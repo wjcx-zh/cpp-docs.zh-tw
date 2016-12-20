@@ -1,0 +1,62 @@
+---
+title: "C++ 常數運算式 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "常數運算式"
+  - "常數運算式, 語法"
+  - "運算式 [C++], 常數"
+ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
+caps.latest.revision: 8
+caps.handback.revision: 8
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# C++ 常數運算式
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+*「常數」*\(Constant\) 值是不會變更的值。  C\+\+ 提供兩個關鍵字，以讓您表示不要修改物件的意圖，以及施行該意圖。  
+  
+ C\+\+ 需要常數運算式 \(也就是評估為常數的運算式\) 才能宣告下列各項：  
+  
+-   陣列界限  
+  
+-   case 陳述式中的選取器  
+  
+-   位元欄位長度規格  
+  
+-   列舉初始設定式  
+  
+ 常數運算式中合法的運算元包括：  
+  
+-   常值  
+  
+-   列舉常數  
+  
+-   宣告為 const 並使用常數運算式初始化的值  
+  
+-   `sizeof` 運算式  
+  
+ 非整數常數必須轉換成整數類資料類型 \(明確或隱含\)，在常數運算式中才會是合法的。  因此，下列程式碼是合法的：  
+  
+```  
+const double Size = 11.0;  
+char chArray[(int)Size];  
+```  
+  
+ 在常數運算式中明確轉換成整數類資料類型是合法的，所有其他類型和衍生類型都不合法，但做為 `sizeof` 運算子的運算元使用時除外。  
+  
+ 逗號運算子和指派運算子不能在常數運算式中使用。  
+  
+## 請參閱  
+ [運算式的類型](../cpp/types-of-expressions.md)

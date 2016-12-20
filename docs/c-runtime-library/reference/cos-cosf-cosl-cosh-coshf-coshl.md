@@ -1,0 +1,144 @@
+---
+title: "cos、cosf、cosl、cosh、coshf、coshl | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+apiname: 
+  - "coshl"
+  - "cosh"
+  - "cos"
+  - "cosl"
+  - "cosf"
+  - "coshf"
+apilocation: 
+  - "msvcrt.dll"
+  - "msvcr80.dll"
+  - "msvcr90.dll"
+  - "msvcr100.dll"
+  - "msvcr100_clr0400.dll"
+  - "msvcr110.dll"
+  - "msvcr110_clr0400.dll"
+  - "msvcr120.dll"
+  - "msvcr120_clr0400.dll"
+  - "ucrtbase.dll"
+  - "api-ms-win-crt-math-l1-1-0.dll"
+apitype: "DLLExport"
+f1_keywords: 
+  - "coshl"
+  - "cos"
+  - "cosf"
+  - "cosh"
+  - "cosl"
+  - "coshf"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "計算餘弦函數"
+  - "cos 函式"
+  - "cosf 函式"
+  - "cosh 函式"
+  - "coshf 函式"
+  - "coshl 函式"
+  - "餘弦函數"
+  - "餘弦函數, 計算"
+  - "cosl 函式"
+  - "雙曲線函式"
+  - "三角函式"
+ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
+caps.latest.revision: 17
+caps.handback.revision: 15
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# cos、cosf、cosl、cosh、coshf、coshl
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+計算餘弦函數 \(`cos`、 `cosf`或 `cosl`\)，或者 Hyperbolic Cosine \(`cosh`、 `coshf`或 `coshl`\)。  
+  
+## 語法  
+  
+```  
+double cos(   
+   double x   
+);  
+float cos(  
+   float x   
+);  // C++ only  
+long double cos(  
+   long double x  
+);  // C++ only  
+float cosf(   
+   float x   
+);  
+long double cosl(  
+   long double x  
+);  
+double cosh(   
+   double x   
+);  
+float cosh(  
+   float x   
+);  // C++ only  
+long double cosh(  
+   long double x  
+);  // C++ only  
+float coshf(  
+   float x   
+);  
+long double coshl(  
+   long double x  
+);  
+```  
+  
+#### 參數  
+ `x`  
+ 角度 \(以弧度為單位\)。  
+  
+## 傳回值  
+ 餘弦值或 `x`的雙曲線餘弦函數。  如果 `x` 大於或等於 263 或小於或等於，則會傳回– 263 顯著性位元會遺失對呼叫的結果為 `cos`的 `cosf`，或者 `cosl` 隨即出現。  
+  
+ 根據預設，若在 `cosh`、 `coshf`或 `coshl`呼叫中結果太大，函式傳回 `HUGE_VAL` ，並將 `errno` 設定為 `ERANGE`。  
+  
+|輸入|SEH 例外狀況|Matherr 例外狀況|  
+|--------|--------------|------------------|  
+|± `QNAN`,`IND`|無|`_DOMAIN`|  
+|± ∞  \(`cosf`, `cos`, `cosl`\)|`INVALID`|`_DOMAIN`|  
+|x ≥ 7.104760e\+002 \(`cosh`、 `coshf`， `coshl`\)。|`INEXACT`\+`OVERFLOW`|`OVERFLOW`|  
+  
+## 備註  
+ 因為 C\+\+ 允許多載，您可以呼叫會接受並傳回 `float` 或 `long double` 值的 `cos` 和 `cosh` 之多載。  在 C 程式中，`cos` 和 `cosh` 永遠接受並傳回 `double`。  
+  
+## 需求  
+  
+|常式|必要的標頭|  
+|--------|-----------|  
+|`cos`, `cosh`, `cosf`, `coshf`, `cosl`, `coshl`|\<math.h\>|  
+  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+  
+## 範例  
+ 請參閱 [sin、sinf、sinl、sinh、sinhf、sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md) 中的範例。  
+  
+## .NET Framework 對等用法  
+  
+-   [System::Math::Cos](https://msdn.microsoft.com/en-us/library/system.math.cos.aspx)  
+  
+-   [System::Math::Cosh](https://msdn.microsoft.com/en-us/library/system.math.cosh.aspx)  
+  
+## 請參閱  
+ [浮點支援](../../c-runtime-library/floating-point-support.md)   
+ [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
+ [asin、asinf、asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
+ [atan、atanf、atanl、atan2、atan2f、atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
+ [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [sin、sinf、sinl、sinh、sinhf、sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
+ [tan、tanf、tanl、tanh、tanhf、tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
+ [\_CIcos](../../c-runtime-library/cicos.md)

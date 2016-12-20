@@ -1,0 +1,36 @@
+---
+title: "編譯器警告 (層級 1 和 4) C4115 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "C4115"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C4115"
+ms.assetid: f3f94e72-fc49-4d09-b3e7-23d68e61152f
+caps.latest.revision: 6
+caps.handback.revision: 6
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 編譯器警告 (層級 1 和 4) C4115
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+'type': 括弧中未命名類型的定義  
+  
+ 這個指定的符號可用來定義括弧運算式內的結構、等位或列舉類型。 定義的範圍可能不如預期。  
+  
+ 在 C 函式呼叫中，此定義具有全域範圍。 在 C\+\+ 呼叫中，此定義與正在呼叫之函式的範圍相同。  
+  
+ 這個警告也可能是由括弧內不是括號運算式的宣告子 \(例如原型\) 所造成。  
+  
+ 在 ANSI 相容性 \(\/Za\) 下所編譯的 C\+\+ 和 C 程式中，這是層級 1 警告。 其他情況下則為層級 3。

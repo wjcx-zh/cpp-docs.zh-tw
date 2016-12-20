@@ -1,0 +1,116 @@
+---
+title: "concurrent_unordered_multiset 類別 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "concurrent_unordered_set/concurrency::concurrent_unordered_multiset"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "concurrent_unordered_multiset 類別"
+ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
+caps.latest.revision: 12
+caps.handback.revision: 5
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# concurrent_unordered_multiset 類別
+[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+
+`concurrent_unordered_multiset` 類別是並行安全容器，控制類型 \_Key\_type 的項目的不同長度序列。  序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。  
+  
+## 語法  
+  
+```  
+template <  
+   typename _Key_type,  
+   typename _Hasher = std::tr1::hash<_Key_type>,  
+   typename _Key_equality = std::equal_to<_Key_type>,  
+   typename _Allocator_type = std::allocator<_Key_type>  
+>  
+, typename _Key_equality = std::equal_to<_Key_type>, typename _Allocator_type = std::allocator<_Key_type> > class concurrent_unordered_multiset : public details::_Concurrent_hash< details::_Concurrent_unordered_set_traits<_Key_type, details::_Hash_compare<_Key_type, _Hasher, _Key_equality>, _Allocator_type, true> >;  
+```  
+  
+#### 參數  
+ `_Key_type`  
+ 金鑰類型。  
+  
+ `_Hasher`  
+ 雜湊函式物件類型。  此引數是選擇性的，而且預設值是 `std::tr1::hash<``_Key_type``>`。  
+  
+ `_Key_equality`  
+ 相等比較函式物件類型。  此引數是選擇性的，而且預設值是 `std::equal_to<``_Key_type``>`。  
+  
+ `_Allocator_type`  
+ 代表預存配置器物件 \(此物件會封裝有關配置和解除配置並行向量之記憶體的詳細資訊\) 的型別。  此引數是選擇性的，而且預設值是 `std::allocator<``_Key_type``>`。  
+  
+## Members  
+  
+### 公用 Typedefs  
+  
+|名稱|描述|  
+|--------|--------|  
+|`allocator_type`|管理儲存體的配置器類型。|  
+|`const_iterator`|用於受控制序列的常數迭代器類型。|  
+|`const_local_iterator`|用於受控制序列的常數 bucket 迭代器類型。|  
+|`const_pointer`|項目的常數指標類型。|  
+|`const_reference`|項目的常數參考類型。|  
+|`difference_type`|兩個項目之間的帶正負號距離的類型。|  
+|`hasher`|雜湊函式的類型。|  
+|`iterator`|受控制序列中 iterator 的類型。|  
+|`key_equal`|比較函式的類型。|  
+|`key_type`|排序索引鍵的類型。|  
+|`local_iterator`|用於受控制序列的 bucket 迭代器類型。|  
+|`pointer`|項目的指標類型。|  
+|`reference`|項目的參考類型。|  
+|`size_type`|兩個項目之間的不帶正負號距離的類型。|  
+|`value_type`|項目的類型。|  
+  
+### 公用建構函式  
+  
+|名稱|描述|  
+|--------|--------|  
+|[concurrent\_unordered\_multiset::concurrent\_unordered\_multiset 建構函式](../Topic/concurrent_unordered_multiset::concurrent_unordered_multiset%20Constructor.md)|多載。  建構並行未排序對應集。|  
+  
+### 公用方法  
+  
+|名稱|描述|  
+|--------|--------|  
+|[concurrent\_unordered\_multiset::hash\_function 方法](../Topic/concurrent_unordered_multiset::hash_function%20Method.md)|回報儲存的雜湊函式物件。|  
+|[concurrent\_unordered\_multiset::insert 方法](../Topic/concurrent_unordered_multiset::insert%20Method.md)|多載。  將項目加入至 `concurrent_unordered_multiset` 物件。|  
+|[concurrent\_unordered\_multiset::key\_eq 方法](../Topic/concurrent_unordered_multiset::key_eq%20Method.md)|儲存的相等比較函式物件。|  
+|[concurrent\_unordered\_multiset::swap 方法](../Topic/concurrent_unordered_multiset::swap%20Method.md)|交換兩個 `concurrent_unordered_multiset` 物件的內容。  這個方法不是並行安全的。|  
+|[concurrent\_unordered\_multiset::unsafe\_erase 方法](../Topic/concurrent_unordered_multiset::unsafe_erase%20Method.md)|多載。  移除指定位置的 `concurrent_unordered_multiset` 項目。  這個方法不是並行安全的。|  
+  
+### 公用運算子  
+  
+|名稱|描述|  
+|--------|--------|  
+|[concurrent\_unordered\_multiset::operator\= 運算子](../Topic/concurrent_unordered_multiset::operator=%20Operator.md)|多載。  將另一個 `concurrent_unordered_multiset` 物件的內容指派給這一個。  這個方法不是並行安全的。|  
+  
+## 備註  
+ 如需關於 `concurrent_unordered_multiset` 類別的詳細資訊，請參閱 [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。  
+  
+## 繼承階層架構  
+ `_Traits`  
+  
+ `_Concurrent_hash`  
+  
+ `concurrent_unordered_multiset`  
+  
+## 需求  
+ **標頭：**concurrent\_unordered\_set.h  
+  
+ **命名空間：**concurrency  
+  
+## 請參閱  
+ [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
+ [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)

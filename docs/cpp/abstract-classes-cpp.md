@@ -1,0 +1,100 @@
+---
+title: "抽象類別 (C++) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "language-reference"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "抽象類別"
+  - "基底類別, 抽象類別"
+  - "類別 [C++], abstract"
+  - "衍生類別, 抽象類別"
+ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# 抽象類別 (C++)
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+抽象類別用於表示可衍生更明確類別的一般概念。  您無法建立抽象類別類型的物件，但是可以使用抽象類別類型的指標和參考。  
+  
+ 至少包含一個純虛擬函式的類別會被視為抽象類別。  衍生自抽象類別的類別必須實作純虛擬函式，否則這些類別也是抽象類別。  
+  
+ 虛擬函式是使用 *pure\-specifier* 語法宣告為「純虛擬函式」\([類別通訊協定實作](http://msdn.microsoft.com/zh-tw/a319f1b3-05e8-400e-950a-1ca6eb105ab5)中會說明\)。  請參考[虛擬函式](../cpp/virtual-functions.md)中的範例。  `Account` 類別的目的是要提供一般功能，但 `Account` 類型的物件則過於籠統，實用性不高。  因此，`Account` 非常適合作為抽象類別：  
+  
+```  
+// deriv_AbstractClasses.cpp  
+// compile with: /LD  
+class Account {  
+public:  
+   Account( double d );   // Constructor.  
+   virtual double GetBalance();   // Obtain balance.  
+   virtual void PrintBalance() = 0;   // Pure virtual function.  
+private:  
+    double _balance;  
+};  
+  
+```  
+  
+ 此宣告和上一個宣告之間唯一的差別，在於 `PrintBalance` 是使用純指定名稱 \(`= 0`\) 宣告的。  
+  
+## 抽象類別的限制  
+ 抽象類別不能用於：  
+  
+-   變數或成員資料  
+  
+-   引數類型  
+  
+-   函式傳回類型  
+  
+-   明確轉換的類型  
+  
+ 另一項限制是，如果抽象類別的建構函式直接或間接呼叫純虛擬函式，則結果會是未定義。  不過，抽象類別的建構函式和解構函式可以呼叫其他成員函式。  
+  
+ 您可以為抽象類別定義純虛擬函式，但是只能使用下列語法直接呼叫：  
+  
+ *abstract\-class\-name* `::` *function\-name***\( \)**  
+  
+ 這在設計基底類別包含純虛擬解構函式的類別階層架構時很有幫助，因為基底類別解構函式會一律在終結物件的處理序中呼叫。  參考下列範例：  
+  
+```  
+// Declare an abstract base class with a pure virtual destructor.  
+// deriv_RestrictionsonUsingAbstractClasses.cpp  
+class base {  
+public:  
+    base() {}  
+    virtual ~base()=0;  
+};  
+  
+// Provide a definition for destructor.  
+base::~base() {}  
+  
+class derived:public base {  
+public:  
+    derived() {}  
+    ~derived(){}  
+};  
+  
+int main() {  
+    derived *pDerived = new derived;  
+    delete pDerived;  
+}  
+```  
+  
+ 當 `pDerived` 所指向的物件已刪除時，就會呼叫 `derived` 類別的解構函式，然後呼叫 `base` 類別的解構函式。  純虛擬函式的空白實作可確保函式至少有某種實作存在。  
+  
+> [!NOTE]
+>  在上述範例中，純虛擬函式 `base::~base` 是從 `derived::~derived` 隱含呼叫。  另外也可以使用完整限定的成員函式名稱明確呼叫純虛擬函式。  
+  
+## 請參閱  
+ [繼承](../cpp/inheritance-cpp.md)

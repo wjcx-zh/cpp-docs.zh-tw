@@ -1,0 +1,102 @@
+---
+title: "編譯器錯誤 C2678 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "error-reference"
+f1_keywords: 
+  - "C2678"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C2678"
+ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
+caps.latest.revision: 12
+caps.handback.revision: 12
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 編譯器錯誤 C2678
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+二元 'operator'：未定義使用左方運算元類型 'type' 的運算子 \(或是沒有可接受的轉換\)  
+  
+ 若要使用運算子，您必須針對指定類型進行多載，或針對已定義運算子的類型定義轉換。  
+  
+## 範例  
+ 當左方運算元是 const 限定，而運算子定義成採用非 const 引數時，可能會發生 C2678。  
+  
+ 下列範例會產生 C2678，並示範如何修正此問題：  
+  
+```  
+// C2678a.cpp  
+// Compile by using: cl /EHsc /W4 C2678a.cpp  
+struct Combo {  
+   int number;  
+   char letter;  
+};  
+  
+inline Combo& operator+=(Combo& lhs, int rhs) {  
+   lhs.number += rhs;  
+   return lhs;  
+}  
+  
+int main() {  
+   Combo const combo1{ 42, 'X' };  
+   Combo combo2{ 13, 'Z' };  
+  
+   combo1 += 6; // C2678  
+   combo2 += 9; // OK - operator+= matches non-const Combo  
+}  
+```  
+  
+## 範例  
+ 如果您沒有先 pin 原生成員，就在其上呼叫成員函式，也可能會發生 C2678。  
+  
+ 下列範例會產生 C2678，並示範如何修正此問題。  
+  
+```  
+// C2678.cpp  
+// compile with: /clr /c  
+struct S { int _a; };  
+  
+ref class C {  
+public:  
+   void M( S param ) {  
+      test = param;   // C2678  
+  
+      // OK  
+      pin_ptr<S> ptest = &test;  
+      *ptest = param;  
+   }  
+   S test;  
+};  
+```  
+  
+## 範例  
+ 下列範例會產生 C2678，並示範如何修正此問題。  
+  
+```  
+// C2678_2.cpp  
+// compile with: /clr:oldSyntax /c  
+struct S { int _a; };  
+  
+__gc class C {  
+public:  
+   void M(S param) {  
+      test = param;   // C2678  
+  
+      // OK  
+      S __pin* ptest = &test;  
+      *ptest = param;  
+   }  
+  
+   S test;  
+};  
+```

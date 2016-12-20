@@ -1,0 +1,43 @@
+---
+title: "HStringReference::Get 方法 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "reference"
+f1_keywords: 
+  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get"
+dev_langs: 
+  - "C++"
+ms.assetid: ee5f4d6e-5628-4fcf-af2d-d63d70c1ec13
+caps.latest.revision: 2
+caps.handback.revision: 2
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# HStringReference::Get 方法
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+擷取基礎 HSTRING 控制代碼的值。  
+  
+## 語法  
+  
+```  
+HSTRING Get() const throw()  
+```  
+  
+## 傳回值  
+ 基礎 HSTRING 代碼的值。  
+  
+## 需求  
+ **標題:** corewrappers.h  
+  
+ **命名空間：**Microsoft::WRL::Wrappers  
+  
+## 請參閱  
+ [HStringReference 類別](../windows/hstringreference-class.md)

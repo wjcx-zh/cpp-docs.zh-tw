@@ -1,0 +1,1 @@
+如需 Visual Studio 2017 RC 的最新文件請參閱 [Visual Studio 2017 RC 文件](http://docs.microsoft.com/visualstudio)。

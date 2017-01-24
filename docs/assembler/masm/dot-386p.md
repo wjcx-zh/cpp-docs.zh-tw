@@ -1,0 +1,42 @@
+---
+title: ".386P | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - ".386P"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - ".386P directive"
+ms.assetid: 15199091-3bb7-4270-bb9b-878c1c2f2146
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# .386P
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+可讓組件的所有指令 \(包括有權限\) 80386 處理器 ； 停用指令有較新的處理器導入的組的件。  
+  
+## 語法  
+  
+```  
+  
+.386P  
+  
+```  
+  
+## 備註  
+ 也可以讓 80387 的指示進行。  
+  
+## 請參閱  
+ [Directives Reference](../../assembler/masm/directives-reference.md)

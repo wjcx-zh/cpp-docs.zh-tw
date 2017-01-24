@@ -1,0 +1,56 @@
+---
+title: "C 複合指派 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-cpp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "C++"
+  - "C"
+helpviewer_keywords: 
+  - "指派運算子, 複合"
+  - "複合指派運算子"
+  - "運算子 [C], 設定"
+ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "mikeblome"
+ms.author: "mblome"
+manager: "ghogen"
+---
+# C 複合指派
+[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+
+複合指派運算子可結合簡單指派運算子和另一個二元運算子。  複合指派運算子會執行其他運算子指定的作業，然後將結果指派給左運算元。  例如，如下所示的複合指派運算式  
+  
+```  
+  
+expression1 += expression2  
+```  
+  
+ 等同於  
+  
+```  
+  
+expression1 = expression1 + expression2  
+```  
+  
+ 不過，複合指派運算式與展開的版本不同，因為複合指派運算式只會評估 *expression* 一次，而展開版本會評估 *expression1* 兩次：在加法作業和指派作業中。  
+  
+ 複合指派運算子的運算元必須為整數類型或浮點類型。  每個複合指派運算子會執行對應的二元運算子所執行的轉換，並且據以限制其運算元的類型。  加法指派 \(`+=`\) 和減法指派 \(**–\=**\) 運算子也可以有指標類型的左運算元，在這種情況下，右運算元必須為整數類型。  複合指派作業的結果為左運算元的值和類型。  
+  
+```  
+#define MASK 0xff00  
+  
+n &= MASK;  
+```  
+  
+ 在此範例中，是在 `n` 和 `MASK` 執行位元包含 AND 作業，並將結果指派給 `n`。  資訊清單常數 `MASK` 是以 [\#define](../preprocessor/hash-define-directive-c-cpp.md) 前置處理器指示詞定義。  
+  
+## 請參閱  
+ [C 指派運算子](../c-language/c-assignment-operators.md)

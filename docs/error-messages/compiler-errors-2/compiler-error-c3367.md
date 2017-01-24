@@ -1,0 +1,39 @@
+---
+title: "編譯器錯誤 C3367 | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/05/2016"
+ms.prod: "visual-studio-dev14"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "devlang-csharp"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "C3367"
+dev_langs: 
+  - "C++"
+helpviewer_keywords: 
+  - "C3367"
+ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
+caps.latest.revision: 7
+caps.handback.revision: 7
+author: "corob-msft"
+ms.author: "corob"
+manager: "ghogen"
+---
+# 編譯器錯誤 C3367
+[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+
+'static\_member\_function' : 無法用靜態函式建立未繫結的委派  
+  
+ 當您呼叫未繫結的委派時，您必須傳遞物件的執行個體。 由於是透過類別名稱呼叫靜態成員函式，您只能以執行個體成員函式具現化未繫結的委派。  
+  
+ 如需詳細資訊，請參閱[取消繫結委派](../../misc/unbound-delegates.md)。  
+  
+## 範例  
+ 下列範例會產生 C3367：  
+  
+```  
+// C3367.cpp // compile with: /clr ref struct R { void b() {} static void f() {} }; delegate void Del(R^); int main() { Del ^ a = gcnew Del(&R::b);   // OK Del ^ b = gcnew Del(&R::f);   // C3367 }  
+```

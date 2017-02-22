@@ -1,8 +1,7 @@
 ---
 title: "建立資料庫連接 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "ODBC 連接 [C++], 資料控制項"
 ms.assetid: cf85fb26-b22f-4aa2-bd40-991da412892d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 建立資料庫連接
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

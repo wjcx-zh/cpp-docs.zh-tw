@@ -1,8 +1,7 @@
 ---
 title: "OLE DB 提供者樣板架構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB 提供者樣板, 物件模型"
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # OLE DB 提供者樣板架構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

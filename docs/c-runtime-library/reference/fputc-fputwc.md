@@ -1,8 +1,7 @@
 ---
 title: "fputc、fputwc | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "_fputtc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fputtc 函式"
   - "fputc 函式"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "資料流, 將字元寫入"
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # fputc、fputwc
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

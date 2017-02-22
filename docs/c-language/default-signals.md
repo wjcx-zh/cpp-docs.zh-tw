@@ -1,8 +1,7 @@
 ---
 title: "預設訊號 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "預設訊號"
   - "預設, 訊號"
 ms.assetid: db9fc17b-75c0-4d33-86be-c536584bbede
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 預設訊號
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

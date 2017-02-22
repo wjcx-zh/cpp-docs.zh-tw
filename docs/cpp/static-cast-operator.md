@@ -1,8 +1,7 @@
 ---
 title: "static_cast 運算子 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "static_cast 關鍵字 [C++]"
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # static_cast 運算子
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

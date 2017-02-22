@@ -1,8 +1,7 @@
 ---
 title: "signal 動作常數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,17 +13,16 @@ f1_keywords:
   - "SIG_DFL"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "SIG_DFL 常數"
   - "SIG_IGN 常數"
   - "signal 動作常數"
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # signal 動作常數
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

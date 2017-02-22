@@ -1,8 +1,7 @@
 ---
 title: "逐步解說：將控制項放在工具列上 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "工具列, 加入控制項"
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
 caps.latest.revision: 24
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 逐步解說：將控制項放在工具列上
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

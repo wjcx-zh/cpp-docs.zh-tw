@@ -1,8 +1,7 @@
 ---
 title: "在 Visual Studio 中產生資訊清單 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "資訊清單 [C++]"
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 在 Visual Studio 中產生資訊清單
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

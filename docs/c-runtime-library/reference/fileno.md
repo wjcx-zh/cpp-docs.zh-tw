@@ -1,8 +1,7 @@
 ---
 title: "_fileno | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "_fileno"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "檔案控制代碼 [C++], 從資料流取得"
   - "fileno 函式"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "資料流, 取得檔案控制代碼"
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _fileno
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

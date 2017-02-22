@@ -1,8 +1,7 @@
 ---
 title: "terminate (CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,16 +27,15 @@ f1_keywords:
   - "terminate"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "例外狀況處理, 終止"
   - "terminate 函式"
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
 caps.latest.revision: 12
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # terminate (CRT)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

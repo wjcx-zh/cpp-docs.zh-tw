@@ -1,8 +1,7 @@
 ---
 title: "外觀, ATL 控制項精靈 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ATL 控制項精靈, 外觀"
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 外觀, ATL 控制項精靈
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

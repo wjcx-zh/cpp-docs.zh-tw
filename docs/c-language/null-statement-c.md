@@ -1,8 +1,7 @@
 ---
 title: "Null 陳述式 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "運算式 [C++], null"
   - "null 陳述式"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "冒號, C null 陳述式"
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Null 陳述式 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

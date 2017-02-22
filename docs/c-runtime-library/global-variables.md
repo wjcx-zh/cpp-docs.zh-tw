@@ -1,8 +1,7 @@
 ---
 title: "全域變數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.variables"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "全域變數"
   - "全域變數, Microsoft 執行階段程式庫"
   - "變數, 全域"
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 全域變數
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

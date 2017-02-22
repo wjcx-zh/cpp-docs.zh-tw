@@ -1,8 +1,7 @@
 ---
 title: "extreme_value_distribution 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "extreme_value_distribution 類別"
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
 caps.latest.revision: 16
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # extreme_value_distribution 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

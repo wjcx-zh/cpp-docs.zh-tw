@@ -1,8 +1,7 @@
 ---
 title: "如何：建置隔離的應用程式以使用 COM 元件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "隔離的應用程式 [C++]"
 ms.assetid: 04587547-1174-44ab-bd99-1292358fba20
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 如何：建置隔離的應用程式以使用 COM 元件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

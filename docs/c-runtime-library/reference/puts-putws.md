@@ -1,8 +1,7 @@
 ---
 title: "puts、_putws | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "puts"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_putts 函式"
   - "_putws 函式"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "字串 [C++], 撰寫"
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # puts、_putws
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/H (限制外部名稱的長度) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "公用名稱長度"
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /H (限制外部名稱的長度)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

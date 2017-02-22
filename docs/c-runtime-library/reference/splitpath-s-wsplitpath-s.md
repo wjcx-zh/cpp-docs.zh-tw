@@ -1,8 +1,7 @@
 ---
 title: "_splitpath_s、_wsplitpath_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "wsplitpath_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_splitpath_s 函式"
   - "_wsplitpath_s 函式"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "wsplitpath_s 函式"
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # _splitpath_s、_wsplitpath_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

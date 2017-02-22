@@ -1,8 +1,7 @@
 ---
 title: "EDITBIN 參考 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "目的檔, 修改"
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # EDITBIN 參考
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

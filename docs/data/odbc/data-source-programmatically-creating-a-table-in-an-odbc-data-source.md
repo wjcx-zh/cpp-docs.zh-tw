@@ -1,8 +1,7 @@
 ---
 title: "資料來源：以程式設計方式建立 ODBC 資料來源資料表 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "資料表 [C++], 以程式設計方式建立"
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 資料來源：以程式設計方式建立 ODBC 資料來源資料表
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

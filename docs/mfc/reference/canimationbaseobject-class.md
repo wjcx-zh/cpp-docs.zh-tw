@@ -1,8 +1,7 @@
 ---
 title: "CAnimationBaseObject 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CAnimationBaseObject 類別"
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
 caps.latest.revision: 17
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # CAnimationBaseObject 類別
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

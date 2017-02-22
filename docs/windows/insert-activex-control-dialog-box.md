@@ -1,8 +1,7 @@
 ---
 title: "插入 ActiveX 控制項對話方塊 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "ActiveX 控制項 [C++], 加入對話方塊"
 ms.assetid: 06638ea3-0726-40da-a989-9b89292d0e3d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 插入 ActiveX 控制項對話方塊
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

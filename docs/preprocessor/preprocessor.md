@@ -1,8 +1,7 @@
 ---
 title: "前置處理器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "前置處理器"
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 前置處理器
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "流程控制和環境控制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "環境控制常式"
   - "父處理序"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "處理序, 停止"
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 流程控制和環境控制
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

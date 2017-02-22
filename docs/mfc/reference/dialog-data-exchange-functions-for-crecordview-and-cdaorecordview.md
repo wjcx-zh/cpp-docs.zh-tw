@@ -1,8 +1,7 @@
 ---
 title: "CRecordView 和 CDaoRecordView 的對話方塊資料交換函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "ODBC [C++], 對話方塊資料交換 (DDX) 支援"
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 caps.latest.revision: 13
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # CRecordView 和 CDaoRecordView 的對話方塊資料交換函式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

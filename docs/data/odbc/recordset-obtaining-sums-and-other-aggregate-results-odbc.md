@@ -1,8 +1,7 @@
 ---
 title: "資料錄集：取得 SUM 和其他彙總結果 (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "SQL, 從資料錄集擷取彙總值"
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 資料錄集：取得 SUM 和其他彙總結果 (ODBC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

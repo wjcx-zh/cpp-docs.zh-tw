@@ -1,8 +1,7 @@
 ---
 title: "清單控制項和清單檢視 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "檢視, 清單和清單控制項"
 ms.assetid: 7aee1c48-b158-4399-be0b-be366993665e
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 清單控制項和清單檢視
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

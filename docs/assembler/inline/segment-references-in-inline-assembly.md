@@ -1,8 +1,7 @@
 ---
 title: "內嵌組譯碼中的區段參考 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "內嵌組譯碼中的區段參考"
 ms.assetid: c63e6bb4-49d9-4fa1-bb22-eea21b5cbc0f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 內嵌組譯碼中的區段參考
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "__alignof 運算子 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "類型 [C++], 對齊需求"
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # __alignof 運算子
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

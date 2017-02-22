@@ -1,8 +1,7 @@
 ---
 title: "CL 叫用連結器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "LINK 工具 [C++], 從 CL 編譯器叫用"
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CL 叫用連結器
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

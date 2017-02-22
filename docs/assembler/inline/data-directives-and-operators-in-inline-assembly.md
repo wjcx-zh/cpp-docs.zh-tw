@@ -1,8 +1,7 @@
 ---
 title: "內嵌組譯碼中的資料指示詞和運算子 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "結構 [C++], MASM"
 ms.assetid: fb7410c7-156a-4131-bcfc-211aa70533e3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 內嵌組譯碼中的資料指示詞和運算子
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

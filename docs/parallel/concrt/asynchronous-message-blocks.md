@@ -1,8 +1,7 @@
 ---
 title: "非同步訊息區 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "窮盡聯結 [並行執行階段]"
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 caps.latest.revision: 36
-caps.handback.revision: 36
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # 非同步訊息區
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

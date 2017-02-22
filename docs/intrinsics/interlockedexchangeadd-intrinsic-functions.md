@@ -1,8 +1,7 @@
 ---
 title: "_InterlockedExchangeAdd 內建函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -66,10 +65,10 @@ helpviewer_keywords:
   - "InterlockedExchangeAdd64_rel 內建函式"
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _InterlockedExchangeAdd 內建函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

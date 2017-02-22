@@ -1,8 +1,7 @@
 ---
 title: "EDITBIN 選項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "EDITBIN 程式,  選項"
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # EDITBIN 選項
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

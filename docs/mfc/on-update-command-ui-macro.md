@@ -1,8 +1,7 @@
 ---
 title: "ON_UPDATE_COMMAND_UI 巨集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "更新使用者介面物件"
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # ON_UPDATE_COMMAND_UI 巨集
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

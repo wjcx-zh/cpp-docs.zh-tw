@@ -1,8 +1,7 @@
 ---
 title: "_fpieee_flt | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_fpieee_flt"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fpieee_flt 函式"
   - "例外狀況處理, 浮點"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "fpieee_flt 函式"
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _fpieee_flt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

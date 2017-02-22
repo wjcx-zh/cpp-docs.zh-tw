@@ -1,8 +1,7 @@
 ---
 title: "引出程式庫成員 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "程式庫, 引出成員"
 ms.assetid: a2c5c2a1-9b7e-489a-a9a4-1dec694e1fc5
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 引出程式庫成員
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

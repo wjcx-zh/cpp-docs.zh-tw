@@ -1,8 +1,7 @@
 ---
 title: "格式規格欄位：scanf 和 wscanf 函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,7 +21,6 @@ f1_keywords:
   - "scanf"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "寬度, scanf 函式的規格"
   - "scanf 格式規格"
@@ -33,10 +31,10 @@ helpviewer_keywords:
   - "類型欄位"
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 格式規格欄位：scanf 和 wscanf 函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

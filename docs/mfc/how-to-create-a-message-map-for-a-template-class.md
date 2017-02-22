@@ -1,8 +1,7 @@
 ---
 title: "如何：建立樣板類別的訊息對應 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "樣板類別, 建立訊息對應"
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 如何：建立樣板類別的訊息對應
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

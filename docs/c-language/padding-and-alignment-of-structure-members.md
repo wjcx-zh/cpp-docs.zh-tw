@@ -1,8 +1,7 @@
 ---
 title: "結構成員的填補和對齊 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,15 +10,14 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "結構成員, 填補和對齊"
 ms.assetid: c999820b-dd47-41fc-b923-e4c7ebbcd30f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 結構成員的填補和對齊
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

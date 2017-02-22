@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控制項：加入自訂事件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "MFC ActiveX 控制項, 事件"
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # MFC ActiveX 控制項：加入自訂事件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

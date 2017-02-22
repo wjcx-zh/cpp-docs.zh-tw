@@ -1,8 +1,7 @@
 ---
 title: "char_traits 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "char_traits 結構"
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 caps.latest.revision: 20
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # char_traits 結構
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "交互匯入 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "相互匯入的可執行檔 [C++]"
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 交互匯入
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

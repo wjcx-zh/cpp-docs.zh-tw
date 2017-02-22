@@ -1,8 +1,7 @@
 ---
 title: "Module::GenericReleaseNotifier::GenericReleaseNotifier 建構函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GenericReleaseNotifier，建構函式"
 ms.assetid: feb5b687-a4b0-4809-9022-8f292181b7a1
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Module::GenericReleaseNotifier::GenericReleaseNotifier 建構函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

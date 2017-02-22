@@ -1,8 +1,7 @@
 ---
 title: "以程式設計方式列印 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "列印 [MFC], 程式設計"
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 以程式設計方式列印
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

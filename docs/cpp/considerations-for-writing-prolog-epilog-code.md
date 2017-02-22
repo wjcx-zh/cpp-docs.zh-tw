@@ -1,8 +1,7 @@
 ---
 title: "撰寫初構/終解程式碼的考量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "堆疊, 堆疊框架配置"
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 撰寫初構/終解程式碼的考量
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

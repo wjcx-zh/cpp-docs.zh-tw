@@ -1,8 +1,7 @@
 ---
 title: "ATL 專案中的 MFC 支援 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "ATL 專案, MFC 支援"
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # ATL 專案中的 MFC 支援
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

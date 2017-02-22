@@ -1,8 +1,7 @@
 ---
 title: "停駐和浮動工具列 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "工具列 [C++], 包裝"
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 停駐和浮動工具列
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

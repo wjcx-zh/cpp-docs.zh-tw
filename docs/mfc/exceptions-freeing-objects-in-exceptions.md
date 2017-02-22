@@ -1,8 +1,7 @@
 ---
 title: "例外狀況：釋放例外狀況中的物件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "try-catch 例外狀況處理, 終結物件"
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 例外狀況：釋放例外狀況中的物件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

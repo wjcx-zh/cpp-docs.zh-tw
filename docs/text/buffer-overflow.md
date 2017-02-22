@@ -1,8 +1,7 @@
 ---
 title: "緩衝區溢位 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MBCS [C++], 緩衝區溢位"
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 緩衝區溢位
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

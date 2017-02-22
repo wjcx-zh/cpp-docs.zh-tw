@@ -1,8 +1,7 @@
 ---
 title: "建置瀏覽資訊檔：概觀 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "bsc 檔案, 關於 bsc 檔案"
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 建置瀏覽資訊檔：概觀
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

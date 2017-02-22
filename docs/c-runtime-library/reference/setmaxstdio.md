@@ -1,8 +1,7 @@
 ---
 title: "_setmaxstdio | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "_setmaxstdio"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_setmaxstdio 函式"
   - "開啟檔案上限"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "setmaxstdio 函式"
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # _setmaxstdio
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

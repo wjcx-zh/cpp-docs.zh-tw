@@ -1,8 +1,7 @@
 ---
 title: "thread 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: df249bc7-ff81-4ff9-a6d6-5e3d9a8f56a1
 caps.latest.revision: 16
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # thread 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

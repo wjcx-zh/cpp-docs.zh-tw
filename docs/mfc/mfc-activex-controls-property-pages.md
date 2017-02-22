@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控制項：屬性頁 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "屬性頁, MFC ActiveX 控制項"
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # MFC ActiveX 控制項：屬性頁
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

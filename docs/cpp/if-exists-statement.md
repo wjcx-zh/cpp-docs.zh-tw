@@ -1,8 +1,7 @@
 ---
 title: "__if_exists 陳述式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "符號, 測試是否存在"
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # __if_exists 陳述式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

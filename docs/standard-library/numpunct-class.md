@@ -1,8 +1,7 @@
 ---
 title: "numpunct 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "numpunct 類別"
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # numpunct 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

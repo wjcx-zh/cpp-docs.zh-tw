@@ -1,8 +1,7 @@
 ---
 title: "CMFCMenuButton 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "CMFCMenuButton 類別"
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
 caps.latest.revision: 32
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 34
 ---
 # CMFCMenuButton 類別
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

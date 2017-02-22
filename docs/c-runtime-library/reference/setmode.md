@@ -1,8 +1,7 @@
 ---
-title: "_setmode | Microsoft Docs"
+title: "setmode | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,23 +24,17 @@ apilocation:
   - "api-ms-win-crt-stdio-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_setmode"
+  - "setmode"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_setmode 函式"
-  - "檔案轉譯 [C++], 設定模式"
-  - "檔案 [C++], 模式"
-  - "檔案 [C++], 轉譯"
   - "setmode 函式"
-  - "Unicode [C++], 主控台輸出"
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
 caps.latest.revision: 23
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _setmode
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

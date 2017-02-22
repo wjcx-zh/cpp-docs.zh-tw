@@ -1,8 +1,7 @@
 ---
 title: "_spawn、_wspawn 函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "wspawn"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tspawnve 函式"
   - "_spawn 函式"
@@ -57,10 +55,10 @@ helpviewer_keywords:
   - "_tspawnle 函式"
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
 caps.latest.revision: 26
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _spawn、_wspawn 函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

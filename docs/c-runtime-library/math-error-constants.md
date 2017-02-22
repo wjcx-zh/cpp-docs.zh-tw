@@ -1,8 +1,7 @@
 ---
 title: "運算錯誤常數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,7 +17,6 @@ f1_keywords:
   - "_OVERFLOW"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_DOMAIN 常數"
   - "_OVERFLOW 常數"
@@ -35,10 +33,10 @@ helpviewer_keywords:
   - "UNDERFLOW 常數"
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 運算錯誤常數
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

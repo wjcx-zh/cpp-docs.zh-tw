@@ -1,8 +1,7 @@
 ---
 title: "發出參數型查詢 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "參數查詢, 使用 CCommand 類別執行"
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 發出參數型查詢
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "目錄控制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "控制項 [C++], 目錄"
   - "目錄控制常式"
 ms.assetid: a72dcf6f-f366-4d20-8850-0e19cc53ca18
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 目錄控制
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

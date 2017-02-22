@@ -1,8 +1,7 @@
 ---
 title: "具有引數的自訂操作工具 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "資料流, 自訂資料流操作工具"
 ms.assetid: fa4655a7-d68f-4fea-a26e-73c3ad5c90a5
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 具有引數的自訂操作工具
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

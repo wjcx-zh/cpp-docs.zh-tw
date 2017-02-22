@@ -1,8 +1,7 @@
 ---
 title: "引數存取 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.arguments"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "引數存取巨集 [C++]"
   - "可變長度引數清單"
 ms.assetid: 7046ae34-a0ec-44f0-815d-3209492a3e19
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 引數存取
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

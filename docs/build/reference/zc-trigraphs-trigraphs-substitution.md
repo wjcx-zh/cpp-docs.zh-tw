@@ -1,8 +1,7 @@
 ---
 title: "/Zc:trigraphs (三併詞替代) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-Zc 編譯器選項 (C++)"
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # /Zc:trigraphs (三併詞替代)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/AI (指定中繼資料目錄) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-AI 編譯器選項 [C++]"
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # /AI (指定中繼資料目錄)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

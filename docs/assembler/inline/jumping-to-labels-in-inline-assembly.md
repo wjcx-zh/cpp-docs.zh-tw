@@ -1,8 +1,7 @@
 ---
 title: "跳至內嵌組譯碼中的標籤 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "標籤, 在內嵌組譯碼中"
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 跳至內嵌組譯碼中的標籤
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

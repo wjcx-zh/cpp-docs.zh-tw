@@ -1,8 +1,7 @@
 ---
 title: "例外狀況：從 MFC 例外狀況巨集轉換 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "巨集, C++ 關鍵字"
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 例外狀況：從 MFC 例外狀況巨集轉換
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

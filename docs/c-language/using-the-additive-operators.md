@@ -1,8 +1,7 @@
 ---
 title: "使用加法類運算子 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "加法類運算子"
   - "運算子 [C++], 加法"
 ms.assetid: 7d54841e-436d-4ae8-9865-1ac1829e6f22
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用加法類運算子
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

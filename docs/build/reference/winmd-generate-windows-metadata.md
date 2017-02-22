@@ -1,8 +1,7 @@
 ---
 title: "/WINMD (產生 Windows 中繼資料) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /WINMD (產生 Windows 中繼資料)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

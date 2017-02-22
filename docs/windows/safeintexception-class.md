@@ -1,8 +1,7 @@
 ---
 title: "SafeIntException 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SafeIntException 類別"
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "ghogen"
 ms.author: "ghogen"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # SafeIntException 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

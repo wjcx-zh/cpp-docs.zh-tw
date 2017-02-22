@@ -1,8 +1,7 @@
 ---
 title: "偵錯和例外狀況類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "偵錯 [MFC], 例外狀況類別"
 ms.assetid: 0d158efd-2e62-452e-9d2a-d3c30dfee7f9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 偵錯和例外狀況類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

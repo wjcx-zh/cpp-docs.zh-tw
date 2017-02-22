@@ -1,8 +1,7 @@
 ---
 title: "_com_error 成員函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "_com_error 類別, 成員函式"
 ms.assetid: 39a73cdb-c12c-4d3b-a314-e3f6580f4d2d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # _com_error 成員函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

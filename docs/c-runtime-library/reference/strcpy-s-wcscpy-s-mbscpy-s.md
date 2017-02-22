@@ -1,8 +1,7 @@
 ---
 title: "strcpy_s、wcscpy_s、_mbscpy_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "wcscpy_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "strcpy_s 函式"
   - "_tcscpy_s 函式"
@@ -45,10 +43,10 @@ helpviewer_keywords:
   - "wcscpy_s 函式"
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
 caps.latest.revision: 41
-caps.handback.revision: 41
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # strcpy_s、wcscpy_s、_mbscpy_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

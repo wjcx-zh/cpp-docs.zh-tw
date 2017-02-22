@@ -1,8 +1,7 @@
 ---
 title: "委派和事件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "事件 [C++], 從 Managed Extensions for C++ 升級"
 ms.assetid: 3505c626-7e5f-4492-a947-0e2248f7b84a
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 委派和事件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

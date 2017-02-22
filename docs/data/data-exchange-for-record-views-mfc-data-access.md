@@ -1,8 +1,7 @@
 ---
 title: "記錄檢視的資料交換 (MFC 資料存取) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "RFX (資料錄欄位交換), 資料錄檢視"
 ms.assetid: abc52ca7-6997-47a7-98f3-f347f52b1f72
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 記錄檢視的資料交換 (MFC 資料存取)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

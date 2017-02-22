@@ -1,8 +1,7 @@
 ---
 title: "資料轉換 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "c.conversions"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "轉換資料"
   - "資料轉換常式 [C++]"
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 資料轉換
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

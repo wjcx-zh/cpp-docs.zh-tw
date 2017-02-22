@@ -1,8 +1,7 @@
 ---
 title: "指定建置事件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "連結前事件"
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 指定建置事件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

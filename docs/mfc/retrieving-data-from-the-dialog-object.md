@@ -1,8 +1,7 @@
 ---
 title: "從對話方塊物件擷取資料 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,10 +31,10 @@ helpviewer_keywords:
   - "使用者輸入 [C++], 從 MFC 對話方塊擷取"
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 從對話方塊物件擷取資料
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

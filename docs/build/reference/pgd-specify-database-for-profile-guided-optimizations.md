@@ -1,8 +1,7 @@
 ---
 title: "/PGD (指定特性指引最佳化資訊庫) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "-PGD 連結器選項"
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /PGD (指定特性指引最佳化資訊庫)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

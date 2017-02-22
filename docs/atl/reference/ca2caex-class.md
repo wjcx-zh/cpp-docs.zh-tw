@@ -1,8 +1,7 @@
 ---
 title: "CA2CAEX 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "CA2CAEX 類別"
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
 caps.latest.revision: 20
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CA2CAEX 類別
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

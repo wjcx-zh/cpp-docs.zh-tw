@@ -1,8 +1,7 @@
 ---
 title: "如何：以原生類型宣告控制代碼 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "類型 [C++], 宣告控制代碼於"
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 如何：以原生類型宣告控制代碼
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

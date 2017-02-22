@@ -1,8 +1,7 @@
 ---
 title: "檢查記憶體覆寫 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "記憶體, 覆寫"
 ms.assetid: da7c5d77-a267-415f-a8ab-ee5ce5bfc286
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 檢查記憶體覆寫
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

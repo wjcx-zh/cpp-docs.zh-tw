@@ -1,8 +1,7 @@
 ---
 title: "預設引數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "函式 [C++], 預設引數"
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 預設引數
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

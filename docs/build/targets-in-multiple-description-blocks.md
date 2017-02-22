@@ -1,8 +1,7 @@
 ---
 title: "多重描述區塊中的目標 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "多個描述區塊"
 ms.assetid: 8618dcd9-c11d-4562-91a7-0c904ed438a8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 多重描述區塊中的目標
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

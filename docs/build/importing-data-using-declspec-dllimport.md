@@ -1,8 +1,7 @@
 ---
 title: "使用 __declspec(dllimport) 匯入資料 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "匯入 DLL [C++], __declspec(dllimport)"
 ms.assetid: 0ae70b39-87c7-4181-8be9-e786e0db60b0
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用 __declspec(dllimport) 匯入資料
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "operator delete (CRT) | Microsoft Docs"
+title: "運算子 delete(CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,19 +17,18 @@ apilocation:
   - "msvcr110_clr0400.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "delete"
+  - "delete[]"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "operator delete"
-  - "scalar delete"
+  - "operator delete[]"
+  - "vector delete"
 ms.assetid: bcd0066a-0022-45f5-af4c-9007c64a6b89
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # operator delete (CRT)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

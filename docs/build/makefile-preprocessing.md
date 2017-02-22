@@ -1,8 +1,7 @@
 ---
 title: "Makefile 前置處理 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "前置處理 Makefile"
 ms.assetid: a9185139-97c9-4adb-b4a9-1ec395cce9f8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Makefile 前置處理
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

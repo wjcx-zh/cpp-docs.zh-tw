@@ -1,8 +1,7 @@
 ---
 title: "/ENTRY (進入點符號) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "開始位址"
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /ENTRY (進入點符號)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

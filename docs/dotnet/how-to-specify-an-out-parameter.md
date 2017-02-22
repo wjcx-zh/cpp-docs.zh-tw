@@ -1,8 +1,7 @@
 ---
 title: "如何：指定 out 參數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "out 參數"
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
 caps.latest.revision: 11
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 如何：指定 out 參數
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

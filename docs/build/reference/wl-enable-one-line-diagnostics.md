@@ -1,8 +1,7 @@
 ---
 title: "/WL (啟用一行診斷) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-WL 編譯器選項 [C++]"
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /WL (啟用一行診斷)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

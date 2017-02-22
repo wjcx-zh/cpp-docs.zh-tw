@@ -1,8 +1,7 @@
 ---
 title: "reverse_iterator 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "reverse_iterator 類別"
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
 caps.latest.revision: 21
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # reverse_iterator 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

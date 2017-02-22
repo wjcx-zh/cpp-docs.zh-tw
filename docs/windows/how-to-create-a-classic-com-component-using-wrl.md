@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 WRL 建立傳統 COM 元件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 如何：使用 WRL 建立傳統 COM 元件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

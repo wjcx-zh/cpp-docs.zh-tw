@@ -1,8 +1,7 @@
 ---
 title: "iostream 程式設計 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "文字輸出 [C++]"
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
 caps.latest.revision: 10
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # iostream 程式設計
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

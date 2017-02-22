@@ -1,8 +1,7 @@
 ---
 title: "文字工具字型對話方塊 (圖示影像編輯器) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "文字工具字型對話方塊"
   - "字型, 在影像上變更"
   - "文字, 在影像上"
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 文字工具字型對話方塊 (圖示影像編輯器)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

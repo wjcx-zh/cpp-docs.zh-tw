@@ -1,8 +1,7 @@
 ---
 title: "資料錄欄位交換：精靈程式碼的使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "Unicode, 和資料庫類別"
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 資料錄欄位交換：精靈程式碼的使用
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

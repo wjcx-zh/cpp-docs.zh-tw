@@ -1,8 +1,7 @@
 ---
 title: "如何：修改目標 Framework 和平台工具組 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild (c++), 如何：修改目標 Framework 和平台工具組"
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # 如何：修改目標 Framework 和平台工具組
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

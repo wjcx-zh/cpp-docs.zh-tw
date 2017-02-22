@@ -1,8 +1,7 @@
 ---
 title: "MFC 類別物件的類型轉換 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "類型轉換"
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
 caps.latest.revision: 15
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # MFC 類別物件的類型轉換
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

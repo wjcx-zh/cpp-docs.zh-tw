@@ -1,8 +1,7 @@
 ---
 title: "/WX (將連結器警告視為錯誤) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-WX 連結器選項"
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /WX (將連結器警告視為錯誤)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

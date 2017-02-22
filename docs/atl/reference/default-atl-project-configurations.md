@@ -1,8 +1,7 @@
 ---
 title: "預設的 ATL 專案組態 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "ATL 專案, 預設設定"
 ms.assetid: 7e272722-41af-4330-b965-a6d74ec16880
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 預設的 ATL 專案組態
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

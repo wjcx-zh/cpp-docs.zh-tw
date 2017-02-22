@@ -1,8 +1,7 @@
 ---
 title: "嚴重錯誤 C1033 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1033"
 ms.assetid: 09976c03-8450-4cf7-8b43-1b91c2c2b9f9
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 嚴重錯誤 C1033
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

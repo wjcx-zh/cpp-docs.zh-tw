@@ -1,8 +1,7 @@
 ---
 title: "命令列的資訊清單產生過程 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "資訊清單 [C++]"
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 命令列的資訊清單產生過程
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

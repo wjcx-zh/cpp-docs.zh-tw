@@ -1,8 +1,7 @@
 ---
 title: "CDaoIndexFieldInfo 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "DAO (資料存取物件), 索引欄位集合"
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # CDaoIndexFieldInfo 結構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

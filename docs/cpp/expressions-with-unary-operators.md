@@ -1,8 +1,7 @@
 ---
 title: "具有一元運算子的運算式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "一元運算子, 運算式具有"
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 具有一元運算子的運算式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

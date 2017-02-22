@@ -1,8 +1,7 @@
 ---
 title: "從預存程序使用多重結果集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "預存程序, 傳回結果集"
 ms.assetid: c450c12c-a76c-4ae4-9675-071a41eeac05
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 從預存程序使用多重結果集
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

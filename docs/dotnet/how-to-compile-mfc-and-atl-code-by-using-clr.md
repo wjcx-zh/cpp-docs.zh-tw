@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 /clr 編譯 MFC 和 ATL 程式碼 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "標準 DLL [C++], /clr 編譯器選項"
 ms.assetid: 12464bec-33a4-482c-880a-c078de7f6ea5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 如何：使用 /clr 編譯 MFC 和 ATL 程式碼
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

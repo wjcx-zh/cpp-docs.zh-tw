@@ -1,8 +1,7 @@
 ---
 title: "MFC 如何讓您更輕鬆地建立網際網路用戶端應用程式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC, 網際網路應用程式"
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # MFC 如何讓您更輕鬆地建立網際網路用戶端應用程式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

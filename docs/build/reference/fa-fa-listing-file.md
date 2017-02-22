@@ -1,8 +1,7 @@
 ---
 title: "/FA、/Fa (清單檔) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "列出檔案類型"
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /FA、/Fa (清單檔)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

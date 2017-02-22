@@ -1,8 +1,7 @@
 ---
 title: "Win 32 應用程式精靈、應用程式設定 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Win32 專案精靈, 應用程式設定"
 ms.assetid: d6b818f0-9b23-4793-a6c5-df1c8c594bad
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Win 32 應用程式精靈、應用程式設定
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_ecvt | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "_ecvt"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ecvt 函式"
   - "轉換雙精度浮點數"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "數字, 轉換"
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _ecvt
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

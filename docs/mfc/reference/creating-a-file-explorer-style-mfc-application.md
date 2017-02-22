@@ -1,8 +1,7 @@
 ---
 title: "建立檔案總管樣式的 MFC 應用程式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "MFC 應用程式, 檔案總管樣式"
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 建立檔案總管樣式的 MFC 應用程式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

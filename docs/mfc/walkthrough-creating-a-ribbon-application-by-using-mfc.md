@@ -1,8 +1,7 @@
 ---
 title: "逐步解說：使用 MFC 建立功能區應用程式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "功能區應用程式, 建立 (MFC)"
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-caps.handback.revision: 17
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # 逐步解說：使用 MFC 建立功能區應用程式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

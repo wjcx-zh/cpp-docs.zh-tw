@@ -1,8 +1,7 @@
 ---
 title: "撰寫初構/終解程式碼時的考量 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__LOCAL_SIZE 常數"
   - "配置, 堆疊框架"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "堆疊, 堆疊框架配置"
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 撰寫初構/終解程式碼時的考量
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

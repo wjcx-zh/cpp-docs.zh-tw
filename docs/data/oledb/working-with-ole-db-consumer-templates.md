@@ -1,8 +1,7 @@
 ---
 title: "使用 OLE DB 消費者樣板 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "範例應用程式 [C++], OLE DB 樣板"
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 使用 OLE DB 消費者樣板
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "HTML 檔案 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "精靈 [C++], 自訂精靈的使用者介面"
 ms.assetid: 3b6ed080-6560-418b-b908-d84d71bdf145
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # HTML 檔案
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "CDaoRelationInfo 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "DAO (資料存取物件), 關聯性集合"
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # CDaoRelationInfo 結構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

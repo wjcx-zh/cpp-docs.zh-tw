@@ -1,8 +1,7 @@
 ---
 title: "Mutex::Mutex 建構函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Mutex, 建構函式"
 ms.assetid: 504afcdc-775a-4c98-a06f-4fb4663eba3f
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # Mutex::Mutex 建構函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

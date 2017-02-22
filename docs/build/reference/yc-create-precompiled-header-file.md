@@ -1,8 +1,7 @@
 ---
 title: "/Yc (建立先行編譯標頭檔) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "-Yc 編譯器選項 [C++]"
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /Yc (建立先行編譯標頭檔)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

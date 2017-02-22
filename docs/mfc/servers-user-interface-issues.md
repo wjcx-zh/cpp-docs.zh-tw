@@ -1,8 +1,7 @@
 ---
 title: "伺服器：使用者介面問題 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "使用者介面問題"
 ms.assetid: 7ef55702-b439-43fa-8ced-c69b96239a89
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 伺服器：使用者介面問題
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

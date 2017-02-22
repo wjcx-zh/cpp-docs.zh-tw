@@ -1,8 +1,7 @@
 ---
 title: "_getpid | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "_getpid"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "getpid 函式"
   - "_getpid 函式"
   - "處理序識別碼"
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _getpid
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

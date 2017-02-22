@@ -1,8 +1,7 @@
 ---
 title: "使用匯入程式庫和匯出檔案 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "匯入程式庫, 使用"
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用匯入程式庫和匯出檔案
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

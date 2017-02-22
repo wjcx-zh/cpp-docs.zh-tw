@@ -1,8 +1,7 @@
 ---
 title: "NMAKE 嚴重錯誤 U1070 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "U1070"
 ms.assetid: 8639fc39-b4b1-48f5-ac91-0e9fb61680fd
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # NMAKE 嚴重錯誤 U1070
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

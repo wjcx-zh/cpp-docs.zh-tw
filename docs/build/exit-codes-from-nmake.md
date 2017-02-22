@@ -1,8 +1,7 @@
 ---
 title: "NMAKE 的結束代碼 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE 程式, 結束代碼"
 ms.assetid: 75f6913c-1da5-4572-a2d3-8a4e058bed15
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # NMAKE 的結束代碼
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

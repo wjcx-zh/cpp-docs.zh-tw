@@ -1,8 +1,7 @@
 ---
 title: "時間管理 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.memory"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "日期，執行階段程式庫成員"
   - "時間，時間管理"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "時間函式"
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 時間管理
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "明確卸載延遲載入的 DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "DLL 的延遲載入, 未載入"
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 明確卸載延遲載入的 DLL
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

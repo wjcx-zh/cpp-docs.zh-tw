@@ -1,8 +1,7 @@
 ---
 title: "運算元和運算式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "運算式 [C++], 語法"
   - "運算元"
   - "運算元, 定義"
 ms.assetid: 8453b095-a017-4c70-9a64-e3b2bd1e35e5
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 運算元和運算式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

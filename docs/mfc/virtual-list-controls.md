@@ -1,8 +1,7 @@
 ---
 title: "虛擬清單控制項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "虛擬清單控制項"
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 虛擬清單控制項
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

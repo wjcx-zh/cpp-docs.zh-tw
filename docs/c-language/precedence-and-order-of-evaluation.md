@@ -1,8 +1,7 @@
 ---
 title: "優先順序和評估順序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "運算子的順序關聯性 [C++]"
   - "資料繫結 [C++], 運算子優先順序"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "優先順序 [C++], 運算子"
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 優先順序和評估順序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

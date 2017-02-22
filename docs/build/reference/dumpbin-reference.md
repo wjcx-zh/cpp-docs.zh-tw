@@ -1,8 +1,7 @@
 ---
 title: "DUMPBIN 參考 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Microsoft COFF 二進位檔傾印工具"
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # DUMPBIN 參考
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

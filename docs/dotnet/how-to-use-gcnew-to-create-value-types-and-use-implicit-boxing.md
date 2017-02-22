@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 gcnew 建立實值類型及使用隱含 Boxing | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "實值類型, 建立"
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 如何：使用 gcnew 建立實值類型及使用隱含 Boxing
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

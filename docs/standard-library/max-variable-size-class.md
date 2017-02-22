@@ -1,8 +1,7 @@
 ---
 title: "max_variable_size 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "max_variable_size 類別"
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
 caps.latest.revision: 18
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # max_variable_size 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

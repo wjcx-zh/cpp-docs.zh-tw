@@ -1,8 +1,7 @@
 ---
 title: "區塊範圍的名稱連結 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "範圍 [C++], 連結規則"
 ms.assetid: 73efa91a-f761-47f7-bbd9-9f9e3508e218
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 區塊範圍的名稱連結
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

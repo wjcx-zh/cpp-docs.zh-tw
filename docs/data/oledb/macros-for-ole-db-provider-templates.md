@@ -1,8 +1,7 @@
 ---
 title: "OLE DB 提供者樣板的巨集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "提供者樣板巨集 (OLE DB)"
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # OLE DB 提供者樣板的巨集
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

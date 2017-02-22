@@ -1,8 +1,7 @@
 ---
 title: "成員函式概觀 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "this 指標, 和非靜態成員函式"
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 成員函式概觀
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

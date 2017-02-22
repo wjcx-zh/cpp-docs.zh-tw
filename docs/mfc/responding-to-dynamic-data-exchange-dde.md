@@ -1,8 +1,7 @@
 ---
 title: "回應動態資料交換 (DDE) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "視窗 [C++], 和動態資料交換"
 ms.assetid: 4db838d5-62cf-4123-915a-66e514155c0c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 回應動態資料交換 (DDE)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

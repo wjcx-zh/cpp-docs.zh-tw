@@ -1,8 +1,7 @@
 ---
 title: "MFC 中的例外狀況處理 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -44,10 +43,10 @@ helpviewer_keywords:
   - "Windows [C++], 資源配置例外狀況"
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # MFC 中的例外狀況處理
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

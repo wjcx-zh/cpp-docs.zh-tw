@@ -1,8 +1,7 @@
 ---
 title: "使用檢視 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "檢視, 使用"
 ms.assetid: dc3de6ad-5c64-4317-8f10-8bdcc38cdbd5
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 使用檢視
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

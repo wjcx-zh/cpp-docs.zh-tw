@@ -1,8 +1,7 @@
 ---
 title: "使用 NMAKE 巨集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE 巨集, 使用"
 ms.assetid: 95c87fbc-76e6-48c0-8536-9bfe179f328e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用 NMAKE 巨集
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

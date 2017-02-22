@@ -1,8 +1,7 @@
 ---
 title: "is_standard_layout 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "is_standard_layout"
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
 caps.latest.revision: 16
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # is_standard_layout 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "length_error 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "length_error 類別"
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # length_error 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

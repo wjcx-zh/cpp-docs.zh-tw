@@ -1,8 +1,7 @@
 ---
 title: "ToolBar 控制項樣式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "ToolBar 控制項樣式"
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
 caps.latest.revision: 16
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # ToolBar 控制項樣式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

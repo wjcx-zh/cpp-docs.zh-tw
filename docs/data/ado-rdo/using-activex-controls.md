@@ -1,8 +1,7 @@
 ---
 title: "使用 ActiveX 控制項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "控制項 [C++], ActiveX"
 ms.assetid: 33442173-205d-492f-82c8-9a8105358ec6
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用 ActiveX 控制項
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

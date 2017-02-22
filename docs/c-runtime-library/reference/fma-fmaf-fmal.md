@@ -1,8 +1,7 @@
 ---
 title: "fma、 fmaf、 fmal | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -35,7 +34,6 @@ f1_keywords:
   - "math/fmaf"
   - "math/fmal"
 dev_langs: 
-  - "C"
   - "C++"
 helpviewer_keywords: 
   - "fma 函式"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "fmal 函式"
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # fma、 fmaf、 fmal
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

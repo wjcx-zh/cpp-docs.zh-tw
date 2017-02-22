@@ -1,8 +1,7 @@
 ---
 title: "使用 ATL 和 C 執行階段程式碼進行程式設計 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CRT, 與 ATL 搭配使用"
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 使用 ATL 和 C 執行階段程式碼進行程式設計
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "IRowsetIdentityImpl 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "IRowsetIdentityImpl 類別"
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # IRowsetIdentityImpl 類別
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

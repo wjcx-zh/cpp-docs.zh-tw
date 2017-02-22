@@ -1,8 +1,7 @@
 ---
 title: "EventTargetArray 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "EventTargetArray 類別"
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # EventTargetArray 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

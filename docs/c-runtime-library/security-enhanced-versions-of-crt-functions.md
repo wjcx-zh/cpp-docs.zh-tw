@@ -1,8 +1,7 @@
 ---
 title: "CRT 函式的安全性增強版本 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "CRT, 安全性增強"
   - "安全性 [CRT]"
   - "安全性增強 CRT"
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # CRT 函式的安全性增強版本
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

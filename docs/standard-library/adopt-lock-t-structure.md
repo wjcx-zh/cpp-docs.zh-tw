@@ -1,8 +1,7 @@
 ---
 title: "adopt_lock_t 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 549972fb-e2e9-4415-8657-c159b09aa3f4
 caps.latest.revision: 13
-caps.handback.revision: 3
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # adopt_lock_t 結構
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

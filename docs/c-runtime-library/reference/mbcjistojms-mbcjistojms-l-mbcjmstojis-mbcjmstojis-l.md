@@ -1,8 +1,7 @@
 ---
 title: "_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "mbcjmstojis"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbcjistojms 函式"
   - "_mbcjistojms_l 函式"
@@ -50,10 +48,10 @@ helpviewer_keywords:
   - "mbcjmstojis_l 函式"
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # _mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

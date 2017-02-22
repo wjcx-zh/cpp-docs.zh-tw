@@ -1,8 +1,7 @@
 ---
 title: "如何：在您的程式碼中實作追蹤 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "CRectTracker 類別, 實作追蹤器"
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 如何：在您的程式碼中實作追蹤
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

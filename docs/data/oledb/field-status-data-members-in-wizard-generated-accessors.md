@@ -1,8 +1,7 @@
 ---
 title: "在精靈產生的存取子中的欄位狀態資料成員 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "OLE DB 消費者樣板, 欄位狀態"
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 在精靈產生的存取子中的欄位狀態資料成員
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

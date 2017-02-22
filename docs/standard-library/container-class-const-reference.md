@@ -1,8 +1,7 @@
 ---
 title: "容器類別::const_reference | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "const_reference 方法"
 ms.assetid: 7a5cfddb-3abf-4c98-b4ad-bbe4da9a5c1b
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 容器類別::const_reference
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

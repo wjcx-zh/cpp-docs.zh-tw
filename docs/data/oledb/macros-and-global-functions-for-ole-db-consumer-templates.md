@@ -1,8 +1,7 @@
 ---
 title: "OLE DB 消費者樣板的巨集和全域函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "OLE DB 消費者樣板, 巨集"
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # OLE DB 消費者樣板的巨集和全域函式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

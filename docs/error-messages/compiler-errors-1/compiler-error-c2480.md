@@ -1,8 +1,7 @@
 ---
 title: "編譯器錯誤 C2480 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2480"
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 編譯器錯誤 C2480
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

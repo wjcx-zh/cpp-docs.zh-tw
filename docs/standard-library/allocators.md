@@ -1,8 +1,7 @@
 ---
 title: "配置器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Standard C++ 程式庫, allocators"
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 配置器
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

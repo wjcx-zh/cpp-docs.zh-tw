@@ -1,8 +1,7 @@
 ---
 title: "is_trivially_default_constructible 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "is_trivially_default_constructible"
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
 caps.latest.revision: 17
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # is_trivially_default_constructible 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

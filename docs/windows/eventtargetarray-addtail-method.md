@@ -1,8 +1,7 @@
 ---
 title: "EventTargetArray::AddTail 方法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "AddTail 方法"
 ms.assetid: d0fafab9-049c-40e0-a40c-d126c9ee63e6
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # EventTargetArray::AddTail 方法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

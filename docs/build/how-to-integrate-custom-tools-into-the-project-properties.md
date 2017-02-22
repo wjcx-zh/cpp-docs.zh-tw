@@ -1,8 +1,7 @@
 ---
 title: "如何：將自訂工具整合至專案屬性中 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "msbuild (c++), 如何：整合自訂工具"
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 如何：將自訂工具整合至專案屬性中
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

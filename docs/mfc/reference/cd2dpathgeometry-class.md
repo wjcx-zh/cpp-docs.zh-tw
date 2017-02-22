@@ -1,8 +1,7 @@
 ---
 title: "CD2DPathGeometry 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CD2DPathGeometry 類別"
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
 caps.latest.revision: 17
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # CD2DPathGeometry 類別
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

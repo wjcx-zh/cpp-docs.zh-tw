@@ -1,8 +1,7 @@
 ---
 title: "內嵌組譯碼中的類型和變數大小 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "變數, 類型"
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 內嵌組譯碼中的類型和變數大小
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

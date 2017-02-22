@@ -1,8 +1,7 @@
 ---
 title: "在內嵌組譯碼中使用和保留暫存器 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "暫存器, 內嵌組譯碼"
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 在內嵌組譯碼中使用和保留暫存器
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

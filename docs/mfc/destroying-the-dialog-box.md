@@ -1,8 +1,7 @@
 ---
 title: "終結對話方塊 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "非強制回應對話方塊, 終結"
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 終結對話方塊
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

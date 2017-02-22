@@ -1,8 +1,7 @@
 ---
 title: "ODBC：直接呼叫 ODBC API 函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "ODBC 類別 [C++], 與 ODBC API 的比較"
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # ODBC：直接呼叫 ODBC API 函式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_dup、_dup2 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "_dup"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_dup 函式"
   - "_dup2 函式"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "檔案控制代碼 [C++], 重新指派"
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
 caps.latest.revision: 19
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # _dup、_dup2
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

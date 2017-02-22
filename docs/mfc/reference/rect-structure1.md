@@ -1,8 +1,7 @@
 ---
-title: "RECT 結構 | Microsoft Docs"
+title: "RECT 結構&amp;1; | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,14 +14,14 @@ f1_keywords:
 dev_langs: 
   - "C++"
 helpviewer_keywords: 
-  - "LPRECT 結構"
   - "RECT 結構"
+  - "LPRECT 結構"
 ms.assetid: 1b3160de-64e9-40d1-89eb-af3e0fd6acf0
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # RECT 結構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "非命令訊息如何連接其處理常式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Windows 訊息 [C++], 傳送"
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 非命令訊息如何連接其處理常式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

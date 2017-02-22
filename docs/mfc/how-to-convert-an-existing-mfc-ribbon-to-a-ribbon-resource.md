@@ -1,8 +1,7 @@
 ---
 title: "如何：將現有的 MFC 功能區轉換為功能區資源 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "功能區資源, 從 MFC 功能區轉換"
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 如何：將現有的 MFC 功能區轉換為功能區資源
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

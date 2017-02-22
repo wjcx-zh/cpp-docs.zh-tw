@@ -1,8 +1,7 @@
 ---
 title: "使用 MFC WinInet 類別建立網際網路用戶端應用程式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "WinInet 類別, 程式設計"
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 使用 MFC WinInet 類別建立網際網路用戶端應用程式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

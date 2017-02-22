@@ -1,8 +1,7 @@
 ---
 title: "運算式評估工具錯誤 CXX0048 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "CXX0048"
 ms.assetid: 294416f9-5e38-4450-8713-c13bcbaaf615
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 運算式評估工具錯誤 CXX0048
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
-title: "_chsize | Microsoft Docs"
+title: "chsize | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,22 +24,17 @@ apilocation:
   - "api-ms-win-crt-stdio-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_chsize"
+  - "chsize"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
-  - "_chsize 函式"
   - "chsize 函式"
-  - "檔案 [C++], 變更大小"
-  - "大小"
-  - "大小, 變更檔案"
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
 caps.latest.revision: 21
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # _chsize
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

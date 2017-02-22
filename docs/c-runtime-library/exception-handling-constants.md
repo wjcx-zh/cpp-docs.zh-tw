@@ -1,8 +1,7 @@
 ---
 title: "例外狀況處理常數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,7 +15,6 @@ f1_keywords:
   - "EXCEPTION_EXECUTE_HANDLER"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "EH 常數"
   - "例外狀況處理, 常數"
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "EXCEPTION_EXECUTE_HANDLER 常數"
 ms.assetid: e1870f41-be9e-46a3-a2ea-830dfbaa18fb
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 例外狀況處理常數
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

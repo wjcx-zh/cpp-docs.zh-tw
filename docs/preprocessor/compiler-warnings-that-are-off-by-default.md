@@ -1,8 +1,7 @@
 ---
 title: "預設為關閉的編譯器警告 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "cl.exe 編譯器, 設定選項"
   - "警告, 編譯器"
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 caps.latest.revision: 39
-caps.handback.revision: 37
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 37
 ---
 # 預設為關閉的編譯器警告
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

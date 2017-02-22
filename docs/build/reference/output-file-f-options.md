@@ -1,8 +1,7 @@
 ---
 title: "輸出檔 (/F) 選項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "輸出檔, 編譯器選項 [C++]"
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 輸出檔 (/F) 選項
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

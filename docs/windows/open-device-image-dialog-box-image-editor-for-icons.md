@@ -1,8 +1,7 @@
 ---
 title: "開啟 &lt;裝置&gt; 影像對話方塊 (圖示影像編輯器) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "vc.editors.opendeviceimage"
 dev_langs: 
   - "C++"
-  - "C++"
 helpviewer_keywords: 
   - "開啟 <裝置> 影像對話方塊"
 ms.assetid: 27cb60ec-8704-4e58-ab1c-8cc3b34e66be
 caps.latest.revision: 8
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 開啟 &lt;裝置&gt; 影像對話方塊 (圖示影像編輯器)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

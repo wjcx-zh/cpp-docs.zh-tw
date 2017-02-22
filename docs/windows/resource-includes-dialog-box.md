@@ -1,8 +1,7 @@
 ---
 title: "資源包含對話方塊 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "符號, 符號標頭檔"
 ms.assetid: 659a54e6-e416-4045-8411-798730ff4ce3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 資源包含對話方塊
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

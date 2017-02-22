@@ -1,8 +1,7 @@
 ---
 title: "Microsoft::WRL::Wrappers::HandleTraits Namespace | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "HandleTraits 命名空間"
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Microsoft::WRL::Wrappers::HandleTraits Namespace
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

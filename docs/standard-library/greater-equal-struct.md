@@ -1,8 +1,7 @@
 ---
 title: "greater_equal 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "greater_equal 函式"
 ms.assetid: a8ba911b-7af8-4653-b972-d8618f4df7d5
 caps.latest.revision: 22
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # greater_equal 結構
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

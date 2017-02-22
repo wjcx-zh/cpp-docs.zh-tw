@@ -1,8 +1,7 @@
 ---
 title: "連結器工具警告 LNK4099 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LNK4099"
 ms.assetid: 358170a4-07cd-43fe-918f-82c32757ffc5
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 連結器工具警告 LNK4099
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "從不帶正負號整數類型的轉換 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "資料類型轉換 [C++], 帶正負號和不帶正負號的整數"
   - "整數, 轉換"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "類型轉換 [C++], 帶正負號和不帶正負號的整數"
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 從不帶正負號整數類型的轉換
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

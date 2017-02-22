@@ -1,8 +1,7 @@
 ---
 title: "轉換運算子的變更 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "類型轉換, 明確轉換"
 ms.assetid: 9b83925c-71b7-4bd3-ac2e-843dd7c7f184
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 轉換運算子的變更
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

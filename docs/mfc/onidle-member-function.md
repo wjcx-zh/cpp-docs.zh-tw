@@ -1,8 +1,7 @@
 ---
 title: "OnIdle 成員函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "處理訊息"
 ms.assetid: 51adc874-0075-4f76-be1c-79283f46c10b
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # OnIdle 成員函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

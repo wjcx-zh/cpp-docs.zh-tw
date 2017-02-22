@@ -1,8 +1,7 @@
 ---
 title: "HString::HString 建構函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 6da12785-ed01-4720-a004-667db60298f1
 caps.latest.revision: 2
-caps.handback.revision: 2
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 2
 ---
 # HString::HString 建構函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

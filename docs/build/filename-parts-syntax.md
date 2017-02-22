@@ -1,8 +1,7 @@
 ---
 title: "檔名部分語法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "語法, 檔名部分"
 ms.assetid: 48fe38e0-3f3b-40e6-894c-330ee775a656
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 檔名部分語法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

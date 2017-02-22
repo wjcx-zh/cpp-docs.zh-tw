@@ -1,8 +1,7 @@
 ---
 title: "功能表 (MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "功能表, 更新為內容變更"
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 功能表 (MFC)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

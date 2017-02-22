@@ -1,8 +1,7 @@
 ---
 title: "如何：判斷影像是否為原生或 CLR | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "影像 [C++], CLR 驗證"
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 如何：判斷影像是否為原生或 CLR
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Module::MethodReleaseNotifier::object_ 資料成員 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "object_ 資料類型"
 ms.assetid: 502d4a6f-f612-4d4e-9df7-fede288e9501
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # Module::MethodReleaseNotifier::object_ 資料成員
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

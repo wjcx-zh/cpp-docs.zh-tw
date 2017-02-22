@@ -1,8 +1,7 @@
 ---
 title: "_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -46,7 +45,6 @@ f1_keywords:
   - "_wutime32"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "tutime 函式"
   - "utime32 函式"
@@ -70,10 +68,10 @@ helpviewer_keywords:
   - "tutime32 函式"
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

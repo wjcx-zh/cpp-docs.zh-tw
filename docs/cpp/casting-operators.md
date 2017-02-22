@@ -1,8 +1,7 @@
 ---
 title: "轉型運算子 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "運算子 [C++], 轉型"
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 轉型運算子
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

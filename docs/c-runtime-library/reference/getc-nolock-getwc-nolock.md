@@ -1,8 +1,7 @@
 ---
 title: "_getc_nolock、_getwc_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_getwc_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_getc_nolock 函式"
   - "_gettc_nolock 函式"
@@ -47,10 +45,10 @@ helpviewer_keywords:
   - "資料流, 讀取字元來源"
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _getc_nolock、_getwc_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

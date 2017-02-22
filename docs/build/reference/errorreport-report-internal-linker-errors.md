@@ -1,8 +1,7 @@
 ---
 title: "/ERRORREPORT (回報內部連結器錯誤) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "-ERRORREPORT 連結器選項"
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /ERRORREPORT (回報內部連結器錯誤)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

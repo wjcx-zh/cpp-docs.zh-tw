@@ -1,8 +1,7 @@
 ---
 title: "Rich Edit 控制項中的斷字法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "斷字法"
 ms.assetid: 641dcf9e-7b40-4dc0-85f7-575a8c142f73
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Rich Edit 控制項中的斷字法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

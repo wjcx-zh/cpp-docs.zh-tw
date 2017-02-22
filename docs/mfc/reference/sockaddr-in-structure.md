@@ -1,8 +1,7 @@
 ---
 title: "SOCKADDR_IN 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "SOCKADDR_IN 結構"
 ms.assetid: e8cd7c34-78bd-4e28-a990-eb3ca070b7a6
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # SOCKADDR_IN 結構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

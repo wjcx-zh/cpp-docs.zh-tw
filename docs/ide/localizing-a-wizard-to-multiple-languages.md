@@ -1,8 +1,7 @@
 ---
 title: "將精靈當地語系化為多種語言 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "精靈 [C++], 當地語系化"
 ms.assetid: 879885c2-fafd-44fd-8032-bf0c301f4f45
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 將精靈當地語系化為多種語言
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

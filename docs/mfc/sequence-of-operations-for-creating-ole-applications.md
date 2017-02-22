@@ -1,8 +1,7 @@
 ---
 title: "建立 OLE 應用程式的作業順序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "OLE 應用程式 [C++], 建立"
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 建立 OLE 應用程式的作業順序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

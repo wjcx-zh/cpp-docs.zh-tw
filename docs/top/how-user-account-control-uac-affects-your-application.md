@@ -1,27 +1,6 @@
 ---
-title: "使用者帳戶控制 (UAC) 如何影響應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UAC [C++]"
-  - "安全性 [C++], 使用者帳戶控制"
-  - "使用者帳戶 [C++]"
-  - "使用者帳戶控制 [C++]"
-ms.assetid: 0d001870-253e-4989-b689-f78035953799
-caps.latest.revision: 5
+redirect_url: /cpp/security/how-user-account-control-uac-affects-your-application
 caps.handback.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
 ---
 # 使用者帳戶控制 (UAC) 如何影響應用程式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

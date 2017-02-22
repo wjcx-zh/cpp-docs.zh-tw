@@ -1,8 +1,7 @@
 ---
 title: "_tzset | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "_tzset"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_tzset 函式"
   - "時間環境變數"
   - "環境變數，時間設定"
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _tzset
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

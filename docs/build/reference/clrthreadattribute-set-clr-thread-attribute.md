@@ -1,8 +1,7 @@
 ---
 title: "/CLRTHREADATTRIBUTE (設定 CLR 執行緒屬性) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "-CLRTHREADATTRIBUTE 連結器選項"
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # /CLRTHREADATTRIBUTE (設定 CLR 執行緒屬性)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

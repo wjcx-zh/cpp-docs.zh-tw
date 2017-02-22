@@ -1,8 +1,7 @@
 ---
 title: "Windows Form/MFC 程式設計的差異 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Windows Form [C++], 與 MFC 比較"
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # Windows Form/MFC 程式設計的差異
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

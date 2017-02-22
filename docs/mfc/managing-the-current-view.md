@@ -1,8 +1,7 @@
 ---
 title: "管理目前的檢視 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "檢視, 停用"
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 管理目前的檢視
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

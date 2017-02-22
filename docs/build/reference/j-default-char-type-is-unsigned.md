@@ -1,8 +1,7 @@
 ---
 title: "/J (預設 char 類型為 unsigned) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "-J 編譯器選項 [C++]"
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # /J (預設 char 類型為 unsigned)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

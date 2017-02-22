@@ -1,8 +1,7 @@
 ---
 title: "Based 指標 (C) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__based 關鍵字 [C]"
   - "基底定址"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "指標, based"
 ms.assetid: b5446920-89e0-4e2f-91f3-1f2a769a08e8
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Based 指標 (C)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "將 Windows Form 使用者控制項裝載為 MFC 檢視 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows Form 控制項 [C++], 裝載為 MFC 檢視"
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 將 Windows Form 使用者控制項裝載為 MFC 檢視
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "mbtowc、_mbtowc_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,17 +29,16 @@ f1_keywords:
   - "mbtowc"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbtowc_l 函式"
   - "mbtowc 函式"
   - "mbtowc_l 函式"
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # mbtowc、_mbtowc_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

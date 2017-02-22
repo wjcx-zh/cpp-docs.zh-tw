@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 PInvoke 封送處理函式指標 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "平台叫用 [C++], 回呼和委派"
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 如何：使用 PInvoke 封送處理函式指標
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

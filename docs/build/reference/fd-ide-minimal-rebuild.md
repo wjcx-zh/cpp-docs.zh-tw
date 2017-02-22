@@ -1,8 +1,7 @@
 ---
 title: "/FD (IDE 最少重建) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-FD 編譯器選項 [C++]"
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /FD (IDE 最少重建)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

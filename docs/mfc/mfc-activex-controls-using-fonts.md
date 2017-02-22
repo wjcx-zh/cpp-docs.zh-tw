@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控制項：使用字型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,10 +29,10 @@ helpviewer_keywords:
   - "內建字型屬性"
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # MFC ActiveX 控制項：使用字型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

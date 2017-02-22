@@ -1,8 +1,7 @@
 ---
 title: "命令列錯誤 D8027 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "D8027"
 ms.assetid: f228220f-0c7f-49a6-a6e0-1f7bd4745aa6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 命令列錯誤 D8027
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

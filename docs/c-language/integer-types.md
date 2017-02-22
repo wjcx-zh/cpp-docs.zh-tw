@@ -1,8 +1,7 @@
 ---
 title: "整數類型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "整數常數"
   - "integer 資料類型, C++ 中的整數類型"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "整數, 類型"
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 整數類型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

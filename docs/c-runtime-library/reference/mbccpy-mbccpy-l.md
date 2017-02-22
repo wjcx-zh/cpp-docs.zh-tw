@@ -1,8 +1,7 @@
 ---
 title: "_mbccpy、_mbccpy_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -34,7 +33,6 @@ f1_keywords:
   - "_ftccpy"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbccpy 函式"
   - "_mbccpy_l 函式"
@@ -46,10 +44,10 @@ helpviewer_keywords:
   - "tccpy_l 函式"
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _mbccpy、_mbccpy_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

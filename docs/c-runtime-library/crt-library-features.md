@@ -1,8 +1,7 @@
 ---
 title: "CRT 程式庫功能 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.runtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "MSVCR71.dll"
   - "程式庫 [C++], 多執行緒"
@@ -30,10 +28,10 @@ helpviewer_keywords:
   - "連結 [C++], 程式庫"
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
 caps.latest.revision: 32
-caps.handback.revision: 32
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 32
 ---
 # CRT 程式庫功能
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

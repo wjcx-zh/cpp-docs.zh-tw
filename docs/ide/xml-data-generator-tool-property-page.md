@@ -1,8 +1,7 @@
 ---
 title: "XML 資料產生器工具屬性頁 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "XML 資料產生器工具屬性頁"
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # XML 資料產生器工具屬性頁
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

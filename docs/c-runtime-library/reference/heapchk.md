@@ -1,8 +1,7 @@
 ---
 title: "_heapchk | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "heapchk"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_heapchk 函式"
   - "堆積的一致性檢查"
@@ -38,10 +36,10 @@ helpviewer_keywords:
   - "堆積, 檢查一致性"
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _heapchk
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

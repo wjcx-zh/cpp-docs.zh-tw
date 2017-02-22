@@ -1,8 +1,7 @@
 ---
 title: "tmpfile_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "tmpfile_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "暫存檔案"
   - "tmpfile_s 函式"
   - "暫存檔案, 建立"
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
 caps.latest.revision: 20
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # tmpfile_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

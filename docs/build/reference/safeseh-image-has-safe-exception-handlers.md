@@ -1,8 +1,7 @@
 ---
 title: "/SAFESEH (影像擁有安全例外狀況處理常式) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "SAFESEH 連結器選項"
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # /SAFESEH (影像擁有安全例外狀況處理常式)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

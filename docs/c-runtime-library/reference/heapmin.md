@@ -1,8 +1,7 @@
 ---
 title: "_heapmin | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,7 +28,6 @@ f1_keywords:
   - "heapmin"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_heapmin 函式"
   - "堆積記憶體"
@@ -39,10 +37,10 @@ helpviewer_keywords:
   - "最小化堆積"
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _heapmin
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

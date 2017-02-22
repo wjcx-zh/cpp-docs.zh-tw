@@ -1,8 +1,7 @@
 ---
 title: "建立工具提示的方法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "工具提示 [C++], 工具提示控制項"
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 建立工具提示的方法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

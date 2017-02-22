@@ -1,8 +1,7 @@
 ---
 title: "架構中的訊息和命令 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "訊息驅動型程式設計"
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 架構中的訊息和命令
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

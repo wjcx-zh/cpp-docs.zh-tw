@@ -1,8 +1,7 @@
 ---
 title: "VerifyInterfaceHelper 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "VerifyInterfaceHelper 結構"
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # VerifyInterfaceHelper 結構
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

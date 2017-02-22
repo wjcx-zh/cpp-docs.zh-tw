@@ -1,8 +1,7 @@
 ---
 title: "錯誤處理和告知 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "錯誤處理, 和告知"
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 錯誤處理和告知
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

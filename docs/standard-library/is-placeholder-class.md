@@ -1,8 +1,7 @@
 ---
 title: "is_placeholder 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "is_placeholder 類別 [TR1]"
 ms.assetid: 2b21a792-96d1-4bb8-b911-0db796510835
 caps.latest.revision: 22
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # is_placeholder 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

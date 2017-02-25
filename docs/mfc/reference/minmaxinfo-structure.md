@@ -1,8 +1,7 @@
 ---
 title: "MINMAXINFO 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MINMAXINFO 結構"
 ms.assetid: be6fb578-f98a-4581-9ada-be9df308ed2f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # MINMAXINFO 結構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

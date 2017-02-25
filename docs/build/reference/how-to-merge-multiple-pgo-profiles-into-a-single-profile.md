@@ -1,8 +1,7 @@
 ---
 title: "如何：將多個 PGO 設定檔合併至單一設定檔 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "特性指引最佳化, 合併設定檔"
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 如何：將多個 PGO 設定檔合併至單一設定檔
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "自動 (函式範圍) 變數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "變數, 自動"
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 自動 (函式範圍) 變數
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

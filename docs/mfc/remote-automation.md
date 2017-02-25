@@ -1,8 +1,7 @@
 ---
 title: "Remote Automation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "Remote Automation"
 ms.assetid: 363f87fb-08fa-4458-b089-b46365a6d4f2
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Remote Automation
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

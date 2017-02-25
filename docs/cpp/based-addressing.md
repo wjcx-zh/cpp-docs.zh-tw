@@ -1,8 +1,7 @@
 ---
 title: "基底定址 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "基底定址 [C++]"
 ms.assetid: e80527b0-2303-4755-a52e-3e07e17232da
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 基底定址
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

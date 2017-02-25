@@ -1,8 +1,7 @@
 ---
 title: "_mbsnbcpy_s、_mbsnbcpy_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_mbsnbcpy_s_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsnbcpy_s 函式"
   - "_mbsnbcpy_s_l 函式"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "tcsncpy_s_l 函式"
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
 caps.latest.revision: 29
-caps.handback.revision: 29
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 29
 ---
 # _mbsnbcpy_s、_mbsnbcpy_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

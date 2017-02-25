@@ -1,8 +1,7 @@
 ---
 title: "如何：在 System::Guid 和 _GUID 之間轉換 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "System::GUID, 轉換為 GUID"
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 如何：在 System::Guid 和 _GUID 之間轉換
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

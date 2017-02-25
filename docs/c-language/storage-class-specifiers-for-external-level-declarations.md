@@ -1,8 +1,7 @@
 ---
 title: "外部層級宣告的儲存類別規範 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "宣告 [C++], 外部"
   - "宣告 [C++], 規範"
@@ -28,10 +26,10 @@ helpviewer_keywords:
   - "可視性, 變數"
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 外部層級宣告的儲存類別規範
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

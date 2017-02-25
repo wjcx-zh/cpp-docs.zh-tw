@@ -1,8 +1,7 @@
 ---
 title: "非同步代理程式程式庫中的最佳做法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "要避免的做法, 非同步代理程式程式庫"
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
 caps.latest.revision: 15
-caps.handback.revision: 12
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 非同步代理程式程式庫中的最佳做法
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

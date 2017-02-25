@@ -1,8 +1,7 @@
 ---
 title: "以第二個記錄集填入清單方塊 (MFC 資料存取) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "資料錄集 [C++], 填入清單方塊或下拉式方塊"
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 以第二個記錄集填入清單方塊 (MFC 資料存取)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

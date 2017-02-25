@@ -1,8 +1,7 @@
 ---
 title: "binary_function 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "binary_function 類別"
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
 caps.latest.revision: 17
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # binary_function 結構
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

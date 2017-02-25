@@ -1,8 +1,7 @@
 ---
 title: "陣列、清單和對應類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "對應類別"
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 陣列、清單和對應類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

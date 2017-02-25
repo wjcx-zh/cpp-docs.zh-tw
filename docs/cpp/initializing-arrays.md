@@ -1,8 +1,7 @@
 ---
 title: "初始化陣列 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "初始化陣列 [c + +]"
 ms.assetid: 41efe5f0-15b5-4f49-9196-c4902f8fc705
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 初始化陣列
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

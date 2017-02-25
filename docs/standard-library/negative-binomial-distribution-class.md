@@ -1,8 +1,7 @@
 ---
 title: "negative_binomial_distribution 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "negative_binomial_distribution 類別"
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
 caps.latest.revision: 15
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # negative_binomial_distribution 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

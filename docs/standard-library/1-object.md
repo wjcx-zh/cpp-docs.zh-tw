@@ -1,8 +1,7 @@
 ---
 title: "_1 物件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "_1 物件 [TR1]"
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
 caps.latest.revision: 24
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _1 物件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

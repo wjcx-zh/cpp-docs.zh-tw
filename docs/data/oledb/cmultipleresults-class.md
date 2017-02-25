@@ -1,8 +1,7 @@
 ---
 title: "CMultipleResults 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CMultipleResults 類別"
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CMultipleResults 類別
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

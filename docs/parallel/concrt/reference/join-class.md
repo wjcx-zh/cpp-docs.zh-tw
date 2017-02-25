@@ -1,8 +1,7 @@
 ---
 title: "join 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "join 類別"
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
 caps.latest.revision: 20
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # join 類別
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

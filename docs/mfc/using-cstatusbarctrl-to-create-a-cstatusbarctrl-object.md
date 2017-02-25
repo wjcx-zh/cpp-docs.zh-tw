@@ -1,8 +1,7 @@
 ---
 title: "使用 CStatusBarCtrl 建立 CStatusBarCtrl 物件 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "狀態列控制項, 建立"
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 使用 CStatusBarCtrl 建立 CStatusBarCtrl 物件
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

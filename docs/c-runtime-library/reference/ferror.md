@@ -1,8 +1,7 @@
 ---
 title: "ferror | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "ferror"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "錯誤 [C++], 測試資料流"
   - "ferror 函式"
   - "資料流, 測試是否有錯誤"
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # ferror
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

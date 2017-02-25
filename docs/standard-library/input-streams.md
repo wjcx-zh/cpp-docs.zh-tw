@@ -1,8 +1,7 @@
 ---
 title: "輸入資料流 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "讀取資料 [C++], 從輸入資料流"
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
 caps.latest.revision: 11
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 輸入資料流
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

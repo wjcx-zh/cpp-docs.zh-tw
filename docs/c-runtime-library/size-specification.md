@@ -1,8 +1,7 @@
 ---
 title: "大小規格 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,15 +20,14 @@ f1_keywords:
   - "size"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "printf 函式, 格式規格欄位"
 ms.assetid: 525dc5d8-e70a-4797-a6a0-ec504a27355c
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 大小規格
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

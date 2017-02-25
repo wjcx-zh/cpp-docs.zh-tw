@@ -1,8 +1,7 @@
 ---
 title: "time_point 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 caps.latest.revision: 10
-caps.handback.revision: 4
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # time_point 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

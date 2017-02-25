@@ -1,8 +1,7 @@
 ---
 title: "printf_p 位置參數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,16 +18,15 @@ apilocation:
 apitype: "DLLExport"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_printf_p 函式, 位置參數"
   - "printf_p 函式, 位置參數"
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # printf_p 位置參數
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

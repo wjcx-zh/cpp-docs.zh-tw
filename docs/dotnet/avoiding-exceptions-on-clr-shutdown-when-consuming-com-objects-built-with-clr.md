@@ -1,8 +1,7 @@
 ---
 title: "當使用以 /clr 建置的 COM 物件時防止 CLR 關閉之例外狀況 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "混合的組件 [C++], CLR 關閉例外狀況"
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # 當使用以 /clr 建置的 COM 物件時防止 CLR 關閉之例外狀況
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

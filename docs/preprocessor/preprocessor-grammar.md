@@ -1,8 +1,7 @@
 ---
 title: "前置處理器文法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "文法, 前置處理器"
   - "前置處理器"
   - "前置處理器, 文法"
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 前置處理器文法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

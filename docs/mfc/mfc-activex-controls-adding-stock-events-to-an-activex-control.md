@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控制項：將內建事件加入至 ActiveX 控制項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -53,10 +52,10 @@ helpviewer_keywords:
   - "ReadyStateChange 事件"
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC ActiveX 控制項：將內建事件加入至 ActiveX 控制項
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

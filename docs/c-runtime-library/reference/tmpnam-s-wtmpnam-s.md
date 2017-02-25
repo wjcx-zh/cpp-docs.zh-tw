@@ -1,8 +1,7 @@
 ---
 title: "tmpnam_s、_wtmpnam_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "L_tmpnam_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_wtmpnam_s 函式"
   - "檔案名稱 [C++], 建立暫存"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "wtmpnam_s 函式"
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # tmpnam_s、_wtmpnam_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

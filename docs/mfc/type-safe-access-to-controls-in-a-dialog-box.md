@@ -1,8 +1,7 @@
 ---
 title: "對話方塊中之控制項的類型安全存取 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "Windows 通用控制項 [C++], 在對話方塊中"
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 對話方塊中之控制項的類型安全存取
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

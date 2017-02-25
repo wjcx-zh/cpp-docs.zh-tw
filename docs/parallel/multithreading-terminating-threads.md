@@ -1,8 +1,7 @@
 ---
 title: "多執行緒：結束執行緒 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "執行緒 [MFC], 結束執行緒"
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 多執行緒：結束執行緒
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

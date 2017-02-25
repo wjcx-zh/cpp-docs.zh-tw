@@ -1,8 +1,7 @@
 ---
 title: "MixIn 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MixIn 結構"
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
 caps.latest.revision: 4
-caps.handback.revision: 4
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # MixIn 結構
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

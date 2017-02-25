@@ -1,8 +1,7 @@
 ---
 title: "_spawnl、_wspawnl | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_spawnl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "spawnl 函式"
   - "處理序，建立"
@@ -43,10 +41,10 @@ helpviewer_keywords:
   - "處理序建立"
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # _spawnl、_wspawnl
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

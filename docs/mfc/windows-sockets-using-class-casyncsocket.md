@@ -1,8 +1,7 @@
 ---
 title: "Windows Sockets：使用類別 CAsyncSocket | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "Windows Sockets [C++], 轉換 Unicode 和 MBCS 字串"
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # Windows Sockets：使用類別 CAsyncSocket
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

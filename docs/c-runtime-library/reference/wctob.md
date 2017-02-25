@@ -1,8 +1,7 @@
 ---
 title: "wctob | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "wctob"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "字元, 轉換"
   - "wctob 函式"
   - "寬字元, 轉換"
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
 caps.latest.revision: 14
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # wctob
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

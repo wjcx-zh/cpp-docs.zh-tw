@@ -1,8 +1,7 @@
 ---
 title: "/Oy (框架指標省略) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "隱藏框架指標的建立"
 ms.assetid: c451da86-5297-4c5a-92bc-561d41379853
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # /Oy (框架指標省略)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

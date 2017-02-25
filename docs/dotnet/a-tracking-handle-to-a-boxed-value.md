@@ -1,8 +1,7 @@
 ---
 title: "Boxed 值的追蹤控制代碼 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "Boxed 實值類型, 追蹤控制代碼至"
 ms.assetid: 16c92048-5b74-47d5-8eca-dfea3d38879a
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # Boxed 值的追蹤控制代碼
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

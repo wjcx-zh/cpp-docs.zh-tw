@@ -1,8 +1,7 @@
 ---
 title: "加強性 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,15 +12,14 @@ f1_keywords:
   - "c.runtime"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "加強性 [CRT]"
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 加強性
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

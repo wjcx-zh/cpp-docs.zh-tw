@@ -1,8 +1,7 @@
 ---
 title: "前置處理器指示詞 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "指示詞, 前置處理器"
   - "前置處理器, 指示詞"
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 前置處理器指示詞
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

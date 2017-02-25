@@ -1,8 +1,7 @@
 ---
 title: "伺服器：實作就地編輯框架視窗 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "伺服器, 就地編輯框架視窗"
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 伺服器：實作就地編輯框架視窗
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

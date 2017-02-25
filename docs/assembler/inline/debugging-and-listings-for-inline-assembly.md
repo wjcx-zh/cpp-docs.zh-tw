@@ -1,8 +1,7 @@
 ---
 title: "內嵌組譯碼的偵錯和清單 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "來源層級偵錯工具"
 ms.assetid: 69266930-6f9a-433d-b704-f4f44e7b2583
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 內嵌組譯碼的偵錯和清單
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

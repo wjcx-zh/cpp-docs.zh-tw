@@ -1,8 +1,7 @@
 ---
 title: "InterfaceListHelper 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "InterfaceListHelper 結構"
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
 caps.latest.revision: 5
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # InterfaceListHelper 結構
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

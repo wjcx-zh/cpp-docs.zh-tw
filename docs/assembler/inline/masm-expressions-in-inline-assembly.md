@@ -1,8 +1,7 @@
 ---
 title: "內嵌組譯碼中的 MASM 運算式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "MASM (Microsoft Macro Assembler), 運算式"
 ms.assetid: c80e89e6-1084-4654-bb14-68c5f6ef2840
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 內嵌組譯碼中的 MASM 運算式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

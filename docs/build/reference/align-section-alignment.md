@@ -1,8 +1,7 @@
 ---
 title: "/ALIGN (區段對齊) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "區段, 指定記憶體對齊"
 ms.assetid: f2f8ac24-e90e-4bea-8205-f2960a3b1740
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /ALIGN (區段對齊)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

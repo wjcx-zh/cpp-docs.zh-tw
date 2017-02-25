@@ -1,8 +1,7 @@
 ---
 title: "AsyncBase::GetOnComplete 方法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetOnComplete 方法"
 ms.assetid: f06ae02d-9a88-41d2-b749-bdc1a7ff8748
 caps.latest.revision: 3
-caps.handback.revision: 3
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 3
 ---
 # AsyncBase::GetOnComplete 方法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

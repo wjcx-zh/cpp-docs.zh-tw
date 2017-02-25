@@ -1,8 +1,7 @@
 ---
 title: "配置和解除配置視窗記憶體 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "視窗物件, 解除配置其記憶體"
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 配置和解除配置視窗記憶體
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "scoped_d3d_access_lock 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
 caps.latest.revision: 8
-caps.handback.revision: 2
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # scoped_d3d_access_lock 類別
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

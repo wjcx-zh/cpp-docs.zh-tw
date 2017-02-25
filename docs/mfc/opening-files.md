@@ -1,8 +1,7 @@
 ---
 title: "開啟檔案 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "開啟檔案, 在 MFC 中"
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 開啟檔案
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

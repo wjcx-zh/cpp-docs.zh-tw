@@ -1,8 +1,7 @@
 ---
 title: "/OUT (輸出檔名稱) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "輸出檔, name 連結器選項"
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # /OUT (輸出檔名稱)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

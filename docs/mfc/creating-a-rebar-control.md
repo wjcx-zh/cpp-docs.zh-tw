@@ -1,8 +1,7 @@
 ---
 title: "建立 Rebar 控制項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "Rebar 控制項, 建立"
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 建立 Rebar 控制項
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

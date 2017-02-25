@@ -1,8 +1,7 @@
 ---
 title: "filesystem_error 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ dev_langs:
   - "C++"
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 caps.latest.revision: 13
-caps.handback.revision: 5
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # filesystem_error 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

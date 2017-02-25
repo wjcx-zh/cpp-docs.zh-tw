@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 PInvoke 封送處理字串 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "平台叫用 [C++], 字串"
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 如何：使用 PInvoke 封送處理字串
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

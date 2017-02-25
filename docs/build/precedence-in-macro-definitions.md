@@ -1,8 +1,7 @@
 ---
 title: "巨集定義的優先順序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "NMAKE 程式, 巨集定義的優先順序"
 ms.assetid: 0c13182d-83cb-4cbd-af2d-f4c916b62aeb
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 巨集定義的優先順序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

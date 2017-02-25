@@ -1,8 +1,7 @@
 ---
 title: "框架視窗類別 (架構) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "框架視窗類別, 文件/檢視架構"
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 框架視窗類別 (架構)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

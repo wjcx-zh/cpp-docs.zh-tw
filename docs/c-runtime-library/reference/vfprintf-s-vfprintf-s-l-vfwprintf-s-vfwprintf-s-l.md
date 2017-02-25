@@ -1,8 +1,7 @@
 ---
 title: "vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "vfprintf_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_vfprintf_s_l 函式"
   - "_vftprintf_s 函式"
@@ -46,10 +44,10 @@ helpviewer_keywords:
   - "vfwprintf_s_l 函式"
 ms.assetid: eab6f563-46e2-4806-963f-2b23f339ecdc
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "搜尋和排序 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "資料 [CRT], 搜尋"
   - "搜尋 [C++]"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "排序資料"
 ms.assetid: 15e984f0-e155-46f5-8542-51c458792f54
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 搜尋和排序
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

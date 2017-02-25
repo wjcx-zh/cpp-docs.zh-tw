@@ -1,8 +1,7 @@
 ---
 title: "執行階段程式庫行為 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,10 +25,10 @@ helpviewer_keywords:
   - "執行階段 [C++], DLL 啟動順序"
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 執行階段程式庫行為
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

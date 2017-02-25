@@ -1,8 +1,7 @@
 ---
 title: "呼叫範例：函式原型和呼叫 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "範例 [C++], 呼叫慣例"
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 呼叫範例：函式原型和呼叫
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "Automation 用戶端：使用類型程式庫 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "類型程式庫, Automation 用戶端"
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # Automation 用戶端：使用類型程式庫
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

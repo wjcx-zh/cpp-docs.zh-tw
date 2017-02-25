@@ -1,8 +1,7 @@
 ---
 title: "MFC：使用不具文件和檢視的資料庫類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "使用者介面 [C++], 繪製資訊"
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # MFC：使用不具文件和檢視的資料庫類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

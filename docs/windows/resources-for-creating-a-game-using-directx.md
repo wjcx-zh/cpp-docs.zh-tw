@@ -1,8 +1,7 @@
 ---
 title: "用於使用 DirectX 建立遊戲的資源 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Windows 應用程式 [C++], 遊戲"
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 用於使用 DirectX 建立遊戲的資源
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

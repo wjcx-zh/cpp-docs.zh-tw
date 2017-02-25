@@ -1,8 +1,7 @@
 ---
 title: "CNoAccessor 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CNoAccessor 類別"
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # CNoAccessor 類別
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

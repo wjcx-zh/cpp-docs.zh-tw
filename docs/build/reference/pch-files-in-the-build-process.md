@@ -1,8 +1,7 @@
 ---
 title: "建置程序中的 PCH 檔 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "PCH 檔案, 建置程序"
 ms.assetid: ebb4b368-8a11-4009-b347-01e79af02fbc
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 建置程序中的 PCH 檔
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

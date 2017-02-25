@@ -1,8 +1,7 @@
 ---
 title: "_fseek_nolock、_fseeki64_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,7 +30,6 @@ f1_keywords:
   - "fseeki64_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_fseek_nolock 函式"
   - "_fseeki64_nolock 函式"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "搜尋檔案指標"
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _fseek_nolock、_fseeki64_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

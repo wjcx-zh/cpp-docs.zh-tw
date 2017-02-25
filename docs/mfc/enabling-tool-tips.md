@@ -1,8 +1,7 @@
 ---
 title: "啟用工具提示 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "工具提示 [C++], 初始化"
 ms.assetid: 06b7c889-7722-4ce6-8b88-9efa50fe6369
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 啟用工具提示
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

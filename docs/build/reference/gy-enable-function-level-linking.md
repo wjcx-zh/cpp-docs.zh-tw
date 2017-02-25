@@ -1,8 +1,7 @@
 ---
 title: "/Gy (啟用函式階層連結) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "封裝函式"
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
 caps.latest.revision: 17
-caps.handback.revision: 17
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # /Gy (啟用函式階層連結)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

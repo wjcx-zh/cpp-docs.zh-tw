@@ -1,8 +1,7 @@
 ---
 title: "指定自訂建置工具 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "自訂建置工具 (C++), 指定"
 ms.assetid: e5161946-8002-418d-991e-219e6a8586f5
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 指定自訂建置工具
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

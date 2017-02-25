@@ -1,8 +1,7 @@
 ---
 title: "使用影像清單 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "清單 [C++], 影像"
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 使用影像清單
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

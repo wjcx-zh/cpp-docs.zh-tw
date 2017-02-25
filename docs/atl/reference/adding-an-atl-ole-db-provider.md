@@ -1,8 +1,7 @@
 ---
 title: "加入 ATL OLE DB 提供者 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB, 在專案中加入 ATL OLE DB 提供者"
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 加入 ATL OLE DB 提供者
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

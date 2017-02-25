@@ -1,8 +1,7 @@
 ---
 title: "_realloc_dbg | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "realloc_dbg"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "重新配置記憶體區塊"
   - "realloc_dbg 函式"
@@ -37,10 +35,10 @@ helpviewer_keywords:
   - "_realloc_dbg 函式"
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
 caps.latest.revision: 15
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # _realloc_dbg
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

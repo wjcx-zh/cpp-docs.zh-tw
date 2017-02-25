@@ -1,8 +1,7 @@
 ---
 title: "建立網際網路用戶端應用程式的 MFC 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "WinInet 類別, 類別"
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 建立網際網路用戶端應用程式的 MFC 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

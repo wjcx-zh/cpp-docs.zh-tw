@@ -1,8 +1,7 @@
 ---
 title: "為提供者建立專案 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "專案 [C++], 建立"
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 為提供者建立專案
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

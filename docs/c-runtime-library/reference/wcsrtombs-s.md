@@ -1,8 +1,7 @@
 ---
 title: "wcsrtombs_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,17 +27,16 @@ f1_keywords:
   - "wcsrtombs_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "字串轉換, 寬字元"
   - "wcsrtombs_s 函式"
   - "寬字元, 字串"
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
 caps.latest.revision: 27
-caps.handback.revision: 25
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 27
 ---
 # wcsrtombs_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

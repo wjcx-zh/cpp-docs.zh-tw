@@ -1,8 +1,7 @@
 ---
 title: "加入控制項 (ATL 教學課程，第 2 部分) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
 caps.latest.revision: 15
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 加入控制項 (ATL 教學課程，第 2 部分)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

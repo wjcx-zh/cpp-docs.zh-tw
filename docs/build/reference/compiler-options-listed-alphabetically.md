@@ -1,8 +1,7 @@
 ---
 title: "依字母順序排列的編譯器選項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "編譯器選項, C++"
 ms.assetid: 98375dad-c9c6-4796-aaa6-fd573269d4ae
 caps.latest.revision: 66
-caps.handback.revision: 66
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 66
 ---
 # 依字母順序排列的編譯器選項
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

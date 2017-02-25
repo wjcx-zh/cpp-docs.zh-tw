@@ -1,8 +1,7 @@
 ---
 title: "在標準 DLL 中使用資料庫、OLE 和通訊端擴充 DLL | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "DLL [C++], 規則性"
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 在標準 DLL 中使用資料庫、OLE 和通訊端擴充 DLL
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

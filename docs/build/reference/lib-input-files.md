@@ -1,8 +1,7 @@
 ---
 title: "LIB 輸入檔 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "輸入檔, LIB"
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # LIB 輸入檔
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

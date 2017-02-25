@@ -1,8 +1,7 @@
 ---
 title: "診斷服務 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -31,10 +30,10 @@ helpviewer_keywords:
   - "服務, 診斷"
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 caps.latest.revision: 20
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # 診斷服務
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

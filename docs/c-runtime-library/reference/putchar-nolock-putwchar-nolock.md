@@ -1,8 +1,7 @@
 ---
 title: "_putchar_nolock、_putwchar_nolock | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "putchar_nolock"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_putchar_nolock 函式"
   - "_puttchar_nolock 函式"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "標準輸出, 寫入至"
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _putchar_nolock、_putwchar_nolock
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

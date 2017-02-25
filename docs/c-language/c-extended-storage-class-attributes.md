@@ -1,8 +1,7 @@
 ---
 title: "C 擴充的儲存類別屬性 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "__declspec 關鍵字 [C]"
   - "擴充屬性"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "儲存類別規範, C 儲存類別"
 ms.assetid: 2580735c-f5bf-46ab-9468-0696893d82be
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # C 擴充的儲存類別屬性
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

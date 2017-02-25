@@ -1,8 +1,7 @@
 ---
 title: "Variadic 巨集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "variadic 巨集 [C++]"
   - "__VA_ARGS__ variadic 巨集規範"
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # Variadic 巨集
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

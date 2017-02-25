@@ -1,8 +1,7 @@
 ---
 title: "wcrtomb_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "wcrtomb_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "寬字元轉換"
   - "wcrtomb_s 函式"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "轉換的字元"
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
 caps.latest.revision: 22
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 22
 ---
 # wcrtomb_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

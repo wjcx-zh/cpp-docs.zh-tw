@@ -1,8 +1,7 @@
 ---
 title: "Rich Edit 控制項中的段落格式化 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Rich Edit 控制項, 其中的段落格式化"
 ms.assetid: 0df2e4c9-2074-4e41-b913-87cb8c1b4d43
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # Rich Edit 控制項中的段落格式化
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

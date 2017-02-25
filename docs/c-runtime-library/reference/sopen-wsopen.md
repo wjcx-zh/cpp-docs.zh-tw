@@ -1,8 +1,7 @@
 ---
 title: "_sopen、_wsopen | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_tsopen"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_sopen 函式"
   - "_wsopen 函式"
@@ -44,10 +42,10 @@ helpviewer_keywords:
   - "wsopen 函式"
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # _sopen、_wsopen
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

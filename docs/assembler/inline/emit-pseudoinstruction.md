@@ -1,8 +1,7 @@
 ---
 title: "_emit 虛擬指令 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "位元組定義 (內嵌組譯碼)"
 ms.assetid: 004c48f3-364c-4e82-9a51-e326f9cc7b2b
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # _emit 虛擬指令
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

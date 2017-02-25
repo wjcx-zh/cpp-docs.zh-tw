@@ -1,8 +1,7 @@
 ---
 title: "qsort_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "qsort_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "陣列 [C++], 排序"
   - "qsort_s 函式"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "排序陣列"
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # qsort_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

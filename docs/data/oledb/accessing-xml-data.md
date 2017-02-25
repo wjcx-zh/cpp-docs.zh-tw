@@ -1,8 +1,7 @@
 ---
 title: "存取 XML 資料 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "XML [C++], 存取資料"
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
 caps.latest.revision: 13
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 存取 XML 資料
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

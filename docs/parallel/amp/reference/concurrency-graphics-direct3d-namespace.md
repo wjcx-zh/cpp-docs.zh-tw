@@ -1,8 +1,7 @@
 ---
 title: "Concurrency::graphics::direct3d 命名空間 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ dev_langs:
   - "C++"
 ms.assetid: be283331-07cf-46e4-91a1-e8aa85d4ec8e
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # Concurrency::graphics::direct3d 命名空間
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

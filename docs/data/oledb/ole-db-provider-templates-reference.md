@@ -1,8 +1,7 @@
 ---
 title: "OLE DB 提供者樣板參考 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "OLE DB 提供者樣板"
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # OLE DB 提供者樣板參考
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

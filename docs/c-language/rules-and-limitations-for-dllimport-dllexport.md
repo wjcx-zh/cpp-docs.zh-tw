@@ -1,8 +1,7 @@
 ---
 title: "dllimport/dllexport 的規則和限制 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport 屬性 [C++]"
   - "dllexport 屬性 [C++], 限制和規則"
   - "dllimport 屬性 [C++], 限制和規則"
 ms.assetid: 274b735f-ab9c-4b07-8d0e-fdb65d664634
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # dllimport/dllexport 的規則和限制
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "最佳化內嵌組譯碼 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "儲存體, 在內嵌組譯碼中最佳化"
 ms.assetid: 52a7ec83-9782-4d96-94c1-53bb2ac9e8c8
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 最佳化內嵌組譯碼
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

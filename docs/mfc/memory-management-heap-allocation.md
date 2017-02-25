@@ -1,8 +1,7 @@
 ---
 title: "記憶體管理：堆積配置 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "new 運算子, 與偵錯 MFC 一起使用"
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 記憶體管理：堆積配置
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

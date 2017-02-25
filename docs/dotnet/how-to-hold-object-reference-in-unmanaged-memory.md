@@ -1,8 +1,7 @@
 ---
 title: "如何：在 Unmanaged 記憶體中存放物件參考 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "參考, 到原生函式中的物件"
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
 caps.latest.revision: 10
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 如何：在 Unmanaged 記憶體中存放物件參考
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

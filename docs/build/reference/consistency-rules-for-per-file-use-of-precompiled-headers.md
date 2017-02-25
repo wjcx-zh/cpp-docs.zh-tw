@@ -1,8 +1,7 @@
 ---
 title: "針對每個檔案使用的先行編譯標頭的一致性規則 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "先行編譯標頭檔, 一致性原則"
 ms.assetid: afd49365-48bc-41f4-b700-fe8297b944a1
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 針對每個檔案使用的先行編譯標頭的一致性規則
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

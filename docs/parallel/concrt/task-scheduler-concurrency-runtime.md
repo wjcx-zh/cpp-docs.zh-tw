@@ -1,8 +1,7 @@
 ---
 title: "工作排程器 (並行執行階段) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -27,10 +26,10 @@ helpviewer_keywords:
   - "wait 函式 [並行執行階段]"
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
 caps.latest.revision: 42
-caps.handback.revision: 41
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 41
 ---
 # 工作排程器 (並行執行階段)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

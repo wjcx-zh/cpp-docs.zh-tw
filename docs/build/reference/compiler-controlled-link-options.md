@@ -1,8 +1,7 @@
 ---
 title: "編譯器控制的 LINK 選項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "連結 [C++], 受到 CL 功能的影響"
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 編譯器控制的 LINK 選項
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

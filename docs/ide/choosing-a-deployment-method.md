@@ -1,8 +1,7 @@
 ---
 title: "選擇部署方法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "靜態連結 [C++]"
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
 caps.latest.revision: 35
-caps.handback.revision: 35
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 35
 ---
 # 選擇部署方法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

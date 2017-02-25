@@ -1,8 +1,7 @@
 ---
 title: "concurrent_unordered_multimap 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "concurrent_unordered_multimap 類別"
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
 caps.latest.revision: 12
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # concurrent_unordered_multimap 類別
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

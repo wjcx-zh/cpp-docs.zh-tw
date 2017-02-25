@@ -1,8 +1,7 @@
 ---
 title: "/Wp64 (偵測 64 位元可移植性問題) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Wp64 編譯器選項 [C++]"
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
 caps.latest.revision: 21
-caps.handback.revision: 21
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # /Wp64 (偵測 64 位元可移植性問題)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

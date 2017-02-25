@@ -1,8 +1,7 @@
 ---
 title: "HLSL 屬性頁：一般 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ dev_langs:
   - "C++"
 ms.assetid: 0e02f2a6-f123-43da-b04b-a0719a7c2b03
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "BrianPeek"
 ms.author: "brpeek"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # HLSL 屬性頁：一般
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

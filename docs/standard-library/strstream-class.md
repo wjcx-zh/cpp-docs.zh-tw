@@ -1,8 +1,7 @@
 ---
 title: "strstream 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "strstream 類別"
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
 caps.latest.revision: 21
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # strstream 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

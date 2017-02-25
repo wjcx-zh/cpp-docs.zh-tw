@@ -1,8 +1,7 @@
 ---
 title: "範本檔案 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "範本 [C++], 精靈"
 ms.assetid: 48fae3d8-3a53-4f62-8010-144c5ffe334e
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 範本檔案
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "匯出的 DLL 函式進入點 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "狀態管理, 匯出的 DLL"
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 匯出的 DLL 函式進入點
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

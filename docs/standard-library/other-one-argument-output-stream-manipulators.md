@@ -1,8 +1,7 @@
 ---
 title: "其他單一引數輸出資料流操作工具 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "輸出資料流, 單一引數操作工具"
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
 caps.latest.revision: 11
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 其他單一引數輸出資料流操作工具
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

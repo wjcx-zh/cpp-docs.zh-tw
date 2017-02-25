@@ -1,8 +1,7 @@
 ---
 title: "編譯器警告 (層級 1) C4821 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C4821"
 ms.assetid: c7768e77-0ee5-491e-8aa4-3915bf5bcbdf
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 編譯器警告 (層級 1) C4821
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

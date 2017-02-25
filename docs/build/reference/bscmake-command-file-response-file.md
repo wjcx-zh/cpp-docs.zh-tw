@@ -1,8 +1,7 @@
 ---
 title: "BSCMAKE 命令檔 (回應檔) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "回應檔, BSCMAKE"
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # BSCMAKE 命令檔 (回應檔)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "其他 LIB 輸出 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "輸出檔, LIB"
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 其他 LIB 輸出
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "/MANIFESTFILE (為資訊清單檔案命名) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-MANIFESTFILE 連結器選項"
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /MANIFESTFILE (為資訊清單檔案命名)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

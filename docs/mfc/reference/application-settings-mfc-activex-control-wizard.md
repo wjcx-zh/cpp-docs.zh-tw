@@ -1,8 +1,7 @@
 ---
 title: "應用程式設定，MFC ActiveX 控制項精靈 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC ActiveX 控制項精靈的應用程式設定"
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # 應用程式設定，MFC ActiveX 控制項精靈
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

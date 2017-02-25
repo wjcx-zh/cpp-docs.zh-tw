@@ -1,8 +1,7 @@
 ---
 title: "介面項目 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MFC 功能套件, 架構"
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
 caps.latest.revision: 28
-caps.handback.revision: 24
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # 介面項目
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

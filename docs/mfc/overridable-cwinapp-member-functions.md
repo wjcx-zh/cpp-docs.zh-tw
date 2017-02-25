@@ -1,8 +1,7 @@
 ---
 title: "可覆寫的 CWinApp 成員函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "覆寫, CWinApp 中的可覆寫函式"
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 可覆寫的 CWinApp 成員函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

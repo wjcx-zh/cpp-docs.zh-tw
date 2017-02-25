@@ -1,8 +1,7 @@
 ---
 title: "/INTEGRITYCHECK (需要簽章檢查) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,10 +12,10 @@ dev_langs:
   - "C++"
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # /INTEGRITYCHECK (需要簽章檢查)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

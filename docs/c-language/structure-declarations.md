@@ -1,8 +1,7 @@
 ---
 title: "結構宣告 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "匿名結構"
   - "內嵌結構"
@@ -20,10 +18,10 @@ helpviewer_keywords:
   - "類型 [C], 宣告"
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 結構宣告
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

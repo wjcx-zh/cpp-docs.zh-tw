@@ -1,8 +1,7 @@
 ---
 title: "如何：使用過度訂閱使延遲產生位移 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "使用過度訂閱 [並行執行階段]"
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
 caps.latest.revision: 17
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 如何：使用過度訂閱使延遲產生位移
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

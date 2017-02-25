@@ -1,8 +1,7 @@
 ---
 title: "位元組和寬資料流 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,16 +12,15 @@ f1_keywords:
   - "Byte and Wide Streams"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "位元組資料流"
   - "寬資料流"
 ms.assetid: 61ef0587-4cbc-4eb8-aae5-4c298dbbc6f9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 位元組和寬資料流
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

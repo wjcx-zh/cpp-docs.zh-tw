@@ -1,8 +1,7 @@
 ---
 title: "將訊息對應到函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "Windows 訊息 [C++], 加入訊息處理常式"
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 將訊息對應到函式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "記憶體管理：框架配置 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "變數, 框架變數"
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 記憶體管理：框架配置
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

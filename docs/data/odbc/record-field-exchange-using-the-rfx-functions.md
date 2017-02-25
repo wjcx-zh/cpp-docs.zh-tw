@@ -1,8 +1,7 @@
 ---
 title: "資料錄欄位交換：RFX 函式的使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "RFX (ODBC) [C++], 函式語法和參數"
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 資料錄欄位交換：RFX 函式的使用
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

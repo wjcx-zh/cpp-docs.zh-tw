@@ -1,8 +1,7 @@
 ---
 title: "終結清單控制項 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "清單控制項, 終結"
 ms.assetid: 513ec820-3a02-49d2-b073-a6a7a3fc91b3
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 終結清單控制項
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

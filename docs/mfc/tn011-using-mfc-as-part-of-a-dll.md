@@ -1,8 +1,7 @@
 ---
 title: "TN011：將 MFC 當成 DLL 的一部分來使用 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "USRDLL, 編譯器參數"
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
 caps.latest.revision: 20
-caps.handback.revision: 16
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # TN011：將 MFC 當成 DLL 的一部分來使用
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "使用 dllexport 和 dllimport 定義內嵌 C 函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "dllexport 屬性 [C++]"
   - "dllexport 屬性 [C++], 內嵌函式"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "內嵌函式 [C++], 使用 dllexport 和 dllimport"
 ms.assetid: 41418f7c-1c11-470b-bb2e-1f8269a239f0
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 使用 dllexport 和 dllimport 定義內嵌 C 函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

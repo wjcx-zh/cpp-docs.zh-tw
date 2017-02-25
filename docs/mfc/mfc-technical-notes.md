@@ -1,8 +1,7 @@
 ---
 title: "MFC 技術提示 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "技術提示, MFC"
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # MFC 技術提示
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

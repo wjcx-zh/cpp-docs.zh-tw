@@ -1,8 +1,7 @@
 ---
 title: "關閉檔案 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MFC [C++], 檔案作業"
 ms.assetid: 8415a3a8-3c75-45b0-ac2a-d5385f49bdb3
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 關閉檔案
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

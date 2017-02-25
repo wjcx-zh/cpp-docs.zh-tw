@@ -1,8 +1,7 @@
 ---
 title: "_cgets_s、_cgetws_s | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_cgetws_s"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cgets_s 函式"
   - "_cgetws_s 函式"
@@ -42,10 +40,10 @@ helpviewer_keywords:
   - "字串 [C++], 從主控台取得"
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
 caps.latest.revision: 31
-caps.handback.revision: 31
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # _cgets_s、_cgetws_s
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

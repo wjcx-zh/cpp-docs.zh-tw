@@ -1,8 +1,7 @@
 ---
 title: "並行執行階段最佳作法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "要避免的作法 [並行執行階段]"
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
 caps.latest.revision: 10
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 並行執行階段最佳作法
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

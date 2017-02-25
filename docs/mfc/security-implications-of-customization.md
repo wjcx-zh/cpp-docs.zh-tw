@@ -1,8 +1,7 @@
 ---
 title: "自訂的安全性影響 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "安全性, MFC 功能套件"
 ms.assetid: 9be96b12-be38-43bd-a133-5d671265f7a1
 caps.latest.revision: 14
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 自訂的安全性影響
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

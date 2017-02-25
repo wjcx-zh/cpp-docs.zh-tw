@@ -1,8 +1,7 @@
 ---
 title: "/hotpatch (建立可線上修補的影像) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "熱修補"
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
 caps.latest.revision: 18
-caps.handback.revision: 18
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # /hotpatch (建立可線上修補的影像)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "嚴重錯誤 C1207 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C1207"
 ms.assetid: cd31b410-9523-47db-883c-e69a9351ffa2
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 嚴重錯誤 C1207
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

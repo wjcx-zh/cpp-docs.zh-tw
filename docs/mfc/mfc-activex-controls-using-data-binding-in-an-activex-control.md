@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "MFC ActiveX 控制項, 資料繫結"
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

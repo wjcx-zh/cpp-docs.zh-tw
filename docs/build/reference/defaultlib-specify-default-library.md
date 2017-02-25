@@ -1,8 +1,7 @@
 ---
 title: "/DEFAULTLIB (指定預設程式庫) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "程式庫, 加入至清單"
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # /DEFAULTLIB (指定預設程式庫)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

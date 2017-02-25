@@ -1,8 +1,7 @@
 ---
 title: "_strinc、_wcsinc、_mbsinc、_mbsinc_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -38,7 +37,6 @@ f1_keywords:
   - "_mbsinc_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_mbsinc 函式"
   - "_mbsinc_l 函式"
@@ -52,10 +50,10 @@ helpviewer_keywords:
   - "wcsinc 函式"
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
 caps.latest.revision: 23
-caps.handback.revision: 23
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 23
 ---
 # _strinc、_wcsinc、_mbsinc、_mbsinc_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

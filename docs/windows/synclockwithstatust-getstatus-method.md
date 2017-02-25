@@ -1,8 +1,7 @@
 ---
 title: "SyncLockWithStatusT::GetStatus 方法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "GetStatus 方法"
 ms.assetid: d448b51d-a63d-40d9-a9ee-4aad3204118d
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # SyncLockWithStatusT::GetStatus 方法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

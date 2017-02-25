@@ -1,8 +1,7 @@
 ---
 title: "階段結構文法 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,16 +10,15 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "文法, 階段結構"
   - "階段結構文法"
 ms.assetid: 546c2961-5d37-4ef9-a0ce-74e7550e3899
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 階段結構文法
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

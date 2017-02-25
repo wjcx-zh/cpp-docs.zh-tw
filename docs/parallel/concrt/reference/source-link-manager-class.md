@@ -1,8 +1,7 @@
 ---
 title: "source_link_manager 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "source_link_manager 類別"
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
 caps.latest.revision: 17
-caps.handback.revision: 11
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # source_link_manager 類別
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

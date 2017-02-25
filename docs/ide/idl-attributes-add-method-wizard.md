@@ -1,8 +1,7 @@
 ---
 title: "IDL 屬性、加入方法精靈 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "IDL 屬性, 加入方法精靈"
 ms.assetid: f80c3bc1-b515-4d6c-83ee-98c2c21ba902
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # IDL 屬性、加入方法精靈
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

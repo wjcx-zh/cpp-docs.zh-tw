@@ -1,8 +1,7 @@
 ---
 title: "視窗樣式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -72,10 +71,10 @@ helpviewer_keywords:
   - "WS_VSCROLL 常數"
 ms.assetid: c85ffbe4-f4ff-4227-917a-48ec4a411842
 caps.latest.revision: 12
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 視窗樣式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

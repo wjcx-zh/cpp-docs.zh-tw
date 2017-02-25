@@ -1,8 +1,7 @@
 ---
 title: "_crtDbgFlag | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -14,7 +13,6 @@ f1_keywords:
   - "crtDbgFlag"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_crtDbgFlag 常數"
   - "crtDbgFlag 常數"
@@ -25,10 +23,10 @@ helpviewer_keywords:
   - "記憶體, 偵錯堆積上的追蹤"
 ms.assetid: 9e7adb47-8ab9-4e19-81d5-e2f237979973
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # _crtDbgFlag
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

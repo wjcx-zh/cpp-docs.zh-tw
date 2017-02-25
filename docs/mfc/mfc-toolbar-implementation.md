@@ -1,8 +1,7 @@
 ---
 title: "MFC 工具列實作 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,10 +27,10 @@ helpviewer_keywords:
   - "工具列 [C++], 實作 MFC 工具列"
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC 工具列實作
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

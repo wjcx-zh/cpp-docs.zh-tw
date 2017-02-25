@@ -1,8 +1,7 @@
 ---
 title: "具有二元運算子的運算式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "運算子 [C++], 二進位"
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 具有二元運算子的運算式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

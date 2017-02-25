@@ -1,8 +1,7 @@
 ---
 title: "如何：使用取消來中斷平行迴圈 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "撰寫平行搜尋演算法 [並行執行階段]"
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
 caps.latest.revision: 19
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # 如何：使用取消來中斷平行迴圈
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

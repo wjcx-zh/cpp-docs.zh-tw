@@ -1,8 +1,7 @@
 ---
 title: "逐步解說：將動畫加入至 MFC 專案 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "MFC, 動畫"
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
 caps.latest.revision: 18
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # 逐步解說：將動畫加入至 MFC 專案
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

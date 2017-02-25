@@ -1,8 +1,7 @@
 ---
 title: "C 乘法類運算子 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "% 運算子"
   - "/ 運算子"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "正斜線 (/) 運算子"
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # C 乘法類運算子
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

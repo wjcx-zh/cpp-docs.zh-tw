@@ -1,8 +1,7 @@
 ---
 title: "內嵌組譯工具概觀 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "叫用內嵌組譯工具"
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 內嵌組譯工具概觀
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

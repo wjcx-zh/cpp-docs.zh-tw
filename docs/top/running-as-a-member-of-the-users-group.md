@@ -1,32 +1,6 @@
 ---
-title: "以使用者群組的成員身分執行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PRJ0050"
-  - "VCD0047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "使用者群組 [C++]"
-  - "安全性 [C++]，使用者群組"
-  - "Windows 帳戶 [C++]"
-  - "非管理員使用者 [C++]"
-  - "使用者群組 [C++]"
-  - "系統管理員 (不以此身分執行) [C++]"
-ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 17
+redirect_url: /cpp/security/running-as-a-member-of-the-users-group
 caps.handback.revision: 17
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
 ---
 # 以使用者群組的成員身分執行
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

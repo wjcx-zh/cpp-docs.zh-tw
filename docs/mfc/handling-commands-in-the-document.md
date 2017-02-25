@@ -1,8 +1,7 @@
 ---
 title: "處理文件中的命令 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "WM_COMMAND"
 ms.assetid: c7375584-27af-4275-b2fd-afea476785d0
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 處理文件中的命令
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

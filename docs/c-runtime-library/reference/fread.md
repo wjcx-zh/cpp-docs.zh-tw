@@ -1,8 +1,7 @@
 ---
 title: "fread | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -28,7 +27,6 @@ f1_keywords:
   - "fread"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "資料 [C++], 從輸入資料流讀取"
   - "fread 函式"
@@ -36,10 +34,10 @@ helpviewer_keywords:
   - "資料流 [C++], 讀取資料來源"
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
 caps.latest.revision: 17
-caps.handback.revision: 15
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 17
 ---
 # fread
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

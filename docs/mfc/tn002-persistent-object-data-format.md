@@ -1,8 +1,7 @@
 ---
 title: "TN002：持續性物件資料格式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "VERSIONABLE_SCHEMA 巨集"
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
 caps.latest.revision: 22
-caps.handback.revision: 18
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 18
 ---
 # TN002：持續性物件資料格式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "_ismbb 常式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,16 +22,15 @@ f1_keywords:
   - "ismbb"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_ismbb 常式"
   - "ismbb 常式"
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _ismbb 常式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

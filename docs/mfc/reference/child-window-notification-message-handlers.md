@@ -1,8 +1,7 @@
 ---
 title: "子視窗通知訊息處理常式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "視窗 [C++], 訊息處理常式"
 ms.assetid: fddfdd08-8ecf-4f84-8b45-5a84616aaa8d
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 子視窗通知訊息處理常式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

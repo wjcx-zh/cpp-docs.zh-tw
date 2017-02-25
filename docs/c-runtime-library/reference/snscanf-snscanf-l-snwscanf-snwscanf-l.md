@@ -1,8 +1,7 @@
 ---
 title: "_snscanf、_snscanf_l、_snwscanf、_snwscanf_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -41,7 +40,6 @@ f1_keywords:
   - "snwscanf_l"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_snscanf 函式"
   - "_snscanf_l 函式"
@@ -60,10 +58,10 @@ helpviewer_keywords:
   - "字串 [C++], 讀取資料來源"
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
 caps.latest.revision: 24
-caps.handback.revision: 22
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # _snscanf、_snscanf_l、_snwscanf、_snwscanf_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "swap 函式 (auto_handle) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "swap 函式"
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
 caps.latest.revision: 8
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # swap 函式 (auto_handle)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

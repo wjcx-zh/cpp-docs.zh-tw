@@ -1,8 +1,7 @@
 ---
 title: "顯示和操作表單中的資料 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "資料錄檢視 [C++], 顯示資料"
 ms.assetid: c56185c4-12cb-40b1-b499-02b29ea83e3a
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 顯示和操作表單中的資料
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

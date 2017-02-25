@@ -1,8 +1,7 @@
 ---
 title: "同步處理資料結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "同步處理資料結構"
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
 caps.latest.revision: 26
-caps.handback.revision: 25
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 25
 ---
 # 同步處理資料結構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

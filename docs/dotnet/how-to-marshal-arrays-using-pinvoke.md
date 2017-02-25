@@ -1,8 +1,7 @@
 ---
 title: "如何：使用 PInvoke 封送處理陣列 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "平台叫用 [C++], 陣列"
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
 caps.latest.revision: 20
-caps.handback.revision: 20
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 20
 ---
 # 如何：使用 PInvoke 封送處理陣列
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

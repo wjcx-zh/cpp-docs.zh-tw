@@ -1,8 +1,7 @@
 ---
 title: "gslice 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "gslice 類別"
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 caps.latest.revision: 21
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # gslice 類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

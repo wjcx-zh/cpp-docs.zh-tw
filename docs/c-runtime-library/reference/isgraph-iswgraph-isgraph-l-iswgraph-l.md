@@ -1,8 +1,7 @@
 ---
 title: "isgraph、iswgraph、_isgraph_l、_iswgraph_l | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -37,7 +36,6 @@ f1_keywords:
   - "iswgraph"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_isgraph_l 函式"
   - "_ismbcgraph_l 函式"
@@ -49,10 +47,10 @@ helpviewer_keywords:
   - "iswgraph 函式"
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # isgraph、iswgraph、_isgraph_l、_iswgraph_l
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

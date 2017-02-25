@@ -1,8 +1,7 @@
 ---
 title: "建立 OLE DB 提供者 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "OLE DB 提供者, 建立"
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
 caps.latest.revision: 9
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 建立 OLE DB 提供者
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

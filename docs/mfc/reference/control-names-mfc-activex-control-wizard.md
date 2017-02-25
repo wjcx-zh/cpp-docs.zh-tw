@@ -1,8 +1,7 @@
 ---
 title: "MFC ActiveX 控制項精靈、控制項名稱 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MFC ActiveX 控制項精靈, 控制項名稱"
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
 caps.latest.revision: 11
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # MFC ActiveX 控制項精靈、控制項名稱
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

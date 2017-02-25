@@ -1,8 +1,7 @@
 ---
 title: "輸入/輸出替代項目 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "I/O [C++], 替代項目"
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 輸入/輸出替代項目
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

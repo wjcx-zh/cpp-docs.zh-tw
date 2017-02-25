@@ -1,8 +1,7 @@
 ---
 title: "/Yu (使用先行編譯標頭檔) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -22,10 +21,10 @@ helpviewer_keywords:
   - "-Yu 編譯器選項 [C++]"
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /Yu (使用先行編譯標頭檔)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "訊息對應巨集 (MFC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -24,10 +23,10 @@ helpviewer_keywords:
   - "Windows 訊息 [C++], 宣告"
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
 caps.latest.revision: 10
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 訊息對應巨集 (MFC)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

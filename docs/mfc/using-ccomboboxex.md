@@ -1,8 +1,7 @@
 ---
 title: "使用 CComboBoxEx | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "擴充的下拉式方塊, 關於擴充的下拉式方塊"
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 使用 CComboBoxEx
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

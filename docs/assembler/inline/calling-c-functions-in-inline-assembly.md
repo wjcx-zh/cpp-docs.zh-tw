@@ -1,8 +1,7 @@
 ---
 title: "在內嵌組譯碼中呼叫 C 函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "Visual C, 函式"
 ms.assetid: f8a8d568-d175-4e23-9b24-36ef60a4cab3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 在內嵌組譯碼中呼叫 C 函式
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

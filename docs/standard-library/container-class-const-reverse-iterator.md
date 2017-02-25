@@ -1,8 +1,7 @@
 ---
 title: "容器類別::const_reverse_iterator | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "const_reverse_iterator 方法"
 ms.assetid: ceac84d5-a40f-4bbf-81e0-a96aa2bd8ee8
 caps.latest.revision: 9
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 容器類別::const_reverse_iterator
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

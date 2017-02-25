@@ -1,8 +1,7 @@
 ---
 title: "影像清單的類型 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "清單 [C++], 影像"
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 影像清單的類型
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

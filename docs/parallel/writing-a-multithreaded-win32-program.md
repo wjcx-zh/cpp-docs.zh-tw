@@ -1,8 +1,7 @@
 ---
 title: "撰寫多執行緒 Win32 程式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,10 +24,10 @@ helpviewer_keywords:
   - "執行緒 [C++], 執行緒堆疊"
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 撰寫多執行緒 Win32 程式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

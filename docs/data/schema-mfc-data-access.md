@@ -1,8 +1,7 @@
 ---
 title: "結構描述 (MFC 資料存取) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "結構 [C++], 資料庫"
 ms.assetid: 7d17e35f-1ccf-4853-b915-5b8c7a45b9ee
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 結構描述 (MFC 資料存取)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

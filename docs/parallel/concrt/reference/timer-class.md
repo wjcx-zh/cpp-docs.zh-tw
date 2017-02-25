@@ -1,8 +1,7 @@
 ---
 title: "timer 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "timer 類別"
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
 caps.latest.revision: 21
-caps.handback.revision: 15
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 21
 ---
 # timer 類別
 [!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "-MP (使用多處理序建置) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "cl.exe 編譯器, 多處理序建置"
 ms.assetid: a932b14a-74fe-4b45-84e4-6bf53f0f5e07
 caps.latest.revision: 19
-caps.handback.revision: 19
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 19
 ---
 # /MP (使用多處理序建置)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

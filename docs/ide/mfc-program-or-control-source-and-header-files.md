@@ -1,8 +1,7 @@
 ---
 title: "MFC 程式或控制項原始程式檔和標頭檔 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "檔案類型 [C++], MFC 原始檔和檔頭檔"
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # MFC 程式或控制項原始程式檔和標頭檔
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

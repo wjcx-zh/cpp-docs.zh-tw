@@ -1,8 +1,7 @@
 ---
 title: "使用 CObject | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "MFC 的根基底類別"
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 使用 CObject
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

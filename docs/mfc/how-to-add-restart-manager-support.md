@@ -1,8 +1,7 @@
 ---
 title: "如何：加入重新啟動管理員支援 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "C++, 應用程式損毀支援"
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 如何：加入重新啟動管理員支援
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "從影像清單拖曳影像 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "影像 [C++], 從影像清單拖曳"
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 從影像清單拖曳影像
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

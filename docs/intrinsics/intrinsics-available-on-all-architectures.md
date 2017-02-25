@@ -1,8 +1,7 @@
 ---
 title: "在所有架構上內建 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "cl.exe 編譯器, 內建函式"
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 在所有架構上內建
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

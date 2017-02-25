@@ -1,8 +1,7 @@
 ---
 title: "檢視類別 (Windows) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "檢視類別, Windows"
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 檢視類別 (Windows)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

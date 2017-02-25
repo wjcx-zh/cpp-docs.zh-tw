@@ -1,8 +1,7 @@
 ---
 title: "一階段和兩階段的物件建構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "一階段和兩階段的物件建構"
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 一階段和兩階段的物件建構
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

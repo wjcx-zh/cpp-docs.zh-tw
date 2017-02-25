@@ -1,8 +1,7 @@
 ---
 title: "範例：透過功能表命令顯示對話方塊 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -21,10 +20,10 @@ helpviewer_keywords:
   - "非強制回應對話方塊, 顯示"
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 範例：透過功能表命令顯示對話方塊
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

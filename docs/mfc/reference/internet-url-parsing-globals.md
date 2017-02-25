@@ -1,8 +1,7 @@
 ---
 title: "網際網路 URL 剖析全域 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "URL, 剖析"
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
 caps.latest.revision: 14
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 15
 ---
 # 網際網路 URL 剖析全域
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

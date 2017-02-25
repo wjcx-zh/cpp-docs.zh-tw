@@ -1,8 +1,7 @@
 ---
 title: "/DEBUG (產生偵錯資訊) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -26,11 +25,11 @@ helpviewer_keywords:
   - "pdb 檔案, 產生偵錯資訊"
   - "程式資料庫 [C++]"
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 11
-caps.handback.revision: 10
+caps.latest.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /DEBUG (產生偵錯資訊)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "try-finally 陳述式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "try-finally 關鍵字 [C++]"
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # try-finally 陳述式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

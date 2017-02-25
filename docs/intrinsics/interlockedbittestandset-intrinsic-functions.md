@@ -1,8 +1,7 @@
 ---
 title: "_interlockedbittestandset 內建函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -29,10 +28,10 @@ helpviewer_keywords:
   - "lock_bts 指令"
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
 caps.latest.revision: 16
-caps.handback.revision: 16
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # _interlockedbittestandset 內建函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "LINGER 結構 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "LINGER 結構"
 ms.assetid: 1fb1c5bf-a64e-4a6c-89d6-1734e4fdbb1b
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # LINGER 結構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

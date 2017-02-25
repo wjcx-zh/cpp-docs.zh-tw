@@ -1,16 +1,13 @@
 ---
 title: "逐步解說：在命令列上編譯 C 程式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
   - "devlang-cpp"
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
 helpviewer_keywords: 
   - "C 程式編譯 [C++]"
   - "命令列應用程式 [C++], C 程式"
@@ -18,10 +15,10 @@ helpviewer_keywords:
   - "Visual C, 編譯"
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 caps.latest.revision: 46
-caps.handback.revision: 31
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 31
 ---
 # 逐步解說：在命令列上編譯 C 程式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

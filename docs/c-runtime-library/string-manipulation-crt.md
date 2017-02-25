@@ -1,8 +1,7 @@
 ---
 title: "字串操作 (CRT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,17 +12,16 @@ f1_keywords:
   - "c.strings"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "操作字串"
   - "字串操作"
   - "字串 [C++], 操作"
 ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
 caps.latest.revision: 11
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 11
 ---
 # 字串操作 (CRT)
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

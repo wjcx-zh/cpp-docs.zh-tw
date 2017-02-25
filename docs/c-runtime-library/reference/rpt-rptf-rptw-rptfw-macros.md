@@ -1,8 +1,7 @@
 ---
 title: "_RPT、_RPTF、_RPTW、_RPTFW 巨集 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -43,7 +42,6 @@ f1_keywords:
   - "_RPTF1"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "偵錯 [CRT], 使用巨集"
   - "_RPTW3 巨集"
@@ -98,10 +96,10 @@ helpviewer_keywords:
   - "RPTW1 巨集"
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 caps.latest.revision: 14
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 14
 ---
 # _RPT、_RPTF、_RPTW、_RPTFW 巨集
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "宣告訊息處理函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "宣告函式, 訊息處理函式"
 ms.assetid: f8d3dbc1-4500-4f1e-a18d-7371edf36386
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 宣告訊息處理函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

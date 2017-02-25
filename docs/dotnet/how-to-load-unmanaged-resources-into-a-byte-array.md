@@ -1,8 +1,7 @@
 ---
 title: "如何：將 Unmanaged 資源載入至位元組陣列 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "Unmanaged 資源, 載入至位元組陣列"
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
 caps.latest.revision: 15
-caps.handback.revision: 13
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 如何：將 Unmanaged 資源載入至位元組陣列
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

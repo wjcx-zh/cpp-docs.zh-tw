@@ -1,8 +1,7 @@
 ---
 title: "視覺化管理員 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "視覺化管理員"
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
 caps.latest.revision: 13
-caps.handback.revision: 9
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 9
 ---
 # 視覺化管理員
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

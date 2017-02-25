@@ -1,8 +1,7 @@
 ---
 title: "檔案和資料庫類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "檔案類別 [C++]"
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
 caps.latest.revision: 9
-caps.handback.revision: 5
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 5
 ---
 # 檔案和資料庫類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

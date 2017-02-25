@@ -1,8 +1,7 @@
 ---
 title: "輸出參數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "預存程序, 參數"
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 輸出參數
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

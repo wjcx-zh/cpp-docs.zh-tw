@@ -1,8 +1,7 @@
 ---
 title: "CMDIFrameWndEx 類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "CMDIFrameWndEx 類別"
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 caps.latest.revision: 42
-caps.handback.revision: 29
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 44
 ---
 # CMDIFrameWndEx 類別
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

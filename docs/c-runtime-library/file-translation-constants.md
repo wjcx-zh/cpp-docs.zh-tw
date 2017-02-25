@@ -1,8 +1,7 @@
 ---
 title: "檔案轉譯常數 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.constants.file"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "常數 [C++], 檔案轉譯模式"
   - "檔案轉譯 [C++]"
@@ -23,10 +21,10 @@ helpviewer_keywords:
   - "轉譯, 檔案轉譯常數"
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 檔案轉譯常數
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

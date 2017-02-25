@@ -1,8 +1,7 @@
 ---
-title: "MSG 結構 | Microsoft Docs"
+title: "MSG 結構 1 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "MSG 結構"
 ms.assetid: dc166d27-9423-41f1-9599-5ba76d2f0138
 caps.latest.revision: 11
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # MSG 結構
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

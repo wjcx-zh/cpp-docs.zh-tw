@@ -1,8 +1,7 @@
 ---
 title: "final 規範 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -18,10 +17,10 @@ helpviewer_keywords:
   - "final 識別項"
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # final 規範
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

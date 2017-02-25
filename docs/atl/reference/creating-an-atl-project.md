@@ -1,8 +1,7 @@
 ---
 title: "建立 ATL 專案 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -20,10 +19,10 @@ helpviewer_keywords:
   - "使用 ATL 元件散發檔案"
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
 caps.latest.revision: 13
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # 建立 ATL 專案
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

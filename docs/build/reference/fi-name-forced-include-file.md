@@ -1,8 +1,7 @@
 ---
 title: "/FI (命名強制的包含檔) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -23,10 +22,10 @@ helpviewer_keywords:
   - "前置處理標頭檔編譯器選項 [C++]"
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # /FI (命名強制的包含檔)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

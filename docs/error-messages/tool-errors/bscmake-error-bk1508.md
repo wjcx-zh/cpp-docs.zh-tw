@@ -1,8 +1,7 @@
 ---
 title: "BSCMAKE 錯誤 BK1508 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "BK1508"
 ms.assetid: 03ea22b8-c7b4-4e73-8553-35b41112e066
 caps.latest.revision: 6
-caps.handback.revision: 6
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # BSCMAKE 錯誤 BK1508
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

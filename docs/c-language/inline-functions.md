@@ -1,8 +1,7 @@
 ---
 title: "內嵌函式 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "快程式碼"
   - "函式 [C++], 內嵌函式"
   - "內嵌函式, __inline 關鍵字"
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
 caps.latest.revision: 10
-caps.handback.revision: 10
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 10
 ---
 # 內嵌函式
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "執行階段物件模型服務 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "執行階段物件模型服務巨集"
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
 caps.latest.revision: 15
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 16
 ---
 # 執行階段物件模型服務
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

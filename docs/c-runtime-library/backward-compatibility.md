@@ -1,8 +1,7 @@
 ---
 title: "回溯相容性 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -13,7 +12,6 @@ f1_keywords:
   - "c.programs"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "回溯相容性"
   - "回溯相容性, C 執行階段程式庫"
@@ -21,10 +19,10 @@ helpviewer_keywords:
   - "CRT, 相容性"
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 回溯相容性
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

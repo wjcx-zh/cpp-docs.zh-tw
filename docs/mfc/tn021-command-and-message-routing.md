@@ -1,8 +1,7 @@
 ---
 title: "TN021：命令和訊息路由 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "Windows 訊息 [C++], 傳送"
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
 caps.latest.revision: 12
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # TN021：命令和訊息路由
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

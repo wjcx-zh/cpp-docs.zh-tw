@@ -1,8 +1,7 @@
 ---
 title: "/Q 選項 (低階運算) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "/Q 編譯器選項 [C++]"
 ms.assetid: 9fa738b9-630a-4bde-bc87-bdfa30552be4
 caps.latest.revision: 24
-caps.handback.revision: 24
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 24
 ---
 # /Q 選項 (低階運算)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

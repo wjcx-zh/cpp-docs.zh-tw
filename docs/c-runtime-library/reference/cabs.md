@@ -1,8 +1,7 @@
 ---
 title: "_cabs | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -30,7 +29,6 @@ f1_keywords:
   - "_cabsl"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_cabs 函式"
   - "_cabsl 函式"
@@ -40,10 +38,10 @@ helpviewer_keywords:
   - "計算絕對值"
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
 caps.latest.revision: 13
-caps.handback.revision: 11
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 13
 ---
 # _cabs
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

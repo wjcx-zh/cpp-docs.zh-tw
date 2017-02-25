@@ -1,8 +1,7 @@
 ---
 title: "函式主體 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -11,7 +10,6 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "函式主體"
   - "函式定義, 函式主體"
@@ -19,10 +17,10 @@ helpviewer_keywords:
   - "變數, 函式語法"
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 函式主體
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

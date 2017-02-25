@@ -1,8 +1,7 @@
 ---
 title: "明確連結 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "明確連結 [C++]"
 ms.assetid: 1e13d960-a195-4e6d-9864-7d8f3a701f4b
 caps.latest.revision: 7
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 明確連結
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

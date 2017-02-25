@@ -1,8 +1,7 @@
 ---
 title: "具有單一引數 (int 或 long) 的輸出資料流操作工具 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -15,10 +14,10 @@ helpviewer_keywords:
   - "輸出資料流, int 或 long 引數操作工具"
 ms.assetid: 338f3164-b5e2-4c5a-a605-7d9dc3629ca1
 caps.latest.revision: 8
-caps.handback.revision: 7
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 7
 ---
 # 具有單一引數 (int 或 long) 的輸出資料流操作工具
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

@@ -1,8 +1,7 @@
 ---
 title: "非同步代理程式程式庫 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -16,10 +15,10 @@ helpviewer_keywords:
   - "非同步代理程式程式庫"
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
 caps.latest.revision: 33
-caps.handback.revision: 33
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 33
 ---
 # 非同步代理程式程式庫
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

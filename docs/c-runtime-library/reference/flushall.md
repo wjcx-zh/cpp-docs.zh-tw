@@ -1,8 +1,7 @@
 ---
-title: "_flushall | Microsoft Docs"
+title: "flushall | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -25,21 +24,17 @@ apilocation:
   - "api-ms-win-crt-stdio-l1-1-0.dll"
 apitype: "DLLExport"
 f1_keywords: 
-  - "_flushall"
+  - "flushall"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "flushall 函式"
-  - "清除資料流"
-  - "資料流, 清除"
-  - "_flushall 函式"
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
 caps.latest.revision: 16
-caps.handback.revision: 14
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 4
 ---
 # _flushall
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

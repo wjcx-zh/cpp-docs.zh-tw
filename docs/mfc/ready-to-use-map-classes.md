@@ -1,8 +1,7 @@
 ---
 title: "立即可用的對應類別 | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "對應類別"
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
 caps.latest.revision: 10
-caps.handback.revision: 6
 author: "mikeblome"
 ms.author: "mblome"
 manager: "ghogen"
+caps.handback.revision: 6
 ---
 # 立即可用的對應類別
 [!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]

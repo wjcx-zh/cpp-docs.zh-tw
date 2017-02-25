@@ -1,8 +1,7 @@
 ---
 title: "/NXCOMPAT (與資料執行防止相容) | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -19,10 +18,10 @@ helpviewer_keywords:
   - "-NXCOMPAT 連結器選項"
 ms.assetid: 5858e7ff-24d3-4ac3-9046-af2c9e220d9b
 caps.latest.revision: 12
-caps.handback.revision: 12
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 12
 ---
 # /NXCOMPAT (與資料執行防止相容)
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

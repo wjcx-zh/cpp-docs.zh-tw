@@ -1,8 +1,7 @@
 ---
 title: "編譯器錯誤 C2206 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/16/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -17,10 +16,10 @@ helpviewer_keywords:
   - "C2206"
 ms.assetid: d7fba68b-aa28-4885-a9a0-27107358f066
 caps.latest.revision: 8
-caps.handback.revision: 8
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 8
 ---
 # 編譯器錯誤 C2206
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

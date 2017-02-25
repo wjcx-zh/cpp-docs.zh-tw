@@ -1,8 +1,7 @@
 ---
 title: "_beginthread、_beginthreadex | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
+ms.date: "11/04/2016"
 ms.reviewer: ""
 ms.suite: ""
 ms.technology: 
@@ -32,7 +31,6 @@ f1_keywords:
   - "_beginthreadex"
 dev_langs: 
   - "C++"
-  - "C"
 helpviewer_keywords: 
   - "_beginthread 函式"
   - "執行緒 [c + +]，建立執行緒"
@@ -41,10 +39,10 @@ helpviewer_keywords:
   - "beginthread 函式"
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
 caps.latest.revision: 36
-caps.handback.revision: 36
 author: "corob-msft"
 ms.author: "corob"
 manager: "ghogen"
+caps.handback.revision: 36
 ---
 # _beginthread、_beginthreadex
 [!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]

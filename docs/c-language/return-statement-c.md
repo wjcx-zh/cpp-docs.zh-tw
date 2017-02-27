@@ -1,40 +1,55 @@
 ---
 title: "return 陳述式 (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "return 陳述式中的 ( ) 括號"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# return 陳述式 (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 214bca780d3ffe508d9e5e3bd9d78392df2f35b9
 
-`return` 陳述式用於結束函式的執行，並且將控制權還給呼叫函式。  在呼叫的函式中呼叫的點繼續執行。  `return` 陳述式也可以傳回值給呼叫的函式。  如需詳細資訊，請參閱 [Return Type](../c-language/return-type.md) 。  
+---
+# <a name="return-statement-c"></a>return 陳述式 (C)
+`return` 陳述式可終止函式的執行，並且將控制權還給呼叫函式。 執行作業會在進行呼叫的函式中緊接著呼叫之後繼續進行。 `return` 陳述式也可將值傳回至呼叫函式。 如需詳細資訊，請參閱[傳回型別](../c-language/return-type.md)。  
   
-## 語法  
- *跳躍陳述式*:  
- **回傳**  *運算式*  opt **;**  
+## <a name="syntax"></a>語法  
+ *jump-statement*：  
+ **return**  *expression* opt**;**  
   
- 如果*運算式*出現的話，運算式的值會傳回至呼叫函式。  若省略*運算式*，函式的傳回值為 undefined。  如果有運算式的話，將評估且再轉換成函式傳回的型別。  如果函式宣告具有傳回型別 `void`，包含運算式產生的 `return` 陳述式警告和運算式不會被評估。  
+ *expression* 的值 (如果有) 會傳回至呼叫函式。 如果省略 *expression*，則函式的傳回值會是未定義。 此運算式 (如果有) 會先評估，再轉換為函式所傳回的類型。 如果函式是使用傳回型別 `void` 宣告，則包含運算式的 `return` 陳述式會產生警告，而且不會評估運算式。  
   
- 如果 `return` 陳述式不會出現在函式定義中，控制項會自動回到呼叫的函式，在呼叫函式的最後一個陳述式執行之後。  在這種情況下，呼叫函式的傳回值為 undefined。  如果不需要傳回值，請宣告函式有 `void` 傳回型別；否則，預設傳回型別為 `int`。  
+ 如果函式定義中未出現 `return` 陳述式，則會在執行所呼叫函式的最後一個陳述式之後，自動將控制權還給呼叫函式。 在此情況下，所呼叫函式的傳回值會是未定義。 如果不需要傳回值，請宣告函式具有 `void` 傳回型別；否則預設的傳回型別會是 `int`。  
   
- 許多程式設計人員使用括號關住 `return` 陳述式的 *運算式* 引數。  不過， C 不需要括號。  
+ 許多程式設計人員使用括號括住 `return` 陳述式的 *expression* 引數。 不過，C 不需要括號。  
   
- 以下範例說明 `return` 陳述式：  
+ 這個範例將示範 `return` 陳述式：  
   
 ```  
 #include <limits.h>  
@@ -68,10 +83,18 @@ void draw( int i, long long ll )
   
 ```  
   
- 在此範例中， `main` 函式會呼叫兩個功能: `sq` 和 `draw`。  `sq` 函式傳回 `x * x` 的值為 `main`，傳回值則指派給 `y`。  在 `sq` 中傳回運算式周圍的括號評估為運算式的一部分，且不需要 return 陳述式。  因為轉換為傳回型別之前，會傳回評估運算式， `sq` 強制運算式類型為傳回型別以避免一個可能的整數溢位的轉換，可能會產生未預期的結果。  `draw` 函式宣告為 `void` 函式。  它會列印其參數的值且空的傳回陳述式會結束函式，並且不會傳回值。  嘗試指派 `draw` 的傳回值會造成一個診斷資訊發行。  `main` 函式會傳回 `x` 的值給作業系統。  
+ 在此範例中，`main` 函式會呼叫兩個函式︰`sq` 和 `draw`。 `sq` 函式會將 `x * x` 的值傳回至 `main`，再將傳回值指派給 `y`。 `sq` 中括住傳回運算式的括號會當做運算式的一部分評估，return 陳述式則不需要括號。 由於傳回運算式在轉換為傳回型別之前已經過評估，因此 `sq` 會強制將運算式類型轉換為傳回型別，以避免發生可能導致未預期結果的整數溢位。 `draw` 函式會宣告為 `void` 函式。 它會列印其參數的值，然後空的 return 陳述式會結束函式而不會傳回值。 嘗試指派 `draw` 的傳回值會導致發出診斷訊息。 `main` 函式會接著將 `x` 的值傳回至作業系統。  
   
  此範例的輸出如下所示：  
   
-  **i \= 2147483647， ll \= 4611686014132420609**   
-## 請參閱  
+```Output  
+i = 2147483647, ll = 4611686014132420609  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [陳述式](../c-language/statements-c.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

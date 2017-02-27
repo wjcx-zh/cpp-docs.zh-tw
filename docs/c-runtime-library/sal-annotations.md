@@ -1,75 +1,93 @@
 ---
 title: "SAL 註釋 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "__bcount 註釋"
-  - "__checkreturn 註釋"
-  - "__deref 註釋"
-  - "__deref_opt 註釋"
-  - "__ecount 註釋"
-  - "__full 註釋"
-  - "__in 註釋"
-  - "__inout 註釋"
-  - "__nz 註釋"
-  - "__opt 註釋"
-  - "__out 註釋"
-  - "__part 註釋"
-  - "__ref 註釋"
-  - "__z 註釋"
-  - "_bcount 註釋"
-  - "_CA_SHOULD_CHECK_RETURN"
-  - "_deref 註釋"
-  - "_deref_opt 註釋"
-  - "_ecount 註釋"
-  - "_full 註釋"
-  - "_in 註釋"
-  - "_inout 註釋"
-  - "_nz 註釋"
-  - "_opt 註釋"
-  - "_out 註釋"
-  - "_part 註釋"
-  - "_ref 註釋"
-  - "_z 註釋"
-  - "註釋 [C++]"
-  - "bcount 註釋"
-  - "deref 註釋"
-  - "deref_opt 註釋"
-  - "ecount 註釋"
-  - "full 註釋"
-  - "in 註釋"
-  - "inout 註釋"
-  - "nz 註釋"
-  - "opt 註釋"
-  - "out 註釋"
-  - "part 註釋"
-  - "ref 註釋"
-  - "SAL 註釋"
-  - "SAL 註釋, _CA_SHOULD_CHECK_RETURN"
-  - "z 註釋"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- __z annotation
+- ref annotation
+- _opt annotation
+- __checkreturn annotatioin
+- __deref_opt annotation
+- deref_opt annotation
+- __deref annotation
+- __in annotation
+- annotations [C++]
+- z annotation
+- _inout annotation
+- __ref annotation
+- full annotation
+- _in annotation
+- _ref annotation
+- __out annotation
+- _ecount annotation
+- SAL annotations
+- __opt annotation
+- inout annotation
+- in annotation
+- _CA_SHOULD_CHECK_RETURN
+- __bcount annotation
+- _full annotation
+- _bcount annotation
+- deref annotation
+- part annotation
+- _out annotation
+- __nz annotation
+- __part annotation
+- opt annotation
+- __full annotation
+- _nz annotation
+- _z annotation
+- out annotation
+- __ecount annotation
+- __inout annotation
+- SAL annotations, _CA_SHOULD_CHECK_RETURN
+- _deref_opt annotation
+- _deref annotation
+- nz annotation
+- _part annotation
+- ecount annotation
+- bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# SAL 註釋
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bdb69f6744c45cacaf4c403967842302f2dc9865
 
-如果檢查程式庫標頭檔，您可能會注意到一些不尋常的註釋，例如 `_In_z` 和 `_Out_z_cap_(_Size)`。  這些是 Microsoft 原始程式碼註釋語言 \(SAL\) 的範例，它提供一組註釋說明函式如何使用它的參數，例如，其關於參數的假設和完成時的保證。  標頭檔 \<sal.h\> 定義註釋。  
+---
+# <a name="sal-annotations"></a>SAL 註釋
+如果檢查程式庫標頭檔，您可能會注意到一些不尋常的註釋，例如 `_In_z` 和 `_Out_z_cap_(_Size)`。 這些是 Microsoft 原始程式碼註釋語言 (SAL) 的範例，它提供一組註釋說明函式如何使用它的參數，例如，其關於參數的假設和完成時的保證。 標頭檔 \<sal.h> 定義註釋。  
   
- 如需在 [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 中使用 SAL 註釋的詳細資訊，請參閱[使用 SAL 註釋減少 C\/C\+\+ 程式碼的缺失](../Topic/Using%20SAL%20Annotations%20to%20Reduce%20C-C++%20Code%20Defects.md)。  
+ 如需在 Visual Studio 中使用 SAL 註釋的詳細資訊，請參閱[使用 SAL 註釋減少 C/C++ 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

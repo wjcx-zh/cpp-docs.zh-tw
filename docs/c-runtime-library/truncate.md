@@ -1,77 +1,92 @@
 ---
-title: "_TRUNCATE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_TRUNCATE"
-  - "TRUNCATE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_TRUNCATE 常數"
-  - "TRUNCATE 常數"
+title: _TRUNCATE | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _TRUNCATE
+- TRUNCATE
+dev_langs:
+- C++
+helpviewer_keywords:
+- TRUNCATE constant
+- _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _TRUNCATE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8aa045caaaaa198c4ddbf19d03decca8d1372155
 
-指定字串的行為。  
+---
+# <a name="truncate"></a>_TRUNCATE
+指定字串截斷行為。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #include <stdlib.h>  
 ```  
   
-## 備註  
- `_TRUNCATE` 可攔截的行為，則會當做 `count` 參數傳遞給這些函式:  
+## <a name="remarks"></a>備註  
+ `_TRUNCATE` 以這些函式的 `count` 參數傳遞時會啟用截斷行為：  
   
- [strncpy\_s、\_strncpy\_s\_l、wcsncpy\_s、\_wcsncpy\_s\_l、\_mbsncpy\_s、\_mbsncpy\_s\_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
+ [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
- [strncat\_s、\_strncat\_s\_l、wcsncat\_s、\_wcsncat\_s\_l、\_mbsncat\_s、\_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+ [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
- [mbstowcs\_s、\_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
+ [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
   
- [mbsrtowcs\_s](../c-runtime-library/reference/mbsrtowcs-s.md)  
+ [mbsrtowcs_s](../c-runtime-library/reference/mbsrtowcs-s.md)  
   
- [wcstombs\_s、\_wcstombs\_s\_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
+ [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
   
- [wcsrtombs\_s](../c-runtime-library/reference/wcsrtombs-s.md)  
+ [wcsrtombs_s](../c-runtime-library/reference/wcsrtombs-s.md)  
   
- [\_snprintf\_s、\_snprintf\_s\_l、\_snwprintf\_s、\_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
+ [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
   
- [vsnprintf\_s、\_vsnprintf\_s、\_vsnprintf\_s\_l、\_vsnwprintf\_s、\_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
+ [vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
   
- 如果目的緩衝區太小而無法容納整個字串，這些函式一般行為是將其視為錯誤情況 \(請參閱 [參數驗證](../c-runtime-library/parameter-validation.md)\)。  不過，如果字串截斷傳遞 `_TRUNCATE`啟用，這些函式會複製相同只許多像字串符合，將目的端緩衝區空間結束，並成功傳回。  
+ 如果目的緩衝區太小無法容納整個字串，這些函式的正常行為是將它視為錯誤狀況 (請參閱[參數驗證](../c-runtime-library/parameter-validation.md))。 不過，如果透過傳遞 `_TRUNCATE` 來啟用字串截斷，則這些函式只會複製可放入的字串部分，並讓目的緩衝區保持 Null 終止，並成功傳回。  
   
- 字串截斷變更受影響的函式的傳回值。  如果攔截未發生，下列函式會傳回 0，如果攔截發生，則為 `STRUNCATE` :  
+ 字串截斷會變更受影響函式的傳回值。 如果未進行截斷，則下列函式會傳回 0，如果進行截斷，則會傳回 `STRUNCATE`：  
   
- [strncpy\_s、\_strncpy\_s\_l、wcsncpy\_s、\_wcsncpy\_s\_l、\_mbsncpy\_s、\_mbsncpy\_s\_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
+ [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)  
   
- [strncat\_s、\_strncat\_s\_l、wcsncat\_s、\_wcsncat\_s\_l、\_mbsncat\_s、\_mbsncat\_s\_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
+ [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)  
   
- [wcstombs\_s、\_wcstombs\_s\_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
+ [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)  
   
- [mbstowcs\_s、\_mbstowcs\_s\_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
+ [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)  
   
- 如果攔截未發生，下列函式傳回複製的數字字元，如果發生截斷 \(符合原始 snprintf 函式的行為\)則為 \-1:  
+ 如果未進行截斷，則下列函式會傳回複製的字元數，如果進行截斷，則會傳回 -1 (符合原始 snprintf 函式的行為)：  
   
- [\_snprintf\_s、\_snprintf\_s\_l、\_snwprintf\_s、\_snwprintf\_s\_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
+ [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)  
   
- [vsnprintf\_s、\_vsnprintf\_s、\_vsnprintf\_s\_l、\_vsnwprintf\_s、\_vsnwprintf\_s\_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
+ [vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_truncate.c  
@@ -89,7 +104,15 @@ int main()
 }  
 ```  
   
-  **攔截發生了\!**  
-**'1234'**   
-## 請參閱  
+```Output  
+truncation occurred!  
+'1234'  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [全域常數](../c-runtime-library/global-constants.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

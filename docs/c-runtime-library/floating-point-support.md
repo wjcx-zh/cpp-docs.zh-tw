@@ -1,100 +1,279 @@
 ---
 title: "浮點支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.math"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "浮點數"
-  - "浮點數, 數學常式"
-  - "數學常式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.math
+dev_langs:
+- C++
+helpviewer_keywords:
+- floating-point numbers, math routines
+- math routines
+- floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 浮點支援
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: e289b439f53b987f57face51952d54dc16002edd
+ms.openlocfilehash: f378805dc00885c10816c989da22f13357b8f894
 
-許多 Microsoft 執行階段程式庫函式需要數學副處理器，或是隨附於編譯器的浮點程式庫對浮點的支援。  僅在需要時才會載入浮點支援函式。  
+---
+# <a name="floating-point-support"></a>浮點支援
+Microsoft C 執行階段程式庫 (CRT) 提供許多浮點數學程式庫函式，包括 ISO C99 需要的所有項目。 實作這些函式可以平衡效能與正確性。 因為產生正確的四捨五入結果可能極為昂貴，所以這些函式會設計成有效率產生最接近正確四捨五入結果的近似值。 在大部分情況下，產生的結果是在正確四捨五入結果的 +/-1 ulp 內，但也可能出現較大的誤差。  
   
- 當您在 `printf` 或 `scanf` 系列中的函式呼叫的格式字串中，使用浮點類型規範時，必須指定浮點值或引數清單中的浮點值指標，以告訴編譯器需要浮點支援。  
+ 許多浮點數學程式庫函式對不同的 CPU 架構會有不同的實作。 例如，32 位元 x86 CRT 的實作可能和 64 位元 x64 CRT 的實作不同。 此外，某些函式對指定的 CPU 架構可能有多種實作。 在執行階段，會根據 CPU 支援的指令集動態選取最有效率的實作。 例如，在 32 位元 x86 CRT，有些函式同時有 x87 實作和 SSE2 實作。 在支援 SSE2 的 CPU 上執行時，會使用較快的 SSE2 實作。 在不支援 SSE2 的 CPU 上執行時，會使用較慢的 x87 實作。 因為數學程式庫函式的不同實作可能會使用不同的 CPU 指令和不同的演算法來產生結果，所以函式在不同的 CPU 中可能會產生不同的結果。 在大部分情況下，結果是在正確四捨五入結果的 +/-1 ulp 內，但實際的結果可能因 CPU 而異。  
   
- 如需示範如何處理浮點例外狀況的範例程式碼，請參閱 [\_fpieee\_flt](../c-runtime-library/reference/fpieee-flt.md)。  
+ 舊的 16 位元版 Microsoft C/C++ 和 Microsoft Visual C++ 支援 `long double` 類型作為 80 位元精確度浮點資料類型。 在更新版本的 Visual C++ 中，`long double` 資料類型是與 `double` 類型相同的 64 位元精確度浮點資料類型。 編譯器會將 `long double` 和 `double` 視為不同的類型，但 `long double` 函式與其 `double` 對應項目相同。 CRT 提供 `long double` 版本的數學函式以相容於 ISO C99 原始程式碼，但請注意，二進位表示法可能與其他編譯器不同。  
   
- 中間值的浮點精確度是由函式 [\_control87、\_controlfp、\_\_control87\_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) 所控制。  根據預設，`_controlfp` 中的精確度控制會設為 53 位元 \(\_PC\_53\)。  使用 FP10.OBJ 進行連結會將預設精確度控制變更為 64 位元 \(\_PC\_64\)。  在連結器命令列上，FP10.OBJ 必須顯示在 LIBC.LIB、LIBCMT.LIB 或 MSVCRT.LIB 之前。  
+ CRT 支援下列浮點函式︰  
   
-### 浮點函式  
+ [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)  
   
-|常式|用法|.NET Framework 同等|  
-|--------|--------|-----------------------|  
-|[abs](../Topic/abs.md)|傳回 `int` 的絕對值|[\<caps:sentence id\="tgt14" sentenceid\="9594ba199e25e9de6b463c8efc9fbe95" class\="tgtSentence"\>System::Math::Abs\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)|  
-|[acos、acosf](../c-runtime-library/reference/acos-acosf-acosl.md)|計算反餘弦|[\<caps:sentence id\="tgt17" sentenceid\="954a441495360a1fa8b0170297b2ff38" class\="tgtSentence"\>System::Math::Acos\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.acos.aspx)|  
-|[asin、asinf](../c-runtime-library/reference/asin-asinf-asinl.md)|計算反正弦|[\<caps:sentence id\="tgt20" sentenceid\="313917cde9698a0924536719f5bece25" class\="tgtSentence"\>System::Math::Asin\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.asin.aspx)|  
-|[atan、atanf、atan2、atan2f](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|計算反正切|[System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx)、[System::Math::Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)|  
-|[atof、\_atof\_l、\_wtof、\_wtof\_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將字元字串轉換為雙精確度浮點值|[System::Convert::ToSingle](https://msdn.microsoft.com/en-us/library/system.convert.tosingle.aspx)、[System::Convert::ToDouble](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)|  
-|[Bessel 函式](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式 `_j0`、`_j1`、`_jn`、`_y0`、`_y1`、`_yn`|不適用。  若要呼叫標準 C 函式，請使用 `PInvoke`。  如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。|  
-|[\_cabs](../c-runtime-library/reference/cabs.md)|尋找複數的絕對值|不適用。|  
-|[cbrt](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|計算立方根|不適用。|  
-|[ceil、ceilf](../c-runtime-library/reference/ceil-ceilf-ceill.md)|尋找整數上限|[\<caps:sentence id\="tgt39" sentenceid\="656009d71fb974368bded363746de018" class\="tgtSentence"\>System::Math::Ceiling\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.ceiling.aspx)|  
-|[\_chgsign、\_chgsignf、\_chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|反轉雙精確度浮點值或長雙精度浮點引數的符號|不適用。|  
-|[\_clear87、\_clearfp](../c-runtime-library/reference/clear87-clearfp.md)|取得及清除浮點狀態字組|不適用。|  
-|[\_control87、\_controlfp、\_\_control87\_2](../c-runtime-library/reference/control87-controlfp-control87-2.md), [\_controlfp\_s](../c-runtime-library/reference/controlfp-s.md)|取得舊的浮點控制字組，並設定新的控制字組值。|不適用。|  
-|[copysign、copysignf、copysignl、\_copysign、\_copysignf、\_copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)|以另一個符號傳回某個值|不適用。|  
-|[cos、cosf、cosh、coshf](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)|計算餘弦|[System::Math::Cos](https://msdn.microsoft.com/en-us/library/system.math.cos.aspx)、[System::Math::Cosh](https://msdn.microsoft.com/en-us/library/system.math.cosh.aspx)|  
-|[difftime](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|計算兩個指定時間值之間的差異|[\<caps:sentence id\="tgt54" sentenceid\="5f4f365a3cd7f368db2f6ce31b797fdf" class\="tgtSentence"\>System::DateTime::Subtract\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.datetime.subtract.aspx)|  
-|[div](../c-runtime-library/reference/div.md)|將某個整數除以另一個整數，傳回商數及餘數。|不適用。|  
-|[\_ecvt](../c-runtime-library/reference/ecvt.md), [\_ecvt\_s](../c-runtime-library/reference/ecvt-s.md)|將 `double` 轉換為指定長度的字元字串|[\<caps:sentence id\="tgt60" sentenceid\="ed8e24ad5c647dc4efa4fbe1e9bbc5e3" class\="tgtSentence"\>System::Convert::ToString\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)|  
-|[exp、expf](../c-runtime-library/reference/exp-expf.md)|計算指數函式|[\<caps:sentence id\="tgt63" sentenceid\="81a65df6ac66cdc4a4b12c2f7e555487" class\="tgtSentence"\>System::Math::Exp\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.exp.aspx)|  
-|[fabs、fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|尋找絕對值|[\<caps:sentence id\="tgt66" sentenceid\="9594ba199e25e9de6b463c8efc9fbe95" class\="tgtSentence"\>System::Math::Abs\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)|  
-|[\_fcvt](../c-runtime-library/reference/fcvt.md)、[\_fcvt\_s](../c-runtime-library/reference/fcvt-s.md)|將 `double` 轉換為小數點後具有指定位數的字串|[\<caps:sentence id\="tgt69" sentenceid\="ed8e24ad5c647dc4efa4fbe1e9bbc5e3" class\="tgtSentence"\>System::Convert::ToString\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)|  
-|[\_finite](../c-runtime-library/reference/finite-finitef.md)|決定指定的雙精確度浮點值是否為有限|[\<caps:sentence id\="tgt72" sentenceid\="8d081c50adeda3dde4cebab81a0b3583" class\="tgtSentence"\>System::Double::IsInfinity\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.double.isinfinity.aspx)|  
-|[floor、floorf](../c-runtime-library/reference/floor-floorf-floorl.md)|尋找小於或等於引數的最大整數|[\<caps:sentence id\="tgt75" sentenceid\="609db9ab0433b647d5350d3b965d70f9" class\="tgtSentence"\>System::Math::Floor\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.floor.aspx)|  
-|[fmod、fmodf](../c-runtime-library/reference/fmod-fmodf.md)|尋找浮點餘數|[\<caps:sentence id\="tgt78" sentenceid\="127a04426267ccb17fb4b566ad56de9c" class\="tgtSentence"\>System::Math::IEEERemainder\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)|  
-|[\_fpclass](../c-runtime-library/reference/fpclass-fpclassf.md)|傳回包含浮點類別相關資訊的狀態字組|[System::Double::IsInfinity](https://msdn.microsoft.com/en-us/library/system.double.isinfinity.aspx)、[System::Double::IsNegativeInfinity](https://msdn.microsoft.com/en-us/library/system.double.isnegativeinfinity.aspx)、[System::Double::IsPositiveInfinity](https://msdn.microsoft.com/en-us/library/system.double.ispositiveinfinity.aspx)、[System::Double::IsNan](https://msdn.microsoft.com/en-us/library/system.double.isnan.aspx)|  
-|[\_fpieee\_flt](../c-runtime-library/reference/fpieee-flt.md)|針對 IEEE 浮點例外狀況叫用使用者定義的設陷處理常式|不適用。|  
-|[\_fpreset](../c-runtime-library/reference/fpreset.md)|重新初始化浮點數學封裝||  
-|[frexp](../c-runtime-library/reference/frexp.md)|計算指數值|不適用。|  
-|[\_gcvt](../c-runtime-library/reference/gcvt.md)、[\_gcvt\_s](../c-runtime-library/reference/gcvt-s.md)|將浮點值轉換為字元字串|[\<caps:sentence id\="tgt92" sentenceid\="ed8e24ad5c647dc4efa4fbe1e9bbc5e3" class\="tgtSentence"\>System::Convert::ToString\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)|  
-|[hypot、hypotf、hypotl、\_hypot、\_hypotf、\_hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)|計算直角三角形的弦|不適用。|  
-|[\_isnan](../c-runtime-library/reference/isnan-isnan-isnanf.md)|檢查不是數字 \(NaN\) 的指定雙精確度浮點值|[\<caps:sentence id\="tgt97" sentenceid\="18f7dc07d0c506c23f2f7eb89262d274" class\="tgtSentence"\>System::Double::IsNan\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.double.isnan.aspx)|  
-|[labs](../misc/labs-llabs.md)|傳回 `long` 的絕對值|[\<caps:sentence id\="tgt100" sentenceid\="9594ba199e25e9de6b463c8efc9fbe95" class\="tgtSentence"\>System::Math::Abs\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.abs.aspx)|  
-|[ldexp](../c-runtime-library/reference/ldexp.md)|計算引數和 2<sup>exp</sup> \(指定的冪\) 的乘積|[\<caps:sentence id\="tgt103" sentenceid\="839e85fe5fb98e8520d40a703d06932b" class\="tgtSentence"\>System::Math::Pow\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)|  
-|[ldiv](../c-runtime-library/reference/ldiv-lldiv.md)|將某個 `long` 整數除以另一個，並傳回商數及餘數。|不適用。|  
-|[log、logf、log10、log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)|計算自然對數或底數 10 的對數。|[System::Math::Log](https://msdn.microsoft.com/en-us/library/system.math.log.aspx)、[System::Math::Log10](https://msdn.microsoft.com/en-us/library/system.math.log10.aspx)|  
-|[\_logb](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)|擷取雙精確度浮點引數的指數值|不適用。|  
-|[\_lrotl、\_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|將 `unsigned long int` 向左移 \(`_lrotl`\) 或向右移 \(`_lrotr`\)|不適用。|  
-|[\_matherr](../c-runtime-library/reference/matherr.md)|處理數學錯誤|不適用。|  
-|[\_\_max](../c-runtime-library/reference/max.md)|傳回兩個值中的較大值|[\<caps:sentence id\="tgt121" sentenceid\="6f9dcb228534c3e5b0013615b2b1d003" class\="tgtSentence"\>System::Math::Max\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.max.aspx)|  
-|[\_\_min](../c-runtime-library/reference/min.md)|傳回兩個值中的較小值|[\<caps:sentence id\="tgt124" sentenceid\="ff471983fc666dec7ba58b17a0bf76e6" class\="tgtSentence"\>System::Math::Min\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.min.aspx)|  
-|[modf、modff](../c-runtime-library/reference/modf-modff-modfl.md)|將引數分為整數和分數部分|不適用。|  
-|[nan、nanf、nanl](../c-runtime-library/reference/nan-nanf-nanl.md)|傳回無訊息 NaN 值|[\<caps:sentence id\="tgt129" sentenceid\="c251043405ffa73fe857c83428b58fdc" class\="tgtSentence"\>System::Double::NaN\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.double.nan.aspx)|  
-|[\_nextafter](../c-runtime-library/reference/nextafter-functions.md)|傳回下一個可表示的鄰近項目|不適用。|  
-|[pow、powf](../c-runtime-library/reference/pow-powf-powl.md)|計算與冪自乘的值|[\<caps:sentence id\="tgt135" sentenceid\="839e85fe5fb98e8520d40a703d06932b" class\="tgtSentence"\>System::Math::Pow\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.pow.aspx)|  
-|[printf、\_printf\_l、wprintf、\_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md), [printf\_s、\_printf\_s\_l、wprintf\_s、\_wprintf\_s\_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|根據指定的格式將資料寫入 `stdout`|[System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)、[System::Console::WriteLine](https://msdn.microsoft.com/en-us/library/system.console.writeline.aspx)|  
-|[rand](../c-runtime-library/reference/rand.md)、[rand\_s](../c-runtime-library/reference/rand-s.md)|取得虛擬亂數|[\<caps:sentence id\="tgt141" sentenceid\="00574fde17be9de3e07567ef5abe0110" class\="tgtSentence"\>System::Random 類別\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.random.aspx)|  
-|[rint、rintf、rintl](../c-runtime-library/reference/rint-rintf-rintl.md)|四捨五入至浮點格式的最接近整數|[\<caps:sentence id\="tgt143" sentenceid\="1c04aeb4aeff1752cb65adabcee29f53" class\="tgtSentence"\>System::Math::Round\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.round.aspx)|  
-|[\_rotl、\_rotr](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|將 `unsigned int` 向左移 \(`_rotl`\) 或向右移 \(`_rotr`\)|不適用。|  
-|[\_scalb](../c-runtime-library/reference/scalb.md)|將引數依 2 的冪進位|不適用。|  
-|[scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|乘以 `FLT_RADIX` 的整數冪|不適用。|  
-|[scanf、wscanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)；[scanf\_s、\_scanf\_s\_l、wscanf\_s、\_wscanf\_s\_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|根據指定的格式讀取 `stdin` 的資料，並將資料寫入指定的位置。|[System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)、[System::Console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)|  
-|[\_set\_controlfp](../c-runtime-library/reference/set-controlfp.md)|設定新的控制字組值|不適用。|  
-|[sin、sinf、sinh、sinhf](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)|計算正弦或雙曲正弦|[System::Math::Sin](https://msdn.microsoft.com/en-us/library/system.math.sin.aspx)、[System::Math::Sinh](https://msdn.microsoft.com/en-us/library/system.math.sinh.aspx)|  
-|[sqrt](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|尋找平方根|[\<caps:sentence id\="tgt162" sentenceid\="1a91af0bd8c63b4be64c7a0bec8dc8c4" class\="tgtSentence"\>System::Math::Sqrt\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.math.sqrt.aspx)|  
-|[srand](../c-runtime-library/reference/srand.md)|初始化虛擬隨機數列|[\<caps:sentence id\="tgt165" sentenceid\="00574fde17be9de3e07567ef5abe0110" class\="tgtSentence"\>System::Random 類別\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.random.aspx)|  
-|[\_status87、\_statusfp、\_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|取得浮點狀態字組|不適用。|  
-|[strtod、\_strtod\_l、wcstod、\_wcstod\_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|將字元字串轉換為雙精確度值|[\<caps:sentence id\="tgt169" sentenceid\="363f8f2cb09f8ca850491a65df66522e" class\="tgtSentence"\>System::Convert::ToDouble\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)|  
-|[tan、tanf、tanh、tanhf](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)|計算正切或雙曲正切|[System::Math::Tan](https://msdn.microsoft.com/en-us/library/system.math.tan.aspx)、[System::Math::Tanh](https://msdn.microsoft.com/en-us/library/system.math.tanh.aspx)|  
+ [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)  
   
-## 請參閱  
- [依分類區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)
+ [acosh、acoshf、acoshl](../c-runtime-library/reference/acosh-acoshf-acoshl.md)  
+  
+ [asin、asinf、asinl](../c-runtime-library/reference/asin-asinf-asinl.md)  
+  
+ [asinh、asinhf、asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)  
+  
+ [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)  
+  
+ [atanh、atanhf、atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)  
+  
+ [_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)  
+  
+ [atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)  
+  
+ [_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)  
+  
+ [cbrt、cbrtf、cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)  
+  
+ [ceil、ceilf、ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)  
+  
+ [_chgsign、_chgsignf、_chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)  
+  
+ [_clear87、_clearfp](../c-runtime-library/reference/clear87-clearfp.md)  
+  
+ [compl](../c-runtime-library/reference/compl.md)  
+  
+ [conj、conjf、conjl](../c-runtime-library/reference/conj-conjf-conjl.md)  
+  
+ [_control87、\__control87_2、_controlfp](../c-runtime-library/reference/control87-controlfp-control87-2.md)  
+  
+ [_controlfp_s](../c-runtime-library/reference/controlfp-s.md)  
+  
+ [copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl](../c-runtime-library/reference/copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)  
+  
+ [cos、cosf、cosl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)  
+  
+ [cosh、coshf、coshl](../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)  
+  
+ [div](../c-runtime-library/reference/div.md)  
+  
+ [_ecvt](../c-runtime-library/reference/ecvt.md)  
+  
+ [ecvt](../c-runtime-library/reference/posix-ecvt.md)  
+  
+ [_ecvt_s](../c-runtime-library/reference/ecvt-s.md)  
+  
+ [erf、erff、erfl、erfc、erfcf、erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)  
+  
+ [exp、expf](../c-runtime-library/reference/exp-expf.md)  
+  
+ [exp2、exp2f、exp2l](../c-runtime-library/reference/exp2-exp2f-exp2l.md)  
+  
+ [expm1、expm1f、expm1l](../c-runtime-library/reference/expm1-expm1f-expm1l.md)  
+  
+ [fabs、fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)  
+  
+ [_fcvt](../c-runtime-library/reference/fcvt.md)  
+  
+ [fcvt](../c-runtime-library/reference/posix-fcvt.md)  
+  
+ [_fcvt_s](../c-runtime-library/reference/fcvt-s.md)  
+  
+ [fdim、fdimf、fdiml](../c-runtime-library/reference/fdim-fdimf-fdiml.md)  
+  
+ [feclearexcept](../c-runtime-library/reference/feclearexcept1.md)  
+  
+ [fegetenv](../c-runtime-library/reference/fegetenv1.md)  
+  
+ [fegetexceptflag](../c-runtime-library/reference/fegetexceptflag2.md)  
+  
+ [fegetround](../c-runtime-library/reference/fegetround-fesetround2.md)  
+  
+ [feholdexcept](../c-runtime-library/reference/feholdexcept2.md)  
+  
+ [feraiseexcept](../c-runtime-library/reference/feraiseexcept.md)  
+  
+ [ferror](../c-runtime-library/reference/ferror.md)  
+  
+ [fesetenv](../c-runtime-library/reference/fesetenv1.md)  
+  
+ [fesetexceptflag](../c-runtime-library/reference/fesetexceptflag2.md)  
+  
+ [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)  
+  
+ [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)  
+  
+ [feupdateenv](../c-runtime-library/reference/feupdateenv.md)  
+  
+ [_finite、_finitef](../c-runtime-library/reference/finite-finitef.md)  
+  
+ [floor、floorf、floorl](../c-runtime-library/reference/floor-floorf-floorl.md)  
+  
+ [fma、fmaf、fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)  
+  
+ [fmax、fmaxf、fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)  
+  
+ [fmin、fminf、fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)  
+  
+ [fmod、fmodf](../c-runtime-library/reference/fmod-fmodf.md)  
+  
+ [_fpclass、_fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)  
+  
+ [fpclassify](../c-runtime-library/reference/fpclassify.md)  
+  
+ [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)  
+  
+ [_fpreset](../c-runtime-library/reference/fpreset.md)  
+  
+ [frexp](../c-runtime-library/reference/frexp.md)  
+  
+ [gcvt](../c-runtime-library/reference/posix-gcvt.md)  
+  
+ [_gcvt](../c-runtime-library/reference/gcvt.md)  
+  
+ [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)  
+  
+ [hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)  
+  
+ [ilogb、ilogbf、ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)  
+  
+ [imaxabs](../c-runtime-library/reference/imaxabs.md)  
+  
+ [imaxdiv](../c-runtime-library/reference/imaxdiv.md)  
+  
+ [isnan、_isnan、_isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)  
+  
+ [_j0、_j1、_jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)  
+  
+ [ldexp](../c-runtime-library/reference/ldexp.md)  
+  
+ [ldiv、lldiv](../c-runtime-library/reference/ldiv-lldiv.md)  
+  
+ [lgamma、lgammaf、lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)  
+  
+ [llrint、llrintf、llrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)  
+  
+ [llround、llroundf、llroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)  
+  
+ [log、logf、log10、log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)  
+  
+ [log1p、log1pf、log1pl](../c-runtime-library/reference/log1p-log1pf-log1pl2.md)  
+  
+ [log2、log2f、log2l](../c-runtime-library/reference/log2-log2f-log2l.md)  
+  
+ [logb、logbf、logbl、_logb、_logbf](../c-runtime-library/reference/logb-logbf-logbl-logb-logbf.md)  
+  
+ [lrint、lrintf、lrintl](../c-runtime-library/reference/lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)  
+  
+ [_lrotl、_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)  
+  
+ [lround、lroundf、lroundl](../c-runtime-library/reference/lround-lroundf-lroundl-llround-llroundf-llroundl.md)  
+  
+ [_matherr](../c-runtime-library/reference/matherr.md)  
+  
+ [__max](../c-runtime-library/reference/max.md)  
+  
+ [__min](../c-runtime-library/reference/min.md)  
+  
+ [modf、modff](../c-runtime-library/reference/modf-modff-modfl.md)  
+  
+ [nan、nanf、nanl](../c-runtime-library/reference/nan-nanf-nanl.md)  
+  
+ [nanf](../c-runtime-library/reference/nan-nanf-nanl.md)  
+  
+ [nanl](../c-runtime-library/reference/nan-nanf-nanl.md)  
+  
+ [nearbyint、nearbyintf、nearbyintl](../c-runtime-library/reference/nearbyint-nearbyintf-nearbyintl1.md)  
+  
+ [nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl](../c-runtime-library/reference/nextafter-functions.md)  
+  
+ [norm、normf、norml](../c-runtime-library/reference/norm-normf-norml1.md)  
+  
+ [pow、powf、powl](../c-runtime-library/reference/pow-powf-powl.md)  
+  
+ [remainder、remainderf、remainderl](../c-runtime-library/reference/remainder-remainderf-remainderl.md)  
+  
+ [remquo、remquof、remquol](../c-runtime-library/reference/remquo-remquof-remquol.md)  
+  
+ [rint、rintf、rintl](../c-runtime-library/reference/rint-rintf-rintl.md)  
+  
+ [_rotl、_rotl64、_rotr、_rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)  
+  
+ [round、roundf、roundl](../c-runtime-library/reference/round-roundf-roundl.md)  
+  
+ [_scalb](../c-runtime-library/reference/scalb.md)  
+  
+ [scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)  
+  
+ [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)  
+  
+ [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)  
+  
+ [sin、sinf、sinl](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)  
+  
+ [sinh、sinhf、sinhl](../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)  
+  
+ [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)  
+  
+ [_status87、_statusfp、_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)  
+  
+ [strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)  
+  
+ [strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)  
+  
+ [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)  
+  
+ [tanh、tanhf、tanhl](../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)  
+  
+ [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)  
+  
+ [trunc、truncf、truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)  
+  
+ [_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)  
+  
+ [_y0、_y1、_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)  
+  
+## <a name="see-also"></a>另請參閱  
+ [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)
+
+
+<!--HONumber=Feb17_HO4-->
+
+

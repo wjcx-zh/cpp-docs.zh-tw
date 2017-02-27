@@ -14,11 +14,11 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 97950b1da4e79feaf4d2657aed570c704f4046b4
+ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
+ms.openlocfilehash: bdde9bfb68c156ec7709329ae7fe038793915ec9
 
 ---
-Visual Studio 2012 Update 1
+Visual Studio 2017 中的 Visual C++
 
 
 <!--HONumber=Feb17_HO4-->

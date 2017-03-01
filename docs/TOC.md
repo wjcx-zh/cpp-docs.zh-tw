@@ -11,7 +11,6 @@
 # [Linux 開發](linux/download-install-and-setup-the-linux-development-workload.md)
 # [使用 C++/CLI 進行 .NET 開發](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [以 Visual C++ 進行雲端和 Web 程式設計](cloud/cloud-and-web-programming-in-visual-cpp.md)
-## [C++ REST SDK (名稱代碼 "Casablanca")](cloud/cpp-rest-sdk-codename-casablanca.md)
 # [平行程式設計](parallel/parallel-programming-in-visual-cpp.md)
 # [資料存取](data/data-access-programming-mfc-atl.md)
 # [文字和字串](text/text-and-strings-in-visual-cpp.md)
@@ -24,8 +23,3 @@
 # [Visual C++ 範例](visual-cpp-samples.md)
 # [Visual C++ 說明和社群](visual-cpp-help-and-community.md)
 # [如何回報 Visual C++ 工具組問題](how-to-report-a-problem-with-the-visual-cpp-toolset.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

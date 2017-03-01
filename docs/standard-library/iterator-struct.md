@@ -1,76 +1,92 @@
 ---
 title: "iterator 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "iterator"
-  - "std::iterator"
-  - "std.iterator"
-  - "xutility/std::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator 類別"
-  - "iterator 結構"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- iterator
+- std::iterator
+- std.iterator
+- xutility/std::iterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- iterator class
+- iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# iterator 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: b14712f36d8cc7b4dbbdd4fd6a0cef3cb0667d8b
+ms.lasthandoff: 02/24/2017
 
-用來建立空的基礎結構確保使用者自訂的 Iterator 類別適當地使用 **iterator\_trait**的 . 一起使用。  
+---
+# <a name="iterator-struct"></a>iterator 結構
+空的基底結構，用來確保使用者定義的迭代器類別能夠與 **iterator_trait** 正常搭配運作。  
   
-## 語法  
+## <a name="syntax"></a>語法  
+```    
+struct iterator {
+   typedef Category iterator_category;
+   typedef Type value_type;
+   typedef Distance difference_type;
+   typedef Distance distance_type;
+   typedef Pointer pointer;
+   typedef Reference reference;
+   };  
+```    
+## <a name="remarks"></a>備註  
+ 此範本結構可作為所有迭代器的基底類型。 它會定義成員類型  
   
-```  
-template<class Category, class Type, class Distance = ptrdiff_t  
-    class Pointer = Type*, class Reference = Type&>  
-    struct iterator {  
-        typedef Category iterator_category;  
-        typedef Type value_type;  
-        typedef Distance difference_type;  
-        typedef Distance distance_type;  
-        typedef Pointer pointer;  
-        typedef Reference reference;  
-    };  
-```  
+- `iterator_category` (與範本參數 `Category` 同義)。  
   
-## 備註  
- 範本結構做為的基底型別 \(Base 所有 Iterator。  它定義成員型別  
+- `value_type` (與範本參數 **Type** 同義)。  
   
--   `iterator_category` \(範本參數的 `Category`\) 的同義字。  
+- `difference_type` (與範本參數 `Distance` 同義)。  
   
--   `value_type` \(範本參數的 \[**型別**\]\) 同義字。  
+- `distance_type` (與範本參數 `Distance` 同義)  
   
--   `difference_type` \(範本參數的 `Distance`\) 的同義字。  
+- `pointer` (與範本參數 `Pointer` 同義)。  
   
--   `distance_type` \(範本參數的 `Distance`\) 同義資料表。  
+- `reference` (與範本參數 `Reference` 同義)。  
   
--   `pointer` \(範本參數的 `Pointer`\) 的同義字。  
+ 請注意，`value_type` 不應該是常數類型，即使 **pointer** 指向 const **Type** 的物件且參考指定的物件是 const **Type** 亦同。  
   
--   `reference` \(範本參數的 `Reference`\) 的同義字。  
+## <a name="example"></a>範例  
+ 如需如何在迭代器基底類別中宣告及使用類型的範例，請參閱 [iterator_traits](../standard-library/iterator-traits-struct.md)。  
   
- 請注意 `value_type` 不應為常數型別，即使在常數 \[**型別**\] 和參考物件的 **pointer** 點選設定常數 \[**型別**\] 物件。  
+## <a name="requirements"></a>需求  
+ **標頭：**\<iterator>  
   
-## 範例  
- 提供的範例參閱 [iterator\_traits](../standard-library/iterator-traits-struct.md) 宣告和使用型別在 Iterator 基底類別。  
+ **命名空間：** std  
   
-## 需求  
- **Header:** \<Iterator\>  
-  
- **命名空間:** std  
-  
-## 請參閱  
- [\<iterator\>](../standard-library/iterator.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="see-also"></a>另請參閱  
+ [\<iterator>](../standard-library/iterator.md)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,74 +1,88 @@
 ---
 title: "_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_vcprintf_s"
-  - "_vcprintf_s_l"
-  - "_vcwprintf_s"
-  - "_vcwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vcprintf_s"
-  - "vcwprintf_s_l"
-  - "_vcwprintf_s"
-  - "_vcwprintf_s_l"
-  - "_vcprintf_s_l"
-  - "_vtcprintf_s"
-  - "vcwprintf_s"
-  - "vcprintf_s_l"
-  - "_vcprintf_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_vcprintf_s 函式"
-  - "_vcprintf_s_l 函式"
-  - "_vcwprintf_s 函式"
-  - "_vcwprintf_s_l 函式"
-  - "_vtcprintf_s 函式"
-  - "_vtcprintf_s_l 函式"
-  - "格式化的文字 [C++]"
-  - "vcprintf_s 函式"
-  - "vcprintf_s_l 函式"
-  - "vcwprintf_s 函式"
-  - "vcwprintf_s_l 函式"
-  - "vtcprintf_s 函式"
-  - "vtcprintf_s_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _vcprintf_s
+- _vcprintf_s_l
+- _vcwprintf_s
+- _vcwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vcprintf_s
+- vcwprintf_s_l
+- _vcwprintf_s
+- _vcwprintf_s_l
+- _vcprintf_s_l
+- _vtcprintf_s
+- vcwprintf_s
+- vcprintf_s_l
+- _vcprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _vtcprintf_s_l function
+- _vcwprintf_s_l function
+- _vtcprintf_s function
+- vtcprintf_s_l function
+- vcprintf_s_l function
+- _vcprintf_s function
+- _vcwprintf_s function
+- vcwprintf_s_l function
+- vcwprintf_s function
+- vcprintf_s function
+- _vcprintf_s_l function
+- vtcprintf_s function
+- formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
 caps.latest.revision: 24
-caps.handback.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 412f586184fa49ca4106ca09f5a031ea3cefc00e
+ms.lasthandoff: 02/24/2017
 
-使用引數清單的指標將格式化輸出寫入至主控台。  這些 [\_vcprintf、\_vcprintf\_l、\_vcwprintf、\_vcwprintf\_l](../../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) 版本有安全性增強功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
+---
+# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
+使用引數清單的指標，將格式化輸出寫入主控台。 這些版本的 [_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l](../../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _vcprintf(  
@@ -91,50 +105,50 @@ int _vcwprintf_s_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `format`  
- 格式規範。  
+ 格式規格。  
   
  `argptr`  
- 指向引數清單的指標。  
+ 引數清單的指標。  
   
  `locale`  
- 使用的地區設定。  
+ 要使用的地區設定。  
   
  如需詳細資訊，請參閱[格式規格語法：printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
-## 傳回值  
- 列印的字元數，但當其為負值時，表示輸出發生錯誤。  
+## <a name="return-value"></a>傳回值  
+ 寫入的字元數，或是當發生輸出錯誤時為負值。  
   
- 像是這類函式的較不安全版本，如果 `format` 為 null 指標，則叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  此外，不同於這些函式的較不安全版本則為，如果 `format` 沒有指定有效格式，會產生無效的參數例外狀況。  如果執行允許繼續執行，這些函式會傳回錯誤碼並將 `errno` 設為該錯誤代碼。  如果特定值無法適用，其預設錯誤碼為 `EINVAL` 。  
+ 與這些函式的不安全版本類似，如果 `format` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 此外，與這些函式的不安全版本不同，如果 `format` 未指定有效格式，則會產生無效參數例外狀況。 如果允許繼續執行，這些函式會傳回錯誤碼，並將 `errno` 設為該錯誤碼。 如果不套用更精確的值，預設的錯誤碼是 `EINVAL`。  
   
-## 備註  
- 這些函式接受一個指向參數清單的指標，然後格式化並將給定的資料寫入至主控台。  `_vcwprintf_s` 是 `_vcprintf_s`的寬字元版本。  它會採用寬字元字串做為引數。  
+## <a name="remarks"></a>備註  
+ 所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 `_vcwprintf_s` 是寬字元版本的 `_vcprintf_s`。 它接受寬字元字串作為引數。  
   
- 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定，而不使用目前的地區設定。  
+ 這些有 `_l` 尾碼的函式版本都相同，不同之處在於會使用傳入的地區設定參數，而不使用目前的地區設定。  
   
 > [!IMPORTANT]
->  確認 `format` 不是使用者定義的字串。  如需詳細資訊，請參閱 [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) 。  
+>  確認 `format` 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vtcprintf_s`|`_vcprintf_s`|`_vcprintf_s`|`_vcwprintf_s`|  
 |`_vtcprintf_s_l`|`_vcprintf_s_l`|`_vcprintf_s_l`|`_vcwprintf_s_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性的標頭檔|  
-|--------|-----------|-------------|  
-|`_vcprintf_s`, `_vcprintf_s_l`|\<conio.h\> 和 \<stdarg.h\>|\<varargs.h\>\*|  
-|`_vcwprintf_s`, `_vcwprintf_s_l`|\<conio.h\> 或 \<wchar.h\>，以及 \<stdarg.h\>|\<varargs.h\>\*|  
+|常式|必要的標頭|選擇性標頭|  
+|-------------|---------------------|----------------------|  
+|`_vcprintf_s`, `_vcprintf_s_l`|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|  
+|`_vcwprintf_s`, `_vcwprintf_s_l`|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  
   
- \* 要求 UNIX V 相容性。  
+ \* UNIX V 相容性的必要項目。  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_vcprintf_s.cpp  
@@ -146,7 +160,9 @@ int eprintf_s(const char* format, ...)
 {  
   va_list args;  
   va_start(args, format);  
-  return _vcprintf_s(format, args);  
+  int result = _vcprintf_s(format, args);  
+  va_end(args);  
+  return result;
 }  
   
 int main()  
@@ -158,16 +174,19 @@ int main()
 }  
 ```  
   
-  **\(10,23\): Error C2111 : \<some error text\>**  
- **\(與第5行定義的\<symbol\>' 符號相關\).**   
-## .NET Framework 對等用法  
+```Output  
+(10,23): Error C2111 : <some error text>  
+  (Related to symbol '<symbol>' defined on line 5).  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 函式](../../c-runtime-library/vprintf-functions.md)   
- [\_cprintf、\_cprintf\_l、\_cwprintf、\_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fprintf、\_fprintf\_l、fwprintf、\_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf、\_printf\_l、wprintf、\_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg、va\_copy、va\_end、va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

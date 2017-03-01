@@ -1,32 +1,48 @@
 ---
 title: "其他單一引數輸出資料流操作工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "輸出資料流, 單一引數操作工具"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 其他單一引數輸出資料流操作工具
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 9a2162085b6a78cb376c5bbd7d76943f76115d30
+ms.lasthandoff: 02/24/2017
 
-下列範例會使用類別， `money`是 `long` 型別。  `setpic` 操作工具附加格式圖片」字串可由類別使用 `money`的資料流插入運算子的類別。  因為資料流類別的資料成員，因此，您不需要從衍生新的輸出資料流類別，圖像字串會儲存為靜態變數在 `money` 類別而不是。  
+---
+# <a name="other-one-argument-output-stream-manipulators"></a>其他單一引數輸出資料流操作工具
+以下範例使用類型為 `long` 的類別 `money`。 `setpic` 操作工具會附加格式「圖片」字串到類別，可由類別 `money` 的多載資料流插入運算子使用。 圖片字串會當作靜態變數儲存於 `money` 類別，而不是資料流類別的資料成員，因此您不需要衍生新的輸出資料流類別。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // one_arg_output.cpp  
 // compile with: /GR /EHsc  
 #include <iostream>  
@@ -84,5 +100,7 @@ int main( )
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有引數的自訂操作工具](../standard-library/custom-manipulators-with-arguments.md)
+
+

@@ -1,54 +1,70 @@
 ---
-title: "remainder、remainderf、remainderl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "remainderl"
-  - "remainder"
-  - "remainderf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "remainderf"
-  - "remainder"
-  - "remainderl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remainderf"
-  - "remainderl"
-  - "餘數"
+title: "remainder、remainderf、remainder | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- remainderl
+- remainder
+- remainderf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- remainderf
+- remainder
+- remainderl
+dev_langs:
+- C++
+helpviewer_keywords:
+- remainderf
+- remainderl
+- remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
 caps.latest.revision: 8
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# remainder、remainderf、remainderl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e482d061fa5692a6a6ca54c618ffcf90a194c6c9
+ms.lasthandoff: 02/24/2017
 
-計算兩個浮點數值商數的其餘部分，會四捨五入至最接近的整數值。  
+---
+# <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
+計算兩個浮點值商數的餘數，四捨五入為最接近的整數值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double remainder(   
@@ -74,32 +90,32 @@ long double remainderl(
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `numer`  
  分子。  
   
  `denom`  
  分母。  
   
-## 傳回值  
- `x` \/ `y`浮點數餘數。  如果 `y` 的值為 0.0，`remainder` 就會傳回無訊息 NaN。  如需以 `printf` 系列表示無訊息 NaN 的詳細資訊，請參閱 [printf、\_printf\_l、wprintf、\_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)。  
+## <a name="return-value"></a>傳回值  
+ `x` / `y` 的浮點餘數。 如果 `y` 的值為 0.0，則 `remainder` 會傳回無訊息 NaN。 如需透過 `printf` 系列表示無訊息 NaN 的資訊，請參閱 [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)。  
   
-## 備註  
- `remainder`函式會計算浮點數餘數`r``x` \/ `y`像是`x` \= `n` \* `y` \+ `r`，`n` 是最接近`x` \/ `y`的值，`n`是偶數無論是否整除 `n`。 \- `x` \/ `y` &#124; \= 1\/2.  當 `r` \= 0， `r` 有與 `x`相同的標記。  
+## <a name="remarks"></a>備註  
+ `remainder` 函式會計算 `x` / `y` 之 `r` 的浮點數餘數，使得 `x` = `n` * `y` + `r`，其中 `n` 是值最接近 `x` / `y` 的整數，且每當 &#124; `n` - `x` / `y` &#124; = 1/2 時，`n` 是偶數。 當 `r` = 0 時，`r` 的正負號與 `x` 相同。  
   
- 因為 C\+\+ 允許多載，您可以呼叫會接受並傳回 `float` 或 `long double` 值的 `remainder` 多載。  在 C 程式中， `remainder` 一律接受並傳回雙精確度浮點數。  
+ 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `remainder` 或 `float` 值的 `long double` 的多載。 在 C 程式中，`remainder` 一律會採用兩個雙精度浮點數並傳回一個雙精度浮點數。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|功能|必要的標頭|  
-|--------|-----------|  
-|`remainder`, `remainderf`, `remainderl`|\<math.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`remainder`, `remainderf`, `remainderl`|\<math.h>|  
   
- 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```c  
+```C  
 // crt_remainder.c  
 // This program displays a floating-point remainder.  
   
@@ -115,11 +131,14 @@ int main( void )
 }  
 ```  
   
-  **\-10.00 \/ 3.00 的餘數為 \-1.000000**   
-## .NET Framework 對等用法  
+```Output  
+The remainder of -10.00 / 3.00 is -1.000000  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [ldiv、lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   

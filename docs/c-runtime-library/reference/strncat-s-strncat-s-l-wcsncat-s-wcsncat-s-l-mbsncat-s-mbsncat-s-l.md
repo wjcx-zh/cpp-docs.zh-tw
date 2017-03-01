@@ -1,78 +1,92 @@
 ---
 title: "strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcsncat_s_l"
-  - "wcsncat_s"
-  - "_mbsncat_s_l"
-  - "_mbsncat_s"
-  - "strncat_s"
-  - "_strncat_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strncat_s_l"
-  - "_mbsncat_s_l"
-  - "_tcsncat_s"
-  - "wcsncat_s"
-  - "wcsncat_s_l"
-  - "strncat_s"
-  - "_mbsncat_s"
-  - "_tcsncat_s_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_mbsncat_s 函式"
-  - "_mbsncat_s_l 函式"
-  - "_tcsncat_s 函式"
-  - "_tcsncat_s_l 函式"
-  - "附加字串"
-  - "串連字串"
-  - "mbsncat_s 函式"
-  - "mbsncat_s_l 函式"
-  - "字串串連 [C++]"
-  - "字串 [C++], 附加"
-  - "strncat_s 函式"
-  - "strncat_s_l 函式"
-  - "wcsncat_s 函式"
-  - "wcsncat_s_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcsncat_s_l
+- wcsncat_s
+- _mbsncat_s_l
+- _mbsncat_s
+- strncat_s
+- _strncat_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strncat_s_l
+- _mbsncat_s_l
+- _tcsncat_s
+- wcsncat_s
+- wcsncat_s_l
+- strncat_s
+- _mbsncat_s
+- _tcsncat_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- concatenating strings
+- _mbsncat_s function
+- mbsncat_s_l function
+- _tcsncat_s function
+- _mbsncat_s_l function
+- strncat_s function
+- strings [C++], appending
+- strncat_s_l function
+- string concatenation [C++]
+- _tcsncat_s_l function
+- wcsncat_s function
+- appending strings
+- wcsncat_s_l function
+- mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
 caps.latest.revision: 42
-caps.handback.revision: 40
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 81de28f343535df964284cd204921352951c2bd6
+ms.lasthandoff: 02/24/2017
 
-將字元附加至字串。  這些 [strncat、\_strncat\_l、wcsncat、\_wcsncat\_l、\_mbsncat、\_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) 版本有安全性增強功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
+---
+# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
+將字元附加至字串。 這些版本的 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
 > [!IMPORTANT]
->  `_mbsncat_s` and `_mbsncat_s_l`不能用於在 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbsncat_s` 和 `_mbsncat_s_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 errno_t strncat_s(  
@@ -155,37 +169,37 @@ errno_t _mbsncat_s_l(
 ); // C++ only  
 ```  
   
-#### 參數  
- \[out\] `strDest`  
- 以 Null 結束的結束字串。  
+#### <a name="parameters"></a>參數  
+ [輸出] `strDest`  
+ 以 Null 終止的目的字串。  
   
- \[in\]`numberOfElements`  
- 目的端緩衝區的大小。  
+ [in]`numberOfElements`  
+ 目的緩衝區大小。  
   
- \[in\]`strSource`  
+ [in]`strSource`  
  以 Null 結束的來源字串。  
   
- \[in\]`count`  
- 附加的字元數，或 [\_TRUNCATE](../../c-runtime-library/truncate.md)。  
+ [in]`count`  
+ 要附加的字元數或 [_TRUNCATE](../../c-runtime-library/truncate.md)。  
   
- \[in\] `locale`  
+ [in] `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 如果成功，回傳零，如果失敗，則為錯誤碼。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，則傳回 0，如果失敗，則為錯誤碼。  
   
-### 錯誤狀況  
+### <a name="error-conditions"></a>錯誤狀況  
   
-|`strDestination`|`numberOfElements`|`strSource`|傳回值|`strDestination` 的內容|  
-|----------------------|------------------------|-----------------|---------|--------------------------|  
-|`NULL` 或未結束|any|any|`EINVAL`|未修改|  
-|any|any|`NULL`|`EINVAL`|未修改|  
-|any|0 或太小|any|`ERANGE`|未修改|  
+|`strDestination`|`numberOfElements`|`strSource`|傳回值|`strDestination` 的內容。|  
+|----------------------|------------------------|-----------------|------------------|----------------------------------|  
+|`NULL` 或未終止的|any|任何|`EINVAL`|未修改|  
+|any|任何|`NULL`|`EINVAL`|未修改|  
+|any|0 或太小|任何|`ERANGE`|未修改|  
   
-## 備註  
- 這些函式嘗試附加 `strSource` 的第一個 `D` 字元加入至 `strDest`的結尾， `D` 是較小的 `count` 和 `strSource`的長度。  如果附加這些 `D` 字元在大小中適當值會測量為 \(`numberOfElements`\) 的 `strDest` 和仍然保留 null 結束字元的空間，則這些字元附加開始，原始的結尾的 null，則為 `strDest`，而且新的結尾附加 null ;否則 `strDest`\[0\] 被設為 Null 字元和無效的參數叫用處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
+## <a name="remarks"></a>備註  
+ 這些函式嘗試將 `strSource` 的前 `D` 個字元附加到 `strDest` 結尾，其中 `D` 是較小的 `count` 且長度為 `strSource`。 如果尾部附加這些 `D` 字元適合 `strDest` (其大小指定為 `numberOfElements`)，並仍留出空間給以 Null 終止的字元，則附加這些字元，從 `strDest` 的原始終止 Null 開始，再附加新的終止 Null；否則 `strDest`[0] 會設成 Null 字元並叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
   
- 上述段落中有個例外。  如果 `count` 為 `strSource` [\_TRUNCATE](../../c-runtime-library/truncate.md) 則符合附加至 `strDest` ，同時保留空間附加一個結尾的 null。  
+ 上述段落有一個例外狀況。 如果 `count` 是 [_TRUNCATE](../../c-runtime-library/truncate.md)，則 `strSource` 會盡量多地調整附加至 `strDest`，同時保留附加終止 Null 的空間。  
   
  例如：  
   
@@ -195,9 +209,9 @@ errno_t _mbsncat_s_l(
   
  `strncat_s(dst, _countof(dst), "34567", 3);`  
   
- 表示我們要求 `strncat_s` 在五個字元的緩衝區附加三個字元至兩個字元;這不會保留空間給 null 結束字元的空間，所以 `strncat_s` 歸零字串並告知無效的參數處理常式。  
+ 表示我們要求 `strncat_s` 將三個字元附加至緩衝區中五個字元長的兩個字元後，這不會留下任何空間給以 Null 終止的字元，因此 `strncat_s` 會歸零字串，並呼叫無效的參數處理常式。  
   
- 如果攔截行為是必要的，請使用 `_TRUNCATE` 或調整 `size` 參數:  
+ 如果需要截斷行為，請使用 `_TRUNCATE` 或據以調整 `size` 參數︰  
   
  `strncat_s(dst, _countof(dst), "34567", _TRUNCATE);`  
   
@@ -205,38 +219,38 @@ errno_t _mbsncat_s_l(
   
  `strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);`  
   
- 在所有情況下，結果產生的字串是以 null 字元結束。  如果在重疊的字串之間執行複製，則行為是未定義的。  
+ 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。  
   
- 如果 `strSource` 或 `strDest` 為 `NULL` 或 `numberOfElements` 為零，則會叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果執行允許繼續執行，函式會傳回 `EINVAL` ，但不修改其參數。  
+ 如果 `strSource` 或 `strDest` 為 `NULL`，或 `numberOfElements` 為零，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回 `EINVAL` 但不修改其參數。  
   
- `wcsncat_s` 和 `_mbsncat_s` 是 `strncat_s` 的寬字元和多位元組字元版本。  `wcsncat_s` 的字串引數和傳回值是寬字元字串，而 `_mbsncat_s` 的引數和傳回值則是多位元組字元字串。  這三個函式其餘部分的運作相同。  
+ `wcsncat_s` 和 `_mbsncat_s` 是寬字元和多位元組字元版本的 `strncat_s`。 `wcsncat_s` 的字串引數與傳回值是寬字元字串；`_mbsncat_s` 的引數和傳回值則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
- 輸出值受地區設定的`LC_CTYPE` 分類設定所影響。如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 。  這些函式沒有以 `_l` 後綴的版本在這些地區相依的行為上使用目前的地區設定，而以 `_l` 後綴版本除了它們會使用傳入的地區設定參數之外運作相同。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- C\+\+ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 \(因而不須指定大小引數\)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。  如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
   
- 這些函式的偵錯版本會先用 0xFD 填入緩衝區。  若要停用此行為，請使用 [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
+ 這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncat_s`|`strncat_s`|`_mbsnbcat_s`|`wcsncat_s`|  
 |`_tcsncat_s_l`|`_strncat_s_l`|`_mbsnbcat_s_l`|`_wcsncat_s_l`|  
   
- `_strncat_s_l` 和 `_wcsncat_s_l` 沒有地區設定相關屬性;它們只針對 `_tcsncat_s_l`。  
+ `_strncat_s_l` 和 `_wcsncat_s_l` 沒有任何地區設定相依性，僅供 `_tcsncat_s_l` 所用。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`strncat_s`|\<string.h\>|  
-|`wcsncat_s`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strncat_s`|\<string.h>|  
+|`wcsncat_s`|\<string.h> 或 \<wchar.h>|  
+|`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_strncat_s.cpp  
@@ -336,46 +350,57 @@ int main( void )
 }  
 ```  
   
-  **附加 4 個字元「where」到 10 個位元組 dest 緩衝區**  
- **dest 的舊內容:「"hi"」**  
- **dest 的新內容:「"hi ther"」**  
-**附加 5 個字元「where」到 10 個位元組 dest 緩衝區**  
- **dest 的舊內容:「"hi"」**  
- **dest 的新內容:「"hi there"」**  
-**附加 6 個字元「where」到 10 個位元組 dest 緩衝區**  
- **dest 的舊內容:「"hi"」**  
- **dest 的新內容:「"hi there"」**  
-**目的緩衝區過小：**  
-**附加 4 個字元「where」到 10 個位元組 dest 緩衝區**  
- **dest 的舊內容:「hello」**  
-**呼叫無效的參數處理常式：\(L 「緩衝區太小」 && 0\)**   
- **目的新內容：「**  
-**攔截範例：**  
-**附加「where」會以攔截語意的 10 位元組 dest 緩衝區**   
- **dest 的舊內容:「hello」**  
- **dest 新內容:「hello the」**  
- **攔截發生**  
-**附加「\!」到攔截語意的 10 位元組 dest 緩衝區**   
- **dest 的舊內容:「hello」**  
- **dest 的新內容:「hello\!」**  
- **攔截未發生**  
-**保護範本多載範例：**  
-**呼叫無效的參數處理常式：\(L 「緩衝區太小」 && 0\)**   
- **目的新內容：「**   
-## .NET Framework 對等用法  
+```Output  
+Appending 4 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi ther'  
+  
+Appending 5 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi there'  
+  
+Appending 6 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hi '  
+    new contents of dest: 'hi there'  
+  
+Destination buffer too small:  
+  
+Appending 4 chars of 'there' to 10-byte buffer dest  
+    old contents of dest: 'hello '  
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
+    new contents of dest: ''  
+  
+Truncation examples:  
+  
+Appending 'there' to 10-byte buffer dest with truncation semantics  
+    old contents of dest: 'hello '  
+    new contents of dest: 'hello the'  
+    truncation did occur  
+  
+Appending '!' to 10-byte buffer dest with truncation semantics  
+    old contents of dest: 'hello '  
+    new contents of dest: 'hello !'  
+    truncation did not occur  
+  
+Secure template overload example:  
+Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
+    new contents of dest: ''  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbcat、\_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [strcat、wcscat、\_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp、wcscmp、\_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy、wcscpy、\_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy、\_strncpy\_l、wcsncpy、\_wcsncpy\_l、\_mbsncpy、\_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [\_strset、\_strset\_l、\_wcsset、\_wcsset\_l、\_mbsset、\_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [_mbsnbcat、_mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

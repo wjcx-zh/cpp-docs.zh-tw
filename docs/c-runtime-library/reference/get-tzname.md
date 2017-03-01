@@ -1,50 +1,66 @@
 ---
-title: "_get_tzname | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_tzname"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_tzname"
-  - "get_tzname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_get_tzname 函式"
-  - "get_tzname 函式"
-  - "時區"
+title: _get_tzname | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_tzname
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_tzname
+- get_tzname
+dev_langs:
+- C++
+helpviewer_keywords:
+- _get_tzname function
+- time zones
+- get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _get_tzname
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 2a7712c311c5007b2d50578d78452d6c989a7ad1
+ms.lasthandoff: 02/24/2017
 
-擷取時區或日光節約時間的標準時區名稱 \(DST\) 的字串表示。  
+---
+# <a name="gettzname"></a>_get_tzname
+擷取代表時區名稱或日光節約標準時區名稱 (DST) 的字元字串。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 errno_t _get_tzname(  
@@ -55,62 +71,62 @@ errno_t _get_tzname(
 );  
 ```  
   
-#### 參數  
- \[out\] `pReturnValue`  
- 字串長度 `timeZoneName` 包括 null 結束字元。  
+#### <a name="parameters"></a>參數  
+ [輸出] `pReturnValue`  
+ `timeZoneName` 的字串長度包括 Null 結束字元。  
   
- \[out\] `timeZoneName`  
- 一個表示時區或日光節約時間時區名稱 \(DST\)的字串的位址，根據 `index`。  
+ [輸出] `timeZoneName`  
+ 代表時區名稱或日光節約標準時區名稱 (DST) 的字元字串的位址，取決於 `index`。  
   
- \[in\] `sizeInBytes`  
+ [in] `sizeInBytes`  
  `timeZoneName` 字元字串的大小，以位元組為單位。  
   
- \[in\] `index`  
- 索引擷取的兩個時區名稱之一。  
+ [in] `index`  
+ 要擷取的兩個時區名稱中，其中一個時區名稱的索引。  
   
-## 傳回值  
- 如果成功為零，反之則為 `errno` 型別的值。  
+## <a name="return-value"></a>傳回值  
+ 如果成功則為零，否則為 `errno` 類型的值。  
   
- 如果 `timeZoneName` 是 `NULL`，或者 `sizeInBytes` 為零或小於零 \(但不是兩個都是\)，將叫用無效的參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，函式將 `errno` 設置為 `EINVAL` 並回傳 `EINVAL` 。  
+ 如果 `timeZoneName` 為 `NULL`，或 `sizeInBytes` 為零或小於零 (但非兩者皆是)，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
   
-### 錯誤狀況  
+### <a name="error-conditions"></a>錯誤狀況  
   
-|`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|傳回值|`timeZoneName` 的內容|  
-|--------------------|--------------------|-------------------|-------------|---------|------------------------|  
-|TZ 名稱的大小|`NULL`|0|0 或 1|0|未修改|  
-|TZ 名稱的大小|any|\> 0|0 或 1|0|TZ 命名|  
-|未修改|`NULL`|\> 0|any|`EINVAL`|未修改|  
-|未修改|any|零|any|`EINVAL`|未修改|  
-|未修改|any|\> 0|\> 1|`EINVAL`|未修改|  
+|`pReturnValue`|`timeZoneName`|`sizeInBytes`|`index`|傳回值|`timeZoneName` 的內容。|  
+|--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|  
+|時區名稱的大小|`NULL`|0|0 或 1|0|未修改|  
+|時區名稱的大小|any|> 0|0 或 1|0|時區名稱|  
+|未修改|`NULL`|> 0|任何|`EINVAL`|未修改|  
+|未修改|any|零|任何|`EINVAL`|未修改|  
+|未修改|any|> 0|> 1|`EINVAL`|未修改|  
   
-## 備註  
- `_get_tzname` 函式根據索引值擷取時區或日光節約時間時區名稱 \(DST\) 的字元字串至 `timeZoneName` 的位址，跟著表示字串大小的 `pReturnValue`。  如果 `timeZoneName` 是 `NULL` ，而且 `sizeInBytes` 為零，只有任一個時區資料的大小 \(以位元組為單位\) 會以 `pReturnValue` 傳回。  索引值必須是 0 代表標準時區時間或 1 代表日光節約標準時區;索引的任何其他值會導致不確定的結果。  
+## <a name="remarks"></a>備註  
+ `_get_tzname` 函式會擷取代表時區名稱或日光節約標準時區名稱 (DST) 的字元字串，依據索引值放入 `timeZoneName` 位址，以及 `pReturnValue`。 如果 `timeZoneName` 是 `NULL`，且 `sizeInBytes` 為零，則 `pReturnValue` 只會傳回其中一個時區的字串大小，以位元組為單位。 標準時區的索引值必須為 0 或日光節約標準時區的索引值必須為 1；任何索引的其他值均為未定結果。  
   
-### 索引值  
+### <a name="index-values"></a>索引值  
   
-|`index`|`timeZoneName` 的內容|`timeZoneName` 預設值。|  
-|-------------|------------------------|-------------------------|  
+|`index`|`timeZoneName` 的內容。|`timeZoneName` 預設值|  
+|-------------|--------------------------------|----------------------------------|  
 |0|時區名稱|"PST"|  
 |1|日光節約標準時區名稱|"PDT"|  
-|\> 1 或 \< 0|將 `errno` 設為 `EINVAL`。|未修改|  
+|> 1 或 < 0|請將 `errno` 設為 `EINVAL`|未修改|  
   
- 在執行階段期間，除非值明確變更，預設值分別為「PST」和「PDT」。這些字元陣列的大小是由 `TZNAME_MAX` 值所控制。  
+ 除非在執行階段期間明確地變更值，否則預設值分別為 "PST" 和 "PDT"。  這些字元陣列的大小都受到 `TZNAME_MAX` 值的規範。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_get_tzname`|\<time.h\>|  
+|-------------|---------------------|  
+|`_get_tzname`|\<time.h>|  
   
  如需詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
- [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [\_get\_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [\_get\_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
- [\_get\_timezone](../../c-runtime-library/reference/get-timezone.md)   
- [TZNAME\_MAX](../../c-runtime-library/tzname-max.md)
+ [errno、_doserrno、_sys_errlist 和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
+ [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
+ [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   
+ [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
+ [TZNAME_MAX](../../c-runtime-library/tzname-max.md)

@@ -1,48 +1,64 @@
 ---
-title: "setbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setbuf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setbuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "setbuf 函式"
-  - "資料流緩衝"
+title: setbuf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setbuf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setbuf
+dev_langs:
+- C++
+helpviewer_keywords:
+- setbuf function
+- stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# setbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ce7ea86029a99b5727fa1d7bd033044431a1fbff
+ms.lasthandoff: 02/24/2017
 
-控制資料流緩衝。  這個函式已被取代；請改用 [setvbuf](../../c-runtime-library/reference/setvbuf.md) 。  
+---
+# <a name="setbuf"></a>setbuf
+控制資料流緩衝處理。 已取代此函式；請改用 [setvbuf](../../c-runtime-library/reference/setvbuf.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void setbuf(  
@@ -51,27 +67,27 @@ void setbuf(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `stream`  
- 指向 `FILE` 結構的指標。  
+ `FILE` 結構的指標。  
   
  `buffer`  
  使用者配置的緩衝區。  
   
-## 備註  
- 緩衝區為 `stream`的 `setbuf` 控制項的函式。  `stream` 引數必須參考未讀取或未寫入的檔案。  如果 `buffer` 引數為 `NULL`，資料流是無緩衝區的。  否則，緩衝區必須指向一字元陣列長度 `BUFSIZ`，`BUFSIZ` 為緩衝區大小，如 STDIO.H. 定義。  使用者指定的緩衝區，而不是指定資料流的預設系統配置緩衝區，為 I\/O 緩衝區。  預設為 `stderr` 資料流是無緩衝區的，不過，您可以使用 `setbuf` 指派緩衝區給 `stderr`。  
+## <a name="remarks"></a>備註  
+ `setbuf` 函式會控制 `stream` 的緩衝處理。 `stream` 引數必須參照尚未讀取或寫入的開啟檔案。 如果 `buffer` 引數是 `NULL`，則不會緩衝處理資料流。 否則，緩衝區必須指向長度為 `BUFSIZ` 的字元陣列，其中 `BUFSIZ` 是 STDIO.H 中所定義的緩衝區大小。 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 預設不會緩衝處理 `stderr` 資料流，但您可以使用 `setbuf` 將緩衝區指派給 `stderr`。  
   
- `setbuf` 已由 [setvbuf](../../c-runtime-library/reference/setvbuf.md) 取代，為新的程式碼較好的常式。  `setbuf` 是為了保持與現有的程式碼的相容性。  
+ `setbuf` 已取代為 [setvbuf](../../c-runtime-library/reference/setvbuf.md)，這是新程式碼的慣用常式。 `setbuf` 會保留與現有程式碼的相容性。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`setbuf`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`setbuf`|\<stdio.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_setbuf.c  
@@ -105,14 +121,17 @@ int main( void )
 }  
 ```  
   
-  **stream1 set to user\-defined buffer at: 0012FCDC**  
-**stream2 緩衝停用**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+stream1 set to user-defined buffer at: 0012FCDC  
+stream2 buffering disabled  
+```  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [fclose、\_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen、\_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

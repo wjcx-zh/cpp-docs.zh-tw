@@ -1,32 +1,50 @@
 ---
 title: "使用擷取運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ">> 運算子, 擷取運算子"
-  - "擷取運算子"
-  - "運算子 [C++], 擷取"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extraction operators
+- '>> operator, extraction operators'
+- operators [C++], extraction
 ms.assetid: a961e1a9-4897-41de-b210-89d5b2d051ae
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 使用擷取運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: e5dcc1e57b807ee7ff7b4292f31563d4041c0bdd
+ms.lasthandoff: 02/24/2017
 
-擷取運算子 \(`>>`\)，為所有標準 C\+\+ 資料型別預先編譯程序，最簡單的方式就是從輸入資料流物件取得位元組。  
+---
+# <a name="using-extraction-operators"></a>使用擷取運算子
+擷取運算子 (`>>`) 已針對所有標準 C++ 資料類型進行預先程式設計，是從輸入資料流物件取得位元組的最簡單方式。  
   
- 格式化文字輸入擷取運算子依賴分隔輸入資料值的插入空白像信號空間。  這並不方便，當文字欄位包含多個單字，或是當逗號分隔數字時。  在這個案例中，其中一種選擇是使用未格式化的輸入成員函式 [istream::getline](../Topic/basic_istream::getline.md) 讀取文字區塊包含空白字元，然後有特殊功能的區塊。  另一個方法會取得與 10% 成員函式的輸入資料流類別 \(例如 `GetNextToken`\)，可以呼叫 istream 成員擷取和格式字元資料。  
+ 格式化的文字輸入擷取運算子會仰賴空白字元以分隔內送的資料值。 當文字欄位包含多個文字，或是當使用逗號來分隔數字時，這很不方便。 在這種情況下，其中一個替代方法是使用未格式化的輸入成員函式 [istream::getline](../standard-library/basic-istream-class.md#basic_istream__getline) 來讀取包含空白字元的文字區塊，然後使用特殊函式剖析該區塊。 另一個方法是使用成員函式 (例如 `GetNextToken`) 來衍生輸入資料流類別，該函式可以呼叫 istream 成員來擷取和格式化字元資料。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [輸入資料流](../standard-library/input-streams.md)
+
+

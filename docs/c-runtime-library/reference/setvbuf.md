@@ -1,49 +1,65 @@
 ---
-title: "setvbuf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "setvbuf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "setvbuf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制資料流緩衝"
-  - "setvbuf 函式"
-  - "資料流緩衝"
+title: setvbuf | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- setvbuf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- setvbuf
+dev_langs:
+- C++
+helpviewer_keywords:
+- controlling stream buffering
+- stream buffering
+- setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# setvbuf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 34e35686b96ae6a2d0b27639d2d23b6d242fe4d4
+ms.lasthandoff: 02/24/2017
 
-控制流程緩衝區和緩衝區大小。  
+---
+# <a name="setvbuf"></a>setvbuf
+控制資料流緩衝處理和緩衝區大小。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int setvbuf(  
@@ -54,52 +70,52 @@ int setvbuf(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `stream`  
- 指向 `FILE` 結構的指標。  
+ `FILE` 結構的指標。  
   
  `buffer`  
  使用者配置的緩衝區。  
   
  `mode`  
- 緩衝模式。  
+ 緩衝處理的模式。  
   
  `size`  
- 緩衝區的大小，以位元組為單位。  允許的範圍:2\<\= `size` \< \= INT\_MAX \(2147483647\)。  在內部提供 `size` 的值會四捨五入至最接近 2 的倍數。.  
+ 緩衝區大小 (以位元組為單位)。 允許的範圍︰2 <= `size` <= INT_MAX (2147483647)。 就內部而言，針對 `size` 提供的值會向下捨入為最近的 2 倍數。  
   
-## 傳回值  
- 如果成功則傳回 0。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，會傳回 0。  
   
- 如果 `stream` 是 `NULL`，或者如果 `mode` 或 `size` 不是有效的變更，則無效的參數處理會被叫用處理，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，這個函式會傳回 `errno`，並將 `EINVAL` 設為 \-1。  
+ 如果 `stream` 為 `NULL`，或者 `mode` 或 `size` 不在有效變更內，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
   
- 如需有關這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `setvbuf` 函式可讓程式控制緩衝區、緩衝區大小的 `stream`。  當他開啟時，`stream` 必須參考未執行 I\/O 作業的開啟檔案。  `buffer`所指向的陣列當做緩衝區，除非它是`NULL`，在 `setvbuf` 中使用自動配置的長度 `size`\/2 \* 2 位元組的緩衝區。  
+## <a name="remarks"></a>備註  
+ `setvbuf` 函式可讓程式控制 `stream` 的緩衝處理和緩衝區大小。 `stream` 必須參考因已開啟而未進行 I/O 作業的開啟檔案。 除非 `buffer` 為 `NULL`，否則會將其所指向的陣列用作緩衝區，在此情況下，`setvbuf` 會使用長度為 `size`/2 * 2 位元組的自動配置緩衝區。  
   
- 模式必須是`_IOFBF`, `_IOLBF`, or `_IONBF`。  如果 `mode` 是 `_IOFBF` 或 `_IOLBF`，則 `size` 當做緩衝區的大小。  如果 `mode` 是 `_IONBF`，則資料流是無緩衝區的，且 `size` 和 `buffer` 會被忽略。  `mode` 的值及其意義如下:  
+ 模式必須是 `_IOFBF`、`_IOLBF` 或 `_IONBF`。 如果 `mode` 為 `_IOFBF` 或 `_IOLBF`，則會將 `size` 用作緩衝區的大小。 如果 `mode` 為 `_IONBF`，則不會緩衝處理資料流，並忽略 `size` 和 `buffer`。 `mode` 的值和其意義如下：  
   
  `_IOFBF`  
- 完整的緩衝區；換句話說，當 `buffer` 被當作緩衝區和 `size` 當做緩衝區的大小。  如果 `buffer` 是 `NULL`，則使用自動配置的緩衝區 `size` 位元組長。  
+ 完整緩衝處理；亦即，將 `buffer` 用作緩衝區，並將 `size` 用作緩衝區的大小。 如果 `buffer` 為 `NULL`，則會使用自動配置的緩衝區 `size` 位元組長度。  
   
  `_IOLBF`  
- 對於某些系統，這提供行的緩衝區。  不過，對於 Win32，行為與 `_IOFBF` 相同\-充分的緩衝區。  
+ 對於某些系統，這提供行緩衝處理。 不過，對於 Win32，行為與 `_IOFBF` 相同 - 完整緩衝處理。  
   
  `_IONBF`  
- 不論 `buffer` 或 `size`，都沒有使用緩衝區。  
+ 不論 `buffer` 或 `size`，都不會使用緩衝區。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`setvbuf`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`setvbuf`|\<stdio.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_setvbuf.c  
@@ -131,14 +147,17 @@ int main( void )
 }  
 ```  
   
-  **「stream1 」現在有 1024 位元組緩衝區。**  
-**「stream2」目前沒有任何緩衝區**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+'stream1' now has a buffer of 1024 bytes  
+'stream2' now has no buffer  
+```  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [fclose、\_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   
- [fopen、\_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [setbuf](../../c-runtime-library/reference/setbuf.md)

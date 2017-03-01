@@ -1,48 +1,65 @@
 ---
-title: "_CrtIsMemoryBlock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtIsMemoryBlock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtlsMemoryBlock"
-  - "_CrtIsMemoryBlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtIsMemoryBlock 函式"
-  - "CrtIsMemoryBlock 函式"
+title: _CrtIsMemoryBlock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtIsMemoryBlock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtlsMemoryBlock
+- _CrtIsMemoryBlock
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtIsMemoryBlock function
+- CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _CrtIsMemoryBlock
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e884526e45e4bb8fbf1070fca8fd740d692dc285
+ms.lasthandoff: 02/24/2017
 
-確認指定的記憶體區塊在本機堆積，並有有效的偵錯堆積區塊類型識別項 \(僅偵錯版本\)。  
+---
+# <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
+確認指定的記憶體區塊位於本機堆積，且具有有效的偵錯堆積區塊類型識別項 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _CrtIsMemoryBlock(   
@@ -54,55 +71,55 @@ int _CrtIsMemoryBlock(
 );  
 ```  
   
-#### 參數  
- \[in\] `userData`  
- 要驗證的記憶體區塊的開頭的指標。  
+#### <a name="parameters"></a>參數  
+ [in] `userData`  
+ 要確認之記憶體區塊開頭的指標。  
   
- \[in\] `size`  
- 單位為位元組的區塊大小。  
+ [in] `size`  
+ 指定區塊的大小 (以位元組為單位)。  
   
- \[out\] `requestNumber`  
- 對區塊配置數量或 `NULL`的指標。  
+ [輸出] `requestNumber`  
+ 區塊之配置數目的指標，或為 `NULL`。  
   
- \[out\] `filename`  
- 指向要求區塊或 `NULL` 的來源檔案名稱之指標。  
+ [輸出] `filename`  
+ 要求區塊之原始程式檔名的指標，或為 `NULL`。  
   
- \[out\] `linenumber`  
- 對在原始程式檔的行號或 `NULL` 的指標。  
+ [輸出] `linenumber`  
+ 原始程式檔中行號的指標，或為 `NULL`。  
   
-## 傳回值  
- 如果指定的記憶體區塊在本機堆積內且有有效的偵錯堆積區塊類型的識別項，`_CrtIsMemoryBlock` 會傳回 `TRUE` ;否則，函式會傳回 `FALSE`。  
+## <a name="return-value"></a>傳回值  
+ 如果指定的記憶體區塊位於本機堆積，且具有有效的偵錯堆積區塊類型識別項，`_CrtIsMemoryBlock` 會傳回 `TRUE`；否則函式會傳回 `FALSE`。  
   
-## 備註  
- `_CrtIsMemoryBlock` 函式會驗證指定的記憶體區塊在應用程式的本機堆積中，而且有有效的區塊類型的識別項。  這個函式也可以用來取得物件配置順序編號和記憶體區塊配置原始要求的原始程式檔名稱和行號。  如果在本機堆積找到區塊，傳遞 `requestNumber`的非 null 值， `filename`或 `linenumber` 參數造成 `_CrtIsMemoryBlock` 設定這些參數為記憶體區塊的偵錯標頭。  如果未定義 [\_DEBUG](../../c-runtime-library/debug.md)，在前置處理中，對 `_CrtIsMemoryBlock` 的呼叫將被移除。  
+## <a name="remarks"></a>備註  
+ `_CrtIsMemoryBlock` 函式會確認指定的記憶體區塊位於應用程式的本機堆積，且具有有效的區塊類型識別項。 此函式也可用來取得物件配置順序編號，以及原始要求記憶體區塊配置的原始程式檔名/行號。 針對 `requestNumber`、`filename` 或 `linenumber` 參數傳遞非 NULL 值，會導致 `_CrtIsMemoryBlock` 將這些參數設定為記憶體區塊偵錯標頭中的值 (如果在本機堆積中找到此區塊)。 若未定義 [_DEBUG](../../c-runtime-library/debug.md)，將會在前置處理期間移除對 `_CrtIsMemoryBlock` 的呼叫。  
   
- 如果 `_CrtIsMemoryBlock` 失敗，則傳回 `FALSE` ，並將輸出參數初始化為預設值: `requestNumber` 和 `lineNumber` 設定為 0，而 `filename` 設定為 `NULL`。  
+ 如果 `_CrtIsMemoryBlock` 失敗，它會傳回 `FALSE` 且輸出參數會初始化為預設值︰`requestNumber` 和 `lineNumber` 會設定為 0，而 `filename` 會設定為 `NULL`。  
   
- 由於這個函式會傳回 `TRUE` 或 `FALSE`，它可以傳遞至其中一個 [\_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 巨集以建立一個簡單的偵錯錯誤處理機制。  如果指定的位址不在本機堆積中，尋找下列範例造成判斷提示失敗:  
+ 因為此函式會傳回 `TRUE` 或 `FALSE`，所以可將該函式傳遞至其中一個 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 巨集，以建立簡單的偵錯處理機制。 如果指定的位址不在本機堆積內，則下列範例會造成判斷提示失敗：  
   
 ```  
 _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,   
 &filename, &linenumber ) );  
 ```  
   
- 如需 `_CrtIsMemoryBlock` 如何與其他偵錯功能和巨集一起使用的詳細資訊，請參閱 [報告巨集](../Topic/Macros%20for%20Reporting.md)。  如需記憶體區塊配置、初始化的方式，並在基底堆積的偵錯版本管理記憶體區塊的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](../Topic/CRT%20Debug%20Heap%20Details.md)。  
+ 如需如何搭配其他偵錯函式和巨集使用 `_CrtIsMemoryBlock` 的詳細資訊，請參閱[報告巨集](/visualstudio/debugger/macros-for-reporting)。 如需如何在偵錯版本的基底堆積中配置、初始化和管理記憶體區塊的資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_CrtIsMemoryBlock`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtIsMemoryBlock`|\<crtdbg.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C run\-time libraries](../../c-runtime-library/crt-library-features.md) 版本的偵錯  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
- 參閱 [CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md) 類別主題的的範例。  
+## <a name="example"></a>範例  
+ 請參閱 [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md) 主題的範例。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

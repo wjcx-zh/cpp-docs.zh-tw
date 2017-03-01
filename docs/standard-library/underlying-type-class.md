@@ -1,54 +1,73 @@
 ---
 title: "underlying_type 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "underlying_type"
-  - "std.underlying_type"
-  - "std::underlying_type"
-  - "type_traits/std::underlying_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "underlying_type"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- underlying_type
+- std.underlying_type
+- std::underlying_type
+- type_traits/std::underlying_type
+dev_langs:
+- C++
+helpviewer_keywords:
+- underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
 caps.latest.revision: 13
-caps.handback.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# underlying_type 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: 95012fdeb3ac78d5e1cc76e03ed851a0b9701f5e
+ms.lasthandoff: 02/24/2017
 
-產生的列舉型別為基礎的整數型別。  
+---
+# <a name="underlyingtype-class"></a>underlying_type 類別
+產生列舉類型的基礎整數類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```
 template <class T>  
-    struct underlying_type;  
+struct underlying_type;
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
  要修改的類型。  
   
-## 備註  
- `type` 樣板類別的成員 typedef 名稱的基礎整數型別 `T`, ，當 `T` 是列舉型別，否則就沒有成員 typedef `type`。  
+## <a name="remarks"></a>備註  
+ 當 `T` 為列舉類型時，樣板類別的 `type` 成員 typedef 會命名 `T` 的基礎整數類型，否則沒有成員 typedef `type`。  
   
-## 需求  
- **標頭：**\<type\_traits\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<type_traits>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<type\_traits\>](../standard-library/type-traits.md)
+## <a name="see-also"></a>另請參閱  
+ [<type_traits>](../standard-library/type-traits.md)
+
+
+
+

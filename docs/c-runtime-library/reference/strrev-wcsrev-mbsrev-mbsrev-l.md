@@ -1,75 +1,91 @@
 ---
 title: "_strrev、_wcsrev、_mbsrev、_mbsrev_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wcsrev"
-  - "_mbsrev"
-  - "_strrev"
-  - "_mbsrev_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strrev"
-  - "_ftcsrev"
-  - "_tcsrev"
-  - "mbsrev"
-  - "mbsrev_l"
-  - "_wcsrev_fstrrev"
-  - "_mbsrev"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcsrev 函式"
-  - "_mbsrev 函式"
-  - "_mbsrev_l 函式"
-  - "_strrev 函式"
-  - "_tcsrev 函式"
-  - "_wcsrev 函式"
-  - "字元 [C++], 反轉順序"
-  - "字元 [C++], 切換"
-  - "ftcsrev 函式"
-  - "mbsrev 函式"
-  - "mbsrev_l 函式"
-  - "反轉字串中的字元"
-  - "字串 [C++], 反向"
-  - "strrev 函式"
-  - "tcsrev 函式"
-  - "wcsrev 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wcsrev
+- _mbsrev
+- _strrev
+- _mbsrev_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strrev
+- _ftcsrev
+- _tcsrev
+- mbsrev
+- mbsrev_l
+- _wcsrev_fstrrev
+- _mbsrev
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbsrev_l function
+- characters [C++], switching
+- _mbsrev function
+- strrev function
+- _ftcsrev function
+- strings [C++], reversing
+- wcsrev function
+- _strrev function
+- mbsrev_l function
+- reversing characters in strings
+- ftcsrev function
+- characters [C++], reversing order
+- _wcsrev function
+- mbsrev function
+- tcsrev function
+- _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _strrev、_wcsrev、_mbsrev、_mbsrev_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 864c1bab23bdedf856f850411b1ba24813757833
+ms.lasthandoff: 02/24/2017
 
-反轉字串的字元。  
+---
+# <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
+反轉字串字元。  
   
 > [!IMPORTANT]
->  `_mbsrev` 與`_mbsrev_l`不能用於[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 不可在於  `_mbsrev` 中執行的應用程式中使用 `_mbsrev_l` 和 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 char *_strrev(  
@@ -87,44 +103,44 @@ unsigned char *_mbsrev_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `str`  
- 要反轉的以 Null 結束的字串。  
+ 以 Null 終止的待反轉字串。  
   
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 傳回變更後字串的指標。  未保留表示錯誤的傳回值。  
+## <a name="return-value"></a>傳回值  
+ 傳回變更後字串的指標。 未保留表示錯誤的傳回值。  
   
-## 備註  
- `_strrev` 函式會反轉 `string` 中的字元順序。  結束的 null 字元就地保留。  `_wcsrev` 和 `_mbsrev` 是 `_strrev` 的寬字元和多位元組字元版本。  `_wcsrev` 的引數和傳回值是寬字元字串，而 `_mbsrev` 的引數和傳回值則是多位元組字元字串。  對於 `_mbsrev`，在 `string` 不變更位元組在每個多位元組字元的順序。  這三個函式其餘部分的運作相同。  
+## <a name="remarks"></a>備註  
+ `_strrev` 函式會反轉 `string` 中的字元順序。 原地保留終止的 Null 字元。 `_wcsrev` 和 `_mbsrev` 是寬字元和多位元組字元版本的 `_strrev`。 `_wcsrev` 的引數和傳回值是寬字元字串；`_mbsrev` 的引數則是多位元組字元字串。 若是 `_mbsrev`，`string` 中每個多位元組字元的位元組順序不會變更。 除此之外，這三個函式的行為相同。  
   
- `_mbsrev` 會驗證其參數。  如果 `string1` 或 `string2` 為 null 指標，則叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行， `_mbsrev` 會傳回 `NULL` 並設定 `errno` 為 `EINVAL`。  `_strrev` 和 `_wcsrev` 並不驗證它們的參數。  
+ `_mbsrev` 會驗證其參數。 如果 `string1` 或 `string2` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`_mbsrev` 會傳回 `NULL`，且 `errno` 設為 `EINVAL`。 `_strrev` 和 `_wcsrev` 不會驗證其參數。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響。如需詳細資訊，請參閱 [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  這些功能的版本是相同的，不同之處在於不具有的那些有 `_l` 後置字元者使用當前區域設置而那些有  `_l`後置字元者，則不是使用的傳入的區域設置參數。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些函式的版本均相同，只不過沒有 `_l` 尾碼的函式使用目前的地區設定，而具有 `_l` 尾碼的函式改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
 > [!IMPORTANT]
->  這些函式可能容易受到緩衝區滿溢的威脅。  緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。  如需詳細資訊，請參閱 [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) 。  
+>  這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsrev`|`_strrev`|`_mbsrev`|`_wcsrev`|  
-|**N\/A**|**N\/A**|`_mbsrev_l`|**N\/A**|  
+|**不適用**|**不適用**|`_mbsrev_l`|**n/a**|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_strrev`|\<string.h\>|  
-|`_wcsrev`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbsrev`, `_mbsrev_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strrev`|\<string.h>|  
+|`_wcsrev`|\<string.h> 或 \<wchar.h>|  
+|`_mbsrev`, `_mbsrev_l`|\<mbstring.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_strrev.c  
@@ -150,13 +166,16 @@ int main( void )
 }  
 ```  
   
-  **The string "Able was I ere I saw Elba" is a palindrome**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+The string "Able was I ere I saw Elba" is a palindrome  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcpy、wcscpy、\_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [\_strset、\_strset\_l、\_wcsset、\_wcsset\_l、\_mbsset、\_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)
+ [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)

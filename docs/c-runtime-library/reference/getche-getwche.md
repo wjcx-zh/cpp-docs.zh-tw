@@ -1,87 +1,103 @@
 ---
 title: "_getche、_getwche | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getwche"
-  - "_getche"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getwche"
-  - "_getche"
-  - "_getwche"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_getche 函式"
-  - "_getwche 函式"
-  - "字元, 從主控台取得"
-  - "主控台, 讀取自"
-  - "getche 函式"
-  - "getwche 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getwche
+- _getche
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- getwche
+- _getche
+- _getwche
+dev_langs:
+- C++
+helpviewer_keywords:
+- characters, getting from console
+- _getwche function
+- getche function
+- console, reading from
+- getwche function
+- _getche function
 ms.assetid: eac978a8-c43a-4130-938f-54f12e2a0fda
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _getche、_getwche
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bfa28600c984bb491b99dfdfa87b3bfa38d5b4df
+ms.lasthandoff: 02/24/2017
 
-從主控台取得包含 echo 的字元。  
+---
+# <a name="getche-getwche"></a>_getche、_getwche
+在有回應的情形下，從主控台取得字元。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _getche( void );  
 wint_t _getwche( void );  
 ```  
   
-## 傳回值  
- 傳回讀取的字元。  不會回傳錯誤。  
+## <a name="return-value"></a>傳回值  
+ 傳回讀取的字元。 不會傳回錯誤。  
   
-## 備註  
- `_getche` 和 `_getwche` 函式從主控台讀取包含 echo 的單一字元，代表字元顯示在主控台。  這些函式都不可以用來讀取 CTRL\+C。  當讀取功能鍵或方向鍵時，每個函式必須呼叫兩次;第一個呼叫會回傳0 或 0xE0，第二個呼叫會傳回實際按鍵碼。  
+## <a name="remarks"></a>備註  
+ `_getche` 和 `_getwche` 函式在有回應的情形下，從主控台讀取單一字元，表示該字元會顯示在主控台上。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。  
   
- 這些函式鎖定呼叫的執行緒並具備執行緒安全。  如需非鎖定版本，請參閱 [\_getche\_nolock、\_getwche\_nolock](../../c-runtime-library/reference/getche-nolock-getwche-nolock.md)。  
+ 這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getche_nolock、_getwche_nolock](../../c-runtime-library/reference/getche-nolock-getwche-nolock.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|Tchar.h 常式|未定義 \_UNICODE and \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|------------------------------|----------------|-------------------|  
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_getche`|`_getche`|`_getch`|`_getwche`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_getche`|\<conio.h\>|  
-|`_getwche`|\<conio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_getche`|\<conio.h>|  
+|`_getwche`|\<conio.h> 或 \<wchar.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_getche.c  
@@ -109,12 +125,16 @@ int main( void )
 }  
 ```  
   
-  **`abcdey`按鍵輸入完成時輸入 'Y': Y**   
-## NET Framework 對等  
- 不適用。  若要呼叫標準 C 函式，請使用 `PInvoke`。  如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
   
-## 請參閱  
- [主控台和連接埠 I\/O](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cgets、\_cgetws](../../c-runtime-library/cgets-cgetws.md)   
+abcdeyType 'Y' when finished typing keys: Y  
+```  
+  
+## <a name="net-framework-equivalent"></a>NET Framework 對等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cgets、_cgetws](../../c-runtime-library/cgets-cgetws.md)   
  [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [\_ungetch、\_ungetwch、\_ungetch\_nolock、\_ungetwch\_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)
+ [_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock](../../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)

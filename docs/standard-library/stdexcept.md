@@ -1,32 +1,48 @@
 ---
-title: "&lt; stdexcept &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<stdexcept>"
-  - "std::<stdexcept>"
-  - "<stdexcept>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stdexcept 標頭"
+title: '&lt;stdexcept&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.<stdexcept>
+- std::<stdexcept>
+- <stdexcept>
+dev_langs:
+- C++
+helpviewer_keywords:
+- stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# &lt; stdexcept &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: a01f0cf531196d59815eb87f03ee9d8a15574088
+ms.lasthandoff: 02/24/2017
 
-定義數個標準類別，用於報告例外狀況。 類別會形成衍生階層衍生自類別 [例外狀況](../standard-library/exception-class1.md) ，並包含兩種一般的例外狀況︰ 邏輯錯誤和執行階段錯誤。 邏輯錯誤會造成程式設計錯誤。 它們衍生自基底類別 logic_error，也包含：  
+---
+# <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
+定義數個標準類別，用於報告例外狀況。 類別構成的衍生階層全都衍生自 [exception](../standard-library/exception-class.md)，而且類別會包含兩種一般的例外狀況類型：邏輯錯誤和執行階段錯誤。 邏輯錯誤會造成程式設計錯誤。 它們衍生自基底類別 logic_error，也包含：  
   
 -   `domain_error`  
   
@@ -58,7 +74,8 @@ caps.handback.revision: 19
 |[runtime_error 類別](../standard-library/runtime-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告僅當程式執行時假定可偵測的錯誤。|  
 |[underflow_error 類別](../standard-library/underflow-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告算術反向溢位。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

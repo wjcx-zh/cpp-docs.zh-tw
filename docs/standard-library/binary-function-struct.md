@@ -1,58 +1,70 @@
 ---
 title: "binary_function 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.binary_function"
-  - "functional/std::binary_function"
-  - "std::binary_function"
-  - "binary_function"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_function 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.binary_function
+- functional/std::binary_function
+- std::binary_function
+- binary_function
+dev_langs:
+- C++
+helpviewer_keywords:
+- binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# binary_function 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 7fa7e543bbf51583c34ade759112a6e101a06f46
+ms.lasthandoff: 02/24/2017
 
-定義型別可能會由衍生類別繼承提供二進位函式物件的空的基礎結構。  
+---
+# <a name="binaryfunction-struct"></a>binary_function 結構
+空的基底結構，這個結構定義可能繼承自衍生類別並提供二元函式物件的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
+```    
+struct binary_function {
+   typedef Arg1 first_argument_type;
+   typedef Arg2 second_argument_type;
+   typedef Result result_type;    
+   };  
+ ```  
+## <a name="remarks"></a>備註  
+ 此樣板結構可作為定義成員函式的類別基底，其格式為：  
   
-```  
+ **result_type operator()**( **constfirst_argument_type&**、  
   
-   template<class Arg1, class Arg2, class Result>  
-struct binary_function {  
-   typedef Arg1 first_argument_type;  
-   typedef Arg2 second_argument_type;  
-   typedef Result result_type;  
-};  
-```  
+ **const second_argument_type&** ) **const**  
   
-## 備註  
- 範本結構做為的基底對於定義表單的 10% 成員函式的類別:  
+ 所有這類二元函式會以 **first_argument_type** 來表示其第一個引數類型、以 **second_argument_type** 來表示其第二個引數類型，並以 ***result_type*** 來表示其傳回型別。  
   
- **result\_type operator\(\)**\( **const first\_argument\_type&**，  
+## <a name="example"></a>範例  
   
- **const second\_argument\_type&const**\)  
-  
- 所有這類二元函式可以參考其第一個引數型別， **first\_argument\_type**，其第二引數型別為 **second\_argument\_type**和其傳回型別為 ***result\_type***。  
-  
-## 範例  
-  
-```  
+```cpp  
 // functional_binary_function.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -103,17 +115,23 @@ int main( )
       cout << *Iter3 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( 11 5.5 3.66667 2.75 2.2 1.83333 )  
+The vector v2 = ( -0 -2 -4 -6 -8 -10 )  
+The element-wise averages are: ( 5.5 1.75 -0.166667 -1.625 -2.9 -4.08333 )  
+*\  
+  
 ```  
   
-  **The vector v1 \= \( 11 5.5 3.66667 2.75 2.2 1.83333 \)**  
-**向量 v2 \= \( \-0 \-2 \-4 \-6 \-8 \-10 \)**  
-**項目平均值為:\(5.5 1.75 \-0.166667 \-1.625 \-2.9 \-4.08333\)。**   
-## 需求  
- **標題:** \<functional\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<functional>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [binary\_function 結構範例](../misc/binary-function-structure-sample.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

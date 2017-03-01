@@ -1,72 +1,88 @@
 ---
 title: "_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_snprintf_s"
-  - "_snprintf_s_l"
-  - "_snwprintf_s"
-  - "_snwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_snwprintf_s_l"
-  - "_sntprintf_s_l"
-  - "snprintf_s_l"
-  - "_snprintf_s_l"
-  - "_sntprintf_s"
-  - "_snprintf_s"
-  - "snprintf_s"
-  - "_snwprintf_s"
-  - "snwprintf_s_l"
-  - "snwprintf_s"
-  - "sntprintf_s"
-  - "sntprintf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_snprintf_s 函式"
-  - "_snprintf_s_l 函式"
-  - "_sntprintf_s 函式"
-  - "_sntprintf_s_l 函式"
-  - "_snwprintf_s 函式"
-  - "_snwprintf_s_l 函式"
-  - "格式化的文字 [C++]"
-  - "snprintf_s 函式"
-  - "snprintf_s_l 函式"
-  - "sntprintf_s 函式"
-  - "sntprintf_s_l 函式"
-  - "snwprintf_s 函式"
-  - "snwprintf_s_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _snprintf_s
+- _snprintf_s_l
+- _snwprintf_s
+- _snwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _snwprintf_s_l
+- _sntprintf_s_l
+- snprintf_s_l
+- _snprintf_s_l
+- _sntprintf_s
+- _snprintf_s
+- snprintf_s
+- _snwprintf_s
+- snwprintf_s_l
+- snwprintf_s
+- sntprintf_s
+- sntprintf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _snprintf_s_l function
+- _snwprintf_s_l function
+- _sntprintf_s_l function
+- snwprintf_s_l function
+- snprintf_s function
+- _snprintf_s function
+- snprintf_s_l function
+- _sntprintf_s function
+- sntprintf_s_l function
+- sntprintf_s function
+- snwprintf_s function
+- _snwprintf_s function
+- formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
 caps.latest.revision: 32
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8a3e2cd1a9bff5c7cb08e30753e98b1769e0b7fa
+ms.lasthandoff: 02/24/2017
 
-將格式化資料寫入字串。 這些是舊版 [snprintf、\_snprintf、\_snprintf\_l、\_snwprintf、\_snwprintf\_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 中所述的安全性增強 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)。  
+---
+# <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
+將格式化資料寫入字串。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 版本。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _snprintf_s(  
@@ -115,15 +131,15 @@ int _snwprintf_s(
 ); // C++ only  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `buffer`  
  輸出的儲存位置。  
   
  `sizeOfBuffer`  
- 輸出的儲存位置的大小。 調整大小 `bytes` 的 `_snprintf_s` 或大小 `words` 的 `_snwprintf_s`。  
+ 輸出的儲存位置大小。 `_snprintf_s` 大小 (以 `bytes` 為單位) 或 `_snwprintf_s` 大小 (以 `words` 為單位)。  
   
  `Count`  
- 要儲存的字元數目上限或 [\_TRUNCATE](../../c-runtime-library/truncate.md)。  
+ 要儲存的最大字元數，或 [_TRUNCATE](../../c-runtime-library/truncate.md)。  
   
  `format`  
  格式控制字串。  
@@ -134,46 +150,46 @@ int _snwprintf_s(
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- `_snprintf_s` 傳回儲存在中的字元數 `buffer`, ，不計結束的 null 字元。`_snwprintf_s` 會傳回儲存在 `buffer` 中的寬字元數目，不計結束的 null 寬字元。  
+## <a name="return-value"></a>傳回值  
+ `_snprintf_s` 會傳回 `buffer` 中所儲存的字元數，不計入終止 Null 字元。 `_snwprintf_s` 會傳回儲存在 `buffer` 中的寬字元數目，不計結束的 null 寬字元。  
   
- 如果儲存資料和結束的 null 所需的儲存體超過 `sizeOfBuffer`, 、 無效參數處理常式叫用時，所述 [參數驗證](../../c-runtime-library/parameter-validation.md)。 如果不正確的參數處理常式之後繼續執行，這些函式會將 `buffer` 為空字串，設定 `errno` 至 `ERANGE`, ，並傳回\-1。  
+ 如果儲存資料和終止 Null 所需的儲存空間超出 `sizeOfBuffer`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果在無效的參數處理常式之後繼續執行，則這些函式會將 `buffer` 設定為空字串、將 `errno` 設定為 `ERANGE`，並傳回 -1。  
   
- 如果 `buffer` 或 `format` 是 `NULL` 指標，或如果 `count` 小於或等於零，會叫用無效參數處理常式。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 \-1。  
+ 如果 `buffer` 或 `format` 為 `NULL` 指標，或者 `count` 小於或等於零，則會叫用無效的參數處理常式。 如果允許繼續執行，這些函式會將 `errno` 設定為 `EINVAL` ，並傳回 -1。  
   
- 如需有關這些錯誤碼和其他錯誤碼的資訊，請參閱 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `_snprintf_s` 函式的格式化並儲存 `count` 或較少的字元 `buffer` ，並將結束的 null。 每個引數 （如果有的話） 會轉換和輸出中的對應格式規格根據 `format`。 格式都是一致的 `printf` 系列的函式; 請參閱 [格式規格語法：printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 如果在重疊的字串之間進行複製，則行為是未定義的。  
+## <a name="remarks"></a>備註  
+ `_snprintf_s` 函式會在 `buffer` 中格式化並儲存 `count` 或更少的字元數，並且會附加終止 Null。 每個引數 (如果有的話) 都是根據 `format` 中的對應格式規格進行轉換和輸出。 格式會與 `printf` 系列函式一致，請參閱[格式規格語法：printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 如果在重疊的字串之間進行複製，則行為是未定義的。  
   
- 如果 `count` 是 [\_TRUNCATE](../../c-runtime-library/truncate.md), ，然後 `_snprintf_s` 盡量將字串寫入以致於無法納入 `buffer` 時留出空間給結束的 null。 如果整個字串 （含結束 null\) 納入 `buffer`, ，然後 `_snprintf_s` 傳回寫入字元數目 （不包括結束的 null）; 否則 `_snprintf_s` 會傳回 – 1，表示該截斷發生。  
+ 如果 `count` 為 [_TRUNCATE](../../c-runtime-library/truncate.md)，則 `_snprintf_s` 會盡量將字串放入 `buffer`，同時保留終止 Null 的空間。 如果整個字串 (含終止 Null) 可放入 `buffer`，則 `_snprintf_s` 會傳回寫入的字元數 (不含終止 Null)；否則，`_snprintf_s` 會傳回 -1 表示發生截斷。  
   
 > [!IMPORTANT]
 >  確認 `format` 不是使用者定義的字串。  
   
- `_snwprintf_s` 是 `_snprintf_s` 的寬字元版本，`_snwprintf_s` 的指標引數是寬字元字串。`_snwprintf_s` 中的編碼錯誤偵測可能不同於 `_snprintf_s`。`_snwprintf_s`, 像是 `swprintf_s`, ，為字串，而不是類型的目的地會將輸出寫入 `FILE`。  
+ `_snwprintf_s` 是 `_snprintf_s` 的寬字元版本，`_snwprintf_s` 的指標引數是寬字元字串。 `_snwprintf_s` 中的編碼錯誤偵測可能不同於 `_snprintf_s`。 `_snwprintf_s` 與 `swprintf_s` 類似，會將輸出寫入字串，而不是 `FILE` 類型的目的地。  
   
  這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定，而不使用目前的執行緒地區設定。  
   
- C\+\+ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 \(因而不須指定大小引數\)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|Tchar.h 常式|未定義 \_UNICODE 和 \_MBCS|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|----------------------------|----------------|-------------------|  
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_sntprintf_s`|`_snprintf_s`|`_snprintf_s`|`_snwprintf_s`|  
 |`_sntprintf_s_l`|`_snprintf_s_l`|`_snprintf_s_l`|`_snwprintf_s_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h\>|  
-|`_snwprintf_s`, `_snwprintf_s_l`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_snprintf_s`, `_snprintf_s_l`|\<stdio.h>|  
+|`_snwprintf_s`, `_snwprintf_s_l`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需相容性詳細資訊，請參閱簡介中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_snprintf_s.cpp  
@@ -271,17 +287,44 @@ int main( void )
   
 ```Output  
   
-計數 = 8。10 位元組緩衝區的新內容的目的地: '<<< 121 >>' 計數 = 9。10 位元組緩衝區的新內容的目的地: '<<< 121 >>> ' 計數 = 10。10 位元組緩衝區的新內容的目的地: '<<< 121 >>> ' 目的緩衝區太小︰ 計數 = 10。10 位元組緩衝區無效參數處理常式叫用: (「 緩衝區太小 」，0) 的目的地的新內容: ' 截斷範例︰ 10 位元組緩衝區。截斷語意 （semantics） 的新內容目的地: '<<< 1221 >>' 並未發生截斷 10 位元組緩衝區。截斷語意 （semantics） 的新內容目的地: '<<< 121 >>> ' 截斷並未發生安全範本多載範例︰ 叫用無效參數處理常式: (「 緩衝區太小 」，0) 的目的地的新內容: '  
+count = 8; 10-byte buffer  
+    new contents of dest: '<<<121>>'  
+  
+count = 9; 10-byte buffer  
+    new contents of dest: '<<<121>>>'  
+  
+count = 10; 10-byte buffer  
+    new contents of dest: '<<<121>>>'  
+  
+Destination buffer too small:  
+  
+count = 10; 10-byte buffer  
+Invalid parameter handler invoked: ("Buffer too small", 0)  
+    new contents of dest: ''  
+  
+Truncation examples:  
+  
+10-byte buffer; truncation semantics  
+    new contents of dest: '<<<1221>>'  
+    truncation did occur  
+  
+10-byte buffer; truncation semantics  
+    new contents of dest: '<<<121>>>'  
+    truncation did not occur  
+  
+Secure template overload example:  
+Invalid parameter handler invoked: ("Buffer too small", 0)  
+    new contents of dest: ''  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [fprintf、\_fprintf\_l、fwprintf、\_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf、\_printf\_l、wprintf、\_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [scanf、\_scanf\_l、wscanf、\_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf、\_sscanf\_l、swscanf、\_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [scanf、_scanf_l、wscanf、_wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf、_sscanf_l、swscanf、_swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
  [vprintf 函式](../../c-runtime-library/vprintf-functions.md)

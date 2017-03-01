@@ -1,124 +1,140 @@
 ---
-title: "時鐘 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "clock"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "clock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "計算已使用的處理器時間"
-  - "clock 函式"
-  - "已使用的處理器時間"
-  - "已使用的處理器時間, 計算"
-  - "時間, 計算處理器"
+title: clock | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- clock
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- clock
+dev_langs:
+- C++
+helpviewer_keywords:
+- processor time used, calculating
+- time, calculating processor
+- clock function
+- processor time used
+- calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# 時鐘
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3a226377499df1747a022325b762b3cdfdd35ea6
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="clock"></a>時鐘
 計算所呼叫的處理序使用的時鐘時間。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 clock_t clock( void );  
 ```  
   
-## 傳回值  
- 自此處理序開始後耗用的時鐘時間 \(以秒為單位的時間的耗用時間 `CLOCKS_PER_SEC`\)。  如果耗用時間量無法使用，則此函式會傳回 – 1，轉換為 `clock_t`。  
+## <a name="return-value"></a>傳回值  
+啟動處理序時自 CRT 初始化以來已耗用的時間 (測量單位：每秒 `CLOCKS_PER_SEC` 單位數)。 如果已耗用時間無法使用，或已超過可記錄為 `clock_t` 類型的最大正時間，則此函式會傳回值 `(clock_t)(-1)`。   
   
-## 備註  
- `clock` 函式會告知呼叫處理序已使用多少時鐘時間。  請注意這並未完全符合 ISO C99 \(ISO C99 指定淨 CPU 時間為傳回值\)。  若要取得 CPU 時間，請使用 Win32 [GetProcessTimes](http://msdn.microsoft.com/library/windows/desktop/ms683223) 函式。  
+## <a name="remarks"></a>備註  
+`clock` 函式會告知在處理序啟動期間自 CRT 初始化之後已使用多少時鐘時間。 請注意，此函式未完全符合將淨 CPU 時間指定為傳回值的 ISO C。 若要取得 CPU 時間，請使用 Win32 [GetProcessTimes](https://msdn.microsoft.com/library/windows/desktop/ms683223) 函式。 若要判定已耗用時間 (秒)，請將 `clock` 函式所傳回的值除以巨集 `CLOCKS_PER_SEC`。  
   
- 計時器刻度大約等於 1\/`CLOCKS_PER_SEC` 秒。  只要有足夠的時間，`clock` 所傳回的值可超過 `clock_t` 的最大正值，因此變成負數，或超過最大絕對值因而換用。  在處理序中，請勿依賴執行多於 214,748 秒 \(或大約 59 小時\) 的總耗用時間值。  
-  
-## 需求  
+只要有足夠的時間，`clock` 所傳回的值可能會超過 `clock_t` 的最大正值。 處理序執行時間較久時，`clock` 所傳回的值一律為 ISO C99 標準 (7.23.2.1) 和 ISO C11 標準 (7.27.2.1) 所指定的 `(clock_t)(-1)`。 Microsoft 會將 `clock_t` 實作為 `long` (帶正負號的 32 位元整數)，而且 `CLOCKS_PER_SEC` 巨集定義為 1000。 這提供最大 `clock` 函式傳回值 2147483.647 秒，或大約 24.8 天。 請不要依賴執行時間超過此時間量之處理序中 `clock` 所傳回的值。 您可以使用 64 位元 `time` 函式或 Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904) 函式來記錄處理序多年來的已耗用時間。  
+
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`clock`|\<time.h\>|  
+|-------------|---------------------|  
+|`clock`|\<time.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_clock.c  
-// This example prompts for how long  
-// the program is to run and then continuously  
-// displays the elapsed time for that period.  
-//  
+// This sample uses clock() to 'sleep' for three 
+// seconds, then determines how long it takes  
+// to execute an empty loop 600000000 times.  
   
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <time.h>  
   
-void sleep( clock_t wait );  
-  
-int main( void )  
-{  
-   long    i = 6000000L;  
-   clock_t start, finish;  
-   double  duration;  
-  
-   // Delay for a specified time.  
-   printf( "Delay for three seconds\n" );  
-   sleep( (clock_t)3 * CLOCKS_PER_SEC );  
-   printf( "Done!\n" );  
-  
-   // Measure the duration of an event.  
-   printf( "Time to do %ld empty loops is ", i );  
-   start = clock();  
-   while( i-- )   
-      ;  
-   finish = clock();  
-   duration = (double)(finish - start) / CLOCKS_PER_SEC;  
-   printf( "%2.1f seconds\n", duration );  
-}  
-  
 // Pauses for a specified number of milliseconds.  
-void sleep( clock_t wait )  
+void do_sleep( clock_t wait )  
 {  
    clock_t goal;  
    goal = wait + clock();  
    while( goal > clock() )  
       ;  
 }  
+  
+const long num_loops = 600000000L;
+
+int main( void )  
+{  
+   long    i = num_loops;  
+   clock_t start, finish;  
+   double  duration;  
+  
+   // Delay for a specified time.  
+   printf( "Delay for three seconds\n" );  
+   do_sleep( (clock_t)3 * CLOCKS_PER_SEC );  
+   printf( "Done!\n" );  
+  
+   // Measure the duration of an event.  
+   start = clock();  
+   while( i-- )   
+      ;  
+   finish = clock();  
+   duration = (double)(finish - start) / CLOCKS_PER_SEC;  
+   printf( "Time to do %ld empty loops is ", num_loops );  
+   printf( "%2.3f seconds\n", duration );  
+}  
 ```  
   
-  **延遲三秒鐘**  
-**完成！  執行 6000000 空的迴圈所需時間為 0.1 秒**    
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Delay for three seconds  
+Done!  
+Time to do 600000000 empty loops is 1.354 seconds  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
- [difftime、\_difftime32、\_difftime64](../../c-runtime-library/reference/difftime-difftime32-difftime64.md)   
- [time、\_time32、\_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [difftime、_difftime32、_difftime64](../../c-runtime-library/reference/difftime-difftime32-difftime64.md)   
+ [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)

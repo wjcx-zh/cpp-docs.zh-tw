@@ -1,49 +1,65 @@
 ---
-title: "wcsrtombs_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wcsrtombs_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcsrtombs_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字串轉換, 寬字元"
-  - "wcsrtombs_s 函式"
-  - "寬字元, 字串"
+title: wcsrtombs_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wcsrtombs_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcsrtombs_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- string conversion, wide characters
+- wcsrtombs_s function
+- wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# wcsrtombs_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 52f3395cc878c1f051867d81ee12d0c9b3de619d
+ms.lasthandoff: 02/24/2017
 
-轉換寬字元字串對其多位元組字串表示。  這是 [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) 的安全性增強版本，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
+---
+# <a name="wcsrtombss"></a>wcsrtombs_s
+將寬字元字串轉換為其多位元組字元字串表示法。 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) 版本。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 errno_t wcsrtombs_s(  
@@ -64,66 +80,66 @@ errno_t wcsrtombs_s(
 ); // C++ only  
 ```  
   
-#### 參數  
- \[out\] `pReturnValue`  
- 要轉換的字元數。  
+#### <a name="parameters"></a>參數  
+ [輸出] `pReturnValue`  
+ 已轉換的字元數。  
   
- \[out\] `mbstr`  
- 產生的轉換多位元組字元字串的緩衝區位址。  
+ [輸出] `mbstr`  
+ 所產生之已轉換的多位元組字串的緩衝區位址。  
   
- \[out\] `sizeInBytes`  
- `mbstr` 緩衝區的大小 \(以位元組為單位\)。  
+ [輸出] `sizeInBytes`  
+ `mbstr` 緩衝區的大小，以位元組為單位。  
   
- \[in\] `wcstr`  
- 要轉換的寬字元字串的點。  
+ [in] `wcstr`  
+ 指向要轉換的寬字元字串。  
   
- \[in\] `count`  
- 在 `mbstr` 緩衝區中儲存的最大位元組數目或 [\_TRUNCATE](../../c-runtime-library/truncate.md)。  
+ [in] `count`  
+ 要儲存在 `mbstr` 緩衝區中的位元組數目上限，或 [_TRUNCATE](../../c-runtime-library/truncate.md)。  
   
- \[in\] `mbstate`  
+ [in] `mbstate`  
  `mbstate_t` 轉換狀態物件的指標。  
   
-## 傳回值  
- 若成功則為零，失敗則為錯誤碼。  
+## <a name="return-value"></a>傳回值  
+ 如果成功則為零，失敗則為錯誤碼。  
   
 |錯誤狀況|傳回值和 `errno`|  
-|----------|------------------|  
-|`mbstr` 為 `NULL` 而 `sizeInBytes`\> 為 0|`EINVAL`|  
-|`wcstr` 為 `NULL`|`EINVAL`|  
-|目的端緩衝區太小無法包含已轉換字串\(除非 `count` 是 `_TRUNCATE` 請參閱 \< 備註 \>\)|`ERANGE`|  
+|---------------------|------------------------------|  
+|`mbstr` 為 `NULL` 且 `sizeInBytes` > 0|`EINVAL`|  
+|`wcstr` 是 `NULL`|`EINVAL`|  
+|目的緩衝區太小，無法包含已轉換的字串 (除非 `count` 是 `_TRUNCATE`，請參閱下面的＜備註＞)|`ERANGE`|  
   
- 如果其中一個錯誤情況發生，無效的參數叫用例外狀況，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果執行允許繼續執行，函式會傳回錯誤碼並如表格中所示設定 `errno` 。  
+ 如果發生上述任何一種情況，則會叫用無效的參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回錯誤碼，並將 `errno` 設為如表中所示。  
   
-## 備註  
- `wcsrtombs_s` 函式轉換寬字元字串指向 `wcstr` 輸入緩衝區中的多位元組字元所指向的 `mbstr`，使用 `mbstate`中所包含的轉換狀態。  每個字元的轉換會繼續，直到下列其中一個條件符合：  
+## <a name="remarks"></a>備註  
+ `wcsrtombs_s` 函式會將 `wcstr` 指向的寬字元字串轉換成儲存在 `mbstr` 所指向緩衝區的多位元組字元，使用 `mbstate` 包含的轉換狀態。 除非遇到下列情況之一，否則會繼續為每個字元進行轉換：  
   
--   遇到空寬字元  
+-   遇到 Null 寬字元  
   
 -   遇到無法轉換的寬字元  
   
--   在 `mbstr` 緩衝區中位元組數目等於 `count`。  
+-   `mbstr` 緩衝區中儲存的位元組數目等於 `count`。  
   
- 目的資料永遠以 null 結尾 \(即使在錯誤的情況下\)。  
+ 目的字串一律會以 Null 結束 (即使發生錯誤亦然)。  
   
- 如果 `count` 是特殊值 [\_TRUNCATE](../../c-runtime-library/truncate.md)，則 `wcsrtombs_s` 盡量轉換能放入目的緩衝區的字串，同時保留 null 結束字元的空間。  
+ 如果 `count` 是特殊值 [_TRUNCATE](../../c-runtime-library/truncate.md)，則 `wcsrtombs_s` 會盡量轉換符合目的緩衝區的字串量，同時仍留出空間給 Null 結束字元。  
   
- 如果 `wcsrtombs_s` 轉換成功來源字串，它在已轉換字串的位元組的大小，包括 null 結束字元，輸入 `*``pReturnValue` \(提供的 `pReturnValue` 不是 `NULL`\)。  發生這種情況，即使 `mbstr` 引數為 `NULL` 並提供方法來判斷所需的緩衝區大小。  請注意，如果 `mbstr` 是 `NULL`，會忽略 `count` 。  
+ 如果 `wcsrtombs_s` 成功轉換來源字串，則會將包括 Null 終止字元在內的已轉換字串大小 (以位元組計) 放入 `*``pReturnValue` (假設 `pReturnValue` 不是 `NULL`)。 即使 `mbstr` 引數為 `NULL`，且可讓您決定所需的緩衝區大小，也會發生這種情況。 請注意，如果 `mbstr` 為 `NULL`，則略過 `count`。  
   
- 如果`wcsrtombs_s` 遇到無法轉換到多位元組字元的寬字元，它在 `*``pReturnValue`放\-1，將目的緩衝區初始化為空字串，將 `errno` 設為 `EILSEQ`，並傳回 `EILSEQ`。  
+ 如果 `wcsrtombs_s` 遇到它無法轉換成多位元組字元的寬字元，會將 -1 放入 `*``pReturnValue`，再將目的緩衝區設為空字串，續將 `errno` 設為 `EILSEQ`，最後傳回 `EILSEQ`。  
   
- 如果序列中所指向的 `wcstr` 和 `mbstr` 重疊， `wcsrtombs_s` 行為是未定義。  `wcsrtombs_s` 受目前地區設定的 LC\_TYPE 分類的影響。  
+ 如果 `wcstr` 和 `mbstr` 所指向的序列重疊，`wcsrtombs_s` 的行為不明。 `wcsrtombs_s` 受到目前地區設定之 LC_TYPE 分類的影響。  
   
 > [!IMPORTANT]
->  確認 `wcstr` 和 `mbstr` 不重疊，而 `count` ，正確反映轉換寬字元的數目。  
+>  確定 `wcstr` 和 `mbstr` 不會重疊，而且 `count` 正確反映要轉換的寬字元數。  
   
- `wcsrtombs_s` 函式與 [wcstombs\_s、\_wcstombs\_s\_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) 不同於其重新開始的能力。  轉換狀態儲存於 `mbstate` 讓後續呼叫的相同或其他可重新啟動的函式能夠使用。  當混合使用可重新開始和不可重新開始的函式時，結果會是未定義的。  例如，如果後續呼叫 `wcsrtombs_s` 而不是 `wcstombs_s.`，應用程式可能會使用 `wcsrlen` ，而不是 `wcslen`  
+ `wcsrtombs_s` 函式因為可以重新開機，而與 [wcstombs_s、_wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) 不同。 針對相同或其他可重新啟動的函式的後續呼叫，轉換狀態會儲存在 `mbstate` 中。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了 `wcsrtombs_s` 的後續呼叫，而不是 `wcstombs_s.`，應用程式應該使用 `wcsrlen`，而不是 `wcslen`。  
   
- C\+\+ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 \(因而不須指定大小引數\)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。  如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
   
-## 例外狀況  
- `wcsrtombs_s` 函式是多執行緒安全，只要在目前執行緒的函式不呼叫 `setlocale` ，當函式執行時， `mbstate` 是空的。  
+## <a name="exceptions"></a>例外狀況  
+ `wcsrtombs_s` 函式是安全多執行緒，但前提是當這個函式執行中、且 `mbstate` 為 Null 時，目前執行緒中沒有任何函式呼叫 `setlocale`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_wcsrtombs_s.cpp  
@@ -166,22 +182,25 @@ void main()
 }  
 ```  
   
-  **字串成功地轉換。**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+The string was successfully converted.  
+```  
   
-## 需求  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`wcsrtombs_s`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`wcsrtombs_s`|\<wchar.h>|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [wcrtomb](../../c-runtime-library/reference/wcrtomb.md)   
- [wcrtomb\_s](../../c-runtime-library/reference/wcrtomb-s.md)   
- [wctomb、\_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
- [wcstombs、\_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)   
+ [wctomb、_wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [wcstombs、_wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
  [mbsinit](../../c-runtime-library/reference/mbsinit.md)

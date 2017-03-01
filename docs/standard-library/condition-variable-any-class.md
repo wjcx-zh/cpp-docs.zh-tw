@@ -1,58 +1,222 @@
 ---
 title: "condition_variable_any 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "condition_variable/std::condition_variable_any"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- condition_variable/std::condition_variable_any
+dev_langs:
+- C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# condition_variable_any 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: a04164eb30bdb0403f131d64a31b9c7d9cb5656f
+ms.lasthandoff: 02/24/2017
 
-使用類別 `condition_variable_any` 等待有任何 `mutex` 型別的事件。  
+---
+# <a name="conditionvariableany-class"></a>condition_variable_any 類別
+使用 `condition_variable_any` 類別，以等候具有任何 `mutex` 類型的事件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class condition_variable_any;
 ```  
-class condition_variable_any;  
+  
+## <a name="members"></a>Members  
+  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|描述|  
+|----------|-----------------|  
+|[condition_variable_any::condition_variable_any 建構函式](#condition_variable_any__condition_variable_any_constructor)|建構 `condition_variable_any` 物件。|  
+  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[condition_variable_any::notify_all](#condition_variable_any__notify_all_method)|解除封鎖所有等候 `condition_variable_any` 物件的執行緒。|  
+|[condition_variable_any::notify_one](#condition_variable_any__notify_one_method)|解除封鎖其中一個等候 `condition_variable_any` 物件的執行緒。|  
+|[condition_variable_any::wait](#condition_variable_any__wait_method)|封鎖執行緒。|  
+|[condition_variable_any::wait_for](#condition_variable_any__wait_for_method)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|  
+|[condition_variable_any::wait_until](#condition_variable_any__wait_until_method)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|  
+  
+## <a name="requirements"></a>需求  
+ **標頭：**condition_variable  
+  
+ **命名空間：** std  
+  
+##  <a name="a-nameconditionvariableanyconditionvariableanyconstructora--conditionvariableanyconditionvariableany-constructor"></a><a name="condition_variable_any__condition_variable_any_constructor"></a>  condition_variable_any::condition_variable_any 建構函式  
+ 建構 `condition_variable_any` 物件。  
+  
+```
+condition_variable_any();
 ```  
   
-## 成員  
+### <a name="remarks"></a>備註  
+ 如果可用的記憶體不足，建構函式會擲回具有 `not_enough_memory` 錯誤碼的 [system_error](../standard-library/system-error-class.md) 物件。 如果因為無法使用其他部分資源，而無法建構物件，建構函式會擲回具有 `resource_unavailable_try_again` 錯誤碼的 `system_error` 物件。  
   
-### 公用建構函式  
+##  <a name="a-nameconditionvariableanynotifyallmethoda--conditionvariableanynotifyall"></a><a name="condition_variable_any__notify_all_method"></a>  condition_variable_any::notify_all  
+ 解除封鎖所有等候 `condition_variable_any` 物件的執行緒。  
   
-|Name|說明|  
-|----------|--------|  
-|[condition\_variable\_any::condition\_variable\_any 建構函式](../Topic/condition_variable_any::condition_variable_any%20Constructor.md)|建構 `condition_variable_any` 物件。|  
+```
+void notify_all() noexcept;
+```  
   
-### 公用方法  
+##  <a name="a-nameconditionvariableanynotifyonemethoda--conditionvariableanynotifyone"></a><a name="condition_variable_any__notify_one_method"></a>  condition_variable_any::notify_one  
+ 解除封鎖其中一個等候 `condition_variable_any` 物件的執行緒。  
   
-|Name|說明|  
-|----------|--------|  
-|[condition\_variable\_any::notify\_all 方法](../Topic/condition_variable_any::notify_all%20Method.md)|解除等候 `condition_variable_any` 物件的所有執行緒之封鎖。|  
-|[condition\_variable\_any::notify\_one 方法](../Topic/condition_variable_any::notify_one%20Method.md)|解除等候 `condition_variable_any` 物件的其中一個執行緒之封鎖。|  
-|[condition\_variable\_any::wait 方法](../Topic/condition_variable_any::wait%20Method.md)|封鎖執行緒。|  
-|[condition\_variable\_any::wait\_for 方法](../Topic/condition_variable_any::wait_for%20Method.md)|阻隔一個線程，在線程解開後設定時間間隔。|  
-|[condition\_variable\_any::wait\_until 方法](../Topic/condition_variable_any::wait_until%20Method.md)|封鎖執行緒，並在執行緒解除封鎖時設定最大時間點。|  
+```
+void notify_one() noexcept;
+```  
   
-## 需求  
- **標頭：** condition\_variable  
+##  <a name="a-nameconditionvariableanywaitmethoda--conditionvariableanywait"></a><a name="condition_variable_any__wait_method"></a>  condition_variable_any::wait  
+ 封鎖執行緒。  
   
- **命名空間:** std  
+```
+template <class Lock>  
+void wait(Lock& Lck);
+
+template <class Lock, class Predicate>
+void wait(Lock& Lck, Predicate Pred);
+```  
   
-## 請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [\<condition\_variable\>](../standard-library/condition-variable.md)
+### <a name="parameters"></a>參數  
+ `Lck`  
+ 任何類型的 `mutex` 物件。  
+  
+ `Pred`  
+ 傳回 `true` 或 `false` 的任何運算式。  
+  
+### <a name="remarks"></a>備註  
+ 系統會封鎖第一個方法，直到 `condition_variable_any` 物件收到 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 的呼叫訊號為止。 它也可能會假性喚醒。  
+  
+ 第二種方法則會執行下列程式碼。  
+  
+```
+while (!Pred())
+    wait(Lck);
+```    
+  
+##  <a name="a-nameconditionvariableanywaitformethoda--conditionvariableanywaitfor"></a><a name="condition_variable_any__wait_for_method"></a>  condition_variable_any::wait_for  
+ 封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。  
+  
+```
+template <class Lock, class Rep, class Period>
+bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time);
+
+template <class Lock, class Rep, class Period, class Predicate>
+bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicate Pred);
+```  
+  
+### <a name="parameters"></a>參數  
+ `Lck`  
+ 任何類型的 `mutex` 物件。  
+  
+ `Rel_time`  
+ `chrono::duration` 物件，指定喚醒執行緒之前的時間。  
+  
+ `Pred`  
+ 傳回 `true` 或 `false` 的任何運算式。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果因已歷時 `Rel_time` 而等候終止時，第一個方法會傳回 `cv_status::timeout`。 否則，方法會傳回 `cv_status::no_timeout`。  
+  
+ 第二個方法會傳回 `Pred` 的值。  
+  
+### <a name="remarks"></a>備註  
+ 系統會封鎖第一個方法，直到 `condition_variable_any` 物件收到 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 的呼叫通知，或已歷時 `Rel_time` 時間間隔為止。 它也可能會假性喚醒。  
+  
+ 第二種方法則會執行下列程式碼。  
+  
+```cpp  
+while(!Pred())
+    if(wait_for(Lck, Rel_time) == cv_status::timeout)
+    return Pred();
+
+return true;
+```  
+  
+##  <a name="a-nameconditionvariableanywaituntilmethoda--conditionvariableanywaituntil"></a><a name="condition_variable_any__wait_until_method"></a>  condition_variable_any::wait_until  
+ 封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。  
+  
+```
+template <class Lock, class Clock, class Duration>
+void wait_until(Lock& Lck, const chrono::time_point<Clock, Duration>& Abs_time);
+
+template <class Lock, class Clock, class Duration, class Predicate>
+void wait_until(
+    Lock& Lck,
+    const chrono::time_point<Clock, Duration>& Abs_time,
+    Predicate Pred);
+
+template <class Lock>
+void wait_until(Lock Lck, const xtime* Abs_time);
+
+template <class Lock, class Predicate>
+void wait_until(
+    Lock Lck,
+    const xtime* Abs_time,
+    Predicate Pred);
+```  
+  
+### <a name="parameters"></a>參數  
+ `Lck`  
+ Mutex 物件。  
+  
+ `Abs_time`  
+ [chrono::time_point](../standard-library/time-point-class.md) 物件。  
+  
+ `Pred`  
+ 傳回 `true` 或 `false` 的任何運算式。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果因歷時 `Abs_time` 而等候終止時，傳回 `cv_status` 類型的方法會傳回 `cv_status::timeout`。 否則，方法會傳回 `cv_status::no_timeout`。  
+  
+ 傳回 `bool` 的方法會傳回 `Pred` 的值。  
+  
+### <a name="remarks"></a>備註  
+ 系統會封鎖第一個方法，直到 `condition_variable` 物件收到 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 的呼叫訊號，或直到 `Abs_time` 為止。 它也可能會假性喚醒。  
+  
+ 第二種方法則會執行下列程式碼。  
+  
+```
+while(!Pred())
+    if(wait_until(Lck, Abs_time) == cv_status::timeout)
+    return Pred();
+
+return true;
+```  
+  
+ 第三個和第四個方法會使用 `xtime` 類型的物件指標來取代 `chrono::time_point` 物件。 `xtime` 物件可指定等待訊號的時間量上限。  
+  
+## <a name="see-also"></a>另請參閱  
+ [標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)   
+ [<condition_variable>](../standard-library/condition-variable.md)
+
+
+
+

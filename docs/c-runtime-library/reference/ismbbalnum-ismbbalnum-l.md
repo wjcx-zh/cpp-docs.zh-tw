@@ -1,56 +1,70 @@
 ---
 title: "_ismbbalnum、_ismbbalnum_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbbalnum"
-  - "_ismbbalnum_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ismbbalnum"
-  - "ismbbalnum"
-  - "_ismbbalnum_l"
-  - "ismbbalnum_l"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_ismbbalnum_l 函式"
-  - "ismbbalnum 函式"
-  - "ismbbalnum_l 函式"
-  - "_ismbbalnum 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbbalnum
+- _ismbbalnum_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ismbbalnum
+- ismbbalnum
+- _ismbbalnum_l
+- ismbbalnum_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ismbbalnum_l function
+- ismbbalnum function
+- ismbbalnum_l function
+- _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _ismbbalnum、_ismbbalnum_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 079830cff49d8efabe9bf0cf531cafa35e42c3ff
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum、_ismbbalnum_l
 判斷指定的多位元組字元為 alpha 或數值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _ismbbalnum(  
@@ -61,39 +75,39 @@ int _ismbbalnum_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `c`  
  待測試整數。  
   
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- `_ismbbalnum` 會傳回非零值表示運算式：  
+## <a name="return-value"></a>傳回值  
+ `_ismbbalnum` 傳回非零值表示運算式：  
   
 ```  
 isalnum || _ismbbkalnum  
 ```  
   
- 的 `c` 為非零，否則會傳回 0。  
+ 非零代表 `c`，0 則代表不是。  
   
  尾碼為 `_l` 的這個函式版本是一樣的，只不過與地區設定相關的行為使用了傳入的地區設定，而不是目前的地區設定。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_ismbbalnum`|\<mbctype.h\>|  
-|`_ismbbalnum_l`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_ismbbalnum`|\<mbctype.h>|  
+|`_ismbbalnum_l`|\<mbctype.h>|  
   
- 如需詳細的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
+## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## .NET Framework 對等用法  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   
- [\_ismbb 常式](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)

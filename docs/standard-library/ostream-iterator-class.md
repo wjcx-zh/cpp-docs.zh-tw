@@ -1,86 +1,423 @@
 ---
 title: "ostream_iterator 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ostream_iterator"
-  - "std.ostream_iterator"
-  - "std::ostream_iterator"
-  - "iterator/std::ostream_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ostream_iterator 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ostream_iterator
+- std.ostream_iterator
+- std::ostream_iterator
+- iterator/std::ostream_iterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- ostream_iterator class
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# ostream_iterator 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 3542d4a47abc3616c00360f9885761d08de5e884
+ms.lasthandoff: 02/24/2017
 
-樣板類別 ostream\_iterator 描述輸出迭代器物件，這個物件使用擷取 **operator \<\<** 在輸出資料流中寫入後續項目。  
+---
+# <a name="ostreamiterator-class"></a>ostream_iterator 類別
+樣板類別 ostream_iterator 描述輸出迭代器物件，這個物件使用擷取 **operator <<** 在輸出資料流中寫入後續項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template <class Type class CharType = char class Traits = char_traits <CharType>>  
+class ostream_iterator
 ```  
   
-      template <  
-   class Type   
-   class CharType = char  
-   class Traits = char_traits<CharType>  
->  
-class ostream_iterator  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  *Type*  
  要插入至輸出資料流的物件類型。  
   
  `CharType`  
- 類型，表示 `ostream_iterator` 的字元類型。  這個引數是選擇性的，而且預設值是 `char`*。*  
+ 類型，表示 `ostream_iterator` 的字元類型。 這個引數是選用引數，且預設值是 `char`*。*  
   
  `Traits`  
- 類型，表示 `ostream_iterator` 的字元類型。  這個引數是選擇性的，而且預設值是 `char_traits`\<*CharType\>。*  
+ 類型，表示 `ostream_iterator` 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。  
   
- ostream\_iterator 類別必須符合輸出迭代器的需求。  使用 `ostream_iterator`，演算法可以直接寫入輸出資料流。  
+ ostream_iterator 類別必須符合輸出迭代器的需求。 使用 `ostream_iterator`，演算法可以直接寫入輸出資料流。  
   
-### 建構函式  
-  
-|||  
-|-|-|  
-|[ostream\_iterator](../Topic/ostream_iterator::ostream_iterator.md)|建構初始化和分隔以寫入輸出資料流的 `ostream_iterator`。|  
-  
-### Typedef  
+### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[char\_type](../Topic/ostream_iterator::char_type.md)|類型，提供 `ostream_iterator` 的字元類型。|  
-|[ostream\_type](../Topic/ostream_iterator::ostream_type.md)|類型，提供 `ostream_iterator` 的資料流類型。|  
-|[traits\_type](../Topic/ostream_iterator::traits_type.md)|類型，提供 `ostream_iterator` 的字元特性類型。|  
+|[ostream_iterator](#ostream_iterator__ostream_iterator)|建構初始化和分隔以寫入輸出資料流的 `ostream_iterator`。|  
   
-### 運算子  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator\*](../Topic/ostream_iterator::operator*.md)|取值運算子，用來實作輸出迭代器運算式 \*`i` \= `x`。|  
-|[operator\+\+](../Topic/ostream_iterator::operator++.md)|無作用的遞增運算子，傳回 `ostream_iterator`，指向在呼叫作業之前它所定址的相同物件。|  
-|[operator\=](../Topic/ostream_iterator::operator=.md)|指派運算子，用來實作輸出迭代器運算式 \*`i` \= `x`，以寫入輸出資料流。|  
+|[char_type](#ostream_iterator__char_type)|類型，提供 `ostream_iterator` 的字元類型。|  
+|[ostream_type](#ostream_iterator__ostream_type)|類型，提供 `ostream_iterator` 的資料流類型。|  
+|[traits_type](#ostream_iterator__traits_type)|類型，提供 `ostream_iterator` 的字元特性類型。|  
   
-## 需求  
- **標頭：**\<iterator\>  
+### <a name="operators"></a>運算子  
   
- **命名空間:** std  
+|||  
+|-|-|  
+|[operator*](#ostream_iterator__operator_star)|取值運算子，用來實作輸出迭代器運算式 * `i` = `x`。|  
+|[operator++](#ostream_iterator__operator_add_add)|無作用的遞增運算子，傳回 `ostream_iterator`，指向在呼叫作業之前它所定址的相同物件。|  
+|[operator=](#ostream_iterator__operator_eq)|指派運算子，用來實作輸出迭代器運算式 * `i` = `x`，以寫入輸出資料流。|  
   
-## 請參閱  
- [\<iterator\>](../standard-library/iterator.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="requirements"></a>需求  
+ **標頭：**\<iterator>  
+  
+ **命名空間：** std  
+  
+##  <a name="a-nameostreamiteratorchartypea--ostreamiteratorchartype"></a><a name="ostream_iterator__char_type"></a>  ostream_iterator::char_type  
+ 類型，提供迭代器的字元類型。  
+  
+```
+typedef CharType char_type;
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型與範本參數 **CharType** 同義。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// ostream_iterator_char_type.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   typedef ostream_iterator<int>::char_type CHT1;  
+   typedef ostream_iterator<int>::traits_type CHTR1;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter:  
+    ostream_iterator<int, CHT1, CHTR1> intOut ( cout , "\n" );  
+  
+   // Standard iterator interface for writing  
+   // elements to the output stream:  
+   cout << "The integers written to the output stream\n"  
+        << "by intOut are:" << endl;  
+ *intOut = 10;  
+ *intOut = 20;  
+ *intOut = 30;  
+}  
+\* Output:   
+The integers written to the output stream  
+by intOut are:  
+10  
+20  
+30  
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratoroperatorstara--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_star"></a>  ostream_iterator::operator*  
+ 取值運算子，用來實作輸出迭代器運算式 \* *ii* = *x*。  
+  
+```
+ostream_iterator<Type, CharType, Traits>& operator*();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `ostream_iterator` 的參考。  
+  
+### <a name="remarks"></a>備註  
+ 針對輸出迭代器的需求，`ostream_iterator` 必須滿足僅要求運算式 \* *ii* = *t* 有效，且本身不涉及**運算子**或 `operator=`。 成員運算子在此實作中會傳回 **\*this**。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// ostream_iterator_op_deref.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter  
+   ostream_iterator<int> intOut ( cout , "\n" );  
+  
+   // Standard iterator interface for writing  
+   // elements to the output stream  
+   cout << "Elements written to output stream:" << endl;  
+ *intOut = 10;  
+   intOut++;      // No effect on iterator position  
+ *intOut = 20;  
+ *intOut = 30;  
+}  
+\* Output:   
+Elements written to output stream:  
+10  
+20  
+30  
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratoroperatoraddadda--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_add_add"></a>  ostream_iterator::operator++  
+ 無作用的遞增運算子，傳回 `ostream_iterator`，指向在呼叫作業之前它所定址的相同物件。  
+  
+```
+ostream_iterator<Type, CharType, Traits>& operator++();
+ostream_iterator<Type, CharType, Traits> operator++(int);
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `ostream_iterator` 的參考。  
+  
+### <a name="remarks"></a>備註  
+ 這些成員運算子都會傳回 **\*this**。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// ostream_iterator_op_incr.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter  
+   ostream_iterator<int> intOut ( cout , "\n" );  
+  
+   // standard iterator interface for writing  
+   // elements to the output stream  
+   cout << "Elements written to output stream:" << endl;  
+ *intOut = 10;  
+   intOut++;      // No effect on iterator position  
+ *intOut = 20;  
+ *intOut = 30;  
+}  
+\* Output:   
+Elements written to output stream:  
+10  
+20  
+30  
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratoroperatoreqa--ostreamiteratoroperator"></a><a name="ostream_iterator__operator_eq"></a>  ostream_iterator::operator=  
+ 指派運算子，用來實作 output_iterator 運算式 * `i` = `x`，以寫入輸出資料流。  
+  
+```
+ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
+```  
+  
+### <a name="parameters"></a>參數  
+ `val`  
+ 要插入至輸出資料流的 `Type` 類型物件值。  
+  
+### <a name="return-value"></a>傳回值  
+ 運算子會將 `val` 插入至與物件相關聯的輸出資料流，後面接著在 [ostream_iterator 建構函式](#ostream_iterator__ostream_iterator)中指定的分隔符號 (如果有的話)，然後將參考傳回 `ostream_iterator`。  
+  
+### <a name="remarks"></a>備註  
+ 針對輸出迭代器的需求，`ostream_iterator` 必須滿足僅要求運算式 * `ii` = `t` 有效，且本身不涉及運算子或 operator=。 此成員運算子會傳回 `*this`。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// ostream_iterator_op_assign.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter  
+   ostream_iterator<int> intOut ( cout , "\n" );  
+  
+   // Standard iterator interface for writing  
+   // elements to the output stream  
+   cout << "Elements written to output stream:" << endl;  
+ *intOut = 10;  
+   intOut++;      // No effect on iterator position  
+ *intOut = 20;  
+ *intOut = 30;  
+}  
+\* Output:   
+Elements written to output stream:  
+10  
+20  
+30  
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratorostreamiteratora--ostreamiteratorostreamiterator"></a><a name="ostream_iterator__ostream_iterator"></a>  ostream_iterator::ostream_iterator  
+ 建構初始化和分隔以寫入輸出資料流的 `ostream_iterator`。  
+  
+```
+ostream_iterator(
+    ostream_type& _Ostr);
+
+ostream_iterator(
+    ostream_type& _Ostr,
+    const CharType* _Delimiter);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Ostr`  
+ 要逐一查看之類型 [ostream_iterator::ostream_type](#ostream_iterator__ostream_type) 的輸出資料流。  
+  
+ `_Delimiter`  
+ 要插入至輸出資料流值之間的分隔符號。  
+  
+### <a name="remarks"></a>備註  
+ 第一個建構函式會使用 `&_Ostr` 初始化輸出資料流指標。 分隔符號字串指標指定為空字串。  
+  
+ 第二個建構函式會使用 `&_Ostr` 初始化輸出資料流指標，使用 `_Delimiter` 初始化分隔符號字串指標。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// ostream_iterator_ostream_iterator.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // ostream_iterator for stream cout  
+   ostream_iterator<int> intOut ( cout , "\n" );  
+ *intOut = 10;  
+   intOut++;  
+ *intOut = 20;  
+   intOut++;  
+  
+   int i;  
+   vector<int> vec;  
+   for ( i = 1 ; i < 7 ; ++i )  
+   {  
+      vec.push_back (  i );  
+   }  
+  
+   // Write elements to standard output stream  
+   cout << "Elements output without delimiter: ";  
+   copy ( vec.begin ( ), vec.end ( ),  
+          ostream_iterator<int> ( cout ) );  
+   cout << endl;  
+  
+   // Write elements with delimiter " : " to output stream  
+   cout << "Elements output with delimiter: ";  
+   copy ( vec.begin ( ), vec.end ( ),  
+          ostream_iterator<int> ( cout, " : " ) );  
+   cout << endl;  
+}  
+\* Output:   
+10  
+20  
+Elements output without delimiter: 123456  
+Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :   
+*\  
+```  
+  
+##  <a name="a-nameostreamiteratorostreamtypea--ostreamiteratorostreamtype"></a><a name="ostream_iterator__ostream_type"></a>  ostream_iterator::ostream_type  
+ 類型，提供迭代器的資料流類型。  
+  
+```
+typedef basic_ostream<CharType, Traits> ostream_type;
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型與 [basic_ostream](../standard-library/basic-ostream-class.md)< `CharType`, `Traits`> 同義，這是 iostream 階層的資料流類別，定義可用於寫入的物件。  
+  
+### <a name="example"></a>範例  
+  如需如何宣告及使用 `ostream_type` 的範例，請參閱 [ostream_iterator](#ostream_iterator__ostream_iterator)。  
+  
+##  <a name="a-nameostreamiteratortraitstypea--ostreamiteratortraitstype"></a><a name="ostream_iterator__traits_type"></a>  ostream_iterator::traits_type  
+ 類型，提供迭代器的字元特性類型。  
+  
+```
+typedef Traits traits_type;
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型與範本參數 **Traits** 同義。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// ostream_iterator_traits_type.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // The following not OK, but are just the default values:  
+   typedef ostream_iterator<int>::char_type CHT1;  
+   typedef ostream_iterator<int>::traits_type CHTR1;  
+  
+   // ostream_iterator for stream cout  
+   // with new line delimiter:  
+    ostream_iterator<int, CHT1, CHTR1> intOut ( cout , "\n" );  
+  
+   // Standard iterator interface for writing  
+   // elements to the output stream:  
+   cout << "The integers written to output stream\n"  
+        << "by intOut are:" << endl;  
+ *intOut = 1;  
+ *intOut = 10;  
+ *intOut = 100;  
+}  
+\* Output:   
+The integers written to output stream  
+by intOut are:  
+1  
+10  
+100  
+*\  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [\<iterator>](../standard-library/iterator.md)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

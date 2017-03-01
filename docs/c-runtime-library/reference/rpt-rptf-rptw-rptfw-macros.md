@@ -1,112 +1,129 @@
 ---
 title: "_RPT、_RPTF、_RPTW、_RPTFW 巨集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "RPT3"
-  - "RPTF4"
-  - "_RPT4"
-  - "RPT1"
-  - "_RPTF0"
-  - "RPTF3"
-  - "_RPTF4"
-  - "RPTF1"
-  - "RPT4"
-  - "_RPT1"
-  - "_RPT0"
-  - "RPT0"
-  - "_RPTF2"
-  - "RPTF0"
-  - "_RPT3"
-  - "_RPT2"
-  - "_RPTF3"
-  - "RPT2"
-  - "_RPTF1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "偵錯 [CRT], 使用巨集"
-  - "_RPTW3 巨集"
-  - "_RPT0 巨集"
-  - "RPTW4 巨集"
-  - "_RPTF3 巨集"
-  - "_RPTW4 巨集"
-  - "RPTF4 巨集"
-  - "RPTFW2 巨集"
-  - "RPTW 巨集"
-  - "RPT1 巨集"
-  - "_RPTF 巨集"
-  - "RPTFW3 巨集"
-  - "_RPTW0 巨集"
-  - "_RPTF0 巨集"
-  - "巨集, 偵錯工具"
-  - "_RPTW2 巨集"
-  - "RPTF3 巨集"
-  - "RPT3 巨集"
-  - "RPT0 巨集"
-  - "_RPT 巨集"
-  - "RPTW3 巨集"
-  - "_RPTFW 巨集"
-  - "偵錯報告巨集"
-  - "RPTF 巨集"
-  - "RPT 巨集"
-  - "_RPTW 巨集"
-  - "RPTF2 巨集"
-  - "_RPTF1 巨集"
-  - "_RPT1 巨集"
-  - "_RPT4 巨集"
-  - "_RPTFW2 巨集"
-  - "_RPTFW1 巨集"
-  - "RPTF0 巨集"
-  - "_RPT2 巨集"
-  - "RPTFW 巨集"
-  - "_RPTW1 巨集"
-  - "_RPTFW0 巨集"
-  - "RPT4 巨集"
-  - "_RPT3 巨集"
-  - "_RPTFW3 巨集"
-  - "_RPTF4 巨集"
-  - "_RPTFW4 巨集"
-  - "_RPTF2 巨集"
-  - "RPTW0 巨集"
-  - "RPTFW4 巨集"
-  - "RPTFW0 巨集"
-  - "RPTW2 巨集"
-  - "RPTF1 巨集"
-  - "RPT2 巨集"
-  - "RPTFW1 巨集"
-  - "RPTW1 巨集"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- RPT3
+- RPTF4
+- _RPT4
+- RPT1
+- _RPTF0
+- RPTF3
+- _RPTF4
+- RPTF1
+- RPT4
+- _RPT1
+- _RPT0
+- RPT0
+- _RPTF2
+- RPTF0
+- _RPT3
+- _RPT2
+- _RPTF3
+- RPT2
+- _RPTF1
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging [CRT], using macros
+- _RPTW3 macro
+- _RPT0 macro
+- RPTW4 macro
+- _RPTF3 macro
+- _RPTW4 macro
+- RPTF4 macro
+- RPTFW2 macro
+- RPTW macros
+- RPT1 macro
+- _RPTF macros
+- RPTFW3 macro
+- _RPTW0 macro
+- _RPTF0 macro
+- macros, debugging with
+- _RPTW2 macro
+- RPTF3 macro
+- RPT3 macro
+- RPT0 macro
+- _RPT macros
+- RPTW3 macro
+- _RPTFW macros
+- debug reporting macros
+- RPTF macros
+- RPT macros
+- _RPTW macros
+- RPTF2 macro
+- _RPTF1 macro
+- _RPT1 macro
+- _RPT4 macro
+- _RPTFW2 macro
+- _RPTFW1 macro
+- RPTF0 macro
+- _RPT2 macro
+- RPTFW macros
+- _RPTW1 macro
+- _RPTFW0 macro
+- RPT4 macro
+- _RPT3 macro
+- _RPTFW3 macro
+- _RPTF4 macro
+- _RPTFW4 macro
+- _RPTF2 macro
+- RPTW0 macro
+- RPTFW4 macro
+- RPTFW0 macro
+- RPTW2 macro
+- RPTF1 macro
+- RPT2 macro
+- RPTFW1 macro
+- RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _RPT、_RPTF、_RPTW、_RPTFW 巨集
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
+ms.lasthandoff: 02/24/2017
 
-藉由產生偵錯報告追蹤應用程式的進度 \(僅偵錯版本\)。  請注意在 *n* `args` 指定引數的數目，而且可以是 0， 1， 2， 3， 4 或 5。  
+---
+# <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 巨集
+產生偵錯報表，以追蹤應用程式進度 (僅限偵錯版本)。 請注意，*n* 指定 `args` 中的引數數目，而且可以是 0、1、2、3、4 或 5。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -134,60 +151,60 @@ _RPTFWn(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `reportType`  
- 報告類型: `_CRT_WARN`、 `_CRT_ERROR`或 `_CRT_ASSERT`。  
+ 報表類型：`_CRT_WARN`、`_CRT_ERROR` 或 `_CRT_ASSERT`。  
   
  `format`  
- 對產生使用者信息的格式控制字串。  
+ 用於建立使用者訊息的格式控制字串。  
   
  `args`  
- `format`使用的替換引數。  
+ `format` 使用的替換引數。  
   
-## 備註  
- 這些巨集採用 `reportType`和 `format`參數。  此外，它們可能也會使用四個其他引數，表示由數字附加至巨集名稱。  例如， `_RPT0` 和 `_RPTF0` 不接受其他引數，則為 `_RPT1` ，且 `_RPTF1` 使用 `arg1`， `_RPT2` ， `_RPTF2` 會使用 `arg1` 和 `arg2`，依此類推。  
+## <a name="remarks"></a>備註  
+ 所有這些巨集都會接受 `reportType` 和 `format` 參數。 此外，它們也可能最多接受四個其他引數，以附加至巨集名稱的號碼表示。 例如，`_RPT0` 和 `_RPTF0` 不接受任何額外引數、`_RPT1` 和 `_RPTF1` 接受 `arg1`，而 `_RPT2` 和 `_RPTF2` 接受 `arg1` 和 `arg2`，以此類推。  
   
- 因為它們可以用來在偵錯期間，追蹤應用程式的進度 `_RPT` 和 `_RPTF` 巨集類似 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函式。  不過，因為它們在應用程式的零售版本中，在 `#ifdef` 陳述式會不需要將避免呼叫這些巨集比 `printf` 更具彈性。  使用 [\_DEBUG](../../c-runtime-library/debug.md) 巨集，這種彈性達成;，當 `_DEBUG` 旗標後， `_RPT` 和 `_RPTF` 巨集才可以使用。  當 `_DEBUG` 沒有定義時，在前置處理中，這些巨集的呼叫將被移除。  
+ `_RPT` 和 `_RPTF` 巨集類似於 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函式，原因是它們可以用來追蹤偵錯程序期間的應用程式進度。 不過，因為這些巨集不需要括在 `#ifdef` 陳述式中，即可避免在應用程式的零售組建中呼叫它們，所以比 `printf` 更具彈性。 這種彈性的達成是使用 [_DEBUG](../../c-runtime-library/debug.md) 巨集；只有在定義 `_DEBUG` 旗標時，才能使用 `_RPT` 和 `_RPTF` 巨集。 若未定義 `_DEBUG` ，將會在前置處理期間移除對這些巨集的呼叫。  
   
- `_RPTW` 和 `_RPTFW` 巨集是這些巨集寬字元版本。  它們是與 `wprintf` 並採取寬字元字串做為引數。  
+ `_RPTW` 和 `_RPTFW` 巨集是這些巨集的寬字元版本。 它們與 `wprintf` 類似，並接受寬字元字串作為引數。  
   
- `_RPT` 巨集呼叫 [\_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函式以產生與使用者訊息的偵錯報告。  `_RPTW` 巨集呼叫 `_CrtDbgReportW` 函式產生與寬字元的相同的報表。  除了使用者訊息之外， `_RPTF` 和 `_RPTFW` 巨集建立與報告巨集呼叫的原始程式檔和行號的偵錯報告。  使用者訊息傳遞替代 `arg`\[*n*\] 引數建立輸入 `format` 字串，使用 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函式定義的相同規則。  
+ `_RPT` 巨集會呼叫 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函式來產生含使用者訊息的偵錯報表。 `_RPTW` 巨集會呼叫 `_CrtDbgReportW` 函式來產生具有寬字元的相同報表。 除了使用者訊息之外，`_RPTF` 和 `_RPTFW` 巨集還會建立內含呼叫報表巨集之原始程式檔和行號的偵錯報表。 使用 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函式所定義的相同規則，透過將 `arg`[*n*] 引數取代為 `format` 字串，來建立使用者訊息。  
   
- `_CrtDbgReport` 或 `_CrtDbgReportW` 產生偵錯報告並決定根據目前報表模式和檔案其目的定義為 `reportType`。  [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 和 [\_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 函式定義每個報告類型的目的地。  
+ `_CrtDbgReport` 或 `_CrtDbgReportW` 會根據目前報表模式以及針對 `reportType` 所定義的檔案來產生偵錯報表，並判斷其目的地。 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 和 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 函式可用於定義每個報表類型的目的地。  
   
- 如果 `_RPT` 巨集呼叫，且 `_CrtSetReportMode` 和 `_CrtSetReportFile` 未呼叫，訊息會如下所示。  
+ 如果呼叫 `_RPT` 巨集，而且尚未呼叫 `_CrtSetReportMode` 和 `_CrtSetReportFile`，則訊息顯示如下。  
   
-|回報類型|輸出目標|  
-|----------|----------|  
-|`_CRT_WARN`|警告文字不會顯示。|  
-|`_CRT_ERROR`|快顯視窗。  同樣地，如果指定的 `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` 。|  
+|報表類型|輸出目的地|  
+|-----------------|------------------------|  
+|`_CRT_WARN`|不會顯示警告文字。|  
+|`_CRT_ERROR`|快顯視窗。 與指定 `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` 時相同。|  
 |`_CRT_ASSERT`|與 `_CRT_ERROR` 相同。|  
   
- 在 Just\-In\-Time \(JIT\) 偵錯已啟用條件下，當目的是偵錯訊息視窗，而且使用者按一下 **重試** 按鈕時， `_CrtDbgReport` 或 `_CrtDbgReportW` 會傳回 1，讓這些巨集啟動偵錯工具。  如需使用這些巨集的詳細資訊做為偵錯和錯誤處理機制，請參閱 [使用驗證和報告的巨集](../Topic/Macros%20for%20Reporting.md)。  
+ 如果目的地為偵錯訊息視窗，而且使用者選擇 [重試] 按鈕，若已啟用 Just-in-Time (JIT) 偵錯，則 `_CrtDbgReport` 或 `_CrtDbgReportW` 會傳回 1，讓這些巨集啟動偵錯程式。 如需如何使用這些巨集作為偵錯錯誤處理機制的詳細資訊，請參閱[使用巨集進行驗證和報告](/visualstudio/debugger/macros-for-reporting)。  
   
- 產生偵錯報告的其他兩個巨集存在。  [\_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 巨集產生報告，不過，只有在其運算式引數評估為 false。  [\_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 是就像 `_ASSERT`，不過，包括失敗的運算式在產生的報告。  
+ 有兩個其他巨集可產生偵錯報表。 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 巨集會產生報表，但僅限其運算式引數評估為 FALSE 時。 [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 與 `_ASSERT` 完全相同，但將失敗的運算式併入產生的報表中。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |巨集|必要的標頭|  
-|--------|-----------|  
-|`_RPT`巨集|\<crtdbg.h\>|  
-|`_RPTF`巨集|\<crtdbg.h\>|  
-|`_RPTW`巨集|\<crtdbg.h\>|  
-|`_RPTFW`巨集|\<crtdbg.h\>|  
+|-----------|---------------------|  
+|`_RPT` 巨集|\<crtdbg.h>|  
+|`_RPTF` 巨集|\<crtdbg.h>|  
+|`_RPTW` 巨集|\<crtdbg.h>|  
+|`_RPTFW` 巨集|\<crtdbg.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C run\-time libraries](../../c-runtime-library/crt-library-features.md) 版本的偵錯  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
- 雖然同樣為巨集且都因為包含 Crtdbg.h 而加入，應用程式必須連結至偵錯程式庫，因為這些巨集呼叫其他執行階段函式。  
+ 雖然這些都是巨集，並且可透過加入 Crtdbg.h 來取得，但因為這些巨集會呼叫其他執行階段函式，所以應用程式必須連結其中一個偵錯程式庫。  
   
-## 範例  
- 請參閱 [\_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 主題的範例。  
+## <a name="example"></a>範例  
+ 請參閱 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 主題中的範例。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

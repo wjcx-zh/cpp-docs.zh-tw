@@ -1,74 +1,90 @@
 ---
 title: "strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbstok_l"
-  - "_mbstok"
-  - "wcstok"
-  - "_mbstok"
-  - "strtok"
-  - "_wcstok_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbstok"
-  - "strtok"
-  - "_tcstok"
-  - "wcstok"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbstok 函式"
-  - "_mbstok_l 函式"
-  - "_strtok_l 函式"
-  - "_tcstok 函式"
-  - "_tcstok_l 函式"
-  - "_wcstok_l 函式"
-  - "mbstok 函式"
-  - "mbstok_l 函式"
-  - "字串 [C++], 搜尋"
-  - "strtok 函式"
-  - "strtok_l 函式"
-  - "tcstok 函式"
-  - "tcstok_l 函式"
-  - "語彙基元, 在字串中尋找"
-  - "wcstok 函式"
-  - "wcstok_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbstok_l
+- _mbstok
+- wcstok
+- _mbstok
+- strtok
+- _wcstok_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbstok
+- strtok
+- _tcstok
+- wcstok
+dev_langs:
+- C++
+helpviewer_keywords:
+- mbstok_l function
+- strings [C++], searching
+- tcstok function
+- _tcstok function
+- _strtok_l function
+- strtok function
+- mbstok function
+- wcstok_l function
+- _mbstok function
+- tcstok_l function
+- tokens, finding in strings
+- _mbstok_l function
+- wcstok function
+- _wcstok_l function
+- _tcstok_l function
+- strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
 caps.latest.revision: 34
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 34
----
-# strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
+ms.lasthandoff: 02/24/2017
 
-使用目前位置或傳遞進來的指定位置，找到字串的下一個語彙基元。  更多這些函式的可用安全版本，請參閱 [strtok\_s、\_strtok\_s\_l、wcstok\_s、\_wcstok\_s\_l、\_mbstok\_s、\_mbstok\_s\_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)。  
+---
+# <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
+使用目前的地區設定或傳入的指定地區設定，在字串中尋找下一個 Token。 這些函式已有更安全的版本可供使用，請參閱 [strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)。  
   
 > [!IMPORTANT]
->  `_mbstok` 和 `_mbstok_l` 不能用於在 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbstok` 和 `_mbstok_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 char *strtok(  
@@ -90,9 +106,9 @@ unsigned char *_mbstok(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `strToken`  
- 包含一個或多個語彙基元的字串。  
+ 包含一或多個 Token 的字串。  
   
  `strDelimit`  
  分隔符號字元集。  
@@ -100,40 +116,40 @@ unsigned char *_mbstok(
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 傳回在 `strToken` 中的下一個語彙基元之指標。  當找不到其他語彙基元時，會傳回 `NULL`。  每個呼叫會藉由將傳回的語彙基元之後第一個分隔符號取代為 `NULL` 字元來修改 `strToken`。  
+## <a name="return-value"></a>傳回值  
+ 傳回在 `strToken` 中找到之下一個 Token 的指標。 再也找不到 Token 時，它們會傳回 `NULL`。 以 `NULL` 字元替代傳回 Token 之後出現的第一個分隔符號，每個呼叫都會修改 `strToken`。  
   
-## 備註  
- `strtok` 函式會找到在 `strToken` 的下一個語彙基元。  `strDelimit` 中的字元集指定在目前呼叫中的 `strToken` 中找到的語彙基元之可能的分隔符號。  `wcstok` 和 `_mbstok` 是 `strtok` 的寬字元和多位元組字元版本。  `wcstok` 的引數和傳回值是寬字元字串，而 `_mbstok` 的引數和傳回值則是多位元組字元字串。  這三個函式其餘部分的運作相同。  
+## <a name="remarks"></a>備註  
+ `strtok` 函式會在 `strToken` 中尋找下一個 Token。 `strDelimit` 中的字元集會指定目前呼叫要在 `strToken` 中尋找的可能 Token 分隔符號。 `wcstok` 和 `_mbstok` 是寬字元和多位元組字元版本的 `strtok`。 `wcstok` 的引數和傳回值是寬字元字串；`_mbstok` 的引數則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
 > [!IMPORTANT]
->  這些函式有導致緩衝區溢位問題的潛在威脅。  緩衝區溢位問題是系統攻擊的常見方法，它會導致權限不確定性的增加。  如需詳細資訊，請參閱 [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) 。  
+>  這些函式可能會帶來因緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- 在對 `strtok` 的第一次呼叫時，函式會略過前置分隔符號並傳回指向 `strToken` 的第一個以空字元結尾之語彙基元的指標。  多個語彙基元可以藉由一系列的呼叫 `strtok` 從 `strToken` 的剩餘項目中跳脫。  對 `strtok` 的每個呼叫都會透過在該呼叫傳回的 `token` 之後插入 null 字元來修改 `strToken` 。  要讀取 `strToken`的下一個語彙基元，請搭配 `NULL` 值為 `strToken` 引數呼叫 `strtok`。  `NULL` `strToken` 引數會造成 `strtok` 搜尋已修改的 `strToken` 中的下一個語彙基元。  `strDelimit` 引數可以接受來自一個和下一個呼叫的任何值，因此分隔符號集可能會變更。  
+ 第一次呼叫 `strtok` 時，函式會略過前導分隔符號，並傳回 `strToken` 中第一個 Token 的指標，終止具有 Null 字元的 Token。 一連串的 `strtok` 呼叫可以中斷超出 `strToken` 剩餘部分的多個 Token。 只要在該呼叫傳回的 `token` 後面插入一個 Null 字元，每次呼叫 `strtok` 都會修改 `strToken`。 若要讀取 `strToken` 的下一個 Token，請以 `strToken` 引數的 `NULL` 值呼叫 `strtok`。 `NULL` `strToken` 引數會令 `strtok` 在修改過的 `strToken` 中搜尋下一個 Token。 `strDelimit` 引數可以接受呼叫與呼叫之間的任何值，所以分隔符號集可能會有所不同。  
   
- 輸出值受地區設定的`LC_CTYPE` 分類設定所影響。如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 。  這些函式沒有以 `_l` 後綴的版本在這些地區相依的行為上使用目前的地區設定，而以 `_l` 後綴版本除了它們會使用傳入的地區設定參數之外運作相同。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
 > [!NOTE]
->  每個函式為剖析字串成語彙基元，使用執行緒區域靜態變數。  因此，多個執行緒可以同時呼叫這些函式，且沒有不想要的影響。  不過，在單一執行緒內容，交錯呼叫這些函式之一很可能會導致資料損毀和不正確的結果。  當剖析不同字串時，請先完成剖析一個字串在開始下一個剖析。  此外，從另一個函式呼叫的迴圈內呼叫這些函式之一時，請注意潛在的危險，。  如果另一個函式使用這些函式之一作為結束，呼叫的交錯順序會造成、觸發資料毀損。  
+>  每個函式都會使用執行緒區域靜態變數將字串剖析為 Token。 因此，多個執行緒可以同時呼叫這些函式，卻不會有意外作用。 但在單一執行緒內，交錯呼叫這些函式的其中之一，非常有可能產生資料損毀或不正確的結果。 剖析不同的字串時，請先完成一個字串的剖析再開始剖析下一個。 亦請注意，從呼叫另一個函式的迴圈內呼叫這些函式的其中之一時，會有潛在的危險。 如果其他函式在使用這些函式的其中之一時結束，就會導致交錯的呼叫順序，觸發資料損毀。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstok`|`strtok`|`_mbstok`|`wcstok`|  
 |`_tcstok`|`_strtok_l`|`_mbstok_l`|`_wcstok_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`strtok`|\<string.h\>|  
-|`wcstok`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbstok`, `_mbstok_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strtok`|\<string.h>|  
+|`wcstok`|\<string.h> 或 \<wchar.h>|  
+|`_mbstok`, `_mbstok_l`|\<mbstring.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_strtok.c  
@@ -167,21 +183,24 @@ int main( void )
 }  
 ```  
   
-  **Tokens：**  
- **A**  
- **string**  
- **of**  
- **tokens**  
- **and**  
- **some**  
- **more**  
- **tokens**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Tokens:  
+ A  
+ string  
+ of  
+ tokens  
+ and  
+ some  
+ more  
+ tokens  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn、wcscspn、\_mbscspn、\_mbscspn\_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strcspn、wcscspn、_mbscspn、_mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

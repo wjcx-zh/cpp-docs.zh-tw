@@ -1,50 +1,67 @@
 ---
-title: "_set_SSE2_enable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_SSE2_enable"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_SSE2_enable"
-  - "set_SSE2_enable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_SSE2_enable 函式"
-  - "Streaming SIMD Extensions 2 指示"
-  - "set_SSE2_enable 函式"
+title: _set_SSE2_enable | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_SSE2_enable
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _set_SSE2_enable
+- set_SSE2_enable
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_SSE2_enable function
+- Streaming SIMD Extensions 2 instructions
+- set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _set_SSE2_enable
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 158ce2d16db5a37870ea55c548796d975065f422
+ms.lasthandoff: 02/24/2017
 
-啟用或停用使用 CRT 數學常式中的 [Streaming SIMD Extensions 2](http://msdn.microsoft.com/zh-tw/f98440eb-73a9-4f96-b203-ac41bb6701ea) \(SSE2\) 指令。\(因為預設上 SSE2 會是啟用的，這個函式在 x64 架構上是不可用的。\)  
+---
+# <a name="setsse2enable"></a>_set_SSE2_enable
+在 CRT 數學常式中啟用或停用 [Streaming SIMD Extensions 2](http://msdn.microsoft.com/en-us/f98440eb-73a9-4f96-b203-ac41bb6701ea) (SSE2) 指令的使用 (因為預設會啟用 SSE2，所以此函式不適用於 x64 結構)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _set_SSE2_enable(  
@@ -52,15 +69,15 @@ int _set_SSE2_enable(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `flag`  
- 1啟用 SSE2 實作；0則停用 SSE2 實作。  根據預設， SSE2 實作在支援它的處理器啟用。  
+ 1 啟用 SSE2 實作；0 停用 SSE2 實作。 根據預設，會在支援它的處理器上啟用 SSE2 實作。  
   
-## 傳回值  
- 如果SSE2 實作已啟用，則非零；如果SSE2 實作停用，則是零。  
+## <a name="return-value"></a>傳回值  
+ 如果啟用 SSE2 實作，則為非零；如果停用 SSE2 實作，則為零。  
   
-## 備註  
- 下列函式有可藉由使用`_set_SSE2_enable`來啟用SSE2的實作:  
+## <a name="remarks"></a>備註  
+ 下列函式具有可使用 `_set_SSE2_enable` 所啟用的 SSE2 實作：  
   
 -   [atan](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)  
   
@@ -78,22 +95,22 @@ int _set_SSE2_enable(
   
 -   [pow](../../c-runtime-library/reference/pow-powf-powl.md)  
   
- 這些函式的資料實作比預設實作會提供一些不同的回應，因為 SSE2 中繼值是 64 位元浮點數量，但預設實作中的值是 80 位元浮點數量。  
+ 因為 SSE2 中間值是 64 位元浮點數量，但預設實作中間值是 80 位元浮點數量，所以這些函式的 SSE2 實作所提供的答案可能會與預設實作略有不同。  
   
 > [!NOTE]
->  如果您使用 [\/Oi \(產生內建函式\)](../../build/reference/oi-generate-intrinsic-functions.md) 編譯器選項編譯專案，可能會使 `_set_SSE2_enable` 沒有作用。  `/Oi` 編譯器選項給編譯器權限使用內建取代 CRT 呼叫；這個行為覆寫 `_set_SSE2_enable`的作用。  如果您要確保 `/Oi` 不會覆寫 `_set_SSE2_enable`，請使用 `/Oi-` 來編譯專案。  當您使用隱含 `/Oi`的其他編譯器參數時，這也可能是很好的作法。  
+>  如果您使用 [/Oi (產生內建函式)](../../build/reference/oi-generate-intrinsic-functions.md) 編譯器選項來編譯專案，則可能會顯示 `_set_SSE2_enable` 沒有作用。 `/Oi` 編譯器選項可授權編譯器使用內建來取代 CRT 呼叫；這種行為會覆寫 `_set_SSE2_enable` 的效果。 如果您想要保證 `/Oi` 不覆寫 `_set_SSE2_enable`，請使用 `/Oi-` 來編譯專案。 當您使用表示 `/Oi` 的其他編譯器參數時，這也可能是不錯做法。  
   
- 如果所有例外狀況有遮罩，則才可用SSE2 實作。  使用 [\_control87， \_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 已處理遮罩例外狀況。  
+ 只有在遮罩所有例外狀況時，才會使用 SSE2 實作。 使用 [_control87、_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 來遮罩例外狀況。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_set_SSE2_enable`|\<math.h\>|  
+|-------------|---------------------|  
+|`_set_SSE2_enable`|\<math.h>|  
   
- 如需詳細資訊，請參閱介紹中的 [相容性](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_set_SSE2_enable.c  
@@ -112,12 +129,12 @@ int main()
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
  `SSE2 enabled.`  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)

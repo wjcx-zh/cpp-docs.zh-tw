@@ -1,58 +1,75 @@
 ---
-title: "realloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "realloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_brealloc"
-  - "_nrealloc"
-  - "realloc"
-  - "_frealloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_brealloc 函式"
-  - "realloc 函式"
-  - "nrealloc 函式"
-  - "frealloc 函式"
-  - "_nrealloc 函式"
-  - "記憶體區塊, 重新配置"
-  - "記憶體, 重新配置"
-  - "_frealloc 函式"
-  - "重新配置記憶體區塊"
+title: realloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- realloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _brealloc
+- _nrealloc
+- realloc
+- _frealloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- _brealloc function
+- realloc function
+- nrealloc function
+- frealloc function
+- _nrealloc function
+- memory blocks, reallocating
+- memory, reallocating
+- _frealloc function
+- reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# realloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: dd20bf67c0854cf837ff5cf4f22308f977b06734
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="realloc"></a>realloc
 重新配置記憶體區塊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void *realloc(  
@@ -61,50 +78,50 @@ void *realloc(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `memblock`  
- 指向先前配置的記憶體區塊的指標。  
+ 先前配置之記憶體區塊的指標。  
   
  `size`  
- 新的大小 \(以位元組為單位\)。  
+ 新的大小 (以位元組計)。  
   
-## 傳回值  
- `realloc` 傳回 `void` 指標到重新配置 \(和可捲動\) 的記憶體區塊。  
+## <a name="return-value"></a>傳回值  
+ `realloc` 會傳回重新配置後 (且可能有移動) 記憶體區塊的 `void` 指標。  
   
- 如果沒有將區塊展開成足夠特定大小的可用記憶體，原始的區塊會保持不變，因此會傳回 `NULL` 。  
+ 如果沒有足夠的可用記憶體將區塊展開為指定大小，原始區塊會保持不變，並傳回 `NULL`。  
   
- 如果 `size` 為零，則由 `memblock` 指向的區塊被釋放；傳回的值為 `NULL`，且 `memblock` 會保留指向釋放區塊。  
+ 如果 `size` 是零，則會釋放 `memblock` 所指向的區塊；傳回值是 `NULL`，且 `memblock` 保持指向已釋放的區塊。  
   
- 傳回值指向保證可以儲存任何型別的物件的適當地對齊的儲存空間。  若要得到 `void` 之外的型別指標，請在傳回值上使用型別轉換。  
+ 儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要取得 `void` 以外之類型的指標，請對傳回值使用類型轉換。  
   
-## 備註  
- `realloc` 函式變更配置記憶體區塊的大小。  `memblock` 引數指向記憶體區塊的起始。  如果 `memblock` 是 `NULL`，`realloc` 產生行為與 `malloc`相同，並且配置一個 `size` 位元組的新區塊。  如果 `memblock` 不是 `NULL`，它應該是先前呼叫 `calloc` 所傳回的指標、`malloc`或 `realloc`。  
+## <a name="remarks"></a>備註  
+ `realloc` 函式會變更已配置之記憶體區塊的大小。 `memblock` 引數指向記憶體區塊的開頭。 如果 `memblock` 是 `NULL`，則 `realloc` 的行為方式與 `malloc` 相同，並且會配置 `size` 個位元組的新區塊。 如果 `memblock` 不是 `NULL`，它應該是由先前呼叫 `calloc`、`malloc` 或 `realloc` 所傳回的指標。  
   
- `size` 引數給區塊以位元組為單位的新大小。  區塊的內容不會由新的短和舊的大小決定變更，不過，新的區塊可以在不同的位置。  由於新的區塊可以在新的記憶體位置，`realloc` 傳回的指標不保證是透過 `memblock` 引數傳遞的指標。  在緩衝區大小上限情況下，`realloc` 最近非零配置記憶體。  
+ `size` 引數會指定區塊的新大小，以位元組為單位。 區塊的內容維持為新舊大小的較短者，不過新區塊可能在不同的位置。 因為新區塊可能會在新的記憶體位置，所以 `realloc` 傳回的指標並不保證是透過 `memblock` 引數傳遞的指標。 `realloc` 在緩衝區成長的情況下，不會將新配置的記憶體歸零。  
   
- 如果記憶體配置失敗，或是要求的記憶體數量超過 `_HEAP_MAXREQ`，則 `realloc` 會將 `errno` 設定為 `ENOMEM`。  如需有關這個錯誤碼及其他錯誤碼的詳細資訊，請參閱 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如果記憶體配置失敗，或所要求的記憶體數量超過 `_HEAP_MAXREQ`，則 `realloc` 會將 `errno` 設定為 `ENOMEM`。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
- `realloc`  會呼叫 `malloc` 以使用 C\+\+[\_set\_new\_mode](../../c-runtime-library/reference/set-new-mode.md) 函來設定新的處理常式模式。  新的處理常式模式表示，失敗時，`malloc` 是否要呼叫由 [\_set\_new\_handler](../../c-runtime-library/reference/set-new-handler.md) 設定的新處理常式。  根據預設， `malloc` 不會在無法配置記憶體時呼叫新的處理常式。  您可以覆寫這個預設行為，因此，當 `realloc` 無法配置記憶體時，`malloc` 會以 `new` 運算子因相同原因失敗時所執行的相同方式，呼叫新處理常式。  若要覆寫預設值，請呼叫  
+ `realloc` 會呼叫 `malloc` 以使用 C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 函式來設定新的處理常式模式。 此新的處理常式模式會指出失敗時，`malloc` 是否會呼叫 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 所設定的新處理常式。 根據預設，`malloc` 不會在失敗時呼叫新的處理常式來配置記憶體。 您可以覆寫這個預設行為，因此，在 `realloc` 無法配置記憶體時，`malloc` 會呼叫新的處理常式，其方法與 `new` 運算子因相同原因而失敗時所執行的方法相同。 若要覆寫預設值，請及早在程式中呼叫  
   
 ```  
 _set_new_mode(1)  
 ```  
   
- 及早在程式中呼叫，或與 NEWMODE.OBJ 連結 \(請參閱[連結選項](../../c-runtime-library/link-options.md)\)。  
+ ，或使用 NEWMODE.OBJ 連結 (請參閱[連結選項](../../c-runtime-library/link-options.md))。  
   
- 當應用程式使用 C 執行期程式庫偵錯版本連結時，`realloc` 會解析為 [\_realloc\_dbg](../../c-runtime-library/reference/realloc-dbg.md)。  如需堆積在偵錯過程中的運作，請參閱 [The CRT Debug Heap](../Topic/CRT%20Debug%20Heap%20Details.md) 。  
+ 當應用程式與偵錯版本的 C 執行階段程式庫相連結時，`realloc` 會解析為 [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。  
   
- `realloc` 會標示為 `__declspec(noalias)` 和 `__declspec(restrict)`，這表示函式保證不會修改全域變數且傳回的指標不會產生別名。  如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。  
+ `realloc` 標記為 `__declspec(noalias)` 和 `__declspec(restrict)`，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`realloc`|\<stdlib.h\> 和 \<malloc.h\>|  
+|-------------|---------------------|  
+|`realloc`|\<stdlib.h> 和 \<malloc.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_realloc.c  
@@ -146,12 +163,15 @@ int main( void )
 }  
 ```  
   
-  **Size of block after malloc of 1000 longs: 4000**  
-**Size of block after realloc of 1000 more longs: 8000**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Size of block after malloc of 1000 longs: 4000  
+Size of block after realloc of 1000 more longs: 8000  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   

@@ -1,51 +1,68 @@
 ---
-title: "_fpieee_flt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fpieee_flt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fpieee_flt"
-  - "_fpieee_flt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fpieee_flt 函式"
-  - "例外狀況處理, 浮點"
-  - "浮點例外狀況處理"
-  - "fpieee_flt 函式"
+title: _fpieee_flt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fpieee_flt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fpieee_flt
+- _fpieee_flt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fpieee_flt function
+- exception handling, floating-point
+- floating-point exception handling
+- fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# _fpieee_flt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 54718c64d7a6720ac0601792bfec5ffb196a9716
+ms.lasthandoff: 02/24/2017
 
-叫用 IEEE 浮點例外狀況中使用者定義的錯誤處理常式。  
+---
+# <a name="fpieeeflt"></a>_fpieee_flt
+針對 IEEE 浮點例外狀況叫用使用者定義的設陷處理常式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _fpieee_flt(   
@@ -55,42 +72,42 @@ int _fpieee_flt(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `excCode`  
  例外狀況代碼。  
   
  `excInfo`  
- 對 Windows NT 例外狀況資訊結構的指標。  
+ Windows NT 例外狀況資訊結構的指標。  
   
  `handler`  
- 對使用者的 IEEE 攔截處理常式的指標。  
+ 使用者之 IEEE 設陷處理常式的指標。  
   
-## 傳回值  
- `_fpieee_flt` 的傳回值是 `handler`所傳回的值。  因此，IEEE 篩選常式可能被使用，除了一個結構化例外狀況處理 \(SEH\) 機制的子句。  
+## <a name="return-value"></a>傳回值  
+ `_fpieee_flt` 的傳回值是 `handler` 所傳回的值。 因此，IEEE 篩選常式可能會用於結構化例外狀況處理 (SEH) 機制的 except 子句。  
   
-## 備註  
- `_fpieee_flt` 函式會叫用 IEEE 浮點例外狀況中的使用者定義的攔截處理常式並提供所有相關資訊。  這個常式做為 SEH 機制的例外狀況篩選條件，需要時則叫用您的 IEEE 例外處理常式。  
+## <a name="remarks"></a>備註  
+ `_fpieee_flt` 函式會針對 IEEE 浮點例外狀況叫用使用者定義的設陷處理常式，並將所有相關資訊提供給它。 此常式作為 SEH 機制中的例外狀況篩選，可在必要時叫用您自己的 IEEE 例外狀況處理常式。  
   
- `_FPIEEE_RECORD` 結構，定義在 Fpieee.h，包含 IEEE 浮點例外狀況的相關資訊。  這個結構會藉由 `_fpieee_flt`傳遞至使用者定義的攔截處理常式。  
+ Fpieee.h 中所定義的 `_FPIEEE_RECORD` 結構包含 IEEE 浮點例外狀況的相關資訊。 此結構會透過 `_fpieee_flt` 傳遞至使用者定義的設陷處理常式。  
   
-|\_FPIEEE\_RECORD 欄位|描述|  
-|-------------------------|--------|  
-|`unsigned int RoundingMode`, `unsigned int Precision`|在例外狀況發生時，這些欄位會包含浮點數環境的相關資訊。|  
-|`unsigned int Operation`|表示導致這個攔截的作業類型。  如果型別是比較 \(`_FpCodeCompare`\)，您可以提供一個特殊的 `_FPIEEE_COMPARE_RESULT` 值 \(如 Fpieee.h 定義\) 中的 `Result.Value` 欄位。  轉換型別 \(`_FpCodeConvert`\) 表示這個攔截在浮點轉換作業時發生。  您可以仔細留意 `Operand1` 和 `Result` 型別來判斷嘗試轉換的型別。|  
-|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|這些結構表示提出結果和運算元的型別和值:<br /><br /> `OperandValid` 旗標表示回應的值是否有效。<br /><br /> `Format` 對應於的值的資料型別。  格式類型可能會回傳，即使對應的值無效。<br /><br /> `Value` 結果或運算元資料值。|  
-|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|\_FPIEEE\_EXCEPTION\_FLAGS 包含每種浮點例外狀況型別的位元欄位。<br /><br /> 在這些欄位和用於引數之間提供給 [\_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)的遮罩例外狀況的對應。<br /><br /> 每個位元的確切意義取決於內容:<br /><br /> `Cause` 每個設定位元表示引發的特定例外狀況。<br /><br /> `Enable` 每個設定位元表示特定例外狀況目前被揭露。<br /><br /> `Status` 每個設定位元表示特定例外狀況目前是未定的。  這包括未引發的例外狀況，因為被 `_controlfp`遮罩。|  
+|_FPIEEE_RECORD 欄位|描述|  
+|----------------------------|-----------------|  
+|`unsigned int RoundingMode`, `unsigned int Precision`|這些欄位包含發生例外狀況時的浮點環境相關資訊。|  
+|`unsigned int Operation`|表示已導致陷阱的作業類型。 如果類型是比較 (`_FpCodeCompare`)，則可以在 `Result.Value` 欄位中提供 Fpieee.h 中所定義的其中一個特殊 `_FPIEEE_COMPARE_RESULT` 值。 轉換類型 (`_FpCodeConvert`) 表示設陷發生在浮點轉換作業期間。 您可以查看 `Operand1` 和 `Result` 類型，以判斷正在嘗試之轉換的類型。|  
+|`_FPIEEE_VALUE Operand1`, `_FPIEEE_VALUE Operand2`, `_FPIEEE_VALUE Result`|這些結構表示所建議結果和運算元的類型和值︰<br /><br /> `OperandValid` 旗標，指出回應的值是否有效。<br /><br /> `Format` 對應值的資料類型。 即使對應的值無效，還是可能會傳回格式類型。<br /><br /> `Value` 結果或運算元資料值。|  
+|`_FPIEEE_EXCEPTION_FLAGS Cause`, `_FPIEEE_EXCEPTION_FLAGS Enable`, `_FPIEEE_EXCEPTION_FLAGS Status`|_FPIEEE_EXCEPTION_FLAGS 會為每個浮點例外狀況類型包含一個位元欄位。<br /><br /> 這些欄位與用來遮罩提供給 [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 之例外狀況的引數之間具有對應關係。<br /><br /> 每個位元的確切意義取決於內容︰<br /><br /> `Cause` 每個設定的位元都表示已引發的特定例外狀況。<br /><br /> `Enable` 每個設定的位元都表示目前取消遮罩特定例外狀況。<br /><br /> `Status` 每個設定的位元都表示特定例外狀況目前暫止。 這包括因透過 `_controlfp` 進行遮罩而尚未引發的例外狀況。|  
   
- 當您啟用時，停用的未定的例外狀況會被引發。  在使用 `_fpieee_flt` 做為例外狀況篩選條件時，這可能會產生未定義的行為。  永遠在啟用浮點例外狀況之前呼叫 [\_clearfp](../../c-runtime-library/reference/clear87-clearfp.md) 。  
+ 啟用暫止例外狀況時，會引發停用的暫止例外狀況。 這可能會在使用 `_fpieee_flt` 作為例外狀況篩選時導致未定義的行為。 一律在啟用浮點例外狀況之前呼叫 [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|Function|必要的標頭|  
-|--------------|-----------|  
-|`_fpieee_flt`|\<fpieee.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`_fpieee_flt`|\<fpieee.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_fpieee.c  
@@ -157,10 +174,10 @@ int main( void )
 }  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [\_control87、\_controlfp、\_\_control87\_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
- [\_controlfp\_s](../../c-runtime-library/reference/controlfp-s.md)
+ [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
+ [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)

@@ -1,63 +1,79 @@
 ---
 title: "_mbccpy、_mbccpy_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbccpy"
-  - "_mbccpy_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbccpy"
-  - "tccpy"
-  - "ftccpy"
-  - "mbccpy"
-  - "_tccpy"
-  - "_ftccpy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbccpy 函式"
-  - "_mbccpy_l 函式"
-  - "_tccpy 函式"
-  - "_tccpy_l 函式"
-  - "mbccpy 函式"
-  - "mbccpy_l 函式"
-  - "tccpy 函式"
-  - "tccpy_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbccpy
+- _mbccpy_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbccpy
+- tccpy
+- ftccpy
+- mbccpy
+- _tccpy
+- _ftccpy
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tccpy function
+- _tccpy_l function
+- tccpy_l function
+- tccpy function
+- mbccpy function
+- _mbccpy_l function
+- _mbccpy function
+- mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _mbccpy、_mbccpy_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 32a0f8249bf3a3e2296fa6c6f41b807cd7c15294
+ms.lasthandoff: 02/24/2017
 
-複製某個字串的多位元組字元到另一個字串。  更多這些函式的可用安全版本，請參閱 [\_mbccpy\_s、\_mbccpy\_s\_l](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md)。  
+---
+# <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
+將多位元組字元從某個字串複製到另一個字串。 這些函式已有更安全的版本可用，請參閱 [_mbccpy_s、_mbccpy_s_l](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md)。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void _mbccpy(  
@@ -71,7 +87,7 @@ void _mbccpy_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `dest`  
  複製目的地。  
   
@@ -81,35 +97,35 @@ void _mbccpy_l(
  `locale`  
  要使用的地區設定。  
   
-## 備註  
- `_mbccpy` 函式將 `src` 的多位元組字元複製到 `dest`。  
+## <a name="remarks"></a>備註  
+ `_mbccpy` 函式會將一個多位元組字元從 `src` 複製到 `dest`。  
   
- 這個函式會驗證它的參數。  如果 `_mbccpy`傳遞 null 指標給`dest`或`src` ，則將會叫用無效參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行， `errno` 將設定為 `EINVAL`。  
+ 這個函式會驗證它的參數。 如果針對 `dest` 或 `src` 將 null 指標傳遞給 `_mbccpy`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會將 `errno` 設定為 `EINVAL`。  
   
- `_mbccpy` 會在所有地區設定相依表現方式中使用目前的地區設定。  `_mbccpy_l` 與 `_mbccpy` 相似，除了`_mbccpy_l` 使用傳遞的地區設定為所有地區設定相關行為。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `_mbccpy` 會針對任何與地區設定相關的行為使用目前的地區設定。 `_mbccpy_l` 與 `_mbccpy` 相同，只不過 `_mbccpy_l` 會針對任何與地區設定相關的行為使用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- **Security Note** 使用 null 結尾的字串。  null 結尾字串不能超過目的緩衝區的大小。  如需詳細資訊，請參閱 [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) 。  緩衝區溢位問題是系統攻擊的常見方法，它會導致權限不確定性的增加。  
+ **安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|Tchar.h 常式|未定義 \_UNICODE and \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|------------------------------|----------------|-------------------|  
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tccpy`|巨集或內嵌函式的對應|`_mbccpy`|巨集或內嵌函式的對應|  
-|`_tccpy_l`|N\/A|`_mbccpy_l`|N\/A|  
+|`_tccpy_l`|N/A|`_mbccpy_l`|N/A|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_mbccpy`|\<mbctype.h\>|  
-|`_mbccpy_l`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_mbccpy`|\<mbctype.h>|  
+|`_mbccpy_l`|\<mbctype.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## NET Framework 對等  
- 不適用。  若要呼叫標準 C 函式，請使用 `PInvoke`。  如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>NET Framework 對等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen、mblen、\_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)
+ [_mbclen、mblen、_mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)

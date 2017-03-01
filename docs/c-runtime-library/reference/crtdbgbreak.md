@@ -1,73 +1,89 @@
 ---
-title: "_CrtDbgBreak | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtDbgBreak"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_CrtDbgBreak"
-  - "CrtDbgBreak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtDbgBreak 函式"
-  - "CrtDbgBreak 函式"
+title: _CrtDbgBreak | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtDbgBreak
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _CrtDbgBreak
+- CrtDbgBreak
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtDbgBreak function
+- _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtDbgBreak
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 105b86a3c06c17bd9d24ff6cedb213abf06dadcd
+ms.lasthandoff: 02/24/2017
 
-在程式碼的某一行設置中斷點。\(請僅在偵錯模式使用。\)  
+---
+# <a name="crtdbgbreak"></a>_CrtDbgBreak
+在特定程式碼行上設定中斷點 (僅適用於偵錯模式)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void _CrtDbgBreak( void );  
 ```  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  沒有傳回值。  
   
-## 備註  
- `_CrtDbgBreak` 函式為函式所在的程式碼行設置偵錯中斷點。  此函式必須在偵錯模式下使用且依賴 `_DEBUG` 的預定義。  
+## <a name="remarks"></a>備註  
+ `_CrtDbgBreak` 函式會在函式所在的特定程式碼行上設定偵錯中斷點。 此函式僅適用於偵錯模式，而且必須事先定義 `_DEBUG`。  
   
- 如需使用其他攔截功能的執行階段函式和撰寫自己的用戶端定義的攔截函式的詳細資訊，請參閱 [Writing Your Own Debug Hook Functions](../Topic/Debug%20Hook%20Function%20Writing.md) 。  
+ 如需使用支援攔截程序之其他執行階段函式，以及撰寫您自己的用戶端定義攔截函式的詳細資訊，請參閱[撰寫您自己的偵錯攔截函式](/visualstudio/debugger/debug-hook-function-writing)。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_CrtDbgBreak`|\<CRTDBG.h\>|  
+|-------------|---------------------|  
+|`_CrtDbgBreak`|\<CRTDBG.h>|  
   
-## 程式庫  
- [C run\-time libraries](../../c-runtime-library/crt-library-features.md) 版本的偵錯  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
- [\_\_debugbreak](../../intrinsics/debugbreak.md)
+ [__debugbreak](../../intrinsics/debugbreak.md)

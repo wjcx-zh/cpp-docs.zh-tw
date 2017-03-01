@@ -1,92 +1,109 @@
 ---
-title: "_CrtDumpMemoryLeaks | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtDumpMemoryLeaks"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CRTDBG_LEAK_CHECK_DF"
-  - "CRTDBG_CHECK_CRT_DF"
-  - "_CRTDBG_LEAK_CHECK_DF"
-  - "CrtDumpMemoryLeaks"
-  - "_CrtDumpMemoryLeaks"
-  - "_CRTDBG_CHECK_CRT_DF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtDumpMemoryLeaks 函式"
-  - "CRTDBG_LEAK_CHECK_DF 巨集"
-  - "_CRTDBG_LEAK_CHECK_DF 巨集"
-  - "_CrtDumpMemoryLeaks 函式"
-  - "CRTDBG_CHECK_CRT_DF 巨集"
-  - "_CRTDBG_CHECK_CRT_DF 巨集"
+title: _CrtDumpMemoryLeaks | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtDumpMemoryLeaks
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CRTDBG_LEAK_CHECK_DF
+- CRTDBG_CHECK_CRT_DF
+- _CRTDBG_LEAK_CHECK_DF
+- CrtDumpMemoryLeaks
+- _CrtDumpMemoryLeaks
+- _CRTDBG_CHECK_CRT_DF
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtDumpMemoryLeaks function
+- CRTDBG_LEAK_CHECK_DF macro
+- _CRTDBG_LEAK_CHECK_DF macro
+- _CrtDumpMemoryLeaks function
+- CRTDBG_CHECK_CRT_DF macro
+- _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _CrtDumpMemoryLeaks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3fca6935525d9654c7f78f81e879497fc3e0e5af
+ms.lasthandoff: 02/24/2017
 
-當記憶體遺漏發生時，在偵錯堆積傾印所有記憶體區塊 \(僅偵錯版本\)。  
+---
+# <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
+發生記憶體流失時，傾印偵錯堆積中的所有記憶體區塊 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 int _CrtDumpMemoryLeaks( void );  
 ```  
   
-## 傳回值  
- 如果找到記憶體遺漏，則 `_CrtDumpMemoryLeaks` 傳回TRUE。  否則，函式會傳回 false。  
+## <a name="return-value"></a>傳回值  
+ 如果發現記憶體流失，`_CrtDumpMemoryLeaks` 會傳回 TRUE。 否則，此函式會傳回 FALSE。  
   
-## 備註  
- `_CrtDumpMemoryLeaks` 函式會判斷自程式執行啟動後記憶體遺漏是否發生。  找到遺漏時，堆積內所有物件的偵錯標頭資訊會傾印為使用者可閱讀的格式。  如果未定義 [\_DEBUG](../../c-runtime-library/debug.md)，在前置處理中，對 `_CrtDumpMemoryLeaks` 的呼叫將被移除。  
+## <a name="remarks"></a>備註  
+ `_CrtDumpMemoryLeaks` 函式會判斷自程式執行開始以來是否發生記憶體流失。 發現流失時，會以使用者可讀格式傾印堆積中所有物件的偵錯標頭資訊。 若未定義 [_DEBUG](../../c-runtime-library/debug.md)，將會在前置處理期間移除對 `_CrtDumpMemoryLeaks` 的呼叫。  
   
- `_CrtDumpMemoryLeaks` 通常會在程序執行結束時被呼叫，以驗證應用程式配置的所有記憶體已經釋放。  藉由開啟 [\_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 旗標的 `_CRTDBG_LEAK_CHECK_DF` 位元欄（使用 [\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函式），可讓此函式在程式結束時自動被呼叫。  
+ 程式執行結束時經常會呼叫 `_CrtDumpMemoryLeaks`，以確認應用程式所配置的所有記憶體皆已釋放。 您可以使用 [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函式開啟 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 旗標的 `_CRTDBG_LEAK_CHECK_DF` 位元欄位，以在程式終止時自動呼叫此函式。  
   
- `_CrtDumpMemoryLeaks` 呼叫 [\_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) 以取得堆積的目前狀態然後掃描未釋放區塊的狀態。  當遇到一個未被釋放的區塊時， `_CrtDumpMemoryLeaks` 會呼叫 [\_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) 以傾印程式開始執行以來，堆積內配置的所有物件之資訊。  
+ `_CrtDumpMemoryLeaks` 會呼叫[_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) 以取得堆積的目前狀態，然後掃描尚未釋放之區塊的狀態。 遇到未釋放的區塊時，`_CrtDumpMemoryLeaks` 會呼叫 [_CrtMemDumpAllObjectsSince](../../c-runtime-library/reference/crtmemdumpallobjectssince.md) 以傾印自程式執行開始以來在堆積中配置之所有物件的資訊。  
   
- 根據預設，內部 C 執行階段區塊 \(`_CRT_BLOCK`\) 不包含在記憶體傾印作業。  [\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函式可用來開啟 `_crtDbgFlag` 的 `_CRTDBG_CHECK_CRT_DF`，將這些區塊包含至遺漏檢測程序。  
+ 根據預設，內部 C 執行階段區塊 (`_CRT_BLOCK`) 不會包含在記憶體傾印作業中。 您可以使用 [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函式來開啟 `_crtDbgFlag` 的 `_CRTDBG_CHECK_CRT_DF` 位元，以將這些區塊包含在流失偵測處理序中。  
   
- 如需堆積狀態的函式和 `_CrtMemState` 結構的詳細資訊，請參閱 [堆積狀態報告函式](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Heap_State_Reporting_Functions)。  如需記憶體區塊配置、初始化的方式，並在基底堆積的偵錯版本管理記憶體區塊的更多詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](../Topic/CRT%20Debug%20Heap%20Details.md)。  
+ 如需堆積狀態函式和 `_CrtMemState` 結構的詳細資訊，請參閱[堆積狀態報告函式](/visualstudio/debugger/crt-debug-heap-details)。 如需如何在偵錯版本的基底堆積中配置、初始化和管理記憶體區塊的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_CrtDumpMemoryLeaks`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtDumpMemoryLeaks`|\<crtdbg.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C run\-time libraries](../../c-runtime-library/crt-library-features.md) 版本的偵錯  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
- 如需 `_CrtDumpMemoryLeaks` 使用方式的範例，請參閱 [crt\_dbg1](http://msdn.microsoft.com/zh-tw/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
+## <a name="example"></a>範例  
+ 如需如何使用 `_CrtDumpMemoryLeaks` 的範例，請參閱 [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

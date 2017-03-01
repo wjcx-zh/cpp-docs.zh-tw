@@ -1,49 +1,67 @@
 ---
 title: "C++ 程式啟動和終止 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制文字資料流"
-  - "函式 Main 程序"
-  - "main 函式, 程式啟動"
-  - "Standard C++ 程式庫, 程式啟動和終止"
-  - "啟始程式碼, 和 C++ 程式終止"
-  - "終止執行"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Standard Library, program startup and termination
+- terminating execution
+- Function Main procedures
+- control text streams
+- startup code, and C++ program termination
+- main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
 caps.latest.revision: 9
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# C++ 程式啟動和終止
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 53e31f3f3a175013a248401f4231bb87cf444681
+ms.lasthandoff: 02/24/2017
 
-C \+\+. 程式執行相同 C\+\+. 程式在程式啟動且程式終止作業，加上外框陣列這裡。  
+---
+# <a name="c-program-startup-and-termination"></a>C++ 程式啟動和終止
+C++ 程式執行的作業和 C 程式在執行程式啟動和程式終止時執行的相同，再加上幾個此處概述的作業。  
   
- 在目標環境函式呼叫 `main`之前，因此，，會儲存所有常數值之後在有靜態期間的所有物件，程式執行這類靜態物件的其他建構函式。  執行的順序未指定在轉譯單位之間，然而，但是您可以假設，某些 [iostreams](../standard-library/iostreams-conventions.md) 物件正確初始化供這些靜態建構函式。  這些控制項的文字資料流是:  
+ 在目標環境呼叫 `main` 函式之前，以及其儲存任何常數初始值 (您在具有靜態期間的所有物件中所指定) 之後，程式即會針對這類靜態物件執行任何剩餘的建構函式。 系統不會指定轉譯單位之間的執行順序，但您仍可假設這些靜態建構函式已正確初始化所要使用的部分 [iostreams](../standard-library/iostreams-conventions.md) 物件。 這些控制文字資料流如下：  
   
--   [cin](../Topic/cin.md) —標準輸入的。  
+-   [cin](../standard-library/iostream.md#cin) — 適用於標準輸入。  
   
--   [cout](../Topic/cout.md) —標準輸出的。  
+-   [cout](../standard-library/iostream.md#cout) — 適用於標準輸出。  
   
--   [cerr](../Topic/cerr.md) —無緩衝區的標準錯誤輸出的。  
+-   [cerr](../standard-library/iostream.md#cerr) — 適用於非緩衝的標準錯誤輸出。  
   
--   [阻礙。](../Topic/clog.md) —緩衝區的標準錯誤輸出的。  
+-   [clog](../standard-library/iostream.md#clog) — 適用於緩衝的標準錯誤輸出。  
   
- 您可以為靜態物件可以使用在程式結束時呼叫的，解構函式內的這些物件。  
+ 於程式終止期間，您也可以在針對靜態物件呼叫的解構函式內使用這些物件。  
   
- 與 C，傳回 `main` 或 `exit` 呼叫的所有函式向註冊反向的 `atexit` 。  從所擲回的例外狀況註冊的函式呼叫 `terminate`。  
+ 和使用 C 相同，從 `main` 傳回或進行`exit` 呼叫時，系統會依據登錄的相反順序，呼叫在 `atexit` 中登錄的所有函式。 從這類已登錄函式擲回的例外狀況皆會呼叫 `terminate`。  
   
-## 請參閱  
- [STL 概觀](../standard-library/cpp-standard-library-overview.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+

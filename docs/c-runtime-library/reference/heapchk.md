@@ -1,89 +1,105 @@
 ---
-title: "_heapchk | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_heapchk"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_heapchk"
-  - "heapchk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_heapchk 函式"
-  - "堆積的一致性檢查"
-  - "偵錯 [CRT], 堆積相關的問題"
-  - "heapchk 函式"
-  - "堆積, 檢查一致性"
+title: _heapchk | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _heapchk
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _heapchk
+- heapchk
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging [CRT], heap-related problems
+- consistency checking of heaps
+- heapchk function
+- heaps, checking consistency
+- _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# _heapchk
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d75464be51440dfd171323ad91d32946310ea956
+ms.lasthandoff: 02/24/2017
 
-對堆積的一致性檢查。  
+---
+# <a name="heapchk"></a>_heapchk
+在堆積上執行一致性檢查。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _heapchk( void );  
 ```  
   
-## 傳回值  
- `_heapchk` 傳回在 Malloc.h 定義的下列整數資訊清單常數。  
+## <a name="return-value"></a>傳回值  
+ `_heapchk` 會傳回下列在 Malloc.h 中定義的整數資訊清單常數之一。  
   
  `_HEAPBADBEGIN`  
- 初始標頭資訊是錯誤的或找不到。  
+ 初始標頭資訊不正確或找不到。  
   
  `_HEAPBADNODE`  
- 找到錯誤的節點或損毀堆積。  
+ 找到不正確的節點或堆積損壞。  
   
  `_HEAPBADPTR`  
- 指標至堆積中無效。  
+ 無效的堆積指標。  
   
  `_HEAPEMPTY`  
  堆積尚未初始化。  
   
  `_HEAPOK`  
- 堆積似乎是一致的。  
+ 堆積看似一致。  
   
- 此外，如果發生錯誤，則為 `_heapchk` ，將 `errno` 設為 `ENOSYS`。  
+ 此外若是發生錯誤， `_heapchk` 會將 `errno` 設為 `ENOSYS`。  
   
-## 備註  
- `_heapchk` 函式可檢查偵錯堆積相關問題堆積的最小的一致性。  如果作業系統不支援 `_heapchk`\(例如， Windows 98\)，則函式會傳回 `_HEAPOK` 且將 `errno` 設為 `ENOSYS`。  
+## <a name="remarks"></a>備註  
+ `_heapchk` 函式可透過檢查堆積的最小一致性來協助堆積相關問題的偵錯。 若作業系統不支援 `_heapchk` (例如，Windows 98)，此函式會傳回 `_HEAPOK`，並將 `errno` 設為 `ENOSYS`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|選擇性標頭|  
-|--------|-----------|-----------|  
-|`_heapchk`|\<malloc.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_heapchk`|\<malloc.h>|\<errno.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_heapchk.c  
@@ -122,13 +138,16 @@ int main( void )
 }  
 ```  
   
-  **好\-堆積可正常。**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+OK - heap is fine  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   
- [\_heapadd](../../c-runtime-library/heapadd.md)   
- [\_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [\_heapset](../../c-runtime-library/heapset.md)   
- [\_heapwalk](../../c-runtime-library/reference/heapwalk.md)
+ [_heapadd](../../c-runtime-library/heapadd.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)   
+ [_heapset](../../c-runtime-library/heapset.md)   
+ [_heapwalk](../../c-runtime-library/reference/heapwalk.md)

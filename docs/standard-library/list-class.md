@@ -1,129 +1,2463 @@
 ---
 title: "list 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.list"
-  - "list"
-  - "std::list"
-  - "list/std::list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "list 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.list
+- list
+- std::list
+- list/std::list
+dev_langs:
+- C++
+helpviewer_keywords:
+- list class
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# list 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 16d9bb63aac40bc4494f8d748fd752cde85d79d9
+ms.lasthandoff: 02/24/2017
 
-STL list 類別是序列容器的範本類別，其以線性排列方式維護其元素，並允許在序列內的任何位置進行有效率的插入與刪除。  此序列會儲存為雙向連結的元素清單，每一個都會包含某種 *Type* 類型的成員。  
+---
+# <a name="list-class"></a>list 類別
+「C++ 標準程式庫」list 類別是序列容器的範本類別，這些容器是以線性排列方式維護其元素，可讓在序列內任何位置進行的插入和刪除都相當有效率。 此序列會儲存為雙向連結的元素清單，每一個都包含某種 *Type* 類型的成員。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
-  
-template <    class Type,     class Allocator=allocator<Type>  > class list  
+template <class Type, class Allocator= allocator<Type>>  
+class list  
 ```  
   
-#### 參數  
- *類型*  
+#### <a name="parameters"></a>參數  
+ *Type*  
  要存放在清單中的元素資料類型。  
   
  `Allocator`  
- 代表預存配置器物件的類型，封裝有關清單之記憶體配置和解除配置的詳細資訊。  這個引數是選擇性的，而且預設值是 **allocator**\<*Type*\>*。*  
+ 代表預存配置器物件的類型，封裝有關清單之記憶體配置和解除配置的詳細資訊。 這個引數是選用引數，且預設值是 **allocator**\< *Type*> 。  
   
-## 備註  
- 選擇容器類型時，通常應根據應用程式所需的搜尋和插入類型。  當需要隨機存取任何元素，且只要在序列結尾處插入或刪除元素，則向量應該是管理序列的慣用容器。  當需要隨機存取，且需要在序列的開頭和結尾進行插入和刪除時，類別 deque 容器的效能是很好的。  
+## <a name="remarks"></a>備註  
+ 選擇容器類型時，通常應根據應用程式所需的搜尋和插入類型。 當需要隨機存取任何元素，且只要在序列結尾處插入或刪除元素，則向量應該是管理序列的慣用容器。 當需要隨機存取，且需要在序列的開頭和結尾進行插入和刪除時，類別 deque 容器的效能是很好的。  
   
- list 成員函式 [merge](../Topic/list::merge.md)、[reverse](../Topic/list::reverse.md)、[unique](../Topic/list::unique.md)、[remove](../Topic/list::remove.md) 和 [remove\_if](../Topic/list::remove_if.md) 已針對 list 物件上的運算進行最佳化，並為它們的泛型對應項提供高效能的替代選項。  
+ list 成員函式 [merge](#list__merge)、[reverse](#list__reverse)、[unique](#list__unique)、[remove](#list__remove) 及 [remove_if](#list__remove_if) 已針對 list 物件上的運算進行最佳化，可為它們的泛型對應項提供高效能的替代方案。  
   
- 當成員函式必須插入或清除清單的元素時，就會發生清單重新配置。  在所有這種情況下，只有指向受控制序列的清除部份的迭代器或參考會變成無效。  
+ 當成員函式必須插入或清除清單的元素時，就會發生清單重新配置。 在所有這種情況下，只有指向受控制序列的清除部份的迭代器或參考會變成無效。  
   
- 包括 STL 標準標頭 \<list\> 以定義[容器](../standard-library/stl-containers.md)範本類別清單和幾個支援範本。  
+ 包括「C++ 標準程式庫」標準標頭 \<list> 以定義[容器](../standard-library/stl-containers.md)範本類別清單和數個支援範本。  
   
-### 建構函式  
-  
-|||  
-|-|-|  
-|[list](../Topic/list::list.md)|建構特定大小的清單，或具有特定值之元素的清單，或具有特定 `allocator` 的清單，或是做為其他清單的複本。|  
-  
-### Typedef  
+### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[allocator\_type](../Topic/list::allocator_type.md)|類型，表示清單物件的 `allocator` 類別。|  
-|[const\_iterator](../Topic/list::const_iterator.md)|類型，提供可讀取 list 中 `const` 元素的雙向迭代器。|  
-|[const\_pointer](../Topic/list::const_pointer.md)|類型，提供清單中 `const` 元素的指標。|  
-|[const\_reference](../Topic/list::const_reference.md)|類型，提供儲存在清單中供讀取和執行 `const` 作業之 `const` 元素的參考。|  
-|[const\_reverse\_iterator](../Topic/list::const_reverse_iterator.md)|類型，提供可讀取 list 中任何 `const` 元素的雙向迭代器。|  
-|[difference\_type](../Topic/list::difference_type.md)|類型，提供兩個指出相同清單內之元素的迭代器間的差異。|  
-|[迭代器](../Topic/list::iterator.md)|類型，提供可以讀取或修改清單中之任何元素的雙向迭代器。|  
-|[指標](../Topic/list::pointer.md)|類型，提供清單中的元素指標。|  
-|[參考](../Topic/list::reference.md)|類型，提供儲存在清單中供讀取和執行 `const` 作業之 `const` 元素的參考。|  
-|[reverse\_iterator](../Topic/list::reverse_iterator.md)|類型，提供可以讀取或修改反轉清單中之元素的雙向迭代器。|  
-|[size\_type](../Topic/list::size_type.md)|計算清單中元素數目的類型。|  
-|[value\_type](../Topic/list::value_type.md)|類型，表示儲存在清單中的資料類型。|  
+|[list](#list__list)|建構特定大小的清單，或具有特定值之元素的清單，或具有特定 `allocator` 的清單，或是做為其他清單的複本。|  
   
-### 成員函式  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[assign](../Topic/list::assign.md)|清除清單中的元素，並複製一組新的元素至目標 list。|  
-|[back](../Topic/list::back.md)|傳回清單的最後一個元素的參考。|  
-|[begin](../Topic/list::begin.md)|傳回迭代器，其定址清單中的第一個元素。|  
-|[list::cbegin](../Topic/list::cbegin.md)|傳回 const 迭代器，其定址清單中的第一個元素。|  
-|[list::cend](../Topic/list::cend.md)|傳回 const 迭代器，其定址清單中最後一個元素的下一個位置。|  
-|[list::clear](../Topic/list::clear.md)|清除清單的所有元素。|  
-|[list::crbegin](../Topic/list::crbegin.md)|傳回 const 迭代器，其定址反轉清單中的第一個元素。|  
-|[list::crend](../Topic/list::crend.md)|傳回 const 迭代器，其定址反轉清單中最後一個元素的下一個位置。|  
-|[list::emplace](../Topic/list::emplace.md)|將就地建構的元素插入清單的指定位置。|  
-|[list::emplace\_back](../Topic/list::emplace_back.md)|將就地建構的元素加入至清單的結尾。|  
-|[list::emplace\_front](../Topic/list::emplace_front.md)|將就地建構的元素加入至清單的開頭。|  
-|[空的](../Topic/list::empty.md)|測試清單是否為空的。|  
-|[end](../Topic/list::end.md)|傳回迭代器，其定址清單中最後一個元素的後接位置。|  
-|[erase](../Topic/list::erase.md)|從清單中的指定位置移除元素或某個元素範圍。|  
-|[front](../Topic/list::front.md)|傳回清單中第一個元素的參考。|  
-|[get\_allocator](../Topic/list::get_allocator.md)|傳回用來建構清單的 `allocator` 物件複本。|  
-|[insert](../Topic/list::insert.md)|將某個元素或一些元素或某個元素範圍，插入清單的指定位置。|  
-|[max\_size](../Topic/list::max_size.md)|傳回清單的最大長度。|  
-|[merge](../Topic/list::merge.md)|從引數清單中移除元素，並將其插入目標清單中，然後以遞增順序或其他指定的順序，排序新合併的元素集合。|  
-|[pop\_back](../Topic/list::pop_back.md)|刪除清單結尾的項目。|  
-|[pop\_front](../Topic/list::pop_front.md)|刪除清單開頭的元素。|  
-|[push\_back](../Topic/list::push_back.md)|將元素加入至清單的結尾。|  
-|[push\_front](../Topic/list::push_front.md)|將元素加入至清單的開頭。|  
-|[rbegin](../Topic/list::rbegin.md)|傳回迭代器，其定址反轉清單中的第一個元素。|  
-|[remove](../Topic/list::remove.md)|清除清單中符合指定之值的項目。|  
-|[remove\_if](../Topic/list::remove_if.md)|從清單中清除符合指定述詞的元素。|  
-|[rend](../Topic/list::rend.md)|傳回迭代器，其定址反轉清單中最後一個元素的後接位置。|  
-|[resize](../Topic/list::resize.md)|指定清單的新大小。|  
-|[reverse](../Topic/list::reverse.md)|反轉項目在清單中出現的順序。|  
-|[大小](../Topic/list::size.md)|傳回清單中項目的數目。|  
-|[sort](../Topic/list::sort.md)|將清單的元素以遞增順序或以其他順序關聯進行排序。|  
-|[splice](../Topic/list::splice.md)|從引數清單中移除元素，並將它們插入目標清單。|  
-|[交換](../Topic/list::swap.md)|交換兩個清單的項目。|  
-|[unique](../Topic/list::unique.md)|從清單移除相鄰的重複元素，或移除符合其他某些二元述詞的相鄰元素。|  
+|[allocator_type](#list__allocator_type)|類型，表示清單物件的 `allocator` 類別。|  
+|[const_iterator](#list__const_iterator)|類型，提供可讀取 list 中 `const` 元素的雙向迭代器。|  
+|[const_pointer](#list__const_pointer)|類型，提供清單中 `const` 元素的指標。|  
+|[const_reference](#list__const_reference)|類型，提供儲存在清單中供讀取和執行 `const` 作業之 `const` 元素的參考。|  
+|[const_reverse_iterator](#list__const_reverse_iterator)|類型，提供可讀取 list 中任何 `const` 元素的雙向迭代器。|  
+|[difference_type](#list__difference_type)|類型，提供兩個指出相同清單內之元素的迭代器間的差異。|  
+|[iterator](#list__iterator)|類型，提供可以讀取或修改清單中之任何元素的雙向迭代器。|  
+|[pointer](#list__pointer)|類型，提供清單中的元素指標。|  
+|[reference](#list__reference)|類型，提供儲存在清單中供讀取和執行 `const` 作業之 `const` 元素的參考。|  
+|[reverse_iterator](#list__reverse_iterator)|類型，提供可以讀取或修改反轉清單中之元素的雙向迭代器。|  
+|[size_type](#list__size_type)|計算清單中元素數目的類型。|  
+|[value_type](#list__value_type)|類型，表示儲存在清單中的資料類型。|  
   
-### 運算子  
+### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[list::operator\=](../Topic/list::operator=.md)|用另一個清單複本取代清單的元素。|  
+|[assign](#list__assign)|清除清單中的元素，並複製一組新的元素至目標 list。|  
+|[back](#list__back)|傳回清單的最後一個元素的參考。|  
+|[begin](#list__begin)|傳回迭代器，其定址清單中的第一個元素。|  
+|[list::cbegin](#list__cbegin)|傳回 const 迭代器，其定址清單中的第一個元素。|  
+|[list::cend](#list__cend)|傳回 const 迭代器，其定址清單中最後一個元素的下一個位置。|  
+|[list::clear](#list__clear)|清除清單的所有元素。|  
+|[list::crbegin](#list__crbegin)|傳回 const 迭代器，其定址反轉清單中的第一個元素。|  
+|[list::crend](#list__crend)|傳回 const 迭代器，其定址反轉清單中最後一個元素的下一個位置。|  
+|[list::emplace](#list__emplace)|將就地建構的元素插入清單的指定位置。|  
+|[list::emplace_back](#list__emplace_back)|將就地建構的元素加入至清單的結尾。|  
+|[list::emplace_front](#list__emplace_front)|將就地建構的元素加入至清單的開頭。|  
+|[empty](#list__empty)|測試清單是否為空的。|  
+|[end](#list__end)|傳回迭代器，其定址清單中最後一個元素的後接位置。|  
+|[erase](#list__erase)|從清單中的指定位置移除元素或某個元素範圍。|  
+|[front](#list__front)|傳回清單中第一個元素的參考。|  
+|[get_allocator](#list__get_allocator)|傳回用來建構清單的 `allocator` 物件複本。|  
+|[insert](#list__insert)|將某個元素或一些元素或某個元素範圍，插入清單的指定位置。|  
+|[max_size](#list__max_size)|傳回清單的最大長度。|  
+|[merge](#list__merge)|從引數清單中移除元素，並將其插入目標清單中，然後以遞增順序或其他指定的順序，排序新合併的元素集合。|  
+|[pop_back](#list__pop_back)|刪除清單結尾的項目。|  
+|[pop_front](#list__pop_front)|刪除清單開頭的元素。|  
+|[push_back](#list__push_back)|將元素加入至清單的結尾。|  
+|[push_front](#list__push_front)|將元素加入至清單的開頭。|  
+|[rbegin](#list__rbegin)|傳回迭代器，其定址反轉清單中的第一個元素。|  
+|[remove](#list__remove)|清除清單中符合指定之值的項目。|  
+|[remove_if](#list__remove_if)|從清單中清除符合指定述詞的元素。|  
+|[rend](#list__rend)|傳回迭代器，其定址反轉清單中最後一個元素的後接位置。|  
+|[resize](#list__resize)|指定清單的新大小。|  
+|[reverse](#list__reverse)|反轉項目在清單中出現的順序。|  
+|[size](#list__size)|傳回清單中項目的數目。|  
+|[sort](#list__sort)|將清單的元素以遞增順序或以其他順序關聯進行排序。|  
+|[splice](#list__splice)|從引數清單中移除元素，並將它們插入目標清單。|  
+|[swap](#list__swap)|交換兩個清單的項目。|  
+|[unique](#list__unique)|從清單移除相鄰的重複元素，或移除符合其他某些二元述詞的相鄰元素。|  
   
-## 需求  
- **標頭：**\<list\>  
+### <a name="operators"></a>運算子  
   
-## 請參閱  
- [\<list\>](../standard-library/list.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+|||  
+|-|-|  
+|[list::operator=](#list__operator_eq)|用另一個清單複本取代清單的元素。|  
+  
+## <a name="requirements"></a>需求  
+ **標頭**：\<list>  
+  
+##  <a name="a-namelistallocatortypea--listallocatortype"></a><a name="list__allocator_type"></a>  list::allocator_type  
+ 類型，表示清單物件的配置器類別。  
+  
+```  
+typedef Allocator allocator_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ `allocator_type` 與範本參數 **Allocator** 同義。  
+  
+### <a name="example"></a>範例  
+  請參閱 [get_allocator](#list__get_allocator) 的範例。  
+  
+##  <a name="a-namelistassigna--listassign"></a><a name="list__assign"></a>  list::assign  
+ 清除清單上的項目，並複製一組新的項目至目標清單。  
+  
+```  
+void assign(
+    size_type Count,  
+    const Type& Val);
+
+void assign  
+    initializer_list<Type> IList);
+
+template <class InputIterator>  
+void assign(
+    InputIterator First,  
+    InputIterator Last);
+```  
+  
+### <a name="parameters"></a>參數  
+ `First`  
+ 複製來源的引數清單中，項目範圍的第一個項目的位置。  
+  
+ `Last`  
+ 複製來源的引數清單中，項目範圍之外第一個項目的位置。  
+  
+ `Count`  
+ 插入清單中項目的複本數目。  
+  
+ `Val`  
+ 插入清單中之項目的值。  
+  
+ `IList`  
+ initializer_list，包含要插入之項目。  
+  
+### <a name="remarks"></a>備註  
+ 在清除目標清單中任何現有的項目之後，assign 從原始清單或從其他清單中將項目指定的範圍插入至目標清單，或是將指定之值的新項目複本插入到目標清單  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_assign.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main()  
+{  
+    using namespace std;  
+    list<int> c1, c2;  
+    list<int>::const_iterator cIter;  
+  
+    c1.push_back(10);  
+    c1.push_back(20);  
+    c1.push_back(30);  
+    c2.push_back(40);  
+    c2.push_back(50);  
+    c2.push_back(60);  
+  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    c1.assign(++c2.begin(), c2.end());  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    c1.assign(7, 4);  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    c1.assign({ 10, 20, 30, 40 });  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+}  
+```  
+  
+```Output  
+c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40  
+```  
+  
+##  <a name="a-namelistbacka--listback"></a><a name="list__back"></a>  list::back  
+ 傳回清單的最後一個元素的參考。  
+  
+```  
+reference back();
+
+const_reference back() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 清單的最後一個元素。 如果清單是空的，傳回值為未定義。  
+  
+### <a name="remarks"></a>備註  
+ 如果將 **back** 的傳回值指派給 `const_reference`，便無法修改 list 物件。 如果將 **back** 的傳回值指派給 **reference**，則可以修改 list 物件。  
+  
+ 使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空清單中的元素，將會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_back.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 11 );  
+  
+   int& i = c1.back( );  
+   const int& ii = c1.front( );  
+  
+   cout << "The last integer of c1 is " << i << endl;  
+   i--;  
+   cout << "The next-to-last integer of c1 is " << ii << endl;  
+}  
+```  
+  
+```Output  
+The last integer of c1 is 11  
+The next-to-last integer of c1 is 10  
+```  
+  
+##  <a name="a-namelistbegina--listbegin"></a><a name="list__begin"></a>  list::begin  
+ 傳回迭代器，其定址清單中的第一個元素。  
+  
+```  
+const_iterator begin() const;
+
+iterator begin();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 雙向迭代器，其定址清單中的第一個元素，或空清單之後的位置。  
+  
+### <a name="remarks"></a>備註  
+ 如果將 **begin** 的傳回值指派給 `const_iterator`，便無法修改 list 物件中的元素。 如果將 **begin** 的傳回值已指派給 **iterator**，則可以修改 list 物件中的元素。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_begin.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter;  
+   list <int>::const_iterator c1_cIter;  
+  
+   c1.push_back( 1 );  
+   c1.push_back( 2 );  
+  
+   c1_Iter = c1.begin( );  
+   cout << "The first element of c1 is " << *c1_Iter << endl;  
+  
+ *c1_Iter = 20;  
+   c1_Iter = c1.begin( );  
+   cout << "The first element of c1 is now " << *c1_Iter << endl;  
+  
+   // The following line would be an error because iterator is const  
+   // *c1_cIter = 200;  
+}  
+```  
+  
+```Output  
+The first element of c1 is 1  
+The first element of c1 is now 20  
+```  
+  
+##  <a name="a-namelistcbegina--listcbegin"></a><a name="list__cbegin"></a>  list::cbegin  
+ 傳回 `const` 迭代器，為範圍中的第一個項目定址。  
+  
+```  
+const_iterator cbegin() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `const` 雙向存取迭代器，指向範圍的第一個項目，或指向空白範圍結尾 (空白範圍 `cbegin() == cend()`) 之外的位置。  
+  
+### <a name="remarks"></a>備註  
+ 傳回值為 `cbegin` 時，無法修改範圍中的項目。  
+  
+ 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為任何一種支援 `begin()` 和 `cbegin()` 的可修改 (非 `const`) 容器。  
+  
+```cpp  
+auto i1 = Container.begin();
+// i1 is Container<T>::iterator   
+auto i2 = Container.cbegin();
+
+// i2 is Container<T>::const_iterator  
+```  
+  
+##  <a name="a-namelistcenda--listcend"></a><a name="list__cend"></a>  list::cend  
+ 傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。  
+  
+```  
+const_iterator cend() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 指向範圍結尾之外的 `const` 雙向存取迭代器。  
+  
+### <a name="remarks"></a>備註  
+ `cend` 用來測試迭代器是否已超過其範圍結尾。  
+  
+ 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 且可修改的任何種類 (非 `const`) 容器。  
+  
+```cpp  
+auto i1 = Container.end();
+// i1 is Container<T>::iterator   
+auto i2 = Container.cend();
+
+// i2 is Container<T>::const_iterator  
+```  
+  
+ `cend` 所傳回的值不應該取值。  
+  
+##  <a name="a-namelistcleara--listclear"></a><a name="list__clear"></a>  list::clear  
+ 清除清單的所有元素。  
+  
+```  
+void clear();
+```  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_clear.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main() {  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+  
+   cout << "The size of the list is initially " << c1.size( ) << endl;  
+   c1.clear( );  
+   cout << "The size of list after clearing is " << c1.size( ) << endl;  
+}  
+```  
+  
+```Output  
+The size of the list is initially 3  
+The size of list after clearing is 0  
+```  
+  
+##  <a name="a-namelistconstiteratora--listconstiterator"></a><a name="list__const_iterator"></a>  list::const_iterator  
+ 一種類型，提供可讀取清單中任何 **const** 元素的雙向迭代器。  
+  
+```  
+typedef implementation-defined const_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型 `const_iterator` 無法用來修改元素的值。  
+  
+### <a name="example"></a>範例  
+  請參閱 [back](#list__back) 的範例。  
+  
+##  <a name="a-namelistconstpointera--listconstpointer"></a><a name="list__const_pointer"></a>  list::const_pointer  
+ 提供清單中 `const` 元素的指標。  
+  
+``` 
+typedef typename Allocator::const_pointer const_pointer;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型 `const_pointer` 無法用來修改元素的值。  
+  
+ 在大部分情況下，應該使用 [iterator](#list__iterator) 存取 list 物件中的元素。  
+  
+##  <a name="a-namelistconstreferencea--listconstreference"></a><a name="list__const_reference"></a>  list::const_reference  
+ 一種類型，提供對儲存在清單中以供讀取和執行 **const** 運算之 **const** 元素的參考。  
+  
+```  
+typedef typename Allocator::const_reference const_reference;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型 `const_reference` 無法用來修改元素的值。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_const_ref.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+  
+   const list <int> c2 = c1;  
+   const int &i = c2.front( );  
+   const int &j = c2.back( );  
+   cout << "The first element is " << i << endl;  
+   cout << "The second element is " << j << endl;  
+  
+   // The following line would cause an error because c2 is const  
+   // c2.push_back( 30 );  
+}  
+```  
+  
+```Output  
+The first element is 10  
+The second element is 20  
+```  
+  
+##  <a name="a-namelistconstreverseiteratora--listconstreverseiterator"></a><a name="list__const_reverse_iterator"></a>  list::const_reverse_iterator  
+ 一種類型，提供可讀取清單中任何 **const** 元素的雙向迭代器。  
+  
+```  
+typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型 `const_reverse_iterator` 無法修改元素的值，且會用來逐一查看反轉的 list。  
+  
+### <a name="example"></a>範例  
+  請參閱 [rbegin](#list__rbegin) 的範例。  
+  
+##  <a name="a-namelistcrbegina--listcrbegin"></a><a name="list__crbegin"></a>  list::crbegin  
+ 傳回 const 迭代器，其定址反轉清單中的第一個元素。  
+  
+```  
+const_reverse_iterator rbegin() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 常數反轉雙向迭代器，定址對象是反轉 list 中的第一個元素 (或未反轉 `list` 中的作為最後一個元素的項目)。  
+  
+### <a name="remarks"></a>備註  
+ `crbegin` 是與反轉 list 搭配使用，就如同 [list::begin](#list__begin) 是與 `list` 搭配使用一樣。  
+  
+ 有 `crbegin` 的傳回值時，無法修改 list 物件。 [list::rbegin](#list__rbegin) 可用來向後逐一查看清單。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_crbegin.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::const_reverse_iterator c1_crIter;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+   c1_crIter = c1.crbegin( );  
+   cout << "The last element in the list is " << *c1_crIter << "." << endl;  
+}  
+```  
+  
+```Output  
+The last element in the list is 30.  
+```  
+  
+##  <a name="a-namelistcrenda--listcrend"></a><a name="list__crend"></a>  list::crend  
+ 傳回 const 迭代器，其定址反轉清單中最後一個元素的下一個位置。  
+  
+```  
+const_reverse_iterator rend() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 常數反轉雙向迭代器，定址對象是反轉 [list](../standard-library/list-class.md) 中最後一個元素後面的位置 (未反轉 `list` 中第一個元素前面的位置)。  
+  
+### <a name="remarks"></a>備註  
+ `crend` 是與反轉 list 搭配使用，就如同 [list::end](#list__end) 是與 `list` 搭配使用一樣。  
+  
+ 有 `crend` 的傳回值時，無法修改 `list` 物件。  
+  
+ `crend` 可以用來測試反轉迭代器是否已到達其 `list` 的結尾。  
+  
+ `crend` 所傳回的值不應該取值。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_crend.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::const_reverse_iterator c1_crIter;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+  
+   c1_crIter = c1.crend( );  
+   c1_crIter --;  // Decrementing a reverse iterator moves it forward in   
+                 // the list (to point to the first element here)  
+   cout << "The first element in the list is: " << *c1_crIter << endl;  
+}  
+```  
+  
+```Output  
+The first element in the list is: 10  
+```  
+  
+##  <a name="a-namelistdifferencetypea--listdifferencetype"></a><a name="list__difference_type"></a>  list::difference_type  
+ 帶正負號的整數類型，可以用來表示範圍 (介於迭代器所指的元素) 中清單的元素數。  
+  
+```  
+typedef typename Allocator::difference_type difference_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ `difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type` 通常用來代表迭代器 ` first` 和 ` last` 之間範圍 [ ` first`, ` last`) 內的元素數目，包括 ` first` 所指的元素以及上限到 ` last` 所指元素 (但不包含此元素) 的元素範圍。  
+  
+ 請注意，儘管 `difference_type` 適用於符合輸入迭代器需求的所有迭代器，其中包括可反轉容器 (例如 set) 所支援之雙向迭代器的類別，但只有隨機存取容器 (例如 [vector 類別](../standard-library/vector-class.md)) 所提供的隨機存取迭代器，才支援迭代器之間的減法。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_diff_type.cpp  
+// compile with: /EHsc  
+#include <iostream>  
+#include <list>  
+#include <algorithm>  
+  
+int main( )   
+{  
+   using namespace std;  
+  
+   list <int> c1;  
+   list <int>::iterator   c1_Iter, c2_Iter;  
+  
+   c1.push_back( 30 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+   c1.push_back( 10 );  
+   c1.push_back( 30 );  
+   c1.push_back( 20 );  
+  
+   c1_Iter = c1.begin( );  
+   c2_Iter = c1.end( );  
+  
+    list <int>::difference_type df_typ1, df_typ2, df_typ3;  
+  
+   df_typ1 = count( c1_Iter, c2_Iter, 10 );  
+   df_typ2 = count( c1_Iter, c2_Iter, 20 );  
+   df_typ3 = count( c1_Iter, c2_Iter, 30 );  
+   cout << "The number '10' is in c1 collection " << df_typ1 << " times.\n";  
+   cout << "The number '20' is in c1 collection " << df_typ2 << " times.\n";  
+   cout << "The number '30' is in c1 collection " << df_typ3 << " times.\n";  
+}  
+```  
+  
+```Output  
+The number '10' is in c1 collection 1 times.  
+The number '20' is in c1 collection 2 times.  
+The number '30' is in c1 collection 3 times.  
+```  
+  
+##  <a name="a-namelistemplacea--listemplace"></a><a name="list__emplace"></a>  list::emplace  
+ 將就地建構的元素插入清單的指定位置。  
+  
+```  
+void emplace_back(iterator Where, Type&& val);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|||  
+|-|-|  
+|參數|說明|  
+|`Where`|目標 [list](../standard-library/list-class.md) 中第一個元素的插入位置。|  
+|` val`|加入至 `list` 結尾的元素。|  
+  
+### <a name="remarks"></a>備註  
+ 如果擲回例外狀況，`list` 會保持不變，並重新擲回例外狀況。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_emplace.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+#include <string>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <string> c2;  
+   string str("a");  
+  
+   c2.emplace(c2.begin(), move( str ) );  
+   cout << "Moved first element: " << c2.back( ) << endl;  
+}  
+```  
+  
+```Output  
+Moved first element: a  
+```  
+  
+##  <a name="a-namelistemplacebacka--listemplaceback"></a><a name="list__emplace_back"></a>  list::emplace_back  
+ 將就地建構的元素加入至清單的開頭。  
+  
+```  
+void emplace_back(Type&& val);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|||  
+|-|-|  
+|參數|描述|  
+|` val`|新增到 [list](../standard-library/list-class.md) 結尾的元素。|  
+  
+### <a name="remarks"></a>備註  
+ 如果擲回例外狀況，`list` 會保持不變，並重新擲回例外狀況。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_emplace_back.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+#include <string>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <string> c2;  
+   string str("a");  
+  
+   c2.emplace_back( move( str ) );  
+   cout << "Moved first element: " << c2.back( ) << endl;  
+}  
+```  
+  
+```Output  
+Moved first element: a  
+```  
+  
+##  <a name="a-namelistemplacefronta--listemplacefront"></a><a name="list__emplace_front"></a>  list::emplace_front  
+ 將就地建構的元素加入至清單的開頭。  
+  
+```  
+void emplace_front(Type&& val);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|||  
+|-|-|  
+|參數|描述|  
+|` val`|新增到 [list](../standard-library/list-class.md) 開頭的元素。|  
+  
+### <a name="remarks"></a>備註  
+ 如果擲回例外狀況，`list` 會保持不變，並重新擲回例外狀況。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_emplace_front.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+#include <string>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <string> c2;  
+   string str("a");  
+  
+   c2.emplace_front( move( str ) );  
+   cout << "Moved first element: " << c2.front( ) << endl;  
+}  
+```  
+  
+```Output  
+Moved first element: a  
+```  
+  
+##  <a name="a-namelistemptya--listempty"></a><a name="list__empty"></a>  list::empty  
+ 測試清單是否為空的。  
+  
+```  
+bool empty() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果清單是空的，便會傳回 **true**；如果清單不是空的，則傳回 **false**。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_empty.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 10 );  
+   if ( c1.empty( ) )  
+      cout << "The list is empty." << endl;  
+   else  
+      cout << "The list is not empty." << endl;  
+}  
+```  
+  
+```Output  
+The list is not empty.  
+```  
+  
+##  <a name="a-namelistenda--listend"></a><a name="list__end"></a>  list::end  
+ 傳回迭代器，其定址清單中最後一個元素的後接位置。  
+  
+```  
+const_iterator end() const;
+iterator end();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 雙向迭代器，其定址清單中最後一個元素的後接位置。 如果清單是空的，則 `list::end == list::begin`。  
+  
+### <a name="remarks"></a>備註  
+ **end** 是用來測試迭代器是否已到達其清單的結尾。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_end.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+  
+   c1_Iter = c1.end( );  
+   c1_Iter--;  
+   cout << "The last integer of c1 is " << *c1_Iter << endl;  
+  
+   c1_Iter--;  
+ *c1_Iter = 400;  
+   cout << "The new next-to-last integer of c1 is "  
+        << *c1_Iter << endl;  
+  
+   // If a const iterator had been declared instead with the line:  
+   // list <int>::const_iterator c1_Iter;  
+   // an error would have resulted when inserting the 400  
+  
+   cout << "The list is now:";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+}  
+```  
+  
+```Output  
+The last integer of c1 is 30  
+The new next-to-last integer of c1 is 400  
+The list is now: 10 400 30  
+```  
+  
+##  <a name="a-namelisterasea--listerase"></a><a name="list__erase"></a>  list::erase  
+ 從清單中的指定位置移除元素或某個元素範圍。  
+  
+```  
+iterator erase(iterator Where);
+iterator erase(iterator first, iterator last);
+```  
+  
+### <a name="parameters"></a>參數  
+ `Where`  
+ 要從清單中移除之元素項目的位置。  
+  
+ ` first`  
+ 從清單中移除的第一個元素的位置。  
+  
+ ` last`  
+ 從清單中移除的最後一個元素之後的位置。  
+  
+### <a name="return-value"></a>傳回值  
+ 雙向迭代器，指定所有移除的元素之後的第一個剩餘元素；或者，如果沒有這類元素存在，則為清單結尾的指標。  
+  
+### <a name="remarks"></a>備註  
+ 沒有發生重新配置，因此迭代器和參考只針對刪除的元素變成無效。  
+  
+ **erase** 一律不會擲回例外狀況。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_erase.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator Iter;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+   c1.push_back( 40 );  
+   c1.push_back( 50 );  
+   cout << "The initial list is:";  
+   for ( Iter = c1.begin( ); Iter != c1.end( ); Iter++ )  
+      cout << " " << *Iter;  
+   cout << endl;  
+  
+   c1.erase( c1.begin( ) );  
+   cout << "After erasing the first element, the list becomes:";  
+   for ( Iter = c1.begin( ); Iter != c1.end( ); Iter++ )  
+      cout << " " << *Iter;  
+   cout << endl;  
+   Iter = c1.begin( );  
+   Iter++;  
+   c1.erase( Iter, c1.end( ) );  
+   cout << "After erasing all elements but the first, the list becomes: ";  
+   for (Iter = c1.begin( ); Iter != c1.end( ); Iter++ )  
+      cout << " " << *Iter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+The initial list is: 10 20 30 40 50  
+After erasing the first element, the list becomes: 20 30 40 50  
+After erasing all elements but the first, the list becomes:  20  
+```  
+  
+##  <a name="a-namelistfronta--listfront"></a><a name="list__front"></a>  list::front  
+ 傳回清單中第一個元素的參考。  
+  
+```  
+reference front();
+const_reference front() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果清單是空的，傳回為未定義。  
+  
+### <a name="remarks"></a>備註  
+ 如果將 `front` 的傳回值指派給 `const_reference`，便無法修改 list 物件。 如果將 `front` 的傳回值指派給 **reference**，則可以修改 list 物件。  
+  
+ 使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空清單中的元素，將會發生執行階段錯誤。  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_front.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main() {  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 10 );  
+  
+   int& i = c1.front();  
+   const int& ii = c1.front();  
+  
+   cout << "The first integer of c1 is " << i << endl;  
+   i++;  
+   cout << "The first integer of c1 is " << ii << endl;  
+}  
+```  
+  
+```Output  
+The first integer of c1 is 10  
+The first integer of c1 is 11  
+```  
+  
+##  <a name="a-namelistgetallocatora--listgetallocator"></a><a name="list__get_allocator"></a>  list::get_allocator  
+ 傳回用來建構清單的配置器物件複本。  
+  
+```  
+Allocator get_allocator() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 清單使用的配置器。  
+  
+### <a name="remarks"></a>備註  
+ list 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_get_allocator.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   // The following lines declare objects   
+   // that use the default allocator.  
+   list <int> c1;  
+   list <int, allocator<int> > c2 = list <int, allocator<int> >( allocator<int>( ) );  
+  
+   // c3 will use the same allocator class as c1  
+   list <int> c3( c1.get_allocator( ) );  
+  
+   list<int>::allocator_type xlst = c1.get_allocator( );  
+   // You can now call functions on the allocator class used by c1  
+}  
+```  
+  
+##  <a name="a-namelistinserta--listinsert"></a><a name="list__insert"></a>  list::insert  
+ 將某個元素或一些元素或某個元素範圍，插入清單的指定位置。  
+  
+```  
+iterator insert(iterator Where, const Type& Val);
+iterator insert(iterator Where, Type&& Val);
+
+void insert(iterator Where, size_type Count, const Type& Val);
+iterator insert(iterator Where, initializer_list<Type> IList);
+
+template <class InputIterator>  
+void insert(iterator Where, InputIterator First, InputIterator Last);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|||  
+|-|-|  
+|參數|描述|  
+|`Where`|目標 list 中第一個元素插入的位置。|  
+|`Val`|插入清單中之項目的值。|  
+|`Count`|插入清單中的元素數目。|  
+|`First`|要複製之引數清單的元素範圍中，第一個元素的位置。|  
+|`Last`|要複製之引數清單的元素範圍中，最後一個元素之後的位置。|  
+  
+### <a name="return-value"></a>傳回值  
+ 前兩個插入函式傳回的迭代器，指向新元素插入至清單的位置。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_class_insert.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+#include <string>  
+  
+int main()  
+{  
+    using namespace std;  
+    list <int> c1, c2;  
+    list <int>::iterator Iter;  
+  
+    c1.push_back(10);  
+    c1.push_back(20);  
+    c1.push_back(30);  
+    c2.push_back(40);  
+    c2.push_back(50);  
+    c2.push_back(60);  
+  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    Iter = c1.begin();  
+    Iter++;  
+    c1.insert(Iter, 100);  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    Iter = c1.begin();  
+    Iter++;  
+    Iter++;  
+    c1.insert(Iter, 2, 200);  
+  
+    cout << "c1 =";  
+    for(auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    c1.insert(++c1.begin(), c2.begin(), --c2.end());  
+  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    // initialize a list of strings by moving  
+    list < string > c3;  
+    string str("a");  
+  
+    c3.insert(c3.begin(), move(str));  
+    cout << "Moved first element: " << c3.front() << endl;  
+  
+    // Assign with an initializer_list  
+    list <int> c4{ {1, 2, 3, 4} };  
+    c4.insert(c4.begin(), { 5, 6, 7, 8 });  
+  
+    cout << "c4 =";  
+    for (auto c : c4)  
+        cout << " " << c;  
+    cout << endl;  
+}  
+```  
+  
+##  <a name="a-namelistiteratora--listiterator"></a><a name="list__iterator"></a>  list::iterator  
+ 類型，提供可以讀取或修改清單中之任何元素的雙向迭代器。  
+  
+```  
+typedef implementation-defined iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型 **iterator** 可用來修改元素的值。  
+  
+### <a name="example"></a>範例  
+  請參閱 [begin](#list__begin) 的範例。  
+  
+##  <a name="a-namelistlista--listlist"></a><a name="list__list"></a>  list::list  
+ 建構特定大小的清單，或具有特定值之元素的清單，或具有特定配置器的清單，或是做為其他一些清單的所有或部分複本。  
+  
+```  
+list();
+explicit list(const Allocator& Al);
+explicit list(size_type Count);
+list(size_type Count, const Type& Val);
+list(size_type Count, const Type& Val, const Allocator& Al);
+
+list(const list& Right);
+list(list&& Right);
+list(initializer_list<Type> IList, const Allocator& Al);
+
+template <class InputIterator>  
+list(InputIterator First, InputIterator Last);
+
+template <class InputIterator>  
+list(InputIterator First, InputIterator Last, const Allocator& Al);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|||  
+|-|-|  
+|參數|描述|  
+|`Al`|搭配這個物件使用的配置器類別。|  
+|`Count`|建構的清單中元素的數目。|  
+|`Val`|list 中元素的值。|  
+|`Right`|list，其中有要複製的建構的 list。|  
+|`First`|要複製的元素範圍中第一個元素的位置。|  
+|`Last`|超出要複製之元素範圍的第一個元素的位置。|  
+|`IList`|包含要複製之項目的 initializer_list。|  
+  
+### <a name="remarks"></a>備註  
+ 所有的建構函式都會儲存配置器物件 ( `Al`) 並將清單初始化。  
+  
+ [get_allocator](#list__get_allocator) 會傳回一份用來建構清單的配置器物件複本。  
+  
+ 前兩個建構函式會指定空的初始清單，第二個建構函式會指定所要使用的配置器類型 ( `Al`)。  
+  
+ 第三個建構函式會指定 **Type** 類別預設值之指定元素數目 ( `Count`) 的重複。  
+  
+ 第四及第五個建構函式會指定 `Val` 值之 ( `Count`) 元素的重複。  
+  
+ 第六個建構函式指定清單 `Right` 的複本。  
+  
+ 第七個建構函式將清單移至 `Right`。  
+  
+ 第八個建構函式使用 initializer_list 來指定元素。  
+  
+ 下面兩個建構函式複製清單的範圍 `[First, Last)`。  
+  
+ 沒有建構函式會執行任何暫時重新配置。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_class_list.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main()  
+{  
+    using namespace std;  
+    // Create an empty list c0  
+    list <int> c0;  
+  
+    // Create a list c1 with 3 elements of default value 0  
+    list <int> c1(3);  
+  
+    // Create a list c2 with 5 elements of value 2  
+    list <int> c2(5, 2);  
+  
+    // Create a list c3 with 3 elements of value 1 and with the   
+    // allocator of list c2  
+    list <int> c3(3, 1, c2.get_allocator());  
+  
+    // Create a copy, list c4, of list c2  
+    list <int> c4(c2);  
+  
+    // Create a list c5 by copying the range c4[ first,  last)  
+    list <int>::iterator c4_Iter = c4.begin();  
+    c4_Iter++;  
+    c4_Iter++;  
+    list <int> c5(c4.begin(), c4_Iter);  
+  
+    // Create a list c6 by copying the range c4[ first,  last) and with   
+    // the allocator of list c2  
+    c4_Iter = c4.begin();  
+    c4_Iter++;  
+    c4_Iter++;  
+    c4_Iter++;  
+    list <int> c6(c4.begin(), c4_Iter, c2.get_allocator());  
+  
+    cout << "c1 =";  
+    for (auto c : c1)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c2 =";  
+    for (auto c : c2)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c3 =";  
+    for (auto c : c3)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c4 =";  
+    for (auto c : c4)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c5 =";  
+    for (auto c : c5)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    cout << "c6 =";  
+    for (auto c : c6)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    // Move list c6 to list c7  
+    list <int> c7(move(c6));  
+    cout << "c7 =";  
+    for (auto c : c7)  
+        cout << " " << c;  
+    cout << endl;  
+  
+    // Construct with initializer_list  
+    list<int> c8({ 1, 2, 3, 4 });  
+    cout << "c8 =";  
+    for (auto c : c8)  
+        cout << " " << c;  
+    cout << endl;  
+}  
+```  
+  
+```Output  
+c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4  
+```  
+  
+##  <a name="a-namelistmaxsizea--listmaxsize"></a><a name="list__max_size"></a>  list::max_size  
+ 傳回清單的最大長度。  
+  
+```
+size_type max_size() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 清單的最大可能長度。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_max_size.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::size_type i;  
+  
+   i = c1.max_size( );  
+   cout << "Maximum possible length of the list is " << i << "." << endl;  
+}  
+```  
+  
+##  <a name="a-namelistmergea--listmerge"></a><a name="list__merge"></a>  list::merge  
+ 從引數清單中移除元素，並將其插入目標清單中，然後以遞增順序或其他指定的順序，排序新合併的元素集合。  
+  
+```  
+void merge(list<Type, Allocator>& right);
+
+template <class Traits>  
+void merge(list<Type, Allocator>& right, Traits comp);
+```  
+  
+### <a name="parameters"></a>參數  
+ ` right`  
+ 要與目標清單合併的引數清單。  
+  
+ ` comp`  
+ 比較運算子，用來排序目標清單的元素。  
+  
+### <a name="remarks"></a>備註  
+ 引數清單 ` right` 會與目標清單合併。  
+  
+ 引數和目標清單必須以相同的比較關聯排序，而結果序列會依此排序。 第一個成員函式的預設排序為遞增的順序。 第二個成員函式會施加使用者指定的 **Traits** 類別比較作業 ` comp`。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_merge.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1, c2, c3;  
+   list <int>::iterator c1_Iter, c2_Iter, c3_Iter;  
+  
+   c1.push_back( 3 );  
+   c1.push_back( 6 );  
+   c2.push_back( 2 );  
+   c2.push_back( 4 );  
+   c3.push_back( 5 );  
+   c3.push_back( 1 );  
+  
+   cout << "c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   cout << "c2 =";  
+   for ( c2_Iter = c2.begin( ); c2_Iter != c2.end( ); c2_Iter++ )  
+      cout << " " << *c2_Iter;  
+   cout << endl;  
+  
+   c2.merge( c1 );  // Merge c1 into c2 in (default) ascending order  
+   c2.sort( greater<int>( ) );  
+   cout << "After merging c1 with c2 and sorting with >: c2 =";  
+   for ( c2_Iter = c2.begin( ); c2_Iter != c2.end( ); c2_Iter++ )  
+      cout << " " << *c2_Iter;  
+   cout << endl;  
+  
+   cout << "c3 =";  
+   for ( c3_Iter = c3.begin( ); c3_Iter != c3.end( ); c3_Iter++ )  
+      cout << " " << *c3_Iter;  
+   cout << endl;  
+  
+   c2.merge( c3, greater<int>( ) );  
+   cout << "After merging c3 with c2 according to the '>' comparison relation: c2 =";  
+   for ( c2_Iter = c2.begin( ); c2_Iter != c2.end( ); c2_Iter++ )  
+      cout << " " << *c2_Iter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+c1 = 3 6  
+c2 = 2 4  
+After merging c1 with c2 and sorting with >: c2 = 6 4 3 2  
+c3 = 5 1  
+After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1  
+```  
+  
+##  <a name="a-namelistoperatoreqa--listoperator"></a><a name="list__operator_eq"></a>  list::operator=  
+ 用另一個清單複本取代清單的元素。  
+  
+```  
+list& operator=(const list& right);
+list& operator=(list&& right);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|||  
+|-|-|  
+|參數|說明|  
+|` right`|要複製到 `list` 中的 [list](../standard-library/list-class.md)。|  
+  
+### <a name="remarks"></a>備註  
+ 清除 `list` 中任何現有的元素之後，運算子會將 ` right` 的內容複製或移到 `list` 中。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_operator_as.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   list<int> v1, v2, v3;  
+   list<int>::iterator iter;  
+  
+   v1.push_back(10);  
+   v1.push_back(20);  
+   v1.push_back(30);  
+   v1.push_back(40);  
+   v1.push_back(50);  
+  
+   cout << "v1 = " ;  
+   for (iter = v1.begin(); iter != v1.end(); iter++)  
+      cout << *iter << " ";  
+   cout << endl;  
+  
+   v2 = v1;  
+   cout << "v2 = ";  
+   for (iter = v2.begin(); iter != v2.end(); iter++)  
+      cout << *iter << " ";  
+   cout << endl;  
+  
+// move v1 into v2  
+   v2.clear();  
+   v2 = forward< list<int> >(v1);  
+   cout << "v2 = ";  
+   for (iter = v2.begin(); iter != v2.end(); iter++)  
+      cout << *iter << " ";  
+   cout << endl;  
+}  
+```  
+  
+##  <a name="a-namelistpointera--listpointer"></a><a name="list__pointer"></a>  list::pointer  
+ 提供指向清單中項目的指標。  
+  
+```
+typedef typename Allocator::pointer pointer;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型 **pointer** 可用來修改元素的值。  
+  
+ 在大部分情況下，應該使用 [iterator](#list__iterator) 存取 list 物件中的元素。  
+  
+##  <a name="a-namelistpopbacka--listpopback"></a><a name="list__pop_back"></a>  list::pop_back  
+ 刪除清單結尾的項目。  
+  
+``` 
+void pop_back();
+```  
+  
+### <a name="remarks"></a>備註  
+ 最後一個項目不能是空的。 `pop_back` 絕不會擲回例外狀況。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_pop_back.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 1 );  
+   c1.push_back( 2 );  
+   cout << "The first element is: " << c1.front( ) << endl;  
+   cout << "The last element is: " << c1.back( ) << endl;  
+  
+   c1.pop_back( );  
+   cout << "After deleting the element at the end of the list, "  
+           "the last element is: " << c1.back( ) << endl;  
+}  
+```  
+  
+```Output  
+The first element is: 1  
+The last element is: 2  
+After deleting the element at the end of the list, the last element is: 1  
+```  
+  
+##  <a name="a-namelistpopfronta--listpopfront"></a><a name="list__pop_front"></a>  list::pop_front  
+ 刪除清單開頭的元素。  
+  
+``` 
+void pop_front();
+```  
+  
+### <a name="remarks"></a>備註  
+ 第一個元素不能是空的。 `pop_front` 絕不會擲回例外狀況。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_pop_front.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 1 );  
+   c1.push_back( 2 );  
+   cout << "The first element is: " << c1.front( ) << endl;  
+   cout << "The second element is: " << c1.back( ) << endl;  
+  
+   c1.pop_front( );  
+   cout << "After deleting the element at the beginning of the list, "  
+         "the first element is: " << c1.front( ) << endl;  
+}  
+```  
+  
+```Output  
+The first element is: 1  
+The second element is: 2  
+After deleting the element at the beginning of the list, the first element is: 2  
+```  
+  
+##  <a name="a-namelistpushbacka--listpushback"></a><a name="list__push_back"></a>  list::push_back  
+ 將元素加入至清單的結尾。  
+  
+```  
+void push_back(void push_back(Type&& val);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|||  
+|-|-|  
+|參數|描述|  
+|` val`|加入至 list 結尾的元素。|  
+  
+### <a name="remarks"></a>備註  
+ 如果擲回例外狀況，list 會保持不變，並重新擲回例外狀況。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_push_back.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+#include <string>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 1 );  
+   if ( c1.size( ) != 0 )  
+      cout << "Last element: " << c1.back( ) << endl;  
+  
+   c1.push_back( 2 );  
+   if ( c1.size( ) != 0 )  
+      cout << "New last element: " << c1.back( ) << endl;  
+  
+// move initialize a list of strings  
+   list <string> c2;  
+   string str("a");  
+  
+   c2.push_back( move( str ) );  
+   cout << "Moved first element: " << c2.back( ) << endl;  
+}  
+```  
+  
+```Output  
+Last element: 1  
+New last element: 2  
+Moved first element: a  
+```  
+  
+##  <a name="a-namelistpushfronta--listpushfront"></a><a name="list__push_front"></a>  list::push_front  
+ 將元素加入至清單的開頭。  
+  
+```  
+void push_front(const Type& val);
+void push_front(Type&& val);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|||  
+|-|-|  
+|參數|描述|  
+|` val`|加入至清單的開頭的元素。|  
+  
+### <a name="remarks"></a>備註  
+ 如果擲回例外狀況，list 會保持不變，並重新擲回例外狀況。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_push_front.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+#include <string>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_front( 1 );  
+   if ( c1.size( ) != 0 )  
+      cout << "First element: " << c1.front( ) << endl;  
+  
+   c1.push_front( 2 );  
+   if ( c1.size( ) != 0 )  
+      cout << "New first element: " << c1.front( ) << endl;  
+  
+// move initialize a list of strings  
+   list <string> c2;  
+   string str("a");  
+  
+   c2.push_front( move( str ) );  
+   cout << "Moved first element: " << c2.front( ) << endl;  
+}  
+```  
+  
+```Output  
+First element: 1  
+New first element: 2  
+Moved first element: a  
+```  
+  
+##  <a name="a-namelistrbegina--listrbegin"></a><a name="list__rbegin"></a>  list::rbegin  
+ 傳回迭代器，為反轉清單中的第一個項目定址。  
+  
+``` 
+const_reverse_iterator rbegin() const;
+reverse_iterator rbegin();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 反向雙向迭代器，為反轉清單中的第一個項目定址 (或為未反轉清單中的最後一個項目定址)。  
+  
+### <a name="remarks"></a>備註  
+ `rbegin` 是與反轉 list 搭配使用，就如同 [begin](#list__begin) 是與 list 搭配使用一樣。  
+  
+ 如果 `rbegin` 的傳回值已指派給 `const_reverse_iterator`，則無法修改清單物件。 如果 `rbegin` 的傳回值已指派給 `reverse_iterator`，則可以修改清單物件。  
+  
+ `rbegin` 可用來向後逐一查看清單。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_rbegin.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter;  
+   list <int>::reverse_iterator c1_rIter;  
+  
+   // If the following line replaced the line above, *c1_rIter = 40;  
+   // (below) would be an error  
+   //list <int>::const_reverse_iterator c1_rIter;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+   c1_rIter = c1.rbegin( );  
+   cout << "The last element in the list is " << *c1_rIter << "." << endl;  
+  
+   cout << "The list is:";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   // rbegin can be used to start an iteration through a list in   
+   // reverse order  
+   cout << "The reversed list is:";  
+   for ( c1_rIter = c1.rbegin( ); c1_rIter != c1.rend( ); c1_rIter++ )  
+      cout << " " << *c1_rIter;  
+   cout << endl;  
+  
+   c1_rIter = c1.rbegin( );  
+ *c1_rIter = 40;  
+   cout << "The last element in the list is now " << *c1_rIter << "." << endl;  
+}  
+```  
+  
+```Output  
+The last element in the list is 30.  
+The list is: 10 20 30  
+The reversed list is: 30 20 10  
+The last element in the list is now 40.  
+```  
+  
+##  <a name="a-namelistreferencea--listreference"></a><a name="list__reference"></a>  list::reference  
+ 類型，提供儲存在清單中之元素的參考。  
+  
+```  
+typedef typename Allocator::reference reference;  
+```  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_ref.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+  
+   int &i = c1.front( );  
+   int &j = c1.back( );  
+   cout << "The first element is " << i << endl;  
+   cout << "The second element is " << j << endl;  
+}  
+```  
+  
+```Output  
+The first element is 10  
+The second element is 20  
+```  
+  
+##  <a name="a-namelistremovea--listremove"></a><a name="list__remove"></a>  list::remove  
+ 清除清單中符合指定之值的項目。  
+  
+``` 
+void remove(const Type& val);
+```  
+  
+### <a name="parameters"></a>參數  
+ ` val`  
+ 值，由項目持有時，會導致項目從清單移除。  
+  
+### <a name="remarks"></a>備註  
+ 剩餘項目的順序不受影響。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_remove.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter, c2_Iter;  
+  
+   c1.push_back( 5 );  
+   c1.push_back( 100 );  
+   c1.push_back( 5 );  
+   c1.push_back( 200 );  
+   c1.push_back( 5 );  
+   c1.push_back( 300 );  
+  
+   cout << "The initial list is c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   list <int> c2 = c1;  
+   c2.remove( 5 );  
+   cout << "After removing elements with value 5, the list becomes c2 =";  
+   for ( c2_Iter = c2.begin( ); c2_Iter != c2.end( ); c2_Iter++ )  
+      cout << " " << *c2_Iter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+The initial list is c1 = 5 100 5 200 5 300  
+After removing elements with value 5, the list becomes c2 = 100 200 300  
+```  
+  
+##  <a name="a-namelistremoveifa--listremoveif"></a><a name="list__remove_if"></a>  list::remove_if  
+ 從清單中清除符合指定述詞的元素。  
+  
+``` 
+template <class Predicate>  
+void remove_if(Predicate pred)  
+```  
+  
+### <a name="parameters"></a>參數  
+ ` pred`  
+ 一元述詞，如果元素符合此述詞，就會從清單中刪除該元素。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_remove_if.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+template <class T> class is_odd : public std::unary_function<T, bool>   
+{  
+public:  
+   bool operator( ) ( T& val )   
+   {  
+   return ( val % 2 ) == 1;  
+   }  
+};  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter, c2_Iter;  
+  
+   c1.push_back( 3 );  
+   c1.push_back( 4 );  
+   c1.push_back( 5 );  
+   c1.push_back( 6 );  
+   c1.push_back( 7 );  
+   c1.push_back( 8 );  
+  
+   cout << "The initial list is c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   list <int> c2 = c1;  
+   c2.remove_if( is_odd<int>( ) );  
+  
+   cout << "After removing the odd elements, "  
+        << "the list becomes c2 =";  
+   for ( c2_Iter = c2.begin( ); c2_Iter != c2.end( ); c2_Iter++ )  
+      cout << " " << *c2_Iter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+The initial list is c1 = 3 4 5 6 7 8  
+After removing the odd elements, the list becomes c2 = 4 6 8  
+```  
+  
+##  <a name="a-namelistrenda--listrend"></a><a name="list__rend"></a>  list::rend  
+ 傳回迭代器，定址對象是反轉 list 中最後一個元素後面的位置。  
+  
+``` 
+const_reverse_iterator rend() const;
+reverse_iterator rend();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 反轉雙向迭代器，定址對象是反轉 list 中最後一個元素後面的位置 (未反轉 list 中第一個元素前面的位置)。  
+  
+### <a name="remarks"></a>備註  
+ `rend` 是與反轉 list 搭配使用，就如同 [end](#list__end) 是與 list 搭配使用一樣。  
+  
+ 如果 `rend` 的傳回值已指派給 `const_reverse_iterator`，則無法修改清單物件。 如果 `rend` 的傳回值已指派給 `reverse_iterator`，則可以修改清單物件。  
+  
+ `rend` 可以用來測試反轉迭代器是否已到達其清單的結尾。  
+  
+ `rend` 所傳回的值不應該取值。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_rend.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter;  
+   list <int>::reverse_iterator c1_rIter;  
+  
+   // If the following line had replaced the line above, an error would   
+   // have resulted in the line modifying an element (commented below)  
+   // because the iterator would have been const  
+   // list <int>::const_reverse_iterator c1_rIter;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+  
+   c1_rIter = c1.rend( );  
+   c1_rIter --;  // Decrementing a reverse iterator moves it forward in   
+                 // the list (to point to the first element here)  
+   cout << "The first element in the list is: " << *c1_rIter << endl;  
+  
+   cout << "The list is:";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   // rend can be used to test if an iteration is through all of the   
+   // elements of a reversed list  
+   cout << "The reversed list is:";  
+   for ( c1_rIter = c1.rbegin( ); c1_rIter != c1.rend( ); c1_rIter++ )  
+      cout << " " << *c1_rIter;  
+   cout << endl;  
+  
+   c1_rIter = c1.rend( );  
+   c1_rIter--;  // Decrementing the reverse iterator moves it backward   
+                // in the reversed list (to the last element here)  
+  
+ *c1_rIter = 40;  // This modification of the last element would have   
+                    // caused an error if a const_reverse iterator had   
+                    // been declared (as noted above)  
+  
+   cout << "The modified reversed list is:";  
+   for ( c1_rIter = c1.rbegin( ); c1_rIter != c1.rend( ); c1_rIter++ )  
+      cout << " " << *c1_rIter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+The first element in the list is: 10  
+The list is: 10 20 30  
+The reversed list is: 30 20 10  
+The modified reversed list is: 30 20 40  
+```  
+  
+##  <a name="a-namelistresizea--listresize"></a><a name="list__resize"></a>  list::resize  
+ 指定清單的新大小。  
+  
+``` 
+void resize(size_type _Newsize);
+void resize(size_type _Newsize, Type val);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Newsize`  
+ 清單的新大小。  
+  
+ ` val`  
+ 如果新大小大於原始大小，便是要新增到清單中之新元素的值。 如果省略此值，就會為新元素指派類別的預設值。  
+  
+### <a name="remarks"></a>備註  
+ 如果清單的大小小於所要求的 `_Newsize` 大小，系統將會把元素新增到清單中，直到達到所要求的大小為止。  
+  
+ 如果清單的大小大於所要求的大小，系統便會刪除最接近清單結尾的元素，直到清單達到 `_Newsize` 大小為止。  
+  
+ 如果清單現在的大小與所要求的大小相同，則不會採取任何動作。  
+  
+ [size](#list__size) 會反映清單的目前大小。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_resize.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{   
+   using namespace std;  
+   list <int> c1;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+  
+   c1.resize( 4,40 );  
+   cout << "The size of c1 is " << c1.size( ) << endl;  
+   cout << "The value of the last element is " << c1.back( ) << endl;  
+  
+   c1.resize( 5 );  
+   cout << "The size of c1 is now " << c1.size( ) << endl;  
+   cout << "The value of the last element is now " << c1.back( ) << endl;  
+  
+   c1.resize( 2 );  
+   cout << "The reduced size of c1 is: " << c1.size( ) << endl;  
+   cout << "The value of the last element is now " << c1.back( ) << endl;  
+}  
+```  
+  
+```Output  
+The size of c1 is 4  
+The value of the last element is 40  
+The size of c1 is now 5  
+The value of the last element is now 0  
+The reduced size of c1 is: 2  
+The value of the last element is now 20  
+```  
+  
+##  <a name="a-namelistreversea--listreverse"></a><a name="list__reverse"></a>  list::reverse  
+ 反轉項目在清單中出現的順序。  
+  
+``` 
+void reverse();
+```  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_reverse.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter;  
+  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 30 );  
+  
+   cout << "c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   c1.reverse( );  
+   cout << "Reversed c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+c1 = 10 20 30  
+Reversed c1 = 30 20 10  
+```  
+  
+##  <a name="a-namelistreverseiteratora--listreverseiterator"></a><a name="list__reverse_iterator"></a>  list::reverse_iterator  
+ 類型，提供可以讀取或修改反轉清單中之元素的雙向迭代器。  
+  
+```  
+typedef std::reverse_iterator<iterator> reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型 `reverse_iterator` 用來逐一查看反轉的 list。  
+  
+### <a name="example"></a>範例  
+  請參閱 [rbegin](#list__rbegin) 的範例。  
+  
+##  <a name="a-namelistsizea--listsize"></a><a name="list__size"></a>  list::size  
+ 傳回清單中項目的數目。  
+  
+``` 
+size_type size() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 清單目前的長度。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_size.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::size_type i;  
+  
+   c1.push_back( 5 );  
+   i = c1.size( );  
+   cout << "List length is " << i << "." << endl;  
+  
+   c1.push_back( 7 );  
+   i = c1.size( );  
+   cout << "List length is now " << i << "." << endl;  
+}  
+```  
+  
+```Output  
+List length is 1.  
+List length is now 2.  
+```  
+  
+##  <a name="a-namelistsizetypea--listsizetype"></a><a name="list__size_type"></a>  list::size_type  
+ 計算清單中元素數目的類型。  
+  
+```  
+typedef typename Allocator::size_type size_type;  
+```  
+  
+### <a name="example"></a>範例  
+  請參閱 [size](#list__size) 的範例。  
+  
+##  <a name="a-namelistsorta--listsort"></a><a name="list__sort"></a>  list::sort  
+ 將清單的項目以遞增順序或以其他使用者指定的順序排序。  
+  
+``` 
+void sort();
+
+template <class Traits>  
+void sort(Traits comp);
+```  
+  
+### <a name="parameters"></a>參數  
+ ` comp`  
+ 用來排序連續元素的比較運算子。  
+  
+### <a name="remarks"></a>備註  
+ 第一個成員函數預設會以遞增順序放置元素。  
+  
+ 成員範本函式會根據使用者指定之 **Traits** 類別的比較運算 ` comp` 來排序元素。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_sort.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter;  
+  
+   c1.push_back( 20 );  
+   c1.push_back( 10 );  
+   c1.push_back( 30 );  
+  
+   cout << "Before sorting: c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   c1.sort( );  
+   cout << "After sorting c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   c1.sort( greater<int>( ) );  
+   cout << "After sorting with 'greater than' operation, c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+Before sorting: c1 = 20 10 30  
+After sorting c1 = 10 20 30  
+After sorting with 'greater than' operation, c1 = 30 20 10  
+```  
+  
+##  <a name="a-namelistsplicea--listsplice"></a><a name="list__splice"></a>  list::splice  
+ 從來源清單移除項目，並將項目插入至目的地清單。  
+  
+```  
+// insert the entire source list  
+void splice(const_iterator Where, list<Type, Allocator>& Source);
+void splice(const_iterator Where, list<Type, Allocator>&& Source); 
+
+// insert one element of the source list  
+void splice(const_iterator Where, list<Type, Allocator>& Source, const_iterator Iter);
+void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator Iter);
+ 
+// insert a range of elements from the source list  
+void splice(const_iterator Where, list<Type, Allocator>& Source, const_iterator First, const_iterator Last);
+void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator First, const_iterator Last);
+```  
+  
+### <a name="parameters"></a>參數  
+ `Where`  
+ 目的地清單中的位置 (要在此位置之前插入)。  
+  
+ `Source`  
+ 要插入至目的地清單的來源清單。  
+  
+ `Iter`  
+ 要從來源清單插入的項目。  
+  
+ `First`  
+ 要從來源清單插入的範圍中的第一個項目。  
+  
+ `Last`  
+ 要從來源清單插入的範圍中的最後一個項目，這之後的第一個位置。  
+  
+### <a name="remarks"></a>備註  
+ 第一對成員函式會將來源清單中的所有項目插入至目的地清單 (插入到 `Where` 所參考的位置之前)，並從來源清單移除所有項目 (`&Source` 不得等於 `this`)。  
+  
+ 第二對成員函式會將 `Iter` 所參考的項目插入至 `Where` 所參考之目的地清單中的位置之前，並從來源清單移除 `Iter` (若 `Where == Iter || Where == ++Iter`，則不會產生任何變更)。  
+  
+ 第三對成員函式會將 [ `First`, `Last`) 指定的範圍插入到 `Where` 所參考的目的清單中元素之前，並從來源清單中移除該範圍的元素。 (若 `&Source == this`，則範圍 `[First, Last)` 不得包含 `Where` 所指向的元素)。  
+  
+ 如果範圍接合插入 `N` 個元素，而且 `&Source != this`，則會將 [iterator](../standard-library/forward-list-class.md#forward_list__iterator) 類別的物件遞增 `N` 次。  
+  
+ 在所有情況中，迭代器、指標或關於接合的項目的參考都會保持有效，並會傳送至目的地容器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_splice.cpp  
+// compile with: /EHsc /W4  
+#include <list>  
+#include <iostream>  
+  
+using namespace std;  
+  
+template <typename S> void print(const S& s) {  
+    cout << s.size() << " elements: ";  
+  
+    for (const auto& p : s) {  
+        cout << "(" << p << ") ";  
+    }  
+  
+    cout << endl;  
+}  
+  
+int main()  
+{  
+    list<int> c1{10,11};  
+    list<int> c2{20,21,22};  
+    list<int> c3{30,31};  
+    list<int> c4{40,41,42,43};  
+  
+    list<int>::iterator where_iter;  
+    list<int>::iterator first_iter;  
+    list<int>::iterator last_iter;  
+  
+    cout << "Beginning state of lists:" << endl;  
+    cout << "c1 = ";  
+    print(c1);  
+    cout << "c2 = ";  
+    print(c2);  
+    cout << "c3 = ";  
+    print(c3);  
+    cout << "c4 = ";  
+    print(c4);  
+  
+    where_iter = c2.begin();  
+    ++where_iter; // start at second element  
+    c2.splice(where_iter, c1);  
+    cout << "After splicing c1 into c2:" << endl;  
+    cout << "c1 = ";  
+    print(c1);  
+    cout << "c2 = ";  
+    print(c2);  
+  
+    first_iter = c3.begin();  
+    c2.splice(where_iter, c3, first_iter);  
+    cout << "After splicing the first element of c3 into c2:" << endl;  
+    cout << "c3 = ";  
+    print(c3);  
+    cout << "c2 = ";  
+    print(c2);  
+  
+    first_iter = c4.begin();  
+    last_iter = c4.end();  
+    // set up to get the middle elements  
+    ++first_iter;  
+    --last_iter;  
+    c2.splice(where_iter, c4, first_iter, last_iter);  
+    cout << "After splicing a range of c4 into c2:" << endl;  
+    cout << "c4 = ";  
+    print(c4);  
+    cout << "c2 = ";  
+    print(c2);  
+}  
+  
+```  
+  
+```Output  
+Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)  
+```  
+  
+##  <a name="a-namelistswapa--listswap"></a><a name="list__swap"></a>  list::swap  
+ 交換兩個清單的項目。  
+  
+``` 
+void swap(list<Type, Allocator>& right);
+friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)  
+```  
+  
+### <a name="parameters"></a>參數  
+ ` right`  
+ 提供待交換項目的清單，或其項目要與清單 ` left` 交換的清單。  
+  
+ ` left`  
+ 其項目要與清單 ` right` 交換的清單。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_swap.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   list <int> c1, c2, c3;  
+   list <int>::iterator c1_Iter;  
+  
+   c1.push_back( 1 );  
+   c1.push_back( 2 );  
+   c1.push_back( 3 );  
+   c2.push_back( 10 );  
+   c2.push_back( 20 );  
+   c3.push_back( 100 );  
+  
+   cout << "The original list c1 is:";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   c1.swap( c2 );  
+  
+   cout << "After swapping with c2, list c1 is:";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   swap( c1,c3 );  
+  
+   cout << "After swapping with c3, list c1 is:";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+The original list c1 is: 1 2 3  
+After swapping with c2, list c1 is: 10 20  
+After swapping with c3, list c1 is: 100  
+```  
+  
+##  <a name="a-namelistuniquea--listunique"></a><a name="list__unique"></a>  list::unique  
+ 從清單移除相鄰的重複元素，或移除符合其他某些二元述詞的相鄰元素。  
+  
+```  
+void unique();
+
+template <class BinaryPredicate>  
+void unique(BinaryPredicate pred);
+```  
+  
+### <a name="parameters"></a>參數  
+ ` pred`  
+ 供二元述詞用來比較連續元素。  
+  
+### <a name="remarks"></a>備註  
+ 這個函式假設清單已排序，因此所有重複的元素都是相鄰的。 不相鄰的重複元素將不會被刪除。  
+  
+ 第一個成員函式會移除比較為等於其前一元素的每個元素。  
+  
+ 第二個成員函式會在相較於其前一元素時，移除符合述詞函式 ` pred` 的每個元素。 您可以使用 pred 引數的 `<functional>` 標頭中所宣告的任何二元函式物件，或是建立自己的函式物件。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_unique.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   list <int> c1;  
+   list <int>::iterator c1_Iter, c2_Iter,c3_Iter;  
+   not_equal_to<int> mypred;  
+  
+   c1.push_back( -10 );  
+   c1.push_back( 10 );  
+   c1.push_back( 10 );  
+   c1.push_back( 20 );  
+   c1.push_back( 20 );  
+   c1.push_back( -10 );  
+  
+   cout << "The initial list is c1 =";  
+   for ( c1_Iter = c1.begin( ); c1_Iter != c1.end( ); c1_Iter++ )  
+      cout << " " << *c1_Iter;  
+   cout << endl;  
+  
+   list <int> c2 = c1;  
+   c2.unique( );  
+   cout << "After removing successive duplicate elements, c2 =";  
+   for ( c2_Iter = c2.begin( ); c2_Iter != c2.end( ); c2_Iter++ )  
+      cout << " " << *c2_Iter;  
+   cout << endl;  
+  
+   list <int> c3 = c2;  
+   c3.unique( mypred );  
+   cout << "After removing successive unequal elements, c3 =";  
+   for ( c3_Iter = c3.begin( ); c3_Iter != c3.end( ); c3_Iter++ )  
+      cout << " " << *c3_Iter;  
+   cout << endl;  
+}  
+```  
+  
+```Output  
+The initial list is c1 = -10 10 10 20 20 -10  
+After removing successive duplicate elements, c2 = -10 10 20 -10  
+After removing successive unequal elements, c3 = -10 -10  
+```  
+  
+##  <a name="a-namelistvaluetypea--listvaluetype"></a><a name="list__value_type"></a>  list::value_type  
+ 類型，表示儲存在清單中的資料類型。  
+  
+```  
+typedef typename Allocator::value_type value_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ `value_type` 與範本參數 **Type** 同義。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// list_value_type.cpp  
+// compile with: /EHsc  
+#include <list>  
+#include <iostream>  
+  
+int main( )   
+{  
+   using namespace std;  
+   list<int>::value_type AnInt;  
+   AnInt = 44;  
+   cout << AnInt << endl;  
+}  
+```  
+  
+```Output  
+44  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [\<list>](../standard-library/list.md)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+

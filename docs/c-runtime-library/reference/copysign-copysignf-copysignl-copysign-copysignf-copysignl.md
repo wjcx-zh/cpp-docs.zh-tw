@@ -1,62 +1,78 @@
 ---
 title: "copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "copysignf"
-  - "copysignl"
-  - "_copysignl"
-  - "_copysign"
-  - "_copysignf"
-  - "copysign"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_copysignl"
-  - "copysign"
-  - "copysignf"
-  - "_copysign"
-  - "copysignl"
-  - "_copysignf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_copysign 函式"
-  - "_copysignf 函式"
-  - "_copysignl 函式"
-  - "copysign 函式"
-  - "copysignf 函式"
-  - "copysignl 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- copysignf
+- copysignl
+- _copysignl
+- _copysign
+- _copysignf
+- copysign
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _copysignl
+- copysign
+- copysignf
+- _copysign
+- copysignl
+- _copysignf
+dev_langs:
+- C++
+helpviewer_keywords:
+- copysignl function
+- _copysignl function
+- copysign function
+- _copysignf function
+- _copysign function
+- copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 513ba53a63351b7239c0612103c41977e930eafa
+ms.lasthandoff: 02/24/2017
 
-傳回某值，其具有一個引數之範圍和其他引數的符號。  
+---
+# <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
+傳回一個值，具有其中一個引數的大小和另一個引數的正負號。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double copysign(   
@@ -89,33 +105,33 @@ long double _copysignl(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `x`  
- 浮點數值，其被傳回為此結果範圍。  
+ 傳回為結果大小的浮點值。  
   
  `y`  
- 浮點數值，其被傳回為此結果的符號。  
+ 傳回為結果正負號的浮點值。  
   
  [浮點支援常式](../../c-runtime-library/floating-point-support.md)  
   
-## 傳回值  
- `copysign` 函式傳回浮點值，其結合 `x`的大小和 `y`的符號。  不會回傳錯誤。  
+## <a name="return-value"></a>傳回值  
+ `copysign` 函式會傳回合併 `x` 之大小和 `y`之正負號的浮點值。 不會傳回錯誤。  
   
-## 備註  
- 因為 C\+\+ 允許多載，您可以呼叫會接受並傳回 `float` 或 `long double` 值的 `copysign` 多載。  在 C 程式，`copysign` 一律接受並傳回 `double`。  
+## <a name="remarks"></a>備註  
+ 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `copysign` 或 `float` 值的 `long double` 的多載。 在 C 程式中，`copysign` 會一律採用並傳回 `double`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_copysign`|\<float.h\>|  
-|`copysign`, `copysignf`, `copysignl`, `_copysignf` `_copysignl`|\<math.h\>|  
+|-------------|---------------------|  
+|`_copysign`|\<float.h>|  
+|`copysign`, `copysignf`, `copysignl`, `_copysignf``_copysignl`|\<math.h>|  
   
- 如需詳細的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
- [fabs、 fabsf fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [\_chgsign、\_chgsignf、\_chgsignl](../../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)
+## <a name="see-also"></a>另請參閱  
+ [fabs、fabsf、fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
+ [_chgsign、_chgsignf、_chgsignl](../../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)

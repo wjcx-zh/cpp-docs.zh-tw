@@ -1,33 +1,49 @@
 ---
-title: "ctype &lt; char &gt; 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ctype<char>"
-  - "locale/std::ctype<char>"
-  - "std::ctype<char>"
-  - "std.ctype<char>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ctype < char > 類別"
+title: "ctype&lt;char&gt; 類別 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ctype<char>
+- locale/std::ctype<char>
+- std::ctype<char>
+- std.ctype<char>
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# ctype &lt; char &gt; 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 0acae30ecbe670c87179f4cc2f5a2b8066ef3a4c
+ms.lasthandoff: 02/24/2017
 
-類別是類別樣板的明確特製化 **ctype \< CharType**> 輸入 `char`, ，描述可以做為地區設定 facet 各種屬性的類型的字元特性的物件 `char`。  
+---
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 類別
+此類別可將範本類別 **ctype\<CharType**> 明確特製化為 `char` 類型，並描述可以作為地區設定 Facet 的物件，以表示 `char` 類型字元的各種屬性特性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -130,29 +146,30 @@ protected:
 ```  
   
 ## <a name="remarks"></a>備註  
- 明確特製化不同於樣板類別，以數種方式︰  
+ 明確特製化和範本類別有下列幾項差異：  
   
--   Ctype 類別的物件 < `char`> 儲存指標至 ctype 遮罩表格的第一個項目、 UCHAR_MAX 陣列 + 1 個項目的型別 **ctype_base::mask**。 它也會儲存布林值的物件，指出是否應該刪除陣列 (使用 `operator delete[]`) 時 ctype \< **Elem**> 物件被終結。  
+-   ctype< `char`> 類別的物件會儲存 ctype 遮罩資料表的第一個元素指標，亦即 **ctype_base::mask** 類型的UCHAR_MAX + 1 元素陣列。 它也會儲存 Boolean 物件，指出當 ctype\< **Elem**> 物件已終結時，是否應該刪除陣列 (使用 `operator delete[]`)。  
   
--   其唯一的公用建構函式可讓您指定 **] 索引標籤**, ，ctype 遮罩資料表和 **del**, ，如果應該是陣列則為 true 的布林物件刪除 ctype < `char`> 物件被終結，以及參考計數參數參考。  
+-   其唯一的公用建構函式可讓您指定**tab**、ctype 遮罩資料表、**del** (為 true 的 Boolean 物件，代表應在 ctype< `char`> 物件已終結時刪除陣列)，以及參考計數參數 refs。  
   
--   受保護的成員函式 **資料表** 傳回預存的 ctype 遮罩資料表。  
+-   受保護的成員函式 **table** 會傳回預存的 ctype 遮罩資料表。  
   
--   靜態成員物件 **table_size** ctype 遮罩資料表中指定的項目數目下限。  
+-   靜態成員物件 **table_size** 可指定 ctype 遮罩資料表中的元素數下限。  
   
--   受保護的靜態成員函式 **classic_table**（傳回 ctype 遮罩表格配合"C"地區設定。  
+-   受保護的靜態成員函式 **classic_table**( 會傳回適用於 "C" 地區設定的 ctype 遮罩資料表。  
   
--   沒有受保護的虛擬成員函式 [do_is](../standard-library/ctype-class.md#ctype__do_is), ，[do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is), ，或 [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not)。 對應的公用成員函式執行本身的對等作業。  
+-   系統並沒有提供 [do_is](../standard-library/ctype-class.md#ctype__do_is)、[do_scan_is](../standard-library/ctype-class.md#ctype__do_scan_is) 或 [do_scan_not](../standard-library/ctype-class.md#ctype__do_scan_not) 這幾個受保護的虛擬成員函式。 對應的公用成員函式會自行執行對等作業。  
   
- 成員函式 [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) 和 [do_widen](../standard-library/ctype-class.md#ctype__do_widen) 複製項目不變。  
+ 成員函式 [do_narrow](../standard-library/ctype-class.md#ctype__do_narrow) 和 [do_widen](../standard-library/ctype-class.md#ctype__do_widen) 會複製不變的元素。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \< 地區設定>  
+ **標頭︰**\<locale>  
   
- **命名空間︰** std  
+ **命名空間：** std  
   
-## <a name="see-also"></a>請參閱  
- [facet 類別](../Topic/facet%20Class.md)   
+## <a name="see-also"></a>另請參閱  
+ [facet 類別](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
  [ctype_base 類別](../standard-library/ctype-base-class.md)   
- [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

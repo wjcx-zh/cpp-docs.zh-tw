@@ -1,73 +1,93 @@
 ---
-title: "flushall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_flushall"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "flushall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flushall 函式"
+title: _flushall | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _flushall
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _flushall
+dev_langs:
+- C++
+helpviewer_keywords:
+- flushall function
+- flushing streams
+- streams, flushing
+- _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _flushall
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7d1802d3d1c61099a7e260617ad8e7858c25501d
+ms.lasthandoff: 02/24/2017
 
-清除所有資料流；清除所有的緩衝區。  
+---
+# <a name="flushall"></a>_flushall
+清除所有資料流；清除所有緩衝區。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _flushall( void );  
 ```  
   
-## 傳回值  
- `_flushall` 傳回開啟資料流數目 \(輸入和輸出\)。  不會回傳錯誤。  
+## <a name="return-value"></a>傳回值  
+ `_flushall` 會傳回開啟的資料流數目 (輸入和輸出)。 不會傳回錯誤。  
   
-## 備註  
- 根據預設， `_flushall` 函式寫入適當檔案所有緩衝區內容與開啟輸出資料流。  所有緩衝區與開啟輸入資料流清除其目前的內容。\(這些緩衝區由作業系統通常維護，判斷最佳時寫入磁碟自動寫入資料：當緩衝區已滿，在資料流關閉，或者當程式正常終止，不需關閉的資料流\)。  
+## <a name="remarks"></a>備註  
+ 根據預設，`_flushall` 函式會將與開啟輸出資料流相關聯之所有緩衝區的內容寫入至適當的檔案。 會清除與開啟之輸入資料流相關聯的所有緩衝區中的目前內容 (這些緩衝區通常是由作業系統所維護，以判斷將資料自動寫入至磁碟的最佳時機︰緩衝區已滿時、關閉資料流時，或程式正常結束而未關閉資料流時)。  
   
- 如果讀取之後呼叫 `_flushall`，新的資料會從輸入檔案讀取至緩衝區。  在呼叫 `_flushall`之後，所有資料流保持開啟。  
+ 如果在呼叫 `_flushall` 之後讀取，則會將新資料從輸入檔讀入緩衝區。 呼叫 `_flushall` 之後，所有資料流都會保持開啟狀態。  
   
- 執行階段程式庫的對硬碟操作功能使您可以確保重要資料被直接寫入硬碟而非先寫入作業系統緩衝區。  不會覆寫現有的程式，您可以連接程式的目的檔與 Commode.obj 啟用這項功能。  在產生的可執行檔，呼叫 `_flushall` 時寫入磁碟任何緩衝區內容。  只有 `_flushall` 和 `fflush` 是受 Commode.obj 影響。  
+ 執行階段程式庫的認可到磁碟功能可讓您確保將重大資料直接寫入至磁碟，而不是作業系統緩衝區。 不需要重新撰寫現有程式，即可連結程式的物件檔案與 Commode.obj 來啟用這項功能。 在產生的可執行檔中，`_flushall` 呼叫會將所有緩衝區的內容寫入至磁碟。 Commode.obj 只會影響 `_flushall` 和 `fflush`。  
   
- 如需控制項對鍵盤功能的詳細資訊，請參閱 [資料流 I\/O](../../c-runtime-library/stream-i-o.md)、 [fopen](../../c-runtime-library/reference/fopen-wfopen.md)和 [\_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)。  
+ 如需控制認可到磁碟功能的資訊，請參閱[資料流 I/O](../../c-runtime-library/stream-i-o.md)、[fopen](../../c-runtime-library/reference/fopen-wfopen.md) 和 [_fdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|Function|必要的標頭|  
-|--------------|-----------|  
-|`_flushall`|\<stdio.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`_flushall`|\<stdio.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_flushall.c  
@@ -85,8 +105,11 @@ int main( void )
 }  
 ```  
   
-  **會有 3 個資料流清除**   
-## .NET Framework 對等用法  
+```Output  
+There were 3 streams flushed  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
   
 -   [System::IO::FileStream::Flush](https://msdn.microsoft.com/en-us/library/2bw4h516.aspx)  
   
@@ -96,9 +119,9 @@ int main( void )
   
 -   [System::IO::BinaryWriter::Flush](https://msdn.microsoft.com/en-us/library/system.io.binarywriter.flush.aspx)  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [\_commit](../../c-runtime-library/reference/commit.md)   
- [fclose、\_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [_commit](../../c-runtime-library/reference/commit.md)   
+ [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [fflush](../../c-runtime-library/reference/fflush.md)   
  [setvbuf](../../c-runtime-library/reference/setvbuf.md)

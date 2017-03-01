@@ -1,80 +1,98 @@
 ---
-title: "_CrtSetBreakAlloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetBreakAlloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtSetBreakAlloc"
-  - "_CrtSetBreakAlloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtSetBreakAlloc 函式"
-  - "CrtSetBreakAlloc 函式"
+title: _CrtSetBreakAlloc | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetBreakAlloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtSetBreakAlloc
+- _CrtSetBreakAlloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtSetBreakAlloc function
+- _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtSetBreakAlloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7b60eb9cb0367136ee7e3f06cab22347486678cc
+ms.lasthandoff: 02/24/2017
 
-在指定的物件配置順序編號設定中斷點 \(僅限偵錯版本\)。  
+---
+# <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
+在指定的物件配置順序編號設定中斷點 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-long _CrtSetBreakAlloc(     long lBreakAlloc  );  
+      long _CrtSetBreakAlloc(   
+   long lBreakAlloc   
+);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *lBreakAlloc*  
  要設定中斷點的配置順序編號。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  傳回有設定中斷點的上一個物件配置順序編號。  
   
-## 備註  
- `_CrtSetBreakAlloc` 允許應用程式透過在記憶體配置的特定點中斷，並追溯回要求的來源，以執行記憶體遺漏偵測。  此函式會在記憶體區塊配置於堆積中時，使用指派給記憶體區塊的循序物件配置順序編號。  當 [\_DEBUG](../../c-runtime-library/debug.md) 未定義時，會在前置處理期間移除 `_CrtSetBreakAlloc` 的呼叫。  
+## <a name="remarks"></a>備註  
+ `_CrtSetBreakAlloc` 允許應用程式透過在記憶體配置的特定點中斷，並追溯回要求的來源，以執行記憶體遺漏偵測。 此函式會在記憶體區塊配置於堆積中時，使用指派給記憶體區塊的循序物件配置順序編號。 若未定義 [_DEBUG](../../c-runtime-library/debug.md)，將會在前置處理期間移除對 `_CrtSetBreakAlloc` 的呼叫。  
   
- 物件配置順序編號會儲存在定義於 Crtdbg.h 中的 **\_CrtMemBlockHeader** 結構的 *lRequest* 欄位內。  當記憶體區塊的相關資訊由其中一個偵錯傾印函式回報時，此編號會包含在大括號裡，例如 {36}。  
+ 物件配置順序編號會儲存在定義於 Crtdbg.h 中的 **_CrtMemBlockHeader** 結構的 *lRequest* 欄位內。 當記憶體區塊的相關資訊由其中一個偵錯傾印函式回報時，此編號會包含在大括號裡，例如 {36}。  
   
- 如需如何搭配其他記憶體管理函式使用 `_CrtSetBreakAlloc` 的詳細資訊，請參閱 [追蹤堆積配置要求](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Track_Heap_Allocation_Requests)。  如需在偵錯版本的基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](../Topic/CRT%20Debug%20Heap%20Details.md)。  
+ 如需如何搭配其他記憶體管理函式使用 `_CrtSetBreakAlloc` 的詳細資訊，請參閱[追蹤堆積配置要求](/visualstudio/debugger/crt-debug-heap-details)。 如需如何在偵錯版本的基底堆積中配置、初始化和管理記憶體區塊的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_CrtSetBreakAlloc`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtSetBreakAlloc`|\<crtdbg.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- 偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_setbrkal.c  
@@ -120,8 +138,8 @@ int main( )
 }  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

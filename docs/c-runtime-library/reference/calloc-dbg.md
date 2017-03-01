@@ -1,48 +1,65 @@
 ---
-title: "_calloc_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_calloc_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_calloc_dbg"
-  - "calloc_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_calloc_dbg 函式"
-  - "calloc_dbg 函式"
+title: _calloc_dbg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _calloc_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _calloc_dbg
+- calloc_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _calloc_dbg function
+- calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _calloc_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f505aa045dcee661bfddec2ed1d01a7b77efcc51
+ms.lasthandoff: 02/24/2017
 
-在堆積中配置數個記憶體區塊，與偵錯標題和重新寫入緩衝區的額外空間 \(僅偵錯版本\)。  
+---
+# <a name="callocdbg"></a>_calloc_dbg
+使用額外空間為偵錯標頭和覆寫緩衝區配置堆積中的記憶體區塊數目 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void *_calloc_dbg(   
@@ -54,53 +71,53 @@ void *_calloc_dbg(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `num`  
- 記憶體區塊要求數目。  
+ 要求的記憶體區塊數。  
   
  `size`  
- 每個記憶體區塊 \(位元組\) 的要求大小。  
+ 要求的每個記憶體區塊大小 (位元組)。  
   
  `blockType`  
- 記憶體區塊的要求型別：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
+ 要求的記憶體區塊類型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
   
- 如需配置區塊類型的資訊以及它們的使用方式，請參閱 [偵錯堆積上的區塊類型](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)。  
+ 如需配置區塊類型和其使用方式的資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。  
   
  `filename`  
- 指向要求配置作業或 `NULL` 的來源檔案名稱之指標。  
+ 要求配置作業之原始程式檔的名稱的指標，或為 `NULL`。  
   
  `linenumber`  
- 配置作業為要求或 `NULL` 的原始程式檔行號。  
+ 原始程式檔中的行號，其中要求配置作業，或為 `NULL`。  
   
- `filename` 和 `linenumber` 參數只有在 `_calloc_dbg` 已經明確呼叫或 [\_CRTDBG\_MAP\_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) 前置處理器常數已經被定義後才可使用。  
+ 只有在已明確呼叫 `_calloc_dbg`，或是已定義 [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) 處理器常數時，才可以使用 `filename` 和 `linenumber` 參數。  
   
-## 傳回值  
- 在成功完成後，這個函式會傳回指向上次配置的記憶體區塊的使用者部分的指標、呼叫新處理常式函式、或傳回 `NULL`。  如需傳回行為的完整說明，請參閱備註章節。  如需使用新處理常式函式的詳細資訊，請參閱 [calloc](../../c-runtime-library/reference/calloc.md) 函式。  
+## <a name="return-value"></a>傳回值  
+ 成功完成時，此函式會傳回最後一個重新配置記憶體區塊之使用者部分的指標、呼叫新的處理常式函式，或傳回 `NULL`。 如需傳回行為的完整描述，請參閱＜備註＞一節。 如需如何使用新的處理常式函式的詳細資訊，請參閱 [calloc](../../c-runtime-library/reference/calloc.md) 函式。  
   
-## 備註  
- `_calloc_dbg` 是 [calloc](../../c-runtime-library/reference/calloc.md) 函式的偵錯版本。  當 [\_DEBUG](../../c-runtime-library/debug.md) 未定義時，對 `_calloc_dbg` 的每個呼叫會減少為對 `calloc` 的一個呼叫。  `calloc` 和 `_calloc_dbg` 會在基底堆積配置 `num` 記憶體區塊，不過 `_calloc_dbg` 提供幾個偵錯功能：  
+## <a name="remarks"></a>備註  
+ `_calloc_dbg` 是偵錯版本的 [calloc](../../c-runtime-library/reference/calloc.md) 函式。 未定義 [_DEBUG](../../c-runtime-library/debug.md) 時，每個 `_calloc_dbg` 呼叫都會降至 `calloc` 呼叫。 `calloc` 和 `_calloc_dbg` 會配置基底堆積中的 `num` 記憶體區塊，但 `_calloc_dbg` 提供數個偵錯功能︰  
   
--   在測試遺漏的區塊的任一邊使用者部分進行緩衝。  
+-   區塊之使用者部分任一端上要測試流失的緩衝區。  
   
 -   追蹤特定配置類型的區塊類型參數。  
   
--   決定配置要求原點的 `filename`\/`linenumber` 資訊。  
+-   判斷配置要求原點的 `filename`/`linenumber` 資訊。  
   
- `_calloc_dbg` 配置給每個記憶體區塊的空間會比要求的 `size` 更多一些。  偵錯堆積管理員用額外空間來連接偵錯記憶體區塊，並提供應用程式偵錯標頭資訊並覆寫緩衝區。  當區塊被配置時，區塊的使用者部分會被填入 0xCD 值，而且每個覆寫緩衝區會填入 0xFD。  
+ `_calloc_dbg` 會使用比要求的 `size` 稍多一些的空間來配置每個記憶體區塊。 偵錯堆積管理員會使用額外的空間連結偵錯記憶體區塊，以及為應用程式提供偵錯標頭資訊和覆寫緩衝區。 區塊配置後，區塊的使用者部分會填入值 0xCD，且每個覆寫緩衝區會填入 0xFD。  
   
- 如果記憶體配置失敗，`_calloc_dbg` 會將 `errno` 設至 `ENOMEM` ；如果需要的記憶體數量 \(先前提到的包括額外負荷\) 超過 `_HEAP_MAXREQ`，`EINVAL` 會傳回。  如需有關這個錯誤碼及其他錯誤碼的詳細資訊，請參閱 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 若記憶體配置失敗，`_calloc_dbg` 會將 `errno` 設定為 `ENOMEM`；若所需的記憶體數量 (包含之前提到的額外負荷) 超過 `EINVAL`，則會傳回 `_HEAP_MAXREQ`。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
- 如需記憶體區塊配置、初始化的方式，並在基底堆積的偵錯版本管理記憶體區塊的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](../Topic/CRT%20Debug%20Heap%20Details.md)。  如需呼叫標準堆積函式以及偵錯應用程式的偵錯組建的版本之差異的詳細資訊，請參閱 [堆積配置函式的偵錯版本](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md)。  
+ 如需在偵錯版本的基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。 如需在應用程式的偵錯組建中呼叫標準堆積函式與其偵錯版本間之差異的資訊，請參閱[堆積配置函式的偵錯版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_calloc_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_calloc_dbg`|\<crtdbg.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_callocd.c  
@@ -136,12 +153,15 @@ int main( void )
 }  
 ```  
   
-  **成功配置記憶體**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Allocated memory successfully  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
- [\_DEBUG](../../c-runtime-library/debug.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
+ [_DEBUG](../../c-runtime-library/debug.md)

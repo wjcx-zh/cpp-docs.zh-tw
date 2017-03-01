@@ -1,60 +1,76 @@
 ---
 title: "輸入資料流成員函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "輸入資料流物件"
-  - "輸入資料流, 成員函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- input stream objects
+- input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 輸入資料流成員函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d270a9790f33fe5258108663f9618f0da1ed5b37
+ms.lasthandoff: 02/24/2017
 
-輸入資料流的成員函式鍵盤輸入使用。  成員函式包括:  
+---
+# <a name="input-stream-member-functions"></a>輸入資料流成員函式
+輸入資料流成員函式是用於磁碟輸入。 成員函式包括：  
   
--   [輸入資料流的開啟函式](#vclrftheopenfunctionforinputstreamsanchor11)  
+- [輸入資料流的 open 函式](#vclrftheopenfunctionforinputstreamsanchor11)  
   
--   [取得函式](#vclrfthegetfunctionanchor12)  
+- [get 函式](#vclrfthegetfunctionanchor12)  
   
--   [getline 函式](#vclrfthegetlinefunctionanchor13)  
+- [getline 函式](#vclrfthegetlinefunctionanchor13)  
   
--   [讀取的函式](#vclrfthereadfunctionanchor14)  
+- [read 函式](#vclrfthereadfunctionanchor14)  
   
--   [seekg 和 tellg 函式](#vclrftheseekgandtellgfunctionsanchor7)  
+- [seekg 和 tellg 函式](#vclrftheseekgandtellgfunctionsanchor7)  
   
--   [輸入資料流的存取函式](#vclrftheclosefunctionforinputstreamsanchor15)  
+- [輸入資料流的 close 函式](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> 輸入資料流的開啟函式  
- 如果您使用的輸入檔案資料流 \(ifstream\)，您必須與該資料流與特定磁碟檔案。  您可以在建構函式，也可以使用 **open** 函式。  在任何情況下，引數是相同的。  
+##  <a name="a-namevclrftheopenfunctionforinputstreamsanchor11a-the-open-function-for-input-streams"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> 輸入資料流的 open 函式  
+ 如果您使用輸入檔案資料流 (ifstream)，就必須將該資料流與特定的磁碟檔案建立關聯。 您可以在建構函式中進行此操作，或是使用 **open** 函式。 不論是上述哪一種情況，引數都相同。  
   
- 您通常會指定 [ios\_base::openmode](../Topic/ios_base::openmode.md) 旗標，則當您開啟檔案與輸入資料流時 \(預設模式是 **ios::in**\)。  如需 **open\_mode** 旗標的清單，請參閱 [開啟函式](#vclrftheopenfunctionforinputstreamsanchor11)。  旗標可以結合位元 OR \(&#124;\) 運算子。  
+ 當您開啟與輸入資料流關聯的檔案時，通常需指定 [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) 旗標 (預設模式為 **ios::in**)。 如需 **open_mode** 旗標的清單，請參閱 [open 函式](#vclrftheopenfunctionforinputstreamsanchor11)。 這些旗標可以與位元 OR ( &#124; ) 運算子合併使用。  
   
- 若要讀取檔案，請先使用 **fail** 成員函式來判斷它是否存在:  
+ 若要讀取檔案，請先使用 **fail** 成員函式來判斷它是否存在：  
   
 ```  
-istream ifile( "FILENAME" );  
-if ( ifile.fail() )  
+istream ifile("FILENAME");
+
+if (ifile.fail())  
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a> 取得函式  
- 未格式化的 **get** 成員函式的運作方式與 **\>\>** 運算子有兩個例外狀況。  首先， **get** 函式包含空白字元，反之，擷取器排除泛空白字元，當 [skipws](../Topic/skipws.md) 旗標設為 \(預設值\)。  其次， **get** 函式不太可能導致繫結的輸出資料流 \(例如`cout`\)，清除。  
+##  <a name="a-namevclrfthegetfunctionanchor12a-the-get-function"></a><a name="vclrfthegetfunctionanchor12"></a> get 函式  
+ 未格式化的 **get** 成員函式運作方式與 **>>** 運算子相同，但有兩個例外。 第一，**get** 函式包含空白字元，但在已設定 **skipws** 旗標 (預設) 的情況下，擷取器則會排除空白字元。 第二，**get** 函式較不可能導致將繫結的輸出資料流 (例如 `cout`) 清除。  
   
- **get** 函式的變化指定緩衝區位址和最大字元數讀取。  因為這個範例顯示，這會限制字元數是有用的傳送到特定變數:  
+ **get** 函式的變化可指定緩衝區位址，以及要讀取的字元數上限。 這對於限制傳送給特定變數的字元數來說，相當有用，如以下範例所示：  
   
 ```  
 // ioo_get_function.cpp  
@@ -73,22 +89,22 @@ int main()
 }  
 ```  
   
-### 輸入  
+### <a name="input"></a>輸入  
   
 ```  
 1234  
 ```  
   
-### 範例輸出  
+### <a name="sample-output"></a>範例輸出  
   
 ```  
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a> getline 函式  
- **getline** 成員函式類似 **get** 函式。  兩個函式允許為項目指定結束字元第三個引數。  預設值是新行字元。  兩個函式為必要的結尾字元保留一個字元。  不過， **get** 資料流的結尾字元保留，並取消 **getline** 結尾的字元。  
+##  <a name="a-namevclrfthegetlinefunctionanchor13a-the-getline-function"></a><a name="vclrfthegetlinefunctionanchor13"></a> getline 函式  
+ **getline** 成員函式與 **get** 函式類似。 這兩個函式都允許使用第三引數來指定輸入的終止字元。 預設值是新行字元。 這兩個函式都會保留一個字元作為所需的終止字元。 不過，**get** 會保留資料流中的終止字元，而 **getline** 則是會移除終止字元。  
   
- 下列範例指定輸入資料流指定的終止字元:  
+ 以下範例會指定輸入資料流的終止字元：  
   
 ```  
 // getline_func.cpp  
@@ -105,16 +121,16 @@ int main( )
 }  
 ```  
   
-### 輸入  
+### <a name="input"></a>輸入  
   
 ```  
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a> 讀取的函式  
- **read** 成員函式從檔案讀取位元組至記憶體中的指定區域。  引數的長度判斷所讀取的位元組數目。  如果您未包含該引數，將停止文字模式檔案的情況下，，當實體檔案結尾為止，或者，，當內嵌 `EOF` 字元讀取時。  
+##  <a name="a-namevclrfthereadfunctionanchor14a-the-read-function"></a><a name="vclrfthereadfunctionanchor14"></a> read 函式  
+ **read** 成員函式會從檔案將位元組讀取到指定的記憶體區域。 長度引數會決定所讀取的位元組數目。 如果您未將該引數包含在內，則在到達檔案的實際結尾時就會停止讀取，或在文字模式檔案的案例中，則是會在讀取到內嵌的 `EOF` 字元時停止讀取。  
   
- 這個範例會將一個二進位資料錄從薪資檔案的結構:  
+ 此範例會從薪資檔案將二進位記錄讀取到結構中：  
   
 ```  
 #include <fstream>  
@@ -140,10 +156,10 @@ int main()
 }  
 ```  
   
- 程式會假設，資料錄正確地格式化依結構沒有終止歸位字元或換行字元。  
+ 程式會假設資料記錄是完全依照結構指定的方式格式化，沒有任何終止歸位字元或換行字元。  
   
-##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> seekg 和 tellg 函式  
- 輸入檔案資料流保留內部指標至資料是要讀取的下一個檔案的位置。  將與 `seekg` 的這個函式指標，如下所示:  
+##  <a name="a-namevclrftheseekgandtellgfunctionsanchor7a-the-seekg-and-tellg-functions"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> seekg 和 tellg 函式  
+ 輸入檔案資料流會保留內部指標，該指標指向檔案中接下來要讀取資料的位置。 您可以使用 `seekg` 函式來設定這個指標，如下所示：  
   
 ```  
 #include <iostream>  
@@ -169,9 +185,9 @@ int main( )
 }  
 ```  
   
- 若要使用 `seekg` 實作記錄導向資料管理系統，請將固定長度記錄大小以記錄編號取得位元組相對於檔案結尾，然後使用 **get** 物件讀取資料錄。  
+ 若要使用 `seekg` 來實作記錄導向資料管理系統，請將固定長度記錄大小乘以記錄數目，以取得相對於檔案結尾的位元組位置，然後使用 **get** 物件來讀取記錄。  
   
- `tellg` 成員函式來傳回讀取目前的檔案位置。  iostream\>屬於型別 `streampos`， `typedef` 定義的這 \<個值。  下列範例會讀取檔案並顯示空間的位置的訊息。  
+ `tellg` 成員函式會傳回目前的檔案位置以供讀取。 此值的類型為 `streampos`，這是在 \<iostream> 中定義的 `typedef`。 以下範例會讀取檔案，並顯示指出空格位置的訊息。  
   
 ```  
 #include <fstream>  
@@ -196,8 +212,10 @@ int main( )
 }  
 ```  
   
-##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> 輸入資料流的存取函式  
- **close** 成員函式關閉磁碟檔與輸入檔資料流並釋放作業系統檔案控制代碼。  [ifstream](../standard-library/basic-ifstream-class.md) 解構函式關閉您的檔案，不過，您可以使用 **close** 函式需要開啟相同物件的另一個檔案。  
+##  <a name="a-namevclrftheclosefunctionforinputstreamsanchor15a-the-close-function-for-input-streams"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> 輸入資料流的 close 函式  
+ **close** 成員函式會關閉與輸入檔案資料流關聯的磁碟檔案，然後釋出作業系統控制代碼。 [ifstream](../standard-library/basic-ifstream-class.md) 解構函式會為您關閉檔案，但如果您需要為相同的資料流物件開啟另一個檔案，則可以使用 **close** 函式。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [輸入資料流](../standard-library/input-streams.md)
+
+

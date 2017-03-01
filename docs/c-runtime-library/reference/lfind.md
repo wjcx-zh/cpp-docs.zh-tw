@@ -1,47 +1,69 @@
 ---
-title: "lfind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lfind"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lfind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lfind 函式"
+title: _lfind | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lfind
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lfind
+- _lfind
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear searching
+- lfind function
+- arrays [CRT], searching
+- searching, linear
+- finding keys in arrays
+- _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _lfind
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 4101348ee1344accb0a0117c997dceb1c79d0b40
+ms.lasthandoff: 02/24/2017
 
-執行指定之索引鍵的線性搜尋。  這些函式已有更安全的版本可用，請參閱 [\_lfind\_s](../../c-runtime-library/reference/lfind-s.md)。  
+---
+# <a name="lfind"></a>_lfind
+執行所指定索引鍵的線性搜尋。 已有比這個函式更安全的版本；請參閱 [_lfind_s](../../c-runtime-library/reference/lfind-s.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void *_lfind(  
@@ -53,39 +75,39 @@ void *_lfind(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `key`  
  要搜尋的物件。  
   
  `base`  
- 指向要搜尋資料基底的指標。  
+ 搜尋資料基底的指標。  
   
  `num`  
- 陣列項目的數目。  
+ 陣列元素數目。  
   
  `width`  
- 陣列項目的寬度。  
+ 陣列元素的寬度。  
   
  `compare`  
- 要比較常式的指標。  第一個參數是指向搜尋的索引指標。  第二個參數是指向與索引鍵比較的陣列元素。  
+ 比較常式的指標。 第一個參數是搜尋索引鍵的指標。 第二個參數是要與索引鍵比較之陣列元素的指標。  
   
-## 傳回值  
- 如果找到索引鍵，則 `_lfind` 會傳回與 `key`相符的`base` 陣列的項目的指標 。  如果索引鍵沒有找到，`_lfind` 就會傳回 `NULL`。  
+## <a name="return-value"></a>傳回值  
+ 如果找到索引鍵，`_lfind` 將指標傳回至 `base` 與 `key` 相符的陣列元素。 如果找不到索引鍵，`_lfind` 會傳回 `NULL`。  
   
-## 備註  
- `_lfind` 函式在陣列中的 `num` 項目用 `key` 執行線性搜尋，每 `width` 位元組。  不同於 `bsearch`， `_lfind` 不需要先排序陣列。  `base` 引數是指向將搜尋陣列的基底。  `compare` 引數是指向比較兩個陣列元素和傳回指定其關聯性之值的使用者提供的常式。  在搜尋過程中，`_lfind` 會呼叫 `compare` 常式一次或多次，並於每次呼叫傳遞兩個陣列元素的指標。  `compare` 常式必須比較項目且傳回非零 \(表示項目是不同的\) 或 0 \(表示項目中相同\)。  
+## <a name="remarks"></a>備註  
+ `_lfind` 函式會在 `num` 個元素的陣列中執行線性搜尋，尋找 `key` 值，每個元素 `width` 個位元組。 不同於 `bsearch`，`_lfind` 不需要排序陣列。 `base` 引數是要搜尋之陣列基底的指標。 `compare` 引數是使用者所提供之常式的指標，該常式比較兩個陣列元素，然後傳回一個指定其關聯性的值。 `_lfind` 在搜尋時會呼叫`compare` 常式一或多次，每次呼叫會將指標傳遞至兩個陣列元素。 `compare` 常式必須比較項目，然後傳回非零 (表示項目不同) 或 0 (表示項目完全相同)。  
   
- 這個函式會驗證它的參數。  如果 `compare` 或 `key` 是 `num`，或是如果 `NULL` 為 `base` 且\*`num` 為非零，或是 `width` 小於零，將會叫用無效的參數的處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，`errno` 會設定為 `EINVAL` 且函式會傳回 `NULL`。  
+ 這個函式會驗證它的參數。 如果 `compare`、`key` 或 `num` 是 `NULL`，或者如果 `base`是 NULL 且 *`num` 為非零值，或如果 `width` 小於零，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行， `errno` 會設為 `EINVAL` ，且此函式會傳回 `NULL`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_lfind`|\<search.h\>|  
+|-------------|---------------------|  
+|`_lfind`|\<search.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_lfind.c  
@@ -118,13 +140,16 @@ int main( )
 }  
 ```  
   
-  **Hello 找到**   
-## .NET Framework 對等用法  
+```Output  
+Hello found  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   
- [\_lfind\_s](../../c-runtime-library/reference/lfind-s.md)   
+ [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)   
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)   
  [qsort](../../c-runtime-library/reference/qsort.md)

@@ -1,53 +1,69 @@
 ---
-title: "_heapwalk | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_heapwalk"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "heapwalk"
-  - "_heapwalk"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_heapwalk 函式"
-  - "偵錯 [CRT], 堆積相關的問題"
-  - "heapwalk 函式"
+title: _heapwalk | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _heapwalk
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- heapwalk
+- _heapwalk
+dev_langs:
+- C++
+helpviewer_keywords:
+- debugging [CRT], heap-related problems
+- heapwalk function
+- _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _heapwalk
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8ead1e2102ce55e747799d0b1b198e6ff0f27865
+ms.lasthandoff: 02/24/2017
 
-周遊堆積並傳回用於下一個項目的相關資訊。  
+---
+# <a name="heapwalk"></a>_heapwalk
+周遊堆積，並傳回下一個項目的相關資訊。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面無法在 Windows 執行階段執行的應用程式，除了在偵錯組建。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 除了偵錯組建之外，不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _heapwalk(   
@@ -55,58 +71,58 @@ int _heapwalk(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `entryinfo`  
  包含堆積資訊的緩衝區。  
   
-## 傳回值  
- `_heapwalk` 傳回在 Malloc.h 定義的下列整數資訊清單常數。  
+## <a name="return-value"></a>傳回值  
+ `_heapwalk` 會傳回下列在 Malloc.h 中定義的整數資訊清單常數之一。  
   
  `_HEAPBADBEGIN`  
- 初始標頭資訊無效或找不到。  
+ 找不到初始標頭資訊或其無效。  
   
  `_HEAPBADNODE`  
- 堆積損毀的或找到的錯誤節點。  
+ 堆積已損毀或找到故障的節點。  
   
  `_HEAPBADPTR`  
- `_HEAPINFO` 結構的`_pentry` 欄位未包含輸入堆積有效的指標或 `entryinfo` 為 null 指標。  
+`_HEAPINFO` 結構的  `_pentry` 欄位進入堆積不包含有效的指標或 `entryinfo` 為 Null 指標。  
   
  `_HEAPEND`  
- 已成功到達的堆積的結尾。  
+ 已成功達到堆積的結尾。  
   
  `_HEAPEMPTY`  
- 堆積尚未初始化  
+ 堆積未初始化。  
   
  `_HEAPOK`  
- 到目前為止沒有錯誤； `entryinfo` 更新以下堆積輸入的資訊。  
+ 到目前為止，沒有錯誤；已使用下一個堆積項目的相關資訊更新 `entryinfo`。  
   
- 此外，如果發生錯誤，則為 `_heapwalk` ，將 `errno` 設為 `ENOSYS`。  
+ 此外，若是發生錯誤，`_heapwalk` 會將 `errno` 設為 `ENOSYS`。  
   
-## 備註  
- `_heapwalk` 函式可協助偵錯程式中的堆積相關的問題。  函式透過堆積查核，周遊呼叫每一個項目，並將指標傳回包含下堆積輸入的資訊型別 `_HEAPINFO` 的結構。  `_HEAPINFO` 型別，定義在 Malloc.h，包含下列項目。  
+## <a name="remarks"></a>備註  
+ `_heapwalk` 函式可協助程式中堆積相關問題的偵錯。 函式會查核堆積，每次呼叫周遊一個項目，並將指標傳回至包含下一個堆積項目的 `_HEAPINFO` 類型結構。 Malloc.h 中定義的 `_HEAPINFO` 類型包含下列項目。  
   
  `int *_pentry`  
- 堆積輸入指標。  
+ 堆積項目指標。  
   
  `size_t _size`  
- 堆積輸入的大小。  
+ 堆積項目大小。  
   
  `int _useflag`  
- 旗標表示堆積輸入是否正在使用中。  
+ 表示堆積項目是否為使用中的旗標。  
   
- 對 `_heapwalk` 的呼叫是在 `_size` 中傳回 `_HEAPOK` 存放區之輸入的大小並將 `_useflag` 欄位設為 `_FREEENTRY` 或 `_USEDENTRY` \(都在 Malloc.h 定義的常數\)。  取得在堆積第一個項目的這個資訊，傳遞 `_heapwalk` 指標到 `_pentry` 成員為 `NULL`的 `_HEAPINFO` 結構。  如果作業系統不支援 `_heapwalk`\(例如， Windows 98\)，則函式會傳回 `_HEAPEND` 且將 `errno` 設為 `ENOSYS`。  
+ 呼叫 `_heapwalk` 並傳回 `_HEAPOK` 時，項目大小會被儲存在 `_size` 欄位，並將 `_useflag` 欄位設定為 `_FREEENTRY` 或 `_USEDENTRY` 其中之一 (兩者都是 Malloc.h 中定義的常數)。 若要取得此堆積中第一個項目的資訊，請將 `_heapwalk` 指標傳遞至 `_pentry` 成員為 `NULL` 的`_HEAPINFO` 結構。 如果作業系統不支援 `_heapwalk` (例如，Windows 98)，函式會傳回 `_HEAPEND`，並將 `errno` 設定為 `ENOSYS`。  
   
- 這個函式會驗證其參數。  如果 `entryinfo` 如  [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述為 null 指標，則叫用無效參數處理常式。  如果允許繼續執行，`errno` 會設定為 `EINVAL` 且函式會傳回 `_HEAPBADPTR`。  
+ 這個函式會驗證其參數。 如果 `entryinfo` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`errno` 會設為 `EINVAL`，且此函式會傳回 `_HEAPBADPTR`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|選擇性標頭|  
-|--------|-----------|-----------|  
-|`_heapwalk`|\<malloc.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_heapwalk`|\<malloc.h>|\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_heapwalk.c  
@@ -173,25 +189,28 @@ void heapdump(void)
 }  
 ```  
   
-  **USED block at 00310650 of size 0100**  
- **USED block at 00310758 of size 0800**  
- **USED block at 00310F60 of size 0080**  
- **FREE block at 00310FF0 of size 0398**  
- **USED block at 00311390 of size 000D**  
- **USED block at 003113A8 of size 00B4**  
- **USED block at 00311468 of size 0034**  
- **USED block at 003114A8 of size 0039**  
-**...**  
- **USED block at 00312228 of size 0010**  
- **USED block at 00312240 of size 1000**  
- **FREE block at 00313250 of size 1DB0**  
-**OK \- end of heap**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+  USED block at 00310650 of size 0100  
+  USED block at 00310758 of size 0800  
+  USED block at 00310F60 of size 0080  
+  FREE block at 00310FF0 of size 0398  
+  USED block at 00311390 of size 000D  
+  USED block at 003113A8 of size 00B4  
+  USED block at 00311468 of size 0034  
+  USED block at 003114A8 of size 0039  
+...  
+  USED block at 00312228 of size 0010  
+  USED block at 00312240 of size 1000  
+  FREE block at 00313250 of size 1DB0  
+OK - end of heap  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   
- [\_heapadd](../../c-runtime-library/heapadd.md)   
- [\_heapchk](../../c-runtime-library/reference/heapchk.md)   
- [\_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [\_heapset](../../c-runtime-library/heapset.md)
+ [_heapadd](../../c-runtime-library/heapadd.md)   
+ [_heapchk](../../c-runtime-library/reference/heapchk.md)   
+ [_heapmin](../../c-runtime-library/reference/heapmin.md)   
+ [_heapset](../../c-runtime-library/heapset.md)

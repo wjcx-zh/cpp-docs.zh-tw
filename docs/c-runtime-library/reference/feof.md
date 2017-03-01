@@ -1,48 +1,64 @@
 ---
-title: "feof | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feof"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "feof"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "檔案結尾, 測試"
-  - "feof 函式"
+title: feof | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- feof
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- feof
+dev_langs:
+- C++
+helpviewer_keywords:
+- end of file, testing for
+- feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# feof
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: aef536d11e6d7902bdaf43ccc3a5257be4522661
+ms.lasthandoff: 02/24/2017
 
-測試串流的檔案結尾。  
+---
+# <a name="feof"></a>feof
+測試資料流的檔案結尾。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int feof(   
@@ -50,29 +66,29 @@ int feof(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `stream`  
- 指向 `FILE` 結構的指標。  
+ `FILE` 結構的指標。  
   
-## 傳回值  
- `feof` 函式在讀入運算嘗試在檔案結尾後讀入時回傳一非零值，否則回傳零。  如果串流指標是 `NULL` ，函式叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行， `errno` 會被設置為 `EINVAL` 且 `feof` 會回傳零。  
+## <a name="return-value"></a>傳回值  
+ 如果讀取作業已嘗試讀取超過檔案結尾，則 `feof` 函式會傳回非零值，否則會傳回 0。 如果資料流指標是 `NULL`，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`errno` 會設為 `EINVAL`，且 `feof` 會傳回 0。  
   
- 如需更多關於這些和其他回傳碼的資訊，請參閱 [\_doserrno 、 errno 、 \_sys\_errlist 和 \_sys\_nerr \(\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr\)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
+ 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `feof` 常式 \(會實作為函式和巨集\) 判斷是否已經過 `stream` 結尾。  已經過檔案結尾時，讀取作業將回傳檔案結尾指示，直到關閉串流或呼叫 `rewind` 、 `fsetpos` 、 `fseek` 或 `clearerr` 為止。  
+## <a name="remarks"></a>備註  
+ `feof` 常式 (實作為函式和巨集) 會判斷是否已超過 `stream` 的結尾。 超過檔案結尾時，讀取作業會傳回檔案結尾指標直到資料流關閉，或者直到針對它呼叫 `rewind`、`fsetpos`、`fseek` 或 `clearerr`。  
   
- 例如，一個當案包含 10 個位元組，而您從它讀取了 10 個位元組， `feof` 會回傳 0 ，因為即使檔案指標已經位於檔案的結尾，但是你並沒有再次嘗試去讀取它。  只有在您嘗試讀取第 11 個位元組時， `feof` 才會傳回非零的值。  
+ 例如，如果檔案包含 10 個位元組，而您從檔案讀取 10 個位元組，`feof` 會傳回 0，因為即使檔案指標是在檔案結尾處，而您並未嘗試讀取超過結尾。 只有在您嘗試讀取第 11 個位元組之後，`feof` 才會傳回非零值。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|Function|必要的標頭檔|  
-|--------------|------------|  
-|`feof`|\<stdio.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`feof`|\<stdio.h>|  
   
- 如需其他相容性資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_feof.c  
@@ -112,26 +128,26 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_feof.txt  
+## <a name="input-crtfeoftxt"></a>輸入：crt_feof.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
 Number of bytes read = 19  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需更多的資訊，請參閱 [平台調用範例 \(Platform Invoke Examples\)](../Topic/Platform%20Invoke%20Examples.md) 。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [錯誤處理](../../c-runtime-library/error-handling-crt.md)   
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [\_eof](../../c-runtime-library/reference/eof.md)   
+ [_eof](../../c-runtime-library/reference/eof.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [perror、\_wperror](../../c-runtime-library/reference/perror-wperror.md)
+ [perror、_wperror](../../c-runtime-library/reference/perror-wperror.md)

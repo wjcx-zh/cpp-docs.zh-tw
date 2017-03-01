@@ -1,32 +1,48 @@
 ---
 title: "front_insert_iterator 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "iterator/std::front_insert_iterator"
-  - "std::front_insert_iterator"
-  - "std.front_insert_iterator"
-  - "front_insert_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_insert_iterator 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- iterator/std::front_insert_iterator
+- std::front_insert_iterator
+- std.front_insert_iterator
+- front_insert_iterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- front_insert_iterator class
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# front_insert_iterator 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 6468f372324cb6f62b5b09524cfbf5386b1502c6
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="frontinsertiterator-class"></a>front_insert_iterator 類別
 描述滿足輸出迭代器需求的迭代器配接器。 它在序列前端插入項目 (而不是覆寫)，因此其語意不同於 C++ 序列容器的迭代器所提供的覆寫語意。 `front_insert_iterator` 類別是根據容器的類型樣板化。  
   
 ## <a name="syntax"></a>語法  
@@ -41,7 +57,7 @@ class front_insert_iterator;
  容器的類型，其項目前端要由 `front_insert_iterator` 插入。  
   
 ## <a name="remarks"></a>備註  
- 容器必須符合是否可以在平攤常數時間將項目插入於序列開頭的前端插入序列需求。 所定義的標準範本庫序列容器 [deque 類別](../standard-library/deque-class.md) 和 [list 類別](../standard-library/list-class.md) 提供需要 `push_front` 成員函式且滿足這些需求。 相較之下，定義的序列容器的 [vector 類別](../standard-library/vector-class.md) 不滿足這些需求，而且無法調整以搭配 `front_insert_iterator`s。 `front_insert_iterator` 一定要以其容器初始化。  
+ 容器必須符合是否可以在平攤常數時間將項目插入於序列開頭的前端插入序列需求。 [deque 類別](../standard-library/deque-class.md)和 [list 類別](../standard-library/list-class.md)所定義的 C++ 標準程式庫序列容器，可提供所需的 `push_front` 成員函式，並滿足這些需求。 相反地，[vector 類別](../standard-library/vector-class.md)所定義的序列容器不滿足這些需求，亦無法調整以搭配 `front_insert_iterator` 使用。 `front_insert_iterator` 一定要以其容器初始化。  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -54,22 +70,22 @@ class front_insert_iterator;
 |||  
 |-|-|  
 |[container_type](#front_insert_iterator__container_type)|類型，表示要執行前端插入的容器。|  
-|[參考](#front_insert_iterator__reference)|類型，提供關聯容器控制之序列中項目的參考。|  
+|[reference](#front_insert_iterator__reference)|類型，提供關聯容器控制之序列中項目的參考。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[運算子 *](#front_insert_iterator__operator_star)|取值運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行前端插入。|  
-|[operator + +](#front_insert_iterator__operator_add_add)|將 `front_insert_iterator` 遞增至可儲存值的下一個位置。|  
-|[運算子 =](#front_insert_iterator__operator_eq)|指派運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行前端插入。|  
+|[operator*](#front_insert_iterator__operator_star)|取值運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行前端插入。|  
+|[operator++](#front_insert_iterator__operator_add_add)|將 `front_insert_iterator` 遞增至可儲存值的下一個位置。|  
+|[operator=](#front_insert_iterator__operator_eq)|指派運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行前端插入。|  
   
 ## <a name="requirements"></a>需求  
- **標頭**: \< 迭代器>  
+ **標頭**：\<iterator>  
   
  **命名空間：** std  
   
-##  <a name="a-namefrontinsertiteratorcontainertypea-frontinsertiteratorcontainertype"></a><a name="front_insert_iterator__container_type"></a>  front_insert_iterator:: container_type  
+##  <a name="a-namefrontinsertiteratorcontainertypea--frontinsertiteratorcontainertype"></a><a name="front_insert_iterator__container_type"></a>  front_insert_iterator::container_type  
  類型，表示要執行前端插入的容器。  
   
 ```  
@@ -77,11 +93,11 @@ typedef Container container_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 型別是範本參數的同義字 **容器**。  
+ 此類型與範本參數 **Container** 同義。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // front_insert_iterator_container_type.cpp  
 // compile with: /EHsc  
 #include <iterator>  
@@ -109,7 +125,7 @@ The list L2 is: ( 40 10 20 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratorfrontinsertiteratora-frontinsertiteratorfrontinsertiterator"></a><a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator:: front_insert_iterator  
+##  <a name="a-namefrontinsertiteratorfrontinsertiteratora--frontinsertiteratorfrontinsertiterator"></a><a name="front_insert_iterator__front_insert_iterator"></a>  front_insert_iterator::front_insert_iterator  
  建立可以在指定的容器物件前面插入項目的迭代器。  
   
 ```  
@@ -118,14 +134,14 @@ explicit front_insert_iterator(Container& _Cont);
   
 ### <a name="parameters"></a>參數  
  `_Cont`  
- 容器物件，其中 `front_insert_iterator` 是插入項目。  
+ `front_insert_iterator` 要插入元素的目標容器物件。  
   
 ### <a name="return-value"></a>傳回值  
- A `front_insert_iterator` 參數容器物件。  
+ 參數容器物件的 `front_insert_iterator`。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // front_insert_iterator_front_insert_iterator.cpp  
 // compile with: /EHsc  
 #include <iterator>  
@@ -169,22 +185,22 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatorstara-frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_star"></a>  front_insert_iterator:: operator *  
- 會對插入迭代器傳回的項目，它可以解決。  
+##  <a name="a-namefrontinsertiteratoroperatorstara--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_star"></a>  front_insert_iterator::operator*  
+ 可對傳回所定址之元素的插入迭代器進行取值。  
   
 ```  
 front_insert_iterator<Container>& operator*();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 成員函式傳回的值定址的項目。  
+ 此成員函式會傳回所定址之元素的值。  
   
 ### <a name="remarks"></a>備註  
- 用來實作輸出迭代器運算式 **\*Iter** = **值**。 如果 **Iter** 是迭代器，在序列中，項目然後 **\*Iter** = **值** 值取代該項目並不會變更在序列中的項目總數。  
+ 用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果 **Iter** 是以序列中元素為定址對象的迭代器，則 **\*Iter** = **value** 會以值取代該元素，而不會變更序列中的元素總數。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // front_insert_iterator_deref.cpp  
 // compile with: /EHsc  
 #include <iterator>  
@@ -227,7 +243,7 @@ After the front insertions, the list L is:
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatoraddadda-frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator:: operator + +  
+##  <a name="a-namefrontinsertiteratoroperatoraddadda--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_add_add"></a>  front_insert_iterator::operator++  
  將 `back_insert_iterator` 遞增至可儲存值的下一個位置。  
   
 ```  
@@ -237,14 +253,14 @@ front_insert_iterator<Container> operator++(int);
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A `front_insert_iterator` 定址的值可能會儲存到其中的下一個位置。  
+ `front_insert_iterator`，定址可儲存值的下一個位置。  
   
 ### <a name="remarks"></a>備註  
- Preincrementation 和 postincrementation 運算子會傳回相同的結果。  
+ preincrementation 和 postincrementation 運算子都會傳回相同的結果。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // front_insert_iterator_op_incre.cpp  
 // compile with: /EHsc  
 #include <iterator>  
@@ -275,8 +291,8 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratoroperatoreqa-frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator:: operator =  
- 將附加 （推送） 到最上層容器的值。  
+##  <a name="a-namefrontinsertiteratoroperatoreqa--frontinsertiteratoroperator"></a><a name="front_insert_iterator__operator_eq"></a>  front_insert_iterator::operator=  
+ 將值附加 (推送) 到容器前端。  
   
 ```  
 front_insert_iterator<Container>& operator=(typename Container::const_reference val);
@@ -289,12 +305,12 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
  要指派給容器的值。  
   
 ### <a name="return-value"></a>傳回值  
- 最後一個元素的容器前面插入參考。  
+ 插入容器前端之最後一個元素的參考。  
   
 ### <a name="remarks"></a>備註  
- 第一個成員運算子評估 `container.push_front( val)`, ，然後傳回 `*this`。  
+ 第一個成員運算子會評估 `container.push_front( val)`，然後傳回 `*this`。  
   
- 在第二個成員運算子評估  
+ 在第二個成員運算子會評估  
   
  `container->push_front((typename Container::value_type&&) val)`,  
   
@@ -302,7 +318,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // front_insert_iterator_op_assign.cpp  
 // compile with: /EHsc  
 #include <iterator>  
@@ -333,7 +349,7 @@ The list L1 is: ( 30 20 10 ).
 *\  
 ```  
   
-##  <a name="a-namefrontinsertiteratorreferencea-frontinsertiteratorreference"></a><a name="front_insert_iterator__reference"></a>  front_insert_iterator:: reference  
+##  <a name="a-namefrontinsertiteratorreferencea--frontinsertiteratorreference"></a><a name="front_insert_iterator__reference"></a>  front_insert_iterator::reference  
  類型，提供關聯容器控制之序列中項目的參考。  
   
 ```  
@@ -342,7 +358,7 @@ typedef typename Container::reference reference;
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // front_insert_iterator_reference.cpp  
 // compile with: /EHsc  
 #include <iterator>  
@@ -377,7 +393,8 @@ The first element in the list L is: 30.
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [\< 迭代器>](../standard-library/iterator.md)   
- [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+ [\<iterator>](../standard-library/iterator.md)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
 

@@ -1,51 +1,72 @@
 ---
-title: "參考 (C++ AMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp/Concurrency::Reference (C++ AMP)"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Accelerated Massive Parallelism, 參考"
+title: "參考 (c + + AMP) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp/Concurrency::Reference (C++ AMP)
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ Accelerated Massive Parallelism, reference
 ms.assetid: 372a8aed-8a53-48c9-996f-9c3cf09c9fa8
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 參考 (C++ AMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
+ms.openlocfilehash: cc654cedd8639377ab7011c91454f1508c730247
+ms.lasthandoff: 02/24/2017
 
-本節包含 C\+\+ Accelerated Massive Parallelism \(C\+\+ AMP\) 執行階段的參考資訊。  
+---
+# <a name="reference-c-amp"></a>參考 (C++ AMP)
+本節包含 c + + Accelerated Massive Parallelism (c + + AMP) 執行階段的參考資訊。  
   
 > [!NOTE]
->  C\+\+ 語言標準針對程式庫等實作保留了以底線 \(`_`\) 字元為開頭之識別碼的用法。  請勿在您的程式碼中使用以底線為開頭的名稱。  我們不保證名稱遵循這個慣例之程式碼項目的行為，而且未來的發行版本可能會變更。  基於這些原因，本文件省略了這類程式碼項目。  
+>  C++ 語言標準針對程式庫等實作，保留使用開頭為底線 (`_`) 字元的識別項。 請勿在程式碼中使用開頭為底線的名稱。 我們不保證名稱遵循這個慣例之程式碼項目的行為，而且未來的發行版本可能會變更。 因此，本文件中將省略這類程式碼項目。  
   
-## 在本節中  
- [Concurrency 命名空間 \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)  
- 提供為在資料平行硬體上執行的 C\+\+ 程式碼加速的類別和函式。  
+## <a name="in-this-section"></a>本章節內容  
+ [Concurrency 命名空間 (c + + AMP)](concurrency-namespace-cpp-amp.md)  
+ 提供類別和函式可讓 c + + 程式碼，在資料平行硬體加速。  
   
- [Concurrency::direct3d 命名空間](../../../parallel/amp/reference/concurrency-direct3d-namespace.md)  
- 提供支援 D3D 互通性的函式。  啟用緊密整合用於 AMP 程式碼中的 D3D 資源計算，您毋需建立多餘的中間複本即可使用 AMP 程式碼在 D3D 模式下建立的資源。  您可以使用 C\+\+ AMP，以累加方式加速 DirectX 應用程式的大量運算區段，並將 D3D 應用程式開發介面用於 AMP 計算所產生的資料。  
+ [Concurrency:: direct3d 命名空間](concurrency-direct3d-namespace.md)  
+ 提供支援 D3D 互通性的函式。 可讓順暢地將 D3D 資源 AMP 程式碼中的計算並且使用所建立的資源 AMP D3D 程式碼中，而不需建立中繼副本。 您可以使用 c + + AMP 累加加速運算密集的部份 DirectX 應用程式，並使用 D3D API AMP 計算所產生的資料。  
   
- [Concurrency::fast\_math 命名空間](../../../parallel/amp/reference/concurrency-fast-math-namespace.md)  
- `fast_math` 命名空間中的函式不符合 C99 標準。  僅提供每個函式的單精確度版本。  這些函式使用 DirectX 內建函式，比 `precise_math` 命名空間的對應函式更快速，而且不需要加速器的擴充雙精確度支援，不過它們比較不精確。  每個函式有兩個版本，以便在來源層級與 C99 程式碼相容；兩個版本會接受並傳回單精確度值。  
+ [Concurrency:: fast_math 命名空間](concurrency-fast-math-namespace.md)  
+ 函式的`fast_math`命名空間不符合 C99 標準。 只有每個函式的單精確度版本都會提供。 這些函式會使用 DirectX 內建函式，也就是比對應的函式中`precise_math`命名空間並不需要擴充的雙精確度支援加速器上，但它們是較不精確。 有兩個版本的來源層級相容性的 C99 程式碼; 每個函式這兩個版本使用，並傳回單精確度值。  
   
- [Concurrency::graphics 命名空間](../../../parallel/amp/reference/concurrency-graphics-namespace.md)  
- 提供專為圖形程式設計而設計的類型與函式。  
+ [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)  
+ 圖形程式設計提供型別和函式所設計。  
   
- [Concurrency::precise\_math 命名空間](../../../parallel/amp/reference/concurrency-precise-math-namespace.md)  
- `precise_math` 命名空間中的函式符合 C99 標準。  每個函式的單精確度與雙精確度版本都有包含。  這些函式包括單精確度函式，在加速器上需要擴充的雙精確度支援。  
+ [Concurrency:: precise_math 命名空間](concurrency-precise-math-namespace.md)  
+ 函式的`precise_math`命名空間是 C99 標準。 每個函式的單精確度和雙精度版本隨附。 這些函式，包括單精確度函式 — 需要擴充的雙精確度支援加速器上。  
   
-## 相關章節  
- [C\+\+ AMP \(C\+\+ Accelerated Massive Parallelism\)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
- C\+\+ AMP 利用通常是獨立圖形顯示卡上的圖形處理器 \(GPU\) 等資料平行硬體來加速您的 C\+\+ 程式碼的執行。
+## <a name="related-sections"></a>相關章節  
+ [C++ AMP (C++ Accelerated Massive Parallelism)](../../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
+ C + + AMP 利用通常呈現為離散的圖形卡上的圖形處理單元 (GPU) 的資料平行硬體加速您的 c + + 程式碼的執行。
+
+
+
+
+
+

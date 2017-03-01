@@ -1,64 +1,79 @@
 ---
-title: "CMFCRibbonUndoButton Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCRibbonUndoButton"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCRibbonUndoButton class"
+title: "CMFCRibbonUndoButton 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCRibbonUndoButton
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCRibbonUndoButton class
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
 caps.latest.revision: 35
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CMFCRibbonUndoButton Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: d4406e21a7e2a945965020d85a748b93d66b5682
+ms.lasthandoff: 02/24/2017
 
-`CMFCRibbonUndoButton` 類別實作含有新使用者命令中的下拉式清單按鈕。  使用者可以選取一或多個最近命令從下拉式清單中加入取消復原或復原這些變更。  
+---
+# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 類別
+`CMFCRibbonUndoButton`類別會實作包含最新的使用者命令的下拉式清單按鈕。 使用者可以選取一或多個最新的命令，從下拉式清單，要重做或復原它們。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CMFCRibbonUndoButton : public CMFCRibbonGallery  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](../Topic/CMFCRibbonUndoButton::CMFCRibbonUndoButton.md)|建構新的物件 `CMFCRibbonUndoButton` 使用命令 ID，您指定的文字標籤，然後從父代影像清單中的影像物件。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|建構新`CMFCRibbonUndoButton`使用您指定的命令 ID、 文字標籤和映像檔從影像清單的父物件的物件。|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[CMFCRibbonUndoButton::AddUndoAction](../Topic/CMFCRibbonUndoButton::AddUndoAction.md)|加入新的動作加入動作清單。|  
-|[CMFCRibbonUndoButton::CleanUpUndoList](../Topic/CMFCRibbonUndoButton::CleanUpUndoList.md)|清除動作清單，為下拉式清單。|  
-|[CMFCRibbonUndoButton::GetActionNumber](../Topic/CMFCRibbonUndoButton::GetActionNumber.md)|判斷使用者從下拉式清單中選取項目的數目。|  
-|[CMFCRibbonUndoButton::HasMenu](../Topic/CMFCRibbonUndoButton::HasMenu.md)|指出物件是否包含功能表。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|動作清單中加入新的動作。|  
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|清除動作清單，也就是下拉式清單。|  
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|決定使用者從下拉式清單中選取的項目數目。|  
+|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|指出物件是否包含功能表。|  
   
-## 備註  
- `CMFCRibbonUndoButton` 類別使用堆疊表示下拉式清單。  
+## <a name="remarks"></a>備註  
+ `CMFCRibbonUndoButton`類別來代表下拉式清單使用的堆疊。  
   
-## 範例  
- 下列範例示範如何建構物件 `CMFCRibbonUndoButton` 類別，並加入新的動作加入動作清單。  這個程式碼片段是 [功能區小工具範例](../../top/visual-cpp-samples.md)的一部分。  
+## <a name="example"></a>範例  
+ 下列範例示範如何建構的物件`CMFCRibbonUndoButton`類別，並加入新的動作的動作清單。 此程式碼片段是一部分[功能區小工具範例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/CPP/cmfcribbonundobutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonGadgets #&2;](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -69,11 +84,85 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
  [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)  
   
-## 需求  
- **標題:** afxribbonundobutton.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxribbonundobutton.h  
   
-## 請參閱  
+##  <a name="a-nameaddundoactiona--cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
+ 動作清單中加入新的動作。  
+  
+```  
+void AddUndoAction(LPCTSTR lpszLabel);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `lpszLabel`  
+ 將會顯示在下拉式清單中的動作標籤。  
+  
+##  <a name="a-namecleanupundolista--cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
+ 清除動作清單，也就是下拉式清單。  
+  
+```  
+void CleanUpUndoList();
+```  
+  
+##  <a name="a-namecmfcribbonundobuttona--cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+ 建構新`CMFCRibbonUndoButton`使用您指定的命令 ID、 文字標籤和映像檔從影像清單的父物件的物件。  
+  
+```  
+CMFCRibbonUndoButton(
+    UINT nID,  
+    LPCTSTR lpszText,  
+    int nSmallImageIndex=-1,  
+    int nLargeImageIndex=-1);
+
+ 
+CMFCRibbonUndoButton(
+    UINT nID,  
+    LPCTSTR lpszText,  
+    HICON hIcon);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `nID`  
+ 指定的命令識別項。  
+  
+ [in] `lpszText`  
+ 指定按鈕的文字標籤。  
+  
+ [in] `nSmallImageIndex`  
+ 清單中的影像按鈕的小型影像的父物件的以零為起始的索引。  
+  
+ [in] `nLargeImageIndex`  
+ 在影像清單的父物件的以零起始的索引的按鈕的大型影像。  
+  
+ [in] `hIcon`  
+ 您可以做為按鈕的影像圖示的控制代碼。  
+  
+##  <a name="a-namegetactionnumbera--cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
+ 決定使用者從下拉式清單中選取的項目數目。  
+  
+```  
+int GetActionNumber() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 使用者選取的項目數目。  
+  
+##  <a name="a-namehasmenua--cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
+ 指出物件是否包含功能表。  
+  
+```  
+virtual BOOL HasMenu() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 一律傳回 `TRUE`。  
+  
+### <a name="remarks"></a>備註  
+  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonGallery Class](../../mfc/reference/cmfcribbongallery-class.md)   
- [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
+ [CMFCRibbonGallery 類別](../../mfc/reference/cmfcribbongallery-class.md)   
+ [CMFCRibbonButton 類別](../../mfc/reference/cmfcribbonbutton-class.md)
+

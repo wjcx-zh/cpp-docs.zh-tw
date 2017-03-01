@@ -1,111 +1,126 @@
 ---
-title: "CMFCVisualManagerWindows7 Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxvisualmanagerwindows7/CMFCVisualManagerWindows7"
-  - "CMFCVisualManagerWindows7"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCVisualManagerWindows7 class"
+title: "CMFCVisualManagerWindows7 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxvisualmanagerwindows7/CMFCVisualManagerWindows7
+- CMFCVisualManagerWindows7
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCVisualManagerWindows7 class
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
 caps.latest.revision: 21
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CMFCVisualManagerWindows7 Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 236223fe371973fb4e009d2fcb242f2ed6e90963
+ms.lasthandoff: 02/24/2017
 
-`CMFCVisualManagerWindows7` 寫入應用程式 [!INCLUDE[win7](../../build/includes/win7_md.md)] 應用程式的外觀。  
+---
+# <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 類別
+`CMFCVisualManagerWindows7`提供的應用程式的外觀[!INCLUDE[win7](../../build/includes/win7_md.md)]應用程式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;  
 ```  
   
-## 成員  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](../Topic/CMFCVisualManagerWindows7::CMFCVisualManagerWindows7.md)|預設建構函式。|  
-|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](../Topic/CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7.md)|預設的解構函式。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|預設建構函式。|  
+|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|預設的解構函式。|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|`CMFCVisualManagerWindows7::CleanStyle`|清除目前視覺化樣式並重設預設視覺化樣式。|  
-|`CMFCVisualManagerWindows7::CleanUp`|清除所有的使用者介面 \(UI\) 中的物件並重設功能表。|  
-|`CMFCVisualManagerWindows7::DrawNcBtn`|繪製在非用戶端區域中的按鈕在框架。  架構會使用此方法來繪製最小化，最大化，關閉並還原按鈕在框架右上角。  當程式使用非 Aero 佈景主題時，不會呼叫這個方法。|  
-|`CMFCVisualManagerWindows7::DrawNcText`|繪製在非工作區的文字在框架。  架構會在標題列中使用這個方法會繪製應用程式標題在框架視窗上方。|  
-|`CMFCVisualManagerWindows7::DrawSeparator`|繪製在 [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)的分隔符號。|  
-|`CMFCVisualManagerWindows7::GetRibbonBar`|擷取 [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) 與使用者介面。|  
-|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](../Topic/CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor.md)|取得一個功能區編輯方塊背景色彩。|  
-|`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|覆寫 [CMFCVisualManager::GetRibbonPopupBorderSize](../Topic/CMFCVisualManager::GetRibbonPopupBorderSize.md)。|  
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|覆寫 [CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../Topic/CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset.md)。|  
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|覆寫 [CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../Topic/CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin.md)。|  
-|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|覆寫 [CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../Topic/CMFCVisualManagerWindows::IsHighlightWholeMenuItem.md)。|  
-|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|覆寫 [CMFCVisualManager::IsOwnerDrawMenuCheck](../Topic/CMFCVisualManager::IsOwnerDrawMenuCheck.md)。|  
-|`CMFCVisualManagerWindows7::IsRibbonPresent`|判斷 `CMFCRibbonBar` 是否存在並且可見。|  
-|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|覆寫 [CMFCVisualManagerWindows::OnDrawButtonBorder](../Topic/CMFCVisualManagerWindows::OnDrawButtonBorder.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|覆寫 [CMFCVisualManagerWindows::OnDrawCheckBoxEx](../Topic/CMFCVisualManagerWindows::OnDrawCheckBoxEx.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|覆寫 [CMFCVisualManagerWindows::OnDrawComboDropButton](../Topic/CMFCVisualManagerWindows::OnDrawComboDropButton.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|覆寫 [CMFCVisualManager::OnDrawDefaultRibbonImage](../Topic/CMFCVisualManager::OnDrawDefaultRibbonImage.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|覆寫 [CMFCVisualManagerWindows::OnDrawMenuBorder](../Topic/CMFCVisualManagerWindows::OnDrawMenuBorder.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|覆寫 [CMFCVisualManager::OnDrawMenuCheck](../Topic/CMFCVisualManager::OnDrawMenuCheck.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|覆寫 [CMFCVisualManager::OnDrawMenuLabel](../Topic/CMFCVisualManager::OnDrawMenuLabel.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRadioButton`|覆寫 `CMFCVisualManager::OnDrawRadioButton`。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|覆寫 [CMFCVisualManager::OnDrawRibbonApplicationButton](../Topic/CMFCVisualManager::OnDrawRibbonApplicationButton.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|覆寫 [CMFCVisualManager::OnDrawRibbonButtonBorder](../Topic/CMFCVisualManager::OnDrawRibbonButtonBorder.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|覆寫 [CMFCVisualManager::OnDrawRibbonCaption](../Topic/CMFCVisualManager::OnDrawRibbonCaption.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|覆寫 [CMFCVisualManager::OnDrawRibbonCaptionButton](../Topic/CMFCVisualManager::OnDrawRibbonCaptionButton.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|覆寫 [CMFCVisualManager::OnDrawRibbonCategory](../Topic/CMFCVisualManager::OnDrawRibbonCategory.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|覆寫 [CMFCVisualManager::OnDrawRibbonCategoryTab](../Topic/CMFCVisualManager::OnDrawRibbonCategoryTab.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|覆寫 [CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../Topic/CMFCVisualManager::OnDrawRibbonDefaultPaneButton.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|覆寫 [CMFCVisualManager::OnDrawRibbonGalleryButton](../Topic/CMFCVisualManager::OnDrawRibbonGalleryButton.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|覆寫 `CMFCVisualManager::OnDrawRibbonLaunchButton`。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|覆寫 [CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../Topic/CMFCVisualManager::OnDrawRibbonMenuCheckFrame.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|覆寫 [CMFCVisualManager::OnDrawRibbonPanel](../Topic/CMFCVisualManager::OnDrawRibbonPanel.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|覆寫 [CMFCVisualManager::OnDrawRibbonPanelCaption](../Topic/CMFCVisualManager::OnDrawRibbonPanelCaption.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|覆寫 [CMFCVisualManager::OnDrawRibbonProgressBar](../Topic/CMFCVisualManager::OnDrawRibbonProgressBar.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|覆寫 [CMFCVisualManager::OnDrawRibbonRecentFilesFrame](../Topic/CMFCVisualManager::OnDrawRibbonRecentFilesFrame.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|覆寫 [CMFCVisualManager::OnDrawRibbonSliderChannel](../Topic/CMFCVisualManager::OnDrawRibbonSliderChannel.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|覆寫 [CMFCVisualManager::OnDrawRibbonSliderThumb](../Topic/CMFCVisualManager::OnDrawRibbonSliderThumb.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|覆寫 [CMFCVisualManager::OnDrawRibbonSliderZoomButton](../Topic/CMFCVisualManager::OnDrawRibbonSliderZoomButton.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|覆寫 [CMFCVisualManager::OnDrawRibbonStatusBarPane](../Topic/CMFCVisualManager::OnDrawRibbonStatusBarPane.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|覆寫 [CMFCVisualManager::OnDrawRibbonTabsFrame](../Topic/CMFCVisualManager::OnDrawRibbonTabsFrame.md)。|  
-|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|覆寫 [CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../Topic/CMFCVisualManagerWindows::OnDrawStatusBarSizeBox.md)。|  
-|`CMFCVisualManagerWindows7::OnFillBarBackground`|覆寫 [CMFCVisualManagerWindows::OnFillBarBackground](../Topic/CMFCVisualManagerWindows::OnFillBarBackground.md)。|  
-|`CMFCVisualManagerWindows7::OnFillButtonInterior`|覆寫 [CMFCVisualManagerWindows::OnFillButtonInterior](../Topic/CMFCVisualManagerWindows::OnFillButtonInterior.md)。|  
-|[CMFCVisualManagerWindows7::OnFillMenuImageRect](../Topic/CMFCVisualManagerWindows7::OnFillMenuImageRect.md)|表示處於功能表項目時，影像周圍繪製區域架構會呼叫這個方法。|  
-|`CMFCVisualManagerWindows7::OnFillRibbonButton`|覆寫 [CMFCVisualManager::OnFillRibbonButton](../Topic/CMFCVisualManager::OnFillRibbonButton.md)。|  
-|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|覆寫 [CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../Topic/CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup.md)。|  
-|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|覆寫 [CMFCVisualManagerWindows::OnHighlightMenuItem](../Topic/CMFCVisualManagerWindows::OnHighlightMenuItem.md)。|  
-|`CMFCVisualManagerWindows7::OnNcActivate`|覆寫 [CMFCVisualManager::OnNcActivate](../Topic/CMFCVisualManager::OnNcActivate.md)。|  
-|`CMFCVisualManagerWindows7::OnNcPaint`|覆寫 [CMFCVisualManager::OnNcPaint](../Topic/CMFCVisualManager::OnNcPaint.md)。|  
-|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|覆寫 [CMFCVisualManagerWindows::OnUpdateSystemColors](../Topic/CMFCVisualManagerWindows::OnUpdateSystemColors.md)。|  
-|`CMFCVisualManagerWindows7::SetResourceHandle`|設定描述視覺管理員的屬性的資源控制代碼。|  
-|`CMFCVisualManagerWindows7::SetStyle`|設定 `CMFCVisualManagerWindows7` GUI 的色彩配置。|  
+|名稱|說明|  
+|----------|-----------------|  
+|`CMFCVisualManagerWindows7::CleanStyle`|清除目前的視覺化樣式，並會重設預設視覺化樣式。|  
+|`CMFCVisualManagerWindows7::CleanUp`|清除所有的使用者介面中的物件，並會重設功能表。|  
+|`CMFCVisualManagerWindows7::DrawNcBtn`|在框架上，在非工作區中繪製的按鈕。 這個方法，以繪製降到最低，架構會使用最大化、 關閉和還原視窗框架的右上角的按鈕。 程式會使用非 Aero 佈景主題時，不會呼叫這個方法。|  
+|`CMFCVisualManagerWindows7::DrawNcText`|在框架上，在非工作區中繪製文字。 架構會使用這個方法繪製在框架視窗頂端的標題列中的應用程式的標題。|  
+|`CMFCVisualManagerWindows7::DrawSeparator`|在上繪製分隔符號[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)。|  
+|`CMFCVisualManagerWindows7::GetRibbonBar`|擷取[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)相關聯的使用者介面。|  
+|[CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|取得功能區編輯方塊背景色彩。|  
+|`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|覆寫[CMFCVisualManager::GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|  
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|覆寫[CMFCVisualManager::GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|  
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|覆寫[CMFCVisualManager::GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|  
+|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|覆寫[CMFCVisualManagerWindows::IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|  
+|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|覆寫[CMFCVisualManager::IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|  
+|`CMFCVisualManagerWindows7::IsRibbonPresent`|決定是否`CMFCRibbonBar`存在且可見。|  
+|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|覆寫[CMFCVisualManagerWindows::OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|  
+|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|覆寫[CMFCVisualManagerWindows::OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|  
+|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|覆寫[CMFCVisualManagerWindows::OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|  
+|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|覆寫[CMFCVisualManager::OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|  
+|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|覆寫[CMFCVisualManagerWindows::OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|  
+|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|覆寫[CMFCVisualManager::OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|  
+|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|覆寫[CMFCVisualManager::OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|  
+|`CMFCVisualManagerWindows7::OnDrawRadioButton`|覆寫`CMFCVisualManager::OnDrawRadioButton`|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|覆寫[CMFCVisualManager::OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|覆寫[CMFCVisualManager::OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|覆寫[CMFCVisualManager::OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|覆寫[CMFCVisualManager::OnDrawRibbonCaptionButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|覆寫[CMFCVisualManager::OnDrawRibbonCategory](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|覆寫[CMFCVisualManager::OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|覆寫[CMFCVisualManager::OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|覆寫[CMFCVisualManager::OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|覆寫`CMFCVisualManager::OnDrawRibbonLaunchButton`|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|覆寫[CMFCVisualManager::OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|覆寫[CMFCVisualManager::OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|覆寫[CMFCVisualManager::OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|覆寫[CMFCVisualManager::OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|覆寫[CMFCVisualManager::OnDrawRibbonRecentFilesFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|覆寫[CMFCVisualManager::OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|覆寫[CMFCVisualManager::OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|覆寫[CMFCVisualManager::OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|覆寫[CMFCVisualManager::OnDrawRibbonStatusBarPane](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|  
+|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|覆寫[CMFCVisualManager::OnDrawRibbonTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|  
+|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|覆寫[CMFCVisualManagerWindows::OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|  
+|`CMFCVisualManagerWindows7::OnFillBarBackground`|覆寫[CMFCVisualManagerWindows::OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|  
+|`CMFCVisualManagerWindows7::OnFillButtonInterior`|覆寫[CMFCVisualManagerWindows::OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|  
+|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|填滿功能表項目影像周圍區域時，架構會呼叫這個方法。|  
+|`CMFCVisualManagerWindows7::OnFillRibbonButton`|覆寫[CMFCVisualManager::OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|  
+|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|覆寫[CMFCVisualManager::OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|  
+|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|覆寫[CMFCVisualManagerWindows::OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|  
+|`CMFCVisualManagerWindows7::OnNcActivate`|覆寫[CMFCVisualManager::OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|  
+|`CMFCVisualManagerWindows7::OnNcPaint`|覆寫[CMFCVisualManager::OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|  
+|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|覆寫[CMFCVisualManagerWindows::OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|  
+|`CMFCVisualManagerWindows7::SetResourceHandle`|設定描述的視覺管理員屬性的資源控制代碼。|  
+|`CMFCVisualManagerWindows7::SetStyle`|設定的色彩配置`CMFCVisualManagerWindows7`GUI。|  
   
-## 備註  
- 使用 `CMFCVisualManagerWindows7` 類別將您的應用程式會模擬預設 [!INCLUDE[win7](../../build/includes/win7_md.md)] 應用程式。  此外，如果您的應用程式在 Windows 版本早於 [!INCLUDE[win7](../../build/includes/win7_md.md)]執行，這個類別可能會無效。  在該案例中，使用 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) 所定義的預設視覺管理員，。  
+## <a name="remarks"></a>備註  
+ 使用`CMFCVisualManagerWindows7`類別來變更您的應用程式模擬預設外觀[!INCLUDE[win7](../../build/includes/win7_md.md)]應用程式。 這個類別可能不正確，如果您的應用程式的 Windows 版本上執行早於[!INCLUDE[win7](../../build/includes/win7_md.md)]。 在這種情況下，應用程式使用中定義的預設視覺化管理員[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)。  
   
- CMFCVisualManagerWindows7 繼承自 [CMFCVisualManagerWindows Class](../../mfc/reference/cmfcvisualmanagerwindows-class.md) 和 `CMFCVisualManager` 類別的多個方法。  在上一節中所列的方法是方法的新 `CMFCVisualManagerWindows7` 類別。  
+ CMFCVisualManagerWindows7 多個方法同時繼承自[CMFCVisualManagerWindows 類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)和`CMFCVisualManager`類別。 上一節中所列的方法是方法的新`CMFCVisualManagerWindows7`類別。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
@@ -118,12 +133,81 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
   
  `CMFCVisualManagerWindows7`  
   
-## 需求  
- **標題:** afxvisualmanagerwindows7.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxvisualmanagerwindows7.h  
   
-## 請參閱  
+##  <a name="a-namedtorcmfcvisualmanagerwindows7a--cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="_dtorcmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7  
+ 預設的解構函式。  
+  
+```  
+virtual ~CMFCVisualManagerWindows7();
+```  
+  
+##  <a name="a-namecmfcvisualmanagerwindows7a--cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="cmfcvisualmanagerwindows7"></a>CMFCVisualManagerWindows7::CMFCVisualManagerWindows7  
+ 預設建構函式。  
+  
+```  
+CMFCVisualManagerWindows7();
+```  
+  
+##  <a name="a-namegetribboneditbackgroundcolora--cmfcvisualmanagerwindows7getribboneditbackgroundcolor"></a><a name="getribboneditbackgroundcolor"></a>CMFCVisualManagerWindows7::GetRibbonEditBackgroundColor  
+ 取得功能區的編輯方塊的背景色彩。  
+  
+```  
+virtual COLORREF GetRibbonEditBackgroundColor (
+    CMFCRibbonRichEditCtrl* pEdit,  
+    BOOL bIsHighlighted,  
+    BOOL bIsPaneHighlighted,  
+    BOOL bIsDisabled);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pEdit`  
+ 編輯控制項的指標。 這個值不能是 `NULL`。  
+  
+ [輸出] `bIsHighlighted`  
+ 傳回 [功能區] 方塊中會反白顯示。  
+  
+ [輸出] `bIsPaneHighlighted`  
+ 傳回`TRUE`如果功能區 面板中包含`pEdit`會反白顯示。  
+  
+ [輸出] `bIsDisabled`  
+ 傳回是否`pEdit`已停用。  
+  
+### <a name="return-value"></a>傳回值  
+ 編輯方塊的背景色彩`pEdit`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonfillmenuimagerecta--cmfcvisualmanagerwindows7onfillmenuimagerect"></a><a name="onfillmenuimagerect"></a>CMFCVisualManagerWindows7::OnFillMenuImageRect  
+ 填滿功能表項目影像周圍的區域時，架構會呼叫這個方法。  
+  
+```  
+virtual void OnFillMenuImageRect(
+    CDC* pDC,  
+    CMFCToolBarButton* pButton,  
+    CRect rect,  
+    CMFCVisualManager::AFX_BUTTON_STATE state);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDC`  
+ 功能表按鈕的裝置內容的指標。  
+  
+ [in] `pButton`  
+ 指標`CMFCToolBarButton`。 架構會填滿此按鈕的背景。  
+  
+ [in] `rect`  
+ 指定的功能表按鈕影像區域界限的矩形。  
+  
+ [in] `state`  
+ 按鈕的狀態。  
+  
+### <a name="remarks"></a>備註  
+  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)   
- [CMFCVisualManagerWindows Class](../../mfc/reference/cmfcvisualmanagerwindows-class.md)   
- [CMFCVisualManager::SetDefaultManager](../Topic/CMFCVisualManager::SetDefaultManager.md)
+ [CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)   
+ [CMFCVisualManagerWindows 類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+

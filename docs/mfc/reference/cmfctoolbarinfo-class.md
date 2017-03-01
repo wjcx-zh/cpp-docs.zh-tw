@@ -1,63 +1,135 @@
 ---
-title: "CMFCToolBarInfo Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCToolBarInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCToolBarInfo class"
+title: "CMFCToolBarInfo 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCToolBarInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCToolBarInfo class
 ms.assetid: 6dc84482-eaaa-491f-aa5d-dd7a57886b46
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CMFCToolBarInfo Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: a9e66ffa0b5a751a7e5711ed20927a6adcede45d
+ms.lasthandoff: 02/24/2017
 
-包含工具列影像資源 ID 在各種狀態。  `CMFCToolBarInfo` 是當做 [CMFCToolBar::LoadToolBarEx](../Topic/CMFCToolBar::LoadToolBarEx.md) 方法之參數的 Helper 類別。  
+---
+# <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo 類別
+包含在各種狀態下工具列影像的資源 ID。 `CMFCToolBarInfo`是一個 helper 類別，做為參數的[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CMFCToolBarInfo  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 資料成員  
+### <a name="data-members"></a>資料成員  
   
-|名稱|描述|  
-|--------|--------|  
-|[CMFCToolBarInfo::m\_uiColdResID](../Topic/CMFCToolBarInfo::m_uiColdResID.md)|包含標準工具列點陣圖的資源 ID \(冷\) 工具列影像。|  
-|[CMFCToolBarInfo::m\_uiDisabledResID](../Topic/CMFCToolBarInfo::m_uiDisabledResID.md)|包含停用工具列影像工具列點陣圖的資源 ID。|  
-|[CMFCToolBarInfo::m\_uiHotResID](../Topic/CMFCToolBarInfo::m_uiHotResID.md)|包含選取工具列點陣圖的資源 ID \(作用中\) 工具列影像。|  
-|[CMFCToolBarInfo::m\_uiLargeColdResID](../Topic/CMFCToolBarInfo::m_uiLargeColdResID.md)|包含大，規則工具列影像工具列點陣圖的資源 ID。|  
-|[CMFCToolBarInfo::m\_uiLargeDisabledResID](../Topic/CMFCToolBarInfo::m_uiLargeDisabledResID.md)|包含大，停用工具列影像工具列點陣圖的資源 ID。|  
-|[CMFCToolBarInfo::m\_uiLargeHotResID](../Topic/CMFCToolBarInfo::m_uiLargeHotResID.md)|包含大型工具列點陣圖的資源 ID，選取工具列影像。|  
-|[CMFCToolBarInfo::m\_uiMenuDisabledResID](../Topic/CMFCToolBarInfo::m_uiMenuDisabledResID.md)|包含停用功能表影像工具列點陣圖的資源 ID。|  
-|[CMFCToolBarInfo::m\_uiMenuResID](../Topic/CMFCToolBarInfo::m_uiMenuResID.md)|包含功能表影像工具列點陣圖的資源 ID。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|包含規則 （冷） 的工具列影像的工具列點陣圖的資源識別碼。|  
+|[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|包含已停用的工具列影像的工具列點陣圖的資源識別碼。|  
+|[CMFCToolBarInfo::m_uiHotResID](#m_uihotresid)|包含所選 （熱） 的工具列影像的工具列點陣圖的資源識別碼。|  
+|[CMFCToolBarInfo::m_uiLargeColdResID](#m_uilargecoldresid)|包含大型的標準工具列影像的工具列點陣圖的資源識別碼。|  
+|[CMFCToolBarInfo::m_uiLargeDisabledResID](#m_uilargedisabledresid)|工具列點陣圖，其中包含大型的資源識別碼停用工具列影像。|  
+|[CMFCToolBarInfo::m_uiLargeHotResID](#m_uilargehotresid)|包含大型的所選的工具列影像的工具列點陣圖的資源識別碼。|  
+|[CMFCToolBarInfo::m_uiMenuDisabledResID](#m_uimenudisabledresid)|包含已停用的功能表影像的工具列點陣圖的資源識別碼。|  
+|[CMFCToolBarInfo::m_uiMenuResID](#m_uimenuresid)|包含功能表影像的工具列點陣圖的資源識別碼。|  
   
-## 備註  
- 完整的工具列點陣圖包含小型工具列影像 \(按鈕\) 固定大小。   在 `CMFCToolBarInfo` 物件中儲存的每個資源 ID 是以單一狀態包含完整工具列影像的點陣圖 \(，選取，停用的大型影像，或功能表\)。  
+## <a name="remarks"></a>備註  
+ 完整的工具列點陣圖所組成的固定大小的小型工具列影像 （按鈕）。 儲存在每個資源識別碼`CMFCToolBarInfo`物件是包含一組完整的 （適用於範例中，選取、 停用，很大或功能表的影像） 的單一狀態下工具列影像的點陣圖。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CMFCToolBarInfo](../../mfc/reference/cmfctoolbarinfo-class.md)  
   
-## 需求  
- **標題:** afxtoolbar.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxtoolbar.h  
   
-## 請參閱  
+##  <a name="a-namemuicoldresida--cmfctoolbarinfomuicoldresid"></a><a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
+ 指定工具列的所有一般按鈕影像的資源 ID。  
+  
+```  
+UINT m_uiColdResID;  
+```  
+  
+##  <a name="a-namemuidisabledresida--cmfctoolbarinfomuidisabledresid"></a><a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
+ 指定工具列的按鈕無法使用的映像的資源 ID。  
+  
+```  
+UINT m_uiDisabledResID;  
+```  
+  
+##  <a name="a-namemuihotresida--cmfctoolbarinfomuihotresid"></a><a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
+ 指定工具列的所有反白顯示的按鈕影像的資源 ID。  
+  
+```  
+UINT m_uiHotResID  
+```  
+  
+##  <a name="a-namemuilargecoldresida--cmfctoolbarinfomuilargecoldresid"></a><a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
+ 指定工具列的所有規則的大型按鈕影像的資源 ID。  
+  
+```  
+UINT m_uiLargeColdResID  
+```  
+  
+##  <a name="a-namemuilargedisabledresida--cmfctoolbarinfomuilargedisabledresid"></a><a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
+ 指定工具列的所有大型已停用的按鈕影像的資源 ID。  
+  
+```  
+UINT m_uiLargeDisabledResID;  
+```  
+  
+##  <a name="a-namemuilargehotresida--cmfctoolbarinfomuilargehotresid"></a><a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
+ 指定工具列的所有大型反白顯示影像的資源 ID。  
+  
+```  
+UINT m_uiLargeHotResID;  
+```  
+  
+##  <a name="a-namemuimenudisabledresida--cmfctoolbarinfomuimenudisabledresid"></a><a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
+ 指定的工具列命令無法使用的映像的資源 ID。  
+  
+```  
+UINT m_uiMenuDisabledResID;  
+```  
+  
+##  <a name="a-namemuimenuresida--cmfctoolbarinfomuimenuresid"></a><a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
+ 指定工具列的所有規則的功能表項目影像的資源 ID。  
+  
+```  
+UINT m_uiMenuResID;  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBar::LoadToolBarEx](../Topic/CMFCToolBar::LoadToolBarEx.md)
+ [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)
+

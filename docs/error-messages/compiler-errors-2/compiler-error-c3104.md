@@ -1,38 +1,54 @@
 ---
-title: "編譯器錯誤 C3104 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3104"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3104"
+title: "編譯器錯誤 C3104 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3104
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 編譯器錯誤 C3104
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="compiler-error-c3104"></a>編譯器錯誤 C3104
 不合法的屬性引數  
   
- 您對屬性指定了無效的引數。  
+ 您指定無效的引數的屬性。  
   
- 如需詳細資訊，請參閱[Attribute Parameter Types](../../windows/attribute-parameter-types-cpp-component-extensions.md)。  
+ 請參閱[屬性參數類型](../../windows/attribute-parameter-types-cpp-component-extensions.md)如需詳細資訊。  
   
- 對 Visual C\+\+ 2005 的編譯器完成一致性處理後可能會發生這項錯誤：傳遞 Managed 陣列給自訂屬性時，陣列的型別不再是從彙總初始設定清單中推算得出。  現在編譯器要求您指定陣列的型別以及初始設定式清單。  
+ 此錯誤可能會產生編譯器一致性工作讓 Visual c + + 2005 所完成之︰ 時將 managed 的陣列傳遞至自訂屬性，從彙總初始化清單不會再推算的類型陣列。 編譯器現在會要求您指定的陣列，以及初始設定式清單型別。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3104。  
   
 ```  
@@ -52,7 +68,7 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3104。  
   
 ```  
@@ -79,27 +95,4 @@ ref class B {};
 [A(0)]  
 ref class B {};  
 ```  
-  
-## 範例  
- 下列範例會產生 C3104。  
-  
-```  
-// C3104c.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-  
-[ attribute(Class) ]  
-public __gc class AnotherAttr {  
-public:  
-   AnotherAttr(Object* arr __gc[]) : var0(arr) {}  
-   Object* var1 __gc[];  
-   Object* var0 __gc[];  
-};  
-  
-[ AnotherAttr( { __box(3.14159), S"pi" }, var1 = { S"a", S"b" } ) ]   // C3104  
-public __gc class Class1 {};  
-  
-// OK  
-[ AnotherAttr( new Object * __gc[] {__box(3.14159), S"pi" }, var1 = new Object * __gc[] { S"a", S"b" } ) ]  
-public __gc class Class2 {};  
-```
+

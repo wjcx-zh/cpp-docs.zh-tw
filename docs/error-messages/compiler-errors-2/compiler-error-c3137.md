@@ -1,34 +1,50 @@
 ---
-title: "編譯器錯誤 C3137 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3137"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3137"
+title: "編譯器錯誤 C3137 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3137
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3137
 ms.assetid: 70bb1313-2e87-43ed-a0d8-33fa6ff475e4
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 編譯器錯誤 C3137
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 5fcf26ea1a5cb2565a1ad343536a86f0fb26ba08
+ms.lasthandoff: 02/24/2017
 
-'property' : 無法初始化屬性  
+---
+# <a name="compiler-error-c3137"></a>編譯器錯誤 C3137
+'property': 無法初始化屬性  
   
- 例如，屬性無法在建構函式的初始化清單中初始化。  
+ 屬性無法初始化，比方說，在建構函式的初始化清單中。  
   
- 下列範例會產生 C3137：  
+ 下列範例會產生 C3137:  
   
 ```  
 // C3137.cpp  
@@ -49,23 +65,4 @@ public:
    }  
 };  
 ```  
-  
- 下列範例會產生 C3137：  
-  
-```  
-// C3137_2.cpp  
-// compile with: /clr:oldSyntax /c  
-__gc class CMyClass {  
-public:  
-   __property int get_Size() {  
-      return 0;  
-   }  
-   __property void set_Size(int i) {}  
-  
-   CMyClass() : Size(1) {   // C3137  
-      // to resolve this C3137, remove the initializer from the  
-      // ctor declaration and perform the assignment as follows  
-      // Size = 1;  
-   }  
-};  
-```
+

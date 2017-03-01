@@ -1,52 +1,46 @@
 ---
-title: "編譯器錯誤 C2845 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2845"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2845"
+title: "編譯器錯誤 C2845 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2845
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2845
 ms.assetid: 31b28ee9-978f-403b-94d8-dbaacd24cce0
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2845
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: edb941c3c8f3481fc31ab6af6fec446c7722a74f
+ms.lasthandoff: 02/24/2017
 
-'operator' : 這個型別上不允許指標算術  
+---
+# <a name="compiler-error-c2845"></a>編譯器錯誤 C2845
+'operator': 不允許這種類型的指標算術  
   
- 您不能遞增指向 Managed 類別的指標。  
-  
- **Managed Extensions for C\+\+**  
-  
- 您不能遞增指向 [\_\_gc](../../misc/gc.md) 類別的指標。而且，字串運算子只有用 **\/clr** 才有效 \(不是 **\/clr:oldSyntax**\)。  
-  
- 下列範例會產生 C2845：  
-  
-```  
-// C2845b.cpp  
-// compile with: /clr:oldSyntax  
-using namespace System;  
-__gc class X {};  
-  
-int main() {  
-   X *pX = new X;  
-   pX++;   // C2845  
-  
-   String * a = new String("abc");  
-   String * b = new String("def");  
-   Console::WriteLine(a + b);   // C2845 not with /clr:oldSyntax  
-}  
-```
+ 您無法遞增 managed 類別的指標。  
+

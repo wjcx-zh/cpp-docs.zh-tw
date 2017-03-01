@@ -1,48 +1,63 @@
 ---
-title: "嚴重錯誤 C1092 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1092"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1092"
+title: "嚴重錯誤 C1092 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1092
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 嚴重錯誤 C1092
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
+ms.openlocfilehash: 6d93fd662b638126e21d5f5f034138c0e6f0e0ad
+ms.lasthandoff: 02/24/2017
 
-編輯後繼續不支援對資料型別的變更；需要建置  
+---
+# <a name="fatal-error-c1092"></a>嚴重錯誤 C1092
+編輯後繼續不支援對資料類型的變更; 需要先進行建置  
   
- 您在上次成功組建時變更或加入了一個資料型別。  
+ 變更或新增的最後一個成功組建後的資料型別。  
   
--   編輯後繼續並不支援現有資料型別 \(包括類別、結構或列舉定義\) 的變更。  您必須停止偵錯，並建置應用程式。  
+-   編輯後繼續 不支援變更現有的資料類型，包括類別、 結構或列舉的定義。 您必須停止偵錯，並建置應用程式。  
   
--   編輯後繼續在程式資料庫檔 \(例如，vc*x*0.pdb，此處的 *x* 是指正在使用 Visual C\+\+ 主要版本\) 是唯讀時，不支援新加入的資料型別。  若要加入資料型別，編譯器必須在寫入模式開啟 .pdb 檔。  
+-   編輯後繼續 不支援附加新資料型別如果程式資料庫檔案，例如 vc*x*0.pdb (其中*x*是使用中的主要版本的 Visual c + +) 是唯讀的。 若要加入資料型別，編譯器必須在寫入模式中開啟的.pdb 檔。  
   
-### 若要不結束目前的偵錯工作階段來移除這個錯誤  
+### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>若要移除此錯誤，而不需要結束目前的偵錯工作階段  
   
-1.  請將資料型別改回錯誤發生之前的狀態。  
+1.  請將資料類型改回錯誤之前的狀態。  
   
-2.  從 \[**偵錯**\] 功能表選擇 \[**套用程式碼變更**\]。  
+2.  從 [偵錯]  功能表選擇 [套用程式碼變更] 。  
   
-### 若要移除此錯誤但不更改您的程式碼  
+### <a name="to-remove-this-error-without-changing-your-source-code"></a>移除這個錯誤，而不變更您的原始程式碼  
   
-1.  從 \[**偵錯**\] 功能中表選擇 \[**停止偵錯**\]。  
+1.  從 [偵錯]  功能表選擇 [停止偵錯] 。  
   
-2.  從 \[**建置**\] 功能表上，選擇 \[**建置**\]。  
+2.  從 [建置]  功能表選擇 [建置] 。  
   
- 如需詳細資訊，請參閱[支援的程式碼變更](../Topic/Supported%20Code%20Changes%20\(C++\).md)。
+ 如需詳細資訊，請參閱[支援的程式碼變更](/visualstudio/debugger/supported-code-changes-cpp)。

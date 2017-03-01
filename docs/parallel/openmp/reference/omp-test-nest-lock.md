@@ -1,33 +1,48 @@
 ---
-title: "omp_test_nest_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_test_nest_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_test_nest_lock OpenMP function"
+title: "omp_test_nest_lock |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- omp_test_nest_lock
+dev_langs:
+- C++
+helpviewer_keywords:
+- omp_test_nest_lock OpenMP function
 ms.assetid: 4c909bbe-80e0-4100-aca6-d415d7dc5294
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# omp_test_nest_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 61f1a227400354a9d8c22f87e14093e6992a950e
+ms.lasthandoff: 02/24/2017
 
-嘗試設定 nestable 的鎖定，但不會封鎖執行緒的執行。  
+---
+# <a name="omptestnestlock"></a>omp_test_nest_lock
+嘗試設定可巢狀的鎖定，但不會封鎖執行緒的執行。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int omp_test_nest_lock(  
@@ -35,16 +50,16 @@ int omp_test_nest_lock(
 );  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
  `lock`  
- 型別的變數[omp\_nest\_lock\_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) ，初始化時[omp\_init\_nest\_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)。  
+ 型別的變數[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)初始化與[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)。  
   
-## 備註  
- 如需詳細資訊，請參閱 [3.2.5 omp\_test\_lock and omp\_test\_nest\_lock Functions](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。  
+## <a name="remarks"></a>備註  
+ 如需詳細資訊，請參閱[3.2.5 omp_test_lock 和 omp_test_nest_lock 函式](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_test_nest_lock.cpp  
@@ -82,36 +97,39 @@ int main() {
 }  
 ```  
   
-  **取得執行緒 1\-nestable\_lock**  
-**執行緒 0\-無法取得 nestable\_lock**  
-**一次取得執行緒 1\-nestable\_lock**  
-**執行緒 0\-無法取得 nestable\_lock**  
-**釋放執行緒 1\-nestable\_lock**  
-**執行緒 0\-無法取得 nestable\_lock**  
-**釋放執行緒 1\-nestable\_lock**  
-**執行緒 0\-無法取得 nestable\_lock**  
-**取得執行緒 3\-nestable\_lock**  
-**執行緒 0\-無法取得 nestable\_lock**  
-**一次取得執行緒 3\-nestable\_lock**  
-**執行緒 0\-無法取得 nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**釋放執行緒 3\-nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**釋放執行緒 3\-nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**取得執行緒 0\-nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**一次取得執行緒 0\-nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**釋放執行緒 0\-nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**釋放執行緒 0\-nestable\_lock**  
-**執行緒 2\-無法取得 nestable\_lock**  
-**取得執行緒 2\-nestable\_lock**  
-**一次取得執行緒 2\-nestable\_lock**  
-**釋放執行緒 2\-nestable\_lock**  
-**釋放執行緒 2\-nestable\_lock**   
-## 請參閱  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 1 - acquired nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - acquired nestable_lock again  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - released nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - released nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 3 - acquired nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 3 - acquired nestable_lock again  
+Thread 0 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 3 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 3 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - acquired nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - acquired nestable_lock again  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - acquired nestable_lock  
+Thread 2 - acquired nestable_lock again  
+Thread 2 - released nestable_lock  
+Thread 2 - released nestable_lock  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [函式](../../../parallel/openmp/reference/openmp-functions.md)

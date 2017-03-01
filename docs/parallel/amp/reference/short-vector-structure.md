@@ -1,36 +1,52 @@
 ---
-title: "short_vector 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::short_vector"
-dev_langs: 
-  - "C++"
+title: "short_vector 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::short_vector
+dev_langs:
+- C++
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
 caps.latest.revision: 7
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# short_vector 結構
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
+ms.openlocfilehash: f8df5600c8af80b4d279fc1fde0cc4c2ab9337eb
+ms.lasthandoff: 02/24/2017
 
-short\_vector 提供對於 short vectors 泛型程式設計非常有用的 metaprogramming 定義。  
+---
+# <a name="shortvector-structure"></a>short_vector 結構
+short_vector 提供 metaprogramming 定義適用於一般程式設計短向量的定義。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-template<  
-   typename _Scalar_type,  
-   int _Size  
+template<
+    typename _Scalar_type,  
+    int _Size  
 >  
 struct short_vector;  
 template<>  
@@ -83,31 +99,38 @@ template<>
 struct short_vector<double, 4>;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_Scalar_type`  
  `_Size`  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用 Typedefs  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
 |名稱|描述|  
-|--------|--------|  
+|----------|-----------------|  
 |`type`||  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[short\_vector::short\_vector 建構函式](../Topic/short_vector::short_vector%20Constructor.md)||  
+|----------|-----------------|  
+|[short_vector:: short_vector 建構函式](#ctor)||  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `short_vector`  
   
-## 需求  
- **標頭:** amp\_short\_vectors.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** amp_short_vectors.h  
   
- **命名空間:**  Concurrency::graphics  
+ **命名空間︰** concurrency:: graphics  
   
-## 請參閱  
- [Concurrency::graphics 命名空間](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora--shortvectorshortvector-constructor"></a><a name="ctor"></a>short_vector:: short_vector 建構函式  
+  
+```  
+short_vector();
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+

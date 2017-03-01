@@ -1,59 +1,74 @@
 ---
-title: "reduction | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reduction"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reduction OpenMP clause"
+title: "減少 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- reduction
+dev_langs:
+- C++
+helpviewer_keywords:
+- reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# reduction
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: c9b2d13ac10005590c51275cc9ecbab0407e5a9e
+ms.lasthandoff: 02/24/2017
 
-指定給每個執行緒的私用的一或多個變數都是在平行區域結尾處的縮減作業的主體。  
+---
+# <a name="reduction"></a>reduction
+指定私用的每個執行緒的一個或多個變數是降低作業平行區域結尾處的主題。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reduction(operation:var)  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
  `operation`  
- 如果要在變數上執行作業的運算子 \(`var`\) 在平行區域結尾處。  
+ 在變數上執行作業的運算子 (`var`) 結尾的平行區域。  
   
  `var`  
- 在其上執行純量減少一個以上的變數。  如果指定一個以上的變數，請以逗號分隔變數名稱。  
+ 在其上執行純量減少一個以上的變數。 如果指定多個變數，請以逗號分隔變數名稱。  
   
-## 備註  
- `reduction`適用於下列指示詞：  
+## <a name="remarks"></a>備註  
+ `reduction`適用於下列指示詞︰  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [parallel](../../../parallel/openmp/reference/parallel.md)  
+-   [平行](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 如需詳細資訊，請參閱 [2.7.2.6 reduction](../../../parallel/openmp/2-7-2-6-reduction.md)。  
+ 如需詳細資訊，請參閱[2.7.2.6 減少](../../../parallel/openmp/2-7-2-6-reduction.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_reduction.cpp  
@@ -160,7 +175,11 @@ int main( )
 }  
 ```  
   
-  **平行的區段是平行執行四次。  連續整數介於 1 到 10 的總和是 55**  
-**所有的函式，透過成功的 func5 func1\!**    
-## 請參閱  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+The parallel section was executed 4 times in parallel.  
+The sum of the consecutive integers from 1 to 10, is 55  
+All of the the functions, func1 through func5 succeeded!  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -1,33 +1,48 @@
 ---
-title: "omp_set_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_nested OpenMP function"
+title: "omp_set_nested |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- omp_set_nested
+dev_langs:
+- C++
+helpviewer_keywords:
+- omp_set_nested OpenMP function
 ms.assetid: fa1cb08c-7b8b-42c9-8654-2c33dcffb5b6
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# omp_set_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: d120c4eca49a917cb34fc3b8a873c08f5e2815eb
+ms.lasthandoff: 02/24/2017
 
-可讓巢狀的平行處理。  
+---
+# <a name="ompsetnested"></a>omp_set_nested
+可讓巢狀平行處理原則。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void omp_set_nested(  
@@ -35,24 +50,24 @@ void omp_set_nested(
 );  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
  `val`  
- 如果不為零，可讓巢狀的平行處理原則。  如果是零，會停用巢狀的平行處理原則。  
+ 如果是非零值，可讓巢狀平行處理原則。 如果為零，會停用巢狀平行處理原則。  
   
-## 備註  
- 巢狀的 OMP 平行處理可以開啟與`omp_set_nested`，或藉由設定[OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md)環境變數。  
+## <a name="remarks"></a>備註  
+ 巢狀 OMP 平行處理原則可以開啟的`omp_set_nested`，或藉由設定[OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md)環境變數。  
   
- 將`omp_set_nested`將會覆寫的設定值`OMP_NESTED`環境變數。  
+ 設定`omp_set_nested`會覆寫的設定`OMP_NESTED`環境變數。  
   
- 啟用時，環境變數可以中斷否則操作的程式，因為在巢狀處理平行區域以指數方式增加執行緒數量。  例如 OMP 設定為 4 的執行緒數目與 6 倍進行遞迴需要 4096 \(4 \/ 6 次方\) 的函式執行緒在一般情況下，如果執行緒的數目超過處理器數目，將會降低應用程式的效能。  此例外的情況就是應用程式的 I\/O 繫結。  
+ 啟用時，環境變數可以中斷否則操作的程式，因為巢狀平行區域時，執行緒的數目以指數方式增加。  例如 6 次與 OMP 設為 4 的執行緒數目進行遞迴需要 4096 (4 到 6 乘) 的函式的一般執行緒，您的應用程式的效能會降低，如果執行緒數目超過處理器的數目。 I/O 繫結應用程式是一個例外狀況。  
   
- 使用[omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md)以顯示目前設定的`omp_set_nested`。  
+ 使用[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)以顯示目前的設定`omp_set_nested`。  
   
- 如需詳細資訊，請參閱 [3.1.9 omp\_set\_nested Function](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)。  
+ 如需詳細資訊，請參閱[3.1.9 omp_set_nested 函式](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_set_nested.cpp  
@@ -73,7 +88,10 @@ int main( )
 }  
 ```  
   
-  **1**  
-**1**   
-## 請參閱  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [函式](../../../parallel/openmp/reference/openmp-functions.md)

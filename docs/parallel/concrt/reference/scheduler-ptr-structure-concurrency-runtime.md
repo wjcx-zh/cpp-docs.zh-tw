@@ -1,63 +1,117 @@
 ---
-title: "scheduler_ptr 結構 (並行執行階段) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pplinterface/concurrency::scheduler_ptr"
-dev_langs: 
-  - "C++"
+title: "scheduler_ptr 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pplinterface/concurrency::scheduler_ptr
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# scheduler_ptr 結構 (並行執行階段)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 022b5fafc437a8103fe17967a9a5ea54d5b82a39
+ms.lasthandoff: 02/24/2017
 
-表示排程器的指標。  這個類別是為了使用 shared\_ptr 或使用原始指標的簡單參考，允許共用存留期的規格。  
+---
+# <a name="schedulerptr-structure"></a>scheduler_ptr 結構
+代表排程器的指標。 這個類別是為了允許使用 shared_ptr 共用存留期的規格，或只是使用原始指標的簡單參考。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+struct scheduler_ptr;
 ```  
-struct scheduler_ptr;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[scheduler\_ptr::scheduler\_ptr 建構函式 \(並行執行階段\)](../Topic/scheduler_ptr::scheduler_ptr%20Constructor%20\(Concurrency%20Runtime\).md)|多載。  從排程器 shared\_ptr 建立排程器指標|  
+|名稱|說明|  
+|----------|-----------------|  
+|[scheduler_ptr:: scheduler_ptr 建構函式](#ctor)|多載。 從排程器 shared_ptr 建立排程器指標|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[scheduler\_ptr::get 方法 \(並行執行階段\)](../Topic/scheduler_ptr::get%20Method%20\(Concurrency%20Runtime\).md)|傳回排程器的原始指標|  
+|----------|-----------------|  
+|[scheduler_ptr:: get 方法](#get)|傳回排程器的原始指標|  
   
-### 公用運算子  
+### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
-|--------|--------|  
-|[scheduler\_ptr::operator bool 運算子 \(並行執行階段\)](../Topic/scheduler_ptr::operator%20bool%20Operator%20\(Concurrency%20Runtime\).md)|測試排程器指標是否為非 null|  
-|[scheduler\_ptr::operator\-\> 運算子 \(並行執行階段\)](../Topic/scheduler_ptr::operator-%3E%20Operator%20\(Concurrency%20Runtime\).md)|作用如同指標|  
+|----------|-----------------|  
+|[scheduler_ptr:: operator bool 運算子](#operator_bool)|測試排程器指標是否為非 null|  
+|[scheduler_ptr:: operator-&gt;運算子](#operator_ptr)|作用如同指標|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `scheduler_ptr`  
   
-## 需求  
- **標頭：**pplinterface.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** pplinterface.h  
   
- **命名空間：**concurrency  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namegeta--schedulerptrget-method"></a><a name="get"></a>scheduler_ptr:: get 方法  
+ 傳回排程器的原始指標  
+  
+```
+scheduler_interface* get() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+##  <a name="a-nameoperatorboola--schedulerptroperator-bool"></a><a name="operator_bool"></a>scheduler_ptr:: operator bool   
+ 測試排程器指標是否為非 null  
+  
+'' 運算子 bool() const;
+```  
+  
+##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;   
+ Behave like a pointer  
+  
+```
+scheduler_interface * operator->() const;
+```  
+  
+### Return Value  
+  
+##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor  
+ Creates a scheduler pointer from shared_ptr to scheduler  
+  
+```
+明確 scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);</scheduler_interface>
+
+明確 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
+```  
+  
+### Parameters  
+ `scheduler`  
+ `pScheduler`  
+  
+## See Also  
+ [concurrency Namespace](concurrency-namespace.md)
+

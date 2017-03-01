@@ -1,43 +1,59 @@
 ---
-title: "編輯訊息處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.editing.msghandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "訊息處理常式"
-  - "訊息處理, 編輯處理常式"
+title: "編輯訊息處理常式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.editing.msghandler
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers
+- message handling, editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 編輯訊息處理常式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
+ms.openlocfilehash: e9befbe9bf05623b3ecd05248985dd74f2526b43
+ms.lasthandoff: 02/24/2017
 
-一旦定義訊息處理常式後，您就可以至成員函式的定義，加入或修改程式碼。  
+---
+# <a name="editing-a-message-handler"></a>編輯訊息處理常式
+一旦您已定義的訊息處理常式，您可以移至 新增或修改程式碼的成員函式的定義。  
   
- 若要從[對話方塊編輯器](../../mfc/dialog-editor.md)移至成員 \(Member\) 函式定義，請按兩下已定義處理常式的控制項。  這會讓您巡覽至已定義所選控制項的訊息處理常式的檔案。  
+ 若要跳至從成員函式定義[對話方塊編輯器](../../windows/dialog-editor.md)，按兩下的控制項，已經定義處理常式。 這會瀏覽您選取之的控制項的訊息處理常式定義所在的檔案。  
   
- 若要從[類別檢視](http://msdn.microsoft.com/zh-tw/8d7430a9-3e33-454c-a9e1-a85e3d2db925)移至成員函式定義，請按兩下 \[類別檢視\] 中的函式名稱。  
+ 若要跳至從成員函式定義[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，連按兩下 類別檢視中的函式名稱。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   
  [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
  [加入成員變數](../../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫 Virtual 函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
  [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)   
  [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+

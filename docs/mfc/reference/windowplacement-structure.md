@@ -1,91 +1,108 @@
 ---
-title: "WINDOWPLACEMENT 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WINDOWPLACEMENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WINDOWPLACEMENT 結構"
+title: "WINDOWPLACEMENT 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WINDOWPLACEMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- WINDOWPLACEMENT structure
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# WINDOWPLACEMENT 結構
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 62cf7003f43d50d5998dd527ae5ad7b10ab95686
+ms.lasthandoff: 02/24/2017
 
-`WINDOWPLACEMENT` 結構包含視窗位置資訊在螢幕**.**的  
+---
+# <a name="windowplacement-structure"></a>WINDOWPLACEMENT 結構
+`WINDOWPLACEMENT`結構包含在螢幕上視窗的詳細資訊**。**  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      typedef struct tagWINDOWPLACEMENT {     /* wndpl */  
-   UINT length;  
-   UINT flags;  
-   UINT showCmd;  
-   POINT ptMinPosition;  
-   POINT ptMaxPosition;  
-   RECT rcNormalPosition;  
+typedef struct tagWINDOWPLACEMENT {     /* wndpl */  
+    UINT length;  
+    UINT flags;  
+    UINT showCmd;  
+    POINT ptMinPosition;  
+    POINT ptMaxPosition;  
+    RECT rcNormalPosition;  
 } WINDOWPLACEMENT;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *length*  
- 以位元組為單位\)，指定這個結構的長度，**.**  
+ 指定長度，以位元組為單位結構**。**  
   
  `flags`  
- 指定控制項最小化的視窗位置和方法視窗還原的旗標。  這個成員可以是下列旗標之一或兩個:  
+ 指定旗標可控制最小化的視窗和還原視窗的方法的位置。 這個成員可以是其中一個或多個下列旗標︰  
   
--   **WPF\_SETMINPOSITION** 指定最小化視窗的 X 和 Y 位置可以是指定的**.**必須指定這個旗標座標是否在 **ptMinPosition** 成員設定。  
+- **WPF_SETMINPOSITION**指定 x-和 y-位置的最小化視窗，可以指定**。** 這個旗標必須是指定是否座標設定**ptMinPosition**成員。  
   
--   **WPF\_RESTORETOMAXIMIZED** 指定還原的視窗會最大化，不論它是否為最大化，在最小化之前。  只有在下次視窗還原，這個設定是否有效。  它不會變更預設復原行為。  只有在 **SW\_SHOWMINIMIZED** 值為 **showCmd** 成員時，指定這個旗標才有效。  
+- **WPF_RESTORETOMAXIMIZED**指定，還原的視窗會最大化，不論它大化之前已降至最低。 這項設定正確。 只能在下一次還原視窗 它不會變更預設還原行為。 這個旗標是時才有效**SW_SHOWMINIMIZED**為指定值**showCmd**成員。  
   
  *showCmd*  
- 指定視窗目前的顯示狀態。  這個成員可以是下列其中一個值:  
+ 指定目前的視窗顯示狀態。 這個成員可以是下列值之一︰  
   
--   **SW\_HIDE** 隱藏視窗並將啟動到另一個視窗。  
+- **SW_HIDE**隱藏視窗，並將啟用傳遞至另一個視窗。  
   
--   指定**SW\_MINIMIZE** 最小化的視窗並啟動系統中清單的最上層視窗。  
+- **SW_MINIMIZE**指定的視窗最小化，並啟動系統的清單中的最上層視窗。  
   
--   **SW\_RESTORE** 啟動並顯示視窗。  如果視窗最小化或最大化，視窗還原成其原始大小和位置 \(和 **SW\_SHOWNORMAL**相同\)。  
+- **SW_RESTORE**啟動以及顯示的視窗。 如果視窗是最小化或最大化時，Windows 將它還原至其原始大小和位置 (與相同**SW_SHOWNORMAL**)。  
   
--   **SW\_SHOW** 啟動視窗並顯示其目前的大小和位置。  
+- **SW_SHOW**啟動視窗，並顯示在其目前的大小和位置。  
   
--   **SW\_SHOWMAXIMIZED** 啟動視窗並將它顯示為最大化的視窗。  
+- **SW_SHOWMAXIMIZED**啟動視窗，顯示最大化視窗。  
   
--   **SW\_SHOWMINIMIZED** 啟動視窗並將它顯示為圖示。  
+- **SW_SHOWMINIMIZED**啟動視窗，顯示為圖示。  
   
--   **SW\_SHOWMINNOACTIVE** 視窗顯示為圖示。  作用中目前作用中的視窗。  
+- **SW_SHOWMINNOACTIVE**以圖示顯示的視窗。 目前使用中視窗保持作用中。  
   
--   **SW\_SHOWNA** 處於目前狀態的顯示視窗。  作用中目前作用中的視窗。  
+- **SW_SHOWNA**處於目前狀態顯示的視窗。 目前使用中視窗保持作用中。  
   
--   **SW\_SHOWNOACTIVATE** 顯示其重新調整大小和位置的視窗。  作用中目前作用中的視窗。  
+- **SW_SHOWNOACTIVATE**顯示視窗的最新的大小和位置。 目前使用中視窗保持作用中。  
   
--   **SW\_SHOWNORMAL** 啟動並顯示視窗。  如果視窗最小化或最大化，視窗還原成其原始大小和位置 \(和 **SW\_RESTORE**相同\)。  
+- **SW_SHOWNORMAL**啟動以及顯示的視窗。 如果視窗是最小化或最大化時，Windows 將它還原至其原始大小和位置 (與相同**SW_RESTORE**)。  
   
  *ptMinPosition*  
- 當視窗最小化時，指定視窗左上角的位置。  
+ 當視窗最小化時，請指定視窗的左上角的位置。  
   
  `ptMaxPosition`  
- 當視窗最大化時，指定視窗左上角的位置。  
+ 當視窗最大化時，請指定視窗的左上角的位置。  
   
  *rcNormalPosition*  
- 指定視窗的座標，則視窗在 Normal \(已還原\) 位置。  
+ 當視窗在正常 （還原） 的位置，請指定視窗的座標。  
   
-## 需求  
- **Header:** 中  
+## <a name="requirements"></a>需求  
+ **標頭：** winuser.h  
   
-## 請參閱  
- [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CWnd::SetWindowPlacement](../Topic/CWnd::SetWindowPlacement.md)
+## <a name="see-also"></a>另請參閱  
+ [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CWnd::SetWindowPlacement](../../mfc/reference/cwnd-class.md#setwindowplacement)
+
+

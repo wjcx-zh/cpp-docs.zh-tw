@@ -1,57 +1,88 @@
 ---
-title: "invalid_operation 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::invalid_operation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invalid_operation 類別"
+title: "invalid_operation 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::invalid_operation
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# invalid_operation 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 0484e149409b2515f60b2e9aa34a85d5381e05a5
+ms.lasthandoff: 02/24/2017
 
-這個類別會描述例外狀況擲回執行無效的作業時，更精確地不是由另一個並行執行階段擲回的例外狀況型別描述。  
+---
+# <a name="invalidoperation-class"></a>invalid_operation 類別
+這個類別描述執行無效的作業，且並行執行階段擲回的另一個例外狀況類型未正確描述該作業時，所擲回的例外狀況。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class invalid_operation : public std::exception;
 ```  
-class invalid_operation : public std::exception;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[invalid\_operation::invalid\_operation 建構函式](../Topic/invalid_operation::invalid_operation%20Constructor.md)|多載。  建構 `invalid_operation` 物件。|  
+|----------|-----------------|  
+|[invalid_operation 建構函式](#ctor)|多載。 建構 `invalid_operation` 物件。|  
   
-## 備註  
- 會擲回這個例外狀況的各種方法通常會記錄它們擲回此例外狀況的情形。  
+## <a name="remarks"></a>備註  
+ 擲回這個例外狀況的各種方法，通常會記錄它們擲回此例外狀況的情形。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
   
  `invalid_operation`  
   
-## 需求  
- **標頭：** concrt.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** concrt.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namectora-invalidoperation"></a><a name="ctor"></a>invalid_operation 
+
+ 建構 `invalid_operation` 物件。  
+  
+```
+explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
+
+invalid_operation() throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Message`  
+ 錯誤的描述性訊息。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)
+

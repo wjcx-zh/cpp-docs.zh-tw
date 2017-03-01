@@ -1,84 +1,127 @@
 ---
-title: "task_handle 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::task_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "task_handle 類別"
+title: "task_handle 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::task_handle
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# task_handle 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
+ms.lasthandoff: 02/24/2017
 
-`task_handle` 類別代表個別的平行工作項目。  它會封裝執行工作所需的指示和資料。  
+---
+# <a name="taskhandle-class"></a>task_handle 類別
+`task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-template<  
-   typename _Function  
+template<
+    typename _Function  
 >  
 class task_handle : public ::Concurrency::details::_UnrealizedChore;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_Function`  
- 欲叫用以執行`task_handle`物件代表之工作的函式物件的類型。  
+ 將要叫用以執行該工作所表示的函式物件型別`task_handle`物件。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
-  
-|名稱|描述|  
-|--------|--------|  
-|[task\_handle::task\_handle 建構函式](../Topic/task_handle::task_handle%20Constructor.md)|建構新的 `task_handle` 物件。  工作的工作是透過教用建構函式當作參數的函式來執行的。|  
-|[task\_handle::~task\_handle 解構函式](../Topic/task_handle::~task_handle%20Destructor.md)|終結 `task_handle` 物件。|  
-  
-### 公用運算子  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[task\_handle::operator\(\) 運算子](../Topic/task_handle::operator\(\)%20Operator.md)|函式會呼叫運算子，執行階段會叫用此運算子來執行工作控制代碼的工作。|  
+|----------|-----------------|  
+|[task_handle 建構函式](#ctor)|建構新`task_handle`物件。 藉由叫用指定做為參數的建構函式的函式執行工作的工作。|  
+|[~ task_handle 解構函式](#dtor)|終結`task_handle`物件。|  
   
-## 備註  
- `task_handle` 物件可用來配合 `structured_task_group` 或更一般的 `task_group` 物件，將工作分解成平行的工作。  如需詳細資訊，請參閱 [工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+### <a name="public-operators"></a>公用運算子  
   
- 請注意，`task_handle` 物件的建立者負責維護所建立之 `task_handle` 物件的存留期，直到不再並行執行階段不再需要此物件。  通常，這表示 `task_handle` 物件不能解構，直到呼叫該物件佇列之 `task_group` 或 `structured_task_group` 的 `wait`或`run_and_wait`方法為止。  
+|名稱|描述|  
+|----------|-----------------|  
+|[operator （) 運算子](#task_handle__operator_call)|執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。|  
   
- `task_handle` 物件通常會與 C \+ \+ Lambdas 一起使用。  因為不知道 Lambda 的真正型別，因此 [make\_task](../Topic/make_task%20Function.md) 函式通常用來建立 `task_handle` 物件。  
+## <a name="remarks"></a>備註  
+ `task_handle`物件可以用於搭配`structured_task_group`或多個一般`task_group`物件，用來將工作分解成平行工作。 如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
- 執行階段會建立傳遞給 `task_handle` 物件的工作函式複本。  因此，在您傳遞給 `task_handle` 物件之函式物件中發生的任何狀態變更都不會在該函式物件的複本中出現。  
+ 請注意，建立者`task_handle`物件負責維護所建立的存留期`task_handle`物件，直到它已不再需要由並行執行階段。 通常，這表示`task_handle`物件必須不解構直到`wait`或`run_and_wait`方法`task_group`或`structured_task_group`呼叫的佇列。  
   
-## 繼承階層架構  
+ `task_handle`物件通常用於搭配 c + + lambda。 因為您不知道真正的 lambda 類型[make_task](concurrency-namespace-functions.md#make_task)函式通常用來建立`task_handle`物件。  
+  
+ 執行階段會建立一份工作函式傳遞至`task_handle`物件。 因此，任何狀態變更發生在函數中的物件將傳遞至`task_handle`物件將不會顯示該函式物件的複本中。  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `task_handle`  
   
-## 需求  
- **標頭：** ppl.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** ppl.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [task\_group 類別](../Topic/task_group%20Class.md)   
- [structured\_task\_group 類別](../../../parallel/concrt/reference/structured-task-group-class.md)   
- [make\_task 函式](../Topic/make_task%20Function.md)   
- [task\_group::run 方法](../Topic/task_group::run%20Method.md)   
- [task\_group::wait 方法](../Topic/task_group::wait%20Method.md)   
- [task\_group::run\_and\_wait 方法](../Topic/task_group::run_and_wait%20Method.md)   
- [structured\_task\_group::run 方法](../Topic/structured_task_group::run%20Method.md)   
- [structured\_task\_group::wait 方法](../Topic/structured_task_group::wait%20Method.md)   
- [structured\_task\_group::run\_and\_wait 方法](../Topic/structured_task_group::run_and_wait%20Method.md)
+##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>operator （) 
+
+ 執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。  
+  
+```  
+void operator()() const;
+
+ 
+```  
+  
+##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+
+ 建構新`task_handle`物件。 藉由叫用指定做為參數的建構函式的函式執行工作的工作。  
+  
+```  
+task_handle(const _Function& _Func);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Func`  
+ 將要叫用以執行該工作所表示的函式`task_handle`物件。 這可能是 lambda 仿函式，函式指標，或任何物件支援的版本與簽章的函式呼叫運算子`void operator()()`。  
+  
+### <a name="remarks"></a>備註  
+ 執行階段會建立一份工作函式傳遞至建構函式。 因此，任何狀態變更發生在函數中的物件將傳遞至`task_handle`物件將不會顯示該函式物件的複本中。  
+  
+##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+
+ 終結`task_handle`物件。  
+  
+```  
+~task_handle();
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)   
+ [task_group 類別](task-group-class.md)   
+ [structured_task_group 類別](structured-task-group-class.md)
+

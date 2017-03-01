@@ -1,57 +1,86 @@
 ---
-title: "improper_scheduler_detach 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::improper_scheduler_detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "improper_scheduler_detach 類別"
+title: "improper_scheduler_detach 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::improper_scheduler_detach
+dev_langs:
+- C++
+helpviewer_keywords:
+- improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# improper_scheduler_detach 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 6a4bb4be90966f3abed8792bfbef086e7b399922
+ms.lasthandoff: 02/24/2017
 
-這個類別會描述例外狀況擲回的時機`CurrentScheduler::Detach`內容尚未附加到使用任何排程器上呼叫方法`Attach`方法的`Scheduler`物件。  
+---
+# <a name="improperschedulerdetach-class"></a>improper_scheduler_detach 類別
+這個類別描述當尚未使用 `Scheduler` 物件的 `Attach` 方法將內容附加至任何排程器時呼叫 `CurrentScheduler::Detach` 方法所擲回的例外狀況。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class improper_scheduler_detach : public std::exception;
 ```  
-class improper_scheduler_detach : public std::exception;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[improper\_scheduler\_detach::improper\_scheduler\_detach 建構函式](../Topic/improper_scheduler_detach::improper_scheduler_detach%20Constructor.md)|多載。  建構 `improper_scheduler_detach` 物件。|  
+|----------|-----------------|  
+|[improper_scheduler_detach 建構函式](#ctor)|多載。 建構 `improper_scheduler_detach` 物件。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
   
  `improper_scheduler_detach`  
   
-## 需求  
- **標頭：** concrt.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** concrt.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Scheduler 類別](../../../parallel/concrt/reference/scheduler-class.md)   
- [CurrentScheduler::Detach 方法](../Topic/CurrentScheduler::Detach%20Method.md)   
- [Scheduler::Attach 方法](../Topic/Scheduler::Attach%20Method.md)
+##  <a name="a-namectora-improperschedulerdetach"></a><a name="ctor"></a>improper_scheduler_detach 
+
+ 建構 `improper_scheduler_detach` 物件。  
+  
+```
+explicit _CRTIMP improper_scheduler_detach(_In_z_ const char* _Message) throw();
+
+improper_scheduler_detach() throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Message`  
+ 錯誤的描述性訊息。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)   
+ [Scheduler 類別](scheduler-class.md)
+

@@ -1,48 +1,214 @@
 ---
-title: "灰色和遞色點陣圖函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "灰色和遞色點陣圖函式"
+title: "灰色和遞色點陣圖函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- gray and dithered bitmap functions
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 灰色和遞色點陣圖函式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
+ms.openlocfilehash: b8b6f43917dfe211f477b3dde0c94323015d18b2
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="gray-and-dithered-bitmap-functions"></a>灰色和遞色點陣圖函式
 **灰色點陣圖函式**  
   
  MFC 提供兩個函式來提供點陣圖已停用控制項的外觀。  
   
- ![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.png "vcGrayBitmap")  
+ ![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 |||  
 |-|-|  
-|[AfxDrawGrayBitmap](../Topic/AfxDrawGrayBitmap.md)|繪製點陣圖的灰色版本。|  
-|[AfxGetGrayBitmap](../Topic/AfxGetGrayBitmap.md)|複製點陣圖的灰色版本。|  
+|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|繪製點陣圖的灰色版本。|  
+|[AfxGetGrayBitmap](#afxgetgraybitmap)|複製點陣圖的灰色版本。|  
   
- **遞色點陣圖函式**  
+ **遞色的點陣圖函式**  
   
  MFC 也提供兩個函式將點陣圖的背景取代為遞色圖樣。  
   
- ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.png "vcDitheredBitmap")  
+ ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
 |||  
 |-|-|  
-|[AfxDrawDitheredBitmap](../Topic/AfxDrawDitheredBitmap.md)|繪製遞色背景的點陣圖。|  
-|[AfxGetDitheredBitmap](../Topic/AfxGetDitheredBitmap.md)|複製遞色背景的點陣圖。|  
+|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|繪製遞色背景的點陣圖。|  
+|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|複製遞色背景的點陣圖。|  
   
-## 請參閱  
- [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
+##  <a name="a-nameafxdrawgraybitmapa--afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
+ 繪製點陣圖的灰色版本。  
+  
+```   
+void AFXAPI AfxDrawGrayBitmap(
+    CDC* pDC,  
+    int x,  
+    int y,  
+    const CBitmap& rSrc,  
+    COLORREF crBackground); 
+```  
+  
+### <a name="parameters"></a>參數  
+ `pDC`  
+ 指向目的地 DC。  
+  
+ *x*  
+ 目的地 x 座標。  
+  
+ *y*  
+ 目的地 y 座標。  
+  
+ `rSrc`  
+ 來源點陣圖。  
+  
+ `crBackground`  
+ 新的背景色彩 (通常是灰色，例如 COLOR_MENU)。  
+  
+### <a name="remarks"></a>備註  
+ 使用 `AfxDrawGrayBitmap` 繪製的點陣圖，外觀為已停用的控制項。  
+  
+ ![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+  
+### <a name="example"></a>範例  
+ [!code-cpp[NVC_MFCDocView #&191;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
+
+### <a name="requirements"></a>需求  
+ **標題:** afxwin.h  
+
+##  <a name="a-nameafxgetgraybitmapa--afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
+ 複製點陣圖的灰色版本。  
+  
+```   
+void AFXAPI AfxGetGrayBitmap(
+    const CBitmap& rSrc,  
+    CBitmap* pDest,  
+    COLORREF crBackground); 
+```  
+  
+### <a name="parameters"></a>參數  
+ `rSrc`  
+ 來源點陣圖。  
+  
+ `pDest`  
+ 目的點陣圖。  
+  
+ `crBackground`  
+ 新的背景色彩 (通常是灰色，例如 COLOR_MENU)。  
+  
+### <a name="remarks"></a>備註  
+ 使用 `AfxGetGrayBitmap` 複製的點陣圖，外觀上會有已停用的控制項。  
+  
+ ![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+  
+### <a name="example"></a>範例  
+ [!code-cpp[NVC_MFCDocView #&193;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
+
+### <a name="requirements"></a>需求  
+ **標題:** afxwin.h  
+  
+##  <a name="a-nameafxdrawditheredbitmapa--afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
+ 繪製點陣圖，以遞色 （檢查程式） 樣式取代它的背景。  
+  
+```   
+void AFXAPI AfxDrawDitheredBitmap(
+    CDC* pDC,  
+    int x,  
+    int y,  
+    const CBitmap& rSrc,  
+    COLORREF cr1  ,  
+    COLORREF cr2); 
+```  
+  
+### <a name="parameters"></a>參數  
+ `pDC`  
+ 指向目的地 DC。  
+  
+ *x*  
+ 目的地 x 座標。  
+  
+ *y*  
+ 目的地 y 座標。  
+  
+ `rSrc`  
+ 來源點陣圖。  
+  
+ `cr1`  
+ 兩個遞色色彩之一，通常為白色。  
+  
+ `cr2`  
+ 另一個遞色色彩，通常是淺灰色 (COLOR_MENU)。  
+  
+### <a name="remarks"></a>備註  
+ 含有兩個色彩的目的地 DC 上繪製的來源點陣圖 (`cr1`和`cr2`) 棋盤式的圖樣取代點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。  
+  
+ ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+  
+### <a name="example"></a>範例  
+ [!code-cpp[NVC_MFCDocView #&190;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
+
+### <a name="requirements"></a>需求  
+ **標題:** afxwin.h  
+
+
+##  <a name="a-nameafxgetditheredbitmapa--afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
+ 複製點陣圖，以遞色 (檢查程式) 樣式取代它的背景。  
+  
+```   
+void AFXAPI AfxGetDitheredBitmap(
+    const CBitmap& rSrc,  
+    CBitmap* pDest,  
+    COLORREF cr1  ,  
+    COLORREF cr2); 
+```  
+  
+### <a name="parameters"></a>參數  
+ `rSrc`  
+ 來源點陣圖。  
+  
+ `pDest`  
+ 目的點陣圖。  
+  
+ `cr1`  
+ 兩個遞色色彩之一，通常為白色。  
+  
+ `cr2`  
+ 另一個遞色色彩，通常是淺灰色 (COLOR_MENU)。  
+  
+### <a name="remarks"></a>備註  
+ 將來源點陣圖複製到目的地點陣圖與兩個色彩 (`cr1`和`cr2`) 棋盤式的圖樣取代來源點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。  
+  
+ ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+  
+### <a name="example"></a>範例  
+ [!code-cpp[NVC_MFCDocView #&192;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
+
+### <a name="requirements"></a>需求  
+ **標題:** afxwin.h  
+  
+## <a name="see-also"></a>另請參閱  
+ [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+

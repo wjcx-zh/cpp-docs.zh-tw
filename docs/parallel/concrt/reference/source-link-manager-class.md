@@ -1,88 +1,226 @@
 ---
-title: "source_link_manager 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::source_link_manager"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "source_link_manager 類別"
+title: "source_link_manager 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::source_link_manager
+dev_langs:
+- C++
+helpviewer_keywords:
+- source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# source_link_manager 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: b9323da4d2ccefe09ba38df088e546828d41f2ee
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="sourcelinkmanager-class"></a>source_link_manager 類別
 `source_link_manager` 物件會管理 `ISource` 區塊與傳訊區塊網路的連結。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
-template<  
-   class _LinkRegistry  
->  
-class source_link_manager;  
+```
+template<class _LinkRegistry>
+class source_link_manager;
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_LinkRegistry`  
- 網路連結登錄。  
+ 網路連結登錄中。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用 Typedefs  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|描述|  
-|--------|--------|  
-|`const_pointer`|針對 `source_link_manager` 物件中的 `const` 項目提供指標的類型。|  
-|`const_reference`|型別，針對存放在並行佇列中的 `source_link_manager` 物件提供參考，以讀取及執行 `const`作業。|  
-|`iterator`|型別，提供隨機存取 Iterator，可以讀取或修改 `source_link_manager` 物件中的任何項目。|  
-|`type`|連結登錄的類型由 `source_link_manager` 物件管理。|  
+|名稱|說明|  
+|----------|-----------------|  
+|`const_pointer`|類型，提供一個指向`const`中的項目`source_link_manager`物件。|  
+|`const_reference`|提供的參考型別`const`項目儲存在`source_link_manager`物件進行讀取和執行 const 的作業。|  
+|`iterator`|類型，提供迭代器可以讀取或修改任何項目中的`source_link_manager`物件。|  
+|`type`|受管理的連結登錄的型別`source_link_manager`物件。|  
   
-### 公用建構函式  
-  
-|名稱|描述|  
-|--------|--------|  
-|[source\_link\_manager::source\_link\_manager 建構函式](../Topic/source_link_manager::source_link_manager%20Constructor.md)|建構 `source_link_manager` 物件。|  
-|[source\_link\_manager::~source\_link\_manager 解構函式](../Topic/source_link_manager::~source_link_manager%20Destructor.md)|終結 `source_link_manager` 物件。|  
-  
-### 公用方法  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[source\_link\_manager::add 方法](../Topic/source_link_manager::add%20Method.md)|將來源連結加入至 `source_link_manager` 物件。|  
-|[source\_link\_manager::begin 方法](../Topic/source_link_manager::begin%20Method.md)|將 Iterator 傳回 `source_link_manager` 物件中的第一個項目。|  
-|[source\_link\_manager::contains 方法](../Topic/source_link_manager::contains%20Method.md)|在 `source_link_manager` 物件內的 `network_link_registry` 中搜尋指定的區塊。|  
-|[source\_link\_manager::count 方法](../Topic/source_link_manager::count%20Method.md)|計算 `source_link_manager` 物件中的連結區塊數目。|  
-|[source\_link\_manager::reference 方法](../Topic/source_link_manager::reference%20Method.md)|取得 `source_link_manager` 物件的參考。|  
-|[source\_link\_manager::register\_target\_block 方法](../Topic/source_link_manager::register_target_block%20Method.md)|註冊保留此 `source_link_manager` 物件的目標區塊。|  
-|[source\_link\_manager::release 方法](../Topic/source_link_manager::release%20Method.md)|釋放 `source_link_manager` 物件的參考。|  
-|[source\_link\_manager::remove 方法](../Topic/source_link_manager::remove%20Method.md)|移除 `source_link_manager` 物件中的連結。|  
-|[source\_link\_manager::set\_bound 方法](../Topic/source_link_manager::set_bound%20Method.md)|針對可以加入至這個 `source_link_manager` 物件的來源連結數目設定最大上限。|  
+|----------|-----------------|  
+|[source_link_manager 建構函式](#ctor)|建構 `source_link_manager` 物件。|  
+|[~ source_link_manager 解構函式](#dtor)|終結`source_link_manager`物件。|  
   
-## 備註  
- 目前，來源區塊是計算的參考。  這是 `network_link_registry` 物件的包裝程式，可允許並行存取連結並透過回呼參考連結。  訊息區塊 \(`target_block`s 或 `propagator_block` s'\) 應該使用這個類別做為其來源連結。  
+### <a name="public-methods"></a>公用方法  
   
-## 繼承階層架構  
+|名稱|說明|  
+|----------|-----------------|  
+|[新增方法](#add)|新增來源連結至`source_link_manager`物件。|  
+|[begin 方法](#begin)|傳回迭代器中的第一個項目`source_link_manager`物件。|  
+|[包含方法](#contains)|搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。|  
+|[count 方法](#count)|計算連結中的區塊數目`source_link_manager`物件。|  
+|[參考的方法](#reference)|取得參考上`source_link_manager`物件。|  
+|[register_target_block 方法](#register_target_block)|註冊目標區塊，以保存這`source_link_manager`物件。|  
+|[release 方法](#release)|在釋放參考`source_link_manager`物件。|  
+|[remove 方法](#remove)|移除連結，以從`source_link_manager`物件。|  
+|[set_bound 方法](#set_bound)|設定來源連結，可以新增至這個最大數目`source_link_manager`物件。|  
+  
+## <a name="remarks"></a>備註  
+ 目前，來源區塊是計數的參考。 這是包裝函式上`network_link_registry`物件，可讓並行存取的連結，並可讓您參考透過回呼的連結。 訊息區塊 ( `target_block`s 或`propagator_block`s) 應該使用這個類別，其來源連結。  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `source_link_manager`  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** agents.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [single\_link\_registry 類別](../../../parallel/concrt/reference/single-link-registry-class.md)   
- [multi\_link\_registry 類別](../../../parallel/concrt/reference/multi-link-registry-class.md)
+##  <a name="a-nameadda-add"></a><a name="add"></a>新增 
+
+ 新增來源連結至`source_link_manager`物件。  
+  
+```
+void add(_EType _Link);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Link`  
+ 要加入的區塊的指標。  
+  
+##  <a name="a-namebegina-begin"></a><a name="begin"></a>開始 
+
+ 傳回迭代器中的第一個項目`source_link_manager`物件。  
+  
+```
+iterator begin();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 迭代器中的第一個項目定址`source_link_manager`物件。  
+  
+### <a name="remarks"></a>備註  
+ 迭代器的結束狀態以`NULL`連結。  
+  
+##  <a name="a-namecontainsa-contains"></a><a name="contains"></a>包含 
+
+ 搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。  
+  
+```
+bool contains(_EType _Link);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Link`  
+ 要搜尋中的區塊的指標`source_link_manager`物件。  
+  
+### <a name="return-value"></a>傳回值  
+ `true`如果找不到指定的區塊，`false`否則。  
+  
+##  <a name="a-namecounta-count"></a><a name="count"></a>計數 
+
+ 計算連結中的區塊數目`source_link_manager`物件。  
+  
+```
+size_t count();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 連結中的區塊數`source_link_manager`物件。  
+  
+##  <a name="a-namereferencea-reference"></a><a name="reference"></a>參考 
+
+ 取得參考上`source_link_manager`物件。  
+  
+```
+void reference();
+```  
+  
+##  <a name="a-nameregistertargetblocka-registertargetblock"></a><a name="register_target_block"></a>register_target_block 
+
+ 註冊目標區塊，以保存這`source_link_manager`物件。  
+  
+```
+void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarget);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PTarget`  
+ 保留此目標區塊`source_link_manager`物件。  
+  
+##  <a name="a-namereleasea-release"></a><a name="release"></a>發行 
+
+ 在釋放參考`source_link_manager`物件。  
+  
+```
+void release();
+```  
+  
+##  <a name="a-nameremovea-remove"></a><a name="remove"></a>移除 
+
+ 移除連結，以從`source_link_manager`物件。  
+  
+```
+bool remove(_EType _Link);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Link`  
+ 要移除，如果在區塊的指標找到。  
+  
+### <a name="return-value"></a>傳回值  
+ `true`如果找到並移除連結`false`否則。  
+  
+##  <a name="a-namesetbounda-setbound"></a><a name="set_bound"></a>set_bound 
+
+ 設定來源連結，可以新增至這個最大數目`source_link_manager`物件。  
+  
+```
+void set_bound(size_t _MaxLinks);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_MaxLinks`  
+ 連結的數目上限。  
+  
+##  <a name="a-namectora-sourcelinkmanager"></a><a name="ctor"></a>source_link_manager 
+
+ 建構 `source_link_manager` 物件。  
+  
+```
+source_link_manager();
+```  
+  
+##  <a name="a-namedtora-sourcelinkmanager"></a><a name="dtor"></a>~ source_link_manager 
+
+ 終結`source_link_manager`物件。  
+  
+```
+~source_link_manager();
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)   
+ [single_link_registry 類別](single-link-registry-class.md)   
+ [multi_link_registry 類別](multi-link-registry-class.md)
+

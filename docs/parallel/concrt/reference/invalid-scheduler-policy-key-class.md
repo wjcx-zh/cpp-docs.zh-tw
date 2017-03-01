@@ -1,58 +1,86 @@
 ---
-title: "invalid_scheduler_policy_key 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::invalid_scheduler_policy_key"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "invalid_scheduler_policy_key 類別"
+title: "invalid_scheduler_policy_key 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::invalid_scheduler_policy_key
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# invalid_scheduler_policy_key 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: ba23cb216581862ed110cace9b7fff9024df6899
+ms.lasthandoff: 02/24/2017
 
-這個類別會描述了無效時擲回例外狀況或未知的索引鍵會傳遞至`SchedulerPolicy`物件建構函式，或`SetPolicyValue`方法的`SchedulerPolicy`物件被傳遞的索引鍵，必須使用其他方法，如變更`SetConcurrencyLimits`方法。  
+---
+# <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key 類別
+這個類別描述將無效或未知的機碼傳遞給 `SchedulerPolicy` 物件建構函式，或將必須使用其他方式 (如 `SetConcurrencyLimits` 方法) 變更的機碼傳遞給 `SchedulerPolicy` 物件的 `SetPolicyValue` 方法時所擲回的例外狀況。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class invalid_scheduler_policy_key : public std::exception;
 ```  
-class invalid_scheduler_policy_key : public std::exception;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[invalid\_scheduler\_policy\_key::invalid\_scheduler\_policy\_key 建構函式](../Topic/invalid_scheduler_policy_key::invalid_scheduler_policy_key%20Constructor.md)|多載。  建構 `invalid_scheduler_policy_key` 物件。|  
+|----------|-----------------|  
+|[invalid_scheduler_policy_key 建構函式](#ctor)|多載。 建構 `invalid_scheduler_policy_key` 物件。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
   
  `invalid_scheduler_policy_key`  
   
-## 需求  
- **標頭：** concrt.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** concrt.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [SchedulerPolicy 類別](../../../parallel/concrt/reference/schedulerpolicy-class.md)   
- [PolicyElementKey 列舉](../Topic/PolicyElementKey%20Enumeration.md)   
- [SchedulerPolicy::SetPolicyValue 方法](../Topic/SchedulerPolicy::SetPolicyValue%20Method.md)   
- [SchedulerPolicy::SetConcurrencyLimits 方法](../Topic/SchedulerPolicy::SetConcurrencyLimits%20Method.md)
+##  <a name="a-namectora-invalidschedulerpolicykey"></a><a name="ctor"></a>invalid_scheduler_policy_key 
+
+ 建構 `invalid_scheduler_policy_key` 物件。  
+  
+```
+explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
+
+invalid_scheduler_policy_key() throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Message`  
+ 錯誤的描述性訊息。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)   
+ [SchedulerPolicy 類別](schedulerpolicy-class.md)
+

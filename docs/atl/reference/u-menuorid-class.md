@@ -1,68 +1,110 @@
 ---
-title: "_U_MENUorID Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL._U_MENUorID"
-  - "ATL::_U_MENUorID"
-  - "_U_MENUorID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_U_MENUorID class"
-  - "U_MENUorID class"
+title: "_U_MENUorID 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL._U_MENUorID
+- ATL::_U_MENUorID
+- _U_MENUorID
+dev_langs:
+- C++
+helpviewer_keywords:
+- U_MENUorID class
+- _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _U_MENUorID Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
+ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.lasthandoff: 02/24/2017
 
-這個類別會提供 **CreateWindow** 和 **CreateWindowEx**提供包裝函式。  
+---
+# <a name="umenuorid-class"></a>_U_MENUorID 類別
+這個類別會提供包裝函式的**CreateWindow**和**CreateWindowEx**。  
   
 > [!IMPORTANT]
->  這個類別和其成員不能用於 Windows 執行階段執行的應用程式。  
+>  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class _U_MENUorID
 ```  
   
-class _U_MENUorID  
+## <a name="members"></a>Members  
   
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[_U_MENUorID::_U_MENUorID](#_u_menuorid___u_menuorid)|建構函式。|  
+  
+### <a name="public-data-members"></a>公用資料成員  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|功能表的控點。|  
+  
+## <a name="remarks"></a>備註  
+ 這個引數的配接器類別可讓任一 Id ( **UINT**s) 或功能表的控制代碼 ( `HMENU`s) 傳遞至函式，而不需要呼叫端的組件上的明確轉型。  
+  
+ 這個類別主要用來實作包裝函式以 Windows API，尤其是[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)和[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函式，這兩種接受`HMENU`可能是子視窗識別項的引數 ( **UINT**) 而不是功能表控制代碼。 例如，您所見中使用這個類別做為參數[CWindowImpl::Create](cwindowimpl-class.md#create)。  
+
+  
+ 類別會定義兩個建構函式多載︰ 其中一個接受**UINT**引數，而另一個接受`HMENU`引數。 **UINT**引數只會轉換成`HMENU`建構函式和結果儲存在該類別的單一資料成員， [m_hMenu](#_u_menuorid__m_hmenu)。 引數`HMENU`建構函式會儲存直接而無需轉換。  
+  
+## <a name="requirements"></a>需求  
+ **標頭︰** atlwin.h  
+  
+##  <a name="a-nameumenuoridmhmenua--umenuoridmhmenu"></a><a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+ 類別會保存的值傳遞至其中一個建構函式為公用`HMENU`資料成員。  
+  
+```
+HMENU m_hMenu;
 ```  
   
-## Members  
+##  <a name="a-nameumenuoridumenuorida--umenuoridumenuorid"></a><a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+ **UINT**引數只會轉換成`HMENU`建構函式和結果儲存在該類別的單一資料成員， [m_hMenu](#_u_menuorid__m_hmenu)。  
   
-### 公用建構函式  
+```
+_U_MENUorID(UINT nID);  
+_U_MENUorID(HMENU hMenu);
+```  
   
-|名稱|描述|  
-|--------|--------|  
-|[\_U\_MENUorID::\_U\_MENUorID](../Topic/_U_MENUorID::_U_MENUorID.md)|建構函式。|  
+### <a name="parameters"></a>參數  
+ `nID`  
+ 子視窗的識別項。  
   
-### 公用資料成員  
+ `hMenu`  
+ 功能表控制代碼。  
   
-|名稱|描述|  
-|--------|--------|  
-|[\_U\_MENUorID::m\_hMenu](../Topic/_U_MENUorID::m_hMenu.md)|為功能表的控制代碼。|  
+### <a name="remarks"></a>備註  
+ 引數`HMENU`建構函式會儲存直接而無需轉換。  
   
-## 備註  
- 這個引數配接器類別允許 ID \(**UINT**\) 或功能表控制代碼 \(`HMENU`\) 會傳遞至函式，而不需要明確轉換 \(Cast\) 在呼叫端部分。  
-  
- 這個類別會實作特定 Windows API， [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 和 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) 函式的包裝函式設計，這兩者會接受 `HMENU` 引數可能是子視窗識別項 \(**UINT**\) 而不是功能表控制代碼。  例如，您可以看到這個類別會在使用中當做參數傳遞至 [CWindowImpl::Create](../Topic/CWindowImpl::Create.md)。  
-  
- 類別會定義兩個建構函式多載:一個接受 **UINT** 引數，另一 `HMENU` 接受引數。  **UINT** 引數轉換成在類別的唯一資料成員和結果的 `HMENU` 儲存的建構函式， [m\_hMenu](../Topic/_U_MENUorID::m_hMenu.md)。  `HMENU` 至建構函式的引數直接儲存，而無法轉換。  
-  
-## 需求  
- **Header:** atlwin.h  
-  
-## 請參閱  
- [Class Overview](../../atl/atl-class-overview.md)
+## <a name="see-also"></a>另請參閱  
+ [類別概觀](../../atl/atl-class-overview.md)
+

@@ -1,101 +1,364 @@
 ---
-title: "target_block 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "agents/concurrency::target_block"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "target_block 類別"
+title: "target_block 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- agents/concurrency::target_block
+dev_langs:
+- C++
+helpviewer_keywords:
+- target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
 caps.latest.revision: 21
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# target_block 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 0137e95d0d5015fd2e8d18d85388c16ab25a2e9c
+ms.lasthandoff: 02/24/2017
 
-`target_block` 類別是提供基本的連結管理功能和錯誤檢查僅限目標區塊的抽象基底類別。  
+---
+# <a name="targetblock-class"></a>target_block 類別
+`target_block` 類別是一種抽象基底類別，可提供基本的連結管理功能和僅限目標區塊的錯誤檢查。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template<class _SourceLinkRegistry, class _MessageProcessorType = ordered_message_processor<typename _SourceLinkRegistry::type::source_type>>
+class target_block : public ITarget<typename _SourceLinkRegistry::type::source_type>;
 ```  
-template<  
-   class _SourceLinkRegistry,  
-   class _MessageProcessorType = ordered_message_processor<typename _SourceLinkRegistry::type::source_type>  
->  
-class target_block : public ITarget<typename _SourceLinkRegistry::type::source_type>;  
-```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_SourceLinkRegistry`  
- 要用來保留來源連結的連結登錄。  
+ 連結的登錄，以用於保留來源連結。  
   
  `_MessageProcessorType`  
- 訊息處理的處理器型別。  
+ 處理訊息的處理器類型。  
   
-## 成員  
+## <a name="members"></a>Members  
   
-### 公用 Typedefs  
-  
-|名稱|說明|  
-|--------|--------|  
-|`source_iterator`|此 `target_block` 物件之 `source_link_manager` 的 Iterator 類型。|  
-  
-### 公用建構函式  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
 |名稱|說明|  
-|--------|--------|  
-|[target\_block::target\_block 建構函式](../Topic/target_block::target_block%20Constructor.md)|建構 `target_block` 物件。|  
-|[target\_block::~target\_block 解構函式](../Topic/target_block::~target_block%20Destructor.md)|終結 `target_block` 物件。|  
+|----------|-----------------|  
+|`source_iterator`|迭代器類型`source_link_manager`這個`target_block`物件。|  
   
-### 公用方法  
-  
-|名稱|說明|  
-|--------|--------|  
-|[target\_block::propagate 方法](../Topic/target_block::propagate%20Method.md)|以非同步方式將訊息從來源區塊傳遞到這個目標區塊。|  
-|[target\_block::send 方法](../Topic/target_block::send%20Method.md)|以同步方式將訊息從來源區塊傳遞到這個目標區塊。|  
-  
-### 受保護的方法  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|說明|  
-|--------|--------|  
-|[target\_block::async\_send 方法](../Topic/target_block::async_send%20Method.md)|以非同步方式傳送訊息，以進行處理。|  
-|[target\_block::decline\_incoming\_messages 方法](../Topic/target_block::decline_incoming_messages%20Method.md)|表示應拒絕新訊息的區塊。|  
-|[target\_block::enable\_batched\_processing 方法](../Topic/target_block::enable_batched_processing%20Method.md)|啟用批次處理了這個區塊。|  
-|[target\_block::initialize\_target 方法](../Topic/target_block::initialize_target%20Method.md)|初始化基底物件。  尤其必須初始化 `message_processor` 物件。|  
-|[target\_block::link\_source 方法](../Topic/target_block::link_source%20Method.md)|連結指定的來源區塊與這個 `target_block` 物件。|  
-|[target\_block::process\_input\_messages 方法](../Topic/target_block::process_input_messages%20Method.md)|處理收到的輸入的訊息。|  
-|[target\_block::process\_message 方法](../Topic/target_block::process_message%20Method.md)|在衍生類別中被覆寫時，處理這個 `target_block` 物件接受的訊息。|  
-|[target\_block::propagate\_message 方法](../Topic/target_block::propagate_message%20Method.md)|在衍生類別中被覆寫時，這個方法會以非同步方式從 `ISource` 區塊傳遞訊息到這個 `target_block` 物件。  會於來源區塊呼叫時由 `propagate` 方法叫用。|  
-|[target\_block::register\_filter 方法](../Topic/target_block::register_filter%20Method.md)|註冊會在收到每個訊息時叫用的篩選方法。|  
-|[target\_block::remove\_sources 方法](../Topic/target_block::remove_sources%20Method.md)|等候未完成的非同步傳送作業完成後，中斷連結所有來源。|  
-|[target\_block::send\_message 方法](../Topic/target_block::send_message%20Method.md)|在衍生類別中被覆寫時，這個方法會以同步方式從 `ISource` 區塊傳遞訊息到這個 `target_block` 物件。  會於來源區塊呼叫時由 `send` 方法叫用。|  
-|[target\_block::sync\_send 方法](../Topic/target_block::sync_send%20Method.md)|以同步方式傳送訊息以進行處理。|  
-|[target\_block::unlink\_source 方法](../Topic/target_block::unlink_source%20Method.md)|將指定的來源區塊與這個 `target_block` 物件中斷連結。|  
-|[target\_block::unlink\_sources 方法](../Topic/target_block::unlink_sources%20Method.md)|將所有來源區塊與這個 `target_block` 物件中斷連結。\(會覆寫 [ITarget::unlink\_sources](../Topic/ITarget::unlink_sources%20Method.md)\)。|  
-|[target\_block::wait\_for\_async\_sends 方法](../Topic/target_block::wait_for_async_sends%20Method.md)|等候所有非同步傳播完成。|  
+|----------|-----------------|  
+|[target_block 建構函式](#ctor)|建構 `target_block` 物件。|  
+|[~ target_block 解構函式](#dtor)|終結`target_block`物件。|  
   
-## 繼承階層  
- [ITarget](../../../parallel/concrt/reference/itarget-class.md)  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|描述|  
+|----------|-----------------|  
+|[傳播方法](#propagate)|以非同步方式將訊息從來源區塊傳遞到此目標區塊。|  
+|[send 方法](#send)|以同步方式將訊息從來源區塊傳遞到此目標區塊。|  
+  
+### <a name="protected-methods"></a>受保護的方法  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[async_send 方法](#async_send)|以非同步方式傳送訊息以進行處理。|  
+|[decline_incoming_messages 方法](#decline_incoming_messages)|表示區塊應該已拒絕新的訊息。|  
+|[enable_batched_processing 方法](#enable_batched_processing)|啟用這個區塊的批次處理。|  
+|[initialize_target 方法](#initialize_target)|初始化基底物件。 具體來說，`message_processor`需要初始化物件。|  
+|[link_source 方法](#link_source)|將指定的來源區塊連結至這個`target_block`物件。|  
+|[process_input_messages 方法](#process_input_messages)|處理收到的輸入訊息。|  
+|[process_message 方法](#process_message)|在衍生類別中覆寫時，處理這個 `target_block` 物件接受的訊息。|  
+|[propagate_message 方法](#propagate_message)|當在衍生類別中覆寫時，這個方法以非同步方式將訊息傳遞從`ISource`區塊至此`target_block`物件。 它會叫用`propagate`方法，由來源區塊呼叫時。|  
+|[register_filter 方法](#register_filter)|註冊將會叫用每個收到的訊息的篩選方法。|  
+|[remove_sources 方法](#remove_sources)|等候未處理的非同步傳送作業完成之後，取消連結所有來源。|  
+|[send_message 方法](#send_message)|當在衍生類別中覆寫時，這個方法以同步方式將訊息傳遞從`ISource`區塊至此`target_block`物件。 它會叫用`send`方法，由來源區塊呼叫時。|  
+|[sync_send 方法](#sync_send)|以同步方式傳送訊息以進行處理。|  
+|[unlink_source 方法](#unlink_source)|取消連結指定的來源區塊從此`target_block`物件。|  
+|[unlink_sources 方法](#unlink_sources)|取消連結所有來源區塊，從這個`target_block`物件。 (覆寫[itarget:: Unlink_sources](itarget-class.md#unlink_sources)。)|  
+|[wait_for_async_sends 方法](#wait_for_async_sends)|等候所有完成的非同步傳播。|  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
+ [ITarget](itarget-class.md)  
   
  `target_block`  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** agents.h  
   
- **命名空間：**concurrency  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [ITarget 類別](../../../parallel/concrt/reference/itarget-class.md)
+##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+
+ 以非同步方式傳送訊息以進行處理。  
+  
+```
+void async_send(_Inout_opt_ message<_Source_type>* _PMessage);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PMessage`  
+ 所傳送的郵件指標。  
+  
+##  <a name="a-namedeclineincomingmessagesa-declineincomingmessages"></a><a name="decline_incoming_messages"></a>decline_incoming_messages 
+
+ 表示區塊應該已拒絕新的訊息。  
+  
+```
+void decline_incoming_messages();
+```  
+  
+### <a name="remarks"></a>備註  
+ 以確保新的訊息會遭到拒絕，解構函式正在進行時，解構函式會呼叫這個方法。  
+  
+##  <a name="a-nameenablebatchedprocessinga-enablebatchedprocessing"></a><a name="enable_batched_processing"></a>enable_batched_processing 
+
+ 啟用這個區塊的批次處理。  
+  
+```
+void enable_batched_processing();
+```  
+  
+##  <a name="a-nameinitializetargeta-initializetarget"></a><a name="initialize_target"></a>initialize_target 
+
+ 初始化基底物件。 具體來說，`message_processor`需要初始化物件。  
+  
+```
+void initialize_target(
+    _Inout_opt_ Scheduler* _PScheduler = NULL,
+    _Inout_opt_ ScheduleGroup* _PScheduleGroup = NULL);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PScheduler`  
+ 要用於排程工作排程器。  
+  
+ `_PScheduleGroup`  
+ 要用於排程工作的排程群組。  
+  
+##  <a name="a-namelinksourcea-linksource"></a><a name="link_source"></a>link_source 
+
+ 將指定的來源區塊連結至這個`target_block`物件。  
+  
+```
+virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PSource`  
+ 指標`ISource`是要連結的區塊。  
+  
+### <a name="remarks"></a>備註  
+ 此函式不應該直接呼叫`target_block`物件。 區塊應該一起使用來連接`link_target`方法`ISource`區塊，會叫用`link_source`上對應的目標方法。  
+  
+##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+
+ 處理收到的輸入訊息。  
+  
+```
+virtual void process_input_messages(_Inout_ message<_Source_type>* _PMessage);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PMessage`  
+  
+##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+
+ 在衍生類別中覆寫時，處理這個 `target_block` 物件接受的訊息。  
+  
+```
+virtual void process_message(message<_Source_type> *);
+```  
+  
+##  <a name="a-namepropagatea-propagate"></a><a name="propagate"></a>傳播 
+
+ 以非同步方式將訊息從來源區塊傳遞到此目標區塊。  
+  
+```
+virtual message_status propagate(
+    _Inout_opt_ message<_Source_type>* _PMessage,
+    _Inout_opt_ ISource<_Source_type>* _PSource);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PMessage`  
+ `message` 物件的指標。  
+  
+ `_PSource`  
+ 提供訊息來源區塊的指標。  
+  
+### <a name="return-value"></a>傳回值  
+ A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+  
+### <a name="remarks"></a>備註  
+ 方法會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況，如果`_PMessage`或`_PSource`參數是`NULL`。  
+  
+##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+
+ 當在衍生類別中覆寫時，這個方法以非同步方式將訊息傳遞從`ISource`區塊至此`target_block`物件。 它會叫用`propagate`方法，由來源區塊呼叫時。  
+  
+```
+virtual message_status propagate_message(
+    _Inout_ message<_Source_type>* _PMessage,
+    _Inout_ ISource<_Source_type>* _PSource) = 0;
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PMessage`  
+ `message` 物件的指標。  
+  
+ `_PSource`  
+ 提供訊息來源區塊的指標。  
+  
+### <a name="return-value"></a>傳回值  
+ A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+  
+##  <a name="a-nameregisterfiltera-registerfilter"></a><a name="register_filter"></a>register_filter 
+
+ 註冊將會叫用每個收到的訊息的篩選方法。  
+  
+```
+void register_filter(filter_method const& _Filter);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Filter`  
+ 篩選方法。  
+  
+##  <a name="a-nameremovesourcesa-removesources"></a><a name="remove_sources"></a>remove_sources 
+
+ 等候未處理的非同步傳送作業完成之後，取消連結所有來源。  
+  
+```
+void remove_sources();
+```  
+  
+### <a name="remarks"></a>備註  
+ 所有的目標區塊應該呼叫這個常式，以移除其解構函式中的來源。  
+  
+##  <a name="a-namesenda-send"></a><a name="send"></a>傳送 
+
+ 以同步方式將訊息從來源區塊傳遞到此目標區塊。  
+  
+```
+virtual message_status send(
+    _Inout_ message<_Source_type>* _PMessage,
+    _Inout_ ISource<_Source_type>* _PSource);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PMessage`  
+ `message` 物件的指標。  
+  
+ `_PSource`  
+ 提供訊息來源區塊的指標。  
+  
+### <a name="return-value"></a>傳回值  
+ A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+  
+### <a name="remarks"></a>備註  
+ 方法會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況，如果`_PMessage`或`_PSource`參數是`NULL`。  
+  
+ 使用`send`方法初始化訊息之外，並傳播網路內的郵件是非常危險，可能會導致死結。  
+  
+ 當`send`傳回時，訊息可能已被接受，並傳輸至目標區塊時，或目標已被拒絕。  
+  
+##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+
+ 當在衍生類別中覆寫時，這個方法以同步方式將訊息傳遞從`ISource`區塊至此`target_block`物件。 它會叫用`send`方法，由來源區塊呼叫時。  
+  
+```
+virtual message_status send_message(
+    _Inout_ message<_Source_type> *,
+    _Inout_ ISource<_Source_type> *);
+```  
+  
+### <a name="return-value"></a>傳回值  
+ A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，此區塊傳回`declined`除非在衍生類別覆寫。  
+  
+##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+
+ 以同步方式傳送訊息以進行處理。  
+  
+```
+void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PMessage`  
+ 所傳送的郵件指標。  
+  
+##  <a name="a-namectora-targetblock"></a><a name="ctor"></a>target_block 
+
+ 建構 `target_block` 物件。  
+  
+```
+target_block();
+```  
+  
+##  <a name="a-namedtora-targetblock"></a><a name="dtor"></a>~ target_block 
+
+ 終結`target_block`物件。  
+  
+```
+virtual ~target_block();
+```  
+  
+##  <a name="a-nameunlinksourcea-unlinksource"></a><a name="unlink_source"></a>unlink_source 
+
+ 取消連結指定的來源區塊從此`target_block`物件。  
+  
+```
+virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_PSource`  
+ 指標`ISource`要取消連結的區塊。  
+  
+##  <a name="a-nameunlinksourcesa-unlinksources"></a><a name="unlink_sources"></a>unlink_sources 
+
+ 取消連結所有來源區塊，從這個`target_block`物件。  
+  
+```
+virtual void unlink_sources();
+```  
+  
+##  <a name="a-namewaitforasyncsendsa-waitforasyncsends"></a><a name="wait_for_async_sends"></a>wait_for_async_sends 
+
+ 等候所有完成的非同步傳播。  
+  
+```
+void wait_for_async_sends();
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個方法可供訊息區塊解構函式以確保所有的非同步作業已花時間完成，然後再終結區塊。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)   
+ [ITarget 類別](itarget-class.md)
+

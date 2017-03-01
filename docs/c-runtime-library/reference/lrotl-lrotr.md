@@ -1,59 +1,73 @@
 ---
 title: "_lrotl、_lrotr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lrotl"
-  - "_lrotr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lrotr"
-  - "lrotl"
-  - "_lrotr"
-  - "_lrotl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_lrotl 函式"
-  - "_lrotr 函式"
-  - "位元"
-  - "位元, 旋轉"
-  - "lrotl 函式"
-  - "lrotr 函式"
-  - "旋轉位元"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lrotl
+- _lrotr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- lrotr
+- lrotl
+- _lrotr
+- _lrotl
+dev_langs:
+- C++
+helpviewer_keywords:
+- lrotl function
+- bits
+- _lrotr function
+- lrotr function
+- rotating bits
+- _lrotl function
+- bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _lrotl、_lrotr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b4f7d08e41c2510b8de9494aa039320fb9d7a3ac
+ms.lasthandoff: 02/24/2017
 
-旋轉的位元向左移 \(`_lrotl`\) 或向右移 \(`_lrotr`\)。  
+---
+# <a name="lrotl-lrotr"></a>_lrotl、_lrotr
+將位元向左 (`_lrotl`) 或向右 (`_lrotr`) 旋轉。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -67,32 +81,32 @@ unsigned long _lrotr(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *value*  
- 旋轉的值。  
+ 要旋轉的值。  
   
  `shift`  
- 將 *值*向左移的位元數。  
+ *value* 要移位的位元數。  
   
-## 傳回值  
- 兩個函式傳回旋轉的值。  不會回傳錯誤。  
+## <a name="return-value"></a>傳回值  
+ 這兩個函式會傳回旋轉的值。 不會傳回錯誤。  
   
-## 備註  
- `_lrotl` 和 `_lrotr` 函式由 `shift` 位元旋轉 *值* 。  `_lrotl` 旋轉值向左。  `_lrotr` 旋轉值向右。  兩個函式包裝位元旋轉 *值* 結尾對其他結尾。  
+## <a name="remarks"></a>備註  
+ `_lrotl` 和 `_lrotr` 函式會將 *value* 旋轉 `shift` 個位元。 `_lrotl` 會將值向左旋轉。 `_lrotr` 會將值向右旋轉。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_lrotl`|\<stdlib.h\>|  
-|`_lrotr`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_lrotl`|\<stdlib.h>|  
+|`_lrotr`|\<stdlib.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_lrot.c  
@@ -111,16 +125,16 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 0xfac35791 rotated left eight times is 0xc35791fa  
 0xfac35791 rotated right four times is 0x1fac3579  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [\_rotl、\_rotl64、\_rotr、\_rotr64](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)
+ [_rotl、_rotl64、_rotr、_rotr64](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)

@@ -1,54 +1,70 @@
 ---
 title: "_ismbbgraph、_ismbbgraph_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ismbbgraph_l"
-  - "_ismbbgraph"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ismbbgraph"
-  - "_ismbbgraph_l"
-  - "ismbbgraph"
-  - "ismbbgraph_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ismbbgraph_l 函式"
-  - "ismbbgraph_l 函式"
-  - "_ismbbgraph 函式"
-  - "ismbbgraph 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ismbbgraph_l
+- _ismbbgraph
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ismbbgraph
+- _ismbbgraph_l
+- ismbbgraph
+- ismbbgraph_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ismbbgraph_l function
+- ismbbgraph_l function
+- _ismbbgraph function
+- ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _ismbbgraph、_ismbbgraph_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 828ca38d754d40729f8d09cb22526fb872605024
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph、_ismbbgraph_l
 判斷某個多位元組字元是否為圖形字元。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _ismbbgraph (  
@@ -60,37 +76,37 @@ int _ismbbgraph_l (
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `c`  
  待測試整數。  
   
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  傳回非零值表示運算式：  
   
 ```  
 ( _PUNCT | _UPPER | _LOWER | _DIGIT ) || _ismbbkprint  
 ```  
   
- 的 `c` 為非零，否則會傳回 0。 針對任何地區設定相關行為，`_ismbbgraph` 會使用目前的地區設定。`_ismbbgraph_l` 也相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 非零代表 `c`，0 則代表不是。 針對任何地區設定相關行為，`_ismbbgraph` 會使用目前的地區設定。 `_ismbbgraph_l` 完全相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_ismbbgraph`|\<mbctype.h\>|  
-|`_ismbbgraph_l`|\<mbctype.h\>|  
+|-------------|---------------------|  
+|`_ismbbgraph`|\<mbctype.h>|  
+|`_ismbbgraph_l`|\<mbctype.h>|  
   
- 如需詳細的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
+## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## .NET Framework 對等用法  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   
- [\_ismbb 常式](../../c-runtime-library/ismbb-routines.md)
+ [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)

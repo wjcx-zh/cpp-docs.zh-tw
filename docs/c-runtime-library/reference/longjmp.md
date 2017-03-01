@@ -1,49 +1,63 @@
 ---
-title: "longjmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "longjmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "longjmp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "longjmp 函式"
-  - "還原堆疊環境和執行地區設定"
+title: longjmp | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- longjmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- longjmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- restoring stack environment and execution locale
+- longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# longjmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 8d6ae9f6207bc0cc42ec2a0749ddfb6253c496f6
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="longjmp"></a>longjmp
 還原堆疊環境和執行地區設定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -53,47 +67,47 @@ manager: "ghogen"
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `env`  
  儲存環境的變數。  
   
  *value*  
- 要回傳予 `setjmp` 呼叫的值。  
+ 要傳回至 `setjmp` 呼叫的值。  
   
-## 備註  
- `longjmp` 函式於 `setjmp` 還原堆疊環境和先前儲存於 `env` 的執行地區設定。  `setjmp` 和 `longjmp` 提供一個執行非本地 `goto` 的方式。它們通常被用於傳遞執行控制予錯誤處理或還原之前被呼叫的常式的程式碼而不使用一般的呼叫與回傳慣例。  
+## <a name="remarks"></a>備註  
+ `longjmp` 函式會還原之前由 `setjmp` 儲存在 `env` 中的堆疊環境和執行地區設定。 `setjmp` 和 `longjmp` 可讓您執行非區域 `goto`；它們通常用於將執行控制項傳遞至之前所呼叫常式中的錯誤處理或復原程式碼，而不使用標準呼叫和傳回慣例。  
   
- 呼叫 `setjmp` 導致目前堆疊環境被儲存於 `env` 。  連續的 `longjmp` 呼叫還原已儲存的環境並回傳控制到對應的 `setjmp` 呼叫之下的點。  執行如同 *value* 剛被 `setjmp` 呼叫回傳般地繼續。  所有得到控制的常式的變數的值 \(除了暫存器變數\) 包含在呼叫 `longjmp` 時它們的值。  暫存器變數的值無法預期。  `setjmp` 回傳的值必須為非零。  如果 *value* 以 0 被傳遞，會實際以 1 為替代。  
+ 呼叫 `setjmp` 會在 `env` 中儲存目前的堆疊環境。 後續呼叫 `longjmp` 會還原儲存的環境，並將控制權還給緊接在對應 `setjmp` 呼叫之後的時間點。 執行會繼續，就像是 `setjmp` 呼叫剛傳回 *value* 一樣。 接收控制項的常式可存取之所有變數 (暫存器變數除外) 的值會包含呼叫 `longjmp` 時所擁有的值。 無法預測暫存器變數的值。 `setjmp` 所傳回的值必須為非零。 如果傳遞的 *value* 為 0，實際傳回時會以值 1 替代。  
   
- 在呼叫 `setjmp` 的函式結束回傳前呼叫 `longjmp` 。否則結果會是無法預期的。  
+ 請在所呼叫 `setjmp` 傳回的函式之前呼叫 `longjmp`，否則會出現無法預期的結果。  
   
- 請觀察下列使用 `longjmp` 的限制：  
+ 使用 `longjmp` 時，請注意下列限制：  
   
--   請勿假設暫存器變數的值會保持不變。  在呼叫 `setjmp` 的常式的暫存器變數的值可能不會在 `longjmp` 執行後被還原為適當的值。  
+-   請勿假設暫存器變數的值將保持不變。 執行 `longjmp` 之後，可能無法將呼叫 `setjmp` 之常式中的暫存器變數值還原為適當的值。  
   
--   請勿使用 `longjmp` 來轉移中斷處理常式的控制，除非該中斷是由浮點例外狀況造成。  在此情況下，如果應用程式先透過呼叫 `_fpreset` 來重新初始化浮點數學套件，它可以由 `longjmp` 來從中斷處理常式結束回傳。  
+-   請勿使用 `longjmp` 將控制項移出中斷處理常式，除非中斷是由浮點例外狀況所造成。 在此情況下，如果藉由呼叫 `_fpreset` 先將浮點數學封裝重新初始化，則可能會透過 `longjmp` 從中斷處理常式傳回一個程式。  
   
-     **注意** 請在 C\+\+ 應用程式裏小心地使用 `setjmp` 和 `longjmp` 。  因為這些函式並不支援 C\+\+ 物件語意，使用 C\+\+ 例外狀況處理機制是比較安全的。  
+     **注意**：請在 C++ 程式中小心使用 `setjmp` 和 `longjmp`。 因為這些函式不支援 C++ 物件語意，所以使用 C++ 例外狀況處理機制會更安全。  
   
- 如需詳細資訊，請參閱 [使用 setjmp 和 longjmp \(Using setjmp and longjmp\)](../../cpp/using-setjmp-longjmp.md) 。  
+ 如需詳細資訊，請參閱[使用 setjmp/longjmp](../../cpp/using-setjmp-longjmp.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`longjmp`|\<setjmp.h\>|  
+|-------------|---------------------|  
+|`longjmp`|\<setjmp.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
- 請參閱 [\_fpreset](../../c-runtime-library/reference/fpreset.md) 的範例。  
+## <a name="example"></a>範例  
+ 請參閱 [_fpreset](../../c-runtime-library/reference/fpreset.md) 的範例。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
- [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>另請參閱  
+ [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [setjmp](../../c-runtime-library/reference/setjmp.md)

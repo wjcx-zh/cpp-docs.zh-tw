@@ -1,96 +1,437 @@
 ---
 title: "istreambuf_iterator 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "istreambuf_iterator"
-  - "std.istreambuf_iterator"
-  - "std::istreambuf_iterator"
-  - "streambuf/std::istreambuf_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "istreambuf_iterator 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- istreambuf_iterator
+- std.istreambuf_iterator
+- std::istreambuf_iterator
+- streambuf/std::istreambuf_iterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- istreambuf_iterator class
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
 caps.latest.revision: 19
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# istreambuf_iterator 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: f06fb6bbc667be97267bb0a84564e6a36c837528
+ms.lasthandoff: 02/24/2017
 
-樣板類別 istreambuf\_iterator 描述輸入迭代器物件，該物件從輸入資料流緩衝區擷取字元項目，並透過它所儲存的物件 \(屬於 `basic_streambuf`\<**CharType**, **Traits**\> 的 pointer 類型\) 存取項目。  
+---
+# <a name="istreambufiterator-class"></a>istreambuf_iterator 類別
+範本類別 istreambuf_iterator 描述一個輸入迭代器物件，此物件會從輸入資料流緩衝區擷取字元元素，其中會透過它所儲存的物件 (屬於 `basic_streambuf`\< **CharType**, **Traits** 的 pointer 類型) 來存取該緩衝區。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template <class CharType class Traits = char_traits <CharType>>  
+class istreambuf_iterator 
+: public iterator<input_iterator_tag, CharType, typename Traits ::off_type, CharType*, CharType&>
 ```  
   
-      template <   
-   class CharType  
-   class Traits = char_traits<CharType>  
->  
-class istreambuf_iterator  
-: public iterator<input_iterator_tag, CharType, typename Traits::off_type, CharType *, CharType&>  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  `CharType`  
- 類型，表示 istreambuf\_iterator 的字元類型。  
+ 類型，表示 istreambuf_iterator 的字元類型。  
   
  `Traits`  
- 類型，表示 istreambuf\_iterator 的字元類型。  這個引數是選擇性的，而且預設值是 `char_traits`\<*CharType\>。*  
+ 類型，表示 istreambuf_iterator 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。  
   
-## 備註  
- istreambuf\_iterator 類別必須符合輸入迭代器的需求。  
+## <a name="remarks"></a>備註  
+ istreambuf_iterator 類別必須符合輸入迭代器的需求。  
   
- 在建構或遞增具有非 null 儲存指標的 istreambuf\_iterator 類別物件之後，物件會有效嘗試從關聯的輸入資料流擷取和儲存 **CharType** 類型物件。  然而，擷取可能會延遲，直到物件實際上已取值或複製。  如果擷取失敗，物件是實際上會將儲存的指標取代為 null 指標，因而建立序列結尾指標。  
+ 在建構或遞增具有非 Null 預存指標的 istreambuf_iterator 類別物件之後，物件會實際嘗試從關聯的輸入資料流中擷取和儲存 **CharType** 類型物件。 然而，擷取可能會延遲，直到物件實際上已取值或複製。 如果擷取失敗，物件是實際上會將儲存的指標取代為 null 指標，因而建立序列結尾指標。  
   
-### 建構函式  
-  
-|||  
-|-|-|  
-|[istreambuf\_iterator](../Topic/istreambuf_iterator::istreambuf_iterator.md)|建構 `istreambuf_iterator`，初始化以從輸入資料流讀取字元。|  
-  
-### Typedef  
+### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[char\_type](../Topic/istreambuf_iterator::char_type.md)|類型，提供 `ostreambuf_iterator` 的字元類型。|  
-|[int\_type](../Topic/istreambuf_iterator::int_type.md)|類型，提供 `istreambuf_iterator` 的整數類型。|  
-|[istream\_type](../Topic/istreambuf_iterator::istream_type.md)|類型，提供 `istream_iterator` 的資料流類型。|  
-|[streambuf\_type](../Topic/istreambuf_iterator::streambuf_type.md)|類型，提供 `istreambuf_iterator` 的資料流類型。|  
-|[traits\_type](../Topic/istream_iterator::traits_type.md)|類型，提供 `istream_iterator` 的字元特性類型。|  
+|[istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)|建構 `istreambuf_iterator`，初始化以從輸入資料流讀取字元。|  
   
-### 成員函式  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[equal](../Topic/istreambuf_iterator::equal.md)|測試兩個輸入資料流緩衝區迭代器是否相等。|  
+|[char_type](#istreambuf_iterator__char_type)|類型，提供 `ostreambuf_iterator` 的字元類型。|  
+|[int_type](#istreambuf_iterator__int_type)|類型，提供 `istreambuf_iterator` 的整數類型。|  
+|[istream_type](#istreambuf_iterator__istream_type)|類型，提供 `istream_iterator` 的資料流類型。|  
+|[streambuf_type](#istreambuf_iterator__streambuf_type)|類型，提供 `istreambuf_iterator` 的資料流類型。|  
+|[traits_type](../standard-library/istream-iterator-class.md#istream_iterator__traits_type)|類型，提供 `istream_iterator` 的字元特性類型。|  
   
-### 運算子  
+### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[operator\*](../Topic/istreambuf_iterator::operator*.md)|取值運算子傳回資料流的下一個字元。|  
-|[operator\+\+](../Topic/istreambuf_iterator::operator++.md)|從輸入資料流傳回下一個字元，或在遞增之前複製物件並傳回複本。|  
-|[operator\-\>](../Topic/istreambuf_iterator::operator-%3E.md)|傳回成員的值 \(如果有\)。|  
+|[equal](#istreambuf_iterator__equal)|測試兩個輸入資料流緩衝區迭代器是否相等。|  
   
-## 需求  
- **標頭：**\<iterator\>  
+### <a name="operators"></a>運算子  
   
- **命名空間:** std  
+|||  
+|-|-|  
+|[operator*](#istreambuf_iterator__operator_star)|取值運算子傳回資料流的下一個字元。|  
+|[operator++](#istreambuf_iterator__operator_add_add)|從輸入資料流傳回下一個字元，或在遞增之前複製物件並傳回複本。|  
+|[operator->](#istreambuf_iterator__operator-_gt_)|傳回成員的值 (如果有)。|  
   
-## 請參閱  
+## <a name="requirements"></a>需求  
+ **標頭：**\<iterator>  
+  
+ **命名空間：** std  
+  
+##  <a name="a-nameistreambufiteratorchartypea--istreambufiteratorchartype"></a><a name="istreambuf_iterator__char_type"></a>  istreambuf_iterator::char_type  
+ 類型，提供 `ostreambuf_iterator` 的字元類型。  
+  
+```
+typedef CharType char_type;
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型與範本參數 **CharType** 同義。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// istreambuf_iterator_char_type.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+#include <algorithm>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   typedef istreambuf_iterator<char>::char_type CHT1;  
+   typedef istreambuf_iterator<char>::traits_type CHTR1;  
+  
+   cout << "(Try the example: 'So many dots to be done'\n"  
+        << " then an Enter key to insert into the output,\n"  
+        << " & use a ctrl-Z Enter key combination to exit): ";  
+  
+   // istreambuf_iterator for input stream  
+   istreambuf_iterator< CHT1, CHTR1> charInBuf ( cin );  
+   ostreambuf_iterator<char> charOut ( cout );  
+  
+   // Used in conjunction with replace_copy algorithm  
+   // to insert into output stream and replace spaces  
+   // with dot-separators  
+   replace_copy ( charInBuf , istreambuf_iterator<char>( ),  
+        charOut , ' ' , '.' );  
+}  
+```  
+  
+##  <a name="a-nameistreambufiteratorequala--istreambufiteratorequal"></a><a name="istreambuf_iterator__equal"></a>  istreambuf_iterator::equal  
+ 測試兩個輸入資料流緩衝區迭代器是否相等。  
+  
+```
+bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
+```  
+  
+### <a name="parameters"></a>參數  
+ `right`  
+ 要檢查其相等性的迭代器。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果兩個 `istreambuf_iterator` 都是或都不是資料流結尾迭代器，便會傳回 **true**；否則會傳回 **false**。  
+  
+### <a name="remarks"></a>備註  
+ 範圍是由指向目前位置的 `istreambuf_iterator` 和資料流結尾迭代器所定義，但由於所有非資料流結尾迭代器在 **equal** 成員函式下都相等，因此無法使用 `istreambuf_iterator` 來定義任何子範圍。 `==` 和 `!=` 運算子的語意相同。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// istreambuf_iterator_equal.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   cout << "(Try the example: 'Hello world!'\n"  
+        << " then an Enter key to insert into the output,\n"  
+        << " & use a ctrl-Z Enter key combination to exit): ";  
+  
+   istreambuf_iterator<char> charReadIn1 ( cin );  
+   istreambuf_iterator<char> charReadIn2 ( cin );  
+  
+   bool b1 = charReadIn1.equal ( charReadIn2 );  
+  
+   if (b1)  
+      cout << "The iterators are equal." << endl;  
+   else  
+      cout << "The iterators are not equal." << endl;  
+}  
+```  
+  
+##  <a name="a-nameistreambufiteratorinttypea--istreambufiteratorinttype"></a><a name="istreambuf_iterator__int_type"></a>  istreambuf_iterator::int_type  
+ 類型，提供 `istreambuf_iterator` 的整數類型。  
+  
+```
+typedef typename traits_type::int_type int_type;
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型與 **Traits::int_type** 同義。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// istreambuf_iterator_int_type.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   istreambuf_iterator<char>::int_type inttype1 = 100;  
+   cout << "The inttype1 = " << inttype1 << "." << endl;  
+}  
+\* Output:   
+The inttype1 = 100.  
+*\  
+```  
+  
+##  <a name="a-nameistreambufiteratoristreamtypea--istreambufiteratoristreamtype"></a><a name="istreambuf_iterator__istream_type"></a>  istreambuf_iterator::istream_type  
+ 類型，提供 `istreambuf_iterator` 的資料流類型。  
+  
+```
+typedef basic_istream<CharType, Traits> istream_type;
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型與 `basic_istream`\< **CharType**, **Traits**> 同義。  
+  
+### <a name="example"></a>範例  
+  如需如何宣告及使用 `istream_type` 的範例，請參閱 [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)。  
+  
+##  <a name="a-nameistreambufiteratoristreambufiteratora--istreambufiteratoristreambufiterator"></a><a name="istreambuf_iterator__istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
+ 建構會初始化以從輸入資料流讀取字元的 istreambuf_iterator。  
+  
+```
+istreambuf_iterator(streambuf_type* strbuf = 0) throw();
+istreambuf_iterator(istream_type& _Istr) throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `strbuf`  
+ 要附加 `istreambuf_iterator` 的輸入資料流緩衝區。  
+  
+ `_Istr`  
+ 要附加 `istreambuf_iterator` 的輸入資料流。  
+  
+### <a name="remarks"></a>備註  
+ 第一個建構函式會使用 `strbuf` 將輸入資料流緩衝區指標初始化。 第二個建構函式會使用 `_Istr` 將輸入資料流緩衝區指標初始化。 最後，`rdbuf` 會接著嘗試擷取並儲存 **CharType** 類型的物件。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// istreambuf_iterator_istreambuf_iterator.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <algorithm>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   // Following declarations will not compile:  
+   istreambuf_iterator<char>::istream_type &istrm = cin;  
+   istreambuf_iterator<char>::streambuf_type *strmbf = cin.rdbuf( );  
+  
+   cout << "(Try the example: 'Oh what a world!'\n"  
+      << " then an Enter key to insert into the output,\n"  
+      << " & use a ctrl-Z Enter key combination to exit): ";  
+   istreambuf_iterator<char> charReadIn ( cin );  
+   ostreambuf_iterator<char> charOut ( cout );  
+  
+   // Used in conjunction with replace_copy algorithm  
+   // to insert into output stream and replace spaces  
+   // with hyphen-separators  
+   replace_copy ( charReadIn , istreambuf_iterator<char>( ),  
+      charOut , ' ' , '-' );  
+}  
+```  
+  
+##  <a name="a-nameistreambufiteratoroperatorstara--istreambufiteratoroperator"></a><a name="istreambuf_iterator__operator_star"></a>  istreambuf_iterator::operator*  
+ 取值運算子傳回資料流的下一個字元。  
+  
+```
+CharType operator*() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 資料流中的下一個字元。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// istreambuf_iterator_operator_deref.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   cout << "Type string of characters & enter to output it,\n"  
+      << " with stream buffer iterators,(try: 'I'll be back.')\n"  
+      << " repeat as many times as desired,\n"   
+      << " then keystroke ctrl-Z Enter to exit program: ";  
+   istreambuf_iterator<char> inpos ( cin );  
+   istreambuf_iterator<char> endpos;  
+   ostreambuf_iterator<char> outpos ( cout );  
+   while ( inpos != endpos )  
+   {  
+ *outpos = *inpos;   //Put value of outpos equal to inpos  
+      ++inpos;  
+      ++outpos;  
+   }  
+}  
+```  
+  
+##  <a name="a-nameistreambufiteratoroperatoraddadda--istreambufiteratoroperator"></a><a name="istreambuf_iterator__operator_add_add"></a>  istreambuf_iterator::operator++  
+ 從輸入資料流傳回下一個字元，或在遞增之前複製物件並傳回複本。  
+  
+```
+istreambuf_iterator<CharType, Traits>& operator++();
+istreambuf_iterator<CharType, Traits> operator++(int);
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `istreambuf_iterator` 或對 `istreambuf_iterator` 的參考。  
+  
+### <a name="remarks"></a>備註  
+ 第一個運算子最後會嘗試從關聯的輸入資料流中擷取並儲存 **CharType** 類型的物件。 第二個運算子會複製物件、遞增物件，然後傳回複本。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// istreambuf_iterator_operator_incr.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   cout << "Type string of characters & enter to output it,\n"  
+      << " with stream buffer iterators,(try: 'I'll be back.')\n"  
+      << " repeat as many times as desired,\n"   
+      << " then keystroke ctrl-Z Enter to exit program: ";  
+   istreambuf_iterator<char> inpos ( cin );  
+   istreambuf_iterator<char> endpos;  
+   ostreambuf_iterator<char> outpos ( cout );  
+   while ( inpos != endpos )  
+   {  
+ *outpos = *inpos;  
+      ++inpos;   //Increment istreambuf_iterator  
+      ++outpos;  
+   }  
+}  
+```  
+  
+##  <a name="a-nameistreambufiteratoroperator-gta--istreambufiteratoroperator-gt"></a><a name="istreambuf_iterator__operator-_gt_"></a>  istreambuf_iterator::operator-&gt;  
+ 傳回成員的值 (如果有)。  
+  
+```
+const Elem* operator->() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 運算子會傳回 **&\*\*this**。  
+  
+##  <a name="a-nameistreambufiteratorstreambuftypea--istreambufiteratorstreambuftype"></a><a name="istreambuf_iterator__streambuf_type"></a>  istreambuf_iterator::streambuf_type  
+ 一種類型，提供 istreambuf_iterator 的資料流類型。  
+  
+```
+typedef basic_streambuf<CharType, Traits> streambuf_type;
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型與 `basic_streambuf`\< **CharType**, **Traits**> 同義。  
+  
+### <a name="example"></a>範例  
+  如需如何宣告及使用 **istreambuf_type** 的範例，請參閱 [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)。  
+  
+##  <a name="a-nameistreambufiteratortraitstypea--istreambufiteratortraitstype"></a><a name="istreambuf_iterator__traits_type"></a>  istreambuf_iterator::traits_type  
+ 類型，提供 `istream_iterator` 的字元特性類型。  
+  
+```
+typedef Traits traits_type;
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型與範本參數 **Traits** 同義。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// istreambuf_iterator_traits_type.cpp  
+// compile with: /EHsc  
+#include <iterator>  
+#include <vector>  
+#include <iostream>  
+#include <algorithm>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   typedef istreambuf_iterator<char>::char_type CHT1;  
+   typedef istreambuf_iterator<char>::traits_type CHTR1;  
+  
+   cout << "(Try the example: 'So many dots to be done'\n"  
+        << " then an Enter key to insert into the output,\n"  
+        << " & use a ctrl-Z Enter key combination to exit): ";  
+  
+   // istreambuf_iterator for input stream  
+   istreambuf_iterator< CHT1, CHTR1> charInBuf ( cin );  
+   ostreambuf_iterator<char> charOut ( cout );  
+  
+   // Used in conjunction with replace_copy algorithm  
+   // to insert into output stream and replace spaces  
+   // with dot-separators  
+   replace_copy ( charInBuf , istreambuf_iterator<char>( ),  
+        charOut , ' ' , '.' );  
+}  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [iterator 結構](../standard-library/iterator-struct.md)   
- [\<iterator\>](../standard-library/iterator.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+ [\<iterator>](../standard-library/iterator.md)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

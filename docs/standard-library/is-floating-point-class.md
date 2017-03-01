@@ -1,57 +1,70 @@
 ---
 title: "is_floating_point 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "is_floating_point"
-  - "std.tr1.is_floating_point"
-  - "std::tr1::is_floating_point"
-  - "std.is_floating_point"
-  - "std::is_floating_point"
-  - "type_traits/std::is_floating_point"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_floating_point 類別 [TR1]"
-  - "is_floating_point"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_floating_point
+- std::is_floating_point
+- type_traits/std::is_floating_point
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_floating_point class
+- is_floating_point
 ms.assetid: 070679c1-115b-4ee4-8ab7-f52e5d9e157f
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_floating_point 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: fad953c57d32b7851cff3083fc133dce5fd2ef10
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isfloatingpoint-class"></a>is_floating_point 類別
 測試類型是否為浮點。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-template<class Ty>  
-    struct is_floating_point;  
+template <class Ty>  
+struct is_floating_point;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `Ty`  
  要查詢的類型。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  如果類型 `Ty` 是浮點類型或浮點類型的 `cv-qualified` 形式，則類型述詞的執行個體為 true，否則為 false。  
   
  浮點類型是 `float`、`double` 或 `long double` 其中一個。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
-// std_tr1__type_traits__is_floating_point.cpp   
+```cpp  
+// std__type_traits__is_floating_point.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -75,14 +88,18 @@ int main()
   
 ```  
   
-  **is\_floating\_point\<trivial\> \=\= false**  
-**is\_floating\_point\<int\> \=\= false**  
-**is\_floating\_point\<float\> \=\= true**   
-## 需求  
- **標頭：**\<type\_traits\>  
+```Output  
+is_floating_point<trivial> == false  
+is_floating_point<int> == false  
+is_floating_point<float> == true  
+```  
   
- **命名空間:** std  
+## <a name="requirements"></a>需求  
+ **標頭：**\<type_traits>  
   
-## 請參閱  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_integral 類別](../standard-library/is-integral-class.md)
+ **命名空間：** std  
+  
+## <a name="see-also"></a>另請參閱  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_integral 類別](../standard-library/is-integral-class.md)
+

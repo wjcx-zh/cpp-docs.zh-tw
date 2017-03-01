@@ -1,47 +1,63 @@
 ---
-title: "imaxdiv | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "imaxdiv"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "imaxdiv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "imaxdiv 函式"
+title: imaxdiv | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- imaxdiv
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- imaxdiv
+dev_langs:
+- C++
+helpviewer_keywords:
+- imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# imaxdiv
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 1d86597d8ff759a1a388fea785ff864d47c823ae
+ms.lasthandoff: 02/24/2017
 
-將兩個任何大小整數值的商數及餘數當做單一運算來計算。  
+---
+# <a name="imaxdiv"></a>imaxdiv
+以單一作業計算任何大小之兩個整數值的商數和餘數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 imaxdiv_t imaxdiv(   
@@ -50,28 +66,28 @@ imaxdiv_t imaxdiv(
 );   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `numer`  
  分子。  
   
  `denom`  
  分母。  
   
-## 傳回值  
- 使用屬於類型 [intmax\_t](../../c-runtime-library/standard-types.md) 的引數所呼叫的 `imaxdiv` 會傳回屬於類型 [imaxdiv\_t](../../c-runtime-library/standard-types.md) 的結構，這個結構包含商數和餘數。  
+## <a name="return-value"></a>傳回值  
+ 以 [intmax_t](../../c-runtime-library/standard-types.md) 類型的引數呼叫的 `imaxdiv` 會傳回由商數和餘數組成的 [imaxdiv_t](../../c-runtime-library/standard-types.md) 類型結構。  
   
-## 備註  
- `imaxdiv` 函式會將 `denom` 除以 `numer`，因此計算其商數和餘數。  `imaxdiv_t` 結構包含商數 `intmax_t` `quot` 和餘數 `intmax_t` `rem`。  商數的符號與數學商數的符號相同。  其絕對值是小於數學商數絕對值的最大整數。  如果分母為 0，則程式會終止並出現錯誤訊息。  
+## <a name="remarks"></a>備註  
+ `imaxdiv` 函式會將 `numer` 除以 `denom`，藉此計算商數和餘數。 `imaxdiv_t` 結構包含商數 `intmax_t``quot` 和餘數 `intmax_t``rem`。 商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`imaxdiv`|\<inttypes.h\>|  
+|-------------|---------------------|  
+|`imaxdiv`|\<inttypes.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_imaxdiv.c  
@@ -99,14 +115,17 @@ int main(int argc, char *argv[])
 }  
 ```  
   
- 當建置後，使用 `9460730470000000 8766` 命令列參數呼叫時，程式碼會產生這個輸出：  
+ 建置後以命令列參數 `9460730470000000 8766` 呼叫，程式碼會產生以下輸出︰  
   
-  **呼叫 imaxdiv\(9460730470000000, 8766\)。**  
-**導致商數 1079252848505 和餘數 5170**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+The call to imaxdiv(9460730470000000, 8766)  
+results in a quotient of 1079252848505, and a remainder of 5170  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [div](../../c-runtime-library/reference/div.md)   
  [ldiv、lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)

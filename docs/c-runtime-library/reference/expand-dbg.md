@@ -1,49 +1,66 @@
 ---
-title: "_expand_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_expand_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "expand_dbg"
-  - "_expand_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "記憶體區塊，變更大小"
-  - "expand_dbg 函式"
-  - "_expand_dbg 函式"
+title: _expand_dbg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _expand_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- expand_dbg
+- _expand_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks, changing size
+- expand_dbg function
+- _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _expand_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 18cf0578ea136ea6c84bb351b4bc087f3282910b
+ms.lasthandoff: 02/24/2017
 
-您可以展開或壓縮區塊調整在堆積上配置指定的記憶體區塊 \(僅偵錯版本\)。  
+---
+# <a name="expanddbg"></a>_expand_dbg
+以展開或收縮區塊的方式調整堆積中的指定記憶體區塊 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void *_expand_dbg(   
@@ -55,50 +72,50 @@ void *_expand_dbg(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `userData`  
- 指向先前配置的記憶體區塊的指標。  
+ 之前配置的記憶體區塊的指標。  
   
  `newSize`  
- 重新配置區塊 \(位元組\) 新要求的大小。  
+ 要求的新區塊大小 (以位元組為單位)。  
   
  `blockType`  
- 調整大小的區塊所要求的型別: `_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
+ 已調整大小區塊的要求類型︰`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
   
  `filename`  
- 指向要求的展開作業或 `NULL` 的來源檔案名稱的指標。  
+ 要求展開作業的來源檔案名稱指標，或為 `NULL`。  
   
  `linenumber`  
- 展開作業為要求或`NULL`的原始程式檔行號。  
+ 要求展開作業的來源檔案行號，或為 `NULL`。  
   
- `filename` 和 `linenumber` 參數只有在 `_expand_dbg` 已經明確呼叫或 [\_CRTDBG\_MAP\_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) 前置處理器常數已經被定義後才可使用。  
+ 只有在已明確呼叫 `_expand_dbg`，或是已定義 [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md) 處理器常數時，才可以使用 `filename` 和 `linenumber` 參數。  
   
-## 傳回值  
- 在成功完成時， `_expand_dbg` 會傳回調整記憶體區塊大小的指標。  由於記憶體不會移動，位址與 userData 相同。  如果發生錯誤或區塊無法展開至要求的大小，則會傳回 `NULL`。  如果失敗， `errno` 是作業系統失敗性質的相關資訊。  如需 `errno` 的詳細資訊，請參閱 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+## <a name="return-value"></a>傳回值  
+ 成功完成時，`_expand_dbg` 會傳回已調整大小的記憶體區塊指標。 因為記憶體未移動，所以位址和 userData 相同。 如果發生錯誤，或區塊無法展開至要求的大小，它會傳回 `NULL`。 如果失敗，`errno` 會伴隨作業系統有關失敗類別的資訊。 如需 `errno` 的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `_expand_dbg` 函式是 \_[expand](../../c-runtime-library/reference/expand.md) 函式的偵錯版本。  當 [\_DEBUG](../../c-runtime-library/debug.md) 未定義時，對 `_expand_dbg`  的每個呼叫會減少對 `_expand` 的一個呼叫。  `_expand`  和 `_expand_dbg`  皆在基底堆積調整一個記憶體區塊大小，不過 `_expand_dbg` 搭載幾個偵錯功能：在使用者部分的區塊內其中一邊的緩衝區，可測試遺漏；可追蹤特定配置型別的區塊類型參數；決定配置要求的原點之 `filename`\/`linenumber` 資訊。  
+## <a name="remarks"></a>備註  
+ `_expand_dbg` 函式是 _[expand](../../c-runtime-library/reference/expand.md) 函式的偵錯版本。 當 [_DEBUG](../../c-runtime-library/debug.md) 未定義時，每個 `_expand_dbg` 的呼叫會降至 `_expand` 的呼叫。 `_expand` 和 `_expand_dbg` 都會調整基底堆積的記憶體區塊大小，但 `_expand_dbg` 還容納數種偵錯功能：在區塊的使用者部分的任一端使用緩衝區以測試遺漏，以及追蹤特定配置類型的區塊類型參數，還有判斷配置要求來源的 `filename`/`linenumber` 資訊。  
   
- `_expand_dbg` 會調整大小給特定的記憶體區塊比要求的 `newSize` 更多空間。  `newSize` 可能大於或小於最初配置的記憶體區塊之大小。  偵錯堆積管理員用額外空間來連接偵錯記憶體區塊，並提供應用程式偵錯標頭資訊並覆寫緩衝區。  調整大小以完成展開或壓縮原始記憶體區塊。  `_expand_dbg` 不會移動記憶體區塊，如 [\_realloc\_dbg](../../c-runtime-library/reference/realloc-dbg.md) 函式。  
+ `_expand_dbg` 會使用比要求的 `newSize` 稍多一些的空間調整指定的記憶體區塊大小。 `newSize` 可能會比原始配置的記憶體區塊大小更多或更少。 偵錯堆積管理員會使用額外的空間連結偵錯記憶體區塊，以及為應用程式提供偵錯標頭資訊和覆寫緩衝區。 展開或收縮原始記憶體區塊即可調整大小。 `_expand_dbg` 不會移動記憶體區塊，如同 [_realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md) 函式一樣。  
   
- 當 `newSize` 大於原始區塊大小時，記憶體區塊展開。  在增益集期間，如果記憶體區塊無法以容納要求的大小擴充，則會傳回 `NULL` 。  當 `newSize` 小於原始區塊大小時，記憶體區塊會縮小，直到新大小取得。  
+ 當 `newSize` 大於原始區塊大小時，就會展開記憶體區塊。 在展開時，如果記憶體區塊無法展開至可容納要求的大小，即傳回 `NULL`。 當 `newSize` 小於原時區塊大小時，記憶體區塊會收縮至取得新的大小。  
   
- 如需記憶體區塊配置、初始化的方式，並在基底堆積的偵錯版本管理記憶體區塊的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](../Topic/CRT%20Debug%20Heap%20Details.md)。  如需配置區塊類型的資訊以及它們的使用方式，請參閱 [偵錯堆積上的區塊類型](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)。  如需呼叫標準堆積函式以及偵錯應用程式的偵錯組建的版本之差異的詳細資訊，請參閱 [堆積配置函式的偵錯版本](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md)。  
+ 如需在偵錯版本的基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。 如需配置區塊類型以及如何使用它們的資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。 如需在應用程式的偵錯組建中呼叫標準堆積函式與其偵錯版本間之差異的資訊，請參閱[堆積配置函式的偵錯版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。  
   
- 這個函式會驗證它的參數。  如果 `memblock` 為 null 指標，或如果大小大於 `_HEAP_MAXREQ`，這個函式叫用無效的參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，`errno` 會設定為 `EINVAL` 且函式會傳回 `NULL`。  
+ 這個函式會驗證它的參數。 如果 `memblock` 為 Null 指標，或如果大小大於 `_HEAP_MAXREQ`，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行， `errno` 會設為 `EINVAL` ，且此函式會傳回 `NULL`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_expand_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_expand_dbg`|\<crtdbg.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C run\-time libraries](../../c-runtime-library/crt-library-features.md) 版本的偵錯  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_expand_dbg.c  
@@ -146,14 +163,17 @@ int main( void )
 }  
 ```  
   
-  **Size of block after \_malloc\_dbg of 40 longs: 160**  
-**Size of block after \_expand\_dbg of 1 more long: 164**   
-## 註解  
- 這個程式的輸出取決於電腦展開所有部分的能力。  如果所有部分展開，輸出會顯示在輸出區域反映。  
+```Output  
+Size of block after _malloc_dbg of 40 longs: 160  
+Size of block after _expand_dbg of 1 more long: 164  
+```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="comment"></a>註解  
+ 此程式的輸出取決於您的電腦能否展開所有區段。 如果所有區段都能展開，就會在 [輸出] 區段反映輸出。  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

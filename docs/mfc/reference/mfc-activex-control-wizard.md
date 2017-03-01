@@ -1,51 +1,66 @@
 ---
-title: "MFC ActiveX 控制項精靈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項 [C++], MFC"
-  - "MFC ActiveX 控制項精靈"
-  - "MFC ActiveX 控制項 [C++], 精靈"
-  - "OLE 控制項 [C++]"
-  - "OLE 控制項 [C++], 建立"
+title: "MFC ActiveX 控制項精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.overview
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [C++], MFC
+- MFC ActiveX controls [C++], wizards
+- OLE controls [C++], creating
+- MFC ActiveX Control Wizard
+- OLE controls [C++]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC ActiveX 控制項精靈
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 734c8dfdef42a0de614e02197d8cefdf4adc1bf1
+ms.lasthandoff: 02/24/2017
 
-ActiveX 控制項是 [Automation 伺服程式](../../mfc/automation-servers.md)的特定類型；它是可重複使用的元件。  裝載 \(Host\) ActiveX 控制項的應用程式是這個控制項的 [Automation 用戶端](../../mfc/automation-clients.md)。  如果要建立這類可重複使用的元件，則請使用這個精靈來建立您的控制項。  如需詳細資訊，請參閱 [MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)。  
+---
+# <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈
+ActiveX 控制項是特定類型的[automation 伺服程式](../../mfc/automation-servers.md); 它是一個可重複使用的元件。 裝載 ActiveX 控制項的應用程式是[automation 用戶端](../../mfc/automation-clients.md)該控制項。 如果您的目標是要建立可重複使用元件，然後使用這個精靈來建立您的控制項。 請參閱[MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)如需詳細資訊。  
   
- 此外，您可使用 [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)來建立 Automation 伺服程式 MFC 應用程式。  
+ 或者，您可以建立自動化伺服器 MFC 應用程式使用[MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)。  
   
- 使用這個精靈建立的 ActiveX 控制項可以有使用者介面，也可以是不可見的。  您可在精靈的[控制項設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)頁面來表示這個選項。  計時器控制項是您希望成為不可見 ActiveX 控制項的例子。  
+ 使用此精靈建立 ActiveX 控制項可以具有使用者介面，或可以是不可見。 您可以指定此選項在[控制設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)精靈中的頁面。 Timer 控制項是您想要看不見的 ActiveX 控制項的範例。  
   
- ActiveX 控制項可具有複雜的使用者介面。  有些控制項可能就像封裝的表單：包含許多欄位的單一控制項，每個欄位都有適當的 Windows 控制項。  例如，一個實作為 MFC ActiveX 控制項的汽車零件物件可能有個像表單的使用者介面，使用者透過這個介面可讀取並編輯零件編號、零件名稱以及其他資訊。  如需詳細資訊，請參閱 [MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)。  
+ ActiveX 控制項可以有複雜的使用者介面。 某些控制項可能會像封裝的表單︰ 單一控制項包含許多欄位，每個 Windows 控制項本身。 比方說，實作為 MFC ActiveX 控制項的自動部分物件可能會顯示類似表單的使用者介面，讓使用者可讀取，並編輯零件編號、 組件名稱和其他資訊。 請參閱[MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)如需詳細資訊。  
   
- 如需為 ActiveX 物件建立容器 \(Container\)，請參閱[建立 ActiveX 控制項容器](../../mfc/reference/creating-an-mfc-activex-control-container.md)。  
+ 如果您需要建立 ActiveX 物件的容器，請參閱[建立 ActiveX 控制項容器](../../mfc/reference/creating-an-mfc-activex-control-container.md)。  
   
- MFC 起始程式包含 C\+\+ 原始程式 \(.cpp\) 檔、資源 \(.rc\) 檔及專案 \(.vcxproj\) 檔。  起始檔案 \(Starter File\) 中所產生的程式碼是以 MFC 為基礎。  
+ MFC 起始程式包括 c + + 原始程式 (.cpp) 檔、 資源 (.rc) 檔案和專案 (.vcxproj) 檔案。 起始檔案中產生的程式碼是以 MFC 為基礎。  
   
- 以下範例清單顯示 ActiveX 控制項相關的工作和增強功能的類型：  
+ 下面範例會顯示工作和增強功能，為您的 ActiveX 控制項的類型︰  
   
 -   [最佳化 ActiveX 控制項](../../mfc/mfc-activex-controls-optimization.md)  
   
--   [將內建事件加入至 ActiveX 控制項](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
+-   [內建事件加入至 ActiveX 控制項](../../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)  
   
 -   [加入自訂事件](../../mfc/mfc-activex-controls-adding-custom-events.md)  
   
@@ -57,18 +72,20 @@ ActiveX 控制項是 [Automation 伺服程式](../../mfc/automation-servers.md)�
   
 -   [加入自訂屬性](../../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [在 ActiveX 控制項容器中程式設計 ActiveX 控制項](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [ActiveX 控制項容器中程式設計 ActiveX 控制項](../../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
-## 概觀  
- 這個精靈頁面將會為您建立的 MFC ActiveX 控制項專案描述目前的應用程式設定。  在預設情況下，精靈會如下建立專案：  
+## <a name="overview"></a>概觀  
+ 此精靈頁面說明您要建立 MFC ActiveX 控制項專案的目前應用程式設定。 依預設，此精靈建立專案，如下所示︰  
   
--   預設專案不會產生執行階段授權或說明檔。  您可在[應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)頁面變更這些預設值。  只有在 ActiveX 控制項精靈的這個頁面上所進行的選取會反映在 \[概觀\] 頁面中。  
+-   預設專案會產生任何執行階段授權或說明檔。 您可以變更這些預設設定上[應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)頁面。 只有您進行 ActiveX 控制項精靈的這個頁面的選取會反映在**概觀**頁面。  
   
--   專案會根據專案的名稱來包含控制項類別和屬性頁類別。  您可以在[控制項名稱](../../mfc/reference/control-names-mfc-activex-control-wizard.md)頁面上編輯專案的名稱和檔名。  
+-   專案會包含控制項類別和屬性頁類別，根據專案的名稱。 您可以編輯您的專案和檔案名稱上[控制項名稱](../../mfc/reference/control-names-mfc-activex-control-wizard.md)頁面。  
   
--   控制項並不是以現有的 Windows 控制項為基礎、而是在可見時啟動、具有使用者介面且包含 \[**關於**\] 對話方塊。  您可在[控制項設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)頁面變更這些預設值。  
+-   控制項沒有現有的 Windows 控制項為基礎，它會成為可見狀態，具有使用者介面，並包含時啟動**有關**對話方塊。 您可以變更這些預設設定上[控制設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)頁面。  
   
-## 請參閱  
- [建立和管理 Visual C\+\+ 專案](../../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual C\+\+ 專案類型](../../ide/visual-cpp-project-types.md)   
+## <a name="see-also"></a>另請參閱  
+ [建立和管理 Visual c + + 專案](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [概念](../../atl/active-template-library-atl-concepts.md)
+
+

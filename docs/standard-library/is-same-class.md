@@ -1,58 +1,71 @@
 ---
 title: "is_same 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::is_same"
-  - "std.tr1.is_same"
-  - "is_same"
-  - "std.is_same"
-  - "std::is_same"
-  - "type_traits/std::is_same"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_same 類別 [TR1]"
-  - "is_same"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_same
+- std::is_same
+- type_traits/std::is_same
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_same class
+- is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_same 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 763b2b9e120976270ccdad8509e0d60f280f9344
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="issame-class"></a>is_same 類別
 測試兩個類型是否相同。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-template<class Ty1, class Ty2>  
-    struct is_same;  
+template <class Ty1, class Ty2>  
+struct is_same;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `Ty1`  
  要查詢的第一個類型。  
   
  `Ty2`  
  要查詢的第二個類型。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  如果類型 `Ty1` 與 `Ty2` 相同，則類型述詞的執行個體為 true，否則為 false。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
-// std_tr1__type_traits__is_same.cpp   
+```cpp  
+// std__type_traits__is_same.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -85,17 +98,21 @@ int main()
   
 ```  
   
-  **is\_same\<base, base\> \=\= true**  
-**is\_same\<base, derived\> \=\= false**  
-**is\_same\<derived, base\> \=\= false**  
-**is\_same\<int, int\> \=\= true**  
-**is\_same\<int, const int\> \=\= false**   
-## 需求  
- **標頭：**\<type\_traits\>  
+```Output  
+is_same<base, base> == true  
+is_same<base, derived> == false  
+is_same<derived, base> == false  
+is_same<int, int> == true  
+is_same<int, const int> == false  
+```  
   
- **命名空間:** std  
+## <a name="requirements"></a>需求  
+ **標頭：**\<type_traits>  
   
-## 請參閱  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_convertible 類別](../standard-library/is-convertible-class.md)   
- [is\_base\_of 類別](../standard-library/is-base-of-class.md)
+ **命名空間：** std  
+  
+## <a name="see-also"></a>另請參閱  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_convertible 類別](../standard-library/is-convertible-class.md)   
+ [is_base_of 類別](../standard-library/is-base-of-class.md)
+

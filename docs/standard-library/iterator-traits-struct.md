@@ -1,108 +1,107 @@
 ---
 title: "iterator_traits 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::iterator_traits"
-  - "xutility/std::iterator_traits"
-  - "iterator_traits"
-  - "std.iterator_traits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator_traits 類別"
-  - "iterator_traits 結構"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::iterator_traits
+- xutility/std::iterator_traits
+- iterator_traits
+- std.iterator_traits
+dev_langs:
+- C++
+helpviewer_keywords:
+- iterator_traits struct
+- iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# iterator_traits 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 24cdef3317b1a2c982858a3832e0085ba7ba7d20
+ms.lasthandoff: 02/24/2017
 
-用於的範本 Helper 結構指定 Iterator 應該有的所有重要型別定義。  
+---
+# <a name="iteratortraits-struct"></a>iterator_traits 結構
+範本協助程式結構，用來指定迭代器應有的所有重要類型定義。  
   
-## 語法  
+## <a name="syntax"></a>語法  
+
+```    
+struct iterator_traits {
+   typedef typename Iterator::iterator_category iterator_category;
+   typedef typename Iterator::value_type value_type;
+   typedef typename Iterator::difference_type difference_type;
+   typedef difference_type distance_type;
+   typedef typename Iterator::pointer pointer;
+   typedef typename Iterator::reference reference;
+   };  
+```    
+## <a name="remarks"></a>備註  
+ 範本結構會定義成員類型  
   
-```  
-template<class Iterator>  
-    struct iterator_traits {  
-        typedef typename Iterator::iterator_category iterator_category;  
-        typedef typename Iterator::value_type value_type;  
-        typedef typename Iterator::difference_type difference_type;  
-        typedef difference_type distance_type;  
-        typedef typename Iterator::pointer pointer;  
-        typedef typename Iterator::reference reference;  
-    };  
-template<class Type>  
-    struct iterator_traits<Type*> {  
-        typedef random_access_iterator_tag iterator_category;  
-        typedef Type value_type;  
-        typedef ptrdiff_t difference_type;  
-        typedef difference_type distance_type;  
-        typedef Type *pointer;  
-        typedef Type& reference;  
-    };  
-template<class Type>  
-    struct iterator_traits<const Type*> {  
-        typedef random_access_iterator_tag iterator_category;  
-        typedef Type value_type;  
-        typedef ptrdiff_t difference_type;  
-        typedef difference_type distance_type;  
-        typedef const Type *pointer;  
-        typedef const Type& reference;  
-    };  
-```  
+- **iterator_category**：與 **Iterator::iterator_category** 同義。  
   
-## 備註  
- 範本結構定義成員型別  
+- `value_type`：與 **Iterator::value_type** 同義。  
   
--   **iterator\_category**: **Iterator::iterator\_category**的同義字。  
+- `difference_type`：與 **Iterator::difference_type** 同義。  
   
--   `value_type`: **Iterator::value\_type**的同義字。  
+- `distance_type`：與 **Iterator::difference_type** 同義。  
   
--   `difference_type`: **Iterator::difference\_type**的同義字。  
+- **pointer**：與 **Iterator::pointer** 同義。  
   
--   `distance_type`: **Iterator::difference\_type.**的同義資料表。  
+- **reference**：與 **Iterator::reference** 同義。  
   
--   **pointer**: **Iterator::pointer**的同義字。  
+ 部分特製化會決定與 **Type \*** 或 const **Type \*** 類型之物件指標關聯的重要類型。  
   
--   **reference**: **Iterator::reference**的同義字。  
+ 在這項實作中，您也可以使用數個不利用部分特製化的範本函式：  
   
- 部分特製化判斷重要型別與型別 **Type \*** 或常數 **Type \***物件指標。  
-  
- 在這個實作也可以使用不使用部分特製化的幾個樣板函式:  
-  
-```  
-template<class Category, class Type, class Diff>  
-C _Iter_cat(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    random_access_iterator_tag _Iter_cat(const Ty *);  
-  
-template<class Category, class Ty, class Diff>  
-Ty *_Val_type(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    Ty *_Val_type(const Ty *);  
-  
-template<class Category, class Ty, class Diff>  
-Diff *_Dist_type(const iterator<Category, Ty, Diff>&);  
-template<class Ty>  
-    ptrdiff_t *_Dist_type(const Ty *);  
+```cpp  
+template <class Category, class Type, class Diff>
+C _Iter_cat(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+random_access_iterator_tag _Iter_cat(const Ty *);
+
+template <class Category, class Ty, class Diff>
+Ty *val_type(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+Ty *val_type(const Ty *);
+
+template <class Category, class Ty, class Diff>
+Diff *_Dist_type(const iterator<Category, Ty, Diff>&);
+
+template <class Ty>
+ptrdiff_t *_Dist_type(const Ty *);
 ```  
   
- 哪些更間接判斷數目相同的型別。  您可以使用這些函式當做函式呼叫的引數。  它們的唯一目的是提供一個有用的樣板類別界限給呼叫的函式。  
+ 這會更間接地決定數個相同類型。 您可以在函式呼叫上使用這些函式作為引數。 它們的唯一目的是要提供實用的範本類別參數給所呼叫的函式。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // iterator_traits.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -135,18 +134,24 @@ int main( )
    function( vc.begin( ), vc.end( ) );  
    function( li.begin( ), li.end( ) );  
 }  
+\* Output:   
+struct std::random_access_iterator_tag  
+a a a a a a a a a a   
+struct std::bidirectional_iterator_tag  
+0 0 0 0 0 0 0 0 0 0   
+*\  
 ```  
   
-  **結構 std::random\_access\_iterator\_tag**  
-**。**  
-**結構 std::bidirectional\_iterator\_tag**  
-**0 0 0 0 0 0 0 0 0 0**   
-## 需求  
- **標頭：**\<迭代器\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<iterator>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<iterator\>](../standard-library/iterator.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="see-also"></a>另請參閱  
+ [\<iterator>](../standard-library/iterator.md)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,78 +1,90 @@
 ---
 title: "greater_equal 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.greater_equal"
-  - "greater_equal"
-  - "std::greater_equal"
-  - "xfunctional/std::greater_equal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "greater_equal 結構"
-  - "greater_equal 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.greater_equal
+- greater_equal
+- std::greater_equal
+- xfunctional/std::greater_equal
+dev_langs:
+- C++
+helpviewer_keywords:
+- greater_equal struct
+- greater_equal function
 ms.assetid: a8ba911b-7af8-4653-b972-d8618f4df7d5
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# greater_equal 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 56fd730319f7523915fcdbb71d9cd97c98fda5b0
+ms.lasthandoff: 02/24/2017
 
-對其引數執行大於或等於作業 \(`operator>=`\) 的二進位述詞。  
+---
+# <a name="greaterequal-struct"></a>greater_equal 結構
+在其引數上執行大於或等於運算 ( `operator>=`) 的二元述詞。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
-template<class Type = void>  
-   struct greater_equal : public binary_function <Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator>=  
-template<>  
-   struct greater_equal<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            >= std::forward<Type2>(Right));  
-   };  
-  
+```
+template <class Type = void>
+struct greater_equal : public binary_function <Type, Type, bool>  
+{
+    bool operator()(const Type& Left, const Type& Right) const;
+};
+
+// specialized transparent functor for operator>=
+template <>
+struct greater_equal<void>  
+{
+  template <class T, class U>
+  auto operator()(T&& Left, U&& Right) const`
+    -> decltype(std::forward<T>(Left)>= std::forward<U>(Right));
+ };
 ```  
   
-#### 參數  
- `Type`, `Type1`, `Type2`  
- 任何支援`operator>=`接受指定或推斷型別的運算元之類型。  
+#### <a name="parameters"></a>參數  
+ `Type`, `T`, `U`  
+ 支援 `operator>=` 的任何類型，其接受指定或推斷類型的運算元。  
   
  `Left`  
- 左邊的大於或等於運算元作業。  非特製化樣板接受型別 `Type` 的左值參考引數。  特製化樣板在左值和右值推斷型別 `Type1` 參考引數能完美轉送。  
+ 大於或等於運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
   
  `Right`  
- 右邊的大於或等於運算元作業。  非特製化樣板接受型別 `Type` 的左值參考引數。  特製化樣板在左值和右值推斷的型別 `Type2`參考引數能完美轉送。  
+ 大於或等於運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
   
-## 傳回值  
- `Left` `>=` `Right` 的結果。  特製化樣板能完善結果的轉送，其具有 `operator>=`所傳回的型別。  
+## <a name="return-value"></a>傳回值  
+ `Left``>=``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator>=` 所傳回的類型。  
   
-## 備註  
- 只有在此型別滿足標準數學需求時，二元述詞 `greater_equal`\<`Type`\> 提供一組嚴格弱式型別 `Type` 的項目值至一個同等類別這個型別符合。  任何指標型別的特製化會產生項目的總定序，使得不同值的元素會依照彼此排序。  
+## <a name="remarks"></a>備註  
+ 二元述詞 `greater_equal`< `Type`> 會提供嚴格弱式排序來將一組 `Type` 類型的元素值分割成等價類別，但只有在此類型滿足以此方式排序的標準數學需求時，才會這麼做。 任何指標類型的特製化都會產生元素的總排序，其中所有不同值的元素都會依照彼此的相關順序排序。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // functional_greater_equal.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -118,18 +130,22 @@ int main( )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
+```
+Original vector v1 = (6262 6262 41 18467 6334 26500 19169)
+Sorted vector v1 = (41 6262 6262 6334 18467 19169 26500)
+Resorted vector v1 = (26500 19169 18467 6334 6262 6262 41)
 ```  
-Original vector v1 = ( 6262 6262 41 18467 6334 26500 19169 )  
-Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )  
-Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )  
-```  
   
-## 需求  
- **標題:** \<functional\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<functional>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

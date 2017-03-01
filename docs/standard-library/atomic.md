@@ -1,111 +1,128 @@
 ---
-title: "&lt;atomic&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<atomic>"
-  - "atomic/std::atomic_int_least32_t"
-  - "atomic/std::atomic_ullong"
-  - "atomic/std::atomic_ptrdiff_t"
-  - "atomic/std::atomic_char16_t"
-  - "atomic/std::atomic_schar"
-  - "atomic/std::atomic_ulong"
-  - "atomic/std::atomic_uint_fast32_t"
-  - "atomic/std::atomic_uint8_t"
-  - "atomic/std::atomic_int32_t"
-  - "atomic/std::atomic_uint_fast64_t"
-  - "atomic/std::atomic_uint32_t"
-  - "atomic/std::atomic_int16_t"
-  - "atomic/std::atomic_uintmax_t"
-  - "atomic/std::atomic_intmax_t"
-  - "atomic/std::atomic_long"
-  - "atomic/std::atomic_int"
-  - "atomic/std::atomic_uint_least8_t"
-  - "atomic/std::atomic_size_t"
-  - "atomic/std::atomic_uint_fast16_t"
-  - "atomic/std::atomic_wchar_t"
-  - "atomic/std::atomic_int_fast64_t"
-  - "atomic/std::atomic_uint_fast8_t"
-  - "atomic/std::atomic_int_fast8_t"
-  - "atomic/std::atomic_intptr_t"
-  - "atomic/std::atomic_uint"
-  - "atomic/std::atomic_uint16_t"
-  - "atomic/std::atomic_char32_t"
-  - "atomic/std::atomic_uint64_t"
-  - "atomic/std::atomic_ushort"
-  - "atomic/std::atomic_int_least16_t"
-  - "atomic/std::atomic_char"
-  - "atomic/std::atomic_uint_least32_t"
-  - "atomic/std::atomic_uintptr_t"
-  - "atomic/std::atomic_short"
-  - "atomic/std::atomic_llong"
-  - "atomic/std::atomic_uint_least16_t"
-  - "atomic/std::atomic_int_fast16_t"
-  - "atomic/std::atomic_int_least8_t"
-  - "atomic/std::atomic_int_least64_t"
-  - "atomic/std::atomic_int_fast32_t"
-  - "atomic/std::atomic_uchar"
-  - "atomic/std::atomic_int8_t"
-  - "atomic/std::atomic_int64_t"
-  - "atomic/std::atomic_uint_least64_t"
-dev_langs: 
-  - "C++"
+title: '&lt;atomic&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <atomic>
+- atomic/std::atomic_int_least32_t
+- atomic/std::atomic_ullong
+- atomic/std::atomic_ptrdiff_t
+- atomic/std::atomic_char16_t
+- atomic/std::atomic_schar
+- atomic/std::atomic_ulong
+- atomic/std::atomic_uint_fast32_t
+- atomic/std::atomic_uint8_t
+- atomic/std::atomic_int32_t
+- atomic/std::atomic_uint_fast64_t
+- atomic/std::atomic_uint32_t
+- atomic/std::atomic_int16_t
+- atomic/std::atomic_uintmax_t
+- atomic/std::atomic_intmax_t
+- atomic/std::atomic_long
+- atomic/std::atomic_int
+- atomic/std::atomic_uint_least8_t
+- atomic/std::atomic_size_t
+- atomic/std::atomic_uint_fast16_t
+- atomic/std::atomic_wchar_t
+- atomic/std::atomic_int_fast64_t
+- atomic/std::atomic_uint_fast8_t
+- atomic/std::atomic_int_fast8_t
+- atomic/std::atomic_intptr_t
+- atomic/std::atomic_uint
+- atomic/std::atomic_uint16_t
+- atomic/std::atomic_char32_t
+- atomic/std::atomic_uint64_t
+- atomic/std::atomic_ushort
+- atomic/std::atomic_int_least16_t
+- atomic/std::atomic_char
+- atomic/std::atomic_uint_least32_t
+- atomic/std::atomic_uintptr_t
+- atomic/std::atomic_short
+- atomic/std::atomic_llong
+- atomic/std::atomic_uint_least16_t
+- atomic/std::atomic_int_fast16_t
+- atomic/std::atomic_int_least8_t
+- atomic/std::atomic_int_least64_t
+- atomic/std::atomic_int_fast32_t
+- atomic/std::atomic_uchar
+- atomic/std::atomic_int8_t
+- atomic/std::atomic_int64_t
+- atomic/std::atomic_uint_least64_t
+dev_langs:
+- C++
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 caps.latest.revision: 22
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# &lt;atomic&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 8346982360dbc6ecfaae296e48da9464b91190b4
+ms.lasthandoff: 02/24/2017
 
-定義類別和使用的樣板類別建立支援不可部分完成的作業的類型。  
+---
+# <a name="ltatomicgt"></a>&lt;atomic&gt;
+定義類別和範本類別，用於建立可支援不可部分完成作業的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 #include <atomic>  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  使用 **\/clr** 或 **\/clr:pure**，以編譯的程式碼，這個標題會封鎖。  
+>  使用已編譯的程式碼中**/clr**，此標頭會封鎖。  
   
- 不可部分完成的作業可以協助您使用多執行緒正確操作物件，而不需要使用 Mutex 鎖定的兩個主要屬性。  
+ 不可部分完成作業有兩個重要屬性，可協助您使用多個執行緒來正確操作物件，而不使用 Mutex 鎖定。  
   
--   由於不可部分完成的作業不能的，相同物件的第二個原子作業從不同的執行緒可能在第一個不可部分完成的作業前後只取得物件的狀態。  
+-   因為不可部分完成作業不可分割，所以不同執行緒的相同物件上的第二個不可部分完成作業只能取得第一個不可部分完成作業之前或之後的物件狀態。  
   
--   根據其 [memory\_order](../Topic/memory_order%20Enum.md) 引數，不可部分完成的作業在相同執行緒上建立其他不可部分完成的作業效果的可視性的定序需求。  因此，它禁止違反定序需求的編譯器最佳化。  
+-   根據其 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數，不可部分完成作業會建立相同執行緒中其他不可部分完成作業影響可見性的順序需求。 因此，它會禁止違反排序需求的編譯器最佳化。  
   
- 在某些平台上，有效率地實作某些型別不可部分完成的作業可能是不可能的，而不使用 `mutex` 鎖定。  如果該型別使用的不可部分完成的作業不會鎖定，原子型別是 *無鎖定* 。  
+ 在部分平台上，如果不使用 `mutex` 鎖定，則可能無法有效率地實作某些類型的不可部分完成作業。 如果該類型上沒有不可部分完成作業使用鎖定，則不可部分完成類型是「無鎖定」。  
   
- [atomic\_flag](../standard-library/atomic-flag-structure.md) 類別提供保留 `bool` 旗標的較小的原子型別。  它的作業永遠是無鎖定。  
+ **C++11**：如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 為 true，則在訊號處理常式中，您可以在 `obj` 物件上執行不可部分完成作業。  
   
- 樣板類別 `atomic<Ty>` 儲存其引數型別 `Ty` 物件與提供之不可部分完成存取儲存的值。  您可以執行個體化就可以使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)，可以複製使用 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 和相等的所測試的任何型別。  特別是，您可以將它與符合這些需求和，在許多情況下，使用浮點型別的使用者定義型別。  
+ [atomic_flag](../standard-library/atomic-flag-structure.md) 類別提供可保留 `bool` 旗標的最小不可部分完成類型。 它的作業永遠是無鎖定。  
   
- 範本也有一組整數型別的特製化和指標的部分特製化。  這些特製化的無法透過主要樣板的其他作業。  
+ 範本類別 `atomic<T>` 會儲存其引數類型 `T` 的物件，並提供該儲存值的不可部分完成存取。 您可以將它具現化，方法是使用可使用 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 進行複製以及使用 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 測試是否相等的任何類型。 特別的是，您可以將它與符合這些需求的使用者定義類型搭配使用，而且在許多情況下，也可以與浮點類型搭配使用。  
   
-## 指標特製化  
- 對任何指標型別的 `atomic<Ty *>` 部分特製化應用程式。  它們為指標算術提供方法。  
+ 範本也會有一組整數類型的特製化以及指標的部分特製化。 這些特製化提供無法透過主要範本取得的其他作業。  
   
-## 整數特製化  
- `atomic<integral>` 特製化適用於所有整數型別。  它們提供無法透過主要樣板的其他作業。  
+## <a name="pointer-specializations"></a>指標特製化  
+ `atomic<T *>` 部分特製化會套用至所有指標類型。 它們提供方法來執行指標算術。  
   
- 每個 `atomic<integral>` 型別具有您在 `if directive` 可以用來判斷在編譯時期的對應巨集在該型別的作業是否已鎖定。  如果巨集的值為零，在型別的作業不是無鎖定。  如果值為 1，作業可能是無鎖定，因此，需要執行階段檢查。  如果值為 2，表示作業已鎖定。  您可以使用 `atomic_is_lock_free` 函式來判斷在執行階段在型別的作業是否已鎖定。  
+## <a name="integral-specializations"></a>整數特製化  
+ `atomic<integral>` 特製化會套用至所有整數類型。 它們提供無法透過主要範本取得的其他作業。  
   
- 對於每一個整數型別，則處理該整數型別物件的對應的具名原子型別。  每個 `atomic_integral` 型別具有相同的一組成員函式與 `atomic<Ty>` 對應的執行個體化，而且可以傳遞至任何原子非成員函式。  
+ 每個 `atomic<integral>` 類型都會有對應巨集，可在 `if directive` 中用來判斷該類型上的作業在編譯時期是否無鎖定。 如果巨集的值為零，則類型上的作業不是無鎖定。 如果值為 1，作業可能是無鎖定，而且需要執行階段檢查。 如果值為 2，作業是無鎖定。 您可以使用函式 `atomic_is_lock_free`，在執行階段決定類型上的作業是否無鎖定。  
   
-|`atomic_integral` 型別|整數類資料型別|`atomic_is_lock_free` 巨集|  
-|--------------------------|-------------|------------------------------|  
+ 針對每個整數類型，具有管理該整數類型之物件的對應具名不可部分完成類型。 每個 `atomic_integral` 類型都會有一組與對應 `atomic<T>` 具現化相同的成員函式，而且可以傳遞給任何非成員不可部分完成函式。  
+  
+|`atomic_integral` 型別|整數類型|`atomic_is_lock_free` 巨集|  
+|----------------------------|-------------------|---------------------------------|  
 |`atomic_char`|`char`|`ATOMIC_CHAR_LOCK_FREE`|  
 |`atomic_schar`|`signed char`|`ATOMIC_CHAR_LOCK_FREE`|  
 |`atomic_uchar`|`unsigned char`|`ATOMIC_CHAR_LOCK_FREE`|  
@@ -121,10 +138,10 @@ manager: "ghogen"
 |`atomic_llong`|`long long`|`ATOMIC_LLONG_LOCK_FREE`|  
 |`atomic_ullong`|`unsigned long long`|`ATOMIC_LLONG_LOCK_FREE`|  
   
- Typedef 名稱為不可部分完成的樣板之特製化在標題 \<inttypes.h 定義的某些存在的型別。\>  
+ 具有 typedef 名稱可特製化標頭 \<inttypes.h> 中所定義之部分類型的不可部分完成範本。  
   
-|原子型別|Typedef 名稱|  
-|----------|----------------|  
+|不可部分完成類型|typedef 名稱|  
+|-----------------|------------------|  
 |`atomic_int8_t`|`atomic<int8_t>`|  
 |`atomic_uint8_t`|`atomic<uint8_t>`|  
 |`atomic_int16_t`|`atomic<int16_t>`|  
@@ -156,54 +173,60 @@ manager: "ghogen"
 |`atomic_intmax_t`|`atomic<intmax_t>`|  
 |`atomic_uintmax_t`|`atomic<uintmax_t>`|  
   
-## Structs  
+## <a name="structs"></a>結構  
   
-|Name|說明|  
-|----------|--------|  
-|[atomic 結構](../standard-library/atomic-structure.md)|描述物件儲存於中的值執行不可部分完成的作業。|  
-|[atomic\_flag 結構](../standard-library/atomic-flag-structure.md)|描述原子集合和清除 `bool` 旗標的物件。|  
+|名稱|描述|  
+|----------|-----------------|  
+|[atomic 結構](../standard-library/atomic-structure.md)|描述在預存值上執行不可部分完成作業的物件。|  
+|[atomic_flag 結構](../standard-library/atomic-flag-structure.md)|描述以不可部分完成方式設定和清除 `bool` 旗標的物件。|  
   
-## 列舉  
+## <a name="enums"></a>列舉  
   
-|Name|說明|  
-|----------|--------|  
-|[memory\_order 列舉](../Topic/memory_order%20Enum.md)|提供在記憶體位置對於同步作業處理的符號名稱。  這些作業會影響執行緒的工作方式變成也可在其他執行緒看見。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[memory_order 列舉](../standard-library/atomic-enums.md#memory_order_enum)|為記憶體位置上的同步處理作業提供符號名稱。 這些作業會影響一個執行緒的指派如何在其他執行緒中變成可見。|  
   
-## 函式  
- 下列清單中， `_explicit` 不結束函式有對應的 `_explicit`的語意，不過，它們會隱含 [memory\_order](../Topic/memory_order%20Enum.md)`memory_order_seq_cst`的引數。  
+## <a name="functions"></a>函式  
+ 在下列清單中，結尾不是 `_explicit` 的函式具有對應 `_explicit` 的語意，差異在於它們具有 `memory_order_seq_cst`的隱含 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數。  
   
-|Name|說明|  
-|----------|--------|  
-|[atomic\_compare\_exchange\_strong 函式](../Topic/atomic_compare_exchange_strong%20Function.md)|執行 *不可部分完成的比較和交換* 作業。|  
-|[atomic\_compare\_exchange\_strong\_explicit 函式](../Topic/atomic_compare_exchange_strong_explicit%20Function.md)|執行 *不可部分完成的比較和交換* 作業。|  
-|[atomic\_compare\_exchange\_weak 函式](../Topic/atomic_compare_exchange_weak%20Function.md)|執行 *弱式不可部分完成比較和交換* 作業。|  
-|[atomic\_compare\_exchange\_weak\_explicit 函式](../Topic/atomic_compare_exchange_weak_explicit%20Function.md)|執行 *弱式不可部分完成比較和交換* 作業。|  
-|[atomic\_exchange 函式](../Topic/atomic_exchange%20Function.md)|取代所儲存的值。|  
-|[atomic\_exchange\_explicit 函式](../Topic/atomic_exchange_explicit%20Function.md)|取代所儲存的值。|  
-|[atomic\_fetch\_add 函式](../Topic/atomic_fetch_add%20Function.md)|將值加入至現有的儲存值。|  
-|[atomic\_fetch\_add\_explicit 函式](../Topic/atomic_fetch_add_explicit%20Function.md)|將值加入至現有的儲存值。|  
-|[atomic\_fetch\_and 函式](../Topic/atomic_fetch_and%20Function.md)|執行指定的值和現有的儲存值執行位元 `and` 。|  
-|[atomic\_fetch\_and\_explicit 函式](../Topic/atomic_fetch_and_explicit%20Function.md)|執行指定的值和現有的儲存值執行位元 `and` 。|  
-|[atomic\_fetch\_or 函式](../Topic/atomic_fetch_or%20Function.md)|執行指定的值和現有的儲存值執行位元 `or` 。|  
-|[atomic\_fetch\_or\_explicit 函式](../Topic/atomic_fetch_or_explicit%20Function.md)|執行指定的值和現有的儲存值執行位元 `or` 。|  
-|[atomic\_fetch\_sub 函式](../Topic/atomic_fetch_sub%20Function.md)|從現有的儲存值減去某個值。|  
-|[atomic\_fetch\_sub\_explicit 函式](../Topic/atomic_fetch_sub_explicit%20Function.md)|從現有的儲存值減去某個值。|  
-|[atomic\_fetch\_xor 函式](../Topic/atomic_fetch_xor%20Function.md)|執行指定的值和現有的儲存值執行位元 `exclusive or` 。|  
-|[atomic\_fetch\_xor\_explicit 函式](../Topic/atomic_fetch_xor_explicit%20Function.md)|執行指定的值和現有的儲存值執行位元 `exclusive or` 。|  
-|[atomic\_flag\_clear 函式](../Topic/atomic_flag_clear%20Function.md)|設定在 `atomic_flag` 物件中的旗標設為 `false`。|  
-|[atomic\_flag\_clear\_explicit 函式](../Topic/atomic_flag_clear_explicit%20Function.md)|設定在 `atomic_flag` 物件中的旗標設為 `false`。|  
-|[atomic\_flag\_test\_and\_set 函式](../Topic/atomic_flag_test_and_set%20Function.md)|設定在 `atomic_flag` 物件中的旗標設為 `true`。|  
-|[atomic\_flag\_test\_and\_set\_explicit 函式](../Topic/atomic_flag_test_and_set_explicit%20Function.md)|設定在 `atomic_flag` 物件中的旗標設為 `true`。|  
-|[atomic\_init 函式](../Topic/atomic_init%20Function.md)|設定 `atomic` 物件中儲存的值。|  
-|[atomic\_is\_lock\_free 函式](../Topic/atomic_is_lock_free%20Function.md)|指定在指定物件的不可部分完成的作業是否已鎖定。|  
-|[atomic\_load 函式](../Topic/atomic_load%20Function.md)|元素擷取值。|  
-|[atomic\_load\_explicit 函式](../Topic/atomic_load_explicit%20Function.md)|元素擷取值。|  
-|[atomic\_signal\_fence 函式](../Topic/atomic_signal_fence%20Function.md)|為在呼叫的執行緒建立記憶體在柵欄之間的定序需求有訊號處理常式會執行在相同執行緒上 *柵欄* 。|  
-|[atomic\_store 函式](../Topic/atomic_store%20Function.md)|儲存原子值。|  
-|[atomic\_store\_explicit 函式](../Topic/atomic_store_explicit%20Function.md)|儲存原子值。|  
-|[atomic\_thread\_fence 函式](../Topic/atomic_thread_fence%20Function.md)|為建立記憶體定序需求。如需其他柵欄的 *柵欄* 。|  
-|[kill\_dependency 函式](../Topic/kill_dependency%20Function.md)|中斷一種可能的相依性鏈結中。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[atomic_compare_exchange_strong 函式](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_function)|執行「不可部分完成比較和交換」作業。|  
+|[atomic_compare_exchange_strong_explicit 函式](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)|執行「不可部分完成比較和交換」作業。|  
+|[atomic_compare_exchange_weak 函式](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_function)|執行「弱式不可部分完成比較和交換」作業。|  
+|[atomic_compare_exchange_weak_explicit 函式](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)|執行「弱式不可部分完成比較和交換」作業。|  
+|[atomic_exchange 函式](../standard-library/atomic-functions.md#atomic_exchange_function)|取代預存值。|  
+|[atomic_exchange_explicit 函式](../standard-library/atomic-functions.md#atomic_exchange_explicit_function)|取代預存值。|  
+|[atomic_fetch_add 函式](../standard-library/atomic-functions.md#atomic_fetch_add_function)|將指定的值加入現有預存值。|  
+|[atomic_fetch_add_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_add_explicit_function)|將指定的值加入現有預存值。|  
+|[atomic_fetch_and 函式](../standard-library/atomic-functions.md#atomic_fetch_and_function)|對指定的值和現有預存值執行位元 `and`。|  
+|[atomic_fetch_and_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_and_explicit_function)|對指定的值和現有預存值執行位元 `and`。|  
+|[atomic_fetch_or 函式](../standard-library/atomic-functions.md#atomic_fetch_or_function)|對指定的值和現有預存值執行位元 `or`。|  
+|[atomic_fetch_or_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_or_explicit_function)|對指定的值和現有預存值執行位元 `or`。|  
+|[atomic_fetch_sub 函式](../standard-library/atomic-functions.md#atomic_fetch_sub_function)|將現有預存值減去指定的值。|  
+|[atomic_fetch_sub_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit_function)|將現有預存值減去指定的值。|  
+|[atomic_fetch_xor 函式](../standard-library/atomic-functions.md#atomic_fetch_xor_function)|對指定的值和現有預存值執行位元 `exclusive or`。|  
+|[atomic_fetch_xor_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit_function)|對指定的值和現有預存值執行位元 `exclusive or`。|  
+|[atomic_flag_clear 函式](../standard-library/atomic-functions.md#atomic_flag_clear_function)|將 `atomic_flag` 物件中的旗標設定為 `false`。|  
+|[atomic_flag_clear_explicit 函式](../standard-library/atomic-functions.md#atomic_flag_clear_explicit_function)|將 `atomic_flag` 物件中的旗標設定為 `false`。|  
+|[atomic_flag_test_and_set 函式](../standard-library/atomic-functions.md#atomic_flag_test_and_set_function)|將 `atomic_flag` 物件中的旗標設定為 `true`。|  
+|[atomic_flag_test_and_set_explicit 函式](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit_function)|將 `atomic_flag` 物件中的旗標設定為 `true`。|  
+|[atomic_init 函式](../standard-library/atomic-functions.md#atomic_init_function)|設定 `atomic` 物件中的預存值。|  
+|[atomic_is_lock_free 函式](../standard-library/atomic-functions.md#atomic_is_lock_free_function)|指定所指定物件上的不可部分完成作業是否為「無鎖定」。|  
+|[atomic_load 函式](../standard-library/atomic-functions.md#atomic_load_function)|以不可部分完成的方式擷取值。|  
+|[atomic_load_explicit 函式](../standard-library/atomic-functions.md#atomic_load_explicit_function)|以不可部分完成的方式擷取值。|  
+|[atomic_signal_fence 函式](../standard-library/atomic-functions.md#atomic_signal_fence_function)|作為「範圍」，可在下列範圍之間建立記憶體順序需求：具有相同執行緒中所執行訊號處理常式之呼叫執行緒中的範圍。|  
+|[atomic_store 函式](../standard-library/atomic-functions.md#atomic_store_function)|以不可部分完成的方式儲存值。|  
+|[atomic_store_explicit 函式](../standard-library/atomic-functions.md#atomic_store_explicit_function)|以不可部分完成的方式儲存值。|  
+|[atomic_thread_fence 函式](../standard-library/atomic-functions.md#atomic_thread_fence_function)|作為「範圍」，可建立與其他範圍有關的記憶體順序需求。|  
+|[kill_dependency 函式](../standard-library/atomic-functions.md#kill_dependency_function)|中斷可能的相依性鏈結。|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+
+
+

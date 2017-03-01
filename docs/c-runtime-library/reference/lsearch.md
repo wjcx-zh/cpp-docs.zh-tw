@@ -1,47 +1,70 @@
 ---
-title: "lsearch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_lsearch"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "lsearch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lsearch 函式"
+title: _lsearch | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _lsearch
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _lsearch
+- lsearch
+dev_langs:
+- C++
+helpviewer_keywords:
+- _lsearch function
+- values, searching for
+- keys, finding in arrays
+- arrays [CRT], searching
+- linear searches
+- searching, linear
+- lsearch function
 ms.assetid: 8200f608-159a-46f0-923b-1a37ee1af7e0
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# _lsearch
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 05248645487edfc46b8adc5754bf99e46ee6911f
+ms.lasthandoff: 02/24/2017
 
-執行值的線性搜尋;如果找不到，加入至清單結尾。  這個函式更安全的版本可用;請參閱 [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)。  
+---
+# <a name="lsearch"></a>_lsearch
+執行值的線性搜尋；如果找不到，則新增至清單結尾。 這個函式已有更安全的版本可用；請參閱 [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void *_lsearch(  
@@ -53,12 +76,12 @@ void *_lsearch(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `key`  
  要搜尋的物件。  
   
  `base`  
- 要搜尋的基底陣列的指標。  
+ 要搜尋之陣列的基底指標。  
   
  `num`  
  項目數。  
@@ -67,27 +90,27 @@ void *_lsearch(
  每個陣列元素的寬度。  
   
  `compare`  
- 要比較常式的指標。  第一個參數是指向搜尋的索引指標。  第二個參數是指向與索引鍵比較的陣列元素。  
+ 比較常式的指標。 第一個參數是搜尋索引鍵的指標。 第二個參數是要與索引鍵比較之陣列元素的指標。  
   
-## 傳回值  
- 如果找到索引鍵，則 `_lsearch` 會傳回與 `key`相符的`base` 陣列的項目的指標 。  如果找不到關鍵， `_lsearch` 將指標傳回新加入的項目在陣列結尾。  
+## <a name="return-value"></a>傳回值  
+ 如果找到索引鍵，`_lsearch` 會傳回與 `key` 相符的 `base` 處之陣列元素的指標。 如果找不到索引鍵，`_lsearch` 會傳回陣列結尾新增項目的指標。  
   
-## 備註  
- `_lsearch` 函式在陣列中的 `num` 項目用 `key` 執行線性搜尋，每 `width` 位元組。  不同於 `bsearch`， `_lsearch` 不需要先排序陣列。  如果找不到 `key` ，則 `_lsearch` 將它加入至陣列結尾並加入 `num`。  
+## <a name="remarks"></a>備註  
+ `_lsearch` 函式會在 `num` 個元素的陣列中執行線性搜尋，尋找 `key` 值，每個元素 `width` 個位元組。 不同於 `bsearch`，`_lsearch` 不需要排序陣列。 如果找不到 `key`，`_lsearch` 會將其新增至陣列結尾，並遞增 `num`。  
   
- `compare` 引數是指向比較兩個陣列元素和傳回指定其關聯性之值的使用者提供的常式。  在搜尋過程中，`_lsearch` 會呼叫 `compare` 常式一次或多次，並於每次呼叫傳遞兩個陣列元素的指標。  `compare` 必須比較項目且傳回非零 \(表示項目是不同的\) 或 0 \(表示項目中相同\)。  
+ `compare` 引數是使用者所提供之常式的指標，該常式比較兩個陣列元素，然後傳回一個指定其關聯性的值。 `_lsearch` 在搜尋時會呼叫`compare` 常式一或多次，每次呼叫會將指標傳遞至兩個陣列元素。 `compare` 必須比較元素，然後傳回非零 (表示元素不同) 或 0 (表示元素完全相同)。  
   
- 這個函式會驗證它的參數。  如果 `compare` 或 `key` 是 `num`，或是如果 `NULL` 為 `base` 且\*`num` 為非零，或是 `width` 小於零，將會叫用無效的參數的處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，`errno` 會設定為 `EINVAL` 且函式會傳回 `NULL`。  
+ 這個函式會驗證它的參數。 如果 `compare`、`key` 或 `num` 是 `NULL`，或者如果 `base`是 NULL 且 *`num` 為非零值，或如果 `width` 小於零，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行， `errno` 會設為 `EINVAL` ，且此函式會傳回 `NULL`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_lsearch`|\<search.h\>|  
+|-------------|---------------------|  
+|`_lsearch`|\<search.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_lsearch.c  
@@ -124,13 +147,16 @@ int compare(const void *arg1, const void *arg2 )
 }  
 ```  
   
-  **在 \_lsearch 前的單一字表:你好 謝謝 再見**  
-**在 \_lsearch 之後的單一字表:你好 感謝 再見 重複。**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+wordlist before _lsearch: hello thanks bye  
+wordlist after _lsearch: hello thanks bye extra  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lfind](../../c-runtime-library/reference/lfind.md)   
- [\_lsearch\_s](../../c-runtime-library/reference/lsearch-s.md)
+ [_lfind](../../c-runtime-library/reference/lfind.md)   
+ [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)

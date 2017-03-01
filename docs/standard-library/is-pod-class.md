@@ -1,58 +1,71 @@
 ---
 title: "is_pod 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.is_pod"
-  - "is_pod"
-  - "std::tr1::is_pod"
-  - "std.is_pod"
-  - "std::is_pod"
-  - "type_traits/std::is_pod"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_pod 類別 [TR1]"
-  - "is_pod"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_pod
+- std::is_pod
+- type_traits/std::is_pod
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_pod class
+- is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# is_pod 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 2236d6a9796b1353b919a63620606242cde169bd
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ispod-class"></a>is_pod 類別
 測試類型是否為 POD。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template <class T>
+struct is_pod;
 ```  
-template<class Ty>  
-    struct is_pod;  
-```  
   
-#### 參數  
- `Ty`  
- 要查詢的類型。  
+#### <a name="parameters"></a>參數  
+*T*  
+要查詢的類型。  
   
-## 備註  
- 如果類型 `Ty` 是一般舊資料 \(POD\)，則 `is_pod<Ty>::value` 為 `true`。  否則為 `false`。  
+## <a name="remarks"></a>備註  
+如果類型 *T* 是「一般舊資料」(POD)，則 `is_pod<T>::value` 為 `true`。 否則為 `false`。  
   
- 算術類型、列舉類型、指標類型和成員類型的指標是 POD。  
+算術類型、列舉類型、指標類型和成員類型的指標是 POD。  
   
- POD 類型的 cv\-qualified 版本本身是 POD 類型。  
+POD 類型的 cv-qualified 版本本身是 POD 類型。  
   
- POD 的陣列本身是 POD。  
+POD 的陣列本身是 POD。  
   
- 結構或等位 \(其所有的非靜態資料成員皆為 POD\) 本身是 POD，前提是：  
+結構或等位 (其所有的非靜態資料成員皆為 POD) 本身是 POD，前提是：  
   
 -   沒有使用者宣告的建構函式。  
   
@@ -68,40 +81,27 @@ template<class Ty>
   
 -   沒有使用者定義的解構函式。  
   
- 因此，您可以用遞迴方式建置包含 POD 結構和陣列的 POD 結構和陣列。  
+因此，您可以用遞迴方式建置包含 POD 結構和陣列的 POD 結構和陣列。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
-// std_tr1__type_traits__is_pod.cpp   
+```cpp  
+// std__type_traits__is_pod.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
   
-struct trivial   
-    {   
+struct trivial {   
     int val;   
-    };   
+};   
   
-struct throws   
-    {   
-    throws() throw(int)   
-        {   
-        }   
-  
-    throws(const throws&) throw(int)   
-        {   
-        }   
-  
-    throws& operator=(const throws&) throw(int)   
-        {   
-        }   
+struct throws {   
+    throws() {}  // User-declared ctor, so not POD
   
     int val;   
-    };   
+};   
   
-int main()   
-    {   
+int main() {   
     std::cout << "is_pod<trivial> == " << std::boolalpha   
         << std::is_pod<trivial>::value << std::endl;   
     std::cout << "is_pod<int> == " << std::boolalpha   
@@ -110,17 +110,23 @@ int main()
         << std::is_pod<throws>::value << std::endl;   
   
     return (0);   
-    }  
-  
+}  
 ```  
   
-  **is\_pod\<trivial\> \=\= true**  
-**is\_pod\<int\> \=\= true**  
-**is\_pod\<throws\> \=\= false**   
-## 需求  
- **標頭：**\<type\_traits\>  
+```Output  
+is_pod<trivial> == true  
+is_pod<int> == true  
+is_pod<throws> == false  
+```  
   
- **命名空間:** std  
+## <a name="requirements"></a>需求  
+**標頭：**\<type_traits>  
   
-## 請參閱  
- [\<type\_traits\>](../standard-library/type-traits.md)
+**命名空間：** std  
+  
+## <a name="see-also"></a>另請參閱  
+[<type_traits>](../standard-library/type-traits.md)
+
+
+
+

@@ -1,39 +1,55 @@
 ---
 title: "輸入資料流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料 [C++], 從輸入資料流讀取"
-  - "輸入資料流物件"
-  - "輸入資料流"
-  - "讀取資料 [C++], 從輸入資料流"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- data [C++], reading from input stream
+- input streams
+- input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 輸入資料流
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 344c0c29531ee44445b89f14396593cdd48a25ad
+ms.lasthandoff: 02/24/2017
 
-輸入資料流物件是位元組來源。  三個最重要的輸入資料流類別是 [istream](http://msdn.microsoft.com/zh-tw/6801779e-260e-416d-b4ec-fef5ff1b2371)、 [ifstream](../Topic/ifstream.md)和 [istringstream](../Topic/istringstream.md)。  
+---
+# <a name="input-streams"></a>輸入資料流
+輸入資料流物件是位元組的來源。 三種最重要的輸入資料流類別為 [istream](../standard-library/basic-istream-class.md)、[ifstream](../standard-library/basic-ifstream-class.md) 及 [istringstream](../standard-library/basic-istringstream-class.md)。  
   
- `istream` 類別最適合用於執行文字模式項目使用。  您可以設定類別 `istream` 物件緩衝區或無緩衝區的作業。  基底類別， `ios`中的所有功能，在 `istream`中。  您很少會從類別建構 `istream`的物件。  相反地，您通常會使用預先定義的 `cin` 物件，實際上是類別 [ostream](../standard-library/ostream.md)物件。  在某些情況下，您可以將 `cin` 加入至其他資料流物件在程式啟動後。  
+ `istream` 類別最適用於連續的文字模式輸入。 您可以設定 `istream` 類別的物件來進行經緩衝或未經緩衝的作業。 基底類別 `ios` 的所有功能都包含在 `istream` 中。 您極少會從 `istream` 類別建構物件。 您通常會改用預先定義的 `cin` 物件，而此物件實際上是 [ostream](../standard-library/basic-ostream-class.md) 類別的物件。 在某些情況下，您可以在程式啟動之後，將 `cin` 指派給其他資料流物件。  
   
- `ifstream` 類別支援磁碟檔案項目。  如果您需要輸入磁碟檔案，請建構物件類別 `ifstream`。  您可以指定二進位或文字模式的資料。  如果您在建構函式中指定檔名，自動開啟檔案，在建構物件時。  否則，您可以在叫用預設建構函式會使用 `open` 函式。  許多格式化選項和成員函式套用至 `ifstream` 物件。  基底類別 `ios` 和 `istream` 的所有功能在 `ifstream`中。  
+ `ifstream` 類別支援磁碟檔案輸入。 如果您需要僅供輸入使用的磁碟檔案，請建構 `ifstream` 類別的物件。 您可以指定二進位或文字模式檔案。 如果您在建構函式中指定檔案名稱，則在建構完物件時會自動開啟該檔案。 否則，您可以在叫用預設建構函式之後，使用 `open` 函式。 許多格式設定選項和成員函式都適用於 `ifstream` 物件。 基底類別 `ios` 和 `istream` 的所有功能都包含在 `ifstream` 中。  
   
- 像程式庫函式 `sscanf_s`， `istringstream` 類別支援從記憶體中字串的項目。  從有 null 結束字元的字元陣列要擷取資料，請配置並初始化字串，然後建構物件類別 `istringstream`。  
+ 與程式庫函式 `sscanf_s` 相同，`istringstream` 類別也支援從記憶體內的字串輸入。 若要從具有 Null 結束字元的字元陣列中擷取資料，請配置字串並將其初始化，然後建構 `istringstream` 類別的物件。  
   
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
  [建構輸入資料流物件](../standard-library/constructing-input-stream-objects.md)  
   
  [使用擷取運算子](../standard-library/using-extraction-operators.md)  
@@ -44,7 +60,8 @@ caps.handback.revision: 10
   
  [輸入資料流成員函式](../standard-library/input-stream-member-functions.md)  
   
- [為您的自訂類別多載 \>\> 運算子](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
+ [為您的自訂類別多載 >> 運算子](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [iostream 程式設計](../standard-library/iostream-programming.md)
+

@@ -1,63 +1,83 @@
 ---
-title: "&lt;array&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<array>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array 標頭 [TR1]"
+title: '&lt;array&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <array>
+dev_langs:
+- C++
+helpviewer_keywords:
+- array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# &lt;array&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
+ms.lasthandoff: 02/24/2017
 
-定義容器範本類別 `array` 和數個支援的範本。  
+---
+# <a name="ltarraygt"></a>&lt;array&gt;
+定義容器範本類別 `array` 及數個支援範本。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #include <array>  
 ```  
   
-### 類別  
+### <a name="classes"></a>類別  
   
 |||  
 |-|-|  
-|[array](../standard-library/array-class-stl.md)|儲存項目的固定長度序列。|  
-|[tuple\_element](../standard-library/tuple-element-class-array.md)|包裝陣列元素的型別。|  
-|[tuple\_size](../standard-library/tuple-size-class-array.md)|包裝陣列元素的大小。|  
+|[array](../standard-library/array-class-stl.md)|儲存固定長度的元素序列。|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|包裝陣列元素的類型。|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|包裝陣列元素的大小。|  
   
-### 運算子  
-  
-|||  
-|-|-|  
-|[operator\=\=](../Topic/operator==%20%3Carray%3E.md)|陣列比較，等|  
-|[operator\!\=](../Topic/operator!=%20%3Carray%3E.md)|陣列比較，不相等|  
-|[運算子\<](../Topic/operator%3C%20%3Carray%3E.md)|陣列比較，小於|  
-|[operator\>\=](../Topic/operator%3E=%20%3Carray%3E.md)|陣列比較、大於或等於|  
-|[運算子\>](../Topic/operator%3E%20%3Carray%3E.md)|陣列大於比較，|  
-|[operator\<\=](../Topic/operator%3C=%20%3Carray%3E.md)|陣列比較，小於或等於|  
-  
-### 函式  
+### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[get](../Topic/get%20Function%20%3Carray%3E.md)|取得指定的陣列元素。|  
-|[交換](../Topic/swap%20Function%20%3Carray%3E.md)|交換陣列內容以另一個陣列內容。|  
+|[operator==](../standard-library/array-operators.md#operator_eq_eq)|陣列比較，相等|  
+|[operator!=](../standard-library/array-operators.md#operator_neq)|陣列比較，不相等|  
+|[operator\<](../standard-library/array-operators.md#operator_lt_)|陣列比較，小於|  
+|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|陣列比較，大於或相等|  
+|[operator>](../standard-library/array-operators.md#operator_gt_)|陣列比較，大於|  
+|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|陣列比較，小於或相等|  
   
-## 請參閱  
- [\<tuple\>](../standard-library/tuple.md)   
+### <a name="functions"></a>函式  
+  
+|||  
+|-|-|  
+|[get](../standard-library/array-functions.md#get_function)|取得指定的陣列元素。|  
+|[swap](../standard-library/array-functions.md#swap_function)|交換其中一個陣列的內容與另一個陣列的內容。|  
+  
+## <a name="see-also"></a>另請參閱  
+ [\<tuple>](../standard-library/tuple.md)   
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

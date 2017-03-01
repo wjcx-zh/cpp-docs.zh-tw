@@ -1,81 +1,97 @@
 ---
 title: "_clear87、_clearfp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_clearfp"
-  - "_clear87"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "clearfp"
-  - "_clearfp"
-  - "_clear87"
-  - "clear87"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_clear87 函式"
-  - "_clearfp 函式"
-  - "clear87 函式"
-  - "clearfp 函式"
-  - "清除浮點狀態字"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _clearfp
+- _clear87
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- clearfp
+- _clearfp
+- _clear87
+- clear87
+dev_langs:
+- C++
+helpviewer_keywords:
+- clearing floating point status word
+- clearfp function
+- _clear87 function
+- _clearfp function
+- clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _clear87、_clearfp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 7c7659bb52594678538ea2701174c070ace41d70
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="clear87-clearfp"></a>_clear87、_clearfp
 取得及清除浮點狀態字組。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned int _clear87( void );  
 unsigned int _clearfp( void );  
 ```  
   
-## 傳回值  
- 傳回值中的位元表示在呼叫 `_clear87` 或 `_clearfp` 之前的浮點狀態。  如需 `_clear87` 所傳回位元的完整定義，請參閱 Float.h。  許多數學程式庫函式會修改 8087\/80287 狀態字組，伴隨著無法預期的結果。  來自 `_clear87` 和 `_status87` 的傳回值更加可靠，因為較少浮點作業在浮點狀態字組之已知狀態之間執行。  
+## <a name="return-value"></a>傳回值  
+ 傳回值中的位元表示在呼叫 `_clear87` 或 `_clearfp` 之前的浮點狀態。 如需 `_clear87` 所傳回位元的完整定義，請參閱 Float.h。 許多數學程式庫函式會修改 8087/80287 狀態字組，伴隨著無法預期的結果。 來自 `_clear87` 和 `_status87` 的傳回值更加可靠，因為較少浮點作業在浮點狀態字組之已知狀態之間執行。  
   
-## 備註  
- `_clear87` 函式會清除浮點狀態字組中的例外狀況旗標，將忙碌的位元設為 0，然後傳回狀態字組。  浮點狀態字組是 8087\/80287 狀態字組和 8087\/80287 例外狀況處理常式所偵測到其他條件的組合，例如浮點的堆疊溢位和反向溢位。  
+## <a name="remarks"></a>備註  
+ `_clear87` 函式會清除浮點狀態字組中的例外狀況旗標，將忙碌的位元設為 0，然後傳回狀態字組。 浮點狀態字組是 8087/80287 狀態字組和 8087/80287 例外狀況處理常式所偵測到其他條件的組合，例如浮點的堆疊溢位和反向溢位。  
   
- `_clearfp` 是 `_clear87` 常式之與平台無關的可攜式版本。  其等同於 Intel \(x86\) 平台上的 `_clear87`，也受 x64 和 ARM 平台支援。  若要確保您的浮點程式碼可移植到 x64 和 ARM，請使用 `_clearfp`。  如果您僅以 x86 平台為目標，您可以使用 `_clear87` 或 `_clearfp`。  
+ `_clearfp` 是 `_clear87` 常式之與平台無關的可攜式版本。 其等同於 Intel (x86) 平台上的 `_clear87`，也受 x64 和 ARM 平台支援。 若要確保您的浮點程式碼可移植到 x64 和 ARM，請使用 `_clearfp`。 如果您僅以 x86 平台為目標，您可以使用 `_clear87` 或 `_clearfp`。  
   
- 使用 [\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md) 或 `/clr:pure` 進行編譯時，已取代這些函式，因為 Common Language Runtime 只支援預設的浮點精確度。  
+ 這些函式已被取代，以編譯時[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 僅支援預設浮點有效位數。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_clear87`|\<float.h\>|  
-|`_clearfp`|\<float.h\>|  
+|-------------|---------------------|  
+|`_clear87`|\<float.h>|  
+|`_clearfp`|\<float.h>|  
   
- 如需相容性詳細資訊，請參閱簡介中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_clear87.c  
@@ -108,13 +124,16 @@ int main( void )
 }  
 ```  
   
-  **Status: 0000 \- clear**  
-**Status: 0003 \- inexact, underflow**  
-**Status: 80000 \- denormal**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Status: 0000 - clear  
+Status: 0003 - inexact, underflow  
+Status: 80000 - denormal  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [\_control87、\_controlfp、\_\_control87\_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
- [\_status87、\_statusfp、\_statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)
+ [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)   
+ [_status87、_statusfp、_statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)

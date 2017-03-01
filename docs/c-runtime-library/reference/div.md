@@ -1,53 +1,67 @@
 ---
-title: "div | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "div"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "div"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "div 函式"
-  - "整數相除"
-  - "商數"
-  - "商數, 計算"
-  - "餘數計算"
+title: div | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- div
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- div
+dev_langs:
+- C++
+helpviewer_keywords:
+- div function
+- quotients, computing
+- quotients
+- dividing integers
+- remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
 caps.latest.revision: 15
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# div
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
+ms.lasthandoff: 02/24/2017
 
-計算商數和兩個整數值的餘數。  
+---
+# <a name="div"></a>div
+計算兩個整數值的商數和餘數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 div_t div(   
@@ -64,30 +78,30 @@ lldiv_t div(
 ); /* C++ only */  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `numer`  
  分子。  
   
  `denom`  
  分母。  
   
-## 傳回值  
- 使用 `int` 型別呼叫 `div`，傳回一個型別 `div_t` 的結構 ，包含這個商數和餘數。  多載的傳回值與型別 `long` 之引數為 `ldiv_t`。  `div_t` 和 `ldiv_t` 皆在 STDLIB.H. 中定義。  
+## <a name="return-value"></a>傳回值  
+ 使用 `int` 類型的引數呼叫 `div` 會傳回 `div_t` 類型的結構，其中包括商數和餘數。 具有 `long` 類型引數之多載的傳回值為 `ldiv_t`。 `div_t` 和 `ldiv_t` 是在 STDLIB.H 中定義。  
   
-## 備註  
- `div` 函式會將 `denom` 除以 `numer`，因此計算其商數和餘數。  [div\_t](../../c-runtime-library/standard-types.md) 結構包含商數、`int` `quot` 和餘數 `int` `rem`。  商數的符號與數學商數的符號相同。  其絕對值是小於數學商數絕對值的最大整數。  如果分母為 0，則程式會終止並出現錯誤訊息。  
+## <a name="remarks"></a>備註  
+ `div` 函式會將 `numer` 除以 `denom`，藉此計算商數和餘數。 [div_t](../../c-runtime-library/standard-types.md) 結構包含商數 `int``quot` 和餘數 `int``rem`。 商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。  
   
- 取得型別 `long` 或 `long long` 引數的多載對 C\+\+ 程式碼才可供使用。  包含成員 `long` `quot` 和 `long` `rem` 的傳回型別 [ldiv\_t](../../c-runtime-library/standard-types.md)，及包含成員 `long long quot` 和 `long long rem` 的傳回型別 [lldiv\_t](../../c-runtime-library/standard-types.md)，其與`div_t` 的成員有相同的意義。  
+ 接受 `long` 或 `long long` 類型之引數的多載僅適用於 C++ 程式碼。 傳回型別 [ldiv_t](../../c-runtime-library/standard-types.md) 包含成員 `long``quot` 和 `long``rem`，而傳回型別 [lldiv_t](../../c-runtime-library/standard-types.md) 包含成員 `long long quot` 和 `long long rem`，其意義與 `div_t` 的成員相同。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`div`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`div`|\<stdlib.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_div.c  
@@ -120,12 +134,15 @@ int main( int argc, char *argv[] )
 }  
 ```  
   
-  **x is 876, y is 13**  
-**The quotient is 67, and the remainder is 5**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+x is 876, y is 13  
+The quotient is 67, and the remainder is 5  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [ldiv、lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)

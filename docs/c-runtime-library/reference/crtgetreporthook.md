@@ -1,78 +1,95 @@
 ---
-title: "_CrtGetReportHook | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtGetReportHook"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtGetReportHook"
-  - "_CrtGetReportHook"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtGetReportHook 函式"
-  - "_CrtGetReportHook 函式"
+title: _CrtGetReportHook | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtGetReportHook
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtGetReportHook
+- _CrtGetReportHook
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtGetReportHook function
+- _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtGetReportHook
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7f70ab172614c6bc3d4462f31f8a17590ddaab55
+ms.lasthandoff: 02/24/2017
 
-擷取攔截它用戶端定義的報告函式進入偵錯報告流程的 C 執行階段 \(僅偵錯版本\)。  
+---
+# <a name="crtgetreporthook"></a>_CrtGetReportHook
+擷取用戶端定義的報告函式，以將它連結到偵錯報告處理序的 C 執行階段 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 _CRT_REPORT_HOOK _CrtGetReportHook( void );  
 ```  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  傳回目前的用戶端定義報告函式。  
   
-## 備註  
- `_CrtGetReportHook` 可讓應用程式擷取執行階段 C 的目前報告函式偵錯程式庫報告流程。  
+## <a name="remarks"></a>備註  
+ `_CrtGetReportHook` 可讓應用程式擷取 C 執行階段偵錯程式庫報告處理序目前的報告函式。  
   
- 如需使用其他攔截功能的執行階段函式，以及撰寫自己的用戶端定義攔截函式的詳細資訊，請參閱 [撰寫偵錯攔截函式](../Topic/Debug%20Hook%20Function%20Writing.md)。  
+ 如需使用支援攔截程序之其他執行階段函式，以及撰寫您自己的用戶端定義攔截函式的詳細資訊，請參閱[撰寫偵錯攔截函式](/visualstudio/debugger/debug-hook-function-writing)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_CrtGetReportHook`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtGetReportHook`|\<crtdbg.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C run\-time libraries](../../c-runtime-library/crt-library-features.md) 版本的偵錯  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
- 如需 `_CrtSetReportHook`使用方式的範例，請參閱 [報表](http://msdn.microsoft.com/zh-tw/f6e08c30-6bd9-459a-830a-56deec0d2051)。  
+## <a name="example"></a>範例  
+ 如需如何使用 `_CrtSetReportHook` 的範例，請參閱 [report](http://msdn.microsoft.com/en-us/f6e08c30-6bd9-459a-830a-56deec0d2051)。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
- [\_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md)
+ [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md)

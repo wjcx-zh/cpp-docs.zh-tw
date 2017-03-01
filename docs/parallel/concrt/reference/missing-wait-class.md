@@ -1,63 +1,92 @@
 ---
-title: "missing_wait 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::missing_wait"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "missing_wait 類別"
+title: "missing_wait 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::missing_wait
+dev_langs:
+- C++
+helpviewer_keywords:
+- missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# missing_wait 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
+ms.lasthandoff: 02/24/2017
 
-這個類別會描述有仍然安排的工作時，擲回例外狀況`task_group`或`structured_task_group`物件一次該物件的解構函式會執行。  解構函式會在達到因堆疊回溯例外狀況的結果時，將永遠不會擲回這個例外狀況。  
+---
+# <a name="missingwait-class"></a>missing_wait 類別
+這個類別描述 `task_group` 或 `structured_task_group` 物件的建構函式執行時卻仍有工作排程至該物件所擲回的例外狀況。 如果例外狀況導致堆疊回溯而達成解構函式，則永遠不會擲回此例外狀況。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class missing_wait : public std::exception;
 ```  
-class missing_wait : public std::exception;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[missing\_wait::missing\_wait 建構函式](../Topic/missing_wait::missing_wait%20Constructor.md)|多載。  建構 `missing_wait` 物件。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[missing_wait 建構函式](#ctor)|多載。 建構 `missing_wait` 物件。|  
   
-## 備註  
- 例外狀況流程不存在，您必須先呼叫 `task_group` 或 `structured_task_group` 物件的 `wait` 或 `run_and_wait`方法，然後才能解構該物件。  執行階段會擲回這個例外狀況，表示您忘了呼叫 `wait` `run_and_wait` 方法。  
+## <a name="remarks"></a>備註  
+ 這個屬性不存在例外狀況流程，您必須負責呼叫`wait`或`run_and_wait`方法`task_group`或`structured_task_group`之前允許解構該物件的物件。 執行階段會擲回這個例外狀況以表示您忘記呼叫`wait`或`run_and_wait`方法。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
   
  `missing_wait`  
   
-## 需求  
- **標頭：** concrt.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** concrt.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [task\_group 類別](../Topic/task_group%20Class.md)   
- [task\_group::wait 方法](../Topic/task_group::wait%20Method.md)   
- [task\_group::run\_and\_wait 方法](../Topic/task_group::run_and_wait%20Method.md)   
- [structured\_task\_group 類別](../../../parallel/concrt/reference/structured-task-group-class.md)   
- [structured\_task\_group::wait 方法](../Topic/structured_task_group::wait%20Method.md)   
- [structured\_task\_group::run\_and\_wait 方法](../Topic/structured_task_group::run_and_wait%20Method.md)
+##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+
+ 建構 `missing_wait` 物件。  
+  
+```
+explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
+
+missing_wait() throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Message`  
+ 錯誤的描述性訊息。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)   
+ [task_group 類別](task-group-class.md)   
+ [wait 方法](task-group-class.md)   
+ [run_and_wait 方法](task-group-class.md)   
+ [structured_task_group 類別](structured-task-group-class.md)
+

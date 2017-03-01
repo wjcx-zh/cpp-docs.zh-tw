@@ -1,65 +1,79 @@
 ---
 title: "hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_hypotf"
-  - "hypot"
-  - "hypotf"
-  - "_hypot"
-  - "_hypotl"
-  - "hypotl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "hypotf"
-  - "hypotl"
-  - "_hypotl"
-  - "hypot"
-  - "_hypot"
-  - "_hypotf"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_hypot 函式"
-  - "計算斜邊"
-  - "hypot 函式"
-  - "斜邊計算"
-  - "hypotf 函式"
-  - "hypotl 函式"
-  - "三角形, 計算斜邊"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _hypotf
+- hypot
+- hypotf
+- _hypot
+- _hypotl
+- hypotl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- hypotf
+- hypotl
+- _hypotl
+- hypot
+- _hypot
+- _hypotf
+dev_langs:
+- C++
+helpviewer_keywords:
+- hypotenuse calculation
+- hypot function
+- hypotf function
+- triangles, calculating hypotenuse
+- hypotl function
+- calculating hypotenuses
+- _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
 caps.latest.revision: 17
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c372095f4ae5903f27e5f6add9a79de728a5e202
+ms.lasthandoff: 02/24/2017
 
-計算直角三角形的斜邊。  
+---
+# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
+計算斜邊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double hypot(   
@@ -88,29 +102,29 @@ long double _hypotl(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `x`, `y`  
- 浮點數的值。  
+ 浮點值。  
   
-## 傳回值  
- 如果成功，則 `hypot` 會傳回斜邊的長度；若溢位， `hypot` 會傳回 INF \(無限大\)，而且 `errno` 變數會設定為 `ERANGE`。  您可以使用 `_matherr` 修改錯誤處理。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，`hypot` 會傳回斜邊的長度；溢位時，`hypot` 會傳回 INF (無限大)，同時 `errno` 變數會被設為 `ERANGE`。 您可以使用 `_matherr` 修改錯誤處理。  
   
- 如需傳回碼的詳細資訊，請參閱[errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- 給定直角三角形的兩邊長 `x` 和 `y`，`hypot` 函式會計算斜邊長度 \(也就是，`x`<sup>2</sup> \+ `y`<sup>2</sup> 的平方根\)。  
+## <a name="remarks"></a>備註  
+ 提供兩個邊的長度 `x` 和 `y``hypot` 函式會計算直角三角形斜邊的長度 (亦即，`x`<sup>2</sup> + `y`<sup>2</sup> 的平方根)。  
   
- 具有前置底線的函式是為先前標準提供相容性。  它們的行為與沒有前置底線的版本相同。  建議您在新的程式碼中使用沒有前置底線的版本。  
+ 具有前置底線的函式版本提供舊版標準的相容性。 其行為與不具有前置底線的版本完全相同。 建議針對新程式碼使用不具有前置底線的版本。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h\>|  
+|-------------|---------------------|  
+|`hypot`, `hypotf`, `hypotl`, `_hypot`, `_hypotf`, `_hypotl`|\<math.h>|  
   
- 如需詳細的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_hypot.c  
@@ -128,11 +142,14 @@ int main( void )
 }  
 ```  
   
-  **如果一個直角三角形的兩個邊為 3.0 和 4.0，其斜邊為 5.0**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [\_cabs](../../c-runtime-library/reference/cabs.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)
+ [_cabs](../../c-runtime-library/reference/cabs.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)

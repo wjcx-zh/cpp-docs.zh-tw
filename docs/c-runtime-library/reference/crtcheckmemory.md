@@ -1,88 +1,105 @@
 ---
-title: "_CrtCheckMemory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtCheckMemory"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtCheckMemory"
-  - "_CrtCheckMemory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CrtCheckMemory 函式"
-  - "CrtCheckMemory 函式"
+title: _CrtCheckMemory | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtCheckMemory
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtCheckMemory
+- _CrtCheckMemory
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CrtCheckMemory function
+- CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# _CrtCheckMemory
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5563d618b0056de285f66cf428cbcfc6a717ce55
+ms.lasthandoff: 02/24/2017
 
-在偵錯堆積中檢查配置的記憶體區塊的完整性 \(僅偵錯版本\)。  
+---
+# <a name="crtcheckmemory"></a>_CrtCheckMemory
+確認在偵錯堆積中配置之記憶體區塊的完整性 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 int _CrtCheckMemory( void );  
 ```  
   
-## 傳回值  
- 如果成功，則 `_CrtCheckMemory` 會傳回 TRUE;否則，函式會傳回 FALSE。  
+## <a name="return-value"></a>傳回值  
+ 若成功，`_CrtCheckMemory` 會傳回 TRUE；否則此函式會傳回 FALSE。  
   
-## 備註  
- `_CrtCheckMemory` 函式是由偵錯堆積管理員就會驗證配置來驗證基礎基底堆積並檢查每個記憶體區塊。  如果錯誤或記憶體不一致在基礎基底堆積、偵錯標頭資訊或覆寫緩衝區發生， `_CrtCheckMemory` 會產生與描述錯誤條件的資訊的偵錯報告。  如果未定義 [\_DEBUG](../../c-runtime-library/debug.md)，在前置處理中，對 `_CrtCheckMemory` 的呼叫將被移除。  
+## <a name="remarks"></a>備註  
+ `_CrtCheckMemory` 函式會透過確認基礎基底堆積及檢查每個記憶體區塊，來驗證偵錯堆積管理員所配置的記憶體。 如果基礎基底堆積、偵錯標頭資訊或覆寫緩衝區中發生錯誤或記憶體不一致的情況，`_CrtCheckMemory` 就會產生內含描述錯誤狀況之資訊的偵錯報告。 若未定義 [_DEBUG](../../c-runtime-library/debug.md)，將會在前置處理期間移除對 `_CrtCheckMemory` 的呼叫。  
   
- 使用 [\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函式， `_CrtCheckMemory` 行為可以透過設定 [\_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 旗標的位元欄位控制項。  將 **\_CRTDBG\_CHECK\_ALWAYS\_DF** 位元欄位打開會導致 `_CrtCheckMemory` 在每一次記憶體配置被要求時呼叫。  雖然這個方法會拖慢執行，但對於快速尋找錯誤很有用。  將 **\_CRTDBG\_ALLOC\_MEM\_DF** 位元欄位關掉會導致 `_CrtCheckMemory` 不去驗證堆積且立即傳回 **TRUE**。  
+ 您可以使用 [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) 函式設定 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 旗標的位元欄位，來控制 `_CrtCheckMemory` 的行為。 開啟 **_CRTDBG_CHECK_ALWAYS_DF** 位元欄位會導致每次要求記憶體配置作業都會呼叫 `_CrtCheckMemory`。 雖然這個方法會降低執行速度，但會快速攔截錯誤。 關閉 **_CRTDBG_ALLOC_MEM_DF** 位元欄位會導致 `_CrtCheckMemory` 不確認堆積就立即傳回 **TRUE**。  
   
- 由於這個函式會傳回 **TRUE** 或 **FALSE**，它可以傳遞至 [\_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 巨集之一，以建立一個簡單的偵錯錯誤處理機制。  如果在堆積損毀，偵測到下列範例造成判斷提示失敗:  
+ 因為此函式會傳回 **TRUE** 或 **FALSE**，所以可將該函式傳遞至其中一個 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 巨集，以建立簡單的偵錯處理機制。 下列範例會在偵測到堆積中的損毀時造成判斷提示失敗：  
   
 ```  
 _ASSERTE( _CrtCheckMemory( ) );  
 ```  
   
- 如需 `_CrtCheckMemory` 如何運作的詳細資訊可以使用與其他偵錯功能，請參閱 [堆積狀態報告函式](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Heap_State_Reporting_Functions)。  如需記憶體管理和偵錯堆積的概觀，請參閱 [CRT 偵錯堆積詳細資料](../Topic/CRT%20Debug%20Heap%20Details.md)。  
+ 如需如何搭配其他偵錯函式使用 `_CrtCheckMemory` 的詳細資訊，請參閱[堆積狀態報告函式](/visualstudio/debugger/crt-debug-heap-details)。 如需記憶體管理及偵錯堆積的概觀，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_CrtCheckMemory`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_CrtCheckMemory`|\<crtdbg.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C run\-time libraries](../../c-runtime-library/crt-library-features.md) 版本的偵錯  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
- 如需 `_CrtCheckMemory` 使用方式的範例，請參閱 [crt\_dbg1](http://msdn.microsoft.com/zh-tw/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
+## <a name="example"></a>範例  
+ 如需如何使用 `_CrtCheckMemory` 的範例，請參閱 [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
   
-## .NET Framework 對等用法  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::Diagnostics::PerformanceCounter](https://msdn.microsoft.com/en-us/library/system.diagnostics.performancecounter.aspx)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
- [\_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
- [\_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)
+ [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
+ [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)

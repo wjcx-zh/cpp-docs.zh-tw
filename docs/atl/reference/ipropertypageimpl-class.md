@@ -1,105 +1,325 @@
 ---
-title: "IPropertyPageImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IPropertyPageImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IPropertyPage ATL implementation"
-  - "IPropertyPageImpl class"
-  - "屬性頁"
+title: "IPropertyPageImpl 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IPropertyPageImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages
+- IPropertyPage ATL implementation
+- IPropertyPageImpl class
 ms.assetid: f9b7c8b1-7a04-4eab-aa63-63efddb740fa
 caps.latest.revision: 21
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# IPropertyPageImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 1179e13eb33f09a363c7a3f4425a9ebf13c73b91
+ms.lasthandoff: 02/24/2017
 
-這個類別會實作 **IUnknown** 並提供 [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 介面的預設實作。  
+---
+# <a name="ipropertypageimpl-class"></a>IPropertyPageImpl 類別
+這個類別會實作**IUnknown** ，並提供的預設實作[IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)介面。  
   
 > [!IMPORTANT]
->  這個類別和其成員不能用於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]執行的應用程式。  
+>  這個類別及其成員無法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式內使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template<class T>  
+class IPropertyPageImpl
 ```  
   
-      template< class   
-      T  
-      >  
-class IPropertyPageImpl  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 您的類別，衍生自 `IPropertyPageImpl`。  
+ 您的類別，衍生自`IPropertyPageImpl`。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
-  
-|名稱|描述|  
-|--------|--------|  
-|[IPropertyPageImpl::IPropertyPageImpl](../Topic/IPropertyPageImpl::IPropertyPageImpl.md)|建構函式。|  
-  
-### 公用方法  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[IPropertyPageImpl::Activate](../Topic/IPropertyPageImpl::Activate.md)|建立屬性頁的對話方塊視窗。|  
-|[IPropertyPageImpl::Apply](../Topic/IPropertyPageImpl::Apply.md)|將目前的屬性頁值傳遞至 `SetObjects`指定的基礎物件。  ATL 實作會傳回 `S_OK`。|  
-|[IPropertyPageImpl::Deactivate](../Topic/IPropertyPageImpl::Deactivate.md)|終結視窗會以 **啟動**。|  
-|[IPropertyPageImpl::GetPageInfo](../Topic/IPropertyPageImpl::GetPageInfo.md)|擷取有關屬性頁的詳細資訊。|  
-|[IPropertyPageImpl::Help](../Topic/IPropertyPageImpl::Help.md)|叫用屬性頁的 Windows 說明。|  
-|[IPropertyPageImpl::IsPageDirty](../Topic/IPropertyPageImpl::IsPageDirty.md)|指示屬性頁是否已變更，自從啟動。|  
-|[IPropertyPageImpl::Move](../Topic/IPropertyPageImpl::Move.md)|位置和調整大小屬性頁對話方塊。|  
-|[IPropertyPageImpl::SetDirty](../Topic/IPropertyPageImpl::SetDirty.md)|旗標不變更屬性頁的狀態為已變更或。|  
-|[IPropertyPageImpl::SetObjects](../Topic/IPropertyPageImpl::SetObjects.md)|提供物件的陣列 **IUnknown** 指標與屬性頁。  這些物件是藉由呼叫接收目前屬性頁值組 **套用**。|  
-|[IPropertyPageImpl::SetPageSite](../Topic/IPropertyPageImpl::SetPageSite.md)|提供屬性的網頁。 `IPropertyPageSite` 指標，則屬性頁的屬性架構通訊。|  
-|[IPropertyPageImpl::Show](../Topic/IPropertyPageImpl::Show.md)|讓 \[屬性頁\] 對話方塊中可見或不可見的。|  
-|[IPropertyPageImpl::TranslateAccelerator](../Topic/IPropertyPageImpl::TranslateAccelerator.md)|處理所指定按鍵。|  
+|----------|-----------------|  
+|[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|建構函式。|  
   
-### 公用資料成員  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[IPropertyPageImpl::m\_bDirty](../Topic/IPropertyPageImpl::m_bDirty.md)|指定屬性頁的狀態是否已變更。|  
-|[IPropertyPageImpl::m\_dwDocString](../Topic/IPropertyPageImpl::m_dwDocString.md)|儲存資源識別與說明屬性頁的文字字串。|  
-|[IPropertyPageImpl::m\_dwHelpContext](../Topic/IPropertyPageImpl::m_dwHelpContext.md)|儲存說明主題的內容識別項與屬性頁。|  
-|[IPropertyPageImpl::m\_dwHelpFile](../Topic/IPropertyPageImpl::m_dwHelpFile.md)|儲存資源識別與說明屬性頁的說明檔的名稱。|  
-|[IPropertyPageImpl::m\_dwTitle](../Topic/IPropertyPageImpl::m_dwTitle.md)|將資源識別項與出現在 \[屬性\] 頁面的  索引標籤的文字字串。|  
-|[IPropertyPageImpl::m\_nObjects](../Topic/IPropertyPageImpl::m_nObjects.md)|儲存的物件數目與屬性頁。|  
-|[IPropertyPageImpl::m\_pPageSite](../Topic/IPropertyPageImpl::m_pPageSite.md)|\[屬性頁具有屬性架構通訊的 `IPropertyPageSite` 介面的點。|  
-|[IPropertyPageImpl::m\_ppUnk](../Topic/IPropertyPageImpl::m_ppUnk.md)|物件陣列的指向物件的 **IUnknown** 指標與屬性頁。|  
-|[IPropertyPageImpl::m\_size](../Topic/IPropertyPageImpl::m_size.md)|以像素為單位\) 儲存屬性頁的  對話方塊的高度和寬度，。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[IPropertyPageImpl::Activate](#activate)|建立屬性頁對話方塊視窗。|  
+|[IPropertyPageImpl::Apply](#apply)|目前屬性頁的值會套用至基礎物件透過指定`SetObjects`。 ATL 實作會傳回`S_OK`。|  
+|[IPropertyPageImpl::Deactivate](#deactivate)|終結視窗以建立**啟動**。|  
+|[IPropertyPageImpl::GetPageInfo](#getpageinfo)|擷取屬性頁的相關資訊。|  
+|[IPropertyPageImpl::Help](#help)|叫用 [屬性] 頁面上的 Windows 說明。|  
+|[IPropertyPageImpl::IsPageDirty](#ispagedirty)|表示屬性頁是否已變更，因為它已啟動。|  
+|[IPropertyPageImpl::Move](#move)|定位並調整大小屬性頁對話方塊。|  
+|[IPropertyPageImpl::SetDirty](#setdirty)|旗標為已變更或未變更的屬性頁的狀態。|  
+|[IPropertyPageImpl::SetObjects](#setobjects)|提供一系列的**IUnknown**屬性頁相關聯的物件的指標。 這些物件會接收目前的屬性頁面值，透過呼叫**套用**。|  
+|[IPropertyPageImpl::SetPageSite](#setpagesite)|提供屬性頁`IPropertyPageSite`指標，透過此屬性頁與其通訊的內容框架。|  
+|[IPropertyPageImpl::Show](#show)|可見或不可見，請讓屬性頁對話方塊。|  
+|[IPropertyPageImpl::TranslateAccelerator](#translateaccelerator)|處理指定的按鍵。|  
   
-## 備註  
- [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 介面允許物件會在屬性工作表內的特定屬性頁。  類別 `IPropertyPageImpl` 提供這個介面的預設實作並透過傳送訊息至實作 **IUnknown** 傾印裝置偵錯組建。  
+### <a name="public-data-members"></a>公用資料成員  
   
- **相關文件** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)， [建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
+|名稱|說明|  
+|----------|-----------------|  
+|[IPropertyPageImpl::m_bDirty](#m_bdirty)|指定是否已變更屬性頁的狀態。|  
+|[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|儲存與描述 屬性頁的文字字串相關聯的資源識別碼。|  
+|[IPropertyPageImpl::m_dwHelpContext](#m_dwhelpcontext)|儲存相關聯的屬性頁的 [說明] 主題的內容識別碼。|  
+|[IPropertyPageImpl::m_dwHelpFile](#m_dwhelpfile)|儲存與描述 屬性頁的說明檔的名稱相關聯的資源識別碼。|  
+|[IPropertyPageImpl::m_dwTitle](#m_dwtitle)|儲存於屬性頁 索引標籤的文字字串相關聯的資源識別碼。|  
+|[IPropertyPageImpl::m_nObjects](#m_nobjects)|儲存屬性頁相關聯的物件的數目。|  
+|[IPropertyPageImpl::m_pPageSite](#m_ppagesite)|指向`IPropertyPageSite`透過屬性頁會與屬性框架通訊的介面。|  
+|[IPropertyPageImpl::m_ppUnk](#m_ppunk)|指向陣列**IUnknown**屬性頁相關聯的物件的指標。|  
+|[IPropertyPageImpl::m_size](#m_size)|像素為單位儲存的高度和寬度屬性頁 對話方塊。|  
   
-## 繼承階層架構  
+## <a name="remarks"></a>備註  
+ [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246)介面可讓管理特定的屬性頁的屬性工作表內的物件。 類別`IPropertyPageImpl`提供此介面的預設實作，並且實作**IUnknown**傳送資訊給傾印裝置在偵錯組建。  
+  
+ **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `IPropertyPage`  
   
  `IPropertyPageImpl`  
   
-## 需求  
- **Header:** atlctl.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** atlctl.h  
   
-## 請參閱  
- [IPropertyPage2Impl Class](../../atl/reference/ipropertypage2impl-class.md)   
- [IPerPropertyBrowsingImpl Class](../../atl/reference/iperpropertybrowsingimpl-class.md)   
- [ISpecifyPropertyPagesImpl Class](../../atl/reference/ispecifypropertypagesimpl-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameactivatea--ipropertypageimplactivate"></a><a name="activate"></a>IPropertyPageImpl::Activate  
+ 建立屬性頁對話方塊視窗。  
+  
+```
+HRESULT Activate(  
+    HWND hWndParent,
+    LPCRECT pRect,
+    BOOL bModal);
+```  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，對話方塊是一律非強制回應的值為何*bModal*參數。  
+  
+ 請參閱[IPropertyPage::Activate](http://msdn.microsoft.com/library/windows/desktop/ms682250)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-nameapplya--ipropertypageimplapply"></a><a name="apply"></a>IPropertyPageImpl::Apply  
+ 目前屬性頁的值會套用至基礎物件透過指定`SetObjects`。  
+  
+```
+HRESULT Apply();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回 `S_OK`。  
+  
+### <a name="remarks"></a>備註  
+ 請參閱[IPropertyPage::Apply](http://msdn.microsoft.com/library/windows/desktop/ms691284)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-namedeactivatea--ipropertypageimpldeactivate"></a><a name="deactivate"></a>IPropertyPageImpl::Deactivate  
+ 終結對話方塊視窗建立[啟動](#activate)。  
+  
+```
+HRESULT Deactivate();
+```  
+  
+### <a name="remarks"></a>備註  
+ 請參閱[IPropertyPage::Deactivate](http://msdn.microsoft.com/library/windows/desktop/ms682504)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-namegetpageinfoa--ipropertypageimplgetpageinfo"></a><a name="getpageinfo"></a>IPropertyPageImpl::GetPageInfo  
+ 填滿*pPageInfo*結構的資料成員中包含的資訊。  
+  
+```
+HRESULT GetPageInfo(PROPPAGEINFO* pPageInfo);
+```  
+  
+### <a name="remarks"></a>備註  
+ `GetPageInfo`載入字串資源與[m_dwDocString](#m_dwdocstring)， [m_dwHelpFile](#m_dwhelpfile)，和[m_dwTitle](#m_dwtitle)。  
+  
+ 請參閱[IPropertyPage::GetPageInfo](http://msdn.microsoft.com/library/windows/desktop/ms680714)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-namehelpa--ipropertypageimplhelp"></a><a name="help"></a>IPropertyPageImpl::Help  
+ 叫用 [屬性] 頁面上的 Windows 說明。  
+  
+```
+HRESULT Help(PROPPAGEINFO* pPageInfo);
+```  
+  
+### <a name="remarks"></a>備註  
+ 請參閱[IPropertyPage::Help](http://msdn.microsoft.com/library/windows/desktop/ms691504)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-nameipropertypageimpla--ipropertypageimplipropertypageimpl"></a><a name="ipropertypageimpl"></a>IPropertyPageImpl::IPropertyPageImpl  
+ 建構函式。  
+  
+```
+IPropertyPageImpl();
+```  
+  
+### <a name="remarks"></a>備註  
+ 初始化所有的資料成員。  
+  
+##  <a name="a-nameispagedirtya--ipropertypageimplispagedirty"></a><a name="ispagedirty"></a>IPropertyPageImpl::IsPageDirty  
+ 表示屬性頁是否已變更，因為它已啟動。  
+  
+```
+HRESULT IsPageDirty(void);
+```  
+  
+### <a name="remarks"></a>備註  
+ `IsPageDirty`傳回`S_OK`之後啟動時，頁面已變更。  
+  
+##  <a name="a-namembdirtya--ipropertypageimplmbdirty"></a><a name="m_bdirty"></a>IPropertyPageImpl::m_bDirty  
+ 指定是否已變更屬性頁的狀態。  
+  
+```
+BOOL m_bDirty;
+```  
+  
+##  <a name="a-namemnobjectsa--ipropertypageimplmnobjects"></a><a name="m_nobjects"></a>IPropertyPageImpl::m_nObjects  
+ 儲存屬性頁相關聯的物件的數目。  
+  
+```
+ULONG m_nObjects;
+```  
+  
+##  <a name="a-namemdwhelpcontexta--ipropertypageimplmdwhelpcontext"></a><a name="m_dwhelpcontext"></a>IPropertyPageImpl::m_dwHelpContext  
+ 儲存相關聯的屬性頁的 [說明] 主題的內容識別碼。  
+  
+```
+DWORD m_dwHelpContext;
+```  
+  
+##  <a name="a-namemdwdocstringa--ipropertypageimplmdwdocstring"></a><a name="m_dwdocstring"></a>IPropertyPageImpl::m_dwDocString  
+ 儲存與描述 屬性頁的文字字串相關聯的資源識別碼。  
+  
+```
+UINT m_dwDocString;
+```  
+  
+##  <a name="a-namemdwhelpfilea--ipropertypageimplmdwhelpfile"></a><a name="m_dwhelpfile"></a>IPropertyPageImpl::m_dwHelpFile  
+ 儲存與描述 屬性頁的說明檔的名稱相關聯的資源識別碼。  
+  
+```
+UINT m_dwHelpFile;
+```  
+  
+##  <a name="a-namemdwtitlea--ipropertypageimplmdwtitle"></a><a name="m_dwtitle"></a>IPropertyPageImpl::m_dwTitle  
+ 儲存於屬性頁 索引標籤的文字字串相關聯的資源識別碼。  
+  
+```
+UINT m_dwTitle;
+```  
+  
+##  <a name="a-namemppagesitea--ipropertypageimplmppagesite"></a><a name="m_ppagesite"></a>IPropertyPageImpl::m_pPageSite  
+ 指向[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)透過屬性頁會與屬性框架通訊的介面。  
+  
+```
+IPropertyPageSite* m_pPageSite;
+```  
+  
+##  <a name="a-namemppunka--ipropertypageimplmppunk"></a><a name="m_ppunk"></a>IPropertyPageImpl::m_ppUnk  
+ 指向陣列**IUnknown**屬性頁相關聯的物件的指標。  
+  
+```
+IUnknown** m_ppUnk;
+```  
+  
+##  <a name="a-namemsizea--ipropertypageimplmsize"></a><a name="m_size"></a>IPropertyPageImpl::m_size  
+ 像素為單位儲存的高度和寬度屬性頁 對話方塊。  
+  
+```
+SIZE m_size;
+```  
+  
+##  <a name="a-namemovea--ipropertypageimplmove"></a><a name="move"></a>IPropertyPageImpl::Move  
+ 定位並調整大小屬性頁對話方塊。  
+  
+```
+HRESULT Move(LPCRECT pRect);
+```  
+  
+### <a name="remarks"></a>備註  
+ 請參閱[IPropertyPage::Move](http://msdn.microsoft.com/library/windows/desktop/ms680118)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-namesetdirtya--ipropertypageimplsetdirty"></a><a name="setdirty"></a>IPropertyPageImpl::SetDirty  
+ 屬性頁的狀態為已變更或不變，根據的值加上旗標`bDirty`。  
+  
+```
+void SetDirty(BOOL bDirty);
+```  
+  
+### <a name="parameters"></a>參數  
+ `bDirty`  
+ [in]如果**TRUE**，屬性頁的狀態會標示為已變更。 否則，它會標示為不變。  
+  
+### <a name="remarks"></a>備註  
+ 如有必要，`SetDirty`會通知已變更 [屬性] 頁面上的框架。  
+  
+##  <a name="a-namesetobjectsa--ipropertypageimplsetobjects"></a><a name="setobjects"></a>IPropertyPageImpl::SetObjects  
+ 提供一系列的**IUnknown**屬性頁相關聯的物件的指標。  
+  
+```
+HRESULT SetObjects(ULONG nObjects, IUnknown** ppUnk);
+```  
+  
+### <a name="remarks"></a>備註  
+ 請參閱[IPropertyPage::SetObjects](http://msdn.microsoft.com/library/windows/desktop/ms678529)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-namesetpagesitea--ipropertypageimplsetpagesite"></a><a name="setpagesite"></a>IPropertyPageImpl::SetPageSite  
+ 提供屬性頁[IPropertyPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690583)指標，透過此屬性頁與其通訊的內容框架。  
+  
+```
+HRESULT SetPageSite(IPropertyPageSite* pPageSite);
+```  
+  
+### <a name="remarks"></a>備註  
+ 請參閱[IPropertyPage::SetPageSite](http://msdn.microsoft.com/library/windows/desktop/ms690413)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-nameshowa--ipropertypageimplshow"></a><a name="show"></a>IPropertyPageImpl::Show  
+ 可見或不可見，請讓屬性頁對話方塊。  
+  
+```
+HRESULT Show(UINT nCmdShow);
+```  
+  
+### <a name="remarks"></a>備註  
+ 請參閱[IPropertyPage::Show](http://msdn.microsoft.com/library/windows/desktop/ms694467)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+##  <a name="a-nametranslateacceleratora--ipropertypageimpltranslateaccelerator"></a><a name="translateaccelerator"></a>IPropertyPageImpl::TranslateAccelerator  
+ 處理中指定的按鍵動作`pMsg`。  
+  
+```
+HRESULT TranslateAccelerator(MSG* pMsg);
+```  
+  
+### <a name="remarks"></a>備註  
+ 請參閱[IPropertyPage::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms686603)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+## <a name="see-also"></a>另請參閱  
+ [IPropertyPage2Impl 類別](../../atl/reference/ipropertypage2impl-class.md)   
+ [IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+ [ISpecifyPropertyPagesImpl 類別](../../atl/reference/ispecifypropertypagesimpl-class.md)   
+ [類別概觀](../../atl/atl-class-overview.md)
+

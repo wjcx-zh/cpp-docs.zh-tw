@@ -1,73 +1,90 @@
 ---
-title: "_getdrives | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_getdrives"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "getdrives"
-  - "_getdrives"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_getdrives 函式"
-  - "磁碟機"
-  - "getdrives 函式"
+title: _getdrives | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _getdrives
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- getdrives
+- _getdrives
+dev_langs:
+- C++
+helpviewer_keywords:
+- _getdrives function
+- getdrives function
+- disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _getdrives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b8052d82a223402849b6ba48ce5f6621a7d27ed9
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="getdrives"></a>_getdrives
 傳回代表目前可用之磁碟機的位元遮罩。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned long _getdrives( void );  
 ```  
   
-## 傳回值  
- 如果此函式成功，則傳回值為代表目前可用之磁碟機的位元遮罩。  位元位置 0 \(最小顯著性位元\) 是磁碟機 A，位元位置 1 是磁碟機 B，位元位置 2 是 C 磁碟機，依此類推。  如果此函式失敗，則傳回值為零。  若要取得延伸錯誤資訊，請呼叫 `GetLastError`。  
+## <a name="return-value"></a>傳回值  
+ 如果此函式成功，則傳回值為代表目前可用之磁碟機的位元遮罩。 位元位置 0 (最小顯著性位元) 是磁碟機 A，位元位置 1 是磁碟機 B，位元位置 2 是 C 磁碟機，依此類推。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_getdrives`|\<direct.h\>|  
+|-------------|---------------------|  
+|`_getdrives`|\<direct.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
-// crt_getdrives.c  
+  
+      // crt_getdrives.c  
 // This program retrives and lists out  
 // all the logical drives that are   
 // currently mounted on the machine.  
@@ -102,13 +119,16 @@ int main(int argc, char* argv[]) {
 }  
 ```  
   
-  **使用下列邏輯磁碟機：**  
-**答：**  
-**C:**  
-**D:**  
-**E:**   
-## NET Framework 對等  
- 不適用。  若要呼叫標準 C 函式，請使用 `PInvoke`。  如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+The following logical drives are being used:  
+A:  
+C:  
+D:  
+E:  
+```  
   
-## 請參閱  
+## <a name="net-framework-equivalent"></a>NET Framework 對等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [目錄控制](../../c-runtime-library/directory-control.md)

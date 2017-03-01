@@ -1,61 +1,127 @@
 ---
 title: "lognormal_distribution 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.lognormal_distribution"
-  - "tr1.lognormal_distribution"
-  - "tr1::lognormal_distribution"
-  - "std::tr1::lognormal_distribution"
-  - "lognormal_distribution"
-  - "random/std::tr1::lognormal_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lognormal_distribution 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- lognormal_distribution
+- std::lognormal_distribution
+- random/std::lognormal_distribution
+- std::lognormal_distribution::reset
+- random/std::lognormal_distribution::reset
+- std::lognormal_distribution::m
+- random/std::lognormal_distribution::m
+- std::lognormal_distribution::s
+- random/std::lognormal_distribution::s
+- std::lognormal_distribution::param
+- random/std::lognormal_distribution::param
+- std::lognormal_distribution::min
+- random/std::lognormal_distribution::min
+- std::lognormal_distribution::max
+- random/std::lognormal_distribution::max
+- std::lognormal_distribution::operator()
+- random/std::lognormal_distribution::operator()
+- std::lognormal_distribution::param_type
+- random/std::lognormal_distribution::param_type
+- std::lognormal_distribution::param_type::m
+- random/std::lognormal_distribution::param_type::m
+- std::lognormal_distribution::param_type::s
+- random/std::lognormal_distribution::param_type::s
+- std::lognormal_distribution::param_type::operator==
+- random/std::lognormal_distribution::param_type::operator==
+- std::lognormal_distribution::param_type::operator!=
+- random/std::lognormal_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- lognormal_distribution class
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# lognormal_distribution 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 9e3e74b396e0f5026cc69c6cf4e2ca7cf5215ad5
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="lognormaldistribution-class"></a>lognormal_distribution 類別
 產生對數常態分佈。  
   
-## 語法  
-  
+## <a name="syntax"></a>語法  
 ```  
-template<class RealType = double> class lognormal_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructor and reset functions     explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);     explicit lognormal_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType m() const;     RealType s() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
+template <class RealType = double>  
+class lognormal_distribution  
+   {  
+public:  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+   // constructor and reset functions  
+   explicit lognormal_distribution(result_type m = 0.0, result_type s = 1.0);
+   explicit lognormal_distribution(const param_type& parm);
+   void reset();
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   // property functions  
+   result_type m() const;
+   result_type s() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+### <a name="parameters"></a>參數  
+*RealType*  
+浮點結果類型，預設值為 `double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
   
-#### 參數  
- `RealType`  
- 浮點結果類型，預設值為 `double`。  如需可能的類型，請參閱 [\<random\>](../standard-library/random.md)。  
-  
-## 備註  
- 此範本類別描述產生使用者指定之整數類型的值的分佈 \(若無提供則為 `double` 類型\)，而這是根據對數常態分佈進行分佈。  下表提供各個成員的文章連結。  
+## <a name="remarks"></a>備註  
+此範本類別描述產生使用者指定之整數類型的值的分佈 (若無提供則為 `double` 類型)，而這是根據對數常態分佈進行分佈。 下表提供各個成員的文章連結。  
   
 ||||  
 |-|-|-|  
-|[lognormal\_distribution::lognormal\_distribution](../Topic/lognormal_distribution::lognormal_distribution.md)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[lognormal\_distribution::param\_type](../Topic/lognormal_distribution::param_type.md)|  
+|[lognormal_distribution::lognormal_distribution](#lognormal_distribution__lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|  
+|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[lognormal_distribution::param_type](#lognormal_distribution__param_type)|  
   
- 屬性函式 `m()` 和 `s()` 會分別傳回儲存的分佈參數 `m` 和 `s` 的值。  
+屬性函式 `m()` 和 `s()` 會分別傳回預存分佈參數 *m* 和 *s* 的值。  
   
- 如需分佈類別及其成員的詳細資訊，請參閱 [\<random\>](../standard-library/random.md)。  
+屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。  
+
+`min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
   
- 如需對數常態分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[對數常態分佈](http://go.microsoft.com/fwlink/?LinkId=400917) \(英文\)。  
+`reset()` 成員函式會捨棄任何快取的值，讓下個針對 `operator()` 呼叫的結果不是取決於呼叫之前取自引擎的任何值。  
   
-## 範例  
+`operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
+  
+如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+  
+如需有關 LogNormal 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[LogNormal 分佈 (英文)](http://go.microsoft.com/fwlink/LinkId=400917)。  
+  
+## <a name="example"></a>範例  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -114,38 +180,91 @@ int main()
   
     test(m_dist, s_dist, samples);  
 }  
-  
 ```  
   
-## 輸出  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'm' distribution parameter: 0  
 Enter a floating point value for the 's' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == -1.79769e+308  
 max() == 1.79769e+308  
 m() == 0.0000000000  
 s() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.3862809339  
-          2:   0.4128865601  
-          3:   0.4490576787  
-          4:   0.4862035428  
-          5:   0.5930607126  
-          6:   0.8190778771  
-          7:   0.8902379317  
-          8:   2.8332911667  
-          9:   5.1359445565  
-         10:   5.4406507912  
+    1: 0.3862809339  
+    2: 0.4128865601  
+    3: 0.4490576787  
+    4: 0.4862035428  
+    5: 0.5930607126  
+    6: 0.8190778771  
+    7: 0.8902379317  
+    8: 2.8332911667  
+    9: 5.1359445565  
+    10: 5.4406507912  
 ```  
   
-## 需求  
- **標頭：**\<random\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<random>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namelognormaldistributionlognormaldistributiona--lognormaldistributionlognormaldistribution"></a><a name="lognormal_distribution__lognormal_distribution"></a>  lognormal_distribution::lognormal_distribution  
+ 建構分佈。  
+  
+```  
+explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);
+explicit lognormal_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>參數  
+*m*  
+`m` 分佈參數。  
+  
+*s*  
+`s` 分佈參數。  
+  
+*parm*  
+用來建構分佈的 `param_type` 結構。  
+  
+### <a name="remarks"></a>備註  
+**前置條件︰**`0.0 < s`  
+  
+第一個建構函式會建構預存 `m` 值具有 *m* 值而預存 `s` 值具有 *s* 值的物件。  
+  
+第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+  
+##  <a name="a-namelognormaldistributionparamtypea--lognormaldistributionparamtype"></a><a name="lognormal_distribution__param_type"></a>  lognormal_distribution::param_type  
+儲存分佈的參數。  
+  
+```  
+struct param_type {  
+   typedef lognormal_distribution<result_type> distribution_type;  
+   param_type(result_type m = 0.0, result_type s = 1.0);
+   result_type m() const;
+   result_type s() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+};  
+```    
+### <a name="parameters"></a>參數  
+*m*  
+`m` 分佈參數。  
+  
+*s*  
+`s` 分佈參數。  
+  
+*right*  
+用來進行比較的 `param_type` 結構。  
+  
+### <a name="remarks"></a>備註  
+**前置條件：**`0.0 < s`  
+  
+此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+  
+## <a name="see-also"></a>另請參閱  
+[\<random>](../standard-library/random.md)
+
+

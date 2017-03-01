@@ -1,50 +1,64 @@
 ---
 title: "偵錯迭代器支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_HAS_ITERATOR_DEBUGGING symbol"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "偵錯迭代器支援"
-  - "不相容的迭代器"
-  - "迭代器, 偵錯迭代器支援"
-  - "迭代器, 不相容"
-  - "安全程式庫"
-  - "安全程式庫, Standard C++ 程式庫"
-  - "安全 Standard C++ 程式庫"
-  - "Standard C++ 程式庫, 偵錯迭代器支援"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Safe Libraries
+- Safe Libraries, C++ Standard Library
+- Safe C++ Standard Library
+- C++ Standard Library, debug iterator support
+- iterators, debug iterator support
+- iterators, incompatible
+- incompatible iterators
+- debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
 caps.latest.revision: 22
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 偵錯迭代器支援
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
+ms.openlocfilehash: 37f3450fbd320105781fa5398e838d3a8e317879
+ms.lasthandoff: 02/24/2017
 
-Visual C\+\+ 執行階段程式庫偵測到無效的 Iterator 用法，並判斷提示並顯示對話方塊在執行階段。  若要啟用偵錯 Iterator 支援，您必須使用 . C 執行階段程式庫偵錯版本編譯您的程式。  如需詳細資訊，請參閱[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。  如需如何使用 Iterator 的詳細資訊，請參閱 [已檢查的迭代器](../standard-library/checked-iterators.md)。  
+---
+# <a name="debug-iterator-support"></a>Debug Iterator Support
+Visual C++ 執行階段程式庫可在執行階段偵測不正確的迭代器用法、進行判斷提示並顯示對話方塊。 若要啟用偵錯迭代器支援，您必須使用 C++ 標準程式庫和 C 執行階段程式庫的偵錯版本來編譯您的程式。 如需詳細資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。 如需如何使用已檢查的迭代器的資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
   
- C\+\+ 標準描述成員函式如何可能造成 Iterator 到容器就會變成無效。  兩個範例如下:  
+ C++ 標準說明為何成員函式可能會導致容器的迭代器變成無效。 以下為兩個範例：  
   
--   清除容器的項目造成 Iterator 對這個項目會變成無效。  
+-   從容器清除元素時，會導致迭代器的元素變成無效。  
   
--   加入 [向量](../standard-library/vector.md) 的大小 \(推入或插入\) 會將 Iterator 的 `vector` 變成無效。  
+-   使用 push 或 insert 增加[向量](../standard-library/vector.md)的大小時，會導致 `vector` 內的迭代器變成無效。  
   
-## 範例  
- 如果您編譯在偵錯模式的程式，執行階段會判斷提示和結束。  
+## <a name="example"></a>範例  
+如果您在偵錯模式中編譯此範例程式，程式就會在執行階段進行判斷提示並終止。  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_0.cpp  
+// compile by using /EHsc /MDd  
 #include <vector>  
 #include <iostream>  
   
@@ -61,25 +75,21 @@ int main() {
    std::vector<int>::iterator j = v.end();  
    --j;  
   
-   std::cout<<*j<<'\n';  
+   std::cout << *j << '\n';  
   
    v.insert(i,25);   
   
-   std::cout<<*j<<'\n'; // Using an old iterator after an insert  
+   std::cout << *j << '\n'; // Using an old iterator after an insert  
 }  
-  
 ```  
   
-## 範例  
- 您可以使用符號 [\_HAS\_ITERATOR\_DEBUGGING](../standard-library/has-iterator-debugging.md) 關閉在偵錯組建的 Iterator 偵錯功能。  下列程式不提示，，但仍觸發未定義的行為。  
-  
-> [!IMPORTANT]
->  使用 `_ITERATOR_DEBUG_LEVEL` 控制項的 `_HAS_ITERATOR_DEBUGGING`。  如需詳細資訊，請參閱[\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)。  
+## <a name="example"></a>範例  
+您可以使用前置處理器巨集 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)，來關閉偵錯組建中的迭代器偵錯功能。 這個程式不會進行判斷提示，但仍會觸發未定義的行為。  
   
 ```cpp  
-// iterator_debugging.cpp  
-// compile with: /EHsc /MDd  
-#define _HAS_ITERATOR_DEBUGGING 0  
+// iterator_debugging_1.cpp  
+// compile by using: /EHsc /MDd  
+#define _ITERATOR_DEBUG_LEVEL 0  
 #include <vector>  
 #include <iostream>  
   
@@ -96,23 +106,28 @@ int main() {
    std::vector<int>::iterator j = v.end();  
    --j;  
   
-   std::cout<<*j<<'\n';  
+   std::cout << *j << '\n';  
   
    v.insert(i,25);   
   
-   std::cout<<*j<<'\n'; // Using an old iterator after an insert  
+   std::cout << *j << '\n'; // Using an old iterator after an insert  
 }  
 ```  
   
-  **20**  
-**\-572662307**   
-## 範例  
- 判斷提示可能會發生，如果您嘗試使用 Iterator，在初始化之前，如下所示:  
+```Output  
+20  
+-572662307  
+```  
+  
+## <a name="example"></a>範例  
+如果您嘗試在迭代器初始化之前就加以使用，也會發生如下的判斷提示：  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_2.cpp  
+// compile by using: /EHsc /MDd  
 #include <string>  
 using namespace std;  
+  
 int main() {  
    string::iterator i1, i2;  
    if (i1 == i2)  
@@ -120,11 +135,12 @@ int main() {
 }  
 ```  
   
-## 範例  
- 因為對 [for\_each](../Topic/for_each.md) 演算法的兩個 Iterator 不相容，下列程式碼範例會產生判斷提示。  演算法檢查以確定提供給它們的 Iterator 是否參考相同的容器。  
+## <a name="example"></a>範例  
+下列程式碼範例會引起判斷提示，因為針對 [for_each](../standard-library/algorithm-functions.md#for_each) 演算法提供的兩個迭代器不相容。 演算法會檢查並判斷會提供給它們的迭代器是否參考相同的容器。  
   
 ```cpp  
-/* compile with /EHsc /MDd */  
+// iterator_debugging_3.cpp  
+// compile by using /EHsc /MDd  
 #include <algorithm>  
 #include <vector>  
 using namespace std;  
@@ -140,20 +156,20 @@ int main()
     v2.push_back(10);  
     v2.push_back(20);  
   
-    // The next line will assert because v1 and v2 are  
+    // The next line asserts because v1 and v2 are  
     // incompatible.  
     for_each(v1.begin(), v2.end(), [] (int& elem) { elem *= 2; } );  
 }  
 ```  
   
- 請注意這個範例會使用 Lambda 運算式 `[] (int& elem) { elem *= 2; }` 而不是子功能。  雖然這個選項與無關判斷提示失敗的功能類似的工具會產生相同的失敗 Lambda 是非常有用的方式完成精簡函式物件工作。  如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。  
+請注意，此範例中使用 Lambda 運算式`[] (int& elem) { elem *= 2; }` 而不是仿函式。 雖然這種選擇與判斷提示失敗無關 (類似的仿函式會導致相同的失敗)，但 Lambda 非常適合用來完成精簡函式物件的工作。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。  
   
-## 範例  
- 偵錯也已檢查的 Iterator 會導致 `for` 重複宣告超出範圍的 Iterator 變數，當 `for` 迴圈範圍的結尾。  
+## <a name="example"></a>範例  
+當 `for` 迴圈範圍結束時，偵錯迭代器的檢查也會導致 `for` 迴圈中宣告的迭代器變數超出範圍。  
   
 ```cpp  
-// debug_iterator.cpp  
-// compile with: /EHsc /MDd  
+// iterator_debugging_4.cpp  
+// compile by using: /EHsc /MDd  
 #include <vector>  
 #include <iostream>  
 int main() {  
@@ -163,20 +179,21 @@ int main() {
    v.push_back(15);  
    v.push_back(20);  
   
-   for (std::vector<int>::iterator i = v.begin() ; i != v.end(); ++i)  
-   ;  
+   for (std::vector<int>::iterator i = v.begin(); i != v.end(); ++i)  
+      ;   // do nothing  
    --i;   // C2065  
 }  
 ```  
   
-## 範例  
- 偵錯 Iterator 有重要解構函式。  如果解構函式不會執行，無論原因為何，存取違規和資料損毀可能發生。  請考量以下範例：  
+## <a name="example"></a>範例  
+偵錯迭代器具有非一般的解構函式。 如果解構函式因任何原因並未執行，即可能發生存取違規與資料損毀情況。 請考量以下範例：  
   
 ```cpp  
-/* compile with: /EHsc /MDd */  
+// iterator_debugging_5.cpp  
+// compile by using: /EHsc /MDd  
 #include <vector>  
 struct base {  
-   // FIX: uncomment the next line  
+   // TO FIX: uncomment the next line  
    // virtual ~base() {}  
 };  
   
@@ -194,5 +211,10 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [STL 概觀](../standard-library/cpp-standard-library-overview.md)
+## <a name="see-also"></a>另請參閱  
+[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
+
+
+
+
+

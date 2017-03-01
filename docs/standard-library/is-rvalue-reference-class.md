@@ -1,56 +1,73 @@
 ---
 title: "is_rvalue_reference 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.is_rvalue_reference"
-  - "is_rvalue_reference"
-  - "std::tr1::is_rvalue_reference"
-  - "std.is_rvalue_reference"
-  - "std::is_rvalue_reference"
-  - "type_traits/std::is_rvalue_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_rvalue_reference 類別 [TR1]"
-  - "is_rvalue_reference"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_rvalue_reference
+- std::is_rvalue_reference
+- type_traits/std::is_rvalue_reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_rvalue_reference class
+- is_rvalue_reference
 ms.assetid: 40a97072-7b5c-4274-9154-298d3dcf064a
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# is_rvalue_reference 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 748a717c1f49206457bded1cd11be2dd30753f6f
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isrvaluereference-class"></a>is_rvalue_reference 類別
 測試類型是否為 rvalue 參考。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
-template<class Ty>  
-    struct is_rvalue_reference;  
+```
+template <class Ty>
+struct is_rvalue_reference;
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `Ty`  
  要查詢的類型。  
   
-## 備註  
- 如果類型 `Ty` 是 [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md) 參考，則此類型述詞的執行個體會維持 true。  
+## <a name="remarks"></a>備註  
+ 如果類型 `Ty` 是 [rvalue 參考](../cpp/rvalue-reference-declarator-amp-amp.md)，此類型述詞執行個體的值就會是 true。  
   
-## 需求  
- **標頭：**\<type\_traits\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<type_traits>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<type\_traits\>](../standard-library/type-traits.md)   
+## <a name="see-also"></a>另請參閱  
+ [<type_traits>](../standard-library/type-traits.md)   
  [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
+
+
+
+

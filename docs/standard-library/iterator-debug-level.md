@@ -1,65 +1,95 @@
 ---
-title: "_ITERATOR_DEBUG_LEVEL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ITERATOR_DEBUG_LEVEL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ITERATOR_DEBUG_LEVEL"
+title: _ITERATOR_DEBUG_LEVEL | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _ITERATOR_DEBUG_LEVEL
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 caps.latest.revision: 6
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _ITERATOR_DEBUG_LEVEL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 441f493d8ada3ef232f60d917dc3f95812ba9114
+ms.openlocfilehash: d5f89f871f60827d894aa414e12b52f0c5f7ef38
+ms.lasthandoff: 02/24/2017
 
-`_ITERATOR_DEBUG_LEVEL` \(IDL\) 巨集取代和合併 [\_SECURE\_SCL](../standard-library/secure-scl.md) \(SCL\) 和 [\_HAS\_ITERATOR\_DEBUGGING](../standard-library/has-iterator-debugging.md) \(隱藏\) 巨集的功能。  
+---
+# <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
+`_ITERATOR_DEBUG_LEVEL` 巨集可控制是否啟用[已檢查的迭代器](../standard-library/checked-iterators.md)和[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。 此巨集取代及結合了舊版 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 巨集的功能。  
   
-## 巨集值  
- 下表摘要說明 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 巨集的值，而最後這些值如何由 `_ITERATOR_DEBUG_LEVEL` 巨集取代。  
+## <a name="macro-values"></a>巨集值  
+下表摘要說明 `_ITERATOR_DEBUG_LEVEL` 巨集的可能值。  
   
- 下列章節描述 SCL 和隱藏的巨集的可能值。  
+|編譯模式|巨集值|描述|  
+|----------------------|----------------|-----------------|  
+|**偵錯**|||  
+||0|停用已檢查的迭代器及停用迭代器偵錯功能。|  
+||1|啟用已檢查的迭代器，但停用迭代器偵錯功能。|  
+||2 (預設)|停用迭代器偵錯功能；與已檢查的迭代器無關。|  
+|**發行**|||  
+||0 (預設)|停用已檢查的迭代器。|  
+||1|啟用已檢查的迭代器；與迭代器偵錯功能無關。|  
   
- SCL\=0  
- 停用已檢查的 Iterator。  
+在發行模式下，如果您將 `_ITERATOR_DEBUG_LEVEL` 指定為 2，編譯器會產生錯誤。  
   
- SCL\=1  
- 啟用已檢查的 Iterator。  
+## <a name="remarks"></a>備註  
+`_ITERATOR_DEBUG_LEVEL` 巨集可控制是否啟用[已檢查的迭代器](../standard-library/checked-iterators.md)，而在「偵錯」模式下，則可控制是否啟用[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。 如果將 `_ITERATOR_DEBUG_LEVEL` 定義為 1 或 2，已檢查的迭代器便可確保您容器的界限不會被覆寫。 如果 `_ITERATOR_DEBUG_LEVEL` 是 0，則不會檢查迭代器。 當 `_ITERATOR_DEBUG_LEVEL` 定義為 1 時，任何不安全的迭代器使用方式都會導致執行階段錯誤，而使程式終止。 當 `_ITERATOR_DEBUG_LEVEL` 定義為 2 時，不安全的迭代器使用方式會導致顯示判斷提示和執行階段錯誤對話方塊，讓您可以中斷偵錯工具。 
+
+由於 `_ITERATOR_DEBUG_LEVEL` 巨集支援的功能與 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 巨集類似，因此您可能會不確定在特定情況下要使用哪個巨集和巨集值。 為了避免混淆，建議您只使用 `_ITERATOR_DEBUG_LEVEL` 巨集。 下表說明在現有的程式碼中，針對 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 的各種值，要使用的對等 `_ITERATOR_DEBUG_LEVEL` 巨集值。  
   
- HID\=0  
- 停用 Iterator 偵錯組建。  
+|**_ITERATOR_DEBUG_LEVEL** |**_SECURE_SCL** |**_HAS_ITERATOR_DEBUGGING**|
+|---|---|---|
+|0 (發行模式預設)|0 (已停用)|0 (已停用)|
+|1|1 (已啟用)|0 (已停用)|
+|2 (偵錯模式預設)|(不相關)|1 (在偵錯模式下啟用)|
   
- HID\=1  
- 啟用 Iterator 偵錯組建。  HID 在發行的組建中無法啟用。  
+如需了解如何停用已檢查迭代器的相關警告，請參閱 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)。  
   
- 下表描述 IDL 巨集值如何代替 SCL 和隱藏巨集的值。  
+### <a name="example"></a>範例  
   
-|編輯模式|新的巨集|舊巨集|說明|  
-|----------|----------|---------|--------|  
-|**偵錯**||||  
-||IDL\=0|SCL\=0， HID\=0|停用已檢查的 Iterator 和 Iterator 停用偵錯。|  
-||IDL\=1|SCL\=1， HID\=0|啟用已檢查的 Iterator 和停用 Iterator 偵錯。|  
-||IDL\=2 \(預設值\)|SCL\= \(不應用\)， HID\=1|根據預設，啟用 Iterator 偵錯;已檢查的 Iterator 不相關。|  
-|**Release**||||  
-||IDL\=0 \(預設值\)|SCL\=0|根據預設，會停用已檢查的 Iterator。|  
-||IDL\=1|SCL\=1|啟用已檢查的 Iterator;Iterator 偵錯並不相關。|  
+若要指定 `_ITERATOR_DEBUG_LEVEL` 巨集的值，請在命令列上使用 [/D](../build/reference/d-preprocessor-definitions.md) 編譯器選項來定義它，或在您原始程式檔所含的「C++ 標準程式庫」標頭之前使用 `#define`。 例如，在命令列上，若要以偵錯模式編譯 *sample.cpp* 並使用偵錯迭代器支援，您可以指定 `_ITERATOR_DEBUG_LEVEL` 巨集定義：  
   
-## 備註  
- 在發行模式，因此，如果您指定 IDL\=2.，錯誤發出。  
+`cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`  
   
- 因為 `_SECURE_SCL` 和 `_HAS_ITERATOR_DEBUGGING` 巨集支援類似的功能，使用的巨集和巨集值在特定情況的使用者通常不確定的。  若要解決這個問題，建議您只使用 `_ITERATOR_DEBUG_LEVEL` 巨集。  
+在原始程式檔中，於任何定義迭代器的標準程式庫標頭之前，指定巨集。  
   
-## 請參閱  
- [安全程式庫：C\+\+ 標準程式庫](../standard-library/safe-libraries-cpp-standard-library.md)
+```cpp  
+// sample.cpp  
+  
+#define _ITERATOR_DEBUG_LEVEL 1  
+  
+#include <vector>  
+  
+// ...
+```  
+  
+## <a name="see-also"></a>另請參閱  
+[已檢查的迭代器](../standard-library/checked-iterators.md)   
+[偵錯迭代器支援](../standard-library/debug-iterator-support.md)   
+[安全程式庫：C++ 標準程式庫](../standard-library/safe-libraries-cpp-standard-library.md)
+

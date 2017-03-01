@@ -1,55 +1,92 @@
 ---
-title: "IUMSUnblockNotification 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrtrm/concurrency::IUMSUnblockNotification"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IUMSUnblockNotification 結構"
+title: "IUMSUnblockNotification 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrtrm/concurrency::IUMSUnblockNotification
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# IUMSUnblockNotification 結構
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 6fba6c36987107e2e8100c8b296c279592220682
+ms.lasthandoff: 02/24/2017
 
-代表資源管理員發出的通知，表示封鎖及觸發傳回排程器指派排程內容的執行緒 Proxy 已解除鎖定，而且已準備好進行排程。  若重新排程從 `GetContext` 方法傳回之執行緒 Proxy 的相關執行內容，則此介面不正確。  
+---
+# <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification 結構
+代表資源管理員發出的通知，其中說明遭封鎖並觸發傳回給排程器所指派之排程內容的執行緒 Proxy 已解除鎖定，而且已準備好進行排程。 若重新排程從 `GetContext` 方法傳回之執行緒 Proxy 的相關執行內容，則此介面不正確。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+struct IUMSUnblockNotification;
 ```  
-struct IUMSUnblockNotification;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[IUMSUnblockNotification::GetContext 方法](../Topic/IUMSUnblockNotification::GetContext%20Method.md)|傳回與已解除鎖定之執行緒 Proxy 相關的執行內容的 `IExecutionContext` 介面。  一旦這個方法傳回，並透過 `IThreadProxy::SwitchTo` 方法呼叫重新排程基礎的執行內容，這個介面已不再有效。|  
-|[IUMSUnblockNotification::GetNextUnblockNotification 方法](../Topic/IUMSUnblockNotification::GetNextUnblockNotification%20Method.md)|傳回從方法 `IUMSUnblockNotification` 傳回之鏈結中的下一個 `IUMSCompletionList::GetUnblockNotifications` 介面。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[Iumsunblocknotification:: Getcontext 方法](#getcontext)|傳回`IExecutionContext`已解除封鎖的執行緒 proxy 相關聯的執行內容的介面。 當這個方法會傳回，而且已重新排定基礎的執行內容，透過對呼叫`IThreadProxy::SwitchTo`方法，這個介面不再有效。|  
+|[Iumsunblocknotification:: Getnextunblocknotification 方法](#getnextunblocknotification)|傳回下一個`IUMSUnblockNotification`從方法傳回鏈結中的介面`IUMSCompletionList::GetUnblockNotifications`。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `IUMSUnblockNotification`  
   
-## 需求  
- **標頭：** concrtrm.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** concrtrm.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [IUMSScheduler 結構](../../../parallel/concrt/reference/iumsscheduler-structure.md)   
- [IUMSCompletionList 結構](../../../parallel/concrt/reference/iumscompletionlist-structure.md)
+##  <a name="a-namegetcontexta--iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a>Iumsunblocknotification:: Getcontext 方法  
+ 傳回`IExecutionContext`已解除封鎖的執行緒 proxy 相關聯的執行內容的介面。 當這個方法會傳回，而且已重新排定基礎的執行內容，透過對呼叫`IThreadProxy::SwitchTo`方法，這個介面不再有效。  
+  
+```
+virtual IExecutionContext* GetContext() = 0;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `IExecutionContext`已解除封鎖執行緒 proxy 的執行內容的介面。  
+  
+##  <a name="a-namegetnextunblocknotificationa--iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a>Iumsunblocknotification:: Getnextunblocknotification 方法  
+ 傳回下一個`IUMSUnblockNotification`從方法傳回鏈結中的介面`IUMSCompletionList::GetUnblockNotifications`。  
+  
+```
+virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 下一個`IUMSUnblockNotification`從方法傳回鏈結中的介面`IUMSCompletionList::GetUnblockNotifications`。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)   
+ [IUMSScheduler 結構](iumsscheduler-structure.md)   
+ [IUMSCompletionList 結構](iumscompletionlist-structure.md)
+

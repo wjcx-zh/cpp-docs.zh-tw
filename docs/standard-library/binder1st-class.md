@@ -1,84 +1,95 @@
 ---
 title: "binder1st 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xfunctional/std::binder1st"
-  - "std::binder1st"
-  - "binder1st"
-  - "std.binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- xfunctional/std::binder1st
+- std::binder1st
+- binder1st
+- std.binder1st
+dev_langs:
+- C++
+helpviewer_keywords:
+- binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
 caps.latest.revision: 22
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# binder1st 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 71d06115b1f6cc0df5a3dee9ce60482e641407ef
+ms.lasthandoff: 02/24/2017
 
-提供一個建構函式的樣板類別，此建構函式透過繫結二元函式第一個引數為指定值，將二元函式物件轉換為一元函式物件。  
+---
+# <a name="binder1st-class"></a>binder1st 類別
+提供一個建構函式的樣板類別，這個建構函式透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
-template<class Operation>  
-class binder1st  
-   : public unary_function <  
-      typename Operation::second_argument_type,  
-      typename Operation::result_type>   
-  {  
-   public:  
-   typedef typename Operation::argument_type argument_type;  
-   typedef typename Operation::result_type result_type;  
-   binder1st(  
-      const Operation & _Func,  
-      const typename Operation::first_argument_type& _Left  
-   );  
-   result_type operator()(  
-      const argument_type& _Right  
-   ) const;  
-   result_type operator()(  
-      const argument_type& _Right  
-   ) const;  
-   protected:  
-   Operation op;  
-   typename Operation::first_argument_type value;  
-   };  
+```
+template <class Operation>
+class binder1st
+    : public unaryFunction <typename Operation::second_argument_type,
+                             typename Operation::result_type>
+{
+public:
+    typedef typename Operation::argument_type argument_type;
+    typedef typename Operation::result_type result_type;
+    binder1st(
+        const Operation& Func,
+        const typename Operation::first_argument_type& left);
+
+    result_type operator()(const argument_type& right) const;
+    result_type operator()(const argument_type& right) const;
+
+protected:
+    Operation op;
+    typename Operation::first_argument_type value;
+};
 ```  
   
-#### 參數  
- `_Func`  
- 要轉換的二元函式物件對一元的函式物件。  
+#### <a name="parameters"></a>參數  
+ `Func`  
+ 要轉換為一元函式物件的二元函式物件。  
   
- `_Left`  
- 二元函式物件的第一個引數所繫結的值。  
+ `left`  
+ 二元函式物件的第一個引數所要繫結的值。  
   
- `_Right`  
- 引數的值符合的二進位物件與第二個引數的不可變值比較。  
+ `right`  
+ 調整後的二元物件用來與第二個引數的固定值進行比較的引數值。  
   
-## 傳回值  
- 一元的函式物件從繫結的結果二元函式物件的第一個引數傳遞給 `_Left.`的值  
+## <a name="return-value"></a>傳回值  
+ 透過將二元函式物件的第一個引數繫結至 `left.` 值，所產生的一元函式物件。  
   
-## 備註  
- 樣板類別在 **op**存放二進位函式物件 `_Func` 的複製和 `_Left` 複製到 **value**的。  它會定義成員的函式 `operator()` 為傳回 **op**\(**value**， `_Right`\)。  
+## <a name="remarks"></a>備註  
+ 此樣板類別會將二元函式物件 `Func` 的複本儲存在 **op** 中，並將 `left` 的複本儲存在 **value** 中。 它會在傳回下列項目時定義其成員函式 `operator()`：**op**( **value**, `right`)。  
   
- 如果 `_Func` 屬於型別 **Operation** 物件，而且 `c` 是常數，則 [bind1st](../Topic/bind1st%20Function.md) \( `_Func`， `c` \) 與 `binder1st` 類別建構函式 `binder1st`\<**Operation**\> \( `_Func`\)， `c` 等於且更方便。  
+ 如果 `Func` 是 **Operation** 類型的物件且 `c` 是常數，則 [bind1st](../standard-library/functional-functions.md#bind1st_function) ( `Func`, `c` ) 相當於 `binder1st` 類別建構函式 `binder1st`\< **Operation**> ( `Func`, `c` )，而且更方便。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // functional_binder1st.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -119,16 +130,22 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "  
          << result2 << "." << endl;  
 }  
+\* Output:   
+The vector v1 = ( 0 5 10 15 20 25 )  
+The number of elements in v1 greater than 10 is: 3.  
+The number of elements in v1 less than 10 is: 2.  
+*\  
 ```  
   
-  **The vector v1 \= \( 0 5 10 15 20 25 \)**  
-**項目數目 v1 大於 10 的是:3.**  
-**項目數目 v1 小於 10 的是:2.**   
-## 需求  
- **標題:** \<functional\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<functional>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

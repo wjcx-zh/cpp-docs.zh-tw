@@ -1,66 +1,80 @@
 ---
 title: "atan、atanf、atanl、atan2、atan2f、atan2l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atan2f"
-  - "atan2l"
-  - "atan2"
-  - "atanf"
-  - "atan"
-  - "atanl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "atan"
-  - "atan2l"
-  - "atan2"
-  - "atanl"
-  - "atanf"
-  - "atan2f"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "arctangent 函式"
-  - "atan 函式"
-  - "atan2 函式"
-  - "atan2f 函式"
-  - "atan2l 函式"
-  - "atanf 函式"
-  - "atanl 函式"
-  - "三角函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atan2f
+- atan2l
+- atan2
+- atanf
+- atan
+- atanl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- atan
+- atan2l
+- atan2
+- atanl
+- atanf
+- atan2f
+dev_langs:
+- C++
+helpviewer_keywords:
+- atan function
+- atanf function
+- atanl function
+- atan2 function
+- atan2l function
+- arctangent function
+- trigonometric functions
+- atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 caps.latest.revision: 21
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# atan、atanf、atanl、atan2、atan2f、atan2l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 9478bce81c89d642fbcad296ffc53e1312a177c2
+ms.lasthandoff: 02/24/2017
 
-計算 `x` 的反正切值 \(`atan`、 `atanf`和 `atanl`\) 或 `y`\/`x` 的反正切值 \(`atan2`、 `atan2f`和 `atan2l`\)。  
+---
+# <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
+計算 `x` 的反正切值 (`atan`、`atanf` 和 `atanl`) 或 `y`/`x` 的反正切值 (`atan2`、`atan2f` 和 `atan2l`)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double atan(   
@@ -100,33 +114,33 @@ long double atan2l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `x`, `y`  
  任何數字。  
   
-## 傳回值  
- `atan` 傳回 `x` 的反正切值 \(在 – π\/2 到 π\/2 的範圍中\)。  `atan2` 傳回 `y/x` 的反正切值 \(在 – π 到 π 的範圍中\)。  如果 `x` 為 0， `atan` 會傳回 0。  如果 `atan2` 的兩個參數都是 0，則函式會傳回 0。  所有結果都是以弧度為單位。  
+## <a name="return-value"></a>傳回值  
+ `atan` 會傳回 –π/2 到 π/2 弧度之間的 `x` 反正切值。 `atan2` 會傳回 –π 到 π 弧度之間的 `y/x` 反正切值。 如果 `x` 為 0，則 `atan` 傳回 0。 如果 `atan2` 的兩個參數都是 0，則函式會傳回 0。 所有結果都以弧度為單位。  
   
- `atan2` 使用兩個參數的正負號判斷傳回值的象限。  
+ `atan2` 使用這兩個參數的符號來判斷傳回值的象限。  
   
 |輸入|SEH 例外狀況|Matherr 例外狀況|  
-|--------|--------------|------------------|  
+|-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|無|`_DOMAIN`|  
   
-## 備註  
- `atan` 函式會計算 `x` 的反正切值 \(反正切函數函式\)。  `atan2` 計算 `y`\/`x` 的反正切值 \(`x` 等於 0 時，如果 `y` 為正數， `atan2` 會傳回 π\/2；如果 `y` 為負數，會傳回 \- π\/2；如果 `y` 是 0，會傳回 0\)。  
+## <a name="remarks"></a>備註  
+ `atan` 函式會計算 `x` 的反正切值 (反向 tangent 函式)。 `atan2` 計算 `y`/`x` 的反正切值 (如果 `x` 等於 0，`atan2` 會傳回 π/2；如果 `y` 是正值，則為 -π/2；如果 `y` 為負值或 0，則 `y` 為 0)。  
   
- `atan` 會使用 Streaming SIMD Extensions 2\(SSE2\) 的實作。  如需有關使用 SSE2 實作的詳細資訊和限制，請參閱 [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
+ `atan` 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
- 因為 C\+\+ 允許多載，您可以呼叫 `atan` 和 `atan2` 的多載。  在 C 程式，`atan` 和 `atan2` 一律接受並傳回 double 值。  
+ 因為 C++ 允許多載，所以您可以呼叫 `atan` 和 `atan2` 的多載。 在 C 程式中，`atan` 和 `atan2` 會一律採用並傳回雙精度浮點數。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h\>|  
+|-------------|---------------------|  
+|`atan`, `atan2`, `atanf`, `atan2f`, `atanl`, `atan2l`|\<math.h>|  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_atan.c  
@@ -152,21 +166,24 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-  **5.000000 的反正切值：1.373401**  
-**0.500000 \/ 5.000000 的反正切值：0.099669**   
-## .NET Framework 對等用法  
+```Output  
+Arctangent of 5.000000: 1.373401  
+Arctangent of 0.500000 / 5.000000: 0.099669  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
   
 -   [System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx)  
   
 -   [System::Math::Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin、asinf、asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [cos、cosf、cosl、cosh、coshf、coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [sin、sinf、sinl、sinh、sinhf、sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [tan、tanf、tanl、tanh、tanhf、tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [\_CIatan](../../c-runtime-library/ciatan.md)   
- [\_CIatan2](../../c-runtime-library/ciatan2.md)
+ [_CIatan](../../c-runtime-library/ciatan.md)   
+ [_CIatan2](../../c-runtime-library/ciatan2.md)

@@ -1,78 +1,110 @@
 ---
 title: "file_status 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "filesystem/std::tr2::sys::file_status"
-  - "filesystem/std::tr2::sys::file_status::perms"
-  - "filesystem/std::tr2::sys::file_status::type"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- file_status
+- std::experimental::filesystem::v1::file_status
+- filesystem/std::experimental::filesystem::v1::file_status
+- std::experimental::filesystem::v1::file_status::operator=
+- filesystem/std::experimental::filesystem::v1::file_status::operator=
+- std::experimental::filesystem::v1::file_status::type
+- filesystem/std::experimental::filesystem::v1::file_status::type
+- std::experimental::filesystem::v1::file_status::permissions
+- filesystem/std::experimental::filesystem::v1::file_status::permissions
+dev_langs:
+- C++
 ms.assetid: 9781840e-ad22-44dd-ad79-0fabaa94bac4
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# file_status 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
+ms.openlocfilehash: 954da8df11c2382887717baa61070acc0b6070b4
+ms.lasthandoff: 02/24/2017
 
-包裝 [file\_type](../Topic/file_type%20Enumeration.md)。  
+---
+# <a name="filestatus-class"></a>file_status 類別
+包裝 [file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type) 和檔案的 [perms](../standard-library/filesystem-enumerations.md#filesystem__perms)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
+```cpp  
 class file_status;  
 ```  
   
-## file\_status::file\_status  
+## <a name="filestatusfilestatus"></a>file_status::file_status  
   
-```  
-explicit file_status(file_type ftype = file_type::none,    perms mask = perms::unknown) noexcept;file_status(const file_status&) noexcept = default;file_status(file_status&&) noexcept = default;  
+```cpp  
+explicit file_status(  
+   file_type ftype = file_type::none,  
+   perms mask = perms::unknown) noexcept;  
+  
+file_status(const file_status&) noexcept = default;  
+  
+file_status(file_status&&) noexcept = default; 
+
+~file_status() noexcept = default; 
 ```  
   
-## file\_status::operator\=  
+## <a name="filestatusoperator"></a>file_status::operator=  
   
-```  
+```cpp  
 file_status& operator=(const file_status&) noexcept = default;  
 file_status& operator=(file_status&&) nexcept = default;  
 ```  
   
  預設成員指派運算子會如預期般運作。  
   
-## 類型  
+## <a name="type"></a>類型  
   
-```  
+```cpp  
 file_type type() const noexcept  
-void type(file_type _Ftype) noexcept  
+void type(file_type ftype) noexcept  
 ```  
   
- 取得或設定 file\_type。  
+ 取得或設定 file_type。  
   
-## 權限  
+## <a name="permissions"></a>permissions  
   
-```  
+``cpp  
 perms permissions() const noexcept  
-void permissions(perms_Prms) noexcept   
+void permissions(perms mask) noexcept   
 ```  
   
- 取得或設定檔案權限。  
+ Gets or sets the file permissions.  
   
- 使用 setter 將檔案設成唯讀或移除唯讀屬性。  
+ Use the setter to make a file readonly or remove the readonly attribute.  
   
-## 需求  
- **標頭：**filesystem  
+## Requirements  
+ **Header:** filesystem  
   
- **命名空間：**std::tr2::sys  
+ **Namespace:** std::experimental::filesystem, std::experimental::filesystem::v1  
   
-## 請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [path 類別 \(C\+\+ 標準範本庫\)](../standard-library/path-class-cpp-standard-template-library.md)   
- [\<filesystem\>](../standard-library/filesystem.md)
+## See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [path Class](../standard-library/path-class.md)   
+ [\<filesystem>](../standard-library/filesystem.md)
+
+

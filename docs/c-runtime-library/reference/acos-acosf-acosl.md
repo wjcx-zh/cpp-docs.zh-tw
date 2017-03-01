@@ -1,59 +1,73 @@
 ---
 title: "acos、acosf、acosl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "acosf"
-  - "acos"
-  - "acosl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "acos"
-  - "acosl"
-  - "acosf"
-  - "math/acosf"
-  - "math/acosl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "acos 函式"
-  - "acosf 函式"
-  - "acosl 函式"
-  - "arccosine 函式"
-  - "三角函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- acosf
+- acos
+- acosl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- acos
+- acosl
+- acosf
+- math/acosf
+- math/acosl
+dev_langs:
+- C++
+helpviewer_keywords:
+- acos function
+- acosl function
+- acosf function
+- trigonometric functions
+- arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 caps.latest.revision: 19
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# acos、acosf、acosl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 70b71755436db29f60b1f8a4da8f2da216dcaf31
+ms.lasthandoff: 02/24/2017
 
-計算反餘弦函式。  
+---
+# <a name="acos-acosf-acosl"></a>acos、acosf、acosl
+計算反餘弦值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double acos(   
@@ -73,32 +87,32 @@ long double acosl(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `x`  
- – 1 和 1之間的值，其可以計算反餘弦值 \(反餘弦\)。  
+ 值介於 –1 和 1 之間，以計算反餘弦值 (反餘弦)。  
   
-## 傳回值  
- `acos` 函式傳回 0 到 π 弧度之間的 `x` 的反餘弦函式值。  
+## <a name="return-value"></a>傳回值  
+ `acos` 函式會傳回 0 到 π 弧度之間的 `x` 反餘弦值。  
   
- 根據預設，如果 `x` 小於 \-1 或大於 1 ， `acos` 函式的回傳結果是未定義的。  
+ 根據預設，如果 `x` 小於 –1 或大於 1，則 `acos` 傳回不確定值。  
   
 |輸入|SEH 例外狀況|Matherr 例外狀況|  
-|--------|--------------|------------------|  
+|-----------|-------------------|-----------------------|  
 |± ∞|`INVALID`|`_DOMAIN`|  
-|± QNAN,IND|無|`_DOMAIN`|  
-|&#124;x&#124;\>1|`INVALID`|`_DOMAIN`|  
+|± QNAN、IND|無|`_DOMAIN`|  
+|&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
   
-## 備註  
- 因為 C\+\+ 允許多載，您可以呼叫會接受 `float`值和 `long double` 值並傳回之的 `acos` 多載。  在 C 程式，`acos` 一律接受並傳回 `double`。  
+## <a name="remarks"></a>備註  
+ 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `acos` 和 `float` 類型的 `long double` 的多載。 在 C 程式中，`acos` 會一律採用並傳回 `double`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性的標頭檔|  
-|--------|-----------|-------------|  
-|`acos`, `acosf`, `acosl`|\<math.h\>|\<errno.h\>|  
+|常式|必要的標頭|選擇性標頭|  
+|-------------|---------------------|----------------------|  
+|`acos`, `acosf`, `acosl`|\<math.h>|\<errno.h>|  
   
-## 範例  
- 這個程式會提示您輸入介於 \-1 到 1 的值。  在此範圍以外的輸入值會產生 `_DOMAIN` 錯誤訊息。  如果輸入了有效的值，程式會印出它的反正弦和反餘弦函式值。  
+## <a name="example"></a>範例  
+ 此程式會提示範圍介於 -1 到 1 的值。 輸入此範圍外的值會產生 `_DOMAIN` 錯誤訊息。 如果輸入有效的值，則程式會列印該值的反正弦值及反餘弦值。  
   
 ```  
 // crt_asincos.c  
@@ -141,16 +155,19 @@ int main( int ac, char* av[] )
 }  
 ```  
   
-  **反正弦值 0.000000 \= 0.000000**  
-**反餘弦值 0.000000 \= 1.570796**   
-## .NET Framework 對等用法  
+```Output  
+Arcsine of 0.000000 = 0.000000  
+Arccosine of 0.000000 = 1.570796  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::Math::Acos](https://msdn.microsoft.com/en-us/library/system.math.acos.aspx)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [asin、asinf、asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
  [atan、atanf、atanl、atan2、atan2f、atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
  [cos、cosf、cosl、cosh、coshf、coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [sin、sinf、sinl、sinh、sinhf、sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
  [tan、tanf、tanl、tanh、tanhf、tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)

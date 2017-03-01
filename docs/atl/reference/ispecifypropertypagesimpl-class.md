@@ -1,81 +1,107 @@
 ---
-title: "ISpecifyPropertyPagesImpl Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ISpecifyPropertyPagesImpl"
-  - "ATL.ISpecifyPropertyPagesImpl<T>"
-  - "ATL::ISpecifyPropertyPagesImpl"
-  - "ATL::ISpecifyPropertyPagesImpl<T>"
-  - "ATL.ISpecifyPropertyPagesImpl"
-  - "ISpecifyPropertyPagesImpl Class"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ISpecifyPropertyPages"
-  - "ISpecifyPropertyPagesImpl class"
-  - "屬性頁, CLSIDs associated with"
+title: "ISpecifyPropertyPagesImpl 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ISpecifyPropertyPagesImpl
+- ATL.ISpecifyPropertyPagesImpl<T>
+- ATL::ISpecifyPropertyPagesImpl
+- ATL::ISpecifyPropertyPagesImpl<T>
+- ATL.ISpecifyPropertyPagesImpl
+- ISpecifyPropertyPagesImpl Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- property pages, CLSIDs associated with
+- ISpecifyPropertyPages
+- ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# ISpecifyPropertyPagesImpl Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 4d5f74de2ec6569527221cf94df6f7921f4bb4c9
+ms.lasthandoff: 02/24/2017
 
-這個類別會實作 **IUnknown** 並提供 [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) 介面的預設實作。  
+---
+# <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl 類別
+這個類別會實作**IUnknown** ，並提供的預設實作[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面。  
   
 > [!IMPORTANT]
->  這個類別和其成員不能用於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]執行的應用程式。  
+>  這個類別及其成員無法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式內使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template<class T>  
+class ATL_NO_VTABLE ISpecifyPropertyPagesImpl 
+   : public ISpecifyPropertyPages
 ```  
   
-      template<  
-class T   
->  
-class ATL_NO_VTABLE ISpecifyPropertyPagesImpl :  
-public ISpecifyPropertyPages  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 您的類別，衍生自 `ISpecifyPropertyPagesImpl`。  
+ 您的類別，衍生自`ISpecifyPropertyPagesImpl`。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[ISpecifyPropertyPagesImpl::GetPages](../Topic/ISpecifyPropertyPagesImpl::GetPages.md)|填滿封閉的 UUID 值。  每個 UUID 對應於物件的屬性工作表中顯示的其中一個的 CLSID 屬性頁。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|填滿計算 UUID 陣列值。 每個 UUID 會對應至屬性頁可顯示物件的屬性工作表中的其中一個的 CLSID。|  
   
-## 備註  
- [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) 介面可讓用戶端取得物件所支援的屬性頁的 CLSID 的清單。  類別 `ISpecifyPropertyPagesImpl` 提供這個介面的預設實作並透過傳送訊息至實作 **IUnknown** 傾印裝置偵錯組建。  
+## <a name="remarks"></a>備註  
+ [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面可讓用戶端取得一份 Clsid 物件所支援之屬性頁面。 類別`ISpecifyPropertyPagesImpl`提供此介面的預設實作，並且實作**IUnknown**傳送資訊給傾印裝置在偵錯組建。  
   
 > [!NOTE]
->  此外，如果您的物件不支援屬性頁，請不要公開 **ISpecifyPropertyPages** 介面。  
+>  不會公開**ISpecifyPropertyPages**介面，如果您的物件不支援屬性頁。  
   
- **相關文件** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)， [建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
+ **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `ISpecifyPropertyPages`  
   
  `ISpecifyPropertyPagesImpl`  
   
-## 需求  
- **Header:** atlcom.h  
+## <a name="requirements"></a>需求  
+ **標頭︰**於 atlcom.h  
   
-## 請參閱  
- [IPropertyPageImpl Class](../../atl/reference/ipropertypageimpl-class.md)   
- [IPerPropertyBrowsingImpl Class](../../atl/reference/iperpropertybrowsingimpl-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-namegetpagesa--ispecifypropertypagesimplgetpages"></a><a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
+ 填入陣列[CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048)結構對於屬性頁可顯示物件的屬性工作表中的 Clsid。  
+  
+```
+STDMETHOD(GetPages)(CAUUID* pPages);
+```  
+  
+### <a name="remarks"></a>備註  
+ ATL 使用物件的屬性對應，來擷取每個 CLSID。  
+  
+ 請參閱[ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+## <a name="see-also"></a>另請參閱  
+ [IPropertyPageImpl 類別](../../atl/reference/ipropertypageimpl-class.md)   
+ [IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)   
+ [類別概觀](../../atl/atl-class-overview.md)
+

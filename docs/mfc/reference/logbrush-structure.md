@@ -1,90 +1,107 @@
 ---
-title: "LOGBRUSH 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LOGBRUSH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LOGBRUSH 結構"
+title: "LOGBRUSH 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LOGBRUSH
+dev_langs:
+- C++
+helpviewer_keywords:
+- LOGBRUSH structure
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# LOGBRUSH 結構
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: eea7caf6139fd43dd77163271701d170c7a744e2
+ms.lasthandoff: 02/24/2017
 
-`LOGBRUSH` 結構會定義一個實體筆刷的樣式、色彩和樣式。  Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) 和 [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) 函式會使用它。  
+---
+# <a name="logbrush-structure"></a>LOGBRUSH 結構
+`LOGBRUSH`結構會定義樣式、 色彩和實體的筆刷的模式。 它由 Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487)和[ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      typedef struct tag LOGBRUSH { /* lb */  
-   UINT lbStyle;  
-   COLORREF lbColor;  
-   LONG lbHatch;  
+typedef struct tag LOGBRUSH { /* lb */  
+    UINT lbStyle;  
+    COLORREF lbColor;  
+    LONG lbHatch;  
 } LOGBRUSH;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `lbStyle`  
- 指定筆刷型態。  `lbStyle` 成員必須是下列其中一種模式:  
+ 指定的筆刷樣式。 `lbStyle`成員必須為下列樣式的其中一個︰  
   
--   **BS\_DIBPATTERN** 裝置無關點陣圖 \(DIB\) 規格定義的圖樣筆刷。  如果 `lbStyle` 是 **BS\_DIBPATTERN**， **lbHatch** 成員包含控制代碼給包裝 DIB。  
+- **BS_DIBPATTERN**圖樣筆刷與裝置無關點陣圖 (DIB) 規格所定義。 如果`lbStyle`是**BS_DIBPATTERN**、 **lbHatch**成員包含壓縮 DIB 的控制代碼。  
   
--   **BS\_DIBPATTERNPT** 裝置無關點陣圖 \(DIB\) 規格定義的圖樣筆刷。  如果 `lbStyle` 是 **BS\_DIBPATTERNPT**， **lbHatch** 成員包含指標給包裝 DIB。  
+- **BS_DIBPATTERNPT**圖樣筆刷與裝置無關點陣圖 (DIB) 規格所定義。 如果`lbStyle`是**BS_DIBPATTERNPT**、 **lbHatch**成員包含壓縮 DIB 的指標。  
   
--   **BS\_HATCHED** 規劃的筆刷。  
+- **BS_HATCHED**影線筆刷。  
   
--   **BS\_HOLLOW** 凹陷筆刷。  
+- **BS_HOLLOW**中空筆刷。  
   
--   **BS\_NULL** 和 **BS\_HOLLOW**相同。  
+- **BS_NULL**相同**BS_HOLLOW**。  
   
--   **BS\_PATTERN** 記憶體點陣圖定義的圖樣筆刷。  
+- **BS_PATTERN**模式記憶體點陣圖所定義的筆刷。  
   
--   **BS\_SOLID** 實心筆刷。  
+- **BS_SOLID**實心筆刷。  
   
  `lbColor`  
- 指定這個筆刷用於繪製的色彩。  如果 `lbStyle` 是 **BS\_HOLLOW** 和 **BS\_PATTERN** 樣式， **lbColor** 被忽略。  如果 `lbStyle` 是 **BS\_DIBPATTERN** 或 **BS\_DIBPATTERNBT**， **lbColor** 低序位文字指定 [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) 結構的 **bmiColors** 成員是否包含明確紅色，綠色，藍色 \(RGB\) 值或索引目前實現的邏輯調色盤。  **lbColor** 成員必須是下列其中一個值:  
+ 指定的筆刷為要繪製的色彩。 如果`lbStyle`是**BS_HOLLOW**或**BS_PATTERN**樣式， **lbColor**會被忽略。 如果`lbStyle`是**BS_DIBPATTERN**或**BS_DIBPATTERNBT**，低序位文字**lbColor**指定是否**bmiColors**成員[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)結構中包含明確的紅色、 綠色、 藍 (RGB) 值或索引目前實現邏輯調色盤。 **LbColor**成員必須是下列值之一︰  
   
--   **DIB\_PAL\_COLORS** 色表包含一些 16 位元索引目前實現的邏輯調色盤。  
+- **DIB_PAL_COLORS**色彩表包含的 16 位元索引的陣列至目前實現邏輯調色盤。  
   
--   **DIB\_RGB\_COLORS** 色表包含常值 RGB 值。  
+- **DIB_RGB_COLORS**色彩表包含常值的 RGB 值。  
   
  *lbHatch*  
- 指定影線樣式。  這個意義取決於 `lbStyle`定義的筆刷型態。  如果 `lbStyle` 是 **BS\_DIBPATTERN**， **lbHatch** 成員包含控制代碼給包裝 DIB。  如果 `lbStyle` 是 **BS\_DIBPATTERNPT**， **lbHatch** 成員包含指標給包裝 DIB。  如果 `lbStyle` 是 **BS\_HATCHED**， **lbHatch** 成員指定用於線條的方向建立規劃。  它可以是下列其中一個值：  
+ 指定影線樣式。 意義取決於所定義的筆刷樣式`lbStyle`。 如果`lbStyle`是**BS_DIBPATTERN**、 **lbHatch**成員包含壓縮 DIB 的控制代碼。 如果`lbStyle`是**BS_DIBPATTERNPT**、 **lbHatch**成員包含壓縮 DIB 的指標。 如果`lbStyle`是**BS_HATCHED**、 **lbHatch**成員指定用來建立規劃的幾行的方向。 它可以是下列值之一︰  
   
--   向`HS_BDIAGONAL` 上為 45 度，從左至右規劃  
+- `HS_BDIAGONAL`45 度向上、 左到右規劃  
   
--   `HS_CROSS` 水平和垂直交叉陰影。  
+- `HS_CROSS`水平和垂直有斜紋  
   
--   `HS_DIAGCROSS` 45 度交叉陰影。  
+- `HS_DIAGCROSS`45 度有斜紋  
   
--   向下`HS_FDIAGONAL` 為 45 度，從左至右規劃  
+- `HS_FDIAGONAL`45 度向下、 左到右規劃  
   
--   `HS_HORIZONTAL` 層級的規劃  
+- `HS_HORIZONTAL`水平影線  
   
--   `HS_VERTICAL` 垂直規劃  
+- `HS_VERTICAL`垂直規劃  
   
- 如果 `lbStyle` 是 **BS\_PATTERN**， **lbHatch** 是控制代碼定義樣式的點陣圖。  如果 `lbStyle` 是 **BS\_SOLID** 或 **BS\_HOLLOW**， **lbHatch** 被忽略。  
+ 如果`lbStyle`是**BS_PATTERN**， **lbHatch**是定義的模式，點陣圖的控制代碼。 如果`lbStyle`是**BS_SOLID**或**BS_HOLLOW**， **lbHatch**會被忽略。  
   
-## 備註  
- 雖然控制項 **lbColor** 規劃筆刷的前景色彩， [CDC::SetBkMode](../Topic/CDC::SetBkMode.md) 和 [CDC::SetBkColor](../Topic/CDC::SetBkColor.md) 函式控制項的背景色彩。  
+## <a name="remarks"></a>備註  
+ 雖然**lbColor**控制規劃筆刷的前景色彩[CDC::SetBkMode](../../mfc/reference/cdc-class.md#setbkmode)和[CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor)函式控制項的背景色彩。  
   
-## 需求  
- **標頭檔：** wingdi.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** wingdi.h  
   
-## 請參閱  
- [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetCharABCWidths](../Topic/CDC::GetCharABCWidths.md)
+## <a name="see-also"></a>另請參閱  
+ [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
+
+

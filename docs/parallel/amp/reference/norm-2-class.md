@@ -1,129 +1,232 @@
 ---
-title: "norm_2 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_short_vectors/Concurrency::graphics::norm_2::set_x"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::set_xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::g"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::get_yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::set_yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator-="
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator/="
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator*="
-  - "amp_short_vectors/Concurrency::graphics::norm_2::yx"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::y"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator++"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator-"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::rg"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator="
-  - "amp_short_vectors/Concurrency::graphics::norm_2::get_y"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::r"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::get_x"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::get_xy"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::gr"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::set_y"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::x"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator+="
-  - "amp_short_vectors/Concurrency::graphics::norm_2"
-  - "amp_short_vectors/Concurrency::graphics::norm_2::operator--"
-dev_langs: 
-  - "C++"
+title: "norm_2 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_short_vectors/Concurrency::graphics::norm_2::set_x
+- amp_short_vectors/Concurrency::graphics::norm_2::set_xy
+- amp_short_vectors/Concurrency::graphics::norm_2::g
+- amp_short_vectors/Concurrency::graphics::norm_2::get_yx
+- amp_short_vectors/Concurrency::graphics::norm_2::set_yx
+- amp_short_vectors/Concurrency::graphics::norm_2::operator-=
+- amp_short_vectors/Concurrency::graphics::norm_2::operator/=
+- amp_short_vectors/Concurrency::graphics::norm_2::operator*=
+- amp_short_vectors/Concurrency::graphics::norm_2::yx
+- amp_short_vectors/Concurrency::graphics::norm_2::y
+- amp_short_vectors/Concurrency::graphics::norm_2::xy
+- amp_short_vectors/Concurrency::graphics::norm_2::operator++
+- amp_short_vectors/Concurrency::graphics::norm_2::operator-
+- amp_short_vectors/Concurrency::graphics::norm_2::rg
+- amp_short_vectors/Concurrency::graphics::norm_2::operator=
+- amp_short_vectors/Concurrency::graphics::norm_2::get_y
+- amp_short_vectors/Concurrency::graphics::norm_2::r
+- amp_short_vectors/Concurrency::graphics::norm_2::get_x
+- amp_short_vectors/Concurrency::graphics::norm_2::get_xy
+- amp_short_vectors/Concurrency::graphics::norm_2::gr
+- amp_short_vectors/Concurrency::graphics::norm_2::set_y
+- amp_short_vectors/Concurrency::graphics::norm_2::x
+- amp_short_vectors/Concurrency::graphics::norm_2::operator+=
+- amp_short_vectors/Concurrency::graphics::norm_2
+- amp_short_vectors/Concurrency::graphics::norm_2::operator--
+dev_langs:
+- C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# norm_2 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 7ff9cb756ca17633aa90e2f35c6f6f02da6cc884
+ms.lasthandoff: 02/24/2017
 
-表示兩個一般數字的最短的向量。  
+---
+# <a name="norm2-class"></a>norm_2 類別
+表示兩個一般數字的短向量。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class norm_2;  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用 Typedefs  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
 |名稱|描述|  
-|--------|--------|  
+|----------|-----------------|  
 |`value_type`||  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[norm_2 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[norm\_2::norm\_2 建構函式](../Topic/norm_2::norm_2%20Constructor.md)|多載。  預設建構函式，初始化所有元素為 0 。|  
+|----------|-----------------|  
+|norm_2::get_x 方法||  
+|norm_2::get_xy 方法||  
+|norm_2::get_y 方法||  
+|norm_2::get_yx 方法||  
+|norm_2::ref_g 方法||  
+|norm_2::ref_r 方法||  
+|norm_2::ref_x 方法||  
+|norm_2::ref_y 方法||  
+|norm_2::set_x 方法||  
+|norm_2::set_xy 方法||  
+|norm_2::set_y 方法||  
+|norm_2::set_yx 方法||  
   
-### 公用方法  
-  
-|名稱|描述|  
-|--------|--------|  
-|norm\_2::get\_x 方法。||  
-|norm\_2::get\_xy 方法。||  
-|norm\_2::get\_y 方法。||  
-|norm\_2::get\_yx 方法。||  
-|norm\_2::ref\_g 方法||  
-|norm\_2::ref\_r 方法||  
-|norm\_2::ref\_x 方法||  
-|norm\_2::ref\_y 方法||  
-|norm\_2::set\_x 方法。||  
-|norm\_2::set\_xy 方法。||  
-|norm\_2::set\_y 方法||  
-|norm\_2::set\_yx 方法||  
-  
-### 公用運算子  
+### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
-|--------|--------|  
-|norm\_2::operator\- 運算子。||  
-|norm\_2::operator\-\- 運算子。||  
-|norm\_2::operator\*\= 運算子。||  
-|norm\_2::operator\/\= 運算子。||  
-|norm\_2::operator\+\+ 運算子。||  
-|norm\_2::operator\+\= 運算子。||  
-|norm\_2::operator\= 運算子。||  
-|norm\_2::operator\-\= 運算子。||  
+|----------|-----------------|  
+|norm_2::operator 運算子||  
+|norm_2::operator-運算子||  
+|norm_2::operator * = 運算子||  
+|norm_2::operator / = 運算子||  
+|norm_2::operator + + 運算子||  
+|norm_2::operator + = 運算子||  
+|norm_2::operator = 運算子||  
+|norm_2::operator-= 運算子||  
   
-### 公用常數  
-  
-|名稱|描述|  
-|--------|--------|  
-|[norm\_2::size 常數](../Topic/norm_2::size%20Constant.md)||  
-  
-### 公用資料成員  
+### <a name="public-constants"></a>公用常數  
   
 |名稱|描述|  
-|--------|--------|  
-|norm\_2::g 資料成員||  
-|norm\_2::gr 資料成員||  
-|norm\_2::r 資料成員||  
-|norm\_2::rg 資料成員||  
-|norm\_2::x 資料成員||  
-|norm\_2::xy 資料成員||  
-|norm\_2::y 資料成員||  
-|norm\_2::yx 資料成員||  
+|----------|-----------------|  
+|[大小常數](#norm_2__size)||  
   
-## 繼承階層架構  
+### <a name="public-data-members"></a>公用資料成員  
+  
+|名稱|描述|  
+|----------|-----------------|  
+|norm_2::g 資料成員||  
+|norm_2::gr 資料成員||  
+|norm_2::r 資料成員||  
+|norm_2::rg 資料成員||  
+|norm_2::x 資料成員||  
+|norm_2::xy 資料成員||  
+|norm_2::y 資料成員||  
+|norm_2::yx 資料成員||  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `norm_2`  
   
-## 需求  
- **標頭:** amp\_short\_vectors.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** amp_short_vectors.h  
   
- **命名空間：**Concurrency::graphics  
+ **命名空間︰** concurrency:: graphics  
   
-## 請參閱  
- [Concurrency::graphics 命名空間](../../../parallel/amp/reference/concurrency-graphics-namespace.md)
+##  <a name="a-namectora-norm2"></a><a name="ctor"></a>norm_2 
+
+ 預設建構函式，初始化為 0 的所有項目。  
+  
+```  
+norm_2() restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    norm _V0,  
+    norm _V1) restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    float _V0,  
+    float _V1) restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    unorm _V0,  
+    unorm _V1) restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    norm _V) restrict(amp,
+    cpu);
+
+ 
+explicit norm_2(
+    float _V) restrict(amp,
+    cpu);
+
+ 
+norm_2(
+    const norm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const uint_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const int_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const float_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const unorm_2& _Other) restrict(amp,
+    cpu);
+
+ 
+explicit inline norm_2(
+    const double_2& _Other) restrict(amp,
+    cpu);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_V0`  
+ 要初始化項目 0 的值。  
+  
+ `_V1`  
+ 要初始化項目 1 的值。  
+  
+ `_V`  
+ 初始設定的值。  
+  
+ `_Other`  
+ 用來初始化物件。  
+  
+##  <a name="a-namenorm2sizea-size"></a><a name="norm_2__size"></a>大小 
+
+```  
+static const int size = 2;  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+

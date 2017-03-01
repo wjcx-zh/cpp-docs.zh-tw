@@ -1,44 +1,59 @@
 ---
-title: "連結器工具錯誤 LNK2022 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2022"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2022"
+title: "連結器工具錯誤 LNK2022 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK2022
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK2022
 ms.assetid: d2128c73-dde3-4b8e-a9b2-0a153acefb3b
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 連結器工具錯誤 LNK2022
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 91fb85679fd6c66bc97974912a2de688f494d5e9
+ms.lasthandoff: 02/24/2017
 
-中繼資料作業失敗 \(HRESULT\)：error\_message  
+---
+# <a name="linker-tools-error-lnk2022"></a>連結器工具錯誤 LNK2022
+中繼資料作業失敗 (HRESULT): error_message  
   
- 連結器合併中繼資料時偵測到錯誤。  中繼資料錯誤必須解決，才能連結成功。  
+ 連結器合併中繼資料時發現錯誤。 中繼資料錯誤必須解析成連結成功。  
   
- 診斷這個問題的其中一種方式是：在目的檔上執行 **ildasm –tokens**，以找出具有列在 `error_message` 中之語彙基元的型別，並尋找其差異。在中繼資料內，具有相同名稱的兩個不同型別無效，即使只有 LayoutType 屬性不同，也一樣無效。  
+ 診斷此問題的方法之一是執行**ildasm – 語彙基元**上尋找有哪些類型的物件檔案的語彙基元列`error_message`，並尋找差異。  中繼資料，具有相同名稱的兩種不同類型不正確，即使只是 LayoutType 屬性不同。  
   
- 造成 LNK2022 的其中一個原因是：當你以 [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) 編譯時，型別 \(例如 struct\) 在多個編譯單位中有相同名稱，但定義不同而相衝突。在此情況下，請確定型別在所有編譯中都有完全相同的定義。型別名稱會列於 `error_message` 之中。  
+ 其中一個原因 LNK2022 時 （例如結構） 的型別存在於多個編譯單位同名，但具有衝突的定義，而當您使用編譯[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。  在此情況下，請確定該型別具有相同的定義，在所有編譯中。  類型名稱會列在`error_message`。  
   
- 另一個可能造成 LNK2022 錯誤的原因是，連結器在不同於指定給編譯器 \(以 [\#using](../../preprocessor/hash-using-directive-cpp.md)\) 的位置找到中繼資料檔。  確保中繼資料\(.dll或 .netmodule\) 所在位置是與傳遞給連結器時相同，也與傳遞給編譯器時相同。  
+ 連結器會尋找在不同位置的中繼資料檔案於指定給編譯器時，另一個可能造成 LNK2022 (與[#using](../../preprocessor/hash-using-directive-cpp.md) )。 確保中繼資料檔 (.dll 或 .netmodule) 所在位置是與傳遞給連結器時相同，也與傳遞給編譯器時相同。  
   
- 建置 ATL 應用程式時，只要其中一個編譯單位使用到 [\_ATL\_MIXED](../Topic/_ATL_MIXED.md)，則所有編譯單位都必須使用。  
+ 當建置 ATL 應用程式，使用[_ATL_MIXED](http://msdn.microsoft.com/Library/11b59a83-7098-43e2-9f7b-408299930966)需要在所有編譯中，如果它用在至少一個。  
   
-## 範例  
- 以下範例會定義空型別。  
+## <a name="example"></a>範例  
+ 下列範例會定義空的型別。  
   
 ```  
 // LNK2022_a.cpp  
@@ -46,8 +61,8 @@ manager: "ghogen"
 public ref class Test {};  
 ```  
   
-## 範例  
- 這個範例示範了您不能連結兩個包含相同名稱但不同定義之型別的原始程式碼。  
+## <a name="example"></a>範例  
+ 這個範例示範您無法連結兩個原始程式碼檔案包含型別的名稱相同但不同的定義。  
   
  下列範例會產生 LNK2022。  
   

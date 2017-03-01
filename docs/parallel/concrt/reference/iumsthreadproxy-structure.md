@@ -1,60 +1,129 @@
 ---
-title: "IUMSThreadProxy 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrtrm/concurrency::IUMSThreadProxy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IUMSThreadProxy 結構"
+title: "IUMSThreadProxy 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrtrm/concurrency::IUMSThreadProxy
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# IUMSThreadProxy 結構
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
+ms.openlocfilehash: 55ed05f137775e819c81ce231cf8c8ad3a9974f3
+ms.lasthandoff: 02/24/2017
 
-執行緒的抽象概念。  如果您想要授與使用者模式可排程的 \(UMS\) 給您的執行緒，請將排程器原則項目  `SchedulerKind` 的值設為 `UmsThreadDefault`，並實作 `IUMSScheduler` 介面。  只有安裝 Windows 7 \(含以上\) 版本的 64 位元作業系統支援 UMS 執行緒。  
+---
+# <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 結構
+執行緒的抽象概念。 如果您想要將可使用者模式排程 (UMS) 的執行緒授與給排程器，請將排程器原則項目 `SchedulerKind` 的值設為 `UmsThreadDefault`，並實作 `IUMSScheduler` 介面。 只有安裝 Windows 7 (含以上) 版本的 64 位元作業系統支援 UMS 執行緒。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+struct IUMSThreadProxy : public IThreadProxy;
 ```  
-struct IUMSThreadProxy : public IThreadProxy;  
-```  
   
-## 成員  
+## <a name="members"></a>Members  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|說明|  
-|--------|--------|  
-|[IUMSThreadProxy::EnterCriticalRegion 方法](../Topic/IUMSThreadProxy::EnterCriticalRegion%20Method.md)|呼叫以輸入關鍵區域。  在關鍵區域內，排程器不會觀察在該區域期間發生的非同步封鎖作業。  這表示 UMS 執行緒不會因分頁錯誤、執行緒暫止、核心非同步程序呼叫 \(APC\) 等而重新進入排程器。|  
-|[IUMSThreadProxy::EnterHyperCriticalRegion 方法](../Topic/IUMSThreadProxy::EnterHyperCriticalRegion%20Method.md)|呼叫以輸入超關鍵區域。  在超關鍵區域內，排程器不會觀察區域期間發生任何封鎖作業。  這表示 UMS 執行緒不會因封鎖函式呼叫、鎖定封鎖的擷取嘗試、分頁錯誤、執行緒暫止、核心非同步程序呼叫 \(APC\) 等而重新進入排程器。|  
-|[IUMSThreadProxy::ExitCriticalRegion 方法](../Topic/IUMSThreadProxy::ExitCriticalRegion%20Method.md)|呼叫以離開關鍵區域。|  
-|[IUMSThreadProxy::ExitHyperCriticalRegion 方法](../Topic/IUMSThreadProxy::ExitHyperCriticalRegion%20Method.md)|呼叫以離開超關鍵區域。|  
-|[IUMSThreadProxy::GetCriticalRegionType 方法](../Topic/IUMSThreadProxy::GetCriticalRegionType%20Method.md)|傳回執行緒 Proxy 所在的關鍵區域類型。  由於超關鍵區域是關鍵區域的超集，如果程式碼已進入關鍵區域，然後超關鍵區域，將會傳回 `InsideHyperCriticalRegion`。|  
+|----------|-----------------|  
+|[Iumsthreadproxy:: Entercriticalregion 方法](#entercriticalregion)|呼叫，以輸入的關鍵區域。 在關鍵區域內的排程器不會發現非同步區域可能發生的封鎖作業。 這表示，排程器將不會因為而重新進入分頁錯誤、 執行緒暫止、 核心非同步程序呼叫 (Apc) 等，UMS 執行緒。|  
+|[Iumsthreadproxy:: Enterhypercriticalregion 方法](#enterhypercriticalregion)|呼叫，以輸入超關鍵區域。 在超關鍵區域內的排程器不會發現區域可能發生的任何封鎖作業。 這表示不會因為 UMS 執行緒的封鎖函式呼叫、鎖定封鎖的擷取嘗試、分頁錯誤、執行緒暫止、核心非同步程序呼叫 (APC) 等，而重新進入排程器。|  
+|[Iumsthreadproxy:: Exitcriticalregion 方法](#exitcriticalregion)|呼叫以結束關鍵區域。|  
+|[Iumsthreadproxy:: Exithypercriticalregion 方法](#exithypercriticalregion)|呼叫以結束超關鍵區域。|  
+|[Iumsthreadproxy:: Getcriticalregiontype 方法](#getcriticalregiontype)|傳回何種執行緒 proxy 會在關鍵區域。 因為超關鍵區域是關鍵區域的超集，如果程式碼已經在關鍵區域，然後超關鍵區域中，輸入`InsideHyperCriticalRegion`會傳回。|  
   
-## 繼承階層  
- [IThreadProxy](../../../parallel/concrt/reference/ithreadproxy-structure.md)  
+## <a name="inheritance-hierarchy"></a>繼承階層  
+ [IThreadProxy](ithreadproxy-structure.md)  
   
  `IUMSThreadProxy`  
   
-## 需求  
- **標頭：** concrtrm.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** concrtrm.h  
   
- **命名空間：**concurrency  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [IUMSScheduler 結構](../../../parallel/concrt/reference/iumsscheduler-structure.md)   
- [SchedulerType 列舉](../Topic/SchedulerType%20Enumeration.md)
+##  <a name="a-nameentercriticalregiona--iumsthreadproxyentercriticalregion-method"></a><a name="entercriticalregion"></a>Iumsthreadproxy:: Entercriticalregion 方法  
+ 呼叫，以輸入的關鍵區域。 在關鍵區域內的排程器不會發現非同步區域可能發生的封鎖作業。 這表示，排程器將不會因為而重新進入分頁錯誤、 執行緒暫止、 核心非同步程序呼叫 (Apc) 等，UMS 執行緒。  
+  
+```
+virtual int EnterCriticalRegion() = 0;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 關鍵區域的新的深度。 關鍵區域是可重新進入。  
+  
+##  <a name="a-nameenterhypercriticalregiona--iumsthreadproxyenterhypercriticalregion-method"></a><a name="enterhypercriticalregion"></a>Iumsthreadproxy:: Enterhypercriticalregion 方法  
+ 呼叫，以輸入超關鍵區域。 在超關鍵區域內的排程器不會發現區域可能發生的任何封鎖作業。 這表示不會因為 UMS 執行緒的封鎖函式呼叫、鎖定封鎖的擷取嘗試、分頁錯誤、執行緒暫止、核心非同步程序呼叫 (APC) 等，而重新進入排程器。  
+  
+```
+virtual int EnterHyperCriticalRegion() = 0;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 新超關鍵區域的深度。 Hyper-v 關鍵區域是可重新進入。  
+  
+### <a name="remarks"></a>備註  
+ 排程器必須小心杯呼叫的方法和其鎖定取得這類區域中，功能。 如果在這種區域中的程式碼區塊由工作排程器負責排程持有的鎖定，可能會發生死結。  
+  
+##  <a name="a-nameexitcriticalregiona--iumsthreadproxyexitcriticalregion-method"></a><a name="exitcriticalregion"></a>Iumsthreadproxy:: Exitcriticalregion 方法  
+ 呼叫以結束關鍵區域。  
+  
+```
+virtual int ExitCriticalRegion() = 0;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 關鍵區域的新的深度。 關鍵區域是可重新進入。  
+  
+##  <a name="a-nameexithypercriticalregiona--iumsthreadproxyexithypercriticalregion-method"></a><a name="exithypercriticalregion"></a>Iumsthreadproxy:: Exithypercriticalregion 方法  
+ 呼叫以結束超關鍵區域。  
+  
+```
+virtual int ExitHyperCriticalRegion() = 0;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 新超關鍵區域的深度。 Hyper-v 關鍵區域是可重新進入。  
+  
+##  <a name="a-namegetcriticalregiontypea--iumsthreadproxygetcriticalregiontype-method"></a><a name="getcriticalregiontype"></a>Iumsthreadproxy:: Getcriticalregiontype 方法  
+ 傳回何種執行緒 proxy 會在關鍵區域。 因為超關鍵區域是關鍵區域的超集，如果程式碼已經在關鍵區域，然後超關鍵區域中，輸入`InsideHyperCriticalRegion`會傳回。  
+  
+```
+virtual CriticalRegionType GetCriticalRegionType() const = 0;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 執行緒 proxy 會在關鍵區域的類型。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)   
+ [IUMSScheduler 結構](iumsscheduler-structure.md)
+

@@ -1,60 +1,76 @@
 ---
 title: "vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vfwprintf_s"
-  - "_vfprintf_s_l"
-  - "vfprintf_s"
-  - "_vfwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_vftprintf_s"
-  - "vfwprintf_s"
-  - "vfprintf_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_vfprintf_s_l 函式"
-  - "_vftprintf_s 函式"
-  - "_vftprintf_s_l 函式"
-  - "_vfwprintf_s_l 函式"
-  - "格式化的文字 [C++]"
-  - "vfprintf_s 函式"
-  - "vfprintf_s_l 函式"
-  - "vftprintf_s_l 函式"
-  - "vfwprintf_s 函式"
-  - "vfwprintf_s_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vfwprintf_s
+- _vfprintf_s_l
+- vfprintf_s
+- _vfwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _vftprintf_s
+- vfwprintf_s
+- vfprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- vfprintf_s_l function
+- vfwprintf_s_l function
+- vfwprintf_s function
+- _vfprintf_s_l function
+- _vfwprintf_s_l function
+- vftprintf_s_l function
+- vfprintf_s function
+- _vftprintf_s_l function
+- formatted text [C++]
+- _vftprintf_s function
 ms.assetid: eab6f563-46e2-4806-963f-2b23f339ecdc
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: ad82a85b00f04620bf52bdf478c5293905b75aca
+ms.lasthandoff: 02/24/2017
 
-使用指向一個引數清單的指標輸出格式化的字串  這些是 [vfprintf、\_vfprintf\_l、vfwprintf、\_vfwprintf\_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) 的安全性增強版本，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
+---
+# <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l
+使用引數清單的指標，寫入格式化輸出。 這些版本的 [vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int vfprintf_s(  
@@ -81,63 +97,63 @@ int _vfwprintf_s_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `stream`  
- 指向 `FILE` 結構的指標。  
+ `FILE` 結構的指標。  
   
  `format`  
- 格式規範。  
+ 格式規格。  
   
  `argptr`  
- 參數清單的指標。  
+ 引數清單的指標。  
   
  `locale`  
  要使用的地區設定。  
   
  如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
-## 傳回值  
- `vfprintf_s` 和 `vfwprintf_s` 回傳寫入的字元數，不包含結尾的空字元，或者在輸出發生錯誤時回傳一個負值。  如果 `stream` 或 `format` 為 null 指標，或是如果格式字串包含無效的格式化字元，無效的參數會叫用處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，函式回傳 \-1 並將 `errno` 設置為 `EINVAL` 。  
+## <a name="return-value"></a>傳回值  
+ `vfprintf_s` 和 `vfwprintf_s` 會傳回寫入的字元數，但不包含終止 Null 字元，或在發生輸出錯誤時傳回負值。 如果 `stream` 或 `format` 為 Null 指標，或者此格式字串包含無效格式化字元，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
   
- 如需有關這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- 這些函式都接受指標引數清單，然後格式和寫入 `stream`的特定資料。  
+## <a name="remarks"></a>備註  
+ 所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入 `stream`。  
   
- 這些函式與非安全版本的不同處只在於安全版本檢查 `format` 字串包含有效格式字元。  
+ 這些函式與不安全版本不同，差異僅在於安全版本會檢查 `format` 字串是否包含有效格式化字元。  
   
- `vfwprintf_s` 是 `vfprintf_s`的寬字元版本;如果資料流在 ANSI 模式中開啟，則兩個函式的作用完全相同。  `vfprintf_s` 目前不支援輸出到 UNICODE 串流。  
+ `vfwprintf_s` 是 `vfprintf_s` 的寬字元版本；如果資料流是以 ANSI 模式開啟，則這兩個函式的行為相同。 `vfprintf_s` 目前不支援輸出至 UNICODE 資料流。  
   
  這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定，而不使用目前的執行緒地區設定。  
   
 > [!IMPORTANT]
->  確認 `format` 不是使用者定義的字串。  如需詳細資訊，請參閱 [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) 。  
+>  確認 `format` 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|\_UNICODE 和 \_MBCS 未定義|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vftprintf_s`|`vfprintf_s`|`vfprintf_s`|`vfwprintf_s`|  
 |`_vftprintf_s_l`|`_vfprintf_s_l`|`_vfprintf_s_l`|`_vfwprintf_s_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性的標頭檔|  
-|--------|-----------|-------------|  
-|`vfprintf_s`, \_`vfprintf_s_l`|\<stdio.h\> 和 \<stdarg.h\>|\<varargs.h\>\*|  
-|`vfwprintf_s`, \_`vfwprintf_s_l`|\<stdio.h\> 或 \<wchar.h\>, 及 \<stdarg.h\>|\<varargs.h\>\*|  
+|常式|必要的標頭|選擇性標頭|  
+|-------------|---------------------|----------------------|  
+|`vfprintf_s`, _`vfprintf_s_l`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
+|`vfwprintf_s`, _`vfwprintf_s_l`|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  
   
- \* 要求 UNIX V 相容性。  
+ \* UNIX V 相容性的必要項目。  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 函式](../../c-runtime-library/vprintf-functions.md)   
- [fprintf、\_fprintf\_l、fwprintf、\_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf、\_printf\_l、wprintf、\_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va\_arg、va\_copy、va\_end、va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+ [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
+ [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

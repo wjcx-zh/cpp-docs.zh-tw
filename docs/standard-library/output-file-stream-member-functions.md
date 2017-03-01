@@ -1,72 +1,98 @@
 ---
 title: "輸出檔資料流成員函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "輸出資料流, 成員函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- output streams, member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 輸出檔資料流成員函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
+ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
+ms.lasthandoff: 02/24/2017
 
-輸出資料流成員函式有三種類型:與操作相同執行未格式化的寫入作業的項目，否則修改資料流狀態並沒有對等的操作工具或插入運算子的以及。  對於循序，格式化輸出，您可能只使用插入運算子和操作工具。  對於隨機存取二進位磁碟輸出，您使用其他成員函式，不論是否有插入運算子。  
+---
+# <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
+輸出資料流的成員函式有三種類型：相當於操作工具的類型、會執行未格式化寫入作業的類型，以及其他會修改資料流狀態，且沒有對等的操作工具或插入運算子的類型。 對於循序的格式化輸出，您可能僅會使用插入運算子和操作工具。 對於隨機存取二進位磁碟輸出，您會使用其他的成員函式 (無論搭配插入運算子與否)。  
   
-## 輸出資料流的開啟函式  
- 若要使用輸出檔案資料流 \([ofstream](../Topic/ofstream.md)\)，您必須與該資料流與建構函式或 **open** 函式的特定磁碟檔案。  如果您使用 **open** 函式，您可以重複使用於一系列檔案的相同物件。  在任何情況下，描述檔案的引數是相同的。  
+## <a name="the-open-function-for-output-streams"></a>輸出資料流的 open 函式  
+ 若要使用輸出檔案資料流 ([ofstream](../standard-library/basic-ofstream-class.md))，您必須在建構函式或是 **open** 函式中，將該資料流與特定的磁碟檔案建立關聯。 如果您使用 **open** 函式，您就可以重複使用相同的資料流物件搭配一系列檔案。 不論使用哪一種，描述檔案的引數都一樣。  
   
- 當您開啟檔案與輸出資料流時，通常會指定 **open\_mode** 旗標。  您可以結合這些旗標，定義為 `ios` 類別的列舉程式，使用位元 OR \(&#124;\) 運算子。  提供列舉程式清單參閱 [ios\_base::openmode](../Topic/ios_base::openmode.md) 。  
+ 當您開啟與輸出資料流相關聯的檔案時，通常會指定 **open_mode** 旗標。 您可以使用位元 OR ( &#124; ) 運算子，來合併這些在 `ios` 類別中定義為列舉程式的旗標。 如需列舉程式的清單，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode)。  
   
- 三種常見的輸出資料流的情況包括模式選項:  
+ 有三種常見的輸出資料流情況會牽涉到模式選項：  
   
--   建立檔案。  如果檔案已經存在，舊版刪除。  
+-   建立檔案。 如果檔案已經存在，將會刪除舊版本檔案。  
   
-    ```  
-    ostream ofile( "FILENAME" );  // Default is ios::out  
-    ofstream ofile( "FILENAME", ios::out ); // Equivalent to above  
-    ```  
-  
--   將記錄附加至現有檔案或建立，如果它不存在。  
-  
-    ```  
-    ofstream ofile( "FILENAME", ios::app );  
-    ```  
-  
--   開啟兩個檔案，一次一個，在相同。  
-  
-    ```  
-    ofstream ofile();  
-    ofile.open( "FILE1", ios::in );  
-    // Do some output  
-    ofile.close(); // FILE1 closed  
-    ofile.open( "FILE2", ios::in );  
-    // Do some more output  
-    ofile.close(); // FILE2 closed  
-    // When ofile goes out of scope it is destroyed.  
-    ```  
-  
-## put 函式  
- **put** 函式寫入輸出資料流中的字元。  預設為下列兩個陳述式是相同的，不過，第二個是 Managed 資料流的格式引數的影響:  
-  
-```  
-cout.put( 'A' ); // Exactly one character written  
-cout << 'A'; // Format arguments 'width' and 'fill' apply   
+ ```  
+    ostream ofile("FILENAME");
+// Default is ios::out  
+    ofstream ofile("FILENAME", ios::out);
+
+// Equivalent to above  
 ```  
   
-## 寫入函式  
- **write** 函式給輸出檔案資料流寫入記憶體區塊。  引數的長度指定寫入的位元組數目。  這個範例會建立輸出檔案資料流並在其中寫入 `Date` 結構的二進位值:  
+-   將記錄附加到現有檔案，或在檔案不存在的情況下建立檔案。  
+  
+ ```  
+    ofstream ofile("FILENAME", ios::app);
+```  
+  
+-   在相同的資料流上開啟兩個檔案，一次開啟一個。  
+  
+ ```  
+    ofstream ofile();
+ofile.open("FILE1",
+    ios::in);
+// Do some output  
+    ofile.close();
+
+// FILE1 closed  
+    ofile.open("FILE2",
+    ios::in);
+// Do some more output  
+    ofile.close();
+
+// FILE2 closed  // When ofile goes out of scope it is destroyed.  
+```  
+  
+## <a name="the-put-function"></a>put 函式  
+ **put** 函式會將一個字元寫入輸出資料流。 下列兩個陳述式的預設值都相同，但第二個會受到資料流的格式引數影響：  
+  
+```  
+cout.put('A');
+
+// Exactly one character written  
+cout <<'A'; // Format arguments 'width' and 'fill' apply   
+```  
+  
+## <a name="the-write-function"></a>write 函式  
+ **write** 函式會寫入輸出檔案資料流的記憶體區塊。 長度引數會指定要寫入的位元組數目。 這個範例會建立輸出檔案資料流，並將 `Date` 結構的二進位值寫入它：  
   
 ```  
 // write_function.cpp  
@@ -87,53 +113,55 @@ int main( )
 }  
 ```  
   
- **write** 函式不會停止，並在到達 null 字元，因此，完整類別結構寫入。  函式會採用兩個引數: `char` 指標和寫入的字元計數。  請注意所需的轉換至 **char\*** ，結構物件的位址。  
+ **write** 函式遇到 null 字元時並不會停止，因此會寫入完整的類別結構。 此函式會採用兩個引數：`char` 指標和要寫入的字元計數。 請注意，在結構物件的位址之前必須轉型成 **char\***。  
   
-## seekp 和 tellp 函式  
- 輸出檔案資料流保留指向位置資料會寫入下的內部指標。  `seekp` 成員函式會將這個指標而提供隨機存取磁碟檔案輸出。  `tellp` 成員函式來傳回檔案位置。  如需使用輸入資料流相當於 `seekp` 和 `tellp`的範例，請參閱 [seekg 和 tellg 函式](../standard-library/input-stream-member-functions.md)。  
+## <a name="the-seekp-and-tellp-functions"></a>seekp 和 tellp 函式  
+ 輸出檔案資料流會保留內部指標，該指標指向接下來要寫入資料的位置。 `seekp` 成員函式會設定此指標，並提供隨機存取磁碟檔案輸出。 `tellp` 成員函式會傳回檔案位置。 如需使用對應至 `seekp` 和 `tellp` 的輸入資料流範例，請參閱 [seekg 和 tellg 函式](../standard-library/input-stream-member-functions.md)。  
   
-## 輸出資料流的存取函式  
- **close** 成員函式關閉磁碟檔案與輸出檔案資料流。  必須關閉檔案完成所有磁碟輸出。  如果需要 `ofstream` ，解構函式關閉您的檔案，不過，您可以使用 **close** 函式需要開啟相同物件的另一個檔案。  
+## <a name="the-close-function-for-output-streams"></a>輸出資料流的 close 函式  
+ **close** 成員函式會關閉與輸出檔案資料流相關聯的磁碟檔案。 若要完成所有的磁碟輸出，必須先關閉檔案。 如有必要，`ofstream` 解構函式能為您關閉檔案，但如果您需要在相同的資料流物件中開啟另一個檔案，您可以使用 **close** 函式。  
   
- 在建構函式或 **open** 成員函式開啟的檔案時，輸出資料流的解構函式自動關閉資料流的檔案。  如果您透過建構函式已開啟檔案的檔案描述項或使用 **attach** 成員函式，您必須明確地關閉檔案。  
+ 輸出資料流解構函式只有在建構函式或是 **open** 成員函式開啟檔案後，才會自動關閉資料流的檔案。 如果您將已開啟之檔案的檔案描述元傳遞給建構函式，或使用 **attach** 成員函式，您必須明確地關閉檔案。  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a> 處理函式的錯誤。  
- 請使用這些成員函式來測試錯誤，在寫入至資料流時:  
+##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> 錯誤處理函式  
+ 寫入資料流時，請使用下列成員函式來測試是否發生錯誤：  
   
-|功能|傳回值|  
-|--------|---------|  
-|[終結](../Topic/basic_ios::bad.md)|如果有一個無法復原的錯誤，傳回 **true** 。|  
-|[失敗](../Topic/basic_ios::fail.md)|傳回 **true** ，如果有一個無法復原的錯誤或一個「必須有」情形，例如轉譯錯誤，或者，如果找不到檔案。  處理可能在呼叫之後通常復原至具有零的引數 **clear** 。|  
-|[好](../Topic/basic_ios::good.md)|傳回 **true** ，如果沒有錯誤條件 \(無法復原或\)，且檔案結尾旗標未設定。|  
-|[eof](../Topic/basic_ios::eof.md)|傳回這個文件關閉條件的 **true** 。|  
-|[clear](../Topic/basic_ios::clear.md)|設定內部錯誤狀態。  如果呼叫具有預設引數，它會清除所有錯誤位元。|  
-|[rdstate](../Topic/basic_ios::rdstate.md)|傳回目前錯誤狀態。|  
+|函式|傳回值|  
+|--------------|------------------|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|如果有無法復原的錯誤，則傳回 **true**。|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果有無法復原的錯誤，或是「預期」的狀況 (例如轉換錯誤，或是找不到檔案)，則傳回 **true**。 在呼叫不具有引數的 **clear** 之後，通常可以繼續處理。|  
+|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|如果沒有任何錯誤狀況 (無論是否可復原) 且未設定檔案結尾旗標，則會傳回 **true**。|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|針對檔案結尾條件傳回 **true**。|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|設定內部錯誤狀態。 如果使用預設引數呼叫，它會清除所有錯誤位元。|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|傳回目前的錯誤狀態。|  
   
- **\!** 運算子多載執行和 **fail** 函式相同。  因此運算式:  
+ **!** 運算子會多載以執行與 **fail** 函式相同的功能。 因此運算式︰  
   
 ```  
-if( !cout)...  
+if(!cout)...  
 ```  
   
  等於：  
   
 ```  
-if( cout.fail() )...  
+if(cout.fail())...  
 ```  
   
- **void\*\(\)** 運算子多載是 **\!** 運算子相反;因此運算式:  
+ **void\*()** 運算子會多載成為相反的 **!** 運算子；因此運算式：  
   
 ```  
-if( cout)...  
+if(cout)...  
 ```  
   
- 等於:  
+ 等於：  
   
 ```  
-if( !cout.fail() )...  
+if(!cout.fail())...  
 ```  
   
- 因為它不會測試檔案結尾， **void\*\(\)** 和 **good** 運算子不相等。  
+ **void\*()** 運算子不等於 **good**，因為它並不會測試檔案結尾。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [輸出資料流](../standard-library/output-streams.md)
+
+

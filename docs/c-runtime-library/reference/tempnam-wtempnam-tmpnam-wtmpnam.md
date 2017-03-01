@@ -1,66 +1,82 @@
 ---
 title: "_tempnam、_wtempnam、tmpnam、_wtmpnam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wtempnam"
-  - "_wtmpnam"
-  - "tmpnam"
-  - "_tempnam"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wtempnam"
-  - "_wtmpnam"
-  - "wtmpnam"
-  - "tmpnam"
-  - "_wtempnam"
-  - "_tempnam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tempnam 函式"
-  - "_ttmpnam 函式"
-  - "_wtempnam 函式"
-  - "_wtmpnam 函式"
-  - "檔案名稱 [C++], 建立暫存"
-  - "檔案名稱 [C++], 暫存"
-  - "tempnam 函式"
-  - "暫存檔案, 建立"
-  - "tmpnam 函式"
-  - "ttmpnam 函式"
-  - "wtempnam 函式"
-  - "wtmpnam 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wtempnam
+- _wtmpnam
+- tmpnam
+- _tempnam
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wtempnam
+- _wtmpnam
+- wtmpnam
+- tmpnam
+- _wtempnam
+- _tempnam
+dev_langs:
+- C++
+helpviewer_keywords:
+- wtempnam function
+- file names [C++], creating temporary
+- _tempnam function
+- ttmpnam function
+- tmpnam function
+- tempnam function
+- wtmpnam function
+- temporary files, creating
+- file names [C++], temporary
+- _ttmpnam function
+- _wtmpnam function
+- _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _tempnam、_wtempnam、tmpnam、_wtmpnam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
+ms.lasthandoff: 02/24/2017
 
-產生您可以使用於建立暫存檔的名稱。  其中部分函式的可用安全版本，請參閱 [tmpnam\_s、\_wtmpnam\_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)。  
+---
+# <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
+產生可用來建立暫存檔的名稱。 您現在已有這些函式當中某些更安全的版本可以使用，請參閱 [tmpnam_s、_wtmpnam_s](../../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 char *_tempnam(  
@@ -79,59 +95,59 @@ wchar_t *_wtmpnam(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `prefix`  
- 將會附加到名稱的字串是由 `_tempnam`傳回。  
+ 此字串會加在 `_tempnam` 所傳回的名稱前面。  
   
  `dir`  
- 如果沒有 TMP 環境變數，或者如果 TMP 不是有效的目錄，路徑用於檔案名稱。  
+ 若沒有 TMP 環境變數，或是 TMP 不是有效的目錄時，檔案名稱中所使用的路徑。  
   
  `str`  
- 將保留產生名稱的指標，且與使用函式傳回的名稱是相同的。  這是很方便儲存產生的名稱的方法。  
+ 將保留所產生名稱，並且將與函式所傳回之名稱相同的指標。 這便於儲存產生的名稱。  
   
-## 傳回值  
- 如果發生失敗，這些函式都會傳回指向產生的名稱或 `NULL` 的指標。  如果您想要更多具有 `tmpnam` 的 `TMP_MAX`\(參閱 STDIO.H\) 呼叫或是如果您使用 `_tempnam` 且在 TMP 環境變數中及 `dir` 中有指定無效的目錄名稱，可能會發生失敗。  
+## <a name="return-value"></a>傳回值  
+ 若發生失敗，這些函式均會傳回產生之名稱的指標或 `NULL`。 若您嘗試超過 `TMP_MAX` (請參閱 STDIO.H) 次呼叫 `tmpnam`，或是您使用 `_tempnam` 而且在 TMP 環境變數和 `dir` 參數中指定了無效的目錄名稱，就會發生失敗。  
   
 > [!NOTE]
->  指標是由 `tmpnam` 和 `_wtmpnam` 傳回至內部靜態緩衝區。  不應該呼叫[可用](../../c-runtime-library/reference/free.md) 取消這些指標。  `free` 必須為 `_tempnam` 和 `_wtempnam`配置的指標來呼叫。  
+>  `tmpnam` 和 `_wtmpnam` 所傳回的指標指向內部靜態緩衝區。 不應呼叫 [free](../../c-runtime-library/reference/free.md) 來解除配置這些指標。 需要針對 `_tempnam` 和 `_wtempnam` 配置的指標呼叫 `free`。  
   
-## 備註  
- 這些函式都會傳回目前不存在的檔名。  `tmpnam` 傳回在工作目錄唯一名稱且 `_tempnam` 讓您在目錄中產生不同於目前的唯一名稱。  請注意，會在檔名之前加上反斜線且沒有路徑資訊，例如\\ fname21，這表示這名稱在目前工作目錄是有效的。  
+## <a name="remarks"></a>備註  
+ 這些函式均會傳回目前不存在的檔案名稱。 `tmpnam` 傳回在目前工作目錄中唯一的名稱，而 `_tempnam` 可讓您在非目前目錄的目錄中產生唯一的名稱。 請注意，當檔案名稱前面附加反斜線且沒有路徑資訊時，例如 \fname21，這表示名稱對於目前工作目錄有效。  
   
- 如果是 `tmpnam`，則可在 `str` 中儲存這個產生的檔案名稱。  如果 `str` 是 `NULL`，那麼 `tmpnam` 將結果留在內部靜態緩衝區。  因此所有後續的呼叫會摧毀此值。  `tmpnam` 產生的檔名包含程式產生的檔案名稱，而且，在第一次呼叫 `tmpnam` 之後，基底為 32 的副檔名序號為 \(.1\-.1vvu，當 STDIO.H 的 `TMP_MAX` 是 32,767\)。  
+ 對於 `tmpnam`，您可以將這個產生的檔案名稱儲存在 `str`。 如果 `str` 是 `NULL`，則 `tmpnam` 會將結果保持在內部靜態緩衝區中。 因此任何後續呼叫會終結這個值。 `tmpnam` 所產生的名稱包含程式所產生的檔案名稱，以及在第一次呼叫 `tmpnam` 之後，以 32 為基底的序號副檔名 (.1-.vvu，當 `TMP_MAX` 在 STDIO.H 中時是 32,767)。  
   
- `_tempnam` 會為目錄產生唯一的檔案名稱依下列規則選取：  
+ `_tempnam` 會產生目錄的唯一檔案名稱，目錄是依照下列規則來選擇︰  
   
--   如果 TMP 環境變數定義並設定為有效的目錄名稱，唯一的檔案名稱為 TMP 指定的目錄中產生。  
+-   若已定義 TMP 環境變數，而且設定為有效的目錄名稱，則會針對 TMP 所指定的目錄產生唯一的檔案名稱。  
   
--   如果 TMP 環境變數未定義，或者設定為不存在的目錄名稱， `_tempnam` 會使用 `dir` 參數做為它將產生唯一名稱的路徑。  
+-   如果未定義 TMP 環境變數，或是它設定為不存在之目錄的名稱，則 `_tempnam` 將使用 `dir` 參數作為它將為其產生唯一名稱的路徑。  
   
--   如果 TMP 環境變數未定義，或者設定為不存在的目錄名稱，且如果 `dir` 為 `NULL` ，或設定為不存在的目錄名稱， `_tempnam` 會使用目前工作目錄產生唯一的名稱。  目前，如果 TMP 和 `dir` 皆指定不存在的目錄名稱， `_tempnam` 函式呼叫將會失敗。  
+-   如果未定義 TMP 環境變數，或是它設定為不存在之目錄的名稱，而且 `dir` 是 `NULL` 或設定為不存在之目錄的名稱，則 `_tempnam` 會使用目前的工作目錄來產生唯一的名稱。 目前，如果 TMP 和 `dir` 都指定不存在之目錄的名稱，`_tempnam` 函式呼叫將會失敗。  
   
- `_tempnam` 傳回的名稱將是 `prefix` 和序號的連接，該名稱將合併建立唯一名稱指定的目錄。  `_tempnam` 產生沒有副檔名的檔案名稱。  `_tempnam` 使用 [malloc](../../c-runtime-library/reference/malloc.md) 配置這個檔名的空間;，當不再需要時，程式會負責釋放這個空間。  
+ `_tempnam` 傳回的名稱會串連 `prefix` 和序號，它們相結合可以為指定目錄建立唯一的檔案名稱。 `_tempnam` 會產生沒有副檔名的檔案名稱。 `_tempnam` 使用 [malloc](../../c-runtime-library/reference/malloc.md) 來配置檔案名稱的空間，程式會負責在不再需要時釋放此空間。  
   
- `_tempnam` 和 `tmpnam` 會根據從作業系統取得的 OEM 字碼頁自動適當地處理多位元組字串，辨識多位元組序列。  `_wtempnam` 是 `_tempnam` 的寬字元版本；`_wtempnam` 的引數和回傳值是寬字元字串。  `_wtempnam` 和 `_tempnam` 行為相同，除了 `_wtempnam` 不處理多位元組字元字串。  `_wtmpnam` 是 `tmpnam` 的寬字元版本，`_wtmpnam` 函式的參數和回傳值是寬字元字串。  `_wtmpnam` 和 `tmpnam` 行為相同，除了 `_wtmpnam` 不處理多位元組字元字串。  
+ `_tempnam` 和 `tmpnam` 會自動適當地處理多位元組字元字串引數，並根據從作業系統取得的 OEM 字碼頁辨識多位元組字元序列。 `_wtempnam` 是 `_tempnam` 的寬字元版本，`_wtempnam` 的引數與傳回值是寬字元字串。 `_wtempnam` 與 `_tempnam` 的運作方式完全相同，不同之處在於 `_wtempnam` 不會處理多位元組字元字串。 `_wtmpnam` 是 `tmpnam` 的寬字元版本，`_wtmpnam` 的引數與傳回值是寬字元字串。 `_wtmpnam` 與 `tmpnam` 的運作方式完全相同，不同之處在於 `_wtmpnam` 不會處理多位元組字元字串。  
   
- 如果 `_DEBUG` 和 `_CRTDBG_MAP_ALLOC` 已定義 `_tempnam` 和 `_wtempnam` 由 [\_tempnam\_dbg 和 \_wtempnam\_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md)的呼叫取代。  
+ 如果已定義 `_DEBUG` 和 `_CRTDBG_MAP_ALLOC`，`_tempnam` 和 `_wtempnam` 會取代為 [_tempnam_dbg 和 _wtempnam_dbg](../../c-runtime-library/reference/tempnam-dbg-wtempnam-dbg.md) 的呼叫。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|\_UNICODE & \_MBCS 未定義|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ttmpnam`|`tmpnam`|`tmpnam`|`_wtmpnam`|  
 |`_ttempnam`|`_tempnam`|`_tempnam`|`_wtempnam`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_tempnam`|\<stdio.h\>|  
-|`_wtempnam`, `_wtmpnam`|\<stdio.h\> 或 \<wchar.h\>|  
-|`tmpnam`|\<stdio.h\>|  
+|-------------|---------------------|  
+|`_tempnam`|\<stdio.h>|  
+|`_wtempnam`, `_wtmpnam`|\<stdio.h> 或 \<wchar.h>|  
+|`tmpnam`|\<stdio.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_tempnam.c  
@@ -172,15 +188,18 @@ int main( void )
 }  
 ```  
   
-  **\\s1gk. is safe to use as a temporary file.**  
-**C:\\DOCUME~1\\user\\LOCALS~1\\Temp\\2\\stq2 is safe to use as a temporary file.**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+\s1gk. is safe to use as a temporary file.  
+C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
+```  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
  [tmpfile](../../c-runtime-library/reference/tmpfile.md)   
- [tmpfile\_s](../../c-runtime-library/reference/tmpfile-s.md)
+ [tmpfile_s](../../c-runtime-library/reference/tmpfile-s.md)

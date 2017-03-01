@@ -1,70 +1,86 @@
 ---
 title: "va_arg、va_copy、va_end、va_start | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "va_arg"
-  - "va_end"
-  - "va_copy"
-  - "va_start"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "va_arg"
-  - "va_start"
-  - "va_list"
-  - "va_alist"
-  - "va_dcl"
-  - "va_copy"
-  - "va_end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "變數引數清單存取"
-  - "va_start 巨集"
-  - "va_arg 巨集"
-  - "va_end 巨集"
-  - "引數 [c + +] 引數清單"
-  - "va_list 巨集"
-  - "va_dcl 巨集"
-  - "va_alist 巨集"
-  - "va_copy 巨集"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- va_arg
+- va_end
+- va_copy
+- va_start
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- va_arg
+- va_start
+- va_list
+- va_alist
+- va_dcl
+- va_copy
+- va_end
+dev_langs:
+- C++
+helpviewer_keywords:
+- variable argument lists, accessing
+- va_start macro
+- va_arg macro
+- va_end macro
+- arguments [C++], argument lists
+- va_list macro
+- va_dcl macro
+- va_alist macro
+- va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# va_arg、va_copy、va_end、va_start
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 5caea89460070402fc8dc5b38912e290d4c5798d
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="vaarg-vacopy-vaend-vastart"></a>va_arg、va_copy、va_end、va_start
 存取變數引數清單。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      type va_arg(  
+type va_arg(  
    va_list arg_ptr,  
    type   
-);void va_copy(  
+);
+void va_copy(  
    va_list dest,  
    va_list src  
 ); // (ISO C99 and later)  
@@ -77,47 +93,47 @@ void va_start(
 ); // (ANSI C89 and later)  
 void va_start(  
    arg_ptr   
-);  // (Pre-ANSI C89 standardization version)  
+);  // (deprecated Pre-ANSI C89 standardization version)  
 ```  
   
 #### <a name="parameters"></a>參數  
  `type`  
- 要擷取的引數的型別。  
+ 要擷取的引數類型。  
   
  `arg_ptr`  
  引數清單的指標。  
   
  `dest`  
- 要從其中初始化的引數清單的指標 `src`  
+ 要從 `src` 初始化之引數清單的指標。  
   
  `src`  
- 初始化清單複製到引數的指標 `dest`。  
+ 要複製至 `dest` 之初始化引數清單的指標。  
   
  `prev_param`  
- 位於第一個選擇性引數的參數。  
+ 第一個選擇性引數之前的參數。  
   
 ## <a name="return-value"></a>傳回值  
- `va_arg` 傳回目前的引數。 `va_copy`, `va_start` 和 `va_end` 不會傳回值。  
+ `va_arg` 會傳回目前引數。 `va_copy`、`va_start` 和 `va_end` 未傳回值。  
   
 ## <a name="remarks"></a>備註  
-  `va_arg`, ，`va_copy`, ，`va_end`, ，和 `va_start` 巨集提供的可攜式方法，以存取函式的引數，當函式接受可變引數數目。 有兩個版本的巨集︰ STDARG 中定義的巨集。H 符合 ISO C99 標準。VARARGS 中定義的巨集。H 已被取代，但會保留回溯相容性的標準 ANSI C89 之前所撰寫的程式碼。  
+ `va_arg`、`va_copy`、`va_end` 和 `va_start` 巨集提供可攜式方法，以在函式接受變動數目的引數時存取函式的引數。 巨集有兩個版本︰定義於 STDARG.H 的巨集符合 ISO C99 標準；定義於 VARARGS.H 的巨集已遭取代但仍保留與 ANSI C89 標準之前所撰寫程式碼的回溯相容性。  
   
- 這些巨集假設函式接受必要的引數，後面接著選擇性的引數數目可變的固定的數。 必要的引數會宣告為函式的一般參數，並可存取透過參數名稱。 選擇性的引數被經由 STDARG 中的巨集。H （或 VARARGS。H ANSI C89 標準之前所撰寫的程式碼)，其設定的指標引數清單中第一個選擇性引數從清單中，擷取引數和引數處理完成時，會重設指標。  
+ 這些巨集假設函式接受固定數目的必要引數，後面接著變動數目的選擇性引數。 必要引數會宣告為函式的一般參數，而且可以透過參數名稱進行存取。 選擇性引數是透過 STDARG.H (或 VARARGS.H，適用於在 ANSI C89 標準之前撰寫的程式碼) 中的巨集進行存取，而這個檔案設定引數清單中第一個選擇性引數的指標、從清單中擷取引數，以及在完成引數處理時重設指標。  
   
- C 標準定義的巨集，在 STDARG。H，用法如下︰  
+ 定義於 STDARG.H 之 C 標準巨集的使用如下︰  
   
--   `va_start` 設定 `arg_ptr` 傳遞至函數的引數清單中第一個選擇性的引數。 引數 `arg_ptr` 必須 `va_list` 型別。 引數 `prev_param` 是必要引數清單中前面的第一個選擇性引數的參數名稱。 如果 `prev_param` 暫存器儲存類別中，使用巨集的行為未定義宣告。 `va_start` 之前，必須使用 `va_arg` 用於第一次。  
+-   `va_start` 會將 `arg_ptr` 設為傳遞至函式之引數清單中的第一個選擇性引數。 `arg_ptr` 引數必須具有 `va_list` 類型。 引數 `prev_param` 是必要參數的名稱，緊接在引數清單中的第一個選擇性引數前面。 如果使用暫存器儲存類別宣告 `prev_param`，則未定義巨集的行為。 第一次使用 `va_arg` 之前，必須先使用 `va_start`。  
   
--   `va_arg` 擷取某個值的 `type` 由所指定的位置 `arg_ptr`, ，並遞增 `arg_ptr` 指向清單中的下一個引數使用的大小 `type` 來決定下一個引數的開始位置。 `va_arg` 可以是函式使用次數不限，來擷取引數清單中。  
+-   `va_arg` 會擷取 `arg_ptr` 所指定位置中的 `type` 值，並使用 `type` 大小決定下一個引數的開始位置，來遞增 `arg_ptr` 以指向清單中的下一個引數。 在函式中可以使用任意次數的 `va_arg`，來擷取清單中的引數。  
   
--   `va_copy` 建立引數清單的複本處於目前狀態。  `src` 參數必須已經使用初始化 `va_start`; 它可能已更新為 `va_arg` 呼叫，但必須有尚未重設與 `va_end`。 下一個引數所擷取 `va_arg` 從 `dest` 擷取自下一個引數相同 `src`。  
+-   `va_copy` 會以目前的狀態複製引數清單。 `src` 參數必須已使用 `va_start` 初始化；它可能已使用 `va_arg` 呼叫更新，但尚未使用 `va_end` 重設。 `va_arg` 從 `dest` 擷取的下一個引數，與擷取自 `src` 的下一個引數相同。  
   
--   在擷取所有引數之後， `va_end` 重設的指標 **NULL**。 `va_end` 必須在每個引數清單，以初始化呼叫 `va_start` 或 `va_copy` 函式會傳回之前。  
+-   擷取所有引數之後，`va_end` 會重設 **NULL** 的指標。 傳回函式之前，在使用 `va_start` 或 `va_copy` 初始化的每個引數清單上，都必須呼叫 `va_end`。  
   
 > [!NOTE]
->  VARARGS 巨集。H 已被取代而只保留給回溯相容性以 ANSI C89 標準之前所撰寫的程式碼。 在其他情況下，使用 STDARGS 中的巨集。H.  
+>  VARARGS.H 中的巨集已遭取代，並且僅保留與 ANSI C89 標準之前所撰寫程式碼的回溯相容性。 在所有其他情況下，會使用 STDARGS.H 中的巨集。  
   
- 當編譯使用 [/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md), ，使用這些巨集的程式可能會產生非預期的結果，因為原生和 common language runtime (CLR) 型別系統之間的差異。 此程式，請考慮︰  
+ 因為原生與 Common Language Runtime (CLR) 類型系統之間的差異，所以使用 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md) 進行編譯時，使用這些巨集的程式可能會產生未預期結果。 請考慮使用此程式：  
   
 ```  
 #include <stdio.h>  
@@ -138,6 +154,8 @@ void testit (int i, ...)
         char *s = va_arg(argptr, char*);  
         printf("%s\n", s);  
     }  
+
+    va_end(argptr);  
 }  
   
 int main()  
@@ -147,7 +165,7 @@ int main()
 }  
 ```  
   
- 請注意， `testit` 第二個參數會是 `int` 或 `char*`。 傳入的引數是 0xffffffff ( `unsigned int`, ，而非 `int`) 和 `NULL` (實際上 `int`, ，而非 `char*`)。 當程式編譯為原生程式碼時，它會產生以下輸出︰  
+ 請注意，`testit` 的第二個參數必須是 `int` 或 `char*`。 正在傳遞的引數是 0xffffffff (`unsigned int`，非 `int`) 和 `NULL` (實際是 `int`，非 `char*`)。 針對機器碼編譯程式時，會產生此輸出︰  
   
 ```Output  
 -1  
@@ -155,20 +173,10 @@ int main()
 (null)  
 ```  
   
- 不過，當程式編譯使用 **/clr: pure**, ，類型不符的情況會產生例外狀況。 解決方法是使用明確轉換 （cast）︰  
-  
-```  
-int main()  
-{  
-   testit( 0, (int)0xFFFFFFFF ); // cast unsigned to int  
-   testit( 1, (char*)NULL );     // cast int to char*  
-}  
-```  
-  
 ## <a name="requirements"></a>需求  
- **標頭︰** \< stdio.h > 和 \< g.h >  
+ **標頭：**\<stdio.h> 和 \<stdarg.h>  
   
- **已被取代的標頭︰** \< varargs.h >  
+ **已取代的標頭︰**\<varargs.h>  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -246,6 +254,6 @@ Deviation is: 0.000000
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::ParamArrayAttribute 類別](https://msdn.microsoft.com/en-us/library/system.paramarrayattribute.aspx)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [引數存取](../../c-runtime-library/argument-access.md)   
- [vfprintf、 _vfprintf_l、 vfwprintf、 _vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)
+ [vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l](../../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)

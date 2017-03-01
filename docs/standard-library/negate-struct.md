@@ -1,70 +1,84 @@
 ---
 title: "negate 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "negate"
-  - "std.negate"
-  - "std::negate"
-  - "xfunctional/std::negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "negate 結構"
-  - "negate 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- negate
+- std.negate
+- std::negate
+- xfunctional/std::negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- negate struct
+- negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# negate 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 810861f1f1343d13b5e539a1a21206a72bcb3ec1
+ms.lasthandoff: 02/24/2017
 
-一個是先定義好的函式物件將對引述執行 negation 運算\( unary `operator-`\) 使用現有的引數。  
+---
+# <a name="negate-struct"></a>negate 結構
+在其引數上執行算數否定運算 (一元 `operator-`) 的預先定義函式物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template <class Type = void>
+struct negate : public unary_function<Type, Type>  
+{
+    Type operator()(const Type& Left) const;
+};
+
+// specialized transparent functor for unary operator-
+template <>
+struct negate<void>  
+{
+  template <class Type>
+  auto operator()(Type&& Left) const`
+    -> decltype(-std::forward<Type>(Left));
+ };
 ```  
-template<class Type = void>  
-   struct negate : public unary_function<Type, Type>   
-   {  
-      Type operator()(  
-         const Type& Left  
-      ) const;  
-   };  
   
-// specialized transparent functor for unary operator-  
-template<>  
-   struct negate<void>  
-   {  
-      template<class Type>  
-      auto operator()(Type&& Left) const  
-         -> decltype(-std::forward<Type>(Left));  
-   };  
-  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  `Type`  
- 任何支援`operator-`接受指定或推斷型別的運算元之類型。  
+ 任何支援 `operator-` (接受指定或推斷類型的運算元) 的類型。  
   
  `Left`  
- 要變成相反值的運算元。  特製化樣板在左值和右值推斷的型別 `Type` 參考引數能完美轉送。  
+ 要否定的運算元。 此特製化的範本會完美地轉送 `Type` 推斷類型的左值和右值參考引數。  
   
-## 傳回值  
- `-` `Left.` 的結果，特製化樣板完善轉送結果，其有由元素 `operator-` 傳回的型別 。  
+## <a name="return-value"></a>傳回值  
+ `-``Left.` 的結果。此特製化範本會完整轉送結果 (具有一元 `operator-` 所傳回的類型)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // functional_negate.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -98,15 +112,21 @@ int main( )
       cout << *Iter2 << " ";  
    cout << ")" << endl;  
 }  
+\* Output:   
+The vector v1 = ( -10 -5 0 5 10 15 20 25 )  
+The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )  
+*\  
 ```  
   
-  **The vector v1 \= \( \-10 \-5 0 5 10 15 20 25 \)**  
-**The negated elements of the vector \= \( 10 5 0 \-5 \-10 \-15 \-20 \-25 \)**   
-## 需求  
- **標題:** \<functional\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<functional>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

@@ -1,57 +1,72 @@
 ---
 title: "_dupenv_s_dbg、_wdupenv_s_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_dupenv_s_dbg"
-  - "_wdupenv_s_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tdupenv_s_dbg"
-  - "_dupenv_s_dbg"
-  - "_wdupenv_s_dbg"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_tdupenv_s_dbg 函式"
-  - "dupenv_s_dbg 函式"
-  - "_wdupenv_s_dbg 函式"
-  - "環境變數"
-  - "tdupenv_s_dbg 函式"
-  - "wdupenv_s_dbg 函式"
-  - "_dupenv_s_dbg 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _dupenv_s_dbg
+- _wdupenv_s_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _tdupenv_s_dbg
+- _dupenv_s_dbg
+- _wdupenv_s_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tdupenv_s_dbg function
+- dupenv_s_dbg function
+- _wdupenv_s_dbg function
+- environment variables
+- tdupenv_s_dbg function
+- wdupenv_s_dbg function
+- _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _dupenv_s_dbg、_wdupenv_s_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: bfe2abe691a3f82b261f36f7581c4284aa1f6624
+ms.lasthandoff: 02/24/2017
 
-從目前環境取得值。使用[\_dupenv\_s、\_wdupenv\_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) 的版本利用 [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md) 分配記憶體以提供額外的偵錯資訊。  
+---
+# <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
+從目前環境取得值  這是使用 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) 配置記憶體以提供其他偵錯資訊的 [_dupenv_s、_wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) 版本。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 errno_t _dupenv_s_dbg(  
@@ -72,53 +87,54 @@ errno_t _wdupenv_s_dbg(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `buffer`  
- 儲存變數值的緩衝區。  
+ 要儲存變數的值的緩衝區。  
   
  `numberOfElements`  
- `buffer`的大小。  
+ 
+          `buffer` 的大小。  
   
  `varname`  
  環境變數名稱。  
   
  `blockType`  
- 記憶體區塊的要求型別：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
+ 要求的記憶體區塊類型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
   
  `filename`  
- 對原始程式檔或 `NULL`名稱的指標。  
+ 原始程式檔名的指標，或為 `NULL`。  
   
  `linenumber`  
- 在原始程式檔或 `NULL`的行號。  
+ 原始程式檔中的行號，或為 `NULL`。  
   
-## 傳回值  
- 如果成功，就是零，如果失敗，則為錯誤碼。  
+## <a name="return-value"></a>傳回值  
+ 若成功，就是零；若失敗，則為錯誤碼。  
   
- 這些函式會驗證它們的參數;如果 `buffer` 或 `varname` 是 `NULL`，無效的參數處理常式會被叫用，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
+ 這些函式會驗證其參數；若 `buffer` 或 `varname` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，函式會將 `errno` 設定為 `EINVAL` 並傳回 `EINVAL`。  
   
- 如果這些函式無法配置足夠的記憶體，它們將 `buffer` 設定為 `NULL` 和 `numberOfElements` 為 0 並傳回 `ENOMEM`。  
+ 若這些函是無法配置足夠的記憶體，會將 `buffer` 設定為 `NULL`，將 `numberOfElements` 設定為 0，並傳回 `ENOMEM`。  
   
-## 備註  
- `_dupenv_s_dbg` 和 `_wdupenv_s_dbg` 函式與 `_dupenv_s` 和 `_wdupenv_s` 相同，除了當 `_DEBUG` 已被宣告，這些函式使用 [malloc](../../c-runtime-library/reference/malloc.md)， [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)偵錯版本，以分配環境變數值的記憶體。  如需 `_malloc_dbg`偵錯功能得更多資訊，請參閱 [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
+## <a name="remarks"></a>備註  
+ `_dupenv_s_dbg` 和 `_wdupenv_s_dbg` 函式與 `_dupenv_s` 和 `_wdupenv_s` 相同，唯一不同的是當定義 `_DEBUG` 時，這些函式會使用 [malloc](../../c-runtime-library/reference/malloc.md) 的偵錯版本 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) 來配置環境變數值的記憶體。 如需 `_malloc_dbg` 之偵錯功能的資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
   
- 您不需要在許多情況下明確地呼叫這些函式。  相反地，您可以定義旗標 `_CRTDBG_MAP_ALLOC`。  當 `_CRTDBG_MAP_ALLOC` 已被定義，呼叫 `_dupenv_s` 和 `_wdupenv_s` 分別重新對應至 `_dupenv_s_dbg` 和 `_wdupenv_s_dbg`，`blockType` 設定為 `_NORMAL_BLOCK`。  因此，除非您要標記堆積區塊為 `_CLIENT_BLOCK`時，您不需要明確地呼叫這些函式。  如需區塊類型的詳細資訊，請參閱 [偵錯堆積上的區塊類型](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)。  
+ 在大多數情況中，您不需要明確地呼叫這些函式。 但您可以定義 `_CRTDBG_MAP_ALLOC` 旗標。 定義 `_CRTDBG_MAP_ALLOC` 時，呼叫 `_dupenv_s` 和 `_wdupenv_s` 會分別重新對應至 `_dupenv_s_dbg` 和 `_wdupenv_s_dbg`，且 `blockType` 會設為 `_NORMAL_BLOCK`。 因此，您不需要呼叫這些函式，除非您想要將堆積區塊標示為 `_CLIENT_BLOCK`。 如需區塊類型的詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tdupenv_s_dbg`|`_dupenv_s_dbg`|`_dupenv_s_dbg`|`_wdupenv_s_dbg`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_dupenv_s_dbg`|\<crtdbg.h\>|  
-|`_wdupenv_s_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_dupenv_s_dbg`|\<crtdbg.h>|  
+|`_wdupenv_s_dbg`|\<crtdbg.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_dupenv_s_dbg.c  
@@ -142,18 +158,18 @@ int main( void )
 }  
 ```  
   
-## 範例輸出  
+## <a name="sample-output"></a>範例輸出  
   
 ```  
 pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
 nonexistentvariable = (null)  
 ```  
   
-## .NET Framework 對等用法  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
   
-## 請參閱  
- [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>另請參閱  
+ [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [環境常數](../../c-runtime-library/environmental-constants.md)   
- [getenv\_s、\_wgetenv\_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [\_putenv\_s、\_wputenv\_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)
+ [getenv_s、_wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
+ [putenv_s、_wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)

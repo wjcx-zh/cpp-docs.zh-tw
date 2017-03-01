@@ -1,50 +1,67 @@
 ---
-title: "_free_dbg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_free_dbg"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_free_dbg"
-  - "free_dbg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "記憶體區塊，解除配置"
-  - "釋放記憶體"
-  - "_free_dbg 函式"
-  - "free_dbg 函式"
+title: _free_dbg | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _free_dbg
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _free_dbg
+- free_dbg
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks, deallocating
+- freeing memory
+- _free_dbg function
+- free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _free_dbg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 7ab13da1c51d75979656c4b70c4874566296e845
+ms.lasthandoff: 02/24/2017
 
-釋放在堆積上的記憶體區塊 \(僅偵錯版本\)。  
+---
+# <a name="freedbg"></a>_free_dbg
+釋放堆積中的記憶體區塊 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void _free_dbg(   
@@ -53,36 +70,36 @@ void _free_dbg(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `userData`  
- 要釋放的配置的記憶體區塊的指標。  
+ 要釋放之已配置記憶體區塊的指標。  
   
  `blockType`  
- 要釋放的配置的記憶體區塊類型: `_CLIENT_BLOCK`、 `_NORMAL_BLOCK`或 `_IGNORE_BLOCK`。  
+ 要釋放之已配置記憶體區塊的類型：`_CLIENT_BLOCK`、`_NORMAL_BLOCK` 或 `_IGNORE_BLOCK`。  
   
-## 備註  
- `_free_dbg` 函式是 [free](../../c-runtime-library/reference/free.md) 函式的偵錯版本。  當 [\_DEBUG](../../c-runtime-library/debug.md) 未定義時，對 `_free_dbg` 的每個呼叫會減少為對 `free` 的一個呼叫。  `free` 和 `_free_dbg` 釋放在基底堆積的記憶體區塊，不過， `_free_dbg` 容納兩個偵錯功能:能夠保持釋放堆積的連結串列以模擬低記憶體情況和一個區塊類型參數以釋放特定配置類型。  
+## <a name="remarks"></a>備註  
+ `_free_dbg` 函式是偵錯版本的 [free](../../c-runtime-library/reference/free.md) 函式。 未定義 [_DEBUG](../../c-runtime-library/debug.md) 時，每個 `_free_dbg` 呼叫都會降至 `free` 呼叫。 `free` 和 `_free_dbg` 都會釋放基底堆積中的記憶體區塊，但 `_free_dbg` 容納兩個偵錯功能：將釋放的區塊保留在堆積的已連結清單中以模擬低記憶體狀況的能力，以及釋放特定配置類型的區塊類型參數。  
   
- `_free_dbg` 在執行釋放作業之前執行所有指定之檔案和區塊位置之有效性檢查。  應用程式不應該提供這項資訊。  當記憶體區塊被釋放時，偵錯堆積管理器會自動檢查配置區域每端的使用者部分之完整性，如果發生覆寫發便會發出錯誤報告。  如果 [\_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 旗標的 `_CRTDBG_DELAY_FREE_MEM_DF` 位元欄位已設定，釋放的區塊在記憶體區塊填入 0xDD 值，指定 `_FREE_BLOCK` 區塊類型，並保留在記憶體區塊的堆疊連結串列。  
+ `_free_dbg` 會先對所有指定檔案和區塊位置執行有效性檢查，再執行釋放作業。 應用程式不需要提供此資訊。 釋放記憶體區塊時，偵錯堆積管理員會自動檢查使用者部分每一端的緩衝區完整性，並在發生覆寫時發出錯誤報表。 如果設定 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 旗標的 `_CRTDBG_DELAY_FREE_MEM_DF` 位元欄位，會以值 0xDD 填入釋放的區塊，並獲指派 `_FREE_BLOCK` 區塊類型，而且會保留在堆積的已連結記憶體區塊清單中。  
   
- 如果錯誤發生在釋放記憶體， `errno` 設定成作業系統發生錯誤的性質的資訊。  如需詳細資訊，請參閱[errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 若釋放記憶體發生錯誤，會使用來自作業系統且具有失敗性質的資訊設定 `errno`。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
- 如需記憶體區塊配置、初始化的方式，並在基底堆積的偵錯版本管理記憶體區塊的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](../Topic/CRT%20Debug%20Heap%20Details.md)。  如需配置區塊類型的資訊以及它們的使用方式，請參閱 [偵錯堆積上的區塊類型](../Topic/CRT%20Debug%20Heap%20Details.md#BKMK_Types_of_blocks_on_the_debug_heap)。  如需呼叫標準堆積函式以及偵錯應用程式的偵錯組建的版本之差異的詳細資訊，請參閱 [堆積配置函式的偵錯版本](../Topic/Debug%20Versions%20of%20Heap%20Allocation%20Functions.md)。  
+ 如需在偵錯版本的基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。 如需配置區塊類型以及如何使用它們的資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。 如需在應用程式的偵錯組建中呼叫標準堆積函式以及其偵錯版本之間的差異的資訊，請參閱[堆積配置函式的偵錯版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_free_dbg`|\<crtdbg.h\>|  
+|-------------|---------------------|  
+|`_free_dbg`|\<crtdbg.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
- 如需範例 `_free_dbg`使用方式，請參閱 [crt\_dbg2](http://msdn.microsoft.com/zh-tw/21e1346a-6a17-4f57-b275-c76813089167)。  
+## <a name="example"></a>範例  
+ 如需如何使用 `_free_dbg` 的範例，請參閱 [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
- [\_malloc\_dbg](../../c-runtime-library/reference/malloc-dbg.md)
+ [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

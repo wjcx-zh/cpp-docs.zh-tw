@@ -1,79 +1,95 @@
 ---
 title: "_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnbcnt_l"
-  - "_mbsnccnt"
-  - "_wcsncnt"
-  - "_strncnt"
-  - "_mbsnccnt_l"
-  - "_mbsnbcnt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbsnbcnt"
-  - "wcsncnt"
-  - "_tcsnbcnt"
-  - "_mbsnccnt"
-  - "_ftcsnbcnt"
-  - "mbsnbcnt"
-  - "strncnt"
-  - "mbsnbcnt_l"
-  - "mbsnccnt_l"
-  - "mbsnccnt"
-  - "_strncnt"
-  - "_wcsncnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbsnbcnt 函式"
-  - "_mbsnbcnt_l 函式"
-  - "_mbsnccnt 函式"
-  - "_mbsnccnt_l 函式"
-  - "_strncnt 函式"
-  - "_tcsnbcnt 函式"
-  - "_wcsncnt 函式"
-  - "mbsnbcnt 函式"
-  - "mbsnbcnt_l 函式"
-  - "mbsnccnt 函式"
-  - "mbsnccnt_l 函式"
-  - "strncnt 函式"
-  - "tcsnbcnt 函式"
-  - "wcsncnt 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnbcnt_l
+- _mbsnccnt
+- _wcsncnt
+- _strncnt
+- _mbsnccnt_l
+- _mbsnbcnt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbsnbcnt
+- wcsncnt
+- _tcsnbcnt
+- _mbsnccnt
+- _ftcsnbcnt
+- mbsnbcnt
+- strncnt
+- mbsnbcnt_l
+- mbsnccnt_l
+- mbsnccnt
+- _strncnt
+- _wcsncnt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strncnt function
+- _mbsnbcnt function
+- _mbsnbcnt_l function
+- _mbsnccnt_l function
+- mbsnbcnt_l function
+- mbsnbcnt function
+- tcsnbcnt function
+- mbsnccnt_l function
+- strncnt function
+- _tcsnbcnt function
+- mbsnccnt function
+- wcsncnt function
+- _mbsnccnt function
+- _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: de740ec295489829d236e2249f92ef98de655ad0
+ms.lasthandoff: 02/24/2017
 
-傳回字元或位元組數目在指定的計數中。  
+---
+# <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
+傳回指定計次數內的字元或位元組數目。  
   
 > [!IMPORTANT]
->  `_mbsnbcnt`、`_mbsnbcnt_l`、`_mbsnccnt`和`_mbsnccnt_l`不能用於 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbsnbcnt`、`_mbsnbcnt_l`、`_mbsnccnt` 和 `_mbsnccnt_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_t _strncnt(  
@@ -105,54 +121,54 @@ size_t _mbsnccnt_l(
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `str`  
- 待檢查字串。  
+ 要檢查的字串。  
   
  `count`  
- 在 `str`檢查的位元組或字元數。  
+ 要以 `str` 檢查的字元或位元組數。  
   
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- `_mbsnbcnt` 和 `_mbsnbcnt_l` 傳回 `str`多位元組字元的第一個 `count` 中的位元組數目。  `_mbsnccnt` 和 `_mbsnccnt_l` 傳回 `str`多位元組字元的第一個 `count` 中的字元數目。  如果在 `str` 中檢查完成之前遇到 Null 字元，會傳回在 Null 字元之前找到的位元組數目或字元。  如果 `str` 包括小於 `count` 字元或位元組，它們傳回字元或位元組數目字串。  如果 `count` 小於零，則會傳回 0。  在舊版中，這些函式的傳回值型別是 `int` 而非 `size_t`。  
+## <a name="return-value"></a>傳回值  
+ `_mbsnbcnt` 和 `_mbsnbcnt_l` 傳回在 `str` 的前 `count` 個多位元組字元中找到的位元組數目。 `_mbsnccnt` 和 `_mbsnccnt_l` 傳回在 `str` 的前 `count` 個位元組中找到的字元數目。 如果在 `str` 檢查完成前碰到 NULL 字元，它們會傳回在 NULL 字元前找到的字元或位元組數。 如果 `str` 的組成字元或位元組數少於 `count`，它們會傳回字串中的字元或位元組數。 如果 `count` 小於零，它們會傳回 0。 在舊版中，這些函式有 `int` 類型的傳回值，而不是 `size_t`。  
   
- `_strncnt` 在單一位元組字串 `str`的第一個 `count` 位元組傳回字元數。  `_wcsncnt` 所傳回的字元是數寬字元字串 `str`的第一個 `count` 的寬度 \(以字元為單位\)。  
+ `_strncnt` 傳回單一位元組字串 `str` 的前 `count` 個位元組。 `_wcsncnt` 傳回寬字元字串 `str` 的前 `count` 個寬字元。  
   
-## 備註  
- `_mbsnbcnt` 和 `_mbsnbcnt_l` 會計算 `str`多位元組字元的第一個 `count` 中的位元組數目。  `_mbsnbcnt` 和 `_mbsnbcnt_l` 取代 `mtob` ，且應在 `mtob`位置使用。  
+## <a name="remarks"></a>備註  
+ `_mbsnbcnt` 和 `_mbsnbcnt_l` 計算在 `str` 的前 `count` 個多位元組字元中找到的位元組數目。 `_mbsnbcnt` 和 `_mbsnbcnt_l` 取代 `mtob`，應該用於取代 `mtob`。  
   
- `_mbsnccnt` 和 `_mbsnccnt_l` 會計算 `str`多位元組字元的第一個 `count` 中的字元數目。  如果 `_mbsnccnt` 和 `_mbsnccnt_l` 以雙位元組字元的第二個位元組遇到 NULL，第一個位元組也視為 NULL 且不包含在傳回的值。  `_mbsnccnt` 和 `_mbsnccnt_l` 取代 `btom` ，且應在 `btom`位置使用。  
+ `_mbsnccnt` 和 `_mbsnccnt_l` 計算在 `str` 的前 `count` 個位元組中找到的字元數目。 如果 `_mbsnccnt` 和 `_mbsnccnt_l` 在雙位元組字元的第二個位元組碰到 NULL，則第一個位元組也視為 NULL 且不包含在傳回的計數值中。 `_mbsnccnt` 和 `_mbsnccnt_l` 取代 `btom`，應該用於取代 `btom`。  
   
- 如果 `str` 為 null 指標或為 `count` 為 0，這些函式會叫用無效的參數處理常式如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述， `errno` 會設定為 `EINVAL`且函式會傳回 0。  
+ 如果 `str` 為 Null 指標，或 `count` 為 0，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述，`errno` 設為 `EINVAL` 且函式傳回 0。  
   
- 輸出值受地區設定的`LC_CTYPE` 分類設定所影響。如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 。  這些函式沒有以 `_l` 後綴的版本在這些地區相依的行為上使用目前的地區設定，而以 `_l` 後綴版本除了它們會使用傳入的地區設定參數之外運作相同。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|常式|未定義 \_UNICODE and \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|--------|------------------------------|----------------|-------------------|  
+|常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|-------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnbcnt`|`_strncnt`|`_mbsnbcnt`|`_wcsncnt`|  
 |`_tcsnccnt`|`_strncnt`|`_mbsnbcnt`|`n/a`|  
 |`_wcsncnt`|`n/a`|`n/a`|`_mbsnbcnt`|  
 |`_wcsncnt`|`n/a`|`n/a`|`_mbsnccnt`|  
 |`n/a`|`n/a`|`_mbsnbcnt_l`|`_mbsnccnt_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_mbsnbcnt`|\<mbstring.h\>|  
-|`_mbsnbcnt_l`|\<mbstring.h\>|  
-|`_mbsnccnt`|\<mbstring.h\>|  
-|`_mbsnccnt_l`|\<mbstring.h\>|  
-|`_strncnt`|\<tchar.h\>|  
-|`_wcsncnt`|\<tchar.h\>|  
+|-------------|---------------------|  
+|`_mbsnbcnt`|\<mbstring.h>|  
+|`_mbsnbcnt_l`|\<mbstring.h>|  
+|`_mbsnccnt`|\<mbstring.h>|  
+|`_mbsnccnt_l`|\<mbstring.h>|  
+|`_strncnt`|\<tchar.h>|  
+|`_wcsncnt`|\<tchar.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_mbsnbcnt.c  
@@ -173,17 +189,17 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 The first 10 characters are single-byte.  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbsnbcat、\_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)
+ [_mbsnbcat、_mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)

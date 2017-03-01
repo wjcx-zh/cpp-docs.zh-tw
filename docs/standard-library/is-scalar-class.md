@@ -1,55 +1,68 @@
 ---
 title: "is_scalar 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.is_scalar"
-  - "std::tr1::is_scalar"
-  - "is_scalar"
-  - "std.is_scalar"
-  - "std::is_scalar"
-  - "type_traits/std::is_scalar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "is_scalar 類別 [TR1]"
-  - "is_scalar"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- is_scalar
+- std::is_scalar
+- type_traits/std::is_scalar
+dev_langs:
+- C++
+helpviewer_keywords:
+- is_scalar class
+- is_scalar
 ms.assetid: a0cdfc9a-f27e-4808-890f-6ed7942db60c
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# is_scalar 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
+ms.openlocfilehash: 7025e3eb4545689522375a9b7943360d9144c0f8
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="isscalar-class"></a>is_scalar 類別
 測試類型是否為純量。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-template<class Ty>  
-    struct is_scalar;  
+template <class Ty>  
+struct is_scalar;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `Ty`  
  要查詢的類型。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  類型述詞執行個體為 true，表示類型 `Ty` 是整數類型、浮點類型、列舉類型、指標類型、成員指標類型，或前述其中之一的 `cv-qualified` 形式，否則為 false。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
-// std_tr1__type_traits__is_scalar.cpp   
+```cpp  
+// std__type_traits__is_scalar.cpp   
 // compile with: /EHsc   
 #include <type_traits>   
 #include <iostream>   
@@ -75,15 +88,19 @@ int main()
   
 ```  
   
-  **is\_scalar\<trivial\> \=\= false**  
-**is\_scalar\<trivial \*\> \=\= true**  
-**is\_scalar\<int\> \=\= true**  
-**is\_scalar\<float\> \=\= true**   
-## 需求  
- **標頭：**\<type\_traits\>  
+```Output  
+is_scalar<trivial> == false  
+is_scalar<trivial *> == true  
+is_scalar<int> == true  
+is_scalar<float> == true  
+```  
   
- **命名空間:** std  
+## <a name="requirements"></a>需求  
+ **標頭：**\<type_traits>  
   
-## 請參閱  
- [\<type\_traits\>](../standard-library/type-traits.md)   
- [is\_compound 類別](../standard-library/is-compound-class.md)
+ **命名空間：** std  
+  
+## <a name="see-also"></a>另請參閱  
+ [<type_traits>](../standard-library/type-traits.md)   
+ [is_compound 類別](../standard-library/is-compound-class.md)
+

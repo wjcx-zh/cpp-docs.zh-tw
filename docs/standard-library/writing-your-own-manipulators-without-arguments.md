@@ -1,54 +1,73 @@
 ---
 title: "撰寫不含引數的操作工具 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "操作工具"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 撰寫不含引數的操作工具
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 276bba3dd5ce5debd926ebbc4ccfaf52c6b92097
+ms.lasthandoff: 02/24/2017
 
-不使用引數的文字操作工具不需要類別對複雜巨集的衍生和用途。  假設您的印表機需要 ESC \<\>\[進入粗體的方式。  您可以插入這個對直接輸入資料流:  
+---
+# <a name="writing-your-own-manipulators-without-arguments"></a>撰寫不含引數的操作工具
+撰寫不使用引數的操作工具，不需要衍生類別，也不需要使用複雜的巨集。 假設您的印表機需要一組 \<ESC>[ 以進入粗體模式。 您可以將這組直接插入資料流：  
   
 ```  
-cout << "regular " << '\033' << '[' << "boldface" << endl;  
+cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;  
 ```  
   
- 或者您可以定義 `bold` 操作，插入字元:  
+ 或者，您可以定義 `bold` 操作工具來插入字元：  
   
 ```  
-ostream& bold( ostream& os ) {  
-    return os << '\033' << '[';  
+ostream& bold(ostream& os) {  
+    return os <<'\033' <<'[';  
 }  
-cout << "regular " << bold << "boldface" << endl;  
+cout <<"regular " <<bold <<"boldface" <<endl;  
 ```  
   
- 全域定義的 `bold` 函式接受 `ostream` 參考引數並傳回 `ostream` 的參考。  因為它不需要存取私用類別項目的存取，它不是成員函式或 Friend。  `bold` 函式連接至資料流，因為資料流的 `<<` 運算子多載接受該函式，使用看起來像這樣的宣告:  
+ 全域定義的 `bold` 函式會接受 `ostream` 參考引數，並傳回 `ostream` 參考。 它不是成員函式或 Friend，因為它不需要存取任何私用類別項目。 `bold` 函式會使用如下的宣告來連接到資料流，因為已多載資料流的 `<<` 運算子來接受該類型的函式：  
   
 ```  
 _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))  
-{     
-   // call ios_base manipulator  
-   (*_Pfn)(*(ios_base *)this);  
-   return (*this);  
+{     // call ios_base manipulator  
+ (*_Pfn)(*(ios_base *)this);
+
+    return (*this);
+
 }  
 ```  
   
- 您可以使用這個功能擴充其他多載運算子。  在這個案例中，是在產生的 `bold` 插入字元輸入資料流。  函式不一定會呼叫，以插入資料流時，，當相鄰字元列印時。  因此，因為資料流的緩衝區，列印可以延遲。  
+ 您可以使用此功能來擴充其他多載的運算子。 在此案例中，`bold` 一定會將字元插入資料流。 函式會在將它插入資料流時呼叫，但在列印相鄰字元時並不需要。 因此，列印可能會因為資料流的緩衝區而延遲。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [輸出資料流](../standard-library/output-streams.md)
+
+

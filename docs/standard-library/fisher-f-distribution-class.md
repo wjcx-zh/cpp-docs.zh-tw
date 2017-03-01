@@ -1,84 +1,130 @@
 ---
 title: "fisher_f_distribution 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.fisher_f_distribution"
-  - "tr1.fisher_f_distribution"
-  - "std::tr1::fisher_f_distribution"
-  - "fisher_f_distribution"
-  - "random/std::tr1::fisher_f_distribution"
-  - "tr1::fisher_f_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fisher_f_distribution 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- fisher_f_distribution
+- std::fisher_f_distribution
+- random/std::fisher_f_distribution
+- std::fisher_f_distribution::reset
+- random/std::fisher_f_distribution::reset
+- std::fisher_f_distribution::m
+- random/std::fisher_f_distribution::m
+- std::fisher_f_distribution::n
+- random/std::fisher_f_distribution::n
+- std::fisher_f_distribution::param
+- random/std::fisher_f_distribution::param
+- std::fisher_f_distribution::min
+- random/std::fisher_f_distribution::min
+- std::fisher_f_distribution::max
+- random/std::fisher_f_distribution::max
+- std::fisher_f_distribution::operator()
+- random/std::fisher_f_distribution::operator()
+- std::fisher_f_distribution::param_type
+- random/std::fisher_f_distribution::param_type
+- std::fisher_f_distribution::param_type::m
+- random/std::fisher_f_distribution::param_type::m
+- std::fisher_f_distribution::param_type::n
+- random/std::fisher_f_distribution::param_type::n
+- std::fisher_f_distribution::param_type::operator==
+- random/std::fisher_f_distribution::param_type::operator==
+- std::fisher_f_distribution::param_type::operator!=
+- random/std::fisher_f_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- fisher_f_distribution class
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# fisher_f_distribution 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
+ms.openlocfilehash: 3a0fc233334909249f75978ba095cb3f31af90dc
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="fisherfdistribution-class"></a>fisher_f_distribution 類別
 產生費雪 F 分佈。  
   
-## 語法  
-  
+## <a name="syntax"></a>語法  
 ```  
-template<class RealType = double>  
+template<class RealType = double>
 class fisher_f_distribution  
-{  
+   {  
 public:  
-    // types  
-    typedef RealType result_type;  
-    struct param_type;  
-    // constructor and reset functions  
-    explicit fisher_f_distribution(RealType m = 1.0, RealType n = 1.0);  
-    explicit fisher_f_distribution(const param_type& parm);  
-    void reset();  
-    // generating functions  
-    template<class URNG>  
-    result_type operator()(URNG& gen);  
-    template<class URNG>  
-    result_type operator()(URNG& gen, const param_type& parm);  
-    // property functions  
-    RealType m() const;  
-    RealType n() const;  
-    param_type param() const;  
-    void param(const param_type& parm);  
-    result_type min() const;  
-    result_type max() const;  
-};  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  // constructor and reset functions  
+   explicit fisher_f_distribution(result_type m = 1.0, result_type n = 1.0);
+   explicit fisher_f_distribution(const param_type& parm);
+   void reset();
+
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+
+   // property functions  
+   result_type m() const;
+   result_type n() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
 ```  
+#### <a name="parameters"></a>參數  
+*RealType*  
+浮點結果類型，預設值為 `double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
   
-#### 參數  
- `RealType`  
- 浮點結果類型，預設值為 `double`。 可能的類型，請參閱 [\<random\>](../standard-library/random.md)。  
+*URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
   
-## 備註  
- 此範本類別描述產生使用者指定之整數類型的值的分佈 \(若無提供則為 `double` 類型\)，而這是根據費雪 F 分佈進行分佈。 下表提供各個成員的文章連結。  
+## <a name="remarks"></a>備註  
+ 此範本類別描述的分佈，可產生使用者指定之浮點類型的值 (若無提供則為 `double` 類型)，而這是根據費雪 F 分佈進行分佈。 下表提供各個成員的文章連結。  
   
 ||||  
 |-|-|-|  
-|[fisher\_f\_distribution::fisher\_f\_distribution](../Topic/fisher_f_distribution::fisher_f_distribution.md)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[fisher\_f\_distribution::param\_type](../Topic/fisher_f_distribution::param_type.md)|  
+|[fisher_f_distribution::fisher_f_distribution](#fisher_f_distribution__fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
+|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[fisher_f_distribution::param_type](#fisher_f_distribution__param_type)|  
   
  屬性函式 `m()` 和 `n()` 會分別傳回儲存的分佈參數 `m` 和 `n` 的值。  
   
- 如需分佈類別及其成員的詳細資訊，請參閱 [\<random\>](../standard-library/random.md)。  
+屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。  
+
+`min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
   
- 如需 F 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [F 分佈](http://go.microsoft.com/fwlink/?LinkId=400899)。  
+`reset()` 成員函式會捨棄任何快取的值，讓下個針對 `operator()` 呼叫的結果不是取決於呼叫之前取自引擎的任何值。  
   
-## 範例  
+`operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
+  
+ 如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+  
+ 如需 F 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [F-Distribution](http://go.microsoft.com/fwlink/LinkId=400899) (F 分佈)。  
+  
+## <a name="example"></a>範例  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -138,29 +184,29 @@ int main()
   
 ```  
   
-## 輸出  
+## <a name="output"></a>輸出  
  第一次執行：  
   
 ```  
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1  
 Enter a floating point value for the 'n' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 m() == 1.0000000000  
 n() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.0204569549  
-          2:   0.0221376644  
-          3:   0.0297234962  
-          4:   0.1600937252  
-          5:   0.2775342196  
-          6:   0.3950701700  
-          7:   0.8363200295  
-          8:   0.9512500702  
-          9:   2.7844815974  
-         10:   3.4320929653  
+    1: 0.0204569549  
+    2: 0.0221376644  
+    3: 0.0297234962  
+    4: 0.1600937252  
+    5: 0.2775342196  
+    6: 0.3950701700  
+    7: 0.8363200295  
+    8: 0.9512500702  
+    9: 2.7844815974  
+    10: 3.4320929653  
 ```  
   
  第二次執行：  
@@ -169,22 +215,22 @@ Distribution for 10 samples:
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): 1  
 Enter a floating point value for the 'n' distribution parameter (must be greater than zero): .1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 m() == 1.0000000000  
 n() == 0.1000000000  
 Distribution for 10 samples:  
-          1:   0.0977725649  
-          2:   0.5304122767  
-          3:   4.9468518084  
-          4:  25.1012074939  
-          5:  48.8082121613  
-          6: 401.8075539377  
-          7: 8199.5947873699  
-          8: 226492.6855335717  
-          9: 2782062.6639740225  
-         10: 20829747131.7185860000  
+    1: 0.0977725649  
+    2: 0.5304122767  
+    3: 4.9468518084  
+    4: 25.1012074939  
+    5: 48.8082121613  
+    6: 401.8075539377  
+    7: 8199.5947873699  
+    8: 226492.6855335717  
+    9: 2782062.6639740225  
+    10: 20829747131.7185860000  
 ```  
   
  第三次執行：  
@@ -193,28 +239,86 @@ Distribution for 10 samples:
 Enter a floating point value for the 'm' distribution parameter (must be greater than zero): .1  
 Enter a floating point value for the 'n' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 m() == 0.1000000000  
 n() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.0000000000  
-          2:   0.0000000000  
-          3:   0.0000000000  
-          4:   0.0000000000  
-          5:   0.0000000033  
-          6:   0.0000073975  
-          7:   0.0000703800  
-          8:   0.0280427735  
-          9:   0.2660239949  
-         10:   3.4363333954  
+    1: 0.0000000000  
+    2: 0.0000000000  
+    3: 0.0000000000  
+    4: 0.0000000000  
+    5: 0.0000000033  
+    6: 0.0000073975  
+    7: 0.0000703800  
+    8: 0.0280427735  
+    9: 0.2660239949  
+    10: 3.4363333954  
 ```  
   
-## 需求  
- **標頭：**\<random\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<random>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-namefisherfdistributionfisherfdistributiona--fisherfdistributionfisherfdistribution"></a><a name="fisher_f_distribution__fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
+ 建構分佈。  
+  
+```  
+explicit fisher_f_distribution(result_type m = 1.0, result_type n = 1.0);
+explicit fisher_f_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>參數  
+*m*  
+ `m` 分佈參數。  
+  
+*n*  
+ `n` 分佈參數。  
+  
+*parm*  
+ 用來建構分佈的 `param_type` 結構。  
+  
+### <a name="remarks"></a>備註  
+ **前置條件：**`0.0 < m` 和 `0.0 < n`  
+  
+ 第一個建構函式會建構物件，該物件的預存 `m` 值為 *m* 值，而該值的預存 `n` 值為 *n* 值。  
+  
+ 第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+  
+##  <a name="a-namefisherfdistributionparamtypea--fisherfdistributionparamtype"></a><a name="fisher_f_distribution__param_type"></a>  fisher_f_distribution::param_type  
+ 儲存分佈的參數。  
+  
+```cpp  
+struct param_type {  
+   typedef fisher_f_distribution<result_type> distribution_type;  
+   param_type(result_type m = 1.0, result_type n = 1.0);
+   result_type m() const;
+   result_type n() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };  
+```  
+### <a name="parameters"></a>參數  
+*m*  
+ `m` 分佈參數。  
+  
+*n*  
+ `n` 分佈參數。  
+  
+*right*  
+要與這個項目比較的 `param_type` 物件。  
+  
+### <a name="remarks"></a>備註  
+ **前置條件：**`0.0 < m` 和 `0.0 < n`  
+  
+ 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+  
+## <a name="see-also"></a>另請參閱  
+ [\<random>](../standard-library/random.md)
+
+
+
+

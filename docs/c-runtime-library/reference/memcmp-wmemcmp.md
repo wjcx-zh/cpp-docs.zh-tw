@@ -1,51 +1,66 @@
 ---
 title: "memcmp、wmemcmp | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "memcmp"
-  - "wmemcmp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memcmp"
-  - "wmemcmp"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "memcmp 函式"
-  - "wmemcmp 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- memcmp
+- wmemcmp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- memcmp
+- wmemcmp
+dev_langs:
+- C++
+helpviewer_keywords:
+- wmemcmp function
+- memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# memcmp、wmemcmp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 902d19ff7e548fcf2847ab492e1237b36035d06f
+ms.lasthandoff: 02/24/2017
 
-比較兩個緩衝區裏的字元。  
+---
+# <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
+比較兩個緩衝區中的字元。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -61,7 +76,7 @@ int wmemcmp(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `buf1`  
  第一個緩衝區。  
   
@@ -69,36 +84,37 @@ int wmemcmp(
  第二個緩衝區。  
   
  `count`  
- 要比較的字元數。\( 在`memcmp`比較位元組， `wmemcmp`比較寬字元\)。  
+ 要比較的字元數。 (比較 `memcmp` 和寬字元 `wmemcmp` 的位元組數)。  
   
-## 傳回值  
- 回傳表示兩個緩衝區大小關係的值。  
+## <a name="return-value"></a>傳回值  
+ 傳回值表示緩衝區之間的關聯性。  
   
-|傳回值|buf1 和 buf2第一個 `count` 字元之間的大小關係|  
-|---------|--------------------------------------|  
-|\< 0|`buf1` 小於 `buf2`|  
-|0|`buf1` 與 `buf2` 相同|  
-|\> 0|`buf1` 大於 `buf2`|  
+|傳回值|buf1 和 buf2 的前 `count` 個字元的關聯性|  
+|------------------|---------------------------------------------------------------|  
+|< 0|`buf1` 小於 `buf2`|  
+|0|`buf1` 等於 `buf2`|  
+|> 0|`buf1` 大於 `buf2`|  
   
-## 備註  
- 比較 `buf1` 和 `buf2` 的第一個 `count` 字元並傳回表示其大小關係的值。  非零傳回值的正負號是在緩衝區中表示第一對不同的值之差異的標記。  其值會解譯為 `memcmp`的 `unsigned char` ，以及解釋為 `wmemcmp`的 `wchar_t` 。  
+## <a name="remarks"></a>備註  
+ 比較 `buf1` 和 `buf2` 的前 `count` 個字元，並傳回指出其關聯性的值。 非零傳回值的正負號是緩衝區中第一組不同值之間差異的正負號。 值會解譯為 `memcmp` 的 `unsigned char`，以及 `wmemcmp` 的 `wchar_t`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`memcmp`|\<memory.h\> 或 \<string.h\>|  
-|`wmemcmp`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memcmp`|\<memory.h> 或 \<string.h>|  
+|`wmemcmp`|\<wchar.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
-// crt_memcmp.c  
+  
+      // crt_memcmp.c  
 /* This program uses memcmp to compare  
  * the strings named first and second. If the first  
  * 19 bytes of the strings are equal, the program  
@@ -136,7 +152,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 Compare '1234567890123456789' to '1234567890123456789':  
@@ -145,14 +161,14 @@ Compare '1,2' to '1,2':
 int_arr1 is equal to int_arr2.  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr、wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
  [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset、wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcmp、wcscmp、\_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)
+ [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)

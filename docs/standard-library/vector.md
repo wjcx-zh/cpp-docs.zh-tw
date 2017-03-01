@@ -1,36 +1,52 @@
 ---
-title: "&lt; 向量 &gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<vector>"
-  - "std.<vector>"
-  - "std::<vector>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vector 標頭"
+title: '&lt;vector&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <vector>
+- std.<vector>
+- std::<vector>
+dev_langs:
+- C++
+helpviewer_keywords:
+- vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# &lt; 向量 &gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
+ms.openlocfilehash: 99aa5d5df1367dfb6e6f6c0b9333783240a12690
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="ltvectorgt"></a>&lt;vector&gt;
 定義容器範本類別 vector 以及數個支援的範本。  
   
  `vector` 是以線性順序組織指定類型項目的容器。 它可讓您快速隨機存取任何項目，並動態地加入序列及從序列中移除。 當隨機存取效能很重要時，`vector` 是慣用的序列容器。  
   
- 如需有關類別 `vector`, ，請參閱 [vector 類別](../standard-library/vector-class.md)。 如需特製化 `vector<bool>`, ，請參閱 [向量 \< bool> 類別](../standard-library/vector-bool-class.md)。  
+ 如需類別 `vector` 的詳細資訊，請參閱 [vector 類別](../standard-library/vector-class.md)。 如需特製化 `vector<bool>` 的相關資訊，請參閱 [vector\<bool> 類別](../standard-library/vector-bool-class.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -99,12 +115,12 @@ void swap (
   
 |||  
 |-|-|  
-|[運算子 ！=](../Topic/%3Cvector%3E%20operators.md#operator_neq)|測試運算子左邊的向量物件是否不等於右邊的向量物件。|  
-|[運算子 <](../Topic/%3Cvector%3E%20operators.md#operator_lt_)|測試運算子左邊的向量物件是否小於右邊的向量物件。|  
-|[運算子 \< =](../Topic/%3Cvector%3E%20operators.md#operator_lt__eq)|測試運算子左邊的向量物件是否小於或等於右邊的向量物件。|  
-|[運算子 = =](../Topic/%3Cvector%3E%20operators.md#operator_eq_eq)|測試運算子左邊的向量物件是否等於右邊的向量物件。|  
-|[運算子 >](../Topic/%3Cvector%3E%20operators.md#operator_gt_)|測試運算子左邊的向量物件是否大於右邊的向量物件。|  
-|[運算子 > =](../Topic/%3Cvector%3E%20operators.md#operator_gt__eq)|測試運算子左邊的向量物件是否大於或等於右邊的向量物件。|  
+|[operator! =](../standard-library/vector-operators.md#operator_neq)|測試運算子左邊的向量物件是否不等於右邊的向量物件。|  
+|[operator<](../standard-library/vector-operators.md#operator_lt_)|測試運算子左邊的向量物件是否小於右邊的向量物件。|  
+|[operator\<=](../standard-library/vector-operators.md#operator_lt__eq)|測試運算子左邊的向量物件是否小於或等於右邊的向量物件。|  
+|[operator==](../standard-library/vector-operators.md#operator_eq_eq)|測試運算子左邊的向量物件是否等於右邊的向量物件。|  
+|[operator>](../standard-library/vector-operators.md#operator_gt_)|測試運算子左邊的向量物件是否大於右邊的向量物件。|  
+|[operator>=](../standard-library/vector-operators.md#operator_gt__eq)|測試運算子左邊的向量物件是否大於或等於右邊的向量物件。|  
   
 ### <a name="classes"></a>類別  
   
@@ -116,15 +132,16 @@ void swap (
   
 |||  
 |-|-|  
-|[向量 \< bool> 類別](../standard-library/vector-bool-class.md)|`bool` 類型項目之樣板類別向量的完整特製化，並提供特製化所使用之基礎類型的配置器。|  
+|[vector\<bool> 類別](../standard-library/vector-bool-class.md)|`bool` 類型項目之樣板類別向量的完整特製化，並提供特製化所使用之基礎類型的配置器。|  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \< 向量>  
+ **標頭：** \<vector>  
   
- **命名空間︰** std  
+ **命名空間：** std  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
 

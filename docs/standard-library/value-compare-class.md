@@ -1,68 +1,89 @@
 ---
 title: "value_compare 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::value_compare"
-  - "std.value_compare"
-  - "value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::value_compare
+- std.value_compare
+- value_compare
+dev_langs:
+- C++
+helpviewer_keywords:
+- value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 類別 value_compare 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: c82ae35feadcf1f28af47d3f055e854f7bcf6a34
+ms.lasthandoff: 02/24/2017
 
-提供可以藉由比較其索引鍵的值會決定它們在 hash\_map 的相對順序比較 hash\_map 元素的函式物件。  
+---
+# <a name="valuecompare-class"></a>value_compare 類別
+提供函式物件，該物件可透過比較 hash_map 項目的索引鍵值來比較項目，以判斷項目在 hash_map 中的相對順序。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class value_compare
+ : std::public binary_function<value_type, value_type, bool>
+{
+public:
+    bool operator()(
+    const value_type& left,
+    const value_type& right) const
+ {
+    return (comp(left.first, right.first));
+
+ }
+protected:
+    value_compare(const key_compare& c) : comp (c) { }
+    key_compare comp;
+};
 ```  
-class value_compare  
-    : std::public binary_function<value_type, value_type, bool>   
-{  
-public:  
-    bool operator( )(  
-        const value_type& _Left,  
-        const value_type& _Right ) const  
-        {  
-            return ( comp( _Left.first, _Right.first ) );   
-        }  
-protected:  
-    value_compare( const key_compare& c ) : comp (c) { }  
-    key_compare comp;  
-};  
-```  
   
-## 備註  
- 在整個項目包含之間 **value\_types** 的 value\_compare 提供的比較準則 hash\_map 中個別項目的索引鍵之間的比較產生的結構描述類別建構。  成員函式會使用物件在函式物件儲存的型別 `key_compare`**comp** 提供 value\_compare 比較兩個項目排序索引鍵元件。  
+## <a name="remarks"></a>備註  
+ 由 value_compare 提供在 hash_map 所包含全部 **value_types** 項目之間的比較準則，是透過輔助類別建構函式在個別項目之間的索引鍵比較而導出。 成員函式運算子會使用型別 `key_compare` 的物件 **comp**，該物件儲存於由 value_compare 提供的函式物件中，來比較兩個項目的排序鍵元件。  
   
- 如需 hash\_sets 和 hash\_multisets，是簡單的容器索引鍵值與項目值相同， value\_compare 相當於 `key_compare`;如需 hash\_maps 和 hash\_multimaps 它們不是，，因為型別 `pair` 項目的值與項目的索引鍵的值不相同。  
+ 對於 hash_sets 和 hash_multisets 而言 (這些是簡單容器，其中索引鍵值和項目值相同)，value_compare 相當於 `key_compare`；但對於 hash_maps 和 hash_multimaps 則否，因為項目型別 `pair` 的值與項目的索引鍵值不同。  
   
- 在 Visual C\+\+ .NET 2003 中， [\<hash\_map\>](../standard-library/hash-map.md) 和 [\<hash\_set\>](../standard-library/hash-set.md) 標頭檔的成員不在 std 命名空間中，而是移至 stdext 命名空間。  如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+ 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
-## 範例  
- 中的 [hash\_map::value\_comp](../Topic/hash_map::value_comp.md) 參閱本範例說明如何宣告和使用 value\_compare。  
+## <a name="example"></a>範例  
+ 如需如何宣告和使用 value_compare 的範例，請參閱 [hash_map::value_comp](../standard-library/hash-map-class.md#hash_map__value_comp) 範例。  
   
-## 需求  
- **標頭檔:** \<hash\_map\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<hash_map>  
   
- **命名空間：**stdext  
+ **命名空間：** stdext  
   
-## 請參閱  
- [binary\_function 結構](../standard-library/binary-function-struct.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="see-also"></a>另請參閱  
+ [binary_function 結構](../standard-library/binary-function-struct.md)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

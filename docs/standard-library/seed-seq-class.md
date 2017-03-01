@@ -1,105 +1,120 @@
 ---
 title: "seed_seq 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "tr1::seed_seq"
-  - "std::tr1::seed_seq"
-  - "tr1.seed_seq"
-  - "seed_seq"
-  - "std.tr1.seed_seq"
-  - "random/std::tr1::seed_seq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "seed_seq 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- seed_seq
+- std::seed_seq
+- random/std::seed_seq
+- std::seed_seq::result_type
+- random/std::seed_seq::result_type
+- std::seed_seq::generate
+- random/std::seed_seq::generate
+- std::seed_seq::size
+- random/std::seed_seq::size
+- std::seed_seq::param
+- random/std::seed_seq::param
+dev_langs:
+- C++
+helpviewer_keywords:
+- seed_seq class
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
 caps.latest.revision: 19
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# seed_seq 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: b637e311971b71564244f9bbdcfc37973a514710
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="seedseq-class"></a>seed_seq 類別
 儲存不帶正負號的整數值的向量，可以提供亂數引擎的隨機化種子。  
   
-## 語法  
-  
+## <a name="syntax"></a>語法  
 ```  
 class seed_seq  
-{  
+   {  
 public:  
-    // types  
-    typedef unsigned int result_type;  
-  
-    // constructors  
-    seed_seq();  
-  
-    template<class T>  
-    seed_seq(initializer_list<T> initlist);  
-  
-    template<class InputIterator>  
-    seed_seq(InputIterator begin, InputIterator end);  
-  
-    // generating functions  
-    template<class RandomAccessIterator>  
-    void generate(RandomAccessIterator begin, RandomAccessIterator end);  
-  
-    // property functions  
-    size_t size() const;  
-  
-    template<class OutputIterator>  
-    void param(OutputIterator dest) const;  
-  
-    // no copy functions  
-    seed_seq(const seed_seq&) = delete;  
-    void operator=(const seed_seq&) = delete;  
-};  
+   // types  
+   typedef unsigned int result_type;  
+
+   // constructors  
+   seed_seq();
+   template <class T>  
+      seed_seq(initializer_list<T> initlist);
+   template <class InputIterator>  
+      seed_seq(InputIterator begin, InputIterator end);
+
+   // generating functions  
+   template <class RandomAccessIterator>  
+      void generate(RandomAccessIterator begin, RandomAccessIterator end);
+
+   // property functions  
+   size_t size() const;
+   template <class OutputIterator>  
+      void param(OutputIterator dest) const;
+
+   // no copy functions  
+   seed_seq(const seed_seq&) = delete;  
+   void operator=(const seed_seq&) = delete;  
+   };  
 ```  
-  
-## 類型  
+## <a name="types"></a>類型  
  `typedef unsigned int result_type;`   
 種子序列的項目類型。 32 位元不帶正負號的整數類型。  
   
-## 建構函式  
+## <a name="constructors"></a>建構函式  
  `seed_seq();`   
-預設建構函式，初始化具有空的內部序列。  
+預設的建構函式，會初始化以具備空的內部序列。  
   
  `template<class T>`   
  `seed_seq(initializer_list<T> initlist);`   
-使用 `initlist` 設定內部序列。  
+使用 `initlist` 設定內部序列。                   
 `T` 必須是整數類型。  
   
  `template<class InputIterator>`   
  `seed_seq(InputIterator begin, InputIterator end);`   
-初始化內部序列使用提供的輸入迭代器範圍中所有項目。  
+使用輸入迭代器範圍中提供的所有元素，來初始化內部序列。                  
 `iterator_traits<InputIterator>::value_type` 必須是整數類型。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 產生函式  
- `template<class RandomAccessIterator> void generate(RandomAccessIterator begin, RandomAccessIterator end);`   
-會使用內部演算法所提供序列的項目中填入。 此演算法會受到內部序列 `seed_seq` 已初始化。  
-不做任何動作如果 `begin == end`。  
+### <a name="generating-functions"></a>產生函式  
+ `template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);`   
+使用內部演算法，以填入所提供序列的元素。 已初始化 `seed_seq` 的內部序列會影響此演算法。                          
+如果 `begin == end`，則不會有任何動作。  
   
-### 屬性函式  
+### <a name="property-functions"></a>屬性函式  
  `size_t size() const;`   
-傳回數字中的項目 `seed_seq`。  
+傳回 `seed_seq` 中項目的數目。  
   
  `template<class OutputIterator> void param(OutputIterator dest) const;`   
 將內部序列複製至輸出迭代器 `dest`。  
   
-## 範例  
- 下列程式碼範例會執行這三個建構函式，並在指派給陣列時從產生的 `seed_seq` 執行個體產生輸出。 如需範例，會使用 `seed_seq` 隨機號碼產生器，請參閱 [\<random\>](../standard-library/random.md)。  
+## <a name="example"></a>範例  
+ 下列程式碼範例會執行這三個建構函式，並在指派給陣列時從產生的 `seed_seq` 執行個體產生輸出。 如需搭配亂數產生器使用 `seed_seq` 的範例，請參閱 [\<random>](../standard-library/random.md)。  
   
 ```cpp  
 #include <iostream>  
@@ -137,20 +152,45 @@ int main()
 }  
 ```  
   
-## 輸出  
-  
 ```Output  
+seed_seq::size(): 0  
+seed_seq::param():  
+Generating a sequence of 5 elements into an array:  
+505382999  
+163489202  
+3932644188  
+763126080  
+73937346  
   
-seed_seq::size(): 0 seed_seq::param()︰ 產生 5 個元素陣列的序列︰ 505382999 163489202 3932644188 763126080 73937346 seed_seq::size(): 3 seed_seq::param(): 1701年 1729年 1791年產生 5 個元素陣列的序列︰ 1730669648 1954224479 2809786021 1172893117 2393473414 seed_seq::size(): 7 seed_seq::param(): 65 32 66 32 67 32 68 產生 5 個元素陣列的序列: 3139879222 3775111734 1084804564 2485037668 1985355432  
+seed_seq::size(): 3  
+seed_seq::param(): 1701 1729 1791  
+Generating a sequence of 5 elements into an array:  
+1730669648  
+1954224479  
+2809786021  
+1172893117  
+2393473414  
+  
+seed_seq::size(): 7  
+seed_seq::param(): 65 32 66 32 67 32 68  
+Generating a sequence of 5 elements into an array:  
+3139879222  
+3775111734  
+1084804564  
+2485037668  
+1985355432  
 ```  
   
-## 備註  
- 這個類別的成員函式不會擲回例外狀況。  
+## <a name="remarks"></a>備註  
+ 此類別的成員函式不會擲回例外狀況。  
   
-## 需求  
- **標頭：**\<random\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<random>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<random\>](../standard-library/random.md)
+## <a name="see-also"></a>另請參閱  
+ [\<random>](../standard-library/random.md)
+
+
+

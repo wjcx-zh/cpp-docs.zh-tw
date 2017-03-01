@@ -1,32 +1,48 @@
 ---
 title: "out_of_range 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "out_of_range"
-  - "stdexcept/std::out_of_range"
-  - "std.out_of_range"
-  - "std::out_of_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "out_of_range 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- out_of_range
+- stdexcept/std::out_of_range
+- std.out_of_range
+- std::out_of_range
+dev_langs:
+- C++
+helpviewer_keywords:
+- out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# out_of_range 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 356b39825e0240cc021063470b787a524b17b809
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="outofrange-class"></a>out_of_range 類別
 此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告引數超出其有效範圍。  
   
 ## <a name="syntax"></a>語法  
@@ -42,11 +58,11 @@ public:
 ```  
   
 ## <a name="remarks"></a>備註  
- 所傳回的值 [什麼](../standard-library/exception-class1.md) 是一份 **訊息**`.`[資料](../standard-library/basic-string-class.md#basic_string__data)。  
+ [what](../standard-library/exception-class.md) 所傳回的值為 **message**`.`[data](../standard-library/basic-string-class.md#basic_string__data) 的複本。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // out_of_range.cpp  
 // compile with: /EHsc  
 #include <string>  
@@ -75,11 +91,12 @@ Caught: invalid string position
 ```  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \< stdexcept>  
+ **標頭：**\<stdexcept>  
   
- **命名空間︰** std  
+ **命名空間：** std  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [logic_error 類別](../standard-library/logic-error-class.md)   
- [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 

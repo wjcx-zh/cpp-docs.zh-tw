@@ -1,49 +1,71 @@
 ---
-title: "regex_traits &lt; char &gt; 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::regex_traits<char>"
-  - "regex_traits<char>"
-  - "std.tr1.regex_traits<char>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "regex_traits < char > 類別 [TR1]"
+title: "regex_traits&lt;char&gt; 類別 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::regex_traits<char>
+- regex/std::regex_traits<char>
+dev_langs:
+- C++
+helpviewer_keywords:
+- regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
 caps.latest.revision: 17
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# regex_traits &lt; char &gt; 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
+ms.openlocfilehash: ccff902e47483f7f5346637e66e66cb5036d6ffb
+ms.lasthandoff: 02/24/2017
 
-regex\_traits for char 的特製化。  
+---
+# <a name="regextraitsltchargt-class"></a>regex_traits&lt;char&gt; 類別
+regex_traits for char 的特製化。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <>  
-    class regex_traits<char>  
+class regex_traits<char>  
 ```  
   
-## 備註  
- 類別是類別樣板的明確特製化 [regex\_traits 類別](../standard-library/regex-traits-class.md) 類型項目的 `char` （以便它可以利用操作此類型的物件程式庫函式）。  
+## <a name="remarks"></a>備註  
+ 此類別是針對類型 `char` 的項目明確特製化的範本類別 [regex_traits](../standard-library/regex-traits-class.md) (使其能夠運用程式庫函式來管理此類型的物件)。  
   
-## 需求  
- **標頭：**\<regex\>  
+## <a name="requirements"></a>需求  
+ **標頭︰**\<regex>  
   
- **命名空間：**std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<regex\>](../standard-library/regex.md)   
- [regex\_traits 類別](../standard-library/regex-traits-class.md)
+## <a name="see-also"></a>另請參閱  
+[\<regex>](../standard-library/regex.md)  
+[regex_constants 類別](../standard-library/regex-constants-class.md)  
+[regex_error 類別](../standard-library/regex-error-class.md)  
+[\<regex> 函式](../standard-library/regex-functions.md)  
+[regex_iterator 類別](../standard-library/regex-iterator-class.md)  
+[\<regex> 運算子](../standard-library/regex-operators.md)  
+[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
+[regex_traits 類別](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
+

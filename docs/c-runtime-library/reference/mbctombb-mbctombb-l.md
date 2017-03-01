@@ -1,57 +1,73 @@
 ---
 title: "_mbctombb、_mbctombb_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbctombb_l"
-  - "_mbctombb"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mbctombb_l"
-  - "_mbctombb"
-  - "mbctombb_l"
-  - "mbctombb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbctombb 函式"
-  - "_mbctombb_l 函式"
-  - "mbctombb 函式"
-  - "mbctombb_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbctombb_l
+- _mbctombb
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mbctombb_l
+- _mbctombb
+- mbctombb_l
+- mbctombb
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbctombb function
+- mbctombb_l function
+- mbctombb function
+- _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _mbctombb、_mbctombb_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d1831c28a8aab99478fb362d46db352674a360df
+ms.lasthandoff: 02/24/2017
 
-轉換雙位元組多位元組字元至對應的單一位元組、多位元組字元。  
+---
+# <a name="mbctombb-mbctombbl"></a>_mbctombb、_mbctombb_l
+將雙位元組的多位元組字元轉換成對應之單一位元組的多位元組字元。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned int _mbctombb(  
@@ -63,38 +79,38 @@ unsigned int _mbctombb_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `c`  
  要轉換的多位元組字元。  
   
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 如果成功，則 `_mbctombb` 和 `_mbctombb_l`傳回對應於 `c`的單一位元組字元;否則會傳回 `c`。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，`_mbctombb` 和 `_mbctombb_l` 會傳回對應至 `c` 的單一位元組字元；否則會傳回 `c`。  
   
-## 備註  
- `_mbctombb` 和 `_mbctombb_l`函式轉換指定多位元組字元至對應的單一位元組、多位元組字元。  字元必須對應於這個範圍 0x20 內的單一位元組字元– 0x7E 或 0xA1 –要轉換的 0xDF。  
+## <a name="remarks"></a>備註  
+ `_mbctombb` 和 `_mbctombb_l` 函式會將指定的多位元組字元轉換成對應之單一位元組的多位元組字元。 這些字元必須對應至 0x20-0x7E 或 0xA1-0xDF 範圍內的單一位元組字元，才能進行轉換。  
   
- 輸出值受地區設定的 `LC_CTYPE`  分類設定所影響。如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 。  沒有 `_l` 後綴的函式版本在這些地區相依的行為上使用目前的地區設定，而有 `_l`  後綴的函式版本也是相同的，除了它們會使用傳入的地區設定參數之外。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這個沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本與其相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- 在舊版中， `_mbctombb` 會呼叫 `zentohan`。  請改用\_ `mbctombb`。  
+ 在舊版中，`_mbctombb` 稱為 `zentohan`。 請改用 _`mbctombb`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_mbctombb`|\<mbstring.h\>|  
-|`_mbctombb_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_mbctombb`|\<mbstring.h>|  
+|`_mbctombb_l`|\<mbstring.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
- [\_mbbtombc、\_mbbtombc\_l](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
- [\_mbcjistojms、\_mbcjistojms\_l、\_mbcjmstojis、\_mbcjmstojis\_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
- [\_mbctohira、\_mbctohira\_l、\_mbctokata、\_mbctokata\_l](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
- [\_mbctolower、\_mbctolower\_l、\_mbctoupper、\_mbctoupper\_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
+ [_mbbtombc、_mbbtombc_l](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
+ [_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
+ [_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
+ [_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)

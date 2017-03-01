@@ -1,63 +1,77 @@
 ---
 title: "fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fprintf_s_l"
-  - "fwprintf_s"
-  - "fprintf_s"
-  - "_fwprintf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftprintf_s"
-  - "fprintf_s"
-  - "fwprintf_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_fprintf_s_l 函式"
-  - "_ftprintf_s 函式"
-  - "_ftprintf_s_l 函式"
-  - "_fwprintf_s_l 函式"
-  - "fprintf_s 函式"
-  - "fprintf_s_l 函式"
-  - "ftprintf_s 函式"
-  - "ftprintf_s_l 函式"
-  - "fwprintf_s 函式"
-  - "fwprintf_s_l 函式"
-  - "將格式化的資料列印至資料流"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fprintf_s_l
+- fwprintf_s
+- fprintf_s
+- _fwprintf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _ftprintf_s
+- fprintf_s
+- fwprintf_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftprintf_s_l function
+- ftprintf_s function
+- _fprintf_s_l function
+- _ftprintf_s function
+- _ftprintf_s_l function
+- fwprintf_s_l function
+- fwprintf_s function
+- fprintf_s_l function
+- fprintf_s function
+- _fwprintf_s_l function
+- print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
 caps.latest.revision: 21
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: d6fc4a71132483e4eb8646fe5394994a0af7fbd6
+ms.lasthandoff: 02/24/2017
 
-將格式化的資料列印至資料流。  這些是 [fprintf、\_fprintf\_l、fwprintf、\_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) 的安全性增強版本，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
+---
+# <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
+將格式化資料列印至資料流。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) 版本。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int fprintf_s(   
@@ -84,9 +98,9 @@ int _fwprintf_s_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `stream`  
- 指向 `FILE` 結構的指標。  
+ `FILE` 結構的指標。  
   
  `format`  
  格式控制字串。  
@@ -97,40 +111,40 @@ int _fwprintf_s_l(
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- `fprintf_s`傳回寫入的位元組數目。  `fwprintf_s` 傳回寫入的寬字元數目。  當發生輸出錯誤時，這些函式都會傳回負值。  
+## <a name="return-value"></a>傳回值  
+ `fprintf_s` 會傳回寫入的位元組數。 `fwprintf_s` 會傳回寫入的寬字元數。 發生輸出錯誤時，所有這些函式都會改為傳回負值。  
   
-## 備註  
- `fprintf_s` 會在 `stream` 輸出中格式化並儲存一連串字元和值。每個 `argument` 函式\(如果有的話\) 是根據 `format` 中的對應格式規格進行轉換和輸出。如果是 `fprintf_s`，則 `format` 引數具有它在 `printf_s`的相同語法和用法。  
+## <a name="remarks"></a>備註  
+ `fprintf_s` 會格式化一連串的字元和值，並將其列印至輸出 `stream`。 每個 `argument` 函式 (如果有的話) 都是根據 `format` 中的對應格式規格進行轉換和輸出。 針對 `fprintf_s`，`format` 引數的語法和用法與在 `printf_s` 中相同。  
   
- `fwprintf_s` 是 `fprintf_s` 的寬字元版本；在`fwprintf_s`中，`format` 是寬字元字串。  如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。  `fprintf_s` 目前不支援輸出到 UNICODE 串流。  
+ `fwprintf_s` 是寬字元版本的 `fprintf_s`；在 `fwprintf_s` 中，`format` 是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 `fprintf_s` 目前不支援輸出至 UNICODE 資料流。  
   
- 這些以 `_l` 後綴的函式版本除了使用傳入的地區設定以外行為相同。  
+ 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定參數，而不使用目前的地區設定。  
   
 > [!IMPORTANT]
 >  確認 `format` 不是使用者定義的字串。  
   
- 像不安全的版本 \(請參閱 [fprintf、\_fprintf\_l、fwprintf、\_fwprintf\_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)\)，如果 `stream` 或 `format`為 null 指標，這些函式會驗證它們的參數並叫用無效的參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  這些函式與不安全的版本不同之處在於格式字串也會驗證。  如果有任何未知或格式錯誤的格式規範，這些函式產生無效的參數例外狀況。  在所有案例中，如果允許繼續執行，這些函式會傳回 \-1 ，並將  `errno`設為`EINVAL` 。  如需更多關於這些和其他回傳碼的資訊，請參閱 [\_doserrno 、 errno 、 \_sys\_errlist 和 \_sys\_nerr \(\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr\)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
+ 與不安全版本相同 (請參閱 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md))，如果 `stream` 或 `format` 是 Null 指標，則這些函式會驗證其參數，並叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 這些函式與不安全版本的差異在於也會一併驗證格式字串本身。 如果有任何未知或錯誤格式的格式規範，則這些函式會產生無效參數例外狀況。 在所有情況下，如果允許繼續執行，此函式會傳回 -1，並將 `errno` 設為 `EINVAL`。 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|\_UNICODE 和 \_MBCS 未定義|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_ftprintf_s`|`fprintf_s`|`fprintf_s`|`fwprintf_s`|  
 |`_ftprintf_s_l`|`_fprintf_s_l`|`_fprintf_s_l`|`_fwprintf_s_l`|  
   
  如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|功能|必要的標頭|  
-|--------|-----------|  
-|`fprintf_s`, `_fprintf_s_l`|\<stdio.h\>|  
-|`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h\> 或 \<wchar.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`fprintf_s`, `_fprintf_s_l`|\<stdio.h>|  
+|`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_fprintf_s.c  
@@ -160,14 +174,17 @@ int main( void )
 }  
 ```  
   
-  **this is a string**  
-**10**  
-**1.500000**   
-## .NET Framework 對等用法  
+```Output  
+this is a string  
+10  
+1.500000  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [\_cprintf、\_cprintf\_l、\_cwprintf、\_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf、\_fscanf\_l、fwscanf、\_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf、_fscanf_l、fwscanf、_fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)

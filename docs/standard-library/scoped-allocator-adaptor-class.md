@@ -1,108 +1,317 @@
 ---
 title: "scoped_allocator_adaptor 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.scoped_allocator_adaptor"
-  - "scoped_allocator_adaptor"
-  - "scoped_allocator/std::scoped_allocator_adaptor"
-  - "std::scoped_allocator_adaptor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "scoped_allocator_adaptor 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.scoped_allocator_adaptor
+- scoped_allocator_adaptor
+- scoped_allocator/std::scoped_allocator_adaptor
+- std::scoped_allocator_adaptor
+dev_langs:
+- C++
+helpviewer_keywords:
+- scoped_allocator_adaptor Class
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# scoped_allocator_adaptor 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
+ms.openlocfilehash: f4c343592c2c767d52a66091ecca5b1bd4ae9e88
+ms.lasthandoff: 02/24/2017
 
-表示配置器巢。  
+---
+# <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 類別
+表示巢狀配置器。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
-template<class Outer, class... Inner>  
-    class scoped_allocator_adaptor;  
+template <class Outer, class... Inner>  
+class scoped_allocator_adaptor;  
 ```  
   
-## 備註  
- 樣板類別封裝一或多個配置器巢。  每個類別具有 `outer_allocator_type`， `Outer`的同義字的最外層的配置器，即 `scoped_allocator_adaptor` 物件的公用基底。  `Outer` 用來配置容器所使用的記憶體。  您可以藉由呼叫 `outer_allocator`取得此配置器基底物件的參考。  
+## <a name="remarks"></a>備註  
+ 此樣板類別會封裝巢狀的一或多個配置器。 這類每個類別都具備類型 `outer_allocator_type` (`Outer` 的同義字) 的最外層配置器，其為 `scoped_allocator_adaptor` 物件的公用基底。 `Outer` 可用來配置容器所使用的記憶體。 您可以呼叫 `outer_allocator`，來取得此配置器基底物件的參考。  
   
- 巢狀的其餘部分具有型別 `inner_allocator_type`。  內部配置器用來配置項目的記憶體在容器內。  您可以藉由呼叫 `inner_allocator`取得這個型別會儲存物件的參考。  如果 `Inner...` 不是 null，則 `inner_allocator_type` 的型別，則為 `scoped_allocator_adaptor<Inner...>`，而 `inner_allocator` 指定為 10% 的物件。  否則， `inner_allocator_type` 的型別，則為 `scoped_allocator_adaptor<Outer>`，且 `inner_allocator` 會指定整個物件。  
+ 巢狀的其餘部分會具備 `inner_allocator_type` 類型。 內部配置器可用來配置記憶體，以供容器內的項目使用。 您可以呼叫 `inner_allocator`，來取得此類型之預存物件的參考。 如果 `Inner...` 不是空的，`inner_allocator_type` 就具備 `scoped_allocator_adaptor<Inner...>` 類型，而 `inner_allocator` 會指定成員物件。 否則，`inner_allocator_type` 具備 `scoped_allocator_adaptor<Outer>` 類型，而 `inner_allocator` 會指定整個物件。  
   
- 的行為，就像具有任意深度，請複製該程式碼最內層封裝的配置器視需要。  
+ 巢狀的行為就如同它含有任意深度，可視需要複寫其最內層的封裝配置器。  
   
- 不可見的介面協助的部分在描述這個範本類別行為的幾個概念。  的 *最外層的配置器* 斡旋所有呼叫建構並終結方法。  它是有效地由遞迴函式 `OUTERMOST(X)`定義的 `OUTERMOST(X)` ，是下列其中一項。  
+ 有數個不屬於可見介面一部分的概念，有助於說明此樣板類別的行為。 「最外層的配置器」會調解所有對建構和終結方法的呼叫。 這實際上是透過遞迴函式 `OUTERMOST(X)` 所定義，其中 `OUTERMOST(X)` 為下列其中一項。  
   
--   如果 `X.outer_allocator()` 是語式正確，則 `OUTERMOST(X)` 為 `OUTERMOST(X.outer_allocator())`。  
+-   如果 `X.outer_allocator()` 格式正確，則 `OUTERMOST(X)` 是 `OUTERMOST(X.outer_allocator())`。  
   
 -   否則，`OUTERMOST(X)` 為 `X`。  
   
- 三個型別為平台上會定義:  
+ 有三種類型是基於說明目的而定義：  
   
-|型別|說明|  
-|--------|--------|  
-|`Outermost`|`OUTERMOST(*this)` 的型別。|  
+|類型|說明|  
+|----------|-----------------|  
+|`Outermost`|`OUTERMOST(*this)` 的類型。|  
 |`Outermost_traits`|`allocator_traits<Outermost>`|  
 |`Outer_traits`|`allocator_traits<Outer>`|  
   
-### 建構函式  
+### <a name="constructors"></a>建構函式  
   
-|Name|說明|  
-|----------|--------|  
-|[scoped\_allocator\_adaptor::scoped\_allocator\_adaptor 建構函式](../Topic/scoped_allocator_adaptor::scoped_allocator_adaptor%20Constructor.md)|建構 `scoped_allocator_adaptor` 物件。|  
+|名稱|描述|  
+|----------|-----------------|  
+|[scoped_allocator_adaptor::scoped_allocator_adaptor 建構函式](#scoped_allocator_adaptor__scoped_allocator_adaptor_constructor)|建構 `scoped_allocator_adaptor` 物件。|  
   
-### Typedef  
+### <a name="typedefs"></a>Typedef  
   
-|Name|說明|  
-|----------|--------|  
-|`const_pointer`|這個型別是與配置器 `Outer``const_pointer` 的同義字。|  
-|`const_void_pointer`|這個型別是與配置器 `Outer``const_void_pointer` 的同義字。|  
-|`difference_type`|這個型別是與配置器 `Outer``difference_type` 的同義字。|  
-|`inner_allocator_type`|這個型別是巢狀 `scoped_allocator_adaptor<Inner...>`配接器類型的同義字。|  
-|`outer_allocator_type`|這個型別是基本的配置器 `Outer`類型的同義字。|  
-|`pointer`|型別為 `pointer` 的同義字與配置器 `Outer`。|  
-|`propagate_on_container_copy_assignment`|這個型別套用時，才會套用 `Outer_traits::propagate_on_container_copy_assignment` 或 `inner_allocator_type::propagate_on_container_copy_assignment` 套用。|  
-|`propagate_on_container_move_assignment`|這個型別套用時，才會套用 `Outer_traits::propagate_on_container_move_assignment` 或 `inner_allocator_type::propagate_on_container_move_assignment` 套用。|  
-|`propagate_on_container_swap`|這個型別套用時，才會套用 `Outer_traits::propagate_on_container_swap` 或 `inner_allocator_type::propagate_on_container_swap` 套用。|  
-|`size_type`|型別為 `size_type` 的同義字與配置器 `Outer`。|  
-|`value_type`|型別為 `value_type` 的同義字與配置器 `Outer`。|  
-|`void_pointer`|型別為 `void_pointer` 的同義字與配置器 `Outer`。|  
+|名稱|說明|  
+|----------|-----------------|  
+|`const_pointer`|此類型是與 `Outer` 配置器相關聯之 `const_pointer` 的同義字。|  
+|`const_void_pointer`|此類型是與 `Outer` 配置器相關聯之 `const_void_pointer` 的同義字。|  
+|`difference_type`|此類型是與 `Outer` 配置器相關聯之 `difference_type` 的同義字。|  
+|`inner_allocator_type`|此類型是巢狀配置器 `scoped_allocator_adaptor<Inner...>` 之類型的同義字。|  
+|`outer_allocator_type`|此類型是基底配置器 `Outer` 之類型的同義字。|  
+|`pointer`|此類型是與 `Outer` 配置器相關聯之 `pointer` 的同義字。|  
+|`propagate_on_container_copy_assignment`|只有當 `Outer_traits::propagate_on_container_copy_assignment` 保留 true 或 `inner_allocator_type::propagate_on_container_copy_assignment` 保留 true 時，此類型才會保留 true。|  
+|`propagate_on_container_move_assignment`|只有當 `Outer_traits::propagate_on_container_move_assignment` 保留 true 或 `inner_allocator_type::propagate_on_container_move_assignment` 保留 true 時，此類型才會保留 true。|  
+|`propagate_on_container_swap`|只有當 `Outer_traits::propagate_on_container_swap` 保留 true 或 `inner_allocator_type::propagate_on_container_swap` 保留 true 時，此類型才會保留 true。|  
+|`size_type`|此類型是與 `Outer` 配置器相關聯之 `size_type` 的同義字。|  
+|`value_type`|此類型是與 `Outer` 配置器相關聯之 `value_type` 的同義字。|  
+|`void_pointer`|此類型是與 `Outer` 配置器相關聯之 `void_pointer` 的同義字。|  
   
-### Structs  
+### <a name="structs"></a>結構  
   
-|Name|說明|  
-|----------|--------|  
-|[scoped\_allocator\_adaptor::rebind 結構](../Topic/scoped_allocator_adaptor::rebind%20Struct.md)|定義 `Outer::rebind<Other>::other` 型別為 `scoped_allocator_adaptor<Other, Inner...>`的同義字。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[scoped_allocator_adaptor::rebind 結構](#scoped_allocator_adaptor__rebind_struct)|將 `Outer::rebind\<Other>::other` 類型定義為 `scoped_allocator_adaptor\<Other, Inner...>` 的同義字。|  
   
-### 方法  
+### <a name="methods"></a>方法  
   
-|Name|說明|  
-|----------|--------|  
-|[scoped\_allocator\_adaptor::allocate 方法](../Topic/scoped_allocator_adaptor::allocate%20Method.md)|使用 `Outer` 配置器，配置記憶體。|  
-|[scoped\_allocator\_adaptor::construct 方法](../Topic/scoped_allocator_adaptor::construct%20Method.md)|建構物件。|  
-|[scoped\_allocator\_adaptor::deallocate 方法](../Topic/scoped_allocator_adaptor::deallocate%20Method.md)|使用外部配置器，則會解除配置物件。|  
-|[scoped\_allocator\_adaptor::destroy 方法](../Topic/scoped_allocator_adaptor::destroy%20Method.md)|終結指定的物件。|  
-|[scoped\_allocator\_adaptor::inner\_allocator 方法](../Topic/scoped_allocator_adaptor::inner_allocator%20Method.md)|擷取對 `inner_allocator_type`型別儲存物件的參考。|  
-|[scoped\_allocator\_adaptor::max\_size 方法](../Topic/scoped_allocator_adaptor::max_size%20Method.md)|判斷可以由外部配置器所配置的物件數目上限。|  
-|[scoped\_allocator\_adaptor::outer\_allocator 方法](../Topic/scoped_allocator_adaptor::outer_allocator%20Method.md)|擷取對 `outer_allocator_type`型別儲存物件的參考。|  
-|[scoped\_allocator\_adaptor::select\_on\_container\_copy\_construction 方法](../Topic/scoped_allocator_adaptor::select_on_container_copy_construction%20Method.md)|建立與初始化呼叫的每個儲存的配置器物件的新 `scoped_allocator_adaptor` 物件每一個對應的配置器的 `select_on_container_copy_construction` 。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[scoped_allocator_adaptor::allocate 方法](#scoped_allocator_adaptor__allocate_method)|使用 `Outer` 配置器來配置記憶體。|  
+|[scoped_allocator_adaptor::construct 方法](#scoped_allocator_adaptor__construct_method)|建構物件。|  
+|[scoped_allocator_adaptor::deallocate 方法](#scoped_allocator_adaptor__deallocate_method)|使用外部配置器來取消配置物件。|  
+|[scoped_allocator_adaptor::destroy 方法](#scoped_allocator_adaptor__destroy_method)|終結指定的物件。|  
+|[scoped_allocator_adaptor::inner_allocator 方法](#scoped_allocator_adaptor__inner_allocator_method)|擷取 `inner_allocator_type` 類型之預存物件的參考。|  
+|[scoped_allocator_adaptor::max_size 方法](#scoped_allocator_adaptor__max_size_method)|決定可由外部配置器所配置的物件數目上限。|  
+|[scoped_allocator_adaptor::outer_allocator 方法](#scoped_allocator_adaptor__outer_allocator_method)|擷取 `outer_allocator_type` 類型之預存物件的參考。|  
+|[scoped_allocator_adaptor::select_on_container_copy_construction 方法](#scoped_allocator_adaptor__select_on_container_copy_construction_method)|建立新的 `scoped_allocator_adaptor` 物件，以及針對每個對應配置器呼叫 `select_on_container_copy_construction` 來初始化的每個預存配置器物件。|  
   
-## 需求  
- **標題:** \<scoped\_allocator\>  
+## <a name="requirements"></a>需求  
+ **標頭︰**\<scoped_allocator >  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
+##  <a name="a-namescopedallocatoradaptorallocatemethoda--scopedallocatoradaptorallocate-method"></a><a name="scoped_allocator_adaptor__allocate_method"></a>  scoped_allocator_adaptor::allocate 方法  
+ 使用 `Outer` 配置器來配置記憶體。  
+  
+```cpp  
+pointer allocate(size_type count);pointer allocate(size_type count, const_void_pointer hint);
+```  
+  
+### <a name="parameters"></a>參數  
+ `count`  
+ 要配置足夠儲存體的項目數。  
+  
+ `hint`  
+ 指標，可藉由找出要求之前所配置的物件位址，來協助配置器物件。  
+  
+### <a name="return-value"></a>傳回值  
+ 第一個成員函式會傳回 `Outer_traits::allocate(outer_allocator(), count)`。 第二個成員函式會傳回 `Outer_traits::allocate(outer_allocator(), count, hint)`。  
+  
+##  <a name="a-namescopedallocatoradaptorconstructmethoda--scopedallocatoradaptorconstruct-method"></a><a name="scoped_allocator_adaptor__construct_method"></a>  scoped_allocator_adaptor::construct 方法  
+ 建構物件。  
+  
+```cpp  
+template <class Ty, class... Atypes>  
+void construct(Ty* ptr, Atypes&&... args);
+
+template <class Ty1, class Ty2, class... Atypes1, class... Atypes2>  
+void construct(pair<Ty1, Ty2>* ptr, piecewise_construct_t,  
+    tuple<Atypes1&&...>  
+first, tuple<Atypes1&&...> second);
+
+template <class Ty1, class Ty2>  
+void construct(pair<Ty1, Ty2>* ptr);
+
+template <class Ty1, class Ty2, class Uy1, class Uy2>  
+void construct(pair<Ty1, Ty2>* ptr,  
+    class Uy1&& first, class Uy2&& second);
+
+template <class Ty1, class Ty2, class Uy1, class Uy2>  
+void construct(pair<Ty1, Ty2>* ptr, const pair<Uy1, Uy2>& right);
+
+template <class Ty1, class Ty2, class Uy1, class Uy2>  
+void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
+```  
+  
+### <a name="parameters"></a>參數  
+ `ptr`  
+ 要建構物件之記憶體位置的指標。  
+  
+ `args`  
+ 引數清單。  
+  
+ `first`  
+ 配對中第一個類型的物件。  
+  
+ `second`  
+ 配對中第二個類型的物件。  
+  
+ `right`  
+ 要移動或複製的現有物件。  
+  
+### <a name="remarks"></a>備註  
+ 第一個方法會藉由呼叫 `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)`，在 `ptr` 上建構物件，其中 `xargs...` 是下列其中一項。  
+  
+-   如果 `uses_allocator<Ty, inner_allocator_type>` 保留 false，則 `xargs...` 是 `args...`。  
+  
+-   如果 `uses_allocator<Ty, inner_allocator_type>` 保留 true，而且 `is_constructible<Ty, allocator_arg_t, inner_allocator_type, args...>` 保留 true，則 `xargs...` 是 `allocator_arg, inner_allocator(), args...`。  
+  
+-   如果 `uses_allocator<Ty, inner_allocator_type>` 保留 true，而且 `is_constructible<Ty, args..., inner_allocator()>` 保留 true，則 `xargs...` 是 `args..., inner_allocator()`。  
+  
+ 第二個方法會藉由呼叫 `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)` (其中 `xargs...` 是如上述清單中修改的 `first...`) 及 `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)` (其中 `xargs...` 是如上述清單中修改的 `second...`)，在 `ptr` 上建構配對物件。  
+  
+ 第三個方法的行為與 `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)` 相同。  
+  
+ 第四個方法的行為與 `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(first), forward_as_tuple(std::forward<Uy2>(second))` 相同。  
+  
+ 第五個方法的行為與 `this->construct(ptr, piecewise_construct, forward_as_tuple(right.first), forward_as_tuple(right.second))` 相同。  
+  
+ 第六個方法的行為與 `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))` 相同。  
+  
+##  <a name="a-namescopedallocatoradaptordeallocatemethoda--scopedallocatoradaptordeallocate-method"></a><a name="scoped_allocator_adaptor__deallocate_method"></a>  scoped_allocator_adaptor::deallocate 方法  
+ 使用外部配置器來取消配置物件。  
+  
+```cpp  
+void deallocate(pointer ptr, size_type count);
+```  
+  
+### <a name="parameters"></a>參數  
+ `ptr`  
+ 要解除配置之物件的起始位置指標。  
+  
+ `count`  
+ 要解除配置的物件數目。  
+  
+##  <a name="a-namescopedallocatoradaptordestroymethoda--scopedallocatoradaptordestroy-method"></a><a name="scoped_allocator_adaptor__destroy_method"></a>  scoped_allocator_adaptor::destroy 方法  
+ 終結指定的物件。  
+  
+```cpp  
+template <class Ty>  
+void destroy(Ty* ptr)  
+```  
+  
+### <a name="parameters"></a>參數  
+ `ptr`  
+ 要終結的物件指標。  
+  
+### <a name="return-value"></a>傳回值  
+ `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
+  
+##  <a name="a-namescopedallocatoradaptorinnerallocatormethoda--scopedallocatoradaptorinnerallocator-method"></a><a name="scoped_allocator_adaptor__inner_allocator_method"></a>  scoped_allocator_adaptor::inner_allocator 方法  
+ 擷取 `inner_allocator_type` 類型之預存物件的參考。  
+  
+```cpp  
+inner_allocator_type& inner_allocator() noexcept;  
+const inner_allocator_type& inner_allocator() const noexcept;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `inner_allocator_type` 類型之預存物件的參考。  
+  
+##  <a name="a-namescopedallocatoradaptormaxsizemethoda--scopedallocatoradaptormaxsize-method"></a><a name="scoped_allocator_adaptor__max_size_method"></a>  scoped_allocator_adaptor::max_size 方法  
+ 決定可由外部配置器所配置的物件數目上限。  
+  
+```cpp  
+size_type max_size();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `Outer_traits::max_size(outer_allocator())`  
+  
+##  <a name="a-namescopedallocatoradaptorouterallocatormethoda--scopedallocatoradaptorouterallocator-method"></a><a name="scoped_allocator_adaptor__outer_allocator_method"></a>  scoped_allocator_adaptor::outer_allocator 方法  
+ 擷取 `outer_allocator_type` 類型之預存物件的參考。  
+  
+```cpp  
+outer_allocator_type& outer_allocator() noexcept;  
+const outer_allocator_type& outer_allocator() const noexcept;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `outer_allocator_type` 類型之預存物件的參考。  
+  
+##  <a name="a-namescopedallocatoradaptorrebindstructa--scopedallocatoradaptorrebind-struct"></a><a name="scoped_allocator_adaptor__rebind_struct"></a>  scoped_allocator_adaptor::rebind 結構  
+ 將 `Outer::rebind\<Other>::other` 類型定義為 `scoped_allocator_adaptor\<Other, Inner...>` 的同義字。  
+  
+struct rebind{  
+   typedef Other_traits::rebind\<Other>  
+   Other_alloc;  
+   typedef scoped_allocator_adaptor\<Other_alloc, Inner...> other;  
+   };  
+  
+##  <a name="a-namescopedallocatoradaptorscopedallocatoradaptorconstructora--scopedallocatoradaptorscopedallocatoradaptor-constructor"></a><a name="scoped_allocator_adaptor__scoped_allocator_adaptor_constructor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 建構函式  
+ 建構 `scoped_allocator_adaptor` 物件。  
+  
+```cpp  
+scoped_allocator_adaptor();
+
+scoped_allocator_adaptor(const scoped_allocator_adaptor& right) noexcept;  
+template <class Outer2>  
+scoped_allocator_adaptor(
+ const scoped_allocator_adaptor<Outer2, Inner...>& right) noexcept;  
+template <class Outer2>  
+scoped_allocator_adaptor(
+ scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;  
+template <class Outer2>  
+scoped_allocator_adaptor(Outer2&& al,  
+    const Inner&... rest) noexcept;  
+```  
+  
+### <a name="parameters"></a>參數  
+ `right`  
+ 現有的 `scoped_allocator_adaptor`。  
+  
+ `al`  
+ 用來做為外部配置器的現有配置器。  
+  
+ `rest`  
+ 用來做為內部配置器的配置器清單。  
+  
+### <a name="remarks"></a>備註  
+ 第一個建構函式預設會建構它的預存配置器物件。 後續三個建構函式的每一個都會從 `right` 的對應物件中建構它的預存配置器物件。 最後一個建構函式會從引數清單的對應引數中建立它的預存配置器物件。  
+  
+##  <a name="a-namescopedallocatoradaptorselectoncontainercopyconstructionmethoda--scopedallocatoradaptorselectoncontainercopyconstruction-method"></a><a name="scoped_allocator_adaptor__select_on_container_copy_construction_method"></a>  scoped_allocator_adaptor::select_on_container_copy_construction 方法  
+ 建立新的 `scoped_allocator_adaptor` 物件，以及針對每個對應配置器呼叫 `select_on_container_copy_construction` 來初始化的每個預存配置器物件。  
+  
+```cpp  
+scoped_allocator_adaptor select_on_container_copy_construction();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 這個方法會有效地傳回 `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`。 結果是新的 `scoped_allocator_adaptor` 物件，以及對於對應配置器 `al` 呼叫 `al.select_on_container_copy_construction()` 來初始化的每個預存配置器物件。  
+  
+## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

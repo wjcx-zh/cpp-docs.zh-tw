@@ -1,106 +1,134 @@
 ---
-title: "&lt;regex&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<regex>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "regex 標頭 [TR1]"
+title: '&lt;regex&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <regex>
+dev_langs:
+- C++
+helpviewer_keywords:
+- regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# &lt;regex&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 248e9ba676b906af62f6804f4939e04158a8e2ef
+ms.openlocfilehash: 4e172f8bf72fd528027c333cf411a307aa97d786
+ms.lasthandoff: 02/24/2017
 
-定義範本類別來剖析[規則運算式 \(C\+\+\)](../standard-library/regular-expressions-cpp.md)，以及定義數個範本類別和函式，藉此搜尋和規則運算式物件相符的文字。  
+---
+# <a name="ltregexgt"></a>&lt;regex&gt;
+定義範本類別來剖析[規則運算式 (C++)](../standard-library/regular-expressions-cpp.md)，以及定義數個範本類別和函式來搜尋與規則運算式物件相符的文字。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #include <regex>  
 ```  
   
-## 備註  
- 若要建立規則運算式物件，請使用此範本類別 [basic\_regex 類別](../standard-library/basic-regex-class.md) 或其特製化 \([regex Typedef](../Topic/regex%20Typedef.md) 和 [wregex Typedef](../Topic/wregex%20Typedef.md)\)，並與 [regex\_constants::syntax\_option\_type](../Topic/regex_constants::syntax_option_type.md) 類型的語法旗標搭配使用。  
+## <a name="remarks"></a>備註  
+ 若要建立規則運算式物件，請使用範本類別 [basic_regex 類別](../standard-library/basic-regex-class.md)或它的其中一個特製化 ([regex](../standard-library/regex-typedefs.md#regex_typedef) 和 [wregex](../standard-library/regex-typedefs.md#wregex_typedef))，並與 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#regex_constants__syntax_option_type) 類型的語法旗標搭配使用。  
   
- 若要搜尋與規則運算式物件相符的文字，請使用此範本函式 [regex\_match 函式](../Topic/regex_match%20Function.md) 和 [regex\_search 函式](../Topic/regex_search%20Function.md)，並與[regex\_constants::match\_flag\_type](../Topic/regex_constants::match_flag_type.md) 類型的相符旗標搭配使用。  這些函式使用此範本類別 [match\_results 類別](../standard-library/match-results-class.md) 和其特製化 \([cmatch Typedef](../Topic/cmatch%20Typedef.md)、[wcmatch Typedef](../Topic/wcmatch%20Typedef.md)、[smatch Typedef](../Topic/smatch%20Typedef.md) 和 [wsmatch Typedef](../Topic/wsmatch%20Typedef.md)\) 傳回結果，並與此範本類別 [sub\_match 類別](../standard-library/sub-match-class.md) 和其特製化 \([csub\_match Typedef](../Topic/csub_match%20Typedef.md)、[wcsub\_match Typedef](../Topic/wcsub_match%20Typedef.md)、[ssub\_match Typedef](../Topic/ssub_match%20Typedef.md) 和 [wssub\_match Typedef](../Topic/wssub_match%20Typedef.md)\) 搭配使用。  
+ 若要搜尋與規則運算式物件相符的文字，請使用範本函式 [regex_match 函式](../standard-library/regex-functions.md#regex_match_function)和 [regex_search 函式](../standard-library/regex-functions.md#regex_search_function)，並與 [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#regex_constants__match_flag_type) 類型的相符旗標搭配使用。 這些函式會使用範本類別 [match_results 類別](../standard-library/match-results-class.md)及其特製化 ([cmatch](../standard-library/regex-typedefs.md#cmatch_typedef)、[wcmatch](../standard-library/regex-typedefs.md#wcmatch_typedef)、[smatch](../standard-library/regex-typedefs.md#smatch_typedef) 及 [wsmatch](../standard-library/regex-typedefs.md#wsmatch_typedef)) 傳回結果，並與範本類別 [sub_match 類別](../standard-library/sub-match-class.md)及其特製化 ([csub_match](../standard-library/regex-typedefs.md#csub_match_typedef)、[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match_typedef)、[ssub_match](../standard-library/regex-typedefs.md#ssub_match_typedef) 及 [wssub_match](../standard-library/regex-typedefs.md#wssub_match_typedef)) 搭配使用。  
   
- 若要取代與規則運算式物件相符的文字，請使用此範本函式 [regex\_replace 函式](../Topic/regex_replace%20Function.md)，並與 [regex\_constants::match\_flag\_type](../Topic/regex_constants::match_flag_type.md) 類型的相符旗標搭配使用。  
+ 若要取代與規則運算式物件相符的文字，請使用範本函式 [regex_replace 函式](../standard-library/regex-functions.md#regex_replace_function)，並與 [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#regex_constants__match_flag_type) 類型的相符旗標搭配使用。  
   
- 若要逐一查看規則運算式物件的多個相符項目，請使用此範本類別 [regex\_iterator 類別](../standard-library/regex-iterator-class.md) 和 [regex\_token\_iterator 類別](../standard-library/regex-token-iterator-class.md) 或其特製化 \([cregex\_iterator Typedef](../Topic/cregex_iterator%20Typedef.md)、[sregex\_iterator Typedef](../Topic/sregex_iterator%20Typedef.md)、[wcregex\_iterator Typedef](../Topic/wcregex_iterator%20Typedef.md)、[wsregex\_iterator Typedef](../Topic/wsregex_iterator%20Typedef.md)、[cregex\_token\_iterator Typedef](../Topic/cregex_token_iterator%20Typedef.md)、[sregex\_token\_iterator Typedef](../Topic/sregex_token_iterator%20Typedef.md)、[wcregex\_token\_iterator Typedef](../Topic/wcregex_token_iterator%20Typedef.md) 或 [wsregex\_token\_iterator Typedef](../Topic/wsregex_token_iterator%20Typedef.md)\)，並與類型 [regex\_constants::match\_flag\_type](../Topic/regex_constants::match_flag_type.md) 的相符旗標搭配使用。  
+ 若要逐一查看規則運算式物件的多個相符項目，請使用範本類別 [regex_iterator 類別](../standard-library/regex-iterator-class.md)和 [regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)或它的其中一個特製化 ([cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator_typedef)、[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator_typedef)、[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator_typedef)、[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator_typedef)、[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator_typedef)、[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator_typedef)、[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator_typedef) 或 [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator_typedef))，並與 [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#regex_constants__match_flag_type) 類型的相符旗標搭配使用。  
   
  若要修改規則運算式文法的詳細資訊，請撰寫實作規則運算式特性的類別。  
   
-### 類別  
+### <a name="classes"></a>類別  
   
 |||  
 |-|-|  
-|[basic\_regex](../standard-library/basic-regex-class.md)|包裝規則運算式。|  
-|[match\_results](../standard-library/match-results-class.md)|保留子相符項目的序列。|  
-|[regex\_constants](../standard-library/regex-constants-class.md)|保留各種常數。|  
-|[regex\_error](../standard-library/regex-error-class.md)|報告錯誤的規則運算式。|  
-|[regex\_iterator](../standard-library/regex-iterator-class.md)|逐一查看相符的結果。|  
-|[regex\_traits](../standard-library/regex-traits-class.md)|描述進行比對的項目特性。|  
-|[regex\_traits\<char\>](../standard-library/regex-traits-char-class.md)|描述進行比對的 `char` 特性。|  
-|[regex\_traits\<wchar\_t\>](../standard-library/regex-traits-wchar-t-class.md)|描述進行比對的 `wchar_t` 特性。|  
-|[regex\_token\_iterator](../standard-library/regex-token-iterator-class.md)|逐一查看子相符項目。|  
-|[sub\_match](../standard-library/sub-match-class.md)|描述子相符項目。|  
+|[basic_regex](../standard-library/basic-regex-class.md)|包裝規則運算式。|  
+|[match_results](../standard-library/match-results-class.md)|保留子相符項目的序列。|  
+|[regex_constants](../standard-library/regex-constants-class.md)|保留各種常數。|  
+|[regex_error](../standard-library/regex-error-class.md)|報告錯誤的規則運算式。|  
+|[regex_iterator](../standard-library/regex-iterator-class.md)|逐一查看相符的結果。|  
+|[regex_traits](../standard-library/regex-traits-class.md)|描述進行比對的元素特性。|  
+|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|描述進行比對的 `char` 特性。|  
+|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|描述進行比對的 `wchar_t` 特性。|  
+|[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|逐一查看子相符項目。|  
+|[sub_match](../standard-library/sub-match-class.md)|描述子相符項目。|  
   
-### 類型定義  
-  
-|||  
-|-|-|  
-|[cmatch](../Topic/cmatch%20Typedef.md)|`char` `match_results` 的類型定義。|  
-|[cregex\_iterator](../Topic/cregex_iterator%20Typedef.md)|`char` `regex_iterator` 的類型定義。|  
-|[cregex\_token\_iterator](../Topic/cregex_token_iterator%20Typedef.md)|`char` `regex_token_iterator` 的類型定義。|  
-|[csub\_match](../Topic/csub_match%20Typedef.md)|`char` `sub_match` 的類型定義。|  
-|[regex](../Topic/regex%20Typedef.md)|`char` `basic_regex` 的類型定義。|  
-|[smatch](../Topic/smatch%20Typedef.md)|`string` `match_results` 的類型定義。|  
-|[sregex\_iterator](../Topic/sregex_iterator%20Typedef.md)|`string` `regex_iterator` 的類型定義。|  
-|[sregex\_token\_iterator](../Topic/sregex_token_iterator%20Typedef.md)|`string` `regex_token_iterator` 的類型定義。|  
-|[ssub\_match](../Topic/ssub_match%20Typedef.md)|`string` `sub_match` 的類型定義。|  
-|[wcmatch](../Topic/wcmatch%20Typedef.md)|`wchar_t` `match_results` 的類型定義。|  
-|[wcregex\_iterator](../Topic/wcregex_iterator%20Typedef.md)|`wchar_t` `regex_iterator` 的類型定義。|  
-|[wcregex\_token\_iterator](../Topic/wcregex_token_iterator%20Typedef.md)|`wchar_t` `regex_token_iterator` 的類型定義。|  
-|[wcsub\_match](../Topic/wcsub_match%20Typedef.md)|`wchar_t` `sub_match` 的類型定義。|  
-|[wregex](../Topic/wregex%20Typedef.md)|`wchar_t` `basic_regex` 的類型定義。|  
-|[wsmatch](../Topic/wsmatch%20Typedef.md)|`wstring` `match_results` 的類型定義。|  
-|[wsregex\_iterator](../Topic/wsregex_iterator%20Typedef.md)|`wstring` `regex_iterator` 的類型定義。|  
-|[wsregex\_token\_iterator](../Topic/wsregex_token_iterator%20Typedef.md)|`wstring` `regex_token_iterator` 的類型定義。|  
-|[wssub\_match](../Topic/wssub_match%20Typedef.md)|`wstring` `sub_match` 的類型定義。|  
-  
-### 函式  
+### <a name="type-definitions"></a>類型定義  
   
 |||  
 |-|-|  
-|[regex\_match](../Topic/regex_match%20Function.md)|完全符合規則運算式。|  
-|[regex\_replace](../Topic/regex_replace%20Function.md)|取代符合的規則運算式。|  
-|[regex\_search](../Topic/regex_search%20Function.md)|搜尋規則運算式相符項目。|  
-|[交換](../Topic/swap%20Function%20%3Cregex%3E.md)|交換 `basic_regex` 或 `match_results` 物件。|  
+|[cmatch](../standard-library/regex-typedefs.md#cmatch_typedef)|`char``match_results` 的類型定義。|  
+|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator_typedef)|`char``regex_iterator` 的類型定義。|  
+|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator_typedef)|`char``regex_token_iterator` 的類型定義。|  
+|[csub_match](../standard-library/regex-typedefs.md#csub_match_typedef)|`char``sub_match` 的類型定義。|  
+|[regex](../standard-library/regex-typedefs.md#regex_typedef)|`char``basic_regex` 的類型定義。|  
+|[smatch](../standard-library/regex-typedefs.md#smatch_typedef)|`string``match_results` 的類型定義。|  
+|[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator_typedef)|`string``regex_iterator` 的類型定義。|  
+|[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator_typedef)|`string``regex_token_iterator` 的類型定義。|  
+|[ssub_match](../standard-library/regex-typedefs.md#ssub_match_typedef)|`string``sub_match` 的類型定義。|  
+|[wcmatch](../standard-library/regex-typedefs.md#wcmatch_typedef)|`wchar_t``match_results` 的類型定義。|  
+|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator_typedef)|`wchar_t``regex_iterator` 的類型定義。|  
+|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator_typedef)|`wchar_t``regex_token_iterator` 的類型定義。|  
+|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match_typedef)|`wchar_t``sub_match` 的類型定義。|  
+|[wregex](../standard-library/regex-typedefs.md#wregex_typedef)|`wchar_t``basic_regex` 的類型定義。|  
+|[wsmatch](../standard-library/regex-typedefs.md#wsmatch_typedef)|`wstring``match_results` 的類型定義。|  
+|[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator_typedef)|`wstring``regex_iterator` 的類型定義。|  
+|[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator_typedef)|`wstring``regex_token_iterator` 的類型定義。|  
+|[wssub_match](../standard-library/regex-typedefs.md#wssub_match_typedef)|`wstring``sub_match` 的類型定義。|  
   
-### 運算子  
+### <a name="functions"></a>函式  
   
 |||  
 |-|-|  
-|[operator\=\=](../Topic/operator==%20%3Cregex%3E.md)|不同物件的比較 \(等於\)。|  
-|[operator\!\=](../Topic/operator!=%20%3Cregex%3E.md)|不同物件的比較 \(不等於\)。|  
-|[運算子 \<](../Topic/operator%3C%20%3Cregex%3E.md)|不同物件的比較 \(小於\)。|  
-|[運算子 \<\=](../Topic/operator%3C=%20%3Cregex%3E.md)|不同物件的比較 \(小於或等於\)。|  
-|[運算子 \>](../Topic/operator%3E%20%3Cregex%3E.md)|不同物件的比較 \(大於\)。|  
-|[運算子 \>\=](../Topic/operator%3E=%20%3Cregex%3E.md)|不同物件的比較 \(大於或等於\)。|  
-|[運算子 \<\<](../Topic/operator%3C%3C%20%3Cregex%3E.md)|在資料流中插入 `sub_match`。|  
+|[regex_match](../standard-library/regex-functions.md#regex_match_function)|完全符合規則運算式。|  
+|[regex_replace](../standard-library/regex-functions.md#regex_replace_function)|取代符合的規則運算式。|  
+|[regex_search](../standard-library/regex-functions.md#regex_search_function)|搜尋規則運算式相符項目。|  
+|[swap](../standard-library/regex-functions.md#swap_function)|交換 `basic_regex` 或 `match_results` 物件。|  
   
-## 請參閱  
- [規則運算式 \(C\+\+\)](../standard-library/regular-expressions-cpp.md)
+### <a name="operators"></a>運算子  
+  
+|||  
+|-|-|  
+|[operator==](../standard-library/regex-operators.md#operator_eq_eq)|不同物件的比較 (等於)。|  
+|[operator!=](../standard-library/regex-operators.md#operator_neq)|不同物件的比較 (不等於)。|  
+|[operator<](../standard-library/regex-operators.md#operator_lt_)|不同物件的比較 (小於)。|  
+|[operator\<=](../standard-library/regex-operators.md#operator_lt__eq)|不同物件的比較 (小於或等於)。|  
+|[operator>](../standard-library/regex-operators.md#operator_gt_)|不同物件的比較 (大於)。|  
+|[operator>=](../standard-library/regex-operators.md#operator_gt__eq)|不同物件的比較 (大於或等於)。|  
+|[operator<<](../standard-library/regex-operators.md#operator_lt__lt_)|在資料流中插入 `sub_match`。|  
+  
+## <a name="see-also"></a>另請參閱  
+[規則運算式 (C++)](../standard-library/regular-expressions-cpp.md)  
+[regex_constants 類別](../standard-library/regex-constants-class.md)  
+[regex_error 類別](../standard-library/regex-error-class.md)  
+[\<regex> 函式](../standard-library/regex-functions.md)  
+[regex_iterator 類別](../standard-library/regex-iterator-class.md)  
+[\<regex> 運算子](../standard-library/regex-operators.md)  
+[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
+[regex_traits 類別](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
+
+
+
+

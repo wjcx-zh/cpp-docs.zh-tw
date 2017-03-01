@@ -1,91 +1,105 @@
 ---
 title: "_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strlwr_s_l"
-  - "_mbslwr_s_l"
-  - "_mbslwr_s"
-  - "_wcslwr_s"
-  - "_strlwr_s"
-  - "_wcslwr_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strlwr_s_l"
-  - "_strlwr_s"
-  - "mbslwr_s_l"
-  - "strlwr_s_l"
-  - "_wcslwr_s"
-  - "strlwr_s"
-  - "mbslwr_s"
-  - "_wcslwr_s_l"
-  - "wcslwr_s_l"
-  - "_tcslwr_s"
-  - "_tcslwr_s_l"
-  - "_mbslwr_s_l"
-  - "wcslwr_s"
-  - "_mbslwr_s"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_mbslwr_s 函式"
-  - "_mbslwr_s_l 函式"
-  - "_strlwr_s 函式"
-  - "_strlwr_s_l 函式"
-  - "_tcslwr_s 函式"
-  - "_tcslwr_s_l 函式"
-  - "_wcslwr_s 函式"
-  - "_wcslwr_s_l 函式"
-  - "大小寫, 轉換"
-  - "轉換大小寫, CRT 函式"
-  - "mbslwr_s 函式"
-  - "mbslwr_s_l 函式"
-  - "字串轉換 [C++], 大小寫"
-  - "字串 [C++], 大小寫"
-  - "字串 [C++], 轉換大小寫"
-  - "strlwr_s 函式"
-  - "strlwr_s_l 函式"
-  - "tcslwr_s 函式"
-  - "tcslwr_s_l 函式"
-  - "wcslwr_s 函式"
-  - "wcslwr_s_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strlwr_s_l
+- _mbslwr_s_l
+- _mbslwr_s
+- _wcslwr_s
+- _strlwr_s
+- _wcslwr_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strlwr_s_l
+- _strlwr_s
+- mbslwr_s_l
+- strlwr_s_l
+- _wcslwr_s
+- strlwr_s
+- mbslwr_s
+- _wcslwr_s_l
+- wcslwr_s_l
+- _tcslwr_s
+- _tcslwr_s_l
+- _mbslwr_s_l
+- wcslwr_s
+- _mbslwr_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tcslwr_s function
+- wcslwr_s function
+- _mbslwr_s function
+- _wcslwr_s function
+- strlwr_s_l function
+- mbslwr_s_l function
+- _strlwr_s function
+- string conversion [C++], case
+- strlwr_s function
+- wcslwr_s_l function
+- _tcslwr_s_l function
+- mbslwr_s function
+- strings [C++], case
+- _wcslwr_s_l function
+- converting case, CRT functions
+- _strlwr_s_l function
+- _mbslwr_s_l function
+- case, converting
+- tcslwr_s function
+- tcslwr_s_l function
+- strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
 caps.latest.revision: 42
-caps.handback.revision: 40
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# _strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3a32625a58d2d06859c738afcf6b591ab6065ba3
+ms.lasthandoff: 02/24/2017
 
-使用目前的地區設定或傳遞的地區設定物件，將字串轉換為小寫。  這些 [\_strlwr、\_wcslwr、\_mbslwr、\_strlwr\_l、\_wcslwr\_l、\_mbslwr\_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 版本有安全性增強功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
+---
+# <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
+使用目前的地區設定或傳入的地區設定物件，將字串轉換成小寫。 這些版本的 [_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
 > [!IMPORTANT]
->  `_mbslwr_s` and `_mbslwr_s_l`不能用於在 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbslwr_s` 和 `_mbslwr_s_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 errno_t _strlwr_s(  
@@ -144,48 +158,48 @@ errno_t _wcslwr_s_l(
 ); // C++ only  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `str`  
- 將以 Null 結束之字串轉換為小寫。  
+ 要轉換為小寫的以 Null 終止的字串。  
   
  `numberOfElements`  
  緩衝區的大小。  
   
  `locale`  
- 使用的地區設定。  
+ 要使用的地區設定。  
   
-## 傳回值  
- 如果成功則得到 0 值；如果失敗，則結果不為 0 的錯誤碼。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，則傳回零；如果失敗，則傳回非零的錯誤碼。  
   
- 這些函式會驗證它們的參數。  如果 `str` 不是有效的 null 結尾的字串，則觸發無效參數叫用處理常式 ，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，函式會傳回 `EINVAL` 並將 `EINVAL` 設定為 `errno`。  如果 `numberOfElements` 小於字串長度，函式一樣傳回 `EINVAL` 並將 `errno` 設定為 `EINVAL`。  
+ 這些函式會驗證它們的參數。 如果 `str` 不是有效的以 Null 終止的字串，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回 `EINVAL`，並將 `errno` 設為 `EINVAL`。 如果 `numberOfElements` 小於字串的長度，函式也會傳回 `EINVAL`，並將 `errno` 設為 `EINVAL`。  
   
-## 備註  
- `_strlwr_s` 函式將所有在 `str` 中的大寫字母轉換為小寫。  `_mbslwr_s` 是 `_strlwr_s`多位元組字元版本。`_wcslwr_s` 是 `_strlwr_s`的寬字元版本。  
+## <a name="remarks"></a>備註  
+ `_strlwr_s` 函式會就地將 `str` 中的任何大寫字母轉換成小寫。 `_mbslwr_s` 是 `_strlwr_s` 的寬字元版本。`_wcslwr_s` 這是 `_strlwr_s` 的寬字元版本。  
   
- 輸出值受地區設定的`LC_CTYPE` 分類設定所影響。如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 。  這些函式沒有以 `_l` 後綴的版本在這些地區相依的行為上使用目前的地區設定，而以 `_l` 後綴版本除了它們會使用傳入的地區設定參數之外運作相同。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- C\+\+ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 \(因而不須指定大小引數\)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。  如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
   
- 這些函式的偵錯版本會先用 0xFD 填入緩衝區。  若要停用此行為，請使用 [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
+ 這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcslwr_s`|`_strlwr_s`|`_mbslwr_s`|`_wcslwr_s`|  
 |`_tcslwr_s_l`|`_strlwr_s_l`|`_mbslwr_s_l`|`_wcslwr_s_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_strlwr_s`, `_strlwr_s_l`|\<string.h\>|  
-|`_mbslwr_s`, `_mbslwr_s_l`|\<mbstring.h\>|  
-|`_wcslwr_s`, `_wcslwr_s_l`|\<string.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_strlwr_s`, `_strlwr_s_l`|\<string.h>|  
+|`_mbslwr_s`, `_mbslwr_s_l`|\<mbstring.h>|  
+|`_wcslwr_s`, `_wcslwr_s_l`|\<string.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_strlwr_s.cpp  
@@ -217,14 +231,17 @@ int main()
 }  
 ```  
   
-  **Mixed: The String to End All Strings\!**  
-**Lower: the string to end all strings\!**  
-**Upper: THE STRING TO END ALL STRINGS\!**   
-## .NET Framework 對等用法  
+```Output  
+Mixed: The String to End All Strings!  
+Lower: the string to end all strings!  
+Upper: THE STRING TO END ALL STRINGS!  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
  [System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_strupr\_s、\_strupr\_s\_l、\_mbsupr\_s、\_mbsupr\_s\_l、\_wcsupr\_s、\_wcsupr\_s\_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
+ [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)

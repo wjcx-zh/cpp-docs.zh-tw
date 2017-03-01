@@ -1,53 +1,69 @@
 ---
-title: "_resetstkoflw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_resetstkoflw"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "resetstkoflw"
-  - "_resetstkoflw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_resetstkoflw 函式"
-  - "resetstkoflw 函式"
-  - "堆疊溢位"
-  - "堆疊, 復原"
+title: _resetstkoflw | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _resetstkoflw
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- resetstkoflw
+- _resetstkoflw
+dev_langs:
+- C++
+helpviewer_keywords:
+- resetstkoflw function
+- stack overflow
+- stack, recovering
+- _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# _resetstkoflw
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
+ms.lasthandoff: 02/24/2017
 
-從堆疊溢位中復原。  
+---
+# <a name="resetstkoflw"></a>_resetstkoflw
+從堆疊溢位復原。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -55,39 +71,39 @@ int _resetstkoflw ( void );
   
 ```  
   
-## 傳回值  
- 如果函式成功則非零，失敗則為零。  
+## <a name="return-value"></a>傳回值  
+ 如果函式成功則為非零值，失敗則為&0;。  
   
-## 備註  
- `_resetstkoflw` 函式可從堆疊溢位的情況中復原，讓程式得以繼續執行，不會因嚴重的例外狀況錯誤而失敗。  如果未呼叫 `_resetstkoflw` 函式，則在上述的例外狀況之後不會產生保護分頁。  下次發生堆疊溢位時，完全不會有例外狀況，且會在沒有產生警告的情況下結束此處理序。  
+## <a name="remarks"></a>備註  
+ `_resetstkoflw` 函式從堆疊溢位狀況復原，讓程式繼續執行而不是因嚴重的例外狀況錯誤而失敗。 如果未呼叫 `_resetstkoflw` 函式，在前一個例外狀況之後便沒有防護頁面。 下次發生堆疊溢位時，完全沒有任何例外狀況，且處理序會終止而不發出警告。  
   
- 如果在應用程式中的執行緒會產生 **EXCEPTION\_STACK\_OVERFLOW** 例外狀況時，執行緒是使自己的堆疊處於損毀狀態。  與其他例外狀況比較，例如 **EXCEPTION\_ACCESS\_VIOLATION** 或 **EXCEPTION\_INT\_DIVIDE\_BY\_ZERO**則是堆疊無損壞的情況。  當程式第一次載入時，堆疊設為一個小的隨機值。  堆疊再來會依執行緒需求調整為想要的大小。  方法為代換頁面為目前堆疊最末端的 PAGE\_GUARD 存取。  如需詳細資訊，請參閱[建立保護頁面](http://msdn.microsoft.com/library/windows/desktop/aa366549)。  
+ 如果應用程式中的執行緒造成 **EXCEPTION_STACK_OVERFLOW** 例外狀況，執行緒的堆疊便已處於損毀狀態。 這與其他例外狀況，例如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO** 相反，它們的堆疊並未損毀。 程式第一次載入時，堆疊會設定為很小的值。 然後堆疊會視需要成長，以符合執行緒的需要。 這樣的實作方法是在目前堆疊結尾處放置具有 PAGE_GUARD 存取的頁面。 如需詳細資訊，請參閱 [Creating Guard Pages](http://msdn.microsoft.com/library/windows/desktop/aa366549) (建立防護頁面)。  
   
- 當程式碼造成堆疊指標指向這個頁面的位址時，例外狀況會出現並且系統會做下列三件事情:  
+ 當程式碼造成堆疊指標指向這個頁面上的位址時，會發生例外狀況，且系統會執行下列三件事︰  
   
--   移除保護網頁的 PAGE\_GUARD 保護，讓執行緒可以寫入和讀取記憶體資料。  
+-   移除防護頁面上的 PAGE_GUARD 保護，使執行緒可以讀取和寫入記憶體中的資料。  
   
--   配置一個新保護網頁，此頁面接在最後一個頁面之後。  
+-   配置新的防護頁面，位於前一個防護頁面的下方一個頁面。  
   
--   重新執行引發例外狀況的指示。  
+-   重新執行引發例外狀況的指令。  
   
- 如此一來，系統可以為執行緒自動加大堆疊的大小。  處理序中的每個執行緒有堆疊大小的上限。  堆疊大小在編譯時期由 [\/STACK \(堆疊配置\)](../../build/reference/stack-stack-allocations.md)，或是在 .def 檔中的 [STACKSIZE](../../build/reference/stacksize.md) 陳述式的專案設定。  
+ 如此一來，系統可以自動增加執行緒的堆疊大小。 處理序中的每個執行緒都有最大堆疊大小。 堆疊大小在編譯時期由 [/STACK (堆疊配置)](../../build/reference/stack-stack-allocations.md) 所設定，或是由專案 .def 檔案中的 [STACKSIZE](../../build/reference/stacksize.md) 陳述式設定。  
   
- 當超過這個最大堆疊大小時，系統會做下列三件事情:  
+ 當超過這個最大堆疊大小時，系統會執行下列三件事︰  
   
--   如前所述，移除保護網頁的 PAGE\_GUARD 保護。  
+-   移除防護頁面上的 PAGE_GUARD 保護，如先前所述。  
   
--   嘗試在最後一個網頁後配置一個新的保護網頁。  然而，因最大堆疊大小已超過所以會失敗。  
+-   嘗試在前一個防護頁面下方配置新的防護頁面。 不過，這會失敗，因為已經超過最大堆疊大小。  
   
--   引發一個例外狀況，以便執行緒可以在例外狀況區塊處理它。  
+-   引發例外狀況，使執行緒可以在例外狀況區塊中處理它。  
   
- 請注意此時堆疊不會產生保護分頁。  下次程式隨時增加到堆疊的末端，最末端會產生一個保護分頁，寫入在此堆疊後面的程式會造成存取違規。  
+ 請注意，此時，堆疊不再有防護頁面。 下次程式堆疊一直成長到最後時，在該處應該有防護頁面，程式會寫入超過堆疊的結尾，並造成存取違規。  
   
- 每當在復原堆疊溢位的例外狀況完成後，會呼叫 `_resetstkoflw` 還原保護頁面。  這個函式可從 `__except` 區塊內部主體呼叫或是 **\_\_except** 區塊的外部呼叫。  不過在使用時，仍然有一些限制存在。  `_resetstkoflw`不應該從以下地方呼叫:  
+ 每當發生堆疊溢位例外狀況之後完成復原時，請呼叫 `_resetstkoflw` 還原防護頁面。 此函式可以從 `__except` 區塊主體內呼叫，或是在 **__except** 區塊之外呼叫。 不過，它的使用時機有一些限制。 `_resetstkoflw` 永遠不可從下列位置呼叫︰  
   
 -   篩選條件運算式。  
   
--   一個 filter 函式。  
+-   篩選函式。  
   
 -   從篩選函式呼叫的函式。  
   
@@ -95,28 +111,28 @@ int _resetstkoflw ( void );
   
 -   `__finally` 區塊。  
   
- 在這幾個地方，堆疊還不會回溯。  
+ 在這些點，堆疊尚無法充分回溯。  
   
- 堆疊溢位例外狀況會以結構化例外狀況產生，因此 `_resetstkoflw` 不適用於一般 **catch** 區塊，因為它不會攔截堆疊溢位例外狀況。  不過，如果 [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) 用來實作傳回 C\+\+ 例外狀況的結構化的例外狀況轉譯器 \(第二個範例中\)，C\+\+ 例外狀況的堆疊溢位例外狀況產生可由 C \+\+ catch 區塊處理。  
+ 堆疊溢位例外狀況會產生為結構化例外狀況，而不是 C++ 例外狀況，因此 `_resetstkoflw` 並不適用於一般 **catch** 區塊，因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。  
   
- 在 C \+\+ catch 區塊呼叫 **\_resetstkoflw**  從結構化例外狀況轉譯函式所擲回的例外狀況是不安全的。  在這種情況下，堆疊空間不會釋放，且堆疊指標不會重設到 catch 區塊之外，即使在 Catch 區塊之前解構函式由可終結物件被呼叫。  此函式不應該被呼叫，直到堆疊空間被釋放且堆疊指標重設。  因此，應該在離開 catch 區塊之後再呼叫它。  盡可能不要在 catch 區塊中使用堆疊空間，因為在 catch 區塊本身就會嘗試復原先前不可復原的堆疊溢位 \(Stack Overflow\) ，且在 catch 區塊的溢位觸發本身同一個 catch 區塊處理的例外狀況可能造成程式停止回應。  
+ 在從結構化例外狀況翻譯器函式所擲回例外狀況達到的 C++ catch 區塊中呼叫 **_resetstkoflw** 並不安全。 在此情況下，不會釋放堆疊空間，而且一直達到 catch 區塊之外以前都不會重設堆疊指標，即使已經在 catch 區塊之前呼叫任何可破壞物件的解構函式。 在堆疊空間釋放且堆疊指標重設之前，不應該呼叫此函式。 因此，它只應該在結束 catch 區塊之後呼叫。 在 catch 區塊中應該盡可能減少使用堆疊空間，因為如果堆疊溢位發生在 catch 區塊中，而 catch 區塊本身正在嘗試從先前堆疊溢位復原時，這樣的堆疊溢位是無法復原的，並且可能造成程式停止回應，因為 catch 區塊中的溢位會觸發例外狀況，該例外狀況又是由相同的 catch 區塊處理。  
   
- **\_resetstkoflw** 在正確的位置下仍可能會失敗，例如在 **\_\_except**  區塊內。  如果，在回溯堆疊後，在不寫入堆疊的最後一頁的情況下，仍然是以不足夠的堆疊空間執行 **\_resetstkoflw** ， **\_resetstkoflw** 會因為保護網頁失敗，並傳回 0，。  因此，這個函式的正確使用方式應該包括檢查傳回值而非假設此堆疊是保證不會出錯的。  
+ 在有些情況下 **_resetstkoflw** 可能會失敗，即使是使用於正確的位置，例如在 **__except** 區塊內。 如果即使是在回溯堆疊之後，仍沒有足夠的堆疊空間可執行 **_resetstkoflw** 而不寫入至堆疊的最後一頁，那麼 **_resetstkoflw** 便無法將堆疊的最後一頁重設為防護頁面，並且會傳回 0，表示失敗。 因此，安全地使用此函式應該要包含檢查傳回值，而不是假設堆疊的使用是安全的。  
   
- 結構化例外處理 \(Exception Handling\) 將不會攔截 `STATUS_STACK_OVERFLOW` 例外狀況，在編譯應用程式與 `/clr` 或 `/clr:pure` \(請參閱 [\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)\)。  
+ 結構化的例外處理不會抓取`STATUS_STACK_OVERFLOW`與編譯該應用程式時的例外狀況`/clr`(請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md))。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_resetstkoflw`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_resetstkoflw`|\<malloc.h>|  
   
- 如需詳細的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
- **程式庫:** [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)的所有版本。  
+ **程式庫︰**所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
- 下列範例為 `_resetstkoflw` 函式的推薦使用方法。  
+## <a name="example"></a>範例  
+ 下列範例顯示 `_resetstkoflw` 函式的建議用法。  
   
 ```  
 // crt_resetstkoflw.c  
@@ -185,16 +201,16 @@ int main(int ac)
 }  
 ```  
   
-## 範例輸出  
- 沒有程式引數:  
+## <a name="sample-output"></a>範例輸出  
+ 不含程式引數：  
   
 ```  
 loop #1  
 ```  
   
- 程式停止回應，而不執行下一步的反覆項目。  
+ 程式停止回應，而不執行進一步的反覆項目。  
   
- 含有程式引數:  
+ 含程式引數：  
   
 ```  
 loop #1  
@@ -219,10 +235,10 @@ loop #10
 resetting stack overflow  
 ```  
   
-### 描述  
- 下列範例為 `_resetstkoflw` 在有結構化的例外狀況被轉換成 C\+\+ 的程式推薦用法。  
+### <a name="description"></a>描述  
+ 下列範例將示範 `_resetstkoflw` 在程式中的建議用法，在該程式中，結構化例外狀況會轉換成 C++ 例外狀況。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // crt_resetstkoflw2.cpp  
@@ -304,7 +320,7 @@ int main ( )
 }  
 ```  
   
-## 範例輸出  
+## <a name="sample-output"></a>範例輸出  
   
 ```  
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  
@@ -312,8 +328,8 @@ Stack overflow!
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
- [\_alloca](../../c-runtime-library/reference/alloca.md)
+## <a name="see-also"></a>另請參閱  
+ [_alloca](../../c-runtime-library/reference/alloca.md)

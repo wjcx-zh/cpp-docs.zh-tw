@@ -1,75 +1,91 @@
 ---
 title: "_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fstat32"
-  - "_fstat64"
-  - "_fstati64"
-  - "_fstat"
-  - "_fstat64i32"
-  - "_fstat32i64"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fstat32i64"
-  - "fstat"
-  - "fstat64i32"
-  - "_fstat64"
-  - "_fstati64"
-  - "fstat64"
-  - "_fstat32"
-  - "fstat32i64"
-  - "fstati64"
-  - "_fstat"
-  - "fstat32"
-  - "_fstat64i32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fstat64 函式"
-  - "fstati64 函式"
-  - "_fstat64i32 函式"
-  - "_fstat32i64 函式"
-  - "_fstat32 函式"
-  - "檔案資訊"
-  - "fstat64i32 函式"
-  - "fstat32 函式"
-  - "fstat 函式"
-  - "fstat64 函式"
-  - "_fstat 函式"
-  - "_fstati64 函式"
-  - "fstat32i64 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fstat32
+- _fstat64
+- _fstati64
+- _fstat
+- _fstat64i32
+- _fstat32i64
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fstat32i64
+- fstat
+- fstat64i32
+- _fstat64
+- _fstati64
+- fstat64
+- _fstat32
+- fstat32i64
+- fstati64
+- _fstat
+- fstat32
+- _fstat64i32
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fstat64 function
+- fstati64 function
+- _fstat64i32 function
+- _fstat32i64 function
+- _fstat32 function
+- file information
+- fstat64i32 function
+- fstat32 function
+- fstat function
+- fstat64 function
+- _fstat function
+- _fstati64 function
+- fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
+ms.lasthandoff: 02/24/2017
 
-取得開啟的檔案的相關資訊。  
+---
+# <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
+取得開啟之檔案的相關資訊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _fstat(   
@@ -98,30 +114,30 @@ int _fstat64i32(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `fd`  
  已開啟之檔案的檔案描述項。  
   
  `buffer`  
- 要儲存結果的結構指標。  
+ 儲存結果的結構指標。  
   
-## 傳回值  
- 如果取得檔案狀態資訊，傳回 0。 –1 的傳回值表示錯誤。 如果檔案描述項無效，或 `buffer` 是 `NULL`, 、 無效參數處理常式叫用時，所述 [參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 `errno` 設為 `EBADF`, 、 無效的檔案描述元，或為 `EINVAL`, ，如果 `buffer` 是 `NULL`。  
+## <a name="return-value"></a>傳回值  
+ 如果取得檔案狀態資訊，則傳回 0。 –1 的傳回值表示錯誤。 如果檔案描述元無效或 `buffer` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，在檔案描述元無效的情形中，`errno` 會設為 `EBADF`，如果 `buffer` 為 `NULL`，則會設為 `EINVAL`。  
   
-## 備註  
- `_fstat` 函式會取得資訊開啟與相關聯的檔案 `fd` 並將它儲存在結構中所指 `buffer`。`_stat` SYS\\Stat.h 中, 定義的結構包含下列欄位。  
+## <a name="remarks"></a>備註  
+ `_fstat` 函式會取得與 `fd` 相關聯之開啟的檔案的相關資訊，並將它儲存在 `buffer` 結構中。 定義於 SYS\Stat.h 中，`_stat` 結構包含下列欄位。  
   
  `st_atime`  
- 最後一個檔案存取時間。  
+ 最後存取檔案的時間。  
   
  `st_ctime`  
  建立檔案的時間。  
   
  `st_dev`  
- 如果裝置 `fd`，否則為 0。  
+ 如果是裝置，則為 `fd`，否則為 0。  
   
  `st_mode`  
- 檔案模式資訊的位元遮罩。`_S_IFCHR` 如果位元設定 `fd` 指的是裝置。`_S_IFREG` 如果位元設定 `fd` 指的是一般的檔案。 根據檔案的權限模式設定的讀取\/寫入位元。`_S_IFCHR` 和其他常數 SYS\\Stat.h 中定義。  
+ 檔案模式資訊的位元遮罩。 如果 `fd` 指的是裝置，則會設定 `_S_IFCHR` 位元。 如果 `fd` 指的是一般檔案，則會設定 `_S_IFREG` 位元。 讀取/寫入位元會根據檔案的權限模式設定。 `_S_IFCHR` 和其他常數於 SYS\Stat.h 中定義。  
   
  `st_mtime`  
  檔案的上次修改時間。  
@@ -130,25 +146,25 @@ int _fstat64i32(
  在非 NTFS 檔案系統上一律為 1。  
   
  `st_rdev`  
- 如果裝置 `fd`，否則為 0。  
+ 如果是裝置，則為 `fd`，否則為 0。  
   
  `st_size`  
- 以位元組為單位的檔案大小。  
+ 檔案大小，以位元組為單位。  
   
- 如果 `fd` 到裝置，是指 `st_atime`, ，`st_ctime`, ，`st_mtime`, ，和 `st_size` 欄位並沒有意義。  
+ 如果 `fd` 指的是裝置，則 `st_atime`、`st_ctime`、`st_mtime`和`st_size` 欄位並沒有意義。  
   
- 因為使用 Stat.h [\_dev\_t](../../c-runtime-library/standard-types.md) 輸入，定義在 Types.h，您必須包含 Types.h Stat.h 之前程式碼中。  
+ 因為 Stat.h 使用在 Types.h 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) 類型，所以您必須在程式碼中的 Stat.h 之前包含 Types.h。  
   
- `_fstat64`, 它會使用 `__stat64` 結構，可讓總 23:59:59，3000 年 12 月 31 日 UTC 表示的檔案建立日期，而其他函式只能代表 23:59:59 2038 年 1 月 18 日 UTC 日期。 午夜過後，1970 年 1 月 1 日是所有這些函式的日期範圍的下限。  
+ 使用 `__stat64` 結構的 `_fstat64`，允許表示至3000 年 12 月 31 日 23:59:59 UTC 為止的日期；而其他函式只能表示至 2038 年 1 月 18 日23:59:59 UTC 的日期。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。  
   
- 這些函式的各種支援 32 位元或 64 位元的時間型別和 32 位元或 64 位元檔案長度。 第一個數值後置字元 \(`32` 或 `64`\) 表示所使用的時間類型大小，第二個後置字元為 `i32` 或 `i64`，表示檔案大小是以 32 位元或 64 位元整數來表示。  
+ 這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數值後置字元 (`32` 或 `64`) 表示所使用的時間類型大小，第二個後置字元為 `i32` 或 `i64`，表示檔案大小是以 32 位元或 64 位元整數來表示。  
   
- `_fstat` 相當於 `_fstat64i32`, ，和 `struct``_stat` 包含 64 位元時間。 這是 true 除非 `_USE_32BIT_TIME_T` 定義在此情況下舊的行為是生效; `_fstat` 使用 32 位元的時間和 `struct``_stat` 包含 32 位元時間。 這也適用於 `_fstati64`。  
+ `_fstat` 相當於 `_fstat64i32`，且 `struct``_stat` 包含 64 位元時間。 上述情況只有在定義 `_USE_32BIT_TIME_T` 時才不成立，在此情況下，會採用舊版行為，也就是 `_fstat` 使用 32 位元時間，且 `struct``_stat` 包含 32 位元時間。 對於 `_fstati64` 也是如此。  
   
-### \_stat 的時間類型和檔案長度類型版本  
+### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 的時間類型和檔案長度類型版本  
   
-|函式|是否已定義 \_USE\_32BIT\_TIME\_T？|時間類型|檔案長度類型|  
-|--------|----------------------------------|----------|------------|  
+|函式|是否已定義 _USE_32BIT_TIME_T？|時間類型|檔案長度類型|  
+|---------------|------------------------------------|---------------|----------------------|  
 |`_fstat`|未定義|64 位元|32 位元|  
 |`_fstat`|已定義|32 位元|32 位元|  
 |`_fstat32`|不會受到巨集定義的影響|32 位元|32 位元|  
@@ -158,20 +174,20 @@ int _fstat64i32(
 |`_fstat32i64`|不會受到巨集定義的影響|32 位元|64 位元|  
 |`_fstat64i32`|不會受到巨集定義的影響|64 位元|32 位元|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |函式|必要的標頭|  
-|--------|-----------|  
-|`_fstat`|\<.h \> 和 \< s \>|  
-|`_fstat32`|\<.h \> 和 \< s \>|  
-|`_fstat64`|\<.h \> 和 \< s \>|  
-|`_fstati64`|\<.h \> 和 \< s \>|  
-|`_fstat32i64`|\<.h \> 和 \< s \>|  
-|`_fstat64i32`|\<.h \> 和 \< s \>|  
+|--------------|---------------------|  
+|`_fstat`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstat32`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstat64`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstati64`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstat32i64`|\<sys/stat.h> 和 \<sys/types.h>|  
+|`_fstat64i32`|\<sys/stat.h> 和 \<sys/types.h>|  
   
- 如需相容性詳細資訊，請參閱簡介中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_fstat.c  
@@ -232,15 +248,16 @@ int main( void )
 ```  
   
 ```Output  
-檔案大小︰ 16 次修改時間︰ 星期三 5 月 07 日 15:25:11 2003年  
+File size     : 16  
+Time modified : Wed May 07 15:25:11 2003  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
- [\_access、\_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [\_chmod、\_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_filelength、\_filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
- [\_stat、\_wstat 函式](../../c-runtime-library/reference/stat-functions.md)
+ [_access、_waccess](../../c-runtime-library/reference/access-waccess.md)   
+ [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_filelength、_filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
+ [_stat、_wstat 函式](../../c-runtime-library/reference/stat-functions.md)

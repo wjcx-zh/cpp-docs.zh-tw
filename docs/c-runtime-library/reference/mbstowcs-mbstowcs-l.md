@@ -1,50 +1,66 @@
 ---
 title: "mbstowcs、_mbstowcs_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "mbstowcs"
-  - "_mbstowcs_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "mbstowcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mbstowcs_l 函式"
-  - "mbstowcs 函式"
-  - "mbstowcs_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- mbstowcs
+- _mbstowcs_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- mbstowcs
+dev_langs:
+- C++
+helpviewer_keywords:
+- _mbstowcs_l function
+- mbstowcs_l function
+- mbstowcs function
 ms.assetid: 96696b27-e068-4eeb-8006-3f7a0546ae6d
 caps.latest.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 30
----
-# mbstowcs、_mbstowcs_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
+ms.lasthandoff: 02/24/2017
 
-轉換寬字元序列至對應的多位元組字元。  這些函式已有更安全的版本可用，請參閱 [mbstowcs\_s、\_mbstowcs\_s\_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)。  
+---
+# <a name="mbstowcs-mbstowcsl"></a>mbstowcs、_mbstowcs_l
+將多位元組字元序列轉換成對應的寬字元序列。 這些函式已有更安全的版本可用，請參閱 [mbstowcs_s、_mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_t mbstowcs(  
@@ -73,46 +89,46 @@ size_t _mbstowcs_l(
 ); // C++ only  
 ```  
   
-#### 參數  
- \[out\] `wcstr`  
+#### <a name="parameters"></a>參數  
+ [輸出] `wcstr`  
  寬字元序列的位址。  
   
- \[in\] `mbstr`  
- 空結尾多位元組字元序列的位址。  
+ [in] `mbstr`  
+ 以 Null 結束之多位元組字元序列的位址。  
   
- \[in\] `count`  
- 要轉換的最大多位元字元數。  
+ [in] `count`  
+ 要轉換的多位元組字元數上限。  
   
- \[in\] `locale`  
+ [in] `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 如果 `mbstowcs` 轉換成功來源字串，它會傳回轉換的多位元組字元數。  如果 `wcstr` 引數是 `NULL`，函式會傳回所需大小 \(以寬字元計算\) 的目的字串。  如果 `mbstowcs` 遇到無效的多位元組字元，則會傳回– 1。  如果傳回值是 `count`，寬字元字串不是以 null 終止。  
+## <a name="return-value"></a>傳回值  
+ 如果 `mbstowcs` 成功轉換來源字串，則會傳回已轉換的多位元組字元數。 如果 `wcstr` 引數為 `NULL`，函式會傳回目的字串所需的大小 (以寬字元為單位)。 如果 `mbstowcs` 遇到無效的多位元組字元，則傳回 -1。 如果傳回值是 `count`，則寬字元字串不會以 Null 結束。  
   
 > [!IMPORTANT]
->  確認 `wcstr` 和 `mbstr` 不重疊，而 `count` 正確反映轉換寬字元的數目。  
+>  確定 `wcstr` 和 `mbstr` 沒有重疊，而且 `count` 正確反映要轉換的多位元組字元數。  
   
-## 備註  
- `mbstowcs` 函式轉換由 `count` 多位元組字元的最大數目指向 `mbstr` 套用至目前地區設定取決於對應的寬字元的字串。  它儲存產生的寬字元字串以 `wcstr`表示的位址*。*結果類似一系列呼叫於 `mbtowc`。  如果 `mbstowcs` 發生單一位元組 null 字元 \(「\\ 0 "\) 或前面，或當發生 `count` ，它會將 null 字元之寬字元 L null 字元 \(」\\ 0 "\) 和中止。  因此，在轉換期間，只有當遇到多位元 NULL 字元時 `wcstr` 的寬字元字串才是 NULL 結尾。  如果被 `wcstr` 和 `mbstr` 指向的序列重疊，行為是未定義。  
+## <a name="remarks"></a>備註  
+ `mbstowcs` 函式最多可將 `mbstr` 所指向的 `count` 個多位元組字元，轉換成目前地區設定所決定的對應寬字元字串。 它會將產生的寬字元字串儲存在以 `wcstr` 表示的位址。 結果會類似於對 `mbtowc` 的一連串呼叫。 如果 `mbstowcs` 在發生 `count` 之前或期間遇到單一位元組的 Null 字元 ('\0')，則會將 Null 字元轉換成寬字元的 Null 字元 (L'\0') 並停止。 因此，只有在轉換期間遇到 Null 字元時，`wcstr` 的寬字元字串才會以 Null 結束。 如果 `wcstr` 和 `mbstr` 所指向的序列重疊，則行為是未定義的。  
   
- 如果 `wcstr` 引數是 `NULL`， `mbstowcs` 會傳回由轉換寬字元數目，包括 null 結束字元。  必須以 null 結束之來源字串才能傳回正確的值。  如果您需要產生的寬字元字串 NULL 結尾，請將傳回的值。  
+ 如果 `wcstr` 引數為 `NULL`，`mbstowcs` 會傳回轉換所產生的寬字元數，但不包括 Null 結束字元。 來源字串必須以 Null 結束，才能傳回正確的值。 如果您需要產生的寬字元字串以 Null 結束，請將一個 Null 新增至傳回的值。  
   
- 如果 `mbstr`引數為`NULL`，或如果 `count`是  \> `INT_MAX`，則會叫用無效參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，errno會被設為 `EINVAL` ，函式並傳回 \-1。  
+ 如果 `mbstr` 引數為 `NULL`，或 `count` > `INT_MAX`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，errno 會設定為 `EINVAL`，且函式會傳回 -1。  
   
- `mbstowcs` 在區域設定相依的動作時使用任何的區域設定。 `_mbstowcs_l`  除了使用傳入的區域設定以外其餘相同。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `mbstowcs` 會針對任何與地區設定相關的行為使用目前的地區設定；`_mbstowcs_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- 在 C\+\+ 中，這些函式具有多載樣板，可以叫用更新、更安全的這些函式的相對版本。  如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`mbstowcs`|\<stdlib.h\>|  
-|`_mbstowcs_l`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`mbstowcs`|\<stdlib.h>|  
+|`_mbstowcs_l`|\<stdlib.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_mbstowcs.c  
@@ -194,24 +210,28 @@ int main( void )
 }  
 ```  
   
-  **地區設定資訊設定為 Japanese\_Japan.932**  
-**轉換為多位元字串：**  
- **要求的大小: 4**  
- **提供多位元組字串的位元組數目:4**  
- **多位元組字元的十六進位值:0x82 0xa0 0x82 0xa1**  
- **到 0x9f 的字碼頁 932 使用 0x81 當前導位元組。**  
-**轉換回寬字元字串：**  
- **Characters converted: 2**  
- **前 2 寬字元的十六進位值:0x3042 0x3043**   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+```Output  
+Locale information set to Japanese_Japan.932  
+Convert to multibyte string:  
+  Required Size: 4  
+  Number of bytes written to multibyte string: 4  
+  Hex values of the  multibyte characters: 0x82 0xa0 0x82 0xa1  
+  Codepage 932 uses 0x81 to 0x9f as lead bytes.  
   
-## 請參閱  
+Convert back to wide-character string:  
+  Characters converted: 2  
+  Hex value of first 2 wide characters: 0x3042 0x3043  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [\_mbclen、mblen、\_mblen\_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbtowc、\_mbtowc\_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs、\_wcstombs\_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [wctomb、\_wctomb\_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
+ [_mbclen、mblen、_mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
+ [mbtowc、_mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
+ [wcstombs、_wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
+ [wctomb、_wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)

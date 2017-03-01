@@ -1,49 +1,65 @@
 ---
 title: "memchr、wmemchr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wmemchr"
-  - "memchr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memchr"
-  - "wmemchr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memchr 函式"
-  - "wmemchr 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wmemchr
+- memchr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- memchr
+- wmemchr
+dev_langs:
+- C++
+helpviewer_keywords:
+- memchr function
+- wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# memchr、wmemchr
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: f9a0a16f6af3fd8b357a979a64c4d8b38b0a1ea9
+ms.lasthandoff: 02/24/2017
 
-尋找在緩衝區的字元。  
+---
+# <a name="memchr-wmemchr"></a>memchr、wmemchr
+在緩衝區中尋找字元。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void *memchr(  
@@ -78,7 +94,7 @@ const wchar_t *wmemchr(
 ); // C++ only  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `buf`  
  緩衝區的指標。  
   
@@ -88,27 +104,27 @@ const wchar_t *wmemchr(
  `count`  
  要檢查的字元數。  
   
-## 傳回值  
- 如果成功的話，會傳回指標至`buf`中`c` 的第一個位置。  否則，會傳回 `NULL`。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，則傳回 `buf` 中 `c` 的第一個位置指標。 否則會傳回 `NULL`。  
   
-## 備註  
- `memchr` 和`wmemchr`尋找`c`在`buf`中第一個`count`位元組的第一次出現。  當他找到`c`或是檢查到第一個`count`位元組時，他會停止。  
+## <a name="remarks"></a>備註  
+ `memchr` 和 `wmemchr` 會在 `buf` 的前 `count` 個位元組中尋找第一個出現的 `c`。 當它找到 `c` 或完成前 `count` 個位元組的檢查時，便會停止。  
   
- 在 C 裏，這些函式的第一個引數採用 `const` 的指標。  在 C\+\+ 裏，有兩個多載版本可供使用。  多載的一個版本接受 `const` 的指標並回傳 `const` 的指標。另一個則接受 `const` 的指標並回傳非 `const` 的指標。  如果 `const` 和非 `const` 的版本均可用，會定義巨集 \_CONST\_CORRECT\_OVERLOADS 。  如果您需要 C\+\+ 兩個overloadsin C\+\+版本有非 `const` 的行為，請定義符號 \_CONST\_RETURN 。  
+ 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 如果這些函式的 `const` 和非 `const` 版本都可以使用，即會定義巨集 _CONST_CORRECT_OVERLOADS。 如果 C++ 中的兩個 C++ 多載都需要非 `const` 行為，請定義符號 _CONST_RETURN。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`memchr`|\<memory.h\> 或 \<string.h\>|  
-|`wmemchr`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memchr`|\<memory.h> 或 \<string.h>|  
+|`wmemchr`|\<wchar.h>|  
   
- 如需更多相容性的資訊，請參閱 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_memchr.c  
@@ -139,7 +155,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 String to be searched:  
@@ -151,13 +167,13 @@ Search char: r
 Result:      r found at position 12  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
  [memset、wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strchr、wcschr、\_mbschr、\_mbschr\_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)
+ [strchr、wcschr、_mbschr、_mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)

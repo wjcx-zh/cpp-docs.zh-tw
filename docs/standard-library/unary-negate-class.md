@@ -1,71 +1,81 @@
 ---
 title: "unary_negate 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unary_negate"
-  - "std::unary_negate"
-  - "std.unary_negate"
-  - "xfunctional/std::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unary_negate
+- std::unary_negate
+- std.unary_negate
+- xfunctional/std::unary_negate
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# unary_negate 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: 078ee71844b0ac5cd02b182287a7a6db6caa04db
+ms.lasthandoff: 02/24/2017
 
-提供一個成員函式的樣板類別，此成員函式否定指定的一元函式之傳回值。  
+---
+# <a name="unarynegate-class"></a>unary_negate 類別
+提供一個成員函式的樣板類別，這個成員函式可將指定一元函式的傳回值變成負值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template <class Predicate>
+class unary_negate
+    : public unaryFunction<typename Predicate::argument_type, bool>
+{
+public:
+    explicit unary_negate(const Predicate& Func);
+    bool operator()(const typename Predicate::argument_type& left) const;
+};
 ```  
   
-   template<class Predicate>  
-class unary_negate  
-   : public unary_function<  
-      typename Predicate::argument_type,  
-      bool>   
-{  
-public:  
-explicit unary_negate(  
-   const Predicate& _Func  
-);  
-bool operator()(  
-   const typename Predicate::argument_type& _Left ) const;  
-};  
-```  
+#### <a name="parameters"></a>參數  
+ `Func`  
+ 要變為負值的一元函式。  
   
-#### 參數  
- `_Func`  
- 要變成相反值的一元的函式。  
+ `left`  
+ 要變為負值之一元函式的運算元。  
   
- `_Left`  
- 要變成相反值的一元的函式的運算元。  
+## <a name="return-value"></a>傳回值  
+ 一元函式的負運算。  
   
-## 傳回值  
- 一元負的函式。  
+## <a name="remarks"></a>備註  
+ 此樣板類別會儲存一元函式物件 _ *Func* 的複本。 它會將其成員函式 `operator()` 定義為傳回的 **!**\_ *Func(left)*。  
   
-## 備註  
- 樣板類別儲存一元的函式物件 \_Func 的複本。它會定義成員的函式 `operator()` 為傳回 **\!**\_Func*\(\_Left\)。*  
+ `unary_negate` 的建構函式很少會直接使用。 Helper 函式 [not1](../standard-library/functional-functions.md#not1_function) 提供宣告和使用 **unary_negator** 配接器述詞的更簡易方式。  
   
- 直接很少使用 `unary_negate` 建構函式。  Helper 函式 [not1](../Topic/not1%20Function.md) 提供簡易的方法宣告和使用 **unary\_negator** 配接器述詞。  
+## <a name="example"></a>範例  
   
-## 範例  
-  
-```  
+```cpp  
 // functional_unary_negate.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -108,16 +118,22 @@ int main()
     cout << "The number of elements in v1 not greater than 10 is: "  
          << result2 << "." << endl;  
 }  
+/* Output:  
+The vector v1 = ( 0 5 10 15 20 25 30 35 )  
+The number of elements in v1 greater than 10 is: 5.  
+The number of elements in v1 not greater than 10 is: 3.  
+*/  
 ```  
   
-  **向量 v1 \= \(0 5 10 15 20 25 30 35\)。**  
-**項目數目 v1 大於 10 的是:5.**  
-**項目數目 v1 不大於 10 的是:3.**   
-## 需求  
- **標題:** \<functional\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<functional>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
+
+
+

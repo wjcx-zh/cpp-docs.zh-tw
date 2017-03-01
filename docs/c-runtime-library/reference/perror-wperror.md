@@ -1,56 +1,72 @@
 ---
 title: "perror、_wperror | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wperror"
-  - "perror"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wperror"
-  - "_tperror"
-  - "perror"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_tperror 函式"
-  - "_wperror 函式"
-  - "錯誤訊息, 列印"
-  - "perror 函式"
-  - "列印錯誤訊息"
-  - "tperror 函式"
-  - "wperror 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wperror
+- perror
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wperror
+- _tperror
+- perror
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tperror function
+- tperror function
+- wperror function
+- error messages, printing
+- printing error messages
+- _wperror function
+- perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# perror、_wperror
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: b826a1539581aee3d58f49f68c5ba04139a14328
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="perror-wperror"></a>perror、_wperror
 列印錯誤訊息。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -62,40 +78,40 @@ void _wperror(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `string`  
- 欲列印的字串訊息。  
+ 要列印的字串訊息。  
   
-## 備註  
- `perror` 函式會列印錯誤訊息至 `stderr`。  `_wperror` 是 **\_perror** 的寬字元版本； `_wperror` 的 `string` 引數是寬字元字串。  此外 `_wperror` 和 **\_perror** 的行為相同。  
+## <a name="remarks"></a>備註  
+ `perror` 函式會將錯誤訊息列印至 `stderr`。 `_wperror` 是寬字元版本的 **_perror**；`_wperror` 的 `string` 引數是寬字元字串。 否則，`_wperror` 和 **_perror** 的行為即會相同。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|\_UNICODE & \_MBCS 未定義|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tperror`|`perror`|`perror`|`_wperror`|  
   
- `string` 會先列印，後面加上冒號，然後由造成錯誤的最後一個程式庫呼叫的系統錯誤訊息和最後的新行字元。  如果 `string` 為 null 指標或指標為空字串， `perror` 只列印系統錯誤訊息。  
+ `string` 會先列印，後面接著冒號，再接著上次產生錯誤之程式庫呼叫的系統錯誤訊息，最後接著新行字元。 如果 `string` 是 null 指標或 Null 字串的指標，`perror` 只會列印系統錯誤訊息。  
   
- 錯誤代碼儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 \(定義在 ERRNO.H\)。  系統錯誤訊息透過變數 [\_sys\_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 存取，此變數為依錯誤代碼排序的訊息陣列。  `perror` 列印適當的錯誤訊息會使用 `errno` 值做為對 `_sys_errlist` 的索引。  [\_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 變數的值定義為項目 `_sys_errlist` 陣列中的最大數目。  
+ 錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 `perror` 會使用 `errno` 值作為 `_sys_errlist` 的索引，來列印適當的錯誤訊息。 變數 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的值已定義為 `_sys_errlist` 陣列中的元素數目上限。  
   
- 若要產生正確的結果，請在程式庫常式傳回錯誤之後立刻呼叫 `perror`。  否則，後續呼叫可以覆寫 `errno` 值。  
+ 如需準確的結果，請在程式庫常式傳回錯誤之後立即呼叫 `perror`。 否則，後續呼叫可能會覆寫 `errno` 值。  
   
- 在 Windows 作業系統，在 ERRNO.H 清單的 `errno` 值未使用。  這些值是保留給 UNIX 作業系統使用的。  如需提供 Windows 作業系統使用的 `errno` 值的清單，請參閱 [\_doserrno、errno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 作業系統。  `perror` 列印這些平台未使用的所有 `errno` 值為空字串。  
+ 在 Windows 作業系統中，不會用到 ERRNO.H 中所列的一些 `errno` 值。 這些值會保留供 UNIX 作業系統使用。 如需 Windows 作業系統所使用的 `errno` 值清單，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 `perror` 會針對這些平台未使用的任何 `errno` 值列印空字串。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`perror`|\<stdio.h\> or \<stdlib.h\>|  
-|`_wperror`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`perror`|\<stdio.h> 或 \<stdlib.h>|  
+|`_wperror`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_perror.c  
@@ -137,7 +153,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 perror says open failed: No such file or directory  
@@ -145,11 +161,11 @@ strerror says open failed: No such file or directory
 _strerror says open failed: No such file or directory  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。若要呼叫標準 C 函式，請使用 `PInvoke`。如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
- [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>另請參閱  
+ [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [clearerr](../../c-runtime-library/reference/clearerr.md)   
  [ferror](../../c-runtime-library/reference/ferror.md)   
- [strerror、\_strerror、\_wcserror、\_\_wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)
+ [strerror、_strerror、_wcserror、\__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)

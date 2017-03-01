@@ -1,63 +1,123 @@
 ---
 title: "exponential_distribution 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::tr1::exponential_distribution"
-  - "exponential_distribution"
-  - "tr1::exponential_distribution"
-  - "tr1.exponential_distribution"
-  - "random/std::tr1::exponential_distribution"
-  - "std.tr1.exponential_distribution"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "exponential_distribution 類別"
-  - "exponential_distribution 類別 [TR1]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- exponential_distribution
+- std::exponential_distribution
+- random/std::exponential_distribution
+- std::exponential_distribution::reset
+- random/std::exponential_distribution::reset
+- std::exponential_distribution::lambda
+- random/std::exponential_distribution::lambda
+- std::exponential_distribution::param
+- random/std::exponential_distribution::param
+- std::exponential_distribution::min
+- random/std::exponential_distribution::min
+- std::exponential_distribution::max
+- random/std::exponential_distribution::max
+- std::exponential_distribution::operator()
+- random/std::exponential_distribution::operator()
+- std::exponential_distribution::param_type
+- random/std::exponential_distribution::param_type
+- std::exponential_distribution::param_type::lambda
+- random/std::exponential_distribution::param_type::lambda
+- std::exponential_distribution::param_type::operator==
+- random/std::exponential_distribution::param_type::operator==
+- std::exponential_distribution::param_type::operator!=
+- random/std::exponential_distribution::param_type::operator!=
+dev_langs:
+- C++
+helpviewer_keywords:
+- exponential_distribution class
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
 caps.latest.revision: 18
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# exponential_distribution 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
+ms.openlocfilehash: 6681447dd9e5dda7515d04b4bdedfd9de9c62983
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="exponentialdistribution-class"></a>exponential_distribution 類別
 產生指數分佈。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-template<class RealType = double> class exponential_distribution { public:     // types     typedef RealType result_type;     struct param_type;     // constructors and reset functions     explicit exponential_distribution(RealType lambda = 1.0);     explicit exponential_distribution(const param_type& parm);     void reset();     // generating functions     template<class URNG>     result_type operator()(URNG& gen);     template<class URNG>     result_type operator()(URNG& gen, const param_type& parm);     // property functions     RealType lambda() const;     param_type param() const;     void param(const param_type& parm);     result_type min() const;     result_type max() const; };  
-```  
+template<class RealType = double>
+class exponential_distribution  
+   {  
+public:  
+   // types  
+   typedef RealType result_type;  
+   struct param_type;  
+   
+   // constructors and reset functions  
+   explicit exponential_distribution(result_type lambda = 1.0);
+   explicit exponential_distribution(const param_type& parm);
+   void reset();
+   
+   // generating functions  
+   template <class URNG>  
+   result_type operator()(URNG& gen);
+   template <class URNG>  
+   result_type operator()(URNG& gen, const param_type& parm);
+   
+   // property functions  
+   result_type lambda() const;
+   param_type param() const;
+   void param(const param_type& parm);
+   result_type min() const;
+   result_type max() const;
+   };  
+``` 
+### <a name="parameters"></a>參數  
+*RealType*  
+浮點結果類型，預設值為 `double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
   
-#### 參數  
- `RealType`  
- 浮點結果類型，預設值為 `double`。  如需可能的類型，請參閱 [\<random\>](../standard-library/random.md)。  
+*URNG* 亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
   
-## 備註  
- 此範本類別描述產生使用者指定之整數類型的值的分佈 \(若無提供則為 `double` 類型\)，而這是根據指數分佈進行分佈。  下表提供各個成員的文章連結。  
+  
+## <a name="remarks"></a>備註  
+ 此範本類別描述產生使用者指定之整數類型的值的分佈 (若無提供則為 `double` 類型)，而這是根據指數分佈進行分佈。 下表提供各個成員的文章連結。  
   
 ||||  
 |-|-|-|  
-|[exponential\_distribution::exponential\_distribution](../Topic/exponential_distribution::exponential_distribution.md)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
-|`exponential_distribution::operator()`||[exponential\_distribution::param\_type](../Topic/exponential_distribution::param_type.md)|  
+|[exponential_distribution::exponential_distribution](#exponential_distribution__exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|  
+|`exponential_distribution::operator()`||[exponential_distribution::param_type](#exponential_distribution__param_type)|  
   
- 屬性函式 `lambda()` 會傳回儲存的分佈參數 `lambda` 的值。  
+屬性成員函式 `lambda()` 會傳回預存的分佈參數 `lambda` 值。  
   
- 如需分佈類別及其成員的詳細資訊，請參閱 [\<random\>](../standard-library/random.md)。  
+屬性成員函式 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。  
   
- 如需指數分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[指數分佈](http://go.microsoft.com/fwlink/?LinkId=401098) \(英文\)。  
+如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
-## 範例  
+如需指數分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Exponential Distribution](http://go.microsoft.com/fwlink/LinkId=401098) (指數分佈)。  
+  
+## <a name="example"></a>範例  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -112,33 +172,81 @@ int main()
   
 ```  
   
-## 輸出  
-  
-```  
+```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
 Enter a floating point value for the 'lambda' distribution parameter (must be greater than zero): 1  
 Enter an integer value for the sample count: 10  
-  
+ 
 min() == 0  
 max() == 1.79769e+308  
 lambda() == 1.0000000000  
 Distribution for 10 samples:  
-          1:   0.0936880533  
-          2:   0.1225944894  
-          3:   0.6443593183  
-          4:   0.6551171649  
-          5:   0.7313457551  
-          6:   0.7313557977  
-          7:   0.7590097389  
-          8:   1.4466885214  
-          9:   1.6434088411  
-         10:   2.1201210996  
+    1: 0.0936880533  
+    2: 0.1225944894  
+    3: 0.6443593183  
+    4: 0.6551171649  
+    5: 0.7313457551  
+    6: 0.7313557977  
+    7: 0.7590097389  
+    8: 1.4466885214  
+    9: 1.6434088411  
+    10: 2.1201210996  
 ```  
   
-## 需求  
- **標頭：**\<random\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<random>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<random\>](../standard-library/random.md)
+##  <a name="a-nameexponentialdistributionexponentialdistributiona--exponentialdistributionexponentialdistribution"></a><a name="exponential_distribution__exponential_distribution"></a>  exponential_distribution::exponential_distribution  
+ 建構分佈。  
+  
+```  
+explicit exponential_distribution(result_type lambda = 1.0);
+explicit exponential_distribution(const param_type& parm);
+```  
+  
+### <a name="parameters"></a>參數  
+*lambda*  
+ `lambda` 分佈參數。  
+  
+*parm*  
+ 用於建構分佈的參數封裝。  
+  
+### <a name="remarks"></a>備註  
+**前置條件：**`0.0 < lambda`  
+  
+第一個建構函式的物件，其預存的 `lambda` 值具有 *lambda* 值。  
+  
+第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+  
+##  <a name="a-nameexponentialdistributionparamtypea--exponentialdistributionparamtype"></a><a name="exponential_distribution__param_type"></a>  exponential_distribution::param_type  
+儲存分佈的參數。  
+  
+```
+struct param_type {  
+   typedef exponential_distribution<result_type> distribution_type;  
+   param_type(result_type lambda = 1.0);
+   result_type lambda() const;
+
+   bool operator==(const param_type& right) const;
+   bool operator!=(const param_type& right) const;
+   };
+```  
+  
+### <a name="parameters"></a>參數  
+*lambda*  
+`lambda` 分佈參數。  
+  
+*right*  
+要與這個項目比較的 `param_type` 物件。  
+  
+### <a name="remarks"></a>備註  
+**前置條件：**`0.0 < lambda`  
+  
+此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+  
+## <a name="see-also"></a>另請參閱  
+[\<random>](../standard-library/random.md)
+
+

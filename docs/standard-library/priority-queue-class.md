@@ -1,32 +1,48 @@
 ---
 title: "priority_queue 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.priority_queue"
-  - "priority_queue"
-  - "std::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "priority_queue 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.priority_queue
+- priority_queue
+- std::priority_queue
+dev_langs:
+- C++
+helpviewer_keywords:
+- priority_queue class
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# priority_queue 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: 493cc5b28bb4cfa682b06ed904c3b0c0aa46220c
+ms.lasthandoff: 02/24/2017
 
-範本容器配接器類別，提供的功能限制的存取權的一些基礎的容器類型，都是最大或最高優先順序的最上層元素的限制。 Priority_queue 可以加入新項目，可以檢查或移除 priority_queue 頂端的項目。  
+---
+# <a name="priorityqueue-class"></a>priority_queue 類別
+範本容器配接器類別，它提供的限制功能可限制存取某些基礎容器類型的最上層項目，且這一律為最大或最高優先順序。 新項目可加入至 priority_queue，並且可以檢查或移除 priority_queue 的最上層項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,36 +53,36 @@ class priority_queue
   
 #### <a name="parameters"></a>參數  
  *Type*  
- Priority_queue 中儲存項目資料型別。  
+ 要存放在 priority_queue 中的項目資料類型。  
   
  `Container`  
- 用來實作 priority_queue 基礎容器的類型。  
+ 用來實作 priority_queue 的基礎容器類型。  
   
- *比較*  
- 提供的函式物件的型別可以比較兩個項目值做為排序鍵，以判斷 priority_queue 中的相對順序。 這個引數是選擇性的二元述詞和 **小於***\<***typename** *容器***:: value_type***>* 做為預設值。  
+ *Compare*  
+ 此類型提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在 priority_queue 中的相對順序。 這是選擇性引數，而且二元述詞 **less***\<***typename** *Container***::value_type***>* 是預設值。  
   
 ## <a name="remarks"></a>備註  
- 類別的項目 **類型** 約定第一個範本中的佇列物件的參數是同義詞 [value_type](#priority_queue__value_type) ，而且必須符合基礎容器類別中的項目類型 **容器** 約定由第二個範本參數。  **類型** 必須指派，如此就可以複製該類型的物件，並將值指派給該型別的變數。  
+ 佇列物件第一個範本參數中約定的類別 **Type** 的項目，與 [value_type](#priority_queue__value_type) 同義，且必須符合第二個範本參數約定之基礎容器類別 **Container** 中的項目類型。 **Type** 必須是可指派，以便可以複製該類型的物件，並將值指派給該類型的變數。  
   
- Priority_queue 訂單藉由呼叫類別的預存函式物件所控制的序列 **特性**。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。  
+ priority_queue 會藉由呼叫 **Traits** 類別的已儲存函式物件，排序它所控制的序列。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。  
   
- 包含適合基礎容器類別，如 priority_queue [deque 類別](../standard-library/deque-class.md) 和預設 [vector 類別](../standard-library/vector-class.md) 或任何其他支援的作業序列容器 `front`, ，`push_back`, ，和 `pop_back` 和隨機存取迭代器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。  
+ 適用於 priority_queue 的基礎容器類別包括 [deque 類別](../standard-library/deque-class.md)和預設的 [vector 類別](../standard-library/vector-class.md)，或是任何其他支援 `front`、`push_back` 和 `pop_back` 作業，以及隨機存取迭代器的序列容器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。  
   
- 將項目來加入和移除項目從 `priority_queue` 兩者都有對數的複雜性。 存取項目中的 `priority_queue` 有常數複雜度。  
+ 將項目加入至 `priority_queue` 或從中移除項目，都具有對數複雜度。 存取 `priority_queue` 中的項目具有常數複雜度。  
   
- 有三種類型的 STL 所定義的容器配接器︰ 堆疊、 佇列和 priority_queue。 每個會限制一些基礎容器類別，以提供標準的資料結構的精確地控制的介面的功能。  
+ 有三種由 C++ 標準程式庫定義的容器配接器類型：stack、queue 和 priority_queue。 每個類型都會限制某些基礎容器類別的功能，以精確地為標準資料結構提供受控制的介面。  
   
--    [Stack 類別](../standard-library/stack-class.md) 支援後進先出 (LIFO) 資料結構。 就好像盤子的堆疊一樣，這是一種較為貼切好記的類比。 項目 (盤子) 可能會插入、檢查，或只從堆疊頂端移除，這是基底容器尾端的最後一個項目。 限制只存取最上層項目是使用 stack 類別的原因。  
+-   [stack 類別](../standard-library/stack-class.md)支援後進先出 (LIFO) 的資料結構。 就好像盤子的堆疊一樣，這是一種較為貼切好記的類比。 項目 (盤子) 可能會插入、檢查，或只從堆疊頂端移除，這是基底容器尾端的最後一個項目。 限制只存取最上層項目是使用 stack 類別的原因。  
   
--    [Queue 類別](../standard-library/queue-class.md) 支援先進先出 (FIFO) 資料結構。 就好像人們排隊等候銀行櫃員一樣，這是一種較為貼切好記的類比。 項目 (人) 可能會加入隊伍的尾端，以及從隊伍的前面移除。 隊伍的前端和後端都可能會進行檢查。 限制存取只正面和背面元素以這種方式是使用佇列類別的原因。  
+-   [queue 類別](../standard-library/queue-class.md)支援先進先出 (FIFO) 的資料結構。 就好像人們排隊等候銀行櫃員一樣，這是一種較為貼切好記的類比。 項目 (人) 可能會加入隊伍的尾端，以及從隊伍的前面移除。 隊伍的前端和後端都可能會進行檢查。 以這種方式限制只存取前端和後端項目，是使用 queue 類別的原因。  
   
--   Priority_queue 類別排序其項目，因此，最大項目會一直在頂端位置。 它支援插入項目，以及檢查和移除頂端項目。 就好像依照年齡、身高或某些其他條件來排列一群人一樣，這是一種較為貼切好記的類比。  
+-   priority_queue 類別會排序其項目，使最大的項目一律位在頂端位置。 它支援插入項目，以及檢查和移除頂端項目。 就好像依照年齡、身高或某些其他條件來排列一群人一樣，這是一種較為貼切好記的類比。  
   
 ### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[priority_queue](#priority_queue__priority_queue)|建構 `priority_queue` 也就是空的或，是一份基底的容器物件或另一個範圍 `priority_queue`。|  
+|[priority_queue](#priority_queue__priority_queue)|建構 `priority_queue`，它可以是空的，或是基底容器物件範圍的複本，或是其他 `priority_queue` 的複本。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -80,45 +96,45 @@ class priority_queue
   
 |||  
 |-|-|  
-|[空白](#priority_queue__empty)|測試 `priority_queue` 是否為空白。|  
-|[快顯](#priority_queue__pop)|移除的最大項目 `priority_queue` 從頂端的位置。|  
-|[推播](#priority_queue__push)|將元素加入至根據優先順序的運算子中的項目優先權佇列 <。|  
-|[大小](#priority_queue__size)|傳回 `priority_queue` 中項目的數目。|  
-|[頁首](#priority_queue__top)|傳回常數參考的最大的項目上方的 `priority_queue`。|  
+|[empty](#priority_queue__empty)|測試 `priority_queue` 是否為空白。|  
+|[pop](#priority_queue__pop)|從頂端位置移除 `priority_queue` 的最大項目。|  
+|[push](#priority_queue__push)|根據運算子 < 的項目優先順序，將項目加入到優先權佇列。|  
+|[size](#priority_queue__size)|傳回 `priority_queue` 中項目的數目。|  
+|[top](#priority_queue__top)|傳回 `priority_queue` 頂端最大項目的 const 參考。|  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \< 佇列>  
+ **標頭：**\<queue>  
   
  **命名空間：** std  
   
-##  <a name="a-namepriorityqueuecontainertypea-priorityqueuecontainertype"></a><a name="priority_queue__container_type"></a>  priority_queue:: container_type  
- 提供基底的容器必須採用型別。  
+##  <a name="a-namepriorityqueuecontainertypea--priorityqueuecontainertype"></a><a name="priority_queue__container_type"></a>  priority_queue::container_type  
+ 提供要調整之基底容器的類型。  
   
 ```  
 typedef Container container_type;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型是樣板參數 `Container` 的同義字。 STL 序列容器類別 deque 和預設類別向量符合的需求來做為 priority_queue 物件的基底的容器。 也可能使用滿足需求的使用者定義型別。  
+ 此類型是樣板參數 `Container` 的同義字。 C++ 標準程式庫序列容器類別 `deque` 和預設類別 `vector` 都符合用來當作 priority_queue 物件之基底類別的需求。 也可以使用滿足該要求的使用者定義類型。  
   
- 如需有關 `Container`, ，請參閱 \< 備註 > 一節 [priority_queue 類別](../standard-library/priority-queue-class.md) 主題。  
+ 如需有關 `Container` 的詳細資訊，請參閱 [priority_queue 類別](../standard-library/priority-queue-class.md)主題的＜備註＞一節。  
   
 ### <a name="example"></a>範例  
-  請參閱範例 [priority_queue](#priority_queue__priority_queue) 如需如何宣告和使用的範例 `container_type`。  
+  如需如何宣告及使用 `container_type` 的範例，請參閱 [priority_queue](#priority_queue__priority_queue) 的範例。  
   
-##  <a name="a-namepriorityqueueemptya-priorityqueueempty"></a><a name="priority_queue__empty"></a>  priority_queue:: empty  
- 測試是否 priority_queue 是空的。  
+##  <a name="a-namepriorityqueueemptya--priorityqueueempty"></a><a name="priority_queue__empty"></a>  priority_queue::empty  
+ 測試 priority_queue 是否是空的。  
   
 ```  
 bool empty() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- **true** priority_queue 是空的; 如果 **false** 如果 priority_queue 是空的。  
+ 如果 priority_queue 是空的則為 **true**；如果 priority_queue 不是空的則為 **false**。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // pqueue_empty.cpp  
 // compile with: /EHsc  
 #include <queue>  
@@ -150,19 +166,19 @@ The priority_queue q1 is not empty.
 The priority_queue s2 is empty.  
 ```  
   
-##  <a name="a-namepriorityqueuepopa-priorityqueuepop"></a><a name="priority_queue__pop"></a>  priority_queue:: pop  
- 從頂端位置移除 priority_queue 最大項目。  
+##  <a name="a-namepriorityqueuepopa--priorityqueuepop"></a><a name="priority_queue__pop"></a>  priority_queue::pop  
+ 從頂端位置移除 priority_queue 的最大項目。  
   
 ```  
 void pop();
 ```  
   
 ### <a name="remarks"></a>備註  
- priority_queue 必須為非空白，才能套用成員函式。 Priority_queue 頂端一律佔用的最大的項目容器中。  
+ priority_queue 必須為非空白，才能套用成員函式。 priority_queue 的頂端一律由容器中最大的項目佔用。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // pqueue_pop.cpp  
 // compile with: /EHsc  
 #include <queue>  
@@ -204,8 +220,8 @@ After a pop, the priority_queue length is 2.
 After a pop, the element at the top of the priority_queue is 20.  
 ```  
   
-##  <a name="a-namepriorityqueuepriorityqueuea-priorityqueuepriorityqueue"></a><a name="priority_queue__priority_queue"></a>  priority_queue:: priority_queue  
- 建構 priority_queue 是空的或範圍，或另一個 priority_queue 的基底的容器物件的複本。  
+##  <a name="a-namepriorityqueuepriorityqueuea--priorityqueuepriorityqueue"></a><a name="priority_queue__priority_queue"></a>  priority_queue::priority_queue  
+ 建構 priority_queue，它可以是空的，或是基底容器物件範圍的複本，或是另一個 priority_queue 的複本。  
   
 ```  
 priority_queue();
@@ -228,13 +244,13 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
   
 ### <a name="parameters"></a>參數  
  *_ comp*  
- 類型的比較函式 **constTraits** 用來排序 priority_queue，其預設值為比較函式的基底的容器中的項目。  
+ 類型為 **constTraits** 並用來排序 priority_queue 中項目的比較函式，預設為基底容器的比較函式。  
   
  `_Cont`  
- 為其複本建構的 priority_queue 的基底的容器。  
+ 建構的 priority_queue 將成為複本的基底容器。  
   
  ` right`  
- Priority_queue 當中建構的集合的副本。  
+ 建構的集合將成為複本的 priority_queue。  
   
  ` first`  
  要複製的元素範圍中第一個元素的位置。  
@@ -243,15 +259,15 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
  超出要複製之元素範圍的第一個元素的位置。  
   
 ### <a name="remarks"></a>備註  
- 每個前三個建構函式指定空的初始 priority_queue，第二個指定的比較函式類型 ( ` comp`) 要用來建立項目和第三個明確指定的順序 `container_type` ( `_Cont`) 使用。 關鍵字 **明確** 隱藏某些類型的自動類型轉換。  
+ 前三建構函式都會指定空的初始 priority_queue，第二個建構函式還會指定建立項目順序時所要使用的比較函式類型 ( ` comp`)，而第三個建構函式則會明確指定所要使用的 `container_type` ( `_Cont`)。 關鍵字 **explicit** 會隱藏某些類型的自動類型轉換。  
   
- 第四個建構函式會指定一份 priority_queue ` right`。  
+ 第四個建構函式會指定 priority_queue ` right` 的複本。  
   
- 最後三個建構函式會將範圍複製 [ * first、 last*) 的某個容器，並使用值來初始化逐漸 explicitness 中指定的比較函式類別的型別 priority_queue **特性** 和 `container_type`。  
+ 最後三個建構函式會複製某些容器的範圍 [ * first,  last*)，並使用該值初始化 priority_queue，其中會以越來越明確的方式指定類別 **Traits** 和 `container_type` 的比較函式類型。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // pqueue_ctor.cpp  
 // compile with: /EHsc  
 #include <queue>  
@@ -360,8 +376,8 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namepriorityqueuepusha-priorityqueuepush"></a><a name="priority_queue__push"></a>  priority_queue:: push  
- 將元素加入至根據優先順序的運算子中的項目優先權佇列 <。  
+##  <a name="a-namepriorityqueuepusha--priorityqueuepush"></a><a name="priority_queue__push"></a>  priority_queue::push  
+ 根據運算子 < 的項目優先順序，將項目加入到優先權佇列。  
   
 ```  
 void push(const Type& val);
@@ -369,14 +385,14 @@ void push(const Type& val);
   
 ### <a name="parameters"></a>參數  
  ` val`  
- 加入至 priority_queue 頂端的項目。  
+ 加入到 priority_queue 頂端的項目。  
   
 ### <a name="remarks"></a>備註  
- Priority_queue 頂端是佔用最大的項目容器中的位置。  
+ priority_queue 的頂端是由容器中最大的項目佔用的位置。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // pqueue_push.cpp  
 // compile with: /EHsc  
 #include <queue>  
@@ -406,19 +422,19 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuesizea-priorityqueuesize"></a><a name="priority_queue__size"></a>  priority_queue:: size  
- Priority_queue 中傳回的項目數。  
+##  <a name="a-namepriorityqueuesizea--priorityqueuesize"></a><a name="priority_queue__size"></a>  priority_queue::size  
+ 傳回 priority_queue 中的項目數目。  
   
 ```  
 size_type size() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- Priority_queue 目前的長度。  
+ priority_queue 的目前長度。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // pqueue_size.cpp  
 // compile with: /EHsc  
 #include <queue>  
@@ -445,20 +461,20 @@ The priority_queue length is 1.
 The priority_queue length is now 2.  
 ```  
   
-##  <a name="a-namepriorityqueuesizetypea-priorityqueuesizetype"></a><a name="priority_queue__size_type"></a>  priority_queue:: size_type  
- 不帶正負號的整數型別可以代表 priority_queue 中的項目數。  
+##  <a name="a-namepriorityqueuesizetypea--priorityqueuesizetype"></a><a name="priority_queue__size_type"></a>  priority_queue::size_type  
+ 不帶正負號的整數類型，可以表示 priority_queue 中的項目數。  
   
 ```  
 typedef typename Container::size_type size_type;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型是同義字 `size_type` 由 priority_queue 的基底容器。  
+ 此類型和由 priority_queue 配接的基底容器 `size_type` 同義。  
   
 ### <a name="example"></a>範例  
-  請參閱範例 [大小](#priority_queue__size) 如需如何宣告和使用的範例 `size_type`。  
+  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#priority_queue__size) 的範例。  
   
-##  <a name="a-namepriorityqueuetopa-priorityqueuetop"></a><a name="priority_queue__top"></a>  priority_queue:: top  
+##  <a name="a-namepriorityqueuetopa--priorityqueuetop"></a><a name="priority_queue__top"></a>  priority_queue::top  
  傳回 priority_queue 頂端最大項目的常數參考。  
   
 ```  
@@ -466,14 +482,14 @@ const_reference top() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 最大項目，由參考 **特性** 函式、 priority_queue 的物件。  
+ 最大項目物件參考，該項目是由 **Traits** 函式 (priority_queue 的物件) 所決定。  
   
 ### <a name="remarks"></a>備註  
  priority_queue 必須為非空白，才能套用成員函式。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // pqueue_top.cpp  
 // compile with: /EHsc  
 #include <queue>  
@@ -503,19 +519,19 @@ The priority_queue length is 3.
 The element at the top of the priority_queue is 30.  
 ```  
   
-##  <a name="a-namepriorityqueuevaluetypea-priorityqueuevaluetype"></a><a name="priority_queue__value_type"></a>  priority_queue:: value_type  
- 代表物件儲存為 priority_queue 中的項目類型的類型。  
+##  <a name="a-namepriorityqueuevaluetypea--priorityqueuevaluetype"></a><a name="priority_queue__value_type"></a>  priority_queue::value_type  
+ 此類型代表儲存為 priority_queue 項目的物件類型。  
   
 ```  
 typedef typename Container::value_type value_type;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型是同義字 `value_type` 由 priority_queue 的基底容器。  
+ 此類型和由 priority_queue 配接的基底容器 `value_type` 同義。  
   
 ### <a name="example"></a>範例  
   
-```  
+```cpp  
 // pqueue_value_type.cpp  
 // compile with: /EHsc  
 #include <queue>  
@@ -544,6 +560,7 @@ The element at the top of the priority_queue is 69.
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [標準樣板程式庫](../misc/standard-template-library.md)
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+
 

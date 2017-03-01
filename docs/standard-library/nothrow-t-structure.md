@@ -1,49 +1,69 @@
 ---
 title: "nothrow_t 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "nothrow_t"
-  - "std.nothrow_t"
-  - "std::nothrow_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nothrow_t 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- nothrow_t
+- std.nothrow_t
+- std::nothrow_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# nothrow_t 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
+ms.openlocfilehash: b490cccf048b5d5b9be53508331cba89e66c952f
+ms.lasthandoff: 02/24/2017
 
-而不會擲回例外狀況，結構用來，當 new 運算子的函式參數指示函式應該傳回 null 指標報告配置失敗。  
+---
+# <a name="nothrowt-structure"></a>nothrow_t 結構
+此類別可用來作為 new 運算子的函式參數，以指出函式應該要傳回 Null 指標來回報配置失敗，而非擲回例外狀況。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+struct std::nothrow_t {};
 ```  
-struct std::nothrow_t {};  
-```  
   
-## 備註  
- 結構說明編譯器選取建構函式的正確版本。  [nothrow](../Topic/nothrow%20\(%3Cnew%3E\).md) 是 `std::nothrow_t`型別物件的同義字。  
+## <a name="remarks"></a>備註  
+ 此結構可協助編譯器選取正確的建構函式版本。 [nothrow](../standard-library/new-functions.md#nothrow) 與 `std::nothrow_t` 類型的物件同義。  
   
-## 範例  
- 請參閱 [new 運算子](../Topic/operator%20new%20\(%3Cnew%3E\).md) 和 [new 運算子 &#91;](../Topic/operator%20new\(%3Cnew%3E\).md) 以 `std::nothrow_t` 如何為例做為函式參數。  
+## <a name="example"></a>範例  
+ 如需如何使用 `std::nothrow_t` 作為函式參數的範例，請參閱 [operator new](../standard-library/new-operators.md#operator_new) 和 [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)。  
   
-## 需求  
- 新 \<的**Header:** \>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<new>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

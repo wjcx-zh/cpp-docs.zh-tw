@@ -1,70 +1,129 @@
 ---
-title: "COleException Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "COleException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COleException class"
-  - "例外狀況, OLE"
+title: "COleException 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- COleException
+dev_langs:
+- C++
+helpviewer_keywords:
+- COleException class
+- exceptions, OLE
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# COleException Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
+ms.openlocfilehash: 059c92c8dc8796cf103cc02533ba5f3526720249
+ms.lasthandoff: 02/24/2017
 
-表示例外狀況與 OLE 作業相關。  
+---
+# <a name="coleexception-class"></a>COleException 類別
+表示與 OLE 作業相關的例外狀況。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class COleException : public CException  
 ```  
   
-## 成員  
+## <a name="members"></a>Members  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[COleException::Process](#process)|將轉譯成 OLE 傳回碼攔截的例外狀況。|  
+  
+### <a name="public-data-members"></a>公用資料成員  
   
 |名稱|描述|  
-|--------|--------|  
-|[COleException::Process](../Topic/COleException::Process.md)|轉譯攔截的例外狀況為 OLE 傳回碼。|  
+|----------|-----------------|  
+|[COleException::m_sc](#m_sc)|包含表示例外狀況原因的狀態碼。|  
   
-### 公用資料成員  
+## <a name="remarks"></a>備註  
+ `COleException`類別包含保存之原因的例外狀況的狀態程式碼的公用資料成員。  
   
-|名稱|描述|  
-|--------|--------|  
-|[COleException::m\_sc](../Topic/COleException::m_sc.md)|表示包含例外狀況原因的狀態碼。|  
+ 一般情況下，您不應該建立`COleException`物件直接; 相反地，您應該呼叫[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
   
-## 備註  
- `COleException` 類別包含保存表示例外狀況的狀態碼原因的一個公用資料成員。  
+ 如需有關例外狀況的詳細資訊，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[例外狀況︰ OLE 例外狀況](../../mfc/exceptions-ole-exceptions.md)。  
   
- 一般而言，您不應該直接建立物件， `COleException` 相反地，您應該呼叫 [AfxThrowOleException](../Topic/AfxThrowOleException.md)。  
-  
- 如需例外狀況的詳細資訊，請參閱 Microsoft 知識庫文件 [例外處理 \(MFC\)](../../mfc/exception-handling-in-mfc.md) 和 [例外狀況:OLE 例外狀況。](../../mfc/exceptions-ole-exceptions.md)。  
-  
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `COleException`  
   
-## 需求  
- **Header:** afxdisp.h  
+## <a name="requirements"></a>需求  
+ **標頭：** afxdisp.h  
   
-## 請參閱  
- [MFC 範例 CALCDRIV](../../top/visual-cpp-samples.md)   
- [CException Class](../../mfc/reference/cexception-class.md)   
+##  <a name="a-namemsca--coleexceptionmsc"></a><a name="m_sc"></a>COleException::m_sc  
+ 此資料成員會保留之 OLE 狀態碼，指出例外狀況的原因。  
+  
+```  
+SCODE m_sc;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個變數的值由設定[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
+  
+ 如需有關`SCODE`，請參閱[結構的 COM 錯誤碼](http://msdn.microsoft.com/library/windows/desktop/ms690088)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+### <a name="example"></a>範例  
+ [!code-cpp[NVC_MFCOleContainer #&22;](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
+  
+##  <a name="a-nameprocessa--coleexceptionprocess"></a><a name="process"></a>COleException::Process  
+ 呼叫**程序**成員函式以轉譯成 OLE 狀態碼攔截的例外狀況。  
+  
+```  
+static SCODE PASCAL Process(const CException* pAnyException);
+```  
+  
+### <a name="parameters"></a>參數  
+ *pAnyException*  
+ 攔截的例外狀況的指標。  
+  
+### <a name="return-value"></a>傳回值  
+ OLE 狀態碼。  
+  
+### <a name="remarks"></a>備註  
+  
+> [!NOTE]
+>  此函式是**靜態**。  
+  
+ 如需有關`SCODE`，請參閱[結構的 COM 錯誤碼](http://msdn.microsoft.com/library/windows/desktop/ms690088)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+### <a name="example"></a>範例  
+  請參閱範例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)   
+ [CException 類別](../../mfc/reference/cexception-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
+
+
+
+

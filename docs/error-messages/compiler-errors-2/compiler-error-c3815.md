@@ -1,75 +1,48 @@
 ---
-title: "編譯器錯誤 C3815 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3815"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3815"
+title: "編譯器錯誤 C3815 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3815
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3815
 ms.assetid: c5a3b404-6341-4fd3-92af-152b404c4dde
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C3815
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0c8c034d7d52e66bcd88c2a1046c40c68a9e0784
+ms.lasthandoff: 02/24/2017
 
-方法 'get\_accessor' 的傳回型別必須符合 setter 最後參數的型別  
+---
+# <a name="compiler-error-c3815"></a>編譯器錯誤 C3815
+方法 'get_accessor' 傳回型別必須符合 setter 的最後一個參數的型的別  
   
- 宣告 [屬性](../../misc/property.md) 時，`get_accessor` 方法的傳回值必須符合 Set Accessor 方法宣告中的最後一個參數。  
+ 宣告屬性的傳回值時`get_accessor`方法必須符合的 set 存取子方法宣告中的最後一個參數。  
   
- C3815 只能透過 **\/clr:oldSyntax** 取得。  
-  
- 下列範例會產生 C3815：  
-  
-```  
-// C3815.cpp  
-// compile with: /clr:oldSyntax /LD  
-#using <mscorlib.dll>  
-__gc class X  
-{  
-public:  
-   __property char get_N()  
-   // try the following line instead  
-   // __property int get_N()  
-   {  
-      return m_val;  
-   }  
-  
-   __property void set_N( int val)  
-   {  
-      m_val = val;  
-   }  
-  
-private:  
-   int m_val;  
-};   // C3815  
-```  
-  
- 以下範例示範了如何載入屬性，會讓 getter 的傳回型別與 setter 的最後一個參數不相符。  
-  
-```  
-// C3815b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-public __gc class MyClass {  
-public:  
-// 1st property:  
-   __property System::Int32 get_p1();  
-   __property void set_p1(System::Int32 i);  
-  
-// 2nd property (only setter):  
-   __property void set_p1(System::Int32* i);  
-  
-};  
-```
+ C3815 才可使用過時的編譯器選項**/clr:oldSyntax**。  
+

@@ -1,53 +1,86 @@
 ---
-title: "affinity_partitioner 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::affinity_partitioner"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "affinity_partitioner 類別"
+title: "affinity_partitioner 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::affinity_partitioner
+dev_langs:
+- C++
+helpviewer_keywords:
+- affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# affinity_partitioner 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 92da56fd5b84537c2fa01a252dfee202c729cc96
+ms.lasthandoff: 02/24/2017
 
-`affinity_partitioner`類別是類似於`static_partitioner`類別，但它會快取親和性提高其選擇的對應子範圍與背景工作執行緒。  針對相同的資料集合，會重新執行迴圈並的資料放在快取中時，它可以明顯改善效能。  請注意，相同`affinity_partitioner`物件使用方式必須執行特定的資料集合，可受益於資料位置上的平行迴圈的後續的反覆項目。  
+---
+# <a name="affinitypartitioner-class"></a>affinity_partitioner 類別
+`affinity_partitioner` 類別與 `static_partitioner` 類別類似，不過，它可依據對應背景工作執行緒子範圍的選擇來改善快取依存性。 當迴圈重複執行相同的資料集，且快取容納得下該資料時，它可以大幅改善效能。 請注意，若要取得資料位置的優勢，必須使用相同的 `affinity_partitioner` 物件來搭配平行迴圈的後續反覆項目，且該平行迴圈應執行於特定資料集上。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class affinity_partitioner;
 ```  
-class affinity_partitioner;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[affinity\_partitioner::affinity\_partitioner 建構函式](../Topic/affinity_partitioner::affinity_partitioner%20Constructor.md)|建構 `affinity_partitioner` 物件。|  
-|[affinity\_partitioner::~affinity\_partitioner 解構函式](../Topic/affinity_partitioner::~affinity_partitioner%20Destructor.md)|終結 `affinity_partitioner` 物件。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[affinity_partitioner 建構函式](#ctor)|建構 `affinity_partitioner` 物件。|  
+|[~ affinity_partitioner 解構函式](#dtor)|終結`affinity_partitioner`物件。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `affinity_partitioner`  
   
-## 需求  
- **標頭：** ppl.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** ppl.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-affinitypartitioner"></a><a name="dtor"></a>~ affinity_partitioner 
+
+ 終結`affinity_partitioner`物件。  
+  
+```
+~affinity_partitioner();
+```  
+  
+##  <a name="a-namectora-affinitypartitioner"></a><a name="ctor"></a>affinity_partitioner 
+
+ 建構 `affinity_partitioner` 物件。  
+  
+```
+affinity_partitioner();
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)
+

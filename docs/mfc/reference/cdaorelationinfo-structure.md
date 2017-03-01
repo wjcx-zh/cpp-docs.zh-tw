@@ -1,92 +1,107 @@
 ---
-title: "CDaoRelationInfo 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoRelationInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoRelationInfo 結構"
-  - "DAO (資料存取物件), 關聯性集合"
+title: "CDaoRelationInfo 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoRelationInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- DAO (Data Access Objects), Relations collection
+- CDaoRelationInfo structure
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# CDaoRelationInfo 結構
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 7c3a8195aed2c3b3fe5c78c98afcc6e72a83cc21
+ms.lasthandoff: 02/24/2017
 
-關聯的 `CDaoRelationInfo` 結構包含資訊定義在兩個資料表之間欄位在 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 物件中。  
+---
+# <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 結構
+`CDaoRelationInfo`結構包含定義兩個資料表中的欄位之間的關聯性的相關資訊[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      struct CDaoRelationInfo  
+struct CDaoRelationInfo  
 {  
-   CDaoRelationInfo( );                    // Constructor  
-   CString m_strName;                      // Primary  
-   CString m_strTable;                     // Primary  
-   CString m_strForeignTable;              // Primary  
-   long m_lAttributes;                     // Secondary  
-   CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-   short m_nFields;                        // Secondary  
-   // Below the // Implementation comment:  
-   // Destructor, not otherwise documented  
+    CDaoRelationInfo();
+*// Constructor  
+    CString m_strName;      // Primary  
+    CString m_strTable;     // Primary  
+    CString m_strForeignTable;              // Primary  
+    long m_lAttributes;     // Secondary  
+    CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
+    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
 };  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `m_strName`  
- 唯一名稱相關聯的物件。  如需詳細資訊，請參閱本主題中的"名字屬性" DAO'幫助。  
+ 唯一名稱的關聯物件。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
   
- *m\_strTable*  
- 在關聯將主資料表。  
+ *m_strTable*  
+ 命名關聯性中的主要資料表。  
   
- *m\_strForeignTable*  
- 命名關聯對外資料表。  外部資料表是用於資料表的外部索引鍵。  通常，您會使用外部資料表建立或強制使用參考完整性。  外部資料表是一對多關聯性中表示「多」方。  外部資料表包含的範例資料表包含美國狀態或加拿大省或客戶訂單的程式碼。  
+ *m_strForeignTable*  
+ 命名關聯性中的外部索引資料表。 外部資料表是用來包含外部索引鍵的資料表。 一般而言，您可以使用外部資料表來建立或強制參考完整性。 外部資料表通常是一對多關聯性的多邊。 外部資料表的範例包括包含程式碼狀態美國或加拿大地區或客戶訂單的資料表。  
   
  `m_lAttributes`  
- 包含相關聯型別的相關資訊。  這個成員的值可以是下列任何一項:  
+ 包含關聯性類型的相關資訊。 這個成員的值可以是下列其中一項︰  
   
--   **dbRelationUnique** 關聯性是一對一。  
+- **dbRelationUnique**關聯性是一對一。  
   
--   **dbRelationDontEnforce** 關聯性不會強制執行 \(沒有參考完整性 \(Referential Integrity\)。  
+- **dbRelationDontEnforce**關聯性不是強制執行 （沒有參考完整性）。  
   
--   **dbRelationInherited** 關係存在於包含兩種其他的資料表建立非目前的資料庫。  
+- **dbRelationInherited**包含兩個連結的資料表的非資料庫中存在關聯性。  
   
--   **dbRelationLeft** 關聯性是左聯結。  左外部聯結包含任何資料錄開頭 \(左邊\) 這兩個資料表，因此，即使沒有資料錄相符的值在第二個 \(右邊\) 資料表中。  
+- **dbRelationLeft**的關聯性是左方的聯結。 左外部聯結包含所有記錄的第一個 （左） 兩個資料表，即使沒有相符值的第二個 （右） 資料表中的記錄。  
   
--   **dbRelationRight** 關聯性是權限聯結。  右外部聯結包含任何資料錄第二個 \(右邊\) 這兩個資料表，因此，即使沒有資料錄相符的值在第一個 \(左邊\) 資料表中。  
+- **dbRelationRight**的關聯性是正確的聯結。 右外部聯結包含所有記錄的第二個 （右） 的兩個資料表，即使沒有相符值的第一個 （左） 資料表中的記錄。  
   
--   **dbRelationUpdateCascade** 更新下拉式清單。  
+- **dbRelationUpdateCascade**會串聯更新。  
   
--   **dbRelationDeleteCascade** 刪除將下拉式清單。  
+- **dbRelationDeleteCascade**會串聯刪除。  
   
  `m_pFieldInfos`  
- [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)結構陣列的指標。  陣列包含每個欄位的物件相關聯的。  `m_nFields` 資料成員指定陣列元素的計數。  
+ 陣列的指標[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)結構。 陣列包含關聯性中每個欄位的一個物件。 `m_nFields`資料成員可讓陣列項目的計數。  
   
  `m_nFields`  
- `CDaoRelationFieldInfo` 數字在 `m_pFieldInfos` 資料成員的物件。  
+ 數目`CDaoRelationFieldInfo`物件`m_pFieldInfos`資料成員。  
   
-## 備註  
- 對主要和次要參考在指令的資訊如何由類別 `CDaoDatabase`的 [GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md) 成員函式傳回。  
+## <a name="remarks"></a>備註  
+ 主要和次要上述參考表示資訊由[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)類別中的成員函式`CDaoDatabase`。  
   
- 相關物件不是由 MFC 類別表示。  相反地，基礎 `CDaoDatabase` 類別之物件的 MFC DAO 物件維護相關聯物件的集合: `CDaoDatabase` 提供成員函式存取關聯資訊一些個別項目，也可以同時存取它們與 `CDaoRelationInfo` 物件藉由呼叫包含的資料庫物件的 `GetRelationInfo` 成員函式。  
+ 關聯性物件不會由 MFC 類別表示。 改為基礎的 MFC 物件的 DAO 物件、`CDaoDatabase`類別會維護關聯性物件的集合︰`CDaoDatabase`提供成員函式，以存取某些個別的項目關聯性的詳細資訊，或者，您可以存取它們全部一次與`CDaoRelationInfo`物件呼叫`GetRelationInfo`包含資料庫物件的成員函式。  
   
- [CDaoDatabase::GetRelationInfo](../Topic/CDaoDatabase::GetRelationInfo.md) 成員函式來擷取的資訊在 `CDaoRelationInfo` 結構中。  `CDaoRelationInfo` 也會定義函式偵錯組建中一個 `Dump` 成員。  您可以使用 `Dump` 來傾印 `CDaoRelationInfo` 物件的內容。  
+ 所擷取的資訊[CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成員函式會儲存在`CDaoRelationInfo`結構。 `CDaoRelationInfo`也會定義`Dump`成員函式中偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoRelationInfo`物件。  
   
-## 需求  
- **標頭：** afxdao.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxdao.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDaoRelationFieldInfo 結構](../../mfc/reference/cdaorelationfieldinfo-structure.md)
+

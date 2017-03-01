@@ -1,59 +1,76 @@
 ---
-title: "ABC 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ABC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ABC 結構"
+title: "ABC 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ABC
+dev_langs:
+- C++
+helpviewer_keywords:
+- ABC structure
 ms.assetid: 32663839-c3b7-4f47-896c-b15329c96bc8
 caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# ABC 結構
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: c8b49cd8a94c5ff580393814be08b1819a1eca52
+ms.lasthandoff: 02/24/2017
 
-**ABC** 結構在 TrueType 字型包含字元的寬度。  
+---
+# <a name="abc-structure"></a>ABC 結構
+**ABC**結構包含 TrueType 字型的字元寬度。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      typedef struct _ABC { /* abc */  
-   int abcA;  
-   UINT abcB;  
-   int abcC;  
+typedef struct _ABC { /* abc */  
+    int abcA;  
+    UINT abcB;  
+    int abcC;  
 } ABC;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *abcA*  
- 指定字元的 A 範圍。  A 範圍是在繪製字元圖像之前要加入至目前位置的距離。  
+ 指定字元的 A 間距。 A 間距是在繪製字元圖像之前要加入至目前位置的距離。  
   
  *abcB*  
- 指定字元的 B 範圍。  B 範圍是字元圖像繪製部分的寬度。  
+ 指定字元的 B 間距。 B 間距是繪製字元圖像部分的寬度。  
   
  *abcC*  
- 指定字元的 C 範圍。  C 範圍是要加入至目前位置的距離，以在字元圖像右邊加上空白字元。  
+ 指定字元的 C 間距。 C 間距是要加入至目前位置，以便在字元圖像右邊加上空白字元的距離。  
   
-## 備註  
- 字元的總寬度為 A、B 和 C 延伸的總和。  A 或 C 範圍可以是負數值，以標示留白部分或突出部分。  
+## <a name="remarks"></a>備註  
+ 字元的總寬度為 A、B 和 C 間距的總和。 A 或 C 間距可以是負數值，用於標示留白部分或突出部分。  
   
-## 需求  
- **標頭檔：** wingdi.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** wingdi.h  
   
-## 請參閱  
- [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetCharABCWidths](../Topic/CDC::GetCharABCWidths.md)
+## <a name="see-also"></a>另請參閱  
+ [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
+
+
+

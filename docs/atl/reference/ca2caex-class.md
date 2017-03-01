@@ -1,101 +1,160 @@
 ---
-title: "CA2CAEX 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CA2CAEX"
-  - "ATL.CA2CAEX<t_nBufferLength>"
-  - "ATLCONV/CA2CAEX"
-  - "ATL::CA2CAEX<t_nBufferLength>"
-  - "ATL::CA2CAEX"
-  - "CA2CAEX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CA2CAEX 類別"
+title: "CA2CAEX 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CA2CAEX
+- ATL.CA2CAEX<t_nBufferLength>
+- ATLCONV/CA2CAEX
+- ATL::CA2CAEX<t_nBufferLength>
+- ATL::CA2CAEX
+- CA2CAEX
+dev_langs:
+- C++
+helpviewer_keywords:
+- CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# CA2CAEX 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: f104a62144e7fd8ac802c27dfe940a7f96d0e79a
+ms.lasthandoff: 02/24/2017
 
-字串轉換巨集 `CA2CTEX` 和 `CT2CAEX`和 typedef 使用這個類別 **CA2CA**。  
+---
+# <a name="ca2caex-class"></a>CA2CAEX 類別
+這個類別由字串轉換巨集`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。  
   
 > [!IMPORTANT]
->  這個類別和其成員不能用於 Windows 執行階段執行的應用程式。  
+>  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template<int t_nBufferLength = 128>  
+class CA2CAEX
 ```  
   
-      template<  
-int t_nBufferLength= 128  
->  
-class CA2CAEX  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  `t_nBufferLength`  
- 用來轉換程序的緩衝區大小。  預設長度為 128 個位元組。  
+ 轉譯程序中使用之緩衝區的大小。 預設長度為 128 位元組。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[CA2CAEX::CA2CAEX](../Topic/CA2CAEX::CA2CAEX.md)|建構函式。|  
-|[CA2CAEX::~CA2CAEX](../Topic/CA2CAEX::~CA2CAEX.md)|解構函式。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CA2CAEX::CA2CAEX](#ca2caex)|建構函式。|  
+|[CA2CAEX:: ~ CA2CAEX](#dtor)|解構函式。|  
   
-### 公用運算子  
-  
-|名稱|描述|  
-|--------|--------|  
-|[CA2CAEX::operator LPCSTR](../Topic/CA2CAEX::operator%20LPCSTR.md)|轉換運算子。|  
-  
-### 公用資料成員  
+### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
-|--------|--------|  
-|[CA2CAEX::m\_psz](../Topic/CA2CAEX::m_psz.md)|儲存來源字串的資料成員。|  
+|----------|-----------------|  
+|[CA2CAEX::operator LPCSTR](#operator_lpcstr)|轉換運算子。|  
   
-## 備註  
- 除非需要額外的功能，請使用 `CA2CTEX`， `CT2CAEX`或 **CA2CA** 在自己的程式碼。  
+### <a name="public-data-members"></a>公用資料成員  
   
- 這個類別是安全使用迴圈，並不會讓堆疊溢位。  根據預設， ATL 轉換類別和巨集來轉換會使用目前執行緒的 ANSI 字碼頁。  
+|名稱|描述|  
+|----------|-----------------|  
+|[CA2CAEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
   
- 下列巨集以此類別:  
+## <a name="remarks"></a>備註  
+ 除非需要額外的功能，則使用`CA2CTEX`， `CT2CAEX`，或**CA2CA**自己的程式碼中。  
   
--   `CA2CTEX`  
+ 這個類別會安全地在迴圈中使用，而且不會發生堆疊溢位。 根據預設，ATL 轉換類別及巨集將使用目前的執行緒 ANSI 字碼頁，來進行轉換。  
   
--   `CT2CAEX`  
+ 下列巨集根據此類別︰  
   
- 下列 typedef 依據此類別:  
+- `CA2CTEX`  
   
--   **CA2 CA**  
+- `CT2CAEX`  
   
- 如需這些的討論文字轉換巨集，請參閱 [ATL 和 MFC 字串轉換巨集](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md)。  
+ Typedef，下列根據此類別︰  
   
-## 範例  
- 針對使用這類字串轉換巨集參閱 [ATL 和 MFC 字串轉換巨集](../Topic/ATL%20and%20MFC%20String%20Conversion%20Macros.md) 。  
+- **CA2CA**  
   
-## 需求  
- **Header:** atlconv.h  
+ 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)。  
   
-## 請參閱  
+## <a name="example"></a>範例  
+ 請參閱[ATL 和 MFC 字串轉換巨集](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)如需使用這些字串轉換巨集的範例。  
+  
+## <a name="requirements"></a>需求  
+ **標頭︰** atlconv.h  
+  
+##  <a name="a-nameca2caexa--ca2caexca2caex"></a><a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+ 建構函式。  
+  
+```
+CA2CAEX(LPCSTR psz, UINT nCodePage) throw(...);
+CA2CAEX(LPCSTR psz) throw(...);
+```  
+  
+### <a name="parameters"></a>參數  
+ `psz`  
+ 要轉換的文字字串。  
+  
+ `nCodePage`  
+ 這個類別中未使用。  
+  
+### <a name="remarks"></a>備註  
+ 建立做為轉換所需的緩衝區。  
+  
+##  <a name="a-namedtora--ca2caexca2caex"></a><a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+ 解構函式。  
+  
+```
+~CA2CAEX() throw();
+```  
+  
+### <a name="remarks"></a>備註  
+ 釋出配置的緩衝區。  
+  
+##  <a name="a-namempsza--ca2caexmpsz"></a><a name="m_psz"></a>CA2CAEX::m_psz  
+ 儲存在來源字串的資料成員。  
+  
+```
+LPCSTR m_psz;
+```  
+  
+##  <a name="a-nameoperatorlpcstra--ca2caexoperator-lpcstr"></a><a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
+ 轉換運算子。  
+  
+```  
+operator LPCSTR() const throw();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回文字字串做為類型`LPCSTR`。  
+  
+## <a name="see-also"></a>另請參閱  
  [CA2AEX 類別](../../atl/reference/ca2aex-class.md)   
  [CA2WEX 類別](../../atl/reference/ca2wex-class.md)   
  [CW2AEX 類別](../../atl/reference/cw2aex-class.md)   
  [CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX 類別](../../atl/reference/cw2wex-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+ [類別概觀](../../atl/atl-class-overview.md)
+

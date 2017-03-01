@@ -1,80 +1,209 @@
 ---
-title: "CD2DLayer 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxrendertarget/CD2DLayer"
-  - "CD2DLayer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DLayer 類別"
+title: "CD2DLayer 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CD2DLayer
+- CD2DLayer
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DLayer class
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# CD2DLayer 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: d0034c37da7fa61c10cf6c7662ba361de8313aa0
+ms.lasthandoff: 02/24/2017
 
-ID2D1Layer 的包裝函式。  
+---
+# <a name="cd2dlayer-class"></a>CD2DLayer 類別
+ID2D1Layer 包裝函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CD2DLayer : public CD2DResource;  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[CD2DLayer::CD2DLayer](../Topic/CD2DLayer::CD2DLayer.md)|建構 CD2DLayer 物件。|  
-|[CD2DLayer::~CD2DLayer](../Topic/CD2DLayer::~CD2DLayer.md)|解構函式。  當正在終結 D2D 圖層物件時呼叫。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CD2DLayer::CD2DLayer](#cd2dlayer)|建構 CD2DLayer 物件。|  
+|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|解構函式。 D2D 圖層物件終結時呼叫。|  
   
-### 公用方法  
-  
-|名稱|描述|  
-|--------|--------|  
-|[CD2DLayer::Attach](../Topic/CD2DLayer::Attach.md)|將現有的資源介面附加至物件|  
-|[CD2DLayer::Create](../Topic/CD2DLayer::Create.md)|建立 CD2DLayer。  \(覆寫 [CD2DResource::Create](../Topic/CD2DResource::Create.md)\)。|  
-|[CD2DLayer::Destroy](../Topic/CD2DLayer::Destroy.md)|終結 CD2DLayer 物件。  \(覆寫 [CD2DResource::Destroy](../Topic/CD2DResource::Destroy.md)\)。|  
-|[CD2DLayer::Detach](../Topic/CD2DLayer::Detach.md)|將資源介面與其物件中斷連結|  
-|[CD2DLayer::Get](../Topic/CD2DLayer::Get.md)|傳回 ID2D1Layer 介面|  
-|[CD2DLayer::GetSize](../Topic/CD2DLayer::GetSize.md)|傳回轉譯目標的大小 \(以裝置獨立畫素為單位\)|  
-|[CD2DLayer::IsValid](../Topic/CD2DLayer::IsValid.md)|檢查資源有效性 \(覆寫 [CD2DResource::IsValid](../Topic/CD2DResource::IsValid.md)\)。|  
-  
-### 公用運算子  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[CD2DLayer::operator ID2D1Layer\*](../Topic/CD2DLayer::operator%20ID2D1Layer*.md)|傳回 ID2D1Layer 介面|  
+|----------|-----------------|  
+|[CD2DLayer::Attach](#attach)|會附加至現有的資源物件的介面|  
+|[CD2DLayer::Create](#create)|建立 CD2DLayer。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
+|[CD2DLayer::Destroy](#destroy)|終結 CD2DLayer 物件。 (覆寫[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|  
+|[CD2DLayer::Detach](#detach)|中斷連結物件中的資源介面|  
+|[CD2DLayer::Get](#get)|傳回 ID2D1Layer 介面|  
+|[CD2DLayer::GetSize](#getsize)|傳回與裝置無關的像素為單位的呈現目標大小|  
+|[CD2DLayer::IsValid](#isvalid)|檢查資源的有效性 (覆寫[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|  
   
-### 受保護的資料成員  
+### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
-|--------|--------|  
-|[CD2DLayer::m\_pLayer](../Topic/CD2DLayer::m_pLayer.md)|儲存 ID2D1Layer 物件的指標。|  
+|----------|-----------------|  
+|[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|傳回 ID2D1Layer 介面|  
   
-## 繼承階層架構  
+### <a name="protected-data-members"></a>受保護的資料成員  
+  
+|名稱|描述|  
+|----------|-----------------|  
+|[CD2DLayer::m_pLayer](#m_player)|儲存 ID2D1Layer 物件的指標。|  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
- [CD2DLayer](../../mfc/reference/cd2dlayer-class.md)  
+ `CD2DLayer`  
   
-## 需求  
- **標頭檔：**afxrendertarget.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxrendertarget.h  
   
-## 請參閱  
+##  <a name="a-namedtorcd2dlayera--cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+ 解構函式。 D2D 圖層物件終結時呼叫。  
+  
+```  
+virtual ~CD2DLayer();
+```  
+  
+##  <a name="a-nameattacha--cd2dlayerattach"></a><a name="attach"></a>CD2DLayer::Attach  
+ 會附加至現有的資源物件的介面  
+  
+```  
+void Attach(ID2D1Layer* pResource);
+```  
+  
+### <a name="parameters"></a>參數  
+ `pResource`  
+ 現有的資源介面。 不能是 NULL  
+  
+##  <a name="a-namecd2dlayera--cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+ 建構 CD2DLayer 物件。  
+  
+```  
+CD2DLayer(
+    CRenderTarget* pParentTarget,  
+    BOOL bAutoDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ `pParentTarget`  
+ 呈現目標指標。  
+  
+ `bAutoDestroy`  
+ 指出由擁有者 (pParentTarget) 將會終結物件。  
+  
+##  <a name="a-namecreatea--cd2dlayercreate"></a><a name="create"></a>CD2DLayer::Create  
+ 建立 CD2DLayer。  
+  
+```  
+virtual HRESULT Create(CRenderTarget* pRenderTarget);
+```  
+  
+### <a name="parameters"></a>參數  
+ `pRenderTarget`  
+ 呈現目標指標。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
+  
+##  <a name="a-namedestroya--cd2dlayerdestroy"></a><a name="destroy"></a>CD2DLayer::Destroy  
+ 終結 CD2DLayer 物件。  
+  
+```  
+virtual void Destroy();
+```  
+  
+##  <a name="a-namedetacha--cd2dlayerdetach"></a><a name="detach"></a>CD2DLayer::Detach  
+ 中斷連結物件中的資源介面  
+  
+```  
+ID2D1Layer* Detach();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 中斷連結的資源介面指標。  
+  
+##  <a name="a-namegeta--cd2dlayerget"></a><a name="get"></a>CD2DLayer::Get  
+ 傳回 ID2D1Layer 介面  
+  
+```  
+ID2D1Layer* Get();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果物件尚未初始化為 NULL 的 ID2D1Layer 介面的指標。  
+  
+##  <a name="a-namegetsizea--cd2dlayergetsize"></a><a name="getsize"></a>CD2DLayer::GetSize  
+ 傳回與裝置無關的像素為單位的呈現目標大小  
+  
+```  
+CD2DSizeF GetSize() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 與裝置無關的像素為單位的呈現目標的目前大小  
+  
+##  <a name="a-nameisvalida--cd2dlayerisvalid"></a><a name="isvalid"></a>CD2DLayer::IsValid  
+ 檢查資源的有效性  
+  
+```  
+virtual BOOL IsValid() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果資源無效，則為 TRUE否則為 FALSE。  
+  
+##  <a name="a-namemplayera--cd2dlayermplayer"></a><a name="m_player"></a>CD2DLayer::m_pLayer  
+ 儲存 ID2D1Layer 物件的指標。  
+  
+```  
+ID2D1Layer* m_pLayer;  
+```  
+  
+##  <a name="a-nameoperatorid2d1layerstara--cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+ 傳回 ID2D1Layer 介面  
+  
+```  
+operator ID2D1Layer* ();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果物件尚未初始化為 NULL 的 ID2D1Layer 介面的指標。  
+  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
+

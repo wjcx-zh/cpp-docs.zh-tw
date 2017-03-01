@@ -1,34 +1,50 @@
 ---
-title: "編譯器錯誤 C3269 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3269"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3269"
+title: "編譯器錯誤 C3269 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3269
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3269
 ms.assetid: c575f067-244d-4dd5-bf58-9e7630ea58b7
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C3269
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 7349909f413d489546023da498ffdbc8fc1c450a
+ms.lasthandoff: 02/24/2017
 
-'function' : 不可以使用 '...' 來宣告 Managed 或 WinRT 類型的成員函式  
+---
+# <a name="compiler-error-c3269"></a>編譯器錯誤 C3269
+'function': 成員函式的 managed 或 WinRTtype 不能宣告 '...'  
   
- Managed 和 WinRT 類別成員函式不能宣告可變長度參數清單。  
+Managed 和 WinRT 類別成員函式不能宣告可變長度參數清單。  
   
- 下列範例會產生 C3269，並示範如何修正此問題：  
+下列範例會產生 C3269，並示範如何修正此問題：  
   
 ```  
 // C3269_2.cpp  
@@ -47,24 +63,4 @@ int main()
 {  
 }  
 ```  
-  
- 下列範例會產生 C3269，並示範如何修正此問題：  
-  
-```  
-// C3269.cpp  
-// compile with: /clr:oldSyntax  
-#using <mscorlib.dll>  
-  
-__gc struct A  
-{  
-   void func(int i, ...)   // C3269  
-   // try the following line instead  
-   // void func(int i )  
-   {  
-   }  
-};  
-  
-int main()  
-{  
-}  
-```
+

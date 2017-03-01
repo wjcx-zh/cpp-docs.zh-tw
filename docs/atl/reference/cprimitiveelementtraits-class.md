@@ -1,64 +1,77 @@
 ---
-title: "CPrimitiveElementTraits Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL.CPrimitiveElementTraits<T>"
-  - "CPrimitiveElementTraits"
-  - "ATL.CPrimitiveElementTraits"
-  - "ATL::CPrimitiveElementTraits<T>"
-  - "ATL::CPrimitiveElementTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPrimitiveElementTraits class"
+title: "CPrimitiveElementTraits 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL.CPrimitiveElementTraits<T>
+- CPrimitiveElementTraits
+- ATL.CPrimitiveElementTraits
+- ATL::CPrimitiveElementTraits<T>
+- ATL::CPrimitiveElementTraits
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# CPrimitiveElementTraits Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 44e3849ebf2de09bc9b62e28df0f70bf52ac95e6
+ms.lasthandoff: 02/24/2017
 
-這個類別會提供集合類別的預設方法和函式所組成的基本資料型別。  
+---
+# <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits 類別
+這個類別會提供預設的方法和函式的集合類別的基本資料型別所組成。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template <typename T>  
+class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ```  
   
-      template<  
-   typename T  
-> class CPrimitiveElementTraits :   
-   public CDefaultElementTraits< T >  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 在集合類別物件中儲存的資料型別。  
+ 集合類別物件中儲存的資料類型。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用 Typedefs  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
 |名稱|描述|  
-|--------|--------|  
-|[CPrimitiveElementTraits::INARGTYPE](../Topic/CPrimitiveElementTraits::INARGTYPE.md)|使用的資料型別會將項目加入至集合類別物件。|  
-|[CPrimitiveElementTraits::OUTARGTYPE](../Topic/CPrimitiveElementTraits::OUTARGTYPE.md)|使用資料型別來擷取項目從集合類別物件。|  
+|----------|-----------------|  
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|若要使用項目加入集合類別物件的資料型別。|  
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|要用來擷取項目從集合類別物件的資料類型。|  
   
-## 備註  
- 這個類別會提供預設的靜態函式，並且移動，複製，比較和集合類別所儲存的雜湊的基本資料型別項目的方法。  
+## <a name="remarks"></a>備註  
+ 這個類別會提供預設的靜態函式和方法來移動、 複製、 比較和雜湊儲存在集合類別物件的基本資料型別項目。  
   
- 如需詳細資訊，請參閱 [ATL 集合類別。](../../atl/atl-collection-classes.md)。  
+ 如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
   
  [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)  
@@ -69,9 +82,24 @@ caps.handback.revision: 22
   
  `CPrimitiveElementTraits`  
   
-## 需求  
- **Header:** atlcoll.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** atlcoll.h  
   
-## 請參閱  
- [CDefaultElementTraits Class](../../atl/reference/cdefaultelementtraits-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameinargtypea--cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
+ 若要使用項目加入集合類別物件的資料型別。  
+  
+```
+typedef T INARGTYPE;
+```  
+  
+##  <a name="a-nameoutargtypea--cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
+ 要用來擷取項目從集合類別物件的資料類型。  
+  
+```
+typedef T& OUTARGTYPE;
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
+ [類別概觀](../../atl/atl-class-overview.md)
+

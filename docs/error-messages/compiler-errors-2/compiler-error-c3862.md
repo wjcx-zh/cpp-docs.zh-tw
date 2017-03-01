@@ -1,37 +1,55 @@
 ---
-title: "編譯器錯誤 C3862 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3862"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3862"
+title: "編譯器錯誤 C3862 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3862
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3862
 ms.assetid: ba547366-4189-4077-8c00-ab45e08a9533
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C3862
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
+ms.openlocfilehash: 48dbae62c367616a437db0607d84fa89e8006021
+ms.lasthandoff: 02/24/2017
 
-'function': 不能以 \/clr:pure 或 \/clr:safe 編譯 Unmanaged 函式  
+---
+# <a name="compiler-error-c3862"></a>編譯器錯誤 C3862
+'function': 無法編譯 unmanaged 函式以 /clr: pure 或 /clr: safe  
   
- 以 **\/clr:pure** 或 **\/clr:safe** 編譯將產生只有 MSIL 的影像，也就是沒有原生 \(Unmanaged\) 程式碼的影像。因此，您不能在 **\/clr:pure** 或 **\/clr:safe**  編譯中使用 `unmanaged` pragma。  
+ **/Clr: pure**和**/clr: safe** Visual Studio 2015 中的編譯器選項已被取代。  
   
- 如需詳細資訊，請參閱[\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)與[managed、unmanaged](../../preprocessor/managed-unmanaged.md)。  
+ 使用編譯**/clr: pure**或**/clr: safe**會產生 MSIL 唯一映像、 映像沒有原生 (unmanaged) 程式碼。  因此，您無法使用`unmanaged`pragma 在**/clr: pure**或**/clr: safe**編譯。  
   
-## 範例  
- 下列範例會產生 C3862：  
+ 如需詳細資訊，請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)和[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。  
+  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3862:  
   
 ```  
 // C3862.cpp  

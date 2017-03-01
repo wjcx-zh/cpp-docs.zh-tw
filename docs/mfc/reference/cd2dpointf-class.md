@@ -1,60 +1,106 @@
 ---
-title: "CD2DPointF 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "afxrendertarget/CD2DPointF"
-  - "CD2DPointF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CD2DPointF 類別"
+title: "CD2DPointF 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- afxrendertarget/CD2DPointF
+- CD2DPointF
+dev_langs:
+- C++
+helpviewer_keywords:
+- CD2DPointF class
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
 caps.latest.revision: 18
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CD2DPointF 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 8449fcadfb72305e9e5b6ed2c6829ba9963ba7ca
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="cd2dpointf-class"></a>CD2DPointF 類別
 `D2D1_POINT_2F`的包裝函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CD2DPointF : public D2D1_POINT_2F;  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CD2DPointF::CD2DPointF](#cd2dpointf)|多載。 建構`CD2DPointF`物件從`D2D1_POINT_2F`物件。|  
+  
+### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
-|--------|--------|  
-|[CD2DPointF::CD2DPointF](../Topic/CD2DPointF::CD2DPointF.md)|多載。  從 `D2D1_POINT_2F` 物件的 `CD2DPointF` 物件。|  
+|----------|-----------------|  
+|[CD2DPointF::operator CPoint](#operator_cpoint)|將轉換`CD2DPointF`到`CPoint`物件。|  
   
-### 公用運算子  
-  
-|名稱|描述|  
-|--------|--------|  
-|[CD2DPointF::operator CPoint](../Topic/CD2DPointF::operator%20CPoint.md)|`CPoint` 物件相互轉換。 `CD2DPointF` 。|  
-  
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `D2D1_POINT_2F`  
   
- [CD2DPointF](../../mfc/reference/cd2dpointf-class.md)  
+ `CD2DPointF`  
   
-## 需求  
- **標頭檔：**afxrendertarget.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxrendertarget.h  
   
-## 請參閱  
+##  <a name="a-namecd2dpointfa--cd2dpointfcd2dpointf"></a><a name="cd2dpointf"></a>CD2DPointF::CD2DPointF  
+ 建構 CD2DPointF 物件從 CPoint 物件。  
+  
+```  
+CD2DPointF(const CPoint& pt);    
+CD2DPointF(const D2D1_POINT_2F& pt);    
+CD2DPointF(const D2D1_POINT_2F* pt); 
+CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
+```  
+  
+### <a name="parameters"></a>參數  
+ `pt`  
+ 來源點  
+  
+ `fX`  
+ 來源 X  
+  
+ `fY`  
+ 來源 Y  
+  
+##  <a name="a-nameoperatorcpointa--cd2dpointfoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointF::operator CPoint  
+ 將 CD2DPointF 轉換 CPoint 物件。  
+  
+```  
+operator CPoint();
+```   
+  
+### <a name="return-value"></a>傳回值  
+ D2D 點的目前值。  
+  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
+

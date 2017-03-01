@@ -1,96 +1,112 @@
 ---
-title: "CMultiPaneFrameWnd Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMultiPaneFrameWnd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMultiPaneFrameWnd class"
+title: "CMultiPaneFrameWnd 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMultiPaneFrameWnd
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMultiPaneFrameWnd class
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
 caps.latest.revision: 36
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 38
----
-# CMultiPaneFrameWnd Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 4332533097b6e2463c21065ef361969397cacf5e
+ms.lasthandoff: 02/24/2017
 
-`CMultiPaneFrameWnd` 類別擴充 [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md)。  它可以支援多個窗格。  而不是控制列的單一內嵌控制代碼， `CMultiPaneFrameWnd` 包含可讓使用者一 `CMultiPaneFrameWnd` 停駐到另一個並動態建立多個浮動的 [CPaneContainerManager Class](../../mfc/reference/cpanecontainermanager-class.md) 物件，做為索引視窗。  
+---
+# <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 類別
+`CMultiPaneFrameWnd`類別會擴充[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)。 這可以支援多個窗格。 而不是一種控制列的單一內嵌控制代碼`CMultiPaneFrameWnd`包含[CPaneContainerManager 類別](../../mfc/reference/cpanecontainermanager-class.md)物件，可讓使用者可將其中一個固定`CMultiPaneFrameWnd`到另一個，並以動態方式建立多個浮動索引標籤式視窗。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CMultiPaneFrameWnd : public CPaneFrameWnd  
 ```  
   
-## 成員  
+## <a name="members"></a>Members  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[CMultiPaneFrameWnd::AddPane](../Topic/CMultiPaneFrameWnd::AddPane.md)|加入一個窗格。  \(覆寫 [CPaneFrameWnd::AddPane](../Topic/CPaneFrameWnd::AddPane.md)\)。|  
-|[CMultiPaneFrameWnd::AddRecentPane](../Topic/CMultiPaneFrameWnd::AddRecentPane.md)||  
-|[CMultiPaneFrameWnd::AdjustLayout](../Topic/CMultiPaneFrameWnd::AdjustLayout.md)|調整小型框架視窗的配置。  \(覆寫 [CPaneFrameWnd::AdjustLayout](../Topic/CPaneFrameWnd::AdjustLayout.md)\)。|  
-|[CMultiPaneFrameWnd::AdjustPaneFrames](../Topic/CMultiPaneFrameWnd::AdjustPaneFrames.md)|\(覆寫 [CPaneFrameWnd::AdjustPaneFrames](../Topic/CPaneFrameWnd::AdjustPaneFrames.md)\)。|  
-|[CMultiPaneFrameWnd::CalcExpectedDockedRect](../Topic/CMultiPaneFrameWnd::CalcExpectedDockedRect.md)|計算一個停駐視窗的預期的矩形。  \(覆寫 [CPaneFrameWnd::CalcExpectedDockedRect](../Topic/CPaneFrameWnd::CalcExpectedDockedRect.md)\)。|  
-|[CMultiPaneFrameWnd::CanBeAttached](../Topic/CMultiPaneFrameWnd::CanBeAttached.md)|判斷目前是否可以窗格停駐到另一個窗格或框架視窗。  \(覆寫 [CPaneFrameWnd::CanBeAttached](../Topic/CPaneFrameWnd::CanBeAttached.md)\)。|  
-|[CMultiPaneFrameWnd::CanBeDockedToPane](../Topic/CMultiPaneFrameWnd::CanBeDockedToPane.md)|判斷小型框架視窗是否可停駐窗格。  \(覆寫 [CPaneFrameWnd::CanBeDockedToPane](../Topic/CPaneFrameWnd::CanBeDockedToPane.md)\)。|  
-|[CMultiPaneFrameWnd::CheckGripperVisibility](../Topic/CMultiPaneFrameWnd::CheckGripperVisibility.md)|\(覆寫 [CPaneFrameWnd::CheckGripperVisibility](../Topic/CPaneFrameWnd::CheckGripperVisibility.md)\)。|  
-|[CMultiPaneFrameWnd::CloseMiniFrame](../Topic/CMultiPaneFrameWnd::CloseMiniFrame.md)|\(覆寫 `CPaneFrameWnd::CloseMiniFrame`\)。|  
-|[CMultiPaneFrameWnd::ConvertToTabbedDocument](../Topic/CMultiPaneFrameWnd::ConvertToTabbedDocument.md)|轉換窗格為索引標籤式文件。  \(覆寫 [CPaneFrameWnd::ConvertToTabbedDocument](../Topic/CPaneFrameWnd::ConvertToTabbedDocument.md)\)。|  
-|[CMultiPaneFrameWnd::DockFrame](../Topic/CMultiPaneFrameWnd::DockFrame.md)||  
-|[CMultiPaneFrameWnd::DockPane](../Topic/CMultiPaneFrameWnd::DockPane.md)|停駐窗格。  \(覆寫 [CPaneFrameWnd::DockPane](../Topic/CPaneFrameWnd::DockPane.md)\)。|  
-|[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](../Topic/CMultiPaneFrameWnd::DockRecentPaneToMainFrame.md)||  
-|[CMultiPaneFrameWnd::GetCaptionText](../Topic/CMultiPaneFrameWnd::GetCaptionText.md)|傳回標題文字。  \(覆寫 [CPaneFrameWnd::GetCaptionText](../Topic/CPaneFrameWnd::GetCaptionText.md)\)。|  
-|[CMultiPaneFrameWnd::GetPaneContainerManager](../Topic/CMultiPaneFrameWnd::GetPaneContainerManager.md)|傳回內部容器處理常式之物件的參考。|  
-|[CMultiPaneFrameWnd::GetFirstVisiblePane](../Topic/CMultiPaneFrameWnd::GetFirstVisiblePane.md)|傳回在小型框架視窗包含的第一個可見的窗格。  \(覆寫 [CPaneFrameWnd::GetFirstVisiblePane](../Topic/CPaneFrameWnd::GetFirstVisiblePane.md)\)。|  
-|[CMultiPaneFrameWnd::GetPane](../Topic/CMultiPaneFrameWnd::GetPane.md)|傳回在小型框架視窗中的窗格。  \(覆寫 [CPaneFrameWnd::GetPane](../Topic/CPaneFrameWnd::GetPane.md)\)。|  
-|[CMultiPaneFrameWnd::GetPaneCount](../Topic/CMultiPaneFrameWnd::GetPaneCount.md)|傳回在小型框架視窗窗格中包含的項目數。  \(覆寫 [CPaneFrameWnd::GetPaneCount](../Topic/CPaneFrameWnd::GetPaneCount.md)\)。|  
-|[CMultiPaneFrameWnd::GetVisiblePaneCount](../Topic/CMultiPaneFrameWnd::GetVisiblePaneCount.md)|傳回在小型框架視窗包含可見的窗格的數目。  \(覆寫 [CPaneFrameWnd::GetVisiblePaneCount](../Topic/CPaneFrameWnd::GetVisiblePaneCount.md)\)。|  
-|[CMultiPaneFrameWnd::InsertPane](../Topic/CMultiPaneFrameWnd::InsertPane.md)||  
-|[CMultiPaneFrameWnd::LoadState](../Topic/CMultiPaneFrameWnd::LoadState.md)|從登錄載入窗格的狀態。  \(覆寫 [CPaneFrameWnd::LoadState](../Topic/CPaneFrameWnd::LoadState.md)\)。|  
-|[CMultiPaneFrameWnd::OnDockToRecentPos](../Topic/CMultiPaneFrameWnd::OnDockToRecentPos.md)|內建小型框架視窗在其新位置。  \(覆寫 [CPaneFrameWnd::OnDockToRecentPos](../Topic/CPaneFrameWnd::OnDockToRecentPos.md)\)。|  
-|[CMultiPaneFrameWnd::OnKillRollUpTimer](../Topic/CMultiPaneFrameWnd::OnKillRollUpTimer.md)|停止彙總計時器。  \(覆寫 [CPaneFrameWnd::OnKillRollUpTimer](../Topic/CPaneFrameWnd::OnKillRollUpTimer.md)\)。|  
-|[CMultiPaneFrameWnd::OnPaneRecalcLayout](../Topic/CMultiPaneFrameWnd::OnPaneRecalcLayout.md)|調整一個窗格的配置是小型框架視窗中顯示。  \(覆寫 [CPaneFrameWnd::OnPaneRecalcLayout](../Topic/CPaneFrameWnd::OnPaneRecalcLayout.md)\)。|  
-|[CMultiPaneFrameWnd::OnSetRollUpTimer](../Topic/CMultiPaneFrameWnd::OnSetRollUpTimer.md)|設定彙總計時器。  \(覆寫 [CPaneFrameWnd::OnSetRollUpTimer](../Topic/CPaneFrameWnd::OnSetRollUpTimer.md)\)。|  
-|[CMultiPaneFrameWnd::OnShowPane](../Topic/CMultiPaneFrameWnd::OnShowPane.md)|呼叫框架，在小型框架視窗的窗格隱藏或顯示。  \(覆寫 [CPaneFrameWnd::OnShowPane](../Topic/CPaneFrameWnd::OnShowPane.md)\)。|  
-|[CMultiPaneFrameWnd::PaneFromPoint](../Topic/CMultiPaneFrameWnd::PaneFromPoint.md)|如果包含，它是小型框架視窗內的使用者，提供的點傳回窗格。  \(覆寫 [CPaneFrameWnd::PaneFromPoint](../Topic/CPaneFrameWnd::PaneFromPoint.md)\)。|  
-|[CMultiPaneFrameWnd::RemoveNonValidPanes](../Topic/CMultiPaneFrameWnd::RemoveNonValidPanes.md)|呼叫框架移除非有效窗格。  \(覆寫 [CPaneFrameWnd::RemoveNonValidPanes](../Topic/CPaneFrameWnd::RemoveNonValidPanes.md)\)。|  
-|[CMultiPaneFrameWnd::RemovePane](../Topic/CMultiPaneFrameWnd::RemovePane.md)|從小型框架視窗中移除窗格。  \(覆寫 [CPaneFrameWnd::RemovePane](../Topic/CPaneFrameWnd::RemovePane.md)\)。|  
-|[CMultiPaneFrameWnd::ReplacePane](../Topic/CMultiPaneFrameWnd::ReplacePane.md)|取代另一個窗格。  \(覆寫 [CPaneFrameWnd::ReplacePane](../Topic/CPaneFrameWnd::ReplacePane.md)\)。|  
-|[CMultiPaneFrameWnd::SaveState](../Topic/CMultiPaneFrameWnd::SaveState.md)|儲存窗格的狀態變更登錄。  \(覆寫 [CPaneFrameWnd::SaveState](../Topic/CPaneFrameWnd::SaveState.md)\)。|  
-|[CMultiPaneFrameWnd::Serialize](../Topic/CMultiPaneFrameWnd::Serialize.md)|\(覆寫 `CPaneFrameWnd::Serialize`\)。|  
-|[CMultiPaneFrameWnd::SetDockState](../Topic/CMultiPaneFrameWnd::SetDockState.md)|設定停駐狀態。  \(覆寫 [CPaneFrameWnd::SetDockState](../Topic/CPaneFrameWnd::SetDockState.md)\)。|  
-|[CMultiPaneFrameWnd::SetLastFocusedPane](../Topic/CMultiPaneFrameWnd::SetLastFocusedPane.md)||  
-|[CMultiPaneFrameWnd::SetPreDockState](../Topic/CMultiPaneFrameWnd::SetPreDockState.md)|設定這個 predocking 的狀態。  \(覆寫 [CPaneFrameWnd::SetPreDockState](../Topic/CPaneFrameWnd::SetPreDockState.md)\)。|  
-|[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](../Topic/CMultiPaneFrameWnd::StoreRecentDockSiteInfo.md)|\(覆寫 [CPaneFrameWnd::StoreRecentDockSiteInfo](../Topic/CPaneFrameWnd::StoreRecentDockSiteInfo.md)\)。|  
-|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](../Topic/CMultiPaneFrameWnd::StoreRecentTabRelatedInfo.md)|\(覆寫 [CPaneFrameWnd::StoreRecentTabRelatedInfo](../Topic/CPaneFrameWnd::StoreRecentTabRelatedInfo.md)\)。|  
+|----------|-----------------|  
+|[CMultiPaneFrameWnd::AddPane](#addpane)|加入窗格。 (覆寫[CPaneFrameWnd::AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane)。)|  
+|[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||  
+|[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|調整迷你框架視窗的配置。 (覆寫[CPaneFrameWnd::AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout)。)|  
+|[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|(覆寫[CPaneFrameWnd::AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes)。)|  
+|[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|計算預期停駐視窗的矩形。 (覆寫[CPaneFrameWnd::CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect)。)|  
+|[CMultiPaneFrameWnd::CanBeAttached](#canbeattached)|判斷目前的窗格可以停駐到另一個窗格或框架視窗。 (覆寫[CPaneFrameWnd::CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached)。)|  
+|[CMultiPaneFrameWnd::CanBeDockedToPane](#canbedockedtopane)|決定迷你框架視窗可以停駐窗格。 (覆寫[CPaneFrameWnd::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane)。)|  
+|[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|(覆寫[CPaneFrameWnd::CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility)。)|  
+|[CMultiPaneFrameWnd::CloseMiniFrame](#closeminiframe)|(覆寫 `CPaneFrameWnd::CloseMiniFrame`。)|  
+|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|將窗格轉換為索引標籤式文件。 (覆寫[CPaneFrameWnd::ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument)。)|  
+|[CMultiPaneFrameWnd::DockFrame](#dockframe)||  
+|[CMultiPaneFrameWnd::DockPane](#dockpane)|固定窗格。 (覆寫[CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane)。)|  
+|[CMultiPaneFrameWnd::DockRecentPaneToMainFrame](#dockrecentpanetomainframe)||  
+|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|傳回標題文字。 (覆寫[CPaneFrameWnd::GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext)。)|  
+|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|傳回內部容器管理員物件的參考。|  
+|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|傳回包含在迷你框架視窗中的第一個可見窗格。 (覆寫[CPaneFrameWnd::GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane)。)|  
+|[CMultiPaneFrameWnd::GetPane](#getpane)|傳回包含在迷你框架視窗中的窗格。 (覆寫[CPaneFrameWnd::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane)。)|  
+|[CMultiPaneFrameWnd::GetPaneCount](#getpanecount)|傳回包含在迷你框架視窗中的窗格數目。 (覆寫[CPaneFrameWnd::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount)。)|  
+|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|傳回包含在迷你框架視窗中的可見窗格數目。 (覆寫[CPaneFrameWnd::GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount)。)|  
+|[CMultiPaneFrameWnd::InsertPane](#insertpane)||  
+|[CMultiPaneFrameWnd::LoadState](#loadstate)|從登錄載入窗格的狀態。 (覆寫[CPaneFrameWnd::LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate)。)|  
+|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|將迷你框架視窗固定在其最近的位置上。 (覆寫[CPaneFrameWnd::OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos)。)|  
+|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|停止彙總計時器。 (覆寫[CPaneFrameWnd::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer)。)|  
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|調整窗格的迷你框架視窗內的版面配置。 (覆寫[CPaneFrameWnd::OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout)。)|  
+|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|設定彙總計時器。 (覆寫[CPaneFrameWnd::OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer)。)|  
+|[CMultiPaneFrameWnd::OnShowPane](#onshowpane)|在隱藏或顯示迷你框架視窗中的窗格時，由架構呼叫。 (覆寫[CPaneFrameWnd::OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane)。)|  
+|[CMultiPaneFrameWnd::PaneFromPoint](#panefrompoint)|如果在迷你框架視窗內包含使用者提供的點，則會傳回一個窗格。 (覆寫[CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint)。)|  
+|[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|由架構呼叫以移除無效窗格。 (覆寫[CPaneFrameWnd::RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes)。)|  
+|[CMultiPaneFrameWnd::RemovePane](#removepane)|從迷你框架視窗中移除窗格。 (覆寫[CPaneFrameWnd::RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane)。)|  
+|[CMultiPaneFrameWnd::ReplacePane](#replacepane)|以一個窗格取代另一個。 (覆寫[CPaneFrameWnd::ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane)。)|  
+|[CMultiPaneFrameWnd::SaveState](#savestate)|將窗格的狀態儲存至登錄。 (覆寫[CPaneFrameWnd::SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate)。)|  
+|[CMultiPaneFrameWnd::Serialize](#serialize)|(覆寫 `CPaneFrameWnd::Serialize`。)|  
+|[CMultiPaneFrameWnd::SetDockState](#setdockstate)|設定固定狀態。 (覆寫[CPaneFrameWnd::SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate)。)|  
+|[CMultiPaneFrameWnd::SetLastFocusedPane](#setlastfocusedpane)||  
+|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|設定 predocking 的狀態。 (覆寫[CPaneFrameWnd::SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate)。)|  
+|[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|(覆寫[CPaneFrameWnd::StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo)。)|  
+|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|(覆寫[CPaneFrameWnd::StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo)。)|  
   
-## 備註  
- 大部分在這個類別會覆寫方法的方法。 [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md) 類別。  
+## <a name="remarks"></a>備註  
+ 大部分方法，這個類別中覆寫的方法[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)類別。  
   
- 如果窗格使用 `AFX_CBRS_AUTO_ROLLUP` 樣式和使用者修正不論其他停駐窗格的樣式設定，窗格加入多窗格框架視窗，使用者可以彙總視窗。  
+ 如果窗格使用`AFX_CBRS_AUTO_ROLLUP`樣式和的使用者停駐於該窗格的多窗格框架視窗中，使用者可以彙總視窗中，不論其他停駐窗格的樣式設定。  
   
- 這個架構便會自動建立 `CMultiPaneFrameWnd` 物件，當使用者使用浮動 `CBRS_FLOAT_MULTI` 樣式的窗格時。  
+ 此架構會自動建立`CMultiPaneFrameWnd`物件時，使用者會浮動窗格中會使用`CBRS_FLOAT_MULTI`樣式。  
   
- 如需動態自類別衍生類別 `CPaneFrameWnd` 類別和建立它的詳細資訊，請參閱 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)。  
+ 如需從衍生類別`CPaneFrameWnd`類別，並以動態方式建立，請參閱[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)。  
   
-## 範例  
- 下列範例示範如何擷取指標 `CMultiPaneFrameWnd` 物件。  這個程式碼片段是 [將窗格大小範例](../../top/visual-cpp-samples.md)的一部分。  
+## <a name="example"></a>範例  
+ 下列範例示範如何擷取變數的指標，`CMultiPaneFrameWnd`物件。 此程式碼片段是一部分[設定窗格大小範例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/CPP/cmultipaneframewnd-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_SetPaneSize #&4;](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -101,10 +117,485 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
   
  [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)  
   
-## 需求  
- **標題:** afxMultiPaneFrameWnd.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxMultiPaneFrameWnd.h  
   
-## 請參閱  
+##  <a name="a-nameaddpanea--cmultipaneframewndaddpane"></a><a name="addpane"></a>CMultiPaneFrameWnd::AddPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void AddPane(CBasePane* pWnd);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pWnd`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameaddrecentpanea--cmultipaneframewndaddrecentpane"></a><a name="addrecentpane"></a>CMultiPaneFrameWnd::AddRecentPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL AddRecentPane(CDockablePane* pBar);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pBar`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameadjustlayouta--cmultipaneframewndadjustlayout"></a><a name="adjustlayout"></a>CMultiPaneFrameWnd::AdjustLayout  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void AdjustLayout();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameadjustpaneframesa--cmultipaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>CMultiPaneFrameWnd::AdjustPaneFrames  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void AdjustPaneFrames();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecalcexpecteddockedrecta--cmultipaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CMultiPaneFrameWnd::CalcExpectedDockedRect  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void CalcExpectedDockedRect(
+    CWnd* pWndToDock,  
+    CPoint ptMouse,  
+    CRect& rectResult,  
+    BOOL& bDrawTab,  
+    CDockablePane** ppTargetBar);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pWndToDock`  
+ [in] `ptMouse`  
+ [in] `rectResult`  
+ [in] `bDrawTab`  
+ [in] `ppTargetBar`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecanbeattacheda--cmultipaneframewndcanbeattached"></a><a name="canbeattached"></a>CMultiPaneFrameWnd::CanBeAttached  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL CanBeAttached() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecanbedockedtopanea--cmultipaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>CMultiPaneFrameWnd::CanBeDockedToPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDockingBar`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecheckgrippervisibilitya--cmultipaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>CMultiPaneFrameWnd::CheckGripperVisibility  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void CheckGripperVisibility();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecloseminiframea--cmultipaneframewndcloseminiframe"></a><a name="closeminiframe"></a>CMultiPaneFrameWnd::CloseMiniFrame  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void CloseMiniFrame();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameconverttotabbeddocumenta--cmultipaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CMultiPaneFrameWnd::ConvertToTabbedDocument  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void ConvertToTabbedDocument();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namedockframea--cmultipaneframewnddockframe"></a><a name="dockframe"></a>CMultiPaneFrameWnd::DockFrame  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL DockFrame(
+    CPaneFrameWnd* pDockedFrame,  
+    AFX_DOCK_METHOD dockMethod);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDockedFrame`  
+ [in] `dockMethod`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namedockpanea--cmultipaneframewnddockpane"></a><a name="dockpane"></a>CMultiPaneFrameWnd::DockPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL DockPane(CDockablePane* pDockedBar);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDockedBar`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namedockrecentpanetomainframea--cmultipaneframewnddockrecentpanetomainframe"></a><a name="dockrecentpanetomainframe"></a>CMultiPaneFrameWnd::DockRecentPaneToMainFrame  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pBar`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetcaptiontexta--cmultipaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>CMultiPaneFrameWnd::GetCaptionText  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CString GetCaptionText();
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetfirstvisiblepanea--cmultipaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CMultiPaneFrameWnd::GetFirstVisiblePane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CWnd* GetFirstVisiblePane() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetpanea--cmultipaneframewndgetpane"></a><a name="getpane"></a>CMultiPaneFrameWnd::GetPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CWnd* GetPane() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetpanecontainermanagera--cmultipaneframewndgetpanecontainermanager"></a><a name="getpanecontainermanager"></a>CMultiPaneFrameWnd::GetPaneContainerManager  
+ 傳回內部容器管理員物件的參考。  
+  
+```  
+CPaneContainerManager& GetPaneContainerManager();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 內部容器管理員物件的參考。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法可以用來存取內部[CPaneContainerManager 類別](../../mfc/reference/cpanecontainermanager-class.md)物件。  
+  
+##  <a name="a-namegetpanecounta--cmultipaneframewndgetpanecount"></a><a name="getpanecount"></a>CMultiPaneFrameWnd::GetPaneCount  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual int GetPaneCount() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetvisiblepanecounta--cmultipaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CMultiPaneFrameWnd::GetVisiblePaneCount  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual int GetVisiblePaneCount() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameinsertpanea--cmultipaneframewndinsertpane"></a><a name="insertpane"></a>CMultiPaneFrameWnd::InsertPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL InsertPane(
+    CBasePane* pControlBar,  
+    CBasePane* pTarget,  
+    BOOL bAfter);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pControlBar`  
+ [in] `pTarget`  
+ [in] `bAfter`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameloadstatea--cmultipaneframewndloadstate"></a><a name="loadstate"></a>CMultiPaneFrameWnd::LoadState  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL LoadState(
+    LPCTSTR lpszProfileName = NULL,  
+    UINT uiID = (UINT) -1);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `lpszProfileName`  
+ [in] `uiID`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameondocktorecentposa--cmultipaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>CMultiPaneFrameWnd::OnDockToRecentPos  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnDockToRecentPos();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonkillrolluptimera--cmultipaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>CMultiPaneFrameWnd::OnKillRollUpTimer  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnKillRollUpTimer();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonpanerecalclayouta--cmultipaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>CMultiPaneFrameWnd::OnPaneRecalcLayout  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnPaneRecalcLayout();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonsetrolluptimera--cmultipaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>CMultiPaneFrameWnd::OnSetRollUpTimer  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnSetRollUpTimer();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonshowpanea--cmultipaneframewndonshowpane"></a><a name="onshowpane"></a>CMultiPaneFrameWnd::OnShowPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnShowPane(
+    CDockablePane* pBar,  
+    BOOL bShow);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pBar`  
+ [in] `bShow`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namepanefrompointa--cmultipaneframewndpanefrompoint"></a><a name="panefrompoint"></a>CMultiPaneFrameWnd::PaneFromPoint  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CBasePane* PaneFromPoint(
+    CPoint point,  
+    int nSensitivity,  
+    BOOL bCheckVisibility);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `point`  
+ [in] `nSensitivity`  
+ [in] `bCheckVisibility`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameremovenonvalidpanesa--cmultipaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CMultiPaneFrameWnd::RemoveNonValidPanes  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void RemoveNonValidPanes();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameremovepanea--cmultipaneframewndremovepane"></a><a name="removepane"></a>CMultiPaneFrameWnd::RemovePane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void RemovePane(
+    CBasePane* pBar,  
+    BOOL bDestroy = FALSE,  
+    BOOL bNoDelayedDestroy = TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pBar`  
+ [in] `bDestroy`  
+ [in] `bNoDelayedDestroy`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namereplacepanea--cmultipaneframewndreplacepane"></a><a name="replacepane"></a>CMultiPaneFrameWnd::ReplacePane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void ReplacePane(
+    CBasePane* pBarOrg,  
+    CBasePane* pBarReplaceWith);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pBarOrg`  
+ [in] `pBarReplaceWith`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namesavestatea--cmultipaneframewndsavestate"></a><a name="savestate"></a>CMultiPaneFrameWnd::SaveState  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL SaveState(
+    LPCTSTR lpszProfileName = NULL,  
+    UINT uiID = (UINT) -1);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `lpszProfileName`  
+ [in] `uiID`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameserializea--cmultipaneframewndserialize"></a><a name="serialize"></a>CMultiPaneFrameWnd::Serialize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void Serialize(CArchive& ar);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `ar`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namesetdockstatea--cmultipaneframewndsetdockstate"></a><a name="setdockstate"></a>CMultiPaneFrameWnd::SetDockState  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void SetDockState(CDockingManager* pDockManager);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDockManager`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namesetlastfocusedpanea--cmultipaneframewndsetlastfocusedpane"></a><a name="setlastfocusedpane"></a>CMultiPaneFrameWnd::SetLastFocusedPane  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void SetLastFocusedPane(HWND hwnd);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `hwnd`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namesetpredockstatea--cmultipaneframewndsetpredockstate"></a><a name="setpredockstate"></a>CMultiPaneFrameWnd::SetPreDockState  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL SetPreDockState(
+    AFX_PREDOCK_STATE preDockState,  
+    CBasePane* pBarToDock = NULL,  
+    AFX_DOCK_METHOD dockMethod = DM_MOUSE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `preDockState`  
+ [in] `pBarToDock`  
+ [in] `dockMethod`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namestorerecentdocksiteinfoa--cmultipaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CMultiPaneFrameWnd::StoreRecentDockSiteInfo  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void StoreRecentDockSiteInfo(CPane* pBar);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pBar`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namestorerecenttabrelatedinfoa--cmultipaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CMultiPaneFrameWnd::StoreRecentTabRelatedInfo  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void StoreRecentTabRelatedInfo(
+    CDockablePane* pDockingBar,  
+    CDockablePane* pTabbedBar);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDockingBar`  
+ [in] `pTabbedBar`  
+  
+### <a name="remarks"></a>備註  
+  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
- [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md)
+ [CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)
+

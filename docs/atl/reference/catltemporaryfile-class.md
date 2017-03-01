@@ -1,87 +1,393 @@
 ---
-title: "CAtlTemporaryFile Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CAtlTemporaryFile"
-  - "ATL.CAtlTemporaryFile"
-  - "ATL::CAtlTemporaryFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAtlTemporaryFile class"
+title: "CAtlTemporaryFile 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CAtlTemporaryFile
+- ATL.CAtlTemporaryFile
+- ATL::CAtlTemporaryFile
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# CAtlTemporaryFile Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 9673c5a137feddb0eb696945ec6abeb5f3cb062e
+ms.lasthandoff: 02/24/2017
 
-這個類別提供方法來為暫存檔的建立和使用。  
+---
+# <a name="catltemporaryfile-class"></a>CAtlTemporaryFile 類別
+這個類別提供建立和使用的暫存檔案的方法。  
   
 > [!IMPORTANT]
->  這個類別和其成員不能用於 Windows 執行階段執行的應用程式。  
+>  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class CAtlTemporaryFile
 ```  
   
-class CAtlTemporaryFile  
+## <a name="members"></a>Members  
   
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|建構函式。|  
+|[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|解構函式。|  
+  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CAtlTemporaryFile::Close](#close)|呼叫這個方法來關閉暫存檔，請刪除其內容或將它們儲存在指定的檔案名稱。|  
+|[CAtlTemporaryFile::Create](#create)|呼叫此方法以建立暫存檔。|  
+|[CAtlTemporaryFile::Flush](#flush)|呼叫這個方法，以強制寫入暫存檔案，檔案緩衝區剩餘的任何資料。|  
+|[CAtlTemporaryFile::GetPosition](#getposition)|呼叫這個方法，取得目前的檔案位置指標。|  
+|[CAtlTemporaryFile::GetSize](#getsize)|呼叫這個方法，以取得以位元組為單位的暫存檔案的大小。|  
+|[CAtlTemporaryFile::HandsOff](#handsoff)|呼叫這個方法來取消關聯的檔案從`CAtlTemporaryFile`物件。|  
+|[CAtlTemporaryFile::HandsOn](#handson)|呼叫這個方法來開啟現有的暫存檔案並在檔案結尾指標。|  
+|[CAtlTemporaryFile::LockRange](#lockrange)|呼叫此方法以鎖定可防止其他處理序存取該檔案中的區域。|  
+|[CAtlTemporaryFile::Read](#read)|呼叫這個方法從檔案指標所指示的位置開始，暫存檔案讀取資料。|  
+|[CAtlTemporaryFile::Seek](#seek)|呼叫這個方法來移動檔案指標的暫存檔案。|  
+|[CAtlTemporaryFile::SetSize](#setsize)|呼叫這個方法來設定暫存檔案的大小。|  
+|[CAtlTemporaryFile::TempFileName](#tempfilename)|呼叫這個方法傳回的暫存檔案的名稱。|  
+|[CAtlTemporaryFile::UnlockRange](#unlockrange)|呼叫這個方法來解除鎖定暫存檔案的區域。|  
+|[CAtlTemporaryFile::Write](#write)|呼叫這個方法將資料寫入至暫存檔檔案指標所指示的位置開始。|  
+  
+### <a name="public-operators"></a>公用運算子  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CAtlTemporaryFile::operator 控制代碼](#operator_handle)|傳回的控制代碼到暫存檔。|  
+  
+## <a name="remarks"></a>備註  
+ `CAtlTemporaryFile`可讓您輕鬆建立及使用暫存檔。 檔案會自動是名為、 開啟、 關閉，並且刪除。 如果檔案內容需要關閉檔案後，可以儲存至具有指定名稱的新檔案。  
+  
+## <a name="requirements"></a>需求  
+ **標頭︰** atlfile.h  
+  
+## <a name="example"></a>範例  
+ 請參閱範例[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
+  
+##  <a name="a-namecatltemporaryfilea--catltemporaryfilecatltemporaryfile"></a><a name="catltemporaryfile"></a>CAtlTemporaryFile::CAtlTemporaryFile  
+ 建構函式。  
+  
+```
+CAtlTemporaryFile() throw();
 ```  
   
-## Members  
+### <a name="remarks"></a>備註  
+ 檔案並未實際開啟之前呼叫[CAtlTemporaryFile::Create](#create)。  
   
-### 公用建構函式  
+### <a name="example"></a>範例  
+ [!code-cpp[NVC_ATL_Utilities #&73;](../../atl/codesnippet/cpp/catltemporaryfile-class_1.cpp)]  
   
-|名稱|描述|  
-|--------|--------|  
-|[CAtlTemporaryFile::CAtlTemporaryFile](../Topic/CAtlTemporaryFile::CAtlTemporaryFile.md)|建構函式。|  
-|[CAtlTemporaryFile::~CAtlTemporaryFile](../Topic/CAtlTemporaryFile::~CAtlTemporaryFile.md)|解構函式。|  
+##  <a name="a-namedtora--catltemporaryfilecatltemporaryfile"></a><a name="dtor"></a>CAtlTemporaryFile:: ~ CAtlTemporaryFile  
+ 解構函式。  
   
-### 公用方法  
+```
+~CAtlTemporaryFile() throw();
+```  
   
-|名稱|描述|  
-|--------|--------|  
-|[CAtlTemporaryFile::Close](../Topic/CAtlTemporaryFile::Close.md)|呼叫這個方法會關閉暫存檔案和刪除其內容或將它們儲存在指定的檔案名稱的下方。|  
-|[CAtlTemporaryFile::Create](../Topic/CAtlTemporaryFile::Create.md)|呼叫這個方法會建立暫存檔案。|  
-|[CAtlTemporaryFile::Flush](../Topic/CAtlTemporaryFile::Flush.md)|呼叫這個方法會強制保持在檔案緩衝區的資料都會寫入至暫存檔。|  
-|[CAtlTemporaryFile::GetPosition](../Topic/CAtlTemporaryFile::GetPosition.md)|呼叫這個方法會取得目前資料指標位置。|  
-|[CAtlTemporaryFile::GetSize](../Topic/CAtlTemporaryFile::GetSize.md)|呼叫這個方法會取得大小在暫存檔案的位元組。|  
-|[CAtlTemporaryFile::HandsOff](../Topic/CAtlTemporaryFile::HandsOff.md)|呼叫這個方法分開 `CAtlTemporaryFile` 物件的檔案。|  
-|[CAtlTemporaryFile::HandsOn](../Topic/CAtlTemporaryFile::HandsOn.md)|呼叫這個方法開啟現有的暫存檔並將游標放在位於檔案結尾。|  
-|[CAtlTemporaryFile::LockRange](../Topic/CAtlTemporaryFile::LockRange.md)|呼叫這個方法會鎖定檔案的本機防止其他處理序存取它。|  
-|[CAtlTemporaryFile::Read](../Topic/CAtlTemporaryFile::Read.md)|呼叫這個方法會將資料從開始在這個位置的暫存檔\) 將檔案指標。|  
-|[CAtlTemporaryFile::Seek](../Topic/CAtlTemporaryFile::Seek.md)|呼叫這個方法會將暫存檔的資料指標。|  
-|[CAtlTemporaryFile::SetSize](../Topic/CAtlTemporaryFile::SetSize.md)|呼叫這個方法會設定暫存檔案的大小。|  
-|[CAtlTemporaryFile::TempFileName](../Topic/CAtlTemporaryFile::TempFileName.md)|呼叫這個方法會傳回暫存檔案的名稱。|  
-|[CAtlTemporaryFile::UnlockRange](../Topic/CAtlTemporaryFile::UnlockRange.md)|呼叫這個方法會解除鎖定暫存檔的區域。|  
-|[CAtlTemporaryFile::Write](../Topic/CAtlTemporaryFile::Write.md)|呼叫這個方法會將資料寫入開始在這個位置的暫存檔\) 將檔案指標。|  
+### <a name="remarks"></a>備註  
+ 解構函式呼叫[CAtlTemporaryFile::Close](#close)。  
   
-### 公用運算子  
+##  <a name="a-nameclosea--catltemporaryfileclose"></a><a name="close"></a>CAtlTemporaryFile::Close  
+ 呼叫這個方法來關閉暫存檔，請刪除其內容或將它們儲存在指定的檔案名稱。  
   
-|名稱|描述|  
-|--------|--------|  
-|[CAtlTemporaryFile::operator HANDLE](../Topic/CAtlTemporaryFile::operator%20HANDLE.md)|將控制代碼傳回至暫存檔案。|  
+```
+HRESULT Close(LPCTSTR szNewName = NULL) throw();
+```  
   
-## 備註  
- `CAtlTemporaryFile` 可以很容易地建立及使用暫存檔案。  名為的檔案，請開啟，會自動關閉，並刪除。  如果需要檔案內容，在檔案關閉之後，可以儲存至具有指定之名稱的新檔案。  
+### <a name="parameters"></a>參數  
+ *szNewName*  
+ 新的檔案來儲存暫存檔中的內容名稱。 如果這個引數為 NULL，則會刪除暫存檔案的內容。  
   
-## 需求  
- **Header:** atlfile.h  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
   
-## 範例  
- [CAtlTemporaryFile::CAtlTemporaryFile](../Topic/CAtlTemporaryFile::CAtlTemporaryFile.md)。請參閱範例。  
+### <a name="example"></a>範例  
+ 請參閱範例[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
   
-## 請參閱  
- [Class Overview](../../atl/atl-class-overview.md)   
- [CAtlFile Class](../../atl/reference/catlfile-class.md)
+##  <a name="a-namecreatea--catltemporaryfilecreate"></a><a name="create"></a>CAtlTemporaryFile::Create  
+ 呼叫此方法以建立暫存檔。  
+  
+```
+HRESULT Create(LPCTSTR pszDir = NULL, DWORD dwDesiredAccess = GENERIC_WRITE) throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `pszDir`  
+ 暫存檔案的路徑。 如果這是 NULL， [GetTempPath](http://msdn.microsoft.com/library/windows/desktop/aa364992)將被呼叫來指派的路徑。  
+  
+ `dwDesiredAccess`  
+ 所需的存取。 請參閱`dwDesiredAccess`中[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="example"></a>範例  
+ 請參閱範例[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
+  
+##  <a name="a-nameflusha--catltemporaryfileflush"></a><a name="flush"></a>CAtlTemporaryFile::Flush  
+ 呼叫這個方法，以強制寫入暫存檔案，檔案緩衝區剩餘的任何資料。  
+  
+```
+HRESULT Flush() throw();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ 類似於[CAtlTemporaryFile::HandsOff](#handsoff)，但不關閉檔案。  
+  
+### <a name="example"></a>範例  
+ 請參閱範例[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
+  
+##  <a name="a-namegetpositiona--catltemporaryfilegetposition"></a><a name="getposition"></a>CAtlTemporaryFile::GetPosition  
+ 呼叫這個方法，取得目前的檔案位置指標。  
+  
+```
+HRESULT GetPosition(ULONGLONG& nPos) const throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `nPos`  
+ 以位元組為單位的位置。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ 若要變更檔案指標的位置，請使用[CAtlTemporaryFile::Seek](#seek)。  
+  
+##  <a name="a-namegetsizea--catltemporaryfilegetsize"></a><a name="getsize"></a>CAtlTemporaryFile::GetSize  
+ 呼叫這個方法，以取得以位元組為單位的暫存檔案的大小。  
+  
+```
+HRESULT GetSize(ULONGLONG& nLen) const throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `nLen`  
+ 在檔案中的位元組數目。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+##  <a name="a-namehandsoffa--catltemporaryfilehandsoff"></a><a name="handsoff"></a>CAtlTemporaryFile::HandsOff  
+ 呼叫這個方法來取消關聯的檔案從`CAtlTemporaryFile`物件。  
+  
+```
+HRESULT HandsOff() throw();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ `HandsOff`和[CAtlTemporaryFile::HandsOn](#handson)用來解除關聯物件的檔案，並視需要將它重新附加。 `HandsOff`會強制執行任何寫入暫存檔案中，將檔案緩衝區中剩餘的資料，然後關閉檔案。 如果您想要關閉，並永久刪除檔案，或如果您想要關閉並保留檔案具有指定名稱的內容，請使用[CAtlTemporaryFile::Close](#close)。  
+  
+##  <a name="a-namehandsona--catltemporaryfilehandson"></a><a name="handson"></a>CAtlTemporaryFile::HandsOn  
+ 呼叫這個方法來開啟現有的暫存檔案並在檔案結尾指標。  
+  
+```
+HRESULT HandsOn() throw();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ [CAtlTemporaryFile::HandsOff](#handsoff)和`HandsOn`用來解除關聯物件的檔案，並視需要將它重新附加。  
+  
+##  <a name="a-namelockrangea--catltemporaryfilelockrange"></a><a name="lockrange"></a>CAtlTemporaryFile::LockRange  
+ 呼叫此方法以鎖定可防止其他處理序存取該暫存檔中的區域。  
+  
+```
+HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `nPos`  
+ 應該鎖定檔案中的位置。  
+  
+ `nCount`  
+ 要鎖定的位元組範圍的長度。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 您可以鎖定之檔案中，多個區域，但允許沒有重疊的區域。 若要成功地解除鎖定的區域，請使用[CAtlTemporaryFile::UnlockRange](#unlockrange)，確保位元組範圍就相當於先前鎖定的區域。 `LockRange`不會合併相鄰地區。如果兩個鎖定的區域是相鄰的您必須個別解除每個鎖定。  
+  
+##  <a name="a-nameoperatorhandlea--catltemporaryfileoperator-handle"></a><a name="operator_handle"></a>CAtlTemporaryFile::operator 控制代碼  
+ 傳回的控制代碼到暫存檔。  
+  
+```  
+operator HANDLE() throw();
+```  
+  
+##  <a name="a-namereada--catltemporaryfileread"></a><a name="read"></a>CAtlTemporaryFile::Read  
+ 呼叫這個方法從檔案指標所指示的位置開始，暫存檔案讀取資料。  
+  
+```
+HRESULT Read(
+    LPVOID pBuffer,
+    DWORD nBufSize,
+    DWORD& nBytesRead) throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `pBuffer`  
+ 接收從檔案讀取資料的緩衝區指標。  
+  
+ `nBufSize`  
+ 緩衝區大小，以位元組為單位。  
+  
+ `nBytesRead`  
+ 讀取的位元組數。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫[CAtlFile::Read](../../atl/reference/catlfile-class.md#read)。 若要變更之檔案指標的位置，請呼叫[CAtlTemporaryFile::Seek](#seek)。  
+  
+### <a name="example"></a>範例  
+ 請參閱範例[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
+  
+##  <a name="a-nameseeka--catltemporaryfileseek"></a><a name="seek"></a>CAtlTemporaryFile::Seek  
+ 呼叫這個方法來移動檔案指標的暫存檔案。  
+  
+```
+HRESULT Seek(LONGLONG nOffset, DWORD dwFrom = FILE_CURRENT) throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `nOffset`  
+ 以位元組為單位，從所指定的起始位置的位移， *dwFrom。*  
+  
+ `dwFrom`  
+ 起始點 （FILE_BEGIN、 FILE_CURRENT 或 FILE_END）。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫[CAtlFile::Seek](../../atl/reference/catlfile-class.md#seek)。 若要取得目前的檔案位置指標，呼叫[CAtlTemporaryFile::GetPosition](#getposition)。  
+  
+### <a name="example"></a>範例  
+ 請參閱範例[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
+  
+##  <a name="a-namesetsizea--catltemporaryfilesetsize"></a><a name="setsize"></a>CAtlTemporaryFile::SetSize  
+ 呼叫這個方法來設定暫存檔案的大小。  
+  
+```
+HRESULT SetSize(ULONGLONG nNewLen) throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `nNewLen`  
+ 新的檔案，以位元組為單位的長度。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫[CAtlFile::SetSize](../../atl/reference/catlfile-class.md#setsize)。 在傳回時，檔案指標位於檔案結尾。  
+  
+##  <a name="a-nametempfilenamea--catltemporaryfiletempfilename"></a><a name="tempfilename"></a>CAtlTemporaryFile::TempFileName  
+ 呼叫這個方法傳回的暫存檔案的名稱。  
+  
+```
+LPCTSTR TempFileName() throw();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`LPCTSTR`指向的檔案名稱。  
+  
+### <a name="remarks"></a>備註  
+ 在產生檔案名稱[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)呼叫[GetTempFile](http://msdn.microsoft.com/library/windows/desktop/aa364991) [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]函式。 副檔名存檔一律為"TFR"。  
+  
+##  <a name="a-nameunlockrangea--catltemporaryfileunlockrange"></a><a name="unlockrange"></a>CAtlTemporaryFile::UnlockRange  
+ 呼叫這個方法來解除鎖定暫存檔案的區域。  
+  
+```
+HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `nPos`  
+ 應該解除鎖定的檔案中的位置。  
+  
+ `nCount`  
+ 要解除鎖定的位元組範圍的長度。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫[CAtlFile::UnlockRange](../../atl/reference/catlfile-class.md#unlockrange)。  
+  
+##  <a name="a-namewritea--catltemporaryfilewrite"></a><a name="write"></a>CAtlTemporaryFile::Write  
+ 呼叫這個方法將資料寫入至暫存檔檔案指標所指示的位置開始。  
+  
+```
+HRESULT Write(  
+    LPCVOID pBuffer,
+    DWORD nBufSize,
+    DWORD* pnBytesWritten = NULL) throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `pBuffer`  
+ 包含要寫入檔案的資料緩衝區。  
+  
+ `nBufSize`  
+ 從緩衝區中要傳輸的位元組數目。  
+  
+ `pnBytesWritten`  
+ 寫入的位元組數目。  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫[CAtlFile::Write](../../atl/reference/catlfile-class.md#write)。  
+  
+### <a name="example"></a>範例  
+ 請參閱範例[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [類別概觀](../../atl/atl-class-overview.md)   
+ [CAtlFile 類別](../../atl/reference/catlfile-class.md)
+

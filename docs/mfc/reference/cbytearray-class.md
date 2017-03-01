@@ -1,102 +1,119 @@
 ---
-title: "CByteArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CByteArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], byte"
-  - "位元組陣列"
-  - "CByteArray class"
-  - "MFC collection classes, 位元組陣列"
+title: "CByteArray 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CByteArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- CByteArray class
+- byte arrays
+- arrays [C++], byte
+- MFC collection classes, byte arrays
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
 caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# CByteArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: e2ddbaf9895dc957d9bc9743df4b4a6b827d3bce
+ms.lasthandoff: 02/24/2017
 
-支援動態的位元組陣列。  
+---
+# <a name="cbytearray-class"></a>CByteArray 類別
+支援動態位元組陣列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CByteArray : public CObject  
 ```  
   
-## Members  
- `CByteArray` 的成員函式類似於類別 [使用 CObArray](../../mfc/reference/cobarray-class.md)的成員函式。  因此相似，您可以使用成員的函式特定使用 `CObArray` 參考文件。  不論您在何處參閱 `CObject` 指標做為函式參數或傳回值，請用 **位元組**。  
+## <a name="members"></a>Members  
+ 成員函式`CByteArray`類別的成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到`CObject`指標做為函式參數或傳回值，取代**位元組**。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
- 例如，轉譯  
+ 例如，轉換為  
   
  `BYTE CByteArray::GetAt( int <nIndex> ) const;`  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|建構空陣列。|  
+  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[CObArray::CObArray](../Topic/CObArray::CObArray.md)|建構空白陣列。|  
+|----------|-----------------|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|將項目加入至陣列結尾；必要時讓陣列增長。|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|將其他陣列附加至該陣列；必要時讓陣列成長。|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|傳回的位元組陣列中的臨時參考。|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|釋放超過目前上限的所有未使用記憶體。|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|傳回給定索引的值。|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|取得此陣列中項目的數目。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|容許存取陣列中的項目。 可以是**NULL**。|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|取得此陣列中項目的數目。|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|傳回最大的有效索引。|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|判定陣列是否是空的。|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|從此陣列移除所有項目。|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引處的項目。|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|設定給定索引的值；不容許陣列成長。|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|設定給定索引的值；必要時讓陣列成長。|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|設定此陣列中要包含的項目數目。|  
   
-### 公用方法  
+### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
-|--------|--------|  
-|[CObArray::Add](../Topic/CObArray::Add.md)|將項目加入至陣列結尾;如果需要，擴大陣列。|  
-|[CObArray::Append](../Topic/CObArray::Append.md)|附加另一個陣列的陣列;如果需要，擴大陣列。|  
-|[CObArray::Copy](../Topic/CObArray::Copy.md)|複製到另一個陣列的陣列;如果需要，擴大陣列。|  
-|[CObArray::ElementAt](../Topic/CObArray::ElementAt.md)|傳回為位元組的暫存參考在陣列中。|  
-|[CObArray::FreeExtra](../Topic/CObArray::FreeExtra.md)|釋放在目前的上限 \(Upper Bound\) 上的所有未使用的記憶體。|  
-|[CObArray::GetAt](../Topic/CObArray::GetAt.md)|傳回值是在指定的索引。|  
-|[CObArray::GetCount](../Topic/CObArray::GetCount.md)|取得項目的參數數目等於陣列中的。|  
-|[CObArray::GetData](../Topic/CObArray::GetData.md)|允許存取項目的存取陣列中。  可以是 **NULL**。|  
-|[CObArray::GetSize](../Topic/CObArray::GetSize.md)|取得項目的參數數目等於陣列中的。|  
-|[CObArray::GetUpperBound](../Topic/CObArray::GetUpperBound.md)|會傳回最大的有效索引。|  
-|[CObArray::InsertAt](../Topic/CObArray::InsertAt.md)|插入項目 \(或另一個檔案中的所有元素的陣列\) 中的指定索引。|  
-|[CObArray::IsEmpty](../Topic/CObArray::IsEmpty.md)|判斷陣列是否是空的。|  
-|[CObArray::RemoveAll](../Topic/CObArray::RemoveAll.md)|從陣列中移除所有項目。|  
-|[CObArray::RemoveAt](../Topic/CObArray::RemoveAt.md)|移除項目中的特定索引處。|  
-|[CObArray::SetAt](../Topic/CObArray::SetAt.md)|設定指定之索引的值;不允許的陣列成長。|  
-|[CObArray::SetAtGrow](../Topic/CObArray::SetAtGrow.md)|設定指定之索引的值;如果需要，擴大陣列。|  
-|[CObArray::SetSize](../Topic/CObArray::SetSize.md)|將陣列中的元素數目。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|  
   
-### 公用運算子  
-  
-|名稱|描述|  
-|--------|--------|  
-|[CObArray::operator](../Topic/CObArray::operator.md)|設定或取得這個項目在指定之索引處的。|  
-  
-## 備註  
- `CByteArray` 合併 `IMPLEMENT_SERIAL` 巨集支援序列化和傾印其項目。  如果位元組陣列儲存到檔案，則會有多載的外掛程式**\<\<**\(\) 運算子的或 `Serialize` 成員函式中，每個項目，接著，序列化。  
+## <a name="remarks"></a>備註  
+ `CByteArray` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果位元組陣列儲存至封存檔，也能提供多載的插入 ( ** << **) 運算子或`Serialize`成員函式，每個項目，換句話說，序列化。  
   
 > [!NOTE]
->  在使用陣列，請使用 `SetSize` 建立控制項的大小和配置其記憶體。  如果您不使用 `SetSize`，將項目加入至陣列會經常被重新配置和複製。  經常重新配置和複製沒有效率，而且可能分段記憶體。  
+>  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
   
- 如果您需要偵錯從個別項目的輸出陣列中，您必須將 `CDumpContext` 物件的深度為 1 或更大。  
+ 如果您需要偵錯輸出陣列中的個別項目，您必須設定的深度`CDumpContext`為 1 或更高的物件。  
   
- 如需使用 `CByteArray`的詳細資訊，請參閱本文 [集合](../../mfc/collections.md)。  
+ 如需有關使用`CByteArray`，請參閱文章[集合](../../mfc/collections.md)。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CByteArray`  
   
-## 需求  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxcoll.h  
   
-## 請參閱  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>另請參閱  
+ [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CObArray Class](../../mfc/reference/cobarray-class.md)
+ [CObArray 類別](../../mfc/reference/cobarray-class.md)
+

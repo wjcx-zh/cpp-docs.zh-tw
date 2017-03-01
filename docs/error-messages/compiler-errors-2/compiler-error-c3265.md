@@ -1,34 +1,50 @@
 ---
-title: "編譯器錯誤 C3265 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3265"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3265"
+title: "編譯器錯誤 C3265 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3265
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C3265
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 1e3de88791b46b242bb4cdb812e3c3349f44d137
+ms.lasthandoff: 02/24/2017
 
-無法宣告 Managed 'managed construct' \(於 Unmanaged 'unmanaged construct' 中\)  
+---
+# <a name="compiler-error-c3265"></a>編譯器錯誤 C3265
+不可以宣告 managed 'managed '中建構的 unmanaged 'unmanaged 建構'  
   
- 您不能將 Managed 物件包含在 Unmanaged 內容中。  
+您無法在未受管理的內容中包含受管理的物件。  
   
- 下列範例會重現 C3265：  
+下列範例會重現 C3265:  
   
 ```  
 // C3265_2.cpp  
@@ -47,47 +63,4 @@ class B
    // gcroot<A^> a;  
 };  
 ```  
-  
- 下列範例會重現 C3265：  
-  
-```  
-// C3265.cpp  
-// compile with: /clr:oldSyntax /LD  
-#using <mscorlib.dll>  
-__gc class A { };  
-  
-__nogc class B  
-// try the following line instead  
-// __gc class B   
-{  
-   A *a;   // C3265  
-};  
-```  
-  
- 如果直接將 Managed 指標嵌入 Unmanaged 類別之內，也會發生 C3265。  若要修正這項錯誤，請使用 `gcroot`：  
-  
-```  
-// C3265b.cpp  
-// compile with: /clr:oldSyntax  
-#include <vcclr.h>  
-#using <mscorlib.dll>  
-  
-namespace TestNS {  
-   __gc public class Test{};  
-}  
-  
-template<class T>  
-struct Container {  
-  T* m_px;   // C3265  
-};  
-__gc public class ClassA {  
-public:  
-  ClassA (){}  
-   ~ClassA(){}  
-  
-private:  
-   Container<TestNS::Test*>  vctTest;  
-   // try the following line instead  
-   Container<gcroot<TestNS::Test* > > vctTest2;  
-};  
-```
+

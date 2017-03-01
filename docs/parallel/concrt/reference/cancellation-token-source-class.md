@@ -1,70 +1,187 @@
 ---
-title: "cancellation_token_source 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "pplcancellation_token/concurrency::cancellation_token_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cancellation_token_source 類別"
+title: "cancellation_token_source 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- pplcancellation_token/concurrency::cancellation_token_source
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
 caps.latest.revision: 10
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# cancellation_token_source 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 5c80977656308d3174f4141b131c27fd3c162bbe
+ms.lasthandoff: 02/24/2017
 
-`cancellation_token_source` 類別表示取消某個可取消作業的能力。  
+---
+# <a name="cancellationtokensource-class"></a>cancellation_token_source 類別
+`cancellation_token_source` 類別代表取消某個可取消作業的能力。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class cancellation_token_source;
 ```  
-class cancellation_token_source;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[cancellation\_token\_source::cancellation\_token\_source 建構函式](../Topic/cancellation_token_source::cancellation_token_source%20Constructor.md)|多載。  建構新的 `cancellation_token_source`。  來源可用於將某個可取消作業的取消加上標幟。|  
-|[cancellation\_token\_source::~cancellation\_token\_source 解構函式](../Topic/cancellation_token_source::~cancellation_token_source%20Destructor.md)||  
+|名稱|說明|  
+|----------|-----------------|  
+|[cancellation_token_source 建構函式](#ctor)|多載。 建構新的 `cancellation_token_source`。 來源可用於將某個可取消作業的取消加上標幟。|  
+|[~ cancellation_token_source 解構函式](#dtor)||  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[cancellation\_token\_source::cancel 方法](../Topic/cancellation_token_source::cancel%20Method.md)|取消語彙基元。  任何使用語彙基元的 `task_group`、`structured_task_group` 或 `task` 都會在進行這個呼叫時取消，並在下一個中斷點擲回例外狀況。|  
-|[cancellation\_token\_source::create\_linked\_source 方法](../Topic/cancellation_token_source::create_linked_source%20Method.md)|多載。  建立 `cancellation_token_source`，其會在提供的語彙基元已取消時取消。|  
-|[cancellation\_token\_source::get\_token 方法](../Topic/cancellation_token_source::get_token%20Method.md)|傳回與此來源相關聯的取消語彙基元。  傳回的語彙基元可用於輪詢取消或在發生取消時提供回呼。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[cancel 方法](#cancel)|取消語彙基元。 任何使用語彙基元的 `task_group`、`structured_task_group` 或 `task` 都會在進行這個呼叫時取消，並在下一個中斷點擲回例外狀況。|  
+|[create_linked_source 方法](#create_linked_source)|多載。 建立 `cancellation_token_source`，其會在提供的語彙基元已取消時取消。|  
+|[get_token 方法](#get_token)|傳回與此來源相關聯的取消語彙基元。 傳回的語彙基元可用於輪詢取消或在發生取消時提供回呼。|  
   
-### 公用運算子  
+### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
-|--------|--------|  
-|[cancellation\_token\_source::operator\!\= 運算子](../Topic/cancellation_token_source::operator!=%20Operator.md)||  
-|[cancellation\_token\_source::operator\= 運算子](../Topic/cancellation_token_source::operator=%20Operator.md)||  
-|[cancellation\_token\_source::operator\=\= 運算子](../Topic/cancellation_token_source::operator==%20Operator.md)||  
+|----------|-----------------|  
+|[運算子 ！ = 運算子](#operator_neq)||  
+|[運算子 = 運算子](#operator_eq)||  
+|[運算子 = = 運算子](#operator_eq_eq)||  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `cancellation_token_source`  
   
-## 需求  
- **標頭：** pplcancellation\_token.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** pplcancellation_token.h  
   
- **命名空間：**concurrency  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namedtora-cancellationtokensource"></a><a name="dtor"></a>~ cancellation_token_source 
+
+```
+~cancellation_token_source();
+```  
+  
+##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>[取消] 
+
+ 取消語彙基元。 任何使用語彙基元的 `task_group`、`structured_task_group` 或 `task` 都會在進行這個呼叫時取消，並在下一個中斷點擲回例外狀況。  
+  
+```
+void cancel() const;
+```  
+  
+##  <a name="a-namectora-cancellationtokensource"></a><a name="ctor"></a>cancellation_token_source 
+
+ 建構新的 `cancellation_token_source`。 來源可用於將某個可取消作業的取消加上標幟。  
+  
+```
+cancellation_token_source();
+
+cancellation_token_source(const cancellation_token_source& _Src);
+
+cancellation_token_source(cancellation_token_source&& _Src);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Src`  
+  
+##  <a name="a-namecreatelinkedsourcea-createlinkedsource"></a><a name="create_linked_source"></a>create_linked_source 
+
+ 建立 `cancellation_token_source`，其會在提供的語彙基元已取消時取消。  
+  
+```
+static cancellation_token_source create_linked_source(
+    cancellation_token& _Src);
+
+template<typename _Iter>
+static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Iter`  
+ `_Src`  
+ 語彙基元，其取消作業將會導致取消傳回的語彙基元來源。 請注意，傳回的語彙基元來源也可以獨立取消，不受此參數包含的來源影響。  
+  
+ `_Begin`  
+ C + + 標準程式庫迭代器的語彙基元範圍的開頭對應於接聽取消之語彙。  
+  
+ `_End`  
+ C + + 標準程式庫迭代器對應至權杖的範圍結尾接聽取消之語彙。  
+  
+### <a name="return-value"></a>傳回值  
+ `cancellation_token_source`，其會在 `_Src` 參數提供的語彙基元已取消時取消。  
+  
+##  <a name="a-namegettokena-gettoken"></a><a name="get_token"></a>get_token 
+
+ 傳回與此來源相關聯的取消語彙基元。 傳回的語彙基元可用於輪詢取消或在發生取消時提供回呼。  
+  
+```
+cancellation_token get_token() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 與此來源相關聯的取消語彙基元。  
+  
+##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>運算子 ！ = 
+
+```
+bool operator!= (const cancellation_token_source& _Src) const;
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Src`  
+  
+### <a name="return-value"></a>傳回值  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+
+```
+cancellation_token_source& operator= (const cancellation_token_source& _Src);
+
+cancellation_token_source& operator= (cancellation_token_source&& _Src);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Src`  
+  
+### <a name="return-value"></a>傳回值  
+  
+##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>運算子 = = 
+
+```
+bool operator== (const cancellation_token_source& _Src) const;
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Src`  
+  
+### <a name="return-value"></a>傳回值  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)
+

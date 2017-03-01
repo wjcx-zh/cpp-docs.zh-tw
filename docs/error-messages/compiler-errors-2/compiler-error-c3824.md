@@ -1,34 +1,51 @@
 ---
-title: "編譯器錯誤 C3824 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3824"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3824"
+title: "編譯器錯誤 C3824 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3824
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3824
 ms.assetid: b6c6adf1-0a29-401c-a06e-616fd50d4c37
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 編譯器錯誤 C3824
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 546edbeccfee84e91018d0801f0c1ebc7a53a537
+ms.lasthandoff: 02/24/2017
 
-'member': 這個型別不可出現在這種內容中 \(函式參數、傳回型別或靜態成員\)  
+---
+# <a name="compiler-error-c3824"></a>編譯器錯誤 C3824
+'member': 此類型不能出現在此內容 （函式參數、 傳回型別或靜態成員）  
   
- Pin 指標不可為函式參數、傳回型別，也不能宣告為 `static`。  
+ Pin 指標不可以是函式參數、 傳回型別，或宣告`static`。  
   
- 下列範例會產生 C3824：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3824:  
   
 ```  
 // C3824a.cpp  
@@ -38,22 +55,4 @@ void func() {
    pin_ptr<int> b; // OK  
 }  
 ```  
-  
- **Managed Extensions for C\+\+**  
-  
- 以 `__pin` 關鍵字宣告的區域指標不可以宣告為 `static`，也不可以為內部指標。  
-  
- 下列範例會產生 C3824：  
-  
-```  
-// C3824b.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-  
-__gc struct A {};  
-  
-void func() {  
-   static A __pin* a;   // C3824  
-   A __pin* b;   // OK  
-}  
-```
+

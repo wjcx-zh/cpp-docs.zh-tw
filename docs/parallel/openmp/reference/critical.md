@@ -1,33 +1,48 @@
 ---
-title: "critical | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Critical"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "critical OpenMP directive"
+title: "重大 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Critical
+dev_langs:
+- C++
+helpviewer_keywords:
+- critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# critical
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 5693a16faebbc0f8c0a29cf28910110fbff66318
+ms.lasthandoff: 02/24/2017
 
-指定一次，程式碼只執行一個執行緒上。  
+---
+# <a name="critical"></a>critical
+指定程式碼只會執行一個執行緒上一次。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma omp critical [(name)]  
@@ -36,18 +51,18 @@ manager: "ghogen"
 }  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
- \(`name`\) \(optional\)  
- 識別關鍵的程式碼的名稱。  請注意該名稱必須以括號括住。  
+ (`name`) （選擇性）  
+ 要找出重要的程式碼的名稱。 請注意該名稱必須括在括號括住。  
   
-## 備註  
- **要徑**指示詞可支援任何 OpenMP 子句。  
+## <a name="remarks"></a>備註  
+ **重大**指示詞可支援不含 OpenMP 子句。  
   
- 如需詳細資訊，請參閱 [2.6.2 critical Construct](../../../parallel/openmp/2-6-2-critical-construct.md)。  
+ 如需詳細資訊，請參閱[2.6.2 重大建構](../../../parallel/openmp/2-6-2-critical-construct.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_critical.cpp  
@@ -91,16 +106,19 @@ int main()
 }  
 ```  
   
-  **41**  
-**18467**  
-**6334**  
-**26500**  
-**19169**  
-**15724**  
-**11478**  
-**29358**  
-**26962**  
-**24464**  
-**最大值 \= 29358**   
-## 請參閱  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+41  
+18467  
+6334  
+26500  
+19169  
+15724  
+11478  
+29358  
+26962  
+24464  
+max = 29358  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

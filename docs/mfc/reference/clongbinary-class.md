@@ -1,77 +1,117 @@
 ---
-title: "CLongBinary Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "BLOB"
-  - "CLongBinary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB (二進位大型物件)"
-  - "BLOB (二進位大型物件), CLongBinary 類別"
-  - "CLongBinary 類別"
+title: "CLongBinary 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- BLOB
+- CLongBinary
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB (binary large object)
+- CLongBinary class
+- BLOB (binary large object), CLongBinary class
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
 caps.latest.revision: 21
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CLongBinary Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: bb73604ee4d15f3a71be8514f348ad265064928a
+ms.lasthandoff: 02/24/2017
 
-simplifies 針對極大型二進位資料在資料庫物件 \(通常稱為 BLOBs 或「二進位大型物件\)。  
+---
+# <a name="clongbinary-class"></a>CLongBinary 類別
+簡化在資料庫中對極大型二進位資料物件 (通常稱為 BLOB 或「二進位大型物件」) 的處理。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CLongBinary : public CObject  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CLongBinary::CLongBinary](#clongbinary)|建構 `CLongBinary` 物件。|  
+  
+### <a name="public-data-members"></a>公用資料成員  
   
 |名稱|描述|  
-|--------|--------|  
-|[CLongBinary::CLongBinary](../Topic/CLongBinary::CLongBinary.md)|建構 `CLongBinary` 物件。|  
+|----------|-----------------|  
+|[CLongBinary::m_dwDataLength](#m_dwdatalength)|包含的實際大小，以位元組為單位的資料物件的控制代碼儲存在`m_hData`。|  
+|[CLongBinary::m_hData](#m_hdata)|包含 Windows`HGLOBAL`實際影像物件控制代碼。|  
   
-### 公用資料成員  
-  
-|名稱|描述|  
-|--------|--------|  
-|[CLongBinary::m\_dwDataLength](../Topic/CLongBinary::m_dwDataLength.md)|在控制項的程式碼在 `m_hData`儲存資料物件的位元組包含實際大小。|  
-|[CLongBinary::m\_hData](../Topic/CLongBinary::m_hData.md)|包含視窗控制代碼。 `HGLOBAL` 實際影像物件。|  
-  
-## 備註  
- 例如， \[記錄\] 欄位在 SQL 資料表可能包含表示圖片的點陣圖。  `CLongBinary` 物件儲存這類物件並將它的大小。  
+## <a name="remarks"></a>備註  
+ 例如，SQL 資料表中的記錄欄位可能包含代表圖片的點陣圖。 A`CLongBinary`物件會儲存這類物件，並會記錄的大小。  
   
 > [!NOTE]
->  一般而言，是比較好的作法。 [DFX\_Binary](../Topic/DFX_Binary.md) 函式現在 [CByteArray](../../mfc/reference/cbytearray-class.md) 一起使用。  您仍然可以使用 `CLongBinary`，不過，通常 `CByteArray` 提供更多的功能，在 Win32 中，因為不再具有大小限制遇到具有 16 位元 `CByteArray`。  這項建議適用於程式設計與資料存取物件 \(DAO\) 以及開放式資料庫連接 \(Open Database Connectivity，ODBC\)。  
+>  一般而言，最好是更好的做法是現在使用[CByteArray](../../mfc/reference/cbytearray-class.md)搭配[DFX_Binary](http://msdn.microsoft.com/library/678021a3-2e46-44d7-8528-71bb692dcc07)函式。 您仍然可以使用`CLongBinary`，但一般而言`CByteArray`提供更多的功能，在 Win32 中，因為不會遇到的 16 位元的大小限制`CByteArray`。 這項建議適用於資料存取物件 (DAO)，以及開放式資料庫連接 (ODBC) 的程式設計。  
   
- 若要使用 `CLongBinary` 物件，請宣告型別 `CLongBinary` 的欄位資料成員至資料錄集類別中。  當資料錄集建構，成員就會是資料錄集類別中的某個內嵌的成員，並建構。  在 `CLongBinary` 建構物件後，資料錄欄位交換 \(RFX\) 機制從欄位載入資料物件中目前資料錄的資料來源並將它儲存到此資料錄時，已更新資料錄時。  RFX 查詢二進位大型物件大小的資料來源，其配置儲存體 \(透過 `CLongBinary` 物件的 `m_hData` 資料成員\) 和存放區 `HGLOBAL` 控制代碼在 `m_hData`的資料。  RFX 在 `m_dwDataLength` 資料成員也會儲存資料物件的實際大小。  與物件中的資料來傳遞 `m_hData`，使用時通常會使用  視窗中 `HGLOBAL` 控制代碼所儲存之資料的相同的技術。  
+ 若要使用`CLongBinary`物件，宣告類型的欄位資料成員`CLongBinary`資料錄集類別中。 此成員會內嵌的類別成員的資料錄集，並在建構資料錄集時，就會建構。 之後`CLongBinary`建構物件、 資料錄欄位交換 (RFX) 機制載入資料物件從目前的記錄資料來源上的欄位，並將它儲存回資料錄，更新記錄時。 RFX 查詢中的資料來源的二進位大型物件的大小會為它配置儲存體 (透過`CLongBinary`物件的`m_hData`資料成員)，並將`HGLOBAL`中資料的控制代碼`m_hData`。 RFX 也會儲存在資料物件的實際大小`m_dwDataLength`資料成員。 使用中的資料物件，可透過`m_hData`，您通常會用來操作資料儲存在 Windows 中的相同技巧`HGLOBAL`處理。  
   
- 當您終結您的資料錄集時，也會終結物件， `CLongBinary` 內嵌，而且其解構函式解除配置 `HGLOBAL` 資料控制代碼。  
+ 當損毀資料錄集，內嵌`CLongBinary`也終結物件，並取消配置其解構函式`HGLOBAL`資料控制代碼。  
   
- 如需大型物件並使用 `CLongBinary`的相關資訊，請參閱 Microsoft 知識庫文件 [資料錄集 \(ODBC\)](../../data/odbc/recordset-odbc.md) 和 [資料錄集:使用大型資料項目 \(ODBC\) 使用](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。  
+ 如需有關大型物件，以及使用`CLongBinary`，請參閱文章[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)和[資料錄集︰ 使用大型資料的項目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CLongBinary`  
   
-## 需求  
- **Header:** afxdb\_.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxdb_.h  
   
-## 請參閱  
- [CObject Class](../../mfc/reference/cobject-class.md)   
+##  <a name="a-nameclongbinarya--clongbinaryclongbinary"></a><a name="clongbinary"></a>CLongBinary::CLongBinary  
+ 建構 `CLongBinary` 物件。  
+  
+```  
+CLongBinary();
+```  
+  
+##  <a name="a-namemdwdatalengtha--clongbinarymdwdatalength"></a><a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+ 以位元組為單位的資料儲存在儲存實際大小`HGLOBAL`處理`m_hData`。  
+  
+```  
+SQLULEN m_dwDataLength;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個大小可能小於資料配置的記憶體區塊的大小。 呼叫 Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)函式可取得已配置的大小。  
+  
+##  <a name="a-namemhdataa--clongbinarymhdata"></a><a name="m_hdata"></a>CLongBinary::m_hData  
+ 儲存 Windows`HGLOBAL`實際的二進位大型物件資料的控制代碼。  
+  
+```  
+HGLOBAL m_hData;  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+ [CRecordset 類別](../../mfc/reference/crecordset-class.md)
+

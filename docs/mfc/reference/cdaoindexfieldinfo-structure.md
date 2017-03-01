@@ -1,61 +1,78 @@
 ---
-title: "CDaoIndexFieldInfo 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDaoIndexFieldInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDaoIndexFieldInfo 結構"
-  - "DAO (資料存取物件), 索引欄位集合"
+title: "CDaoIndexFieldInfo 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDaoIndexFieldInfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDaoIndexFieldInfo structure
+- DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# CDaoIndexFieldInfo 結構
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 975b3a704936adc9d4205938bb2c757ab650f0d9
+ms.lasthandoff: 02/24/2017
 
-`CDaoIndexFieldInfo` 結構中為資料存取物件定義的物件包含一個索引欄位物件的資訊 \(DAO\)。  
+---
+# <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo 結構
+`CDaoIndexFieldInfo`結構包含索引欄位物件的定義資料存取物件 (DAO) 的相關資訊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      struct CDaoIndexFieldInfo  
+struct CDaoIndexFieldInfo  
 {  
-   CString m_strName;          // Primary  
-   BOOL m_bDescending;         // Primary  
+    CString m_strName;          // Primary  
+    BOOL m_bDescending;         // Primary  
 };  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `m_strName`  
- 唯一命名索引欄位物件。  如需詳細資訊，請參閱本主題「Name 屬性」 DAO 說明。  
+ 唯一命名索引的欄位物件。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
   
- *m\_bDescending*  
- 表示索引物件定義的索引順序。  停止命令則為**TRUE** 。  
+ *m_bDescending*  
+ 表示索引物件所定義的索引順序。 **TRUE**如果順序會遞減排序。  
   
-## 備註  
- 索引物件可能有一些欄位，表示哪些欄位 tabledef \(或根據資料表的資料錄集\) 索引。  對主要上面指令的參考資訊如何在呼叫衍生 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 物件的 `m_pFieldInfos` 成員傳回類別 [CDaoTableDef](../Topic/CDaoTableDef::GetIndexInfo.md) 或 [CDaoRecordset](../Topic/CDaoRecordset::GetIndexInfo.md)的 `GetIndexInfo` 成員函式。  
+## <a name="remarks"></a>備註  
+ 索引物件可以有數個欄位，指出 tabledef （或以資料表為基礎的資料錄集） 已編製索引的欄位。 上述的主要參考表示在傳回的資訊是如何`m_pFieldInfos`成員[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)取得藉由呼叫物件`GetIndexInfo`類別成員函式[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)。  
   
- 索引物件和索引欄位物件不是由 MFC 類別表示。  相反地，基礎類別 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 中的 MFC 物件 DAO 物件中之物件的集合，稱為索引集合。  每個索引物件，一一接著，包含欄位的物件集合。  這些類別提供成員函式存取索引資訊一些個別項目也可以同時存取它們與 `CDaoIndexInfo` 物件藉由呼叫包含的 `GetIndexInfo` 物件的成員函式。  `CDaoIndexInfo` 物件，然後，有一個資料成員，則為 `m_pFieldInfos`，指向 `CDaoIndexFieldInfo` 物件的陣列。  
+ 索引與索引欄位的物件不會顯示由 MFC 類別。 相反地，DAO 物件類別的基礎 MFC 物件[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)包含稱為索引集合的索引物件的集合。 每個索引物件，反而會包含欄位物件的集合。 這些類別提供成員函式來存取索引資訊的個別項目，或是您可以存取它們全部一次使用`CDaoIndexInfo`物件呼叫`GetIndexInfo`包含物件的成員函式。 `CDaoIndexInfo`物件，接著，必須為資料成員， `m_pFieldInfos`，指向陣列`CDaoIndexFieldInfo`物件。  
   
- 呼叫索引集合中儲存索引物件所需的包含 tabledef 或資料錄集物件的 `GetIndexInfo` 成員函式中。  然後存取 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 物件的 `m_pFieldInfos` 成員。  `m_pFieldInfos` 陣列的長度儲存於 `m_nFields`中。  `CDaoIndexFieldInfo` 也會定義函式偵錯組建中一個 `Dump` 成員。  您可以使用 `Dump` 來傾印 `CDaoIndexFieldInfo` 物件的內容。  
+ 呼叫`GetIndexInfo`成員函式包含 tabledef 或資料錄集物件的集合是在索引中儲存您感興趣的索引物件。 然後存取`m_pFieldInfos`成員[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)物件。 長度`m_pFieldInfos`陣列儲存在`m_nFields`。 `CDaoIndexFieldInfo`也會定義`Dump`成員函式中偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoIndexFieldInfo`物件。  
   
-## 需求  
- **標頭：** afxdao.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxdao.h  
   
-## 請參閱  
- [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef::GetIndexInfo](../Topic/CDaoTableDef::GetIndexInfo.md)   
- [CDaoRecordset::GetIndexInfo](../Topic/CDaoRecordset::GetIndexInfo.md)
+## <a name="see-also"></a>另請參閱  
+ [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)   
+ [CDaoRecordset::GetIndexInfo](../../mfc/reference/cdaorecordset-class.md#getindexinfo)
+
+

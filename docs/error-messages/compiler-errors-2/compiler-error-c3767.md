@@ -1,36 +1,54 @@
 ---
-title: "編譯器錯誤 C3767 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3767"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3767"
+title: "編譯器錯誤 C3767 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3767
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C3767
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: b0cce511d895aae218c1b2ab04d129173b049983
+ms.lasthandoff: 02/24/2017
 
-'function': 無法存取候選函式  
+---
+# <a name="compiler-error-c3767"></a>編譯器錯誤 C3767
+'function' 候選函式無法存取  
   
- 在類別中定義的 friend 函式，不應視如在全域命名空間範圍中定義和宣告。  不過，可透過與引數相關的查閱去找到。  
+ 在類別中定義的 friend 函式不應視為定義和宣告全域命名空間範圍中。 它可以不過，找不到的引數相依查閱。  
   
- 某項重大變更也可能會造成 C3767：在 **\/clr** 編譯作業中，原生型別現在預設是私用型別；如需詳細資訊，請參閱[類型可視性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)。  
+ 重大變更也可能造成 C3767︰ 原生類型現在預設是私用在**/clr**編譯; 請參閱[輸入可視性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)如需詳細資訊。  
   
- 下列範例會產生 C3767：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3767:  
   
 ```  
 // C3767a.cpp  
@@ -61,38 +79,7 @@ int main() {
 };  
 ```  
   
- 下列範例會產生 C3767：  
-  
-```  
-// C3767b.cpp  
-// compile with: /clr:oldSyntax  
-using namespace System;  
-__delegate void TestDel();  
-  
-public __gc class MyClass {  
-public:  
-   static __event TestDel * MyClass_Event;  
-};  
-  
-public __gc class MyClass2 : public MyClass {  
-public:  
-   void Test() {  
-      MyClass* patient = new MyClass;  
-      patient->MyClass_Event();  
-    }  
-};  
-  
-int main() {  
-   MyClass* x = new MyClass;  
-   x->MyClass_Event();   // C3767  
-  
-   // OK  
-   MyClass2 * y = new MyClass2();  
-   y->Test();  
-};  
-```  
-  
- 下列範例會產生 C3767：  
+ 下列範例會產生 C3767:  
   
 ```  
 // C3767c.cpp  
@@ -114,31 +101,9 @@ ref class Der : public Base {
 };  
 ```  
   
- 下列範例會產生 C3767：  
+ 在 Visual c + +.NET 2002 中，編譯器會改變它查閱符號的方式。 在某些情況下，它會自動尋找指定命名空間中的符號。 現在，它會使用引數相依查閱。  
   
-```  
-// C3767d.cpp  
-// compile with: /clr:oldSyntax /c  
-  
-__gc class Base {  
-protected:  
-   void Method() {  
-      System::Console::WriteLine("protected");  
-   }  
-};  
-  
-__gc class Der : public Base {  
-   void Method() {  
-      ((Base*)this)->Method();   // C3767  
-      // try the following line instead  
-      // Base::Method();  
-   }  
-};  
-```  
-  
- 在 Visual C\+\+ .NET 2002 中，編譯器已改變查閱符號的方法。  原本在某些情況下，它會自動尋找特定命名空間中的符號。  現在，它將使用與引數相關的查閱。  
-  
- 下列範例會產生 C3767：  
+ 下列範例會產生 C3767:  
   
 ```  
 // C3767e.cpp  
@@ -157,7 +122,7 @@ int main() {
 }  
 ```  
   
- 對於在 Visual C\+\+ .NET 2003 和 Visual C\+\+ .NET 2002 中有效的程式碼，請在類別中宣告 friend，然後在命名空間範圍中加以定義。  
+ 在 Visual c + +.NET 2003年和 Visual c + +.NET 2002年中有效的程式碼，宣告 friend 類別範圍中的並將其命名空間範圍中定義︰  
   
 ```  
 // C3767f.cpp  

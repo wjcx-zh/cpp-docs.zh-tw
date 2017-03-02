@@ -1,78 +1,206 @@
 ---
-title: "combinable 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ppl/concurrency::combinable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "combinable 類別"
+title: "combinable 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ppl/concurrency::combinable
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# combinable 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
+ms.lasthandoff: 02/24/2017
 
-`combinable<T>` 物件適用於提供資料的執行緒私用複本，在平行演算法期間執行無鎖定的執行緒\-本機子運算。  在平行作業結尾處，可以將執行緒私用子運算合併於最終結果。  這個類別可以用來代替共用變數，而且如果該共用變數有許多爭用情形，則可能可以改進效能。  
+---
+# <a name="combinable-class"></a>combinable 類別
+`combinable<T>` 物件適用於提供資料的執行緒私用複本，在平行演算法期間執行無鎖定的執行緒-本機子運算。 在平行作業結尾處，可以將執行緒私用子運算合併於最終結果。 這個類別可以用來代替共用變數，而且如果該共用變數有許多爭用情形，則可能可以改進效能。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template<typename T>
+class combinable;
 ```  
-template<  
-   typename _Ty  
->  
-class combinable;  
-```  
   
-#### 參數  
- `_Ty`  
- 最後合併結果的資料型別。  型別必須具有複製建構函式和預設的建構函式。  
+#### <a name="parameters"></a>參數  
+ `T`  
+ 最後的合併結果的資料型別。 複製建構函式和預設建構函式，必須使用型別。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[combinable::combinable 建構函式](../Topic/combinable::combinable%20Constructor.md)|多載。  建構新的 `combinable` 物件。|  
-|[combinable::~combinable 解構函式](../Topic/combinable::~combinable%20Destructor.md)|終結 `combinable` 物件。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[可組合的類別建構函式](#ctor)|多載。 建構新`combinable`物件。|  
+|[~ combinable 解構函式](#dtor)|終結 `combinable` 物件。|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[combinable::clear 方法](../Topic/combinable::clear%20Method.md)|清除先前使用方式的任何中繼運算結果。|  
-|[combinable::combine 方法](../Topic/combinable::combine%20Method.md)|藉由呼叫提供的結合仿函數，從一組執行緒本機子運算計算最終值。|  
-|[combinable::combine\_each 方法](../Topic/combinable::combine_each%20Method.md)|藉由每個執行緒本機子運算呼叫一次提供的結合仿函數，從一組執行緒本機子運算計算最終值。  函式物件會累積最終結果。|  
-|[combinable::local 方法](../Topic/combinable::local%20Method.md)|多載。  傳回執行緒私用子運算的參考。|  
+|----------|-----------------|  
+|[clear 方法](#clear)|清除任何計算的中繼結果，從先前的使用方式。|  
+|[combine 方法](#combine)|藉由呼叫提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。|  
+|[combine_each 方法](#combine_each)|藉由呼叫執行緒區域子計算每一次提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。 最後的結果會累積函式物件。|  
+|[區域方法](#local)|多載。 傳回執行緒私用子運算的參考。|  
   
-### 公用運算子  
+### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
-|--------|--------|  
-|[combinable::operator\= 運算子](../Topic/combinable::operator=%20Operator.md)|從另一個 `combinable` 物件指派到 `combinable` 物件。|  
+|----------|-----------------|  
+|[運算子 = 運算子](#operator_eq)|指派給`combinable`從另一個物件`combinable`物件。|  
   
-## 備註  
- 如需詳細資訊，請參閱 [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。  
+## <a name="remarks"></a>備註  
+ 如需詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `combinable`  
   
-## 需求  
- **標頭：** ppl.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** ppl.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)
+##  <a name="a-namecleara-clear"></a><a name="clear"></a>清除 
+
+ 清除任何計算的中繼結果，從先前的使用方式。  
+  
+```
+void clear();
+```  
+  
+##  <a name="a-namectora-combinable"></a><a name="ctor"></a>可組合的類別 
+
+ 建構新`combinable`物件。  
+  
+```
+combinable();
+
+template <typename _Function>
+explicit combinable(_Function _FnInitialize);
+
+combinable(const combinable& _Copy);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Function`  
+ 初始化仿函式物件的型別。  
+  
+ `_FnInitialize`  
+ 函式會初始化每個新的執行緒私用值的型別呼叫`T`。 它必須支援具有簽章的函式呼叫運算子`T ()`。  
+  
+ `_Copy`  
+ 將現有`combinable`要複製到這個物件。  
+  
+### <a name="remarks"></a>備註  
+ 第一個建構函式初始化新的項目類型的預設建構函式`T`。  
+  
+ 第二個建構函式初始化新的項目使用初始化仿函式當做提供`_FnInitialize`參數。  
+  
+ 第三個建構函式是複製建構函式。  
+  
+##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ 可組合的類別 
+
+ 終結 `combinable` 物件。  
+  
+```
+~combinable();
+```  
+  
+##  <a name="a-namecombinea-combine"></a><a name="combine"></a>結合 
+
+ 藉由呼叫提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。  
+  
+```
+template<typename _Function>
+T combine(_Function _FnCombine) const;
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Function`  
+ 將要叫用以將兩個執行緒區域子運算結合的函式物件類型。  
+  
+ `_FnCombine`  
+ 用來將子運算結合仿函式。 其簽章是`T (T, T)`或`T (const T&, const T&)`，而且必須關聯和交換。  
+  
+### <a name="return-value"></a>傳回值  
+ 合併所有這些執行緒私用子運算的最終結果。  
+  
+##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+
+ 藉由呼叫執行緒區域子計算每一次提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。 最後的結果會累積函式物件。  
+  
+```
+template<typename _Function>
+void combine_each(_Function _FnCombine) const;
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Function`  
+ 將要叫用以結合單一的執行緒區域子運算的函式物件類型。  
+  
+ `_FnCombine`  
+ 用來結合一個子計算仿函式。 其簽章是`void (T)`或`void (const T&)`，而且必須是關聯式和交換式。  
+  
+##  <a name="a-namelocala-local"></a><a name="local"></a>本機 
+
+ 傳回執行緒私用子運算的參考。  
+  
+```
+T& local();
+
+T& local(bool& _Exists);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Exists`  
+ 布林值的參考。 這個引數所參考的布林值會設定為`true`如果子運算已經存在於這個執行緒，且設定為`false`如果這是在此執行緒的第一個子計算。  
+  
+### <a name="return-value"></a>傳回值  
+ 執行緒私用子計算參考。  
+  
+##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+
+ 指派給`combinable`從另一個物件`combinable`物件。  
+  
+```
+combinable& operator= (const combinable& _Copy);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Copy`  
+ 將現有`combinable`要複製到這個物件。  
+  
+### <a name="return-value"></a>傳回值  
+ 參考`combinable`物件。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)
+

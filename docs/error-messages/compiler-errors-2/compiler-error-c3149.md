@@ -1,38 +1,54 @@
 ---
-title: "編譯器錯誤 C3149 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3149"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3149"
+title: "編譯器錯誤 C3149 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3149
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 編譯器錯誤 C3149
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.lasthandoff: 02/24/2017
 
-'type' : 沒有最上層 'char' 無法在這裡使用這個型別  
+---
+# <a name="compiler-error-c3149"></a>編譯器錯誤 C3149
+'type': 無法使用此類型沒有最上層的 'char'  
   
  未正確指定宣告。  
   
- 例如，您可能已在全域範圍定義 CLR 型別，並嘗試將型別的變數建立為定義的一部分。  由於不允許 CLR 型別的全域變數，編譯器將產生 C3149。  
+ 比方說，您可能已定義在全域範圍的 CLR 型別，並嘗試建立類型的變數定義的一部分。 不允許全域變數的 CLR 型別，因為編譯器會產生 C3149。  
   
- 若要解決這項錯誤，請在函式或型別定義之內宣告 CLR 型別的變數。  
+ 若要解決這個錯誤，宣告函式或型別定義的 CLR 型別的變數。  
   
- 下列範例會產生 C3149：  
+ 下列範例會產生 C3149:  
   
 ```  
 // C3149.cpp  
@@ -45,7 +61,7 @@ int main() {
 }  
 ```  
   
- 下列範例會產生 C3149：  
+ 下列範例會產生 C3149:  
   
 ```  
 // C3149b.cpp  
@@ -54,20 +70,4 @@ delegate int MyDelegate(const int, int);
 void Test1(MyDelegate m) {}   // C3149  
 void Test2(MyDelegate ^ m) {}   // OK  
 ```  
-  
- **Managed Extensions for C\+\+**  
-  
- 未正確使用 Managed 物件。  
-  
- 下列範例會產生 C3149：  
-  
-```  
-// C3149c.cpp  
-// compile with: /clr:oldSyntax  
-__gc class A {};  
-  
-int main() {  
-   A a = new A;   // C3149  
-   A *a = new A;   // OK  
-}  
-```
+

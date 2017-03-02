@@ -1,42 +1,55 @@
 ---
-title: "編譯器警告 (層級 1) C4803 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4803"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4803"
+title: "編譯器警告 （層級 1） C4803 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4803
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器警告 (層級 1) C4803
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 2581d4240306e88d75fe5fcc0249371005853b7e
+ms.lasthandoff: 02/24/2017
 
-'method' : 產生的方法具有與該事件的 'event' 不同的儲存類別  
+---
+# <a name="compiler-warning-level-1-c4803"></a>編譯器警告 (層級 1) C4803
+'method': raise 方法具有不同的儲存類別的事件，'event'  
   
- 事件方法與事件宣告必須有相同的儲存類別。  編譯器會調整事件方法，使儲存類別相同。  
+事件方法必須具有相同的儲存類別，為事件宣告。 編譯器會調整事件的方法，使儲存類別相同。  
   
- 如果有自介面實作事件的類別，可能會發生此警告。  編譯器不會在介面中明確地為事件產生引發方法。  當您在類別中實作介面時，編譯器會明確地產生引發方法，而且該方法不是虛擬的，因此警告產生。  
+如果您有一個類別可實作介面的事件，可能會發生這個警告。 編譯器不會以隱含方式產生的介面中引發事件的方法。 當您在類別中實作該介面時，編譯器會隱含地產生引發方法，該方法不是虛擬的因此這項警告。 如需有關事件的詳細資訊，請參閱[事件](../../windows/event-cpp-component-extensions.md)。  
   
- 如需關於如何關閉警告的資訊，請參閱 [warning](../../preprocessor/warning.md) pragma。  
+請參閱[警告](../../preprocessor/warning.md)pragma，如需如何關閉警告。  
   
-## 範例  
- 使用 **\/clr** 可能會產生 C4803。  如需使用事件的詳細資訊，請參閱 [event](../../windows/event-cpp-component-extensions.md)。  
-  
- 下列範例會產生 C4803。  
+## <a name="example"></a>範例  
+ 下列範例會產生 c4803:。  
   
 ```  
 // C4803.cpp  
@@ -75,42 +88,4 @@ int main() {
    ep->E1();  
 }  
 ```  
-  
-## 範例  
- 使用 **\/clr:oldSyntax** 也可以產生 C4803。  下列範例會產生 C4803。  
-  
-```  
-// C4803_b.cpp  
-// compile with: /clr:oldSyntax /W1  
-using namespace System;  
-  
-public __delegate void Del();  
-  
-__gc struct E {  
-   Del* _pd1;  
-   virtual __event void add_E1(Del* pd1) {  
-      _pd1 = dynamic_cast<Del*> (Delegate::Combine(_pd1, pd1));  
-   }  
-  
-   virtual __event void remove_E1(Del* pd1) {  
-      _pd1 = dynamic_cast<Del*> (Delegate::Remove(_pd1, pd1));  
-   }  
-  
-   __event void raise_E1 () {   // C4803, add virtual  
-      if (_pd1)  
-         _pd1->Invoke();  
-   }  
-  
-   void func() {  
-      Console::WriteLine("In E::func()");  
-   }  
-};  
-  
-int main() {  
-   E* ep = new E;  
-   ep->E1 += new Del(ep, &E::func);  
-   ep->E1();  
-   ep->E1 -= new Del(ep, &E::func);  
-   ep->E1();  
-}  
-```
+

@@ -1,56 +1,48 @@
 ---
-title: "編譯器警告 (層級 2) C4948 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4948"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4948"
+title: "編譯器警告 （層級 2） C4948 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4948
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4948
 ms.assetid: d006cb17-754a-4c70-ba7f-c3200e2cd8fa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器警告 (層級 2) C4948
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 6483f704967faa75d9298e0bb7e942e9a8202c00
+ms.lasthandoff: 02/24/2017
 
-'accessor' 的傳回型別不符合對應之 setter 最後一個參數的型別  
+---
+# <a name="compiler-warning-level-2-c4948"></a>編譯器警告 (層級 2) C4948
+'存取子' 的傳回類型不符合對應 setter 的最後一個參數型別  
   
- 編譯器發現目前所取得的資料型別與具索引的屬性 \(Property\) 設定的型別間，有不相符的情況。  
+編譯器發現不相符的資料型別是目前所取得，且設定為索引的屬性。  
   
- C4948 只能透過 **\/clr:oldSyntax** 取得。  
-  
- 下列範例會產生 C4948：  
-  
-```  
-// C4948.cpp  
-// compile with: /clr:oldSyntax /LD /W2  
-  
-__gc class MyClass  
-{  
-   int prop __nogc [2];  
-   public:  
-  
-      __property int get_P(int i)  
-      // try the following line instead  
-      // __property char get_P(int i)  
-      {  
-         return prop[i];  
-      }  
-  
-      __property void set_P(int i, char c)  
-      {  
-         prop[i] = c;  
-      }  
-};   // C4948  
-```
+C4948 才可使用過時的編譯器選項**/clr:oldSyntax**。  
+

@@ -1,104 +1,484 @@
 ---
-title: "CWordArray Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CWordArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 索引"
-  - "CWordArray class"
-  - "indexed arrays"
-  - "INT"
-  - "UINT"
-  - "WORD data type"
+title: "CWordArray 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CWordArray
+dev_langs:
+- C++
+helpviewer_keywords:
+- INT
+- UINT
+- indexed arrays
+- arrays [C++], indexed
+- WORD data type
+- CWordArray class
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# CWordArray Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: cd6c26c49c6b46449ec6d7da42b9166d17d563da
+ms.lasthandoff: 02/24/2017
 
-支援 16 位元的文字。  
+---
+# <a name="cwordarray-class"></a>CWordArray 類別
+支援 16 位元字組陣列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CWordArray : public CObject  
 ```  
   
-## 成員  
- `CWordArray` 的成員函式類似於類別 [使用 CObArray](../../mfc/reference/cobarray-class.md)的成員函式。  因此相似，您可以使用成員的函式特定使用 `CObArray` 參考文件。  不論您在何處參閱 [CObject](../../mfc/reference/cobject-class.md) 指標做為函式參數或傳回值，請用 **字**。  
+## <a name="members"></a>Members  
+ 成員函式`CWordArray`類別的成員函式類似[CObArray](../../mfc/reference/cobarray-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObArray` 參考文件。 無論在何處看到[CObject](../../mfc/reference/cobject-class.md)指標做為函式參數或傳回值，取代**WORD**。  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
   
- 例如，轉譯  
+ 例如，轉換為  
   
  `WORD CWordArray::GetAt( int <nIndex> ) const;`  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[CObArray::CObArray](../Topic/CObArray::CObArray.md)|建構空白陣列。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|建構空陣列。|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[CObArray::Add](../Topic/CObArray::Add.md)|將項目加入至陣列結尾;如果需要，擴大陣列。|  
-|[CObArray::Append](../Topic/CObArray::Append.md)|附加另一個陣列的陣列;如果需要，擴大陣列。|  
-|[CObArray::Copy](../Topic/CObArray::Copy.md)|複製到另一個陣列的陣列;如果需要，擴大陣列。|  
-|[CObArray::ElementAt](../Topic/CObArray::ElementAt.md)|傳回項目指標的暫存參考在陣列中。|  
-|[CObArray::FreeExtra](../Topic/CObArray::FreeExtra.md)|釋放在目前的上限 \(Upper Bound\) 上的所有未使用的記憶體。|  
-|[CObArray::GetAt](../Topic/CObArray::GetAt.md)|傳回值是在指定的索引。|  
-|[CObArray::GetCount](../Topic/CObArray::GetCount.md)|取得項目的參數數目等於陣列中的。|  
-|[CObArray::GetData](../Topic/CObArray::GetData.md)|允許存取項目的存取陣列中。  可以是 **NULL**。|  
-|[CObArray::GetSize](../Topic/CObArray::GetSize.md)|取得項目的參數數目等於陣列中的。|  
-|[CObArray::GetUpperBound](../Topic/CObArray::GetUpperBound.md)|會傳回最大的有效索引。|  
-|[CObArray::InsertAt](../Topic/CObArray::InsertAt.md)|插入項目 \(或另一個檔案中的所有元素的陣列\) 中的指定索引。|  
-|[CObArray::IsEmpty](../Topic/CObArray::IsEmpty.md)|判斷陣列是否是空的。|  
-|[CObArray::RemoveAll](../Topic/CObArray::RemoveAll.md)|從陣列中移除所有項目。|  
-|[CObArray::RemoveAt](../Topic/CObArray::RemoveAt.md)|移除項目中的特定索引處。|  
-|[CObArray::SetAt](../Topic/CObArray::SetAt.md)|設定指定之索引的值;不允許的陣列成長。|  
-|[CObArray::SetAtGrow](../Topic/CObArray::SetAtGrow.md)|設定指定之索引的值;如果需要，擴大陣列。|  
-|[CObArray::SetSize](../Topic/CObArray::SetSize.md)|將陣列中的元素數目。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|將項目加入至陣列結尾；必要時讓陣列增長。|  
+|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|將其他陣列附加至該陣列；必要時讓陣列成長。|  
+|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|  
+|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|傳回陣列中項目指標的臨時參考。|  
+|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|釋放超過目前上限的所有未使用記憶體。|  
+|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|傳回給定索引的值。|  
+|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|取得此陣列中項目的數目。|  
+|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|容許存取陣列中的項目。 可以是**NULL**。|  
+|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|取得此陣列中項目的數目。|  
+|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|傳回最大的有效索引。|  
+|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|  
+|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|判定陣列是否是空的。|  
+|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|從此陣列移除所有項目。|  
+|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|移除特定索引處的項目。|  
+|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|設定給定索引的值；不容許陣列成長。|  
+|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|設定給定索引的值；必要時讓陣列成長。|  
+|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|設定此陣列中要包含的項目數目。|  
   
-### 公用運算子  
+### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
-|--------|--------|  
-|[CObArray::operator](../Topic/CObArray::operator.md)|設定或取得這個項目在指定之索引處的。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|  
   
-## 備註  
- `CWordArray` 合併 [IMPLEMENT\_SERIAL](../Topic/IMPLEMENT_SERIAL.md) 巨集支援序列化和傾印其項目。  如果文字儲存為檔案，具有多載插入運算子的或 [CObject::Serialize](../Topic/CObject::Serialize.md) 成員函式中，每個項目，接著，序列化。  
+## <a name="remarks"></a>備註  
+ `CWordArray`結合[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)巨集，以支援序列化和傾印的項目。 如果文字陣列儲存至封存檔，請使用多載的插入運算子或[CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)成員函式，每個項目，換句話說，序列化。  
   
 > [!NOTE]
->  在使用陣列，請使用 `SetSize` 建立控制項的大小和配置其記憶體。  如果您不使用 `SetSize`，將項目加入至陣列會經常被重新配置和複製。  經常重新配置和複製沒有效率，而且可能分段記憶體。  
+>  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
   
- 如果您在陣列需要個別項目傾印，您必須將傾印內容的深度為 1 或更大。  
+ 如果您需要傾印陣列中的個別項目，您必須設定為 1 或更高的傾印內容的深度。  
   
- 如需使用 `CWordArray`的詳細資訊，請參閱本文 [集合](../../mfc/collections.md)。  
+ 如需有關使用`CWordArray`，請參閱文章[集合](../../mfc/collections.md)。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CWordArray`  
   
-## 需求  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxcoll.h  
   
-## 請參閱  
- [MFC 範例收集](../../top/visual-cpp-samples.md)   
- [CObject Class](../../mfc/reference/cobject-class.md)   
+##  <a name="a-nameicommandsourceinterfacea--icommandsource-interface"></a><a name="icommandsource_interface"></a>ICommandSource 介面  
+ 管理從命令來源物件傳送至使用者控制項的命令。  
+  
+```  
+interface class ICommandSource  
+```  
+  
+### <a name="remarks"></a>備註  
+ 當您將使用者控制項裝載在 MFC 檢視中， [CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)路由命令，並更新命令 UI 至使用者控制項中的郵件，讓它處理 MFC 命令 （例如，框架的功能表項目和工具列按鈕）。 實作時，您可以讓使用者控制項的參考`ICommandSource`物件。  
+  
+ 請參閱[How to︰ 將命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用`ICommandTarget`。  
+  
+ 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+  
+##  <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
+ 命令處理常式加入命令來源物件。  
+  
+```  
+void AddCommandHandler(
+    unsigned int cmdID,  
+    CommandHandler^ cmdHandler);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdID`  
+ 命令 ID。  
+  
+ `cmdHandler`  
+ 命令處理常式方法的處理常式。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會將命令處理常式`cmdHandler`命令來源物件，並將對應的處理常式`cmdID`。  
+  
+ 請參閱[How to︰ 將命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用`AddCommandHandler`。  
+  
+##  <a name="a-nameaddcommandrangehandlera--icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
+ 將一組命令處理常式加入至命令來源物件。  
+  
+```  
+void AddCommandRangeHandler(
+    unsigned int cmdIDMin,  
+    unsigned int cmdIDMax,  
+    CommandHandler^ cmdHandler);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdIDMin`  
+ 命令 ID 範圍的起始索引。  
+  
+ `cmdIDMax`  
+ 命令識別碼範圍結束的索引。  
+  
+ `cmdHandler`  
+ 命令對應的訊息處理常式方法控制代碼。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會將連續的命令 Id 對應至單一訊息處理常式，並將其加入命令來源物件。 這用來處理一組相關的按鈕有一個方法。  
+  
+##  <a name="a-nameaddcommandrangeuihandlera--icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
+ 將一群使用者介面的命令訊息處理常式加入至命令來源物件。  
+  
+```  
+void AddCommandRangeUIHandler(
+    unsigned int cmdIDMin,   
+    unsigned int cmdIDMax,   
+    CommandUIHandler^ cmdUIHandler);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdIDMin`  
+ 命令 ID 範圍的起始索引。  
+  
+ `cmdIDMax`  
+ 命令識別碼範圍結束的索引。  
+  
+ `cmdHandler`  
+ 命令對應的訊息處理常式方法控制代碼。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會將連續的命令 Id 對應至單一使用者介面命令訊息處理常式，並將其加入命令來源物件。 這用來處理一組相關的按鈕有一個方法。  
+  
+##  <a name="a-nameaddcommanduihandlera--icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
+ 將使用者介面命令訊息處理常式加入至命令來源物件。  
+  
+```  
+void AddCommandUIHandler(
+    unsigned int cmdID,   
+    CommandUIHandler^ cmdUIHandler);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdID`  
+ 命令 ID。  
+  
+ `cmdUIHandler`  
+ 使用者介面命令訊息處理常式方法的處理常式。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會將使用者介面命令訊息處理常式`cmdHandler`命令來源物件，並將對應的處理常式`cmdID`。  
+  
+##  <a name="a-namepostcommanda--icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand  
+ 張貼的訊息，而不需等待處理。  
+  
+```  
+void PostCommand(unsigned int command);
+```  
+  
+### <a name="parameters"></a>參數  
+ `command`  
+ 要張貼之訊息的命令 ID。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法以非同步方式將訊息對應到所指定的識別碼張貼`command`。 它會呼叫[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)將訊息放在視窗的訊息佇列，然後傳回，而不需等待處理訊息對應的視窗。  
+  
+##  <a name="a-nameremovecommandhandlera--icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
+ 命令來源物件中移除的命令處理常式。  
+  
+```  
+void RemoveCommandHandler(unsigned int cmdID);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdID`  
+ 命令 ID。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會移除對應至命令處理常式`cmdID`命令來源物件。  
+  
+##  <a name="a-nameremovecommandrangehandlera--icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
+ 命令來源物件中移除一組命令處理常式。  
+  
+```  
+void RemoveCommandRangeUIHandler(
+    unsigned int cmdIDMin,  
+    unsigned int cmdIDMax);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdIDMin`  
+ 命令 ID 範圍的起始索引。  
+  
+ `cmdIDMax`  
+ 命令識別碼範圍結束的索引。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會移除訊息處理常式，對應到所指定的命令 Id 的一群`cmdIDMin`和`cmdIDMax`，從命令來源物件。  
+  
+##  <a name="a-nameremovecommandrangeuihandlera--icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
+ 命令來源物件中移除一群使用者介面的命令訊息處理常式。  
+  
+```  
+void RemoveCommandRangeUIHandler(
+    unsigned int cmdIDMin,  
+    unsigned int cmdIDMax);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdIDMin`  
+ 命令 ID 範圍的起始索引。  
+  
+ `cmdIDMax`  
+ 命令識別碼範圍結束的索引。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會移除群組的使用者介面命令訊息處理常式，對應到所指定的命令 Id`cmdIDMin`和`cmdIDMax`，從命令來源物件。  
+  
+##  <a name="a-nameremovecommanduihandlera--icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
+ 命令來源物件中移除的使用者介面命令訊息處理常式。  
+  
+```  
+void RemoveCommandUIHandler(unsigned int cmdID);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdID`  
+ 命令 ID。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會移除的使用者介面命令訊息處理常式對應至`cmdID`命令來源物件。  
+  
+##  <a name="a-namesendcommanda--icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand  
+ 傳送訊息，並等候它處理後再傳回。  
+  
+```  
+void SendCommand(unsigned int command);
+```  
+  
+### <a name="parameters"></a>參數  
+ `command`  
+ 要傳送訊息的命令 ID。  
+  
+### <a name="remarks"></a>備註  
+ 此方法會以同步方式傳送的訊息對應到所指定的識別碼`command`。 它會呼叫[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)將訊息放在視窗的訊息佇列，並等待，直到該視窗程序傳回之前處理訊息之後。  
+  
+##  <a name="a-nameicommandtargetinterfacea--icommandtarget-interface"></a><a name="icommandtarget_interface"></a>ICommandTarget 介面  
+ 使用者控制項提供介面來接收命令來源物件的命令。  
+  
+```  
+interface class ICommandTarget  
+```  
+  
+### <a name="remarks"></a>備註  
+ 當您將使用者控制項裝載在 MFC 檢視中， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)路由命令，並更新命令 UI 至使用者控制項中的郵件，讓它處理 MFC 命令 （例如，框架的功能表項目和工具列按鈕）。 藉由實作`ICommandTarget`，讓使用者控制物件的參考。  
+  
+ 請參閱[How to︰ 將命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用`ICommandTarget`。  
+  
+ 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+  
+##  <a name="a-nameinitializea--icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget::Initialize  
+ 初始化命令目標物件。  
+  
+```  
+void Initialize(ICommandSource^ cmdSource);
+```  
+  
+### <a name="parameters"></a>參數  
+ `cmdSource`  
+ 命令來源物件的控制代碼。  
+  
+### <a name="remarks"></a>備註  
+ 當您將使用者控制項裝載在 MFC 檢視中， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)路由命令，並更新命令 UI 至使用者控制項中的郵件，讓它處理 MFC 命令。  
+  
+ 這個方法會初始化命令目標物件，並將它與指定的命令來源物件相關聯`cmdSource`。 使用者控制項類別實作中，應該呼叫它。 在初始化時，您應該註冊命令處理常式與命令來源物件呼叫[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)中`Initialize`實作。 請參閱[How to︰ 將命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用`Initialize`若要這樣做。  
+  
+##  <a name="a-nameicommanduiinterfacea--icommandui-interface"></a><a name="icommandui_interface"></a>ICommandUI 介面  
+ 管理使用者介面的命令。  
+  
+```  
+interface class ICommandUI  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個介面會提供方法和屬性，以管理使用者介面的命令。 `ICommandUI`類似於[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)，只不過`ICommandUI`用於與.NET 元件相互操作的 MFC 應用程式。  
+  
+ `ICommandUI`用於`ON_UPDATE_COMMAND_UI`處理常式的衍生類別中。 當應用程式的使用者啟動 （選取或按下滑鼠） 功能表上，每個功能表項目會顯示為已啟用或停用。 每個功能表命令的目標是提供這項資訊藉由實作`ON_UPDATE_COMMAND_UI`處理常式。 每個命令的使用者介面物件，在應用程式中，使用 [屬性] 視窗來建立訊息對應項目和每個處理常式的函式原型。  
+  
+ 如需有關如何`ICommandUI`介面用在命令路由，請參閱[How to︰ 將命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。  
+  
+ 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+  
+ 如需有關使用者介面的命令在 MFC 中的管理方式的詳細資訊，請參閱[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)。  
+  
+##  <a name="a-namechecka--icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+ 將此命令的使用者介面項目設定為適當的核取狀態。  
+  
+```  
+property UICheckState Check;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此屬性設定為適當的核取狀態的使用者介面項目，此命令。 設定`Check`為下列值︰  
+  
+|詞彙|定義|  
+|----------|----------------|  
+|0|取消核取|  
+|1|核取|  
+|2|不確定設定|  
+  
+##  <a name="a-namecontinueroutinga--icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting  
+ 會告知命令路由機制，繼續傳送處理常式的鏈結中向下目前的訊息。  
+  
+```  
+void ContinueRouting();
+```  
+  
+### <a name="remarks"></a>備註  
+ 這是進階的成員函式，應該用於搭配[ON_COMMAND_EX](http://msdn.microsoft.com/library/0bb49090-aee8-4203-87c8-dd001d3dd26e)處理常式，傳回`FALSE`。 如需詳細資訊，請參閱技術提示[TN006︰ 訊息對應](../../mfc/tn006-message-maps.md)。  
+  
+##  <a name="a-nameenableda--icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled  
+ 啟用或停用使用者介面項目，此命令。  
+  
+```  
+property bool Enabled;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個屬性會啟用或停用使用者介面項目，此命令。 設定`Enabled`至`TRUE`啟用項目，`FALSE`停用它。  
+  
+##  <a name="a-nameida--icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+ 取得所表示的使用者介面物件的 ID`ICommandUI`物件。  
+  
+```  
+property unsigned int ID;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個屬性會取得功能表項目 工具列按鈕的 ID （處理），或其他使用者介面物件，表示由`ICommandUI`物件。  
+  
+##  <a name="a-nameindexa--icommanduiindex"></a><a name="index"></a>ICommandUI::Index  
+ 取得所表示的使用者介面物件的索引`ICommandUI`物件。  
+  
+```  
+property unsigned int Index;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個屬性會取得索引 （處理） 的功能表項目、 工具列按鈕或其他使用者介面物件，表示由`ICommandUI`物件。  
+  
+##  <a name="a-nameradioa--icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio  
+ 將此命令的使用者介面項目設定為適當的核取狀態。  
+  
+```  
+property bool Radio;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此屬性設定為適當的核取狀態的使用者介面項目，此命令。 設定`Radio`至`TRUE`啟用項目; 否則`FALSE`。  
+  
+##  <a name="a-nametexta--icommanduitext"></a><a name="text"></a>ICommandUI::Text  
+ 設定使用者介面項目，此命令的文字。  
+  
+```  
+property String^ Text;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個屬性設定的使用者介面項目，此命令的文字。 設定`Text`的文字字串控制代碼。  
+  
+##  <a name="a-nameiviewinterfacea--iview-interface"></a><a name="iview_interface"></a>IView 介面  
+ 實作數個方法， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)檢視通知傳送至 managed 控制項使用。  
+  
+```  
+interface class IView  
+```  
+  
+### <a name="remarks"></a>備註  
+ `IView`實作數個方法，`CWinFormsView`使用轉送至裝載的 managed 控制項的一般檢視通知。 這些是[OnInitialUpdate](../../mfc/reference/iview-interface.md)， [OnUpdate](../../mfc/reference/iview-interface.md)和[OnActivateView](../../mfc/reference/iview-interface.md)。  
+  
+ `IView`類似於[CView](../../mfc/reference/cview-class.md)，但僅適用於受管理的檢視和控制。  
+  
+ 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+  
+##  <a name="a-nameonactivateviewa--iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+ 由 MFC 檢視是啟用或停用時呼叫。  
+  
+```  
+void OnActivateView(bool activate);
+```  
+  
+### <a name="parameters"></a>參數  
+ `activate`  
+ 指出檢視是否目前已啟用或停用。  
+  
+##  <a name="a-nameoninitialupdatea--iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate  
+ 檢視第一次連接到文件之後，但一開始會顯示檢視之前，由架構呼叫。  
+  
+```  
+void OnInitialUpdate();
+```  
+  
+##  <a name="a-nameonupdatea--iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate  
+ 修改檢視的文件之後，由 MFC 呼叫。  
+  
+```  
+void OnUpdate();
+```  
+  
+### <a name="remarks"></a>備註  
+ 此函式可更新以反映修改顯示的檢視。  
+  
+## <a name="see-also"></a>另請參閱  
+ [MFC 範例收集](../../visual-cpp-samples.md)   
+ [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
+
+
+
+

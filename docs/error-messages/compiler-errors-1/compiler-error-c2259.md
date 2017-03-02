@@ -1,38 +1,55 @@
 ---
-title: "編譯器錯誤 C2259 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2259"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2259"
+title: "編譯器錯誤 C2259 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2259
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# 編譯器錯誤 C2259
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 0837d8f5e48ccf0de0ba8630801667da2ddb6bfa
+ms.lasthandoff: 02/24/2017
 
-'class' : 無法產生抽象類別  
+---
+# <a name="compiler-error-c2259"></a>編譯器錯誤 C2259
+'class': 無法具現化抽象類別  
   
- 程式碼宣告了一個抽象類別或結構的執行個體。  
+ 程式碼會宣告一個抽象類別或結構的執行個體。  
   
- 您不能以一個或多個純虛擬函式執行個體化類別或結構。  若要產生衍生類別的物件，衍生類別必須覆寫每個純虛擬函式。  
+ 您無法執行個體化的類別或結構與一或多個純虛擬函式。 若要具現化衍生類別的物件，衍生的類別必須覆寫每個純虛擬函式。  
   
  如需詳細資訊，請參閱[隱含抽象類別](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)。  
   
- 下列範例會產生 C2259：  
+ 下列範例會產生 C2259:  
   
 ```  
 // C2259.cpp  
@@ -51,17 +68,17 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()  
 ```  
   
- 只要從介面衍生，並在衍生類別中，以公用以外的存取權限實作介面方法，就可能會接到 C2259 錯誤訊息。這是因為編譯器必須有在衍生類別中實作的介面方法，才會有公用存取，所以會發生這種錯誤。  當您以限制更多的存取權限實作介面的成員函式時，編譯器不會將它們視為定義於介面中的介面方法實作，因而使得衍生類別變成抽象類別。  
+ 當您從介面衍生並實作介面方法衍生類別中具有非公用的存取權限時，您可能會收到 C2259。  這是因為編譯器會預期有公用存取的衍生類別中實作的介面方法。 當您實作的介面，以更具限制性的存取權限的成員函式時，編譯器不會考慮它們都是介面，因此可將衍生的類別的抽象類別中定義的介面方法的實作。  
   
- 可能解決這種問題的辦法有兩種：  
+ 有兩個可能的因應措施的問題︰  
   
--   將存取權限變成公用，以便實作方法。  
+-   將存取權限已實作的方法公開。  
   
--   使用在衍生類別中實作之介面方法的範圍解析運算子，以介面名稱限定實作的方法名稱。  
+-   使用衍生類別中實作的介面方法的範圍解析運算子限定實作的方法名稱的介面名稱。  
   
- 在 Visual C\+\+ 2005 中完成一致性處理的結果也可能會產生 C2259，**\/Zc:wchar\_t** 現在預設為開啟。  在這種情況下，C2599 的解決方法有兩種：可以透過用 **\/Zc:wchar\_t\-** 編譯，從舊版取得行為；但最好還是更新型別，讓型別相容。  如需詳細資訊，請參閱 [\/Zc:wchar\_t \(wchar\_t 是原生類型\)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
+ C2259 也會導致在 Visual c + + 2005 中，已完成一致性處理**/zc: wchar_t**現在預設為開啟。 在此情況下，C2599 可以解析使用由編譯**/Zc:wchar_t-**，以取得此行為，從先前的版本，或最好是藉由更新您的型別，因此它們彼此相容。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
   
- 下列範例會產生 C2259：  
+ 下列範例會產生 C2259:  
   
 ```  
 // C2259b.cpp  
@@ -99,7 +116,7 @@ public:
 MyClass4 y;  
 ```  
   
- 下列範例會產生 C2259：  
+ 下列範例會產生 C2259:  
   
 ```  
 // C2259c.cpp  
@@ -121,25 +138,4 @@ int main() {
    MyDerivedClass^ instance = gcnew MyDerivedClass; // C2259  
 }  
 ```  
-  
- 下列範例會產生 C2259：  
-  
-```  
-// C2259d.cpp  
-// compile with: /clr:oldSyntax  
-public __gc __interface MyInterface {  
-   void MyMethod();  
-};  
-  
-__gc class MyDerivedClass : public MyInterface {  
-// Uncomment the following line to resolve.  
-// public:  
-   void MyMethod() {};  
-   // or the following line  
-   // void MyInterface::MyMethod() {};  
-};  
-  
-int main() {  
-   MyDerivedClass *instance = new MyDerivedClass();   // C2259  
-}  
-```
+

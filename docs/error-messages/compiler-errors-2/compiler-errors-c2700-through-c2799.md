@@ -1,26 +1,42 @@
 ---
-title: "編譯器錯誤s C2700 Through C2799 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "編譯器錯誤 C2700 到 C2799 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 編譯器錯誤s C2700 Through C2799
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: fd86815cb1f3ef215805bdb96449cb8b7a9b322a
+ms.lasthandoff: 02/24/2017
 
-這部分文件中的文章包含 Visual C\+\+ 編譯器錯誤的子區段的相關資訊。  您可以在此存取資訊，或是在 Visual Studio 的 \[**輸出**\] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
+---
+# <a name="compiler-errors-c2700-through-c2799"></a>編譯器錯誤 C2700 到 C2799
+這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [輸出]  視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
  [編譯器錯誤 C2701](../../error-messages/compiler-errors-2/compiler-error-c2701.md)  
   
@@ -48,10 +64,6 @@ caps.handback.revision: 13
   
  [編譯器錯誤 C2715](../../error-messages/compiler-errors-2/compiler-error-c2715.md)  
   
- [編譯器錯誤 C2716](../Topic/Compiler%20Error%20C2716.md)  
-  
- [編譯器錯誤 C2717](../Topic/Compiler%20Error%20C2717.md)  
-  
  [編譯器錯誤 C2718](../../error-messages/compiler-errors-2/compiler-error-c2718.md)  
   
  [編譯器錯誤 C2719](../../error-messages/compiler-errors-2/compiler-error-c2719.md)  
@@ -69,8 +81,6 @@ caps.handback.revision: 13
  [編譯器錯誤 C2725](../../error-messages/compiler-errors-2/compiler-error-c2725.md)  
   
  [編譯器錯誤 C2726](../../error-messages/compiler-errors-2/compiler-error-c2726.md)  
-  
- [編譯器錯誤 C2727](../Topic/Compiler%20Error%20C2727.md)  
   
  [編譯器錯誤 C2728](../../error-messages/compiler-errors-2/compiler-error-c2728.md)  
   

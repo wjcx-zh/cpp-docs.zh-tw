@@ -1,97 +1,114 @@
 ---
-title: "Concurrency::graphics 命名空間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_graphics/Concurrency::graphics"
-  - "amp_short_vectors/Concurrency::graphics"
-dev_langs: 
-  - "C++"
+title: "Concurrency:: graphics 命名空間 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics
+- amp_short_vectors/Concurrency::graphics
+dev_langs:
+- C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Concurrency::graphics 命名空間
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
+ms.lasthandoff: 02/24/2017
 
-圖形命名空間提供專為圖形程式設計所設計的類型和函式。  
+---
+# <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空間
+圖形的命名空間提供型別和函式，可用於圖形程式設計。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 namespace graphics;  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 命名空間  
+### <a name="namespaces"></a>命名空間  
   
-|名稱|描述|  
-|--------|--------|  
-|[Concurrency::graphics::direct3d 命名空間](../../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)|提供 Direct3D Interop 的函式。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[Concurrency::graphics::direct3d 命名空間](concurrency-graphics-direct3d-namespace.md)|Direct3D interop 提供函式。|  
   
-### Typedef  
+### <a name="typedefs"></a>Typedef  
   
-|名稱|描述|  
-|--------|--------|  
-|`uint`|[uint\_2 類別](../../../parallel/amp/reference/uint-2-class.md)、[uint\_3 類別](../../../parallel/amp/reference/uint-3-class.md) 和 [uint\_4 類別](../../../parallel/amp/reference/uint-4-class.md) 的項目類型。  定義為 `typedef unsigned int uint;`。|  
+|名稱|說明|  
+|----------|-----------------|  
+|`uint`|項目型別[uint_2 類別](uint-2-class.md)， [uint_3 類別](uint-3-class.md)，和[uint_4 類別](uint-4-class.md)。 定義為`typedef unsigned int uint;`。|  
   
-### 列舉  
-  
-|名稱|描述|  
-|--------|--------|  
-|[address\_mode 列舉](../Topic/address_mode%20Enumeration.md)|指定材質取樣支援的位址模式。|  
-|[filter\_mode 列舉](../Topic/filter_mode%20Enumeration.md)|指定材質取樣支援的篩選模式。|  
-  
-### 類別  
+### <a name="enumerations"></a>列舉  
   
 |名稱|描述|  
-|--------|--------|  
-|[texture 類別](../../../parallel/amp/reference/texture-class.md)|材質是在範圍內 accelerator\_view 上的資料彙總。  它是變數集合，對應範圍網域中的每個項目。  每個變數都會保留對應到 C\+\+ 基本類型 \(unsigned int、int、float、double\)、純量類型範數或 unorm \(定義於 concurrency::graphics\) 或合適短向量類型 \(定義於 concurrency::graphics\) 的值。|  
-|[writeonly\_texture\_view 類別](../../../parallel/amp/reference/writeonly-texture-view-class.md)|writeonly\_texture\_view 提供材質的唯寫存取。|  
-|[double\_2 類別](../../../parallel/amp/reference/double-2-class.md)|代表 2 個 `double` 值的短向量。|  
-|[double\_3 類別](../../../parallel/amp/reference/double-3-class.md)|代表 3 個 `double` 值的短向量。|  
-|[double\_4 類別](../../../parallel/amp/reference/double-4-class.md)|代表 4 個 `double` 值的短向量。|  
-|[float\_2 類別](../../../parallel/amp/reference/float-2-class.md)|代表 2 個 `float` 值的短向量。|  
-|[float\_3 類別](../../../parallel/amp/reference/float-3-class.md)|代表 3 個 `float` 值的短向量。|  
-|[float\_4 類別](../../../parallel/amp/reference/float-4-class.md)|代表 4 個 `float` 值的短向量。|  
-|[int\_2 類別](../../../parallel/amp/reference/int-2-class.md)|代表 2 個 `int` 值的短向量。|  
-|[int\_3 類別](../../../parallel/amp/reference/int-3-class.md)|代表 3 個 `int` 值的短向量。|  
-|[int\_4 類別](../../../parallel/amp/reference/int-4-class.md)|代表 4 個 `int` 值的短向量。|  
-|[norm\_2 類別](../../../parallel/amp/reference/norm-2-class.md)|代表 2 個 `norm` 值的短向量。|  
-|[norm\_3 類別](../../../parallel/amp/reference/norm-3-class.md)|代表 3 個 `norm` 值的短向量。|  
-|[norm\_4 類別](../../../parallel/amp/reference/norm-4-class.md)|代表 4 個 `norm` 值的短向量。|  
-|[uint\_2 類別](../../../parallel/amp/reference/uint-2-class.md)|代表 2 個 `uint` 值的短向量。|  
-|[uint\_3 類別](../../../parallel/amp/reference/uint-3-class.md)|代表 3 個 `uint` 值的短向量。|  
-|[uint\_4 類別](../../../parallel/amp/reference/uint-4-class.md)|代表 4 個 `uint` 值的短向量。|  
-|[unorm\_2 類別](../../../parallel/amp/reference/unorm-2-class.md)|代表 2 個 `unorm` 值的短向量。|  
-|[unorm\_3 類別](../../../parallel/amp/reference/unorm-3-class.md)|代表 3 個 `unorm` 值的短向量。|  
-|[unorm\_4 類別](../../../parallel/amp/reference/unorm-4-class.md)|代表 4 個 `unorm` 值的短向量。|  
-|[sampler 類別](../../../parallel/amp/reference/sampler-class.md)|表示用於材質取樣的取樣器組態。|  
-|[short\_vector 結構](../../../parallel/amp/reference/short-vector-structure.md)|提供一個短向量值的基本實作。|  
-|[short\_vector\_traits 結構](../../../parallel/amp/reference/short-vector-traits-structure.md)|提供擷取短向量的長度和類型。|  
-|[texture\_view 類別](../../../parallel/amp/reference/texture-view-class.md)|提供材質的讀取存取和寫入存取。|  
+|----------|-----------------|  
+|[address_mode 列舉](concurrency-graphics-namespace-enums.md#address_mode)。|指定位址模式支援紋理取樣。|  
+|[filter_mode 列舉](concurrency-graphics-namespace-enums.md#filter_mode)|指定篩選條件模式支援紋理取樣。|  
   
-### 功能  
+### <a name="classes"></a>類別  
   
 |名稱|描述|  
-|--------|--------|  
-|[copy 函式](../Topic/copy%20Function.md)|多載。  將來源材質的內容複製到目的端主機緩衝區。|  
-|[copy\_async 函式](../Topic/copy_async%20Function.md)|多載。  以非同步方式將來源材質的內容複製到目的端主機緩衝區中。|  
+|----------|-----------------|  
+|[紋理類別](texture-class.md)|紋理是將資料彙總上 accelerator_view 範圍網域中。 它是每個項目範圍網域中的變數集合。 每個變數會保留值，對應到 c + + 基本型別 (不帶正負號的 int、 int、 float、 double)，或在 concurrency:: graphics 中定義的純量型別 norm 或 unorm （定義於 concurrency:: graphics） 或符合資格的短向量類型。|  
+|[writeonly_texture_view 類別](writeonly-texture-view-class.md)|Writeonly_texture_view 提供紋理 writeonly 存取。|  
+|[double_2 類別](double-2-class.md)|代表 2 短向量`double`值。|  
+|[double_3 類別](double-3-class.md)|代表 3 短向量`double`值。|  
+|[double_4 類別](double-4-class.md)|代表 4 短向量`double`值。|  
+|[float_2 類別](float-2-class.md)|代表 2 短向量`float`值。|  
+|[float_3 類別](float-3-class.md)|代表 3 短向量`float`值。|  
+|[float_4 類別](float-4-class.md)|代表 4 短向量`float`值。|  
+|[int_2 類別](int-2-class.md)|代表 2 短向量`int`值。|  
+|[int_3 類別](int-3-class.md)|代表 3 短向量`int`值。|  
+|[int_4 類別](int-4-class.md)|代表 4 短向量`int`值。|  
+|[norm_2 類別](norm-2-class.md)|代表 2 短向量`norm`值。|  
+|[norm_3 類別](norm-3-class.md)|代表 3 短向量`norm`值。|  
+|[norm_4 類別](norm-4-class.md)|代表 4 短向量`norm`值。|  
+|[uint_2 類別](uint-2-class.md)|代表 2 短向量`uint`值。|  
+|[uint_3 類別](uint-3-class.md)|代表 3 短向量`uint`值。|  
+|[uint_4 類別](uint-4-class.md)|代表 4 短向量`uint`值。|  
+|[unorm_2 類別](unorm-2-class.md)|代表 2 短向量`unorm`值。|  
+|[unorm_3 類別](unorm-3-class.md)|代表 3 短向量`unorm`值。|  
+|[unorm_4 類別](unorm-4-class.md)|代表 4 短向量`unorm`值。|  
+|[sampler 類別](sampler-class.md)|代表用於 「 紋理取樣的取樣器組態。|  
+|[short_vector 結構](short-vector-structure.md)|提供值的短向量的基本實作。|  
+|[short_vector_traits 結構](short-vector-traits-structure.md)|提供可擷取的長度和短向量類型。|  
+|[texture_view 類別](texture-view-class.md)|提供讀取和寫入存取權的紋理。|  
   
-## 需求  
- **標頭：**amp\_graphics.h  
+### <a name="functions"></a>函式  
   
- **命名空間：**並行  
+|名稱|說明|  
+|----------|-----------------|  
+|[copy 函式](concurrency-graphics-namespace-functions.md#copy)|多載。 將來源紋理的內容複製到目的主機的緩衝區。|  
+|[copy_async 函式](concurrency-graphics-namespace-functions.md#copy_async)|多載。 以非同步方式將來源紋理的內容複製到目的主機的緩衝區。|  
   
-## 請參閱  
- [Concurrency 命名空間 \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+## <a name="requirements"></a>需求  
+ **標頭︰** amp_graphics.h  
+  
+ **命名空間：** 並行  
+  
+## <a name="see-also"></a>另請參閱  
+ [Concurrency 命名空間 (c + + AMP)](concurrency-namespace-cpp-amp.md)
+

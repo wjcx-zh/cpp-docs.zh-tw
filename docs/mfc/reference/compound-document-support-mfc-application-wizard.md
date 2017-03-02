@@ -1,55 +1,72 @@
 ---
-title: "MFC 應用程式精靈、複合文件支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.compdoc"
-dev_langs: 
-  - "C++"
+title: "複合文件支援，MFC 應用程式精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.compdoc
+dev_langs:
+- C++
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC 應用程式精靈、複合文件支援
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: e322824bd2887b50d72221cee67e2ba5cc46f2ea
+ms.lasthandoff: 02/24/2017
 
-在 MFC 應用程式精靈的這個頁面中，表示出應用程式可提供何種層級的複合及主動式文件支援。  您的應用程式必須支援文件 \/ 檢視架構，以支援複合文件和文件範本。  
+---
+# <a name="compound-document-support-mfc-application-wizard"></a>MFC 應用程式精靈、複合文件支援
+在 MFC 應用程式精靈的這個頁面上，表示何種層級應用程式提供複合及主動式文件支援。 您的應用程式必須支援文件/檢視架構支援複合文件和文件範本。  
   
- 在預設情況下，應用程式不包含複合文件支援。  如果您接受這項預設，則應用程式無法支援主動式文件或複合檔案。  
+ 根據預設，應用程式會包含任何複合文件支援。 如果您接受此預設值，您的應用程式無法支援主動式文件或複合檔案。  
   
  **複合文件支援**  
- 判斷應用程式是否提供容器支援、伺服程式支援，或者兩者皆提供。  如需本範圍的詳細資訊，請參閱：  
+ 決定您的應用程式提供容器支援、 伺服器支援，或兩者。 如需這方面的詳細資訊，請參閱︰  
   
--   [容器：容器的實作](../../mfc/containers-implementing-a-container.md)  
+-   [容器︰ 實作容器](../../mfc/containers-implementing-a-container.md)  
   
--   [伺服程式：實作一個伺服程式](../../mfc/servers-implementing-a-server.md)  
+-   [伺服器︰ 實作伺服器](../../mfc/servers-implementing-a-server.md)  
   
 |選項|說明|  
-|--------|--------|  
-|**無**|表示不支援物件連結與內嵌 \(Object Linking and Embedding，OLE\)。  在預設情況下，應用程式精靈會在無 ActiveX 支援的情況下建立應用程式。|  
-|**容器**|包含連結與內嵌物件。|  
-|**迷你伺服程式**|表示應用程式可以建立和管理複合文件物件。  請注意，迷你伺服程式 \(Mini\-Server\) 無法單獨執行，同時僅支援內嵌項目。|  
-|**全伺服程式**|表示應用程式可以建立和管理複合文件物件。  全伺服程式可單獨執行，並同時支援連結與內嵌項目。|  
-|**容器\/全伺服程式**|表示應用程式可同時是容器和伺服程式。  容器是一種應用程式，可以將內嵌或連結項目加入到本身的文件中。  伺服程式是一種應用程式，可建立 Automation 項供容器應用程式使用。|  
+|------------|-----------------|  
+|**無**|指出不支援物件連結與嵌入 (OLE)。 根據預設，應用程式精靈會建立沒有 ActiveX 支援的應用程式。|  
+|**容器**|包含連結和內嵌物件。|  
+|**迷你伺服程式**|表示應用程式可以建立和管理複合文件物件。 請注意，執行迷你伺服器無法獨立存在，而且只支援內嵌項目。|  
+|**完整伺服器**|表示應用程式可以建立和管理複合文件物件。 完整的伺服器可執行獨立和同時支援連結與內嵌項目。|  
+|**容器/全伺服程式**|指出應用程式可以同時為容器和伺服器。 容器是可以將內嵌或連結項目加入到本身的文件的應用程式。 可以建立用於自動化項目由容器應用程式的應用程式伺服器。|  
   
  **其他選項**  
- 指出應用程式是否支援主動式文件。  如需有關本功能的詳細資訊，請參閱[主動式文件](../../mfc/active-documents.md)。  
+ 指出您的應用程式是否支援主動式文件。 請參閱[主動式文件](../../mfc/active-documents.md)如需有關這項功能。  
   
 |選項|說明|  
-|--------|--------|  
-|**主動式文件伺服程式\(A\)**|表示應用程式可以建立和管理主動式文件。  如果選取本選項，則必須在精靈的[文件樣板字串](../../mfc/reference/document-template-strings-mfc-application-wizard.md)頁面中，於 \[副檔名\] 方塊內指定主動式文件伺服程式的副檔名。  如需詳細資訊，請參閱[主動式文件伺服程式](../../mfc/active-document-servers.md)。|  
-|**主動式文件容器**|表示應用程式可於框架內包含主動式文件。  例如，主動式文件可能包括 Internet Explorer 文件、或者 Microsoft Word 檔案或 Excel 試算表等 Office 文件。  如需詳細資訊，請參閱 [主動式文件內含項目](../../mfc/active-document-containment.md)。|  
-|**支援複合檔案\(U\)**|不使用複合檔案格式將容器應用程式的文件序列化。  本選項會強制將整個包含物件的檔案載入記憶體。  個別物件的累加儲存不適用。  如果某物件已變更並儲存，則檔案中所有物件皆會儲存。|  
+|------------|-----------------|  
+|**主動式文件伺服器**|表示應用程式可以建立和管理主動式文件。 如果您選取此選項時，您必須指定副檔名的檔案中使用中文件伺服器**副檔名**方塊[文件樣板字串](../../mfc/reference/document-template-strings-mfc-application-wizard.md)精靈頁面。 請參閱[主動式文件伺服](../../mfc/active-document-servers.md)如需詳細資訊。|  
+|**主動式文件容器**|表示應用程式可以包含其範圍內的主動式文件。 例如，主動式文件可能包括 Internet Explorer 文件或 Office 文件，例如 Microsoft Word 檔案或 Excel 試算表。 請參閱[作用中的文件內含項目](../../mfc/active-document-containment.md)如需詳細資訊。|  
+|**支援複合檔案**|不會序列化使用複合檔案格式的容器應用程式的文件。 這個選項會強制載入到記憶體中包含物件的整個檔案。 無法使用累加儲存個別物件。 如果一個物件變更且隨後儲存時，會儲存在檔案中的所有物件。|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
+
+

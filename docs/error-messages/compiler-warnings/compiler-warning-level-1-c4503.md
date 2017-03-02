@@ -1,38 +1,54 @@
 ---
-title: "編譯器警告 (層級 1) C4503 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4503"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4503"
+title: "編譯器警告 （層級 1） C4503 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4503
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器警告 (層級 1) C4503
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
+ms.openlocfilehash: f999fcb73860bfd2fabb3484e78f313a32240dee
+ms.lasthandoff: 02/24/2017
 
-'identifier' : 裝飾名稱的長度超出範圍，名稱已截斷  
+---
+# <a name="compiler-warning-level-1-c4503"></a>編譯器警告 (層級 1) C4503
+'identifier': 裝飾名稱長度超出範圍，名稱被截斷  
   
- 裝飾名稱長於編譯器的限制 \(4096\)，而且已被截斷。  若要避免發生此警告與截斷，請減少引數個數或識別項名稱的長度。  
+ 裝飾的名稱長於編譯器的限制 (4096)，而且已被截斷。 若要避免這個警告，而且截斷，減少的引數或使用的識別項名稱長度。  
   
- 發出這項警告的情況之一是：當您的程式碼中包含重複對樣板進行特製化的樣板時。例如，對應的對應 \(從 Standard C\+\+ 程式庫\)。在這種情況下，您可以讓 typedef 成為包含對應的型別 \(例如，struct\)。  
+ 一種情況下將會發出這個警告時，您的程式碼包含樣板的特製化樣板重複。  例如，對應 （從 c + + 標準程式庫） 的對應。  在此情況下，您可以讓您的 typedef 包含對應的型別 （例如結構）。  
   
- 但是，您可能會決定不要重組程式碼的結構。您是可以隨附產生 C4503 的應用程式交貨，但如果您在截斷的符號上接到連結時間錯誤，就會更難以決定錯誤中的符號型別。偵錯也將會更困難，偵錯工具也會很難對應符號名稱至型別名稱。不過程式的正確性不會因為截斷的名稱而受影響。  
+ 不過，您可能決定不重建您的程式碼。  很可能會產生 C4503 的應用程式，但是如果您在截斷的符號連結時間時發生錯誤，它會更難判斷錯誤中符號的類型。  偵錯也會比較困難。偵錯工具也會有困難對應的符號名稱，輸入名稱。  正確性的程式，不過，不會受到截斷的名稱。  
   
- 下列範例會產生 C4503：  
+ 下列範例會產生 C4503:  
   
 ```  
 // C4503.cpp  
@@ -50,7 +66,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;  
 ```  
   
- 下列範例將示範一種重寫程式碼的方式，可解決 C4503 的問題：  
+ 下列範例會示範一種方式重寫程式碼來解決 C4503:  
   
 ```  
 // C4503b.cpp  

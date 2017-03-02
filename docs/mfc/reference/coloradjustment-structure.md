@@ -1,45 +1,59 @@
 ---
-title: "COLORADJUSTMENT 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLORADJUSTMENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLORADJUSTMENT 結構"
+title: "COLORADJUSTMENT 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COLORADJUSTMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLORADJUSTMENT structure
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
 caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# COLORADJUSTMENT 結構
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 7f88877fa009abf4e811ba0a99b7e0e1683f998a
+ms.lasthandoff: 02/24/2017
 
-當 `StretchBlt` 模式是 **HALFTONE** 時， `COLORADJUSTMENT` 結構定義視窗 **StretchDIBits** 和 `StretchBlt` 函式所使用的色彩調整值。  
+---
+# <a name="coloradjustment-structure"></a>COLORADJUSTMENT 結構
+`COLORADJUSTMENT`結構會定義 Windows 所使用的色彩調整值`StretchBlt`和**stretchdibits 做**函式時`StretchBlt`模式是**半色調**。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      typedef struct  tagCOLORADJUSTMENT {    /* ca */  
-    WORD  caSize;  
-    WORD  caFlags;  
-    WORD  caIlluminantIndex;  
-    WORD  caRedGamma;  
-    WORD  caGreenGamma;  
-    WORD  caBlueGamma;  
-    WORD  caReferenceBlack;  
-    WORD  caReferenceWhite;  
+typedef struct  tagCOLORADJUSTMENT {    /* ca */  
+    WORD caSize;  
+    WORD caFlags;  
+    WORD caIlluminantIndex;  
+    WORD caRedGamma;  
+    WORD caGreenGamma;  
+    WORD caBlueGamma;  
+    WORD caReferenceBlack;  
+    WORD caReferenceWhite;  
     SHORT caContrast;  
     SHORT caBrightness;  
     SHORT caColorfulness;  
@@ -47,76 +61,79 @@ manager: "ghogen"
 } COLORADJUSTMENT;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *caSize*  
- 指定結構的大小，以位元組為單位。  
+ 以位元組為單位指定的結構大小。  
   
  *caFlags*  
- 指定應如何準備輸出影像。  這個成員可以設定為 **NULL** 或下列值的任何組合：  
+ 指定應該如何準備輸出映像。 這個成員可以設定為**NULL**或下列值的任何組合︰  
   
--   **CA\_NEGATIVE** 指定應顯示原始影像的底片。  
+- **CA_NEGATIVE**指定應該顯示原始的映像的負值。  
   
--   **CA\_LOG\_FILTER** 指定應套用至輸出色彩的最後密度的對數函式。  表示這個功能的亮度不足，這會將色彩相反。  
+- **CA_LOG_FILTER**指定對數函式應該要套用至最終輸出色彩的密度。 這會增加的色彩對比，較低亮度時。  
   
  *caIlluminantIndex*  
- 指定檢視影像物件下方的光源亮度。  這個成員可以設為下列其中一個值：  
+ 指定檢視映像物件時的光源的亮度。 這個成員可以設定為下列值之一︰  
   
--   **ILLUMINANT\_EQUAL\_ENERGY**  
+- **ILLUMINANT_EQUAL_ENERGY**  
   
--   **ILLUMINANT\_A**  
+- **ILLUMINANT_A**  
   
--   **ILLUMINANT\_B**  
+- **ILLUMINANT_B**  
   
--   **ILLUMINANT\_C**  
+- **ILLUMINANT_C**  
   
--   **ILLUMINANT\_D50**  
+- **ILLUMINANT_D50**  
   
--   **ILLUMINANT\_D55**  
+- **ILLUMINANT_D55**  
   
--   **ILLUMINANT\_D65**  
+- **ILLUMINANT_D65**  
   
--   **ILLUMINANT\_D75**  
+- **ILLUMINANT_D75**  
   
--   **ILLUMINANT\_F2**  
+- **ILLUMINANT_F2**  
   
--   **ILLUMINANT\_TURNGSTEN**  
+- **ILLUMINANT_TURNGSTEN**  
   
--   **ILLUMINANT\_DAYLIGHT**  
+- **ILLUMINANT_DAYLIGHT**  
   
--   **ILLUMINANT\_FLUORESCENT**  
+- **ILLUMINANT_FLUORESCENT**  
   
--   **ILLUMINANT\_NTSC**  
+- **ILLUMINANT_NTSC**  
   
  *caRedGamma*  
- 為主要來源色彩的紅色指定第 n 強度 Gamma 修正值。  值必須在 2,500 到 65,000。  10,000 的值表示沒有 Gamma 修正。  
+ 指定來源色彩的紅色主要的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
   
  *caGreenGamma*  
- 為主要來源色彩的綠色指定第 n 強度 Gamma 修正值。  值必須在 2,500 到 65,000。  10,000 的值表示沒有 Gamma 修正。  
+ 指定來源色彩的綠色主要的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
   
  *caBlueGamma*  
- 為主要來源色彩的藍色指定第 n 強度 Gamma 修正值。  值必須在 2,500 到 65,000。  10,000 的值表示沒有 Gamma 修正。  
+ 指定來源色彩藍色原色的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
   
  *caReferenceBlack*  
- 為來源色彩指定黑色參考。  比這個黑的所有色彩視為黑色。  值必須在 0 到 4,000。  
+ 指定來源色彩為黑色的參考。 會比這更深色的任何色彩都會視為黑色。 值必須介於 0 到 4000。  
   
  *caReferenceWhite*  
- 為來源色彩指定白色參考。  比這個亮的所有色彩視為白色。  值必須在 6,000 到 10,000。  
+ 指定來源色彩為白色的參考。 任何會比這更亮的色彩會被視為空白。 值必須是介於 6000 到 10000。  
   
  *caContrast*  
- 指定要套用至來源物件的對比量。  值必須在 \-100 到 100。  值為 0 表示沒有對比調整。  
+ 指定要套用至來源物件的對比數量。 值必須介於-100 到 100 之間。 值為 0 表示無對比調整。  
   
  *caBrightness*  
- 指定要套用至來源物件的亮度量。  值必須在 \-100 到 100。  值為 0 表示沒有亮度調整。  
+ 指定要套用至來源物件的亮度。 值必須介於-100 到 100 之間。 值為 0 表示無亮度調整。  
   
  *caColorfulness*  
- 指定要套用至來源物件的彩度量。  值必須在 \-100 到 100。  值為 0 表示沒有彩度調整。  
+ 指定要套用至來源物件的 colorfulness 數量。 值必須介於-100 到 100 之間。 值為 0 表示無 colorfulness 調整。  
   
  *caRedGreenTint*  
- 指定套用至來源物件的紅色、綠色或色彩調整量。  值必須在 \-100 到 100。  正數會調整往紅色，而負數調整往綠色。  0 表示沒有色彩調整。  
+ 指定要套用至來源物件的紅色或綠色濃淡調整數量。 值必須介於-100 到 100 之間。 數字會調整紅色向和負的數字調整綠色向正數。 0 表示無濃淡調整。  
   
-## 需求  
- **標頭檔：** wingdi.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** wingdi.h  
   
-## 請參閱  
- [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDC::GetColorAdjustment](../Topic/CDC::GetColorAdjustment.md)
+## <a name="see-also"></a>另請參閱  
+ [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDC::GetColorAdjustment](../../mfc/reference/cdc-class.md#getcoloradjustment)
+
+
+

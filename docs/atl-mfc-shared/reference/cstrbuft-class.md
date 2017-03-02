@@ -1,101 +1,233 @@
 ---
-title: "CStrBufT Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CStrBufT<TCharType>"
-  - "ATL.CStrBufT"
-  - "CStrBufT"
-  - "ATL::CStrBufT"
-  - "ATL.CStrBufT<TCharType>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStrBufT class"
-  - "shared classes, CStrBufT"
-  - "字串 [C++], custom memory management"
+title: "CStrBufT 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CStrBufT<TCharType>
+- ATL.CStrBufT
+- CStrBufT
+- ATL::CStrBufT
+- ATL.CStrBufT<TCharType>
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], custom memory management
+- CStrBufT class
+- shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# CStrBufT Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 2eb551d2db029de88aa9c1b456c44609b7fc0922
+ms.lasthandoff: 02/24/2017
 
-這個類別會提供 `GetBuffer` 提供自動清除資源，並在現有的 `CStringT` 的 `ReleaseBuffer` 物件上呼叫。  
+---
+# <a name="cstrbuft-class"></a>CStrBufT 類別
+這個類別提供的自動資源清除`GetBuffer`和`ReleaseBuffer`呼叫上的現有`CStringT`物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template<typename TCharType>
+class CStrBufT
 ```  
   
-      template<  
-   typename TCharType  
->  
-class CStrBufT  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  *TCharType*  
- `CStrBufT` 類別的配置類型。  可以是下列其中一項：  
+ 字元類型`CStrBufT`類別。 可以是下列其中一項：  
   
--   `char` \(ANSI 字串\)。  
+- `char`（適用於 ANSI 字元字串）  
   
--   `wchar_t` \(Unicode 字串\)。  
+- `wchar_t`（如需 Unicode 字元字串）  
   
--   **TCHAR** \(適用於 ANSI 和 Unicode 字串\)。  
+- **TCHAR** （適用於 ANSI 和 Unicode 字元字串）  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用 Typedefs  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|描述|  
-|--------|--------|  
-|`PCXSTR`|使用常數字串的指標。|  
+|名稱|說明|  
+|----------|-----------------|  
+|`PCXSTR`|常數字串的指標。|  
 |`PXSTR`|字串的指標。|  
-|`StringType`|緩衝區中要由這個類別樣板的特製化作業的資料型別。|  
+|`StringType`|其緩衝區是由這個類別樣板的特製化操作字串的型別。|  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CStrBufT::CStrBufT](#cstrbuft)|字串緩衝區物件建構函式。|  
+  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CStrBufT::SetLength](#setlength)|設定關聯的字串物件的字元緩衝區長度。|  
+  
+### <a name="public-operators"></a>公用運算子  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CStrBufT::operator PCXSTR](#operator_pcxstr)|擷取**const**相關聯的字串物件的字元緩衝區的指標。|  
+|[CStrBufT::operator PXSTR](#operator_pxstr)|擷取相關聯的字串物件的字元緩衝區的指標。|  
+  
+### <a name="public-constants"></a>公用常數  
   
 |名稱|描述|  
-|--------|--------|  
-|[CStrBufT::CStrBufT](../Topic/CStrBufT::CStrBufT.md)|字串緩衝區物件的建構函式。|  
+|----------|-----------------|  
+|[CStrBufT::AUTO_LENGTH](#auto_length)|自動判斷新的版本字串長度。|  
+|[CStrBufT::SET_LENGTH](#set_length)|GetBuffer 次設定的字串物件的長度|  
   
-### 公用方法  
+## <a name="remarks"></a>備註  
+ 這個類別可做為包裝函式類別來取代呼叫[GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer)和[ReleaseBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer)，或[GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength)和`ReleaseBuffer`。  
   
-|名稱|描述|  
-|--------|--------|  
-|[CStrBufT::SetLength](../Topic/CStrBufT::SetLength.md)|設定關聯之資料物件的字元緩衝區的長度。|  
+ 主要設計為協助程式類別，`CStrBufT`提供便利的方式，開發人員使用的字元緩衝區的字串物件，而不需擔心如何或何時要呼叫`ReleaseBuffer`。 這可能是因為包裝函式物件超出範圍自然發生例外狀況或多個現有的程式碼路徑。造成其解構函式，以釋放字串資源。  
   
-### 公用運算子  
+## <a name="requirements"></a>需求  
+ **標頭︰** atlsimpstr.h  
   
-|名稱|描述|  
-|--------|--------|  
-|[CStrBufT::operator PCXSTR](../Topic/CStrBufT::operator%20PCXSTR.md)|擷取 **const** 指標關聯字串物件的字元緩衝區。|  
-|[CStrBufT::operator PXSTR](../Topic/CStrBufT::operator%20PXSTR.md)|擷取指標關聯字串物件的字元緩衝區。|  
+##  <a name="a-nameautolengtha--cstrbuftautolength"></a><a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
+ 自動判斷新的版本字串長度。  
   
-### 公用常數  
+```
+static const DWORD AUTO_LENGTH = 0x01;
+```  
   
-|名稱|描述|  
-|--------|--------|  
-|[CStrBufT::AUTO\_LENGTH](../Topic/CStrBufT::AUTO_LENGTH.md)|會自動判斷字串的新長度在版本。|  
-|[CStrBufT::SET\_LENGTH](../Topic/CStrBufT::SET_LENGTH.md)|設定字串物件的長度 \(以 GetBuffer 時間|  
+### <a name="remarks"></a>備註  
+ 自動判斷新的版本字串長度。 此字串必須以 null 結束。  
   
-## 備註  
- 這個類別會包裝函式類別會取代為 [GetBuffer](../Topic/CSimpleStringT::GetBuffer.md) 呼叫和 [ReleaseBuffer](../Topic/CSimpleStringT::ReleaseBuffer.md)或 [GetBufferSetLength](../Topic/CSimpleStringT::GetBufferSetLength.md) 和 `ReleaseBuffer`。  
+##  <a name="a-namecstrbufta--cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CStrBufT  
+ 建構緩衝區物件。  
   
- 主要設計用來當做 Helper 類別， `CStrBufT` 如何列出為開發人員提供便利的方式與字串物件的字元緩衝區一起使用，而不用擔心或呼叫 `ReleaseBuffer`。  在例外狀況或多個結束的程式碼路徑的情況下，，，因為包裝函式物件自然超出範圍這是可行的，使其解構函式來釋放字串資源。  
+```
+CStrBufT(StringType& str, int nMinLength, DWORD dwFlags = AUTO_LENGTH) throw(...);
+explicit CStrBufT(StringType& str) throw(...);
+```  
   
-## 需求  
- **Header:** atlsimpstr.h  
+### <a name="parameters"></a>參數  
+ `str`  
+ 緩衝區相關聯的字串物件。 開發人員通常會使用預先定義的 typedef **CStrBuf** ( **TCHAR**變體)， **CStrBufA** (`char`變體) 和**CStrBufW** ( `wchar_t` variant)。  
   
-## 請參閱  
+ *nMinLength*  
+ 字元緩衝區的最小長度。  
+  
+ `dwFlags`  
+ 判斷字串長度會自動決定。 可以是下列其中一項：  
+  
+- **AUTO_LENGTH**字串長度，則會自動判斷何時[CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer)呼叫。 此字串必須以 null 結束。 預設值。  
+  
+- **SET_LENGTH**字串長度會設定當[CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer)呼叫。  
+  
+### <a name="remarks"></a>備註  
+ 建立關聯的字串物件的字串緩衝區。 在建構期間， [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer)或[CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength)呼叫。  
+  
+ 請注意，複製建構函式是`private`。  
+  
+##  <a name="a-nameoperatorpcxstra--cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
+ 直接存取儲存在做為 C 樣式字串相關聯的字串物件中的字元。  
+  
+```  
+operator PCXSTR() const throw();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 字串資料的字元指標。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫此函式傳回的字串物件的字元緩衝區的指標。 String 物件的內容無法變更與這個指標。  
+  
+##  <a name="a-nameoperatorpxstra--cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
+ 直接存取儲存在做為 C 樣式字串相關聯的字串物件中的字元。  
+  
+```
+operator PXSTR() throw();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 字串資料的字元指標。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫此函式傳回的字串物件的字元緩衝區的指標。 開發人員可能會變更與這個指標的字串物件的內容。  
+  
+##  <a name="a-namepcxstra--cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::PCXSTR  
+ 常數字串的指標。  
+  
+```
+typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
+```  
+  
+##  <a name="a-namepxstra--cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::PXSTR  
+ 字串的指標。  
+  
+```
+typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
+```  
+  
+##  <a name="a-namesetlengtha--cstrbuftsetlength"></a><a name="set_length"></a>CStrBufT::SET_LENGTH  
+ 設定字串物件的長度`GetBuffer`時間。  
+  
+```
+static const DWORD SET_LENGTH = 0x02;
+```  
+  
+### <a name="remarks"></a>備註  
+ 在 GetBuffer 階段設定的字串物件的長度。  
+  
+ 決定如果[CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer)和[CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength)建構字串緩衝區物件時，會呼叫。  
+  
+##  <a name="a-namesetlengtha--cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT::SetLength  
+ 設定字元緩衝區的長度。  
+  
+```
+void SetLength(int nLength);
+```  
+  
+### <a name="parameters"></a>參數  
+ `nLength`  
+ 字元緩衝區的字串物件的新長度。  
+  
+> [!NOTE]
+>  必須是小於或等於指定的建構函式中的最小緩衝區長度`CStrBufT`。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫此函式可設定的緩衝區物件所代表的字串長度。  
+  
+##  <a name="a-namestringtypea--cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::StringType  
+ 其緩衝區是由這個類別樣板的特製化操作字串的型別。  
+  
+```
+typedef CSimpleStringT<TCharType> StringType;
+```  
+  
+### <a name="remarks"></a>備註  
+ **TCharType**是用來特製化類別樣板的字元類型。  
+  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [ATL\/MFC Shared Classes](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+ [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
+
+
+

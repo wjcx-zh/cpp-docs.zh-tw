@@ -1,35 +1,51 @@
 ---
-title: "編譯器錯誤 C2440 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2440"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2440"
+title: "編譯器錯誤 C2440 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2440
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# 編譯器錯誤 C2440
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 5f0472f7d318de24c38898388906a264cf56db7b
+ms.lasthandoff: 02/24/2017
 
-conversion' : 無法從 'type1' 轉換為 'type2'  
+---
+# <a name="compiler-error-c2440"></a>編譯器錯誤 C2440
+'conversion': 無法從 'type1' 轉換成 'type2'  
   
- 編譯器無法從 '`type1`' 轉換為 '`type2`'。  
+編譯器不能從`type1`到`type2`。  
   
-## 範例  
- 如果在設定了編譯器一致性選項 [\/Zc:strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) 時嘗試在 C\+\+ 程式碼中使用字串常值初始化非常數的 `char*` \(或 `wchar_t*`\)，可能會造成 C2440。  在 C\# 中，字串常值的類型是 `char` 的陣列，但在 C\+\+ 中，則是 `const``char` 的陣列。  這個範例產生 C2440：  
+## <a name="example"></a>範例  
+如果您嘗試初始化非常數，可能會造成 C2440 `char*` (或`wchar_t*`) 所使用的字串常值 c + + 程式碼中，當編譯器一致性選項[/zc: strictstrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)設定。 在 C 中，字串常值的型別是陣列`char`，但它是在 c + + 中的陣列`const char`。 這個範例會產生 C2440:  
   
 ```cpp  
 // C2440s.cpp  
@@ -46,8 +62,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果嘗試將成員指標轉換為 void\*，也可能造成 C2440 錯誤。  下一個範例會產生 C2440：  
+## <a name="example"></a>範例  
+ 如果您嘗試將指標轉換成 void * 的成員，也可能造成 C2440。 接下來的範例會產生 C2440:  
   
 ```cpp  
 // C2440.cpp  
@@ -68,8 +84,8 @@ public:
 };  
 ```  
   
-## 範例  
- 如果嘗試從只順向宣告但未定義的類型轉換，也會造成 C2440。  這個範例產生 C2440：  
+## <a name="example"></a>範例  
+ 如果您嘗試從僅向前宣告，但未定義的型別轉換，也可能造成 C2440。 這個範例會產生 C2440:  
   
 ```cpp  
 // c2440a.cpp   
@@ -83,14 +99,14 @@ Base * func(Derived * d) {
   
 ```  
   
-## 範例  
- 以下範例中 15 和 16 行上的 C2440 錯誤將以 `Incompatible calling conventions for UDT return value` 訊息限定。\(UDT 是使用者定義的型別，例如類別、結構或等位\)。這些不相容錯誤發生的原因是：順向宣告 \(Forward Declaration\) 的傳回類型中所指定 UDT 呼叫慣例與實際的 UDT 呼叫慣例產生衝突，以及牽涉到函式指標。  
+## <a name="example"></a>範例  
+ 在 15 到下一個範例的第 16 行 C2440 錯誤以限定`Incompatible calling conventions for UDT return value`訊息。 A *UDT*是使用者定義的型別，例如類別、 結構或等位。 UDT 的呼叫慣例指定中使用實際呼叫慣例的 UDT，並牽涉到函式指標是向前宣告衝突的傳回型別時，會產生這類不相容錯誤。  
   
- 在此範例中，我們先順向宣告了一個結構和一個傳回該結構的函式；編譯器會假設該結構使用 C\+\+ 呼叫慣例。  接下來在預設狀態下，結構定義使用 C 的呼叫慣例。  因為編譯器必須等到讀完整個結構之後才知道結構的呼叫慣例，因此對於 `get_c2` 傳回類型的結構，其呼叫慣例也將假設為 C\+\+。  
+ 在範例中，第一次就不會向前宣告為結構和函式會傳回結構;編譯器會假設該結構使用 c + + 呼叫慣例。 接下來結構定義，根據預設，使用 C 呼叫慣例。 因為編譯器不知道結構的呼叫慣例，直到它完成讀取整個結構中的傳回型別結構的呼叫慣例`get_c2`也會被假設為 c + +。  
   
- 結構之後是另一個傳回該結構的函式宣告，但此時編譯器已知道該結構的呼叫慣例為 C\+\+。  同樣地，傳回該結構的函式指標亦定義於結構定義之後，因此編譯器知道該結構使用 C\+\+ 的呼叫慣例。  
+ 結構後面接著另一個函式宣告會傳回結構，但此時，編譯器知道結構的呼叫慣例是 c + +。 同樣地，函式指標，它會傳回結構，被定義在結構定義之後，讓編譯器知道該結構使用 c + + 呼叫慣例。  
   
- 若要解決因為呼叫慣例不相容而發生的 C2440，請在 UDT 定義之後宣告傳回 UDT 的函式。  
+ 若要解決因不相容的呼叫慣例而發生的 C2440，宣告函式傳回 UDT 定義之後的 UDT。  
   
 ```cpp  
 // C2440b.cpp  
@@ -132,8 +148,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果指定零給內部指標，也可能會發生 C2440：  
+## <a name="example"></a>範例  
+ 如果您指派零給內部指標，也可能會發生 C2440:  
   
 ```cpp  
 // C2440c.cpp  
@@ -146,8 +162,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 使用者定義轉換使用不正確，也可能會發生 C2440。  如需使用者定義轉換的詳細資訊，請參閱[使用者定義轉換](../../dotnet/user-defined-conversions-cpp-cli.md)。  這個範例產生 C2440：  
+## <a name="example"></a>範例  
+ C2440 也可能使用不正確的使用者定義的轉換。 例如，當轉換運算子已定義為`explicit`，編譯器無法隱含轉換中使用它。 如需使用者定義轉換的詳細資訊，請參閱[使用者定義轉換 (C + + /cli CLI)](../../dotnet/user-defined-conversions-cpp-cli.md))。 這個範例會產生 C2440:  
   
 ```cpp  
 // C2440d.cpp  
@@ -169,8 +185,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果嘗試建立型別為 <xref:System.Array> 之 Visual C\+\+ 陣列的執行個體，也可能會發生 C2440。如需詳細資訊，請參閱[Arrays](../../windows/arrays-cpp-component-extensions.md)。下一個範例會產生 C2440：  
+## <a name="example"></a>範例  
+ 如果您嘗試建立 Visual c + + 陣列的型別是<xref:System.Array>。</xref:System.Array>的執行個體，也會發生 C2440  如需詳細資訊，請參閱[陣列](../../windows/arrays-cpp-component-extensions.md)。  接下來的範例會產生 C2440:  
   
 ```cpp  
 // C2440e.cpp  
@@ -183,8 +199,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- C2440 也可能會因為屬性功能變更而發生。下列範例會產生 C2440：  
+## <a name="example"></a>範例  
+ C2440 也可能會發生 「 屬性 」 功能中的變更。  下列範例會產生 C2440。  
   
 ```cpp  
 // c2440f.cpp  
@@ -194,12 +210,12 @@ int main() {
 // [ module(name="PropDemoLib", version="1.0") ];  
 ```  
   
-## 範例  
- 在編譯使用 **\/clr** 程式設計的原始程式碼時，Visual C\+\+ 編譯器不再允許 [const\_cast 運算子](../../cpp/const-cast-operator.md) 執行向下轉換 \(Down Cast\)。  
+## <a name="example"></a>範例  
+ Visual c + + 編譯器不會再允許[const_cast 運算子](../../cpp/const-cast-operator.md)向下轉型時使用原始程式碼**/clr**編譯程式設計。  
   
- 若要解決這個 C2440，請使用正確的轉型運算子。  如需詳細資訊，請參閱[轉型運算子](../../cpp/casting-operators.md)。  
+ 若要解決此 C2440，請使用正確的轉型運算子。 如需詳細資訊，請參閱[轉型運算子](../../cpp/casting-operators.md)。  
   
- 這個範例產生 C2440：  
+ 這個範例會產生 C2440:  
   
 ```cpp  
 // c2440g.cpp  
@@ -214,18 +230,30 @@ int main() {
 }  
 ```  
   
-## 範例  
- 使用 **\/clr:oldSyntax** 也可以產生 C2440：  
+## <a name="example"></a>範例  
+C2440 可以發生在 Visual Studio 2015 Update 3 編譯器一致性的變更。 先前，編譯器不正確地視為某些不同的運算式相同的型別識別針對範本比對時`static_cast`作業。 現在，編譯器來區分型別是否正確，然後程式碼，依賴先前`static_cast`行為已中斷。 若要修正此問題，請變更 符合樣板參數型別，或使用的樣板引數`reinterpret_cast`或 c-style 轉換。
+  
+這個範例會產生 C2440:  
   
 ```cpp  
-// c2440h.cpp  
-// compile with: /clr:oldSyntax  
-__gc class Base {};  
-__gc class Derived : public Base {};  
-int main() {  
-   Derived *d = new Derived;  
-   Base *b = d;  
-   d = const_cast<Derived*>(b);   // C2440  
-   d = dynamic_cast<Derived*>(b);   // OK  
-}  
+// c2440h.cpp
+
+template<int *a>
+struct S1 {};
+
+int g;
+struct S2 : S1<&g> {
+};
+
+int main()
+{
+    S2 s;
+    static_cast<S1<&*&g>>(s); // C2440 in VS 2015 Update 3 
+    // This compiles correctly:
+    // static_cast<S1<&g>>(s);
+}
+
+This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
+
 ```
+

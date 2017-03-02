@@ -1,90 +1,106 @@
 ---
-title: "Concurrency::direct3d 命名空間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp/Concurrency::direct3d"
-  - "amprt/Concurrency::direct3d"
-  - "amp_short_vectors/Concurrency::direct3d"
-  - "amp_graphics/Concurrency::direct3d"
-  - "amp_math/Concurrency::direct3d"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "direct3d 命名空間"
+title: "Concurrency:: direct3d 命名空間 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp/Concurrency::direct3d
+- amprt/Concurrency::direct3d
+- amp_short_vectors/Concurrency::direct3d
+- amp_graphics/Concurrency::direct3d
+- amp_math/Concurrency::direct3d
+dev_langs:
+- C++
+helpviewer_keywords:
+- direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
 caps.latest.revision: 15
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Concurrency::direct3d 命名空間
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: fe9121d6e054446d3adb70da9f78884f4198517e
+ms.lasthandoff: 02/24/2017
 
-`direct3d` 命名空間提供支援 D3D 互通性的函式。  可充分運用 D3D 資源在 AMP 程式碼中運算，也可以使用在 AMP 中使用 D3D 程式碼建立的資源，而不需要建立中繼複本。  您可以使用 C\+\+ AMP，以累加方式加速 DirectX 應用程式的大量運算的區段，並將 D3D 應用程式開發介面用於 AMP 計算所產生的資料。  
+---
+# <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空間
+`direct3d`命名空間提供支援 D3D 互通性函式。 它可以順暢地運用 D3D 資源 AMP 程式碼中的計算，以及允許使用所建立的資源 AMP D3D 程式碼中，而不需建立中繼副本。 您可以以累加方式使用 c + + AMP 加速 DirectX 應用程式的計算密集區段並使用 D3D API AMP 計算所產生的資料。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 namespace direct3d;  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 類別  
+### <a name="classes"></a>類別  
   
-|名稱|描述|  
-|--------|--------|  
-|[scoped\_d3d\_access\_lock 類別](../../../parallel/amp/reference/scoped-d3d-access-lock-class.md)|`accelerator_view` 物件的 D3D 存取鎖定的 RAII 包裝函式。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[scoped_d3d_access_lock 類別](scoped-d3d-access-lock-class.md)|RAII 包裝函式上的 D3D 存取鎖定`accelerator_view`物件。|  
   
-### 結構  
+### <a name="structures"></a>結構  
   
-|名稱|描述|  
-|--------|--------|  
-|[adopt\_d3d\_access\_lock\_t 結構](../../../parallel/amp/reference/adopt-d3d-access-lock-t-structure.md)|表示應該採用 \(而不是取得\) D3D 存取鎖定的標記類型。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[adopt_d3d_access_lock_t 結構](adopt-d3d-access-lock-t-structure.md)|標記類型，以表示 D3D 存取鎖定應該採用，而取得。|  
   
-### 功能  
+### <a name="functions"></a>函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[abs 函式](../Topic/abs%20Function.md)|傳回引數的絕對值|  
-|[clamp 函式](../Topic/clamp%20Function.md)|多載。  將 \_X 限制在指定的 \_Min 和 \_Max 範圍內|  
-|[countbits 函式](../Topic/countbits%20Function.md)|計算 \_X 中的設定位元數|  
-|[create\_accelerator\_view 函式](../Topic/create_accelerator_view%20Function.md)|建立從指標到 Direct3D 裝置介面的 [accelerator\_view 類別](../../../parallel/amp/reference/accelerator-view-class.md)|  
-|[d3d\_access\_lock 函式](../Topic/d3d_access_lock%20Function.md)|取得 accelerator\_view 的鎖定，以便安全地對與 accelerator\_view 共用的資源執行 D3D 作業|  
-|[d3d\_access\_try\_lock 函式](../Topic/d3d_access_try_lock%20Function.md)|嘗試取得對 accelerator\_view 的 D3D 存取鎖定，而不需封鎖。|  
-|[d3d\_access\_unlock 函式](../Topic/d3d_access_unlock%20Function.md)|釋放特定 accelerator\_view 的 D3D 存取鎖定。|  
-|[firstbithigh 函式](../Topic/firstbithigh%20Function.md)|從最高序位位元向下取得 \_X 中第一個設定位元的位置。|  
-|[firstbitlow 函式](../Topic/firstbitlow%20Function.md)|從最低序位位元開始向上取得 \_X 中第一個設定位元的位置。|  
-|[get\_buffer 函式](../Topic/get_buffer%20Function.md)|取得構成陣列基礎的 D3D 緩衝區介面。|  
-|[imax 函式](../Topic/imax%20Function.md)|比較兩個的值，傳回其中較大的值。|  
-|[imin 函式](../Topic/imin%20Function.md)|比較兩個值，傳回其中較小的值。|  
-|[is\_timeout\_disabled 函式](../Topic/is_timeout_disabled%20Function.md)|傳回布林旗標，表示指定的 accelerator\_view 是否停用逾時。|  
-|[mad 函式](../Topic/mad%20Function.md)|多載。  對三個引數執行算術乘法\/加法運算: \_X \* \_Y \+ \_Z|  
-|[make\_array 函式](../Topic/make_array%20Function.md)|從 D3D 緩衝區介面指標建立陣列。|  
-|[noise 函式](../Topic/noise%20Function.md)|使用 Perlin 雜訊演算法產生隨機值|  
-|[radians 函式](../Topic/radians%20Function.md)|將 \_X 從角度轉換成弧度|  
-|[rcp 函式](../Topic/rcp%20Function.md)|計算引數的快速近似倒數|  
-|[reversebits 函式](../Topic/reversebits%20Function.md)|反轉 \_X 的位元組順序|  
-|[saturate 函式](../Topic/saturate%20Function.md)|將 \_X 限制在 0 到 1 之間的範圍|  
-|[sign 函式](../Topic/sign%20Function.md)|多載。  傳回引數的正負號|  
-|[smoothstep 函式](../Topic/smoothstep%20Function.md)|傳回介於 0 和 1 之間的平滑 Hermite 插補，如果 \_X 介於 \[\_Min， \_Max\]。|  
-|[step 函式](../Topic/step%20Function.md)|比較兩個值，並根據哪一個值較大回傳 0 或 1|  
-|[umax 函式](../Topic/umax%20Function.md)|比較兩個不帶正負號的值，傳回其中較大的值。|  
-|[umin 函式](../Topic/umin%20Function.md)|比較兩個不帶正負號的值，傳回其中較小的值。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[abs 函式](concurrency-direct3d-namespace-functions-amp.md#abs)|傳回引數的絕對值|  
+|[clamp 函式](concurrency-direct3d-namespace-functions-amp.md#clamp)|多載。 鉗制 _X 指定 _Min 和 （_m） 的範圍|  
+|[countbits 函式](concurrency-direct3d-namespace-functions-amp.md#countbits)|計算集合中的位元 _X 數目|  
+|[create_accelerator_view 函式](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|建立[accelerator_view 類別](accelerator-view-class.md)從 Direct3D 裝置介面的指標|  
+|[d3d_access_lock 函式](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|取得 accelerator_view 為了安全地執行 D3D accelerator_view 與共用的資源執行作業的鎖定|  
+|[d3d_access_try_lock 函式](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|嘗試取得 accelerator_view D3D 存取鎖定，而不會封鎖。|  
+|[d3d_access_unlock 函式](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|釋放指定 accelerator_view D3D 存取鎖定。|  
+|[firstbithigh 函式](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|取得 _X，從最高序位的位元和向下使用中的第一組位元的位置|  
+|[firstbitlow 函式](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|取得 _X，從最低順序位元，且向上運作中的第一組位元的位置|  
+|[get_buffer 函式](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|取得基礎陣列 D3D 緩衝區介面。|  
+|[imax 函式](concurrency-direct3d-namespace-functions-amp.md#imax)|比較兩個數值，傳回較大的值。|  
+|[imin 函式](concurrency-direct3d-namespace-functions-amp.md#imin)|比較兩個數值，傳回較小的值。|  
+|[is_timeout_disabled 函式](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|傳回布林值旗標，表示逾時已停用的指定 accelerator_view。|  
+|[mad 函式](concurrency-direct3d-namespace-functions-amp.md#mad)|多載。 執行三個引數的算術/乘積和運算︰ _X * _Y + _Z|  
+|[make_array 函式](concurrency-direct3d-namespace-functions-amp.md#make_array)|建立從 D3D 緩衝區介面指標的陣列。|  
+|[noise 函式](concurrency-direct3d-namespace-functions-amp.md#noise)|藉由使用 Perlin 雜訊演算法產生隨機值|  
+|[radians 函式](concurrency-direct3d-namespace-functions-amp.md#radians)|將 _X 從角度轉換為弧度|  
+|[rcp 函式](concurrency-direct3d-namespace-functions-amp.md#rcp)|計算引數的快速、 近似對等|  
+|[reversebits 函式](concurrency-direct3d-namespace-functions-amp.md#reversebits)|反轉 _X 的位元的順序|  
+|[saturate 函式](concurrency-direct3d-namespace-functions-amp.md#saturate)|鉗制 _X 0 到 1 的範圍內|  
+|[sign 函式](concurrency-direct3d-namespace-functions-amp.md#sign)|多載。 傳回引數的符號|  
+|[smoothstep 函式](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|介於 0 和 1，傳回的平滑 Hermite 插補，_X 是否在範圍 [_Min，（_m）]。|  
+|[step 函式](concurrency-direct3d-namespace-functions-amp.md#step)|比較兩個值，傳回 0 或 1 為基礎的值大於|  
+|[umax 函式](concurrency-direct3d-namespace-functions-amp.md#umax)|比較兩個不帶正負號的數值，傳回較大的值。|  
+|[umin 函式](concurrency-direct3d-namespace-functions-amp.md#umin)|比較兩個不帶正負號的數值，傳回較小的值。|  
+
+## <a name="requirements"></a>需求  
+ **標頭︰** amp.h  
   
-## 需求  
- **標頭：**amp.h  
+ **命名空間：** 並行  
   
- **命名空間：**並行  
-  
-## 請參閱  
- [Concurrency 命名空間 \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+## <a name="see-also"></a>另請參閱  
+ [Concurrency 命名空間 (c + + AMP)](concurrency-namespace-cpp-amp.md)
+

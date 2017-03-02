@@ -1,51 +1,48 @@
 ---
-title: "編譯器錯誤 C2696 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2696"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2696"
+title: "編譯器錯誤 C2696 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2696
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2696
 ms.assetid: 6c6eb7df-1230-4346-9a73-abf14c20785d
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C2696
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 08b8a7990efbf981aec342b99bbb558fd9fab8d5
+ms.lasthandoff: 02/24/2017
 
-無法建立 Managed 型別 'type' 的暫存物件  
+---
+# <a name="compiler-error-c2696"></a>編譯器錯誤 C2696
+無法建立暫存物件的 managed 型別 'type'  
   
- Unmanaged 程式中的 `const` 的參考使得編譯器呼叫建構函式，並在堆疊上建立一個暫存物件。  但是 Managed 類別絕對不能建立在堆疊上。  
+參考`const`在 unmanaged 應用程式會導致編譯器呼叫建構函式，並在堆疊上建立暫存物件。 不過，managed 的類別永遠不會在堆疊上建立。  
   
- C2696 只能透過 **\/clr:oldSyntax** 取得。  
-  
- 下列範例會產生 C2696：  
-  
-```  
-// C2696b.cpp  
-// compile with: /clr:oldSyntax  
-  
-__gc class G {  
-public:  
-   G( int i ) {}  
-};  
-  
-void func( const G& g );  
-  
-int main() {  
-   func( 1 );   // C2696  
-   G *myG = new G( 1 );   // OK  
-   func( *myG );  
-}  
-```
+C2696 才可使用過時的編譯器選項**/clr:oldSyntax**。  
+

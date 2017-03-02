@@ -1,36 +1,52 @@
 ---
-title: "編譯器錯誤 C2327 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2327"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2327"
+title: "編譯器錯誤 C2327 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2327
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C2327
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
+ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.lasthandoff: 02/24/2017
 
-'symbol' : 不是型別名稱、靜態或列舉值  
+---
+# <a name="compiler-error-c2327"></a>編譯器錯誤 C2327
+'symbol': 不是型別名稱、 靜態、 或列舉值  
   
- 巢狀類別 \(Nested Class\) 內的程式碼嘗試存取封入類別 \(Enclosing Class\) 的成員，但該成員並非型別名稱、靜態成員或列舉值。  
+ 巢狀類別內的程式碼會嘗試存取不是型別名稱、 靜態成員或列舉值的封入類別的成員。  
   
- 使用 **\/clr** 編譯時，引發 C2327 的一個常見原因是因為屬性的名稱與屬性型別相同。  
+ 進行編譯時**/clr**，引發 C2327 的常見原因是具有相同名稱的屬性類型的屬性。  
   
- 下列範例會產生 C2327：  
+ 下列範例會產生 C2327:  
   
 ```  
 // C2327.cpp  
@@ -49,7 +65,7 @@ public:
 };  
 ```  
   
- 如果型別的名稱是由成員名稱加以隱藏，也可能會發生 C2327：  
+ 如果型別名稱隱藏的成員名稱，也會發生 C2327:  
   
 ```  
 // C2327b.cpp  
@@ -63,7 +79,7 @@ class S {
 };  
 ```  
   
- 在下列狀況中您需要完整指定參數的資料型別，也可能會引發 C2327：  
+ 在此情況下，您需要完整指定參數的資料型別，也可以引發 C2327:  
   
 ```  
 // C2327c.cpp  
@@ -78,7 +94,7 @@ struct B {
 };  
 ```  
   
- 下列範例會產生 C2327：  
+ 下列範例會產生 C2327:  
   
 ```  
 // C2327d.cpp  
@@ -112,35 +128,7 @@ namespace NA {
 }  
 ```  
   
- 使用 Managed Extensions for C\+\+ 時也可能發生 C2327：  
-  
-```  
-// C2327e.cpp  
-// compile with: /clr:oldSyntax /c  
-using namespace System;  
-namespace NA {  
-   public __value enum E : Int32 {  
-      one = 1, two = 2, three = 3  
-   };  
-  
-   public __gc class A {  
-      E m_e;  
-      public:  
-         __property E get_E() {  
-            return m_e;  
-         }  
-         // At set_E compiler doesn't know whether E is get_E or   
-         // Enum E, therefore fully qualifying Enum E is necessary  
-         __property void set_E(E e) {   // C2327  
-         // try the following line instead  
-         // __property void set_E(NA::E e) {  
-            m_e = e;  
-         }  
-   };  
-}  
-```  
-  
- 下列範例顯示在屬性與屬性型別名稱相同時，會發生 C2327：  
+下列範例會示範 C2327 時，會發生相同的屬性型別名稱︰  
   
 ```  
 // C2327f.cpp  
@@ -165,31 +153,4 @@ private:
    // ::Address address;  
 };  
 ```  
-  
- 下列範例顯示在屬性與屬性型別名稱相同時，會發生 C2327：  
-  
-```  
-// C2327g.cpp  
-// compile with: /clr:oldSyntax /c  
-#using <mscorlib.dll>  
-public __value struct Address {};  
-  
-public __gc class Person {  
-public:  
-   __property ::Address get_Address() {     
-      return address;  
-   }  
-  
-   __property void set_Address(Address addr)   // C2327  
-   // try the following line instead  
-   // __property void set_Address(::Address addr) {  
-      address = addr;   
-   }  
-  
-private:  
-   Address address;   // C2327  
-  
-   // try the following line instead  
-   // ::Address address;  
-};  
-```
+

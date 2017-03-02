@@ -1,27 +1,43 @@
 ---
-title: "編譯器錯誤s C3500 through C3999 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "編譯器錯誤 C3500 c3999 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤s C3500 through C3999
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: ec3dba4995e0df05a1871c73abfbbee5c24b5266
+ms.lasthandoff: 02/24/2017
 
-這部分文件中的文章包含 Visual C\+\+ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 \[輸出\] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
+---
+# <a name="compiler-errors-c3500-through-c3999"></a>編譯器錯誤 C3500 c3999
+這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [輸出]  視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
  [編譯器錯誤 C3500](../../error-messages/compiler-errors-2/compiler-error-c3500.md)  
   
@@ -49,8 +65,6 @@ manager: "ghogen"
   
  [編譯器錯誤 C3533](../../error-messages/compiler-errors-2/compiler-error-c3533.md)  
   
- [編譯器錯誤 C3534](../Topic/Compiler%20Error%20C3534.md)  
-  
  [編譯器錯誤 C3535](../../error-messages/compiler-errors-2/compiler-error-c3535.md)  
   
  [編譯器錯誤 C3536](../../error-messages/compiler-errors-2/compiler-error-c3536.md)  
@@ -65,7 +79,7 @@ manager: "ghogen"
   
  [編譯器錯誤 C3541](../../error-messages/compiler-errors-2/compiler-error-c3541.md)  
   
- [Compiler Error C3550](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
+ [編譯器錯誤 C3550](../../error-messages/compiler-errors-2/compiler-error-c3550.md)  
   
  [編譯器錯誤 C3603](../../error-messages/compiler-errors-2/compiler-error-c3603.md)  
   
@@ -76,8 +90,6 @@ manager: "ghogen"
  [編譯器錯誤 C3611](../../error-messages/compiler-errors-2/compiler-error-c3611.md)  
   
  [編譯器錯誤 C3612](../../error-messages/compiler-errors-2/compiler-error-c3612.md)  
-  
- [編譯器錯誤 C3616](../Topic/Compiler%20Error%20C3616.md)  
   
  [編譯器錯誤 C3618](../../error-messages/compiler-errors-2/compiler-error-c3618.md)  
   
@@ -140,8 +152,6 @@ manager: "ghogen"
  [編譯器錯誤 C3656](../../error-messages/compiler-errors-2/compiler-error-c3656.md)  
   
  [編譯器錯誤 C3657](../../error-messages/compiler-errors-2/compiler-error-c3657.md)  
-  
- [編譯器錯誤 C3658](../Topic/Compiler%20Error%20C3658.md)  
   
  [編譯器錯誤 C3661](../../error-messages/compiler-errors-2/compiler-error-c3661.md)  
   
@@ -219,8 +229,6 @@ manager: "ghogen"
   
  [編譯器錯誤 C3728](../../error-messages/compiler-errors-2/compiler-error-c3728.md)  
   
- [編譯器錯誤 C3730](../Topic/Compiler%20Error%20C3730.md)  
-  
  [編譯器錯誤 C3731](../../error-messages/compiler-errors-2/compiler-error-c3731.md)  
   
  [編譯器錯誤 C3732](../../error-messages/compiler-errors-2/compiler-error-c3732.md)  
@@ -287,8 +295,6 @@ manager: "ghogen"
   
  [編譯器錯誤 C3800](../../error-messages/compiler-errors-2/compiler-error-c3800.md)  
   
- [編譯器錯誤 C3802](../Topic/Compiler%20Error%20C3802.md)  
-  
  [編譯器錯誤 C3803](../../error-messages/compiler-errors-2/compiler-error-c3803.md)  
   
  [編譯器錯誤 C3804](../../error-messages/compiler-errors-2/compiler-error-c3804.md)  
@@ -301,13 +307,9 @@ manager: "ghogen"
   
  [編譯器錯誤 C3809](../../error-messages/compiler-errors-2/compiler-error-c3809.md)  
   
- [編譯器錯誤 C3811](../Topic/Compiler%20Error%20C3811.md)  
-  
  [編譯器錯誤 C3812](../../error-messages/compiler-errors-2/compiler-error-c3812.md)  
   
  [編譯器錯誤 C3813](../../error-messages/compiler-errors-2/compiler-error-c3813.md)  
-  
- [編譯器錯誤 C3814](../Topic/Compiler%20Error%20C3814.md)  
   
  [編譯器錯誤 C3815](../../error-messages/compiler-errors-2/compiler-error-c3815.md)  
   
@@ -317,19 +319,11 @@ manager: "ghogen"
   
  [編譯器錯誤 C3818](../../error-messages/compiler-errors-2/compiler-error-c3818.md)  
   
- [編譯器錯誤 C3819](../Topic/Compiler%20Error%20C3819.md)  
-  
  [編譯器錯誤 C3821](../../error-messages/compiler-errors-2/compiler-error-c3821.md)  
-  
- [編譯器錯誤 C3822](../Topic/Compiler%20Error%20C3822.md)  
-  
- [編譯器錯誤 C3823](../Topic/Compiler%20Error%20C3823.md)  
   
  [編譯器錯誤 C3824](../../error-messages/compiler-errors-2/compiler-error-c3824.md)  
   
  [編譯器錯誤 C3825](../../error-messages/compiler-errors-2/compiler-error-c3825.md)  
-  
- [編譯器錯誤 C3826](../Topic/Compiler%20Error%20C3826.md)  
   
  [編譯器錯誤 C3828](../../error-messages/compiler-errors-2/compiler-error-c3828.md)  
   
@@ -348,8 +342,6 @@ manager: "ghogen"
  [編譯器錯誤 C3838](../../error-messages/compiler-errors-2/compiler-error-c3838.md)  
   
  [編譯器錯誤 C3839](../../error-messages/compiler-errors-2/compiler-error-c3839.md)  
-  
- [編譯器錯誤 C3840](../Topic/Compiler%20Error%20C3840.md)  
   
  [編譯器錯誤 C3842](../../error-messages/compiler-errors-2/compiler-error-c3842.md)  
   
@@ -381,7 +373,7 @@ manager: "ghogen"
   
  [編譯器錯誤 C3860](../../error-messages/compiler-errors-2/compiler-error-c3860.md)  
   
- [編譯器錯誤 C3861](../../error-messages/compiler-errors-2/compiler-error-c3861.md)  
+ [編譯器錯誤 c3861:](../../error-messages/compiler-errors-2/compiler-error-c3861.md)  
   
  [編譯器錯誤 C3862](../../error-messages/compiler-errors-2/compiler-error-c3862.md)  
   
@@ -389,7 +381,7 @@ manager: "ghogen"
   
  [編譯器錯誤 C3866](../../error-messages/compiler-errors-2/compiler-error-c3866.md)  
   
- [編譯器錯誤 C3867](../../error-messages/compiler-errors-2/compiler-error-c3867.md)  
+ [編譯器錯誤 c3867 」](../../error-messages/compiler-errors-2/compiler-error-c3867.md)  
   
  [編譯器錯誤 C3868](../../error-messages/compiler-errors-2/compiler-error-c3868.md)  
   
@@ -461,8 +453,5 @@ manager: "ghogen"
   
  [編譯器錯誤 C3920](../../error-messages/compiler-errors-2/compiler-error-c3920.md)  
   
- [編譯器錯誤 C3921](../Topic/Compiler%20Error%20C3921.md)  
-  
  [編譯器錯誤 C3923](../../error-messages/compiler-errors-2/compiler-error-c3923.md)  
-  
- [編譯器錯誤 C3996](../Topic/Compiler%20Error%20C3996.md)
+

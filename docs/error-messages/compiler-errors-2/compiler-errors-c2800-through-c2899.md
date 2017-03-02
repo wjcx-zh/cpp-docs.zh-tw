@@ -1,26 +1,42 @@
 ---
-title: "編譯器錯誤s C2800 Through C2899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "編譯器錯誤 C2800 到 C2899 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤s C2800 Through C2899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
+ms.openlocfilehash: 06061d98a0bdbbd69c8fe2fb05c75c7b301e4072
+ms.lasthandoff: 02/24/2017
 
-這部分文件中的文章包含 Visual C\+\+ 編譯器錯誤的子區段的相關資訊。  您可以在此存取資訊，或是在 Visual Studio 的 \[**輸出**\] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
+---
+# <a name="compiler-errors-c2800-through-c2899"></a>編譯器錯誤 C2800 到 C2899
+這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [輸出]  視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
  [編譯器錯誤 C2800](../../error-messages/compiler-errors-2/compiler-error-c2800.md)  
   
@@ -65,8 +81,6 @@ caps.handback.revision: 12
  [編譯器錯誤 C2824](../../error-messages/compiler-errors-2/compiler-error-c2824.md)  
   
  [編譯器錯誤 C2825](../../error-messages/compiler-errors-2/compiler-error-c2825.md)  
-  
- [編譯器錯誤 C2826](../Topic/Compiler%20Error%20C2826.md)  
   
  [編譯器錯誤 C2827](../../error-messages/compiler-errors-2/compiler-error-c2827.md)  
   
@@ -128,8 +142,6 @@ caps.handback.revision: 12
   
  [編譯器錯誤 C2865](../../error-messages/compiler-errors-2/compiler-error-c2865.md)  
   
- [編譯器錯誤 C2866](../Topic/Compiler%20Error%20C2866.md)  
-  
  [編譯器錯誤 C2867](../../error-messages/compiler-errors-2/compiler-error-c2867.md)  
   
  [編譯器錯誤 C2868](../../error-messages/compiler-errors-2/compiler-error-c2868.md)  
@@ -185,5 +197,4 @@ caps.handback.revision: 12
  [編譯器錯誤 C2897](../../error-messages/compiler-errors-2/compiler-error-c2897.md)  
   
  [編譯器錯誤 C2898](../../error-messages/compiler-errors-2/compiler-error-c2898.md)  
-  
- [編譯器錯誤 C2899](../../error-messages/compiler-errors-2/compiler-error-c2899.md)
+

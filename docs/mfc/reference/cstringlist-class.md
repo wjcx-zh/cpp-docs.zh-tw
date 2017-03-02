@@ -1,46 +1,62 @@
 ---
-title: "CStringList Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CStringList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStringList class"
-  - "清單, string"
-  - "字串 [C++], 集合"
-  - "字串 [C++], 清單"
+title: "CStringList 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CStringList
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], lists
+- lists, string
+- CStringList class
+- strings [C++], collections
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
 caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# CStringList Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: 0b67104e330890ffe8f67bac0dd3b129c7742a29
+ms.lasthandoff: 02/24/2017
 
-`CString` 物件支援清單。  
+---
+# <a name="cstringlist-class"></a>CStringList 類別
+支援 `CString` 物件的清單。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CStringList : public CObject  
 ```  
   
-## 成員  
- `CStringList` 的成員函式類似於類別 [CObList](../../mfc/reference/coblist-class.md)的成員函式。  因此相似，您可以使用成員的函式特定使用 `CObList` 參考文件。  不論您在何處參閱 `CObject` 指標做為傳回值，請用 `CString` \(不是 `CString` 指標\)。  不論您在何處參閱 `CObject` 指標做為函式參數，請以 `LPCTSTR`。  
+## <a name="members"></a>Members  
+ 成員函式`CStringList`類別的成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到`CObject`指標做為傳回值，取代`CString`(不`CString`指標)。 無論在何處看到`CObject`指標做為函式參數，以取代`LPCTSTR`。  
   
  `CObject*& CObList::GetHead() const;`  
   
- 例如，轉譯  
+ 例如，轉換為  
   
  `CString& CStringList::GetHead() const;`  
   
@@ -48,60 +64,64 @@ class CStringList : public CObject
   
  `POSITION AddHead( CObject* <newElement> );`  
   
- 轉譯  
+ 轉換為  
   
  `POSITION AddHead( LPCTSTR <newElement> );`  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|建構空的清單。|  
+  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[CObList::CObList](../Topic/CObList::CObList.md)|建構空白清單。|  
+|----------|-----------------|  
+|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|新增項目 （或另一個清單中的所有項目） 標頭的清單 （產生新的標頭）。|  
+|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|（產生新的結尾） 的清單結尾加入項目 （或另一個清單中的所有項目）。|  
+|[CObList::Find](../../mfc/reference/coblist-class.md#find)|取得指標值所指定的項目位置。|  
+|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|取得指定的項目以零為起始的索引位置。|  
+|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|取得指定位置的項目。|  
+|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|這份清單中傳回的項目數。|  
+|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|傳回的清單 （不能是空的） 的標頭的項目。|  
+|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|傳回的標頭的項目清單的位置。|  
+|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|取得逐一查看下一個項目。|  
+|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|取得逐一查看的上一個項目。|  
+|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|這份清單中傳回的項目數。|  
+|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|傳回的結尾項目清單 （不能是空的）。|  
+|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|傳回清單的結尾項目的位置。|  
+|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|指定的位置之後插入新項目。|  
+|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|將指定的位置之前的新項目。|  
+|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|空白清單條件 （沒有項目） 的測試。|  
+|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|從這個清單中移除所有項目。|  
+|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|從此清單中，指定位置移除元素。|  
+|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|從清單的開頭移除的項目。|  
+|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|從清單的結尾的項目。|  
+|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|設定位於指定位置的項目。|  
   
-### 公用方法  
+## <a name="remarks"></a>備註  
+ 所有的比較，這表示字串中的字元，而不是字串的位址比較的值即可。  
   
-|名稱|描述|  
-|--------|--------|  
-|[CObList::AddHead](../Topic/CObList::AddHead.md)|將項目 \(或另一個檔案中的所有項目清單\) 加入至清單的開頭 \(設定新的開頭\)。|  
-|[CObList::AddTail](../Topic/CObList::AddTail.md)|將項目 \(或另一個檔案中的所有項目清單\) 加入至清單的尾端 \(設定一個新的尾端\)。|  
-|[CObList::Find](../Topic/CObList::Find.md)|取得指令指標值所指定之項目的位置。|  
-|[CObList::FindIndex](../Topic/CObList::FindIndex.md)|取得以零起始的索引所指定之項目的位置。|  
-|[CObList::GetAt](../Topic/CObList::GetAt.md)|取得這個項目在指定的位置。|  
-|[CObList::GetCount](../Topic/CObList::GetCount.md)|傳回的元素數目。這個清單中的。|  
-|[CObList::GetHead](../Topic/CObList::GetHead.md)|傳回清單的標頭項目 \(不可以是 Null\)。|  
-|[CObList::GetHeadPosition](../Topic/CObList::GetHeadPosition.md)|傳回清單的標頭項目的位置。|  
-|[CObList::GetNext](../Topic/CObList::GetNext.md)|取得可逐一查看的下一個項目。|  
-|[CObList::GetPrev](../Topic/CObList::GetPrev.md)|取得可逐一查看的上一個項目。|  
-|[CObList::GetSize](../Topic/CObList::GetSize.md)|傳回的元素數目。這個清單中的。|  
-|[CObList::GetTail](../Topic/CObList::GetTail.md)|傳回清單的尾端項目 \(不可以是 Null\)。|  
-|[CObList::GetTailPosition](../Topic/CObList::GetTailPosition.md)|傳回清單的尾端項目的位置。|  
-|[CObList::InsertAfter](../Topic/CObList::InsertAfter.md)|在指定的位置後面插入新的項目。|  
-|[CObList::InsertBefore](../Topic/CObList::InsertBefore.md)|在指定位置之前插入新的項目。|  
-|[CObList::IsEmpty](../Topic/CObList::IsEmpty.md)|空白清單情況的 \(沒有項目\) 的測試。|  
-|[CObList::RemoveAll](../Topic/CObList::RemoveAll.md)|從這份清單中移除所有項目。|  
-|[CObList::RemoveAt](../Topic/CObList::RemoveAt.md)|從這份清單中移除項目，由指定位置。|  
-|[CObList::RemoveHead](../Topic/CObList::RemoveHead.md)|從清單中移除的項目。|  
-|[CObList::RemoveTail](../Topic/CObList::RemoveTail.md)|從清單的尾端移除項目。|  
-|[CObList::SetAt](../Topic/CObList::SetAt.md)|設定這個項目在指定的位置。|  
+ `CStringList` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果一份`CString`物件會儲存至封存檔，請使用多載的插入運算子或`Serialize`成員函式，每個`CString`項目會依序序列化。  
   
-## 備註  
- 所有比較以傳值方式完成，這表示字串中的字元比較而不是字串的位址。  
+ 如果您需要個別的傾印`CString`項目，您必須將傾印內容的深度大於或等於 1。  
   
- `CStringList` 合併 `IMPLEMENT_SERIAL` 巨集支援序列化和傾印其項目。  如果 `CString` 物件清單儲存至檔案，具有多載插入運算子的或 `Serialize` 成員函式的 `CString` ，每個項目依次序列化。  
+ 如需有關使用`CStringList`，請參閱文章[集合](../../mfc/collections.md)。  
   
- 如果您需要個別項目 `CString` 傾印，您必須將傾印內容的深度為 1 或更大。  
-  
- 如需使用 `CStringList`的詳細資訊，請參閱本文 [集合](../../mfc/collections.md)。  
-  
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CStringList`  
   
-## 需求  
- **Header:** afxcoll.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxcoll.h  
   
-## 請參閱  
- [MFC 範例收集](../../top/visual-cpp-samples.md)   
- [CObject Class](../../mfc/reference/cobject-class.md)   
+## <a name="see-also"></a>另請參閱  
+ [MFC 範例收集](../../visual-cpp-samples.md)   
+ [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
+
+
+
+

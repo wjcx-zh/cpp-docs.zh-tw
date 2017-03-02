@@ -1,82 +1,98 @@
 ---
-title: "CVSListBox Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CVSListBox"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CVSListBox class"
-  - "CVSListBox::PreTranslateMessage method"
+title: "CVSListBox 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CVSListBox
+dev_langs:
+- C++
+helpviewer_keywords:
+- CVSListBox::PreTranslateMessage method
+- CVSListBox class
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
 caps.latest.revision: 30
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 32
----
-# CVSListBox Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 4527249fc1a22a1db0623ea46954065fcbd071f4
+ms.lasthandoff: 02/24/2017
 
-`CVSListBox` 類別支援可編輯的清單控制項。  
+---
+# <a name="cvslistbox-class"></a>CVSListBox 類別
+`CVSListBox`類別支援可編輯的清單控制項。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CVSListBox : public CVSListBoxBase  
 ```  
   
-## 成員  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[CVSListBox::CVSListBox](../Topic/CVSListBox::CVSListBox.md)|建構 `CVSListBox` 物件。|  
+|----------|-----------------|  
+|[CVSListBox::CVSListBox](#cvslistbox)|建構 `CVSListBox` 物件。|  
 |`CVSListBox::~CVSListBox`|解構函式。|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[CVSListBox::AddItem](../Topic/CVSListBox::AddItem.md)|將字串加入至清單控制項。  \(覆寫 `CVSListBoxBase::AddItem`\)。|  
-|[CVSListBox::EditItem](../Topic/CVSListBox::EditItem.md)|開始在清單控制項項目文字的編輯作業。  \(覆寫 `CVSListBoxBase::EditItem`\)。|  
-|[CVSListBox::GetCount](../Topic/CVSListBox::GetCount.md)|擷取字串數目可編輯的清單控制項的。  \(覆寫 `CVSListBoxBase::GetCount`\)。|  
-|[CVSListBox::GetItemData](../Topic/CVSListBox::GetItemData.md)|擷取與一個可編輯的清單控制項項目的特定應用程式的 32 位元值。  \(覆寫 `CVSListBoxBase::GetItemData`\)。|  
-|[CVSListBox::GetItemText](../Topic/CVSListBox::GetItemText.md)|擷取可編輯的清單控制項項目的文字。  \(覆寫 `CVSListBoxBase::GetItemText`\)。|  
-|[CVSListBox::GetSelItem](../Topic/CVSListBox::GetSelItem.md)|擷取目前選取之項目的以零起始的索引中可編輯的清單控制項的。  \(覆寫 `CVSListBoxBase::GetSelItem`\)。|  
-|`CVSListBox::PreTranslateMessage`|包含會分派給 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前，將 Windows 訊息。  如需詳細資訊和方法語法的詳細資訊，請參閱 [CWnd::PreTranslateMessage](../Topic/CWnd::PreTranslateMessage.md)。  \(覆寫 `CVSListBoxBase::PreTranslateMessage`\)。|  
-|[CVSListBox::RemoveItem](../Topic/CVSListBox::RemoveItem.md)|從一個可編輯的清單控制項中移除項目。  \(覆寫 `CVSListBoxBase::RemoveItem`\)。|  
-|[CVSListBox::SelectItem](../Topic/CVSListBox::SelectItem.md)|選項可編輯的清單控制項的字串。  \(覆寫 `CVSListBoxBase::SelectItem`\)。|  
-|[CVSListBox::SetItemData](../Topic/CVSListBox::SetItemData.md)|關聯應用程式特定的 32 位元值的可編輯的清單控制項項目。  \(覆寫 `CVSListBoxBase::SetItemData`\)。|  
+|----------|-----------------|  
+|[CVSListBox::AddItem](#additem)|將字串加入至清單控制項。 (覆寫 `CVSListBoxBase::AddItem`。)|  
+|[CVSListBox::EditItem](#edititem)|啟動清單控制項項目的文字編輯作業。 (覆寫 `CVSListBoxBase::EditItem`。)|  
+|[CVSListBox::GetCount](#getcount)|擷取可編輯的清單控制項中的字串數目。 (覆寫 `CVSListBoxBase::GetCount`。)|  
+|[CVSListBox::GetItemData](#getitemdata)|擷取可編輯的清單控制項項目相關聯的特定應用程式的 32 位元值。 (覆寫 `CVSListBoxBase::GetItemData`。)|  
+|[CVSListBox::GetItemText](#getitemtext)|擷取可編輯的清單控制項項目的文字。 (覆寫 `CVSListBoxBase::GetItemText`。)|  
+|[CVSListBox::GetSelItem](#getselitem)|擷取可編輯的清單控制項中目前選取項目的以零為起始的索引。 (覆寫 `CVSListBoxBase::GetSelItem`。)|  
+|`CVSListBox::PreTranslateMessage`|轉譯的視窗訊息，再分派給[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需詳細資訊和方法語法，請參閱[CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CVSListBoxBase::PreTranslateMessage`。)|  
+|[CVSListBox::RemoveItem](#removeitem)|可編輯的清單控制項中移除的項目。 (覆寫 `CVSListBoxBase::RemoveItem`。)|  
+|[CVSListBox::SelectItem](#selectitem)|選取的可編輯的清單控制項的字串。 (覆寫 `CVSListBoxBase::SelectItem`。)|  
+|[CVSListBox::SetItemData](#setitemdata)|關聯的可編輯的清單控制項項目之特定應用程式的 32 位元值。 (覆寫 `CVSListBoxBase::SetItemData`。)|  
   
-### 受保護的方法  
+### <a name="protected-methods"></a>受保護的方法  
   
 |名稱|描述|  
-|--------|--------|  
-|[CVSListBox::GetListHwnd](../Topic/CVSListBox::GetListHwnd.md)|將控制代碼傳回給目前內嵌清單檢視控制項。|  
+|----------|-----------------|  
+|[CVSListBox::GetListHwnd](#getlisthwnd)|傳回目前的內嵌的清單檢視控制項的控制代碼。|  
   
-## 備註  
- `CVSListBox` 類別提供一組可讓使用者建立，修改，刪除或重新排列在清單控制項中項目的編輯按鈕。  
+## <a name="remarks"></a>備註  
+ `CVSListBox`類別提供一組編輯按鈕，可讓使用者建立、 修改、 刪除或重新排列清單控制項中的項目。  
   
- 以下是可編輯的清單控制項的圖片。  第二個清單項目，名為「Item2」，以供編輯的選項。  
+ 以下是可編輯的清單控制項的圖片。 第二個清單項目，標題為 「&2; 」，這會選取進行編輯。  
   
  ![CVSListBox 控制項](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
   
- 如果您使用資源編輯器將可編輯的清單控制項，請注意編輯器的 \[**工具箱**\] 窗格不提供預先定義的可編輯的清單控制項。  相反地，請將靜態控制項 \(例如控制項 \[**群組方塊**\] 。  架構會使用靜態控制項做為預留位置指定可編輯的清單控制項的大小和位置。  
+ 如果您將可編輯的清單控制項中使用資源編輯器，請注意，**工具箱**編輯器窗格不會提供預先定義的可編輯的清單控制項。 相反地，例如新增靜態控制項**群組方塊**控制項。 指定大小和可編輯的清單控制項的位置，架構會使用靜態控制項做為預留位置。  
   
- 若要使用可編輯的清單控制項在對話方塊中的範本，請在您的對話方塊類別的一 `CVSListBox` 變數。  若要支援資料交換在變數和控制項之間，定義在  對話方塊中的 `DoDataExchange` 方法的 `DDX_Control` 巨集輸入。  根據預設，可編輯的清單控制項建立，而不需要編輯按鈕。  使用繼承的 [CVSListBoxBase::SetStandardButtons](http://msdn.microsoft.com/zh-tw/129e530f-97e9-42eb-b128-371c2a5686ba) 方法啟用編輯按鈕。  
+ 若要使用的可編輯的清單控制項在對話方塊範本中，宣告`CVSListBox`變數中您的對話方塊類別。 若要支援變數與控制項之間的資料交換，定義`DDX_Control`中的巨集項目`DoDataExchange` 對話方塊的方法。 根據預設，建立不含編輯 按鈕可編輯的清單控制項。 您可以使用繼承的 CVSListBoxBase::SetStandardButtons 方法來啟用 [編輯] 按鈕。  
   
- 如需詳細資訊，請參閱範例目錄、 `New Controls` 範例， Page3.cpp 和 Page3.h 檔案。  
+ 如需詳細資訊，請參閱範例目錄中，`New Controls`範例中，將 Page3.cpp 和 Page3.h 檔案。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,9 +105,186 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## 需求  
- **標題:** afxvslistbox.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxvslistbox.h  
   
-## 請參閱  
+##  <a name="a-nameadditema--cvslistboxadditem"></a><a name="additem"></a>CVSListBox::AddItem  
+ 將字串加入至清單控制項。  
+  
+```  
+virtual int AddItem(
+    const CString& strIext,  
+    DWORD_PTR dwData=0,  
+    int iIndex=-1);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `strIext`  
+ 字串的參考。  
+  
+ [in] `dwData`  
+ 特定應用程式的 32 位元值與字串相關聯。 預設值為 0。  
+  
+ [in] `iIndex`  
+ 將保留字串的位置以零為起始的索引。 如果`iIndex`參數為-1，字串會新增至清單的結尾。 預設值為 -1。  
+  
+### <a name="return-value"></a>傳回值  
+ 字串的清單控制項中的位置以零為起始的索引。  
+  
+### <a name="remarks"></a>備註  
+ 使用[CVSListBox::GetItemData](#getitemdata)方法來擷取所指定的值`dwData`參數。 這個值可以是應用程式特定整數或其他資料的指標。  
+  
+##  <a name="a-namecvslistboxa--cvslistboxcvslistbox"></a><a name="cvslistbox"></a>CVSListBox::CVSListBox  
+ 建構 `CVSListBox` 物件。  
+  
+```  
+CVSListBox();
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameedititema--cvslistboxedititem"></a><a name="edititem"></a>CVSListBox::EditItem  
+ 啟動清單控制項項目的文字編輯作業。  
+  
+```  
+virtual BOOL EditItem(int iIndex);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `iIndex`  
+ 清單控制項項目的以零為起始的索引。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果編輯作業成功; 啟動否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+ 在使用者開始編輯作業，連按兩下某個項目的標籤，或按下**F2**或**空格鍵**索引鍵的項目有焦點時。  
+  
+##  <a name="a-namegetcounta--cvslistboxgetcount"></a><a name="getcount"></a>CVSListBox::GetCount  
+ 擷取可編輯的清單控制項中的字串數目。  
+  
+```  
+virtual int GetCount() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 清單控制項中的項目數。  
+  
+### <a name="remarks"></a>備註  
+ 請注意此計數是比最後一個項目的索引值大一因為是以零為起始的索引。  
+  
+##  <a name="a-namegetitemdataa--cvslistboxgetitemdata"></a><a name="getitemdata"></a>CVSListBox::GetItemData  
+ 擷取可編輯的清單控制項項目相關聯的特定應用程式的 32 位元值。  
+  
+```  
+virtual DWORD_PTR GetItemData(int iIndex) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `iIndex`  
+ 可編輯的清單控制項項目的以零為起始的索引。  
+  
+### <a name="return-value"></a>傳回值  
+ 指定的項目相關聯的 32 位元值。  
+  
+### <a name="remarks"></a>備註  
+ 使用[CVSListBox::SetItemData](#setitemdata)或[CVSListBox::AddItem](#additem)要與清單控制項項目產生關聯的 32 位元值的方法。 這個值可以是應用程式特定整數或其他資料的指標。  
+  
+##  <a name="a-namegetitemtexta--cvslistboxgetitemtext"></a><a name="getitemtext"></a>CVSListBox::GetItemText  
+ 擷取可編輯的清單控制項項目的文字。  
+  
+```  
+virtual CString GetItemText(int iIndex) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `iIndex`  
+ 可編輯的清單控制項項目的以零為起始的索引。  
+  
+### <a name="return-value"></a>傳回值  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含指定項目的文字。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetlisthwnda--cvslistboxgetlisthwnd"></a><a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+ 傳回目前的內嵌的清單檢視控制項的控制代碼。  
+  
+```  
+virtual HWND GetListHwnd() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 內嵌的清單檢視控制項的控制代碼。  
+  
+### <a name="remarks"></a>備註  
+ 使用此方法來擷取支援內嵌的清單檢視控制項的控制代碼`CVSListBox`類別。  
+  
+##  <a name="a-namegetselitema--cvslistboxgetselitem"></a><a name="getselitem"></a>CVSListBox::GetSelItem  
+ 擷取可編輯的清單控制項中目前選取項目的以零為起始的索引。  
+  
+```  
+virtual int GetSelItem() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果此方法成功，起始的索引，目前選取的項目。反之則為-1。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameremoveitema--cvslistboxremoveitem"></a><a name="removeitem"></a>CVSListBox::RemoveItem  
+ 可編輯的清單控制項中移除的項目。  
+  
+```  
+virtual BOOL RemoveItem(int iIndex);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `iIndex`  
+ 可編輯的清單控制項項目的以零為起始的索引。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果指定的項目已移除;否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameselectitema--cvslistboxselectitem"></a><a name="selectitem"></a>CVSListBox::SelectItem  
+ 選取的可編輯的清單控制項的字串。  
+  
+```  
+virtual BOOL SelectItem(int iItem);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `iItem`  
+ 可編輯的清單控制項項目的以零為起始的索引。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果此方法成功為 `TRUE`；否則為 `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會選取指定的項目，而且如有必要，將項目捲動到檢視。  
+  
+##  <a name="a-namesetitemdataa--cvslistboxsetitemdata"></a><a name="setitemdata"></a>CVSListBox::SetItemData  
+ 關聯的可編輯的清單控制項項目之特定應用程式的 32 位元值。  
+  
+```  
+virtual void SetItemData(
+    int iIndex,  
+    DWORD_PTR dwData);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `iIndex`  
+ 可編輯的清單控制項項目的以零為起始的索引。  
+  
+ [in] `dwData`  
+ 32 位元值。 這個值可以是應用程式特定整數或其他資料的指標。  
+  
+### <a name="remarks"></a>備註  
+  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)
+

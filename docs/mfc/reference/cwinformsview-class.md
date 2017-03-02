@@ -1,75 +1,136 @@
 ---
-title: "CWinFormsView Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CWinFormsView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWinFormsView class"
-  - "MFC [C++], Windows Form 支援"
-  - "Windows Form [C++], MFC 支援"
+title: "CWinFormsView 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CWinFormsView
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC [C++], Windows Forms support
+- CWinFormsView class
+- Windows Forms [C++], MFC support
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 caps.latest.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
----
-# CWinFormsView Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 6c49d711da747e4c6cbad0f883d93196b6a98057
+ms.openlocfilehash: 7aadcc1aa887cb6be1ddbb8f3797c4a9e1af5b6a
+ms.lasthandoff: 02/24/2017
 
-提供裝載 Windows Form 控制項的一般功能為 MFC 檢視。  
+---
+# <a name="cwinformsview-class"></a>CWinFormsView 類別
+提供可將 Windows Form 控制項裝載為 MFC 檢視的一般功能。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CWinFormsView : public CView;  
 ```  
   
-## 成員  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
-  
-|名稱|描述|  
-|--------|--------|  
-|[CWinFormsView::CWinFormsView](../Topic/CWinFormsView::CWinFormsView.md)|建構 `CWinFormsView` 物件。|  
-  
-### 公用方法  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
-|[CWinFormsView::GetControl](../Topic/CWinFormsView::GetControl.md)|擷取指標對 Windows Form 控制項。|  
+|----------|-----------------|  
+|[CWinFormsView::CWinFormsView](#cwinformsview)|建構 `CWinFormsView` 物件。|  
   
-### 公用運算子  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|描述|  
+|----------|-----------------|  
+|[CWinFormsView::GetControl](#getcontrol)|擷取 Windows Form 控制項的指標。|  
+  
+### <a name="public-operators"></a>公用運算子  
   
 |名稱||  
-|--------|-|  
-|[CWinFormsView::operator Control^](../Topic/CWinFormsView::operator%20Control%5E.md)|轉換為型別為指標對 Windows Form 控制項。|  
+|----------|-|  
+|[CWinFormsView::operator 控制 ^](#operator_control)|將型別轉換成 Windows Form 控制項的指標。|  
   
-## 備註  
- MFC 使用 `CWinFormsView` 類別來裝載 \(Host\) MFC 檢視內的 .NET Framework Windows Form 控制項。  控制項是原生 \(Native\) 檢視的子系並佔用 MFC 檢視的整個工作區 \(Client Area\)。  結果類似 `CFormView` 檢視，可以讓您利用 Windows Form 設計工具和執行階段來建立豐富的表單架構檢視。  
+## <a name="remarks"></a>備註  
+ MFC 使用`CWinFormsView`裝載.NET Framework Windows Form 控制項在 MFC 檢視類別。 控制項是子系的原生的檢視，而且會佔用整個工作區的 MFC 檢視。 結果就像`CFormView`檢視，可讓您充分利用 Windows Form 設計工具和執行時間來建立豐富的以 form 為基礎的檢視。  
   
- 如需使用 Windows Form 的詳細資訊，請參閱 [在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
-  
-> [!NOTE]
->  MFC Windows Form 整合只有在和 MFC 的專案中才有作用 \(有定義 AFXDLL 的專案動態連接。  
+ 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
 > [!NOTE]
->  CWinFormsView 不支援 MFC 分隔視窗 \([CSplitterWnd Class](../../mfc/reference/csplitterwnd-class.md)\)。  目前只有 Windows Form 分隔器控制項 \(<xref:System.Windows.Forms.Splitter>\) 支援。  
+>  MFC Windows Form 整合只能在動態連結與 MFC 專案中的工作 （AFXDLL 定義所在的專案）。  
   
-## 需求  
- **標題:** afxwinforms.h  
+> [!NOTE]
+>  CWinFormsView 不支援 MFC 分隔視窗 ( [CSplitterWnd 類別](../../mfc/reference/csplitterwnd-class.md))。 目前只有 Windows Form 分隔器支援控制項。  
   
-## 請參閱  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxwinforms.h  
+  
+##  <a name="a-namecwinformsviewa--cwinformsviewcwinformsview"></a><a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+ 建構 `CWinFormsView` 物件。  
+  
+```  
+CWinFormsView(System::Type^ pManagedViewType);  
+```  
+  
+### <a name="parameters"></a>參數  
+ `pManagedViewType`  
+ Windows Form 使用者控制項的資料類型的指標。   
+  
+### <a name="example"></a>範例  
+ 在下列範例中，`CUserView`類別繼承自`CWinFormsView`，並傳遞的型別`UserControl1`至`CWinFormsView`建構函式。 `UserControl1`是 ControlLibrary1.dll 自訂控制項。  
+  
+ [!code-cpp[NVC_MFC_Managed #&1;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
+  
+ [!code-cpp[NVC_MFC_Managed #&2;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
+  
+##  <a name="a-namegetcontrola--cwinformsviewgetcontrol"></a><a name="getcontrol"></a>CWinFormsView::GetControl  
+ 擷取 Windows Form 控制項的指標。  
+  
+```  
+System::Windows::Forms::Control^ GetControl() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 指標`System.Windows.Forms.Control`物件。  
+  
+### <a name="remarks"></a>備註  
+ 如需如何使用 Windows Form 的範例，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+  
+##  <a name="a-nameoperatorcontrola--cwinformsviewoperator-control"></a><a name="operator_control"></a>CWinFormsView::operator 控制 ^  
+ 將型別轉換成 Windows Form 控制項的指標。  
+  
+```  
+operator System::Windows::Forms::Control^() const;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個運算子可讓您傳遞`CWinFormsView`檢視，以接受 Windows Form 控制項的型別<xref:System.Windows.Forms.Control>.</xref:System.Windows.Forms.Control>指標的函式  
+  
+### <a name="example"></a>範例  
+  請參閱[CWinFormsView::GetControl](#getcontrol)。  
+  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CWinFormsControl Class](../../mfc/reference/cwinformscontrol-class.md)   
- [CWinFormsDialog Class](../../mfc/reference/cwinformsdialog-class.md)   
- [CFormView Class](../../mfc/reference/cformview-class.md)
+ [CWinFormsControl 類別](../../mfc/reference/cwinformscontrol-class.md)   
+ [CWinFormsDialog 類別](../../mfc/reference/cwinformsdialog-class.md)   
+ [CFormView 類別](../../mfc/reference/cformview-class.md)
+

@@ -1,55 +1,85 @@
 ---
-title: "default_scheduler_exists 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "concrt/concurrency::default_scheduler_exists"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default_scheduler_exists 類別"
+title: "default_scheduler_exists 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::default_scheduler_exists
+dev_langs:
+- C++
+helpviewer_keywords:
+- default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
 caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# default_scheduler_exists 類別
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 527d02e6b79d86c8a194fffa30351efc944db441
+ms.lasthandoff: 02/24/2017
 
-這個類別會描述例外狀況擲回的時機`Scheduler::SetDefaultSchedulerPolicy`處理序中的預設排程器已經存在時，會呼叫方法。  
+---
+# <a name="defaultschedulerexists-class"></a>default_scheduler_exists 類別
+這個類別描述預設排程器已經存在於處理序中時呼叫 `Scheduler::SetDefaultSchedulerPolicy` 方法所擲回的例外狀況。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class default_scheduler_exists : public std::exception;
 ```  
-class default_scheduler_exists : public std::exception;  
-```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[default\_scheduler\_exists::default\_scheduler\_exists 建構函式](../Topic/default_scheduler_exists::default_scheduler_exists%20Constructor.md)|多載。  建構 `default_scheduler_exists` 物件。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[default_scheduler_exists 建構函式](#ctor)|多載。 建構 `default_scheduler_exists` 物件。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
   
  `default_scheduler_exists`  
   
-## 需求  
- **標頭：** concrt.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** concrt.h  
   
- **Namespace:** 並行存取  
+ **命名空間：** concurrency  
   
-## 請參閱  
- [concurrency 命名空間](../../../parallel/concrt/reference/concurrency-namespace.md)   
- [Scheduler::SetDefaultSchedulerPolicy 方法](../Topic/Scheduler::SetDefaultSchedulerPolicy%20Method.md)
+##  <a name="a-namectora-defaultschedulerexists"></a><a name="ctor"></a>default_scheduler_exists 
+
+ 建構 `default_scheduler_exists` 物件。  
+  
+```
+explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
+
+default_scheduler_exists() throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Message`  
+ 錯誤的描述性訊息。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)
+

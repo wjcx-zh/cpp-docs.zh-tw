@@ -15,7 +15,7 @@ translation.priority.ht:
 - zh-tw
 translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0821dd4bff10bcd55a19ce3e3b41fc37b6502eab
+ms.openlocfilehash: c4c94e04b8067f64eade4e2506e7ac207fef7add
 
 ---
-.NET Framework
+必須有 Visual Studio 2010 SP1。

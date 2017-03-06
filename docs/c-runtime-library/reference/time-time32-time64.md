@@ -1,59 +1,75 @@
 ---
 title: "time、_time32、_time64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "time"
-  - "_time64"
-  - "_time32"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "time"
-  - "_time64"
-  - "time/time"
-  - "time/_time32"
-  - "time/_time64"
-  - "_time32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "time32 函式"
-  - "_time32 函式"
-  - "_time64 函式"
-  - "時間函式"
-  - "系統時間"
-  - "time64 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- time
+- _time64
+- _time32
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- time
+- _time64
+- time/time
+- time/_time32
+- time/_time64
+- _time32
+dev_langs:
+- C++
+helpviewer_keywords:
+- time32 function
+- _time32 function
+- _time64 function
+- time functions
+- system time
+- time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# time、_time32、_time64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
+ms.lasthandoff: 02/24/2017
 
+---
+# <a name="time-time32-time64"></a>time、_time32、_time64
 取得系統時間。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 time_t time(  
@@ -67,29 +83,29 @@ __time64_t _time64(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `timer`  
  時間儲存位置的指標。  
   
-## 傳回值  
- 以秒為單位傳回自 1970 年 1 月 1 日午夜所經過的時間，或是如果發生錯誤則傳回 \-1。  
+## <a name="return-value"></a>傳回值  
+ 以秒為單位傳回自 1970 年 1 月 1 日午夜所經過的時間，或是如果發生錯誤則傳回 -1。  
   
-## 備註  
- `time` 函式會傳回根據系統時鐘自國際標準時間 \(UTC\) 1970 年 1 月 1 日午夜 \(00:00:00\) 起所經過的秒數。 傳回的值會儲存在 `timer` 所指定的位置。 此參數可能是 `NULL`，而在此情況下不會儲存傳回的值。  
+## <a name="remarks"></a>備註  
+ `time` 函式會傳回根據系統時鐘自國際標準時間 (UTC) 1970 年 1 月 1 日午夜 (00:00:00) 起所經過的秒數。 傳回的值會儲存在 `timer` 所指定的位置。 此參數可能是 `NULL`，而在此情況下不會儲存傳回的值。  
   
- `time` 是 `_time64` 的包裝函式，而按照預設，`time_t` 相當於 `__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元 `time_t`，您可以定義 `_USE_32BIT_TIME_T`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗；不允許在 64 位元平台上使用此巨集。  
+ `time` 是 `_time64` 的包裝函式，而根據預設，`time_t` 相當於 `__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元`time_t`，您可以定義 `_USE_32BIT_TIME_T`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗；不允許在 64 位元平台上使用此巨集。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`time`, `_time32`, `_time64`|C: \<time.h\>，C\+\+: \<ctime\> 或 \<time.h\>|  
+|-------------|---------------------|  
+|`time`, `_time32`, `_time64`|C: \<time.h>，C++： \<ctime> 或 \<time.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```c  
+```C  
 // crt_times.c  
 // compile with: /W3  
 // This program demonstrates these time and date functions:  
@@ -224,19 +240,31 @@ int main()
 ```  
   
 ```Output  
-OS 時間：            13:51:23 OS 日期：            04/25/03 自 1/1/70 UTC 起所經過的秒數：   1051303883 UNIX 時間和日期：4 月 25 日星期五 13:51:23 2003 國際標準時間：4 月 25 日星期五 20:51:23 2003年 12 小時制時間：下午 01:51:23 加毫秒：552 區域差異以小時為單位的 UTC：8 時區名稱：太平洋標準時間日光節約時間：是 聖誕節            12 月 25 日 星期六 12:00:00 1993 年今天是星期五，2003 年 4 月的第 25 天。  
+OS time:            13:51:23  
+OS date:            04/25/03  
+Time in seconds since UTC 1/1/70:   1051303883  
+UNIX time and date:         Fri Apr 25 13:51:23 2003  
+Coordinated universal time:      Fri Apr 25 20:51:23 2003  
+12-hour time:            01:51:23 PM  
+Plus milliseconds:         552  
+Zone difference in hours from UTC:   8  
+Time zone name:            Pacific Standard Time  
+Daylight savings:         YES  
+Christmas            Sat Dec 25 12:00:00 1993  
+  
+Today is Friday, day 25 of April in the year 2003.  
 ```  
   
-## .NET Framework 對等用法  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](../Topic/Platform%20Invoke%20Examples.md)。  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+ 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
- [asctime、\_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [asctime\_s、\_wasctime\_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
- [\_ftime、\_ftime32、\_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
- [gmtime、\_gmtime32、\_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [gmtime\_s、\_gmtime32\_s、\_gmtime64\_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
- [localtime，\_localtime32，\_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [localtime\_s、\_localtime32\_s、\_localtime64\_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
- [\_utime、\_utime32、\_utime64、\_wutime、\_wutime32、\_wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)
+ [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
+ [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   
+ [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [gmtime_s、_gmtime32_s、_gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)   
+ [localtime、_localtime32、_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [localtime_s、_localtime32_s、_localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)   
+ [_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](../../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)

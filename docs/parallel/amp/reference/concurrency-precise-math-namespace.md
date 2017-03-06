@@ -1,179 +1,198 @@
 ---
-title: "Concurrency::precise_math 命名空間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "amp_math/Concurrency::precise_math"
-dev_langs: 
-  - "C++"
+title: "Concurrency:: precise_math 命名空間 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- amp_math/Concurrency::precise_math
+dev_langs:
+- C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Concurrency::precise_math 命名空間
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b64bd3e3702701ae2685d6688d88988dd91dc5d0
+ms.lasthandoff: 02/24/2017
 
-命名空間 `precise_math` 裡的函式與 C99 相容。  各函式的單精度與雙精度版本均有包含。  例如， `acos` 為雙精度版本，而 `acosf` 為單精度版本。  這些包含單精度函式在內的函式需要加速器上的擴充雙精度支援。  您可以透過 [accelerator::supports\_double\_precision 資料成員](../Topic/accelerator::supports_double_precision%20Data%20Member.md) 來檢查您是否可以在某個特定的加速器上執行這些函式。  
+---
+# <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math 命名空間
+函式的`precise_math`命名空間是 C99 標準。 單一精確度和雙精確度的每個函式的版本隨附。 例如，`acos`是雙精度版本和`acosf`是單精確度的版本。 這些功能，包括的單精確度函式需要加速器上擴充的雙精確度支援。 您可以使用[accelerator:: supports_double_precision 資料成員](accelerator-class.md#supports_double_precision)來判斷您可以在特定的加速器上執行這些函式。 
+
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```vb  
+```cpp  
 namespace precise_math;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 功能  
+### <a name="functions"></a>函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[acos 函式](../Topic/acos%20Function.md)|多載。  計算這個引數的反餘弦函式值|  
-|[acosf 函式](../Topic/acosf%20Function.md)|計算這個引數的反餘弦函式值|  
-|[acosh 函式](../Topic/acosh%20Function.md)|多載。  計算這個引數的反雙曲線餘弦函式值|  
-|[acoshf 函式](../Topic/acoshf%20Function.md)|計算這個引數的反雙曲線餘弦函式值|  
-|[asin 函式](../Topic/asin%20Function.md)|多載。  計算引數的反正弦函式值|  
-|[asinf 函式](../Topic/asinf%20Function.md)|計算引數的反正弦函式值|  
-|[asinh 函式](../Topic/asinh%20Function.md)|多載。  計算引數的反雙曲正弦函式值|  
-|[asinhf 函式](../Topic/asinhf%20Function.md)|計算引數的反雙曲正弦函式值|  
-|[atan 函式](../Topic/atan%20Function.md)|多載。  計算這個引數的反正切函式值|  
-|[atan2 函式](../Topic/atan2%20Function.md)|多載。  計算 \_Y\/\_X 的反正切函式值|  
-|[atan2f 函式](../Topic/atan2f%20Function.md)|計算 \_Y\/\_X 的反正切函式值|  
-|[atanf 函式](../Topic/atanf%20Function.md)|計算這個引數的反正切函式值|  
-|[atanh 函式](../Topic/atanh%20Function.md)|多載。  計算引數的反雙曲線正切函式值|  
-|[atanhf 函式](../Topic/atanhf%20Function.md)|計算引數的反雙曲線正切函式值|  
-|[cbrt 函式](../Topic/cbrt%20Function.md)|多載。  計算這個引數的實數立方根|  
-|[cbrtf 函式](../Topic/cbrtf%20Function.md)|計算這個引數的實數立方根|  
-|[ceil 函式](../Topic/ceil%20Function.md)|多載。  計算引數的向上取整函式值|  
-|[ceilf 函式](../Topic/ceilf%20Function.md)|計算引數的向上取整函式值|  
-|[copysign 函式](../Topic/copysign%20Function.md)|多載。  產生值為 \_X 且正負號為 \_Y 的值|  
-|[copysignf 函式](../Topic/copysignf%20Function.md)|產生值為 \_X 且正負號為 \_Y 的值|  
-|[cos 函式](../Topic/cos%20Function.md)|多載。  計算這個引數的餘弦函式值|  
-|[cosf 函式](../Topic/cosf%20Function.md)|計算這個引數的餘弦函式值|  
-|[cosh 函式](../Topic/cosh%20Function.md)|多載。  計算引數的雙曲線餘弦函式值|  
-|[coshf 函式](../Topic/coshf%20Function.md)|計算引數的雙曲線餘弦函式值|  
-|[cospi 函式](../Topic/cospi%20Function.md)|多載。  計算 pi \* \_X 的餘弦函式值|  
-|[cospif 函式](../Topic/cospif%20Function.md)|計算 pi \* \_X 的餘弦函式值|  
-|[erf 函式](../Topic/erf%20Function.md)|多載。  計算 \_X 的誤差函式值|  
-|[erfc 函式](../Topic/erfc%20Function.md)|多載。  計算 \_X 的互補誤差函式值|  
-|[erfcf 函式](../Topic/erfcf%20Function.md)|計算 \_X 的互補誤差函式值|  
-|[erfcinv 函式](../Topic/erfcinv%20Function.md)|多載。  計算的 \_X 的反互補誤差函式值|  
-|[erfcinvf 函式](../Topic/erfcinvf%20Function.md)|計算的 \_X 的反互補誤差函式值|  
-|[erff 函式](../Topic/erff%20Function.md)|計算 \_X 的誤差函式值|  
-|[erfinv 函式](../Topic/erfinv%20Function.md)|多載。  計算 \_X 的反誤差函式值|  
-|[erfinvf 函式](../Topic/erfinvf%20Function.md)|計算 \_X 的反誤差函式值|  
-|[exp 函式](../Topic/exp%20Function.md)|多載。  計算引數以 e 為基底的指數函式值|  
-|[exp10 函式](../Topic/exp10%20Function.md)|多載。  計算引數以 10 為底數的指數函式值|  
-|[exp10f 函式](../Topic/exp10f%20Function.md)|計算引數以 10 為底數的指數函式值|  
-|[exp2 函式](../Topic/exp2%20Function.md)|多載。  計算引數以2為底數的指數|  
-|[exp2f 函式](../Topic/exp2f%20Function.md)|計算引數以2為底數的指數|  
-|[expf 函式](../Topic/expf%20Function.md)|計算引數以 e 為基底的指數函式值|  
-|[expm1 函式](../Topic/expm1%20Function.md)|多載。  計算引數以 e 為基底的指數函式值減 1 。|  
-|[expm1f 函式](../Topic/expm1f%20Function.md)|計算引數以 e 為基底的指數函式值減 1 。|  
-|[fabs 函式](../Topic/fabs%20Function.md)|多載。  傳回引數的絕對值|  
-|[fabsf 函式](../Topic/fabsf%20Function.md)|傳回引數的絕對值|  
-|[fdim 函式](../Topic/fdim%20Function.md)|多載。  判斷引數之間的正差異|  
-|[fdimf 函式](../Topic/fdimf%20Function.md)|判斷引數之間的正差異|  
-|[floor 函式](../Topic/floor%20Function.md)|多載。  計算引數的向下取整函式值|  
-|[floorf 函式](../Topic/floorf%20Function.md)|計算引數的向下取整函式值|  
-|[fma 函式](../Topic/fma%20Function.md)|多載。  計算 \(\_X \* \_Y\) \+ \_Z 並四捨五入成一個三元計算。|  
-|[fmaf 函式](../Topic/fmaf%20Function.md)|計算 \(\_X \* \_Y\) \+ \_Z 並四捨五入成一個三元計算。|  
-|[fmax 函式](../Topic/fmax%20Function.md)|多載。  判斷引數的最大的數字值|  
-|[fmaxf 函式](../Topic/fmaxf%20Function.md)|判斷引數的最大的數字值|  
-|[fmin 函式](../Topic/fmin%20Function.md)|多載。  判斷引數最小的數字值|  
-|[fminf 函式](../Topic/fminf%20Function.md)|判斷引數最小的數字值|  
-|[fmod 函式 \(C\+\+ AMP\)](../Topic/fmod%20Function%20\(C++%20AMP\).md)|多載。  計算 \_X\/\_Y 浮點數餘數。|  
-|[fmodf 函式](../Topic/fmodf%20Function.md)|計算 \_X\/\_Y 浮點數餘數。|  
-|[fpclassify 函式](../Topic/fpclassify%20Function.md)|多載。  將引數值分類為 NaN，無限，一般，低品質，零|  
-|[frexp 函式](../Topic/frexp%20Function.md)|多載。  取得 \_X 的尾數和指數|  
-|[frexpf 函式](../Topic/frexpf%20Function.md)|取得 \_X 的尾數和指數|  
-|[hypot 函式](../Topic/hypot%20Function.md)|多載。  計算 \_X 與 \_Y 的平方和的平方根。|  
-|[hypotf 函式](../Topic/hypotf%20Function.md)|計算 \_X 與 \_Y 的平方和的平方根。|  
-|[ilogb 函式](../Topic/ilogb%20Function.md)|多載。  擷取 \_X 的指數值成一有號整數|  
-|[ilogbf 函式](../Topic/ilogbf%20Function.md)|擷取 \_X 的指數值成一有號整數|  
-|[isfinite 函式](../Topic/isfinite%20Function.md)|多載。  確定引數是否有有限值。|  
-|[isinf 函式](../Topic/isinf%20Function.md)|多載。  確定引數是否為無限大|  
-|[isnan 函式](../Topic/isnan%20Function.md)|多載。  判斷這個引數是否為非數|  
-|[isnormal 函式](../Topic/isnormal%20Function.md)|多載。  判斷這個引數是一般的|  
-|[ldexp 函式](../Topic/ldexp%20Function.md)|多載。  利用尾數和指數計算出一個實數。|  
-|[ldexpf 函式](../Topic/ldexpf%20Function.md)|利用尾數和指數計算出一個實數。|  
-|[lgamma 函式](../Topic/lgamma%20Function.md)|多載。  計算引數的 gamma 的絕對值的自然對數函式值|  
-|[lgammaf 函式](../Topic/lgammaf%20Function.md)|計算引數的 gamma 的絕對值的自然對數函式值|  
-|[log 函式](../Topic/log%20Function.md)|多載。  計算引數以 e 為基底的對數函式值|  
-|[log10 函式](../Topic/log10%20Function.md)|多載。  計算引數以 10 為基底的對數函式值|  
-|[log10f 函式](../Topic/log10f%20Function.md)|計算引數以 10 為基底的對數函式值|  
-|[log1p 函式](../Topic/log1p%20Function.md)|多載。  計算引數加 1 ，以 e 為基底的對數函式值|  
-|[log1pf 函式](../Topic/log1pf%20Function.md)|計算引數加 1 ，以 e 為基底的對數函式值|  
-|[log2 函式](../Topic/log2%20Function.md)|多載。  計算引數以 2 為基底的對數函式值|  
-|[log2f 函式](../Topic/log2f%20Function.md)|計算引數以 2 為基底的對數函式值|  
-|[logb 函式](../Topic/logb%20Function.md)|多載。  擷取 \_X 指數，當做浮點格式的帶正負號的整數 \(Unsigned Integer\) 值。|  
-|[logbf 函式](../Topic/logbf%20Function.md)|擷取 \_X 指數，當做浮點格式的帶正負號的整數 \(Unsigned Integer\) 值。|  
-|[logf 函式](../Topic/logf%20Function.md)|計算引數以 e 為基底的對數函式值|  
-|[modf 函式](../Topic/modf%20Function.md)|多載。  分割 \_X 至分數和整數部分中。|  
-|[modff 函式](../Topic/modff%20Function.md)|分割 \_X 至分數和整數部分中。|  
-|[nan 函式](../Topic/nan%20Function.md)|傳回靜默非數|  
-|[nanf 函式](../Topic/nanf%20Function.md)|傳回靜默非數|  
-|[nearbyint 函式](../Topic/nearbyint%20Function.md)|多載。  依目前的捨入方向將引數以浮點數值的格式捨入成一整數值|  
-|[nearbyintf 函式](../Topic/nearbyintf%20Function.md)|依目前的捨入方向將引數以浮點數值的格式捨入成一整數值|  
-|[nextafter 函式](../Topic/nextafter%20Function.md)|多載。  以函式的形式找出依照 \_Y 的方向，在 \_X 之後下一個可以表示的數值|  
-|[nextafterf 函式](../Topic/nextafterf%20Function.md)|以函式的形式找出依照 \_Y 的方向，在 \_X 之後下一個可以表示的數值|  
-|[phi 函式](../Topic/phi%20Function.md)|多載。  傳回引數的累積分布函數值。|  
-|[phif 函式](../Topic/phif%20Function.md)|傳回引數的累積分布函數值。|  
-|[pow 函式](../Topic/pow%20Function.md)|多載。  計算 \_X 的 \_Y 次方|  
-|[powf 函式](../Topic/powf%20Function.md)|計算 \_X 的 \_Y 次方|  
-|[probit 函式](../Topic/probit%20Function.md)|多載。  傳回引數的反累積分布函式值|  
-|[probitf 函式](../Topic/probitf%20Function.md)|傳回引數的反累積分布函式值|  
-|[rcbrt 函式](../Topic/rcbrt%20Function.md)|多載。  傳回引數的立方根的倒數|  
-|[rcbrtf 函式](../Topic/rcbrtf%20Function.md)|傳回引數的立方根的倒數|  
-|[remainder 函式](../Topic/remainder%20Function.md)|多載。  計算餘數: \_X REM \_Y|  
-|[remainderf 函式](../Topic/remainderf%20Function.md)|計算餘數: \_X REM \_Y|  
-|[remquo 函式](../Topic/remquo%20Function.md)|多載。  計算與 \_X REM \_Y 相同的餘數值。  並計算整數商數 \_X\/\_Y 的較低的 23 位元，並讓該值正負號和 \_X\/\_Y 相同。  它將此有號數值儲存在 \_Quo 所指向的整數裡。|  
-|[remquof 函式](../Topic/remquof%20Function.md)|計算與 \_X REM \_Y 相同的餘數值。  並計算整數商數 \_X\/\_Y 的較低的 23 位元，並讓該值正負號和 \_X\/\_Y 相同。  它將此有號數值儲存在 \_Quo 所指向的整數裡。|  
-|[round 函式](../Topic/round%20Function.md)|多載。  將 \_X 捨入至最接近的整數。|  
-|[roundf 函式](../Topic/roundf%20Function.md)|將 \_X 捨入至最接近的整數。|  
-|[rsqrt 函式](../Topic/rsqrt%20Function.md)|多載。  傳回引數的平方根的倒數。|  
-|[rsqrtf 函式](../Topic/rsqrtf%20Function.md)|傳回引數的平方根的倒數。|  
-|[scalb 函式](../Topic/scalb%20Function.md)|多載。  計算 \_X 乘以 FLT\_RADIX 的 \_Y 次方|  
-|[scalbf 函式](../Topic/scalbf%20Function.md)|計算 \_X 乘以 FLT\_RADIX 的 \_Y 次方|  
-|[scalbn 函式](../Topic/scalbn%20Function.md)|多載。  計算 \_X 乘以 FLT\_RADIX 的 \_Y 次方|  
-|[scalbnf 函式](../Topic/scalbnf%20Function.md)|計算 \_X 乘以 FLT\_RADIX 的 \_Y 次方|  
-|[signbit 函式](../Topic/signbit%20Function.md)|多載。  判斷 \_X 的符號是否為負。|  
-|[signbitf 函式](../Topic/signbitf%20Function.md)|判斷 \_X 的符號是否為負。|  
-|[sin 函式](../Topic/sin%20Function.md)|多載。  計算這個引數的正弦值。|  
-|[sincos 函式](../Topic/sincos%20Function.md)|多載。  計算 \_X 的正弦 \(Sine\) 和餘弦函數 \(Cosine\) 值|  
-|[sincosf 函式](../Topic/sincosf%20Function.md)|計算 \_X 的正弦 \(Sine\) 和餘弦函數 \(Cosine\) 值|  
-|[sinf 函式](../Topic/sinf%20Function.md)|計算這個引數的正弦值。|  
-|[sinh 函式](../Topic/sinh%20Function.md)|多載。  計算引數的雙曲正弦函式值|  
-|[sinhf 函式](../Topic/sinhf%20Function.md)|計算引數的雙曲正弦函式值|  
-|[sinpi 函式](../Topic/sinpi%20Function.md)|多載。  計算 pi \* \_X 的正弦值。|  
-|[sinpif 函式](../Topic/sinpif%20Function.md)|計算 pi \* \_X 的正弦值。|  
-|[sqrt 函式](../Topic/sqrt%20Function.md)|多載。  計算引數的平方根|  
-|[sqrtf 函式](../Topic/sqrtf%20Function.md)|計算引數的平方根|  
-|[tan 函式](../Topic/tan%20Function.md)|多載。  計算這個引數的正切值|  
-|[tanf 函式](../Topic/tanf%20Function.md)|計算這個引數的正切值|  
-|[tanh 函式](../Topic/tanh%20Function.md)|多載。  計算引數的雙曲正切函式值|  
-|[tanhf 函式](../Topic/tanhf%20Function.md)|計算引數的雙曲正切函式值|  
-|[tanpi 函式](../Topic/tanpi%20Function.md)|多載。  計算角度 pi \* \_X 的正切函式值|  
-|[tanpif 函式](../Topic/tanpif%20Function.md)|計算角度 pi \* \_X 的正切函式值|  
-|[tgamma 函式](../Topic/tgamma%20Function.md)|多載。  計算 \_X 的 gamma 函式值|  
-|[tgammaf 函式](../Topic/tgammaf%20Function.md)|計算 \_X 的 gamma 函式值|  
-|[trunc 函式](../Topic/trunc%20Function.md)|多載。  將這個引數截為整數部份|  
-|[truncf 函式](../Topic/truncf%20Function.md)|將這個引數截為整數部份|  
+|名稱|說明|  
+|----------|-----------------|  
+|[acos 函式](concurrency-precise-math-namespace-functions.md#acos)|多載。 計算引數的反餘弦|  
+|[acosf 函式](concurrency-precise-math-namespace-functions.md#acosf)|計算引數的反餘弦|  
+|[acosh 函式](concurrency-precise-math-namespace-functions.md#acosh)|多載。 計算引數的反雙曲餘弦|  
+|[acoshf 函式](concurrency-precise-math-namespace-functions.md#acoshf)|計算引數的反雙曲餘弦|  
+|[asin 函式](concurrency-precise-math-namespace-functions.md#asin)|多載。 計算引數的反正弦值|  
+|[asinf 函式](concurrency-precise-math-namespace-functions.md#asinf)|計算引數的反正弦值|  
+|[asinh 函式](concurrency-precise-math-namespace-functions.md#asinh)|多載。 計算引數的反雙曲正弦|  
+|[asinhf 函式](concurrency-precise-math-namespace-functions.md#asinhf)|計算引數的反雙曲正弦|  
+|[atan 函式](concurrency-precise-math-namespace-functions.md#atan)|多載。 計算引數的反正切|  
+|[atan2 函式](concurrency-precise-math-namespace-functions.md#atan2)|多載。 計算 _Y/_X 的反正切|  
+|[atan2f 函式](concurrency-precise-math-namespace-functions.md#atan2f)|計算 _Y/_X 的反正切|  
+|[atanf 函式](concurrency-precise-math-namespace-functions.md#atanf)|計算引數的反正切|  
+|[atanh 函式](concurrency-precise-math-namespace-functions.md#atanh)|多載。 計算引數的反雙曲正切|  
+|[atanhf 函式](concurrency-precise-math-namespace-functions.md#atanhf)|計算引數的反雙曲正切|  
+|[cbrt 函式](concurrency-precise-math-namespace-functions.md#cbrt)|多載。 計算引數的實際的立方根|  
+|[cbrtf 函式](concurrency-precise-math-namespace-functions.md#cbrtf)|計算引數的實際的立方根|  
+|[ceil 函式](concurrency-precise-math-namespace-functions.md#ceil)|多載。 計算引數的上限|  
+|[ceilf 函式](concurrency-precise-math-namespace-functions.md#ceilf)|計算引數的上限|  
+|[copysign 函式](concurrency-precise-math-namespace-functions.md#copysign)|多載。 產生與 _X 且 _Y 的正負號的值|  
+|[copysignf 函式](concurrency-precise-math-namespace-functions.md#copysignf)|產生與 _X 且 _Y 的正負號的值|  
+|[cos 函式](concurrency-precise-math-namespace-functions.md#cos)|多載。 計算引數的餘弦|  
+|[cosf 函式](concurrency-precise-math-namespace-functions.md#cosf)|計算引數的餘弦|  
+|[cosh 函式](concurrency-precise-math-namespace-functions.md#cosh)|多載。 計算引數的雙曲餘弦值|  
+|[coshf 函式](concurrency-precise-math-namespace-functions.md#coshf)|計算引數的雙曲餘弦值|  
+|[cospi 函式](concurrency-precise-math-namespace-functions.md#cospi)|多載。 計算 pi 的餘弦值 * _X|  
+|[cospif 函式](concurrency-precise-math-namespace-functions.md#cospif)|計算 pi 的餘弦值 * _X|  
+|[erf 函式](concurrency-precise-math-namespace-functions.md#erf)|多載。 計算 _X 錯誤函式|  
+|[erfc 函式](concurrency-precise-math-namespace-functions.md#erfc)|多載。 計算 _X 補充錯誤函式|  
+|[erfcf 函式](concurrency-precise-math-namespace-functions.md#erfcf)|計算 _X 補充錯誤函式|  
+|[erfcinv 函式](concurrency-precise-math-namespace-functions.md#erfcinv)|多載。 計算 _X 反向的補充錯誤函式|  
+|[erfcinvf 函式](concurrency-precise-math-namespace-functions.md#erfcinvf)|計算 _X 反向的補充錯誤函式|  
+|[erff 函式](concurrency-precise-math-namespace-functions.md#erff)|計算 _X 錯誤函式|  
+|[erfinv 函式](concurrency-precise-math-namespace-functions.md#erfinv)|多載。 計算 _X 反向錯誤函式|  
+|[erfinvf 函式](concurrency-precise-math-namespace-functions.md#erfinvf)|計算 _X 反向錯誤函式|  
+|[exp 函式](concurrency-precise-math-namespace-functions.md#exp)|多載。 計算以 e 為底數的引數的指數|  
+|[exp10 函式](concurrency-precise-math-namespace-functions.md#exp10)|多載。 計算指數引數的基底為&10;|  
+|[exp10f 函式](concurrency-precise-math-namespace-functions.md#exp10f)|計算指數引數的基底為&10;|  
+|[exp2 函式](concurrency-precise-math-namespace-functions.md#exp2)|多載。 計算引數的指數底數-2|  
+|[exp2f 函式](concurrency-precise-math-namespace-functions.md#exp2f)|計算引數的指數底數-2|  
+|[expf 函式](concurrency-precise-math-namespace-functions.md#expf)|計算以 e 為底數的引數的指數|  
+|[expm1 函式](concurrency-precise-math-namespace-functions.md#expm1)|多載。 計算引數以 e 為底數的指數，減 1。|  
+|[expm1f 函式](concurrency-precise-math-namespace-functions.md#expm1f)|計算引數以 e 為底數的指數，減 1。|  
+|[fabs 函式](concurrency-precise-math-namespace-functions.md#fabs)|多載。 傳回引數的絕對值|  
+|[fabsf 函式](concurrency-precise-math-namespace-functions.md#fabsf)|傳回引數的絕對值|  
+|[fdim 函式](concurrency-precise-math-namespace-functions.md#fdim)|多載。 決定在引數之間的正數差異|  
+|[fdimf 函式](concurrency-precise-math-namespace-functions.md#fdimf)|決定在引數之間的正數差異|  
+|[floor 函式](concurrency-precise-math-namespace-functions.md#floor)|多載。 計算引數的最低限度值|  
+|[floorf 函式](concurrency-precise-math-namespace-functions.md#floorf)|計算引數的最低限度值|  
+|[fma 函式](concurrency-precise-math-namespace-functions.md#fma)|多載。 計算 (_X * _Y) + _Z，捨入為一個三元作業|  
+|[fmaf 函式](concurrency-precise-math-namespace-functions.md#fmaf)|計算 (_X * _Y) + _Z，捨入為一個三元作業|  
+|[fmax 函式](concurrency-precise-math-namespace-functions.md#fmax)|多載。 判斷引數的最大數值|  
+|[fmaxf 函式](concurrency-precise-math-namespace-functions.md#fmaxf)|判斷引數的最大數值|  
+|[fmin 函式](concurrency-precise-math-namespace-functions.md#fmin)|多載。 判斷引數的最小數值|  
+|[fminf 函式](concurrency-precise-math-namespace-functions.md#fminf)|判斷引數的最小數值|  
+|[fmod 函式 (c + + AMP)](concurrency-precise-math-namespace-functions.md#fmod)|多載。 計算 _X/_Y 浮點數餘數|  
+|[fmodf 函式](concurrency-precise-math-namespace-functions.md#fmodf)|計算 _X/_Y 浮點數餘數|  
+|[fpclassify 函式](concurrency-precise-math-namespace-functions.md#fpclassify)|多載。 將引數值分類為 NaN、 無限，normal subnormal，零|  
+|[frexp 函式](concurrency-precise-math-namespace-functions.md#frexp)|多載。 取得尾數和指數 _X|  
+|[frexpf 函式](concurrency-precise-math-namespace-functions.md#frexpf)|取得尾數和指數 _X|  
+|[hypot 函式](concurrency-precise-math-namespace-functions.md#hypot)|多載。 計算的 _X 和 _Y 平方總和的平方根|  
+|[hypotf 函式](concurrency-precise-math-namespace-functions.md#hypotf)|計算的 _X 和 _Y 平方總和的平方根|  
+|[ilogb 函式](concurrency-precise-math-namespace-functions.md#ilogb)|多載。 擷取 _X 指數為帶正負號的 int 值|  
+|[ilogbf 函式](concurrency-precise-math-namespace-functions.md#ilogbf)|擷取 _X 指數為帶正負號的 int 值|  
+|[isfinite 函式](concurrency-precise-math-namespace-functions.md#isfinite)|多載。 決定是否引數的有限值|  
+|[isinf 函式](concurrency-precise-math-namespace-functions.md#isinf)|多載。 決定是否引數是無限值|  
+|[isnan 函式](concurrency-precise-math-namespace-functions.md#isnan)|多載。 決定是否該引數是 NaN|  
+|[isnormal 函式](concurrency-precise-math-namespace-functions.md#isnormal)|多載。 判斷引數是否為標準模式|  
+|[ldexp 函式](concurrency-precise-math-namespace-functions.md#ldexp)|多載。 計算實數尾數和指數|  
+|[ldexpf 函式](concurrency-precise-math-namespace-functions.md#ldexpf)|計算實數尾數和指數|  
+|[lgamma 函式](concurrency-precise-math-namespace-functions.md#lgamma)|多載。 計算自然對數的 gamma 引數的絕對值|  
+|[lgammaf 函式](concurrency-precise-math-namespace-functions.md#lgammaf)|計算自然對數的 gamma 引數的絕對值|  
+|[log 函式](concurrency-precise-math-namespace-functions.md#log)|多載。 計算引數以 e 為底數對數|  
+|[log10 函式](concurrency-precise-math-namespace-functions.md#log10)|多載。 計算引數的基底&10; 對數|  
+|[log10f 函式](concurrency-precise-math-namespace-functions.md#log10f)|計算引數的基底&10; 對數|  
+|[log1p 函式](concurrency-precise-math-namespace-functions.md#log1p)|多載。 計算以 e 為底數的對數 1 再加上引數|  
+|[log1pf 函式](concurrency-precise-math-namespace-functions.md#log1pf)|計算以 e 為底數的對數 1 再加上引數|  
+|[log2 函式](concurrency-precise-math-namespace-functions.md#log2)|多載。 計算引數的基底&2; 對數|  
+|[log2f 函式](concurrency-precise-math-namespace-functions.md#log2f)|計算引數的基底&2; 對數|  
+|[logb 函式](concurrency-precise-math-namespace-functions.md#logb)|多載。 擷取 _X，指數為帶正負號的整數中的值的浮點格式|  
+|[logbf 函式](concurrency-precise-math-namespace-functions.md#logbf)|擷取 _X，指數為帶正負號的整數中的值的浮點格式|  
+|[logf 函式](concurrency-precise-math-namespace-functions.md#logf)|計算引數以 e 為底數對數|  
+|[modf 函式](concurrency-precise-math-namespace-functions.md#modf)|多載。 分割成小數 _X 和整數部分。|  
+|[modff 函式](concurrency-precise-math-namespace-functions.md#modff)|分割成小數 _X 和整數部分。|  
+|[nan 函式](concurrency-precise-math-namespace-functions.md#nan)|傳回無訊息 NaN|  
+|[nanf 函式](concurrency-precise-math-namespace-functions.md#nanf)|傳回無訊息 NaN|  
+|[nearbyint 函式](concurrency-precise-math-namespace-functions.md#nearbyint)|多載。 四捨五入至浮點格式，使用目前的捨入方向的整數值的引數。|  
+|[nearbyintf 函式](concurrency-precise-math-namespace-functions.md#nearbyintf)|四捨五入至浮點格式，使用目前的捨入方向的整數值的引數。|  
+|[nextafter 函式](concurrency-precise-math-namespace-functions.md#nextafter)|多載。 判斷 _X _Y 的方向之後的下一個可顯示值，函數的類型|  
+|[nextafterf 函式](concurrency-precise-math-namespace-functions.md#nextafterf)|判斷 _X _Y 的方向之後的下一個可顯示值，函數的類型|  
+|[phi 函式](concurrency-precise-math-namespace-functions.md#phi)|多載。 傳回累加分配函數的引數|  
+|[phif 函式](concurrency-precise-math-namespace-functions.md#phif)|傳回累加分配函數的引數|  
+|[pow 函式](concurrency-precise-math-namespace-functions.md#pow)|多載。 計算乘冪的 _Y _X|  
+|[powf 函式](concurrency-precise-math-namespace-functions.md#powf)|計算乘冪的 _Y _X|  
+|[probit 函式](concurrency-precise-math-namespace-functions.md#probit)|多載。 傳回反向累積分佈函數的引數|  
+|[probitf 函式](concurrency-precise-math-namespace-functions.md#probitf)|傳回反向累積分佈函數的引數|  
+|[rcbrt 函式](concurrency-precise-math-namespace-functions.md#rcbrt)|多載。 傳回對等的引數的立方根|  
+|[rcbrtf 函式](concurrency-precise-math-namespace-functions.md#rcbrtf)|傳回對等的引數的立方根|  
+|[remainder 函式](concurrency-precise-math-namespace-functions.md#remainder)|多載。 計算餘數︰ _X REM _Y|  
+|[remainderf 函式](concurrency-precise-math-namespace-functions.md#remainderf)|計算餘數︰ _X REM _Y|  
+|[remquo 函式](concurrency-precise-math-namespace-functions.md#remquo)|多載。 會計算為 _X REM _Y 相同的餘數。 也會計算較低的 23 位元的整數商數 _X/_Y，並提供相同的簽章，為 _X/_Y 該值。 _Quo 所指的整數，它就會儲存此帶正負號的值。|  
+|[remquof 函式](concurrency-precise-math-namespace-functions.md#remquof)|會計算為 _X REM _Y 相同的餘數。 也會計算較低的 23 位元的整數商數 _X/_Y，並提供相同的簽章，為 _X/_Y 該值。 _Quo 所指的整數，它就會儲存此帶正負號的值。|  
+|[round 函式](concurrency-precise-math-namespace-functions.md#round)|多載。 四捨五入至最接近整數的 _X|  
+|[roundf 函式](concurrency-precise-math-namespace-functions.md#roundf)|四捨五入至最接近整數的 _X|  
+|[rsqrt 函式](concurrency-precise-math-namespace-functions.md#rsqrt)|多載。 傳回對等的引數的平方根|  
+|[rsqrtf 函式](concurrency-precise-math-namespace-functions.md#rsqrtf)|傳回對等的引數的平方根|  
+|[scalb 函式](concurrency-precise-math-namespace-functions.md#scalb)|多載。 將電源 _Y 到由 FLT_RADIX _X|  
+|[scalbf 函式](concurrency-precise-math-namespace-functions.md#scalbf)|將電源 _Y 到由 FLT_RADIX _X|  
+|[scalbn 函式](concurrency-precise-math-namespace-functions.md#scalbn)|多載。 將電源 _Y 到由 FLT_RADIX _X|  
+|[scalbnf 函式](concurrency-precise-math-namespace-functions.md#scalbnf)|將電源 _Y 到由 FLT_RADIX _X|  
+|[signbit 函式](concurrency-precise-math-namespace-functions.md#signbit)|多載。 判斷是否為負數的 _X 正負號|  
+|[signbitf 函式](concurrency-precise-math-namespace-functions.md#signbitf)|判斷是否為負數的 _X 正負號|  
+|[sin 函式](concurrency-precise-math-namespace-functions.md#sin)|多載。 計算引數的正弦函數值|  
+|[sincos 函式](concurrency-precise-math-namespace-functions.md#sincos)|多載。 計算正弦和餘弦值 _X|  
+|[sincosf 函式](concurrency-precise-math-namespace-functions.md#sincosf)|計算正弦和餘弦值 _X|  
+|[sinf 函式](concurrency-precise-math-namespace-functions.md#sinf)|計算引數的正弦函數值|  
+|[sinh 函式](concurrency-precise-math-namespace-functions.md#sinh)|多載。 計算引數的雙曲正弦值|  
+|[sinhf 函式](concurrency-precise-math-namespace-functions.md#sinhf)|計算引數的雙曲正弦值|  
+|[sinpi 函式](concurrency-precise-math-namespace-functions.md#sinpi)|多載。 計算 pi 的正弦值 * _X|  
+|[sinpif 函式](concurrency-precise-math-namespace-functions.md#sinpif)|計算 pi 的正弦值 * _X|  
+|[sqrt 函式](concurrency-precise-math-namespace-functions.md#sqrt)|多載。 計算引數的 squre 根|  
+|[sqrtf 函式](concurrency-precise-math-namespace-functions.md#sqrtf)|計算引數的 squre 根|  
+|[tan 函式](concurrency-precise-math-namespace-functions.md#tan)|多載。 計算引數的正切函數值|  
+|[tanf 函式](concurrency-precise-math-namespace-functions.md#tanf)|計算引數的正切函數值|  
+|[tanh 函式](concurrency-precise-math-namespace-functions.md#tanh)|多載。 計算引數的雙曲正切函數值|  
+|[tanhf 函式](concurrency-precise-math-namespace-functions.md#tanhf)|計算引數的雙曲正切函數值|  
+|[tanpi 函式](concurrency-precise-math-namespace-functions.md#tanpi)|多載。 計算 pi 的正切函數值 * _X|  
+|[tanpif 函式](concurrency-precise-math-namespace-functions.md#tanpif)|計算 pi 的正切函數值 * _X|  
+|[tgamma 函式](concurrency-precise-math-namespace-functions.md#tgamma)|多載。 計算 _X gamma 的函數|  
+|[tgammaf 函式](concurrency-precise-math-namespace-functions.md#tgammaf)|計算 _X gamma 的函數|  
+|[trunc 函式](concurrency-precise-math-namespace-functions.md#trunc)|多載。 截斷整數部分的引數|  
+|[truncf 函式](concurrency-precise-math-namespace-functions.md#truncf)|截斷整數部分的引數|  
   
-## 需求  
- **標頭:** amp\_math.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** amp_math.h  
   
- **命名空間：**並行  
+ **命名空間：** 並行  
   
-## 請參閱  
- [Concurrency 命名空間 \(C\+\+ AMP\)](../../../parallel/amp/reference/concurrency-namespace-cpp-amp.md)
+## <a name="see-also"></a>另請參閱  
+ [Concurrency 命名空間 (c + + AMP)](concurrency-namespace-cpp-amp.md)
+

@@ -1,103 +1,203 @@
 ---
-title: "CComTearOffObject Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ATL::CComTearOffObject<Base>"
-  - "ATL::CComTearOffObject"
-  - "ATL.CComTearOffObject"
-  - "ATL.CComTearOffObject<Base>"
-  - "CComTearOffObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CComTearOffObject class"
-  - "tear-off interfaces"
-  - "tear-off interfaces, ATL"
+title: "CComTearOffObject 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ATL::CComTearOffObject<Base>
+- ATL::CComTearOffObject
+- ATL.CComTearOffObject
+- ATL.CComTearOffObject<Base>
+- CComTearOffObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- tear-off interfaces, ATL
+- tear-off interfaces
+- CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
 caps.latest.revision: 20
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CComTearOffObject Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
+ms.openlocfilehash: 3e8e997f26df1adca8050bd4d967a38297685831
+ms.lasthandoff: 02/24/2017
 
-這個類別會實作 Tear\-Off 介面。  
+---
+# <a name="ccomtearoffobject-class"></a>CComTearOffObject 類別
+這個類別會實作撕介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template<class Base>
+class CComTearOffObject : public Base
 ```  
   
-      template<  
-   class Base   
->  
-class CComTearOffObject :  
-   public Base  
-```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  `Base`  
- 請 Tear\-Off 類別，衍生自 `CComTearOffObjectBase` ，而您希望 Tear\-Off 為支援介面的物件。  
+ 撕下類別，衍生自`CComTearOffObjectBase`和要撕物件支援的介面。  
   
- ATL 是以兩個階段實作它自己 Tear\-Off 介面— `CComTearOffObjectBase` 方法處理參考計數和 `QueryInterface`，反之， `CComTearOffObject` 實作 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。  
+ ATL 實作其 tear-off 介面分成兩個階段 —`CComTearOffObjectBase`方法會處理參考計數和`QueryInterface`，雖然`CComTearOffObject`實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[CComTearOffObject::CComTearOffObject](../Topic/CComTearOffObject::CComTearOffObject.md)|建構函式。|  
-|[CComTearOffObject::~CComTearOffObject](../Topic/CComTearOffObject::~CComTearOffObject.md)|解構函式。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|建構函式。|  
+|[CComTearOffObject:: ~ CComTearOffObject](#dtor)|解構函式。|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[CComTearOffObject::AddRef](../Topic/CComTearOffObject::AddRef.md)|將 `CComTearOffObject` 物件的參考計數。|  
-|[CComTearOffObject::QueryInterface](../Topic/CComTearOffObject::QueryInterface.md)|傳回指向儲存在您 Tear\-Off 類別或擁有者類別的要求的介面。|  
-|[CComTearOffObject::Release](../Topic/CComTearOffObject::Release.md)|會 `CComTearOffObject` 物件的參考次數並終止。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CComTearOffObject::AddRef](#addref)|參考計數遞增`CComTearOffObject`物件。|  
+|[CComTearOffObject::QueryInterface](#queryinterface)|傳回所要求介面的指標上撕下類別或擁有者類別。|  
+|[CComTearOffObject::Release](#release)|遞減參考計數的`CComTearOffObject`物件，並將其終結。|  
   
-### CComTearOffObjectBase 方法  
-  
-|||  
-|-|-|  
-|[CComTearOffObjectBase](../Topic/CComTearOffObject::CComTearOffObjectBase.md)|建構函式。|  
-  
-### CComTearOffObjectBase 資料成員  
+### <a name="ccomtearoffobjectbase-methods"></a>CComTearOffObjectBase 方法  
   
 |||  
 |-|-|  
-|[m\_pOwner](../Topic/CComTearOffObject::m_pOwner.md)|為 `CComObject` 的指標從主控類別衍生自。|  
+|[CComTearOffObjectBase](#ccomtearoffobjectbase)|建構函式。|  
   
-## 備註  
- `CComTearOffObject` Tear\-Off 實作介面，因為具現化的物件，但該介面進行查詢。  其參考計數為零時， Tear\-Off 刪除。  通常，您會建立很少使用介面的介面， Tear\-Off，因為使用 Tear\-Off 儲存在您的主要物件的所有執行個體的 vtable 指標。  
+### <a name="ccomtearoffobjectbase-data-members"></a>CComTearOffObjectBase 資料成員  
   
- 您應該從 `CComTearOffObjectBase` Tear\-Off 實作衍生自的類別中，並從介面想要請 Tear\-Off 為支援的物件。  在`CComTearOffObjectBase` 擁有者類別和執行緒模型樣板化。  擁有者類別為 Tear\-Off 實作物件的類別。  如果您沒有指定執行緒模型，使用預設執行緒模型。  
+|||  
+|-|-|  
+|[m_pOwner](#m_powner)|指標`CComObject`衍生自擁有者類別。|  
   
- 您必須建置 COM 對應 Tear\-Off 類別。  在 ATL Tear\-Off 具現化，它會建立 **CComTearOffObject\<CYourTearOffClass\>** 或 **CComCachedTearOffObject\<CYourTearOffClass\>**。  
+## <a name="remarks"></a>備註  
+ `CComTearOffObject`為個別的物件，該介面針對查詢時，才會具現化，可實作撕介面。 撕下會刪除其參考計數變成零時。 一般而言，您會建置撕介面很少使用，因為使用撕將 vtable 指標儲存在主要物件的所有執行個體的介面。  
   
- 例如，在 BEEPER 範例， `CBeeper2` 類別為 Tear\-Off 類別，並 `CBeeper` 類別是擁有人類別:  
+ 您應該衍生類別實作撕從`CComTearOffObjectBase`並從要撕物件以支援何種介面。 `CComTearOffObjectBase`被根據擁有者的類別和執行緒模型。 擁有者類別是的物件的撕正在實作的類別。 如果未指定執行緒模型，則會使用預設的執行緒模型。  
   
- [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/CPP/ccomtearoffobject-class_1.h)]  
+ 您應該建立 COM 地圖撕類別。 當 ATL 具現化撕時，它會建立**CComTearOffObject\<CYourTearOffClass >**或**CComCachedTearOffObject\<CYourTearOffClass >**。  
   
-## 繼承階層架構  
+ 例如，在呼叫範例中，`CBeeper2`類別是撕類別和`CBeeper`類別是擁有者的類別︰  
+  
+ [!code-cpp[NVC_ATL_COM&#43;](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `Base`  
   
  `CComTearOffObject`  
   
-## 需求  
- **Header:** atlcom.h  
+## <a name="requirements"></a>需求  
+ **標頭︰**於 atlcom.h  
   
-## 請參閱  
- [CComCachedTearOffObject Class](../../atl/reference/ccomcachedtearoffobject-class.md)   
- [Class Overview](../../atl/atl-class-overview.md)
+##  <a name="a-nameaddrefa--ccomtearoffobjectaddref"></a><a name="addref"></a>CComTearOffObject::AddRef  
+ 參考計數遞增`CComTearOffObject`一個物件。  
+  
+```
+STDMETHOD_(ULONG, AddRef)();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 值，可用於診斷和測試。  
+  
+##  <a name="a-nameccomtearoffobjecta--ccomtearoffobjectccomtearoffobject"></a><a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
+ 建構函式。  
+  
+```
+CComTearOffObject(void* pv);
+```  
+  
+### <a name="parameters"></a>參數  
+ `pv`  
+ [in]將轉換成指標的指標**CComObject\<擁有者 >**物件。  
+  
+### <a name="remarks"></a>備註  
+ 擁有者的參考計數遞增&1;。  
+  
+##  <a name="a-namedtora--ccomtearoffobjectccomtearoffobject"></a><a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
+ 解構函式。  
+  
+```
+~CComTearOffObject();
+```  
+  
+### <a name="remarks"></a>備註  
+ 釋放所有配置的資源，呼叫 FinalRelease，並遞減模組鎖定計數。  
+  
+##  <a name="a-nameccomtearoffobjectbasea--ccomtearoffobjectccomtearoffobjectbase"></a><a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
+ 建構函式。  
+  
+```
+CComTearOffObjectBase();
+```  
+  
+### <a name="remarks"></a>備註  
+ 初始化[m_pOwner](#m_powner)成員**NULL**。  
+  
+##  <a name="a-namempownera--ccomtearoffobjectmpowner"></a><a name="m_powner"></a>CComTearOffObject::m_pOwner  
+ 指標[CComObject](../../atl/reference/ccomobject-class.md)物件衍生自*擁有者*。  
+  
+```
+CComObject<Owner>* m_pOwner;
+```  
+  
+### <a name="parameters"></a>參數  
+ *擁有者*  
+ [in]為其撕已實作的類別。  
+  
+### <a name="remarks"></a>備註  
+ 指標初始化為**NULL**在建構期間。  
+  
+##  <a name="a-namequeryinterfacea--ccomtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComTearOffObject::QueryInterface  
+ 擷取所要求介面的指標。  
+  
+```
+STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
+```  
+  
+### <a name="parameters"></a>參數  
+ `iid`  
+ [in]所要求之介面的 IID。  
+  
+ `ppvObject`  
+ [out]所識別的介面指標的指標`iid`，或**NULL**如果找不到介面。  
+  
+### <a name="return-value"></a>傳回值  
+ 標準 `HRESULT` 值。  
+  
+### <a name="remarks"></a>備註  
+ 第一次查詢中的上撕下類別的介面。 如果介面不存在，查詢擁有者物件上的介面。 如果要求的介面是**IUnknown**，傳回**IUnknown**的擁有者。  
+  
+##  <a name="a-namereleasea--ccomtearoffobjectrelease"></a><a name="release"></a>CComTearOffObject::Release  
+ 遞減參考計數&1; 和參考計數為零，如果刪除`CComTearOffObject`。  
+  
+```
+STDMETHOD_ULONG Release();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 在非偵錯組建中，一律會傳回零。 在偵錯組建中，傳回值，可能有助於診斷或測試。  
+  
+## <a name="see-also"></a>另請參閱  
+ [CComCachedTearOffObject 類別](../../atl/reference/ccomcachedtearoffobject-class.md)   
+ [類別概觀](../../atl/atl-class-overview.md)
+

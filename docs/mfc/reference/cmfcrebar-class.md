@@ -1,77 +1,284 @@
 ---
-title: "CMFCReBar Class | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "CMFCReBar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMFCReBar class"
+title: "CMFCReBar 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCReBar
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCReBar class
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
 caps.latest.revision: 27
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CMFCReBar Class
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: 5ec432cb8cf70d31c04c718fd7e802ee9c099763
+ms.lasthandoff: 02/24/2017
 
-`CMFCReBar` 物件是針對 Rebar 控制項的配置、保存及狀態資訊的控制列。  
+---
+# <a name="cmfcrebar-class"></a>CMFCReBar 類別
+A`CMFCReBar`物件會提供配置、 持續性和 rebar 控制項的狀態資訊的控制列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CMFCReBar : public CPane  
 ```  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[CMFCReBar::AddBar](../Topic/CMFCReBar::AddBar.md)|將加入至 Rebar 群組列。|  
-|[CMFCReBar::CalcFixedLayout](../Topic/CMFCReBar::CalcFixedLayout.md)|\(覆寫 [CBasePane::CalcFixedLayout](../Topic/CBasePane::CalcFixedLayout.md)\)。|  
-|[CMFCReBar::CanFloat](../Topic/CMFCReBar::CanFloat.md)|\(覆寫 [CBasePane::CanFloat](../Topic/CBasePane::CanFloat.md)\)。|  
-|[CMFCReBar::Create](../Topic/CMFCReBar::Create.md)|建立 Rebar 控制項並將其附加至 `CMFCReBar` 物件。|  
-|[CMFCReBar::EnableDocking](../Topic/CMFCReBar::EnableDocking.md)|\(覆寫 [CBasePane::EnableDocking](../Topic/CBasePane::EnableDocking.md)\)。|  
-|[CMFCReBar::GetReBarBandInfoSize](../Topic/CMFCReBar::GetReBarBandInfoSize.md)||  
-|[CMFCReBar::GetReBarCtrl](../Topic/CMFCReBar::GetReBarCtrl.md)|提供對基礎 [CReBarCtrl](../../mfc/reference/crebarctrl-class.md) 通用控制項的直接存取。|  
-|[CMFCReBar::OnShowControlBarMenu](../Topic/CMFCReBar::OnShowControlBarMenu.md)|\(覆寫 [CPane::OnShowControlBarMenu](../Topic/CPane::OnShowControlBarMenu.md)\)。|  
-|[CMFCReBar::OnToolHitTest](../Topic/CMFCReBar::OnToolHitTest.md)|\(覆寫 [CWnd::OnToolHitTest](../Topic/CWnd::OnToolHitTest.md)\)。|  
-|[CMFCReBar::OnUpdateCmdUI](../Topic/CMFCReBar::OnUpdateCmdUI.md)|\(覆寫 [CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/zh-tw/e139f06a-9793-4ee2-bc3d-517389368c77)\)。|  
-|[CMFCReBar::SetPaneAlignment](../Topic/CMFCReBar::SetPaneAlignment.md)|\(覆寫 [CBasePane::SetPaneAlignment](../Topic/CBasePane::SetPaneAlignment.md)\)。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CMFCReBar::AddBar](#addbar)|將 rebar 群組列。|  
+|[CMFCReBar::CalcFixedLayout](#calcfixedlayout)|(覆寫[CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|  
+|[CMFCReBar::CanFloat](#canfloat)|(覆寫[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)。)|  
+|[CMFCReBar::Create](#create)|建立 rebar 控制項並將它附加`CMFCReBar`物件。|  
+|[CMFCReBar::EnableDocking](#enabledocking)|(覆寫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。)|  
+|[CMFCReBar::GetReBarBandInfoSize](#getrebarbandinfosize)||  
+|[CMFCReBar::GetReBarCtrl](#getrebarctrl)|可直接存取基礎[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)通用控制項。|  
+|[CMFCReBar::OnShowControlBarMenu](#onshowcontrolbarmenu)|(覆寫[CPane::OnShowControlBarMenu](../../mfc/reference/cpane-class.md#onshowcontrolbarmenu)。)|  
+|[CMFCReBar::OnToolHitTest](#ontoolhittest)|(覆寫[CWnd::OnToolHitTest](../../mfc/reference/cwnd-class.md#ontoolhittest)。)|  
+|[CMFCReBar::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CBasePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/e139f06a-9793-4ee2-bc3d-517389368c77)。)|  
+|[CMFCReBar::SetPaneAlignment](#setpanealignment)|(覆寫[CBasePane::SetPaneAlignment](../../mfc/reference/cbasepane-class.md#setpanealignment)。)|  
   
-## 備註  
- `CMFCReBar` 物件可以包含各種子視窗。  這包括編輯方塊、工具列和清單方塊。  您可以調整 Rebar 的方式，或者使用者可以藉由拖曳項目的移駐夾列手動調整 Rebar 群組列。  您也可以將 Rebar 物件的背景設定為您選擇的點陣圖的。  
+## <a name="remarks"></a>備註  
+ A`CMFCReBar`物件可以包含各種子視窗。 這包括編輯方塊、 工具列和清單方塊。 您可以以程式設計方式調整大小 rebar 或使用者可以手動拖曳調整大小 rebar 的移駐夾列。 您也可以設定 rebar 物件的背景，您所選擇的點陣圖。  
   
- Rebar 物件具有類似的行為需工具列物件。  Rebar 控制項可以包含一或多個群組列，，而且每個群組列可以包含移駐夾列、點陣圖、文字標籤和子視窗。  
+ Rebar 物件運作起來就像一個工具列物件。 Rebar 控制項可以包含一或多個群組列，而且每個群組列可以包含移駐夾列、 點陣圖、 文字標籤和子視窗。  
   
-## 範例  
- 下列範例會在 `CMFCReBar` 類別會示範如何使用各種方法。  這個範例顯示如何建立控制項並加入 Rebar 群組列加入其中。  群組列函式為內部工具列。  這個程式碼片段是 [Rebar 測試範例](../../top/visual-cpp-samples.md)的一部分。  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用各種方法的`CMFCReBar`類別。 此範例示範如何建立 rebar 控制項和群組列加入。 寬功能為內部的工具列。 此程式碼片段是一部分[Rebar 測試範例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/CPP/cmfcrebar-class_1.h)]  
-[!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/CPP/cmfcrebar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_RebarTest #&1;](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]  
+[!code-cpp[NVC_MFC_RebarTest #&2;](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CMFCReBar](../../mfc/reference/cmfcrebar-class.md)  
   
-## 需求  
- **標題:** afxRebar.h  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxRebar.h  
   
-## 請參閱  
+##  <a name="a-nameaddbara--cmfcrebaraddbar"></a><a name="addbar"></a>CMFCReBar::AddBar  
+ 將 rebar 群組列。  
+  
+```  
+BOOL AddBar(
+    CWnd* pBar,  
+    LPCTSTR pszText = NULL,  
+    CBitmap* pbmp = NULL,  
+    DWORD dwStyle = RBBS_GRIPPERALWAYS | RBBS_FIXEDBMP);
+
+BOOL AddBar(
+    CWnd* pBar,  
+    COLORREF clrFore,  
+    COLORREF clrBack,  
+    LPCTSTR pszText = NULL,  
+    DWORD dwStyle = RBBS_GRIPPERALWAYS);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in][out]`pBar`  
+ 要插入至 rebar 是子視窗的指標。 參考的物件必須具有**WS_CHILD**視窗樣式。  
+  
+ [in] `pszText`  
+ 指定要顯示 rebar 上的文字。 文字不是子視窗的一部分。 相反地，它會顯示在 rebar 本身。  
+  
+ [in][out]`pbmp`  
+ 指定要顯示 rebar 背景點陣圖。  
+  
+ [in] `dwStyle`  
+ 包含要套用至群組列的樣式。 如頻外樣式的完整清單，請參閱描述`fStyle`中[REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Windows SDK 文件中的結構。  
+  
+ [in] `clrFore`  
+ 代表 rebar 的前景色彩。  
+  
+ [in] `clrBack`  
+ 代表 rebar 的背景色彩。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果群組列已成功新增至 rebar;否則， `FALSE`。  
+  
+##  <a name="a-namecreatea--cmfcrebarcreate"></a><a name="create"></a>CMFCReBar::Create  
+ 建立 rebar 控制項並將它附加[CMFCReBar](../../mfc/reference/cmfcrebar-class.md)物件。  
+  
+```  
+BOOL Create(
+    CWnd* pParentWnd,  
+    DWORD dwCtrlStyle = RBS_BANDBORDERS,  
+    DWORD dwStyle = WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | CBRS_TOP,  
+    UINT nID = AFX_IDW_REBAR);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in][out]`pParentWnd`  
+ Rebar 控制項的父視窗的指標。  
+  
+ [in] `dwCtrlStyle`  
+ 指定 rebar 控制項的樣式。 預設樣式的值是**RBS_BANDBORDERS**，它會顯示縮小範圍，來分隔相鄰群組列的 rebar 控制項的程式碼行。 如需有效的樣式，請參閱[Rebar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb774377)Windows SDK 文件中。  
+  
+ [in] `dwStyle`  
+ Rebar 控制項的視窗樣式。 如需有效的樣式，請參閱[視窗樣式](../../mfc/reference/window-styles.md)。  
+  
+ [in] `nID`  
+ Rebar 的子視窗識別碼。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果已成功; 建立 rebar否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetrebarctrla--cmfcrebargetrebarctrl"></a><a name="getrebarctrl"></a>CMFCReBar::GetReBarCtrl  
+ 可直接存取`CReBarCtrl`為基礎的通用控制項`CMFCReBar`物件。  
+  
+```  
+CReBarCtrl& GetReBarCtrl() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 參考基礎`CReBarCtrl`物件。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫這個方法，以充分利用 Windows rebar 通用控制項功能來自訂您 rebar 時。  
+  
+##  <a name="a-namecalcfixedlayouta--cmfcrebarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCReBar::CalcFixedLayout  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual CSize CalcFixedLayout(
+    BOOL bStretch,  
+    BOOL bHorz);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `bStretch`  
+ [in] `bHorz`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecanfloata--cmfcrebarcanfloat"></a><a name="canfloat"></a>CMFCReBar::CanFloat  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL CanFloat() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameenabledockinga--cmfcrebarenabledocking"></a><a name="enabledocking"></a>CMFCReBar::EnableDocking  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+void EnableDocking(DWORD dwDockStyle);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `dwDockStyle`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetrebarbandinfosizea--cmfcrebargetrebarbandinfosize"></a><a name="getrebarbandinfosize"></a>CMFCReBar::GetReBarBandInfoSize  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+UINT GetReBarBandInfoSize() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonshowcontrolbarmenua--cmfcrebaronshowcontrolbarmenu"></a><a name="onshowcontrolbarmenu"></a>CMFCReBar::OnShowControlBarMenu  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual BOOL OnShowControlBarMenu(CPoint);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `CPoint`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameontoolhittesta--cmfcrebarontoolhittest"></a><a name="ontoolhittest"></a>CMFCReBar::OnToolHitTest  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual INT_PTR OnToolHitTest(
+    CPoint point,  
+    TOOLINFO* pTI) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `point`  
+ [in] `pTI`  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonupdatecmduia--cmfcrebaronupdatecmdui"></a><a name="onupdatecmdui"></a>CMFCReBar::OnUpdateCmdUI  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnUpdateCmdUI(
+    CFrameWnd* pTarget,  
+    BOOL bDisableIfNoHndler);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pTarget`  
+ [in] `bDisableIfNoHndler`  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namesetpanealignmenta--cmfcrebarsetpanealignment"></a><a name="setpanealignment"></a>CMFCReBar::SetPaneAlignment  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void SetPaneAlignment(DWORD dwAlignment);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `dwAlignment`  
+  
+### <a name="remarks"></a>備註  
+  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
- [CReBarCtrl Class](../../mfc/reference/crebarctrl-class.md)   
- [CPane Class](../../mfc/reference/cpane-class.md)
+ [CReBarCtrl 類別](../../mfc/reference/crebarctrl-class.md)   
+ [CPane 類別](../../mfc/reference/cpane-class.md)
+

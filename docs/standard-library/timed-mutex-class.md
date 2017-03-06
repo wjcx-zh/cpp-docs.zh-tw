@@ -1,60 +1,167 @@
 ---
 title: "timed_mutex 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mutex/std::timed_mutex"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mutex/std::timed_mutex
+dev_langs:
+- C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
 caps.latest.revision: 9
-caps.handback.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# timed_mutex 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 72861fe588cf038743d5c44f22a420e690f63993
+ms.lasthandoff: 02/24/2017
 
-代表一個 *時間的型別*。  這個型別物件用來逐一查看程式中定期有限的封鎖強制執行互斥。  
+---
+# <a name="timedmutex-class"></a>timed_mutex 類別
+表示「計時 mutex 類型」。 透過在程式內進行限時封鎖，可以使用這個類型的物件來強制執行互斥。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class timed_mutex;
 ```  
-class timed_mutex;  
+  
+## <a name="members"></a>Members  
+  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[timed_mutex::timed_mutex 建構函式](#timed_mutex__timed_mutex_constructor)|建構未鎖定的 `timed_mutex` 物件。|  
+|[timed_mutex::~timed_mutex 解構函式](#timed_mutex___dtortimed_mutex_destructor)|釋放 `timed_mutex` 物件使用的任何資源。|  
+  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[timed_mutex::lock 方法](#timed_mutex__lock_method)|封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。|  
+|[timed_mutex::try_lock 方法](#timed_mutex__try_lock_method)|嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。|  
+|[timed_mutex::try_lock_for 方法](#timed_mutex__try_lock_for_method)|嘗試取得所指定時間間隔內 `mutex` 的所有權。|  
+|[timed_mutex::try_lock_until 方法](#timed_mutex__try_lock_until_method)|嘗試取得所指定時間間隔之前 `mutex` 的所有權。|  
+|[timed_mutex::unlock 方法](#timed_mutex__unlock_method)|釋放 `mutex` 的擁有權。|  
+  
+## <a name="requirements"></a>需求  
+ **標頭：**mutex  
+  
+ **命名空間：** std  
+  
+##  <a name="a-nametimedmutexlockmethoda--timedmutexlock-method"></a><a name="timed_mutex__lock_method"></a>  timed_mutex::lock 方法  
+ 封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。  
+  
+```cpp  
+void lock();
 ```  
   
-## 成員  
+### <a name="remarks"></a>備註  
+ 如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
   
-### 公用建構函式  
+##  <a name="a-nametimedmutextimedmutexconstructora--timedmutextimedmutex-constructor"></a><a name="timed_mutex__timed_mutex_constructor"></a>  timed_mutex::timed_mutex 建構函式  
+ 建構未鎖定的 `timed_mutex` 物件。  
   
-|Name|說明|  
-|----------|--------|  
-|[timed\_mutex::timed\_mutex 建構函式](../Topic/timed_mutex::timed_mutex%20Constructor.md)|建構未鎖定的 `timed_mutex` 物件。|  
-|[timed\_mutex::~timed\_mutex 解構函式](../Topic/timed_mutex::~timed_mutex%20Destructor.md)|釋放 `timed_mutex` 物件所使用的所有資源。|  
+```cpp  
+timed_mutex();
+```  
   
-### 公用方法  
+##  <a name="a-nametimedmutexdtortimedmutexdestructora--timedmutextimedmutex-destructor"></a><a name="timed_mutex___dtortimed_mutex_destructor"></a>  timed_mutex::~timed_mutex 解構函式  
+ 釋放 `mutex` 物件使用的任何資源。  
   
-|Name|說明|  
-|----------|--------|  
-|[timed\_mutex::lock 方法](../Topic/timed_mutex::lock%20Method.md)|封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。|  
-|[timed\_mutex::try\_lock 方法](../Topic/timed_mutex::try_lock%20Method.md)|嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。|  
-|[timed\_mutex::try\_lock\_for 方法](../Topic/timed_mutex::try_lock_for%20Method.md)|嘗試取得 `mutex` 的擁有權指定的間隔時間。|  
-|[timed\_mutex::try\_lock\_until 方法](../Topic/timed_mutex::try_lock_until%20Method.md)|嘗試取得 `mutex` 的擁有權直到指定的時間。|  
-|[timed\_mutex::unlock 方法](../Topic/timed_mutex::unlock%20Method.md)|釋放 `mutex` 的擁有權。|  
+```cpp  
+~timed_mutex();
+```  
   
-## 需求  
- **標題:** mutex  
+### <a name="remarks"></a>備註  
+ 如果執行解構函式時物件已鎖定，則行為是未定義的。  
   
- **命名空間:** std  
+##  <a name="a-nametimedmutextrylockmethoda--timedmutextrylock-method"></a><a name="timed_mutex__try_lock_method"></a>  timed_mutex::try_lock 方法  
+ 嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。  
   
-## 請參閱  
+```cpp  
+bool try_lock();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果方法成功取得 `true` 的擁有權，就是 `mutex`，否則為 `false`。  
+  
+### <a name="remarks"></a>備註  
+ 如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
+  
+##  <a name="a-nametimedmutextrylockformethoda--timedmutextrylockfor-method"></a><a name="timed_mutex__try_lock_for_method"></a>  timed_mutex::try_lock_for 方法  
+ 嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。  
+  
+```cpp  
+template <class Rep, class Period>
+bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
+```  
+  
+### <a name="parameters"></a>參數  
+ `Rel_time`  
+ [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果方法成功取得 `true` 的擁有權，就是 `mutex`，否則為 `false`。  
+  
+### <a name="remarks"></a>備註  
+ 如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
+  
+##  <a name="a-nametimedmutextrylockuntilmethoda--timedmutextrylockuntil-method"></a><a name="timed_mutex__try_lock_until_method"></a>  timed_mutex::try_lock_until 方法  
+ 嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。  
+  
+```cpp  
+template <class Clock, class Duration>
+bool try_lock_for(const chrono::time_point<Clock, Duration>& Abs_time);
+
+bool try_lock_until(const xtime* Abs_time);
+```  
+  
+### <a name="parameters"></a>參數  
+ `Abs_time`  
+ 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果方法成功取得 `true` 的擁有權，就是 `mutex`，否則為 `false`。  
+  
+### <a name="remarks"></a>備註  
+ 如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
+  
+##  <a name="a-nametimedmutexunlockmethoda--timedmutexunlock-method"></a><a name="timed_mutex__unlock_method"></a>  timed_mutex::unlock 方法  
+ 釋放 `mutex` 的擁有權。  
+  
+```cpp  
+void unlock();
+```  
+  
+### <a name="remarks"></a>備註  
+ 如果呼叫的執行緒未擁有 `mutex`，則行為是未定義的。  
+  
+## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [\<mutex\>](../standard-library/mutex.md)
+ [\<mutex>](../standard-library/mutex.md)
+
+
+
+

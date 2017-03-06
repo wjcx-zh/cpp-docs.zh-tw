@@ -1,33 +1,51 @@
 ---
-title: "MFC 使用的回呼函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.functions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "回呼函式"
-  - "回呼函式, MFC"
-  - "函式 [C++], 回呼"
-  - "MFC, 回呼函式"
+title: "MFC 使用的回呼函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.functions
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback functions, MFC
+- MFC, callback functions
+- functions [C++], callback
+- callback functions
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# MFC 使用的回呼函式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
+ms.openlocfilehash: b4d104fa76347da43c84611672f843511f0f3725
+ms.lasthandoff: 02/24/2017
 
-三個回呼函式會出現在 MFC 程式庫。  傳遞給 [CDC::EnumObjects](../Topic/CDC::EnumObjects.md)回呼函式， [CDC::GrayString](../Topic/CDC::GrayString.md)和 [CDC::SetAbortProc](../Topic/CDC::SetAbortProc.md) 的說明遵循這個主題。  如需回呼函式的一般使用方式，請參閱下列成員函式的 \< 備註 \> 一節。  請注意任何回呼函式必須在傳回之前截取 MFC 例外加入到 Windows，，因為例外狀況無法跨界限回呼會擲回。  如需例外狀況的詳細資訊，請參閱本文件的 [例外狀況。](../../mfc/exception-handling-in-mfc.md)。  
+---
+# <a name="callback-functions-used-by-mfc"></a>MFC 使用的回呼函式
+三個回呼函式會出現在 Mfc 程式庫。 傳遞至回呼函式的說明[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，和[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)遵循本主題。 回呼函式的一般用法，請參閱這些成員函式的 < 備註 > 一節。 請注意，所有的回呼函式必須捕捉 MFC 例外狀況，然後再回到 Windows 中，因為無法跨越界限回呼擲回例外狀況。 如需例外狀況的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。  
   
-## 請參閱  
- [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>另請參閱  
+ [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+

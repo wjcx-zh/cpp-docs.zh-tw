@@ -27,12 +27,12 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3a86bbb43d89c1aef17fd53a3ae54a8afd3f5011
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a769a69a788c2c7ae1fd9854afe89d1feccf9278
+ms.openlocfilehash: bc9ac2892eb9372586f101d706e744e60ebda3ce
+ms.lasthandoff: 03/02/2017
 
 ---
-  
+   
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中的 C++ 編譯器一致性改善
 
 ## <a name="new-language-features"></a>新的語言功能  
@@ -342,5 +342,6 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-
+## <a name="see-also"></a>另請參閱  
+[Visual C/C++ 語言一致性](c-cpp-language-conformance.md)  
 

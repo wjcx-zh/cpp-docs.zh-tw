@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9660db5ff0d41a31f7d2a4e824df4e4bdf6a00e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 961dc75623ec04993d118e46e1d4ba73a9aadcec
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT 類別
@@ -366,7 +366,7 @@ int CompareNoCase(PCXSTR psz) const throw();
  零，如果相同的字串 （忽略大小寫） <0 if="" this=""></0> `CStringT`物件是小於`psz`（忽略大小寫） 或 >&0;，表示此`CStringT`物件是否大於`psz`（忽略大小寫）。  
   
 ### <a name="remarks"></a>備註  
- 一般文字函式`_tcsicmp`，定義在 TCHAR。H，對應至`_stricmp`，`_wcsicmp`或`_mbsicmp`，取決於編譯時期定義的字元集。 每個函式執行不區分大小寫的字串比較。 比較取決於`LC_CTYPE`方面的地區設定，但不是`LC_COLLATE`。 如需詳細資訊，請參閱[_stricmp、 _wcsicmp、 _mbsicmp、 _stricmp_l、 _wcsicmp_l、 _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)。  
+ 一般文字函式`_tcsicmp`，定義在 TCHAR。H，對應至`_stricmp`，`_wcsicmp`或是`_mbsicmp`，取決於編譯時期定義的字元集。 每個函式執行不區分大小寫的字串比較。 比較取決於`LC_CTYPE`方面的地區設定，但不是`LC_COLLATE`。 如需詳細資訊，請參閱[_stricmp、 _wcsicmp、 _mbsicmp、 _stricmp_l、 _wcsicmp_l、 _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&111;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]  
@@ -645,12 +645,12 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
  選擇性引數。  
   
 ### <a name="remarks"></a>備註  
- 函式需要訊息定義做為輸入。 訊息定義由`pszFormat`或從所識別的字串資源`nFormatID`。 函式格式化的訊息將文字複製到`CStringT`處理任何內嵌的物件，如果要求的話，插入順序。  
+ 函式需要訊息定義做為輸入。 訊息定義由`pszFormat`或是從所識別的字串資源`nFormatID`。 函式格式化的訊息將文字複製到`CStringT`處理任何內嵌的物件，如果要求的話，插入順序。  
   
 > [!NOTE]
 > `FormatMessage`嘗試配置系統記憶體最近格式化的字串。 如果此嘗試失敗，會自動擲回記憶體例外狀況。  
   
- 每個插入必須有對應的參數下列`pszFormat`或`nFormatID`參數。 訊息文字中的動態格式化訊息支援數個逸出序列。 如需詳細資訊，請參閱 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)函式中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 每個插入必須有對應的參數下列`pszFormat`或是`nFormatID`參數。 訊息文字中支援數個逸出序列以動態方式格式化訊息。 如需詳細資訊，請參閱 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)函式中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&118;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
@@ -1340,7 +1340,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  字串會解譯為一組字元。  
   
 ### <a name="return-value"></a>傳回值  
- 包含在字串中的字元的子字串`pszCharSet`、 從字串中的第一個字元開始和結束時不在字串中找到字元`pszCharSet.``SpanIncluding`傳回空的子字串，如果字串中的第一個字元不指定集合中。  
+ 包含在字串中的字元的子字串`pszCharSet`、 從字串中的第一個字元開始和結束時不在字串中找到字元`pszCharSet`。 `SpanIncluding`如果字串中的第一個字元不是指定集合中，則傳回空的子字串。  
   
 ### <a name="remarks"></a>備註  
  如果字串的第一個字元不在字元集，則`SpanIncluding`會傳回空字串。 否則，它會傳回集合中的連續字元序列。  

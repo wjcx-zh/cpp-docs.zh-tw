@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 791b9ec18cc71fe19f633c12afdc48c835c2bf14
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: e273aff69b9c8dbea4fb829798b2e9d58351b9dd
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
@@ -76,7 +76,7 @@ class CSimpleStringT
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleStringT::CSimpleStringT](#ctor)|建構`CSimpleStringT`物件以各種方式。|  
 |[CSimpleStringT:: ~ CSimpleStringT](#dtor)|解構函式。|  
@@ -89,7 +89,7 @@ class CSimpleStringT
 |[CSimpleStringT::Append](#append)|將附加`CSimpleStringT`至現有的物件`CSimpleStringT`物件。|  
 |[CSimpleStringT::AppendChar](#appendchar)|將字元附加至現有`CSimpleStringT`物件。|  
 |[CSimpleStringT::CopyChars](#copychars)|將字元複製到另一個字串中。|  
-|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|將字元複製到另一個緩衝區與重疊的字串。|  
+|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|將字元複製到另一個與緩衝區重疊的字串。|  
 |[CSimpleStringT::Empty](#empty)|強制將長度為零的字串。|  
 |[CSimpleStringT::FreeExtra](#freeextra)|釋放先前配置的字串物件的任何額外的記憶體。|  
 |[CSimpleStringT::GetAllocLength](#getalloclength)|擷取的配置的長度`CSimpleStringT`物件。|  
@@ -269,7 +269,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  建構新`CSimpleStringT`物件。 建構函式會將輸入的資料複製到新配置的儲存體，因為可能會造成記憶體例外狀況。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用`CSimpleStringT::CSimpleStringT`使用 ATL `typedef``CSimpleString`。 `CSimpleString`是常用的類別樣板的特製化`CSimpleStringT`。  
+ 下列範例示範如何使用`CSimpleStringT::CSimpleStringT`使用 ATL `typedef` `CSimpleString`。 `CSimpleString`是常用的類別樣板的特製化`CSimpleStringT`。  
   
 ```cpp  
 CSimpleString s1(pMgr);
@@ -455,11 +455,11 @@ PXSTR GetBufferSetLength(int nLength);
   
  如果您使用傳回的指標[GetBufferSetLength](#getbuffersetlength)若要變更字串內容，請呼叫`ReleaseBuffer`更新的內部狀態`CsimpleStringT`使用任何其他之前`CSimpleStringT`方法。  
   
- 傳回的位址`GetBufferSetLength`可能不是有效的通話之後`ReleaseBuffer`因為其他`CSimpleStringT`作業可能會導致`CSimpleStringT`都重新配置的緩衝區。 如果您未變更的長度，不會指派緩衝區`CSimpleStringT`。  
+ 傳回的位址`GetBufferSetLength`可能不是有效的通話之後`ReleaseBuffer`因為其他`CSimpleStringT`作業可能會導致`CSimpleStringT`都重新配置的緩衝區。 如果您不要變更長度的緩衝區不重新指派`CSimpleStringT`。  
   
  緩衝區記憶體會自動釋放時`CSimpleStringT`物件被終結。  
   
- 如果您追蹤的字串長度自己，沒有不將附加結束 null 字元。 當您釋放緩衝區使用時，您必須指定最終字串長度`ReleaseBuffer`。 如果您不要附加結束的 null 字元，當您呼叫`ReleaseBuffer`，傳遞 –&1; （預設值） 的長度， `ReleaseBuffer`，和`ReleaseBuffer`會執行`strlen`的緩衝區，以判斷它的長度。  
+ 如果您追蹤的字串長度自己，沒有不將附加結束 null 字元。 您必須指定最終字串長度，當您使用釋放緩衝區`ReleaseBuffer`。 如果您不要附加結束的 null 字元，當您呼叫`ReleaseBuffer`，傳遞 –&1; （預設值） 的長度， `ReleaseBuffer`，和`ReleaseBuffer`會執行`strlen`的緩衝區，以判斷它的長度。  
   
  如需參考計數的詳細資訊，請參閱下列文章︰  
   
@@ -837,7 +837,7 @@ void ReleaseBuffer(int nNewLength = -1);
  在不計算 null 結束字元的字元字串的新長度。 如果 string 為 null 終止，預設為-1 值會設定`CSimpleStringT`大小目前字串的長度。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法來重新配置或釋出的字串物件的緩衝區。 如果您知道在緩衝區中的字串，null 結尾，您可以省略`nNewLength`引數。 如果您的字串不是 null 終止，使用`nNewLength`來指定它的長度。 傳回的位址[GetBuffer](#getbuffer)無效的通話之後`ReleaseBuffer`或任何其他`CSimpleStringT`作業。  
+ 呼叫這個方法來重新配置或釋出的字串物件的緩衝區。 如果您知道在緩衝區中的字串，null 結尾，您可以省略`nNewLength`引數。 如果您的字串不是 null 終止，使用`nNewLength`來指定它的長度。 傳回的位址[GetBuffer](#getbuffer)無效的通話之後`ReleaseBuffer`為任何其他`CSimpleStringT`作業。  
   
 ### <a name="example"></a>範例  
  下列範例示範 `CSimpleStringT::ReleaseBuffer` 的用法。  

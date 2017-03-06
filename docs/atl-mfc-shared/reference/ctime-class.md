@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5ac891241f29df515864c01fc449197f39bbaedd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 56b8b5c3574a7a53a4e259412b1b1326973bcac9
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ctime-class"></a>CTime 類別
@@ -61,7 +61,7 @@ class CTime
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CTime::Format](#format)|將轉換`CTime`格式化的字串物件 — 根據當地時區。|  
 |[CTime::FormatGmt](#formatgmt)|將轉換`CTime`格式化的字串物件 — UTC 為基礎。|  
@@ -84,8 +84,8 @@ class CTime
   
 |||  
 |-|-|  
-|[運算子 + –](#operator_add_-)|這些運算子加號和減號`CTimeSpan`和`CTime`物件。|  
-|[運算子 + =、 =](#operator_add_eq_-_eq)|這些運算子加號和減號`CTimeSpan`物件與此`CTime`物件。|  
+|[運算子 + –](#operator_add_-)|這些運算子加號和減號運算子`CTimeSpan`和`CTime`物件。|  
+|[運算子 + =、 =](#operator_add_eq_-_eq)|這些運算子加號和減號運算子`CTimeSpan`物件與此`CTime`物件。|  
 |[運算子 =](#operator_eq)|指派運算子。|  
 |[運算子 = =、< ,="">](#ctime_comparison_operators)|比較運算子。|  
   
@@ -106,7 +106,7 @@ class CTime
  如需有關使用`CTime`，請參閱文章[日期和時間](../../atl-mfc-shared/date-and-time.md)，和[時間管理](../../c-runtime-library/time-management.md)在執行階段程式庫參考。  
   
 > [!NOTE]
->  `CTime`結構變更從 MFC 7.1 MFC 8.0。 如果您將序列化`CTime`結構使用`operator <<`在 MFC 8.0 或更新版本，產生的檔案將無法讀取在舊版的 MFC。  
+>  `CTime`結構變更從 MFC 7.1 MFC 8.0。 如果您將序列化`CTime`結構使用`operator <<`MFC 8.0 或更新版本，在產生的檔案將無法讀取在舊版的 MFC。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** atltime.h  
@@ -183,7 +183,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="remarks"></a>備註  
  每個建構函式如下所述︰  
   
-- **CTime （);**建構未初始化`CTime`物件。 這個建構函式可讓您定義`CTime`物件陣列。 您應該初始化有效的時間，才能使用這類陣列。  
+- **CTime();**建構未初始化`CTime`物件。 這個建構函式可讓您定義`CTime`物件陣列。 您應該初始化有效的時間，才能使用這類陣列。  
   
 - **CTime (const CTime i);**建構`CTime`從另一個物件`CTime`值。  
   
@@ -202,11 +202,11 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      這個建構函式會適當轉換為 UTC。 Mfc 程式庫的偵錯版本會判斷提示，如果將一個或多個時間元件會超出範圍。 您必須先驗證之前，先呼叫的引數。 這個建構函式必須要有本機時間。  
   
-- `CTime`( **WORD, WORD** ) **;**建構`CTime`從指定的 MS-DOS 的日期和時間值的物件。 這個建構函式必須要有本機時間。  
+- **CTime （單字、 字）;**建構`CTime`從指定的 MS-DOS 的日期和時間值的物件。 這個建構函式必須要有本機時間。  
   
-- `CTime`( **const SYSTEMTIME&** ) **;**建構`CTime`物件從`SYSTEMTIME`結構。 這個建構函式必須要有本機時間。  
+- **CTime (const SYSTEMTIME&AMP; i);**建構`CTime`物件從`SYSTEMTIME`結構。 這個建構函式必須要有本機時間。  
   
-- `CTime`( **const FILETIME&** ) **;**建構`CTime`物件從`FILETIME`結構。 您很可能不會使用`CTime``FILETIME`直接初始化。 如果您使用`CFile`物件來操作檔案、`CFile::GetStatus`擷取檔案時間戳記，讓您透過`CTime`物件初始化`FILETIME`結構。 這個建構函式假設的 UTC 時間，並儲存結果之前，會自動將值轉換為本地時間。  
+- **CTime (const FILETIME&AMP; i);**建構`CTime`物件從`FILETIME`結構。 您很可能不會使用`CTime FILETIME`直接初始化。 如果您使用`CFile`物件來操作檔案、`CFile::GetStatus`擷取檔案時間戳記，讓您透過`CTime`物件初始化`FILETIME`結構。 這個建構函式假設的 UTC 時間，並儲存結果之前，會自動將值轉換為本地時間。  
   
     > [!NOTE]
     >  建構函式使用**DBTIMESTAMP** OLEDB.h 是否包含時，才可使用參數。  
@@ -252,7 +252,7 @@ CString FormatGmt(UINT nFormatID) const;
   
 ### <a name="parameters"></a>參數  
  `pszFormat`  
- 指定的格式化字串類似於`printf`格式化字串。 請參閱執行階段函式[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)如需詳細資訊。  
+ 指定與相似的格式化字串`printf`格式化字串。 請參閱執行階段函式[strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)如需詳細資訊。  
   
  `nFormatID`  
  識別這個格式的字串識別碼。  
@@ -508,7 +508,7 @@ CTime& operator=(__time64_t time) throw();
  這個多載的指派運算子會將來源時間複製到這`CTime`物件。 中的內部時間儲存體`CTime`時區物件無關。 在設定期間，不需要進行時區轉換。  
   
 ##  <a name="a-nameoperatoradd-a--ctimeoperator---"></a><a name="operator_add_-"></a>CTime::operator +、-  
- 這些運算子加號和減號`CTimeSpan`和`CTime`物件。  
+ 這些運算子加號和減號運算子`CTimeSpan`和`CTime`物件。  
   
 ```  
 CTime operator+(CTimeSpan timeSpan) const throw(); 
@@ -533,7 +533,7 @@ CTimeSpan operator-(CTime time) const throw();
  [!code-cpp[NVC_ATLMFC_Utilities #&159;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
   
 ##  <a name="a-nameoperatoraddeq-eqa--ctimeoperator---"></a><a name="operator_add_eq_-_eq"></a>CTime::operator + =、 =  
- 這些運算子加號和減號`CTimeSpan`物件與此`CTime`物件。  
+ 這些運算子加號和減號運算子`CTimeSpan`物件與此`CTime`物件。  
   
 ```  
 CTime& operator+=(CTimeSpan span) throw();

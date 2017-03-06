@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 718aac826916b977eec4fb8400da81b5e32d4afa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: dd14e5c941da5383dce19e9f7f539bfb9909759f
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 類別

@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: deed13f7e44246eca1e9d3d138f73d0f540dc0b1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: a0724b0ea8922d1f39d8cf7ccd630068c32ea3ac
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 類別
@@ -72,7 +72,7 @@ template <class TBase = CWindow>
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAxWindow2T::Create](#create)|建立主應用程式視窗。|  
 |[CAxWindow2T::CreateControlLic](#createcontrollic)|建立授權的 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。|  
@@ -133,7 +133,7 @@ HWND Create(
 ```  
   
 ### <a name="remarks"></a>備註  
- `CAxWindow2T::Create`呼叫[CWindow::Create](../../atl/reference/cwindow-class.md#create)與`LPCTSTR``lpstrWndClass`參數設定為提供裝載控制項的視窗類別 ( **AtlAxWinLic80**)。  
+ `CAxWindow2T::Create`呼叫[CWindow::Create](../../atl/reference/cwindow-class.md#create)與`LPCTSTR lpstrWndClass`參數設定為提供裝載控制項的視窗類別 ( **AtlAxWinLic80**)。  
   
  請參閱`CWindow::Create`參數和傳回值的說明。  
   

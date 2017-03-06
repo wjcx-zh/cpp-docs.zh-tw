@@ -238,7 +238,7 @@
 #### [混合 C (結構化) 和 C++ 例外狀況](mixing-c-structured-and-cpp-exceptions.md)
 ##### [使用 setjmp-longjmp](using-setjmp-longjmp.md)
 ##### [例外狀況處理差異](exception-handling-differences.md)
-### [結構化例外狀況處理 (C-C++)](structured-exception-handling-c-cpp.md)
+### [結構化例外狀況處理 (C/C++)](structured-exception-handling-c-cpp.md)
 #### [撰寫例外狀況處理常式](writing-an-exception-handler.md)
 ##### [try-except 陳述式](try-except-statement.md)
 ##### [撰寫例外狀況篩選條件](writing-an-exception-filter.md)

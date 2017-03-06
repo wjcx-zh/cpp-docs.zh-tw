@@ -1,4 +1,4 @@
-# [C-C++ 建置錯誤](c-cpp-build-errors.md)
+# [C/C++ 建置錯誤](c-cpp-build-errors.md)
 # [編譯器嚴重錯誤 C999 到 C1999](compiler-fatal-errors-c999-through-c1999.md)
 ## [嚴重錯誤 C999](fatal-error-c999.md)
 ## [嚴重錯誤 C1001](fatal-error-c1001.md)

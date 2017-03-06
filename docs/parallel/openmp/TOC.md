@@ -102,6 +102,6 @@
 ### [C.1 標記法](c-1-notation.md)
 ### [C.2 規則](c-2-rules.md)
 ## [D.使用 schedule 子句](d-using-the-schedule-clause.md)
-## [E.OpenMP C-C++ 中的實作定義行為](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+## [E.OpenMP C/C++ 中的實作定義行為](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 ## [F.2.0 版中的新功能和釐清的內容](f-new-features-and-clarifications-in-version-2-0.md)
 # [參考](reference/toc.md)

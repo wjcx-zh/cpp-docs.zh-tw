@@ -12,7 +12,6 @@
 ### [位元組和寬資料流](byte-and-wide-streams.md)
 ### [控制資料流](controlling-streams.md)
 ### [資料流狀態](stream-states.md)
-## [格式化的輸入和輸出](formatted-input-and-output.md)
 ## [在函式和巨集之間選擇的建議](recommendations-for-choosing-between-functions-and-macros.md)
 ## [類型檢查 (CRT)](type-checking-crt.md)
 ## [方向旗標](direction-flag.md)
@@ -171,7 +170,6 @@
 # [函式系列概觀](function-family-overviews.md)
 ## [_exec、_wexec 函式](exec-wexec-functions.md)
 ## [檔案名稱搜尋函式](filename-search-functions.md)
-## [旗標指示詞](flag-directives.md)
 ## [格式規格語法：printf 和 wprintf 函式](format-specification-syntax-printf-and-wprintf-functions.md)
 ## [格式規格欄位：scanf 和 wscanf 函式](format-specification-fields-scanf-and-wscanf-functions.md)
 ## [is、isw 常式](is-isw-routines.md)
@@ -181,13 +179,9 @@
 ## [operator new (CRT)](operator-new-crt.md)
 ## [operator delete(CRT)](delete-operator-crt.md)
 ## [operator delete (CRT)](operator-delete-crt.md)
-## [精確度規格](precision-specification.md)
-## [printf 類型欄位字元](printf-type-field-characters.md)
-## [printf 寬度規格](printf-width-specification.md)
 ## [printf_p 位置參數](printf-p-positional-parameters.md)
 ## [scanf 類型欄位字元](scanf-type-field-characters.md)
 ## [scanf 寬度規格](scanf-width-specification.md)
-## [大小規格](size-specification.md)
 ## [_spawn、_wspawn 函式](spawn-wspawn-functions.md)
 ## [strcoll 函式](strcoll-functions.md)
 ## [字串轉換為數值函式](string-to-numeric-value-functions.md)
@@ -207,7 +201,3 @@
 ## [_set_output_format](set-output-format.md)
 ## [_unlock](unlock.md)
 # [依字母順序排列的函式參考](reference/TOC.md)
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -30,7 +30,7 @@
     },
     {
        "path_to_root": "_repo.en-us",
-       "url": "https://github.com/Microsoft/vsdocs",
+       "url": "https://github.com/Microsoft/vcppdocs",
        "branch": "master",
        "branch_mapping": {
          "master": "master",

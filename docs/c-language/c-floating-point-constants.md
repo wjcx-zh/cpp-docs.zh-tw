@@ -1,64 +1,76 @@
 ---
 title: "C 浮點常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "常數, 浮點"
-  - "double 資料類型, 浮點常數"
-  - "浮點常數"
-  - "浮點常數, 關於浮點常數"
-  - "浮點數, 浮點常數"
-  - "類型 [C], 常數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- types [C], constants
+- floating-point numbers, floating-point constants
+- constants, floating-point
+- floating-point constants
+- floating-point constants, about floating-point constants
+- double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# C 浮點常數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
+ms.lasthandoff: 02/24/2017
 
-「浮點常數」表示帶正負號的十進位實數。  帶正負號實數的表示由整數部分、小數部分和指數部分所組成。  使用浮點常數表示不能變更的浮點值。  
+---
+# <a name="c-floating-point-constants"></a>C 浮點常數
+「浮點常數」是代表帶正負號實數的十進位數字。 帶正負號的實數表示包含整數部分、分數部分和指數。 使用浮點常數表示不能變更的浮點值。  
   
-## 語法  
- *符點常數*:  
- *小數常數 指數部分*  可選               *浮動後置字元*  可選  
+## <a name="syntax"></a>語法  
+ *floating-point-constant*：  
+ &nbsp;&nbsp; *fractional-constant exponent-part*<sub>opt</sub> *floating-suffix*<sub>opt</sub>  
+ &nbsp;&nbsp; *digit-sequence exponent-part floating-suffix*<sub>opt</sub>  
   
- *數字序列 指數部分 浮動後置字元*  可選  
+ *fractional-constant*：  
+ &nbsp;&nbsp; *digit-sequence*<sub>opt</sub> **.** *digit-sequence*  
+ &nbsp;&nbsp; *digit-sequence*  **.**  
   
- *小數常數*:  
- *數字序列*  可選               **.**  *數字序列*  
+ *exponent-part*：  
+ &nbsp;&nbsp; **e**  *sign*<sub>opt</sub> *digit-sequence*  
+ &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
- *數字序列*  **.**  
+ *sign*：下列其中一個  
+ &nbsp;&nbsp; **+ –**  
   
- *指數部分*:  
- **e**  *正負號*  可選               *數字序列*  
+ *digit-sequence*：  
+ &nbsp;&nbsp; *digit*  
+ &nbsp;&nbsp; *digit-sequence digit*  
   
- **E**  *正負號*  可選               *數字序列*  
+ *floating-suffix*：下列其中一個  
+ &nbsp;&nbsp; **f l F L**  
   
- *正負號* :擇一  
- **\+ –**  
+ 您可以省略小數點之前的數字 (值的整數部分)，或小數點之後的數字 (分數部分)，但不能省略兩者。 只有在加入指數時，才可以省略小數點。 不能使用空白字元分隔常數的數字或字元。  
   
- *數字序列* :  
- *digit*  
-  
- *數值數字序列*  
-  
- *浮動後置字元* :擇一  
- **f l F L**  
-  
- 您可以省略小數點 \(值的整數部分前\) 前的數字或小數點 \(分數部分\) 之後的數字，但不能同時省略兩者。  當您包含指數時才可以忽略小數點。  空白字元不能用於分隔常數的數值或字元。  
-  
- 下列範例說明浮點常數和表達式的某些形式:  
+ 下列範例說明某些形式的浮點常數和表示式︰  
   
 ```  
 15.75  
@@ -68,18 +80,18 @@ caps.handback.revision: 12
 25E-4     /* =  0.0025 */  
 ```  
   
- 浮點常數是正數，除非在減號 \(**–**\) 之後。  在這種情況下，負號視為一元算術負運算子。  浮點常數有 **float**和 **double**或者 `long double`型別。  
+ 除非前面加上負號 (**–**)，否則浮點常數為正數。 此時，負號會視為一元算術負運算子。 浮點常數有 `float`、`double` 或 `long double` 型別。  
   
- 沒有 **f**和 **F**和 **l**或 **L** 結尾的浮點常數為 **double**型別。  如果 **f** 字母或 **F** 是後置字元，常數為 **float**型別。  如果字尾加入字母 **l** 或 **L**，它具有 `long double`型別。  例如：  
+ 沒有**f**、**F**、**l** 或 **L** 後置字元的浮點常數是 `double` 型別。 如果後置字元是字母 **f** 或 **F**，常數則是 `float` 型別。 如果後置字元是字母 **l** 或 **L**，則是 `long double` 型別。 例如:   
   
 ```  
 100L  /* Has type long double  */  
 100F  /* Has type float        */  
 ```  
   
- 請注意 Microsoft C 編譯器將 **long double** 轉換至 **double**型別。  如需型別 **double**和 **float**和 **long**的詳細資訊，請參閱 [基本型別的儲存](../c-language/storage-of-basic-types.md) 。  
+ 請注意，Microsoft C 編譯器在內部將 `long double` 表示為 `double` 型別。 請參閱[基本型別的儲存空間](../c-language/storage-of-basic-types.md)了解 `double`、`float` 和 `long double` 型別的相關資訊。  
   
- 如下列範例所示，您可以省略浮點常數的整數部分。  小數 .75 可以用許多方式表示，包括下列:  
+ 您可以省略浮點常數的整數部分，如下列範例所示。 數字 .75 可以包括下列多種方式表示︰  
   
 ```  
 .0075e2  
@@ -88,5 +100,5 @@ caps.handback.revision: 12
 75e-2  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [C 常數](../c-language/c-constants.md)

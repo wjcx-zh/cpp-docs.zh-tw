@@ -1,44 +1,60 @@
 ---
 title: "C 語言參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-f1_keywords: 
-  - "c"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C, 語言參考"
-  - "語言參考, C"
-  - "Visual C"
-  - "Visual C, 語言參考"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+f1_keywords:
+- c
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visual C
+- C, language reference
+- Visual C, language reference
+- language reference, C
 ms.assetid: 3a306c30-8dd2-435b-bd1c-c143b02c0872
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# C 語言參考
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 3c140b9d49421e8a9f0082351f5e64608506b8ea
+ms.lasthandoff: 02/24/2017
 
-《C 語言參考》將說明 Microsoft C 中實作的 C 程式語言。  本書是根據 ANSI C 標準以及其他有關 ANSI C 標準之 Microsoft 擴充功能的資料所編成。  
+---
+# <a name="c-language-reference"></a>C 語言參考
+*C 語言參考*說明 Microsoft C 中實作的 C 程式語言。本書的組織根據 ANSI C 標準 (有時稱為 C89)，以及其他有關 ANSI C 標準之 Microsoft 擴充功能的資料。  
   
--   [C 語言參考的編制內容](../c-language/organization-of-the-c-language-reference.md)  
+-   [C 語言參考的組織](../c-language/organization-of-the-c-language-reference.md)  
   
- 如需有關 C\+\+ 和前置處理器的其他參考資料，請參閱：  
+如需有關 C++ 和前置處理器的其他參考資料，請參閱：  
   
--   [C\+\+ 語言參考](../cpp/cpp-language-reference.md)  
+-   [C++ 語言參考](../cpp/cpp-language-reference.md)  
   
 -   [前置處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)  
   
- 編譯器和連結器選項記載於 [C\/C\+\+ 建置參考](../build/reference/c-cpp-building-reference.md)中。  
+編譯器和連結器選項記載於 [C/C++ 建置參考](../build/reference/c-cpp-building-reference.md)中。  
   
-## 請參閱  
- [C\/C\+\+ 語言](../misc/c-cpp-languages.md)   
- [Visual C\+\+ Libraries Reference](http://msdn.microsoft.com/zh-tw/fec23c40-10c0-4857-9cdc-33a3b99b30ae)
+## <a name="see-also"></a>另請參閱  
+[C/C++ 語言和標準程式庫](../cpp/c-cpp-language-and-standard-libraries.md)   
+

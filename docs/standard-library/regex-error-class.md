@@ -1,0 +1,178 @@
+---
+title: "regex_error 類別 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- regex_error
+- std::regex_error
+- regex/std::regex_error
+- std::regex_error::code
+- regex/std::regex_error::code
+dev_langs:
+- C++
+helpviewer_keywords:
+- regex_error class
+ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
+caps.latest.revision: 19
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 248e9ba676b906af62f6804f4939e04158a8e2ef
+ms.openlocfilehash: e5eab496a34eaef6f6d382ce8b1d10055c6b4422
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="regexerror-class"></a>regex_error 類別
+回報錯誤的 basic_regex 物件。  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+class regex_error  
+ : public std::runtime_error {  
+public:  
+    explicit regex_error(regex_constants::error_code error);
+
+    regex_constants::error_code code() const;
+
+ 
+ };  
+```  
+  
+## <a name="remarks"></a>備註  
+ 此類別描述為了回報建構或使用 `basic_regex` 物件時所發生的錯誤，所擲回的例外狀況物件。  
+  
+## <a name="requirements"></a>需求  
+ **標頭︰**\<regex>  
+  
+ **命名空間：** std  
+  
+##  <a name="a-nameregexerrorcodea--regexerrorcode"></a><a name="regex_error__code"></a>  regex_error::code  
+ 傳回錯誤碼。  
+  
+```  
+regex_constants::error_code code() const;
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回傳遞給物件建構函式的值。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// std__regex__regex_error_code.cpp   
+// compile with: /EHsc   
+#include <regex>   
+#include <iostream>   
+  
+int main()   
+    {   
+    std::regex_error paren(std::regex_constants::error_paren);   
+  
+    try   
+        {   
+        std::regex rx("(a");   
+        }   
+    catch (const std::regex_error& rerr)   
+        {   
+        std::cout << "regex error: "   
+            << (rerr.code() == paren.code()   
+                 "unbalanced parentheses" : "")   
+            << std::endl;   
+        }   
+    catch (...)   
+        {   
+        std::cout << "unknown exception" << std::endl;   
+        }   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+regex error: unbalanced parentheses  
+```  
+  
+##  <a name="a-nameregexerrorregexerrora--regexerrorregexerror"></a><a name="regex_error__regex_error"></a>  regex_error::regex_error  
+ 建構物件。  
+  
+```  
+regex_error(regex_constants::error_code error);
+```  
+  
+### <a name="parameters"></a>參數  
+ `error`  
+ 錯誤碼。  
+  
+### <a name="remarks"></a>備註  
+ 建構函式會建構物件以保留 `error`值。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// std__regex__regex_error_construct.cpp   
+// compile with: /EHsc   
+#include <regex>   
+#include <iostream>   
+  
+int main()   
+    {   
+    std::regex_error paren(std::regex_constants::error_paren);   
+  
+    try   
+        {   
+        std::regex rx("(a");   
+        }   
+    catch (const std::regex_error& rerr)   
+        {   
+        std::cout << "regex error: "   
+            << (rerr.code() == paren.code()   
+                 "unbalanced parentheses" : "")   
+            << std::endl;   
+        }   
+    catch (...)   
+        {   
+        std::cout << "unknown exception" << std::endl;   
+        }   
+  
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+regex error: unbalanced parentheses  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+[\<regex>](../standard-library/regex.md)  
+[regex_constants 類別](../standard-library/regex-constants-class.md)  
+[\<regex> 函式](../standard-library/regex-functions.md)  
+[regex_iterator 類別](../standard-library/regex-iterator-class.md)  
+[\<regex> 運算子](../standard-library/regex-operators.md)  
+[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
+[regex_traits 類別](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
+

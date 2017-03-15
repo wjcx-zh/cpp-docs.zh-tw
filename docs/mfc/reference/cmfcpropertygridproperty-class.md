@@ -1,0 +1,1390 @@
+---
+title: "CMFCPropertyGridProperty 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- CMFCPropertyGridProperty
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMFCPropertyGridProperty class
+ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
+caps.latest.revision: 35
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
+ms.openlocfilehash: e0a8dfc9d4475947e65c827d7ff9a37a429b7feb
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 類別
+A`CMFCPropertyGridProperty`物件都代表屬性清單控制項中的清單項目。  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+class CMFCPropertyGridProperty : public CObject  
+```  
+  
+## <a name="members"></a>Members  
+  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|建構 `CMFCPropertyGridProperty` 物件。|  
+|`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|解構函式。|  
+  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|描述|  
+|----------|-----------------|  
+|[CMFCPropertyGridProperty::AddOption](#addoption)|將新的清單項目加入至屬性清單控制項。|  
+|[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|將子項目加入至屬性。|  
+|[CMFCPropertyGridProperty::AdjustButtonRect](#adjustbuttonrect)|呼叫父屬性清單控制項，來告訴要調整大小的內嵌的按鈕，這個周框的屬性。|  
+|[CMFCPropertyGridProperty::AdjustInPlaceEditRect](#adjustinplaceeditrect)|擷取用來設定屬性值的文字方塊和選擇性微調按鈕控制項的界限。|  
+|[CMFCPropertyGridProperty::AllowEdit](#allowedit)|可讓屬性，可以讓您編輯或唯讀狀態。|  
+|[CMFCPropertyGridProperty::CreateInPlaceEdit](#createinplaceedit)|若要建立可編輯的控制項的屬性架構呼叫。|  
+|[CMFCPropertyGridProperty::CreateSpinControl](#createspincontrol)|若要建立可編輯的微調按鈕控制項架構呼叫。|  
+|[CMFCPropertyGridProperty::Enable](#enable)|啟用或停用屬性。|  
+|[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)|啟用或停用來修改屬性值使用微調按鈕控制項。|  
+|[CMFCPropertyGridProperty::Expand](#expand)|展開或摺疊，包含子屬性的屬性。|  
+|[CMFCPropertyGridProperty::FormatProperty](#formatproperty)|格式化屬性值的文字表示法。|  
+|[CMFCPropertyGridProperty::GetData](#getdata)|擷取`DWORD`與屬性相關聯的值。|  
+|[CMFCPropertyGridProperty::GetDescription](#getdescription)|擷取屬性描述。|  
+|[CMFCPropertyGridProperty::GetExpandedSubItems](#getexpandedsubitems)|擷取子展開的項目數目。|  
+|[CMFCPropertyGridProperty::GetHierarchyLevel](#gethierarchylevel)|擷取屬性的階層層級的以零為起始的索引。|  
+|[CMFCPropertyGridProperty::GetName](#getname)|擷取屬性的名稱。|  
+|[CMFCPropertyGridProperty::GetNameTooltip](#getnametooltip)|在工具提示中顯示的屬性名稱的架構所呼叫。|  
+|[CMFCPropertyGridProperty::GetOption](#getoption)|擷取指定索引選項的文字。|  
+|[CMFCPropertyGridProperty::GetOptionCount](#getoptioncount)|擷取屬於屬性的選項數目。|  
+|[CMFCPropertyGridProperty::GetOriginalValue](#getoriginalvalue)|擷取目前屬性的初始值。|  
+|[CMFCPropertyGridProperty::GetParent](#getparent)|擷取父屬性的指標。|  
+|[CMFCPropertyGridProperty::GetRect](#getrect)|擷取的屬性，這個周框。|  
+|[CMFCPropertyGridProperty::GetSubItem](#getsubitem)|擷取子屬性，以零為起始的索引所識別。|  
+|[CMFCPropertyGridProperty::GetSubItemsCount](#getsubitemscount)|擷取子項目數目。|  
+|`CMFCPropertyGridProperty::GetThisClass`|由架構用來取得變數的指標， [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
+|[CMFCPropertyGridProperty::GetValue](#getvalue)|擷取屬性值。|  
+|[CMFCPropertyGridProperty::GetValueTooltip](#getvaluetooltip)|若要擷取屬性值，即會顯示在工具提示的文字表示架構呼叫。|  
+|[CMFCPropertyGridProperty::HitTest](#hittest)|指向對應至屬性清單項目對應至某個點的屬性物件。|  
+|[CMFCPropertyGridProperty::IsAllowEdit](#isallowedit)|指出屬性是否可編輯。|  
+|[CMFCPropertyGridProperty::IsEnabled](#isenabled)|指出屬性是否要啟用或停用。|  
+|[CMFCPropertyGridProperty::IsExpanded](#isexpanded)|指出屬性是否要展開或摺疊。|  
+|[CMFCPropertyGridProperty::IsGroup](#isgroup)|指出目前的屬性是否代表群組。|  
+|[CMFCPropertyGridProperty::IsInPlaceEditing](#isinplaceediting)|指出是否可以讓您編輯目前的屬性。|  
+|[CMFCPropertyGridProperty::IsModified](#ismodified)|指出是否要修改目前的屬性。|  
+|[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|指出是否會展開目前屬性的父代。|  
+|[CMFCPropertyGridProperty::IsSelected](#isselected)|指出是否已選取目前的屬性。|  
+|[CMFCPropertyGridProperty::IsVisible](#isvisible)|指出是否可以看到目前的屬性。|  
+|[CMFCPropertyGridProperty::OnClickButton](#onclickbutton)|使用者按一下屬性中內含的按鈕時由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnClickName](#onclickname)|當使用者按一下 [名稱] 欄位的屬性，由父屬性清單控制項呼叫。|  
+|[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|當使用者按一下 [值] 欄位的屬性，由父屬性清單控制項呼叫。|  
+|[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|關閉包含在屬性的下拉式方塊時，由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnDblClk](#ondblclk)|當使用者按兩下屬性時，由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnDrawButton](#ondrawbutton)|若要繪製按鈕包含在屬性架構呼叫。|  
+|[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|若要顯示的屬性描述架構呼叫。|  
+|[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|若要繪製展開方塊控制項附近，包含子屬性的屬性架構呼叫。|  
+|[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|若要顯示的屬性名稱架構呼叫。|  
+|[CMFCPropertyGridProperty::OnDrawValue](#ondrawvalue)|由架構呼叫以顯示屬性值。|  
+|[CMFCPropertyGridProperty::OnEdit](#onedit)|使用者即將修改屬性值時由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|當使用者完成時，由框架呼叫修改屬性值。|  
+|[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||  
+|[CMFCPropertyGridProperty::OnPosSizeChanged](#onpossizechanged)||  
+|[CMFCPropertyGridProperty::OnRClickName](#onrclickname)|當使用者按一下滑鼠右鍵，在屬性名稱區域中，由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnRClickValue](#onrclickvalue)|當使用者按一下滑鼠右鍵的屬性值區，由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|當使用者從可編輯的下拉式方塊選取項目，由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|當滑鼠指標移至的屬性項目時，由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||  
+|[CMFCPropertyGridProperty::OnUpdateValue](#onupdatevalue)|當可編輯屬性的值變更時由架構呼叫。|  
+|[CMFCPropertyGridProperty::PushChar](#pushchar)|在選取的屬性和使用者輸入新的字元時，從屬性清單控制項呼叫。|  
+|[CMFCPropertyGridProperty::Redraw](#redraw)|此屬性來重新繪製。|  
+|[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|從屬性中移除所有的選項 （項目）。|  
+|[CMFCPropertyGridProperty::RemoveSubItem](#removesubitem)|移除指定的子項目。|  
+|[CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue)|還原已編輯的屬性的原始值。|  
+|[CMFCPropertyGridProperty::SetData](#setdata)|將`DWORD`與屬性的值。|  
+|[CMFCPropertyGridProperty::SetDescription](#setdescription)|指定的文字，描述目前的屬性。|  
+|[CMFCPropertyGridProperty::SetName](#setname)|設定屬性的名稱。|  
+|[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)|設定可編輯屬性的原始值。|  
+|[CMFCPropertyGridProperty::SetValue](#setvalue)|設定屬性格線屬性值。|  
+|[CMFCPropertyGridProperty::Show](#show)|顯示或隱藏屬性。|  
+  
+### <a name="protected-methods"></a>受保護的方法  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[CMFCPropertyGridProperty::CreateCombo](#createcombo)|若要將下拉式方塊加入至屬性架構呼叫。|  
+|[CMFCPropertyGridProperty::HasButton](#hasbutton)|指出屬性是否包含一個按鈕。|  
+|[CMFCPropertyGridProperty::Init](#init)|若要初始化的屬性物件架構呼叫。|  
+|[CMFCPropertyGridProperty::IsSubItem](#issubitem)|指出指定的屬性是否為目前屬性的項目。|  
+|[CMFCPropertyGridProperty::IsValueChanged](#isvaluechanged)|指出是否已變更的目前屬性值。|  
+|[CMFCPropertyGridProperty::OnCtlColor](#onctlcolor)|架構必須擷取屬性的背景色彩填滿筆刷時呼叫。|  
+|[CMFCPropertyGridProperty::OnDestroyWindow](#ondestroywindow)|終結屬性時，或編輯完成時，由架構呼叫。|  
+|[CMFCPropertyGridProperty::OnKillFocus](#onkillfocus)|當屬性失去輸入的焦點時，由架構呼叫。|  
+  
+### <a name="data-members"></a>資料成員  
+  
+|名稱|描述|  
+|----------|-----------------|  
+|[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Double 型別值的格式字串。|  
+|[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|浮點值的格式字串。|  
+|[CMFCPropertyGridProperty::m_strFormatLong](#m_strformatlong)|長時間格式字串類型的值。|  
+|[CMFCPropertyGridProperty::m_strFormatShort](#m_strformatshort)|簡短的型別值的格式字串。|  
+  
+## <a name="remarks"></a>備註  
+ 使用`CMFCPropertyGridProperty`物件以代表您將加入的屬性清單控制項屬性。 如需詳細資訊，請參閱[CMFCPropertyGridCtrl 類別](../../mfc/reference/cmfcpropertygridctrl-class.md)。  
+  
+ 屬性物件可以代表資料類型，例如字串、 日期和布林值或整數值。 它可以包含子屬性，或者也可以包含例如下拉式方塊控制項或按鈕控制項。  
+  
+## <a name="example"></a>範例  
+ 下列範例示範如何建構`CMFCPropertyGridProperty`物件。 此範例也示範如何使用各種方法的`CMFCPropertyGridProperty`類別，以將選項加入、 新增項目，啟用的屬性，以及顯示屬性。 這個範例是屬於[新的控制項範例](../../visual-cpp-samples.md)。  
+  
+ [!code-cpp[NVC_MFC_NewControls #&27;](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
+ [CObject](../../mfc/reference/cobject-class.md)  
+  
+ [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)  
+  
+## <a name="requirements"></a>需求  
+ **標頭︰** afxpropertygridctrl.h  
+  
+##  <a name="a-nameaddoptiona--cmfcpropertygridpropertyaddoption"></a><a name="addoption"></a>CMFCPropertyGridProperty::AddOption  
+ 將新的清單項目加入至屬性清單控制項。  
+  
+```  
+BOOL AddOption(
+    LPCTSTR lpszOption,  
+    BOOL bInsertUnique=TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `lpszOption`  
+ 清單項目 （選項） 來加入。  
+  
+ [in] `bInsertUnique`  
+ `TRUE`若要將清單項目，只有當已經存在。否則， `FALSE`。 預設值是 `TRUE`。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`這表示，便會加入清單項目。 否則， `FALSE`，也就是說，不是清單項目加入，因為`bInsertUnique`參數是`TRUE`和所指定的項目清單`lpszOption`參數已經存在。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameaddsubitema--cmfcpropertygridpropertyaddsubitem"></a><a name="addsubitem"></a>CMFCPropertyGridProperty::AddSubItem  
+ 將子項目加入至屬性。  
+  
+```  
+BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pProp`  
+ 要加入屬性的指標。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果指定的屬性已成功新增為子屬性。 `FALSE`如果屬性不會加入，因為它已出現在父屬性。  
+  
+### <a name="remarks"></a>備註  
+ 使用這個方法來建立階層式清單的父和子屬性。 子系之後會新增屬性，parent 屬性會自動顯示指定的加號 （+） 展開方塊控制項。 當使用者按一下加號時，parent 屬性會展開並顯示任何子屬性項目。  
+  
+##  <a name="a-nameadjustbuttonrecta--cmfcpropertygridpropertyadjustbuttonrect"></a><a name="adjustbuttonrect"></a>CMFCPropertyGridProperty::AdjustButtonRect  
+ 呼叫父屬性清單控制項，來告訴要調整大小的內嵌的按鈕，這個周框的屬性。  
+  
+```  
+virtual void AdjustButtonRect();
+```  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法︰  
+  
+-   調整按鈕的高度按鈕等於寬度加上 3 個像素為單位。  
+  
+-   移至右邊的屬性，這個周框的按鈕  
+  
+-   將屬性的上邊緣下方的按鈕 1 像素。  
+  
+##  <a name="a-nameadjustinplaceeditrecta--cmfcpropertygridpropertyadjustinplaceeditrect"></a><a name="adjustinplaceeditrect"></a>CMFCPropertyGridProperty::AdjustInPlaceEditRect  
+ 擷取用來設定屬性值的文字方塊和選擇性微調按鈕控制項的界限。  
+  
+```  
+virtual void AdjustInPlaceEditRect(
+    CRect& rectEdit,  
+    CRect& rectSpin);
+```  
+  
+### <a name="parameters"></a>參數  
+ [輸出] `rectEdit`  
+ 當這個方法傳回時，指定屬性值的文字方塊中的界限的矩形。  
+  
+ [輸出] `rectSpin`  
+ 當這個方法傳回時，指定屬性值的微調按鈕控制項界限的矩形。 或者，如果屬性不支援微調按鈕，為空的矩形。  
+  
+### <a name="remarks"></a>備註  
+ 屬性的值區域包含的文字方塊中，且可能*選項按鈕*，例如微調按鈕控制項。 這個方法計算的維度的 [文字] 方塊和選項按鈕，並傳回這些值在指定的參數。  
+  
+##  <a name="a-nameallowedita--cmfcpropertygridpropertyallowedit"></a><a name="allowedit"></a>CMFCPropertyGridProperty::AllowEdit  
+ 可讓屬性，可以讓您編輯或唯讀狀態。  
+  
+```  
+void AllowEdit(BOOL bAllow=TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `bAllow`  
+ `TRUE`將屬性設為可編輯。`FALSE`若要將此屬性為唯讀。 預設值是 `TRUE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecmfcpropertygridpropertya--cmfcpropertygridpropertycmfcpropertygridproperty"></a><a name="cmfcpropertygridproperty"></a>CMFCPropertyGridProperty::CMFCPropertyGridProperty  
+ 建構 `CMFCPropertyGridProperty` 物件。  
+  
+```  
+CMFCPropertyGridProperty(
+    const CString& strGroupName,  
+    DWORD_PTR dwData=0,  
+    BOOL bIsValueList=FALSE);
+
+ 
+CMFCPropertyGridProperty(
+    const CString& strName,  
+    const _variant_t& varValue,  
+    LPCTSTR lpszDescr=NULL,  
+    DWORD_PTR dwData=0,  
+    LPCTSTR lpszEditMask=NULL,  
+    LPCTSTR lpszEditTemplate=NULL,  
+    LPCTSTR lpszValidChars=NULL);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `strGroupName`  
+ 群組名稱。 A*群組*是在屬性方格控制項中的相關屬性的集合。 如果控制項以階層方式，顯示*群組名稱*會顯示為群組上的資料列中的類別目錄標題。  
+  
+ [in] `dwData`  
+ 應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
+  
+ [in] `strName`  
+ 屬性的名稱。  
+  
+ [in] `varValue`  
+ 屬性值。  
+  
+ [in] `lpszDescr`  
+ 屬性描述。 預設值是 `NULL`。  
+  
+ [in] `lpszEditMask`  
+ 如果屬性為遮罩的編輯控制項編輯遮罩。 預設值是 `NULL`。  
+  
+ [in] `lpszEditTemplate`  
+ 如果屬性為遮罩的編輯控制項編輯範本。 預設值是 `NULL`。  
+  
+ [in] `lpszValidChars`  
+ 無效的字元，如果屬性為遮罩的編輯控制項的清單。 預設值是 `NULL`。  
+  
+ [in] `bIsValueList`  
+ `TRUE`如果屬性表示一份值;`FALSE`如果屬性表示的單一值。 預設值是 `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecreatecomboa--cmfcpropertygridpropertycreatecombo"></a><a name="createcombo"></a>CMFCPropertyGridProperty::CreateCombo  
+ 若要將下拉式方塊加入至屬性架構呼叫。  
+  
+```  
+virtual CComboBox* CreateCombo(
+    CWnd* pWndParent,  
+    CRect rect);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pWndParent`  
+ 下拉式方塊的父視窗的指標。  
+  
+ [in] `rect`  
+ 下拉式方塊，這個周框。  
+  
+### <a name="return-value"></a>傳回值  
+ 新指標[CComboBox](../../mfc/reference/ccombobox-class.md)物件。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namecreateinplaceedita--cmfcpropertygridpropertycreateinplaceedit"></a><a name="createinplaceedit"></a>CMFCPropertyGridProperty::CreateInPlaceEdit  
+ 若要建立可編輯的控制項的屬性架構呼叫。  
+  
+```  
+virtual CWnd* CreateInPlaceEdit(
+    CRect rectEdit,  
+    BOOL& bDefaultFormat);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `rectEdit`  
+ 可編輯的控制項，這個周框。  
+  
+ [in] `bDefaultFormat`  
+ `TRUE`若要使用預設屬性的格式設定的文字編輯控制項中;否則， `FALSE`。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果此方法成功，可以讓您編輯控制項的指標否則， `NULL`。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法會使用值`varValue`， `lpszEditMask`， `lpszEditTemplate`，和`lpszValidChars`參數中指定的[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)類別建構函式。 根據預設，這個方法支援`varValue`variant 型別。 This includes `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, and `VT_BOOL`.  
+  
+ 這個方法會建立[CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)控制如果一或多個`lpszEditMask`， `lpszEditTemplate`，或`lpszValidChars`指定參數; 否則它會建立[CEdit](../../mfc/reference/cedit-class.md)控制項。  
+  
+##  <a name="a-namecreatespincontrola--cmfcpropertygridpropertycreatespincontrol"></a><a name="createspincontrol"></a>CMFCPropertyGridProperty::CreateSpinControl  
+ 若要建立可編輯的微調按鈕控制項架構呼叫。  
+  
+```  
+virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `rectSpin`  
+ 定義建立可編輯的微調按鈕控制項的位置矩形。  
+  
+### <a name="return-value"></a>傳回值  
+ 新的指標[CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)轉換為指標指向的物件[CSpinButtonCtrl](../../mfc/reference/cspinbuttonctrl-class.md)物件。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫[CMFCPropertyGridProperty::EnableSpinControl](#enablespincontrol)方法，以顯示可編輯的微調按鈕控制項屬性的右邊緣。  
+  
+##  <a name="a-nameenablea--cmfcpropertygridpropertyenable"></a><a name="enable"></a>CMFCPropertyGridProperty::Enable  
+ 啟用或停用屬性。  
+  
+```  
+void Enable(BOOL bEnable=TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `bEnable`  
+ `TRUE`若要啟用的屬性。`FALSE`來停用的屬性。 已停用的屬性不會回應滑鼠或鍵盤輸入。 預設值是 `TRUE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameenablespincontrola--cmfcpropertygridpropertyenablespincontrol"></a><a name="enablespincontrol"></a>CMFCPropertyGridProperty::EnableSpinControl  
+ 啟用或停用來修改屬性值使用微調按鈕控制項。  
+  
+```  
+void EnableSpinControl(
+    BOOL bEnable=TRUE,  
+    int nMin=0,  
+    int nMax=0);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `bEnable`  
+ `TRUE`若要啟用微調按鈕控制項。`FALSE`停用微調按鈕控制項。 預設值是 `TRUE`。  
+  
+ [in] `nMin`  
+ 微調按鈕控制項的最小值。 預設值為 0。  
+  
+ [in] `nMax`  
+ 微調按鈕控制項的最大值。 預設值為 0。  
+  
+### <a name="remarks"></a>備註  
+ 編輯屬性時，架構會自動建立微調按鈕控制項。  
+  
+ 屬性型別，這是由`varValue`參數[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)建構函式，必須是支援的 variant 型別。 否則，這個方法會判斷提示中偵錯模式。 支援的類型包括`VT_INT`， `VT_UINT`， `VT_I2`， `VT_I4`， `VT_UI2`，和`VT_UI4`。  
+  
+##  <a name="a-nameexpanda--cmfcpropertygridpropertyexpand"></a><a name="expand"></a>CMFCPropertyGridProperty::Expand  
+ 展開或摺疊，包含子屬性的屬性。  
+  
+```  
+void Expand(BOOL bExpand=TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `bExpand`  
+ `TRUE`若要展開的屬性。若要摺疊屬性，則為 FALSE。 預設值是 `TRUE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameformatpropertya--cmfcpropertygridpropertyformatproperty"></a><a name="formatproperty"></a>CMFCPropertyGridProperty::FormatProperty  
+ 格式化屬性值的文字表示法。  
+  
+```  
+virtual CString FormatProperty();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 屬性值的文字表示。  
+  
+### <a name="remarks"></a>備註  
+ 架構會呼叫這個方法，就會顯示屬性值。  
+  
+##  <a name="a-namegetdataa--cmfcpropertygridpropertygetdata"></a><a name="getdata"></a>CMFCPropertyGridProperty::GetData  
+ 擷取`DWORD`與屬性相關聯的值。  
+  
+```  
+DWORD_PTR GetData() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `DWORD` 值。  
+  
+### <a name="remarks"></a>備註  
+ 傳回的資料是應用程式特定值，例如數字或其他資料的指標。 指定的資料值，當您建構屬性時，或當您呼叫[CMFCPropertyGridProperty::SetData](#setdata)方法。  
+  
+##  <a name="a-namegetdescriptiona--cmfcpropertygridpropertygetdescription"></a><a name="getdescription"></a>CMFCPropertyGridProperty::GetDescription  
+ 擷取屬性描述。  
+  
+```  
+const CString& GetDescription() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 文字字串，其中包含屬性描述。  
+  
+### <a name="remarks"></a>備註  
+ 屬性清單控制項也會使用這個方法來顯示屬性的描述。  
+  
+##  <a name="a-namegetexpandedsubitemsa--cmfcpropertygridpropertygetexpandedsubitems"></a><a name="getexpandedsubitems"></a>CMFCPropertyGridProperty::GetExpandedSubItems  
+ 擷取子展開的項目數目。  
+  
+```  
+int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|描述|  
+|---------------|-----------------|  
+|[in] `bIncludeHidden`|`TRUE`若要隱藏的子項目納入計數;否則， `FALSE`。 預設值是 `TRUE`。|  
+  
+### <a name="return-value"></a>傳回值  
+ 展開子的項目數目。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegethierarchylevela--cmfcpropertygridpropertygethierarchylevel"></a><a name="gethierarchylevel"></a>CMFCPropertyGridProperty::GetHierarchyLevel  
+ 擷取屬性的階層層級的以零為起始的索引。  
+  
+```  
+int GetHierarchyLevel() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 屬性的階層層級。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetnamea--cmfcpropertygridpropertygetname"></a><a name="getname"></a>CMFCPropertyGridProperty::GetName  
+ 擷取屬性的名稱。  
+  
+```  
+LPCTSTR GetName() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 包含屬性名稱的字串指標。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetnametooltipa--cmfcpropertygridpropertygetnametooltip"></a><a name="getnametooltip"></a>CMFCPropertyGridProperty::GetNameTooltip  
+ 在工具提示中顯示的屬性名稱的架構所呼叫。  
+  
+```  
+virtual CString GetNameTooltip();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 包含屬性名稱的字串。 根據預設，傳回值為空字串。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetoptiona--cmfcpropertygridpropertygetoption"></a><a name="getoption"></a>CMFCPropertyGridProperty::GetOption  
+ 擷取指定索引選項的文字。  
+  
+```  
+LPCTSTR GetOption(int nIndex) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+ `nIndex`  
+ 屬性清單項目 （選項），以擷取以零為起始的索引。  
+  
+### <a name="return-value"></a>傳回值  
+ 包含選項的文字字串的指標。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetoptioncounta--cmfcpropertygridpropertygetoptioncount"></a><a name="getoptioncount"></a>CMFCPropertyGridProperty::GetOptionCount  
+ 擷取屬於屬性的選項數目。  
+  
+```  
+int GetOptionCount() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 屬性清單項目 （選項） 屬性控制項中所包含的數目。  
+  
+### <a name="remarks"></a>備註  
+ 呼叫[CMFCPropertyGridProperty::AddOption](#addoption)方法，將項目加入至屬性清單。 呼叫[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)方法來移除所有項目。  
+  
+##  <a name="a-namegetoriginalvaluea--cmfcpropertygridpropertygetoriginalvalue"></a><a name="getoriginalvalue"></a>CMFCPropertyGridProperty::GetOriginalValue  
+ 擷取目前屬性的初始值。  
+  
+```  
+const COleVariant& GetOriginalValue() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 目前屬性的原始值。  
+  
+### <a name="remarks"></a>備註  
+ 使用此方法來復原變更的目前屬性值的編輯作業的效果。  
+  
+ 設定目前屬性的原始值[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)建構函式，來修改[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)方法，並根據重設[CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue)方法。  
+  
+##  <a name="a-namegetparenta--cmfcpropertygridpropertygetparent"></a><a name="getparent"></a>CMFCPropertyGridProperty::GetParent  
+ 擷取父屬性的指標。  
+  
+```  
+CMFCPropertyGridProperty* GetParent() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 父屬性物件的指標或`NULL`最上層屬性。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetrecta--cmfcpropertygridpropertygetrect"></a><a name="getrect"></a>CMFCPropertyGridProperty::GetRect  
+ 擷取的屬性，這個周框。  
+  
+```  
+CRect GetRect() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ A [CRect](../../atl-mfc-shared/reference/crect-class.md)物件，描述，這個周框。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetsubitema--cmfcpropertygridpropertygetsubitem"></a><a name="getsubitem"></a>CMFCPropertyGridProperty::GetSubItem  
+ 擷取子屬性，以零為起始的索引所識別。  
+  
+```  
+CMFCPropertyGridProperty* GetSubItem(int nIndex) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `nIndex`  
+ 要擷取之屬性的以零為起始的索引。 這個參數是不正確，如果它小於零或大於或等於子屬性數目。  
+  
+### <a name="return-value"></a>傳回值  
+ 子項目，這個屬性的屬性物件的指標。  
+  
+ -或-  
+  
+ 在零售模式中，`NULL`如果`nIndex`參數無效。 在偵錯模式中，這個方法會判斷提示。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetsubitemscounta--cmfcpropertygridpropertygetsubitemscount"></a><a name="getsubitemscount"></a>CMFCPropertyGridProperty::GetSubItemsCount  
+ 擷取子項目數目。  
+  
+```  
+int GetSubItemsCount() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 子系項目數目。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetvaluea--cmfcpropertygridpropertygetvalue"></a><a name="getvalue"></a>CMFCPropertyGridProperty::GetValue  
+ 擷取屬性值。  
+  
+```  
+virtual const _variant_t& GetValue() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 包含屬性值的變數。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namegetvaluetooltipa--cmfcpropertygridpropertygetvaluetooltip"></a><a name="getvaluetooltip"></a>CMFCPropertyGridProperty::GetValueTooltip  
+ 若要擷取屬性值，即會顯示在工具提示的文字表示架構呼叫。  
+  
+```  
+virtual CString GetValueTooltip();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ A`CString`物件，其中包含屬性值的文字表示法。 根據預設，這個值會是空的字串。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namehasbuttona--cmfcpropertygridpropertyhasbutton"></a><a name="hasbutton"></a>CMFCPropertyGridProperty::HasButton  
+ 指出屬性是否包含一個按鈕。  
+  
+```  
+virtual BOOL HasButton() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果內容包含按鈕 （或屬性清單）。否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namehittesta--cmfcpropertygridpropertyhittest"></a><a name="hittest"></a>CMFCPropertyGridProperty::HitTest  
+ 指向對應至屬性清單項目對應至某個點的屬性物件。  
+  
+```  
+CMFCPropertyGridProperty* HitTest(
+    CPoint point,  
+    CMFCPropertyGridProperty::ClickArea* pnArea=NULL);
+
+ 
+CMFCPropertyGridProperty* HitTest(
+    CPoint pt,  
+    CMFCPropertyGridProperty::ClickArea* pnArea=NULL,  
+    BOOL bPropsOnly=FALSE) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `point`  
+ 要測試，請在工作區座標的點。 這個參數通常是目前的滑鼠指標位置。  
+  
+ [in] `pt`  
+ 要測試，請在工作區座標的點。  
+  
+ [輸出] `pnArea`  
+ 此方法傳回時，表示包含指定的點的區域。 如需詳細資訊，請參閱＜備註＞。 預設值是 `NULL`。  
+  
+ [in] `bPropsOnly`  
+ `TRUE`若要測試的任何區域中屬性的控制項，`FALSE`測試只描述區域。 預設值是 `FALSE`。  
+  
+### <a name="return-value"></a>傳回值  
+ 屬性物件的指標或`NULL`。  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法會測試屬性子項目，如果任何屬性的項目中找不到指定的點。  
+  
+ 下表列出的值會傳回給`pnArea`參數。  
+  
+|區域圖|說明|  
+|----------|-----------------|  
+|`ClickArea::ClickExpandBox`|展開方塊控制項，指定將以加號 （+）。|  
+|`ClickArea::ClickName`|屬性名稱。|  
+|`ClickArea::ClickValue`|屬性值。|  
+  
+##  <a name="a-nameinita--cmfcpropertygridpropertyinit"></a><a name="init"></a>CMFCPropertyGridProperty::Init  
+ 若要初始化的屬性物件架構呼叫。  
+  
+```  
+void Init();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameisallowedita--cmfcpropertygridpropertyisallowedit"></a><a name="isallowedit"></a>CMFCPropertyGridProperty::IsAllowEdit  
+ 指出屬性是否可編輯。  
+  
+```  
+BOOL IsAllowEdit() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果屬性是可編輯。否則`FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameisenableda--cmfcpropertygridpropertyisenabled"></a><a name="isenabled"></a>CMFCPropertyGridProperty::IsEnabled  
+ 指出屬性是否要啟用或停用。  
+  
+```  
+BOOL IsEnabled() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果屬性已啟用。`FALSE`如果屬性已停用。  
+  
+### <a name="remarks"></a>備註  
+ 會告知屬性是否要啟用或停用。  
+  
+##  <a name="a-nameisexpandeda--cmfcpropertygridpropertyisexpanded"></a><a name="isexpanded"></a>CMFCPropertyGridProperty::IsExpanded  
+ 指出屬性是否要展開或摺疊。  
+  
+```  
+BOOL IsExpanded() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果擴充屬性。，`FALSE`如果屬性已摺疊。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameisgroupa--cmfcpropertygridpropertyisgroup"></a><a name="isgroup"></a>CMFCPropertyGridProperty::IsGroup  
+ 指出目前的屬性是否代表群組。  
+  
+```  
+BOOL IsGroup() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果目前的屬性物件表示某個群組;`FALSE`如果屬性表示的值。  
+  
+### <a name="remarks"></a>備註  
+ A*群組*是在屬性方格控制項中的相關屬性的集合。 如果控制項以階層方式，顯示*群組名稱*會顯示為群組上的資料列中的類別目錄標題。  
+  
+##  <a name="a-nameisinplaceeditinga--cmfcpropertygridpropertyisinplaceediting"></a><a name="isinplaceediting"></a>CMFCPropertyGridProperty::IsInPlaceEditing  
+ 指出是否可以讓您編輯目前的屬性。  
+  
+```  
+BOOL IsInPlaceEditing() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果目前的屬性是可編輯。否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameismodifieda--cmfcpropertygridpropertyismodified"></a><a name="ismodified"></a>CMFCPropertyGridProperty::IsModified  
+ 指出是否要修改目前的屬性。  
+  
+```  
+BOOL IsModified() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果屬性已修改;否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameisparentexpandeda--cmfcpropertygridpropertyisparentexpanded"></a><a name="isparentexpanded"></a>CMFCPropertyGridProperty::IsParentExpanded  
+ 指出是否會展開目前屬性的父代。  
+  
+```  
+BOOL IsParentExpanded() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果展開所有父系的目前屬性。，`FALSE`如果摺疊父屬性。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameisselecteda--cmfcpropertygridpropertyisselected"></a><a name="isselected"></a>CMFCPropertyGridProperty::IsSelected  
+ 指出是否已選取目前的屬性。  
+  
+```  
+virtual BOOL IsSelected() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果已選取目前的屬性。，否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameissubitema--cmfcpropertygridpropertyissubitem"></a><a name="issubitem"></a>CMFCPropertyGridProperty::IsSubItem  
+ 指出指定的屬性是否為目前屬性的項目。  
+  
+```  
+BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;  
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pProp`  
+ 指標的屬性。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果指定的屬性是目前的屬性，項目否則， `FALSE`。  
+  
+##  <a name="a-nameisvaluechangeda--cmfcpropertygridpropertyisvaluechanged"></a><a name="isvaluechanged"></a>CMFCPropertyGridProperty::IsValueChanged  
+ 指出是否已變更的目前屬性值。  
+  
+```  
+virtual BOOL IsValueChanged() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果目前屬性的值已變更。否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameisvisiblea--cmfcpropertygridpropertyisvisible"></a><a name="isvisible"></a>CMFCPropertyGridProperty::IsVisible  
+ 指出是否可以看到目前的屬性。  
+  
+```  
+BOOL IsVisible() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果目前的屬性是可見的。否則`FALSE`.  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namemstrformatdoublea--cmfcpropertygridpropertymstrformatdouble"></a><a name="m_strformatdouble"></a>CMFCPropertyGridProperty::m_strFormatDouble  
+ 保存 double 型別值的格式字串。  
+  
+```  
+static CString m_strFormatDouble;  
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namemstrformatfloata--cmfcpropertygridpropertymstrformatfloat"></a><a name="m_strformatfloat"></a>CMFCPropertyGridProperty::m_strFormatFloat  
+ 保留的浮點值的格式字串。  
+  
+```  
+static CString m_strFormatFloat;  
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namemstrformatlonga--cmfcpropertygridpropertymstrformatlong"></a><a name="m_strformatlong"></a>CMFCPropertyGridProperty::m_strFormatLong  
+ 保存 long 型別值的格式字串。  
+  
+```  
+static CString m_strFormatLong;  
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namemstrformatshorta--cmfcpropertygridpropertymstrformatshort"></a><a name="m_strformatshort"></a>CMFCPropertyGridProperty::m_strFormatShort  
+ 包含簡短的型別值的格式字串。  
+  
+```  
+static CString m_strFormatShort;  
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonclickbuttona--cmfcpropertygridpropertyonclickbutton"></a><a name="onclickbutton"></a>CMFCPropertyGridProperty::OnClickButton  
+ 使用者按一下屬性中內含的按鈕時由架構呼叫。  
+  
+```  
+virtual void OnClickButton(CPoint point);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `point`  
+ 用戶端座標中的點。  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法沒有作用。  
+  
+##  <a name="a-nameonclicknamea--cmfcpropertygridpropertyonclickname"></a><a name="onclickname"></a>CMFCPropertyGridProperty::OnClickName  
+ 當使用者按一下 [名稱] 欄位的屬性，由父屬性清單控制項呼叫。  
+  
+```  
+virtual void OnClickName(CPoint C);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|描述|  
+|---------------|-----------------|  
+|[in] `C`|用戶端座標中的點。|  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法沒有作用。  
+  
+##  <a name="a-nameonclickvaluea--cmfcpropertygridpropertyonclickvalue"></a><a name="onclickvalue"></a>CMFCPropertyGridProperty::OnClickValue  
+ 當使用者按一下 [值] 欄位的屬性，由父屬性清單控制項呼叫。  
+  
+```  
+virtual BOOL OnClickValue(
+    UINT uiMsg,  
+    CPoint point);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `uiMsg`  
+ 滑鼠訊息。  
+  
+ [in] `point`  
+ 用戶端座標中的點。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果指定的滑鼠處理該訊息是由這個方法。否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法會傳回`FALSE`如果目前的屬性不是可編輯。 否則，這個屬性與相關聯的微調控制項的編輯處理指定的滑鼠的訊息，並則這個方法會傳回`TRUE`。  
+  
+##  <a name="a-nameonclosecomboa--cmfcpropertygridpropertyonclosecombo"></a><a name="onclosecombo"></a>CMFCPropertyGridProperty::OnCloseCombo  
+ 關閉包含在屬性的下拉式方塊時，由架構呼叫。  
+  
+```  
+virtual void OnCloseCombo();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonctlcolora--cmfcpropertygridpropertyonctlcolor"></a><a name="onctlcolor"></a>CMFCPropertyGridProperty::OnCtlColor  
+ 架構必須擷取屬性的背景色彩填滿筆刷時呼叫。  
+  
+```  
+virtual HBRUSH OnCtlColor(
+    CDC* pDC,  
+    UINT nCtlColor);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDC`  
+ 裝置內容的指標。  
+  
+ [in] `nCtlColor`  
+ （這個參數是未使用）。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果此方法成功則為筆刷控制代碼否則， `NULL`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameondblclka--cmfcpropertygridpropertyondblclk"></a><a name="ondblclk"></a>CMFCPropertyGridProperty::OnDblClk  
+ 當使用者按兩下屬性時，由架構呼叫。  
+  
+```  
+virtual BOOL OnDblClk(CPoint point);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `point`  
+ 用戶端座標中的點。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果此方法成功為 `TRUE`；否則為 `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法會在屬性清單控制項中選取下一個屬性項目。  
+  
+##  <a name="a-nameondestroywindowa--cmfcpropertygridpropertyondestroywindow"></a><a name="ondestroywindow"></a>CMFCPropertyGridProperty::OnDestroyWindow  
+ 終結屬性時，或編輯完成時，由架構呼叫。  
+  
+```  
+virtual void OnDestroyWindow();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameondrawbuttona--cmfcpropertygridpropertyondrawbutton"></a><a name="ondrawbutton"></a>CMFCPropertyGridProperty::OnDrawButton  
+ 若要繪製按鈕包含在屬性架構呼叫。  
+  
+```  
+virtual void OnDrawButton(
+    CDC* pDC,  
+    CRect rectButton);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDC`  
+ 裝置內容的指標。  
+  
+ [in] `rectButton`  
+ 指定要繪製按鈕的週框。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameondrawdescriptiona--cmfcpropertygridpropertyondrawdescription"></a><a name="ondrawdescription"></a>CMFCPropertyGridProperty::OnDrawDescription  
+ 若要繪製的屬性描述架構呼叫。  
+  
+```  
+virtual void OnDrawDescription(
+    CDC* pDC,  
+    CRect rect);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDC`  
+ 裝置內容的指標。  
+  
+ [in] `rect`  
+ 指定要繪製的屬性描述的目標周框矩形。  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法會以屬性名稱和描述父屬性清單控制項所使用的字型。 屬性描述繪製樣式規則中，會繪製粗體樣式屬性名稱。  
+  
+##  <a name="a-nameondrawexpandboxa--cmfcpropertygridpropertyondrawexpandbox"></a><a name="ondrawexpandbox"></a>CMFCPropertyGridProperty::OnDrawExpandBox  
+ 若要繪製展開方塊控制項附近，包含子屬性的屬性架構呼叫。  
+  
+```  
+virtual void OnDrawExpandBox(
+    CDC* pDC,  
+    CRect rectExpand);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDC`  
+ 裝置內容的指標。  
+  
+ [in] `rectExpand`  
+ 指定要繪製展開方塊控制項週框。  
+  
+### <a name="remarks"></a>備註  
+ 按一下展開方塊控制項來展開或摺疊子屬性的清單。 展開方塊控制項指定正方形，其中包含一個加號 （+） 或減號 （-）。 加號表示可以展開的屬性，以顯示子屬性的清單。 負號，表示清單，可以摺疊以顯示只有的屬性。  
+  
+##  <a name="a-nameondrawnamea--cmfcpropertygridpropertyondrawname"></a><a name="ondrawname"></a>CMFCPropertyGridProperty::OnDrawName  
+ 若要顯示的屬性名稱架構呼叫。  
+  
+```  
+virtual void OnDrawName(
+    CDC* pDC,  
+    CRect rect);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDC`  
+ 裝置內容的指標。  
+  
+ [in] `rect`  
+ 指定要繪製的屬性名稱的週框。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameondrawvaluea--cmfcpropertygridpropertyondrawvalue"></a><a name="ondrawvalue"></a>CMFCPropertyGridProperty::OnDrawValue  
+ 由架構呼叫以顯示屬性值。  
+  
+```  
+virtual void OnDrawValue(
+    CDC* pDC,  
+    CRect rect);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pDC`  
+ 裝置內容的指標。  
+  
+ [in] `rect`  
+ 指定要向其取得屬性值週框。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameonedita--cmfcpropertygridpropertyonedit"></a><a name="onedit"></a>CMFCPropertyGridProperty::OnEdit  
+ 使用者即將修改屬性值時由架構呼叫。  
+  
+```  
+virtual BOOL OnEdit(LPPOINT lptClick);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `lptClick`  
+ （這個參數是未使用）。用戶端座標中的點，指標。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果編輯作業成功; 啟動否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+ 當使用者修改屬性值時，則架構會呼叫此函數。 根據預設，此方法會啟動適當的下拉式方塊控制項或調整控制項的編輯器。  
+  
+##  <a name="a-nameonendedita--cmfcpropertygridpropertyonendedit"></a><a name="onendedit"></a>CMFCPropertyGridProperty::OnEndEdit  
+ 當使用者完成時，由框架呼叫修改屬性值。  
+  
+```  
+virtual BOOL OnEndEdit();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 這個方法一律會傳回 `TRUE`。  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法會終結目前的編輯控制項，然後傳回`TRUE`。  
+  
+##  <a name="a-nameonkillfocusa--cmfcpropertygridpropertyonkillfocus"></a><a name="onkillfocus"></a>CMFCPropertyGridProperty::OnKillFocus  
+ 當屬性失去輸入的焦點時，由架構呼叫。  
+  
+```  
+virtual BOOL OnKillFocus(CWnd*);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|描述|  
+|---------------|-----------------|  
+|[in] `CWnd`|（不使用）。視窗的指標。|  
+  
+### <a name="return-value"></a>傳回值  
+ 這個方法一律會傳回 `TRUE`。  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法會執行任何動作，然後傳回`TRUE`。 如果您覆寫這個方法，傳回`TRUE`如果屬性失去輸入的焦點時，架構可以結束編輯作業。  
+  
+##  <a name="a-nameonkillselectiona--cmfcpropertygridpropertyonkillselection"></a><a name="onkillselection"></a>CMFCPropertyGridProperty::OnKillSelection  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnKillSelection(CMFCPropertyGridProperty*);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `CMFCPropertyGridProperty*`  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法沒有作用。  
+  
+##  <a name="a-nameonpossizechangeda--cmfcpropertygridpropertyonpossizechanged"></a><a name="onpossizechanged"></a>CMFCPropertyGridProperty::OnPosSizeChanged  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnPosSizeChanged(CRect);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `CRect`  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法沒有作用。  
+  
+##  <a name="a-nameonrclicknamea--cmfcpropertygridpropertyonrclickname"></a><a name="onrclickname"></a>CMFCPropertyGridProperty::OnRClickName  
+ 當使用者按一下滑鼠右鍵，在屬性名稱區域中，由架構呼叫。  
+  
+```  
+virtual void OnRClickName(CPoint C);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|描述|  
+|---------------|-----------------|  
+|[in] `C`|用戶端座標中的點。|  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法沒有作用。  
+  
+##  <a name="a-nameonrclickvaluea--cmfcpropertygridpropertyonrclickvalue"></a><a name="onrclickvalue"></a>CMFCPropertyGridProperty::OnRClickValue  
+ 當使用者按一下滑鼠右鍵的屬性值區，由架構呼叫。  
+  
+```  
+virtual void OnRClickValue(
+    CPoint C,  
+    BOOL B);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|描述|  
+|---------------|-----------------|  
+|[in] `C`|用戶端座標中的點。|  
+|[in] `B`|布林值。|  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法不做任何動作，`B`參數沒有任何預先定義的用途。  
+  
+##  <a name="a-nameonselectcomboa--cmfcpropertygridpropertyonselectcombo"></a><a name="onselectcombo"></a>CMFCPropertyGridProperty::OnSelectCombo  
+ 當使用者從可編輯的下拉式方塊選取項目，由架構呼叫。  
+  
+```  
+virtual void OnSelectCombo();
+```  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法會使用選取之項目的文字來更新屬性值。  
+  
+##  <a name="a-nameonsetcursora--cmfcpropertygridpropertyonsetcursor"></a><a name="onsetcursor"></a>CMFCPropertyGridProperty::OnSetCursor  
+ 當滑鼠指標移至的屬性項目時，由架構呼叫。  
+  
+```  
+virtual BOOL OnSetCursor() const;  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果目前的屬性是 variant 型別或值的清單，且此方法成功載入的插入點 （i 字形狀） 的滑鼠游標。否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+ This method supports the following variant types: `VT_INT`, `VT_I2`, `VT_I4`, `VT_UINT`, `VT_UI1`, `VT_UI2`, `VT_UI4`, `VT_R4`, `VT_R8`, and `VT_BSTR`.  
+  
+##  <a name="a-nameonsetselectiona--cmfcpropertygridpropertyonsetselection"></a><a name="onsetselection"></a>CMFCPropertyGridProperty::OnSetSelection  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+  
+```  
+virtual void OnSetSelection(CMFCPropertyGridProperty*);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `CMFCPropertyGridProperty*`  
+  
+### <a name="remarks"></a>備註  
+ 根據預設，這個方法沒有作用。  
+  
+##  <a name="a-nameonupdatevaluea--cmfcpropertygridpropertyonupdatevalue"></a><a name="onupdatevalue"></a>CMFCPropertyGridProperty::OnUpdateValue  
+ 當可編輯屬性的值變更時由架構呼叫。  
+  
+```  
+virtual BOOL OnUpdateValue();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果此方法成功為 `TRUE`；否則為 `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namepushchara--cmfcpropertygridpropertypushchar"></a><a name="pushchar"></a>CMFCPropertyGridProperty::PushChar  
+ 在選取的屬性和使用者輸入新的字元時，從屬性清單控制項呼叫。  
+  
+```  
+virtual BOOL PushChar(UINT nChar);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `nChar`  
+ 字元。  
+  
+### <a name="return-value"></a>傳回值  
+ `TRUE`如果編輯作業，繼續執行。否則， `FALSE`。  
+  
+### <a name="remarks"></a>備註  
+ 這個方法支援的屬性值清單，或是一個下列 variant 型別︰ `VT_INT`， `VT_I2`， `VT_I4`， `VT_UINT`， `VT_UI1`， `VT_UI2`， `VT_UI4`， `VT_R4`， `VT_R8`，和`VT_BSTR`。  
+  
+##  <a name="a-nameredrawa--cmfcpropertygridpropertyredraw"></a><a name="redraw"></a>CMFCPropertyGridProperty::Redraw  
+ 此屬性來重新繪製。  
+  
+```  
+void Redraw();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameremovealloptionsa--cmfcpropertygridpropertyremovealloptions"></a><a name="removealloptions"></a>CMFCPropertyGridProperty::RemoveAllOptions  
+ 從屬性中移除所有的選項 （項目）。  
+  
+```  
+void RemoveAllOptions();
+```  
+  
+### <a name="remarks"></a>備註  
+ 選項也就是為屬性清單控制項的清單項目。  
+  
+##  <a name="a-nameremovesubitema--cmfcpropertygridpropertyremovesubitem"></a><a name="removesubitem"></a>CMFCPropertyGridProperty::RemoveSubItem  
+ 移除指定的子項目。  
+  
+```  
+BOOL RemoveSubItem(
+    CMFCPropertyGridProperty*& pProp,  
+    BOOL bDelete=TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `pProp`  
+ 指標的子屬性的項目。  
+  
+ [in] `bDelete`  
+ `TRUE`若要刪除所指定的屬性物件`pProp`參數，否則`FALSE`。 預設值是 `TRUE`。  
+  
+### <a name="return-value"></a>傳回值  
+  
+### <a name="remarks"></a>備註  
+ 指定`FALSE`的`bDelete`參數，如果您想要移動指定的子項目，也就是移除項目，然後再將其新增其他位置。  
+  
+##  <a name="a-nameresetoriginalvaluea--cmfcpropertygridpropertyresetoriginalvalue"></a><a name="resetoriginalvalue"></a>CMFCPropertyGridProperty::ResetOriginalValue  
+ 還原已編輯的屬性的原始值。  
+  
+```  
+virtual void ResetOriginalValue();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namesetdataa--cmfcpropertygridpropertysetdata"></a><a name="setdata"></a>CMFCPropertyGridProperty::SetData  
+ 將`DWORD`與屬性的值。  
+  
+```  
+void SetData(DWORD_PTR dwData);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `dwData`  
+ 特定應用程式的 32 位元值，例如整數或其他資料的指標。  
+  
+### <a name="remarks"></a>備註  
+ 使用[CMFCPropertyGridProperty::GetData](#getdata)方法來擷取`DWORD`值。 使用[CMFCPropertyGridCtrl::FindItemByData](../../mfc/reference/cmfcpropertygridctrl-class.md#finditembydata)方法來找出具有指定之相關聯的屬性清單項目`DWORD`值。  
+  
+##  <a name="a-namesetdescriptiona--cmfcpropertygridpropertysetdescription"></a><a name="setdescription"></a>CMFCPropertyGridProperty::SetDescription  
+ 指定的文字，描述目前的屬性。  
+  
+```  
+void SetDescription(const CString& strDescr);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `strDescr`  
+ 描述目前屬性的文字。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namesetnamea--cmfcpropertygridpropertysetname"></a><a name="setname"></a>CMFCPropertyGridProperty::SetName  
+ 設定屬性的名稱。  
+  
+```  
+void SetName(
+    LPCTSTR lpszName,  
+    BOOL bRedraw=TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `lpszName`  
+ 屬性名稱。  
+  
+ [in] `bRedraw`  
+ `TRUE`若要立即; 重繪屬性否則， `FALSE`。 預設值是 `TRUE`。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-namesetoriginalvaluea--cmfcpropertygridpropertysetoriginalvalue"></a><a name="setoriginalvalue"></a>CMFCPropertyGridProperty::SetOriginalValue  
+ 設定可編輯屬性的原始值。  
+  
+```  
+virtual void SetOriginalValue(const COleVariant& varValue);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `varValue`  
+ 一個值。  
+  
+### <a name="remarks"></a>備註  
+ 使用[CMFCPropertyGridProperty::ResetOriginalValue](#resetoriginalvalue)方法來重設原始的已編輯的屬性值。  
+  
+##  <a name="a-namesetvaluea--cmfcpropertygridpropertysetvalue"></a><a name="setvalue"></a>CMFCPropertyGridProperty::SetValue  
+ 設定屬性格線屬性值。  
+  
+```  
+virtual void SetValue(const _variant_t& varValue);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `varValue`  
+ 值的參考。  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="a-nameshowa--cmfcpropertygridpropertyshow"></a><a name="show"></a>CMFCPropertyGridProperty::Show  
+ 顯示或隱藏屬性。  
+  
+```  
+void Show(
+    BOOL bShow=TRUE,  
+    BOOL bAdjustLayout=TRUE);
+```  
+  
+### <a name="parameters"></a>參數  
+ [in] `bShow`  
+ `TRUE`若要顯示目前的屬性和它的子項目。`FALSE`要隱藏目前的屬性和它的子項目。 預設值是 `TRUE`。  
+  
+ [in] `bAdjustLayout`  
+ `TRUE`若要重新計算如何繪製標籤與屬性的值，然後畫出屬性。`FALSE`繪製屬性使用現有的計算。 預設值是 `TRUE`。  
+  
+## <a name="see-also"></a>另請參閱  
+ [階層架構圖表](../../mfc/hierarchy-chart.md)   
+ [類別](../../mfc/reference/mfc-classes.md)   
+ [CMFCPropertyGridCtrl 類別](../../mfc/reference/cmfcpropertygridctrl-class.md)
+

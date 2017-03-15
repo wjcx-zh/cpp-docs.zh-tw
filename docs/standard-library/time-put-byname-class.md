@@ -1,0 +1,89 @@
+---
+title: "time_put_byname 類別 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- time_put_byname
+- xloctime/std::time_put_byname
+- std.time_put_byname
+- std::time_put_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- time_put_byname class
+ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
+caps.latest.revision: 25
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 3572e73b569abfff0a32fe2cd7ea0f4f5c265582
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="timeputbyname-class"></a>time_put_byname 類別
+衍生的樣板類別描述可做為類型 `time_put`\< CharType, OutputIterator > 的地區設定 facet 的物件。  
+  
+## <a name="syntax"></a>語法  
+  
+```
+template <class CharType, class OutIt = ostreambuf_iterator<CharType, char_traits<CharType>>>
+class time_put_byname : public time_put<CharType, OutputIterator>
+{
+public:
+    explicit time_put_byname(
+    const char* _Locname,
+    size_t _Refs = 0);
+
+    explicit time_put_byname(
+    const string& _Locname,
+    size_t _Refs = 0);
+
+protected:
+    virtual ~time_put_byname();
+
+};
+```  
+  
+#### <a name="parameters"></a>參數  
+ `_Locname`  
+ 地區設定名稱。  
+  
+ `_Refs`  
+ 初始參考計數。  
+  
+## <a name="remarks"></a>備註  
+ 其行為取決於[具名](../standard-library/locale-class.md#locale__name)地區設定 `_Locname`。 每個建構函式會以 [time_put](../standard-library/time-put-class.md#time_put__time_put)\<CharType, OutputIterator>( `_Refs`) 初始化其基底物件。  
+  
+## <a name="requirements"></a>需求  
+ **標頭︰**\<locale>  
+  
+ **命名空間：** std  
+  
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

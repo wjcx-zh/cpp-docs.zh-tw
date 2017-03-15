@@ -1,0 +1,144 @@
+---
+title: "_fputchar、_fputwchar | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fputchar
+- _fputwchar
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fputtchar
+- _fputwchar
+- fputwchar
+- _fputtchar
+- fputchar
+- _fputchar
+dev_langs:
+- C++
+helpviewer_keywords:
+- fputchar function
+- standard output, writing to
+- _fputtchar function
+- fputwchar function
+- _fputwchar function
+- fputtchar function
+- _fputchar function
+ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
+caps.latest.revision: 15
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
+ms.openlocfilehash: 321520b3638fb062f10d114a03ec9e4525b44173
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="fputchar-fputwchar"></a>_fputchar、_fputwchar
+將一個字元寫入 `stdout`。  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+int _fputchar(  
+   int c   
+);  
+wint_t _fputwchar(  
+   wchar_t c   
+);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ `c`  
+ 待寫入字元。  
+  
+## <a name="return-value"></a>傳回值  
+ 所有這些函式都會傳回寫入的字元。 針對 `_fputchar`，傳回值 `EOF` 表示錯誤。 針對 `_fputwchar`，傳回值 `WEOF` 表示錯誤。 如果 c 是 `NULL`，則這些函式會產生無效參數例外狀況 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，這些函式會傳回 `EOF` (或 `WEOF`)，並將 `errno` 設為 `EINVAL`。  
+  
+ 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+  
+## <a name="remarks"></a>備註  
+ 這兩個函式都會將單一字元 `c` 寫入至 `stdout`，並適當地往前移動指標。 `_fputchar` 相當於 `fputc(``stdout )`。 它也相當於 `putchar`，但僅實作為函式，而不是函式和巨集。 與 `fputc` 和 `putchar` 不同，這些函式與 ANSI 標準不相容。  
+  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
+  
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|`_fputtchar`|`_fputchar`|`_fputchar`|`_fputwchar`|  
+  
+## <a name="requirements"></a>需求  
+  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`_fputchar`|\<stdio.h>|  
+|`_fputwchar`|\<stdio.h> 或 \<wchar.h>|  
+  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+  
+## <a name="example"></a>範例  
+  
+```  
+// crt_fputchar.c  
+// This program uses _fputchar  
+// to send a character array to stdout.  
+  
+#include <stdio.h>  
+  
+int main( void )  
+{  
+    char strptr[] = "This is a test of _fputchar!!\n";  
+    char *p = NULL;  
+  
+    // Print line to stream using _fputchar.   
+    p = strptr;  
+    while( (*p != '\0') && _fputchar( *(p++) ) != EOF )  
+      ;  
+}  
+```  
+  
+```Output  
+This is a test of _fputchar!!  
+```  
+  
+## <a name="net-framework-equivalent"></a>.NET Framework 同等  
+  
+-   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
+  
+-   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
+  
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fgetc、fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
+ [putc、putwc](../../c-runtime-library/reference/putc-putwc.md)

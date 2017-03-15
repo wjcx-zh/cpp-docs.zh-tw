@@ -1,0 +1,89 @@
+---
+title: "context_unblock_unbalanced 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- concrt/concurrency::context_unblock_unbalanced
+dev_langs:
+- C++
+helpviewer_keywords:
+- context_unblock_unbalanced class
+ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
+caps.latest.revision: 20
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
+ms.openlocfilehash: 7341ff5d10b7f7752c49f18ea9b810824e347b1c
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced 類別
+這個類別描述時擲回的例外狀況呼叫`Block`和`Unblock`方法`Context`物件未正確配對。  
+  
+## <a name="syntax"></a>語法  
+  
+```  
+class context_unblock_unbalanced : public std::exception;  
+```  
+  
+## <a name="members"></a>Members  
+  
+### <a name="public-constructors"></a>公用建構函式  
+  
+|名稱|說明|  
+|----------|-----------------|  
+|[context_unblock_unbalanced 建構函式](#ctor)|多載。 建構 `context_unblock_unbalanced` 物件。|  
+  
+## <a name="remarks"></a>備註  
+ 呼叫`Block`和`Unblock`方法`Context`物件必須永遠正確配對。 並行執行階段可讓任何一種順序進行的作業。 例如，呼叫 `Block` 之後可以呼叫 `Unblock`，反之亦然。 這個例外狀況就會擲回，比方說，兩個呼叫`Unblock`方法對資料列，在`Context`未遭到封鎖的物件。  
+  
+## <a name="inheritance-hierarchy"></a>繼承階層  
+ `exception`  
+  
+ `context_unblock_unbalanced`  
+  
+## <a name="requirements"></a>需求  
+ **標頭︰** concrt.h  
+  
+ **命名空間：** concurrency  
+  
+##  <a name="a-namectora-contextunblockunbalanced"></a><a name="ctor"></a>context_unblock_unbalanced 
+
+ 建構 `context_unblock_unbalanced` 物件。  
+  
+```  
+explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
+
+ 
+context_unblock_unbalanced() throw();
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Message`  
+ 錯誤的描述性訊息。  
+  
+## <a name="see-also"></a>另請參閱  
+ [concurrency 命名空間](concurrency-namespace.md)
+

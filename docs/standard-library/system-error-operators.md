@@ -1,0 +1,116 @@
+---
+title: "&lt;system_error&gt; 運算子 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
+caps.latest.revision: 11
+manager: ghogen
+translationtype: Machine Translation
+ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
+ms.openlocfilehash: 82f7876aca66524ba50b1e01b74437d8a2117976
+ms.lasthandoff: 02/24/2017
+
+---
+# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 運算子
+||||  
+|-|-|-|  
+|[operator!=](#operator_neq)|[operator&lt;](#operator_lt_)|[operator==](#operator_eq_eq)|  
+  
+##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+ 測試運算子左邊的物件是否等於右邊的物件。  
+  
+```
+bool operator==(const error_code& left,
+    const error_condition& right);
+
+bool operator==(const error_condition& left,
+    const error_code& right);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|描述|  
+|---------------|-----------------|  
+|`left`|要測試是否相等的物件。|  
+|`right`|要測試是否相等的物件。|  
+  
+### <a name="return-value"></a>傳回值  
+ 如果物件相等，即為 **true**；如果物件不相等，則為 **false**。  
+  
+### <a name="remarks"></a>備註  
+ 此函式會傳回 `left.category() == right.category() && left.value() == right.value()`。  
+  
+##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+ 測試運算子左邊的物件是否不等於右邊的物件。  
+  
+```
+bool operator!=(const error_code& left,
+    const error_condition& right);
+
+bool operator!=(const error_condition& left,
+    const error_code& right);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|描述|  
+|---------------|-----------------|  
+|`left`|要測試是否不相等的物件。|  
+|`right`|要測試是否不相等的物件。|  
+  
+### <a name="return-value"></a>傳回值  
+ 如果 `left` 中傳入的物件不等於 `right` 中傳入的物件，即為 **true**；否則為 **false**。  
+  
+### <a name="remarks"></a>備註  
+ 此函式會傳回 `!(left == right)`。  
+  
+##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+ 測試物件是否小於傳入的物件以進行比較。  
+  
+```
+template <class _Enum>  
+inline bool operator<(
+    _Enum left,
+    typename enable_if<is_error_code_enum<_Enum>::value,
+    const error_code&>::type right);
+
+template <class _Enum>  
+inline bool operator<(
+    typename enable_if<is_error_code_enum<_Enum>::value,
+    const error_code&>::type left, _Enum right);
+
+template <class _Enum>  
+inline bool operator<(
+    _Enum left,
+    typename enable_if<is_error_condition_enum<_Enum>::value,
+    const error_condition&>::type right);
+
+template <class _Enum>  
+inline bool operator<(
+    typename enable_if<is_error_condition_enum<_Enum>::value,
+    const error_condition&>::type left, _Enum right);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|說明|  
+|---------------|-----------------|  
+|`left`|要比較的物件。|  
+|`right`|要比較的物件。|  
+  
+### <a name="return-value"></a>傳回值  
+ 如果 `left` 中傳入的物件小於 `right` 中傳入的物件，即為 **true**；否則為 **false**。  
+  
+### <a name="remarks"></a>備註  
+ 這個功能測試錯誤順序。  
+  
+## <a name="see-also"></a>另請參閱  
+ [<system_error>](../standard-library/system-error.md)
+
+
+
+

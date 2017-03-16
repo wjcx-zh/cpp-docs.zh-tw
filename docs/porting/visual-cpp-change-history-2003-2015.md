@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
@@ -58,9 +59,9 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 4.  [並行執行階段的重大變更](#BK_ConcRT)  
   
-## <a name="a-namevc2015a-visual-c-2015-conformance-changes"></a><a name="VC_2015"></a> Visual C++ 2015 的合規性變更  
+## <a name="VC_2015"></a> Visual C++ 2015 的合規性變更  
   
-###  <a name="a-namebkcrta-c-runtime-library-crt"></a><a name="BK_CRT"></a> C 執行階段程式庫 (CRT)  
+###  <a name="BK_CRT"></a> C 執行階段程式庫 (CRT)  
   
 #### <a name="general-changes"></a>一般變更  
   
@@ -180,7 +181,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **%A 和 %a 的精確度** 在此程式庫的舊版中，%A 和 %a 的格式規範之預設精確度是 6。 為了與 C 標準一致，現在此預設精確度為 13。  
   
-     在搭配 %A 或 %a 使用格式字串的任何函式輸出中，此為執行階段行為變更。 在舊版的行為中，使用 %A 規範的輸出可能為 "1.1A2B3Cp+111"。 現在對於相同值的輸出是 "1.1A2B3C4D5E6F7p+111"。 若要取得舊的行為，您可以指定精確度，例如 %.6A。 請參閱[精確度規格](../c-runtime-library/precision-specification.md)。  
+     在搭配 %A 或 %a 使用格式字串的任何函式輸出中，此為執行階段行為變更。 在舊版的行為中，使用 %A 規範的輸出可能為 "1.1A2B3Cp+111"。 現在對於相同值的輸出是 "1.1A2B3C4D5E6F7p+111"。 若要取得舊的行為，您可以指定精確度，例如 %.6A。 請參閱[精確度規格](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)。  
   
 -   **%F 規範** 現在支援 %F 格式/轉換規範。 它的功能相當於 %f 格式規範，不同之處在於無限大和 NaN 的格式使用大寫字母。  
   
@@ -252,7 +253,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **CLOCKS_PER_SEC** 現在 CLOCKS_PER_SEC 巨集會展開成整數的類型 clock_t，如同 C 語言所要求的。  
   
-####  <a name="a-namebkstla-c-standard-library"></a><a name="BK_STL"></a>C++ 標準程式庫  
+####  <a name="BK_STL"></a>C++ 標準程式庫  
  為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤  (_MSC_VER 是包含此編譯器主要版本的巨集，例如對於 Visual Studio 2013 為 1800。)這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。  
   
 -   **C++ 標準程式庫包含檔案**：有一些變更讓 C++ 標準程式庫標頭可以加入結構。 C++ 標準程式庫標頭可以一些未經指定的方式加入彼此之中。 一般來說，您在撰寫程式碼時，應依據 C++ 標準小心地加入程式碼所需的所有標頭，而不要使用 C++ 標準程式庫標頭相互加入的這項特性。 這使其成為可攜式跨版本和跨平台的程式碼。 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，至少有兩種標頭的變更會影響使用者程式碼。 首先，\<string> 不再包含 \<iterator>。 其次，\<tuple> 現在只會宣告 std::array，而不會加入所有的 \<array>。此函式可以經由下列程式碼建構組合中斷程式碼：您的程式碼具有名為 "array" 的變數及 using 指示詞 "using namespace std;"，而且包含內有 \<tuple> (現在會宣告 std::array) 的 C++ 標準程式庫標頭 (例如 \<functional>)。  
@@ -315,13 +316,13 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **launch::any 與 launch::sync 原則**：nonstandard launch::any 和 launch::sync 原則已移除。 對於 launch::any，請改用 launch:async &#124; launch:deferred。 對於 launch::sync，請改用 launch::deferred。 請參閱 [launch Enumeration](../standard-library/future-enums.md#launch_enumeration)。  
   
-####  <a name="a-namebkmfca-mfc-and-atl"></a><a name="BK_MFC"></a> MFC 與 ATL  
+####  <a name="BK_MFC"></a> MFC 與 ATL  
   
 -   **Microsoft Foundation Classes (MFC)** 因為其大小太大而不再隨附於 Visual Studio 的「一般」安裝。 若要安裝 MFC，請在 Visual Studio 2015 安裝程式中選擇 [自訂] 安裝選項。 如果您已經安裝 Visual Studio 2015，您可以重新執行 Visual Studio 安裝程式，選擇 [自訂] 安裝選項，以及選擇 Microsoft Foundation Classes 來安裝 MFC。 從 [控制台]、[程式和功能]，或從安裝媒體，您可以重新執行 Visual Studio 安裝程式。  
   
      Visual C++ 可轉散發套件仍然包含這個程式庫。  
   
-####  <a name="a-namebkconcrta-concurrency-runtime"></a><a name="BK_ConcRT"></a> 並行執行階段  
+####  <a name="BK_ConcRT"></a> 並行執行階段  
   
 -   **從 Windows.h 產生的巨集與 concurrency::Context::Yield 發生衝突** 並行執行階段之前使用 #undef 取消 Yield 巨集的定義，以避免 Windows.h h 和 concurrency::Context::Yield 函式中定義的 Yield 巨集之間發生衝突。 此 #undef 已移除，並新增了不衝突的對等 API 呼叫 [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution)。 若要解決 Yield 的衝突，您可以更新您的程式碼，改成呼叫 YieldExecution 函式，或在呼叫位置將 Yield 函式名稱加上括弧，如下列範例所示：  
   
@@ -346,7 +347,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   [Update 3 的合規性改進](#VS_Update3)  
   
-###  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Visual C++ 2015 的合規性改進  
+###  <a name="VS_RTM"></a> Visual C++ 2015 的合規性改進  
   
 -   /Zc:forScope- 選項  
   
@@ -861,7 +862,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
   
-###  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Update 1 的合規性改進  
+###  <a name="VS_Update1"></a> Update 1 的合規性改進  
   
 -   **私用的虛擬基底類別與間接繼承**  
   
@@ -1408,7 +1409,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
     ```  
   
-###  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Update 2 的合規性改進  
+###  <a name="VS_Update2"></a> Update 2 的合規性改進  
   
 -   **運算式 SFINAE 的部分支援也可能會發出其他警告與錯誤**  
   
@@ -1693,7 +1694,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      可能需要先將運算子定義從標頭檔移出，再將其移入對應的原始程式檔，才能修正以此方式撰寫的程式碼。  
   
-###  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Update 3 的合規性改進  
+###  <a name="VS_Update3"></a> Update 3 的合規性改進  
   
 -   **std::is_convertable 現在已可偵測自我指派** (標準程式庫)  
   
@@ -2793,8 +2794,3 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 ## <a name="see-also"></a>另請參閱  
 [Visual Studio 之 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

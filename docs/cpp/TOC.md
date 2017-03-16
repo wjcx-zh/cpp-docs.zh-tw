@@ -399,7 +399,6 @@
 ## [非標準行為](nonstandard-behavior.md)
 ### [編譯器限制](compiler-limits.md)
 # [歡迎回到 C++ (現代 C++)](welcome-back-to-cpp-modern-cpp.md)
-## [C++11-14-17 功能的支援 (現代 C++)](support-for-cpp11-14-17-features-modern-cpp.md)
 ## [C++ 型別系統 (現代 C++)](cpp-type-system-modern-cpp.md)
 ### [實值型別 (現代 C++)](value-types-modern-cpp.md)
 ### [轉換和型別安全 (現代 C++)](type-conversions-and-type-safety-modern-cpp.md)

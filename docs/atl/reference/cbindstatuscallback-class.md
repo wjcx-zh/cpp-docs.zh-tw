@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBindStatusCallback
+- ATLCTL/ATL::CBindStatusCallback
+- ATLCTL/ATL::CBindStatusCallback::CBindStatusCallback
+- ATLCTL/ATL::CBindStatusCallback::Download
+- ATLCTL/ATL::CBindStatusCallback::GetBindInfo
+- ATLCTL/ATL::CBindStatusCallback::GetPriority
+- ATLCTL/ATL::CBindStatusCallback::OnDataAvailable
+- ATLCTL/ATL::CBindStatusCallback::OnLowResource
+- ATLCTL/ATL::CBindStatusCallback::OnObjectAvailable
+- ATLCTL/ATL::CBindStatusCallback::OnProgress
+- ATLCTL/ATL::CBindStatusCallback::OnStartBinding
+- ATLCTL/ATL::CBindStatusCallback::OnStopBinding
+- ATLCTL/ATL::CBindStatusCallback::StartAsyncDownload
+- ATLCTL/ATL::CBindStatusCallback::m_dwAvailableToRead
+- ATLCTL/ATL::CBindStatusCallback::m_dwTotalRead
+- ATLCTL/ATL::CBindStatusCallback::m_pFunc
+- ATLCTL/ATL::CBindStatusCallback::m_pT
+- ATLCTL/ATL::CBindStatusCallback::m_spBindCtx
+- ATLCTL/ATL::CBindStatusCallback::m_spBinding
+- ATLCTL/ATL::CBindStatusCallback::m_spMoniker
+- ATLCTL/ATL::CBindStatusCallback::m_spStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -123,7 +143,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namecbindstatuscallbacka--cbindstatuscallbackcbindstatuscallback"></a><a name="cbindstatuscallback"></a>CBindStatusCallback::CBindStatusCallback  
+##  <a name="cbindstatuscallback"></a>CBindStatusCallback::CBindStatusCallback  
  建構函式。  
   
 ```
@@ -135,7 +155,7 @@ CBindStatusCallback();
   
  建構函式也會初始化[m_pT](#m_pt)和[m_pFunc](#m_pfunc)至**NULL**。  
   
-##  <a name="a-namedtora--cbindstatuscallbackcbindstatuscallback"></a><a name="dtor"></a>CBindStatusCallback:: ~ CBindStatusCallback  
+##  <a name="dtor"></a>CBindStatusCallback:: ~ CBindStatusCallback  
  解構函式。  
   
 ```
@@ -145,7 +165,7 @@ CBindStatusCallback();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-namedownloada--cbindstatuscallbackdownload"></a><a name="download"></a>CBindStatusCallback::Download  
+##  <a name="download"></a>CBindStatusCallback::Download  
  建立`CBindStatusCallback`物件並呼叫`StartAsyncDownload`開始以非同步方式下載資料，從指定的 URL。  
   
 ```
@@ -181,7 +201,7 @@ static HRESULT Download(
 ### <a name="remarks"></a>備註  
  每次資料可將它傳送到物件，用來`OnDataAvailable`。 `OnDataAvailable`讀取資料，並指向函式會呼叫*pFunc* （例如，若要將資料儲存或列印至螢幕）。  
   
-##  <a name="a-namegetbindinfoa--cbindstatuscallbackgetbindinfo"></a><a name="getbindinfo"></a>CBindStatusCallback::GetBindInfo  
+##  <a name="getbindinfo"></a>CBindStatusCallback::GetBindInfo  
  呼叫以判斷如何將繫結 moniker。  
   
 ```
@@ -211,7 +231,7 @@ STDMETHOD(GetBindInfo)(
 ### <a name="remarks"></a>備註  
  預設實作會設定必須是非同步的並將資料推入模式的繫結。 在資料推入模型中，moniker 非同步繫結作業和持續在每當有新的資料可用時通知用戶端。  
   
-##  <a name="a-namegetprioritya--cbindstatuscallbackgetpriority"></a><a name="getpriority"></a>CBindStatusCallback::GetPriority  
+##  <a name="getpriority"></a>CBindStatusCallback::GetPriority  
  若要取得繫結作業的優先順序非同步 moniker 所呼叫。  
   
 ```
@@ -225,7 +245,7 @@ STDMETHOD(GetPriority)(LONG* pnPriority);
 ### <a name="return-value"></a>傳回值  
  傳回**E_NOTIMPL**。  
   
-##  <a name="a-namemdwavailabletoreada--cbindstatuscallbackmdwavailabletoread"></a><a name="m_dwavailabletoread"></a>CBindStatusCallback::m_dwAvailableToRead  
+##  <a name="m_dwavailabletoread"></a>CBindStatusCallback::m_dwAvailableToRead  
  可用來儲存可供讀取的位元組數目。  
   
 ```
@@ -235,7 +255,7 @@ DWORD m_dwAvailableToRead;
 ### <a name="remarks"></a>備註  
  初始化為零`StartAsyncDownload`。  
   
-##  <a name="a-namemdwtotalreada--cbindstatuscallbackmdwtotalread"></a><a name="m_dwtotalread"></a>CBindStatusCallback::m_dwTotalRead  
+##  <a name="m_dwtotalread"></a>CBindStatusCallback::m_dwTotalRead  
  非同步資料傳輸的讀取位元組累計總數。  
   
 ```
@@ -245,7 +265,7 @@ DWORD m_dwTotalRead;
 ### <a name="remarks"></a>備註  
  每次遞增`OnDataAvailable`會呼叫實際讀取的位元組數目。 初始化為零`StartAsyncDownload`。  
   
-##  <a name="a-namempfunca--cbindstatuscallbackmpfunc"></a><a name="m_pfunc"></a>CBindStatusCallback::m_pFunc  
+##  <a name="m_pfunc"></a>CBindStatusCallback::m_pFunc  
  函式所指`m_pFunc`由呼叫`OnDataAvailable`讀取可用的資料 （例如，若要將資料儲存或列印至螢幕） 之後。  
   
 ```
@@ -265,7 +285,7 @@ ATL_PDATAAVAILABLE m_pFunc;
   
  `);`  
   
-##  <a name="a-namempta--cbindstatuscallbackmpt"></a><a name="m_pt"></a>CBindStatusCallback::m_pT  
+##  <a name="m_pt"></a>CBindStatusCallback::m_pT  
  要求非同步資料傳輸物件的指標。  
   
 ```
@@ -275,7 +295,7 @@ T* m_pT;
 ### <a name="remarks"></a>備註  
  `CBindStatusCallback`物件根據物件的類別。  
   
-##  <a name="a-namemspbindctxa--cbindstatuscallbackmspbindctx"></a><a name="m_spbindctx"></a>CBindStatusCallback::m_spBindCtx  
+##  <a name="m_spbindctx"></a>CBindStatusCallback::m_spBindCtx  
  指標[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)提供的繫結內容 （儲存特定 moniker 繫結作業的相關資訊的物件） 存取的介面。  
   
 ```
@@ -285,7 +305,7 @@ CComPtr<IBindCtx> m_spBindCtx;
 ### <a name="remarks"></a>備註  
  在初始化`StartAsyncDownload`。  
   
-##  <a name="a-namemspbindinga--cbindstatuscallbackmspbinding"></a><a name="m_spbinding"></a>CBindStatusCallback::m_spBinding  
+##  <a name="m_spbinding"></a>CBindStatusCallback::m_spBinding  
  指標`IBinding`介面目前的繫結操作。  
   
 ```
@@ -295,7 +315,7 @@ CComPtr<IBinding> m_spBinding;
 ### <a name="remarks"></a>備註  
  在初始化`OnStartBinding`及發行在`OnStopBinding`。  
   
-##  <a name="a-namemspmonikera--cbindstatuscallbackmspmoniker"></a><a name="m_spmoniker"></a>CBindStatusCallback::m_spMoniker  
+##  <a name="m_spmoniker"></a>CBindStatusCallback::m_spMoniker  
  指標[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)介面要使用的 URL。  
   
 ```
@@ -305,7 +325,7 @@ CComPtr<IMoniker> m_spMoniker;
 ### <a name="remarks"></a>備註  
  在初始化`StartAsyncDownload`。  
   
-##  <a name="a-namemspstreama--cbindstatuscallbackmspstream"></a><a name="m_spstream"></a>CBindStatusCallback::m_spStream  
+##  <a name="m_spstream"></a>CBindStatusCallback::m_spStream  
  指標[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)介面目前的繫結操作。  
   
 ```
@@ -315,7 +335,7 @@ CComPtr<IStream> m_spStream;
 ### <a name="remarks"></a>備註  
  在初始化`OnDataAvailable`從**STGMEDIUM**結構時**BCSF**旗標是**BCSF_FIRSTDATANOTIFICATION**和時釋放**BCSF**旗標是**BCSF_LASTDATANOTIFICATION**。  
   
-##  <a name="a-nameondataavailablea--cbindstatuscallbackondataavailable"></a><a name="ondataavailable"></a>CBindStatusCallback::OnDataAvailable  
+##  <a name="ondataavailable"></a>CBindStatusCallback::OnDataAvailable  
  系統提供的非同步 moniker 呼叫`OnDataAvailable`可用時，提供資料給物件。  
   
 ```
@@ -345,7 +365,7 @@ STDMETHOD(
 ### <a name="remarks"></a>備註  
  `OnDataAvailable`讀取資料時，再呼叫物件的類別 （例如，若要將資料儲存或列印至螢幕） 的方法。 請參閱[CBindStatusCallback::StartAsyncDownload](#startasyncdownload)如需詳細資訊。  
   
-##  <a name="a-nameonlowresourcea--cbindstatuscallbackonlowresource"></a><a name="onlowresource"></a>CBindStatusCallback::OnLowResource  
+##  <a name="onlowresource"></a>CBindStatusCallback::OnLowResource  
  當資源不足時呼叫。  
   
 ```
@@ -359,7 +379,7 @@ STDMETHOD(OnLowResource)(DWORD /* dwReserved */);
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
   
-##  <a name="a-nameonobjectavailablea--cbindstatuscallbackonobjectavailable"></a><a name="onobjectavailable"></a>CBindStatusCallback::OnObjectAvailable  
+##  <a name="onobjectavailable"></a>CBindStatusCallback::OnObjectAvailable  
  呼叫非同步 moniker，將物件的介面指標傳遞至您的應用程式。  
   
 ```
@@ -376,7 +396,7 @@ STDMETHOD(OnObjectAvailable)(REFID /* riid */, IUnknown* /* punk */);
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
   
-##  <a name="a-nameonprogressa--cbindstatuscallbackonprogress"></a><a name="onprogress"></a>CBindStatusCallback::OnProgress  
+##  <a name="onprogress"></a>CBindStatusCallback::OnProgress  
  呼叫以表示資料下載程序的進度。  
   
 ```
@@ -403,7 +423,7 @@ STDMETHOD(OnProgress)(
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
   
-##  <a name="a-nameonstartbindinga--cbindstatuscallbackonstartbinding"></a><a name="onstartbinding"></a>CBindStatusCallback::OnStartBinding  
+##  <a name="onstartbinding"></a>CBindStatusCallback::OnStartBinding  
  設定資料成員[m_spBinding](#m_spbinding)至`IBinding`中的指標`pBinding`。  
   
 ```
@@ -417,7 +437,7 @@ STDMETHOD(OnStartBinding)(DWORD /* dwReserved */, IBinding* pBinding);
  `pBinding`  
  [in]位址 IBinding 介面目前的繫結作業。 這不是 NULL。 用戶端應該將繫結物件的參考保留這個指標上呼叫 AddRef。  
   
-##  <a name="a-nameonstopbindinga--cbindstatuscallbackonstopbinding"></a><a name="onstopbinding"></a>CBindStatusCallback::OnStopBinding  
+##  <a name="onstopbinding"></a>CBindStatusCallback::OnStopBinding  
  版本`IBinding`中的資料成員的指標[m_spBinding](#m_spbinding)。  
   
 ```
@@ -434,7 +454,7 @@ STDMETHOD(OnStopBinding)(HRESULT hresult, LPCWSTR /* szError */);
 ### <a name="remarks"></a>備註  
  由系統提供非同步 moniker，以指示繫結作業的呼叫。  
   
-##  <a name="a-namestartasyncdownloada--cbindstatuscallbackstartasyncdownload"></a><a name="startasyncdownload"></a>CBindStatusCallback::StartAsyncDownload  
+##  <a name="startasyncdownload"></a>CBindStatusCallback::StartAsyncDownload  
  啟動非同步下載資料，從指定的 URL。  
   
 ```

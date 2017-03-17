@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMessageMap
-- ATL.CMessageMap
-- ATL::CMessageMap
+- ATLWIN/ATL::CMessageMap
+- ATLWIN/ATL::CMessageMap::ProcessWindowMessage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +77,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-nameprocesswindowmessagea--cmessagemapprocesswindowmessage"></a><a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
+##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
  存取所識別的訊息對應`dwMsgMapID`中`CMessageMap`-衍生的類別。  
   
 ```

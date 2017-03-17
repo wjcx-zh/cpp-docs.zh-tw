@@ -10,6 +10,34 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleSafeArray
+- AFXDISP/COleSafeArray
+- AFXDISP/COleSafeArray::COleSafeArray
+- AFXDISP/COleSafeArray::AccessData
+- AFXDISP/COleSafeArray::AllocData
+- AFXDISP/COleSafeArray::AllocDescriptor
+- AFXDISP/COleSafeArray::Attach
+- AFXDISP/COleSafeArray::Clear
+- AFXDISP/COleSafeArray::Copy
+- AFXDISP/COleSafeArray::Create
+- AFXDISP/COleSafeArray::CreateOneDim
+- AFXDISP/COleSafeArray::Destroy
+- AFXDISP/COleSafeArray::DestroyData
+- AFXDISP/COleSafeArray::DestroyDescriptor
+- AFXDISP/COleSafeArray::Detach
+- AFXDISP/COleSafeArray::GetByteArray
+- AFXDISP/COleSafeArray::GetDim
+- AFXDISP/COleSafeArray::GetElement
+- AFXDISP/COleSafeArray::GetElemSize
+- AFXDISP/COleSafeArray::GetLBound
+- AFXDISP/COleSafeArray::GetOneDimSize
+- AFXDISP/COleSafeArray::GetUBound
+- AFXDISP/COleSafeArray::Lock
+- AFXDISP/COleSafeArray::PtrOfIndex
+- AFXDISP/COleSafeArray::PutElement
+- AFXDISP/COleSafeArray::Redim
+- AFXDISP/COleSafeArray::ResizeOneDim
+- AFXDISP/COleSafeArray::UnaccessData
+- AFXDISP/COleSafeArray::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +139,7 @@ class COleSafeArray : public tagVARIANT
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-nameaccessdataa--colesafearrayaccessdata"></a><a name="accessdata"></a>COleSafeArray::AccessData  
+##  <a name="accessdata"></a>COleSafeArray::AccessData  
  擷取陣列資料的指標。  
   
 ```  
@@ -128,7 +156,7 @@ void AccessData(void** ppvData);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&26;](../../mfc/codesnippet/cpp/colesafearray-class_1.cpp)]  
   
-##  <a name="a-nameallocdataa--colesafearrayallocdata"></a><a name="allocdata"></a>COleSafeArray::AllocData  
+##  <a name="allocdata"></a>COleSafeArray::AllocData  
  安全陣列配置記憶體。  
   
 ```  
@@ -138,7 +166,7 @@ void AllocData();
 ### <a name="remarks"></a>備註  
  錯誤時，此函式會擲回[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
-##  <a name="a-nameallocdescriptora--colesafearrayallocdescriptor"></a><a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor  
+##  <a name="allocdescriptor"></a>COleSafeArray::AllocDescriptor  
  安全陣列的描述元，會配置記憶體。  
   
 ```  
@@ -152,7 +180,7 @@ void AllocDescriptor(DWORD dwDims);
 ### <a name="remarks"></a>備註  
  錯誤時，此函式會擲回[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
-##  <a name="a-nameattacha--colesafearrayattach"></a><a name="attach"></a>COleSafeArray::Attach  
+##  <a name="attach"></a>COleSafeArray::Attach  
  提供在現有的資料控制**VARIANT**陣列`COleSafeArray`物件。  
   
 ```  
@@ -169,7 +197,7 @@ void Attach(VARIANT& varSrc);
 ### <a name="example"></a>範例  
   請參閱範例[COleSafeArray::AccessData](#accessdata)。  
   
-##  <a name="a-namecleara--colesafearrayclear"></a><a name="clear"></a>COleSafeArray::Clear  
+##  <a name="clear"></a>COleSafeArray::Clear  
  清除安全陣列。  
   
 ```  
@@ -179,7 +207,7 @@ void Clear();
 ### <a name="remarks"></a>備註  
  函式，藉以設定清除安全陣列`VARTYPE`之物件的`VT_EMPTY`。 釋放目前的內容，並釋放陣列。  
   
-##  <a name="a-namecolesafearraya--colesafearraycolesafearray"></a><a name="colesafearray"></a>COleSafeArray::COleSafeArray  
+##  <a name="colesafearray"></a>COleSafeArray::COleSafeArray  
  建構 `COleSafeArray` 物件。  
   
 ```  
@@ -222,7 +250,7 @@ COleSafeArray(const COleVariant& varSrc);
   
  錯誤時，此函式會擲回[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
-##  <a name="a-namecopya--colesafearraycopy"></a><a name="copy"></a>COleSafeArray::Copy  
+##  <a name="copy"></a>COleSafeArray::Copy  
  建立現有的安全陣列的複本。  
   
 ```  
@@ -236,7 +264,7 @@ void Copy(LPSAFEARRAY* ppsa);
 ### <a name="remarks"></a>備註  
  錯誤時，此函式會擲回[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
-##  <a name="a-namecreatea--colesafearraycreate"></a><a name="create"></a>COleSafeArray::Create  
+##  <a name="create"></a>COleSafeArray::Create  
  配置並初始化陣列的資料。  
   
 ```  
@@ -271,7 +299,7 @@ void Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&27;](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="a-namecreateonedima--colesafearraycreateonedim"></a><a name="createonedim"></a>COleSafeArray::CreateOneDim  
+##  <a name="createonedim"></a>COleSafeArray::CreateOneDim  
  建立新的一維`COleSafeArray`物件。  
   
 ```  
@@ -303,7 +331,7 @@ void CreateOneDim(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&28;](../../mfc/codesnippet/cpp/colesafearray-class_3.cpp)]  
   
-##  <a name="a-namedestroya--colesafearraydestroy"></a><a name="destroy"></a>COleSafeArray::Destroy  
+##  <a name="destroy"></a>COleSafeArray::Destroy  
  會破壞現有的陣列描述項和陣列中的所有資料。  
   
 ```  
@@ -313,7 +341,7 @@ void Destroy();
 ### <a name="remarks"></a>備註  
  如果物件儲存在陣列中，會釋放每個物件。 錯誤時，此函式會擲回[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
-##  <a name="a-namedestroydataa--colesafearraydestroydata"></a><a name="destroydata"></a>COleSafeArray::DestroyData  
+##  <a name="destroydata"></a>COleSafeArray::DestroyData  
  終結安全陣列中的所有資料。  
   
 ```  
@@ -323,7 +351,7 @@ void DestroyData();
 ### <a name="remarks"></a>備註  
  如果物件儲存在陣列中，會釋放每個物件。 錯誤時，此函式會擲回[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
-##  <a name="a-namedestroydescriptora--colesafearraydestroydescriptor"></a><a name="destroydescriptor"></a>COleSafeArray::DestroyDescriptor  
+##  <a name="destroydescriptor"></a>COleSafeArray::DestroyDescriptor  
  終結安全陣列的描述元。  
   
 ```  
@@ -333,7 +361,7 @@ void DestroyDescriptor();
 ### <a name="remarks"></a>備註  
  錯誤時，此函式會擲回[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)。  
   
-##  <a name="a-namedetacha--colesafearraydetach"></a><a name="detach"></a>COleSafeArray::Detach  
+##  <a name="detach"></a>COleSafeArray::Detach  
  卸離**VARIANT**資料`COleSafeArray`物件。  
   
 ```  
@@ -351,7 +379,7 @@ VARIANT Detach();
 ### <a name="example"></a>範例  
   請參閱範例[COleSafeArray::PutElement](#putelement)。  
   
-##  <a name="a-namegetbytearraya--colesafearraygetbytearray"></a><a name="getbytearray"></a>COleSafeArray::GetByteArray  
+##  <a name="getbytearray"></a>COleSafeArray::GetByteArray  
  複製到的安全陣列的內容`CByteArray`。  
   
 ```  
@@ -362,7 +390,7 @@ void GetByteArray(CByteArray& bytes);
  `bytes`  
  參考[CByteArray](../../mfc/reference/cbytearray-class.md)物件。  
   
-##  <a name="a-namegetdima--colesafearraygetdim"></a><a name="getdim"></a>COleSafeArray::GetDim  
+##  <a name="getdim"></a>COleSafeArray::GetDim  
  傳回維度中的數字`COleSafeArray`物件。  
   
 ```  
@@ -375,7 +403,7 @@ DWORD GetDim();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&27;](../../mfc/codesnippet/cpp/colesafearray-class_2.cpp)]  
   
-##  <a name="a-namegetelementa--colesafearraygetelement"></a><a name="getelement"></a>COleSafeArray::GetElement  
+##  <a name="getelement"></a>COleSafeArray::GetElement  
  擷取安全陣列的單一項目。  
   
 ```  
@@ -399,7 +427,7 @@ void GetElement(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&29;](../../mfc/codesnippet/cpp/colesafearray-class_4.cpp)]  
   
-##  <a name="a-namegetelemsizea--colesafearraygetelemsize"></a><a name="getelemsize"></a>COleSafeArray::GetElemSize  
+##  <a name="getelemsize"></a>COleSafeArray::GetElemSize  
  擷取中的項目大小`COleSafeArray`物件。  
   
 ```  
@@ -409,7 +437,7 @@ DWORD GetElemSize();
 ### <a name="return-value"></a>傳回值  
  以位元組為單位的安全陣列的項目大小。  
   
-##  <a name="a-namegetlbounda--colesafearraygetlbound"></a><a name="getlbound"></a>COleSafeArray::GetLBound  
+##  <a name="getlbound"></a>COleSafeArray::GetLBound  
  傳回的任何維度下限`COleSafeArray`物件。  
   
 ```  
@@ -431,7 +459,7 @@ void GetLBound(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&30;](../../mfc/codesnippet/cpp/colesafearray-class_5.cpp)]  
   
-##  <a name="a-namegetonedimsizea--colesafearraygetonedimsize"></a><a name="getonedimsize"></a>COleSafeArray::GetOneDimSize  
+##  <a name="getonedimsize"></a>COleSafeArray::GetOneDimSize  
  傳回一維的項目數`COleSafeArray`物件。  
   
 ```  
@@ -444,7 +472,7 @@ DWORD GetOneDimSize();
 ### <a name="example"></a>範例  
   請參閱範例[COleSafeArray::CreateOneDim](#createonedim)。  
   
-##  <a name="a-namegetubounda--colesafearraygetubound"></a><a name="getubound"></a>COleSafeArray::GetUBound  
+##  <a name="getubound"></a>COleSafeArray::GetUBound  
  會傳回任何維度的安全陣列的上限。  
   
 ```  
@@ -466,7 +494,7 @@ void GetUBound(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&31;](../../mfc/codesnippet/cpp/colesafearray-class_6.cpp)]  
   
-##  <a name="a-namelocka--colesafearraylock"></a><a name="lock"></a>COleSafeArray::Lock  
+##  <a name="lock"></a>COleSafeArray::Lock  
  陣列和位置的指標陣列中的資料陣列描述項的鎖定計數遞增。  
   
 ```  
@@ -480,14 +508,14 @@ void Lock();
   
  無法刪除陣列，而遭到鎖定。  
   
-##  <a name="a-nameoperatorlpcvarianta--colesafearrayoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleSafeArray::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>COleSafeArray::operator LPCVARIANT  
  呼叫此轉型運算子，來存取基礎**VARIANT**這個結構`COleSafeArray`物件。  
   
 ```  
 operator LPCVARIANT() const;  
 ```  
   
-##  <a name="a-nameoperatorlpvarianta--colesafearrayoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleSafeArray::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>COleSafeArray::operator LPVARIANT  
  呼叫此轉型運算子，來存取基礎**VARIANT**這個結構`COleSafeArray`物件。  
   
 ```  
@@ -497,7 +525,7 @@ operator LPVARIANT();
 ### <a name="remarks"></a>備註  
  請注意，變更中的值**VARIANT**結構存取此函式所傳回的指標會變更這個值`COleSafeArray`物件。  
   
-##  <a name="a-nameoperatoreqa--colesafearrayoperator-"></a><a name="operator_eq"></a>COleSafeArray::operator =  
+##  <a name="operator_eq"></a>COleSafeArray::operator =  
  這些多載的指派運算子會將來源值複製到這`COleSafeArray`物件。  
   
 ```  
@@ -516,7 +544,7 @@ COleSafeArray& operator=(const COleVariant& varSrc);
   
 - **運算子 = (** `pSrc` **)**複製**VARIANT** array 物件來存取`pSrc`到此物件。  
   
-##  <a name="a-nameoperatoreqeqa--colesafearrayoperator-"></a><a name="operator_eq_eq"></a>COleSafeArray::operator = =  
+##  <a name="operator_eq_eq"></a>COleSafeArray::operator = =  
  這個運算子比較兩個陣列 ( **SAFEARRAY**， **VARIANT**， `COleVariant`，或`COleSafeArray`陣列)，並傳回非零，如果相等，否則為 0。  
   
 ```  

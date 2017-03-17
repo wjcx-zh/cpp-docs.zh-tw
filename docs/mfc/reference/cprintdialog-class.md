@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
+- AFXDLGS/CPrintDialog
+- AFXDLGS/CPrintDialog::CPrintDialog
+- AFXDLGS/CPrintDialog::CreatePrinterDC
+- AFXDLGS/CPrintDialog::DoModal
+- AFXDLGS/CPrintDialog::GetCopies
+- AFXDLGS/CPrintDialog::GetDefaults
+- AFXDLGS/CPrintDialog::GetDeviceName
+- AFXDLGS/CPrintDialog::GetDevMode
+- AFXDLGS/CPrintDialog::GetDriverName
+- AFXDLGS/CPrintDialog::GetFromPage
+- AFXDLGS/CPrintDialog::GetPortName
+- AFXDLGS/CPrintDialog::GetPrinterDC
+- AFXDLGS/CPrintDialog::GetToPage
+- AFXDLGS/CPrintDialog::PrintAll
+- AFXDLGS/CPrintDialog::PrintCollate
+- AFXDLGS/CPrintDialog::PrintRange
+- AFXDLGS/CPrintDialog::PrintSelection
+- AFXDLGS/CPrintDialog::m_pd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -132,7 +150,7 @@ class CPrintDialog : public CCommonDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdlgs.h  
   
-##  <a name="a-namecprintdialoga--cprintdialogcprintdialog"></a><a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
+##  <a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
  建構 Windows 列印或設定列印格式 對話方塊物件。  
   
 ```  
@@ -160,7 +178,7 @@ CPrintDialog(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&174;](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
-##  <a name="a-namecreateprinterdca--cprintdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
  從建立印表機裝置內容 (DC) [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。  
   
 ```  
@@ -176,7 +194,7 @@ HDC CreatePrinterDC();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&106;](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]  
   
-##  <a name="a-namedomodala--cprintdialogdomodal"></a><a name="domodal"></a>CPrintDialog::DoModal  
+##  <a name="domodal"></a>CPrintDialog::DoModal  
  顯示 Windows 通用列印對話方塊，並讓使用者選取各種列印選項，例如頁面範圍的複本數目以及是否應該自動分頁複本。  
   
 ```  
@@ -198,7 +216,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::CreatePrinterDC](#createprinterdc)。  
   
-##  <a name="a-namegetcopiesa--cprintdialoggetcopies"></a><a name="getcopies"></a>CPrintDialog::GetCopies  
+##  <a name="getcopies"></a>CPrintDialog::GetCopies  
  擷取要求的份數。  
   
 ```  
@@ -214,7 +232,7 @@ int GetCopies() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::PrintCollate](#printcollate)。  
   
-##  <a name="a-namegetdefaultsa--cprintdialoggetdefaults"></a><a name="getdefaults"></a>CPrintDialog::GetDefaults  
+##  <a name="getdefaults"></a>CPrintDialog::GetDefaults  
  擷取預設印表機的裝置預設值，而不會顯示對話方塊。  
   
 ```  
@@ -236,7 +254,7 @@ BOOL GetDefaults();
   
  [!code-cpp[NVC_MFCDocView #&107;](../../mfc/codesnippet/cpp/cprintdialog-class_3.cpp)]  
   
-##  <a name="a-namegetdevicenamea--cprintdialoggetdevicename"></a><a name="getdevicename"></a>CPrintDialog::GetDeviceName  
+##  <a name="getdevicename"></a>CPrintDialog::GetDeviceName  
  擷取目前選取的印表機裝置的名稱。  
   
 ```  
@@ -254,7 +272,7 @@ CString GetDeviceName() const;
   
  [!code-cpp[NVC_MFCDocView #&108;](../../mfc/codesnippet/cpp/cprintdialog-class_4.cpp)]  
   
-##  <a name="a-namegetdevmodea--cprintdialoggetdevmode"></a><a name="getdevmode"></a>CPrintDialog::GetDevMode  
+##  <a name="getdevmode"></a>CPrintDialog::GetDevMode  
  擷取`DEVMODE`結構。  
   
 ```  
@@ -270,7 +288,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::PrintCollate](#printcollate)。  
   
-##  <a name="a-namegetdrivernamea--cprintdialoggetdrivername"></a><a name="getdrivername"></a>CPrintDialog::GetDriverName  
+##  <a name="getdrivername"></a>CPrintDialog::GetDriverName  
  擷取目前選取的印表機驅動程式的名稱。  
   
 ```  
@@ -286,7 +304,7 @@ CString GetDriverName() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::GetDeviceName](#getdevicename)。  
   
-##  <a name="a-namegetfrompagea--cprintdialoggetfrompage"></a><a name="getfrompage"></a>CPrintDialog::GetFromPage  
+##  <a name="getfrompage"></a>CPrintDialog::GetFromPage  
  擷取的列印範圍的起始頁。  
   
 ```  
@@ -302,7 +320,7 @@ int GetFromPage() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::m_pd](#m_pd)。  
   
-##  <a name="a-namegetportnamea--cprintdialoggetportname"></a><a name="getportname"></a>CPrintDialog::GetPortName  
+##  <a name="getportname"></a>CPrintDialog::GetPortName  
  擷取目前選取的印表機連接埠的名稱。  
   
 ```  
@@ -318,7 +336,7 @@ CString GetPortName() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::GetDeviceName](#getdevicename)。  
   
-##  <a name="a-namegetprinterdca--cprintdialoggetprinterdc"></a><a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
+##  <a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
  擷取印表機裝置內容控制代碼。  
   
 ```  
@@ -334,7 +352,7 @@ HDC GetPrinterDC() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&109;](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
   
-##  <a name="a-namegettopagea--cprintdialoggettopage"></a><a name="gettopage"></a>CPrintDialog::GetToPage  
+##  <a name="gettopage"></a>CPrintDialog::GetToPage  
  擷取的列印範圍的結束頁面。  
   
 ```  
@@ -350,7 +368,7 @@ int GetToPage() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::m_pd](#m_pd)。  
   
-##  <a name="a-namempda--cprintdialogmpd"></a><a name="m_pd"></a>CPrintDialog::m_pd  
+##  <a name="m_pd"></a>CPrintDialog::m_pd  
  結構，其成員儲存對話方塊物件的特性。  
   
 ```  
@@ -365,7 +383,7 @@ PRINTDLG& m_pd;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&111;](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]  
   
-##  <a name="a-nameprintalla--cprintdialogprintall"></a><a name="printall"></a>CPrintDialog::PrintAll  
+##  <a name="printall"></a>CPrintDialog::PrintAll  
  決定是否要列印整份文件。  
   
 ```  
@@ -381,7 +399,7 @@ BOOL PrintAll() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::m_pd](#m_pd)。  
   
-##  <a name="a-nameprintcollatea--cprintdialogprintcollate"></a><a name="printcollate"></a>CPrintDialog::PrintCollate  
+##  <a name="printcollate"></a>CPrintDialog::PrintCollate  
  決定是否自動分頁複製要求。  
   
 ```  
@@ -397,7 +415,7 @@ BOOL PrintCollate() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&110;](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]  
   
-##  <a name="a-nameprintrangea--cprintdialogprintrange"></a><a name="printrange"></a>CPrintDialog::PrintRange  
+##  <a name="printrange"></a>CPrintDialog::PrintRange  
  決定是否要列印指定的範圍的頁面。  
   
 ```  
@@ -413,7 +431,7 @@ BOOL PrintRange() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::m_pd](#m_pd)。  
   
-##  <a name="a-nameprintselectiona--cprintdialogprintselection"></a><a name="printselection"></a>CPrintDialog::PrintSelection  
+##  <a name="printselection"></a>CPrintDialog::PrintSelection  
  決定是否要列印的目前選取項目。  
   
 ```  

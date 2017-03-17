@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMapStringToString
+- AFXCOLL/CMapStringToString
+- AFXCOLL/CMapStringToString::CPair
+- AFXCOLL/CMapStringToOb::CMapStringToOb
+- AFXCOLL/CMapStringToOb::GetCount
+- AFXCOLL/CMapStringToOb::GetHashTableSize
+- AFXCOLL/CMapStringToOb::GetNextAssoc
+- AFXCOLL/CMapStringToOb::GetSize
+- AFXCOLL/CMapStringToOb::GetStartPosition
+- AFXCOLL/CMapStringToOb::HashKey
+- AFXCOLL/CMapStringToOb::InitHashTable
+- AFXCOLL/CMapStringToOb::IsEmpty
+- AFXCOLL/CMapStringToOb::Lookup
+- AFXCOLL/CMapStringToOb::LookupKey
+- AFXCOLL/CMapStringToString::PGetFirstAssoc
+- AFXCOLL/CMapStringToString::PGetNextAssoc
+- AFXCOLL/CMapStringToString::PLookup
+- AFXCOLL/CMapStringToOb::RemoveAll
+- AFXCOLL/CMapStringToOb::RemoveKey
+- AFXCOLL/CMapStringToOb::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +135,7 @@ class CMapStringToString : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxcoll.h  
   
-##  <a name="a-namecpaira--cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringToString::CPair  
+##  <a name="cpair"></a>CMapStringToString::CPair  
  包含索引鍵的值和相關聯的字串物件的值。  
   
 ### <a name="remarks"></a>備註  
@@ -133,7 +152,7 @@ class CMapStringToString : public CObject
 ### <a name="example"></a>範例  
   如需使用方式的範例，請參閱範例[CMapStringToString::PLookup](#plookup)。  
   
-##  <a name="a-namepgetfirstassoca--cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
  傳回對應物件的第一個項目。  
   
 ```  
@@ -151,7 +170,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&73;](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
-##  <a name="a-namepgetnextassoca--cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
  擷取所指的對應項目`pAssocRec`。  
   
 ```  
@@ -173,7 +192,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="example"></a>範例  
   請參閱範例[CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)。  
   
-##  <a name="a-nameplookupa--cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString::PLookup  
+##  <a name="plookup"></a>CMapStringToString::PLookup  
  查閱對應至指定的索引鍵的值。  
   
 ```  

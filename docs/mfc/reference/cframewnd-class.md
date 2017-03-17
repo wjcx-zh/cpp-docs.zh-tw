@@ -10,6 +10,57 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFrameWnd
+- AFXWIN/CFrameWnd
+- AFXWIN/CFrameWnd::CFrameWnd
+- AFXWIN/CFrameWnd::ActivateFrame
+- AFXWIN/CFrameWnd::BeginModalState
+- AFXWIN/CFrameWnd::Create
+- AFXWIN/CFrameWnd::CreateView
+- AFXWIN/CFrameWnd::DockControlBar
+- AFXWIN/CFrameWnd::EnableDocking
+- AFXWIN/CFrameWnd::EndModalState
+- AFXWIN/CFrameWnd::FloatControlBar
+- AFXWIN/CFrameWnd::GetActiveDocument
+- AFXWIN/CFrameWnd::GetActiveFrame
+- AFXWIN/CFrameWnd::GetActiveView
+- AFXWIN/CFrameWnd::GetControlBar
+- AFXWIN/CFrameWnd::GetDockState
+- AFXWIN/CFrameWnd::GetMenuBarState
+- AFXWIN/CFrameWnd::GetMenuBarVisibility
+- AFXWIN/CFrameWnd::GetMessageBar
+- AFXWIN/CFrameWnd::GetMessageString
+- AFXWIN/CFrameWnd::GetTitle
+- AFXWIN/CFrameWnd::InitialUpdateFrame
+- AFXWIN/CFrameWnd::InModalState
+- AFXWIN/CFrameWnd::IsTracking
+- AFXWIN/CFrameWnd::LoadAccelTable
+- AFXWIN/CFrameWnd::LoadBarState
+- AFXWIN/CFrameWnd::LoadFrame
+- AFXWIN/CFrameWnd::NegotiateBorderSpace
+- AFXWIN/CFrameWnd::OnBarCheck
+- AFXWIN/CFrameWnd::OnContextHelp
+- AFXWIN/CFrameWnd::OnSetPreviewMode
+- AFXWIN/CFrameWnd::OnUpdateControlBarMenu
+- AFXWIN/CFrameWnd::RecalcLayout
+- AFXWIN/CFrameWnd::SaveBarState
+- AFXWIN/CFrameWnd::SetActivePreviewView
+- AFXWIN/CFrameWnd::SetActiveView
+- AFXWIN/CFrameWnd::SetDockState
+- AFXWIN/CFrameWnd::SetMenuBarState
+- AFXWIN/CFrameWnd::SetMenuBarVisibility
+- AFXWIN/CFrameWnd::SetMessageText
+- AFXWIN/CFrameWnd::SetProgressBarPosition
+- AFXWIN/CFrameWnd::SetProgressBarRange
+- AFXWIN/CFrameWnd::SetProgressBarState
+- AFXWIN/CFrameWnd::SetTaskbarOverlayIcon
+- AFXWIN/CFrameWnd::SetTitle
+- AFXWIN/CFrameWnd::ShowControlBar
+- AFXWIN/CFrameWnd::ShowOwnedWindows
+- AFXWIN/CFrameWnd::OnCreateClient
+- AFXWIN/CFrameWnd::OnHideMenuBar
+- AFXWIN/CFrameWnd::OnShowMenuBar
+- AFXWIN/CFrameWnd::m_bAutoMenuEnable
+- AFXWIN/CFrameWnd::rectDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -182,7 +233,7 @@ class CFrameWnd : public CWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameactivateframea--cframewndactivateframe"></a><a name="activateframe"></a>CFrameWnd::ActivateFrame  
+##  <a name="activateframe"></a>CFrameWnd::ActivateFrame  
  呼叫此成員函式，來啟動和還原框架視窗，使其可見且隨時可用的使用者。  
   
 ```  
@@ -203,14 +254,14 @@ virtual void ActivateFrame(int nCmdShow = -1);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&1;](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
   
-##  <a name="a-namebeginmodalstatea--cframewndbeginmodalstate"></a><a name="beginmodalstate"></a>CFrameWnd::BeginModalState  
+##  <a name="beginmodalstate"></a>CFrameWnd::BeginModalState  
  呼叫此成員函式以製作框架視窗強制回應。  
   
 ```  
 virtual void BeginModalState();
 ```  
   
-##  <a name="a-namecframewnda--cframewndcframewnd"></a><a name="cframewnd"></a>CFrameWnd::CFrameWnd  
+##  <a name="cframewnd"></a>CFrameWnd::CFrameWnd  
  建構`CFrameWnd`物件，但不是會建立可見的框架視窗。  
   
 ```  
@@ -220,7 +271,7 @@ CFrameWnd();
 ### <a name="remarks"></a>備註  
  呼叫**建立**建立可見的視窗。  
   
-##  <a name="a-namecreatea--cframewndcreate"></a><a name="create"></a>CFrameWnd::Create  
+##  <a name="create"></a>CFrameWnd::Create  
  建立及初始化相關聯的視窗框架視窗呼叫`CFrameWnd`物件。  
   
 ```  
@@ -268,7 +319,7 @@ virtual BOOL Create(
   
  使用`LoadFrame`而**建立**載入的資源，而不是指定其引數從框架視窗。  
   
-##  <a name="a-namecreateviewa--cframewndcreateview"></a><a name="createview"></a>CFrameWnd::CreateView  
+##  <a name="createview"></a>CFrameWnd::CreateView  
  呼叫`CreateView`來建立檢視的範圍內。  
   
 ```  
@@ -290,7 +341,7 @@ CWnd* CreateView(
 ### <a name="remarks"></a>備註  
  使用不是此成員函式來建立 「 檢視 」 `CView`-衍生的範圍內。 在呼叫`CreateView`，您必須手動設定為 作用中的檢視，並將它設為可見，則這些工作不會自動執行的`CreateView`。  
   
-##  <a name="a-namedockcontrolbara--cframewnddockcontrolbar"></a><a name="dockcontrolbar"></a>CFrameWnd::DockControlBar  
+##  <a name="dockcontrolbar"></a>CFrameWnd::DockControlBar  
  會在框架視窗停駐控制列。  
   
 ```  
@@ -323,7 +374,7 @@ void DockControlBar(
 ### <a name="remarks"></a>備註  
  將停駐控制列，同時呼叫中指定的框架視窗的側邊的其中一個[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)和[CFrameWnd::EnableDocking](#enabledocking)。 選擇側邊由`nDockBarID`。  
   
-##  <a name="a-nameenabledockinga--cframewndenabledocking"></a><a name="enabledocking"></a>CFrameWnd::EnableDocking  
+##  <a name="enabledocking"></a>CFrameWnd::EnableDocking  
  呼叫此函式可啟用在框架視窗中的可停駐控制列。  
   
 ```  
@@ -350,7 +401,7 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="example"></a>範例  
   請參閱範例[CToolBar::Create](../../mfc/reference/ctoolbar-class.md#create)。  
   
-##  <a name="a-nameendmodalstatea--cframewndendmodalstate"></a><a name="endmodalstate"></a>CFrameWnd::EndModalState  
+##  <a name="endmodalstate"></a>CFrameWnd::EndModalState  
  呼叫此成員函式，將框架視窗從強制回應變更為非強制回應。  
   
 ```  
@@ -360,7 +411,7 @@ virtual void EndModalState();
 ### <a name="remarks"></a>備註  
  `EndModalState`可讓所有停用 windows [BeginModalState](#beginmodalstate)。  
   
-##  <a name="a-namefloatcontrolbara--cframewndfloatcontrolbar"></a><a name="floatcontrolbar"></a>CFrameWnd::FloatControlBar  
+##  <a name="floatcontrolbar"></a>CFrameWnd::FloatControlBar  
  呼叫此函式會造成不被停駐在框架視窗的控制列。  
   
 ```  
@@ -395,7 +446,7 @@ void FloatControlBar(
   
  當使用者透過放開滑鼠左鍵時未提供停駐的位置拖曳控制列造成拖放作業時，則架構會呼叫此函數。  
   
-##  <a name="a-namegetactivedocumenta--cframewndgetactivedocument"></a><a name="getactivedocument"></a>CFrameWnd::GetActiveDocument  
+##  <a name="getactivedocument"></a>CFrameWnd::GetActiveDocument  
  呼叫此成員函式，以取得目前的指標**CDocument**附加至目前的現用檢視。  
   
 ```  
@@ -405,7 +456,7 @@ virtual CDocument* GetActiveDocument();
 ### <a name="return-value"></a>傳回值  
  目前的指標[CDocument](../../mfc/reference/cdocument-class.md)。 如果沒有目前的文件，就會傳回**NULL**。  
   
-##  <a name="a-namegetactiveframea--cframewndgetactiveframe"></a><a name="getactiveframe"></a>CFrameWnd::GetActiveFrame  
+##  <a name="getactiveframe"></a>CFrameWnd::GetActiveFrame  
  呼叫此成員函式，以取得指向使用中的多個文件介面 (MDI) 子視窗的 MDI 框架視窗。  
   
 ```  
@@ -418,7 +469,7 @@ virtual CFrameWnd* GetActiveFrame();
 ### <a name="remarks"></a>備註  
  如果沒有使用中的 MDI 子系，或應用程式是單一文件介面 (SDI)，隱含**這**會傳回的指標。  
   
-##  <a name="a-namegetactiveviewa--cframewndgetactiveview"></a><a name="getactiveview"></a>CFrameWnd::GetActiveView  
+##  <a name="getactiveview"></a>CFrameWnd::GetActiveView  
  呼叫此成員函式，以取得使用中檢視 （如果有的話） 附加至框架視窗的指標 ( `CFrameWnd`)。  
   
 ```  
@@ -433,7 +484,7 @@ CView* GetActiveView() const;
   
  [!code-cpp[NVC_MFCWindowing #&2;](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
   
-##  <a name="a-namegetcontrolbara--cframewndgetcontrolbar"></a><a name="getcontrolbar"></a>CFrameWnd::GetControlBar  
+##  <a name="getcontrolbar"></a>CFrameWnd::GetControlBar  
  呼叫`GetControlBar`來存取與識別碼相關聯的控制列  
   
 ```  
@@ -452,7 +503,7 @@ CControlBar* GetControlBar(UINT nID);
   
  `GetControlBar`將傳回的控制列，即使它浮動窗格，而且不是目前子視窗的框架。  
   
-##  <a name="a-namegetdockstatea--cframewndgetdockstate"></a><a name="getdockstate"></a>CFrameWnd::GetDockState  
+##  <a name="getdockstate"></a>CFrameWnd::GetDockState  
  呼叫此成員函式，來儲存狀態資訊在框架視窗的控制列`CDockState`物件。  
   
 ```  
@@ -466,7 +517,7 @@ void GetDockState(CDockState& state) const;
 ### <a name="remarks"></a>備註  
  然後，您可以撰寫的內容`CDockState`儲存體使用`CDockState::SaveState`或`Serialize`。 如果您稍後想要還原為先前狀態的控制列，載入與狀態`CDockState::LoadState`或`Serialize`，然後呼叫`SetDockState`来套用至框架視窗的控制列先前的狀態。  
   
-##  <a name="a-namegetmenubarstatea--cframewndgetmenubarstate"></a><a name="getmenubarstate"></a>CFrameWnd::GetMenuBarState  
+##  <a name="getmenubarstate"></a>CFrameWnd::GetMenuBarState  
  擷取目前的 MFC 應用程式中的功能表的顯示狀態。  
   
 ```  
@@ -483,7 +534,7 @@ virtual DWORD GetMenuBarState();
 ### <a name="remarks"></a>備註  
  如果發生執行階段錯誤，此方法偵錯模式中的判斷提示，並引發例外狀況衍生自[CException](../../mfc/reference/cexception-class.md)類別。  
   
-##  <a name="a-namegetmenubarvisibilitya--cframewndgetmenubarvisibility"></a><a name="getmenubarvisibility"></a>CFrameWnd::GetMenuBarVisibility  
+##  <a name="getmenubarvisibility"></a>CFrameWnd::GetMenuBarVisibility  
  指出是否在目前的 MFC 應用程式 功能表上的預設狀態為隱藏或顯示。  
   
 ```  
@@ -502,7 +553,7 @@ virtual DWORD CFrameWnd::GetMenuBarVisibility();
 ### <a name="remarks"></a>備註  
  如果發生執行階段錯誤，此方法偵錯模式中的判斷提示，並引發例外狀況衍生自[CException](../../mfc/reference/cexception-class.md)類別。  
   
-##  <a name="a-namegetmessagebara--cframewndgetmessagebar"></a><a name="getmessagebar"></a>CFrameWnd::GetMessageBar  
+##  <a name="getmessagebar"></a>CFrameWnd::GetMessageBar  
  呼叫此成員函式可取得 [狀態] 列的指標。  
   
 ```  
@@ -512,7 +563,7 @@ virtual CWnd* GetMessageBar();
 ### <a name="return-value"></a>傳回值  
  [狀態列] 視窗的指標。  
   
-##  <a name="a-namegetmessagestringa--cframewndgetmessagestring"></a><a name="getmessagestring"></a>CFrameWnd::GetMessageString  
+##  <a name="getmessagestring"></a>CFrameWnd::GetMessageString  
  覆寫此函式可提供自訂字串的命令 Id。  
   
 ```  
@@ -531,7 +582,7 @@ virtual void GetMessageString(
 ### <a name="remarks"></a>備註  
  預設實作只會載入指定的字串以`nID`從資源檔。 在狀態列中的訊息字串需要更新時，架構會呼叫此函式。  
   
-##  <a name="a-namegettitlea--cframewndgettitle"></a><a name="gettitle"></a>CFrameWnd::GetTitle  
+##  <a name="gettitle"></a>CFrameWnd::GetTitle  
  擷取視窗物件的標題。  
   
 ```  
@@ -541,7 +592,7 @@ CString GetTitle() const;
 ### <a name="return-value"></a>傳回值  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含目前視窗物件的標題。  
   
-##  <a name="a-nameinitialupdateframea--cframewndinitialupdateframe"></a><a name="initialupdateframe"></a>CFrameWnd::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>CFrameWnd::InitialUpdateFrame  
  呼叫**IntitialUpdateFrame**之後建立新的框架與**建立**。  
   
 ```  
@@ -562,7 +613,7 @@ void InitialUpdateFrame(
   
  此外，如果有先前未使用中的檢視，框架視窗的主要檢視會成為使用中。 主要的檢視是檢視子識別碼為**AFX_IDW_PANE_FIRST**。 最後，框架視窗就會顯示如果`bMakeVisible`為非零值。 如果`bMakeVisible`是 0，則將保持不變的目前焦點和框架視窗的可見狀態。 您不需要呼叫此函式時使用的新檔案和開啟檔案架構的實作。  
   
-##  <a name="a-nameinmodalstatea--cframewndinmodalstate"></a><a name="inmodalstate"></a>CFrameWnd::InModalState  
+##  <a name="inmodalstate"></a>CFrameWnd::InModalState  
  呼叫此成員函式，來檢查框架視窗是否為獨佔式或非強制回應。  
   
 ```  
@@ -572,7 +623,7 @@ BOOL InModalState() const;
 ### <a name="return-value"></a>傳回值  
  如果是，為非零否則為 0。  
   
-##  <a name="a-nameistrackinga--cframewndistracking"></a><a name="istracking"></a>CFrameWnd::IsTracking  
+##  <a name="istracking"></a>CFrameWnd::IsTracking  
  呼叫此成員函式，來判斷是否分隔列在視窗中目前正在移動。  
   
 ```  
@@ -582,7 +633,7 @@ BOOL IsTracking() const;
 ### <a name="return-value"></a>傳回值  
  分隔作業正在進行中; 如果為非零否則為 0。  
   
-##  <a name="a-nameloadacceltablea--cframewndloadacceltable"></a><a name="loadacceltable"></a>CFrameWnd::LoadAccelTable  
+##  <a name="loadacceltable"></a>CFrameWnd::LoadAccelTable  
  載入指定的快速鍵對應表的呼叫。  
   
 ```  
@@ -603,7 +654,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
   
  如果您呼叫`LoadFrame`架構建立框架視窗，載入快速鍵對應表的功能表和圖示資源，以及與此成員函式的後續呼叫，就不需要。  
   
-##  <a name="a-nameloadbarstatea--cframewndloadbarstate"></a><a name="loadbarstate"></a>CFrameWnd::LoadBarState  
+##  <a name="loadbarstate"></a>CFrameWnd::LoadBarState  
  呼叫此函式可還原的每個框架視窗所擁有的控制列的設定。  
   
 ```  
@@ -619,7 +670,7 @@ void LoadBarState(LPCTSTR lpszProfileName);
   
  您想要還原的設定必須寫入至登錄，才能呼叫`LoadBarState`。 將資訊寫入至登錄，藉由呼叫[CWinApp::SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey)。 將資訊寫入 INI 檔案，藉由呼叫[SaveBarState](#savebarstate)。  
   
-##  <a name="a-nameloadframea--cframewndloadframe"></a><a name="loadframe"></a>CFrameWnd::LoadFrame  
+##  <a name="loadframe"></a>CFrameWnd::LoadFrame  
  呼叫以動態方式建立框架視窗從資源資訊。  
   
 ```  
@@ -652,7 +703,7 @@ virtual BOOL LoadFrame(
   
  架構會使用`pContext`引數來指定要連接到的框架視窗，包括任何物件所包含的檢視物件。 您可以設定`pContext`引數**NULL**當您呼叫`LoadFrame`。  
   
-##  <a name="a-namembautomenuenablea--cframewndmbautomenuenable"></a><a name="m_bautomenuenable"></a>CFrameWnd::m_bAutoMenuEnable  
+##  <a name="m_bautomenuenable"></a>CFrameWnd::m_bAutoMenuEnable  
  （這是預設值） 啟用此資料成員時，功能表項目，並沒有`ON_UPDATE_COMMAND_UI`或`ON_COMMAND`處理常式會自動停用使用者提取下一個功能表。  
   
 ```  
@@ -672,7 +723,7 @@ BOOL m_bAutoMenuEnable;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&3;](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]  
   
-##  <a name="a-namenegotiateborderspacea--cframewndnegotiateborderspace"></a><a name="negotiateborderspace"></a>CFrameWnd::NegotiateBorderSpace  
+##  <a name="negotiateborderspace"></a>CFrameWnd::NegotiateBorderSpace  
  呼叫此成員函式 OLE 就地啟用期間交涉框線框架視窗中的空間。  
   
 ```  
@@ -700,7 +751,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="remarks"></a>備註  
  此成員函式是**CFrameWnd** OLE 框線空間交涉的實作。  
   
-##  <a name="a-nameonbarchecka--cframewndonbarcheck"></a><a name="onbarcheck"></a>CFrameWnd::OnBarCheck  
+##  <a name="onbarcheck"></a>CFrameWnd::OnBarCheck  
  只要指定的控制列上執行動作時呼叫。  
   
 ```  
@@ -714,7 +765,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 ### <a name="return-value"></a>傳回值  
  控制列存在; 如果為非零否則為 0。  
   
-##  <a name="a-nameoncontexthelpa--cframewndoncontexthelp"></a><a name="oncontexthelp"></a>CFrameWnd::OnContextHelp  
+##  <a name="oncontexthelp"></a>CFrameWnd::OnContextHelp  
  處理 SHIFT + F1 說明就地項目。  
   
 ```  
@@ -730,7 +781,7 @@ afx_msg void OnContextHelp();
   
  如果您的應用程式是 OLE 容器，`OnContextHelp`放至說明模式包含在框架視窗物件內的所有就地項目。 游標會變更以箭號和一個問號，使用者可以移動滑鼠指標並按下滑鼠左的按鈕來選取 對話方塊、 視窗、 功能表或命令按鈕。 此成員函式會呼叫 Windows 函式`WinHelp`具有說明內容的游標下的物件。  
   
-##  <a name="a-nameoncreateclienta--cframewndoncreateclient"></a><a name="oncreateclient"></a>CFrameWnd::OnCreateClient  
+##  <a name="oncreateclient"></a>CFrameWnd::OnCreateClient  
  在執行期間，由框架呼叫`OnCreate`。  
   
 ```  
@@ -759,7 +810,7 @@ virtual BOOL OnCreateClient(
 > [!NOTE]
 >  不會傳入的值取代`CREATESTRUCT`結構。 它們是僅供參考之用。 如果您想要覆寫初始視窗矩形，比方說，覆寫`CWnd`成員函式[PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow)。  
   
-##  <a name="a-nameonhidemenubara--cframewndonhidemenubar"></a><a name="onhidemenubar"></a>CFrameWnd::OnHideMenuBar  
+##  <a name="onhidemenubar"></a>CFrameWnd::OnHideMenuBar  
  隱藏功能表列中目前的 MFC 應用程式系統時，會呼叫此函數。  
   
 ```  
@@ -769,7 +820,7 @@ virtual void OnHideMenuBar();
 ### <a name="remarks"></a>備註  
  此事件處理常式可讓您的應用程式，以隱藏功能表系統時執行自訂動作。 無法防止功能表隱藏，但是比方說，您可以呼叫其他方法來擷取功能表樣式或狀態。  
   
-##  <a name="a-nameonsetpreviewmodea--cframewndonsetpreviewmode"></a><a name="onsetpreviewmode"></a>CFrameWnd::OnSetPreviewMode  
+##  <a name="onsetpreviewmode"></a>CFrameWnd::OnSetPreviewMode  
  呼叫這個成員函式，在預覽列印模式裡外設定應用程式的主框架視窗。  
   
 ```  
@@ -790,7 +841,7 @@ virtual void OnSetPreviewMode(
   
  覆寫此成員函式，以自訂的隱藏和顯示在預覽列印期間控制列和其他框架視窗部分。 呼叫基底類別實作從覆寫的版本中。  
   
-##  <a name="a-nameonshowmenubara--cframewndonshowmenubar"></a><a name="onshowmenubar"></a>CFrameWnd::OnShowMenuBar  
+##  <a name="onshowmenubar"></a>CFrameWnd::OnShowMenuBar  
  當系統即將顯示在目前的 MFC 應用程式的功能表列，會呼叫此函數。  
   
 ```  
@@ -800,7 +851,7 @@ virtual void OnShowMenuBar();
 ### <a name="remarks"></a>備註  
  此事件處理常式可讓您的應用程式，以顯示功能表時執行自訂動作。 無法防止功能表顯示，但是比方說，您可以呼叫其他方法來擷取功能表樣式或狀態。  
   
-##  <a name="a-nameonupdatecontrolbarmenua--cframewndonupdatecontrolbarmenu"></a><a name="onupdatecontrolbarmenu"></a>CFrameWnd::OnUpdateControlBarMenu  
+##  <a name="onupdatecontrolbarmenu"></a>CFrameWnd::OnUpdateControlBarMenu  
  更新相關聯的功能表時，由架構呼叫。  
   
 ```  
@@ -811,7 +862,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  指標[CCmdUI](../../mfc/reference/ccmdui-class.md)物件，代表產生更新命令的功能表。 更新處理常式呼叫[啟用](../../mfc/reference/ccmdui-class.md#enable)成員函式`CCmdUI`物件透過`pCmdUI`來更新使用者介面。  
   
-##  <a name="a-namerecalclayouta--cframewndrecalclayout"></a><a name="recalclayout"></a>CFrameWnd::RecalcLayout  
+##  <a name="recalclayout"></a>CFrameWnd::RecalcLayout  
  當開啟或關閉切換為標準的控制列，或框架視窗調整大小時，由架構呼叫。  
   
 ```  
@@ -827,14 +878,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
  覆寫此成員函式之後已變更的框架視窗的版面配置控制項的外觀和行為的控制列。 例如，呼叫它當您開啟或關閉的控制列，或新增另一種控制列。  
   
-##  <a name="a-namerectdefaulta--cframewndrectdefault"></a><a name="rectdefault"></a>CFrameWnd::rectDefault  
+##  <a name="rectdefault"></a>CFrameWnd::rectDefault  
  將此變數傳遞靜態`CRect`做為參數時建立視窗，讓 Windows 選擇視窗的初始大小和位置。  
   
 ```  
 static AFX_DATA const CRect rectDefault;  
 ```  
   
-##  <a name="a-namesavebarstatea--cframewndsavebarstate"></a><a name="savebarstate"></a>CFrameWnd::SaveBarState  
+##  <a name="savebarstate"></a>CFrameWnd::SaveBarState  
  呼叫此函式可儲存每個框架視窗所擁有的控制列的相關資訊。  
   
 ```  
@@ -848,7 +899,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 ### <a name="remarks"></a>備註  
  這項資訊可以從初始設定檔案使用讀取[LoadBarState](#loadbarstate)。 儲存的資訊包括可見性，水平或垂直方向，停駐狀態，以及控制列位置。  
   
-##  <a name="a-namesetactivepreviewviewa--cframewndsetactivepreviewview"></a><a name="setactivepreviewview"></a>CFrameWnd::SetActivePreviewView  
+##  <a name="setactivepreviewview"></a>CFrameWnd::SetActivePreviewView  
  指定指定的檢視，以豐富的預覽的作用中檢視。  
   
 ```  
@@ -861,7 +912,7 @@ void SetActivePreviewView(CView* pViewNew);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetactiveviewa--cframewndsetactiveview"></a><a name="setactiveview"></a>CFrameWnd::SetActiveView  
+##  <a name="setactiveview"></a>CFrameWnd::SetActiveView  
  呼叫此成員函式，以設定作用中的檢視。  
   
 ```  
@@ -880,7 +931,7 @@ void SetActiveView(
 ### <a name="remarks"></a>備註  
  架構會自動呼叫此函式，因為使用者將焦點變更至框架視窗內的檢視。 您可以明確呼叫`SetActiveView`，將焦點變更至指定的檢視。  
   
-##  <a name="a-namesetdockstatea--cframewndsetdockstate"></a><a name="setdockstate"></a>CFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>CFrameWnd::SetDockState  
  呼叫此成員函式套用狀態資訊儲存在`CDockState`框架視窗的控制列的物件。  
   
 ```  
@@ -894,7 +945,7 @@ void SetDockState(const CDockState& state);
 ### <a name="remarks"></a>備註  
  若要還原的控制列先前的狀態，您可以載入儲存的狀態與`CDockState::LoadState`或`Serialize`，然後使用`SetDockState`以套用至框架視窗的控制列。 先前的狀態會儲存在`CDockState`物件`GetDockState`  
   
-##  <a name="a-namesetmenubarstatea--cframewndsetmenubarstate"></a><a name="setmenubarstate"></a>CFrameWnd::SetMenuBarState  
+##  <a name="setmenubarstate"></a>CFrameWnd::SetMenuBarState  
  若要隱藏或顯示目前的 MFC 應用程式中設定 功能表上的顯示狀態。  
   
 ```  
@@ -913,7 +964,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 ### <a name="remarks"></a>備註  
  如果發生執行階段錯誤，此方法偵錯模式中的判斷提示，並引發例外狀況衍生自[CException](../../mfc/reference/cexception-class.md)類別。  
   
-##  <a name="a-namesetmenubarvisibilitya--cframewndsetmenubarvisibility"></a><a name="setmenubarvisibility"></a>CFrameWnd::SetMenuBarVisibility  
+##  <a name="setmenubarvisibility"></a>CFrameWnd::SetMenuBarVisibility  
  在目前是可見或隱藏的 MFC 應用程式設定 功能表上的預設行為。  
   
 ```  
@@ -931,7 +982,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
  這個方法會影響撰寫的應用程式中的功能表狀態[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]和更新版本。  
   
-##  <a name="a-namesetmessagetexta--cframewndsetmessagetext"></a><a name="setmessagetext"></a>CFrameWnd::SetMessageText  
+##  <a name="setmessagetext"></a>CFrameWnd::SetMessageText  
  呼叫此函式可將字串放在狀態列上窗格中的識別碼為 0。  
   
 ```  
@@ -949,7 +1000,7 @@ void SetMessageText(UINT nID);
 ### <a name="remarks"></a>備註  
  這通常是 [狀態] 列的最左邊，且最長，窗格。  
   
-##  <a name="a-namesetprogressbarpositiona--cframewndsetprogressbarposition"></a><a name="setprogressbarposition"></a>CFrameWnd::SetProgressBarPosition  
+##  <a name="setprogressbarposition"></a>CFrameWnd::SetProgressBarPosition  
  設定顯示在工作列上的 Windows 7 進度列目前位置。  
   
 ```  
@@ -962,7 +1013,7 @@ void SetProgressBarPosition(int nProgressPos);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetprogressbarrangea--cframewndsetprogressbarrange"></a><a name="setprogressbarrange"></a>CFrameWnd::SetProgressBarRange  
+##  <a name="setprogressbarrange"></a>CFrameWnd::SetProgressBarRange  
  設定顯示在工作列上的 Windows 7 進度列範圍。  
   
 ```  
@@ -980,7 +1031,7 @@ void SetProgressBarRange(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetprogressbarstatea--cframewndsetprogressbarstate"></a><a name="setprogressbarstate"></a>CFrameWnd::SetProgressBarState  
+##  <a name="setprogressbarstate"></a>CFrameWnd::SetProgressBarState  
  設定類型和狀態的工作列按鈕上的進度指示器。  
   
 ```  
@@ -993,7 +1044,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesettaskbaroverlayicona--cframewndsettaskbaroverlayicon"></a><a name="settaskbaroverlayicon"></a>CFrameWnd::SetTaskbarOverlayIcon  
+##  <a name="settaskbaroverlayicon"></a>CFrameWnd::SetTaskbarOverlayIcon  
  多載。 適用於覆疊的工作列按鈕，以指出應用程式狀態，或通知使用者。  
   
 ```  
@@ -1022,7 +1073,7 @@ BOOL SetTaskbarOverlayIcon(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesettitlea--cframewndsettitle"></a><a name="settitle"></a>CFrameWnd::SetTitle  
+##  <a name="settitle"></a>CFrameWnd::SetTitle  
  設定視窗物件的標題。  
   
 ```  
@@ -1033,7 +1084,7 @@ void SetTitle(LPCTSTR lpszTitle);
  `lpszTitle`  
  包含標題的視窗物件的字元字串指標。  
   
-##  <a name="a-nameshowcontrolbara--cframewndshowcontrolbar"></a><a name="showcontrolbar"></a>CFrameWnd::ShowControlBar  
+##  <a name="showcontrolbar"></a>CFrameWnd::ShowControlBar  
  呼叫此成員函式，以顯示或隱藏控制列。  
   
 ```  
@@ -1053,7 +1104,7 @@ void ShowControlBar(
  *bDelay*  
  如果**TRUE**，顯示控制項列的延遲時間。 如果**FALSE**，顯示列立即的控制項。  
   
-##  <a name="a-nameshowownedwindowsa--cframewndshowownedwindows"></a><a name="showownedwindows"></a>CFrameWnd::ShowOwnedWindows  
+##  <a name="showownedwindows"></a>CFrameWnd::ShowOwnedWindows  
  呼叫此成員函式，以顯示子系的所有 windows`CFrameWnd`物件。  
   
 ```  

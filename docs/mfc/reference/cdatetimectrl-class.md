@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDateTimeCtrl
+- AFXDTCTL/CDateTimeCtrl
+- AFXDTCTL/CDateTimeCtrl::CDateTimeCtrl
+- AFXDTCTL/CDateTimeCtrl::CloseMonthCal
+- AFXDTCTL/CDateTimeCtrl::Create
+- AFXDTCTL/CDateTimeCtrl::GetDateTimePickerInfo
+- AFXDTCTL/CDateTimeCtrl::GetIdealSize
+- AFXDTCTL/CDateTimeCtrl::GetMonthCalColor
+- AFXDTCTL/CDateTimeCtrl::GetMonthCalCtrl
+- AFXDTCTL/CDateTimeCtrl::GetMonthCalFont
+- AFXDTCTL/CDateTimeCtrl::GetMonthCalStyle
+- AFXDTCTL/CDateTimeCtrl::GetRange
+- AFXDTCTL/CDateTimeCtrl::GetTime
+- AFXDTCTL/CDateTimeCtrl::SetFormat
+- AFXDTCTL/CDateTimeCtrl::SetMonthCalColor
+- AFXDTCTL/CDateTimeCtrl::SetMonthCalFont
+- AFXDTCTL/CDateTimeCtrl::SetMonthCalStyle
+- AFXDTCTL/CDateTimeCtrl::SetRange
+- AFXDTCTL/CDateTimeCtrl::SetTime
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,14 +117,14 @@ class CDateTimeCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdtctl.h  
   
-##  <a name="a-namecdatetimectrla--cdatetimectrlcdatetimectrl"></a><a name="cdatetimectrl"></a>CDateTimeCtrl::CDateTimeCtrl  
+##  <a name="cdatetimectrl"></a>CDateTimeCtrl::CDateTimeCtrl  
  建構 `CDateTimeCtrl` 物件。  
   
 ```  
 CDateTimeCtrl();
 ```  
   
-##  <a name="a-nameclosemonthcala--cdatetimectrlclosemonthcal"></a><a name="closemonthcal"></a>CDateTimeCtrl::CloseMonthCal  
+##  <a name="closemonthcal"></a>CDateTimeCtrl::CloseMonthCal  
  關閉目前的日期和時間選擇器控制項。  
   
 ```  
@@ -126,7 +144,7 @@ void CloseMonthCal() const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&5;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]  
   
-##  <a name="a-namecreatea--cdatetimectrlcreate"></a><a name="create"></a>CDateTimeCtrl::Create  
+##  <a name="create"></a>CDateTimeCtrl::Create  
  建立日期和時間選擇器控制項並將它附加`CDateTimeCtrl`物件。  
   
 ```  
@@ -166,7 +184,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl #&1;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]  
   
-##  <a name="a-namegetdatetimepickerinfoa--cdatetimectrlgetdatetimepickerinfo"></a><a name="getdatetimepickerinfo"></a>CDateTimeCtrl::GetDateTimePickerInfo  
+##  <a name="getdatetimepickerinfo"></a>CDateTimeCtrl::GetDateTimePickerInfo  
  擷取目前的日期和時間選擇器控制項的相關資訊。  
   
 ```   
@@ -195,7 +213,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&4;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]  
   
-##  <a name="a-namegetmonthcalcolora--cdatetimectrlgetmonthcalcolor"></a><a name="getmonthcalcolor"></a>CDateTimeCtrl::GetMonthCalColor  
+##  <a name="getmonthcalcolor"></a>CDateTimeCtrl::GetMonthCalColor  
  擷取日期和時間選擇器控制項中的月份行事曆的指定部分的色彩。  
   
 ```  
@@ -215,7 +233,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl #&2;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]  
   
-##  <a name="a-namegetmonthcalctrla--cdatetimectrlgetmonthcalctrl"></a><a name="getmonthcalctrl"></a>Cdatetimectrl:: Getmonthcalctrl  
+##  <a name="getmonthcalctrl"></a>Cdatetimectrl:: Getmonthcalctrl  
  擷取`CMonthCalCtrl`日期和時間選擇器控制項相關聯的物件。  
   
 ```  
@@ -231,7 +249,7 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl #&3;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]  
   
-##  <a name="a-namegetmonthcalfonta--cdatetimectrlgetmonthcalfont"></a><a name="getmonthcalfont"></a>CDateTimeCtrl::GetMonthCalFont  
+##  <a name="getmonthcalfont"></a>CDateTimeCtrl::GetMonthCalFont  
  取得目前的日期和時間選擇器控制項的月曆控制項所使用的字型。  
   
 ```  
@@ -244,7 +262,7 @@ CFont* GetMonthCalFont() const;
 ### <a name="remarks"></a>備註  
  `CFont`所指之傳回值的物件是暫存物件，並且被終結在下一步的閒置處理時間。  
   
-##  <a name="a-namegetmonthcalstylea--cdatetimectrlgetmonthcalstyle"></a><a name="getmonthcalstyle"></a>CDateTimeCtrl::GetMonthCalStyle  
+##  <a name="getmonthcalstyle"></a>CDateTimeCtrl::GetMonthCalStyle  
  取得下拉式月曆控制項與目前的日期和時間選擇器控制項相關聯的樣式。  
   
 ```  
@@ -257,7 +275,7 @@ DWORD GetMonthCalStyle() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[DTM_GETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761763)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetrangea--cdatetimectrlgetrange"></a><a name="getrange"></a>CDateTimeCtrl::GetRange  
+##  <a name="getrange"></a>CDateTimeCtrl::GetRange  
  擷取目前的最小和最大允許系統時間的日期和時間選擇器控制項。  
   
 ```  
@@ -294,7 +312,7 @@ DWORD GetRange(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl #&4;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]  
   
-##  <a name="a-namegettimea--cdatetimectrlgettime"></a><a name="gettime"></a>CDateTimeCtrl::GetTime  
+##  <a name="gettime"></a>CDateTimeCtrl::GetTime  
  擷取日期和時間選擇器控制項中目前選取的時間，並將它放在指定的`SYSTEMTIME`結構。  
   
 ```  
@@ -321,7 +339,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl #&5;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
   
-##  <a name="a-namegetidealsizea--cdatetimectrlgetidealsize"></a><a name="getidealsize"></a>CDateTimeCtrl::GetIdealSize  
+##  <a name="getidealsize"></a>CDateTimeCtrl::GetIdealSize  
  傳回日期和時間選擇器控制項，顯示目前的日期或時間所需的理想大小。  
   
 ```  
@@ -350,7 +368,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]  
   
-##  <a name="a-namesetformata--cdatetimectrlsetformat"></a><a name="setformat"></a>Cdatetimectrl:: Setformat  
+##  <a name="setformat"></a>Cdatetimectrl:: Setformat  
  設定顯示的日期和時間選擇器控制項根據指定的格式字串。  
   
 ```  
@@ -373,7 +391,7 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl #&6;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]  
   
-##  <a name="a-namesetmonthcalcolora--cdatetimectrlsetmonthcalcolor"></a><a name="setmonthcalcolor"></a>CDateTimeCtrl::SetMonthCalColor  
+##  <a name="setmonthcalcolor"></a>CDateTimeCtrl::SetMonthCalColor  
  設定月曆的日期和時間選擇器控制項中的某個部分的色彩。  
   
 ```  
@@ -407,7 +425,7 @@ COLORREF SetMonthCalColor(
 ### <a name="example"></a>範例  
   請參閱範例[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)。  
   
-##  <a name="a-namesetmonthcalfonta--cdatetimectrlsetmonthcalfont"></a><a name="setmonthcalfont"></a>Cdatetimectrl:: Setmonthcalfont  
+##  <a name="setmonthcalfont"></a>Cdatetimectrl:: Setmonthcalfont  
  設定將會使用日期和時間選擇器控制項的子系月曆控制項的字型。  
   
 ```  
@@ -432,7 +450,7 @@ void SetMonthCalFont(
 > [!NOTE]
 >  如果您使用此程式碼，您要將您`CDialog`-衍生類別呼叫`m_MonthFont`型別的**CFont**。  
   
-##  <a name="a-namesetmonthcalstylea--cdatetimectrlsetmonthcalstyle"></a><a name="setmonthcalstyle"></a>CDateTimeCtrl::SetMonthCalStyle  
+##  <a name="setmonthcalstyle"></a>CDateTimeCtrl::SetMonthCalStyle  
  設定下拉式月曆控制項與目前的日期和時間選擇器控制項相關聯的樣式。  
   
 ```  
@@ -461,7 +479,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&3;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]  
   
-##  <a name="a-namesetrangea--cdatetimectrlsetrange"></a><a name="setrange"></a>CDateTimeCtrl::SetRange  
+##  <a name="setrange"></a>CDateTimeCtrl::SetRange  
  設定日期和時間選擇器控制項的最小和最大允許的系統時間。  
   
 ```  
@@ -491,7 +509,7 @@ BOOL SetRange(
 ### <a name="example"></a>範例  
   請參閱範例[CDateTimeCtrl::GetRange](#getrange)。  
   
-##  <a name="a-namesettimea--cdatetimectrlsettime"></a><a name="settime"></a>CDateTimeCtrl::SetTime  
+##  <a name="settime"></a>CDateTimeCtrl::SetTime  
  日期和時間選擇器控制項中設定的時間。  
   
 ```  

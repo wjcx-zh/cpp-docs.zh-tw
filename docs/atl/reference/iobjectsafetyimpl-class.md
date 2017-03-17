@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IObjectSafetyImpl
+- ATLCTL/ATL::IObjectSafetyImpl
+- ATLCTL/ATL::IObjectSafetyImpl::GetInterfaceSafetyOptions
+- ATLCTL/ATL::IObjectSafetyImpl::SetInterfaceSafetyOptions
+- ATLCTL/ATL::IObjectSafetyImpl::m_dwCurrentSafety
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +100,7 @@ class IObjectSafetyImpl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namegetinterfacesafetyoptionsa--iobjectsafetyimplgetinterfacesafetyoptions"></a><a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
+##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
  擷取物件所支援的安全性選項，以及目前設定物件的安全性選項。  
   
 ```
@@ -114,14 +118,14 @@ HRESULT GetInterfaceSafetyOptions(
   
  請參閱[IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemdwcurrentsafetya--iobjectsafetyimplmdwcurrentsafety"></a><a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
+##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
  儲存物件的目前安全性層級。  
   
 ```
 DWORD m_dwCurrentSafety;
 ```  
   
-##  <a name="a-namesetinterfacesafetyoptionsa--iobjectsafetyimplsetinterfacesafetyoptions"></a><a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
+##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
  使物件來初始化或指令碼設定安全[m_dwCurrentSafety](#m_dwcurrentsafety)適當值的成員。  
   
 ```

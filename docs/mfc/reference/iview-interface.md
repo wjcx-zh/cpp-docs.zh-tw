@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IView
+- No header/IView
+- No header/IView::OnActivateView
+- No header/IView::OnInitialUpdate
+- No header/IView::OnUpdate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +75,7 @@ interface class IView
 ## <a name="requirements"></a>需求  
  標頭︰ afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
 
-## <a name="a-nameonactivateviewa-iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+## <a name="onactivateview"></a>IView::OnActivateView  
 由 MFC 檢視是啟用或停用時呼叫。
 ```
 void OnActivateView(bool activate);
@@ -80,13 +84,13 @@ void OnActivateView(bool activate);
 `activate`  
 指出檢視是否目前已啟用或停用。  
 
-## <a name="a-nameoninitialupdatea-iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate
+## <a name="oninitialupdate"></a>IView::OnInitialUpdate
 檢視第一次連接到文件之後，但一開始會顯示檢視之前，由架構呼叫。
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="a-nameonupdatea-iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate 
+## <a name="onupdate"></a>IView::OnUpdate 
 修改檢視的文件之後，由 MFC 呼叫。  
 ```
 void OnUpdate();

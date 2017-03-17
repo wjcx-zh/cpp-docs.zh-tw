@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleResizeBar
+- AFXOLE/COleResizeBar
+- AFXOLE/COleResizeBar::COleResizeBar
+- AFXOLE/COleResizeBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class COleResizeBar : public CControlBar
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-namecoleresizebara--coleresizebarcoleresizebar"></a><a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
  建構 `COleResizeBar` 物件。  
   
 ```  
@@ -98,7 +101,7 @@ COleResizeBar();
 ### <a name="remarks"></a>備註  
  呼叫**建立**建立調整列物件。  
   
-##  <a name="a-namecreatea--coleresizebarcreate"></a><a name="create"></a>COleResizeBar::Create  
+##  <a name="create"></a>COleResizeBar::Create  
  建立子視窗，並將它與相關聯`COleResizeBar`物件。  
   
 ```  

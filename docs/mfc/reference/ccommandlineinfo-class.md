@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
+- AFXWIN/CCommandLineInfo
+- AFXWIN/CCommandLineInfo::CCommandLineInfo
+- AFXWIN/CCommandLineInfo::ParseParam
+- AFXWIN/CCommandLineInfo::m_bRunAutomated
+- AFXWIN/CCommandLineInfo::m_bRunEmbedded
+- AFXWIN/CCommandLineInfo::m_bShowSplash
+- AFXWIN/CCommandLineInfo::m_nShellCommand
+- AFXWIN/CCommandLineInfo::m_strDriverName
+- AFXWIN/CCommandLineInfo::m_strFileName
+- AFXWIN/CCommandLineInfo::m_strPortName
+- AFXWIN/CCommandLineInfo::m_strPrinterName
+- AFXWIN/CCommandLineInfo::m_strRestartIdentifier
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +120,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameccommandlineinfoa--ccommandlineinfoccommandlineinfo"></a><a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
  這個建構函式會建立`CCommandLineInfo`物件使用預設值。  
   
 ```  
@@ -123,7 +135,7 @@ CCommandLineInfo();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="a-namembrunautomateda--ccommandlineinfombrunautomated"></a><a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
  表示**/Automation**命令列上找不到旗標。  
   
 ```  
@@ -133,7 +145,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>備註  
  如果**TRUE**，這表示為 OLE automation 伺服器啟動。  
   
-##  <a name="a-namembrunembeddeda--ccommandlineinfombrunembedded"></a><a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
  表示**/內嵌**命令列上找不到旗標。  
   
 ```  
@@ -143,7 +155,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>備註  
  如果**TRUE**，這表示啟動編輯內嵌的 OLE 項目。  
   
-##  <a name="a-namembshowsplasha--ccommandlineinfombshowsplash"></a><a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  表示應該顯示開頭顯示畫面。  
   
 ```  
@@ -153,7 +165,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>備註  
  如果**TRUE**，這表示此應用程式應該顯示在啟動時的啟動顯示畫面。 預設實作[ParseParam](#parseparam)將此資料成員設定為**TRUE**如果[m_nShellCommand](#m_nshellcommand)等於**CCommandLineInfo::FileNew**。  
   
-##  <a name="a-namemnshellcommanda--ccommandlineinfomnshellcommand"></a><a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  指出此執行個體的應用程式 shell 命令。  
   
 ```  
@@ -208,7 +220,7 @@ m_nShellCommand;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&55;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="a-namemstrdrivernamea--ccommandlineinfomstrdrivername"></a><a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
  第三個非旗標參數的值儲存在命令列上。  
   
 ```  
@@ -218,7 +230,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>備註  
  這個參數通常是列印至殼層命令的印表機驅動程式的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當**/pt**命令列上找不到旗標。  
   
-##  <a name="a-namemstrfilenamea--ccommandlineinfomstrfilename"></a><a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  在命令列會儲存第一個非旗標參數的值。  
   
 ```  
@@ -228,7 +240,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>備註  
  這個參數通常是檔案的要開啟名稱。  
   
-##  <a name="a-namemstrportnamea--ccommandlineinfomstrportname"></a><a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
  第四個非旗標參數的值儲存在命令列上。  
   
 ```  
@@ -238,7 +250,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>備註  
  這個參數通常是列印至殼層命令的印表機連接埠的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當**/pt**命令列上找不到旗標。  
   
-##  <a name="a-namemstrprinternamea--ccommandlineinfomstrprintername"></a><a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  第二個非旗標參數的值儲存在命令列上。  
   
 ```  
@@ -248,7 +260,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>備註  
  這個參數通常是列印至殼層命令印表機的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當**/pt**命令列上找不到旗標。  
   
-##  <a name="a-namemstrrestartidentifiera--ccommandlineinfomstrrestartidentifier"></a><a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  在命令列上的識別項重新啟動的唯一性。  
   
 ```  
@@ -260,7 +272,7 @@ CString m_strRestartIdentifier;
   
  如果重新啟動管理員結束應用程式，並設定成重新啟動它，則重新啟動管理員會執行重新啟動識別項使用的命令列的應用程式做為選擇性參數。 當重新啟動管理員使用的重新啟動識別項時，應用程式可以重新開啟先前開啟的文件，並復原 autosaved 檔案。  
   
-##  <a name="a-nameparseparama--ccommandlineinfoparseparam"></a><a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
  架構會呼叫此函式可剖析/解譯個別的參數，從命令列。 第二個版本不同於第一個只能在 Unicode 專案中。  
   
 ```  

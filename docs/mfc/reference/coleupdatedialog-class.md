@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
+- AFXODLGS/COleUpdateDialog
+- AFXODLGS/COleUpdateDialog::COleUpdateDialog
+- AFXODLGS/COleUpdateDialog::DoModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class COleUpdateDialog : public COleLinksDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxodlgs.h  
   
-##  <a name="a-namecoleupdatedialoga--coleupdatedialogcoleupdatedialog"></a><a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
  建構 `COleUpdateDialog` 物件。  
   
 ```  
@@ -117,7 +120,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>備註  
  此函式建構只`COleUpdateDialog`物件。 若要顯示對話方塊，請呼叫[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)。 應該使用這個類別，而不是`COleLinksDialog`當您想要更新只有現有連結或內嵌項目。  
   
-##  <a name="a-namedomodala--coleupdatedialogdomodal"></a><a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>COleUpdateDialog::DoModal  
  顯示 [編輯連結] 對話方塊中更新模式。  
   
 ```  

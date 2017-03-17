@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMap
+- AFXTEMPL/CMap
+- AFXTEMPL/CMap::CPair
+- AFXTEMPL/CMap::CMap
+- AFXTEMPL/CMap::GetCount
+- AFXTEMPL/CMap::GetHashTableSize
+- AFXTEMPL/CMap::GetNextAssoc
+- AFXTEMPL/CMap::GetSize
+- AFXTEMPL/CMap::GetStartPosition
+- AFXTEMPL/CMap::InitHashTable
+- AFXTEMPL/CMap::IsEmpty
+- AFXTEMPL/CMap::Lookup
+- AFXTEMPL/CMap::PGetFirstAssoc
+- AFXTEMPL/CMap::PGetNextAssoc
+- AFXTEMPL/CMap::PLookup
+- AFXTEMPL/CMap::RemoveAll
+- AFXTEMPL/CMap::RemoveKey
+- AFXTEMPL/CMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -125,7 +142,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ## <a name="requirements"></a>需求  
  **Header:** afxtempl.h  
   
-##  <a name="a-namecmapa--cmapcmap"></a><a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>CMap::CMap  
  建構空的對應。  
   
 ```  
@@ -142,7 +159,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&56;](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="a-namecpaira--cmapcpair"></a><a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>CMap::CPair  
  包含索引鍵的值和相關聯的物件的值。  
   
 ### <a name="remarks"></a>備註  
@@ -159,7 +176,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>範例  
  如需使用方式的範例，請參閱範例[CMap::PLookup](#plookup)。  
   
-##  <a name="a-namegetcounta--cmapgetcount"></a><a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>CMap::GetCount  
  擷取對應中的項目數。  
   
 ```  
@@ -172,7 +189,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>範例  
  請參閱範例[CMap::Lookup](#lookup)。  
   
-##  <a name="a-namegethashtablesizea--cmapgethashtablesize"></a><a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
  決定在對應的雜湊表中的項目數。  
   
 ```  
@@ -185,7 +202,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&57;](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="a-namegetnextassoca--cmapgetnextassoc"></a><a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
  擷取對應的項目在`rNextPosition`，然後更新`rNextPosition`來指向對應中的下一個項目。  
   
 ```  
@@ -219,7 +236,7 @@ void GetNextAssoc(
 ### <a name="example"></a>範例  
  請參閱範例[CMap::SetAt](#setat)。  
   
-##  <a name="a-namegetsizea--cmapgetsize"></a><a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>CMap::GetSize  
  傳回對應的項目數目。  
   
 ```  
@@ -235,7 +252,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapgetstartposition"></a><a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>CMap::GetStartPosition  
  一開始會傳回對應的反覆項目**位置**值傳遞至`GetNextAssoc`呼叫。  
   
 ```  
@@ -251,7 +268,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>範例  
  請參閱範例[CMap::SetAt](#setat)。  
   
-##  <a name="a-nameinithashtablea--cmapinithashtable"></a><a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>CMap::InitHashTable  
  初始化雜湊表。  
   
 ```  
@@ -271,7 +288,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUEÂ);
 ### <a name="example"></a>範例  
  請參閱範例[CMap::Lookup](#lookup)。  
   
-##  <a name="a-nameisemptya--cmapisempty"></a><a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>CMap::IsEmpty  
  決定是否是空的對應。  
   
 ```  
@@ -284,7 +301,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>範例  
  請參閱範例[CMap::RemoveAll](#removeall)。  
   
-##  <a name="a-namelookupa--cmaplookup"></a><a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>CMap::Lookup  
  查閱對應至指定的索引鍵的值。  
   
 ```  
@@ -313,7 +330,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&58;](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="a-nameoperatorata--cmapoperator--"></a><a name="operator_at"></a>CMap::operator]  
+##  <a name="operator_at"></a>CMap::operator]  
  方便的替代`SetAt`成員函式。  
   
 ```  
@@ -338,7 +355,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>範例  
  請參閱範例[CMap::Lookup](#lookup)。  
   
-##  <a name="a-namepgetfirstassoca--cmappgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
  傳回對應物件的第一個項目。  
   
 ```  
@@ -354,7 +371,7 @@ const CPair* PGetFirstAssoc() const;Â CPair* PGetFirstAssoc();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&59;](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="a-namepgetnextassoca--cmappgetnextassoc"></a><a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
  擷取所指的對應項目`pAssocRec`。  
   
 ```  
@@ -376,7 +393,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>範例  
  請參閱範例[CMap::PGetFirstAssoc](#pgetfirstassoc)。  
   
-##  <a name="a-nameplookupa--cmapplookup"></a><a name="plookup"></a>CMap::PLookup  
+##  <a name="plookup"></a>CMap::PLookup  
  尋找對應至指定的索引鍵的值。  
   
 ```  

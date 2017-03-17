@@ -6,6 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::all_memory_fence
+- amp/Concurrency::atomic_compare_exchange
+- amp/Concurrency::atomic_fetch_dec
+- amp/Concurrency::atomic_fetch_max
+- amp/Concurrency::atomic_fetch_min
+- amp/Concurrency::copy
+- amp/Concurrency::direct3d_abort
+- amp/Concurrency::direct3d_printf
+- amp/Concurrency::global_memory_fence
+- amp/Concurrency::tile_static_memory_fence
+dev_langs:
+- C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 caps.latest.revision: 9
 author: mikeblome
@@ -28,7 +41,7 @@ ms.lasthandoff: 02/24/2017
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|  
 |[global_memory_fence](#global_memory_fence)|[parallel_for_each 函式 (c + + AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|  
   
-##  <a name="a-nameallmemoryfencea--allmemoryfence"></a><a name="all_memory_fence"></a>all_memory_fence  
+##  <a name="all_memory_fence"></a>all_memory_fence  
  區塊執行的所有執行緒，直到完成為止的所有記憶體存取在磚中。 這可確保所有的記憶體存取會顯示 [執行緒] 磚中，在其他執行緒，而且程式的順序執行。  
   
 ```  
@@ -39,14 +52,14 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  `tile_barrier` 物件。  
   
-##  <a name="a-nameampuninitializea--ampuninitialize"></a><a name="amp_uninitialize"></a>amp_uninitialize  
+##  <a name="amp_uninitialize"></a>amp_uninitialize  
  未初始化 c + + AMP 執行階段。 它是合法的應用程式存留期期間多次呼叫此函式。 呼叫任何呼叫此函式的 c + + AMP API afer 會重新初始化 c + + AMP 執行階段。 請注意，您不能使用 c + + AMP 物件上呼叫此函式，這樣做會導致未定義的行為。 此外，同時呼叫此函式和任何其他 AMP Api 就是不合法的而且會導致未定義的行為。  
   
 ```  
 void __cdecl amp_uninitialize();
 ```  
   
-##  <a name="a-nameatomiccompareexchangea--atomiccompareexchange"></a><a name="atomic_compare_exchange"></a>atomic_compare_exchange  
+##  <a name="atomic_compare_exchange"></a>atomic_compare_exchange  
  以不可分割方式比較儲存在記憶體位置中指定的值相等，其值為第二個指定的引數，第一個引數和值都是一樣，如果記憶體位置的值變更為第三個指定的引數。  
   
 ```  
@@ -78,7 +91,7 @@ inline bool atomic_compare_exchange(
  如果作業成功，則為 `true`，否則為 `false`。  
   
 
-##  <a name="a-nameatomicexchangea--atomicexchange-function-c-amp"></a><a name="atomic_exchange"></a>atomic_exchange 函式 (c + + AMP)  
+##  <a name="atomic_exchange"></a>atomic_exchange 函式 (c + + AMP)  
  設定目的地位置的值，成為不可部分完成的作業。  
   
 ```  
@@ -111,7 +124,7 @@ inline float atomic_exchange(
  目的地位置的原始值。  
   
 
-##  <a name="a-nameatomicfetchadda--atomicfetchadd-function-c-amp"></a><a name="atomic_fetch_add"></a>atomic_fetch_add 函式 (c + + AMP)  
+##  <a name="atomic_fetch_add"></a>atomic_fetch_add 函式 (c + + AMP)  
  自動將值加入至記憶體位置的值。  
   
 ```  
@@ -137,7 +150,7 @@ inline unsigned int atomic_fetch_add(
 ### <a name="return-value"></a>傳回值  
  記憶體位置的原始值。  
   
-##  <a name="a-nameatomicfetchanda--atomicfetchand-function-c-amp"></a><a name="atomic_fetch_and"></a>atomic_fetch_and 函式 (c + + AMP)  
+##  <a name="atomic_fetch_and"></a>atomic_fetch_and 函式 (c + + AMP)  
  以原子方式執行值與的記憶體位置的值的位元 AND 運算。  
   
 ```  
@@ -163,7 +176,7 @@ inline unsigned int atomic_fetch_and(
 ### <a name="return-value"></a>傳回值  
  記憶體位置的原始值。  
   
-##  <a name="a-nameatomicfetchdeca--atomicfetchdec"></a><a name="atomic_fetch_dec"></a>atomic_fetch_dec  
+##  <a name="atomic_fetch_dec"></a>atomic_fetch_dec  
  以不可分割方式遞減值儲存在指定的記憶體位置。  
   
 ```  
@@ -181,7 +194,7 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  儲存在記憶體位置的原始值。  
   
-##  <a name="a-nameatomicfetchinca--atomicfetchinc"></a><a name="atomic_fetch_inc"></a>atomic_fetch_inc  
+##  <a name="atomic_fetch_inc"></a>atomic_fetch_inc  
  自動遞增的值儲存在指定的記憶體位置。  
   
 ```  
@@ -198,7 +211,7 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  儲存在記憶體位置的原始值。  
   
-##  <a name="a-nameatomicfetchmaxa--atomicfetchmax"></a><a name="atomic_fetch_max"></a>atomic_fetch_max  
+##  <a name="atomic_fetch_max"></a>atomic_fetch_max  
  自動計算值儲存在第一個引數和第二個引數中指定的值中指定的記憶體位置之間的最大值，並將它儲存在相同的記憶體位置。  
   
 ```  
@@ -224,7 +237,7 @@ inline unsigned int atomic_fetch_max(
 ### <a name="return-value"></a>傳回值  
  原始的值儲存在指定的位置。  
   
-##  <a name="a-nameatomicfetchmina--atomicfetchmin"></a><a name="atomic_fetch_min"></a>atomic_fetch_min  
+##  <a name="atomic_fetch_min"></a>atomic_fetch_min  
  自動計算值儲存在第一個引數和第二個引數中指定的值中指定的記憶體位置之間的最小值，並將它儲存在相同的記憶體位置。  
   
 ```  
@@ -250,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>傳回值  
  原始的值儲存在指定的位置。  
   
-##  <a name="a-nameatomicfetchora--atomicfetchor-function-c-amp"></a><a name="atomic_fetch_or"></a>atomic_fetch_or 函式 (c + + AMP)  
+##  <a name="atomic_fetch_or"></a>atomic_fetch_or 函式 (c + + AMP)  
  以原子方式執行值，記憶體位置的值的位元 OR 運算。  
   
 ```  
@@ -276,7 +289,7 @@ inline unsigned int atomic_fetch_or(
 ### <a name="return-value"></a>傳回值  
  記憶體位置的原始值。  
   
-##  <a name="a-nameatomicfetchsuba--atomicfetchsub-function-c-amp"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub 函式 (c + + AMP)  
+##  <a name="atomic_fetch_sub"></a>atomic_fetch_sub 函式 (c + + AMP)  
  以不可分割方式相減的記憶體位置的值。  
   
 ```  
@@ -302,7 +315,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>傳回值  
  記憶體位置的原始值。  
   
-##  <a name="a-nameatomicfetchxora--atomicfetchxor-function-c-amp"></a><a name="atomic_fetch_xor"></a>atomic_fetch_xor 函式 (c + + AMP)  
+##  <a name="atomic_fetch_xor"></a>atomic_fetch_xor 函式 (c + + AMP)  
  以不可分割方式 peforms 值和記憶體位置的位元 XOR 運算。  
   
 ```  
@@ -328,7 +341,7 @@ inline unsigned int atomic_fetch_xor(
 ### <a name="return-value"></a>傳回值  
  記憶體位置的原始值。  
   
-##  <a name="a-namecopya--copy"></a><a name="copy"></a> copy  
+##  <a name="copy"></a> copy  
  將 c + + AMP 物件複製。 符合所有同步的資料傳輸需求。 加速器上執行的程式碼時，您無法複製資料。 此函式的一般形式是`copy(src, dest)`。  
   
 ```  
@@ -434,7 +447,7 @@ void copy(
  `value_type`  
  複製的項目資料型別。  
   
-##  <a name="a-namecopyasynca--copyasync"></a><a name="copy_async"></a>copy_async  
+##  <a name="copy_async"></a>copy_async  
  複製 c + + AMP 物件並傳回[completion_future](completion-future-class.md)可以等候的物件。 加速器上執行的程式碼時，您無法複製資料。  此函式的一般形式是`copy(src, dest)`。  
   
 ```  
@@ -535,14 +548,14 @@ concurrency::completion_future copy_async(
 ### <a name="return-value"></a>傳回值  
  A`future<void>`可以等候的。  
   
-##  <a name="a-namedirect3daborta--direct3dabort"></a><a name="direct3d_abort"></a>direct3d_abort  
+##  <a name="direct3d_abort"></a>direct3d_abort  
  使用 `restrict(amp)` 限制子句中止函式執行。 AMP 執行階段偵測到在呼叫時，它會引發[runtime_exception](runtime-exception-class.md)例外狀況，並出現錯誤訊息 「 參考光柵處理器︰ 著色器中止指令叫用 」。  
   
 ```  
 void direct3d_abort() restrict(amp);
 ```  
   
-##  <a name="a-namedirect3derrorfa--direct3derrorf"></a><a name="direct3d_errorf"></a>direct3d_errorf  
+##  <a name="direct3d_errorf"></a>direct3d_errorf  
  列印 Visual Studio 的 輸出 視窗的格式化的字串。 呼叫的函式從`restrict(amp)`限制子句。 AMP 執行階段偵測到在呼叫時，它會引發[runtime_exception](runtime-exception-class.md)使用相同的格式字串的例外狀況。  
   
 ```  
@@ -551,7 +564,7 @@ void direct3d_errorf(
  ...) restrict(amp);
 ```  
   
-##  <a name="a-namedirect3dprintfa--direct3dprintf"></a><a name="direct3d_printf"></a>direct3d_printf  
+##  <a name="direct3d_printf"></a>direct3d_printf  
  列印 Visual Studio 的 輸出 視窗的格式化的字串。 呼叫的函式從`restrict(amp)`限制子句。  
   
 ```  
@@ -560,7 +573,7 @@ void direct3d_printf(
  ...) restrict(amp);
 ```  
   
-##  <a name="a-nameglobalmemoryfencea--globalmemoryfence"></a><a name="global_memory_fence"></a>global_memory_fence  
+##  <a name="global_memory_fence"></a>global_memory_fence  
  已完成的所有執行緒，直到所有的全域記憶體存取在磚中的區塊執行。 這可確保全域記憶體存取會顯示 [執行緒] 磚中，在其他執行緒，而且程式的順序執行。  
   
 ```  
@@ -571,7 +584,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Tile_barrier 物件  
   
-##  <a name="a-nameparallelforeacha--parallelforeach-function-c-amp"></a><a name="parallel_for_each"></a>parallel_for_each 函式 (c + + AMP)  
+##  <a name="parallel_for_each"></a>parallel_for_each 函式 (c + + AMP)  
  在計算網域中執行的函式。 如需詳細資訊，請參閱[c + + AMP 概觀](../../../parallel/amp/cpp-amp-overview.md)。  
   
 ```  
@@ -652,7 +665,7 @@ void parallel_for_each(
  `_Rank`  
  範圍的陣序規範。  
   
-##  <a name="a-nametilestaticmemoryfencea--tilestaticmemoryfence"></a><a name="tile_static_memory_fence"></a>tile_static_memory_fence  
+##  <a name="tile_static_memory_fence"></a>tile_static_memory_fence  
  阻礙磚中的所有執行緒的執行，直到所有未完成`tile_static`已完成的記憶體存取。 這可確保`tile_static`記憶體存取會顯示在 [執行緒] 磚，其他執行緒，而且存取執行中程式的順序。  
   
 ```  

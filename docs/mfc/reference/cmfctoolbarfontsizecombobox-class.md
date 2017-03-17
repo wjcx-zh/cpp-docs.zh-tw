@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::GetTwipSize
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::RebuildFontSizes
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontSizeComboBox::SetTwipSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +93,14 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontsizecomboboxa--cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
  建構 `CMFCToolBarFontSizeComboBox` 物件。  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="a-namegettwipsizea--cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
  擷取文字大小二分之一，字型大小下拉式方塊的文字方塊中。  
   
 ```  
@@ -105,7 +110,7 @@ int GetTwipSize() const;
 ### <a name="return-value"></a>傳回值  
  如果傳回值是正數，則二分之一文字大小。 如果下拉式方塊的文字方塊為空白，則為-1。 如果發生錯誤時，它可以是-2。  
   
-##  <a name="a-namerebuildfontsizesa--cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
  填入所有有效的大小，指定字型的字型大小下拉式方塊。  
   
 ```  
@@ -119,7 +124,7 @@ void RebuildFontSizes(const CString& strFontName);
 ### <a name="remarks"></a>備註  
  呼叫此函式，當您要同步處理一個字型下拉式方塊中的選取項目與字型大小下拉式方塊中，例如[CMFCToolBarFontComboBox 類別](../../mfc/reference/cmfctoolbarfontcombobox-class.md)。  
   
-##  <a name="a-namesettwipsizea--cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
  將指定大小 （以二分之一） 的最接近的大小，以點，然後集值的下拉式方塊中選取的大小。  
   
 ```  

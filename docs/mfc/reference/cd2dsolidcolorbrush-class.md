@@ -10,7 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DSolidColorBrush
-- afxrendertarget/CD2DSolidColorBrush
+- AFXRENDERTARGET/CD2DSolidColorBrush
+- AFXRENDERTARGET/CD2DSolidColorBrush::CD2DSolidColorBrush
+- AFXRENDERTARGET/CD2DSolidColorBrush::Attach
+- AFXRENDERTARGET/CD2DSolidColorBrush::Create
+- AFXRENDERTARGET/CD2DSolidColorBrush::Destroy
+- AFXRENDERTARGET/CD2DSolidColorBrush::Detach
+- AFXRENDERTARGET/CD2DSolidColorBrush::Get
+- AFXRENDERTARGET/CD2DSolidColorBrush::GetColor
+- AFXRENDERTARGET/CD2DSolidColorBrush::SetColor
+- AFXRENDERTARGET/CD2DSolidColorBrush::m_colorSolid
+- AFXRENDERTARGET/CD2DSolidColorBrush::m_pSolidColorBrush
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,14 +105,14 @@ class CD2DSolidColorBrush : public CD2DBrush;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dsolidcolorbrusha--cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
+##  <a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
  解構函式。 D2D 實心筆刷物件終結時呼叫。  
   
 ```  
 virtual ~CD2DSolidColorBrush();
 ```  
   
-##  <a name="a-nameattacha--cd2dsolidcolorbrushattach"></a><a name="attach"></a>CD2DSolidColorBrush::Attach  
+##  <a name="attach"></a>CD2DSolidColorBrush::Attach  
  會附加至現有的資源物件的介面  
   
 ```  
@@ -113,7 +123,7 @@ void Attach(ID2D1SolidColorBrush* pResource);
  `pResource`  
  現有的資源介面。 不能是 NULL  
   
-##  <a name="a-namecd2dsolidcolorbrusha--cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
+##  <a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
  建構 CD2DSolidColorBrush 物件。  
   
 ```  
@@ -148,7 +158,7 @@ CD2DSolidColorBrush(
  `nAlpha`  
  筆刷色彩的不透明度。  
   
-##  <a name="a-namecreatea--cd2dsolidcolorbrushcreate"></a><a name="create"></a>CD2DSolidColorBrush::Create  
+##  <a name="create"></a>CD2DSolidColorBrush::Create  
  建立 CD2DSolidColorBrush。  
   
 ```  
@@ -162,14 +172,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-namedestroya--cd2dsolidcolorbrushdestroy"></a><a name="destroy"></a>CD2DSolidColorBrush::Destroy  
+##  <a name="destroy"></a>CD2DSolidColorBrush::Destroy  
  終結 CD2DSolidColorBrush 物件。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dsolidcolorbrushdetach"></a><a name="detach"></a>CD2DSolidColorBrush::Detach  
+##  <a name="detach"></a>CD2DSolidColorBrush::Detach  
  中斷連結物件中的資源介面  
   
 ```  
@@ -179,7 +189,7 @@ ID2D1SolidColorBrush* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的資源介面指標。  
   
-##  <a name="a-namegeta--cd2dsolidcolorbrushget"></a><a name="get"></a>CD2DSolidColorBrush::Get  
+##  <a name="get"></a>CD2DSolidColorBrush::Get  
  傳回 ID2D1SolidColorBrush 介面  
   
 ```  
@@ -189,7 +199,7 @@ ID2D1SolidColorBrush* Get();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1SolidColorBrush 介面的指標。  
   
-##  <a name="a-namegetcolora--cd2dsolidcolorbrushgetcolor"></a><a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
+##  <a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
  擷取單色筆刷色彩  
   
 ```  
@@ -199,21 +209,21 @@ D2D1_COLOR_F GetColor() const;
 ### <a name="return-value"></a>傳回值  
  這個單色筆刷色彩  
   
-##  <a name="a-namemcolorsolida--cd2dsolidcolorbrushmcolorsolid"></a><a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
+##  <a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
  筆刷不透明的色彩。  
   
 ```  
 D2D1_COLOR_F m_colorSolid;  
 ```  
   
-##  <a name="a-namempsolidcolorbrusha--cd2dsolidcolorbrushmpsolidcolorbrush"></a><a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
+##  <a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
  儲存 ID2D1SolidColorBrush 物件的指標。  
   
 ```  
 ID2D1SolidColorBrush* m_pSolidColorBrush;  
 ```  
   
-##  <a name="a-nameoperatorid2d1solidcolorbrushstara--cd2dsolidcolorbrushoperator-id2d1solidcolorbrush"></a><a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush *  
+##  <a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush *  
  傳回 ID2D1SolidColorBrush 介面  
   
 ```  
@@ -223,7 +233,7 @@ operator ID2D1SolidColorBrush*();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1SolidColorBrush 介面的指標。  
   
-##  <a name="a-namesetcolora--cd2dsolidcolorbrushsetcolor"></a><a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
+##  <a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
  指定此單色筆刷色彩  
   
 ```  

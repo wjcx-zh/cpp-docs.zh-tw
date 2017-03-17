@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonSlider
+- AFXRIBBONSLIDER/CMFCRibbonSlider
+- AFXRIBBONSLIDER/CMFCRibbonSlider::CMFCRibbonSlider
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetPos
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetRangeMax
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetRangeMin
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetRegularSize
+- AFXRIBBONSLIDER/CMFCRibbonSlider::GetZoomIncrement
+- AFXRIBBONSLIDER/CMFCRibbonSlider::HasZoomButtons
+- AFXRIBBONSLIDER/CMFCRibbonSlider::OnDraw
+- AFXRIBBONSLIDER/CMFCRibbonSlider::SetPos
+- AFXRIBBONSLIDER/CMFCRibbonSlider::SetRange
+- AFXRIBBONSLIDER/CMFCRibbonSlider::SetZoomButtons
+- AFXRIBBONSLIDER/CMFCRibbonSlider::SetZoomIncrement
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +107,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>需求  
  **標頭︰** afxribbonslider.h  
   
-##  <a name="a-namecmfcribbonslidera--cmfcribbonslidercmfcribbonslider"></a><a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
+##  <a name="cmfcribbonslider"></a>CMFCRibbonSlider::CMFCRibbonSlider  
  建構的功能區滑桿。  
   
 ```  
@@ -113,7 +126,7 @@ CMFCRibbonSlider(
 ### <a name="remarks"></a>備註  
  建構是功能區滑桿`nWidth`像素寬面板分類加入滑桿的位置中。 根據預設，滑動軸是水平的。  
   
-##  <a name="a-namegetposa--cmfcribbonslidergetpos"></a><a name="getpos"></a>CMFCRibbonSlider::GetPos  
+##  <a name="getpos"></a>CMFCRibbonSlider::GetPos  
  傳回目前的滑桿控制項的位置。  
   
 ```  
@@ -123,7 +136,7 @@ int GetPos() const;
 ### <a name="return-value"></a>傳回值  
  目前的滑桿控制項，也就是相對於開始的位置，滑桿的位置。  
   
-##  <a name="a-namegetrangemaxa--cmfcribbonslidergetrangemax"></a><a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
+##  <a name="getrangemax"></a>CMFCRibbonSlider::GetRangeMax  
  取得滑動軸可行駛的滑桿控制項的滑桿的最大的遞增值。  
   
 ```  
@@ -133,7 +146,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>傳回值  
  滑桿可行駛的滑桿控制項的滑桿的最大的遞增值。  
   
-##  <a name="a-namegetrangemina--cmfcribbonslidergetrangemin"></a><a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
+##  <a name="getrangemin"></a>CMFCRibbonSlider::GetRangeMin  
  傳回的最小值的遞增量滑桿可行駛的滑桿控制項。  
   
 ```  
@@ -143,7 +156,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>傳回值  
  滑桿可行駛滑桿控制項的最小的增量。  
   
-##  <a name="a-namegetregularsizea--cmfcribbonslidergetregularsize"></a><a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonSlider::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -157,7 +170,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetzoomincrementa--cmfcribbonslidergetzoomincrement"></a><a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
+##  <a name="getzoomincrement"></a>CMFCRibbonSlider::GetZoomIncrement  
  取得滑動軸控制項的縮放增量。  
   
 ```  
@@ -167,7 +180,7 @@ int GetZoomIncrement() const;
 ### <a name="return-value"></a>傳回值  
  縮放滑桿控制項的增量。  
   
-##  <a name="a-namehaszoombuttonsa--cmfcribbonsliderhaszoombuttons"></a><a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
+##  <a name="haszoombuttons"></a>CMFCRibbonSlider::HasZoomButtons  
  指定滑動軸是否顯示比例按鈕。  
   
 ```  
@@ -177,7 +190,7 @@ BOOL HasZoomButtons() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果滑桿有縮放按鈕。`FALSE`否則。  
   
-##  <a name="a-nameondrawa--cmfcribbonsliderondraw"></a><a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonSlider::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -189,7 +202,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetposa--cmfcribbonslidersetpos"></a><a name="setpos"></a>CMFCRibbonSlider::SetPos  
+##  <a name="setpos"></a>CMFCRibbonSlider::SetPos  
  將滑桿控制項的目前位置的設定。  
   
 ```  
@@ -205,7 +218,7 @@ void SetPos(
  [in] `bRedraw`  
  如果`TRUE`，滑桿會重新繪製。  
   
-##  <a name="a-namesetrangea--cmfcribbonslidersetrange"></a><a name="setrange"></a>CMFCRibbonSlider::SetRange  
+##  <a name="setrange"></a>CMFCRibbonSlider::SetRange  
  設定滑桿控制項的值範圍。  
   
 ```  
@@ -224,7 +237,7 @@ void SetRange(
 ### <a name="remarks"></a>備註  
  設定最小和最大值，指定滑桿控制項的值的範圍。  
   
-##  <a name="a-namesetzoombuttonsa--cmfcribbonslidersetzoombuttons"></a><a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
+##  <a name="setzoombuttons"></a>CMFCRibbonSlider::SetZoomButtons  
  顯示或隱藏 [縮放] 按鈕。  
   
 ```  
@@ -235,7 +248,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
  [in]。 `bSet`  
  `TRUE`若要顯示 顯示比例按鈕;`FALSE`隱藏起來。  
   
-##  <a name="a-namesetzoomincrementa--cmfcribbonslidersetzoomincrement"></a><a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
+##  <a name="setzoomincrement"></a>CMFCRibbonSlider::SetZoomIncrement  
  設定滑桿控制項的縮放增量。  
   
 ```  

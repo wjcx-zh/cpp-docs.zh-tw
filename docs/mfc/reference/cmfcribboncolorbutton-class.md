@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonColorButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::CMFCRibbonColorButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::AddColorsGroup
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::EnableAutomaticButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::EnableOtherButton
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetAutomaticColor
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetColor
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetColorBoxSize
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetColumns
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::GetHighlightedColor
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::RemoveAllColorGroups
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetColor
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetColorBoxSize
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetColorName
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetColumns
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetDocumentColors
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::SetPalette
+- AFXRIBBONCOLORBUTTON/CMFCRibbonColorButton::UpdateColor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +117,7 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 ## <a name="requirements"></a>需求  
  **標題:** afxribboncolorbutton.h  
   
-##  <a name="a-nameaddcolorsgroupa--cmfcribboncolorbuttonaddcolorsgroup"></a><a name="addcolorsgroup"></a>CMFCRibbonColorButton::AddColorsGroup  
+##  <a name="addcolorsgroup"></a>CMFCRibbonColorButton::AddColorsGroup  
  將色彩群組加入標準色彩區域中。  
   
 ```  
@@ -122,7 +140,7 @@ void AddColorsGroup(
 ### <a name="remarks"></a>備註  
  使用這個函式，使色彩快顯會顯示數個群組的色彩。 您可以控制色彩群組中的顯示方式。  
   
-##  <a name="a-namecmfcribboncolorbuttona--cmfcribboncolorbuttoncmfcribboncolorbutton"></a><a name="cmfcribboncolorbutton"></a>CMFCRibbonColorButton::CMFCRibbonColorButton  
+##  <a name="cmfcribboncolorbutton"></a>CMFCRibbonColorButton::CMFCRibbonColorButton  
  建構 `CMFCRibbonColorButton` 物件。  
   
 ```  
@@ -168,7 +186,7 @@ CMFCRibbonColorButton(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenableautomaticbuttona--cmfcribboncolorbuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCRibbonColorButton::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCRibbonColorButton::EnableAutomaticButton  
  指定是否啟用 [自動]  按鈕。  
   
 ```  
@@ -200,7 +218,7 @@ void EnableAutomaticButton(
  [in] `bDrawBorder`  
  `TRUE`如果應用程式在功能區色彩按鈕上繪製框線色彩。 色軸會顯示目前選取的色彩。 `FALSE`如果應用程式不繪製框線  
   
-##  <a name="a-nameenableotherbuttona--cmfcribboncolorbuttonenableotherbutton"></a><a name="enableotherbutton"></a>CMFCRibbonColorButton::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCRibbonColorButton::EnableOtherButton  
  啟用 [其他]  按鈕。  
   
 ```  
@@ -219,7 +237,7 @@ void EnableOtherButton(
 ### <a name="remarks"></a>備註  
  **其他**按鈕是會顯示色彩的群組下方的按鈕。 當使用者按一下**其他** 按鈕，它會顯示色彩 對話方塊。  
   
-##  <a name="a-namegetautomaticcolora--cmfcribboncolorbuttongetautomaticcolor"></a><a name="getautomaticcolor"></a>CMFCRibbonColorButton::GetAutomaticColor  
+##  <a name="getautomaticcolor"></a>CMFCRibbonColorButton::GetAutomaticColor  
  擷取目前自動按鈕的色彩。  
   
 ```  
@@ -232,7 +250,7 @@ COLORREF GetAutomaticColor() const;
 ### <a name="remarks"></a>備註  
  設定自動按鈕的色彩`colorAutomatic`參數傳遞至`CMFCRibbonColorButton::EnableAutomaticButton`方法。  
   
-##  <a name="a-namegetcolora--cmfcribboncolorbuttongetcolor"></a><a name="getcolor"></a>CMFCRibbonColorButton::GetColor  
+##  <a name="getcolor"></a>CMFCRibbonColorButton::GetColor  
  傳回目前選取的色彩。  
   
 ```  
@@ -242,7 +260,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>傳回值  
  按一下 [] 按鈕選取的色彩。  
   
-##  <a name="a-namegetcolorboxsizea--cmfcribboncolorbuttongetcolorboxsize"></a><a name="getcolorboxsize"></a>CMFCRibbonColorButton::GetColorBoxSize  
+##  <a name="getcolorboxsize"></a>CMFCRibbonColorButton::GetColorBoxSize  
  傳回色軸顯示的色彩項目大小。  
   
 ```  
@@ -252,7 +270,7 @@ CSize GetColorBoxSize() const;
 ### <a name="return-value"></a>傳回值  
  下拉式色彩調色盤的色彩按鈕大小。  
   
-##  <a name="a-namegetcolumnsa--cmfcribboncolorbuttongetcolumns"></a><a name="getcolumns"></a>CMFCRibbonColorButton::GetColumns  
+##  <a name="getcolumns"></a>CMFCRibbonColorButton::GetColumns  
  功能區色彩按鈕組件庫顯示的資料列中取得的項目數。  
   
 ```  
@@ -264,7 +282,7 @@ int GetColumns() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegethighlightedcolora--cmfcribboncolorbuttongethighlightedcolor"></a><a name="gethighlightedcolor"></a>CMFCRibbonColorButton::GetHighlightedColor  
+##  <a name="gethighlightedcolor"></a>CMFCRibbonColorButton::GetHighlightedColor  
  傳回目前所選元素的色彩在快顯的色板。  
   
 ```  
@@ -274,14 +292,14 @@ COLORREF GetHighlightedColor() const;
 ### <a name="return-value"></a>傳回值  
  目前選取的項目在快顯的調色盤色彩。  
   
-##  <a name="a-nameremoveallcolorgroupsa--cmfcribboncolorbuttonremoveallcolorgroups"></a><a name="removeallcolorgroups"></a>CMFCRibbonColorButton::RemoveAllColorGroups  
+##  <a name="removeallcolorgroups"></a>CMFCRibbonColorButton::RemoveAllColorGroups  
  從標準色彩區域移除所有色彩群組。  
   
 ```  
 void RemoveAllColorGroups();
 ```  
   
-##  <a name="a-namesetcolora--cmfcribboncolorbuttonsetcolor"></a><a name="setcolor"></a>CMFCRibbonColorButton::SetColor  
+##  <a name="setcolor"></a>CMFCRibbonColorButton::SetColor  
  從標準色彩區域選取色彩。  
   
 ```  
@@ -292,7 +310,7 @@ void SetColor(COLORREF color);
  [in] `color`  
  若要設定的色彩。  
   
-##  <a name="a-namesetcolorboxsizea--cmfcribboncolorbuttonsetcolorboxsize"></a><a name="setcolorboxsize"></a>CMFCRibbonColorButton::SetColorBoxSize  
+##  <a name="setcolorboxsize"></a>CMFCRibbonColorButton::SetColorBoxSize  
  設定色軸顯示之所有色彩項目的大小。  
   
 ```  
@@ -303,7 +321,7 @@ void SetColorBoxSize(CSize sizeBox);
  [in] `sizeBox`  
  中的色彩調色盤的色彩按鈕，新的大小。  
   
-##  <a name="a-namesetcolornamea--cmfcribboncolorbuttonsetcolorname"></a><a name="setcolorname"></a>CMFCRibbonColorButton::SetColorName  
+##  <a name="setcolorname"></a>CMFCRibbonColorButton::SetColorName  
  設定指定的色彩的新名稱。  
   
 ```  
@@ -322,7 +340,7 @@ static void __stdcall SetColorName(
 ### <a name="remarks"></a>備註  
  因為它會呼叫`CMFCColorBar::SetColorName`，這個方法會變更在所有指定的色彩名稱`CMFCColorBar`應用程式中的物件。  
   
-##  <a name="a-namesetcolumnsa--cmfcribboncolorbuttonsetcolumns"></a><a name="setcolumns"></a>CMFCRibbonColorButton::SetColumns  
+##  <a name="setcolumns"></a>CMFCRibbonColorButton::SetColumns  
  設定使用者的色彩選擇程序期間呈現給使用者的色彩表中顯示的資料行數目。  
   
 ```  
@@ -335,7 +353,7 @@ void SetColumns(int nColumns);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetdocumentcolorsa--cmfcribboncolorbuttonsetdocumentcolors"></a><a name="setdocumentcolors"></a>CMFCRibbonColorButton::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>CMFCRibbonColorButton::SetDocumentColors  
  指定文件色彩區域顯示的 RGB 值清單。  
   
 ```  
@@ -351,7 +369,7 @@ void SetDocumentColors(
  [in] `lstColors`  
  RGB 值的清單參考。  
   
-##  <a name="a-namesetpalettea--cmfcribboncolorbuttonsetpalette"></a><a name="setpalette"></a>CMFCRibbonColorButton::SetPalette  
+##  <a name="setpalette"></a>CMFCRibbonColorButton::SetPalette  
  指定要顯示在 [色彩] 按鈕會顯示色彩表中的標準色彩。  
   
 ```  
@@ -364,7 +382,7 @@ void SetPalette(CPalette* pPalette);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameupdatecolora--cmfcribboncolorbuttonupdatecolor"></a><a name="updatecolor"></a>CMFCRibbonColorButton::UpdateColor  
+##  <a name="updatecolor"></a>CMFCRibbonColorButton::UpdateColor  
  當使用者選取色彩的色彩表顯示當使用者按一下色彩按鈕，從由架構呼叫。  
   
 ```  

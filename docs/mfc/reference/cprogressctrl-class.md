@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CProgressCtrl
+- AFXCMN/CProgressCtrl
+- AFXCMN/CProgressCtrl::CProgressCtrl
+- AFXCMN/CProgressCtrl::Create
+- AFXCMN/CProgressCtrl::CreateEx
+- AFXCMN/CProgressCtrl::GetBarColor
+- AFXCMN/CProgressCtrl::GetBkColor
+- AFXCMN/CProgressCtrl::GetPos
+- AFXCMN/CProgressCtrl::GetRange
+- AFXCMN/CProgressCtrl::GetState
+- AFXCMN/CProgressCtrl::GetStep
+- AFXCMN/CProgressCtrl::OffsetPos
+- AFXCMN/CProgressCtrl::SetBarColor
+- AFXCMN/CProgressCtrl::SetBkColor
+- AFXCMN/CProgressCtrl::SetMarquee
+- AFXCMN/CProgressCtrl::SetPos
+- AFXCMN/CProgressCtrl::SetRange
+- AFXCMN/CProgressCtrl::SetState
+- AFXCMN/CProgressCtrl::SetStep
+- AFXCMN/CProgressCtrl::StepIt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +118,7 @@ class CProgressCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="a-namecprogressctrla--cprogressctrlcprogressctrl"></a><a name="cprogressctrl"></a>CProgressCtrl::CProgressCtrl  
+##  <a name="cprogressctrl"></a>CProgressCtrl::CProgressCtrl  
  建構 `CProgressCtrl` 物件。  
   
 ```  
@@ -112,7 +131,7 @@ CProgressCtrl();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&1;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cprogressctrlcreate"></a><a name="create"></a>Cprogressctrl:: Create  
+##  <a name="create"></a>Cprogressctrl:: Create  
  建立進度列控制項並將它附加`CProgressCtrl`物件。  
   
 ```  
@@ -149,7 +168,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&2;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_2.cpp)]  
   
-##  <a name="a-namecreateexa--cprogressctrlcreateex"></a><a name="createex"></a>CProgressCtrl::CreateEx  
+##  <a name="createex"></a>CProgressCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CProgressCtrl`物件。  
   
 ```  
@@ -183,7 +202,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，指定 Windows 延伸的樣式序言**WS_EX_**。  
   
-##  <a name="a-namegetbarcolora--cprogressctrlgetbarcolor"></a><a name="getbarcolor"></a>CProgressCtrl::GetBarColor  
+##  <a name="getbarcolor"></a>CProgressCtrl::GetBarColor  
  取得目前的進度列控制項的進度指示器列色彩。  
   
 ```  
@@ -196,7 +215,7 @@ COLORREF GetBarColor() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PBM_GETBARCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760826)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbkcolora--cprogressctrlgetbkcolor"></a><a name="getbkcolor"></a>CProgressCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CProgressCtrl::GetBkColor  
  取得目前的進度列的背景色彩。  
   
 ```  
@@ -209,7 +228,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PBM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760828)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetposa--cprogressctrlgetpos"></a><a name="getpos"></a>CProgressCtrl::GetPos  
+##  <a name="getpos"></a>CProgressCtrl::GetPos  
  擷取目前的進度列的位置。  
   
 ```  
@@ -225,7 +244,7 @@ int GetPos();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&3;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_3.cpp)]  
   
-##  <a name="a-namegetrangea--cprogressctrlgetrange"></a><a name="getrange"></a>CProgressCtrl::GetRange  
+##  <a name="getrange"></a>CProgressCtrl::GetRange  
  取得目前的下限和上限限制或進度列控制項的範圍。  
   
 ```  
@@ -247,7 +266,7 @@ void GetRange(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&4;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]  
   
-##  <a name="a-namegetstatea--cprogressctrlgetstate"></a><a name="getstate"></a>CProgressCtrl::GetState  
+##  <a name="getstate"></a>CProgressCtrl::GetState  
  取得目前的進度列控制項的狀態。  
   
 ```  
@@ -276,7 +295,7 @@ int GetState() const;
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&5;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_6.cpp)]  
   
-##  <a name="a-namegetstepa--cprogressctrlgetstep"></a><a name="getstep"></a>CProgressCtrl::GetStep  
+##  <a name="getstep"></a>CProgressCtrl::GetStep  
  擷取目前的進度列控制項的進度列的步驟遞增。  
   
 ```  
@@ -301,7 +320,7 @@ int GetStep() const;
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&3;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]  
   
-##  <a name="a-nameoffsetposa--cprogressctrloffsetpos"></a><a name="offsetpos"></a>CProgressCtrl::OffsetPos  
+##  <a name="offsetpos"></a>CProgressCtrl::OffsetPos  
  進度列控制項的目前位置前移所指定的增量`nPos`及重繪列，以反映新的位置。  
   
 ```  
@@ -318,7 +337,7 @@ int OffsetPos(int nPos);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&5;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_8.cpp)]  
   
-##  <a name="a-namesetbarcolora--cprogressctrlsetbarcolor"></a><a name="setbarcolor"></a>CProgressCtrl::SetBarColor  
+##  <a name="setbarcolor"></a>CProgressCtrl::SetBarColor  
  設定目前的進度列控制項中的進度指示器列的色彩。  
   
 ```  
@@ -349,7 +368,7 @@ COLORREF SetBarColor(COLORREF clrBar);
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_9.cpp)]  
   
-##  <a name="a-namesetbkcolora--cprogressctrlsetbkcolor"></a><a name="setbkcolor"></a>CProgressCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CProgressCtrl::SetBkColor  
  設定進度列的背景色彩。  
   
 ```  
@@ -366,7 +385,7 @@ COLORREF SetBkColor(COLORREF clrNew);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&6;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_10.cpp)]  
   
-##  <a name="a-namesetmarqueea--cprogressctrlsetmarquee"></a><a name="setmarquee"></a>CProgressCtrl::SetMarquee  
+##  <a name="setmarquee"></a>CProgressCtrl::SetMarquee  
  關閉目前的進度列控制項的開啟或關閉的跑馬燈模式。  
   
 ```  
@@ -400,7 +419,7 @@ BOOL SetMarquee(
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_11.cpp)]  
   
-##  <a name="a-namesetposa--cprogressctrlsetpos"></a><a name="setpos"></a>CProgressCtrl::SetPos  
+##  <a name="setpos"></a>CProgressCtrl::SetPos  
  設定進度列控制項的目前位置所指定`nPos`及重繪列，以反映新的位置。  
   
 ```  
@@ -420,7 +439,7 @@ int SetPos(int nPos);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&7;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_12.cpp)]  
   
-##  <a name="a-namesetrangea--cprogressctrlsetrange"></a><a name="setrange"></a>CProgressCtrl::SetRange  
+##  <a name="setrange"></a>CProgressCtrl::SetRange  
  設定進度列控制項範圍的上限和下限，並重新繪製的列，以反映新的範圍。  
   
 ```  
@@ -447,7 +466,7 @@ void SetRange32(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&8;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]  
   
-##  <a name="a-namesetstatea--cprogressctrlsetstate"></a><a name="setstate"></a>CProgressCtrl::SetState  
+##  <a name="setstate"></a>CProgressCtrl::SetState  
  設定目前進度列控制項的狀態。  
   
 ```  
@@ -476,7 +495,7 @@ int SetState(int iState);
   
  [!code-cpp[NVC_MFC_CProgressCtrl_s&#1;&4;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]  
   
-##  <a name="a-namesetstepa--cprogressctrlsetstep"></a><a name="setstep"></a>CProgressCtrl::SetStep  
+##  <a name="setstep"></a>CProgressCtrl::SetStep  
  指定進度列控制項的步驟遞增量。  
   
 ```  
@@ -498,7 +517,7 @@ int SetStep(int nStep);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CProgressCtrl #&9;](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]  
   
-##  <a name="a-namestepita--cprogressctrlstepit"></a><a name="stepit"></a>CProgressCtrl::StepIt  
+##  <a name="stepit"></a>CProgressCtrl::StepIt  
  進度列控制項的目前位置前移步驟遞增，並且重繪的列，以反映新的位置。  
   
 ```  

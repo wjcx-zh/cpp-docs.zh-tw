@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::CMFCMenuButton
+- AFXMENUBUTTON/CMFCMenuButton::PreTranslateMessage
+- AFXMENUBUTTON/CMFCMenuButton::SizeToContent
+- AFXMENUBUTTON/CMFCMenuButton::m_bOSMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_bRightArrow
+- AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
+- AFXMENUBUTTON/CMFCMenuButton::m_hMenu
+- AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,14 +110,14 @@ class CMFCMenuButton : public CMFCButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmenubutton.h  
   
-##  <a name="a-namecmfcmenubuttona--cmfcmenubuttoncmfcmenubutton"></a><a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
+##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
  建構新[CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)物件。  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="a-namembosmenua--cmfcmenubuttonmbosmenu"></a><a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
+##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
  此布林值的成員變數會指出哪一個快顯功能表，架構會顯示。  
   
 ```  
@@ -118,7 +127,7 @@ BOOL m_bOSMenu;
 ### <a name="remarks"></a>備註  
  如果`m_bOSMenu`是`TRUE`，架構會呼叫繼承`TrackPopupMenu`此物件的方法。 否則，架構會呼叫[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。  
   
-##  <a name="a-namembrightarrowa--cmfcmenubuttonmbrightarrow"></a><a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
+##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
  布林值的成員變數，指出快顯功能表上的位置。  
   
 ```  
@@ -128,7 +137,7 @@ BOOL m_bRightArrow;
 ### <a name="remarks"></a>備註  
  當使用者按下 [功能表] 按鈕時，應用程式會顯示快顯功能表。 架構會顯示快顯功能表 按鈕下方或右邊的按鈕。 此按鈕還有一個小箭號，指出快顯功能表上出現的位置。 如果`m_bRightArrow`是`TRUE`，架構會顯示快顯功能表按鈕的右邊。 否則，它會顯示快顯功能表 按鈕下方。  
   
-##  <a name="a-namembstaypresseda--cmfcmenubuttonmbstaypressed"></a><a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
+##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
  雖然使用者可以從快顯功能表選取項目，按下的布林成員變數，指出是否顯示功能表 按鈕。  
   
 ```  
@@ -140,7 +149,7 @@ BOOL m_bStayPressed;
   
  如果`m_bStayPressed`成員是`TRUE`，當使用者按一下按鈕會變成已按下 [功能表] 按鈕。 使用者關閉快顯功能表上，藉由選取或取消之後，它會維持狀態直到按下。  
   
-##  <a name="a-namemhmenua--cmfcmenubuttonmhmenu"></a><a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
+##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
  要附加的功能表的控制代碼。  
   
 ```  
@@ -150,7 +159,7 @@ HMENU m_hMenu;
 ### <a name="remarks"></a>備註  
  架構會顯示由這個成員變數，當使用者按一下 [功能表] 按鈕的功能表。  
   
-##  <a name="a-namemnmenuresulta--cmfcmenubuttonmnmenuresult"></a><a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
+##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
  整數，表示哪些項目會從快顯功能表上選取使用者。  
   
 ```  
@@ -160,7 +169,7 @@ int m_nMenuResult;
 ### <a name="remarks"></a>備註  
  這個成員變數的值為零，如果使用者取消功能表而不做選擇，或發生錯誤。  
   
-##  <a name="a-namepretranslatemessagea--cmfcmenubuttonpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
  要轉譯的視窗訊息，再分派這些架構呼叫。  
   
 ```  
@@ -176,7 +185,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesizetocontenta--cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
  根據其文字大小和影像大小 按鈕的大小變更。  
   
 ```  

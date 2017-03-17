@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: 
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
 caps.latest.revision: 9
 author: mikeblome
@@ -24,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a> operator==   
+##  <a name="operator_eq_eq"></a> operator==   
  判斷指定的引數是否相等。  
   
 ```  
@@ -50,7 +53,7 @@ bool operator== (
 ### <a name="return-value"></a>傳回值  
  `true`如果 tuple 是相等。否則， `false`。  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a> operator!=   
+##  <a name="operator_neq"></a> operator!=   
  判斷指定的引數是否不相等。  
   
 ```  
@@ -76,7 +79,7 @@ bool operator!= (
 ### <a name="return-value"></a>傳回值  
  `true`如果 tuple 不相等。否則， `false`。  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+   
+##  <a name="operator_add"></a>  operator+   
 
  計算 component-wise 指定的引數的總和。  
   
@@ -121,7 +124,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="return-value"></a>傳回值  
  Component-wise 指定的引數的總和。  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-   
+##  <a name="operator-"></a>  operator-   
 
  計算指定的引數的 component-wise 差異。  
   
@@ -166,7 +169,7 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="return-value"></a>傳回值  
  指定的引數 component-wise 差異。  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*   
+##  <a name="operator_star"></a>  operator*   
 
  計算指定的引數的 component-wise 的乘積。  
   
@@ -203,7 +206,7 @@ _Tuple_type<_Rank>   operator*(
  指定的引數 component-wise 產品。  
   
 
-##  <a name="a-nameoperatordiva--operator"></a><a name="operator_div"></a>  operator/   
+##  <a name="operator_div"></a>  operator/   
  計算指定的引數的 component-wise 的商數。  
   
 ```  
@@ -238,7 +241,7 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="return-value"></a>傳回值  
  指定的引數 component-wise 的商數。  
   
-##  <a name="a-nameoperatormoda--operator"></a><a name="operator_mod"></a>  operator%   
+##  <a name="operator_mod"></a>  operator%   
 
  計算的第一個指定的引數，第二個指定的引數的模數。  
   

@@ -10,8 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAtlFile
-- ATL::CAtlFile
-- ATL.CAtlFile
+- ATLFILE/ATL::CAtlFile
+- ATLFILE/ATL::CAtlFile::CAtlFile
+- ATLFILE/ATL::CAtlFile::Create
+- ATLFILE/ATL::CAtlFile::Flush
+- ATLFILE/ATL::CAtlFile::GetOverlappedResult
+- ATLFILE/ATL::CAtlFile::GetPosition
+- ATLFILE/ATL::CAtlFile::GetSize
+- ATLFILE/ATL::CAtlFile::LockRange
+- ATLFILE/ATL::CAtlFile::Read
+- ATLFILE/ATL::CAtlFile::Seek
+- ATLFILE/ATL::CAtlFile::SetSize
+- ATLFILE/ATL::CAtlFile::UnlockRange
+- ATLFILE/ATL::CAtlFile::Write
+- ATLFILE/ATL::CAtlFile::m_pTM
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +106,7 @@ class CAtlFile : public CHandle
 ## <a name="requirements"></a>需求  
  **標頭︰** atlfile.h  
   
-##  <a name="a-namecatlfilea--catlfilecatlfile"></a><a name="catlfile"></a>CAtlFile::CAtlFile  
+##  <a name="catlfile"></a>CAtlFile::CAtlFile  
  建構函式。  
   
 ```
@@ -117,7 +129,7 @@ explicit CAtlFile(HANDLE hFile) throw();
 ### <a name="remarks"></a>備註  
  複製建構函式的檔案控制代碼擁有權轉移原始`CAtlFile`新建構的物件的物件。  
   
-##  <a name="a-namecreatea--catlfilecreate"></a><a name="create"></a>CAtlFile::Create  
+##  <a name="create"></a>CAtlFile::Create  
  呼叫這個方法來建立或開啟檔案。  
   
 ```
@@ -159,7 +171,7 @@ HRESULT Create(
 ### <a name="remarks"></a>備註  
  呼叫[CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858)來建立或開啟檔案。  
   
-##  <a name="a-nameflusha--catlfileflush"></a><a name="flush"></a>CAtlFile::Flush  
+##  <a name="flush"></a>CAtlFile::Flush  
  呼叫此方法來清除檔案緩衝區，並造成所有緩衝的資料寫入檔案。  
   
 ```
@@ -172,7 +184,7 @@ HRESULT Flush() throw();
 ### <a name="remarks"></a>備註  
  呼叫[FlushFileBuffers](http://msdn.microsoft.com/library/windows/desktop/aa364439)排清緩衝處理的資料檔案。  
   
-##  <a name="a-namegetoverlappedresulta--catlfilegetoverlappedresult"></a><a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
+##  <a name="getoverlappedresult"></a>CAtlFile::GetOverlappedResult  
  呼叫這個方法來取得重疊在檔案上作業的結果。  
   
 ```
@@ -198,7 +210,7 @@ HRESULT GetOverlappedResult(
 ### <a name="remarks"></a>備註  
  呼叫[GetOverlappedResult](http://msdn.microsoft.com/library/windows/desktop/ms683209)取得重疊在檔案上作業的結果。  
   
-##  <a name="a-namegetpositiona--catlfilegetposition"></a><a name="getposition"></a>CAtlFile::GetPosition  
+##  <a name="getposition"></a>CAtlFile::GetPosition  
  呼叫這個方法，取得目前的檔案位置指標。  
   
 ```
@@ -215,7 +227,7 @@ HRESULT GetPosition(ULONGLONG& nPos) const throw();
 ### <a name="remarks"></a>備註  
  呼叫[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)取得目前的檔案位置指標。  
   
-##  <a name="a-namegetsizea--catlfilegetsize"></a><a name="getsize"></a>CAtlFile::GetSize  
+##  <a name="getsize"></a>CAtlFile::GetSize  
  呼叫這個方法，以取得以位元組為單位的檔案大小。  
   
 ```
@@ -232,7 +244,7 @@ HRESULT GetSize(ULONGLONG& nLen) const throw();
 ### <a name="remarks"></a>備註  
  呼叫[GetFileSize](http://msdn.microsoft.com/library/windows/desktop/aa364955)以取得以位元組為單位的檔案大小。  
   
-##  <a name="a-namelockrangea--catlfilelockrange"></a><a name="lockrange"></a>CAtlFile::LockRange  
+##  <a name="lockrange"></a>CAtlFile::LockRange  
  呼叫此方法以鎖定可防止其他處理序存取該檔案中的區域。  
   
 ```
@@ -252,7 +264,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>備註  
  呼叫[鎖定](http://msdn.microsoft.com/library/windows/desktop/aa365202)鎖定檔案中的區域。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 您可以鎖定之檔案中，多個區域，但允許沒有重疊的區域。 當您解除鎖定的區域時，使用[CAtlFile::UnlockRange](#unlockrange)，位元組範圍必須確實對應到先前鎖定的區域。 `LockRange`不會合併相鄰地區。如果兩個鎖定的區域是相鄰的您必須個別解除每個鎖定。  
   
-##  <a name="a-namemptma--catlfilemptm"></a><a name="m_ptm"></a>CAtlFile::m_pTM  
+##  <a name="m_ptm"></a>CAtlFile::m_pTM  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ```
@@ -261,7 +273,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namereada--catlfileread"></a><a name="read"></a>CAtlFile::Read  
+##  <a name="read"></a>CAtlFile::Read  
  呼叫這個方法來讀取資料檔案，檔案指標所指示的位置開始。  
   
 ```
@@ -308,7 +320,7 @@ HRESULT Read(
 ### <a name="remarks"></a>備註  
  前三個表單呼叫[ReadFile](http://msdn.microsoft.com/library/windows/desktop/aa365467)，最後一個[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)從檔案讀取資料。 使用[CAtlFile::Seek](#seek)移動檔案指標。  
   
-##  <a name="a-nameseeka--catlfileseek"></a><a name="seek"></a>CAtlFile::Seek  
+##  <a name="seek"></a>CAtlFile::Seek  
  呼叫這個方法來移動檔案的檔案的指標。  
   
 ```
@@ -330,7 +342,7 @@ HRESULT Seek(
 ### <a name="remarks"></a>備註  
  呼叫[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)移動檔案指標。  
   
-##  <a name="a-namesetsizea--catlfilesetsize"></a><a name="setsize"></a>CAtlFile::SetSize  
+##  <a name="setsize"></a>CAtlFile::SetSize  
  呼叫這個方法，設定檔的大小。  
   
 ```
@@ -347,7 +359,7 @@ HRESULT SetSize(ULONGLONG nNewLen) throw();
 ### <a name="remarks"></a>備註  
  呼叫[SetFilePointer](http://msdn.microsoft.com/library/windows/desktop/aa365541)和[SetEndOfFile](http://msdn.microsoft.com/library/windows/desktop/aa365531)設定檔的大小。 在傳回時，檔案指標位於檔案結尾。  
   
-##  <a name="a-nameunlockrangea--catlfileunlockrange"></a><a name="unlockrange"></a>CAtlFile::UnlockRange  
+##  <a name="unlockrange"></a>CAtlFile::UnlockRange  
  呼叫這個方法來解除鎖定檔案的區域。  
   
 ```
@@ -367,7 +379,7 @@ HRESULT UnlockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 ### <a name="remarks"></a>備註  
  呼叫[UnlockFile](http://msdn.microsoft.com/library/windows/desktop/aa365715)來解除鎖定檔案的區域。  
   
-##  <a name="a-namewritea--catlfilewrite"></a><a name="write"></a>CAtlFile::Write  
+##  <a name="write"></a>CAtlFile::Write  
  呼叫這個方法將資料寫入檔案的檔案指標所指示的位置開始。  
   
 ```

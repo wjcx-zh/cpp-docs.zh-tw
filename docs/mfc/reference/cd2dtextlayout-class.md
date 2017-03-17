@@ -10,7 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DTextLayout
-- afxrendertarget/CD2DTextLayout
+- AFXRENDERTARGET/CD2DTextLayout
+- AFXRENDERTARGET/CD2DTextLayout::CD2DTextLayout
+- AFXRENDERTARGET/CD2DTextLayout::Create
+- AFXRENDERTARGET/CD2DTextLayout::Destroy
+- AFXRENDERTARGET/CD2DTextLayout::Get
+- AFXRENDERTARGET/CD2DTextLayout::GetFontFamilyName
+- AFXRENDERTARGET/CD2DTextLayout::GetLocaleName
+- AFXRENDERTARGET/CD2DTextLayout::IsValid
+- AFXRENDERTARGET/CD2DTextLayout::ReCreate
+- AFXRENDERTARGET/CD2DTextLayout::SetFontFamilyName
+- AFXRENDERTARGET/CD2DTextLayout::SetLocaleName
+- AFXRENDERTARGET/CD2DTextLayout::m_pTextLayout
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,14 +105,14 @@ class CD2DTextLayout : public CD2DResource;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dtextlayouta--cd2dtextlayoutcd2dtextlayout"></a><a name="_dtorcd2dtextlayout"></a>CD2DTextLayout:: ~ CD2DTextLayout  
+##  <a name="_dtorcd2dtextlayout"></a>CD2DTextLayout:: ~ CD2DTextLayout  
  解構函式。 終結 D2D 文字配置物件時呼叫。  
   
 ```  
 virtual ~CD2DTextLayout();
 ```  
   
-##  <a name="a-namecd2dtextlayouta--cd2dtextlayoutcd2dtextlayout"></a><a name="cd2dtextlayout"></a>CD2DTextLayout::CD2DTextLayout  
+##  <a name="cd2dtextlayout"></a>CD2DTextLayout::CD2DTextLayout  
  建構 CD2DTextLayout 物件。  
   
 ```  
@@ -129,7 +140,7 @@ CD2DTextLayout(
  `bAutoDestroy`  
  指出由擁有者 (pParentTarget) 將會終結物件。  
   
-##  <a name="a-namecreatea--cd2dtextlayoutcreate"></a><a name="create"></a>CD2DTextLayout::Create  
+##  <a name="create"></a>CD2DTextLayout::Create  
  建立 CD2DTextLayout。  
   
 ```  
@@ -139,14 +150,14 @@ virtual HRESULT Create(CRenderTarget* */);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-namedestroya--cd2dtextlayoutdestroy"></a><a name="destroy"></a>CD2DTextLayout::Destroy  
+##  <a name="destroy"></a>CD2DTextLayout::Destroy  
  終結 CD2DTextLayout 物件。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namegeta--cd2dtextlayoutget"></a><a name="get"></a>CD2DTextLayout::Get  
+##  <a name="get"></a>CD2DTextLayout::Get  
  傳回 IDWriteTextLayout 介面  
   
 ```  
@@ -156,7 +167,7 @@ IDWriteTextLayout* Get();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 IDWriteTextLayout 介面的指標。  
   
-##  <a name="a-namegetfontfamilynamea--cd2dtextlayoutgetfontfamilyname"></a><a name="getfontfamilyname"></a>CD2DTextLayout::GetFontFamilyName  
+##  <a name="getfontfamilyname"></a>CD2DTextLayout::GetFontFamilyName  
  複製字型家族名稱的指定位置處的文字。  
   
 ```  
@@ -175,7 +186,7 @@ CString GetFontFamilyName(
 ### <a name="return-value"></a>傳回值  
  CString 物件，其中包含目前的字型家族名稱。  
   
-##  <a name="a-namegetlocalenamea--cd2dtextlayoutgetlocalename"></a><a name="getlocalename"></a>CD2DTextLayout::GetLocaleName  
+##  <a name="getlocalename"></a>CD2DTextLayout::GetLocaleName  
  取得位於指定位置的地區設定名稱的文字。  
   
 ```  
@@ -194,7 +205,7 @@ CString GetLocaleName(
 ### <a name="return-value"></a>傳回值  
  CString 物件，其中包含目前地區設定名稱。  
   
-##  <a name="a-nameisvalida--cd2dtextlayoutisvalid"></a><a name="isvalid"></a>CD2DTextLayout::IsValid  
+##  <a name="isvalid"></a>CD2DTextLayout::IsValid  
  檢查資源的有效性  
   
 ```  
@@ -204,14 +215,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>傳回值  
  如果資源無效，則為 TRUE否則為 FALSE。  
   
-##  <a name="a-namemptextlayouta--cd2dtextlayoutmptextlayout"></a><a name="m_ptextlayout"></a>CD2DTextLayout::m_pTextLayout  
+##  <a name="m_ptextlayout"></a>CD2DTextLayout::m_pTextLayout  
  IDWriteTextLayout 指標。  
   
 ```  
 IDWriteTextLayout* m_pTextLayout;  
 ```  
   
-##  <a name="a-nameoperatoridwritetextlayoutstara--cd2dtextlayoutoperator-idwritetextlayout"></a><a name="operator_idwritetextlayout_star"></a>CD2DTextLayout::operator IDWriteTextLayout *  
+##  <a name="operator_idwritetextlayout_star"></a>CD2DTextLayout::operator IDWriteTextLayout *  
  傳回 IDWriteTextLayout 介面  
   
 ```  
@@ -221,7 +232,7 @@ operator IDWriteTextLayout*();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 IDWriteTextLayout 介面的指標。  
   
-##  <a name="a-namerecreatea--cd2dtextlayoutrecreate"></a><a name="recreate"></a>CD2DTextLayout::ReCreate  
+##  <a name="recreate"></a>CD2DTextLayout::ReCreate  
  重新建立 CD2DTextLayout。  
   
 ```  
@@ -231,7 +242,7 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-namesetfontfamilynamea--cd2dtextlayoutsetfontfamilyname"></a><a name="setfontfamilyname"></a>CD2DTextLayout::SetFontFamilyName  
+##  <a name="setfontfamilyname"></a>CD2DTextLayout::SetFontFamilyName  
  設定 null 結束的字型家族名稱中指定的文字範圍的文字  
   
 ```  
@@ -250,7 +261,7 @@ BOOL SetFontFamilyName(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE  
   
-##  <a name="a-namesetlocalenamea--cd2dtextlayoutsetlocalename"></a><a name="setlocalename"></a>CD2DTextLayout::SetLocaleName  
+##  <a name="setlocalename"></a>CD2DTextLayout::SetLocaleName  
  設定指定的文字範圍內文字的地區設定名稱  
   
 ```  

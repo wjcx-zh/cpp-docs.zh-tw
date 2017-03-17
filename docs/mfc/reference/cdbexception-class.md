@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDBException
+- AFXDB/CDBException
+- AFXDB/CDBException::m_nRetCode
+- AFXDB/CDBException::m_strError
+- AFXDB/CDBException::m_strStateNativeOrigin
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
   
-##  <a name="a-namemnretcodea--cdbexceptionmnretcode"></a><a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
  包含型別的 ODBC 錯誤碼**RETCODE** ODBC 應用程式發展介面 (API) 函數所傳回。  
   
 ### <a name="remarks"></a>備註  
@@ -134,13 +138,13 @@ class CDBException : public CException
   
  ODBC 所定義的 SQL 前置碼。 AFX 前置詞的程式碼會定義在 AFXDB。H、 MFC\INCLUDE 中找到。  
   
-##  <a name="a-namemstrerrora--cdbexceptionmstrerror"></a><a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>CDBException::m_strError  
  包含字串，描述造成例外狀況的錯誤。  
   
 ### <a name="remarks"></a>備註  
  字串會描述錯誤以英數字元表示。 如需詳細資訊和範例，請參閱**m_strStateNativeOrigin**。  
   
-##  <a name="a-namemstrstatenativeorigina--cdbexceptionmstrstatenativeorigin"></a><a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
  包含字串，描述造成例外狀況的錯誤。  
   
 ### <a name="remarks"></a>備註  

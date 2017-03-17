@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComUnkArray
-- ATL.CComUnkArray<nMaxSize>
-- ATL::CComUnkArray<nMaxSize>
-- ATL::CComUnkArray
 - CComUnkArray
+- ATLCOM/ATL::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::CComUnkArray
+- ATLCOM/ATL::CComUnkArray::Add
+- ATLCOM/ATL::CComUnkArray::begin
+- ATLCOM/ATL::CComUnkArray::end
+- ATLCOM/ATL::CComUnkArray::GetCookie
+- ATLCOM/ATL::CComUnkArray::GetUnknown
+- ATLCOM/ATL::CComUnkArray::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CComUnkArray
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameadda--ccomunkarrayadd"></a><a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>CComUnkArray::Add  
  呼叫這個方法可以加入**IUnknown**陣列指標。  
   
 ```
@@ -104,7 +108,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>傳回值  
  傳回的 cookie，如果陣列不是大小足以包含新的指標相關聯的新加入的指標或 0。  
   
-##  <a name="a-namebegina--ccomunkarraybegin"></a><a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>CComUnkArray::begin  
  傳回集合的開頭的指標**IUnknown**介面指標。  
   
 ```
@@ -120,7 +124,7 @@ IUnknown**
   
  使用之前**IUnknown**介面，您應該檢查不是**NULL**。  
   
-##  <a name="a-nameccomunkarraya--ccomunkarrayccomunkarray"></a><a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
  建構函式。  
   
 ```
@@ -130,7 +134,7 @@ CComUnkArray();
 ### <a name="remarks"></a>備註  
  設定集合來保有`nMaxSize` **IUnknown**指標，並初始化的指標**NULL**。  
   
-##  <a name="a-nameenda--ccomunkarrayend"></a><a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>CComUnkArray::end  
  將指標傳回至越過最後一個**IUnknown**集合中的指標。  
   
 ```
@@ -146,7 +150,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM&#44;](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="a-namegetcookiea--ccomunkarraygetcookie"></a><a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>CComUnkArray::GetCookie  
  呼叫此方法以取得相關聯的 cookie 指定**IUnknown**指標。  
   
 ```
@@ -163,7 +167,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>備註  
  是否有相同的多個執行個體**IUnknown**指標，此函數會傳回第一個 cookie。  
   
-##  <a name="a-namegetunknowna--ccomunkarraygetunknown"></a><a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
  呼叫此方法來取得**IUnknown**指定 cookie 相關聯的指標。  
   
 ```
@@ -177,7 +181,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>傳回值  
  傳回**IUnknown**指標或為 NULL，如果不找到任何相符的 cookie。  
   
-##  <a name="a-nameremovea--ccomunkarrayremove"></a><a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>CComUnkArray::Remove  
  呼叫此方法以移除**IUnknown**從陣列的指標。  
   
 ```

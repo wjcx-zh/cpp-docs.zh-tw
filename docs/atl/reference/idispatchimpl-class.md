@@ -10,8 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispatchImpl
-- ATL.IDispatchImpl
-- ATL::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl::IDispatchImpl
+- ATLCOM/ATL::IDispatchImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispatchImpl::GetTypeInfo
+- ATLCOM/ATL::IDispatchImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispatchImpl::Invoke
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +120,7 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namegetidsofnamesa--idispatchimplgetidsofnames"></a><a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispatchImpl::GetIDsOfNames  
  將一組名稱對應至一組對應的分派識別項 (Dispatch Identifier)。  
   
 ```
@@ -131,7 +135,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>備註  
  請參閱[IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettypeinfoa--idispatchimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispatchImpl::GetTypeInfo  
  擷取雙重介面的型別資訊。  
   
 ```
@@ -144,7 +148,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>備註  
  請參閱[IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettypeinfocounta--idispatchimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount  
  判斷是否有可用的型別資訊的雙重介面。  
   
 ```
@@ -154,14 +158,14 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>備註  
  See `IDispatch::GetTypeInfoCount` in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-nameidispatchimpla--idispatchimplidispatchimpl"></a><a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
+##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl  
  建構函式。 呼叫`AddRef`管理雙重介面的型別資訊的受保護的成員變數上。 解構函式呼叫**版本**。  
   
 ```
 IDispatchImpl();
 ```  
   
-##  <a name="a-nameinvokea--idispatchimplinvoke"></a><a name="invoke"></a>IDispatchImpl::Invoke  
+##  <a name="invoke"></a>IDispatchImpl::Invoke  
  提供存取權的方法和雙重介面所公開的屬性。  
   
 ```

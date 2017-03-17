@@ -10,6 +10,55 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CListBox
+- AFXWIN/CListBox
+- AFXWIN/CListBox::CListBox
+- AFXWIN/CListBox::AddString
+- AFXWIN/CListBox::CharToItem
+- AFXWIN/CListBox::CompareItem
+- AFXWIN/CListBox::Create
+- AFXWIN/CListBox::DeleteItem
+- AFXWIN/CListBox::DeleteString
+- AFXWIN/CListBox::Dir
+- AFXWIN/CListBox::DrawItem
+- AFXWIN/CListBox::FindString
+- AFXWIN/CListBox::FindStringExact
+- AFXWIN/CListBox::GetAnchorIndex
+- AFXWIN/CListBox::GetCaretIndex
+- AFXWIN/CListBox::GetCount
+- AFXWIN/CListBox::GetCurSel
+- AFXWIN/CListBox::GetHorizontalExtent
+- AFXWIN/CListBox::GetItemData
+- AFXWIN/CListBox::GetItemDataPtr
+- AFXWIN/CListBox::GetItemHeight
+- AFXWIN/CListBox::GetItemRect
+- AFXWIN/CListBox::GetListBoxInfo
+- AFXWIN/CListBox::GetLocale
+- AFXWIN/CListBox::GetSel
+- AFXWIN/CListBox::GetSelCount
+- AFXWIN/CListBox::GetSelItems
+- AFXWIN/CListBox::GetText
+- AFXWIN/CListBox::GetTextLen
+- AFXWIN/CListBox::GetTopIndex
+- AFXWIN/CListBox::InitStorage
+- AFXWIN/CListBox::InsertString
+- AFXWIN/CListBox::ItemFromPoint
+- AFXWIN/CListBox::MeasureItem
+- AFXWIN/CListBox::ResetContent
+- AFXWIN/CListBox::SelectString
+- AFXWIN/CListBox::SelItemRange
+- AFXWIN/CListBox::SetAnchorIndex
+- AFXWIN/CListBox::SetCaretIndex
+- AFXWIN/CListBox::SetColumnWidth
+- AFXWIN/CListBox::SetCurSel
+- AFXWIN/CListBox::SetHorizontalExtent
+- AFXWIN/CListBox::SetItemData
+- AFXWIN/CListBox::SetItemDataPtr
+- AFXWIN/CListBox::SetItemHeight
+- AFXWIN/CListBox::SetLocale
+- AFXWIN/CListBox::SetSel
+- AFXWIN/CListBox::SetTabStops
+- AFXWIN/CListBox::SetTopIndex
+- AFXWIN/CListBox::VKeyToItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -166,7 +215,7 @@ class CListBox : public CWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameaddstringa--clistboxaddstring"></a><a name="addstring"></a>CListBox::AddString  
+##  <a name="addstring"></a>CListBox::AddString  
  將字串加入至清單方塊。  
   
 ```  
@@ -188,7 +237,7 @@ int AddString(LPCTSTR lpszItem);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&3;](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]  
   
-##  <a name="a-namechartoitema--clistboxchartoitem"></a><a name="chartoitem"></a>CListBox::CharToItem  
+##  <a name="chartoitem"></a>CListBox::CharToItem  
  當清單方塊的父視窗會收到由架構呼叫`WM_CHARTOITEM`從清單方塊的訊息。  
   
 ```  
@@ -225,7 +274,7 @@ virtual int CharToItem(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&4;](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]  
   
-##  <a name="a-nameclistboxa--clistboxclistbox"></a><a name="clistbox"></a>CListBox::CListBox  
+##  <a name="clistbox"></a>CListBox::CListBox  
  建構 `CListBox` 物件。  
   
 ```  
@@ -238,7 +287,7 @@ CListBox();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&1;](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
   
-##  <a name="a-namecompareitema--clistboxcompareitem"></a><a name="compareitem"></a>CListBox::CompareItem  
+##  <a name="compareitem"></a>CListBox::CompareItem  
  由框架呼叫以判斷新的項目已排序的主控描繪清單方塊中的相對位置。  
   
 ```  
@@ -266,7 +315,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&5;](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]  
   
-##  <a name="a-namecreatea--clistboxcreate"></a><a name="create"></a>CListBox::Create  
+##  <a name="create"></a>CListBox::Create  
  建立 Windows 清單方塊，並將它附加`CListBox`物件。  
   
 ```  
@@ -319,7 +368,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&2;](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]  
   
-##  <a name="a-namedeleteitema--clistboxdeleteitem"></a><a name="deleteitem"></a>CListBox::DeleteItem  
+##  <a name="deleteitem"></a>CListBox::DeleteItem  
  當使用者從主控描繪刪除項目時，由框架呼叫`CListBox`物件或終結清單方塊。  
   
 ```  
@@ -338,7 +387,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&6;](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]  
   
-##  <a name="a-namedeletestringa--clistboxdeletestring"></a><a name="deletestring"></a>CListBox::DeleteString  
+##  <a name="deletestring"></a>CListBox::DeleteString  
  刪除項目位置`nIndex`從清單方塊。  
   
 ```  
@@ -358,7 +407,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&7;](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
   
-##  <a name="a-namedira--clistboxdir"></a><a name="dir"></a>CListBox::Dir  
+##  <a name="dir"></a>CListBox::Dir  
  將檔名、 磁碟機，或兩者的清單方塊的清單。  
   
 ```  
@@ -391,7 +440,7 @@ int Dir(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&8;](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]  
   
-##  <a name="a-namedrawitema--clistboxdrawitem"></a><a name="drawitem"></a>CListBox::DrawItem  
+##  <a name="drawitem"></a>CListBox::DrawItem  
  當主控描繪清單方塊中變更的視覺外觀的架構所呼叫。  
   
 ```  
@@ -412,7 +461,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&9;](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]  
   
-##  <a name="a-namefindstringa--clistboxfindstring"></a><a name="findstring"></a>CListBox::FindString  
+##  <a name="findstring"></a>CListBox::FindString  
  尋找第一個字串，而不需要變更清單方塊選取項目包含指定的前置詞的清單方塊中。  
   
 ```  
@@ -437,7 +486,7 @@ int FindString(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&10;](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
-##  <a name="a-namefindstringexacta--clistboxfindstringexact"></a><a name="findstringexact"></a>CListBox::FindStringExact  
+##  <a name="findstringexact"></a>CListBox::FindStringExact  
  尋找符合指定之字串的第一個清單方塊字串`lpszFind`。  
   
 ```  
@@ -462,7 +511,7 @@ int FindStringExact(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&11;](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
   
-##  <a name="a-namegetanchorindexa--clistboxgetanchorindex"></a><a name="getanchorindex"></a>CListBox::GetAnchorIndex  
+##  <a name="getanchorindex"></a>CListBox::GetAnchorIndex  
  擷取目前的清單方塊中的錨點項目以零為起始索引。  
   
 ```  
@@ -478,7 +527,7 @@ int GetAnchorIndex() const;
 ### <a name="example"></a>範例  
   請參閱範例[CListBox::SetAnchorIndex](#setanchorindex)。  
   
-##  <a name="a-namegetcaretindexa--clistboxgetcaretindex"></a><a name="getcaretindex"></a>CListBox::GetCaretIndex  
+##  <a name="getcaretindex"></a>CListBox::GetCaretIndex  
  判斷具有焦點矩形多重選擇清單方塊中的項目索引。  
   
 ```  
@@ -494,7 +543,7 @@ int GetCaretIndex() const;
 ### <a name="example"></a>範例  
   請參閱範例[CListBox::SetCaretIndex](#setcaretindex)。  
   
-##  <a name="a-namegetcounta--clistboxgetcount"></a><a name="getcount"></a>CListBox::GetCount  
+##  <a name="getcount"></a>CListBox::GetCount  
  擷取清單方塊中的項目數。  
   
 ```  
@@ -510,7 +559,7 @@ int GetCount() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&12;](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]  
   
-##  <a name="a-namegetcursela--clistboxgetcursel"></a><a name="getcursel"></a>CListBox::GetCurSel  
+##  <a name="getcursel"></a>CListBox::GetCurSel  
  如果有的話，在單一選取清單方塊中會擷取目前選取項目的以零起始的索引。  
   
 ```  
@@ -528,7 +577,7 @@ int GetCurSel() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&13;](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]  
   
-##  <a name="a-namegethorizontalextenta--clistboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
  擷取清單方塊中，它可以水平捲動的像素為單位的寬度。  
   
 ```  
@@ -544,7 +593,7 @@ int GetHorizontalExtent() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&14;](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]  
   
-##  <a name="a-namegetitemdataa--clistboxgetitemdata"></a><a name="getitemdata"></a>CListBox::GetItemData  
+##  <a name="getitemdata"></a>CListBox::GetItemData  
  擷取與指定的清單方塊項目相關聯的應用程式提供 doubleword 值。  
   
 ```  
@@ -564,7 +613,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&15;](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
-##  <a name="a-namegetitemdataptra--clistboxgetitemdataptr"></a><a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
  擷取與指定的清單方塊項目做為指標的應用程式提供 32 位元值 ( **void\***)。  
   
 ```  
@@ -581,7 +630,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&16;](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]  
   
-##  <a name="a-namegetitemheighta--clistboxgetitemheight"></a><a name="getitemheight"></a>CListBox::GetItemHeight  
+##  <a name="getitemheight"></a>CListBox::GetItemHeight  
  決定清單方塊中的項目高度。  
   
 ```  
@@ -598,7 +647,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&17;](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
   
-##  <a name="a-namegetitemrecta--clistboxgetitemrect"></a><a name="getitemrect"></a>CListBox::GetItemRect  
+##  <a name="getitemrect"></a>CListBox::GetItemRect  
  擷取矩形的維度繫結清單方塊項目目前顯示在清單方塊視窗中。  
   
 ```  
@@ -620,7 +669,7 @@ int GetItemRect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&18;](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]  
   
-##  <a name="a-namegetlistboxinfoa--clistboxgetlistboxinfo"></a><a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
+##  <a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
  擷取每個資料行的項目數。  
   
 ```  
@@ -633,7 +682,7 @@ DWORD GetListBoxInfo() const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetlocalea--clistboxgetlocale"></a><a name="getlocale"></a>CListBox::GetLocale  
+##  <a name="getlocale"></a>CListBox::GetLocale  
  擷取清單方塊所使用的地區設定。  
   
 ```  
@@ -649,7 +698,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>範例  
   請參閱範例[CListBox::SetLocale](#setlocale)。  
   
-##  <a name="a-namegetsela--clistboxgetsel"></a><a name="getsel"></a>CListBox::GetSel  
+##  <a name="getsel"></a>CListBox::GetSel  
  擷取項目的選取狀態。  
   
 ```  
@@ -671,7 +720,7 @@ int GetSel(int nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&19;](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]  
   
-##  <a name="a-namegetselcounta--clistboxgetselcount"></a><a name="getselcount"></a>CListBox::GetSelCount  
+##  <a name="getselcount"></a>CListBox::GetSelCount  
  擷取多重選擇清單方塊中選取的項目的總數。  
   
 ```  
@@ -684,7 +733,7 @@ int GetSelCount() const;
 ### <a name="example"></a>範例  
   請參閱範例[CListBox::GetSelItems](#getselitems)。  
   
-##  <a name="a-namegetselitemsa--clistboxgetselitems"></a><a name="getselitems"></a>CListBox::GetSelItems  
+##  <a name="getselitems"></a>CListBox::GetSelItems  
  指定多重選擇清單方塊中的選取項目的項目編號的整數陣列中填入緩衝區。  
   
 ```  
@@ -706,7 +755,7 @@ int GetSelItems(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&20;](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]  
   
-##  <a name="a-namegettexta--clistboxgettext"></a><a name="gettext"></a>CListBox::GetText  
+##  <a name="gettext"></a>CListBox::GetText  
  取得字串，請從清單方塊。  
   
 ```  
@@ -738,7 +787,7 @@ void GetText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&21;](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]  
   
-##  <a name="a-namegettextlena--clistboxgettextlen"></a><a name="gettextlen"></a>CListBox::GetTextLen  
+##  <a name="gettextlen"></a>CListBox::GetTextLen  
  取得字串的長度，在清單方塊項目。  
   
 ```  
@@ -755,7 +804,7 @@ int GetTextLen(int nIndex) const;
 ### <a name="example"></a>範例  
   請參閱範例[CListBox::GetText](#gettext)。  
   
-##  <a name="a-namegettopindexa--clistboxgettopindex"></a><a name="gettopindex"></a>CListBox::GetTopIndex  
+##  <a name="gettopindex"></a>CListBox::GetTopIndex  
  擷取清單方塊中第一個可見項目的以零為起始的索引。  
   
 ```  
@@ -771,7 +820,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&22;](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]  
   
-##  <a name="a-nameinitstoragea--clistboxinitstorage"></a><a name="initstorage"></a>CListBox::InitStorage  
+##  <a name="initstorage"></a>CListBox::InitStorage  
  配置記憶體來儲存清單方塊項目。  
   
 ```  
@@ -800,7 +849,7 @@ int InitStorage(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&23;](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
   
-##  <a name="a-nameinsertstringa--clistboxinsertstring"></a><a name="insertstring"></a>CListBox::InsertString  
+##  <a name="insertstring"></a>CListBox::InsertString  
  將字串插入至清單方塊。  
   
 ```  
@@ -825,7 +874,7 @@ int InsertString(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&24;](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
-##  <a name="a-nameitemfrompointa--clistboxitemfrompoint"></a><a name="itemfrompoint"></a>CListBox::ItemFromPoint  
+##  <a name="itemfrompoint"></a>CListBox::ItemFromPoint  
  決定最接近指定點的清單方塊項目`pt`。  
   
 ```  
@@ -850,7 +899,7 @@ UINT ItemFromPoint(
 ### <a name="example"></a>範例  
   請參閱範例[CListBox::SetAnchorIndex](#setanchorindex)。  
   
-##  <a name="a-namemeasureitema--clistboxmeasureitem"></a><a name="measureitem"></a>CListBox::MeasureItem  
+##  <a name="measureitem"></a>CListBox::MeasureItem  
  建立具有主控描繪樣式的清單方塊時，由架構呼叫。  
   
 ```  
@@ -871,7 +920,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&25;](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]  
   
-##  <a name="a-nameresetcontenta--clistboxresetcontent"></a><a name="resetcontent"></a>CListBox::ResetContent  
+##  <a name="resetcontent"></a>CListBox::ResetContent  
  從清單方塊中移除所有項目。  
   
 ```  
@@ -881,7 +930,7 @@ void ResetContent();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&26;](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]  
   
-##  <a name="a-nameselectstringa--clistboxselectstring"></a><a name="selectstring"></a>CListBox::SelectString  
+##  <a name="selectstring"></a>CListBox::SelectString  
  搜尋符合指定的字串中，清單方塊項目和如果找到相符的項目，它會選取項目。  
   
 ```  
@@ -912,7 +961,7 @@ int SelectString(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&27;](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]  
   
-##  <a name="a-nameselitemrangea--clistboxselitemrange"></a><a name="selitemrange"></a>CListBox::SelItemRange  
+##  <a name="selitemrange"></a>CListBox::SelItemRange  
  多重選擇清單方塊中選取多個連續的項目。  
   
 ```  
@@ -941,7 +990,7 @@ int SelItemRange(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&28;](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
   
-##  <a name="a-namesetanchorindexa--clistboxsetanchorindex"></a><a name="setanchorindex"></a>CListBox::SetAnchorIndex  
+##  <a name="setanchorindex"></a>CListBox::SetAnchorIndex  
  設定在多重選擇清單方塊中，開始的延伸選取範圍的錨點。  
   
 ```  
@@ -958,7 +1007,7 @@ void SetAnchorIndex(int nIndex);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&29;](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]  
   
-##  <a name="a-namesetcaretindexa--clistboxsetcaretindex"></a><a name="setcaretindex"></a>CListBox::SetCaretIndex  
+##  <a name="setcaretindex"></a>CListBox::SetCaretIndex  
  多重選擇清單方塊中指定索引處的項目設定焦點矩形。  
   
 ```  
@@ -983,7 +1032,7 @@ int SetCaretIndex(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&30;](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]  
   
-##  <a name="a-namesetcolumnwidtha--clistboxsetcolumnwidth"></a><a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
  多重資料行的清單方塊中，像素為單位的所有資料行設定寬度 (以建立[LBS_MULTICOLUMN](../../mfc/reference/list-box-styles.md)樣式)。  
   
 ```  
@@ -997,7 +1046,7 @@ void SetColumnWidth(int cxWidth);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&31;](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]  
   
-##  <a name="a-namesetcursela--clistboxsetcursel"></a><a name="setcursel"></a>CListBox::SetCurSel  
+##  <a name="setcursel"></a>CListBox::SetCurSel  
  選取字串，並捲動到檢視，如有必要。  
   
 ```  
@@ -1021,7 +1070,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&32;](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]  
   
-##  <a name="a-namesethorizontalextenta--clistboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent  
  設定寬度，單位為像素的清單方塊可以水平捲動。  
   
 ```  
@@ -1042,7 +1091,7 @@ void SetHorizontalExtent(int cxExtent);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&33;](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]  
   
-##  <a name="a-namesetitemdataa--clistboxsetitemdata"></a><a name="setitemdata"></a>CListBox::SetItemData  
+##  <a name="setitemdata"></a>CListBox::SetItemData  
  設定清單方塊中指定的項目相關聯的 32 位元值。  
   
 ```  
@@ -1064,7 +1113,7 @@ int SetItemData(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&34;](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
-##  <a name="a-namesetitemdataptra--clistboxsetitemdataptr"></a><a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
  設定為指定的指標的清單方塊中指定的項目相關聯的 32 位元值 ( **void\***)。  
   
 ```  
@@ -1089,7 +1138,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&35;](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]  
   
-##  <a name="a-namesetitemheighta--clistboxsetitemheight"></a><a name="setitemheight"></a>CListBox::SetItemHeight  
+##  <a name="setitemheight"></a>CListBox::SetItemHeight  
  清單方塊中設定項目的高度。  
   
 ```  
@@ -1114,7 +1163,7 @@ int SetItemHeight(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&36;](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
   
-##  <a name="a-namesetlocalea--clistboxsetlocale"></a><a name="setlocale"></a>CListBox::SetLocale  
+##  <a name="setlocale"></a>CListBox::SetLocale  
  設定此清單方塊的地區設定識別碼。  
   
 ```  
@@ -1134,7 +1183,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&37;](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]  
   
-##  <a name="a-namesetsela--clistboxsetsel"></a><a name="setsel"></a>CListBox::SetSel  
+##  <a name="setsel"></a>CListBox::SetSel  
  多重選擇清單方塊中選取字串。  
   
 ```  
@@ -1161,7 +1210,7 @@ int SetSel(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&38;](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]  
   
-##  <a name="a-namesettabstopsa--clistboxsettabstops"></a><a name="settabstops"></a>CListBox::SetTabStops  
+##  <a name="settabstops"></a>CListBox::SetTabStops  
  設定定位停駐點位置的清單方塊中。  
   
 ```  
@@ -1197,7 +1246,7 @@ BOOL SetTabStops(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&39;](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]  
   
-##  <a name="a-namesettopindexa--clistboxsettopindex"></a><a name="settopindex"></a>CListBox::SetTopIndex  
+##  <a name="settopindex"></a>CListBox::SetTopIndex  
  請確定特定的清單方塊項目會出現。  
   
 ```  
@@ -1217,7 +1266,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CListBox #&40;](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
   
-##  <a name="a-namevkeytoitema--clistboxvkeytoitem"></a><a name="vkeytoitem"></a>CListBox::VKeyToItem  
+##  <a name="vkeytoitem"></a>CListBox::VKeyToItem  
  當清單方塊的父視窗會收到由架構呼叫`WM_VKEYTOITEM`從清單方塊的訊息。  
   
 ```  

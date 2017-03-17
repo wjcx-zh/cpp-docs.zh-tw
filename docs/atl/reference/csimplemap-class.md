@@ -9,9 +9,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CSimpleMap
-- ATL.CSimpleMap
 - CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap::_ArrayElementType
+- ATLSIMPCOLL/ATL::CSimpleMap::_ArrayKeyType
+- ATLSIMPCOLL/ATL::CSimpleMap::CSimpleMap
+- ATLSIMPCOLL/ATL::CSimpleMap::Add
+- ATLSIMPCOLL/ATL::CSimpleMap::FindKey
+- ATLSIMPCOLL/ATL::CSimpleMap::FindVal
+- ATLSIMPCOLL/ATL::CSimpleMap::GetKeyAt
+- ATLSIMPCOLL/ATL::CSimpleMap::GetSize
+- ATLSIMPCOLL/ATL::CSimpleMap::GetValueAt
+- ATLSIMPCOLL/ATL::CSimpleMap::Lookup
+- ATLSIMPCOLL/ATL::CSimpleMap::Remove
+- ATLSIMPCOLL/ATL::CSimpleMap::RemoveAll
+- ATLSIMPCOLL/ATL::CSimpleMap::RemoveAt
+- ATLSIMPCOLL/ATL::CSimpleMap::ReverseLookup
+- ATLSIMPCOLL/ATL::CSimpleMap::SetAt
+- ATLSIMPCOLL/ATL::CSimpleMap::SetAtIndex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +125,7 @@ class CSimpleMap
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&91;](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
   
-##  <a name="a-nameadda--csimplemapadd"></a><a name="add"></a>CSimpleMap::Add  
+##  <a name="add"></a>CSimpleMap::Add  
  將索引鍵和相關聯的值加入至對應陣列中。  
   
 ```
@@ -130,21 +145,21 @@ BOOL Add(const TKey& key, const TVal& val);
 ### <a name="remarks"></a>備註  
  每個索引鍵和值組加入對應陣列的記憶體被釋放並重新配置，以確保每個資料一律連續儲存的原因。 也就是說，第二個索引鍵的項目一律直接會遵循在記憶體中的第一個索引鍵的元素，依此類推。  
   
-##  <a name="a-namearrayelementtypea--csimplemaparrayelementtype"></a><a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
+##  <a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
  索引鍵類型的 typedef。  
   
 ```
 typedef TVal _ArrayElementType;
 ```  
   
-##  <a name="a-namearraykeytypea--csimplemaparraykeytype"></a><a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
+##  <a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
  實值型別之 typedef。  
   
 ```
 typedef TKey _ArrayKeyType;
 ```  
   
-##  <a name="a-namecsimplemapa--csimplemapcsimplemap"></a><a name="csimplemap"></a>CSimpleMap::CSimpleMap  
+##  <a name="csimplemap"></a>CSimpleMap::CSimpleMap  
  建構函式。  
   
 ```
@@ -154,7 +169,7 @@ CSimpleMap();
 ### <a name="remarks"></a>備註  
  資料成員初始化。  
   
-##  <a name="a-namedtora--csimplemapcsimplemap"></a><a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
+##  <a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
  解構函式。  
   
 ```
@@ -164,7 +179,7 @@ CSimpleMap();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-namefindkeya--csimplemapfindkey"></a><a name="findkey"></a>CSimpleMap::FindKey  
+##  <a name="findkey"></a>CSimpleMap::FindKey  
  尋找特定的索引鍵。  
   
 ```
@@ -178,7 +193,7 @@ int FindKey(const TKey& key) const;
 ### <a name="return-value"></a>傳回值  
  傳回的索引鍵，如果找到，否則會傳回-1。  
   
-##  <a name="a-namefindvala--csimplemapfindval"></a><a name="findval"></a>CSimpleMap::FindVal  
+##  <a name="findval"></a>CSimpleMap::FindVal  
  尋找特定的值。  
   
 ```
@@ -192,7 +207,7 @@ int FindVal(const TVal& val) const;
 ### <a name="return-value"></a>傳回值  
  傳回值的索引找到它，否則傳回-1。  
   
-##  <a name="a-namegetkeyata--csimplemapgetkeyat"></a><a name="getkeyat"></a>CSimpleMap::GetKeyAt  
+##  <a name="getkeyat"></a>CSimpleMap::GetKeyAt  
  擷取指定索引處的索引鍵。  
   
 ```
@@ -209,7 +224,7 @@ TKey& GetKeyAt(int nIndex) const;
 ### <a name="remarks"></a>備註  
  所傳遞的索引`nIndex`必須是有效的傳回值為有意義。  
   
-##  <a name="a-namegetsizea--csimplemapgetsize"></a><a name="getsize"></a>CSimpleMap::GetSize  
+##  <a name="getsize"></a>CSimpleMap::GetSize  
  傳回對應陣列中的項目數。  
   
 ```
@@ -219,7 +234,7 @@ int GetSize() const;
 ### <a name="return-value"></a>傳回值  
  對應陣列中傳回的項目數 （索引鍵和值是一個項目）。  
   
-##  <a name="a-namegetvalueata--csimplemapgetvalueat"></a><a name="getvalueat"></a>CSimpleMap::GetValueAt  
+##  <a name="getvalueat"></a>CSimpleMap::GetValueAt  
  擷取特定索引處的值。  
   
 ```
@@ -236,7 +251,7 @@ TVal& GetValueAt(int nIndex) const;
 ### <a name="remarks"></a>備註  
  所傳遞的索引`nIndex`必須是有效的傳回值為有意義。  
   
-##  <a name="a-namelookupa--csimplemaplookup"></a><a name="lookup"></a>CSimpleMap::Lookup  
+##  <a name="lookup"></a>CSimpleMap::Lookup  
  傳回指定索引鍵相關聯的值。  
   
 ```
@@ -250,7 +265,7 @@ TVal Lookup(const TKey& key) const;
 ### <a name="return-value"></a>傳回值  
  傳回相關聯的值。 如果沒有相符的索引鍵找不到 NULL 會傳回。  
   
-##  <a name="a-nameremovea--csimplemapremove"></a><a name="remove"></a>CSimpleMap::Remove  
+##  <a name="remove"></a>CSimpleMap::Remove  
  移除索引鍵和值相符。  
   
 ```
@@ -264,7 +279,7 @@ BOOL Remove(const TKey& key);
 ### <a name="return-value"></a>傳回值  
  如果索引鍵和相符的值，已成功移除，則為 FALSE 否則為 true，則傳回。  
   
-##  <a name="a-nameremovealla--csimplemapremoveall"></a><a name="removeall"></a>CSimpleMap::RemoveAll  
+##  <a name="removeall"></a>CSimpleMap::RemoveAll  
  移除所有索引鍵和值。  
   
 ```
@@ -274,7 +289,7 @@ void RemoveAll();
 ### <a name="remarks"></a>備註  
  移除對應陣列物件的所有索引鍵和值。  
   
-##  <a name="a-nameremoveata--csimplemapremoveat"></a><a name="removeat"></a>CSimpleMap::RemoveAt  
+##  <a name="removeat"></a>CSimpleMap::RemoveAt  
  移除機碼和相關聯的值，指定索引處。  
   
 ```
@@ -288,7 +303,7 @@ BOOL RemoveAt(int nIndex);
 ### <a name="return-value"></a>傳回值  
  為 true，則傳回 FALSE 如果成功，如果指定的索引是無效的索引。  
   
-##  <a name="a-namereverselookupa--csimplemapreverselookup"></a><a name="reverselookup"></a>CSimpleMap::ReverseLookup  
+##  <a name="reverselookup"></a>CSimpleMap::ReverseLookup  
  傳回給定值相關聯的金鑰。  
   
 ```
@@ -302,7 +317,7 @@ TKey ReverseLookup(const TVal& val) const;
 ### <a name="return-value"></a>傳回值  
  傳回相關聯的索引鍵。 如果沒有相符的索引鍵找不到 NULL 會傳回。  
   
-##  <a name="a-namesetata--csimplemapsetat"></a><a name="setat"></a>CSimpleMap::SetAt  
+##  <a name="setat"></a>CSimpleMap::SetAt  
  設定指定的索引鍵相關聯的值。  
   
 ```
@@ -319,7 +334,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 ### <a name="return-value"></a>傳回值  
  如果找不到索引鍵和值程式已成功變更，則為 FALSE，傳回 TRUE。  
   
-##  <a name="a-namesetatindexa--csimplemapsetatindex"></a><a name="setatindex"></a>CSimpleMap::SetAtIndex  
+##  <a name="setatindex"></a>CSimpleMap::SetAtIndex  
  設定指定索引處的索引鍵和值。  
   
 ```

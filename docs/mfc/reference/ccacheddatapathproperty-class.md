@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty::CCachedDataPathProperty
+- AFXCTL/CCachedDataPathProperty::m_Cache
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +100,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="requirements"></a>需求  
  **標頭︰** afxctl.h  
   
-##  <a name="a-nameccacheddatapathpropertya--ccacheddatapathpropertyccacheddatapathproperty"></a><a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
+##  <a name="ccacheddatapathproperty"></a>CCachedDataPathProperty::CCachedDataPathProperty  
  建構 `CCachedDataPathProperty` 物件。  
   
 ```  
@@ -119,7 +122,7 @@ CCachedDataPathProperty(
 ### <a name="remarks"></a>備註  
  `COleControl`指向的物件`pControl`由[開啟](../../mfc/reference/cdatapathproperty-class.md#open)，並且擷取衍生的類別。 如果`pControl`是**NULL**，搭配使用的控制項**開啟**應該與設定[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)。 如果`lpszPath`是**NULL**，您可以透過路徑中傳遞**開啟**，或將它與[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)。  
   
-##  <a name="a-namemcachea--ccacheddatapathpropertymcache"></a><a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
+##  <a name="m_cache"></a>CCachedDataPathProperty::m_Cache  
  包含資料快取到記憶體檔案類別的名稱。  
   
 ```  

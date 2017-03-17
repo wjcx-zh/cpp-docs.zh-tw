@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPropertyPage2Impl
+- ATLCTL/ATL::IPropertyPage2Impl
+- ATLCTL/ATL::IPropertyPage2Impl::EditProperty
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +87,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-nameeditpropertya--ipropertypage2impleditproperty"></a><a name="editproperty"></a>IPropertyPage2Impl::EditProperty  
+##  <a name="editproperty"></a>IPropertyPage2Impl::EditProperty  
  指定哪一個屬性控制項來接收焦點時就會啟動 [屬性] 頁面。  
   
 ```

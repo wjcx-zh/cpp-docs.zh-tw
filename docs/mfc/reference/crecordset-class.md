@@ -10,6 +10,69 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecordset
+- AFXDB/CRecordset
+- AFXDB/CRecordset::CRecordset
+- AFXDB/CRecordset::AddNew
+- AFXDB/CRecordset::CanAppend
+- AFXDB/CRecordset::CanBookmark
+- AFXDB/CRecordset::Cancel
+- AFXDB/CRecordset::CancelUpdate
+- AFXDB/CRecordset::CanRestart
+- AFXDB/CRecordset::CanScroll
+- AFXDB/CRecordset::CanTransact
+- AFXDB/CRecordset::CanUpdate
+- AFXDB/CRecordset::CheckRowsetError
+- AFXDB/CRecordset::Close
+- AFXDB/CRecordset::Delete
+- AFXDB/CRecordset::DoBulkFieldExchange
+- AFXDB/CRecordset::DoFieldExchange
+- AFXDB/CRecordset::Edit
+- AFXDB/CRecordset::FlushResultSet
+- AFXDB/CRecordset::GetBookmark
+- AFXDB/CRecordset::GetDefaultConnect
+- AFXDB/CRecordset::GetDefaultSQL
+- AFXDB/CRecordset::GetFieldValue
+- AFXDB/CRecordset::GetODBCFieldCount
+- AFXDB/CRecordset::GetODBCFieldInfo
+- AFXDB/CRecordset::GetRecordCount
+- AFXDB/CRecordset::GetRowsetSize
+- AFXDB/CRecordset::GetRowsFetched
+- AFXDB/CRecordset::GetRowStatus
+- AFXDB/CRecordset::GetSQL
+- AFXDB/CRecordset::GetStatus
+- AFXDB/CRecordset::GetTableName
+- AFXDB/CRecordset::IsBOF
+- AFXDB/CRecordset::IsDeleted
+- AFXDB/CRecordset::IsEOF
+- AFXDB/CRecordset::IsFieldDirty
+- AFXDB/CRecordset::IsFieldNull
+- AFXDB/CRecordset::IsFieldNullable
+- AFXDB/CRecordset::IsOpen
+- AFXDB/CRecordset::Move
+- AFXDB/CRecordset::MoveFirst
+- AFXDB/CRecordset::MoveLast
+- AFXDB/CRecordset::MoveNext
+- AFXDB/CRecordset::MovePrev
+- AFXDB/CRecordset::OnSetOptions
+- AFXDB/CRecordset::OnSetUpdateOptions
+- AFXDB/CRecordset::Open
+- AFXDB/CRecordset::RefreshRowset
+- AFXDB/CRecordset::Requery
+- AFXDB/CRecordset::SetAbsolutePosition
+- AFXDB/CRecordset::SetBookmark
+- AFXDB/CRecordset::SetFieldDirty
+- AFXDB/CRecordset::SetFieldNull
+- AFXDB/CRecordset::SetLockingMode
+- AFXDB/CRecordset::SetParamNull
+- AFXDB/CRecordset::SetRowsetCursorPosition
+- AFXDB/CRecordset::SetRowsetSize
+- AFXDB/CRecordset::Update
+- AFXDB/CRecordset::m_hstmt
+- AFXDB/CRecordset::m_nFields
+- AFXDB/CRecordset::m_nParams
+- AFXDB/CRecordset::m_pDatabase
+- AFXDB/CRecordset::m_strFilter
+- AFXDB/CRecordset::m_strSort
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -162,7 +225,7 @@ class CRecordset : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
   
-##  <a name="a-nameaddnewa--crecordsetaddnew"></a><a name="addnew"></a>CRecordset::AddNew  
+##  <a name="addnew"></a>CRecordset::AddNew  
  準備新的記錄加入至資料表。  
   
 ```  
@@ -192,7 +255,7 @@ virtual void AddNew();
 ### <a name="example"></a>範例  
  請參閱文章[交易︰ 資料錄集 (ODBC) 中執行交易](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
-##  <a name="a-namecanappenda--crecordsetcanappend"></a><a name="canappend"></a>CRecordset::CanAppend  
+##  <a name="canappend"></a>CRecordset::CanAppend  
  決定是否先前開啟的資料錄集可讓您新增新的記錄。  
   
 ```  
@@ -202,7 +265,7 @@ BOOL CanAppend() const;
 ### <a name="return-value"></a>傳回值  
  非零，如果資料錄集允許加入新資料錄。否則為 0。 `CanAppend`如果您開啟為唯讀資料錄集時，就會傳回 0。  
   
-##  <a name="a-namecanbookmarka--crecordsetcanbookmark"></a><a name="canbookmark"></a>CRecordset::CanBookmark  
+##  <a name="canbookmark"></a>CRecordset::CanBookmark  
  決定是否資料錄集可讓您將使用書籤的記錄。  
   
 ```  
@@ -220,7 +283,7 @@ BOOL CanBookmark() const;
   
  如需書籤和資料錄集巡覽的詳細資訊，請參閱文章[資料錄集︰ 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[資料錄集︰ 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。  
   
-##  <a name="a-namecancela--crecordsetcancel"></a><a name="cancel"></a>CRecordset::Cancel  
+##  <a name="cancel"></a>CRecordset::Cancel  
  資料來源取消非同步作業進行中的或從第二個執行緒的處理序的要求。  
   
 ```  
@@ -230,7 +293,7 @@ void Cancel();
 ### <a name="remarks"></a>備註  
  請注意，MFC ODBC 類別不會再使用非同步處理。若要執行的非同步作業，您必須直接呼叫 ODBC API 函式**SQLSetConnectOption**。 如需詳細資訊，請參閱 「 非同步執行函式 」 主題中*ODBC SDK 程式設計人員指南*。  
   
-##  <a name="a-namecancelupdatea--crecordsetcancelupdate"></a><a name="cancelupdate"></a>CRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>CRecordset::CancelUpdate  
  取消任何暫止的更新，因[編輯](#edit)或[AddNew](#addnew)作業之前[更新](#update)呼叫。  
   
 ```  
@@ -246,7 +309,7 @@ void CancelUpdate();
   
  如需更新資料的詳細資訊，請參閱文章[資料錄集︰ 加入、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。  
   
-##  <a name="a-namecanrestarta--crecordsetcanrestart"></a><a name="canrestart"></a>CRecordset::CanRestart  
+##  <a name="canrestart"></a>CRecordset::CanRestart  
  決定資料錄集是否允許重新啟動其查詢 （若要更新其記錄），藉由呼叫**Requery**成員函式。  
   
 ```  
@@ -256,7 +319,7 @@ BOOL CanRestart() const;
 ### <a name="return-value"></a>傳回值  
  非零，如果允許重新查詢;否則為 0。  
   
-##  <a name="a-namecanscrolla--crecordsetcanscroll"></a><a name="canscroll"></a>CRecordset::CanScroll  
+##  <a name="canscroll"></a>CRecordset::CanScroll  
  決定是否允許捲動資料錄集。  
   
 ```  
@@ -269,7 +332,7 @@ BOOL CanScroll() const;
 ### <a name="remarks"></a>備註  
  如需捲動的詳細資訊，請參閱文章[資料錄集︰ 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。  
   
-##  <a name="a-namecantransacta--crecordsetcantransact"></a><a name="cantransact"></a>CRecordset::CanTransact  
+##  <a name="cantransact"></a>CRecordset::CanTransact  
  決定資料錄集是否允許交易。  
   
 ```  
@@ -282,7 +345,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱文章[交易 (ODBC)](../../data/odbc/transaction-odbc.md)。  
   
-##  <a name="a-namecanupdatea--crecordsetcanupdate"></a><a name="canupdate"></a>CRecordset::CanUpdate  
+##  <a name="canupdate"></a>CRecordset::CanUpdate  
  決定是否可以更新資料錄集。  
   
 ```  
@@ -295,7 +358,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>備註  
  資料錄集可能是唯讀屬性，如果基礎資料來源是唯讀，或您指定**CRecordset::readOnly**中`dwOptions`開啟資料錄集時的參數。  
   
-##  <a name="a-namecheckrowseterrora--crecordsetcheckrowseterror"></a><a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
+##  <a name="checkrowseterror"></a>CRecordset::CheckRowsetError  
  呼叫以處理期間擷取的記錄產生的錯誤。  
   
 ```  
@@ -322,7 +385,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
   
  如需詳細資訊**SQLError**，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如需大量資料列擷取的詳細資訊，請參閱文章[資料錄集︰ 擷取記錄在大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="a-nameclosea--crecordsetclose"></a><a name="close"></a>CRecordset::Close  
+##  <a name="close"></a>CRecordset::Close  
  關閉資料錄集。  
   
 ```  
@@ -337,7 +400,7 @@ virtual void Close();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase #&17;](../../mfc/codesnippet/cpp/crecordset-class_1.cpp)]  
   
-##  <a name="a-namecrecordseta--crecordsetcrecordset"></a><a name="crecordset"></a>CRecordset::CRecordset  
+##  <a name="crecordset"></a>CRecordset::CRecordset  
  建構 `CRecordset` 物件。  
   
 ```  
@@ -359,7 +422,7 @@ CRecordset(CDatabase* pDatabase = NULL);
 ### <a name="example"></a>範例  
  如需詳細資訊，請參閱文章[資料錄集︰ 宣告資料表 (ODBC) 為](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)。  
   
-##  <a name="a-namedeletea--crecordsetdelete"></a><a name="delete"></a>CRecordset::Delete  
+##  <a name="delete"></a>CRecordset::Delete  
  刪除現有的記錄。  
   
 ```  
@@ -382,7 +445,7 @@ virtual void Delete();
   
  [!code-cpp[NVC_MFCDatabase #&18;](../../mfc/codesnippet/cpp/crecordset-class_2.cpp)]  
   
-##  <a name="a-namedobulkfieldexchangea--crecordsetdobulkfieldexchange"></a><a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
+##  <a name="dobulkfieldexchange"></a>CRecordset::DoBulkFieldExchange  
  呼叫以交換大量資料列的資料來源的資料錄集。 實作大量資料錄欄位交換 (Bulk RFX)。  
   
 ```  
@@ -407,7 +470,7 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
   
  如需大量資料列擷取的詳細資訊，請參閱文章[資料錄集︰ 擷取記錄在大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 如需相關資訊，請參閱文章[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)。  
   
-##  <a name="a-namedofieldexchangea--crecordsetdofieldexchange"></a><a name="dofieldexchange"></a>CRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>CRecordset::DoFieldExchange  
  呼叫之間交換資料 （在兩個方向） 的資料錄集的欄位資料成員和資料來源上對應的記錄。 實作資料錄欄位交換 (RFX)。  
   
 ```  
@@ -438,7 +501,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
   
  如需進一步的範例和詳細`DoFieldExchange`，請參閱文章[資料錄欄位交換︰ RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)。 如需 RFX 的一般資訊，請參閱文章[資料錄欄位交換](../../data/odbc/record-field-exchange-rfx.md)。  
   
-##  <a name="a-nameedita--crecordsetedit"></a><a name="edit"></a>CRecordset::Edit  
+##  <a name="edit"></a>CRecordset::Edit  
  允許的最新記錄的變更。  
   
 ```  
@@ -466,7 +529,7 @@ virtual void Edit();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase #&20;](../../mfc/codesnippet/cpp/crecordset-class_4.cpp)]  
   
-##  <a name="a-nameflushresultseta--crecordsetflushresultset"></a><a name="flushresultset"></a>CRecordset::FlushResultSet  
+##  <a name="flushresultset"></a>CRecordset::FlushResultSet  
  如果有多個結果集，擷取下一個結果集的預先定義的查詢 （預存程序）。  
   
 ```  
@@ -492,7 +555,7 @@ BOOL FlushResultSet();
   
  [!code-cpp[NVC_MFCDatabase #&22;](../../mfc/codesnippet/cpp/crecordset-class_6.cpp)]  
   
-##  <a name="a-namegetbookmarka--crecordsetgetbookmark"></a><a name="getbookmark"></a>CRecordset::GetBookmark  
+##  <a name="getbookmark"></a>CRecordset::GetBookmark  
  取得目前資料錄的書籤值。  
   
 ```  
@@ -516,7 +579,7 @@ void GetBookmark(CDBVariant& varBookmark);
   
  如需書籤和資料錄集巡覽的詳細資訊，請參閱文章[資料錄集︰ 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[資料錄集︰ 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。  
   
-##  <a name="a-namegetdefaultconnecta--crecordsetgetdefaultconnect"></a><a name="getdefaultconnect"></a>CRecordset::GetDefaultConnect  
+##  <a name="getdefaultconnect"></a>CRecordset::GetDefaultConnect  
  呼叫以取得預設的連接字串。  
   
 ```  
@@ -529,7 +592,7 @@ virtual CString GetDefaultConnect();
 ### <a name="remarks"></a>備註  
  架構會呼叫此成員函式資料錄集所依據的資料來源取得預設的連接字串。 類別精靈為您實作此函式，藉由識別相同的資料來源用於 ClassWizard 來取得資料表和資料行的相關資訊。 您可能會發現它容易依賴此開發您的應用程式時的預設連線。 但是，預設的連線可能不適合您的應用程式的使用者。 如果是這樣，您應該實作此函式，並捨棄 ClassWizard 的版本。 如需連接字串的詳細資訊，請參閱文章[資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)。  
   
-##  <a name="a-namegetdefaultsqla--crecordsetgetdefaultsql"></a><a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>CRecordset::GetDefaultSQL  
  呼叫以取得要執行的預設 SQL 字串。  
   
 ```  
@@ -551,7 +614,7 @@ virtual CString GetDefaultSQL();
 > [!CAUTION]
 >  資料表名稱會是空架構無法識別的資料表名稱，如果提供多個資料表名稱，或如果**呼叫**無法解譯陳述式。 請注意，當使用**呼叫**陳述式中，您必須插入的大括號之間的空白字元和**呼叫**關鍵字，也應該插入之前的大括號前後的空白字元不**選取**關鍵字**選取**陳述式。  
   
-##  <a name="a-namegetfieldvaluea--crecordsetgetfieldvalue"></a><a name="getfieldvalue"></a>CRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>CRecordset::GetFieldValue  
  擷取目前的記錄中的欄位資料。  
   
 ```  
@@ -629,7 +692,7 @@ void GetFieldValue(
   
  如需大量資料列擷取的詳細資訊，請參閱文章[資料錄集︰ 擷取記錄在大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="a-namegetodbcfieldcounta--crecordsetgetodbcfieldcount"></a><a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
+##  <a name="getodbcfieldcount"></a>CRecordset::GetODBCFieldCount  
  擷取資料錄集物件中的欄位的總數。  
   
 ```  
@@ -642,7 +705,7 @@ short GetODBCFieldCount() const;
 ### <a name="remarks"></a>備註  
  如需建立資料錄集的詳細資訊，請參閱文章[資料錄集︰ 建立和關閉資料錄集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。  
   
-##  <a name="a-namegetodbcfieldinfoa--crecordsetgetodbcfieldinfo"></a><a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
+##  <a name="getodbcfieldinfo"></a>CRecordset::GetODBCFieldInfo  
  取得資料錄集欄位的相關資訊。  
   
 ```  
@@ -673,7 +736,7 @@ void GetODBCFieldInfo(
   
  如需建立資料錄集的詳細資訊，請參閱文章[資料錄集︰ 建立和關閉資料錄集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)。  
   
-##  <a name="a-namegetrecordcounta--crecordsetgetrecordcount"></a><a name="getrecordcount"></a>CRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>CRecordset::GetRecordCount  
  判斷資料錄集的大小。  
   
 ```  
@@ -688,7 +751,7 @@ long GetRecordCount() const;
 > [!CAUTION]
 >  記錄計數維持為 「 高水位，「 最高編號的記錄，但當使用者在記錄之間移動。 之後使用者已超越最後一筆記錄，只有已知記錄總數。 基於效能考量，計數時不會更新您呼叫`MoveLast`。 若要自行計算記錄，請呼叫`MoveNext`重複直到`IsEOF`傳回非零值。 新增記錄，以透過**CRecordset:AddNew**和**更新**增加計數; 刪除透過記錄`CRecordset::Delete`減少計數。  
   
-##  <a name="a-namegetrowsetsizea--crecordsetgetrowsetsize"></a><a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
+##  <a name="getrowsetsize"></a>CRecordset::GetRowsetSize  
  取得目前的設定，您想要指定提取時擷取的資料列數目。  
   
 ```  
@@ -705,7 +768,7 @@ DWORD GetRowsetSize() const;
   
  如需大量資料列擷取的詳細資訊，請參閱文章[資料錄集︰ 擷取記錄在大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="a-namegetrowsfetcheda--crecordsetgetrowsfetched"></a><a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
+##  <a name="getrowsfetched"></a>CRecordset::GetRowsFetched  
  決定在提取之後實際擷取記錄數目。  
   
 ```  
@@ -725,7 +788,7 @@ DWORD GetRowsFetched() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase #&24;](../../mfc/codesnippet/cpp/crecordset-class_8.cpp)]  
   
-##  <a name="a-namegetrowstatusa--crecordsetgetrowstatus"></a><a name="getrowstatus"></a>CRecordset::GetRowStatus  
+##  <a name="getrowstatus"></a>CRecordset::GetRowStatus  
  取得目前資料列集中的資料列的狀態。  
   
 ```  
@@ -753,7 +816,7 @@ WORD GetRowStatus(WORD wRow) const;
   
  如需詳細資訊，請參閱 ODBC API 函式**SQLExtendedFetch**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetstatusa--crecordsetgetstatus"></a><a name="getstatus"></a>CRecordset::GetStatus  
+##  <a name="getstatus"></a>CRecordset::GetStatus  
  判斷目前記錄中的資料錄集，和最後一筆記錄是否已看過的索引。  
   
 ```  
@@ -785,7 +848,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
   
 - **m_bRecordCountFinal** Nonzero 如果判斷出資料錄集中的記錄總數。 通常這必須透過資料錄集的開頭開始，然後呼叫`MoveNext`直到`IsEOF`傳回非零值。 這個成員是零，如果記錄計算所傳回的`GetRecordCount`，如果不 –&1;，只有 「 高水位 」 的記錄個數。  
   
-##  <a name="a-namegetsqla--crecordsetgetsql"></a><a name="getsql"></a>CRecordset::GetSQL  
+##  <a name="getsql"></a>CRecordset::GetSQL  
  呼叫此成員函式，以取得用來開啟網頁時，請選取資料錄集的資料錄的 SQL 陳述式。  
   
 ```  
@@ -803,7 +866,7 @@ const CString& GetSQL() const;
 > [!NOTE]
 >  只有在呼叫之後呼叫此成員函式[開啟](#open)。  
   
-##  <a name="a-namegettablenamea--crecordsetgettablename"></a><a name="gettablename"></a>CRecordset::GetTableName  
+##  <a name="gettablename"></a>CRecordset::GetTableName  
  取得資料錄集的查詢為基礎的 SQL 資料表名稱。  
   
 ```  
@@ -819,7 +882,7 @@ const CString& GetTableName() const;
 > [!NOTE]
 >  只有在呼叫之後呼叫此成員函式[開啟](#open)。  
   
-##  <a name="a-nameisbofa--crecordsetisbof"></a><a name="isbof"></a>CRecordset::IsBOF  
+##  <a name="isbof"></a>CRecordset::IsBOF  
  傳回非零，如果第一個資料錄之前已置於資料錄集。 沒有目前資料錄。  
   
 ```  
@@ -839,7 +902,7 @@ BOOL IsBOF() const;
   
  [!code-cpp[NVC_MFCDatabase #&25;](../../mfc/codesnippet/cpp/crecordset-class_9.cpp)]  
   
-##  <a name="a-nameisdeleteda--crecordsetisdeleted"></a><a name="isdeleted"></a>CRecordset::IsDeleted  
+##  <a name="isdeleted"></a>CRecordset::IsDeleted  
  判斷是否已刪除目前的記錄。  
   
 ```  
@@ -859,7 +922,7 @@ BOOL IsDeleted() const;
 > [!NOTE]
 >  如果您已實作大量資料列擷取，您不應該呼叫`IsDeleted`。 請改為呼叫[GetRowStatus](#getrowstatus)成員函式。 如需大量資料列擷取的詳細資訊，請參閱文章[資料錄集︰ 擷取記錄在大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="a-nameiseofa--crecordsetiseof"></a><a name="iseof"></a>CRecordset::IsEOF  
+##  <a name="iseof"></a>CRecordset::IsEOF  
  傳回非零，如果已位置之後的最後一個記錄的資料錄集。 沒有目前資料錄。  
   
 ```  
@@ -877,7 +940,7 @@ BOOL IsEOF() const;
 ### <a name="example"></a>範例  
  請參閱範例[IsBOF](#isbof)。  
   
-##  <a name="a-nameisfielddirtya--crecordsetisfielddirty"></a><a name="isfielddirty"></a>CRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>CRecordset::IsFieldDirty  
  判斷指定的欄位資料成員是否已變更自[編輯](#edit)或[AddNew](#addnew)呼叫。  
   
 ```  
@@ -903,7 +966,7 @@ BOOL IsFieldDirty(void* pv);
   
  如需有關記錄變更旗標的詳細資訊，請參閱文章[資料錄集︰ 如何資料錄集選取資料錄 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)。  
   
-##  <a name="a-nameisfieldnulla--crecordsetisfieldnull"></a><a name="isfieldnull"></a>CRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>CRecordset::IsFieldNull  
  傳回非零值，如果目前的記錄中指定的欄位為 Null （沒有任何值）。  
   
 ```  
@@ -925,7 +988,7 @@ BOOL IsFieldNull(void* pv);
   
  `IsFieldNull`透過實作[DoFieldExchange](#dofieldexchange)。  
   
-##  <a name="a-nameisfieldnullablea--crecordsetisfieldnullable"></a><a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>CRecordset::IsFieldNullable  
  傳回非零，如果目前的記錄中指定的欄位可以設定為 Null （具有任何值）。  
   
 ```  
@@ -958,7 +1021,7 @@ BOOL IsFieldNullable(void* pv);
   
  `IsFieldNullable`透過實作[DoFieldExchange](#dofieldexchange)。  
   
-##  <a name="a-nameisopena--crecordsetisopen"></a><a name="isopen"></a>CRecordset::IsOpen  
+##  <a name="isopen"></a>CRecordset::IsOpen  
  判斷是否已開啟資料錄集。  
   
 ```  
@@ -968,7 +1031,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>傳回值  
  如果為非零資料錄集物件的[開啟](#open)或[Requery](#requery)先前呼叫成員函式和資料錄集尚未關閉，否則為 0。  
   
-##  <a name="a-namemhstmta--crecordsetmhstmt"></a><a name="m_hstmt"></a>CRecordset::m_hstmt  
+##  <a name="m_hstmt"></a>CRecordset::m_hstmt  
  包含 ODBC 陳述式資料結構類型的控制代碼**HSTMT**、 資料錄集相關聯。  
   
 ### <a name="remarks"></a>備註  
@@ -979,7 +1042,7 @@ BOOL IsOpen() const;
   
  通常您不需要存取**HSTMT**直接，但您可能需要直接執行 SQL 陳述式。 `ExecuteSQL`類別成員函式`CDatabase`舉例說明使用**m_hstmt**。  
   
-##  <a name="a-namemnfieldsa--crecordsetmnfields"></a><a name="m_nfields"></a>CRecordset::m_nFields  
+##  <a name="m_nfields"></a>CRecordset::m_nFields  
  包含資料錄集類別; 中的欄位資料成員的數目也就是說，資料來源的資料錄集選取資料行數目。  
   
 ### <a name="remarks"></a>備註  
@@ -997,7 +1060,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>範例  
  請參閱文章[資料錄欄位交換︰ RFX 的使用](../../data/odbc/record-field-exchange-using-rfx.md)。  
   
-##  <a name="a-namemnparamsa--crecordsetmnparams"></a><a name="m_nparams"></a>CRecordset::m_nParams  
+##  <a name="m_nparams"></a>CRecordset::m_nParams  
  包含在資料錄集類別中，參數資料成員的數目也就是使用資料錄集的查詢傳遞的參數數目。  
   
 ### <a name="remarks"></a>備註  
@@ -1011,7 +1074,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>範例  
   請參閱文章[資料錄集︰ 參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)和[資料錄欄位交換︰ RFX 的使用](../../data/odbc/record-field-exchange-using-rfx.md)。  
   
-##  <a name="a-namempdatabasea--crecordsetmpdatabase"></a><a name="m_pdatabase"></a>CRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>CRecordset::m_pDatabase  
  包含一個指向`CDatabase`透過此資料錄集連接到資料來源的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -1019,7 +1082,7 @@ BOOL IsOpen() const;
   
  通常您會直接不必使用指標儲存在**m_pDatabase**。 如果您撰寫自己的延伸模組來`CRecordset`，不過，您可能需要使用該指標。 例如，您可能需要將指標如果您擲回自己`CDBException`s。 或者如果您需要執行一些動作使用的相同，可能需要它`CDatabase`物件，例如執行交易，設定逾時值，或呼叫`ExecuteSQL`類別成員函式`CDatabase`直接執行 SQL 陳述式。  
   
-##  <a name="a-namemstrfiltera--crecordsetmstrfilter"></a><a name="m_strfilter"></a>CRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>CRecordset::m_strFilter  
  但您建構資料錄集物件之後, 才能呼叫其**開啟**成員函式中，使用此資料成員來儲存`CString`包含 SQL**其中**子句。  
   
 ### <a name="remarks"></a>備註  
@@ -1036,7 +1099,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase #&30;](../../mfc/codesnippet/cpp/crecordset-class_12.cpp)]  
   
-##  <a name="a-namemstrsorta--crecordsetmstrsort"></a><a name="m_strsort"></a>CRecordset::m_strSort  
+##  <a name="m_strsort"></a>CRecordset::m_strSort  
  但您建構資料錄集物件之後, 才能呼叫其**開啟**成員函式中，使用此資料成員來儲存`CString`包含 SQL **ORDER BY**子句。  
   
 ### <a name="remarks"></a>備註  
@@ -1053,7 +1116,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase #&31;](../../mfc/codesnippet/cpp/crecordset-class_13.cpp)]  
   
-##  <a name="a-namemovea--crecordsetmove"></a><a name="move"></a>CRecordset::Move  
+##  <a name="move"></a>CRecordset::Move  
  將目前的記錄指標內資料錄集，向前或向後移。  
   
 ```  
@@ -1108,7 +1171,7 @@ virtual void Move(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase #&28;](../../mfc/codesnippet/cpp/crecordset-class_14.cpp)]  
   
-##  <a name="a-namemovefirsta--crecordsetmovefirst"></a><a name="movefirst"></a>CRecordset::MoveFirst  
+##  <a name="movefirst"></a>CRecordset::MoveFirst  
  讓第一筆記錄中的第一個資料列集目前的記錄。  
   
 ```  
@@ -1137,7 +1200,7 @@ void MoveFirst();
 ### <a name="example"></a>範例  
   請參閱範例[IsBOF](#isbof)。  
   
-##  <a name="a-namemovelasta--crecordsetmovelast"></a><a name="movelast"></a>CRecordset::MoveLast  
+##  <a name="movelast"></a>CRecordset::MoveLast  
  讓第一筆記錄中的最後一個完整的資料列集目前的記錄。  
   
 ```  
@@ -1164,7 +1227,7 @@ void MoveLast();
 ### <a name="example"></a>範例  
   請參閱範例[IsBOF](#isbof)。  
   
-##  <a name="a-namemovenexta--crecordsetmovenext"></a><a name="movenext"></a>CRecordset::MoveNext  
+##  <a name="movenext"></a>CRecordset::MoveNext  
  讓第一筆記錄中的下一個資料列集目前的記錄。  
   
 ```  
@@ -1191,7 +1254,7 @@ void MoveNext();
 ### <a name="example"></a>範例  
   請參閱範例[IsBOF](#isbof)。  
   
-##  <a name="a-namemovepreva--crecordsetmoveprev"></a><a name="moveprev"></a>CRecordset::MovePrev  
+##  <a name="moveprev"></a>CRecordset::MovePrev  
  讓第一筆記錄中的前一個資料列集目前的記錄。  
   
 ```  
@@ -1221,7 +1284,7 @@ void MovePrev();
 ### <a name="example"></a>範例  
   請參閱範例[IsBOF](#isbof)。  
   
-##  <a name="a-nameonsetoptionsa--crecordsetonsetoptions"></a><a name="onsetoptions"></a>CRecordset::OnSetOptions  
+##  <a name="onsetoptions"></a>CRecordset::OnSetOptions  
  針對指定的 ODBC 陳述式來呼叫設定選項 （選取項目上使用）。  
   
 ```  
@@ -1239,7 +1302,7 @@ virtual void OnSetOptions(HSTMT hstmt);
   
  如需資料指標的詳細資訊，請參閱文章[ODBC](../../data/odbc/odbc-basics.md)。  
   
-##  <a name="a-nameonsetupdateoptionsa--crecordsetonsetupdateoptions"></a><a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
+##  <a name="onsetupdateoptions"></a>CRecordset::OnSetUpdateOptions  
  呼叫以針對指定的 ODBC 陳述式來設定 （用於更新） 的選項。  
   
 ```  
@@ -1257,7 +1320,7 @@ virtual void OnSetUpdateOptions(HSTMT hstmt);
   
  如需資料指標的詳細資訊，請參閱文章[ODBC](../../data/odbc/odbc-basics.md)。  
   
-##  <a name="a-nameopena--crecordsetopen"></a><a name="open"></a>Crecordset:: Open  
+##  <a name="open"></a>Crecordset:: Open  
  開啟資料錄集擷取資料表或查詢資料錄集表示。  
   
 ```  
@@ -1365,7 +1428,7 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCDatabase #&16;](../../mfc/codesnippet/cpp/crecordset-class_15.cpp)]  
   
-##  <a name="a-namerefreshrowseta--crecordsetrefreshrowset"></a><a name="refreshrowset"></a>CRecordset::RefreshRowset  
+##  <a name="refreshrowset"></a>CRecordset::RefreshRowset  
  更新資料和目前的資料列集中的資料列的狀態。  
   
 ```  
@@ -1396,7 +1459,7 @@ void RefreshRowset(
   
  如需詳細資訊**SQLSetPos**，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如需大量資料列擷取的詳細資訊，請參閱文章[資料錄集︰ 擷取記錄在大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="a-namerequerya--crecordsetrequery"></a><a name="requery"></a>CRecordset::Requery  
+##  <a name="requery"></a>CRecordset::Requery  
  重建 （重新整理） 資料錄集。  
   
 ```  
@@ -1423,7 +1486,7 @@ virtual BOOL Requery();
   
  [!code-cpp[NVC_MFCDatabase #&29;](../../mfc/codesnippet/cpp/crecordset-class_16.cpp)]  
   
-##  <a name="a-namesetabsolutepositiona--crecordsetsetabsoluteposition"></a><a name="setabsoluteposition"></a>CRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>CRecordset::SetAbsolutePosition  
  資料錄集置於對應至指定的記錄數目的記錄。  
   
 ```  
@@ -1449,7 +1512,7 @@ void SetAbsolutePosition(long nRows);
   
  如需有關資料錄集巡覽和書籤的詳細資訊，請參閱文章[資料錄集︰ 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)和[資料錄集︰ 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。  
   
-##  <a name="a-namesetbookmarka--crecordsetsetbookmark"></a><a name="setbookmark"></a>CRecordset::SetBookmark  
+##  <a name="setbookmark"></a>CRecordset::SetBookmark  
  資料錄集置於包含指定的書籤的記錄。  
   
 ```  
@@ -1473,7 +1536,7 @@ void SetBookmark(const CDBVariant& varBookmark);
   
  如需書籤和資料錄集巡覽的詳細資訊，請參閱文章[資料錄集︰ 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)和[資料錄集︰ 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)。  
   
-##  <a name="a-namesetfielddirtya--crecordsetsetfielddirty"></a><a name="setfielddirty"></a>CRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>CRecordset::SetFieldDirty  
  旗標為已變更的資料錄集，或為不變的欄位資料成員。  
   
 ```  
@@ -1510,7 +1573,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
   
  這表示您無法設定所有**param**欄位**NULL**，您可以使用如**outputColumn**欄位。  
   
-##  <a name="a-namesetfieldnulla--crecordsetsetfieldnull"></a><a name="setfieldnull"></a>CRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>CRecordset::SetFieldNull  
  以旗標資料錄集欄位資料的成員為 Null （特別具有任何值） 或非 Null。  
   
 ```  
@@ -1552,7 +1615,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
   
  `SetFieldNull`透過實作[DoFieldExchange](#dofieldexchange)。  
   
-##  <a name="a-namesetlockingmodea--crecordsetsetlockingmode"></a><a name="setlockingmode"></a>CRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>CRecordset::SetLockingMode  
  將鎖定模式設定為 「 開放式 」 鎖定 （預設值） 或 「 封閉式 」 鎖定。 決定如何更新鎖定的記錄。  
   
 ```  
@@ -1570,7 +1633,7 @@ void SetLockingMode(UINT nMode);
 ### <a name="remarks"></a>備註  
  如果您需要指定這兩種記錄鎖定的策略使用資料錄集來進行更新，請呼叫此成員函式。 根據預設，資料錄集的鎖定模式是**開放式**。 您可以變更，以更加小心**封閉式**鎖定策略。 呼叫`SetLockingMode`但在建構並開啟資料錄集物件之後才能呼叫**編輯**。  
   
-##  <a name="a-namesetparamnulla--crecordsetsetparamnull"></a><a name="setparamnull"></a>CRecordset::SetParamNull  
+##  <a name="setparamnull"></a>CRecordset::SetParamNull  
  旗標參數，為 Null （特別具有任何值） 或非 Null。  
   
 ```  
@@ -1591,7 +1654,7 @@ void SetParamNull(
   
  `SetParamNull`通常使用預先定義的查詢 （預存程序）。  
   
-##  <a name="a-namesetrowsetcursorpositiona--crecordsetsetrowsetcursorposition"></a><a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
+##  <a name="setrowsetcursorposition"></a>CRecordset::SetRowsetCursorPosition  
  將游標移至目前資料列集內的資料列。  
   
 ```  
@@ -1620,7 +1683,7 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
   
  如需詳細資訊**SQLSetPos**，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如需大量資料列擷取的詳細資訊，請參閱文章[資料錄集︰ 擷取記錄在大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="a-namesetrowsetsizea--crecordsetsetrowsetsize"></a><a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
+##  <a name="setrowsetsize"></a>CRecordset::SetRowsetSize  
  指定您想要一次擷取中擷取的記錄數目。  
   
 ```  
@@ -1646,7 +1709,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
   
  如需大量資料列擷取的詳細資訊，請參閱文章[資料錄集︰ 擷取記錄在大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="a-nameupdatea--crecordsetupdate"></a><a name="update"></a>CRecordset::Update  
+##  <a name="update"></a>CRecordset::Update  
  完成`AddNew`或**編輯**新增或編輯資料儲存在資料來源上的作業。  
   
 ```  

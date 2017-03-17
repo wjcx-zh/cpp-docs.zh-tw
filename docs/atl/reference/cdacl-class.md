@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDacl
 - CDacl
-- ATL.CDacl
+- ATLSECURITY/ATL::CDacl
+- ATLSECURITY/ATL::CDacl::CDacl
+- ATLSECURITY/ATL::CDacl::AddAllowedAce
+- ATLSECURITY/ATL::CDacl::AddDeniedAce
+- ATLSECURITY/ATL::CDacl::GetAceCount
+- ATLSECURITY/ATL::CDacl::RemoveAce
+- ATLSECURITY/ATL::CDacl::RemoveAllAces
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CDacl : public CAcl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h  
   
-##  <a name="a-nameaddallowedacea--cdacladdallowedace"></a><a name="addallowedace"></a>CDacl::AddAllowedAce  
+##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
  將允許的 ACE （存取控制的項目） 加入至`CDacl`物件。  
   
 ```
@@ -139,7 +144,7 @@ bool AddAllowedAce(
   
  請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可以在中設定各種旗標的描述`AceFlags`參數。  
   
-##  <a name="a-nameadddeniedacea--cdacladddeniedace"></a><a name="adddeniedace"></a>CDacl::AddDeniedAce  
+##  <a name="adddeniedace"></a>CDacl::AddDeniedAce  
  將拒絕的 ACE （存取控制的項目） 加入至`CDacl`物件。  
   
 ```
@@ -183,7 +188,7 @@ bool AddDeniedAce(
   
  請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可以在中設定各種旗標的描述`AceFlags`參數。  
   
-##  <a name="a-namecdacla--cdaclcdacl"></a><a name="cdacl"></a>CDacl::CDacl  
+##  <a name="cdacl"></a>CDacl::CDacl  
  建構函式。  
   
 ```
@@ -198,7 +203,7 @@ CDacl () throw();
 ### <a name="remarks"></a>備註  
  `CDacl`物件，可選擇性地建立使用現有**ACL**結構。 請務必注意，只有 DACL （判別存取控制清單），而且不 SACL （系統存取控制清單），會傳遞做為此參數。 偵錯組建中傳遞 SACL 會判斷提示。 在發行組建傳遞 SACL 會導致 Ace （存取控制的項目） 中的 ACL 會被忽略，而且不會發生錯誤。  
   
-##  <a name="a-namedtora--cdaclcdacl"></a><a name="dtor"></a>CDacl:: ~ CDacl  
+##  <a name="dtor"></a>CDacl:: ~ CDacl  
  解構函式。  
   
 ```
@@ -208,7 +213,7 @@ CDacl () throw();
 ### <a name="remarks"></a>備註  
  解構函式會釋放取得物件，包括所有的 Ace （存取控制的項目） 所使用的任何資源[CDacl::RemoveAllAces](#removeallaces)。  
   
-##  <a name="a-namegetacecounta--cdaclgetacecount"></a><a name="getacecount"></a>CDacl::GetAceCount  
+##  <a name="getacecount"></a>CDacl::GetAceCount  
  在傳回的 Ace （存取控制的項目） 數目`CDacl`物件。  
   
 ```
@@ -218,7 +223,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回的 Ace 中包含數字`CDacl`物件。  
   
-##  <a name="a-nameoperatoreqa--cdacloperator-"></a><a name="operator_eq"></a>CDacl::operator =  
+##  <a name="operator_eq"></a>CDacl::operator =  
  指派運算子。  
   
 ```
@@ -235,7 +240,7 @@ CDacl& operator= (const ACL& rhs) throw(...);
 ### <a name="remarks"></a>備註  
  您應該確定您只將 DACL （判別存取控制清單） 傳遞給此函式。 傳遞 SACL （系統存取控制清單） 這個函式會導致偵錯組建中的判斷提示，但會導致發行組建中的任何錯誤。  
   
-##  <a name="a-nameremoveacea--cdaclremoveace"></a><a name="removeace"></a>CDacl::RemoveAce  
+##  <a name="removeace"></a>CDacl::RemoveAce  
  移除特定的 ACE （存取控制的項目）`CDacl`物件。  
   
 ```
@@ -249,7 +254,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>備註  
  這個方法衍生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
-##  <a name="a-nameremoveallacesa--cdaclremoveallaces"></a><a name="removeallaces"></a>CDacl::RemoveAllAces  
+##  <a name="removeallaces"></a>CDacl::RemoveAllAces  
  移除所有的 Ace （存取控制的項目） 中包含`CDacl`物件。  
   
 ```

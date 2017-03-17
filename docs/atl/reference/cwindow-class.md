@@ -9,9 +9,154 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CWindow
-- ATL::CWindow
 - CWindow
+- ATLWIN/ATL::CWindow
+- ATLWIN/ATL::CWindow::CWindow
+- ATLWIN/ATL::CWindow::ArrangeIconicWindows
+- ATLWIN/ATL::CWindow::Attach
+- ATLWIN/ATL::CWindow::BeginPaint
+- ATLWIN/ATL::CWindow::BringWindowToTop
+- ATLWIN/ATL::CWindow::CenterWindow
+- ATLWIN/ATL::CWindow::ChangeClipboardChain
+- ATLWIN/ATL::CWindow::CheckDlgButton
+- ATLWIN/ATL::CWindow::CheckRadioButton
+- ATLWIN/ATL::CWindow::ChildWindowFromPoint
+- ATLWIN/ATL::CWindow::ChildWindowFromPointEx
+- ATLWIN/ATL::CWindow::ClientToScreen
+- ATLWIN/ATL::CWindow::Create
+- ATLWIN/ATL::CWindow::CreateCaret
+- ATLWIN/ATL::CWindow::CreateGrayCaret
+- ATLWIN/ATL::CWindow::CreateSolidCaret
+- ATLWIN/ATL::CWindow::DeferWindowPos
+- ATLWIN/ATL::CWindow::DestroyWindow
+- ATLWIN/ATL::CWindow::Detach
+- ATLWIN/ATL::CWindow::DlgDirList
+- ATLWIN/ATL::CWindow::DlgDirListComboBox
+- ATLWIN/ATL::CWindow::DlgDirSelect
+- ATLWIN/ATL::CWindow::DlgDirSelectComboBox
+- ATLWIN/ATL::CWindow::DragAcceptFiles
+- ATLWIN/ATL::CWindow::DrawMenuBar
+- ATLWIN/ATL::CWindow::EnableScrollBar
+- ATLWIN/ATL::CWindow::EnableWindow
+- ATLWIN/ATL::CWindow::EndPaint
+- ATLWIN/ATL::CWindow::FlashWindow
+- ATLWIN/ATL::CWindow::GetClientRect
+- ATLWIN/ATL::CWindow::GetDC
+- ATLWIN/ATL::CWindow::GetDCEx
+- ATLWIN/ATL::CWindow::GetDescendantWindow
+- ATLWIN/ATL::CWindow::GetDlgControl
+- ATLWIN/ATL::CWindow::GetDlgCtrlID
+- ATLWIN/ATL::CWindow::GetDlgHost
+- ATLWIN/ATL::CWindow::GetDlgItem
+- ATLWIN/ATL::CWindow::GetDlgItemInt
+- ATLWIN/ATL::CWindow::GetDlgItemText
+- ATLWIN/ATL::CWindow::GetExStyle
+- ATLWIN/ATL::CWindow::GetFont
+- ATLWIN/ATL::CWindow::GetHotKey
+- ATLWIN/ATL::CWindow::GetIcon
+- ATLWIN/ATL::CWindow::GetLastActivePopup
+- ATLWIN/ATL::CWindow::GetMenu
+- ATLWIN/ATL::CWindow::GetNextDlgGroupItem
+- ATLWIN/ATL::CWindow::GetNextDlgTabItem
+- ATLWIN/ATL::CWindow::GetParent
+- ATLWIN/ATL::CWindow::GetScrollInfo
+- ATLWIN/ATL::CWindow::GetScrollPos
+- ATLWIN/ATL::CWindow::GetScrollRange
+- ATLWIN/ATL::CWindow::GetStyle
+- ATLWIN/ATL::CWindow::GetSystemMenu
+- ATLWIN/ATL::CWindow::GetTopLevelParent
+- ATLWIN/ATL::CWindow::GetTopLevelWindow
+- ATLWIN/ATL::CWindow::GetTopWindow
+- ATLWIN/ATL::CWindow::GetUpdateRect
+- ATLWIN/ATL::CWindow::GetUpdateRgn
+- ATLWIN/ATL::CWindow::GetWindow
+- ATLWIN/ATL::CWindow::GetWindowContextHelpId
+- ATLWIN/ATL::CWindow::GetWindowDC
+- ATLWIN/ATL::CWindow::GetWindowLong
+- ATLWIN/ATL::CWindow::GetWindowLongPtr
+- ATLWIN/ATL::CWindow::GetWindowPlacement
+- ATLWIN/ATL::CWindow::GetWindowProcessID
+- ATLWIN/ATL::CWindow::GetWindowRect
+- ATLWIN/ATL::CWindow::GetWindowRgn
+- ATLWIN/ATL::CWindow::GetWindowText
+- ATLWIN/ATL::CWindow::GetWindowTextLength
+- ATLWIN/ATL::CWindow::GetWindowThreadID
+- ATLWIN/ATL::CWindow::GetWindowWord
+- ATLWIN/ATL::CWindow::GotoDlgCtrl
+- ATLWIN/ATL::CWindow::HideCaret
+- ATLWIN/ATL::CWindow::HiliteMenuItem
+- ATLWIN/ATL::CWindow::Invalidate
+- ATLWIN/ATL::CWindow::InvalidateRect
+- ATLWIN/ATL::CWindow::InvalidateRgn
+- ATLWIN/ATL::CWindow::IsChild
+- ATLWIN/ATL::CWindow::IsDialogMessage
+- ATLWIN/ATL::CWindow::IsDlgButtonChecked
+- ATLWIN/ATL::CWindow::IsIconic
+- ATLWIN/ATL::CWindow::IsParentDialog
+- ATLWIN/ATL::CWindow::IsWindow
+- ATLWIN/ATL::CWindow::IsWindowEnabled
+- ATLWIN/ATL::CWindow::IsWindowUnicode
+- ATLWIN/ATL::CWindow::IsWindowVisible
+- ATLWIN/ATL::CWindow::IsZoomed
+- ATLWIN/ATL::CWindow::KillTimer
+- ATLWIN/ATL::CWindow::LockWindowUpdate
+- ATLWIN/ATL::CWindow::MapWindowPoints
+- ATLWIN/ATL::CWindow::MessageBox
+- ATLWIN/ATL::CWindow::ModifyStyle
+- ATLWIN/ATL::CWindow::ModifyStyleEx
+- ATLWIN/ATL::CWindow::MoveWindow
+- ATLWIN/ATL::CWindow::NextDlgCtrl
+- ATLWIN/ATL::CWindow::OpenClipboard
+- ATLWIN/ATL::CWindow::PostMessage
+- ATLWIN/ATL::CWindow::PrevDlgCtrl
+- ATLWIN/ATL::CWindow::Print
+- ATLWIN/ATL::CWindow::PrintClient
+- ATLWIN/ATL::CWindow::RedrawWindow
+- ATLWIN/ATL::CWindow::ReleaseDC
+- ATLWIN/ATL::CWindow::ResizeClient
+- ATLWIN/ATL::CWindow::ScreenToClient
+- ATLWIN/ATL::CWindow::ScrollWindow
+- ATLWIN/ATL::CWindow::ScrollWindowEx
+- ATLWIN/ATL::CWindow::SendDlgItemMessage
+- ATLWIN/ATL::CWindow::SendMessage
+- ATLWIN/ATL::CWindow::SendMessageToDescendants
+- ATLWIN/ATL::CWindow::SendNotifyMessage
+- ATLWIN/ATL::CWindow::SetActiveWindow
+- ATLWIN/ATL::CWindow::SetCapture
+- ATLWIN/ATL::CWindow::SetClipboardViewer
+- ATLWIN/ATL::CWindow::SetDlgCtrlID
+- ATLWIN/ATL::CWindow::SetDlgItemInt
+- ATLWIN/ATL::CWindow::SetDlgItemText
+- ATLWIN/ATL::CWindow::SetFocus
+- ATLWIN/ATL::CWindow::SetFont
+- ATLWIN/ATL::CWindow::SetHotKey
+- ATLWIN/ATL::CWindow::SetIcon
+- ATLWIN/ATL::CWindow::SetMenu
+- ATLWIN/ATL::CWindow::SetParent
+- ATLWIN/ATL::CWindow::SetRedraw
+- ATLWIN/ATL::CWindow::SetScrollInfo
+- ATLWIN/ATL::CWindow::SetScrollPos
+- ATLWIN/ATL::CWindow::SetScrollRange
+- ATLWIN/ATL::CWindow::SetTimer
+- ATLWIN/ATL::CWindow::SetWindowContextHelpId
+- ATLWIN/ATL::CWindow::SetWindowLong
+- ATLWIN/ATL::CWindow::SetWindowLongPtr
+- ATLWIN/ATL::CWindow::SetWindowPlacement
+- ATLWIN/ATL::CWindow::SetWindowPos
+- ATLWIN/ATL::CWindow::SetWindowRgn
+- ATLWIN/ATL::CWindow::SetWindowText
+- ATLWIN/ATL::CWindow::SetWindowWord
+- ATLWIN/ATL::CWindow::ShowCaret
+- ATLWIN/ATL::CWindow::ShowOwnedPopups
+- ATLWIN/ATL::CWindow::ShowScrollBar
+- ATLWIN/ATL::CWindow::ShowWindow
+- ATLWIN/ATL::CWindow::ShowWindowAsync
+- ATLWIN/ATL::CWindow::UpdateWindow
+- ATLWIN/ATL::CWindow::ValidateRect
+- ATLWIN/ATL::CWindow::ValidateRgn
+- ATLWIN/ATL::CWindow::WinHelp
+- ATLWIN/ATL::CWindow::m_hWnd
+- ATLWIN/ATL::CWindow::rcDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -256,7 +401,7 @@ class CWindow
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-namearrangeiconicwindowsa--cwindowarrangeiconicwindows"></a><a name="arrangeiconicwindows"></a>CWindow::ArrangeIconicWindows  
+##  <a name="arrangeiconicwindows"></a>CWindow::ArrangeIconicWindows  
  排列所有的最小化的子視窗。  
   
 ```
@@ -266,7 +411,7 @@ UINT ArrangeIconicWindows() throw();
 ### <a name="remarks"></a>備註  
  請參閱[ArrangeIconicWindows](http://msdn.microsoft.com/library/windows/desktop/ms632671)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameattacha--cwindowattach"></a><a name="attach"></a>CWindow::Attach  
+##  <a name="attach"></a>CWindow::Attach  
  會將由視窗附加`hWndNew`到`CWindow`物件。  
   
 ```
@@ -280,7 +425,7 @@ void Attach(HWND hWndNew) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&1;](../../atl/codesnippet/cpp/cwindow-class_1.cpp)]  
   
-##  <a name="a-namebeginpainta--cwindowbeginpaint"></a><a name="beginpaint"></a>CWindow::BeginPaint  
+##  <a name="beginpaint"></a>CWindow::BeginPaint  
  準備要繪製的視窗。  
   
 ```
@@ -293,7 +438,7 @@ HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&2;](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]  
   
-##  <a name="a-namebringwindowtotopa--cwindowbringwindowtotop"></a><a name="bringwindowtotop"></a>CWindow::BringWindowToTop  
+##  <a name="bringwindowtotop"></a>CWindow::BringWindowToTop  
  將視窗帶到疊置順序的頂端。  
   
 ```
@@ -306,7 +451,7 @@ BOOL BringWindowToTop() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&3;](../../atl/codesnippet/cpp/cwindow-class_3.cpp)]  
   
-##  <a name="a-namecenterwindowa--cwindowcenterwindow"></a><a name="centerwindow"></a>CWindow::CenterWindow  
+##  <a name="centerwindow"></a>CWindow::CenterWindow  
  針對指定的視窗視窗置中對齊。  
   
 ```
@@ -323,7 +468,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&4;](../../atl/codesnippet/cpp/cwindow-class_4.cpp)]  
   
-##  <a name="a-namechangeclipboardchaina--cwindowchangeclipboardchain"></a><a name="changeclipboardchain"></a>CWindow::ChangeClipboardChain  
+##  <a name="changeclipboardchain"></a>CWindow::ChangeClipboardChain  
  從剪貼簿檢視器的鏈結中移除視窗。  
   
 ```
@@ -333,7 +478,7 @@ BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
 ### <a name="remarks"></a>備註  
  請參閱[ChangeClipboardChain](http://msdn.microsoft.com/library/windows/desktop/ms649034)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecheckdlgbuttona--cwindowcheckdlgbutton"></a><a name="checkdlgbutton"></a>CWindow::CheckDlgButton  
+##  <a name="checkdlgbutton"></a>CWindow::CheckDlgButton  
  指定按鈕的核取狀態變更。  
   
 ```
@@ -343,7 +488,7 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 ### <a name="remarks"></a>備註  
  請參閱[CheckDlgButton](http://msdn.microsoft.com/library/windows/desktop/bb761875)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecheckradiobuttona--cwindowcheckradiobutton"></a><a name="checkradiobutton"></a>CWindow::CheckRadioButton  
+##  <a name="checkradiobutton"></a>CWindow::CheckRadioButton  
  檢查指定的選項按鈕。  
   
 ```
@@ -356,7 +501,7 @@ BOOL CheckRadioButton(
 ### <a name="remarks"></a>備註  
  請參閱[CheckRadioButton](http://msdn.microsoft.com/library/windows/desktop/bb761877)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namechildwindowfrompointa--cwindowchildwindowfrompoint"></a><a name="childwindowfrompoint"></a>CWindow::ChildWindowFromPoint  
+##  <a name="childwindowfrompoint"></a>CWindow::ChildWindowFromPoint  
  擷取包含指定的點的子視窗。  
   
 ```
@@ -366,7 +511,7 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[ChildWindowFromPoint](http://msdn.microsoft.com/library/windows/desktop/ms632676)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namechildwindowfrompointexa--cwindowchildwindowfrompointex"></a><a name="childwindowfrompointex"></a>CWindow::ChildWindowFromPointEx  
+##  <a name="childwindowfrompointex"></a>CWindow::ChildWindowFromPointEx  
  擷取特定類型的子視窗，其中包含指定的點。  
   
 ```
@@ -376,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[ChildWindowFromPointEx](http://msdn.microsoft.com/library/windows/desktop/ms632677)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameclienttoscreena--cwindowclienttoscreen"></a><a name="clienttoscreen"></a>CWindow::ClientToScreen  
+##  <a name="clienttoscreen"></a>CWindow::ClientToScreen  
  將工作區座標轉換為螢幕座標。  
   
 ```
@@ -389,7 +534,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
   
  這個方法的第二個版本可讓您轉換的座標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
-##  <a name="a-namecreatea--cwindowcreate"></a><a name="create"></a>CWindow::Create  
+##  <a name="create"></a>CWindow::Create  
  建立視窗。  
   
 ```
@@ -439,7 +584,7 @@ HWND Create(
   
  **請注意**如果會使用 0 做為值`MenuOrID`參數，它必須指定為 0U （預設值） 以避免編譯器錯誤。  
   
-##  <a name="a-namecreatecareta--cwindowcreatecaret"></a><a name="createcaret"></a>CWindow::CreateCaret  
+##  <a name="createcaret"></a>CWindow::CreateCaret  
  建立新的圖形，使系統插入號。  
   
 ```
@@ -449,7 +594,7 @@ BOOL CreateCaret(HBITMAP pBitmap) throw();
 ### <a name="remarks"></a>備註  
  請參閱[CreateCaret](http://msdn.microsoft.com/library/windows/desktop/ms648399)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecreategraycareta--cwindowcreategraycaret"></a><a name="creategraycaret"></a>CWindow::CreateGrayCaret  
+##  <a name="creategraycaret"></a>CWindow::CreateGrayCaret  
  建立系統游標的灰色矩形。  
   
 ```
@@ -461,7 +606,7 @@ BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
   
  傳遞 (HBITMAP) 1 點陣圖控制代碼的 Win32 函式的參數。  
   
-##  <a name="a-namecreatesolidcareta--cwindowcreatesolidcaret"></a><a name="createsolidcaret"></a>CWindow::CreateSolidCaret  
+##  <a name="createsolidcaret"></a>CWindow::CreateSolidCaret  
  建立系統游標的實心矩形。  
   
 ```
@@ -473,7 +618,7 @@ BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
   
  傳遞 (HBITMAP) 0 點陣圖控制代碼的 Win32 函式的參數。  
   
-##  <a name="a-namecwindowa--cwindowcwindow"></a><a name="cwindow"></a>CWindow::CWindow  
+##  <a name="cwindow"></a>CWindow::CWindow  
  建構函式。  
   
 ```
@@ -490,7 +635,7 @@ CWindow(HWND hWnd = NULL) throw();
 > [!NOTE]
 > `CWindow::CWindow`不會建立視窗。 類別[CWindowImpl](../../atl/reference/cwindowimpl-class.md)， [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)，和[CDialogImpl](../../atl/reference/cdialogimpl-class.md) (其中都衍生自`CWindow`) 提供一個方法來建立視窗或對話方塊的方塊，然後指派給`CWindow::m_hWnd`。 您也可以使用[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Win32 函式。  
   
-##  <a name="a-namedeferwindowposa--cwindowdeferwindowpos"></a><a name="deferwindowpos"></a>CWindow::DeferWindowPos  
+##  <a name="deferwindowpos"></a>CWindow::DeferWindowPos  
  更新指定的多個視窗位置結構指定的視窗。  
   
 ```
@@ -507,7 +652,7 @@ HDWP DeferWindowPos(
 ### <a name="remarks"></a>備註  
  請參閱[DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedestroywindowa--cwindowdestroywindow"></a><a name="destroywindow"></a>CWindow::DestroyWindow  
+##  <a name="destroywindow"></a>CWindow::DestroyWindow  
  終結視窗相關聯`CWindow`物件，然後設定[m_hWnd](#m_hwnd)至**NULL**。  
   
 ```
@@ -522,7 +667,7 @@ BOOL DestroyWindow() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&5;](../../atl/codesnippet/cpp/cwindow-class_5.cpp)]  
   
-##  <a name="a-namedetacha--cwindowdetach"></a><a name="detach"></a>CWindow::Detach  
+##  <a name="detach"></a>CWindow::Detach  
  卸離[m_hWnd](#m_hwnd)從`CWindow`物件，然後設定`m_hWnd`至**NULL**。  
   
 ```
@@ -535,7 +680,7 @@ HWND Detach() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&6;](../../atl/codesnippet/cpp/cwindow-class_6.cpp)]  
   
-##  <a name="a-namedlgdirlista--cwindowdlgdirlist"></a><a name="dlgdirlist"></a>CWindow::DlgDirList  
+##  <a name="dlgdirlist"></a>CWindow::DlgDirList  
  清單方塊中填入所有符合指定的路徑或檔案名稱的檔案名稱。  
   
 ```
@@ -549,7 +694,7 @@ int DlgDirList(
 ### <a name="remarks"></a>備註  
  請參閱[DlgDirList](http://msdn.microsoft.com/library/windows/desktop/bb761366)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedlgdirlistcomboboxa--cwindowdlgdirlistcombobox"></a><a name="dlgdirlistcombobox"></a>CWindow::DlgDirListComboBox  
+##  <a name="dlgdirlistcombobox"></a>CWindow::DlgDirListComboBox  
  下拉式方塊中填入所有符合指定的路徑或檔案名稱的檔案名稱。  
   
 ```
@@ -563,7 +708,7 @@ int DlgDirListComboBox(
 ### <a name="remarks"></a>備註  
  請參閱[DlgDirListComboBox](http://msdn.microsoft.com/library/windows/desktop/bb775935)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedlgdirselecta--cwindowdlgdirselect"></a><a name="dlgdirselect"></a>CWindow::DlgDirSelect  
+##  <a name="dlgdirselect"></a>CWindow::DlgDirSelect  
  從清單方塊擷取目前的選取範圍。  
   
 ```
@@ -576,7 +721,7 @@ BOOL DlgDirSelect(
 ### <a name="remarks"></a>備註  
  請參閱[DlgDirSelectEx](http://msdn.microsoft.com/library/windows/desktop/bb761368)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedlgdirselectcomboboxa--cwindowdlgdirselectcombobox"></a><a name="dlgdirselectcombobox"></a>CWindow::DlgDirSelectComboBox  
+##  <a name="dlgdirselectcombobox"></a>CWindow::DlgDirSelectComboBox  
  從下拉式方塊擷取目前的選取範圍。  
   
 ```
@@ -589,7 +734,7 @@ BOOL DlgDirSelectComboBox(
 ### <a name="remarks"></a>備註  
  請參閱[DlgDirSelectComboBoxEx](http://msdn.microsoft.com/library/windows/desktop/bb775937)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedragacceptfilesa--cwindowdragacceptfiles"></a><a name="dragacceptfiles"></a>CWindow::DragAcceptFiles  
+##  <a name="dragacceptfiles"></a>CWindow::DragAcceptFiles  
  暫存器視窗是否會接受拖曳檔案。  
   
 ```
@@ -599,7 +744,7 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
 ### <a name="remarks"></a>備註  
  請參閱[DragAcceptFiles](http://msdn.microsoft.com/library/windows/desktop/bb776406)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedrawmenubara--cwindowdrawmenubar"></a><a name="drawmenubar"></a>CWindow::DrawMenuBar  
+##  <a name="drawmenubar"></a>CWindow::DrawMenuBar  
  視窗的功能表列來重新繪製。  
   
 ```
@@ -609,7 +754,7 @@ BOOL DrawMenuBar() throw();
 ### <a name="remarks"></a>備註  
  請參閱[DrawMenuBar](http://msdn.microsoft.com/library/windows/desktop/ms647633)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameenablescrollbara--cwindowenablescrollbar"></a><a name="enablescrollbar"></a>CWindow::EnableScrollBar  
+##  <a name="enablescrollbar"></a>CWindow::EnableScrollBar  
  啟用或停用捲軸箭號。  
   
 ```
@@ -619,7 +764,7 @@ BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
 ### <a name="remarks"></a>備註  
  請參閱[EnableScrollBar](http://msdn.microsoft.com/library/windows/desktop/bb787579)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameenablewindowa--cwindowenablewindow"></a><a name="enablewindow"></a>CWindow::EnableWindow  
+##  <a name="enablewindow"></a>CWindow::EnableWindow  
  啟用或停用輸入。  
   
 ```
@@ -632,7 +777,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&7;](../../atl/codesnippet/cpp/cwindow-class_7.cpp)]  
   
-##  <a name="a-nameendpainta--cwindowendpaint"></a><a name="endpaint"></a>CWindow::EndPaint  
+##  <a name="endpaint"></a>CWindow::EndPaint  
  標記繪製的結束。  
   
 ```
@@ -645,7 +790,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&2;](../../atl/codesnippet/cpp/cwindow-class_2.cpp)]  
   
-##  <a name="a-nameflashwindowa--cwindowflashwindow"></a><a name="flashwindow"></a>CWindow::FlashWindow  
+##  <a name="flashwindow"></a>CWindow::FlashWindow  
  閃爍視窗一次。  
   
 ```
@@ -655,7 +800,7 @@ BOOL FlashWindow(BOOL bInvert) throw();
 ### <a name="remarks"></a>備註  
  請參閱[FlashWindow](http://msdn.microsoft.com/library/windows/desktop/ms679346)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetclientrecta--cwindowgetclientrect"></a><a name="getclientrect"></a>CWindow::GetClientRect  
+##  <a name="getclientrect"></a>CWindow::GetClientRect  
  擷取用戶端區域的座標。  
   
 ```
@@ -668,7 +813,7 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&8;](../../atl/codesnippet/cpp/cwindow-class_8.cpp)]  
   
-##  <a name="a-namegetdca--cwindowgetdc"></a><a name="getdc"></a>CWindow::GetDC  
+##  <a name="getdc"></a>CWindow::GetDC  
  擷取用戶端區域的裝置內容。  
   
 ```
@@ -681,7 +826,7 @@ HDC GetDC() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&9;](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]  
   
-##  <a name="a-namegetdcexa--cwindowgetdcex"></a><a name="getdcex"></a>CWindow::GetDCEx  
+##  <a name="getdcex"></a>CWindow::GetDCEx  
  擷取用戶端區域的裝置內容，並允許裁剪選項。  
   
 ```
@@ -691,7 +836,7 @@ HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdescendantwindowa--cwindowgetdescendantwindow"></a><a name="getdescendantwindow"></a>CWindow::GetDescendantWindow  
+##  <a name="getdescendantwindow"></a>CWindow::GetDescendantWindow  
  尋找指定的識別項所指定的子系視窗。  
   
 ```
@@ -708,7 +853,7 @@ HWND GetDescendantWindow(int nID) const throw();
 ### <a name="remarks"></a>備註  
  `GetDescendantWindow`搜尋整個樹狀結構的子視窗，不只會直接子系的視窗。  
   
-##  <a name="a-namegetdlgcontrola--cwindowgetdlgcontrol"></a><a name="getdlgcontrol"></a>CWindow::GetDlgControl  
+##  <a name="getdlgcontrol"></a>CWindow::GetDlgControl  
  呼叫此函式可取得的複合控制項的控制項裝載對話方塊裝載 ActiveX 控制項介面的指標。  
   
 ```
@@ -734,7 +879,7 @@ HRESULT GetDlgControl(
 ### <a name="remarks"></a>備註  
  使用這個指標，您可以在介面上呼叫方法。  
   
-##  <a name="a-namegetdlgctrlida--cwindowgetdlgctrlid"></a><a name="getdlgctrlid"></a>CWindow::GetDlgCtrlID  
+##  <a name="getdlgctrlid"></a>CWindow::GetDlgCtrlID  
  擷取 （僅適用於子 windows) 視窗中的識別項。  
   
 ```
@@ -744,7 +889,7 @@ int GetDlgCtrlID() const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetDlgCtrlID](http://msdn.microsoft.com/library/windows/desktop/ms645478)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdlghosta--cwindowgetdlghost"></a><a name="getdlghost"></a>CWindow::GetDlgHost  
+##  <a name="getdlghost"></a>CWindow::GetDlgHost  
  擷取 ATL 控制項裝載容器的介面指標。  
   
 ```
@@ -770,7 +915,7 @@ HRESULT GetDlgHost(
 ### <a name="remarks"></a>備註  
  使用這個指標，您可以在介面上呼叫方法。  
   
-##  <a name="a-namegetdlgitema--cwindowgetdlgitem"></a><a name="getdlgitem"></a>CWindow::GetDlgItem  
+##  <a name="getdlgitem"></a>CWindow::GetDlgItem  
  擷取指定的子視窗。  
   
 ```
@@ -780,7 +925,7 @@ HWND GetDlgItem(int nID) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetDlgItem](http://msdn.microsoft.com/library/windows/desktop/ms645481)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdlgiteminta--cwindowgetdlgitemint"></a><a name="getdlgitemint"></a>CWindow::GetDlgItemInt  
+##  <a name="getdlgitemint"></a>CWindow::GetDlgItemInt  
  將轉譯成整數的控制項的文字。  
   
 ```
@@ -793,7 +938,7 @@ UINT GetDlgItemInt(
 ### <a name="remarks"></a>備註  
  請參閱[GetDlgItemInt](http://msdn.microsoft.com/library/windows/desktop/ms645485)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdlgitemtexta--cwindowgetdlgitemtext"></a><a name="getdlgitemtext"></a>CWindow::GetDlgItemText  
+##  <a name="getdlgitemtext"></a>CWindow::GetDlgItemText  
  擷取控制項的文字。  
   
 ```
@@ -813,7 +958,7 @@ BOOL GetDlgItemText(
 ### <a name="remarks"></a>備註  
  這個方法的第二個版本可讓您複製到控制項的文字`BSTR`。 這一版傳回**TRUE**文字是否順利複製，否則**FALSE**。  
   
-##  <a name="a-namegetexstylea--cwindowgetexstyle"></a><a name="getexstyle"></a>CWindow::GetExStyle  
+##  <a name="getexstyle"></a>CWindow::GetExStyle  
  擷取視窗的延伸的視窗樣式。  
   
 ```
@@ -829,7 +974,7 @@ DWORD GetExStyle() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&10;](../../atl/codesnippet/cpp/cwindow-class_10.cpp)]  
   
-##  <a name="a-namegetfonta--cwindowgetfont"></a><a name="getfont"></a>CWindow::GetFont  
+##  <a name="getfont"></a>CWindow::GetFont  
  藉由傳送擷取視窗的目前字型[WM_GETFONT](http://msdn.microsoft.com/library/windows/desktop/ms632624)至視窗的訊息。  
   
 ```
@@ -839,7 +984,7 @@ HFONT GetFont() const throw();
 ### <a name="return-value"></a>傳回值  
  字型的控制代碼。  
   
-##  <a name="a-namegethotkeya--cwindowgethotkey"></a><a name="gethotkey"></a>CWindow::GetHotKey  
+##  <a name="gethotkey"></a>CWindow::GetHotKey  
  決定熱鍵與視窗相關聯，藉由傳送**WM_GETHOTKEY**訊息。  
   
 ```
@@ -849,7 +994,7 @@ DWORD GetHotKey() const throw();
 ### <a name="return-value"></a>傳回值  
  虛擬按鍵碼和修飾詞的熱鍵與視窗相關聯。 如需可能的修飾詞的清單，請參閱[WM_GETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646278)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.。  
   
-##  <a name="a-namegeticona--cwindowgeticon"></a><a name="geticon"></a>CWindow::GetIcon  
+##  <a name="geticon"></a>CWindow::GetIcon  
  擷取視窗的大型或小型圖示的控制代碼。  
   
 ```
@@ -866,7 +1011,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 ### <a name="remarks"></a>備註  
  `GetIcon`傳送[WM_GETICON](http://msdn.microsoft.com/library/windows/desktop/ms632625)至視窗的訊息。  
   
-##  <a name="a-namegetlastactivepopupa--cwindowgetlastactivepopup"></a><a name="getlastactivepopup"></a>CWindow::GetLastActivePopup  
+##  <a name="getlastactivepopup"></a>CWindow::GetLastActivePopup  
  擷取最近使用的快顯視窗。  
   
 ```
@@ -876,7 +1021,7 @@ HWND GetLastActivePopup() const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetLastActivePopup](http://msdn.microsoft.com/library/windows/desktop/ms633507)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetmenua--cwindowgetmenu"></a><a name="getmenu"></a>CWindow::GetMenu  
+##  <a name="getmenu"></a>CWindow::GetMenu  
  擷取視窗的功能表。  
   
 ```
@@ -886,7 +1031,7 @@ HMENU GetMenu() const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetMenu](http://msdn.microsoft.com/library/windows/desktop/ms647640)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetnextdlggroupitema--cwindowgetnextdlggroupitem"></a><a name="getnextdlggroupitem"></a>CWindow::GetNextDlgGroupItem  
+##  <a name="getnextdlggroupitem"></a>CWindow::GetNextDlgGroupItem  
  擷取群組內的控制項的上一個或下一個控制項。  
   
 ```
@@ -896,7 +1041,7 @@ HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetNextDlgGroupItem](http://msdn.microsoft.com/library/windows/desktop/ms645492)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetnextdlgtabitema--cwindowgetnextdlgtabitem"></a><a name="getnextdlgtabitem"></a>CWindow::GetNextDlgTabItem  
+##  <a name="getnextdlgtabitem"></a>CWindow::GetNextDlgTabItem  
  擷取上一個或下一個控制項有**WS_TABSTOP**樣式。  
   
 ```
@@ -906,7 +1051,7 @@ HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetNextDlgTabItem](http://msdn.microsoft.com/library/windows/desktop/ms645495)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetparenta--cwindowgetparent"></a><a name="getparent"></a>CWindow::GetParent  
+##  <a name="getparent"></a>CWindow::GetParent  
  擷取直屬父視窗。  
   
 ```
@@ -919,7 +1064,7 @@ HWND GetParent() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&11;](../../atl/codesnippet/cpp/cwindow-class_11.cpp)]  
   
-##  <a name="a-namegetscrollinfoa--cwindowgetscrollinfo"></a><a name="getscrollinfo"></a>CWindow::GetScrollInfo  
+##  <a name="getscrollinfo"></a>CWindow::GetScrollInfo  
  擷取捲軸的參數。  
   
 ```
@@ -929,7 +1074,7 @@ BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetScrollInfo](http://msdn.microsoft.com/library/windows/desktop/bb787583)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetscrollposa--cwindowgetscrollpos"></a><a name="getscrollpos"></a>CWindow::GetScrollPos  
+##  <a name="getscrollpos"></a>CWindow::GetScrollPos  
  擷取的捲動方塊的位置。  
   
 ```
@@ -939,7 +1084,7 @@ int GetScrollPos(int nBar) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787585)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetscrollrangea--cwindowgetscrollrange"></a><a name="getscrollrange"></a>CWindow::GetScrollRange  
+##  <a name="getscrollrange"></a>CWindow::GetScrollRange  
  擷取捲軸列範圍。  
   
 ```
@@ -952,7 +1097,7 @@ BOOL GetScrollRange(
 ### <a name="remarks"></a>備註  
  請參閱[GetScrollRange](http://msdn.microsoft.com/library/windows/desktop/bb787587)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetstylea--cwindowgetstyle"></a><a name="getstyle"></a>CWindow::GetStyle  
+##  <a name="getstyle"></a>CWindow::GetStyle  
  擷取視窗的視窗樣式。  
   
 ```
@@ -968,7 +1113,7 @@ DWORD GetStyle() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&12;](../../atl/codesnippet/cpp/cwindow-class_12.cpp)]  
   
-##  <a name="a-namegetsystemmenua--cwindowgetsystemmenu"></a><a name="getsystemmenu"></a>CWindow::GetSystemMenu  
+##  <a name="getsystemmenu"></a>CWindow::GetSystemMenu  
  建立一份要修改的 [系統] 功能表。  
   
 ```
@@ -978,7 +1123,7 @@ HMENU GetSystemMenu(BOOL bRevert) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetSystemMenu](http://msdn.microsoft.com/library/windows/desktop/ms647985)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettoplevelparenta--cwindowgettoplevelparent"></a><a name="gettoplevelparent"></a>CWindow::GetTopLevelParent  
+##  <a name="gettoplevelparent"></a>CWindow::GetTopLevelParent  
  擷取視窗的最上層的父視窗。  
   
 ```
@@ -988,7 +1133,7 @@ HWND GetTopLevelParent() const throw();
 ### <a name="return-value"></a>傳回值  
  最上層父視窗控制代碼。  
   
-##  <a name="a-namegettoplevelwindowa--cwindowgettoplevelwindow"></a><a name="gettoplevelwindow"></a>CWindow::GetTopLevelWindow  
+##  <a name="gettoplevelwindow"></a>CWindow::GetTopLevelWindow  
  擷取視窗的最上層父系或擁有者視窗。  
   
 ```
@@ -998,7 +1143,7 @@ HWND GetTopLevelWindow() const throw();
 ### <a name="return-value"></a>傳回值  
  最上層視窗控制代碼。  
   
-##  <a name="a-namegettopwindowa--cwindowgettopwindow"></a><a name="gettopwindow"></a>CWindow::GetTopWindow  
+##  <a name="gettopwindow"></a>CWindow::GetTopWindow  
  擷取最上層的子視窗。  
   
 ```
@@ -1011,7 +1156,7 @@ HWND GetTopWindow() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&13;](../../atl/codesnippet/cpp/cwindow-class_13.cpp)]  
   
-##  <a name="a-namegetupdaterecta--cwindowgetupdaterect"></a><a name="getupdaterect"></a>CWindow::GetUpdateRect  
+##  <a name="getupdaterect"></a>CWindow::GetUpdateRect  
  擷取最小完全圍住更新區域的矩形的座標。  
   
 ```
@@ -1021,7 +1166,7 @@ BOOL GetUpdateRect(LPRECT lpRect, BOOL bErase = FALSE) throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetUpdateRect](http://msdn.microsoft.com/library/windows/desktop/dd144943)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetupdatergna--cwindowgetupdatergn"></a><a name="getupdatergn"></a>CWindow::GetUpdateRgn  
+##  <a name="getupdatergn"></a>CWindow::GetUpdateRgn  
  擷取更新區域，並將它複製到指定的區域。  
   
 ```
@@ -1031,7 +1176,7 @@ int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetUpdateRgn](http://msdn.microsoft.com/library/windows/desktop/dd144944)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetwindowa--cwindowgetwindow"></a><a name="getwindow"></a>CWindow::GetWindow  
+##  <a name="getwindow"></a>CWindow::GetWindow  
  擷取指定的視窗。  
   
 ```
@@ -1041,7 +1186,7 @@ HWND GetWindow(UINT nCmd) const throw();
 ### <a name="remarks"></a>備註  
  See `GetWindow` in the [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
   
-##  <a name="a-namegetwindowcontexthelpida--cwindowgetwindowcontexthelpid"></a><a name="getwindowcontexthelpid"></a>CWindow::GetWindowContextHelpId  
+##  <a name="getwindowcontexthelpid"></a>CWindow::GetWindowContextHelpId  
  擷取視窗的說明內容識別碼。  
   
 ```
@@ -1051,7 +1196,7 @@ DWORD GetWindowContextHelpId() const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetWindowContextHelpId](http://msdn.microsoft.com/library/windows/desktop/bb776429)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetwindowdca--cwindowgetwindowdc"></a><a name="getwindowdc"></a>CWindow::GetWindowDC  
+##  <a name="getwindowdc"></a>CWindow::GetWindowDC  
  擷取整個視窗的裝置內容。  
   
 ```
@@ -1064,7 +1209,7 @@ HDC GetWindowDC() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&14;](../../atl/codesnippet/cpp/cwindow-class_14.cpp)]  
   
-##  <a name="a-namegetwindowlonga--cwindowgetwindowlong"></a><a name="getwindowlong"></a>CWindow::GetWindowLong  
+##  <a name="getwindowlong"></a>CWindow::GetWindowLong  
  擷取的 32 位元值的指定位移到額外的視窗記憶體。  
   
 ```
@@ -1077,7 +1222,7 @@ LONG GetWindowLong(int nIndex) const throw();
 > [!NOTE]
 >  若要撰寫與 32 位元和 64 位元版本的 Windows 相容的程式碼，使用[CWindow::GetWindowLongPtr](#getwindowlongptr)。  
   
-##  <a name="a-namegetwindowlongptra--cwindowgetwindowlongptr"></a><a name="getwindowlongptr"></a>CWindow::GetWindowLongPtr  
+##  <a name="getwindowlongptr"></a>CWindow::GetWindowLongPtr  
  擷取指定的視窗，包括額外的視窗記憶體中指定的位移值的相關資訊。  
   
 ```
@@ -1095,7 +1240,7 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
   
  若要撰寫與 32 位元和 64 位元版本的 Windows 相容的程式碼，使用`CWindow::GetWindowLongPtr`。  
   
-##  <a name="a-namegetwindowplacementa--cwindowgetwindowplacement"></a><a name="getwindowplacement"></a>CWindow::GetWindowPlacement  
+##  <a name="getwindowplacement"></a>CWindow::GetWindowPlacement  
  擷取的顯示狀態和位置。  
   
 ```
@@ -1105,7 +1250,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetWindowPlacement](http://msdn.microsoft.com/library/windows/desktop/ms633518)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetwindowprocessida--cwindowgetwindowprocessid"></a><a name="getwindowprocessid"></a>CWindow::GetWindowProcessID  
+##  <a name="getwindowprocessid"></a>CWindow::GetWindowProcessID  
  擷取建立視窗的視窗程序的識別項。  
   
 ```
@@ -1118,7 +1263,7 @@ DWORD GetWindowProcessID() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&15;](../../atl/codesnippet/cpp/cwindow-class_15.cpp)]  
   
-##  <a name="a-namegetwindowrecta--cwindowgetwindowrect"></a><a name="getwindowrect"></a>CWindow::GetWindowRect  
+##  <a name="getwindowrect"></a>CWindow::GetWindowRect  
  擷取視窗的週框的大小。  
   
 ```
@@ -1128,7 +1273,7 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetWindowRect](http://msdn.microsoft.com/library/windows/desktop/ms633519)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetwindowrgna--cwindowgetwindowrgn"></a><a name="getwindowrgn"></a>CWindow::GetWindowRgn  
+##  <a name="getwindowrgn"></a>CWindow::GetWindowRgn  
  取得視窗的視窗區域的複本。  
   
 ```
@@ -1138,7 +1283,7 @@ int GetWindowRgn(HRGN hRgn) throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetWindowRgn](http://msdn.microsoft.com/library/windows/desktop/dd144950)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetwindowtexta--cwindowgetwindowtext"></a><a name="getwindowtext"></a>CWindow::GetWindowText  
+##  <a name="getwindowtext"></a>CWindow::GetWindowText  
  擷取視窗的文字。  
   
 ```
@@ -1168,7 +1313,7 @@ int GetWindowText(CSimpleString& strText) const;
   
  這個方法的第二個版本可讓您儲存中的文字`BSTR`; 第三個版本可讓您儲存中的結果[CString](../../atl-mfc-shared/reference/cstringt-class.md)，因為`CSimpleString`是基底類別`CString`。  
   
-##  <a name="a-namegetwindowtextlengtha--cwindowgetwindowtextlength"></a><a name="getwindowtextlength"></a>CWindow::GetWindowTextLength  
+##  <a name="getwindowtextlength"></a>CWindow::GetWindowTextLength  
  擷取視窗的文字的長度。  
   
 ```
@@ -1178,7 +1323,7 @@ int GetWindowTextLength() const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetWindowTextLength](http://msdn.microsoft.com/library/windows/desktop/ms633521)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetwindowthreadida--cwindowgetwindowthreadid"></a><a name="getwindowthreadid"></a>CWindow::GetWindowThreadID  
+##  <a name="getwindowthreadid"></a>CWindow::GetWindowThreadID  
  擷取建立指定之的視窗的執行緒的識別項。  
   
 ```
@@ -1191,7 +1336,7 @@ DWORD GetWindowThreadID() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&16;](../../atl/codesnippet/cpp/cwindow-class_16.cpp)]  
   
-##  <a name="a-namegetwindowworda--cwindowgetwindowword"></a><a name="getwindowword"></a>CWindow::GetWindowWord  
+##  <a name="getwindowword"></a>CWindow::GetWindowWord  
  擷取的 16 位元值的指定位移到額外的視窗記憶體。  
   
 ```
@@ -1201,7 +1346,7 @@ WORD GetWindowWord(int nIndex) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegotodlgctrla--cwindowgotodlgctrl"></a><a name="gotodlgctrl"></a>CWindow::GotoDlgCtrl  
+##  <a name="gotodlgctrl"></a>CWindow::GotoDlgCtrl  
  在對話方塊中，為控制項設定鍵盤焦點。  
   
 ```
@@ -1211,7 +1356,7 @@ void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namehidecareta--cwindowhidecaret"></a><a name="hidecaret"></a>CWindow::HideCaret  
+##  <a name="hidecaret"></a>CWindow::HideCaret  
  隱藏系統游標。  
   
 ```
@@ -1224,7 +1369,7 @@ BOOL HideCaret() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&17;](../../atl/codesnippet/cpp/cwindow-class_17.cpp)]  
   
-##  <a name="a-namehilitemenuitema--cwindowhilitemenuitem"></a><a name="hilitemenuitem"></a>CWindow::HiliteMenuItem  
+##  <a name="hilitemenuitem"></a>CWindow::HiliteMenuItem  
  反白顯示，或從最上層功能表項目移除反白顯示。  
   
 ```
@@ -1237,7 +1382,7 @@ BOOL HiliteMenuItem(
 ### <a name="remarks"></a>備註  
  請參閱[HiliteMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647986)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinvalidatea--cwindowinvalidate"></a><a name="invalidate"></a>CWindow::Invalidate  
+##  <a name="invalidate"></a>CWindow::Invalidate  
  使整個工作區失效。  
   
 ```
@@ -1252,7 +1397,7 @@ BOOL Invalidate(BOOL bErase = TRUE) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&18;](../../atl/codesnippet/cpp/cwindow-class_18.cpp)]  
   
-##  <a name="a-nameinvalidaterecta--cwindowinvalidaterect"></a><a name="invalidaterect"></a>CWindow::InvalidateRect  
+##  <a name="invalidaterect"></a>CWindow::InvalidateRect  
  使工作區中指定的矩形。  
   
 ```
@@ -1262,7 +1407,7 @@ BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 ### <a name="remarks"></a>備註  
  請參閱[InvalidateRect](http://msdn.microsoft.com/library/windows/desktop/dd145002)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinvalidatergna--cwindowinvalidatergn"></a><a name="invalidatergn"></a>CWindow::InvalidateRgn  
+##  <a name="invalidatergn"></a>CWindow::InvalidateRgn  
  使指定的區域內的用戶端區域。  
   
 ```
@@ -1275,7 +1420,7 @@ void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ### <a name="remarks"></a>備註  
  指定`void`傳回型別，而`InvalidateRgn`Win32 函式一定會傳回**TRUE**。  
   
-##  <a name="a-nameischilda--cwindowischild"></a><a name="ischild"></a>CWindow::IsChild  
+##  <a name="ischild"></a>CWindow::IsChild  
  判斷指定的視窗是否為子視窗。  
   
 ```
@@ -1285,7 +1430,7 @@ BOOL IsChild(const HWND hWnd) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[IsChild](http://msdn.microsoft.com/library/windows/desktop/ms633524)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisdialogmessagea--cwindowisdialogmessage"></a><a name="isdialogmessage"></a>CWindow::IsDialogMessage  
+##  <a name="isdialogmessage"></a>CWindow::IsDialogMessage  
  判斷訊息是否可供指定的對話方塊。  
   
 ```
@@ -1295,7 +1440,7 @@ BOOL IsDialogMessage(LPMSG lpMsg) throw();
 ### <a name="remarks"></a>備註  
  請參閱[IsDialogMessage](http://msdn.microsoft.com/library/windows/desktop/ms645498)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisdlgbuttoncheckeda--cwindowisdlgbuttonchecked"></a><a name="isdlgbuttonchecked"></a>CWindow::IsDlgButtonChecked  
+##  <a name="isdlgbuttonchecked"></a>CWindow::IsDlgButtonChecked  
  決定按鈕的核取狀態。  
   
 ```
@@ -1305,7 +1450,7 @@ UINT IsDlgButtonChecked(int nIDButton) const throw();
 ### <a name="remarks"></a>備註  
  請參閱[IsDlgButtonChecked](http://msdn.microsoft.com/library/windows/desktop/bb761879)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisiconica--cwindowisiconic"></a><a name="isiconic"></a>CWindow::IsIconic  
+##  <a name="isiconic"></a>CWindow::IsIconic  
  決定是否視窗最小化。  
   
 ```
@@ -1318,7 +1463,7 @@ BOOL IsIconic() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&19;](../../atl/codesnippet/cpp/cwindow-class_19.cpp)]  
   
-##  <a name="a-nameisparentdialoga--cwindowisparentdialog"></a><a name="isparentdialog"></a>CWindow::IsParentDialog  
+##  <a name="isparentdialog"></a>CWindow::IsParentDialog  
  判斷控制項的父視窗是否為對話方塊視窗。  
   
 ```
@@ -1328,7 +1473,7 @@ BOOL IsParentDialog() throw();
 ### <a name="return-value"></a>傳回值  
  會傳回 TRUE 如果父視窗 對話方塊中，FALSE 否則。  
   
-##  <a name="a-nameiswindowa--cwindowiswindow"></a><a name="iswindow"></a>CWindow::IsWindow  
+##  <a name="iswindow"></a>CWindow::IsWindow  
  判斷指定的視窗控制代碼是否識別現有視窗。  
   
 ```
@@ -1341,7 +1486,7 @@ BOOL IsWindow() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&20;](../../atl/codesnippet/cpp/cwindow-class_20.cpp)]  
   
-##  <a name="a-nameiswindowenableda--cwindowiswindowenabled"></a><a name="iswindowenabled"></a>CWindow::IsWindowEnabled  
+##  <a name="iswindowenabled"></a>CWindow::IsWindowEnabled  
  判斷輸入是否已啟用視窗。  
   
 ```
@@ -1354,7 +1499,7 @@ BOOL IsWindowEnabled() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&21;](../../atl/codesnippet/cpp/cwindow-class_21.cpp)]  
   
-##  <a name="a-nameiswindowvisiblea--cwindowiswindowvisible"></a><a name="iswindowvisible"></a>CWindow::IsWindowVisible  
+##  <a name="iswindowvisible"></a>CWindow::IsWindowVisible  
  決定視窗的可見性狀態。  
   
 ```
@@ -1367,7 +1512,7 @@ BOOL IsWindowVisible() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&22;](../../atl/codesnippet/cpp/cwindow-class_22.cpp)]  
   
-##  <a name="a-nameiswindowunicodea--cwindowiswindowunicode"></a><a name="iswindowunicode"></a>CWindow::IsWindowUnicode  
+##  <a name="iswindowunicode"></a>CWindow::IsWindowUnicode  
  判斷指定的視窗是否為原生的 Unicode 視窗。  
   
 ```
@@ -1380,7 +1525,7 @@ BOOL IsWindowUnicode() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&23;](../../atl/codesnippet/cpp/cwindow-class_23.cpp)]  
   
-##  <a name="a-nameiszoomeda--cwindowiszoomed"></a><a name="iszoomed"></a>CWindow::IsZoomed  
+##  <a name="iszoomed"></a>CWindow::IsZoomed  
  決定是否要最大化的視窗。  
   
 ```
@@ -1390,7 +1535,7 @@ BOOL IsZoomed() const throw();
 ### <a name="remarks"></a>備註  
  請參閱[IsZoomed](http://msdn.microsoft.com/library/windows/desktop/ms633531)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namekilltimera--cwindowkilltimer"></a><a name="killtimer"></a>CWindow::KillTimer  
+##  <a name="killtimer"></a>CWindow::KillTimer  
  終結所建立的計時器事件`CWindow::SetTimer`。  
   
 ```
@@ -1400,7 +1545,7 @@ BOOL KillTimer(UINT nIDEvent) throw();
 ### <a name="remarks"></a>備註  
  請參閱[KillTimer](http://msdn.microsoft.com/library/windows/desktop/ms644903)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namelockwindowupdatea--cwindowlockwindowupdate"></a><a name="lockwindowupdate"></a>CWindow::LockWindowUpdate  
+##  <a name="lockwindowupdate"></a>CWindow::LockWindowUpdate  
  停用或啟用視窗中繪製呼叫[LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034) Win32 函式。  
   
 ```
@@ -1417,14 +1562,14 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 ### <a name="remarks"></a>備註  
  如果`bLock`是**TRUE**，這個方法會傳遞[m_hWnd](#m_hwnd) Win32 函式; 否則它會傳遞**NULL**。  
   
-##  <a name="a-namemhwnda--cwindowmhwnd"></a><a name="m_hwnd"></a>CWindow::m_hWnd  
+##  <a name="m_hwnd"></a>CWindow::m_hWnd  
  包含與關聯的視窗控制代碼`CWindow`物件。  
   
 ```
 HWND m_hWnd throw() throw();
 ```  
   
-##  <a name="a-namemapwindowpointsa--cwindowmapwindowpoints"></a><a name="mapwindowpoints"></a>CWindow::MapWindowPoints  
+##  <a name="mapwindowpoints"></a>CWindow::MapWindowPoints  
  將一組點視窗的座標空間轉換到另一個視窗的座標空間。  
   
 ```
@@ -1443,7 +1588,7 @@ int MapWindowPoints(
   
  這個方法的第二個版本可讓您轉換的座標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
-##  <a name="a-namemessageboxa--cwindowmessagebox"></a><a name="messagebox"></a>CWindow::MessageBox  
+##  <a name="messagebox"></a>CWindow::MessageBox  
  顯示訊息方塊。  
   
 ```
@@ -1459,7 +1604,7 @@ int MessageBox(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&24;](../../atl/codesnippet/cpp/cwindow-class_24.cpp)]  
   
-##  <a name="a-namemodifystylea--cwindowmodifystyle"></a><a name="modifystyle"></a>CWindow::ModifyStyle  
+##  <a name="modifystyle"></a>CWindow::ModifyStyle  
  修改的視窗樣式`CWindow`物件。  
   
 ```
@@ -1500,7 +1645,7 @@ BOOL ModifyStyle(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&25;](../../atl/codesnippet/cpp/cwindow-class_25.cpp)]  
   
-##  <a name="a-namemodifystyleexa--cwindowmodifystyleex"></a><a name="modifystyleex"></a>CWindow::ModifyStyleEx  
+##  <a name="modifystyleex"></a>CWindow::ModifyStyleEx  
  修改的延伸的視窗樣式`CWindow`物件。  
   
 ```
@@ -1541,7 +1686,7 @@ BOOL ModifyStyleEx(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&26;](../../atl/codesnippet/cpp/cwindow-class_26.cpp)]  
   
-##  <a name="a-namemovewindowa--cwindowmovewindow"></a><a name="movewindow"></a>CWindow::MoveWindow  
+##  <a name="movewindow"></a>CWindow::MoveWindow  
  變更視窗的大小和位置。  
   
 ```
@@ -1562,7 +1707,7 @@ BOOL MoveWindow(
   
  這個方法的第二個版本會使用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，以決定視窗的新位置、 寬度和高度。  
   
-##  <a name="a-namenextdlgctrla--cwindownextdlgctrl"></a><a name="nextdlgctrl"></a>CWindow::NextDlgCtrl  
+##  <a name="nextdlgctrl"></a>CWindow::NextDlgCtrl  
  在對話方塊中設定的下一個控制項鍵盤焦點。  
   
 ```
@@ -1572,7 +1717,7 @@ void NextDlgCtrl() const throw();
 ### <a name="remarks"></a>備註  
  請參閱[WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameopenclipboarda--cwindowopenclipboard"></a><a name="openclipboard"></a>CWindow::OpenClipboard  
+##  <a name="openclipboard"></a>CWindow::OpenClipboard  
  開啟剪貼簿。  
   
 ```
@@ -1582,21 +1727,21 @@ BOOL OpenClipboard() throw();
 ### <a name="remarks"></a>備註  
  請參閱[OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoperatorhwnda--cwindowoperator-hwnd"></a><a name="operator_hwnd"></a>CWindow::operator HWND  
+##  <a name="operator_hwnd"></a>CWindow::operator HWND  
  將轉換`CWindow`物件傳遞給`HWND`。  
   
 ```  
 operator HWND() const throw();
 ```  
   
-##  <a name="a-nameoperatoreqa--cwindowoperator-"></a><a name="operator_eq"></a>CWindow::operator =  
+##  <a name="operator_eq"></a>CWindow::operator =  
  指派`HWND`至`CWindow`藉由設定物件[m_hWnd](#m_hwnd)成員`hWnd`。  
   
 ```
 CWindow& operator= (HWND hWnd) throw();
 ```  
   
-##  <a name="a-namepostmessagea--cwindowpostmessage"></a><a name="postmessage"></a>CWindow::PostMessage  
+##  <a name="postmessage"></a>CWindow::PostMessage  
  將訊息放在建立視窗的執行緒相關聯的訊息佇列中。  
   
 ```
@@ -1614,7 +1759,7 @@ BOOL PostMessage(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&27;](../../atl/codesnippet/cpp/cwindow-class_27.cpp)]  
   
-##  <a name="a-nameprevdlgctrla--cwindowprevdlgctrl"></a><a name="prevdlgctrl"></a>CWindow::PrevDlgCtrl  
+##  <a name="prevdlgctrl"></a>CWindow::PrevDlgCtrl  
  在對話方塊中上, 一個控制項來設定鍵盤焦點。  
   
 ```
@@ -1624,7 +1769,7 @@ void PrevDlgCtrl() const throw();
 ### <a name="remarks"></a>備註  
  請參閱[WM_NEXTDLGCTL](http://msdn.microsoft.com/library/windows/desktop/ms645432)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameprinta--cwindowprint"></a><a name="print"></a>CWindow::Print  
+##  <a name="print"></a>CWindow::Print  
  傳送[WM_PRINT](http://msdn.microsoft.com/library/windows/desktop/dd145216)要求，它本身的內容中繪製指定的裝置 視窗的訊息。  
   
 ```
@@ -1650,7 +1795,7 @@ void Print(HDC hDC, DWORD dwFlags) const throw();
   
 - `PRF_OWNED`繪製所有已擁有的 windows。  
   
-##  <a name="a-nameprintclienta--cwindowprintclient"></a><a name="printclient"></a>CWindow::PrintClient  
+##  <a name="printclient"></a>CWindow::PrintClient  
  傳送[WM_PRINTCLIENT](http://msdn.microsoft.com/library/windows/desktop/dd145217)要求它繪製指定的裝置內容中的工作區視窗訊息。  
   
 ```
@@ -1676,14 +1821,14 @@ void PrintClient(HDC hDC, DWORD dwFlags) const throw();
   
 - `PRF_OWNED`繪製所有已擁有的 windows。  
   
-##  <a name="a-namercdefaulta--cwindowrcdefault"></a><a name="rcdefault"></a>CWindow::rcDefault  
+##  <a name="rcdefault"></a>CWindow::rcDefault  
  包含預設視窗大小。  
   
 ```
 static RECT rcDefault;
 ```  
   
-##  <a name="a-nameredrawwindowa--cwindowredrawwindow"></a><a name="redrawwindow"></a>CWindow::RedrawWindow  
+##  <a name="redrawwindow"></a>CWindow::RedrawWindow  
  更新指定的矩形或工作區中的區域。  
   
 ```
@@ -1701,7 +1846,7 @@ throw()
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&28;](../../atl/codesnippet/cpp/cwindow-class_28.cpp)]  
   
-##  <a name="a-namereleasedca--cwindowreleasedc"></a><a name="releasedc"></a>CWindow::ReleaseDC  
+##  <a name="releasedc"></a>CWindow::ReleaseDC  
  釋放裝置內容。  
   
 ```
@@ -1714,7 +1859,7 @@ int ReleaseDC(HDC hDC);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&9;](../../atl/codesnippet/cpp/cwindow-class_9.cpp)]  
   
-##  <a name="a-nameresizeclienta--cwindowresizeclient"></a><a name="resizeclient"></a>CWindow::ResizeClient  
+##  <a name="resizeclient"></a>CWindow::ResizeClient  
  將視窗調整至指定的用戶端區域的大小。  
   
 ```
@@ -1734,7 +1879,7 @@ BOOL ResizeClient(
  `bRedraw`  
  旗標，指出是否要重繪其變更。 預設值是**FALSE**，指出視窗不會重新繪製的變更。  
   
-##  <a name="a-namescreentoclienta--cwindowscreentoclient"></a><a name="screentoclient"></a>CWindow::ScreenToClient  
+##  <a name="screentoclient"></a>CWindow::ScreenToClient  
  將螢幕座標轉換為工作區座標。  
   
 ```
@@ -1747,7 +1892,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
   
  這個方法的第二個版本可讓您轉換的座標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
-##  <a name="a-namescrollwindowa--cwindowscrollwindow"></a><a name="scrollwindow"></a>CWindow::ScrollWindow  
+##  <a name="scrollwindow"></a>CWindow::ScrollWindow  
  將指定的用戶端區域的捲動。  
   
 ```
@@ -1761,7 +1906,7 @@ BOOL ScrollWindow(
 ### <a name="remarks"></a>備註  
  請參閱[ScrollWindow](http://msdn.microsoft.com/library/windows/desktop/bb787591)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namescrollwindowexa--cwindowscrollwindowex"></a><a name="scrollwindowex"></a>CWindow::ScrollWindowEx  
+##  <a name="scrollwindowex"></a>CWindow::ScrollWindowEx  
  將額外的功能在指定的用戶端區域的捲動。  
   
 ```
@@ -1778,7 +1923,7 @@ int ScrollWindowEx(
 ### <a name="remarks"></a>備註  
  請參閱[ScrollWindowEx](http://msdn.microsoft.com/library/windows/desktop/bb787593)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesenddlgitemmessagea--cwindowsenddlgitemmessage"></a><a name="senddlgitemmessage"></a>CWindow::SendDlgItemMessage  
+##  <a name="senddlgitemmessage"></a>CWindow::SendDlgItemMessage  
  傳送訊息至控制項。  
   
 ```
@@ -1792,7 +1937,7 @@ LRESULT SendDlgItemMessage(
 ### <a name="remarks"></a>備註  
  請參閱[SendDlgItemMessage](http://msdn.microsoft.com/library/windows/desktop/ms645515)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesendmessagea--cwindowsendmessage"></a><a name="sendmessage"></a>CWindow::SendMessage  
+##  <a name="sendmessage"></a>CWindow::SendMessage  
  將訊息傳送至視窗，並不會傳回之前處理訊息的視窗程序之後。  
   
 ```
@@ -1814,7 +1959,7 @@ static LRESULT SendMessage(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&29;](../../atl/codesnippet/cpp/cwindow-class_29.cpp)]  
   
-##  <a name="a-namesendmessagetodescendantsa--cwindowsendmessagetodescendants"></a><a name="sendmessagetodescendants"></a>CWindow::SendMessageToDescendants  
+##  <a name="sendmessagetodescendants"></a>CWindow::SendMessageToDescendants  
  將指定的訊息傳送至所有直接子系`CWindow`物件。  
   
 ```
@@ -1841,7 +1986,7 @@ void SendMessageToDescendants(
 ### <a name="remarks"></a>備註  
  如果`bDeep`是**TRUE**，此外將訊息傳送到其他子系的所有視窗。  
   
-##  <a name="a-namesendnotifymessagea--cwindowsendnotifymessage"></a><a name="sendnotifymessage"></a>CWindow::SendNotifyMessage  
+##  <a name="sendnotifymessage"></a>CWindow::SendNotifyMessage  
  傳送訊息至視窗。  
   
 ```
@@ -1856,7 +2001,7 @@ BOOL SendNotifyMessage(
   
  如果呼叫的執行緒，所建立視窗`SendNotifyMessage`等到處理訊息的視窗程序之後才會傳回。 否則，它會立即傳回。  
   
-##  <a name="a-namesetactivewindowa--cwindowsetactivewindow"></a><a name="setactivewindow"></a>CWindow::SetActiveWindow  
+##  <a name="setactivewindow"></a>CWindow::SetActiveWindow  
  啟用視窗。  
   
 ```
@@ -1869,7 +2014,7 @@ HWND SetActiveWindow() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&30;](../../atl/codesnippet/cpp/cwindow-class_30.cpp)]  
   
-##  <a name="a-namesetcapturea--cwindowsetcapture"></a><a name="setcapture"></a>CWindow::SetCapture  
+##  <a name="setcapture"></a>CWindow::SetCapture  
  傳送至視窗的所有後續的滑鼠輸入。  
   
 ```
@@ -1879,7 +2024,7 @@ HWND SetCapture() throw();
 ### <a name="remarks"></a>備註  
  請參閱[SetCapture](http://msdn.microsoft.com/library/windows/desktop/ms646262)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetclipboardviewera--cwindowsetclipboardviewer"></a><a name="setclipboardviewer"></a>CWindow::SetClipboardViewer  
+##  <a name="setclipboardviewer"></a>CWindow::SetClipboardViewer  
  將剪貼簿檢視器鏈結中的視窗。  
   
 ```
@@ -1889,7 +2034,7 @@ HWND SetClipboardViewer() throw();
 ### <a name="remarks"></a>備註  
  請參閱[SetClipboardViewer](http://msdn.microsoft.com/library/windows/desktop/ms649052)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetdlgctrlida--cwindowsetdlgctrlid"></a><a name="setdlgctrlid"></a>CWindow::SetDlgCtrlID  
+##  <a name="setdlgctrlid"></a>CWindow::SetDlgCtrlID  
  將視窗的識別項設定指定的值。  
   
 ```
@@ -1903,7 +2048,7 @@ int SetDlgCtrlID(int nID) throw();
 ### <a name="return-value"></a>傳回值  
  如果成功，視窗中，前一個識別碼否則為 0。  
   
-##  <a name="a-namesetdlgiteminta--cwindowsetdlgitemint"></a><a name="setdlgitemint"></a>CWindow::SetDlgItemInt  
+##  <a name="setdlgitemint"></a>CWindow::SetDlgItemInt  
  變更控制項的文字字串表示的整數值。  
   
 ```
@@ -1916,7 +2061,7 @@ BOOL SetDlgItemInt(
 ### <a name="remarks"></a>備註  
  請參閱[SetDlgItemInt](http://msdn.microsoft.com/library/windows/desktop/ms645518)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetdlgitemtexta--cwindowsetdlgitemtext"></a><a name="setdlgitemtext"></a>CWindow::SetDlgItemText  
+##  <a name="setdlgitemtext"></a>CWindow::SetDlgItemText  
  變更控制項的文字。  
   
 ```
@@ -1926,7 +2071,7 @@ BOOL SetDlgItemText(int nID, LPCTSTR lpszString) throw();
 ### <a name="remarks"></a>備註  
  請參閱[SetDlgItemText](http://msdn.microsoft.com/library/windows/desktop/ms645521)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetfocusa--cwindowsetfocus"></a><a name="setfocus"></a>CWindow::SetFocus  
+##  <a name="setfocus"></a>CWindow::SetFocus  
  將輸入的焦點設定為視窗。  
   
 ```
@@ -1939,7 +2084,7 @@ HWND SetFocus() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&31;](../../atl/codesnippet/cpp/cwindow-class_31.cpp)]  
   
-##  <a name="a-namesetfonta--cwindowsetfont"></a><a name="setfont"></a>CWindow::SetFont  
+##  <a name="setfont"></a>CWindow::SetFont  
  藉由傳送變更視窗的目前字型[WM_SETFONT](http://msdn.microsoft.com/library/windows/desktop/ms632642)至視窗的訊息。  
   
 ```
@@ -1953,7 +2098,7 @@ void SetFont(HFONT hFont, BOOL bRedraw = TRUE) throw();
  `bRedraw`  
  [in]如果**TRUE** （預設值），視窗會重新繪製。 否則，它不是。  
   
-##  <a name="a-namesethotkeya--cwindowsethotkey"></a><a name="sethotkey"></a>CWindow::SetHotKey  
+##  <a name="sethotkey"></a>CWindow::SetHotKey  
  將熱鍵與視窗相關聯傳送**WM_SETHOTKEY**訊息。  
   
 ```
@@ -1970,7 +2115,7 @@ int SetHotKey(WORD wVirtualKeyCode, WORD wModifiers) throw();
 ### <a name="return-value"></a>傳回值  
  可能的清單傳回值，請參閱[WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameseticona--cwindowseticon"></a><a name="seticon"></a>CWindow::SetIcon  
+##  <a name="seticon"></a>CWindow::SetIcon  
  將視窗的大型或小型圖示所識別的圖示`hIcon`。  
   
 ```
@@ -1990,7 +2135,7 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 ### <a name="remarks"></a>備註  
  `SetIcon`傳送[WM_SETICON](http://msdn.microsoft.com/library/windows/desktop/ms632643)至視窗的訊息。  
   
-##  <a name="a-namesetmenua--cwindowsetmenu"></a><a name="setmenu"></a>CWindow::SetMenu  
+##  <a name="setmenu"></a>CWindow::SetMenu  
  變更目前的視窗的功能表。  
   
 ```
@@ -2000,7 +2145,7 @@ BOOL SetMenu(HMENU hMenu) throw();
 ### <a name="remarks"></a>備註  
  請參閱[SetMenu](http://msdn.microsoft.com/library/windows/desktop/ms647995)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetparenta--cwindowsetparent"></a><a name="setparent"></a>CWindow::SetParent  
+##  <a name="setparent"></a>CWindow::SetParent  
  變更父視窗。  
   
 ```
@@ -2013,7 +2158,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&32;](../../atl/codesnippet/cpp/cwindow-class_32.cpp)]  
   
-##  <a name="a-namesetredrawa--cwindowsetredraw"></a><a name="setredraw"></a>CWindow::SetRedraw  
+##  <a name="setredraw"></a>CWindow::SetRedraw  
  設定或清除所傳送的重繪旗標[WM_SETREDRAW](http://msdn.microsoft.com/library/windows/desktop/dd145219)至視窗的訊息。  
   
 ```
@@ -2030,7 +2175,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&33;](../../atl/codesnippet/cpp/cwindow-class_33.cpp)]  
   
-##  <a name="a-namesetscrollinfoa--cwindowsetscrollinfo"></a><a name="setscrollinfo"></a>CWindow::SetScrollInfo  
+##  <a name="setscrollinfo"></a>CWindow::SetScrollInfo  
  設定捲軸上的參數。  
   
 ```
@@ -2043,7 +2188,7 @@ int SetScrollInfo(
 ### <a name="remarks"></a>備註  
  請參閱[SetScrollInfo](http://msdn.microsoft.com/library/windows/desktop/bb787595)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetscrollposa--cwindowsetscrollpos"></a><a name="setscrollpos"></a>CWindow::SetScrollPos  
+##  <a name="setscrollpos"></a>CWindow::SetScrollPos  
  變更的捲動方塊的位置。  
   
 ```
@@ -2056,7 +2201,7 @@ int SetScrollPos(
 ### <a name="remarks"></a>備註  
  請參閱[SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetscrollrangea--cwindowsetscrollrange"></a><a name="setscrollrange"></a>CWindow::SetScrollRange  
+##  <a name="setscrollrange"></a>CWindow::SetScrollRange  
  變更捲軸列範圍。  
   
 ```
@@ -2070,7 +2215,7 @@ BOOL SetScrollRange(
 ### <a name="remarks"></a>備註  
  請參閱[SetScrollRange](http://msdn.microsoft.com/library/windows/desktop/bb787599)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesettimera--cwindowsettimer"></a><a name="settimer"></a>CWindow::SetTimer  
+##  <a name="settimer"></a>CWindow::SetTimer  
  建立計時器事件。  
   
 ```
@@ -2083,7 +2228,7 @@ UINT SetTimer(
 ### <a name="remarks"></a>備註  
  請參閱[SetTimer](http://msdn.microsoft.com/library/windows/desktop/ms644906)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetwindowcontexthelpida--cwindowsetwindowcontexthelpid"></a><a name="setwindowcontexthelpid"></a>CWindow::SetWindowContextHelpId  
+##  <a name="setwindowcontexthelpid"></a>CWindow::SetWindowContextHelpId  
  設定視窗的說明內容識別碼。  
   
 ```
@@ -2093,7 +2238,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId) throw();
 ### <a name="remarks"></a>備註  
  請參閱[SetWindowContextHelpId](http://msdn.microsoft.com/library/windows/desktop/bb762101)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetwindowlonga--cwindowsetwindowlong"></a><a name="setwindowlong"></a>CWindow::SetWindowLong  
+##  <a name="setwindowlong"></a>CWindow::SetWindowLong  
  32 位元值的指定位移設定額外的視窗記憶體。  
   
 ```
@@ -2106,7 +2251,7 @@ LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 > [!NOTE]
 >  若要撰寫與 32 位元和 64 位元版本的 Windows 相容的程式碼，使用[CWindow::SetWindowLongPtr](#setwindowlongptr)。  
   
-##  <a name="a-namesetwindowlongptra--cwindowsetwindowlongptr"></a><a name="setwindowlongptr"></a>CWindow::SetWindowLongPtr  
+##  <a name="setwindowlongptr"></a>CWindow::SetWindowLongPtr  
  指定的視窗中，屬性變更，也會將值設定額外的視窗記憶體中指定的位移。  
   
 ```
@@ -2118,7 +2263,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
   
  這個函數會取代`CWindow::SetWindowLong`方法。 若要撰寫與 32 位元和 64 位元版本的 Windows 相容的程式碼，使用`CWindow::SetWindowLongPtr`。  
   
-##  <a name="a-namesetwindowplacementa--cwindowsetwindowplacement"></a><a name="setwindowplacement"></a>CWindow::SetWindowPlacement  
+##  <a name="setwindowplacement"></a>CWindow::SetWindowPlacement  
  設定顯示狀態和位置。  
   
 ```
@@ -2128,7 +2273,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 ### <a name="remarks"></a>備註  
  請參閱[SetWindowPlacement](http://msdn.microsoft.com/library/windows/desktop/ms633544)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetwindowposa--cwindowsetwindowpos"></a><a name="setwindowpos"></a>CWindow::SetWindowPos  
+##  <a name="setwindowpos"></a>CWindow::SetWindowPos  
  設定大小、 位置和 Z 順序。  
   
 ```
@@ -2151,7 +2296,7 @@ BOOL SetWindowPos(
   
  這個方法的第二個版本會使用[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構來設定視窗的新位置、 寬度和高度。  
   
-##  <a name="a-namesetwindowrgna--cwindowsetwindowrgn"></a><a name="setwindowrgn"></a>CWindow::SetWindowRgn  
+##  <a name="setwindowrgn"></a>CWindow::SetWindowRgn  
  設定視窗的視窗區域。  
   
 ```
@@ -2161,7 +2306,7 @@ int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 ### <a name="remarks"></a>備註  
  請參閱[SetWindowRgn](http://msdn.microsoft.com/library/windows/desktop/dd145102)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetwindowtexta--cwindowsetwindowtext"></a><a name="setwindowtext"></a>CWindow::SetWindowText  
+##  <a name="setwindowtext"></a>CWindow::SetWindowText  
  變更視窗的文字。  
   
 ```
@@ -2174,7 +2319,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&34;](../../atl/codesnippet/cpp/cwindow-class_34.cpp)]  
   
-##  <a name="a-namesetwindowworda--cwindowsetwindowword"></a><a name="setwindowword"></a>CWindow::SetWindowWord  
+##  <a name="setwindowword"></a>CWindow::SetWindowWord  
  設定中指定位移的 16 位元值到額外的視窗記憶體。  
   
 ```
@@ -2184,7 +2329,7 @@ WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ### <a name="remarks"></a>備註  
  請參閱[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameshowcareta--cwindowshowcaret"></a><a name="showcaret"></a>CWindow::ShowCaret  
+##  <a name="showcaret"></a>CWindow::ShowCaret  
  顯示系統游標。  
   
 ```
@@ -2197,7 +2342,7 @@ BOOL ShowCaret() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&35;](../../atl/codesnippet/cpp/cwindow-class_35.cpp)]  
   
-##  <a name="a-nameshowownedpopupsa--cwindowshowownedpopups"></a><a name="showownedpopups"></a>CWindow::ShowOwnedPopups  
+##  <a name="showownedpopups"></a>CWindow::ShowOwnedPopups  
  顯示或隱藏視窗所擁有的快顯視窗。  
   
 ```
@@ -2207,7 +2352,7 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 ### <a name="remarks"></a>備註  
  請參閱[ShowOwnedPopups](http://msdn.microsoft.com/library/windows/desktop/ms633547)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameshowscrollbara--cwindowshowscrollbar"></a><a name="showscrollbar"></a>CWindow::ShowScrollBar  
+##  <a name="showscrollbar"></a>CWindow::ShowScrollBar  
  顯示或隱藏捲軸。  
   
 ```
@@ -2217,7 +2362,7 @@ BOOL ShowScrollBar(UINT nBar, BOOL bShow = TRUE) throw();
 ### <a name="remarks"></a>備註  
  請參閱[ShowScrollBar](http://msdn.microsoft.com/library/windows/desktop/bb787601)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameshowwindowa--cwindowshowwindow"></a><a name="showwindow"></a>CWindow::ShowWindow  
+##  <a name="showwindow"></a>CWindow::ShowWindow  
  設定視窗的顯示狀態。  
   
 ```
@@ -2230,7 +2375,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&36;](../../atl/codesnippet/cpp/cwindow-class_36.cpp)]  
   
-##  <a name="a-nameshowwindowasynca--cwindowshowwindowasync"></a><a name="showwindowasync"></a>CWindow::ShowWindowAsync  
+##  <a name="showwindowasync"></a>CWindow::ShowWindowAsync  
  設定不同的執行緒所建立之視窗的顯示狀態。  
   
 ```
@@ -2240,7 +2385,7 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 ### <a name="remarks"></a>備註  
  請參閱[ShowWindowAsync](http://msdn.microsoft.com/library/windows/desktop/ms633549)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameupdatewindowa--cwindowupdatewindow"></a><a name="updatewindow"></a>CWindow::UpdateWindow  
+##  <a name="updatewindow"></a>CWindow::UpdateWindow  
  更新工作區。  
   
 ```
@@ -2253,7 +2398,7 @@ BOOL UpdateWindow() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&37;](../../atl/codesnippet/cpp/cwindow-class_37.cpp)]  
   
-##  <a name="a-namevalidaterecta--cwindowvalidaterect"></a><a name="validaterect"></a>CWindow::ValidateRect  
+##  <a name="validaterect"></a>CWindow::ValidateRect  
  驗證指定的矩形內的用戶端區域。  
   
 ```
@@ -2263,7 +2408,7 @@ BOOL ValidateRect(LPCRECT lpRect) throw();
 ### <a name="remarks"></a>備註  
  請參閱[ValidateRect](http://msdn.microsoft.com/library/windows/desktop/dd145194)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namevalidatergna--cwindowvalidatergn"></a><a name="validatergn"></a>CWindow::ValidateRgn  
+##  <a name="validatergn"></a>CWindow::ValidateRgn  
  驗證指定的區域內的用戶端區域。  
   
 ```
@@ -2273,7 +2418,7 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 ### <a name="remarks"></a>備註  
  請參閱[ValidateRgn](http://msdn.microsoft.com/library/windows/desktop/dd145195)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namewinhelpa--cwindowwinhelp"></a><a name="winhelp"></a>CWindow::WinHelp  
+##  <a name="winhelp"></a>CWindow::WinHelp  
  啟動 Windows 說明。  
   
 ```

@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRgn
+- AFXWIN/CRgn
+- AFXWIN/CRgn::CRgn
+- AFXWIN/CRgn::CombineRgn
+- AFXWIN/CRgn::CopyRgn
+- AFXWIN/CRgn::CreateEllipticRgn
+- AFXWIN/CRgn::CreateEllipticRgnIndirect
+- AFXWIN/CRgn::CreateFromData
+- AFXWIN/CRgn::CreateFromPath
+- AFXWIN/CRgn::CreatePolygonRgn
+- AFXWIN/CRgn::CreatePolyPolygonRgn
+- AFXWIN/CRgn::CreateRectRgn
+- AFXWIN/CRgn::CreateRectRgnIndirect
+- AFXWIN/CRgn::CreateRoundRectRgn
+- AFXWIN/CRgn::EqualRgn
+- AFXWIN/CRgn::FromHandle
+- AFXWIN/CRgn::GetRegionData
+- AFXWIN/CRgn::GetRgnBox
+- AFXWIN/CRgn::OffsetRgn
+- AFXWIN/CRgn::PtInRegion
+- AFXWIN/CRgn::RectInRegion
+- AFXWIN/CRgn::SetRectRgn
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +126,7 @@ class CRgn : public CGdiObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecombinergna--crgncombinergn"></a><a name="combinergn"></a>CRgn::CombineRgn  
+##  <a name="combinergn"></a>CRgn::CombineRgn  
  建立新的 GDI 區域結合兩個現有的區域。  
   
 ```  
@@ -158,7 +179,7 @@ int CombineRgn(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&144;](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
-##  <a name="a-namecopyrgna--crgncopyrgn"></a><a name="copyrgn"></a>CRgn::CopyRgn  
+##  <a name="copyrgn"></a>CRgn::CopyRgn  
  複製所定義之區域`pRgnSrc`到`CRgn`物件。  
   
 ```  
@@ -186,7 +207,7 @@ int CopyRgn(CRgn* pRgnSrc);
 ### <a name="example"></a>範例  
   請參閱範例[CRgn::CreateEllipticRgn](#createellipticrgn)。  
   
-##  <a name="a-namecreateellipticrgna--crgncreateellipticrgn"></a><a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
+##  <a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
  建立橢圓的區域。  
   
 ```  
@@ -223,7 +244,7 @@ BOOL CreateEllipticRgn(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&145;](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
-##  <a name="a-namecreateellipticrgnindirecta--crgncreateellipticrgnindirect"></a><a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
+##  <a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
  建立橢圓的區域。  
   
 ```  
@@ -247,7 +268,7 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ### <a name="example"></a>範例  
   請參閱範例[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)。  
   
-##  <a name="a-namecreatefromdataa--crgncreatefromdata"></a><a name="createfromdata"></a>CRgn::CreateFromData  
+##  <a name="createfromdata"></a>CRgn::CreateFromData  
  從指定的區域和轉換資料，請建立區域。  
   
 ```  
@@ -273,7 +294,7 @@ BOOL CreateFromData(
 ### <a name="remarks"></a>備註  
  應用程式可以擷取區域的資料，藉由呼叫`CRgn::GetRegionData`函式。  
   
-##  <a name="a-namecreatefrompatha--crgncreatefrompath"></a><a name="createfrompath"></a>CRgn::CreateFromPath  
+##  <a name="createfrompath"></a>CRgn::CreateFromPath  
  從所選入指定的裝置內容的路徑建立區域。  
   
 ```  
@@ -290,7 +311,7 @@ BOOL CreateFromPath(CDC* pDC);
 ### <a name="remarks"></a>備註  
  裝置內容做為識別`pDC`參數必須包含已關閉的路徑。 之後`CreateFromPath`將轉換的路徑到區域時，Windows 會捨棄從裝置內容的封閉的路徑。  
   
-##  <a name="a-namecreatepolygonrgna--crgncreatepolygonrgn"></a><a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
+##  <a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
  建立多邊形的區域。  
   
 ```  
@@ -335,7 +356,7 @@ BOOL CreatePolygonRgn(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&146;](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
-##  <a name="a-namecreatepolypolygonrgna--crgncreatepolypolygonrgn"></a><a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
+##  <a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
  建立包含一系列的封閉的多邊形的區域。  
   
 ```  
@@ -383,7 +404,7 @@ BOOL CreatePolyPolygonRgn(
   
  應用程式已經完成時使用區域，以建立`CreatePolyPolygonRgn`函式，它應該選取的裝置內容和使用的區域出[CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)成員函式，將它移除。  
   
-##  <a name="a-namecreaterectrgna--crgncreaterectrgn"></a><a name="createrectrgn"></a>CRgn::CreateRectRgn  
+##  <a name="createrectrgn"></a>CRgn::CreateRectRgn  
  建立矩形區域中所儲存`CRgn`物件。  
   
 ```  
@@ -420,7 +441,7 @@ BOOL CreateRectRgn(
   
  如需其他範例，請參閱[CRgn::CombineRgn](#combinergn)。  
   
-##  <a name="a-namecreaterectrgnindirecta--crgncreaterectrgnindirect"></a><a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
+##  <a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
  建立矩形區域中所儲存`CRgn`物件。  
   
 ```  
@@ -454,7 +475,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&148;](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
-##  <a name="a-namecreateroundrectrgna--crgncreateroundrectrgn"></a><a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
+##  <a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
  建立具有圓角中所儲存的矩形區域`CRgn`物件。  
   
 ```  
@@ -497,7 +518,7 @@ BOOL CreateRoundRectRgn(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&149;](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
   
-##  <a name="a-namecrgna--crgncrgn"></a><a name="crgn"></a>CRgn::CRgn  
+##  <a name="crgn"></a>CRgn::CRgn  
  建構 `CRgn` 物件。  
   
 ```  
@@ -510,7 +531,7 @@ CRgn();
 ### <a name="example"></a>範例  
   請參閱範例[CRgn::CreateRoundRectRgn](#createroundrectrgn)。  
   
-##  <a name="a-nameequalrgna--crgnequalrgn"></a><a name="equalrgn"></a>CRgn::EqualRgn  
+##  <a name="equalrgn"></a>CRgn::EqualRgn  
  判斷指定的區域是否等於儲存在區域`CRgn`物件。  
   
 ```  
@@ -527,7 +548,7 @@ BOOL EqualRgn(CRgn* pRgn) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&150;](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
-##  <a name="a-namefromhandlea--crgnfromhandle"></a><a name="fromhandle"></a>CRgn::FromHandle  
+##  <a name="fromhandle"></a>CRgn::FromHandle  
  若要將指標傳回`CRgn`物件控制代碼給 Windows 區域時。  
   
 ```  
@@ -544,7 +565,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ### <a name="remarks"></a>備註  
  如果`CRgn`物件尚未附加至控制代碼，暫存`CRgn`會建立並附加物件。 此暫存`CRgn`僅直到下一次應用程式在其事件迴圈中有閒置時間，在這次所有暫存圖形會刪除物件，物件才有效。 另一種說法是，此暫存物件的一個視窗訊息處理期間才有效。  
   
-##  <a name="a-namegetregiondataa--crgngetregiondata"></a><a name="getregiondata"></a>CRgn::GetRegionData  
+##  <a name="getregiondata"></a>CRgn::GetRegionData  
  描述區域資料中填入指定的緩衝區。  
   
 ```  
@@ -566,7 +587,7 @@ int GetRegionData(
 ### <a name="remarks"></a>備註  
  此資料包括組成區域的矩形維度。 此函式用於搭配`CRgn::CreateFromData`函式。  
   
-##  <a name="a-namegetrgnboxa--crgngetrgnbox"></a><a name="getrgnbox"></a>CRgn::GetRgnBox  
+##  <a name="getrgnbox"></a>CRgn::GetRgnBox  
  擷取週框的座標`CRgn`物件。  
   
 ```  
@@ -603,7 +624,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ### <a name="example"></a>範例  
   請參閱範例[CRgn::CreatePolygonRgn](#createpolygonrgn)。  
   
-##  <a name="a-nameoffsetrgna--crgnoffsetrgn"></a><a name="offsetrgn"></a>CRgn::OffsetRgn  
+##  <a name="offsetrgn"></a>CRgn::OffsetRgn  
  將儲存在區域`CRgn`物件所指定的位移。  
   
 ```  
@@ -643,7 +664,7 @@ int OffsetRgn(POINT point);
 ### <a name="example"></a>範例  
   請參閱範例[CRgn::CreateEllipticRgn](#createellipticrgn)。  
   
-##  <a name="a-nameoperatorhrgna--crgnoperator-hrgn"></a><a name="operator_hrgn"></a>CRgn::operator HRGN  
+##  <a name="operator_hrgn"></a>CRgn::operator HRGN  
  使用這個運算子來取得附加的 Windows GDI 控制代碼的`CRgn`物件。  
   
 ```  
@@ -658,7 +679,7 @@ operator HRGN() const;
   
  如需使用圖形物件的詳細資訊，請參閱文章[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameptinregiona--crgnptinregion"></a><a name="ptinregion"></a>CRgn::PtInRegion  
+##  <a name="ptinregion"></a>CRgn::PtInRegion  
  檢查是否所指定的位置*x*和*y*儲存在區域中`CRgn`物件。  
   
 ```  
@@ -682,7 +703,7 @@ BOOL PtInRegion(POINT point) const;
 ### <a name="return-value"></a>傳回值  
  重點是在區域; 如果為非零否則為 0。  
   
-##  <a name="a-namerectinregiona--crgnrectinregion"></a><a name="rectinregion"></a>CRgn::RectInRegion  
+##  <a name="rectinregion"></a>CRgn::RectInRegion  
  判斷指定的矩形的任何部分`lpRect`是儲存在區域的界限內`CRgn`物件。  
   
 ```  
@@ -708,7 +729,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
 ### <a name="return-value"></a>傳回值  
  如果指定的任何的矩形部分位於地區的界限內，非零值。否則為 0。  
   
-##  <a name="a-namesetrectrgna--crgnsetrectrgn"></a><a name="setrectrgn"></a>CRgn::SetRectRgn  
+##  <a name="setrectrgn"></a>CRgn::SetRectRgn  
  建立矩形區域。  
   
 ```  

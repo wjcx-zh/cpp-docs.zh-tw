@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CConstantTransition
 - CConstantTransition
+- AFXANIMATIONCONTROLLER/CConstantTransition
+- AFXANIMATIONCONTROLLER/CConstantTransition::CConstantTransition
+- AFXANIMATIONCONTROLLER/CConstantTransition::Create
+- AFXANIMATIONCONTROLLER/CConstantTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CConstantTransition : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecconstanttransitiona--cconstanttransitioncconstanttransition"></a><a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
+##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
  建構轉換物件並初始化其持續時間。  
   
 ```  
@@ -93,7 +96,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  `duration`  
  轉換的持續時間。  
   
-##  <a name="a-namecreatea--cconstanttransitioncreate"></a><a name="create"></a>CConstantTransition::Create  
+##  <a name="create"></a>CConstantTransition::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -109,7 +112,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-namemdurationa--cconstanttransitionmduration"></a><a name="m_duration"></a>CConstantTransition::m_duration  
+##  <a name="m_duration"></a>CConstantTransition::m_duration  
  轉換的持續時間。  
   
 ```  

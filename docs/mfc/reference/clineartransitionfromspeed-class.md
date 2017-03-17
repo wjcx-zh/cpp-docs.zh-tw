@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CLinearTransitionFromSpeed
 - CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::CLinearTransitionFromSpeed
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::Create
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CLinearTransitionFromSpeed::m_dblSpeed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-nameclineartransitionfromspeeda--clineartransitionfromspeedclineartransitionfromspeed"></a><a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
+##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
  建構線性速度轉換物件，並使用速度和最終值將它初始化。  
   
 ```  
@@ -99,7 +103,7 @@ CLinearTransitionFromSpeed(
  `dblFinalValue`  
  在轉換結束動畫變數的值。  
   
-##  <a name="a-namecreatea--clineartransitionfromspeedcreate"></a><a name="create"></a>CLinearTransitionFromSpeed::Create  
+##  <a name="create"></a>CLinearTransitionFromSpeed::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -115,14 +119,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-namemdblfinalvaluea--clineartransitionfromspeedmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
  在轉換結束動畫變數的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdblspeeda--clineartransitionfromspeedmdblspeed"></a><a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
+##  <a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
  變數的速度的絕對值。  
   
 ```  

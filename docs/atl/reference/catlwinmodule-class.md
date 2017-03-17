@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlWinModule
-- ATL.CAtlWinModule
 - CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule::CAtlWinModule
+- ATLBASE/ATL::CAtlWinModule::AddCreateWndData
+- ATLBASE/ATL::CAtlWinModule::ExtractCreateWndData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +82,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-nameaddcreatewnddataa--catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
+##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
  這個方法會初始化並新增`_AtlCreateWndData`結構。  
   
 ```
@@ -97,7 +99,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[AtlWinModuleAddCreateWndData](http://msdn.microsoft.com/library/8463a6ed-07ea-4aad-92ec-ded681601b32)的初始化[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)結構。 此結構會儲存**這**指標，用來取得視窗程序中的類別執行個體。  
   
-##  <a name="a-namecatlwinmodulea--catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
+##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
  建構函式。  
   
 ```
@@ -107,7 +109,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>備註  
  如果初始化失敗， **EXCEPTION_NONCONTINUABLE**會引發例外狀況。  
   
-##  <a name="a-namedtora--catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
  解構函式。  
   
 ```
@@ -117,7 +119,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-nameextractcreatewnddataa--catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
+##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
  這個方法會傳回指標`_AtlCreateWndData`結構。  
   
 ```

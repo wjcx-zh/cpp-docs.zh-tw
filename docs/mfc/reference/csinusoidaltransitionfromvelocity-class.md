@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSinusoidalTransitionFromVelocity
-- afxanimationcontroller/CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::Create
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_duration
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromVelocity::m_period
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--csinusoidaltransitionfromvelocitycreate"></a><a name="create"></a>CSinusoidalTransitionFromVelocity::Create  
+##  <a name="create"></a>CSinusoidalTransitionFromVelocity::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -99,7 +103,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-namecsinusoidaltransitionfromvelocitya--csinusoidaltransitionfromvelocitycsinusoidaltransitionfromvelocity"></a><a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
+##  <a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
  建構轉換物件。  
   
 ```  
@@ -115,14 +119,14 @@ CSinusoidalTransitionFromVelocity(
  `period`  
  以秒為單位的正弦曲線 wave 振盪期間。  
   
-##  <a name="a-namemdurationa--csinusoidaltransitionfromvelocitymduration"></a><a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration  
+##  <a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration  
  轉換的持續時間。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemperioda--csinusoidaltransitionfromvelocitymperiod"></a><a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period  
+##  <a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period  
  以秒為單位的正弦曲線 wave 振盪期間。  
   
 ```  

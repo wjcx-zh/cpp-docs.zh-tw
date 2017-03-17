@@ -10,6 +10,54 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditView
+- AFXRICH/CRichEditView
+- AFXRICH/CRichEditView::CRichEditView
+- AFXRICH/CRichEditView::AdjustDialogPosition
+- AFXRICH/CRichEditView::CanPaste
+- AFXRICH/CRichEditView::DoPaste
+- AFXRICH/CRichEditView::FindText
+- AFXRICH/CRichEditView::FindTextSimple
+- AFXRICH/CRichEditView::GetCharFormatSelection
+- AFXRICH/CRichEditView::GetDocument
+- AFXRICH/CRichEditView::GetInPlaceActiveItem
+- AFXRICH/CRichEditView::GetMargins
+- AFXRICH/CRichEditView::GetPageRect
+- AFXRICH/CRichEditView::GetPaperSize
+- AFXRICH/CRichEditView::GetParaFormatSelection
+- AFXRICH/CRichEditView::GetPrintRect
+- AFXRICH/CRichEditView::GetPrintWidth
+- AFXRICH/CRichEditView::GetRichEditCtrl
+- AFXRICH/CRichEditView::GetSelectedItem
+- AFXRICH/CRichEditView::GetTextLength
+- AFXRICH/CRichEditView::GetTextLengthEx
+- AFXRICH/CRichEditView::InsertFileAsObject
+- AFXRICH/CRichEditView::InsertItem
+- AFXRICH/CRichEditView::IsRichEditFormat
+- AFXRICH/CRichEditView::OnCharEffect
+- AFXRICH/CRichEditView::OnParaAlign
+- AFXRICH/CRichEditView::OnUpdateCharEffect
+- AFXRICH/CRichEditView::OnUpdateParaAlign
+- AFXRICH/CRichEditView::PrintInsideRect
+- AFXRICH/CRichEditView::PrintPage
+- AFXRICH/CRichEditView::SetCharFormat
+- AFXRICH/CRichEditView::SetMargins
+- AFXRICH/CRichEditView::SetPaperSize
+- AFXRICH/CRichEditView::SetParaFormat
+- AFXRICH/CRichEditView::TextNotFound
+- AFXRICH/CRichEditView::GetClipboardData
+- AFXRICH/CRichEditView::GetContextMenu
+- AFXRICH/CRichEditView::IsSelected
+- AFXRICH/CRichEditView::OnFindNext
+- AFXRICH/CRichEditView::OnInitialUpdate
+- AFXRICH/CRichEditView::OnPasteNativeObject
+- AFXRICH/CRichEditView::OnPrinterChanged
+- AFXRICH/CRichEditView::OnReplaceAll
+- AFXRICH/CRichEditView::OnReplaceSel
+- AFXRICH/CRichEditView::OnTextNotFound
+- AFXRICH/CRichEditView::QueryAcceptData
+- AFXRICH/CRichEditView::WrapChanged
+- AFXRICH/CRichEditView::m_nBulletIndent
+- AFXRICH/CRichEditView::m_nWordWrap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -145,7 +193,7 @@ class CRichEditView : public CCtrlView
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrich.h  
   
-##  <a name="a-nameadjustdialogpositiona--cricheditviewadjustdialogposition"></a><a name="adjustdialogposition"></a>CRichEditView::AdjustDialogPosition  
+##  <a name="adjustdialogposition"></a>CRichEditView::AdjustDialogPosition  
  呼叫此函式，讓它不會遮蔽到目前的選取範圍移動指定的對話方塊。  
   
 ```  
@@ -156,7 +204,7 @@ void AdjustDialogPosition(CDialog* pDlg);
  *pDlg*  
  指向 `CDialog` 物件的指標。  
   
-##  <a name="a-namecanpastea--cricheditviewcanpaste"></a><a name="canpaste"></a>CRichEditView::CanPaste  
+##  <a name="canpaste"></a>CRichEditView::CanPaste  
  呼叫此函式可判斷剪貼簿是否包含可以貼到此豐富的編輯 檢視的資訊。  
   
 ```  
@@ -166,14 +214,14 @@ BOOL CanPaste() const;
 ### <a name="return-value"></a>傳回值  
  剪貼簿資料格式可以接受此豐富的編輯檢視; 如果為非零否則為 0。  
   
-##  <a name="a-namecricheditviewa--cricheditviewcricheditview"></a><a name="cricheditview"></a>CRichEditView::CRichEditView  
+##  <a name="cricheditview"></a>CRichEditView::CRichEditView  
  呼叫此函式建立`CRichEditView`物件。  
   
 ```  
 CRichEditView();
 ```  
   
-##  <a name="a-namedopastea--cricheditviewdopaste"></a><a name="dopaste"></a>CRichEditView::DoPaste  
+##  <a name="dopaste"></a>CRichEditView::DoPaste  
  呼叫此函式中的 OLE 項目貼上`dataobj`此豐富的編輯文件/檢視。  
   
 ```  
@@ -198,7 +246,7 @@ void DoPaste(
   
  此函式判斷結果為基礎的處理常式的選擇性貼上貼上的型別。 如果`cf`是 0，則新的項目會使用目前的圖示表示。 如果`cf`為非零值和`hMetaPict`不**NULL**，新的項目會使用`hMetaPict`的表示法。  
   
-##  <a name="a-namefindtexta--cricheditviewfindtext"></a><a name="findtext"></a>CRichEditView::FindText  
+##  <a name="findtext"></a>CRichEditView::FindText  
  呼叫此函式以尋找指定的文字，並將它設為目前的選取範圍。  
   
 ```  
@@ -231,7 +279,7 @@ BOOL FindText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&151;](../../mfc/codesnippet/cpp/cricheditview-class_1.cpp)]  
   
-##  <a name="a-namefindtextsimplea--cricheditviewfindtextsimple"></a><a name="findtextsimple"></a>CRichEditView::FindTextSimple  
+##  <a name="findtextsimple"></a>CRichEditView::FindTextSimple  
  呼叫此函式以尋找指定的文字，並將它設為目前的選取範圍。  
   
 ```  
@@ -261,7 +309,7 @@ BOOL FindTextSimple(
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::FindText](#findtext)。  
   
-##  <a name="a-namegetcharformatselectiona--cricheditviewgetcharformatselection"></a><a name="getcharformatselection"></a>CRichEditView::GetCharFormatSelection  
+##  <a name="getcharformatselection"></a>CRichEditView::GetCharFormatSelection  
  呼叫此函式可取得的字元格式目前選取範圍的屬性。  
   
 ```  
@@ -277,7 +325,7 @@ CHARFORMAT2& GetCharFormatSelection();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&152;](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
-##  <a name="a-namegetclipboarddataa--cricheditviewgetclipboarddata"></a><a name="getclipboarddata"></a>CRichEditView::GetClipboardData  
+##  <a name="getclipboarddata"></a>CRichEditView::GetClipboardData  
  架構會呼叫此函式的處理程序中為[IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315)。  
   
 ```  
@@ -321,7 +369,7 @@ virtual HRESULT GetClipboardData(
   
  如需詳細資訊，請參閱[IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341)， [IRichEditOleCallback::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774315)，和[CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]看[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)中[!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
   
-##  <a name="a-namegetcontextmenua--cricheditviewgetcontextmenu"></a><a name="getcontextmenu"></a>CRichEditView::GetContextMenu  
+##  <a name="getcontextmenu"></a>CRichEditView::GetContextMenu  
  架構會呼叫此函式的處理程序中為[IRichEditOleCallback::GetContextMenu](http://msdn.microsoft.com/library/windows/desktop/bb774317)。  
   
 ```  
@@ -365,7 +413,7 @@ virtual HMENU GetContextMenu(
   
  如需有關**OLEOBJECT**類型，請參閱 OLE 資料結構和結構配置文件，在*OLE 知識庫*。  
   
-##  <a name="a-namegetdocumenta--cricheditviewgetdocument"></a><a name="getdocument"></a>CRichEditView::GetDocument  
+##  <a name="getdocument"></a>CRichEditView::GetDocument  
  呼叫此函式可取得的指標`CRichEditDoc`與此檢視相關聯。  
   
 ```  
@@ -375,7 +423,7 @@ CRichEditDoc* GetDocument() const;
 ### <a name="return-value"></a>傳回值  
  指標[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)物件相關聯程式`CRichEditView`物件。  
   
-##  <a name="a-namegetinplaceactiveitema--cricheditviewgetinplaceactiveitem"></a><a name="getinplaceactiveitem"></a>CRichEditView::GetInPlaceActiveItem  
+##  <a name="getinplaceactiveitem"></a>CRichEditView::GetInPlaceActiveItem  
  呼叫此函式可取得 OLE 項目中這目前已啟動`CRichEditView`物件。  
   
 ```  
@@ -385,7 +433,7 @@ CRichEditCntrItem* GetInPlaceActiveItem() const;
 ### <a name="return-value"></a>傳回值  
  單一的就地使用中的指標[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)物件在此豐富的編輯 檢視中。**NULL**如果沒有 OLE 項目目前就地作用中狀態。  
   
-##  <a name="a-namegetmarginsa--cricheditviewgetmargins"></a><a name="getmargins"></a>CRichEditView::GetMargins  
+##  <a name="getmargins"></a>CRichEditView::GetMargins  
  呼叫此函式可擷取目前用於列印的邊界。  
   
 ```  
@@ -395,7 +443,7 @@ CRect GetMargins() const;
 ### <a name="return-value"></a>傳回值  
  用於列印，邊界以`MM_TWIPS`。  
   
-##  <a name="a-namegetpagerecta--cricheditviewgetpagerect"></a><a name="getpagerect"></a>CRichEditView::GetPageRect  
+##  <a name="getpagerect"></a>CRichEditView::GetPageRect  
  呼叫此函式可取得用於列印頁面的尺寸。  
   
 ```  
@@ -408,7 +456,7 @@ CRect GetPageRect() const;
 ### <a name="remarks"></a>備註  
  這個值會根據紙張大小。  
   
-##  <a name="a-namegetpapersizea--cricheditviewgetpapersize"></a><a name="getpapersize"></a>CRichEditView::GetPaperSize  
+##  <a name="getpapersize"></a>CRichEditView::GetPaperSize  
  呼叫此函式可擷取目前的紙張大小。  
   
 ```  
@@ -421,7 +469,7 @@ CSize GetPaperSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&153;](../../mfc/codesnippet/cpp/cricheditview-class_3.cpp)]  
   
-##  <a name="a-namegetparaformatselectiona--cricheditviewgetparaformatselection"></a><a name="getparaformatselection"></a>CRichEditView::GetParaFormatSelection  
+##  <a name="getparaformatselection"></a>CRichEditView::GetParaFormatSelection  
  呼叫此函式可取得的段落格式化目前選取範圍的屬性。  
   
 ```  
@@ -434,7 +482,7 @@ PARAFORMAT2& GetParaFormatSelection();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[EM_GETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774182)訊息和[PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetprintrecta--cricheditviewgetprintrect"></a><a name="getprintrect"></a>CRichEditView::GetPrintRect  
+##  <a name="getprintrect"></a>CRichEditView::GetPrintRect  
  呼叫此函式可擷取頁面矩形內的列印區域的範圍。  
   
 ```  
@@ -447,7 +495,7 @@ CRect GetPrintRect() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&154;](../../mfc/codesnippet/cpp/cricheditview-class_4.cpp)]  
   
-##  <a name="a-namegetprintwidtha--cricheditviewgetprintwidth"></a><a name="getprintwidth"></a>CRichEditView::GetPrintWidth  
+##  <a name="getprintwidth"></a>CRichEditView::GetPrintWidth  
  呼叫此函式可判斷列印區域的寬度。  
   
 ```  
@@ -457,7 +505,7 @@ int GetPrintWidth() const;
 ### <a name="return-value"></a>傳回值  
  列印區域的寬度以`MM_TWIPS`。  
   
-##  <a name="a-namegetricheditctrla--cricheditviewgetricheditctrl"></a><a name="getricheditctrl"></a>Cricheditview:: Getricheditctrl  
+##  <a name="getricheditctrl"></a>Cricheditview:: Getricheditctrl  
  呼叫此函式可擷取[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)物件相關聯`CRichEditView`物件。  
   
 ```  
@@ -470,7 +518,7 @@ CRichEditCtrl& GetRichEditCtrl() const;
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::FindText](#findtext)。  
   
-##  <a name="a-namegetselecteditema--cricheditviewgetselecteditem"></a><a name="getselecteditem"></a>CRichEditView::GetSelectedItem  
+##  <a name="getselecteditem"></a>CRichEditView::GetSelectedItem  
  呼叫此函式可擷取 OLE 項目 (`CRichEditCntrItem`物件) 目前在此選取`CRichEditView`物件。  
   
 ```  
@@ -480,7 +528,7 @@ CRichEditCntrItem* GetSelectedItem() const;
 ### <a name="return-value"></a>傳回值  
  指標[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)中所選取物件`CRichEditView`物件;**NULL**如果在這個檢視中不選取任何項目。  
   
-##  <a name="a-namegettextlengtha--cricheditviewgettextlength"></a><a name="gettextlength"></a>CRichEditView::GetTextLength  
+##  <a name="gettextlength"></a>CRichEditView::GetTextLength  
  呼叫此函式，以取得在這個文字的長度`CRichEditView`物件。  
   
 ```  
@@ -490,7 +538,7 @@ long GetTextLength() const;
 ### <a name="return-value"></a>傳回值  
  在這個文字的長度`CRichEditView`物件。  
   
-##  <a name="a-namegettextlengthexa--cricheditviewgettextlengthex"></a><a name="gettextlengthex"></a>CRichEditView::GetTextLengthEx  
+##  <a name="gettextlengthex"></a>CRichEditView::GetTextLengthEx  
  呼叫此成員函式，來計算中的文字長度`CRichEditView`物件。  
   
 ```  
@@ -512,7 +560,7 @@ long GetTextLengthEx(
 ### <a name="remarks"></a>備註  
  `GetTextLengthEx`提供其他方法，判斷文字的長度。 它支援豐富的編輯 2.0 的功能。 如需詳細資訊，請參閱[有關 Rich Edit 控制項](http://msdn.microsoft.com/library/windows/desktop/bb787873)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinsertfileasobjecta--cricheditviewinsertfileasobject"></a><a name="insertfileasobject"></a>CRichEditView::InsertFileAsObject  
+##  <a name="insertfileasobject"></a>CRichEditView::InsertFileAsObject  
  呼叫此函式，將指定的檔案 (做為[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)物件) 讀入 rich 編輯檢視。  
   
 ```  
@@ -523,7 +571,7 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
  `lpszFileName`  
  字串，包含要插入的檔案名稱。  
   
-##  <a name="a-nameinsertitema--cricheditviewinsertitem"></a><a name="insertitem"></a>CRichEditView::InsertItem  
+##  <a name="insertitem"></a>CRichEditView::InsertItem  
  呼叫此函式插入[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)豐富的編輯檢視的物件。  
   
 ```  
@@ -540,7 +588,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ### <a name="remarks"></a>備註  
  如需有關`HRESULT`，請參閱[結構的 COM 錯誤碼](http://msdn.microsoft.com/library/windows/desktop/ms690088)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisricheditformata--cricheditviewisricheditformat"></a><a name="isricheditformat"></a>CRichEditView::IsRichEditFormat  
+##  <a name="isricheditformat"></a>CRichEditView::IsRichEditFormat  
  呼叫此函式來判斷如果`cf`是剪貼簿格式，也就是文字、 豐富的文字或 rtf 文字與 OLE 項目。  
   
 ```  
@@ -554,7 +602,7 @@ static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ### <a name="return-value"></a>傳回值  
  如果為非零`cf`是豐富的編輯] 或 [文字剪貼簿格式。  
   
-##  <a name="a-nameisselecteda--cricheditviewisselected"></a><a name="isselected"></a>CRichEditView::IsSelected  
+##  <a name="isselected"></a>CRichEditView::IsSelected  
  呼叫此函式來判斷指定的 OLE 項目目前在此檢視中選取。  
   
 ```  
@@ -571,14 +619,14 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="remarks"></a>備註  
  如果您的衍生的檢視類別具有不同的方法來處理 OLE 項目的選取範圍，請覆寫這個函式。  
   
-##  <a name="a-namemnbulletindenta--cricheditviewmnbulletindent"></a><a name="m_nbulletindent"></a>CRichEditView::m_nBulletIndent  
+##  <a name="m_nbulletindent"></a>CRichEditView::m_nBulletIndent  
  縮排項目符號中的項目清單。根據預設，720 單位，也就是 1/2 英吋。  
   
 ```  
 int m_nBulletIndent;  
 ```  
   
-##  <a name="a-namemnwordwrapa--cricheditviewmnwordwrap"></a><a name="m_nwordwrap"></a>CRichEditView::m_nWordWrap  
+##  <a name="m_nwordwrap"></a>CRichEditView::m_nWordWrap  
  表示此豐富的編輯 檢視的自動換行的類型。  
   
 ```  
@@ -597,7 +645,7 @@ int m_nWordWrap;
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::WrapChanged](#wrapchanged)。  
   
-##  <a name="a-nameonchareffecta--cricheditviewonchareffect"></a><a name="onchareffect"></a>CRichEditView::OnCharEffect  
+##  <a name="onchareffect"></a>CRichEditView::OnCharEffect  
  呼叫此函式可切換的格式化效果目前選取範圍的字元。  
   
 ```  
@@ -621,7 +669,7 @@ void OnCharEffect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&155;](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
   
-##  <a name="a-nameonfindnexta--cricheditviewonfindnext"></a><a name="onfindnext"></a>CRichEditView::OnFindNext  
+##  <a name="onfindnext"></a>CRichEditView::OnFindNext  
  處理命令的 [尋找/取代] 對話方塊時，由架構呼叫。  
   
 ```  
@@ -648,7 +696,7 @@ virtual void OnFindNext(
 ### <a name="remarks"></a>備註  
  呼叫此函式內搜尋文字`CRichEditView`。 覆寫這個函式來變更搜尋特性衍生的檢視類別。  
   
-##  <a name="a-nameoninitialupdatea--cricheditviewoninitialupdate"></a><a name="oninitialupdate"></a>CRichEditView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>CRichEditView::OnInitialUpdate  
  檢視第一次連接到文件之後，但一開始會顯示檢視之前，由架構呼叫。  
   
 ```  
@@ -661,7 +709,7 @@ virtual void OnInitialUpdate();
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::m_nWordWrap](#m_nwordwrap)。  
   
-##  <a name="a-nameonpastenativeobjecta--cricheditviewonpastenativeobject"></a><a name="onpastenativeobject"></a>CRichEditView::OnPasteNativeObject  
+##  <a name="onpastenativeobject"></a>CRichEditView::OnPasteNativeObject  
  您可以使用此函式，內嵌項目載入原生資料。  
   
 ```  
@@ -682,7 +730,7 @@ virtual BOOL OnPasteNativeObject(LPSTORAGE lpStg);
   
  如需詳細資訊，請參閱[IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonparaaligna--cricheditviewonparaalign"></a><a name="onparaalign"></a>CRichEditView::OnParaAlign  
+##  <a name="onparaalign"></a>CRichEditView::OnParaAlign  
  呼叫此函式來變更所選段落中的段落對齊方式。  
   
 ```  
@@ -702,7 +750,7 @@ void OnParaAlign(WORD wAlign);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&156;](../../mfc/codesnippet/cpp/cricheditview-class_6.cpp)]  
   
-##  <a name="a-nameonprinterchangeda--cricheditviewonprinterchanged"></a><a name="onprinterchanged"></a>CRichEditView::OnPrinterChanged  
+##  <a name="onprinterchanged"></a>CRichEditView::OnPrinterChanged  
  覆寫這個函式來變更印表機時，變更此豐富的編輯 檢視的特性。  
   
 ```  
@@ -716,7 +764,7 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ### <a name="remarks"></a>備註  
  預設實作會將紙張大小設定為實體的高度和寬度的輸出裝置 （印表機）。 如果沒有任何裝置內容會與相關聯`dcPrinter`，預設實作會將紙張大小設定為 8.5 11 英吋。  
   
-##  <a name="a-nameonreplacealla--cricheditviewonreplaceall"></a><a name="onreplaceall"></a>CRichEditView::OnReplaceAll  
+##  <a name="onreplaceall"></a>CRichEditView::OnReplaceAll  
  處理來自 [取代] 對話方塊中的全部取代命令時，由架構呼叫。  
   
 ```  
@@ -746,7 +794,7 @@ virtual void OnReplaceAll(
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::FindText](#findtext)。  
   
-##  <a name="a-nameonreplacesela--cricheditviewonreplacesel"></a><a name="onreplacesel"></a>CRichEditView::OnReplaceSel  
+##  <a name="onreplacesel"></a>CRichEditView::OnReplaceSel  
  處理 [取代] 對話方塊中的取代命令時，由架構呼叫。  
   
 ```  
@@ -777,7 +825,7 @@ virtual void OnReplaceSel(
 ### <a name="remarks"></a>備註  
  呼叫此函式出現一次某些指定的文字取代為另一個字串。 覆寫這個函式來變更此檢視的搜尋特性。  
   
-##  <a name="a-nameontextnotfounda--cricheditviewontextnotfound"></a><a name="ontextnotfound"></a>CRichEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>CRichEditView::OnTextNotFound  
  每當搜尋失敗時，由架構呼叫。  
   
 ```  
@@ -796,7 +844,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&157;](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]  
   
-##  <a name="a-nameonupdatechareffecta--cricheditviewonupdatechareffect"></a><a name="onupdatechareffect"></a>CRichEditView::OnUpdateCharEffect  
+##  <a name="onupdatechareffect"></a>CRichEditView::OnUpdateCharEffect  
  架構會呼叫此函式可更新命令 UI 字元效果命令。  
   
 ```  
@@ -824,7 +872,7 @@ void OnUpdateCharEffect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&158;](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
   
-##  <a name="a-nameonupdateparaaligna--cricheditviewonupdateparaalign"></a><a name="onupdateparaalign"></a>CRichEditView::OnUpdateParaAlign  
+##  <a name="onupdateparaalign"></a>CRichEditView::OnUpdateParaAlign  
  架構會呼叫此函式可更新命令 UI 段落效果命令。  
   
 ```  
@@ -849,7 +897,7 @@ void OnUpdateParaAlign(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&159;](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]  
   
-##  <a name="a-nameprintinsiderecta--cricheditviewprintinsiderect"></a><a name="printinsiderect"></a>CRichEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>CRichEditView::PrintInsideRect  
  呼叫此函式可設定以符合 rich edit 控制項中的文字範圍的格式*rectLayout*所指定的裝置`pDC`。  
   
 ```  
@@ -886,7 +934,7 @@ long PrintInsideRect(
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::GetPaperSize](#getpapersize)。  
   
-##  <a name="a-nameprintpagea--cricheditviewprintpage"></a><a name="printpage"></a>CRichEditView::PrintPage  
+##  <a name="printpage"></a>CRichEditView::PrintPage  
  呼叫此函式可設定所指定的輸出裝置的 rich edit 控制項中的文字範圍的格式`pDC`。  
   
 ```  
@@ -914,7 +962,7 @@ long PrintPage(
   
  請注意，是相對於實體頁面上，而不是邏輯頁面的邊界。 因此，由於許多印表機無法列印頁面上的區域邊界的零會經常裁剪文字。 若要避免裁剪文字，您應該呼叫[SetMargins](#setmargins)和設定列印之前先合理的邊界。  
   
-##  <a name="a-namequeryacceptdataa--cricheditviewqueryacceptdata"></a><a name="queryacceptdata"></a>CRichEditView::QueryAcceptData  
+##  <a name="queryacceptdata"></a>CRichEditView::QueryAcceptData  
  若要將物件貼到豐富的編輯架構呼叫。  
   
 ```  
@@ -953,7 +1001,7 @@ virtual HRESULT QueryAcceptData(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&160;](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]  
   
-##  <a name="a-namesetcharformata--cricheditviewsetcharformat"></a><a name="setcharformat"></a>CRichEditView::SetCharFormat  
+##  <a name="setcharformat"></a>CRichEditView::SetCharFormat  
  呼叫此函式可設定的字元格式中的新文字屬性`CRichEditView`物件。  
   
 ```  
@@ -972,7 +1020,7 @@ void SetCharFormat(CHARFORMAT2 cf);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&152;](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
-##  <a name="a-namesetmarginsa--cricheditviewsetmargins"></a><a name="setmargins"></a>CRichEditView::SetMargins  
+##  <a name="setmargins"></a>CRichEditView::SetMargins  
  呼叫此函式可設定此豐富的編輯 檢視的列印邊界。  
   
 ```  
@@ -991,7 +1039,7 @@ void SetMargins(const CRect& rectMargin);
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::GetPaperSize](#getpapersize)。  
   
-##  <a name="a-namesetpapersizea--cricheditviewsetpapersize"></a><a name="setpapersize"></a>CRichEditView::SetPaperSize  
+##  <a name="setpapersize"></a>CRichEditView::SetPaperSize  
  呼叫此函式以設定紙張大小來列印此豐富的編輯 檢視。  
   
 ```  
@@ -1008,7 +1056,7 @@ void SetPaperSize(CSize sizePaper);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&161;](../../mfc/codesnippet/cpp/cricheditview-class_11.cpp)]  
   
-##  <a name="a-namesetparaformata--cricheditviewsetparaformat"></a><a name="setparaformat"></a>CRichEditView::SetParaFormat  
+##  <a name="setparaformat"></a>CRichEditView::SetParaFormat  
  呼叫此函式可設定段落格式屬性目前的選取範圍，在此`CRichEditView`物件。  
   
 ```  
@@ -1030,7 +1078,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&162;](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]  
   
-##  <a name="a-nametextnotfounda--cricheditviewtextnotfound"></a><a name="textnotfound"></a>CRichEditView::TextNotFound  
+##  <a name="textnotfound"></a>CRichEditView::TextNotFound  
  呼叫此函式來重設的內部搜尋狀態[CRichEditView](../../mfc/reference/cricheditview-class.md)失敗呼叫後的控制項[FindText](#findtext)。  
   
 ```  
@@ -1049,7 +1097,7 @@ void TextNotFound(LPCTSTR lpszFind);
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::FindText](#findtext)。  
   
-##  <a name="a-namewrapchangeda--cricheditviewwrapchanged"></a><a name="wrapchanged"></a>CRichEditView::WrapChanged  
+##  <a name="wrapchanged"></a>CRichEditView::WrapChanged  
  變更列印特性時，呼叫此函式 ( [SetMargins](#setmargins)或[SetPaperSize](#setpapersize))。  
   
 ```  

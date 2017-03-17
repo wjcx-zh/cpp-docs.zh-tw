@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CListView
+- AFXCVIEW/CListView
+- AFXCVIEW/CListView::CListView
+- AFXCVIEW/CListView::GetListCtrl
+- AFXCVIEW/CListView::RemoveImageList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +92,14 @@ class CListView : public CCtrlView
 ## <a name="requirements"></a>需求  
  **標頭︰** afxcview.h  
   
-##  <a name="a-nameclistviewa--clistviewclistview"></a><a name="clistview"></a>CListView::CListView  
+##  <a name="clistview"></a>CListView::CListView  
  建構 `CListView` 物件。  
   
 ```  
 CListView();
 ```  
   
-##  <a name="a-namegetlistctrla--clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl  
+##  <a name="getlistctrl"></a>CListView::GetListCtrl  
  呼叫此成員函式可取得與檢視相關聯的清單控制項的參考。  
   
 ```  
@@ -108,7 +112,7 @@ CListCtrl& GetListCtrl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCListView #&7;](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
-##  <a name="a-nameremoveimagelista--clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList  
+##  <a name="removeimagelist"></a>CListView::RemoveImageList  
  從清單檢視中移除指定的映像的清單。  
   
 ```  

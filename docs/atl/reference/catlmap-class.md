@@ -9,9 +9,38 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlMap
 - CAtlMap
-- ATL::CAtlMap
+- ATLCOLL/ATL::CAtlMap
+- ATLCOLL/ATL::CAtlMap::KINARGTYPE
+- ATLCOLL/ATL::CAtlMap::KOUTARGTYPE
+- ATLCOLL/ATL::CAtlMap::VINARGTYPE
+- ATLCOLL/ATL::CAtlMap::VOUTARGTYPE
+- ATLCOLL/ATL::CPair::m_key
+- ATLCOLL/ATL::CPair::m_value
+- ATLCOLL/ATL::CAtlMap::CAtlMap
+- ATLCOLL/ATL::CAtlMap::AssertValid
+- ATLCOLL/ATL::CAtlMap::DisableAutoRehash
+- ATLCOLL/ATL::CAtlMap::EnableAutoRehash
+- ATLCOLL/ATL::CAtlMap::GetAt
+- ATLCOLL/ATL::CAtlMap::GetCount
+- ATLCOLL/ATL::CAtlMap::GetHashTableSize
+- ATLCOLL/ATL::CAtlMap::GetKeyAt
+- ATLCOLL/ATL::CAtlMap::GetNext
+- ATLCOLL/ATL::CAtlMap::GetNextAssoc
+- ATLCOLL/ATL::CAtlMap::GetNextKey
+- ATLCOLL/ATL::CAtlMap::GetNextValue
+- ATLCOLL/ATL::CAtlMap::GetStartPosition
+- ATLCOLL/ATL::CAtlMap::GetValueAt
+- ATLCOLL/ATL::CAtlMap::InitHashTable
+- ATLCOLL/ATL::CAtlMap::IsEmpty
+- ATLCOLL/ATL::CAtlMap::Lookup
+- ATLCOLL/ATL::CAtlMap::Rehash
+- ATLCOLL/ATL::CAtlMap::RemoveAll
+- ATLCOLL/ATL::CAtlMap::RemoveAtPos
+- ATLCOLL/ATL::CAtlMap::RemoveKey
+- ATLCOLL/ATL::CAtlMap::SetAt
+- ATLCOLL/ATL::CAtlMap::SetOptimalLoad
+- ATLCOLL/ATL::CAtlMap::SetValueAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -150,7 +179,7 @@ class CAtlMap
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-nameassertvalida--catlmapassertvalid"></a><a name="assertvalid"></a>CAtlMap::AssertValid  
+##  <a name="assertvalid"></a>CAtlMap::AssertValid  
  呼叫這個方法，讓判斷提示，如果`CAtlMap`物件無效。  
   
 ```
@@ -163,7 +192,7 @@ void AssertValid() const;
 ### <a name="example"></a>範例  
  請參閱範例[CAtlMap::CAtlMap](#catlmap)。  
   
-##  <a name="a-namecatlmapa--catlmapcatlmap"></a><a name="catlmap"></a>CAtlMap::CAtlMap  
+##  <a name="catlmap"></a>CAtlMap::CAtlMap  
  建構函式。  
   
 ```
@@ -209,7 +238,7 @@ CAtlMap(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&72;](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]  
   
-##  <a name="a-namedtora--catlmapcatlmap"></a><a name="dtor"></a>CAtlMap:: ~ CAtlMap  
+##  <a name="dtor"></a>CAtlMap:: ~ CAtlMap  
  解構函式。  
   
 ```
@@ -219,7 +248,7 @@ CAtlMap(
 ### <a name="remarks"></a>備註  
  會釋放所有配置的資源。  
   
-##  <a name="a-namecpairclassa--catlmapcpair-class"></a><a name="cpair_class"></a>CAtlMap::CPair 類別  
+##  <a name="cpair_class"></a>CAtlMap::CPair 類別  
  類別，包含索引鍵和值的項目。  
   
 ```
@@ -229,7 +258,7 @@ class CPair : public __POSITION
 ### <a name="remarks"></a>備註  
  方法使用這個類別[CAtlMap::GetNext](#getnext)和[CAtlMap::Lookup](#lookup)存取儲存在對應結構的索引鍵和值的項目。  
   
-##  <a name="a-namedisableautorehasha--catlmapdisableautorehash"></a><a name="disableautorehash"></a>CAtlMap::DisableAutoRehash  
+##  <a name="disableautorehash"></a>CAtlMap::DisableAutoRehash  
  呼叫這個方法，以停用的自動重新`CAtlMap`物件。  
   
 ```
@@ -241,7 +270,7 @@ void DisableAutoRehash() throw();
   
  `DisableAutoRehash`當大量項目會加入至對應一次時，會十分實用。 而不是每次超過限制，請觸發 rehashing 程序，是更有效率的方式呼叫`DisableAutoRehash`、 加入項目，以及最後呼叫[CAtlMap::EnableAutoRehash](#enableautorehash)。  
   
-##  <a name="a-nameenableautorehasha--catlmapenableautorehash"></a><a name="enableautorehash"></a>CAtlMap::EnableAutoRehash  
+##  <a name="enableautorehash"></a>CAtlMap::EnableAutoRehash  
  呼叫此方法以啟用自動重新的`CAtlMap`物件。  
   
 ```
@@ -253,7 +282,7 @@ void EnableAutoRehash() throw();
   
  **EnableAutoRefresh**最常使用呼叫後[CAtlMap::DisableAutoRehash](#disableautorehash)。  
   
-##  <a name="a-namegetata--catlmapgetat"></a><a name="getat"></a>CAtlMap::GetAt  
+##  <a name="getat"></a>CAtlMap::GetAt  
  呼叫這個方法，傳回對應中的指定位置處的項目。  
   
 ```
@@ -281,7 +310,7 @@ CPair* GetAt(POSITION& pos) throw();
 ### <a name="remarks"></a>備註  
  在偵錯組建，判斷提示就會發生錯誤，如果`pos`等於 NULL。  
   
-##  <a name="a-namegetcounta--catlmapgetcount"></a><a name="getcount"></a>CAtlMap::GetCount  
+##  <a name="getcount"></a>CAtlMap::GetCount  
  呼叫這個方法來擷取對應中的項目數。  
   
 ```
@@ -294,7 +323,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[CAtlMap::CAtlMap](#catlmap)。  
   
-##  <a name="a-namegethashtablesizea--catlmapgethashtablesize"></a><a name="gethashtablesize"></a>CAtlMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CAtlMap::GetHashTableSize  
  呼叫這個方法來判斷對應的雜湊表中的分類收納數目。  
   
 ```
@@ -304,7 +333,7 @@ UINT GetHashTableSize() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回雜湊表中的分類收納數目。 請參閱[CAtlMap::CAtlMap](#catlmap)說明。  
   
-##  <a name="a-namegetkeyata--catlmapgetkeyat"></a><a name="getkeyat"></a>CAtlMap::GetKeyAt  
+##  <a name="getkeyat"></a>CAtlMap::GetKeyAt  
  呼叫這個方法來擷取索引鍵中指定的位置儲存`CAtlMap`物件。  
   
 ```
@@ -321,7 +350,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 ### <a name="example"></a>範例  
  請參閱範例[CAtlMap::CAtlMap](#catlmap)。  
   
-##  <a name="a-namegetnexta--catlmapgetnext"></a><a name="getnext"></a>CAtlMap::GetNext  
+##  <a name="getnext"></a>CAtlMap::GetNext  
  呼叫這個方法來取得對儲存在下一個元素的指標`CAtlMap`物件。  
   
 ```
@@ -336,7 +365,7 @@ const CPair* GetNext(POSITION& pos) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回下一個配對的索引鍵/值項目儲存在對應中的指標。 `pos`位置計數器會在每次呼叫之後更新。 如果擷取的項目是在對應中的最後一個`pos`設為 NULL。  
   
-##  <a name="a-namegetnextassoca--catlmapgetnextassoc"></a><a name="getnextassoc"></a>CAtlMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CAtlMap::GetNextAssoc  
  取得逐一查看下一個項目。  
   
 ```
@@ -359,7 +388,7 @@ void GetNextAssoc(
 ### <a name="remarks"></a>備註  
  `pos`位置計數器會在每次呼叫之後更新。 如果擷取的項目是在對應中的最後一個`pos`設為 NULL。  
   
-##  <a name="a-namegetnextkeya--catlmapgetnextkey"></a><a name="getnextkey"></a>CAtlMap::GetNextKey  
+##  <a name="getnextkey"></a>CAtlMap::GetNextKey  
  呼叫這個方法來擷取下一個索引鍵，從`CAtlMap`物件。  
   
 ```
@@ -376,7 +405,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 ### <a name="remarks"></a>備註  
  更新的目前位置計數器`pos`。 如果在對應中有任何項目，位置計數器是設為 NULL。  
   
-##  <a name="a-namegetnextvaluea--catlmapgetnextvalue"></a><a name="getnextvalue"></a>CAtlMap::GetNextValue  
+##  <a name="getnextvalue"></a>CAtlMap::GetNextValue  
  呼叫此方法來取得下一個值從`CAtlMap`物件。  
   
 ```
@@ -397,7 +426,7 @@ const V& GetNextValue(POSITION& pos) const throw();
 ### <a name="example"></a>範例  
  請參閱範例[CAtlMap::CAtlMap](#catlmap)。  
   
-##  <a name="a-namegetstartpositiona--catlmapgetstartposition"></a><a name="getstartposition"></a>CAtlMap::GetStartPosition  
+##  <a name="getstartposition"></a>CAtlMap::GetStartPosition  
  呼叫這個方法來啟動對應的反覆項目。  
   
 ```
@@ -416,7 +445,7 @@ POSITION GetStartPosition() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[CAtlMap::CAtlMap](#catlmap)。  
   
-##  <a name="a-namegetvalueata--catlmapgetvalueat"></a><a name="getvalueat"></a>CAtlMap::GetValueAt  
+##  <a name="getvalueat"></a>CAtlMap::GetValueAt  
  呼叫此方法以擷取儲存在指定的位置中的值`CAtlMap`物件。  
   
 ```
@@ -431,7 +460,7 @@ const V& GetValueAt(POSITION pos) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回儲存在指定的位置中的值的參考`CAtlMap`物件。  
   
-##  <a name="a-nameinithashtablea--catlmapinithashtable"></a><a name="inithashtable"></a>CAtlMap::InitHashTable  
+##  <a name="inithashtable"></a>CAtlMap::InitHashTable  
  呼叫此方法以初始化雜湊資料表。  
   
 ```
@@ -458,7 +487,7 @@ bool InitHashTable(
 ### <a name="example"></a>範例  
  請參閱範例[CAtlMap::CAtlMap](#catlmap)。  
   
-##  <a name="a-nameisemptya--catlmapisempty"></a><a name="isempty"></a>CAtlMap::IsEmpty  
+##  <a name="isempty"></a>CAtlMap::IsEmpty  
  呼叫此方法來測試空的對應物件。  
   
 ```
@@ -468,21 +497,21 @@ bool IsEmpty() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**對應是空的如果**false**否則。  
   
-##  <a name="a-namekinargtypea--catlmapkinargtype"></a><a name="kinargtype"></a>CAtlMap::KINARGTYPE  
+##  <a name="kinargtype"></a>CAtlMap::KINARGTYPE  
  索引鍵做為輸入引數傳遞時所使用的類型。  
   
 ```
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```  
   
-##  <a name="a-namekoutargtypea--catlmapkoutargtype"></a><a name="koutargtype"></a>CAtlMap::KOUTARGTYPE  
+##  <a name="koutargtype"></a>CAtlMap::KOUTARGTYPE  
  做為輸出引數傳回一個機碼時所使用的類型。  
   
 ```
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```  
   
-##  <a name="a-namelookupa--catlmaplookup"></a><a name="lookup"></a>CAtlMap::Lookup  
+##  <a name="lookup"></a>CAtlMap::Lookup  
  呼叫這個方法來查詢索引鍵或值`CAtlMap`物件。  
   
 ```
@@ -504,7 +533,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="remarks"></a>備註  
  `Lookup`快速尋找對應項目，包含完全符合指定的索引鍵參數的索引鍵使用雜湊演算法。  
   
-##  <a name="a-nameoperatorata--catlmapoperator-"></a><a name="operator_at"></a>CAtlMap::operator\[\]  
+##  <a name="operator_at"></a>CAtlMap::operator\[\]  
  取代或加入新的項目`CAtlMap`。  
   
 ```
@@ -521,7 +550,7 @@ V& operator[](kinargtype key) throw();
 ### <a name="example"></a>範例  
  如果索引鍵已經存在，會取代此項目。 如果索引鍵不存在，則會加入新項目。 請參閱範例[CAtlMap::CAtlMap](#catlmap)。  
   
-##  <a name="a-namerehasha--catlmaprehash"></a><a name="rehash"></a>CAtlMap::Rehash  
+##  <a name="rehash"></a>CAtlMap::Rehash  
  呼叫此方法以 rehash`CAtlMap`物件。  
   
 ```
@@ -535,7 +564,7 @@ void Rehash(UINT nBins = 0);
 ### <a name="remarks"></a>備註  
  如果`nBins`為 0，`CAtlMap`計算合理的數字為基礎的地圖與最佳的負載設定中的項目數。 通常 rehashing 程序會自動進行，但如果[CAtlMap::DisableAutoRehash](#disableautorehash)已呼叫，這個方法會執行必要的調整大小。  
   
-##  <a name="a-nameremovealla--catlmapremoveall"></a><a name="removeall"></a>CAtlMap::RemoveAll  
+##  <a name="removeall"></a>CAtlMap::RemoveAll  
  呼叫此方法以移除所有項目從`CAtlMap`物件。  
   
 ```
@@ -545,7 +574,7 @@ void RemoveAll() throw();
 ### <a name="remarks"></a>備註  
  清除`CAtlMap`物件，即釋放記憶體，用來儲存項目。  
   
-##  <a name="a-nameremoveatposa--catlmapremoveatpos"></a><a name="removeatpos"></a>CAtlMap::RemoveAtPos  
+##  <a name="removeatpos"></a>CAtlMap::RemoveAtPos  
  呼叫此方法以移除在指定位置處的項目`CAtlMap`物件。  
   
 ```
@@ -559,7 +588,7 @@ void RemoveAtPos(POSITION pos) throw();
 ### <a name="remarks"></a>備註  
  移除指定位置處儲存的索引鍵/值組。 在用來儲存項目，會釋放記憶體。 所參考位置`pos`失效，且在地圖中的任何其他項目位置仍有效，就不一定會保留相同的順序。  
   
-##  <a name="a-nameremovekeya--catlmapremovekey"></a><a name="removekey"></a>CAtlMap::RemoveKey  
+##  <a name="removekey"></a>CAtlMap::RemoveKey  
  呼叫此方法以移除項目從`CAtlMap`指定索引鍵的物件。  
   
 ```
@@ -576,7 +605,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>範例  
  請參閱範例[CAtlMap::CAtlMap](#catlmap)。  
   
-##  <a name="a-namesetata--catlmapsetat"></a><a name="setat"></a>CAtlMap::SetAt  
+##  <a name="setat"></a>CAtlMap::SetAt  
  呼叫這個方法來插入對應的項目組。  
   
 ```
@@ -598,7 +627,7 @@ POSITION SetAt(
 ### <a name="remarks"></a>備註  
  `SetAt`如果找到相符的索引鍵，會取代現有的項目。 如果找不到索引鍵，會建立新的索引鍵/值組。  
   
-##  <a name="a-namesetoptimalloada--catlmapsetoptimalload"></a><a name="setoptimalload"></a>CAtlMap::SetOptimalLoad  
+##  <a name="setoptimalload"></a>CAtlMap::SetOptimalLoad  
  呼叫這個方法來設定最佳的負載的`CAtlMap`物件。  
   
 ```
@@ -625,7 +654,7 @@ void SetOptimalLoad(
 ### <a name="remarks"></a>備註  
  這個方法來重新定義的最佳負載值`CAtlMap`物件。 請參閱[CAtlMap::CAtlMap](#catlmap)討論的各種參數。 如果`bRehashNow`為 true，而且項目數目超出最小和最大值，則會重新計算雜湊表。  
   
-##  <a name="a-namesetvalueata--catlmapsetvalueat"></a><a name="setvalueat"></a>CAtlMap::SetValueAt  
+##  <a name="setvalueat"></a>CAtlMap::SetValueAt  
  呼叫此方法以變更儲存在指定的位置中的值`CAtlMap`物件。  
   
 ```
@@ -644,21 +673,21 @@ void SetValueAt(
 ### <a name="remarks"></a>備註  
  變更儲存在指定位置的值項目`CAtlMap`物件。  
   
-##  <a name="a-namevinargtypea--catlmapvinargtype"></a><a name="vinargtype"></a>CAtlMap::VINARGTYPE  
+##  <a name="vinargtype"></a>CAtlMap::VINARGTYPE  
  將值傳遞做為輸入引數時所使用的類型。  
   
 ```
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```  
   
-##  <a name="a-namevoutargtypea--catlmapvoutargtype"></a><a name="voutargtype"></a>CAtlMap::VOUTARGTYPE  
+##  <a name="voutargtype"></a>CAtlMap::VOUTARGTYPE  
  將值傳遞做為輸出引數時所使用的類型。  
   
 ```
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```  
   
-##  <a name="a-namemkeya--catlmapcpairmkey"></a><a name="m_key"></a>CAtlMap::CPair::m_key  
+##  <a name="m_key"></a>CAtlMap::CPair::m_key  
  儲存索引鍵的項目之資料成員。  
   
 ```
@@ -669,7 +698,7 @@ const K m_key;
  `K`  
  索引鍵的項目型別。  
   
-##  <a name="a-namemvaluea--catlmapcpairmvalue"></a><a name="m_value"></a>CAtlMap::CPair::m_value  
+##  <a name="m_value"></a>CAtlMap::CPair::m_value  
  儲存值的項目之資料成員。  
   
 ```

@@ -9,11 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComPtrBase
-- ATL::CComPtrBase<T>
-- ATL.CComPtrBase<T>
-- ATL::CComPtrBase
 - CComPtrBase
+- ATLCOMCLI/ATL::CComPtrBase
+- ATLCOMCLI/ATL::CComPtrBase::Advise
+- ATLCOMCLI/ATL::CComPtrBase::Attach
+- ATLCOMCLI/ATL::CComPtrBase::CoCreateInstance
+- ATLCOMCLI/ATL::CComPtrBase::CopyTo
+- ATLCOMCLI/ATL::CComPtrBase::Detach
+- ATLCOMCLI/ATL::CComPtrBase::IsEqualObject
+- ATLCOMCLI/ATL::CComPtrBase::QueryInterface
+- ATLCOMCLI/ATL::CComPtrBase::Release
+- ATLCOMCLI/ATL::CComPtrBase::SetSite
+- ATLCOMCLI/ATL::CComPtrBase::p
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +110,7 @@ class CComPtrBase
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcomcli.h  
   
-##  <a name="a-nameadvisea--ccomptrbaseadvise"></a><a name="advise"></a>CComPtrBase::Advise  
+##  <a name="advise"></a>CComPtrBase::Advise  
  呼叫此方法以之間建立連線`CComPtrBase`的連接點與用戶端的接收器。  
   
 ```
@@ -129,7 +136,7 @@ HRESULT Advise(
 ### <a name="remarks"></a>備註  
  請參閱[AtlAdvise](http://msdn.microsoft.com/library/625a2f03-6b7f-4761-be5d-d2871d1d3254)如需詳細資訊。  
   
-##  <a name="a-nameattacha--ccomptrbaseattach"></a><a name="attach"></a>CComPtrBase::Attach  
+##  <a name="attach"></a>CComPtrBase::Attach  
  呼叫這個方法來取得現有指標的擁有權。  
   
 ```
@@ -143,7 +150,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>備註  
  **附加**呼叫[CComPtrBase::Release](#release)現有[CComPtrBase::p](#p)成員變數，然後指派`p2`到`CComPtrBase::p`。 當`CComPtrBase`物件指標的擁有權，它會自動呼叫`Release`這會刪除指標，任何在指標上配置資料物件上的參考計數變成 0。  
   
-##  <a name="a-namedtora--ccomptrbaseccomptrbase"></a><a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
+##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
  解構函式。  
   
 ```
@@ -153,7 +160,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>備註  
  釋放介面所指`CComPtrBase`。  
   
-##  <a name="a-namecocreateinstancea--ccomptrbasecocreateinstance"></a><a name="cocreateinstance"></a>CComPtrBase::CoCreateInstance  
+##  <a name="cocreateinstance"></a>CComPtrBase::CoCreateInstance  
  呼叫這個方法來建立與指定的類別識別碼或程式識別碼關聯之類別的物件  
   
 ```
@@ -189,7 +196,7 @@ HRESULT CoCreateInstance(
   
  在偵錯組建，判斷提示就會發生錯誤，如果[CComPtrBase::p](#p)不等於 NULL。  
   
-##  <a name="a-namecopytoa--ccomptrbasecopyto"></a><a name="copyto"></a>CComPtrBase::CopyTo  
+##  <a name="copyto"></a>CComPtrBase::CopyTo  
  呼叫這個方法來複製`CComPtrBase`給另一個指標變數的指標。  
   
 ```
@@ -208,7 +215,7 @@ HRESULT CopyTo(T** ppT) throw();
   
  錯誤將傳回 HRESULT，如果*ppT*等於 NULL。 在偵錯組建，判斷提示就會發生錯誤，如果*ppT*等於 NULL。  
   
-##  <a name="a-namedetacha--ccomptrbasedetach"></a><a name="detach"></a>CComPtrBase::Detach  
+##  <a name="detach"></a>CComPtrBase::Detach  
  呼叫此方法，以釋放指標的擁有權。  
   
 ```
@@ -221,7 +228,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>備註  
  釋放指標的擁有權、 設定[CComPtrBase::p](#p)資料成員變數為 NULL，並傳回指標的複本。  
   
-##  <a name="a-nameisequalobjecta--ccomptrbaseisequalobject"></a><a name="isequalobject"></a>CComPtrBase::IsEqualObject  
+##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject  
  呼叫這個方法來檢查是否已指定**IUnknown**指向相同的物件相關聯`CComPtrBase`物件。  
   
 ```
@@ -235,7 +242,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="return-value"></a>傳回值  
  如果物件是完全相同，則為 false，則傳回 true。  
   
-##  <a name="a-nameoperatornota--ccomptrbaseoperator-"></a><a name="operator_not"></a>CComPtrBase::operator ！  
+##  <a name="operator_not"></a>CComPtrBase::operator ！  
  NOT 運算子。  
   
 ```
@@ -245,7 +252,7 @@ bool operator!() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回 true 如果`CComHeapPtr`指標為 NULL 時，等於 false 否則。  
   
-##  <a name="a-nameoperatorampa--ccomptrbaseoperator-amp"></a><a name="operator_amp"></a>CComPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
  I 運算子。  
   
 ```
@@ -255,7 +262,7 @@ T** operator&() throw();
 ### <a name="return-value"></a>傳回值  
  傳回所指物件的位址`CComPtrBase`物件。  
   
-##  <a name="a-nameoperatorstara--ccomptrbaseoperator-"></a><a name="operator_star"></a>CComPtrBase::operator *  
+##  <a name="operator_star"></a>CComPtrBase::operator *  
  * 運算子。  
   
 ```
@@ -267,7 +274,7 @@ T& operator*() const throw();
   
  若偵錯組建，判斷錯誤便會發生[CComPtrBase::p](#p)不等於 NULL。  
   
-##  <a name="a-nameoperatoreqeqa--ccomptrbaseoperator-"></a><a name="operator_eq_eq"></a>CComPtrBase::operator = =  
+##  <a name="operator_eq_eq"></a>CComPtrBase::operator = =  
  等號比較運算子。  
   
 ```
@@ -281,7 +288,7 @@ bool operator== (T* pT) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回 true 如果`CComPtrBase`和*pT*指向相同的物件，則為 false 否則。  
   
-##  <a name="a-nameoperatorptra--ccomptrbaseoperator--gt"></a><a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
 
  成員指標運算子。  
   
@@ -295,7 +302,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ### <a name="remarks"></a>備註  
  使用這個運算子所指的類別中呼叫的方法`CComPtrBase`物件。 在偵錯組建中，如果，就會發生判斷提示失敗`CComPtrBase`點為 NULL 的資料成員。  
   
-##  <a name="a-nameoperatorlta--ccomptrbaseoperator-lt"></a><a name="operator_lt"></a>CComPtrBase::operator&lt;  
+##  <a name="operator_lt"></a>CComPtrBase::operator&lt;  
  小於-運算子。  
   
 ```
@@ -309,7 +316,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>傳回值  
  如果由目前物件的指標，則傳回 true 小於的指標，它會進行比較。  
   
-##  <a name="a-nameoperatortstara--ccomptrbaseoperator-t"></a><a name="operator_t_star"></a>CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>CComPtrBase::operator T *  
  轉型運算子。  
   
 ```  
@@ -319,7 +326,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>備註  
  傳回類別樣板中定義的物件資料類型的指標。  
   
-##  <a name="a-namepa--ccomptrbasep"></a><a name="p"></a>CComPtrBase::p  
+##  <a name="p"></a>CComPtrBase::p  
  指標的資料成員變數。  
   
 ```
@@ -329,7 +336,7 @@ T* p;
 ### <a name="remarks"></a>備註  
  這個成員變數會保留指標資訊。  
   
-##  <a name="a-namequeryinterfacea--ccomptrbasequeryinterface"></a><a name="queryinterface"></a>CComPtrBase::QueryInterface  
+##  <a name="queryinterface"></a>CComPtrBase::QueryInterface  
  呼叫這個方法來傳回指定介面的指標。  
   
 ```
@@ -352,7 +359,7 @@ template <class Q> HRESULT QueryInterface(Q
   
  在偵錯組建，判斷提示就會發生錯誤，如果*pp*不等於 NULL。  
   
-##  <a name="a-namereleasea--ccomptrbaserelease"></a><a name="release"></a>CComPtrBase::Release  
+##  <a name="release"></a>CComPtrBase::Release  
  呼叫此方法，以釋放介面。  
   
 ```
@@ -362,7 +369,7 @@ void Release() throw();
 ### <a name="remarks"></a>備註  
  已發行的介面，和[CComPtrBase::p](#p)設為 NULL。  
   
-##  <a name="a-namesetsitea--ccomptrbasesetsite"></a><a name="setsite"></a>CComPtrBase::SetSite  
+##  <a name="setsite"></a>CComPtrBase::SetSite  
  呼叫這個方法來設定的站台`CComPtrBase`物件傳遞給**IUnknown**父物件。  
   
 ```

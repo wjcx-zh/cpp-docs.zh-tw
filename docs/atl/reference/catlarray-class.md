@@ -9,9 +9,27 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlArray
-- ATL.CAtlArray
 - CAtlArray
+- ATLCOLL/ATL::CAtlArray
+- ATLCOLL/ATL::Add
+- ATLCOLL/ATL::Append
+- ATLCOLL/ATL::AssertValid
+- ATLCOLL/ATL::CAtlArray
+- ATLCOLL/ATL::Copy
+- ATLCOLL/ATL::FreeExtra
+- ATLCOLL/ATL::GetAt
+- ATLCOLL/ATL::GetCount
+- ATLCOLL/ATL::GetData
+- ATLCOLL/ATL::InsertArrayAt
+- ATLCOLL/ATL::InsertAt
+- ATLCOLL/ATL::IsEmpty
+- ATLCOLL/ATL::RemoveAll
+- ATLCOLL/ATL::RemoveAt
+- ATLCOLL/ATL::SetAt
+- ATLCOLL/ATL::SetAtGrow
+- ATLCOLL/ATL::SetCount
+- ATLCOLL/ATL::INARGTYPE
+- ATLCOLL/ATL::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +127,7 @@ class CAtlArray
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-nameadda--catlarrayadd"></a><a name="add"></a>CAtlArray::Add  
+##  <a name="add"></a>CAtlArray::Add  
  呼叫這個方法將項目新增至陣列物件。  
   
 ```
@@ -130,7 +148,7 @@ size_t Add();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&1;](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
-##  <a name="a-nameappenda--catlarrayappend"></a><a name="append"></a>CAtlArray::Append  
+##  <a name="append"></a>CAtlArray::Append  
  呼叫這個方法，以加入另一個陣列的內容。  
   
 ```
@@ -154,7 +172,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&2;](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
-##  <a name="a-nameassertvalida--catlarrayassertvalid"></a><a name="assertvalid"></a>CAtlArray::AssertValid  
+##  <a name="assertvalid"></a>CAtlArray::AssertValid  
  呼叫這個方法來確認陣列物件有效。  
   
 ```
@@ -167,7 +185,7 @@ void AssertValid() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&3;](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
-##  <a name="a-namecatlarraya--catlarraycatlarray"></a><a name="catlarray"></a>CAtlArray::CAtlArray  
+##  <a name="catlarray"></a>CAtlArray::CAtlArray  
  建構函式。  
   
 ```
@@ -180,7 +198,7 @@ CAtlArray() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&4;](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
-##  <a name="a-namedtora--catlarraycatlarray"></a><a name="dtor"></a>CAtlArray:: ~ CAtlArray  
+##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
  解構函式。  
   
 ```
@@ -190,7 +208,7 @@ CAtlArray() throw();
 ### <a name="remarks"></a>備註  
  釋放陣列物件所使用的任何資源。  
   
-##  <a name="a-namecopya--catlarraycopy"></a><a name="copy"></a>CAtlArray::Copy  
+##  <a name="copy"></a>CAtlArray::Copy  
  呼叫這個方法來複製到另一個陣列的元素。  
   
 ```
@@ -214,7 +232,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&5;](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
-##  <a name="a-namefreeextraa--catlarrayfreeextra"></a><a name="freeextra"></a>CAtlArray::FreeExtra  
+##  <a name="freeextra"></a>CAtlArray::FreeExtra  
  呼叫這個方法來移除陣列中的任何空白項目。  
   
 ```
@@ -226,7 +244,7 @@ void FreeExtra() throw();
   
  在偵錯組建中，如果 CAtlArray 物件無效，或是陣列會超過其大小上限，就會引發 ATLASSERT。  
   
-##  <a name="a-namegetata--catlarraygetat"></a><a name="getat"></a>CAtlArray::GetAt  
+##  <a name="getat"></a>CAtlArray::GetAt  
  呼叫這個方法，以從陣列物件擷取單一項目。  
   
 ```
@@ -247,7 +265,7 @@ E& GetAt(size_t iElement) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&6;](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
-##  <a name="a-namegetcounta--catlarraygetcount"></a><a name="getcount"></a>CAtlArray::GetCount  
+##  <a name="getcount"></a>CAtlArray::GetCount  
  呼叫此方法以傳回儲存在陣列中的項目數目。  
   
 ```
@@ -263,7 +281,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[CAtlArray::GetAt](#getat)。  
   
-##  <a name="a-namegetdataa--catlarraygetdata"></a><a name="getdata"></a>CAtlArray::GetData  
+##  <a name="getdata"></a>CAtlArray::GetData  
  呼叫此方法以傳回陣列中的第一個元素的指標。  
   
 ```
@@ -277,14 +295,14 @@ const E* GetData() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&7;](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
-##  <a name="a-nameinargtypea--catlarrayinargtype"></a><a name="inargtype"></a>CAtlArray::INARGTYPE  
+##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
  要用來將項目加入至陣列的資料類型。  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="a-nameinsertarrayata--catlarrayinsertarrayat"></a><a name="insertarrayat"></a>CAtlArray::InsertArrayAt  
+##  <a name="insertarrayat"></a>CAtlArray::InsertArrayAt  
  呼叫這個方法來插入另一個陣列。  
   
 ```
@@ -309,7 +327,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&8;](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
-##  <a name="a-nameinsertata--catlarrayinsertat"></a><a name="insertat"></a>CAtlArray::InsertAt  
+##  <a name="insertat"></a>CAtlArray::InsertAt  
  陣列物件呼叫這個方法，以插入新項目 （或多個項目的複本）。  
   
 ```
@@ -334,7 +352,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&9;](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
-##  <a name="a-nameisemptya--catlarrayisempty"></a><a name="isempty"></a>CAtlArray::IsEmpty  
+##  <a name="isempty"></a>CAtlArray::IsEmpty  
  呼叫這個方法來測試是否是空的陣列。  
   
 ```
@@ -350,7 +368,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&10;](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
-##  <a name="a-nameoperatorata--catlarrayoperator-"></a><a name="operator_at"></a>CAtlArray::operator]  
+##  <a name="operator_at"></a>CAtlArray::operator]  
  呼叫這個運算子來傳回陣列中項目的參考。  
   
 ```
@@ -370,14 +388,14 @@ const E& operator[](size_t ielement) const throw();
   
  在偵錯組建 ATLASSERT，將產生`iElement`超過陣列中的項目總數。 在零售組建中無效的參數可能會導致無法預期的結果。  
   
-##  <a name="a-nameoutargtypea--catlarrayoutargtype"></a><a name="outargtype"></a>CAtlArray::OUTARGTYPE  
+##  <a name="outargtype"></a>CAtlArray::OUTARGTYPE  
  要用來擷取項目陣列中的資料類型。  
   
 ```
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```  
   
-##  <a name="a-nameremovealla--catlarrayremoveall"></a><a name="removeall"></a>CAtlArray::RemoveAll  
+##  <a name="removeall"></a>CAtlArray::RemoveAll  
  呼叫這個方法來移除陣列物件的所有項目。  
   
 ```
@@ -392,7 +410,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>範例  
  請參閱範例[CAtlArray::IsEmpty](#isempty)。  
   
-##  <a name="a-nameremoveata--catlarrayremoveat"></a><a name="removeat"></a>CAtlArray::RemoveAt  
+##  <a name="removeat"></a>CAtlArray::RemoveAt  
  呼叫這個方法來移除陣列中的一個或多個項目。  
   
 ```
@@ -414,7 +432,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&11;](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
-##  <a name="a-namesetata--catlarraysetat"></a><a name="setat"></a>CAtlArray::SetAt  
+##  <a name="setat"></a>CAtlArray::SetAt  
  呼叫這個方法來設定陣列物件中項目的值。  
   
 ```
@@ -434,7 +452,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 ### <a name="example"></a>範例  
  請參閱範例[CAtlArray::GetAt](#getat)。  
   
-##  <a name="a-namesetcounta--catlarraysetcount"></a><a name="setcount"></a>CAtlArray::SetCount  
+##  <a name="setcount"></a>CAtlArray::SetCount  
  呼叫這個方法來設定陣列物件的大小。  
   
 ```
@@ -459,7 +477,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ### <a name="example"></a>範例  
  請參閱範例[CAtlArray::GetData](#getdata)。  
   
-##  <a name="a-namesetatgrowa--catlarraysetatgrow"></a><a name="setatgrow"></a>CAtlArray::SetAtGrow  
+##  <a name="setatgrow"></a>CAtlArray::SetAtGrow  
  呼叫這個方法來設定陣列物件，展開所需的陣列中項目的值。  
   
 ```

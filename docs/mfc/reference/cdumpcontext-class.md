@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDumpContext
+- AFX/CDumpContext
+- AFX/CDumpContext::CDumpContext
+- AFX/CDumpContext::DumpAsHex
+- AFX/CDumpContext::Flush
+- AFX/CDumpContext::GetDepth
+- AFX/CDumpContext::HexDump
+- AFX/CDumpContext::SetDepth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +112,7 @@ class CDumpContext
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="a-namecdumpcontexta--cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext  
+##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
  建構類別的物件`CDumpContext`。  
   
 ```  
@@ -124,7 +131,7 @@ CDumpContext(CFile* pFile = NULL);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities #&12;](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
-##  <a name="a-namedumpashexa--cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex  
+##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
  傾印格式化為十六進位數字指定的型別。  
   
 ```  
@@ -147,7 +154,7 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities #&13;](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
-##  <a name="a-nameflusha--cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Flush  
+##  <a name="flush"></a>CDumpContext::Flush  
  強制執行任何剩餘的緩衝區寫入檔案中的資料附加至傾印內容。  
   
 ```  
@@ -157,7 +164,7 @@ void Flush();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities #&14;](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
-##  <a name="a-namegetdeptha--cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth  
+##  <a name="getdepth"></a>CDumpContext::GetDepth  
  判斷是否在處理序中深層或淺層傾印。  
   
 ```  
@@ -170,7 +177,7 @@ int GetDepth() const;
 ### <a name="example"></a>範例  
   請參閱範例[SetDepth](#setdepth)。  
   
-##  <a name="a-namehexdumpa--cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump  
+##  <a name="hexdump"></a>CDumpContext::HexDump  
  傾印格式化為十六進位數字的位元組的陣列。  
   
 ```  
@@ -200,7 +207,7 @@ void HexDump(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities #&15;](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
-##  <a name="a-nameoperatorltlta--cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
  輸出指定要傾印內容的資料。  
   
 ```  
@@ -238,7 +245,7 @@ CDumpContext& operator<<(HFONT h);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities #&17;](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
-##  <a name="a-namesetdeptha--cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::SetDepth  
+##  <a name="setdepth"></a>CDumpContext::SetDepth  
  設定傾印的深度。  
   
 ```  

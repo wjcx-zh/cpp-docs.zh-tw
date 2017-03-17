@@ -8,6 +8,30 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CPagerCtrl
+- AFXCMN/CPagerCtrl
+- AFXCMN/CPagerCtrl::CPagerCtrl
+- AFXCMN/CPagerCtrl::Create
+- AFXCMN/CPagerCtrl::CreateEx
+- AFXCMN/CPagerCtrl::ForwardMouse
+- AFXCMN/CPagerCtrl::GetBkColor
+- AFXCMN/CPagerCtrl::GetBorder
+- AFXCMN/CPagerCtrl::GetButtonSize
+- AFXCMN/CPagerCtrl::GetButtonState
+- AFXCMN/CPagerCtrl::GetDropTarget
+- AFXCMN/CPagerCtrl::GetScrollPos
+- AFXCMN/CPagerCtrl::IsButtonDepressed
+- AFXCMN/CPagerCtrl::IsButtonGrayed
+- AFXCMN/CPagerCtrl::IsButtonHot
+- AFXCMN/CPagerCtrl::IsButtonInvisible
+- AFXCMN/CPagerCtrl::IsButtonNormal
+- AFXCMN/CPagerCtrl::RecalcSize
+- AFXCMN/CPagerCtrl::SetBkColor
+- AFXCMN/CPagerCtrl::SetBorder
+- AFXCMN/CPagerCtrl::SetButtonSize
+- AFXCMN/CPagerCtrl::SetChild
+- AFXCMN/CPagerCtrl::SetScrollPos
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +122,7 @@ class CPagerCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="a-namecpagerctrla--cpagerctrlcpagerctrl"></a><a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
+##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
  建構 `CPagerCtrl` 物件。  
   
 ```  
@@ -108,7 +132,7 @@ CPagerCtrl();
 ### <a name="remarks"></a>備註  
  使用[CPagerCtrl::Create](#create)或[CPagerCtrl::CreateEx](#createex)方法來建立頁面巡覽區控制項，並將其附加至`CPagerCtrl`物件。  
   
-##  <a name="a-namecreatea--cpagerctrlcreate"></a><a name="create"></a>CPagerCtrl::Create  
+##  <a name="create"></a>CPagerCtrl::Create  
  使用指定的樣式建立頁面巡覽區控制項，並將其附加至目前`CPagerCtrl`物件。  
   
 ```  
@@ -139,7 +163,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="a-namecreateexa--cpagerctrlcreateex"></a><a name="createex"></a>CPagerCtrl::CreateEx  
+##  <a name="createex"></a>CPagerCtrl::CreateEx  
  使用指定的延伸樣式建立頁面巡覽區控制項，並將其附加至目前`CPagerCtrl`物件。  
   
 ```  
@@ -167,7 +191,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  若要建立頁面巡覽區控制項，宣告`CPagerCtrl`變數，然後呼叫[CPagerCtrl::Create](#create)或[CPagerCtrl::CreateEx](#createex)位於變數上的方法。  
   
-##  <a name="a-nameforwardmousea--cpagerctrlforwardmouse"></a><a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
+##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
  啟用或停用轉送[WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616)包含在目前的頁面巡覽區控制項的視窗訊息。  
   
 ```  
@@ -183,7 +207,7 @@ void ForwardMouse(BOOL bForward);
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbordera--cpagerctrlgetborder"></a><a name="getborder"></a>CPagerCtrl::GetBorder  
+##  <a name="getborder"></a>CPagerCtrl::GetBorder  
  擷取目前的頁面巡覽區控制項的框線大小。  
   
 ```  
@@ -201,7 +225,7 @@ int GetBorder() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&5;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="a-namegetbkcolora--cpagerctrlgetbkcolor"></a><a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
  擷取目前的頁面巡覽區控制項的背景色彩。  
   
 ```  
@@ -219,7 +243,7 @@ COLORREF GetBkColor() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&4;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="a-namegetbuttonsizea--cpagerctrlgetbuttonsize"></a><a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
  擷取目前的頁面巡覽區控制項的按鈕大小。  
   
 ```  
@@ -234,7 +258,7 @@ int GetButtonSize() const;
   
  如果頁面巡覽區控制項有`PGS_HORZ`樣式 按鈕的大小會決定頁面巡覽區按鈕的寬度與頁面巡覽區控制項有`PGS_VERT`樣式 按鈕的大小會決定頁面巡覽區按鈕的高度。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。  
   
-##  <a name="a-namegetbuttonstatea--cpagerctrlgetbuttonstate"></a><a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
+##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
  擷取目前的頁面巡覽區控制項中指定的捲軸按鈕的狀態。  
   
 ```  
@@ -253,7 +277,7 @@ DWORD GetButtonState(int iButton) const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdroptargeta--cpagerctrlgetdroptarget"></a><a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
  擷取[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)目前的頁面巡覽區控制項的介面。  
   
 ```  
@@ -268,7 +292,7 @@ IDropTarget* GetDropTarget() const;
   
  這個方法會傳送[PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此方法的呼叫端會負責呼叫`Release`成員[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)介面時不再需要的介面。  
   
-##  <a name="a-namegetscrollposa--cpagerctrlgetscrollpos"></a><a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
+##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
  擷取目前的頁面巡覽區控制項的捲動位置。  
   
 ```  
@@ -286,7 +310,7 @@ int GetScrollPos() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&7;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="a-nameisbuttondepresseda--cpagerctrlisbuttondepressed"></a><a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
+##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
  表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於已按下的狀態。  
   
 ```  
@@ -305,7 +329,7 @@ BOOL IsButtonDepressed(int iButton) const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_DEPRESSED`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
   
-##  <a name="a-nameisbuttongrayeda--cpagerctrlisbuttongrayed"></a><a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
+##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
  表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於灰色的狀態。  
   
 ```  
@@ -324,7 +348,7 @@ BOOL IsButtonGrayed(int iButton) const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_GRAYED`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
   
-##  <a name="a-nameisbuttonhota--cpagerctrlisbuttonhot"></a><a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
+##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
  表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於作用中狀態。  
   
 ```  
@@ -343,7 +367,7 @@ BOOL IsButtonHot(int iButton) const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_HOT`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
   
-##  <a name="a-nameisbuttoninvisiblea--cpagerctrlisbuttoninvisible"></a><a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
+##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
  表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於隱藏狀態。  
   
 ```  
@@ -369,7 +393,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&6;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="a-nameisbuttonnormala--cpagerctrlisbuttonnormal"></a><a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
+##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
  表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於正常狀態。  
   
 ```  
@@ -388,7 +412,7 @@ BOOL IsButtonNormal(int iButton) const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_NORMAL`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
   
-##  <a name="a-namerecalcsizea--cpagerctrlrecalcsize"></a><a name="recalcsize"></a>CPagerCtrl::RecalcSize  
+##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
  導致目前的頁面巡覽區控制項重新計算包含視窗的大小。  
   
 ```  
@@ -408,7 +432,7 @@ void RecalcSize();
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&8;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="a-namesetbkcolora--cpagerctrlsetbkcolor"></a><a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
  設定目前的頁面巡覽區控制項的背景色彩。  
   
 ```  
@@ -432,7 +456,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&4;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="a-namesetbordera--cpagerctrlsetborder"></a><a name="setborder"></a>CPagerCtrl::SetBorder  
+##  <a name="setborder"></a>CPagerCtrl::SetBorder  
  設定目前的頁面巡覽區控制項的框線大小。  
   
 ```  
@@ -456,7 +480,7 @@ int SetBorder(int iBorder);
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="a-namesetbuttonsizea--cpagerctrlsetbuttonsize"></a><a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
  設定目前的頁面巡覽區控制項的按鈕大小。  
   
 ```  
@@ -482,7 +506,7 @@ int SetButtonSize(int iButtonSize);
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="a-namesetchilda--cpagerctrlsetchild"></a><a name="setchild"></a>CPagerCtrl::SetChild  
+##  <a name="setchild"></a>CPagerCtrl::SetChild  
  設定目前的頁面巡覽區控制項所包含的視窗。  
   
 ```  
@@ -505,7 +529,7 @@ void SetChild(HWND hwndChild);
   
  [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="a-namesetscrollposa--cpagerctrlsetscrollpos"></a><a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
+##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
  設定目前的頁面巡覽區控制項的捲動位置。  
   
 ```  

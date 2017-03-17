@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComAutoThreadModule
+- ATLBASE/ATL::CComAutoThreadModule
+- ATLBASE/ATL::CreateInstance
+- ATLBASE/ATL::GetDefaultThreads
+- ATLBASE/ATL::Init
+- ATLBASE/ATL::Lock
+- ATLBASE/ATL::Unlock
+- ATLBASE/ATL::dwThreadID
+- ATLBASE/ATL::m_Allocator
+- ATLBASE/ATL::m_nThreads
+- ATLBASE/ATL::m_pApartments
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +121,7 @@ class CComAutoThreadModule : public CComModule
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-namecreateinstancea--ccomautothreadmodulecreateinstance"></a><a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
+##  <a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -137,7 +147,7 @@ HRESULT CreateInstance(
 ### <a name="remarks"></a>備註  
  選取一個執行緒，然後在相關聯的 apartment 中建立的物件。  
   
-##  <a name="a-namedwthreadida--ccomautothreadmoduledwthreadid"></a><a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
+##  <a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -147,7 +157,7 @@ DWORD dwThreadID;
 ### <a name="remarks"></a>備註  
  包含目前執行緒的識別項。  
   
-##  <a name="a-namegetdefaultthreadsa--ccomautothreadmodulegetdefaultthreads"></a><a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -160,7 +170,7 @@ static int GetDefaultThreads();
 ### <a name="remarks"></a>備註  
  這個靜態函式會動態計算 EXE 模組，根據處理器數目的執行緒的數目上限。 根據預設，此傳回值傳遞至[Init](#init)方法來建立執行緒。  
   
-##  <a name="a-nameinita--ccomautothreadmoduleinit"></a><a name="init"></a>CComAutoThreadModule::Init  
+##  <a name="init"></a>CComAutoThreadModule::Init  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -187,7 +197,7 @@ HRESULT Init(
 ### <a name="remarks"></a>備註  
  初始化資料成員，並建立所指定的執行緒數目`nThreads`。  
   
-##  <a name="a-namelocka--ccomautothreadmodulelock"></a><a name="lock"></a>CComAutoThreadModule::Lock  
+##  <a name="lock"></a>CComAutoThreadModule::Lock  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -200,7 +210,7 @@ LONG Lock();
 ### <a name="remarks"></a>備註  
  執行不可部分完成的增量模組和目前執行緒的鎖定計數。 `CComAutoThreadModule`若要判斷任何用戶端是否正在存取模組中使用模組鎖定計數。 目前的執行緒上的鎖定計數用於統計用途。  
   
-##  <a name="a-namemallocatora--ccomautothreadmodulemallocator"></a><a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
+##  <a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -210,7 +220,7 @@ ThreadAllocator  m_Allocator;
 ### <a name="remarks"></a>備註  
  管理執行緒選取範圍的物件。 根據預設，`ThreadAllocator`類別樣板參數是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。  
   
-##  <a name="a-namemnthreadsa--ccomautothreadmodulemnthreads"></a><a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
+##  <a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -220,7 +230,7 @@ int m_nThreads;
 ### <a name="remarks"></a>備註  
  包含 EXE 的模組中的執行緒數目。 當[Init](#init)呼叫時，`m_nThreads`設為`nThreads`參數值。 每個執行緒相關聯的 apartment 由[CComApartment](../../atl/reference/ccomapartment-class.md)物件。  
   
-##  <a name="a-namempapartmentsa--ccomautothreadmodulempapartments"></a><a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
+##  <a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -230,7 +240,7 @@ CComApartment* m_pApartments;
 ### <a name="remarks"></a>備註  
  指向陣列[CComApartment](../../atl/reference/ccomapartment-class.md)物件，其中每個管理模組中的 apartment。 陣列中元素數目根據[m_nThreads](#m_nthreads)成員。  
   
-##  <a name="a-nameunlocka--ccomautothreadmoduleunlock"></a><a name="unlock"></a>CComAutoThreadModule::Unlock  
+##  <a name="unlock"></a>CComAutoThreadModule::Unlock  
  ATL 7.0 截至`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```

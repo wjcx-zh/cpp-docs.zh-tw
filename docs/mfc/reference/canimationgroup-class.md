@@ -9,8 +9,28 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationGroup
 - CAnimationGroup
+- AFXANIMATIONCONTROLLER/CAnimationGroup
+- AFXANIMATIONCONTROLLER/CAnimationGroup::CAnimationGroup
+- AFXANIMATIONCONTROLLER/CAnimationGroup::Animate
+- AFXANIMATIONCONTROLLER/CAnimationGroup::ApplyTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::FindAnimationObject
+- AFXANIMATIONCONTROLLER/CAnimationGroup::GetGroupID
+- AFXANIMATIONCONTROLLER/CAnimationGroup::RemoveKeyframes
+- AFXANIMATIONCONTROLLER/CAnimationGroup::RemoveTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::Schedule
+- AFXANIMATIONCONTROLLER/CAnimationGroup::SetAutodestroyTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::AddKeyframes
+- AFXANIMATIONCONTROLLER/CAnimationGroup::AddTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::CreateTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_bAutoclearTransitions
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_bAutodestroyAnimationObjects
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_bAutodestroyKeyframes
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_lstAnimationObjects
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_lstKeyFrames
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_pStoryboard
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_nGroupID
+- AFXANIMATIONCONTROLLER/CAnimationGroup::m_pParentController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,14 +126,14 @@ class CAnimationGroup;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namedtorcanimationgroupa--canimationgroupcanimationgroup"></a><a name="_dtorcanimationgroup"></a>CAnimationGroup:: ~ CAnimationGroup  
+##  <a name="_dtorcanimationgroup"></a>CAnimationGroup:: ~ CAnimationGroup  
  解構函式。 動畫群組終結時呼叫。  
   
 ```  
 ~CAnimationGroup();
 ```  
   
-##  <a name="a-nameaddkeyframesa--canimationgroupaddkeyframes"></a><a name="addkeyframes"></a>CAnimationGroup::AddKeyframes  
+##  <a name="addkeyframes"></a>CAnimationGroup::AddKeyframes  
  加入主要畫面格的分鏡腳本協助程式。  
   
 ```  
@@ -127,7 +147,7 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
  `bAddDeep`  
  指定這個方法應該加入相依於其他主要畫面格的分鏡腳本主要畫面格。  
   
-##  <a name="a-nameaddtransitionsa--canimationgroupaddtransitions"></a><a name="addtransitions"></a>CAnimationGroup::AddTransitions  
+##  <a name="addtransitions"></a>CAnimationGroup::AddTransitions  
  將轉換加入至分鏡腳本協助程式。  
   
 ```  
@@ -142,7 +162,7 @@ void AddTransitions(
   
  `bDependOnKeyframes`  
   
-##  <a name="a-nameanimatea--canimationgroupanimate"></a><a name="animate"></a>CAnimationGroup::Animate  
+##  <a name="animate"></a>CAnimationGroup::Animate  
  動畫的群組。  
   
 ```  
@@ -163,7 +183,7 @@ BOOL Animate(
 ### <a name="remarks"></a>備註  
  這個方法會建立內部的分鏡腳本、 建立和套用轉換和排程動畫 bScheduleNow 結果為 TRUE。 如果 bScheduleNow 是 FALSE，您需要呼叫啟動動畫在指定的時間排程。  
   
-##  <a name="a-nameapplytransitionsa--canimationgroupapplytransitions"></a><a name="applytransitions"></a>CAnimationGroup::ApplyTransitions  
+##  <a name="applytransitions"></a>CAnimationGroup::ApplyTransitions  
  套用至動畫物件的轉換。  
   
 ```  
@@ -173,7 +193,7 @@ void ApplyTransitions();
 ### <a name="remarks"></a>備註  
  這個方法會判斷提示偵錯模式中如果不建立分鏡腳本。 它首先，建立所有的轉換，然後加入 「 靜態 」 的主要畫面格 （主要畫面格位移而定）、 加入轉換，而不必主要畫面格，加入主要畫面格根據轉換和其他主要畫面格，然後在上一次加入取決於主要畫面格的轉換。  
   
-##  <a name="a-namecanimationgroupa--canimationgroupcanimationgroup"></a><a name="canimationgroup"></a>CAnimationGroup::CAnimationGroup  
+##  <a name="canimationgroup"></a>CAnimationGroup::CAnimationGroup  
  建構動畫群組。  
   
 ```  
@@ -187,7 +207,7 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
  `nGroupID`  
  指定識別碼。  
   
-##  <a name="a-namecreatetransitionsa--canimationgroupcreatetransitions"></a><a name="createtransitions"></a>CAnimationGroup::CreateTransitions  
+##  <a name="createtransitions"></a>CAnimationGroup::CreateTransitions  
  建立轉換的 COM 物件的 helper。  
   
 ```  
@@ -197,7 +217,7 @@ BOOL CreateTransitions();
 ### <a name="return-value"></a>傳回值  
  此方法成功，否則為 FALSE 則為 TRUE。  
   
-##  <a name="a-namefindanimationobjecta--canimationgroupfindanimationobject"></a><a name="findanimationobject"></a>CAnimationGroup::FindAnimationObject  
+##  <a name="findanimationobject"></a>CAnimationGroup::FindAnimationObject  
  尋找包含指定的動畫變數的動畫物件。  
   
 ```  
@@ -211,7 +231,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ### <a name="return-value"></a>傳回值  
  動畫物件或 NULL，如果找不到動畫物件的指標。  
   
-##  <a name="a-namegetgroupida--canimationgroupgetgroupid"></a><a name="getgroupid"></a>CAnimationGroup::GetGroupID  
+##  <a name="getgroupid"></a>CAnimationGroup::GetGroupID  
  傳回 GroupID。  
   
 ```  
@@ -221,63 +241,63 @@ UINT32 GetGroupID() const;
 ### <a name="return-value"></a>傳回值  
  群組識別碼。  
   
-##  <a name="a-namembautocleartransitionsa--canimationgroupmbautocleartransitions"></a><a name="m_bautocleartransitions"></a>CAnimationGroup::m_bAutoclearTransitions  
+##  <a name="m_bautocleartransitions"></a>CAnimationGroup::m_bAutoclearTransitions  
  指定如何清除轉換的動畫物件屬於群組。 這個成員是 TRUE，如果轉換會在動畫已排定自動移除。 否則，您必須手動移除轉換。  
   
 ```  
 BOOL m_bAutoclearTransitions;  
 ```  
   
-##  <a name="a-namembautodestroyanimationobjectsa--canimationgroupmbautodestroyanimationobjects"></a><a name="m_bautodestroyanimationobjects"></a>CAnimationGroup::m_bAutodestroyAnimationObjects  
+##  <a name="m_bautodestroyanimationobjects"></a>CAnimationGroup::m_bAutodestroyAnimationObjects  
  指定要終結動畫物件的方式。 如果此參數為 TRUE，動畫物件將會自動終結時終結該群組。 否則必須以手動方式終結動畫的物件。 預設值為 FALSE。 此值設定為 TRUE，只有當所有動畫物件屬於群組會以動態方式都配置使用 new 運算子。  
   
 ```  
 BOOL m_bAutodestroyAnimationObjects;  
 ```  
   
-##  <a name="a-namembautodestroykeyframesa--canimationgroupmbautodestroykeyframes"></a><a name="m_bautodestroykeyframes"></a>CAnimationGroup::m_bAutodestroyKeyframes  
+##  <a name="m_bautodestroykeyframes"></a>CAnimationGroup::m_bAutodestroyKeyframes  
  指定要終結的主要畫面格的方式。 如果此值為 TRUE，會移除所有主要畫面格，並終結;否則，則會移除從僅限清單。 預設值為 TRUE。  
   
 ```  
 BOOL m_bAutodestroyKeyframes;  
 ```  
   
-##  <a name="a-namemlstanimationobjectsa--canimationgroupmlstanimationobjects"></a><a name="m_lstanimationobjects"></a>CAnimationGroup::m_lstAnimationObjects  
+##  <a name="m_lstanimationobjects"></a>CAnimationGroup::m_lstAnimationObjects  
  包含動畫物件的清單。  
   
 ```  
 CObList m_lstAnimationObjects;  
 ```  
   
-##  <a name="a-namemlstkeyframesa--canimationgroupmlstkeyframes"></a><a name="m_lstkeyframes"></a>CAnimationGroup::m_lstKeyFrames  
+##  <a name="m_lstkeyframes"></a>CAnimationGroup::m_lstKeyFrames  
  包含一份主要畫面格。  
   
 ```  
 CObList m_lstKeyFrames;  
 ```  
   
-##  <a name="a-namemngroupida--canimationgroupmngroupid"></a><a name="m_ngroupid"></a>CAnimationGroup::m_nGroupID  
+##  <a name="m_ngroupid"></a>CAnimationGroup::m_nGroupID  
  動畫群組的唯一識別項。  
   
 ```  
 UINT32 m_nGroupID;  
 ```  
   
-##  <a name="a-namempparentcontrollera--canimationgroupmpparentcontroller"></a><a name="m_pparentcontroller"></a>CAnimationGroup::m_pParentController  
+##  <a name="m_pparentcontroller"></a>CAnimationGroup::m_pParentController  
  此群組所屬的動畫控制器指標。  
   
 ```  
 CAnimationController* m_pParentController;  
 ```  
   
-##  <a name="a-namempstoryboarda--canimationgroupmpstoryboard"></a><a name="m_pstoryboard"></a>CAnimationGroup::m_pStoryboard  
+##  <a name="m_pstoryboard"></a>CAnimationGroup::m_pStoryboard  
  指向以動畫腳本。 只有在動畫上呼叫之後，這個指標是有效。  
   
 ```  
 ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;  
 ```  
   
-##  <a name="a-nameremovekeyframesa--canimationgroupremovekeyframes"></a><a name="removekeyframes"></a>CAnimationGroup::RemoveKeyframes  
+##  <a name="removekeyframes"></a>CAnimationGroup::RemoveKeyframes  
  移除，並選擇性地會終結所有主要畫面格動畫群組。  
   
 ```  
@@ -287,7 +307,7 @@ void RemoveKeyframes();
 ### <a name="remarks"></a>備註  
  如果 m_bAutodestroyKeyframes 成員則為 TRUE，則會移除主要畫面格，並將其終結，否則主要畫面格只會移除從內部清單中的主要畫面格。  
   
-##  <a name="a-nameremovetransitionsa--canimationgroupremovetransitions"></a><a name="removetransitions"></a>CAnimationGroup::RemoveTransitions  
+##  <a name="removetransitions"></a>CAnimationGroup::RemoveTransitions  
  移除屬於群組的動畫的動畫物件的轉換。  
   
 ```  
@@ -297,7 +317,7 @@ void RemoveTransitions();
 ### <a name="remarks"></a>備註  
  如果 m_bAutoclearTransitions 旗標設為 TRUE 時，這個方法屬於該群組的所有動畫物件進行都迴圈，並且呼叫 CAnimationObject::ClearTransitions(FALSE)。  
   
-##  <a name="a-nameschedulea--canimationgroupschedule"></a><a name="schedule"></a>CAnimationGroup::Schedule  
+##  <a name="schedule"></a>CAnimationGroup::Schedule  
  排程在指定時間的動畫。  
   
 ```  
@@ -317,7 +337,7 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ### <a name="remarks"></a>備註  
  呼叫此函式可排程於指定時間的動畫。 您必須呼叫動畫與 bScheduleNow 先設為 FALSE。  
   
-##  <a name="a-namesetautodestroytransitionsa--canimationgroupsetautodestroytransitions"></a><a name="setautodestroytransitions"></a>CAnimationGroup::SetAutodestroyTransitions  
+##  <a name="setautodestroytransitions"></a>CAnimationGroup::SetAutodestroyTransitions  
  指示所有動畫物件屬於群組會自動都終結轉換。  
   
 ```  

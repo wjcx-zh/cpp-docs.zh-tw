@@ -10,6 +10,28 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSafeArray
+- ATLSAFE/ATL::CComSafeArray
+- ATLSAFE/ATL::CComSafeArray::CComSafeArray
+- ATLSAFE/ATL::CComSafeArray::Add
+- ATLSAFE/ATL::CComSafeArray::Attach
+- ATLSAFE/ATL::CComSafeArray::CopyFrom
+- ATLSAFE/ATL::CComSafeArray::CopyTo
+- ATLSAFE/ATL::CComSafeArray::Create
+- ATLSAFE/ATL::CComSafeArray::Destroy
+- ATLSAFE/ATL::CComSafeArray::Detach
+- ATLSAFE/ATL::CComSafeArray::GetAt
+- ATLSAFE/ATL::CComSafeArray::GetCount
+- ATLSAFE/ATL::CComSafeArray::GetDimensions
+- ATLSAFE/ATL::CComSafeArray::GetLowerBound
+- ATLSAFE/ATL::CComSafeArray::GetSafeArrayPtr
+- ATLSAFE/ATL::CComSafeArray::GetType
+- ATLSAFE/ATL::CComSafeArray::GetUpperBound
+- ATLSAFE/ATL::CComSafeArray::IsSizable
+- ATLSAFE/ATL::CComSafeArray::MultiDimGetAt
+- ATLSAFE/ATL::CComSafeArray::MultiDimSetAt
+- ATLSAFE/ATL::CComSafeArray::Resize
+- ATLSAFE/ATL::CComSafeArray::SetAt
+- ATLSAFE/ATL::CComSafeArray::m_psa
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -137,7 +159,7 @@ class CComSafeArray
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&75;](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
-##  <a name="a-nameadda--ccomsafearrayadd"></a><a name="add"></a>CComSafeArray::Add  
+##  <a name="add"></a>CComSafeArray::Add  
  將一或多個項目 (或 **SAFEARRAY** 結構) 加入 `CComSafeArray`。  
   
 ```
@@ -170,7 +192,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
   
  `bCopy`旗標考慮到當項目類型的`BSTR`或**VARIANT**會加入至陣列。 預設值的**TRUE**會確保新的複本是資料的項目加入至陣列時。  
   
-##  <a name="a-nameattacha--ccomsafearrayattach"></a><a name="attach"></a>CComSafeArray::Attach  
+##  <a name="attach"></a>CComSafeArray::Attach  
  將 **SAFEARRAY** 結構附加至 `CComSafeArray` 物件。  
   
 ```
@@ -187,7 +209,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>備註  
  附加**SAFEARRAY**結構以`CComSafeArray`的物件，使現有`CComSafeArray`可用方法。  
   
-##  <a name="a-nameccomsafearraya--ccomsafearrayccomsafearray"></a><a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
+##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
  建構函式。  
   
 ```
@@ -225,7 +247,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>備註  
  建立 `CComSafeArray` 物件。  
   
-##  <a name="a-namedtora--ccomsafearrayccomsafearray"></a><a name="dtor"></a>Ccomsafearray 的 Safearray:: ~ ccomsafearray 的 Safearray  
+##  <a name="dtor"></a>Ccomsafearray 的 Safearray:: ~ ccomsafearray 的 Safearray  
  解構函式。  
   
 ```
@@ -235,7 +257,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-namecopyfroma--ccomsafearraycopyfrom"></a><a name="copyfrom"></a>CComSafeArray::CopyFrom  
+##  <a name="copyfrom"></a>CComSafeArray::CopyFrom  
  將 **SAFEARRAY** 結構的內容複製到 `CComSafeArray` 物件中。  
   
 ```
@@ -252,7 +274,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>備註  
  這個方法的內容複製**SAFEARRAY**到目前`CComSafeArray`物件。 會取代現有的陣列的內容。  
   
-##  <a name="a-namecopytoa--ccomsafearraycopyto"></a><a name="copyto"></a>CComSafeArray::CopyTo  
+##  <a name="copyto"></a>CComSafeArray::CopyTo  
  建立 `CComSafeArray` 物件的複本。  
   
 ```
@@ -269,7 +291,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>備註  
  這個方法的內容複製`CComSafeArray`物件插入**SAFEARRAY**結構。  
   
-##  <a name="a-namecreatea--ccomsafearraycreate"></a><a name="create"></a>CComSafeArray::Create  
+##  <a name="create"></a>CComSafeArray::Create  
  建立 `CComSafeArray`。  
   
 ```
@@ -296,7 +318,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>備註  
  A`CComSafeArray`物件可以建立從現有**SAFEARRAYBOUND**結構和數字的維度，或藉由在陣列與下限指定的項目數。 如果陣列是從 Visual c + + 存取，而下限應該是 0。 其他語言可能可以使用其他值下限 （例如，項目，例如-10 到 10 的範圍的 Visual Basic 支援陣列）。  
   
-##  <a name="a-namedestroya--ccomsafearraydestroy"></a><a name="destroy"></a>CComSafeArray::Destroy  
+##  <a name="destroy"></a>CComSafeArray::Destroy  
  終結 `CComSafeArray` 物件。  
   
 ```
@@ -309,7 +331,7 @@ HRESULT Destroy();
 ### <a name="remarks"></a>備註  
  終結的現有`CComSafeArray`物件及其所有包含的資料。  
   
-##  <a name="a-namedetacha--ccomsafearraydetach"></a><a name="detach"></a>CComSafeArray::Detach  
+##  <a name="detach"></a>CComSafeArray::Detach  
  從 **物件卸離** SAFEARRAY `CComSafeArray` 。  
   
 ```
@@ -322,7 +344,7 @@ LPSAFEARRAY Detach();
 ### <a name="remarks"></a>備註  
  這個方法會卸離**SAFEARRAY**物件從`CComSafeArray`物件。  
   
-##  <a name="a-namegetata--ccomsafearraygetat"></a><a name="getat"></a>CComSafeArray::GetAt  
+##  <a name="getat"></a>CComSafeArray::GetAt  
  從一維陣列中擷取單一項目。  
   
 ```
@@ -336,7 +358,7 @@ T& GetAt(LONG lIndex) const;
 ### <a name="return-value"></a>傳回值  
  傳回所需的陣列元素的參考。  
   
-##  <a name="a-namegetcounta--ccomsafearraygetcount"></a><a name="getcount"></a>CComSafeArray::GetCount  
+##  <a name="getcount"></a>CComSafeArray::GetCount  
  傳回陣列中的元素數目。  
   
 ```
@@ -353,7 +375,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="remarks"></a>備註  
  多維陣列搭配使用時，這個方法會傳回的項目數特定維度中。  
   
-##  <a name="a-namegetdimensionsa--ccomsafearraygetdimensions"></a><a name="getdimensions"></a>CComSafeArray::GetDimensions  
+##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
  傳回陣列中的維度數目。  
   
 ```
@@ -363,7 +385,7 @@ UINT GetDimensions() const;
 ### <a name="return-value"></a>傳回值  
  傳回陣列中的維度數目。  
   
-##  <a name="a-namegetlowerbounda--ccomsafearraygetlowerbound"></a><a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
+##  <a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
  傳回陣列中指定維度的下限。  
   
 ```
@@ -380,7 +402,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>備註  
  如果下限為 0，這表示類似 C 陣列，其第一個項目都是項目編號 0。 發生錯誤時，例如，無效的維度引數，這個方法會呼叫`AtlThrow`，描述錯誤的 HRESULT。  
   
-##  <a name="a-namegetsafearrayptra--ccomsafearraygetsafearrayptr"></a><a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
+##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
  傳回 `m_psa` 資料成員的位址。  
   
 ```
@@ -390,7 +412,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 ### <a name="return-value"></a>傳回值  
  傳回的指標[CComSafeArray::m_psa](#m_psa)資料成員。  
   
-##  <a name="a-namegettypea--ccomsafearraygettype"></a><a name="gettype"></a>CComSafeArray::GetType  
+##  <a name="gettype"></a>CComSafeArray::GetType  
  傳回陣列中儲存之資料的類型。  
   
 ```
@@ -418,7 +440,7 @@ VARTYPE GetType() const;
 |VT_VARIANT|variant 指標|  
 |VT_CY|Currency 資料類型|  
   
-##  <a name="a-namegetupperbounda--ccomsafearraygetupperbound"></a><a name="getupperbound"></a>CComSafeArray::GetUpperBound  
+##  <a name="getupperbound"></a>CComSafeArray::GetUpperBound  
  傳回陣列中任何維度的上限。  
   
 ```
@@ -435,7 +457,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>備註  
  發生錯誤時，例如，無效的維度引數，這個方法會呼叫`AtlThrow`，描述錯誤的 HRESULT。  
   
-##  <a name="a-nameissizablea--ccomsafearrayissizable"></a><a name="issizable"></a>CComSafeArray::IsSizable  
+##  <a name="issizable"></a>CComSafeArray::IsSizable  
  測試是否可以調整 `CComSafeArray` 物件大小。  
   
 ```
@@ -445,14 +467,14 @@ bool IsSizable() const;
 ### <a name="return-value"></a>傳回值  
  傳回**true**如果`CComSafeArray`可調整大小， **false**如果不行。  
   
-##  <a name="a-namempsaa--ccomsafearraympsa"></a><a name="m_psa"></a>CComSafeArray::m_psa  
+##  <a name="m_psa"></a>CComSafeArray::m_psa  
  保留的位址**SAFEARRAY**結構的存取。  
   
 ```
 LPSAFEARRAY m_psa;
 ```  
   
-##  <a name="a-namemultidimgetata--ccomsafearraymultidimgetat"></a><a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
+##  <a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
  從多維陣列中擷取單一項目。  
   
 ```
@@ -469,7 +491,7 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="a-namemultidimsetata--ccomsafearraymultidimsetat"></a><a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
+##  <a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
  設定多維陣列中的項目值。  
   
 ```
@@ -489,7 +511,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="remarks"></a>備註  
  這是多維度版本[CComSafeArray::SetAt](#setat)。  
   
-##  <a name="a-nameoperatorata--ccomsafearrayoperator-"></a><a name="operator_at"></a>CComSafeArray::operator\[\]  
+##  <a name="operator_at"></a>CComSafeArray::operator\[\]  
  從陣列中擷取項目。  
   
 ```
@@ -507,7 +529,7 @@ T& operator[]int nindex) const;
 ### <a name="remarks"></a>備註  
  執行類似的功能[CComSafeArray::GetAt](#getat)，但是這個運算子只能搭配一維陣列。  
   
-##  <a name="a-nameoperatoreqa--ccomsafearrayoperator-"></a><a name="operator_eq"></a>CComSafeArray::operator =  
+##  <a name="operator_eq"></a>CComSafeArray::operator =  
  指派運算子。  
   
 ```
@@ -525,7 +547,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 ### <a name="return-value"></a>傳回值  
  傳回陣列中儲存之資料的類型。  
   
-##  <a name="a-nameoperatorlpsafearraya--ccomsafearrayoperator-lpsafearray"></a><a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
+##  <a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
  將值轉換成 **SAFEARRAY** 指標。  
   
 ```
@@ -535,7 +557,7 @@ operator LPSAFEARRAY() const;
 ### <a name="return-value"></a>傳回值  
  將值轉換成 **SAFEARRAY** 指標。  
   
-##  <a name="a-nameresizea--ccomsafearrayresize"></a><a name="resize"></a>CComSafeArray::Resize  
+##  <a name="resize"></a>CComSafeArray::Resize  
  調整 `CComSafeArray` 物件大小。  
   
 ```
@@ -559,7 +581,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="remarks"></a>備註  
  這個方法只會調整大小的最右邊的維度。 它不會調整大小，傳回的陣列**IsResizable**為**false**。  
   
-##  <a name="a-namesetata--ccomsafearraysetat"></a><a name="setat"></a>CComSafeArray::SetAt  
+##  <a name="setat"></a>CComSafeArray::SetAt  
  設定一維陣列中的項目值。  
   
 ```

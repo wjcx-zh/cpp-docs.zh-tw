@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBitmap
+- AFXWIN/CBitmap
+- AFXWIN/CBitmap::CBitmap
+- AFXWIN/CBitmap::CreateBitmap
+- AFXWIN/CBitmap::CreateBitmapIndirect
+- AFXWIN/CBitmap::CreateCompatibleBitmap
+- AFXWIN/CBitmap::CreateDiscardableBitmap
+- AFXWIN/CBitmap::FromHandle
+- AFXWIN/CBitmap::GetBitmap
+- AFXWIN/CBitmap::GetBitmapBits
+- AFXWIN/CBitmap::GetBitmapDimension
+- AFXWIN/CBitmap::LoadBitmap
+- AFXWIN/CBitmap::LoadMappedBitmap
+- AFXWIN/CBitmap::LoadOEMBitmap
+- AFXWIN/CBitmap::SetBitmapBits
+- AFXWIN/CBitmap::SetBitmapDimension
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +112,7 @@ class CBitmap : public CGdiObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecbitmapa--cbitmapcbitmap"></a><a name="cbitmap"></a>CBitmap::CBitmap  
+##  <a name="cbitmap"></a>CBitmap::CBitmap  
  建構 `CBitmap` 物件。  
   
 ```  
@@ -107,7 +122,7 @@ CBitmap();
 ### <a name="remarks"></a>備註  
  產生的物件必須先初始化與其中一個成員函式初始化。  
   
-##  <a name="a-namecreatebitmapa--cbitmapcreatebitmap"></a><a name="createbitmap"></a>CBitmap::CreateBitmap  
+##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
  初始化具有指定寬度、高度和位元模式之因裝置而異的記憶體點陣圖。  
   
 ```  
@@ -147,7 +162,7 @@ BOOL CreateBitmap(
   
  如需詳細資訊，請參閱 **BITMAP** 結構中 **bmBits** 欄位的說明。 [點陣圖](../../mfc/reference/bitmap-structure.md)結構描述下[CBitmap::CreateBitmapIndirect](#createbitmapindirect)成員函式。  
   
-##  <a name="a-namecreatebitmapindirecta--cbitmapcreatebitmapindirect"></a><a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
+##  <a name="createbitmapindirect"></a>CBitmap::CreateBitmapIndirect  
  初始化寬度、 高度和位元模式 （如果已指定） 所指向的結構中指定的點陣圖`lpBitmap`。  
   
 ```  
@@ -168,7 +183,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
   
  當您完成使用`CBitmap`物件以建立`CreateBitmapIndirect`函式，先選取 從裝置內容中，點陣圖，然後刪除`CBitmap`物件。  
   
-##  <a name="a-namecreatecompatiblebitmapa--cbitmapcreatecompatiblebitmap"></a><a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
+##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
  初始化與所指定的裝置相容的點陣圖`pDC`。  
   
 ```  
@@ -202,7 +217,7 @@ BOOL CreateCompatibleBitmap(
   
  當您完成使用`CBitmap`物件以建立`CreateCompatibleBitmap`函式，先選取 從裝置內容中，點陣圖，然後刪除`CBitmap`物件。  
   
-##  <a name="a-namecreatediscardablebitmapa--cbitmapcreatediscardablebitmap"></a><a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
+##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
  初始化與所識別的裝置內容的可捨棄點陣圖`pDC`。  
   
 ```  
@@ -232,7 +247,7 @@ BOOL CreateDiscardableBitmap(
   
  當您完成使用`CBitmap`物件以建立`CreateDiscardableBitmap`函式，先選取 從裝置內容中，點陣圖，然後刪除`CBitmap`物件。  
   
-##  <a name="a-namefromhandlea--cbitmapfromhandle"></a><a name="fromhandle"></a>CBitmap::FromHandle  
+##  <a name="fromhandle"></a>CBitmap::FromHandle  
  若要將指標傳回`CBitmap`物件指定 Windows GDI 點陣圖控制代碼時。  
   
 ```  
@@ -249,7 +264,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="remarks"></a>備註  
  如果`CBitmap`物件尚未附加至控制代碼，暫存`CBitmap`會建立並附加物件。 此暫存`CBitmap`僅直到下一次應用程式在其事件迴圈中有閒置時間，在這次所有暫存圖形會刪除物件，物件才有效。 另一種說法是，此暫存物件的一個視窗訊息處理期間才有效。  
   
-##  <a name="a-namegetbitmapa--cbitmapgetbitmap"></a><a name="getbitmap"></a>CBitmap::GetBitmap  
+##  <a name="getbitmap"></a>CBitmap::GetBitmap  
  擷取附加點陣圖影像屬性。  
   
 ```  
@@ -265,7 +280,7 @@ int GetBitmap(BITMAP* pBitMap);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetbitmapbitsa--cbitmapgetbitmapbits"></a><a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
+##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
  將附加的點陣圖的位元模式複製到指定的緩衝區。  
   
 ```  
@@ -287,7 +302,7 @@ DWORD GetBitmapBits(
 ### <a name="remarks"></a>備註  
  使用[CBitmap::GetBitmap](#getbitmap)來判斷所需的緩衝區大小。  
   
-##  <a name="a-namegetbitmapdimensiona--cbitmapgetbitmapdimension"></a><a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
+##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
  傳回點陣圖的高度與寬度。  
   
 ```  
@@ -300,7 +315,7 @@ CSize GetBitmapDimension() const;
 ### <a name="remarks"></a>備註  
  高度和寬度會假設已使用先前設定[SetBitmapDimension](#setbitmapdimension)成員函式。  
   
-##  <a name="a-nameloadbitmapa--cbitmaploadbitmap"></a><a name="loadbitmap"></a>Cbitmap:: Loadbitmap  
+##  <a name="loadbitmap"></a>Cbitmap:: Loadbitmap  
  載入所命名的點陣圖資源`lpszResourceName`中的 ID 編號來識別或`nIDResource`從應用程式的可執行檔。  
   
 ```  
@@ -334,7 +349,7 @@ BOOL LoadBitmap(UINT nIDResource);
   
  這些點陣圖找不到的 Windows 版本的裝置驅動程式 3.0 版及更早版本。 點陣圖，以及其外觀的完整清單，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameloadmappedbitmapa--cbitmaploadmappedbitmap"></a><a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
+##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
  呼叫此成員函式可載入點陣圖，並將色彩對應至目前的系統色彩。  
   
 ```  
@@ -366,7 +381,7 @@ BOOL LoadMappedBitmap(
   
  如需建立對應的點陣圖的資訊，請參閱 Windows 函式[CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562)和[COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameloadoembitmapa--cbitmaploadoembitmap"></a><a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
+##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  載入 Windows 所使用的預先定義的點陣圖。  
   
 ```  
@@ -405,7 +420,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
   
  請注意，常數**OEMRESOURCE**必須包含 WINDOWS 前先定義。若要使用的任何 H **OBM_**常數。  
   
-##  <a name="a-nameoperatorhbitmapa--cbitmapoperator-hbitmap"></a><a name="operator_hbitmap"></a>CBitmap::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>CBitmap::operator HBITMAP  
  使用這個運算子來取得附加的 Windows GDI 控制代碼的`CBitmap`物件。  
   
 ```  
@@ -420,7 +435,7 @@ operator HBITMAP() const;
   
  如需使用圖形物件的詳細資訊，請參閱[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetbitmapbitsa--cbitmapsetbitmapbits"></a><a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
+##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
  將點陣圖的位元設定為所指定的位元值`lpBits`。  
   
 ```  
@@ -439,7 +454,7 @@ DWORD SetBitmapBits(
 ### <a name="return-value"></a>傳回值  
  點陣圖位元; 設定中使用的位元組數目0，表示函式失敗。  
   
-##  <a name="a-namesetbitmapdimensiona--cbitmapsetbitmapdimension"></a><a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
+##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
  點陣圖，以 0.1 公釐為單位指定寬度和高度。  
   
 ```  

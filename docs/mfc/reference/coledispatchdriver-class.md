@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDispatchDriver
+- AFXDISP/COleDispatchDriver
+- AFXDISP/COleDispatchDriver::COleDispatchDriver
+- AFXDISP/COleDispatchDriver::AttachDispatch
+- AFXDISP/COleDispatchDriver::CreateDispatch
+- AFXDISP/COleDispatchDriver::DetachDispatch
+- AFXDISP/COleDispatchDriver::GetProperty
+- AFXDISP/COleDispatchDriver::InvokeHelper
+- AFXDISP/COleDispatchDriver::ReleaseDispatch
+- AFXDISP/COleDispatchDriver::SetProperty
+- AFXDISP/COleDispatchDriver::m_bAutoRelease
+- AFXDISP/COleDispatchDriver::m_lpDispatch
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +114,7 @@ class COleDispatchDriver
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-nameattachdispatcha--coledispatchdriverattachdispatch"></a><a name="attachdispatch"></a>COleDispatchDriver::AttachDispatch  
+##  <a name="attachdispatch"></a>COleDispatchDriver::AttachDispatch  
  呼叫 `AttachDispatch` 成員函式可將 `IDispatch` 指標附加至 `COleDispatchDriver` 物件。 如需詳細資訊，請參閱[實作 IDispatch 介面](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
   
 ```  
@@ -125,7 +136,7 @@ void AttachDispatch(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&3;](../../mfc/codesnippet/cpp/coledispatchdriver-class_1.cpp)]  
   
-##  <a name="a-namecoledispatchdrivera--coledispatchdrivercoledispatchdriver"></a><a name="coledispatchdriver"></a>COleDispatchDriver::COleDispatchDriver  
+##  <a name="coledispatchdriver"></a>COleDispatchDriver::COleDispatchDriver  
  建構 `COleDispatchDriver` 物件。  
   
 ```  
@@ -154,7 +165,7 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 ### <a name="example"></a>範例  
   請參閱範例[COleDispatchDriver::CreateDispatch](#createdispatch)。  
   
-##  <a name="a-namecreatedispatcha--coledispatchdrivercreatedispatch"></a><a name="createdispatch"></a>COleDispatchDriver::CreateDispatch  
+##  <a name="createdispatch"></a>COleDispatchDriver::CreateDispatch  
  建立[IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)介面物件，並將它附加`COleDispatchDriver`物件。  
   
 ```  
@@ -184,7 +195,7 @@ BOOL CreateDispatch(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&4;](../../mfc/codesnippet/cpp/coledispatchdriver-class_2.cpp)]  
   
-##  <a name="a-namedetachdispatcha--coledispatchdriverdetachdispatch"></a><a name="detachdispatch"></a>COleDispatchDriver::DetachDispatch  
+##  <a name="detachdispatch"></a>COleDispatchDriver::DetachDispatch  
  卸離目前`IDispatch`從此物件的連接。  
   
 ```  
@@ -202,7 +213,7 @@ LPDISPATCH DetachDispatch();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&5;](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
   
-##  <a name="a-namegetpropertya--coledispatchdrivergetproperty"></a><a name="getproperty"></a>COleDispatchDriver::GetProperty  
+##  <a name="getproperty"></a>COleDispatchDriver::GetProperty  
  取得所指定的物件屬性`dwDispID`。  
   
 ```  
@@ -225,7 +236,7 @@ void GetProperty(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&6;](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]  
   
-##  <a name="a-nameinvokehelpera--coledispatchdriverinvokehelper"></a><a name="invokehelper"></a>COleDispatchDriver::InvokeHelper  
+##  <a name="invokehelper"></a>COleDispatchDriver::InvokeHelper  
  在 `dwDispID`指定的內容中，呼叫物件方法或 `wFlags`所指定的屬性。  
   
 ```  
@@ -286,7 +297,7 @@ void AFX_CDECL InvokeHelper(
 ### <a name="example"></a>範例  
   請參閱範例[COleDispatchDriver::CreateDispatch](#createdispatch)。  
   
-##  <a name="a-namembautoreleasea--coledispatchdrivermbautorelease"></a><a name="m_bautorelease"></a>COleDispatchDriver::m_bAutoRelease  
+##  <a name="m_bautorelease"></a>COleDispatchDriver::m_bAutoRelease  
  如果**TRUE**，來存取 COM 物件[m_lpDispatch](#m_lpdispatch)會自動釋放時[ReleaseDispatch](#releasedispatch)稱為或當這`COleDispatchDriver`物件被終結。  
   
 ```  
@@ -301,7 +312,7 @@ BOOL m_bAutoRelease;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&9;](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]  
   
-##  <a name="a-namemlpdispatcha--coledispatchdrivermlpdispatch"></a><a name="m_lpdispatch"></a>COleDispatchDriver::m_lpDispatch  
+##  <a name="m_lpdispatch"></a>COleDispatchDriver::m_lpDispatch  
  將指標`IDispatch`介面附加至這個`COleDispatchDriver`。  
   
 ```  
@@ -316,7 +327,7 @@ LPDISPATCH m_lpDispatch;
 ### <a name="example"></a>範例  
   請參閱範例[COleDispatchDriver::AttachDispatch](#attachdispatch)。  
   
-##  <a name="a-nameoperatoreqa--coledispatchdriveroperator-"></a><a name="operator_eq"></a>COleDispatchDriver::operator =  
+##  <a name="operator_eq"></a>COleDispatchDriver::operator =  
  複製到來源值`COleDispatchDriver`物件。  
   
 ```  
@@ -327,7 +338,7 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
  `dispatchSrc`  
  指向現有的`COleDispatchDriver`物件。  
   
-##  <a name="a-nameoperatorlpdispatcha--coledispatchdriveroperator-lpdispatch"></a><a name="operator_lpdispatch"></a>COleDispatchDriver::operator LPDISPATCH  
+##  <a name="operator_lpdispatch"></a>COleDispatchDriver::operator LPDISPATCH  
  存取基礎`IDispatch`指標`COleDispatchDriver`物件。  
   
 ```  
@@ -337,7 +348,7 @@ operator LPDISPATCH();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&8;](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]  
   
-##  <a name="a-namereleasedispatcha--coledispatchdriverreleasedispatch"></a><a name="releasedispatch"></a>COleDispatchDriver::ReleaseDispatch  
+##  <a name="releasedispatch"></a>COleDispatchDriver::ReleaseDispatch  
  版本`IDispatch`連線。 如需詳細資訊，請參閱[實作 IDispatch 介面](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)  
   
 ```  
@@ -350,7 +361,7 @@ void ReleaseDispatch();
 ### <a name="example"></a>範例  
   請參閱範例[COleDispatchDriver::AttachDispatch](#attachdispatch)。  
   
-##  <a name="a-namesetpropertya--coledispatchdriversetproperty"></a><a name="setproperty"></a>COleDispatchDriver::SetProperty  
+##  <a name="setproperty"></a>COleDispatchDriver::SetProperty  
  設定 `dwDispID`指定的 OLE 物件屬性。  
   
 ```  

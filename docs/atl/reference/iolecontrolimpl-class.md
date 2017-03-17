@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl
+- ATLCTL/ATL::IOleControlImpl::FreezeEvents
+- ATLCTL/ATL::IOleControlImpl::GetControlInfo
+- ATLCTL/ATL::IOleControlImpl::OnAmbientPropertyChange
+- ATLCTL/ATL::IOleControlImpl::OnMnemonic
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +85,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namefreezeeventsa--iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
  在 ATL 的實作中，`FreezeEvents`遞增 control 類別`m_nFreezeEvents`資料成員如果`bFreeze`是**TRUE**，並遞減`m_nFreezeEvents`如果`bFreeze`是**FALSE**。  
   
 ```
@@ -92,7 +97,7 @@ HRESULT FreezeEvents(BOOL bFreeze);
   
  請參閱[IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetcontrolinfoa--iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
  填滿控制項的鍵盤行為的相關資訊。  
   
 ```
@@ -105,7 +110,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>傳回值  
  傳回**E_NOTIMPL**。  
   
-##  <a name="a-nameonambientpropertychangea--iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
  通知一或多個容器的環境屬性已變更的控制項。  
   
 ```
@@ -118,7 +123,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>備註  
  請參閱[IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonmnemonica--iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
  通知控制項使用者已按下指定的按鍵。  
   
 ```

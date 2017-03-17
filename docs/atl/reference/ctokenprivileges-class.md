@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CTokenPrivileges
 - CTokenPrivileges
-- ATL.CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges::CTokenPrivileges
+- ATLSECURITY/ATL::CTokenPrivileges::Add
+- ATLSECURITY/ATL::CTokenPrivileges::Delete
+- ATLSECURITY/ATL::CTokenPrivileges::DeleteAll
+- ATLSECURITY/ATL::CTokenPrivileges::GetCount
+- ATLSECURITY/ATL::CTokenPrivileges::GetDisplayNames
+- ATLSECURITY/ATL::CTokenPrivileges::GetLength
+- ATLSECURITY/ATL::CTokenPrivileges::GetLuidsAndAttributes
+- ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
+- ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
+- ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +106,7 @@ class CTokenPrivileges
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h  
   
-##  <a name="a-nameadda--ctokenprivilegesadd"></a><a name="add"></a>CTokenPrivileges::Add  
+##  <a name="add"></a>CTokenPrivileges::Add  
  新增一或多個權限，才能`CTokenPrivileges`存取權杖的物件。  
   
 ```
@@ -117,7 +127,7 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="return-value"></a>傳回值  
  這個方法的第一種形式傳回權限已成功加入，false 否則如果為 true。  
   
-##  <a name="a-namectokenprivilegesa--ctokenprivilegesctokenprivileges"></a><a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
+##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges  
  建構函式。  
   
 ```
@@ -136,7 +146,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>備註  
  `CTokenPrivileges`物件可以選擇性地建立使用**TOKEN_PRIVILEGES**結構或先前定義`CTokenPrivileges`物件。  
   
-##  <a name="a-namedtora--ctokenprivilegesctokenprivileges"></a><a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
  解構函式。  
   
 ```
@@ -146,7 +156,7 @@ virtual ~CTokenPrivileges() throw();
 ### <a name="remarks"></a>備註  
  解構函式會釋放所有配置的資源。  
   
-##  <a name="a-namedeletea--ctokenprivilegesdelete"></a><a name="delete"></a>CTokenPrivileges::Delete  
+##  <a name="delete"></a>CTokenPrivileges::Delete  
  刪除權限`CTokenPrivileges`存取權杖的物件。  
   
 ```
@@ -163,7 +173,7 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 ### <a name="remarks"></a>備註  
  此方法相當實用，做為建立受限制的權杖，在 Windows 2000 的工具。  
   
-##  <a name="a-namedeletealla--ctokenprivilegesdeleteall"></a><a name="deleteall"></a>CTokenPrivileges::DeleteAll  
+##  <a name="deleteall"></a>CTokenPrivileges::DeleteAll  
  刪除所有的權限從`CTokenPrivileges`存取權杖的物件。  
   
 ```
@@ -173,7 +183,7 @@ void DeleteAll() throw();
 ### <a name="remarks"></a>備註  
  刪除所有特殊權限包含在`CTokenPrivileges`存取權杖的物件。  
   
-##  <a name="a-namegetdisplaynamesa--ctokenprivilegesgetdisplaynames"></a><a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
+##  <a name="getdisplaynames"></a>CTokenPrivileges::GetDisplayNames  
  擷取顯示名稱中包含的權限`CTokenPrivileges`存取權杖的物件。  
   
 ```
@@ -189,7 +199,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
  這個方法會擷取可顯示的名稱︰ 例如，如果 SE_REMOTE_SHUTDOWN_NAME 屬性名稱，可顯示的名稱是 「 從遠端系統強制關閉 」。 若要取得系統名稱，請使用[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)。  
   
-##  <a name="a-namegetcounta--ctokenprivilegesgetcount"></a><a name="getcount"></a>CTokenPrivileges::GetCount  
+##  <a name="getcount"></a>CTokenPrivileges::GetCount  
  傳回的權限中的項目數`CTokenPrivileges`物件。  
   
 ```
@@ -199,7 +209,7 @@ UINT GetCount() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回包含在權限數目`CTokenPrivileges`物件。  
   
-##  <a name="a-namegetlengtha--ctokenprivilegesgetlength"></a><a name="getlength"></a>CTokenPrivileges::GetLength  
+##  <a name="getlength"></a>CTokenPrivileges::GetLength  
  傳回的長度`CTokenPrivileges`物件。  
   
 ```
@@ -209,7 +219,7 @@ UINT GetLength() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回所需的位元組數目**TOKEN_PRIVILEGES**結構由`CTokenPrivileges`物件，包括所有包含的權限項目。  
   
-##  <a name="a-namegetluidsandattributesa--ctokenprivilegesgetluidsandattributes"></a><a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
+##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes  
  擷取本機唯一識別碼 (Luid) 和屬性旗標，從`CTokenPrivileges`物件。  
   
 ```
@@ -228,7 +238,7 @@ void GetLuidsAndAttributes(
 ### <a name="remarks"></a>備註  
  這個方法會列舉中所包含的權限的所有`CTokenPrivileges`存取權杖的物件，並將個別的 Luid，以及 （選擇性） 的屬性旗標放入陣列物件。  
   
-##  <a name="a-namegetnamesandattributesa--ctokenprivilegesgetnamesandattributes"></a><a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
+##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes  
  擷取的名稱，以及屬性的旗標從`CTokenPrivileges`物件。  
   
 ```
@@ -249,7 +259,7 @@ void GetNamesAndAttributes(
   
  這個方法會擷取的屬性名稱，而不是可顯示名稱︰ 例如，如果 SE_REMOTE_SHUTDOWN_NAME 屬性名稱，系統名稱是 「 SeRemoteShutdownPrivilege 」。 若要取得可顯示的名稱，請使用方法[CTokenPrivileges::GetDisplayNames](#getdisplaynames)。  
   
-##  <a name="a-namegetptokenprivilegesa--ctokenprivilegesgetptokenprivileges"></a><a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
+##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES  
  傳回的指標**TOKEN_PRIVILEGES**結構。  
   
 ```
@@ -259,7 +269,7 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 ### <a name="return-value"></a>傳回值  
  傳回的指標[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)結構。  
   
-##  <a name="a-namelookupprivilegea--ctokenprivilegeslookupprivilege"></a><a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
+##  <a name="lookupprivilege"></a>CTokenPrivileges::LookupPrivilege  
  擷取與指定權限名稱相關聯的屬性。  
   
 ```
@@ -278,7 +288,7 @@ bool LookupPrivilege(
 ### <a name="return-value"></a>傳回值  
  如果屬性處於已順利擷取，則為 false，則傳回 true。  
   
-##  <a name="a-nameoperatoreqa--ctokenprivilegesoperator-"></a><a name="operator_eq"></a>CTokenPrivileges::operator =  
+##  <a name="operator_eq"></a>CTokenPrivileges::operator =  
  指派運算子。  
   
 ```
@@ -296,7 +306,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>傳回值  
  傳回更新`CTokenPrivileges`物件。  
   
-##  <a name="a-nameoperatorconsttokenprivilegesstara--ctokenprivilegesoperator-const-tokenprivileges-"></a><a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
+##  <a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
  將指標值轉換**TOKEN_PRIVILEGES**結構。  
   
 ```  

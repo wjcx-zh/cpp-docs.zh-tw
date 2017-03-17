@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonButtonsGroup
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::AddButton
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::AddButtons
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::GetButton
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::GetCount
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::GetImageSize
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::GetRegularSize
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::HasImages
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::OnDrawImage
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::RemoveAll
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::SetImages
+- AFXRIBBONBUTTONSGROUP/CMFCRibbonButtonsGroup::SetParentCategory
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +104,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>需求  
  **標頭︰** afxribbonbuttonsgroup.h  
   
-##  <a name="a-nameaddbuttona--cmfcribbonbuttonsgroupaddbutton"></a><a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton  
+##  <a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton  
  將按鈕新增至群組。  
   
 ```  
@@ -102,7 +115,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
  [in] `pButton`  
  若要新增按鈕指標。  
   
-##  <a name="a-nameaddbuttonsa--cmfcribbonbuttonsgroupaddbuttons"></a><a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons  
+##  <a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons  
  將按鈕的清單加入至群組。  
   
 ```  
@@ -114,7 +127,7 @@ void AddButtons(
  [in] `lstButtons`  
  您想要新增的按鈕指標的清單。  
   
-##  <a name="a-namecmfcribbonbuttonsgroupa--cmfcribbonbuttonsgroupcmfcribbonbuttonsgroup"></a><a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
+##  <a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
  建構 `CMFCRibbonButtonsGroup` 物件。  
   
 ```  
@@ -130,7 +143,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetbuttona--cmfcribbonbuttonsgroupgetbutton"></a><a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton  
+##  <a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton  
  傳回位於指定索引上的按鈕的指標。  
   
 ```  
@@ -146,7 +159,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetcounta--cmfcribbonbuttonsgroupgetcount"></a><a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount  
+##  <a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount  
  傳回群組中的按鈕數目。  
   
 ```  
@@ -156,7 +169,7 @@ int GetCount() const;
 ### <a name="return-value"></a>傳回值  
  群組中的按鈕數目。  
   
-##  <a name="a-namegetimagesizea--cmfcribbonbuttonsgroupgetimagesize"></a><a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize  
+##  <a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize  
  擷取受保護的來源映像大小`CMFCToolBarImages`成員`m_Images`。  
   
 ```  
@@ -168,7 +181,7 @@ const CSize GetImageSize() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetregularsizea--cmfcribbonbuttonsgroupgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize  
  擷取功能區群組元素的大小上限。  
   
 ```  
@@ -183,7 +196,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehasimagesa--cmfcribbonbuttonsgrouphasimages"></a><a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages  
+##  <a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages  
  報告是否`CMFCRibbonButtonsGroup`物件包含的工具列影像。  
   
 ```  
@@ -195,7 +208,7 @@ BOOL HasImages() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameondrawimagea--cmfcribbonbuttonsgroupondrawimage"></a><a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage  
+##  <a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage  
  繪製指定的按鈕，根據按鈕是否正常、 反白顯示或停用適當的映像。  
   
 ```  
@@ -221,7 +234,7 @@ virtual void OnDrawImage(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameremovealla--cmfcribbonbuttonsgroupremoveall"></a><a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll  
+##  <a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll  
  移除所有的按鈕，從`CMFCRibbonButtonsGroup`物件。  
   
 ```  
@@ -230,7 +243,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetimagesa--cmfcribbonbuttonsgroupsetimages"></a><a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages  
+##  <a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages  
  將影像指派給一組功能區按鈕。  
   
 ```  
@@ -256,7 +269,7 @@ void SetImages(
 > [!NOTE]
 >  作用中影像是當使用者將滑鼠指標停留在按鈕上時所顯示的影像。 已停用的影像是按鈕已停用時，會顯示的影像。  
   
-##  <a name="a-namesetparentcategorya--cmfcribbonbuttonsgroupsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory  
+##  <a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory  
  設定父系`CMFCRibbonCategory`的`CMFCRibbonButtonsGroup`物件和其內的所有按鈕。  
   
 ```  

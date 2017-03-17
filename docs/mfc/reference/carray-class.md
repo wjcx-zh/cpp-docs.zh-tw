@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArray
+- AFXTEMPL/CArray
+- AFXTEMPL/CArray::CArray
+- AFXTEMPL/CArray::Add
+- AFXTEMPL/CArray::Append
+- AFXTEMPL/CArray::Copy
+- AFXTEMPL/CArray::ElementAt
+- AFXTEMPL/CArray::FreeExtra
+- AFXTEMPL/CArray::GetAt
+- AFXTEMPL/CArray::GetCount
+- AFXTEMPL/CArray::GetData
+- AFXTEMPL/CArray::GetSize
+- AFXTEMPL/CArray::GetUpperBound
+- AFXTEMPL/CArray::InsertAt
+- AFXTEMPL/CArray::IsEmpty
+- AFXTEMPL/CArray::RemoveAll
+- AFXTEMPL/CArray::RemoveAt
+- AFXTEMPL/CArray::SetAt
+- AFXTEMPL/CArray::SetAtGrow
+- AFXTEMPL/CArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +141,7 @@ class CArray : public CObject
 ## <a name="requirements"></a>需求  
  `Header:`afxtempl.h  
   
-##  <a name="a-nameadda--carrayadd"></a><a name="add"></a>CArray::Add  
+##  <a name="add"></a>CArray::Add  
  將新的項目加入至陣列，陣列成長 1 結束。  
   
 ```  
@@ -145,7 +164,7 @@ INT_PTR Add(ARG_TYPE newElement);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&22;](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="a-nameappenda--carrayappend"></a><a name="append"></a>Carray:: Append  
+##  <a name="append"></a>Carray:: Append  
  呼叫此成員函式，加入另一個陣列的內容。  
   
 ```  
@@ -167,7 +186,7 @@ INT_PTR Append(const CArray& src);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&23;](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="a-namecarraya--carraycarray"></a><a name="carray"></a>CArray::CArray  
+##  <a name="carray"></a>CArray::CArray  
  建構空陣列。  
   
 ```  
@@ -180,7 +199,7 @@ CArray();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&24;](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="a-namecopya--carraycopy"></a><a name="copy"></a>Carray:: Copy  
+##  <a name="copy"></a>Carray:: Copy  
  使用此成員函式複製到另一個陣列的元素。  
   
 ```  
@@ -199,7 +218,7 @@ void Copy(const CArray& src);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&25;](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="a-nameelementata--carrayelementat"></a><a name="elementat"></a>CArray::ElementAt  
+##  <a name="elementat"></a>CArray::ElementAt  
  傳回指定的項目陣列中的臨時參考。  
   
 ```  
@@ -220,7 +239,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 ### <a name="example"></a>範例  
   請參閱範例[GetSize](#getsize)。  
   
-##  <a name="a-namefreeextraa--carrayfreeextra"></a><a name="freeextra"></a>CArray::FreeExtra  
+##  <a name="freeextra"></a>CArray::FreeExtra  
  任何額外的記憶體配置陣列已成長時，會釋出。  
   
 ```  
@@ -233,7 +252,7 @@ void FreeExtra();
 ### <a name="example"></a>範例  
   請參閱範例[GetData](#getdata)。  
   
-##  <a name="a-namegetata--carraygetat"></a><a name="getat"></a>CArray::GetAt  
+##  <a name="getat"></a>CArray::GetAt  
  傳回指定索引處的陣列元素。  
   
 ```  
@@ -257,7 +276,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&26;](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="a-namegetcounta--carraygetcount"></a><a name="getcount"></a>CArray::GetCount  
+##  <a name="getcount"></a>CArray::GetCount  
  傳回陣列元素的數目。  
   
 ```  
@@ -273,7 +292,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&27;](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="a-namegetdataa--carraygetdata"></a><a name="getdata"></a>CArray::GetData  
+##  <a name="getdata"></a>CArray::GetData  
  使用此成員函式來直接存取陣列中的項目。  
   
 ```  
@@ -296,7 +315,7 @@ TYPE* GetData();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&28;](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="a-namegetsizea--carraygetsize"></a><a name="getsize"></a>CArray::GetSize  
+##  <a name="getsize"></a>CArray::GetSize  
  傳回陣列的大小。  
   
 ```  
@@ -309,7 +328,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&29;](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="a-namegetupperbounda--carraygetupperbound"></a><a name="getupperbound"></a>CArray::GetUpperBound  
+##  <a name="getupperbound"></a>CArray::GetUpperBound  
  傳回目前的上限，此陣列。  
   
 ```  
@@ -324,7 +343,7 @@ INT_PTR GetUpperBound() const;
 ### <a name="example"></a>範例  
   請參閱範例[CArray::GetAt](#getat)。  
   
-##  <a name="a-nameinsertata--carrayinsertat"></a><a name="insertat"></a>CArray::InsertAt  
+##  <a name="insertat"></a>CArray::InsertAt  
  第一版`InsertAt`陣列中指定索引處插入一個項目 （或多個項目的複本）。  
   
 ```  
@@ -367,7 +386,7 @@ void InsertAt(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&30;](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="a-nameisemptya--carrayisempty"></a><a name="isempty"></a>CArray::IsEmpty  
+##  <a name="isempty"></a>CArray::IsEmpty  
  判斷是否為空陣列。  
   
 ```  
@@ -377,7 +396,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>傳回值  
  陣列會不包含任何項目; 如果為非零否則為 0。  
   
-##  <a name="a-nameoperatorata--carrayoperator-"></a><a name="operator_at"></a>CArray::operator\[\]  
+##  <a name="operator_at"></a>CArray::operator\[\]  
  這些註標運算子是很方便的替代[SetAt](#setat)和[GetAt](#getat)函式。  
   
 ```  
@@ -400,7 +419,7 @@ const TYPE& operator[](int_ptr nindex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&34;](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="a-namerelocateelementsa--carrayrelocateelements"></a><a name="relocateelements"></a>CArray::RelocateElements  
+##  <a name="relocateelements"></a>CArray::RelocateElements  
  基底位址資料到新的緩衝區，當陣列應該成長或壓縮。  
   
 ```  
@@ -428,7 +447,7 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
   
  對於項目包含指向其中一個自己的成員，或另一個結構包含一個陣列元素的指標陣列，純文字複本不會更新指標。 在此情況下，您可以更正指標實作的特製化`RelocateElements`與相關的型別。 您也會負責將資料複製。  
   
-##  <a name="a-nameremovealla--carrayremoveall"></a><a name="removeall"></a>CArray::RemoveAll  
+##  <a name="removeall"></a>CArray::RemoveAll  
  從此陣列移除所有項目。  
   
 ```  
@@ -441,7 +460,7 @@ void RemoveAll();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&31;](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="a-nameremoveata--carrayremoveat"></a><a name="removeat"></a>CArray::RemoveAt  
+##  <a name="removeat"></a>CArray::RemoveAt  
  移除陣列中的指定索引處開始的一或多個項目。  
   
 ```  
@@ -465,7 +484,7 @@ void RemoveAt(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&32;](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="a-namesetata--carraysetat"></a><a name="setat"></a>CArray::SetAt  
+##  <a name="setat"></a>CArray::SetAt  
  設定指定索引處的陣列元素。  
   
 ```  
@@ -490,7 +509,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>範例  
   請參閱範例[GetAt](#getat)。  
   
-##  <a name="a-namesetatgrowa--carraysetatgrow"></a><a name="setatgrow"></a>CArray::SetAtGrow  
+##  <a name="setatgrow"></a>CArray::SetAtGrow  
  設定指定索引處的陣列元素。  
   
 ```  
@@ -513,7 +532,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&33;](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="a-namesetsizea--carraysetsize"></a><a name="setsize"></a>CArray::SetSize  
+##  <a name="setsize"></a>CArray::SetSize  
  建立空的或現有的陣列; 的大小必要時，會配置記憶體。  
   
 ```  

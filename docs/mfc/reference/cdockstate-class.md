@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockState
+- AFXADV/CDockState
+- AFXADV/CDockState::Clear
+- AFXADV/CDockState::GetVersion
+- AFXADV/CDockState::LoadState
+- AFXADV/CDockState::SaveState
+- AFXADV/CDockState::m_arrBarInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +95,7 @@ class CDockState : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxadv.h  
   
-##  <a name="a-namecleara--cdockstateclear"></a><a name="clear"></a>CDockState::Clear  
+##  <a name="clear"></a>CDockState::Clear  
  呼叫此函式來清除所有停駐的資訊儲存在`CDockState`物件。  
   
 ```  
@@ -99,7 +105,7 @@ void Clear();
 ### <a name="remarks"></a>備註  
  這包括不只是否列停駐，但是狀態列的大小和位置，以及它可見。  
   
-##  <a name="a-namegetversiona--cdockstategetversion"></a><a name="getversion"></a>CDockState::GetVersion  
+##  <a name="getversion"></a>CDockState::GetVersion  
  呼叫此函式可擷取已儲存的版本號碼列狀態。  
   
 ```  
@@ -112,7 +118,7 @@ DWORD GetVersion();
 ### <a name="remarks"></a>備註  
  版本支援啟用修訂過的列，將新的持續性屬性，但也可以偵測並載入所列的是舊版建立的持續性狀態。  
   
-##  <a name="a-nameloadstatea--cdockstateloadstate"></a><a name="loadstate"></a>CDockState::LoadState  
+##  <a name="loadstate"></a>CDockState::LoadState  
  呼叫此函式可從登錄擷取狀態資訊或。INI 檔案。  
   
 ```  
@@ -126,14 +132,14 @@ void LoadState(LPCTSTR lpszProfileName);
 ### <a name="remarks"></a>備註  
  設定檔名稱是應用程式的區段。INI 檔案或登錄中包含的資料列的狀態資訊。 您可以將控制列狀態資訊儲存至登錄或。INI 檔案`SaveState`。  
   
-##  <a name="a-namemarrbarinfoa--cdockstatemarrbarinfo"></a><a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
+##  <a name="m_arrbarinfo"></a>CDockState::m_arrBarInfo  
  A`CPtrArray`物件的每個已儲存狀態資訊的控制列的預存的控制列資訊的指標陣列`CDockState`物件。  
   
 ```  
 CPtrArray m_arrBarInfo;  
 ```  
   
-##  <a name="a-namesavestatea--cdockstatesavestate"></a><a name="savestate"></a>CDockState::SaveState  
+##  <a name="savestate"></a>CDockState::SaveState  
  呼叫此函式可將狀態資訊儲存至登錄或。INI 檔案。  
   
 ```  

@@ -10,6 +10,58 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComboBox
+- AFXWIN/CComboBox
+- AFXWIN/CComboBox::CComboBox
+- AFXWIN/CComboBox::AddString
+- AFXWIN/CComboBox::Clear
+- AFXWIN/CComboBox::CompareItem
+- AFXWIN/CComboBox::Copy
+- AFXWIN/CComboBox::Create
+- AFXWIN/CComboBox::Cut
+- AFXWIN/CComboBox::DeleteItem
+- AFXWIN/CComboBox::DeleteString
+- AFXWIN/CComboBox::Dir
+- AFXWIN/CComboBox::DrawItem
+- AFXWIN/CComboBox::FindString
+- AFXWIN/CComboBox::FindStringExact
+- AFXWIN/CComboBox::GetComboBoxInfo
+- AFXWIN/CComboBox::GetCount
+- AFXWIN/CComboBox::GetCueBanner
+- AFXWIN/CComboBox::GetCurSel
+- AFXWIN/CComboBox::GetDroppedControlRect
+- AFXWIN/CComboBox::GetDroppedState
+- AFXWIN/CComboBox::GetDroppedWidth
+- AFXWIN/CComboBox::GetEditSel
+- AFXWIN/CComboBox::GetExtendedUI
+- AFXWIN/CComboBox::GetHorizontalExtent
+- AFXWIN/CComboBox::GetItemData
+- AFXWIN/CComboBox::GetItemDataPtr
+- AFXWIN/CComboBox::GetItemHeight
+- AFXWIN/CComboBox::GetLBText
+- AFXWIN/CComboBox::GetLBTextLen
+- AFXWIN/CComboBox::GetLocale
+- AFXWIN/CComboBox::GetMinVisible
+- AFXWIN/CComboBox::GetTopIndex
+- AFXWIN/CComboBox::InitStorage
+- AFXWIN/CComboBox::InsertString
+- AFXWIN/CComboBox::LimitText
+- AFXWIN/CComboBox::MeasureItem
+- AFXWIN/CComboBox::Paste
+- AFXWIN/CComboBox::ResetContent
+- AFXWIN/CComboBox::SelectString
+- AFXWIN/CComboBox::SetCueBanner
+- AFXWIN/CComboBox::SetCurSel
+- AFXWIN/CComboBox::SetDroppedWidth
+- AFXWIN/CComboBox::SetEditSel
+- AFXWIN/CComboBox::SetExtendedUI
+- AFXWIN/CComboBox::SetHorizontalExtent
+- AFXWIN/CComboBox::SetItemData
+- AFXWIN/CComboBox::SetItemDataPtr
+- AFXWIN/CComboBox::SetItemHeight
+- AFXWIN/CComboBox::SetLocale
+- AFXWIN/CComboBox::SetMinVisibleItems
+- AFXWIN/CComboBox::SetTopIndex
+- AFXWIN/CComboBox::ShowDropDown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -183,7 +235,7 @@ class CComboBox : public CWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameaddstringa--ccomboboxaddstring"></a><a name="addstring"></a>Ccombobox:: Addstring  
+##  <a name="addstring"></a>Ccombobox:: Addstring  
  將字串加入至下拉式方塊的清單方塊。  
   
 ```  
@@ -208,7 +260,7 @@ int AddString(LPCTSTR lpszString);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&3;](../../mfc/reference/codesnippet/cpp/ccombobox-class_1.cpp)]  
   
-##  <a name="a-nameccomboboxa--ccomboboxccombobox"></a><a name="ccombobox"></a>CComboBox::CComboBox  
+##  <a name="ccombobox"></a>CComboBox::CComboBox  
  建構 `CComboBox` 物件。  
   
 ```  
@@ -218,7 +270,7 @@ CComboBox();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&1;](../../mfc/reference/codesnippet/cpp/ccombobox-class_2.cpp)]  
   
-##  <a name="a-namecleara--ccomboboxclear"></a><a name="clear"></a>CComboBox::Clear  
+##  <a name="clear"></a>CComboBox::Clear  
  （清除） 會刪除目前選取範圍，如果有的話，編輯控制項的下拉式方塊中。  
   
 ```  
@@ -231,7 +283,7 @@ void Clear();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&4;](../../mfc/reference/codesnippet/cpp/ccombobox-class_3.cpp)]  
   
-##  <a name="a-namecompareitema--ccomboboxcompareitem"></a><a name="compareitem"></a>CComboBox::CompareItem  
+##  <a name="compareitem"></a>CComboBox::CompareItem  
  由框架呼叫以判斷新的項目已排序的主控描繪下拉式方塊的清單方塊部分中的相對位置。  
   
 ```  
@@ -259,7 +311,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&5;](../../mfc/reference/codesnippet/cpp/ccombobox-class_4.cpp)]  
   
-##  <a name="a-namecopya--ccomboboxcopy"></a><a name="copy"></a>CComboBox::Copy  
+##  <a name="copy"></a>CComboBox::Copy  
  將目前的選取範圍，複製到剪貼簿中的下拉式方塊的編輯控制項中的任何**CF_TEXT**格式。  
   
 ```  
@@ -269,7 +321,7 @@ void Copy();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&6;](../../mfc/reference/codesnippet/cpp/ccombobox-class_5.cpp)]  
   
-##  <a name="a-namecreatea--ccomboboxcreate"></a><a name="create"></a>CComboBox::Create  
+##  <a name="create"></a>CComboBox::Create  
  建立下拉式方塊，並將它附加`CComboBox`物件。  
   
 ```  
@@ -322,7 +374,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&2;](../../mfc/reference/codesnippet/cpp/ccombobox-class_6.cpp)]  
   
-##  <a name="a-namecuta--ccomboboxcut"></a><a name="cut"></a>CComboBox::Cut  
+##  <a name="cut"></a>CComboBox::Cut  
  刪除 （剪下） 目前選取項目，如果在下拉式方塊中的任何編輯控制，並複製到剪貼簿中刪除的文字**CF_TEXT**格式。  
   
 ```  
@@ -335,7 +387,7 @@ void Cut();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&7;](../../mfc/reference/codesnippet/cpp/ccombobox-class_7.cpp)]  
   
-##  <a name="a-namedeleteitema--ccomboboxdeleteitem"></a><a name="deleteitem"></a>CComboBox::DeleteItem  
+##  <a name="deleteitem"></a>CComboBox::DeleteItem  
  當使用者從主控描繪刪除項目時，由框架呼叫`CComboBox`物件或終結下拉式方塊。  
   
 ```  
@@ -352,7 +404,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&8;](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
-##  <a name="a-namedeletestringa--ccomboboxdeletestring"></a><a name="deletestring"></a>CComboBox::DeleteString  
+##  <a name="deletestring"></a>CComboBox::DeleteString  
  刪除項目位置`nIndex`下拉式方塊中。  
   
 ```  
@@ -372,7 +424,7 @@ int DeleteString(UINT nIndex);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&9;](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
   
-##  <a name="a-namedira--ccomboboxdir"></a><a name="dir"></a>CComboBox::Dir  
+##  <a name="dir"></a>CComboBox::Dir  
  將下拉式方塊的清單方塊中的檔案名稱或磁碟機的清單。  
   
 ```  
@@ -413,7 +465,7 @@ int Dir(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&10;](../../mfc/reference/codesnippet/cpp/ccombobox-class_10.cpp)]  
   
-##  <a name="a-namedrawitema--ccomboboxdrawitem"></a><a name="drawitem"></a>CComboBox::DrawItem  
+##  <a name="drawitem"></a>CComboBox::DrawItem  
  當主控描繪下拉式方塊變更的視覺外觀的架構所呼叫。  
   
 ```  
@@ -432,7 +484,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&11;](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
   
-##  <a name="a-namefindstringa--ccomboboxfindstring"></a><a name="findstring"></a>CComboBox::FindString  
+##  <a name="findstring"></a>CComboBox::FindString  
  找到，但不會選取第一個字串，其中包含指定的前置詞清單方塊的下拉式方塊中。  
   
 ```  
@@ -457,7 +509,7 @@ int FindString(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&12;](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
-##  <a name="a-namefindstringexacta--ccomboboxfindstringexact"></a><a name="findstringexact"></a>CComboBox::FindStringExact  
+##  <a name="findstringexact"></a>CComboBox::FindStringExact  
  呼叫`FindStringExact`成員函式來尋找第一個清單方塊中的字串 （下拉式方塊），符合指定之字串`lpszFind`。  
   
 ```  
@@ -482,7 +534,7 @@ int FindStringExact(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&13;](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
   
-##  <a name="a-namegetcomboboxinfoa--ccomboboxgetcomboboxinfo"></a><a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
+##  <a name="getcomboboxinfo"></a>CComboBox::GetComboBoxInfo  
  擷取資訊`CComboBox`物件。  
   
 ```  
@@ -499,7 +551,7 @@ BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[CB_GETCOMBOBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775839)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetcounta--ccomboboxgetcount"></a><a name="getcount"></a>CComboBox::GetCount  
+##  <a name="getcount"></a>CComboBox::GetCount  
  呼叫此成員函式可擷取下拉式方塊的清單方塊部分中的項目數。  
   
 ```  
@@ -512,7 +564,7 @@ int GetCount() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&14;](../../mfc/reference/codesnippet/cpp/ccombobox-class_14.cpp)]  
   
-##  <a name="a-namegetcuebannera--ccomboboxgetcuebanner"></a><a name="getcuebanner"></a>CComboBox::GetCueBanner  
+##  <a name="getcuebanner"></a>CComboBox::GetCueBanner  
  取得下拉式方塊控制項中顯示的提示文字。  
   
 ```  
@@ -542,7 +594,7 @@ BOOL GetCueBanner(
   
  這個方法會傳送[CB_GETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775843)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetcursela--ccomboboxgetcursel"></a><a name="getcursel"></a>CComboBox::GetCurSel  
+##  <a name="getcursel"></a>CComboBox::GetCurSel  
  呼叫此成員函式，來決定選取哪一個下拉式方塊中的項目。  
   
 ```  
@@ -558,7 +610,7 @@ int GetCurSel() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&15;](../../mfc/reference/codesnippet/cpp/ccombobox-class_15.cpp)]  
   
-##  <a name="a-namegetdroppedcontrolrecta--ccomboboxgetdroppedcontrolrect"></a><a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
+##  <a name="getdroppedcontrolrect"></a>CComboBox::GetDroppedControlRect  
  呼叫`GetDroppedControlRect`成員函式來擷取可見 （卸除） 清單方塊的下拉式清單方塊的螢幕座標。  
   
 ```  
@@ -572,7 +624,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&16;](../../mfc/reference/codesnippet/cpp/ccombobox-class_16.cpp)]  
   
-##  <a name="a-namegetdroppedstatea--ccomboboxgetdroppedstate"></a><a name="getdroppedstate"></a>CComboBox::GetDroppedState  
+##  <a name="getdroppedstate"></a>CComboBox::GetDroppedState  
  呼叫`GetDroppedState`成員函式來決定是否清單方塊的下拉式清單方塊會顯示 （落下）。  
   
 ```  
@@ -585,7 +637,7 @@ BOOL GetDroppedState() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&17;](../../mfc/reference/codesnippet/cpp/ccombobox-class_17.cpp)]  
   
-##  <a name="a-namegetdroppedwidtha--ccomboboxgetdroppedwidth"></a><a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
+##  <a name="getdroppedwidth"></a>CComboBox::GetDroppedWidth  
  呼叫此函式可擷取的最小的可允許寬度，單位為像素下拉式方塊的清單方塊。  
   
 ```  
@@ -603,7 +655,7 @@ int GetDroppedWidth() const;
 ### <a name="example"></a>範例  
   請參閱範例[SetDroppedWidth](#setdroppedwidth)。  
   
-##  <a name="a-namegeteditsela--ccomboboxgeteditsel"></a><a name="geteditsel"></a>CComboBox::GetEditSel  
+##  <a name="geteditsel"></a>CComboBox::GetEditSel  
  取得編輯控制項的下拉式方塊中目前的選取範圍的開始和結束的字元位置。  
   
 ```  
@@ -616,7 +668,7 @@ DWORD GetEditSel() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&18;](../../mfc/reference/codesnippet/cpp/ccombobox-class_18.cpp)]  
   
-##  <a name="a-namegetextendeduia--ccomboboxgetextendedui"></a><a name="getextendedui"></a>CComboBox::GetExtendedUI  
+##  <a name="getextendedui"></a>CComboBox::GetExtendedUI  
  呼叫`GetExtendedUI`成員函式，以判斷是否下拉式方塊的預設使用者介面或擴充的使用者介面。  
   
 ```  
@@ -638,7 +690,7 @@ BOOL GetExtendedUI() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&19;](../../mfc/reference/codesnippet/cpp/ccombobox-class_19.cpp)]  
   
-##  <a name="a-namegethorizontalextenta--ccomboboxgethorizontalextent"></a><a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>CComboBox::GetHorizontalExtent  
  擷取從下拉式方塊的下拉式方塊的清單方塊部分可以水平捲動的像素為單位的寬度。  
   
 ```  
@@ -654,7 +706,7 @@ UINT GetHorizontalExtent() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&20;](../../mfc/reference/codesnippet/cpp/ccombobox-class_20.cpp)]  
   
-##  <a name="a-namegetitemdataa--ccomboboxgetitemdata"></a><a name="getitemdata"></a>CComboBox::GetItemData  
+##  <a name="getitemdata"></a>CComboBox::GetItemData  
  擷取與指定的下拉式方塊項目相關聯的應用程式提供 32 位元值。  
   
 ```  
@@ -674,7 +726,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&21;](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
   
-##  <a name="a-namegetitemdataptra--ccomboboxgetitemdataptr"></a><a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>CComboBox::GetItemDataPtr  
  擷取與指定的下拉式方塊項目做為指標的應用程式提供 32 位元值 ( **void\***)。  
   
 ```  
@@ -691,7 +743,7 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&22;](../../mfc/reference/codesnippet/cpp/ccombobox-class_22.cpp)]  
   
-##  <a name="a-namegetitemheighta--ccomboboxgetitemheight"></a><a name="getitemheight"></a>CComboBox::GetItemHeight  
+##  <a name="getitemheight"></a>CComboBox::GetItemHeight  
  呼叫`GetItemHeight`成員函式可擷取下拉式方塊中的清單項目的高度。  
   
 ```  
@@ -708,7 +760,7 @@ int GetItemHeight(int nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&23;](../../mfc/reference/codesnippet/cpp/ccombobox-class_23.cpp)]  
   
-##  <a name="a-namegetlbtexta--ccomboboxgetlbtext"></a><a name="getlbtext"></a>CComboBox::GetLBText  
+##  <a name="getlbtext"></a>CComboBox::GetLBText  
  取得字串，請從清單方塊的下拉式方塊。  
   
 ```  
@@ -740,7 +792,7 @@ void GetLBText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&24;](../../mfc/reference/codesnippet/cpp/ccombobox-class_24.cpp)]  
   
-##  <a name="a-namegetlbtextlena--ccomboboxgetlbtextlen"></a><a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
+##  <a name="getlbtextlen"></a>CComboBox::GetLBTextLen  
  取得清單方塊的下拉式方塊中的字串的長度。  
   
 ```  
@@ -757,7 +809,7 @@ int GetLBTextLen(int nIndex) const;
 ### <a name="example"></a>範例  
   請參閱範例[CComboBox::GetLBText](#getlbtext)。  
   
-##  <a name="a-namegetlocalea--ccomboboxgetlocale"></a><a name="getlocale"></a>CComboBox::GetLocale  
+##  <a name="getlocale"></a>CComboBox::GetLocale  
  擷取使用下拉式方塊的地區設定。  
   
 ```  
@@ -773,7 +825,7 @@ LCID GetLocale() const;
 ### <a name="example"></a>範例  
   請參閱範例[CComboBox::SetLocale](#setlocale)。  
   
-##  <a name="a-namegetminvisiblea--ccomboboxgetminvisible"></a><a name="getminvisible"></a>CComboBox::GetMinVisible  
+##  <a name="getminvisible"></a>CComboBox::GetMinVisible  
  在目前的下拉式方塊控制項的下拉式清單中取得的最小的可見項目數目。  
   
 ```  
@@ -786,7 +838,7 @@ int GetMinVisible() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[CB_GETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettopindexa--ccomboboxgettopindex"></a><a name="gettopindex"></a>CComboBox::GetTopIndex  
+##  <a name="gettopindex"></a>CComboBox::GetTopIndex  
  擷取的下拉式方塊的清單方塊部分中的第一個可見項目以零為起始的索引。  
   
 ```  
@@ -802,7 +854,7 @@ int GetTopIndex() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&25;](../../mfc/reference/codesnippet/cpp/ccombobox-class_25.cpp)]  
   
-##  <a name="a-nameinitstoragea--ccomboboxinitstorage"></a><a name="initstorage"></a>CComboBox::InitStorage  
+##  <a name="initstorage"></a>CComboBox::InitStorage  
  在下拉式方塊的清單方塊部分中儲存清單方塊項目會配置記憶體。  
   
 ```  
@@ -831,7 +883,7 @@ int InitStorage(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&26;](../../mfc/reference/codesnippet/cpp/ccombobox-class_26.cpp)]  
   
-##  <a name="a-nameinsertstringa--ccomboboxinsertstring"></a><a name="insertstring"></a>CComboBox::InsertString  
+##  <a name="insertstring"></a>CComboBox::InsertString  
  將字串插入下拉式方塊的清單方塊中。  
   
 ```  
@@ -859,7 +911,7 @@ int InsertString(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&27;](../../mfc/reference/codesnippet/cpp/ccombobox-class_27.cpp)]  
   
-##  <a name="a-namelimittexta--ccomboboxlimittext"></a><a name="limittext"></a>CComboBox::LimitText  
+##  <a name="limittext"></a>CComboBox::LimitText  
  限制使用者可以將編輯控制項的下拉式方塊輸入文字以位元組為單位的長度。  
   
 ```  
@@ -881,7 +933,7 @@ BOOL LimitText(int nMaxChars);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&28;](../../mfc/reference/codesnippet/cpp/ccombobox-class_28.cpp)]  
   
-##  <a name="a-namemeasureitema--ccomboboxmeasureitem"></a><a name="measureitem"></a>CComboBox::MeasureItem  
+##  <a name="measureitem"></a>CComboBox::MeasureItem  
  建立主控描繪樣式下拉式方塊時，由架構呼叫。  
   
 ```  
@@ -902,7 +954,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&29;](../../mfc/reference/codesnippet/cpp/ccombobox-class_29.cpp)]  
   
-##  <a name="a-namepastea--ccomboboxpaste"></a><a name="paste"></a>CComboBox::Paste  
+##  <a name="paste"></a>CComboBox::Paste  
  從剪貼簿資料插入下拉式方塊目前游標位置的編輯控制項。  
   
 ```  
@@ -915,7 +967,7 @@ void Paste();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&30;](../../mfc/reference/codesnippet/cpp/ccombobox-class_30.cpp)]  
   
-##  <a name="a-nameresetcontenta--ccomboboxresetcontent"></a><a name="resetcontent"></a>CComboBox::ResetContent  
+##  <a name="resetcontent"></a>CComboBox::ResetContent  
  移除所有項目從清單方塊和下拉式方塊控制項的編輯。  
   
 ```  
@@ -925,7 +977,7 @@ void ResetContent();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&31;](../../mfc/reference/codesnippet/cpp/ccombobox-class_31.cpp)]  
   
-##  <a name="a-nameselectstringa--ccomboboxselectstring"></a><a name="selectstring"></a>CComboBox::SelectString  
+##  <a name="selectstring"></a>CComboBox::SelectString  
  搜尋下拉式方塊的清單方塊中的字串，並找到字串，如果在清單方塊中選取字串，並將其複製編輯控制項。  
   
 ```  
@@ -952,7 +1004,7 @@ int SelectString(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&32;](../../mfc/reference/codesnippet/cpp/ccombobox-class_32.cpp)]  
   
-##  <a name="a-namesetcuebannera--ccomboboxsetcuebanner"></a><a name="setcuebanner"></a>CComboBox::SetCueBanner  
+##  <a name="setcuebanner"></a>CComboBox::SetCueBanner  
  設定下拉式方塊控制項所顯示的提示文字。  
   
 ```  
@@ -983,7 +1035,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
  [!code-cpp[NVC_MFC_CComboBox_s&#1;&2;](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="a-namesetcursela--ccomboboxsetcursel"></a><a name="setcursel"></a>CComboBox::SetCurSel  
+##  <a name="setcursel"></a>CComboBox::SetCurSel  
  選取清單方塊的下拉式方塊中的字串。  
   
 ```  
@@ -1003,7 +1055,7 @@ int SetCurSel(int nSelect);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&33;](../../mfc/reference/codesnippet/cpp/ccombobox-class_35.cpp)]  
   
-##  <a name="a-namesetdroppedwidtha--ccomboboxsetdroppedwidth"></a><a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
+##  <a name="setdroppedwidth"></a>CComboBox::SetDroppedWidth  
  呼叫此函式可設定的最小的可允許寬度，單位為像素下拉式方塊的清單方塊。  
   
 ```  
@@ -1025,7 +1077,7 @@ int SetDroppedWidth(UINT nWidth);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&34;](../../mfc/reference/codesnippet/cpp/ccombobox-class_36.cpp)]  
   
-##  <a name="a-nameseteditsela--ccomboboxseteditsel"></a><a name="seteditsel"></a>CComboBox::SetEditSel  
+##  <a name="seteditsel"></a>CComboBox::SetEditSel  
  選取下拉式方塊的編輯控制項中的字元。  
   
 ```  
@@ -1053,7 +1105,7 @@ BOOL SetEditSel(
 ### <a name="example"></a>範例  
   請參閱範例[CComboBox::GetEditSel](#geteditsel)。  
   
-##  <a name="a-namesetextendeduia--ccomboboxsetextendedui"></a><a name="setextendedui"></a>CComboBox::SetExtendedUI  
+##  <a name="setextendedui"></a>CComboBox::SetExtendedUI  
  呼叫`SetExtendedUI`選取預設的使用者介面或下拉式方塊已擴充的使用者介面的成員函式[CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md)或[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)樣式。  
   
 ```  
@@ -1079,7 +1131,7 @@ int SetExtendedUI(BOOL bExtended = TRUE);
 ### <a name="example"></a>範例  
   請參閱範例[CComboBox::GetExtendedUI](#getextendedui)。  
   
-##  <a name="a-namesethorizontalextenta--ccomboboxsethorizontalextent"></a><a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>CComboBox::SetHorizontalExtent  
  設定寬度，單位為像素的下拉式方塊的清單方塊部分可以水平捲動。  
   
 ```  
@@ -1096,7 +1148,7 @@ void SetHorizontalExtent(UINT nExtent);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&35;](../../mfc/reference/codesnippet/cpp/ccombobox-class_37.cpp)]  
   
-##  <a name="a-namesetitemdataa--ccomboboxsetitemdata"></a><a name="setitemdata"></a>CComboBox::SetItemData  
+##  <a name="setitemdata"></a>CComboBox::SetItemData  
  設定下拉式方塊中指定的項目相關聯的 32 位元值。  
   
 ```  
@@ -1121,7 +1173,7 @@ int SetItemData(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&36;](../../mfc/reference/codesnippet/cpp/ccombobox-class_38.cpp)]  
   
-##  <a name="a-namesetitemdataptra--ccomboboxsetitemdataptr"></a><a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>CComboBox::SetItemDataPtr  
  設定為指定的指標下拉式方塊中指定的項目相關聯的 32 位元值 ( **void\***)。  
   
 ```  
@@ -1146,7 +1198,7 @@ int SetItemDataPtr(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&37;](../../mfc/reference/codesnippet/cpp/ccombobox-class_39.cpp)]  
   
-##  <a name="a-namesetitemheighta--ccomboboxsetitemheight"></a><a name="setitemheight"></a>CComboBox::SetItemHeight  
+##  <a name="setitemheight"></a>CComboBox::SetItemHeight  
  呼叫`SetItemHeight`成員函式中的下拉式方塊或下拉式方塊的編輯控制項 （或靜態文字） 部分的高度設定的清單項目高度。  
   
 ```  
@@ -1175,7 +1227,7 @@ int SetItemHeight(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&38;](../../mfc/reference/codesnippet/cpp/ccombobox-class_40.cpp)]  
   
-##  <a name="a-namesetlocalea--ccomboboxsetlocale"></a><a name="setlocale"></a>CComboBox::SetLocale  
+##  <a name="setlocale"></a>CComboBox::SetLocale  
  設定下拉式方塊的地區設定識別碼。  
   
 ```  
@@ -1195,7 +1247,7 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&39;](../../mfc/reference/codesnippet/cpp/ccombobox-class_41.cpp)]  
   
-##  <a name="a-namesetminvisibleitemsa--ccomboboxsetminvisibleitems"></a><a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
+##  <a name="setminvisibleitems"></a>CComboBox::SetMinVisibleItems  
  設定可見的項目數目下限下拉式清單中的目前下拉式方塊控制項。  
   
 ```  
@@ -1224,7 +1276,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
  [!code-cpp[NVC_MFC_CComboBox_s&#1;&2;](../../mfc/reference/codesnippet/cpp/ccombobox-class_34.cpp)]  
   
-##  <a name="a-namesettopindexa--ccomboboxsettopindex"></a><a name="settopindex"></a>CComboBox::SetTopIndex  
+##  <a name="settopindex"></a>CComboBox::SetTopIndex  
  可確保特定項目會顯示在下拉式方塊的清單方塊部分。  
   
 ```  
@@ -1244,7 +1296,7 @@ int SetTopIndex(int nIndex);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox #&40;](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  
   
-##  <a name="a-nameshowdropdowna--ccomboboxshowdropdown"></a><a name="showdropdown"></a>CComboBox::ShowDropDown  
+##  <a name="showdropdown"></a>CComboBox::ShowDropDown  
  顯示或隱藏清單方塊的下拉式方塊具有[CBS_DROPDOWN](../../mfc/reference/combo-box-styles.md)或[CBS_DROPDOWNLIST](../../mfc/reference/combo-box-styles.md)樣式。  
   
 ```  

@@ -10,7 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DRadialGradientBrush
-- afxrendertarget/CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::CD2DRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Attach
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Create
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Destroy
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Detach
+- AFXRENDERTARGET/CD2DRadialGradientBrush::Get
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetCenter
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetGradientOriginOffset
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetRadiusX
+- AFXRENDERTARGET/CD2DRadialGradientBrush::GetRadiusY
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetCenter
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetGradientOriginOffset
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusX
+- AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusY
+- AFXRENDERTARGET/CD2DRadialGradientBrush::m_pRadialGradientBrush
+- AFXRENDERTARGET/CD2DRadialGradientBrush::m_RadialGradientBrushProperties
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,14 +119,14 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dradialgradientbrusha--cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
+##  <a name="_dtorcd2dradialgradientbrush"></a>CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush  
  解構函式。 D2D 放射狀漸層筆刷物件終結時呼叫。  
   
 ```  
 virtual ~CD2DRadialGradientBrush();
 ```  
   
-##  <a name="a-nameattacha--cd2dradialgradientbrushattach"></a><a name="attach"></a>CD2DRadialGradientBrush::Attach  
+##  <a name="attach"></a>CD2DRadialGradientBrush::Attach  
  會附加至現有的資源物件的介面  
   
 ```  
@@ -121,7 +137,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
  `pResource`  
  現有的資源介面。 不能是 NULL  
   
-##  <a name="a-namecd2dradialgradientbrusha--cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
+##  <a name="cd2dradialgradientbrush"></a>CD2DRadialGradientBrush::CD2DRadialGradientBrush  
  建構 CD2DLinearGradientBrush 物件。  
   
 ```  
@@ -161,7 +177,7 @@ CD2DRadialGradientBrush(
  `bAutoDestroy`  
  指出由擁有者 (pParentTarget) 將會終結物件。  
   
-##  <a name="a-namecreatea--cd2dradialgradientbrushcreate"></a><a name="create"></a>CD2DRadialGradientBrush::Create  
+##  <a name="create"></a>CD2DRadialGradientBrush::Create  
  建立 CD2DRadialGradientBrush。  
   
 ```  
@@ -175,14 +191,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-namedestroya--cd2dradialgradientbrushdestroy"></a><a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
+##  <a name="destroy"></a>CD2DRadialGradientBrush::Destroy  
  終結 CD2DRadialGradientBrush 物件。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dradialgradientbrushdetach"></a><a name="detach"></a>CD2DRadialGradientBrush::Detach  
+##  <a name="detach"></a>CD2DRadialGradientBrush::Detach  
  中斷連結物件中的資源介面  
   
 ```  
@@ -192,7 +208,7 @@ ID2D1RadialGradientBrush* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的資源介面指標。  
   
-##  <a name="a-namegeta--cd2dradialgradientbrushget"></a><a name="get"></a>CD2DRadialGradientBrush::Get  
+##  <a name="get"></a>CD2DRadialGradientBrush::Get  
  傳回 ID2D1RadialGradientBrush 介面  
   
 ```  
@@ -202,7 +218,7 @@ ID2D1RadialGradientBrush* Get();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1RadialGradientBrush 介面的指標。  
   
-##  <a name="a-namegetcentera--cd2dradialgradientbrushgetcenter"></a><a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
+##  <a name="getcenter"></a>CD2DRadialGradientBrush::GetCenter  
  擷取漸層的橢圓形的中心  
   
 ```  
@@ -212,7 +228,7 @@ CD2DPointF GetCenter() const;
 ### <a name="return-value"></a>傳回值  
  漸層的橢圓形的中心。 這個值表示的筆刷座標空間中  
   
-##  <a name="a-namegetgradientoriginoffseta--cd2dradialgradientbrushgetgradientoriginoffset"></a><a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
+##  <a name="getgradientoriginoffset"></a>CD2DRadialGradientBrush::GetGradientOriginOffset  
  擷取相對於漸層的橢圓形中心漸層的原點位移  
   
 ```  
@@ -222,7 +238,7 @@ CD2DPointF GetGradientOriginOffset() const;
 ### <a name="return-value"></a>傳回值  
  漸層的漸層橢圓形中心原點位移。 這個值表示的筆刷座標空間中  
   
-##  <a name="a-namegetradiusxa--cd2dradialgradientbrushgetradiusx"></a><a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
+##  <a name="getradiusx"></a>CD2DRadialGradientBrush::GetRadiusX  
  擷取的漸層的橢圓形 x 半徑  
   
 ```  
@@ -232,7 +248,7 @@ FLOAT GetRadiusX() const;
 ### <a name="return-value"></a>傳回值  
  漸層的橢圓形 x 軸半徑。 這個值表示的筆刷座標空間中  
   
-##  <a name="a-namegetradiusya--cd2dradialgradientbrushgetradiusy"></a><a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
+##  <a name="getradiusy"></a>CD2DRadialGradientBrush::GetRadiusY  
  擷取的漸層的橢圓形 y 半徑  
   
 ```  
@@ -242,21 +258,21 @@ FLOAT GetRadiusY() const;
 ### <a name="return-value"></a>傳回值  
  漸層的橢圓形 y 軸半徑。 這個值表示的筆刷座標空間中  
   
-##  <a name="a-namempradialgradientbrusha--cd2dradialgradientbrushmpradialgradientbrush"></a><a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
+##  <a name="m_pradialgradientbrush"></a>CD2DRadialGradientBrush::m_pRadialGradientBrush  
  ID2D1RadialGradientBrush 指標。  
   
 ```  
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;  
 ```  
   
-##  <a name="a-namemradialgradientbrushpropertiesa--cd2dradialgradientbrushmradialgradientbrushproperties"></a><a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
+##  <a name="m_radialgradientbrushproperties"></a>CD2DRadialGradientBrush::m_RadialGradientBrushProperties  
  中心、 漸層的原點位移和 x 半徑和 y 軸半徑筆刷的漸層。  
   
 ```  
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;  
 ```  
   
-##  <a name="a-nameoperatorid2d1radialgradientbrushstara--cd2dradialgradientbrushoperator-id2d1radialgradientbrush"></a><a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *  
+##  <a name="operator_id2d1radialgradientbrush_star"></a>CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *  
  傳回 ID2D1RadialGradientBrush 介面  
   
 ```  
@@ -266,7 +282,7 @@ operator ID2D1RadialGradientBrush*();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1RadialGradientBrush 介面的指標。  
   
-##  <a name="a-namesetcentera--cd2dradialgradientbrushsetcenter"></a><a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
+##  <a name="setcenter"></a>CD2DRadialGradientBrush::SetCenter  
  指定的筆刷座標空間中的漸層的橢圓形的中心  
   
 ```  
@@ -277,7 +293,7 @@ void SetCenter(CD2DPointF point);
  `point`  
  漸層橢圓形，筆刷的座標空間中的中心  
   
-##  <a name="a-namesetgradientoriginoffseta--cd2dradialgradientbrushsetgradientoriginoffset"></a><a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
+##  <a name="setgradientoriginoffset"></a>CD2DRadialGradientBrush::SetGradientOriginOffset  
  指定相對於漸層的橢圓形中心漸層的原點位移  
   
 ```  
@@ -288,7 +304,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
  `gradientOriginOffset`  
  漸層的漸層橢圓形中心原點位移  
   
-##  <a name="a-namesetradiusxa--cd2dradialgradientbrushsetradiusx"></a><a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
+##  <a name="setradiusx"></a>CD2DRadialGradientBrush::SetRadiusX  
  指定的筆刷座標空間中的漸層橢圓形 x 半徑  
   
 ```  
@@ -299,7 +315,7 @@ void SetRadiusX(FLOAT radiusX);
  `radiusX`  
  漸層的橢圓形 x 軸半徑。 此值為筆刷的座標空間  
   
-##  <a name="a-namesetradiusya--cd2dradialgradientbrushsetradiusy"></a><a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
+##  <a name="setradiusy"></a>CD2DRadialGradientBrush::SetRadiusY  
  指定的筆刷座標空間中的漸層的橢圓形 y 半徑  
   
 ```  

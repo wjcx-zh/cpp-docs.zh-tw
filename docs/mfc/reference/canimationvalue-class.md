@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationValue
 - CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::CAnimationValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetVariable
+- AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationValue::m_value
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +106,7 @@ class CAnimationValue : public CAnimationBaseObject;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationvalueaddtransition"></a><a name="addtransition"></a>CAnimationValue::AddTransition  
+##  <a name="addtransition"></a>CAnimationValue::AddTransition  
  將轉換套用至值。  
   
 ```  
@@ -113,7 +120,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>備註  
  呼叫此函式可將轉換加入至轉換套用至動畫變數的內部清單。 當您新增的轉換時，它們就會不會立即套用，並儲存在內部清單。 轉換會套用 （加入至腳本，以尋找特定的值） 當您呼叫 CAnimationController::AnimateGroup。  
   
-##  <a name="a-namecanimationvaluea--canimationvaluecanimationvalue"></a><a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
+##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
  建構 CAnimationValue 物件。  
   
 ```  
@@ -143,7 +150,7 @@ CAnimationValue(
 ### <a name="remarks"></a>備註  
  建構 CAnimationValue 物件使用預設屬性︰ 預設值，群組識別碼和物件識別碼會設為 0。  
   
-##  <a name="a-namegetanimationvariablelista--canimationvaluegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
  將封裝的動畫變數放入清單。  
   
 ```  
@@ -156,7 +163,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  函式傳回時，它包含 CAnimationVariable 代表動畫的值的指標。  
   
-##  <a name="a-namegetvaluea--canimationvaluegetvalue"></a><a name="getvalue"></a>CAnimationValue::GetValue  
+##  <a name="getvalue"></a>CAnimationValue::GetValue  
  擷取目前的值。  
   
 ```  
@@ -177,7 +184,7 @@ BOOL GetValue(INT32& nValue);
 ### <a name="remarks"></a>備註  
  呼叫此函式可擷取目前的值。 這個實作會呼叫封裝的 COM 物件，如果呼叫失敗，這個方法會傳回在建構函式或使用 SetDefaultValue 先前所設定的預設值。  
   
-##  <a name="a-namegetvariablea--canimationvaluegetvariable"></a><a name="getvariable"></a>CAnimationValue::GetVariable  
+##  <a name="getvariable"></a>CAnimationValue::GetVariable  
  提供封裝的動畫變數的存取。  
   
 ```  
@@ -190,14 +197,14 @@ CAnimationVariable& GetVariable();
 ### <a name="remarks"></a>備註  
  您可以使用這個方法來存取封裝的動畫變數。 從 CAnimationVariable 即可存取基礎 IUIAnimationVariable 物件，如果尚未建立動畫變數的指標可以是 NULL。  
   
-##  <a name="a-namemvaluea--canimationvaluemvalue"></a><a name="m_value"></a>CAnimationValue::m_value  
+##  <a name="m_value"></a>CAnimationValue::m_value  
  表示動畫值之封裝的動畫變數。  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="a-nameoperatordoublea--canimationvalueoperator-double"></a><a name="operator_double"></a>CAnimationValue::operator 雙  
+##  <a name="operator_double"></a>CAnimationValue::operator 雙  
  提供 CAnimationValue 與點之間的轉換。  
   
 ```  
@@ -210,7 +217,7 @@ operator DOUBLE();
 ### <a name="remarks"></a>備註  
  提供 CAnimationValue 與點之間的轉換。 此方法在內部呼叫 GetValue，而且並不會檢查有錯誤。 如果 GetValue 失敗，傳回的值會包含先前在建構函式或設定與 SetDefaultValue 的預設值。  
   
-##  <a name="a-nameoperatorint32a--canimationvalueoperator-int32"></a><a name="operator_int32"></a>CAnimationValue::operator INT32  
+##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
  提供 CAnimationValue 與 INT32 之間的轉換。  
   
 ```  
@@ -223,7 +230,7 @@ operator INT32();
 ### <a name="remarks"></a>備註  
  提供 CAnimationValue 與 INT32 之間的轉換。 此方法在內部呼叫 GetValue，而且並不會檢查有錯誤。 如果 GetValue 失敗，傳回的值會包含先前在建構函式或設定與 SetDefaultValue 的預設值。  
   
-##  <a name="a-nameoperatoreqa--canimationvalueoperator"></a><a name="operator_eq"></a>CAnimationValue::operator =  
+##  <a name="operator_eq"></a>CAnimationValue::operator =  
  將雙精度浮點數值指派給 CAnimationValue。  
   
 ```  
@@ -241,7 +248,7 @@ void operator=(INT32 nVal);
 ### <a name="remarks"></a>備註  
  將雙精度浮點數值指派給 CAnimationValue。 此值設定為封裝的動畫變數的預設值。 如果您已訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件，您需要重新啟用這些事件。  
   
-##  <a name="a-namesetdefaultvaluea--canimationvaluesetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
  設定預設值。  
   
 ```  

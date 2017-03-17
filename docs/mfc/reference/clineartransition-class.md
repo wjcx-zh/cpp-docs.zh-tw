@@ -10,7 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CLinearTransition
-- afxanimationcontroller/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::CLinearTransition
+- AFXANIMATIONCONTROLLER/CLinearTransition::Create
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CLinearTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +87,7 @@ class CLinearTransition : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-nameclineartransitiona--clineartransitionclineartransition"></a><a name="clineartransition"></a>CLinearTransition::CLinearTransition  
+##  <a name="clineartransition"></a>CLinearTransition::CLinearTransition  
  建構線性轉換物件，並使用持續時間和最終值將它初始化。  
   
 ```  
@@ -99,7 +103,7 @@ CLinearTransition(
  `dblFinalValue`  
  在轉換結束動畫變數的值。  
   
-##  <a name="a-namecreatea--clineartransitioncreate"></a><a name="create"></a>CLinearTransition::Create  
+##  <a name="create"></a>CLinearTransition::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -115,14 +119,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-namemdblfinalvaluea--clineartransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue  
  在轉換結束動畫變數的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdurationa--clineartransitionmduration"></a><a name="m_duration"></a>CLinearTransition::m_duration  
+##  <a name="m_duration"></a>CLinearTransition::m_duration  
  轉換的持續時間。  
   
 ```  

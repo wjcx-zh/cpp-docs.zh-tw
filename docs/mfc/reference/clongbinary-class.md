@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- BLOB
 - CLongBinary
+- AFXDB_/CLongBinary
+- AFXDB_/CLongBinary::CLongBinary
+- AFXDB_/CLongBinary::m_dwDataLength
+- AFXDB_/CLongBinary::m_hData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +89,14 @@ class CLongBinary : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdb_.h  
   
-##  <a name="a-nameclongbinarya--clongbinaryclongbinary"></a><a name="clongbinary"></a>CLongBinary::CLongBinary  
+##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
  建構 `CLongBinary` 物件。  
   
 ```  
 CLongBinary();
 ```  
   
-##  <a name="a-namemdwdatalengtha--clongbinarymdwdatalength"></a><a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
+##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
  以位元組為單位的資料儲存在儲存實際大小`HGLOBAL`處理`m_hData`。  
   
 ```  
@@ -103,7 +106,7 @@ SQLULEN m_dwDataLength;
 ### <a name="remarks"></a>備註  
  這個大小可能小於資料配置的記憶體區塊的大小。 呼叫 Win32 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)函式可取得已配置的大小。  
   
-##  <a name="a-namemhdataa--clongbinarymhdata"></a><a name="m_hdata"></a>CLongBinary::m_hData  
+##  <a name="m_hdata"></a>CLongBinary::m_hData  
  儲存 Windows`HGLOBAL`實際的二進位大型物件資料的控制代碼。  
   
 ```  

@@ -10,6 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWordArray
+- AFXCOLL/CWordArray
+- AFXCOLL/CObArray::CObArray
+- AFXCOLL/CObArray::Add
+- AFXCOLL/CObArray::Append
+- AFXCOLL/CObArray::Copy
+- AFXCOLL/CObArray::ElementAt
+- AFXCOLL/CObArray::FreeExtra
+- AFXCOLL/CObArray::GetAt
+- AFXCOLL/CObArray::GetCount
+- AFXCOLL/CObArray::GetData
+- AFXCOLL/CObArray::GetSize
+- AFXCOLL/CObArray::GetUpperBound
+- AFXCOLL/CObArray::InsertAt
+- AFXCOLL/CObArray::IsEmpty
+- AFXCOLL/CObArray::RemoveAll
+- AFXCOLL/CObArray::RemoveAt
+- AFXCOLL/CObArray::SetAt
+- AFXCOLL/CObArray::SetAtGrow
+- AFXCOLL/CObArray::SetSize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +133,7 @@ class CWordArray : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxcoll.h  
   
-##  <a name="a-nameicommandsourceinterfacea--icommandsource-interface"></a><a name="icommandsource_interface"></a>ICommandSource 介面  
+##  <a name="icommandsource_interface"></a>ICommandSource 介面  
  管理從命令來源物件傳送至使用者控制項的命令。  
   
 ```  
@@ -128,7 +147,7 @@ interface class ICommandSource
   
  如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
+##  <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler  
  命令處理常式加入命令來源物件。  
   
 ```  
@@ -149,7 +168,7 @@ void AddCommandHandler(
   
  請參閱[How to︰ 將命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用`AddCommandHandler`。  
   
-##  <a name="a-nameaddcommandrangehandlera--icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
+##  <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler  
  將一組命令處理常式加入至命令來源物件。  
   
 ```  
@@ -172,7 +191,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>備註  
  這個方法會將連續的命令 Id 對應至單一訊息處理常式，並將其加入命令來源物件。 這用來處理一組相關的按鈕有一個方法。  
   
-##  <a name="a-nameaddcommandrangeuihandlera--icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
+##  <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler  
  將一群使用者介面的命令訊息處理常式加入至命令來源物件。  
   
 ```  
@@ -195,7 +214,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>備註  
  這個方法會將連續的命令 Id 對應至單一使用者介面命令訊息處理常式，並將其加入命令來源物件。 這用來處理一組相關的按鈕有一個方法。  
   
-##  <a name="a-nameaddcommanduihandlera--icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
+##  <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler  
  將使用者介面命令訊息處理常式加入至命令來源物件。  
   
 ```  
@@ -214,7 +233,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>備註  
  這個方法會將使用者介面命令訊息處理常式`cmdHandler`命令來源物件，並將對應的處理常式`cmdID`。  
   
-##  <a name="a-namepostcommanda--icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand  
+##  <a name="postcommand"></a>ICommandSource::PostCommand  
  張貼的訊息，而不需等待處理。  
   
 ```  
@@ -228,7 +247,7 @@ void PostCommand(unsigned int command);
 ### <a name="remarks"></a>備註  
  這個方法以非同步方式將訊息對應到所指定的識別碼張貼`command`。 它會呼叫[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)將訊息放在視窗的訊息佇列，然後傳回，而不需等待處理訊息對應的視窗。  
   
-##  <a name="a-nameremovecommandhandlera--icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
+##  <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler  
  命令來源物件中移除的命令處理常式。  
   
 ```  
@@ -242,7 +261,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>備註  
  這個方法會移除對應至命令處理常式`cmdID`命令來源物件。  
   
-##  <a name="a-nameremovecommandrangehandlera--icommandsourceremovecommandrangehandler"></a><a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
+##  <a name="removecommandrangehandler"></a>ICommandSource::RemoveCommandRangeHandler  
  命令來源物件中移除一組命令處理常式。  
   
 ```  
@@ -261,7 +280,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>備註  
  這個方法會移除訊息處理常式，對應到所指定的命令 Id 的一群`cmdIDMin`和`cmdIDMax`，從命令來源物件。  
   
-##  <a name="a-nameremovecommandrangeuihandlera--icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
+##  <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler  
  命令來源物件中移除一群使用者介面的命令訊息處理常式。  
   
 ```  
@@ -280,7 +299,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>備註  
  這個方法會移除群組的使用者介面命令訊息處理常式，對應到所指定的命令 Id`cmdIDMin`和`cmdIDMax`，從命令來源物件。  
   
-##  <a name="a-nameremovecommanduihandlera--icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
+##  <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler  
  命令來源物件中移除的使用者介面命令訊息處理常式。  
   
 ```  
@@ -294,7 +313,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>備註  
  這個方法會移除的使用者介面命令訊息處理常式對應至`cmdID`命令來源物件。  
   
-##  <a name="a-namesendcommanda--icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand  
+##  <a name="sendcommand"></a>ICommandSource::SendCommand  
  傳送訊息，並等候它處理後再傳回。  
   
 ```  
@@ -308,7 +327,7 @@ void SendCommand(unsigned int command);
 ### <a name="remarks"></a>備註  
  此方法會以同步方式傳送的訊息對應到所指定的識別碼`command`。 它會呼叫[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)將訊息放在視窗的訊息佇列，並等待，直到該視窗程序傳回之前處理訊息之後。  
   
-##  <a name="a-nameicommandtargetinterfacea--icommandtarget-interface"></a><a name="icommandtarget_interface"></a>ICommandTarget 介面  
+##  <a name="icommandtarget_interface"></a>ICommandTarget 介面  
  使用者控制項提供介面來接收命令來源物件的命令。  
   
 ```  
@@ -322,7 +341,7 @@ interface class ICommandTarget
   
  如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameinitializea--icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a>ICommandTarget::Initialize  
  初始化命令目標物件。  
   
 ```  
@@ -338,7 +357,7 @@ void Initialize(ICommandSource^ cmdSource);
   
  這個方法會初始化命令目標物件，並將它與指定的命令來源物件相關聯`cmdSource`。 使用者控制項類別實作中，應該呼叫它。 在初始化時，您應該註冊命令處理常式與命令來源物件呼叫[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)中`Initialize`實作。 請參閱[How to︰ 將命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用`Initialize`若要這樣做。  
   
-##  <a name="a-nameicommanduiinterfacea--icommandui-interface"></a><a name="icommandui_interface"></a>ICommandUI 介面  
+##  <a name="icommandui_interface"></a>ICommandUI 介面  
  管理使用者介面的命令。  
   
 ```  
@@ -356,7 +375,7 @@ interface class ICommandUI
   
  如需有關使用者介面的命令在 MFC 中的管理方式的詳細資訊，請參閱[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)。  
   
-##  <a name="a-namechecka--icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+##  <a name="check"></a>ICommandUI::Check  
  將此命令的使用者介面項目設定為適當的核取狀態。  
   
 ```  
@@ -372,7 +391,7 @@ property UICheckState Check;
 |1|核取|  
 |2|不確定設定|  
   
-##  <a name="a-namecontinueroutinga--icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting  
+##  <a name="continuerouting"></a>ICommandUI::ContinueRouting  
  會告知命令路由機制，繼續傳送處理常式的鏈結中向下目前的訊息。  
   
 ```  
@@ -382,7 +401,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>備註  
  這是進階的成員函式，應該用於搭配[ON_COMMAND_EX](http://msdn.microsoft.com/library/0bb49090-aee8-4203-87c8-dd001d3dd26e)處理常式，傳回`FALSE`。 如需詳細資訊，請參閱技術提示[TN006︰ 訊息對應](../../mfc/tn006-message-maps.md)。  
   
-##  <a name="a-nameenableda--icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled  
+##  <a name="enabled"></a>ICommandUI::Enabled  
  啟用或停用使用者介面項目，此命令。  
   
 ```  
@@ -392,7 +411,7 @@ property bool Enabled;
 ### <a name="remarks"></a>備註  
  這個屬性會啟用或停用使用者介面項目，此命令。 設定`Enabled`至`TRUE`啟用項目，`FALSE`停用它。  
   
-##  <a name="a-nameida--icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+##  <a name="id"></a>ICommandUI::ID  
  取得所表示的使用者介面物件的 ID`ICommandUI`物件。  
   
 ```  
@@ -402,7 +421,7 @@ property unsigned int ID;
 ### <a name="remarks"></a>備註  
  這個屬性會取得功能表項目 工具列按鈕的 ID （處理），或其他使用者介面物件，表示由`ICommandUI`物件。  
   
-##  <a name="a-nameindexa--icommanduiindex"></a><a name="index"></a>ICommandUI::Index  
+##  <a name="index"></a>ICommandUI::Index  
  取得所表示的使用者介面物件的索引`ICommandUI`物件。  
   
 ```  
@@ -412,7 +431,7 @@ property unsigned int Index;
 ### <a name="remarks"></a>備註  
  這個屬性會取得索引 （處理） 的功能表項目、 工具列按鈕或其他使用者介面物件，表示由`ICommandUI`物件。  
   
-##  <a name="a-nameradioa--icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio  
+##  <a name="radio"></a>ICommandUI::Radio  
  將此命令的使用者介面項目設定為適當的核取狀態。  
   
 ```  
@@ -422,7 +441,7 @@ property bool Radio;
 ### <a name="remarks"></a>備註  
  此屬性設定為適當的核取狀態的使用者介面項目，此命令。 設定`Radio`至`TRUE`啟用項目; 否則`FALSE`。  
   
-##  <a name="a-nametexta--icommanduitext"></a><a name="text"></a>ICommandUI::Text  
+##  <a name="text"></a>ICommandUI::Text  
  設定使用者介面項目，此命令的文字。  
   
 ```  
@@ -432,7 +451,7 @@ property String^ Text;
 ### <a name="remarks"></a>備註  
  這個屬性設定的使用者介面項目，此命令的文字。 設定`Text`的文字字串控制代碼。  
   
-##  <a name="a-nameiviewinterfacea--iview-interface"></a><a name="iview_interface"></a>IView 介面  
+##  <a name="iview_interface"></a>IView 介面  
  實作數個方法， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)檢視通知傳送至 managed 控制項使用。  
   
 ```  
@@ -446,7 +465,7 @@ interface class IView
   
  如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameonactivateviewa--iviewonactivateview"></a><a name="onactivateview"></a>IView::OnActivateView  
+##  <a name="onactivateview"></a>IView::OnActivateView  
  由 MFC 檢視是啟用或停用時呼叫。  
   
 ```  
@@ -457,14 +476,14 @@ void OnActivateView(bool activate);
  `activate`  
  指出檢視是否目前已啟用或停用。  
   
-##  <a name="a-nameoninitialupdatea--iviewoninitialupdate"></a><a name="oninitialupdate"></a>IView::OnInitialUpdate  
+##  <a name="oninitialupdate"></a>IView::OnInitialUpdate  
  檢視第一次連接到文件之後，但一開始會顯示檢視之前，由架構呼叫。  
   
 ```  
 void OnInitialUpdate();
 ```  
   
-##  <a name="a-nameonupdatea--iviewonupdate"></a><a name="onupdate"></a>IView::OnUpdate  
+##  <a name="onupdate"></a>IView::OnUpdate  
  修改檢視的文件之後，由 MFC 呼叫。  
   
 ```  

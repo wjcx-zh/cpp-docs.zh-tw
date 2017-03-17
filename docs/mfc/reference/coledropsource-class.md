@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDropSource
+- AFXOLE/COleDropSource
+- AFXOLE/COleDropSource::COleDropSource
+- AFXOLE/COleDropSource::GiveFeedback
+- AFXOLE/COleDropSource::OnBeginDrag
+- AFXOLE/COleDropSource::QueryContinueDrag
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +91,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-namecoledropsourcea--coledropsourcecoledropsource"></a><a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
  建構 `COleDropSource` 物件。  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="a-namegivefeedbacka--coledropsourcegivefeedback"></a><a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
  在呼叫之後，由框架呼叫[COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)或[COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)。  
   
 ```  
@@ -122,7 +127,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  如需詳細資訊，請參閱[IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723)， [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)，和[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonbegindraga--coledropsourceonbegindrag"></a><a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
  由呼叫 framework 發生事件時，就可以開始拖曳作業，例如按下滑鼠左鍵。  
   
 ```  
@@ -139,7 +144,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>備註  
  如果您想要修改拖曳的處理序啟動的方式，請覆寫這個函式。 預設實作會捕捉到滑鼠，並且會保持在拖曳模式，直到使用者按下滑鼠左鍵或向右按鈕或按 esc 鍵，此時它會釋放滑鼠按鈕。  
   
-##  <a name="a-namequerycontinuedraga--coledropsourcequerycontinuedrag"></a><a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
  拖曳開始之後，此函式會重複呼叫 framework 直到拖曳作業取消或完成。  
   
 ```  

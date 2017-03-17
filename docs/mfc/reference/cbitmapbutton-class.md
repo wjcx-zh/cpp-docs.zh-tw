@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
+- AFXEXT/CBitmapButton
+- AFXEXT/CBitmapButton::CBitmapButton
+- AFXEXT/CBitmapButton::AutoLoad
+- AFXEXT/CBitmapButton::LoadBitmaps
+- AFXEXT/CBitmapButton::SizeToContent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +133,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxext.h  
   
-##  <a name="a-nameautoloada--cbitmapbuttonautoload"></a><a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>CBitmapButton::AutoLoad  
  在對話方塊中的按鈕關聯的物件`CBitmapButton`類別名稱，以載入 bitmap(s) 和調整大小以符合點陣圖按鈕。  
   
 ```  
@@ -153,7 +158,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog #&75;](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="a-namecbitmapbuttona--cbitmapbuttoncbitmapbutton"></a><a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
  建立 `CBitmapButton` 物件。  
   
 ```  
@@ -166,7 +171,7 @@ CBitmapButton();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog #&57;](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="a-nameloadbitmapsa--cbitmapbuttonloadbitmaps"></a><a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
  使用此函式，當您想要載入其資源名稱或識別碼編號，或無法使用時的點陣圖影像`AutoLoad`函數，因為，比方說，您要建立不屬於 對話方塊中的點陣圖按鈕。  
   
 ```  
@@ -215,7 +220,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog #&58;](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="a-namesizetocontenta--cbitmapbuttonsizetocontent"></a><a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
  呼叫此函式可調整大小的點陣圖大小的點陣圖按鈕。  
   
 ```  

@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObject<Base>
-- ATL::CComObject
-- ATL::CComObject<Base>
-- ATL.CComObject
 - CComObject
+- ATLCOM/ATL::CComObject
+- ATLCOM/ATL::CComObject::CComObject
+- ATLCOM/ATL::CComObject::AddRef
+- ATLCOM/ATL::CComObject::CreateInstance
+- ATLCOM/ATL::CComObject::QueryInterface
+- ATLCOM/ATL::CComObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +90,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectaddref"></a><a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>CComObject::AddRef  
  在物件上的參考計數遞增。  
   
 ```
@@ -98,7 +100,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>傳回值  
  此函數會傳回新的遞增的參考計數物件。 這個值可用來診斷測試。  
   
-##  <a name="a-nameccomobjecta--ccomobjectccomobject"></a><a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>CComObject::CComObject  
  建構函式遞增模組鎖定計數。  
   
 ```
@@ -114,7 +116,7 @@ CComObject(void* = NULL);
   
  如果`CComObject`-使用成功建構衍生的物件**新**運算子，初始的參考計數為 0。 若要設定為適當的值 (1) 的參考計數，請呼叫[AddRef](#addref)函式。  
   
-##  <a name="a-namedtora--ccomobjectccomobject"></a><a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>CComObject:: ~ CComObject  
  解構函式。  
   
 ```
@@ -125,7 +127,7 @@ CComObject();
  釋放所有配置的資源，呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)，和模組的鎖定計數遞減。  
 
   
-##  <a name="a-namecreateinstancea--ccomobjectcreateinstance"></a><a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>CComObject::CreateInstance  
  這個靜態函式可讓您建立新**CComObject** `Base` ** > **物件，而不需要的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
@@ -149,7 +151,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM&#39;](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="a-namequeryinterfacea--ccomobjectqueryinterface"></a><a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>CComObject::QueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -171,7 +173,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namereleasea--ccomobjectrelease"></a><a name="release"></a>CComObject::Release  
+##  <a name="release"></a>CComObject::Release  
  遞減參考計數物件。  
   
 ```

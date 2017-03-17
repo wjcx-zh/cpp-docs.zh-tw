@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHandle
-- ATL::CHandle
 - CHandle
+- ATLBASE/ATL::CHandle
+- ATLBASE/ATL::CHandle::CHandle
+- ATLBASE/ATL::CHandle::Attach
+- ATLBASE/ATL::CHandle::Close
+- ATLBASE/ATL::CHandle::Detach
+- ATLBASE/ATL::CHandle::m_h
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +93,7 @@ class CHandle
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-nameattacha--chandleattach"></a><a name="attach"></a>CHandle::Attach  
+##  <a name="attach"></a>CHandle::Attach  
  呼叫這個方法來附加`CHandle`至現有的控制代碼的物件。  
   
 ```
@@ -103,7 +107,7 @@ void Attach(HANDLE h) throw();
 ### <a name="remarks"></a>備註  
  指派`CHandle`物件傳遞給`h`處理。 在偵錯組建中 ATLASSERT，將產生`h`是 NULL。 控制代碼的有效性的任何其他檢查不撤銷狀態。  
   
-##  <a name="a-namechandlea--chandlechandle"></a><a name="chandle"></a>CHandle::CHandle  
+##  <a name="chandle"></a>CHandle::CHandle  
  建構函式。  
   
 ```
@@ -119,7 +123,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>備註  
  建立新`CHandle`物件時，您可以選擇使用現有的控制代碼或`CHandle`物件。  
   
-##  <a name="a-namedtora--chandlechandle"></a><a name="dtor"></a>CHandle:: ~ CHandle  
+##  <a name="dtor"></a>CHandle:: ~ CHandle  
  解構函式。  
   
 ```
@@ -129,7 +133,7 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="remarks"></a>備註  
  釋出`CHandle`物件呼叫[CHandle::Close](#close)。  
   
-##  <a name="a-nameclosea--chandleclose"></a><a name="close"></a>CHandle::Close  
+##  <a name="close"></a>CHandle::Close  
  呼叫這個方法來關閉`CHandle`物件。  
   
 ```
@@ -139,7 +143,7 @@ void Close() throw();
 ### <a name="remarks"></a>備註  
  關閉開啟的物件控制代碼。 如果控制代碼為 NULL，而如果**關閉**已經過呼叫，ATLASSERT，系統將產生在偵錯組建。  
   
-##  <a name="a-namedetacha--chandledetach"></a><a name="detach"></a>CHandle::Detach  
+##  <a name="detach"></a>CHandle::Detach  
  呼叫這個方法來卸離的控制代碼從`CHandle`物件。  
   
 ```
@@ -152,14 +156,14 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>備註  
  釋放控制代碼的擁有權。  
   
-##  <a name="a-namemha--chandlemh"></a><a name="m_h"></a>CHandle::m_h  
+##  <a name="m_h"></a>CHandle::m_h  
  儲存控制代碼的成員變數。  
   
 ```
 HANDLE m_h;
 ```  
   
-##  <a name="a-nameoperatoreqa--chandleoperator-"></a><a name="operator_eq"></a>CHandle::operator =  
+##  <a name="operator_eq"></a>CHandle::operator =  
  指派運算子。  
   
 ```
@@ -176,7 +180,7 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="remarks"></a>備註  
  如果`CHandle`物件目前包含的控制代碼，則會關閉。 `CHandle`傳入必須設為 NULL 的控制代碼參考的物件。 這可確保兩個`CHandle`物件絕不會包含相同的作用中控制代碼。  
   
-##  <a name="a-nameoperatorhandlea--chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::operator 控制代碼  
+##  <a name="operator_handle"></a>CHandle::operator 控制代碼  
  傳回儲存的控制代碼值。  
   
 ```  

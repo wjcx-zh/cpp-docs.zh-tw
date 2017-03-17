@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDataPathProperty
+- AFXCTL/CDataPathProperty
+- AFXCTL/CDataPathProperty::CDataPathProperty
+- AFXCTL/CDataPathProperty::GetControl
+- AFXCTL/CDataPathProperty::GetPath
+- AFXCTL/CDataPathProperty::Open
+- AFXCTL/CDataPathProperty::ResetData
+- AFXCTL/CDataPathProperty::SetControl
+- AFXCTL/CDataPathProperty::SetPath
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="requirements"></a>需求  
  **標頭︰** afxctl.h  
   
-##  <a name="a-namecdatapathpropertya--cdatapathpropertycdatapathproperty"></a><a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
+##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
  建構 `CDataPathProperty` 物件。  
   
 ```  
@@ -115,7 +123,7 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ### <a name="remarks"></a>備註  
  `COleControl`指向的物件`pControl`由**開啟**，並且擷取衍生的類別。 如果`pControl`是**NULL**，搭配使用的控制項**開啟**應該與設定`SetControl`。 如果`lpszPath`是**NULL**，您可以透過路徑中傳遞**開啟**，或將它與`SetPath`。  
   
-##  <a name="a-namegetcontrola--cdatapathpropertygetcontrol"></a><a name="getcontrol"></a>CDataPathProperty::GetControl  
+##  <a name="getcontrol"></a>CDataPathProperty::GetControl  
  呼叫此成員函式擷取`COleControl`物件相關聯`CDataPathProperty`物件。  
   
 ```  
@@ -125,7 +133,7 @@ COleControl* GetControl();
 ### <a name="return-value"></a>傳回值  
  傳回與關聯的 OLE 控制項的指標`CDataPathProperty`物件。 **NULL**如果不是控制項相關聯。  
   
-##  <a name="a-namegetpatha--cdatapathpropertygetpath"></a><a name="getpath"></a>CDataPathProperty::GetPath  
+##  <a name="getpath"></a>CDataPathProperty::GetPath  
  呼叫此成員函式，擷取路徑，請設定當`CDataPathProperty`建構，或在指定物件**開啟**，或在前一次呼叫中指定`SetPath`成員函式。  
   
 ```  
@@ -135,7 +143,7 @@ CString GetPath() const;
 ### <a name="return-value"></a>傳回值  
  屬性本身傳回的路徑名稱。 可以是空白，如果未不指定任何路徑。  
   
-##  <a name="a-nameopena--cdatapathpropertyopen"></a><a name="open"></a>CDataPathProperty::Open  
+##  <a name="open"></a>CDataPathProperty::Open  
  呼叫此成員函式，以起始非同步屬性相關聯控制項的載入。  
   
 ```  
@@ -179,7 +187,7 @@ virtual BOOL Open(CFileException* pError = NULL);
   
  所有多載[CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open)也都由`CDataPathProperty`。  
   
-##  <a name="a-nameresetdataa--cdatapathpropertyresetdata"></a><a name="resetdata"></a>CDataPathProperty::ResetData  
+##  <a name="resetdata"></a>CDataPathProperty::ResetData  
  呼叫此函式可取得`CAsyncMonikerFile::OnDataAvailable`以通知容器，控制項屬性已變更，並以非同步方式載入的所有資訊都都不再有用。  
   
 ```  
@@ -189,7 +197,7 @@ virtual void ResetData();
 ### <a name="remarks"></a>備註  
  開啟應該重新啟動。 在衍生的類別可以覆寫這個函式供不同的預設值。  
   
-##  <a name="a-namesetcontrola--cdatapathpropertysetcontrol"></a><a name="setcontrol"></a>CDataPathProperty::SetControl  
+##  <a name="setcontrol"></a>CDataPathProperty::SetControl  
  呼叫此成員函式，將以非同步的 OLE 控制項相關聯`CDataPathProperty`物件。  
   
 ```  
@@ -200,7 +208,7 @@ void SetControl(COleControl* pControl);
  `pControl`  
  非同步的 OLE 控制項，與屬性相關聯的指標。  
   
-##  <a name="a-namesetpatha--cdatapathpropertysetpath"></a><a name="setpath"></a>CDataPathProperty::SetPath  
+##  <a name="setpath"></a>CDataPathProperty::SetPath  
  呼叫此成員函式設定屬性的路徑名稱。  
   
 ```  

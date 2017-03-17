@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandTarget
+- AFXWINFORMS/ICommandTarget
+- AFXWINFORMS/ICommandTarget::Initialize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -66,7 +68,7 @@ interface class ICommandTarget
 ## <a name="requirements"></a>需求  
  **標頭︰** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
   
-##  <a name="a-nameinitializea-icommandtargetinitialize"></a><a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a>ICommandTarget::Initialize  
  初始化命令目標物件。  
   
 ```  

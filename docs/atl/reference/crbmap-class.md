@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CRBMap
 - CRBMap
-- ATL::CRBMap
+- ATLCOLL/ATL::CRBMap
+- ATLCOLL/ATL::CRBMap::CRBMap
+- ATLCOLL/ATL::CRBMap::Lookup
+- ATLCOLL/ATL::CRBMap::RemoveKey
+- ATLCOLL/ATL::CRBMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +108,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-namecrbmapa--crbmapcrbmap"></a><a name="crbmap"></a>CRBMap::CRBMap  
+##  <a name="crbmap"></a>CRBMap::CRBMap  
  建構函式。  
   
 ```
@@ -124,7 +127,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&81;](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmapcrbmap"></a><a name="dtor"></a>CRBMap:: ~ CRBMap  
+##  <a name="dtor"></a>CRBMap:: ~ CRBMap  
  解構函式。  
   
 ```
@@ -136,7 +139,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需可用的其他方法。  
   
-##  <a name="a-namelookupa--crbmaplookup"></a><a name="lookup"></a>CRBMap::Lookup  
+##  <a name="lookup"></a>CRBMap::Lookup  
  呼叫這個方法來查詢索引鍵或值`CRBMap`物件。  
   
 ```
@@ -161,7 +164,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&82;](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
-##  <a name="a-nameremovekeya--crbmapremovekey"></a><a name="removekey"></a>CRBMap::RemoveKey  
+##  <a name="removekey"></a>CRBMap::RemoveKey  
  呼叫此方法以移除項目從`CRBMap`指定索引鍵的物件。  
   
 ```
@@ -181,7 +184,7 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&83;](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
-##  <a name="a-namesetata--crbmapsetat"></a><a name="setat"></a>CRBMap::SetAt  
+##  <a name="setat"></a>CRBMap::SetAt  
  呼叫這個方法來插入對應的項目組。  
   
 ```

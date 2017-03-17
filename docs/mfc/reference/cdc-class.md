@@ -10,6 +10,205 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDC
+- AFXWIN/CDC
+- AFXWIN/CDC::CDC
+- AFXWIN/CDC::AbortDoc
+- AFXWIN/CDC::AbortPath
+- AFXWIN/CDC::AddMetaFileComment
+- AFXWIN/CDC::AlphaBlend
+- AFXWIN/CDC::AngleArc
+- AFXWIN/CDC::Arc
+- AFXWIN/CDC::ArcTo
+- AFXWIN/CDC::Attach
+- AFXWIN/CDC::BeginPath
+- AFXWIN/CDC::BitBlt
+- AFXWIN/CDC::Chord
+- AFXWIN/CDC::CloseFigure
+- AFXWIN/CDC::CreateCompatibleDC
+- AFXWIN/CDC::CreateDC
+- AFXWIN/CDC::CreateIC
+- AFXWIN/CDC::DeleteDC
+- AFXWIN/CDC::DeleteTempMap
+- AFXWIN/CDC::Detach
+- AFXWIN/CDC::DPtoHIMETRIC
+- AFXWIN/CDC::DPtoLP
+- AFXWIN/CDC::Draw3dRect
+- AFXWIN/CDC::DrawDragRect
+- AFXWIN/CDC::DrawEdge
+- AFXWIN/CDC::DrawEscape
+- AFXWIN/CDC::DrawFocusRect
+- AFXWIN/CDC::DrawFrameControl
+- AFXWIN/CDC::DrawIcon
+- AFXWIN/CDC::DrawState
+- AFXWIN/CDC::DrawText
+- AFXWIN/CDC::DrawTextEx
+- AFXWIN/CDC::Ellipse
+- AFXWIN/CDC::EndDoc
+- AFXWIN/CDC::EndPage
+- AFXWIN/CDC::EndPath
+- AFXWIN/CDC::EnumObjects
+- AFXWIN/CDC::Escape
+- AFXWIN/CDC::ExcludeClipRect
+- AFXWIN/CDC::ExcludeUpdateRgn
+- AFXWIN/CDC::ExtFloodFill
+- AFXWIN/CDC::ExtTextOut
+- AFXWIN/CDC::FillPath
+- AFXWIN/CDC::FillRect
+- AFXWIN/CDC::FillRgn
+- AFXWIN/CDC::FillSolidRect
+- AFXWIN/CDC::FlattenPath
+- AFXWIN/CDC::FloodFill
+- AFXWIN/CDC::FrameRect
+- AFXWIN/CDC::FrameRgn
+- AFXWIN/CDC::FromHandle
+- AFXWIN/CDC::GetArcDirection
+- AFXWIN/CDC::GetAspectRatioFilter
+- AFXWIN/CDC::GetBkColor
+- AFXWIN/CDC::GetBkMode
+- AFXWIN/CDC::GetBoundsRect
+- AFXWIN/CDC::GetBrushOrg
+- AFXWIN/CDC::GetCharABCWidths
+- AFXWIN/CDC::GetCharABCWidthsI
+- AFXWIN/CDC::GetCharacterPlacement
+- AFXWIN/CDC::GetCharWidth
+- AFXWIN/CDC::GetCharWidthI
+- AFXWIN/CDC::GetClipBox
+- AFXWIN/CDC::GetColorAdjustment
+- AFXWIN/CDC::GetCurrentBitmap
+- AFXWIN/CDC::GetCurrentBrush
+- AFXWIN/CDC::GetCurrentFont
+- AFXWIN/CDC::GetCurrentPalette
+- AFXWIN/CDC::GetCurrentPen
+- AFXWIN/CDC::GetCurrentPosition
+- AFXWIN/CDC::GetDCBrushColor
+- AFXWIN/CDC::GetDCPenColor
+- AFXWIN/CDC::GetDeviceCaps
+- AFXWIN/CDC::GetFontData
+- AFXWIN/CDC::GetFontLanguageInfo
+- AFXWIN/CDC::GetGlyphOutline
+- AFXWIN/CDC::GetGraphicsMode
+- AFXWIN/CDC::GetHalftoneBrush
+- AFXWIN/CDC::GetKerningPairs
+- AFXWIN/CDC::GetLayout
+- AFXWIN/CDC::GetMapMode
+- AFXWIN/CDC::GetMiterLimit
+- AFXWIN/CDC::GetNearestColor
+- AFXWIN/CDC::GetOutlineTextMetrics
+- AFXWIN/CDC::GetOutputCharWidth
+- AFXWIN/CDC::GetOutputTabbedTextExtent
+- AFXWIN/CDC::GetOutputTextExtent
+- AFXWIN/CDC::GetOutputTextMetrics
+- AFXWIN/CDC::GetPath
+- AFXWIN/CDC::GetPixel
+- AFXWIN/CDC::GetPolyFillMode
+- AFXWIN/CDC::GetROP2
+- AFXWIN/CDC::GetSafeHdc
+- AFXWIN/CDC::GetStretchBltMode
+- AFXWIN/CDC::GetTabbedTextExtent
+- AFXWIN/CDC::GetTextAlign
+- AFXWIN/CDC::GetTextCharacterExtra
+- AFXWIN/CDC::GetTextColor
+- AFXWIN/CDC::GetTextExtent
+- AFXWIN/CDC::GetTextExtentExPointI
+- AFXWIN/CDC::GetTextExtentPointI
+- AFXWIN/CDC::GetTextFace
+- AFXWIN/CDC::GetTextMetrics
+- AFXWIN/CDC::GetViewportExt
+- AFXWIN/CDC::GetViewportOrg
+- AFXWIN/CDC::GetWindow
+- AFXWIN/CDC::GetWindowExt
+- AFXWIN/CDC::GetWindowOrg
+- AFXWIN/CDC::GetWorldTransform
+- AFXWIN/CDC::GradientFill
+- AFXWIN/CDC::GrayString
+- AFXWIN/CDC::HIMETRICtoDP
+- AFXWIN/CDC::HIMETRICtoLP
+- AFXWIN/CDC::IntersectClipRect
+- AFXWIN/CDC::InvertRect
+- AFXWIN/CDC::InvertRgn
+- AFXWIN/CDC::IsPrinting
+- AFXWIN/CDC::LineTo
+- AFXWIN/CDC::LPtoDP
+- AFXWIN/CDC::LPtoHIMETRIC
+- AFXWIN/CDC::MaskBlt
+- AFXWIN/CDC::ModifyWorldTransform
+- AFXWIN/CDC::MoveTo
+- AFXWIN/CDC::OffsetClipRgn
+- AFXWIN/CDC::OffsetViewportOrg
+- AFXWIN/CDC::OffsetWindowOrg
+- AFXWIN/CDC::PaintRgn
+- AFXWIN/CDC::PatBlt
+- AFXWIN/CDC::Pie
+- AFXWIN/CDC::PlayMetaFile
+- AFXWIN/CDC::PlgBlt
+- AFXWIN/CDC::PolyBezier
+- AFXWIN/CDC::PolyBezierTo
+- AFXWIN/CDC::PolyDraw
+- AFXWIN/CDC::Polygon
+- AFXWIN/CDC::Polyline
+- AFXWIN/CDC::PolylineTo
+- AFXWIN/CDC::PolyPolygon
+- AFXWIN/CDC::PolyPolyline
+- AFXWIN/CDC::PtVisible
+- AFXWIN/CDC::RealizePalette
+- AFXWIN/CDC::Rectangle
+- AFXWIN/CDC::RectVisible
+- AFXWIN/CDC::ReleaseAttribDC
+- AFXWIN/CDC::ReleaseOutputDC
+- AFXWIN/CDC::ResetDC
+- AFXWIN/CDC::RestoreDC
+- AFXWIN/CDC::RoundRect
+- AFXWIN/CDC::SaveDC
+- AFXWIN/CDC::ScaleViewportExt
+- AFXWIN/CDC::ScaleWindowExt
+- AFXWIN/CDC::ScrollDC
+- AFXWIN/CDC::SelectClipPath
+- AFXWIN/CDC::SelectClipRgn
+- AFXWIN/CDC::SelectObject
+- AFXWIN/CDC::SelectPalette
+- AFXWIN/CDC::SelectStockObject
+- AFXWIN/CDC::SetAbortProc
+- AFXWIN/CDC::SetArcDirection
+- AFXWIN/CDC::SetAttribDC
+- AFXWIN/CDC::SetBkColor
+- AFXWIN/CDC::SetBkMode
+- AFXWIN/CDC::SetBoundsRect
+- AFXWIN/CDC::SetBrushOrg
+- AFXWIN/CDC::SetColorAdjustment
+- AFXWIN/CDC::SetDCBrushColor
+- AFXWIN/CDC::SetDCPenColor
+- AFXWIN/CDC::SetGraphicsMode
+- AFXWIN/CDC::SetLayout
+- AFXWIN/CDC::SetMapMode
+- AFXWIN/CDC::SetMapperFlags
+- AFXWIN/CDC::SetMiterLimit
+- AFXWIN/CDC::SetOutputDC
+- AFXWIN/CDC::SetPixel
+- AFXWIN/CDC::SetPixelV
+- AFXWIN/CDC::SetPolyFillMode
+- AFXWIN/CDC::SetROP2
+- AFXWIN/CDC::SetStretchBltMode
+- AFXWIN/CDC::SetTextAlign
+- AFXWIN/CDC::SetTextCharacterExtra
+- AFXWIN/CDC::SetTextColor
+- AFXWIN/CDC::SetTextJustification
+- AFXWIN/CDC::SetViewportExt
+- AFXWIN/CDC::SetViewportOrg
+- AFXWIN/CDC::SetWindowExt
+- AFXWIN/CDC::SetWindowOrg
+- AFXWIN/CDC::SetWorldTransform
+- AFXWIN/CDC::StartDoc
+- AFXWIN/CDC::StartPage
+- AFXWIN/CDC::StretchBlt
+- AFXWIN/CDC::StrokeAndFillPath
+- AFXWIN/CDC::StrokePath
+- AFXWIN/CDC::TabbedTextOut
+- AFXWIN/CDC::TextOut
+- AFXWIN/CDC::TransparentBlt
+- AFXWIN/CDC::UpdateColors
+- AFXWIN/CDC::WidenPath
+- AFXWIN/CDC::m_hAttribDC
+- AFXWIN/CDC::m_hDC
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -312,7 +511,7 @@ class CDC : public CObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameabortdoca--cdcabortdoc"></a><a name="abortdoc"></a>CDC::AbortDoc  
+##  <a name="abortdoc"></a>CDC::AbortDoc  
  結束目前的列印工作，並清除應用程式已自上次呼叫來寫入裝置的所有項目[Cdc](#startdoc)成員函式。  
   
 ```  
@@ -348,7 +547,7 @@ int AbortDoc();
 ### <a name="example"></a>範例  
   請參閱範例[CDC::StartDoc](#startdoc)。  
   
-##  <a name="a-nameabortpatha--cdcabortpath"></a><a name="abortpath"></a>CDC::AbortPath  
+##  <a name="abortpath"></a>CDC::AbortPath  
  關閉並捨棄任何在裝置內容中的路徑。  
   
 ```  
@@ -361,7 +560,7 @@ BOOL AbortPath();
 ### <a name="remarks"></a>備註  
  如果在裝置內容中有開放的路徑括號，路徑括號會關閉，而路徑則會捨棄。 如果在裝置內容中沒有封閉的路徑，路徑會被捨棄。  
   
-##  <a name="a-nameaddmetafilecommenta--cdcaddmetafilecomment"></a><a name="addmetafilecomment"></a>CDC::AddMetaFileComment  
+##  <a name="addmetafilecomment"></a>CDC::AddMetaFileComment  
  將註解緩衝區複製到指定的格式增強型中繼檔。  
   
 ```  
@@ -383,7 +582,7 @@ BOOL AddMetaFileComment(
 ### <a name="remarks"></a>備註  
  註解可以包含任何私人資訊 — 例如，圖片和日期的來源建立。 註解的開頭應該應用程式簽章，後面接著資料。 註解不應包含位置特定資料。 位置特定的資料指定記錄的位置，則不應該包含一個中繼檔可能會內嵌在另一個中繼檔，因為。 此函式僅能使用增強型中繼檔。  
   
-##  <a name="a-namealphablenda--cdcalphablend"></a><a name="alphablend"></a>CDC::AlphaBlend  
+##  <a name="alphablend"></a>CDC::AlphaBlend  
  呼叫此成員函式，以顯示具有透明或半透明的像素的點陣圖。  
   
 ```  
@@ -437,7 +636,7 @@ BOOL AlphaBlend(
 ### <a name="remarks"></a>備註  
  請參閱[alphablend，還有旁邊](http://msdn.microsoft.com/library/windows/desktop/dd183351)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需詳細資訊。  
   
-##  <a name="a-nameanglearca--cdcanglearc"></a><a name="anglearc"></a>CDC::AngleArc  
+##  <a name="anglearc"></a>CDC::AngleArc  
  繪製的直線線段與圓弧。  
   
 ```  
@@ -475,7 +674,7 @@ BOOL AngleArc(
   
  如果掃掠角度大於 360 度弧線是清理多次。 此函式使用目前畫筆繪製線條。 此圖不會填滿。  
   
-##  <a name="a-namearca--cdcarc"></a><a name="arc"></a>CDC::Arc  
+##  <a name="arc"></a>CDC::Arc  
  繪製橢圓弧形。  
   
 ```  
@@ -541,7 +740,7 @@ BOOL Arc(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&29;](../../mfc/codesnippet/cpp/cdc-class_1.cpp)]  
   
-##  <a name="a-namearctoa--cdcarcto"></a><a name="arcto"></a>CDC::ArcTo  
+##  <a name="arcto"></a>CDC::ArcTo  
  繪製橢圓弧形。  
   
 ```  
@@ -604,7 +803,7 @@ BOOL ArcTo(
   
  從目前的位置繪製一條線到弧形開始點。 如果沒有發生錯誤，目前位置設定到弧形結束點。 使用目前的畫筆繪製弧形不填滿。  
   
-##  <a name="a-nameattacha--cdcattach"></a><a name="attach"></a>CDC::Attach  
+##  <a name="attach"></a>CDC::Attach  
  使用此成員函式附加`hDC`到`CDC`物件。  
   
 ```  
@@ -621,7 +820,7 @@ BOOL Attach(HDC hDC);
 ### <a name="remarks"></a>備註  
  `hDC`會儲存在`m_hDC`，輸出裝置內容，然後在`m_hAttribDC`，屬性的裝置內容。  
   
-##  <a name="a-namebeginpatha--cdcbeginpath"></a><a name="beginpath"></a>Cdc:: beginpath  
+##  <a name="beginpath"></a>Cdc:: beginpath  
  裝置內容中開啟路徑括號。  
   
 ```  
@@ -639,7 +838,7 @@ BOOL BeginPath();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&30;](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
   
-##  <a name="a-namebitblta--cdcbitblt"></a><a name="bitblt"></a>CDC::BitBlt  
+##  <a name="bitblt"></a>CDC::BitBlt  
  來源裝置內容的點陣圖複製到這個目前的裝置內容。  
   
 ```  
@@ -700,14 +899,14 @@ BOOL BitBlt(
 ### <a name="example"></a>範例  
   請參閱範例[CDC::CreateCompatibleDC](#createcompatibledc)。  
   
-##  <a name="a-namecdca--cdccdc"></a><a name="cdc"></a>CDC::CDC  
+##  <a name="cdc"></a>CDC::CDC  
  建構 `CDC` 物件。  
   
 ```  
 CDC();
 ```  
   
-##  <a name="a-namechorda--cdcchord"></a><a name="chord"></a>CDC::Chord  
+##  <a name="chord"></a>CDC::Chord  
  繪製弦 （橢圓形和直線線段的交集所繫結到封閉的圖表）。  
   
 ```  
@@ -773,7 +972,7 @@ BOOL Chord(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&31;](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]  
   
-##  <a name="a-nameclosefigurea--cdcclosefigure"></a><a name="closefigure"></a>CDC::CloseFigure  
+##  <a name="closefigure"></a>CDC::CloseFigure  
  關閉開放的圖形路徑中。  
   
 ```  
@@ -788,7 +987,7 @@ BOOL CloseFigure();
   
  除非明確地使用這個函式關閉開放的路徑中的圖形。 （即使目前點和圖形的起始點是相同的圖表可能會開啟）。任何線條或曲線加入路徑後`CloseFigure`開始新的圖形。  
   
-##  <a name="a-namecreatecompatibledca--cdccreatecompatibledc"></a><a name="createcompatibledc"></a>CDC::CreateCompatibleDC  
+##  <a name="createcompatibledc"></a>CDC::CreateCompatibleDC  
  建立與所指定的裝置相容的記憶體裝置內容`pDC`。  
   
 ```  
@@ -812,7 +1011,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&32;](../../mfc/codesnippet/cpp/cdc-class_4.cpp)]  
   
-##  <a name="a-namecreatedca--cdccreatedc"></a><a name="createdc"></a>CDC::CreateDC  
+##  <a name="createdc"></a>CDC::CreateDC  
  建立指定之裝置的裝置內容。  
   
 ```  
@@ -844,7 +1043,7 @@ BOOL CreateDC(
   
  裝置名稱遵循下列慣例︰ 結尾的冒號 （:） 是建議，但為選用。 Windows 會去除終止冒號，以便將裝置名稱結尾冒號對應不含冒號的名稱相同的連接埠。 驅動程式和連接埠的名稱不能包含前置或尾端空格。 GDI 輸出函式不能與內容資訊。  
   
-##  <a name="a-namecreateica--cdccreateic"></a><a name="createic"></a>CDC::CreateIC  
+##  <a name="createic"></a>CDC::CreateIC  
  建立指定之裝置的資訊內容。  
   
 ```  
@@ -876,7 +1075,7 @@ BOOL CreateIC(
   
  裝置名稱遵循下列慣例︰ 結尾的冒號 （:） 是建議，但為選用。 Windows 會去除終止冒號，以便將裝置名稱結尾冒號對應不含冒號的名稱相同的連接埠。 驅動程式和連接埠的名稱不能包含前置或尾端空格。 GDI 輸出函式不能與內容資訊。  
   
-##  <a name="a-namedeletedca--cdcdeletedc"></a><a name="deletedc"></a>CDC::DeleteDC  
+##  <a name="deletedc"></a>CDC::DeleteDC  
  一般情況下，不會呼叫此函式。解構函式會替您。  
   
 ```  
@@ -898,14 +1097,14 @@ BOOL DeleteDC();
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc)。  
   
-##  <a name="a-namedeletetempmapa--cdcdeletetempmap"></a><a name="deletetempmap"></a>CDC::DeleteTempMap  
+##  <a name="deletetempmap"></a>CDC::DeleteTempMap  
  自動呼叫`CWinApp`閒置時間處理常式，`DeleteTempMap`會刪除任何暫存`CDC`所建立的物件`FromHandle`，但不會終結裝置內容控制代碼 ( `hDC`s) 暫時聯`CDC`物件。  
   
 ```  
 static void PASCAL DeleteTempMap();
 ```  
   
-##  <a name="a-namedetacha--cdcdetach"></a><a name="detach"></a>CDC::Detach  
+##  <a name="detach"></a>CDC::Detach  
  呼叫此函式可卸離`m_hDC`（輸出裝置內容） 從`CDC`物件，並同時設定`m_hDC`和`m_hAttribDC`至**NULL**。  
   
 ```  
@@ -915,7 +1114,7 @@ HDC Detach();
 ### <a name="return-value"></a>傳回值  
  Windows 裝置內容。  
   
-##  <a name="a-namedptohimetrica--cdcdptohimetric"></a><a name="dptohimetric"></a>CDC::DPtoHIMETRIC  
+##  <a name="dptohimetric"></a>CDC::DPtoHIMETRIC  
  使用此函式，當您為**HIMETRIC**至 OLE，轉換以像素大小**HIMETRIC**。  
   
 ```  
@@ -929,7 +1128,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="remarks"></a>備註  
  裝置內容物件的對應模式是否`MM_LOENGLISH`， `MM_HIENGLISH`， `MM_LOMETRIC`，或`MM_HIMETRIC`，然後轉換為基礎的實體英吋的像素數目。 對應模式是一種其他非限制模式 (例如`MM_TEXT`)，然後轉換為基礎的邏輯英吋的像素數目。  
   
-##  <a name="a-namedptolpa--cdcdptolp"></a><a name="dptolp"></a>CDC::DPtoLP  
+##  <a name="dptolp"></a>CDC::DPtoLP  
  將裝置單位轉換成邏輯單元。  
   
 ```  
@@ -957,7 +1156,7 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="remarks"></a>備註  
  函式對應的每個點座標或大小，從裝置座標系統到 GDI 的邏輯座標系統的維度。 轉換取決於目前的對應模式，以及設定來源和裝置的視窗和檢視區的範圍。  
   
-##  <a name="a-namedraw3drecta--cdcdraw3drect"></a><a name="draw3drect"></a>CDC::Draw3dRect  
+##  <a name="draw3drect"></a>CDC::Draw3dRect  
  呼叫此成員函式，來繪製三維矩形。  
   
 ```  
@@ -1004,7 +1203,7 @@ void Draw3dRect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&33;](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]  
   
-##  <a name="a-namedrawdragrecta--cdcdrawdragrect"></a><a name="drawdragrect"></a>CDC::DrawDragRect  
+##  <a name="drawdragrect"></a>CDC::DrawDragRect  
  呼叫此成員函式重複重繪拖曳矩形。  
   
 ```  
@@ -1041,7 +1240,7 @@ void DrawDragRect(
   
  第一次呼叫`DrawDragRect`、`lpRectLast`參數應該是**NULL**。  
   
-##  <a name="a-namedrawedgea--cdcdrawedge"></a><a name="drawedge"></a>CDC::DrawEdge  
+##  <a name="drawedge"></a>CDC::DrawEdge  
  呼叫此成員函式，若要繪製的矩形，以指定的型別和樣式的邊緣。  
   
 ```  
@@ -1064,7 +1263,7 @@ BOOL DrawEdge(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="a-namedrawescapea--cdcdrawescape"></a><a name="drawescape"></a>CDC::DrawEscape  
+##  <a name="drawescape"></a>CDC::DrawEscape  
  繪製未直接提供的圖形裝置介面 (GDI) 視訊顯示功能的存取。  
   
 ```  
@@ -1090,7 +1289,7 @@ int DrawEscape(
 ### <a name="remarks"></a>備註  
  當應用程式呼叫`DrawEscape`，所識別的資料`nInputSize`和`lpszInputData`會直接傳遞至指定的顯示驅動程式。  
   
-##  <a name="a-namedrawfocusrecta--cdcdrawfocusrect"></a><a name="drawfocusrect"></a>CDC::DrawFocusRect  
+##  <a name="drawfocusrect"></a>CDC::DrawFocusRect  
  用來表示矩形具有焦點的樣式繪製的矩形。  
   
 ```  
@@ -1107,7 +1306,7 @@ void DrawFocusRect(LPCRECT lpRect);
 > [!CAUTION]
 > `DrawFocusRect`只適用於`MM_TEXT`模式。 在其他模式中，此函式不能正確地繪製焦點矩形，但不會傳回錯誤值。  
   
-##  <a name="a-namedrawframecontrola--cdcdrawframecontrol"></a><a name="drawframecontrol"></a>CDC::DrawFrameControl  
+##  <a name="drawframecontrol"></a>CDC::DrawFrameControl  
  呼叫此成員函式來繪製框架控制項的指定型別和樣式。  
   
 ```  
@@ -1186,7 +1385,7 @@ BOOL DrawFrameControl(
   
  [!code-cpp[NVC_MFCDocView #&34;](../../mfc/codesnippet/cpp/cdc-class_6.cpp)]  
   
-##  <a name="a-namedrawicona--cdcdrawicon"></a><a name="drawicon"></a>CDC::DrawIcon  
+##  <a name="drawicon"></a>CDC::DrawIcon  
  代表目前的裝置上繪製一個圖示`CDC`物件。  
   
 ```  
@@ -1225,7 +1424,7 @@ BOOL DrawIcon(
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::IsIconic](../../mfc/reference/cwnd-class.md#isiconic)。  
   
-##  <a name="a-namedrawstatea--cdcdrawstate"></a><a name="drawstate"></a>CDC::DrawState  
+##  <a name="drawstate"></a>CDC::DrawState  
  呼叫此成員函式，來顯示影像，並套用視覺效果來指示狀態，例如已停用或預設狀態。  
   
 > [!NOTE]
@@ -1345,7 +1544,7 @@ BOOL DrawState(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="a-namedrawtexta--cdcdrawtext"></a><a name="drawtext"></a>CDC::DrawText  
+##  <a name="drawtext"></a>CDC::DrawText  
  呼叫此成員函式，可以格式化文字方塊中指定的矩形。 若要指定其他格式設定選項，請使用[CDC::DrawTextEx](#drawtextex)。  
   
 ```  
@@ -1397,7 +1596,7 @@ int DrawText(
   
  文字色彩可能會設定[CDC::SetTextColor](#settextcolor)。  
   
-##  <a name="a-namedrawtextexa--cdcdrawtextex"></a><a name="drawtextex"></a>CDC::DrawTextEx  
+##  <a name="drawtextex"></a>CDC::DrawTextEx  
  將指定的矩形中的文字。  
   
 ```  
@@ -1443,7 +1642,7 @@ int DrawTextEx(
   
  文字色彩可能會設定[CDC::SetTextColor](#settextcolor)。  
   
-##  <a name="a-nameellipsea--cdcellipse"></a><a name="ellipse"></a>CDC::Ellipse  
+##  <a name="ellipse"></a>CDC::Ellipse  
  繪製橢圓形。  
   
 ```  
@@ -1482,7 +1681,7 @@ BOOL Ellipse(LPCRECT lpRect);
   
  如果寬度或高度，這個周框為 0，會繪製沒有橢圓形。  
   
-##  <a name="a-nameenddoca--cdcenddoc"></a><a name="enddoc"></a>CDC::EndDoc  
+##  <a name="enddoc"></a>CDC::EndDoc  
  結束呼叫所啟動的列印工作[Cdc](#startdoc)成員函式。  
   
 ```  
@@ -1502,7 +1701,7 @@ int EndDoc();
 ### <a name="example"></a>範例  
   請參閱範例[CDC::StartDoc](#startdoc)。  
   
-##  <a name="a-nameendpagea--cdcendpage"></a><a name="endpage"></a>CDC::EndPage  
+##  <a name="endpage"></a>CDC::EndPage  
  通知裝置的應用程式已完成寫入頁面。  
   
 ```  
@@ -1520,7 +1719,7 @@ int EndPage();
 ### <a name="example"></a>範例  
   請參閱範例[CDC::StartDoc](#startdoc)。  
   
-##  <a name="a-nameendpatha--cdcendpath"></a><a name="endpath"></a>CDC::EndPath  
+##  <a name="endpath"></a>CDC::EndPath  
  關閉路徑括號，並選取放入裝置內容以方括號所定義的路徑。  
   
 ```  
@@ -1533,7 +1732,7 @@ BOOL EndPath();
 ### <a name="example"></a>範例  
   請參閱範例[cdc:: beginpath](#beginpath)。  
   
-##  <a name="a-nameenumobjectsa--cdcenumobjects"></a><a name="enumobjects"></a>Cdc:: enumobjects  
+##  <a name="enumobjects"></a>Cdc:: enumobjects  
  列舉畫筆和筆刷在裝置內容中使用。  
   
 ```  
@@ -1576,7 +1775,7 @@ int EnumObjects(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&35;](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]  
   
-##  <a name="a-nameescapea--cdcescape"></a><a name="escape"></a>CDC::Escape  
+##  <a name="escape"></a>CDC::Escape  
  此成員函式是 Win32 程式設計幾乎已經過時。  
   
 ```  
@@ -1656,7 +1855,7 @@ int Escape(
   
  如果您的應用程式會使用預先定義的逸出值，請使用第一個版本。 如果您的應用程式定義私用的逸出的值，請使用第二個版本。 請參閱[ExtEscape](http://msdn.microsoft.com/library/windows/desktop/dd162708)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]的第二個版本的詳細資訊。  
   
-##  <a name="a-nameexcludecliprecta--cdcexcludecliprect"></a><a name="excludecliprect"></a>CDC::ExcludeClipRect  
+##  <a name="excludecliprect"></a>CDC::ExcludeClipRect  
  建立新的裁剪區域，其中包含現有的裁剪區域減去指定的矩形。  
   
 ```  
@@ -1699,7 +1898,7 @@ int ExcludeClipRect(LPCRECT lpRect);
 ### <a name="remarks"></a>備註  
  數值的絕對值所指定的矩形的寬度`x2`– `x1`，不能超過 32767 的單位。 這項限制適用於以及矩形的高度。  
   
-##  <a name="a-nameexcludeupdatergna--cdcexcludeupdatergn"></a><a name="excludeupdatergn"></a>CDC::ExcludeUpdateRgn  
+##  <a name="excludeupdatergn"></a>CDC::ExcludeUpdateRgn  
  從相關聯的裁剪區域排除在視窗中的更新的區域，以防止無效視窗區域內的繪圖`CDC`物件。  
   
 ```  
@@ -1721,7 +1920,7 @@ int ExcludeUpdateRgn(CWnd* pWnd);
   
 - **SIMPLEREGION**區域有沒有重疊的框線。  
   
-##  <a name="a-nameextfloodfilla--cdcextfloodfill"></a><a name="extfloodfill"></a>CDC::ExtFloodFill  
+##  <a name="extfloodfill"></a>CDC::ExtFloodFill  
  填入目前的筆刷顯示介面的區域。  
   
 ```  
@@ -1761,7 +1960,7 @@ BOOL ExtFloodFill(
   
  只有記憶體裝置內容和支援點陣顯示技術支援的裝置`ExtFloodFill`。 如需詳細資訊，請參閱[GetDeviceCaps](#getdevicecaps)成員函式。  
   
-##  <a name="a-nameexttextouta--cdcexttextout"></a><a name="exttextout"></a>CDC::ExtTextOut  
+##  <a name="exttextout"></a>CDC::ExtTextOut  
  呼叫此成員函式，將使用目前選取的字型的矩形區域中的字元字串。  
   
 ```  
@@ -1821,7 +2020,7 @@ BOOL ExtTextOut(
   
  如果`nOptions`為 0 和`lpRect`是**NULL**，函式將文字寫入至裝置內容而不需使用矩形區域。 根據預設，函式不會使用或更新目前的位置。 如果應用程式需要更新目前的位置時，它會呼叫`ExtTextOut`，應用程式可以呼叫`CDC`成員函式[SetTextAlign](#settextalign)與`nFlags`設**TA_UPDATECP**。 當設定這個旗標時，Windows 會略過*x*和*y*的後續呼叫`ExtTextOut`，並改為使用目前的位置。 當應用程式時，使用**TA_UPDATECP**更新目前的位置，`ExtTextOut`設定的目前位置到文字的上一行的結尾，或指向陣列的最後一個項目所指定的位置`lpDxWidths`，何者較大。  
   
-##  <a name="a-namefillpatha--cdcfillpath"></a><a name="fillpath"></a>CDC::FillPath  
+##  <a name="fillpath"></a>CDC::FillPath  
  關閉任何開啟的圖形，在目前路徑，並使用目前的筆刷和填滿的多邊形模式填滿的路徑內部。  
   
 ```  
@@ -1834,7 +2033,7 @@ BOOL FillPath();
 ### <a name="remarks"></a>備註  
  填入其內部之後，就會捨棄裝置內容的路徑。  
   
-##  <a name="a-namefillrecta--cdcfillrect"></a><a name="fillrect"></a>CDC::FillRect  
+##  <a name="fillrect"></a>CDC::FillRect  
  呼叫此成員函式，以填滿指定的矩形，使用指定的筆刷。  
   
 ```  
@@ -1859,7 +2058,7 @@ void FillRect(
   
  `FillRect`類似於[CDC::FillSolidRect](#fillsolidrect); 不過，`FillRect`採用筆刷，因此可以用來使用純色、 遞色的色彩、 規劃筆刷或圖樣填滿矩形。 `FillSolidRect`使用僅純色 (由**COLORREF**參數)。 `FillRect`通常會比慢`FillSolidRect`。  
   
-##  <a name="a-namefillrgna--cdcfillrgn"></a><a name="fillrgn"></a>CDC::FillRgn  
+##  <a name="fillrgn"></a>CDC::FillRgn  
  填滿指定的區域`pRgn`與所指定的筆刷`pBrush`。  
   
 ```  
@@ -1884,7 +2083,7 @@ BOOL FillRgn(
 ### <a name="example"></a>範例  
   請參閱範例[CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn)。  
   
-##  <a name="a-namefillsolidrecta--cdcfillsolidrect"></a><a name="fillsolidrect"></a>CDC::FillSolidRect  
+##  <a name="fillsolidrect"></a>CDC::FillSolidRect  
  呼叫此成員函式的指定純色填滿指定的矩形。  
   
 ```  
@@ -1925,7 +2124,7 @@ void FillSolidRect(
 > [!NOTE]
 >  當您呼叫`FillSolidRect`，背景色彩，先前已設定使用[SetBkColor](#setbkcolor)，設定為所指示的顏色`clr`。  
   
-##  <a name="a-nameflattenpatha--cdcflattenpath"></a><a name="flattenpath"></a>CDC::FlattenPath  
+##  <a name="flattenpath"></a>CDC::FlattenPath  
  轉換到目前的裝置內容中，選取的路徑中的任何型曲線，並將每個曲線轉成一連串的程式碼行。  
   
 ```  
@@ -1935,7 +2134,7 @@ BOOL FlattenPath();
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零，否則為 0。  
   
-##  <a name="a-namefloodfilla--cdcfloodfill"></a><a name="floodfill"></a>CDC::FloodFill  
+##  <a name="floodfill"></a>CDC::FloodFill  
  填入目前的筆刷顯示介面的區域。  
   
 ```  
@@ -1965,7 +2164,7 @@ BOOL FloodFill(
   
  `ExtFloodFill`函數會提供類似的功能，但更大的彈性。  
   
-##  <a name="a-nameframerecta--cdcframerect"></a><a name="framerect"></a>CDC::FrameRect  
+##  <a name="framerect"></a>CDC::FrameRect  
  繪製框線所指定的矩形`lpRect`。  
   
 ```  
@@ -1988,7 +2187,7 @@ void FrameRect(
   
  所繪製的框線`FrameRect`位於相同位置繪製框線**矩形**成員函式使用相同的座標 (如果**矩形**使用畫筆的 1 個邏輯單位寬)。 不會填入的矩形內部`FrameRect`。  
   
-##  <a name="a-nameframergna--cdcframergn"></a><a name="framergn"></a>CDC::FrameRgn  
+##  <a name="framergn"></a>CDC::FrameRgn  
  所指定的區域周圍繪製框線`pRgn`使用所指定的筆刷`pBrush`。  
   
 ```  
@@ -2018,7 +2217,7 @@ BOOL FrameRgn(
 ### <a name="example"></a>範例  
   請參閱範例[CRgn::CombineRgn](../../mfc/reference/crgn-class.md#combinergn)。  
   
-##  <a name="a-namefromhandlea--cdcfromhandle"></a><a name="fromhandle"></a>CDC::FromHandle  
+##  <a name="fromhandle"></a>CDC::FromHandle  
  若要將指標傳回`CDC`物件指定的裝置內容控制代碼時。  
   
 ```  
@@ -2038,7 +2237,7 @@ static CDC* PASCAL FromHandle(HDC hDC);
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc)。  
   
-##  <a name="a-namegetarcdirectiona--cdcgetarcdirection"></a><a name="getarcdirection"></a>CDC::GetArcDirection  
+##  <a name="getarcdirection"></a>CDC::GetArcDirection  
  傳回目前弧線方向裝置內容。  
   
 ```  
@@ -2057,7 +2256,7 @@ int GetArcDirection() const;
 ### <a name="remarks"></a>備註  
  弧形和矩形函式會使用反方向。  
   
-##  <a name="a-namegetaspectratiofiltera--cdcgetaspectratiofilter"></a><a name="getaspectratiofilter"></a>CDC::GetAspectRatioFilter  
+##  <a name="getaspectratiofilter"></a>CDC::GetAspectRatioFilter  
  擷取目前的長寬比篩選條件的設定。  
   
 ```  
@@ -2070,7 +2269,7 @@ CSize GetAspectRatioFilter() const;
 ### <a name="remarks"></a>備註  
  外觀比例是由裝置的像素寬度和高度的比例。 裝置的外觀比例的資訊用於建立、 選取及顯示的字型。 Windows 提供特殊的篩選器，長寬比篩選器，並選取專為特定的長寬比從所有可用的字型所設計的字型。 篩選器會使用所指定的長寬比`SetMapperFlags`成員函式。  
   
-##  <a name="a-namegetbkcolora--cdcgetbkcolor"></a><a name="getbkcolor"></a>CDC::GetBkColor  
+##  <a name="getbkcolor"></a>CDC::GetBkColor  
  傳回目前的背景色彩。  
   
 ```  
@@ -2083,7 +2282,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>備註  
  如果背景模式是**不透明**，系統會使用背景色彩填滿樣式的行間距、 字元儲存格的背景筆刷，規劃的行之間間距。 轉換點陣圖色彩與單色裝置內容時，系統也會使用背景色彩。  
   
-##  <a name="a-namegetbkmodea--cdcgetbkmode"></a><a name="getbkmode"></a>CDC::GetBkMode  
+##  <a name="getbkmode"></a>CDC::GetBkMode  
  傳回背景模式。  
   
 ```  
@@ -2096,7 +2295,7 @@ int GetBkMode() const;
 ### <a name="remarks"></a>備註  
  背景模式會定義系統是否會移除現有的背景色彩，在繪圖介面上繪製文字、 規劃筆刷或不是實線任何畫筆樣式之前。  
   
-##  <a name="a-namegetboundsrecta--cdcgetboundsrect"></a><a name="getboundsrect"></a>CDC::GetBoundsRect  
+##  <a name="getboundsrect"></a>CDC::GetBoundsRect  
  傳回指定之的裝置內容的目前累積週框。  
   
 ```  
@@ -2127,7 +2326,7 @@ UINT GetBoundsRect(
   
 - **DCB_DISABLE**週框累積為關閉。  
   
-##  <a name="a-namegetbrushorga--cdcgetbrushorg"></a><a name="getbrushorg"></a>CDC::GetBrushOrg  
+##  <a name="getbrushorg"></a>CDC::GetBrushOrg  
  擷取目前選取的裝置內容的筆刷的原點 （以裝置為單位）。  
   
 ```  
@@ -2140,7 +2339,7 @@ CPoint GetBrushOrg() const;
 ### <a name="remarks"></a>備註  
  初始的筆刷的原點位於 (0，0) 的工作區。 傳回值指定相對於的桌面視窗原點裝置單位為止。  
   
-##  <a name="a-namegetcharacterplacementa--cdcgetcharacterplacement"></a><a name="getcharacterplacement"></a>CDC::GetCharacterPlacement  
+##  <a name="getcharacterplacement"></a>CDC::GetCharacterPlacement  
  擷取各種類型的字元字串的詳細資訊。  
   
 ```  
@@ -2185,7 +2384,7 @@ DWORD GetCharacterPlacement(
 ### <a name="remarks"></a>備註  
  此成員函式模擬函式的功能[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetcharabcwidthsa--cdcgetcharabcwidths"></a><a name="getcharabcwidths"></a>CDC::GetCharABCWidths  
+##  <a name="getcharabcwidths"></a>CDC::GetCharABCWidths  
  擷取目前的 TrueType 字型在指定範圍中的連續字元的寬度。  
   
 ```  
@@ -2229,7 +2428,7 @@ BOOL GetCharABCWidths(
   
  若要擷取非 TrueType 字型中的字元寬度，應用程式應使用[GetCharWidth](http://msdn.microsoft.com/library/windows/desktop/dd144861) Windows 函式。  
   
-##  <a name="a-namegetcharabcwidthsia--cdcgetcharabcwidthsi"></a><a name="getcharabcwidthsi"></a>CDC::GetCharABCWidthsI  
+##  <a name="getcharabcwidthsi"></a>CDC::GetCharABCWidthsI  
  擷取的寬度，以邏輯單位，從目前的 TrueType 字型在指定範圍中的連續圖像索引。  
   
 ```  
@@ -2259,7 +2458,7 @@ BOOL GetCharABCWidthsI(
 ### <a name="remarks"></a>備註  
  此成員函式模擬函式的功能[GetCharABCWidthsI](http://msdn.microsoft.com/library/windows/desktop/dd144859)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetcharwidtha--cdcgetcharwidth"></a><a name="getcharwidth"></a>CDC::GetCharWidth  
+##  <a name="getcharwidth"></a>CDC::GetCharWidth  
  從目前的字型，擷取的連續字元的群組中的個別字元寬度使用`m_hAttribDC`，輸入的裝置內容。  
   
 ```  
@@ -2297,7 +2496,7 @@ BOOL GetCharWidth(
   
  如果連續的字元群組中的字元不存在於特定字型，則會指派預設字元寬度值。  
   
-##  <a name="a-namegetcharwidthia--cdcgetcharwidthi"></a><a name="getcharwidthi"></a>CDC::GetCharWidthI  
+##  <a name="getcharwidthi"></a>CDC::GetCharWidthI  
  擷取的寬度，以邏輯座標，從目前字型的指定範圍內的連續圖像索引。  
   
 ```  
@@ -2327,7 +2526,7 @@ BOOL GetCharWidthI(
 ### <a name="remarks"></a>備註  
  此成員函式模擬函式的功能[GetCharWidthI](http://msdn.microsoft.com/library/windows/desktop/dd144864)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetclipboxa--cdcgetclipbox"></a><a name="getclipbox"></a>CDC::GetClipBox  
+##  <a name="getclipbox"></a>CDC::GetClipBox  
  擷取目前裁剪界限周圍 tightest 週框的維度。  
   
 ```  
@@ -2352,7 +2551,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="remarks"></a>備註  
  維度會複製到緩衝區所指`lpRect`。  
   
-##  <a name="a-namegetcoloradjustmenta--cdcgetcoloradjustment"></a><a name="getcoloradjustment"></a>CDC::GetColorAdjustment  
+##  <a name="getcoloradjustment"></a>CDC::GetColorAdjustment  
  擷取裝置內容的色彩調整值。  
   
 ```  
@@ -2366,7 +2565,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零，否則為 0。  
   
-##  <a name="a-namegetcurrentbitmapa--cdcgetcurrentbitmap"></a><a name="getcurrentbitmap"></a>CDC::GetCurrentBitmap  
+##  <a name="getcurrentbitmap"></a>CDC::GetCurrentBitmap  
  將指標傳回至目前選取之`CBitmap`物件。  
   
 ```  
@@ -2379,7 +2578,7 @@ CBitmap* GetCurrentBitmap() const;
 ### <a name="remarks"></a>備註  
  此成員函式可能會傳回暫存物件。  
   
-##  <a name="a-namegetcurrentbrusha--cdcgetcurrentbrush"></a><a name="getcurrentbrush"></a>CDC::GetCurrentBrush  
+##  <a name="getcurrentbrush"></a>CDC::GetCurrentBrush  
  將指標傳回至目前選取之`CBrush`物件。  
   
 ```  
@@ -2392,7 +2591,7 @@ CBrush* GetCurrentBrush() const;
 ### <a name="remarks"></a>備註  
  此成員函式可能會傳回暫存物件。  
   
-##  <a name="a-namegetcurrentfonta--cdcgetcurrentfont"></a><a name="getcurrentfont"></a>CDC::GetCurrentFont  
+##  <a name="getcurrentfont"></a>CDC::GetCurrentFont  
  將指標傳回至目前選取之`CFont`物件。  
   
 ```  
@@ -2405,7 +2604,7 @@ CFont* GetCurrentFont() const;
 ### <a name="remarks"></a>備註  
  此成員函式可能會傳回暫存物件。  
   
-##  <a name="a-namegetcurrentpalettea--cdcgetcurrentpalette"></a><a name="getcurrentpalette"></a>CDC::GetCurrentPalette  
+##  <a name="getcurrentpalette"></a>CDC::GetCurrentPalette  
  將指標傳回至目前選取之`CPalette`物件。  
   
 ```  
@@ -2418,7 +2617,7 @@ CPalette* GetCurrentPalette() const;
 ### <a name="remarks"></a>備註  
  此成員函式可能會傳回暫存物件。  
   
-##  <a name="a-namegetcurrentpena--cdcgetcurrentpen"></a><a name="getcurrentpen"></a>CDC::GetCurrentPen  
+##  <a name="getcurrentpen"></a>CDC::GetCurrentPen  
  將指標傳回至目前選取之`CPen`物件。  
   
 ```  
@@ -2431,7 +2630,7 @@ CPen* GetCurrentPen() const;
 ### <a name="remarks"></a>備註  
  此成員函式可能會傳回暫存物件。  
   
-##  <a name="a-namegetcurrentpositiona--cdcgetcurrentposition"></a><a name="getcurrentposition"></a>CDC::GetCurrentPosition  
+##  <a name="getcurrentposition"></a>CDC::GetCurrentPosition  
  擷取目前的位置 （以邏輯座標表示）。  
   
 ```  
@@ -2444,7 +2643,7 @@ CPoint GetCurrentPosition() const;
 ### <a name="remarks"></a>備註  
  目前的位置可以設定的`MoveTo`成員函式。  
   
-##  <a name="a-namegetdcbrushcolora--cdcgetdcbrushcolor"></a><a name="getdcbrushcolor"></a>CDC::GetDCBrushColor  
+##  <a name="getdcbrushcolor"></a>CDC::GetDCBrushColor  
  擷取目前的筆刷色彩。  
   
 ```  
@@ -2459,7 +2658,7 @@ COLORREF GetDCBrushColor() const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬函式的功能[GetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd144872)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdcpencolora--cdcgetdcpencolor"></a><a name="getdcpencolor"></a>CDC::GetDCPenColor  
+##  <a name="getdcpencolor"></a>CDC::GetDCPenColor  
  擷取目前的畫筆顏色。  
   
 ```  
@@ -2474,7 +2673,7 @@ COLORREF GetDCPenColor() const;
 ### <a name="remarks"></a>備註  
  此成員函式會利用 Win32 函式[GetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd144875)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdevicecapsa--cdcgetdevicecaps"></a><a name="getdevicecaps"></a>Rastercaps  
+##  <a name="getdevicecaps"></a>Rastercaps  
  擷取各種不同的顯示裝置的裝置特定資訊。  
   
 ```  
@@ -2491,7 +2690,7 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="example"></a>範例  
   請參閱範例[CPrintDialog::GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults)。  
   
-##  <a name="a-namegetfontdataa--cdcgetfontdata"></a><a name="getfontdata"></a>CDC::GetFontData  
+##  <a name="getfontdata"></a>CDC::GetFontData  
  擷取可調式字型檔案中的字型度量資訊。  
   
 ```  
@@ -2527,7 +2726,7 @@ DWORD GetFontData(
   
  如果應用程式嘗試使用這個函數來擷取資訊，對於非 TrueType 字型`GetFontData`成員函式會傳回 –&1;。  
   
-##  <a name="a-namegetfontlanguageinfoa--cdcgetfontlanguageinfo"></a><a name="getfontlanguageinfo"></a>CDC::GetFontLanguageInfo  
+##  <a name="getfontlanguageinfo"></a>CDC::GetFontLanguageInfo  
  傳回指定的顯示內容的目前選取字型的相關資訊。  
   
 ```  
@@ -2540,7 +2739,7 @@ DWORD GetFontLanguageInfo() const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬函式的功能[GetFontLanguageInfo](http://msdn.microsoft.com/library/windows/desktop/dd144886)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetglyphoutlinea--cdcgetglyphoutline"></a><a name="getglyphoutline"></a>CDC::GetGlyphOutline  
+##  <a name="getglyphoutline"></a>CDC::GetGlyphOutline  
  擷取大綱曲線或大綱中的字元之目前字型的點陣圖。  
   
 ```  
@@ -2587,7 +2786,7 @@ DWORD GetGlyphOutline(
   
  字符外框會傳回一系列的分佈。 定義每個分佈[TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158)結構盡可能後面**TTPOLYCURVE**結構描述所需。 所有資料點會以傳回[POINTFX](http://msdn.microsoft.com/library/windows/desktop/dd162806)結構，而且代表絕對位置，而非相對的移動。 開始點給定**pfxStart**成員[TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158)結構是分佈的大綱開始的點。 [TTPOLYCURVE](http://msdn.microsoft.com/library/windows/desktop/dd145157)記錄聚合線條或曲線記錄，可遵循的結構。 聚合線條記錄是一連串的點。點之間繪製資料行描述字元外的框。 曲線記錄代表 TrueType （也就是二次方 b-曲線） 所使用的二次方曲線。  
   
-##  <a name="a-namegetgraphicsmodea--cdcgetgraphicsmode"></a><a name="getgraphicsmode"></a>CDC::GetGraphicsMode  
+##  <a name="getgraphicsmode"></a>CDC::GetGraphicsMode  
  擷取指定之的裝置內容中目前的圖形模式。  
   
 ```  
@@ -2604,7 +2803,7 @@ int GetGraphicsMode() const;
 ### <a name="remarks"></a>備註  
  這個方法會包裝 Windows GDI 函式[GetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd144892)。  
   
-##  <a name="a-namegethalftonebrusha--cdcgethalftonebrush"></a><a name="gethalftonebrush"></a>CDC::GetHalftoneBrush  
+##  <a name="gethalftonebrush"></a>CDC::GetHalftoneBrush  
  呼叫此成員函式擷取半色調筆刷。  
   
 ```  
@@ -2619,7 +2818,7 @@ static CBrush* PASCAL GetHalftoneBrush();
   
  ![遞色的畫筆筆劃的詳細資料](../../mfc/reference/media/vc318s1.gif "vc318s1")  
   
-##  <a name="a-namegetkerningpairsa--cdcgetkerningpairs"></a><a name="getkerningpairs"></a>CDC::GetKerningPairs  
+##  <a name="getkerningpairs"></a>CDC::GetKerningPairs  
  擷取的字元間距調整組指定的裝置內容中目前選取的字型。  
   
 ```  
@@ -2638,7 +2837,7 @@ int GetKerningPairs(
 ### <a name="return-value"></a>傳回值  
  指定的字元間距調整擷取的配對數目或總數字元間距調整組在字型中，如果函式成功。 如果函式失敗，或沒有 kerning 成對的字型，則會傳回零。  
   
-##  <a name="a-namegetlayouta--cdcgetlayout"></a><a name="getlayout"></a>CDC::GetLayout  
+##  <a name="getlayout"></a>CDC::GetLayout  
  呼叫此成員函式，來決定文字和圖形裝置內容，例如印表機或中繼檔的配置。  
   
 ```  
@@ -2651,7 +2850,7 @@ DWORD GetLayout() const;
 ### <a name="remarks"></a>備註  
  預設的版面配置是由左至右。  
   
-##  <a name="a-namegetmapmodea--cdcgetmapmode"></a><a name="getmapmode"></a>CDC::GetMapMode  
+##  <a name="getmapmode"></a>CDC::GetMapMode  
  擷取目前的對應模式。  
   
 ```  
@@ -2667,7 +2866,7 @@ int GetMapMode() const;
 > [!NOTE]
 >  如果您呼叫[SetLayout](#setlayout) DC 變成由右至左配置**SetLayout**會自動變更的對應模式`MM_ISOTROPIC`。 因此，任何後續呼叫`GetMapMode`會傳回`MM_ISOTROPIC`。  
   
-##  <a name="a-namegetmiterlimita--cdcgetmiterlimit"></a><a name="getmiterlimit"></a>CDC::GetMiterLimit  
+##  <a name="getmiterlimit"></a>CDC::GetMiterLimit  
  傳回斜裝置內容。  
   
 ```  
@@ -2680,7 +2879,7 @@ float GetMiterLimit() const;
 ### <a name="remarks"></a>備註  
  包含繪製幾何行儀表聯結時，會使用斜。  
   
-##  <a name="a-namegetnearestcolora--cdcgetnearestcolor"></a><a name="getnearestcolor"></a>CDC::GetNearestColor  
+##  <a name="getnearestcolor"></a>CDC::GetNearestColor  
  傳回最符合指定的邏輯色彩的實心色彩。  
   
 ```  
@@ -2697,7 +2896,7 @@ COLORREF GetNearestColor(COLORREF crColor) const;
 ### <a name="remarks"></a>備註  
  指定的裝置必須能夠代表這個色彩。  
   
-##  <a name="a-namegetoutlinetextmetricsa--cdcgetoutlinetextmetrics"></a><a name="getoutlinetextmetrics"></a>CDC::GetOutlineTextMetrics  
+##  <a name="getoutlinetextmetrics"></a>CDC::GetOutlineTextMetrics  
  擷取 TrueType 字型度量資訊。  
   
 ```  
@@ -2722,7 +2921,7 @@ UINT GetOutlineTextMetrics(
 ### <a name="remarks"></a>備註  
  [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755)結構包含大部分的 TrueType 格式時，所提供的字型度量資訊包括[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)結構。 最後四個成員**OUTLINETEXTMETRIC**結構都是字串指標。 應用程式應該針對這些字串，除了其他成員所需的空間配置空間。 因為沒有任何系統加諸限制字串的大小，最簡單的方法配置的記憶體是藉由指定擷取所需的大小**NULL**的`lpotm`中的第一個呼叫`GetOutlineTextMetrics`函式。  
   
-##  <a name="a-namegetoutputcharwidtha--cdcgetoutputcharwidth"></a><a name="getoutputcharwidth"></a>CDC::GetOutputCharWidth  
+##  <a name="getoutputcharwidth"></a>CDC::GetOutputCharWidth  
  輸出裝置內容中，會使用`m_hDC`，並擷取從目前的字型顯示連續的字元群組中的個別字元的寬度。  
   
 ```  
@@ -2752,7 +2951,7 @@ BOOL GetOutputCharWidth(
   
  如果連續的字元群組中的字元不存在於特定字型，則會指派預設字元寬度值。  
   
-##  <a name="a-namegetoutputtabbedtextextenta--cdcgetoutputtabbedtextextent"></a><a name="getoutputtabbedtextextent"></a>CDC::GetOutputTabbedTextExtent  
+##  <a name="getoutputtabbedtextextent"></a>CDC::GetOutputTabbedTextExtent  
  呼叫此成員函式，來計算的寬度和高度的字元字串使用[m_hDC](#m_hdc)，輸出裝置內容。  
   
 ```  
@@ -2796,7 +2995,7 @@ CSize GetOutputTabbedTextExtent(
   
  如果`nTabPositions`為 0 和`lpnTabStopPositions`是**NULL**，索引標籤會展開為八個平均字元寬度。 如果`nTabPositions`為 1，第一個值的陣列中所指定的距離會分開定位停駐點`lpnTabStopPositions`點。 如果`lpnTabStopPositions`點到多個單一值，最多指定的數字陣列中每個值設定定位停駐點`nTabPositions`。  
   
-##  <a name="a-namegetoutputtextextenta--cdcgetoutputtextextent"></a><a name="getoutputtextextent"></a>CDC::GetOutputTextExtent  
+##  <a name="getoutputtextextent"></a>CDC::GetOutputTextExtent  
  呼叫此成員函式會使用輸出的裝置內容， [m_hDC](#m_hdc)，並計算行的文字，使用目前字型的高度與寬度。  
   
 ```  
@@ -2825,7 +3024,7 @@ CSize GetOutputTextExtent(const CString& str) const;
   
  由於某些裝置並將字元放在一般的資料格陣列中 （也就是它們執行字元間距調整），請在字串中的字元範圍的總和可能不等於字串的範圍。  
   
-##  <a name="a-namegetoutputtextmetricsa--cdcgetoutputtextmetrics"></a><a name="getoutputtextmetrics"></a>CDC::GetOutputTextMetrics  
+##  <a name="getoutputtextmetrics"></a>CDC::GetOutputTextMetrics  
  擷取目前的字型使用的度量`m_hDC`，輸出裝置內容。  
   
 ```  
@@ -2839,7 +3038,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零，否則為 0。  
   
-##  <a name="a-namegetpatha--cdcgetpath"></a><a name="getpath"></a>CDC::GetPath  
+##  <a name="getpath"></a>CDC::GetPath  
  擷取定義線條的端點和選入裝置內容的路徑中找到的曲線的控制點的座標。  
   
 ```  
@@ -2880,7 +3079,7 @@ int GetPath(
 ### <a name="example"></a>範例  
   請參閱範例[cdc:: beginpath](#beginpath)。  
   
-##  <a name="a-namegetpixela--cdcgetpixel"></a><a name="getpixel"></a>CDC::GetPixel  
+##  <a name="getpixel"></a>CDC::GetPixel  
  擷取所指定的點的像素的 RGB 色彩值*x*和*y*。  
   
 ```  
@@ -2911,7 +3110,7 @@ COLORREF GetPixel(POINT point) const;
   
  **GetPixel**成員函式有兩種形式。 第一個會採用兩個座標值。第二個會[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
   
-##  <a name="a-namegetpolyfillmodea--cdcgetpolyfillmode"></a><a name="getpolyfillmode"></a>CDC::GetPolyFillMode  
+##  <a name="getpolyfillmode"></a>CDC::GetPolyFillMode  
  擷取目前的多邊形填滿模式。  
   
 ```  
@@ -2924,7 +3123,7 @@ int GetPolyFillMode() const;
 ### <a name="remarks"></a>備註  
  請參閱`SetPolyFillMode`成員函式的多邊形填滿模式的描述。  
   
-##  <a name="a-namegetrop2a--cdcgetrop2"></a><a name="getrop2"></a>CDC::GetROP2  
+##  <a name="getrop2"></a>CDC::GetROP2  
  擷取目前的繪圖模式。  
   
 ```  
@@ -2937,7 +3136,7 @@ int GetROP2() const;
 ### <a name="remarks"></a>備註  
  繪圖模式指定如何將畫筆的色彩和填滿物件內部合併使用已經在顯示介面上的色彩。  
   
-##  <a name="a-namegetsafehdca--cdcgetsafehdc"></a><a name="getsafehdc"></a>CDC::GetSafeHdc  
+##  <a name="getsafehdc"></a>CDC::GetSafeHdc  
  呼叫此成員函式可取得[m_hDC](#m_hdc)，輸出裝置內容。  
   
 ```  
@@ -2950,7 +3149,7 @@ HDC GetSafeHdc() const;
 ### <a name="remarks"></a>備註  
  此成員函式也可以搭配 null 指標。  
   
-##  <a name="a-namegetstretchbltmodea--cdcgetstretchbltmode"></a><a name="getstretchbltmode"></a>CDC::GetStretchBltMode  
+##  <a name="getstretchbltmode"></a>CDC::GetStretchBltMode  
  擷取目前的點陣圖自動縮放模式。  
   
 ```  
@@ -2965,7 +3164,7 @@ int GetStretchBltMode() const;
   
  **STRETCH_ANDSCANS**和**STRETCH_ORSCANS**模式通常用於保留前景單色點陣圖的像素。 **STRETCH_DELETESCANS**模式通常用來保留色彩點陣圖中的色彩。  
   
-##  <a name="a-namegettabbedtextextenta--cdcgettabbedtextextent"></a><a name="gettabbedtextextent"></a>CDC::GetTabbedTextExtent  
+##  <a name="gettabbedtextextent"></a>CDC::GetTabbedTextExtent  
  呼叫此成員函式，來計算的寬度和高度的字元字串使用[m_hAttribDC](#m_hattribdc)，屬性的裝置內容。  
   
 ```  
@@ -3009,7 +3208,7 @@ CSize GetTabbedTextExtent(
   
  如果`nTabPositions`為 0 和`lpnTabStopPositions`是**NULL**，索引標籤會展開成 8 倍的平均字元寬度。 如果`nTabPositions`為 1，第一個值的陣列中所指定的距離會分開定位停駐點`lpnTabStopPositions`點。 如果`lpnTabStopPositions`點到多個單一值，最多指定的數字陣列中每個值設定定位停駐點`nTabPositions`。  
   
-##  <a name="a-namegettextaligna--cdcgettextalign"></a><a name="gettextalign"></a>CDC::GetTextAlign  
+##  <a name="gettextalign"></a>CDC::GetTextAlign  
  擷取裝置內容的文字對齊方式旗標的狀態。  
   
 ```  
@@ -3050,7 +3249,7 @@ UINT GetTextAlign() const;
   
 3.  測試結果和旗標相等。  
   
-##  <a name="a-namegettextcharacterextraa--cdcgettextcharacterextra"></a><a name="gettextcharacterextra"></a>CDC::GetTextCharacterExtra  
+##  <a name="gettextcharacterextra"></a>CDC::GetTextCharacterExtra  
  擷取 intercharacter 間距所需的目前設定。  
   
 ```  
@@ -3065,7 +3264,7 @@ int GetTextCharacterExtra() const;
   
  Intercharacter 間距所需的預設值為 0。  
   
-##  <a name="a-namegettextcolora--cdcgettextcolor"></a><a name="gettextcolor"></a>CDC::GetTextColor  
+##  <a name="gettextcolor"></a>CDC::GetTextColor  
  擷取目前的文字色彩。  
   
 ```  
@@ -3078,7 +3277,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>備註  
  文字色彩是使用 GDI 文字輸出成員函式來繪製的字元的前景色彩[TextOut](#textout)， [ExtTextOut](#exttextout)，和[TabbedTextOut](#tabbedtextout)。  
   
-##  <a name="a-namegettextextenta--cdcgettextextent"></a><a name="gettextextent"></a>CDC::GetTextExtent  
+##  <a name="gettextextent"></a>CDC::GetTextExtent  
  呼叫此成員函式，來計算一行文字，以判斷維度的目前字型的高度與寬度。  
   
 ```  
@@ -3111,7 +3310,7 @@ CSize GetTextExtent(const CString& str) const;
   
  由於某些裝置並將字元放在一般的資料格陣列中 （也就是它們執行字元間距調整），請在字串中的字元範圍的總和可能不等於字串的範圍。  
   
-##  <a name="a-namegettextextentexpointia--cdcgettextextentexpointi"></a><a name="gettextextentexpointi"></a>CDC::GetTextExtentExPointI  
+##  <a name="gettextextentexpointi"></a>CDC::GetTextExtentExPointI  
  擷取指定的字串，將符合指定的空間內，且陣列填入每個字元的文字範圍中的字元數。  
   
 ```  
@@ -3149,7 +3348,7 @@ BOOL GetTextExtentExPointI(
 ### <a name="remarks"></a>備註  
  此成員函式模擬函式的功能[GetTextExtentExPointI](http://msdn.microsoft.com/library/windows/desktop/dd144936)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettextextentpointia--cdcgettextextentpointi"></a><a name="gettextextentpointi"></a>CDC::GetTextExtentPointI  
+##  <a name="gettextextentpointi"></a>CDC::GetTextExtentPointI  
  擷取指定之陣列的圖像 （glyph） 索引的高度與寬度。  
   
 ```  
@@ -3175,7 +3374,7 @@ BOOL GetTextExtentPointI(
 ### <a name="remarks"></a>備註  
  此成員函式模擬函式的功能[GetTextExtentPointI](http://msdn.microsoft.com/library/windows/desktop/dd144939)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettextfacea--cdcgettextface"></a><a name="gettextface"></a>CDC::GetTextFace  
+##  <a name="gettextface"></a>CDC::GetTextFace  
  呼叫此成員函式複製到緩衝區的目前字型的字樣名稱。  
   
 ```  
@@ -3202,7 +3401,7 @@ int GetTextFace(CString& rString) const;
 ### <a name="remarks"></a>備註  
  以 null 結束的字串會複製的字樣名稱。  
   
-##  <a name="a-namegettextmetricsa--cdcgettextmetrics"></a><a name="gettextmetrics"></a>CDC::GetTextMetrics  
+##  <a name="gettextmetrics"></a>CDC::GetTextMetrics  
  擷取目前使用屬性的裝置內容的字型度量資訊。  
   
 ```  
@@ -3216,7 +3415,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零，否則為 0。  
   
-##  <a name="a-namegetviewportexta--cdcgetviewportext"></a><a name="getviewportext"></a>CDC::GetViewportExt  
+##  <a name="getviewportext"></a>CDC::GetViewportExt  
  擷取 x-和 y-範圍的裝置內容的檢視區。  
   
 ```  
@@ -3226,7 +3425,7 @@ CSize GetViewportExt() const;
 ### <a name="return-value"></a>傳回值  
  X-和 y 的範圍 （以裝置為單位） 為`CSize`物件。  
   
-##  <a name="a-namegetviewportorga--cdcgetviewportorg"></a><a name="getviewportorg"></a>CDC::GetViewportOrg  
+##  <a name="getviewportorg"></a>CDC::GetViewportOrg  
  擷取裝置內容相關聯的檢視區原點 x 和 y 座標。  
   
 ```  
@@ -3236,7 +3435,7 @@ CPoint GetViewportOrg() const;
 ### <a name="return-value"></a>傳回值  
  （以裝置座標表示） 做為檢視區原點`CPoint`物件。  
   
-##  <a name="a-namegetwindowa--cdcgetwindow"></a><a name="getwindow"></a>CDC::GetWindow  
+##  <a name="getwindow"></a>CDC::GetWindow  
  傳回顯示裝置內容相關聯的視窗。  
   
 ```  
@@ -3249,7 +3448,7 @@ CWnd* GetWindow() const;
 ### <a name="remarks"></a>備註  
  這是進階的函式。 例如，此成員函式不會傳回 [檢視] 視窗時列印或預覽列印。 它一律會傳回與 output 相關聯的視窗。 使用指定的 DC 的輸出函式會繪製到這個視窗。  
   
-##  <a name="a-namegetwindowexta--cdcgetwindowext"></a><a name="getwindowext"></a>CDC::GetWindowExt  
+##  <a name="getwindowext"></a>CDC::GetWindowExt  
  擷取 x-和 y-範圍相關聯的裝置內容的視窗。  
   
 ```  
@@ -3259,7 +3458,7 @@ CSize GetWindowExt() const;
 ### <a name="return-value"></a>傳回值  
  X-和 y 的範圍 （以邏輯單位表示） 做為`CSize`物件。  
   
-##  <a name="a-namegetwindoworga--cdcgetwindoworg"></a><a name="getwindoworg"></a>CDC::GetWindowOrg  
+##  <a name="getwindoworg"></a>CDC::GetWindowOrg  
  擷取視窗相關聯的裝置內容的原點 x 和 y 座標。  
   
 ```  
@@ -3269,7 +3468,7 @@ CPoint GetWindowOrg() const;
 ### <a name="return-value"></a>傳回值  
  間隔 （以邏輯座標表示） 做為原點`CPoint`物件。  
   
-##  <a name="a-namegetworldtransforma--cdcgetworldtransform"></a><a name="getworldtransform"></a>CDC::GetWorldTransform  
+##  <a name="getworldtransform"></a>CDC::GetWorldTransform  
  擷取目前頁面空間轉換到全球空白字元。  
   
 ```  
@@ -3290,7 +3489,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ### <a name="remarks"></a>備註  
  這個方法會包裝 Windows GDI 函式[GetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd144953)。  
   
-##  <a name="a-namegradientfilla--cdcgradientfill"></a><a name="gradientfill"></a>CDC::GradientFill  
+##  <a name="gradientfill"></a>CDC::GradientFill  
  呼叫此成員函式以順暢其他淡從一端的色彩填滿的矩形和三角形的結構。  
   
 ```  
@@ -3324,7 +3523,7 @@ BOOL GradientFill(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱`GradientFill`中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegraystringa--cdcgraystring"></a><a name="graystring"></a>Cdc:: graystring  
+##  <a name="graystring"></a>Cdc:: graystring  
  繪製寫入記憶體點陣圖中的文字，變暗點陣圖，然後將點陣圖複製到顯示灰色 （灰色） 在指定位置的文字。  
   
 ```  
@@ -3383,7 +3582,7 @@ virtual BOOL GrayString(
   
  當架構是在預覽模式中，呼叫`GrayString`成員函式會轉譯為`TextOut`呼叫時，並回呼函式不會呼叫。  
   
-##  <a name="a-namehimetrictodpa--cdchimetrictodp"></a><a name="himetrictodp"></a>CDC::HIMETRICtoDP  
+##  <a name="himetrictodp"></a>CDC::HIMETRICtoDP  
  使用此函式，當您轉換**HIMETRIC** OLE 像素為單位的大小。  
   
 ```  
@@ -3397,7 +3596,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="remarks"></a>備註  
  裝置內容物件的對應模式是否`MM_LOENGLISH`， `MM_HIENGLISH`，`MM_LOMETRIC`或`MM_HIMETRIC`，然後轉換為基礎的實體英吋的像素數目。 對應模式是一種其他非限制模式 (例如`MM_TEXT`)，然後轉換為基礎的邏輯英吋的像素數目。  
   
-##  <a name="a-namehimetrictolpa--cdchimetrictolp"></a><a name="himetrictolp"></a>CDC::HIMETRICtoLP  
+##  <a name="himetrictolp"></a>CDC::HIMETRICtoLP  
  呼叫此函式轉換**HIMETRIC**成邏輯單元的單位。  
   
 ```  
@@ -3413,7 +3612,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
   
  轉換透過第一個轉換**HIMETRIC**單位為像素為單位，然後再將這些單位轉換成使用裝置內容的目前對應單位的邏輯單元。 請注意，裝置的視窗和檢視區的範圍會影響結果。  
   
-##  <a name="a-nameintersectcliprecta--cdcintersectcliprect"></a><a name="intersectcliprect"></a>CDC::IntersectClipRect  
+##  <a name="intersectcliprect"></a>CDC::IntersectClipRect  
  藉由形成目前區域和所指定的矩形的交集來建立新的裁剪區域`x1`， `y1`， `x2`，和`y2`。  
   
 ```  
@@ -3456,7 +3655,7 @@ int IntersectClipRect(LPCRECT lpRect);
 ### <a name="remarks"></a>備註  
  GDI 裁剪以納入新的界限內的所有後續輸出。 寬度和高度不能超過 32767。  
   
-##  <a name="a-nameinvertrecta--cdcinvertrect"></a><a name="invertrect"></a>CDC::InvertRect  
+##  <a name="invertrect"></a>CDC::InvertRect  
  反轉指定矩形的內容。  
   
 ```  
@@ -3475,7 +3674,7 @@ void InvertRect(LPCRECT lpRect);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&36;](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]  
   
-##  <a name="a-nameinvertrgna--cdcinvertrgn"></a><a name="invertrgn"></a>CDC::InvertRgn  
+##  <a name="invertrgn"></a>CDC::InvertRgn  
  反轉所指定的區域中的色彩`pRgn`。  
   
 ```  
@@ -3492,7 +3691,7 @@ BOOL InvertRgn(CRgn* pRgn);
 ### <a name="remarks"></a>備註  
  在單色顯示器，此函式對於白色像素的黑色和黑色的像素白色。 色彩顯示反轉取決於如何顯示產生的色彩。  
   
-##  <a name="a-nameisprintinga--cdcisprinting"></a><a name="isprinting"></a>CDC::IsPrinting  
+##  <a name="isprinting"></a>CDC::IsPrinting  
  判斷是否正在使用的裝置內容進行列印。  
   
 ```  
@@ -3502,7 +3701,7 @@ BOOL IsPrinting() const;
 ### <a name="return-value"></a>傳回值  
  如果為非零`CDC`物件是印表機 DC，否則傳回 0。  
   
-##  <a name="a-namelinetoa--cdclineto"></a><a name="lineto"></a>CDC::LineTo  
+##  <a name="lineto"></a>CDC::LineTo  
  從目前的位置，但不是包括、 指定的點繪製一條線*x*和*y* (或`point`)。  
   
 ```  
@@ -3532,7 +3731,7 @@ BOOL LineTo(POINT point);
 ### <a name="example"></a>範例  
   請參閱範例[CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint)。  
   
-##  <a name="a-namelptodpa--cdclptodp"></a><a name="lptodp"></a>CDC::LPtoDP  
+##  <a name="lptodp"></a>CDC::LPtoDP  
  將邏輯單元轉換成裝置單位。  
   
 ```  
@@ -3562,7 +3761,7 @@ void LPtoDP(LPSIZE lpSize) const;
   
  X 和 y 座標的點是 2 位元組帶正負號的整數 – 32768 到 32767 範圍內。 在其中的對應模式會導致值大於這些限制的情況下，系統將值設定為 – 32768 與 32767，分別。  
   
-##  <a name="a-namelptohimetrica--cdclptohimetric"></a><a name="lptohimetric"></a>CDC::LPtoHIMETRIC  
+##  <a name="lptohimetric"></a>CDC::LPtoHIMETRIC  
  呼叫此函式轉換成邏輯單元**HIMETRIC**單位。  
   
 ```  
@@ -3578,7 +3777,7 @@ void LPtoHIMETRIC(LPSIZE lpSize) const;
   
  轉換透過第一個轉換的邏輯單位使用的裝置內容的目前對應單位，再將轉換成這些單位為像素**HIMETRIC**單位。  
   
-##  <a name="a-namemhattribdca--cdcmhattribdc"></a><a name="m_hattribdc"></a>CDC::m_hAttribDC  
+##  <a name="m_hattribdc"></a>CDC::m_hAttribDC  
  這個屬性的裝置內容`CDC`物件。  
   
 ```  
@@ -3588,7 +3787,7 @@ HDC m_hAttribDC;
 ### <a name="remarks"></a>備註  
  根據預設，這個裝置內容是等於`m_hDC`。 一般而言，`CDC`要求資訊從裝置內容的 GDI 呼叫會導向至`m_hAttribDC`。 請參閱[CDC](../../mfc/reference/cdc-class.md)類別如需使用的這兩個裝置內容的描述。  
   
-##  <a name="a-namemhdca--cdcmhdc"></a><a name="m_hdc"></a>CDC::m_hDC  
+##  <a name="m_hdc"></a>CDC::m_hDC  
  輸出裝置內容，這個`CDC`物件。  
   
 ```  
@@ -3598,7 +3797,7 @@ HDC m_hDC;
 ### <a name="remarks"></a>備註  
  根據預設，`m_hDC`等於`m_hAttribDC`，其他所包裝的裝置內容`CDC`。 一般而言， `CDC` GDI 呼叫建立輸出，請移至`m_hDC`裝置內容。 您可以初始化`m_hDC`和`m_hAttribDC`指向不同的裝置。 請參閱[CDC](../../mfc/reference/cdc-class.md)類別如需使用的這兩個裝置內容的描述。  
   
-##  <a name="a-namemaskblta--cdcmaskblt"></a><a name="maskblt"></a>CDC::MaskBlt  
+##  <a name="maskblt"></a>CDC::MaskBlt  
  結合使用指定的遮罩與點陣化操作的來源和目的地點陣圖的色彩資料。  
   
 ```  
@@ -3660,7 +3859,7 @@ BOOL MaskBlt(
   
  如果來源、 模式和目的地點陣圖的色彩格式不同，此函式會將模式或來源格式，或兩者，以符合目的格式。 如果遮罩點陣圖不是單色點陣圖，就會發生錯誤。 記錄的增強型中繼檔時，發生錯誤 （和函式會傳回 0） 如果來源裝置內容會識別使用增強型中繼檔裝置內容。 並非所有裝置都支援`MaskBlt`。 應用程式應該呼叫`GetDeviceCaps`來判斷裝置是否支援此函式。 如果沒有提供任何遮罩點陣圖，此函式的行為完全相同`BitBlt`，使用前景點陣作業程式碼。 來源裝置內容的點陣圖中的點 (0，0) 的遮罩點陣圖對應中位移的像素。 這是包含一系列遮罩; 之遮罩點陣圖的情況下很有用應用程式可以輕鬆地套用其中任何一個遮罩單色工作藉由調整像素位移和矩形大小傳送至`MaskBlt`。  
   
-##  <a name="a-namemodifyworldtransforma--cdcmodifyworldtransform"></a><a name="modifyworldtransform"></a>CDC::ModifyWorldTransform  
+##  <a name="modifyworldtransform"></a>CDC::ModifyWorldTransform  
  變更裝置內容中使用指定的模式的自然轉換。  
   
 ```  
@@ -3686,7 +3885,7 @@ BOOL ModifyWorldTransform(
 ### <a name="remarks"></a>備註  
  這個方法會包裝 Windows GDI 函式[ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060)。  
   
-##  <a name="a-namemovetoa--cdcmoveto"></a><a name="moveto"></a>CDC::MoveTo  
+##  <a name="moveto"></a>CDC::MoveTo  
  目前的位置移至指定的點*x*和*y* (或由`point`)。  
   
 ```  
@@ -3713,7 +3912,7 @@ CPoint MoveTo(POINT point);
 ### <a name="example"></a>範例  
   請參閱範例[CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint)。  
   
-##  <a name="a-nameoffsetcliprgna--cdcoffsetcliprgn"></a><a name="offsetcliprgn"></a>CDC::OffsetClipRgn  
+##  <a name="offsetcliprgn"></a>CDC::OffsetClipRgn  
  將指定之位移的裝置內容的裁剪區域。  
   
 ```  
@@ -3748,7 +3947,7 @@ int OffsetClipRgn(SIZE size);
 ### <a name="remarks"></a>備註  
  函式將移區域*x*沿著 x 軸單位並*y*沿著 y 軸的單位。  
   
-##  <a name="a-nameoffsetviewportorga--cdcoffsetviewportorg"></a><a name="offsetviewportorg"></a>CDC::OffsetViewportOrg  
+##  <a name="offsetviewportorg"></a>CDC::OffsetViewportOrg  
  修改檢視區原點，相對於目前的檢視區原點座標的座標。  
   
 ```  
@@ -3767,7 +3966,7 @@ virtual CPoint OffsetViewportOrg(
 ### <a name="return-value"></a>傳回值  
  上一個檢視區的原點 （以裝置座標表示） 做為`CPoint`物件。  
   
-##  <a name="a-nameoffsetwindoworga--cdcoffsetwindoworg"></a><a name="offsetwindoworg"></a>CDC::OffsetWindowOrg  
+##  <a name="offsetwindoworg"></a>CDC::OffsetWindowOrg  
  修改視窗原點，相對於目前視窗原點座標的座標。  
   
 ```  
@@ -3786,7 +3985,7 @@ CPoint OffsetWindowOrg(
 ### <a name="return-value"></a>傳回值  
  做為 （以邏輯座標表示） 上一個視窗原點`CPoint`物件。  
   
-##  <a name="a-nameoperatorhdca--cdcoperator-hdc"></a><a name="operator_hdc"></a>CDC::operator HDC  
+##  <a name="operator_hdc"></a>CDC::operator HDC  
  使用這個運算子來擷取的裝置內容控制代碼`CDC`物件。  
   
 ```  
@@ -3799,7 +3998,7 @@ operator HDC() const;
 ### <a name="remarks"></a>備註  
  若要直接呼叫 Windows Api，您可以使用控制代碼。  
   
-##  <a name="a-namepaintrgna--cdcpaintrgn"></a><a name="paintrgn"></a>CDC::PaintRgn  
+##  <a name="paintrgn"></a>CDC::PaintRgn  
  填滿指定的區域`pRgn`使用目前的筆刷。  
   
 ```  
@@ -3813,7 +4012,7 @@ BOOL PaintRgn(CRgn* pRgn);
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零，否則為 0。  
   
-##  <a name="a-namepatblta--cdcpatblt"></a><a name="patblt"></a>CDC::PatBlt  
+##  <a name="patblt"></a>CDC::PatBlt  
  裝置上建立一個位元模式。  
   
 ```  
@@ -3859,7 +4058,7 @@ BOOL PatBlt(
   
  並非所有的裝置內容支援`PatBlt`函式。 若要判斷裝置的內容是否支援`PatBlt`，呼叫`GetDeviceCaps`成員函式**RASTERCAPS**編製索引，並檢查傳回值**RC_BITBLT**旗標。  
   
-##  <a name="a-namepiea--cdcpie"></a><a name="pie"></a>CDC::Pie  
+##  <a name="pie"></a>CDC::Pie  
  藉由繪製橢圓弧形為中心和兩個端點聯結在一起的線條繪製派形的楔形。  
   
 ```  
@@ -3927,7 +4126,7 @@ BOOL Pie(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&37;](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]  
   
-##  <a name="a-nameplaymetafilea--cdcplaymetafile"></a><a name="playmetafile"></a>CDC::PlayMetaFile  
+##  <a name="playmetafile"></a>CDC::PlayMetaFile  
  裝置內容上播放指定的中繼檔的內容。  
   
 ```  
@@ -3961,7 +4160,7 @@ BOOL PlayMetaFile(
   
  輸出裝置內容的狀態會保留此函式。 此函式會刪除任何物件建立，但不是刪除增強型中繼檔中。 若要停止此函式，應用程式可以呼叫**CancelDC** Windows 函式，從另一個執行緒終止作業。 在此情況下，函數會傳回零。  
   
-##  <a name="a-nameplgblta--cdcplgblt"></a><a name="plgblt"></a>CDC::PlgBlt  
+##  <a name="plgblt"></a>CDC::PlgBlt  
  執行從來源裝置內容中指定的矩形的色彩資料位元的位元區塊轉送，來指定的裝置內容中指定的平行四邊形。  
   
 ```  
@@ -4023,7 +4222,7 @@ BOOL PlgBlt(
   
  如果來源和目的地裝置內容代表不相容的裝置，`PlgBlt`會傳回錯誤。  
   
-##  <a name="a-namepolybeziera--cdcpolybezier"></a><a name="polybezier"></a>CDC::PolyBezier  
+##  <a name="polybezier"></a>CDC::PolyBezier  
  繪製一個或多個 Bzier 曲線。  
   
 ```  
@@ -4047,7 +4246,7 @@ BOOL PolyBezier(
   
  目前的位置不會使用或更新`PolyBezier`函式。 此圖不會填滿。 此函式使用目前畫筆繪製線條。  
   
-##  <a name="a-namepolybeziertoa--cdcpolybezierto"></a><a name="polybezierto"></a>CDC::PolyBezierTo  
+##  <a name="polybezierto"></a>CDC::PolyBezierTo  
  繪製一個或多個 Bzier 曲線。  
   
 ```  
@@ -4072,7 +4271,7 @@ BOOL PolyBezierTo(
 ### <a name="example"></a>範例  
   請參閱範例[cdc:: beginpath](#beginpath)。  
   
-##  <a name="a-namepolydrawa--cdcpolydraw"></a><a name="polydraw"></a>CDC::PolyDraw  
+##  <a name="polydraw"></a>CDC::PolyDraw  
  繪製一組直線線段和 Bzier 曲線。  
   
 ```  
@@ -4115,7 +4314,7 @@ BOOL PolyDraw(
 ### <a name="example"></a>範例  
   請參閱範例[cdc:: beginpath](#beginpath)。  
   
-##  <a name="a-namepolygona--cdcpolygon"></a><a name="polygon"></a>CDC::Polygon  
+##  <a name="polygon"></a>CDC::Polygon  
  繪製多邊形，其中包含兩個或多個 （頂點） 以折線連接點，使用目前的畫筆。  
   
 ```  
@@ -4142,7 +4341,7 @@ BOOL Polygon(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&38;](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]  
   
-##  <a name="a-namepolylinea--cdcpolyline"></a><a name="polyline"></a>CDC::Polyline  
+##  <a name="polyline"></a>CDC::Polyline  
  繪製連接所指定的點之直線線段的一組`lpPoints`。  
   
 ```  
@@ -4166,7 +4365,7 @@ BOOL Polyline(
   
  如需詳細資訊，請參閱[聚合線條](http://msdn.microsoft.com/library/windows/desktop/dd162815)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namepolylinetoa--cdcpolylineto"></a><a name="polylineto"></a>CDC::PolylineTo  
+##  <a name="polylineto"></a>CDC::PolylineTo  
  繪製一個或多個直線。  
   
 ```  
@@ -4188,7 +4387,7 @@ BOOL PolylineTo(
 ### <a name="remarks"></a>備註  
  從目前位置所指定的第一個點來繪製線條`lpPoints`參數使用目前的畫筆。 對於每個額外的一行，函式用來繪製從結束點上一行的下一個所指定的點`lpPoints`。 `PolylineTo`將目前位置移至最後一行的結束點。 如果此函式所繪製之直線線段形成封閉的圖表，此圖不會填滿。  
   
-##  <a name="a-namepolypolygona--cdcpolypolygon"></a><a name="polypolygon"></a>CDC::PolyPolygon  
+##  <a name="polypolygon"></a>CDC::PolyPolygon  
  建立兩個或多個使用目前的多邊形填滿模式會填滿的多邊形。  
   
 ```  
@@ -4220,7 +4419,7 @@ BOOL PolyPolygon(
   
  目前的多邊形填滿模式可擷取或設定使用`GetPolyFillMode`和`SetPolyFillMode`成員函式。  
   
-##  <a name="a-namepolypolylinea--cdcpolypolyline"></a><a name="polypolyline"></a>CDC::PolyPolyline  
+##  <a name="polypolyline"></a>CDC::PolyPolyline  
  繪製連接的直線線段的多個數列。  
   
 ```  
@@ -4246,7 +4445,7 @@ BOOL PolyPolyline(
 ### <a name="remarks"></a>備註  
  使用目前畫筆繪製之直線線段。 區段的格式的數字不會填滿。 目前的位置不是使用或更新此函式。  
   
-##  <a name="a-nameptvisiblea--cdcptvisible"></a><a name="ptvisible"></a>CDC::PtVisible  
+##  <a name="ptvisible"></a>CDC::PtVisible  
  判斷指定的點是否在裝置內容的裁剪區域內。  
   
 ```  
@@ -4270,7 +4469,7 @@ BOOL PtVisible(POINT point) const;
 ### <a name="return-value"></a>傳回值  
  如果指定的點中的裁剪區域中，為非零否則為 0。  
   
-##  <a name="a-namequeryaborta--cdcqueryabort"></a><a name="queryabort"></a>CDC::QueryAbort  
+##  <a name="queryabort"></a>CDC::QueryAbort  
  所安裝的中止函式會呼叫[SetAbortProc](#setabortproc)是否應該終止列印成員函式列印應用程式和查詢。  
   
 ```  
@@ -4280,7 +4479,7 @@ BOOL QueryAbort() const;
 ### <a name="return-value"></a>傳回值  
  傳回值為非零，如果應該繼續列印，或沒有中止程序。 如果應終止列印工作，它會為 0。 Abort 函式提供所傳回的值。  
   
-##  <a name="a-namerealizepalettea--cdcrealizepalette"></a><a name="realizepalette"></a>CDC::RealizePalette  
+##  <a name="realizepalette"></a>CDC::RealizePalette  
  將對應從目前的邏輯調色盤到系統調色盤項目。  
   
 ```  
@@ -4297,7 +4496,7 @@ UINT RealizePalette();
   
  此外，Windows 會比對要求的可用色彩儘可能密集地呼叫的函式的非使用中視窗的色彩。 這會大幅降低非預期的變更，在非使用中視窗所顯示的色彩。  
   
-##  <a name="a-namerectanglea--cdcrectangle"></a><a name="rectangle"></a>CDC::Rectangle  
+##  <a name="rectangle"></a>CDC::Rectangle  
  繪製矩形，使用目前的畫筆。  
   
 ```  
@@ -4337,7 +4536,7 @@ BOOL Rectangle(LPCRECT lpRect);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&39;](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]  
   
-##  <a name="a-namerectvisiblea--cdcrectvisible"></a><a name="rectvisible"></a>CDC::RectVisible  
+##  <a name="rectvisible"></a>CDC::RectVisible  
  判斷指定的任何的矩形部分是否位於顯示內容的裁剪區域。  
   
 ```  
@@ -4351,7 +4550,7 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 ### <a name="return-value"></a>傳回值  
  如果有任何非零值指定的矩形部分之內的裁剪區域。否則為 0。  
   
-##  <a name="a-namereleaseattribdca--cdcreleaseattribdc"></a><a name="releaseattribdc"></a>CDC::ReleaseAttribDC  
+##  <a name="releaseattribdc"></a>CDC::ReleaseAttribDC  
  呼叫此成員函式設定`m_hAttribDC`至**NULL**。  
   
 ```  
@@ -4361,7 +4560,7 @@ virtual void ReleaseAttribDC();
 ### <a name="remarks"></a>備註  
  這不會造成**卸離**發生。 僅輸出裝置內容會附加至`CDC`物件，而只是它可卸離。  
   
-##  <a name="a-namereleaseoutputdca--cdcreleaseoutputdc"></a><a name="releaseoutputdc"></a>CDC::ReleaseOutputDC  
+##  <a name="releaseoutputdc"></a>CDC::ReleaseOutputDC  
  呼叫此成員函式設定`m_hDC`成員**NULL**。  
   
 ```  
@@ -4371,7 +4570,7 @@ virtual void ReleaseOutputDC();
 ### <a name="remarks"></a>備註  
  無法呼叫此成員函式，當輸出裝置內容附加到`CDC`物件。 使用**卸離**成員函式來卸離輸出裝置內容。  
   
-##  <a name="a-nameresetdca--cdcresetdc"></a><a name="resetdc"></a>CDC::ResetDC  
+##  <a name="resetdc"></a>CDC::ResetDC  
  呼叫此成員函式更新所包裝的裝置內容`CDC`物件。  
   
 ```  
@@ -4394,7 +4593,7 @@ BOOL ResetDC(const DEVMODE* lpDevMode);
   
  呼叫此成員函式之前，您必須確定外，已選取 （非內建物件） 選取放入裝置內容的所有物件。  
   
-##  <a name="a-namerestoredca--cdcrestoredc"></a><a name="restoredc"></a>CDC::RestoreDC  
+##  <a name="restoredc"></a>CDC::RestoreDC  
  還原先前的狀態所識別的裝置內容`nSavedDC`。  
   
 ```  
@@ -4413,7 +4612,7 @@ virtual BOOL RestoreDC(int nSavedDC);
   
  堆疊可以包含數種裝置內容的狀態資訊。 如果所指定內容`nSavedDC`不是在堆疊頂端`RestoreDC`刪除所指定的裝置內容之間的所有狀態資訊`nSavedDC`和堆疊的頂端。 已刪除的資訊都會遺失。  
   
-##  <a name="a-nameroundrecta--cdcroundrect"></a><a name="roundrect"></a>CDC::RoundRect  
+##  <a name="roundrect"></a>CDC::RoundRect  
  具有圓角使用目前畫筆繪製矩形。  
   
 ```  
@@ -4467,7 +4666,7 @@ BOOL RoundRect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&40;](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]  
   
-##  <a name="a-namesavedca--cdcsavedc"></a><a name="savedc"></a>CDC::SaveDC  
+##  <a name="savedc"></a>CDC::SaveDC  
  藉由複製狀態資訊 （例如裁剪區域中，選取的物件和對應模式） 將內容堆疊維護 Windows 的裝置內容的目前狀態。  
   
 ```  
@@ -4482,7 +4681,7 @@ virtual int SaveDC();
   
  `SaveDC`可以是用來儲存任意數目的裝置內容狀態的次數不限。  
   
-##  <a name="a-namescaleviewportexta--cdcscaleviewportext"></a><a name="scaleviewportext"></a>CDC::ScaleViewportExt  
+##  <a name="scaleviewportext"></a>CDC::ScaleViewportExt  
  修改檢視區範圍相對於目前的值。  
   
 ```  
@@ -4518,7 +4717,7 @@ virtual CSize ScaleViewportExt(
   
  新的檢視區範圍會計算的乘以指定分子中目前的範圍，然後除以指定的分母。  
   
-##  <a name="a-namescalewindowexta--cdcscalewindowext"></a><a name="scalewindowext"></a>CDC::ScaleWindowExt  
+##  <a name="scalewindowext"></a>CDC::ScaleWindowExt  
  修改視窗範圍相對於目前的值。  
   
 ```  
@@ -4554,7 +4753,7 @@ virtual CSize ScaleWindowExt(
   
  新的視窗範圍會計算的乘以指定分子中目前的範圍，然後除以指定的分母。  
   
-##  <a name="a-namescrolldca--cdcscrolldc"></a><a name="scrolldc"></a>CDC::ScrollDC  
+##  <a name="scrolldc"></a>CDC::ScrollDC  
  水平及垂直捲動的位元的矩形。  
   
 ```  
@@ -4594,7 +4793,7 @@ BOOL ScrollDC(
   
  應用程式應該使用`ScrollWindow`類別成員函式`CWnd`需要捲動視窗的整個用戶端區域。 否則，它應該使用`ScrollDC`。  
   
-##  <a name="a-nameselectclippatha--cdcselectclippath"></a><a name="selectclippath"></a>CDC::SelectClipPath  
+##  <a name="selectclippath"></a>CDC::SelectClipPath  
  選取目前的路徑做為裝置內容中，使用指定的模式結合使用任何現有的裁剪區域的新區域的裁剪區域。  
   
 ```  
@@ -4621,7 +4820,7 @@ BOOL SelectClipPath(int nMode);
 ### <a name="remarks"></a>備註  
  識別的裝置內容必須包含已關閉的路徑。  
   
-##  <a name="a-nameselectcliprgna--cdcselectcliprgn"></a><a name="selectcliprgn"></a>CDC::SelectClipRgn  
+##  <a name="selectcliprgn"></a>CDC::SelectClipRgn  
  選取特定的區域做為目前裁剪區域的裝置內容。  
   
 ```  
@@ -4672,7 +4871,7 @@ int SelectClipRgn(
   
  GDI 中的圖形物件的縮放比例必須採取的應用程式可以使用**GETSCALINGFACTOR**印表機逸出，以判斷的縮放比例。 此縮放比例會影響裁剪。 如果區域用來裁剪圖形，GDI 會除以縮放比例的座標。 如果區域用來裁剪文字，GDI 會讓無縮放比例調整。 1 縮放比例會導致要除以 2; 座標2 倍的擴充會導致座標除以 4。然後依此類推。  
   
-##  <a name="a-nameselectobjecta--cdcselectobject"></a><a name="selectobject"></a>CDC::SelectObject  
+##  <a name="selectobject"></a>CDC::SelectObject  
  選取的物件放入裝置內容。  
   
 ```  
@@ -4723,7 +4922,7 @@ CGdiObject* SelectObject(CGdiObject* pObject);
   
  Windows 3.1 和更新版本，`SelectObject`函式會傳回相同的值，不管是否使用中繼檔中。 在舊版的 Windows，`SelectObject`傳回非零值給成功和失敗的 0 時，中繼檔中使用。  
   
-##  <a name="a-nameselectpalettea--cdcselectpalette"></a><a name="selectpalette"></a>CDC::SelectPalette  
+##  <a name="selectpalette"></a>CDC::SelectPalette  
  選取所指定的邏輯調色盤`pPalette`裝置內容的所選的調色盤物件形式。  
   
 ```  
@@ -4747,7 +4946,7 @@ CPalette* SelectPalette(
   
  應用程式可以放入一個以上的裝置內容中選取邏輯調色盤。 但是，邏輯調色盤的變更會影響所有的裝置內容，它會選取。 如果應用程式選取放入一個以上的裝置內容的調色盤，裝置內容必須全部屬於同一部實體裝置。  
   
-##  <a name="a-nameselectstockobjecta--cdcselectstockobject"></a><a name="selectstockobject"></a>CDC::SelectStockObject  
+##  <a name="selectstockobject"></a>CDC::SelectStockObject  
  選取[CGdiObject](../../mfc/reference/cgdiobject-class.md)對應至其中一個預先定義的內建畫筆、 筆刷或字型的物件。  
   
 ```  
@@ -4795,7 +4994,7 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ### <a name="return-value"></a>傳回值  
  指標`CGdiObject`函式如果成功更新已被取代的物件。 指向實際的物件是[CPen](../../mfc/reference/cpen-class.md)， [CBrush](../../mfc/reference/cbrush-class.md)，或[CFont](../../mfc/reference/cfont-class.md)物件。 如果呼叫失敗，則傳回值是**NULL**。  
   
-##  <a name="a-namesetabortproca--cdcsetabortproc"></a><a name="setabortproc"></a>Cdc:: setabortproc  
+##  <a name="setabortproc"></a>Cdc:: setabortproc  
  安裝列印工作的中止程序。  
   
 ```  
@@ -4832,7 +5031,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
   
  也請注意所有的回呼函式必須傳回對 Windows 而言，因為無法跨越界限回呼擲回例外狀況之前設陷 Mfc 例外狀況。 如需例外狀況的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。  
   
-##  <a name="a-namesetarcdirectiona--cdcsetarcdirection"></a><a name="setarcdirection"></a>CDC::SetArcDirection  
+##  <a name="setarcdirection"></a>CDC::SetArcDirection  
  設定要用於弧線和矩形函式的繪圖方向。  
   
 ```  
@@ -4859,7 +5058,7 @@ int SetArcDirection(int nArcDirection);
 |`Chord`|`RoundRect`|  
 |**橢圓形**||  
   
-##  <a name="a-namesetattribdca--cdcsetattribdc"></a><a name="setattribdc"></a>CDC::SetAttribDC  
+##  <a name="setattribdc"></a>CDC::SetAttribDC  
  呼叫此函式來設定屬性的裝置內容， `m_hAttribDC`。  
   
 ```  
@@ -4873,7 +5072,7 @@ virtual void SetAttribDC(HDC hDC);
 ### <a name="remarks"></a>備註  
  此成員函式不會附加裝置內容至`CDC`物件。 僅輸出裝置內容會附加至`CDC`物件。  
   
-##  <a name="a-namesetbkcolora--cdcsetbkcolor"></a><a name="setbkcolor"></a>CDC::SetBkColor  
+##  <a name="setbkcolor"></a>CDC::SetBkColor  
  將目前的背景色彩設定為指定的色彩。  
   
 ```  
@@ -4892,7 +5091,7 @@ virtual COLORREF SetBkColor(COLORREF crColor);
   
  如果裝置無法顯示指定的色彩，系統就會設定為最接近的實體色彩的背景色彩。  
   
-##  <a name="a-namesetbkmodea--cdcsetbkmode"></a><a name="setbkmode"></a>CDC::SetBkMode  
+##  <a name="setbkmode"></a>CDC::SetBkMode  
  設定背景模式。  
   
 ```  
@@ -4916,7 +5115,7 @@ int SetBkMode(int nBkMode);
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)。  
   
-##  <a name="a-namesetboundsrecta--cdcsetboundsrect"></a><a name="setboundsrect"></a>CDC::SetBoundsRect  
+##  <a name="setboundsrect"></a>CDC::SetBoundsRect  
  控制累積的週框矩形指定之的裝置內容的資訊。  
   
 ```  
@@ -4950,7 +5149,7 @@ UINT SetBoundsRect(
 ### <a name="remarks"></a>備註  
  Windows 可以維護所有繪圖作業的周框矩形。 可以查詢這個矩形，並將它重設應用程式中。 繪製界限可用於使點陣圖快取失效。  
   
-##  <a name="a-namesetbrushorga--cdcsetbrushorg"></a><a name="setbrushorg"></a>CDC::SetBrushOrg  
+##  <a name="setbrushorg"></a>CDC::SetBrushOrg  
  指定的 GDI 會指派給應用程式便可選取的裝置內容的下一筆刷的原點。  
   
 ```  
@@ -4979,7 +5178,7 @@ CPoint SetBrushOrg(POINT point);
   
  請勿使用`SetBrushOrg`與內建`CBrush`物件。  
   
-##  <a name="a-namesetcoloradjustmenta--cdcsetcoloradjustment"></a><a name="setcoloradjustment"></a>CDC::SetColorAdjustment  
+##  <a name="setcoloradjustment"></a>CDC::SetColorAdjustment  
  設定裝置內容，使用指定的值的色彩調整值。  
   
 ```  
@@ -4996,7 +5195,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="remarks"></a>備註  
  色彩調整值用來調整輸入的呼叫的來源點陣圖的色彩`CDC::StretchBlt`成員函式時**半色調**模式設定。  
   
-##  <a name="a-namesetdcbrushcolora--cdcsetdcbrushcolor"></a><a name="setdcbrushcolor"></a>CDC::SetDCBrushColor  
+##  <a name="setdcbrushcolor"></a>CDC::SetDCBrushColor  
  將目前的裝置內容 (DC) 筆刷色彩設定為指定的色彩值。  
   
 ```  
@@ -5015,7 +5214,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 ### <a name="remarks"></a>備註  
  這個方法會模擬函式的功能[SetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd162969)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetdcpencolora--cdcsetdcpencolor"></a><a name="setdcpencolor"></a>CDC::SetDCPenColor  
+##  <a name="setdcpencolor"></a>CDC::SetDCPenColor  
  將目前的裝置內容 (DC) 畫筆顏色設定為指定的色彩值。  
   
 ```  
@@ -5032,7 +5231,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 ### <a name="remarks"></a>備註  
  此成員函式會利用 Win32 函式[SetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd162970)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetgraphicsmodea--cdcsetgraphicsmode"></a><a name="setgraphicsmode"></a>CDC::SetGraphicsMode  
+##  <a name="setgraphicsmode"></a>CDC::SetGraphicsMode  
  設定指定之的裝置內容的圖形模式。  
   
 ```  
@@ -5051,7 +5250,7 @@ int SetGraphicsMode(int iMode);
 ### <a name="remarks"></a>備註  
  這個方法會包裝 Windows GDI 函式[SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977)。  
   
-##  <a name="a-namesetlayouta--cdcsetlayout"></a><a name="setlayout"></a>CDC::SetLayout  
+##  <a name="setlayout"></a>CDC::SetLayout  
  呼叫此成員函式可將文字和圖形裝置內容的配置變更為右至左，如阿拉伯文和希伯來文的文化特性的標準版面配置。  
   
 ```  
@@ -5082,7 +5281,7 @@ DWORD SetLayout(DWORD dwLayout);
   
  一旦變更版面配置與**LAYOUT_RTL**旗標，通常指定權限的旗標或左相反。 為了避免混淆，您可能要定義標準的旗標的替代名稱。 如需建議替代的旗標名稱的清單，請參閱[SetLayout](http://msdn.microsoft.com/library/windows/desktop/dd162979)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetmapmodea--cdcsetmapmode"></a><a name="setmapmode"></a>CDC::SetMapMode  
+##  <a name="setmapmode"></a>CDC::SetMapMode  
  設定對應模式。  
   
 ```  
@@ -5123,7 +5322,7 @@ virtual int SetMapMode(int nMapMode);
 ### <a name="example"></a>範例  
   請參閱範例[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。  
   
-##  <a name="a-namesetmapperflagsa--cdcsetmapperflags"></a><a name="setmapperflags"></a>CDC::SetMapperFlags  
+##  <a name="setmapperflags"></a>CDC::SetMapperFlags  
  變更時它會轉換成實體字型的邏輯字型字型對應器所使用的方法。  
   
 ```  
@@ -5144,7 +5343,7 @@ DWORD SetMapperFlags(DWORD dwFlag);
   
  如果沒有實體字型有符合邏輯字型中的規格，外觀比例，GDI 選擇新的長寬比，並選擇符合這個新的長寬比的字型。  
   
-##  <a name="a-namesetmiterlimita--cdcsetmiterlimit"></a><a name="setmiterlimit"></a>CDC::SetMiterLimit  
+##  <a name="setmiterlimit"></a>CDC::SetMiterLimit  
  設定斜接角聯結裝置內容的長度限制。  
   
 ```  
@@ -5161,7 +5360,7 @@ BOOL SetMiterLimit(float fMiterLimit);
 ### <a name="remarks"></a>備註  
  斜接長度定義為內部聯結線牆面交集的外部聯結的直線牆交集的距離。 斜是斜接長度為線條寬度的最大允許的比率。 預設斜為 10.0。  
   
-##  <a name="a-namesetoutputdca--cdcsetoutputdc"></a><a name="setoutputdc"></a>CDC::SetOutputDC  
+##  <a name="setoutputdc"></a>CDC::SetOutputDC  
  呼叫此成員函式，來設定輸出裝置內容， `m_hDC`。  
   
 ```  
@@ -5175,7 +5374,7 @@ virtual void SetOutputDC(HDC hDC);
 ### <a name="remarks"></a>備註  
  此成員函式只能呼叫，當裝置內容未連接至`CDC`物件。 此成員函式會將`m_hDC`但不會附加裝置內容至`CDC`物件。  
   
-##  <a name="a-namesetpixela--cdcsetpixel"></a><a name="setpixel"></a>CDC::SetPixel  
+##  <a name="setpixel"></a>CDC::SetPixel  
  設定所指定的色彩最接近指定點的像素`crColor`。  
   
 ```  
@@ -5211,7 +5410,7 @@ COLORREF SetPixel(
   
  並非所有的裝置皆支援 `SetPixel` 函式。 若要判斷裝置是否支援`SetPixel`，呼叫`GetDeviceCaps`成員函式**RASTERCAPS**編製索引，並檢查傳回值**RC_BITBLT**旗標。  
   
-##  <a name="a-namesetpixelva--cdcsetpixelv"></a><a name="setpixelv"></a>CDC::SetPixelV  
+##  <a name="setpixelv"></a>CDC::SetPixelV  
  設定以指定的色彩最接近指定座標上的像素。  
   
 ```  
@@ -5245,7 +5444,7 @@ BOOL SetPixelV(
 ### <a name="remarks"></a>備註  
  點必須位於裁剪區域和裝置介面的可見部分。 並非所有裝置都支援成員函式。 如需詳細資訊，請參閱**RC_BITBLT**功能`CDC::GetDeviceCaps`成員函式。 `SetPixelV`速度比`SetPixel`因為不需傳回實際繪製點的色彩值。  
   
-##  <a name="a-namesetpolyfillmodea--cdcsetpolyfillmode"></a><a name="setpolyfillmode"></a>CDC::SetPolyFillMode  
+##  <a name="setpolyfillmode"></a>CDC::SetPolyFillMode  
  將多邊形填滿模式設定。  
   
 ```  
@@ -5264,7 +5463,7 @@ int SetPolyFillMode(int nPolyFillMode);
   
  多邊形填滿模式時**彎曲**，系統會用來判斷是否要填滿的區域已繪製圖表的方向。 順時針或逆時針方向會繪製多邊形中的每個直線線段。 每當虛構的線圖外面括住的區域繪製出通過順時針直線線段，計數會漸增。 當行通過逆時針直線線段時，計數會遞減。 如果計數在線條數到達外的圖為非零，則會填滿區域。  
   
-##  <a name="a-namesetrop2a--cdcsetrop2"></a><a name="setrop2"></a>CDC::SetROP2  
+##  <a name="setrop2"></a>CDC::SetROP2  
  設定目前的繪圖模式。  
   
 ```  
@@ -5317,7 +5516,7 @@ int SetROP2(int nDrawMode);
   
  繪圖模式是僅適用於點陣裝置。它不會套用到向量裝置。 繪圖模式會代表所有可能的布林值組合的兩個變數，不使用二元運算子 AND、 OR 和 XOR (排除 OR)，一元運算的二進位的點陣作業程式碼。  
   
-##  <a name="a-namesetstretchbltmodea--cdcsetstretchbltmode"></a><a name="setstretchbltmode"></a>CDC::SetStretchBltMode  
+##  <a name="setstretchbltmode"></a>CDC::SetStretchBltMode  
  設定點陣圖自動縮放模式`StretchBlt`成員函式。  
   
 ```  
@@ -5352,7 +5551,7 @@ int SetStretchBltMode(int nStretchMode);
   
  可能也會根據裝置驅動程式功能提供額外的自動縮放模式。  
   
-##  <a name="a-namesettextaligna--cdcsettextalign"></a><a name="settextalign"></a>CDC::SetTextAlign  
+##  <a name="settextalign"></a>CDC::SetTextAlign  
  設定文字對齊方式的旗標。  
   
 ```  
@@ -5389,7 +5588,7 @@ UINT SetTextAlign(UINT nFlags);
 ### <a name="remarks"></a>備註  
  `TextOut`和`ExtTextOut`定位的顯示或裝置上的文字字串時，成員函式會使用這些旗標。 旗標指定的特定點與周圍文字的矩形之間的關聯性。 此點的座標會做為參數傳遞`TextOut`成員函式。 繫結文字的矩形是相鄰的字元儲存格的文字字串中所構成。  
   
-##  <a name="a-namesettextcharacterextraa--cdcsettextcharacterextra"></a><a name="settextcharacterextra"></a>CDC::SetTextCharacterExtra  
+##  <a name="settextcharacterextra"></a>CDC::SetTextCharacterExtra  
  設定 intercharacter 的間距數量。  
   
 ```  
@@ -5406,7 +5605,7 @@ int SetTextCharacterExtra(int nCharExtra);
 ### <a name="remarks"></a>備註  
  GDI 新增這個間距，包括分行符號字元，當一行文字寫入裝置內容的每個字元。 Intercharacter 間距所需的預設值為 0。  
   
-##  <a name="a-namesettextcolora--cdcsettextcolor"></a><a name="settextcolor"></a>CDC::SetTextColor  
+##  <a name="settextcolor"></a>CDC::SetTextColor  
  將文字的色彩設定為指定的色彩。  
   
 ```  
@@ -5428,7 +5627,7 @@ virtual COLORREF SetTextColor(COLORREF crColor);
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)。  
   
-##  <a name="a-namesettextjustificationa--cdcsettextjustification"></a><a name="settextjustification"></a>CDC::SetTextJustification  
+##  <a name="settextjustification"></a>CDC::SetTextJustification  
  分行符號字元在字串中加上空格。  
   
 ```  
@@ -5460,7 +5659,7 @@ int SetTextJustification(
   
  已對齊每一行之後，必須清除這個錯誤的詞彙，以防止它被合併到下一行。 藉由呼叫，就可以清除一詞`SetTextJustification`與`nBreakExtra`設為 0。  
   
-##  <a name="a-namesetviewportexta--cdcsetviewportext"></a><a name="setviewportext"></a>CDC::SetViewportExt  
+##  <a name="setviewportext"></a>CDC::SetViewportExt  
  設定 x-和 y-範圍的裝置內容的檢視區。  
   
 ```  
@@ -5499,7 +5698,7 @@ CSize SetViewportExt(SIZE size);
 ### <a name="example"></a>範例  
   請參閱範例[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。  
   
-##  <a name="a-namesetviewportorga--cdcsetviewportorg"></a><a name="setviewportorg"></a>CDC::SetViewportOrg  
+##  <a name="setviewportorg"></a>CDC::SetViewportOrg  
  設定裝置內容的檢視區的原點。  
   
 ```  
@@ -5531,7 +5730,7 @@ CPoint SetViewportOrg(POINT point);
 ### <a name="example"></a>範例  
   請參閱範例[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。  
   
-##  <a name="a-namesetwindowexta--cdcsetwindowext"></a><a name="setwindowext"></a>CDC::SetWindowExt  
+##  <a name="setwindowext"></a>CDC::SetWindowExt  
  設定 x-和 y-範圍相關聯的裝置內容的視窗。  
   
 ```  
@@ -5577,7 +5776,7 @@ CSize SetWindowExt(SIZE size);
 ### <a name="example"></a>範例  
   請參閱範例[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。  
   
-##  <a name="a-namesetwindoworga--cdcsetwindoworg"></a><a name="setwindoworg"></a>CDC::SetWindowOrg  
+##  <a name="setwindoworg"></a>CDC::SetWindowOrg  
  設定裝置內容的視窗原點。  
   
 ```  
@@ -5606,7 +5805,7 @@ CPoint SetWindowOrg(POINT point);
   
  視窗原點標示邏輯從中 GDI 對應的檢視區原點，在裝置座標系統中所指定的點的座標系統中的點**SetWindowOrg**函式。 GDI 遵循相同的程序對應至檢視區原點視窗原點需要對應其他所有資料點。 例如，繞著視窗原點的點的圓形中的所有點都會環繞在檢視區原點的點。 同樣地，通過視窗原點的列中的所有點都都通過檢視區原點的列。  
   
-##  <a name="a-namesetworldtransforma--cdcsetworldtransform"></a><a name="setworldtransform"></a>CDC::SetWorldTransform  
+##  <a name="setworldtransform"></a>CDC::SetWorldTransform  
  設定全局空間與指定之的裝置內容的頁面空間之間的二維線性轉換。 此轉換可用來縮放、 旋轉、 傾斜或轉譯圖形輸出。  
   
 ```  
@@ -5627,7 +5826,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ### <a name="remarks"></a>備註  
  這個方法會包裝 Windows GDI 函式[SetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145104)。  
   
-##  <a name="a-namestartdoca--cdcstartdoc"></a><a name="startdoc"></a>CDC::StartDoc  
+##  <a name="startdoc"></a>CDC::StartDoc  
  正在啟動新的列印工作的裝置驅動程式，就會通知，所有後續`StartPage`和`EndPage`呼叫應該在相同的作業，直到多工緩衝`EndDoc`呼叫就會發生。  
   
 ```  
@@ -5659,7 +5858,7 @@ int StartDoc(LPCTSTR lpszDocName);
   
  [!code-cpp[NVC_MFCDocView #&41;](../../mfc/codesnippet/cpp/cdc-class_13.cpp)]  
   
-##  <a name="a-namestartpagea--cdcstartpage"></a><a name="startpage"></a>CDC::StartPage  
+##  <a name="startpage"></a>CDC::StartPage  
  呼叫此成員函式，若要準備要接收資料的印表機驅動程式。  
   
 ```  
@@ -5679,7 +5878,7 @@ int StartPage();
 ### <a name="example"></a>範例  
   請參閱範例[CDC::StartDoc](#startdoc)。  
   
-##  <a name="a-namestretchblta--cdcstretchblt"></a><a name="stretchblt"></a>CDC::StretchBlt  
+##  <a name="stretchblt"></a>CDC::StretchBlt  
  將來源矩形的點陣圖複製到目的地矩形，必要時可延伸或壓縮點陣圖，使其符合目的地矩形的維度。  
   
 ```  
@@ -5775,7 +5974,7 @@ BOOL StretchBlt(
   
  並非所有的裝置皆支援 `StretchBlt` 函式。 若要判斷裝置是否支援`StretchBlt`，呼叫`GetDeviceCaps`成員函式**RASTERCAPS**編製索引，並檢查傳回值**RC_STRETCHBLT**旗標。  
   
-##  <a name="a-namestrokeandfillpatha--cdcstrokeandfillpath"></a><a name="strokeandfillpath"></a>CDC::StrokeAndFillPath  
+##  <a name="strokeandfillpath"></a>CDC::StrokeAndFillPath  
  關閉任何開啟的圖形路徑中，使用目前的畫筆 strokes 路徑的外框，填滿它的內部使用目前的筆刷。  
   
 ```  
@@ -5788,7 +5987,7 @@ BOOL StrokeAndFillPath();
 ### <a name="remarks"></a>備註  
  裝置內容必須包含已關閉的路徑。 `StrokeAndFillPath`成員函式具有相同的效果關閉所有開啟的圖表，在路徑中，並將畫筆繪製，並分別填入路徑，不同之處在於填滿的區域將不會重疊描圖外的區域，即使是寬。  
   
-##  <a name="a-namestrokepatha--cdcstrokepath"></a><a name="strokepath"></a>CDC::StrokePath  
+##  <a name="strokepath"></a>CDC::StrokePath  
  使用目前的畫筆轉譯指定的路徑。  
   
 ```  
@@ -5801,7 +6000,7 @@ BOOL StrokePath();
 ### <a name="remarks"></a>備註  
  裝置內容必須包含已關閉的路徑。  
   
-##  <a name="a-nametabbedtextouta--cdctabbedtextout"></a><a name="tabbedtextout"></a>CDC::TabbedTextOut  
+##  <a name="tabbedtextout"></a>CDC::TabbedTextOut  
  呼叫此成員函式可寫入的字元字串，在指定的位置中，展開索引標籤的定位停駐點位置陣列中指定的值。  
   
 ```  
@@ -5859,7 +6058,7 @@ CSize TabbedTextOut(
   
  根據預設，函式不會使用或更新目前的位置。 如果應用程式需要更新目前的位置，它會呼叫此函式時，應用程式可以呼叫[SetTextAlign](#settextalign)成員函式`nFlags`設**TA_UPDATECP**。 當設定這個旗標時，Windows 會略過*x*和*y*參數的後續呼叫`TabbedTextOut`，改用目前的位置。  
   
-##  <a name="a-nametextouta--cdctextout"></a><a name="textout"></a>CDC::TextOut  
+##  <a name="textout"></a>CDC::TextOut  
  使用目前選取的字型，在指定的位置寫入字元字串。  
   
 ```  
@@ -5903,7 +6102,7 @@ BOOL TextOut(
 ### <a name="example"></a>範例  
   請參閱範例[cdc:: beginpath](#beginpath)。  
   
-##  <a name="a-nametransparentblta--cdctransparentblt"></a><a name="transparentblt"></a>CDC::TransparentBlt  
+##  <a name="transparentblt"></a>CDC::TransparentBlt  
  呼叫此成員函式，將對應從指定的來源裝置內容中，放入目的地裝置內容中像素矩形的色彩資料位元區塊。  
   
 ```  
@@ -5959,7 +6158,7 @@ BOOL TransparentBlt(
   
  如需詳細資訊，請參閱[TransparentBlt](http://msdn.microsoft.com/library/windows/desktop/dd145141)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameupdatecolorsa--cdcupdatecolors"></a><a name="updatecolors"></a>CDC::UpdateColors  
+##  <a name="updatecolors"></a>CDC::UpdateColors  
  更新工作區會比對目前的裝置內容的系統調色盤像素 x 像素為基礎的用戶端區域中的色彩。  
   
 ```  
@@ -5973,7 +6172,7 @@ void UpdateColors();
   
  `UpdateColors`成員函式通常會更新用戶端區域較重繪的區域。 不過，因為函式會執行系統調色盤變更之前，根據每個像素色彩的色彩轉譯，每次呼叫此函數就會導致某些色彩精確度遺失。  
   
-##  <a name="a-namewidenpatha--cdcwidenpath"></a><a name="widenpath"></a>CDC::WidenPath  
+##  <a name="widenpath"></a>CDC::WidenPath  
  如果路徑圖案使用目前選取到裝置內容的畫筆會繪製的區域來重新定義目前的路徑。  
   
 ```  

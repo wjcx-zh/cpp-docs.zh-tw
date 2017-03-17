@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSyncObject
+- AFXMT/CSyncObject
+- AFXMT/CSyncObject::CSyncObject
+- AFXMT/CSyncObject::Lock
+- AFXMT/CSyncObject::Unlock
+- AFXMT/CSyncObject::m_hObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmt.h  
   
-##  <a name="a-namecsyncobjecta--csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
  建構的同步處理物件，使用提供的名稱。  
   
 ```  
@@ -101,7 +106,7 @@ virtual ~CSyncObject();
  `pstrName`  
  物件的名稱。 如果**NULL**， *pstrName*將會是 null。  
   
-##  <a name="a-namelocka--csyncobjectlock"></a><a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>CSyncObject::Lock  
  呼叫此函式可存取由同步處理物件所控制的資源。  
   
 ```  
@@ -118,14 +123,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>備註  
  如果在同步物件收到信號，`Lock`會成功傳回，而且執行緒現在擁有的物件。 如果未收到信號同步處理的物件 （無法使用），`Lock`會等候同步物件變成已收到訊號中指定的毫秒數最*dwTimeOut*參數。 如果同步處理物件未不被通知以指定的時間量`Lock`傳回失敗。  
   
-##  <a name="a-namemhobjecta--csyncobjectmhobject"></a><a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>CSyncObject::m_hObject  
  基礎的同步處理物件的控制代碼。  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="a-nameoperatorhandlea--csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSyncObject::operator 控制代碼  
+##  <a name="operator_handle"></a>CSyncObject::operator 控制代碼  
  若要取得的控制代碼使用這個運算子`CSyncObject`物件。  
   
 ```  
@@ -138,7 +143,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>備註  
  若要直接呼叫 Windows Api，您可以使用控制代碼。  
   
-##  <a name="a-nameunlocka--csyncobjectunlock"></a><a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>CSyncObject::Unlock  
  宣告`Unlock`不含任何參數是純虛擬函式，並且必須被覆寫的所有類別衍生自`CSyncObject`。  
   
 ```  

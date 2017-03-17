@@ -10,7 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBaseTransition
-- afxanimationcontroller/CBaseTransition
+- AFXANIMATIONCONTROLLER/CBaseTransition
+- AFXANIMATIONCONTROLLER/CBaseTransition::CBaseTransition
+- AFXANIMATIONCONTROLLER/CBaseTransition::AddToStoryboard
+- AFXANIMATIONCONTROLLER/CBaseTransition::AddToStoryboardAtKeyframes
+- AFXANIMATIONCONTROLLER/CBaseTransition::Clear
+- AFXANIMATIONCONTROLLER/CBaseTransition::Create
+- AFXANIMATIONCONTROLLER/CBaseTransition::GetEndKeyframe
+- AFXANIMATIONCONTROLLER/CBaseTransition::GetRelatedVariable
+- AFXANIMATIONCONTROLLER/CBaseTransition::GetStartKeyframe
+- AFXANIMATIONCONTROLLER/CBaseTransition::GetTransition
+- AFXANIMATIONCONTROLLER/CBaseTransition::GetType
+- AFXANIMATIONCONTROLLER/CBaseTransition::IsAdded
+- AFXANIMATIONCONTROLLER/CBaseTransition::SetKeyframes
+- AFXANIMATIONCONTROLLER/CBaseTransition::SetRelatedVariable
+- AFXANIMATIONCONTROLLER/CBaseTransition::m_bAdded
+- AFXANIMATIONCONTROLLER/CBaseTransition::m_pEndKeyframe
+- AFXANIMATIONCONTROLLER/CBaseTransition::m_pRelatedVariable
+- AFXANIMATIONCONTROLLER/CBaseTransition::m_pStartKeyframe
+- AFXANIMATIONCONTROLLER/CBaseTransition::m_transition
+- AFXANIMATIONCONTROLLER/CBaseTransition::m_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,14 +122,14 @@ class CBaseTransition : public CObject;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namedtorcbasetransitiona--cbasetransitioncbasetransition"></a><a name="_dtorcbasetransition"></a>CBaseTransition:: ~ CBaseTransition  
+##  <a name="_dtorcbasetransition"></a>CBaseTransition:: ~ CBaseTransition  
  解構函式。 轉換物件終結時呼叫。  
   
 ```  
 virtual ~CBaseTransition();
 ```  
   
-##  <a name="a-nameaddtostoryboarda--cbasetransitionaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseTransition::AddToStoryboard  
+##  <a name="addtostoryboard"></a>CBaseTransition::AddToStoryboard  
  將轉換加入至分鏡腳本。  
   
 ```  
@@ -127,7 +146,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>備註  
  套用轉換至腳本中相關的變數。 如果這是套用至這個腳本中的這個變數的第一個轉換，轉換就會開始腳本的開始。 否則，轉換會附加至最近新增至變數的轉換。  
   
-##  <a name="a-nameaddtostoryboardatkeyframesa--cbasetransitionaddtostoryboardatkeyframes"></a><a name="addtostoryboardatkeyframes"></a>CBaseTransition::AddToStoryboardAtKeyframes  
+##  <a name="addtostoryboardatkeyframes"></a>CBaseTransition::AddToStoryboardAtKeyframes  
  將轉換加入至分鏡腳本。  
   
 ```  
@@ -144,14 +163,14 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>備註  
  套用轉換至腳本中相關的變數。 如果指定的開始主要畫面格，轉換會開始在該主要畫面格。 如果指定的結束主要畫面格，轉換就會開始在開始主要畫面格，並停止在結束主要畫面格。 如果指定的持續時間參數建立轉換，這段時間會覆寫的持續時間的開始和結束的主要畫面格之間的時間。 如果沒有主要畫面格已指定，轉換會附加至最近新增至變數的轉換。  
   
-##  <a name="a-namecbasetransitiona--cbasetransitioncbasetransition"></a><a name="cbasetransition"></a>CBaseTransition::CBaseTransition  
+##  <a name="cbasetransition"></a>CBaseTransition::CBaseTransition  
  建構的基底轉換物件。  
   
 ```  
 CBaseTransition();
 ```  
   
-##  <a name="a-namecleara--cbasetransitionclear"></a><a name="clear"></a>CBaseTransition::Clear  
+##  <a name="clear"></a>CBaseTransition::Clear  
  發行封裝 IUIAnimationTransition COM 物件。  
   
 ```  
@@ -161,7 +180,7 @@ void Clear();
 ### <a name="remarks"></a>備註  
  若要防止 IUITransition 介面流失，應該從衍生的類別的建立方法呼叫這個方法。  
   
-##  <a name="a-namecreatea--cbasetransitioncreate"></a><a name="create"></a>CBaseTransition::Create  
+##  <a name="create"></a>CBaseTransition::Create  
  建立 COM 轉換。  
   
 ```  
@@ -183,7 +202,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  這是純虛擬函式必須在衍生類別中被覆寫。 它會呼叫基礎 COM 轉換物件具現化架構。  
   
-##  <a name="a-namegetendkeyframea--cbasetransitiongetendkeyframe"></a><a name="getendkeyframe"></a>CBaseTransition::GetEndKeyframe  
+##  <a name="getendkeyframe"></a>CBaseTransition::GetEndKeyframe  
  傳回開始主要畫面格。  
   
 ```  
@@ -196,7 +215,7 @@ CBaseKeyFrame* GetEndKeyframe();
 ### <a name="remarks"></a>備註  
  這個方法可以用來存取 SetKeyframes 先前所設定的主要畫面格物件。 當轉換正在新增至腳本，則是由上層程式碼進行呼叫。  
   
-##  <a name="a-namegetrelatedvariablea--cbasetransitiongetrelatedvariable"></a><a name="getrelatedvariable"></a>CBaseTransition::GetRelatedVariable  
+##  <a name="getrelatedvariable"></a>CBaseTransition::GetRelatedVariable  
  傳回相關變數的指標。  
   
 ```  
@@ -209,7 +228,7 @@ CAnimationVariable* GetRelatedVariable();
 ### <a name="remarks"></a>備註  
  這是相關的動畫變數的存取子。  
   
-##  <a name="a-namegetstartkeyframea--cbasetransitiongetstartkeyframe"></a><a name="getstartkeyframe"></a>CBaseTransition::GetStartKeyframe  
+##  <a name="getstartkeyframe"></a>CBaseTransition::GetStartKeyframe  
  傳回開始主要畫面格。  
   
 ```  
@@ -222,7 +241,7 @@ CBaseKeyFrame* GetStartKeyframe();
 ### <a name="remarks"></a>備註  
  這個方法可以用來存取 SetKeyframes 先前所設定的主要畫面格物件。 當轉換正在新增至腳本，則是由上層程式碼進行呼叫。  
   
-##  <a name="a-namegettransitiona--cbasetransitiongettransition"></a><a name="gettransition"></a>CBaseTransition::GetTransition  
+##  <a name="gettransition"></a>CBaseTransition::GetTransition  
  傳回基礎 COM 轉換物件的指標。  
   
 ```  
@@ -246,7 +265,7 @@ IUIAnimationTransition* GetTransition();
 ### <a name="remarks"></a>備註  
  這個方法會傳回基礎 COM 轉換物件的指標，並在必要時建立它。  
   
-##  <a name="a-namegettypea--cbasetransitiongettype"></a><a name="gettype"></a>CBaseTransition::GetType  
+##  <a name="gettype"></a>CBaseTransition::GetType  
  傳回轉換型別。  
   
 ```  
@@ -259,7 +278,7 @@ TRANSITION_TYPE GetType() const;
 ### <a name="remarks"></a>備註  
  這個方法可以用來識別轉換物件，其型別。 類型 設定在衍生類別中的建構函式。  
   
-##  <a name="a-nameisaddeda--cbasetransitionisadded"></a><a name="isadded"></a>CBaseTransition::IsAdded  
+##  <a name="isadded"></a>CBaseTransition::IsAdded  
  會指示轉換是否已經新增至腳本。  
   
 ```  
@@ -272,49 +291,49 @@ BOOL IsAdded();
 ### <a name="remarks"></a>備註  
  最上層程式碼會加入至分鏡腳本的轉換時，會在內部設定這個旗標。  
   
-##  <a name="a-namembaddeda--cbasetransitionmbadded"></a><a name="m_badded"></a>CBaseTransition::m_bAdded  
+##  <a name="m_badded"></a>CBaseTransition::m_bAdded  
  指定轉換是否已經新增至腳本。  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="a-namempendkeyframea--cbasetransitionmpendkeyframe"></a><a name="m_pendkeyframe"></a>CBaseTransition::m_pEndKeyframe  
+##  <a name="m_pendkeyframe"></a>CBaseTransition::m_pEndKeyframe  
  儲存指定轉換結束的主要畫面格的指標。  
   
 ```  
 CBaseKeyFrame* m_pEndKeyframe;  
 ```  
   
-##  <a name="a-namemprelatedvariablea--cbasetransitionmprelatedvariable"></a><a name="m_prelatedvariable"></a>CBaseTransition::m_pRelatedVariable  
+##  <a name="m_prelatedvariable"></a>CBaseTransition::m_pRelatedVariable  
  動畫變數動畫與轉換儲存在 m_transition 指標。  
   
 ```  
 CAnimationVariable* m_pRelatedVariable;  
 ```  
   
-##  <a name="a-namempstartkeyframea--cbasetransitionmpstartkeyframe"></a><a name="m_pstartkeyframe"></a>CBaseTransition::m_pStartKeyframe  
+##  <a name="m_pstartkeyframe"></a>CBaseTransition::m_pStartKeyframe  
  儲存指定轉換的開頭的主要畫面格的指標。  
   
 ```  
 CBaseKeyFrame* m_pStartKeyframe;  
 ```  
   
-##  <a name="a-namemtransitiona--cbasetransitionmtransition"></a><a name="m_transition"></a>CBaseTransition::m_transition  
+##  <a name="m_transition"></a>CBaseTransition::m_transition  
  儲存 IUIAnimationTransition 的指標。 如果尚未建立 COM 物件轉換為 NULL。  
   
 ```  
 ATL::CComPtr<IUIAnimationTransition> m_transition;  
 ```  
   
-##  <a name="a-namemtypea--cbasetransitionmtype"></a><a name="m_type"></a>CBaseTransition::m_type  
+##  <a name="m_type"></a>CBaseTransition::m_type  
  儲存轉換類型。  
   
 ```  
 TRANSITION_TYPE m_type;  
 ```  
   
-##  <a name="a-namesetkeyframesa--cbasetransitionsetkeyframes"></a><a name="setkeyframes"></a>CBaseTransition::SetKeyframes  
+##  <a name="setkeyframes"></a>CBaseTransition::SetKeyframes  
  設定主要畫面格的轉換。  
   
 ```  
@@ -333,7 +352,7 @@ void SetKeyframes(
 ### <a name="remarks"></a>備註  
  這個方法會告訴轉換到指定主要畫面格之後啟動，並選擇性地，如果不是 NULL，暫止結束之前指定的主要畫面格。 如果指定的持續時間參數建立轉換，這段時間會覆寫的持續時間的開始和結束的主要畫面格之間的時間。  
   
-##  <a name="a-namesetrelatedvariablea--cbasetransitionsetrelatedvariable"></a><a name="setrelatedvariable"></a>CBaseTransition::SetRelatedVariable  
+##  <a name="setrelatedvariable"></a>CBaseTransition::SetRelatedVariable  
  建立轉換動畫變數之間關聯性。  
   
 ```  
@@ -347,7 +366,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ### <a name="remarks"></a>備註  
  建立轉換動畫變數之間關聯性。 轉換只能用於一個變數。  
   
-##  <a name="a-nametransitiontypeenumerationa--cbasetransitiontransitiontype-enumeration"></a><a name="transition_type_enumeration"></a>CBaseTransition::TRANSITION_TYPE 列舉型別  
+##  <a name="transition_type_enumeration"></a>CBaseTransition::TRANSITION_TYPE 列舉型別  
  定義目前的視窗動畫 API MFC 實作所支援的轉換類型。  
   
 ```  

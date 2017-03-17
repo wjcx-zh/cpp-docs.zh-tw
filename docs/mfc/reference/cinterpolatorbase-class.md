@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CInterpolatorBase
 - CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::CInterpolatorBase
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::CreateInstance
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetDependencies
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetDuration
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::GetFinalValue
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::InterpolateValue
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::InterpolateVelocity
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetCustomInterpolator
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetDuration
+- AFXANIMATIONCONTROLLER/CInterpolatorBase::SetInitialValueAndVelocity
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,14 +94,14 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecinterpolatorbasea--cinterpolatorbasecinterpolatorbase"></a><a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
+##  <a name="cinterpolatorbase"></a>CInterpolatorBase::CInterpolatorBase  
  建構 CInterpolatorBase 物件。  
   
 ```  
 CInterpolatorBase();
 ```  
   
-##  <a name="a-namecreateinstancea--cinterpolatorbasecreateinstance"></a><a name="createinstance"></a>CInterpolatorBase::CreateInstance  
+##  <a name="createinstance"></a>CInterpolatorBase::CreateInstance  
  建立 CInterpolatorBase 的執行個體，並將自訂 interpolator，將會處理事件的指標。  
   
 ```  
@@ -109,7 +119,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="a-namegetdependenciesa--cinterpolatorbasegetdependencies"></a><a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
+##  <a name="getdependencies"></a>CInterpolatorBase::GetDependencies  
  取得 interpolator 的相依性。  
   
 ```  
@@ -132,7 +142,7 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE GetDependencies 方法會傳回 E_FAIL。  
   
-##  <a name="a-namegetdurationa--cinterpolatorbasegetduration"></a><a name="getduration"></a>CInterpolatorBase::GetDuration  
+##  <a name="getduration"></a>CInterpolatorBase::GetDuration  
  取得 interpolator 的持續時間。  
   
 ```  
@@ -146,7 +156,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE GetDuration 方法會傳回 E_FAIL。  
   
-##  <a name="a-namegetfinalvaluea--cinterpolatorbasegetfinalvalue"></a><a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
+##  <a name="getfinalvalue"></a>CInterpolatorBase::GetFinalValue  
  取得 interpolator 會導致的最後一個值。  
   
 ```  
@@ -160,7 +170,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE GetFinalValue 方法會傳回 E_FAIL。  
   
-##  <a name="a-nameinterpolatevaluea--cinterpolatorbaseinterpolatevalue"></a><a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
+##  <a name="interpolatevalue"></a>CInterpolatorBase::InterpolateValue  
  指定位移處的值進行插補  
   
 ```  
@@ -179,7 +189,7 @@ IFACEMETHOD(InterpolateValue)(
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE InterpolateValue 方法會傳回 E_FAIL。  
   
-##  <a name="a-nameinterpolatevelocitya--cinterpolatorbaseinterpolatevelocity"></a><a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
+##  <a name="interpolatevelocity"></a>CInterpolatorBase::InterpolateVelocity  
  指定位移處的速度進行插補  
   
 ```  
@@ -198,7 +208,7 @@ IFACEMETHOD(InterpolateVelocity)(
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE InterpolateVelocity 方法會傳回 E_FAIL。  
   
-##  <a name="a-namesetcustominterpolatora--cinterpolatorbasesetcustominterpolator"></a><a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
+##  <a name="setcustominterpolator"></a>CInterpolatorBase::SetCustomInterpolator  
  儲存自訂 interpolator，將會處理事件的指標。  
   
 ```  
@@ -209,7 +219,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
  `pInterpolator`  
  自訂 interpolator 指標。  
   
-##  <a name="a-namesetdurationa--cinterpolatorbasesetduration"></a><a name="setduration"></a>CInterpolatorBase::SetDuration  
+##  <a name="setduration"></a>CInterpolatorBase::SetDuration  
  設定 interpolator 的持續時間  
   
 ```  
@@ -223,7 +233,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE SetDuration 方法會傳回 E_FAIL。  
   
-##  <a name="a-namesetinitialvalueandvelocitya--cinterpolatorbasesetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
+##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase::SetInitialValueAndVelocity  
  Interpolator 的起始值和速度設定。  
   
 ```  

@@ -10,8 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCoClass
-- ATL.CComCoClass
-- ATL::CComCoClass
+- ATLCOM/ATL::CComCoClass
+- ATLCOM/ATL::CComCoClass::CreateInstance
+- ATLCOM/ATL::CComCoClass::Error
+- ATLCOM/ATL::CComCoClass::GetObjectCLSID
+- ATLCOM/ATL::CComCoClass::GetObjectDescription
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +89,7 @@ class CComCoClass
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomcoclasscreateinstance"></a><a name="createinstance"></a>CComCoClass::CreateInstance  
+##  <a name="createinstance"></a>CComCoClass::CreateInstance  
  使用這些`CreateInstance`函式來建立執行個體的 COM 物件，並擷取介面指標，而不需使用 COM API。  
   
 ```
@@ -124,7 +127,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
   
  [!code-cpp[NVC_ATL_COM&#11;](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
-##  <a name="a-nameerrora--ccomcoclasserror"></a><a name="error"></a>CComCoClass::Error  
+##  <a name="error"></a>CComCoClass::Error  
  這個靜態函式中設定`IErrorInfo`介面，以提供給用戶端的錯誤資訊。  
   
 ```
@@ -197,7 +200,7 @@ static HRESULT Error(
   
  如果`hRes`參數不是零，然後`Error`傳回的值`hRes`。 如果`hRes`是零，則前四個版本`Error`傳回`DISP_E_EXCEPTION`。 最後兩個版本都會傳回巨集的結果**MAKE_HRESULT (1，FACILITY_ITF，** `nID` **)**。  
   
-##  <a name="a-namegetobjectclsida--ccomcoclassgetobjectclsid"></a><a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
+##  <a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
  提供一致的方式擷取物件的 CLSID。  
   
 ```
@@ -207,7 +210,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 ### <a name="return-value"></a>傳回值  
  物件的類別識別項。  
   
-##  <a name="a-namegetobjectdescriptiona--ccomcoclassgetobjectdescription"></a><a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
+##  <a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
  這個靜態函式會擷取類別物件的文字描述。  
   
 ```

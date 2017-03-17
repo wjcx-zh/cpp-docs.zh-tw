@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CLocalHeap
-- ATL::CLocalHeap
 - CLocalHeap
+- ATLMEM/ATL::CLocalHeap
+- ATLMEM/ATL::CLocalHeap::Allocate
+- ATLMEM/ATL::CLocalHeap::Free
+- ATLMEM/ATL::CLocalHeap::GetSize
+- ATLMEM/ATL::CLocalHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +84,7 @@ class CLocalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>需求  
  **標頭︰** atlmem.h  
   
-##  <a name="a-nameallocatea--clocalheapallocate"></a><a name="allocate"></a>CLocalHeap::Allocate  
+##  <a name="allocate"></a>CLocalHeap::Allocate  
  呼叫這個方法來配置記憶體區塊。  
   
 ```
@@ -100,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用實作[LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723)旗標參數與**LMEM_FIXED**。  
   
-##  <a name="a-namefreea--clocalheapfree"></a><a name="free"></a>CLocalHeap::Free  
+##  <a name="free"></a>CLocalHeap::Free  
  呼叫此方法以釋放此記憶體管理員所配置的記憶體區塊。  
   
 ```
@@ -114,7 +117,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>備註  
  使用實作[LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730)。  
   
-##  <a name="a-namegetsizea--clocalheapgetsize"></a><a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>CLocalHeap::GetSize  
  呼叫這個方法，以取得此記憶體管理員所配置的記憶體區塊配置的大小。  
   
 ```
@@ -131,7 +134,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>備註  
  使用實作[LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745)。  
   
-##  <a name="a-namereallocatea--clocalheapreallocate"></a><a name="reallocate"></a>CLocalHeap::Reallocate  
+##  <a name="reallocate"></a>CLocalHeap::Reallocate  
  呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。  
   
 ```

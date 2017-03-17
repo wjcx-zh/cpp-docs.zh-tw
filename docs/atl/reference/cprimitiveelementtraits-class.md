@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPrimitiveElementTraits<T>
 - CPrimitiveElementTraits
-- ATL.CPrimitiveElementTraits
-- ATL::CPrimitiveElementTraits<T>
-- ATL::CPrimitiveElementTraits
+- ATLCOLL/ATL::CPrimitiveElementTraits
+- ATLCOLL/ATL::CPrimitiveElementTraits::INARGTYPE
+- ATLCOLL/ATL::CPrimitiveElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +84,14 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE  
  若要使用項目加入集合類別物件的資料型別。  
   
 ```
 typedef T INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE  
  要用來擷取項目從集合類別物件的資料類型。  
   
 ```

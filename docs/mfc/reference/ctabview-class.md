@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabView
+- AFXTABVIEW/CTabView
+- AFXTABVIEW/CTabView::AddView
+- AFXTABVIEW/CTabView::FindTab
+- AFXTABVIEW/CTabView::GetActiveView
+- AFXTABVIEW/CTabView::GetTabControl
+- AFXTABVIEW/CTabView::RemoveView
+- AFXTABVIEW/CTabView::SetActiveView
+- AFXTABVIEW/CTabView::IsScrollBar
+- AFXTABVIEW/CTabView::OnActivateView
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +92,7 @@ class CTabbedView : public CView
 ## <a name="requirements"></a>需求  
  **標頭︰** afxTabView.h  
   
-##  <a name="a-nameaddviewa--ctabviewaddview"></a><a name="addview"></a>CTabView::AddView  
+##  <a name="addview"></a>CTabView::AddView  
  將檢視加入至索引標籤控制項。  
   
 ```  
@@ -113,7 +122,7 @@ int AddView(
 ### <a name="remarks"></a>備註  
  呼叫此函式可加入內嵌於框架 索引標籤控制項的檢視。  
   
-##  <a name="a-namefindtaba--ctabviewfindtab"></a><a name="findtab"></a>CTabView::FindTab  
+##  <a name="findtab"></a>CTabView::FindTab  
  傳回指定之檢視的索引 索引標籤控制項中。  
   
 ```  
@@ -130,7 +139,7 @@ int FindTab(HWND hWndView) const;
 ### <a name="remarks"></a>備註  
  呼叫此函式可擷取具有指定控制代碼的檢視索引。  
   
-##  <a name="a-namegetactiveviewa--ctabviewgetactiveview"></a><a name="getactiveview"></a>CTabView::GetActiveView  
+##  <a name="getactiveview"></a>CTabView::GetActiveView  
  傳回目前使用中檢視的指標。  
   
 ```  
@@ -142,7 +151,7 @@ CView* GetActiveView() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegettabcontrola--ctabviewgettabcontrol"></a><a name="gettabcontrol"></a>CTabView::GetTabControl  
+##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
  傳回與檢視相關聯的索引標籤控制項的參考。  
   
 ```  
@@ -152,7 +161,7 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ### <a name="return-value"></a>傳回值  
  與檢視相關聯的索引標籤控制項參考。  
   
-##  <a name="a-nameisscrollbara--ctabviewisscrollbar"></a><a name="isscrollbar"></a>CTabView::IsScrollBar  
+##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
  在建立索引標籤檢視來判斷索引標籤檢視是否有共用水平捲軸時，由架構呼叫。  
   
 ```  
@@ -167,7 +176,7 @@ virtual BOOL IsScrollBar() const;
   
  覆寫`IsScrollBar`方法中的`CTabView`-衍生類別，並傳回`TRUE`如果您想要建立具有共用水平捲軸檢視。  
   
-##  <a name="a-nameonactivateviewa--ctabviewonactivateview"></a><a name="onactivateview"></a>CTabView::OnActivateView  
+##  <a name="onactivateview"></a>CTabView::OnActivateView  
  索引標籤檢視進行作用中或非作用中時，由架構呼叫。  
   
 ```  
@@ -181,7 +190,7 @@ virtual void OnActivateView(CView* view);
 ### <a name="remarks"></a>備註  
  預設實作不做任何動作。 覆寫這個方法在`CTabView`-衍生的類別來處理此通知。  
   
-##  <a name="a-nameremoveviewa--ctabviewremoveview"></a><a name="removeview"></a>CTabView::RemoveView  
+##  <a name="removeview"></a>CTabView::RemoveView  
  從索引標籤控制項移除檢視。  
   
 ```  
@@ -197,7 +206,7 @@ BOOL RemoveView(int iTabNum);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetactiveviewa--ctabviewsetactiveview"></a><a name="setactiveview"></a>CTabView::SetActiveView  
+##  <a name="setactiveview"></a>CTabView::SetActiveView  
  讓檢視成為使用中。  
   
 ```  

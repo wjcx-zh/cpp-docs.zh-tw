@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAdapt
-- ATL.CAdapt<T>
-- ATL::CAdapt
-- ATL::CAdapt<T>
 - CAdapt
+- ATLCOMCLI/ATL::CAdapt
+- ATLCOMCLI/ATL::CAdapt::CAdapt
+- ATLCOMCLI/ATL::CAdapt::m_T
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +96,7 @@ class CAdapt
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcomcli.h  
   
-##  <a name="a-namecadapta--cadaptcadapt"></a><a name="cadapt"></a>CAdapt::CAdapt  
+##  <a name="cadapt"></a>CAdapt::CAdapt  
  建構函式可讓配接器物件建構、 從配接的類型的物件複製或從另一個介面卡物件複製的預設值。  
   
 ```
@@ -115,7 +114,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
  *rSrCA*  
  其包含的資料應該複製 （或移動） 至新建構的配接器物件配接器物件。  
   
-##  <a name="a-namemta--cadaptmt"></a><a name="m_t"></a>CAdapt::m_T  
+##  <a name="m_t"></a>CAdapt::m_T  
  保留所調整的資料。  
   
 ```
@@ -125,7 +124,7 @@ T m_T;
 ### <a name="remarks"></a>備註  
  這**公用**資料成員可以存取直接或間接與[運算子 const T i](#operator_const_t_amp)和[運算子 T i](#operator_t_amp)。  
   
-##  <a name="a-nameoperatorconsttampa--cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
+##  <a name="operator_const_t_amp"></a>CAdapt::operator const T&amp;  
  傳回**const**參考[m_T](#m_t)成員，可讓配接器物件，就好像型別的物件視為`T`。  
   
 ```  
@@ -135,7 +134,7 @@ operator const T&() const;
 ### <a name="return-value"></a>傳回值  
  A **const**參考`m_T`。  
   
-##  <a name="a-nameoperatortampa--cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt::operator T&amp;  
+##  <a name="operator_t_amp"></a>CAdapt::operator T&amp;  
  將參考傳回給[m_T](#m_t)成員，可讓配接器物件，就好像型別的物件視為`T`。  
   
 ```  
@@ -145,7 +144,7 @@ operator T&();
 ### <a name="return-value"></a>傳回值  
  參考`m_T`。  
   
-##  <a name="a-nameoperatorlta--cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt::operator&lt;  
+##  <a name="operator_lt"></a>CAdapt::operator&lt;  
  比較與所配接類型的物件[m_T](#m_t)。  
   
 ```
@@ -159,7 +158,7 @@ bool operator<(const T& rSrc) const;
 ### <a name="return-value"></a>傳回值  
  之間的比較結果`m_T`和`rSrc`。  
   
-##  <a name="a-nameoperatoreqa--cadaptoperator-"></a><a name="operator_eq"></a>CAdapt::operator =  
+##  <a name="operator_eq"></a>CAdapt::operator =  
  指派運算子指派引數， `rSrc`，資料成員[m_T](#m_t) ，並傳回目前的介面卡物件。  
   
 ```
@@ -178,7 +177,7 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 ### <a name="return-value"></a>傳回值  
  目前物件的參考。  
   
-##  <a name="a-nameoperatoreqeqa--cadaptoperator-"></a><a name="operator_eq_eq"></a>CAdapt::operator = =  
+##  <a name="operator_eq_eq"></a>CAdapt::operator = =  
  比較與所配接類型的物件[m_T](#m_t)。  
   
 ```

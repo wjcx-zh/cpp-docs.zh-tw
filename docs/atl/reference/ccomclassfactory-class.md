@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComClassFactory
 - CComClassFactory
-- ATL::CComClassFactory
+- ATLCOM/ATL::CComClassFactory
+- ATLCOM/ATL::CComClassFactory::CreateInstance
+- ATLCOM/ATL::CComClassFactory::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CComClassFactory
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactorycreateinstance"></a><a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
  建立指定 CLSID 的物件，並擷取這個物件的介面指標。  
   
 ```
@@ -101,7 +102,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namelockservera--ccomclassfactorylockserver"></a><a name="lockserver"></a>CComClassFactory::LockServer  
+##  <a name="lockserver"></a>CComClassFactory::LockServer  
  遞增和遞減模組鎖定計數藉由呼叫**_Module::Lock**和**_Module::Unlock**分別。  
   
 ```

@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DRoundedRect
 - CD2DRoundedRect
+- AFXRENDERTARGET/CD2DRoundedRect
+- AFXRENDERTARGET/CD2DRoundedRect::CD2DRoundedRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -65,7 +66,7 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namecd2droundedrecta--cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect  
+##  <a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect  
  建構 CD2DRoundedRect 物件從 CD2DRectF 物件。  
   
 ```  

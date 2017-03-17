@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFontInfo
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::GetFullName
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nCharSet
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nPitchAndFamily
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_nType
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_strName
+- AFXTOOLBARFONTCOMBOBOX/CMFCFontInfo::m_strScript
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +91,7 @@ class CMFCFontInfo : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfcfontinfoa--cmfcfontinfocmfcfontinfo"></a><a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
+##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
  建構 `CMFCFontInfo` 物件。  
   
 ```  
@@ -122,7 +129,7 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ### <a name="remarks"></a>備註  
  這份文件使用的詞彙*字元集*和*指令碼*交替。 A*指令碼*，這也就是書寫系統，是字元和規則，在一或多種語言撰寫這些字元的集合。 字元的集合包含字母和使用該指令碼中的標點符號。 比方說，拉丁指令碼會用於英文的唸在美國，和其字母包括從 A 到 Z 的字元。`lfCharSet`成員[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構指定的字元集。 例如，值`ANSI_CHARSET`指定[!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)]字元集，其中包括拉丁文字母。  
   
-##  <a name="a-namegetfullnamea--cmfcfontinfogetfullname"></a><a name="getfullname"></a>CMFCFontInfo::GetFullName  
+##  <a name="getfullname"></a>CMFCFontInfo::GetFullName  
  擷取的字型和它的字元串連的名稱設定 （指令碼）。  
   
 ```  
@@ -135,7 +142,7 @@ CString GetFullName() const;
 ### <a name="remarks"></a>備註  
  使用這個方法來取得字型的完整名稱。 例如，如果字型名稱是`Arial`以及字型指令碼為`Cyrillic`，這個方法會傳回"新細明體 （斯拉夫） 」。  
   
-##  <a name="a-namemncharseta--cmfcfontinfomncharset"></a><a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
+##  <a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
  值，指定與字型相關聯的字集 （指令碼）。  
   
 ```  
@@ -145,7 +152,7 @@ const BYTE m_nCharSet;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱`nCharSet`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
-##  <a name="a-namemnpitchandfamilya--cmfcfontinfomnpitchandfamily"></a><a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
+##  <a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
  指定的頻率 （點大小） 和字型家族 （例如，細明體，新細明體和等寬） 的值。  
   
 ```  
@@ -155,7 +162,7 @@ const BYTE m_nPitchAndFamily;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱`nPitchAndFamily`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
-##  <a name="a-namemntypea--cmfcfontinfomntype"></a><a name="m_ntype"></a>CMFCFontInfo::m_nType  
+##  <a name="m_ntype"></a>CMFCFontInfo::m_nType  
  指定的字型類型的值。  
   
 ```  
@@ -165,7 +172,7 @@ const int m_nType;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱`nType`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
-##  <a name="a-namemstrnamea--cmfcfontinfomstrname"></a><a name="m_strname"></a>CMFCFontInfo::m_strName  
+##  <a name="m_strname"></a>CMFCFontInfo::m_strName  
  字型的名稱︰ 例如，**新細明體**。  
   
 ```  
@@ -175,7 +182,7 @@ const CString m_strName;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱`lpszName`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
-##  <a name="a-namemstrscripta--cmfcfontinfomstrscript"></a><a name="m_strscript"></a>CMFCFontInfo::m_strScript  
+##  <a name="m_strscript"></a>CMFCFontInfo::m_strScript  
  字元集 （指令碼） 相關聯之字型的名稱。  
   
 ```  

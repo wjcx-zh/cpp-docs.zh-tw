@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlFileMappingBase
-- ATL::CAtlFileMappingBase
 - CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase::CAtlFileMappingBase
+- ATLFILE/ATL::CAtlFileMappingBase::CopyFrom
+- ATLFILE/ATL::CAtlFileMappingBase::GetData
+- ATLFILE/ATL::CAtlFileMappingBase::GetHandle
+- ATLFILE/ATL::CAtlFileMappingBase::GetMappingSize
+- ATLFILE/ATL::CAtlFileMappingBase::MapFile
+- ATLFILE/ATL::CAtlFileMappingBase::MapSharedMem
+- ATLFILE/ATL::CAtlFileMappingBase::OpenMapping
+- ATLFILE/ATL::CAtlFileMappingBase::Unmap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +97,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>需求  
  **標頭︰** atlfile.h  
   
-##  <a name="a-namecatlfilemappingbasea--catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
  建構函式。  
   
 ```
@@ -107,7 +115,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&71;](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="a-namedtora--catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
  解構函式。  
   
 ```
@@ -117,7 +125,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>備註  
  會釋放所有資源配置的類別並呼叫[CAtlFileMappingBase::Unmap](#unmap)方法。  
   
-##  <a name="a-namecopyfroma--catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
  呼叫這個方法來複製檔案對應物件。  
   
 ```
@@ -131,7 +139,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>傳回值  
  傳回`S_OK`上成功 」 或 「 錯誤`HRESULT`失敗。  
   
-##  <a name="a-namegetdataa--catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
  呼叫這個方法來取得檔案對應物件中的資料。  
   
 ```
@@ -141,7 +149,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回資料的指標。  
   
-##  <a name="a-namegethandlea--catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
  呼叫此方法以傳回檔案對應物件的控制代碼。  
   
 ```
@@ -151,7 +159,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>傳回值  
  傳回檔案對應物件的控制代碼。  
   
-##  <a name="a-namegetmappingsizea--catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
  呼叫此方法來取得對應大小從檔案對應物件。  
   
 ```
@@ -164,7 +172,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>範例  
  請參閱範例[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
   
-##  <a name="a-namemapfilea--catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
  呼叫這個方法來開啟或建立指定之檔案的檔案對應物件。  
   
 ```
@@ -201,7 +209,7 @@ HRESULT MapFile(
 ### <a name="example"></a>範例  
  請參閱範例[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
   
-##  <a name="a-namemapsharedmema--catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
  呼叫這個方法來建立檔案對應物件，允許所有處理程序的完整存取權。  
   
 ```
@@ -239,7 +247,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>備註  
  **MapShareMem**可讓現有的檔案對應物件，由[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)，以處理序之間共用。  
   
-##  <a name="a-nameopenmappinga--catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
  呼叫這個方法，以開啟具名的檔案對應物件，為指定的檔案。  
   
 ```
@@ -269,7 +277,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>備註  
  在偵錯組建中，如果輸入的參數無效，會發生判斷提示錯誤。  
   
-##  <a name="a-nameoperatoreqa--catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
  設定目前的檔案對應物件到另一個檔案對應物件。  
   
 ```
@@ -283,7 +291,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>傳回值  
  傳回目前物件的參考。  
   
-##  <a name="a-nameunmapa--catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
  呼叫這個方法來取消對應檔案對應物件。  
   
 ```

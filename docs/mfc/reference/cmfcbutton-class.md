@@ -10,6 +10,44 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCButton
+- AFXBUTTON/CMFCButton
+- AFXBUTTON/CMFCButton::CleanUp
+- AFXBUTTON/CMFCButton::EnableFullTextTooltip
+- AFXBUTTON/CMFCButton::EnableMenuFont
+- AFXBUTTON/CMFCButton::EnableWindowsTheming
+- AFXBUTTON/CMFCButton::GetToolTipCtrl
+- AFXBUTTON/CMFCButton::IsAutoCheck
+- AFXBUTTON/CMFCButton::IsAutorepeatCommandMode
+- AFXBUTTON/CMFCButton::IsCheckBox
+- AFXBUTTON/CMFCButton::IsChecked
+- AFXBUTTON/CMFCButton::IsHighlighted
+- AFXBUTTON/CMFCButton::IsPressed
+- AFXBUTTON/CMFCButton::IsPushed
+- AFXBUTTON/CMFCButton::IsRadioButton
+- AFXBUTTON/CMFCButton::IsWindowsThemingEnabled
+- AFXBUTTON/CMFCButton::SetAutorepeatMode
+- AFXBUTTON/CMFCButton::SetCheckedImage
+- AFXBUTTON/CMFCButton::SetFaceColor
+- AFXBUTTON/CMFCButton::SetImage
+- AFXBUTTON/CMFCButton::SetMouseCursor
+- AFXBUTTON/CMFCButton::SetMouseCursorHand
+- AFXBUTTON/CMFCButton::SetStdImage
+- AFXBUTTON/CMFCButton::SetTextColor
+- AFXBUTTON/CMFCButton::SetTextHotColor
+- AFXBUTTON/CMFCButton::SetTooltip
+- AFXBUTTON/CMFCButton::SizeToContent
+- AFXBUTTON/CMFCButton::OnDraw
+- AFXBUTTON/CMFCButton::OnDrawBorder
+- AFXBUTTON/CMFCButton::OnDrawFocusRect
+- AFXBUTTON/CMFCButton::OnDrawText
+- AFXBUTTON/CMFCButton::OnFillBackground
+- AFXBUTTON/CMFCButton::SelectFont
+- AFXBUTTON/CMFCButton::m_bDrawFocus
+- AFXBUTTON/CMFCButton::m_bHighlightChecked
+- AFXBUTTON/CMFCButton::m_bRightImage
+- AFXBUTTON/CMFCButton::m_bTransparent
+- AFXBUTTON/CMFCButton::m_nAlignStyle
+- AFXBUTTON/CMFCButton::m_nFlatStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -150,14 +188,14 @@ class CMFCButton : public CButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxbutton.h  
   
-##  <a name="a-namecleanupa--cmfcbuttoncleanup"></a><a name="cleanup"></a>CMFCButton::CleanUp  
+##  <a name="cleanup"></a>CMFCButton::CleanUp  
  重設內部變數，並釋放已配置的資源，例如影像、 點陣圖和圖示。  
   
 ```  
 virtual void CleanUp();
 ```  
   
-##  <a name="a-nameenablefulltexttooltipa--cmfcbuttonenablefulltexttooltip"></a><a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
+##  <a name="enablefulltexttooltip"></a>CMFCButton::EnableFullTextTooltip  
  指定是否要在大型的工具提示視窗或截斷的版小工具提示視窗中的文字顯示完整的工具提示文字。  
   
 ```  
@@ -170,7 +208,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenablemenufonta--cmfcbuttonenablemenufont"></a><a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
+##  <a name="enablemenufont"></a>CMFCButton::EnableMenuFont  
  指定按鈕文字的字型是相同的應用程式 功能表上的字型。  
   
 ```  
@@ -189,7 +227,7 @@ void EnableMenuFont(
 ### <a name="remarks"></a>備註  
  如果您不使用這個方法來指定按鈕文字的字型，您可以指定字型[CWnd::SetFont](../../mfc/reference/cwnd-class.md#setfont)方法。 如果您根本不指定字型，架構會設定預設字型。  
   
-##  <a name="a-nameenablewindowstheminga--cmfcbuttonenablewindowstheming"></a><a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
+##  <a name="enablewindowstheming"></a>CMFCButton::EnableWindowsTheming  
  指定按鈕的框線樣式是否對應至目前的 Windows 佈景主題。  
   
 ```  
@@ -203,7 +241,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>備註  
  這個方法會影響衍生自您的應用程式中的所有按鈕`CMFCButton`類別。  
   
-##  <a name="a-namegettooltipctrla--cmfcbuttongettooltipctrl"></a><a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
+##  <a name="gettooltipctrl"></a>CMFCButton::GetToolTipCtrl  
  傳回基礎的工具提示控制項的參考。  
   
 ```  
@@ -215,7 +253,7 @@ CToolTipCtrl& GetToolTipCtrl();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisautochecka--cmfcbuttonisautocheck"></a><a name="isautocheck"></a>CMFCButton::IsAutoCheck  
+##  <a name="isautocheck"></a>CMFCButton::IsAutoCheck  
  指出核取方塊或選項按鈕是否為自動的按鈕。  
   
 ```  
@@ -227,7 +265,7 @@ BOOL IsAutoCheck() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisautorepeatcommandmodea--cmfcbuttonisautorepeatcommandmode"></a><a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
+##  <a name="isautorepeatcommandmode"></a>CMFCButton::IsAutorepeatCommandMode  
  指出是否要將按鈕設定為自動重複模式。  
   
 ```  
@@ -240,7 +278,7 @@ BOOL IsAutorepeatCommandMode() const;
 ### <a name="remarks"></a>備註  
  使用[CMFCButton::SetAutorepeatMode](#setautorepeatmode)方法，將按鈕設定為自動重複模式。  
   
-##  <a name="a-nameischeckboxa--cmfcbuttonischeckbox"></a><a name="ischeckbox"></a>CMFCButton::IsCheckBox  
+##  <a name="ischeckbox"></a>CMFCButton::IsCheckBox  
  表示按鈕是否為核取方塊按鈕。  
   
 ```  
@@ -252,7 +290,7 @@ BOOL IsCheckBox() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameischeckeda--cmfcbuttonischecked"></a><a name="ischecked"></a>CMFCButton::IsChecked  
+##  <a name="ischecked"></a>CMFCButton::IsChecked  
  指出是否要檢查目前的按鈕。  
   
 ```  
@@ -265,7 +303,7 @@ BOOL IsChecked() const;
 ### <a name="remarks"></a>備註  
  架構會使用不同的方式來指出會檢查不同種類的按鈕。 例如，選項按鈕已核取它包含了一個點。核取方塊時，它包含**X**。  
   
-##  <a name="a-nameishighlighteda--cmfcbuttonishighlighted"></a><a name="ishighlighted"></a>CMFCButton::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCButton::IsHighlighted  
  表示按鈕會反白顯示。  
   
 ```  
@@ -278,7 +316,7 @@ BOOL IsHighlighted() const;
 ### <a name="remarks"></a>備註  
  當滑鼠停留在按鈕上時，按鈕會變成反白顯示。  
   
-##  <a name="a-nameispresseda--cmfcbuttonispressed"></a><a name="ispressed"></a>CMFCButton::IsPressed  
+##  <a name="ispressed"></a>CMFCButton::IsPressed  
  指出是否推入並反白顯示的按鈕。  
   
 ```  
@@ -290,7 +328,7 @@ BOOL IsPressed() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameispusheda--cmfcbuttonispushed"></a><a name="ispushed"></a>CMFCButton::IsPushed  
+##  <a name="ispushed"></a>CMFCButton::IsPushed  
  指出是否按下按鈕。  
   
 ```  
@@ -302,7 +340,7 @@ BOOL IsPushed() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisradiobuttona--cmfcbuttonisradiobutton"></a><a name="isradiobutton"></a>CMFCButton::IsRadioButton  
+##  <a name="isradiobutton"></a>CMFCButton::IsRadioButton  
  指出按鈕是否為選項按鈕。  
   
 ```  
@@ -314,7 +352,7 @@ BOOL IsRadioButton() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameiswindowsthemingenableda--cmfcbuttoniswindowsthemingenabled"></a><a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
+##  <a name="iswindowsthemingenabled"></a>CMFCButton::IsWindowsThemingEnabled  
  指出目前的 Windows 佈景主題是否對應按鈕的框線樣式。  
   
 ```  
@@ -324,7 +362,7 @@ static BOOL IsWindowsThemingEnabled();
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果按鈕的框線樣式對應至目前的 Windows 佈景主題。否則， `FALSE`。  
   
-##  <a name="a-namembdrawfocusa--cmfcbuttonmbdrawfocus"></a><a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
+##  <a name="m_bdrawfocus"></a>CMFCButton::m_bDrawFocus  
  指出是否要繪製焦點矩形按鈕周圍。  
   
 ```  
@@ -336,7 +374,7 @@ BOOL m_bDrawFocus;
   
  `CMFCButton` 建構函式會將此成員初始化為 `TRUE`。  
   
-##  <a name="a-namembhighlightcheckeda--cmfcbuttonmbhighlightchecked"></a><a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
+##  <a name="m_bhighlightchecked"></a>CMFCButton::m_bHighlightChecked  
  指出是否要將游標停留時，反白顯示 BS_CHECKBOX 樣式 按鈕。  
   
 ```  
@@ -346,7 +384,7 @@ BOOL m_bHighlightChecked;
 ### <a name="remarks"></a>備註  
  設定`m_bHighlightChecked`成員`TRUE`來指定當滑鼠停留在 framework 會標示 BS_CHECKBOX 樣式 按鈕。  
   
-##  <a name="a-namembrightimagea--cmfcbuttonmbrightimage"></a><a name="m_brightimage"></a>CMFCButton::m_bRightImage  
+##  <a name="m_brightimage"></a>CMFCButton::m_bRightImage  
  指出是否要在按鈕的右邊顯示影像。  
   
 ```  
@@ -356,7 +394,7 @@ BOOL m_bRightImage;
 ### <a name="remarks"></a>備註  
  設定`m_bRightImage`成員`TRUE`指定架構，會顯示按鈕的影像按鈕的文字標籤的右側。  
   
-##  <a name="a-namembtransparenta--cmfcbuttonmbtransparent"></a><a name="m_btransparent"></a>CMFCButton::m_bTransparent  
+##  <a name="m_btransparent"></a>CMFCButton::m_bTransparent  
  指出是否為透明的按鈕。  
   
 ```  
@@ -366,7 +404,7 @@ BOOL m_bTransparent;
 ### <a name="remarks"></a>備註  
  設定`m_bTransparent`成員`TRUE`來指定，架構會讓按鈕變成透明。 `CMFCButton` 建構函式會將此成員初始化為 `FALSE`。  
   
-##  <a name="a-namemnalignstylea--cmfcbuttonmnalignstyle"></a><a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
+##  <a name="m_nalignstyle"></a>CMFCButton::m_nAlignStyle  
  指定按鈕文字的對齊方式。  
   
 ```  
@@ -384,7 +422,7 @@ AlignStyle m_nAlignStyle;
   
  `CMFCButton`建構函式會初始化這個成員為 ALIGN_CENTER。  
   
-##  <a name="a-namemnflatstylea--cmfcbuttonmnflatstyle"></a><a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
+##  <a name="m_nflatstyle"></a>CMFCButton::m_nFlatStyle  
  指定的按鈕，例如無框線、 一般，分號平面或 3D 樣式。  
   
 ```  
@@ -409,7 +447,7 @@ FlatStyle  m_nFlatStyle;
  [!code-cpp[NVC_MFC_NewControls #&28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls #&29;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]  
   
-##  <a name="a-nameondrawa--cmfcbuttonondraw"></a><a name="ondraw"></a>CMFCButton::OnDraw  
+##  <a name="ondraw"></a>CMFCButton::OnDraw  
  若要繪製按鈕架構呼叫。  
   
 ```  
@@ -432,7 +470,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以使用您自己的程式碼來繪製按鈕。  
   
-##  <a name="a-nameondrawbordera--cmfcbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCButton::OnDrawBorder  
  若要繪製按鈕的框線架構呼叫。  
   
 ```  
@@ -455,7 +493,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以使用您自己的程式碼來繪製框線。  
   
-##  <a name="a-nameondrawfocusrecta--cmfcbuttonondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCButton::OnDrawFocusRect  
  若要繪製焦點矩形按鈕架構呼叫。  
   
 ```  
@@ -474,7 +512,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以使用您自己的程式碼繪製焦點矩形。  
   
-##  <a name="a-nameondrawtexta--cmfcbuttonondrawtext"></a><a name="ondrawtext"></a>CMFCButton::OnDrawText  
+##  <a name="ondrawtext"></a>CMFCButton::OnDrawText  
  若要繪製按鈕文字架構呼叫。  
   
 ```  
@@ -505,7 +543,7 @@ virtual void OnDrawText(
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以使用您自己的程式碼繪製按鈕文字。  
   
-##  <a name="a-nameonfillbackgrounda--cmfcbuttononfillbackground"></a><a name="onfillbackground"></a>CMFCButton::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCButton::OnFillBackground  
  若要繪製背景的按鈕文字架構呼叫。  
   
 ```  
@@ -524,7 +562,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>備註  
  覆寫這個方法來繪製按鈕的背景使用您自己的程式碼。  
   
-##  <a name="a-nameselectfonta--cmfcbuttonselectfont"></a><a name="selectfont"></a>CMFCButton::SelectFont  
+##  <a name="selectfont"></a>CMFCButton::SelectFont  
  擷取與指定之的裝置內容相關聯的字型。  
   
 ```  
@@ -540,7 +578,7 @@ virtual CFont* SelectFont(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetautorepeatmodea--cmfcbuttonsetautorepeatmode"></a><a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
+##  <a name="setautorepeatmode"></a>CMFCButton::SetAutorepeatMode  
  將按鈕設定為自動重複模式。  
   
 ```  
@@ -554,7 +592,7 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ### <a name="remarks"></a>備註  
  這個方法會使持續傳送 WM_COMMAND 訊息給父視窗，直到放開按鍵時，按鈕或`nTimeDelay`參數設定為零。  
   
-##  <a name="a-namesetcheckedimagea--cmfcbuttonsetcheckedimage"></a><a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
+##  <a name="setcheckedimage"></a>CMFCButton::SetCheckedImage  
  設定已核取按鈕的影像。  
   
 ```  
@@ -619,7 +657,7 @@ void SetCheckedImage(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetfacecolora--cmfcbuttonsetfacecolor"></a><a name="setfacecolor"></a>CMFCButton::SetFaceColor  
+##  <a name="setfacecolor"></a>CMFCButton::SetFaceColor  
  設定按鈕文字的背景色彩。  
   
 ```  
@@ -638,7 +676,7 @@ void SetFaceColor(
 ### <a name="remarks"></a>備註  
  使用這個方法來定義新的填滿色彩的按鈕背景 （圖示）。 請注意，不是背景填滿時[CMFCButton::m_bTransparent](#m_btransparent)成員變數是`TRUE`。  
   
-##  <a name="a-namesetimagea--cmfcbuttonsetimage"></a><a name="setimage"></a>CMFCButton::SetImage  
+##  <a name="setimage"></a>CMFCButton::SetImage  
  設定按鈕的影像。  
   
 ```  
@@ -709,7 +747,7 @@ void SetImage(
  [!code-cpp[NVC_MFC_NewControls #&28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls #&31;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]  
   
-##  <a name="a-namesetmousecursora--cmfcbuttonsetmousecursor"></a><a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
+##  <a name="setmousecursor"></a>CMFCButton::SetMouseCursor  
  設定資料指標的影像。  
   
 ```  
@@ -729,7 +767,7 @@ void SetMouseCursor(HCURSOR hcursor);
  [!code-cpp[NVC_MFC_NewControls #&28;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls #&30;](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]  
   
-##  <a name="a-namesetmousecursorhanda--cmfcbuttonsetmousecursorhand"></a><a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
+##  <a name="setmousecursorhand"></a>CMFCButton::SetMouseCursorHand  
  設定游標的左手邊的影像。  
   
 ```  
@@ -739,7 +777,7 @@ void SetMouseCursorHand();
 ### <a name="remarks"></a>備註  
  使用這個方法與按鈕關聯的左手邊的游標映像。 游標會從應用程式資源載入。  
   
-##  <a name="a-namesetstdimagea--cmfcbuttonsetstdimage"></a><a name="setstdimage"></a>CMFCButton::SetStdImage  
+##  <a name="setstdimage"></a>CMFCButton::SetStdImage  
  使用`CMenuImages`物件來設定按鈕的影像。  
   
 ```  
@@ -761,7 +799,7 @@ void SetStdImage(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesettextcolora--cmfcbuttonsettextcolor"></a><a name="settextcolor"></a>CMFCButton::SetTextColor  
+##  <a name="settextcolor"></a>CMFCButton::SetTextColor  
  設定未選取按鈕的按鈕文字的色彩。  
   
 ```  
@@ -774,7 +812,7 @@ void SetTextColor(COLORREF clrText);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesettexthotcolora--cmfcbuttonsettexthotcolor"></a><a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
+##  <a name="settexthotcolor"></a>CMFCButton::SetTextHotColor  
  設定已選取按鈕的按鈕文字的色彩。  
   
 ```  
@@ -787,7 +825,7 @@ void SetTextHotColor(COLORREF clrTextHot);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesettooltipa--cmfcbuttonsettooltip"></a><a name="settooltip"></a>CMFCButton::SetTooltip  
+##  <a name="settooltip"></a>CMFCButton::SetTooltip  
  關聯按鈕的工具提示。  
   
 ```  
@@ -800,7 +838,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesizetocontenta--cmfcbuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCButton::SizeToContent  
  調整大小，以包含其按鈕文字和影像的按鈕。  
   
 ```  

@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWnd
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::Create
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAnimationSpeed
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAnimationType
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetAutoCloseTime
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetCaptionHeight
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetDialogSize
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetLastPos
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::GetTransparency
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::HasSmallCaption
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnBeforeShow
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnClickLinkButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnCommand
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::OnDraw
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::ProcessCommand
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAnimationSpeed
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAnimationType
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetAutoCloseTime
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetSmallCaption
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWnd::SetTransparency
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -120,7 +140,7 @@ class CMFCDesktopAlertWnd : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭︰** afxDesktopAlertWnd.h  
   
-##  <a name="a-namecreatea--cmfcdesktopalertwndcreate"></a><a name="create"></a>CMFCDesktopAlertWnd::Create  
+##  <a name="create"></a>CMFCDesktopAlertWnd::Create  
  建立並初始化桌面警示視窗。  
   
 ```  
@@ -168,7 +188,7 @@ virtual BOOL Create(
   
  第二個方法多載會建立警示視窗，其中包含預設控制項。 您可以指定要修改顯示哪些控制項[CMFCDesktopAlertWndInfo 類別](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)。  
   
-##  <a name="a-namegetanimationspeeda--cmfcdesktopalertwndgetanimationspeed"></a><a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
  傳回的動畫速度。  
   
 ```  
@@ -181,7 +201,7 @@ UINT GetAnimationSpeed() const;
 ### <a name="remarks"></a>備註  
  動畫速度描述 [警示] 視窗中開啟和關閉的速度。  
   
-##  <a name="a-namegetanimationtypea--cmfcdesktopalertwndgetanimationtype"></a><a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
+##  <a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
  傳回的動畫類型。  
   
 ```  
@@ -201,7 +221,7 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="a-namegetautoclosetimea--cmfcdesktopalertwndgetautoclosetime"></a><a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
+##  <a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
  傳回自動關閉逾時。  
   
 ```  
@@ -214,7 +234,7 @@ int GetAutoCloseTime() const;
 ### <a name="remarks"></a>備註  
  使用這個方法來判斷 [警示] 視窗會自動關閉之前，應該經過多少時間。  
   
-##  <a name="a-namegetcaptionheighta--cmfcdesktopalertwndgetcaptionheight"></a><a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
  傳回標題的高度。  
   
 ```  
@@ -227,7 +247,7 @@ virtual int GetCaptionHeight();
 ### <a name="remarks"></a>備註  
  可以在衍生類別中覆寫這個方法。 預設實作其中一個︰ 如果小標題或從 Windows API 函式取得的值顯示快顯視窗，則會傳回小標題的高度值 （7 個像素） `GetSystemMetrics(SM_CYSMCAPTION)`。  
   
-##  <a name="a-namegetlastposa--cmfcdesktopalertwndgetlastpos"></a><a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
+##  <a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
  傳回最後一個位置的桌面警示視窗在螢幕上。  
   
 ```  
@@ -240,7 +260,7 @@ CPoint GetLastPos() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳回在螢幕上的 [警示] 視窗中的最後一個有效位置。  
   
-##  <a name="a-namegettransparencya--cmfcdesktopalertwndgettransparency"></a><a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
+##  <a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
  傳回的透明度。  
   
 ```  
@@ -253,7 +273,7 @@ BYTE GetTransparency() const;
 ### <a name="remarks"></a>備註  
  使用這個方法來擷取目前的 [警示] 視窗的透明度等級。  
   
-##  <a name="a-namehassmallcaptiona--cmfcdesktopalertwndhassmallcaption"></a><a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
+##  <a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
  決定桌面警示視窗有小型的標題或一般大小標題。  
   
 ```  
@@ -266,7 +286,7 @@ BOOL HasSmallCaption() const;
 ### <a name="remarks"></a>備註  
  您可以使用這個方法來判斷快顯視窗是否有小型的標題或一般大小標題。 根據預設，小標題是 7 個像素高。 您可以藉由呼叫 Windows API 函式來取得一般大小標題的高度`GetSystemMetrics(SM_CYCAPTION)`。  
   
-##  <a name="a-nameonbeforeshowa--cmfcdesktopalertwndonbeforeshow"></a><a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
+##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -280,7 +300,7 @@ virtual BOOL OnBeforeShow(CPoint&);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameonclicklinkbuttona--cmfcdesktopalertwndonclicklinkbutton"></a><a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
+##  <a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
  當使用者按一下位於桌面的警示 功能表上的連結按鈕，由架構呼叫。  
   
 ```  
@@ -297,7 +317,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ### <a name="remarks"></a>備註  
  如果您想要在使用者按一下 [警示] 視窗中的連結時收到通知，請覆寫這個方法在衍生類別中。  
   
-##  <a name="a-nameoncommanda--cmfcdesktopalertwndoncommand"></a><a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
+##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -314,7 +334,7 @@ virtual BOOL OnCommand(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameondrawa--cmfcdesktopalertwndondraw"></a><a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
+##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -326,7 +346,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameprocesscommanda--cmfcdesktopalertwndprocesscommand"></a><a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
+##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -340,7 +360,7 @@ BOOL ProcessCommand(HWND hwnd);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetanimationspeeda--cmfcdesktopalertwndsetanimationspeed"></a><a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
  設定新的動畫速度。  
   
 ```  
@@ -354,7 +374,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ### <a name="remarks"></a>備註  
  呼叫這個方法來設定警示的視窗動畫速度。 預設的動畫速度為 30 毫秒。  
   
-##  <a name="a-namesetanimationtypea--cmfcdesktopalertwndsetanimationtype"></a><a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
+##  <a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
  設定動畫類型。  
   
 ```  
@@ -378,7 +398,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="a-namesetautoclosetimea--cmfcdesktopalertwndsetautoclosetime"></a><a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
+##  <a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
  設定自動關閉逾時。  
   
 ```  
@@ -392,7 +412,7 @@ void SetAutoCloseTime(int nTime);
 ### <a name="remarks"></a>備註  
  如果使用者不會與視窗互動，[警示] 視窗會自動關閉指定的時間之後。  
   
-##  <a name="a-namesetsmallcaptiona--cmfcdesktopalertwndsetsmallcaption"></a><a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
+##  <a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
  小型和一般大小標題之間切換。  
   
 ```  
@@ -406,7 +426,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ### <a name="remarks"></a>備註  
  呼叫這個方法，以顯示小型或一般大小的標題。 根據預設，小標題是 7 個像素高。 您可以藉由呼叫 Windows API 函式來取得一般標題大小`GetSystemMetrics(SM_CYCAPTION)`。  
   
-##  <a name="a-namesettransparencya--cmfcdesktopalertwndsettransparency"></a><a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
+##  <a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
  設定快顯視窗的透明度。  
   
 ```  
@@ -420,7 +440,7 @@ void SetTransparency(BYTE nTransparency);
 ### <a name="remarks"></a>備註  
  呼叫此函式可設定的快顯視窗的透明度。  
   
-##  <a name="a-namegetdialogsizea--cmfcdesktopalertwndgetdialogsize"></a><a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
+##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

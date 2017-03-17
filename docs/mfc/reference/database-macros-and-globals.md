@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDB/AFX_ODBC_CALL
+- AFXDB/AFX_SQL_ASYNC
+- AFXDB/AFX_SQL_SYNC
+- AFXDB/AfxGetHENV
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -62,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[AfxGetHENV](#afxgethenv)|擷取目前正在由 MFC 使用的 ODBC 環境控制代碼。 您可以直接呼叫 ODBC 時使用這個控制代碼。|  
   
-##  <a name="a-nameafxodbccalla--afxodbccall"></a><a name="afx_odbc_call"></a>AFX_ODBC_CALL  
+##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
  使用這個巨集呼叫可能會傳回任何 ODBC API 函式`SQL_STILL_EXECUTING`。  
   
 ```  
@@ -89,7 +92,7 @@ AFX_ODBC_CALL(SQLFunc)
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-##  <a name="a-nameafxsqlasynca--afxsqlasync"></a><a name="afx_sql_async"></a>AFX_SQL_ASYNC  
+##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC  
  在 MFC 4.2 變更這個巨集實作。  
   
 ```   
@@ -112,7 +115,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ### <a name="requirements"></a>需求  
   **標頭**afxdb.h  
   
-##  <a name="a-nameafxsqlsynca--afxsqlsync"></a><a name="afx_sql_sync"></a>AFX_SQL_SYNC  
+##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
  `AFX_SQL_SYNC`巨集只會呼叫此函式`SQLFunc`。  
   
 ```   
@@ -139,7 +142,7 @@ AFX_SQL_SYNC(SQLFunc)
 ### <a name="requirements"></a>需求  
   **標頭**afxdb.h  
   
-##  <a name="a-nameafxgethenva--afxgethenv"></a><a name="afxgethenv"></a>AfxGetHENV  
+##  <a name="afxgethenv"></a>AfxGetHENV  
  您可以使用傳回的處理常式直接呼叫 ODBC，但您不能關閉控制代碼或假設控制代碼仍然有效且可用之後任何現有`CDatabase`-或`CRecordset`-衍生的物件已終結。  
   
 ```   

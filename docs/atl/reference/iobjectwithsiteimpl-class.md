@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IObjectWithSiteImpl
-- ATL.IObjectWithSiteImpl<T>
 - IObjectWithSiteImpl
-- ATL.IObjectWithSiteImpl
-- ATL::IObjectWithSiteImpl<T>
+- ATLCOM/ATL::IObjectWithSiteImpl
+- ATLCOM/ATL::IObjectWithSiteImpl::GetSite
+- ATLCOM/ATL::IObjectWithSiteImpl::SetChildSite
+- ATLCOM/ATL::IObjectWithSiteImpl::SetSite
+- ATLCOM/ATL::IObjectWithSiteImpl::m_spUnkSite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +90,7 @@ template <class T>
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namegetsitea--iobjectwithsiteimplgetsite"></a><a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
  查詢所識別的介面指標的站台`riid`。  
   
 ```
@@ -103,7 +104,7 @@ STDMETHOD(GetSite)(
   
  請參閱[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemspunksitea--iobjectwithsiteimplmspunksite"></a><a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
  管理站台的**IUnknown**指標。  
   
 ```
@@ -113,7 +114,7 @@ CComPtr<IUnknown> m_spUnkSite;
 ### <a name="remarks"></a>備註  
  `m_spUnkSite`一開始會接收這個指標透過呼叫[SetSite](#setsite)。  
   
-##  <a name="a-namesetchildsitea--iobjectwithsiteimplsetchildsite"></a><a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
  提供的物件與站台的**IUnknown**指標。  
   
 ```
@@ -127,7 +128,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
   
-##  <a name="a-namesetsitea--iobjectwithsiteimplsetsite"></a><a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
  提供的物件與站台的**IUnknown**指標。  
   
 ```

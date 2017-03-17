@@ -10,10 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComPolyObject
-- ATL.CComPolyObject<contained>
-- ATL::CComPolyObject
-- ATL::CComPolyObject<contained>
-- ATL.CComPolyObject
+- ATLCOM/ATL::CComPolyObject
+- ATLCOM/ATL::CComPolyObject::CComPolyObject
+- ATLCOM/ATL::CComPolyObject::AddRef
+- ATLCOM/ATL::CComPolyObject::CreateInstance
+- ATLCOM/ATL::CComPolyObject::FinalConstruct
+- ATLCOM/ATL::CComPolyObject::FinalRelease
+- ATLCOM/ATL::CComPolyObject::QueryInterface
+- ATLCOM/ATL::CComPolyObject::Release
+- ATLCOM/ATL::CComPolyObject::m_contained
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +116,7 @@ class CComPolyObject : public IUnknown,
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameaddrefa--ccompolyobjectaddref"></a><a name="addref"></a>CComPolyObject::AddRef  
+##  <a name="addref"></a>CComPolyObject::AddRef  
  在物件上的參考計數遞增。  
   
 ```
@@ -121,7 +126,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>傳回值  
  值，可用於診斷或測試。  
   
-##  <a name="a-nameccompolyobjecta--ccompolyobjectccompolyobject"></a><a name="ccompolyobject"></a>CComPolyObject::CComPolyObject  
+##  <a name="ccompolyobject"></a>CComPolyObject::CComPolyObject  
  建構函式。  
   
 ```
@@ -137,7 +142,7 @@ CComPolyObject(void* pv);
   
  解構函式會遞減模組鎖定計數。  
   
-##  <a name="a-namedtora--ccompolyobjectccompolyobject"></a><a name="dtor"></a>CComPolyObject:: ~ CComPolyObject  
+##  <a name="dtor"></a>CComPolyObject:: ~ CComPolyObject  
  解構函式。  
   
 ```
@@ -147,7 +152,7 @@ CComPolyObject(void* pv);
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源，呼叫[FinalRelease](#finalrelease)，和模組的鎖定計數遞減。  
   
-##  <a name="a-namecreateinstancea--ccompolyobjectcreateinstance"></a><a name="createinstance"></a>CComPolyObject::CreateInstance  
+##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
  可讓您建立新**CComPolyObject** `contained` ** > **物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
@@ -168,7 +173,7 @@ static HRESULT WINAPI CreateInstance(
   
  如果您不需要直接存取物件，但仍想要建立新的物件，而不需要的額外負荷`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)改。  
   
-##  <a name="a-namefinalconstructa--ccompolyobjectfinalconstruct"></a><a name="finalconstruct"></a>CComPolyObject::FinalConstruct  
+##  <a name="finalconstruct"></a>CComPolyObject::FinalConstruct  
  呼叫物件建構的最後階段，這個方法會執行任何最後的初始設定上[m_contained](#m_contained)資料成員。  
   
 ```
@@ -178,14 +183,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namefinalreleasea--ccompolyobjectfinalrelease"></a><a name="finalrelease"></a>CComPolyObject::FinalRelease  
+##  <a name="finalrelease"></a>CComPolyObject::FinalRelease  
  在物件解構期間呼叫，這個方法會釋放[m_contained](#m_contained)資料成員。  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="a-namemcontaineda--ccompolyobjectmcontained"></a><a name="m_contained"></a>CComPolyObject::m_contained  
+##  <a name="m_contained"></a>CComPolyObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)物件衍生自您的類別。  
   
 ```
@@ -199,7 +204,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>備註  
  **IUnknown**透過呼叫`m_contained`如果物件彙總，或會委派給外部未知**IUnknown**如果物件不會彙總此物件。  
   
-##  <a name="a-namequeryinterfacea--ccompolyobjectqueryinterface"></a><a name="queryinterface"></a>CComPolyObject::QueryInterface  
+##  <a name="queryinterface"></a>CComPolyObject::QueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -227,7 +232,7 @@ HRESULT QueryInterface(Q** pp);
 ### <a name="remarks"></a>備註  
  如果所要求的介面的彙總物件**IUnknown**，`QueryInterface`傳回彙總物件本身的指標**IUnknown**並遞增參考計數。 否則，這個方法會查詢介面，透過`CComContainedObject`資料成員[m_contained](#m_contained)。  
   
-##  <a name="a-namereleasea--ccompolyobjectrelease"></a><a name="release"></a>CComPolyObject::Release  
+##  <a name="release"></a>CComPolyObject::Release  
  遞減參考計數物件。  
   
 ```

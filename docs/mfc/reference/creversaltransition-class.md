@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CReversalTransition
 - CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition::CReversalTransition
+- AFXANIMATIONCONTROLLER/CReversalTransition::Create
+- AFXANIMATIONCONTROLLER/CReversalTransition::m_duration
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CReversalTransition : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--creversaltransitioncreate"></a><a name="create"></a>CReversalTransition::Create  
+##  <a name="create"></a>CReversalTransition::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -98,7 +101,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-namecreversaltransitiona--creversaltransitioncreversaltransition"></a><a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+##  <a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
  建構反轉轉換物件並初始化其持續時間。  
   
 ```  
@@ -109,7 +112,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
  `duration`  
  轉換的持續時間。  
   
-##  <a name="a-namemdurationa--creversaltransitionmduration"></a><a name="m_duration"></a>CReversalTransition::m_duration  
+##  <a name="m_duration"></a>CReversalTransition::m_duration  
  轉換的持續時間。  
   
 ```  

@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSecurityAttributes
-- ATL::CSecurityAttributes
 - CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::CSecurityAttributes
+- ATLSECURITY/ATL::CSecurityAttributes::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +81,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h  
   
-##  <a name="a-namecsecurityattributesa--csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
  建構函式。  
   
 ```
@@ -95,7 +96,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  指定是否在建立新處理序時繼承傳回的控制代碼。 如果此成員為 true，新處理序會繼承控制代碼。  
   
-##  <a name="a-nameseta--csecurityattributesset"></a><a name="set"></a>CSecurityAttributes::Set  
+##  <a name="set"></a>CSecurityAttributes::Set  
  呼叫這個方法來設定的屬性`CSecurityAttributes`物件。  
   
 ```

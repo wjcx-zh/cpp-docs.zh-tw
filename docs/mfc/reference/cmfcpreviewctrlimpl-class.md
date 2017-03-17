@@ -10,7 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPreviewCtrlImpl
-- afxwin/CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+- AFXWIN/CMFCPreviewCtrlImpl::Create
+- AFXWIN/CMFCPreviewCtrlImpl::Destroy
+- AFXWIN/CMFCPreviewCtrlImpl::Focus
+- AFXWIN/CMFCPreviewCtrlImpl::GetDocument
+- AFXWIN/CMFCPreviewCtrlImpl::Redraw
+- AFXWIN/CMFCPreviewCtrlImpl::SetDocument
+- AFXWIN/CMFCPreviewCtrlImpl::SetHost
+- AFXWIN/CMFCPreviewCtrlImpl::SetPreviewVisuals
+- AFXWIN/CMFCPreviewCtrlImpl::SetRect
+- AFXWIN/CMFCPreviewCtrlImpl::DoPaint
+- AFXWIN/CMFCPreviewCtrlImpl::m_clrBackColor
+- AFXWIN/CMFCPreviewCtrlImpl::m_clrTextColor
+- AFXWIN/CMFCPreviewCtrlImpl::m_font
+- AFXWIN/CMFCPreviewCtrlImpl::m_pDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,13 +114,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="a-namecmfcpreviewctrlimpla-cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 建構預覽控制項物件。
 
 ### <a name="syntax"></a>語法
 CMFCPreviewCtrlImpl();  
 
-## <a name="a-namecreatea-cmfcpreviewctrlimplcreate"></a><a name="create"></a>CMFCPreviewCtrlImpl::Create
+## <a name="create"></a>CMFCPreviewCtrlImpl::Create
 多載。 若要建立 Windows 視窗的豐富預覽處理常式呼叫。  
   
 ### <a name="syntax"></a>語法  
@@ -135,7 +150,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果建立成功。否則`FALSE`。  
   
-## <a name="a-namedestroya-cmfcpreviewctrlimpldestroy"></a><a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
+## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
 要終結這個控制項需要時，由豐富的預覽處理常式呼叫。  
   
 ### <a name="syntax"></a>語法  
@@ -144,7 +159,7 @@ virtual BOOL Create(
 virtual void Destroy();  
 ```  
   
-## <a name="a-namedopainta-cmfcpreviewctrlimpldopaint"></a><a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
+## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
 呈現預覽架構呼叫。  
   
 ### <a name="syntax"></a>語法  
@@ -160,7 +175,7 @@ virtual void DoPaint(
  要繪製的裝置內容指標。  
 
 
-## <a name="a-namefocusa-cmfcpreviewctrlimplfocus"></a><a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
+## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
 設定輸入這個控制項焦點。  
   
 ### <a name="syntax"></a>語法  
@@ -168,7 +183,7 @@ virtual void DoPaint(
 ```  
 virtual void Focus();  
 ```  
-## <a name="a-namegetdocumenta-cmfcpreviewctrlimplgetdocument"></a><a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
+## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
 傳回連接到此預覽控制項的文件。  
   
 ### <a name="syntax"></a>語法  
@@ -180,7 +195,7 @@ ATL::IDocument* GetDocument();
 ### <a name="return-value"></a>傳回值  
  文件，其內容控制項中可預覽指標。
 
-## <a name="a-namemclrbackcolora-cmfcpreviewctrlimplmclrbackcolor"></a><a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
+## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
 預覽視窗的背景色彩。  
   
 ### <a name="syntax"></a>語法  
@@ -189,7 +204,7 @@ ATL::IDocument* GetDocument();
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="a-namemclrtextcolora-cmfcpreviewctrlimplmclrtextcolor"></a><a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
 預覽視窗的文字色彩。  
   
 ### <a name="syntax"></a>語法  
@@ -197,14 +212,14 @@ COLORREF m_clrBackColor;
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="a-namemfonta-cmfcpreviewctrlimplmfont--font-used-to-display-text-in-the-preview-window"></a><a name="m_font"></a>CMFCPreviewCtrlImpl::m_font 用來在預覽視窗中顯示文字的字型。  
+## <a name="m_font"></a>CMFCPreviewCtrlImpl::m_font 用來在預覽視窗中顯示文字的字型。  
   
 ### <a name="syntax"></a>語法  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="a-namempdocumenta-cmfcpreviewctrlimplmpdocument"></a><a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
+## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
 內容控制項中可預覽的文件指標。  
   
 ### <a name="syntax"></a>語法  
@@ -213,7 +228,7 @@ CFont m_font;
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="a-nameredrawa-cmfcpreviewctrlimplredraw"></a><a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
+## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
 說明此控制項重繪。  
   
 ### <a name="syntax"></a>語法  
@@ -221,7 +236,7 @@ ATL::IDocument* m_pDocument;
 ```  
 virtual void Redraw();  
 ```  
-## <a name="a-namesetdocumenta-cmfcpreviewctrlimplsetdocument"></a><a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
+## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
 呼叫預覽處理常式建立文件實作與預覽控制項之間的關聯性。  
   
 ### <a name="syntax"></a>語法  
@@ -236,7 +251,7 @@ void SetDocument(
  `pDocument`  
  文件實作指標。  
 
-## <a name="a-namesethosta-cmfcpreviewctrlimplsethost"></a><a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
+## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
 設定新的父項對這個控制項。  
   
 ### <a name="syntax"></a>語法  
@@ -251,7 +266,7 @@ virtual void SetHost(
  `hWndParent`  
  新的父視窗控制代碼。  
 
-## <a name="a-namesetpreviewvisualsa-cmfcpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
+## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
 豐富的預覽處理常式時呼叫必須設定視覺效果豐富的預覽的內容。  
   
 ### <a name="syntax"></a>語法  
@@ -274,7 +289,7 @@ virtual void SetPreviewVisuals(
  `plf`  
  用來在預覽視窗中顯示文字的字型。 
 
-##  <a name="a-namesetrecta-cmfcpreviewctrlimplsetrect"></a><a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
 設定這個控制項的新周框矩形。  
   
 ### <a name="syntax"></a>語法  
@@ -296,7 +311,7 @@ virtual void SetRect(
 ### <a name="remarks"></a>備註  
  通常主控制項的大小時，會設定新周框矩形。  
 
-## <a name="a-namedtora-cmfcpreviewctrlimplcmfcpreviewctrlimpl"></a><a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
+## <a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 Destructs 預覽控制項物件。  
   
 ### <a name="syntax"></a>語法  

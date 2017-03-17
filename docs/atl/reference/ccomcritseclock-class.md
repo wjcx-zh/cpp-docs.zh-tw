@@ -9,11 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComCritSecLock
-- ATL.CComCritSecLock<TLock>
-- ATL::CComCritSecLock<TLock>
-- ATL.CComCritSecLock
 - CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock::CComCritSecLock
+- ATLBASE/ATL::CComCritSecLock::Lock
+- ATLBASE/ATL::CComCritSecLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +78,7 @@ template<class TLock> class CComCritSecLock
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-namectora--ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
  建構函式。  
   
 ```
@@ -95,7 +95,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>備註  
  重要區段物件初始化。  
   
-##  <a name="a-namedtora--ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
  解構函式。  
   
 ```
@@ -105,7 +105,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>備註  
  解除鎖定重要區段物件。  
   
-##  <a name="a-namelocka--ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>CComCritSecLock::Lock  
  呼叫此方法以鎖定重要區段物件。  
   
 ```
@@ -118,7 +118,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>備註  
  如果物件已鎖定，判斷提示錯誤會發生在偵錯組建。  
   
-##  <a name="a-nameunlocka--ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>CComCritSecLock::Unlock  
  呼叫這個方法來解除鎖定重要區段物件。  
   
 ```

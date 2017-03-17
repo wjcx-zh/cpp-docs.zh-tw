@@ -10,7 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DSizeU
-- afxrendertarget/CD2DSizeU
+- AFXRENDERTARGET/CD2DSizeU
+- AFXRENDERTARGET/CD2DSizeU::CD2DSizeU
+- AFXRENDERTARGET/CD2DSizeU::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namecd2dsizeua--cd2dsizeucd2dsizeu"></a><a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU  
+##  <a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU  
  建構 CD2DSizeU 物件從 CSize 物件。  
   
 ```  
@@ -101,7 +103,7 @@ CD2DSizeU(
  `cy`  
  來源高度  
   
-##  <a name="a-nameisnulla--cd2dsizeuisnull"></a><a name="isnull"></a>CD2DSizeU::IsNull  
+##  <a name="isnull"></a>CD2DSizeU::IsNull  
  傳回布林值，指出運算式是否包含任何有效的資料 (Null)。  
   
 ```  
@@ -111,7 +113,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>傳回值  
  如果是空的; 的寬度和高度，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-nameoperatorcsizea--cd2dsizeuoperator-csize"></a><a name="operator_csize"></a>CD2DSizeU::operator CSize  
+##  <a name="operator_csize"></a>CD2DSizeU::operator CSize  
  將 CD2DSizeU 轉換 CSize 物件。  
   
 ```  

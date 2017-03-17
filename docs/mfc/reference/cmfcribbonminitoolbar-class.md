@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::IsContextMenuMode
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::SetCommands
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::Show
+- AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::ShowWithContextMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 ## <a name="requirements"></a>需求  
  **標頭︰** afxRibbonMiniToolBar.h  
   
-##  <a name="a-namesetcommandsa--cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
+##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
  設定要顯示在工具列上的命令清單。  
   
 ```  
@@ -118,7 +124,7 @@ void SetCommands(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo #&9;](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="a-nameshowa--cmfcribbonminitoolbarshow"></a><a name="show"></a>CMFCRibbonMiniToolBar::Show  
+##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
  顯示位於指定的螢幕座標的迷你工具列。  
   
 ```  
@@ -137,7 +143,7 @@ BOOL Show(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果顯示 迷你工具列已順利啟動。否則， `FALSE`。  
   
-##  <a name="a-nameshowwithcontextmenua--cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
+##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
  顯示迷你工具列以及操作功能表。  
   
 ```  
@@ -167,7 +173,7 @@ BOOL ShowWithContextMenu(
 ### <a name="remarks"></a>備註  
  您可以使用此函式來顯示具有內容功能表的迷你工具列。 內容功能表是迷你工具列下方的定位 15 像素。  
   
-##  <a name="a-nameiscontextmenumodea--cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -178,7 +184,7 @@ BOOL IsContextMenuMode() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisribbonminitoolbara--cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

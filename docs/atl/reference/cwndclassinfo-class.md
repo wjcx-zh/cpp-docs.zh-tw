@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWndClassInfo
+- ATLWIN/ATL::CWndClassInfo
+- ATLWIN/ATL::Register
+- ATLWIN/ATL::m_atom
+- ATLWIN/ATL::m_bSystemCursor
+- ATLWIN/ATL::m_lpszCursorID
+- ATLWIN/ATL::m_lpszOrigName
+- ATLWIN/ATL::m_szAutoName
+- ATLWIN/ATL::m_wc
+- ATLWIN/ATL::pWndProc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CWndClassInfo
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-namematoma--cwndclassinfomatom"></a><a name="m_atom"></a>CWndClassInfo::m_atom  
+##  <a name="m_atom"></a>CWndClassInfo::m_atom  
  包含已註冊的視窗類別的唯一識別碼。  
   
 ```
 ATOM m_atom;
 ```  
   
-##  <a name="a-namembsystemcursora--cwndclassinfombsystemcursor"></a><a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
+##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
  如果**TRUE**，註冊視窗類別時，將其載入系統游標資源。  
   
 ```
@@ -112,7 +121,7 @@ BOOL m_bSystemCursor;
   
  `CWndClassInfo`使用`m_bSystemCursor`時，才[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (預設值在[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或[DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411)指定巨集。 在此情況下，`m_bSystemCursor`會初始化為**TRUE**。 如需詳細資訊，請參閱[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)概觀。  
   
-##  <a name="a-namemlpszcursorida--cwndclassinfomlpszcursorid"></a><a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
+##  <a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
  低序位字組和零高序位文字中的指定的游標資源的名稱或資源識別碼。  
   
 ```
@@ -124,7 +133,7 @@ LPCTSTR m_lpszCursorID;
   
  `CWndClassInfo`使用`m_lpszCursorID`時，才[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971) (預設值在[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或[DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411)指定巨集。 在此情況下，`m_lpszCursorID`會初始化為**IDC_ARROW**。 如需詳細資訊，請參閱[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)概觀。  
   
-##  <a name="a-namemlpszorignamea--cwndclassinfomlpszorigname"></a><a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
+##  <a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
  包含現有視窗類別名稱。  
   
 ```
@@ -134,7 +143,7 @@ LPCTSTR m_lpszOrigName;
 ### <a name="remarks"></a>備註  
  `CWndClassInfo`使用`m_lpszOrigName`只有當您加入[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)在類別定義中的巨集。 在此情況下，`CWndClassInfo`暫存器視窗類別根據由名為的類別`m_lpszOrigName`。 如需詳細資訊，請參閱[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)概觀。  
   
-##  <a name="a-namemszautonamea--cwndclassinfomszautoname"></a><a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
+##  <a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
  保留視窗類別的名稱。  
   
 ```
@@ -144,7 +153,7 @@ TCHAR m_szAutoName[13];
 ### <a name="remarks"></a>備註  
  `CWndClassInfo`使用`m_szAutoName`才**NULL**傳遞給`WndClassName`參數[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971)、 [DECLARE_WND_CLASS_EX](http://msdn.microsoft.com/library/0672c144-f2aa-4f6a-ae16-566e3a1f5411)或[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)。 註冊視窗類別時，ATL 會建構一個名稱。  
   
-##  <a name="a-namemwca--cwndclassinfomwc"></a><a name="m_wc"></a>CWndClassInfo::m_wc  
+##  <a name="m_wc"></a>CWndClassInfo::m_wc  
  維護中的視窗類別資訊[WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577)結構。  
   
 ```
@@ -156,7 +165,7 @@ WNDCLASSEX m_wc;
   
  如果您已指定[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)巨集，`m_wc`包含超級類別資訊 — 視窗類別，根據現有的類別，但使用不同的視窗程序。 [m_lpszOrigName](#m_lpszorigname)和[pWndProc](#pwndproc)分別儲存現有的視窗類別名稱和視窗程序。  
   
-##  <a name="a-namepwndproca--cwndclassinfopwndproc"></a><a name="pwndproc"></a>CWndClassInfo::pWndProc  
+##  <a name="pwndproc"></a>CWndClassInfo::pWndProc  
  指向視窗程序的現有視窗類別。  
   
 ```
@@ -166,7 +175,7 @@ WNDPROC pWndProc;
 ### <a name="remarks"></a>備註  
  `CWndClassInfo`使用`pWndProc`只有當您加入[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)在類別定義中的巨集。 在此情況下，`CWndClassInfo`註冊視窗類別，根據現有的類別，但使用不同的視窗程序。 現有視窗類別的視窗程序儲存在`pWndProc`。 如需詳細資訊，請參閱[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)概觀。  
   
-##  <a name="a-nameregistera--cwndclassinforegister"></a><a name="register"></a>CWndClassInfo::Register  
+##  <a name="register"></a>CWndClassInfo::Register  
  由呼叫[CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)註冊視窗類別，如果尚未註冊。  
   
 ```

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDialogBar
+- AFXEXT/CDialogBar
+- AFXEXT/CDialogBar::CDialogBar
+- AFXEXT/CDialogBar::Create
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +91,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>需求  
  **標頭︰** afxext.h  
   
-##  <a name="a-namecdialogbara--cdialogbarcdialogbar"></a><a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
  建構 `CDialogBar` 物件。  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="a-namecreatea--cdialogbarcreate"></a><a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>CDialogBar::Create  
  載入對話方塊資源範本所指定`lpszTemplateName`或`nIDTemplate`、 建立對話方塊列視窗中，設定其樣式，並將它與關聯`CDialogBar`物件。  
   
 ```  

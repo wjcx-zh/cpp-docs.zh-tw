@@ -10,6 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoTableDef
+- AFXDAO/CDaoTableDef
+- AFXDAO/CDaoTableDef::CDaoTableDef
+- AFXDAO/CDaoTableDef::Append
+- AFXDAO/CDaoTableDef::CanUpdate
+- AFXDAO/CDaoTableDef::Close
+- AFXDAO/CDaoTableDef::Create
+- AFXDAO/CDaoTableDef::CreateField
+- AFXDAO/CDaoTableDef::CreateIndex
+- AFXDAO/CDaoTableDef::DeleteField
+- AFXDAO/CDaoTableDef::DeleteIndex
+- AFXDAO/CDaoTableDef::GetAttributes
+- AFXDAO/CDaoTableDef::GetConnect
+- AFXDAO/CDaoTableDef::GetDateCreated
+- AFXDAO/CDaoTableDef::GetDateLastUpdated
+- AFXDAO/CDaoTableDef::GetFieldCount
+- AFXDAO/CDaoTableDef::GetFieldInfo
+- AFXDAO/CDaoTableDef::GetIndexCount
+- AFXDAO/CDaoTableDef::GetIndexInfo
+- AFXDAO/CDaoTableDef::GetName
+- AFXDAO/CDaoTableDef::GetRecordCount
+- AFXDAO/CDaoTableDef::GetSourceTableName
+- AFXDAO/CDaoTableDef::GetValidationRule
+- AFXDAO/CDaoTableDef::GetValidationText
+- AFXDAO/CDaoTableDef::IsOpen
+- AFXDAO/CDaoTableDef::Open
+- AFXDAO/CDaoTableDef::RefreshLink
+- AFXDAO/CDaoTableDef::SetAttributes
+- AFXDAO/CDaoTableDef::SetConnect
+- AFXDAO/CDaoTableDef::SetName
+- AFXDAO/CDaoTableDef::SetSourceTableName
+- AFXDAO/CDaoTableDef::SetValidationRule
+- AFXDAO/CDaoTableDef::SetValidationText
+- AFXDAO/CDaoTableDef::m_pDAOTableDef
+- AFXDAO/CDaoTableDef::m_pDatabase
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -149,7 +183,7 @@ class CDaoTableDef : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
   
-##  <a name="a-nameappenda--cdaotabledefappend"></a><a name="append"></a>CDaoTableDef::Append  
+##  <a name="append"></a>CDaoTableDef::Append  
  呼叫此成員函式之後您呼叫,[建立](#create)來建立新的 tabledef 物件 tabledef 儲存在資料庫中。  
   
 ```  
@@ -164,7 +198,7 @@ virtual void Append();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 附加方法 」。  
   
-##  <a name="a-namecanupdatea--cdaotabledefcanupdate"></a><a name="canupdate"></a>CDaoTableDef::CanUpdate  
+##  <a name="canupdate"></a>CDaoTableDef::CanUpdate  
  呼叫此成員函式，以判斷是否將基礎資料表的定義`CDaoTableDef`物件已變更。  
   
 ```  
@@ -179,7 +213,7 @@ BOOL CanUpdate();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 可更新屬性 」。  
   
-##  <a name="a-namecdaotabledefa--cdaotabledefcdaotabledef"></a><a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
+##  <a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
  建構**CDaoTableDef**物件。  
   
 ```  
@@ -193,7 +227,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ### <a name="remarks"></a>備註  
  之後建構物件，您必須呼叫[建立](#create)或[開啟](#open)成員函式。 當您完成物件時，您必須呼叫其[關閉](#close)成員函式，並摧毀`CDaoTableDef`物件。  
   
-##  <a name="a-nameclosea--cdaotabledefclose"></a><a name="close"></a>CDaoTableDef::Close  
+##  <a name="close"></a>CDaoTableDef::Close  
  呼叫此成員函式，以關閉及釋放 tabledef 物件。  
   
 ```  
@@ -207,7 +241,7 @@ virtual void Close();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 關閉方法 」。  
   
-##  <a name="a-namecreatea--cdaotabledefcreate"></a><a name="create"></a>CDaoTableDef::Create  
+##  <a name="create"></a>CDaoTableDef::Create  
  呼叫此成員函式，來建立新儲存的資料表。  
   
 ```  
@@ -243,7 +277,7 @@ virtual void Create(
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 CreateTableDef 方法 」。  
   
-##  <a name="a-namecreatefielda--cdaotabledefcreatefield"></a><a name="createfield"></a>CDaoTableDef::CreateField  
+##  <a name="createfield"></a>CDaoTableDef::CreateField  
  呼叫此成員函式，將欄位加入至資料表。  
   
 ```  
@@ -313,7 +347,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 CreateField 方法 」。  
   
-##  <a name="a-namecreateindexa--cdaotabledefcreateindex"></a><a name="createindex"></a>CDaoTableDef::CreateIndex  
+##  <a name="createindex"></a>CDaoTableDef::CreateIndex  
  呼叫此函式可新增至資料表的索引。  
   
 ```  
@@ -339,7 +373,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
  剩餘的成員將會忽略的如果設定為**FALSE**。 此外， **m_lDistinctCount**成員會在建立索引期間忽略。  
   
-##  <a name="a-namedeletefielda--cdaotabledefdeletefield"></a><a name="deletefield"></a>CDaoTableDef::DeleteField  
+##  <a name="deletefield"></a>CDaoTableDef::DeleteField  
  呼叫此成員函式，若要移除欄位，並使其無法存取。  
   
 ```  
@@ -359,7 +393,7 @@ void DeleteField(int nIndex);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 刪除方法 」。  
   
-##  <a name="a-namedeleteindexa--cdaotabledefdeleteindex"></a><a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
+##  <a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
  呼叫此成員函式來刪除基礎資料表中的索引。  
   
 ```  
@@ -379,7 +413,7 @@ void DeleteIndex(int nIndex);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 刪除方法 」。  
   
-##  <a name="a-namegetattributesa--cdaotabledefgetattributes"></a><a name="getattributes"></a>CDaoTableDef::GetAttributes  
+##  <a name="getattributes"></a>CDaoTableDef::GetAttributes  
  如`CDaoTableDef`物件，傳回的值會指定所表示的資料表的特性`CDaoTableDef`物件，而且可以是加總兩個常數︰  
   
 ```  
@@ -406,7 +440,7 @@ long GetAttributes();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 屬性屬性 」。  
   
-##  <a name="a-namegetconnecta--cdaotabledefgetconnect"></a><a name="getconnect"></a>CDaoTableDef::GetConnect  
+##  <a name="getconnect"></a>CDaoTableDef::GetConnect  
  呼叫此成員函式，以取得資料來源的連接字串。  
   
 ```  
@@ -429,7 +463,7 @@ CString GetConnect();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 連接屬性 」。  
   
-##  <a name="a-namegetdatecreateda--cdaotabledefgetdatecreated"></a><a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
+##  <a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
  呼叫此函式可決定日期和時間資料表基礎`CDaoTableDef`建立物件。  
   
 ```  
@@ -444,7 +478,7 @@ COleDateTime GetDateCreated();
   
  如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
   
-##  <a name="a-namegetdatelastupdateda--cdaotabledefgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
  呼叫此函式可決定日期和時間資料表基礎**CDaoTableDef**上次更新物件。  
   
 ```  
@@ -459,7 +493,7 @@ COleDateTime GetDateLastUpdated();
   
  如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
   
-##  <a name="a-namegetfieldcounta--cdaotabledefgetfieldcount"></a><a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
+##  <a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
  呼叫此成員函式擷取資料表中定義的欄位數目。  
   
 ```  
@@ -474,7 +508,7 @@ short GetFieldCount();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 計數屬性 」。  
   
-##  <a name="a-namegetfieldinfoa--cdaotabledefgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
  呼叫此成員函式，以取得各種 tabledef 中定義欄位的相關資訊。  
   
 ```  
@@ -516,7 +550,7 @@ void GetFieldInfo(
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 屬性屬性 」。  
   
-##  <a name="a-namegetindexcounta--cdaotabledefgetindexcount"></a><a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
+##  <a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
  呼叫此成員函式來取得資料表的索引編號。  
   
 ```  
@@ -531,7 +565,7 @@ short GetIndexCount();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 計數屬性 」。  
   
-##  <a name="a-namegetindexinfoa--cdaotabledefgetindexinfo"></a><a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
+##  <a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
  呼叫此成員函式，以取得各種 tabledef 中定義索引的相關資訊。  
   
 ```  
@@ -573,7 +607,7 @@ void GetIndexInfo(
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 屬性屬性 」。  
   
-##  <a name="a-namegetnamea--cdaotabledefgetname"></a><a name="getname"></a>CDaoTableDef::GetName  
+##  <a name="getname"></a>CDaoTableDef::GetName  
  呼叫此成員函式，以取得基礎資料表的使用者定義名稱。  
   
 ```  
@@ -588,7 +622,7 @@ CString GetName();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 名稱屬性 」。  
   
-##  <a name="a-namegetrecordcounta--cdaotabledefgetrecordcount"></a><a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
+##  <a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
  呼叫此成員函式，以找出幾筆記錄的在`CDaoTableDef`物件。  
   
 ```  
@@ -603,7 +637,7 @@ long GetRecordCount();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 RecordCount 屬性 」。  
   
-##  <a name="a-namegetsourcetablenamea--cdaotabledefgetsourcetablename"></a><a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
+##  <a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
  呼叫此成員函式，以擷取附加來源資料庫中資料表的名稱。  
   
 ```  
@@ -618,7 +652,7 @@ CString GetSourceTableName();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 SourceTableName 屬性 」。  
   
-##  <a name="a-namegetvalidationrulea--cdaotabledefgetvalidationrule"></a><a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
+##  <a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
  呼叫此成員函式擷取 tabledef 的驗證規則。  
   
 ```  
@@ -633,7 +667,7 @@ CString GetValidationRule();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 ValidationRule 屬性 」。  
   
-##  <a name="a-namegetvalidationtexta--cdaotabledefgetvalidationtext"></a><a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
+##  <a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
  呼叫此函式可擷取使用者輸入的資料不符合驗證規則時要顯示的字串。  
   
 ```  
@@ -648,7 +682,7 @@ CString GetValidationText();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 驗證屬性 」。  
   
-##  <a name="a-nameisopena--cdaotabledefisopen"></a><a name="isopen"></a>CDaoTableDef::IsOpen  
+##  <a name="isopen"></a>CDaoTableDef::IsOpen  
  呼叫此成員函式，以判斷是否`CDaoTableDef`物件目前已開啟。  
   
 ```  
@@ -660,18 +694,18 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namempdatabasea--cdaotabledefmpdatabase"></a><a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
  包含一個指向[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)這份資料表的物件。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namempdaotabledefa--cdaotabledefmpdaotabledef"></a><a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
+##  <a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
  包含 DAO tabledef 物件基礎的 OLE 介面的指標`CDaoTableDef`物件。  
   
 ### <a name="remarks"></a>備註  
  如果您需要直接存取 DAO 介面，請使用這個指標。  
   
-##  <a name="a-nameopena--cdaotabledefopen"></a><a name="open"></a>CDaoTableDef::Open  
+##  <a name="open"></a>CDaoTableDef::Open  
  呼叫此成員函式，以開啟 tabledef 先前儲存在資料庫中的 TableDef 的集合。  
   
 ```  
@@ -684,7 +718,7 @@ virtual void Open(LPCTSTR lpszName);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namerefreshlinka--cdaotabledefrefreshlink"></a><a name="refreshlink"></a>CDaoTableDef::RefreshLink  
+##  <a name="refreshlink"></a>CDaoTableDef::RefreshLink  
  呼叫此成員函式，來更新附加資料表的連接資訊。  
   
 ```  
@@ -698,7 +732,7 @@ void RefreshLink();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 RefreshLink 方法 」。  
   
-##  <a name="a-namesetattributesa--cdaotabledefsetattributes"></a><a name="setattributes"></a>CDaoTableDef::SetAttributes  
+##  <a name="setattributes"></a>CDaoTableDef::SetAttributes  
  設定值，這個值表示的一或多個特性`CDaoTableDef`物件。  
   
 ```  
@@ -725,7 +759,7 @@ void SetAttributes(long lAttributes);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 屬性屬性 」。  
   
-##  <a name="a-namesetconnecta--cdaotabledefsetconnect"></a><a name="setconnect"></a>CDaoTableDef::SetConnect  
+##  <a name="setconnect"></a>CDaoTableDef::SetConnect  
  如`CDaoTableDef`物件，表示附加的資料表，string 物件 （資料庫類型指定名稱和資料庫的路徑） 的一或兩個部分所組成。  
   
 ```  
@@ -774,7 +808,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 連接屬性 」。  
   
-##  <a name="a-namesetnamea--cdaotabledefsetname"></a><a name="setname"></a>CDaoTableDef::SetName  
+##  <a name="setname"></a>CDaoTableDef::SetName  
  呼叫此成員函式設定使用者定義資料表的名稱。  
   
 ```  
@@ -790,7 +824,7 @@ void SetName(LPCTSTR lpszName);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 名稱屬性 」。  
   
-##  <a name="a-namesetsourcetablenamea--cdaotabledefsetsourcetablename"></a><a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
+##  <a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
  呼叫此成員函式，來指定連接的資料表名稱或基底資料表的名稱在其上`CDaoTableDef`物件為基礎，存在於資料的原始來源。  
   
 ```  
@@ -806,7 +840,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 SourceTableName 屬性 」。  
   
-##  <a name="a-namesetvalidationrulea--cdaotabledefsetvalidationrule"></a><a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
+##  <a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
  呼叫此成員函式設定 tabledef 的驗證規則。  
   
 ```  
@@ -828,7 +862,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 ValidationRule 屬性 」。  
   
-##  <a name="a-namesetvalidationtexta--cdaotabledefsetvalidationtext"></a><a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
+##  <a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
  呼叫此成員函式設定的驗證規則的例外狀況文字`CDaoTableDef`支援 Microsoft Jet 資料庫引擎的基礎基底資料表的物件。  
   
 ```  

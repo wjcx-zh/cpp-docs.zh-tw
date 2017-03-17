@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey::CMFCAcceleratorKey
+- AFXACCELERATORKEY/CMFCAcceleratorKey::Format
+- AFXACCELERATORKEY/CMFCAcceleratorKey::SetAccelerator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +85,7 @@ class CMFCAcceleratorKey : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxacceleratorkey.h  
   
-##  <a name="a-namecmfcacceleratorkeya--cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
  建構[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件。  
   
 ```  
@@ -96,7 +100,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="remarks"></a>備註  
  當您建立時如果您未提供的快速鍵`CMFCAccleratorKey`，使用[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)方法產生關聯的快速鍵與您`CMFCAcceleratorKey`物件。  
   
-##  <a name="a-nameformata--cmfcacceleratorkeyformat"></a><a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>CMFCAcceleratorKey::Format  
  將轉譯加速度結構及其相關聯的字串值。  
   
 ```  
@@ -110,7 +114,7 @@ void Format(CString& str) const;
 ### <a name="remarks"></a>備註  
  這個方法會擷取字串的格式相關的快速鍵。 您可以設定的字串格式[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件建構函式或方法使用[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)。  
   
-##  <a name="a-namesetacceleratora--cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
  設定的快速鍵[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件。  
   
 ```  

@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IConnectionPointContainerImpl
-- ATL.IConnectionPointContainerImpl
-- ATL.IConnectionPointContainerImpl<T>
 - IConnectionPointContainerImpl
-- ATL::IConnectionPointContainerImpl<T>
+- ATLCOM/ATL::IConnectionPointContainerImpl
+- ATLCOM/ATL::IConnectionPointContainerImpl::EnumConnectionPoints
+- ATLCOM/ATL::IConnectionPointContainerImpl::FindConnectionPoint
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +85,7 @@ class ATL_NO_VTABLE IConnectionPointContainerImpl
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameenumconnectionpointsa--iconnectionpointcontainerimplenumconnectionpoints"></a><a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
+##  <a name="enumconnectionpoints"></a>IConnectionPointContainerImpl::EnumConnectionPoints  
  建立列舉值，可逐一查看支援可連接物件的連接點。  
   
 ```
@@ -96,7 +95,7 @@ STDMETHOD(EnumConnectionPoints)(IEnumConnectionPoints** ppEnum);
 ### <a name="remarks"></a>備註  
  請參閱[IConnectionPointContainer::EnumConnectionPoints](http://msdn.microsoft.com/library/windows/desktop/ms682460)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namefindconnectionpointa--iconnectionpointcontainerimplfindconnectionpoint"></a><a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
+##  <a name="findconnectionpoint"></a>IConnectionPointContainerImpl::FindConnectionPoint  
  擷取支援指定的 IID 的連接點的介面指標。  
   
 ```

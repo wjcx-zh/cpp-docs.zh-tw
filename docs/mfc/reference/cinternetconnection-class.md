@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
+- AFXINET/CInternetConnection
+- AFXINET/CInternetConnection::CInternetConnection
+- AFXINET/CInternetConnection::GetContext
+- AFXINET/CInternetConnection::GetServerName
+- AFXINET/CInternetConnection::GetSession
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CInternetConnection : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxinet.h  
   
-##  <a name="a-namecinternetconnectiona--cinternetconnectioncinternetconnection"></a><a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
  此成員函式時，會呼叫`CInternetConnection`建立物件。  
   
 ```  
@@ -122,7 +127,7 @@ CInternetConnection(
   
  預設值為`dwContext`傳送到 mfc `CInternetConnection`-衍生物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立**InternetConnection**-衍生物件。 預設值是設定為 1。不過，您可以明確指派的特定內容識別元[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)建構函式的連線。 物件，它沒有任何工作將會與該內容識別碼建立關聯 內容識別碼傳回給[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-##  <a name="a-namegetcontexta--cinternetconnectiongetcontext"></a><a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>CInternetConnection::GetContext  
  呼叫此成員函式，以取得此工作階段的內容識別碼。  
   
 ```  
@@ -137,7 +142,7 @@ DWORD_PTR GetContext() const;
   
  如需有關如何**GetContext**搭配其他 WinInet 類別，以提供使用者的狀態資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-##  <a name="a-namegetservernamea--cinternetconnectiongetservername"></a><a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>CInternetConnection::GetServerName  
  呼叫此成員函式，以取得這個網際網路連線相關聯的伺服器名稱。  
   
 ```  
@@ -147,7 +152,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>傳回值  
  使用此連接物件的伺服器名稱。  
   
-##  <a name="a-namegetsessiona--cinternetconnectiongetsession"></a><a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>CInternetConnection::GetSession  
  若要取得的指標，此成員函式的呼叫`CInternetSession`這個連接相關聯的物件。  
   
 ```  
@@ -157,7 +162,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>傳回值  
  指標[CInternetSession](../../mfc/reference/cinternetsession-class.md)與網際網路連線物件相關聯的物件。  
   
-##  <a name="a-nameoperatorhinterneta--cinternetconnectionoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
  您可以使用這個運算子來取得目前的網際網路工作階段中的 API 層級的控制代碼。  
   
 ```  

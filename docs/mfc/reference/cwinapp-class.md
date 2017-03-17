@@ -10,7 +10,100 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinApp
-- hInstance
+- AFXWIN/CWinApp
+- AFXWIN/CWinApp::CWinApp
+- AFXWIN/CWinApp::AddDocTemplate
+- AFXWIN/CWinApp::AddToRecentFileList
+- AFXWIN/CWinApp::ApplicationRecoveryCallback
+- AFXWIN/CWinApp::CloseAllDocuments
+- AFXWIN/CWinApp::CreatePrinterDC
+- AFXWIN/CWinApp::DelRegTree
+- AFXWIN/CWinApp::DoMessageBox
+- AFXWIN/CWinApp::DoWaitCursor
+- AFXWIN/CWinApp::EnableD2DSupport
+- AFXWIN/CWinApp::EnableHtmlHelp
+- AFXWIN/CWinApp::EnableTaskbarInteraction
+- AFXWIN/CWinApp::ExitInstance
+- AFXWIN/CWinApp::GetApplicationRecoveryParameter
+- AFXWIN/CWinApp::GetApplicationRecoveryPingInterval
+- AFXWIN/CWinApp::GetApplicationRestartFlags
+- AFXWIN/CWinApp::GetAppRegistryKey
+- AFXWIN/CWinApp::GetDataRecoveryHandler
+- AFXWIN/CWinApp::GetFirstDocTemplatePosition
+- AFXWIN/CWinApp::GetHelpMode
+- AFXWIN/CWinApp::GetNextDocTemplate
+- AFXWIN/CWinApp::GetPrinterDeviceDefaults
+- AFXWIN/CWinApp::GetProfileBinary
+- AFXWIN/CWinApp::GetProfileInt
+- AFXWIN/CWinApp::GetProfileString
+- AFXWIN/CWinApp::GetSectionKey
+- AFXWIN/CWinApp::HideApplication
+- AFXWIN/CWinApp::HtmlHelp
+- AFXWIN/CWinApp::InitInstance
+- AFXWIN/CWinApp::IsTaskbarInteractionEnabled
+- AFXWIN/CWinApp::LoadCursor
+- AFXWIN/CWinApp::LoadIcon
+- AFXWIN/CWinApp::LoadOEMCursor
+- AFXWIN/CWinApp::LoadOEMIcon
+- AFXWIN/CWinApp::LoadStandardCursor
+- AFXWIN/CWinApp::LoadStandardIcon
+- AFXWIN/CWinApp::OnDDECommand
+- AFXWIN/CWinApp::OnIdle
+- AFXWIN/CWinApp::OpenDocumentFile
+- AFXWIN/CWinApp::ParseCommandLine
+- AFXWIN/CWinApp::PreTranslateMessage
+- AFXWIN/CWinApp::ProcessMessageFilter
+- AFXWIN/CWinApp::ProcessShellCommand
+- AFXWIN/CWinApp::ProcessWndProcException
+- AFXWIN/CWinApp::Register
+- AFXWIN/CWinApp::RegisterWithRestartManager
+- AFXWIN/CWinApp::ReopenPreviousFilesAtRestart
+- AFXWIN/CWinApp::RestartInstance
+- AFXWIN/CWinApp::RestoreAutosavedFilesAtRestart
+- AFXWIN/CWinApp::Run
+- AFXWIN/CWinApp::RunAutomated
+- AFXWIN/CWinApp::RunEmbedded
+- AFXWIN/CWinApp::SaveAllModified
+- AFXWIN/CWinApp::SelectPrinter
+- AFXWIN/CWinApp::SetHelpMode
+- AFXWIN/CWinApp::SupportsApplicationRecovery
+- AFXWIN/CWinApp::SupportsAutosaveAtInterval
+- AFXWIN/CWinApp::SupportsAutosaveAtRestart
+- AFXWIN/CWinApp::SupportsRestartManager
+- AFXWIN/CWinApp::Unregister
+- AFXWIN/CWinApp::WinHelp
+- AFXWIN/CWinApp::WriteProfileBinary
+- AFXWIN/CWinApp::WriteProfileInt
+- AFXWIN/CWinApp::WriteProfileString
+- AFXWIN/CWinApp::EnableShellOpen
+- AFXWIN/CWinApp::LoadStdProfileSettings
+- AFXWIN/CWinApp::OnContextHelp
+- AFXWIN/CWinApp::OnFileNew
+- AFXWIN/CWinApp::OnFileOpen
+- AFXWIN/CWinApp::OnFilePrintSetup
+- AFXWIN/CWinApp::OnHelp
+- AFXWIN/CWinApp::OnHelpFinder
+- AFXWIN/CWinApp::OnHelpIndex
+- AFXWIN/CWinApp::OnHelpUsing
+- AFXWIN/CWinApp::RegisterShellFileTypes
+- AFXWIN/CWinApp::SetAppID
+- AFXWIN/CWinApp::SetRegistryKey
+- AFXWIN/CWinApp::UnregisterShellFileTypes
+- AFXWIN/CWinApp::m_bHelpMode
+- AFXWIN/CWinApp::m_eHelpType
+- AFXWIN/CWinApp::m_hInstance
+- AFXWIN/CWinApp::m_lpCmdLine
+- AFXWIN/CWinApp::m_nCmdShow
+- AFXWIN/CWinApp::m_pActiveWnd
+- AFXWIN/CWinApp::m_pszAppID
+- AFXWIN/CWinApp::m_pszAppName
+- AFXWIN/CWinApp::m_pszExeName
+- AFXWIN/CWinApp::m_pszHelpFilePath
+- AFXWIN/CWinApp::m_pszProfileName
+- AFXWIN/CWinApp::m_pszRegistryKey
+- AFXWIN/CWinApp::m_dwRestartManagerSupportFlags
+- AFXWIN/CWinApp::m_nAutosaveInterval
+- AFXWIN/CWinApp::m_pDataRecoveryHandler
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -213,7 +306,7 @@ class CWinApp : public CWinThread
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameadddoctemplatea--cwinappadddoctemplate"></a><a name="adddoctemplate"></a>CWinApp::AddDocTemplate  
+##  <a name="adddoctemplate"></a>CWinApp::AddDocTemplate  
  呼叫此成員函式加入應用程式所維護的可用文件範本清單中的文件範本。  
   
 ```  
@@ -230,7 +323,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&35;](../../mfc/reference/codesnippet/cpp/cwinapp-class_1.cpp)]  
   
-##  <a name="a-nameaddtorecentfilelista--cwinappaddtorecentfilelist"></a><a name="addtorecentfilelist"></a>CWinApp::AddToRecentFileList  
+##  <a name="addtorecentfilelist"></a>CWinApp::AddToRecentFileList  
  呼叫此成員函式加入`lpszPathName`到最近一次使用的檔案清單。  
   
 ```  
@@ -249,7 +342,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&36;](../../mfc/reference/codesnippet/cpp/cwinapp-class_2.cpp)]  
   
-##  <a name="a-nameapplicationrecoverycallbacka--cwinappapplicationrecoverycallback"></a><a name="applicationrecoverycallback"></a>CWinApp::ApplicationRecoveryCallback  
+##  <a name="applicationrecoverycallback"></a>CWinApp::ApplicationRecoveryCallback  
  架構應用程式意外結束時呼叫。  
   
 ```  
@@ -270,7 +363,7 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
   
  若要自訂行為，請覆寫這個函式中衍生[CWinApp 類別](../../mfc/reference/cwinapp-class.md)或做為參數傳遞您自己的應用程式的復原方法[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)。  
   
-##  <a name="a-nameclosealldocumentsa--cwinappclosealldocuments"></a><a name="closealldocuments"></a>CWinApp::CloseAllDocuments  
+##  <a name="closealldocuments"></a>CWinApp::CloseAllDocuments  
  呼叫此成員函式結束前，請關閉所有開啟的文件。  
   
 ```  
@@ -284,7 +377,7 @@ void CloseAllDocuments(BOOL bEndSession);
 ### <a name="remarks"></a>備註  
  呼叫[HideApplication](#hideapplication)之前，先呼叫`CloseAllDocuments`。  
   
-##  <a name="a-namecreateprinterdca--cwinappcreateprinterdc"></a><a name="createprinterdc"></a>CWinApp::CreatePrinterDC  
+##  <a name="createprinterdc"></a>CWinApp::CreatePrinterDC  
  呼叫此成員函式來建立從所選印表機的印表機裝置內容 (DC)。  
   
 ```  
@@ -303,7 +396,7 @@ BOOL CreatePrinterDC(CDC& dc);
   
  如果函式成功，當您完成列印時，您必須銷毀的裝置內容。 您可以讓的解構函式[CDC](../../mfc/reference/cdc-class.md)物件執行動作，或您可以進行明確呼叫[CDC::DeleteDC](../../mfc/reference/cdc-class.md#deletedc)。  
   
-##  <a name="a-namecwinappa--cwinappcwinapp"></a><a name="cwinapp"></a>CWinApp::CWinApp  
+##  <a name="cwinapp"></a>CWinApp::CWinApp  
  建構`CWinApp`物件，以及傳遞`lpszAppName`將儲存為應用程式名稱。  
   
 ```  
@@ -317,7 +410,7 @@ CWinApp(LPCTSTR lpszAppName = NULL);
 ### <a name="remarks"></a>備註  
  您應該建構的全域物件您`CWinApp`-衍生的類別。 您只能有一個`CWinApp`應用程式中的物件。 建構函式會將儲存的指標`CWinApp`物件以便`WinMain`可以呼叫物件的成員函式來初始化和執行應用程式。  
   
-##  <a name="a-namedelregtreea--cwinappdelregtree"></a><a name="delregtree"></a>CWinApp::DelRegTree  
+##  <a name="delregtree"></a>CWinApp::DelRegTree  
  刪除特定的登錄機碼和所有子機碼。  
   
 ```  
@@ -348,7 +441,7 @@ LONG DelRegTree(
 ### <a name="remarks"></a>備註  
  呼叫此函式來刪除指定的機碼及其子機碼。  
   
-##  <a name="a-namedomessageboxa--cwinappdomessagebox"></a><a name="domessagebox"></a>CWinApp::DoMessageBox  
+##  <a name="domessagebox"></a>CWinApp::DoMessageBox  
  架構會呼叫此成員函式實作全域函式的訊息方塊[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)。  
   
 ```  
@@ -376,7 +469,7 @@ virtual int DoMessageBox(
   
  覆寫此成員函式來自訂您整個應用程式處理`AfxMessageBox`呼叫。  
   
-##  <a name="a-namedowaitcursora--cwinappdowaitcursor"></a><a name="dowaitcursor"></a>CWinApp::DoWaitCursor  
+##  <a name="dowaitcursor"></a>CWinApp::DoWaitCursor  
  若要實作架構會呼叫此成員函式[CWaitCursor](../../mfc/reference/cwaitcursor-class.md)， [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)， [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)，和[CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)。  
   
 ```  
@@ -397,7 +490,7 @@ virtual void DoWaitCursor(int nCode);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&37;](../../mfc/reference/codesnippet/cpp/cwinapp-class_3.cpp)]  
   
-##  <a name="a-nameenabled2dsupporta--cwinappenabled2dsupport"></a><a name="enabled2dsupport"></a>CWinApp::EnableD2DSupport  
+##  <a name="enabled2dsupport"></a>CWinApp::EnableD2DSupport  
  [!INCLUDE[dev10_sp1required](../../mfc/reference/includes/dev10_sp1required_md.md)]  
   
  可讓應用程式 D2D 支援。 初始化主視窗之前先呼叫這個方法。  
@@ -418,7 +511,7 @@ DWRITE_FACTORY_TYPE writeFactoryType = DWRITE_FACTORY_TYPE_SHARED);
 ### <a name="return-value"></a>傳回值  
  如果 D2D 支援已啟用，FALSE-否則為 true，則傳回  
   
-##  <a name="a-nameenablehtmlhelpa--cwinappenablehtmlhelp"></a><a name="enablehtmlhelp"></a>CWinApp::EnableHtmlHelp  
+##  <a name="enablehtmlhelp"></a>CWinApp::EnableHtmlHelp  
  呼叫此成員函式的建構函式內您`CWinApp`-衍生的類別 HTMLHelp 用於應用程式的說明。  
   
 ```  
@@ -427,7 +520,7 @@ void EnableHtmlHelp();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenableshellopena--cwinappenableshellopen"></a><a name="enableshellopen"></a>CWinApp::EnableShellOpen  
+##  <a name="enableshellopen"></a>CWinApp::EnableShellOpen  
  呼叫此函式，通常來自您`InitInstance`覆寫時，可讓您的應用程式使用者，當他們連按兩下檔案從 Windows 檔案管理員中開啟資料檔案。  
   
 ```  
@@ -440,7 +533,7 @@ void EnableShellOpen();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&38;](../../mfc/reference/codesnippet/cpp/cwinapp-class_4.cpp)]  
   
-##  <a name="a-nameenabletaskbarinteractiona--cwinappenabletaskbarinteraction"></a><a name="enabletaskbarinteraction"></a>CWinApp::EnableTaskbarInteraction  
+##  <a name="enabletaskbarinteraction"></a>CWinApp::EnableTaskbarInteraction  
  可讓工作列互動。  
   
 ```  
@@ -457,7 +550,7 @@ BOOL EnableTaskbarInteraction(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>備註  
  在主視窗建立之前，必須呼叫這個方法，否則它會判斷提示，並傳回`FALSE`。  
   
-##  <a name="a-nameexitinstancea--cwinappexitinstance"></a><a name="exitinstance"></a>CWinApp::ExitInstance  
+##  <a name="exitinstance"></a>CWinApp::ExitInstance  
  中，由框架呼叫**執行**成員函式來結束應用程式的這個執行個體。  
   
 ```  
@@ -475,7 +568,7 @@ virtual int ExitInstance();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&39;](../../mfc/reference/codesnippet/cpp/cwinapp-class_5.cpp)]  
   
-##  <a name="a-namegetapplicationrecoveryparametera--cwinappgetapplicationrecoveryparameter"></a><a name="getapplicationrecoveryparameter"></a>CWinApp::GetApplicationRecoveryParameter  
+##  <a name="getapplicationrecoveryparameter"></a>CWinApp::GetApplicationRecoveryParameter  
  擷取應用程式復原方法的輸入的參數。  
   
 ```  
@@ -490,7 +583,7 @@ virtual LPVOID GetApplicationRecoveryParameter();
   
  如需詳細資訊，請參閱[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)。  
   
-##  <a name="a-namegetapplicationrecoverypingintervala--cwinappgetapplicationrecoverypinginterval"></a><a name="getapplicationrecoverypinginterval"></a>CWinApp::GetApplicationRecoveryPingInterval  
+##  <a name="getapplicationrecoverypinginterval"></a>CWinApp::GetApplicationRecoveryPingInterval  
  傳回重新啟動管理員會等到復原回呼函式傳回的時間的長度。  
   
 ```  
@@ -505,7 +598,7 @@ virtual DWORD GetApplicationRecoveryPingInterval();
   
  架構會等到復原回呼函式傳回長度是時間的 ping 間隔。 您可以藉由覆寫自訂 ping 間隔`CWinApp::GetApplicationRecoveryPingInterval`或提供的自訂值`RegisterWithRestartManager`。  
   
-##  <a name="a-namegetapplicationrestartflagsa--cwinappgetapplicationrestartflags"></a><a name="getapplicationrestartflags"></a>CWinApp::GetApplicationRestartFlags  
+##  <a name="getapplicationrestartflags"></a>CWinApp::GetApplicationRestartFlags  
  重新啟動管理員傳回的旗標。  
   
 ```  
@@ -530,7 +623,7 @@ virtual DWORD GetApplicationRestartFlags();
   
 - `RESTART_NO_REBOOT`  
   
-##  <a name="a-namegetappregistrykeya--cwinappgetappregistrykey"></a><a name="getappregistrykey"></a>CWinApp::GetAppRegistryKey  
+##  <a name="getappregistrykey"></a>CWinApp::GetAppRegistryKey  
  傳回的索引鍵的 HKEY_CURRENT_USER\\\RegistryKey\ProfileName 「 軟體 」。  
   
 ```  
@@ -546,7 +639,7 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetdatarecoveryhandlera--cwinappgetdatarecoveryhandler"></a><a name="getdatarecoveryhandler"></a>CWinApp::GetDataRecoveryHandler  
+##  <a name="getdatarecoveryhandler"></a>CWinApp::GetDataRecoveryHandler  
  取得這個執行個體的應用程式資料復原處理常式。  
   
 ```  
@@ -563,7 +656,7 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
   
  如果應用程式目前沒有資料復原處理常式，這個方法會建立一個，並傳回的指標。  
   
-##  <a name="a-namegetfirstdoctemplatepositiona--cwinappgetfirstdoctemplateposition"></a><a name="getfirstdoctemplateposition"></a>CWinApp::GetFirstDocTemplatePosition  
+##  <a name="getfirstdoctemplateposition"></a>CWinApp::GetFirstDocTemplatePosition  
  取得應用程式中的第一個文件範本的位置。  
   
 ```  
@@ -576,7 +669,7 @@ POSITION GetFirstDocTemplatePosition() const;
 ### <a name="remarks"></a>備註  
  使用**位置**的呼叫中傳回值[GetNextDocTemplate](#getnextdoctemplate)取得第一個[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件。  
   
-##  <a name="a-namegethelpmodea--cwinappgethelpmode"></a><a name="gethelpmode"></a>CWinApp::GetHelpMode  
+##  <a name="gethelpmode"></a>CWinApp::GetHelpMode  
  擷取說明應用程式使用的型別。  
   
 ```  
@@ -586,7 +679,7 @@ AFX_HELP_TYPE GetHelpMode();
 ### <a name="return-value"></a>傳回值  
  使用應用程式的說明類型。 請參閱[CWinApp::m_eHelpType](#m_ehelptype)如需詳細資訊。  
   
-##  <a name="a-namegetnextdoctemplatea--cwinappgetnextdoctemplate"></a><a name="getnextdoctemplate"></a>CWinApp::GetNextDocTemplate  
+##  <a name="getnextdoctemplate"></a>CWinApp::GetNextDocTemplate  
  取得所識別的文件範本`pos`，然後設定`pos`至**位置**值。  
   
 ```  
@@ -607,7 +700,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
   
  最後一個擷取的文件範本是否可用，則新值的`pos`設為**NULL**。  
   
-##  <a name="a-namegetprinterdevicedefaultsa--cwinappgetprinterdevicedefaults"></a><a name="getprinterdevicedefaults"></a>CWinApp::GetPrinterDeviceDefaults  
+##  <a name="getprinterdevicedefaults"></a>CWinApp::GetPrinterDeviceDefaults  
  呼叫此成員函式，以準備進行列印印表機裝置內容。  
   
 ```  
@@ -627,7 +720,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&40;](../../mfc/reference/codesnippet/cpp/cwinapp-class_6.cpp)]  
   
-##  <a name="a-namegetprofilebinarya--cwinappgetprofilebinary"></a><a name="getprofilebinary"></a>CWinApp::GetProfileBinary  
+##  <a name="getprofilebinary"></a>CWinApp::GetProfileBinary  
  呼叫此成員函式，來擷取二進位資料，從應用程式的登錄指定的區段內的項目或。INI 檔案。  
   
 ```  
@@ -668,7 +761,7 @@ BOOL GetProfileBinary(
   
  如需其他範例，請參閱[CWinApp::WriteProfileBinary](#writeprofilebinary)。  
   
-##  <a name="a-namegetprofileinta--cwinappgetprofileint"></a><a name="getprofileint"></a>CWinApp::GetProfileInt  
+##  <a name="getprofileint"></a>CWinApp::GetProfileInt  
  呼叫此成員函式，從應用程式登錄檔或 .INI 檔中指定的區段內的項目擷取整數的值。  
   
 ```  
@@ -704,7 +797,7 @@ UINT GetProfileInt(
   
  如需其他範例，請參閱[cwinapp:: Writeprofileint](#writeprofileint)。  
   
-##  <a name="a-namegetprofilestringa--cwinappgetprofilestring"></a><a name="getprofilestring"></a>CWinApp::GetProfileString  
+##  <a name="getprofilestring"></a>CWinApp::GetProfileString  
  呼叫此成員函式，來擷取應用程式的登錄中指定的區段內的項目相關聯的字串或。INI 檔案。  
   
 ```  
@@ -737,7 +830,7 @@ CString GetProfileString(
   
  如需其他範例，請參閱範例[CWinApp::GetProfileInt](#getprofileint)。  
   
-##  <a name="a-namegetsectionkeya--cwinappgetsectionkey"></a><a name="getsectionkey"></a>CWinApp::GetSectionKey  
+##  <a name="getsectionkey"></a>CWinApp::GetSectionKey  
  傳回的索引鍵的 HKEY_CURRENT_USER\\\RegistryKey\AppName\lpszSection 「 軟體 」。  
   
 ```  
@@ -758,14 +851,14 @@ CAtlTransactionManager* pTM = NULL);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehideapplicationa--cwinapphideapplication"></a><a name="hideapplication"></a>CWinApp::HideApplication  
+##  <a name="hideapplication"></a>CWinApp::HideApplication  
  呼叫此成員函式，以隱藏應用程式前關閉開啟的文件。  
   
 ```  
 void HideApplication();
 ```  
   
-##  <a name="a-namehtmlhelpa--cwinapphtmlhelp"></a><a name="htmlhelp"></a>CWinApp::HtmlHelp  
+##  <a name="htmlhelp"></a>CWinApp::HtmlHelp  
  呼叫此成員函式叫用 HTMLHelp 應用程式。  
   
 ```  
@@ -786,7 +879,7 @@ virtual void HtmlHelp(
   
  您的應用程式終止時，架構會自動關閉 HTMLHelp 應用程式。  
   
-##  <a name="a-nameinitinstancea--cwinappinitinstance"></a><a name="initinstance"></a>Cwinapp:: Initinstance  
+##  <a name="initinstance"></a>Cwinapp:: Initinstance  
  Windows 可讓在相同時間執行的相同程式的多個複本。  
   
 ```  
@@ -807,7 +900,7 @@ virtual BOOL InitInstance();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCListView #&9;](../../atl/reference/codesnippet/cpp/cwinapp-class_10.cpp)]  
   
-##  <a name="a-nameistaskbarinteractionenableda--cwinappistaskbarinteractionenabled"></a><a name="istaskbarinteractionenabled"></a>CWinApp::IsTaskbarInteractionEnabled  
+##  <a name="istaskbarinteractionenabled"></a>CWinApp::IsTaskbarInteractionEnabled  
  會指示是否已啟用 Windows 7 工作列互動。  
   
 ```  
@@ -820,7 +913,7 @@ virtual BOOL IsTaskbarInteractionEnabled();
 ### <a name="remarks"></a>備註  
  工作列互動表示 MDI 應用程式，會在滑鼠指標移至應用程式的工作列按鈕時，會出現的個別索引標籤式縮圖中顯示 MDI 子視窗的內容。  
   
-##  <a name="a-nameloadcursora--cwinapploadcursor"></a><a name="loadcursor"></a>CWinApp::LoadCursor  
+##  <a name="loadcursor"></a>CWinApp::LoadCursor  
  載入所命名的游標資源`lpszResourceName`或所指定`nIDResource`從目前的可執行檔。  
   
 ```  
@@ -868,7 +961,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const; HICON LoadIcon(UINT nIDResource)
 > [!NOTE]
 >  此成員函式呼叫 Win32 API 函式[LoadIcon](http://msdn.microsoft.com/library/windows/desktop/ms648072)，這只能載入的圖示的大小會符合**SM_CXICON**和**SM_CYICON**系統度量值。  
   
-##  <a name="a-nameloadoemcursora--cwinapploadoemcursor"></a><a name="loadoemcursor"></a>CWinApp::LoadOEMCursor  
+##  <a name="loadoemcursor"></a>CWinApp::LoadOEMCursor  
  載入 Windows 預先定義的資料指標所指定的資源`nIDCursor`。  
   
 ```  
@@ -890,7 +983,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
   
  [!code-cpp[NVC_MFCWindowing #&46;](../../mfc/reference/codesnippet/cpp/cwinapp-class_13.cpp)]  
   
-##  <a name="a-nameloadoemicona--cwinapploadoemicon"></a><a name="loadoemicon"></a>CWinApp::LoadOEMIcon  
+##  <a name="loadoemicon"></a>CWinApp::LoadOEMIcon  
  載入 Windows 預先定義所指定的圖示資源`nIDIcon`。  
   
 ```  
@@ -907,7 +1000,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 ### <a name="remarks"></a>備註  
  使用`LoadOEMIcon`或[LoadStandardIcon](#loadstandardicon)成員函式來存取預先定義的 Windows 圖示。  
   
-##  <a name="a-nameloadstandardcursora--cwinapploadstandardcursor"></a><a name="loadstandardcursor"></a>CWinApp::LoadStandardCursor  
+##  <a name="loadstandardcursor"></a>CWinApp::LoadStandardCursor  
  載入 Windows 預先定義的游標資源的`lpszCursorName`指定。  
   
 ```  
@@ -951,7 +1044,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&47;](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]  
   
-##  <a name="a-nameloadstandardicona--cwinapploadstandardicon"></a><a name="loadstandardicon"></a>CWinApp::LoadStandardIcon  
+##  <a name="loadstandardicon"></a>CWinApp::LoadStandardIcon  
  載入 Windows 預先定義的圖示資源的`lpszIconName`指定。  
   
 ```  
@@ -968,7 +1061,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="remarks"></a>備註  
  使用`LoadStandardIcon`或[LoadOEMIcon](#loadoemicon)成員函式來存取預先定義的 Windows 圖示。  
   
-##  <a name="a-nameloadstdprofilesettingsa--cwinapploadstdprofilesettings"></a><a name="loadstdprofilesettings"></a>CWinApp::LoadStdProfileSettings  
+##  <a name="loadstdprofilesettings"></a>CWinApp::LoadStdProfileSettings  
  此成員函式呼叫中[InitInstance](#initinstance)成員函式來啟用與載入最近使用過 (MRU) 檔案的清單和上一次預覽狀態。  
   
 ```  
@@ -982,7 +1075,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 ### <a name="remarks"></a>備註  
  如果`nMaxMRU`是 0，將會保留任何 MRU 清單。  
   
-##  <a name="a-namembhelpmodea--cwinappmbhelpmode"></a><a name="m_bhelpmode"></a>CWinApp::m_bHelpMode  
+##  <a name="m_bhelpmode"></a>CWinApp::m_bHelpMode  
  **TRUE**應用程式是否在說明內容模式 （通常用來叫用 SHIFT + F1）; 否則**FALSE**。  
   
 ```  
@@ -992,7 +1085,7 @@ BOOL m_bHelpMode;
 ### <a name="remarks"></a>備註  
  在說明內容模式，游標會變成問號，則使用者可以移動螢幕相關。 如果您想要實作在說明模式中的特殊處理，請檢查此旗標。 `m_bHelpMode`類型的公用變數**BOOL**。  
   
-##  <a name="a-namemdwrestartmanagersupportflagsa--cwinappmdwrestartmanagersupportflags"></a><a name="m_dwrestartmanagersupportflags"></a>CWinApp::m_dwRestartManagerSupportFlags  
+##  <a name="m_dwrestartmanagersupportflags"></a>CWinApp::m_dwRestartManagerSupportFlags  
  決定重新啟動管理員行為的旗標。  
   
 ```  
@@ -1016,7 +1109,7 @@ DWORD m_dwRestartManagerSupportFlags;
 |- `AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS`|The union of `AFX_RESTART_MANAGER_SUPPORT_RESTART`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`, and `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`.|  
 |- `AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS`|The union of `AFX_RESTART_MANAGER_SUPPORT_RECOVERY`, `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`, and `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`.|  
   
-##  <a name="a-namemehelptypea--cwinappmehelptype"></a><a name="m_ehelptype"></a>CWinApp::m_eHelpType  
+##  <a name="m_ehelptype"></a>CWinApp::m_eHelpType  
  此資料成員的類型是列舉型別**AFX_HELP_TYPE**，定義在`CWinApp`類別。  
   
 ```  
@@ -1040,7 +1133,7 @@ AFX_HELP_TYPE m_eHelpType;
   
 -   若要設定 WinHelp 的應用程式的說明，請呼叫`SetHelpMode`，並指定**afxWinHelp**。  
   
-##  <a name="a-namemhinstancea--cwinappmhinstance"></a><a name="m_hinstance"></a>CWinApp::m_hInstance  
+##  <a name="m_hinstance"></a>CWinApp::m_hInstance  
  對應至`hInstance`參數傳遞至 windows `WinMain`。  
   
 ```  
@@ -1053,7 +1146,7 @@ HINSTANCE m_hInstance;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&55;](../../mfc/reference/codesnippet/cpp/cwinapp-class_15.cpp)]  
   
-##  <a name="a-namemlpcmdlinea--cwinappmlpcmdline"></a><a name="m_lpcmdline"></a>CWinApp::m_lpCmdLine  
+##  <a name="m_lpcmdline"></a>CWinApp::m_lpCmdLine  
  對應至`lpCmdLine`參數傳遞至 windows `WinMain`。  
   
 ```  
@@ -1066,7 +1159,7 @@ LPTSTR m_lpCmdLine;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&52;](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]  
   
-##  <a name="a-namemnautosaveintervala--cwinappmnautosaveinterval"></a><a name="m_nautosaveinterval"></a>CWinApp::m_nAutosaveInterval  
+##  <a name="m_nautosaveinterval"></a>CWinApp::m_nAutosaveInterval  
  以毫秒為單位之間時，自動儲存的時間長度。  
   
 ```  
@@ -1076,7 +1169,7 @@ int m_nAutosaveInterval;
 ### <a name="remarks"></a>備註  
  您可以設定自動儲存開啟的文件的重新啟動管理員設定的間隔。 如果您的應用程式不是自動儲存檔案，此參數沒有任何作用。  
   
-##  <a name="a-namemncmdshowa--cwinappmncmdshow"></a><a name="m_ncmdshow"></a>CWinApp::m_nCmdShow  
+##  <a name="m_ncmdshow"></a>CWinApp::m_nCmdShow  
  對應至`nCmdShow`參數傳遞至 windows `WinMain`。  
   
 ```  
@@ -1089,7 +1182,7 @@ int m_nCmdShow;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&56;](../../mfc/reference/codesnippet/cpp/cwinapp-class_17.cpp)]  
   
-##  <a name="a-namempactivewnda--cwinappmpactivewnd"></a><a name="m_pactivewnd"></a>CWinApp::m_pActiveWnd  
+##  <a name="m_pactivewnd"></a>CWinApp::m_pActiveWnd  
  您可以使用此資料成員來儲存具有您 OLE 伺服器應用程式就地啟動 OLE 容器應用程式的主視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1097,7 +1190,7 @@ int m_nCmdShow;
   
  就地啟動 OLE 容器應用程式框架視窗時，架構會設定這個成員變數。  
   
-##  <a name="a-namempdatarecoveryhandlera--cwinappmpdatarecoveryhandler"></a><a name="m_pdatarecoveryhandler"></a>CWinApp::m_pDataRecoveryHandler  
+##  <a name="m_pdatarecoveryhandler"></a>CWinApp::m_pDataRecoveryHandler  
  應用程式的資料復原處理常式的指標。  
   
 ```  
@@ -1107,7 +1200,7 @@ CDataRecoveryHandler* m_pDataRecoveryHandler;
 ### <a name="remarks"></a>備註  
  應用程式的資料復原處理常式會監視開啟的文件和時，自動儲存它們。 架構會還原 autosaved 檔案，它在非預期地結束之後，重新啟動應用程式時使用資料復原處理常式。 如需詳細資訊，請參閱[CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)。  
   
-##  <a name="a-namempszappnamea--cwinappmpszappname"></a><a name="m_pszappname"></a>CWinApp::m_pszAppName  
+##  <a name="m_pszappname"></a>CWinApp::m_pszAppName  
  指定應用程式的名稱。  
   
 ```  
@@ -1127,7 +1220,7 @@ LPCTSTR m_pszAppName;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&65;](../../mfc/reference/codesnippet/cpp/cwinapp-class_19.cpp)]  
   
-##  <a name="a-namempszexenamea--cwinappmpszexename"></a><a name="m_pszexename"></a>CWinApp::m_pszExeName  
+##  <a name="m_pszexename"></a>CWinApp::m_pszExeName  
  包含應用程式的可執行檔不含副檔名的名稱。  
   
 ```  
@@ -1142,7 +1235,7 @@ LPCTSTR m_pszExeName;
   
  [!code-cpp[NVC_MFCWindowing #&58;](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]  
   
-##  <a name="a-namempszhelpfilepatha--cwinappmpszhelpfilepath"></a><a name="m_pszhelpfilepath"></a>CWinApp::m_pszHelpFilePath  
+##  <a name="m_pszhelpfilepath"></a>CWinApp::m_pszHelpFilePath  
  包含應用程式的說明檔的路徑。  
   
 ```  
@@ -1157,7 +1250,7 @@ LPCTSTR m_pszHelpFilePath;
   
  [!code-cpp[NVC_MFCWindowing #&59;](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]  
   
-##  <a name="a-namempszprofilenamea--cwinappmpszprofilename"></a><a name="m_pszprofilename"></a>CWinApp::m_pszProfileName  
+##  <a name="m_pszprofilename"></a>CWinApp::m_pszProfileName  
  包含應用程式的名稱。INI 檔案。  
   
 ```  
@@ -1172,7 +1265,7 @@ LPCTSTR m_pszProfileName;
   
  [!code-cpp[NVC_MFCWindowing #&60;](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]  
   
-##  <a name="a-namempszregistrykeya--cwinappmpszregistrykey"></a><a name="m_pszregistrykey"></a>CWinApp::m_pszRegistryKey  
+##  <a name="m_pszregistrykey"></a>CWinApp::m_pszRegistryKey  
  用來決定，在登錄或 INI 檔案中，應用程式設定檔設定的儲存位置。  
   
 ```  
@@ -1188,7 +1281,7 @@ LPCTSTR m_pszRegistryKey;
   
  [!code-cpp[NVC_MFCWindowing #&61;](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]  
   
-##  <a name="a-namempszappida--cwinappmpszappid"></a><a name="m_pszappid"></a>CWinApp::m_pszAppID  
+##  <a name="m_pszappid"></a>CWinApp::m_pszAppID  
  應用程式使用者的模型識別碼。  
   
 ```  
@@ -1197,7 +1290,7 @@ LPCTSTR m_pszAppID;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameoncontexthelpa--cwinapponcontexthelp"></a><a name="oncontexthelp"></a>CWinApp::OnContextHelp  
+##  <a name="oncontexthelp"></a>CWinApp::OnContextHelp  
  處理應用程式中的 SHIFT + F1 說明。  
   
 ```  
@@ -1209,7 +1302,7 @@ afx_msg void OnContextHelp();
   
  `OnContextHelp`將放入說明模式的應用程式。 游標會變更以箭號和一個問號，使用者可以移動滑鼠指標並按下滑鼠左的按鈕來選取 對話方塊、 視窗、 功能表或命令按鈕。 此成員函式會擷取資料指標所在物件的說明內容，並呼叫 Windows 函式 WinHelp 該說明內容。  
   
-##  <a name="a-nameonddecommanda--cwinapponddecommand"></a><a name="onddecommand"></a>CWinApp::OnDDECommand  
+##  <a name="onddecommand"></a>CWinApp::OnDDECommand  
  當主框架視窗收到 DDE，由框架呼叫執行訊息。  
   
 ```  
@@ -1229,7 +1322,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&48;](../../mfc/reference/codesnippet/cpp/cwinapp-class_24.cpp)]  
   
-##  <a name="a-nameonfilenewa--cwinapponfilenew"></a><a name="onfilenew"></a>CWinApp::OnFileNew  
+##  <a name="onfilenew"></a>CWinApp::OnFileNew  
  實作`ID_FILE_NEW`命令。  
   
 ```  
@@ -1246,7 +1339,7 @@ afx_msg void OnFileNew();
   
  [!code-cpp[NVC_MFCWindowing #&50;](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
-##  <a name="a-nameonfileopena--cwinapponfileopen"></a><a name="onfileopen"></a>CWinApp::OnFileOpen  
+##  <a name="onfileopen"></a>CWinApp::OnFileOpen  
  實作`ID_FILE_OPEN`命令。  
   
 ```  
@@ -1263,7 +1356,7 @@ afx_msg void OnFileOpen();
   
  [!code-cpp[NVC_MFCWindowing #&50;](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
-##  <a name="a-nameonfileprintsetupa--cwinapponfileprintsetup"></a><a name="onfileprintsetup"></a>CWinApp::OnFilePrintSetup  
+##  <a name="onfileprintsetup"></a>CWinApp::OnFilePrintSetup  
  實作**ID_FILE_PRINT_SETUP**命令。  
   
 ```  
@@ -1280,7 +1373,7 @@ afx_msg void OnFilePrintSetup();
   
  [!code-cpp[NVC_MFCWindowing #&50;](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]  
   
-##  <a name="a-nameonhelpa--cwinapponhelp"></a><a name="onhelp"></a>CWinApp::OnHelp  
+##  <a name="onhelp"></a>CWinApp::OnHelp  
  在應用程式 (使用目前的內容) 中處理 F1 說明。  
   
 ```  
@@ -1296,7 +1389,7 @@ afx_msg void OnHelp();
   
  覆寫此成員函式設定項目 視窗、 對話方塊、 功能表項目或目前具有焦點的工具列按鈕以外的說明內容。 呼叫`WinHelp`與想要的說明內容識別碼。  
   
-##  <a name="a-nameonhelpfindera--cwinapponhelpfinder"></a><a name="onhelpfinder"></a>CWinApp::OnHelpFinder  
+##  <a name="onhelpfinder"></a>CWinApp::OnHelpFinder  
  處理**ID_HELP_FINDER**和**ID_DEFAULT_HELP**命令。  
   
 ```  
@@ -1306,7 +1399,7 @@ afx_msg void OnHelpFinder();
 ### <a name="remarks"></a>備註  
  您必須新增`ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )`陳述式，以您`CWinApp`類別訊息對應，若要啟用此成員函式。 如果啟用，架構會呼叫此訊息處理常式函式的應用程式在使用者選取協助搜尋命令，以叫用時`WinHelp`標準**HELP_FINDER**主題。  
   
-##  <a name="a-nameonhelpindexa--cwinapponhelpindex"></a><a name="onhelpindex"></a>CWinApp::OnHelpIndex  
+##  <a name="onhelpindex"></a>CWinApp::OnHelpIndex  
  處理**ID_HELP_INDEX**命令，並提供預設說明主題。  
   
 ```  
@@ -1316,7 +1409,7 @@ afx_msg void OnHelpIndex();
 ### <a name="remarks"></a>備註  
  您必須新增`ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )`陳述式，以您`CWinApp`類別訊息對應，若要啟用此成員函式。 如果啟用，架構會呼叫此訊息處理常式函式的應用程式在使用者選取說明索引命令，以叫用時`WinHelp`標準**HELP_INDEX**主題。  
   
-##  <a name="a-nameonhelpusinga--cwinapponhelpusing"></a><a name="onhelpusing"></a>CWinApp::OnHelpUsing  
+##  <a name="onhelpusing"></a>CWinApp::OnHelpUsing  
  處理**ID_HELP_USING**命令。  
   
 ```  
@@ -1326,7 +1419,7 @@ afx_msg void OnHelpUsing();
 ### <a name="remarks"></a>備註  
  您必須新增`ON_COMMAND( ID_HELP_USING, OnHelpUsing )`陳述式，以您`CWinApp`類別訊息對應，若要啟用此成員函式。 當應用程式的使用者選取說明使用的命令，以叫用時，架構會呼叫此訊息處理常式函式`WinHelp`應用程式與標準**HELP_HELPONHELP**主題。  
   
-##  <a name="a-nameonidlea--cwinapponidle"></a><a name="onidle"></a>CWinApp::OnIdle  
+##  <a name="onidle"></a>CWinApp::OnIdle  
  覆寫此成員函式，以執行閒置時間處理。  
   
 ```  
@@ -1367,7 +1460,7 @@ virtual BOOL OnIdle(LONG lCount);
   
  [!code-cpp[NVC_MFCWindowing #&51;](../../mfc/reference/codesnippet/cpp/cwinapp-class_27.cpp)]  
   
-##  <a name="a-nameopendocumentfilea--cwinappopendocumentfile"></a><a name="opendocumentfile"></a>CWinApp::OpenDocumentFile  
+##  <a name="opendocumentfile"></a>CWinApp::OpenDocumentFile  
  架構會呼叫這個方法，以開啟具名[CDocument](../../mfc/reference/cdocument-class.md)應用程式檔案。  
   
 ```  
@@ -1392,7 +1485,7 @@ BOOL bAddToMRU = TRUE);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&52;](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]  
   
-##  <a name="a-nameparsecommandlinea--cwinappparsecommandline"></a><a name="parsecommandline"></a>CWinApp::ParseCommandLine  
+##  <a name="parsecommandline"></a>CWinApp::ParseCommandLine  
  呼叫此成員函式，來剖析命令列並將傳送一次的參數給[CCommandLineInfo::ParseParam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)。  
   
 ```  
@@ -1418,7 +1511,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
   
  如需命令列的旗標的說明，請參閱[CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)。  
   
-##  <a name="a-namepretranslatemessagea--cwinapppretranslatemessage"></a><a name="pretranslatemessage"></a>CWinApp::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CWinApp::PreTranslateMessage  
  覆寫這個函式來篩選視窗訊息，再分派這些 Windows 函式[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)的預設實作會執行對應鍵轉譯，因此您必須呼叫`CWinApp::PreTranslateMessage`成員函式的覆寫版本。  
   
 ```  
@@ -1432,7 +1525,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="return-value"></a>傳回值  
  如果在完全處理訊息為非零`PreTranslateMessage`，不應進一步處理。 如果應該以一般方式處理訊息，則為零。  
   
-##  <a name="a-nameprocessmessagefiltera--cwinappprocessmessagefilter"></a><a name="processmessagefilter"></a>CWinApp::ProcessMessageFilter  
+##  <a name="processmessagefilter"></a>CWinApp::ProcessMessageFilter  
  架構的攔截函式會呼叫此成員函式，來篩選及回應特定 Windows 訊息。  
   
 ```  
@@ -1456,7 +1549,7 @@ virtual BOOL ProcessMessageFilter(
   
  如果您覆寫這項進階的功能，請務必呼叫基底類別版本來維護架構的攔截 (hook) 處理。  
   
-##  <a name="a-nameprocessshellcommanda--cwinappprocessshellcommand"></a><a name="processshellcommand"></a>CWinApp::ProcessShellCommand  
+##  <a name="processshellcommand"></a>CWinApp::ProcessShellCommand  
  此成員函式會呼叫[InitInstance](#initinstance)接受從傳遞的參數`CCommandLineInfo`所識別的物件`rCmdInfo`，並執行指定的動作。  
   
 ```  
@@ -1499,7 +1592,7 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
   
  如需每個這些值的簡短說明，請參閱`CCommandLineInfo::m_nShellCommand`。  
   
-##  <a name="a-nameprocesswndprocexceptiona--cwinappprocesswndprocexception"></a><a name="processwndprocexception"></a>CWinApp::ProcessWndProcException  
+##  <a name="processwndprocexception"></a>CWinApp::ProcessWndProcException  
  每當處理常式不會攔截在一個應用程式的訊息或命令處理常式中擲回例外狀況時，架構會呼叫此成員函式。  
   
 ```  
@@ -1525,7 +1618,7 @@ virtual LRESULT ProcessWndProcException(
   
  若要提供您的例外狀況的通用處理此成員函式會覆寫。 如果您想要顯示訊息方塊，才可以呼叫的基本功能。  
   
-##  <a name="a-nameregistera--cwinappregister"></a><a name="register"></a>CWinApp::Register  
+##  <a name="register"></a>CWinApp::Register  
  執行任何註冊的工作不是由`RegisterShellFileTypes`。  
   
 ```  
@@ -1538,7 +1631,7 @@ virtual BOOL Register();
 ### <a name="remarks"></a>備註  
  預設實作只會傳回 TRUE。 覆寫此函式可提供任何自訂的註冊步驟。  
   
-##  <a name="a-nameregistershellfiletypesa--cwinappregistershellfiletypes"></a><a name="registershellfiletypes"></a>CWinApp::RegisterShellFileTypes  
+##  <a name="registershellfiletypes"></a>CWinApp::RegisterShellFileTypes  
  呼叫此成員函式可註冊您的應用程式的文件類型的所有使用 Windows 檔案管理員。  
   
 ```  
@@ -1559,7 +1652,7 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
   
  如果註冊資料庫已經將指定的副檔名與其他檔案類型相關聯，則會不建立任何新的關聯。 請參閱`CDocTemplate`格式的字串註冊這項資訊所需的類別。  
   
-##  <a name="a-nameregisterwithrestartmanagera--cwinappregisterwithrestartmanager"></a><a name="registerwithrestartmanager"></a>CWinApp::RegisterWithRestartManager  
+##  <a name="registerwithrestartmanager"></a>CWinApp::RegisterWithRestartManager  
  重新啟動管理員會向應用程式。  
   
 ```  
@@ -1613,7 +1706,7 @@ DWORD dwCallbackFlags);
   
 - `RESTART_NO_REBOOT`  
   
-##  <a name="a-namereopenpreviousfilesatrestarta--cwinappreopenpreviousfilesatrestart"></a><a name="reopenpreviousfilesatrestart"></a>CWinApp::ReopenPreviousFilesAtRestart  
+##  <a name="reopenpreviousfilesatrestart"></a>CWinApp::ReopenPreviousFilesAtRestart  
  決定是否重新啟動管理員會重新開啟應用程式意外結束時未開啟的檔案。  
   
 ```  
@@ -1623,7 +1716,7 @@ virtual BOOL ReopenPreviousFilesAtRestart() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`指出重新啟動管理員再次開啟先前開啟的檔案。`FALSE`表示並不會重新啟動管理員。  
   
-##  <a name="a-namerestartinstancea--cwinapprestartinstance"></a><a name="restartinstance"></a>CWinApp::RestartInstance  
+##  <a name="restartinstance"></a>CWinApp::RestartInstance  
  處理重新啟動應用程式重新啟動管理員所起始。  
   
 ```  
@@ -1638,7 +1731,7 @@ virtual BOOL CWinApp::RestartInstance();
   
  這個方法會傳回`FALSE`如果[CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md)判斷已開啟的文件。 如果沒有任何開啟的文件，在應用程式通常啟動。  
   
-##  <a name="a-namerestoreautosavedfilesatrestarta--cwinapprestoreautosavedfilesatrestart"></a><a name="restoreautosavedfilesatrestart"></a>CWinApp::RestoreAutosavedFilesAtRestart  
+##  <a name="restoreautosavedfilesatrestart"></a>CWinApp::RestoreAutosavedFilesAtRestart  
  決定是否重新啟動管理員重新啟動應用程式時還原 autosaved 檔案。  
   
 ```  
@@ -1648,7 +1741,7 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`指出重新啟動管理員還原 autosaved 檔案;`FALSE`表示並不會重新啟動管理員。  
   
-##  <a name="a-nameruna--cwinapprun"></a><a name="run"></a>Cwinapp:: Run  
+##  <a name="run"></a>Cwinapp:: Run  
  提供預設訊息迴圈。  
   
 ```  
@@ -1663,7 +1756,7 @@ virtual int Run();
   
  **執行**幾乎不覆寫，但是您可以覆寫它，以便提供特殊行為。  
   
-##  <a name="a-namerunautomateda--cwinapprunautomated"></a><a name="runautomated"></a>CWinApp::RunAutomated  
+##  <a name="runautomated"></a>CWinApp::RunAutomated  
  呼叫此函式來判斷是否 「 **/Automation**「 或 」 **-自動化**」 選項已存在，表示用戶端應用程式是否已啟動伺服器應用程式。  
   
 ```  
@@ -1676,7 +1769,7 @@ BOOL RunAutomated();
 ### <a name="remarks"></a>備註  
  如果有的話，是從命令列移除的選項。 如需有關 OLE Automation 的詳細資訊，請參閱文章[Automation 伺服程式](../../mfc/automation-servers.md)。  
   
-##  <a name="a-namerunembeddeda--cwinapprunembedded"></a><a name="runembedded"></a>CWinApp::RunEmbedded  
+##  <a name="runembedded"></a>CWinApp::RunEmbedded  
  呼叫此函式來判斷是否 「 **/內嵌**「 或 」 **-內嵌**」 選項已存在，表示用戶端應用程式是否已啟動伺服器應用程式。  
   
 ```  
@@ -1689,7 +1782,7 @@ BOOL RunEmbedded();
 ### <a name="remarks"></a>備註  
  如果有的話，是從命令列移除的選項。 如需有關內嵌的詳細資訊，請參閱文章[伺服器︰ 實作伺服器](../../mfc/servers-implementing-a-server.md)。  
   
-##  <a name="a-namesaveallmodifieda--cwinappsaveallmodified"></a><a name="saveallmodified"></a>CWinApp::SaveAllModified  
+##  <a name="saveallmodified"></a>CWinApp::SaveAllModified  
  由架構呼叫儲存所有文件時應用程式的主框架視窗會關閉，或透過`WM_QUERYENDSESSION`訊息。  
   
 ```  
@@ -1702,7 +1795,7 @@ virtual BOOL SaveAllModified();
 ### <a name="remarks"></a>備註  
  此成員函式的預設實作會呼叫[CDocument::SaveModified](../../mfc/reference/cdocument-class.md#savemodified)序的應用程式中所有修改過的文件的成員函式。  
   
-##  <a name="a-nameselectprintera--cwinappselectprinter"></a><a name="selectprinter"></a>CWinApp::SelectPrinter  
+##  <a name="selectprinter"></a>CWinApp::SelectPrinter  
  呼叫此成員函式，以選取特定的印表機，並釋放先前在 [列印] 對話方塊中選取的印表機。  
   
 ```  
@@ -1725,7 +1818,7 @@ void SelectPrinter(
 ### <a name="remarks"></a>備註  
  如果兩個`hDevMode`和`hDevNames`是**NULL**，`SelectPrinter`會使用目前的預設印表機。  
   
-##  <a name="a-namesethelpmodea--cwinappsethelpmode"></a><a name="sethelpmode"></a>CWinApp::SetHelpMode  
+##  <a name="sethelpmode"></a>CWinApp::SetHelpMode  
  設定應用程式的說明類型。  
   
 ```  
@@ -1741,7 +1834,7 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
   
  若要設定 HTMLHelp 您的應用程式類型，您可以呼叫[EnableHTMLHelp](#enablehtmlhelp)。 一旦您呼叫`EnableHTMLHelp`，應用程式必須使用 HTMLHelp 作為其說明應用程式。 如果您想要使用 WinHelp 變更，您可以呼叫`SetHelpMode`，並設定`eHelpType`至**afxWinHelp**。  
   
-##  <a name="a-namesetregistrykeya--cwinappsetregistrykey"></a><a name="setregistrykey"></a>CWinApp::SetRegistryKey  
+##  <a name="setregistrykey"></a>CWinApp::SetRegistryKey  
  會儲存在登錄中，而不是 INI 檔案的應用程式設定。  
   
 ```  
@@ -1759,7 +1852,7 @@ void SetRegistryKey(UINT nIDRegistryKey);
 ### <a name="remarks"></a>備註  
  此函式會將*m_pszRegistryKey*，然後由`GetProfileInt`， `GetProfileString`， `WriteProfileInt`，和`WriteProfileString`的成員函式`CWinApp`。 如果已經呼叫此函式，最最近使用 (過 MRU) 檔案的清單也會儲存在登錄中。 登錄機碼通常是公司的名稱。 它會儲存在下列形式的索引鍵︰ HKEY_CURRENT_USER\Software\\<company></company>\>\\<application></application>\>\\<section></section>\>\\<value></value>\>。  
   
-##  <a name="a-namesupportsapplicationrecoverya--cwinappsupportsapplicationrecovery"></a><a name="supportsapplicationrecovery"></a>CWinApp::SupportsApplicationRecovery  
+##  <a name="supportsapplicationrecovery"></a>CWinApp::SupportsApplicationRecovery  
  決定是否重新啟動管理員復原意外結束的應用程式。  
   
 ```  
@@ -1769,7 +1862,7 @@ virtual BOOL SupportsApplicationRecovery() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`指出重新啟動管理員復原應用程式。`FALSE`表示並不會重新啟動管理員。  
   
-##  <a name="a-namesupportsautosaveatintervala--cwinappsupportsautosaveatinterval"></a><a name="supportsautosaveatinterval"></a>CWinApp::SupportsAutosaveAtInterval  
+##  <a name="supportsautosaveatinterval"></a>CWinApp::SupportsAutosaveAtInterval  
  決定是否重新啟動管理員時，自動儲存開啟的文件以固定間隔。  
   
 ```  
@@ -1779,7 +1872,7 @@ virtual BOOL SupportsAutosaveAtInterval() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`指出重新啟動管理員時，自動儲存開啟的文件。`FALSE`表示並不會重新啟動管理員。  
   
-##  <a name="a-namesupportsautosaveatrestarta--cwinappsupportsautosaveatrestart"></a><a name="supportsautosaveatrestart"></a>CWinApp::SupportsAutosaveAtRestart  
+##  <a name="supportsautosaveatrestart"></a>CWinApp::SupportsAutosaveAtRestart  
  決定是否重新啟動管理員時，自動儲存所有開啟的文件的應用程式重新啟動時。  
   
 ```  
@@ -1789,7 +1882,7 @@ virtual BOOL SupportsAutosaveAtRestart() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`指出重新啟動管理員時，自動儲存開啟的文件，當應用程式重新啟動。`FALSE`表示並不會重新啟動管理員。  
   
-##  <a name="a-namesupportsrestartmanagera--cwinappsupportsrestartmanager"></a><a name="supportsrestartmanager"></a>CWinApp::SupportsRestartManager  
+##  <a name="supportsrestartmanager"></a>CWinApp::SupportsRestartManager  
  判斷應用程式是否支援重新啟動管理員。  
   
 ```  
@@ -1799,7 +1892,7 @@ virtual BOOL SupportsRestartManager() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`指出應用程式支援的重新啟動管理員。`FALSE`表示應用程式並不會。  
   
-##  <a name="a-nameunregistera--cwinappunregister"></a><a name="unregister"></a>CWinApp::Unregister  
+##  <a name="unregister"></a>CWinApp::Unregister  
  取消註冊已註冊的應用程式物件的所有檔案。  
   
 ```  
@@ -1814,14 +1907,14 @@ virtual BOOL Unregister();
   
  覆寫這個函式來執行自訂取消註冊步驟。  
   
-##  <a name="a-nameunregistershellfiletypesa--cwinappunregistershellfiletypes"></a><a name="unregistershellfiletypes"></a>CWinApp::UnregisterShellFileTypes  
+##  <a name="unregistershellfiletypes"></a>CWinApp::UnregisterShellFileTypes  
  呼叫此成員函式取消登錄所有的應用程式的文件類型與 Windows 檔案管理員。  
   
 ```  
 void UnregisterShellFileTypes();
 ```  
   
-##  <a name="a-namewinhelpa--cwinappwinhelp"></a><a name="winhelp"></a>CWinApp::WinHelp  
+##  <a name="winhelp"></a>CWinApp::WinHelp  
  呼叫此成員函式叫用 WinHelp 的應用程式。  
   
 ```  
@@ -1845,7 +1938,7 @@ virtual void WinHelp(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&53;](../../mfc/reference/codesnippet/cpp/cwinapp-class_28.cpp)]  
   
-##  <a name="a-namewriteprofilebinarya--cwinappwriteprofilebinary"></a><a name="writeprofilebinary"></a>CWinApp::WriteProfileBinary  
+##  <a name="writeprofilebinary"></a>CWinApp::WriteProfileBinary  
  呼叫此成員函式的指定區段中的應用程式的登錄寫入二進位資料或。INI 檔案。  
   
 ```  
@@ -1879,7 +1972,7 @@ BOOL WriteProfileBinary(
   
  如需其他範例，請參閱範例[CWinApp::GetProfileBinary](#getprofilebinary)。  
   
-##  <a name="a-namewriteprofileinta--cwinappwriteprofileint"></a><a name="writeprofileint"></a>Cwinapp:: Writeprofileint  
+##  <a name="writeprofileint"></a>Cwinapp:: Writeprofileint  
  呼叫此成員函式的指定區段中的應用程式的登錄寫入指定的值或。INI 檔案。  
   
 ```  
@@ -1909,7 +2002,7 @@ BOOL WriteProfileInt(
   
  如需其他範例，請參閱範例[CWinApp::GetProfileInt](#getprofileint)。  
   
-##  <a name="a-namewriteprofilestringa--cwinappwriteprofilestring"></a><a name="writeprofilestring"></a>CWinApp::WriteProfileString  
+##  <a name="writeprofilestring"></a>CWinApp::WriteProfileString  
  呼叫此成員函式，將指定的字串寫入應用程式的登錄中的指定區段或。INI 檔案。  
   
 ```  
@@ -1937,7 +2030,7 @@ BOOL WriteProfileString(
   
  如需其他範例，請參閱範例[CWinApp::GetProfileInt](#getprofileint)。  
   
-##  <a name="a-namesetappida--cwinappsetappid"></a><a name="setappid"></a>CWinApp::SetAppID  
+##  <a name="setappid"></a>CWinApp::SetAppID  
  明確地設定應用程式的應用程式使用者的模型識別碼。 任何使用者介面呈現給使用者 （最好是應用程式建構函式） 之前，應該呼叫這個方法。  
   
 ```  

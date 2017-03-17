@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMonikerFile
+- AFXOLE/CMonikerFile
+- AFXOLE/CMonikerFile::CMonikerFile
+- AFXOLE/CMonikerFile::Close
+- AFXOLE/CMonikerFile::Detach
+- AFXOLE/CMonikerFile::GetMoniker
+- AFXOLE/CMonikerFile::Open
+- AFXOLE/CMonikerFile::CreateBindContext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +102,7 @@ class CMonikerFile : public COleStreamFile
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-nameclosea--cmonikerfileclose"></a><a name="close"></a>CMonikerFile::Close  
+##  <a name="close"></a>CMonikerFile::Close  
  呼叫此函式來卸離，並釋放資料流和釋放 moniker。  
   
 ```  
@@ -105,14 +112,14 @@ virtual void Close();
 ### <a name="remarks"></a>備註  
  可以在未開啟或已關閉資料流上呼叫。  
   
-##  <a name="a-namecmonikerfilea--cmonikerfilecmonikerfile"></a><a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
+##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
  建構 `CMonikerFile` 物件。  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="a-namecreatebindcontexta--cmonikerfilecreatebindcontext"></a><a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
+##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
  呼叫此函式建立預設值初始化繫結內容。  
   
 ```  
@@ -129,7 +136,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 ### <a name="remarks"></a>備註  
  繫結內容是儲存特定 moniker 繫結作業的相關資訊的物件。 您可以覆寫此函式可提供自訂的繫結內容。  
   
-##  <a name="a-namedetacha--cmonikerfiledetach"></a><a name="detach"></a>CMonikerFile::Detach  
+##  <a name="detach"></a>CMonikerFile::Detach  
  呼叫此函式來關閉資料流。  
   
 ```  
@@ -143,7 +150,7 @@ BOOL Detach(CFileException* pError = NULL);
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="a-namegetmonikera--cmonikerfilegetmoniker"></a><a name="getmoniker"></a>CMonikerFile::GetMoniker  
+##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
  呼叫此函式可擷取目前 moniker 的指標。  
   
 ```  
@@ -156,7 +163,7 @@ IMoniker* GetMoniker() const;
 ### <a name="remarks"></a>備註  
  由於`CMonikerFile`不是介面，傳回的指標，不會遞增參考計數 (透過[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))，且放開 moniker 時`CMonikerFile`釋放物件。 如果您想要保留 moniker 或自行發行，您必須`AddRef`它。  
   
-##  <a name="a-nameopena--cmonikerfileopen"></a><a name="open"></a>CMonikerFile::Open  
+##  <a name="open"></a>CMonikerFile::Open  
  呼叫此成員函式，以開啟檔案或 moniker 物件。  
   
 ```  

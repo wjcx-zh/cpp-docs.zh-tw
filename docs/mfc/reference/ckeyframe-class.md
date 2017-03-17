@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CKeyFrame
 - CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::CKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboard
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAfterTransition
+- AFXANIMATIONCONTROLLER/CKeyFrame::AddToStoryboardAtOffset
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetExistingKeyframe
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetOffset
+- AFXANIMATIONCONTROLLER/CKeyFrame::GetTransition
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_offset
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_pExistingKeyFrame
+- AFXANIMATIONCONTROLLER/CKeyFrame::m_pTransition
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +99,7 @@ class CKeyFrame : public CBaseKeyFrame;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtostoryboarda--ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
  將主要畫面格加入至分鏡腳本。  
   
 ```  
@@ -111,7 +121,7 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>備註  
  這個方法會加入至分鏡腳本主要畫面格。 如果它相依於其他主要畫面格或轉換 bDeepAdd 為 TRUE，這個方法會嘗試以遞迴方式加入。  
   
-##  <a name="a-nameaddtostoryboardaftertransitiona--ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
+##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
  加入分鏡腳本完成轉換之後的主要畫面格。  
   
 ```  
@@ -133,7 +143,7 @@ BOOL AddToStoryboardAfterTransition(
 ### <a name="remarks"></a>備註  
  架構以新增主要畫面格分鏡腳本完成轉換之後會呼叫此函式。  
   
-##  <a name="a-nameaddtostoryboardatoffseta--ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
+##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
  加入主要畫面格位移分鏡腳本。  
   
 ```  
@@ -155,7 +165,7 @@ virtual BOOL AddToStoryboardAtOffset(
 ### <a name="remarks"></a>備註  
  此函式會呼叫架構以新增至腳本位移主要畫面格。  
   
-##  <a name="a-nameckeyframea--ckeyframeckeyframe"></a><a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
+##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
  建構取決於轉換的主要畫面格。  
   
 ```  
@@ -180,7 +190,7 @@ CKeyFrame(
 ### <a name="remarks"></a>備註  
  指定的轉換結束時，建構的主要畫面格會呈現在腳本內的時間點。  
   
-##  <a name="a-namegetexistingkeyframea--ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
+##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
  傳回這個主要畫面格取決於主要畫面格的指標。  
   
 ```  
@@ -193,7 +203,7 @@ CBaseKeyFrame* GetExistingKeyframe();
 ### <a name="remarks"></a>備註  
  這是取決於此主要畫面格的主要畫面格的存取子。  
   
-##  <a name="a-namegetoffseta--ckeyframegetoffset"></a><a name="getoffset"></a>CKeyFrame::GetOffset  
+##  <a name="getoffset"></a>CKeyFrame::GetOffset  
  傳回從其他主要畫面格的位移。  
   
 ```  
@@ -206,7 +216,7 @@ UI_ANIMATION_SECONDS GetOffset();
 ### <a name="remarks"></a>備註  
  若要判斷位移 （秒） 從其他主要畫面格，應該呼叫這個方法。  
   
-##  <a name="a-namegettransitiona--ckeyframegettransition"></a><a name="gettransition"></a>CKeyFrame::GetTransition  
+##  <a name="gettransition"></a>CKeyFrame::GetTransition  
  傳回的指標轉換，取決於此主要畫面格。  
   
 ```  
@@ -219,21 +229,21 @@ CBaseTransition* GetTransition();
 ### <a name="remarks"></a>備註  
  這是轉換，取決於此主要畫面格的存取子。  
   
-##  <a name="a-namemoffseta--ckeyframemoffset"></a><a name="m_offset"></a>CKeyFrame::m_offset  
+##  <a name="m_offset"></a>CKeyFrame::m_offset  
  指定從主要畫面格 m_pExistingKeyFrame 中儲存此主要畫面格的位移。  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="a-namempexistingkeyframea--ckeyframempexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
+##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
  儲存至現有的 keframe 的指標。 此主要畫面格加入與現有的主要畫面格 m_offset 分鏡腳本。  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="a-namemptransitiona--ckeyframemptransition"></a><a name="m_ptransition"></a>CKeyFrame::m_pTransition  
+##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
  儲存的指標來開始這個主要畫面格的轉換。  
   
 ```  

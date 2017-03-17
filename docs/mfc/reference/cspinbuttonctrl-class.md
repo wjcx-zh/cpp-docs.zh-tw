@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::CSpinButtonCtrl
+- AFXCMN/CSpinButtonCtrl::Create
+- AFXCMN/CSpinButtonCtrl::CreateEx
+- AFXCMN/CSpinButtonCtrl::GetAccel
+- AFXCMN/CSpinButtonCtrl::GetBase
+- AFXCMN/CSpinButtonCtrl::GetBuddy
+- AFXCMN/CSpinButtonCtrl::GetPos
+- AFXCMN/CSpinButtonCtrl::GetRange
+- AFXCMN/CSpinButtonCtrl::SetAccel
+- AFXCMN/CSpinButtonCtrl::SetBase
+- AFXCMN/CSpinButtonCtrl::SetBuddy
+- AFXCMN/CSpinButtonCtrl::SetPos
+- AFXCMN/CSpinButtonCtrl::SetRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +116,7 @@ class CSpinButtonCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="a-namecreatea--cspinbuttonctrlcreate"></a><a name="create"></a>CSpinButtonCtrl::Create  
+##  <a name="create"></a>CSpinButtonCtrl::Create  
  建立使用微調按鈕控制項並將它附加`CSpinButtonCtrl`物件...  
   
 ```  
@@ -134,7 +148,7 @@ virtual BOOL Create(
   
  若要建立延伸的視窗樣式微調按鈕控制項，呼叫[CSpinButtonCtrl::CreateEx](#createex)而不是**建立**。  
   
-##  <a name="a-namecreateexa--cspinbuttonctrlcreateex"></a><a name="createex"></a>CSpinButtonCtrl::CreateEx  
+##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CSpinButtonCtrl`物件。  
   
 ```  
@@ -168,14 +182,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，指定 Windows 延伸的樣式序言**WS_EX_**。  
   
-##  <a name="a-namecspinbuttonctrla--cspinbuttonctrlcspinbuttonctrl"></a><a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
+##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
  建構 `CSpinButtonCtrl` 物件。  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="a-namegetaccela--cspinbuttonctrlgetaccel"></a><a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
+##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
  擷取加速微調按鈕控制項的資訊。  
   
 ```  
@@ -194,7 +208,7 @@ UINT GetAccel(
 ### <a name="return-value"></a>傳回值  
  擷取對應的結構數目。  
   
-##  <a name="a-namegetbasea--cspinbuttonctrlgetbase"></a><a name="getbase"></a>CSpinButtonCtrl::GetBase  
+##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
  擷取目前的基底的微調按鈕控制項。  
   
 ```  
@@ -204,7 +218,7 @@ UINT GetBase() const;
 ### <a name="return-value"></a>傳回值  
  目前的基底值。  
   
-##  <a name="a-namegetbuddya--cspinbuttonctrlgetbuddy"></a><a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
+##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
  擷取目前的協同視窗的指標。  
   
 ```  
@@ -214,7 +228,7 @@ CWnd* GetBuddy() const;
 ### <a name="return-value"></a>傳回值  
  目前的協同視窗的指標。  
   
-##  <a name="a-namegetposa--cspinbuttonctrlgetpos"></a><a name="getpos"></a>CSpinButtonCtrl::GetPos  
+##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
  擷取目前的微調按鈕控制項的位置。  
   
 ```  

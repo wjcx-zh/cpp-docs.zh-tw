@@ -9,11 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CWorkerThread<ThreadTraits>
-- ATL::CWorkerThread
-- ATL.CWorkerThread
-- ATL.CWorkerThread<ThreadTraits>
 - CWorkerThread
+- ATLUTIL/ATL::CWorkerThread
+- ATLUTIL/ATL::CWorkerThread::CWorkerThread
+- ATLUTIL/ATL::CWorkerThread::AddHandle
+- ATLUTIL/ATL::CWorkerThread::AddTimer
+- ATLUTIL/ATL::CWorkerThread::GetThreadHandle
+- ATLUTIL/ATL::CWorkerThread::GetThreadId
+- ATLUTIL/ATL::CWorkerThread::Initialize
+- ATLUTIL/ATL::CWorkerThread::RemoveHandle
+- ATLUTIL/ATL::CWorkerThread::Shutdown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +115,7 @@ class CWorkerThread
 ## <a name="requirements"></a>需求  
  **標頭︰** atlutil.h  
   
-##  <a name="a-nameaddhandlea--cworkerthreadaddhandle"></a><a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>CWorkerThread::AddHandle  
  呼叫這個方法將可等候物件控制代碼加入至背景工作執行緒所維護的清單。  
   
 ```
@@ -136,7 +141,7 @@ HRESULT AddHandle(
 ### <a name="remarks"></a>備註  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)會透過呼叫`pClient`時控制代碼， `hObject`，收到信號。  
   
-##  <a name="a-nameaddtimera--cworkerthreadaddtimer"></a><a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>CWorkerThread::AddTimer  
  呼叫這個方法，以將定期可等候計時器加入至背景工作執行緒所維護的清單。  
   
 ```
@@ -168,14 +173,14 @@ HRESULT AddTimer(
   
  將傳遞計時器控點距離`phTimer`至[CWorkerThread::RemoveHandle](#removehandle)關閉計時器。  
   
-##  <a name="a-namecworkerthreada--cworkerthreadcworkerthread"></a><a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
  建構函式。  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="a-namedtora--cworkerthreadcworkerthread"></a><a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
  解構函式。  
   
 ```
@@ -185,7 +190,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>備註  
  呼叫[CWorkerThread::Shutdown](#shutdown)。  
   
-##  <a name="a-namegetthreadhandlea--cworkerthreadgetthreadhandle"></a><a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
  呼叫這個方法來取得工作者執行緒的執行緒控制代碼。  
   
 ```
@@ -195,7 +200,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>傳回值  
  如果尚未初始化背景工作執行緒會傳回執行緒控制代碼則為 NULL。  
   
-##  <a name="a-namegetthreadida--cworkerthreadgetthreadid"></a><a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
  呼叫這個方法來取得工作者執行緒的執行緒識別碼。  
   
 ```
@@ -205,7 +210,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>傳回值  
  如果尚未初始化背景工作執行緒會傳回執行緒識別碼或 NULL。  
   
-##  <a name="a-nameinitializea--cworkerthreadinitialize"></a><a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>CWorkerThread::Initialize  
  呼叫此方法以初始化背景工作執行緒。  
   
 ```
@@ -228,7 +233,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  請參閱[CWorkerThread::Shutdown](#shutdown)上使用的現有物件的指標初始化時，該方法的行為如何變更的資訊。  
   
-##  <a name="a-nameremovehandlea--cworkerthreadremovehandle"></a><a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
  呼叫此方法以移除可等候物件的清單中的控制代碼。  
   
 ```
@@ -245,7 +250,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>備註  
  移除控制代碼時[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)將傳遞至相關聯物件上呼叫[AddHandle](#addhandle)。 如果這個呼叫失敗，`CWorkerThread`會呼叫 Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)函式的控制碼。  
   
-##  <a name="a-nameshutdowna--cworkerthreadshutdown"></a><a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>CWorkerThread::Shutdown  
  呼叫這個方法，以關閉背景工作執行緒。  
   
 ```

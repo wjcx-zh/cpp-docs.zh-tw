@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
+- AFXDB/CFieldExchange
+- AFXDB/CFieldExchange::IsFieldType
+- AFXDB/CFieldExchange::SetFieldType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +92,7 @@ class CFieldExchange
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
   
-##  <a name="a-nameisfieldtypea--cfieldexchangeisfieldtype"></a><a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
  如果您撰寫您自己的 RFX 函式，呼叫`IsFieldType`您若要判斷目前的作業是否可對特定欄位或參數資料成員類型的函式的開頭 ( **CFieldExchange::outputColumn**， **CFieldExchange::inputParam**， **CFieldExchange::param**， **CFieldExchange::outputParam**，或**CFieldExchange::inoutParam**)。  
   
 ```  
@@ -106,7 +109,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>備註  
  遵循現有的 RFX 函式的模型。  
   
-##  <a name="a-namesetfieldtypea--cfieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
  您必須呼叫`SetFieldType`在資料錄集類別的[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)覆寫。  
   
 ```  

@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::CMFCToolBarFontComboBox
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::GetFontDesc
+- AFXTOOLBARFONTCOMBOBOX/CMFCToolBarFontComboBox::SetFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtoolbarfontcombobox.h  
   
-##  <a name="a-namecmfctoolbarfontcomboboxa--cmfctoolbarfontcomboboxcmfctoolbarfontcombobox"></a><a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  建構[CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)物件。  
   
 ```  
@@ -158,7 +162,7 @@ CMFCToolBarFontComboBox();
   
  [!code-cpp[NVC_MFC_WordPad #&7;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="a-namegetfontdesca--cmfctoolbarfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
  傳回的指標`CMFCFontInfo`下拉式方塊中指定之索引的物件。  
   
 ```  
@@ -172,7 +176,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>傳回值  
  指標`CMFCFontInfo`物件。 如果`iIndex`未指定有效的項目索引，則傳回值是`NULL`。  
   
-##  <a name="a-namemnfontheighta--cmfctoolbarfontcomboboxmnfontheight"></a><a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
  指定高度，單位為像素下拉式方塊的擁有者繪製樣式的字型下拉式方塊中的字元。  
   
 ```  
@@ -182,7 +186,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>備註  
  如果`m_nFontHeight`變數是 0，則根據下拉式方塊的預設字型自動計算高度。 高度同時包含的基準上方字元高度和深度的基準線下方的字元。  
   
-##  <a name="a-namesetfonta--cmfctoolbarfontcomboboxsetfont"></a><a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
  選取的字型名稱與字元字型下拉式方塊中的字型設定的參數中指定。  
   
 ```  

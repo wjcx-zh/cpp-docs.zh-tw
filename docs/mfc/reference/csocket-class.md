@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSocket
+- AFXSOCK/CSocket
+- AFXSOCK/CSocket::CSocket
+- AFXSOCK/CSocket::Attach
+- AFXSOCK/CSocket::CancelBlockingCall
+- AFXSOCK/CSocket::Create
+- AFXSOCK/CSocket::FromHandle
+- AFXSOCK/CSocket::IsBlocking
+- AFXSOCK/CSocket::OnMessagePending
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +113,7 @@ class CSocket : public CAsyncSocket
 ## <a name="requirements"></a>需求  
  **標頭︰** afxsock.h  
   
-##  <a name="a-nameattacha--csocketattach"></a><a name="attach"></a>CSocket::Attach  
+##  <a name="attach"></a>CSocket::Attach  
  呼叫此成員函式附加`hSocket`的控制代碼`CSocket`物件。  
   
 ```  
@@ -131,7 +139,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread #&3;](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="a-namecancelblockingcalla--csocketcancelblockingcall"></a><a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
  呼叫此成員函式取消正在進行中的封鎖呼叫。  
   
 ```  
@@ -147,7 +155,7 @@ void CancelBlockingCall();
   
  如需詳細資訊，請參閱[Windows Sockets︰ 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="a-namecreatea--csocketcreate"></a><a name="create"></a>CSocket::Create  
+##  <a name="create"></a>CSocket::Create  
  呼叫**建立**之後建構建立 Windows 通訊端，並將它附加到通訊端物件的成員函式。  
   
 ```  
@@ -182,7 +190,7 @@ BOOL Create(
   
  如需資料流和資料包通訊端的詳細資訊，請參閱文章[Windows Sockets︰ 背景](../../mfc/windows-sockets-background.md)， [Windows Sockets︰ 連接埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)，和[Windows Sockets︰ 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="a-namecsocketa--csocketcsocket"></a><a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>CSocket::CSocket  
  建構 `CSocket` 物件。  
   
 ```  
@@ -194,7 +202,7 @@ CSocket();
   
  如需詳細資訊，請參閱[Windows Sockets︰ 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="a-namefromhandlea--csocketfromhandle"></a><a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>CSocket::FromHandle  
  若要將指標傳回`CSocket`物件。  
   
 ```  
@@ -213,7 +221,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  如需詳細資訊，請參閱[Windows Sockets︰ 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="a-nameisblockinga--csocketisblocking"></a><a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>CSocket::IsBlocking  
  呼叫此成員函式，來判斷是否封鎖的呼叫正在進行中。  
   
 ```  
@@ -226,7 +234,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[Windows Sockets︰ 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="a-nameonmessagependinga--csocketonmessagepending"></a><a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
  若要從 Windows 尋找特定的訊息，並在您的通訊端回應此成員函式會覆寫。  
   
 ```  

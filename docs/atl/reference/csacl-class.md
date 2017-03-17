@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSacl
-- ATL::CSacl
 - CSacl
+- ATLSECURITY/ATL::CSacl
+- ATLSECURITY/ATL::CSacl::CSacl
+- ATLSECURITY/ATL::CSacl::AddAuditAce
+- ATLSECURITY/ATL::CSacl::GetAceCount
+- ATLSECURITY/ATL::CSacl::RemoveAce
+- ATLSECURITY/ATL::CSacl::RemoveAllAces
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h  
   
-##  <a name="a-nameaddauditacea--csacladdauditace"></a><a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>CSacl::AddAuditAce  
  將稽核存取控制項目 (ACE) 加入至`CSacl`物件。  
   
 ```
@@ -145,7 +149,7 @@ bool AddAuditAce(
   
  請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可以在中設定各種旗標的描述`AceFlags`參數。  
   
-##  <a name="a-namecsacla--csaclcsacl"></a><a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>CSacl::CSacl  
  建構函式。  
   
 ```
@@ -160,7 +164,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>備註  
  `CSacl`物件，可選擇性地建立使用現有**ACL**結構。 請確定此參數是系統存取控制清單 (SACL) 並不是判別存取控制清單 (DACL)。 在偵錯組建中，如果未提供 DACL，則會發生判斷提示。 在發行組建 DACL 中的任何項目會被忽略。  
   
-##  <a name="a-namedtora--csaclcsacl"></a><a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>CSacl:: ~ CSacl  
  解構函式。  
   
 ```
@@ -170,7 +174,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>備註  
  解構函式會釋放物件，包括所有存取控制項目 (Ace) 來取得所有資源。  
   
-##  <a name="a-namegetacecounta--csaclgetacecount"></a><a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>CSacl::GetAceCount  
  在傳回的存取控制項目 (Ace) 數目`CSacl`物件。  
   
 ```
@@ -180,7 +184,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回的 Ace 中包含數字`CSacl`物件。  
   
-##  <a name="a-nameoperatoreqa--csacloperator-"></a><a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>CSacl::operator =  
  指派運算子。  
   
 ```
@@ -194,7 +198,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>傳回值  
  傳回參考更新的`CSacl`物件。 請確認**ACL**參數是實際系統存取控制清單 (SACL)，而不是判別存取控制清單 (DACL)。 在偵錯組建，就會發生判斷提示，並在發行組建**ACL**參數會被忽略。  
   
-##  <a name="a-nameremoveacea--csaclremoveace"></a><a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>CSacl::RemoveAce  
  移除特定的 ACE （存取控制的項目） **CSacl**物件。  
   
 ```
@@ -208,7 +212,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>備註  
  這個方法衍生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
-##  <a name="a-nameremoveallacesa--csaclremoveallaces"></a><a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
  移除所有存取控制項目 (Ace) 中包含`CSacl`物件。  
   
 ```

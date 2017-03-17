@@ -9,9 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CThreadPool
-- ATL::CThreadPool
 - CThreadPool
+- ATLUTIL/ATL::CThreadPool
+- ATLUTIL/ATL::CThreadPool::CThreadPool
+- ATLUTIL/ATL::CThreadPool::AddRef
+- ATLUTIL/ATL::CThreadPool::GetNumThreads
+- ATLUTIL/ATL::CThreadPool::GetQueueHandle
+- ATLUTIL/ATL::CThreadPool::GetSize
+- ATLUTIL/ATL::CThreadPool::GetTimeout
+- ATLUTIL/ATL::CThreadPool::Initialize
+- ATLUTIL/ATL::CThreadPool::QueryInterface
+- ATLUTIL/ATL::CThreadPool::QueueRequest
+- ATLUTIL/ATL::CThreadPool::Release
+- ATLUTIL/ATL::CThreadPool::SetSize
+- ATLUTIL/ATL::CThreadPool::SetTimeout
+- ATLUTIL/ATL::CThreadPool::Shutdown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +117,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="requirements"></a>需求  
  **標頭︰** atlutil.h  
   
-##  <a name="a-nameaddrefa--cthreadpooladdref"></a><a name="addref"></a>CThreadPool::AddRef  
+##  <a name="addref"></a>CThreadPool::AddRef  
  實作`IUnknown::AddRef`。  
   
 ```
@@ -118,7 +130,7 @@ ULONG STDMETHODCALLTYPE AddRef() throw();
 ### <a name="remarks"></a>備註  
  這個類別不會實作使用參考計數的存留期控制項。  
   
-##  <a name="a-namecthreadpoola--cthreadpoolcthreadpool"></a><a name="cthreadpool"></a>CThreadPool::CThreadPool  
+##  <a name="cthreadpool"></a>CThreadPool::CThreadPool  
  執行緒集區的建構函式。  
   
 ```
@@ -128,7 +140,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>備註  
  初始化逾時值[ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT](http://msdn.microsoft.com/library/c1e660a7-d490-42af-bbe1-ded76e80cc10)。  
   
-##  <a name="a-namedtora--cthreadpoolcthreadpool"></a><a name="dtor"></a>CThreadPool:: ~ CThreadPool  
+##  <a name="dtor"></a>CThreadPool:: ~ CThreadPool  
  執行緒集區的解構函式。  
   
 ```
@@ -138,7 +150,7 @@ CThreadPool() throw();
 ### <a name="remarks"></a>備註  
  呼叫[CThreadPool::Shutdown](#shutdown)。  
   
-##  <a name="a-namegetnumthreadsa--cthreadpoolgetnumthreads"></a><a name="getnumthreads"></a>CThreadPool::GetNumThreads  
+##  <a name="getnumthreads"></a>CThreadPool::GetNumThreads  
  呼叫這個方法來取得集區中的執行緒數目。  
   
 ```
@@ -148,7 +160,7 @@ int GetNumThreads() throw();
 ### <a name="return-value"></a>傳回值  
  傳回集區中的執行緒數目。  
   
-##  <a name="a-namegetqueuehandlea--cthreadpoolgetqueuehandle"></a><a name="getqueuehandle"></a>CThreadPool::GetQueueHandle  
+##  <a name="getqueuehandle"></a>CThreadPool::GetQueueHandle  
  呼叫這個方法來取得 IO 完成連接埠，用來佇列工作項目控制代碼。  
   
 ```
@@ -158,7 +170,7 @@ HANDLE GetQueueHandle() throw();
 ### <a name="return-value"></a>傳回值  
  如果尚未初始化執行緒集區會傳回佇列控制代碼則為 NULL。  
   
-##  <a name="a-namegetsizea--cthreadpoolgetsize"></a><a name="getsize"></a>CThreadPool::GetSize  
+##  <a name="getsize"></a>CThreadPool::GetSize  
  呼叫這個方法來取得集區中的執行緒數目。  
   
 ```
@@ -172,7 +184,7 @@ HRESULT STDMETHODCALLTYPE GetSize(int* pnNumThreads) throw();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="a-namegettimeouta--cthreadpoolgettimeout"></a><a name="gettimeout"></a>CThreadPool::GetTimeout  
+##  <a name="gettimeout"></a>CThreadPool::GetTimeout  
  呼叫這個方法，以毫秒為單位，執行緒集區會等待關閉執行緒取得的最長時間。  
   
 ```
@@ -189,7 +201,7 @@ HRESULT STDMETHODCALLTYPE GetTimeout(DWORD* pdwMaxWait) throw();
 ### <a name="remarks"></a>備註  
  這個逾時值由[CThreadPool::Shutdown](#shutdown)如果沒有其他的值提供給該方法。  
   
-##  <a name="a-nameinitializea--cthreadpoolinitialize"></a><a name="initialize"></a>CThreadPool::Initialize  
+##  <a name="initialize"></a>CThreadPool::Initialize  
  呼叫這個方法來初始化執行緒集區。  
   
 ```
@@ -220,7 +232,7 @@ HRESULT Initialize(
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="a-namequeryinterfacea--cthreadpoolqueryinterface"></a><a name="queryinterface"></a>CThreadPool::QueryInterface  
+##  <a name="queryinterface"></a>CThreadPool::QueryInterface  
  實作**Iid**。  
   
 ```
@@ -230,7 +242,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(REFIID riid, void** ppv) throw();
 ### <a name="remarks"></a>備註  
  這個類別的物件可以成功地查詢**IUnknown**和[IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)介面。  
   
-##  <a name="a-namequeuerequesta--cthreadpoolqueuerequest"></a><a name="queuerequest"></a>CThreadPool::QueueRequest  
+##  <a name="queuerequest"></a>CThreadPool::QueueRequest  
  呼叫這個方法來處理執行緒集區中的工作項目佇列。  
   
 ```
@@ -247,7 +259,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 ### <a name="remarks"></a>備註  
  這個方法會將工作項目加入佇列。 執行緒集區中的選取項目從佇列接收它們的順序。  
   
-##  <a name="a-namereleasea--cthreadpoolrelease"></a><a name="release"></a>CThreadPool::Release  
+##  <a name="release"></a>CThreadPool::Release  
  實作`IUnknown::Release`。  
   
 ```
@@ -260,7 +272,7 @@ ULONG STDMETHODCALLTYPE Release() throw();
 ### <a name="remarks"></a>備註  
  這個類別不會實作使用參考計數的存留期控制項。  
   
-##  <a name="a-namesetsizea--cthreadpoolsetsize"></a><a name="setsize"></a>CThreadPool::SetSize  
+##  <a name="setsize"></a>CThreadPool::SetSize  
  呼叫此方法以設定集區中的執行緒數目。  
   
 ```
@@ -281,7 +293,7 @@ HRESULT STDMETHODCALLTYPE SetSizeint nNumThreads) throw();
 ### <a name="remarks"></a>備註  
  如果指定的執行緒數目小於目前的集區中的執行緒數目，物件會關閉訊息佇列來挑選所等候的執行緒。 當等候的執行緒中提取佇列訊息時，它會通知執行緒集區，並結束執行緒的程序。 此程序會重複，直到執行緒集區中的數目到達指定的數目或所指定的期間內沒有執行緒結束[GetTimeout](#gettimeout)/ [SetTimeout](#settimeout)。 在此情況下，方法會傳回對應到 HRESULT **WAIT_TIMEOUT**並取消暫止的關閉訊息。  
   
-##  <a name="a-namesettimeouta--cthreadpoolsettimeout"></a><a name="settimeout"></a>CThreadPool::SetTimeout  
+##  <a name="settimeout"></a>CThreadPool::SetTimeout  
  呼叫這個方法來設定以毫秒為單位，執行緒集區會等待執行緒關閉的時間上限。  
   
 ```
@@ -300,7 +312,7 @@ HRESULT STDMETHODCALLTYPE SetTimeout(DWORD dwMaxWait) throw();
   
  請注意，`dwMaxWait`是集區會等待單一執行緒關閉的時間。 移除集區中的多個執行緒可以採取的最大時間可能會稍微小於`dwMaxWait`乘以執行緒數目。  
   
-##  <a name="a-nameshutdowna--cthreadpoolshutdown"></a><a name="shutdown"></a>CThreadPool::Shutdown  
+##  <a name="shutdown"></a>CThreadPool::Shutdown  
  呼叫這個方法，以關閉執行緒集區。  
   
 ```

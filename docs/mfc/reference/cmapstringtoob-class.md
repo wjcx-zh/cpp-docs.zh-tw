@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMapStringToOb
+- AFXCOLL/CMapStringToOb
+- AFXCOLL/CMapStringToOb::CMapStringToOb
+- AFXCOLL/CMapStringToOb::GetCount
+- AFXCOLL/CMapStringToOb::GetHashTableSize
+- AFXCOLL/CMapStringToOb::GetNextAssoc
+- AFXCOLL/CMapStringToOb::GetSize
+- AFXCOLL/CMapStringToOb::GetStartPosition
+- AFXCOLL/CMapStringToOb::HashKey
+- AFXCOLL/CMapStringToOb::InitHashTable
+- AFXCOLL/CMapStringToOb::IsEmpty
+- AFXCOLL/CMapStringToOb::Lookup
+- AFXCOLL/CMapStringToOb::LookupKey
+- AFXCOLL/CMapStringToOb::RemoveAll
+- AFXCOLL/CMapStringToOb::RemoveKey
+- AFXCOLL/CMapStringToOb::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +118,7 @@ class CMapStringToOb : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxcoll.h  
   
-##  <a name="a-namecmapstringtooba--cmapstringtoobcmapstringtoob"></a><a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
+##  <a name="cmapstringtoob"></a>CMapStringToOb::CMapStringToOb  
  建構空`CString`-到-`CObject*`對應。  
   
 ```  
@@ -133,7 +148,7 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
   
  請參閱[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)的清單`CAge`所有集合範例中使用的類別。  
   
-##  <a name="a-namegetcounta--cmapstringtoobgetcount"></a><a name="getcount"></a>CMapStringToOb::GetCount  
+##  <a name="getcount"></a>CMapStringToOb::GetCount  
  決定在對應中項目數目。  
   
 ```  
@@ -160,7 +175,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections #&64;](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
   
-##  <a name="a-namegethashtablesizea--cmapstringtoobgethashtablesize"></a><a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
+##  <a name="gethashtablesize"></a>CMapStringToOb::GetHashTableSize  
  判斷目前的雜湊表中的元素數目。  
   
 ```  
@@ -182,7 +197,7 @@ UINT GetHashTableSize() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT （GetHashTableSize) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT （GetHashTableSize) const;**|  
   
-##  <a name="a-namegetnextassoca--cmapstringtoobgetnextassoc"></a><a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
+##  <a name="getnextassoc"></a>CMapStringToOb::GetNextAssoc  
  擷取對應的項目在*rNextPosition*，然後更新*rNextPosition*來指向對應中的下一個項目。  
   
 ```  
@@ -239,7 +254,7 @@ void GetNextAssoc(
   
  `Bart : a CAge at $45D4 13`  
   
-##  <a name="a-namegetsizea--cmapstringtoobgetsize"></a><a name="getsize"></a>CMapStringToOb::GetSize  
+##  <a name="getsize"></a>CMapStringToOb::GetSize  
  傳回對應的項目數目。  
   
 ```  
@@ -266,7 +281,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections #&67;](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cmapstringtoobgetstartposition"></a><a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
+##  <a name="getstartposition"></a>CMapStringToOb::GetStartPosition  
  一開始會傳回對應的反覆項目**位置**值傳遞至`GetNextAssoc`呼叫。  
   
 ```  
@@ -293,7 +308,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>範例  
  請參閱範例[CMapStringToOb::GetNextAssoc](#getnextassoc)。  
   
-##  <a name="a-namehashkeya--cmapstringtoobhashkey"></a><a name="hashkey"></a>CMapStringToOb::HashKey  
+##  <a name="hashkey"></a>CMapStringToOb::HashKey  
  計算指定之索引鍵的雜湊值。  
   
 ```  
@@ -319,7 +334,7 @@ UINT HashKey(LPCTSTR key) const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
   
-##  <a name="a-nameinithashtablea--cmapstringtoobinithashtable"></a><a name="inithashtable"></a>CMapStringToOb::InitHashTable  
+##  <a name="inithashtable"></a>CMapStringToOb::InitHashTable  
  初始化雜湊表。  
   
 ```  
@@ -349,7 +364,7 @@ void InitHashTable(
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void InitHashTable (UINT** `hashSize` **，BOOL** `bAllocNow` **= TRUE);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void InitHashTable (UINT** `hashSize` **，BOOL** `bAllocNow` **= TRUE);**|  
   
-##  <a name="a-nameisemptya--cmapstringtoobisempty"></a><a name="isempty"></a>CMapStringToOb::IsEmpty  
+##  <a name="isempty"></a>CMapStringToOb::IsEmpty  
  決定是否是空的對應。  
   
 ```  
@@ -374,7 +389,7 @@ BOOL IsEmpty() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL IsEmpty （) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL IsEmpty （) const;**|  
   
-##  <a name="a-namelookupa--cmapstringtooblookup"></a><a name="lookup"></a>CMapStringToOb::Lookup  
+##  <a name="lookup"></a>CMapStringToOb::Lookup  
  傳回`CObject`指標根據`CString`值。  
   
 ```  
@@ -412,7 +427,7 @@ BOOL Lookup(
   
  [!code-cpp[NVC_MFCCollections #&68;](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
   
-##  <a name="a-namelookupkeya--cmapstringtooblookupkey"></a><a name="lookupkey"></a>CMapStringToOb::LookupKey  
+##  <a name="lookupkey"></a>CMapStringToOb::LookupKey  
  傳回指定之索引鍵值相關聯的索引鍵的參考。  
   
 ```  
@@ -441,7 +456,7 @@ BOOL LookupKey(
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL LookupKey (LPCTSTR** `key` **，LPCTSTR i** `rKey` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL LookupKey (LPCTSTR** `key` **，LPCTSTR i** `rKey` **) const;**|  
   
-##  <a name="a-nameoperatorata--cmapstringtooboperator--"></a><a name="operator_at"></a>CMapStringToOb::operator]  
+##  <a name="operator_at"></a>CMapStringToOb::operator]  
  方便的替代`SetAt`成員函式。  
   
 ```  
@@ -480,7 +495,7 @@ CObject*& operator[ ](lpctstr key);
   
  `[Bart] = a CAge at $497E 13`  
   
-##  <a name="a-nameremovealla--cmapstringtoobremoveall"></a><a name="removeall"></a>CMapStringToOb::RemoveAll  
+##  <a name="removeall"></a>CMapStringToOb::RemoveAll  
  此對應會移除所有項目，並終結`CString`索引鍵的物件。  
   
 ```  
@@ -508,7 +523,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections #&69;](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
   
-##  <a name="a-nameremovekeya--cmapstringtoobremovekey"></a><a name="removekey"></a>CMapStringToOb::RemoveKey  
+##  <a name="removekey"></a>CMapStringToOb::RemoveKey  
  提供索引鍵對應的對應項目查詢然後，如果找到索引鍵，則移除的項目。  
   
 ```  
@@ -551,7 +566,7 @@ BOOL RemoveKey(LPCTSTR key);
   
  `[Bart] = a CAge at $4634 13`  
   
-##  <a name="a-namesetata--cmapstringtoobsetat"></a><a name="setat"></a>CMapStringToOb::SetAt  
+##  <a name="setat"></a>CMapStringToOb::SetAt  
  主要表示要插入對應中的項目。  
   
 ```  

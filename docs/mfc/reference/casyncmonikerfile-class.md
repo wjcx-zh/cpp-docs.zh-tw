@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAsyncMonikerFile
+- AFXOLE/CAsyncMonikerFile
+- AFXOLE/CAsyncMonikerFile::CAsyncMonikerFile
+- AFXOLE/CAsyncMonikerFile::Close
+- AFXOLE/CAsyncMonikerFile::GetBinding
+- AFXOLE/CAsyncMonikerFile::GetFormatEtc
+- AFXOLE/CAsyncMonikerFile::Open
+- AFXOLE/CAsyncMonikerFile::CreateBindStatusCallback
+- AFXOLE/CAsyncMonikerFile::GetBindInfo
+- AFXOLE/CAsyncMonikerFile::GetPriority
+- AFXOLE/CAsyncMonikerFile::OnDataAvailable
+- AFXOLE/CAsyncMonikerFile::OnLowResource
+- AFXOLE/CAsyncMonikerFile::OnProgress
+- AFXOLE/CAsyncMonikerFile::OnStartBinding
+- AFXOLE/CAsyncMonikerFile::OnStopBinding
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +122,7 @@ class CAsyncMonikerFile : public CMonikerFile
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-namecasyncmonikerfilea--casyncmonikerfilecasyncmonikerfile"></a><a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
+##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
  建構 `CAsyncMonikerFile` 物件。  
   
 ```  
@@ -120,7 +134,7 @@ CAsyncMonikerFile();
   
  如需說明`IBindHost`介面，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameclosea--casyncmonikerfileclose"></a><a name="close"></a>CAsyncMonikerFile::Close  
+##  <a name="close"></a>CAsyncMonikerFile::Close  
  呼叫此函式來關閉並釋放所有資源。  
   
 ```  
@@ -130,7 +144,7 @@ virtual void Close();
 ### <a name="remarks"></a>備註  
  可以在未開啟或已關閉的檔案上呼叫。  
   
-##  <a name="a-namecreatebindstatuscallbacka--casyncmonikerfilecreatebindstatuscallback"></a><a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
+##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
  建立 COM 物件實作`IBindStatusCallback`。  
   
 ```  
@@ -153,7 +167,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
   
  如需非同步 moniker 和非同步繫結的詳細資訊，請參閱[IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060)介面和[如何非同步繫結和儲存體工作](http://msdn.microsoft.com/library/windows/desktop/aa379152)。 如需彙總的討論，請參閱[彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)。 所有的三個主題位於[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbindinfoa--casyncmonikerfilegetbindinfo"></a><a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
+##  <a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
  從告訴它要繫結的方式的非同步 moniker，非同步 moniker 的用戶端呼叫。  
   
 ```  
@@ -168,7 +182,7 @@ virtual DWORD GetBindInfo() const;
   
  執行此動作的其中一個原因是使用資料提取模型，而不資料發送模型繫結。 在資料提取模型中，用戶端繫結作業，和 moniker 只提供資料給用戶端會在讀取。 在資料推入模型中，moniker 非同步繫結作業的磁碟機，並持續在每當有新的資料可用時通知用戶端。  
   
-##  <a name="a-namegetbindinga--casyncmonikerfilegetbinding"></a><a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
+##  <a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
  呼叫此函式可擷取非同步傳輸繫結的指標。  
   
 ```  
@@ -183,7 +197,7 @@ IBinding* GetBinding() const;
   
  如需說明`IBinding`介面，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetformatetca--casyncmonikerfilegetformatetc"></a><a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
+##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
  呼叫此函式可擷取的資料流中的資料格式。  
   
 ```  
@@ -193,7 +207,7 @@ FORMATETC* GetFormatEtc() const;
 ### <a name="return-value"></a>傳回值  
  Windows 結構的指標[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)目前開啟的資料流。 傳回**NULL** moniker 未繫結，如果不是非同步的或者尚未開始非同步作業。  
   
-##  <a name="a-namegetprioritya--casyncmonikerfilegetpriority"></a><a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
+##  <a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
  呼叫非同步 moniker 的用戶端從繫結程序開始時接收到執行緒給繫結作業的優先順序。  
   
 ```  
@@ -206,7 +220,7 @@ virtual LONG GetPriority() const;
 ### <a name="remarks"></a>備註  
  `GetPriority`應該不會直接呼叫。 **THREAD_PRIORITY_NORMAL**預設實作會傳回。  
   
-##  <a name="a-nameondataavailablea--casyncmonikerfileondataavailable"></a><a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
+##  <a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
  非同步 moniker 呼叫`OnDataAvailable`可用時，請提供資料給用戶端，在非同步繫結作業。  
   
 ```  
@@ -232,7 +246,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWinInet #&5;](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
-##  <a name="a-nameonlowresourcea--casyncmonikerfileonlowresource"></a><a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
+##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
  時資源不足，而呼叫 moniker。  
   
 ```  
@@ -242,7 +256,7 @@ virtual void OnLowResource();
 ### <a name="remarks"></a>備註  
  預設實作會呼叫`GetBinding( )-> Abort( )`。  
   
-##  <a name="a-nameonprogressa--casyncmonikerfileonprogress"></a><a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
+##  <a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
  呼叫重複，表示這個繫結作業，通常在合理的時間間隔長時間作業期間的目前進度的 moniker。  
   
 ```  
@@ -296,7 +310,7 @@ virtual void OnProgress(
  **BINDSTATUS_CLASSIDAVAILABLE**  
  繫結至物件的執行個體只是要建立的。 `szStatusText`提供可讓用戶端有機會取消繫結作業中，視字串格式的新物件的 CLSID。  
   
-##  <a name="a-nameonstartbindinga--casyncmonikerfileonstartbinding"></a><a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
+##  <a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
  覆寫這個函式，在您啟動繫結時執行動作的衍生類別中。  
   
 ```  
@@ -306,7 +320,7 @@ virtual void OnStartBinding();
 ### <a name="remarks"></a>備註  
  此函式被回呼 moniker。 預設實作不做任何動作。  
   
-##  <a name="a-nameonstopbindinga--casyncmonikerfileonstopbinding"></a><a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
+##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
  呼叫的繫結作業結尾的 moniker。  
   
 ```  
@@ -325,7 +339,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
   
  如需說明`IBinding`介面，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameopena--casyncmonikerfileopen"></a><a name="open"></a>CAsyncMonikerFile::Open  
+##  <a name="open"></a>CAsyncMonikerFile::Open  
  呼叫此成員函式，以非同步方式開啟檔案。  
   
 ```  

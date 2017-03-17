@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiLock
+- AFXMT/CMultiLock
+- AFXMT/CMultiLock::CMultiLock
+- AFXMT/CMultiLock::IsLocked
+- AFXMT/CMultiLock::Lock
+- AFXMT/CMultiLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +87,7 @@ class CMultiLock
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmt.h  
   
-##  <a name="a-namecmultilocka--cmultilockcmultilock"></a><a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
  建構**CMultiLock**物件。  
   
 ```  
@@ -105,7 +110,7 @@ CMultiLock(
 ### <a name="remarks"></a>備註  
  建立等候的同步處理物件的陣列之後，會呼叫此函數。 它通常會從呼叫，必須等待可用的同步處理物件的其中一個執行緒內。  
   
-##  <a name="a-nameislockeda--cmultilockislocked"></a><a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>CMultiLock::IsLocked  
  判斷指定的物件是否為未收到信號 （無法使用）。  
   
 ```  
@@ -119,7 +124,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>傳回值  
  非零，如果指定的物件已鎖定。否則為 0。  
   
-##  <a name="a-namelocka--cmultilocklock"></a><a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>CMultiLock::Lock  
  呼叫此函式來存取一或多個同步處理物件提供給所控制的資源**CMultiLock**建構函式。  
   
 ```  
@@ -163,7 +168,7 @@ DWORD Lock(
   
  如果`Lock`無法立即傳回，它會等待中指定的毫秒數超過*dwTimeOut*傳回之前的參數。 如果*dwTimeOut*是**無限**，`Lock`獲得存取物件或條件中指定之前將不會傳回`dwWakeMask`符合。 否則，如果`Lock`是無法取得的同步處理物件，它會傳回成功; 如果沒有，它會傳回失敗。  
   
-##  <a name="a-nameunlocka--cmultilockunlock"></a><a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>CMultiLock::Unlock  
  釋放同步物件所擁有`CMultiLock`。  
   
 ```  

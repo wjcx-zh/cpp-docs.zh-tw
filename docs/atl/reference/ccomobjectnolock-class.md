@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObjectNoLock
-- ATL::CComObjectNoLock
-- ATL.CComObjectNoLock<Base>
 - CComObjectNoLock
-- ATL::CComObjectNoLock<Base>
+- ATLCOM/ATL::CComObjectNoLock
+- ATLCOM/ATL::CComObjectNoLock::CComObjectNoLock
+- ATLCOM/ATL::CComObjectNoLock::AddRef
+- ATLCOM/ATL::CComObjectNoLock::QueryInterface
+- ATLCOM/ATL::CComObjectNoLock::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +88,7 @@ class CComObjectNoLock : public Base
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectnolockaddref"></a><a name="addref"></a>CComObjectNoLock::AddRef  
+##  <a name="addref"></a>CComObjectNoLock::AddRef  
  在物件上的參考計數遞增。  
   
 ```
@@ -97,7 +98,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>傳回值  
  值，可用於診斷或測試。  
   
-##  <a name="a-nameccomobjectnolocka--ccomobjectnolockccomobjectnolock"></a><a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
+##  <a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock  
  建構函式。 不同於[CComObject](../../atl/reference/ccomobject-class.md)，不會增加模組鎖定計數。  
   
 ```
@@ -108,7 +109,7 @@ CComObjectNoLock(void* = NULL);
  **void\***  
  [in]不使用這個未命名的參數。 它有與其他對稱**CCom***XXX*`Object`*XXX*建構函式。  
   
-##  <a name="a-namedtora--ccomobjectnolockccomobjectnolock"></a><a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
+##  <a name="dtor"></a>CComObjectNoLock:: ~ CComObjectNoLock  
  解構函式。  
   
 ```
@@ -119,7 +120,7 @@ CComObjectNoLock(void* = NULL);
  釋放所有配置的資源並呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)。  
 
   
-##  <a name="a-namequeryinterfacea--ccomobjectnolockqueryinterface"></a><a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -136,7 +137,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namereleasea--ccomobjectnolockrelease"></a><a name="release"></a>CComObjectNoLock::Release  
+##  <a name="release"></a>CComObjectNoLock::Release  
  遞減參考計數物件。  
   
 ```

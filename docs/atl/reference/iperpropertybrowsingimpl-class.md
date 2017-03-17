@@ -9,12 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IPerPropertyBrowsingImpl
-- IPerPropertyBrowsing
-- ATL::IPerPropertyBrowsingImpl
-- ATL::IPerPropertyBrowsingImpl<T>
 - IPerPropertyBrowsingImpl
-- ATL.IPerPropertyBrowsingImpl<T>
+- ATLCTL/ATL::IPerPropertyBrowsingImpl
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetDisplayString
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetPredefinedStrings
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::GetPredefinedValue
+- ATLCTL/ATL::IPerPropertyBrowsingImpl::MapPropertyToPage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +92,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namegetdisplaystringa--iperpropertybrowsingimplgetdisplaystring"></a><a name="getdisplaystring"></a>IPerPropertyBrowsingImpl::GetDisplayString  
+##  <a name="getdisplaystring"></a>IPerPropertyBrowsingImpl::GetDisplayString  
  擷取字串，描述指定的屬性。  
   
 ```
@@ -104,7 +104,7 @@ STDMETHOD(GetDisplayString)(
 ### <a name="remarks"></a>備註  
  請參閱[IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetpredefinedstringsa--iperpropertybrowsingimplgetpredefinedstrings"></a><a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl::GetPredefinedStrings  
+##  <a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl::GetPredefinedStrings  
  填滿零個項目每個陣列。  
   
 ```
@@ -120,7 +120,7 @@ STDMETHOD(GetPredefinedStrings)(
 ### <a name="remarks"></a>備註  
  請參閱[IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetpredefinedvaluea--iperpropertybrowsingimplgetpredefinedvalue"></a><a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl::GetPredefinedValue  
+##  <a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl::GetPredefinedValue  
  擷取**VARIANT**包含所指定的 DISPID 識別屬性的值。 DISPID 有關聯的字串名稱，擷取自`GetPredefinedStrings`。  
   
 ```
@@ -138,7 +138,7 @@ STDMETHOD(GetPredefinedValue)(
   
  請參閱[IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemappropertytopagea--iperpropertybrowsingimplmappropertytopage"></a><a name="mappropertytopage"></a>IPerPropertyBrowsingImpl::MapPropertyToPage  
+##  <a name="mappropertytopage"></a>IPerPropertyBrowsingImpl::MapPropertyToPage  
  擷取指定之屬性相關聯的屬性頁的 CLSID。  
   
 ```

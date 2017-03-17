@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComSafeArrayBound
-- ATL::CComSafeArrayBound
 - CComSafeArrayBound
+- ATLSAFE/ATL::CComSafeArrayBound
+- ATLSAFE/ATL::CComSafeArrayBound
+- ATLSAFE/ATL::GetCount
+- ATLSAFE/ATL::GetLowerBound
+- ATLSAFE/ATL::GetUpperBound
+- ATLSAFE/ATL::SetCount
+- ATLSAFE/ATL::SetLowerBound
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +82,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsafe.h  
   
-##  <a name="a-nameccomsafearraybounda--ccomsafearrayboundccomsafearraybound"></a><a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
+##  <a name="ccomsafearraybound"></a>CComSafeArrayBound::CComSafeArrayBound  
  建構函式。  
   
 ```
@@ -94,7 +99,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 ### <a name="remarks"></a>備註  
  如果陣列是從 Visual c + + 程式存取，建議的最小值定義為 0。 您可能偏好使用不同的下限值，如果陣列是以用於其他語言，例如 Visual Basic 的。  
   
-##  <a name="a-namegetcounta--ccomsafearrayboundgetcount"></a><a name="getcount"></a>CComSafeArrayBound::GetCount  
+##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
  呼叫這個方法傳回的項目數。  
   
 ```
@@ -107,7 +112,7 @@ ULONG GetCount() const throw();
 ### <a name="remarks"></a>備註  
  如果相關聯`CComSafeArray`物件代表多維陣列，這個方法只會傳回最右邊的維度中的項目總數。 使用[CComSafeArray::GetCount](../../atl/reference/ccomsafearray-class.md#getcount)取得項目總數。  
   
-##  <a name="a-namegetlowerbounda--ccomsafearrayboundgetlowerbound"></a><a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
+##  <a name="getlowerbound"></a>CComSafeArrayBound::GetLowerBound  
  呼叫此方法以傳回下限。  
   
 ```
@@ -117,7 +122,7 @@ LONG GetLowerBound() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回下限為`CComSafeArrayBound`物件。  
   
-##  <a name="a-namegetupperbounda--ccomsafearrayboundgetupperbound"></a><a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
+##  <a name="getupperbound"></a>CComSafeArrayBound::GetUpperBound  
  呼叫此方法以傳回上限。  
   
 ```
@@ -130,7 +135,7 @@ LONG GetUpperBound() const throw();
 ### <a name="remarks"></a>備註  
  上限取決於項目和下限值的數目。 例如，如果下限為 0，而項目數目為 10，上限將自動設為 9。  
   
-##  <a name="a-nameoperatoreqa--ccomsafearrayboundoperator-"></a><a name="operator_eq"></a>CComSafeArrayBound::operator =  
+##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
  設定`CComSafeArrayBound`為新值。  
   
 ```
@@ -151,7 +156,7 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 ### <a name="remarks"></a>備註  
  `CComSafeArrayBound`物件可以使用現有指派`CComSafeArrayBound`，或提供項目，以案例下限設定為 0 預設數目。  
   
-##  <a name="a-namesetcounta--ccomsafearrayboundsetcount"></a><a name="setcount"></a>CComSafeArrayBound::SetCount  
+##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
  呼叫這個方法來設定項目數目。  
   
 ```
@@ -165,7 +170,7 @@ ULONG SetCount(ULONG ulCount) throw();
 ### <a name="return-value"></a>傳回值  
  傳回數字中的項目`CComSafeArrayBound`物件。  
   
-##  <a name="a-namesetlowerbounda--ccomsafearrayboundsetlowerbound"></a><a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
+##  <a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
  呼叫這個方法來設定下限。  
   
 ```

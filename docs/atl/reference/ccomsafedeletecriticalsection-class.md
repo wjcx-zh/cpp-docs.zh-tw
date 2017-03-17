@@ -10,8 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
-- ATL::CComSafeDeleteCriticalSection
-- ATL.CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Init
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Lock
+- ATLCORE/ATL::CComSafeDeleteCriticalSection::Term
+- ATLCORE/ATL::m_bInitialized
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +92,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcore.h  
   
-##  <a name="a-nameccomsafedeletecriticalsectiona--ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  建構函式。  
   
 ```
@@ -98,7 +102,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>備註  
  設定[m_bInitialized](#m_binitialized)資料成員，才能**false**。  
   
-##  <a name="a-namedtora--ccomsafedeletecriticalsectionccomsafedeletecriticalsection"></a><a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  解構函式。  
   
 ```
@@ -108,7 +112,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>備註  
  釋出內部**CRITICAL_SECTION**物件從記憶體中，如果[m_bInitialized](#m_binitialized)資料成員設定為**true**。  
   
-##  <a name="a-nameinita--ccomsafedeletecriticalsectioninit"></a><a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
  呼叫的基底類別實作[Init](/visualstudio/debugger/init) ，並設定[m_bInitialized](#m_binitialized)至**true**如果成功。  
   
 ```
@@ -118,7 +122,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>傳回值  
  傳回的結果[CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init)。  
   
-##  <a name="a-namelocka--ccomsafedeletecriticalsectionlock"></a><a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
 呼叫的基底類別實作[鎖定](ccomcriticalsection-class.md#lock)。  
 
   
@@ -134,7 +138,7 @@ HRESULT Lock();
   
  如需行為的函式的詳細資訊，請參閱[CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock)。  
   
-##  <a name="a-namembinitializeda--ccomsafedeletecriticalsectionmbinitialized"></a><a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
  旗標是否內部**CRITICAL_SECTION**物件初始化。  
   
 ```
@@ -144,7 +148,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>備註  
  **M_bInitialized**資料成員用來追蹤的基礎有效性**CRITICAL_SECTION**物件相關聯[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)類別。 基礎**CRITICAL_SECTION**物件不會嘗試從記憶體釋放，如果這個旗標未設為**true**。  
   
-##  <a name="a-nameterma--ccomsafedeletecriticalsectionterm"></a><a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
  呼叫的基底類別實作[CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term)如果內部**CRITICAL_SECTION**物件是否有效。  
   
 ```

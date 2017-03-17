@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CInterfaceList
-- ATL.CInterfaceList
 - CInterfaceList
+- ATLCOLL/ATL::CInterfaceList
+- ATLCOLL/ATL::CInterfaceList::CInterfaceList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +81,7 @@ class CInterfaceList
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-namecinterfacelista--cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>CInterfaceList::CInterfaceList  
+##  <a name="cinterfacelist"></a>CInterfaceList::CInterfaceList  
  建構函式的介面清單。  
   
 ```

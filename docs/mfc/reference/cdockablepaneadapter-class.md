@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::GetWrappedWnd
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::LoadState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SaveState
+- AFXDOCKABLEPANEADAPTER/CDockablePaneAdapter::SetWrappedWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +79,7 @@ class CDockablePaneAdapter : public CDockablePane
 ## <a name="requirements"></a>需求  
  **標頭︰** afxDockablePaneAdapter.h  
   
-##  <a name="a-namegetwrappedwnda--cdockablepaneadaptergetwrappedwnd"></a><a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
  傳回可停駐窗格配接器的基礎視窗。  
   
 ```  
@@ -87,7 +92,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>備註  
  您可以使用此函式來存取包裝的視窗。  
   
-##  <a name="a-nameloadstatea--cdockablepaneadapterloadstate"></a><a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
  從登錄載入窗格的狀態。  
   
 ```  
@@ -111,7 +116,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesavestatea--cdockablepaneadaptersavestate"></a><a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
  將窗格的狀態儲存至登錄。  
   
 ```  
@@ -135,7 +140,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetwrappedwnda--cdockablepaneadaptersetwrappedwnd"></a><a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
  設定可停駐窗格配接器的基礎視窗。  
   
 ```  

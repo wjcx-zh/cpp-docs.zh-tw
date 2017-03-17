@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarInfo
+- AFXTOOLBAR/CMFCToolBarInfo
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiColdResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiHotResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeColdResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiLargeHotResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiMenuDisabledResID
+- AFXTOOLBAR/CMFCToolBarInfo::m_uiMenuResID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -72,56 +81,56 @@ class CMFCToolBarInfo
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtoolbar.h  
   
-##  <a name="a-namemuicoldresida--cmfctoolbarinfomuicoldresid"></a><a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
+##  <a name="m_uicoldresid"></a>CMFCToolBarInfo::m_uiColdResID  
  指定工具列的所有一般按鈕影像的資源 ID。  
   
 ```  
 UINT m_uiColdResID;  
 ```  
   
-##  <a name="a-namemuidisabledresida--cmfctoolbarinfomuidisabledresid"></a><a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
+##  <a name="m_uidisabledresid"></a>CMFCToolBarInfo::m_uiDisabledResID  
  指定工具列的按鈕無法使用的映像的資源 ID。  
   
 ```  
 UINT m_uiDisabledResID;  
 ```  
   
-##  <a name="a-namemuihotresida--cmfctoolbarinfomuihotresid"></a><a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
+##  <a name="m_uihotresid"></a>CMFCToolBarInfo::m_uiHotResID  
  指定工具列的所有反白顯示的按鈕影像的資源 ID。  
   
 ```  
 UINT m_uiHotResID  
 ```  
   
-##  <a name="a-namemuilargecoldresida--cmfctoolbarinfomuilargecoldresid"></a><a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
+##  <a name="m_uilargecoldresid"></a>CMFCToolBarInfo::m_uiLargeColdResID  
  指定工具列的所有規則的大型按鈕影像的資源 ID。  
   
 ```  
 UINT m_uiLargeColdResID  
 ```  
   
-##  <a name="a-namemuilargedisabledresida--cmfctoolbarinfomuilargedisabledresid"></a><a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
+##  <a name="m_uilargedisabledresid"></a>CMFCToolBarInfo::m_uiLargeDisabledResID  
  指定工具列的所有大型已停用的按鈕影像的資源 ID。  
   
 ```  
 UINT m_uiLargeDisabledResID;  
 ```  
   
-##  <a name="a-namemuilargehotresida--cmfctoolbarinfomuilargehotresid"></a><a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
+##  <a name="m_uilargehotresid"></a>CMFCToolBarInfo::m_uiLargeHotResID  
  指定工具列的所有大型反白顯示影像的資源 ID。  
   
 ```  
 UINT m_uiLargeHotResID;  
 ```  
   
-##  <a name="a-namemuimenudisabledresida--cmfctoolbarinfomuimenudisabledresid"></a><a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
+##  <a name="m_uimenudisabledresid"></a>CMFCToolBarInfo::m_uiMenuDisabledResID  
  指定的工具列命令無法使用的映像的資源 ID。  
   
 ```  
 UINT m_uiMenuDisabledResID;  
 ```  
   
-##  <a name="a-namemuimenuresida--cmfctoolbarinfomuimenuresid"></a><a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
+##  <a name="m_uimenuresid"></a>CMFCToolBarInfo::m_uiMenuResID  
  指定工具列的所有規則的功能表項目影像的資源 ID。  
   
 ```  

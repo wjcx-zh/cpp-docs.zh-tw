@@ -8,6 +8,11 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- AFXWIN/AfxDrawGrayBitmap
+- AFXWIN/AfxGetGrayBitmap
+- AFXWIN/AfxDrawDitheredBitmap
+- AFXWIN/AfxGetDitheredBitmap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -60,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|繪製遞色背景的點陣圖。|  
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|複製遞色背景的點陣圖。|  
   
-##  <a name="a-nameafxdrawgraybitmapa--afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
+##  <a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
  繪製點陣圖的灰色版本。  
   
 ```   
@@ -99,7 +104,7 @@ void AFXAPI AfxDrawGrayBitmap(
 ### <a name="requirements"></a>需求  
  **標題:** afxwin.h  
 
-##  <a name="a-nameafxgetgraybitmapa--afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
+##  <a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
  複製點陣圖的灰色版本。  
   
 ```   
@@ -130,7 +135,7 @@ void AFXAPI AfxGetGrayBitmap(
 ### <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameafxdrawditheredbitmapa--afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
+##  <a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
  繪製點陣圖，以遞色 （檢查程式） 樣式取代它的背景。  
   
 ```   
@@ -174,7 +179,7 @@ void AFXAPI AfxDrawDitheredBitmap(
  **標題:** afxwin.h  
 
 
-##  <a name="a-nameafxgetditheredbitmapa--afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
+##  <a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
  複製點陣圖，以遞色 (檢查程式) 樣式取代它的背景。  
   
 ```   

@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArchive
+- AFX/CArchive
+- AFX/CArchive::CArchive
+- AFX/CArchive::Abort
+- AFX/CArchive::Close
+- AFX/CArchive::Flush
+- AFX/CArchive::GetFile
+- AFX/CArchive::GetObjectSchema
+- AFX/CArchive::IsBufferEmpty
+- AFX/CArchive::IsLoading
+- AFX/CArchive::IsStoring
+- AFX/CArchive::MapObject
+- AFX/CArchive::Read
+- AFX/CArchive::ReadClass
+- AFX/CArchive::ReadObject
+- AFX/CArchive::ReadString
+- AFX/CArchive::SerializeClass
+- AFX/CArchive::SetLoadParams
+- AFX/CArchive::SetObjectSchema
+- AFX/CArchive::SetStoreParams
+- AFX/CArchive::Write
+- AFX/CArchive::WriteClass
+- AFX/CArchive::WriteObject
+- AFX/CArchive::WriteString
+- AFX/CArchive::m_pDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +146,7 @@ class CArchive
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="a-nameaborta--carchiveabort"></a><a name="abort"></a>CArchive::Abort  
+##  <a name="abort"></a>CArchive::Abort  
  呼叫此函式來關閉封存，而不擲回例外狀況。  
   
 ```  
@@ -139,7 +163,7 @@ void Abort ();
 ### <a name="example"></a>範例  
   請參閱範例[CArchive::WriteClass](#writeclass)。  
   
-##  <a name="a-namecarchivea--carchivecarchive"></a><a name="carchive"></a>CArchive::CArchive  
+##  <a name="carchive"></a>CArchive::CArchive  
  建構`CArchive`物件，並指定是否將使用以載入或儲存物件。  
   
 ```  
@@ -177,7 +201,7 @@ CArchive(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&12;](../../mfc/codesnippet/cpp/carchive-class_1.cpp)]  
   
-##  <a name="a-nameclosea--carchiveclose"></a><a name="close"></a>CArchive::Close  
+##  <a name="close"></a>CArchive::Close  
  清除任何緩衝區中剩餘的資料、 關閉封存，並中斷封存檔案。  
   
 ```  
@@ -192,7 +216,7 @@ void Close();
 ### <a name="example"></a>範例  
   請參閱範例[CArchive::WriteString](#writestring)。  
   
-##  <a name="a-nameflusha--carchiveflush"></a><a name="flush"></a>CArchive::Flush  
+##  <a name="flush"></a>CArchive::Flush  
  強制寫入檔案的封存緩衝區中剩餘的任何資料。  
   
 ```  
@@ -205,7 +229,7 @@ void Flush();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&13;](../../mfc/codesnippet/cpp/carchive-class_2.cpp)]  
   
-##  <a name="a-namegetfilea--carchivegetfile"></a><a name="getfile"></a>CArchive::GetFile  
+##  <a name="getfile"></a>CArchive::GetFile  
  取得`CFile`此封存檔的物件指標。  
   
 ```  
@@ -221,7 +245,7 @@ CFile* GetFile() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&14;](../../mfc/codesnippet/cpp/carchive-class_3.cpp)]  
   
-##  <a name="a-namegetobjectschemaa--carchivegetobjectschema"></a><a name="getobjectschema"></a>CArchive::GetObjectSchema  
+##  <a name="getobjectschema"></a>CArchive::GetObjectSchema  
  呼叫此函式，從`Serialize`函式來判斷目前正在還原序列化物件的版本。  
   
 ```  
@@ -239,7 +263,7 @@ UINT GetObjectSchema();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&15;](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
   
-##  <a name="a-nameisbufferemptya--carchiveisbufferempty"></a><a name="isbufferempty"></a>CArchive::IsBufferEmpty  
+##  <a name="isbufferempty"></a>CArchive::IsBufferEmpty  
  呼叫此成員函式，以判斷保存物件的內部緩衝區是否為空白。  
   
 ```  
@@ -256,7 +280,7 @@ BOOL IsBufferEmpty() const;
   
  如需詳細資訊，請參閱[Windows Sockets︰ 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="a-nameisloadinga--carchiveisloading"></a><a name="isloading"></a>CArchive::IsLoading  
+##  <a name="isloading"></a>CArchive::IsLoading  
  判斷是否載入保存資料。  
   
 ```  
@@ -272,7 +296,7 @@ BOOL IsLoading() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&16;](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]  
   
-##  <a name="a-nameisstoringa--carchiveisstoring"></a><a name="isstoring"></a>CArchive::IsStoring  
+##  <a name="isstoring"></a>CArchive::IsStoring  
  決定是否保存正在儲存資料。  
   
 ```  
@@ -290,7 +314,7 @@ BOOL IsStoring() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&17;](../../mfc/codesnippet/cpp/carchive-class_6.cpp)]  
   
-##  <a name="a-namemapobjecta--carchivemapobject"></a><a name="mapobject"></a>CArchive::MapObject  
+##  <a name="mapobject"></a>CArchive::MapObject  
  呼叫此成員函式，讓物件的對應，其實不會序列化至檔案，但可供參考的子物件。  
   
 ```  
@@ -315,7 +339,7 @@ void MapObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization #&21;](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
-##  <a name="a-namempdocumenta--carchivempdocument"></a><a name="m_pdocument"></a>CArchive::m_pDocument  
+##  <a name="m_pdocument"></a>CArchive::m_pDocument  
  設定為**NULL**根據預設，此指標**CDocument**可以到任何項目設定的使用者`CArchive`想執行個體。  
   
 ```  
@@ -330,7 +354,7 @@ CDocument* m_pDocument;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&35;](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
   
-##  <a name="a-nameoperatorltlta--carchiveoperator-ltlt"></a><a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>CArchive::operator&lt;&lt;  
  儲存指定的物件或封存的基本型別。  
   
 ```  
@@ -400,7 +424,7 @@ CArchive& operator<<(LONGLONG dwdw);
   
  [!code-cpp[NVC_MFCSerialization #&32;](../../mfc/codesnippet/cpp/carchive-class_13.cpp)]  
   
-##  <a name="a-nameoperatorgtgta--carchiveoperator-gtgt"></a><a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
+##  <a name="operator_gt_gt"></a>CArchive::operator&gt;&gt;  
  從封存載入指定的一或多個基本型別。  
   
 ```  
@@ -482,7 +506,7 @@ CArchive& operator>>(LONGLONG& dwdw);
   
  [!code-cpp[NVC_MFCSerialization #&34;](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]  
   
-##  <a name="a-namereada--carchiveread"></a><a name="read"></a>Carchive:: Read  
+##  <a name="read"></a>Carchive:: Read  
  從封存中讀取指定的位元組數目。  
   
 ```  
@@ -507,7 +531,7 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&24;](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
   
-##  <a name="a-namereadclassa--carchivereadclass"></a><a name="readclass"></a>CArchive::ReadClass  
+##  <a name="readclass"></a>CArchive::ReadClass  
  呼叫此成員函式，來讀取先前儲存的類別參考[WriteClass](#writeclass)。  
   
 ```  
@@ -542,7 +566,7 @@ CRuntimeClass* ReadClass(
 ### <a name="example"></a>範例  
   請參閱範例[CArchive::WriteClass](#writeclass)。  
   
-##  <a name="a-namereadobjecta--carchivereadobject"></a><a name="readobject"></a>CArchive::ReadObject  
+##  <a name="readobject"></a>CArchive::ReadObject  
  從封存讀取物件資料，並建構適當型別的物件。  
   
 ```  
@@ -564,7 +588,7 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 ### <a name="example"></a>範例  
   請參閱範例[CArchive::WriteObject](#writeobject)。  
   
-##  <a name="a-namereadstringa--carchivereadstring"></a><a name="readstring"></a>CArchive::ReadString  
+##  <a name="readstring"></a>CArchive::ReadString  
  呼叫此成員函式相關聯的檔案從緩衝區讀取文字資料`CArchive`物件。  
   
 ```  
@@ -595,7 +619,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ### <a name="example"></a>範例  
   請參閱範例[CArchive::WriteString](#writestring)。  
   
-##  <a name="a-nameserializeclassa--carchiveserializeclass"></a><a name="serializeclass"></a>CArchive::SerializeClass  
+##  <a name="serializeclass"></a>CArchive::SerializeClass  
  當您想要儲存並載入基底類別的版本資訊，請呼叫此成員函式。  
   
 ```  
@@ -618,7 +642,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&25;](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
   
-##  <a name="a-namesetloadparamsa--carchivesetloadparams"></a><a name="setloadparams"></a>CArchive::SetLoadParams  
+##  <a name="setloadparams"></a>CArchive::SetLoadParams  
  呼叫`SetLoadParams`當您要讀取大量的`CObject`-從封存衍生物件。  
   
 ```  
@@ -637,7 +661,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&26;](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="a-namesetobjectschemaa--carchivesetobjectschema"></a><a name="setobjectschema"></a>CArchive::SetObjectSchema  
+##  <a name="setobjectschema"></a>CArchive::SetObjectSchema  
  呼叫此成員函式設定儲存在保存物件的物件結構描述`nSchema`。  
   
 ```  
@@ -656,7 +680,7 @@ void SetObjectSchema(UINT nSchema);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&27;](../../mfc/codesnippet/cpp/carchive-class_19.cpp)]  
   
-##  <a name="a-namesetstoreparamsa--carchivesetstoreparams"></a><a name="setstoreparams"></a>CArchive::SetStoreParams  
+##  <a name="setstoreparams"></a>CArchive::SetStoreParams  
  使用`SetStoreParams`時儲存大量的`CObject`-衍生封存檔中的物件。  
   
 ```  
@@ -678,7 +702,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&26;](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
-##  <a name="a-namewritea--carchivewrite"></a><a name="write"></a>Carchive:: Write  
+##  <a name="write"></a>Carchive:: Write  
  指定的位元組數目寫入封存。  
   
 ```  
@@ -700,7 +724,7 @@ void Write(const void* lpBuf, INT nMax);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&23;](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
   
-##  <a name="a-namewriteclassa--carchivewriteclass"></a><a name="writeclass"></a>CArchive::WriteClass  
+##  <a name="writeclass"></a>CArchive::WriteClass  
  使用`WriteClass`來儲存在衍生類別的序列化期間的基底類別版本和類別資訊。  
   
 ```  
@@ -723,7 +747,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization #&28;](../../mfc/codesnippet/cpp/carchive-class_21.cpp)]  
   
-##  <a name="a-namewriteobjecta--carchivewriteobject"></a><a name="writeobject"></a>CArchive::WriteObject  
+##  <a name="writeobject"></a>CArchive::WriteObject  
  儲存指定`CObject`封存。  
   
 ```  
@@ -749,7 +773,7 @@ void WriteObject(const CObject* pOb);
   
  [!code-cpp[NVC_MFCSerialization #&29;](../../mfc/codesnippet/cpp/carchive-class_22.cpp)]  
   
-##  <a name="a-namewritestringa--carchivewritestring"></a><a name="writestring"></a>CArchive::WriteString  
+##  <a name="writestring"></a>CArchive::WriteString  
  使用此成員函式將資料從緩衝區寫入相關聯的檔案`CArchive`物件。  
   
 ```  

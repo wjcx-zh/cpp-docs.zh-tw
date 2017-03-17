@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::CMFCRibbonProgressBar
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetPos
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRangeMax
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRangeMin
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::GetRegularSize
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::IsInfiniteMode
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::OnDraw
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetInfiniteMode
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetPos
+- AFXRIBBONPROGRESSBAR/CMFCRibbonProgressBar::SetRange
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +99,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>需求  
  **標頭︰** afxRibbonProgressBar.h  
   
-##  <a name="a-namecmfcribbonprogressbara--cmfcribbonprogressbarcmfcribbonprogressbar"></a><a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
+##  <a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
  建構並初始化[CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)物件。  
   
 ```  
@@ -111,7 +122,7 @@ CMFCRibbonProgressBar(
  [in] `nHeight`  
  指定高度，單位為像素功能區進度列。  
   
-##  <a name="a-namegetposa--cmfcribbonprogressbargetpos"></a><a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
+##  <a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
  傳回目前的進度列的位置。  
   
 ```  
@@ -124,7 +135,7 @@ int GetPos () const;
 ### <a name="remarks"></a>備註  
  正在設定的範圍必須是所指定的範圍內[CMFCRibbonProgressBar::SetRange](#setrange)方法。  
   
-##  <a name="a-namegetrangemaxa--cmfcribbonprogressbargetrangemax"></a><a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
+##  <a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
  傳回進度列的目前最大值。  
   
 ```  
@@ -136,7 +147,7 @@ int GetRangeMax() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetrangemina--cmfcribbonprogressbargetrangemin"></a><a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
+##  <a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
  傳回進度列的目前最小範圍值。  
   
 ```  
@@ -146,7 +157,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>傳回值  
  目前範圍的最小值。  
   
-##  <a name="a-namegetregularsizea--cmfcribbonprogressbargetregularsize"></a><a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -160,7 +171,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisinfinitemodea--cmfcribbonprogressbarisinfinitemode"></a><a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
+##  <a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
  指定是否在無限模式工作進度列。  
   
 ```  
@@ -173,7 +184,7 @@ BOOL IsInfiniteMode() const;
 ### <a name="remarks"></a>備註  
  在無限模式中，進度列填滿重複從最小值的最大值。 您可以使用無限的模式，表示作業正在進行中，但完成時間不明。  
   
-##  <a name="a-nameondrawa--cmfcribbonprogressbarondraw"></a><a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -185,7 +196,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetinfinitemodea--cmfcribbonprogressbarsetinfinitemode"></a><a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
+##  <a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
  設定進度列，才能以無限的模式運作。  
   
 ```  
@@ -199,7 +210,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ### <a name="remarks"></a>備註  
  通常，如果進度列是無限的模式，它會告訴使用者作業正在進行中，但完成時間不明。 因此，進度列填滿重複從最小值的最大值。  
   
-##  <a name="a-namesetposa--cmfcribbonprogressbarsetpos"></a><a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
+##  <a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
  設定進度列目前位置。  
   
 ```  
@@ -218,7 +229,7 @@ void SetPos(
 ### <a name="remarks"></a>備註  
  正在設定的範圍必須是所指定的範圍內[CMFCRibbonProgressBar::SetRange](#setrange)方法。  
   
-##  <a name="a-namesetrangea--cmfcribbonprogressbarsetrange"></a><a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
+##  <a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
  設定進度列的最小和最大值。  
   
 ```  

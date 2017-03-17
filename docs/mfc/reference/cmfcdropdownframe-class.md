@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::Create
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentMenuBar
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::GetParentPopupMenu
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::RecalcLayout
+- AFXDROPDOWNTOOLBAR/CMFCDropDownFrame::SetAutoDestroy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +103,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxdropdowntoolbar.h  
   
-##  <a name="a-namecreatea--cmfcdropdownframecreate"></a><a name="create"></a>CMFCDropDownFrame::Create  
+##  <a name="create"></a>CMFCDropDownFrame::Create  
  建立 `CMFCDropDownFrame` 物件。  
   
 ```  
@@ -126,7 +132,7 @@ virtual BOOL Create(
   
  `CMFCDropDownFrame`類別會建立一份提供的`CMFCDropDownToolBar`參數。 這個方法會複製按鈕影像和按鈕狀態從`pWndOriginToolbar`參數`m_pWndOriginToolbar`資料成員。  
   
-##  <a name="a-namegetparentmenubara--cmfcdropdownframegetparentmenubar"></a><a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
  擷取父功能表的下拉式清單框架。  
   
 ```  
@@ -139,7 +145,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 ### <a name="remarks"></a>備註  
  這個方法會擷取父功能表的 [父] 按鈕。 這個方法會傳回`NULL`如果下拉式清單框架有沒有父代按鈕或 [父] 按鈕有沒有父功能表列。  
   
-##  <a name="a-namegetparentpopupmenua--cmfcdropdownframegetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
  擷取父快顯功能表的下拉式清單的框架。  
   
 ```  
@@ -152,7 +158,7 @@ CMFCDropDownFrame* GetParentPopupMenu() const;
 ### <a name="remarks"></a>備註  
  這個方法會擷取在父功能表的 [父] 按鈕。 這個方法會傳回`NULL`如果下拉式清單框架有沒有父代按鈕或 [父] 按鈕有沒有父功能表。  
   
-##  <a name="a-namerecalclayouta--cmfcdropdownframerecalclayout"></a><a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
  重新調整位置下拉式框架。  
   
 ```  
@@ -169,7 +175,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ### <a name="remarks"></a>備註  
  建立下拉式框架時，或者調整父視窗的大小，架構會呼叫這個方法。 這個方法會計算所使用的位置和大小的父視窗的位置和大小下拉式框架。  
   
-##  <a name="a-namesetautodestroya--cmfcdropdownframesetautodestroy"></a><a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
  設定是否會自動終結子下拉式工具列視窗。  
   
 ```  

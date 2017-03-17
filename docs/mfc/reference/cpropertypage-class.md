@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropertyPage
+- AFXDLGS/CPropertyPage
+- AFXDLGS/CPropertyPage::CPropertyPage
+- AFXDLGS/CPropertyPage::CancelToClose
+- AFXDLGS/CPropertyPage::Construct
+- AFXDLGS/CPropertyPage::GetPSP
+- AFXDLGS/CPropertyPage::OnApply
+- AFXDLGS/CPropertyPage::OnCancel
+- AFXDLGS/CPropertyPage::OnKillActive
+- AFXDLGS/CPropertyPage::OnOK
+- AFXDLGS/CPropertyPage::OnQueryCancel
+- AFXDLGS/CPropertyPage::OnReset
+- AFXDLGS/CPropertyPage::OnSetActive
+- AFXDLGS/CPropertyPage::OnWizardBack
+- AFXDLGS/CPropertyPage::OnWizardFinish
+- AFXDLGS/CPropertyPage::OnWizardNext
+- AFXDLGS/CPropertyPage::QuerySiblings
+- AFXDLGS/CPropertyPage::SetModified
+- AFXDLGS/CPropertyPage::m_psp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +124,7 @@ class CPropertyPage : public CDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdlgs.h  
   
-##  <a name="a-namecanceltoclosea--cpropertypagecanceltoclose"></a><a name="canceltoclose"></a>CPropertyPage::CancelToClose  
+##  <a name="canceltoclose"></a>CPropertyPage::CancelToClose  
  無法復原的變更已對非強制回應屬性工作表頁中的資料之後，請呼叫此函式。  
   
 ```  
@@ -121,7 +139,7 @@ void CancelToClose();
 ### <a name="example"></a>範例  
   請參閱範例[CPropertyPage::QuerySiblings](#querysiblings)。  
   
-##  <a name="a-nameconstructa--cpropertypageconstruct"></a><a name="construct"></a>CPropertyPage::Construct  
+##  <a name="construct"></a>CPropertyPage::Construct  
  呼叫此成員函式來建構`CPropertyPage`物件。  
   
 ```  
@@ -181,7 +199,7 @@ void Construct(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&112;](../../mfc/codesnippet/cpp/cpropertypage-class_1.cpp)]  
   
-##  <a name="a-namecpropertypagea--cpropertypagecpropertypage"></a><a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
+##  <a name="cpropertypage"></a>CPropertyPage::CPropertyPage  
  建構 `CPropertyPage` 物件。  
   
 ```  
@@ -247,7 +265,7 @@ CPropertyPage(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&113;](../../mfc/codesnippet/cpp/cpropertypage-class_2.cpp)]  
   
-##  <a name="a-namegetpspa--cpropertypagegetpsp"></a><a name="getpsp"></a>CPropertyPage::GetPSP  
+##  <a name="getpsp"></a>CPropertyPage::GetPSP  
  擷取 Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)相關聯的結構`CPropertyPage`物件。  
   
 ```  
@@ -259,7 +277,7 @@ PROPSHEETPAGE& GetPSP();
 ### <a name="return-value"></a>傳回值  
  參考**PROPSHEETPAGE**結構。  
   
-##  <a name="a-namempspa--cpropertypagempsp"></a><a name="m_psp"></a>CPropertyPage::m_psp  
+##  <a name="m_psp"></a>CPropertyPage::m_psp  
  `m_psp`是一種結構的成員儲存的特性[PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)。  
   
 ```  
@@ -274,7 +292,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&128;](../../mfc/codesnippet/cpp/cpropertypage-class_3.cpp)]  
   
-##  <a name="a-nameonapplya--cpropertypageonapply"></a><a name="onapply"></a>CPropertyPage::OnApply  
+##  <a name="onapply"></a>CPropertyPage::OnApply  
  在使用者選擇 [確定] 或 [立即套用] 按鈕時，架構會呼叫此成員函式。  
   
 ```  
@@ -296,7 +314,7 @@ virtual BOOL OnApply();
 ### <a name="example"></a>範例  
   請參閱範例[CPropertyPage::OnOK](#onok)。  
   
-##  <a name="a-nameoncancela--cpropertypageoncancel"></a><a name="oncancel"></a>CPropertyPage::OnCancel  
+##  <a name="oncancel"></a>CPropertyPage::OnCancel  
  選取 [取消] 按鈕時，架構會呼叫此成員函式。  
   
 ```  
@@ -309,7 +327,7 @@ virtual void OnCancel();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&114;](../../mfc/codesnippet/cpp/cpropertypage-class_4.cpp)]  
   
-##  <a name="a-nameonkillactivea--cpropertypageonkillactive"></a><a name="onkillactive"></a>Cpropertypage:: Onkillactive  
+##  <a name="onkillactive"></a>Cpropertypage:: Onkillactive  
  頁面時不會再使用中的頁面，架構會呼叫此成員函式。  
   
 ```  
@@ -329,7 +347,7 @@ virtual BOOL OnKillActive();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&115;](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]  
   
-##  <a name="a-nameonoka--cpropertypageonok"></a><a name="onok"></a>CPropertyPage::OnOK  
+##  <a name="onok"></a>CPropertyPage::OnOK  
  當使用者選擇 [確定] 或 [立即套用] 按鈕，這個架構會呼叫之後立即由架構呼叫此成員函式[OnKillActive](#onkillactive)。  
   
 ```  
@@ -346,7 +364,7 @@ virtual void OnOK();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView&116;](../../mfc/codesnippet/cpp/cpropertypage-class_6.cpp)]  
   
-##  <a name="a-nameonquerycancela--cpropertypageonquerycancel"></a><a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
+##  <a name="onquerycancel"></a>CPropertyPage::OnQueryCancel  
  當使用者按一下 [取消] 按鈕，而且之前取消動作發生時，架構會呼叫此成員函式。  
   
 ```  
@@ -364,7 +382,7 @@ virtual BOOL OnQueryCancel();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&117;](../../mfc/codesnippet/cpp/cpropertypage-class_7.cpp)]  
   
-##  <a name="a-nameonreseta--cpropertypageonreset"></a><a name="onreset"></a>CPropertyPage::OnReset  
+##  <a name="onreset"></a>CPropertyPage::OnReset  
  在使用者選擇 [取消] 按鈕時，架構會呼叫此成員函式。  
   
 ```  
@@ -381,7 +399,7 @@ virtual void OnReset();
 ### <a name="example"></a>範例  
   請參閱範例[CPropertyPage::OnCancel](#oncancel)。  
   
-##  <a name="a-nameonsetactivea--cpropertypageonsetactive"></a><a name="onsetactive"></a>Cpropertypage:: Onsetactive  
+##  <a name="onsetactive"></a>Cpropertypage:: Onsetactive  
  當頁面選擇由使用者變成使用中的頁面，架構會呼叫此成員函式。  
   
 ```  
@@ -399,7 +417,7 @@ virtual BOOL OnSetActive();
 ### <a name="example"></a>範例  
   請參閱範例[CPropertySheet::SetFinishText](../../mfc/reference/cpropertysheet-class.md#setfinishtext)。  
   
-##  <a name="a-nameonwizardbacka--cpropertypageonwizardback"></a><a name="onwizardback"></a>CPropertyPage::OnWizardBack  
+##  <a name="onwizardback"></a>CPropertyPage::OnWizardBack  
  當使用者按一下精靈中的 [上一頁] 按鈕時，架構會呼叫此成員函式。  
   
 ```  
@@ -417,7 +435,7 @@ virtual LRESULT OnWizardBack();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&118;](../../mfc/codesnippet/cpp/cpropertypage-class_8.cpp)]  
   
-##  <a name="a-nameonwizardfinisha--cpropertypageonwizardfinish"></a><a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
+##  <a name="onwizardfinish"></a>CPropertyPage::OnWizardFinish  
  當使用者按一下 [完成] 按鈕，在精靈中，架構會呼叫此成員函式。  
   
 ```  
@@ -445,7 +463,7 @@ virtual BOOL OnWizardFinish();
   
  [!code-cpp[NVC_MFCDocView #&122;](../../mfc/codesnippet/cpp/cpropertypage-class_12.cpp)]  
   
-##  <a name="a-nameonwizardnexta--cpropertypageonwizardnext"></a><a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
+##  <a name="onwizardnext"></a>CPropertyPage::OnWizardNext  
  當使用者按一下 [下一步] 按鈕，在精靈中，架構會呼叫此成員函式。  
   
 ```  
@@ -463,7 +481,7 @@ virtual LRESULT OnWizardNext();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&123;](../../mfc/codesnippet/cpp/cpropertypage-class_13.cpp)]  
   
-##  <a name="a-namequerysiblingsa--cpropertypagequerysiblings"></a><a name="querysiblings"></a>CPropertyPage::QuerySiblings  
+##  <a name="querysiblings"></a>CPropertyPage::QuerySiblings  
  呼叫此成員函式，來轉送訊息至屬性工作表中的每一頁。  
   
 ```  
@@ -492,7 +510,7 @@ LRESULT QuerySiblings(
   
  [!code-cpp[NVC_MFCDocView #&126;](../../mfc/codesnippet/cpp/cpropertypage-class_16.cpp)]  
   
-##  <a name="a-namesetmodifieda--cpropertypagesetmodified"></a><a name="setmodified"></a>Setmodified  
+##  <a name="setmodified"></a>Setmodified  
  呼叫此成員函式可啟用或停用 [立即套用] 按鈕，根據屬性頁中的設定是否應該套用到適當的外部物件。  
   
 ```  

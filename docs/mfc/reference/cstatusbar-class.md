@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStatusBar
+- AFXEXT/CStatusBar
+- AFXEXT/CStatusBar::CStatusBar
+- AFXEXT/CStatusBar::CommandToIndex
+- AFXEXT/CStatusBar::Create
+- AFXEXT/CStatusBar::CreateEx
+- AFXEXT/CStatusBar::DrawItem
+- AFXEXT/CStatusBar::GetItemID
+- AFXEXT/CStatusBar::GetItemRect
+- AFXEXT/CStatusBar::GetPaneInfo
+- AFXEXT/CStatusBar::GetPaneStyle
+- AFXEXT/CStatusBar::GetPaneText
+- AFXEXT/CStatusBar::GetStatusBarCtrl
+- AFXEXT/CStatusBar::SetIndicators
+- AFXEXT/CStatusBar::SetPaneInfo
+- AFXEXT/CStatusBar::SetPaneStyle
+- AFXEXT/CStatusBar::SetPaneText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +138,7 @@ class CStatusBar : public CControlBar
 ## <a name="requirements"></a>需求  
  **標頭︰** afxext.h  
   
-##  <a name="a-namecommandtoindexa--cstatusbarcommandtoindex"></a><a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
  指標的索引取得指定的識別碼。  
   
 ```  
@@ -139,7 +155,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>備註  
  第一個指標的索引為 0。  
   
-##  <a name="a-namecreatea--cstatusbarcreate"></a><a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>CStatusBar::Create  
  建立狀態列 （子視窗），並將它與相關聯`CStatusBar`物件。  
   
 ```  
@@ -171,7 +187,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  也會將初始字型並將狀態設為預設值的長條的高度。  
   
-##  <a name="a-namecreateexa--cstatusbarcreateex"></a><a name="createex"></a>CStatusBar::CreateEx  
+##  <a name="createex"></a>CStatusBar::CreateEx  
  呼叫此函式可建立狀態列 （子視窗），並將它與關聯`CStatusBar`物件。  
   
 ```  
@@ -209,14 +225,14 @@ virtual BOOL CreateEx(
   
  使用`CreateEx`，而不是[建立](#create)，當特定樣式必須要有內嵌的狀態列控制項的建立期間。 例如，設定`dwCtrlStyle`至**SBT_TOOLTIPS**狀態列物件中顯示工具提示。  
   
-##  <a name="a-namecstatusbara--cstatusbarcstatusbar"></a><a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
  建構`CStatusBar`物件，會建立預設狀態列字型有必要，並設定成預設值的字型特性。  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="a-namedrawitema--cstatusbardrawitem"></a><a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>CStatusBar::DrawItem  
  此成員函式會呼叫架構中，當主控描繪狀態列會變更的視覺外觀。  
   
 ```  
@@ -230,7 +246,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>備註  
  **ItemAction**成員`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。 覆寫此成員函式實作繪圖的主控描繪`CStatusBar`物件。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前終止此成員函式。  
   
-##  <a name="a-namegetitemida--cstatusbargetitemid"></a><a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>CStatusBar::GetItemID  
  傳回所指定的標記識別碼`nIndex`。  
   
 ```  
@@ -244,7 +260,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>傳回值  
  指標所指定的識別碼`nIndex`。  
   
-##  <a name="a-namegetitemrecta--cstatusbargetitemrect"></a><a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
  複製所指定指標的座標`nIndex`成指向結構`lpRect`。  
   
 ```  
@@ -263,7 +279,7 @@ void GetItemRect(
 ### <a name="remarks"></a>備註  
  座標是相對於左上角的 [狀態] 列的像素為單位。  
   
-##  <a name="a-namegetpaneinfoa--cstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
  設定`nID`， `nStyle`，和`cxWidth`以 ID、 樣式和寬度所指定的位置 [指標] 窗格的`nIndex`。  
   
 ```  
@@ -287,7 +303,7 @@ void GetPaneInfo(
  `cxWidth`  
  窗格的寬度設為整數的參考。  
   
-##  <a name="a-namegetpanestylea--cstatusbargetpanestyle"></a><a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
  呼叫此成員函式擷取狀態列窗格的樣式。  
   
 ```  
@@ -306,7 +322,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  狀態列的可用樣式清單，請參閱[建立](#create)。  
   
-##  <a name="a-namegetpanetexta--cstatusbargetpanetext"></a><a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
  呼叫此成員函式，以擷取出現在狀態列上窗格中的文字。  
   
 ```  

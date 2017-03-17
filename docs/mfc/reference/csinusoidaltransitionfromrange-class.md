@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CSinusoidalTransitionFromRange
 - CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::Create
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_dblMaximumValue
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_dblMinimumValue
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_duration
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_period
+- AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_slope
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +93,7 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecreatea--csinusoidaltransitionfromrangecreate"></a><a name="create"></a>CSinusoidalTransitionFromRange::Create  
+##  <a name="create"></a>CSinusoidalTransitionFromRange::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -102,7 +109,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-namecsinusoidaltransitionfromrangea--csinusoidaltransitionfromrangecsinusoidaltransitionfromrange"></a><a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
+##  <a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
  建構轉換物件。  
   
 ```  
@@ -130,35 +137,35 @@ CSinusoidalTransitionFromRange(
  `slope`  
  在開始轉換的斜率。  
   
-##  <a name="a-namemdblmaximumvaluea--csinusoidaltransitionfromrangemdblmaximumvalue"></a><a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
+##  <a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
  在尖峰時段振動波的動畫變數的值。  
   
 ```  
 DOUBLE m_dblMaximumValue;  
 ```  
   
-##  <a name="a-namemdblminimumvaluea--csinusoidaltransitionfromrangemdblminimumvalue"></a><a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
+##  <a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
  在透過振動波的動畫變數的值。  
   
 ```  
 DOUBLE m_dblMinimumValue;  
 ```  
   
-##  <a name="a-namemdurationa--csinusoidaltransitionfromrangemduration"></a><a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
+##  <a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
  轉換的持續時間。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="a-namemperioda--csinusoidaltransitionfromrangemperiod"></a><a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
+##  <a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
  以秒為單位的正弦曲線 wave 振盪期間。  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-##  <a name="a-namemslopea--csinusoidaltransitionfromrangemslope"></a><a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
+##  <a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
  在開始轉換的斜率。  
   
 ```  

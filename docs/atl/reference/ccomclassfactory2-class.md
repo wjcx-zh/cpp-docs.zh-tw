@@ -9,11 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactory2<license>
 - CComClassFactory2
-- ATL.CComClassFactory2<license>
-- ATL::CComClassFactory2
-- ATL.CComClassFactory2
+- ATLCOM/ATL::CComClassFactory2
+- ATLCOM/ATL::CComClassFactory2::CreateInstance
+- ATLCOM/ATL::CComClassFactory2::CreateInstanceLic
+- ATLCOM/ATL::CComClassFactory2::GetLicInfo
+- ATLCOM/ATL::CComClassFactory2::LockServer
+- ATLCOM/ATL::CComClassFactory2::RequestLicKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +106,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactory2createinstance"></a><a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
  建立指定 CLSID 的物件，並擷取這個物件的介面指標。  
   
 ```
@@ -127,7 +129,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>備註  
  需要完整授權的電腦。 完整電腦授權不存在，如果呼叫[CreateInstanceLic](#createinstancelic)。  
   
-##  <a name="a-namecreateinstancelica--ccomclassfactory2createinstancelic"></a><a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
  類似於[CreateInstance](#createinstance)，只不過`CreateInstanceLic`需要授權金鑰。  
   
 ```
@@ -162,7 +164,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>備註  
  您可以取得授權金鑰使用[RequestLicKey](#requestlickey)。 為了在未經授權的電腦上建立物件，您必須呼叫`CreateInstanceLic`。  
   
-##  <a name="a-namegetlicinfoa--ccomclassfactory2getlicinfo"></a><a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
  填滿[LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)結構描述的 class factory 資訊的授權功能。  
   
 ```
@@ -179,7 +181,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>備註  
  `fRuntimeKeyAvail`這個結構的成員表示是否提供授權金鑰，class factory 允許未經授權的電腦上建立的物件。 *FLicVerified*成員表示的完整電腦授權是否存在。  
   
-##  <a name="a-namelockservera--ccomclassfactory2lockserver"></a><a name="lockserver"></a>CComClassFactory2::LockServer  
+##  <a name="lockserver"></a>CComClassFactory2::LockServer  
  遞增和遞減模組鎖定計數藉由呼叫**_Module::Lock**和**_Module::Unlock**分別。  
   
 ```
@@ -198,7 +200,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  呼叫`LockServer`允許用戶端保留一個 class factory，以便可以快速建立多個物件。  
   
-##  <a name="a-namerequestlickeya--ccomclassfactory2requestlickey"></a><a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
  建立並傳回授權金鑰，但前提是`fRuntimeKeyAvail`成員[LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)結構是**TRUE**。  
   
 ```

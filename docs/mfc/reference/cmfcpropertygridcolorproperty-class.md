@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableAutomaticButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::EnableOtherButton
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::GetColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColor
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetColumnsNumber
+- AFXPROPERTYGRIDCTRL/CMFCPropertyGridColorProperty::SetOriginalValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +105,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>需求  
  **標頭︰** afxpropertygridctrl.h  
   
-##  <a name="a-namecmfcpropertygridcolorpropertya--cmfcpropertygridcolorpropertycmfcpropertygridcolorproperty"></a><a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  建構 `CMFCPropertyGridColorProperty` 物件。  
   
 ```  
@@ -125,7 +133,7 @@ CMFCPropertyGridColorProperty(
  [in] `dwData`  
  應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
   
-##  <a name="a-nameenableautomaticbuttona--cmfcpropertygridcolorpropertyenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
  可讓*自動*色彩選取對話方塊上的按鈕。 (標示為 [標準] 按鈕自動**自動**。)  
   
 ```  
@@ -147,7 +155,7 @@ void EnableAutomaticButton(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenableotherbuttona--cmfcpropertygridcolorpropertyenableotherbutton"></a><a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
  可讓*其他*色彩選取對話方塊上的按鈕。 (標準的其他按鈕標記**更多色彩...**.)  
   
 ```  
@@ -169,7 +177,7 @@ void EnableOtherButton(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetcolora--cmfcpropertygridcolorpropertygetcolor"></a><a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
  取得屬性的目前色彩。  
   
 ```  
@@ -181,7 +189,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetcolora--cmfcpropertygridcolorpropertysetcolor"></a><a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
  設定屬性的新色彩。  
   
 ```  
@@ -194,7 +202,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetcolumnsnumbera--cmfcpropertygridcolorpropertysetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
  指定目前色彩屬性格線中的資料行數目。  
   
 ```  
@@ -208,7 +216,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ### <a name="remarks"></a>備註  
  這個方法會設定的值`m_nColumnsNumber`受保護的資料成員。  
   
-##  <a name="a-namesetoriginalvaluea--cmfcpropertygridcolorpropertysetoriginalvalue"></a><a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
+##  <a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
  設定可編輯屬性的原始值。  
   
 ```  

@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
+- AFXTEMPL/CTypedPtrList
+- AFXTEMPL/CTypedPtrList::AddHead
+- AFXTEMPL/CTypedPtrList::AddTail
+- AFXTEMPL/CTypedPtrList::GetAt
+- AFXTEMPL/CTypedPtrList::GetHead
+- AFXTEMPL/CTypedPtrList::GetNext
+- AFXTEMPL/CTypedPtrList::GetPrev
+- AFXTEMPL/CTypedPtrList::GetTail
+- AFXTEMPL/CTypedPtrList::RemoveHead
+- AFXTEMPL/CTypedPtrList::RemoveTail
+- AFXTEMPL/CTypedPtrList::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +119,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>需求  
  **Header:** afxtempl.h  
   
-##  <a name="a-nameaddheada--ctypedptrlistaddhead"></a><a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>CTypedPtrList::AddHead  
  此成員函式呼叫`BASE_CLASS` **:: AddHead**。  
   
 ```  
@@ -135,7 +146,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>備註  
  第一個版本將加入新項目清單的開頭之前。 第二個版本新增另一個清單的開頭之前的項目。  
   
-##  <a name="a-nameaddtaila--ctypedptrlistaddtail"></a><a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>CTypedPtrList::AddTail  
  此成員函式呼叫`BASE_CLASS` **:: AddTail**。  
   
 ```  
@@ -162,7 +173,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>備註  
  第一版會將新的項目加入清單的結尾之後。 第二個版本之後清單的結尾新增另一個清單項目。  
   
-##  <a name="a-namegetata--ctypedptrlistgetat"></a><a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>CTypedPtrList::GetAt  
  型別的變數**位置**是索引鍵清單。  
   
 ```  
@@ -189,7 +200,7 @@ TYPE GetAt(POSITION position) const;
   
  內嵌函式呼叫`BASE_CLASS` **:: GetAt**。  
   
-##  <a name="a-namegetheada--ctypedptrlistgethead"></a><a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>CTypedPtrList::GetHead  
  取得表示標頭項目，此清單的指標。  
   
 ```  
@@ -209,7 +220,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>備註  
  您必須確定清單不是空的再呼叫`GetHead`。 如果清單是空的 Mfc 程式庫的偵錯版本會判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單中含有項目。  
   
-##  <a name="a-namegetnexta--ctypedptrlistgetnext"></a><a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>CTypedPtrList::GetNext  
  取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**清單中的下一個項目值。  
   
 ```  
@@ -238,7 +249,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  您可在反覆項目時移除的項目。 請參閱範例[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)。  
   
-##  <a name="a-namegetpreva--ctypedptrlistgetprev"></a><a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>CTypedPtrList::GetPrev  
  取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**先前的項目清單中的值。  
   
 ```  
@@ -265,7 +276,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  如果擷取的項目是在清單中，第一則新值`rPosition`設為**NULL**。  
   
-##  <a name="a-namegettaila--ctypedptrlistgettail"></a><a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>CTypedPtrList::GetTail  
  取得表示標頭項目，此清單的指標。  
   
 ```  
@@ -285,7 +296,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>備註  
  您必須確定清單不是空的再呼叫`GetTail`。 如果清單是空的 Mfc 程式庫的偵錯版本會判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單中含有項目。  
   
-##  <a name="a-nameremoveheada--ctypedptrlistremovehead"></a><a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
  從清單的開頭移除的項目，並傳回它。  
   
 ```  
@@ -302,7 +313,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>備註  
  您必須確定清單不是空的再呼叫`RemoveHead`。 如果清單是空的 Mfc 程式庫的偵錯版本會判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單中含有項目。  
   
-##  <a name="a-nameremovetaila--ctypedptrlistremovetail"></a><a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
  移除清單結尾的項目，並將它傳回。  
   
 ```  
@@ -319,7 +330,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>備註  
  您必須確定清單不是空的再呼叫`RemoveTail`。 如果清單是空的 Mfc 程式庫的偵錯版本會判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單中含有項目。  
   
-##  <a name="a-namesetata--ctypedptrlistsetat"></a><a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>CTypedPtrList::SetAt  
  此成員函式呼叫`BASE_CLASS` **:: SetAt**。  
   
 ```  

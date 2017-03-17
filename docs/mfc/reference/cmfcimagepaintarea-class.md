@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::CMFCImagePaintArea
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::GetMode
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetBitmap
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetColor
+- AFXIMAGEPAINTAREA/CMFCImagePaintArea::SetMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +98,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afximagepaintarea.h  
   
-##  <a name="a-namecmfcimagepaintareaa--cmfcimagepaintareacmfcimagepaintarea"></a><a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
  建構 `CMFCImagePaintArea` 物件。  
   
 ```  
@@ -106,7 +112,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |參數|描述|  
 |[in] `pParentDlg`|影像編輯器的父系對話方塊指標。|  
   
-##  <a name="a-namegetmodea--cmfcimagepaintareagetmode"></a><a name="getmode"></a>CMFCImagePaintArea::GetMode  
+##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
  擷取目前的繪圖模式。  
   
 ```  
@@ -116,7 +122,7 @@ IMAGE_EDIT_MODE GetMode() const;
 ### <a name="return-value"></a>傳回值  
  [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，指定目前的繪圖模式。  
   
-##  <a name="a-namesetbitmapa--cmfcimagepaintareasetbitmap"></a><a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
  設定 [圖片] 區域的點陣圖影像。  
   
 ```  
@@ -133,7 +139,7 @@ void SetBitmap(CBitmap* pBitmap);
 ### <a name="remarks"></a>備註  
  如果`pBitmap`是`NULL`，這個方法會將設定為可修改 [小畫家] 區域的大小設定為零。 否則，它將可修改 [小畫家] 區域的大小設定為提供的點陣圖影像的大小。  
   
-##  <a name="a-namesetcolora--cmfcimagepaintareasetcolor"></a><a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
  設定目前的繪圖色彩。  
   
 ```  
@@ -152,7 +158,7 @@ void SetColor(COLORREF color);
   
  將繪圖的色彩以外的所有繪圖模式時，是由影像編輯器對話方塊`IMAGE_EDIT_MODE_COLOR`。 如需繪製模式的詳細資訊，請參閱[cmfcimagepaintarea:: Image_edit_mode 列舉](cmfcimagepaintarea-image-edit-mode-enumeration.md)。  
   
-##  <a name="a-namesetmodea--cmfcimagepaintareasetmode"></a><a name="setmode"></a>CMFCImagePaintArea::SetMode  
+##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
  設定目前的繪圖模式。  
   
 ```  

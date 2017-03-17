@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStatic
+- AFXWIN/CStatic
+- AFXWIN/CStatic::CStatic
+- AFXWIN/CStatic::Create
+- AFXWIN/CStatic::DrawItem
+- AFXWIN/CStatic::GetBitmap
+- AFXWIN/CStatic::GetCursor
+- AFXWIN/CStatic::GetEnhMetaFile
+- AFXWIN/CStatic::GetIcon
+- AFXWIN/CStatic::SetBitmap
+- AFXWIN/CStatic::SetCursor
+- AFXWIN/CStatic::SetEnhMetaFile
+- AFXWIN/CStatic::SetIcon
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +111,7 @@ class CStatic : public CWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecreatea--cstaticcreate"></a><a name="create"></a>CStatic::Create  
+##  <a name="create"></a>CStatic::Create  
  建立 Windows 靜態控制項並將它附加`CStatic`物件。  
   
 ```  
@@ -156,7 +168,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&1;](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]  
   
-##  <a name="a-namecstatica--cstaticcstatic"></a><a name="cstatic"></a>CStatic::CStatic  
+##  <a name="cstatic"></a>CStatic::CStatic  
  建構 `CStatic` 物件。  
   
 ```  
@@ -166,7 +178,7 @@ CStatic();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&2;](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]  
   
-##  <a name="a-namedrawitema--cstaticdrawitem"></a><a name="drawitem"></a>CStatic::DrawItem  
+##  <a name="drawitem"></a>CStatic::DrawItem  
  若要繪製主控描繪靜態控制項架構呼叫。  
   
 ```  
@@ -180,7 +192,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>備註  
  覆寫這個函式來實作繪圖的描繪**CStatic**物件 (控制項有樣式**SS_OWNERDRAW**)。  
   
-##  <a name="a-namegetbitmapa--cstaticgetbitmap"></a><a name="getbitmap"></a>CStatic::GetBitmap  
+##  <a name="getbitmap"></a>CStatic::GetBitmap  
  取得與先前設定的點陣圖的控制代碼[SetBitmap](#setbitmap)，也就是相關聯`CStatic`。  
   
 ```  
@@ -193,7 +205,7 @@ HBITMAP GetBitmap() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&3;](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="a-namegetcursora--cstaticgetcursor"></a><a name="getcursor"></a>CStatic::GetCursor  
+##  <a name="getcursor"></a>CStatic::GetCursor  
  取得資料指標，使用先前設定的控制代碼[SetCursor](#setcursor)，也就是相關聯`CStatic`。  
   
 ```  
@@ -206,7 +218,7 @@ HCURSOR GetCursor();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&4;](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="a-namegetenhmetafilea--cstaticgetenhmetafile"></a><a name="getenhmetafile"></a>CStatic::GetEnhMetaFile  
+##  <a name="getenhmetafile"></a>CStatic::GetEnhMetaFile  
  取得與先前設定的增強型中繼檔的控制代碼[SetEnhMetafile](#setenhmetafile)，也就是相關聯`CStatic`。  
   
 ```  
@@ -219,7 +231,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&5;](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="a-namegeticona--cstaticgeticon"></a><a name="geticon"></a>CStatic::GetIcon  
+##  <a name="geticon"></a>CStatic::GetIcon  
  取得圖示，並使用先前設定的控制代碼[SetIcon](#seticon)，也就是相關聯`CStatic`。  
   
 ```  
@@ -232,7 +244,7 @@ HICON GetIcon() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&6;](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]  
   
-##  <a name="a-namesetbitmapa--cstaticsetbitmap"></a><a name="setbitmap"></a>CStatic::SetBitmap  
+##  <a name="setbitmap"></a>CStatic::SetBitmap  
  將新的點陣圖與靜態控制項產生關聯。  
   
 ```  
@@ -269,7 +281,7 @@ MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&3;](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]  
   
-##  <a name="a-namesetcursora--cstaticsetcursor"></a><a name="setcursor"></a>CStatic::SetCursor  
+##  <a name="setcursor"></a>CStatic::SetCursor  
  將新的資料指標映像與靜態控制項產生關聯。  
   
 ```  
@@ -295,7 +307,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&4;](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]  
   
-##  <a name="a-namesetenhmetafilea--cstaticsetenhmetafile"></a><a name="setenhmetafile"></a>CStatic::SetEnhMetaFile  
+##  <a name="setenhmetafile"></a>CStatic::SetEnhMetaFile  
  將新的增強型中繼檔映像與靜態控制項產生關聯。  
   
 ```  
@@ -319,7 +331,7 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatic #&5;](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]  
   
-##  <a name="a-nameseticona--cstaticseticon"></a><a name="seticon"></a>CStatic::SetIcon  
+##  <a name="seticon"></a>CStatic::SetIcon  
  將新的圖示影像與靜態控制項產生關聯。  
   
 ```  

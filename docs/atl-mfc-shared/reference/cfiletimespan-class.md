@@ -10,8 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFileTimeSpan
-- ATL.CFileTimeSpan
-- ATL::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::CFileTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::GetTimeSpan
+- ATLTIME/ATL::CFileTimeSpan::SetTimeSpan
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +93,7 @@ class CFileTimeSpan
 ## <a name="requirements"></a>需求  
  **標頭︰** atltime.h  
   
-##  <a name="a-namecfiletimespana--cfiletimespancfiletimespan"></a><a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan  
+##  <a name="cfiletimespan"></a>CFileTimeSpan::CFileTimeSpan  
  建構函式。  
   
 ```
@@ -110,7 +112,7 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 ### <a name="remarks"></a>備註  
  `CFileTimeSpan`物件可以使用現有建立`CFileTimeSpan`物件，或以 64 位元值表示。 預設建構函式會將時間範圍為 0。  
   
-##  <a name="a-namegettimespana--cfiletimespangettimespan"></a><a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan  
+##  <a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan  
  呼叫這個方法來擷取的時間範圍，從`CFileTimeSpan`物件。  
   
 ```
@@ -120,7 +122,7 @@ LONGLONG GetTimeSpan() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回的時間範圍，以毫秒為單位。  
   
-##  <a name="a-nameoperator-a--cfiletimespanoperator--"></a><a name="operator_-"></a>CFileTimeSpan::operator-  
+##  <a name="operator_-"></a>CFileTimeSpan::operator-  
  上執行減法**CFileTimeSpan**物件。  
   
 ```
@@ -134,7 +136,7 @@ CFileTimeSpan operator-(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回`CFileTimeSpan`物件表示結果的兩個時間範圍之間的差異。  
   
-##  <a name="a-nameoperatorneqa--cfiletimespanoperator-"></a><a name="operator_neq"></a>CFileTimeSpan::operator ！ =  
+##  <a name="operator_neq"></a>CFileTimeSpan::operator ！ =  
  比較兩個 `CFileTimeSpan` 物件是否不相等。  
   
 ```
@@ -148,7 +150,7 @@ bool operator!=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**要比較的項目是否不等於`CFileTimeSpan`物件; 否則**false**。  
   
-##  <a name="a-nameoperatoradda--cfiletimespanoperator-"></a><a name="operator_add"></a>CFileTimeSpan::operator +  
+##  <a name="operator_add"></a>CFileTimeSpan::operator +  
  上執行加法`CFileTimeSpan`物件。  
   
 ```
@@ -162,7 +164,7 @@ CFileTimeSpan operator+(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回`CFileTimeSpan`物件跨越包含兩個時間的總和。  
   
-##  <a name="a-nameoperatoraddeqa--cfiletimespanoperator-"></a><a name="operator_add_eq"></a>CFileTimeSpan::operator + =  
+##  <a name="operator_add_eq"></a>CFileTimeSpan::operator + =  
  上執行加法`CFileTimeSpan`物件，並將結果指派給目前的物件。  
   
 ```
@@ -176,7 +178,7 @@ CFileTimeSpan& operator+=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>傳回值  
  傳回更新`CFileTimeSpan`物件跨越包含兩個時間的總和。  
   
-##  <a name="a-nameoperatorlta--cfiletimespanoperator-lt"></a><a name="operator_lt"></a>CFileTimeSpan::operator&lt;  
+##  <a name="operator_lt"></a>CFileTimeSpan::operator&lt;  
  比較兩個`CFileTimeSpan`物件來判斷較小者。  
   
 ```
@@ -190,7 +192,7 @@ bool operator<(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**的第一個物件是否小於 （也就是代表較短的時間週期） 第二個，否則**false**。  
   
-##  <a name="a-nameoperatorlteqa--cfiletimespanoperator-lt"></a><a name="operator_lt_eq"></a>CFileTimeSpan::operator&lt;=  
+##  <a name="operator_lt_eq"></a>CFileTimeSpan::operator&lt;=  
  比較兩個`CFileTimeSpan`物件來判斷是否相等或較小者。  
   
 ```
@@ -204,7 +206,7 @@ bool operator<=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**如果第一個物件小於 （也就是代表更短時間內） 或等於第二個，否則**false**。  
   
-##  <a name="a-nameoperatoreqa--cfiletimespanoperator-"></a><a name="operator_eq"></a>CFileTimeSpan::operator =  
+##  <a name="operator_eq"></a>CFileTimeSpan::operator =  
  指派運算子。  
   
 ```
@@ -218,7 +220,7 @@ CFileTimeSpan& operator=(const CFileTimeSpan& span) throw();
 ### <a name="return-value"></a>傳回值  
  傳回更新`CFileTimeSpan`物件。  
   
-##  <a name="a-nameoperator-eqa--cfiletimespanoperator--"></a><a name="operator_-_eq"></a>CFileTimeSpan::operator =  
+##  <a name="operator_-_eq"></a>CFileTimeSpan::operator =  
  上執行減法`CFileTimeSpan`物件，並將結果指派給目前的物件。  
   
 ```
@@ -232,7 +234,7 @@ CFileTimeSpan& operator-=(CFileTimeSpan span) throw();
 ### <a name="return-value"></a>傳回值  
  傳回更新`CFileTimeSpan`物件。  
   
-##  <a name="a-nameoperatoreqeqa--cfiletimespanoperator-"></a><a name="operator_eq_eq"></a>CFileTimeSpan::operator = =  
+##  <a name="operator_eq_eq"></a>CFileTimeSpan::operator = =  
  比較兩個 `CFileTimeSpan` 物件是否相等。  
   
 ```
@@ -246,7 +248,7 @@ bool operator==(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**如果物件相等，否則**false**。  
   
-##  <a name="a-nameoperatorgta--cfiletimespanoperator-gt"></a><a name="operator_gt"></a>CFileTimeSpan::operator&gt;  
+##  <a name="operator_gt"></a>CFileTimeSpan::operator&gt;  
  比較兩個`CFileTimeSpan`判斷較大的物件。  
   
 ```
@@ -260,7 +262,7 @@ bool operator>(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**是否大於第一個物件 （也就是代表較長的時間） 第二個，否則**false**。  
   
-##  <a name="a-nameoperatorgteqa--cfiletimespanoperator-gt"></a><a name="operator_gt_eq"></a>CFileTimeSpan::operator&gt;=  
+##  <a name="operator_gt_eq"></a>CFileTimeSpan::operator&gt;=  
  比較兩個`CFileTimeSpan`來判斷是否相等或較大的物件。  
   
 ```
@@ -274,7 +276,7 @@ bool operator>=(CFileTimeSpan span) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**是否大於第一個物件 （也就是代表較長的時間） 或等於第二個，否則**false**。  
   
-##  <a name="a-namesettimespana--cfiletimespansettimespan"></a><a name="settimespan"></a>CFileTimeSpan::SetTimeSpan  
+##  <a name="settimespan"></a>CFileTimeSpan::SetTimeSpan  
  呼叫這個方法來設定的時間範圍內`CFileTimeSpan`物件。  
   
 ```

@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComQIPtrElementTraits
 - CComQIPtrElementTraits
-- ATL::CComQIPtrElementTraits
+- ATLCOLL/ATL::CComQIPtrElementTraits
+- ATLCOLL/ATL::CComQIPtrElementTraits::INARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +86,7 @@ class CComQIPtrElementTraits :
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-nameinargtypea--ccomqiptrelementtraitsinargtype"></a><a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CComQIPtrElementTraits::INARGTYPE  
  若要使用項目加入集合類別物件的資料型別。  
   
 ```

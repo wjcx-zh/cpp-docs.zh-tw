@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWindowDC
+- No header/CWindowDC
+- No header/CWindowDC::CWindowDC
+- No header/CWindowDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +82,7 @@ class CWindowDC : public CDC
 ## <a name="requirements"></a>需求  
  標頭︰ afxwin.h  
   
-##  <a name="a-namecwindowdca--cwindowdccwindowdc"></a><a name="cwindowdc"></a>CWindowDC::CWindowDC  
+##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
  建構`CWindowDC`物件，存取整個螢幕區域 （用戶端和非工作區） 的`CWnd`指向的物件`pWnd`。  
   
 ```  
@@ -98,7 +101,7 @@ explicit CWindowDC(CWnd* pWnd);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&188;](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="a-namemhwnda--cwindowdcmhwnd"></a><a name="m_hwnd"></a>CWindowDC::m_hWnd  
+##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
  `HWND`的`CWnd`指標用來建構`CWindowDC`物件。  
   
 ```  

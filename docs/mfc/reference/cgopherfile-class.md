@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherFile
+- AFXINET/CGopherFile
+- AFXINET/CGopherFile::CGopherFile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +82,7 @@ class CGopherFile : public CInternetFile
 ## <a name="requirements"></a>需求  
  **標頭︰** afxinet.h  
   
-##  <a name="a-namecgopherfilea--cgopherfilecgopherfile"></a><a name="cgopherfile"></a>CGopherFile::CGopherFile  
+##  <a name="cgopherfile"></a>CGopherFile::CGopherFile  
  此成員函式呼叫來建構`CGopherFile`物件。  
   
 ```  

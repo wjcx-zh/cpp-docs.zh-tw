@@ -8,6 +8,16 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::CNetAddressCtrl
+- AFXCMN/CNetAddressCtrl::Create
+- AFXCMN/CNetAddressCtrl::CreateEx
+- AFXCMN/CNetAddressCtrl::DisplayErrorTip
+- AFXCMN/CNetAddressCtrl::GetAddress
+- AFXCMN/CNetAddressCtrl::GetAllowType
+- AFXCMN/CNetAddressCtrl::SetAllowType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class CNetAddressCtrl : public CEdit
   
  這個類別的其他需求所述[建置需求的 Windows Vista 通用控制項](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   
-##  <a name="a-namecnetaddressctrla--cnetaddressctrlcnetaddressctrl"></a><a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
  建構 `CNetAddressCtrl` 物件。  
   
 ```  
@@ -112,7 +122,7 @@ CNetAddressCtrl();
 ### <a name="remarks"></a>備註  
  使用[CNetAddressCtrl::Create](#create)或[CNetAddressCtrl::CreateEx](#createex)方法來建立網路控制，並將其附加至`CNetAddressCtrl`物件。  
   
-##  <a name="a-namecreatea--cnetaddressctrlcreate"></a><a name="create"></a>CNetAddressCtrl::Create  
+##  <a name="create"></a>CNetAddressCtrl::Create  
  使用指定的樣式建立網路位址控制項，並將其附加至目前`CNetAddressCtrl`物件。  
   
 ```  
@@ -135,7 +145,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
-##  <a name="a-namecreateexa--cnetaddressctrlcreateex"></a><a name="createex"></a>CNetAddressCtrl::CreateEx  
+##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
  使用指定的延伸樣式建立網路位址控制項，並將其附加至目前`CNetAddressCtrl`物件。  
   
 ```  
@@ -160,7 +170,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
-##  <a name="a-namedisplayerrortipa--cnetaddressctrldisplayerrortip"></a><a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
  在目前的網路位址控制項相關聯的汽球提示中顯示錯誤訊息。  
   
 ```  
@@ -175,7 +185,7 @@ HRESULT DisplayErrorTip();
   
  此訊息會叫用[NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314)巨集，這會在說明[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 該巨集傳送`NCM_DISPLAYERRORTIP`訊息。  
   
-##  <a name="a-namegetaddressa--cnetaddressctrlgetaddress"></a><a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
  擷取目前的網路位址控制項相關聯的網路位址的驗證和剖析呈現。  
   
 ```  
@@ -198,7 +208,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
  這個方法會叫用[NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316)巨集，這會在說明[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 該巨集傳送`NCM_GETADDRESS`訊息。  
   
-##  <a name="a-namegetallowtypea--cnetaddressctrlgetallowtype"></a><a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
  擷取目前的網路位址控制項可支援的網路位址的型別。  
   
 ```  
@@ -211,7 +221,7 @@ DWORD GetAllowType() const;
 ### <a name="remarks"></a>備註  
  此訊息會叫用[NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318)巨集，這會在說明[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 該巨集傳送`NCM_GETALLOWTYPE`訊息。  
   
-##  <a name="a-namesetallowtypea--cnetaddressctrlsetallowtype"></a><a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
  設定目前的網路位址控制項可支援的網路位址的類型。  
   
 ```  

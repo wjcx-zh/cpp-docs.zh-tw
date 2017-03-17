@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecordView
+- AFXDB/CRecordView
+- AFXDB/CRecordView::CRecordView
+- AFXDB/CRecordView::IsOnFirstRecord
+- AFXDB/CRecordView::IsOnLastRecord
+- AFXDB/CRecordView::OnGetRecordset
+- AFXDB/CRecordView::OnMove
+- AFXDB/CRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +115,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
   
-##  <a name="a-namecrecordviewa--crecordviewcrecordview"></a><a name="crecordview"></a>CRecordView::CRecordView  
+##  <a name="crecordview"></a>CRecordView::CRecordView  
  當您建立的物件型別衍生自`CRecordView`，呼叫任一種形式的建構函式來初始化檢視的物件，並識別檢視所根據的對話方塊資源。  
   
 ```  
@@ -137,7 +144,7 @@ explicit CRecordView(UINT nIDTemplate);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase #&32;](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
-##  <a name="a-nameisonfirstrecorda--crecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
+##  <a name="isonfirstrecord"></a>CRecordView::IsOnFirstRecord  
  呼叫此成員函式，以判斷目前的記錄是第一筆記錄，此資料錄檢視相關聯的資料錄集物件中。  
   
 ```  
@@ -152,7 +159,7 @@ BOOL IsOnFirstRecord();
   
  如果使用者移到第一筆記錄，架構會停用您移至第一個或上一筆記錄有任何使用者介面物件。  
   
-##  <a name="a-nameisonlastrecorda--crecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
+##  <a name="isonlastrecord"></a>CRecordView::IsOnLastRecord  
  呼叫此成員函式，以判斷目前的記錄是最後一筆記錄，此資料錄檢視相關聯的資料錄集物件中。  
   
 ```  
@@ -168,7 +175,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 >  此函式的結果是可靠的不同之處在於檢視無法偵測到資料錄集的結尾，直到使用者已移動過。 資料錄檢視可以告訴它必須停用任何使用者介面物件移動到下一個或最後一筆記錄之前，使用者必須超越最後一筆記錄。 如果使用者移過去的最後一筆記錄，然後將傳回的最後一個記錄 （或之前），資料錄檢視可以追蹤使用者的資料錄集中的位置，並正確地停用使用者介面物件。 `IsOnLastRecord`實作函式的呼叫之後也不可靠**OnRecordLast**，處理`ID_RECORD_LAST`命令，或`CRecordset::MoveLast`。  
   
-##  <a name="a-nameongetrecordseta--crecordviewongetrecordset"></a><a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
+##  <a name="ongetrecordset"></a>CRecordView::OnGetRecordset  
  傳回的指標`CRecordset`-衍生的資料錄檢視相關聯的物件。  
   
 ```  
@@ -183,7 +190,7 @@ virtual CRecordset* OnGetRecordset() = 0;
   
  如需詳細資訊和範例，請參閱文章[資料錄檢視︰ 使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。  
   
-##  <a name="a-nameonmovea--crecordviewonmove"></a><a name="onmove"></a>CRecordView::OnMove  
+##  <a name="onmove"></a>CRecordView::OnMove  
  呼叫此成員函式，將移至不同的資料錄集，資料錄檢視控制項中顯示其欄位。  
   
 ```  

@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CStringElementTraitsI
 - CStringElementTraitsI
-- ATL.CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI
+- ATLCOLL/ATL::CStringElementTraitsI::INARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::OUTARGTYPE
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElements
+- ATLCOLL/ATL::CStringElementTraitsI::CompareElementsOrdered
+- ATLCOLL/ATL::CStringElementTraitsI::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringelementtraitsicompareelements"></a><a name="compareelements"></a>CStringElementTraitsI::CompareElements  
+##  <a name="compareelements"></a>CStringElementTraitsI::CompareElements  
  呼叫此靜態函式來比較兩個字串項目相等，忽略大小寫差異。  
   
 ```
@@ -105,7 +109,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>備註  
  比較會區分大小寫。  
   
-##  <a name="a-namecompareelementsordereda--cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered  
  呼叫此靜態函式來比較兩個字串元素，忽略大小寫差異。  
   
 ```
@@ -126,7 +130,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="remarks"></a>備註  
  比較會區分大小寫。  
   
-##  <a name="a-namehasha--cstringelementtraitsihash"></a><a name="hash"></a>CStringElementTraitsI::Hash  
+##  <a name="hash"></a>CStringElementTraitsI::Hash  
  呼叫此靜態函式來計算雜湊值的指定的字串的項目。  
   
 ```
@@ -140,14 +144,14 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>傳回值  
  傳回使用字串的內容計算的雜湊值。  
   
-##  <a name="a-nameinargtypea--cstringelementtraitsiinargtype"></a><a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
+##  <a name="inargtype"></a>CStringElementTraitsI::INARGTYPE  
  若要使用項目加入集合類別物件的資料型別。  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cstringelementtraitsioutargtype"></a><a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
+##  <a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE  
  要用來擷取項目從集合類別物件的資料類型。  
   
 ```

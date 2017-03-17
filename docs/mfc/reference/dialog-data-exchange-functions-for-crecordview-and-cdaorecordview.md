@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDAO/DDX_FieldCBIndex
+- AFXDAO/DDX_FieldCBString
+- AFXDAO/DDX_FieldCBStringExact
+- AFXDAO/DDX_FieldCheck
+- AFXDAO/DDX_FieldLBIndex
+- AFXDAO/DDX_FieldLBString
+- AFXDAO/DDX_FieldLBStringExact
+- AFXDAO/DDX_FieldRadio
+- AFXDAO/DDX_FieldScroll
+- AFXDAO/DDX_FieldText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -65,7 +74,7 @@ ms.lasthandoff: 02/24/2017
 |[DDX_FieldScroll](#ddx_fieldscroll)|設定或取得在捲軸的捲動位置`CRecordView`或`CDaoRecordView`。 從呼叫程式[DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)函式。|  
 |[DDX_FieldText](#ddx_fieldtext)|多載的版本可供傳輸`int`， **UINT**，**長**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float**，**雙**，**簡短**， [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)，和[COleCurrency](../../mfc/reference/colecurrency-class.md)資料之間的資料錄集欄位資料成員和編輯方塊中`CRecordView`或`CDaoRecordView`。|  
   
-##  <a name="a-nameddxfieldcbindexa--ddxfieldcbindex"></a><a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
+##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
  `DDX_FieldCBIndex`函式會同步處理選取的項目在清單方塊控制項的資料錄檢視中的下拉式方塊控制項中的索引和`int`資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -108,7 +117,7 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
 
-##  <a name="a-nameddxfieldcbstringa--ddxfieldcbstring"></a><a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
+##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
  `DDX_FieldCBString`函式會管理傳送[CString](../../atl-mfc-shared/reference/cstringt-class.md)之間的資料錄檢視中的下拉式方塊控制項的編輯控制項的資料和`CString`資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -151,7 +160,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-## <a name="a-nameddxfieldcbstringexacta--ddxfieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
+## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
  `DDX_FieldCBStringExact`函式會管理傳送[CString](../../atl-mfc-shared/reference/cstringt-class.md)之間的資料錄檢視中的下拉式方塊控制項的編輯控制項的資料和`CString`資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -194,7 +203,7 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="a-nameddxfieldchecka--ddxfieldcheck"></a><a name="ddx_fieldcheck"></a>DDX_FieldCheck  
+##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
  `DDX_FieldCheck`函式會管理傳送`int`在對話方塊中，核取方塊控制項之間的資料表單檢視或控制檢視物件和`int`對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```  
@@ -232,7 +241,7 @@ void AFXAPI DDX_FieldCheck(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="a-nameddxfieldlbindexa--ddxfieldlbindex"></a><a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
+##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
  `DDX_FieldLBIndex`函式會同步處理選取的項目記錄檢視的清單方塊控制項中的索引和`int`資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -275,7 +284,7 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="a-nameddxfieldlbstringa--ddxfieldlbstring"></a><a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
+##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
  `DDX_FieldLBString`清單方塊控制項中的目前選取範圍複製到資料錄檢視[CString](../../atl-mfc-shared/reference/cstringt-class.md)資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -318,7 +327,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="a-nameddxfieldlbstringexacta--ddxfieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
+##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
  `DDX_FieldLBStringExact`函式將清單方塊控制項中的目前選取範圍複製至資料錄檢視[CString](../../atl-mfc-shared/reference/cstringt-class.md)資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -361,7 +370,7 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="a-nameddxfieldradioa--ddxfieldradio"></a><a name="ddx_fieldradio"></a>DDX_FieldRadio  
+##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
  `DDX_FieldRadio`函式將以零為起始`int`與目前選取的選項按鈕群組的選項按鈕，在 [記錄] 檢視中的資料錄檢視的資料錄集的成員變數。  
   
 ```  
@@ -404,7 +413,7 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="a-nameddxfieldscrolla--ddxfieldscroll"></a><a name="ddx_fieldscroll"></a>DDX_FieldScroll  
+##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
  `DDX_FieldScroll`函式會同步處理資料錄檢視中的捲軸捲軸位置和`int`資料錄檢視與 （或您選擇將它對應至任何整數變數） 相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -447,7 +456,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="a-nameddxfieldtexta--ddxfieldtext"></a><a name="ddx_fieldtext"></a>DDX_FieldText  
+##  <a name="ddx_fieldtext"></a>DDX_FieldText  
  `DDX_FieldText`函式會管理傳送`int`，**簡短**，**長**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float**，**雙**， **BOOL**，或**位元組**的編輯方塊控制項和資料錄集的欄位資料成員之間的資料。  
   
 ```  

@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDBVariant
+- AFXDB/CDBVariant
+- AFXDB/CDBVariant::CDBVariant
+- AFXDB/CDBVariant::Clear
+- AFXDB/CDBVariant::m_dwType
+- AFXDB/CDBVariant::m_boolVal
+- AFXDB/CDBVariant::m_chVal
+- AFXDB/CDBVariant::m_dblVal
+- AFXDB/CDBVariant::m_fltVal
+- AFXDB/CDBVariant::m_iVal
+- AFXDB/CDBVariant::m_lVal
+- AFXDB/CDBVariant::m_pbinary
+- AFXDB/CDBVariant::m_pdate
+- AFXDB/CDBVariant::m_pstring
+- AFXDB/CDBVariant::m_pstringA
+- AFXDB/CDBVariant::m_pstringW
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +113,7 @@ class CDBVariant
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
   
-##  <a name="a-namecdbvarianta--cdbvariantcdbvariant"></a><a name="cdbvariant"></a>CDBVariant::CDBVariant  
+##  <a name="cdbvariant"></a>CDBVariant::CDBVariant  
  建立 NULL`CDBVariant`物件。  
   
 ```  
@@ -108,7 +123,7 @@ CDBVariant();
 ### <a name="remarks"></a>備註  
  設定[m_dwType](#m_dwtype)資料成員，才能**DBVT_NULL**。  
   
-##  <a name="a-namecleara--cdbvariantclear"></a><a name="clear"></a>CDBVariant::Clear  
+##  <a name="clear"></a>CDBVariant::Clear  
  呼叫此成員函式，以清除`CDBVariant`物件。  
   
 ```  
@@ -120,25 +135,25 @@ void Clear();
   
  `CDBVariant`解構函式呼叫**清除**。  
   
-##  <a name="a-namemboolvala--cdbvariantmboolval"></a><a name="m_boolval"></a>CDBVariant::m_boolVal  
+##  <a name="m_boolval"></a>CDBVariant::m_boolVal  
  儲存的型別值**BOOL**。  
   
 ### <a name="remarks"></a>備註  
  **M_boolVal**資料成員所屬的等位。 存取之前**m_boolVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_BOOL**，然後**m_boolVal**將包含有效的值; 否則存取**m_boolVal**會產生不可靠的結果。  
   
-##  <a name="a-namemchvala--cdbvariantmchval"></a><a name="m_chval"></a>CDBVariant::m_chVal  
+##  <a name="m_chval"></a>CDBVariant::m_chVal  
  儲存的型別值`unsigned char`。  
   
 ### <a name="remarks"></a>備註  
  **M_chVal**資料成員所屬的等位。 存取之前**m_chVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_UCHAR**，然後**m_chVal**包含有效的值; 否則存取**m_chVal**會產生不可靠的結果。  
   
-##  <a name="a-namemdblvala--cdbvariantmdblval"></a><a name="m_dblval"></a>CDBVariant::m_dblVal  
+##  <a name="m_dblval"></a>CDBVariant::m_dblVal  
  儲存的型別值**雙**。  
   
 ### <a name="remarks"></a>備註  
  **M_dblVal**資料成員所屬的等位。 存取之前**m_dblVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_DOUBLE**，然後**m_dblVal**包含有效的值; 否則存取**m_dblVal**會產生不可靠的結果。  
   
-##  <a name="a-namemdwtypea--cdbvariantmdwtype"></a><a name="m_dwtype"></a>CDBVariant::m_dwType  
+##  <a name="m_dwtype"></a>CDBVariant::m_dwType  
  此資料成員包含目前儲存在中的值的資料型別`CDBVariant`物件的聯集的資料成員。  
   
 ### <a name="remarks"></a>備註  
@@ -159,31 +174,31 @@ void Clear();
 |**DBVT_ASTRING**|[m_pstringA](#m_pstringa)|  
 |**DBVT_WSTRING**|[m_pstringW](#m_pstringw)|  
   
-##  <a name="a-namemfltvala--cdbvariantmfltval"></a><a name="m_fltval"></a>CDBVariant::m_fltVal  
+##  <a name="m_fltval"></a>CDBVariant::m_fltVal  
  儲存的型別值**float**。  
   
 ### <a name="remarks"></a>備註  
  **M_fltVal**資料成員所屬的等位。 存取之前**m_fltVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_SINGLE**，然後**m_fltVal**包含有效的值; 否則存取**m_fltVal**會產生不可靠的結果。  
   
-##  <a name="a-namemivala--cdbvariantmival"></a><a name="m_ival"></a>CDBVariant::m_iVal  
+##  <a name="m_ival"></a>CDBVariant::m_iVal  
  儲存的型別值**簡短**。  
   
 ### <a name="remarks"></a>備註  
  **M_iVal**資料成員所屬的等位。 存取之前**m_iVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_SHORT**，然後**m_iVal**包含有效的值; 否則存取**m_iVal**會產生不可靠的結果。  
   
-##  <a name="a-namemlvala--cdbvariantmlval"></a><a name="m_lval"></a>CDBVariant::m_lVal  
+##  <a name="m_lval"></a>CDBVariant::m_lVal  
  儲存的型別值**長**。  
   
 ### <a name="remarks"></a>備註  
  **M_lVal**資料成員所屬的等位。 存取之前**m_lVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_LONG**，然後**m_lVal**包含有效的值; 否則存取**m_lVal**會產生不可靠的結果。  
   
-##  <a name="a-namempbinarya--cdbvariantmpbinary"></a><a name="m_pbinary"></a>CDBVariant::m_pbinary  
+##  <a name="m_pbinary"></a>CDBVariant::m_pbinary  
  儲存型別的物件的指標[CLongBinary](../../mfc/reference/clongbinary-class.md)。  
   
 ### <a name="remarks"></a>備註  
  **M_pbinary**資料成員所屬的等位。 存取之前**m_pbinary**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_BINARY**，然後**m_pbinary**包含有效的指標; 否則存取**m_pbinary**會產生不可靠的結果。  
   
-##  <a name="a-namempdatea--cdbvariantmpdate"></a><a name="m_pdate"></a>CDBVariant::m_pdate  
+##  <a name="m_pdate"></a>CDBVariant::m_pdate  
  儲存型別的物件的指標**TIMESTAMP_STRUCT**。  
   
 ### <a name="remarks"></a>備註  
@@ -191,19 +206,19 @@ void Clear();
   
  如需詳細資訊**TIMESTAMP_STRUCT**資料類型，請參閱主題[C 資料型別](https://msdn.microsoft.com/library/ms714556.aspx)中的附錄 D *ODBC 程式設計人員參考*中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namempstringa--cdbvariantmpstring"></a><a name="m_pstring"></a>CDBVariant::m_pstring  
+##  <a name="m_pstring"></a>CDBVariant::m_pstring  
  儲存型別的物件的指標[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
 ### <a name="remarks"></a>備註  
  **M_pstring**資料成員所屬的等位。 存取之前**m_pstring**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_STRING**，然後**m_pstring**包含有效的指標; 否則存取**m_pstring**會產生不可靠的結果。  
   
-##  <a name="a-namempstringaa--cdbvariantmpstringa"></a><a name="m_pstringa"></a>CDBVariant::m_pstringA  
+##  <a name="m_pstringa"></a>CDBVariant::m_pstringA  
  儲存的指標 ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
  **M_pstringA**資料成員所屬的等位。 存取之前**m_pstringA**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_ASTRING**，然後**m_pstringA**包含有效的指標; 否則存取**m_pstringA**會產生不可靠的結果。  
   
-##  <a name="a-namempstringwa--cdbvariantmpstringw"></a><a name="m_pstringw"></a>CDBVariant::m_pstringW  
+##  <a name="m_pstringw"></a>CDBVariant::m_pstringW  
  儲存的指標寬[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件。  
   
 ### <a name="remarks"></a>備註  

@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKeyAssignCtrl
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::GetAccel
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::IsFocused
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::IsKeyDefined
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage
+- AFXACCELERATORKEYASSIGNCTRL/CMFCAcceleratorKeyAssignCtrl::ResetKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,14 +97,14 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 ## <a name="requirements"></a>需求  
  **標頭︰** afxacceleratorkeyassignctrl.h  
   
-##  <a name="a-namecmfcacceleratorkeyassignctrla--cmfcacceleratorkeyassignctrlcmfcacceleratorkeyassignctrl"></a><a name="cmfcacceleratorkeyassignctrl"></a>CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
+##  <a name="cmfcacceleratorkeyassignctrl"></a>CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
  建構[CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)物件。  
   
 ```  
 CMFCAcceleratorKeyAssignCtrl();
 ```  
   
-##  <a name="a-namegetaccela--cmfcacceleratorkeyassignctrlgetaccel"></a><a name="getaccel"></a>CMFCAcceleratorKeyAssignCtrl::GetAccel  
+##  <a name="getaccel"></a>CMFCAcceleratorKeyAssignCtrl::GetAccel  
  擷取`ACCEL`結構的按下快速鍵[CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)物件。  
   
 ```  
@@ -110,7 +117,7 @@ ACCEL const* GetAccel() const;
 ### <a name="remarks"></a>備註  
  使用此函式來擷取`ACCEL`結構，使用者輸入的快速鍵您`CMFCAcceleratorKeyAssignCtrl`物件。  
   
-##  <a name="a-nameisfocuseda--cmfcacceleratorkeyassignctrlisfocused"></a><a name="isfocused"></a>CMFCAcceleratorKeyAssignCtrl::IsFocused  
+##  <a name="isfocused"></a>CMFCAcceleratorKeyAssignCtrl::IsFocused  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -121,7 +128,7 @@ BOOL IsFocused() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameiskeydefineda--cmfcacceleratorkeyassignctrliskeydefined"></a><a name="iskeydefined"></a>CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
+##  <a name="iskeydefined"></a>CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
  判斷是否已定義的快速鍵在[CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)物件。  
   
 ```  
@@ -134,7 +141,7 @@ BOOL IsKeyDefined() const;
 ### <a name="remarks"></a>備註  
  使用此函數來判斷使用者是否輸入有效的快速鍵在您`CMFCAcceleratorKeyAssignCtrl`物件。 如果捷徑機碼存在，您可以使用[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)方法，以取得`ACCEL`此快速鍵相關聯的結構。  
   
-##  <a name="a-namepretranslatemessagea--cmfcacceleratorkeyassignctrlpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -148,7 +155,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameresetkeya--cmfcacceleratorkeyassignctrlresetkey"></a><a name="resetkey"></a>CMFCAcceleratorKeyAssignCtrl::ResetKey  
+##  <a name="resetkey"></a>CMFCAcceleratorKeyAssignCtrl::ResetKey  
  重設快速鍵。  
   
 ```  

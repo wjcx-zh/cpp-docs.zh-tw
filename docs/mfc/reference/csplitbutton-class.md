@@ -8,6 +8,13 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
+f1_keywords:
+- CSplitButton
+- AFXCMN/CSplitButton
+- AFXCMN/CSplitButton::CSplitButton
+- AFXCMN/CSplitButton::Create
+- AFXCMN/CSplitButton::SetDropDownMenu
+- AFXCMN/CSplitButton::OnDropDown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +99,7 @@ class CSplitButton : public CButton
   
  這個類別的其他需求所述[建置需求的 Windows Vista 通用控制項](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   
-##  <a name="a-namecreatea--csplitbuttoncreate"></a><a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>CSplitButton::Create  
  使用指定的樣式建立分割按鈕控制項，並將其附加至目前`CSplitButton`物件。  
   
 ```  
@@ -115,7 +122,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
-##  <a name="a-namecsplitbuttona--csplitbuttoncsplitbutton"></a><a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
  建構 `CSplitButton` 物件。 建構函式的參數會指定當使用者按一下分割按鈕控制項的下拉式箭號會顯示子功能表。  
   
 ```  
@@ -139,7 +146,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>備註  
  使用[CSplitButton::Create](#create)方法來建立分割按鈕控制項，並將其附加至`CSplitButton`物件。  
   
-##  <a name="a-nameondropdowna--csplitbuttonondropdown"></a><a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
  處理`BCN_DROPDOWN`使用者按下的下拉式箭號，目前的分割按鈕控制項時，系統會傳送的通知。  
   
 ```  
@@ -169,7 +176,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="a-namesetdropdownmenua--csplitbuttonsetdropdownmenu"></a><a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
  設定當使用者按一下目前的分割按鈕控制項的下拉式箭號會顯示下拉式選單。  
   
 ```  

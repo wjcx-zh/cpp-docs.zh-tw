@@ -9,10 +9,43 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CString
 - CStringT
-- ATL::CStringT
-- ATL.CStringT
+- No header/ATL::CStringT
+- No header/ATL::CStringT::CStringT
+- No header/ATL::CStringT::AllocSysString
+- No header/ATL::CStringT::AnsiToOem
+- No header/ATL::CStringT::AppendFormat
+- No header/ATL::CStringT::Collate
+- No header/ATL::CStringT::CollateNoCase
+- No header/ATL::CStringT::Compare
+- No header/ATL::CStringT::CompareNoCase
+- No header/ATL::CStringT::Delete
+- No header/ATL::CStringT::Find
+- No header/ATL::CStringT::FindOneOf
+- No header/ATL::CStringT::Format
+- No header/ATL::CStringT::FormatMessage
+- No header/ATL::CStringT::FormatMessageV
+- No header/ATL::CStringT::FormatV
+- No header/ATL::CStringT::GetEnvironmentVariable
+- No header/ATL::CStringT::Insert
+- No header/ATL::CStringT::Left
+- No header/ATL::CStringT::LoadString
+- No header/ATL::CStringT::MakeLower
+- No header/ATL::CStringT::MakeReverse
+- No header/ATL::CStringT::MakeUpper
+- No header/ATL::CStringT::Mid
+- No header/ATL::CStringT::OemToAnsi
+- No header/ATL::CStringT::Remove
+- No header/ATL::CStringT::Replace
+- No header/ATL::CStringT::ReverseFind
+- No header/ATL::CStringT::Right
+- No header/ATL::CStringT::SetSysString
+- No header/ATL::CStringT::SpanExcluding
+- No header/ATL::CStringT::SpanIncluding
+- No header/ATL::CStringT::Tokenize
+- No header/ATL::CStringT::Trim
+- No header/ATL::CStringT::TrimLeft
+- No header/ATL::CStringT::TrimRight
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -231,7 +264,7 @@ public CSimpleStringT<BaseType,
 |cstringt.h|僅限 MFC 的字串物件|  
 |atlstr.h|非 MFC 字串物件|  
   
-##  <a name="a-nameallocsysstringa--cstringtallocsysstring"></a><a name="allocsysstring"></a>CStringT::AllocSysString  
+##  <a name="allocsysstring"></a>CStringT::AllocSysString  
  配置類型的 Automation 相容字串`BSTR`複製的內容和`CStringT`物件，包括結束的 null 字元。  
   
 ```  
@@ -253,7 +286,7 @@ BSTR AllocSysString() const;
   
  [!code-cpp[NVC_ATLMFC_Utilities #&105;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]  
   
-##  <a name="a-nameansitooema--cstringtansitooem"></a><a name="ansitooem"></a>CStringT::AnsiToOem  
+##  <a name="ansitooem"></a>CStringT::AnsiToOem  
  將在此的所有字元都轉換`CStringT`OEM 字元集 ANSI 字元集中的物件。  
   
 ```  
@@ -266,7 +299,7 @@ void AnsiToOem();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&106;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]  
   
-##  <a name="a-nameappendformata--cstringtappendformat"></a><a name="appendformat"></a>CStringT::AppendFormat  
+##  <a name="appendformat"></a>CStringT::AppendFormat  
  將格式化的資料附加至現有`CStringT`物件。  
   
 ```  
@@ -290,7 +323,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&107;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]  
   
-##  <a name="a-namecollatea--cstringtcollate"></a><a name="collate"></a>CStringT::Collate  
+##  <a name="collate"></a>CStringT::Collate  
  比較兩個字串使用泛用文字的函式`_tcscoll`。  
   
 ```  
@@ -307,7 +340,7 @@ int Collate(PCXSTR psz) const throw();
 ### <a name="remarks"></a>備註  
  一般文字函式`_tcscoll`，定義在 TCHAR。H，對應至`strcoll`， `wcscoll`，或`_mbscoll`，取決於編譯時期定義的字元集。 每個函式執行根據字碼頁字串的區分大小寫比較目前使用中。 如需詳細資訊，請參閱[strcoll、 wcscoll、 _mbscoll、 _strcoll_l、 _wcscoll_l、 _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。  
   
-##  <a name="a-namecollatenocasea--cstringtcollatenocase"></a><a name="collatenocase"></a>CStringT::CollateNoCase  
+##  <a name="collatenocase"></a>CStringT::CollateNoCase  
  比較兩個字串使用泛用文字的函式`_tcscoll`。  
   
 ```  
@@ -327,7 +360,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&109;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]  
   
-##  <a name="a-namecomparea--cstringtcompare"></a><a name="compare"></a>CStringT::Compare  
+##  <a name="compare"></a>CStringT::Compare  
  比較兩個字串 （區分大小寫）。  
   
 ```  
@@ -351,7 +384,7 @@ int Compare(PCXSTR psz) const;
   
  [!code-cpp[NVC_ATLMFC_Utilities #&110;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]  
   
-##  <a name="a-namecomparenocasea--cstringtcomparenocase"></a><a name="comparenocase"></a>CStringT::CompareNoCase  
+##  <a name="comparenocase"></a>CStringT::CompareNoCase  
  比較兩個字串 （不區分大小寫）。  
   
 ```  
@@ -371,7 +404,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&111;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]  
   
-##  <a name="a-namecstringta--cstringtcstringt"></a><a name="cstringt"></a>CStringT::CStringT  
+##  <a name="cstringt"></a>CStringT::CStringT  
  建構 `CStringT` 物件。  
   
 ```  
@@ -509,7 +542,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&112;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]  
   
-##  <a name="a-namedtorcstringta--cstringtcstringt"></a><a name="_dtorcstringt"></a>CStringT:: ~ CStringT  
+##  <a name="_dtorcstringt"></a>CStringT:: ~ CStringT  
  終結`CStringT`物件。  
   
 ```  
@@ -519,7 +552,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="remarks"></a>備註  
  終結`CStringT`物件。  
   
-##  <a name="a-namedeletea--cstringtdelete"></a><a name="delete"></a>CStringT::Delete  
+##  <a name="delete"></a>CStringT::Delete  
  刪除與指定索引處的字元字串的字元。  
   
 ```  
@@ -549,7 +582,7 @@ After: Soccer best,
     but hockey is quicker!  
 ```  
   
-##  <a name="a-namefinda--cstringtfind"></a><a name="find"></a>CStringT::Find  
+##  <a name="find"></a>CStringT::Find  
  這個字串中搜尋的字元或子字串的第一個相符項目。  
   
 ```  
@@ -576,7 +609,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&114;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]  
   
-##  <a name="a-namefindoneofa--cstringtfindoneof"></a><a name="findoneof"></a>CStringT::FindOneOf  
+##  <a name="findoneof"></a>CStringT::FindOneOf  
  此比對中所包含的任何字元的第一個字元字串中搜尋`pszCharSet`。  
   
 ```  
@@ -596,7 +629,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&115;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]  
   
-##  <a name="a-nameformata--cstringtformat"></a><a name="format"></a>CStringT::Format  
+##  <a name="format"></a>CStringT::Format  
  格式化資料寫入`CStringT`在相同的方式來[sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)資料格式化成 C 樣式的字元陣列。  
   
 ```  
@@ -626,7 +659,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&117;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]  
   
-##  <a name="a-nameformatmessagea--cstringtformatmessage"></a><a name="formatmessage"></a>CStringT::FormatMessage  
+##  <a name="formatmessage"></a>CStringT::FormatMessage  
  格式化訊息字串。  
   
 ```  
@@ -655,7 +688,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&118;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
   
-##  <a name="a-nameformatmessageva--cstringtformatmessagev"></a><a name="formatmessagev"></a>CStringT::FormatMessageV  
+##  <a name="formatmessagev"></a>CStringT::FormatMessageV  
  格式化的訊息字串，使用變數引數清單。  
   
 ```  
@@ -677,7 +710,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
   
  如需詳細資訊，請參閱 Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)函式中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameformatva--cstringtformatv"></a><a name="formatv"></a>CStringT::FormatV  
+##  <a name="formatv"></a>CStringT::FormatV  
  格式化的訊息字串，使用變數引數清單。  
   
 ```  
@@ -699,7 +732,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
   
  [!code-cpp[NVC_ATLMFC_Utilities #&120;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]  
   
-##  <a name="a-namegetenvironmentvariablea--cstringtgetenvironmentvariable"></a><a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable  
+##  <a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable  
  設定指定的環境變數的值的字串。  
   
 ```  
@@ -719,7 +752,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&121;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]  
   
-##  <a name="a-nameinserta--cstringtinsert"></a><a name="insert"></a>CStringT::Insert  
+##  <a name="insert"></a>CStringT::Insert  
  字串內的指定索引處插入單一字元或子字串。  
   
 ```  
@@ -746,7 +779,7 @@ int Insert(int iIndex, XCHAR ch);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&122;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]  
   
-##  <a name="a-namelefta--cstringtleft"></a><a name="left"></a>CStringT::Left  
+##  <a name="left"></a>CStringT::Left  
  從 `nCount` 這個物件中擷取最左邊的 `CStringT` 個字元，並傳回所擷取子字串的複本。  
   
 ```  
@@ -768,7 +801,7 @@ CStringT Left(int nCount) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&123;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]  
   
-##  <a name="a-nameloadstringa--cstringtloadstring"></a><a name="loadstring"></a>CStringT::LoadString  
+##  <a name="loadstring"></a>CStringT::LoadString  
  讀取所識別的 Windows 字串資源`nID`，到現有`CStringT`物件。  
   
 ```  
@@ -796,7 +829,7 @@ BOOL LoadString(UINT nID);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&124;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]  
   
-##  <a name="a-namemakelowera--cstringtmakelower"></a><a name="makelower"></a>CStringT::MakeLower  
+##  <a name="makelower"></a>CStringT::MakeLower  
  將轉換`CStringT`小寫的字串物件。  
   
 ```  
@@ -809,7 +842,7 @@ CStringT& MakeLower();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&125;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]  
   
-##  <a name="a-namemakereversea--cstringtmakereverse"></a><a name="makereverse"></a>CStringT::MakeReverse  
+##  <a name="makereverse"></a>CStringT::MakeReverse  
  反轉順序中的字元`CStringT`物件。  
   
 ```  
@@ -822,7 +855,7 @@ CStringT& MakeReverse();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&126;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]  
   
-##  <a name="a-namemakeuppera--cstringtmakeupper"></a><a name="makeupper"></a>CStringT::MakeUpper  
+##  <a name="makeupper"></a>CStringT::MakeUpper  
  將轉換`CStringT`大寫的字串物件。  
   
 ```  
@@ -837,7 +870,7 @@ CStringT& MakeUpper();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&127;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]  
   
-##  <a name="a-namemida--cstringtmid"></a><a name="mid"></a>CStringT::Mid  
+##  <a name="mid"></a>CStringT::Mid  
  擷取子字串的長度`nCount`從這個字元`CStringT`物件，位置開始`iFirst`（以零為起始）。  
   
 ```  
@@ -863,7 +896,7 @@ CStringT Mid(int iFirst) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&128;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]  
   
-##  <a name="a-nameoemtoansia--cstringtoemtoansi"></a><a name="oemtoansi"></a>CStringT::OemToAnsi  
+##  <a name="oemtoansi"></a>CStringT::OemToAnsi  
  將在此的所有字元都轉換`CStringT`ANSI 字元集的 OEM 字元集中的物件。  
   
 ```  
@@ -876,7 +909,7 @@ void OemToAnsi();
 ### <a name="example"></a>範例  
  請參閱範例[CStringT::AnsiToOem](#ansitooem)。  
   
-##  <a name="a-nameoperatoradda--cstringtoperator-"></a><a name="operator_add"></a>CStringT::operator +  
+##  <a name="operator_add"></a>CStringT::operator +  
  串連兩個字串或字元和字串。  
   
 ```  
@@ -917,7 +950,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&140;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]  
   
-##  <a name="a-nameoperatoraddeqa--cstringtoperator-"></a><a name="operator_add_eq"></a>CStringT::operator + =  
+##  <a name="operator_add_eq"></a>CStringT::operator + =  
  串連字串結尾的字元。  
   
 ```  
@@ -969,7 +1002,7 @@ CStringT& operator+=(const VARIANT& var);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&141; 毫秒](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
   
-##  <a name="a-nameoperatoreqeqa--cstringtoperator-"></a><a name="operator_eq_eq"></a>CStringT::operator = =  
+##  <a name="operator_eq_eq"></a>CStringT::operator = =  
  判斷兩個字串是否以邏輯方式相等。  
   
 ```  
@@ -1007,7 +1040,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&142;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]  
   
-##  <a name="a-nameoperatorneqa--cstringtoperator-"></a><a name="operator_neq"></a>CStringT::operator ！ =  
+##  <a name="operator_neq"></a>CStringT::operator ！ =  
  判斷兩個字串是否以邏輯方式不相等。  
   
 ```  
@@ -1045,7 +1078,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&143;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]  
   
-##  <a name="a-nameoperatorlta--cstringtoperator-lt"></a><a name="operator_lt"></a>CStringT::operator&lt;  
+##  <a name="operator_lt"></a>CStringT::operator&lt;  
  判斷運算子左邊的字串是否小於右邊的字串。  
   
 ```  
@@ -1079,7 +1112,7 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&144;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]  
   
-##  <a name="a-nameoperatorgta--cstringtoperator-gt"></a><a name="operator_gt"></a>CStringT::operator&gt;  
+##  <a name="operator_gt"></a>CStringT::operator&gt;  
  判斷是否大於右邊的字串運算子左邊的字串。  
   
 ```  
@@ -1113,7 +1146,7 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&145;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]  
   
-##  <a name="a-nameoperatorlteqa--cstringtoperator-lt"></a><a name="operator_lt_eq"></a>CStringT::operator&lt;=  
+##  <a name="operator_lt_eq"></a>CStringT::operator&lt;=  
  判斷運算子左邊的字串是否小於或等於右邊的字串。  
   
 ```  
@@ -1147,7 +1180,7 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&146;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]  
   
-##  <a name="a-nameoperatorgteqa--cstringtoperator-gt"></a><a name="operator_gt_eq"></a>CStringT::operator&gt;=  
+##  <a name="operator_gt_eq"></a>CStringT::operator&gt;=  
  判斷運算子左邊的字串是否大於或等於右邊的字串。  
   
 ```  
@@ -1181,7 +1214,7 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&147; 的形式](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]  
   
-##  <a name="a-nameremovea--cstringtremove"></a><a name="remove"></a>CStringT::Remove  
+##  <a name="remove"></a>CStringT::Remove  
  從字串中移除指定之字元的所有執行個體。  
   
 ```  
@@ -1201,7 +1234,7 @@ int Remove(XCHAR chRemove);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&129;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]  
   
-##  <a name="a-namereplacea--cstringtreplace"></a><a name="replace"></a>CStringT::Replace  
+##  <a name="replace"></a>CStringT::Replace  
  有兩個版本的`Replace`。第一個版本會使用另一個子字串取代子字串的一或多個複本。 兩個子字串是以 null 結束。 第二個版本會使用另一個字元取代字元的一或多個的複本。 若對字元資料儲存在這兩個版本`CStringT`。  
   
 ```  
@@ -1244,7 +1277,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&200;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]  
   
-##  <a name="a-namereversefinda--cstringtreversefind"></a><a name="reversefind"></a>CStringT::ReverseFind  
+##  <a name="reversefind"></a>CStringT::ReverseFind  
  搜尋這`CStringT`字元的最後一個相符項目的物件。  
   
 ```  
@@ -1264,7 +1297,7 @@ int ReverseFind(XCHAR ch) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&130;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]  
   
-##  <a name="a-namerighta--cstringtright"></a><a name="right"></a>CStringT::Right  
+##  <a name="right"></a>CStringT::Right  
  擷取最後一個 (也就是最右邊)`nCount`從這個字元`CStringT`物件，並傳回所擷取子字串的複本。  
   
 ```  
@@ -1286,7 +1319,7 @@ CStringT Right(int nCount) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&131;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]  
   
-##  <a name="a-namesetsysstringa--cstringtsetsysstring"></a><a name="setsysstring"></a>CStringT::SetSysString  
+##  <a name="setsysstring"></a>CStringT::SetSysString  
  重新配置`BSTR`指向`pbstr`複製的內容和`CStringT`物件，包括`NULL`字元。  
   
 ```  
@@ -1308,7 +1341,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&132;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]  
   
-##  <a name="a-namespanexcludinga--cstringtspanexcluding"></a><a name="spanexcluding"></a>CStringT::SpanExcluding  
+##  <a name="spanexcluding"></a>CStringT::SpanExcluding  
  從字串中，不在所識別的字元集中的第一個字元開始擷取字元`pszCharSet`。  
   
 ```  
@@ -1328,7 +1361,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&133;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]  
   
-##  <a name="a-namespanincludinga--cstringtspanincluding"></a><a name="spanincluding"></a>CStringT::SpanIncluding  
+##  <a name="spanincluding"></a>CStringT::SpanIncluding  
  從字串中，所識別的字元集中的第一個字元開始擷取字元`pszCharSet`。  
   
 ```  
@@ -1348,7 +1381,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&134;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]  
   
-##  <a name="a-nametokenizea--cstringttokenize"></a><a name="tokenize"></a>CStringT::Tokenize  
+##  <a name="tokenize"></a>CStringT::Tokenize  
  在目標字串中尋找下一個語彙基元  
   
 ```  
@@ -1382,7 +1415,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
   
  `Resulting Token: Third`  
   
-##  <a name="a-nametrima--cstringttrim"></a><a name="trim"></a>CStringT::Trim  
+##  <a name="trim"></a>CStringT::Trim  
  修剪開頭和結尾字元字串。  
   
 ```  
@@ -1420,7 +1453,7 @@ CStringT& Trim();
   
  `After : "Soccer is best, but liquor is quicker"`  
   
-##  <a name="a-nametrimlefta--cstringttrimleft"></a><a name="trimleft"></a>CStringT::TrimLeft  
+##  <a name="trimleft"></a>CStringT::TrimLeft  
  修剪前置字元的字串。  
   
 ```  
@@ -1451,7 +1484,7 @@ CStringT& TrimLeft();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&137;](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]  
   
-##  <a name="a-nametrimrighta--cstringttrimright"></a><a name="trimright"></a>CStringT::TrimRight  
+##  <a name="trimright"></a>CStringT::TrimRight  
  會修剪尾端字元字串。  
   
 ```  

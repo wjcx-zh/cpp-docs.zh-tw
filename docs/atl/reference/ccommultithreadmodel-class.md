@@ -10,8 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComMultiThreadModel
-- ATL.CComMultiThreadModel
-- ATL::CComMultiThreadModel
+- ATLBASE/ATL::CComMultiThreadModel
+- ATLBASE/ATL::CComMultiThreadModel::AutoCriticalSection
+- ATLBASE/ATL::CComMultiThreadModel::CriticalSection
+- ATLBASE/ATL::CComMultiThreadModel::ThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModel::Decrement
+- ATLBASE/ATL::CComMultiThreadModel::Increment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CComMultiThreadModel
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-nameautocriticalsectiona--ccommultithreadmodelautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection  
  當使用`CComMultiThreadModel`、`typedef`名稱`AutoCriticalSection`參考類別[CComAutoCriticalSection](ccomautocriticalsection-class.md)，它提供方法來取得和釋放重要區段物件的擁有權。  
   
 ```
@@ -148,7 +152,7 @@ private:
 |`InternalAddRef`|增量不具備執行緒安全。|增量是安全執行緒。|  
 |`Lock`|沒有作用。沒有任何鎖定的重要區段。|沒有作用。沒有任何鎖定的重要區段。|  
   
-##  <a name="a-namecriticalsectiona--ccommultithreadmodelcriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
+##  <a name="criticalsection"></a>CComMultiThreadModel::CriticalSection  
  當使用`CComMultiThreadModel`、`typedef`名稱`CriticalSection`參考類別[CComCriticalSection](ccomcriticalsection-class.md)，它提供方法來取得和釋放重要區段物件的擁有權。  
   
 ```
@@ -169,7 +173,7 @@ typedef CComCriticalSection CriticalSection;
 ### <a name="example"></a>範例  
  請參閱[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)。  
   
-##  <a name="a-namedecrementa--ccommultithreadmodeldecrement"></a><a name="decrement"></a>CComMultiThreadModel::Decrement  
+##  <a name="decrement"></a>CComMultiThreadModel::Decrement  
  靜態函式呼叫 Win32 函式[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)，所指向的變數值的遞減`p`。  
   
 ```
@@ -186,7 +190,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 ### <a name="remarks"></a>備註  
  **InterlockedDecrement**防止多個執行緒同時使用此變數。  
   
-##  <a name="a-nameincrementa--ccommultithreadmodelincrement"></a><a name="increment"></a>CComMultiThreadModel::Increment  
+##  <a name="increment"></a>CComMultiThreadModel::Increment  
  靜態函式呼叫 Win32 函式[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)，其中增加所指向之變數的值`p`。  
   
 ```
@@ -203,7 +207,7 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 ### <a name="remarks"></a>備註  
  **InterlockedIncrement**防止多個執行緒同時使用此變數。  
   
-##  <a name="a-namethreadmodelnocsa--ccommultithreadmodelthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS  
  當使用`CComMultiThreadModel`、`typedef`名稱`ThreadModelNoCS`參考類別[CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md)。  
   
 ```

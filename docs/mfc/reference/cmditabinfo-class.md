@@ -10,8 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDITabInfo
-- CMDITabInfo.CMDITabInfo
-- CMDITabInfo::CMDITabInfo
+- AFXMDICLIENTAREAWND/CMDITabInfo
+- AFXMDICLIENTAREAWND/CMDITabInfo::Serialize
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bAutoColor
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bDocumentMenu
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bEnableTabSwap
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bFlatFrame
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabCloseButton
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabCustomTooltips
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_bTabIcons
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_nTabBorderSize
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_style
+- AFXMDICLIENTAREAWND/CMDITabInfo::m_tabLocation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +105,7 @@ class CMDITabInfo
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmdiclientareawnd.h  
   
-##  <a name="a-namembactivetabclosebuttona--cmditabinfombactivetabclosebutton"></a><a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
+##  <a name="m_bactivetabclosebutton_"></a>CMDITabInfo::m_bActiveTabCloseButton;  
  指定是否**關閉**按鈕顯示在作用中 索引標籤的標籤。  
   
 ```  
@@ -105,7 +115,7 @@ BOOL m_bActiveTabCloseButton;
 ### <a name="remarks"></a>備註  
  如果`TRUE`，作用中 索引標籤的標籤會顯示**關閉** 按鈕。 **關閉**按鈕將會從右上角的 索引標籤區域中移除。 否則，不會顯示作用中 索引標籤的標籤**關閉** 按鈕。 **關閉**按鈕將會出現在索引標籤區域右上角。  
   
-##  <a name="a-namembautocolora--cmditabinfombautocolor"></a><a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
+##  <a name="m_bautocolor"></a>CMDITabInfo::m_bAutoColor  
  指定每個 MDI 索引標籤是否有它自己的色彩。  
   
 ```  
@@ -115,7 +125,7 @@ BOOL m_bAutoColor;
 ### <a name="remarks"></a>備註  
  如果`TRUE`，每個索引標籤會有它自己的色彩。 MFC 程式庫所管理的色彩。 否則，會顯示索引標籤，以白色。 預設值是 `FALSE`。  
   
-##  <a name="a-namembdocumentmenua--cmditabinfombdocumentmenu"></a><a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
+##  <a name="m_bdocumentmenu"></a>CMDITabInfo::m_bDocumentMenu  
  指定是否每個索引標籤會顯示快顯功能表會顯示在右邊緣的索引標籤區域開啟文件的清單。  
   
 ```  
@@ -125,7 +135,7 @@ BOOL m_bDocumentMenu;
 ### <a name="remarks"></a>備註  
  如果`TRUE`，每個索引標籤上的 windows 會顯示快顯功能表會顯示在右邊緣的索引標籤區域中，開啟文件的清單否則，索引標籤視窗會顯示捲軸按鈕索引標籤區域右邊緣。 預設值是 `FALSE`。  
   
-##  <a name="a-namembenabletabswapa--cmditabinfombenabletabswap"></a><a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
+##  <a name="m_benabletabswap"></a>CMDITabInfo::m_bEnableTabSwap  
  指定使用者是否可以拖曳來交換的索引標籤的位置。  
   
 ```  
@@ -135,14 +145,14 @@ BOOL m_bEnableTabSwap;
 ### <a name="remarks"></a>備註  
  如果`TRUE`，使用者可以藉由拖曳索引標籤變更索引標籤的位置。 否則，使用者無法變更索引標籤的位置。 預設值是 `TRUE`。  
   
-##  <a name="a-namembflatframea--cmditabinfombflatframe"></a><a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
+##  <a name="m_bflatframe"></a>CMDITabInfo::m_bFlatFrame  
  指定每個索引標籤視窗是否有一般的框架。  
   
 ```  
 BOOL m_bFlatFrame;  
 ```  
   
-##  <a name="a-namembtabclosebuttona--cmditabinfombtabclosebutton"></a><a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
+##  <a name="m_btabclosebutton"></a>CMDITabInfo::m_bTabCloseButton  
  指定是否要顯示每個索引標籤視窗**關閉** 按鈕。  
   
 ```  
@@ -152,7 +162,7 @@ BOOL m_bTabCloseButton;
 ### <a name="remarks"></a>備註  
  如果`TRUE`，每個索引標籤 視窗會顯示**關閉**右邊緣的索引標籤上的按鈕。 否則，**關閉**按鈕不會顯示。 預設值是 `TRUE`。  
   
-##  <a name="a-namembtabcustomtooltipsa--cmditabinfombtabcustomtooltips"></a><a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
+##  <a name="m_btabcustomtooltips"></a>CMDITabInfo::m_bTabCustomTooltips  
  指定是否索引標籤會顯示工具提示。  
   
 ```  
@@ -162,7 +172,7 @@ BOOL m_bTabCustomTooltips;
 ### <a name="remarks"></a>備註  
  如果`TRUE`，在應用程式傳送`AFX_WM_ON_GET_TAB_TOOLTIP`主框架的訊息。 您可以使用來處理此訊息`ON_REGISTERED_MESSAGE`巨集。  
   
-##  <a name="a-namembtabiconsa--cmditabinfombtabicons"></a><a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
+##  <a name="m_btabicons"></a>CMDITabInfo::m_bTabIcons  
  指定是否要在 MDI 索引標籤上顯示圖示。  
   
 ```  
@@ -172,7 +182,7 @@ BOOL m_bTabIcons;
 ### <a name="remarks"></a>備註  
  如果`TRUE`，每個 MDI 索引標籤上顯示圖示。 否則，圖示不會顯示在索引標籤上。 預設值是 `FALSE`。  
   
-##  <a name="a-namemntabbordersizea--cmditabinfomntabbordersize"></a><a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
+##  <a name="m_ntabbordersize"></a>CMDITabInfo::m_nTabBorderSize  
  指定框線的大小，單位為像素的每個索引標籤視窗。  
   
 ```  
@@ -182,7 +192,7 @@ int m_nTabBorderSize;
 ### <a name="remarks"></a>備註  
  [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)傳回預設值。  
   
-##  <a name="a-namemstylea--cmditabinfomstyle"></a><a name="m_style"></a>CMDITabInfo::m_style  
+##  <a name="m_style"></a>CMDITabInfo::m_style  
  指定索引標籤的標籤的樣式。  
   
 ```  
@@ -210,7 +220,7 @@ CMFCTabCtrl::Style m_style
  `STYLE_3D_ROUNDED_SCROLL`  
  使用圓形的索引標籤的&3;D 樣式。  
   
-##  <a name="a-namemtablocationa--cmditabinfomtablocation"></a><a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
+##  <a name="m_tablocation"></a>CMDITabInfo::m_tabLocation  
  指定是否位於頂端或底部的頁面 索引標籤的標籤。  
   
 ```  
@@ -224,7 +234,7 @@ CMFCTabCtrl::Location m_tabLocation;
   
 -   LOCATION_TOP︰ 索引標籤的標籤都位於頁面頂端  
   
-##  <a name="a-nameserializea--cmditabinfoserialize"></a><a name="serialize"></a>CMDITabInfo::Serialize  
+##  <a name="serialize"></a>CMDITabInfo::Serialize  
  讀取或寫入此物件從封存到封存。  
   
 ```  

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCMaskedEdit
+- AFXMASKEDEDIT/CMFCMaskedEdit
+- AFXMASKEDEDIT/CMFCMaskedEdit::DisableMask
+- AFXMASKEDEDIT/CMFCMaskedEdit::EnableGetMaskedCharsOnly
+- AFXMASKEDEDIT/CMFCMaskedEdit::EnableMask
+- AFXMASKEDEDIT/CMFCMaskedEdit::EnableSelectByGroup
+- AFXMASKEDEDIT/CMFCMaskedEdit::EnableSetMaskedCharsOnly
+- AFXMASKEDEDIT/CMFCMaskedEdit::GetWindowText
+- AFXMASKEDEDIT/CMFCMaskedEdit::SetValidChars
+- AFXMASKEDEDIT/CMFCMaskedEdit::SetWindowText
+- AFXMASKEDEDIT/CMFCMaskedEdit::IsMaskedChar
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +123,7 @@ class CMFCMaskedEdit : public CEdit
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmaskededit.h  
   
-##  <a name="a-namedisablemaska--cmfcmaskededitdisablemask"></a><a name="disablemask"></a>CMFCMaskedEdit::DisableMask  
+##  <a name="disablemask"></a>CMFCMaskedEdit::DisableMask  
  停用驗證使用者輸入。  
   
 ```  
@@ -123,7 +133,7 @@ void DisableMask();
 ### <a name="remarks"></a>備註  
  如果使用者輸入的驗證已停用，遮罩的編輯控制項的行為方式與標準編輯控制項。  
   
-##  <a name="a-nameenablegetmaskedcharsonlya--cmfcmaskededitenablegetmaskedcharsonly"></a><a name="enablegetmaskedcharsonly"></a>CMFCMaskedEdit::EnableGetMaskedCharsOnly  
+##  <a name="enablegetmaskedcharsonly"></a>CMFCMaskedEdit::EnableGetMaskedCharsOnly  
  指定是否`GetWindowText`方法會擷取僅遮罩的字元。  
   
 ```  
@@ -137,7 +147,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>備註  
  使用這個方法，以便擷取遮罩的字元。 然後建立相對應的電話號碼，例如 (425) 555-0187 遮罩的編輯控制項。 如果您呼叫`GetWindowText`方法，它會傳回 「&42555;50187 」。 如果您停用擷取遮罩的字元，`GetWindowText`方法會傳回顯示在編輯控制項，例如 「 (425) 555-0187 」 的文字。  
   
-##  <a name="a-nameenablemaska--cmfcmaskededitenablemask"></a><a name="enablemask"></a>CMFCMaskedEdit::EnableMask  
+##  <a name="enablemask"></a>CMFCMaskedEdit::EnableMask  
  初始化遮罩編輯控制項。  
   
 ```  
@@ -177,7 +187,7 @@ void EnableMask(
 |a|英數字元或空格。|  
 |*|可列印的字元。|  
   
-##  <a name="a-nameenableselectbygroupa--cmfcmaskededitenableselectbygroup"></a><a name="enableselectbygroup"></a>CMFCMaskedEdit::EnableSelectByGroup  
+##  <a name="enableselectbygroup"></a>CMFCMaskedEdit::EnableSelectByGroup  
  指定是否遮罩的編輯控制項可讓使用者選取的特定群組的輸入或所有的輸入。  
   
 ```  
@@ -209,7 +219,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  如果已啟用選取的群組，使用者可以擷取只"425"、"555 」 或 「&0187; 」 字串群組。 如果已停用群組選取項目，使用者可以擷取的電話號碼的全部文字: 「 (425) 555-0187 」。  
   
-##  <a name="a-nameenablesetmaskedcharsonlya--cmfcmaskededitenablesetmaskedcharsonly"></a><a name="enablesetmaskedcharsonly"></a>CMFCMaskedEdit::EnableSetMaskedCharsOnly  
+##  <a name="enablesetmaskedcharsonly"></a>CMFCMaskedEdit::EnableSetMaskedCharsOnly  
  指定是否針對只有遮罩字元，或整個遮罩會進行驗證的文字。  
   
 ```  
@@ -220,7 +230,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`若要驗證使用者輸入只遮罩字元;`FALSE`整個遮罩對其進行驗證。 預設值是 `TRUE`。  
   
-##  <a name="a-namegetwindowtexta--cmfcmaskededitgetwindowtext"></a><a name="getwindowtext"></a>CMFCMaskedEdit::GetWindowText  
+##  <a name="getwindowtext"></a>CMFCMaskedEdit::GetWindowText  
  擷取驗證遮罩的編輯控制項中的文字。  
   
 ```  
@@ -249,7 +259,7 @@ void GetWindowText(CString& rstrString) const;
   
  這個方法來重新定義[CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext)。  
   
-##  <a name="a-nameismaskedchara--cmfcmaskededitismaskedchar"></a><a name="ismaskedchar"></a>CMFCMaskedEdit::IsMaskedChar  
+##  <a name="ismaskedchar"></a>CMFCMaskedEdit::IsMaskedChar  
  驗證指定的字元對應遮罩字元對架構所呼叫。  
   
 ```  
@@ -271,7 +281,7 @@ virtual BOOL IsMaskedChar(
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以驗證您自己的輸入的字元。 如需遮罩字元的詳細資訊，請參閱[CMFCMaskedEdit::EnableMask](#enablemask)方法。  
   
-##  <a name="a-namesetvalidcharsa--cmfcmaskededitsetvalidchars"></a><a name="setvalidchars"></a>CMFCMaskedEdit::SetValidChars  
+##  <a name="setvalidchars"></a>CMFCMaskedEdit::SetValidChars  
  指定的使用者可以輸入的有效字元的字串。  
   
 ```  
@@ -289,7 +299,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
  `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
   
-##  <a name="a-namesetwindowtexta--cmfcmaskededitsetwindowtext"></a><a name="setwindowtext"></a>CMFCMaskedEdit::SetWindowText  
+##  <a name="setwindowtext"></a>CMFCMaskedEdit::SetWindowText  
  遮罩的編輯控制項中顯示提示。  
   
 ```  

@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAutoPtrElementTraits
 - CAutoPtrElementTraits
-- ATL::CAutoPtrElementTraits<T>
-- ATL.CAutoPtrElementTraits<T>
-- ATL::CAutoPtrElementTraits
+- ATLCOLL/ATL::CAutoPtrElementTraits
+- ATLCOLL/ATL::CAutoPtrElementTraits::INARGTYPE
+- ATLCOLL/ATL::CAutoPtrElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,14 +86,14 @@ class CAutoPtrElementTraits
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cautoptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CAutoPtrElementTraits::INARGTYPE  
  若要使用項目加入集合類別物件的資料型別。  
   
 ```
 typedef CAutoPtr<T>& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cautoptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CAutoPtrElementTraits::OUTARGTYPE  
  要用來擷取項目從集合類別物件的資料類型。  
   
 ```

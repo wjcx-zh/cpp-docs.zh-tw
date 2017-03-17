@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
+- AFXDISP/COleTemplateServer
+- AFXDISP/COleTemplateServer::COleTemplateServer
+- AFXDISP/COleTemplateServer::ConnectTemplate
+- AFXDISP/COleTemplateServer::Unregister
+- AFXDISP/COleTemplateServer::UpdateRegistry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +95,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-namecoletemplateservera--coletemplateservercoletemplateserver"></a><a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
  建構 `COleTemplateServer` 物件。  
   
 ```  
@@ -100,7 +105,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>備註  
  使用簡短的`COleTemplateServer`類別，請參閱[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)類別概觀。  
   
-##  <a name="a-nameconnecttemplatea--coletemplateserverconnecttemplate"></a><a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
  連接所指的文件範本`pDocTemplate`基礎[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)物件。  
   
 ```  
@@ -123,7 +128,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameunregistera--coletemplateserverunregister"></a><a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>COleTemplateServer::Unregister  
  取消登錄的相關聯的文件範本。  
   
 ```  
@@ -136,7 +141,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>備註  
  EnterRemarks  
   
-##  <a name="a-nameupdateregistrya--coletemplateserverupdateregistry"></a><a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
  載入文件範本字串中的檔案類型資訊，並將該資訊放在 OLE 系統登錄中。  
   
 ```  

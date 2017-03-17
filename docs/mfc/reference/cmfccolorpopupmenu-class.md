@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorPopupMenu
+- AFXCOLORPOPUPMENU/CMFCColorPopupMenu
+- AFXCOLORPOPUPMENU/CMFCColorPopupMenu::CMFCColorPopupMenu
+- AFXCOLORPOPUPMENU/CMFCColorPopupMenu::CreateTearOffBar
+- AFXCOLORPOPUPMENU/CMFCColorPopupMenu::GetMenuBar
+- AFXCOLORPOPUPMENU/CMFCColorPopupMenu::SetPropList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +104,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 ## <a name="requirements"></a>需求  
  **標頭︰** afxcolorpopupmenu.h  
   
-##  <a name="a-namecmfccolorpopupmenua--cmfccolorpopupmenucmfccolorpopupmenu"></a><a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu  
+##  <a name="cmfccolorpopupmenu"></a>CMFCColorPopupMenu::CMFCColorPopupMenu  
  建構 `CMFCColorPopupMenu` 物件。  
   
 ```  
@@ -195,7 +200,7 @@ CMFCColorPopupMenu(
   
  [!code-cpp[NVC_MFC_RibbonApp #&34;](../../mfc/reference/codesnippet/cpp/cmfccolorpopupmenu-class_1.cpp)]  
   
-##  <a name="a-namecreatetearoffbara--cmfccolorpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFCColorPopupMenu::CreateTearOffBar  
+##  <a name="createtearoffbar"></a>CMFCColorPopupMenu::CreateTearOffBar  
  建立可停駐撕色軸。  
   
 ```  
@@ -220,7 +225,7 @@ virtual CPane* CreateTearOffBar(
 ### <a name="remarks"></a>備註  
  這個方法會建立[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)物件，並將它轉換成[CPane 類別](../../mfc/reference/cpane-class.md)指標。 您可以將此值轉換回[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)指標所使用的其中一個所述的轉換巨集[型別轉型的 MFC 類別物件](../../mfc/reference/type-casting-of-mfc-class-objects.md)。  
   
-##  <a name="a-namegetmenubara--cmfccolorpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFCColorPopupMenu::GetMenuBar  
+##  <a name="getmenubar"></a>CMFCColorPopupMenu::GetMenuBar  
  傳回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) ，內嵌於快顯功能表。  
   
 ```  
@@ -233,7 +238,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ### <a name="remarks"></a>備註  
  色彩快顯功能表有內嵌[CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)物件。 如果您的應用程式使用不同的內嵌的類型，請覆寫這個方法在衍生類別中。  
   
-##  <a name="a-namesetproplista--cmfccolorpopupmenusetproplist"></a><a name="setproplist"></a>CMFCColorPopupMenu::SetPropList  
+##  <a name="setproplist"></a>CMFCColorPopupMenu::SetPropList  
  設定的屬性方格控制項物件嵌入的`CMFCColorBar`物件。  
   
 ```  

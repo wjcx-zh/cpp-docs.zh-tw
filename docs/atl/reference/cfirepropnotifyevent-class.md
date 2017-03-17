@@ -10,8 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFirePropNotifyEvent
-- ATL::CFirePropNotifyEvent
-- ATL.CFirePropNotifyEvent
+- ATLCTL/ATL::CFirePropNotifyEvent
+- ATLCTL/ATL::CFirePropNotifyEvent::FireOnChanged
+- ATLCTL/ATL::CFirePropNotifyEvent::FireOnRequestEdit
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +75,7 @@ class CFirePropNotifyEvent
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namefireonchangeda--cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
  通知所有連線[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （在每個物件的連接點） 上指定的物件屬性已變更的介面。  
   
 ```
@@ -94,7 +95,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="remarks"></a>備註  
  此函式是安全地呼叫，即使您的控制項不支援連接點。  
   
-##  <a name="a-namefireonrequestedita--cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
  通知所有連線[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （在每個物件的連接點） 上指定的物件屬性即將變更的介面。  
   
 ```

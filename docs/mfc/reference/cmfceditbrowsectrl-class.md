@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCEditBrowseCtrl
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableFileBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::EnableFolderBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::GetMode
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnAfterUpdate
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnBrowse
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnChangeLayout
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnDrawBrowseButton
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::OnIllegalFileName
+- AFXEDITBROWSECTRL/CMFCEditBrowseCtrl::SetBrowseButtonImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +139,7 @@ class CMFCEditBrowseCtrl : public CEdit
 ## <a name="requirements"></a>需求  
  **標頭︰** afxeditbrowsectrl.h  
   
-##  <a name="a-nameenablebrowsebuttona--cmfceditbrowsectrlenablebrowsebutton"></a><a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
+##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
  顯示或不會顯示目前的編輯瀏覽控制項上的 [瀏覽] 按鈕。  
   
 ```  
@@ -149,7 +160,7 @@ void EnableBrowseButton(
   
  如果`bEnable`參數是`TRUE`，控制項的瀏覽模式是`BrowseMode_Default`; 否則，請瀏覽模式`BrowseMode_None`。 如需瀏覽模式的詳細資訊，請參閱[GetMode](#getmode)方法。  
   
-##  <a name="a-nameenablefilebrowsebuttona--cmfceditbrowsectrlenablefilebrowsebutton"></a><a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
+##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
  在目前的編輯瀏覽控制項上顯示 [瀏覽] 按鈕，然後將控制項放入*檔案瀏覽*模式。  
   
 ```  
@@ -174,7 +185,7 @@ void EnableFileBrowseButton(
   
  如需可用旗標的完整清單，請參閱[OPENFILENAME 結構](https://msdn.microsoft.com/library/ms646839.aspx)。  
   
-##  <a name="a-nameenablefolderbrowsebuttona--cmfceditbrowsectrlenablefolderbrowsebutton"></a><a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  在目前的編輯瀏覽控制項上顯示 [瀏覽] 按鈕，然後將控制項放入*資料夾瀏覽*模式。  
   
 ```  
@@ -184,7 +195,7 @@ void EnableFolderBrowseButton();
 ### <a name="remarks"></a>備註  
  當編輯瀏覽控制項是在資料夾瀏覽模式中，使用者按一下瀏覽 按鈕時，控制項會顯示標準的資料夾選項 對話方塊。  
   
-##  <a name="a-namegetmodea--cmfceditbrowsectrlgetmode"></a><a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
+##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
  擷取目前的編輯瀏覽控制項的瀏覽模式。  
   
 ```  
@@ -206,7 +217,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 ### <a name="remarks"></a>備註  
  根據預設，`CMFCEditBrowseCtrl`物件會初始化為`BrowseMode_None`模式。 修改與瀏覽模式[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)， [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)，和[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)方法。  
   
-##  <a name="a-nameonafterupdatea--cmfceditbrowsectrlonafterupdate"></a><a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
+##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
  編輯瀏覽控制項更新瀏覽動作的結果之後，由架構呼叫。  
   
 ```  
@@ -216,7 +227,7 @@ virtual void OnAfterUpdate();
 ### <a name="remarks"></a>備註  
  若要實作自訂動作的衍生類別中，這個方法會覆寫。  
   
-##  <a name="a-nameonbrowsea--cmfceditbrowsectrlonbrowse"></a><a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
+##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
  在使用者按一下編輯瀏覽控制項的 [瀏覽] 按鈕後，由架構呼叫。  
   
 ```  
@@ -226,7 +237,7 @@ virtual void OnBrowse();
 ### <a name="remarks"></a>備註  
  使用這個方法來執行自訂程式碼，當使用者按一下編輯瀏覽控制項的 [瀏覽] 按鈕。 衍生您自己從`CMFCEditBrowseCtrl`類別並覆寫其`OnBrowse`方法。 在該方法，實作自訂瀏覽動作，並選擇性地更新編輯瀏覽控制項的文字方塊。 在您的應用程式使用[EnableBrowseButton](#enablebrowsebutton)方法，以編輯瀏覽控制項置於*自訂瀏覽*模式。  
   
-##  <a name="a-nameonchangelayouta--cmfceditbrowsectrlonchangelayout"></a><a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
+##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
  目前的編輯瀏覽控制項來重新繪製。  
   
 ```  
@@ -236,7 +247,7 @@ virtual void OnChangeLayout();
 ### <a name="remarks"></a>備註  
  瀏覽模式的編輯瀏覽控制的變更時，架構會呼叫這個方法。 如需詳細資訊，請參閱[CMFCEditBrowseCtrl::GetMode](#getmode)。  
   
-##  <a name="a-nameondrawbrowsebuttona--cmfceditbrowsectrlondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
  在 編輯瀏覽控制項上繪製瀏覽按鈕架構呼叫。  
   
 ```  
@@ -263,7 +274,7 @@ virtual void OnDrawBrowseButton(
 ### <a name="remarks"></a>備註  
  覆寫這個函式在衍生的類別，即可自訂瀏覽 按鈕的外觀。  
   
-##  <a name="a-namesetbrowsebuttonimagea--cmfceditbrowsectrlsetbrowsebuttonimage"></a><a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
+##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
  設定自訂映像編輯瀏覽控制項的 [瀏覽] 按鈕。  
   
 ```  
@@ -295,7 +306,7 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ### <a name="remarks"></a>備註  
  使用此方法的自訂映像用於瀏覽 按鈕。 根據預設，架構會取得標準映像中編輯瀏覽控制項時*檔案瀏覽*或*資料夾瀏覽*模式。  
   
-##  <a name="a-nameonillegalfilenamea--cmfceditbrowsectrlonillegalfilename"></a><a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
+##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
  編輯控制項中輸入了不合法的檔案名稱時，由架構呼叫。  
   
 ```  

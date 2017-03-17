@@ -10,6 +10,56 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTabCtrl
+- AFXTABCTRL/CMFCTabCtrl
+- AFXTABCTRL/CMFCTabCtrl::ActivateMDITab
+- AFXTABCTRL/CMFCTabCtrl::AllowDestroyEmptyTabbedPane
+- AFXTABCTRL/CMFCTabCtrl::AutoSizeWindow
+- AFXTABCTRL/CMFCTabCtrl::CalcRectEdit
+- AFXTABCTRL/CMFCTabCtrl::Create
+- AFXTABCTRL/CMFCTabCtrl::EnableActiveTabCloseButton
+- AFXTABCTRL/CMFCTabCtrl::EnableInPlaceEdit
+- AFXTABCTRL/CMFCTabCtrl::EnableTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::EnsureVisible
+- AFXTABCTRL/CMFCTabCtrl::GetDocumentIcon
+- AFXTABCTRL/CMFCTabCtrl::GetFirstVisibleTabNum
+- AFXTABCTRL/CMFCTabCtrl::GetResizeMode
+- AFXTABCTRL/CMFCTabCtrl::GetScrollBar
+- AFXTABCTRL/CMFCTabCtrl::GetTabArea
+- AFXTABCTRL/CMFCTabCtrl::GetTabMaxWidth
+- AFXTABCTRL/CMFCTabCtrl::GetTabsHeight
+- AFXTABCTRL/CMFCTabCtrl::GetTabsRect
+- AFXTABCTRL/CMFCTabCtrl::GetWndArea
+- AFXTABCTRL/CMFCTabCtrl::HideActiveWindowHorzScrollBar
+- AFXTABCTRL/CMFCTabCtrl::HideInactiveWindow
+- AFXTABCTRL/CMFCTabCtrl::HideNoTabs
+- AFXTABCTRL/CMFCTabCtrl::HideSingleTab
+- AFXTABCTRL/CMFCTabCtrl::IsActiveInMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::IsActiveTabBoldFont
+- AFXTABCTRL/CMFCTabCtrl::IsActiveTabCloseButton
+- AFXTABCTRL/CMFCTabCtrl::IsDrawFrame
+- AFXTABCTRL/CMFCTabCtrl::IsFlatFrame
+- AFXTABCTRL/CMFCTabCtrl::IsFlatTab
+- AFXTABCTRL/CMFCTabCtrl::IsLeftRightRounded
+- AFXTABCTRL/CMFCTabCtrl::IsMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::IsOneNoteStyle
+- AFXTABCTRL/CMFCTabCtrl::IsSharedScroll
+- AFXTABCTRL/CMFCTabCtrl::IsTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::IsVS2005Style
+- AFXTABCTRL/CMFCTabCtrl::ModifyTabStyle
+- AFXTABCTRL/CMFCTabCtrl::OnDragEnter
+- AFXTABCTRL/CMFCTabCtrl::OnDragOver
+- AFXTABCTRL/CMFCTabCtrl::OnShowTabDocumentsMenu
+- AFXTABCTRL/CMFCTabCtrl::SetActiveInMDITabGroup
+- AFXTABCTRL/CMFCTabCtrl::SetActiveTab
+- AFXTABCTRL/CMFCTabCtrl::SetActiveTabBoldFont
+- AFXTABCTRL/CMFCTabCtrl::SetDrawFrame
+- AFXTABCTRL/CMFCTabCtrl::SetFlatFrame
+- AFXTABCTRL/CMFCTabCtrl::SetImageList
+- AFXTABCTRL/CMFCTabCtrl::SetResizeMode
+- AFXTABCTRL/CMFCTabCtrl::SetTabMaxWidth
+- AFXTABCTRL/CMFCTabCtrl::StopResize
+- AFXTABCTRL/CMFCTabCtrl::SynchronizeScrollBar
+- AFXTABCTRL/CMFCTabCtrl::m_bEnableActivate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -182,7 +232,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtabctrl.h  
   
-##  <a name="a-nameactivatemditaba--cmfctabctrlactivatemditab"></a><a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
+##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
  顯示目前的索引標籤控制項的指定索引標籤，並將焦點設在該索引標籤。  
   
 ```  
@@ -193,7 +243,7 @@ void ActivateMDITab(int nTab = -1);
  [in] `nTab`  
  索引標籤以顯示，或是-1，指定目前使用中 索引標籤以零為起始的索引。  
   
-##  <a name="a-nameallowdestroyemptytabbedpanea--cmfctabctrlallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -205,7 +255,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameautosizewindowa--cmfctabctrlautosizewindow"></a><a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
+##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
  指定是否要調整大小的所有索引標籤上控制 windows 使用者介面項目 索引標籤的控制項變更時的工作區架構。  
   
 ```  
@@ -218,7 +268,7 @@ void AutoSizeWindow(BOOL bAutoSize = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecreatea--cmfctabctrlcreate"></a><a name="create"></a>CMFCTabCtrl::Create  
+##  <a name="create"></a>CMFCTabCtrl::Create  
  建立索引標籤控制項並將它附加`CMFCTabCtrl`物件。  
   
 ```  
@@ -279,7 +329,7 @@ BOOL Create(
  [!code-cpp[NVC_MFC_StateCollection #&1;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_StateCollection #&2;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
   
-##  <a name="a-namecalcrectedita--cmfctabctrlcalcrectedit"></a><a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
+##  <a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
  「 洩氣 」 指定的索引標籤區域的大小。  
   
 ```  
@@ -293,7 +343,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ### <a name="remarks"></a>備註  
  當您變更索引標籤的標籤時，會呼叫這個方法。 這個方法 deflate 左側與右側相加，指定矩形的一半目前的索引標籤高度，並 「 洩氣 」 上、 下一個單位。  
   
-##  <a name="a-nameenableactivetabclosebuttona--cmfctabctrlenableactivetabclosebutton"></a><a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
+##  <a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
  顯示或隱藏 關閉 按鈕 ( **X**) 在使用中 索引標籤。  
   
 ```  
@@ -304,7 +354,7 @@ void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
  [in] `bEnable`  
  `TRUE`若要在作用中 索引標籤，顯示 關閉 按鈕`FALSE`以顯示索引標籤區域右上角的 關閉 按鈕。 預設值是 `TRUE`。  
   
-##  <a name="a-nameenableinplaceedita--cmfctabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
+##  <a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
  啟用或停用可編輯的索引標籤。  
   
 ```  
@@ -317,7 +367,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenabletabdocumentsmenua--cmfctabctrlenabletabdocumentsmenu"></a><a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
+##  <a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
  使用兩個按鈕捲動視窗索引標籤的使用者介面與介面，以顯示快顯功能表的 索引標籤式視窗之間切換。  
   
 ```  
@@ -331,7 +381,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>備註  
  當使用者按一下索引標籤的標籤時，架構會顯示對應的索引標籤式的視窗。 如果 索引標籤的標籤為可見，而不需要變更它的位置開啟索引標籤式的視窗。 如果使用者從快顯功能表選取 文件對應的索引標籤式的視窗已關閉螢幕，索引標籤式的視窗就會成為第一個索引標籤。  
   
-##  <a name="a-nameensurevisiblea--cmfctabctrlensurevisible"></a><a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
  請確定索引標籤會出現。  
   
 ```  
@@ -348,7 +398,7 @@ virtual BOOL EnsureVisible(int iTab);
 ### <a name="remarks"></a>備註  
  使用這個方法，以確保指定的索引標籤是可見。 如果需要，將捲動索引標籤控制項。  
   
-##  <a name="a-namegetdocumenticona--cmfctabctrlgetdocumenticon"></a><a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
+##  <a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
  擷取與索引標籤式視窗的快顯功能表中的索引標籤相關聯的映像。  
   
 ```  
@@ -362,7 +412,7 @@ static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ### <a name="return-value"></a>傳回值  
  點陣圖影像的控制代碼。  
   
-##  <a name="a-namegetfirstvisibletabnuma--cmfctabctrlgetfirstvisibletabnum"></a><a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
+##  <a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
  擷取會在目前的索引標籤控制項中顯示的第一個索引標籤的索引。  
   
 ```  
@@ -375,7 +425,7 @@ virtual int GetFirstVisibleTabNum() const;
 ### <a name="remarks"></a>備註  
  Microsoft onenote 的樣式會顯示索引標籤控制項時，才使用這個方法。 使用[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)方法，以判斷樣式。  
   
-##  <a name="a-namegetresizemodea--cmfctabctrlgetresizemode"></a><a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
+##  <a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
  擷取值，指定如何在目前的索引標籤控制項可以調整大小。  
   
 ```  
@@ -385,7 +435,7 @@ ResizeMode GetResizeMode() const;
 ### <a name="return-value"></a>傳回值  
  其中一個`CMFCTabCtrl::ResizeMode`列舉值，指定可調整大小的索引標籤控制項的方式。 如需可能值的清單，請參閱的 < 備註 > 一節[CMFCTabCtrl::SetResizeMode](#setresizemode)方法。  
   
-##  <a name="a-namegetscrollbara--cmfctabctrlgetscrollbar"></a><a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
+##  <a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
  擷取與索引標籤控制項相關聯的捲軸列物件的指標。  
   
 ```  
@@ -398,7 +448,7 @@ CScrollBar* GetScrollBar();
 ### <a name="remarks"></a>備註  
  使用這個方法來存取索引標籤控制項的內嵌的捲軸。 捲軸列物件會建立具有索引標籤控制項時，才`STYLE_FLAT_SHARED_HORZ_SCROLL`樣式。  
   
-##  <a name="a-namegettabareaa--cmfctabctrlgettabarea"></a><a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
+##  <a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
  擷取的頂端或底部的索引標籤控制項 索引標籤標籤區域的周框矩形。  
   
 ```  
@@ -417,7 +467,7 @@ void GetTabArea(
 ### <a name="remarks"></a>備註  
  使用這個方法來決定的大小和索引標籤式視窗中的索引標籤區域位置。  
   
-##  <a name="a-namegettabmaxwidtha--cmfctabctrlgettabmaxwidth"></a><a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
+##  <a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
  擷取索引標籤的最大寬度。  
   
 ```  
@@ -430,7 +480,7 @@ int GetTabMaxWidth() const;
 ### <a name="remarks"></a>備註  
  使用[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)方法來設定最大值 索引標籤的寬度。  
   
-##  <a name="a-namegettabsheighta--cmfctabctrlgettabsheight"></a><a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
+##  <a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
  擷取目前的索引標籤控制項的索引標籤區域的高度。  
   
 ```  
@@ -440,7 +490,7 @@ virtual int GetTabsHeight() const;
 ### <a name="return-value"></a>傳回值  
  如果任何索引標籤是可見的或如果沒有索引標籤會顯示索引標籤區域的高度。  
   
-##  <a name="a-namegettabsrecta--cmfctabctrlgettabsrect"></a><a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
+##  <a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
  擷取限定在目前的索引標籤控制項的索引標籤區域的矩形的。  
   
 ```  
@@ -451,7 +501,7 @@ virtual void GetTabsRect(CRect& rect) const;
  [輸出] `rect`  
  此方法傳回時，`rect`參數會包含限定 索引標籤區域的矩形。  
   
-##  <a name="a-namegetwndareaa--cmfctabctrlgetwndarea"></a><a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
+##  <a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
  擷取目前的索引標籤控制項的用戶端區域的界限。  
   
 ```  
@@ -464,7 +514,7 @@ void GetWndArea(CRect& rect) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehideactivewindowhorzscrollbara--cmfctabctrlhideactivewindowhorzscrollbar"></a><a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
+##  <a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
  水平捲軸中，如果隱藏任何使用中視窗。  
   
 ```  
@@ -474,7 +524,7 @@ void HideActiveWindowHorzScrollBar();
 ### <a name="remarks"></a>備註  
  若要防止索引標籤控制項閃爍的使用者 索引標籤控制項頁面之間切換時，使用這個方法。  
   
-##  <a name="a-namehideinactivewindowa--cmfctabctrlhideinactivewindow"></a><a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
+##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
  指定是否，架構會顯示非作用中 索引標籤控制項的視窗。  
   
 ```  
@@ -487,7 +537,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehidenotabsa--cmfctabctrlhidenotabs"></a><a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
+##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
  啟用或停用的索引標籤區域繪圖，如果不有任何可見的索引標籤。  
   
 ```  
@@ -500,7 +550,7 @@ void HideNoTabs(BOOL bHide=TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehidesingletaba--cmfctabctrlhidesingletab"></a><a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
+##  <a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
  啟用或停用索引標籤的繪製，如果沒有單一的索引標籤式的視窗。  
   
 ```  
@@ -513,7 +563,7 @@ virtual void HideSingleTab(BOOL bHide=TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisactiveinmditabgroupa--cmfctabctrlisactiveinmditabgroup"></a><a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
+##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
  指出目前的索引標籤的索引標籤控制項是否為多個文件介面 索引標籤群組中的 作用中 索引標籤。  
   
 ```  
@@ -526,7 +576,7 @@ BOOL IsActiveInMDITabGroup() const;
 ### <a name="remarks"></a>備註  
  您可以將多個文件視窗組織成任一個垂直或水平索引標籤群組，並輕鬆地從一個索引標籤群組到另一個隨機文件。  
   
-##  <a name="a-nameisactivetabboldfonta--cmfctabctrlisactivetabboldfont"></a><a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
+##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
  指出是否使用中 索引標籤的文字會顯示使用粗體字型。  
   
 ```  
@@ -539,7 +589,7 @@ BOOL IsActiveTabBoldFont() const;
 ### <a name="remarks"></a>備註  
  使用[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)方法，以變更作用中索引標籤的字型。  
   
-##  <a name="a-nameisactivetabclosebuttona--cmfctabctrlisactivetabclosebutton"></a><a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
+##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
  指出是否 [關閉] 按鈕 ( **X**) 會顯示在作用中的索引標籤上，或索引標籤區域右上角。  
   
 ```  
@@ -551,7 +601,7 @@ virtual BOOL IsActiveTabCloseButton() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisdrawframea--cmfctabctrlisdrawframe"></a><a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
+##  <a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
  指出是否索引標籤式的視窗框架周圍繪製矩形內嵌的窗格。  
   
 ```  
@@ -564,7 +614,7 @@ BOOL IsDrawFrame() const;
 ### <a name="remarks"></a>備註  
  使用[CMFCTabCtrl::SetDrawFrame](#setdrawframe)方法，以啟用或停用繪製框矩形。  
   
-##  <a name="a-nameisflatframea--cmfctabctrlisflatframe"></a><a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
+##  <a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
  指出是否平面或 3D 索引標籤區域外的框。  
   
 ```  
@@ -577,7 +627,7 @@ BOOL IsFlatFrame() const;
 ### <a name="remarks"></a>備註  
  使用[CMFCTabCtrl::SetFlatFrame](#setflatframe)方法，以變更繪製框架的方式。  
   
-##  <a name="a-nameisflattaba--cmfctabctrlisflattab"></a><a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
+##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
  指出是否一般或不在目前的索引標籤控制項索引標籤的外觀。  
   
 ```  
@@ -587,7 +637,7 @@ virtual BOOL IsFlatTab() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果目前的索引標籤控制項中的索引標籤的外觀是一般。否則， `FALSE`。  
   
-##  <a name="a-nameisleftrightroundeda--cmfctabctrlisleftrightrounded"></a><a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
+##  <a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
  指出是否要四捨五入的左側和右側，目前的索引標籤控制項中的索引標籤的外觀。  
   
 ```  
@@ -597,7 +647,7 @@ virtual BOOL IsLeftRightRounded() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果會捨入的每個索引標籤旁邊。，否則， `FALSE`。  
   
-##  <a name="a-nameismditabgroupa--cmfctabctrlismditabgroup"></a><a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
+##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
  指出目前的索引標籤控制項是否包含多個文件介面視窗的工作區中。  
   
 ```  
@@ -607,7 +657,7 @@ virtual BOOL IsMDITabGroup() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果目前的索引標籤控制項是在 MDI 工作區視窗;否則， `FALSE`。  
   
-##  <a name="a-nameisonenotestylea--cmfctabctrlisonenotestyle"></a><a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
+##  <a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
  指出是否要將目前的索引標籤控制項顯示 Microsoft onenote 樣式。  
   
 ```  
@@ -617,7 +667,7 @@ virtual BOOL IsOneNoteStyle() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果 Microsoft onenote; 樣式中顯示索引標籤控制項否則， `FALSE`。  
   
-##  <a name="a-nameissharedscrolla--cmfctabctrlissharedscroll"></a><a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
+##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
  指出目前的索引標籤控制項是否已捲軸可以捲動其 索引標籤，為群組。  
   
 ```  
@@ -630,7 +680,7 @@ BOOL IsSharedScroll() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳回`TRUE`如果`style`參數[CMFCTabCtrl::Create](#create)方法是 STYLE_FLAT_SHARED_HORZ_SCROLL。  
   
-##  <a name="a-nameistabdocumentsmenua--cmfctabctrlistabdocumentsmenu"></a><a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
+##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
  表示索引標籤控制項是否顯示捲軸按鈕或按鈕，可顯示索引標籤式視窗的功能表。  
   
 ```  
@@ -643,7 +693,7 @@ BOOL IsTabDocumentsMenu() const;
 ### <a name="remarks"></a>備註  
  使用[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)方法，以指定的方法捲動的索引視窗。  
   
-##  <a name="a-nameisvs2005stylea--cmfctabctrlisvs2005style"></a><a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
+##  <a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
  指出是否索引標籤的繪製使用 Visual Studio 2005 的樣式。  
   
 ```  
@@ -656,7 +706,7 @@ virtual BOOL IsVS2005Style() const;
 ### <a name="remarks"></a>備註  
  使用`style`參數[CMFCTabCtrl::Create](#create)方法，以指定索引標籤的繪製方式。  
   
-##  <a name="a-namembenableactivatea--cmfctabctrlmbenableactivate"></a><a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
+##  <a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
  防止使用中的檢視是插入新的索引標籤，並啟用時，失去焦點。  
   
 ```  
@@ -666,7 +716,7 @@ static BOOL m_bEnableActivate;
 ### <a name="remarks"></a>備註  
  當 [] 索引標籤插入，並且成為使用中新的索引標籤式視窗通常是採取焦點。 設定`CMFCTabCtrl::m_bEnableActivate`成員變數來`FALSE`保留原始的焦點。 預設值是 `TRUE`。  
   
-##  <a name="a-namemodifytabstylea--cmfctabctrlmodifytabstyle"></a><a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
+##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
  指定目前的索引標籤控制項中的索引標籤的外觀。  
   
 ```  
@@ -694,7 +744,7 @@ BOOL ModifyTabStyle(Style style);
 |STYLE_FLAT|顯示具有傾斜左邊和右邊的二維索引標籤。|  
 |STYLE_FLAT_SHARED_HORZ_SCROLL|顯示二維索引標籤。 如果有多個索引標籤可以顯示在相同的時間比，，架構會顯示端點索引標籤區域的捲動箭號。|  
   
-##  <a name="a-nameondragentera--cmfctabctrlondragenter"></a><a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
+##  <a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
  資料指標第一次進入目前的索引標籤控制項的視窗時呼叫 framework 拖放作業期間。  
   
 ```  
@@ -722,7 +772,7 @@ virtual DROPEFFECT OnDragEnter(
   
  根據預設，這個方法只會呼叫`CMFCTabCtrl::OnDragOver`，它一定會傳回`DROPEFFECT_NONE`。  
   
-##  <a name="a-nameondragovera--cmfctabctrlondragover"></a><a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
+##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
  當滑鼠移動經過置放目標視窗呼叫由架構在拖曳作業期間。  
   
 ```  
@@ -748,7 +798,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="remarks"></a>備註  
  覆寫這個方法與您的自訂實作。 如需詳細資訊，請參閱[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)方法。  
   
-##  <a name="a-nameonshowtabdocumentsmenua--cmfctabctrlonshowtabdocumentsmenu"></a><a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
+##  <a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
  顯示索引標籤式視窗的快顯功能表中，會等到使用者選取索引標籤，並將選取的索引標籤為作用中索引標籤。  
   
 ```  
@@ -761,7 +811,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetactiveinmditabgroupa--cmfctabctrlsetactiveinmditabgroup"></a><a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
+##  <a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
  將索引標籤控制項的 目前 索引標籤設為多個文件介面 索引標籤群組中的 作用中 索引標籤。  
   
 ```  
@@ -775,7 +825,7 @@ void SetActiveInMDITabGroup(BOOL bActive);
 ### <a name="remarks"></a>備註  
  您可以將多個文件視窗組織成任一個垂直或水平索引標籤群組，並輕鬆地從一個索引標籤群組到另一個隨機文件。  
   
-##  <a name="a-namesetactivetaba--cmfctabctrlsetactivetab"></a><a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
+##  <a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
  啟動索引標籤。  
   
 ```  
@@ -794,7 +844,7 @@ virtual BOOL SetActiveTab(int iTab);
   
  `SetActiveTab`方法會自動呼叫[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)方法，以避免使螢幕閃爍。  
   
-##  <a name="a-namesetactivetabboldfonta--cmfctabctrlsetactivetabboldfont"></a><a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
+##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
  啟用或停用使用的作用中 索引標籤上的粗體字型。  
   
 ```  
@@ -807,7 +857,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetdrawframea--cmfctabctrlsetdrawframe"></a><a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
+##  <a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
  指定是否框架周圍繪製矩形內嵌的列。  
   
 ```  
@@ -820,7 +870,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetflatframea--cmfctabctrlsetflatframe"></a><a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
+##  <a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
  指定是否要繪製以平面或 3D 框架 索引標籤區域。  
   
 ```  
@@ -838,7 +888,7 @@ void SetFlatFrame(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetimagelista--cmfctabctrlsetimagelist"></a><a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
  指定映像清單。  
   
 ```  
@@ -871,7 +921,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
   
  使用[CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)  索引標籤控制項，指定要顯示之影像的索引所繼承的方法。  
   
-##  <a name="a-namesetresizemodea--cmfctabctrlsetresizemode"></a><a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
+##  <a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
  指定如何在目前的索引標籤控制項可以調整大小，然後重新顯示控制項。  
   
 ```  
@@ -891,7 +941,7 @@ void SetResizeMode(ResizeMode resizeMode);
 |RESIZE_VERT|索引標籤控制項可調整大小，以垂直方式，但不是水平。|  
 |RESIZE_HORIZ|索引標籤控制項可調整大小，以水平方式，但不是會以垂直方式。|  
   
-##  <a name="a-namesettabmaxwidtha--cmfctabctrlsettabmaxwidth"></a><a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
+##  <a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
  指定在索引標籤式視窗的最大值 索引標籤寬度。  
   
 ```  
@@ -905,7 +955,7 @@ void SetTabMaxWidth(int nTabMaxWidth);
 ### <a name="remarks"></a>備註  
  使用這個方法來限制每個索引標籤中的索引標籤式視窗的寬度。 此方法相當實用的索引標籤有很長的標籤。 [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)類別建構函式會初始化為 0，表示實際寬度不受限制的最大值 索引標籤寬度。  
   
-##  <a name="a-namestopresizea--cmfctabctrlstopresize"></a><a name="stopresize"></a>CMFCTabCtrl::StopResize  
+##  <a name="stopresize"></a>CMFCTabCtrl::StopResize  
  終止目前的調整大小作業 索引標籤控制項上。  
   
 ```  
@@ -916,7 +966,7 @@ void StopResize(BOOL bCancel);
  [in] `bCancel`  
  `TRUE`要放棄目前的調整大小作業。`FALSE`完成目前的調整大小作業。 在任一情況下，架構會停止繪製調整大小的矩形。  
   
-##  <a name="a-namesynchronizescrollbara--cmfctabctrlsynchronizescrollbar"></a><a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
+##  <a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
  一般索引標籤會顯示在索引標籤控制項上繪製水平捲軸。  
   
 ```  

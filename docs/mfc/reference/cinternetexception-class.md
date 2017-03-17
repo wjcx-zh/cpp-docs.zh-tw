@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetException
+- AFXINET/CInternetException
+- AFXINET/CInternetException::CInternetException
+- AFXINET/CInternetException::m_dwContext
+- AFXINET/CInternetException::m_dwError
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +84,7 @@ class CInternetException : public CException
 ## <a name="requirements"></a>需求  
  **標頭︰** afxinet.h  
   
-##  <a name="a-namecinternetexceptiona--cinternetexceptioncinternetexception"></a><a name="cinternetexception"></a>CInternetException::CInternetException  
+##  <a name="cinternetexception"></a>CInternetException::CInternetException  
  此成員函式時，會呼叫`CInternetException`建立物件。  
   
 ```  
@@ -94,7 +98,7 @@ CInternetException(DWORD dwError);
 ### <a name="remarks"></a>備註  
  擲回 CInternetException，呼叫 MFC 的全域函式[AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb)。  
   
-##  <a name="a-namemdwcontexta--cinternetexceptionmdwcontext"></a><a name="m_dwcontext"></a>CInternetException::m_dwContext  
+##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
  相關的網際網路作業相關聯的內容值。  
   
 ```  
@@ -104,7 +108,7 @@ DWORD_PTR m_dwContext;
 ### <a name="remarks"></a>備註  
  中原本指定的內容識別碼[CInternetSession](../../mfc/reference/cinternetsession-class.md)傳遞 MFC [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-衍生的類別。 您可以覆寫這個預設值，並將任何指派`dwContext`參數您選擇的值。 `dwContext`與指定之任何的物件作業有關聯。 `dwContext`識別所傳回的作業的狀態資訊[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
   
-##  <a name="a-namemdwerrora--cinternetexceptionmdwerror"></a><a name="m_dwerror"></a>CInternetException::m_dwError  
+##  <a name="m_dwerror"></a>CInternetException::m_dwError  
  造成例外狀況的錯誤。  
   
 ```  

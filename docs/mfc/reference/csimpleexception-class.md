@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleException
+- AFX/CSimpleException
+- AFX/CSimpleException::CSimpleException
+- AFX/CSimpleException::GetErrorMessage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +90,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="a-namecsimpleexceptiona--csimpleexceptioncsimpleexception"></a><a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
  建構函式。  
   
 ```  
@@ -102,7 +105,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>備註  
  您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生類別，並呼叫其建構函式，或它應該 MFC 使用其中一個擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 預先定義的型別會擲回。  
   
-##  <a name="a-namegeterrormessagea--csimpleexceptiongeterrormessage"></a><a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
  呼叫此成員函式，以提供有關已發生的錯誤文字。  
   
 ```  

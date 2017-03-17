@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTreeView
+- AFXCVIEW/CTreeView
+- AFXCVIEW/CTreeView::CTreeView
+- AFXCVIEW/CTreeView::GetTreeCtrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,14 +88,14 @@ class CTreeView : public CCtrlView
 ## <a name="requirements"></a>需求  
  **標頭︰** afxcview.h  
   
-##  <a name="a-namectreeviewa--ctreeviewctreeview"></a><a name="ctreeview"></a>CTreeView::CTreeView  
+##  <a name="ctreeview"></a>CTreeView::CTreeView  
  建構 `CTreeView` 物件。  
   
 ```  
 CTreeView();
 ```  
   
-##  <a name="a-namegettreectrla--ctreeviewgettreectrl"></a><a name="gettreectrl"></a>Ctreeview:: Gettreectrl  
+##  <a name="gettreectrl"></a>Ctreeview:: Gettreectrl  
  傳回與檢視相關聯的樹狀目錄控制項的參考。  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComContainedObject
+- ATLCOM/ATL::CComContainedObject
+- ATLCOM/ATL::CComContainedObject::CComContainedObject
+- ATLCOM/ATL::CComContainedObject::AddRef
+- ATLCOM/ATL::CComContainedObject::GetControllingUnknown
+- ATLCOM/ATL::CComContainedObject::QueryInterface
+- ATLCOM/ATL::CComContainedObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +93,7 @@ class CComContainedObject : public Base
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomcontainedobjectaddref"></a><a name="addref"></a>CComContainedObject::AddRef  
+##  <a name="addref"></a>CComContainedObject::AddRef  
  擁有者物件上的參考計數遞增。  
   
 ```
@@ -97,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>傳回值  
  值，可用於診斷或測試。  
   
-##  <a name="a-nameccomcontainedobjecta--ccomcontainedobjectccomcontainedobject"></a><a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
+##  <a name="ccomcontainedobject"></a>CComContainedObject::CComContainedObject  
  建構函式。  
   
 ```
@@ -111,7 +117,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>備註  
  設定`m_pOuterUnknown`成員指標 (透過繼承`Base`類別) 至`pv`。  
   
-##  <a name="a-namedtora--ccomcontainedobjectccomcontainedobject"></a><a name="dtor"></a>CComContainedObject:: ~ CComContainedObject  
+##  <a name="dtor"></a>CComContainedObject:: ~ CComContainedObject  
  解構函式。  
   
 ```
@@ -121,7 +127,7 @@ CComContainedObject(void* pv);
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-namegetcontrollingunknowna--ccomcontainedobjectgetcontrollingunknown"></a><a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
+##  <a name="getcontrollingunknown"></a>CComContainedObject::GetControllingUnknown  
  傳回`m_pOuterUnknown`成員指標 (透過繼承*基底*類別)，其中保存擁有者物件**IUnknown**。  
   
 ```
@@ -134,7 +140,7 @@ IUnknown* GetControllingUnknown();
 ### <a name="remarks"></a>備註  
  這個方法可能是虛擬如果`Base`已宣告[DECLARE_GET_CONTROLLING_UNKNOWN](http://msdn.microsoft.com/library/82b0199a-a9d5-4f95-a711-fa1ae18e1f77)巨集。  
   
-##  <a name="a-namequeryinterfacea--ccomcontainedobjectqueryinterface"></a><a name="queryinterface"></a>CComContainedObject::QueryInterface  
+##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  
  擷取要求的擁有者物件的介面指標。  
   
 ```
@@ -156,7 +162,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namereleasea--ccomcontainedobjectrelease"></a><a name="release"></a>CComContainedObject::Release  
+##  <a name="release"></a>CComContainedObject::Release  
  遞減參考計數的擁有者物件。  
   
 ```

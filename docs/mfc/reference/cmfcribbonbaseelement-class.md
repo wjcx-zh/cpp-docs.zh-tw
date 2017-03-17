@@ -10,6 +10,120 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonBaseElement
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::AddToKeyList
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::AddToListBox
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CanBeCompacted
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CanBeStretched
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CanBeStretchedHorizontally
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CleanUpSizes
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::ClosePopupMenu
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::CopyFrom
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::DestroyCtrl
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::DrawImage
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::Find
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::FindByData
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::FindByID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::FindByOriginal
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetCompactSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetData
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetDescription
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetDroppedDown
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetElements
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetElementsByID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetHighlighted
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetImageSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetIntermediateSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetKeys
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetKeyTipRect
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetKeyTipSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetLocationInGroup
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetMenuKeys
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetNotifyID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetOriginal
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetParentCategory
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetParentPanel
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetParentRibbonBar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetParentWnd
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetPressed
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetQuickAccessToolBarID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetRect
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetRegularSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetText
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetToolTipText
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::GetTopLevelRibbonBar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasCompactMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasFocus
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasIntermediateMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasLargeMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HasMenu
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::HitTest
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsAlignByColumn
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsAlwaysLargeImage
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsAutoRepeatMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsChecked
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsCompactMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsDefaultMenuLook
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsDisabled
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsDroppedDown
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsFocused
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsGalleryIcon
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsHighlighted
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsIntermediateMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsLargeMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsMenuMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsPressed
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsQATMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsSeparator
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsShowGroupBorder
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsShowTooltipOnBottom
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsTabStop
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsTextAlwaysOnRight
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsVisible
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::IsWholeRowHeight
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::NotifyCommand
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::NotifyHighlightListItem
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnAddToQAToolbar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnAfterChangeRect
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnAutoRepeat
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnCalcTextSize
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnChangeMenuHighlight
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnDraw
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnDrawKeyTip
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnDrawMenuImage
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnDrawOnList
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnKey
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnMenuKey
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnRTLChanged
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnShow
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnShowPopupMenu
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::PostMenuCommand
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::Redraw
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetACCData
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetCompactMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetData
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetDefaultMenuLook
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetDescription
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetID
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetInitialMode
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetKeys
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetOriginal
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetParentCategory
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetParentMenu
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetParentRibbonBar
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetRect
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetText
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetTextAlwaysOnRight
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetToolTipText
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::SetVisible
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::StretchHorizontally
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::StretchToWholeRow
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::UpdateTooltipInfo
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnProcessKey
+- AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnSetFocus
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -204,7 +318,7 @@ class CMFCRibbonBaseElement : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxbaseribbonelement.h  
   
-##  <a name="a-nameaddtokeylista--cmfcribbonbaseelementaddtokeylist"></a><a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
+##  <a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
  將 keytip 的功能區項目加入至陣列的按鍵提示。  
   
 ```  
@@ -219,7 +333,7 @@ virtual void AddToKeyList(
 ### <a name="remarks"></a>備註  
  啟用 「 功能區按鍵提示 」 功能時，架構會顯示功能區按鍵提示，當使用者按下 ALT 或 F10 鍵。  
   
-##  <a name="a-nameaddtolistboxa--cmfcribbonbaseelementaddtolistbox"></a><a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
+##  <a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
  將功能區項目加入至指定的功能區命令的清單方塊。  
   
 ```  
@@ -241,7 +355,7 @@ virtual int AddToListBox(
 ### <a name="remarks"></a>備註  
  架構會將功能區項目加入至命令清單方塊，以讓使用者可以自訂使用者介面。  
   
-##  <a name="a-namecanbeaddedtoquickaccesstoolbara--cmfcribbonbaseelementcanbeaddedtoquickaccesstoolbar"></a><a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
+##  <a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
  表示功能區項目是否可以加入快速存取工具列。  
   
 ```  
@@ -253,7 +367,7 @@ virtual BOOL CanBeAddedToQuickAccessToolBar() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecanbecompacteda--cmfcribbonbaseelementcanbecompacted"></a><a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
+##  <a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
  指出是否可壓縮功能區元素的大小。  
   
 ```  
@@ -266,7 +380,7 @@ virtual BOOL CanBeCompacted() const;
 ### <a name="remarks"></a>備註  
  功能區元素的大小可以是壓縮、 中級、 或大。  
   
-##  <a name="a-namecanbestretcheda--cmfcribbonbaseelementcanbestretched"></a><a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched  
  表示功能區元素的高度是否可以垂直地增加到功能區列的高度。  
   
 ```  
@@ -279,7 +393,7 @@ virtual BOOL CanBeStretched();
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回`TRUE`。 覆寫這個方法，以表示功能區元素的高度是否可以垂直地增加到功能區列的高度。  
   
-##  <a name="a-namecanbestretchedhorizontallya--cmfcribbonbaseelementcanbestretchedhorizontally"></a><a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
+##  <a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
  指出是否可以變更功能區項目的寬度。  
   
 ```  
@@ -292,7 +406,7 @@ virtual BOOL CanBeStretchedHorizontally();
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回`FALSE`。 覆寫這個方法，以指出是否可以變更功能區項目的寬度。  
   
-##  <a name="a-namecleanupsizesa--cmfcribbonbaseelementcleanupsizes"></a><a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes  
+##  <a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes  
  清除功能區元素的維度設定。  
   
 ```  
@@ -302,7 +416,7 @@ virtual void CleanUpSizes();
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有作用。 若要重設功能區元素的維度設定衍生類別中，這個方法會覆寫。  
   
-##  <a name="a-nameclosepopupmenua--cmfcribbonbaseelementclosepopupmenu"></a><a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu  
+##  <a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu  
  關閉快顯功能表功能區項目。  
   
 ```  
@@ -311,7 +425,7 @@ virtual void ClosePopupMenu();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecopyfroma--cmfcribbonbaseelementcopyfrom"></a><a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
+##  <a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
  複製指定的狀態[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)目前的物件。  
   
 ```  
@@ -324,7 +438,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namedestroyctrla--cmfcribbonbaseelementdestroyctrl"></a><a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
+##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
  終結功能區項目。  
   
 ```  
@@ -334,7 +448,7 @@ virtual void DestroyCtrl();
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有作用。 要終結的功能區項目在衍生類別中，這個方法會覆寫。  
   
-##  <a name="a-namedrawimagea--cmfcribbonbaseelementdrawimage"></a><a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage  
+##  <a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage  
  繪製影像的功能區項目。  
   
 ```  
@@ -365,7 +479,7 @@ virtual void DrawImage(
  `RibbonImageSmall`  
  小型 16 x 16 像素的影像大小。  
   
-##  <a name="a-namefinda--cmfcribbonbaseelementfind"></a><a name="find"></a>CMFCRibbonBaseElement::Find  
+##  <a name="find"></a>CMFCRibbonBaseElement::Find  
  傳回指定的指標，指向目前的物件。  
   
 ```  
@@ -381,7 +495,7 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namefindbydataa--cmfcribbonbaseelementfindbydata"></a><a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
+##  <a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
  如果它包含指定的資料，擷取功能區項目的指標。  
   
 ```  
@@ -397,7 +511,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namefindbyida--cmfcribbonbaseelementfindbyid"></a><a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
+##  <a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
  擷取功能區元素的指標，如果該元素由指定的命令 id。  
   
 ```  
@@ -413,7 +527,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namefindbyoriginala--cmfcribbonbaseelementfindbyoriginal"></a><a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
+##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
  擷取目前的功能區項目的指標，如果其原始的功能區項目符合指定的功能區項目。  
   
 ```  
@@ -430,7 +544,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="remarks"></a>備註  
  功能區項目複製到另一個容器保留原始的功能區項目的指標。  
   
-##  <a name="a-namegetcompactsizea--cmfcribbonbaseelementgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize  
  傳回功能區項目的壓縮大小。  
   
 ```  
@@ -447,7 +561,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 > [!NOTE]
 >  壓縮大小表示功能區項目會被截斷 （它會顯示小影像或不包含文字的映像）。  
   
-##  <a name="a-namegetdataa--cmfcribbonbaseelementgetdata"></a><a name="getdata"></a>CMFCRibbonBaseElement::GetData  
+##  <a name="getdata"></a>CMFCRibbonBaseElement::GetData  
  擷取與功能區項目相關聯的使用者定義資料。  
   
 ```  
@@ -457,7 +571,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>傳回值  
  使用功能區項目相關聯的使用者定義的資料。  
   
-##  <a name="a-namegetdescriptiona--cmfcribbonbaseelementgetdescription"></a><a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
+##  <a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
  傳回功能區項目的描述。  
   
 ```  
@@ -467,7 +581,7 @@ virtual CString GetDescription() const;
 ### <a name="return-value"></a>傳回值  
  功能區項目的描述。 此描述會顯示狀態列，或在工具提示，或功能表按鈕底下，如果功能區項目位於[CMFCRibbonMainPanel 類別](../../mfc/reference/cmfcribbonmainpanel-class.md)。  
   
-##  <a name="a-namegetdroppeddowna--cmfcribbonbaseelementgetdroppeddown"></a><a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
+##  <a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
  如果其快顯功能表下拉，擷取功能區項目的指標。  
   
 ```  
@@ -479,7 +593,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetelementsa--cmfcribbonbaseelementgetelements"></a><a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
+##  <a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
  將目前的功能區項目加入至指定的陣列。  
   
 ```  
@@ -493,7 +607,7 @@ virtual void GetElements(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetelementsbyida--cmfcribbonbaseelementgetelementsbyid"></a><a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
+##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
  將目前的功能區項目新增至指定的陣列，如果目前的功能區項目包含指定的命令 id。  
   
 ```  
@@ -511,7 +625,7 @@ virtual void GetElementsByID(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegethighlighteda--cmfcribbonbaseelementgethighlighted"></a><a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
+##  <a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
  擷取功能區項目的指標，如果會反白顯示。  
   
 ```  
@@ -523,7 +637,7 @@ virtual CMFCRibbonBaseElement* GetHighlighted();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetida--cmfcribbonbaseelementgetid"></a><a name="getid"></a>CMFCRibbonBaseElement::GetID  
+##  <a name="getid"></a>CMFCRibbonBaseElement::GetID  
  傳回功能區項目的命令 ID。  
   
 ```  
@@ -533,7 +647,7 @@ UINT GetID() const;
 ### <a name="return-value"></a>傳回值  
  功能區項目的命令 ID。  
   
-##  <a name="a-namegetimagesizea--cmfcribbonbaseelementgetimagesize"></a><a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize  
+##  <a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize  
  傳回功能區項目的影像大小。  
   
 ```  
@@ -543,7 +657,7 @@ virtual CSize GetImageSize(RibbonImageType R) const;
 ### <a name="return-value"></a>傳回值  
  功能區項目映像大小。  
   
-##  <a name="a-namegetintermediatesizea--cmfcribbonbaseelementgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize  
  傳回中繼狀態之功能區項目的大小。  
   
 ```  
@@ -557,7 +671,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="return-value"></a>傳回值  
  功能區中的項目及其中繼狀態的大小。  
   
-##  <a name="a-namegetkeysa--cmfcribbonbaseelementgetkeys"></a><a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
+##  <a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
  傳回 keytip 的功能區項目相關聯。  
   
 ```  
@@ -567,7 +681,7 @@ LPCTSTR GetKeys() const;
 ### <a name="return-value"></a>傳回值  
  Keytip 的功能區項目相關聯。  
   
-##  <a name="a-namegetkeytiprecta--cmfcribbonbaseelementgetkeytiprect"></a><a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
+##  <a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
  擷取 keytip 界限矩形的功能區項目。  
   
 ```  
@@ -589,7 +703,7 @@ virtual CRect GetKeyTipRect(
 ### <a name="remarks"></a>備註  
  覆寫這個方法傳回 keytip 界限矩形在衍生類別中。  
   
-##  <a name="a-namegetkeytipsizea--cmfcribbonbaseelementgetkeytipsize"></a><a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
+##  <a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
  擷取 keytip 文字的大小。  
   
 ```  
@@ -605,7 +719,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetlocationingroupa--cmfcribbonbaseelementgetlocationingroup"></a><a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
+##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
  表示功能區中的項目在功能區群組的顯示位置。  
   
 ```  
@@ -626,7 +740,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="remarks"></a>備註  
  功能區項目群組只能水平對齊。  
   
-##  <a name="a-namegetmenukeysa--cmfcribbonbaseelementgetmenukeys"></a><a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
+##  <a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
  傳回功能表 keytip 的功能區項目。  
   
 ```  
@@ -639,7 +753,7 @@ LPCTSTR GetMenuKeys() const;
 ### <a name="remarks"></a>備註  
  叫用時，功能表 keytip 會顯示快顯功能表。  
   
-##  <a name="a-namegetnotifyida--cmfcribbonbaseelementgetnotifyid"></a><a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
+##  <a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
  擷取通知的命令 ID 的功能區項目。  
   
 ```  
@@ -651,7 +765,7 @@ virtual UINT GetNotifyID();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetoriginala--cmfcribbonbaseelementgetoriginal"></a><a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
+##  <a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
  擷取原始的功能區項目。  
   
 ```  
@@ -664,7 +778,7 @@ CMFCRibbonBaseElement* GetOriginal() const;
 ### <a name="remarks"></a>備註  
  功能區項目複製到另一個容器保留原始的功能區項目的指標。  
   
-##  <a name="a-namegetparentcategorya--cmfcribbonbaseelementgetparentcategory"></a><a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
+##  <a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
  擷取功能區類別的功能區項目。  
   
 ```  
@@ -676,7 +790,7 @@ CMFCRibbonCategory* GetParentCategory() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetparentpanela--cmfcribbonbaseelementgetparentpanel"></a><a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
+##  <a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
  擷取功能區面板，其中包含的功能區項目。  
   
 ```  
@@ -688,7 +802,7 @@ virtual CMFCRibbonPanel* GetParentPanel() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetparentribbonbara--cmfcribbonbaseelementgetparentribbonbar"></a><a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
+##  <a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
  擷取功能區元素的父功能區列。  
   
 ```  
@@ -700,7 +814,7 @@ CMFCRibbonBar* GetParentRibbonBar() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetparentwnda--cmfcribbonbaseelementgetparentwnd"></a><a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
+##  <a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
  擷取功能區元素的父視窗。  
   
 ```  
@@ -713,7 +827,7 @@ virtual CWnd* GetParentWnd() const;
 ### <a name="remarks"></a>備註  
  功能區元素的父視窗是[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)或[CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581)。  
   
-##  <a name="a-namegetpresseda--cmfcribbonbaseelementgetpressed"></a><a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
+##  <a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
  如果使用者目前按下它會擷取功能區項目的指標。  
   
 ```  
@@ -725,7 +839,7 @@ virtual CMFCRibbonBaseElement* GetPressed();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetquickaccesstoolbarida--cmfcribbonbaseelementgetquickaccesstoolbarid"></a><a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
+##  <a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
  位於快速存取工具列時，會擷取功能區項目的命令 ID。  
   
 ```  
@@ -737,7 +851,7 @@ virtual UINT GetQuickAccessToolBarID() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetrecta--cmfcribbonbaseelementgetrect"></a><a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
+##  <a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
  傳回功能區項目，這個周的框。  
   
 ```  
@@ -747,7 +861,7 @@ CRect GetRect() const;
 ### <a name="return-value"></a>傳回值  
  功能區項目，這個周框。 矩形的位置是在功能區控制項之父代的座標。  
   
-##  <a name="a-namegetregularsizea--cmfcribbonbaseelementgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize  
  傳回功能區項目的一般大小。  
   
 ```  
@@ -766,7 +880,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 > [!NOTE]
 >  一般大小是功能區元素的最大可能大小。  
   
-##  <a name="a-namegetsizea--cmfcribbonbaseelementgetsize"></a><a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
+##  <a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
  傳回目前的功能區項目大小。  
   
 ```  
@@ -780,7 +894,7 @@ virtual CSize GetSize(CDC* pDC);
 ### <a name="return-value"></a>傳回值  
  功能區項目目前的大小。  
   
-##  <a name="a-namegettexta--cmfcribbonbaseelementgettext"></a><a name="gettext"></a>CMFCRibbonBaseElement::GetText  
+##  <a name="gettext"></a>CMFCRibbonBaseElement::GetText  
  傳回與功能區項目相關聯的文字。  
   
 ```  
@@ -790,7 +904,7 @@ LPCTSTR GetText() const;
 ### <a name="return-value"></a>傳回值  
  使用功能區項目相關聯的文字。  
   
-##  <a name="a-namegettooltiptexta--cmfcribbonbaseelementgettooltiptext"></a><a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText  
+##  <a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText  
  傳回功能區項目的工具提示文字。  
   
 ```  
@@ -800,7 +914,7 @@ virtual CString GetToolTipText() const;
 ### <a name="return-value"></a>傳回值  
  功能區項目的工具提示文字。  
   
-##  <a name="a-namegettoplevelribbonbara--cmfcribbonbaseelementgettoplevelribbonbar"></a><a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
+##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
  擷取功能區項目上方的層級功能區列。  
   
 ```  
@@ -812,7 +926,7 @@ CMFCRibbonBar* GetTopLevelRibbonBar() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehascompactmodea--cmfcribbonbaseelementhascompactmode"></a><a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode  
+##  <a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode  
  指定功能區項目是否有精簡模式。  
   
 ```  
@@ -827,7 +941,7 @@ virtual BOOL HasCompactMode() const;
 > [!NOTE]
 >  在精簡模式中，項目會顯示小影像。  
   
-##  <a name="a-namehasintermediatemodea--cmfcribbonbaseelementhasintermediatemode"></a><a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode  
+##  <a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode  
  指定功能區項目是否有中繼模式。  
   
 ```  
@@ -839,7 +953,7 @@ virtual BOOL HasIntermediateMode() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehaslargemodea--cmfcribbonbaseelementhaslargemode"></a><a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode  
+##  <a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode  
  指定功能區項目是否有大型模式。  
   
 ```  
@@ -852,7 +966,7 @@ virtual BOOL HasLargeMode() const;
 ### <a name="remarks"></a>備註  
  在大型的模式中，項目可能需要父面板的完整高度。  
   
-##  <a name="a-namehasmenua--cmfcribbonbaseelementhasmenu"></a><a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu  
+##  <a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu  
  表示功能區項目是否有功能表。  
   
 ```  
@@ -865,7 +979,7 @@ virtual BOOL HasMenu() const;
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回`FALSE`。 在衍生類別來表示功能區項目是否具有功能表中的，這個方法會覆寫。  
   
-##  <a name="a-namehittesta--cmfcribbonbaseelementhittest"></a><a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
+##  <a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
  如果指定的點位於，擷取功能區項目的指標。  
   
 ```  
@@ -882,7 +996,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回有效的指標至功能區項目時存在。 覆寫這個方法，指出是否點位於功能區項目。  
   
-##  <a name="a-nameisalignbycolumna--cmfcribbonbaseelementisalignbycolumn"></a><a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
+##  <a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
  指出是否與其他功能區項目垂直對齊的功能區項目。  
   
 ```  
@@ -895,7 +1009,7 @@ virtual BOOL IsAlignByColumn() const;
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回`TRUE`。 覆寫這個方法在衍生類別，表示是否與其他功能區項目以垂直方式對齊衍生功能區項目。  
   
-##  <a name="a-nameisalwayslargeimagea--cmfcribbonbaseelementisalwayslargeimage"></a><a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage  
+##  <a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage  
  指出是否永遠大功能區項目映像大小。  
   
 ```  
@@ -908,7 +1022,7 @@ virtual BOOL IsAlwaysLargeImage() const;
 ### <a name="remarks"></a>備註  
  大型影像大小為 32 x 32 像素為單位。  
   
-##  <a name="a-nameisautorepeatmodea--cmfcribbonbaseelementisautorepeatmode"></a><a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
+##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
  指出是否自動重複模式在功能區項目。  
   
 ```  
@@ -927,7 +1041,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
   
  在自動重複模式中，功能區項目會依設定的間隔，回應以持續的使用者輸入以毫秒為單位測量。  
   
-##  <a name="a-nameischeckeda--cmfcribbonbaseelementischecked"></a><a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
+##  <a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
  指定是否要檢查的功能區項目。  
   
 ```  
@@ -937,7 +1051,7 @@ virtual BOOL IsChecked() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果選取的功能區項目;否則`FALSE`。  
   
-##  <a name="a-nameiscompactmodea--cmfcribbonbaseelementiscompactmode"></a><a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
+##  <a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
  指定是否在精簡模式的功能區項目。  
   
 ```  
@@ -947,7 +1061,7 @@ BOOL IsCompactMode() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果功能區項目是精簡的模式。否則`FALSE`。  
   
-##  <a name="a-nameisdefaultmenulooka--cmfcribbonbaseelementisdefaultmenulook"></a><a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
+##  <a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
  指出是否要將功能區項目設定為顯示為快顯的命令。  
   
 ```  
@@ -959,7 +1073,7 @@ BOOL IsDefaultMenuLook() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisdisableda--cmfcribbonbaseelementisdisabled"></a><a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
+##  <a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
  指定是否要停用的功能區項目。  
   
 ```  
@@ -969,7 +1083,7 @@ virtual BOOL IsDisabled() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果已停用的功能區項目。否則`FALSE`。  
   
-##  <a name="a-nameisdroppeddowna--cmfcribbonbaseelementisdroppeddown"></a><a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
+##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
  指定功能區項目是否會顯示快顯功能表和落下。  
   
 ```  
@@ -979,7 +1093,7 @@ virtual BOOL IsDroppedDown() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果功能區項目拉下時，並顯示快顯功能表。否則`FALSE`。  
   
-##  <a name="a-nameisfocuseda--cmfcribbonbaseelementisfocused"></a><a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
+##  <a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
  指定的功能區項目是否有焦點。  
   
 ```  
@@ -989,7 +1103,7 @@ virtual BOOL IsFocused() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`在功能區項目具有焦點。否則`FALSE`。  
   
-##  <a name="a-nameisgalleryicona--cmfcribbonbaseelementisgalleryicon"></a><a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
+##  <a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
  表示功能區項目是否包含在功能區組件庫。  
   
 ```  
@@ -1002,7 +1116,7 @@ virtual BOOL IsGalleryIcon() const;
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回`FALSE`。 覆寫這個方法在衍生類別，表示功能區項目是否包含在功能區組件庫中。  
   
-##  <a name="a-nameishighlighteda--cmfcribbonbaseelementishighlighted"></a><a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
  指定功能區項目會反白顯示。  
   
 ```  
@@ -1014,7 +1128,7 @@ virtual BOOL IsHighlighted() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisintermediatemodea--cmfcribbonbaseelementisintermediatemode"></a><a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
+##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
  指出目前的映像的功能區項目是否為中繼的大小。  
   
 ```  
@@ -1027,7 +1141,7 @@ BOOL IsIntermediateMode() const;
 ### <a name="remarks"></a>備註  
  中間影像大小為 16 x 16 像素為單位。  
   
-##  <a name="a-nameislargemodea--cmfcribbonbaseelementislargemode"></a><a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
+##  <a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
  指出目前的映像的功能區項目是否過大。  
   
 ```  
@@ -1040,7 +1154,7 @@ BOOL IsLargeMode() const;
 ### <a name="remarks"></a>備註  
  大型影像大小為 32 x 32 像素為單位。  
   
-##  <a name="a-nameismenumodea--cmfcribbonbaseelementismenumode"></a><a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
+##  <a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
  指出是否在功能表中包含的功能區項目。  
   
 ```  
@@ -1052,7 +1166,7 @@ BOOL IsMenuMode() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameispresseda--cmfcribbonbaseelementispressed"></a><a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
+##  <a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
  指出使用者是否按一下功能區項目。  
   
 ```  
@@ -1062,7 +1176,7 @@ virtual BOOL IsPressed() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果使用者已按一下功能區項目。否則`FALSE`。  
   
-##  <a name="a-nameisqatmodea--cmfcribbonbaseelementisqatmode"></a><a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
+##  <a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
  表示功能區項目是否包含在快速存取工具列。  
   
 ```  
@@ -1074,7 +1188,7 @@ BOOL IsQATMode() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisseparatora--cmfcribbonbaseelementisseparator"></a><a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
+##  <a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
  表示功能區項目是否顯示分隔符號。  
   
 ```  
@@ -1086,7 +1200,7 @@ virtual BOOL IsSeparator() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisshowgroupbordera--cmfcribbonbaseelementisshowgroupborder"></a><a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
+##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
  表示功能區項目是否包含在一個群組，會顯示一般的框線。  
   
 ```  
@@ -1098,7 +1212,7 @@ BOOL IsShowGroupBorder() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisshowtooltiponbottoma--cmfcribbonbaseelementisshowtooltiponbottom"></a><a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
+##  <a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
  指出是否要將工具提示顯示功能區項目。  
   
 ```  
@@ -1110,7 +1224,7 @@ virtual BOOL IsShowTooltipOnBottom() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameistabstopa--cmfcribbonbaseelementistabstop"></a><a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
+##  <a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
  指出是否可以使用鍵盤選取功能區項目。  
   
 ```  
@@ -1123,7 +1237,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回`TRUE`。 覆寫這個方法，指出是否可以使用鍵盤選取功能區項目。  
   
-##  <a name="a-nameistextalwaysonrighta--cmfcribbonbaseelementistextalwaysonright"></a><a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
+##  <a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
  指出是否要將功能區元素的文字顯示在右側。  
   
 ```  
@@ -1135,7 +1249,7 @@ BOOL IsTextAlwaysOnRight() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisvisiblea--cmfcribbonbaseelementisvisible"></a><a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
+##  <a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
  指出目前是否顯示功能區項目。  
   
 ```  
@@ -1147,7 +1261,7 @@ BOOL IsVisible() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameiswholerowheighta--cmfcribbonbaseelementiswholerowheight"></a><a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
+##  <a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
  指出是否顯示高度的功能區項目包含它的功能區面板顯示高度相同。  
   
 ```  
@@ -1160,7 +1274,7 @@ virtual BOOL IsWholeRowHeight() const;
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回`FALSE`。 覆寫這個方法，以指出顯示高度的功能區項目是否包含它的功能區面板顯示高度相同。  
   
-##  <a name="a-namenotifycommanda--cmfcribbonbaseelementnotifycommand"></a><a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
+##  <a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
  傳送命令通知給父視窗的功能區項目。  
   
 ```  
@@ -1176,7 +1290,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namenotifyhighlightlistitema--cmfcribbonbaseelementnotifyhighlightlistitem"></a><a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
+##  <a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
  當使用者反白顯示功能區項目清單中，請通知功能區列的父視窗。  
   
 ```  
@@ -1189,7 +1303,7 @@ virtual void NotifyHighlightListItem(int nIndex);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameonaddtoqatoolbara--cmfcribbonbaseelementonaddtoqatoolbar"></a><a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
+##  <a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
  將指定的快速存取工具列功能區項目。  
   
 ```  
@@ -1205,7 +1319,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameonafterchangerecta--cmfcribbonbaseelementonafterchangerect"></a><a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
  更新的工具提示的功能區項目。  
   
 ```  
@@ -1219,7 +1333,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="remarks"></a>備註  
  依預設這個方法會更新功能區項目的工具提示。 覆寫這個方法，以變更其顯示矩形之後更新功能區項目。  
   
-##  <a name="a-nameonautorepeata--cmfcribbonbaseelementonautorepeat"></a><a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
+##  <a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
  更新功能區中的項目持續的使用者輸入的回應。  
   
 ```  
@@ -1232,7 +1346,7 @@ virtual BOOL OnAutoRepeat();
 ### <a name="remarks"></a>備註  
  依預設這個方法永遠會傳回`FALSE`。 覆寫這個方法，以處理持續的使用者輸入。  
   
-##  <a name="a-nameoncalctextsizea--cmfcribbonbaseelementoncalctextsize"></a><a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize  
+##  <a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize  
  計算的功能區項目文字的大小。  
   
 ```  
@@ -1246,7 +1360,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有作用。 覆寫這個方法，以計算的功能區項目文字的大小。  
   
-##  <a name="a-nameonchangemenuhighlighta--cmfcribbonbaseelementonchangemenuhighlight"></a><a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
+##  <a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
  反白顯示的變更會位於功能表的功能區項目時，由架構呼叫。  
   
 ```  
@@ -1264,7 +1378,7 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有作用。 覆寫這個方法來更新反白顯示的變更時，會位於功能表的功能區項目。  
   
-##  <a name="a-nameondrawa--cmfcribbonbaseelementondraw"></a><a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw  
  由架構呼叫以繪製功能區項目。  
   
 ```  
@@ -1278,7 +1392,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ### <a name="remarks"></a>備註  
  如果您想要自訂特定功能區項目的繪圖，請覆寫這個方法在衍生類別中。  
   
-##  <a name="a-nameondrawkeytipa--cmfcribbonbaseelementondrawkeytip"></a><a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
+##  <a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
  若要繪製 keytip 的功能區項目架構呼叫。  
   
 ```  
@@ -1300,7 +1414,7 @@ virtual void OnDrawKeyTip(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameondrawmenuimagea--cmfcribbonbaseelementondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage  
  功能區元素的功能表影像繪製時，由架構呼叫。  
   
 ```  
@@ -1321,7 +1435,7 @@ virtual BOOL OnDrawMenuImage(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameondrawonlista--cmfcribbonbaseelementondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
+##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
  若要命令的清單方塊中繪製功能區項目架構呼叫。  
   
 ```  
@@ -1356,7 +1470,7 @@ virtual void OnDrawOnList(
 ### <a name="remarks"></a>備註  
  命令的清單方塊會顯示，讓使用者可以自訂快速存取工具列功能區項目。  
   
-##  <a name="a-nameonkeya--cmfcribbonbaseelementonkey"></a><a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
+##  <a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
  當使用者按下 keytip 和功能區項目具有焦點時，由架構呼叫。  
   
 ```  
@@ -1372,7 +1486,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameonmenukeya--cmfcribbonbaseelementonmenukey"></a><a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
+##  <a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
  當使用者按下功能表 keytip 主面板中，由架構呼叫。  
   
 ```  
@@ -1389,7 +1503,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ### <a name="remarks"></a>備註  
  依預設此方法一律傳回`FALSE`。 覆寫這個方法，以回應當使用者按下功能表 keytip 主面板。  
   
-##  <a name="a-nameonprocesskeya--cmfcribbonbaseelementonprocesskey"></a><a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
+##  <a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
  當使用者按下快速鍵時，由架構呼叫。  
   
 ```  
@@ -1406,7 +1520,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ### <a name="remarks"></a>備註  
  如果您想要處理快速鍵的功能區項目，請覆寫這個方法。  
   
-##  <a name="a-nameonrtlchangeda--cmfcribbonbaseelementonrtlchanged"></a><a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
+##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
  版面配置變更方向時，由架構呼叫。  
   
 ```  
@@ -1420,7 +1534,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有作用。 覆寫這個方法，以配置變更方向時調整功能區項目。 預設的版面配置方向是由左到右。  
   
-##  <a name="a-nameonsetfocusa--cmfcribbonbaseelementonsetfocus"></a><a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
+##  <a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
  功能區項目接收或失去輸入的焦點時，由架構呼叫。  
   
 ```  
@@ -1430,7 +1544,7 @@ virtual void OnSetFocus(BOOL B);
 ### <a name="remarks"></a>備註  
  如果您想要應用程式以處理功能區元素的焦點變更，請覆寫這個方法在衍生類別中。  
   
-##  <a name="a-nameonshowa--cmfcribbonbaseelementonshow"></a><a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
+##  <a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
  若要顯示或隱藏功能區項目架構呼叫。  
   
 ```  
@@ -1444,7 +1558,7 @@ virtual void OnShow(BOOL bShow);
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有作用。 覆寫這個方法，以顯示或隱藏功能區項目。  
   
-##  <a name="a-nameonshowpopupmenua--cmfcribbonbaseelementonshowpopupmenu"></a><a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
+##  <a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
  架構的功能區項目會顯示快顯功能表之前呼叫。  
   
 ```  
@@ -1454,7 +1568,7 @@ virtual void OnShowPopupMenu();
 ### <a name="remarks"></a>備註  
  這個方法會告知功能區項目，就會顯示快顯功能表功能區列的父視窗。  
   
-##  <a name="a-namepostmenucommanda--cmfcribbonbaseelementpostmenucommand"></a><a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
+##  <a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
  關閉快顯功能表功能區項目，並將關閉訊息傳送至父功能表。  
   
 ```  
@@ -1468,7 +1582,7 @@ void PostMenuCommand(UINT uiCmdId);
 ### <a name="remarks"></a>備註  
  如果功能區項目位於快顯功能表上，只是傳送關閉訊息。  
   
-##  <a name="a-nameredrawa--cmfcribbonbaseelementredraw"></a><a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
+##  <a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
  更新的顯示功能區項目。  
   
 ```  
@@ -1478,7 +1592,7 @@ virtual void Redraw();
 ### <a name="remarks"></a>備註  
  藉由呼叫這個方法重新繪製，功能區元素的顯示矩形[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)與`RDW_INVALIDATE`， `RDW_ERASE`，和`RDW_UPDATENOW`旗標集。  
   
-##  <a name="a-namesetaccdataa--cmfcribbonbaseelementsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData  
  設定功能區項目的協助工具資料。  
   
 ```  
@@ -1500,7 +1614,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>備註  
  依預設，此方法會設定功能區項目的協助工具資料，並一律傳回 `TRUE`。 覆寫此方法以設定協助工具資料並傳回值，以指出成功或失敗。  
   
-##  <a name="a-namesetcompactmodea--cmfcribbonbaseelementsetcompactmode"></a><a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
+##  <a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
  設定功能區元素的顯示大小。  
   
 ```  
@@ -1521,7 +1635,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 |`TRUE`|大|如果可能的話，中繼。|  
 |`FALSE`|壓縮|如果可能的話，，中繼否則大。|  
   
-##  <a name="a-namesetdataa--cmfcribbonbaseelementsetdata"></a><a name="setdata"></a>CMFCRibbonBaseElement::SetData  
+##  <a name="setdata"></a>CMFCRibbonBaseElement::SetData  
  資料的項目關聯的功能區項目。  
   
 ```  
@@ -1532,7 +1646,7 @@ void SetData(DWORD_PTR dwData);
  [in] `dwData`  
  資料值。  
   
-##  <a name="a-namesetdefaultmenulooka--cmfcribbonbaseelementsetdefaultmenulook"></a><a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
+##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
  設定功能區項目顯示為快顯的命令。  
   
 ```  
@@ -1545,7 +1659,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetdescriptiona--cmfcribbonbaseelementsetdescription"></a><a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription  
+##  <a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription  
  設定功能區項目的描述。  
   
 ```  
@@ -1559,7 +1673,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ### <a name="remarks"></a>備註  
  [狀態] 列上或在工具提示中，或功能表按鈕下，架構會顯示新的描述。  
   
-##  <a name="a-namesetida--cmfcribbonbaseelementsetid"></a><a name="setid"></a>CMFCRibbonBaseElement::SetID  
+##  <a name="setid"></a>CMFCRibbonBaseElement::SetID  
  設定功能區項目的命令 ID。  
   
 ```  
@@ -1570,7 +1684,7 @@ virtual void SetID(UINT nID);
  [in] `nID`  
  命令 ID。  
   
-##  <a name="a-namesetinitialmodea--cmfcribbonbaseelementsetinitialmode"></a><a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
+##  <a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
  設定的功能區項目最初顯示大小。  
   
 ```  
@@ -1584,7 +1698,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ### <a name="remarks"></a>備註  
  功能區元素的顯示大小可以是壓縮、 中級、 或大。  
   
-##  <a name="a-namesetkeysa--cmfcribbonbaseelementsetkeys"></a><a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
+##  <a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
  設定功能區項目的按鍵提示。  
   
 ```  
@@ -1600,7 +1714,7 @@ virtual void SetKeys(
  [in] `lpszMenuKeys`  
  快顯功能表功能區項目的 keytip。  
   
-##  <a name="a-namesetoriginala--cmfcribbonbaseelementsetoriginal"></a><a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
+##  <a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
  設定功能區項目的原始的功能區項目。  
   
 ```  
@@ -1614,7 +1728,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ### <a name="remarks"></a>備註  
  功能區項目複製到另一個容器保留原始的功能區項目的指標。  
   
-##  <a name="a-namesetparentcategorya--cmfcribbonbaseelementsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory  
+##  <a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory  
  設定功能區元素的父分類。  
   
 ```  
@@ -1628,7 +1742,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ### <a name="remarks"></a>備註  
  在功能區控制項中的索引標籤式的群組稱為 「 類別 」。  
   
-##  <a name="a-namesetparentmenua--cmfcribbonbaseelementsetparentmenu"></a><a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
+##  <a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
  設定父功能表功能區項目的容器。  
   
 ```  
@@ -1641,7 +1755,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetparentribbonbara--cmfcribbonbaseelementsetparentribbonbar"></a><a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
+##  <a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
  設定功能區元素的父功能區列。  
   
 ```  
@@ -1654,7 +1768,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetrecta--cmfcribbonbaseelementsetrect"></a><a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
+##  <a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
  設定功能區元素的顯示矩形的維度。  
   
 ```  
@@ -1667,7 +1781,7 @@ void SetRect(CRect rect);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesettexta--cmfcribbonbaseelementsettext"></a><a name="settext"></a>CMFCRibbonBaseElement::SetText  
+##  <a name="settext"></a>CMFCRibbonBaseElement::SetText  
  設定文字和 keytip 的功能區項目。  
   
 ```  
@@ -1692,7 +1806,7 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))  
 ```  
   
-##  <a name="a-namesettextalwaysonrighta--cmfcribbonbaseelementsettextalwaysonright"></a><a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
+##  <a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
  設定功能區項目顯示在右邊的文字。  
   
 ```  
@@ -1705,7 +1819,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesettooltiptexta--cmfcribbonbaseelementsettooltiptext"></a><a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
+##  <a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
  設定功能區元素的工具提示文字。  
   
 ```  
@@ -1716,7 +1830,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
  [in] `lpszText`  
  工具提示文字。  
   
-##  <a name="a-namesetvisiblea--cmfcribbonbaseelementsetvisible"></a><a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
+##  <a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
  設定可見性的功能區項目。  
   
 ```  
@@ -1729,7 +1843,7 @@ void SetVisible(BOOL bIsVisible);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namestretchhorizontallya--cmfcribbonbaseelementstretchhorizontally"></a><a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
+##  <a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
  延伸功能區項目的寬度。  
   
 ```  
@@ -1739,7 +1853,7 @@ virtual void StretchHorizontally();
 ### <a name="remarks"></a>備註  
  預設這個方法會在偵錯組建中產生判斷提示失敗，因此不應呼叫。 覆寫這個方法，以自動縮放功能區項目的寬度。  
   
-##  <a name="a-namestretchtowholerowa--cmfcribbonbaseelementstretchtowholerow"></a><a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
+##  <a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
  變更顯示的高度功能區項目至指定的資料列的高度。  
   
 ```  
@@ -1761,7 +1875,7 @@ virtual BOOL StretchToWholeRow(
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以變更顯示的高度功能區項目至指定的資料列的高度。  
   
-##  <a name="a-nameupdatetooltipinfoa--cmfcribbonbaseelementupdatetooltipinfo"></a><a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
+##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
  使用命令資源的功能區項目，以更新的工具提示文字。  
   
 ```  
@@ -1770,7 +1884,7 @@ virtual void UpdateTooltipInfo();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehasfocusa--cmfcribbonbaseelementhasfocus"></a><a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
+##  <a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
  表示父項目是否具有鍵盤焦點。  
   
 ```  

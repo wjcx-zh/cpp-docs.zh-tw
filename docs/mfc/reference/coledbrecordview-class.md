@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDBRecordView
+- AFXOLEDB/COleDBRecordView
+- AFXOLEDB/COleDBRecordView::COleDBRecordView
+- AFXOLEDB/COleDBRecordView::OnGetRowset
+- AFXOLEDB/COleDBRecordView::OnMove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +98,7 @@ class COleDBRecordView : public CFormView
 ## <a name="requirements"></a>需求  
  **標頭︰** afxoledb.h  
   
-##  <a name="a-namecoledbrecordviewa--coledbrecordviewcoledbrecordview"></a><a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
+##  <a name="coledbrecordview"></a>COleDBRecordView::COleDBRecordView  
  建構 `COleDBRecordView` 物件。  
   
 ```  
@@ -115,7 +119,7 @@ COleDBRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  您的衍生的類別*必須*提供它自己的建構函式。 在建構函式，會叫用建構函式， `COleDBRecordView::COleDBRecordView`、 資源名稱或識別碼做為引數。  
   
-##  <a name="a-nameongetrowseta--coledbrecordviewongetrowset"></a><a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
+##  <a name="ongetrowset"></a>COleDBRecordView::OnGetRowset  
  傳回的控制代碼**CRowset<> </> **資料錄檢視相關聯的物件。  
   
 ```  
@@ -137,7 +141,7 @@ virtual CRowset<>* OnGetRowset(Â) = 0;
   
  如需詳細資訊和範例，請參閱文章[資料錄檢視︰ 使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。  
   
-##  <a name="a-nameonmovea--coledbrecordviewonmove"></a><a name="onmove"></a>COleDBRecordView::OnMove  
+##  <a name="onmove"></a>COleDBRecordView::OnMove  
  移至不同的記錄中的資料列集和顯示其欄位的控制項記錄中檢視。  
   
 ```  

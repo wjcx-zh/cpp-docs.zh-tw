@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::CMFCRibbonCheckBox
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetCompactSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetIntermediateSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::GetRegularSize
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::IsDrawTooltipImage
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDraw
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDrawMenuImage
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::OnDrawOnList
+- AFXRIBBONCHECKBOX/CMFCRibbonCheckBox::SetACCData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +101,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ## <a name="requirements"></a>需求  
  **標頭︰** afxribboncheckbox.h  
   
-##  <a name="a-namecmfcribboncheckboxa--cmfcribboncheckboxcmfcribboncheckbox"></a><a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  功能區核取方塊物件的建構函式  
   
 ```  
@@ -115,7 +125,7 @@ CMFCRibbonCheckBox(
   
  [!code-cpp[NVC_MFC_RibbonApp #&17;](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="a-namegetcompactsizea--cmfcribboncheckboxgetcompactsize"></a><a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
  覆寫時，取得核取方塊的壓縮大小。  
   
 ```  
@@ -132,7 +142,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
  如果未覆寫，會傳回中繼核取方塊的大小。  
   
-##  <a name="a-namegetintermediatesizea--cmfcribboncheckboxgetintermediatesize"></a><a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
  取得中繼核取方塊的大小。  
   
 ```  
@@ -149,7 +159,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
  如果未覆寫，會計算中繼大小做為預設值 核取方塊大小 ( `AFX_CHECK_BOX_DEFAULT_SIZE`) 再加上文字的大小，再加上邊界。  
   
-##  <a name="a-namegetregularsizea--cmfcribboncheckboxgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
  取得規則的核取方塊大小。  
   
 ```  
@@ -166,7 +176,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
  如果未覆寫，會傳回中繼核取方塊的大小。  
   
-##  <a name="a-nameisdrawtooltipimagea--cmfcribboncheckboxisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
  指出是否有核取方塊相關聯的工具提示映像。  
   
 ```  
@@ -178,7 +188,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameondrawa--cmfcribboncheckboxondraw"></a><a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
  繪製使用指定的裝置內容的核取方塊架構所呼叫。  
   
 ```  
@@ -191,7 +201,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameondrawmenuimagea--cmfcribboncheckboxondrawmenuimage"></a><a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
  繪製功能表 核取方塊的影像架構呼叫。  
   
 ```  
@@ -211,7 +221,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>備註  
  如果未覆寫，就會傳回`FALSE`。  
   
-##  <a name="a-nameondrawonlista--cmfcribboncheckboxondrawonlist"></a><a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
  若要命令的清單方塊中繪製核取方塊，架構呼叫。  
   
 ```  
@@ -245,7 +255,7 @@ virtual void OnDrawOnList(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetaccdataa--cmfcribboncheckboxsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
  設定協助工具的資料 核取方塊。  
   
 ```  

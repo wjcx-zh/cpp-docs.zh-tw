@@ -9,11 +9,48 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.IOleObjectImpl
-- ATL.IOleObjectImpl<T>
-- ATL::IOleObjectImpl
-- ATL::IOleObjectImpl<T>
 - IOleObjectImpl
+- ATLCTL/ATL::IOleObjectImpl
+- ATLCTL/ATL::IOleObjectImpl::Advise
+- ATLCTL/ATL::IOleObjectImpl::Close
+- ATLCTL/ATL::IOleObjectImpl::DoVerb
+- ATLCTL/ATL::IOleObjectImpl::DoVerbDiscardUndo
+- ATLCTL/ATL::IOleObjectImpl::DoVerbHide
+- ATLCTL/ATL::IOleObjectImpl::DoVerbInPlaceActivate
+- ATLCTL/ATL::IOleObjectImpl::DoVerbOpen
+- ATLCTL/ATL::IOleObjectImpl::DoVerbPrimary
+- ATLCTL/ATL::IOleObjectImpl::DoVerbShow
+- ATLCTL/ATL::IOleObjectImpl::DoVerbUIActivate
+- ATLCTL/ATL::IOleObjectImpl::EnumAdvise
+- ATLCTL/ATL::IOleObjectImpl::EnumVerbs
+- ATLCTL/ATL::IOleObjectImpl::GetClientSite
+- ATLCTL/ATL::IOleObjectImpl::GetClipboardData
+- ATLCTL/ATL::IOleObjectImpl::GetExtent
+- ATLCTL/ATL::IOleObjectImpl::GetMiscStatus
+- ATLCTL/ATL::IOleObjectImpl::GetMoniker
+- ATLCTL/ATL::IOleObjectImpl::GetUserClassID
+- ATLCTL/ATL::IOleObjectImpl::GetUserType
+- ATLCTL/ATL::IOleObjectImpl::InitFromData
+- ATLCTL/ATL::IOleObjectImpl::IsUpToDate
+- ATLCTL/ATL::IOleObjectImpl::OnPostVerbDiscardUndo
+- ATLCTL/ATL::IOleObjectImpl::OnPostVerbHide
+- ATLCTL/ATL::IOleObjectImpl::OnPostVerbInPlaceActivate
+- ATLCTL/ATL::IOleObjectImpl::OnPostVerbOpen
+- ATLCTL/ATL::IOleObjectImpl::OnPostVerbShow
+- ATLCTL/ATL::IOleObjectImpl::OnPostVerbUIActivate
+- ATLCTL/ATL::IOleObjectImpl::OnPreVerbDiscardUndo
+- ATLCTL/ATL::IOleObjectImpl::OnPreVerbHide
+- ATLCTL/ATL::IOleObjectImpl::OnPreVerbInPlaceActivate
+- ATLCTL/ATL::IOleObjectImpl::OnPreVerbOpen
+- ATLCTL/ATL::IOleObjectImpl::OnPreVerbShow
+- ATLCTL/ATL::IOleObjectImpl::OnPreVerbUIActivate
+- ATLCTL/ATL::IOleObjectImpl::SetClientSite
+- ATLCTL/ATL::IOleObjectImpl::SetColorScheme
+- ATLCTL/ATL::IOleObjectImpl::SetExtent
+- ATLCTL/ATL::IOleObjectImpl::SetHostNames
+- ATLCTL/ATL::IOleObjectImpl::SetMoniker
+- ATLCTL/ATL::IOleObjectImpl::Unadvise
+- ATLCTL/ATL::IOleObjectImpl::Update
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +159,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-nameadvisea--ioleobjectimpladvise"></a><a name="advise"></a>IOleObjectImpl::Advise  
+##  <a name="advise"></a>IOleObjectImpl::Advise  
  建立控制諮詢連接。  
   
 ```
@@ -134,7 +171,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameclosea--ioleobjectimplclose"></a><a name="close"></a>IOleObjectImpl::Close  
+##  <a name="close"></a>IOleObjectImpl::Close  
  變更控制項狀態執行載入。  
   
 ```
@@ -148,7 +185,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  請參閱[IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedoverba--ioleobjectimpldoverb"></a><a name="doverb"></a>IOleObjectImpl::DoVerb  
+##  <a name="doverb"></a>IOleObjectImpl::DoVerb  
  會告訴控制項執行其中一個列舉的動作。  
   
 ```
@@ -177,7 +214,7 @@ STDMETHOD(DoVerb)(
   
  請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedoverbdiscardundoa--ioleobjectimpldoverbdiscardundo"></a><a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo  
+##  <a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo  
  會告訴控制項来捨棄它維護任何復原狀態。  
   
 ```
@@ -194,7 +231,7 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
   
-##  <a name="a-namedoverbhidea--ioleobjectimpldoverbhide"></a><a name="doverbhide"></a>IOleObjectImpl::DoVerbHide  
+##  <a name="doverbhide"></a>IOleObjectImpl::DoVerbHide  
  停用和移除控制項的使用者介面，並隱藏控制項。  
   
 ```
@@ -211,7 +248,7 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
   
-##  <a name="a-namedoverbinplaceactivatea--ioleobjectimpldoverbinplaceactivate"></a><a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate  
+##  <a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate  
  執行控制項並安裝它的視窗，但不會安裝控制項的使用者介面。  
   
 ```
@@ -231,7 +268,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="remarks"></a>備註  
  藉由呼叫啟動就地控制項[CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)。 除非控制項類別資料成員`m_bWindowOnly`是**TRUE**，`DoVerbInPlaceActivate`第一次嘗試啟動該控制項做為無視窗控制項 (可能只有容器支援[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300))。 如果失敗，則函式會嘗試啟動該控制項擴充功能 (可能只有容器支援[IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461))。 如果失敗，則函式會嘗試啟動該控制項沒有的擴充功能 (可能只有容器支援[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586))。 如果啟動成功，函式會告知容器已啟動控制項。  
   
-##  <a name="a-namedoverbopena--ioleobjectimpldoverbopen"></a><a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen  
+##  <a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen  
  導致必須在個別視窗中的 開啟編輯控制項。  
   
 ```
@@ -248,7 +285,7 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
   
-##  <a name="a-namedoverbprimarya--ioleobjectimpldoverbprimary"></a><a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary  
+##  <a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary  
  定義當使用者按兩下控制項時所採取的動作。  
   
 ```
@@ -268,7 +305,7 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 ### <a name="remarks"></a>備註  
  根據預設，設定要顯示屬性頁。 您可以覆寫控制項類別中叫用不同的行為上按兩下。例如，播放視訊，或移就地啟用作用中。  
   
-##  <a name="a-namedoverbshowa--ioleobjectimpldoverbshow"></a><a name="doverbshow"></a>IOleObjectImpl::DoVerbShow  
+##  <a name="doverbshow"></a>IOleObjectImpl::DoVerbShow  
  會告知容器將控制項設為可見。  
   
 ```
@@ -285,7 +322,7 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>傳回值  
  其中一個標準`HRESULT`值。  
   
-##  <a name="a-namedoverbuiactivatea--ioleobjectimpldoverbuiactivate"></a><a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIActivate  
+##  <a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIActivate  
  啟動控制項的使用者介面，並告知容器，其功能表複合功能表所取代。  
   
 ```
@@ -302,7 +339,7 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="return-value"></a>傳回值  
  其中一個標準`HRESULT`值。  
   
-##  <a name="a-nameenumadvisea--ioleobjectimplenumadvise"></a><a name="enumadvise"></a>IOleObjectImpl::EnumAdvise  
+##  <a name="enumadvise"></a>IOleObjectImpl::EnumAdvise  
  提供對這個控制項的已註冊諮詢連接的列舉型別。  
   
 ```
@@ -312,7 +349,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameenumverbsa--ioleobjectimplenumverbs"></a><a name="enumverbs"></a>IOleObjectImpl::EnumVerbs  
+##  <a name="enumverbs"></a>IOleObjectImpl::EnumVerbs  
  對這個控制項提供已註冊的動作 （動詞命令） 的列舉型別，藉由呼叫**OleRegEnumVerbs**。  
   
 ```
@@ -324,7 +361,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
   
  請參閱[IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetclientsitea--ioleobjectimplgetclientsite"></a><a name="getclientsite"></a>IOleObjectImpl::GetClientSite  
+##  <a name="getclientsite"></a>IOleObjectImpl::GetClientSite  
  將指標放在控制項類別資料成員[CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite)到*ppClientSite*和指標的參考計數遞增。  
   
 ```
@@ -334,7 +371,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetclipboarddataa--ioleobjectimplgetclipboarddata"></a><a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData  
+##  <a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData  
  從剪貼簿擷取資料。  
   
 ```
@@ -349,7 +386,7 @@ STDMETHOD(GetClipboardData)(
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetextenta--ioleobjectimplgetextent"></a><a name="getextent"></a>IOleObjectImpl::GetExtent  
+##  <a name="getextent"></a>IOleObjectImpl::GetExtent  
  擷取以 himetric 為單位 （每個單位&0;.01 公釐） 的執行控制項的顯示大小。  
   
 ```
@@ -363,7 +400,7 @@ STDMETHOD(GetExtent)(
   
  請參閱[IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetmiscstatusa--ioleobjectimplgetmiscstatus"></a><a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus  
+##  <a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus  
  將指標傳回至控制項的已註冊的狀態資訊，藉由呼叫**OleRegGetMiscStatus**。  
   
 ```
@@ -377,7 +414,7 @@ STDMETHOD(GetMiscStatus)(
   
  請參閱[IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetmonikera--ioleobjectimplgetmoniker"></a><a name="getmoniker"></a>IOleObjectImpl::GetMoniker  
+##  <a name="getmoniker"></a>IOleObjectImpl::GetMoniker  
  擷取控制項的 moniker。  
   
 ```
@@ -393,7 +430,7 @@ STDMETHOD(GetMoniker)(
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetuserclassida--ioleobjectimplgetuserclassid"></a><a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID  
+##  <a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID  
  傳回控制項的類別識別項。  
   
 ```
@@ -403,7 +440,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetusertypea--ioleobjectimplgetusertype"></a><a name="getusertype"></a>IOleObjectImpl::GetUserType  
+##  <a name="getusertype"></a>IOleObjectImpl::GetUserType  
  傳回控制項的使用者型別名稱，藉由呼叫**OleRegGetUserType**。  
   
 ```
@@ -417,7 +454,7 @@ STDMETHOD(GetUserType)(
   
  請參閱[IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinitfromdataa--ioleobjectimplinitfromdata"></a><a name="initfromdata"></a>IOleObjectImpl::InitFromData  
+##  <a name="initfromdata"></a>IOleObjectImpl::InitFromData  
  初始化的控制項，從選取的資料。  
   
 ```
@@ -433,7 +470,7 @@ STDMETHOD(InitFromData)(
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisuptodatea--ioleobjectimplisuptodate"></a><a name="isuptodate"></a>IOleObjectImpl::IsUpToDate  
+##  <a name="isuptodate"></a>IOleObjectImpl::IsUpToDate  
  檢查控制項是否為最新狀態。  
   
 ```
@@ -446,7 +483,7 @@ STDMETHOD(IsUpToDate)(void);
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonpostverbdiscardundoa--ioleobjectimplonpostverbdiscardundo"></a><a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo  
+##  <a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo  
  由呼叫[DoVerbDiscardUndo](#doverbdiscardundo)捨棄復原狀態之後。  
   
 ```
@@ -459,7 +496,7 @@ HRESULT OnPostVerbDiscardUndo();
 ### <a name="remarks"></a>備註  
  覆寫這個方法與您想要執行的程式碼後捨棄復原狀態。  
   
-##  <a name="a-nameonpostverbhidea--ioleobjectimplonpostverbhide"></a><a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide  
+##  <a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide  
  由呼叫[DoVerbHide](#doverbhide)之後隱藏控制項。  
   
 ```
@@ -472,7 +509,7 @@ HRESULT OnPostVerbHide();
 ### <a name="remarks"></a>備註  
  覆寫這個方法與您想要執行的程式碼之後隱藏控制項。  
   
-##  <a name="a-nameonpostverbinplaceactivatea--ioleobjectimplonpostverbinplaceactivate"></a><a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate  
+##  <a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate  
  由呼叫[DoVerbInPlaceActivate](#doverbinplaceactivate)就地啟動之後。  
   
 ```
@@ -485,7 +522,7 @@ HRESULT OnPostVerbInPlaceActivate();
 ### <a name="remarks"></a>備註  
  覆寫這個方法與您想要執行的程式碼之後就地啟動。  
   
-##  <a name="a-nameonpostverbopena--ioleobjectimplonpostverbopen"></a><a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen  
+##  <a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen  
  由呼叫[DoVerbOpen](#doverbopen)控制項已開啟另一個視窗中進行編輯之後。  
   
 ```
@@ -498,7 +535,7 @@ HRESULT OnPostVerbOpen();
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以您想要控制開啟另一個視窗中進行編輯之後執行的程式碼。  
   
-##  <a name="a-nameonpostverbshowa--ioleobjectimplonpostverbshow"></a><a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow  
+##  <a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow  
  由呼叫[DoVerbShow](#doverbshow)控制項變成可見之後。  
   
 ```
@@ -511,7 +548,7 @@ HRESULT OnPostVerbShow();
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以您想要控制變成可見之後執行的程式碼。  
   
-##  <a name="a-nameonpostverbuiactivatea--ioleobjectimplonpostverbuiactivate"></a><a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate  
+##  <a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate  
  由呼叫[DoVerbUIActivate](#doverbuiactivate)控制項的使用者介面啟動之後。  
   
 ```
@@ -524,7 +561,7 @@ HRESULT OnPostVerbUIActivate();
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以您想要啟用控制項的使用者介面之後執行的程式碼。  
   
-##  <a name="a-nameonpreverbdiscardundoa--ioleobjectimplonpreverbdiscardundo"></a><a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo  
+##  <a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo  
  由呼叫[DoVerbDiscardUndo](#doverbdiscardundo)捨棄之前復原狀態。  
   
 ```
@@ -537,7 +574,7 @@ HRESULT OnPreVerbDiscardUndo();
 ### <a name="remarks"></a>備註  
  若要避免捨棄復原狀態，會覆寫這個方法，傳回錯誤 HRESULT。  
   
-##  <a name="a-nameonpreverbhidea--ioleobjectimplonpreverbhide"></a><a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide  
+##  <a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide  
  由呼叫[DoVerbHide](#doverbhide)隱藏控制項之前。  
   
 ```
@@ -550,7 +587,7 @@ HRESULT OnPreVerbHide();
 ### <a name="remarks"></a>備註  
  若要防止控制項被隱藏，覆寫這個方法傳回錯誤 HRESULT。  
   
-##  <a name="a-nameonpreverbinplaceactivatea--ioleobjectimplonpreverbinplaceactivate"></a><a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate  
+##  <a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate  
  由呼叫[DoVerbInPlaceActivate](#doverbinplaceactivate)就地啟動控制項之前。  
   
 ```
@@ -563,7 +600,7 @@ HRESULT OnPreVerbInPlaceActivate();
 ### <a name="remarks"></a>備註  
  若要防止控制項被就地啟動，會覆寫這個方法，傳回錯誤 HRESULT。  
   
-##  <a name="a-nameonpreverbopena--ioleobjectimplonpreverbopen"></a><a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen  
+##  <a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen  
  由呼叫[DoVerbOpen](#doverbopen)開啟在另一個視窗中編輯控制項之前。  
   
 ```
@@ -576,7 +613,7 @@ HRESULT OnPreVerbOpen();
 ### <a name="remarks"></a>備註  
  若要防止控制項正在開啟另一個視窗中進行編輯，覆寫這個方法傳回錯誤 HRESULT。  
   
-##  <a name="a-nameonpreverbshowa--ioleobjectimplonpreverbshow"></a><a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow  
+##  <a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow  
  由呼叫[DoVerbShow](#doverbshow)控制項變成可見之前。  
   
 ```
@@ -589,7 +626,7 @@ HRESULT OnPreVerbShow();
 ### <a name="remarks"></a>備註  
  若要防止控制項被顯示出來，覆寫這個方法傳回錯誤 HRESULT。  
   
-##  <a name="a-nameonpreverbuiactivatea--ioleobjectimplonpreverbuiactivate"></a><a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate  
+##  <a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate  
  由呼叫[DoVerbUIActivate](#doverbuiactivate)之前已啟動控制項的使用者介面。  
   
 ```
@@ -602,7 +639,7 @@ HRESULT OnPreVerbUIActivate();
 ### <a name="remarks"></a>備註  
  若要防止控制項的使用者介面，使其無法啟動，會覆寫這個方法，傳回錯誤 HRESULT。  
   
-##  <a name="a-namesetclientsitea--ioleobjectimplsetclientsite"></a><a name="setclientsite"></a>IOleObjectImpl::SetClientSite  
+##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite  
  告訴用戶端中的站台容器控制項。  
   
 ```
@@ -614,7 +651,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
   
  請參閱[IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetcolorschemea--ioleobjectimplsetcolorscheme"></a><a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme  
+##  <a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme  
  如果有的話，請至控制項的應用程式，建議色彩配置。  
   
 ```
@@ -627,7 +664,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetextenta--ioleobjectimplsetextent"></a><a name="setextent"></a>IOleObjectImpl::SetExtent  
+##  <a name="setextent"></a>IOleObjectImpl::SetExtent  
  設定控制項的顯示區域的範圍。  
   
 ```
@@ -645,7 +682,7 @@ STDMETHOD(SetExtent)(
   
  請參閱[IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesethostnamesa--ioleobjectimplsethostnames"></a><a name="sethostnames"></a>IOleObjectImpl::SetHostNames  
+##  <a name="sethostnames"></a>IOleObjectImpl::SetHostNames  
  會告訴控制項容器文件容器應用程式的名稱。  
   
 ```
@@ -658,7 +695,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetmonikera--ioleobjectimplsetmoniker"></a><a name="setmoniker"></a>IOleObjectImpl::SetMoniker  
+##  <a name="setmoniker"></a>IOleObjectImpl::SetMoniker  
  會告訴它 moniker 的控制項。  
   
 ```
@@ -673,7 +710,7 @@ STDMETHOD(SetMoniker)(
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameunadvisea--ioleobjectimplunadvise"></a><a name="unadvise"></a>IOleObjectImpl::Unadvise  
+##  <a name="unadvise"></a>IOleObjectImpl::Unadvise  
  刪除儲存在控制項類別的諮詢連接`m_spOleAdviseHolder`資料成員。  
   
 ```
@@ -683,7 +720,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ### <a name="remarks"></a>備註  
  請參閱[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameupdatea--ioleobjectimplupdate"></a><a name="update"></a>IOleObjectImpl::Update  
+##  <a name="update"></a>IOleObjectImpl::Update  
  更新控制項。  
   
 ```

@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleVariant
+- AFXDISP/COleVariant
+- AFXDISP/COleVariant::COleVariant
+- AFXDISP/COleVariant::Attach
+- AFXDISP/COleVariant::ChangeType
+- AFXDISP/COleVariant::Clear
+- AFXDISP/COleVariant::Detach
+- AFXDISP/COleVariant::GetByteArrayFromVariantArray
+- AFXDISP/COleVariant::SetString
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +107,7 @@ class COleVariant : public tagVARIANT
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-nameattacha--colevariantattach"></a><a name="attach"></a>COleVariant::Attach  
+##  <a name="attach"></a>COleVariant::Attach  
  呼叫此函式附加給定[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)物件與目前`COleVariant`物件。  
   
 ```  
@@ -115,7 +123,7 @@ void Attach(VARIANT& varSrc);
   
  如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)和[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)中的項目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecolevarianta--colevariantcolevariant"></a><a name="colevariant"></a>COleVariant::COleVariant  
+##  <a name="colevariant"></a>COleVariant::COleVariant  
  建構 `COleVariant` 物件。  
   
 ```  
@@ -213,7 +221,7 @@ COleVariant(LPCITEMIDLIST pidl);
   
  如需有關`SCODE`，請參閱[COM 錯誤代碼結構](http://msdn.microsoft.com/library/windows/desktop/ms690088)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namechangetypea--colevariantchangetype"></a><a name="changetype"></a>COleVariant::ChangeType  
+##  <a name="changetype"></a>COleVariant::ChangeType  
  將在此變數值的型別轉換`COleVariant`物件。  
   
 ```  
@@ -230,7 +238,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)， [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)，和[VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1)中的項目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecleara--colevariantclear"></a><a name="clear"></a>COleVariant::Clear  
+##  <a name="clear"></a>COleVariant::Clear  
  清除**VARIANT**。  
   
 ```  
@@ -242,7 +250,7 @@ void Clear();
   
  如需詳細資訊，請參閱`VARIANT`， `VARTYPE`，和`VariantClear`中的項目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedetacha--colevariantdetach"></a><a name="detach"></a>COleVariant::Detach  
+##  <a name="detach"></a>COleVariant::Detach  
  卸離基礎[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)物件與這個`COleVariant`物件。  
   
 ```  
@@ -257,7 +265,7 @@ VARIANT Detach();
   
  如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)， [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)，和[Variant](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835)中的項目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetbytearrayfromvariantarraya--colevariantgetbytearrayfromvariantarray"></a><a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
+##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
  從現有的變數陣列擷取位元組陣列  
   
 ```  
@@ -268,7 +276,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
  `bytes`  
  若要將現有的參考[CByteArray](../../mfc/reference/cbytearray-class.md)物件。  
   
-##  <a name="a-nameoperatorlpcvarianta--colevariantoperator-lpcvariant"></a><a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
  此轉型運算子傳回`VARIANT`結構，其值會複製自這個`COleVariant`物件。  
   
 ```  
@@ -277,7 +285,7 @@ operator LPCVARIANT() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameoperatorlpvarianta--colevariantoperator-lpvariant"></a><a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
  呼叫此轉型運算子，來存取基礎`VARIANT`這個結構`COleVariant`物件。  
   
 ```  
@@ -289,7 +297,7 @@ operator LPVARIANT();
 > [!CAUTION]
 >  變更中的值**VARIANT**結構存取此函式所傳回的指標會變更這個值`COleVariant`物件。  
   
-##  <a name="a-nameoperatoreqa--colevariantoperator-"></a><a name="operator_eq"></a>COleVariant::operator =  
+##  <a name="operator_eq"></a>COleVariant::operator =  
  這些多載的指派運算子會將來源值複製到這`COleVariant`物件。  
   
 ```  
@@ -338,7 +346,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
  如需詳細資訊，請參閱[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118)和[VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4)中的項目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoperatoreqeqa--colevariantoperator-"></a><a name="operator_eq_eq"></a>COleVariant::operator = =  
+##  <a name="operator_eq_eq"></a>COleVariant::operator = =  
  這個運算子比較兩個變數的值，並傳回它們相等; 如果為非零否則為 0。  
   
 ```  
@@ -346,7 +354,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```  
   
-##  <a name="a-nameoperatorltltgtgta--colevariantoperator-ltlt-gtgt"></a><a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;，&gt;&gt;  
+##  <a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;，&gt;&gt;  
  輸出`COleVariant`值`CArchive`或**CdumpContext**和輸入`COleVariant`物件從`CArchive`。  
   
 ```  
@@ -366,7 +374,7 @@ friend CArchive& AFXAPI operator>>(
 ### <a name="remarks"></a>備註  
  `COleVariant`插入 ( ** < \< **) 運算子支援診斷傾印，並儲存至封存檔。 擷取 ( ** >> **) 運算子可支援從封存載入。  
   
-##  <a name="a-namesetstringa--colevariantsetstring"></a><a name="setstring"></a>COleVariant::SetString  
+##  <a name="setstring"></a>COleVariant::SetString  
  設定特定類型的字串。  
   
 ```  

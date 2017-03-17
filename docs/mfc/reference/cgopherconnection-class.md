@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherConnection
+- AFXINET/CGopherConnection
+- AFXINET/CGopherConnection::CGopherConnection
+- AFXINET/CGopherConnection::CreateLocator
+- AFXINET/CGopherConnection::GetAttribute
+- AFXINET/CGopherConnection::OpenFile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CGopherConnection : public CInternetConnection
 ## <a name="requirements"></a>需求  
  **標頭︰** afxinet.h  
   
-##  <a name="a-namecgopherconnectiona--cgopherconnectioncgopherconnection"></a><a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
  此成員函式呼叫來建構`CGopherConnection`物件。  
   
 ```  
@@ -147,7 +152,7 @@ CGopherConnection(
 ### <a name="remarks"></a>備註  
  絕對不要建立`CGopherConnection`直接。 相反地，呼叫[Getgopherconnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)，這樣就可以建立`CGopherConnection`物件，並傳回的指標。  
   
-##  <a name="a-namecreatelocatora--cgopherconnectioncreatelocator"></a><a name="createlocator"></a>CGopherConnection::CreateLocator  
+##  <a name="createlocator"></a>CGopherConnection::CreateLocator  
  呼叫此成員函式建立 gopher 定位器找不到或識別 gopher 伺服器上的檔案。  
   
 ```  
@@ -194,7 +199,7 @@ static CGopherLocator CreateLocator(
   
  若要從 gopher 伺服器擷取資訊，應用程式必須先取得 gopher 定位器。 應用程式必須再將定位器視為不透明的權杖 （也就是應用程式可以使用定位程式，但不是會直接操作或比較）。 一般來說，應用程式的呼叫中使用定位器[CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile)成員函式擷取特定資訊。  
   
-##  <a name="a-namegetattributea--cgopherconnectiongetattribute"></a><a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
  呼叫此成員函式擷取特定的屬性資訊項目從 gopher 伺服器。  
   
 ```  
@@ -216,7 +221,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能呼叫以判斷錯誤的原因。  
   
-##  <a name="a-nameopenfilea--cgopherconnectionopenfile"></a><a name="openfile"></a>CGopherConnection::OpenFile  
+##  <a name="openfile"></a>CGopherConnection::OpenFile  
  呼叫此成員函式，以開啟 gopher 伺服器上的檔案。  
   
 ```  

@@ -9,9 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CContainedWindow
 - CContainedWindowT
-- ATL.CContainedWindowT
+- ATLWIN/ATL::CContainedWindowT
+- ATLWIN/ATL::CContainedWindowT::CContainedWindowT
+- ATLWIN/ATL::CContainedWindowT::Create
+- ATLWIN/ATL::CContainedWindowT::DefWindowProc
+- ATLWIN/ATL::CContainedWindowT::GetCurrentMessage
+- ATLWIN/ATL::CContainedWindowT::RegisterWndSuperclass
+- ATLWIN/ATL::CContainedWindowT::SubclassWindow
+- ATLWIN/ATL::CContainedWindowT::SwitchMessageMap
+- ATLWIN/ATL::CContainedWindowT::UnsubclassWindow
+- ATLWIN/ATL::CContainedWindowT::WindowProc
+- ATLWIN/ATL::CContainedWindowT::m_dwMsgMapID
+- ATLWIN/ATL::CContainedWindowT::m_lpszClassName
+- ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
+- ATLWIN/ATL::CContainedWindowT::m_pObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -129,7 +141,7 @@ class CContainedWindowT : public TBase
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-nameccontainedwindowta--ccontainedwindowtccontainedwindowt"></a><a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
+##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
  建構函式會初始化資料成員。  
   
 ```
@@ -167,7 +179,7 @@ CContainedWindowT(
   
  如果您子類別化現有視窗透過[SubclassWindow](#subclasswindow)、`lpszClassName`值將不會使用; 因此，您可以傳遞**NULL**這個參數。  
   
-##  <a name="a-namecreatea--ccontainedwindowtcreate"></a><a name="create"></a>CContainedWindowT::Create  
+##  <a name="create"></a>CContainedWindowT::Create  
  呼叫[RegisterWndSuperclass](#registerwndsuperclass)註冊視窗類別，根據現有的類別，但使用[CContainedWindowT::WindowProc](#windowproc)。  
   
 ```
@@ -247,7 +259,7 @@ HWND Create(
 > [!NOTE]
 >  如果使用 0 做為值`MenuOrID`參數，它必須指定為 0U （預設值） 以避免編譯器錯誤。  
   
-##  <a name="a-namedefwindowproca--ccontainedwindowtdefwindowproc"></a><a name="defwindowproc"></a>CContainedWindowT::DefWindowProc  
+##  <a name="defwindowproc"></a>CContainedWindowT::DefWindowProc  
  由呼叫[WindowProc](#windowproc)未處理的訊息對應處理訊息。  
   
 ```
@@ -274,7 +286,7 @@ LRESULT DefWindowProc(
 ### <a name="remarks"></a>備註  
  根據預設，`DefWindowProc`呼叫[CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32 函式中指定的視窗程序來傳送的訊息資訊[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
   
-##  <a name="a-namegetcurrentmessagea--ccontainedwindowtgetcurrentmessage"></a><a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage  
  傳回目前訊息 ( **m_pCurrentMsg**)。  
   
 ```
@@ -284,7 +296,7 @@ const _ATL_MSG* GetCurrentMessage();
 ### <a name="return-value"></a>傳回值  
  目前的訊息，以封裝`MSG`結構。  
   
-##  <a name="a-namemdwmsgmapida--ccontainedwindowtmdwmsgmapid"></a><a name="m_dwmsgmapid"></a>CContainedWindowT::m_dwMsgMapID  
+##  <a name="m_dwmsgmapid"></a>CContainedWindowT::m_dwMsgMapID  
  保留目前正用於包含視窗的訊息對應的識別碼。  
   
 ```
@@ -298,7 +310,7 @@ DWORD m_dwMsgMapID;
   
  `m_dwMsgMapID`當初次初始化建構函式，而且可以變更藉由呼叫[SwitchMessageMap](#switchmessagemap)。 如需範例，請參閱[CContainedWindowT 概觀](../../atl/reference/ccontainedwindowt-class.md)。  
   
-##  <a name="a-namemlpszclassnamea--ccontainedwindowtmlpszclassname"></a><a name="m_lpszclassname"></a>CContainedWindowT::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>CContainedWindowT::m_lpszClassName  
  指定現有視窗類別名稱。  
   
 ```
@@ -310,7 +322,7 @@ LPTSTR m_lpszClassName;
   
  `m_lpszClassName`初始化建構函式。 如需範例，請參閱[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)概觀。  
   
-##  <a name="a-namempfnsuperwindowproca--ccontainedwindowtmpfnsuperwindowproc"></a><a name="m_pfnsuperwindowproc"></a>CContainedWindowT::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>CContainedWindowT::m_pfnSuperWindowProc  
  如果包含的視窗進行子類別化，`m_pfnSuperWindowProc`指向視窗類別的原始視窗程序。  
   
 ```
@@ -322,7 +334,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [DefWindowProc](#defwindowproc)方法會將訊息資訊傳送至視窗程序儲存在`m_pfnSuperWindowProc`。  
   
-##  <a name="a-namempobjecta--ccontainedwindowtmpobject"></a><a name="m_pobject"></a>CContainedWindowT::m_pObject  
+##  <a name="m_pobject"></a>CContainedWindowT::m_pObject  
  指向物件，其中包含`CContainedWindowT`物件。  
   
 ```
@@ -334,7 +346,7 @@ CMessageMap* m_pObject;
   
  `m_pObject`初始化建構函式。 如需範例，請參閱[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)概觀。  
   
-##  <a name="a-nameregisterwndsuperclassa--ccontainedwindowtregisterwndsuperclass"></a><a name="registerwndsuperclass"></a>CContainedWindowT::RegisterWndSuperclass  
+##  <a name="registerwndsuperclass"></a>CContainedWindowT::RegisterWndSuperclass  
  由呼叫[建立](#create)以註冊包含視窗的視窗類別。  
   
 ```
@@ -347,7 +359,7 @@ ATOM RegisterWndSuperClass();
 ### <a name="remarks"></a>備註  
  此視窗類別根據現有的類別，但使用[CContainedWindowT::WindowProc](#windowproc)。 現有視窗類別的名稱和視窗程序會儲存在[m_lpszClassName](#m_lpszclassname)和[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)分別。  
   
-##  <a name="a-namesubclasswindowa--ccontainedwindowtsubclasswindow"></a><a name="subclasswindow"></a>CContainedWindowT::SubclassWindow  
+##  <a name="subclasswindow"></a>CContainedWindowT::SubclassWindow  
  子視窗由`hWnd`，並將它附加`CContainedWindowT`物件。  
   
 ```
@@ -367,7 +379,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  請勿呼叫`SubclassWindow`如果已呼叫[建立](#create)。  
   
-##  <a name="a-nameswitchmessagemapa--ccontainedwindowtswitchmessagemap"></a><a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap  
+##  <a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap  
  變更的訊息對應將用於處理包含的視窗的訊息。  
   
 ```
@@ -383,7 +395,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
   
  您一開始會在建構函式中指定的訊息對應識別項。  
   
-##  <a name="a-nameunsubclasswindowa--ccontainedwindowtunsubclasswindow"></a><a name="unsubclasswindow"></a>CContainedWindowT::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>CContainedWindowT::UnsubclassWindow  
  中斷連結子類別化的視窗，從`CContainedWindowT`物件，並還原原始視窗程序，儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
   
 ```
@@ -400,7 +412,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 ### <a name="remarks"></a>備註  
  只有當您想要還原視窗被終結之前的原始視窗程序，請使用這個方法。 否則， [WindowProc](#windowproc)會自動執行這項操作時終結視窗。  
   
-##  <a name="a-namewindowproca--ccontainedwindowtwindowproc"></a><a name="windowproc"></a>CContainedWindowT::WindowProc  
+##  <a name="windowproc"></a>CContainedWindowT::WindowProc  
  這個靜態方法實作的視窗程序。  
   
 ```

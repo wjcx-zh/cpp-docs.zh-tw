@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDisableMenuAnimation
+- AFXPOPUPMENU/CMFCDisableMenuAnimation
+- AFXPOPUPMENU/CMFCDisableMenuAnimation::Restore
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +92,7 @@ class CMFCDisableMenuAnimation
 ## <a name="requirements"></a>需求  
  **標頭︰** afxpopupmenu.h  
   
-##  <a name="a-namerestorea--cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Restore  
+##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
  還原前一個動畫架構用來顯示快顯功能表。  
   
 ```  

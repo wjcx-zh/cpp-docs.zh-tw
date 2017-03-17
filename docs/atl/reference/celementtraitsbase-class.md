@@ -10,10 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
-- ATL::CElementTraitsBase
-- ATL.CElementTraitsBase<T>
-- ATL::CElementTraitsBase<T>
-- ATL.CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase
+- ATLCOLL/ATL::CElementTraitsBase::INARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::OUTARGTYPE
+- ATLCOLL/ATL::CElementTraitsBase::CopyElements
+- ATLCOLL/ATL::CElementTraitsBase::RelocateElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class CElementTraitsBase
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-namecopyelementsa--celementtraitsbasecopyelements"></a><a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
  呼叫這個方法來複製集合類別物件中儲存項目。  
   
 ```
@@ -104,21 +105,21 @@ static void CopyElements(
 ### <a name="remarks"></a>備註  
  來源和目的地的項目不應該重疊。  
   
-##  <a name="a-nameinargtypea--celementtraitsbaseinargtype"></a><a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
  要用來將項目加入至集合的資料類型。  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--celementtraitsbaseoutargtype"></a><a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
  要用來從集合擷取項目資料型別。  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="a-namerelocateelementsa--celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
  呼叫這個方法重新定位項目儲存在集合類別物件。  
   
 ```

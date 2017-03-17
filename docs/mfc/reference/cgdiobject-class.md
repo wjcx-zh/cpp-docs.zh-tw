@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGdiObject
+- AFXWIN/CGdiObject
+- AFXWIN/CGdiObject::CGdiObject
+- AFXWIN/CGdiObject::Attach
+- AFXWIN/CGdiObject::CreateStockObject
+- AFXWIN/CGdiObject::DeleteObject
+- AFXWIN/CGdiObject::DeleteTempMap
+- AFXWIN/CGdiObject::Detach
+- AFXWIN/CGdiObject::FromHandle
+- AFXWIN/CGdiObject::GetObject
+- AFXWIN/CGdiObject::GetObjectType
+- AFXWIN/CGdiObject::GetSafeHandle
+- AFXWIN/CGdiObject::UnrealizeObject
+- AFXWIN/CGdiObject::m_hObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +117,7 @@ class CGdiObject : public CObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameattacha--cgdiobjectattach"></a><a name="attach"></a>CGdiObject::Attach  
+##  <a name="attach"></a>CGdiObject::Attach  
  會附加至 Windows GDI 物件`CGdiObject`物件。  
   
 ```  
@@ -118,7 +131,7 @@ BOOL Attach(HGDIOBJ hObject);
 ### <a name="return-value"></a>傳回值  
  如果附件是成功則為非零否則為 0。  
   
-##  <a name="a-namecgdiobjecta--cgdiobjectcgdiobject"></a><a name="cgdiobject"></a>CGdiObject::CGdiObject  
+##  <a name="cgdiobject"></a>CGdiObject::CGdiObject  
  建構 `CGdiObject` 物件。  
   
 ```  
@@ -128,7 +141,7 @@ CGdiObject();
 ### <a name="remarks"></a>備註  
  絕對不要建立`CGdiObject`直接。 相反地，您建立物件從其衍生的類別，例如`CPen`或**Cbrush**。  
   
-##  <a name="a-namecreatestockobjecta--cgdiobjectcreatestockobject"></a><a name="createstockobject"></a>CGdiObject::CreateStockObject  
+##  <a name="createstockobject"></a>CGdiObject::CreateStockObject  
  擷取其中一個預先定義的內建 Windows GDI 畫筆、 筆刷或字型的控制代碼，並將附加的 GDI 物件`CGdiObject`物件。  
   
 ```  
@@ -145,7 +158,7 @@ BOOL CreateStockObject(int nIndex);
 ### <a name="remarks"></a>備註  
  呼叫此函式與一個衍生的類別對應至 Windows GDI 物件類型，例如`CPen`的內建的畫筆。  
   
-##  <a name="a-namedeleteobjecta--cgdiobjectdeleteobject"></a><a name="deleteobject"></a>CGdiObject::DeleteObject  
+##  <a name="deleteobject"></a>CGdiObject::DeleteObject  
  從記憶體刪除附加的 Windows GDI 物件，藉由釋放所有與 Windows GDI 物件相關聯的系統儲存體。  
   
 ```  
@@ -160,7 +173,7 @@ BOOL DeleteObject();
   
  刪除圖樣筆刷時，會不會刪除相關聯的筆刷的點陣圖。 點陣圖必須個別刪除。  
   
-##  <a name="a-namedeletetempmapa--cgdiobjectdeletetempmap"></a><a name="deletetempmap"></a>CGdiObject::DeleteTempMap  
+##  <a name="deletetempmap"></a>CGdiObject::DeleteTempMap  
  自動呼叫`CWinApp`閒置時間處理常式，`DeleteTempMap`會刪除任何暫存`CGdiObject`所建立的物件`FromHandle`。  
   
 ```  
@@ -173,7 +186,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&175;](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
-##  <a name="a-namedetacha--cgdiobjectdetach"></a><a name="detach"></a>CGdiObject::Detach  
+##  <a name="detach"></a>CGdiObject::Detach  
  卸離 Windows GDI 物件，從`CGdiObject`物件，並將控制代碼傳回至 Windows GDI 物件。  
   
 ```  
@@ -183,7 +196,7 @@ HGDIOBJ Detach();
 ### <a name="return-value"></a>傳回值  
  A`HANDLE`到 Windows GDI 物件中斷連結，否則**NULL**附加沒有 GDI 物件。  
   
-##  <a name="a-namefromhandlea--cgdiobjectfromhandle"></a><a name="fromhandle"></a>CGdiObject::FromHandle  
+##  <a name="fromhandle"></a>CGdiObject::FromHandle  
  若要將指標傳回`CGdiObject`物件控制代碼給 Windows GDI 物件。  
   
 ```  
@@ -202,7 +215,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
   
  此暫存`CGdiObject`物件只適用於應用程式有閒置時間的事件在迴圈中，此時就會刪除所有暫存的圖形物件至下一次。 另一種說法是，此暫存物件的一個視窗訊息處理期間才有效。  
   
-##  <a name="a-namegetobjecta--cgdiobjectgetobject"></a><a name="getobject"></a>CGdiObject::GetObject  
+##  <a name="getobject"></a>CGdiObject::GetObject  
  填滿指定的物件會定義的資料緩衝區。  
   
 ```  
@@ -237,7 +250,7 @@ int GetObject(
   
  如果物件是`CPalette`物件，`GetObject`擷取**WORD**調色盤中指定的項目數。 函式不會擷取[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構，定義的調色盤。 應用程式可以取得有關調色盤項目，藉由呼叫[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)。  
   
-##  <a name="a-namegetobjecttypea--cgdiobjectgetobjecttype"></a><a name="getobjecttype"></a>CGdiObject::GetObjectType  
+##  <a name="getobjecttype"></a>CGdiObject::GetObjectType  
  擷取 GDI 物件的類型。  
   
 ```  
@@ -273,7 +286,7 @@ UINT GetObjectType() const;
   
 - **OBJ_ENHMETADC**增強型中繼檔裝置內容  
   
-##  <a name="a-namegetsafehandlea--cgdiobjectgetsafehandle"></a><a name="getsafehandle"></a>CGdiObject::GetSafeHandle  
+##  <a name="getsafehandle"></a>CGdiObject::GetSafeHandle  
  傳回`m_hObject`除非**這**是**NULL**的情況下**NULL**傳回。  
   
 ```  
@@ -289,14 +302,14 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)。  
   
-##  <a name="a-namemhobjecta--cgdiobjectmhobject"></a><a name="m_hobject"></a>CGdiObject::m_hObject  
+##  <a name="m_hobject"></a>CGdiObject::m_hObject  
  A`HANDLE`包含`HBITMAP`， **HRGN**， `HBRUSH`， `HPEN`， `HPALETTE`，或**HFONT**附加到此物件。  
   
 ```  
 HGDIOBJ m_hObject;  
 ```  
   
-##  <a name="a-nameoperatorneqa--cgdiobjectoperator-"></a><a name="operator_neq"></a>CGdiObject::operator ！ =  
+##  <a name="operator_neq"></a>CGdiObject::operator ！ =  
  判斷兩個的 GDI 物件是否以邏輯方式不相等。  
   
 ```  
@@ -310,7 +323,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ### <a name="remarks"></a>備註  
  判斷左手邊的 GDI 物件是否不等於右邊的 GDI 物件。  
   
-##  <a name="a-nameoperatoreqeqa--cgdiobjectoperator-"></a><a name="operator_eq_eq"></a>CGdiObject::operator = =  
+##  <a name="operator_eq_eq"></a>CGdiObject::operator = =  
  判斷兩個的 GDI 物件是否在邏輯上相等。  
   
 ```  
@@ -324,14 +337,14 @@ BOOL operator==(const CGdiObject& obj) const;
 ### <a name="remarks"></a>備註  
  決定在左邊的 GDI 物件是否等於右邊的 GDI 物件。  
   
-##  <a name="a-nameoperatorhgdiobja--cgdiobjectoperator-hgdiobj"></a><a name="operator_hgdiobj"></a>CGdiObject::operator HGDIOBJ  
+##  <a name="operator_hgdiobj"></a>CGdiObject::operator HGDIOBJ  
  擷取`HANDLE`附加的 Windows GDI 物件; 否則**NULL**如果附加的物件。  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
-##  <a name="a-nameunrealizeobjecta--cgdiobjectunrealizeobject"></a><a name="unrealizeobject"></a>CGdiObject::UnrealizeObject  
+##  <a name="unrealizeobject"></a>CGdiObject::UnrealizeObject  
  重設的筆刷的原點，或重設邏輯調色盤。  
   
 ```  

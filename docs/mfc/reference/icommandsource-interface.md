@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandSource
+- AFXWINFORMS/ICommandSource
+- AFXWINFORMS/ICommandSource::AddCommandHandler
+- AFXWINFORMS/ICommandSource::AddCommandRangeHandler
+- AFXWINFORMS/ICommandSource::AddCommandRangeUIHandler
+- AFXWINFORMS/ICommandSource::AddCommandUIHandler
+- AFXWINFORMS/ICommandSource::PostCommand
+- AFXWINFORMS/ICommandSource::RemoveCommandHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandRangeHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandRangeUIHandler
+- AFXWINFORMS/ICommandSource::RemoveCommandUIHandler
+- AFXWINFORMS/ICommandSource::SendCommand
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +86,7 @@ interface class ICommandSource
 ### <a name="requirements"></a>需求  
  **標頭︰** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
   
-## <a name="a-nameaddcommandhandlera--icommandsourceaddcommandhandler"></a><a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
+## <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
 命令處理常式加入命令來源物件。
 ```
 void AddCommandHandler(
@@ -93,7 +104,7 @@ void AddCommandHandler(
 這個方法將命令處理常式 cmdHandler 加入命令來源物件，並將此處理常式對應 cmdID。
 請參閱[How to︰ 將命令傳送至 Windows Form 控制項](https://msdn.microsoft.com/library/y33d8624.aspx)如需如何使用 AddCommandHandler 的範例。
 
-## <a name="a-nameaddcommandrangehandlera-icommandsourceaddcommandrangehandler"></a><a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
+## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
 
 將一組命令處理常式加入至命令來源物件。
 ```
@@ -112,7 +123,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>備註
 這個方法會將連續的命令 Id 對應至單一訊息處理常式，並將其加入命令來源物件。 這用來處理一組相關的按鈕有一個方法。
 
-## <a name="a-nameaddcommandrangeuihandlera-icommandsourceaddcommandrangeuihandler"></a><a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
+## <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
 將一群使用者介面的命令訊息處理常式加入至命令來源物件。
 ```
 void AddCommandRangeUIHandler(
@@ -131,7 +142,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>備註
 這個方法會將連續的命令 Id 對應至單一使用者介面命令訊息處理常式，並將其加入命令來源物件。 這用來處理一組相關的按鈕有一個方法。
 
-## <a name="a-nameaddcommanduihandlera-icommandsourceaddcommanduihandler"></a><a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
+## <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
 將使用者介面命令訊息處理常式加入至命令來源物件。
 ```
 void AddCommandUIHandler(
@@ -147,7 +158,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>備註
 這個方法會將使用者介面命令訊息處理常式 cmdHandler 加入命令來源物件，並將處理常式對應 cmdID。
 
-## <a name="a-namepostcommanda-icommandsourcepostcommand"></a><a name="postcommand"></a>ICommandSource::PostCommand
+## <a name="postcommand"></a>ICommandSource::PostCommand
 張貼的訊息，而不需等待處理。
 ```
 void PostCommand(unsigned int command);
@@ -159,7 +170,7 @@ void PostCommand(unsigned int command);
 這個方法以非同步方式張貼訊息對應至命令所指定的識別碼。 它會呼叫 CWnd::PostMessage 將訊息放在視窗的訊息佇列，並傳回而不需等待處理訊息對應的視窗。
 
 
-## <a name="a-nameremovecommandhandlera-icommandsourceremovecommandhandler"></a><a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
+## <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
 命令來源物件中移除的命令處理常式。
 ```
 void RemoveCommandHandler(unsigned int cmdID);
@@ -171,7 +182,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 這個方法會移除對應至 cmdID 命令來源物件的命令處理常式。
 
 
-## <a name="a-nameremovecommandrangecommandhandlera-icommandsourceremovecommandrangehandler"></a><a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
+## <a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
 命令來源物件中移除一組命令處理常式。
 ```
 void RemoveCommandRangeUIHandler(
@@ -186,7 +197,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>備註
 這個方法會移除的訊息處理常式，藉由 cmdIDMin 和 cmdIDMax，對應至命令 Id 指定的命令來源物件中的群組。
 
-## <a name="a-nameremovecommandrangeuihandlera-icommandsourceremovecommandrangeuihandler"></a><a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
+## <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
 命令來源物件中移除一群使用者介面的命令訊息處理常式。
 ```
 void RemoveCommandRangeUIHandler(
@@ -201,7 +212,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>備註
 這個方法會移除的使用者介面命令訊息處理常式，藉由 cmdIDMin 和 cmdIDMax，對應至命令 Id 指定的命令來源物件中的群組。
 
-## <a name="a-nameremovecommanduihandlera-icommandsourceremovecommanduihandler"></a><a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
+## <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
 命令來源物件中移除的使用者介面命令訊息處理常式。
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
@@ -212,7 +223,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>備註
 這個方法會移除的使用者介面命令訊息處理常式對應至 cmdID 命令來源物件。
 
-## <a name="a-namesendcommanda-icommandsourcesendcommand"></a><a name="sendcommand"></a>ICommandSource::SendCommand 
+## <a name="sendcommand"></a>ICommandSource::SendCommand 
 傳送訊息，並等候它處理後再傳回。
 ```
 void SendCommand(unsigned int command);

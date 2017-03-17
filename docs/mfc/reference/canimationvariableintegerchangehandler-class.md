@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationVariableIntegerChangeHandler
 - CAnimationVariableIntegerChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
+- AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,14 +84,14 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecanimationvariableintegerchangehandlera--canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
+##  <a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
  建構 CAnimationVariableIntegerChangeHandler 物件。  
   
 ```  
 CAnimationVariableIntegerChangeHandler ();
 ```  
   
-##  <a name="a-namecreateinstancea--canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance  
  建立 CAnimationVariableIntegerChangeHandler 回呼的執行個體。  
   
 ```  
@@ -105,7 +109,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-nameonintegervaluechangeda--canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged  
+##  <a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged  
  當動畫變數的值已變更時呼叫。  
   
 ```  
@@ -132,7 +136,7 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ### <a name="return-value"></a>傳回值  
  S_OK，如果方法成功。否則 E_FAIL。  
   
-##  <a name="a-namesetanimationcontrollera--canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController  
  儲存路由事件的動畫控制器的指標。  
   
 ```  

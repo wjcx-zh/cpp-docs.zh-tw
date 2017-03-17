@@ -10,6 +10,84 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::CMFCPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::ActivatePopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::AlwaysShowEmptyToolsEntry
+- AFXPOPUPMENU/CMFCPopupMenu::AreAllCommandsShown
+- AFXPOPUPMENU/CMFCPopupMenu::CheckArea
+- AFXPOPUPMENU/CMFCPopupMenu::CloseMenu
+- AFXPOPUPMENU/CMFCPopupMenu::Create
+- AFXPOPUPMENU/CMFCPopupMenu::DefaultMouseClickOnClose
+- AFXPOPUPMENU/CMFCPopupMenu::EnableMenuLogo
+- AFXPOPUPMENU/CMFCPopupMenu::EnableMenuSound
+- AFXPOPUPMENU/CMFCPopupMenu::EnableResize
+- AFXPOPUPMENU/CMFCPopupMenu::EnableScrolling
+- AFXPOPUPMENU/CMFCPopupMenu::EnableVertResize
+- AFXPOPUPMENU/CMFCPopupMenu::FindSubItemByCommand
+- AFXPOPUPMENU/CMFCPopupMenu::GetActiveMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetAnimationSpeed
+- AFXPOPUPMENU/CMFCPopupMenu::GetAnimationType
+- AFXPOPUPMENU/CMFCPopupMenu::GetDropDirection
+- AFXPOPUPMENU/CMFCPopupMenu::GetForceMenuFocus
+- AFXPOPUPMENU/CMFCPopupMenu::GetForceShadow
+- AFXPOPUPMENU/CMFCPopupMenu::GetHMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuBar
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuItem
+- AFXPOPUPMENU/CMFCPopupMenu::GetMenuItemCount
+- AFXPOPUPMENU/CMFCPopupMenu::GetMessageWnd
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentArea
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentButton
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentPopupMenu
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentRibbonElement
+- AFXPOPUPMENU/CMFCPopupMenu::GetParentToolBar
+- AFXPOPUPMENU/CMFCPopupMenu::GetQuickCustomizeType
+- AFXPOPUPMENU/CMFCPopupMenu::GetSelItem
+- AFXPOPUPMENU/CMFCPopupMenu::HasBeenResized
+- AFXPOPUPMENU/CMFCPopupMenu::HideRarelyUsedCommands
+- AFXPOPUPMENU/CMFCPopupMenu::InCommand
+- AFXPOPUPMENU/CMFCPopupMenu::InsertItem
+- AFXPOPUPMENU/CMFCPopupMenu::InsertSeparator
+- AFXPOPUPMENU/CMFCPopupMenu::IsAlwaysClose
+- AFXPOPUPMENU/CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry
+- AFXPOPUPMENU/CMFCPopupMenu::IsCustomizePane
+- AFXPOPUPMENU/CMFCPopupMenu::IsEscClose
+- AFXPOPUPMENU/CMFCPopupMenu::IsIdle
+- AFXPOPUPMENU/CMFCPopupMenu::IsMenuSound
+- AFXPOPUPMENU/CMFCPopupMenu::IsQuickCustomize
+- AFXPOPUPMENU/CMFCPopupMenu::IsResizeble
+- AFXPOPUPMENU/CMFCPopupMenu::IsRightAlign
+- AFXPOPUPMENU/CMFCPopupMenu::IsScrollable
+- AFXPOPUPMENU/CMFCPopupMenu::IsSendMenuSelectMsg
+- AFXPOPUPMENU/CMFCPopupMenu::IsShown
+- AFXPOPUPMENU/CMFCPopupMenu::MoveTo
+- AFXPOPUPMENU/CMFCPopupMenu::OnCmdMsg
+- AFXPOPUPMENU/CMFCPopupMenu::PostCommand
+- AFXPOPUPMENU/CMFCPopupMenu::PreTranslateMessage
+- AFXPOPUPMENU/CMFCPopupMenu::RecalcLayout
+- AFXPOPUPMENU/CMFCPopupMenu::RemoveAllItems
+- AFXPOPUPMENU/CMFCPopupMenu::RemoveItem
+- AFXPOPUPMENU/CMFCPopupMenu::SaveState
+- AFXPOPUPMENU/CMFCPopupMenu::SetAnimationSpeed
+- AFXPOPUPMENU/CMFCPopupMenu::SetAnimationType
+- AFXPOPUPMENU/CMFCPopupMenu::SetAutoDestroy
+- AFXPOPUPMENU/CMFCPopupMenu::SetDefaultItem
+- AFXPOPUPMENU/CMFCPopupMenu::SetForceMenuFocus
+- AFXPOPUPMENU/CMFCPopupMenu::SetForceShadow
+- AFXPOPUPMENU/CMFCPopupMenu::SetMaxWidth
+- AFXPOPUPMENU/CMFCPopupMenu::SetMessageWnd
+- AFXPOPUPMENU/CMFCPopupMenu::SetParentRibbonElement
+- AFXPOPUPMENU/CMFCPopupMenu::SetQuickCustomizeType
+- AFXPOPUPMENU/CMFCPopupMenu::SetQuickMode
+- AFXPOPUPMENU/CMFCPopupMenu::SetRightAlign
+- AFXPOPUPMENU/CMFCPopupMenu::SetSendMenuSelectMsg
+- AFXPOPUPMENU/CMFCPopupMenu::ShowAllCommands
+- AFXPOPUPMENU/CMFCPopupMenu::TriggerResize
+- AFXPOPUPMENU/CMFCPopupMenu::UpdateAllShadows
+- AFXPOPUPMENU/CMFCPopupMenu::UpdateShadow
+- AFXPOPUPMENU/CMFCPopupMenu::CreateTearOffBar
+- AFXPOPUPMENU/CMFCPopupMenu::OnChangeHot
+- AFXPOPUPMENU/CMFCPopupMenu::OnChooseItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -166,7 +244,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 ## <a name="requirements"></a>需求  
  **標頭︰** afxpopupmenu.h  
   
-##  <a name="a-nameactivatepopupmenua--cmfcpopupmenuactivatepopupmenu"></a><a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
+##  <a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -183,7 +261,7 @@ static BOOL __stdcall ActivatePopupMenu(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namealwaysshowemptytoolsentrya--cmfcpopupmenualwaysshowemptytoolsentry"></a><a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
+##  <a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
  設定是否啟用快顯功能表上顯示使用者定義類型的空項目。  
   
 ```  
@@ -194,7 +272,7 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
  [in] `bShow`  
  `TRUE`若快顯功能表可顯示空的項目。`FALSE`否則。  
   
-##  <a name="a-nameareallcommandsshowna--cmfcpopupmenuareallcommandsshown"></a><a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
+##  <a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -205,7 +283,7 @@ BOOL AreAllCommandsShown() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecheckareaa--cmfcpopupmenucheckarea"></a><a name="checkarea"></a>CMFCPopupMenu::CheckArea  
+##  <a name="checkarea"></a>CMFCPopupMenu::CheckArea  
  決定相對於快顯功能表上的點的位置。  
   
 ```  
@@ -234,7 +312,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
   
 -   功能表-`ptScreen`是透過命令。  
   
-##  <a name="a-nameclosemenua--cmfcpopupmenuclosemenu"></a><a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
+##  <a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -246,7 +324,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecmfcpopupmenua--cmfcpopupmenucmfcpopupmenu"></a><a name="cmfcpopupmenu"></a>CMFCPopupMenu::CMFCPopupMenu  
+##  <a name="cmfcpopupmenu"></a>CMFCPopupMenu::CMFCPopupMenu  
  建構[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)物件。  
   
 ```  
@@ -265,7 +343,7 @@ CMFCPopupMenu(
 ### <a name="remarks"></a>備註  
  這個方法會配置的資源`CMFCPopupMenu`。 若要建立快顯功能表項目，呼叫[CMFCPopupMenu::Create](#create)。  
   
-##  <a name="a-namecreatea--cmfcpopupmenucreate"></a><a name="create"></a>CMFCPopupMenu::Create  
+##  <a name="create"></a>CMFCPopupMenu::Create  
  建立快顯功能表，並將它附加[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)物件。  
   
 ```  
@@ -308,7 +386,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_CustomPages #&1;](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]  
   
-##  <a name="a-namecreatetearoffbara--cmfcpopupmenucreatetearoffbar"></a><a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
+##  <a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -327,7 +405,7 @@ virtual CPane* CreateTearOffBar(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namedefaultmouseclickonclosea--cmfcpopupmenudefaultmouseclickonclose"></a><a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
+##  <a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -338,7 +416,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenablemenulogoa--cmfcpopupmenuenablemenulogo"></a><a name="enablemenulogo"></a>CMFCPopupMenu::EnableMenuLogo  
+##  <a name="enablemenulogo"></a>CMFCPopupMenu::EnableMenuLogo  
  初始化快顯功能表上的標誌。  
   
 ```  
@@ -359,7 +437,7 @@ void EnableMenuLogo(
   
  可能值`nLogoLocation`MENU_LOGO_LEFT、 MENU_LOGO_RIGHT、 MENU_LOGO_TOP，和 MENU_LOGO_BOTTOM。  
   
-##  <a name="a-nameenablemenusounda--cmfcpopupmenuenablemenusound"></a><a name="enablemenusound"></a>CMFCPopupMenu::EnableMenuSound  
+##  <a name="enablemenusound"></a>CMFCPopupMenu::EnableMenuSound  
  可讓功能表音效。  
   
 ```  
@@ -373,7 +451,7 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>備註  
  如果您啟用聲音，架構會呼叫[PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426)方法，當使用者開啟快顯功能表上，或選取功能表命令。 根據預設，會啟用此功能。  
   
-##  <a name="a-nameenableresizea--cmfcpopupmenuenableresize"></a><a name="enableresize"></a>CMFCPopupMenu::EnableResize  
+##  <a name="enableresize"></a>CMFCPopupMenu::EnableResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -385,7 +463,7 @@ void EnableResize(CSize sizeMinResize);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenablescrollinga--cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
+##  <a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -397,7 +475,7 @@ void EnableScrolling(BOOL = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenablevertresizea--cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
+##  <a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -409,7 +487,7 @@ void EnableVertResize(int nMinResize);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namefindsubitembycommanda--cmfcpopupmenufindsubitembycommand"></a><a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
+##  <a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -423,7 +501,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetactivemenua--cmfcpopupmenugetactivemenu"></a><a name="getactivemenu"></a>CMFCPopupMenu::GetActiveMenu  
+##  <a name="getactivemenu"></a>CMFCPopupMenu::GetActiveMenu  
  傳回目前使用中的功能表。  
   
 ```  
@@ -436,7 +514,7 @@ static CMFCPopupMenu* GetActiveMenu();
 ### <a name="remarks"></a>備註  
  每個應用程式可以有最多一個作用中的快顯功能表。  
   
-##  <a name="a-namegetanimationspeeda--cmfcpopupmenugetanimationspeed"></a><a name="getanimationspeed"></a>CMFCPopupMenu::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>CMFCPopupMenu::GetAnimationSpeed  
  傳回快顯功能表的動畫速度。  
   
 ```  
@@ -449,7 +527,7 @@ static UINT GetAnimationSpeed();
 ### <a name="remarks"></a>備註  
  動畫速度是一個全域值。 使用[CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed)變更速度快顯功能表的動畫。  
   
-##  <a name="a-namegetanimationtypea--cmfcpopupmenugetanimationtype"></a><a name="getanimationtype"></a>CMFCPopupMenu::GetAnimationType  
+##  <a name="getanimationtype"></a>CMFCPopupMenu::GetAnimationType  
  傳回目前的快顯動畫類型。  
   
 ```  
@@ -480,7 +558,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
  淡出  
  第一次出現 透明的快顯功能表，並逐漸 solidifies。  
   
-##  <a name="a-namegetdropdirectiona--cmfcpopupmenugetdropdirection"></a><a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
+##  <a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -491,7 +569,7 @@ DROP_DIRECTION GetDropDirection() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetforcemenufocusa--cmfcpopupmenugetforcemenufocus"></a><a name="getforcemenufocus"></a>CMFCPopupMenu::GetForceMenuFocus  
+##  <a name="getforcemenufocus"></a>CMFCPopupMenu::GetForceMenuFocus  
  指出是否要將焦點傳回至功能表列時顯示快顯功能表。  
   
 ```  
@@ -504,7 +582,7 @@ static BOOL GetForceMenuFocus();
 ### <a name="remarks"></a>備註  
  根據預設，您的應用程式不會傳回焦點功能表列。 若要變更此設定，請使用[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)。  
   
-##  <a name="a-namegetforceshadowa--cmfcpopupmenugetforceshadow"></a><a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
+##  <a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -515,14 +593,14 @@ static BOOL __stdcall GetForceShadow();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegethmenua--cmfcpopupmenugethmenu"></a><a name="gethmenu"></a>CMFCPopupMenu::GetHMenu  
+##  <a name="gethmenu"></a>CMFCPopupMenu::GetHMenu  
  傳回附加的功能表資源的控制代碼。  
   
 ```  
 HMENU GetHMenu();
 ```  
   
-##  <a name="a-namegetmenubara--cmfcpopupmenugetmenubar"></a><a name="getmenubar"></a>CMFCPopupMenu::GetMenuBar  
+##  <a name="getmenubar"></a>CMFCPopupMenu::GetMenuBar  
  傳回[CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)內嵌於快顯功能表。  
   
 ```  
@@ -535,7 +613,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ### <a name="remarks"></a>備註  
  快顯功能表還包含內嵌`CMFCPopupMenuBar`物件。 如果您使用不同的內嵌的類別，您必須覆寫這個方法在衍生類別中。  
   
-##  <a name="a-namegetmenuitema--cmfcpopupmenugetmenuitem"></a><a name="getmenuitem"></a>CMFCPopupMenu::GetMenuItem  
+##  <a name="getmenuitem"></a>CMFCPopupMenu::GetMenuItem  
  傳回功能表項目中指定索引處的指標。  
   
 ```  
@@ -552,7 +630,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ### <a name="remarks"></a>備註  
  功能表項目都由[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)。 當您呼叫這個方法時，它將指標傳回至適當`CMFCToolBarMenuButton`。  
   
-##  <a name="a-namegetmenuitemcounta--cmfcpopupmenugetmenuitemcount"></a><a name="getmenuitemcount"></a>CMFCPopupMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>CMFCPopupMenu::GetMenuItemCount  
  傳回快顯功能表中的項目數目。  
   
 ```  
@@ -562,7 +640,7 @@ int GetMenuItemCount() const;
 ### <a name="return-value"></a>傳回值  
  在功能表中的項目數目。  
   
-##  <a name="a-namegetmessagewnda--cmfcpopupmenugetmessagewnd"></a><a name="getmessagewnd"></a>CMFCPopupMenu::GetMessageWnd  
+##  <a name="getmessagewnd"></a>CMFCPopupMenu::GetMessageWnd  
  傳回的指標至視窗，架構會傳送快顯功能表上的訊息。  
   
 ```  
@@ -575,7 +653,7 @@ CWnd* GetMessageWnd() const;
 ### <a name="remarks"></a>備註  
  當您使用的方法[CMFCPopupMenu::Create](#create)若要建立快顯功能表上，您指定哪些視窗接收到的功能表訊息。  
   
-##  <a name="a-namegetparentareaa--cmfcpopupmenugetparentarea"></a><a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
+##  <a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -589,7 +667,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetparentbuttona--cmfcpopupmenugetparentbutton"></a><a name="getparentbutton"></a>CMFCPopupMenu::GetParentButton  
+##  <a name="getparentbutton"></a>CMFCPopupMenu::GetParentButton  
  傳回父工具列按鈕的指標。  
   
 ```  
@@ -604,7 +682,7 @@ CMFCToolBarMenuButton* GetParentButton() const;
   
  如果快顯功能表的捷徑功能表，會有任何父工具列按鈕。  
   
-##  <a name="a-namegetparentpopupmenua--cmfcpopupmenugetparentpopupmenu"></a><a name="getparentpopupmenu"></a>CMFCPopupMenu::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>CMFCPopupMenu::GetParentPopupMenu  
  傳回父快顯功能表上的指標。  
   
 ```  
@@ -617,7 +695,7 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 ### <a name="remarks"></a>備註  
  快顯功能表上有父代`CMFCPopupMenu`物件是否子功能表。  
   
-##  <a name="a-namegetparentribbonelementa--cmfcpopupmenugetparentribbonelement"></a><a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
+##  <a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -628,7 +706,7 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetparenttoolbara--cmfcpopupmenugetparenttoolbar"></a><a name="getparenttoolbar"></a>CMFCPopupMenu::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>CMFCPopupMenu::GetParentToolBar  
  傳回為父工具列的指標。  
   
 ```  
@@ -641,7 +719,7 @@ CMFCToolBar* GetParentToolBar() const;
 ### <a name="remarks"></a>備註  
  如果`CMFCPopupMenu`是快顯功能表，則該沒有父工具列。  
   
-##  <a name="a-namegetquickcustomizetypea--cmfcpopupmenugetquickcustomizetype"></a><a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
+##  <a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -652,7 +730,7 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetselitema--cmfcpopupmenugetselitem"></a><a name="getselitem"></a>CMFCPopupMenu::GetSelItem  
+##  <a name="getselitem"></a>CMFCPopupMenu::GetSelItem  
  傳回目前選取的功能表命令的指標。  
   
 ```  
@@ -665,7 +743,7 @@ CMFCToolBarMenuButton* GetSelItem();
 ### <a name="remarks"></a>備註  
  在快顯功能表的功能表命令都由[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)，或從中衍生的類別`CMFCToolBarMenuButton`。  
   
-##  <a name="a-namehasbeenresizeda--cmfcpopupmenuhasbeenresized"></a><a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
+##  <a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -676,7 +754,7 @@ BOOL HasBeenResized() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehiderarelyusedcommandsa--cmfcpopupmenuhiderarelyusedcommands"></a><a name="hiderarelyusedcommands"></a>CMFCPopupMenu::HideRarelyUsedCommands  
+##  <a name="hiderarelyusedcommands"></a>CMFCPopupMenu::HideRarelyUsedCommands  
  指出快顯功能表是否可以隱藏很少使用的命令。  
   
 ```  
@@ -689,7 +767,7 @@ BOOL HideRarelyUsedCommands() const;
 ### <a name="remarks"></a>備註  
  這個方法會指定是否可以隱藏快顯功能表上，只有很少使用的命令，除非已啟用該設定。 快顯功能表可以隱藏很少使用的命令，如果它具有父系 按鈕，以及衍生自的父視窗[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)。 使用[CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus)啟用這項功能和[CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus)來判斷目前是否已啟用此功能。 您必須呼叫這兩種方法與父視窗。  
   
-##  <a name="a-nameincommanda--cmfcpopupmenuincommand"></a><a name="incommand"></a>CMFCPopupMenu::InCommand  
+##  <a name="incommand"></a>CMFCPopupMenu::InCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -700,7 +778,7 @@ virtual BOOL InCommand();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameinsertitema--cmfcpopupmenuinsertitem"></a><a name="insertitem"></a>CMFCPopupMenu::InsertItem  
+##  <a name="insertitem"></a>CMFCPopupMenu::InsertItem  
  將新的項目插入至快顯功能表上，在指定的位置。  
   
 ```  
@@ -722,7 +800,7 @@ int InsertItem(
 ### <a name="remarks"></a>備註  
  如果您提供的值無效，此方法將會失敗`iInsertAt`，例如大於目前的快顯功能表上的項目數的整數。  
   
-##  <a name="a-nameinsertseparatora--cmfcpopupmenuinsertseparator"></a><a name="insertseparator"></a>CMFCPopupMenu::InsertSeparator  
+##  <a name="insertseparator"></a>CMFCPopupMenu::InsertSeparator  
  在指定的位置快顯功能表中插入分隔符號。  
   
 ```  
@@ -741,7 +819,7 @@ int InsertSeparator(int iInsertAt = -1);
   
  如果`iInsertAt`是無效的值。  
   
-##  <a name="a-nameisalwaysclosea--cmfcpopupmenuisalwaysclose"></a><a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
+##  <a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -752,7 +830,7 @@ virtual BOOL IsAlwaysClose() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisalwaysshowemptytoolsentrya--cmfcpopupmenuisalwaysshowemptytoolsentry"></a><a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
+##  <a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -763,7 +841,7 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameiscustomizepanea--cmfcpopupmenuiscustomizepane"></a><a name="iscustomizepane"></a>CMFCPopupMenu::IsCustomizePane  
+##  <a name="iscustomizepane"></a>CMFCPopupMenu::IsCustomizePane  
  指出是否有快顯功能表上就做**QuickCustomizePane**。  
   
 ```  
@@ -778,7 +856,7 @@ BOOL IsCustomizePane();
   
  您的應用程式應該呼叫這個方法期間[CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)。  
   
-##  <a name="a-nameisescclosea--cmfcpopupmenuisescclose"></a><a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
+##  <a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -789,7 +867,7 @@ BOOL IsEscClose();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisidlea--cmfcpopupmenuisidle"></a><a name="isidle"></a>CMFCPopupMenu::IsIdle  
+##  <a name="isidle"></a>CMFCPopupMenu::IsIdle  
  指出快顯功能表是否目前處於閒置狀態。  
   
 ```  
@@ -802,7 +880,7 @@ virtual BOOL IsIdle() const;
 ### <a name="remarks"></a>備註  
  根據預設，快顯功能表上就處於閒置模式顯示動畫完成，而且使用者不可捲動快顯功能表。  
   
-##  <a name="a-nameismenusounda--cmfcpopupmenuismenusound"></a><a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
+##  <a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -813,7 +891,7 @@ static UINT __stdcall IsMenuSound();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisquickcustomizea--cmfcpopupmenuisquickcustomize"></a><a name="isquickcustomize"></a>CMFCPopupMenu::IsQuickCustomize  
+##  <a name="isquickcustomize"></a>CMFCPopupMenu::IsQuickCustomize  
  決定是否相關聯[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)QuickCustomize 模式中。  
   
 ```  
@@ -826,7 +904,7 @@ BOOL IsQuickCustomize();
 ### <a name="remarks"></a>備註  
  在 QuickCustomize 模式使用者選取中直接自訂按鈕的工具列上的按鈕。  
   
-##  <a name="a-nameisresizeblea--cmfcpopupmenuisresizeble"></a><a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
+##  <a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -837,7 +915,7 @@ BOOL IsResizeble() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisrightaligna--cmfcpopupmenuisrightalign"></a><a name="isrightalign"></a>CMFCPopupMenu::IsRightAlign  
+##  <a name="isrightalign"></a>CMFCPopupMenu::IsRightAlign  
  表示功能表是靠右或靠左對齊。  
   
 ```  
@@ -852,7 +930,7 @@ BOOL IsRightAlign() const;
   
  功能表對齊的全域設定並不會因快顯功能表。  
   
-##  <a name="a-nameisscrollablea--cmfcpopupmenuisscrollable"></a><a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
+##  <a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -863,7 +941,7 @@ BOOL IsScrollable() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameissendmenuselectmsga--cmfcpopupmenuissendmenuselectmsg"></a><a name="issendmenuselectmsg"></a>CMFCPopupMenu::IsSendMenuSelectMsg  
+##  <a name="issendmenuselectmsg"></a>CMFCPopupMenu::IsSendMenuSelectMsg  
  指出當使用者從快顯功能表選取命令，架構是否通知父框架。  
   
 ```  
@@ -876,7 +954,7 @@ static BOOL IsSendMenuSelectMsg();
 ### <a name="remarks"></a>備註  
  架構父框架會傳送通知它`WM_MENUSELECT`訊息時使用選取的功能表命令。  
   
-##  <a name="a-nameisshowna--cmfcpopupmenuisshown"></a><a name="isshown"></a>CMFCPopupMenu::IsShown  
+##  <a name="isshown"></a>CMFCPopupMenu::IsShown  
  指出快顯功能表上目前是否為可見。  
   
 ```  
@@ -886,7 +964,7 @@ BOOL IsShown() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果快顯功能表是可見的。否則`FALSE`。  
   
-##  <a name="a-namemovetoa--cmfcpopupmenumoveto"></a><a name="moveto"></a>CMFCPopupMenu::MoveTo  
+##  <a name="moveto"></a>CMFCPopupMenu::MoveTo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -898,7 +976,7 @@ void MoveTo(const CPoint& pt);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameonchangehota--cmfcpopupmenuonchangehot"></a><a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
+##  <a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -910,7 +988,7 @@ virtual void OnChangeHot(int nHot);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameonchooseitema--cmfcpopupmenuonchooseitem"></a><a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
+##  <a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -922,7 +1000,7 @@ virtual void OnChooseItem(UINT uidCmdID);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameoncmdmsga--cmfcpopupmenuoncmdmsg"></a><a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
+##  <a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -943,7 +1021,7 @@ virtual BOOL OnCmdMsg(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namepostcommanda--cmfcpopupmenupostcommand"></a><a name="postcommand"></a>CMFCPopupMenu::PostCommand  
+##  <a name="postcommand"></a>CMFCPopupMenu::PostCommand  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -957,7 +1035,7 @@ BOOL PostCommand(UINT uiCommandID);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namepretranslatemessagea--cmfcpopupmenupretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -971,7 +1049,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namerecalclayouta--cmfcpopupmenurecalclayout"></a><a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -983,14 +1061,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameremoveallitemsa--cmfcpopupmenuremoveallitems"></a><a name="removeallitems"></a>CMFCPopupMenu::RemoveAllItems  
+##  <a name="removeallitems"></a>CMFCPopupMenu::RemoveAllItems  
  清除所有項目從快顯功能表。  
   
 ```  
 void RemoveAllItems();
 ```  
   
-##  <a name="a-nameremoveitema--cmfcpopupmenuremoveitem"></a><a name="removeitem"></a>CMFCPopupMenu::RemoveItem  
+##  <a name="removeitem"></a>CMFCPopupMenu::RemoveItem  
  從快顯功能表中移除指定的項目。  
   
 ```  
@@ -1007,7 +1085,7 @@ BOOL RemoveItem(int iIndex);
 ### <a name="remarks"></a>備註  
  這個方法會自動排列受影響的項目移除任何分隔字元。 如需架構如何排列分隔符號的詳細資訊，請參閱[CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)。  
   
-##  <a name="a-namesavestatea--cmfcpopupmenusavestate"></a><a name="savestate"></a>CMFCPopupMenu::SaveState  
+##  <a name="savestate"></a>CMFCPopupMenu::SaveState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1016,7 +1094,7 @@ virtual void SaveState();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetanimationspeeda--cmfcpopupmenusetanimationspeed"></a><a name="setanimationspeed"></a>CMFCPopupMenu::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>CMFCPopupMenu::SetAnimationSpeed  
  設定動畫的速度快顯功能表。  
   
 ```  
@@ -1032,7 +1110,7 @@ static void SetAnimationSpeed(UINT nElapse);
   
  根據預設，此參數設為 30 毫秒。 有效值範圍`nElapse`是從 0 到 200。  
   
-##  <a name="a-namesetanimationtypea--cmfcpopupmenusetanimationtype"></a><a name="setanimationtype"></a>CMFCPopupMenu::SetAnimationType  
+##  <a name="setanimationtype"></a>CMFCPopupMenu::SetAnimationType  
  設定此快顯功能表的動畫類型。  
   
 ```  
@@ -1046,7 +1124,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ### <a name="remarks"></a>備註  
  請參閱[CMFCPopupMenu::GetAnimationType](#getanimationtype)的有效值清單`type`。  
   
-##  <a name="a-namesetautodestroya--cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
+##  <a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1058,7 +1136,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetdefaultitema--cmfcpopupmenusetdefaultitem"></a><a name="setdefaultitem"></a>CMFCPopupMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>CMFCPopupMenu::SetDefaultItem  
  設定快顯功能表上的預設命令。  
   
 ```  
@@ -1072,7 +1150,7 @@ void SetDefaultItem(UINT uiCmd);
 ### <a name="remarks"></a>備註  
  快顯功能表中的預設命令是時就會出現快顯功能表選取命令。  
   
-##  <a name="a-namesetforcemenufocusa--cmfcpopupmenusetforcemenufocus"></a><a name="setforcemenufocus"></a>CMFCPopupMenu::SetForceMenuFocus  
+##  <a name="setforcemenufocus"></a>CMFCPopupMenu::SetForceMenuFocus  
  強制輸入的焦點回到功能表列時顯示快顯功能表。  
   
 ```  
@@ -1086,7 +1164,7 @@ static void SetForceMenuFocus(BOOL bValue);
 ### <a name="remarks"></a>備註  
  這個方法會設定為全域應用程式中的所有快顯功能表的旗標。 根據預設，不會啟用此功能。  
   
-##  <a name="a-namesetforceshadowa--cmfcpopupmenusetforceshadow"></a><a name="setforceshadow"></a>CMFCPopupMenu::SetForceShadow  
+##  <a name="setforceshadow"></a>CMFCPopupMenu::SetForceShadow  
  會強制快顯功能表出現在主框架外部時，繪製功能表陰影架構。  
   
 ```  
@@ -1100,7 +1178,7 @@ static void SetForceShadow(BOOL bValue);
 ### <a name="remarks"></a>備註  
  當您呼叫這個方法時，它在應用程式中設定全域旗標。 這個旗標會影響應用程式中的所有快顯功能表。  
   
-##  <a name="a-namesetmaxwidtha--cmfcpopupmenusetmaxwidth"></a><a name="setmaxwidth"></a>CMFCPopupMenu::SetMaxWidth  
+##  <a name="setmaxwidth"></a>CMFCPopupMenu::SetMaxWidth  
  設定快顯功能表上的最大寬度。  
   
 ```  
@@ -1114,7 +1192,7 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="remarks"></a>備註  
  如果不符合最大寬度與功能表命令相關聯的文字，則會遭到截斷，而不符合的組件會取代三個點。  
   
-##  <a name="a-namesetmessagewnda--cmfcpopupmenusetmessagewnd"></a><a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
+##  <a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1126,7 +1204,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetparentribbonelementa--cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
+##  <a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1138,7 +1216,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetquickcustomizetypea--cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
+##  <a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1150,7 +1228,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetquickmodea--cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
+##  <a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1159,7 +1237,7 @@ void SetQuickMode();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetrightaligna--cmfcpopupmenusetrightalign"></a><a name="setrightalign"></a>CMFCPopupMenu::SetRightAlign  
+##  <a name="setrightalign"></a>CMFCPopupMenu::SetRightAlign  
  設定快顯功能表的功能表對齊方式。  
   
 ```  
@@ -1173,7 +1251,7 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 ### <a name="remarks"></a>備註  
  根據預設，所有的快顯功能表會是靠左對齊。  
   
-##  <a name="a-namesetsendmenuselectmsga--cmfcpopupmenusetsendmenuselectmsg"></a><a name="setsendmenuselectmsg"></a>CMFCPopupMenu::SetSendMenuSelectMsg  
+##  <a name="setsendmenuselectmsg"></a>CMFCPopupMenu::SetSendMenuSelectMsg  
  設定旗標會控制當使用者選取命令的快顯功能表是否告知其父框架。  
   
 ```  
@@ -1187,7 +1265,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ### <a name="remarks"></a>備註  
  這是全域應用程式中的所有快顯功能表選項。 如果已啟用，將會傳送快顯功能表`WM_MENUSELECT`父框架，當使用者選取命令的訊息。  
   
-##  <a name="a-nameshowallcommandsa--cmfcpopupmenushowallcommands"></a><a name="showallcommands"></a>CMFCPopupMenu::ShowAllCommands  
+##  <a name="showallcommands"></a>CMFCPopupMenu::ShowAllCommands  
  會強制快顯功能表上，以顯示所有命令。  
   
 ```  
@@ -1197,7 +1275,7 @@ void ShowAllCommands();
 ### <a name="remarks"></a>備註  
  這不是全域設定，並會影響只有目前的快顯功能表。  
   
-##  <a name="a-nametriggerresizea--cmfcpopupmenutriggerresize"></a><a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
+##  <a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1206,7 +1284,7 @@ void TriggerResize();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameupdateallshadowsa--cmfcpopupmenuupdateallshadows"></a><a name="updateallshadows"></a>CMFCPopupMenu::UpdateAllShadows  
+##  <a name="updateallshadows"></a>CMFCPopupMenu::UpdateAllShadows  
  更新所有已開啟快顯功能表的陰影。  
   
 ```  
@@ -1220,7 +1298,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ### <a name="remarks"></a>備註  
  動畫的控制項或其他動態內容的視窗上顯示快顯功能表時，這個方法會很有用。  
   
-##  <a name="a-nameupdateshadowa--cmfcpopupmenuupdateshadow"></a><a name="updateshadow"></a>CMFCPopupMenu::UpdateShadow  
+##  <a name="updateshadow"></a>CMFCPopupMenu::UpdateShadow  
  更新快顯功能表上的陰影。  
   
 ```  

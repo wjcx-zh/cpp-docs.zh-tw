@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditView
+- AFXHTML/CHtmlEditView
+- AFXHTML/CHtmlEditView::CHtmlEditView
+- AFXHTML/CHtmlEditView::Create
+- AFXHTML/CHtmlEditView::GetDHtmlDocument
+- AFXHTML/CHtmlEditView::GetStartDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,14 +91,14 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ## <a name="requirements"></a>需求  
  **Header:** afxhtml.h  
   
-##  <a name="a-namechtmleditviewa--chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
+##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
  建構 `CHtmlEditView` 物件。  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="a-namecreatea--chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::Create  
+##  <a name="create"></a>CHtmlEditView::Create  
  建立新的視窗物件。  
   
 ```  
@@ -132,7 +137,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  這個方法也會呼叫包含的 WebBrowser**瀏覽**方法以載入預設文件 (請參閱[CHtmlEditView::GetStartDocument](#getstartdocument))。  
   
-##  <a name="a-namegetdhtmldocumenta--chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
  傳回**IHTMLDocument2**介面上目前的文件。  
   
 ```  
@@ -143,7 +148,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)介面。  
   
-##  <a name="a-namegetstartdocumenta--chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
+##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
  擷取此檢視的預設文件的名稱。  
   
 ```  

@@ -10,7 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimationColor
-- afxanimationcontroller/CAnimationColor
+- AFXANIMATIONCONTROLLER/CAnimationColor
+- AFXANIMATIONCONTROLLER/CAnimationColor::CAnimationColor
+- AFXANIMATIONCONTROLLER/CAnimationColor::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationColor::GetB
+- AFXANIMATIONCONTROLLER/CAnimationColor::GetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationColor::GetG
+- AFXANIMATIONCONTROLLER/CAnimationColor::GetR
+- AFXANIMATIONCONTROLLER/CAnimationColor::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationColor::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationColor::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationColor::m_bValue
+- AFXANIMATIONCONTROLLER/CAnimationColor::m_gValue
+- AFXANIMATIONCONTROLLER/CAnimationColor::m_rValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +115,7 @@ class CAnimationColor : public CAnimationBaseObject;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationcoloraddtransition"></a><a name="addtransition"></a>CAnimationColor::AddTransition  
+##  <a name="addtransition"></a>CAnimationColor::AddTransition  
  新增轉換為紅色、 綠色和藍色元件。  
   
 ```  
@@ -126,7 +138,7 @@ void AddTransition(
 ### <a name="remarks"></a>備註  
  呼叫此函式可將指定的轉換加入至轉換套用至動畫變數表示色彩元件的內部清單。 當您新增的轉換時，它們就會不會立即套用，並儲存在內部清單。 轉換會套用 （加入至腳本，以尋找特定的值） 當您呼叫 CAnimationController::AnimateGroup。 如果您不需要將轉換套用到其中一個色彩元件，您可以傳遞 NULL。  
   
-##  <a name="a-namecanimationcolora--canimationcolorcanimationcolor"></a><a name="canimationcolor"></a>CAnimationColor::CAnimationColor  
+##  <a name="canimationcolor"></a>CAnimationColor::CAnimationColor  
  建構 CAnimationColor 物件。  
   
 ```  
@@ -155,7 +167,7 @@ CAnimationColor(
 ### <a name="remarks"></a>備註  
  預設值為紅色、 綠色、 藍色，物件識別碼和群組識別碼，這將會設定為 0，建構的物件。 它們都可以在執行階段使用 SetDefaultValue 和 SetID 之後變更。  
   
-##  <a name="a-namegetanimationvariablelista--canimationcolorgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationColor::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationColor::GetAnimationVariableList  
  將封裝的動畫變數放入清單。  
   
 ```  
@@ -166,7 +178,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
  `lst`  
  函式傳回時，它會包含代表紅色、 綠色和藍色元件的三個 CAnimationVariable 物件的指標。  
   
-##  <a name="a-namegetba--canimationcolorgetb"></a><a name="getb"></a>CAnimationColor::GetB  
+##  <a name="getb"></a>CAnimationColor::GetB  
  提供存取權 CAnimationVariable 代表藍色元件。  
   
 ```  
@@ -179,7 +191,7 @@ CAnimationVariable& GetB();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 代表藍色元件。  
   
-##  <a name="a-namegetdefaultvaluea--canimationcolorgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationColor::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>CAnimationColor::GetDefaultValue  
  傳回元件的預設值。  
   
 ```  
@@ -192,7 +204,7 @@ COLORREF GetDefaultValue();
 ### <a name="remarks"></a>備註  
  呼叫此函式可擷取先前已設定的建構函式或 SetDefaultValue 的預設值。  
   
-##  <a name="a-namegetga--canimationcolorgetg"></a><a name="getg"></a>CAnimationColor::GetG  
+##  <a name="getg"></a>CAnimationColor::GetG  
  提供存取權 CAnimationVariable 代表綠色的元件。  
   
 ```  
@@ -205,7 +217,7 @@ CAnimationVariable& GetG();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 代表綠色元件。  
   
-##  <a name="a-namegetra--canimationcolorgetr"></a><a name="getr"></a>CAnimationColor::GetR  
+##  <a name="getr"></a>CAnimationColor::GetR  
  提供存取權 CAnimationVariable 代表紅色的元件。  
   
 ```  
@@ -218,7 +230,7 @@ CAnimationVariable& GetR();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 代表紅色的元件。  
   
-##  <a name="a-namegetvaluea--canimationcolorgetvalue"></a><a name="getvalue"></a>CAnimationColor::GetValue  
+##  <a name="getvalue"></a>CAnimationColor::GetValue  
  傳回目前的值。  
   
 ```  
@@ -235,28 +247,28 @@ BOOL GetValue(COLORREF& color);
 ### <a name="remarks"></a>備註  
  呼叫此函式以擷取動畫色彩的目前值。 如果此方法失敗或色彩元件的基礎 COM 物件尚未初始化，色彩會包含建構函式中或 SetDefaultValue 先前設定的預設值。  
   
-##  <a name="a-namembvaluea--canimationcolormbvalue"></a><a name="m_bvalue"></a>CAnimationColor::m_bValue  
+##  <a name="m_bvalue"></a>CAnimationColor::m_bValue  
  表示動畫色彩的藍色元件之封裝的動畫變數。  
   
 ```  
 CAnimationVariable m_bValue;  
 ```  
   
-##  <a name="a-namemgvaluea--canimationcolormgvalue"></a><a name="m_gvalue"></a>CAnimationColor::m_gValue  
+##  <a name="m_gvalue"></a>CAnimationColor::m_gValue  
  表示動畫色彩的綠色元件之封裝的動畫變數。  
   
 ```  
 CAnimationVariable m_gValue;  
 ```  
   
-##  <a name="a-namemrvaluea--canimationcolormrvalue"></a><a name="m_rvalue"></a>CAnimationColor::m_rValue  
+##  <a name="m_rvalue"></a>CAnimationColor::m_rValue  
  表示動畫色彩的紅色元素之封裝的動畫變數。  
   
 ```  
 CAnimationVariable m_rValue;  
 ```  
   
-##  <a name="a-nameoperatorcolorrefa--canimationcoloroperator-colorref"></a><a name="operator_colorref"></a>CAnimationColor::operator COLORREF  
+##  <a name="operator_colorref"></a>CAnimationColor::operator COLORREF  
   
 ```  
 operator COLORREF();
@@ -264,7 +276,7 @@ operator COLORREF();
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="a-nameoperatoreqa--canimationcoloroperator"></a><a name="operator_eq"></a>CAnimationColor::operator =  
+##  <a name="operator_eq"></a>CAnimationColor::operator =  
  將色彩指派給 CAnimationColor。  
   
 ```  
@@ -278,7 +290,7 @@ void operator=(COLORREF color);
 ### <a name="remarks"></a>備註  
  建議您這麼做之前動畫開始這個運算子會呼叫 SetDefaultValue，重新建立色彩元件的基礎 COM 物件，如果已建立。 如果您已訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件，您需要重新啟用這些事件。  
   
-##  <a name="a-namesetdefaultvaluea--canimationcolorsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationColor::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationColor::SetDefaultValue  
  設定預設值。  
   
 ```  

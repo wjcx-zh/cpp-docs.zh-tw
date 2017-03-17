@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog::CWinFormsDialog
+- AFXWINFORMS/CWinFormsDialog::GetControl
+- AFXWINFORMS/CWinFormsDialog::GetControlHandle
+- AFXWINFORMS/CWinFormsDialog::OnInitDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +92,7 @@ class CWinFormsDialog :
 ## <a name="requirements"></a>需求  
  **標頭︰** afxwinforms.h  
   
-##  <a name="a-namecwinformsdialoga--cwinformsdialogcwinformsdialog"></a><a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
  建構 `CWinFormsDialog` 物件。  
   
 ```  
@@ -98,7 +103,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  包含 ID 的對話方塊範本資源。 使用對話方塊編輯器建立對話方塊範本，並將它儲存在應用程式的資源指令碼檔案。 如需有關對話方塊範本的詳細資訊，請參閱[CDialog 類別](../../mfc/reference/cdialog-class.md)。  
   
-##  <a name="a-namegetcontrola--cwinformsdialoggetcontrol"></a><a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
  擷取至 Windows Form 使用者控制項的參考。  
   
 ```  
@@ -108,7 +113,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>傳回值  
  傳回在 MFC 對話方塊中的 Windows Form 控制項的參考。  
   
-##  <a name="a-namegetcontrolhandlea--cwinformsdialoggetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
  擷取 Windows Form 使用者控制項的視窗控制代碼。  
   
 ```  
@@ -118,7 +123,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回至 Windows Form 使用者控制項的視窗控制代碼。  
   
-##  <a name="a-nameoninitdialoga--cwinformsdialogoninitdialog"></a><a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
  初始化 MFC 對話方塊中建立和裝載 Windows Form 使用者控制項上。  
   
 ```  
@@ -133,7 +138,7 @@ virtual BOOL OnInitDialog();
   
  如果您需要執行特殊處理初始化對話方塊時，覆寫此成員函式。 如需有關如何使用此方法的詳細資訊，請參閱[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。  
   
-##  <a name="a-nameoperator-gta--cwinformsdialogoperator--gt"></a><a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
  取代[CWinFormsDialog::GetControl](#getcontrol)運算式中。  
   
 ```  
@@ -145,7 +150,7 @@ inline TManagedControl^  operator->() const throw();
   
  如需使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameoperatortmanagedcontrolxora--cwinformsdialogoperator-tmanagedcontrol"></a><a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
  將型別轉換成 Windows Form 使用者控制項的參考。  
   
 ```  

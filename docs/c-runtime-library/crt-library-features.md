@@ -47,9 +47,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: ab3c60c735fbca972ff544a31918698f4afffa0e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 57de8d43336f8fd5c82da17f42cf6f8292600148
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="c-run-time-libraries-crt"></a>C 執行階段程式庫 (CRT)  
  C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程式庫的一部分。 實作 CRT 的 Visual C++ 程式庫支援機器碼開發、混合機器碼與 Managed 程式碼，以及適用於 .NET 開發的純粹 Managed 程式碼。 CRT 的所有版本都支援多執行緒開發。 大部分程式庫都支援靜態連結和動態連結，靜態連結可將程式庫直接連結到您的程式碼，而動態連結則可讓您的程式碼使用通用 DLL 檔案。  
   
- 在 Visual Studio 2015 中，CRT 已重構為新的二進位檔。 通用 CRT (UCRT) 包含標準 C99 CRT 程式庫所匯出的函式和全域變數。 UCRT 現在是 Windows 元件，而且隨附於 Windows 10。 靜態程式庫、DLL 匯入程式庫和 UCRT 的標頭檔現在都位於 Windows 10 SDK 中。 當您安裝 Visual C++ 時，Visual Studio 安裝程式會安裝使用 UCRT 所需的一部分 Windows 10 SDK。 您可以在 Visual Studio 2015 支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 來轉散發。 如需詳細資訊，請參閱[轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)。  
+ 自 Visual Studio 2015 起，CRT 已重構為新的二進位檔。 通用 CRT (UCRT) 包含標準 C99 CRT 程式庫所匯出的函式和全域變數。 UCRT 現在是 Windows 元件，而且隨附於 Windows 10。 靜態程式庫、DLL 匯入程式庫和 UCRT 的標頭檔現在都位於 Windows 10 SDK 中。 當您安裝 Visual C++ 時，Visual Studio 安裝程式會安裝使用 UCRT 所需的一部分 Windows 10 SDK。 您可以在 Visual Studio 2015 及以上版本支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 來轉散發。 如需詳細資訊，請參閱[轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)。  
   
  下表列出實作 UCRT 的程式庫。  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/24/2017
   
  如果您使用 **/clr** 編譯器參數，您的程式碼將會連結到靜態程式庫 msvcurt.lib。 靜態程式庫會提供 Managed 程式碼與原生 CRT 之間的 Proxy。 請勿將靜態連結的 CRT ( **/MT** 或 **/MTd** 選項) 與 **/clr**並用。 請改用動態連結程式庫 (**/MD** 或 **/MDd**)。  
   
- 如果您使用 **/clr:pure** 編譯器參數，您的程式碼將連結到靜態程式庫 msvcurt.lib。 一如 **/clr**，您無法連結到靜態連結的程式庫。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
+ 如果您使用 **/clr:pure** 編譯器參數，您的程式碼將連結到靜態程式庫 msvcurt.lib。 一如 **/clr**，您無法連結到靜態連結的程式庫。 **/clr:pure** 和 **/clr:safe** 編譯器選項自 Visual Studio 2015 起已被取代。  
   
  如需使用 CRT 與 **/clr** 的詳細資訊，請參閱[混合的 (原生與受管理的) 組件 ](../dotnet/mixed-native-and-managed-assemblies.md)；若搭配 **/clr:pure**，請參閱[純粹的和可驗證的程式碼 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
   

@@ -41,8 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 014391806f47e7d39ffe09e30feecaabe26f6a36
+ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
+ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
+ms.lasthandoff: 03/15/2017
 
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
@@ -65,6 +66,9 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
  [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md) 
  了解 Visual Studio 2017 中的 C++ 一致性改善。 
 
+ [Visual C++ 語言一致性](visual-cpp-language-conformance.md)  
+ Visual C++ 依據功能的一致性狀態清單。
+
  [Visual C++ 變更歷程記錄 2003 - 2015](porting/visual-cpp-change-history-2003-2015.md)  
  了解舊版的重大變更。  
   
@@ -76,9 +80,6 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
   
  [Visual C++ 移植和升級指南](porting/visual-cpp-porting-and-upgrading-guide.md)  
  在 Visual Studio 2017 中移植程式碼到 Visual C++ 及將專案升級至 Visual C++ 的指引，包括將 C++ 程式碼移植到 Windows 10 及通用 Windows 平台。  
-  
- [C++11/14/17 功能的支援 (現代 C++)](cpp/support-for-cpp11-14-17-features-modern-cpp.md)  
- 了解 Visual C++ 中對 C++11 及 C++14 功能的支援。  
   
  [Visual C++ Team Blog](http://blogs.msdn.com/b/vcblog/) (Visual C++ 小組部落格)  
  進一步了解新功能以及 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)] 開發人員提供的最新資訊。  
@@ -183,9 +184,4 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
  [C 語言參考](c-language/c-language-reference.md)   
  [C 執行階段程式庫參考](c-runtime-library/c-run-time-library-reference.md)   
  [編譯器內建和組件語言](intrinsics/compiler-intrinsics-and-assembly-language.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio 中 Visual C++ 的新功能 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 3/7/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -27,8 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 39648d170fc189168d5f199fff8b3c2012456b82
-ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
+ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
+ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -36,7 +37,7 @@ ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
 
 [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 帶來 Visual C++ 環境的多個更新與修正。 我們修正了編譯器及工具中超過 250 個 Bug 與回報的問題，其中多為客戶透過 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") 所提交。 感謝您回報 Bug！  如需所有 Visual Studio 中之新功能的詳細資訊，請瀏覽 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的新功能](https://go.microsoft.com/fwlink/?linkid=834481)。
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中的編譯器與工具版本編號為 14.10.24629。 
+<!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
 
 ## <a name="c-compiler"></a>C++ 編譯器
@@ -63,8 +64,9 @@ ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
 - 改善重複的程式碼產生：支援常數整數除法的自動向量化，更容易識別 memset 模式。
 - 改善的程式碼安全性：改善發出緩衝區溢位編譯器診斷，而且 /guard:cf 現在會防護產生跳躍表的 switch 陳述式。
 - 版本控制：現在，每次 Visual C++ 工具組更新時，都只會更新內建前置處理器巨集 _MSC_VER 的值。 如需詳細資訊，請參閱 [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/) (Visual C++ 編譯器版本)。
-- 新的工具組版面配置︰編譯器和相關建置工具在開發電腦上具有新的位置和目錄結構。 新的版面配置可並存安裝多個版本的編譯器。 如需詳細資訊，請參閱 [Compiler Tools Layout in Visual Studio “15”](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/) (Visual Studio “15” 中的編譯器工具版面配置)。
-- 改善的診斷：輸出視窗現在會顯示發生錯誤的資料行。 如需詳細資訊，請參閱 [C++ compiler diagnostics improvements in VS “15” Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/) (VS “15” Preview 5 中的 C++ 編譯器診斷改善)。
+- 新的工具組版面配置︰編譯器和相關建置工具在開發電腦上具有新的位置和目錄結構。 新的版面配置可並存安裝多個版本的編譯器。 如需詳細資訊，請參閱 [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/) (Visual Studio "15" 中的編譯器工具版面配置)。
+- 改善的診斷：輸出視窗現在會顯示發生錯誤的資料行。 如需詳細資訊，請參閱 [C++ compiler diagnostics improvements in VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/) (VS "15" Preview 5 中的 C++ 編譯器診斷改善)。
+- 使用共同常式時，已移除實驗關鍵字 "yield" (在 /await 參數下)。 您應該更新程式碼以改用 "co_yield”。 如需詳細資訊，請參閱 Visual C++ 小組部落格。 
 
 ## <a name="c-libraries"></a>C++ 程式庫
 
@@ -89,6 +91,7 @@ ms.openlocfilehash: 89fceaf02fe2b02bfe2ce6ff1de90bcd2bf66006
 * 為了新增編譯器輸送量，C++ 標準程式庫標頭現在會避免包含非必要編譯器內建的宣告。
 * 稍微改善不正確 bind() 呼叫的編譯器診斷。
 * 已改善 std::string/std::wstring 的移動建構函式的效能，改善幅度超過 3 倍
+* 如需完整的 STL 改善清單，請參閱 [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/) (VS 2017 RTM 中的 STL 修正)。
 
 ### <a name="open-source-library-support"></a>開放原始碼程式庫支援  
 Vcpkg 是一種開放原始碼命令列工具，可大幅簡化在 Visual Studio 中取得和建置開放原始碼 C++ 靜態程式庫和 DLL 的程序。 如需詳細資訊，請參閱 [Vcpkg updates: Static linking is now available](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/) (Vcpkg 更新︰現在已提供靜態連結)。
@@ -102,7 +105,12 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 * 取消隱藏和 atlstr.h 中區域靜態安全執行緒初始化有關的有效警告 C4640
 * 區域靜態的安全執行緒初始化已在 [使用 ATL AND 建置 DLL] 時在 XP 工具組中自動關閉。 不過，此情況以已不再適用。 如果需要關閉安全執行緒初始化，您可以在您的專案設定中新增 /Zc:threadSafeInit-。 
 
+### <a name="visual-c-runtime"></a>Visual C++ 執行階段
+* 「控制流程防護」符號的新標頭 ‘cfguard.h’。 
+
 ## <a name="c-ide"></a>C++ IDE
+
+* C++ 原生專案的組態變更效能現已提升，而 C++/CLI 專案的組態變更效能則更佳。 解決方案組態在首次啟用時將會較快，而它在後續啟用時將能幾乎瞬間完成。
 
 ### <a name="intellisense"></a>Intellisense  
 * 現在預設使用新的 SQLite 型資料庫引擎。 這會加速資料庫作業，如「移至定義」和「尋找所有參考」，也會大幅改善初始解決方案剖析階段。 設定已移至 [工具] > [選項] > [文字編輯器] > [C/C++] > [進階] (原位於 [C/C++] > [實驗] 下)。
@@ -123,29 +131,28 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 
 * [尋找所有參考] (Shift+F12) 現在可協助您輕鬆地解決，即使是在複雜的程式碼基底中也是一樣。 它提供進階分組、篩選、排序、在結果內搜尋和顏色標示 (適用於某些語言)，因此您可以清楚了解您的參考。 針對 C++，新的 UI 包含要讀取或寫入變數的相關資訊。
 
-* _**RC 的新功能**_：[點改為箭號] IntelliSense 功能已從實驗性改為進階，現在預設為啟用。 編輯器功能 [展開範圍] 和 [展開優先順序] 也從實驗性改為進階。
+* [點改為箭號] IntelliSense 功能已從實驗性改為進階，現在預設為啟用。 編輯器功能 [展開範圍] 和 [展開優先順序] 也從實驗性改為進階。
 
-* _**RC 的新功能**_：實驗性的重構功能 [變更簽章] 及 [擷取函式] 現在預設為可用。
+* 實驗性的重構功能 [變更簽章] 及 [擷取函式] 現在預設為可用。
 
-* _** 的新功能**_：啟用了 C++ 專案「讓專案更快載入」的新實驗性功能。 C++ 專案會在您下次開啟時更快載入，之後即以極快速度載入！
+* 啟用了 C++ 專案「讓專案更快載入」的新實驗性功能。 C++ 專案會在您下次開啟時更快載入，之後即以極快速度載入！
 
 其中有部分功能通用於其他語言，部分功能則是 C++ 的特定功能。 如需這些新功能的詳細資訊，請參閱 [Announcing Visual Studio “15”](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/) (宣告 Visual Studio “15”)。 
 
 ### <a name="support-for-non-msbuild-projects-with-open-folder"></a>使用開啟資料夾的非 MSBuild 專案支援
 Visual Studio 2017 引進「開啟資料夾」功能，可讓您在包含原始程式碼的資料夾中編寫程式碼、建置和偵錯，而不需要建立任何方案或專案。 如果您的專案不是 MSBuild 專案，則這可讓開始使用 Visual Studio 更為簡單。 運用「開啟資料夾」，即可存取 Visual Studio 已針對 MSBuild 專案所提供的強大程式碼了解、編輯、建置和偵錯功能。 如需詳細資訊，請參閱 [Bring your C++ codebase to Visual Studio with “Open Folder”](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/) (使用「開啟資料夾」將您的 C++ 程式碼基底移轉至 Visual Studio)。
 
-* _**RC 的新功能**_：[開啟資料夾] 體驗的增強功能。     
-您可以透過這些 JSON 檔案自訂體驗︰
+* [開啟資料夾] 體驗的改良。 您可以透過這些 JSON 檔案自訂體驗︰
   -    CppProperties.json，用以自訂 IntelliSense 及瀏覽體驗。
   -    Tasks.json，用以自訂建置步驟。 
   -    Launch.json，用以自訂偵錯經驗。
 
 ### <a name="cmake-support-via-open-folder"></a>透過開啟資料夾的 CMake 支援
-Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Visual Studio 中的 CMake 支援)。 使用「開啟資料夾」開啟 CMake 專案將會自動針對 C++ 編輯、建置和偵錯設定環境。
+Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Visual Studio 中的 CMake 支援) 和 [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Visual Studio 2017 中的 CMake 支援 – RC.2 更新新功能)。 使用「開啟資料夾」開啟 CMake 專案將會自動針對 C++ 編輯、建置和偵錯設定環境。
 
-* _**RC 的新功能**_：C++ IntelliSense 無須在根資料夾中建立 CppProperties.json 檔案即可運作。 此外，我們新增了下拉式清單，可讓使用者輕易地切換 CMake 和 CppProperties.json 檔案所提供的設定。
+* 無須在根資料夾中建立 CppProperties.json 檔案，C++ IntelliSense 即可運作。 此外，我們新增了下拉式清單，可讓使用者輕易地切換 CMake 和 CppProperties.json 檔案所提供的設定。
 
-* _**RC 的新功能**_：透過與 CMakeLists.txt 檔案位於相同資料夾的 CMakeSettings.json 檔案，支援進一步設定。
+* 透過與 CMakeLists.txt 檔案位於相同資料夾的 CMakeSettings.json 檔案，支援進一步設定。
 
   ![Cmake 開啟資料夾](media/cmake_cpp.png "CMake 開啟資料夾")
 
@@ -153,7 +160,9 @@ Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專
 ## <a name="c-installation-workloads"></a>C++ 安裝工作負載 
 
 ### <a name="windows-desktop-development-with-c"></a>使用 C++ 進行 Windows 桌面開發：  
-我們現在提供安裝原始 C++ 工作負載時更細微的安裝體驗。 我們已新增可選取的元件，讓您能夠只安裝所需的工具。  請注意，安裝程式 UI 中所列元件指出的安裝大小，並不準確且低估總大小。  
+我們現在提供安裝原始 C++ 工作負載時更細微的安裝體驗。 我們已新增可選取的元件，讓您能夠只安裝所需的工具。  請注意，安裝程式 UI 中所列元件指出的安裝大小，並不準確且低估總大小。
+
+若要在 C++ 桌面工作負載中成功建立 Win32 專案，您必須安裝工具組和 Windows SDK。 安裝建議 (選取) 的元件「VC++ 2017 v141 工具組 (x86、x64)」和 “Windows 10 SDK (10.0.14393)” 可確保這正常運作。 如果未安裝必要工具，將無法成功建立專案，而且精靈將會停止回應。
 
 ### <a name="linux-development-with-c"></a>使用 C++ 進行 Linux 開發：  
 熱門的 [Visual C++ for Linux Development](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) 擴充功能現已納入 Visual Studio 中。 這個安裝提供您開發在 Linux 環境上執行的 C++ 應用程式，並進行偵錯所需的一切。  
@@ -165,7 +174,7 @@ Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專
 您現在能夠使用可以 Android 及 iOS 為目標的 Visual Studio 建立行動應用程式並對其偵錯。  
 
 ### <a name="universal-windows-apps"></a>通用 Windows 應用程式：  
-C++ 以通用 Windows app 工作負載的選用元件形式提供。  
+C++ 以通用 Windows app 工作負載的選用元件形式提供。  升級 C++ 專案目前必須以手動方式完成。 如果您在 Visual Studio 2017 中開啟以 v140 為目標的 UWP 專案且未安裝 Visual Studio 2015，則需要在專案屬性頁中選取 v141 平台工具組。
 
 ## <a name="new-options-for-c-on-universal-windows-platform"></a>通用 Windows 平台上 C++ 的新選項
 您現在有新的選項，可撰寫和封裝適用於通用 Windows 平台和 Windows 市集的 C++ 應用程式︰您可以使用 Desktop App Converter 來封裝現有傳統型應用程式，以透過 Windows 市集進行部署。 如需詳細資訊，請參閱 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) (在 Centennial 專案中使用 Visual C++ 執行階段) 和[使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)。
@@ -230,8 +239,4 @@ Visual Studio 圖形診斷是一組工具，用來記錄並分析 Direct3D 應�
 
 
  
-
-
-<!--HONumber=Feb17_HO4-->
-
 

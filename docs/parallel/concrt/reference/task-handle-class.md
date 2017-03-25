@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::task_handle
+- task_handle
+- PPL/concurrency::task_handle
+- PPL/concurrency::task_handle::task_handle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: b113cf519f4326650dc1ed4d20dd2ed00921eda9
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0fef1ef7b1c02287a0113eb80be413e4a17dc1a4
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskhandle-class"></a>task_handle 類別
@@ -61,14 +63,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[task_handle 建構函式](#ctor)|建構新`task_handle`物件。 藉由叫用指定做為參數的建構函式的函式執行工作的工作。|  
+|[task_handle](#ctor)|建構新`task_handle`物件。 藉由叫用指定做為參數的建構函式的函式執行工作的工作。|  
 |[~ task_handle 解構函式](#dtor)|終結`task_handle`物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator （) 運算子](#task_handle__operator_call)|執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。|  
+|[operator （)](#task_handle__operator_call)|執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。|  
   
 ## <a name="remarks"></a>備註  
  `task_handle`物件可以用於搭配`structured_task_group`或多個一般`task_group`物件，用來將工作分解成平行工作。 如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
@@ -87,7 +89,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **命名空間：** concurrency  
   
-##  <a name="a-nametaskhandleoperatorcalla-operator"></a><a name="task_handle__operator_call"></a>operator （) 
+##  <a name="task_handle__operator_call"></a>operator （) 
 
  執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。  
   
@@ -97,7 +99,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="a-nametaskhandlectora-taskhandle"></a><a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a>task_handle 
 
  建構新`task_handle`物件。 藉由叫用指定做為參數的建構函式的函式執行工作的工作。  
   
@@ -112,7 +114,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>備註  
  執行階段會建立一份工作函式傳遞至建構函式。 因此，任何狀態變更發生在函數中的物件將傳遞至`task_handle`物件將不會顯示該函式物件的複本中。  
   
-##  <a name="a-namedtora-taskhandle"></a><a name="dtor"></a>~ task_handle 
+##  <a name="dtor"></a>~ task_handle 
 
  終結`task_handle`物件。  
   

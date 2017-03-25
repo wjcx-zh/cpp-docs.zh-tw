@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_continuation_context
+- task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context
+- PPLTASKS/concurrency::task_continuation_context::get_current_winrt_context
+- PPLTASKS/concurrency::task_continuation_context::use_arbitrary
+- PPLTASKS/concurrency::task_continuation_context::use_current
+- PPLTASKS/concurrency::task_continuation_context::use_default
+- PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 627c2adc60c143ef7cd9be62f71a4365eed5aed5
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8afd599e5ee489500d7f8c498d03c91ace6b99ed
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 類別
@@ -53,13 +59,13 @@ class task_continuation_context : public details::_ContextCallback;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[get_current_winrt_context 方法](#get_current_winrt_context)|傳回代表目前的 winrt 執行緒內容的工作接續內容物件。|  
-|[use_arbitrary 方法](#use_arbitrary)|建立可讓執行階段選擇接續執行內容的工作接續內容。|  
-|[use_current 方法](#use_current)|傳回表示目前執行內容的工作接續內容物件。|  
-|[use_default 方法](#use_default)|建立預設工作接續內容。|  
-|[use_synchronous_execution 方法](#use_synchronous_execution)|傳回表示同步執行內容的工作接續內容物件。|  
+|[get_current_winrt_context](#get_current_winrt_context)|傳回代表目前的 winrt 執行緒內容的工作接續內容物件。|  
+|[use_arbitrary](#use_arbitrary)|建立可讓執行階段選擇接續執行內容的工作接續內容。|  
+|[use_current](#use_current)|傳回表示目前執行內容的工作接續內容物件。|  
+|[use_default](#use_default)|建立預設工作接續內容。|  
+|[use_synchronous_execution](#use_synchronous_execution)|傳回表示同步執行內容的工作接續內容物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `_ContextCallback`  
@@ -71,7 +77,7 @@ class task_continuation_context : public details::_ContextCallback;
   
  **命名空間：** concurrency  
 
-## <a name="a-namegetcurrentwinrtcontexta-getcurrentwinrtcontext"></a><a name="get_current_winrt_context"></a>get_current_winrt_context
+## <a name="get_current_winrt_context"></a>get_current_winrt_context
  傳回代表目前的 WinRT 執行緒內容的工作接續內容物件。  
   
 ## <a name="syntax"></a>語法  
@@ -91,7 +97,7 @@ static task_continuation_context get_current_winrt_context();
  這個方法很類似`use_current`方法，但它也會提供原生 c + + 程式碼，而不需要 C + + /cli CX 延伸支援。 它適用於使用進階使用者撰寫 C + + /cli CX 無從原生和 Windows 執行階段呼叫端的程式庫程式碼。 除非您需要這項功能，我們建議`use_current`方法，只會提供給 C + + /cli CX 用戶端。  
   
   
-##  <a name="a-nameusearbitrarya-usearbitrary"></a><a name="use_arbitrary"></a>use_arbitrary 
+##  <a name="use_arbitrary"></a>use_arbitrary 
 
  建立可讓執行階段選擇接續執行內容的工作接續內容。  
   
@@ -109,7 +115,7 @@ static task_continuation_context use_arbitrary();
   
  這個方法只適用於 Windows 市集應用程式。  
   
-##  <a name="a-nameusecurrenta-usecurrent"></a><a name="use_current"></a>use_current 
+##  <a name="use_current"></a>use_current 
 
  傳回表示目前執行內容的工作接續內容物件。  
   
@@ -127,7 +133,7 @@ static task_continuation_context use_current();
   
  這個方法只適用於 Windows 市集應用程式。  
   
-##  <a name="a-nameusedefaulta-usedefault"></a><a name="use_default"></a>use_default 
+##  <a name="use_default"></a>use_default 
 
  建立預設工作接續內容。  
   
@@ -139,13 +145,13 @@ static task_continuation_context use_default();
  預設接續內容。  
   
 ### <a name="remarks"></a>備註  
- 如果您不指定接續內容呼叫時使用的預設內容`then`方法。 在 Windows 應用程式的 Windows 7 及之前的版本，以及桌面應用程式在 Windows 8 和更新版本，執行階段會決定執行的工作接續。 不過，在 Windows 市集應用程式 apartment 知道工作的接續的預設接續內容是在 apartment 其中`then`叫用。  
+ 如果您不指定接續內容呼叫時使用的預設內容`then`方法。 在 Windows 應用程式的 Windows 7 及之前的版本，以及桌面應用程式在 Windows 8 和更新版本，執行階段會決定執行的工作接續。 不過，在 Windows 市集應用程式 apartment 知道工作的接續的預設接續內容會 apartment 其中`then`叫用。  
   
  瞭解工作是解除包裝 Windows 執行階段的工作 apartment`IAsyncInfo`介面或從這類工作繼承而來的工作。 因此，如果您排程在 Windows 執行階段 STA apartment 知道工作的接續，接續會執行在該 sta。  
   
  在執行階段會選擇的內容中，將會執行非 apartment 知道工作的接續。  
 
-## <a name="a-nameusesynchronousexecutiona-taskcontinuationcontextusesynchronousexecution"></a><a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
+## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
 傳回表示同步執行內容的工作接續內容物件。  
   
 ## <a name="syntax"></a>語法  

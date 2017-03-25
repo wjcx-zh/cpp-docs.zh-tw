@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::ITopologyExecutionResource
+- ITopologyExecutionResource
+- CONCRTRM/concurrency::ITopologyExecutionResource
+- CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetId
+- CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetNext
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: cc54beb4790c9d2ea5bfcb2c8ffd4bca7dca399e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9671dbf84a1104bc3b6f3a6f9d383aac167759c
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 結構
@@ -52,10 +55,10 @@ struct ITopologyExecutionResource;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[Itopologyexecutionresource:: Getid 方法](#getid)|傳回這個執行資源的資源管理員唯一識別項。|  
-|[Itopologyexecutionresource:: Getnext 方法](#getnext)|讓介面返回列舉順序中的下一個執行資源。|  
+|[Itopologyexecutionresource:: Getid](#getid)|傳回這個執行資源的資源管理員唯一識別項。|  
+|[Itopologyexecutionresource:: Getnext](#getnext)|讓介面返回列舉順序中的下一個執行資源。|  
   
 ## <a name="remarks"></a>備註  
  此介面通常可以利用來引導系統的拓撲，觀察到由資源管理員。  
@@ -68,7 +71,7 @@ struct ITopologyExecutionResource;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namegetida--itopologyexecutionresourcegetid-method"></a><a name="getid"></a>Itopologyexecutionresource:: Getid 方法  
+##  <a name="getid"></a>Itopologyexecutionresource:: Getid 方法  
  傳回這個執行資源的資源管理員唯一識別項。  
   
 ```
@@ -78,7 +81,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>傳回值  
  這個執行資源的資源管理員唯一識別項。  
   
-##  <a name="a-namegetnexta--itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>Itopologyexecutionresource:: Getnext 方法  
+##  <a name="getnext"></a>Itopologyexecutionresource:: Getnext 方法  
  讓介面返回列舉順序中的下一個執行資源。  
   
 ```

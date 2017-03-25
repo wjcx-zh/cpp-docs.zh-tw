@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::scheduler_resource_allocation_error
+- scheduler_resource_allocation_error
+- CONCRT/concurrency::scheduler_resource_allocation_error
+- CONCRT/concurrency::scheduler_resource_allocation_error::scheduler_resource_allocation_error
+- CONCRT/concurrency::scheduler_resource_allocation_error::get_error_code
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 52233a99e1d1a715fc7d52599ffeff18a3c2c34b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 84f32bb6192057c9d5872147cc8ef0bd2c13b349
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error 類別
@@ -52,15 +55,15 @@ class scheduler_resource_allocation_error : public std::exception;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[scheduler_resource_allocation_error 建構函式](#ctor)|多載。 建構 `scheduler_resource_allocation_error` 物件。|  
+|[scheduler_resource_allocation_error](#ctor)|多載。 建構 `scheduler_resource_allocation_error` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[get_error_code 方法](#get_error_code)|傳回造成例外狀況的錯誤碼。|  
+|[get_error_code](#get_error_code)|傳回造成例外狀況的錯誤碼。|  
   
 ## <a name="remarks"></a>備註  
  從並行執行階段內的作業系統呼叫失敗時，通常會擲回這個例外狀況。 通常會從呼叫 Win32 方法 `GetLastError` 傳回的錯誤碼會轉換成 `HRESULT` 類型的值，並且可以使用 `get_error_code` 方法擷取。  
@@ -75,7 +78,7 @@ class scheduler_resource_allocation_error : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namegeterrorcodea-geterrorcode"></a><a name="get_error_code"></a>get_error_code 
+##  <a name="get_error_code"></a>get_error_code 
 
  傳回造成例外狀況的錯誤碼。  
   
@@ -86,7 +89,7 @@ HRESULT get_error_code() const throw();
 ### <a name="return-value"></a>傳回值  
  `HRESULT`造成例外狀況之錯誤的值。  
   
-##  <a name="a-namectora-schedulerresourceallocationerror"></a><a name="ctor"></a>scheduler_resource_allocation_error 
+##  <a name="ctor"></a>scheduler_resource_allocation_error 
 
  建構 `scheduler_resource_allocation_error` 物件。  
   

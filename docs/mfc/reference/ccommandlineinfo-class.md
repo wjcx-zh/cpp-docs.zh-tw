@@ -51,9 +51,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: cb8cd58e4e7cf0318b8826cf473739e26e730273
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: f9e63f47a8df69b52a6a12688e84602981d20dae
+ms.openlocfilehash: a5b104e4ad0a0b9ce1933e7d8057f4d0fae46b77
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 類別
@@ -75,16 +75,16 @@ class CCommandLineInfo : public CObject
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCommandLineInfo::ParseParam](#parseparam)|覆寫此剖析個別參數的回呼。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|表示命令列**/Automation**找不到選項。|  
-|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|表示命令列**/內嵌**找不到選項。|  
+|[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|表示命令列`/Automation`找不到選項。|  
+|[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|表示命令列`/Embedding`找不到選項。|  
 |[CCommandLineInfo::m_bShowSplash](#m_bshowsplash)|指出是否應該顯示開頭顯示畫面。|  
 |[CCommandLineInfo::m_nShellCommand](#m_nshellcommand)|表示要處理的 shell 命令。|  
 |[CCommandLineInfo::m_strDriverName](#m_strdrivername)|指出驅動程式名稱如果 shell 命令是列印;否則為空的。|  
@@ -102,13 +102,13 @@ class CCommandLineInfo : public CObject
 |----------------------------|----------------------|  
 |*app*|新檔案。|  
 |*應用程式*檔名|開啟檔案。|  
-|*應用程式* **/p**檔名|列印到預設印表機的檔案。|  
-|*應用程式* **/pt** filename 印表機驅動程式連接埠|指定的印表機來列印檔案。|  
-|*app* **/dde**|啟動並等候 DDE 命令。|  
-|*應用程式* **/Automation**|啟動為 OLE automation 伺服器。|  
-|*應用程式* **/ 內嵌**|若要編輯內嵌的 OLE 項目啟動時。|  
-|*應用程式*  ** /註冊**<br /><br /> *應用程式* **/Regserver**|會通知應用程式執行任何註冊的工作。|  
-|*應用程式* **/ 取消登錄**<br /><br /> *應用程式* **/Unregserver**|會通知應用程式執行任何取消註冊的工作。|  
+|*應用程式*`/p`檔名|列印到預設印表機的檔案。|  
+|*應用程式* `/pt` filename 印表機驅動程式連接埠|指定的印表機來列印檔案。|  
+|*app*`/dde`|啟動並等候 DDE 命令。|  
+|*app*`/Automation`|啟動為 OLE automation 伺服器。|  
+|*app*`/Embedding`|若要編輯內嵌的 OLE 項目啟動時。|  
+|*app*`/Register`<br /><br /> *app*`/Regserver`|會通知應用程式執行任何註冊的工作。|  
+|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|會通知應用程式執行任何取消註冊的工作。|  
   
  衍生新類別從`CCommandLineInfo`來處理其他旗標和參數值。 覆寫[ParseParam](#parseparam)來處理新的旗標。  
   
@@ -128,7 +128,7 @@ CCommandLineInfo();
 ```  
   
 ### <a name="remarks"></a>備註  
- 預設會顯示啟動顯示畫面 ( `m_bShowSplash` **= TRUE**)，並在 [檔案] 功能表上執行新的命令 ( `m_nShellCommand` **= NewFile**)。  
+ 預設會顯示啟動顯示畫面 ( `m_bShowSplash=TRUE`)，並在 [檔案] 功能表上執行新的命令 ( `m_nShellCommand` **= NewFile**)。  
   
  這個應用程式架構會呼叫[ParseParam](#parseparam)來填滿此物件的資料成員。  
   
@@ -136,24 +136,24 @@ CCommandLineInfo();
  [!code-cpp[NVC_MFCDocView #&54;](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
 ##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
- 表示**/Automation**命令列上找不到旗標。  
+ 表示`/Automation`命令列上找不到旗標。  
   
 ```  
 BOOL m_bRunAutomated;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果**TRUE**，這表示為 OLE automation 伺服器啟動。  
+ 如果`TRUE`，這表示為 OLE automation 伺服器啟動。  
   
 ##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
- 表示**/內嵌**命令列上找不到旗標。  
+ 表示`/Embedding`命令列上找不到旗標。  
   
 ```  
 BOOL m_bRunEmbedded;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果**TRUE**，這表示啟動編輯內嵌的 OLE 項目。  
+ 如果`TRUE`，這表示啟動編輯內嵌的 OLE 項目。  
   
 ##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
  表示應該顯示開頭顯示畫面。  
@@ -163,7 +163,7 @@ BOOL m_bShowSplash;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果**TRUE**，這表示此應用程式應該顯示在啟動時的啟動顯示畫面。 預設實作[ParseParam](#parseparam)將此資料成員設定為**TRUE**如果[m_nShellCommand](#m_nshellcommand)等於**CCommandLineInfo::FileNew**。  
+ 如果`TRUE`，這表示此應用程式應該顯示在啟動時的啟動顯示畫面。 預設實作[ParseParam](#parseparam)將此資料成員設定為`TRUE`如果[m_nShellCommand](#m_nshellcommand)等於`CCommandLineInfo::FileNew`。  
   
 ##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
  指出此執行個體的應用程式 shell 命令。  
@@ -228,7 +228,7 @@ CString m_strDriverName;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個參數通常是列印至殼層命令的印表機驅動程式的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當**/pt**命令列上找不到旗標。  
+ 這個參數通常是列印至殼層命令的印表機驅動程式的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當`/pt`命令列上找不到旗標。  
   
 ##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
  在命令列會儲存第一個非旗標參數的值。  
@@ -248,7 +248,7 @@ CString m_strPortName;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個參數通常是列印至殼層命令的印表機連接埠的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當**/pt**命令列上找不到旗標。  
+ 這個參數通常是列印至殼層命令的印表機連接埠的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當`/pt`命令列上找不到旗標。  
   
 ##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
  第二個非旗標參數的值儲存在命令列上。  
@@ -258,7 +258,7 @@ CString m_strPrinterName;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個參數通常是列印至殼層命令印表機的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當**/pt**命令列上找不到旗標。  
+ 這個參數通常是列印至殼層命令印表機的名稱。 預設實作[ParseParam](#parseparam)設定此資料成員只有當`/pt`命令列上找不到旗標。  
   
 ##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
  在命令列上的識別項重新啟動的唯一性。  
@@ -299,27 +299,27 @@ virtual void ParseParam(
  指出這是最後一個參數或命令列上的旗標。  
   
 ### <a name="remarks"></a>備註  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼叫`ParseParam`一次針對每個參數或在命令列上的旗標，將引數傳遞至`pszParam`。 如果參數的第一個字元是 ' ** - **'或' ** / **'，則它也會移除和*bFlag*設為**TRUE**。 最後一個參數在剖析時`bLast`設為**TRUE**。  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼叫`ParseParam`一次針對每個參數或在命令列上的旗標，將引數傳遞至`pszParam`。 如果參數的第一個字元是 ' **-**'或' **/**'，則它也會移除和*bFlag*設為`TRUE`。 最後一個參數在剖析時`bLast`設為`TRUE`。  
   
- 此函式的預設實作會辨識下列旗標︰ **/p**， **/pt**， **/dde**， **/Automation**，和**/內嵌**，如下表所示︰  
+ 此函式的預設實作會辨識下列旗標︰ `/p`， `/pt`， `/dde`， `/Automation`，和`/Embedding`，如下表所示︰  
   
 |命令列引數|執行命令|  
 |----------------------------|----------------------|  
 |*app*|新檔案。|  
 |*應用程式*檔名|開啟檔案。|  
-|*應用程式* **/p**檔名|列印到預設印表機的檔案。|  
-|*應用程式* **/pt** filename 印表機驅動程式連接埠|指定的印表機來列印檔案。|  
-|*app* **/dde**|啟動並等候 DDE 命令。|  
-|*應用程式* **/Automation**|啟動為 OLE automation 伺服器。|  
-|*應用程式* **/ 內嵌**|若要編輯內嵌的 OLE 項目啟動時。|  
-|*應用程式*  ** /註冊**<br /><br /> *應用程式* **/Regserver**|會通知應用程式執行任何註冊的工作。|  
-|*應用程式* **/ 取消登錄**<br /><br /> *應用程式* **/Unregserver**|會通知應用程式執行任何取消註冊的工作。|  
+|*應用程式*`/p`檔名|列印到預設印表機的檔案。|  
+|*應用程式* `/pt` filename 印表機驅動程式連接埠|指定的印表機來列印檔案。|  
+|*app*`/dde`|啟動並等候 DDE 命令。|  
+|*app*`/Automation`|啟動為 OLE automation 伺服器。|  
+|*app*`/Embedding`|若要編輯內嵌的 OLE 項目啟動時。|  
+|*app*`/Register`<br /><br /> *app*`/Regserver`|會通知應用程式執行任何註冊的工作。|  
+|*app*`/Unregister`<br /><br /> *app*`/Unregserver`|會通知應用程式執行任何取消註冊的工作。|  
   
- 這項資訊會儲存在[m_bRunAutomated](#m_brunautomated)， [m_bRunEmbedded](#m_brunembedded)，和[m_nShellCommand](#m_nshellcommand)。 旗標標示是正斜線 ' ** / **'或連字號' ** - **'。  
+ 這項資訊會儲存在[m_bRunAutomated](#m_brunautomated)， [m_bRunEmbedded](#m_brunembedded)，和[m_nShellCommand](#m_nshellcommand)。 旗標標示是正斜線 ' **/**'或連字號' **-**'。  
   
- 預設實作會將第一個非旗標參數插入[m_strFileName](#m_strfilename)。 如果是**/pt**旗標，預設實作會將第二、 第三和第四個非旗標參數[m_strPrinterName](#m_strprintername)， [m_strDriverName](#m_strdrivername)，和[m_strPortName](#m_strportname)分別。  
+ 預設實作會將第一個非旗標參數插入[m_strFileName](#m_strfilename)。 如果是`/pt`旗標，預設實作會將第二、 第三和第四個非旗標參數[m_strPrinterName](#m_strprintername)， [m_strDriverName](#m_strdrivername)，和[m_strPortName](#m_strportname)分別。  
   
- 預設實作也會設定[m_bShowSplash](#m_bshowsplash)至**TRUE**僅在使用新的檔案。 如果是新的檔案，使用者採取動作牽涉到應用程式本身。 在任何其他案例，包括開啟現有的檔案使用 shell 的使用者動作牽涉到直接檔案。 文件為中心的觀點來看，在啟動顯示畫面不會不需要宣布啟動應用程式。  
+ 預設實作也會設定[m_bShowSplash](#m_bshowsplash)至`TRUE`僅在使用新的檔案。 如果是新的檔案，使用者採取動作牽涉到應用程式本身。 在任何其他案例，包括開啟現有的檔案使用 shell 的使用者動作牽涉到直接檔案。 文件為中心的觀點來看，在啟動顯示畫面不會不需要宣布啟動應用程式。  
   
  覆寫這個函式在衍生類別中處理其他旗標和參數的值。  
   

@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task_completion_event
+- task_completion_event
+- PPLTASKS/concurrency::task_completion_event
+- PPLTASKS/concurrency::task_completion_event::task_completion_event
+- PPLTASKS/concurrency::task_completion_event::set
+- PPLTASKS/concurrency::task_completion_event::set_exception
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 2cd3e7381402cc65f3220010a71c969cda1c7e2d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b37ecb250c0794370fc586f0463f93023ca47603
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 類別
@@ -62,16 +66,16 @@ class task_completion_event<void>;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[task_completion_event 建構函式](#ctor)|建構 `task_completion_event` 物件。|  
+|[task_completion_event](#ctor)|建構 `task_completion_event` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[set 方法](#set)|多載。 設定工作完成事件。|  
-|[set_exception 方法](#set_exception)|多載。 將例外狀況傳播至與這個事件相關聯的所有工作。|  
+|[set](#set)|多載。 設定工作完成事件。|  
+|[set_exception](#set_exception)|多載。 將例外狀況傳播至與這個事件相關聯的所有工作。|  
   
 ## <a name="remarks"></a>備註  
  在需要您建立要完成之工作的情況下，使用從工作完成事件建立的工作，以藉此將其接續排程在未來的某個時間點執行。 `task_completion_event` 必須與您建立的工作具有相同類型，而且在具有該類型值的工作完成事件上呼叫 set 方法，將導致關聯工作完成，並將該值當做結果提供給其接續。  
@@ -88,7 +92,7 @@ class task_completion_event<void>;
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>設定 
+##  <a name="set"></a>設定 
 
  設定工作完成事件。  
   
@@ -108,7 +112,7 @@ bool set() const ;
 ### <a name="remarks"></a>備註  
  有多個並行呼叫或`set`，只有第一個呼叫會成功 （如果有的話），其結果會儲存在工作完成事件。 而其餘組會被忽略，則方法會傳回 false。 當您設定工作完成事件時，所有工作都建立從事件將會立即完成，，它，如果有的話，都會排定接續。 工作完成的物件具有`_ResultType`以外`void`會將值傳遞給其接續。  
   
-##  <a name="a-namesetexceptiona-setexception"></a><a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a>set_exception 
 
  將例外狀況傳播至與這個事件相關聯的所有工作。  
   
@@ -126,7 +130,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="a-namectora-taskcompletionevent"></a><a name="ctor"></a>task_completion_event 
+##  <a name="ctor"></a>task_completion_event 
 
  建構 `task_completion_event` 物件。  
   

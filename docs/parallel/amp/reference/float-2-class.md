@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 05707bd43a8f9b89a93c0da0011c46d67361fc84
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4bc5d2138d3ec8e9a0b173d2a60847e92bb8a3b9
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="float2-class"></a>float_2 類別
@@ -80,43 +80,43 @@ class float_2;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[float_2 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|float_2::get_x 方法||  
-|float_2::get_xy 方法||  
-|float_2::get_y 方法||  
-|float_2::get_yx 方法||  
-|float_2::ref_g 方法||  
-|float_2::ref_r 方法||  
-|float_2::ref_x 方法||  
-|float_2::ref_y 方法||  
-|float_2::set_x 方法||  
-|float_2::set_xy 方法||  
-|float_2::set_y 方法||  
-|float_2::set_yx 方法||  
+|float_2::get_x||  
+|float_2::get_xy||  
+|float_2::get_y||  
+|float_2::get_yx||  
+|float_2::ref_g||  
+|float_2::ref_r||  
+|float_2::ref_x||  
+|float_2::ref_y||  
+|float_2::set_x||  
+|float_2::set_xy||  
+|float_2::set_y||  
+|float_2::set_yx||  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|float_2::operator 運算子||  
-|float_2::operator-運算子||  
-|float_2::operator * = 運算子||  
-|float_2::operator / = 運算子||  
-|float_2::operator + + 運算子||  
-|float_2::operator + = 運算子||  
-|float_2::operator = 運算子||  
-|float_2::operator-= 運算子||  
+|float_2::operator-||  
+|float_2::operator-||  
+|float_2::operator * =||  
+|float_2::operator / =||  
+|float_2::operator + +||  
+|float_2::operator + =||  
+|float_2::operator =||  
+|float_2::operator =||  
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[大小常數](#float_2__size)||  
   
@@ -124,14 +124,14 @@ class float_2;
   
 |名稱|描述|  
 |----------|-----------------|  
-|float_2::g 資料成員||  
-|float_2::gr 資料成員||  
-|float_2::r 資料成員||  
-|float_2::rg 資料成員||  
-|float_2::x 資料成員||  
-|float_2::xy 資料成員||  
-|float_2::y 資料成員||  
-|float_2::yx 資料成員||  
+|float_2::g||  
+|float_2::gr||  
+|float_2::r||  
+|float_2::rg||  
+|float_2::x||  
+|float_2::xy||  
+|float_2::y||  
+|float_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `float_2`  
@@ -141,7 +141,7 @@ class float_2;
   
  **命名空間︰** concurrency:: graphics  
   
-##  <a name="a-namectora-float2"></a><a name="ctor"></a>float_2 
+##  <a name="ctor"></a>float_2 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -204,12 +204,12 @@ explicit inline float_2(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="a-namefloat2sizea-size"></a><a name="float_2__size"></a>大小 
+##  <a name="float_2__size"></a>大小 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

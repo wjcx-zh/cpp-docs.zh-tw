@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c09719412e38a4f056eabc39a66a684caa0659d4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d9b49f65d8b862a7b85cdf3e09137f326fa8a1fa
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification 類別
@@ -54,7 +54,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_thread_specification 建構函式](不正確的排程器-原則-值-class.md #ctor|多載。 建構 `invalid_scheduler_policy_value` 物件。|  
+|[invalid_scheduler_policy_thread_specification](不正確的排程器-原則-值-class.md #ctor|多載。 建構 `invalid_scheduler_policy_value` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -65,7 +65,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
  **標頭︰** concrt.h  
   
  **命名空間：** concurrency  
-##  <a name="a-namectora-invalidschedulerpolicythreadspecification"></a><a name="ctor"></a>invalid_scheduler_policy_thread_specification 
+##  <a name="ctor"></a>invalid_scheduler_policy_thread_specification 
 
  建構 `invalid_scheduler_policy_value` 物件。  
   

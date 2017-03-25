@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_scheduler_policy_key
+- invalid_scheduler_policy_key
+- CONCRT/concurrency::invalid_scheduler_policy_key
+- CONCRT/concurrency::invalid_scheduler_policy_key::invalid_scheduler_policy_key
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ba23cb216581862ed110cace9b7fff9024df6899
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: bc16ee5aceb8c81c7c745cf535a4cefb5d3b827e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key 類別
@@ -54,7 +56,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_key 建構函式](#ctor)|多載。 建構 `invalid_scheduler_policy_key` 物件。|  
+|[invalid_scheduler_policy_key](#ctor)|多載。 建構 `invalid_scheduler_policy_key` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -66,7 +68,7 @@ class invalid_scheduler_policy_key : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-invalidschedulerpolicykey"></a><a name="ctor"></a>invalid_scheduler_policy_key 
+##  <a name="ctor"></a>invalid_scheduler_policy_key 
 
  建構 `invalid_scheduler_policy_key` 物件。  
   

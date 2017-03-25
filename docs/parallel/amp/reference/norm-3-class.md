@@ -100,9 +100,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 51769d252d82ff1f307517a93ce01e22b8b69fdd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ca5d8270f04240f99fa6735ea8235c2e077dfa01
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm3-class"></a>norm_3 類別
@@ -124,7 +124,7 @@ class norm_3;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[norm_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
@@ -132,59 +132,59 @@ class norm_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|norm_3::get_x 方法||  
-|norm_3::get_xy 方法||  
-|norm_3::get_xyz 方法||  
-|norm_3::get_xz 方法||  
-|norm_3::get_xzy 方法||  
-|norm_3::get_y 方法||  
-|norm_3::get_yx 方法||  
-|norm_3::get_yxz 方法||  
-|norm_3::get_yz 方法||  
-|norm_3::get_yzx 方法||  
-|norm_3::get_z 方法||  
-|norm_3::get_zx 方法||  
-|norm_3::get_zxy 方法||  
-|norm_3::get_zy 方法||  
-|norm_3::get_zyx 方法||  
-|norm_3::ref_b 方法||  
-|norm_3::ref_g 方法||  
-|norm_3::ref_r 方法||  
-|norm_3::ref_x 方法||  
-|norm_3::ref_y 方法||  
-|norm_3::ref_z 方法||  
-|norm_3::set_x 方法||  
-|norm_3::set_xy 方法||  
-|norm_3::set_xyz 方法||  
-|norm_3::set_xz 方法||  
-|norm_3::set_xzy 方法||  
-|norm_3::set_y 方法||  
-|norm_3::set_yx 方法||  
-|norm_3::set_yxz 方法||  
-|norm_3::set_yz 方法||  
-|norm_3::set_yzx 方法||  
-|norm_3::set_z 方法||  
-|norm_3::set_zx 方法||  
-|norm_3::set_zxy 方法||  
-|norm_3::set_zy 方法||  
-|norm_3::set_zyx 方法||  
+|norm_3::get_x||  
+|norm_3::get_xy||  
+|norm_3::get_xyz||  
+|norm_3::get_xz||  
+|norm_3::get_xzy||  
+|norm_3::get_y||  
+|norm_3::get_yx||  
+|norm_3::get_yxz||  
+|norm_3::get_yz||  
+|norm_3::get_yzx||  
+|norm_3::get_z||  
+|norm_3::get_zx||  
+|norm_3::get_zxy||  
+|norm_3::get_zy||  
+|norm_3::get_zyx||  
+|norm_3:: ref_b||  
+|norm_3:: ref_g||  
+|norm_3:: ref_r||  
+|norm_3:: ref_x||  
+|norm_3:: ref_y||  
+|norm_3:: ref_z||  
+|norm_3::set_x||  
+|norm_3::set_xy||  
+|norm_3::set_xyz||  
+|norm_3::set_xz||  
+|norm_3::set_xzy||  
+|norm_3::set_y||  
+|norm_3::set_yx||  
+|norm_3::set_yxz||  
+|norm_3::set_yz||  
+|norm_3::set_yzx||  
+|norm_3::set_z||  
+|norm_3::set_zx||  
+|norm_3::set_zxy||  
+|norm_3::set_zy||  
+|norm_3::set_zyx||  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|norm_3::operator 運算子||  
-|norm_3::operator-運算子||  
-|norm_3::operator * = 運算子||  
-|norm_3::operator / = 運算子||  
-|norm_3::operator + + 運算子||  
-|norm_3::operator + = 運算子||  
-|norm_3::operator = 運算子||  
-|norm_3::operator-= 運算子||  
+|norm_3::operator-||  
+|norm_3::operator-||  
+|norm_3::operator * =||  
+|norm_3::operator / =||  
+|norm_3::operator + +||  
+|norm_3::operator + =||  
+|norm_3::operator =||  
+|norm_3::operator =||  
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[大小常數](#size)||  
   
@@ -192,36 +192,36 @@ class norm_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|norm_3::b 資料成員||  
-|norm_3::bg 資料成員||  
-|norm_3::bgr 資料成員||  
-|norm_3::br 資料成員||  
-|norm_3::brg 資料成員||  
-|norm_3::g 資料成員||  
-|norm_3::gb 資料成員||  
-|norm_3::gbr 資料成員||  
-|norm_3::gr 資料成員||  
-|norm_3::grb 資料成員||  
-|norm_3::r 資料成員||  
-|norm_3::rb 資料成員||  
-|norm_3::rbg 資料成員||  
-|norm_3::rg 資料成員||  
-|norm_3::rgb 資料成員||  
-|norm_3::x 資料成員||  
-|norm_3::xy 資料成員||  
-|norm_3::xyz 資料成員||  
-|norm_3::xz 資料成員||  
-|norm_3::xzy 資料成員||  
-|norm_3::y 資料成員||  
-|norm_3::yx 資料成員||  
-|norm_3::yxz 資料成員||  
-|norm_3::yz 資料成員||  
-|norm_3::yzx 資料成員||  
-|norm_3::z 資料成員||  
-|norm_3::zx 資料成員||  
-|norm_3::zxy 資料成員||  
-|norm_3::zy 資料成員||  
-|norm_3::zyx 資料成員||  
+|norm_3::b||  
+|norm_3::bg||  
+|norm_3::bgr||  
+|norm_3::br||  
+|norm_3::brg||  
+|norm_3::g||  
+|norm_3::gb||  
+|norm_3::gbr||  
+|norm_3::gr||  
+|norm_3::grb||  
+|norm_3::r||  
+|norm_3::rb||  
+|norm_3::rbg||  
+|norm_3::rg||  
+|norm_3::rgb||  
+|norm_3::x||  
+|norm_3::xy||  
+|norm_3::xyz||  
+|norm_3::xz||  
+|norm_3::xzy||  
+|norm_3::y||  
+|norm_3::yx||  
+|norm_3::yxz||  
+|norm_3::yz||  
+|norm_3::yzx||  
+|norm_3::z||  
+|norm_3::zx||  
+|norm_3::zxy||  
+|norm_3::zy||  
+|norm_3::zyx||  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `norm_3`  
@@ -231,7 +231,7 @@ class norm_3;
   
  **命名空間︰** concurrency:: graphics  
 
-## <a name="a-namectora-norm3-constructor"></a><a name="ctor"></a>norm_3 建構函式
+## <a name="ctor"></a>norm_3 建構函式
 預設建構函式，初始化為 0 的所有項目。  
   
 ## <a name="syntax"></a>語法  
@@ -303,5 +303,5 @@ static const int size = 3;
 ```   
  
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

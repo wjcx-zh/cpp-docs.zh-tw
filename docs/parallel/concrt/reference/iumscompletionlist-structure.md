@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSCompletionList
+- IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList
+- CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 25023c27244669092e0f57fe59bdb190fd2f2afb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 65655e4e03a7b187e0bbadbd576bc088bb57f7c8
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList 結構
@@ -54,7 +56,7 @@ struct IUMSCompletionList;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[Iumscompletionlist:: Getunblocknotifications 方法](#getunblocknotifications)|擷取一連串的`IUMSUnblockNotification`介面代表叫用其相關聯的執行緒 proxy 已解除封鎖，因為上一次這個方法的執行內容。|  
+|[Iumscompletionlist:: Getunblocknotifications](#getunblocknotifications)|擷取一連串的`IUMSUnblockNotification`介面代表叫用其相關聯的執行緒 proxy 已解除封鎖，因為上一次這個方法的執行內容。|  
   
 ## <a name="remarks"></a>備註  
  排程器必須是名符時請小心使用此介面來清除佇列中的完成清單項目之後執行了哪些動作。 項目應該放在排程器的清單中的可執行的內容，並且儘速是普遍可存取。 它是很有可能從佇列中清除的項目具有指定的任意鎖定的擁有權。 排程器可以進行的呼叫來清除佇列項目與那些項目通常能從排程器內的清單上的位置，可能會封鎖任何任意函式呼叫。  
@@ -67,7 +69,7 @@ struct IUMSCompletionList;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namegetunblocknotificationsa--iumscompletionlistgetunblocknotifications-method"></a><a name="getunblocknotifications"></a>Iumscompletionlist:: Getunblocknotifications 方法  
+##  <a name="getunblocknotifications"></a>Iumscompletionlist:: Getunblocknotifications 方法  
  擷取一連串的`IUMSUnblockNotification`介面代表叫用其相關聯的執行緒 proxy 已解除封鎖，因為上一次這個方法的執行內容。  
   
 ```

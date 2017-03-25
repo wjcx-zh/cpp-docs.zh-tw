@@ -9,7 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::reader_writer_lock
+- reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock::scoped_lock
+- CONCRT/concurrency::reader_writer_lock::scoped_lock_read
+- CONCRT/concurrency::reader_writer_lock::reader_writer_lock
+- CONCRT/concurrency::reader_writer_lock::lock
+- CONCRT/concurrency::reader_writer_lock::lock_read
+- CONCRT/concurrency::reader_writer_lock::try_lock
+- CONCRT/concurrency::reader_writer_lock::try_lock_read
+- CONCRT/concurrency::reader_writer_lock::unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +43,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: d5d2fde890b0836621fcd1db5bb87b1933bb2a04
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b5107923baa7d22e6a98c6617a22a883c4d84125
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock 類別
@@ -59,20 +68,20 @@ class reader_writer_lock;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[reader_writer_lock 建構函式](#ctor)|建構新`reader_writer_lock`物件。|  
+|[reader_writer_lock](#ctor)|建構新`reader_writer_lock`物件。|  
 |[~ reader_writer_lock 解構函式](#dtor)|終結`reader_writer_lock`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[lock 方法](#lock)|取得讀取器-寫入器的鎖定做為寫入器。|  
-|[lock_read 方法](#lock_read)|讀取器取得讀取器-寫入器鎖定。 如果寫入器，使用中的讀取器必須等到它們完成。 讀取器只會註冊之鎖定，並等待釋放它的寫入器。|  
-|[try_lock 方法](#try_lock)|嘗試寫入器，以取得讀取器-寫入器鎖定，而不封鎖。|  
-|[try_lock_read 方法](#try_lock_read)|嘗試取得讀取器讀取器-寫入器鎖定，而不會封鎖。|  
-|[unlock 方法](#unlock)|根據使用者鎖定、 讀取或寫入器的讀取器-寫入器鎖定會解除鎖定。|  
+|[lock](#lock)|取得讀取器-寫入器的鎖定做為寫入器。|  
+|[lock_read](#lock_read)|讀取器取得讀取器-寫入器鎖定。 如果寫入器，使用中的讀取器必須等到它們完成。 讀取器只會註冊之鎖定，並等待釋放它的寫入器。|  
+|[try_lock](#try_lock)|嘗試寫入器，以取得讀取器-寫入器鎖定，而不封鎖。|  
+|[try_lock_read](#try_lock_read)|嘗試取得讀取器讀取器-寫入器鎖定，而不會封鎖。|  
+|[unlock](#unlock)|根據使用者鎖定、 讀取或寫入器的讀取器-寫入器鎖定會解除鎖定。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[同步處理資料結構](../../../parallel/concrt/synchronization-data-structures.md)。  
@@ -85,7 +94,7 @@ class reader_writer_lock;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namelocka-lock"></a><a name="lock"></a>鎖定 
+##  <a name="lock"></a>鎖定 
 
  取得讀取器-寫入器的鎖定做為寫入器。  
   
@@ -102,7 +111,7 @@ void lock();
   
  如果鎖定已保留所呼叫的內容， [improper_lock](improper-lock-class.md)擲回例外狀況。  
   
-##  <a name="a-namelockreada-lockread"></a><a name="lock_read"></a>lock_read 
+##  <a name="lock_read"></a>lock_read 
 
  讀取器取得讀取器-寫入器鎖定。 如果寫入器，使用中的讀取器必須等到它們完成。 讀取器只會註冊之鎖定，並等待釋放它的寫入器。  
   
@@ -115,7 +124,7 @@ void lock_read();
   
  如果發生鎖定等候的寫入器，讀取器會等到所有列中的寫入器取得及釋放鎖定。 這種鎖定偏向寫入器，可以使讀取器，連續負載的寫入器匱乏。  
   
-##  <a name="a-namectora-readerwriterlock"></a><a name="ctor"></a>reader_writer_lock 
+##  <a name="ctor"></a>reader_writer_lock 
 
  建構新`reader_writer_lock`物件。  
   
@@ -123,7 +132,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="a-namedtora-readerwriterlock"></a><a name="dtor"></a>~ reader_writer_lock 
+##  <a name="dtor"></a>~ reader_writer_lock 
 
  終結`reader_writer_lock`物件。  
   
@@ -134,13 +143,13 @@ reader_writer_lock();
 ### <a name="remarks"></a>備註  
  預期解構函式執行時，不會再保留鎖定。 允許讀取器的寫入器鎖定與鎖定解構仍保留在未定義的行為結果。  
   
-##  <a name="a-namescopedlockclassa--readerwriterlockscopedlock-class"></a><a name="scoped_lock_class"></a>reader_writer_lock 類別  
+##  <a name="scoped_lock_class"></a>reader_writer_lock 類別  
  例外狀況安全 RAII 包裝函式可以用來取得`reader_writer_lock`成為寫入器鎖定的物件。  
   
 ```
 class scoped_lock;
 ``` 
-## <a name="a-namescopedlockctora-scopedlockscopedlock"></a><a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+## <a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock 
 
 建構`scoped_lock`物件，並取得`reader_writer_lock`物件傳入`_Reader_writer_lock`參數做為寫入器。 如果由另一個執行緒鎖定，這個呼叫會封鎖。  
   
@@ -153,7 +162,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  `reader_writer_lock`成為寫入器取得的物件。  
   
-## <a name="a-namescopedlockdtora-scopedlockscopedlock"></a><a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+## <a name="scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
 
 終結`reader_writer_lock`物件，並釋放其建構函式中提供的鎖定。   
 
@@ -161,18 +170,18 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ~scoped_lock();
 ```  
   
-##  <a name="a-namescopedlockreadclassa--readerwriterlockscopedlockread-class"></a><a name="scoped_lock_read_class"></a>reader_writer_lock 類別  
+##  <a name="scoped_lock_read_class"></a>reader_writer_lock 類別  
  例外狀況安全 RAII 包裝函式可以用來取得`reader_writer_lock`讀取器鎖定的物件。  
   
 ```
 class scoped_lock_read;
 ```  
   
-##  <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a>try_lock 
 
  嘗試寫入器，以取得讀取器-寫入器鎖定，而不封鎖。  
 
-## <a name="a-namescopedlockreadctora-scopedlockreadscopedlockread"></a><a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
+## <a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read 
 
 建構`scoped_lock_read`物件，並取得`reader_writer_lock`物件傳入`_Reader_writer_lock`讀取器的參數。 如果由另一個執行緒成為寫入器鎖定，或有擱置的寫入器，這個呼叫會封鎖。  
   
@@ -191,7 +200,7 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 ~scoped_lock_read();
 ```  
   
-## <a name="a-nametrylocka-trylock"></a><a name="try_lock"></a>try_lock 
+## <a name="try_lock"></a>try_lock 
 
 ```
 bool try_lock();
@@ -200,7 +209,7 @@ bool try_lock();
 ### <a name="return-value"></a>傳回值  
  如果已取得鎖定，值`true`; 否則值`false`。  
   
-##  <a name="a-nametrylockreada-trylockread"></a><a name="try_lock_read"></a>try_lock_read 
+##  <a name="try_lock_read"></a>try_lock_read 
 
  嘗試取得讀取器讀取器-寫入器鎖定，而不會封鎖。  
   
@@ -211,7 +220,7 @@ bool try_lock_read();
 ### <a name="return-value"></a>傳回值  
  如果已取得鎖定，值`true`; 否則值`false`。  
   
-##  <a name="a-nameunlocka-unlock"></a><a name="unlock"></a>解除鎖定 
+##  <a name="unlock"></a>解除鎖定 
 
  根據使用者鎖定、 讀取或寫入器的讀取器-寫入器鎖定會解除鎖定。  
   

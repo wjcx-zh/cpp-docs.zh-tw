@@ -9,7 +9,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency::array
+- array
+- AMP/array
+- AMP/Concurrency::array::array
+- AMP/Concurrency::array::copy_to
+- AMP/Concurrency::array::data
+- AMP/Concurrency::array::get_accelerator_view
+- AMP/Concurrency::array::get_associated_accelerator_view
+- AMP/Concurrency::array::get_cpu_access_type
+- AMP/Concurrency::array::get_extent
+- AMP/Concurrency::array::reinterpret_as
+- AMP/Concurrency::array::section
+- AMP/Concurrency::array::view_as
+- AMP/Concurrency::array::rank
+- AMP/Concurrency::array::accelerator_view
+- AMP/Concurrency::array::associated_accelerator_view
+- AMP/Concurrency::array::cpu_access_type
+- AMP/Concurrency::array::extent
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +50,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c1708bfedc35076f1d10f6c4dd128bb428a7855e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 470918d62357a8dd463db35b4d929e7ec5c2f251
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="array-class"></a>array 類別
@@ -60,7 +76,7 @@ friend class array;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[陣列建構函式](#ctor)|初始化 `array` 類別的新執行個體。|  
 |[~ array 解構函式](#dtor)|終結`array`物件。|  
@@ -68,24 +84,24 @@ friend class array;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[copy_to 方法](#copy_to)|將陣列的內容複製到另一個陣列。|  
-|[資料方法](#data)|傳回陣列的未經處理資料的指標。|  
-|[get_accelerator_view 方法](#get_accelerator_view)|傳回[accelerator_view](accelerator-view-class.md)物件，代表陣列的配置位置。 這個屬性可以只在 CPU 上存取。|  
-|[get_associated_accelerator_view 方法](#get_associated_accelerator_view)|取得第二個[accelerator_view](accelerator-view-class.md)臨時的建構函式呼叫來具現化時，做為參數傳遞的物件`array`物件。|  
-|[get_cpu_access_type 方法](#get_cpu_access_type)|傳回[access_type](concurrency-namespace-enums-amp.md#access_type)的陣列。 這個方法可以只在 CPU 上存取。|  
-|[get_extent 方法](#get_extent)|傳回[範圍](extent-class.md)物件的陣列。|  
-|[reinterpret_as 方法](#reinterpret_as)|傳回一維陣列，包含在所有項目`array`物件。|  
-|[區段方法](#section)|傳回的子區段`array`物件在指定的來源，並選擇性地，具有指定的範圍。|  
-|[view_as 方法](#view_as)|傳回[array_view](array-view-class.md)建構從物件`array`物件。|  
+|[copy_to](#copy_to)|將陣列的內容複製到另一個陣列。|  
+|[data](#data)|傳回陣列的未經處理資料的指標。|  
+|[get_accelerator_view](#get_accelerator_view)|傳回[accelerator_view](accelerator-view-class.md)物件，代表陣列的配置位置。 這個屬性可以只在 CPU 上存取。|  
+|[get_associated_accelerator_view](#get_associated_accelerator_view)|取得第二個[accelerator_view](accelerator-view-class.md)臨時的建構函式呼叫來具現化時，做為參數傳遞的物件`array`物件。|  
+|[get_cpu_access_type](#get_cpu_access_type)|傳回[access_type](concurrency-namespace-enums-amp.md#access_type)的陣列。 這個方法可以只在 CPU 上存取。|  
+|[get_extent](#get_extent)|傳回[範圍](extent-class.md)物件的陣列。|  
+|[reinterpret_as](#reinterpret_as)|傳回一維陣列，包含在所有項目`array`物件。|  
+|[section](#section)|傳回的子區段`array`物件在指定的來源，並選擇性地，具有指定的範圍。|  
+|[view_as](#view_as)|傳回[array_view](array-view-class.md)建構從物件`array`物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[運算子 std:: vector&lt;value_type&gt;運算子](#operator_vec)|使用`copy(*this, vector)`來隱含地將陣列轉換成 std::[向量](../../../standard-library/vector-class.md)物件。|  
-|[operator （) 運算子](#operator_call)|傳回參數所指定的項目值。|  
-|[operator [] 運算子](#operator_at)|傳回指定索引處的項目。|  
-|[運算子 = 運算子](#operator_eq)|將指定的內容複製`array`到這裡的物件。|  
+|[運算子 std:: vector&lt;value_type&gt;](#operator_vec)|使用`copy(*this, vector)`來隱含地將陣列轉換成 std::[向量](../../../standard-library/vector-class.md)物件。|  
+|[operator （)](#operator_call)|傳回參數所指定的項目值。|  
+|[operator]](#operator_at)|傳回指定索引處的項目。|  
+|[operator=](#operator_eq)|將指定的內容複製`array`到這裡的物件。|  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -95,12 +111,12 @@ friend class array;
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[accelerator_view 資料成員](#accelerator_view)|取得[accelerator_view](accelerator-view-class.md)物件，代表陣列的配置位置。 這個屬性可以只在 CPU 上存取。|  
-|[associated_accelerator_view 資料成員](#associated_accelerator_view)|取得第二個[accelerator_view](accelerator-view-class.md)臨時的建構函式呼叫來具現化時，做為參數傳遞的物件`array`物件。|  
-|[cpu_access_type 資料成員](#cpu_access_type)|取得[access_type](concurrency-namespace-enums-amp.md#access_type)表示 CPU 存取陣列的儲存體的方式。|  
-|[extent 資料成員](#extent)|取得定義陣列形狀的程度。|  
+|[accelerator_view](#accelerator_view)|取得[accelerator_view](accelerator-view-class.md)物件，代表陣列的配置位置。 這個屬性可以只在 CPU 上存取。|  
+|[associated_accelerator_view](#associated_accelerator_view)|取得第二個[accelerator_view](accelerator-view-class.md)臨時的建構函式呼叫來具現化時，做為參數傳遞的物件`array`物件。|  
+|[cpu_access_type](#cpu_access_type)|取得[access_type](concurrency-namespace-enums-amp.md#access_type)表示 CPU 存取陣列的儲存體的方式。|  
+|[extent](#extent)|取得定義陣列形狀的程度。|  
   
 ## <a name="remarks"></a>備註  
  型別`array<T,N>`代表密集及一般 （不不規則） *N*-位於特定的位置，例如快速鍵或 CPU 的二維陣列。 陣列中元素的資料型別是`T`，該值必須與目標加速器相容的型別。 雖然順位、 `N`，(的陣列以靜態方式判斷類型的一部分，陣列的範圍取決於執行階段，並使用類別來表示`extent<N>`。  
@@ -127,7 +143,7 @@ friend class array;
   
  **命名空間：** 並行  
   
-##  <a name="a-namedtora-array"></a><a name="dtor"></a>~ 陣列 
+##  <a name="dtor"></a>~ 陣列 
 
  終結`array`物件。  
   
@@ -135,7 +151,7 @@ friend class array;
 ~array() restrict(cpu);
 ```  
   
-##  <a name="a-nameacceleratorviewa-acceleratorview"></a><a name="accelerator_view"></a>accelerator_view 
+##  <a name="accelerator_view"></a>accelerator_view 
 
  取得[accelerator_view](accelerator-view-class.md)物件，代表陣列的配置位置。 這個屬性可以只在 CPU 上存取。  
   
@@ -143,7 +159,7 @@ friend class array;
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;  
 ```  
   
-##  <a name="a-namectora-array"></a><a name="ctor"></a>陣列 
+##  <a name="ctor"></a>陣列 
 
  初始化的新執行個體[array 類別](array-class.md)。 沒有預設建構函式的`array<T,N>`。 只有在 CPU 上執行所有建構函式。 它們無法 Direct3D 目標上執行。  
   
@@ -446,7 +462,7 @@ array(array&& _Other) restrict(cpu);
  `value_type`  
  複製的項目資料型別。  
   
-##  <a name="a-nameassociatedacceleratorviewa-associatedacceleratorview"></a><a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
 
  取得第二個[accelerator_view](accelerator-view-class.md)臨時的建構函式呼叫來具現化時，做為參數傳遞的物件`array`物件。  
   
@@ -454,7 +470,7 @@ array(array&& _Other) restrict(cpu);
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="a-namecopytoa-copyto"></a><a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a>copy_to 
 
  複製的內容`array`到另一個`array`。  
   
@@ -470,7 +486,7 @@ void copy_to(
  `_Dest`  
  [Array_view](array-view-class.md)複製到的物件。  
   
-##  <a name="a-namecpuaccesstypea-cpuaccesstype"></a><a name="cpu_access_type"></a>cpu_access_type 
+##  <a name="cpu_access_type"></a>cpu_access_type 
 
  取得這個陣列所允許的 CPU access_type。  
   
@@ -478,7 +494,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
 ```  
   
-##  <a name="a-namedataa-data"></a><a name="data"></a>資料 
+##  <a name="data"></a>資料 
 
  傳回的未經處理資料的指標`array`。  
   
@@ -491,7 +507,7 @@ const value_type* data() const restrict(amp, cpu);
 ### <a name="return-value"></a>傳回值  
  未經處理資料的陣列指標。  
   
-##  <a name="a-nameextenta-extent"></a><a name="extent"></a>範圍 
+##  <a name="extent"></a>範圍 
 
  取得[範圍](extent-class.md)定義的圖形物件`array`。  
   
@@ -499,7 +515,7 @@ const value_type* data() const restrict(amp, cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="a-namegetacceleratorviewa-getacceleratorview"></a><a name="get_accelerator_view"></a>get_accelerator_view 
+##  <a name="get_accelerator_view"></a>get_accelerator_view 
 
  傳回[accelerator_view](accelerator-view-class.md)物件代表的位置，其中`array`物件配置。 這個屬性可以只在 CPU 上存取。  
   
@@ -510,7 +526,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
 ### <a name="return-value"></a>傳回值  
  `accelerator_view`物件代表的位置，其中`array`物件配置。  
   
-##  <a name="a-namegetassociatedacceleratorviewa-getassociatedacceleratorview"></a><a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
 
  取得第二個[accelerator_view](accelerator-view-class.md)臨時的建構函式呼叫來具現化時，做為參數傳遞的物件`array`物件。  
   
@@ -521,7 +537,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const ;
 ### <a name="return-value"></a>傳回值  
  第二個[accelerator_view](accelerator-view-class.md)物件傳遞至開發用的建構函式。  
   
-##  <a name="a-namegetcpuaccesstypea-getcpuaccesstype"></a><a name="get_cpu_access_type"></a>get_cpu_access_type 
+##  <a name="get_cpu_access_type"></a>get_cpu_access_type 
 
  允許為這個陣列傳回 CPU access_type。  
   
@@ -531,7 +547,7 @@ access_type get_cpu_access_type() const restrict(cpu);
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="a-namegetextenta-getextent"></a><a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a>get_extent 
 
  傳回[範圍](extent-class.md)物件`array`。  
   
@@ -542,7 +558,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  `extent`物件`array`。  
   
-##  <a name="a-nameoperatorveca-operator-stdvectorltvaluetypegt"></a><a name="operator_vec"></a>運算子 std:: vector&lt;value_type&gt; 
+##  <a name="operator_vec"></a>運算子 std:: vector&lt;value_type&gt; 
 
  使用`copy(*this, vector)`來隱含地轉換成 std:: vector 物件的陣列。  
   
@@ -557,7 +573,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ### <a name="return-value"></a>傳回值  
  型別的物件`vector<T>`，其中包含一份陣列中所包含的資料。  
   
-##  <a name="a-nameoperatorcalla-operator"></a><a name="operator_call"></a>operator （) 
+##  <a name="operator_call"></a>operator （) 
 
  傳回參數所指定的項目值。  
   
@@ -598,7 +614,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>傳回值  
  參數所指定的項目值。  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a>operator] 
 
  傳回指定索引處的項目。  
   
@@ -623,7 +639,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>傳回值  
  所指定索引處的項目。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a>運算子 = 
 
  將指定的內容複製`array`物件。  
   
@@ -646,14 +662,14 @@ array& operator= (
 ### <a name="return-value"></a>傳回值  
  參考`array`物件。  
   
-##  <a name="a-nameranka-rank"></a><a name="rank"></a>陣序規範 
+##  <a name="rank"></a>陣序規範 
 
  儲存的陣序規範`array`。  
   
 ```  
 static const int rank = _Rank;  
 ```  
-## <a name="a-namereinterpretasa-reinterpretas"></a><a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a>reinterpret_as 
 
 轉換到一維的 array_view，或者可能會有不同的值類型與來源陣列的陣列。
 
@@ -687,7 +703,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```  
   
-##  <a name="a-namesectiona-section"></a><a name="section"></a>區段 
+##  <a name="section"></a>區段 
 
  傳回的子區段`array`物件在指定的來源，並選擇性地，具有指定的範圍。  
   
@@ -789,7 +805,7 @@ array_view<const value_type,3> section(
 ### <a name="return-value"></a>傳回值  
  傳回的子區段`array`物件在指定的來源，並選擇性地，具有指定的範圍。 只有當`index`指定的物件，子區段包含具有索引是大於索引中的項目相關聯的方格中所有項目`index`物件。  
   
-##  <a name="a-nameviewasa-viewas"></a><a name="view_as"></a>view_as 
+##  <a name="view_as"></a>view_as 
 
  轉換為這個陣列[array_view](array-view-class.md)的不同次序。  
   
@@ -818,5 +834,5 @@ array_view<const value_type,_New_rank> view_as(
  [Array_view](array-view-class.md)建構物件。  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency 命名空間 (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

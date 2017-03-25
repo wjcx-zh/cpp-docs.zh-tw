@@ -8,6 +8,18 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- texture_view
+- AMP_GRAPHICS/texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::texture_view
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_alpha
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_blue
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_green
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::gather_red
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::get
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::set
+- AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
@@ -30,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d3206aea6a6f1e3033e157b3b99a6b3486cb2ac
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4896b3ee55a5955c33e1c2652eb73851e4ec5a64
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="textureview-class"></a>texture_view 類別
@@ -41,23 +53,16 @@ ms.lasthandoff: 02/24/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-template <
-    typename value_type,  
-    int _Rank  
->  
+template<typename value_type,int _Rank>  
 class texture_view;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view 
+   : public details::_Texture_base<value_type, _Rank>;  
  
-template <
-    typename value_type,  
-    int _Rank  
->  
-class texture_view<const value_type, _Rank> : public details::_Texture_base<value_type, _Rank>;  
+template<typename value_type, int _Rank>  
+class texture_view<const value_type, _Rank> 
+   : public details::_Texture_base<value_type, _Rank>;  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -71,11 +76,11 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`value_type`|紋理彙總中的項目類型。|  
 |`coordinates_type`|用來指定在材質座標的型別`texture_view`— 也就是`short_vector`具有相同的陣序做為具有實值型別相關聯紋理`float`。|  
-|`gather_return_type`|傳回的型別用於收集作業 — 也就是次序 4`short_vector`保存的四個同質色彩元件收集取樣的四個材質值。|  
+|`gather_return_type`|傳回的型別用於收集作業 — 也就是次序 4`short_vector`存放四個同質色彩元件收集取樣的四個材質值。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -86,29 +91,29 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[gather_alpha 方法](#gather_alpha)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的 alpha (w) 元件。|  
-|[gather_blue 方法](#gather_blue)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的藍色 (z) 元件。|  
-|[gather_green 方法](#gather_green)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的綠色 (y) 元件。|  
-|[gather_red 方法](#gather_red)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的紅色 x 元件。|  
-|[get 方法](#get)|多載。 依索引取得項目值。|  
-|[範例方法](#sample)|多載。 使用指定的取樣的組態範例指定的座標和層級的詳細資料的材質。|  
-|[set 方法](#set)|依索引設定項目的值。|  
+|[gather_alpha](#gather_alpha)|多載。 使用指定的取樣組態範例指定座標上的紋理，並傳回四個取樣材質的 alpha (w) 元件。|  
+|[gather_blue](#gather_blue)|多載。 使用指定的取樣組態範例指定座標上的紋理，並傳回四個取樣材質的藍色 (z) 元件。|  
+|[gather_green](#gather_green)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的綠色 (y) 元件。|  
+|[gather_red](#gather_red)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的紅色 x 元件。|  
+|[get](#get)|多載。 依索引取得項目值。|  
+|[範例](#sample)|多載。 使用指定的取樣的組態範例指定的座標和層級的詳細資料的材質。|  
+|[set](#set)|依索引設定項目的值。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[operator （) 運算子](#operator__)|多載。 依索引取得項目值。|  
-|[operator [] 運算子](#operator_at)|多載。 依索引取得項目值。|  
-|[運算子 = 運算子](#operator_eq)|多載。 指派運算子。|  
+|[operator （)](#operator_call)|多載。 依索引取得項目值。|  
+|[operator]](#operator_at)|多載。 依索引取得項目值。|  
+|[operator=](#operator_eq)|多載。 指派運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[value_type 資料成員](#value_type)|實值型別之項目的`texture_view`。|  
+|[value_type](#value_type)|實值型別之項目的`texture_view`。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `_Texture_base`  
@@ -120,7 +125,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
   
  **命名空間︰** concurrency:: graphics  
   
-##  <a name="a-namedtora-textureview"></a><a name="dtor"></a>~ texture_view 
+##  <a name="dtor"></a>~ texture_view 
 
  終結`texture_view`執行個體。  
   
@@ -128,7 +133,7 @@ class texture_view<const value_type, _Rank> : public details::_Texture_base<valu
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="a-namectora-textureview"></a><a name="ctor"></a>texture_view 
+##  <a name="ctor"></a>texture_view 
 
  建構`texture_view`執行個體。  
   
@@ -190,7 +195,7 @@ texture_view(// [7] copy constructor
  `_Mip_levels`  
  可透過存取 mipmap 層次數目`texture_view`。  
   
-##  <a name="a-namegatherreda-gatherred"></a><a name="gather_red"></a>gather_red 
+##  <a name="gather_red"></a>gather_red 
 
  使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的紅色 x 元件。  
   
@@ -220,7 +225,7 @@ const gather_return_type gather_red(
 ### <a name="return-value"></a>傳回值  
  包含 4 的紅色 (x) 元件的陣序規範 4 短向量取樣材質的值。  
   
-##  <a name="a-namegathergreena-gathergreen"></a><a name="gather_green"></a>gather_green 
+##  <a name="gather_green"></a>gather_green 
 
  使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的綠色 (y) 元件。  
   
@@ -250,9 +255,9 @@ const gather_return_type gather_green(
 ### <a name="return-value"></a>傳回值  
  包含 4 的綠色 (y) 元件的陣序規範 4 短向量取樣材質的值。  
   
-##  <a name="a-namegatherbluea-gatherblue"></a><a name="gather_blue"></a>gather_blue 
+##  <a name="gather_blue"></a>gather_blue 
 
- 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的藍色 (z) 元件。  
+ 使用指定的取樣組態範例指定座標上的紋理，並傳回四個取樣材質的藍色 (z) 元件。  
   
 ```  
 const gather_return_type gather_blue(
@@ -280,9 +285,9 @@ const gather_return_type gather_blue(
 ### <a name="return-value"></a>傳回值  
  包含 4 的紅色 (x) 元件的陣序規範 4 短向量取樣材質的值。  
   
-##  <a name="a-namegatheralphaa-gatheralpha"></a><a name="gather_alpha"></a>gather_alpha 
+##  <a name="gather_alpha"></a>gather_alpha 
 
- 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的 alpha (w) 元件。  
+ 使用指定的取樣組態範例指定座標上的紋理，並傳回四個取樣材質的 alpha (w) 元件。  
   
 ```  
 const gather_return_type gather_alpha(
@@ -310,7 +315,7 @@ const gather_return_type gather_alpha(
 ### <a name="return-value"></a>傳回值  
  陣序規範 4 短向量包含 alpha (w) 元件的 4 取樣材質的值。  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>取得 
+##  <a name="get"></a>取得 
 
  取得指定索引處的元素的值。  
   
@@ -334,7 +339,7 @@ value_type get(
 ### <a name="return-value"></a>傳回值  
  項目的值。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a>運算子 = 
 
  指定所指定的相同紋理檢視`texture_view`至此`texture_view`執行個體。  
   
@@ -362,7 +367,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>傳回值  
  參考`texture_view`執行個體。  
   
-##  <a name="a-nameoperatorata-operator"></a><a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a>operator] 
 
  索引所傳回的項目值。  
   
@@ -389,7 +394,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>傳回值  
  項目值以做為索引`_Index`。  
   
-##  <a name="a-nameoperatora-operator"></a><a name="operator__"></a>operator （) 
+##  <a name="operator_call"></a>operator （) 
 
  索引所傳回的項目值。  
   
@@ -447,7 +452,7 @@ value_type operator() (
 ### <a name="return-value"></a>傳回值  
  項目值以做為索引`_Index`。  
   
-##  <a name="a-namesamplea-sample"></a><a name="sample"></a>範例 
+##  <a name="sample"></a>範例 
 
  使用指定的取樣的組態範例指定的座標和層級的詳細資料的材質。  
   
@@ -486,7 +491,7 @@ value_type sample(
 ### <a name="return-value"></a>傳回值  
  插補的範例值。  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>設定 
+##  <a name="set"></a>設定 
 
  為指定值的指定索引處設定項目的值。  
   
@@ -503,7 +508,7 @@ void set(
  `value`  
  若要設定項目的值。  
   
-##  <a name="a-namevaluetypea-valuetype"></a><a name="value_type"></a>value_type 
+##  <a name="value_type"></a>value_type 
 
  Texture_view 元素的值型別。  
   
@@ -512,5 +517,5 @@ typedef typename const value_type value_type;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

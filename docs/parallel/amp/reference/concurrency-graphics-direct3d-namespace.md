@@ -33,9 +33,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: a17faa4f0d6bcc29c9d249fd99dd3a5df3b29884
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f842080ce65d4c7a378a9c16ff91b24ae4f17a07
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d 命名空間
@@ -51,13 +51,13 @@ namespace direct3d;
   
 ### <a name="functions"></a>函式  
   
-|名稱<br /><br /> 說明|  
+|名稱<br /><br /> 描述|  
 |--------------------------|  
-|[get_sampler 函式](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> 取得指定加速器上的 Direct3D 取樣器狀態介面檢視代表指定的取樣器物件。|  
-|[get_texture 函式](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> 取得指定基礎 Direct3D 紋理介面[紋理](texture-class.md)物件。|  
-|[make_sampler 函式](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> 建立樣本中，從 Direct3D 取樣器狀態的介面指標。|  
-|[make_texture 函式](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> 建立[紋理](texture-class.md)物件使用指定的參數。|  
-|[msad4 函式](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> 將 4 位元組參考值取值並且 8 個位元組的來源值的比較，並累積 4 加總的向量。|  
+|[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> 取得指定加速器上的 Direct3D 取樣器狀態介面檢視代表指定的取樣器物件。|  
+|[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> 取得指定基礎 Direct3D 紋理介面[紋理](texture-class.md)物件。|  
+|[make_sampler](concurrency-graphics-direct3d-namespace-functions.md#make_sampler)<br /><br /> 建立樣本中，從 Direct3D 取樣器狀態的介面指標。|  
+|[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)<br /><br /> 建立[紋理](texture-class.md)物件使用指定的參數。|  
+|[msad4](concurrency-graphics-direct3d-namespace-functions.md#msad4)<br /><br /> 將 4 位元組參考值取值並且 8 個位元組的來源值的比較，並累積 4 加總的向量。|  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** amp_graphics.h  
@@ -65,5 +65,5 @@ namespace direct3d;
  **命名空間︰** concurrency:: graphics  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

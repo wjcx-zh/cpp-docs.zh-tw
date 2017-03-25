@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionResource
+- IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::CurrentSubscriptionLevel
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
+- CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 530fd40409a08be6ae13ad604deb5b85989b2964
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fa3c65780ac9e001e6f6b8a015dc7f70df47181f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 結構
@@ -52,12 +57,12 @@ struct IExecutionResource;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[Iexecutionresource:: Currentsubscriptionlevel 方法](#currentsubscriptionlevel)|傳回已啟動的虛擬處理器數目根目錄和訂閱目前與這個執行資源所表示的基礎硬體執行緒相關聯的外部執行緒。|  
-|[Iexecutionresource:: Getexecutionresourceid 方法](#getexecutionresourceid)|傳回表示這個執行資源的硬體執行緒的唯一識別碼。|  
-|[Iexecutionresource:: Getnodeid 方法](#getnodeid)|傳回這個執行資源所屬的處理器節點的唯一識別碼。|  
-|[Iexecutionresource:: Remove 方法](#remove)|傳回這個執行資源的資源管理員。|  
+|[Iexecutionresource:: Currentsubscriptionlevel](#currentsubscriptionlevel)|傳回已啟動的虛擬處理器數目根目錄和訂閱目前與這個執行資源所表示的基礎硬體執行緒相關聯的外部執行緒。|  
+|[Iexecutionresource:: Getexecutionresourceid](#getexecutionresourceid)|傳回表示這個執行資源的硬體執行緒的唯一識別碼。|  
+|[Iexecutionresource:: Getnodeid](#getnodeid)|傳回這個執行資源所屬的處理器節點的唯一識別碼。|  
+|[Iexecutionresource:: Remove](#remove)|傳回這個執行資源的資源管理員。|  
   
 ## <a name="remarks"></a>備註  
  執行資源可供單獨或相關聯的虛擬處理器根。 您的應用程式中的執行緒建立執行緒的訂閱時，會建立獨立執行資源。 方法[ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread)和[ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)建立執行緒的訂閱，並傳回`IExecutionResource`介面代表訂用帳戶。 建立執行緒訂閱就能夠通知資源管理員之給定的執行緒要參與工作排入排程器，以及資源管理員會指派給排程器的虛擬處理器根。 資源管理員使用的資訊來避免傳承硬體執行緒，它可以。  
@@ -70,7 +75,7 @@ struct IExecutionResource;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namecurrentsubscriptionlevela--iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>Iexecutionresource:: Currentsubscriptionlevel 方法  
+##  <a name="currentsubscriptionlevel"></a>Iexecutionresource:: Currentsubscriptionlevel 方法  
  傳回已啟動的虛擬處理器數目根目錄和訂閱目前與這個執行資源所表示的基礎硬體執行緒相關聯的外部執行緒。  
   
 ```
@@ -89,7 +94,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  資源管理員會使用訂閱層級的資訊做為其中一個來判斷排程器之間移動資源的方式。  
   
-##  <a name="a-namegetexecutionresourceida--iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>Iexecutionresource:: Getexecutionresourceid 方法  
+##  <a name="getexecutionresourceid"></a>Iexecutionresource:: Getexecutionresourceid 方法  
  傳回表示這個執行資源的硬體執行緒的唯一識別碼。  
   
 ```
@@ -102,7 +107,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>備註  
  每個硬體執行緒會由並行執行階段指派的唯一識別碼。 如果有多個執行資源相關聯的硬體執行緒，它們會都相同的執行資源識別碼。  
   
-##  <a name="a-namegetnodeida--iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>Iexecutionresource:: Getnodeid 方法  
+##  <a name="getnodeid"></a>Iexecutionresource:: Getnodeid 方法  
  傳回這個執行資源所屬的處理器節點的唯一識別碼。  
   
 ```
@@ -117,7 +122,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  您可以從函式取得的節點數目[GetProcessorNodeCount](concurrency-namespace-functions.md)。  
   
-##  <a name="a-nameremovea--iexecutionresourceremove-method"></a><a name="remove"></a>Iexecutionresource:: Remove 方法  
+##  <a name="remove"></a>Iexecutionresource:: Remove 方法  
  傳回這個執行資源的資源管理員。  
   
 ```

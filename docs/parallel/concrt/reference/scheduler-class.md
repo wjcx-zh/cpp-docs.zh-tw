@@ -9,7 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::Scheduler
+- Scheduler
+- CONCRT/concurrency::Scheduler
+- CONCRT/concurrency::Scheduler::Scheduler
+- CONCRT/concurrency::Scheduler::Attach
+- CONCRT/concurrency::Scheduler::Create
+- CONCRT/concurrency::Scheduler::CreateScheduleGroup
+- CONCRT/concurrency::Scheduler::GetNumberOfVirtualProcessors
+- CONCRT/concurrency::Scheduler::GetPolicy
+- CONCRT/concurrency::Scheduler::Id
+- CONCRT/concurrency::Scheduler::IsAvailableLocation
+- CONCRT/concurrency::Scheduler::Reference
+- CONCRT/concurrency::Scheduler::RegisterShutdownEvent
+- CONCRT/concurrency::Scheduler::Release
+- CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
+- CONCRT/concurrency::Scheduler::ScheduleTask
+- CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ea4de856528305020e8b082da3a55fcd27df3a64
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: cc39a524e9a65aeab0c84fb43f5b38ddd892923e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="scheduler-class"></a>Scheduler 類別
@@ -54,26 +69,26 @@ class Scheduler;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[排程器建構函式](#ctor)|物件的`Scheduler`類別可以僅使用 factory 方法建立限或隱含的方式。|  
+|[排程器](#ctor)|物件的`Scheduler`類別可以僅使用 factory 方法建立限或隱含的方式。|  
 |[~ Scheduler 解構函式](#dtor)|物件的`Scheduler`類別以隱含方式終結時就不再存在於所有外部參考。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[Attach 方法](#attach)|將排程附加至呼叫的內容。 這個方法傳回之後，呼叫的內容由排程器和排程器會變成目前的排程器。|  
-|[Create 方法](#create)|建立新的排程器所描述的行為`_Policy`參數，在排程器，將初始的參考，並傳回的指標。|  
-|[CreateScheduleGroup 方法](#createschedulegroup)|多載。 建立新的排程群組，則排程器內。 接受參數的版本`_Placement`會變成優先執行在該參數所指定的位置建立新的排程群組中的工作。|  
-|[GetNumberOfVirtualProcessors 方法](#getnumberofvirtualprocessors)|排程器會傳回目前的虛擬處理器數目。|  
-|[GetPolicy 方法](#getpolicy)|傳回一份排程器所建立的原則。|  
-|[Id 方法](#id)|排程器傳回的唯一識別碼。|  
-|[IsAvailableLocation 方法](#isavailablelocation)|判斷某一特定的位置是否可在排程器。|  
-|[Reference 方法](#reference)|遞增排程器的參考計數。|  
-|[RegisterShutdownEvent 方法](#registershutdownevent)|Windows 事件的控制代碼傳的原因`_Event`收到信號時，排程器關閉並終結本身的參數。 此事件收到信號時，所有之前排程器已排定的工作已完成。 透過這個方法可以註冊多個關機事件。|  
-|[Release 方法](#release)|遞減排程器的參考計數。|  
-|[ResetDefaultSchedulerPolicy 方法](#resetdefaultschedulerpolicy)|將預設排程器原則重設為執行階段預設值。 下一次建立預設排程器時，它會使用執行階段的預設原則設定。|  
-|[ScheduleTask 方法](#scheduletask)|多載。 排程的輕量工作排程器內。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。|  
-|[SetDefaultSchedulerPolicy 方法](#setdefaultschedulerpolicy)|可讓使用者定義原則，用來建立預設排程器。 沒有預設排程器存在於處理程序時，才可以呼叫這個方法。 設定預設原則後，就會生效，直到下一步為有效的呼叫`SetDefaultSchedulerPolicy`或[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)方法。|  
+|[Attach](#attach)|將排程附加至呼叫的內容。 這個方法傳回之後，呼叫的內容由排程器和排程器會變成目前的排程器。|  
+|[建立](#create)|建立新的排程器所描述的行為`_Policy`參數，在排程器，將初始的參考，並傳回的指標。|  
+|[CreateScheduleGroup](#createschedulegroup)|多載。 建立新的排程群組，則排程器內。 接受參數的版本`_Placement`會變成優先執行在該參數所指定的位置建立新的排程群組中的工作。|  
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|排程器會傳回目前的虛擬處理器數目。|  
+|[GetPolicy](#getpolicy)|傳回一份排程器所建立的原則。|  
+|[識別碼](#id)|排程器傳回的唯一識別碼。|  
+|[IsAvailableLocation](#isavailablelocation)|判斷某一特定的位置是否可在排程器。|  
+|[參考](#reference)|遞增排程器的參考計數。|  
+|[RegisterShutdownEvent](#registershutdownevent)|Windows 事件的控制代碼傳的原因`_Event`收到信號時，排程器關閉並終結本身的參數。 此事件收到信號時，所有之前排程器已排定的工作已完成。 透過這個方法可以註冊多個關機事件。|  
+|[發行](#release)|遞減排程器的參考計數。|  
+|[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|將預設排程器原則重設為執行階段預設值。 下一次建立預設排程器時，它會使用執行階段的預設原則設定。|  
+|[ScheduleTask](#scheduletask)|多載。 排程的輕量工作排程器內。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。|  
+|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|可讓使用者定義原則，用來建立預設排程器。 沒有預設排程器存在於處理程序時，才可以呼叫這個方法。 設定預設原則後，就會生效，直到下一步為有效的呼叫`SetDefaultSchedulerPolicy`或[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)方法。|  
   
 ## <a name="remarks"></a>備註  
  並行執行階段排程器會使用對應至作業系統的執行內容，例如執行緒的執行內容，來執行工作排入佇列，您的應用程式。 在任何時間，排程器的並行處理等級相當於授與資源管理員的虛擬處理器數目。 虛擬處理器是抽象的處理序的資源和對應至基礎系統的硬體執行緒。 虛擬處理器可以執行單一排程器內容在指定的時間。  
@@ -88,7 +103,7 @@ class Scheduler;
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameattacha-attach"></a><a name="attach"></a>附加 
+##  <a name="attach"></a>附加 
 
  將排程附加至呼叫的內容。 這個方法傳回之後，呼叫的內容由排程器和排程器會變成目前的排程器。  
   
@@ -105,7 +120,7 @@ virtual void Attach() = 0;
   
  這個方法會擲回[improper_scheduler_attach](improper-scheduler-attach-class.md)這個排程器目前的排程器呼叫內容的例外狀況。  
   
-##  <a name="a-namecreatea-create"></a><a name="create"></a>建立 
+##  <a name="create"></a>建立 
 
  建立新的排程器所描述的行為`_Policy`參數，在排程器，將初始的參考，並傳回的指標。  
   
@@ -127,7 +142,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
   
  這個方法可以擲回例外狀況，包括各種[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)和[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)。  
   
-##  <a name="a-namecreateschedulegroupa-createschedulegroup"></a><a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
  建立新的排程群組，則排程器內。 接受參數的版本`_Placement`會變成優先執行在該參數所指定的位置建立新的排程群組中的工作。  
   
@@ -149,7 +164,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
   
  請注意，是否您明確建立此排程器，您必須釋放排程群組，然後再發行您的參考，排程器上的所有參考。  
   
-##  <a name="a-namegetnumberofvirtualprocessorsa-getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
  排程器會傳回目前的虛擬處理器數目。  
   
@@ -160,7 +175,7 @@ virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ### <a name="return-value"></a>傳回值  
  目前的排程器的虛擬處理器數目。  
   
-##  <a name="a-namegetpolicya-getpolicy"></a><a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a>GetPolicy 
 
  傳回一份排程器所建立的原則。  
   
@@ -171,7 +186,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>傳回值  
  排程器用來建立原則的複本。  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>識別碼 
+##  <a name="id"></a>識別碼 
 
  排程器傳回的唯一識別碼。  
   
@@ -182,7 +197,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>傳回值  
  排程器的唯一識別碼。  
   
-##  <a name="a-nameisavailablelocationa-isavailablelocation"></a><a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a>IsAvailableLocation 
 
  判斷某一特定的位置是否可在排程器。  
   
@@ -200,7 +215,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ### <a name="remarks"></a>備註  
  請注意，傳回值是某一特定位置是否可用的瞬間取樣。 若有多個排程器，動態資源管理可以隨時在排程器中加入或移除資源。 如果發生這種情況，這個特定位置的可用性可能會改變。  
   
-##  <a name="a-namereferencea-reference"></a><a name="reference"></a>參考 
+##  <a name="reference"></a>參考 
 
  遞增排程器的參考計數。  
   
@@ -216,7 +231,7 @@ virtual unsigned int Reference() = 0 ;
   
  方法會擲回[improper_scheduler_reference](improper-scheduler-reference-class.md)例外狀況的參考計數，然後才呼叫如果`Reference`方法是零，並從非排程器所擁有的內容進行呼叫。  
   
-##  <a name="a-nameregistershutdowneventa-registershutdownevent"></a><a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
  Windows 事件的控制代碼傳的原因`_Event`收到信號時，排程器關閉並終結本身的參數。 此事件收到信號時，所有之前排程器已排定的工作已完成。 透過這個方法可以註冊多個關機事件。  
   
@@ -226,9 +241,9 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
   
 ### <a name="parameters"></a>參數  
  `_Event`  
- Windows 事件物件，它會在排程器關閉並終結本身時通知執行階段控制代碼。  
+ 當排程器關閉並終結本身會通知執行階段的 Windows 事件物件控制代碼。  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>發行 
+##  <a name="release"></a>發行 
 
  遞減排程器的參考計數。  
   
@@ -242,7 +257,7 @@ virtual unsigned int Release() = 0;
 ### <a name="remarks"></a>備註  
  這通常用來管理排程器的存留期的組合。 當排程器的參考計數變成零時，排程器會於所有工作完成後關機並自行解構。  
   
-##  <a name="a-nameresetdefaultschedulerpolicya-resetdefaultschedulerpolicy"></a><a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
+##  <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy 
 
  將預設排程器原則重設為執行階段預設值。 下一次建立預設排程器時，它會使用執行階段的預設原則設定。  
   
@@ -253,7 +268,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 ### <a name="remarks"></a>備註  
  在程序中的預設排程器存在時，可以呼叫這個方法。 它不會影響現有的預設排程器原則。 不過，如果預設排程器已關閉，並且在稍後的時間點上建立新的預設值，新的排程器就會使用執行階段的預設原則設定。  
   
-##  <a name="a-namectora-scheduler"></a><a name="ctor"></a>排程器 
+##  <a name="ctor"></a>排程器 
 
  物件的`Scheduler`類別可以僅使用 factory 方法建立限或隱含的方式。  
   
@@ -266,7 +281,7 @@ Scheduler();
   
  您也可以建立排程器是透過明確`CurrentScheduler::Create`方法或`Scheduler::Create`方法。  
   
-##  <a name="a-namedtora-scheduler"></a><a name="dtor"></a>~ 排程器 
+##  <a name="dtor"></a>~ 排程器 
 
  物件的`Scheduler`類別以隱含方式終結時就不再存在於所有外部參考。  
   
@@ -274,7 +289,7 @@ Scheduler();
 virtual ~Scheduler();
 ```  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  排程的輕量工作排程器內。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。  
   
@@ -299,7 +314,7 @@ virtual void ScheduleTask(
  `_Placement`  
  輕量工作將會變成優先執行的位置參考。  
   
-##  <a name="a-namesetdefaultschedulerpolicya-setdefaultschedulerpolicy"></a><a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
+##  <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy 
 
  可讓使用者定義原則，用來建立預設排程器。 沒有預設排程器存在於處理程序時，才可以呼叫這個方法。 設定預設原則後，就會生效，直到下一步為有效的呼叫`SetDefaultSchedulerPolicy`或[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)方法。  
   
@@ -317,7 +332,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)   
- [PolicyElementKey 列舉](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

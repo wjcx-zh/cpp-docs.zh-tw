@@ -9,8 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_graphics/Concurrency::graphics
-- amp_short_vectors/Concurrency::graphics
+- AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
@@ -33,9 +32,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: fd29b427307e336d560a2caf42e4fc5228e8071f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e08a9bc52b7ce519508bb1682287e75070d341a1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空間
@@ -57,7 +56,7 @@ namespace graphics;
   
 ### <a name="typedefs"></a>Typedef  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`uint`|項目型別[uint_2 類別](uint-2-class.md)， [uint_3 類別](uint-3-class.md)，和[uint_4 類別](uint-4-class.md)。 定義為`typedef unsigned int uint;`。|  
   
@@ -70,9 +69,9 @@ namespace graphics;
   
 ### <a name="classes"></a>類別  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[紋理類別](texture-class.md)|紋理是將資料彙總上 accelerator_view 範圍網域中。 它是每個項目範圍網域中的變數集合。 每個變數會保留值，對應到 c + + 基本型別 (不帶正負號的 int、 int、 float、 double)，或在 concurrency:: graphics 中定義的純量型別 norm 或 unorm （定義於 concurrency:: graphics） 或符合資格的短向量類型。|  
+|[texture 類別](texture-class.md)|紋理是將資料彙總上 accelerator_view 範圍網域中。 它是每個項目範圍網域中的變數集合。 每個變數會保留值，對應到 c + + 基本型別 (不帶正負號的 int、 int、 float、 double)，或在 concurrency:: graphics 中定義的純量型別 norm 或 unorm （定義於 concurrency:: graphics） 或符合資格的短向量類型。|  
 |[writeonly_texture_view 類別](writeonly-texture-view-class.md)|Writeonly_texture_view 提供紋理 writeonly 存取。|  
 |[double_2 類別](double-2-class.md)|代表 2 短向量`double`值。|  
 |[double_3 類別](double-3-class.md)|代表 3 短向量`double`值。|  
@@ -99,10 +98,10 @@ namespace graphics;
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[copy 函式](concurrency-graphics-namespace-functions.md#copy)|多載。 將來源紋理的內容複製到目的主機的緩衝區。|  
-|[copy_async 函式](concurrency-graphics-namespace-functions.md#copy_async)|多載。 以非同步方式將來源紋理的內容複製到目的主機的緩衝區。|  
+|[copy](concurrency-graphics-namespace-functions.md#copy)|多載。 將來源紋理的內容複製到目的主機的緩衝區。|  
+|[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|多載。 以非同步方式將來源紋理的內容複製到目的主機的緩衝區。|  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** amp_graphics.h  
@@ -110,5 +109,5 @@ namespace graphics;
  **命名空間：** 並行  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency 命名空間 (c + + AMP)](concurrency-namespace-cpp-amp.md)
+ [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
 

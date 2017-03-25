@@ -9,7 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::progress_reporter
+- progress_reporter
+- PPLTASKS/concurrency::progress_reporter
+- PPLTASKS/concurrency::progress_reporter::progress_reporter
+- PPLTASKS/concurrency::progress_reporter::report
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c6b4dfee5b5f9df98a36fcdac116182ced4cbe30
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 98856e26c82d01433e6f8eb0d76110aff1535936
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="progressreporter-class"></a>progress_reporter 類別
@@ -57,15 +60,15 @@ class progress_reporter;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[progress_reporter 建構函式](#ctor)||  
+|[progress_reporter](#ctor)||  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[報表方法](#report)|將進度報告傳送至這個進度報告程式所繫結的非同步動作或作業。|  
+|[報表](#report)|將進度報告傳送至這個進度報告程式所繫結的非同步動作或作業。|  
   
 ## <a name="remarks"></a>備註  
  這個類型只供 Windows 市集應用程式使用。  
@@ -78,13 +81,13 @@ class progress_reporter;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-progressreporter"></a><a name="ctor"></a>progress_reporter 
+##  <a name="ctor"></a>progress_reporter 
 
 ```
 progress_reporter();
 ```  
   
-##  <a name="a-namereporta-report"></a><a name="report"></a>報表 
+##  <a name="report"></a>報表 
 
  將進度報告傳送至這個進度報告程式所繫結的非同步動作或作業。  
   

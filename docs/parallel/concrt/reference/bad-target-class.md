@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::bad_target
+- bad_target
+- CONCRT/concurrency::bad_target
+- CONCRT/concurrency::bad_target::bad_target
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a22ebb69195dcea91799dc1c2e301a578dd227bc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 145aa17b4589fb572f3b6594360ec69db5e15287
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="badtarget-class"></a>bad_target 類別
@@ -54,7 +56,7 @@ class bad_target : public std::exception;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[bad_target 建構函式](#ctor)|多載。 建構 `bad_target` 物件。|  
+|[bad_target](#ctor)|多載。 建構 `bad_target` 物件。|  
   
 ## <a name="remarks"></a>備註  
  例如嘗試使用不同的目標保留的訊息或釋放其並未持有的保留項目為目標的原因，通常會擲回這個例外狀況。  
@@ -69,7 +71,7 @@ class bad_target : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-badtarget"></a><a name="ctor"></a>bad_target 
+##  <a name="ctor"></a>bad_target 
 
  建構 `bad_target` 物件。  
   

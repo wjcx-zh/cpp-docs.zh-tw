@@ -9,7 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::timer
+- timer
+- AGENTS/concurrency::timer
+- AGENTS/concurrency::timer::timer
+- AGENTS/concurrency::timer::pause
+- AGENTS/concurrency::timer::start
+- AGENTS/concurrency::timer::stop
+- AGENTS/concurrency::timer::accept_message
+- AGENTS/concurrency::timer::consume_message
+- AGENTS/concurrency::timer::link_target_notification
+- AGENTS/concurrency::timer::propagate_to_any_targets
+- AGENTS/concurrency::timer::release_message
+- AGENTS/concurrency::timer::reserve_message
+- AGENTS/concurrency::timer::resume_propagation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 769ccd051c68f0a4d74511392f0f1a811e36e3e7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d6dfdc1b03ac2d15aa575c16cbe86968f565c1c1
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="timer-class"></a>timer 類別
@@ -57,30 +69,30 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[計時器建構函式](#ctor)|多載。 建構`timer`會在特定時間間隔引發指定的訊息的傳訊區塊。|  
+|[計時器](#ctor)|多載。 建構`timer`會在特定時間間隔引發指定的訊息的傳訊區塊。|  
 |[~ timer 解構函式](#dtor)|終結`timer`傳訊區塊。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[pause 方法](#pause)|停駐點`timer`傳訊區塊。 如果它是重複`timer`傳訊區塊，就可以重新啟動與後續`start()`呼叫。 對於非重複的計時器，這有相同的效果`stop`呼叫。|  
-|[start 方法](#start)|啟動`timer`傳訊區塊。 指定在此之後的毫秒數呼叫，就會傳送指定的值做為下游`message`。|  
-|[stop 方法](#stop)|停駐點`timer`傳訊區塊。|  
+|[暫停](#pause)|停駐點`timer`傳訊區塊。 如果它是重複`timer`傳訊區塊，就可以重新啟動與後續`start()`呼叫。 對於非重複的計時器，這有相同的效果`stop`呼叫。|  
+|[start](#start)|啟動`timer`傳訊區塊。 指定在此之後的毫秒數呼叫，就會傳送指定的值做為下游`message`。|  
+|[停止](#stop)|停駐點`timer`傳訊區塊。|  
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[accept_message 方法](#accept_message)|接受的訊息，這提供`timer`傳訊區塊，將擁有權轉移給呼叫者。|  
-|[consume_message 方法](#consume_message)|會使用先前所提供訊息`timer`和目標，將擁有權轉移給呼叫者所保留。|  
-|[link_target_notification 方法](#link_target_notification)|新的目標具有已連結到這會通知回撥`timer`傳訊區塊。|  
-|[propagate_to_any_targets 方法](#propagate_to_any_targets)|嘗試提供所產生的訊息`timer`所有連結的目標區塊。|  
-|[release_message 方法](#release_message)|釋放先前的訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|  
-|[reserve_message 方法](#reserve_message)|先前提供的這一則訊息會保留`timer`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
-|[resume_propagation 方法](#resume_propagation)|釋放保留項目之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
+|[accept_message](#accept_message)|接受的訊息，這提供`timer`傳訊區塊，將擁有權轉移給呼叫者。|  
+|[consume_message](#consume_message)|會使用先前所提供訊息`timer`和目標，將擁有權轉移給呼叫者所保留。|  
+|[link_target_notification](#link_target_notification)|新的目標具有已連結到這會通知回撥`timer`傳訊區塊。|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|嘗試提供所產生的訊息`timer`所有連結的目標區塊。|  
+|[release_message](#release_message)|釋放先前的訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|  
+|[reserve_message](#reserve_message)|先前提供的這一則訊息會保留`timer`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
+|[resume_propagation](#resume_propagation)|釋放保留項目之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -97,7 +109,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  接受的訊息，這提供`timer`傳訊區塊，將擁有權轉移給呼叫者。  
   
@@ -112,7 +124,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>傳回值  
  指標`message`物件，呼叫者現在會有的擁有權。  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  會使用先前所提供訊息`timer`和目標，將擁有權轉移給呼叫者所保留。  
   
@@ -130,7 +142,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>備註  
  類似於`accept`，但呼叫一律置於`reserve`。  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  新的目標具有已連結到這會通知回撥`timer`傳訊區塊。  
   
@@ -142,7 +154,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  新連結的目標指標。  
   
-##  <a name="a-namepausea-pause"></a><a name="pause"></a>暫停 
+##  <a name="pause"></a>暫停 
 
  停駐點`timer`傳訊區塊。 如果它是重複`timer`傳訊區塊，就可以重新啟動與後續`start()`呼叫。 對於非重複的計時器，這有相同的效果`stop`呼叫。  
   
@@ -150,7 +162,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 void pause();
 ```  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  嘗試提供所產生的訊息`timer`所有連結的目標區塊。  
   
@@ -158,7 +170,7 @@ void pause();
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  釋放先前的訊息保留。  
   
@@ -170,7 +182,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity`的`message`物件被釋放。  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  先前提供的這一則訊息會保留`timer`傳訊區塊。  
   
@@ -188,7 +200,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>備註  
  之後`reserve`呼叫時，如果它傳回`true`，`consume`或`release`必須呼叫採取或釋放訊息的擁有權。  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  釋放保留項目之後，請繼續傳播。  
   
@@ -196,7 +208,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="a-namestarta-start"></a><a name="start"></a>啟動 
+##  <a name="start"></a>啟動 
 
  啟動`timer`傳訊區塊。 指定在此之後的毫秒數呼叫，就會傳送指定的值做為下游`message`。  
   
@@ -204,7 +216,7 @@ virtual void resume_propagation();
 void start();
 ```  
   
-##  <a name="a-namestopa-stop"></a><a name="stop"></a>停止 
+##  <a name="stop"></a>停止 
 
  停駐點`timer`傳訊區塊。  
   
@@ -212,7 +224,7 @@ void start();
 void stop();
 ```  
   
-##  <a name="a-namectora-timer"></a><a name="ctor"></a>計時器 
+##  <a name="ctor"></a>計時器 
 
  建構`timer`會在特定時間間隔引發指定的訊息的傳訊區塊。  
   
@@ -260,7 +272,7 @@ timer(
 ### <a name="remarks"></a>備註  
  如果您未指定執行階段會使用預設排程器`_Scheduler`或`_ScheduleGroup`參數。  
   
-##  <a name="a-namedtora-timer"></a><a name="dtor"></a>~ 計時器 
+##  <a name="dtor"></a>~ 計時器 
 
  終結`timer`傳訊區塊。  
   

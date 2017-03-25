@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::context_unblock_unbalanced
+- context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced
+- CONCRT/concurrency::context_unblock_unbalanced::context_unblock_unbalanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7341ff5d10b7f7752c49f18ea9b810824e347b1c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 21c26658e347fa35209677e15ddcb48bbe8d1235
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced 類別
@@ -54,7 +56,7 @@ class context_unblock_unbalanced : public std::exception;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[context_unblock_unbalanced 建構函式](#ctor)|多載。 建構 `context_unblock_unbalanced` 物件。|  
+|[context_unblock_unbalanced](#ctor)|多載。 建構 `context_unblock_unbalanced` 物件。|  
   
 ## <a name="remarks"></a>備註  
  呼叫`Block`和`Unblock`方法`Context`物件必須永遠正確配對。 並行執行階段可讓任何一種順序進行的作業。 例如，呼叫 `Block` 之後可以呼叫 `Unblock`，反之亦然。 這個例外狀況就會擲回，比方說，兩個呼叫`Unblock`方法對資料列，在`Context`未遭到封鎖的物件。  
@@ -69,7 +71,7 @@ class context_unblock_unbalanced : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-contextunblockunbalanced"></a><a name="ctor"></a>context_unblock_unbalanced 
+##  <a name="ctor"></a>context_unblock_unbalanced 
 
  建構 `context_unblock_unbalanced` 物件。  
   

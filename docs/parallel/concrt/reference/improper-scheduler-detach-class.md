@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::improper_scheduler_detach
+- improper_scheduler_detach
+- CONCRT/concurrency::improper_scheduler_detach
+- CONCRT/concurrency::improper_scheduler_detach::improper_scheduler_detach
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 6a4bb4be90966f3abed8792bfbef086e7b399922
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 0975354279c2a7e35524890498d9d7ebab1c18d3
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="improperschedulerdetach-class"></a>improper_scheduler_detach 類別
@@ -54,7 +56,7 @@ class improper_scheduler_detach : public std::exception;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[improper_scheduler_detach 建構函式](#ctor)|多載。 建構 `improper_scheduler_detach` 物件。|  
+|[improper_scheduler_detach](#ctor)|多載。 建構 `improper_scheduler_detach` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -66,7 +68,7 @@ class improper_scheduler_detach : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-improperschedulerdetach"></a><a name="ctor"></a>improper_scheduler_detach 
+##  <a name="ctor"></a>improper_scheduler_detach 
 
  建構 `improper_scheduler_detach` 物件。  
   

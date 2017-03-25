@@ -9,7 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::ISource
+- ISource
+- AGENTS/concurrency::ISource
+- AGENTS/concurrency::ISource::accept
+- AGENTS/concurrency::ISource::acquire_ref
+- AGENTS/concurrency::ISource::consume
+- AGENTS/concurrency::ISource::link_target
+- AGENTS/concurrency::ISource::release
+- AGENTS/concurrency::ISource::release_ref
+- AGENTS/concurrency::ISource::reserve
+- AGENTS/concurrency::ISource::unlink_target
+- AGENTS/concurrency::ISource::unlink_targets
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: db3ba296a96b2e77c0ae7d9be3d0a499fe2e7f76
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: b5545f666dccb251152dc6c9a83101662848be1c
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="isource-class"></a>ISource 類別
@@ -57,7 +67,7 @@ class ISource;
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`source_type`|類型別名`T`。|  
   
@@ -69,17 +79,17 @@ class ISource;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[accept 方法](#accept)|在衍生類別中覆寫，接受訊息，指由這`ISource`區塊中，將擁有權轉移給呼叫者。|  
-|[acquire_ref 方法](#acquire_ref)|當在衍生類別中覆寫時，取得此參考計數`ISource`區塊中，以防止刪除。|  
-|[consume 方法](#consume)|當在衍生類別中覆寫時，會使用先前提供此訊息`ISource`封鎖和成功的目標，將擁有權轉移給呼叫者保留。|  
-|[link_target 方法](#link_target)|當在衍生類別中覆寫時，連結目標區塊這`ISource`區塊。|  
-|[release 方法](#release)|當在衍生類別中覆寫時，釋放前一個成功的訊息保留。|  
-|[release_ref 方法](#release_ref)|當在衍生類別中覆寫時，釋放此參考計數`ISource`區塊。|  
-|[reserve 方法](#reserve)|當在衍生類別中覆寫時，會保留先前提供的這一則訊息`ISource`區塊。|  
-|[unlink_target 方法](#unlink_target)|當在衍生類別中覆寫時，取消連結從這個目標區塊`ISource`封鎖，如果先前連結中找到。|  
-|[unlink_targets 方法](#unlink_targets)|當在衍生類別中覆寫時，取消連結所有的目標區塊，從這個`ISource`區塊。|  
+|[接受](#accept)|在衍生類別中覆寫，接受訊息，指由這`ISource`區塊中，將擁有權轉移給呼叫者。|  
+|[acquire_ref](#acquire_ref)|當在衍生類別中覆寫時，取得此參考計數`ISource`區塊中，以防止刪除。|  
+|[使用](#consume)|當在衍生類別中覆寫時，會使用先前提供此訊息`ISource`封鎖和成功的目標，將擁有權轉移給呼叫者保留。|  
+|[link_target](#link_target)|當在衍生類別中覆寫時，連結目標區塊這`ISource`區塊。|  
+|[release](#release)|當在衍生類別中覆寫時，釋放前一個成功的訊息保留。|  
+|[release_ref](#release_ref)|當在衍生類別中覆寫時，釋放此參考計數`ISource`區塊。|  
+|[reserve](#reserve)|當在衍生類別中覆寫時，會保留先前提供的這一則訊息`ISource`區塊。|  
+|[unlink_target](#unlink_target)|當在衍生類別中覆寫時，取消連結從這個目標區塊`ISource`封鎖，如果先前連結中找到。|  
+|[unlink_targets](#unlink_targets)|當在衍生類別中覆寫時，取消連結所有的目標區塊，從這個`ISource`區塊。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -92,7 +102,7 @@ class ISource;
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameaccepta-accept"></a><a name="accept"></a>接受 
+##  <a name="accept"></a>接受 
 
  在衍生類別中覆寫，接受訊息，指由這`ISource`區塊中，將擁有權轉移給呼叫者。  
   
@@ -115,7 +125,7 @@ virtual message<T>* accept(
 ### <a name="remarks"></a>備註  
  `accept`時提供訊息是由這個方法會呼叫目標`ISource`區塊。 可能會不同於傳入的訊息指標傳回`propagate`方法`ITarget`封鎖，如果此來源決定訊息的副本。  
   
-##  <a name="a-nameacquirerefa-acquireref"></a><a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a>acquire_ref 
 
  當在衍生類別中覆寫時，取得此參考計數`ISource`區塊中，以防止刪除。  
   
@@ -130,7 +140,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`ITarget`物件連結到這個來源期間`link_target`方法。  
   
-##  <a name="a-nameconsumea-consume"></a><a name="consume"></a>使用 
+##  <a name="consume"></a>使用 
 
  當在衍生類別中覆寫時，會使用先前提供此訊息`ISource`封鎖和成功的目標，將擁有權轉移給呼叫者保留。  
   
@@ -153,7 +163,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>備註  
  `consume`方法很類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。  
   
-##  <a name="a-namedtora-isource"></a><a name="dtor"></a>~ ISource 
+##  <a name="dtor"></a>~ ISource 
 
  終結`ISource`物件。  
   
@@ -161,7 +171,7 @@ virtual message<T>* consume(
 virtual ~ISource();
 ```  
   
-##  <a name="a-namelinktargeta-linktarget"></a><a name="link_target"></a>link_target 
+##  <a name="link_target"></a>link_target 
 
  當在衍生類別中覆寫時，連結目標區塊這`ISource`區塊。  
   
@@ -173,7 +183,7 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  連結到此目標區塊的指標`ISource`區塊。  
   
-##  <a name="a-namereleasea-release"></a><a name="release"></a>發行 
+##  <a name="release"></a>發行 
 
  當在衍生類別中覆寫時，釋放前一個成功的訊息保留。  
   
@@ -190,7 +200,7 @@ virtual void release(
  `_PTarget`  
  正在呼叫的目標區塊的指標`release`方法。  
   
-##  <a name="a-namereleaserefa-releaseref"></a><a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a>release_ref 
 
  當在衍生類別中覆寫時，釋放此參考計數`ISource`區塊。  
   
@@ -205,7 +215,7 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`ITarget`從這個來源所連結的物件。 來源區塊可釋放任何資源保留給目標區塊。  
   
-##  <a name="a-namereservea-reserve"></a><a name="reserve"></a>保留 
+##  <a name="reserve"></a>保留 
 
  當在衍生類別中覆寫時，會保留先前提供的這一則訊息`ISource`區塊。  
   
@@ -228,7 +238,7 @@ virtual bool reserve(
 ### <a name="remarks"></a>備註  
  在您呼叫後`reserve`，如果成功，您必須呼叫`consume`或`release`才能採取或分別給予持有的訊息。  
   
-##  <a name="a-nameunlinktargeta-unlinktarget"></a><a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a>unlink_target 
 
  當在衍生類別中覆寫時，取消連結從這個目標區塊`ISource`封鎖，如果先前連結中找到。  
   
@@ -240,7 +250,7 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  正在從這個連結的目標區塊的指標`ISource`區塊。  
   
-##  <a name="a-nameunlinktargetsa-unlinktargets"></a><a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a>unlink_targets 
 
  當在衍生類別中覆寫時，取消連結所有的目標區塊，從這個`ISource`區塊。  
   

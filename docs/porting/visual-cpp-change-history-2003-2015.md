@@ -162,7 +162,7 @@ ms.lasthandoff: 03/07/2017
   
 -   **浮點數格式化和剖析** 已引進新的浮點數格式化和剖析演算法來改善正確性。 此變更影響 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 及 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 系列函式及 [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) 一類的函式。  
   
-     舊格式的演算法會產生有限位數的數字，然後以零填滿剩餘的小數位數。 若要產生會對原始浮點數值反覆存取的字串，這通常已經夠合用了，但如果您想要精確值 (或其中最接近的十進位表示)，就會不夠合適。 新的格式演算法會視需要產生足夠多的位數，用來代表該值 (或用來填入指定的精確度)。 做為改進的範例，請考慮列印&2; 的大型乘冪時之結果：  
+     舊格式的演算法會產生有限位數的數字，然後以零填滿剩餘的小數位數。 若要產生會對原始浮點數值反覆存取的字串，這通常已經夠合用了，但如果您想要精確值 (或其中最接近的十進位表示)，就會不夠合適。 新的格式演算法會視需要產生足夠多的位數，用來代表該值 (或用來填入指定的精確度)。 做為改進的範例，請考慮列印 2 的大型乘冪時之結果：  
   
     ```cpp  
     printf("%.0f\n", pow(2.0, 80))  
@@ -217,7 +217,7 @@ ms.lasthandoff: 03/07/2017
   
 -   **strtof 和 wcstof** The strtof 和 wcstof functions failed to set errno to ERANGE when the value was not representable as a float. 這項問題已獲得修正。 (請注意，這個錯誤是這兩個函數特有的；而 strtod、wcstod、strtold 和 wcstold 函式不受影響。)這是執行階段的重大變更。  
   
--   **alligned 配置函式**：在舊版中，alligned 配置函式 (_aligned_malloc、_aligned_offset_malloc 等等) 會以無訊息方式接受對齊等於 0 的區塊要求。 要求的對齊必須是&2; 的乘冪，而&0; 卻不是。 已修正這個問題，現在會將要求的對齊為 0 視為無效的參數。 這是執行階段的重大變更。  
+-   **alligned 配置函式**：在舊版中，alligned 配置函式 (_aligned_malloc、_aligned_offset_malloc 等等) 會以無訊息方式接受對齊等於 0 的區塊要求。 要求的對齊必須是 2 的乘冪，而 0 卻不是。 已修正這個問題，現在會將要求的對齊為 0 視為無效的參數。 這是執行階段的重大變更。  
   
 -   **堆積函式**：_heapadd、_heapset 和 _heapused 函式已移除。 這些函式已無作用，因為 CRT 已更新為使用 Windows 堆積。  
   
@@ -576,9 +576,9 @@ ms.lasthandoff: 03/07/2017
   
 -   **placement new 與 delete**  
   
-     為了讓 delete 運算子 (delete Operator) 與 C++&14; 標準一致，已對它加以變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 此變更加入一種全域 delete 運算子，該運算子需要大小參數。 重大變更是如果您先前使用具有相同簽章 (藉此對應至 placement new 運算子) 的 operator delete 函式，就會發生編譯器錯誤 (C2956，於使用 placement new 運算子所在之處發生，因為在程式碼的該位置上，此編譯器會嘗試識別合適且相符的 delete 運算子)。  
+     為了讓 delete 運算子 (delete Operator) 與 C++ 14 標準一致，已對它加以變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 此變更加入一種全域 delete 運算子，該運算子需要大小參數。 重大變更是如果您先前使用具有相同簽章 (藉此對應至 placement new 運算子) 的 operator delete 函式，就會發生編譯器錯誤 (C2956，於使用 placement new 運算子所在之處發生，因為在程式碼的該位置上，此編譯器會嘗試識別合適且相符的 delete 運算子)。  
   
-     函式 `void operator delete(void *, size_t)` 曾是 placement delete 運算子，相當於 C++&11; 中的 placement new 函式 "void \* operator new(size_t, size_t)"。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為 *「一般解除配置函式」* (Usual Deallocation Function) (全域 delete 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。  
+     函式 `void operator delete(void *, size_t)` 曾是 placement delete 運算子，相當於 C++ 11 中的 placement new 函式 "void \* operator new(size_t, size_t)"。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為 *「一般解除配置函式」* (Usual Deallocation Function) (全域 delete 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。  
   
      例如，假設您的程式碼同時定義 placement new 和 placement delete：  
   
@@ -949,7 +949,7 @@ ms.lasthandoff: 03/07/2017
   
      此外，雖然編譯器不提供特定的診斷，但內嵌運算子 new 會被視為語式錯誤。  
   
--   對非類別類型** **呼叫 'operator *type*()' (使用者定義的轉換)  
+-   對非類別類型** **呼叫 'operator*type*()' (使用者定義的轉換)  
   
      舊版編譯器允許在非類別類型上呼叫 'operator *type*()'，但以無訊息方式略過。 這種舊行為造成的風險是，會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2228。  
   
@@ -1508,7 +1508,7 @@ ms.lasthandoff: 03/07/2017
   
     ```  
   
--   `volatile` ** 成員變數會禁止隱含定義的建構函式與指派運算子**  
+-   `volatile` **成員變數會禁止隱含定義的建構函式與指派運算子**  
   
      舊版編譯器允許具有 `volatile` 成員變數的類別自動產生預設的複製/移動建構函式及預設的複製/移動指派運算子。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會考慮讓具有揮發性成員變數的類別擁有非 trivial 建構和指派運算子，這樣可防止自動產生這些運算子的預設實作。  當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含 Unonymous 等位之類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。  
   

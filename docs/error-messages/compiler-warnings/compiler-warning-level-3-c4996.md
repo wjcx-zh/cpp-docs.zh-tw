@@ -35,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: bf7b4ccd6309f08098416f4bdb6777b8eafd2e7f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: aa9586bd0abed0b1fa1d24c777eea8c82c5cedc0
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="compiler-warning-level-3-c4996"></a>編譯器警告 （層級 3） C4996
@@ -45,33 +45,35 @@ ms.lasthandoff: 02/24/2017
   
  這則警告或錯誤有幾種可能的含意。  
   
- `C4996`當編譯器遇到函式或變數，標示為[取代](../../cpp/deprecated-cpp.md)。 Visual Studio 中有數個函式、成員函式、範本函式，以及程式庫中的全域變數皆標示為已被取代。 這些函式可能有不同的慣用名稱、可能不安全，或可能已有更安全的變體版，甚至可能已經過時。 錯誤訊息中可能會為已被取代的函式或全域變數提出替代項目建議。 您可以關閉此警告，與[警告](../../preprocessor/warning.md)pragma 或**/wd4996**命令列選項。 您也可使用前置處理器巨集關閉某些類別已被取代的警告。  
+ `C4996`當編譯器遇到函式或標示為的變數，就會發生[取代](../../cpp/deprecated-cpp.md)。 Visual Studio 中有數個函式、成員函式、範本函式，以及程式庫中的全域變數皆標示為已被取代。 這些函式可能有不同的慣用名稱、可能不安全，或可能已有更安全的變體版，甚至可能已經過時。 錯誤訊息中可能會為已被取代的函式或全域變數提出替代項目建議。 您可以關閉此警告，與[警告](../../preprocessor/warning.md)pragma 或**/wd4996**命令列選項。 您也可使用前置處理器巨集關閉某些類別已被取代的警告。 
+
+當您嘗試存取函式、 類別成員或具有 C + + 14 的 typedef，也會發出這個警告`[[deprecated]]`屬性。 如需詳細資訊，請參閱[c + + 標準屬性](../../cpp/attributes2.md)。 
   
- **此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 和 c + + 標準名稱︰** new_name**。如需詳細資料，請參閱線上說明。**  
+ **此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 和 c + + 一致的名稱︰** new_name**。如需詳細資料，請參閱線上說明。**  
   
  CRT 中的某些 POSIX 函式已依照 C99 與 C++03 規則重新命名為實作限定的全域函式名稱。 在大多數情況下，POSIX 函式名稱前會加上底線來表示符合標準的名稱。 編譯器會為原始函式名稱發出已被取代的警告，並建議所應使用的名稱。 只有原始名稱被取代，函式本身仍可繼續使用。 若要關閉這些函式已被取代的警告，請定義前置處理器巨集 **_CRT_NONSTDC_NO_WARNINGS**。 您可以在命令列中加上選項 `/D_CRT_NONSTDC_NO_WARNINGS`來加以定義。 若要在 Visual Studio 中定義此巨集，請開啟您專案的 [屬性頁]  對話方塊。 展開 [組態屬性] 、[C/C++] 、[前置處理器] 。 在 [前置處理器定義] 中，加入 `_CRT_NONSTDC_NO_WARNINGS`。 選擇 [確定]  加以儲存，然後重建您的專案。 若要只在特定的來源檔案中定義此巨集，請在包含標頭檔的該行前加入 `#define _CRT_NONSTDC_NO_WARNINGS` 一行。  
   
- **此函式或變數可能不安全。請考慮使用**safe_version**改。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**  
+ **此函式或變數可能不安全。請考慮使用**safe_version**改為。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**  
   
- 有些 CRT 和 c + + 標準程式庫函式和全域變數有已被新的、 更安全的函式。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。 若要關閉 CRT 中這些函式已被取代的警告，請定義 **_CRT_SECURE_NO_WARNINGS**。 若要為全域變數關閉已被取代的警告，請定義 **_CRT_SECURE_NO_WARNINGS_GLOBALS**。 如需有關這些已被取代的函式和全域變數的詳細資訊，請參閱[CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全程式庫︰ c + + 標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)。  
+ 有些 CRT 和 c + + 標準程式庫函式和全域變數已被取代為新的且較安全的函式。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。 若要關閉 CRT 中這些函式已被取代的警告，請定義 **_CRT_SECURE_NO_WARNINGS**。 若要為全域變數關閉已被取代的警告，請定義 **_CRT_SECURE_NO_WARNINGS_GLOBALS**。 如需有關這些已被取代的函式和全域變數的詳細資訊，請參閱[CRT 中安全性功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全程式庫︰ c + + 標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)。  
   
- **函式呼叫的參數可能不安全-此呼叫須由呼叫端檢查通過的值正確。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。請參閱如何使用 Visual c + + ' Checked Iterators' 的文件**  
+ **函式呼叫的參數可能不安全-此呼叫須由呼叫端確認傳遞的值正確無誤。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。請參閱有關如何使用 Visual c + + ' Checked Iterators' 的文件**  
   
  某些 C++ 標準程式庫範本函式不會檢查參數的正確性。 這項警告可協助您確認這些函數的用法。 若要關閉這些函式的警告，請定義 **_SCL_SECURE_NO_WARNINGS**。 如需詳細資訊，請參閱[已檢查的迭代器](../../standard-library/checked-iterators.md)。  
   
- **此函式或變數已被取代的更新版本的文件庫或作業系統功能。請考慮使用**new_item**改。如需詳細資料，請參閱線上說明。**  
+ **此函式或變數已被取代的較新的文件庫或作業系統功能。請考慮使用**new_item**改為。如需詳細資料，請參閱線上說明。**  
   
  某些程式庫函式與全域變數因為過時而被取代。 這些函式及變數可能會從後續版本的程式庫中移除。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。 若要關閉這些項目之已被取代的警告，請定義 **_CRT_OBSOLETE_NO_WARNINGS**。 如需詳細資訊，請參閱文件中所列之已被取代的函式或變數。  
   
  **MFC 或 ATL 程式碼中的各種訊息**  
   
- 如果您使用因安全考量而被取代的 MFC 或 ATL 函式，也可能會發生 `C4996`。 若要抑制這些警告，請參閱[_afx_secure_no_warnings，則](http://msdn.microsoft.com/Library/97dcfd41-1e56-41d5-bf7e-d240b950134b)和[_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73)。  
+ 如果您使用因安全考量而被取代的 MFC 或 ATL 函式，也可能會發生 `C4996`。 若要顯示這些警告，請參閱[_afx_secure_no_warnings，則](http://msdn.microsoft.com/Library/97dcfd41-1e56-41d5-bf7e-d240b950134b)和[_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73)。  
   
  **封送處理 CLR 程式碼中的錯誤**  
   
- 當您使用封送處理程式庫時，也可能會發生 `C4996`。 在此情況下，C4996 是錯誤而非警告。 當您使用時，會發生此錯誤[marshal_as](../../dotnet/marshal-as.md)需要兩個資料類型之間進行轉換[marshal_context 類別](../../dotnet/marshal-context-class.md)。 當封送處理不支援某項轉換時，也會發生這個錯誤。 如需封送處理程式庫的詳細資訊，請參閱[概觀的封送處理在 c + +](../../dotnet/overview-of-marshaling-in-cpp.md)。  
+ 當您使用封送處理程式庫時，也可能會發生 `C4996`。 在此情況下，C4996 是錯誤而非警告。 當您使用時，會發生這個錯誤[marshal_as](../../dotnet/marshal-as.md)需要兩個資料類型之間進行轉換[marshal_context 類別](../../dotnet/marshal-context-class.md)。 當封送處理不支援某項轉換時，也會發生這個錯誤。 如需封送處理程式庫的詳細資訊，請參閱[概觀的封送處理 c + + 中](../../dotnet/overview-of-marshaling-in-cpp.md)。  
   
- **範例會產生 C4996**  
+ **產生 C4996 的範例**  
   
  在第一個例子中，宣告函式的程式行及使用函式的程式行會產生 `C4996` 。  
   

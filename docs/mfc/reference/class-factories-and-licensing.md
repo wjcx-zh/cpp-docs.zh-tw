@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: a8ef7ba19d2337e4e50f34d7cdd528024a1d90aa
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
+ms.openlocfilehash: 17a99edadeb7a5bd923126bce7fbef50313e1867
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="class-factories-and-licensing"></a>Class Factory 和授權
@@ -56,7 +56,7 @@ ms.lasthandoff: 02/24/2017
 |[END_OLEFACTORY](#end_olefactory)|所有授權函式宣告的結尾。|  
 |[AfxVerifyLicFile](#afxverifylicfile)|驗證控制項是否獲得在特定電腦上使用的授權。|  
   
-##  <a name="a-namedeclareolecreateexa--declareolecreateex"></a><a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
+##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
  宣告 class factory 和`GetClassID`控制類別成員函式。  
   
 ```   
@@ -65,19 +65,19 @@ DECLARE_OLECREATE_EX(class_name)
   
 ### <a name="parameters"></a>參數  
  *class_name*  
- 控制項類別的名稱。  
+ 控制項類別名稱。  
   
 ### <a name="remarks"></a>備註  
  使用這個巨集不支援授權控制項的控制項類別標頭檔中。  
   
  請注意，此巨集相同的目的為下列程式碼範例︰  
   
- [!code-cpp[NVC_MFCAxCtl #&14;](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
+ [!code-cpp[NVC_MFCAxCtl # 14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="a-nameimplementolecreateexa--implementolecreateex"></a><a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
+##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
  實作控制項的 class factory 和[GetClassID](../../mfc/reference/colecontrol-class.md#getclassid)控制類別成員函式。  
   
 ```   
@@ -102,19 +102,19 @@ IMPLEMENT_OLECREATE_EX(
  控制項屬性頁類別名稱。  
   
  *external_name*  
- 應用程式公開的物件名稱。  
+ 應用程式所公開物件名稱。  
   
  *l、 w1、 w2、 b1、 b2、 b3、 b4、 b5、 b6、 b7、 b8*  
- 此類別的元件**CLSID**。 如需有關這些參數的詳細資訊，請參閱備註[IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
+ 此類別的元件**CLSID**。 如需這些參數的詳細資訊，請參閱備註[IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)。  
   
 ### <a name="remarks"></a>備註  
- 這個巨集必須出現在使用任何控制項類別的實作檔`DECLARE_OLECREATE_EX`巨集或`BEGIN_OLEFACTORY`和`END_OLEFACTORY`巨集。 外部名稱是公開給其他應用程式的 OLE 控制項的識別碼。 容器會使用此名稱來要求此控制類別的物件。  
+ 這個巨集必須使用任何控制項類別的實作檔中出現`DECLARE_OLECREATE_EX`巨集或`BEGIN_OLEFACTORY`和`END_OLEFACTORY`巨集。 External name 是公開給其他應用程式的 OLE 控制項的識別碼。 容器會使用此名稱來要求此控制類別的物件。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="a-namebeginolefactorya--beginolefactory"></a><a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
- 您 class factory，在您的控制項類別的標頭檔中宣告的開頭。  
+##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
+ 開始您的類別處理站，您的控制項類別的標頭檔中宣告。  
   
 ``` 
 BEGIN_OLEFACTORY(class_name)  
@@ -122,16 +122,16 @@ BEGIN_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>參數  
  *class_name*  
- 指定的類別處理站，這是控制項類別的名稱。  
+ 指定的控制項類別的類別處理站，這是名稱。  
   
 ### <a name="remarks"></a>備註  
- Class factory 授權函式宣告應該開始之後立即`BEGIN_OLEFACTORY`。  
+ 宣告授權函式的類別處理站應該開始之後立即`BEGIN_OLEFACTORY`。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="a-nameendolefactorya--endolefactory"></a><a name="end_olefactory"></a>END_OLEFACTORY  
- 控制項的 class factory 宣告結尾。  
+##  <a name="end_olefactory"></a>END_OLEFACTORY  
+ 宣告的結尾控制項的 class factory。  
   
 ```  
 END_OLEFACTORY(class_name)   
@@ -139,13 +139,13 @@ END_OLEFACTORY(class_name)
   
 ### <a name="parameters"></a>參數  
  *class_name*  
- 這是其類別 factory 控制項類別的名稱。  
+ 這是其類別處理站控制項類別的名稱。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="a-nameafxverifylicfilea--afxverifylicfile"></a><a name="afxverifylicfile"></a>AfxVerifyLicFile  
- 呼叫此函式，以確認將授權檔名為的`pszLicFileName`適用於 OLE 控制項。  
+##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
+ 呼叫此函式，以確認授權檔案是由命名`pszLicFileName`適用於 OLE 控制項。  
   
 ```   
 BOOL AFXAPI AfxVerifyLicFile(
@@ -157,24 +157,24 @@ BOOL AFXAPI AfxVerifyLicFile(
   
 ### <a name="parameters"></a>參數  
  `hInstance`  
- 授權控制項相關聯的 DLL 的執行個體控制代碼。  
+ 執行個體控制代碼與授權控制項相關聯的 dll。  
   
  `pszLicFileName`  
- 指向以 null 結束的字元字串，包含授權檔名。  
+ 指向以 null 結尾字元字串，包含授權檔名。  
   
  `pszLicFileContents`  
- 必須符合授權檔案的開頭，請參閱序列的位元組序列點。  
+ 必須符合授權檔案的開頭找到序列的位元組序列的點。  
   
  `cch`  
  中的字元數`pszLicFileContents`。  
   
 ### <a name="return-value"></a>傳回值  
- 如果授權檔案存在，且開頭的字元順序為非零`pszLicFileContents`，否則為 0。  
+ 如果授權檔案存在，而且在中的字元序列的開頭為非零`pszLicFileContents`; 否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`cch`是 â €"1，這個函式使用︰  
+ 如果`cch`為-1，這個函式使用︰  
   
- [!code-cpp[NVC_MFC_Utilities #&36;](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities # 36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  

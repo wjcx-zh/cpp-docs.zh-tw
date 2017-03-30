@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: fe4946a8d3785c6295cb7537de0a11e06cd7a1cc
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3dd5d8dd77f2b62a6b0ea52e7d056b3d779cd2f4
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="exception-handling-routines"></a>例外狀況處理常式
@@ -44,13 +44,13 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="exception-handling-functions"></a>例外狀況處理函式  
   
-|函式|用法|.NET Framework 同等|  
-|--------------|---------|-------------------------------|  
-|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|以 C++ 類型化例外狀況處理 Win32 例外狀況 (C 結構化例外狀況)|不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|安裝要由 `terminate` 呼叫的專屬終止常式|不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|安裝要由 `unexpected` 呼叫的專屬終止函式|不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[terminate](../c-runtime-library/reference/terminate-crt.md)|在擲回例外狀況之後，在某些情況下自動呼叫。 `terminate` 函式會呼叫 `abort` 或您使用 `set_terminate` 指定的函式|不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。|  
-|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|呼叫 `terminate` 或您使用 `set_unexpected` 指定的函式。 目前 Microsoft C++ 例外狀況處理實作中未使用 `unexpected`|[System::Exception 類別](https://msdn.microsoft.com/en-us/library/system.exception.aspx)|  
+|函式|用法|  
+|--------------|---------|  
+|[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|以 C++ 類型化例外狀況處理 Win32 例外狀況 (C 結構化例外狀況)|  
+|[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|安裝要由 `terminate` 呼叫的專屬終止常式|  
+|[set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md)|安裝要由 `unexpected` 呼叫的專屬終止函式|  
+|[terminate](../c-runtime-library/reference/terminate-crt.md)|在擲回例外狀況之後，在某些情況下自動呼叫。 `terminate` 函式會呼叫 `abort` 或您使用 `set_terminate` 指定的函式|  
+|[unexpected](../c-runtime-library/reference/unexpected-crt.md)|呼叫 `terminate` 或您使用 `set_unexpected` 指定的函式。 目前 Microsoft C++ 例外狀況處理實作中未使用 `unexpected`|  
   
 ## <a name="see-also"></a>另請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

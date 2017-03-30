@@ -24,6 +24,7 @@ translation.priority.mt:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
@@ -44,7 +45,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
   
 -   [Update 3 的合規性改進](#VS_Update3)  
   
-##  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Visual C++ 2015 的合規性改進  
+##  <a name="VS_RTM"></a> Visual C++ 2015 的合規性改進  
   
 -   /Zc:forScope- 選項  
   
@@ -527,7 +528,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
   
      在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
   
-##  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Update 1 的合規性改進  
+##  <a name="VS_Update1"></a> Update 1 的合規性改進  
   
 -   **私用的虛擬基底類別與間接繼承**  
   
@@ -605,7 +606,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
   
      此外，雖然編譯器不提供特定的診斷，但內嵌運算子 new 會被視為語式錯誤。  
   
--   對非類別類型** **呼叫 'operator *type*()' (使用者定義的轉換)  
+-   對非類別類型** **呼叫 'operator*type*()' (使用者定義的轉換)  
   
      舊版編譯器允許在非類別類型上呼叫 'operator *type*()'，但以無訊息方式略過。 這種舊行為造成的風險是，會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2228。  
   
@@ -1038,7 +1039,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
     }  
     ```  
   
-##  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Update 2 的合規性改進  
+##  <a name="VS_Update2"></a> Update 2 的合規性改進  
   
 -   **運算式 SFINAE 的部分支援也可能會發出其他警告與錯誤**  
   
@@ -1129,7 +1130,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
     };  
     ```  
   
--   `volatile` ** 成員變數會禁止隱含定義的建構函式與指派運算子**  
+-   `volatile` **成員變數會禁止隱含定義的建構函式與指派運算子**  
   
      舊版編譯器允許具有 `volatile` 成員變數的類別自動產生預設的複製/移動建構函式及預設的複製/移動指派運算子。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會考慮讓具有揮發性成員變數的類別擁有非 trivial 建構和指派運算子，這樣可防止自動產生這些運算子的預設實作。  當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含 Unonymous 等位之類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。  
   
@@ -1303,7 +1304,7 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
   
      可能需要先將運算子定義從標頭檔移出，再將其移入對應的原始程式檔，才能修正以此方式撰寫的程式碼。  
   
-##  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Update 3 的合規性改進  
+##  <a name="VS_Update3"></a> Update 3 的合規性改進  
   
 -   **std::is_convertable 現在已可偵測自我指派** (標準程式庫)  
   
@@ -1542,8 +1543,3 @@ ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
     cl /c /Wall /Ycc.h -I.. X.cpp  
     cl /c /Wall /Yuc.h -I.. Z.cpp  
     ```
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -9,11 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlFileMapping<T>
-- ATL.CAtlFileMapping
-- ATL::CAtlFileMapping
 - CAtlFileMapping
-- ATL.CAtlFileMapping<T>
+- atlfile/ATL::CAtlFileMapping
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +76,7 @@ class CAtlFileMapping : public CAtlFileMappingBase
 ## <a name="requirements"></a>需求  
  **標頭︰** atlfile.h  
   
-##  <a name="a-nameoperatortstara--catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping::operator T *  
+##  <a name="operator_t_star"></a>CAtlFileMapping::operator T *  
  允許隱含轉換的`CAtlFileMapping`物件加入至`T` ** \* **。  
   
 ```  

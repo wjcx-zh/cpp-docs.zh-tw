@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator!= (hash_multiset)](#operator_neq__hash_multiset_)|[operator==](#operator_eq_eq)|  
 |[operator== (hash_multiset)](#operator_eq_eq__hash_multiset_)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
@@ -33,10 +33,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  `hash_set` 類型的物件。  
   
- ` right`  
+ `right`  
  `hash_set` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -86,7 +86,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
@@ -98,10 +98,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  `hash_set` 類型的物件。  
   
- ` right`  
+ `right`  
  `hash_set` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -151,7 +151,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorneqhashmultiseta--operator-hashmultiset"></a><a name="operator_neq__hash_multiset_"></a>  operator!= (hash_multiset)  
+##  <a name="operator_neq__hash_multiset_"></a>  operator!= (hash_multiset)  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
@@ -163,10 +163,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  `hash_multiset` 類型的物件。  
   
- ` right`  
+ `right`  
  `hash_multiset` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -216,7 +216,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqhashmultiseta--operator-hashmultiset"></a><a name="operator_eq_eq__hash_multiset_"></a>  operator== (hash_multiset)  
+##  <a name="operator_eq_eq__hash_multiset_"></a>  operator== (hash_multiset)  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
@@ -228,10 +228,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  `hash_multiset` 類型的物件。  
   
- ` right`  
+ `right`  
  `hash_multiset` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  

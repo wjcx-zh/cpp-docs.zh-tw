@@ -172,17 +172,14 @@ HRESULT Init(
   
  `flags`參數可讓您指定列舉值應該如何處理傳遞給它的陣列元素。 `flags`可能需要從值的其中一個**CComEnumFlags**列舉型別，如下所示︰  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy**表示陣列的存留期不會受到列舉值。 在此情況下，其中一個陣列會是靜態或所識別的物件*pUnk*負責在不再需要時釋放陣列。  
   

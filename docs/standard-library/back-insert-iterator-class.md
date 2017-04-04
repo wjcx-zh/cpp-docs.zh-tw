@@ -85,7 +85,7 @@ class back_insert_iterator;
   
  **命名空間：** std  
   
-##  <a name="a-namebackinsertiteratorbackinsertiteratora--backinsertiteratorbackinsertiterator"></a><a name="back_insert_iterator__back_insert_iterator"></a> back_insert_iterator::back_insert_iterator  
+##  <a name="back_insert_iterator__back_insert_iterator"></a> back_insert_iterator::back_insert_iterator  
  建構 `back_insert_iterator`，在容器的最後一個項目之後插入項目。  
   
 ```   
@@ -147,7 +147,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratorcontainertypea--backinsertiteratorcontainertype"></a><a name="back_insert_iterator__container_type"></a> back_insert_iterator::container_type  
+##  <a name="back_insert_iterator__container_type"></a> back_insert_iterator::container_type  
  類型，提供 `back_insert_iterator` 的容器。  
   
 ```   
@@ -199,7 +199,7 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatorstara--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_star"></a> back_insert_iterator::operator*  
+##  <a name="back_insert_iterator__operator_star"></a> back_insert_iterator::operator*  
  取值運算子，用來實作輸出迭代器運算式 \* *i* = *x*。  
   
 ```  
@@ -256,7 +256,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatoraddadda--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_add_add"></a> back_insert_iterator::operator++  
+##  <a name="back_insert_iterator__operator_add_add"></a> back_insert_iterator::operator++  
  將 `back_insert_iterator` 遞增至可儲存值的下一個位置。  
   
 ```  
@@ -314,7 +314,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).  
 ```  
   
-##  <a name="a-namebackinsertiteratoroperatoreqa--backinsertiteratoroperator"></a><a name="back_insert_iterator__operator_eq"></a> back_insert_iterator::operator=  
+##  <a name="back_insert_iterator__operator_eq"></a> back_insert_iterator::operator=  
  將值附加或推送到容器後端。  
   
 ```  
@@ -323,7 +323,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 ```  
   
 ### <a name="parameters"></a>參數  
- ` val`  
+ `val`  
  要插入容器的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -377,7 +377,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebackinsertiteratorreferencea--backinsertiteratorreference"></a><a name="back_insert_iterator__reference"></a> back_insert_iterator::reference  
+##  <a name="back_insert_iterator__reference"></a> back_insert_iterator::reference  
  類型，提供 `back_insert_iterator` 的參考。  
   
 ```  

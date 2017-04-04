@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
 |[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  測試運算子左邊的物件是否不等於右邊的物件。  
   
 ```  
@@ -29,10 +29,10 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  類型 **vector** 的物件。  
   
- ` right`  
+ `right`  
  類型 **vector** 的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -68,7 +68,7 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  運算子&lt;  
+##  <a name="operator_lt_"></a>  運算子&lt;  
  測試運算子左邊的物件是否小於右邊的物件。  
   
 ```  
@@ -76,10 +76,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  類型 **vector** 的物件。  
   
- ` right`  
+ `right`  
  類型 **vector** 的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -116,7 +116,7 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  運算子&lt;=  
+##  <a name="operator_lt__eq"></a>  運算子&lt;=  
  測試運算子左邊的物件是否小於或等於右邊的物件。  
   
 ```  
@@ -124,10 +124,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  類型 **vector** 的物件。  
   
- ` right`  
+ `right`  
  類型 **vector** 的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -164,7 +164,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  測試運算子左邊的物件是否等於右邊的物件。  
   
 ```  
@@ -172,10 +172,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  類型 **vector** 的物件。  
   
- ` right`  
+ `right`  
  類型 **vector** 的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -211,7 +211,7 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  運算子&gt;  
+##  <a name="operator_gt_"></a>  運算子&gt;  
  測試運算子左邊的物件是否大於右邊的物件。  
   
 ```  
@@ -219,10 +219,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  類型 **vector** 的物件。  
   
- ` right`  
+ `right`  
  類型 **vector** 的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -260,7 +260,7 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  運算子&gt;=  
+##  <a name="operator_gt__eq"></a>  運算子&gt;=  
  測試運算子左邊的物件是否大於或等於右邊的物件。  
   
 ```  
@@ -268,10 +268,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  類型 **vector** 的物件。  
   
- ` right`  
+ `right`  
  類型 **vector** 的物件。  
   
 ### <a name="return-value"></a>傳回值  

@@ -177,7 +177,7 @@
 ## [execvpe](execvpe.md)
 ## [_execvpe、_wexecvpe](execvpe-wexecvpe.md)
 ## [exit、_Exit、_exit](exit-exit-exit.md)
-## [exp、expf](exp-expf.md)
+## [exp、expf、expl](exp-expf.md)
 ## [exp2、exp2f、exp2l](exp2-exp2f-exp2l.md)
 ## [_expand](expand.md)
 ## [_expand_dbg](expand-dbg.md)
@@ -744,8 +744,3 @@
 ## [xor](xor.md)
 ## [xor_eq](xor-eq.md)
 ## [y0、y1、yn](y0-y1-yn.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

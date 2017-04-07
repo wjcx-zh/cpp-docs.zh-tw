@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap
+- AFXTEMPL/CTypedPtrMap::GetNextAssoc
+- AFXTEMPL/CTypedPtrMap::Lookup
+- AFXTEMPL/CTypedPtrMap::RemoveKey
+- AFXTEMPL/CTypedPtrMap::SetAt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>需求  
  **Header:** afxtempl.h  
   
-##  <a name="a-namegetnextassoca--ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
  擷取對應的項目在`rNextPosition`，然後更新`rNextPosition`來指向對應中的下一個項目。  
   
 ```  
@@ -128,7 +133,7 @@ void GetNextAssoc(
   
  內嵌函式呼叫`BASE_CLASS` **:: GetNextAssoc**。  
   
-##  <a name="a-namelookupa--ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Lookup  
+##  <a name="lookup"></a>CTypedPtrMap::Lookup  
  `Lookup`若要快速尋找完全符合的索引鍵的對應項目，會使用雜湊演算法。  
   
 ```  
@@ -154,7 +159,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>備註  
  內嵌函式呼叫`BASE_CLASS` **:: 查閱**。  
   
-##  <a name="a-nameoperatorata--ctypedptrmapoperator--"></a><a name="operator_at"></a>CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>CTypedPtrMap::operator]  
  這個運算子只用於在指派陳述式 (l-value) 的左側。  
   
 ```  
@@ -174,7 +179,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>備註  
  如果沒有具有指定之索引鍵的對應項目，則會建立新的項目。 任何 「 右側 」 （右值） 相當於這個運算子因為沒有索引鍵在對應中找到的可能性。 使用`Lookup`項目擷取的成員函式。  
   
-##  <a name="a-nameremovekeya--ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
  此成員函式呼叫`BASE_CLASS` **:: RemoveKey**。  
   
 ```  
@@ -194,7 +199,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>備註  
  如需詳細註解，請參閱[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)。  
   
-##  <a name="a-namesetata--ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>CTypedPtrMap::SetAt  
  此成員函式呼叫`BASE_CLASS` **:: SetAt**。  
   
 ```  

@@ -8,6 +8,10 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- scoped_d3d_access_lock
+- AMPRT/scoped_d3d_access_lock
+- AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 dev_langs:
 - C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
@@ -30,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: c5bc6183b3abc7a5598159717b0dbfa1dae2a05d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fd7f377e1dfe4e99f566da4782be5c2ccfdddbff
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock 類別
@@ -48,7 +52,7 @@ class scoped_d3d_access_lock;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[scoped_d3d_access_lock 建構函式](#ctor)|多載。 建構 `scoped_d3d_access_lock` 物件。 當此物件超出範圍時，會釋放鎖定。|  
 |[~ scoped_d3d_access_lock 解構函式](#dtor)|釋放相關聯的 D3D 存取鎖定`accelerator_view`物件。|  
@@ -57,7 +61,7 @@ class scoped_d3d_access_lock;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[運算子 = 運算子](#operator_eq)|取得從另一個鎖定的擁有權`scoped_d3d_access_lock`。|  
+|[operator=](#operator_eq)|取得從另一個鎖定的擁有權`scoped_d3d_access_lock`。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `scoped_d3d_access_lock`  
@@ -67,7 +71,7 @@ class scoped_d3d_access_lock;
   
  **命名空間︰** concurrency:: direct3d  
 
-##  <a name="a-namectora-scopedd3daccesslock"></a><a name="ctor"></a>scoped_d3d_access_lock 
+##  <a name="ctor"></a>scoped_d3d_access_lock 
 
  建構 `scoped_d3d_access_lock` 物件。 當此物件超出範圍時，會釋放鎖定。  
  
@@ -106,14 +110,14 @@ scoped_d3d_access_lock(// [3] move constructor
  會從另一個現有的 D3D 存取鎖定`scoped_d3d_access_lock`物件。 建構不會封鎖。  
 
   
-##  <a name="a-namedtora-scopedd3daccesslock"></a><a name="dtor"></a>~ scoped_d3d_access_lock 
+##  <a name="dtor"></a>~ scoped_d3d_access_lock 
 
  釋放相關聯的 D3D 存取鎖定`accelerator_view`物件。  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+## <a name="operator_eq"></a>運算子 = 
 
 取得從另一個 D3D 存取鎖定的擁有權`scoped_d3d_access_lock`釋放先前鎖定的物件。  
  
@@ -129,5 +133,5 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
  參考`scoped_accelerator_view_lock`。  
 
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: direct3d 命名空間](concurrency-direct3d-namespace.md)
+ [Concurrency::direct3d 命名空間](concurrency-direct3d-namespace.md)
 

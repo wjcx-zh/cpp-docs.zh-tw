@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
+- AFXEXT/CMetaFileDC
+- AFXEXT/CMetaFileDC::CMetaFileDC
+- AFXEXT/CMetaFileDC::Close
+- AFXEXT/CMetaFileDC::CloseEnhanced
+- AFXEXT/CMetaFileDC::Create
+- AFXEXT/CMetaFileDC::CreateEnhanced
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +100,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>需求  
  **標頭︰** afxext.h  
   
-##  <a name="a-nameclosea--cmetafiledcclose"></a><a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>CMetaFileDC::Close  
  關閉中繼檔裝置內容，並建立可用來播放使用中繼檔的 Windows 中繼檔控制代碼[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)成員函式。  
   
 ```  
@@ -109,7 +115,7 @@ HMETAFILE Close();
   
  在使用後刪除中繼檔，藉由呼叫 Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537)函式。  
   
-##  <a name="a-namecloseenhanceda--cmetafiledccloseenhanced"></a><a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
  關閉增強型中繼檔裝置內容，並傳回識別格式增強型中繼檔的控制代碼。  
   
 ```  
@@ -140,7 +146,7 @@ HENHMETAFILE CloseEnhanced();
   
  當應用程式不再需要的增強型中繼檔的控制代碼時，它應該釋放控制代碼藉由呼叫 Win32 **DeleteEnhMetaFile**函式。  
   
-##  <a name="a-namecmetafiledca--cmetafiledccmetafiledc"></a><a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
  建構`CMetaFileDC`兩個步驟中的物件。  
   
 ```  
@@ -150,7 +156,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>備註  
  首先，呼叫`CMetaFileDC`，然後呼叫**建立**，這會建立 Windows 中繼檔裝置內容，並將其以附加`CMetaFileDC`物件。  
   
-##  <a name="a-namecreatea--cmetafiledccreate"></a><a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>CMetaFileDC::Create  
  建構`CMetaFileDC`兩個步驟中的物件。  
   
 ```  
@@ -167,7 +173,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>備註  
  首先，呼叫建構函式`CMetaFileDC`，然後呼叫**建立**，這會建立 Windows 中繼檔裝置內容，並將其以附加`CMetaFileDC`物件。  
   
-##  <a name="a-namecreateenhanceda--cmetafiledccreateenhanced"></a><a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
  建立格式增強型中繼檔裝置內容。  
   
 ```  

@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CVSListBox
+- AFXVSLISTBOX/CVSListBox
+- AFXVSLISTBOX/CVSListBox::CVSListBox
+- AFXVSLISTBOX/CVSListBox::AddItem
+- AFXVSLISTBOX/CVSListBox::EditItem
+- AFXVSLISTBOX/CVSListBox::GetCount
+- AFXVSLISTBOX/CVSListBox::GetItemData
+- AFXVSLISTBOX/CVSListBox::GetItemText
+- AFXVSLISTBOX/CVSListBox::GetSelItem
+- AFXVSLISTBOX/CVSListBox::RemoveItem
+- AFXVSLISTBOX/CVSListBox::SelectItem
+- AFXVSLISTBOX/CVSListBox::SetItemData
+- AFXVSLISTBOX/CVSListBox::GetListHwnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +120,7 @@ class CVSListBox : public CVSListBoxBase
 ## <a name="requirements"></a>需求  
  **標頭︰** afxvslistbox.h  
   
-##  <a name="a-nameadditema--cvslistboxadditem"></a><a name="additem"></a>CVSListBox::AddItem  
+##  <a name="additem"></a>CVSListBox::AddItem  
  將字串加入至清單控制項。  
   
 ```  
@@ -134,7 +146,7 @@ virtual int AddItem(
 ### <a name="remarks"></a>備註  
  使用[CVSListBox::GetItemData](#getitemdata)方法來擷取所指定的值`dwData`參數。 這個值可以是應用程式特定整數或其他資料的指標。  
   
-##  <a name="a-namecvslistboxa--cvslistboxcvslistbox"></a><a name="cvslistbox"></a>CVSListBox::CVSListBox  
+##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
  建構 `CVSListBox` 物件。  
   
 ```  
@@ -145,7 +157,7 @@ CVSListBox();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameedititema--cvslistboxedititem"></a><a name="edititem"></a>CVSListBox::EditItem  
+##  <a name="edititem"></a>CVSListBox::EditItem  
  啟動清單控制項項目的文字編輯作業。  
   
 ```  
@@ -162,7 +174,7 @@ virtual BOOL EditItem(int iIndex);
 ### <a name="remarks"></a>備註  
  在使用者開始編輯作業，連按兩下某個項目的標籤，或按下**F2**或**空格鍵**索引鍵的項目有焦點時。  
   
-##  <a name="a-namegetcounta--cvslistboxgetcount"></a><a name="getcount"></a>CVSListBox::GetCount  
+##  <a name="getcount"></a>CVSListBox::GetCount  
  擷取可編輯的清單控制項中的字串數目。  
   
 ```  
@@ -175,7 +187,7 @@ virtual int GetCount() const;
 ### <a name="remarks"></a>備註  
  請注意此計數是比最後一個項目的索引值大一因為是以零為起始的索引。  
   
-##  <a name="a-namegetitemdataa--cvslistboxgetitemdata"></a><a name="getitemdata"></a>CVSListBox::GetItemData  
+##  <a name="getitemdata"></a>CVSListBox::GetItemData  
  擷取可編輯的清單控制項項目相關聯的特定應用程式的 32 位元值。  
   
 ```  
@@ -192,7 +204,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ### <a name="remarks"></a>備註  
  使用[CVSListBox::SetItemData](#setitemdata)或[CVSListBox::AddItem](#additem)要與清單控制項項目產生關聯的 32 位元值的方法。 這個值可以是應用程式特定整數或其他資料的指標。  
   
-##  <a name="a-namegetitemtexta--cvslistboxgetitemtext"></a><a name="getitemtext"></a>CVSListBox::GetItemText  
+##  <a name="getitemtext"></a>CVSListBox::GetItemText  
  擷取可編輯的清單控制項項目的文字。  
   
 ```  
@@ -208,7 +220,7 @@ virtual CString GetItemText(int iIndex) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetlisthwnda--cvslistboxgetlisthwnd"></a><a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
+##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
  傳回目前的內嵌的清單檢視控制項的控制代碼。  
   
 ```  
@@ -221,7 +233,7 @@ virtual HWND GetListHwnd() const;
 ### <a name="remarks"></a>備註  
  使用此方法來擷取支援內嵌的清單檢視控制項的控制代碼`CVSListBox`類別。  
   
-##  <a name="a-namegetselitema--cvslistboxgetselitem"></a><a name="getselitem"></a>CVSListBox::GetSelItem  
+##  <a name="getselitem"></a>CVSListBox::GetSelItem  
  擷取可編輯的清單控制項中目前選取項目的以零為起始的索引。  
   
 ```  
@@ -233,7 +245,7 @@ virtual int GetSelItem() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameremoveitema--cvslistboxremoveitem"></a><a name="removeitem"></a>CVSListBox::RemoveItem  
+##  <a name="removeitem"></a>CVSListBox::RemoveItem  
  可編輯的清單控制項中移除的項目。  
   
 ```  
@@ -249,7 +261,7 @@ virtual BOOL RemoveItem(int iIndex);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameselectitema--cvslistboxselectitem"></a><a name="selectitem"></a>CVSListBox::SelectItem  
+##  <a name="selectitem"></a>CVSListBox::SelectItem  
  選取的可編輯的清單控制項的字串。  
   
 ```  
@@ -266,7 +278,7 @@ virtual BOOL SelectItem(int iItem);
 ### <a name="remarks"></a>備註  
  這個方法會選取指定的項目，而且如有必要，將項目捲動到檢視。  
   
-##  <a name="a-namesetitemdataa--cvslistboxsetitemdata"></a><a name="setitemdata"></a>CVSListBox::SetItemData  
+##  <a name="setitemdata"></a>CVSListBox::SetItemData  
  關聯的可編輯的清單控制項項目之特定應用程式的 32 位元值。  
   
 ```  

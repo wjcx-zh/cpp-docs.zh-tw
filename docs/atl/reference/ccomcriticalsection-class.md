@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComCriticalSection
 - CComCriticalSection
-- ATL::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection::CComCriticalSection
+- ATLCORE/ATL::CComCriticalSection::Init
+- ATLCORE/ATL::CComCriticalSection::Lock
+- ATLCORE/ATL::CComCriticalSection::Term
+- ATLCORE/ATL::CComCriticalSection::Unlock
+- ATLCORE/ATL::CComCriticalSection::m_sec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CComCriticalSection
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcore.h  
   
-##  <a name="a-nameccomcriticalsectiona--ccomcriticalsectionccomcriticalsection"></a><a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection  
+##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection  
  建構函式。  
   
 ```
@@ -94,7 +99,7 @@ CComCriticalSection() throw();
 ### <a name="remarks"></a>備註  
  設定[m_sec](#m_sec)為 NULL 的資料成員**。**  
   
-##  <a name="a-nameinita--ccomcriticalsectioninit"></a><a name="init"></a>CComCriticalSection::Init  
+##  <a name="init"></a>CComCriticalSection::Init  
  呼叫 Win32 函式[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)，這會初始化中包含的重要區段物件[m_sec](#m_sec)資料成員。  
   
 ```
@@ -104,7 +109,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>傳回值  
  傳回`S_OK`成功時， **E_OUTOFMEMORY**或**E_FAIL**失敗。  
   
-##  <a name="a-namelocka--ccomcriticalsectionlock"></a><a name="lock"></a>CComCriticalSection::Lock  
+##  <a name="lock"></a>CComCriticalSection::Lock  
  呼叫 Win32 函式[EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)，哪些等待執行緒可能需要包含在重要區段物件的擁有權[m_sec](#m_sec)資料成員。  
   
 ```
@@ -117,14 +122,14 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>備註  
  重要區段物件必須先初始化呼叫[Init](#init)方法。 當受保護的程式碼完成執行時，必須呼叫執行緒[Unlock](#unlock)釋放重要區段的擁有權。  
   
-##  <a name="a-namemseca--ccomcriticalsectionmsec"></a><a name="m_sec"></a>CComCriticalSection::m_sec  
+##  <a name="m_sec"></a>CComCriticalSection::m_sec  
  包含所有使用的重要區段物件`CComCriticalSection`方法。  
   
 ```
 CRITICAL_SECTION m_sec;
 ```  
   
-##  <a name="a-nameterma--ccomcriticalsectionterm"></a><a name="term"></a>CComCriticalSection::Term  
+##  <a name="term"></a>CComCriticalSection::Term  
  呼叫 Win32 函式[DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552)，其中包含在重要區段物件所使用的資源全部釋出[m_sec](#m_sec)資料成員。  
   
 ```
@@ -137,7 +142,7 @@ HRESULT Term() throw();
 ### <a name="remarks"></a>備註  
  一次`Term`已呼叫的重要區段不可以用於同步處理。  
   
-##  <a name="a-nameunlocka--ccomcriticalsectionunlock"></a><a name="unlock"></a>CComCriticalSection::Unlock  
+##  <a name="unlock"></a>CComCriticalSection::Unlock  
  呼叫 Win32 函式[LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169)，其中所含的重要區段物件的擁有權釋放[m_sec](#m_sec)資料成員。  
   
 ```

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::invalid_operation
+- invalid_operation
+- CONCRT/concurrency::invalid_operation
+- CONCRT/concurrency::invalid_operation::invalid_operation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 0484e149409b2515f60b2e9aa34a85d5381e05a5
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 85821bbbe62fe5da93165065cb6f17ae4e938f4e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="invalidoperation-class"></a>invalid_operation 類別
@@ -54,7 +56,7 @@ class invalid_operation : public std::exception;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[invalid_operation 建構函式](#ctor)|多載。 建構 `invalid_operation` 物件。|  
+|[invalid_operation](#ctor)|多載。 建構 `invalid_operation` 物件。|  
   
 ## <a name="remarks"></a>備註  
  擲回這個例外狀況的各種方法，通常會記錄它們擲回此例外狀況的情形。  
@@ -69,7 +71,7 @@ class invalid_operation : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-invalidoperation"></a><a name="ctor"></a>invalid_operation 
+##  <a name="ctor"></a>invalid_operation 
 
  建構 `invalid_operation` 物件。  
   

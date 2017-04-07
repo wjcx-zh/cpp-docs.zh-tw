@@ -10,6 +10,27 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocTemplate
+- AFXWIN/CDocTemplate
+- AFXWIN/CDocTemplate::CDocTemplate
+- AFXWIN/CDocTemplate::AddDocument
+- AFXWIN/CDocTemplate::CloseAllDocuments
+- AFXWIN/CDocTemplate::CreateNewDocument
+- AFXWIN/CDocTemplate::CreateNewFrame
+- AFXWIN/CDocTemplate::CreateOleFrame
+- AFXWIN/CDocTemplate::CreatePreviewFrame
+- AFXWIN/CDocTemplate::GetDocString
+- AFXWIN/CDocTemplate::GetFirstDocPosition
+- AFXWIN/CDocTemplate::GetNextDoc
+- AFXWIN/CDocTemplate::InitialUpdateFrame
+- AFXWIN/CDocTemplate::LoadTemplate
+- AFXWIN/CDocTemplate::MatchDocType
+- AFXWIN/CDocTemplate::OpenDocumentFile
+- AFXWIN/CDocTemplate::RemoveDocument
+- AFXWIN/CDocTemplate::SaveAllModified
+- AFXWIN/CDocTemplate::SetContainerInfo
+- AFXWIN/CDocTemplate::SetDefaultTitle
+- AFXWIN/CDocTemplate::SetPreviewInfo
+- AFXWIN/CDocTemplate::SetServerInfo
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -115,7 +136,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameadddocumenta--cdoctemplateadddocument"></a><a name="adddocument"></a>CDocTemplate::AddDocument  
+##  <a name="adddocument"></a>CDocTemplate::AddDocument  
  使用此函式加入至範本的文件。  
   
 ```  
@@ -129,7 +150,7 @@ virtual void AddDocument(CDocument* pDoc);
 ### <a name="remarks"></a>備註  
  在衍生的類別[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)和[CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)覆寫這個函式。 如果您衍生您自己的文件樣板類別，從`CDocTemplate`，您的衍生的類別必須覆寫這個函式。  
   
-##  <a name="a-namecdoctemplatea--cdoctemplatecdoctemplate"></a><a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
+##  <a name="cdoctemplate"></a>CDocTemplate::CDocTemplate  
  建構 `CDocTemplate` 物件。  
   
 ```  
@@ -170,7 +191,7 @@ CDocTemplate (
 ### <a name="remarks"></a>備註  
  使用此成員函式來建構`CDocTemplate`物件。 動態配置`CDocTemplate`物件，並將它傳遞給[CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)從`InitInstance`應用程式類別的成員函式。  
   
-##  <a name="a-nameclosealldocumentsa--cdoctemplateclosealldocuments"></a><a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
+##  <a name="closealldocuments"></a>CDocTemplate::CloseAllDocuments  
  呼叫此成員函式，以關閉所有開啟的文件。  
   
 ```  
@@ -186,7 +207,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
   
  如果您想要要求使用者在執行特殊清除處理序在關閉文件之前，請覆寫這個函式。 比方說，如果文件代表資料庫中的記錄，您可能想要覆寫這個函式來關閉資料庫。  
   
-##  <a name="a-namecreatenewdocumenta--cdoctemplatecreatenewdocument"></a><a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
+##  <a name="createnewdocument"></a>CDocTemplate::CreateNewDocument  
  呼叫此成員函式，建立新的文件的文件樣板與相關聯的型別。  
   
 ```  
@@ -196,7 +217,7 @@ virtual CDocument* CreateNewDocument();
 ### <a name="return-value"></a>傳回值  
  新建立的文件的指標或**NULL**發生錯誤。  
   
-##  <a name="a-namecreatenewframea--cdoctemplatecreatenewframe"></a><a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
+##  <a name="createnewframe"></a>CDocTemplate::CreateNewFrame  
  建立新的框架視窗，其中包含文件和檢視。  
   
 ```  
@@ -220,7 +241,7 @@ virtual CFrameWnd* CreateNewFrame(
   
  `pOther`參數用來實作新視窗的命令。 它提供用來建立新的框架視窗的模型上的框架視窗。 新的框架視窗通常會建立不可見的。 呼叫此函式來建立新檔案和開啟檔案的標準架構實作外部框架視窗。  
   
-##  <a name="a-namecreateoleframea--cdoctemplatecreateoleframe"></a><a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
+##  <a name="createoleframe"></a>CDocTemplate::CreateOleFrame  
  建立 OLE 框架視窗。  
   
 ```  
@@ -246,7 +267,7 @@ CFrameWnd* CreateOleFrame(
 ### <a name="remarks"></a>備註  
  如果`bCreateView`為零，會建立空白的框架。  
   
-##  <a name="a-namegetdocstringa--cdoctemplategetdocstring"></a><a name="getdocstring"></a>CDocTemplate::GetDocString  
+##  <a name="getdocstring"></a>CDocTemplate::GetDocString  
  擷取與文件類型相關聯的字串。  
   
 ```  
@@ -284,7 +305,7 @@ virtual BOOL GetDocString(
   
  呼叫此函式，只有當您進行衍生您自己的類別，從`CDocTemplate`。  
   
-##  <a name="a-namegetfirstdocpositiona--cdoctemplategetfirstdocposition"></a><a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
+##  <a name="getfirstdocposition"></a>CDocTemplate::GetFirstDocPosition  
  擷取第一個與此範本相關聯的文件的位置。  
   
 ```  
@@ -299,7 +320,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
   
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)和[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)都會覆寫此純虛擬函式。 任何類別衍生自`CDocTemplate`也必須覆寫這個函式。  
   
-##  <a name="a-namegetnextdoca--cdoctemplategetnextdoc"></a><a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
+##  <a name="getnextdoc"></a>CDocTemplate::GetNextDoc  
  擷取所識別的清單項目`rPos`，然後設定`rPos`至**位置**清單中的下一個項目值。  
   
 ```  
@@ -320,7 +341,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
   
  您必須確定您**位置**值代表在清單中的有效位置。 如果它是無效的 Mfc 程式庫的偵錯版本會判斷提示。  
   
-##  <a name="a-nameinitialupdateframea--cdoctemplateinitialupdateframe"></a><a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
+##  <a name="initialupdateframe"></a>CDocTemplate::InitialUpdateFrame  
  初始化框架視窗時，並選擇性地使其可見。  
   
 ```  
@@ -345,7 +366,7 @@ virtual void InitialUpdateFrame(
   
  您不需要呼叫此函式時使用的新檔案和開啟檔案架構的實作。  
   
-##  <a name="a-nameloadtemplatea--cdoctemplateloadtemplate"></a><a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
+##  <a name="loadtemplate"></a>CDocTemplate::LoadTemplate  
  載入的資源指定`CDocTemplate`或衍生的類別。  
   
 ```  
@@ -355,7 +376,7 @@ virtual void LoadTemplate();
 ### <a name="remarks"></a>備註  
  載入的資源，架構會呼叫此成員函式指定`CDocTemplate`或衍生的類別。 通常在建構期間，除了時呼叫全域正在建構的範本。 在此情況下，呼叫`LoadTemplate`延遲到[CWinApp::AddDocTemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)呼叫。  
   
-##  <a name="a-namematchdoctypea--cdoctemplatematchdoctype"></a><a name="matchdoctype"></a>CDocTemplate::MatchDocType  
+##  <a name="matchdoctype"></a>CDocTemplate::MatchDocType  
  決定文件類型與此範本相符的信心程度。  
   
 ```  
@@ -374,23 +395,17 @@ virtual Confidence MatchDocType(
 ### <a name="return-value"></a>傳回值  
  介於**信心**列舉型別，定義如下︰  
   
- `enum Confidence`  
-  
- `{`  
-  
- `noAttempt,`  
-  
- `maybeAttemptForeign,`  
-  
- `maybeAttemptNative,`  
-  
- `yesAttemptForeign,`  
-  
- `yesAttemptNative,`  
-  
- `yesAlreadyOpen`  
-  
- `};`  
+```  
+enum Confidence  
+    {  
+    noAttempt,
+    maybeAttemptForeign,
+    maybeAttemptNative,
+    yesAttemptForeign,
+    yesAttemptNative,
+    yesAlreadyOpen
+    };  
+```  
   
 ### <a name="remarks"></a>備註  
  使用此函數來決定要用於開啟檔案的文件範本的類型。 如果您的應用程式支援多個檔案類型，例如，您可以使用此函式來判斷哪一個可用的文件範本會透過呼叫適用於指定的檔案`MatchDocType`每個範本中開啟，然後選擇範本，以根據信心值傳回。  
@@ -403,7 +418,7 @@ virtual Confidence MatchDocType(
   
  預設實作不會傳回**CDocTemplate::maybeAttemptForeign**或**CDocTemplate::maybeAttemptNative**。 覆寫這個函式來實作適用於您的應用程式，或許使用 從這兩個值的型別符合邏輯**信心**列舉型別。  
   
-##  <a name="a-nameopendocumentfilea--cdoctemplateopendocumentfile"></a><a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
+##  <a name="opendocumentfile"></a>CDocTemplate::OpenDocumentFile  
  開啟檔案的路徑所指定。  
   
 ```  
@@ -427,7 +442,7 @@ virtual CDocument* OpenDocumentFile(
 ### <a name="remarks"></a>備註  
  開啟的檔案的路徑由指定`lpszPathName`。 如果`lpszPathName`是`NULL`，來建立新的檔案，其中包含與此範本相關聯之類型的文件。  
   
-##  <a name="a-nameremovedocumenta--cdoctemplateremovedocument"></a><a name="removedocument"></a>CDocTemplate::RemoveDocument  
+##  <a name="removedocument"></a>CDocTemplate::RemoveDocument  
  移除所指的文件`pDoc`從這個範本相關聯的文件的清單。  
   
 ```  
@@ -441,7 +456,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 ### <a name="remarks"></a>備註  
  在衍生的類別`CMultiDocTemplate`和`CSingleDocTemplate`覆寫這個函式。 如果您衍生您自己的文件樣板類別，從`CDocTemplate`，您的衍生的類別必須覆寫這個函式。  
   
-##  <a name="a-namesaveallmodifieda--cdoctemplatesaveallmodified"></a><a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
+##  <a name="saveallmodified"></a>CDocTemplate::SaveAllModified  
  儲存修改過的所有文件。  
   
 ```  
@@ -451,7 +466,7 @@ virtual BOOL SaveAllModified();
 ### <a name="return-value"></a>傳回值  
  非零如果登錄成功。否則為 0。  
   
-##  <a name="a-namesetcontainerinfoa--cdoctemplatesetcontainerinfo"></a><a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
+##  <a name="setcontainerinfo"></a>CDocTemplate::SetContainerInfo  
  編輯就地 OLE 項目時，請決定 OLE 容器的資源。  
   
 ```  
@@ -467,7 +482,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
   
  相關聯的功能表`nIDOleInPlaceContainer`包含分隔符號，讓啟動就地項目合併的功能表與容器應用程式的功能表。 如需合併伺服器和容器的功能表的詳細資訊，請參閱文章[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
-##  <a name="a-namesetdefaulttitlea--cdoctemplatesetdefaulttitle"></a><a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
+##  <a name="setdefaulttitle"></a>CDocTemplate::SetDefaultTitle  
  呼叫此函式可載入文件的預設標題，並顯示文件的標題列中。  
   
 ```  
@@ -481,7 +496,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 ### <a name="remarks"></a>備註  
  在預設標題上的資訊，請參閱說明**CDocTemplate::docName**中[CDocTemplate::GetDocString](#getdocstring)。  
   
-##  <a name="a-namesetserverinfoa--cdoctemplatesetserverinfo"></a><a name="setserverinfo"></a>Coleresizebar  
+##  <a name="setserverinfo"></a>Coleresizebar  
  伺服器文件內嵌或特殊處理時，決定資源與類別。  
   
 ```  
@@ -510,7 +525,7 @@ void SetServerInfo(
   
  相關聯的功能表`nIDOleInPlaceServer`包含分隔符號，讓合併伺服器功能表與容器的功能表。 如需合併伺服器和容器的功能表的詳細資訊，請參閱文章[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
-##  <a name="a-namecreatepreviewframea--cdoctemplatecreatepreviewframe"></a><a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
+##  <a name="createpreviewframe"></a>CDocTemplate::CreatePreviewFrame  
  建立一個子框架用於豐富的預覽。  
   
 ```  
@@ -531,7 +546,7 @@ CFrameWnd* CreatePreviewFrame(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetpreviewinfoa--cdoctemplatesetpreviewinfo"></a><a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
+##  <a name="setpreviewinfo"></a>CDocTemplate::SetPreviewInfo  
  設定程序預覽處理常式。  
   
 ```  

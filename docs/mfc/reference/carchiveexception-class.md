@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CArchiveException
+- AFX/CArchiveException
+- AFX/CArchiveException::CArchiveException
+- AFX/CArchiveException::m_cause
+- AFX/CArchiveException::m_strFileName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +86,7 @@ class CArchiveException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="a-namecarchiveexceptiona--carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
  建構`CArchiveException`物件，儲存的值`cause`物件中。  
   
 ```  
@@ -103,7 +107,7 @@ CArchiveException(
   
  直接; 請勿使用這個建構函式請改為呼叫全域函式`AfxThrowArchiveException`。  
   
-##  <a name="a-namemcausea--carchiveexceptionmcause"></a><a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>CArchiveException::m_cause  
  指定例外狀況的原因。  
   
 ```  
@@ -135,7 +139,7 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic**已被取代。 使用**genericException**改。 如果**泛型**已用在應用程式，而且建置以 /clr，會有語法錯誤，並不容易破解。  
   
-##  <a name="a-namemstrfilenamea--carchiveexceptionmstrfilename"></a><a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
  指定此例外狀況的檔案名稱。  
   
 ```  

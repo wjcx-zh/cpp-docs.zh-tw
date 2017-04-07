@@ -9,9 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSimpleArray
-- ATL::CSimpleArray
 - CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray::CSimpleArray
+- ATLSIMPCOLL/ATL::CSimpleArray::Add
+- ATLSIMPCOLL/ATL::CSimpleArray::Find
+- ATLSIMPCOLL/ATL::CSimpleArray::GetData
+- ATLSIMPCOLL/ATL::CSimpleArray::GetSize
+- ATLSIMPCOLL/ATL::CSimpleArray::Remove
+- ATLSIMPCOLL/ATL::CSimpleArray::RemoveAll
+- ATLSIMPCOLL/ATL::CSimpleArray::RemoveAt
+- ATLSIMPCOLL/ATL::CSimpleArray::SetAtIndex
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +109,7 @@ class CSimpleArray
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities # x86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
-##  <a name="a-nameadda--csimplearrayadd"></a><a name="add"></a>CSimpleArray::Add  
+##  <a name="add"></a>CSimpleArray::Add  
  將新的項目加入至陣列。  
   
 ```
@@ -118,7 +126,7 @@ BOOL Add(const T& t);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&87;](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
-##  <a name="a-namecsimplearraya--csimplearraycsimplearray"></a><a name="csimplearray"></a>CSimpleArray::CSimpleArray  
+##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
  陣列物件的建構函式。  
   
 ```
@@ -133,7 +141,7 @@ CSimpleArray();
 ### <a name="remarks"></a>備註  
  初始化資料成員，建立新的空白`CSimpleArray`物件或將現有的複本`CSimpleArray`物件。  
   
-##  <a name="a-namedtora--csimplearraycsimplearray"></a><a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
  解構函式。  
   
 ```
@@ -143,7 +151,7 @@ CSimpleArray();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-namefinda--csimplearrayfind"></a><a name="find"></a>CSimpleArray::Find  
+##  <a name="find"></a>CSimpleArray::Find  
  陣列中尋找的項目。  
   
 ```
@@ -160,7 +168,7 @@ int Find(const T& t) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&88;](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
-##  <a name="a-namegetdataa--csimplearraygetdata"></a><a name="getdata"></a>CSimpleArray::GetData  
+##  <a name="getdata"></a>CSimpleArray::GetData  
  傳回的指標儲存在陣列中的資料。  
   
 ```
@@ -170,7 +178,7 @@ T* GetData() const;
 ### <a name="return-value"></a>傳回值  
  傳回陣列中的資料指標。  
   
-##  <a name="a-namegetsizea--csimplearraygetsize"></a><a name="getsize"></a>CSimpleArray::GetSize  
+##  <a name="getsize"></a>CSimpleArray::GetSize  
  傳回儲存在陣列中元素數目。  
   
 ```
@@ -180,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>傳回值  
  傳回儲存在陣列中元素數目。  
   
-##  <a name="a-nameoperatorata--csimplearrayoperator-"></a><a name="operator_at"></a>CSimpleArray::operator\[\]  
+##  <a name="operator_at"></a>CSimpleArray::operator\[\]  
  從陣列中擷取項目。  
   
 ```
@@ -197,7 +205,7 @@ T& operator[](int nindex);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&89;](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
-##  <a name="a-nameoperatoreqa--csimplearrayoperator-"></a><a name="operator_eq"></a>CSimpleArray::operator =  
+##  <a name="operator_eq"></a>CSimpleArray::operator =  
  指派運算子。  
   
 ```
@@ -219,7 +227,7 @@ CSimpleArray<T, TEqual>
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&90;](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
-##  <a name="a-nameremovea--csimplearrayremove"></a><a name="remove"></a>CSimpleArray::Remove  
+##  <a name="remove"></a>CSimpleArray::Remove  
  從陣列中移除指定的項目。  
   
 ```
@@ -236,7 +244,7 @@ BOOL Remove(const T& t);
 ### <a name="remarks"></a>備註  
  當移除項目時，陣列中其餘的項目將會重新編號以填滿空的空間。  
   
-##  <a name="a-nameremovealla--csimplearrayremoveall"></a><a name="removeall"></a>CSimpleArray::RemoveAll  
+##  <a name="removeall"></a>CSimpleArray::RemoveAll  
  從陣列移除所有項目。  
   
 ```
@@ -246,7 +254,7 @@ void RemoveAll();
 ### <a name="remarks"></a>備註  
  移除目前儲存在陣列中的所有項目。  
   
-##  <a name="a-nameremoveata--csimplearrayremoveat"></a><a name="removeat"></a>CSimpleArray::RemoveAt  
+##  <a name="removeat"></a>CSimpleArray::RemoveAt  
  從陣列中移除指定的項目。  
   
 ```
@@ -263,7 +271,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="remarks"></a>備註  
  當移除項目時，陣列中其餘的項目將會重新編號以填滿空的空間。  
   
-##  <a name="a-namesetatindexa--csimplearraysetatindex"></a><a name="setatindex"></a>CSimpleArray::SetAtIndex  
+##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  
  設定指定的項目陣列中。  
   
 ```

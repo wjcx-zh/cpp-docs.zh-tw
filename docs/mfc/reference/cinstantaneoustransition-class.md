@@ -9,8 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CInstantaneousTransition
 - CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::CInstantaneousTransition
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::Create
+- AFXANIMATIONCONTROLLER/CInstantaneousTransition::m_dblFinalValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CInstantaneousTransition : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecinstantaneoustransitiona--cinstantaneoustransitioncinstantaneoustransition"></a><a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
+##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
  建構轉換物件並初始化其最終值。  
   
 ```  
@@ -93,7 +96,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
  `dblFinalValue`  
  在轉換結束動畫變數的值。  
   
-##  <a name="a-namecreatea--cinstantaneoustransitioncreate"></a><a name="create"></a>CInstantaneousTransition::Create  
+##  <a name="create"></a>CInstantaneousTransition::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -110,7 +113,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-namemdblfinalvaluea--cinstantaneoustransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
  在轉換結束動畫變數的值。  
   
 ```  

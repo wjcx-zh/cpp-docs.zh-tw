@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl::IDispEventImpl
+- ATLCOM/ATL::IDispEventImpl::GetFuncInfoFromId
+- ATLCOM/ATL::IDispEventImpl::GetIDsOfNames
+- ATLCOM/ATL::IDispEventImpl::GetTypeInfo
+- ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
+- ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -135,7 +142,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namegetfuncinfofromida--idispeventimplgetfuncinfofromid"></a><a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
+##  <a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
  找出指定的分派識別項的函式索引。  
   
 ```
@@ -162,7 +169,7 @@ HRESULT GetFuncInfoFromId(
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namegetidsofnamesa--idispeventimplgetidsofnames"></a><a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>IDispEventImpl::GetIDsOfNames  
  單一成員和一組選擇性的引數名稱對應至一組對應的整數 Dispid，可以用在後續呼叫[Excepinfo](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)。  
   
 ```
@@ -177,7 +184,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>備註  
  請參閱[IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegettypeinfoa--idispeventimplgettypeinfo"></a><a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  擷取物件的類型資訊，可以用來取得介面的類型資訊。  
   
 ```
@@ -189,7 +196,7 @@ STDMETHOD(GetTypeInfo)(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegettypeinfocounta--idispeventimplgettypeinfocount"></a><a name="gettypeinfocount"></a>IDispEventImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>IDispEventImpl::GetTypeInfoCount  
  擷取物件提供的類型資訊介面數目 (0 或 1)。  
   
 ```
@@ -199,7 +206,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ### <a name="remarks"></a>備註  
  請參閱[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetuserdefinedtypea--idispeventimplgetuserdefinedtype"></a><a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
+##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
  擷取使用者定義型別的基本類型。  
   
 ```
@@ -221,14 +228,14 @@ VARTYPE GetUserDefinedType(
 ### <a name="remarks"></a>備註  
  請參閱[ITypeInfo::GetRefTypeInfo](http://msdn.microsoft.com/en-us/61d3b31d-6591-4e55-9e82-5246a168be00)。  
   
-##  <a name="a-nameidispeventimpla--idispeventimplidispeventimpl"></a><a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
+##  <a name="idispeventimpl"></a>IDispEventImpl::IDispEventImpl  
  建構函式。 儲存類別樣板參數的值`plibid`， `pdiid`， `wMajor`，和`wMinor`。  
   
 ```
 IDispEventImpl();
 ```  
   
-##  <a name="a-nametihclassa--idispeventimpltihclass"></a><a name="tihclass"></a>IDispEventImpl::tihclass  
+##  <a name="tihclass"></a>IDispEventImpl::tihclass  
  此 typedef 是類別樣板參數的執行個體`tihclass`。  
   
 ```

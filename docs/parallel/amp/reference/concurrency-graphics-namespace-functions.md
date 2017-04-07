@@ -6,23 +6,28 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::fast_math::copy_async
+- amp_graphics/Concurrency::fast_math::copy
+dev_langs:
+- C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c17becb6bc3fb9b243a65652bf019b7fad1b8cd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: graphics 命名空間函式
 |||  
 |-|-|  
-|[copy 函式 （concurrency:: graphics 命名空間）](#copy)|[copy_async 函式 （concurrency:: graphics 命名空間）](#copy_async)|  
+|[copy](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="a-namecopya--copy-function-concurrencygraphics-namespace"></a><a name="copy"></a>copy 函式 （concurrency:: graphics 命名空間）  
+##  <a name="copy"></a>copy 函式 （concurrency:: graphics 命名空間）  
  將來源紋理複製到目的地緩衝區中，或將來源緩衝區複製到目的緩衝區。 此函式的一般形式是`copy(src, dest)`。  
   
 ```  
@@ -168,7 +173,7 @@ void copy (
  `last`  
  結束迭代器，為來源容器。  
   
-##  <a name="a-namecopyasynca--copyasync-function-concurrencygraphics-namespace"></a><a name="copy_async"></a>copy_async 函式 （concurrency:: graphics 命名空間）  
+##  <a name="copy_async"></a>copy_async 函式 （concurrency:: graphics 命名空間）  
  以非同步方式將來源紋理複製到目的地緩衝區中，或將來源緩衝區複製到目的地緩衝區，然後傳回[completion_future](completion-future-class.md)可以等候的物件。 加速器上執行的程式碼時，無法複製資料。 此函式的一般形式是`copy(src, dest)`。  
   
 ```  
@@ -309,7 +314,12 @@ concurrency::completion_future copy_async(_Src_type& _Src,
   
  `last`  
  結束迭代器，為來源容器。  
+
+## <a name="requirements"></a>需求  
+ **標頭︰** amp_graphics.h  
   
+ **命名空間︰** concurrency:: graphics 
+
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

@@ -9,8 +9,30 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationBaseObject
 - CAnimationBaseObject
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::CAnimationBaseObject
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::ApplyTransitions
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::ClearTransitions
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::ContainsVariable
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::CreateTransitions
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::DetachFromController
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::EnableIntegerValueChangedEvent
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::EnableValueChangedEvent
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::GetAutodestroyTransitions
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::GetGroupID
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::GetObjectID
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::GetUserData
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::SetAutodestroyTransitions
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::SetID
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::SetUserData
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::SetParentAnimationObjects
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_bAutodestroyTransitions
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_dwUserData
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nGroupID
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nObjectID
+- AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_pParentController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,14 +127,14 @@ class CAnimationBaseObject : public CObject;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namedtorcanimationbaseobjecta--canimationbaseobjectcanimationbaseobject"></a><a name="_dtorcanimationbaseobject"></a>CAnimationBaseObject:: ~ CAnimationBaseObject  
+##  <a name="_dtorcanimationbaseobject"></a>CAnimationBaseObject:: ~ CAnimationBaseObject  
  解構函式。 動畫在物件終結時呼叫。  
   
 ```  
 virtual ~CAnimationBaseObject();
 ```  
   
-##  <a name="a-nameapplytransitionsa--canimationbaseobjectapplytransitions"></a><a name="applytransitions"></a>CAnimationBaseObject::ApplyTransitions  
+##  <a name="applytransitions"></a>CAnimationBaseObject::ApplyTransitions  
  加入分鏡腳本與封裝的動畫變數的轉換。  
   
 ```  
@@ -134,7 +156,7 @@ virtual BOOL ApplyTransitions(
 ### <a name="remarks"></a>備註  
  新增相關的轉換，已加入至分鏡腳本的 （在衍生類別中的多載方法），還得使用。  
   
-##  <a name="a-namecanimationbaseobjecta--canimationbaseobjectcanimationbaseobject"></a><a name="canimationbaseobject"></a>CAnimationBaseObject::CAnimationBaseObject  
+##  <a name="canimationbaseobject"></a>CAnimationBaseObject::CAnimationBaseObject  
  建構的動畫物件。  
   
 ```  
@@ -160,7 +182,7 @@ CAnimationBaseObject(
 ### <a name="remarks"></a>備註  
  建構動畫物件，並指派預設物件識別碼 (0) 和群組識別碼 (0)。  
   
-##  <a name="a-namecleartransitionsa--canimationbaseobjectcleartransitions"></a><a name="cleartransitions"></a>CAnimationBaseObject::ClearTransitions  
+##  <a name="cleartransitions"></a>CAnimationBaseObject::ClearTransitions  
  移除所有相關的轉換。  
   
 ```  
@@ -174,7 +196,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ### <a name="remarks"></a>備註  
  移除所有相關的轉換，如果為 TRUE，否則 bAutodestroy 或 m_bAutodestroyTransitions 旗標會終結。 轉換不會在堆疊上配置時，才應該會自動終結。 如果上述的旗標為 FALSE，轉換會只會移除從內部清單中相關的轉換。  
   
-##  <a name="a-namecontainsvariablea--canimationbaseobjectcontainsvariable"></a><a name="containsvariable"></a>CAnimationBaseObject::ContainsVariable  
+##  <a name="containsvariable"></a>CAnimationBaseObject::ContainsVariable  
  判斷動畫物件是否包含特定的動畫變數。  
   
 ```  
@@ -191,7 +213,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ### <a name="remarks"></a>備註  
  這個方法可以用來判斷動畫物件中是否包含指定 pVariable 動畫變數。 動畫物件，根據其類型，可能包含數個動畫變數。 例如，CAnimationColor 包含三個變數，一個用於每個色彩元件 （紅色、 綠色和藍色）。 當動畫變數的值變更時，會傳送 Windows 動畫 API ValueChanged 或 IntegerValueChanged 事件 （如果啟用），以及此事件的參數是介面 IUIAnimationVariable 動畫變數的指標。 此方法可協助從包含 COM 物件的指標取得動畫的指標。  
   
-##  <a name="a-namecreatetransitionsa--canimationbaseobjectcreatetransitions"></a><a name="createtransitions"></a>CAnimationBaseObject::CreateTransitions  
+##  <a name="createtransitions"></a>CAnimationBaseObject::CreateTransitions  
  建立轉換與動畫物件相關聯。  
   
 ```  
@@ -204,7 +226,7 @@ BOOL CreateTransitions();
 ### <a name="remarks"></a>備註  
  循環查看封裝在衍生的動畫物件的動畫變數的清單，並建立每個動畫變數相關聯的轉換。  
   
-##  <a name="a-namedetachfromcontrollera--canimationbaseobjectdetachfromcontroller"></a><a name="detachfromcontroller"></a>CAnimationBaseObject::DetachFromController  
+##  <a name="detachfromcontroller"></a>CAnimationBaseObject::DetachFromController  
  卸離父動畫控制器中的動畫物件。  
   
 ```  
@@ -214,7 +236,7 @@ void DetachFromController();
 ### <a name="remarks"></a>備註  
  這個方法是在內部使用。  
   
-##  <a name="a-nameenableintegervaluechangedeventa--canimationbaseobjectenableintegervaluechangedevent"></a><a name="enableintegervaluechangedevent"></a>CAnimationBaseObject::EnableIntegerValueChangedEvent  
+##  <a name="enableintegervaluechangedevent"></a>CAnimationBaseObject::EnableIntegerValueChangedEvent  
  設定變更的整數值的事件處理常式。  
   
 ```  
@@ -233,7 +255,7 @@ virtual void EnableIntegerValueChangedEvent(
 ### <a name="remarks"></a>備註  
  如果已啟用的整數值變更事件處理常式，您可以處理此事件在 CAnimationController::OnAnimationIntegerValueChanged 方法，應該 CAnimationController 衍生類別中覆寫。 每次動畫的整數值已變更，都會呼叫這個方法。  
   
-##  <a name="a-nameenablevaluechangedeventa--canimationbaseobjectenablevaluechangedevent"></a><a name="enablevaluechangedevent"></a>CAnimationBaseObject::EnableValueChangedEvent  
+##  <a name="enablevaluechangedevent"></a>CAnimationBaseObject::EnableValueChangedEvent  
  設定值變更事件處理常式。  
   
 ```  
@@ -252,7 +274,7 @@ virtual void EnableValueChangedEvent(
 ### <a name="remarks"></a>備註  
  如果已啟用的值變更事件處理常式，您可以處理此事件在 CAnimationController::OnAnimationValueChanged 方法，應該 CAnimationController 衍生類別中覆寫。 每次動畫值已變更，都會呼叫這個方法。  
   
-##  <a name="a-namegetanimationvariablelista--canimationbaseobjectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationBaseObject::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationBaseObject::GetAnimationVariableList  
  會收集包含的動畫變數的指標。  
   
 ```  
@@ -268,7 +290,7 @@ virtual void GetAnimationVariableList(
 ### <a name="remarks"></a>備註  
  這是必須在衍生類別中覆寫的純虛擬方法。 動畫物件，根據其類型，包含一或多個動畫變數。 例如，CAnimationPoint 包含兩個變數，X 和 Y 座標分別表示。 CAnimationBaseObject 的基底類別會實作某些泛型方法，執行動畫變數的清單︰ ApplyTransitions、 ClearTransitions、 EnableValueChangedEvent、 EnableIntegerValueChangedEvent。 這些方法會呼叫 GetAnimationVariableList，其中會填入在衍生類別中特定動畫物件中包含的實際動畫變數，然後循環清單並執行必要的動作。 如果您建立自訂動畫物件時，您必須將加入 lst 該物件中包含的所有動畫變數。  
   
-##  <a name="a-namegetautodestroytransitionsa--canimationbaseobjectgetautodestroytransitions"></a><a name="getautodestroytransitions"></a>CAnimationBaseObject::GetAutodestroyTransitions  
+##  <a name="getautodestroytransitions"></a>CAnimationBaseObject::GetAutodestroyTransitions  
  會告知相關的轉換是否會自動終結。  
   
 ```  
@@ -281,7 +303,7 @@ BOOL GetAutodestroyTransitions() const;
 ### <a name="remarks"></a>備註  
  依預設此旗標為 TRUE。 只有當您配置在堆疊上的轉換和/或轉換應該被呼叫的應用程式解除配置，請設定此旗標。  
   
-##  <a name="a-namegetgroupida--canimationbaseobjectgetgroupid"></a><a name="getgroupid"></a>CAnimationBaseObject::GetGroupID  
+##  <a name="getgroupid"></a>CAnimationBaseObject::GetGroupID  
  傳回目前的群組識別碼。  
   
 ```  
@@ -294,7 +316,7 @@ UINT32 GetGroupID() const;
 ### <a name="remarks"></a>備註  
  使用此方法來擷取群組識別碼。 如果群組識別碼尚未設定明確建構函式中或 SetID，的 0。  
   
-##  <a name="a-namegetobjectida--canimationbaseobjectgetobjectid"></a><a name="getobjectid"></a>CAnimationBaseObject::GetObjectID  
+##  <a name="getobjectid"></a>CAnimationBaseObject::GetObjectID  
  傳回目前的物件識別碼。  
   
 ```  
@@ -307,7 +329,7 @@ UINT32 GetObjectID() const;
 ### <a name="remarks"></a>備註  
  使用此方法來擷取物件識別碼。 如果物件識別碼尚未設定明確建構函式中或 SetID，的 0。  
   
-##  <a name="a-namegetuserdataa--canimationbaseobjectgetuserdata"></a><a name="getuserdata"></a>CAnimationBaseObject::GetUserData  
+##  <a name="getuserdata"></a>CAnimationBaseObject::GetUserData  
  傳回使用者定義的資料。  
   
 ```  
@@ -320,42 +342,42 @@ DWORD GetUserData() const;
 ### <a name="remarks"></a>備註  
  呼叫這個方法來擷取在執行階段自訂的資料。 傳回的值將會是 0，如果它未明確初始化建構函式中或 SetUserData。  
   
-##  <a name="a-namembautodestroytransitionsa--canimationbaseobjectmbautodestroytransitions"></a><a name="m_bautodestroytransitions"></a>CAnimationBaseObject::m_bAutodestroyTransitions  
+##  <a name="m_bautodestroytransitions"></a>CAnimationBaseObject::m_bAutodestroyTransitions  
  指定是否應該自動終結相關的轉換。  
   
 ```  
 BOOL m_bAutodestroyTransitions;  
 ```  
   
-##  <a name="a-namemdwuserdataa--canimationbaseobjectmdwuserdata"></a><a name="m_dwuserdata"></a>CAnimationBaseObject::m_dwUserData  
+##  <a name="m_dwuserdata"></a>CAnimationBaseObject::m_dwUserData  
  儲存使用者定義的資料。  
   
 ```  
 DWORD m_dwUserData;  
 ```  
   
-##  <a name="a-namemngroupida--canimationbaseobjectmngroupid"></a><a name="m_ngroupid"></a>CAnimationBaseObject::m_nGroupID  
+##  <a name="m_ngroupid"></a>CAnimationBaseObject::m_nGroupID  
  指定的動畫物件的群組識別碼。  
   
 ```  
 UINT32 m_nGroupID;  
 ```  
   
-##  <a name="a-namemnobjectida--canimationbaseobjectmnobjectid"></a><a name="m_nobjectid"></a>CAnimationBaseObject::m_nObjectID  
+##  <a name="m_nobjectid"></a>CAnimationBaseObject::m_nObjectID  
  指定的動畫物件的物件識別碼。  
   
 ```  
 UINT32 m_nObjectID;  
 ```  
   
-##  <a name="a-namempparentcontrollera--canimationbaseobjectmpparentcontroller"></a><a name="m_pparentcontroller"></a>CAnimationBaseObject::m_pParentController  
+##  <a name="m_pparentcontroller"></a>CAnimationBaseObject::m_pParentController  
  父動畫控制器指標。  
   
 ```  
 CAnimationController* m_pParentController;  
 ```  
   
-##  <a name="a-namesetautodestroytransitionsa--canimationbaseobjectsetautodestroytransitions"></a><a name="setautodestroytransitions"></a>CAnimationBaseObject::SetAutodestroyTransitions  
+##  <a name="setautodestroytransitions"></a>CAnimationBaseObject::SetAutodestroyTransitions  
  設定自動終結轉換訂單的旗標。  
   
 ```  
@@ -369,7 +391,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ### <a name="remarks"></a>備註  
  只有當您配置轉換的物件，使用新的運算子，請設定此旗標。 如果基於某些原因會在堆疊配置轉換物件，自動終結旗標應該是 FALSE。 依預設此旗標為 TRUE。  
   
-##  <a name="a-namesetida--canimationbaseobjectsetid"></a><a name="setid"></a>CAnimationBaseObject::SetID  
+##  <a name="setid"></a>CAnimationBaseObject::SetID  
  設定新的識別碼。  
   
 ```  
@@ -388,7 +410,7 @@ void SetID(
 ### <a name="remarks"></a>備註  
  讓使用者能夠變更物件識別碼和群組識別碼。 如果新的群組識別碼不同於目前的識別碼，動畫物件移到另一個群組 （新的群組將會建立，如有必要）。  
   
-##  <a name="a-namesetparentanimationobjectsa--canimationbaseobjectsetparentanimationobjects"></a><a name="setparentanimationobjects"></a>CAnimationBaseObject::SetParentAnimationObjects  
+##  <a name="setparentanimationobjects"></a>CAnimationBaseObject::SetParentAnimationObjects  
  建立動畫物件和其容器中所包含的動畫變數之間的關聯性。  
   
 ```  
@@ -398,7 +420,7 @@ virtual void SetParentAnimationObjects();
 ### <a name="remarks"></a>備註  
  這是可以用來建立動畫物件和其容器中所包含的動畫變數之間的關聯性的協助程式。 它會循環查看動畫變數，並設定父動畫物件，以每個動畫變數的返回指標。 在目前的實作中 CAnimationBaseObject::ApplyTransitions 建立實際的關聯性，因此反向指標才會進行設定呼叫 CAnimationGroup::Animate。 了解關聯性可能很有幫助您處理事件及要取得父動畫物件從 CAnimationVariable （使用 CAnimationVariable::GetParentAnimationObject） 時。  
   
-##  <a name="a-namesetuserdataa--canimationbaseobjectsetuserdata"></a><a name="setuserdata"></a>CAnimationBaseObject::SetUserData  
+##  <a name="setuserdata"></a>CAnimationBaseObject::SetUserData  
  設定使用者定義的資料。  
   
 ```  

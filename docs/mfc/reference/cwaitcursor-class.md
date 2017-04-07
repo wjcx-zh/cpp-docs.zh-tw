@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWaitCursor
+- AFXWIN/CWaitCursor
+- AFXWIN/CWaitCursor::CWaitCursor
+- AFXWIN/CWaitCursor::Restore
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +95,7 @@ class CWaitCursor
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&62;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
-##  <a name="a-namecwaitcursora--cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
+##  <a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
  若要顯示等待游標，只是宣告`CWaitCursor`之前執行長時間作業的程式碼的物件。  
   
 ```  
@@ -112,7 +115,7 @@ CWaitCursor();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&63;](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
-##  <a name="a-namerestorea--cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor::Restore  
+##  <a name="restore"></a>CWaitCursor::Restore  
  若要還原將等待游標，請執行作業，例如顯示訊息方塊或對話方塊中，可能會將等待游標變更為另一個資料指標之後呼叫此函式。  
   
 ```  

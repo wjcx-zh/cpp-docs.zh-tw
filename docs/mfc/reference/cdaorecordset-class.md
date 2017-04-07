@@ -10,6 +10,87 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoRecordset
+- AFXDAO/CDaoRecordset
+- AFXDAO/CDaoRecordset::CDaoRecordset
+- AFXDAO/CDaoRecordset::AddNew
+- AFXDAO/CDaoRecordset::CanAppend
+- AFXDAO/CDaoRecordset::CanBookmark
+- AFXDAO/CDaoRecordset::CancelUpdate
+- AFXDAO/CDaoRecordset::CanRestart
+- AFXDAO/CDaoRecordset::CanScroll
+- AFXDAO/CDaoRecordset::CanTransact
+- AFXDAO/CDaoRecordset::CanUpdate
+- AFXDAO/CDaoRecordset::Close
+- AFXDAO/CDaoRecordset::Delete
+- AFXDAO/CDaoRecordset::DoFieldExchange
+- AFXDAO/CDaoRecordset::Edit
+- AFXDAO/CDaoRecordset::FillCache
+- AFXDAO/CDaoRecordset::Find
+- AFXDAO/CDaoRecordset::FindFirst
+- AFXDAO/CDaoRecordset::FindLast
+- AFXDAO/CDaoRecordset::FindNext
+- AFXDAO/CDaoRecordset::FindPrev
+- AFXDAO/CDaoRecordset::GetAbsolutePosition
+- AFXDAO/CDaoRecordset::GetBookmark
+- AFXDAO/CDaoRecordset::GetCacheSize
+- AFXDAO/CDaoRecordset::GetCacheStart
+- AFXDAO/CDaoRecordset::GetCurrentIndex
+- AFXDAO/CDaoRecordset::GetDateCreated
+- AFXDAO/CDaoRecordset::GetDateLastUpdated
+- AFXDAO/CDaoRecordset::GetDefaultDBName
+- AFXDAO/CDaoRecordset::GetDefaultSQL
+- AFXDAO/CDaoRecordset::GetEditMode
+- AFXDAO/CDaoRecordset::GetFieldCount
+- AFXDAO/CDaoRecordset::GetFieldInfo
+- AFXDAO/CDaoRecordset::GetFieldValue
+- AFXDAO/CDaoRecordset::GetIndexCount
+- AFXDAO/CDaoRecordset::GetIndexInfo
+- AFXDAO/CDaoRecordset::GetLastModifiedBookmark
+- AFXDAO/CDaoRecordset::GetLockingMode
+- AFXDAO/CDaoRecordset::GetName
+- AFXDAO/CDaoRecordset::GetParamValue
+- AFXDAO/CDaoRecordset::GetPercentPosition
+- AFXDAO/CDaoRecordset::GetRecordCount
+- AFXDAO/CDaoRecordset::GetSQL
+- AFXDAO/CDaoRecordset::GetType
+- AFXDAO/CDaoRecordset::GetValidationRule
+- AFXDAO/CDaoRecordset::GetValidationText
+- AFXDAO/CDaoRecordset::IsBOF
+- AFXDAO/CDaoRecordset::IsDeleted
+- AFXDAO/CDaoRecordset::IsEOF
+- AFXDAO/CDaoRecordset::IsFieldDirty
+- AFXDAO/CDaoRecordset::IsFieldNull
+- AFXDAO/CDaoRecordset::IsFieldNullable
+- AFXDAO/CDaoRecordset::IsOpen
+- AFXDAO/CDaoRecordset::Move
+- AFXDAO/CDaoRecordset::MoveFirst
+- AFXDAO/CDaoRecordset::MoveLast
+- AFXDAO/CDaoRecordset::MoveNext
+- AFXDAO/CDaoRecordset::MovePrev
+- AFXDAO/CDaoRecordset::Open
+- AFXDAO/CDaoRecordset::Requery
+- AFXDAO/CDaoRecordset::Seek
+- AFXDAO/CDaoRecordset::SetAbsolutePosition
+- AFXDAO/CDaoRecordset::SetBookmark
+- AFXDAO/CDaoRecordset::SetCacheSize
+- AFXDAO/CDaoRecordset::SetCacheStart
+- AFXDAO/CDaoRecordset::SetCurrentIndex
+- AFXDAO/CDaoRecordset::SetFieldDirty
+- AFXDAO/CDaoRecordset::SetFieldNull
+- AFXDAO/CDaoRecordset::SetFieldValue
+- AFXDAO/CDaoRecordset::SetFieldValueNull
+- AFXDAO/CDaoRecordset::SetLockingMode
+- AFXDAO/CDaoRecordset::SetParamValue
+- AFXDAO/CDaoRecordset::SetParamValueNull
+- AFXDAO/CDaoRecordset::SetPercentPosition
+- AFXDAO/CDaoRecordset::Update
+- AFXDAO/CDaoRecordset::m_bCheckCacheForDirtyFields
+- AFXDAO/CDaoRecordset::m_nFields
+- AFXDAO/CDaoRecordset::m_nParams
+- AFXDAO/CDaoRecordset::m_pDAORecordset
+- AFXDAO/CDaoRecordset::m_pDatabase
+- AFXDAO/CDaoRecordset::m_strFilter
+- AFXDAO/CDaoRecordset::m_strSort
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -193,7 +274,7 @@ class CDaoRecordset : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
   
-##  <a name="a-nameaddnewa--cdaorecordsetaddnew"></a><a name="addnew"></a>CDaoRecordset::AddNew  
+##  <a name="addnew"></a>CDaoRecordset::AddNew  
  呼叫此成員函式，將新記錄新增至資料表類型或動態類型的資料錄集。  
   
 ```  
@@ -231,7 +312,7 @@ virtual void AddNew();
   
  如需相關資訊，請參閱 「 AddNew 方法 」、 「 CancelUpdate 方法 」、 「 LastModified 屬性 」 和 「 EditMode 屬性 」 DAO 說明中的主題。  
   
-##  <a name="a-namecanappenda--cdaorecordsetcanappend"></a><a name="canappend"></a>CDaoRecordset::CanAppend  
+##  <a name="canappend"></a>CDaoRecordset::CanAppend  
  呼叫此成員函式，以判斷是否先前開啟的資料錄集可讓您新增新的記錄，藉由呼叫[AddNew](#addnew)成員函式。  
   
 ```  
@@ -244,7 +325,7 @@ BOOL CanAppend() const;
 ### <a name="remarks"></a>備註  
  如需相關資訊，請參閱主題 DAO 說明中的 「 附加方法 」。  
   
-##  <a name="a-namecanbookmarka--cdaorecordsetcanbookmark"></a><a name="canbookmark"></a>CDaoRecordset::CanBookmark  
+##  <a name="canbookmark"></a>CDaoRecordset::CanBookmark  
  呼叫此成員函式，以判斷是否先前開啟的資料錄集可讓您個別地將標記記錄使用書籤。  
   
 ```  
@@ -259,7 +340,7 @@ BOOL CanBookmark();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 Bookmarkable 屬性 」。  
   
-##  <a name="a-namecancelupdatea--cdaorecordsetcancelupdate"></a><a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
  `CancelUpdate`成員函式會取消任何暫止的更新，因為[編輯](#edit)或[AddNew](#addnew)作業。  
   
 ```  
@@ -276,7 +357,7 @@ virtual void CancelUpdate();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 CancelUpdate 方法 」。  
   
-##  <a name="a-namecanrestarta--cdaorecordsetcanrestart"></a><a name="canrestart"></a>CDaoRecordset::CanRestart  
+##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
  呼叫此成員函式，以判斷資料錄集是否允許重新啟動其查詢 （若要更新其記錄），藉由呼叫**Requery**成員函式。  
   
 ```  
@@ -293,7 +374,7 @@ BOOL CanRestart();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 可重新啟動屬性 」。  
   
-##  <a name="a-namecanscrolla--cdaorecordsetcanscroll"></a><a name="canscroll"></a>CDaoRecordset::CanScroll  
+##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
  呼叫此成員函式，以判斷是否允許捲動資料錄集。  
   
 ```  
@@ -308,7 +389,7 @@ BOOL CanScroll() const;
   
  如需相關資訊，請參閱主題 < 目前記錄指標使用 DAO 定位 」 DAO 說明中。  
   
-##  <a name="a-namecantransacta--cdaorecordsetcantransact"></a><a name="cantransact"></a>CDaoRecordset::CanTransact  
+##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
  呼叫此成員函式，以判斷資料錄集是否允許交易。  
   
 ```  
@@ -321,7 +402,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>備註  
  如需相關資訊，請參閱主題 DAO 說明中的 「 交易屬性 」。  
   
-##  <a name="a-namecanupdatea--cdaorecordsetcanupdate"></a><a name="canupdate"></a>CDaoRecordset::CanUpdate  
+##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
  呼叫此成員函式，以判斷是否可以更新資料錄集。  
   
 ```  
@@ -336,7 +417,7 @@ BOOL CanUpdate() const;
   
  如需相關資訊，請參閱主題 < AddNew 方法 」、 「 編輯方法 」、 「 刪除方法 」、 「 更新方法 」 和 DAO 說明中的 「 可更新屬性 」。  
   
-##  <a name="a-namecdaorecordseta--cdaorecordsetcdaorecordset"></a><a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
+##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
  建構 `CDaoRecordset` 物件。  
   
 ```  
@@ -355,7 +436,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
   
  傳遞**NULL**到您的資料錄集建構函式有`CDaoDatabase`物件建構，並為您自動連接。 這是不需要您建構，以及連線的有用捷徑`CDaoDatabase`之前建構資料錄集物件。 如果`CDaoDatabase`物件未開啟， [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件也會建立以供您使用的預設工作區。 如需詳細資訊，請參閱[CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase)。  
   
-##  <a name="a-nameclosea--cdaorecordsetclose"></a><a name="close"></a>CDaoRecordset::Close  
+##  <a name="close"></a>CDaoRecordset::Close  
  關閉`CDaoRecordset`物件會將它移除相關聯的資料庫中開啟資料錄集的集合。  
   
 ```  
@@ -371,7 +452,7 @@ virtual void Close();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 關閉方法 」。  
   
-##  <a name="a-namedeletea--cdaorecordsetdelete"></a><a name="delete"></a>CDaoRecordset::Delete  
+##  <a name="delete"></a>CDaoRecordset::Delete  
  呼叫此成員函式來刪除目前開啟的動態類型或類型的資料表資料錄集物件中的記錄。  
   
 ```  
@@ -392,7 +473,7 @@ virtual void Delete();
   
  如需相關資訊，請參閱主題 < AddNew 方法 」、 「 編輯方法 」、 「 刪除方法 」、 「 更新方法 」 和 DAO 說明中的 「 可更新屬性 」。  
   
-##  <a name="a-namedofieldexchangea--cdaorecordsetdofieldexchange"></a><a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
  架構會呼叫此成員函式自動之間交換資料的資料錄集物件的欄位資料成員和對應的資料行的資料來源上目前的記錄。  
   
 ```  
@@ -412,7 +493,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
   
  [!code-cpp[NVC_MFCDatabase #&2;](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="a-nameedita--cdaorecordsetedit"></a><a name="edit"></a>CDaoRecordset::Edit  
+##  <a name="edit"></a>CDaoRecordset::Edit  
  呼叫此成員函式允許您變更目前的記錄。  
   
 ```  
@@ -452,7 +533,7 @@ virtual void Edit();
   
  如需相關資訊，請參閱主題 < AddNew 方法 」、 「 編輯方法 」、 「 刪除方法 」、 「 更新方法 」 和 DAO 說明中的 「 可更新屬性 」。  
   
-##  <a name="a-namefillcachea--cdaorecordsetfillcache"></a><a name="fillcache"></a>CDaoRecordset::FillCache  
+##  <a name="fillcache"></a>CDaoRecordset::FillCache  
  呼叫此成員函式快取的指定從資料錄集的記錄筆數。  
   
 ```  
@@ -481,7 +562,7 @@ void FillCache(
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 FillCache 方法 」。  
   
-##  <a name="a-namefinda--cdaorecordsetfind"></a><a name="find"></a>CDaoRecordset::Find  
+##  <a name="find"></a>CDaoRecordset::Find  
  呼叫此成員函式中使用比較運算子的動態或快照集類型資料錄集找出特定的字串。  
   
 ```  
@@ -520,7 +601,7 @@ virtual BOOL Find(
   
  如需相關資訊，請參閱本主題 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO 說明。  
   
-##  <a name="a-namefindfirsta--cdaorecordsetfindfirst"></a><a name="findfirst"></a>CDaoRecordset::FindFirst  
+##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
  呼叫此成員函式，來尋找符合指定的條件的第一個記錄。  
   
 ```  
@@ -570,7 +651,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
   
  如需相關資訊，請參閱本主題 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO 說明。  
   
-##  <a name="a-namefindlasta--cdaorecordsetfindlast"></a><a name="findlast"></a>CDaoRecordset::FindLast  
+##  <a name="findlast"></a>CDaoRecordset::FindLast  
  呼叫此成員函式，來尋找符合指定的條件的最後一筆記錄。  
   
 ```  
@@ -608,7 +689,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
   
  如需相關資訊，請參閱本主題 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO 說明。  
   
-##  <a name="a-namefindnexta--cdaorecordsetfindnext"></a><a name="findnext"></a>CDaoRecordset::FindNext  
+##  <a name="findnext"></a>CDaoRecordset::FindNext  
  呼叫此成員函式，來尋找符合指定的條件下一筆記錄。  
   
 ```  
@@ -646,7 +727,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
   
  如需相關資訊，請參閱本主題 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO 說明。  
   
-##  <a name="a-namefindpreva--cdaorecordsetfindprev"></a><a name="findprev"></a>CDaoRecordset::FindPrev  
+##  <a name="findprev"></a>CDaoRecordset::FindPrev  
  呼叫此成員函式，來尋找符合指定的條件的上一個記錄。  
   
 ```  
@@ -684,7 +765,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
   
  如需相關資訊，請參閱本主題 「 FindFirst，FindLast FindNext，FindPrevious 方法 」 DAO 說明。  
   
-##  <a name="a-namegetabsolutepositiona--cdaorecordsetgetabsoluteposition"></a><a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
  傳回資料錄集物件的目前記錄的記錄數目。  
   
 ```  
@@ -707,7 +788,7 @@ long GetAbsolutePosition();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 AbsolutePosition 屬性 」。  
   
-##  <a name="a-namegetbookmarka--cdaorecordsetgetbookmark"></a><a name="getbookmark"></a>CDaoRecordset::GetBookmark  
+##  <a name="getbookmark"></a>CDaoRecordset::GetBookmark  
  呼叫此成員函式，以取得特定的資料記錄中的書籤值。  
   
 ```  
@@ -727,7 +808,7 @@ COleVariant GetBookmark();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 書籤屬性 」。  
   
-##  <a name="a-namegetcachesizea--cdaorecordsetgetcachesize"></a><a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
+##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
  呼叫此成員函式，以取得快取的記錄數目。  
   
 ```  
@@ -744,7 +825,7 @@ long GetCacheSize();
   
  如需相關資訊，請參閱 DAO 說明主題 「 CacheSize CacheStart 屬性 」。  
   
-##  <a name="a-namegetcachestarta--cdaorecordsetgetcachestart"></a><a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
+##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
  呼叫此成員函式，以取得第一筆資料錄集快取中的書籤值。  
   
 ```  
@@ -762,7 +843,7 @@ COleVariant GetCacheStart();
   
  如需相關資訊，請參閱 DAO 說明主題 「 CacheSize CacheStart 屬性 」。  
   
-##  <a name="a-namegetcurrentindexa--cdaorecordsetgetcurrentindex"></a><a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
+##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
  呼叫此成員函式，以判斷目前正在使用中索引的資料表類型索引`CDaoRecordset`物件。  
   
 ```  
@@ -779,7 +860,7 @@ CString GetCurrentIndex();
   
  如需相關資訊，請參閱主題 「 索引物件 」，並定義 DAO 說明中的 「 目前索引 」。  
   
-##  <a name="a-namegetdatecreateda--cdaorecordsetgetdatecreated"></a><a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
+##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
  呼叫此成員函式擷取基底資料表的建立的時間與日期。  
   
 ```  
@@ -794,7 +875,7 @@ COleDateTime GetDateCreated();
   
  如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
   
-##  <a name="a-namegetdatelastupdateda--cdaorecordsetgetdatelastupdated"></a><a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
  呼叫此成員函式擷取結構描述上次更新的時間與日期。  
   
 ```  
@@ -809,7 +890,7 @@ COleDateTime GetDateLastUpdated();
   
  如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
   
-##  <a name="a-namegetdefaultdbnamea--cdaorecordsetgetdefaultdbname"></a><a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
+##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
  呼叫此成員函式，來判斷這個資料錄集之資料庫的名稱。  
   
 ```  
@@ -826,7 +907,7 @@ virtual CString GetDefaultDBName();
   
  [!code-cpp[NVC_MFCDatabase #&4;](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="a-namegetdefaultsqla--cdaorecordsetgetdefaultsql"></a><a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
  架構會呼叫此成員函式，以取得資料錄集所依據的預設 SQL 陳述式。  
   
 ```  
@@ -843,7 +924,7 @@ virtual CString GetDefaultSQL();
   
  如果您傳遞 null SQL 字串，以[開啟](#open)，則會呼叫此函數來判斷資料錄集的資料表名稱或 SQL。  
   
-##  <a name="a-namegeteditmodea--cdaorecordsetgeteditmode"></a><a name="geteditmode"></a>CDaoRecordset::GetEditMode  
+##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
  呼叫此成員函式來判斷狀態的編輯，也就是下列值之一︰  
   
 ```  
@@ -863,7 +944,7 @@ short GetEditMode();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 EditMode 屬性 」。  
   
-##  <a name="a-namegetfieldcounta--cdaorecordsetgetfieldcount"></a><a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
+##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
  呼叫此成員函式可擷取的數字 （資料行） 中定義的欄位資料錄集。  
   
 ```  
@@ -876,7 +957,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>備註  
  如需相關資訊，請參閱主題 DAO 說明中的 「 計數屬性 」。  
   
-##  <a name="a-namegetfieldinfoa--cdaorecordsetgetfieldinfo"></a><a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
+##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
  呼叫此成員函式，以取得相關資料錄集中的欄位資訊。  
   
 ```  
@@ -918,7 +999,7 @@ void GetFieldInfo(
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 屬性屬性 」。  
   
-##  <a name="a-namegetfieldvaluea--cdaorecordsetgetfieldvalue"></a><a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
  呼叫此成員函式來擷取資料錄集中的資料。  
   
 ```  
@@ -960,7 +1041,7 @@ virtual COleVariant GetFieldValue(int nIndex);
   
  如需相關資訊，請參閱 「 欄位物件 」 和 「 值屬性 」 中 DAO 說明主題。  
   
-##  <a name="a-namegetindexcounta--cdaorecordsetgetindexcount"></a><a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
+##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
  呼叫此成員函式，來決定資料表類型的資料錄集的索引數目。  
   
 ```  
@@ -975,7 +1056,7 @@ short GetIndexCount();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 屬性屬性 」。  
   
-##  <a name="a-namegetindexinfoa--cdaorecordsetgetindexinfo"></a><a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
+##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
  呼叫此成員函式，以取得不同的索引定義基礎資料錄集的基底資料表中的相關資訊。  
   
 ```  
@@ -1017,7 +1098,7 @@ void GetIndexInfo(
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 屬性屬性 」。  
   
-##  <a name="a-namegetlastmodifiedbookmarka--cdaorecordsetgetlastmodifiedbookmark"></a><a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
+##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
  呼叫此成員函式擷取最最近新增或更新資料錄的書籤。  
   
 ```  
@@ -1034,7 +1115,7 @@ COleVariant GetLastModifiedBookmark();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 上次修改屬性 」。  
   
-##  <a name="a-namegetlockingmodea--cdaorecordsetgetlockingmode"></a><a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
+##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
  呼叫此成員函式，以判斷鎖定資料錄集的作用中的型別。  
   
 ```  
@@ -1053,7 +1134,7 @@ BOOL GetLockingMode();
   
  如需相關資訊，請參閱 「 LockEdits 屬性 」 和 「 鎖定行為在多使用者應用程式 」 DAO 說明中的主題。  
   
-##  <a name="a-namegetnamea--cdaorecordsetgetname"></a><a name="getname"></a>CDaoRecordset::GetName  
+##  <a name="getname"></a>CDaoRecordset::GetName  
  呼叫此成員函式擷取的資料錄集的名稱。  
   
 ```  
@@ -1068,7 +1149,7 @@ CString GetName();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 名稱屬性 」。  
   
-##  <a name="a-namegetparamvaluea--cdaorecordsetgetparamvalue"></a><a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
+##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
  呼叫此成員函式擷取儲存在基礎 DAOParameter 物件中的指定參數的目前值。  
   
 ```  
@@ -1091,7 +1172,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 參數物件 」。  
   
-##  <a name="a-namegetpercentpositiona--cdaorecordsetgetpercentposition"></a><a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
+##  <a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
  使用動態類型或快照集類型資料錄集，如果您呼叫時`GetPercentPosition`之前完全填入資料錄集，是相對於存取由呼叫的記錄數目的移動量[GetRecordCount](#getrecordcount)。  
   
 ```  
@@ -1108,7 +1189,7 @@ float GetPercentPosition();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 PercentPosition 屬性 」。  
   
-##  <a name="a-namegetrecordcounta--cdaorecordsetgetrecordcount"></a><a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
  呼叫此成員函式，以找出資料錄集的多少筆記錄被存取。  
   
 ```  
@@ -1133,7 +1214,7 @@ long GetRecordCount();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 RecordCount 屬性 」。  
   
-##  <a name="a-namegetsqla--cdaorecordsetgetsql"></a><a name="getsql"></a>CDaoRecordset::GetSQL  
+##  <a name="getsql"></a>CDaoRecordset::GetSQL  
  呼叫此成員函式，以取得用來開啟網頁時，請選取資料錄集的資料錄的 SQL 陳述式。  
   
 ```  
@@ -1153,7 +1234,7 @@ CString GetSQL() const;
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 SQL 屬性 」。  
   
-##  <a name="a-namegettypea--cdaorecordsetgettype"></a><a name="gettype"></a>CDaoRecordset::GetType  
+##  <a name="gettype"></a>CDaoRecordset::GetType  
  開啟資料錄集來判斷資料錄集物件的型別之後呼叫此成員函式。  
   
 ```  
@@ -1172,7 +1253,7 @@ short GetType();
 ### <a name="remarks"></a>備註  
  如需相關資訊，請參閱主題 DAO 說明中的 「 型別屬性 」。  
   
-##  <a name="a-namegetvalidationrulea--cdaorecordsetgetvalidationrule"></a><a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
+##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
  呼叫此成員函式，以判斷用來驗證資料的規則。  
   
 ```  
@@ -1189,7 +1270,7 @@ CString GetValidationRule();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 ValidationRule 屬性 」。  
   
-##  <a name="a-namegetvalidationtexta--cdaorecordsetgetvalidationtext"></a><a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
+##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
  呼叫此成員函式擷取基礎欄位物件的驗證屬性的文字。  
   
 ```  
@@ -1202,7 +1283,7 @@ CString GetValidationText();
 ### <a name="remarks"></a>備註  
  如需相關資訊，請參閱主題 DAO 說明中的 「 驗證屬性 」。  
   
-##  <a name="a-nameisbofa--cdaorecordsetisbof"></a><a name="isbof"></a>CDaoRecordset::IsBOF  
+##  <a name="isbof"></a>CDaoRecordset::IsBOF  
  您從資料錄捲動記錄，以了解是否有發生第一筆資料錄集之前先呼叫此成員函式。  
   
 ```  
@@ -1249,7 +1330,7 @@ BOOL IsBOF() const;
   
  如需相關資訊，請參閱本主題 「 BOF，EOF 屬性 」 DAO 說明中。  
   
-##  <a name="a-nameisdeleteda--cdaorecordsetisdeleted"></a><a name="isdeleted"></a>CDaoRecordset::IsDeleted  
+##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
  呼叫此成員函式，以判斷是否已刪除目前的記錄。  
   
 ```  
@@ -1269,7 +1350,7 @@ BOOL IsDeleted() const;
   
  如需相關資訊，請參閱 「 刪除方法 」、 「 LastModified 屬性 」 和 「 EditMode 屬性 」 DAO 說明中的主題。  
   
-##  <a name="a-nameiseofa--cdaorecordsetiseof"></a><a name="iseof"></a>CDaoRecordset::IsEOF  
+##  <a name="iseof"></a>CDaoRecordset::IsEOF  
  當您從資料錄捲動記錄，以了解您是否已超過最後一筆記錄的資料錄集已經呼叫此成員函式。  
   
 ```  
@@ -1316,7 +1397,7 @@ BOOL IsEOF() const;
   
  如需相關資訊，請參閱本主題 「 BOF，EOF 屬性 」 DAO 說明中。  
   
-##  <a name="a-nameisfielddirtya--cdaorecordsetisfielddirty"></a><a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
  呼叫此成員函式來判斷指定的欄位資料成員的動態集是否已標示為 「 不正常 」 （變更）。  
   
 ```  
@@ -1335,7 +1416,7 @@ BOOL IsFieldDirty(void* pv);
   
  `IsFieldDirty`透過實作`DoFieldExchange`。  
   
-##  <a name="a-nameisfieldnulla--cdaorecordsetisfieldnull"></a><a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
  呼叫此成員函式，以判斷資料錄集的指定的欄位資料成員是否被標示為 Null。  
   
 ```  
@@ -1360,7 +1441,7 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  如果您使用動態資料錄的繫結，而不需從衍生`CDaoRecordset`，務必使用**VT_NULL**範例所示。  
   
-##  <a name="a-nameisfieldnullablea--cdaorecordsetisfieldnullable"></a><a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
  呼叫此成員函式，以判斷指定的欄位資料成員是 「 null 」 （可以是設定為 Null 值。C + + **NULL**不是 Null，表示，在資料庫術語中，相同不擁有任何值 」)。  
   
 ```  
@@ -1377,7 +1458,7 @@ BOOL IsFieldNullable(void* pv);
 ### <a name="remarks"></a>備註  
  不能是 Null 的欄位必須有值。 如果您嘗試將這類欄位設定為 Null，新增或更新一筆記錄時，資料來源會拒絕新增或更新，以及**更新**將會擲回例外狀況。 當您呼叫時，就會發生例外狀況**更新**，不會在您呼叫`SetFieldNull`。  
   
-##  <a name="a-nameisopena--cdaorecordsetisopen"></a><a name="isopen"></a>CDaoRecordset::IsOpen  
+##  <a name="isopen"></a>CDaoRecordset::IsOpen  
  呼叫此成員函式，以判斷是否已開啟資料錄集。  
   
 ```  
@@ -1389,7 +1470,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namembcheckcachefordirtyfieldsa--cdaorecordsetmbcheckcachefordirtyfields"></a><a name="m_bcheckcachefordirtyfields"></a>M_bcheckcachefordirtyfields  
+##  <a name="m_bcheckcachefordirtyfields"></a>M_bcheckcachefordirtyfields  
  包含旗標，指出是否快取的欄位會自動標示為中途 （變更） 和 Null。  
   
 ### <a name="remarks"></a>備註  
@@ -1397,7 +1478,7 @@ BOOL IsOpen() const;
   
  設定此資料成員，然後再呼叫**開啟**。 此機制是主要是為了方便使用。 效能可能會變慢因為雙重緩衝的欄位進行變更時。  
   
-##  <a name="a-namemnfieldsa--cdaorecordsetmnfields"></a><a name="m_nfields"></a>CDaoRecordset::m_nFields  
+##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
  包含資料錄集類別中的欄位資料成員的數目和資料來源的資料錄集選取資料行數目。  
   
 ### <a name="remarks"></a>備註  
@@ -1410,7 +1491,7 @@ BOOL IsOpen() const;
   
  您可以繫結資料行，以動態方式由種`CDaoRecordset::GetFieldValue`和`CDaoRecordset::SetFieldValue`。 如果您這樣做，您不需要遞增的計數中`m_nFields`以反映數目 DFX 函式呼叫中您`DoFieldExchange`成員函式。  
   
-##  <a name="a-namemnparamsa--cdaorecordsetmnparams"></a><a name="m_nparams"></a>CDaoRecordset::m_nParams  
+##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
  包含資料錄集類別中的參數資料成員的數目，與資料錄集的查詢中傳遞的參數數目。  
   
 ### <a name="remarks"></a>備註  
@@ -1423,7 +1504,7 @@ BOOL IsOpen() const;
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 參數物件 」。  
   
-##  <a name="a-namempdaorecordseta--cdaorecordsetmpdaorecordset"></a><a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
+##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
  包含的 DAO 資料錄集物件基礎的 OLE 介面的指標`CDaoRecordset`物件。  
   
 ### <a name="remarks"></a>備註  
@@ -1431,7 +1512,7 @@ BOOL IsOpen() const;
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 資料錄集物件 」。  
   
-##  <a name="a-namempdatabasea--cdaorecordsetmpdatabase"></a><a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
  包含一個指向`CDaoDatabase`透過此資料錄集連接到資料來源的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -1441,7 +1522,7 @@ BOOL IsOpen() const;
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 資料庫物件 」。  
   
-##  <a name="a-namemstrfiltera--cdaorecordsetmstrfilter"></a><a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
  包含用來建構字串**其中**子句的 SQL 陳述式。  
   
 ### <a name="remarks"></a>備註  
@@ -1451,7 +1532,7 @@ BOOL IsOpen() const;
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 篩選條件屬性 」。  
   
-##  <a name="a-namemstrsorta--cdaorecordsetmstrsort"></a><a name="m_strsort"></a>CDaoRecordset::m_strSort  
+##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
  包含字串，含有**ORDERBY**子句的 SQL 陳述式，而不需要的保留字**ORDERBY**。  
   
 ### <a name="remarks"></a>備註  
@@ -1463,7 +1544,7 @@ BOOL IsOpen() const;
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 排序屬性 」。  
   
-##  <a name="a-namemovea--cdaorecordsetmove"></a><a name="move"></a>CDaoRecordset::Move  
+##  <a name="move"></a>CDaoRecordset::Move  
  呼叫此成員函式，來定位資料錄集`lRows`與目前記錄的記錄。  
   
 ```  
@@ -1492,7 +1573,7 @@ virtual void Move(long lRows);
   
  如需相關資訊，請參閱主題 < 移動方法 」 和 「 MoveFirst、 MoveLast、 MoveNext，MovePrevious 方法 「 DAO 說明中。  
   
-##  <a name="a-namemovefirsta--cdaorecordsetmovefirst"></a><a name="movefirst"></a>CDaoRecordset::MoveFirst  
+##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
  呼叫此成員函式 （如果有的話），進行第一筆記錄中資料錄集目前的記錄。  
   
 ```  
@@ -1520,7 +1601,7 @@ void MoveFirst();
   
  如需相關資訊，請參閱主題 < 移動方法 」 和 「 MoveFirst、 MoveLast、 MoveNext，MovePrevious 方法 「 DAO 說明中。  
   
-##  <a name="a-namemovelasta--cdaorecordsetmovelast"></a><a name="movelast"></a>CDaoRecordset::MoveLast  
+##  <a name="movelast"></a>CDaoRecordset::MoveLast  
  資料錄集目前的記錄中呼叫此成員函式進行最後一筆記錄 （如果有的話）。  
   
 ```  
@@ -1545,7 +1626,7 @@ void MoveLast();
   
  如需相關資訊，請參閱主題 < 移動方法 」 和 「 MoveFirst、 MoveLast、 MoveNext，MovePrevious 方法 「 DAO 說明中。  
   
-##  <a name="a-namemovenexta--cdaorecordsetmovenext"></a><a name="movenext"></a>CDaoRecordset::MoveNext  
+##  <a name="movenext"></a>CDaoRecordset::MoveNext  
  呼叫此成員函式，要在資料錄集目前的記錄中的下一筆記錄。  
   
 ```  
@@ -1569,7 +1650,7 @@ void MoveNext();
   
  如需相關資訊，請參閱主題 < 移動方法 」 和 「 MoveFirst、 MoveLast、 MoveNext，MovePrevious 方法 「 DAO 說明中。  
   
-##  <a name="a-namemovepreva--cdaorecordsetmoveprev"></a><a name="moveprev"></a>CDaoRecordset::MovePrev  
+##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
  呼叫此成員函式，要在資料錄集目前的記錄中的前一筆記錄。  
   
 ```  
@@ -1595,7 +1676,7 @@ void MovePrev();
   
  如需相關資訊，請參閱主題 < 移動方法 」 和 「 MoveFirst、 MoveLast、 MoveNext，MovePrevious 方法 「 DAO 說明中。  
   
-##  <a name="a-nameopena--cdaorecordsetopen"></a><a name="open"></a>Cdaorecordset:: Open  
+##  <a name="open"></a>Cdaorecordset:: Open  
  您必須呼叫此成員函式擷取資料錄集的記錄。  
   
 ```  
@@ -1717,7 +1798,7 @@ virtual void Open(
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 OpenRecordset 方法 」。  
   
-##  <a name="a-namerequerya--cdaorecordsetrequery"></a><a name="requery"></a>CDaoRecordset::Requery  
+##  <a name="requery"></a>CDaoRecordset::Requery  
  呼叫此成員函式可重建 （重新整理） 資料錄集。  
   
 ```  
@@ -1745,7 +1826,7 @@ virtual void Requery();
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 Requery 方法 」。  
   
-##  <a name="a-nameseeka--cdaorecordsetseek"></a><a name="seek"></a>CDaoRecordset::Seek  
+##  <a name="seek"></a>CDaoRecordset::Seek  
  呼叫此成員函式以尋找符合指定的準則目前編製索引，並將該記錄目前的記錄之索引的資料表類型資料錄集物件中的記錄。  
   
 ```  
@@ -1806,7 +1887,7 @@ BOOL Seek(
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 搜尋方法 」。  
   
-##  <a name="a-namesetabsolutepositiona--cdaorecordsetsetabsoluteposition"></a><a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
  設定資料錄集物件的目前資料錄的相對的記錄數目。  
   
 ```  
@@ -1832,7 +1913,7 @@ void SetAbsolutePosition(long lPosition);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 AbsolutePosition 屬性 」。  
   
-##  <a name="a-namesetbookmarka--cdaorecordsetsetbookmark"></a><a name="setbookmark"></a>CDaoRecordset::SetBookmark  
+##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
  呼叫此成員函式，以包含指定的書籤的記錄上定位資料錄集。  
   
 ```  
@@ -1853,7 +1934,7 @@ void SetBookmark(COleVariant varBookmark);
   
  如需相關資訊，請參閱 「 書籤屬性 」 和 Bookmarkable 屬性的主題 「 DAO 說明。  
   
-##  <a name="a-namesetcachesizea--cdaorecordsetsetcachesize"></a><a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
+##  <a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
  呼叫此成員函式設定的快取的記錄數目。  
   
 ```  
@@ -1871,7 +1952,7 @@ void SetCacheSize(long lSize);
   
  如需相關資訊，請參閱 DAO 說明主題 「 CacheSize CacheStart 屬性 」。  
   
-##  <a name="a-namesetcachestarta--cdaorecordsetsetcachestart"></a><a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
+##  <a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
  呼叫此成員函式，來指定快取資料錄集中的第一筆記錄的書籤。  
   
 ```  
@@ -1895,7 +1976,7 @@ void SetCacheStart(COleVariant varBookmark);
   
  如需相關資訊，請參閱主題 CacheSize，CacheStart 屬性 「 DAO 說明。  
   
-##  <a name="a-namesetcurrentindexa--cdaorecordsetsetcurrentindex"></a><a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
+##  <a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
  呼叫此成員函式設定資料表類型的資料錄集的索引。  
   
 ```  
@@ -1915,7 +1996,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
   
  如需相關資訊，請參閱主題 「 索引物件 」，並定義 DAO 說明中的 「 目前索引 」。  
   
-##  <a name="a-namesetfielddirtya--cdaorecordsetsetfielddirty"></a><a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
  呼叫此成員函式，加上旗標為已變更或為未變更資料錄集的欄位資料成員。  
   
 ```  
@@ -1955,7 +2036,7 @@ void SetFieldDirty(
   
  `SetFieldDirty`透過實作`DoFieldExchange`。  
   
-##  <a name="a-namesetfieldnulla--cdaorecordsetsetfieldnull"></a><a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
  呼叫此成員函式，加上旗標的資料錄集為 Null （特別具有任何值） 或非 Null 的欄位資料成員。  
   
 ```  
@@ -1991,7 +2072,7 @@ void SetFieldNull(
   
  集合只**outputColumn**欄位**NULL**;**param**欄位不會受到影響。  
   
-##  <a name="a-namesetfieldvaluea--cdaorecordsetsetfieldvalue"></a><a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
+##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
  呼叫此成員函式，若要設定的值 欄位中，依序數位置，或藉由變更字串的值。  
   
 ```  
@@ -2035,7 +2116,7 @@ void SetFieldValue(
   
  如需相關資訊，請參閱 「 欄位物件 」 和 「 值屬性 」 中 DAO 說明主題。  
   
-##  <a name="a-namesetfieldvaluenulla--cdaorecordsetsetfieldvaluenull"></a><a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
+##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
  呼叫此成員函式可將欄位設定為 Null 值。  
   
 ```  
@@ -2055,7 +2136,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
   
  如需相關資訊，請參閱 「 欄位物件 」 和 「 值屬性 」 中 DAO 說明主題。  
   
-##  <a name="a-namesetlockingmodea--cdaorecordsetsetlockingmode"></a><a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
  呼叫此成員函式設定的鎖定資料錄集類型。  
   
 ```  
@@ -2077,7 +2158,7 @@ void SetLockingMode(BOOL bPessimistic);
   
  當使用 ODBC 資料來源，總是開放式鎖定模式。  
   
-##  <a name="a-namesetparamvaluea--cdaorecordsetsetparamvalue"></a><a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
+##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
  呼叫此成員函式在執行階段資料錄集中設定的參數值。  
   
 ```  
@@ -2106,7 +2187,7 @@ virtual void SetParamValue(
   
  指定要設定為值`COleVariant`物件。 如需有關設定所要的值，然後輸入您`COleVariant`物件，請參閱類別[COleVariant](../../mfc/reference/colevariant-class.md)。 請注意，如果您不想要建立的 UNICODE 資料錄集，則`COleVariant`物件必須明確宣告 ANSI。 這可以經由使用[COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **，** `vtSrc` **)**形式的建構函式與`vtSrc`設`VT_BSTRT`(ANSI) 或使用**COleVariant**函式[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **，** `vtSrc` **)**與`vtSrc`設為`VT_BSTRT`。  
   
-##  <a name="a-namesetparamvaluenulla--cdaorecordsetsetparamvaluenull"></a><a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
+##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
  呼叫此成員函式將參數設定為 Null 值。  
   
 ```  
@@ -2124,7 +2205,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="remarks"></a>備註  
  C + + **NULL**不是 Null，表示，在資料庫術語中，相同 」 有任何值 」。  
   
-##  <a name="a-namesetpercentpositiona--cdaorecordsetsetpercentposition"></a><a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
+##  <a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
  呼叫此成員函式設定值，以變更目前的記錄中資料錄集的資料錄的百分比為基礎的資料錄集物件中的概略位置。  
   
 ```  
@@ -2145,7 +2226,7 @@ void SetPercentPosition(float fPosition);
   
  如需相關資訊，請參閱主題 DAO 說明中的 「 PercentPosition 屬性 」。  
   
-##  <a name="a-nameupdatea--cdaorecordsetupdate"></a><a name="update"></a>CDaoRecordset::Update  
+##  <a name="update"></a>CDaoRecordset::Update  
  呼叫此成員函式呼叫之後`AddNew`或**編輯**成員函式。  
   
 ```  

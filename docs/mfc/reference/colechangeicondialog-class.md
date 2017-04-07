@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog::COleChangeIconDialog
+- AFXODLGS/COleChangeIconDialog::DoChangeIcon
+- AFXODLGS/COleChangeIconDialog::DoModal
+- AFXODLGS/COleChangeIconDialog::GetIconicMetafile
+- AFXODLGS/COleChangeIconDialog::m_ci
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxodlgs.h  
   
-##  <a name="a-namecolechangeicondialoga--colechangeicondialogcolechangeicondialog"></a><a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
  此函式建構只`COleChangeIconDialog`物件。  
   
 ```  
@@ -134,7 +140,7 @@ explicit COleChangeIconDialog(
   
  如需詳細資訊，請參閱[OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedochangeicona--colechangeicondialogdochangeicon"></a><a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
  呼叫此函式來變更表示的項目之後的對話方塊中選取一個圖示[DoModal](#domodal)傳回**IDOK**。  
   
 ```  
@@ -148,7 +154,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>傳回值  
  如果變更成功則為非零否則為 0。  
   
-##  <a name="a-namedomodala--colechangeicondialogdomodal"></a><a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
  呼叫此函式來顯示 OLE 的 [變更圖示] 對話方塊。  
   
 ```  
@@ -169,7 +175,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`傳回**IDOK**，您可以呼叫其他成員函式來擷取設定或已由使用者輸入 對話方塊中的資訊。  
   
-##  <a name="a-namegeticonicmetafilea--colechangeicondialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
  呼叫此函式可取得中繼檔，其中包含選取的項目圖示的層面的控制代碼。  
   
 ```  
@@ -179,7 +185,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>傳回值  
  如果已關閉對話方塊，選擇包含 [新增] 圖示，圖示層面的中繼檔的控制代碼**確定**; 否則對話方塊顯示之前做為它的圖示。  
   
-##  <a name="a-namemcia--colechangeicondialogmci"></a><a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
  型別的結構**OLEUICHANGEICON**可用來控制變更圖示 對話方塊的行為。  
   
 ```  

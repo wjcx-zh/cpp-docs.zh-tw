@@ -32,6 +32,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
@@ -42,7 +43,7 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
   
  我們認為這個案例是移植使用 MFC 和 Win32 API 之 Windows 桌面應用程式的典型案例，特別適用於 Visual C++ 6.0 之後便沒有再以 Visual C++ 的各版更新過的舊專案。  
   
-##  <a name="a-nameconvertprojectfilea-step-1-converting-the-project-file"></a><a name="convert_project_file"></a> 步驟 1： 轉換專案檔。  
+##  <a name="convert_project_file"></a> 步驟 1： 轉換專案檔。  
  專案檔 (Visual C++ 6.0 中的兩個舊的 .dsw 檔案) 已輕鬆轉換，沒有發生任何需要進一步注意的問題。 其中一個專案是 Spy++ 應用程式。 另一個專案是以 C 撰寫並支援 DLL 的 SpyHk。 更複雜的專案可能不會那麼容易就升級 (如[這裡](../porting/visual-cpp-porting-and-upgrading-guide.md)所討論)。  
   
  升級這兩個專案之後，我們的方案看起來像這樣：  
@@ -51,7 +52,7 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
   
  我們有兩個專案，一個包含大量 C++ 檔案，而另一個是以 C 撰寫的 DLL。  
   
-##  <a name="a-nameheaderfileproblemsa-step-2-header-file-problems"></a><a name="header_file_problems"></a> 步驟 2： 標頭檔問題  
+##  <a name="header_file_problems"></a> 步驟 2： 標頭檔問題  
  建置新轉換的專案時，您通常會先發現的問題之一，就是找不到專案所使用的標頭檔。  
   
  在 Spy++ 中找不到的其中一個檔案是 verstamp.h。 透過網際網路搜尋，我們判斷這個檔案來自一項過時的資料技術 DAO SDK。 我們想要查明標頭檔中使用了哪些符號，以了解是否真的需要這個檔案，還是可以在其他地方定義這些符號，因此我們將標頭檔宣告標記為註解並重新編譯。 結果是只需要一個符號，那就是 VER_FILEFLAGSMASK。  
@@ -60,9 +61,9 @@ ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK  
 ```  
   
- 在可用的 include 檔案中尋找符號的最簡單方式是使用 [檔案中尋找] (Ctrl+Shift+F)，並指定 [Visual C++ Include 目錄]。 我們在 ntverp.h 中找到這個符號。 以 ntverp.h 取代 verstamp.h include，這個錯誤即會消失。  
+ 在可用的 include 檔案中尋找符號的最簡單方式是使用 [檔案中尋找]\(Ctrl+Shift+F)，並指定 [Visual C++ Include 目錄]。 我們在 ntverp.h 中找到這個符號。 以 ntverp.h 取代 verstamp.h include，這個錯誤即會消失。  
   
-##  <a name="a-namelinkeroutputsettingsa-step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a> 步驟 3： 連結器 OutputFile 設定  
+##  <a name="linker_output_settings"></a> 步驟 3： 連結器 OutputFile 設定  
  舊專案有時會有檔案位於非傳統位置，這在升級後可能會造成問題。 在這種情況下，我們必須在專案屬性中將 $(SolutionDir) 加入 Include 路徑，以確保 Visual Studio 可以在這些位置 (而不是其中一個專案資料夾) 找到一些標頭檔。  
   
  MSBuild 指出其 Link.OutputFile 屬性不符合 TargetPath 和 TargetName 值，並發出 MSB8012。  
@@ -75,7 +76,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
   
  在此情況下，針對 Spy++ 專案，將所轉換專案中的 **Link.OutputFile** 屬性設為 .\Debug\Spyxx.exe 和 .\Release\Spyxx.exe (視組態而定)。 最好是在 [所有組態] 中，以 $(TargetDir)$(TargetName)$(TargetExt) 取代這些硬式編碼值。 如果這個方法沒有作用，您可以在此進行自訂，或在設定這些值的 [一般] 區段中變更屬性 (這些屬性包括 [輸出目錄]、[目標名稱] 和 [目標副檔名])。 請記住，如果您要檢視的屬性使用巨集，則可以在下拉式清單中選擇 [編輯] 來開啟對話方塊，以顯示替代巨集後的最終字串。 您可以選擇 [巨集] 按鈕，來檢視所有可用的巨集與其目前的值。  
   
-##  <a name="a-nameupdatingwinvera-step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a> 步驟 4： 更新目標 Windows 版本  
+##  <a name="updating_winver"></a> 步驟 4： 更新目標 Windows 版本  
  下一個錯誤指出 MFC 不再支援 WINVER 版本。 Windows XP 的 WINVER 是 0x0501。  
   
 ```Output  
@@ -101,7 +102,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7  
 ```  
   
-##  <a name="a-namelinkererrorsa-step-5-linker-errors"></a><a name="linker_errors"></a> 步驟 5： 連結器錯誤  
+##  <a name="linker_errors"></a> 步驟 5： 連結器錯誤  
  由於這些變更，SpyHk (DLL) 專案雖然會建置，但是會產生連結器錯誤。  
   
 ```  
@@ -118,14 +119,14 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
   
  C DLL 專案 SpyHK.dll 現在會無誤建置和連結。  
   
-##  <a name="a-nameoutdatedheaderfilesa-step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a> 步驟 6： 更多過時的標頭檔  
+##  <a name="outdated_header_files"></a> 步驟 6： 更多過時的標頭檔  
  我們接著要開始處理主要可執行檔專案 Spyxx。  
   
  找不到另外兩個 Include 檔案：ctl3d.h 和 penwin.h。 雖然搜尋網際網路嘗試找出包含標頭的檔案可能會有幫助，但有時這項資訊並不是那麼有用。 我們發現 ctl3d.h 是 Exchange 開發套件的一部分，並支援 Windows 95 上特定樣式的控制項；而 penwin.h 則與過時的 API Window Pen Computing 相關。 在這種情況下，我們可以直接將 #include 行標記為註解，並以 verstamp.h 的方式來處理未定義的符號。 所有與 3D 控制項或 Pen Computing 的內容都已從專案中移除。  
   
  由於專案有許多編譯錯誤需要您逐步移除，因此當移除 #include 指示詞時，可能不會立即就找到所有使用過時 API 的符號。 我們並未立即偵測到，而是稍後才發現 WM_DLGBORDER 未定義的錯誤。 這實際上只是來自 ctl3d.h 之許多未定義符號的其中一個。 一旦我們判定符號與過期的 API 相關，便會在程式碼中移除該符號的所有參考。  
   
-##  <a name="a-nameupdatingiostreamscodea-step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a> 步驟 7： 更新舊版 iostreams 程式碼  
+##  <a name="updating_iostreams_code"></a> 步驟 7： 更新舊版 iostreams 程式碼  
  下一個錯誤是使用 iostreams 的舊版 C++ 程式碼常見的錯誤。  
   
  mstream.h(40): 嚴重錯誤 C1083: 無法開啟 Include 檔案: 'iostream.h': 沒有這種檔案或目錄  
@@ -278,7 +279,7 @@ mstream& operator<<(LPTSTR psz)
   
  舊版、較不嚴格的編譯器允許這種轉換類型，但最新的一致性變更需要更正確的程式碼。  
   
-##  <a name="a-namestricterconversionsa-step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a> 步驟 8： 編譯器的更嚴格轉換  
+##  <a name="stricter_conversions"></a> 步驟 8： 編譯器的更嚴格轉換  
  我們也得到許多類似如下的錯誤：  
   
 ```  
@@ -289,10 +290,9 @@ error C2440: 'static_cast': cannot convert from 'UINT (__thiscall CHotLinkCtrl::
   
 ```cpp  
 BEGIN_MESSAGE_MAP(CFindToolIcon, CWnd)  
-// other message omitted …  
+// other messages omitted...  
 ON_WM_NCHITTEST() // Error occurs on this line.  
 END_MESSAGE_MAP()  
-  
 ```  
   
  移至這個巨集的定義，我們發現它參考函式 OnNcHitTest。  
@@ -302,7 +302,6 @@ END_MESSAGE_MAP()
 { WM_NCHITTEST, 0, 0, 0, AfxSig_l_p, \  
 (AFX_PMSG)(AFX_PMSGW) \  
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },  
-  
 ```  
   
  問題一定與成員函式類型的指標不符相關。 問題不在於從類別類型 CHotLinkCtrl 轉換成類別類型 CWnd，因為這是有效的衍生基底轉換。 問題在於傳回類型：UINT 與LRESULT。 LRESULT 會根據目標二進位檔類型，解析成 64 位元指標或 32 位元指標的 LONG_PTR，因此 UINT 不會轉換成這種類型。 這個問題在升級 2005 版以前所撰寫的程式碼時很常見，因為許多訊息對應方法的傳回類型從 UINT 變更為 LRESULT，是到了 Visual Studio 2005 才有的一項 64 位元相容性變更。 我們在下列程式碼中，將傳回類型從 UINT 變更為 LRESULT：  
@@ -317,9 +316,9 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);  
 ```  
   
- 這個函式在衍生自 CWnd 的不同類別中出現約&10; 次，因此建議您在編輯器中將游標移到函式上方，然後使用 [移至定義] (快速鍵：F12) 和 [移至宣告] (快速鍵：Ctrl+F12)，透過 [尋找符號] 工具視窗尋找並巡覽至這些符號。 [移至定義] 通常是兩者中較有用的一個。 [移至宣告] 會尋找定義類別宣告以外的宣告，例如 friend 類別宣告或向前參考。  
+ 這個函式在衍生自 CWnd 的不同類別中出現約 10 次，因此建議您在編輯器中將游標移到函式上方，然後使用 [移至定義] (快速鍵：F12) 和 [移至宣告] (快速鍵：Ctrl+F12)，透過 [尋找符號] 工具視窗尋找並巡覽至這些符號。 [移至定義] 通常是兩者中較有用的一個。 [移至宣告] 會尋找定義類別宣告以外的宣告，例如 friend 類別宣告或向前參考。  
   
-##  <a name="a-namemfcchangesa-step-9-mfc-changes"></a><a name="mfc_changes"></a> 步驟 9： MFC 變更  
+##  <a name="mfc_changes"></a> 步驟 9： MFC 變更  
  下一個錯誤產生也與已變更的宣告類型相關，並且也是出現在巨集中。  
   
 ```Output  
@@ -340,7 +339,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
   
  我們現在可以編譯專案。 不過還有幾個警告需要解決，並且有幾個升級選項可用，例如從 MBCS 轉換成 Unicode，或使用安全的 CRT 函式來增強安全性。  
   
-##  <a name="a-namecompilerwarningsa-step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a> 步驟 10： 解決編譯器警告  
+##  <a name="compiler_warnings"></a> 步驟 10： 解決編譯器警告  
  若要取得警告的完整清單，由於您只能從目前編譯取得警告報表，因此您應該對方案執行 [全部重建]，而不是一般建置，以確保重新編譯之前編譯的所有內容。 另一個問題在於要接受目前的警告層級，還是要使用較高的警告層級。  移植大量程式碼時 (特別是舊版程式碼)，可能適合使用較高的警告層級。  您也可能想要從預設警告層級開始，然後再增加警告層級以取得所有警告。 如果您使用 /Wall，您會取得系統標頭檔的一些警告，因此許多人使用 /W4 來取得程式碼的大部分警告，以避免取得系統標頭的警告。 如果您想要將警告顯示為錯誤，請加入 /WX 選項。 這些設定位於 [專案屬性] 對話方塊的 [C/C++] 區段中。  
   
  CSpyApp 類別的其中一個方法會產生已不再支援的函式警告。  
@@ -530,7 +529,7 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  當變數先宣告為 `extern`，稍後再宣告為 `static` 時，就會發生這個問題。 這兩個儲存類別規範的意思互斥，但允許做為 Microsoft 擴充功能。 如果您想要讓程式碼可以移植到其他編譯器，或者想要使用 /Za (ANSI 相容性) 進行編譯，您需要變更宣告以擁有相符的儲存類別規範。  
   
-##  <a name="a-nameportingtounicodea-step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a> 步驟 11： 從 MBCS 移植到 Unicode  
+##  <a name="porting_to_unicode"></a> 步驟 11： 從 MBCS 移植到 Unicode  
  請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前的程式碼使用 MBCS，為了繼續使用，我們需要下載 MFC 的 MBCS 版本。  這個相當大的程式庫已從預設 Visual Studio 安裝移除，因此必須另外下載。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 一旦您下載這個程式庫並重新啟動 Visual Studio，即可使用 MFC 的 MBCS 版本進行編譯並與之連結，但若要移除 MBCS 的相關警告，您還應該在專案屬性的 [前置處理器] 區段中，將 NO_WARN_MBCS_MFC_DEPRECATION 加入預先定義的巨集清單，或加入 stdafx.h 標頭檔或其他常見標頭檔的開頭。  
   
  現在出現一些連結器錯誤。  
@@ -649,7 +648,7 @@ strFace.ReleaseBuffer();
   
  在使用這個 Spy++ 方案的工作中，每位 C++ 開發人員將程式碼轉換成 Unicode 平均需要約兩個工作天， 這不包括重新測試的時間。  
   
-##  <a name="a-nameportingtosecurecrta-step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a> 步驟 12： 移植以使用安全的 CRT  
+##  <a name="porting_to_secure_crt"></a> 步驟 12： 移植以使用安全的 CRT  
  下一個步驟是移植程式碼，以使用 CRT 函式的安全版本 (版本尾碼為 _s)。 在這種情況下，一般策略是以 _s 版本取代函式，然後通常會加入所需的其他緩衝區大小參數。 在許多情況下，由於已知大小，因此會直接這樣做。 在其他無法立即得知大小的情況下，則需要將額外的參數加入使用 CRT 函式的函式；您也可以查看目的緩衝區的使用方式，以了解適當的大小限制。  
   
  Visual C++ 提供一個訣竅，讓您不需要加入許多大小參數就能保護程式碼的安全，那就是使用樣板多載。 因為這些多載是範本，所以只有在編譯為 C++ (而不是 C) 時才可以使用。Spyxxhk 是 C 專案，因此無法使用這個訣竅。  但 Spyxx 不是，因此可以使用這個訣竅。 這個訣竅是將類似這行的程式碼，加入專案的每個檔案中會編譯到的位置，例如 stdafx.h 中：  
@@ -666,7 +665,7 @@ strFace.ReleaseBuffer();
   
  透過上述技術來轉換程式碼以使用安全的 CRT 函式，需要約半天的時間。 如果您選擇不使用樣板多載，而要手動加入大小參數，可能得花兩倍次或三倍以上的時間。  
   
-##  <a name="a-namedeprecatedforscopea-step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a> 步驟 13： /Zc:forScope- 已被取代  
+##  <a name="deprecated_forscope"></a> 步驟 13： /Zc:forScope- 已被取代  
  自 Visual C++ 6.0 開始，編譯器遵守目前標準，也就是將迴圈中宣告的變數範圍限制在迴圈範圍。 編譯器選項 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (專案屬性中的 [強制在 For 迴圈範圍中一致]) 控制是否要回報這個錯誤。 我們應該更新程式碼使其符合標準，並只在迴圈外加入宣告。 若要避免變更程式碼，您可以將 C++ 專案屬性之 [語言] 區段中的設定變更為 [否 (/Zc:forScope-)]。 不過，請記住，[/Zc:forScope-] 在未來的 Visual C++ 版本中可能會予以移除，因此最後還是需要變更您的程式碼以符合標準。  
   
  這些問題相對容易修正，但根據您的程式碼，它可能會影響大量程式碼。 以下是典型問題。  
@@ -706,8 +705,3 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 ## <a name="see-also"></a>另請參閱  
  [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [上一個案例研究：COM Spy](../porting/porting-guide-com-spy.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

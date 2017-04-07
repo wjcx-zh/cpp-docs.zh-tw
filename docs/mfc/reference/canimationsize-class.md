@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationSize
 - CAnimationSize
+- AFXANIMATIONCONTROLLER/CAnimationSize
+- AFXANIMATIONCONTROLLER/CAnimationSize::CAnimationSize
+- AFXANIMATIONCONTROLLER/CAnimationSize::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationSize::GetCX
+- AFXANIMATIONCONTROLLER/CAnimationSize::GetCY
+- AFXANIMATIONCONTROLLER/CAnimationSize::GetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationSize::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationSize::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationSize::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationSize::m_cxValue
+- AFXANIMATIONCONTROLLER/CAnimationSize::m_cyValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +111,7 @@ class CAnimationSize : public CAnimationBaseObject;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationsizeaddtransition"></a><a name="addtransition"></a>CAnimationSize::AddTransition  
+##  <a name="addtransition"></a>CAnimationSize::AddTransition  
  新增轉換寬度和高度。  
   
 ```  
@@ -120,7 +130,7 @@ void AddTransition(
 ### <a name="remarks"></a>備註  
  呼叫此函式可加入內部清單的轉換套用至動畫變數的寬度和高度指定的轉換。 當您新增的轉換時，它們就會不會立即套用，並儲存在內部清單。 轉換會套用 （加入至腳本，以尋找特定的值） 當您呼叫 CAnimationController::AnimateGroup。 如果您不需要將轉換套用到其中一個維度，您可以傳遞 NULL。  
   
-##  <a name="a-namecanimationsizea--canimationsizecanimationsize"></a><a name="canimationsize"></a>CAnimationSize::CAnimationSize  
+##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
  建構的動畫大小的物件。  
   
 ```  
@@ -150,7 +160,7 @@ CAnimationSize(
 ### <a name="remarks"></a>備註  
  在建構物件的寬度、 高度，預設值的物件識別碼和群組識別碼，這將會設定為 0。 它們都可以在執行階段使用 SetDefaultValue 和 SetID 之後變更。  
   
-##  <a name="a-namegetanimationvariablelista--canimationsizegetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
  將封裝的動畫變數放入清單。  
   
 ```  
@@ -163,7 +173,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  函式傳回時，它會包含代表寬度與高度的兩個 CAnimationVariable 物件的指標。  
   
-##  <a name="a-namegetcxa--canimationsizegetcx"></a><a name="getcx"></a>CAnimationSize::GetCX  
+##  <a name="getcx"></a>CAnimationSize::GetCX  
  提供存取權 CAnimationVariable 代表寬度。  
   
 ```  
@@ -176,7 +186,7 @@ CAnimationVariable& GetCX();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 代表寬度。  
   
-##  <a name="a-namegetcya--canimationsizegetcy"></a><a name="getcy"></a>CAnimationSize::GetCY  
+##  <a name="getcy"></a>CAnimationSize::GetCY  
  提供存取權 CAnimationVariable 代表高度。  
   
 ```  
@@ -189,7 +199,7 @@ CAnimationVariable& GetCY();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 代表高度。  
   
-##  <a name="a-namegetdefaultvaluea--canimationsizegetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
  傳回預設值，寬度和高度。  
   
 ```  
@@ -202,7 +212,7 @@ CSize GetDefaultValue();
 ### <a name="remarks"></a>備註  
  呼叫此函式可擷取先前已設定的建構函式或 SetDefaultValue 的預設值。  
   
-##  <a name="a-namegetvaluea--canimationsizegetvalue"></a><a name="getvalue"></a>CAnimationSize::GetValue  
+##  <a name="getvalue"></a>CAnimationSize::GetValue  
  傳回目前的值。  
   
 ```  
@@ -219,21 +229,21 @@ BOOL GetValue(CSize& szValue);
 ### <a name="remarks"></a>備註  
  呼叫此函式以擷取動畫大小的目前值。 如果此方法失敗或未初始化的寬度和大小的基礎 COM 物件，szValue 包含建構函式中或 SetDefaultValue 先前設定的預設值。  
   
-##  <a name="a-namemcxvaluea--canimationsizemcxvalue"></a><a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
+##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
  表示動畫大小的寬度封裝的動畫變數。  
   
 ```  
 CAnimationVariable m_cxValue;  
 ```  
   
-##  <a name="a-namemcyvaluea--canimationsizemcyvalue"></a><a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
+##  <a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
  表示動畫大小的高度封裝的動畫變數。  
   
 ```  
 CAnimationVariable m_cyValue;  
 ```  
   
-##  <a name="a-nameoperatorcsizea--canimationsizeoperator-csize"></a><a name="operator_csize"></a>CAnimationSize::operator CSize  
+##  <a name="operator_csize"></a>CAnimationSize::operator CSize  
  將 CSize CAnimationSize。  
   
 ```  
@@ -246,7 +256,7 @@ operator CSize();
 ### <a name="remarks"></a>備註  
  此函式會在內部呼叫 GetValue。 如果 GetValue 因故失敗，傳回的大小將會包含預設值，寬度和高度。  
   
-##  <a name="a-nameoperatoreqa--canimationsizeoperator"></a><a name="operator_eq"></a>CAnimationSize::operator =  
+##  <a name="operator_eq"></a>CAnimationSize::operator =  
  指派 CAnimationSize szSrc。  
   
 ```  
@@ -260,7 +270,7 @@ void operator=(const CSize& szSrc);
 ### <a name="remarks"></a>備註  
  指派 CAnimationSize szSrc。 建議您這麼做之前動畫開始時，這個運算子會呼叫 SetDefaultValue，寬度和高度會重建基礎 COM 物件，如果已建立。 如果您已訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件，您需要重新啟用這些事件。  
   
-##  <a name="a-namesetdefaultvaluea--canimationsizesetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
  設定預設值。  
   
 ```  

@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
-- ATL.CSocketAddr
-- ATL::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr::CSocketAddr
+- ATLSOCKET/ATL::CSocketAddr::FindAddr
+- ATLSOCKET/ATL::CSocketAddr::FindINET4Addr
+- ATLSOCKET/ATL::CSocketAddr::FindINET6Addr
+- ATLSOCKET/ATL::CSocketAddr::GetAddrInfo
+- ATLSOCKET/ATL::CSocketAddr::GetAddrInfoList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +83,7 @@ class CSocketAddr
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsocket.h  
   
-##  <a name="a-namecsocketaddra--csocketaddrcsocketaddr"></a><a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
  建構函式。  
   
 ```
@@ -88,7 +93,7 @@ CSocketAddr();
 ### <a name="remarks"></a>備註  
  建立新`CSocketAddr`物件，並初始化包含主機的回應資訊的連結的清單。  
   
-##  <a name="a-namefindaddra--csocketaddrfindaddr"></a><a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>CSocketAddr::FindAddr  
  呼叫此方法以提供的主機名稱轉換成主機位址。  
   
 ```
@@ -137,7 +142,7 @@ int FindAddr(
 ### <a name="remarks"></a>備註  
  主機名稱參數可能是 IPv4 或 IPv6 格式。 這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)來執行轉換。  
   
-##  <a name="a-namefindinet4addra--csocketaddrfindinet4addr"></a><a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
  呼叫這個方法將 IPv4 主機名稱的主機位址。  
   
 ```
@@ -167,7 +172,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)來執行轉換。  
   
-##  <a name="a-namefindinet6addra--csocketaddrfindinet6addr"></a><a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
  呼叫這個方法，以轉換成 IPv6 主機名稱的主機位址。  
   
 ```
@@ -197,7 +202,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)來執行轉換。  
   
-##  <a name="a-namegetaddrinfoa--csocketaddrgetaddrinfo"></a><a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
  呼叫此方法以傳回中特定元素的指標**addrinfo**清單。  
   
 ```
@@ -211,7 +216,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>傳回值  
  傳回的指標**addrinfo**所參考的結構`nIndex`包含主機的回應資訊的連結清單中。  
   
-##  <a name="a-namegetaddrinfolista--csocketaddrgetaddrinfolist"></a><a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
  呼叫這個方法傳回的指標**addrinfo**清單。  
   
 ```

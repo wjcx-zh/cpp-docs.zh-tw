@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::combinable
+- combinable
+- PPL/concurrency::combinable
+- PPL/concurrency::combinable::combinable
+- PPL/concurrency::combinable::clear
+- PPL/concurrency::combinable::combine
+- PPL/concurrency::combinable::combine_each
+- PPL/concurrency::combinable::local
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 4ed3ce3d441566a0fb301d01123335846d86a8af
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a491f8eef59978808608917531a5237cceacdb21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="combinable-class"></a>combinable 類別
@@ -57,25 +63,25 @@ class combinable;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[可組合的類別建構函式](#ctor)|多載。 建構新`combinable`物件。|  
+|[可組合的類別](#ctor)|多載。 建構新`combinable`物件。|  
 |[~ combinable 解構函式](#dtor)|終結 `combinable` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[clear 方法](#clear)|清除任何計算的中繼結果，從先前的使用方式。|  
-|[combine 方法](#combine)|藉由呼叫提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。|  
-|[combine_each 方法](#combine_each)|藉由呼叫執行緒區域子計算每一次提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。 最後的結果會累積函式物件。|  
-|[區域方法](#local)|多載。 傳回執行緒私用子運算的參考。|  
+|[clear](#clear)|清除任何計算的中繼結果，從先前的使用方式。|  
+|[combine](#combine)|藉由呼叫提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。|  
+|[combine_each](#combine_each)|藉由呼叫執行緒區域子計算每一次提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。 最後的結果會累積函式物件。|  
+|[本機](#local)|多載。 傳回執行緒私用子運算的參考。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[運算子 = 運算子](#operator_eq)|指派給`combinable`從另一個物件`combinable`物件。|  
+|[operator=](#operator_eq)|指派給`combinable`從另一個物件`combinable`物件。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。  
@@ -88,7 +94,7 @@ class combinable;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>清除 
+##  <a name="clear"></a>清除 
 
  清除任何計算的中繼結果，從先前的使用方式。  
   
@@ -96,7 +102,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="a-namectora-combinable"></a><a name="ctor"></a>可組合的類別 
+##  <a name="ctor"></a>可組合的類別 
 
  建構新`combinable`物件。  
   
@@ -126,7 +132,7 @@ combinable(const combinable& _Copy);
   
  第三個建構函式是複製建構函式。  
   
-##  <a name="a-namedtora-combinable"></a><a name="dtor"></a>~ 可組合的類別 
+##  <a name="dtor"></a>~ 可組合的類別 
 
  終結 `combinable` 物件。  
   
@@ -134,7 +140,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="a-namecombinea-combine"></a><a name="combine"></a>結合 
+##  <a name="combine"></a>結合 
 
  藉由呼叫提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。  
   
@@ -153,7 +159,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>傳回值  
  合併所有這些執行緒私用子運算的最終結果。  
   
-##  <a name="a-namecombineeacha-combineeach"></a><a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a>combine_each 
 
  藉由呼叫執行緒區域子計算每一次提供的結合仿函式會計算從執行緒區域子計算集合的最後一個值。 最後的結果會累積函式物件。  
   
@@ -169,7 +175,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  用來結合一個子計算仿函式。 其簽章是`void (T)`或`void (const T&)`，而且必須是關聯式和交換式。  
   
-##  <a name="a-namelocala-local"></a><a name="local"></a>本機 
+##  <a name="local"></a>本機 
 
  傳回執行緒私用子運算的參考。  
   
@@ -186,7 +192,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>傳回值  
  執行緒私用子計算參考。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a>運算子 = 
 
  指派給`combinable`從另一個物件`combinable`物件。  
   

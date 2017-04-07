@@ -9,10 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CSimpleDialog
-- CSimpleDialgo
 - CSimpleDialog
-- ATL.CSimpleDialog
+- ATLWIN/ATL::CSimpleDialog
+- ATLWIN/ATL::CSimpleDialog::DoModal
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +85,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-namedomodala--csimpledialogdomodal"></a><a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>CSimpleDialog::DoModal  
  叫用強制回應對話方塊，並傳回完成的對話方塊結果。  
   
 ```

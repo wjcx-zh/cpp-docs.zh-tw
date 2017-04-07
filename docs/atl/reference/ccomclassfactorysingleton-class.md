@@ -9,11 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComClassFactorySingleton
-- ATL.CComClassFactorySingleton<T>
-- ATL::CComClassFactorySingleton
-- ATL::CComClassFactorySingleton<T>
 - CComClassFactorySingleton
+- ATLCOM/ATL::CComClassFactorySingleton
+- ATLCOM/ATL::CComClassFactorySingleton::CreateInstance
+- ATLCOM/ATL::CComClassFactorySingleton::m_spObj
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +94,7 @@ class CComClassFactorySingleton : public CComClassFactory
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactorysingletoncreateinstance"></a><a name="createinstance"></a>CComClassFactorySingleton::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactorySingleton::CreateInstance  
  呼叫`QueryInterface`透過[m_spObj](#m_spobj)以擷取介面指標。  
   
 ```
@@ -115,7 +114,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namemspobja--ccomclassfactorysingletonmspobj"></a><a name="m_spobj"></a>CComClassFactorySingleton::m_spObj  
+##  <a name="m_spobj"></a>CComClassFactorySingleton::m_spObj  
  [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)所建構的物件`CComClassFactorySingleton`。  
   
 ```

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton::IsCaptionButton
+- AFXDESKTOPALERTWND/CMFCDesktopAlertWndButton::IsCloseButton
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +104,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdesktopalertwnd.h  
   
-##  <a name="a-nameiscaptionbuttona--cmfcdesktopalertwndbuttoniscaptionbutton"></a><a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
  決定是否要將按鈕顯示 [警示] 對話方塊的標題區域中。  
   
 ```  
@@ -111,7 +114,7 @@ BOOL IsCaptionButton() const;
 ### <a name="return-value"></a>傳回值  
  如果按鈕會顯示在標題區域的 [警示] 對話方塊中，為非零否則為 0。  
   
-##  <a name="a-nameisclosebuttona--cmfcdesktopalertwndbuttonisclosebutton"></a><a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
  決定按鈕是否要關閉警示 對話方塊。  
   
 ```  

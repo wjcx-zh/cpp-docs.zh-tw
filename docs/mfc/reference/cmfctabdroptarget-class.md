@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTabDropTarget
+- AFXBASETABCTRL/CMFCTabDropTarget
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragEnter
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragLeave
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDragOver
+- AFXBASETABCTRL/CMFCTabDropTarget::OnDropEx
+- AFXBASETABCTRL/CMFCTabDropTarget::Register
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +96,7 @@ class CMFCTabDropTarget : public COleDropTarget
 ## <a name="requirements"></a>需求  
  **標頭：** afxbasetabctrl.h  
   
-##  <a name="a-nameondragentera--cmfctabdroptargetondragenter"></a><a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>CMFCTabDropTarget::OnDragEnter  
  在使用者拖曳物件到索引標籤視窗時，由架構呼叫。  
   
 ```  
@@ -129,7 +135,7 @@ virtual DROPEFFECT OnDragEnter(
   
  如需自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
-##  <a name="a-nameondragleavea--cmfctabdroptargetondragleave"></a><a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>CMFCTabDropTarget::OnDragLeave  
  當使用者拖曳物件具有焦點的索引標籤視窗之外，由架構呼叫。  
   
 ```  
@@ -146,7 +152,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`CMFCBaseTabCtrl::OnDragLeave`方法，以執行拖曳作業。  
   
-##  <a name="a-nameondragovera--cmfctabdroptargetondragover"></a><a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
+##  <a name="ondragover"></a>CMFCTabDropTarget::OnDragOver  
  當使用者將物件拖曳至索引標籤視窗具有焦點時，由架構呼叫。  
   
 ```  
@@ -185,7 +191,7 @@ virtual DROPEFFECT OnDragOver(
   
  如需自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
-##  <a name="a-nameondropexa--cmfctabdroptargetondropex"></a><a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
+##  <a name="ondropex"></a>CMFCTabDropTarget::OnDropEx  
  當使用者放開滑鼠按鈕，在拖曳作業結束時，由架構呼叫。  
   
 ```  
@@ -226,7 +232,7 @@ virtual DROPEFFECT OnDropEx(
   
  如需自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
-##  <a name="a-nameregistera--cmfctabdroptargetregister"></a><a name="register"></a>CMFCTabDropTarget::Register  
+##  <a name="register"></a>CMFCTabDropTarget::Register  
  註冊控制項為可為 OLE 拖放作業的目標。  
   
 ```  

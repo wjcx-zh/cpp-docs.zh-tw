@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlComModule
 - CAtlComModule
-- ATL::CAtlComModule
+- ATLBASE/ATL::CAtlComModule
+- ATLBASE/ATL::CAtlComModule::CAtlComModule
+- ATLBASE/ATL::CAtlComModule::RegisterServer
+- ATLBASE/ATL::CAtlComModule::RegisterTypeLib
+- ATLBASE/ATL::CAtlComModule::UnregisterServer
+- ATLBASE/ATL::CAtlComModule::UnRegisterTypeLib
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +85,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-namecatlcommodulea--catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
+##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
  建構函式。  
   
 ```
@@ -91,7 +95,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>備註  
  初始化模組。  
   
-##  <a name="a-namedtora--catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule:: ~ CAtlComModule  
+##  <a name="dtor"></a>CAtlComModule:: ~ CAtlComModule  
  解構函式。  
   
 ```
@@ -101,7 +105,7 @@ CAtlComModule() throw();
 ### <a name="remarks"></a>備註  
  釋放所有的 class factory。  
   
-##  <a name="a-nameregisterservera--catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer  
+##  <a name="registerserver"></a>CAtlComModule::RegisterServer  
  呼叫這個方法來更新系統登錄中的物件對應每個物件。  
   
 ```
@@ -121,7 +125,7 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ### <a name="remarks"></a>備註  
  全域函式會呼叫[AtlComModuleRegisterServer](http://msdn.microsoft.com/library/d11a0c91-0c56-4b1b-a5f5-1287970f798b)。  
   
-##  <a name="a-nameregistertypeliba--catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>CAtlComModule::RegisterTypeLib  
  呼叫這個方法來註冊類型程式庫。  
   
 ```
@@ -139,7 +143,7 @@ HRESULT RegisterTypeLib();
 ### <a name="remarks"></a>備註  
  將型別程式庫的相關資訊加入至系統登錄。 如果模組執行個體包含多個型別程式庫，請使用這個方法的第一個版本來指定應該使用哪一個型別程式庫。  
   
-##  <a name="a-nameunregisterservera--catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>CAtlComModule::UnregisterServer  
  呼叫此方法以移除物件對應中的每個物件的註冊。  
   
 ```
@@ -161,7 +165,7 @@ HRESULT UnregisterServer(
 ### <a name="remarks"></a>備註  
  全域函式會呼叫[AtlComModuleUnregisterServer](http://msdn.microsoft.com/library/c4ef3da4-def7-4aaf-b005-573a02e389d5)。  
   
-##  <a name="a-nameunregistertypeliba--catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
+##  <a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib  
  呼叫這個方法來取消註冊類型程式庫。  
   
 ```

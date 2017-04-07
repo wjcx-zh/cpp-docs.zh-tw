@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::missing_wait
+- missing_wait
+- CONCRT/concurrency::missing_wait
+- CONCRT/concurrency::missing_wait::missing_wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7d29294f4ddce571451a72bf637526e5af283cff
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 70b1c77660992b33de2204fd4f4221ed6e957e21
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="missingwait-class"></a>missing_wait 類別
@@ -52,9 +54,9 @@ class missing_wait : public std::exception;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[missing_wait 建構函式](#ctor)|多載。 建構 `missing_wait` 物件。|  
+|[missing_wait](#ctor)|多載。 建構 `missing_wait` 物件。|  
   
 ## <a name="remarks"></a>備註  
  這個屬性不存在例外狀況流程，您必須負責呼叫`wait`或`run_and_wait`方法`task_group`或`structured_task_group`之前允許解構該物件的物件。 執行階段會擲回這個例外狀況以表示您忘記呼叫`wait`或`run_and_wait`方法。  
@@ -69,7 +71,7 @@ class missing_wait : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-missingwait"></a><a name="ctor"></a>missing_wait 
+##  <a name="ctor"></a>missing_wait 
 
  建構 `missing_wait` 物件。  
   
@@ -86,7 +88,7 @@ missing_wait() throw();
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [task_group 類別](task-group-class.md)   
- [wait 方法](task-group-class.md)   
- [run_and_wait 方法](task-group-class.md)   
+ [等候](task-group-class.md)   
+ [run_and_wait](task-group-class.md)   
  [structured_task_group 類別](structured-task-group-class.md)
 

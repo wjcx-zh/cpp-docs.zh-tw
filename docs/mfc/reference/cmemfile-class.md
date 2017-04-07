@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMemFile
+- AFX/CMemFile
+- AFX/CMemFile::CMemFile
+- AFX/CMemFile::Attach
+- AFX/CMemFile::Detach
+- AFX/CMemFile::Alloc
+- AFX/CMemFile::Free
+- AFX/CMemFile::GrowFile
+- AFX/CMemFile::Memcpy
+- AFX/CMemFile::Realloc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class CMemFile : public CFile
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="a-namealloca--cmemfilealloc"></a><a name="alloc"></a>CMemFile::Alloc  
+##  <a name="alloc"></a>CMemFile::Alloc  
  此函式會呼叫`CMemFile`成員函式。  
   
 ```  
@@ -121,7 +130,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
   
  預設實作會使用執行階段程式庫函式[malloc](../../c-runtime-library/reference/malloc.md)配置記憶體。  
   
-##  <a name="a-nameattacha--cmemfileattach"></a><a name="attach"></a>CMemFile::Attach  
+##  <a name="attach"></a>CMemFile::Attach  
  呼叫此函式可附加的記憶體區塊`CMemFile`。  
   
 ```  
@@ -150,7 +159,7 @@ void Attach(
   
  如果`nGrowBytes`大於 0，`CMemFile`會略過連結之後的記憶體區塊的內容。 您必須撰寫記憶體檔案的內容，從可用的使用`CMemFile`覆寫`CFile::Write`。 如果您嘗試寫入超過檔案結尾，或檔案成長藉由呼叫`CMemFile`覆寫`CFile::SetLength`，`CMemFile`會成長量的記憶體配置`nGrowBytes`。 如果您傳遞給記憶體區塊成長的記憶體配置將會失敗**附加**不相容的方法以配置[配置](#alloc)。 預設實作與`Alloc`，您必須配置的記憶體以執行階段程式庫函數[malloc](../../c-runtime-library/reference/malloc.md)或[calloc](../../c-runtime-library/reference/calloc.md)。  
   
-##  <a name="a-namecmemfilea--cmemfilecmemfile"></a><a name="cmemfile"></a>CMemFile::CMemFile  
+##  <a name="cmemfile"></a>CMemFile::CMemFile  
  第一個多載會開啟空白記憶體檔案。  
   
 ```  
@@ -181,7 +190,7 @@ CMemFile(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles #&36;](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
-##  <a name="a-namedetacha--cmemfiledetach"></a><a name="detach"></a>CMemFile::Detach  
+##  <a name="detach"></a>CMemFile::Detach  
  呼叫此函式可取得正在使用的記憶體區塊的指標`CMemFile`。  
   
 ```  
@@ -194,7 +203,7 @@ BYTE* Detach();
 ### <a name="remarks"></a>備註  
  呼叫此函式也會關閉`CMemFile`。 您可以重新連接到的記憶體區塊`CMemFile`藉由呼叫[附加](#attach)。 如果您想要附加檔案，並在其中使用的資料，您應該呼叫[CFile::GetLength](../../mfc/reference/cfile-class.md#getlength)取得的檔案，然後再呼叫長度**卸離**。 請注意，如果您附加至的記憶體區塊`CMemFile`好讓您可以使用它的資料 ( `nGrowBytes` = = 0)，則您將無法檔案成長的記憶體。  
   
-##  <a name="a-namefreea--cmemfilefree"></a><a name="free"></a>CMemFile::Free  
+##  <a name="free"></a>CMemFile::Free  
  此函式會呼叫`CMemFile`成員函式。  
   
 ```  
@@ -208,7 +217,7 @@ virtual void Free(BYTE* lpMem);
 ### <a name="remarks"></a>備註  
  覆寫這個函式來實作自訂記憶體解除配置。 如果您覆寫這個函式，您可能需要覆寫[配置](#alloc)和[Realloc](#realloc)以及。  
   
-##  <a name="a-namegrowfilea--cmemfilegrowfile"></a><a name="growfile"></a>CMemFile::GrowFile  
+##  <a name="growfile"></a>CMemFile::GrowFile  
  會呼叫此函數的數個`CMemFile`成員函式。  
   
 ```  
@@ -222,7 +231,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ### <a name="remarks"></a>備註  
  您可以覆寫它如果您想要變更如何`CMemFile`成長的檔案。 預設實作會呼叫[Realloc](#realloc)成長的現有區塊 (或[配置](#alloc)建立記憶體區塊)，配置記憶體的倍數`nGrowBytes`建構函式中指定的值或[附加](#attach)呼叫。  
   
-##  <a name="a-namememcpya--cmemfilememcpy"></a><a name="memcpy"></a>CMemFile::Memcpy  
+##  <a name="memcpy"></a>CMemFile::Memcpy  
  此函式會呼叫`CMemFile`的覆寫[CFile::Read](../../mfc/reference/cfile-class.md#read)和[CFile::Write](../../mfc/reference/cfile-class.md#write)傳輸資料的記憶體檔案。  
   
 ```  
@@ -248,7 +257,7 @@ virtual BYTE* Memcpy(
 ### <a name="remarks"></a>備註  
  如果您想要變更的方式覆寫此函數，`CMemFile`沒有這些記憶體複本。  
   
-##  <a name="a-namerealloca--cmemfilerealloc"></a><a name="realloc"></a>CMemFile::Realloc  
+##  <a name="realloc"></a>CMemFile::Realloc  
  此函式會呼叫`CMemFile`成員函式。  
   
 ```  

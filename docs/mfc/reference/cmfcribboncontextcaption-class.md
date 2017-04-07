@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonContextCaption
+- AFXRIBBONBAR/CMFCRibbonContextCaption
+- AFXRIBBONBAR/CMFCRibbonContextCaption::GetColor
+- AFXRIBBONBAR/CMFCRibbonContextCaption::GetRightTabX
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +79,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxRibbonBar.h  
   
-##  <a name="a-namegetcolora--cmfcribboncontextcaptiongetcolor"></a><a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
+##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
  傳回標題的背景色彩。  
   
 ```  
@@ -105,7 +108,7 @@ AFX_RibbonCategoryColor GetColor() const;
 ### <a name="remarks"></a>備註  
  可以藉由呼叫設定標題色彩[CMFCRibbonCategory::SetTabColor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)或[CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)。  
   
-##  <a name="a-namegetrighttabxa--cmfcribboncontextcaptiongetrighttabx"></a><a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
+##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
  擷取類別的功能區索引標籤的右側邊緣的位置。  
   
 ```  

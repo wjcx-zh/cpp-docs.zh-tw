@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::SetACCData
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsBottom
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsCollapsed
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_bIsSpecial
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_lstTasks
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_rect
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_rectGroup
+- AFXTASKSPANE/CMFCTasksPaneTaskGroup::m_strName
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +110,7 @@ class CMFCTasksPaneTaskGroup : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxTasksPane.h  
   
-##  <a name="a-namecmfctaskspanetaskgroupa--cmfctaskspanetaskgroupcmfctaskspanetaskgroup"></a><a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
  建構 `CMFCTasksPaneTaskGroup` 物件。  
   
 ```  
@@ -134,7 +144,7 @@ CMFCTasksPaneTaskGroup(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namembisbottoma--cmfctaskspanetaskgroupmbisbottom"></a><a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
+##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
  決定是否要將工作群組對齊工作窗格控制項的底部。  
   
 ```  
@@ -144,7 +154,7 @@ BOOL m_bIsBottom;
 ### <a name="remarks"></a>備註  
  只有一個群組可以工作窗格控制項的底部對齊。 最後必須加入這個工作群組。 如需詳細資訊，請參閱[CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。  
   
-##  <a name="a-namembiscollapseda--cmfctaskspanetaskgroupmbiscollapsed"></a><a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
  決定是否要摺疊，工作群組。  
   
 ```  
@@ -154,7 +164,7 @@ BOOL m_bIsCollapsed;
 ### <a name="remarks"></a>備註  
  您可以啟用或停用的功能，在工作窗格中摺疊群組，藉由呼叫[CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)。  
   
-##  <a name="a-namembisspeciala--cmfctaskspanetaskgroupmbisspecial"></a><a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
+##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
  判斷是否要為工作群組*特殊*和特殊工作群組的標題是否應該由不同的色彩。  
   
 ```  
@@ -164,7 +174,7 @@ BOOL m_bIsSpecial;
 ### <a name="remarks"></a>備註  
  如果您的應用程式使用 Windows XP 視覺化佈景主題和`m_bIsSpecial`是`FALSE`，架構會呼叫`DrawThemeBackground`與`EBP_NORMALGROUPBACKGROUND`旗標。 如果`m_bIsSpecial`是`TRUE`，架構會呼叫`DrawThemeBackground`與`EBP_SPECIALGROUPBACKGROUND`旗標。  
   
-##  <a name="a-namemlsttasksa--cmfctaskspanetaskgroupmlsttasks"></a><a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
+##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
  包含內部工作的清單。  
   
 ```  
@@ -174,7 +184,7 @@ CObList m_lstTasks;
 ### <a name="remarks"></a>備註  
  若要填滿此清單，請呼叫[CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask)。  
   
-##  <a name="a-namemrecta--cmfctaskspanetaskgroupmrect"></a><a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
+##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
  指定在群組標題的周框矩形。  
   
 ```  
@@ -184,7 +194,7 @@ CRect m_rect;
 ### <a name="remarks"></a>備註  
  架構會自動計算此值。  
   
-##  <a name="a-namemrectgroupa--cmfctaskspanetaskgroupmrectgroup"></a><a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
+##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
  指定群組的周框矩形。  
   
 ```  
@@ -194,7 +204,7 @@ CRect m_rectGroup;
 ### <a name="remarks"></a>備註  
  這個值會由架構自動計算的。  
   
-##  <a name="a-namemstrnamea--cmfctaskspanetaskgroupmstrname"></a><a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
+##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
  指定群組的名稱。  
   
 ```  
@@ -204,7 +214,7 @@ CString m_strName;
 ### <a name="remarks"></a>備註  
  如果這個值是空的不會顯示在群組標題，並不能摺疊群組。  
   
-##  <a name="a-namesetaccdataa--cmfctaskspanetaskgroupsetaccdata"></a><a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
+##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
  判斷目前的工作群組的存取範圍資料。  
   
 ```  

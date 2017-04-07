@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAtlStringMgr
+- ATLSIMPSTR/ATL::IAtlStringMgr
+- ATLSIMPSTR/ATL::Allocate
+- ATLSIMPSTR/ATL::Clone
+- ATLSIMPSTR/ATL::Free
+- ATLSIMPSTR/ATL::GetNilString
+- ATLSIMPSTR/ATL::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -70,7 +76,7 @@ __interface IAtlStringMgr
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsimpstr.h  
   
-##  <a name="a-nameallocatea--iatlstringmgrallocate"></a><a name="allocate"></a>IAtlStringMgr::Allocate  
+##  <a name="allocate"></a>IAtlStringMgr::Allocate  
  會配置新的字串資料結構。  
   
 ```
@@ -96,7 +102,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 >  使用方式範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。  
   
-##  <a name="a-nameclonea--iatlstringmgrclone"></a><a name="clone"></a>IAtlStringMgr::Clone  
+##  <a name="clone"></a>IAtlStringMgr::Clone  
  傳回新字串管理員用於另一個執行個體的指標`CSimpleStringT`。  
   
 ```
@@ -114,7 +120,7 @@ IAtlStringMgr* Clone() throw();
 > [!NOTE]
 >  使用方式範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。  
   
-##  <a name="a-namefreea--iatlstringmgrfree"></a><a name="free"></a>IAtlStringMgr::Free  
+##  <a name="free"></a>IAtlStringMgr::Free  
  釋出的字串資料結構。  
   
 ```
@@ -131,7 +137,7 @@ void Free(CStringData* pData) throw();
 > [!NOTE]
 >  使用方式範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。  
   
-##  <a name="a-namegetnilstringa--iatlstringmgrgetnilstring"></a><a name="getnilstring"></a>IAtlStringMgr::GetNilString  
+##  <a name="getnilstring"></a>IAtlStringMgr::GetNilString  
  傳回空字串的字串資料結構的指標。  
   
 ```
@@ -150,7 +156,7 @@ CStringData* GetNilString() throw();
 > [!NOTE]
 >  使用方式範例，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。  
   
-##  <a name="a-namereallocatea--iatlstringmgrreallocate"></a><a name="reallocate"></a>IAtlStringMgr::Reallocate  
+##  <a name="reallocate"></a>IAtlStringMgr::Reallocate  
  重新配置的字串資料結構。  
   
 ```

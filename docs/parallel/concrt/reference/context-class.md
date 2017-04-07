@@ -9,7 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::Context
+- Context
+- CONCRT/concurrency::Context
+- CONCRT/concurrency::Context::Block
+- CONCRT/concurrency::Context::CurrentContext
+- CONCRT/concurrency::Context::GetId
+- CONCRT/concurrency::Context::GetScheduleGroupId
+- CONCRT/concurrency::Context::GetVirtualProcessorId
+- CONCRT/concurrency::Context::Id
+- CONCRT/concurrency::Context::IsCurrentTaskCollectionCanceling
+- CONCRT/concurrency::Context::IsSynchronouslyBlocked
+- CONCRT/concurrency::Context::Oversubscribe
+- CONCRT/concurrency::Context::ScheduleGroupId
+- CONCRT/concurrency::Context::Unblock
+- CONCRT/concurrency::Context::VirtualProcessorId
+- CONCRT/concurrency::Context::Yield
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +48,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 11d8252afdfe9c02869b14f976f8f348513c46b8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: fd6f59e1e94329ef73e8fdbe946ec22241815e2e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="context-class"></a>Context 類別
@@ -58,21 +72,21 @@ class Context;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[Block 方法](#block)|封鎖目前的內容。|  
-|[CurrentContext 方法](#currentcontext)|傳回目前內容的指標。|  
-|[GetId 方法](#getid)|傳回的內容，內容所屬的排程器內必須是唯一的識別碼。|  
-|[GetScheduleGroupId 方法](#getschedulegroupid)|傳回內容目前正在使用排程群組的識別碼。|  
-|[GetVirtualProcessorId 方法](#getvirtualprocessorid)|傳回內容目前正在執行的虛擬處理器的識別碼。|  
-|[Id 方法](#id)|傳回目前內容中目前的內容所屬的排程器的唯一識別碼。|  
-|[IsCurrentTaskCollectionCanceling 方法](#iscurrenttaskcollectioncanceling)|指示傳回工作集合目前正在執行內嵌於目前的內容是在使用中的取消 （或將會在短時間內）。|  
-|[IsSynchronouslyBlocked 方法](#issynchronouslyblocked)|判斷同步遭到封鎖的內容。 內容會被視為應用程式明確執行造成封鎖的動作會以同步方式封鎖。|  
-|[Oversubscribe 方法](#oversubscribe)|插入排程器的額外的虛擬處理器的一段程式碼的其中一個該排程器中的虛擬處理器上執行的內容上叫用時持續期間。|  
-|[ScheduleGroupId 方法](#schedulegroupid)|傳回目前內容是使用排程群組的識別碼。|  
-|[Unblock 方法](#unblock)|解除封鎖內容，並使其成為可執行。|  
-|[VirtualProcessorId 方法](#virtualprocessorid)|傳回目前內容上執行之虛擬處理器的識別碼。|  
-|[Yield 方法](#yield)|會產生執行，以便能夠執行其他內容。 如果沒有其他內容需要產生，排程器即會配合其他作業系統執行緒。|  
+|[區塊](#block)|封鎖目前的內容。|  
+|[CurrentContext](#currentcontext)|傳回目前內容的指標。|  
+|[GetId](#getid)|傳回的內容，內容所屬的排程器內必須是唯一的識別碼。|  
+|[GetScheduleGroupId](#getschedulegroupid)|傳回內容目前正在使用排程群組的識別碼。|  
+|[GetVirtualProcessorId](#getvirtualprocessorid)|傳回內容目前正在執行的虛擬處理器的識別碼。|  
+|[識別碼](#id)|傳回目前內容中目前的內容所屬的排程器的唯一識別碼。|  
+|[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|指示傳回工作集合目前正在執行內嵌於目前的內容是在使用中的取消 （或將會在短時間內）。|  
+|[IsSynchronouslyBlocked](#issynchronouslyblocked)|判斷同步遭到封鎖的內容。 內容會被視為應用程式明確執行造成封鎖的動作會以同步方式封鎖。|  
+|[過度訂閱](#oversubscribe)|插入排程器的額外的虛擬處理器的一段程式碼的其中一個該排程器中的虛擬處理器上執行的內容上叫用時持續期間。|  
+|[ScheduleGroupId](#schedulegroupid)|傳回目前內容是使用排程群組的識別碼。|  
+|[解除封鎖](#unblock)|解除封鎖內容，並使其成為可執行。|  
+|[VirtualProcessorId](#virtualprocessorid)|傳回目前內容上執行之虛擬處理器的識別碼。|  
+|[產生](#yield)|會產生執行，以便能夠執行其他內容。 如果沒有其他內容需要產生，排程器即會配合其他作業系統執行緒。|  
   
 ## <a name="remarks"></a>備註  
  並行執行階段排程器 (請參閱[排程器](scheduler-class.md)) 會使用執行內容來執行工作排入佇列，您的應用程式。 Win32 執行緒是 Windows 作業系統上執行內容的範例。  
@@ -89,7 +103,7 @@ class Context;
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameblocka-block"></a><a name="block"></a>區塊 
+##  <a name="block"></a>區塊 
 
  封鎖目前的內容。  
   
@@ -106,13 +120,13 @@ static void __cdecl Block();
   
  這個方法可以擲回例外狀況，包括各種[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)。  
   
-##  <a name="a-namedtora-context"></a><a name="dtor"></a>~ 內容 
+##  <a name="dtor"></a>~ 內容 
 
 ```
 virtual ~Context();
 ```  
   
-##  <a name="a-namecurrentcontexta-currentcontext"></a><a name="currentcontext"></a>CurrentContext 
+##  <a name="currentcontext"></a>CurrentContext 
 
  傳回目前內容的指標。  
   
@@ -126,7 +140,7 @@ static Context* __cdecl CurrentContext();
 ### <a name="remarks"></a>備註  
  如果呼叫的內容目前沒有任何相關聯的排程器，則這個方法會將處理序的預設排程器建立及/或附加至呼叫的內容。  
   
-##  <a name="a-namegetida-getid"></a><a name="getid"></a>GetId 
+##  <a name="getid"></a>GetId 
 
  傳回的內容，內容所屬的排程器內必須是唯一的識別碼。  
   
@@ -137,7 +151,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>傳回值  
  內容所屬的排程器內必須是唯一的內容識別項。  
   
-##  <a name="a-namegetschedulegroupida-getschedulegroupid"></a><a name="getschedulegroupid"></a>GetScheduleGroupId 
+##  <a name="getschedulegroupid"></a>GetScheduleGroupId 
 
  傳回內容目前正在使用排程群組的識別碼。  
   
@@ -151,7 +165,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 ### <a name="remarks"></a>備註  
  這個方法的傳回值是排程群組上執行內容的瞬間取樣。 如果在非目前內容的其他內容上呼叫這個方法，則值傳回時可能會過期，因而無法依賴。 一般而言，這個方法會用於偵錯或追蹤之用。  
   
-##  <a name="a-namegetvirtualprocessorida-getvirtualprocessorid"></a><a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
+##  <a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
 
  傳回內容目前正在執行的虛擬處理器的識別碼。  
   
@@ -165,7 +179,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 ### <a name="remarks"></a>備註  
  這個方法的傳回值是某虛擬處理器上執行內容的瞬間取樣。 這個值傳回時可能會過期，因而無法依賴。 一般而言，這個方法會用於偵錯或追蹤之用。  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>識別碼 
+##  <a name="id"></a>識別碼 
 
  傳回目前內容中目前的內容所屬的排程器的唯一識別碼。  
   
@@ -176,7 +190,7 @@ static unsigned int __cdecl Id();
 ### <a name="return-value"></a>傳回值  
  如果目前的內容會附加至排程器，針對目前的內容中目前的內容屬於哪個; 排程器的唯一識別項否則，值`-1`。  
   
-##  <a name="a-nameiscurrenttaskcollectioncancelinga-iscurrenttaskcollectioncanceling"></a><a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
+##  <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
 
  指示傳回工作集合目前正在執行內嵌於目前的內容是在使用中的取消 （或將會在短時間內）。  
   
@@ -187,7 +201,7 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 ### <a name="return-value"></a>傳回值  
  如果排程器會附加至呼叫的內容，以及工作群組該內容執行內嵌工作，是否表示該工作群組是在使用中的取消 （或將會在短時間內）;否則，值`false`。  
   
-##  <a name="a-nameissynchronouslyblockeda-issynchronouslyblocked"></a><a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
+##  <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
 
  判斷同步遭到封鎖的內容。 內容會被視為應用程式明確執行造成封鎖的動作會以同步方式封鎖。  
   
@@ -203,7 +217,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
   
  這個方法的傳回值是瞬間是否以同步方式封鎖內容的範例。 這個值可能會過期，因而會傳回只用於在特殊情況。  
   
-##  <a name="a-nameoperatordeletea-operator-delete"></a><a name="operator_delete"></a>delete 運算子 
+##  <a name="operator_delete"></a>delete 運算子 
 
  A`Context`由執行階段內部終結物件。 不可將它明確刪除。  
   
@@ -215,7 +229,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  要刪除物件的指標。  
   
-##  <a name="a-nameoversubscribea-oversubscribe"></a><a name="oversubscribe"></a>過度訂閱 
+##  <a name="oversubscribe"></a>過度訂閱 
 
  插入排程器的額外的虛擬處理器的一段程式碼的其中一個該排程器中的虛擬處理器上執行的內容上叫用時持續期間。  
   
@@ -227,7 +241,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
  `_BeginOversubscription`  
  如果`true`，過度訂閱期間，應該加入額外的虛擬處理器的指示。 如果`false`，表示過度訂閱應該結束，而且應該移除先前新增的虛擬處理器。  
   
-##  <a name="a-nameschedulegroupida-schedulegroupid"></a><a name="schedulegroupid"></a>ScheduleGroupId 
+##  <a name="schedulegroupid"></a>ScheduleGroupId 
 
  傳回目前內容是使用排程群組的識別碼。  
   
@@ -238,7 +252,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>傳回值  
  如果目前的內容會附加至排程器和排程器的識別項使用的排程群組，群組的目前內容正在進行。否則，值`-1`。  
   
-##  <a name="a-nameunblocka-unblock"></a><a name="unblock"></a>解除封鎖 
+##  <a name="unblock"></a>解除封鎖 
 
  解除封鎖內容，並使其成為可執行。  
   
@@ -253,7 +267,7 @@ virtual void Unblock() = 0;
   
  請注意，您的程式碼發行另一個執行緒可以呼叫其內容的點之間是關鍵時間`Unblock`方法和點的實際方法呼叫來`Block`為止。 在這個過程中，您不能呼叫因本身原因而封鎖及解除封鎖的任何方法 (例如，取得鎖定)。 呼叫`Block`和`Unblock`方法不會追蹤封鎖和解除封鎖的原因。 只有一個物件應有的擁有權`Block`和`Unblock`配對。  
   
-##  <a name="a-namevirtualprocessorida-virtualprocessorid"></a><a name="virtualprocessorid"></a>VirtualProcessorId 
+##  <a name="virtualprocessorid"></a>VirtualProcessorId 
 
  傳回目前內容上執行之虛擬處理器的識別碼。  
   
@@ -267,7 +281,7 @@ static unsigned int __cdecl VirtualProcessorId();
 ### <a name="remarks"></a>備註  
  這個方法的傳回值是目前的內容上執行之虛擬處理器的瞬間取樣。 這個值傳回時可能會過期，因而無法依賴。 一般而言，這個方法會用於偵錯或追蹤之用。  
   
-##  <a name="a-nameyielda-yield"></a><a name="yield"></a>產生 
+##  <a name="yield"></a>產生 
 
  會產生執行，以便能夠執行其他內容。 如果沒有其他內容需要產生，排程器即會配合其他作業系統執行緒。  
   
@@ -278,7 +292,7 @@ static void __cdecl Yield();
 ### <a name="remarks"></a>備註  
  如果呼叫的內容目前沒有任何相關聯的排程器，則這個方法會將處理序的預設排程器建立及/或附加至呼叫的內容。  
   
-##  <a name="a-nameyieldexecutiona-yieldexecution"></a><a name="yieldexecution"></a>YieldExecution 
+##  <a name="yieldexecution"></a>YieldExecution 
 
  會產生執行，以便能夠執行其他內容。 如果沒有其他內容需要產生，排程器即會配合其他作業系統執行緒。  
   

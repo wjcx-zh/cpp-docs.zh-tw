@@ -1,41 +1,57 @@
 ---
-title: "編譯器錯誤 C2668 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2668"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2668"
+title: "編譯器錯誤 C2668 |Microsoft 文件"
+ms.custom: 
+ms.date: 03/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2668
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 編譯器錯誤 C2668
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
+ms.openlocfilehash: 6bb1dc7c1dbf26a4ff8ec25a46fe7128e0fb6aa8
+ms.lasthandoff: 03/29/2017
 
-'function' : 模稜兩可的呼叫多載函式  
+---
+# <a name="compiler-error-c2668"></a>編譯器錯誤 C2668
+'function': 模稜兩可的呼叫多載函式  
   
- 無法解析指定的多載函式呼叫。  您可能需要明確轉換實質參數的其中一個或多個。  
+ 無法解析指定的多載函式呼叫。 若要明確轉換一或多個實際的參數。  
   
- 您也可以使用樣板來取得這項錯誤。  如果在同一個類別中，您具有一個一般的成員函式和一個樣板的成員函式，而且它們都具用相同的簽章，則樣板成員函式必須先出現。  這是目前 Visual C\+\+ 實作的一項限制。  
+ 您也可以藉由使用範本來取得這項錯誤。 如果在相同類別中，您有一般成員函式以及相同的簽章樣板成員函式，必須先使用樣板化的其中一個。 這是目前的 Visual c + + 實作的限制。  
   
- 如需函式樣板的部分指定詳細資訊，請參閱知識庫文件 Q240869。  
+ 在函式樣板的部分排序，請參閱知識庫文件 Q240869 如需詳細資訊。  
   
- 如果是建置包含支援 `ISupportErrorInfo` 之 COM 物件的 ATL 專案，請參閱知識庫文件 Q243298。  
+ 如果您要建立包含支援 COM 物件的 ATL 專案`ISupportErrorInfo`，請參閱知識庫文章 Q243298。  
   
-## 範例  
- 下列範例會產生 C2668：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C2668:  
   
 ```  
 // C2668.cpp  
@@ -53,8 +69,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 另一解決這個錯誤的方法是使用 [using 宣告](../../cpp/using-declaration.md)：  
+## <a name="example"></a>範例  
+ 若要解決此錯誤的另一個方法是使用[using 宣告](../../cpp/using-declaration.md):  
   
 ```  
 // C2668b.cpp  
@@ -95,10 +111,10 @@ class MyTestCase : public AppTestCase {
 };  
 ```  
   
-## 範例  
- 對 Visual Studio .NET 2003 的編譯器完成符合標準處理後也會出現這個錯誤：轉換 \(Conversion\) 常數為 0 的轉型 \(Cast\) 是模稜兩可的。  
+## <a name="example"></a>範例  
+ 也可以針對 Visual Studio.NET 2003年所進行的編譯器一致性工作產生這個錯誤︰ 常數 0 轉換上模稜兩可的轉換。  
   
- 轉換使用常數 0 之轉型是模稜兩可的，因為 int 必須轉換成 long 和 void\*。  若要解決這個錯誤，請將 0 轉型成使用 0 之函式參數的確切型別，這樣便可不必進行任何轉換 \(在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本中，這個程式碼將是有效的\)。  
+ 在使用常數 0 轉換的轉換模稜兩可，因為 int 需要轉換兩個長時間和 void *。 若要解決這個錯誤，轉型 0 到它使用，因此不需要進行 （此程式碼是有效的 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中） 的任何轉換的函式參數的確切類型。  
   
 ```  
 // C2668c.cpp  
@@ -118,8 +134,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 可能是因為現在 CRT 具有所有數學函式的浮點和雙精度浮點數格式而發生這個錯誤。  
+## <a name="example"></a>範例  
+ 這個錯誤可能是因為 CRT 現在具有 float 和所有數學函式的雙精度浮點格式。  
   
 ```  
 // C2668d.cpp  
@@ -132,8 +148,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 可能是因為已從 the CRT 中的 math.h 移除 pow\(int, int\) 而產生這個錯誤。  
+## <a name="example"></a>範例  
+ 由於 math.h CRT 中已移除 pow （int，int），就會發生此錯誤。  
   
 ```  
 // C2668e.cpp  
@@ -142,4 +158,26 @@ int main() {
    pow(9,9);   // C2668  
    pow((double)9,9);   // OK  
 }  
+```
+
+## <a name="example"></a>範例  
+這段程式碼在 Visual Studio 2015 會成功，但無法以 Visual Studio 2017 和更新版本 C2668。 在 Visual Studio 2015 中，編譯器會使用與一般 copy-initialization 相同的方式錯誤地處理 copy-list-initialization；它只會考慮轉換建構函式來進行多載解析。 
+
+```
+C++
+struct A {
+    explicit A(int) {}
+};
+
+struct B {
+    B(int) {}
+};
+
+void f(const A&) {}
+void f(const B&) {}
+
+int main()
+{
+    f({ 1 }); // error C2668: 'f': ambiguous call to overloaded function
+}
 ```

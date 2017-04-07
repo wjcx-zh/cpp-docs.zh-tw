@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CGlobalHeap
-- ATL::CGlobalHeap
 - CGlobalHeap
+- ATLMEM/ATL::CGlobalHeap
+- ATLMEM/ATL::CGlobalHeap::Allocate
+- ATLMEM/ATL::CGlobalHeap::Free
+- ATLMEM/ATL::CGlobalHeap::GetSize
+- ATLMEM/ATL::CGlobalHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +84,7 @@ class CGlobalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>需求  
  **標頭︰** atlmem.h  
   
-##  <a name="a-nameallocatea--cglobalheapallocate"></a><a name="allocate"></a>CGlobalHeap::Allocate  
+##  <a name="allocate"></a>CGlobalHeap::Allocate  
  呼叫這個方法來配置記憶體區塊。  
   
 ```
@@ -100,7 +103,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用實作[GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)旗標參數與**GMEM_FIXED**。  
   
-##  <a name="a-namefreea--cglobalheapfree"></a><a name="free"></a>CGlobalHeap::Free  
+##  <a name="free"></a>CGlobalHeap::Free  
  呼叫此方法以釋放此記憶體管理員所配置的記憶體區塊。  
   
 ```
@@ -114,7 +117,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>備註  
  使用實作[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)。  
   
-##  <a name="a-namegetsizea--cglobalheapgetsize"></a><a name="getsize"></a>CGlobalHeap::GetSize  
+##  <a name="getsize"></a>CGlobalHeap::GetSize  
  呼叫這個方法，以取得此記憶體管理員所配置的記憶體區塊配置的大小。  
   
 ```
@@ -131,7 +134,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>備註  
  使用實作[GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)。  
   
-##  <a name="a-namereallocatea--cglobalheapreallocate"></a><a name="reallocate"></a>CGlobalHeap::Reallocate  
+##  <a name="reallocate"></a>CGlobalHeap::Reallocate  
  呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。  
   
 ```

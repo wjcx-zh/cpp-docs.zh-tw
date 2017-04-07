@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IExecutionContext
+- IExecutionContext
+- CONCRTRM/concurrency::IExecutionContext
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::Dispatch
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetId
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetProxy
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::GetScheduler
+- CONCRTRM/concurrency::IExecutionContext::IExecutionContext::SetProxy
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 5ad3f21e55371b904ac8a597a7a66d5c5deb8339
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4c4301d7afe46249d6d67ab2a6ec0a9fc2c7935e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext 結構
@@ -52,13 +58,13 @@ struct IExecutionContext;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[Iexecutioncontext:: Dispatch 方法](#dispatch)|執行緒 proxy 會開始執行一個特定的執行內容時，會呼叫方法。 這應該是您的排程器的主工作者常式。|  
-|[Iexecutioncontext:: Getid 方法](#getid)|傳回的執行內容的唯一識別碼。|  
-|[Iexecutioncontext:: Getproxy 方法](#getproxy)|傳回的介面來執行此內容的執行緒 proxy。|  
-|[Iexecutioncontext:: Getscheduler 方法](#getscheduler)|此執行內容所屬的排程器的介面傳回。|  
-|[Iexecutioncontext:: Setproxy 方法](#setproxy)|執行緒 proxy 關聯至這個執行內容。 相關聯的執行緒 proxy 在它開始執行的內容之前，會叫用此方法的權限`Dispatch`方法。|  
+|[Iexecutioncontext:: Dispatch](#dispatch)|執行緒 proxy 會開始執行一個特定的執行內容時，會呼叫方法。 這應該是您的排程器的主工作者常式。|  
+|[Iexecutioncontext:: Getid](#getid)|傳回的執行內容的唯一識別碼。|  
+|[Iexecutioncontext:: Getproxy](#getproxy)|傳回的介面來執行此內容的執行緒 proxy。|  
+|[Iexecutioncontext:: Getscheduler](#getscheduler)|此執行內容所屬的排程器的介面傳回。|  
+|[Iexecutioncontext:: Setproxy](#setproxy)|執行緒 proxy 關聯至這個執行內容。 相關聯的執行緒 proxy 在它開始執行的內容之前，會叫用此方法的權限`Dispatch`方法。|  
   
 ## <a name="remarks"></a>備註  
  如果您正在實作自訂的排程器介面與並行執行階段的資源管理員，您必須實作`IExecutionContext`介面。 資源管理員所建立的執行緒執行工作，代表您的排程器執行`IExecutionContext::Dispatch`方法。  
@@ -71,7 +77,7 @@ struct IExecutionContext;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namedispatcha--iexecutioncontextdispatch-method"></a><a name="dispatch"></a>Iexecutioncontext:: Dispatch 方法  
+##  <a name="dispatch"></a>Iexecutioncontext:: Dispatch 方法  
  執行緒 proxy 會開始執行一個特定的執行內容時，會呼叫方法。 這應該是您的排程器的主工作者常式。  
   
 ```
@@ -82,7 +88,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
  `pDispatchState`  
  在發送這個執行內容的狀態指標。 如需有關分派狀態的詳細資訊，請參閱[DispatchState](dispatchstate-structure.md)。  
   
-##  <a name="a-namegetida--iexecutioncontextgetid-method"></a><a name="getid"></a>Iexecutioncontext:: Getid 方法  
+##  <a name="getid"></a>Iexecutioncontext:: Getid 方法  
  傳回的執行內容的唯一識別碼。  
   
 ```
@@ -97,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  從不同來源取得的識別項可能會導致未定義的行為。  
   
-##  <a name="a-namegetproxya--iexecutioncontextgetproxy-method"></a><a name="getproxy"></a>Iexecutioncontext:: Getproxy 方法  
+##  <a name="getproxy"></a>Iexecutioncontext:: Getproxy 方法  
  傳回的介面來執行此內容的執行緒 proxy。  
   
 ```
@@ -110,7 +116,7 @@ virtual IThreadProxy* GetProxy() = 0;
 ### <a name="remarks"></a>備註  
  資源管理員會叫用`SetProxy`上執行內容，方法與`IThreadProxy`介面做為參數，在進入之前`Dispatch`方法上的的內容。 您應該儲存此引數，並將它傳回呼叫`GetProxy()`。  
   
-##  <a name="a-namegetschedulera--iexecutioncontextgetscheduler-method"></a><a name="getscheduler"></a>Iexecutioncontext:: Getscheduler 方法  
+##  <a name="getscheduler"></a>Iexecutioncontext:: Getscheduler 方法  
  此執行內容所屬的排程器的介面傳回。  
   
 ```
@@ -123,7 +129,7 @@ virtual IScheduler* GetScheduler() = 0;
 ### <a name="remarks"></a>備註  
  您必須初始化執行內容的有效`IScheduler`介面，再使用它做為方法的參數提供資源管理員。  
   
-##  <a name="a-namesetproxya--iexecutioncontextsetproxy-method"></a><a name="setproxy"></a>Iexecutioncontext:: Setproxy 方法  
+##  <a name="setproxy"></a>Iexecutioncontext:: Setproxy 方法  
  執行緒 proxy 關聯至這個執行內容。 相關聯的執行緒 proxy 在它開始執行的內容之前，會叫用此方法的權限`Dispatch`方法。  
   
 ```

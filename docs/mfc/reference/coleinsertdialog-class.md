@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleInsertDialog
+- AFXODLGS/COleInsertDialog
+- AFXODLGS/COleInsertDialog::COleInsertDialog
+- AFXODLGS/COleInsertDialog::CreateItem
+- AFXODLGS/COleInsertDialog::DoModal
+- AFXODLGS/COleInsertDialog::GetClassID
+- AFXODLGS/COleInsertDialog::GetDrawAspect
+- AFXODLGS/COleInsertDialog::GetIconicMetafile
+- AFXODLGS/COleInsertDialog::GetPathName
+- AFXODLGS/COleInsertDialog::GetSelectionType
+- AFXODLGS/COleInsertDialog::m_io
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +115,7 @@ class COleInsertDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxodlgs.h  
   
-##  <a name="a-namecoleinsertdialoga--coleinsertdialogcoleinsertdialog"></a><a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
+##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
  此函式建構只`COleInsertDialog`物件。  
   
 ```  
@@ -138,7 +148,7 @@ COleInsertDialog (
 ### <a name="remarks"></a>備註  
  若要顯示對話方塊，請呼叫[DoModal](#domodal)函式。  
   
-##  <a name="a-namecreateitema--coleinsertdialogcreateitem"></a><a name="createitem"></a>COleInsertDialog::CreateItem  
+##  <a name="createitem"></a>COleInsertDialog::CreateItem  
  呼叫此函式建立型別的物件[COleClientItem](../../mfc/reference/coleclientitem-class.md)才[DoModal](#domodal)傳回**IDOK**。  
   
 ```  
@@ -155,7 +165,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="remarks"></a>備註  
  您必須配置`COleClientItem`物件之前，您可以呼叫此函式。  
   
-##  <a name="a-namedomodala--coleinsertdialogdomodal"></a><a name="domodal"></a>COleInsertDialog::DoModal  
+##  <a name="domodal"></a>COleInsertDialog::DoModal  
  呼叫此函式來顯示 OLE 插入物件 對話方塊。  
   
 ```  
@@ -191,7 +201,7 @@ INT_PTR
   
  如果`DoModal`傳回 IDOK，您可以呼叫其他成員函式來擷取設定或輸入 [使用者] 對話方塊的資訊。  
   
-##  <a name="a-namegetclassida--coleinsertdialoggetclassid"></a><a name="getclassid"></a>COleInsertDialog::GetClassID  
+##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
  呼叫此函式可取得**CLSID**與選取的項目只有當相關聯[DoModal](#domodal)傳回**IDOK**和選取項目型別是**COleInsertDialog::createNewItem**。  
   
 ```  
@@ -204,7 +214,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdrawaspecta--coleinsertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
  呼叫此函式可判斷使用者是否選擇選取的項目顯示為圖示。  
   
 ```  
@@ -223,7 +233,7 @@ DVASPECT GetDrawAspect() const;
   
  繪製層面的詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)資料結構中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegeticonicmetafilea--coleinsertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
  呼叫此函式可取得中繼檔，其中包含選取的項目圖示的層面的控制代碼。  
   
 ```  
@@ -233,7 +243,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>傳回值  
  如果是以圖示顯示核取方塊，其中包含選取的項目圖示的層面的中繼檔的控制代碼檢查時已藉由選擇關閉對話方塊**確定**，否則為**NULL**。  
   
-##  <a name="a-namegetpathnamea--coleinsertdialoggetpathname"></a><a name="getpathname"></a>COleInsertDialog::GetPathName  
+##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
  呼叫此函式可取得的完整路徑的所選的檔案才[DoModal](#domodal)傳回**IDOK**和選取項目類型不是**COleInsertDialog::createNewItem**。  
   
 ```  
@@ -243,7 +253,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>傳回值  
  在對話方塊中選取的檔案完整路徑。 如果選取項目型別是`createNewItem`，此函數會傳回沒有意義`CString`在發行模式中或在偵錯模式下引起判斷提示。  
   
-##  <a name="a-namegetselectiontypea--coleinsertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
  呼叫此函式可取得選取項目類型，選擇 [插入物件] 對話方塊中選擇時解除**確定**。  
   
 ```  
@@ -256,17 +266,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>備註  
  傳回型別值由**選取**中宣告列舉型別`COleInsertDialog`類別。  
   
- `enum Selection`  
-  
- `{`  
-  
- `createNewItem,`  
-  
- `insertFromFile,`  
-  
- `linkToFile`  
-  
- `};`  
+```  
+enum Selection {
+    createNewItem,
+    insertFromFile,
+    linkToFile
+    };  
+```  
   
  請依照下列這些值的簡短描述︰  
   
@@ -276,7 +282,7 @@ UINT GetSelectionType() const;
   
 - **COleInsertDialog::linkToFile**已選取 從檔案建立選項按鈕和 連結 核取方塊已勾選。  
   
-##  <a name="a-namemioa--coleinsertdialogmio"></a><a name="m_io"></a>COleInsertDialog::m_io  
+##  <a name="m_io"></a>COleInsertDialog::m_io  
  型別的結構**OLEUIINSERTOBJECT**可用來控制插入物件 對話方塊的行為。  
   
 ```  

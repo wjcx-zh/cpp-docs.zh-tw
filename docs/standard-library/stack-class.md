@@ -101,7 +101,7 @@ class stack
   
  **命名空間：** std  
   
-##  <a name="a-namestackcontainertypea--stackcontainertype"></a><a name="stack__container_type"></a>  stack::container_type  
+##  <a name="stack__container_type"></a>  stack::container_type  
  提供要配接之基底容器的類型。  
   
 ```  
@@ -116,7 +116,7 @@ typedef Container container_type;
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `container_type` 的範例，請參閱 [stack::stack](#stack__stack) 的範例。  
   
-##  <a name="a-namestackemptya--stackempty"></a><a name="stack__empty"></a>  stack::empty  
+##  <a name="stack__empty"></a>  stack::empty  
  測試堆疊是否為空。  
   
 ```  
@@ -159,7 +159,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="a-namestackpopa--stackpop"></a><a name="stack__pop"></a>  stack::pop  
+##  <a name="stack__pop"></a>  stack::pop  
  從堆疊頂端移除項目。  
   
 ```  
@@ -213,7 +213,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="a-namestackpusha--stackpush"></a><a name="stack__push"></a>  stack::push  
+##  <a name="stack__push"></a>  stack::push  
  將項目加入至堆疊的最上方結尾。  
   
 ```  
@@ -221,7 +221,7 @@ void push(const Type& val);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` val`  
+ `val`  
  加入至堆疊頂端的項目。  
   
 ### <a name="remarks"></a>備註  
@@ -259,7 +259,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="a-namestacksizea--stacksize"></a><a name="stack__size"></a>  stack::size  
+##  <a name="stack__size"></a>  stack::size  
  傳回堆疊中的項目數。  
   
 ```  
@@ -298,7 +298,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="a-namestacksizetypea--stacksizetype"></a><a name="stack__size_type"></a>  stack::size_type  
+##  <a name="stack__size_type"></a>  stack::size_type  
  不帶正負號的整數類型，可以表示堆疊中的項目數。  
   
 ```  
@@ -311,7 +311,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#stack__size) 的範例。  
   
-##  <a name="a-namestackstacka--stackstack"></a><a name="stack__stack"></a>  stack::stack  
+##  <a name="stack__stack"></a>  stack::stack  
  建構空的堆疊，或是基底容器類別複本的堆疊。  
   
 ```  
@@ -321,7 +321,7 @@ explicit stack(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  要從中複製所建構堆疊的容器。  
   
 ### <a name="example"></a>範例  
@@ -363,7 +363,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="a-namestacktopa--stacktop"></a><a name="stack__top"></a>  stack::top  
+##  <a name="stack__top"></a>  stack::top  
  傳回堆疊頂端項目的參考。  
   
 ```  
@@ -411,7 +411,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="a-namestackvaluetypea--stackvaluetype"></a><a name="stack__value_type"></a>  stack::value_type  
+##  <a name="stack__value_type"></a>  stack::value_type  
  一個類型，代表堆疊中儲存為項目的物件類型。  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMainPanel
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::Add
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddRecentFilesList
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToBottom
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::AddToRight
+- AFXRIBBONMAINPANEL/CMFCRibbonMainPanel::GetCommandsFrame
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +94,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 ## <a name="requirements"></a>需求  
  **標頭︰** afxRibbonMainPanel.h  
   
-##  <a name="a-nameadda--cmfcribbonmainpaneladd"></a><a name="add"></a>CMFCRibbonMainPanel::Add  
+##  <a name="add"></a>CMFCRibbonMainPanel::Add  
  將功能區項目加入至應用程式按鈕面板的左窗格中。  
   
 ```  
@@ -102,7 +108,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ### <a name="remarks"></a>備註  
  將功能區項目加入面板。 使用此方法加入的項目位於畫面左側的 主面板。  
   
-##  <a name="a-nameaddrecentfileslista--cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
+##  <a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
  將新的檔案清單 功能表上的文字字串。  
   
 ```  
@@ -120,7 +126,7 @@ void AddRecentFilesList(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameaddtobottoma--cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
+##  <a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
  將功能區項目加入至應用程式功能區面板的下方窗格中。  
   
 ```  
@@ -133,7 +139,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameaddtorighta--cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
+##  <a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
  將功能區項目加入至應用程式按鈕面板的右窗格中。  
   
 ```  
@@ -152,7 +158,7 @@ void AddToRight(
 ### <a name="remarks"></a>備註  
  將功能區項目新增至右側面板中使用此函式。 右側面板通常會顯示最近使用的檔案清單，但您可以新增任何其他功能區項目這裡。  
   
-##  <a name="a-namegetcommandsframea--cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
+##  <a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
  傳回表示區域的主要功能區面板的矩形。  
   
 ```  

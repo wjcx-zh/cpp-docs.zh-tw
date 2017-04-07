@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CException
+- AFX/CException
+- AFX/CException::CException
+- AFX/CException::Delete
+- AFX/CException::ReportError
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +117,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="a-namecexceptiona--cexceptioncexception"></a><a name="cexception"></a>CException::CException  
+##  <a name="cexception"></a>CException::CException  
  此成員函式建構`CException`物件。  
   
 ```  
@@ -127,7 +131,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>備註  
  您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生類別，並呼叫其建構函式，或它應該 MFC 使用其中一個擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 預先定義的型別會擲回。 本文件僅供完整性。  
   
-##  <a name="a-namedeletea--cexceptiondelete"></a><a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>CException::Delete  
  此函式會檢查是否要**CException**堆積上建立物件，如果是的話，它會呼叫**刪除**物件上的運算子。  
   
 ```  
@@ -191,7 +195,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="a-namereporterrora--cexceptionreporterror"></a><a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>CException::ReportError  
  在訊息方塊中，使用者呼叫此成員函式，來報告錯誤文字。  
   
 ```  

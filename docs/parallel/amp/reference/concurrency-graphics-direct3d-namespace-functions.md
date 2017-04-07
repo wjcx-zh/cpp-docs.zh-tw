@@ -6,24 +6,31 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp_graphics/Concurrency::graphics::direct3d::get_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_sampler
+- amp_graphics/Concurrency::graphics::direct3d::make_texture
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: aa7e91237eaa9ced297e2c5748359c23bb436df8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空間函式
 ||||  
 |-|-|-|  
-|[get_sampler 函式](#get_sampler)|[get_texture 函式](#get_texture)|[make_sampler 函式](#make_sampler)|  
-|[make_texture 函式](#make_texture)|[msad4 函式](#msad4)|  
-  
-##  <a name="a-namegetsamplera--getsampler-function"></a><a name="get_sampler"></a>get_sampler 函式  
+|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|  
+|[make_texture](#make_texture)|[msad4](#msad4)|  
+
+ 
+##  <a name="get_sampler"></a>get_sampler  
  Get D3D 取樣器狀態上的介面指定對應檢視，代表指定取樣器物件。  
   
 ```  
@@ -42,7 +49,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>傳回值  
  D3D 取樣器狀態，表示指定的取樣器相對應的 IUnknown 介面指標。  
   
-##  <a name="a-namegettexturea--gettexture-function"></a><a name="get_texture"></a>get_texture 函式  
+##  <a name="get_texture"></a>get_texture  
  取得指定基礎 Direct3D 紋理介面[紋理](texture-class.md)物件。  
   
 ```  
@@ -85,7 +92,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>傳回值  
  對應至基礎紋理 Direct3D 紋理 IUnknown 介面指標。  
   
-##  <a name="a-namemakesamplera--makesampler-function"></a><a name="make_sampler"></a>make_sampler 函式  
+##  <a name="make_sampler"></a>make_sampler  
  建立樣本中，從 D3D 取樣器狀態的介面指標。  
   
 ```  
@@ -99,7 +106,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  樣本中，代表提供的 D3D 取樣器狀態。  
   
-##  <a name="a-namemaketexturea--maketexture-function"></a><a name="make_texture"></a>make_texture 函式  
+##  <a name="make_texture"></a>make_texture  
  建立[紋理](texture-class.md)物件使用指定的參數。  
   
 ```  
@@ -132,7 +139,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>傳回值  
  使用提供的 D3D 紋理紋理。  
   
-##  <a name="a-namemsad4a--msad4-function"></a><a name="msad4"></a>msad4 函式  
+##  <a name="msad4"></a>msad4  
  將 4 位元組參考值取值並且 8 個位元組的來源值的比較，並累積 4 加總的向量。 每個總和會對應至不同位元組對齊的參考值取值並且來源值之間的絕對差異的遮罩的總和。  
   
 ```  
@@ -154,7 +161,12 @@ inline uint4 msad4(
   
 ### <a name="return-value"></a>傳回值  
  傳回 4 的加總的向量。 每個總和會對應至不同位元組對齊的參考值取值並且來源值之間的絕對差異的遮罩的總和。  
+
+## <a name="requirements"></a>需求  
+ **標頭︰** amp_graphics.h  
   
+ **命名空間︰** Concurrency::graphics::direct3d 
+
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics::direct3d 命名空間](concurrency-graphics-direct3d-namespace.md)
 

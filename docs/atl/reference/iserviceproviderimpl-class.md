@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl<T>
-- ATL.IServiceProviderImpl
-- ATL::IServiceProviderImpl
 - IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl
+- ATLCOM/ATL::IServiceProviderImpl::QueryService
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +81,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namequeryservicea--iserviceproviderimplqueryservice"></a><a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
  建立或存取指定的服務，並傳回服務的指定介面的介面指標。  
   
 ```

@@ -9,13 +9,71 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CPaneFrameWnd.Serialize
-- CPaneFrameWnd.PreTranslateMessage
 - CPaneFrameWnd
-- CPaneFrameWnd::Serialize
-- PreTranslateMessage
-- CPaneFrameWnd::PreTranslateMessage
-- Serialize
+- AFXPANEFRAMEWND/CPaneFrameWnd
+- AFXPANEFRAMEWND/CPaneFrameWnd::AddPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::AddRemovePaneFromGlobalList
+- AFXPANEFRAMEWND/CPaneFrameWnd::AdjustLayout
+- AFXPANEFRAMEWND/CPaneFrameWnd::AdjustPaneFrames
+- AFXPANEFRAMEWND/CPaneFrameWnd::CalcBorderSize
+- AFXPANEFRAMEWND/CPaneFrameWnd::CalcExpectedDockedRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::CanBeAttached
+- AFXPANEFRAMEWND/CPaneFrameWnd::CanBeDockedToPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::CheckGripperVisibility
+- AFXPANEFRAMEWND/CPaneFrameWnd::ConvertToTabbedDocument
+- AFXPANEFRAMEWND/CPaneFrameWnd::Create
+- AFXPANEFRAMEWND/CPaneFrameWnd::CreateEx
+- AFXPANEFRAMEWND/CPaneFrameWnd::DockPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::FindFloatingPaneByID
+- AFXPANEFRAMEWND/CPaneFrameWnd::FrameFromPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionHeight
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetCaptionText
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetDockingManager
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetDockingMode
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetFirstVisiblePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetHotPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPaneCount
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetParent
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetPinState
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetRecentFloatingRect
+- AFXPANEFRAMEWND/CPaneFrameWnd::GetVisiblePaneCount
+- AFXPANEFRAMEWND/CPaneFrameWnd::HitTest
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsCaptured
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsDelayShow
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsRollDown
+- AFXPANEFRAMEWND/CPaneFrameWnd::IsRollUp
+- AFXPANEFRAMEWND/CPaneFrameWnd::KillDockingTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::LoadState
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnBeforeDock
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnDockToRecentPos
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnKillRollUpTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnMovePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnPaneRecalcLayout
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnSetRollUpTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnShowPane
+- AFXPANEFRAMEWND/CPaneFrameWnd::PaneFromPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::Pin
+- AFXPANEFRAMEWND/CPaneFrameWnd::RedrawAll
+- AFXPANEFRAMEWND/CPaneFrameWnd::RemoveNonValidPanes
+- AFXPANEFRAMEWND/CPaneFrameWnd::RemovePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::ReplacePane
+- AFXPANEFRAMEWND/CPaneFrameWnd::SaveState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetCaptionButtons
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDelayShow
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockingManager
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockingTimer
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetDockState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetHotPoint
+- AFXPANEFRAMEWND/CPaneFrameWnd::SetPreDockState
+- AFXPANEFRAMEWND/CPaneFrameWnd::SizeToContent
+- AFXPANEFRAMEWND/CPaneFrameWnd::StartTearOff
+- AFXPANEFRAMEWND/CPaneFrameWnd::StoreRecentDockSiteInfo
+- AFXPANEFRAMEWND/CPaneFrameWnd::StoreRecentTabRelatedInfo
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnCheckRollState
+- AFXPANEFRAMEWND/CPaneFrameWnd::OnDrawBorder
+- AFXPANEFRAMEWND/CPaneFrameWnd::m_bUseSaveBits
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -162,7 +220,7 @@ class CPaneFrameWnd : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭︰** afxPaneFrameWnd.h  
   
-##  <a name="a-nameaddpanea--cpaneframewndaddpane"></a><a name="addpane"></a>CPaneFrameWnd::AddPane  
+##  <a name="addpane"></a>CPaneFrameWnd::AddPane  
  加入窗格。  
   
 ```  
@@ -173,7 +231,7 @@ virtual void AddPane(CBasePane* pWnd);
  [in] `pWnd`  
  若要新增窗格。  
   
-##  <a name="a-nameaddremovepanefromgloballista--cpaneframewndaddremovepanefromgloballist"></a><a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList  
+##  <a name="addremovepanefromgloballist"></a>CPaneFrameWnd::AddRemovePaneFromGlobalList  
  從全域清單中加入或移除窗格。  
   
 ```  
@@ -192,14 +250,14 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功則為非零否則為 0。  
   
-##  <a name="a-nameadjustlayouta--cpaneframewndadjustlayout"></a><a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout  
+##  <a name="adjustlayout"></a>CPaneFrameWnd::AdjustLayout  
  調整迷你框架視窗的配置。  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
-##  <a name="a-nameadjustpaneframesa--cpaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
+##  <a name="adjustpaneframes"></a>CPaneFrameWnd::AdjustPaneFrames  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -208,7 +266,7 @@ virtual void AdjustPaneFrames();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecalcbordersizea--cpaneframewndcalcbordersize"></a><a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize  
+##  <a name="calcbordersize"></a>CPaneFrameWnd::CalcBorderSize  
  計算自視窗框線的大小。  
   
 ```  
@@ -222,7 +280,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ### <a name="remarks"></a>備註  
  呼叫這個方法是由架構計算自視窗框線的大小。 傳回的大小取決於是否自視窗包含的工具列或[CDockablePane](../../mfc/reference/cdockablepane-class.md)。  
   
-##  <a name="a-namecalcexpecteddockedrecta--cpaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect  
+##  <a name="calcexpecteddockedrect"></a>CPaneFrameWnd::CalcExpectedDockedRect  
  計算預期的固定視窗矩形。  
   
 ```  
@@ -253,7 +311,7 @@ virtual void CalcExpectedDockedRect(
 ### <a name="remarks"></a>備註  
  這個方法會計算如果使用者拖曳到所指定的點的視窗，視窗會佔據的矩形`ptMouse`和那里其固定。  
   
-##  <a name="a-namecanbeattacheda--cpaneframewndcanbeattached"></a><a name="canbeattached"></a>CPaneFrameWnd::CanBeAttached  
+##  <a name="canbeattached"></a>CPaneFrameWnd::CanBeAttached  
  決定目前的窗格是否可以固定到另一個窗格或框架視窗。  
   
 ```  
@@ -263,7 +321,7 @@ virtual BOOL CanBeAttached() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果另一個窗格或框架視窗，停駐窗格，否則`FALSE`。  
   
-##  <a name="a-namecanbedockedtopanea--cpaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane  
+##  <a name="canbedockedtopane"></a>CPaneFrameWnd::CanBeDockedToPane  
  決定迷你框架視窗是否可以固定到窗格。  
   
 ```  
@@ -277,7 +335,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ### <a name="return-value"></a>傳回值  
  如果可以停駐迷你框架為非零`pDockingBar`，否則為 0。  
   
-##  <a name="a-namecheckgrippervisibilitya--cpaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
+##  <a name="checkgrippervisibility"></a>CPaneFrameWnd::CheckGripperVisibility  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -286,14 +344,14 @@ virtual void CheckGripperVisibility();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameconverttotabbeddocumenta--cpaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument  
+##  <a name="converttotabbeddocument"></a>CPaneFrameWnd::ConvertToTabbedDocument  
  將窗格轉換為索引標籤式文件。  
   
 ```  
 virtual void ConvertToTabbedDocument();
 ```  
   
-##  <a name="a-namecreatea--cpaneframewndcreate"></a><a name="create"></a>CPaneFrameWnd::Create  
+##  <a name="create"></a>CPaneFrameWnd::Create  
  建立自視窗，並將它附加[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)物件。  
   
 ```  
@@ -327,7 +385,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  自視窗會建立兩個步驟。 首先，架構就會建立`CPaneFrameWnd`物件。 第二，它會呼叫`Create`建立自視窗，並將其附加至`CPaneFrameWnd`物件。  
   
-##  <a name="a-namecreateexa--cpaneframewndcreateex"></a><a name="createex"></a>CPaneFrameWnd::CreateEx  
+##  <a name="createex"></a>CPaneFrameWnd::CreateEx  
  建立自視窗，並將它附加[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)物件。  
   
 ```  
@@ -365,7 +423,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  自視窗會建立兩個步驟。 首先，架構就會建立`CPaneFrameWnd`物件。 第二，它會呼叫`Create`建立自視窗，並將其附加至`CPaneFrameWnd`物件。  
   
-##  <a name="a-namedockpanea--cpaneframewnddockpane"></a><a name="dockpane"></a>CPaneFrameWnd::DockPane  
+##  <a name="dockpane"></a>CPaneFrameWnd::DockPane  
  固定窗格。  
   
 ```  
@@ -379,7 +437,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ### <a name="return-value"></a>傳回值  
  如果作業成功，`CDockablePane`窗格已停駐，否則`NULL`。  
   
-##  <a name="a-namefindfloatingpanebyida--cpaneframewndfindfloatingpanebyid"></a><a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID  
+##  <a name="findfloatingpanebyid"></a>CPaneFrameWnd::FindFloatingPaneByID  
  在浮動窗格的全域清單中尋找具有指定控制項 ID 的窗格。  
   
 ```  
@@ -393,7 +451,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ### <a name="return-value"></a>傳回值  
  窗格中，並指定的控制項 ID。否則， `NULL`，如果沒有窗格都有指定的控制項 id。  
   
-##  <a name="a-nameframefrompointa--cpaneframewndframefrompoint"></a><a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint  
+##  <a name="framefrompoint"></a>CPaneFrameWnd::FrameFromPoint  
  尋找包含指定的點的迷你框架視窗。  
   
 ```  
@@ -420,7 +478,7 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ### <a name="return-value"></a>傳回值  
  包含的迷你框架視窗的指標`pt`，否則為`NULL`。  
   
-##  <a name="a-namegetcaptionheighta--cpaneframewndgetcaptionheight"></a><a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>CPaneFrameWnd::GetCaptionHeight  
  傳回迷你框架視窗標題的高度。  
   
 ```  
@@ -433,7 +491,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="remarks"></a>備註  
  呼叫這個方法來決定的迷你框架視窗的高度。 根據預設，高度設定為`SM_CYSMCAPTION`。 如需詳細資訊，請參閱[GetSystemMetrics 函式](http://msdn.microsoft.com/library/windows/desktop/ms724385)。  
   
-##  <a name="a-namegetcaptionrecta--cpaneframewndgetcaptionrect"></a><a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect  
+##  <a name="getcaptionrect"></a>CPaneFrameWnd::GetCaptionRect  
  傳回迷你框架視窗標題的週框。  
   
 ```  
@@ -447,7 +505,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ### <a name="remarks"></a>備註  
  計算迷你框架視窗標題的周框矩形架構會呼叫這個方法。  
   
-##  <a name="a-namegetcaptiontexta--cpaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText  
+##  <a name="getcaptiontext"></a>CPaneFrameWnd::GetCaptionText  
  傳回標題文字。  
   
 ```  
@@ -460,7 +518,7 @@ virtual CString GetCaptionText();
 ### <a name="remarks"></a>備註  
  顯示的標題文字時，架構會呼叫這個方法。  
   
-##  <a name="a-namegetdockingmanagera--cpaneframewndgetdockingmanager"></a><a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
+##  <a name="getdockingmanager"></a>CPaneFrameWnd::GetDockingManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -471,7 +529,7 @@ CDockingManager* GetDockingManager() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetdockingmodea--cpaneframewndgetdockingmode"></a><a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode  
+##  <a name="getdockingmode"></a>CPaneFrameWnd::GetDockingMode  
  傳回固定模式。  
   
 ```  
@@ -487,7 +545,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
   
 - `DT_SMART`  
   
-##  <a name="a-namegetfirstvisiblepanea--cpaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane  
+##  <a name="getfirstvisiblepane"></a>CPaneFrameWnd::GetFirstVisiblePane  
  傳回包含在迷你框架視窗中的第一個可見窗格。  
   
 ```  
@@ -497,7 +555,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 ### <a name="return-value"></a>傳回值  
  在迷你框架視窗中，第一個窗格或`NULL`如果迷你框架視窗會不包含任何窗格。  
   
-##  <a name="a-namegethotpointa--cpaneframewndgethotpoint"></a><a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
+##  <a name="gethotpoint"></a>CPaneFrameWnd::GetHotPoint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -508,7 +566,7 @@ CPoint GetHotPoint() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpanea--cpaneframewndgetpane"></a><a name="getpane"></a>CPaneFrameWnd::GetPane  
+##  <a name="getpane"></a>CPaneFrameWnd::GetPane  
  傳回包含在迷你框架視窗中的窗格。  
   
 ```  
@@ -520,7 +578,7 @@ virtual CWnd* GetPane() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpanecounta--cpaneframewndgetpanecount"></a><a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount  
+##  <a name="getpanecount"></a>CPaneFrameWnd::GetPaneCount  
  傳回包含在迷你框架視窗中的窗格數目。  
   
 ```  
@@ -532,7 +590,7 @@ virtual int GetPaneCount() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetparenta--cpaneframewndgetparent"></a><a name="getparent"></a>CPaneFrameWnd::GetParent  
+##  <a name="getparent"></a>CPaneFrameWnd::GetParent  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -543,7 +601,7 @@ CWnd* GetParent();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpinstatea--cpaneframewndgetpinstate"></a><a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
+##  <a name="getpinstate"></a>CPaneFrameWnd::GetPinState  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -554,7 +612,7 @@ BOOL GetPinState() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetrecentfloatingrecta--cpaneframewndgetrecentfloatingrect"></a><a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
+##  <a name="getrecentfloatingrect"></a>CPaneFrameWnd::GetRecentFloatingRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -565,7 +623,7 @@ CRect GetRecentFloatingRect() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetvisiblepanecounta--cpaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount  
+##  <a name="getvisiblepanecount"></a>CPaneFrameWnd::GetVisiblePaneCount  
  傳回包含在迷你框架視窗中的可見窗格數目。  
   
 ```  
@@ -577,7 +635,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehittesta--cpaneframewndhittest"></a><a name="hittest"></a>CPaneFrameWnd::HitTest  
+##  <a name="hittest"></a>CPaneFrameWnd::HitTest  
  判斷迷你框架視窗的哪個部分位於給定的點上。  
   
 ```  
@@ -610,7 +668,7 @@ virtual LRESULT HitTest(
 |`HTBOTTOMLEFT`|重點是在左下方。|  
 |`HTBOTTOMRIGHT`|重點是在右下方。|  
   
-##  <a name="a-nameiscaptureda--cpaneframewndiscaptured"></a><a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
+##  <a name="iscaptured"></a>CPaneFrameWnd::IsCaptured  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -621,7 +679,7 @@ BOOL IsCaptured() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisdelayshowa--cpaneframewndisdelayshow"></a><a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
+##  <a name="isdelayshow"></a>CPaneFrameWnd::IsDelayShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -632,7 +690,7 @@ BOOL IsDelayShow() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisrolldowna--cpaneframewndisrolldown"></a><a name="isrolldown"></a>CPaneFrameWnd::IsRollDown  
+##  <a name="isrolldown"></a>CPaneFrameWnd::IsRollDown  
  決定是否應展開迷你框架視窗。  
   
 ```  
@@ -647,7 +705,7 @@ virtual BOOL IsRollDown() const;
   
  根據預設，架構會檢查是否將滑鼠指標位於迷你框架視窗周框矩形，若要判斷視窗是否具有向下復原。 您可以覆寫衍生類別中的這個行為。  
   
-##  <a name="a-nameisrollupa--cpaneframewndisrollup"></a><a name="isrollup"></a>CPaneFrameWnd::IsRollUp  
+##  <a name="isrollup"></a>CPaneFrameWnd::IsRollUp  
  決定是否應縮合迷你框架視窗。  
   
 ```  
@@ -662,14 +720,14 @@ virtual BOOL IsRollUp() const;
   
  根據預設，架構會檢查是否將滑鼠指標位於迷你框架視窗周框矩形，若要判斷視窗是否具有彙總。 您可以覆寫衍生類別中的這個行為。  
   
-##  <a name="a-namekilldockingtimera--cpaneframewndkilldockingtimer"></a><a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer  
+##  <a name="killdockingtimer"></a>CPaneFrameWnd::KillDockingTimer  
  停止固定計時器。  
   
 ```  
 void KillDockingTimer();
 ```  
   
-##  <a name="a-nameloadstatea--cpaneframewndloadstate"></a><a name="loadstate"></a>CPaneFrameWnd::LoadState  
+##  <a name="loadstate"></a>CPaneFrameWnd::LoadState  
  從登錄載入窗格的狀態。  
   
 ```  
@@ -688,7 +746,7 @@ virtual BOOL LoadState(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果已成功; 載入窗格狀態否則`FALSE`。  
   
-##  <a name="a-namembusesavebitsa--cpaneframewndmbusesavebits"></a><a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits  
+##  <a name="m_busesavebits"></a>CPaneFrameWnd::m_bUseSaveBits  
  指定是否要註冊視窗類別具有`CS_SAVEBITS`類別樣式。  
   
 ```  
@@ -698,7 +756,7 @@ AFX_IMPORT_DATA static BOOL m_bUseSaveBits;
 ### <a name="remarks"></a>備註  
  這個靜態成員設定為`TRUE`登錄具有迷你框架視窗類別`CS_SAVEBITS`樣式。 這可能有助於減少當使用者拖曳的迷你框架視窗閃爍。  
   
-##  <a name="a-nameonbeforedocka--cpaneframewndonbeforedock"></a><a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock  
+##  <a name="onbeforedock"></a>CPaneFrameWnd::OnBeforeDock  
  判斷是否可固定。  
   
 ```  
@@ -708,7 +766,7 @@ virtual BOOL OnBeforeDock();
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果可行，停駐否則， `FALSE`。  
   
-##  <a name="a-nameoncheckrollstatea--cpaneframewndoncheckrollstate"></a><a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState  
+##  <a name="oncheckrollstate"></a>CPaneFrameWnd::OnCheckRollState  
  決定應縮合還是展開迷你框架視窗。  
   
 ```  
@@ -720,14 +778,14 @@ virtual void OnCheckRollState();
   
  根據預設，架構會呼叫[CPaneFrameWnd::IsRollUp](#isrollup)和[CPaneFrameWnd::IsRollDown](#isrolldown)只是延伸或迷你框架視窗會還原。 您可以覆寫這個方法在衍生類別使用不同的視覺效果中。  
   
-##  <a name="a-nameondocktorecentposa--cpaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>CPaneFrameWnd::OnDockToRecentPos  
+##  <a name="ondocktorecentpos"></a>CPaneFrameWnd::OnDockToRecentPos  
  將迷你框架視窗固定在其最近的位置上。  
   
 ```  
 virtual void OnDockToRecentPos();
 ```  
   
-##  <a name="a-nameondrawbordera--cpaneframewndondrawborder"></a><a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder  
+##  <a name="ondrawborder"></a>CPaneFrameWnd::OnDrawBorder  
  繪製迷你框架視窗的框線。  
   
 ```  
@@ -741,14 +799,14 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="remarks"></a>備註  
  要繪製的迷你框架視窗框線架構會呼叫這個方法。  
   
-##  <a name="a-nameonkillrolluptimera--cpaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer  
+##  <a name="onkillrolluptimer"></a>CPaneFrameWnd::OnKillRollUpTimer  
  停止彙總計時器。  
   
 ```  
 virtual void OnKillRollUpTimer();
 ```  
   
-##  <a name="a-nameonmovepanea--cpaneframewndonmovepane"></a><a name="onmovepane"></a>CPaneFrameWnd::OnMovePane  
+##  <a name="onmovepane"></a>CPaneFrameWnd::OnMovePane  
  以指定的位移移動迷你框架視窗。  
   
 ```  
@@ -764,7 +822,7 @@ virtual void OnMovePane(
  [in] `ptOffset`  
  用來將窗格位移。  
   
-##  <a name="a-nameonpanerecalclayouta--cpaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout  
+##  <a name="onpanerecalclayout"></a>CPaneFrameWnd::OnPaneRecalcLayout  
  調整窗格的迷你框架視窗內的版面配置。  
   
 ```  
@@ -776,14 +834,14 @@ virtual void OnPaneRecalcLayout();
   
  根據預設，[] 窗格位於涵蓋完整的工作區的迷你框架視窗。  
   
-##  <a name="a-nameonsetrolluptimera--cpaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer  
+##  <a name="onsetrolluptimer"></a>CPaneFrameWnd::OnSetRollUpTimer  
  設定彙總計時器。  
   
 ```  
 virtual void OnSetRollUpTimer();
 ```  
   
-##  <a name="a-nameonshowpanea--cpaneframewndonshowpane"></a><a name="onshowpane"></a>CPaneFrameWnd::OnShowPane  
+##  <a name="onshowpane"></a>CPaneFrameWnd::OnShowPane  
  在隱藏或顯示迷你框架視窗中的窗格時，由架構呼叫。  
   
 ```  
@@ -802,7 +860,7 @@ virtual void OnShowPane(
 ### <a name="remarks"></a>備註  
  在迷你框架視窗中的窗格會顯示或隱藏時呼叫架構。 預設實作不做任何動作。  
   
-##  <a name="a-namepina--cpaneframewndpin"></a><a name="pin"></a>CPaneFrameWnd::Pin  
+##  <a name="pin"></a>CPaneFrameWnd::Pin  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -814,7 +872,7 @@ void Pin(BOOL bPin = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namepanefrompointa--cpaneframewndpanefrompoint"></a><a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint  
+##  <a name="panefrompoint"></a>CPaneFrameWnd::PaneFromPoint  
  如果在迷你框架視窗內包含使用者提供的點，則會傳回一個窗格。  
   
 ```  
@@ -840,7 +898,7 @@ virtual CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>備註  
  呼叫此方法來取得包含指定的點的窗格。  
   
-##  <a name="a-nameredrawalla--cpaneframewndredrawall"></a><a name="redrawall"></a>CPaneFrameWnd::RedrawAll  
+##  <a name="redrawall"></a>CPaneFrameWnd::RedrawAll  
  重新繪製所有的迷你框架視窗。  
   
 ```  
@@ -850,14 +908,14 @@ static void RedrawAll();
 ### <a name="remarks"></a>備註  
  這個方法會更新所有的迷你框架視窗呼叫[CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)針對每個視窗。  
   
-##  <a name="a-nameremovenonvalidpanesa--cpaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes  
+##  <a name="removenonvalidpanes"></a>CPaneFrameWnd::RemoveNonValidPanes  
  由架構呼叫以移除無效窗格。  
   
 ```  
 virtual void RemoveNonValidPanes();
 ```  
   
-##  <a name="a-nameremovepanea--cpaneframewndremovepane"></a><a name="removepane"></a>CPaneFrameWnd::RemovePane  
+##  <a name="removepane"></a>CPaneFrameWnd::RemovePane  
  從迷你框架視窗中移除窗格。  
   
 ```  
@@ -880,7 +938,7 @@ virtual void RemovePane(
 ### <a name="remarks"></a>備註  
  立即或在特定的延遲之後，架構可以終結迷你框架視窗。 如果您想要延遲的迷你框架視窗的解構函式，傳遞`FALSE`中`bNoDelayedDestroy`參數。 Framework 處理序時，就會發生延遲的解構`AFX_WM_CHECKEMPTYMINIFRAME`訊息。  
   
-##  <a name="a-namereplacepanea--cpaneframewndreplacepane"></a><a name="replacepane"></a>CPaneFrameWnd::ReplacePane  
+##  <a name="replacepane"></a>CPaneFrameWnd::ReplacePane  
  以一個窗格取代另一個。  
   
 ```  
@@ -896,7 +954,7 @@ virtual void ReplacePane(
  [in] `pBarReplaceWith`  
  指標，會取代原始窗格的窗格。  
   
-##  <a name="a-namesavestatea--cpaneframewndsavestate"></a><a name="savestate"></a>CPaneFrameWnd::SaveState  
+##  <a name="savestate"></a>CPaneFrameWnd::SaveState  
  將窗格的狀態儲存至登錄。  
   
 ```  
@@ -915,7 +973,7 @@ virtual BOOL SaveState(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果窗格狀態已經順利完成。否則`FALSE`。  
   
-##  <a name="a-namesetcaptionbuttonsa--cpaneframewndsetcaptionbuttons"></a><a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons  
+##  <a name="setcaptionbuttons"></a>CPaneFrameWnd::SetCaptionButtons  
  動作標題按鈕。  
   
 ```  
@@ -934,7 +992,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
   
 - `AFX_CAPTION_BTN_CUSTOMIZE`  
   
-##  <a name="a-namesetdelayshowa--cpaneframewndsetdelayshow"></a><a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
+##  <a name="setdelayshow"></a>CPaneFrameWnd::SetDelayShow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -946,7 +1004,7 @@ void SetDelayShow(BOOL bDelayShow);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetdockingmanagera--cpaneframewndsetdockingmanager"></a><a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
+##  <a name="setdockingmanager"></a>CPaneFrameWnd::SetDockingManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -958,7 +1016,7 @@ void SetDockingManager(CDockingManager* pManager);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetdockingtimera--cpaneframewndsetdockingtimer"></a><a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer  
+##  <a name="setdockingtimer"></a>CPaneFrameWnd::SetDockingTimer  
  設定固定計時器。  
   
 ```  
@@ -969,7 +1027,7 @@ void SetDockingTimer(UINT nTimeOut);
  [in] `nTimeOut`  
  逾時值以毫秒為單位。  
   
-##  <a name="a-namesetdockstatea--cpaneframewndsetdockstate"></a><a name="setdockstate"></a>CPaneFrameWnd::SetDockState  
+##  <a name="setdockstate"></a>CPaneFrameWnd::SetDockState  
  設定固定狀態。  
   
 ```  
@@ -980,7 +1038,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
  [in] `pDockManager`  
  停駐 manager 指標。  
   
-##  <a name="a-namesethotpointa--cpaneframewndsethotpoint"></a><a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
+##  <a name="sethotpoint"></a>CPaneFrameWnd::SetHotPoint  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -992,7 +1050,7 @@ void SetHotPoint(CPoint& ptNew);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetpredockstatea--cpaneframewndsetpredockstate"></a><a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState  
+##  <a name="setpredockstate"></a>CPaneFrameWnd::SetPreDockState  
  由架構呼叫以設定預先固定狀態。  
   
 ```  
@@ -1021,7 +1079,7 @@ virtual BOOL SetPreDockState(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果迷你框架視窗是卸除。`FALSE`如果停駐。  
   
-##  <a name="a-namesizetocontenta--cpaneframewndsizetocontent"></a><a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent  
+##  <a name="sizetocontent"></a>CPaneFrameWnd::SizeToContent  
  調整的迷你框架視窗的大小，使它相當於所包含的窗格。  
   
 ```  
@@ -1031,7 +1089,7 @@ virtual void SizeToContent();
 ### <a name="remarks"></a>備註  
  呼叫這個方法，以調整大小的迷你框架視窗包含窗格的大小。  
   
-##  <a name="a-namestarttearoffa--cpaneframewndstarttearoff"></a><a name="starttearoff"></a>CPaneFrameWnd::StartTearOff  
+##  <a name="starttearoff"></a>CPaneFrameWnd::StartTearOff  
  清除功能表。  
   
 ```  
@@ -1045,7 +1103,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ### <a name="return-value"></a>傳回值  
  如果該方法成功則為 `TRUE`；否則為 `FALSE`。  
   
-##  <a name="a-namestorerecentdocksiteinfoa--cpaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
+##  <a name="storerecentdocksiteinfo"></a>CPaneFrameWnd::StoreRecentDockSiteInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -1057,7 +1115,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namestorerecenttabrelatedinfoa--cpaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
+##  <a name="storerecenttabrelatedinfo"></a>CPaneFrameWnd::StoreRecentTabRelatedInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

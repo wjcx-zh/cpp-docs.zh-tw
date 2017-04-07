@@ -10,8 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDateTime
-- ATL.COleDateTime
-- ATL::COleDateTime
+- ATLCOMTIME/ATL::COleDateTime
+- ATLCOMTIME/ATL::COleDateTime::COleDateTime
+- ATLCOMTIME/ATL::COleDateTime::Format
+- ATLCOMTIME/ATL::COleDateTime::GetAsDBTIMESTAMP
+- ATLCOMTIME/ATL::COleDateTime::GetAsSystemTime
+- ATLCOMTIME/ATL::COleDateTime::GetAsUDATE
+- ATLCOMTIME/ATL::COleDateTime::GetCurrentTime
+- ATLCOMTIME/ATL::COleDateTime::GetDay
+- ATLCOMTIME/ATL::COleDateTime::GetDayOfWeek
+- ATLCOMTIME/ATL::COleDateTime::GetDayOfYear
+- ATLCOMTIME/ATL::COleDateTime::GetHour
+- ATLCOMTIME/ATL::COleDateTime::GetMinute
+- ATLCOMTIME/ATL::COleDateTime::GetMonth
+- ATLCOMTIME/ATL::COleDateTime::GetSecond
+- ATLCOMTIME/ATL::COleDateTime::GetStatus
+- ATLCOMTIME/ATL::COleDateTime::GetYear
+- ATLCOMTIME/ATL::COleDateTime::ParseDateTime
+- ATLCOMTIME/ATL::COleDateTime::SetDate
+- ATLCOMTIME/ATL::COleDateTime::SetDateTime
+- ATLCOMTIME/ATL::COleDateTime::SetStatus
+- ATLCOMTIME/ATL::COleDateTime::SetTime
+- ATLCOMTIME/ATL::COleDateTime::m_dt
+- ATLCOMTIME/ATL::COleDateTime::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -142,7 +163,7 @@ class COleDateTime
 ## <a name="requirements"></a>需求  
  **標頭︰** ATLComTime.h  
   
-##  <a name="a-namecoledatetimerelationaloperatorsa--coledatetime-relational-operators"></a><a name="coledatetime_relational_operators"></a>COleDateTime 關係運算子  
+##  <a name="coledatetime_relational_operators"></a>COleDateTime 關係運算子  
  比較運算子。  
   
 ```
@@ -171,7 +192,7 @@ bool operator>=(const COleDateTime& date) const throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities #&170;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]  
   
-##  <a name="a-namecoledatetimea--coledatetimecoledatetime"></a><a name="coledatetime"></a>COleDateTime::COleDateTime  
+##  <a name="coledatetime"></a>COleDateTime::COleDateTime  
  建構 `COleDateTime` 物件。  
   
 ```
@@ -269,7 +290,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&2;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_4.cpp)]  
   
-##  <a name="a-nameformata--coledatetimeformat"></a><a name="format"></a>COleDateTime::Format  
+##  <a name="format"></a>COleDateTime::Format  
  建立日期/時間值的格式的表示。  
   
 ```
@@ -325,7 +346,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&3;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_5.cpp)]  
   
-##  <a name="a-namegetasdbtimestampa--coledatetimegetasdbtimestamp"></a><a name="getasdbtimestamp"></a>COleDateTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>COleDateTime::GetAsDBTIMESTAMP  
  呼叫這個方法來取得在時間`COleDateTime`物件做為**DBTIMESTAMP**資料結構。  
   
 ```
@@ -345,7 +366,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&4;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_6.cpp)]  
   
-##  <a name="a-namegetassystemtimea--coledatetimegetassystemtime"></a><a name="getassystemtime"></a>COleDateTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>COleDateTime::GetAsSystemTime  
  呼叫這個方法來取得在時間`COleDateTime`物件做為`SYSTEMTIME`資料結構。  
   
 ```
@@ -364,7 +385,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
   
  請參閱[GetStatus](#getstatus)的詳細資訊的狀態資訊保留在`COleDateTime`物件。  
   
-##  <a name="a-namegetasudatea--coledatetimegetasudate"></a><a name="getasudate"></a>COleDateTime::GetAsUDATE  
+##  <a name="getasudate"></a>COleDateTime::GetAsUDATE  
  呼叫這個方法來取得在時間`COleDateTime`物件做為**UDATE**資料結構。  
   
 ```
@@ -381,7 +402,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 ### <a name="remarks"></a>備註  
  A **UDATE**結構代表 「 打開 」 日期。  
   
-##  <a name="a-namegetcurrenttimea--coledatetimegetcurrenttime"></a><a name="getcurrenttime"></a>COleDateTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>COleDateTime::GetCurrentTime  
  呼叫此靜態成員函式會傳回目前日期/時間值。  
   
 ```
@@ -391,7 +412,7 @@ static COleDateTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&5;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_7.cpp)]  
   
-##  <a name="a-namegetdaya--coledatetimegetday"></a><a name="getday"></a>COleDateTime::GetDay  
+##  <a name="getday"></a>COleDateTime::GetDay  
  取得此日期/時間值所表示的月份天數。  
   
 ```
@@ -423,7 +444,7 @@ int GetDay() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&6;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_8.cpp)]  
   
-##  <a name="a-namegetdayofweeka--coledatetimegetdayofweek"></a><a name="getdayofweek"></a>COleDateTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>COleDateTime::GetDayOfWeek  
  取得此日期/時間值所表示的月份天數。  
   
 ```
@@ -455,7 +476,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&7;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_9.cpp)]  
   
-##  <a name="a-namegetdayofyeara--coledatetimegetdayofyear"></a><a name="getdayofyear"></a>COleDateTime::GetDayOfYear  
+##  <a name="getdayofyear"></a>COleDateTime::GetDayOfYear  
  取得此日期/時間值所表示的年份的日期。  
   
 ```
@@ -487,7 +508,7 @@ int GetDayOfYear() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&8;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_10.cpp)]  
   
-##  <a name="a-namegethoura--coledatetimegethour"></a><a name="gethour"></a>COleDateTime::GetHour  
+##  <a name="gethour"></a>COleDateTime::GetHour  
  取得此日期/時間值所表示的小時。  
   
 ```
@@ -519,7 +540,7 @@ int GetHour() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&9;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_11.cpp)]  
   
-##  <a name="a-namegetminutea--coledatetimegetminute"></a><a name="getminute"></a>COleDateTime::GetMinute  
+##  <a name="getminute"></a>COleDateTime::GetMinute  
  取得此日期/時間值所表示分鐘。  
   
 ```
@@ -551,7 +572,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[GetHour](#gethour)。  
   
-##  <a name="a-namegetmontha--coledatetimegetmonth"></a><a name="getmonth"></a>COleDateTime::GetMonth  
+##  <a name="getmonth"></a>COleDateTime::GetMonth  
  取得此日期/時間值所表示的月份。  
   
 ```
@@ -583,7 +604,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[GetDay](#getday)。  
   
-##  <a name="a-namegetseconda--coledatetimegetsecond"></a><a name="getsecond"></a>COleDateTime::GetSecond  
+##  <a name="getsecond"></a>COleDateTime::GetSecond  
  取得此日期/時間值所表示的第二個。  
   
 ```
@@ -620,7 +641,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[GetHour](#gethour)。  
   
-##  <a name="a-namegetstatusa--coledatetimegetstatus"></a><a name="getstatus"></a>COleDateTime::GetStatus  
+##  <a name="getstatus"></a>COleDateTime::GetStatus  
  取得狀態 （有效性） 指定`COleDateTime`物件。  
   
 ```
@@ -686,7 +707,7 @@ DateTimeStatus GetStatus() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&10;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_12.cpp)]  
   
-##  <a name="a-namegetyeara--coledatetimegetyear"></a><a name="getyear"></a>COleDateTime::GetYear  
+##  <a name="getyear"></a>COleDateTime::GetYear  
  取得此日期/時間值所表示的年份。  
   
 ```
@@ -720,7 +741,7 @@ int GetYear() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[GetDay](#getday)。  
   
-##  <a name="a-namemdta--coledatetimemdt"></a><a name="m_dt"></a>COleDateTime::m_dt  
+##  <a name="m_dt"></a>COleDateTime::m_dt  
  基礎**日期**這個結構`COleDateTime`物件。  
   
 ```
@@ -734,7 +755,7 @@ DATE m_dt;
   
  如需有關實作**日期**物件，請參閱文章[日期和時間︰ 自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="a-namemstatusa--coledatetimemstatus"></a><a name="m_status"></a>COleDateTime::m_status  
+##  <a name="m_status"></a>COleDateTime::m_status  
  包含這個狀態`COleDateTime`物件。  
   
 ```
@@ -747,7 +768,7 @@ DateTimeStatus m_status;
 > [!CAUTION]
 >  此資料成員是進階程式設計的情況下。 您應該使用內嵌成員函式[GetStatus](#getstatus)和[SetStatus](#setstatus)。 請參閱`SetStatus`的其他注意事項，關於明確設定此資料成員。  
   
-##  <a name="a-nameoperatoreqa--coledatetimeoperator-"></a><a name="operator_eq"></a>COleDateTime::operator =  
+##  <a name="operator_eq"></a>COleDateTime::operator =  
  複製`COleDateTime`值。  
   
 ```
@@ -785,7 +806,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
   
  如需有關界限`COleDateTime`值，請參閱文章[日期和時間︰ 自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="a-nameoperatoradd-a--coledatetimeoperator---"></a><a name="operator_add_-"></a>COleDateTime::operator +、-  
+##  <a name="operator_add_-"></a>COleDateTime::operator +、-  
  加號和減號運算子**ColeDateTime**值。  
   
 ```
@@ -812,7 +833,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&12;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_13.cpp)]  
   
-##  <a name="a-nameoperatoraddeq-eqa--coledatetimeoperator---"></a><a name="operator_add_eq_-_eq"></a>COleDateTime::operator + =、 =  
+##  <a name="operator_add_eq_-_eq"></a>COleDateTime::operator + =、 =  
  加號和減號運算子**ColeDateTime**值從這個`COleDateTime`物件。  
   
 ```
@@ -833,7 +854,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
   
  如需有關界限`COleDateTime`值，請參閱文章[日期和時間︰ 自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="a-nameoperatordatea--coledatetimeoperator-date"></a><a name="operator_date"></a>COleDateTime::operator 日期  
+##  <a name="operator_date"></a>COleDateTime::operator 日期  
  將轉換**ColeDateTime**值**日期**。  
   
 ```
@@ -845,7 +866,7 @@ operator DATE() const throw();
   
  **日期**運算子會判斷提示，如果`COleDateTime`物件設為 null。 請參閱[COleDateTime 關係運算子](#coledatetime_relational_operators)範例。  
   
-##  <a name="a-nameparsedatetimea--coledatetimeparsedatetime"></a><a name="parsedatetime"></a>COleDateTime::ParseDateTime  
+##  <a name="parsedatetime"></a>COleDateTime::ParseDateTime  
  剖析為日期/時間值的字串。  
   
 ```
@@ -904,7 +925,7 @@ bool ParseDateTime(
   
  如需有關繫結和實作`COleDateTime`值，請參閱文章[日期和時間︰ 自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-##  <a name="a-namesetdatea--coledatetimesetdate"></a><a name="setdate"></a>COleDateTime::SetDate  
+##  <a name="setdate"></a>COleDateTime::SetDate  
  設定的日期`COleDateTime`物件。  
   
 ```
@@ -970,7 +991,7 @@ int SetDate(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&11;](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_14.cpp)]  
   
-##  <a name="a-namesetdatetimea--coledatetimesetdatetime"></a><a name="setdatetime"></a>COleDateTime::SetDateTime  
+##  <a name="setdatetime"></a>COleDateTime::SetDateTime  
  設定日期和時間的`COleDateTime`物件。  
   
 ```
@@ -1049,7 +1070,7 @@ int SetDateTime(
 ### <a name="example"></a>範例  
  請參閱範例[GetStatus](#getstatus)。  
   
-##  <a name="a-namesetstatusa--coledatetimesetstatus"></a><a name="setstatus"></a>COleDateTime::SetStatus  
+##  <a name="setstatus"></a>COleDateTime::SetStatus  
  設定的狀態`COleDateTime`物件。  
   
 ```
@@ -1069,7 +1090,7 @@ void SetStatus(DateTimeStatus status) throw();
 ### <a name="example"></a>範例  
  請參閱範例[GetStatus](#getstatus)。  
   
-##  <a name="a-namesettimea--coledatetimesettime"></a><a name="settime"></a>COleDateTime::SetTime  
+##  <a name="settime"></a>COleDateTime::SetTime  
  設定的時間`COleDateTime`物件。  
   
 ```

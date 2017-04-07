@@ -10,8 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
-- ATL.IEnumOnSTLImpl
-- ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl
+- ATLCOM/ATL::IEnumOnSTLImpl::Clone
+- ATLCOM/ATL::IEnumOnSTLImpl::Init
+- ATLCOM/ATL::IEnumOnSTLImpl::Next
+- ATLCOM/ATL::IEnumOnSTLImpl::Reset
+- ATLCOM/ATL::IEnumOnSTLImpl::Skip
+- ATLCOM/ATL::IEnumOnSTLImpl::m_iter
+- ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
+- ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +113,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameinita--ienumonstlimplinit"></a><a name="init"></a>IEnumOnSTLImpl::Init  
+##  <a name="init"></a>IEnumOnSTLImpl::Init  
  初始化列舉值。  
   
 ```
@@ -130,7 +137,7 @@ HRESULT Init(
   
  您必須呼叫這個方法之前將指標傳遞給任何用戶端的列舉程式介面。  
   
-##  <a name="a-nameclonea--ienumonstlimplclone"></a><a name="clone"></a>IEnumOnSTLImpl::Clone  
+##  <a name="clone"></a>IEnumOnSTLImpl::Clone  
  這個方法提供實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法藉由建立型別的物件`CComEnumOnSTL`，初始化具有相同的集合和迭代器使用目前的物件，並傳回新建立的物件上的介面。  
   
 ```
@@ -144,7 +151,7 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namemspunka--ienumonstlimplmspunk"></a><a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
+##  <a name="m_spunk"></a>IEnumOnSTLImpl::m_spUnk  
  **IUnknown**提供集合物件的指標。  
   
 ```
@@ -154,7 +161,7 @@ CComPtr<IUnknown> m_spUnk;
 ### <a name="remarks"></a>備註  
  這個智慧型指標會維持物件傳遞至參考[IEnumOnSTLImpl::Init](#init)，確保它運作的列舉值的存留期間。  
   
-##  <a name="a-namempcollectiona--ienumonstlimplmpcollection"></a><a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
+##  <a name="m_pcollection"></a>IEnumOnSTLImpl::m_pcollection  
  這個成員會指向提供資料驅動型的列舉值介面實作的集合。  
   
 ```
@@ -164,14 +171,14 @@ CollType* m_pcollection;
 ### <a name="remarks"></a>備註  
  這個成員由呼叫初始化[IEnumOnSTLImpl::Init](#init)。  
   
-##  <a name="a-namemitera--ienumonstlimplmiter"></a><a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
+##  <a name="m_iter"></a>IEnumOnSTLImpl::m_iter  
  這個成員會保留用來標示集合中目前的位置，並瀏覽至後續元素的迭代器。  
   
 ```
 CollType::iterator m_iter;
 ```  
   
-##  <a name="a-namenexta--ienumonstlimplnext"></a><a name="next"></a>IEnumOnSTLImpl::Next  
+##  <a name="next"></a>IEnumOnSTLImpl::Next  
  這個方法提供實作[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
   
 ```
@@ -194,7 +201,7 @@ STDMETHOD(Next)(
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namereseta--ienumonstlimplreset"></a><a name="reset"></a>IEnumOnSTLImpl::Reset  
+##  <a name="reset"></a>IEnumOnSTLImpl::Reset  
  這個方法提供實作[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
   
 ```
@@ -204,7 +211,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-nameskipa--ienumonstlimplskip"></a><a name="skip"></a>IEnumOnSTLImpl::Skip  
+##  <a name="skip"></a>IEnumOnSTLImpl::Skip  
  這個方法提供實作[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
   
 ```

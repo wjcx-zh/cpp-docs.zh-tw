@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CObject
+- AFX/CObject
+- AFX/CObject::CObject
+- AFX/CObject::AssertValid
+- AFX/CObject::Dump
+- AFX/CObject::GetRuntimeClass
+- AFX/CObject::IsKindOf
+- AFX/CObject::IsSerializable
+- AFX/CObject::Serialize
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +112,7 @@ class AFX_NOVTABLE CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="a-nameassertvalida--cobjectassertvalid"></a><a name="assertvalid"></a>CObject::AssertValid  
+##  <a name="assertvalid"></a>CObject::AssertValid  
  會驗證此物件的完整性。  
   
 ```  
@@ -127,7 +135,7 @@ virtual void AssertValid() const;
   
  如需其他範例，請參閱[AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)。  
   
-##  <a name="a-namecobjecta--cobjectcobject"></a><a name="cobject"></a>CObject::CObject  
+##  <a name="cobject"></a>CObject::CObject  
  這些函式是標準`CObject`建構函式。  
   
 ```  
@@ -151,7 +159,7 @@ CObject(const CObject& objectSrc);
   
  [!code-cpp[NVC_MFCCObjectSample #&8;](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]  
   
-##  <a name="a-namedumpa--cobjectdump"></a><a name="dump"></a>CObject::Dump  
+##  <a name="dump"></a>CObject::Dump  
  您的物件內容傾印[CDumpContext](../../mfc/reference/cdumpcontext-class.md)物件。  
   
 ```  
@@ -181,7 +189,7 @@ virtual void Dump(CDumpContext& dc) const;
   
  [!code-cpp[NVC_MFCCObjectSample #&9;](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]  
   
-##  <a name="a-namegetruntimeclassa--cobjectgetruntimeclass"></a><a name="getruntimeclass"></a>CObject::GetRuntimeClass  
+##  <a name="getruntimeclass"></a>CObject::GetRuntimeClass  
  傳回`CRuntimeClass`對應到此物件的類別結構。  
   
 ```  
@@ -213,7 +221,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
  [!code-cpp[NVC_MFCCObjectSample #&10;](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]  
   
-##  <a name="a-nameiskindofa--cobjectiskindof"></a><a name="iskindof"></a>Cobject:: Iskindof  
+##  <a name="iskindof"></a>Cobject:: Iskindof  
  測試指定類別的物件的關聯性。  
   
 ```  
@@ -237,7 +245,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
   
  [!code-cpp[NVC_MFCCObjectSample #&11;](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]  
   
-##  <a name="a-nameisserializablea--cobjectisserializable"></a><a name="isserializable"></a>CObject::IsSerializable  
+##  <a name="isserializable"></a>CObject::IsSerializable  
  測試是否此物件會進行序列化。  
   
 ```  
@@ -258,7 +266,7 @@ BOOL IsSerializable() const;
   
  [!code-cpp[NVC_MFCCObjectSample #&12;](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]  
   
-##  <a name="a-nameoperatordeletea--cobjectoperator-delete"></a><a name="operator_delete"></a>CObject::operator 刪除  
+##  <a name="operator_delete"></a>CObject::operator 刪除  
  發行版本的程式庫中，運算子**刪除**釋放運算子所配置的記憶體**新**。  
   
 ```  
@@ -294,7 +302,7 @@ void PASCAL operator delete(
   
  [!code-cpp[NVC_MFCCObjectSample #&15;](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]  
   
-##  <a name="a-nameoperatornewa--cobjectoperator-new"></a><a name="operator_new"></a>新 CObject::operator  
+##  <a name="operator_new"></a>新 CObject::operator  
  發行版本的程式庫中，運算子**新**執行最佳的記憶體配置方式類似`malloc`。  
   
 ```  
@@ -327,7 +335,7 @@ void* PASCAL operator new(
   
  [!code-cpp[NVC_MFCCObjectSample #&16;](../../mfc/codesnippet/cpp/cobject-class_9.h)]  
   
-##  <a name="a-nameserializea--cobjectserialize"></a><a name="serialize"></a>CObject::Serialize  
+##  <a name="serialize"></a>CObject::Serialize  
  從封存中讀取或寫入此物件。  
   
 ```  

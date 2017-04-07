@@ -10,6 +10,40 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCStatusBar
+- AFXSTATUSBAR/CMFCStatusBar
+- AFXSTATUSBAR/CMFCStatusBar::CalcFixedLayout
+- AFXSTATUSBAR/CMFCStatusBar::CommandToIndex
+- AFXSTATUSBAR/CMFCStatusBar::Create
+- AFXSTATUSBAR/CMFCStatusBar::CreateEx
+- AFXSTATUSBAR/CMFCStatusBar::DoesAllowDynInsertBefore
+- AFXSTATUSBAR/CMFCStatusBar::EnablePaneDoubleClick
+- AFXSTATUSBAR/CMFCStatusBar::EnablePaneProgressBar
+- AFXSTATUSBAR/CMFCStatusBar::GetCount
+- AFXSTATUSBAR/CMFCStatusBar::GetDrawExtendedArea
+- AFXSTATUSBAR/CMFCStatusBar::GetExtendedArea
+- AFXSTATUSBAR/CMFCStatusBar::GetItemID
+- AFXSTATUSBAR/CMFCStatusBar::GetItemRect
+- AFXSTATUSBAR/CMFCStatusBar::GetPaneInfo
+- AFXSTATUSBAR/CMFCStatusBar::GetPaneProgress
+- AFXSTATUSBAR/CMFCStatusBar::GetPaneStyle
+- AFXSTATUSBAR/CMFCStatusBar::GetPaneText
+- AFXSTATUSBAR/CMFCStatusBar::GetPaneWidth
+- AFXSTATUSBAR/CMFCStatusBar::GetTipText
+- AFXSTATUSBAR/CMFCStatusBar::InvalidatePaneContent
+- AFXSTATUSBAR/CMFCStatusBar::PreCreateWindow
+- AFXSTATUSBAR/CMFCStatusBar::SetDrawExtendedArea
+- AFXSTATUSBAR/CMFCStatusBar::SetIndicators
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneAnimation
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneBackgroundColor
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneIcon
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneInfo
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneProgress
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneStyle
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneText
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneTextColor
+- AFXSTATUSBAR/CMFCStatusBar::SetPaneWidth
+- AFXSTATUSBAR/CMFCStatusBar::SetTipText
+- AFXSTATUSBAR/CMFCStatusBar::OnDrawPane
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -135,7 +169,7 @@ class CMFCStatusBar : public CPane
 ## <a name="requirements"></a>需求  
  **標頭︰** afxstatusbar.h  
   
-##  <a name="a-namecalcfixedlayouta--cmfcstatusbarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFCStatusBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>CMFCStatusBar::CalcFixedLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -152,7 +186,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecommandtoindexa--cmfcstatusbarcommandtoindex"></a><a name="commandtoindex"></a>CMFCStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>CMFCStatusBar::CommandToIndex  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -166,7 +200,7 @@ int CommandToIndex(UINT nIDFind) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecreatea--cmfcstatusbarcreate"></a><a name="create"></a>CMFCStatusBar::Create  
+##  <a name="create"></a>CMFCStatusBar::Create  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -185,7 +219,7 @@ BOOL Create(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecreateexa--cmfcstatusbarcreateex"></a><a name="createex"></a>CMFCStatusBar::CreateEx  
+##  <a name="createex"></a>CMFCStatusBar::CreateEx  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -206,7 +240,7 @@ BOOL CreateEx(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namedoesallowdyninsertbeforea--cmfcstatusbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFCStatusBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>CMFCStatusBar::DoesAllowDynInsertBefore  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -217,7 +251,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenablepanedoubleclicka--cmfcstatusbarenablepanedoubleclick"></a><a name="enablepanedoubleclick"></a>CMFCStatusBar::EnablePaneDoubleClick  
+##  <a name="enablepanedoubleclick"></a>CMFCStatusBar::EnablePaneDoubleClick  
  啟用或停用 [狀態] 列，按兩下滑鼠的處理。  
   
 ```  
@@ -231,7 +265,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ### <a name="remarks"></a>備註  
  如果處理雙點選啟用 [狀態] 列，則 Windows 會傳送`WM_COMMAND`通知擁有者的資源識別碼以及每次使用者按兩下狀態列窗格上狀態列。  
   
-##  <a name="a-nameenablepaneprogressbara--cmfcstatusbarenablepaneprogressbar"></a><a name="enablepaneprogressbar"></a>CMFCStatusBar::EnablePaneProgressBar  
+##  <a name="enablepaneprogressbar"></a>CMFCStatusBar::EnablePaneProgressBar  
  顯示進度列上指定的窗格。  
   
 ```  
@@ -270,7 +304,7 @@ void EnablePaneProgressBar(
   
  若要設定目前的進度，請呼叫[CMFCStatusBar::SetPaneProgress](#setpaneprogress)方法。  
   
-##  <a name="a-namegetcounta--cmfcstatusbargetcount"></a><a name="getcount"></a>CMFCStatusBar::GetCount  
+##  <a name="getcount"></a>CMFCStatusBar::GetCount  
  擷取窗格中 [狀態] 列的數目。  
   
 ```  
@@ -280,7 +314,7 @@ int GetCount() const;
 ### <a name="return-value"></a>傳回值  
  在狀態列中的窗格數目。  
   
-##  <a name="a-namegetdrawextendedareaa--cmfcstatusbargetdrawextendedarea"></a><a name="getdrawextendedarea"></a>CMFCStatusBar::GetDrawExtendedArea  
+##  <a name="getdrawextendedarea"></a>CMFCStatusBar::GetDrawExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -291,7 +325,7 @@ BOOL GetDrawExtendedArea() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetextendedareaa--cmfcstatusbargetextendedarea"></a><a name="getextendedarea"></a>CMFCStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>CMFCStatusBar::GetExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -305,7 +339,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetitemida--cmfcstatusbargetitemid"></a><a name="getitemid"></a>CMFCStatusBar::GetItemID  
+##  <a name="getitemid"></a>CMFCStatusBar::GetItemID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -319,7 +353,7 @@ UINT GetItemID(int nIndex) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetitemrecta--cmfcstatusbargetitemrect"></a><a name="getitemrect"></a>CMFCStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>CMFCStatusBar::GetItemRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -334,7 +368,7 @@ void GetItemRect(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpaneinfoa--cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>CMFCStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>CMFCStatusBar::GetPaneInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -353,7 +387,7 @@ void GetPaneInfo(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpaneprogressa--cmfcstatusbargetpaneprogress"></a><a name="getpaneprogress"></a>CMFCStatusBar::GetPaneProgress  
+##  <a name="getpaneprogress"></a>CMFCStatusBar::GetPaneProgress  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -367,7 +401,7 @@ long GetPaneProgress(int nIndex) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpanestylea--cmfcstatusbargetpanestyle"></a><a name="getpanestyle"></a>CMFCStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>CMFCStatusBar::GetPaneStyle  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -381,7 +415,7 @@ UINT GetPaneStyle(int nIndex) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpanetexta--cmfcstatusbargetpanetext"></a><a name="getpanetext"></a>CMFCStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>CMFCStatusBar::GetPaneText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -400,7 +434,7 @@ CString GetPaneText(int nIndex) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpanewidtha--cmfcstatusbargetpanewidth"></a><a name="getpanewidth"></a>CMFCStatusBar::GetPaneWidth  
+##  <a name="getpanewidth"></a>CMFCStatusBar::GetPaneWidth  
  擷取的狀態列窗格的寬度。  
   
 ```  
@@ -414,7 +448,7 @@ int GetPaneWidth(int nIndex) const;
 ### <a name="return-value"></a>傳回值  
  狀態列窗格的寬度，`nIndex`指定，否則為零如果狀態列窗格不存在。  
   
-##  <a name="a-namegettiptexta--cmfcstatusbargettiptext"></a><a name="gettiptext"></a>CMFCStatusBar::GetTipText  
+##  <a name="gettiptext"></a>CMFCStatusBar::GetTipText  
  擷取狀態列窗格的工具提示文字。  
   
 ```  
@@ -428,7 +462,7 @@ CString GetTipText(int nIndex) const;
 ### <a name="return-value"></a>傳回值  
  狀態列窗格的工具提示文字的`nIndex`指定。 否則，空的字串如果狀態列窗格不存在指定`nIndex`或如果是空的工具提示文字。  
   
-##  <a name="a-nameinvalidatepanecontenta--cmfcstatusbarinvalidatepanecontent"></a><a name="invalidatepanecontent"></a>CMFCStatusBar::InvalidatePaneContent  
+##  <a name="invalidatepanecontent"></a>CMFCStatusBar::InvalidatePaneContent  
  使失效狀態列窗格，並且重繪其內容。  
   
 ```  
@@ -442,7 +476,7 @@ void InvalidatePaneContent(int nIndex);
 ### <a name="remarks"></a>備註  
  狀態列會失效，它會標記為重繪作業。 Windows 重新繪製時`UpdateWindow`方法傳送`WM_PAINT`訊息給`OnPaint`方法。  
   
-##  <a name="a-nameondrawpanea--cmfcstatusbarondrawpane"></a><a name="ondrawpane"></a>CMFCStatusBar::OnDrawPane  
+##  <a name="ondrawpane"></a>CMFCStatusBar::OnDrawPane  
  重繪其 [狀態] 列的窗格。  
   
 ```  
@@ -463,7 +497,7 @@ virtual void OnDrawPane(
   
  覆寫這個方法在`CMFCStatusBar`-衍生類別，即可自訂窗格的外觀。  
   
-##  <a name="a-nameprecreatewindowa--cmfcstatusbarprecreatewindow"></a><a name="precreatewindow"></a>CMFCStatusBar::PreCreateWindow  
+##  <a name="precreatewindow"></a>CMFCStatusBar::PreCreateWindow  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -477,7 +511,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetdrawextendedareaa--cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a>CMFCStatusBar::SetDrawExtendedArea  
+##  <a name="setdrawextendedarea"></a>CMFCStatusBar::SetDrawExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -489,7 +523,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetindicatorsa--cmfcstatusbarsetindicators"></a><a name="setindicators"></a>CMFCStatusBar::SetIndicators  
+##  <a name="setindicators"></a>CMFCStatusBar::SetIndicators  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -506,7 +540,7 @@ BOOL SetIndicators(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetpaneanimationa--cmfcstatusbarsetpaneanimation"></a><a name="setpaneanimation"></a>CMFCStatusBar::SetPaneAnimation  
+##  <a name="setpaneanimation"></a>CMFCStatusBar::SetPaneAnimation  
  將動畫指派給指定的窗格。  
   
 ```  
@@ -533,7 +567,7 @@ void SetPaneAnimation(
 ### <a name="remarks"></a>備註  
  如果您想要停用目前的動畫，呼叫`SetPaneAnimation`與`hImageList`設為`NULL`。  
   
-##  <a name="a-namesetpanebackgroundcolora--cmfcstatusbarsetpanebackgroundcolor"></a><a name="setpanebackgroundcolor"></a>CMFCStatusBar::SetPaneBackgroundColor  
+##  <a name="setpanebackgroundcolor"></a>CMFCStatusBar::SetPaneBackgroundColor  
  設定狀態列窗格的背景色彩。  
   
 ```  
@@ -553,7 +587,7 @@ void SetPaneBackgroundColor(
  [in] `bUpdate`  
  如果`TRUE`，立即更新 窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。  
   
-##  <a name="a-namesetpaneicona--cmfcstatusbarsetpaneicon"></a><a name="setpaneicon"></a>CMFCStatusBar::SetPaneIcon  
+##  <a name="setpaneicon"></a>CMFCStatusBar::SetPaneIcon  
  設定狀態列窗格的圖示。  
   
 ```  
@@ -591,7 +625,7 @@ void SetPaneIcon(
   
  如果沒有任何執行中的動畫， [CMFCStatusBar::SetPaneAnimation](#setpaneanimation)已設定，動畫將會停止。  
   
-##  <a name="a-namesetpaneinfoa--cmfcstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a>CMFCStatusBar::SetPaneInfo  
+##  <a name="setpaneinfo"></a>CMFCStatusBar::SetPaneInfo  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -610,7 +644,7 @@ void SetPaneInfo(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetpaneprogressa--cmfcstatusbarsetpaneprogress"></a><a name="setpaneprogress"></a>CMFCStatusBar::SetPaneProgress  
+##  <a name="setpaneprogress"></a>CMFCStatusBar::SetPaneProgress  
  設定指定的窗格的進度列目前的進度列指示器。  
   
 ```  
@@ -635,7 +669,7 @@ void SetPaneProgress(
   
  若要使用此函式指定的窗格，您必須呼叫[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)第一次。  
   
-##  <a name="a-namesetpanestylea--cmfcstatusbarsetpanestyle"></a><a name="setpanestyle"></a>CMFCStatusBar::SetPaneStyle  
+##  <a name="setpanestyle"></a>CMFCStatusBar::SetPaneStyle  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -650,7 +684,7 @@ void SetPaneStyle(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetpanetexta--cmfcstatusbarsetpanetext"></a><a name="setpanetext"></a>CMFCStatusBar::SetPaneText  
+##  <a name="setpanetext"></a>CMFCStatusBar::SetPaneText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -669,7 +703,7 @@ virtual BOOL SetPaneText(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetpanetextcolora--cmfcstatusbarsetpanetextcolor"></a><a name="setpanetextcolor"></a>CMFCStatusBar::SetPaneTextColor  
+##  <a name="setpanetextcolor"></a>CMFCStatusBar::SetPaneTextColor  
  設定指定的窗格的文字色彩。  
   
 ```  
@@ -689,7 +723,7 @@ void SetPaneTextColor(
  [in] `bUpdate`  
  如果`TRUE`，立即更新 窗格的內容。 否則，不會更新窗格內容直到窗格都無效的另一種方法。  
   
-##  <a name="a-namesetpanewidtha--cmfcstatusbarsetpanewidth"></a><a name="setpanewidth"></a>CMFCStatusBar::SetPaneWidth  
+##  <a name="setpanewidth"></a>CMFCStatusBar::SetPaneWidth  
  設定狀態列窗格的寬度。  
   
 ```  
@@ -705,7 +739,7 @@ void SetPaneWidth(
  [in] `cx`  
  [狀態] 列窗格中，單位為像素新的寬度。  
   
-##  <a name="a-namesettiptexta--cmfcstatusbarsettiptext"></a><a name="settiptext"></a>CMFCStatusBar::SetTipText  
+##  <a name="settiptext"></a>CMFCStatusBar::SetTipText  
  設定狀態列窗格的工具提示文字。  
   
 ```  

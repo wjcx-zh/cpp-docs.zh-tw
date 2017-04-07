@@ -62,7 +62,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰** atlhost.h  
 
-##  <a name="a-nameatlaxdialogboxa--atlaxdialogbox"></a><a name="atlaxdialogbox"></a>AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
  從使用者提供的對話方塊範本中建立強制回應對話方塊。  
    
 ```
@@ -96,15 +96,16 @@ ATLAPI_(int) AtlAxDialogBox(
 ### <a name="remarks"></a>備註  
  若要使用**AtlAxDialogBox**包含 ActiveX 控制項的對話方塊範本，使用指定的有效**CLSID**， **APPID**或做為 URL 字串*文字*欄位**控制項**對話方塊資源，以及"AtlAxWin80"做為區段*類別名稱*相同區段下的欄位。 以下示範哪些有效**控制項**區段可能如下所示︰  
   
- `CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,`  
-  
- `"AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100`  
+```  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+    "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
+```  
   
  如需有關編輯資源指令碼的詳細資訊，請參閱[How to︰ 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[一般控制項參數](http://msdn.microsoft.com/library/windows/desktop/aa380902)下[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *: SDK 工具*。  
   
  如需有關一般對話方塊的詳細資訊，請參閱[對話方塊中](http://msdn.microsoft.com/library/windows/desktop/ms645452)和[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameatlaxcreatedialoga--atlaxcreatedialog"></a><a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
  從使用者提供的對話方塊範本中建立非強制回應對話方塊。  
   
 ```
@@ -140,7 +141,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  請參閱[CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434)和[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameatlaxcreatecontrola--atlaxcreatecontrol"></a><a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
  建立 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。  
   
 
@@ -186,7 +187,7 @@ ATLAPI AtlAxCreateControl(
   
  若要建立授權的 ActiveX 控制項，請參閱[AtlAxCreateControlLic](#atlaxcreatecontrollic)。  
   
-##  <a name="a-nameatlaxcreatecontrolexa--atlaxcreatecontrolex"></a><a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
  建立 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。 另外也可以建立新控制項的介面指標和事件接收器。  
   
 ```
@@ -243,7 +244,7 @@ ATLAPI AtlAxCreateControlEx(
   
  若要建立授權的 ActiveX 控制項，請參閱[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)。  
   
-##  <a name="a-nameatlaxcreatecontrollica--atlaxcreatecontrollic"></a><a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
  建立授權的 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。  
 
 ```
@@ -290,7 +291,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>範例  
  請參閱[裝載 ActiveX 控制項使用 ATL 類別](../../atl/hosting-activex-controls-using-atl-axhost.md)的使用方式的範例`AtlAxCreateControlLic`。  
   
-##  <a name="a-nameatlaxcreatecontrollicexa--atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
  建立授權的 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。 另外也可以建立新控制項的介面指標和事件接收器。  
   
 ```
@@ -352,7 +353,7 @@ ATLAPI AtlAxCreateControlLicEx(
 ### <a name="example"></a>範例  
  請參閱[裝載 ActiveX 控制項使用 ATL 類別](../../atl/hosting-activex-controls-using-atl-axhost.md)的使用方式的範例`AtlAxCreateControlLicEx`。  
   
-##  <a name="a-nameatlaxattachcontrola--atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
  將先前建立的控制項加入至指定的視窗。  
   
 ```
@@ -381,7 +382,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  要附加的控制項物件必須正確地初始化之前，先呼叫`AtlAxAttachControl`。  
   
-##  <a name="a-nameatlaxgethosta--atlaxgethost"></a><a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>AtlAxGetHost  
  在考慮控制代碼的情況下，取得所指定視窗 (如果有) 之容器的直接介面指標。  
   
 ```
@@ -398,7 +399,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="a-nameatlaxgetcontrola--atlaxgetcontrol"></a><a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
  在考慮控制代碼的情況下，取得所指定視窗內包含之控制項的直接介面指標。  
   
 ```
@@ -415,7 +416,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="a-nameatlsetchildsitea--atlsetchildsite"></a><a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>AtlSetChildSite  
  呼叫此函式可設定子物件的站台**IUnknown**父物件。  
   
 ```
@@ -432,7 +433,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  
   
-##  <a name="a-nameatlaxwininita--atlaxwininit"></a><a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>AtlAxWinInit  
  此函式會初始化 ATL 的控制項裝載程式碼，藉由註冊**"AtlAxWin80"**和**"AtlAxWinLic80"**視窗類別加上幾個自訂視窗訊息。  
   
 ```
@@ -445,7 +446,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>備註  
  使用 ATL 控制項裝載 API 之前，必須呼叫此函式。 這個函式，呼叫之後**"AtlAxWin"**視窗類別可用於呼叫[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
 
-##  <a name="a-nameatlaxwinterma--atlaxwinterm"></a><a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
  此函式未初始化 ATL 的控制項裝載程式碼取消註冊**"AtlAxWin80"**和**"AtlAxWinLic80"**視窗類別。  
   
 ```
@@ -460,7 +461,7 @@ inline BOOL AtlAxWinTerm();
   
  呼叫此函式，如果您呼叫所有現有的主控件 windows 已終結後進行清理[AtlAxWinInit](#atlaxwininit) ，您不再需要建立主應用程式視窗。 如果您不呼叫此函式，視窗類別會自動取消註冊處理序終止時。  
   
-##  <a name="a-nameatlgetobjectsourceinterfacea--atlgetobjectsourceinterface"></a><a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
  呼叫此函式可擷取物件的預設來源介面的相關資訊。  
   
 ```

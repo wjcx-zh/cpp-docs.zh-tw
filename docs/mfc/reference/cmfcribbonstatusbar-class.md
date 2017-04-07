@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBar
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddDynamicElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddExtendedElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::AddSeparator
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::Create
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::CreateEx
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::FindByID
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::FindElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetCount
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExCount
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetExtendedArea
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::GetSpace
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsBottomFrame
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsExtendedElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::IsInformationMode
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RecalcLayout
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RemoveAll
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::RemoveElement
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::SetInformation
+- AFXRIBBONSTATUSBAR/CMFCRibbonStatusBar::OnDrawInformation
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +136,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 ## <a name="requirements"></a>需求  
  **標頭︰** afxribbonstatusbar.h  
   
-##  <a name="a-nameadddynamicelementa--cmfcribbonstatusbaradddynamicelement"></a><a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
+##  <a name="adddynamicelement"></a>CMFCRibbonStatusBar::AddDynamicElement  
  將動態項目加入至功能區狀態列。  
   
 ```  
@@ -127,7 +150,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ### <a name="remarks"></a>備註  
  不同於規則的項目動態項目不是可自訂和狀態列的 [自訂] 功能表不會顯示它們。  
   
-##  <a name="a-nameaddelementa--cmfcribbonstatusbaraddelement"></a><a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
+##  <a name="addelement"></a>CMFCRibbonStatusBar::AddElement  
  將新的功能區項目加入至功能區狀態列。  
   
 ```  
@@ -147,7 +170,7 @@ void AddElement(
  [in] `bIsVisible`  
  `TRUE`如果您想要將項目新增為可見，`FALSE`如果您想要新增項目做為隱藏。  
   
-##  <a name="a-nameaddextendedelementa--cmfcribbonstatusbaraddextendedelement"></a><a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
+##  <a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
  將功能區項目加入至功能區狀態列擴充區域中。  
   
 ```  
@@ -170,7 +193,7 @@ void AddExtendedElement(
 ### <a name="remarks"></a>備註  
  擴充區域位於狀態列控制項右邊。  
   
-##  <a name="a-nameaddseparatora--cmfcribbonstatusbaraddseparator"></a><a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
+##  <a name="addseparator"></a>CMFCRibbonStatusBar::AddSeparator  
  將功能區狀態列的分隔符號。  
   
 ```  
@@ -180,7 +203,7 @@ void AddSeparator();
 ### <a name="remarks"></a>備註  
  架構的方法後面加入分隔符號[CMFCRibbonStatusBar::AddElement](#addelement)。 將最後一個項目。  
   
-##  <a name="a-namecreatea--cmfcribbonstatusbarcreate"></a><a name="create"></a>CMFCRibbonStatusBar::Create  
+##  <a name="create"></a>CMFCRibbonStatusBar::Create  
  建立功能區狀態列。  
   
 ```  
@@ -203,7 +226,7 @@ BOOL Create(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果建立成功，狀態列`FALSE`否則。  
   
-##  <a name="a-namecreateexa--cmfcribbonstatusbarcreateex"></a><a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
+##  <a name="createex"></a>CMFCRibbonStatusBar::CreateEx  
  建立功能區狀態列擴充的樣式。  
   
 ```  
@@ -230,7 +253,7 @@ BOOL CreateEx(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果建立成功，狀態列`FALSE`否則。  
   
-##  <a name="a-namefindbyida--cmfcribbonstatusbarfindbyid"></a><a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
+##  <a name="findbyid"></a>CMFCRibbonStatusBar::FindByID  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -245,7 +268,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namefindelementa--cmfcribbonstatusbarfindelement"></a><a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
+##  <a name="findelement"></a>CMFCRibbonStatusBar::FindElement  
  具有指定的命令 ID 的項目中傳回的指標  
   
 ```  
@@ -259,7 +282,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ### <a name="return-value"></a>傳回值  
  指向項目具有指定之的命令 id。 `NULL`如果沒有這類項目。  
   
-##  <a name="a-namegetcounta--cmfcribbonstatusbargetcount"></a><a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
+##  <a name="getcount"></a>CMFCRibbonStatusBar::GetCount  
  傳回位於功能區狀態列的主要區域中的項目數目。  
   
 ```  
@@ -269,7 +292,7 @@ int GetCount() const;
 ### <a name="return-value"></a>傳回值  
  位於功能區狀態列的主要區域中的項目數目。  
   
-##  <a name="a-namegetelementa--cmfcribbonstatusbargetelement"></a><a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
+##  <a name="getelement"></a>CMFCRibbonStatusBar::GetElement  
  傳回位於指定索引處的元素的指標。  
   
 ```  
@@ -285,7 +308,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetexcounta--cmfcribbonstatusbargetexcount"></a><a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
+##  <a name="getexcount"></a>CMFCRibbonStatusBar::GetExCount  
  傳回位於功能區狀態列擴充區域中的項目數目。  
   
 ```  
@@ -295,7 +318,7 @@ int GetExCount() const;
 ### <a name="return-value"></a>傳回值  
  位於功能區狀態列擴充區域中的項目數目。  
   
-##  <a name="a-namegetexelementa--cmfcribbonstatusbargetexelement"></a><a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
+##  <a name="getexelement"></a>CMFCRibbonStatusBar::GetExElement  
  傳回指標，該指標指向功能區狀態列擴充區域中，位於指定索引上的元素。 擴充區域位於狀態列控制項右邊。  
   
 ```  
@@ -311,7 +334,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetextendedareaa--cmfcribbonstatusbargetextendedarea"></a><a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
+##  <a name="getextendedarea"></a>CMFCRibbonStatusBar::GetExtendedArea  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -325,7 +348,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetspacea--cmfcribbonstatusbargetspace"></a><a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
+##  <a name="getspace"></a>CMFCRibbonStatusBar::GetSpace  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -336,7 +359,7 @@ int GetSpace() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisbottomframea--cmfcribbonstatusbarisbottomframe"></a><a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
+##  <a name="isbottomframe"></a>CMFCRibbonStatusBar::IsBottomFrame  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -347,7 +370,7 @@ BOOL IsBottomFrame() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisextendedelementa--cmfcribbonstatusbarisextendedelement"></a><a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
+##  <a name="isextendedelement"></a>CMFCRibbonStatusBar::IsExtendedElement  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -361,7 +384,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisinformationmodea--cmfcribbonstatusbarisinformationmode"></a><a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
+##  <a name="isinformationmode"></a>CMFCRibbonStatusBar::IsInformationMode  
  判斷是否啟用功能區狀態列的資訊模式。  
   
 ```  
@@ -374,7 +397,7 @@ BOOL IsInformationMode() const;
 ### <a name="remarks"></a>備註  
  在資訊模式中，[狀態] 列會隱藏所有規則的窗格，並顯示訊息字串。  
   
-##  <a name="a-nameondrawinformationa--cmfcribbonstatusbarondrawinformation"></a><a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
+##  <a name="ondrawinformation"></a>CMFCRibbonStatusBar::OnDrawInformation  
  在功能區狀態列上啟用資訊模式時，會顯示字串，會出現。  
   
 ```  
@@ -397,7 +420,7 @@ virtual void OnDrawInformation(
 ### <a name="remarks"></a>備註  
  如果您想要自訂狀態列上的資訊字串的外觀，請覆寫這個方法在衍生類別中。 使用[CMFCRibbonStatusBar::SetInformation](#setinformation)方法，以將狀態列放置在資訊模式。 在此模式中，狀態列會隱藏所有窗格，並會顯示所指定的資訊字串`strInfo`。  
   
-##  <a name="a-namerecalclayouta--cmfcribbonstatusbarrecalclayout"></a><a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
+##  <a name="recalclayout"></a>CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -406,14 +429,14 @@ virtual void RecalcLayout();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameremovealla--cmfcribbonstatusbarremoveall"></a><a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
+##  <a name="removeall"></a>CMFCRibbonStatusBar::RemoveAll  
  從功能區狀態列中移除所有項目。  
   
 ```  
 void RemoveAll();
 ```  
   
-##  <a name="a-nameremoveelementa--cmfcribbonstatusbarremoveelement"></a><a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
+##  <a name="removeelement"></a>CMFCRibbonStatusBar::RemoveElement  
  移除具有指定的命令識別碼，從功能區狀態列的項目。  
   
 ```  
@@ -427,7 +450,7 @@ BOOL RemoveElement(UINT uiID);
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果具有指定的項目`uiID`已移除。 否則為 `FALSE`。  
   
-##  <a name="a-namesetinformationa--cmfcribbonstatusbarsetinformation"></a><a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
+##  <a name="setinformation"></a>CMFCRibbonStatusBar::SetInformation  
  啟用或停用功能區狀態列的資訊模式。  
   
 ```  

@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDaoException
+- AFXDAO/CDaoException
+- AFXDAO/CDaoException::CDaoException
+- AFXDAO/CDaoException::GetErrorCount
+- AFXDAO/CDaoException::GetErrorInfo
+- AFXDAO/CDaoException::m_nAfxDaoError
+- AFXDAO/CDaoException::m_pErrorInfo
+- AFXDAO/CDaoException::m_scode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +107,7 @@ class CDaoException : public CException
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
   
-##  <a name="a-namecdaoexceptiona--cdaoexceptioncdaoexception"></a><a name="cdaoexception"></a>CDaoException::CDaoException  
+##  <a name="cdaoexception"></a>CDaoException::CDaoException  
  建構 `CDaoException` 物件。  
   
 ```  
@@ -128,7 +135,7 @@ CDaoException();
   
  如需 MFC DAO 類別中的錯誤處理的詳細資訊，請參閱文章[例外狀況︰ 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。  
   
-##  <a name="a-namegeterrorcounta--cdaoexceptiongeterrorcount"></a><a name="geterrorcount"></a>CDaoException::GetErrorCount  
+##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
  呼叫此成員函式擷取的 DAO 資料庫引擎的錯誤集合中的錯誤物件數目。  
   
 ```  
@@ -144,7 +151,7 @@ short GetErrorCount();
 > [!NOTE]
 >  通常會只有一個錯誤物件中的錯誤集合。 如果您正在使用的 ODBC 資料來源，不過，可能有多個。  
   
-##  <a name="a-namegeterrorinfoa--cdaoexceptiongeterrorinfo"></a><a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
+##  <a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
  錯誤集合中傳回特定的錯誤物件的相關資訊時發生錯誤。  
   
 ```  
@@ -172,7 +179,7 @@ void GetErrorInfo(int nIndex);
   
  如需 DAO 例外狀況和範例程式碼，請參閱文章[例外狀況︰ 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。  
   
-##  <a name="a-namemnafxdaoerrora--cdaoexceptionmnafxdaoerror"></a><a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
+##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
  包含 MFC 延伸錯誤碼。  
   
 ### <a name="remarks"></a>備註  
@@ -188,7 +195,7 @@ void GetErrorInfo(int nIndex);
   
 - **AFX_DAO_ERROR_OBJECT_NOT_OPEN**您嘗試開啟資料錄集根據 querydef 或 tabledef 物件未處於開啟狀態。  
   
-##  <a name="a-namemperrorinfoa--cdaoexceptionmperrorinfo"></a><a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
+##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
  包含一個指向`CDaoErrorInfo`提供上次擷取藉由呼叫 DAO 錯誤物件的相關資訊的結構[GetErrorInfo](#geterrorinfo)。  
   
 ### <a name="remarks"></a>備註  
@@ -204,7 +211,7 @@ void GetErrorInfo(int nIndex);
   
  完整詳細資料中包含的資訊`CDaoErrorInfo`物件，請參閱[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)結構。  
   
-##  <a name="a-namemscodea--cdaoexceptionmscode"></a><a name="m_scode"></a>CDaoException::m_scode  
+##  <a name="m_scode"></a>CDaoException::m_scode  
  包含型別的值`SCODE`描述錯誤。  
   
 ### <a name="remarks"></a>備註  

@@ -10,8 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
-- ATL.CRBMultiMap
-- ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::CRBMultiMap
+- ATLCOLL/ATL::CRBMultiMap::FindFirstWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextValueWithKey
+- ATLCOLL/ATL::CRBMultiMap::GetNextWithKey
+- ATLCOLL/ATL::CRBMultiMap::Insert
+- ATLCOLL/ATL::CRBMultiMap::RemoveKey
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +112,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-namecrbmultimapa--crbmultimapcrbmultimap"></a><a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
  建構函式。  
   
 ```
@@ -126,7 +131,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&85;](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="a-namedtora--crbmultimapcrbmultimap"></a><a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
+##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
  解構函式。  
   
 ```
@@ -138,7 +143,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需可用的其他方法。  
   
-##  <a name="a-namefindfirstwithkeya--crbmultimapfindfirstwithkey"></a><a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
  呼叫這個方法來尋找具有指定索引鍵的第一個項目的位置。  
   
 ```
@@ -160,7 +165,7 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
 ### <a name="example"></a>範例  
  請參閱範例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="a-namegetnextvaluewithkeya--crbmultimapgetnextvaluewithkey"></a><a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
  呼叫這個方法來取得與指定的索引鍵相關聯的值，並更新位置值。  
   
 ```
@@ -190,7 +195,7 @@ V& GetNextValueWithKey(
 ### <a name="example"></a>範例  
  請參閱範例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="a-namegetnextwithkeya--crbmultimapgetnextwithkey"></a><a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
  呼叫這個方法來取得與指定的索引鍵相關聯的項目，並更新位置值。  
   
 ```
@@ -217,7 +222,7 @@ CPair* GetNextWithKey(
   
  請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需可用的其他方法。  
   
-##  <a name="a-nameinserta--crbmultimapinsert"></a><a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>CRBMultiMap::Insert  
  呼叫這個方法來插入對應的項目組。  
   
 ```
@@ -240,7 +245,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="example"></a>範例  
  請參閱範例[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-##  <a name="a-nameremovekeya--crbmultimapremovekey"></a><a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
  呼叫此方法以移除所有指定的索引鍵的索引鍵/值項目。  
   
 ```

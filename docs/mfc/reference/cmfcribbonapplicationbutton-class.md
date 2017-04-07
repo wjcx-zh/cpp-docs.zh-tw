@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+- AFXRIBBONBAR/CMFCRibbonApplicationButton::SetImage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxRibbonBar.h  
   
-##  <a name="a-namecmfcribbonapplicationbuttona--cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
+##  <a name="cmfcribbonapplicationbutton"></a>CMFCRibbonApplicationButton::CMFCRibbonApplicationButton  
  建構並初始化[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)物件。  
   
 ```  
@@ -101,7 +104,7 @@ CMFCRibbonApplicationButton(UINT uiBmpResID);
 ### <a name="remarks"></a>備註  
  功能區應用程式按鈕是位於應用程式視窗左上角的特殊按鈕。 當使用者按一下此按鈕時，應用程式可開啟功能表通常包含一般**檔案**命令，例如**開啟**，**儲存**，和**結束**。  
   
-##  <a name="a-namesetimagea--cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
+##  <a name="setimage"></a>CMFCRibbonApplicationButton::SetImage  
  將影像指派給應用程式 按鈕。  
   
 ```  

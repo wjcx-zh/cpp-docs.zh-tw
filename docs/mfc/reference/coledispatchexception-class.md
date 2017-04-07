@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDispatchException
+- AFXDISP/COleDispatchException
+- AFXDISP/COleDispatchException::m_dwHelpContext
+- AFXDISP/COleDispatchException::m_strDescription
+- AFXDISP/COleDispatchException::m_strHelpFile
+- AFXDISP/COleDispatchException::m_strSource
+- AFXDISP/COleDispatchException::m_wCode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +86,7 @@ class COleDispatchException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-namemdwhelpcontexta--coledispatchexceptionmdwhelpcontext"></a><a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
+##  <a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
  識別您的應用程式說明中的說明內容 (。HLP) 檔案。  
   
 ```  
@@ -93,7 +99,7 @@ DWORD m_dwHelpContext;
 ### <a name="example"></a>範例  
   請參閱範例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="a-namemstrdescriptiona--coledispatchexceptionmstrdescription"></a><a name="m_strdescription"></a>COleDispatchException::m_strDescription  
+##  <a name="m_strdescription"></a>COleDispatchException::m_strDescription  
  包含詳細錯誤描述，例如 「 磁碟已滿。 」  
   
 ```  
@@ -106,14 +112,14 @@ CString m_strDescription;
 ### <a name="example"></a>範例  
   請參閱範例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="a-namemstrhelpfilea--coledispatchexceptionmstrhelpfile"></a><a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
+##  <a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
  架構會填入這個應用程式的說明檔的名稱的字串。  
   
 ```  
 CString m_strHelpFile;  
 ```  
   
-##  <a name="a-namemstrsourcea--coledispatchexceptionmstrsource"></a><a name="m_strsource"></a>COleDispatchException::m_strSource  
+##  <a name="m_strsource"></a>COleDispatchException::m_strSource  
  架構會填入此字串，以產生例外狀況的應用程式的名稱。  
   
 ```  
@@ -123,7 +129,7 @@ CString m_strSource;
 ### <a name="example"></a>範例  
   請參閱範例[COleDispatchDriver::CreateDispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-##  <a name="a-namemwcodea--coledispatchexceptionmwcode"></a><a name="m_wcode"></a>COleDispatchException::m_wCode  
+##  <a name="m_wcode"></a>COleDispatchException::m_wCode  
  包含您的應用程式特定的錯誤碼。  
   
 ```  

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::simple_partitioner
+- simple_partitioner
+- PPL/concurrency::simple_partitioner
+- PPL/concurrency::simple_partitioner::simple_partitioner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: dc90df5ba9fbbf5566a26a014a6a2db2ae4a0459
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 08d378c841fd9181fe9a2cf918bde9fe3ebbdc32
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner 類別
@@ -52,9 +54,9 @@ class simple_partitioner;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[simple_partitioner 建構函式](#ctor)|建構 `simple_partitioner` 物件。|  
+|[simple_partitioner](#ctor)|建構 `simple_partitioner` 物件。|  
 |[~ simple_partitioner 解構函式](#dtor)|終結 `simple_partitioner` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -65,7 +67,7 @@ class simple_partitioner;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namedtora-simplepartitioner"></a><a name="dtor"></a>~ simple_partitioner 
+##  <a name="dtor"></a>~ simple_partitioner 
 
  終結 `simple_partitioner` 物件。  
   
@@ -73,7 +75,7 @@ class simple_partitioner;
 ~simple_partitioner();
 ```  
   
-##  <a name="a-namectora-simplepartitioner"></a><a name="ctor"></a>simple_partitioner 
+##  <a name="ctor"></a>simple_partitioner 
 
  建構 `simple_partitioner` 物件。  
   

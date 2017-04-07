@@ -9,25 +9,29 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- OnDrawOnCustomizeList
-- CMFCToolBarDateTimeCtrl::OnDraw
-- OnDraw
-- CMFCToolBarDateTimeCtrl.Serialize
-- CMFCToolBarDateTimeCtrl.OnSize
-- CMFCToolBarDateTimeCtrl.OnDrawOnCustomizeList
-- OnSize
-- OnCalculateSize
 - CMFCToolBarDateTimeCtrl
-- CMFCToolBarDateTimeCtrl::OnCalculateSize
-- SetStyle
-- CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList
-- CMFCToolBarDateTimeCtrl.OnDraw
-- CMFCToolBarDateTimeCtrl.SetStyle
-- CMFCToolBarDateTimeCtrl::SetStyle
-- CMFCToolBarDateTimeCtrl.OnCalculateSize
-- CMFCToolBarDateTimeCtrl::Serialize
-- CMFCToolBarDateTimeCtrl::OnSize
-- Serialize
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::CanBeStretched
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::CopyFrom
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarButton::ExportToMenuButton
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::GetByCmd
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::GetDateTimeCtrl
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::GetHwnd
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::GetTime
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::GetTimeAll
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::HaveHotBorder
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::NotifyCommand
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::OnAddToCustomizePage
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::OnChangeParentWnd
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::OnClick
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::OnCtlColor
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::OnMove
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::OnShow
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::OnUpdateToolTip
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::SetTime
+- AFXTOOLBARDATETIMECTRL/CMFCToolBarDateTimeCtrl::SetTimeAll
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +132,7 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtoolbardatetimectrl.h  
   
-##  <a name="a-namecanbestretcheda--cmfctoolbardatetimectrlcanbestretched"></a><a name="canbestretched"></a>CMFCToolBarDateTimeCtrl::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCToolBarDateTimeCtrl::CanBeStretched  
  指定使用者是否可以在自訂期間延伸按鈕。  
   
 ```  
@@ -141,7 +145,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="remarks"></a>備註  
  根據預設，架構不允許使用者在自訂期間延伸工具列按鈕。 此方法會擴充基底類別實作 ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) 允許使用者在自訂期間調整日期和時間的工具列按鈕。  
   
-##  <a name="a-namecmfctoolbardatetimectrla--cmfctoolbardatetimectrlcmfctoolbardatetimectrl"></a><a name="cmfctoolbardatetimectrl"></a>CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
+##  <a name="cmfctoolbardatetimectrl"></a>CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
  建立並初始化[CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md)物件。  
   
 ```  
@@ -173,7 +177,7 @@ CMFCToolBarDateTimeCtrl(
   
  [!code-cpp[NVC_MFC_ToolbarDateTimePicker #&1;](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]  
   
-##  <a name="a-namecopyfroma--cmfctoolbardatetimectrlcopyfrom"></a><a name="copyfrom"></a>CMFCToolBarDateTimeCtrl::CopyFrom  
+##  <a name="copyfrom"></a>CMFCToolBarDateTimeCtrl::CopyFrom  
  將另一個工具列按鈕的內容複製到目前的按鈕。  
   
 ```  
@@ -187,7 +191,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="remarks"></a>備註  
  呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 `src`必須是型別`CMFCToolBarDateTimeCtrl`。  
   
-##  <a name="a-nameexporttomenubuttona--cmfctoolbardatetimectrlexporttomenubutton"></a><a name="exporttomenubutton"></a>CMFCToolBarDateTimeCtrl::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>CMFCToolBarDateTimeCtrl::ExportToMenuButton  
  複製文字從工具列按鈕的功能表。  
   
 ```  
@@ -204,7 +208,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="remarks"></a>備註  
  這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) 載入控制項的命令 ID 相關聯的字串資源。 如需字串資源的詳細資訊，請參閱[CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)。  
   
-##  <a name="a-namegetbycmda--cmfctoolbardatetimectrlgetbycmd"></a><a name="getbycmd"></a>CMFCToolBarDateTimeCtrl::GetByCmd  
+##  <a name="getbycmd"></a>CMFCToolBarDateTimeCtrl::GetByCmd  
  擷取第一個`CMFCToolBarDateTimeCtrl`中具有指定的命令 ID 的應用程式物件  
   
 ```  
@@ -221,7 +225,7 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ### <a name="remarks"></a>備註  
  這類方法使用這個共用公用程式方法是[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)和[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)設定或取得具有指定的命令識別碼時間選擇器控制項的所有執行個體的日期與時間  
   
-##  <a name="a-namegetdatetimectrla--cmfctoolbardatetimectrlgetdatetimectrl"></a><a name="getdatetimectrl"></a>CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
+##  <a name="getdatetimectrl"></a>CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
  傳回日期和時間選擇器控制項的指標。  
   
 ```  
@@ -234,7 +238,7 @@ CDateTimeCtrl* GetDateTimeCtrl() const;
 ### <a name="remarks"></a>備註  
  `CMFCToolBarDateTimeCtrl`類別初始化`m_pWndDateTime`資料成員，當您插入`CMFCToolBarDateTimeCtrl`成為一個工具列物件。  
   
-##  <a name="a-namegethwnda--cmfctoolbardatetimectrlgethwnd"></a><a name="gethwnd"></a>CMFCToolBarDateTimeCtrl::GetHwnd  
+##  <a name="gethwnd"></a>CMFCToolBarDateTimeCtrl::GetHwnd  
  擷取與工具列按鈕相關聯的視窗控制代碼。  
   
 ```  
@@ -247,7 +251,7 @@ virtual HWND GetHwnd();
 ### <a name="remarks"></a>備註  
  這個方法會覆寫[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)方法。  
   
-##  <a name="a-namegettimea--cmfctoolbardatetimectrlgettime"></a><a name="gettime"></a>CMFCToolBarDateTimeCtrl::GetTime  
+##  <a name="gettime"></a>CMFCToolBarDateTimeCtrl::GetTime  
  取得選取的時間從相關聯的日期和時間選擇器控制項，並將它放在指定的[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構  
   
 ```  
@@ -269,7 +273,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ### <a name="remarks"></a>備註  
  方法會設定[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構成員 dwFlags 表示的日期和時間選擇器是否設定為日期和時間。 控制項的值等於 GDT_NONE，如果設定為`no date`狀態，並使用 DTS_SHOWNONE 樣式。 如果傳回的值等於 GDT_VALID，系統時間已成功儲存在目的地位置。  
   
-##  <a name="a-namegettimealla--cmfctoolbardatetimectrlgettimeall"></a><a name="gettimeall"></a>CMFCToolBarDateTimeCtrl::GetTimeAll  
+##  <a name="gettimeall"></a>CMFCToolBarDateTimeCtrl::GetTimeAll  
  傳回具有指定的命令 id。 時間選擇器控制項按鈕從使用者選取的時間  
   
 ```  
@@ -302,7 +306,7 @@ static DWORD GetTimeAll(
 ### <a name="remarks"></a>備註  
  這個方法會尋找具有指定的命令 ID 和呼叫的工具列按鈕[CMFCToolBarDateTimeCtrl::GetTime](#gettime)該按鈕上的方法。  
   
-##  <a name="a-namehavehotbordera--cmfctoolbardatetimectrlhavehotborder"></a><a name="havehotborder"></a>CMFCToolBarDateTimeCtrl::HaveHotBorder  
+##  <a name="havehotborder"></a>CMFCToolBarDateTimeCtrl::HaveHotBorder  
  決定當使用者選擇按鈕時，是否要顯示按鈕的框線。  
   
 ```  
@@ -315,7 +319,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>備註  
  如果控制項為可見，這個方法會傳回非零值。  
   
-##  <a name="a-namenotifycommanda--cmfctoolbardatetimectrlnotifycommand"></a><a name="notifycommand"></a>CMFCToolBarDateTimeCtrl::NotifyCommand  
+##  <a name="notifycommand"></a>CMFCToolBarDateTimeCtrl::NotifyCommand  
  指定是否要處理按鈕[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)訊息。  
   
 ```  
@@ -334,7 +338,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
   
  此方法會擴充基底類別實作 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 藉由處理[DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737)通知。 它將內部時間的狀態更新並更新所有的時間屬性`CMFCToolBarDateTimeCtrl`物件具有相同命令 id。  
   
-##  <a name="a-nameonaddtocustomizepagea--cmfctoolbardatetimectrlonaddtocustomizepage"></a><a name="onaddtocustomizepage"></a>CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
  加入按鈕時，由框架呼叫**自訂**對話方塊。  
   
 ```  
@@ -346,7 +350,7 @@ virtual void OnAddToCustomizePage();
   
  如需詳細資訊**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
   
-##  <a name="a-nameonchangeparentwnda--cmfctoolbardatetimectrlonchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
  插入新的工具列按鈕時，由架構呼叫。  
   
 ```  
@@ -360,7 +364,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>備註  
  這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 重新建立內部`CMFCToolBarDateTimeCtrlImpl`物件。  
   
-##  <a name="a-nameonclicka--cmfctoolbardatetimectrlonclick"></a><a name="onclick"></a>CMFCToolBarDateTimeCtrl::OnClick  
+##  <a name="onclick"></a>CMFCToolBarDateTimeCtrl::OnClick  
  當使用者按一下控制項時，由架構呼叫。  
   
 ```  
@@ -382,7 +386,7 @@ virtual BOOL OnClick(
 ### <a name="remarks"></a>備註  
  這個方法會覆寫基底類別實作時， [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)，藉由傳回非零值，如果內部`CMFCToolBarDateTimeCtrlImpl`物件為可見。  
   
-##  <a name="a-nameonctlcolora--cmfctoolbardatetimectrlonctlcolor"></a><a name="onctlcolor"></a>CMFCToolBarDateTimeCtrl::OnCtlColor  
+##  <a name="onctlcolor"></a>CMFCToolBarDateTimeCtrl::OnCtlColor  
  為父工具列處理時，由框架呼叫`WM_CTLCOLOR`訊息。  
   
 ```  
@@ -406,7 +410,7 @@ virtual HBRUSH OnCtlColor(
   
  如需可用於您的應用程式的全域選項的詳細資訊，請參閱[AFX_GLOBAL_DATA 結構](../../mfc/reference/afx-global-data-structure.md)。  
   
-##  <a name="a-nameonglobalfontschangeda--cmfctoolbardatetimectrlonglobalfontschanged"></a><a name="onglobalfontschanged"></a>CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged  
  全域字型變更時，由架構呼叫。  
   
 ```  
@@ -418,7 +422,7 @@ virtual void OnGlobalFontsChanged();
   
  如需可用於您的應用程式的全域選項的詳細資訊，請參閱[AFX_GLOBAL_DATA 結構](../../mfc/reference/afx-global-data-structure.md)。  
   
-##  <a name="a-nameonmovea--cmfctoolbardatetimectrlonmove"></a><a name="onmove"></a>CMFCToolBarDateTimeCtrl::OnMove  
+##  <a name="onmove"></a>CMFCToolBarDateTimeCtrl::OnMove  
  為父工具列移動時，由架構呼叫。  
   
 ```  
@@ -428,7 +432,7 @@ virtual void OnMove();
 ### <a name="remarks"></a>備註  
  這個方法會覆寫預設類別實作 ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) 藉由更新內部位置`CMFCToolBarDateTimeCtrlImpl`物件。  
   
-##  <a name="a-nameonshowa--cmfctoolbardatetimectrlonshow"></a><a name="onshow"></a>CMFCToolBarDateTimeCtrl::OnShow  
+##  <a name="onshow"></a>CMFCToolBarDateTimeCtrl::OnShow  
  由架構呼叫時按鈕會變成可見或不可見。  
   
 ```  
@@ -442,7 +446,7 @@ virtual void OnShow(BOOL bShow);
 ### <a name="remarks"></a>備註  
  此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 來顯示按鈕`bShow`是`TRUE`。 否則，這個方法會隱藏按鈕。  
   
-##  <a name="a-nameonsizea--cmfctoolbardatetimectrlonsize"></a><a name="onsize"></a>CMFCToolBarDateTimeCtrl::OnSize  
+##  <a name="onsize"></a>CMFCToolBarDateTimeCtrl::OnSize  
  為父工具列變更它的大小或位置，這項變更會使按鈕大小變更時，由架構呼叫。  
   
 ```  
@@ -456,7 +460,7 @@ virtual void OnSize(int iSize);
 ### <a name="remarks"></a>備註  
  這個方法會覆寫預設類別實作 ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) 藉由更新的大小和位置內部`CMFCToolBarDateTimeCtrlImpl`物件。  
   
-##  <a name="a-nameonupdatetooltipa--cmfctoolbardatetimectrlonupdatetooltip"></a><a name="onupdatetooltip"></a>CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
  為父工具列更新其工具提示文字時，由架構呼叫。  
   
 ```  
@@ -486,7 +490,7 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="remarks"></a>備註  
  此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) 所顯示的按鈕相關聯的工具提示文字。 如果按鈕不會水平停駐，這個方法不做任何動作，並傳回`FALSE`。  
   
-##  <a name="a-namesettimea--cmfctoolbardatetimectrlsettime"></a><a name="settime"></a>CMFCToolBarDateTimeCtrl::SetTime  
+##  <a name="settime"></a>CMFCToolBarDateTimeCtrl::SetTime  
  時間選擇器控制項中設定的時間和日期。  
   
 ```  
@@ -508,7 +512,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ### <a name="remarks"></a>備註  
  日期和時間選擇器控制項中設定的時間，藉由呼叫[CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime)。  
   
-##  <a name="a-namesettimealla--cmfctoolbardatetimectrlsettimeall"></a><a name="settimeall"></a>CMFCToolBarDateTimeCtrl::SetTimeAll  
+##  <a name="settimeall"></a>CMFCToolBarDateTimeCtrl::SetTimeAll  
  在有指定的命令 ID 時間選擇器控制項的所有執行個體設定的時間和日期  
   
 ```  

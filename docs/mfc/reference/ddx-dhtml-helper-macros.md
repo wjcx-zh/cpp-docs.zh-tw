@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- DDX_DHtml
+- AFXDHTML/DDX_DHtml_ElementValue
+- AFXDHTML/DDX_DHtml_ElementInnerText
+- AFXDHTML/DDX_DHtml_ElementInnerHtml
+- AFXDHTML/DDX_DHtml_Anchor_Href
+- AFXDHTML/DDX_DHtml_Anchor_Target
+- AFXDHTML/DDX_DHtml_Img_Src
+- AFXDHTML/DDX_DHtml_Frame_Src
+- AFXDHTML/DDX_DHtml_IFrame_Src
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -62,7 +69,7 @@ DDX_DHtml helper 巨集可讓您輕鬆存取常用的 HTML 網頁上的控制項
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdhtml.h  
 
-## <a name="a-nameddxdhtmlanchorhrefa-ddxdhtmlanchorhref"></a><a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
+## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
 設定或擷取目的地 URL 或錨點。  
   
   
@@ -87,7 +94,7 @@ DDX_DHtml_Anchor_Href(
 ## <a name="remarks"></a>備註  
  這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLANCHORELEMENT_HREF 分派識別碼。
 
-## <a name="a-nameddxdhtmlanchortargeta--ddxdhtmlanchortarget"></a><a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
+## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
  設定或擷取的目標視窗或框架。  
     
 ```  
@@ -110,7 +117,7 @@ DDX_DHtml_Anchor_Target(
 ## <a name="remarks"></a>備註  
  這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLANCHORELEMENT_TARGET 分派識別碼。  
 
-## <a name="a-nameddxdhtmlelementinnerhtmla--ddxdhtmlelementinnerhtml"></a><a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
+## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
  設定或擷取目前項目的開始和結束標記之間的 HTML。  
   
   
@@ -136,7 +143,7 @@ DDX_DHtml_ElementInnerHtml(
  這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLELEMENT_INNERHTML 分派識別碼。  
   
 
-## <a name="a-nameddxdhtmlelementinnertexta--ddxdhtmlelementinnertext"></a><a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
+## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
 設定或擷取目前項目的開始和結束標記之間的文字。  
   
   
@@ -161,7 +168,7 @@ DDX_DHtml_ElementInnerText(
 ## <a name="remarks"></a>備註  
  這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLELEMENT_INNERTEXT 分派識別碼。 
 
-## <a name="a-nameddxdhtmlelementvaluea-ddxdhtmlelementvalue"></a><a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
+## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
 設定或從選取的控制項擷取值的屬性。  
  
 ```  
@@ -186,7 +193,7 @@ DDX_DHtml_ElementValue(
   
  這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_A_VALUE 分派識別碼。  
 
-## <a name="a-nameddxdhtmlframesrca-ddxdhtmlframesrc"></a><a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
+## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
 設定或擷取關聯框架的 URL。  
   
 ```  
@@ -209,7 +216,7 @@ DDX_DHtml_Frame_Src(
 ## <a name="remarks"></a>備註  
  這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLFRAMEBASE_SRC 分派識別碼。  
 
-## <a name="a-nameddxdhtmliframesrca-ddxdhtmliframesrc"></a><a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
+## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
 設定或擷取關聯框架的 URL。  
   
   
@@ -234,7 +241,7 @@ DDX_DHtml_IFrame_Src(
 ## <a name="remarks"></a>備註  
  這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLFRAMEBASE_SRC 分派識別碼。 
 
-## <a name="a-nameddxdhtmlimgsrcaddxdhtmlimgsrc"></a><a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
+## <a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
 取得或擷取映像或文件中的視訊剪輯的名稱。  
   
 ```  

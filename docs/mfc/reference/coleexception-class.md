@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleException
+- AFXDISP/COleException
+- AFXDISP/COleException::Process
+- AFXDISP/COleException::m_sc
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -80,7 +83,7 @@ class COleException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-namemsca--coleexceptionmsc"></a><a name="m_sc"></a>COleException::m_sc  
+##  <a name="m_sc"></a>COleException::m_sc  
  此資料成員會保留之 OLE 狀態碼，指出例外狀況的原因。  
   
 ```  
@@ -95,7 +98,7 @@ SCODE m_sc;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&22;](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
-##  <a name="a-nameprocessa--coleexceptionprocess"></a><a name="process"></a>COleException::Process  
+##  <a name="process"></a>COleException::Process  
  呼叫**程序**成員函式以轉譯成 OLE 狀態碼攔截的例外狀況。  
   
 ```  

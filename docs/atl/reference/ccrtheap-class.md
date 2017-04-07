@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CCRTHeap
-- ATL.CCRTHeap
 - CCRTHeap
+- ATLMEM/ATL::CCRTHeap
+- ATLMEM/ATL::CCRTHeap::Allocate
+- ATLMEM/ATL::CCRTHeap::Free
+- ATLMEM/ATL::CCRTHeap::GetSize
+- ATLMEM/ATL::CCRTHeap::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -75,7 +78,7 @@ class CCRTHeap : public IAtlMemMgr
 ## <a name="requirements"></a>需求  
  **標頭︰** atlmem.h  
   
-##  <a name="a-nameallocatea--ccrtheapallocate"></a><a name="allocate"></a>CCRTHeap::Allocate  
+##  <a name="allocate"></a>CCRTHeap::Allocate  
  呼叫這個方法來配置記憶體區塊。  
   
 ```
@@ -94,7 +97,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用實作[malloc](../../c-runtime-library/reference/malloc.md)。  
   
-##  <a name="a-namefreea--ccrtheapfree"></a><a name="free"></a>CCRTHeap::Free  
+##  <a name="free"></a>CCRTHeap::Free  
  呼叫此方法以釋放此記憶體管理員所配置的記憶體區塊。  
   
 ```
@@ -108,7 +111,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>備註  
  使用實作[免費](../../c-runtime-library/reference/free.md)。  
   
-##  <a name="a-namegetsizea--ccrtheapgetsize"></a><a name="getsize"></a>CCRTHeap::GetSize  
+##  <a name="getsize"></a>CCRTHeap::GetSize  
  呼叫這個方法，以取得此記憶體管理員所配置的記憶體區塊配置的大小。  
   
 ```
@@ -125,7 +128,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>備註  
  使用實作[_msize](../../c-runtime-library/reference/msize.md)。  
   
-##  <a name="a-namereallocatea--ccrtheapreallocate"></a><a name="reallocate"></a>CCRTHeap::Reallocate  
+##  <a name="reallocate"></a>CCRTHeap::Reallocate  
  呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。  
   
 ```

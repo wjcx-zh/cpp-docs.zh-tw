@@ -10,6 +10,35 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatch
+- No header/ATL::IAxWinAmbientDispatch
+- No header/ATL::get_AllowContextMenu
+- No header/ATL::get_AllowShowUI
+- No header/ATL::get_AllowWindowlessActivation
+- No header/ATL::get_BackColor
+- No header/ATL::get_DisplayAsDefault
+- No header/ATL::get_DocHostDoubleClickFlags
+- No header/ATL::get_DocHostFlags
+- No header/ATL::get_Font
+- No header/ATL::get_ForeColor
+- No header/ATL::get_LocaleID
+- No header/ATL::get_MessageReflect
+- No header/ATL::get_OptionKeyPath
+- No header/ATL::get_ShowGrabHandles
+- No header/ATL::get_ShowHatching
+- No header/ATL::get_UserMode
+- No header/ATL::put_AllowContextMenu
+- No header/ATL::put_AllowShowUI
+- No header/ATL::put_AllowWindowlessActivation
+- No header/ATL::put_BackColor
+- No header/ATL::put_DisplayAsDefault
+- No header/ATL::put_DocHostDoubleClickFlags
+- No header/ATL::put_DocHostFlags
+- No header/ATL::put_Font
+- No header/ATL::put_ForeColor
+- No header/ATL::put_LocaleID
+- No header/ATL::put_MessageReflect
+- No header/ATL::put_OptionKeyPath
+- No header/ATL::put_UserMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +133,7 @@ interface IAxWinAmbientDispatch : IDispatch
 |類型程式庫|ATL.dll|  
 |C++|atliface.h （也包含在 ATLBase.h）|  
   
-##  <a name="a-namegetallowcontextmenua--iaxwinambientdispatchgetallowcontextmenu"></a><a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
+##  <a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch::get_AllowContextMenu  
  **AllowContextMenu**屬性會指定是否允許裝載的控制項顯示快顯功能表。  
   
 ```
@@ -121,7 +150,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作`VARIANT_TRUE`做為預設值，這個屬性。  
   
-##  <a name="a-namegetallowshowuia--iaxwinambientdispatchgetallowshowui"></a><a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
+##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch::get_AllowShowUI  
  **AllowShowUI**屬性會指定是否允許裝載的控制項顯示使用者介面。  
   
 ```
@@ -138,7 +167,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**VARIANT_FALSE**做為預設值，這個屬性。  
   
-##  <a name="a-namegetallowwindowlessactivationa--iaxwinambientdispatchgetallowwindowlessactivation"></a><a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
+##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch::get_AllowWindowlessActivation  
  **AllowWindowlessActivation**屬性中指定容器是否允許無視窗啟用。  
   
 ```
@@ -155,7 +184,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作`VARIANT_TRUE`做為預設值，這個屬性。  
   
-##  <a name="a-namegetbackcolora--iaxwinambientdispatchgetbackcolor"></a><a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
+##  <a name="get_backcolor"></a>IAxWinAmbientDispatch::get_BackColor  
  `BackColor`屬性會指定容器的環境背景色彩。  
   
 ```
@@ -172,7 +201,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**COLOR_BTNFACE**或**COLOR_WINDOW**作為預設值，這個屬性 （取決於是否裝載視窗的父代為對話方塊）。  
   
-##  <a name="a-namegetdisplayasdefaulta--iaxwinambientdispatchgetdisplayasdefault"></a><a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
+##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch::get_DisplayAsDefault  
  **DisplayAsDefault**是環境的屬性，可讓控制項以瞭解其是否預設控制項。  
   
 ```
@@ -189,7 +218,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**VARIANT_FALSE**做為預設值，這個屬性。  
   
-##  <a name="a-namegetdochostdoubleclickflagsa--iaxwinambientdispatchgetdochostdoubleclickflags"></a><a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
+##  <a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::get_DocHostDoubleClickFlags  
  **DocHostDoubleClickFlags**屬性會指定應在回應按兩下作業。  
   
 ```
@@ -206,7 +235,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**DOCHOSTUIDBLCLK_DEFAULT**做為預設值，這個屬性。  
   
-##  <a name="a-namegetdochostflagsa--iaxwinambientdispatchgetdochostflags"></a><a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
+##  <a name="get_dochostflags"></a>IAxWinAmbientDispatch::get_DocHostFlags  
  **DocHostFlags**屬性會指定主應用程式物件的使用者介面功能。  
   
 ```
@@ -223,7 +252,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**DOCHOSTUIFLAG_NO3DBORDER**做為預設值，這個屬性。  
   
-##  <a name="a-namegetfonta--iaxwinambientdispatchgetfont"></a><a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
+##  <a name="get_font"></a>IAxWinAmbientDispatch::get_Font  
  **字型**屬性會指定容器的環境字型。  
   
 ```
@@ -240,7 +269,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 ### <a name="remarks"></a>備註  
  ATL 主應用程式物件實作會使用做為預設值，這個屬性的預設 GUI 字型或系統字型。  
   
-##  <a name="a-namegetforecolora--iaxwinambientdispatchgetforecolor"></a><a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
+##  <a name="get_forecolor"></a>IAxWinAmbientDispatch::get_ForeColor  
  `ForeColor`屬性會指定容器的環境前景色彩。  
   
 ```
@@ -257,7 +286,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ### <a name="remarks"></a>備註  
  ATL 主應用程式物件實作這個屬性的預設值為使用系統視窗文字色彩。  
   
-##  <a name="a-namegetlocaleida--iaxwinambientdispatchgetlocaleid"></a><a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
+##  <a name="get_localeid"></a>IAxWinAmbientDispatch::get_LocaleID  
  **LocaleID**屬性會指定容器的環境的地區設定識別碼。  
   
 ```
@@ -276,7 +305,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
   
  您可以使用這個方法來探索環境 LocalID，也就是程式的地區設定識別碼控制項使用中。 一旦您知道地區設定識別碼，您可以從資源檔或附屬 DLL 等等呼叫的程式碼載入特定地區設定標題，錯誤訊息文字。  
   
-##  <a name="a-namegetmessagereflecta--iaxwinambientdispatchgetmessagereflect"></a><a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
+##  <a name="get_messagereflect"></a>IAxWinAmbientDispatch::get_MessageReflect  
  **MessageReflect**環境屬性會指定容器是否會反映在裝載控制項的訊息。  
   
 ```
@@ -293,7 +322,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作`VARIANT_TRUE`做為預設值，這個屬性。  
   
-##  <a name="a-namegetoptionkeypatha--iaxwinambientdispatchgetoptionkeypath"></a><a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
+##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch::get_OptionKeyPath  
  **OptionKeyPath**屬性會指定使用者設定登錄機碼路徑。  
   
 ```
@@ -307,7 +336,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namegetshowgrabhandlesa--iaxwinambientdispatchgetshowgrabhandles"></a><a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
+##  <a name="get_showgrabhandles"></a>IAxWinAmbientDispatch::get_ShowGrabHandles  
  **ShowGrabHandles**環境屬性可以讓要了解是否它本身應該具有抓取控點來繪製的控制項。  
   
 ```
@@ -324,7 +353,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ### <a name="remarks"></a>備註  
  ATL 主機物件實作一律會傳回**VARIANT_FALSE**做為這個屬性的值。  
   
-##  <a name="a-namegetshowhatchinga--iaxwinambientdispatchgetshowhatching"></a><a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
+##  <a name="get_showhatching"></a>IAxWinAmbientDispatch::get_ShowHatching  
  **ShowHatching**環境屬性可以讓控制項以找出是否它應該繪製本身影線。  
   
 ```
@@ -341,7 +370,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ### <a name="remarks"></a>備註  
  ATL 主機物件實作一律會傳回**VARIANT_FALSE**做為這個屬性的值。  
   
-##  <a name="a-namegetusermodea--iaxwinambientdispatchgetusermode"></a><a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
+##  <a name="get_usermode"></a>IAxWinAmbientDispatch::get_UserMode  
  **UserMode**屬性會指定容器的環境的使用者模式。  
   
 ```
@@ -358,7 +387,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作`VARIANT_TRUE`做為預設值，這個屬性。  
   
-##  <a name="a-nameputallowcontextmenua--iaxwinambientdispatchputallowcontextmenu"></a><a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
+##  <a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch::put_AllowContextMenu  
  **AllowContextMenu**屬性會指定是否允許裝載的控制項顯示快顯功能表。  
   
 ```
@@ -375,7 +404,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作`VARIANT_TRUE`做為預設值，這個屬性。  
   
-##  <a name="a-nameputallowshowuia--iaxwinambientdispatchputallowshowui"></a><a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
+##  <a name="put_allowshowui"></a>IAxWinAmbientDispatch::put_AllowShowUI  
  **AllowShowUI**屬性會指定是否允許裝載的控制項顯示使用者介面。  
   
 ```
@@ -392,7 +421,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**VARIANT_FALSE**做為預設值，這個屬性。  
   
-##  <a name="a-nameputallowwindowlessactivationa--iaxwinambientdispatchputallowwindowlessactivation"></a><a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
+##  <a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch::put_AllowWindowlessActivation  
  **AllowWindowlessActivation**屬性中指定容器是否允許無視窗啟用。  
   
 ```
@@ -409,7 +438,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作`VARIANT_TRUE`做為預設值，這個屬性。  
   
-##  <a name="a-nameputbackcolora--iaxwinambientdispatchputbackcolor"></a><a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
+##  <a name="put_backcolor"></a>IAxWinAmbientDispatch::put_BackColor  
  `BackColor`屬性會指定容器的環境背景色彩。  
   
 ```
@@ -426,7 +455,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**COLOR_BTNFACE**或**COLOR_WINDOW**作為預設值，這個屬性 （取決於是否裝載視窗的父代為對話方塊）。  
   
-##  <a name="a-nameputdisplayasdefaulta--iaxwinambientdispatchputdisplayasdefault"></a><a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
+##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch::put_DisplayAsDefault  
  **DisplayAsDefault**是環境的屬性，可讓控制項以瞭解其是否預設控制項。  
   
 ```
@@ -443,7 +472,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**VARIANT_FALSE**做為預設值，這個屬性。  
   
-##  <a name="a-nameputdochostdoubleclickflagsa--iaxwinambientdispatchputdochostdoubleclickflags"></a><a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
+##  <a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch::put_DocHostDoubleClickFlags  
  **DocHostDoubleClickFlags**屬性會指定應在回應按兩下作業。  
   
 ```
@@ -460,7 +489,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**DOCHOSTUIDBLCLK_DEFAULT**做為預設值，這個屬性。  
   
-##  <a name="a-nameputdochostflagsa--iaxwinambientdispatchputdochostflags"></a><a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
+##  <a name="put_dochostflags"></a>IAxWinAmbientDispatch::put_DocHostFlags  
  **DocHostFlags**屬性會指定主應用程式物件的使用者介面功能。  
   
 ```
@@ -477,7 +506,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作**DOCHOSTUIFLAG_NO3DBORDER**做為預設值，這個屬性。  
   
-##  <a name="a-nameputfonta--iaxwinambientdispatchputfont"></a><a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
+##  <a name="put_font"></a>IAxWinAmbientDispatch::put_Font  
  **字型**屬性會指定容器的環境字型。  
   
 ```
@@ -494,7 +523,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 ### <a name="remarks"></a>備註  
  ATL 主應用程式物件實作會使用做為預設值，這個屬性的預設 GUI 字型或系統字型。  
   
-##  <a name="a-nameputforecolora--iaxwinambientdispatchputforecolor"></a><a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
+##  <a name="put_forecolor"></a>IAxWinAmbientDispatch::put_ForeColor  
  `ForeColor`屬性會指定容器的環境前景色彩。  
   
 ```
@@ -511,7 +540,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ### <a name="remarks"></a>備註  
  ATL 主應用程式物件實作這個屬性的預設值為使用系統視窗文字色彩。  
   
-##  <a name="a-nameputlocaleida--iaxwinambientdispatchputlocaleid"></a><a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
+##  <a name="put_localeid"></a>IAxWinAmbientDispatch::put_LocaleID  
  **LocaleID**屬性會指定容器的環境的地區設定識別碼。  
   
 ```
@@ -528,7 +557,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ### <a name="remarks"></a>備註  
  ATL 主應用程式物件實作這個屬性的預設值為使用使用者的預設地區設定。  
   
-##  <a name="a-nameputmessagereflecta--iaxwinambientdispatchputmessagereflect"></a><a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
+##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch::put_MessageReflect  
  **MessageReflect**環境屬性會指定容器是否會反映在裝載控制項的訊息。  
   
 ```
@@ -545,7 +574,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ### <a name="remarks"></a>備註  
  使用 ATL 主應用程式物件實作`VARIANT_TRUE`做為預設值，這個屬性。  
   
-##  <a name="a-nameputoptionkeypatha--iaxwinambientdispatchputoptionkeypath"></a><a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
+##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch::put_OptionKeyPath  
  **OptionKeyPath**屬性會指定使用者設定登錄機碼路徑。  
   
 ```
@@ -559,7 +588,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-nameputusermodea--iaxwinambientdispatchputusermode"></a><a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
+##  <a name="put_usermode"></a>IAxWinAmbientDispatch::put_UserMode  
  **UserMode**屬性會指定容器的環境的使用者模式。  
   
 ```

@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFontDialog
+- AFXDLGS/CFontDialog
+- AFXDLGS/CFontDialog::CFontDialog
+- AFXDLGS/CFontDialog::DoModal
+- AFXDLGS/CFontDialog::GetCharFormat
+- AFXDLGS/CFontDialog::GetColor
+- AFXDLGS/CFontDialog::GetCurrentFont
+- AFXDLGS/CFontDialog::GetFaceName
+- AFXDLGS/CFontDialog::GetSize
+- AFXDLGS/CFontDialog::GetStyleName
+- AFXDLGS/CFontDialog::GetWeight
+- AFXDLGS/CFontDialog::IsBold
+- AFXDLGS/CFontDialog::IsItalic
+- AFXDLGS/CFontDialog::IsStrikeOut
+- AFXDLGS/CFontDialog::IsUnderline
+- AFXDLGS/CFontDialog::m_cf
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +134,7 @@ class CFontDialog : public CCommonDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdlgs.h  
   
-##  <a name="a-namecfontdialoga--cfontdialogcfontdialog"></a><a name="cfontdialog"></a>CFontDialog::CFontDialog  
+##  <a name="cfontdialog"></a>CFontDialog::CFontDialog  
  建構 `CFontDialog` 物件。  
   
 ```  
@@ -161,7 +176,7 @@ CFontDialog(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&78;](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
-##  <a name="a-namedomodala--cfontdialogdomodal"></a><a name="domodal"></a>CFontDialog::DoModal  
+##  <a name="domodal"></a>CFontDialog::DoModal  
  呼叫此函式來顯示 Windows 通用字型對話方塊中，並允許使用者選擇一種字型。  
   
 ```  
@@ -181,7 +196,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>範例  
   請參閱範例[CFontDialog::CFontDialog](#cfontdialog)和[CFontDialog::GetColor](#getcolor)。  
   
-##  <a name="a-namegetcharformata--cfontdialoggetcharformat"></a><a name="getcharformat"></a>CFontDialog::GetCharFormat  
+##  <a name="getcharformat"></a>CFontDialog::GetCharFormat  
  擷取選取的字型的字元格式。  
   
 ```  
@@ -192,7 +207,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
  `cf`  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)結構，其中包含選取的字型的字元格式的相關資訊。  
   
-##  <a name="a-namegetcolora--cfontdialoggetcolor"></a><a name="getcolor"></a>CFontDialog::GetColor  
+##  <a name="getcolor"></a>CFontDialog::GetColor  
  呼叫此函式可擷取選取的字型色彩。  
   
 ```  
@@ -205,7 +220,7 @@ COLORREF GetColor() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&79;](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
-##  <a name="a-namegetcurrentfonta--cfontdialoggetcurrentfont"></a><a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
+##  <a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
  呼叫此函式可將目前選取字型的特性指派給成員[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
 ```  
@@ -224,7 +239,7 @@ void GetCurrentFont(LPLOGFONT lplf);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&80;](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
-##  <a name="a-namegetfacenamea--cfontdialoggetfacename"></a><a name="getfacename"></a>CFontDialog::GetFaceName  
+##  <a name="getfacename"></a>CFontDialog::GetFaceName  
  呼叫此函式可擷取選取的字型的字樣名稱。  
   
 ```  
@@ -237,7 +252,7 @@ CString GetFaceName() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&81;](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
-##  <a name="a-namegetsizea--cfontdialoggetsize"></a><a name="getsize"></a>CFontDialog::GetSize  
+##  <a name="getsize"></a>CFontDialog::GetSize  
  呼叫此函式可擷取選取字型的大小。  
   
 ```  
@@ -250,7 +265,7 @@ int GetSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&82;](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
-##  <a name="a-namegetstylenamea--cfontdialoggetstylename"></a><a name="getstylename"></a>CFontDialog::GetStyleName  
+##  <a name="getstylename"></a>CFontDialog::GetStyleName  
  呼叫此函式可擷取選取字型的樣式名稱。  
   
 ```  
@@ -263,7 +278,7 @@ CString GetStyleName() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&83;](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
-##  <a name="a-namegetweighta--cfontdialoggetweight"></a><a name="getweight"></a>CFontDialog::GetWeight  
+##  <a name="getweight"></a>CFontDialog::GetWeight  
  呼叫此函式可擷取所選字型的粗細。  
   
 ```  
@@ -279,7 +294,7 @@ int GetWeight() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&84;](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
-##  <a name="a-nameisbolda--cfontdialogisbold"></a><a name="isbold"></a>CFontDialog::IsBold  
+##  <a name="isbold"></a>CFontDialog::IsBold  
  呼叫此函式可判斷選取的字型是否為粗體。  
   
 ```  
@@ -292,7 +307,7 @@ BOOL IsBold() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&85;](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
-##  <a name="a-nameisitalica--cfontdialogisitalic"></a><a name="isitalic"></a>CFontDialog::IsItalic  
+##  <a name="isitalic"></a>CFontDialog::IsItalic  
  呼叫此函式來判斷是否選取的字型為斜體。  
   
 ```  
@@ -305,7 +320,7 @@ BOOL IsItalic() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView # x86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
-##  <a name="a-nameisstrikeouta--cfontdialogisstrikeout"></a><a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
+##  <a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
  呼叫此函式可判斷是否要將選取的字型顯示以刪除線。  
   
 ```  
@@ -318,7 +333,7 @@ BOOL IsStrikeOut() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&87;](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
-##  <a name="a-nameisunderlinea--cfontdialogisunderline"></a><a name="isunderline"></a>CFontDialog::IsUnderline  
+##  <a name="isunderline"></a>CFontDialog::IsUnderline  
  呼叫此函式可判斷選取的字型會加上底線。  
   
 ```  
@@ -331,7 +346,7 @@ BOOL IsUnderline() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&88;](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
-##  <a name="a-namemcfa--cfontdialogmcf"></a><a name="m_cf"></a>CFontDialog::m_cf  
+##  <a name="m_cf"></a>CFontDialog::m_cf  
  結構，其成員儲存對話方塊物件的特性。  
   
 ```  

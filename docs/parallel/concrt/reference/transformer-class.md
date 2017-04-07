@@ -9,7 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::transformer
+- transformer
+- AGENTS/concurrency::transformer
+- AGENTS/concurrency::transformer::transformer
+- AGENTS/concurrency::transformer::accept_message
+- AGENTS/concurrency::transformer::consume_message
+- AGENTS/concurrency::transformer::link_target_notification
+- AGENTS/concurrency::transformer::propagate_message
+- AGENTS/concurrency::transformer::propagate_to_any_targets
+- AGENTS/concurrency::transformer::release_message
+- AGENTS/concurrency::transformer::reserve_message
+- AGENTS/concurrency::transformer::resume_propagation
+- AGENTS/concurrency::transformer::send_message
+- AGENTS/concurrency::transformer::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: a857a88e33c023ee10db338b658b6652ae0e1a0c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 994cfbaa79594389d8d3b8390bfc46a5aa75a525
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="transformer-class"></a>transformer 類別
@@ -61,25 +73,25 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[transformer 建構函式](#ctor)|多載。 建構`transformer`傳訊區塊。|  
+|[轉換程式](#ctor)|多載。 建構`transformer`傳訊區塊。|  
 |[~ transformer 解構函式](#dtor)|終結`transformer`傳訊區塊。|  
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[accept_message 方法](#accept_message)|接受的訊息，這提供`transformer`傳訊區塊，將擁有權轉移給呼叫者。|  
-|[consume_message 方法](#consume_message)|會使用先前所提供訊息`transformer`和目標，將擁有權轉移給呼叫者所保留。|  
-|[link_target_notification 方法](#link_target_notification)|新的目標具有已連結到這會通知回撥`transformer`傳訊區塊。|  
-|[propagate_message 方法](#propagate_message)|以非同步方式傳遞訊息從`ISource`區塊至此`transformer`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。|  
-|[propagate_to_any_targets 方法](#propagate_to_any_targets)|在輸入訊息上執行轉換器函式。|  
-|[release_message 方法](#release_message)|釋放先前的訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|  
-|[reserve_message 方法](#reserve_message)|先前提供的這一則訊息會保留`transformer`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
-|[resume_propagation 方法](#resume_propagation)|釋放保留項目之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
-|[send_message 方法](#send_message)|以同步方式傳遞訊息從`ISource`區塊至此`transformer`傳訊區塊。 它會叫用`send`方法，由來源區塊呼叫時。|  
-|[supports_anonymous_source 方法](#supports_anonymous_source)|覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。 (覆寫[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
+|[accept_message](#accept_message)|接受的訊息，這提供`transformer`傳訊區塊，將擁有權轉移給呼叫者。|  
+|[consume_message](#consume_message)|會使用先前所提供訊息`transformer`和目標，將擁有權轉移給呼叫者所保留。|  
+|[link_target_notification](#link_target_notification)|新的目標具有已連結到這會通知回撥`transformer`傳訊區塊。|  
+|[propagate_message](#propagate_message)|以非同步方式傳遞訊息從`ISource`區塊至此`transformer`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。|  
+|[propagate_to_any_targets](#propagate_to_any_targets)|在輸入訊息上執行轉換器函式。|  
+|[release_message](#release_message)|釋放先前的訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|  
+|[reserve_message](#reserve_message)|先前提供的這一則訊息會保留`transformer`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|  
+|[resume_propagation](#resume_propagation)|釋放保留項目之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|  
+|[send_message](#send_message)|以同步方式傳遞訊息從`ISource`區塊至此`transformer`傳訊區塊。 它會叫用`send`方法，由來源區塊呼叫時。|  
+|[supports_anonymous_source](#supports_anonymous_source)|覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。 (覆寫[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -100,7 +112,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameacceptmessagea-acceptmessage"></a><a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a>accept_message 
 
  接受的訊息，這提供`transformer`傳訊區塊，將擁有權轉移給呼叫者。  
   
@@ -115,7 +127,7 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>傳回值  
  指標`message`物件，呼叫者現在會有的擁有權。  
   
-##  <a name="a-nameconsumemessagea-consumemessage"></a><a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a>consume_message 
 
  會使用先前所提供訊息`transformer`和目標，將擁有權轉移給呼叫者所保留。  
   
@@ -133,7 +145,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>備註  
  類似於`accept`，但呼叫一律置於`reserve`。  
   
-##  <a name="a-namelinktargetnotificationa-linktargetnotification"></a><a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a>link_target_notification 
 
  新的目標具有已連結到這會通知回撥`transformer`傳訊區塊。  
   
@@ -141,7 +153,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
  以非同步方式傳遞訊息從`ISource`區塊至此`transformer`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。  
   
@@ -161,7 +173,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>傳回值  
  A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
   
-##  <a name="a-namepropagatetoanytargetsa-propagatetoanytargets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
 
  在輸入訊息上執行轉換器函式。  
   
@@ -169,7 +181,7 @@ virtual message_status propagate_message(
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```  
   
-##  <a name="a-namereleasemessagea-releasemessage"></a><a name="release_message"></a>release_message 
+##  <a name="release_message"></a>release_message 
 
  釋放先前的訊息保留。  
   
@@ -181,7 +193,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity`的`message`物件被釋放。  
   
-##  <a name="a-namereservemessagea-reservemessage"></a><a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a>reserve_message 
 
  先前提供的這一則訊息會保留`transformer`傳訊區塊。  
   
@@ -199,7 +211,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>備註  
  之後`reserve`呼叫時，如果它傳回`true`，`consume`或`release`必須呼叫採取或釋放訊息的擁有權。  
   
-##  <a name="a-nameresumepropagationa-resumepropagation"></a><a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a>resume_propagation 
 
  釋放保留項目之後，請繼續傳播。  
   
@@ -207,7 +219,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  以同步方式傳遞訊息從`ISource`區塊至此`transformer`傳訊區塊。 它會叫用`send`方法，由來源區塊呼叫時。  
   
@@ -227,7 +239,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>傳回值  
  A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。  
   
@@ -238,7 +250,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>傳回值  
  `true`，因為區塊不會延後提供的訊息。  
   
-##  <a name="a-namectora-transformer"></a><a name="ctor"></a>轉換程式 
+##  <a name="ctor"></a>轉換程式 
 
  建構`transformer`傳訊區塊。  
   
@@ -298,7 +310,7 @@ transformer(
   
  型別`filter_method`是以簽章仿`bool (_Input const &)`由此叫用`transformer`傳訊區塊，以判斷它是否應該接受提供的訊息。  
   
-##  <a name="a-namedtora-transformer"></a><a name="dtor"></a>~ 轉換程式 
+##  <a name="dtor"></a>~ 轉換程式 
 
  終結`transformer`傳訊區塊。  
   
@@ -308,5 +320,5 @@ transformer(
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
- [呼叫類別](call-class.md)
+ [call 類別](call-class.md)
 

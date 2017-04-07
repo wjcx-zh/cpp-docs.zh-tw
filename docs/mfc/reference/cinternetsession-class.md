@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CInternetSession
+- AFXINET/CInternetSession
+- AFXINET/CInternetSession::CInternetSession
+- AFXINET/CInternetSession::Close
+- AFXINET/CInternetSession::EnableStatusCallback
+- AFXINET/CInternetSession::GetContext
+- AFXINET/CInternetSession::GetCookie
+- AFXINET/CInternetSession::GetCookieLength
+- AFXINET/CInternetSession::GetFtpConnection
+- AFXINET/CInternetSession::GetGopherConnection
+- AFXINET/CInternetSession::GetHttpConnection
+- AFXINET/CInternetSession::OnStatusCallback
+- AFXINET/CInternetSession::OpenURL
+- AFXINET/CInternetSession::SetCookie
+- AFXINET/CInternetSession::SetOption
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +124,7 @@ class CInternetSession : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxinet.h  
   
-##  <a name="a-namecinternetsessiona--cinternetsessioncinternetsession"></a><a name="cinternetsession"></a>CInternetSession::CInternetSession  
+##  <a name="cinternetsession"></a>CInternetSession::CInternetSession  
  此成員函式時，會呼叫`CInternetSession`建立物件。  
   
 ```  
@@ -162,7 +176,7 @@ CInternetSession(
 ### <a name="example"></a>範例  
   請參閱範例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="a-nameclosea--cinternetsessionclose"></a><a name="close"></a>CInternetSession::Close  
+##  <a name="close"></a>CInternetSession::Close  
  呼叫此成員函式，當您的應用程式已完成使用`CInternetSession`物件。  
   
 ```  
@@ -172,7 +186,7 @@ virtual void Close();
 ### <a name="example"></a>範例  
   請參閱範例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="a-nameenablestatuscallbacka--cinternetsessionenablestatuscallback"></a><a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
+##  <a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
  呼叫此成員函式會啟用狀態回撥。  
   
 ```  
@@ -195,7 +209,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
   
  若要以非同步方式處理任何作業，您必須建立自己的執行緒，或使用 MFC WinInet 函式。  
   
-##  <a name="a-namegetcontexta--cinternetsessiongetcontext"></a><a name="getcontext"></a>CInternetSession::GetContext  
+##  <a name="getcontext"></a>CInternetSession::GetContext  
  呼叫此成員函式，若要取得特定的應用程式工作階段內容值。  
   
 ```  
@@ -210,7 +224,7 @@ DWORD_PTR GetContext() const;
   
  如需非同步作業的詳細資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)。  
   
-##  <a name="a-namegetcookiea--cinternetsessiongetcookie"></a><a name="getcookie"></a>CInternetSession::GetCookie  
+##  <a name="getcookie"></a>CInternetSession::GetCookie  
  此成員函式實作的 Win32 函式的行為[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ```  
@@ -250,7 +264,7 @@ static BOOL GetCookie(
 ### <a name="remarks"></a>備註  
  在第二個多載，MFC 將 cookie 資料擷取至提供`CString`物件。  
   
-##  <a name="a-namegetcookielengtha--cinternetsessiongetcookielength"></a><a name="getcookielength"></a>CInternetSession::GetCookieLength  
+##  <a name="getcookielength"></a>CInternetSession::GetCookieLength  
  呼叫此成員函式可取得 cookie 儲存在緩衝區的長度。  
   
 ```  
@@ -272,7 +286,7 @@ static DWORD GetCookieLength(
 ### <a name="remarks"></a>備註  
  這個值由[GetCookie](#getcookie)。  
   
-##  <a name="a-namegetftpconnectiona--cinternetsessiongetftpconnection"></a><a name="getftpconnection"></a>Getftpconnection  
+##  <a name="getftpconnection"></a>Getftpconnection  
  呼叫此成員函式，建立 FTP 連接，並取得的指標`CFtpConnection`物件。  
   
 ```  
@@ -316,7 +330,7 @@ CFtpConnection* GetFtpConnection(
 ### <a name="example"></a>範例  
   請參閱範例[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="a-namegetgopherconnectiona--cinternetsessiongetgopherconnection"></a><a name="getgopherconnection"></a>Getgopherconnection  
+##  <a name="getgopherconnection"></a>Getgopherconnection  
  呼叫此成員函式，以建立新的 gopher 連線並取得的指標`CGopherConnection`物件。  
   
 ```  
@@ -346,7 +360,7 @@ CGopherConnection* GetGopherConnection(
 ### <a name="remarks"></a>備註  
  `GetGopherConnection`連接至 gopher 伺服器，以及建立並傳回指標`CGopherConnection`物件。 它不會執行任何伺服器上的特定作業。 如果您想要讀取或寫入資料，例如，您就必須執行這些作業以獨立步驟。 請參閱類別[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)， [CGopherFile](../../mfc/reference/cgopherfile-class.md)，和[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)有關搜尋的檔案，開啟檔案，並讀取或寫入檔案。 瀏覽 FTP 站台的相關資訊，請參閱成員函式[OpenURL](#openurl)。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)中執行一般 gopher 連接工作的步驟。  
   
-##  <a name="a-namegethttpconnectiona--cinternetsessiongethttpconnection"></a><a name="gethttpconnection"></a>Gethttpconnection  
+##  <a name="gethttpconnection"></a>Gethttpconnection  
  呼叫此成員函式，來建立 HTTP 連線，並取得的指標`CHttpConnection`物件。  
   
 ```  
@@ -387,7 +401,7 @@ CHttpConnection* GetHttpConnection(
 ### <a name="remarks"></a>備註  
  `GetHttpConnection`連接至 HTTP 伺服器，以及建立並傳回指標`CHttpConnection`物件。 它不會執行任何伺服器上的特定作業。 如果您想要查詢的 HTTP 標頭，例如，您必須執行這項作業在另一個步驟。 請參閱類別[CHttpConnection](../../mfc/reference/chttpconnection-class.md)和[CHttpFile](../../mfc/reference/chttpfile-class.md)您可以使用 HTTP 伺服器的連接來執行作業的相關資訊。 瀏覽 HTTP 站台的相關資訊，請參閱成員函式[OpenURL](#openurl)。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)中執行一般的 HTTP 連接工作的步驟。  
   
-##  <a name="a-nameonstatuscallbacka--cinternetsessiononstatuscallback"></a><a name="onstatuscallback"></a>CInternetSession::OnStatusCallback  
+##  <a name="onstatuscallback"></a>CInternetSession::OnStatusCallback  
  此成員函式會呼叫架構，以便啟用狀態回撥，且作業已暫止更新的狀態。  
   
 ```  
@@ -440,7 +454,7 @@ virtual void OnStatusCallback(
   
  如需非同步作業的詳細資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)。  
   
-##  <a name="a-nameopenurla--cinternetsessionopenurl"></a><a name="openurl"></a>Cinternetsession:: Openurl  
+##  <a name="openurl"></a>Cinternetsession:: Openurl  
  呼叫此成員函式將指定的要求傳送至 HTTP 伺服器，並允許用戶端指定其他的 RFC822 MIME 或連同要求一起傳送的 HTTP 標頭。  
   
 ```  
@@ -501,14 +515,14 @@ CStdioFile* OpenURL(
   
  若要使用特定的連接 (也就是特定通訊協定) 函式，例如寫入檔案時，您必須開啟工作階段，然後開啟特定種類的連線，再使用該連線所需的模式中開啟檔案。 請參閱`CInternetConnection`如需有關連接特有的函式。  
   
-##  <a name="a-nameoperatorhinterneta--cinternetsessionoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
+##  <a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
  您可以使用這個運算子來取得目前的網際網路工作階段的視窗控制代碼。  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="a-namesetcookiea--cinternetsessionsetcookie"></a><a name="setcookie"></a>CInternetSession::SetCookie  
+##  <a name="setcookie"></a>CInternetSession::SetCookie  
  設定指定之 url 的 cookie。  
   
 ```  
@@ -534,7 +548,7 @@ static BOOL SetCookie(
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息的行為[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetoptiona--cinternetsessionsetoption"></a><a name="setoption"></a>CInternetSession::SetOption  
+##  <a name="setoption"></a>CInternetSession::SetOption  
  呼叫此成員函式設定的網際網路工作階段選項。  
   
 ```  

@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleMessageFilter
+- AFXOLE/COleMessageFilter
+- AFXOLE/COleMessageFilter::COleMessageFilter
+- AFXOLE/COleMessageFilter::BeginBusyState
+- AFXOLE/COleMessageFilter::EnableBusyDialog
+- AFXOLE/COleMessageFilter::EnableNotRespondingDialog
+- AFXOLE/COleMessageFilter::EndBusyState
+- AFXOLE/COleMessageFilter::OnMessagePending
+- AFXOLE/COleMessageFilter::Register
+- AFXOLE/COleMessageFilter::Revoke
+- AFXOLE/COleMessageFilter::SetBusyReply
+- AFXOLE/COleMessageFilter::SetMessagePendingDelay
+- AFXOLE/COleMessageFilter::SetRetryReply
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +110,7 @@ class COleMessageFilter : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-namebeginbusystatea--colemessagefilterbeginbusystate"></a><a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
+##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
  呼叫此函式可開始忙錄狀態。  
   
 ```  
@@ -112,14 +124,14 @@ virtual void BeginBusyState();
   
  根據預設，架構，請輸入在閒置處理，這會由執行的忙碌狀態[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 雖然應用程式正在處理**ON_COMMANDUPDATEUI**閒置處理完成之後更新版本中，處理連入呼叫的通知。  
   
-##  <a name="a-namecolemessagefiltera--colemessagefiltercolemessagefilter"></a><a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
+##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
  建立 `COleMessageFilter` 物件。  
   
 ```  
 COleMessageFilter();
 ```  
   
-##  <a name="a-nameenablebusydialoga--colemessagefilterenablebusydialog"></a><a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
+##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
  啟用和停用 [忙碌] 對話方塊將訊息擱置延遲時間到期時，會顯示 (請參閱[SetRetryReply](#setretryreply)) OLE 呼叫期間。  
   
 ```  
@@ -130,7 +142,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
  *bEnableBusy*  
  指定是否啟用或停用 「 忙碌 」 的對話方塊。  
   
-##  <a name="a-nameenablenotrespondingdialoga--colemessagefilterenablenotrespondingdialog"></a><a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
+##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
  啟用和停用 「 沒有回應 」 對話方塊中，如果鍵盤或滑鼠訊息為擱置中會顯示 OLE 期間的呼叫與呼叫逾時。  
   
 ```  
@@ -141,7 +153,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
  *bEnableNotResponding*  
  指定是否啟用或停用 「 沒有回應 」 對話方塊。  
   
-##  <a name="a-nameendbusystatea--colemessagefilterendbusystate"></a><a name="endbusystate"></a>COleMessageFilter::EndBusyState  
+##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
  呼叫此函式來結束忙錄狀態。  
   
 ```  
@@ -155,7 +167,7 @@ virtual void EndBusyState();
   
  根據預設，架構，請輸入在閒置處理，這會由執行的忙碌狀態[CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)。 雖然應用程式正在處理`ON_UPDATE_COMMAND_UI`通知，來電閒置處理完成之後處理。  
   
-##  <a name="a-nameonmessagependinga--colemessagefilteronmessagepending"></a><a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
+##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
  OLE 呼叫正在進行時，處理訊息的架構所呼叫。  
   
 ```  
@@ -174,7 +186,7 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
   
  您必須註冊您的郵件篩選器透過呼叫[註冊](#register)之前可能會成為使用中。  
   
-##  <a name="a-nameregistera--colemessagefilterregister"></a><a name="register"></a>COleMessageFilter::Register  
+##  <a name="register"></a>COleMessageFilter::Register  
  訊息篩選條件會向 OLE 系統 Dll。  
   
 ```  
@@ -189,7 +201,7 @@ BOOL Register();
   
  架構的預設訊息篩選器會自動在初始化期間註冊及撤銷在終止。  
   
-##  <a name="a-namerevokea--colemessagefilterrevoke"></a><a name="revoke"></a>COleMessageFilter::Revoke  
+##  <a name="revoke"></a>COleMessageFilter::Revoke  
  撤銷先前註冊的呼叫所執行[註冊](#register)。  
   
 ```  
@@ -201,7 +213,7 @@ void Revoke();
   
  預設訊息篩選，建立並由架構自動註冊，也會自動撤銷。  
   
-##  <a name="a-namesetbusyreplya--colemessagefiltersetbusyreply"></a><a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
+##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
  此函式會將應用程式的 「 忙碌回覆。 」  
   
 ```  
@@ -225,7 +237,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
  根據預設，是忙碌的回覆**SERVERCALL_RETRYLATER**。 此回覆會造成呼叫的應用程式，以儘速重試呼叫。  
   
-##  <a name="a-namesetmessagependingdelaya--colemessagefiltersetmessagependingdelay"></a><a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
+##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
  判斷呼叫的應用程式的回應採取進一步的動作之前被呼叫的應用程式等候的時間長度。  
   
 ```  
@@ -239,7 +251,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ### <a name="remarks"></a>備註  
  此函式可搭配[SetRetryReply](#setretryreply)。  
   
-##  <a name="a-namesetretryreplya--colemessagefiltersetretryreply"></a><a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
+##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
  從被呼叫的應用程式收到忙碌的回應時，請判斷呼叫應用程式的動作。  
   
 ```  

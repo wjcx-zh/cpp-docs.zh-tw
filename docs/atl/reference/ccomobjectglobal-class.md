@@ -10,10 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComObjectGlobal
-- ATL::CComObjectGlobal<Base>
-- ATL::CComObjectGlobal
-- ATL.CComObjectGlobal
-- ATL.CComObjectGlobal<Base>
+- ATLCOM/ATL::CComObjectGlobal
+- ATLCOM/ATL::CComObjectGlobal::CComObjectGlobal
+- ATLCOM/ATL::CComObjectGlobal::AddRef
+- ATLCOM/ATL::CComObjectGlobal::QueryInterface
+- ATLCOM/ATL::CComObjectGlobal::Release
+- ATLCOM/ATL::CComObjectGlobal::m_hResFinalConstruct
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +95,7 @@ class CComObjectGlobal : public Base
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomobjectglobaladdref"></a><a name="addref"></a>CComObjectGlobal::AddRef  
+##  <a name="addref"></a>CComObjectGlobal::AddRef  
  物件的參考計數遞增 1。  
   
 ```
@@ -106,7 +108,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>備註  
  根據預設，`AddRef`呼叫**_Module::Lock**，其中**_Module**全域執行個體[CComModule](../../atl/reference/ccommodule-class.md)或從中衍生的類別。  
   
-##  <a name="a-nameccomobjectglobala--ccomobjectglobalccomobjectglobal"></a><a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
+##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
  建構函式。 呼叫`FinalConstruct`，然後設定[m_hResFinalConstruct](#m_hresfinalconstruct)至`HRESULT`傳回`FinalConstruct`。  
   
 ```
@@ -116,7 +118,7 @@ CComObjectGlobal(void* = NULL));
 ### <a name="remarks"></a>備註  
  如果您不具有衍生的基底類別從[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)，您必須提供自己`FinalConstruct`方法。 此解構函式會呼叫 `FinalRelease`。  
   
-##  <a name="a-namedtora--ccomobjectglobalccomobjectglobal"></a><a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
+##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
  解構函式。  
   
 ```
@@ -126,14 +128,14 @@ CComObjectGlobal();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源並呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)。  
   
-##  <a name="a-namemhresfinalconstructa--ccomobjectglobalmhresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
  包含`HRESULT`呼叫`FinalConstruct`在建構期間`CComObjectGlobal`物件。  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
-##  <a name="a-namequeryinterfacea--ccomobjectglobalqueryinterface"></a><a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
+##  <a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
  擷取要求的介面指標的指標。  
   
 ```
@@ -153,7 +155,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>備註  
  `QueryInterface` 只處理 COM 對應表格中的介面。  
   
-##  <a name="a-namereleasea--ccomobjectglobalrelease"></a><a name="release"></a>CComObjectGlobal::Release  
+##  <a name="release"></a>CComObjectGlobal::Release  
  1 的物件的參考計數遞減。  
   
 ```

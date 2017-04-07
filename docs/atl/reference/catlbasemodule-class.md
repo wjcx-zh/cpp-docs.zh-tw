@@ -9,9 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlBaseModule
-- ATL.CAtlBaseModule
 - CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule::CAtlBaseModule
+- ATLCORE/ATL::CAtlBaseModule::AddResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::GetHInstanceAt
+- ATLCORE/ATL::CAtlBaseModule::GetModuleInstance
+- ATLCORE/ATL::CAtlBaseModule::GetResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::SetResourceInstance
+- ATLCORE/ATL::CAtlBaseModule::m_bInitFailed
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +95,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcore.h  
   
-##  <a name="a-nameaddresourceinstancea--catlbasemoduleaddresourceinstance"></a><a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
+##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
  將資源執行個體加入至預存的控制代碼的清單。  
   
 ```
@@ -102,7 +109,7 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>傳回值  
  如果資源已成功則傳回 true，加入 false 否則。  
   
-##  <a name="a-namecatlbasemodulea--catlbasemodulecatlbasemodule"></a><a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
+##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
  建構函式。  
   
 ```
@@ -112,7 +119,7 @@ CAtlBaseModule() throw();
 ### <a name="remarks"></a>備註  
  建立 `CAtlBaseModule`。  
   
-##  <a name="a-namegethinstanceata--catlbasemodulegethinstanceat"></a><a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
+##  <a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
  傳回指定的資源執行個體的控制代碼。  
   
 ```
@@ -126,7 +133,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
 ### <a name="return-value"></a>傳回值  
  如果沒有對應的資源執行個體，傳回的控制代碼資源的執行個體，或 NULL。  
   
-##  <a name="a-namegetmoduleinstancea--catlbasemodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
  傳回從模組執行個體`CAtlBaseModule`物件。  
   
 ```
@@ -136,7 +143,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="return-value"></a>傳回值  
  傳回模組的執行個體。  
   
-##  <a name="a-namegetresourceinstancea--catlbasemodulegetresourceinstance"></a><a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>CAtlBaseModule::GetResourceInstance  
  傳回的資源執行個體。  
   
 ```
@@ -146,7 +153,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="return-value"></a>傳回值  
  傳回的資源執行個體。  
   
-##  <a name="a-namembinitfaileda--catlbasemodulembinitfailed"></a><a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
+##  <a name="m_binitfailed"></a>CAtlBaseModule::m_bInitFailed  
  變數，指出是否模組初始化失敗。  
   
 ```
@@ -156,7 +163,7 @@ static bool m_bInitFailed;
 ### <a name="remarks"></a>備註  
  如果模組初始化，false 如果它無法初始化，則為 true。  
   
-##  <a name="a-nameremoveresourceinstancea--catlbasemoduleremoveresourceinstance"></a><a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
+##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
  從預存的控制代碼的清單中移除資源的執行個體。  
   
 ```
@@ -170,7 +177,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
 ### <a name="return-value"></a>傳回值  
  如果資源程式已成功移除，則為 false，則傳回 true。  
   
-##  <a name="a-namesetresourceinstancea--catlbasemodulesetresourceinstance"></a><a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
+##  <a name="setresourceinstance"></a>CAtlBaseModule::SetResourceInstance  
  設定的資源執行個體`CAtlBaseModule`物件。  
   
 ```

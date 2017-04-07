@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsView
+- AFXWINFORMS/CWinFormsView
+- AFXWINFORMS/CWinFormsView::CWinFormsView
+- AFXWINFORMS/CWinFormsView::GetControl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +87,7 @@ class CWinFormsView : public CView;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxwinforms.h  
   
-##  <a name="a-namecwinformsviewa--cwinformsviewcwinformsview"></a><a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
+##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
  建構 `CWinFormsView` 物件。  
   
 ```  
@@ -102,7 +105,7 @@ CWinFormsView(System::Type^ pManagedViewType);
   
  [!code-cpp[NVC_MFC_Managed #&2;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="a-namegetcontrola--cwinformsviewgetcontrol"></a><a name="getcontrol"></a>CWinFormsView::GetControl  
+##  <a name="getcontrol"></a>CWinFormsView::GetControl  
  擷取 Windows Form 控制項的指標。  
   
 ```  
@@ -115,7 +118,7 @@ System::Windows::Forms::Control^ GetControl() const;
 ### <a name="remarks"></a>備註  
  如需如何使用 Windows Form 的範例，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameoperatorcontrola--cwinformsviewoperator-control"></a><a name="operator_control"></a>CWinFormsView::operator 控制 ^  
+##  <a name="operator_control"></a>CWinFormsView::operator 控制 ^  
  將型別轉換成 Windows Form 控制項的指標。  
   
 ```  

@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
+- AFXOLE/COleDocObjectItem
+- AFXOLE/COleDocObjectItem::COleDocObjectItem
+- AFXOLE/COleDocObjectItem::DoDefaultPrinting
+- AFXOLE/COleDocObjectItem::ExecCommand
+- AFXOLE/COleDocObjectItem::GetActiveView
+- AFXOLE/COleDocObjectItem::GetPageCount
+- AFXOLE/COleDocObjectItem::OnPreparePrinting
+- AFXOLE/COleDocObjectItem::OnPrint
+- AFXOLE/COleDocObjectItem::QueryCommand
+- AFXOLE/COleDocObjectItem::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +112,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-namecoledocobjectitema--coledocobjectitemcoledocobjectitem"></a><a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
  呼叫此成員函式來初始化`COleDocObjectItem`物件。  
   
 ```  
@@ -113,7 +123,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  指標`COleDocument`做為主動式文件容器的物件。 這個參數必須是**NULL**啟用**IMPLEMENT_SERIALIZE**。 通常將 OLE 項目建構與非**NULL**文件指標。  
   
-##  <a name="a-namedodefaultprintinga--coledocobjectitemdodefaultprinting"></a><a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
  使用預設設定的文件的架構所呼叫。  
   
 ```  
@@ -129,7 +139,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  指標[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)物件，描述列印工作。  
   
-##  <a name="a-nameexeccommanda--coledocobjectitemexeccommand"></a><a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
  呼叫此成員函式，來執行命令，使用者所指定。  
   
 ```  
@@ -166,7 +176,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>備註  
  `pguidCmdGroup`和`nCmdID`參數會共同唯一識別要叫用的命令。 `nCmdExecOpt`參數會指定要採取的確切動作。  
   
-##  <a name="a-namegetactiveviewa--coledocobjectitemgetactiveview"></a><a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
  若要取得的指標，此成員函式的呼叫`IOleDocumentView`目前使用中檢視的介面。  
   
 ```  
@@ -179,7 +189,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>備註  
  針對傳回的參考計數`IOleDocumentView`指標這個函式傳回之前不會遞增。  
   
-##  <a name="a-namegetpagecounta--coledocobjectitemgetpagecount"></a><a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
  呼叫此成員函式擷取的文件中的頁數。  
   
 ```  
@@ -198,7 +208,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="a-nameonprepareprintinga--coledocobjectitemonprepareprinting"></a><a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
  準備進行列印的文件架構會呼叫此成員函式。  
   
 ```  
@@ -221,7 +231,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="a-nameonprinta--coledocobjectitemonprint"></a><a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
  若要列印的文件架構會呼叫此成員函式。  
   
 ```  
@@ -241,7 +251,7 @@ static void OnPrint(
  `bPrintAll`  
  指定是否要列印整份文件。  
   
-##  <a name="a-namequerycommanda--coledocobjectitemquerycommand"></a><a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
  查詢使用者介面事件所產生之一或多個命令的狀態。  
   
 ```  
@@ -271,7 +281,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)方法中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namereleasea--coledocobjectitemrelease"></a><a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>COleDocObjectItem::Release  
  釋放連接至 OLE 連結的項目並將它關閉，如果它已開啟。 不會終結的用戶端項目。  
   
 ```  

@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::CMFCRibbonFontComboBox
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::BuildFonts
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetCharSet
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetFontDesc
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetFontType
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::GetPitchAndFamily
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::RebuildFonts
+- AFXRIBBONCOMBOBOX/CMFCRibbonFontComboBox::SetFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +104,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 ## <a name="requirements"></a>需求  
  **標頭︰** afxRibbonComboBox.h  
   
-##  <a name="a-namebuildfontsa--cmfcribbonfontcomboboxbuildfonts"></a><a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
+##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
  填入下拉式方塊，在功能區中的字型。  
   
 ```  
@@ -115,7 +124,7 @@ void BuildFonts(
  [in] `nPitchAndFamily`  
  指定的頻率和新增的字型系列。  
   
-##  <a name="a-namecmfcribbonfontcomboboxa--cmfcribbonfontcomboboxcmfcribbonfontcombobox"></a><a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
+##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  建構並初始化[CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)物件。  
   
 ```  
@@ -148,7 +157,7 @@ CMFCRibbonFontComboBox(
   
  如需有關有效的字元集，您可以指派給`nCharSet,`和有效的值指派給`nPitchAndFamily`，請參閱[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 文件中。  
   
-##  <a name="a-namegetfontdesca--cmfcribbonfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -162,7 +171,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namerebuildfontsa--cmfcribbonfontcomboboxrebuildfonts"></a><a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
+##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
  填入下拉式方塊的字型功能區上的先前指定的字型類型、 字元集和音調和系列。  
   
 ```  
@@ -172,7 +181,7 @@ void RebuildFonts();
 ### <a name="remarks"></a>備註  
  您可以指定字型類型、 字元集，以及要包含在功能區字型下拉式方塊中的字型系列和方塊中[建構函式](#cmfcribbonfontcombobox)對於此類別，或藉由呼叫[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)。  
   
-##  <a name="a-namesetfonta--cmfcribbonfontcomboboxsetfont"></a><a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
+##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
  在下拉式方塊中選取指定的字型。  
   
 ```  
@@ -197,7 +206,7 @@ BOOL SetFont(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetcharseta--cmfcribbonfontcomboboxgetcharset"></a><a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
+##  <a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
  傳回指定的字元集。  
   
 ```  
@@ -209,7 +218,7 @@ BYTE GetCharSet() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetfonttypea--cmfcribbonfontcomboboxgetfonttype"></a><a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
+##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
  傳回要在下拉式方塊中顯示的字型類型。 有效的選項為 DEVICE_FONTTYPE、RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE，或任何位元組合。  
   
 ```  
@@ -221,7 +230,7 @@ int GetFontType() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetpitchandfamilya--cmfcribbonfontcomboboxgetpitchandfamily"></a><a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
+##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
  傳回在下拉式方塊中顯示之字型的字距和系列。  
   
 ```  

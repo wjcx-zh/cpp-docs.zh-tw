@@ -9,7 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::structured_task_group
+- structured_task_group
+- PPL/concurrency::structured_task_group
+- PPL/concurrency::structured_task_group::structured_task_group
+- PPL/concurrency::structured_task_group::cancel
+- PPL/concurrency::structured_task_group::is_canceling
+- PPL/concurrency::structured_task_group::run
+- PPL/concurrency::structured_task_group::run_and_wait
+- PPL/concurrency::structured_task_group::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: ef20ff7fef8683cec4a3856c80c09846aa69a89a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a1817080506150a8a25918988e18b76dd7a04def
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group 類別
@@ -54,18 +61,18 @@ class structured_task_group;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[structured_task_group 建構函式](#ctor)|多載。 建構新`structured_task_group`物件。|  
+|[structured_task_group](#ctor)|多載。 建構新`structured_task_group`物件。|  
 |[~ structured_task_group 解構函式](#dtor)|終結 `structured_task_group` 物件。 您應該呼叫`wait`或`run_and_wait`物件解構函式執行之前的方法，除非執行解構函式可能是堆疊回溯，因為例外狀況。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[cancel 方法](#cancel)|會盡力嘗試取消工作，這個工作群組為根目錄的子樹狀結構。 排定的工作群組上的每項工作將會取得取消間接的話。|  
-|[is_canceling 方法](#is_canceling)|通知呼叫端工作群組是目前在取消作業。 這不一定表示，`cancel`上呼叫方法`structured_task_group`物件 (雖然這類確實符合此方法以傳回`true`)。 它可能是因為，`structured_task_group`物件正在執行內嵌和工作群組，進一步設定工作樹狀結構中已取消。 例如這些位置的情況下，執行階段可以判斷事先取消作業將會流經此`structured_task_group`物件，`true`也會傳回。|  
-|[run 方法](#run)|多載。 排程的工作上`structured_task_group`物件。 呼叫端管理的存留期間`task_handle`物件傳入`_Task_handle`參數。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。|  
-|[run_and_wait 方法](#run_and_wait)|多載。 排程的工作上呼叫的內容要執行的內嵌的協助`structured_task_group`完整取消支援的物件。 如果`task_handle`物件做為參數傳遞`run_and_wait`，呼叫端會負責管理的存留期`task_handle`物件。 函式接著會等候直到所有處理`structured_task_group`物件已完成或已取消。|  
-|[wait 方法](#wait)|等候所有處理`structured_task_group`已完成或取消。|  
+|[[取消]](#cancel)|會盡力嘗試取消工作，這個工作群組為根目錄的子樹狀結構。 排定的工作群組上的每項工作將會取得取消間接的話。|  
+|[is_canceling](#is_canceling)|通知呼叫端工作群組是目前在取消作業。 這不一定表示，`cancel`上呼叫方法`structured_task_group`物件 (雖然這類確實符合此方法以傳回`true`)。 它可能是因為，`structured_task_group`物件正在執行內嵌和工作群組，進一步設定工作樹狀結構中已取消。 例如這些位置的情況下，執行階段可以判斷事先取消作業將會流經此`structured_task_group`物件，`true`也會傳回。|  
+|[run](#run)|多載。 排程的工作上`structured_task_group`物件。 呼叫端管理的存留期間`task_handle`物件傳入`_Task_handle`參數。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。|  
+|[run_and_wait](#run_and_wait)|多載。 排程的工作上呼叫的內容要執行的內嵌的協助`structured_task_group`完整取消支援的物件。 如果`task_handle`物件做為參數傳遞`run_and_wait`，呼叫端會負責管理的存留期`task_handle`物件。 函式接著會等候直到所有處理`structured_task_group`物件已完成或已取消。|  
+|[等候](#wait)|等候所有處理`structured_task_group`已完成或取消。|  
   
 ## <a name="remarks"></a>備註  
  有嚴重的使用方式的限制數目`structured_task_group`才能獲得的效能物件︰  
@@ -88,7 +95,7 @@ class structured_task_group;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namecancela-cancel"></a><a name="cancel"></a>[取消] 
+##  <a name="cancel"></a>[取消] 
 
  會盡力嘗試取消工作，這個工作群組為根目錄的子樹狀結構。 排定的工作群組上的每項工作將會取得取消間接的話。  
   
@@ -99,7 +106,7 @@ void cancel();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[取消](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。  
   
-##  <a name="a-nameiscancelinga-iscanceling"></a><a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a>is_canceling 
 
  通知呼叫端工作群組是目前在取消作業。 這不一定表示，`cancel`上呼叫方法`structured_task_group`物件 (雖然這類確實符合此方法以傳回`true`)。 它可能是因為，`structured_task_group`物件正在執行內嵌和工作群組，進一步設定工作樹狀結構中已取消。 例如這些位置的情況下，執行階段可以判斷事先取消作業將會流經此`structured_task_group`物件，`true`也會傳回。  
   
@@ -113,7 +120,7 @@ bool is_canceling();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[取消](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。  
   
-##  <a name="a-nameruna-run"></a><a name="run"></a>執行 
+##  <a name="run"></a>執行 
 
  排程的工作上`structured_task_group`物件。 呼叫端管理的存留期間`task_handle`物件傳入`_Task_handle`參數。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。  
   
@@ -145,7 +152,7 @@ void run(
   
  擲回[invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)如果工作處理的例外狀況提供`_Task_handle`到透過工作群組物件的參數已排定`run`方法已經沒有介入呼叫`wait`或`run_and_wait`該工作群組上的方法。  
   
-##  <a name="a-namerunandwaita-runandwait"></a><a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a>run_and_wait 
 
  排程的工作上呼叫的內容要執行的內嵌的協助`structured_task_group`完整取消支援的物件。 如果`task_handle`物件做為參數傳遞`run_and_wait`，呼叫端會負責管理的存留期`task_handle`物件。 函式接著會等候直到所有處理`structured_task_group`物件已完成或已取消。  
   
@@ -179,7 +186,7 @@ task_group_status run_and_wait(const _Function& _Func);
   
  在非例外狀況的執行路徑中，您有呼叫這個方法的託管或`wait`方法的解構函式之前`structured_task_group`執行。  
   
-##  <a name="a-namectora-structuredtaskgroup"></a><a name="ctor"></a>structured_task_group 
+##  <a name="ctor"></a>structured_task_group 
 
  建構新`structured_task_group`物件。  
   
@@ -196,7 +203,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>備註  
  使用取消語彙基元的建構函式會建立 `structured_task_group`，當與語彙基元相關聯的來源取消時，它也會一併取消。 提供明確的取消語彙基元也會隔離無法參與具有不同的語彙基元或沒有語彙基元之父群組的隱含取消此結構化的工作群組。  
   
-##  <a name="a-namedtora-structuredtaskgroup"></a><a name="dtor"></a>~ structured_task_group 
+##  <a name="dtor"></a>~ structured_task_group 
 
  終結 `structured_task_group` 物件。 您應該呼叫`wait`或`run_and_wait`物件解構函式執行之前的方法，除非執行解構函式可能是堆疊回溯，因為例外狀況。  
   
@@ -207,7 +214,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>備註  
  如果解構函式而執行的一般執行 （例如，沒有堆疊回溯，因為例外狀況） 而且`wait`或`run_and_wait`方法呼叫、 解構函式可能會擲回[missing_wait](missing-wait-class.md)例外狀況。  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>等候 
+##  <a name="wait"></a>等候 
 
  等候所有處理`structured_task_group`已完成或取消。  
   

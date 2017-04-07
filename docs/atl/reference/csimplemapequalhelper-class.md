@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualKey
+- ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +74,7 @@ class CSimpleMapEqualHelper
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsimpcoll.h  
   
-##  <a name="a-nameisequalkeya--csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
+##  <a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
  測試兩個索引鍵相等。  
   
 ```
@@ -88,7 +91,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="return-value"></a>傳回值  
  如果索引鍵相等，false 否則傳回 true。  
   
-##  <a name="a-nameisequalvaluea--csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
+##  <a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
  測試兩個值相等。  
   
 ```

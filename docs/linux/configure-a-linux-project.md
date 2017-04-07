@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: b110994cab92d2151f63912d2b08af56059b82d7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1683c03c522b0b332ced9e93188c65e996ac633d
+ms.openlocfilehash: ec7ec2a7f5f0393f00efb6d662494e7be2a3f696
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="copy-sources"></a>複製來源
 建置時，會將開發電腦上的來源檔案複製到 Linux 電腦，並在該處進行編譯。  根據預設，Visual Studio 專案中的所有來源都會複製到上方設定中所設定的位置。  不過，也可以在清單中新增其他來源，或者完全關閉複製來源，後者是 Makefile 專案的預設值。
 
-* [要複製的來源] 決定將哪些來源複製到遠端電腦。  根據預設，**@(SourcesToCopyRemotely)** 會預設為專案中的所有檔案。
+* [要複製的來源] 決定將哪些來源複製到遠端電腦。  根據預設，**@(SourcesToCopyRemotely)** 預設為專案中所有的原始程式碼檔案，但不包括任何資產/資源檔案，例如影像。
 
 * [複製來源] 可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
 

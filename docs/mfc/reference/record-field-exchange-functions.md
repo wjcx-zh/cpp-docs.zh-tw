@@ -9,7 +9,36 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros
+- AFXDB/RFX_Binary
+- AFXDB/RFX_Bool
+- AFXDB/RFX_Byte
+- AFXDB/RFX_Date
+- AFXDB/RFX_Double
+- AFXDB/RFX_Int
+- AFXDB/RFX_Long
+- AFXDB/RFX_LongBinary
+- AFXDB/RFX_Single
+- AFXDB/RFX_Text
+- AFXDB/RFX_Binary_Bulk
+- AFXDB/RFX_Bool_Bulk
+- AFXDB/RFX_Byte_Bulk
+- AFXDB/RFX_Date_Bulk
+- AFXDB/RFX_Double_Bulk
+- AFXDB/RFX_Int_Bulk
+- AFXDB/RFX_Long_Bulk
+- AFXDB/RFX_Single_Bulk
+- AFXDB/RFX_Text_Bulk
+- AFXDB/DFX_Binary
+- AFXDB/DFX_Bool
+- AFXDB/DFX_Byte
+- AFXDB/DFX_Currency
+- AFXDB/DFX_DateTime
+- AFXDB/DFX_Double
+- AFXDB/DFX_Long
+- AFXDB/DFX_LongBinary
+- AFXDB/DFX_Short
+- AFXDB/DFX_Single
+- AFXDB/DFX_Text
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +141,7 @@ ms.lasthandoff: 02/24/2017
 
  =============================================
 
-## <a name="a-namerfxbinarya--rfxbinary"></a><a name="rfx_binary"></a>RFX_Binary
+## <a name="rfx_binary"></a>RFX_Binary
 欄位資料成員之間傳送的位元組陣列`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_BINARY**， **SQL_VARBINARY**，或**SQL_LONGVARBINARY**。  
   
 ### <a name="syntax"></a>語法  
@@ -147,7 +176,7 @@ void RFX_Binary(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxboola--rfxbool"></a><a name="rfx_bool"></a>RFX_Bool
+## <a name="rfx_bool"></a>RFX_Bool
 布林值的資料傳輸的欄位資料成員之間`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_BIT**。  
   
 ### <a name="syntax"></a>語法  
@@ -175,7 +204,7 @@ void RFX_Bool(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxbytea--rfxbyte"></a><a name="rfx_byte"></a>RFX_Byte
+## <a name="rfx_byte"></a>RFX_Byte
 欄位資料成員之間傳輸單一位元組`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_TINYINT**。  
   
 ### <a name="syntax"></a>語法  
@@ -203,7 +232,7 @@ void RFX_Byte(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxdatea--rfxdate"></a><a name="rfx_date"></a>RFX_Date
+## <a name="rfx_date"></a>RFX_Date
 傳輸`CTime`或**TIMESTAMP_STRUCT**之間的欄位資料成員的資料`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_DATE**， **SQL_TIME**，或**SQL_TIMESTAMP**。  
   
 ### <a name="syntax"></a>語法  
@@ -248,7 +277,7 @@ void RFX_Date(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxdoublea--rfxdouble"></a><a name="rfx_double"></a>RFX_Double
+## <a name="rfx_double"></a>RFX_Double
 傳輸**雙浮點**之間的欄位資料成員的資料`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_DOUBLE**。  
   
 ### <a name="syntax"></a>語法  
@@ -276,7 +305,7 @@ void RFX_Double(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxinta--rfxint"></a><a name="RFX_Int"></a>RFX_Int
+## <a name="RFX_Int"></a>RFX_Int
 整數資料傳輸的欄位資料成員之間`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_SMALLINT**。  
   
 ### <a name="syntax"></a>語法  
@@ -304,7 +333,7 @@ void RFX_Int(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxlonga--rfxlong"></a><a name="RFX_Long"></a>RFX_Long
+## <a name="RFX_Long"></a>RFX_Long
 長整數資料傳輸的欄位資料成員之間`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_INTEGER**。  
   
 ### <a name="syntax"></a>語法  
@@ -333,7 +362,7 @@ value );
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
   
-## <a name="a-namerfxlongbinarya--rfxlongbinary"></a><a name="RFX_LongBinary"></a>RFX_LongBinary
+## <a name="RFX_LongBinary"></a>RFX_LongBinary
 使用類別的二進位大型物件 (BLOB) 資料傳輸[CLongBinary](clongbinary-class.md)之間的欄位資料成員`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_LONGVARBINARY**或**SQL_LONGVARCHAR**。  
   
 ### <a name="syntax"></a>語法  
@@ -361,7 +390,7 @@ void RFX_LongBinary(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxsinglea--rfxsingle"></a><a name="rfx_single"></a>RFX_Single
+## <a name="rfx_single"></a>RFX_Single
 浮點數的資料傳輸的欄位資料成員之間`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_REAL**。  
   
 ### <a name="syntax"></a>語法  
@@ -390,7 +419,7 @@ void RFX_Single(
  **標頭︰** afxdb.h  
   
 
-## <a name="a-namerfxtexta--rfxtext"></a><a name="rfx_text"></a>RFX_Text
+## <a name="rfx_text"></a>RFX_Text
 傳輸`CString`之間的欄位資料成員的資料`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_LONGVARCHAR**， **SQL_CHAR**， **SQL_VARCHAR**， **SQL_DECIMAL**，或**SQL_NUMERIC**。  
   
 ### <a name="syntax"></a>語法  
@@ -452,7 +481,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
  **標頭︰** afxdb.h  
 
 
-## <a name="a-namerfxbinarybulka--rfxbinarybulk"></a><a name="rfx_binary_Bulk"></a>RFX_Binary_Bulk
+## <a name="rfx_binary_Bulk"></a>RFX_Binary_Bulk
 從 ODBC 資料來源的資料行的多個資料列的位元組資料傳輸至對應陣列`CRecordset`-衍生物件。  
   
 ### <a name="syntax"></a>語法  
@@ -498,7 +527,7 @@ void RFX_Binary_Bulk(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxboolbulka--rfxboolbulk"></a><a name="rfx_bool_Bulk"></a>RFX_Bool_Bulk
+## <a name="rfx_bool_Bulk"></a>RFX_Bool_Bulk
 將布林值資料的多個資料列從 ODBC 資料來源的資料行傳送至對應陣列`CRecordset`-衍生物件。  
   
 ### <a name="syntax"></a>語法  
@@ -540,7 +569,7 @@ void RFX_Bool_Bulk(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxbytebulka--rfxbytebulk"></a><a name="rfx_byte_Bulk"></a>RFX_Byte_Bulk
+## <a name="rfx_byte_Bulk"></a>RFX_Byte_Bulk
 從 ODBC 資料來源的資料行的多個資料列的單一位元組傳輸至對應陣列`CRecordset`-衍生物件。  
   
 ### <a name="syntax"></a>語法  
@@ -582,7 +611,7 @@ void RFX_Byte_Bulk(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
   
-## <a name="a-namerfxdatebulka--rfxdatebulk"></a><a name="rfx_date_Bulk"></a>RFX_Date_Bulk
+## <a name="rfx_date_Bulk"></a>RFX_Date_Bulk
 傳送多個資料列的**TIMESTAMP_STRUCT**從 ODBC 資料來源的資料行的資料至對應陣列`CRecordset`-衍生物件。  
   
 ### <a name="syntax"></a>語法  
@@ -624,7 +653,7 @@ void RFX_Date_Bulk(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxdoublebulka--rfxdoublebulk"></a><a name="rfx_double_Bulk"></a>RFX_Double_Bulk
+## <a name="rfx_double_Bulk"></a>RFX_Double_Bulk
 從 ODBC 資料來源的資料行的多個資料列的雙精確度浮點數資料傳輸至對應陣列`CRecordset`-衍生物件。  
   
 ### <a name="syntax"></a>語法  
@@ -666,7 +695,7 @@ void RFX_Double_Bulk(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxintbulka--rfxintbulk"></a><a name="RFX_Int_Bulk"></a>RFX_Int_Bulk
+## <a name="RFX_Int_Bulk"></a>RFX_Int_Bulk
 整數資料傳輸的欄位資料成員之間`CRecordset`物件和資料行上的資料來源的 ODBC 類型的記錄**SQL_SMALLINT**。  
   
 ### <a name="syntax"></a>語法  
@@ -694,7 +723,7 @@ void RFX_Int(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxlongbulka--rfxlongbulk"></a><a name="RFX_Long_Bulk"></a>RFX_Long_Bulk
+## <a name="RFX_Long_Bulk"></a>RFX_Long_Bulk
 從 ODBC 資料來源的資料行的多個資料列的長整數資料傳輸至對應陣列`CRecordset`-衍生物件。  
   
 ### <a name="syntax"></a>語法  
@@ -736,7 +765,7 @@ void RFX_Long_Bulk(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namerfxsinglebulka--rfxsinglebulk"></a><a name="rfx_single_Bulk"></a>RFX_Single_Bulk
+## <a name="rfx_single_Bulk"></a>RFX_Single_Bulk
 從 ODBC 資料來源的資料行的多個資料列的浮點數資料傳輸至對應陣列`CRecordset`-衍生物件。  
   
 ### <a name="syntax"></a>語法  
@@ -779,7 +808,7 @@ void RFX_Single_Bulk(
  **標頭︰** afxdb.h  
   
 
-## <a name="a-namerfxtextbulka--rfxtextbulk"></a><a name="rfx_text_Bulk"></a>RFX_Text_Bulk
+## <a name="rfx_text_Bulk"></a>RFX_Text_Bulk
 將字元資料的多個資料列從 ODBC 資料來源的資料行傳送至對應陣列`CRecordset`-衍生物件。  
   
 ### <a name="syntax"></a>語法  
@@ -840,7 +869,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdb.h  
 
-## <a name="a-namedfxbinarya--dfxbinary"></a><a name="dfx_binary"></a>DFX_Binary
+## <a name="dfx_binary"></a>DFX_Binary
 欄位資料成員之間傳送的位元組陣列[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -883,7 +912,7 @@ void AFXAPI DFX_Binary(
  **標頭︰** afxdao.h  
   
 
-## <a name="a-namedfxboola--dfxbool"></a><a name="dfx_bool"></a>DFX_Bool
+## <a name="dfx_bool"></a>DFX_Bool
 布林值的資料傳輸的欄位資料成員之間[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -921,7 +950,7 @@ void AFXAPI DFX_Bool(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
 
-## <a name="a-namedfxbytea--dfxbyte"></a><a name="dfx_byte"></a>DFX_Byte
+## <a name="dfx_byte"></a>DFX_Byte
 欄位資料成員之間傳輸單一位元組[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -959,7 +988,7 @@ void AFXAPI DFX_Byte(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
 
-## <a name="a-namedfxcurrencya--dfxcurrency"></a><a name="dfx_currency"></a>DFX_Currency
+## <a name="dfx_currency"></a>DFX_Currency
 貨幣資料的欄位資料成員之間傳輸[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -997,7 +1026,7 @@ void AFXAPI DFX_Currency(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
 
-## <a name="a-namedfxdatetimea--dfxdatetime"></a><a name="dfx_datetime"></a>DFX_DateTime
+## <a name="dfx_datetime"></a>DFX_DateTime
 將日期和時間資料傳輸的欄位資料成員之間[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -1038,7 +1067,7 @@ void AFXAPI DFX_DateTime(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
 
-## <a name="a-namedfxdoublea--dfxdouble"></a><a name="dfx_double"></a>DFX_Double
+## <a name="dfx_double"></a>DFX_Double
 傳輸**雙浮點**之間的欄位資料成員的資料[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -1076,7 +1105,7 @@ void AFXAPI DFX_Double(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
 
-## <a name="a-namedfxlonga--dfxlong"></a><a name="dfx_long"></a>DFX_Long
+## <a name="dfx_long"></a>DFX_Long
 長整數資料傳輸的欄位資料成員之間[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -1115,7 +1144,7 @@ void AFXAPI DFX_Long(
  **標頭︰** afxdao.h  
   
 
-## <a name="a-namedfxlongbinarya--dfxlongbinary"></a><a name="dfx_longbinary"></a>DFX_LongBinary
+## <a name="dfx_longbinary"></a>DFX_LongBinary
 **重要**建議您改用[DFX_Binary](#dfx_binary)而不是此函式。  
   
 ### <a name="syntax"></a>語法  
@@ -1157,7 +1186,7 @@ void AFXAPI DFX_LongBinary(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
 
-## <a name="a-namedfxshorta--dfxshort"></a><a name="dfx_short"></a>DFX_Short
+## <a name="dfx_short"></a>DFX_Short
 傳輸簡短的欄位資料成員之間的整數資料[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -1199,7 +1228,7 @@ void AFXAPI DFX_Short(
  **標頭︰** afxdao.h  
   
 
-## <a name="a-namedfxsinglea--dfxsingle"></a><a name="dfx_single"></a>DFX_Single
+## <a name="dfx_single"></a>DFX_Single
 浮點數的資料傳輸的欄位資料成員之間[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  
@@ -1237,7 +1266,7 @@ void AFXAPI DFX_Single(
 ### <a name="requirements"></a>需求  
  **標頭︰** afxdao.h  
 
-## <a name="a-namedfxtexta--dfxtext"></a><a name="dfx_text"></a>DFX_Text
+## <a name="dfx_text"></a>DFX_Text
 傳輸`CString`之間的欄位資料成員的資料[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。  
   
 ### <a name="syntax"></a>語法  

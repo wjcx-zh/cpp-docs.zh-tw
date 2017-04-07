@@ -10,7 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CBaseKeyFrame
-- afxanimationcontroller/CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::CBaseKeyFrame
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::AddToStoryboard
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::GetAnimationKeyframe
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::IsAdded
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::IsKeyframeAtOffset
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_bAdded
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_bIsKeyframeAtOffset
+- AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_keyframe
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +93,7 @@ class CBaseKeyFrame : public CObject;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtostoryboarda--cbasekeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
+##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
  加入主要畫面格分鏡腳本。  
   
 ```  
@@ -107,14 +115,14 @@ virtual BOOL AddToStoryboard(
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法加入至分鏡腳本主要畫面格。  
   
-##  <a name="a-namecbasekeyframea--cbasekeyframecbasekeyframe"></a><a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
+##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
  建構主要畫面格物件。  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="a-namegetanimationkeyframea--cbasekeyframegetanimationkeyframe"></a><a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
+##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
  傳回基礎主要畫面格的值。  
   
 ```  
@@ -127,7 +135,7 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 ### <a name="remarks"></a>備註  
  這是為基礎的主要畫面格值的存取子。  
   
-##  <a name="a-nameisaddeda--cbasekeyframeisadded"></a><a name="isadded"></a>CBaseKeyFrame::IsAdded  
+##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
  會指示是否已加入主要畫面格分鏡腳本。  
   
 ```  
@@ -140,7 +148,7 @@ BOOL IsAdded() const;
 ### <a name="remarks"></a>備註  
  基底類別中 IsAdded 一定會傳回 TRUE，但在衍生類別中覆寫。  
   
-##  <a name="a-nameiskeyframeatoffseta--cbasekeyframeiskeyframeatoffset"></a><a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
+##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
  指定是否應加入主要畫面格位移，或在轉換之後，分鏡腳本。  
   
 ```  
@@ -153,21 +161,21 @@ BOOL IsKeyframeAtOffset() const;
 ### <a name="remarks"></a>備註  
  指定是否應加入主要畫面格位移分鏡腳本。 必須在衍生類別中指定的位移或轉換。  
   
-##  <a name="a-namembaddeda--cbasekeyframembadded"></a><a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
+##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
  指定是否已加入至此主要畫面格的分鏡腳本。  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="a-namembiskeyframeatoffseta--cbasekeyframembiskeyframeatoffset"></a><a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
+##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
  指定是否應分鏡腳本開頭的位移，從另一個現有主要畫面格，或在某些轉換結尾處加入這個主要畫面格。  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="a-namemkeyframea--cbasekeyframemkeyframe"></a><a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
+##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
  代表 Windows 動畫 API 主要畫面格。 當未初始化的主要畫面格系統是設定為預先定義的值 UI_ANIMATION_KEYFRAME_STORYBOARD_START。  
   
 ```  

@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
+- AFXWINFORMS/CWinFormsControl
+- AFXWINFORMS/CWinFormsControl::CWinFormsControl
+- AFXWINFORMS/CWinFormsControl::CreateManagedControl
+- AFXWINFORMS/CWinFormsControl::GetControl
+- AFXWINFORMS/CWinFormsControl::GetControlHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,7 +96,7 @@ class CWinFormsControl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭︰** afxwinforms.h  
   
-##  <a name="a-namecreatemanagedcontrola--cwinformscontrolcreatemanagedcontrol"></a><a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
  建立 Windows Form 控制項在 MFC 容器中。  
   
 ```  
@@ -160,7 +165,7 @@ inline BOOL CreateManagedControl(
   
  請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)範例使用 Windows Form 控制項。  
   
-##  <a name="a-namecwinformscontrola--cwinformscontrolcwinformscontrol"></a><a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
  建構的 MFC Windows Form 控制項的包裝函式物件。  
   
 ```  
@@ -170,7 +175,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>備註  
  當您呼叫具現化 Windows Form 控制項[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)。  
   
-##  <a name="a-namegetcontrola--cwinformscontrolgetcontrol"></a><a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
  擷取 Windows Form 控制項的指標。  
   
 ```  
@@ -183,7 +188,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="example"></a>範例  
   請參閱[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)。  
   
-##  <a name="a-namegetcontrolhandlea--cwinformscontrolgetcontrolhandle"></a><a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
  擷取 Windows Form 控制項的控制代碼。  
   
 ```  
@@ -196,7 +201,7 @@ inline HWND GetControlHandle() const;
 ### <a name="remarks"></a>備註  
  `GetControlHandle`是 helper 方法會傳回儲存在.NET Framework 控制項屬性的視窗控制代碼。 視窗控制代碼值複製到[CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)的呼叫期間[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)。  
   
-##  <a name="a-nameoperator-gta--cwinformscontroloperator--gt"></a><a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
  取代[CWinFormsControl::GetControl](#getcontrol)運算式中。  
   
 ```  
@@ -208,7 +213,7 @@ inline TManagedControl^  operator->() const;
   
  如需有關 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="a-nameoperatortmanagedcontrola--cwinformscontroloperator-tmanagedcontrol"></a><a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
  將型別轉換成 Windows Form 控制項的指標。  
   
 ```  

@@ -181,7 +181,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  **命名空間：** std  
   
-##  <a name="a-namearrayarraya--arrayarray"></a><a name="array__array"></a> array::array  
+##  <a name="array__array"></a> array::array  
  建構陣列物件。  
   
 ```  
@@ -236,7 +236,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearrayassigna--arrayassign"></a><a name="array__assign"></a> array::assign  
+##  <a name="array__assign"></a> array::assign  
 在 C++11 中已淘汰，已取代為 [fill](#array__fill)。 取代所有項目。  
   
 ```  
@@ -288,7 +288,7 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="a-namearrayata--arrayat"></a><a name="array__at"></a> array::at  
+##  <a name="array__at"></a> array::at  
  存取指定位置的項目。  
   
 ```  
@@ -333,7 +333,7 @@ int main()
   
 ```  
   
-##  <a name="a-namearraybacka--arrayback"></a><a name="array__back"></a> array::back  
+##  <a name="array__back"></a> array::back  
  存取最後一個項目。  
   
 ```  
@@ -378,7 +378,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraybegina--arraybegin"></a><a name="array__begin"></a> array::begin  
+##  <a name="array__begin"></a> array::begin  
  指定受控制序列的開頭。  
   
 ```  
@@ -423,7 +423,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearraycbegina--arraycbegin"></a><a name="array__cbegin"></a> array::cbegin  
+##  <a name="array__cbegin"></a> array::cbegin  
  傳回 `const` 迭代器，為範圍中的第一個項目定址。  
   
 ```  
@@ -446,7 +446,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namearraycenda--arraycend"></a><a name="array__cend"></a> array::cend  
+##  <a name="array__cend"></a> array::cend  
  傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。  
   
 ```  
@@ -471,7 +471,7 @@ auto i2 = Container.cend();
   
  `cend` 所傳回的值不應該取值。  
   
-##  <a name="a-namearrayconstiteratora--arrayconstiterator"></a><a name="array__const_iterator"></a> array::const_iterator  
+##  <a name="array__const_iterator"></a> array::const_iterator  
  用於受控制序列的常數迭代器類型。  
   
 ```  
@@ -522,7 +522,7 @@ it2: 0
   
 ```  
   
-##  <a name="a-namearrayconstpointera--arrayconstpointer"></a><a name="array__const_pointer"></a> array::const_pointer  
+##  <a name="array__const_pointer"></a> array::const_pointer  
  項目的常數指標類型。  
   
 ```  
@@ -566,7 +566,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayconstreferencea--arrayconstreference"></a><a name="array__const_reference"></a> array::const_reference  
+##  <a name="array__const_reference"></a> array::const_reference  
  項目的常數參考類型。  
   
 ```  
@@ -610,7 +610,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayconstreverseiteratora--arrayconstreverseiterator"></a><a name="array__const_reverse_iterator"></a> array::const_reverse_iterator  
+##  <a name="array__const_reverse_iterator"></a> array::const_reverse_iterator  
  用於受控制序列的常數反向迭代器類型。  
   
 ```  
@@ -654,7 +654,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraycrbegina--arraycrbegin"></a><a name="array__crbegin"></a> array::crbegin  
+##  <a name="array__crbegin"></a> array::crbegin  
  將常數迭代器傳回反向陣列中的第一個項目。  
   
 ```  
@@ -697,7 +697,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="a-namearraycrenda--arraycrend"></a><a name="array__crend"></a> array::crend  
+##  <a name="array__crend"></a> array::crend  
  傳回 const 迭代器，其定址反轉陣列中最後一個元素的下一個位置。  
   
 ```  
@@ -740,7 +740,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namearraydataa--arraydata"></a><a name="array__data"></a> array::data  
+##  <a name="array__data"></a> array::data  
  取得第一個項目的位址。  
   
 ```  
@@ -786,7 +786,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearraydifferencetypea--arraydifferencetype"></a><a name="array__difference_type"></a> array::difference_type  
+##  <a name="array__difference_type"></a> array::difference_type  
  兩個項目之間帶正負號距離的類型。  
   
 ```  
@@ -830,7 +830,7 @@ int main()
 -4  
 ```  
   
-##  <a name="a-namearrayemptya--arrayempty"></a><a name="array__empty"></a> array::empty  
+##  <a name="array__empty"></a> array::empty  
  測試項目是否不存在。  
   
 ```  
@@ -880,7 +880,7 @@ false
 true  
 ```  
   
-##  <a name="a-namearrayenda--arrayend"></a><a name="array__end"></a> array::end  
+##  <a name="array__end"></a> array::end  
  指定受控制序列的結尾。  
   
 ```  
@@ -926,7 +926,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearrayfilla--arrayfill"></a><a name="array__fill"></a> array::fill  
+##  <a name="array__fill"></a> array::fill  
  清除陣列，並將指定的項目複製到空陣列。  
   
 ```  
@@ -938,7 +938,7 @@ void fill(const Type& val);
 |||  
 |-|-|  
 |參數|說明|  
-|` val`|插入陣列中之項目的值。|  
+|`val`|插入陣列中之項目的值。|  
   
 ### <a name="remarks"></a>備註  
  `fill` 會以指定的值取代陣列的每個項目。  
@@ -970,7 +970,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namearrayfronta--arrayfront"></a><a name="array__front"></a> array::front  
+##  <a name="array__front"></a> array::front  
  存取第一個項目。  
   
 ```  
@@ -1015,7 +1015,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayiteratora--arrayiterator"></a><a name="array__iterator"></a> array::iterator  
+##  <a name="array__iterator"></a> array::iterator  
  受控制序列之迭代器的類型。  
   
 ```  
@@ -1066,7 +1066,7 @@ it2: 0
   
 ```  
   
-##  <a name="a-namearraymaxsizea--arraymaxsize"></a><a name="array__max_size"></a> array::max_size  
+##  <a name="array__max_size"></a> array::max_size  
  計算元素的數目。  
   
 ```  
@@ -1109,7 +1109,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearrayoperatorata--arrayoperator"></a><a name="array__operator_at"></a> array::operator[]  
+##  <a name="array__operator_at"></a> array::operator[]  
  存取指定位置的項目。  
   
 ```  
@@ -1161,7 +1161,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="a-namearrayoperatoreqa--arrayoperator"></a><a name="array__operator_eq"></a> array::operator=  
+##  <a name="array__operator_eq"></a> array::operator=  
  取代受控制的序列。  
   
 ```  
@@ -1213,7 +1213,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearraypointera--arraypointer"></a><a name="array__pointer"></a> array::pointer  
+##  <a name="array__pointer"></a> array::pointer  
  項目的指標類型。  
   
 ```  
@@ -1257,7 +1257,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayrbegina--arrayrbegin"></a><a name="array__rbegin"></a> array::rbegin  
+##  <a name="array__rbegin"></a> array::rbegin  
  指定反向受控制序列的開頭。  
   
 ```  
@@ -1302,7 +1302,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearrayreferencea--arrayreference"></a><a name="array__reference"></a> array::reference  
+##  <a name="array__reference"></a> array::reference  
  項目的參考類型。  
   
 ```  
@@ -1346,7 +1346,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayrenda--arrayrend"></a><a name="array__rend"></a> array::rend  
+##  <a name="array__rend"></a> array::rend  
  指定反向受控制序列的結尾。  
   
 ```  
@@ -1391,7 +1391,7 @@ int main()
 0  
 ```  
   
-##  <a name="a-namearrayreverseiteratora--arrayreverseiterator"></a><a name="array__reverse_iterator"></a> array::reverse_iterator  
+##  <a name="array__reverse_iterator"></a> array::reverse_iterator  
  受控制序列的反向迭代器類型。  
   
 ```  
@@ -1435,7 +1435,7 @@ int main()
 3  
 ```  
   
-##  <a name="a-namearraysizea--arraysize"></a><a name="array__size"></a> array::size  
+##  <a name="array__size"></a> array::size  
  計算元素的數目。  
   
 ```  
@@ -1478,7 +1478,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearraysizetypea--arraysizetype"></a><a name="array__size_type"></a> array::size_type  
+##  <a name="array__size_type"></a> array::size_type  
  兩個元素之間不帶正負號距離的類型。  
   
 ```  
@@ -1522,7 +1522,7 @@ int main()
 4  
 ```  
   
-##  <a name="a-namearrayswapa--arrayswap"></a><a name="array__swap"></a> array::swap  
+##  <a name="array__swap"></a> array::swap  
 將這個陣列的內容與另一個陣列交換。  
   
 ```  
@@ -1585,7 +1585,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="a-namearrayvaluetypea--arrayvaluetype"></a><a name="array__value_type"></a> array::value_type  
+##  <a name="array__value_type"></a> array::value_type  
  元素的類型。  
   
 ```  

@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAsyncSocket
+- AFXSOCK/CAsyncSocket
+- AFXSOCK/CAsyncSocket::CAsyncSocket
+- AFXSOCK/CAsyncSocket::Accept
+- AFXSOCK/CAsyncSocket::AsyncSelect
+- AFXSOCK/CAsyncSocket::Attach
+- AFXSOCK/CAsyncSocket::Bind
+- AFXSOCK/CAsyncSocket::Close
+- AFXSOCK/CAsyncSocket::Connect
+- AFXSOCK/CAsyncSocket::Create
+- AFXSOCK/CAsyncSocket::Detach
+- AFXSOCK/CAsyncSocket::FromHandle
+- AFXSOCK/CAsyncSocket::GetLastError
+- AFXSOCK/CAsyncSocket::GetPeerName
+- AFXSOCK/CAsyncSocket::GetPeerNameEx
+- AFXSOCK/CAsyncSocket::GetSockName
+- AFXSOCK/CAsyncSocket::GetSockNameEx
+- AFXSOCK/CAsyncSocket::GetSockOpt
+- AFXSOCK/CAsyncSocket::IOCtl
+- AFXSOCK/CAsyncSocket::Listen
+- AFXSOCK/CAsyncSocket::Receive
+- AFXSOCK/CAsyncSocket::ReceiveFrom
+- AFXSOCK/CAsyncSocket::ReceiveFromEx
+- AFXSOCK/CAsyncSocket::Send
+- AFXSOCK/CAsyncSocket::SendTo
+- AFXSOCK/CAsyncSocket::SendToEx
+- AFXSOCK/CAsyncSocket::SetSockOpt
+- AFXSOCK/CAsyncSocket::ShutDown
+- AFXSOCK/CASyncSocket::Socket
+- AFXSOCK/CAsyncSocket::OnAccept
+- AFXSOCK/CAsyncSocket::OnClose
+- AFXSOCK/CAsyncSocket::OnConnect
+- AFXSOCK/CAsyncSocket::OnOutOfBandData
+- AFXSOCK/CAsyncSocket::OnReceive
+- AFXSOCK/CAsyncSocket::OnSend
+- AFXSOCK/CAsyncSocket::m_hSocket
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -136,7 +171,7 @@ class CAsyncSocket : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxsock.h  
   
-##  <a name="a-nameaccepta--casyncsocketaccept"></a><a name="accept"></a>CAsyncSocket::Accept  
+##  <a name="accept"></a>CAsyncSocket::Accept  
  呼叫此成員函式接受通訊端上的連接。  
   
 ```  
@@ -184,7 +219,7 @@ virtual BOOL Accept(
   
  引數`lpSockAddr`已知通訊層為連接通訊端，位址會填入結果參數。 **接受**例如搭配連線為基礎的通訊端類型**SOCK_STREAM**。  
   
-##  <a name="a-nameasyncselecta--casyncsocketasyncselect"></a><a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
+##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
  呼叫此成員函式要求對通訊端的事件通知。  
   
 ```  
@@ -221,7 +256,7 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 ### <a name="remarks"></a>備註  
  此函式用來指定哪些 MFC 回呼通知函式會呼叫通訊端。 `AsyncSelect`自動將此通訊端設定為封鎖模式。 如需詳細資訊，請參閱文章[Windows Sockets︰ 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="a-nameattacha--casyncsocketattach"></a><a name="attach"></a>CAsyncSocket::Attach  
+##  <a name="attach"></a>CAsyncSocket::Attach  
  呼叫此成員函式附加`hSocket`的控制代碼`CAsyncSocket`物件。  
   
 ```  
@@ -254,7 +289,7 @@ BOOL Attach(
 ### <a name="remarks"></a>備註  
  **通訊端**控制代碼會儲存在物件的[m_hSocket](#m_hsocket)資料成員。  
   
-##  <a name="a-namebinda--casyncsocketbind"></a><a name="bind"></a>CAsyncSocket::Bind  
+##  <a name="bind"></a>CAsyncSocket::Bind  
  呼叫此成員函式，將本機位址與通訊端。  
   
 ```  
@@ -305,7 +340,7 @@ BOOL Bind (
 ### <a name="remarks"></a>備註  
  這個常式會先用在未連接的資料流或資料流通訊端，後續**連線**或`Listen`呼叫。 它可以接受的連線要求之前，接聽伺服器通訊端必須選取連接埠號碼，然後對它已知 Windows Sockets 藉由呼叫**繫結**。 **繫結**建立本機名稱指派至未命名的通訊端通訊端的本機關聯 （主機位址/連接埠號碼）。  
   
-##  <a name="a-namecasyncsocketa--casyncsocketcasyncsocket"></a><a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
+##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
  建構空白通訊端物件。  
   
 ```  
@@ -315,7 +350,7 @@ CAsyncSocket();
 ### <a name="remarks"></a>備註  
  之後建構物件，您必須呼叫其**建立**成員函式來建立**通訊端**資料結構，並將其位址繫結。 (在伺服器端的 Windows Sockets 通訊時接聽通訊端建立使用中的通訊端**接受**呼叫時，您不會呼叫**建立**該通訊端。)  
   
-##  <a name="a-nameclosea--casyncsocketclose"></a><a name="close"></a>CAsyncSocket::Close  
+##  <a name="close"></a>CAsyncSocket::Close  
  關閉通訊端。  
   
 ```  
@@ -327,7 +362,7 @@ virtual void Close();
   
  如`CAsyncSocket`，但不適用於`CSocket`的語意**關閉**受到通訊端選項**SO_LINGER**和**SO_DONTLINGER**。 如需詳細資訊，請參閱成員函式`GetSockOpt`。  
   
-##  <a name="a-nameconnecta--casyncsocketconnect"></a><a name="connect"></a>CAsyncSocket::Connect  
+##  <a name="connect"></a>CAsyncSocket::Connect  
  呼叫此成員函式建立的未連接的資料流或資料包通訊端連線。  
   
 ```  
@@ -398,7 +433,7 @@ BOOL Connect(
   
  資料包通訊端 (型別**SOCK_DGRAM**)，設定預設的目的地，用來在後續**傳送**和**接收**呼叫。  
   
-##  <a name="a-namecreatea--casyncsocketcreate"></a><a name="create"></a>CAsyncSocket::Create  
+##  <a name="create"></a>CAsyncSocket::Create  
  呼叫**建立**之後建構建立 Windows 通訊端，並將它附加到通訊端物件的成員函式。  
   
 ```  
@@ -470,14 +505,14 @@ BOOL Create(
   
  如需資料流和資料包通訊端的詳細資訊，請參閱文章[Windows Sockets︰ 背景](../../mfc/windows-sockets-background.md)和[Windows Sockets︰ 連接埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
   
-##  <a name="a-namedetacha--casyncsocketdetach"></a><a name="detach"></a>CAsyncSocket::Detach  
+##  <a name="detach"></a>CAsyncSocket::Detach  
  呼叫此成員函式，要卸離**通訊端**處理`m_hSocket`資料成員從`CAsyncSocket`物件，並設定`m_hSocket`至**NULL**。  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="a-namefromhandlea--casyncsocketfromhandle"></a><a name="fromhandle"></a>CAsyncSocket::FromHandle  
+##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
  若要將指標傳回`CAsyncSocket`物件。  
   
 ```  
@@ -494,7 +529,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="remarks"></a>備註  
  當指定時**通訊端**處理，如果`CAsyncSocket`物件沒有附加至控制代碼，成員函式會傳回**NULL**。  
   
-##  <a name="a-namegetlasterrora--casyncsocketgetlasterror"></a><a name="getlasterror"></a>CAsyncSocket::GetLastError  
+##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
  呼叫此成員函式，以取得最後一個作業失敗的錯誤狀態。  
   
 ```  
@@ -509,7 +544,7 @@ static int PASCAL GetLastError();
   
  如需錯誤碼的詳細資訊，請參閱[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
   
-##  <a name="a-namegetpeernamea--casyncsocketgetpeername"></a><a name="getpeername"></a>CAsyncSocket::GetPeerName  
+##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
  呼叫此成員函式，以取得此通訊端所連接的對等通訊端位址。  
   
 ```  
@@ -554,7 +589,7 @@ BOOL GetPeerName(
 ### <a name="remarks"></a>備註  
  若要處理的 IPv6 位址，請使用[CAsyncSocket::GetPeerNameEx](#getpeernameex)。  
   
-##  <a name="a-namegetpeernameexa--casyncsocketgetpeernameex"></a><a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
+##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
  呼叫此成員函式，以取得此通訊端是連接 （控點 IPv6 位址） 的對等通訊端位址。  
   
 ```  
@@ -588,7 +623,7 @@ BOOL GetPeerNameEx(
 ### <a name="remarks"></a>備註  
  此函式是相同[CAsyncSocket::GetPeerName](#getpeername)不同之處在於它會處理 IPv6 位址以及為舊的通訊協定。  
   
-##  <a name="a-namegetsocknamea--casyncsocketgetsockname"></a><a name="getsockname"></a>CAsyncSocket::GetSockName  
+##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
  呼叫此成員函式，以取得通訊端的本機名稱。  
   
 ```  
@@ -635,7 +670,7 @@ BOOL GetSockName(
   
  若要處理的 IPv6 位址，請使用[CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="a-namegetsocknameexa--casyncsocketgetsocknameex"></a><a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
+##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
  呼叫此成員函式，以取得通訊端 （控點 IPv6 位址） 的本機名稱。  
   
 ```  
@@ -671,7 +706,7 @@ BOOL GetSockNameEx(
   
  這個呼叫時特別有用**連線**呼叫而不需要這麼做**繫結**第一次; 此呼叫提供唯一的方法可以判斷本機關聯已由系統設定。  
   
-##  <a name="a-namegetsockopta--casyncsocketgetsockopt"></a><a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
+##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
  呼叫此成員函式擷取通訊端選項。  
   
 ```  
@@ -745,7 +780,7 @@ BOOL GetSockOpt(
   
  呼叫`GetSockOpt`與不支援的選項會導致的錯誤代碼為**WSAENOPROTOOPT**傳回來自`GetLastError`。  
   
-##  <a name="a-nameioctla--casyncsocketioctl"></a><a name="ioctl"></a>CAsyncSocket::IOCtl  
+##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
  呼叫此成員函式，來控制通訊端的模式。  
   
 ```  
@@ -785,7 +820,7 @@ BOOL IOCtl(
   
  此函式是子集**ioctl()** Berkeley 通訊端中使用。 特別是，沒有任何命令相當於**FIOASYNC**，雖然**SIOCATMARK**是支援的只有通訊端層級命令。  
   
-##  <a name="a-namelistena--casyncsocketlisten"></a><a name="listen"></a>CAsyncSocket::Listen  
+##  <a name="listen"></a>CAsyncSocket::Listen  
  呼叫此成員函式，來接聽連入連線要求。  
   
 ```  
@@ -826,14 +861,14 @@ BOOL Listen(int nConnectionBacklog = 5);
   
  `Listen`嘗試繼續理性判斷運作時沒有可用的連接埠 （描述）。 它會接受連線，直到清空佇列。 如果連接埠供稍後呼叫`Listen`或**接受**將會重新填滿目前或最近 」 待處理項目，「 佇列可能的話，並繼續接聽連入連線。  
   
-##  <a name="a-namemhsocketa--casyncsocketmhsocket"></a><a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
+##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
  包含**通訊端**處理此封裝之通訊端`CAsyncSocket`物件。  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="a-nameonaccepta--casyncsocketonaccept"></a><a name="onaccept"></a>CAsyncSocket::OnAccept  
+##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
  呼叫以通知它可以呼叫接受擱置連線要求的接聽通訊端架構[接受](#accept)成員函式。  
   
 ```  
@@ -851,7 +886,7 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[Windows Sockets︰ 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="a-nameonclosea--casyncsocketonclose"></a><a name="onclose"></a>CAsyncSocket::OnClose  
+##  <a name="onclose"></a>CAsyncSocket::OnClose  
  由框架呼叫以通知這個通訊端連線的通訊端已關閉其處理程序。  
   
 ```  
@@ -873,7 +908,7 @@ virtual void OnClose(int nErrorCode);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[Windows Sockets︰ 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="a-nameonconnecta--casyncsocketonconnect"></a><a name="onconnect"></a>CAsyncSocket::OnConnect  
+##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
  通知此連線的通訊端完成其連線嘗試，不論成功或錯誤的架構所呼叫。  
   
 ```  
@@ -924,7 +959,7 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAsyncSocket #&1;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="a-nameonoutofbanddataa--casyncsocketonoutofbanddata"></a><a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
+##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
  通知傳送的封包有超出訊號範圍的資料，以便傳送接收通訊端架構呼叫。  
   
 ```  
@@ -944,7 +979,7 @@ virtual void OnOutOfBandData(int nErrorCode);
   
  MFC 支援超出訊號範圍的資料，但類別的使用者`CAsyncSocket`不建議使用它。 更簡單的方法是建立並傳遞這類資料的第二個通訊端。 如需詳細資料超出訊號範圍的詳細資訊，請參閱[Windows Sockets︰ 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="a-nameonreceivea--casyncsocketonreceive"></a><a name="onreceive"></a>CAsyncSocket::OnReceive  
+##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
  通知這個通訊端可以藉由呼叫擷取緩衝區中沒有資料架構呼叫**接收**成員函式。  
   
 ```  
@@ -965,7 +1000,7 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAsyncSocket #&2;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="a-nameonsenda--casyncsocketonsend"></a><a name="onsend"></a>CAsyncSocket::OnSend  
+##  <a name="onsend"></a>CAsyncSocket::OnSend  
  呼叫以通知它現在可以傳送資料所呼叫的通訊端架構**傳送**成員函式。  
   
 ```  
@@ -986,7 +1021,7 @@ virtual void OnSend(int nErrorCode);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAsyncSocket #&3;](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="a-nameoperatoreqa--casyncsocketoperator-"></a><a name="operator_eq"></a>CAsyncSocket::operator =  
+##  <a name="operator_eq"></a>CAsyncSocket::operator =  
  新值指派給`CAsyncSocket`物件。  
   
 ```  
@@ -1000,7 +1035,7 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="remarks"></a>備註  
  呼叫此函式，可複製現有`CAsyncSocket`物件給另一個`CAsyncSocket`物件。  
   
-##  <a name="a-nameoperatorsocketa--casyncsocketoperator-socket"></a><a name="operator_socket"></a>CAsyncSocket::operator 通訊端  
+##  <a name="operator_socket"></a>CAsyncSocket::operator 通訊端  
  使用這個運算子來擷取**通訊端**處理的`CAsyncSocket`物件。  
   
 ```  
@@ -1013,7 +1048,7 @@ operator SOCKET() const;
 ### <a name="remarks"></a>備註  
  若要直接呼叫 Windows Api，您可以使用控制代碼。  
   
-##  <a name="a-namereceivea--casyncsocketreceive"></a><a name="receive"></a>CAsyncSocket::Receive  
+##  <a name="receive"></a>CAsyncSocket::Receive  
  呼叫此成員函式可從通訊端接收資料。  
   
 ```  
@@ -1078,7 +1113,7 @@ virtual int Receive(
 ### <a name="example"></a>範例  
   請參閱範例[CAsyncSocket::OnReceive](#onreceive)。  
   
-##  <a name="a-namereceivefroma--casyncsocketreceivefrom"></a><a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
+##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
  呼叫此成員函式，來接收資料包 (datagram) 和儲存中的來源位址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構或`rSocketAddress`。  
   
 ```  
@@ -1166,7 +1201,7 @@ int ReceiveFrom(
   
  如果通訊端型別**SOCK_STREAM**並另一端有連線正常關機，`ReceiveFrom`立即完成時會收到 0 個位元組。  
   
-##  <a name="a-namereceivefromexa--casyncsocketreceivefromex"></a><a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
+##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
  呼叫此成員函式，來接收資料包 (datagram) 和儲存中的來源位址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構或`rSocketAddress`（處理 IPv6 位址）。  
   
 ```  
@@ -1240,7 +1275,7 @@ int ReceiveFromEx(
   
  如果通訊端型別**SOCK_STREAM**並另一端有連線正常關機，`ReceiveFromEx`立即完成時會收到 0 個位元組。  
   
-##  <a name="a-namesenda--casyncsocketsend"></a><a name="send"></a>CAsyncSocket::Send  
+##  <a name="send"></a>CAsyncSocket::Send  
  呼叫此成員函式連接的通訊端上傳送的資料。  
   
 ```  
@@ -1309,7 +1344,7 @@ virtual int Send(
 ### <a name="example"></a>範例  
   請參閱範例[CAsyncSocket::OnSend](#onsend)。  
   
-##  <a name="a-namesendtoa--casyncsocketsendto"></a><a name="sendto"></a>CAsyncSocket::SendTo  
+##  <a name="sendto"></a>CAsyncSocket::SendTo  
  呼叫此成員函式，將資料傳送到特定的目的地。  
   
 ```  
@@ -1409,7 +1444,7 @@ int SendTo(
   
  若要處理的 IPv6 位址，請使用[CAsyncSocket::SendToEx](#sendtoex)。  
   
-##  <a name="a-namesendtoexa--casyncsocketsendtoex"></a><a name="sendtoex"></a>CAsyncSocket::SendToEx  
+##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
  呼叫此成員函式，將資料傳送到特定的目的地 （處理 IPv6 位址）。  
   
 ```  
@@ -1495,7 +1530,7 @@ int SendToEx(
   
  若要將傳送廣播 (上**SOCK_DGRAM**只)，在位址`lpSockAddr`參數應該使用特殊的 IP 位址來建構**INADDR_BROADCAST** （定義於 Windows Sockets 標頭檔 WINSOCK。H） 一起使用的目標連接埠號碼。 或者，如果`lpszHostAddress`參數是**NULL**，通訊端設定為廣播。 通常不得超過大小的分散程度，都可能發生的廣播資料包這表示資料包 （不含標頭） 的資料部分，不應超過 512 個位元組。  
   
-##  <a name="a-namesetsockopta--casyncsocketsetsockopt"></a><a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
+##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
  呼叫此成員函式設定通訊端選項。  
   
 ```  
@@ -1586,7 +1621,7 @@ BOOL SetSockOpt(
 |**SO_TYPE**|`int`|通訊端類型。|  
 |**IP_OPTIONS**||設定 IP 標頭中的選項 欄位。|  
   
-##  <a name="a-nameshutdowna--casyncsocketshutdown"></a><a name="shutdown"></a>CAsyncSocket::ShutDown  
+##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
  若要停用此成員函式傳送時，呼叫都會收到，或兩者都在通訊端。  
   
 ```  
@@ -1628,7 +1663,7 @@ BOOL ShutDown(int nHow = sends);
 ### <a name="example"></a>範例  
   請參閱範例[CAsyncSocket::OnReceive](#onreceive)。  
   
-##  <a name="a-namesocketa--casyncsocketsocket"></a><a name="socket"></a>CASyncSocket::Socket  
+##  <a name="socket"></a>CASyncSocket::Socket  
  配置通訊端控制代碼。  
   
 ```  

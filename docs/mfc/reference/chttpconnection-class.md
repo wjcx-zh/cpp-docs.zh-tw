@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHttpConnection
+- AFXINET/CHttpConnection
+- AFXINET/CHttpConnection::CHttpConnection
+- AFXINET/CHttpConnection::OpenRequest
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +95,7 @@ class CHttpConnection : public CInternetConnection
 ## <a name="requirements"></a>需求  
  **標頭︰** afxinet.h  
   
-##  <a name="a-namechttpconnectiona--chttpconnectionchttpconnection"></a><a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
+##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
  此成員函式呼叫來建構`CHttpConnection`物件。  
   
 ```  
@@ -157,7 +160,7 @@ CHttpConnection(
 ### <a name="remarks"></a>備註  
  絕對不要建立`CHttpConnection`直接。 相反地，您建立物件呼叫[Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。  
   
-##  <a name="a-nameopenrequesta--chttpconnectionopenrequest"></a><a name="openrequest"></a>Chttpconnection::  
+##  <a name="openrequest"></a>Chttpconnection::  
  呼叫此成員函式，以開啟 HTTP 連接。  
   
 ```  

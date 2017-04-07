@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::event
+- event
+- CONCRT/concurrency::event
+- CONCRT/concurrency::event::reset
+- CONCRT/concurrency::event::set
+- CONCRT/concurrency::event::wait
+- CONCRT/concurrency::event::wait_for_multiple
+- CONCRT/concurrency::event::timeout_infinite
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: abda6512f391b59cb48c8e96a489714ee117ae68
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: f858bfad08ca8d62c42556c54b505908b7122569
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="event-class"></a>event 類別
@@ -58,18 +64,18 @@ class event;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[reset 方法](#reset)|重設為未收到信號狀態的事件。|  
-|[set 方法](#set)|通知事件。|  
-|[wait 方法](#wait)|等待事件發出訊號。|  
-|[wait_for_multiple 方法](#wait_for_multiple)|等候變成已收到訊號的多個事件。|  
+|[reset](#reset)|重設為未收到信號狀態的事件。|  
+|[set](#set)|通知事件。|  
+|[等候](#wait)|等待事件發出訊號。|  
+|[wait_for_multiple](#wait_for_multiple)|等候變成已收到訊號的多個事件。|  
   
 ### <a name="public-constants"></a>公用常數  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[timeout_infinite 常數](#timeout_infinite)|值，表示等候應該永遠不會逾時。|  
+|[timeout_infinite](#timeout_infinite)|值，表示等候應該永遠不會逾時。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[同步處理資料結構](../../../parallel/concrt/synchronization-data-structures.md)。  
@@ -82,7 +88,7 @@ class event;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-event"></a><a name="ctor"></a>事件 
+##  <a name="ctor"></a>事件 
 
  建構新的事件。  
   
@@ -92,7 +98,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namedtora-event"></a><a name="dtor"></a>~ 事件 
+##  <a name="dtor"></a>~ 事件 
 
  終結事件。  
   
@@ -103,7 +109,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>備註  
  應該沒有執行緒在等候事件時執行解構函式。 允許事件解構仍在等候的執行緒，會導致未定義的行為發生。  
   
-##  <a name="a-namereseta-reset"></a><a name="reset"></a>重設 
+##  <a name="reset"></a>重設 
 
  重設為未收到信號狀態的事件。  
   
@@ -111,7 +117,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="a-nameseta-set"></a><a name="set"></a>設定 
+##  <a name="set"></a>設定 
 
  通知事件。  
   
@@ -122,7 +128,7 @@ void set();
 ### <a name="remarks"></a>備註  
  發出事件訊號會使事件上正在等候的任意數目內容變為可執行。  
   
-##  <a name="a-nametimeoutinfinitea-timeoutinfinite"></a><a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a>timeout_infinite 
 
  值，表示等候應該永遠不會逾時。  
   
@@ -130,7 +136,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>等候 
+##  <a name="wait"></a>等候 
 
  等待事件發出訊號。  
   
@@ -148,7 +154,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 > [!IMPORTANT]
 >  在 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式中，請勿呼叫在 ASTA 執行緒上的 `wait`，因為這個呼叫可能會封鎖目前的執行緒，而且造成應用程式變成沒有回應。  
   
-##  <a name="a-namewaitformultiplea-waitformultiple"></a><a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a>wait_for_multiple 
 
  等候變成已收到訊號的多個事件。  
   

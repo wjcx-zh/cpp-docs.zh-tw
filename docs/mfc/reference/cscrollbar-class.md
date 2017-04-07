@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CScrollBar
+- AFXWIN/CScrollBar
+- AFXWIN/CScrollBar::CScrollBar
+- AFXWIN/CScrollBar::Create
+- AFXWIN/CScrollBar::EnableScrollBar
+- AFXWIN/CScrollBar::GetScrollBarInfo
+- AFXWIN/CScrollBar::GetScrollInfo
+- AFXWIN/CScrollBar::GetScrollLimit
+- AFXWIN/CScrollBar::GetScrollPos
+- AFXWIN/CScrollBar::GetScrollRange
+- AFXWIN/CScrollBar::SetScrollInfo
+- AFXWIN/CScrollBar::SetScrollPos
+- AFXWIN/CScrollBar::SetScrollRange
+- AFXWIN/CScrollBar::ShowScrollBar
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -101,7 +114,7 @@ class CScrollBar : public CWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecreatea--cscrollbarcreate"></a><a name="create"></a>CScrollBar::Create  
+##  <a name="create"></a>CScrollBar::Create  
  建立 Windows 捲軸，並將它附加`CScrollBar`物件。  
   
 ```  
@@ -144,7 +157,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CScrollBar #&1;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="a-namecscrollbara--cscrollbarcscrollbar"></a><a name="cscrollbar"></a>CScrollBar::CScrollBar  
+##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
  建構 `CScrollBar` 物件。  
   
 ```  
@@ -157,7 +170,7 @@ CScrollBar();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CScrollBar #&2;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="a-nameenablescrollbara--cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
+##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
  啟用或停用一個捲軸的一或兩個箭號。  
   
 ```  
@@ -182,7 +195,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="example"></a>範例  
   請參閱範例[CScrollBar::SetScrollRange](#setscrollrange)。  
   
-##  <a name="a-namegetscrollbarinfoa--cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
+##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
  擷取的資訊， **SCROLLBARINFO**結構會維護有關捲軸。  
   
 ```  
@@ -199,7 +212,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetscrollinfoa--cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
+##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
  擷取 `SCROLLINFO` 結構維護的捲軸相關資訊。  
   
 ```  
@@ -228,7 +241,7 @@ BOOL GetScrollInfo(
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
   
-##  <a name="a-namegetscrolllimita--cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
+##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
  擷取捲動捲軸位置的最大值。  
   
 ```  
@@ -241,7 +254,7 @@ int GetScrollLimit();
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
   
-##  <a name="a-namegetscrollposa--cscrollbargetscrollpos"></a><a name="getscrollpos"></a>CScrollBar::GetScrollPos  
+##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
  擷取捲動方塊的目前位置。  
   
 ```  
@@ -257,7 +270,7 @@ int GetScrollPos() const;
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
   
-##  <a name="a-namegetscrollrangea--cscrollbargetscrollrange"></a><a name="getscrollrange"></a>CScrollBar::GetScrollRange  
+##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
  將給定的捲軸列的目前最小和最大的捲軸位置複製到指定的位置`lpMinPos`和`lpMaxPos`。  
   
 ```  
@@ -279,7 +292,7 @@ void GetScrollRange(
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。  
   
-##  <a name="a-namesetscrollinfoa--cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
+##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
  設定的資訊`SCROLLINFO`結構會維護有關捲軸。  
   
 ```  
@@ -306,7 +319,7 @@ BOOL SetScrollInfo(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CScrollBar #&3;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="a-namesetscrollposa--cscrollbarsetscrollpos"></a><a name="setscrollpos"></a>CScrollBar::SetScrollPos  
+##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
  將目前捲動方塊的位置設定為指定的`nPos`，如果指定，會重繪捲軸，以反映新的位置。  
   
 ```  
@@ -331,7 +344,7 @@ int SetScrollPos(
 ### <a name="example"></a>範例  
   請參閱範例[CScrollBar::SetScrollRange](#setscrollrange)。  
   
-##  <a name="a-namesetscrollrangea--cscrollbarsetscrollrange"></a><a name="setscrollrange"></a>CScrollBar::SetScrollRange  
+##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
  設定給定捲軸的最小和最大位置值。  
   
 ```  
@@ -363,7 +376,7 @@ void SetScrollRange(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CScrollBar #&4;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="a-nameshowscrollbara--cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
+##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
  顯示或隱藏捲軸。  
   
 ```  

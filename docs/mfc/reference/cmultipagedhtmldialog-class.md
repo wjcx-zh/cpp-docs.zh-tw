@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiPageDHtmlDialog
+- AFXDHTML/CMultiPageDHtmlDialog
+- AFXDHTML/CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +97,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdhtml.h  
   
-##  <a name="a-namecmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
  建構多頁 （精靈樣式） DHTML 對話方塊物件。  
   
 ```  
@@ -129,7 +131,7 @@ CMultiPageDHtmlDialog();
  `nHtmlResID`  
  包含 HTML 資源的 ID 編號。  
   
-##  <a name="a-namedtorcmultipagedhtmldialoga--cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
+##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
  終結多頁 DHTML 對話方塊物件。  
   
 ```  

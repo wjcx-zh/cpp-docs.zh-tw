@@ -10,6 +10,36 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarComboBoxButton
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::AddItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::AddSortedItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::Compare
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::CreateEdit
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::DeleteItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::FindItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetByCmd
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetComboBox
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetCount
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetCountAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetCurSel
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetCurSelAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetEditCtrl
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItemAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItemData
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItemDataAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetItemDataPtrAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetText
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::GetTextAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::IsCenterVert
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::IsFlatMode
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::RemoveAllItems
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SelectItem
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SelectItemAll
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SetCenterVert
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SetDropDownHeight
+- AFXTOOLBARCOMBOBOXBUTTON/CMFCToolBarComboBoxButton::SetFlatMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -116,7 +146,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtoolbarcomboboxbutton.h  
   
-##  <a name="a-nameadditema--cmfctoolbarcomboboxbuttonadditem"></a><a name="additem"></a>CMFCToolBarComboBoxButton::AddItem  
+##  <a name="additem"></a>CMFCToolBarComboBoxButton::AddItem  
  將唯一的項目附加至清單方塊。  
   
 ```  
@@ -140,7 +170,7 @@ virtual INT_PTR AddItem(
   
  如果項目文字已在清單方塊中，新的資料會儲存與現有的項目。 項目的搜尋不區分大小寫。  
   
-##  <a name="a-nameaddsorteditema--cmfctoolbarcomboboxbuttonaddsorteditem"></a><a name="addsorteditem"></a>CMFCToolBarComboBoxButton::AddSortedItem  
+##  <a name="addsorteditem"></a>CMFCToolBarComboBoxButton::AddSortedItem  
  將項目加入至清單方塊中所定義的順序[比較](#compare)方法。  
   
 ```  
@@ -162,7 +192,7 @@ virtual INT_PTR AddSortedItem(
 ### <a name="remarks"></a>備註  
  使用此函式項目加入清單方塊，以特定順序。  
   
-##  <a name="a-namecanbestretcheda--cmfctoolbarcomboboxbuttoncanbestretched"></a><a name="canbestretched"></a>CMFCToolBarComboBoxButton::CanBeStretched  
+##  <a name="canbestretched"></a>CMFCToolBarComboBoxButton::CanBeStretched  
  指出是否可以變更下拉式方塊按鈕的大小。  
   
 ```  
@@ -172,7 +202,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="return-value"></a>傳回值  
  傳回 `TRUE`。  
   
-##  <a name="a-namecmfctoolbarcomboboxbuttona--cmfctoolbarcomboboxbuttoncmfctoolbarcomboboxbutton"></a><a name="cmfctoolbarcomboboxbutton"></a>CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
+##  <a name="cmfctoolbarcomboboxbutton"></a>CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
  建構[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)物件。  
   
 ```  
@@ -201,7 +231,7 @@ CMFCToolBarComboBoxButton(
   
  如需工具列按鈕樣式的清單，請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="a-namecleardataa--cmfctoolbarcomboboxbuttoncleardata"></a><a name="cleardata"></a>CMFCToolBarComboBoxButton::ClearData  
+##  <a name="cleardata"></a>CMFCToolBarComboBoxButton::ClearData  
  刪除使用者定義的資料。  
   
 ```  
@@ -211,7 +241,7 @@ virtual void ClearData();
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有作用。 如果您想要刪除任何使用者定義的資料，請覆寫這個方法在衍生類別中。  
   
-##  <a name="a-namecomparea--cmfctoolbarcomboboxbuttoncompare"></a><a name="compare"></a>CMFCToolBarComboBoxButton::Compare  
+##  <a name="compare"></a>CMFCToolBarComboBoxButton::Compare  
  比較兩個字串。  
   
 ```  
@@ -243,7 +273,7 @@ virtual int Compare(
   
  會呼叫這個方法只會從[AddSortedItem](#addsorteditem)方法。  
   
-##  <a name="a-namecopyfroma--cmfctoolbarcomboboxbuttoncopyfrom"></a><a name="copyfrom"></a>CMFCToolBarComboBoxButton::CopyFrom  
+##  <a name="copyfrom"></a>CMFCToolBarComboBoxButton::CopyFrom  
  複製指定的狀態`CMFCToolBarComboBoxButton`目前的物件。  
   
 ```  
@@ -254,7 +284,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  [in] `src`  
  來源 `CMFCToolBarComboBoxButton` 物件。  
   
-##  <a name="a-namecreatecomboa--cmfctoolbarcomboboxbuttoncreatecombo"></a><a name="createcombo"></a>CMFCToolBarComboBoxButton::CreateCombo  
+##  <a name="createcombo"></a>CMFCToolBarComboBoxButton::CreateCombo  
  建立新的下拉式方塊的下拉式方塊按鈕。  
   
 ```  
@@ -273,7 +303,7 @@ virtual CComboBox* CreateCombo(
 ### <a name="return-value"></a>傳回值  
  指向新的下拉式方塊如果方法成功。否則， `NULL`。  
   
-##  <a name="a-namecreateedita--cmfctoolbarcomboboxbuttoncreateedit"></a><a name="createedit"></a>CMFCToolBarComboBoxButton::CreateEdit  
+##  <a name="createedit"></a>CMFCToolBarComboBoxButton::CreateEdit  
  建立新的編輯方塊的下拉式方塊按鈕。  
   
 ```  
@@ -299,7 +329,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ### <a name="remarks"></a>備註  
  建立新的編輯方塊的下拉式方塊按鈕時，架構會呼叫這個方法。 覆寫此方法以變更如何[CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md)建立。  
   
-##  <a name="a-namedeleteitema--cmfctoolbarcomboboxbuttondeleteitem"></a><a name="deleteitem"></a>CMFCToolBarComboBoxButton::DeleteItem  
+##  <a name="deleteitem"></a>CMFCToolBarComboBoxButton::DeleteItem  
  從清單方塊中刪除指定的項目。  
   
 ```  
@@ -323,7 +353,7 @@ BOOL DeleteItem(DWORD_PTR dwData);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameduplicatedataa--cmfctoolbarcomboboxbuttonduplicatedata"></a><a name="duplicatedata"></a>CMFCToolBarComboBoxButton::DuplicateData  
+##  <a name="duplicatedata"></a>CMFCToolBarComboBoxButton::DuplicateData  
  重複使用者定義的資料。  
   
 ```  
@@ -333,7 +363,7 @@ virtual void DuplicateData();
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有作用。 如果您想要複製任何使用者定義的資料，請覆寫這個方法在衍生類別中。  
   
-##  <a name="a-nameenablewindowa--cmfctoolbarcomboboxbuttonenablewindow"></a><a name="enablewindow"></a>CMFCToolBarComboBoxButton::EnableWindow  
+##  <a name="enablewindow"></a>CMFCToolBarComboBoxButton::EnableWindow  
  啟用或停用編輯] 和 [下拉式方塊。  
   
 ```  
@@ -347,7 +377,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>備註  
  停用時，這些控制項不能成為使用中，而且不能接受使用者輸入。  
   
-##  <a name="a-nameexporttomenubuttona--cmfctoolbarcomboboxbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a>CMFCToolBarComboBoxButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>CMFCToolBarComboBoxButton::ExportToMenuButton  
  複製到指定的功能表，使用下拉式方塊按鈕命令的應用程式字串資料表的字串識別碼。  
   
 ```  
@@ -361,7 +391,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ### <a name="return-value"></a>傳回值  
  一定是 `TRUE`。  
   
-##  <a name="a-namefinditema--cmfctoolbarcomboboxbuttonfinditem"></a><a name="finditem"></a>CMFCToolBarComboBoxButton::FindItem  
+##  <a name="finditem"></a>CMFCToolBarComboBoxButton::FindItem  
  傳回包含指定的字串清單方塊中的第一個項目的索引。  
   
 ```  
@@ -377,7 +407,7 @@ int FindItem(LPCTSTR lpszText) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetbycmda--cmfctoolbarcomboboxbuttongetbycmd"></a><a name="getbycmd"></a>CMFCToolBarComboBoxButton::GetByCmd  
+##  <a name="getbycmd"></a>CMFCToolBarComboBoxButton::GetByCmd  
  取得指標下拉式方塊按鈕具有指定的命令識別碼。  
   
 ```  
@@ -398,7 +428,7 @@ static CMFCToolBarComboBoxButton* GetByCmd(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetcomboboxa--cmfctoolbarcomboboxbuttongetcombobox"></a><a name="getcombobox"></a>CMFCToolBarComboBoxButton::GetComboBox  
+##  <a name="getcombobox"></a>CMFCToolBarComboBoxButton::GetComboBox  
  傳回的指標至下拉式方塊下拉式方塊中 按鈕。  
   
 ```  
@@ -410,7 +440,7 @@ CComboBox* GetComboBox() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetcontextmenuida--cmfctoolbarcomboboxbuttongetcontextmenuid"></a><a name="getcontextmenuid"></a>CMFCToolBarComboBoxButton::GetContextMenuID  
+##  <a name="getcontextmenuid"></a>CMFCToolBarComboBoxButton::GetContextMenuID  
  取得下拉式方塊按鈕的捷徑功能表上的資源識別碼。  
   
 ```  
@@ -420,7 +450,7 @@ UINT GetContextMenuID();
 ### <a name="return-value"></a>傳回值  
  快顯功能表上的資源 id。  
   
-##  <a name="a-namegetcounta--cmfctoolbarcomboboxbuttongetcount"></a><a name="getcount"></a>CMFCToolBarComboBoxButton::GetCount  
+##  <a name="getcount"></a>CMFCToolBarComboBoxButton::GetCount  
  清單方塊中，傳回的項目數。  
   
 ```  
@@ -432,7 +462,7 @@ INT_PTR GetCount() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetcountalla--cmfctoolbarcomboboxbuttongetcountall"></a><a name="getcountall"></a>CMFCToolBarComboBoxButton::GetCountAll  
+##  <a name="getcountall"></a>CMFCToolBarComboBoxButton::GetCountAll  
  取得擁有指定的命令識別碼下拉式方塊按鈕的清單方塊中的項目數  
   
 ```  
@@ -448,7 +478,7 @@ static int GetCountAll(UINT uiCmd);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetcursela--cmfctoolbarcomboboxbuttongetcursel"></a><a name="getcursel"></a>CMFCToolBarComboBoxButton::GetCurSel  
+##  <a name="getcursel"></a>CMFCToolBarComboBoxButton::GetCurSel  
  清單方塊中，取得目前選取項目的索引。  
   
 ```  
@@ -461,7 +491,7 @@ int GetCurSel() const;
 ### <a name="remarks"></a>備註  
  清單方塊索引以零為起始。  
   
-##  <a name="a-namegetcurselalla--cmfctoolbarcomboboxbuttongetcurselall"></a><a name="getcurselall"></a>CMFCToolBarComboBoxButton::GetCurSelAll  
+##  <a name="getcurselall"></a>CMFCToolBarComboBoxButton::GetCurSelAll  
  傳回目前選取項目的索引中的下拉式清單方塊方塊按鈕具有指定的命令識別碼。  
   
 ```  
@@ -478,7 +508,7 @@ static int GetCurSelAll(UINT uiCmd);
 ### <a name="remarks"></a>備註  
  清單方塊索引以零為起始。  
   
-##  <a name="a-namegeteditctrla--cmfctoolbarcomboboxbuttongeteditctrl"></a><a name="geteditctrl"></a>CMFCToolBarComboBoxButton::GetEditCtrl  
+##  <a name="geteditctrl"></a>CMFCToolBarComboBoxButton::GetEditCtrl  
  讓指標回到編輯方塊下拉式方塊中 按鈕。  
   
 ```  
@@ -490,7 +520,7 @@ virtual CEdit* GetEditCtrl();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegethwnda--cmfctoolbarcomboboxbuttongethwnd"></a><a name="gethwnd"></a>CMFCToolBarComboBoxButton::GetHwnd  
+##  <a name="gethwnd"></a>CMFCToolBarComboBoxButton::GetHwnd  
  傳回下拉式方塊的視窗控制代碼。  
   
 ```  
@@ -500,7 +530,7 @@ virtual HWND GetHwnd();
 ### <a name="return-value"></a>傳回值  
  視窗控制代碼或`NULL`如果下拉式方塊不是視窗物件相關聯。  
   
-##  <a name="a-namegetitema--cmfctoolbarcomboboxbuttongetitem"></a><a name="getitem"></a>CMFCToolBarComboBoxButton::GetItem  
+##  <a name="getitem"></a>CMFCToolBarComboBoxButton::GetItem  
  傳回與清單方塊中的指定索引處的項目關聯的字串。  
   
 ```  
@@ -517,7 +547,7 @@ LPCTSTR GetItem(int iIndex=-1) const;
 ### <a name="remarks"></a>備註  
  索引參數-1 會傳回目前選取之項目的字串。  
   
-##  <a name="a-namegetitemalla--cmfctoolbarcomboboxbuttongetitemall"></a><a name="getitemall"></a>CMFCToolBarComboBoxButton::GetItemAll  
+##  <a name="getitemall"></a>CMFCToolBarComboBoxButton::GetItemAll  
  傳回具有指定的命令 id。 下拉式方塊按鈕的清單方塊中的指定索引處的項目相關聯的字串  
   
 ```  
@@ -539,7 +569,7 @@ static LPCTSTR GetItemAll(
 ### <a name="remarks"></a>備註  
  索引值為-1 會傳回目前選取之項目的字串。  
   
-##  <a name="a-namegetitemdataa--cmfctoolbarcomboboxbuttongetitemdata"></a><a name="getitemdata"></a>CMFCToolBarComboBoxButton::GetItemData  
+##  <a name="getitemdata"></a>CMFCToolBarComboBoxButton::GetItemData  
  傳回與清單方塊中指定索引處的項目相關聯的資料。  
   
 ```  
@@ -556,7 +586,7 @@ DWORD_PTR GetItemData(int iIndex=-1) const;
 ### <a name="remarks"></a>備註  
  索引參數-1 會傳回目前選取的項目相關聯的資料。  
   
-##  <a name="a-namegetitemdataalla--cmfctoolbarcomboboxbuttongetitemdataall"></a><a name="getitemdataall"></a>CMFCToolBarComboBoxButton::GetItemDataAll  
+##  <a name="getitemdataall"></a>CMFCToolBarComboBoxButton::GetItemDataAll  
  傳回具有特定的命令 id。 下拉式方塊按鈕的清單方塊中的特定索引處的項目相關聯的資料  
   
 ```  
@@ -578,7 +608,7 @@ static DWORD_PTR GetItemDataAll(
 ### <a name="remarks"></a>備註  
  索引參數-1 會傳回目前選取的項目相關聯的資料。  
   
-##  <a name="a-namegetitemdataptralla--cmfctoolbarcomboboxbuttongetitemdataptrall"></a><a name="getitemdataptrall"></a>CMFCToolBarComboBoxButton::GetItemDataPtrAll  
+##  <a name="getitemdataptrall"></a>CMFCToolBarComboBoxButton::GetItemDataPtrAll  
  傳回具有特定的命令 id。 下拉式方塊按鈕的清單方塊中的特定索引處的項目相關聯的資料 這項資料會傳回的指標。  
   
 ```  
@@ -599,7 +629,7 @@ static void* GetItemDataPtrAll(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetprompta--cmfctoolbarcomboboxbuttongetprompt"></a><a name="getprompt"></a>CMFCToolBarComboBoxButton::GetPrompt  
+##  <a name="getprompt"></a>CMFCToolBarComboBoxButton::GetPrompt  
  傳回下拉式方塊按鈕提示字串。  
   
 ```  
@@ -612,7 +642,7 @@ virtual CString GetPrompt() const;
 ### <a name="remarks"></a>備註  
  目前未實作這個方法。  
   
-##  <a name="a-namegettexta--cmfctoolbarcomboboxbuttongettext"></a><a name="gettext"></a>CMFCToolBarComboBoxButton::GetText  
+##  <a name="gettext"></a>CMFCToolBarComboBoxButton::GetText  
  取得文字編輯方塊中。  
   
 ```  
@@ -624,7 +654,7 @@ LPCTSTR GetText() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegettextalla--cmfctoolbarcomboboxbuttongettextall"></a><a name="gettextall"></a>CMFCToolBarComboBoxButton::GetTextAll  
+##  <a name="gettextall"></a>CMFCToolBarComboBoxButton::GetTextAll  
  取得具有指定的命令 id。 下拉式方塊按鈕的編輯方塊中的文字  
   
 ```  
@@ -640,7 +670,7 @@ static LPCTSTR GetTextAll(UINT uiCmd);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehasfocusa--cmfctoolbarcomboboxbuttonhasfocus"></a><a name="hasfocus"></a>CMFCToolBarComboBoxButton::HasFocus  
+##  <a name="hasfocus"></a>CMFCToolBarComboBoxButton::HasFocus  
  指出是否下拉式方塊目前具有焦點。  
   
 ```  
@@ -653,7 +683,7 @@ virtual BOOL HasFocus() const;
 ### <a name="remarks"></a>備註  
  這個方法也會傳回`TRUE`如果下拉式方塊的任何子視窗目前具有焦點。  
   
-##  <a name="a-nameiscenterverta--cmfctoolbarcomboboxbuttoniscentervert"></a><a name="iscentervert"></a>CMFCToolBarComboBoxButton::IsCenterVert  
+##  <a name="iscentervert"></a>CMFCToolBarComboBoxButton::IsCenterVert  
  傳回應用程式中的下拉式方塊按鈕的垂直位置。  
   
 ```  
@@ -665,7 +695,7 @@ static BOOL IsCenterVert();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisflatmodea--cmfctoolbarcomboboxbuttonisflatmode"></a><a name="isflatmode"></a>CMFCToolBarComboBoxButton::IsFlatMode  
+##  <a name="isflatmode"></a>CMFCToolBarComboBoxButton::IsFlatMode  
  傳回應用程式的下拉式方塊按鈕的平面樣式外觀。  
   
 ```  
@@ -678,7 +708,7 @@ static BOOL IsFlatMode();
 ### <a name="remarks"></a>備註  
  下拉式方塊按鈕的預設一般樣式是`FALSE.`  
   
-##  <a name="a-nameisownerofa--cmfctoolbarcomboboxbuttonisownerof"></a><a name="isownerof"></a>CMFCToolBarComboBoxButton::IsOwnerOf  
+##  <a name="isownerof"></a>CMFCToolBarComboBoxButton::IsOwnerOf  
  指出指定的控制代碼是否與下拉式方塊按鈕，或其中一個子項目。  
   
 ```  
@@ -692,7 +722,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果控制代碼相關聯的下拉式方塊按鈕，或其中一個子項目。否則， `FALSE`。  
   
-##  <a name="a-nameisribbonbuttona--cmfctoolbarcomboboxbuttonisribbonbutton"></a><a name="isribbonbutton"></a>CMFCToolBarComboBoxButton::IsRibbonButton  
+##  <a name="isribbonbutton"></a>CMFCToolBarComboBoxButton::IsRibbonButton  
  表示下拉式方塊按鈕是否位在功能區面板上。  
   
 ```  
@@ -705,7 +735,7 @@ BOOL IsRibbonButton() const;
 ### <a name="remarks"></a>備註  
  根據預設，此方法一律傳回`FALSE`，這表示下拉式方塊按鈕永遠不會顯示在功能區面板上。  
   
-##  <a name="a-nameiswindowvisiblea--cmfctoolbarcomboboxbuttoniswindowvisible"></a><a name="iswindowvisible"></a>CMFCToolBarComboBoxButton::IsWindowVisible  
+##  <a name="iswindowvisible"></a>CMFCToolBarComboBoxButton::IsWindowVisible  
  傳回的可見性狀態的下拉式方塊按鈕。  
   
 ```  
@@ -715,7 +745,7 @@ virtual BOOL IsWindowVisible();
 ### <a name="return-value"></a>傳回值  
  下拉式方塊按鈕的可見性狀態。  
   
-##  <a name="a-namenotifycommanda--cmfctoolbarcomboboxbuttonnotifycommand"></a><a name="notifycommand"></a>CMFCToolBarComboBoxButton::NotifyCommand  
+##  <a name="notifycommand"></a>CMFCToolBarComboBoxButton::NotifyCommand  
  表示下拉式方塊按鈕是否會處理訊息。  
   
 ```  
@@ -729,14 +759,14 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ### <a name="return-value"></a>傳回值  
  下拉式方塊按鈕是否會處理訊息。  
   
-##  <a name="a-nameonaddtocustomizepagea--cmfctoolbarcomboboxbuttononaddtocustomizepage"></a><a name="onaddtocustomizepage"></a>CMFCToolBarComboBoxButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>CMFCToolBarComboBoxButton::OnAddToCustomizePage  
  加入按鈕時，由框架呼叫**自訂**對話方塊。  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-##  <a name="a-nameoncalculatesizea--cmfctoolbarcomboboxbuttononcalculatesize"></a><a name="oncalculatesize"></a>CMFCToolBarComboBoxButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>CMFCToolBarComboBoxButton::OnCalculateSize  
  若要計算按鈕的大小架構呼叫。  
   
 ```  
@@ -759,7 +789,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="return-value"></a>傳回值  
  A`SIZE`結構，其中包含的下拉式方塊按鈕，單位為像素尺寸。  
   
-##  <a name="a-nameonchangeparentwnda--cmfctoolbarcomboboxbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCToolBarComboBoxButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>CMFCToolBarComboBoxButton::OnChangeParentWnd  
  下拉式方塊按鈕插入新的工具列時，由架構呼叫。  
   
 ```  
@@ -770,7 +800,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
  [in] `pWndParent`  
  新的父工具列的指標。  
   
-##  <a name="a-nameonclicka--cmfctoolbarcomboboxbuttononclick"></a><a name="onclick"></a>CMFCToolBarComboBoxButton::OnClick  
+##  <a name="onclick"></a>CMFCToolBarComboBoxButton::OnClick  
  當使用者按一下下拉式方塊按鈕，由架構呼叫。  
   
 ```  
@@ -789,7 +819,7 @@ virtual BOOL OnClick(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果此方法會處理事件。，否則， `FALSE`。  
   
-##  <a name="a-nameonctlcolora--cmfctoolbarcomboboxbuttononctlcolor"></a><a name="onctlcolor"></a>CMFCToolBarComboBoxButton::OnCtlColor  
+##  <a name="onctlcolor"></a>CMFCToolBarComboBoxButton::OnCtlColor  
  當使用者變更父工具列色彩設定下拉式方塊按鈕的色彩，由架構呼叫。  
   
 ```  
@@ -811,7 +841,7 @@ virtual HBRUSH OnCtlColor(
 ### <a name="remarks"></a>備註  
  這個方法也會設定下拉式方塊按鈕的文字色彩。  
   
-##  <a name="a-nameondrawa--cmfctoolbarcomboboxbuttonondraw"></a><a name="ondraw"></a>CMFCToolBarComboBoxButton::OnDraw  
+##  <a name="ondraw"></a>CMFCToolBarComboBoxButton::OnDraw  
  使用指定的樣式和選項，以繪製下拉式方塊按鈕架構呼叫。  
   
 ```  
@@ -851,7 +881,7 @@ virtual void OnDraw(
  [in] `bGrayDisabledButtons`  
  `TRUE`若要繪製陰影的已停用的按鈕。`FALSE`使用停用映像的集合。  
   
-##  <a name="a-nameondrawoncustomizelista--cmfctoolbarcomboboxbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
  要繪製下拉式方塊按鈕架構呼叫**命令**窗格**自訂**對話方塊。  
   
 ```  
@@ -874,21 +904,21 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="return-value"></a>傳回值  
  寬度，單位為像素下拉式方塊按鈕。  
   
-##  <a name="a-nameonglobalfontschangeda--cmfctoolbarcomboboxbuttononglobalfontschanged"></a><a name="onglobalfontschanged"></a>CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
  若要設定下拉式方塊按鈕字型，應用程式的字型變更時架構呼叫。  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-##  <a name="a-nameonmovea--cmfctoolbarcomboboxbuttononmove"></a><a name="onmove"></a>CMFCToolBarComboBoxButton::OnMove  
+##  <a name="onmove"></a>CMFCToolBarComboBoxButton::OnMove  
  若要變更下拉式方塊按鈕的位置，為父工具列移動時架構呼叫。  
   
 ```  
 virtual void OnMove();
 ```  
   
-##  <a name="a-nameonshowa--cmfctoolbarcomboboxbuttononshow"></a><a name="onshow"></a>CMFCToolBarComboBoxButton::OnShow  
+##  <a name="onshow"></a>CMFCToolBarComboBoxButton::OnShow  
  當您隱藏或顯示下拉式方塊按鈕時，由架構呼叫。  
   
 ```  
@@ -899,7 +929,7 @@ virtual void OnShow(BOOL bShow);
  [in] `bShow`  
  是否要隱藏或顯示下拉式方塊按鈕。  
   
-##  <a name="a-nameonsizea--cmfctoolbarcomboboxbuttononsize"></a><a name="onsize"></a>CMFCToolBarComboBoxButton::OnSize  
+##  <a name="onsize"></a>CMFCToolBarComboBoxButton::OnSize  
  若要變更下拉式方塊按鈕的大小，為父工具列的大小變更時架構呼叫。  
   
 ```  
@@ -910,7 +940,7 @@ virtual void OnSize(int iSize);
  [in] `iSize`  
  新的下拉式方塊按鈕的寬度。  
   
-##  <a name="a-nameonupdatetooltipa--cmfctoolbarcomboboxbuttononupdatetooltip"></a><a name="onupdatetooltip"></a>CMFCToolBarComboBoxButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>CMFCToolBarComboBoxButton::OnUpdateToolTip  
  在使用者變更下拉式方塊按鈕的工具提示時，由架構呼叫。  
   
 ```  
@@ -937,7 +967,7 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果此方法會處理事件。，否則， `FALSE`。  
   
-##  <a name="a-nameremoveallitemsa--cmfctoolbarcomboboxbuttonremoveallitems"></a><a name="removeallitems"></a>CMFCToolBarComboBoxButton::RemoveAllItems  
+##  <a name="removeallitems"></a>CMFCToolBarComboBoxButton::RemoveAllItems  
  從清單] 和 [編輯方塊中刪除所有項目。  
   
 ```  
@@ -947,7 +977,7 @@ void RemoveAllItems();
 ### <a name="remarks"></a>備註  
  移除所有項目從清單方塊和下拉式方塊控制項的編輯。  
   
-##  <a name="a-nameselectitema--cmfctoolbarcomboboxbuttonselectitem"></a><a name="selectitem"></a>CMFCToolBarComboBoxButton::SelectItem  
+##  <a name="selectitem"></a>CMFCToolBarComboBoxButton::SelectItem  
  清單方塊中選取項目。  
   
 ```  
@@ -977,7 +1007,7 @@ BOOL SelectItem(LPCTSTR lpszText);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameselectitemalla--cmfctoolbarcomboboxbuttonselectitemall"></a><a name="selectitemall"></a>CMFCToolBarComboBoxButton::SelectItemAll  
+##  <a name="selectitemall"></a>CMFCToolBarComboBoxButton::SelectItemAll  
  選取一個項目在清單方塊的下拉式方塊按鈕具有指定的命令識別碼。  
   
 ```  
@@ -1014,7 +1044,7 @@ static BOOL SelectItemAll(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameserializea--cmfctoolbarcomboboxbuttonserialize"></a><a name="serialize"></a>CMFCToolBarComboBoxButton::Serialize  
+##  <a name="serialize"></a>CMFCToolBarComboBoxButton::Serialize  
  從封存讀取此物件，或將它寫入至封存檔。  
   
 ```  
@@ -1028,7 +1058,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>備註  
  在設定`CArchive`物件會決定這個方法會讀取或寫入封存。  
   
-##  <a name="a-namesetaccdataa--cmfctoolbarcomboboxbuttonsetaccdata"></a><a name="setaccdata"></a>CMFCToolBarComboBoxButton::SetACCData  
+##  <a name="setaccdata"></a>CMFCToolBarComboBoxButton::SetACCData  
  填入指定`CAccessibilityData`使用下拉式方塊按鈕的協助工具資料的物件。  
   
 ```  
@@ -1047,7 +1077,7 @@ virtual BOOL SetACCData(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果此方法成功。否則`FALSE`。  
   
-##  <a name="a-namesetcenterverta--cmfctoolbarcomboboxbuttonsetcentervert"></a><a name="setcentervert"></a>CMFCToolBarComboBoxButton::SetCenterVert  
+##  <a name="setcentervert"></a>CMFCToolBarComboBoxButton::SetCenterVert  
  設定應用程式中的下拉式方塊按鈕的垂直位置。  
   
 ```  
@@ -1061,7 +1091,7 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ### <a name="remarks"></a>備註  
  根據預設，下拉式方塊按鈕頂端對齊。  
   
-##  <a name="a-namesetcontextmenuida--cmfctoolbarcomboboxbuttonsetcontextmenuid"></a><a name="setcontextmenuid"></a>CMFCToolBarComboBoxButton::SetContextMenuID  
+##  <a name="setcontextmenuid"></a>CMFCToolBarComboBoxButton::SetContextMenuID  
  設定下拉式方塊按鈕的捷徑功能表資源識別碼。  
   
 ```  
@@ -1072,7 +1102,7 @@ void SetContextMenuID(UINT uiResID);
  [in] `uiResID`  
  快顯功能表上的資源 id。  
   
-##  <a name="a-namesetdropdownheighta--cmfctoolbarcomboboxbuttonsetdropdownheight"></a><a name="setdropdownheight"></a>CMFCToolBarComboBoxButton::SetDropDownHeight  
+##  <a name="setdropdownheight"></a>CMFCToolBarComboBoxButton::SetDropDownHeight  
  向下拖曳時，請設定清單方塊的高度。  
   
 ```  
@@ -1086,7 +1116,7 @@ void SetDropDownHeight(int nHeight);
 ### <a name="remarks"></a>備註  
  預設高度為 150 像素。  
   
-##  <a name="a-namesetflatmodea--cmfctoolbarcomboboxbuttonsetflatmode"></a><a name="setflatmode"></a>CMFCToolBarComboBoxButton::SetFlatMode  
+##  <a name="setflatmode"></a>CMFCToolBarComboBoxButton::SetFlatMode  
  應用程式中設定下拉式方塊按鈕的平面樣式的外觀。  
   
 ```  
@@ -1100,7 +1130,7 @@ static void SetFlatMode(BOOL bFlat=TRUE);
 ### <a name="remarks"></a>備註  
  下拉式方塊按鈕的預設一般樣式是`FALSE`。  
   
-##  <a name="a-namesetstylea--cmfctoolbarcomboboxbuttonsetstyle"></a><a name="setstyle"></a>CMFCToolBarComboBoxButton::SetStyle  
+##  <a name="setstyle"></a>CMFCToolBarComboBoxButton::SetStyle  
  將指定的樣式設定的下拉式方塊按鈕，並重新繪製控制項，如果未停用。  
   
 ```  
@@ -1114,7 +1144,7 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="remarks"></a>備註  
  如需工具列按鈕樣式的清單，請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)  
   
-##  <a name="a-namesettexta--cmfctoolbarcomboboxbuttonsettext"></a><a name="settext"></a>CMFCToolBarComboBoxButton::SetText  
+##  <a name="settext"></a>CMFCToolBarComboBoxButton::SetText  
  設定編輯方塊的下拉式方塊按鈕的文字。  
   
 ```  

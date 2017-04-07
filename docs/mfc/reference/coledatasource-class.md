@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDataSource
+- AFXOLE/COleDataSource
+- AFXOLE/COleDataSource::COleDataSource
+- AFXOLE/COleDataSource::CacheData
+- AFXOLE/COleDataSource::CacheGlobalData
+- AFXOLE/COleDataSource::DelayRenderData
+- AFXOLE/COleDataSource::DelayRenderFileData
+- AFXOLE/COleDataSource::DelaySetData
+- AFXOLE/COleDataSource::DoDragDrop
+- AFXOLE/COleDataSource::Empty
+- AFXOLE/COleDataSource::FlushClipboard
+- AFXOLE/COleDataSource::GetClipboardOwner
+- AFXOLE/COleDataSource::OnRenderData
+- AFXOLE/COleDataSource::OnRenderFileData
+- AFXOLE/COleDataSource::OnRenderGlobalData
+- AFXOLE/COleDataSource::OnSetData
+- AFXOLE/COleDataSource::SetClipboard
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +118,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-namecachedataa--coledatasourcecachedata"></a><a name="cachedata"></a>COleDataSource::CacheData  
+##  <a name="cachedata"></a>COleDataSource::CacheData  
  呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
   
 ```  
@@ -135,7 +151,7 @@ void CacheData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecacheglobaldataa--coledatasourcecacheglobaldata"></a><a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
+##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
  呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
   
 ```  
@@ -164,14 +180,14 @@ void CacheGlobalData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecoledatasourcea--coledatasourcecoledatasource"></a><a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
  建構 `COleDataSource` 物件。  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="a-namedelayrenderdataa--coledatasourcedelayrenderdata"></a><a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
+##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
  呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
   
 ```  
@@ -198,7 +214,7 @@ void DelayRenderData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedelayrenderfiledataa--coledatasourcedelayrenderfiledata"></a><a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
  呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
   
 ```  
@@ -225,7 +241,7 @@ void DelayRenderFileData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedelaysetdataa--coledatasourcedelaysetdata"></a><a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
  呼叫此函式來支援變更資料來源的內容。  
   
 ```  
@@ -248,7 +264,7 @@ void DelaySetData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedodragdropa--coledatasourcedodragdrop"></a><a name="dodragdrop"></a>COleDataSource::DoDragDrop  
+##  <a name="dodragdrop"></a>COleDataSource::DoDragDrop  
  呼叫`DoDragDrop`成員函式來執行這個資料來源的拖放作業通常在[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)處理常式。  
   
 ```  
@@ -294,7 +310,7 @@ DROPEFFECT DoDragDrop(
   
  如需詳細資訊，請參閱文章[將拖放︰ 實作置放來源](../../mfc/drag-and-drop-implementing-a-drop-source.md)。  
   
-##  <a name="a-nameemptya--coledatasourceempty"></a><a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>COleDataSource::Empty  
  呼叫此函式，以空`COleDataSource`資料物件。  
   
 ```  
@@ -306,7 +322,7 @@ void Empty();
   
  如需詳細資訊，請參閱[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameflushclipboarda--coledatasourceflushclipboard"></a><a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
  將剪貼簿，然後接著可讓您貼上剪貼簿的資料，您的應用程式關閉後資料的呈現。  
   
 ```  
@@ -316,7 +332,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>備註  
  使用[SetClipboard](#setclipboard) ，將資料放在剪貼簿上。  
   
-##  <a name="a-namegetclipboardownera--coledatasourcegetclipboardowner"></a><a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
  判斷自從是否已變更的資料到剪貼簿上[SetClipboard](#setclipboard)上次呼叫，如果是的話，識別目前的擁有者。  
   
 ```  
@@ -326,7 +342,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>傳回值  
  目前的剪貼簿，資料來源或**NULL**如果沒有任何在剪貼簿上，或呼叫應用程式不屬於剪貼簿。  
   
-##  <a name="a-nameonrenderdataa--coledatasourceonrenderdata"></a><a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
  擷取指定之格式的資料架構所呼叫。  
   
 ```  
@@ -354,7 +370,7 @@ virtual BOOL OnRenderData(
   
  如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構[TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)列舉型別和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *。*  
   
-##  <a name="a-nameonrenderfiledataa--coledatasourceonrenderfiledata"></a><a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
  指定的儲存體中的檔案時，擷取指定的格式中的資料架構所呼叫。  
   
 ```  
@@ -380,7 +396,7 @@ virtual BOOL OnRenderFileData(
   
  如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *。*  
   
-##  <a name="a-nameonrenderglobaldataa--coledatasourceonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
  擷取指定的格式中的資料，當指定的儲存體中的全域記憶體架構所呼叫。  
   
 ```  
@@ -408,7 +424,7 @@ virtual BOOL OnRenderGlobalData(
   
  如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *。*  
   
-##  <a name="a-nameonsetdataa--coledatasourceonsetdata"></a><a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>COleDataSource::OnSetData  
  若要設定或取代的資料架構呼叫`COleDataSource`物件中指定的格式。  
   
 ```  
@@ -438,7 +454,7 @@ virtual BOOL OnSetData(
   
  如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)函式的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] *。*  
   
-##  <a name="a-namesetclipboarda--coledatasourcesetclipboard"></a><a name="setclipboard"></a>COleDataSource::SetClipboard  
+##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
  將所包含的資料`COleDataSource`物件之後呼叫下列函式的其中一個剪貼簿︰ [CacheData](#cachedata)， [CacheGlobalData](#cacheglobaldata)， [DelayRenderData](#delayrenderdata)，或[DelayRenderFileData](#delayrenderfiledata)。  
   
 ```  

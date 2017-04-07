@@ -9,8 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- IDataObject
 - COleDataObject
+- AFXOLE/COleDataObject
+- AFXOLE/COleDataObject::COleDataObject
+- AFXOLE/COleDataObject::Attach
+- AFXOLE/COleDataObject::AttachClipboard
+- AFXOLE/COleDataObject::BeginEnumFormats
+- AFXOLE/COleDataObject::Detach
+- AFXOLE/COleDataObject::GetData
+- AFXOLE/COleDataObject::GetFileData
+- AFXOLE/COleDataObject::GetGlobalData
+- AFXOLE/COleDataObject::GetNextFormat
+- AFXOLE/COleDataObject::IsDataAvailable
+- AFXOLE/COleDataObject::Release
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +111,7 @@ class COleDataObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-nameattacha--coledataobjectattach"></a><a name="attach"></a>COleDataObject::Attach  
+##  <a name="attach"></a>COleDataObject::Attach  
  呼叫此函式來建立關聯`COleDataObject`OLE 資料物件的物件。  
   
 ```  
@@ -119,7 +130,7 @@ void Attach(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameattachclipboarda--coledataobjectattachclipboard"></a><a name="attachclipboard"></a>COleDataObject::AttachClipboard  
+##  <a name="attachclipboard"></a>COleDataObject::AttachClipboard  
  呼叫此函式來附加至剪貼簿上目前的資料物件`COleDataObject`物件。  
   
 ```  
@@ -134,7 +145,7 @@ BOOL AttachClipboard();
 > [!NOTE]
 >  呼叫此函式會鎖定剪貼簿，直到釋放這個資料物件。 資料物件的解構函式在釋放`COleDataObject`。 如需詳細資訊，請參閱[OpenClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649048)和[CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) Win32 文件中。  
   
-##  <a name="a-namebeginenumformatsa--coledataobjectbeginenumformats"></a><a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
+##  <a name="beginenumformats"></a>COleDataObject::BeginEnumFormats  
  呼叫此函式的後續呼叫準備`GetNextFormat`從項目擷取的資料格式清單。  
   
 ```  
@@ -148,7 +159,7 @@ void BeginEnumFormats();
   
  如需詳細資訊，請參閱[IDataObject::EnumFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms683979)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecoledataobjecta--coledataobjectcoledataobject"></a><a name="coledataobject"></a>COleDataObject::COleDataObject  
+##  <a name="coledataobject"></a>COleDataObject::COleDataObject  
  建構 `COleDataObject` 物件。  
   
 ```  
@@ -161,7 +172,7 @@ COleDataObject();
 > [!NOTE]
 >  由於其中一個拖放處理常式的參數是一個指向`COleDataObject`，就不需要呼叫這個建構函式，以支援拖放。  
   
-##  <a name="a-namedetacha--coledataobjectdetach"></a><a name="detach"></a>COleDataObject::Detach  
+##  <a name="detach"></a>COleDataObject::Detach  
  呼叫此函式可卸離`COleDataObject`從但未釋放資料物件及其相關聯 OLE 資料物件的物件。  
   
 ```  
@@ -173,7 +184,7 @@ LPDATAOBJECT Detach();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetdataa--coledataobjectgetdata"></a><a name="getdata"></a>COleDataObject::GetData  
+##  <a name="getdata"></a>COleDataObject::GetData  
  呼叫此函式可擷取資料的項目中指定的格式。  
   
 ```  
@@ -201,7 +212,7 @@ BOOL GetData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetfiledataa--coledataobjectgetfiledata"></a><a name="getfiledata"></a>COleDataObject::GetFileData  
+##  <a name="getfiledata"></a>COleDataObject::GetFileData  
  呼叫此函式建立`CFile`或`CFile`-衍生物件，以及擷取資料到指定的格式`CFile`指標。  
   
 ```  
@@ -230,7 +241,7 @@ CFile* GetFileData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetglobaldataa--coledataobjectgetglobaldata"></a><a name="getglobaldata"></a>COleDataObject::GetGlobalData  
+##  <a name="getglobaldata"></a>COleDataObject::GetGlobalData  
  呼叫此函式配置全域記憶體區塊，並擷取資料到指定的格式`HGLOBAL`。  
   
 ```  
@@ -254,7 +265,7 @@ HGLOBAL GetGlobalData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetnextformata--coledataobjectgetnextformat"></a><a name="getnextformat"></a>COleDataObject::GetNextFormat  
+##  <a name="getnextformat"></a>COleDataObject::GetNextFormat  
  呼叫此函式重複，以取得所有可用項目從擷取資料的格式。  
   
 ```  
@@ -275,7 +286,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
   
  如需詳細資訊，請參閱[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisdataavailablea--coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
+##  <a name="isdataavailable"></a>COleDataObject::IsDataAvailable  
  呼叫此函式可判斷是否可供 OLE 項目擷取資料的特定格式。  
   
 ```  
@@ -304,7 +315,7 @@ BOOL IsDataAvailable(
 ### <a name="example"></a>範例  
   請參閱範例[CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)。  
   
-##  <a name="a-namereleasea--coledataobjectrelease"></a><a name="release"></a>COleDataObject::Release  
+##  <a name="release"></a>COleDataObject::Release  
  呼叫此函式釋放的擁有權[IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)先前與相關聯的物件`COleDataObject`物件。  
   
 ```  

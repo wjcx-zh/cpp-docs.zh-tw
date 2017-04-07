@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindowLic
+- No header/ATL::IAxWinHostWindowLic
+- No header/ATL::CreateControlLic
+- No header/ATL::CreateControlLicEx
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -70,7 +73,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h （也包含在 ATLBase.h）|  
   
-##  <a name="a-namecreatecontrollica--iaxwinhostwindowliccreatecontrollic"></a><a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
+##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
  建立授權的控制項、 將它初始化，以及裝載於所識別的視窗`hWnd`。  
   
 ```
@@ -93,7 +96,7 @@ STDMETHOD(CreateControlLic)(
 ### <a name="example"></a>範例  
  請參閱[裝載 ActiveX 控制項使用 ATL 類別](../../atl/hosting-activex-controls-using-atl-axhost.md)如需使用範例`IAxWinHostWindowLic::CreateControlLic`。  
   
-##  <a name="a-namecreatecontrollicexa--iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
+##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
  建立授權的 ActiveX 控制項、 將它初始化，以及裝載於指定的視窗，類似於[IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)。  
   
 ```

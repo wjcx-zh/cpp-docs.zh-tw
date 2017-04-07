@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimateCtrl
+- AFXCMN/CAnimateCtrl
+- AFXCMN/CAnimateCtrl::CAnimateCtrl
+- AFXCMN/CAnimateCtrl::Close
+- AFXCMN/CAnimateCtrl::Create
+- AFXCMN/CAnimateCtrl::CreateEx
+- AFXCMN/CAnimateCtrl::IsPlaying
+- AFXCMN/CAnimateCtrl::Open
+- AFXCMN/CAnimateCtrl::Play
+- AFXCMN/CAnimateCtrl::Seek
+- AFXCMN/CAnimateCtrl::Stop
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -108,7 +118,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="a-namecanimatectrla--canimatectrlcanimatectrl"></a><a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
+##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
  建構 `CAnimateCtrl` 物件。  
   
 ```  
@@ -121,7 +131,7 @@ CAnimateCtrl();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog #&56;](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="a-nameclosea--canimatectrlclose"></a><a name="close"></a>CAnimateCtrl::Close  
+##  <a name="close"></a>CAnimateCtrl::Close  
  關閉先前動畫控制項 （如果有的話） 中開啟在播放 AVI 短片，並將它從記憶體移除。  
   
 ```  
@@ -134,7 +144,7 @@ BOOL Close();
 ### <a name="example"></a>範例  
   請參閱範例[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
   
-##  <a name="a-namecreatea--canimatectrlcreate"></a><a name="create"></a>CAnimateCtrl::Create  
+##  <a name="create"></a>CAnimateCtrl::Create  
  建立動畫控制項並將它附加`CAnimateCtrl`物件。  
   
 ```  
@@ -179,7 +189,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
   請參閱範例[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
   
-##  <a name="a-namecreateexa--canimatectrlcreateex"></a><a name="createex"></a>CAnimateCtrl::CreateEx  
+##  <a name="createex"></a>CAnimateCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CAnimateCtrl`物件。  
   
 ```  
@@ -213,7 +223,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，指定 Windows 延伸的樣式序言**WS_EX_**。  
   
-##  <a name="a-nameisplayinga--canimatectrlisplaying"></a><a name="isplaying"></a>CAnimateCtrl::IsPlaying  
+##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
  指出是否要播放音訊視訊交錯格式 (AVI) 剪輯。  
   
 ```  
@@ -226,7 +236,7 @@ BOOL IsPlaying() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameopena--canimatectrlopen"></a><a name="open"></a>CAnimateCtrl::Open  
+##  <a name="open"></a>CAnimateCtrl::Open  
  呼叫此函式可開啟 AVI 短片，並顯示其第一個框架。  
   
 ```  
@@ -258,7 +268,7 @@ BOOL Open(UINT nID);
 ### <a name="example"></a>範例  
   請參閱範例[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
   
-##  <a name="a-nameplaya--canimatectrlplay"></a><a name="play"></a>CAnimateCtrl::Play  
+##  <a name="play"></a>CAnimateCtrl::Play  
  呼叫此函式以動畫控制項在播放 AVI 短片。  
   
 ```  
@@ -287,7 +297,7 @@ BOOL Play(
 ### <a name="example"></a>範例  
   請參閱範例[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
   
-##  <a name="a-nameseeka--canimatectrlseek"></a><a name="seek"></a>CAnimateCtrl::Seek  
+##  <a name="seek"></a>CAnimateCtrl::Seek  
  呼叫此函數會以靜態方式顯示 AVI 短片的單一畫面。  
   
 ```  
@@ -307,7 +317,7 @@ BOOL Seek(UINT nTo);
 ### <a name="example"></a>範例  
   請參閱範例[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
   
-##  <a name="a-namestopa--canimatectrlstop"></a><a name="stop"></a>CAnimateCtrl::Stop  
+##  <a name="stop"></a>CAnimateCtrl::Stop  
  呼叫此函式，若要停止播放 AVI 短片動畫控制項中。  
   
 ```  

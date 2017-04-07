@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator
+- ATLCORE/ATL::CCRTAllocator::Allocate
+- ATLCORE/ATL::CCRTAllocator::Free
+- ATLCORE/ATL::CCRTAllocator::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -64,7 +68,7 @@ class ATL::CCRTAllocator
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcore.h  
   
-##  <a name="a-nameallocatea--ccrtallocatorallocate"></a><a name="allocate"></a>CCRTAllocator::Allocate  
+##  <a name="allocate"></a>CCRTAllocator::Allocate  
  呼叫此靜態函式以配置記憶體。  
   
 ```
@@ -81,7 +85,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  配置記憶體。 請參閱[malloc](../../c-runtime-library/reference/malloc.md)如需詳細資訊。  
   
-##  <a name="a-namefreea--ccrtallocatorfree"></a><a name="free"></a>CCRTAllocator::Free  
+##  <a name="free"></a>CCRTAllocator::Free  
  呼叫此靜態函式來釋放記憶體。  
   
 ```
@@ -95,7 +99,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>備註  
  釋出配置的記憶體。 請參閱[免費](../../c-runtime-library/reference/free.md)如需詳細資訊。  
   
-##  <a name="a-namereallocatea--ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::Reallocate  
+##  <a name="reallocate"></a>CCRTAllocator::Reallocate  
  呼叫此靜態函式以重新配置記憶體。  
   
 ```

@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IPersistStorageImpl
-- ATL::IPersistStorageImpl<T>
-- ATL.IPersistStorageImpl<T>
 - IPersistStorageImpl
-- ATL.IPersistStorageImpl
+- ATLCOM/ATL::IPersistStorageImpl
+- ATLCOM/ATL::IPersistStorageImpl::GetClassID
+- ATLCOM/ATL::IPersistStorageImpl::HandsOffStorage
+- ATLCOM/ATL::IPersistStorageImpl::InitNew
+- ATLCOM/ATL::IPersistStorageImpl::IsDirty
+- ATLCOM/ATL::IPersistStorageImpl::Load
+- ATLCOM/ATL::IPersistStorageImpl::Save
+- ATLCOM/ATL::IPersistStorageImpl::SaveCompleted
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namegetclassida--ipersiststorageimplgetclassid"></a><a name="getclassid"></a>IPersistStorageImpl::GetClassID  
+##  <a name="getclassid"></a>IPersistStorageImpl::GetClassID  
  擷取物件的 CLSID。  
   
 ```
@@ -100,7 +104,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>備註  
  請參閱[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namehandsoffstoragea--ipersiststorageimplhandsoffstorage"></a><a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
+##  <a name="handsoffstorage"></a>IPersistStorageImpl::HandsOffStorage  
  指示要釋放儲存體的所有物件，並輸入 HandsOff 模式的物件。  
   
 ```
@@ -113,7 +117,7 @@ STDMETHOD(HandsOffStorage)(void);
 ### <a name="remarks"></a>備註  
  請參閱[IPersistStorage::HandsOffStorage](http://msdn.microsoft.com/library/windows/desktop/ms679742)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinitnewa--ipersiststorageimplinitnew"></a><a name="initnew"></a>IPersistStorageImpl::InitNew  
+##  <a name="initnew"></a>IPersistStorageImpl::InitNew  
  初始化新的儲存體。  
   
 ```
@@ -125,7 +129,7 @@ STDMETHOD(InitNew)(IStorage*);
   
  請參閱[IPersistStorage:InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisdirtya--ipersiststorageimplisdirty"></a><a name="isdirty"></a>IPersistStorageImpl::IsDirty  
+##  <a name="isdirty"></a>IPersistStorageImpl::IsDirty  
  檢查自上次儲存後，是否已變更物件的資料。  
   
 ```
@@ -137,7 +141,7 @@ STDMETHOD(IsDirty)(void);
   
  請參閱[IPersistStorage:IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameloada--ipersiststorageimplload"></a><a name="load"></a>IPersistStorageImpl::Load  
+##  <a name="load"></a>IPersistStorageImpl::Load  
  從指定的儲存體中載入物件的屬性。  
   
 ```
@@ -149,7 +153,7 @@ STDMETHOD(Load)(IStorage* pStorage);
   
  請參閱[IPersistStorage:Load](http://msdn.microsoft.com/library/windows/desktop/ms680557)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesavea--ipersiststorageimplsave"></a><a name="save"></a>IPersistStorageImpl::Save  
+##  <a name="save"></a>IPersistStorageImpl::Save  
  將物件的屬性儲存至指定的儲存體。  
   
 ```
@@ -161,7 +165,7 @@ STDMETHOD(Save)(IStorage* pStorage, BOOL fSameAsLoad);
   
  請參閱[IPersistStorage:Save](http://msdn.microsoft.com/library/windows/desktop/ms680680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesavecompleteda--ipersiststorageimplsavecompleted"></a><a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
+##  <a name="savecompleted"></a>IPersistStorageImpl::SaveCompleted  
  通知可以回到正常模式才能寫入至其儲存體物件的物件。  
   
 ```

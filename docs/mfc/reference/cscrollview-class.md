@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CScrollView
+- AFXWIN/CScrollView
+- AFXWIN/CScrollView::CScrollView
+- AFXWIN/CScrollView::CheckScrollBars
+- AFXWIN/CScrollView::FillOutsideRect
+- AFXWIN/CScrollView::GetDeviceScrollPosition
+- AFXWIN/CScrollView::GetDeviceScrollSizes
+- AFXWIN/CScrollView::GetScrollPosition
+- AFXWIN/CScrollView::GetTotalSize
+- AFXWIN/CScrollView::ResizeParentToFit
+- AFXWIN/CScrollView::ScrollToPosition
+- AFXWIN/CScrollView::SetScaleToFitSize
+- AFXWIN/CScrollView::SetScrollSizes
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +134,7 @@ class CScrollView : public CView
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecheckscrollbarsa--cscrollviewcheckscrollbars"></a><a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
  呼叫此成員函式，以判斷捲軸檢視是否具有水平及垂直軸。  
   
 ```  
@@ -138,7 +150,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  指出應用程式有垂直捲軸。  
   
-##  <a name="a-namecscrollviewa--cscrollviewcscrollview"></a><a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>CScrollView::CScrollView  
  建構 `CScrollView` 物件。  
   
 ```  
@@ -148,7 +160,7 @@ CScrollView();
 ### <a name="remarks"></a>備註  
  您必須呼叫`SetScrollSizes`或`SetScaleToFitSize`之前捲軸檢視可供使用。  
   
-##  <a name="a-namefilloutsiderecta--cscrollviewfilloutsiderect"></a><a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
  呼叫`FillOutsideRect`填滿區域的捲動區域外部顯示的檢視。  
   
 ```  
@@ -170,7 +182,7 @@ void FillOutsideRect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&164;](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="a-namegetdevicescrollpositiona--cscrollviewgetdevicescrollposition"></a><a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
  呼叫`GetDeviceScrollPosition`當您需要目前水平和垂直位置的捲動方塊中的捲軸。  
   
 ```  
@@ -185,7 +197,7 @@ CPoint GetDeviceScrollPosition() const;
   
  `GetDeviceScrollPosition`傳回值以裝置為單位。 如果您想的邏輯單元，請使用`GetScrollPosition`改。  
   
-##  <a name="a-namegetdevicescrollsizesa--cscrollviewgetdevicescrollsizes"></a><a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
+##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
  `GetDeviceScrollSizes`取得目前的對應模式、 大小總計，以及可捲動檢視的列和頁面大小。  
   
 ```  
@@ -212,7 +224,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>備註  
  大小是以裝置為單位。 此成員函式很少會被呼叫。  
   
-##  <a name="a-namegetscrollpositiona--cscrollviewgetscrollposition"></a><a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
  呼叫`GetScrollPosition`當您需要目前水平和垂直位置的捲動方塊中的捲軸。  
   
 ```  
@@ -227,7 +239,7 @@ CPoint GetScrollPosition() const;
   
  `GetScrollPosition`傳回值，以邏輯單位表示。 如果您想裝置單位，請使用`GetDeviceScrollPosition`改。  
   
-##  <a name="a-namegettotalsizea--cscrollviewgettotalsize"></a><a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
  呼叫`GetTotalSize`來擷取目前的水平和垂直大小的捲軸檢視。  
   
 ```  
@@ -237,7 +249,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>傳回值  
  捲動檢視，以邏輯單位的大小總計。 水平大小**cx**成員`CSize`傳回值。 垂直大小**cy**成員。  
   
-##  <a name="a-nameresizeparenttofita--cscrollviewresizeparenttofit"></a><a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
  呼叫`ResizeParentToFit`讓指示其框架視窗的大小檢視的大小。  
   
 ```  
@@ -255,7 +267,7 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
   
  [!code-cpp[NVC_MFCDocView #&165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="a-namescrolltopositiona--cscrollviewscrolltoposition"></a><a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
  呼叫`ScrollToPosition`以捲動到檢視中的指定點。  
   
 ```  
@@ -269,7 +281,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>備註  
  將捲動到檢視，使這點是在視窗的左上角。 如果此檢視會調整為適合，必須不會呼叫此成員函式。  
   
-##  <a name="a-namesetscaletofitsizea--cscrollviewsetscaletofitsize"></a><a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
  呼叫`SetScaleToFitSize`當您想要自動調整檢視區大小為目前的視窗大小。  
   
 ```  
@@ -291,7 +303,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  [!code-cpp[NVC_MFCDocView #&165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="a-namesetscrollsizesa--cscrollviewsetscrollsizes"></a><a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
  呼叫`SetScrollSizes`檢視即將更新。  
   
 ```  

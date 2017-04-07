@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMouseManager
+- AFXMOUSEMANAGER/CMouseManager
+- AFXMOUSEMANAGER/CMouseManager::AddView
+- AFXMOUSEMANAGER/CMouseManager::GetViewDblClickCommand
+- AFXMOUSEMANAGER/CMouseManager::GetViewIconId
+- AFXMOUSEMANAGER/CMouseManager::GetViewIdByName
+- AFXMOUSEMANAGER/CMouseManager::GetViewNames
+- AFXMOUSEMANAGER/CMouseManager::LoadState
+- AFXMOUSEMANAGER/CMouseManager::SaveState
+- AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -76,7 +85,7 @@ class CMouseManager : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmousemanager.h  
   
-##  <a name="a-nameaddviewa--cmousemanageraddview"></a><a name="addview"></a>CMouseManager::AddView  
+##  <a name="addview"></a>CMouseManager::AddView  
  註冊[CView](../../mfc/reference/cview-class.md)物件[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)以支援自訂的滑鼠行為。  
   
 ```  
@@ -123,7 +132,7 @@ BOOL AddView(
   
  [!code-cpp[NVC_MFC_StateCollection #&4;](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
   
-##  <a name="a-namegetviewdblclickcommanda--cmousemanagergetviewdblclickcommand"></a><a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
+##  <a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
  傳回使用者按兩下內提供的檢視時，所執行的命令。  
   
 ```  
@@ -137,7 +146,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ### <a name="return-value"></a>傳回值  
  如果檢視命令，與相關聯的命令識別項否則為 0。  
   
-##  <a name="a-namegetviewiconida--cmousemanagergetviewiconid"></a><a name="getviewiconid"></a>CMouseManager::GetViewIconId  
+##  <a name="getviewiconid"></a>CMouseManager::GetViewIconId  
  擷取與檢視識別碼相關聯的圖示  
   
 ```  
@@ -154,7 +163,7 @@ UINT GetViewIconId(int iViewId) const;
 ### <a name="remarks"></a>備註  
  如果檢視未使用第一次註冊，這個方法將會失敗[CMouseManager::AddView](#addview)。  
   
-##  <a name="a-namegetviewidbynamea--cmousemanagergetviewidbyname"></a><a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
+##  <a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
  擷取與檢視表名稱相關聯的檢視識別碼。  
   
 ```  
@@ -171,7 +180,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ### <a name="remarks"></a>備註  
  這個方法會透過使用註冊的檢視搜尋[CMouseManager::AddView](#addview)。  
   
-##  <a name="a-namegetviewnamesa--cmousemanagergetviewnames"></a><a name="getviewnames"></a>CMouseManager::GetViewNames  
+##  <a name="getviewnames"></a>CMouseManager::GetViewNames  
  擷取所有已註冊的檢視名稱的清單。  
   
 ```  
@@ -185,7 +194,7 @@ void GetViewNames(CStringList& listOfNames) const;
 ### <a name="remarks"></a>備註  
  這個方法會填入參數`listOfNames`使用註冊的所有檢視的名稱與[CMouseManager::AddView](#addview)。  
   
-##  <a name="a-nameloadstatea--cmousemanagerloadstate"></a><a name="loadstate"></a>CMouseManager::LoadState  
+##  <a name="loadstate"></a>CMouseManager::LoadState  
  載入的狀態[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)登錄中。  
   
 ```  
@@ -204,7 +213,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  在大部分情況下，您不需要直接呼叫此函式。 它稱為工作區初始化程序的一部分。 如需工作區初始化程序的詳細資訊，請參閱[CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)。  
   
-##  <a name="a-namesavestatea--cmousemanagersavestate"></a><a name="savestate"></a>CMouseManager::SaveState  
+##  <a name="savestate"></a>CMouseManager::SaveState  
  寫入的狀態[CMouseManager 類別](../../mfc/reference/cmousemanager-class.md)登錄。  
   
 ```  
@@ -223,7 +232,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  在大部分情況下，您不需要直接呼叫此函式。 它稱為工作區序列化程序的一部分。 如需工作區序列化程序的詳細資訊，請參閱[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)。  
   
-##  <a name="a-namesetcommandfordblclka--cmousemanagersetcommandfordblclk"></a><a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
+##  <a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
  自訂命令關聯至第一次向滑鼠管理員的檢視。  
   
 ```  

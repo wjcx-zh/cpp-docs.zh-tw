@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDIChildWnd
+- AFXWIN/CMDIChildWnd
+- AFXWIN/CMDIChildWnd::CMDIChildWnd
+- AFXWIN/CMDIChildWnd::Create
+- AFXWIN/CMDIChildWnd::GetMDIFrame
+- AFXWIN/CMDIChildWnd::MDIActivate
+- AFXWIN/CMDIChildWnd::MDIDestroy
+- AFXWIN/CMDIChildWnd::MDIMaximize
+- AFXWIN/CMDIChildWnd::MDIRestore
+- AFXWIN/CMDIChildWnd::SetHandles
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -118,7 +127,7 @@ class CMDIChildWnd : public CFrameWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecmdichildwnda--cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
+##  <a name="cmdichildwnd"></a>CMDIChildWnd::CMDIChildWnd  
  呼叫建構`CMDIChildWnd`物件。  
   
 ```  
@@ -131,7 +140,7 @@ CMDIChildWnd();
 ### <a name="example"></a>範例  
   請參閱範例[CMDIChildWnd::Create](#create)。  
   
-##  <a name="a-namecreatea--cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd::Create  
+##  <a name="create"></a>CMDIChildWnd::Create  
  呼叫此成員函式，來建立 Windows MDI 子視窗，並將其附加至`CMDIChildWnd`物件。  
   
 ```  
@@ -183,7 +192,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFCWindowing #&9;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]  
   
-##  <a name="a-namegetmdiframea--cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
+##  <a name="getmdiframe"></a>CMDIChildWnd::GetMDIFrame  
  呼叫此函式來傳回 MDI 父框架。  
   
 ```  
@@ -199,7 +208,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="example"></a>範例  
   請參閱範例[CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu)。  
   
-##  <a name="a-namemdiactivatea--cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
+##  <a name="mdiactivate"></a>CMDIChildWnd::MDIActivate  
  呼叫此成員函式，以啟動獨立 MDI 框架視窗的 MDI 子視窗。  
   
 ```  
@@ -212,7 +221,7 @@ void MDIActivate();
 ### <a name="example"></a>範例  
   請參閱範例[CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup)。  
   
-##  <a name="a-namemdidestroya--cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
+##  <a name="mdidestroy"></a>CMDIChildWnd::MDIDestroy  
  呼叫此成員函式，可摧毀 MDI 子視窗。  
   
 ```  
@@ -225,7 +234,7 @@ void MDIDestroy();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&10;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]  
   
-##  <a name="a-namemdimaximizea--cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>CMDIChildWnd::MDIMaximize  
  呼叫此成員函式，以最大化 MDI 子視窗。  
   
 ```  
@@ -238,7 +247,7 @@ void MDIMaximize();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&11;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]  
   
-##  <a name="a-namemdirestorea--cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
+##  <a name="mdirestore"></a>CMDIChildWnd::MDIRestore  
  呼叫此成員函式，從最大化或最小化大小還原 MDI 子視窗。  
   
 ```  
@@ -248,7 +257,7 @@ void MDIRestore();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&12;](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]  
   
-##  <a name="a-namesethandlesa--cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd::SetHandles  
+##  <a name="sethandles"></a>CMDIChildWnd::SetHandles  
  設定功能表和快速鍵資源控制代碼。  
   
 ```  

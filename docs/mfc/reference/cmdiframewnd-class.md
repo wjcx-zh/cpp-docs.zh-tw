@@ -10,6 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd::CMDIFrameWnd
+- AFXWIN/CMDIFrameWnd::CreateClient
+- AFXWIN/CMDIFrameWnd::CreateNewChild
+- AFXWIN/CMDIFrameWnd::GetWindowMenuPopup
+- AFXWIN/CMDIFrameWnd::MDIActivate
+- AFXWIN/CMDIFrameWnd::MDICascade
+- AFXWIN/CMDIFrameWnd::MDIGetActive
+- AFXWIN/CMDIFrameWnd::MDIIconArrange
+- AFXWIN/CMDIFrameWnd::MDIMaximize
+- AFXWIN/CMDIFrameWnd::MDINext
+- AFXWIN/CMDIFrameWnd::MDIPrev
+- AFXWIN/CMDIFrameWnd::MDIRestore
+- AFXWIN/CMDIFrameWnd::MDISetMenu
+- AFXWIN/CMDIFrameWnd::MDITile
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -126,7 +141,7 @@ class CMDIFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecmdiframewnda--cmdiframewndcmdiframewnd"></a><a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
+##  <a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
  建構 `CMDIFrameWnd` 物件。  
   
 ```  
@@ -139,7 +154,7 @@ CMDIFrameWnd();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&13;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
   
-##  <a name="a-namecreateclienta--cmdiframewndcreateclient"></a><a name="createclient"></a>CMDIFrameWnd::CreateClient  
+##  <a name="createclient"></a>CMDIFrameWnd::CreateClient  
  建立管理 MDI 用戶端視窗`CMDIChildWnd`物件。  
   
 ```  
@@ -164,7 +179,7 @@ virtual BOOL CreateClient(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&14;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
   
-##  <a name="a-namecreatenewchilda--cmdiframewndcreatenewchild"></a><a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
+##  <a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
  建立新的子視窗。  
   
 ```  
@@ -196,7 +211,7 @@ CMDIChildWnd* CreateNewChild(
   
  這個範例是摘錄自知識庫文件 Q201045，「 如何︰ 將多個視窗類型加入至非文件/檢視 MDI 應用程式。 」 知識庫文件可在 MSDN Library 中的 Visual Studio 文件或[http://support.microsoft.com](http://support.microsoft.com/)。  
   
-##  <a name="a-namegetwindowmenupopupa--cmdiframewndgetwindowmenupopup"></a><a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
+##  <a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
  呼叫此成員函式可取得目前的快顯功能表，名為 「 視窗 」 （快顯功能表的 MDI 視窗管理的功能表項目） 的控制代碼。  
   
 ```  
@@ -218,7 +233,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&16;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
   
-##  <a name="a-namemdiactivatea--cmdiframewndmdiactivate"></a><a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
+##  <a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
  啟動不同的 MDI 子視窗。  
   
 ```  
@@ -240,7 +255,7 @@ void MDIActivate(CWnd* pWndActivate);
 ### <a name="example"></a>範例  
  請參閱範例[CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup)。  
   
-##  <a name="a-namemdicascadea--cmdiframewndmdicascade"></a><a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
+##  <a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
  排列所有 MDI 子視窗重疊顯示格式。  
   
 ```  
@@ -258,7 +273,7 @@ void MDICascade(int nType);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&17;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
   
-##  <a name="a-namemdigetactivea--cmdiframewndmdigetactive"></a><a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
+##  <a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
  擷取目前現用 MDI 子視窗，以及旗標，指出是否要最大化子視窗。  
   
 ```  
@@ -275,7 +290,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ### <a name="example"></a>範例  
  請參閱範例[CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)。  
   
-##  <a name="a-namemdiiconarrangea--cmdiframewndmdiiconarrange"></a><a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
+##  <a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
  排列所有的最小化文件子視窗。  
   
 ```  
@@ -288,7 +303,7 @@ void MDIIconArrange();
 ### <a name="example"></a>範例  
  請參閱範例[CMDIFrameWnd::MDICascade](#mdicascade)。  
   
-##  <a name="a-namemdimaximizea--cmdiframewndmdimaximize"></a><a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
  將指定的 MDI 子視窗的最大化。  
   
 ```  
@@ -307,7 +322,7 @@ void MDIMaximize(CWnd* pWnd);
 ### <a name="example"></a>範例  
  請參閱範例[CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)。  
   
-##  <a name="a-namemdinexta--cmdiframewndmdinext"></a><a name="mdinext"></a>CMDIFrameWnd::MDINext  
+##  <a name="mdinext"></a>CMDIFrameWnd::MDINext  
  啟動立即背後目前作用中的子視窗的子視窗，並將目前作用中的子視窗背後所有其他子視窗。  
   
 ```  
@@ -320,7 +335,7 @@ void MDINext();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&18;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
   
-##  <a name="a-namemdipreva--cmdiframewndmdiprev"></a><a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
+##  <a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
  啟動前一個子視窗，並將其背後的目前作用中的子視窗。  
   
 ```  
@@ -330,7 +345,7 @@ void MDIPrev();
 ### <a name="remarks"></a>備註  
  目前現用 MDI 子視窗最大化時，如果成員函式還原目前作用中的子系，並充分發揮新啟動的子系。  
   
-##  <a name="a-namemdirestorea--cmdiframewndmdirestore"></a><a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
+##  <a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
  最大化或最小化的大小，從還原 MDI 子視窗。  
   
 ```  
@@ -344,7 +359,7 @@ void MDIRestore(CWnd* pWnd);
 ### <a name="example"></a>範例  
  請參閱範例[CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore)。  
   
-##  <a name="a-namemdisetmenua--cmdiframewndmdisetmenu"></a><a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
+##  <a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
  取代 MDI 框架視窗的功能表、 視窗快顯功能表上，或兩者。  
   
 ```  
@@ -377,7 +392,7 @@ CMenu* MDISetMenu(
   
  [!code-cpp[NVC_MFCWindowing #&20;](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
   
-##  <a name="a-namemditilea--cmdiframewndmditile"></a><a name="mditile"></a>CMDIFrameWnd::MDITile  
+##  <a name="mditile"></a>CMDIFrameWnd::MDITile  
  排列所有的子視窗並排顯示的格式。  
   
 ```  

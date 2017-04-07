@@ -6,6 +6,11 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::access_type
+- amp/Concurrency::queuing_mode
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 caps.latest.revision: 8
 author: mikeblome
@@ -22,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[access_type 列舉](#access_type)|[queuing_mode 列舉](#queuing_mode)|  
   
-##  <a name="a-nameaccesstypea--accesstype-enumeration"></a><a name="access_type"></a>access_type 列舉  
+##  <a name="access_type"></a>access_type 列舉  
  用來表示資料的存取權的各種類型的列舉型別。  
   
 ```  
@@ -39,7 +44,7 @@ enum access_type;
 |`access_type_write`|共用。 在配置加速器上存取和讀取與寫入 CPU。|  
 
   
-##  <a name="a-namequeuingmodea--queuingmode-enumeration"></a><a name="queuing_mode"></a>queuing_mode 列舉  
+##  <a name="queuing_mode"></a>queuing_mode 列舉  
  指定的佇列模式所支援的快速鍵。  
   
 ```  

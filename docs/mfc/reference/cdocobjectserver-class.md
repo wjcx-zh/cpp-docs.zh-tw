@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDocObjectServer
+- AFXDOCOB/CDocObjectServer
+- AFXDOCOB/CDocObjectServer::CDocObjectServer
+- AFXDOCOB/CDocObjectServer::ActivateDocObject
+- AFXDOCOB/CDocObjectServer::OnActivateView
+- AFXDOCOB/CDocObjectServer::OnApplyViewState
+- AFXDOCOB/CDocObjectServer::OnSaveViewState
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +104,7 @@ class CDocObjectServer : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdocob.h  
   
-##  <a name="a-nameactivatedocobjecta--cdocobjectserveractivatedocobject"></a><a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
+##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
  呼叫此函式文件物件伺服器啟動 （但不顯示）。  
   
 ```  
@@ -110,7 +116,7 @@ void ActivateDocObject();
   
  在一起，`ActivateDocObject`和`OnActivateView`啟動並顯示 DocObject 檢視。 DocObject 啟用不同於其他類型的 OLE 就地啟動。 DocObject 啟動會略過 顯示框線就地規劃和物件 （例如縮放控點） 的裝飾、 略過物件延伸功能，以及將捲軸，而不是外部矩形 （如同一般的就地啟用） 繪製這些檢視矩形內繪製。  
   
-##  <a name="a-namecdocobjectservera--cdocobjectservercdocobjectserver"></a><a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
+##  <a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
  建構並初始化 `CDocObjectServer` 物件。  
   
 ```  
@@ -129,7 +135,7 @@ explicit CDocObjectServer(
 ### <a name="remarks"></a>備註  
  當 DocObject 作用時，用戶端站台 OLE 介面 ( `IOleDocumentSite`) 就是允許 DocObject 伺服器與用戶端 （容器） 進行通訊。 DocObject 伺服器啟動時，它會先檢查容器會實作`IOleDocumentSite`介面。 如果是這樣， [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver)稱為容器是否支援 DocObjects。 根據預設，`GetDocObjectServer`傳回**NULL**。 您必須覆寫`COleServerDoc::GetDocObjectServer`建構新`CDocObjectServer`物件或衍生您自己，與指標的物件`COleServerDoc`容器及其`IOleDocumentSite`介面做為引數的建構函式。  
   
-##  <a name="a-nameonactivateviewa--cdocobjectserveronactivateview"></a><a name="onactivateview"></a>CDocObjectServer::OnActivateView  
+##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
  呼叫此函式，以顯示 DocObject 檢視。  
   
 ```  
@@ -142,7 +148,7 @@ virtual HRESULT OnActivateView();
 ### <a name="remarks"></a>備註  
  這個函式建立的就地框架視窗、 繪製捲軸檢視中的，設定伺服器以其容器的共用、 加入框架控制項、 設定作用中的物件，則最後就地框架視窗會顯示和設定焦點的功能表。  
   
-##  <a name="a-nameonapplyviewstatea--cdocobjectserveronapplyviewstate"></a><a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
+##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
  覆寫這個函式來還原 DocObject 檢視狀態。  
   
 ```  
@@ -158,7 +164,7 @@ virtual void OnApplyViewState(CArchive& ar);
   
  您可以使用`OnSaveViewState`來儲存您的檢視狀態的特定的持續性資訊。 如果您覆寫`OnSaveViewState`來儲存資訊，您會想要覆寫`OnApplyViewState`讀取該資訊，並將它套用至您的檢視，剛啟動時。  
   
-##  <a name="a-nameonsaveviewstatea--cdocobjectserveronsaveviewstate"></a><a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
+##  <a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
  覆寫此函式可儲存有關 DocObject 檢視額外的狀態資訊。  
   
 ```  

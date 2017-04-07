@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
+- AFXDISP/CConnectionPoint
+- AFXDISP/CConnectionPoint::CConnectionPoint
+- AFXDISP/CConnectionPoint::GetConnections
+- AFXDISP/CConnectionPoint::GetContainer
+- AFXDISP/CConnectionPoint::GetIID
+- AFXDISP/CConnectionPoint::GetMaxConnections
+- AFXDISP/CConnectionPoint::GetNextConnection
+- AFXDISP/CConnectionPoint::GetStartPosition
+- AFXDISP/CConnectionPoint::OnAdvise
+- AFXDISP/CConnectionPoint::QuerySinkInterface
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,14 +116,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-namecconnectionpointa--cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
  建構 `CConnectionPoint` 物件。  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="a-namegetconnectionsa--cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint::GetConnections  
+##  <a name="getconnections"></a>CConnectionPoint::GetConnections  
  呼叫此函式可擷取所有使用中連接的連接點。  
   
 ```  
@@ -123,7 +133,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>傳回值  
  作用中連線 （接收） 的陣列指標。 有些陣列中的指標可以是 NULL。 這個陣列中的每個非 NULL 指標可以安全地轉換為使用轉換運算子的接收器介面的指標。  
   
-##  <a name="a-namegetcontainera--cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
  要擷取架構呼叫**IConnectionPointContainer**連接點。  
   
 ```  
@@ -136,7 +146,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>備註  
  此函式通常由實作`BEGIN_CONNECTION_PART`巨集。  
   
-##  <a name="a-namegetiida--cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint::GetIID  
+##  <a name="getiid"></a>CConnectionPoint::GetIID  
  若要擷取的連接點的介面 ID 架構呼叫。  
   
 ```  
@@ -149,7 +159,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>備註  
  覆寫這個函式來傳回這個連接點的介面識別碼。  
   
-##  <a name="a-namegetmaxconnectionsa--cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
  若要擷取的連接點所支援的連線數目上限架構呼叫。  
   
 ```  
@@ -164,7 +174,7 @@ virtual int GetMaxConnections();
   
  如果您想要限制接收可連接到您的控制項數目，請覆寫這個函式。  
   
-##  <a name="a-namegetnextconnectiona--cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint::GetNextConnection  
+##  <a name="getnextconnection"></a>CConnectionPoint::GetNextConnection  
  擷取到連接項目的指標`pos`。  
   
 ```  
@@ -184,7 +194,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCConnectionPoints #&4;](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="a-namegetstartpositiona--cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
  一開始會傳回對應的反覆項目**位置**值傳遞至[GetNextConnection](#getnextconnection)呼叫。  
   
 ```  
@@ -200,7 +210,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>範例  
   請參閱範例[CConnectionPoint::GetNextConnection](#getnextconnection)。  
   
-##  <a name="a-nameonadvisea--cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
  架構的連線時所呼叫，是建立或中斷。  
   
 ```  
@@ -216,7 +226,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  如果您要通知接收到連接或中斷連接點時，覆寫這個函式。  
   
-##  <a name="a-namequerysinkinterfacea--cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
  擷取要求的接收器介面的指標。  
   
 ```  

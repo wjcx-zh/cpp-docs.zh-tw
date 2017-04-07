@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSimpleArrayEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleArrayEqualHelper
+- ATLSIMPCOLL/ATL::CSimpleArrayEqualHelper::IsEqual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -67,7 +69,7 @@ class CSimpleArrayEqualHelper
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsimpcoll.h  
   
-##  <a name="a-nameisequala--csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual  
+##  <a name="isequal"></a>CSimpleArrayEqualHelper::IsEqual  
  測試兩個`CSimpleArray`物件項目是否相等。  
   
 ```

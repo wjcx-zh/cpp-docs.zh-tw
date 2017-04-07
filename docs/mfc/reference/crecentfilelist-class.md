@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRecentFileList
+- AFXADV/CRecentFileList
+- AFXADV/CRecentFileList::CRecentFileList
+- AFXADV/CRecentFileList::Add
+- AFXADV/CRecentFileList::GetDisplayName
+- AFXADV/CRecentFileList::GetSize
+- AFXADV/CRecentFileList::ReadList
+- AFXADV/CRecentFileList::Remove
+- AFXADV/CRecentFileList::UpdateMenu
+- AFXADV/CRecentFileList::WriteList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +98,7 @@ class CRecentFileList
 ## <a name="requirements"></a>需求  
  **標頭︰** afxadv.h  
   
-##  <a name="a-nameadda--crecentfilelistadd"></a><a name="add"></a>CRecentFileList::Add  
+##  <a name="add"></a>CRecentFileList::Add  
  將檔案加入至最近使用過 (MRU) 檔案清單。  
   
 ```  
@@ -135,7 +144,7 @@ void Add(
 ### <a name="remarks"></a>備註  
  檔案名稱會新增至 MRU 清單頂端。 如果 MRU 清單中的檔案名稱已經存在，便會移至最上方。  
   
-##  <a name="a-namecrecentfilelista--crecentfilelistcrecentfilelist"></a><a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
+##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
  建構 `CRecentFileList` 物件。  
   
 ```  
@@ -166,7 +175,7 @@ CRecentFileList(
 ### <a name="remarks"></a>備註  
  格式字串所指`lpszEntryFormat`應該包含"%d"，用於取代每個最近一次使用項目的索引。 例如，如果格式字串是`"file%d"`項目將會命名為`file0`， `file1`，依此類推。  
   
-##  <a name="a-namegetdisplaynamea--crecentfilelistgetdisplayname"></a><a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
+##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
  取得在最近一次使用檔案清單中，檔案以供使用，在功能表上顯示的 MRU 清單的顯示名稱。  
   
 ```  
@@ -200,7 +209,7 @@ virtual BOOL GetDisplayName(
 ### <a name="remarks"></a>備註  
  如果檔案是在目前的目錄中，函式會使隱藏目錄。 如果檔案名稱太長，則會予以去除目錄和延伸模組。 如果仍然太長檔名，顯示名稱設為空字串除非`bAtLeastName`為非零值。  
   
-##  <a name="a-namegetsizea--crecentfilelistgetsize"></a><a name="getsize"></a>CRecentFileList::GetSize  
+##  <a name="getsize"></a>CRecentFileList::GetSize  
  擷取最近一次使用檔案清單中的檔案數目。  
   
 ```  
@@ -210,7 +219,7 @@ int GetSize() const;
 ### <a name="return-value"></a>傳回值  
  在目前的檔案數目最近使用 (過 MRU) 檔案清單。  
   
-##  <a name="a-nameoperatorata--crecentfilelistoperator--"></a><a name="operator_at"></a>CRecentFileList::operator]  
+##  <a name="operator_at"></a>CRecentFileList::operator]  
  多載的註標 ( `[]`) 運算子會傳回單一`CString`中以零為起始的索引所指定`nIndex`。  
   
 ```  
@@ -221,14 +230,14 @@ CString& operator[ ](int nindex);
  `nIndex`  
  以零為起始的索引`CString`集中的`CString`s。  
   
-##  <a name="a-namereadlista--crecentfilelistreadlist"></a><a name="readlist"></a>CRecentFileList::ReadList  
+##  <a name="readlist"></a>CRecentFileList::ReadList  
  讀取最近使用過的 (MRU) 檔案清單，從登錄或應用程式。INI 檔案。  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="a-nameremovea--crecentfilelistremove"></a><a name="remove"></a>CRecentFileList::Remove  
+##  <a name="remove"></a>CRecentFileList::Remove  
  從最近一次使用檔案清單中移除檔案。  
   
 ```  
@@ -239,7 +248,7 @@ virtual void Remove(int nIndex);
  `nIndex`  
  要從最近使用過 (MRU) 檔案清單中移除之檔案的以零為起始的索引。  
   
-##  <a name="a-nameupdatemenua--crecentfilelistupdatemenu"></a><a name="updatemenu"></a>CRecentFileList::UpdateMenu  
+##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
  更新功能表顯示的最近一次使用檔案清單。  
   
 ```  
@@ -250,7 +259,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  指標[CCmdUI](../../mfc/reference/ccmdui-class.md)最近使用過 (MRU) 檔案清單 功能表中的物件。  
   
-##  <a name="a-namewritelista--crecentfilelistwritelist"></a><a name="writelist"></a>CRecentFileList::WriteList  
+##  <a name="writelist"></a>CRecentFileList::WriteList  
  寫入到登錄或應用程式的最最近使用過的 (MRU) 檔案清單。INI 檔案。  
   
 ```  

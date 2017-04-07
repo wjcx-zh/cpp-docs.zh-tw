@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 8739201489644b0f1695a70d0dc12d04ca47aa68
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
+ms.openlocfilehash: 0cc29b21aa2279e51ba666d7447d913c4cc777d4
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
-類別[CObject](../../mfc/reference/cobject-class.md)和[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封裝數個物件服務，包括存取執行階段類別資訊、 序列化和動態物件建立。 從 `CObject` 衍生的所有類別都會繼承此功能。  
+類別[CObject](../../mfc/reference/cobject-class.md)和[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封裝數個物件服務，包括執行階段類別資訊、 序列化和動態物件建立的存取。 從 `CObject` 衍生的所有類別都會繼承此功能。  
   
  對執行階段類別資訊的存取可讓您決定在執行階段的物件類別相關資訊。 當您需要進行函式引數的額外類別檢查時，以及當您必須根據物件類別撰寫特殊用途的程式碼時，能夠在執行階段決定物件的類別就很有用。 C++ 語言並不直接支援執行階段類別資訊。  
   
@@ -76,8 +76,8 @@ ms.lasthandoff: 02/24/2017
 |[DECLARE_OLECREATE](#declare_olecreate)|讓物件透過 OLE Automation 建立。|  
 |[IMPLEMENT_OLECREATE](#implement_olecreate)|讓物件經由 OLE 系統建立。|  
   
-##  <a name="a-namedeclaredynamica--declaredynamic"></a><a name="declare_dynamic"></a>DECLARE_DYNAMIC  
- 加入衍生的類別時，存取的物件類別的執行階段資訊的能力`CObject`。  
+##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
+ 加入衍生的類別時存取的物件類別的執行階段資訊的能力`CObject`。  
   
 ```
 DECLARE_DYNAMIC(class_name) 
@@ -88,22 +88,22 @@ DECLARE_DYNAMIC(class_name)
  類別的實際名稱。  
   
 ### <a name="remarks"></a>備註  
- 新增`DECLARE_DYNAMIC`巨集類別的標頭 (.h) 模組，然後將該模組包含在所有.cpp 模組需要存取此類別的物件。  
+ 新增`DECLARE_DYNAMIC`巨集，以標頭 (.h) 的模組類別，然後將該模組包含在所有.cpp 模組需要存取此類別的物件。  
   
- 如果您使用**DECLARE**_**動態**和`IMPLEMENT_DYNAMIC`巨集所述，您可以使用`RUNTIME_CLASS`巨集和`CObject::IsKindOf`函式可在執行階段決定物件的類別。  
+ 如果您使用**DECLARE**_**動態**和`IMPLEMENT_DYNAMIC`巨集所述，您可以接著使用`RUNTIME_CLASS`巨集和`CObject::IsKindOf`函式在執行階段決定物件的類別。  
   
- 如果`DECLARE_DYNAMIC`包含在類別宣告，然後`IMPLEMENT_DYNAMIC`必須包含在類別實作。  
+ 如果`DECLARE_DYNAMIC`隨附於類別宣告中，然後`IMPLEMENT_DYNAMIC`必須包含在類別實作。  
   
  如需有關`DECLARE_DYNAMIC`巨集，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
   
 ### <a name="example"></a>範例  
- 請參閱範例[IMPLEMENT_DYNAMIC](#implement_dynamic)。  
+ 請參閱範例的[IMPLEMENT_DYNAMIC](#implement_dynamic)。  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="a-namedeclaredyncreatea--declaredyncreate"></a><a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
- 可讓物件的`CObject`-衍生類別能夠在執行階段動態建立。  
+##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
+ 可讓物件的`CObject`-衍生類別，以在執行階段動態建立。  
   
 ```
 DECLARE_DYNCREATE(class_name)   
@@ -114,11 +114,11 @@ DECLARE_DYNCREATE(class_name)
  類別的實際名稱。  
   
 ### <a name="remarks"></a>備註  
- 架構會使用這項功能以動態方式建立新的物件。 例如，新建立的檢視當您開啟新文件。 文件、 檢視和框架類別應該支援動態建立，因為架構需要動態地建立。  
+ 架構會使用這項功能，以動態方式建立新的物件。 例如，新建立的檢視當您開啟新文件。 文件、 檢視和框架類別應該支援動態建立，因為架構需要動態地建立。  
   
- 新增`DECLARE_DYNCREATE`類別的.h 模組中的巨集則包含該模組中所有.cpp 模組需要存取此類別的物件。  
+ 新增`DECLARE_DYNCREATE`類別的.h 模組中的巨集然後包含該模組中所有.cpp 模組需要存取此類別的物件。  
   
- 如果`DECLARE_DYNCREATE`包含在類別宣告，然後`IMPLEMENT_DYNCREATE`必須包含在類別實作。  
+ 如果`DECLARE_DYNCREATE`隨附於類別宣告中，然後`IMPLEMENT_DYNCREATE`必須包含在類別實作。  
   
  如需有關`DECLARE_DYNCREATE`巨集，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
   
@@ -126,12 +126,12 @@ DECLARE_DYNCREATE(class_name)
 >  `DECLARE_DYNCREATE`巨集包含的所有功能`DECLARE_DYNAMIC`。  
   
 ### <a name="example"></a>範例  
- 請參閱範例[IMPLEMENT_DYNCREATE](#implement_dyncreate)。  
+ 請參閱範例的[IMPLEMENT_DYNCREATE](#implement_dyncreate)。  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="a-namedeclareseriala--declareserial"></a><a name="declare_serial"></a>DECLARE_SERIAL  
+##  <a name="declare_serial"></a>DECLARE_SERIAL  
  會產生所需的 c + + 標頭碼`CObject`-衍生可序列化的類別。  
   
 ```
@@ -143,28 +143,28 @@ DECLARE_SERIAL(class_name)
  類別的實際名稱。  
   
 ### <a name="remarks"></a>備註  
- 序列化是檔案中寫入或讀取物件與內容的程序。  
+ 序列化是物件的檔案中寫入或讀取以及內容的程序。  
   
  使用`DECLARE_SERIAL`巨集在.h 模組中，然後將該模組包含在所有.cpp 模組需要存取此類別的物件。  
   
- 如果`DECLARE_SERIAL`包含在類別宣告，然後`IMPLEMENT_SERIAL`必須包含在類別實作。  
+ 如果`DECLARE_SERIAL`隨附於類別宣告中，然後`IMPLEMENT_SERIAL`必須包含在類別實作。  
   
  `DECLARE_SERIAL`巨集包含的所有功能`DECLARE_DYNAMIC`和`DECLARE_DYNCREATE`。  
   
- 您可以使用**AFX_API**巨集，以自動匯出`CArchive`引出運算子的類別使用`DECLARE_SERIAL`和`IMPLEMENT_SERIAL`巨集。 括號的類別宣告 （位於.h 檔） 為下列程式碼︰  
+ 您可以使用**AFX_API**巨集將會自動將匯出`CArchive`引出運算子的類別使用`DECLARE_SERIAL`和`IMPLEMENT_SERIAL`巨集。 括號，類別宣告 （位於.h 檔案） 為下列程式碼︰  
   
- [!code-cpp[NVC_MFCCObjectSample #&20;](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
+ [!code-cpp[NVC_MFCCObjectSample # 20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
   
  如需有關`DECLARE_SERIAL`巨集，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCObjectSample #&21;](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
+ [!code-cpp[NVC_MFCCObjectSample # 21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]  
   
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="a-nameimplementdynamica--implementdynamic"></a><a name="implement_dynamic"></a>您的類別  
- 產生的 c + + 程式碼所需的動態`CObject`-衍生類別的執行階段存取的類別名稱和階層內的位置。  
+##  <a name="implement_dynamic"></a>您的類別  
+ 產生的 c + + 程式碼所需的動態`CObject`-衍生的類別名稱與階層內的位置與執行階段存取的類別。  
   
 ```
 IMPLEMENT_DYNAMIC(class_name, base_class_name)  
@@ -178,20 +178,20 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
  基底類別的名稱。  
   
 ### <a name="remarks"></a>備註  
- 使用`IMPLEMENT_DYNAMIC`.cpp 模組，並連結產生的物件一次程式碼中的巨集。  
+ 使用`IMPLEMENT_DYNAMIC`.cpp 模組，然後再連結產生的物件一次程式碼的巨集。  
   
  如需詳細資訊，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCObjectSample #&2;](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]  
+ [!code-cpp[NVC_MFCCObjectSample # 2](../../mfc/codesnippet/cpp/run-time-object-model-services_3.h)]  
   
- [!code-cpp[NVC_MFCCObjectSample #&3;](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample # 3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="a-nameimplementdyncreatea--implementdyncreate"></a><a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
- 可讓物件的`CObject`-衍生類別能夠以動態方式建立在執行時使用的時間`DECLARE_DYNCREATE`巨集。  
+##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
+ 可讓物件的`CObject`-衍生類別以動態方式建立在執行時間搭配使用時`DECLARE_DYNCREATE`巨集。  
   
 ```
 IMPLEMENT_DYNCREATE(class_name, base_class_name)   
@@ -205,24 +205,24 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
  基底類別的實際名稱。  
   
 ### <a name="remarks"></a>備註  
- 架構會建立新的物件，以動態方式，例如當它從磁碟讀取物件在序列化期間使用這項功能。 新增`IMPLEMENT_DYNCREATE`類別實作檔中的巨集。 如需詳細資訊，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
+ 架構會建立新的物件，以動態方式，例如從磁碟讀取物件在序列化期間時使用這項功能。 新增`IMPLEMENT_DYNCREATE`類別實作檔中的巨集。 如需詳細資訊，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
   
- 如果您使用`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`巨集，然後您可以使用`RUNTIME_CLASS`巨集和`CObject::IsKindOf`在執行階段判斷物件的類別成員函式。  
+ 如果您使用`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`巨集，然後您可以使用`RUNTIME_CLASS`巨集和`CObject::IsKindOf`來在執行階段判斷物件的類別成員函式。  
   
- 如果`DECLARE_DYNCREATE`包含在類別宣告，然後`IMPLEMENT_DYNCREATE`必須包含在類別實作。  
+ 如果`DECLARE_DYNCREATE`隨附於類別宣告中，然後`IMPLEMENT_DYNCREATE`必須包含在類別實作。  
   
- 請注意，此巨集定義會叫用類別的預設建構函式。 如果非一般建構函式會明確實作的類別，就必須明確地實作預設建構函式以及。 預設建構函式可以加入至類別的**私用**或**保護**成員區段，以防止從呼叫外部類別實作。  
+ 請注意，此巨集定義，將會叫用類別的預設建構函式。 如果非一般建構函式會明確實作的類別，它必須同時也可以明確實作預設建構函。 預設建構函式可以加入至類別的**私人**或**保護**成員各節，以防止從外部類別實作所呼叫。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCObjectSample #&22;](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]  
+ [!code-cpp[NVC_MFCCObjectSample # 22](../../mfc/codesnippet/cpp/run-time-object-model-services_5.h)]  
   
- [!code-cpp[NVC_MFCCObjectSample #&23;](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample # 23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="a-nameimplementseriala--implementserial"></a><a name="implement_serial"></a>IMPLEMENT_SERIAL  
- 產生的 c + + 程式碼所需的動態`CObject`-衍生類別的執行階段存取的類別名稱和階層內的位置。  
+##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
+ 產生的 c + + 程式碼所需的動態`CObject`-衍生的類別名稱與階層內的位置與執行階段存取的類別。  
   
 ```
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)  
@@ -236,25 +236,25 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
  基底類別的名稱。  
   
  *wSchema*  
- A **UINT** 」 版本號碼"會讓還原序列化程式來識別及處理所建立的資料保存在編碼之前程式版本。 類別結構描述編號不能為 â €"1。  
+ A **UINT** 」 版本號碼"會讓還原序列化程式找出並處理所建立的資料保存在編碼之前程式版本。 類別結構描述編號不能為-1。  
   
 ### <a name="remarks"></a>備註  
- 使用`IMPLEMENT_SERIAL`巨集在.cpp 模組，然後一次連結產生的物件程式碼。  
+ 使用`IMPLEMENT_SERIAL`巨集.cpp 單元; 然後將產生的物件程式碼連結一次。  
   
- 您可以使用**AFX_API**巨集，以自動匯出`CArchive`引出運算子的類別使用`DECLARE_SERIAL`和`IMPLEMENT_SERIAL`巨集。 括號的類別宣告 （位於.h 檔） 為下列程式碼︰  
+ 您可以使用**AFX_API**巨集將會自動將匯出`CArchive`引出運算子的類別使用`DECLARE_SERIAL`和`IMPLEMENT_SERIAL`巨集。 括號，類別宣告 （位於.h 檔案） 為下列程式碼︰  
   
- [!code-cpp[NVC_MFCCObjectSample #&20;](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
+ [!code-cpp[NVC_MFCCObjectSample # 20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]  
   
  如需詳細資訊，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCObjectSample #&24;](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample # 24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="a-nameruntimeclassa--runtimeclass"></a><a name="runtime_class"></a>RUNTIME_CLASS  
- 取得執行階段類別結構的 c + + 類別名稱。  
+##  <a name="runtime_class"></a>RUNTIME_CLASS  
+ 從 c + + 類別的名稱取得執行階段類別結構。  
   
 ```
 RUNTIME_CLASS(class_name)  
@@ -265,18 +265,18 @@ RUNTIME_CLASS(class_name)
  （不以引號括住） 類別的實際名稱。  
   
 ### <a name="remarks"></a>備註  
- `RUNTIME_CLASS`傳回的指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)所指定的類別結構*class_name*。 只有`CObject`-衍生的類別宣告為具有`DECLARE_DYNAMIC`， `DECLARE_DYNCREATE`，或`DECLARE_SERIAL`會傳回指標`CRuntimeClass`結構。  
+ `RUNTIME_CLASS`將指標傳回至[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)所指定的類別結構*class_name*。 只有`CObject`-衍生的類別宣告與`DECLARE_DYNAMIC`， `DECLARE_DYNCREATE`，或`DECLARE_SERIAL`會傳回指向`CRuntimeClass`結構。  
   
  如需詳細資訊，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCObjectSample #&25;](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample # 25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]  
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
    
-##  <a name="a-namedeclareolecreatea--declareolecreate"></a><a name="declare_olecreate"></a>DECLARE_OLECREATE  
- 可讓物件的`CCmdTarget`-衍生類別能夠透過 OLE automation 建立。  
+##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
+ 可讓物件的`CCmdTarget`-衍生類別，以透過 OLE automation 建立。  
   
 ```
 DECLARE_OLECREATE(class_name) 
@@ -291,12 +291,12 @@ DECLARE_OLECREATE(class_name)
   
  新增`DECLARE_OLECREATE`類別的.h 模組中的巨集，然後包含該模組中所有.cpp 模組需要存取此類別的物件。  
   
- 如果`DECLARE_OLECREATE`包含在類別宣告，然後`IMPLEMENT_OLECREATE`必須包含在類別實作。 使用類別宣告`DECLARE_OLECREATE`也必須使用`DECLARE_DYNCREATE`或`DECLARE_SERIAL`。  
+ 如果`DECLARE_OLECREATE`隨附於類別宣告中，然後`IMPLEMENT_OLECREATE`必須包含在類別實作。 類別宣告使用`DECLARE_OLECREATE`也必須使用`DECLARE_DYNCREATE`或`DECLARE_SERIAL`。  
 
 ### <a name="requirements"></a>需求  
  **標頭**: afxdisp.h  
 
-##  <a name="a-nameimplementolecreatea--implementolecreate"></a><a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
+##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
  這個巨集或[IMPLEMENT_OLECREATE_FLAGS](http://msdn.microsoft.com/library/d1589f6a-5a69-4742-b07c-4c621cfd040d)必須出現在使用任何類別實作檔`DECLARE_OLECREATE`。  
   
 ```
@@ -316,11 +316,11 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 ### <a name="remarks"></a>備註  
   
 > [!NOTE]
->  如果您使用`IMPLEMENT_OLECREATE`，您可以根據預設，支援只有單一執行緒模型。 如果您使用`IMPLEMENT_OLECREATE_FLAGS`，您可以指定物件支援使用哪一個執行緒模型`nFlags`參數。  
+>  如果您使用`IMPLEMENT_OLECREATE`，您可以根據預設，支援只有單一執行緒模型。 如果您使用`IMPLEMENT_OLECREATE_FLAGS`，您可以指定哪些物件支援使用的執行緒模型`nFlags`參數。  
   
- 外部名稱是公開給其他應用程式的識別碼。 用戶端應用程式使用的外部名稱從自動化伺服器要求此類別的物件。  
+ External name 是公開給其他應用程式的識別碼。 用戶端應用程式使用的外部名稱從 automation 伺服程式要求此類別的物件。  
   
- OLE 類別 ID 是唯一的 128 位元識別碼的物件。 它包括一個**長**、 兩個**WORD**s 和八**位元組**s 所表示的*l*， *w1*， *w2*，和*b1*透過*b8*語法描述中。 應用程式精靈和程式碼精靈視需要為您建立唯一的 OLE 類別 Id。  
+ OLE 類別 ID 是唯一的 128 位元識別碼的物件。 它由一個**長**、 兩個**WORD**，以及八**位元組**s 所表示的*l*， *w1*， *w2*，和*b1*透過*b8*語法描述中。 應用程式精靈和程式碼精靈視需要為您建立唯一的 OLE 類別 Id。  
 
 ### <a name="requirements"></a>需求  
  **標頭**: afxdisp.h 

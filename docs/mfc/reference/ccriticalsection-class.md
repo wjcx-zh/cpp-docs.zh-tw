@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
+- AFXMT/CCriticalSection
+- AFXMT/CCriticalSection::CCriticalSection
+- AFXMT/CCriticalSection::Lock
+- AFXMT/CCriticalSection::Unlock
+- AFXMT/CCriticalSection::m_sect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +111,7 @@ class CCriticalSection : public CSyncObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmt.h  
   
-##  <a name="a-nameccriticalsectiona--ccriticalsectionccriticalsection"></a><a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
  建構 `CCriticalSection` 物件。  
   
 ```  
@@ -121,7 +126,7 @@ CCriticalSection();
 ### <a name="example"></a>範例  
   請參閱範例[CCriticalSection::Lock](#lock)。  
   
-##  <a name="a-namelocka--ccriticalsectionlock"></a><a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>CCriticalSection::Lock  
  呼叫此成員函式，以取得重要區段物件的存取權。  
   
 ```  
@@ -148,14 +153,14 @@ BOOL Lock(DWORD dwTimeout);
   
  [!code-cpp[NVC_MFC_Utilities #&11;](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="a-namemsecta--ccriticalsectionmsect"></a><a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>CCriticalSection::m_sect  
  包含所有使用的重要區段物件`CCriticalSection`方法。  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="a-nameoperatorcriticalsectionstara--ccriticalsectionoperator-criticalsection"></a><a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
  擷取**CRITICAL_SECTION**物件。  
   
 ```  
@@ -165,7 +170,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>備註  
  呼叫此函式可擷取內部指標**CRITICAL_SECTION**物件。  
   
-##  <a name="a-nameunlocka--ccriticalsectionunlock"></a><a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>CCriticalSection::Unlock  
  版本`CCriticalSection`以供另一個執行緒的物件。  
   
 ```  

@@ -21,7 +21,7 @@ ms.lasthandoff: 02/24/2017
 |[operator!=](#operator_neq)|[operator!= (hash_map)](#operator_neq__hash_map_)|[operator==](#operator_eq_eq)|  
 |[operator== (hash_map)](#operator_eq_eq__hash_map_)|  
   
-##  <a name="a-nameoperatorneqhashmapa--operator-hashmap"></a><a name="operator_neq__hash_map_"></a>  operator!= (hash_map)  
+##  <a name="operator_neq__hash_map_"></a>  operator!= (hash_map)  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -33,10 +33,10 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  `hash_map` 類型的物件。  
   
- ` right`  
+ `right`  
  `hash_map` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -87,7 +87,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqhashmapa--operator-hashmap"></a><a name="operator_eq_eq__hash_map_"></a>  operator== (hash_map)  
+##  <a name="operator_eq_eq__hash_map_"></a>  operator== (hash_map)  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -99,10 +99,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  `hash_map` 類型的物件。  
   
- ` right`  
+ `right`  
  `hash_map` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -153,7 +153,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。  
@@ -165,10 +165,10 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  `hash_multimap` 類型的物件。  
   
- ` right`  
+ `right`  
  `hash_multimap` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -219,7 +219,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。  
@@ -231,10 +231,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  `hash_multimap` 類型的物件。  
   
- ` right`  
+ `right`  
  `hash_multimap` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  

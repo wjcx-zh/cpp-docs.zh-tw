@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox::CMFCFontComboBox
+- AFXFONTCOMBOBOX/CMFCFontComboBox::GetSelFont
+- AFXFONTCOMBOBOX/CMFCFontComboBox::SelectFont
+- AFXFONTCOMBOBOX/CMFCFontComboBox::Setup
+- AFXFONTCOMBOBOX/CMFCFontComboBox::m_bDrawUsingFont
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +102,7 @@ class CMFCFontComboBox : public CComboBox
 ## <a name="requirements"></a>需求  
  **標頭︰** afxfontcombobox.h  
   
-##  <a name="a-namecmfcfontcomboboxa--cmfcfontcomboboxcmfcfontcombobox"></a><a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
+##  <a name="cmfcfontcombobox"></a>CMFCFontComboBox::CMFCFontComboBox  
  建構 `CMFCFontComboBox` 物件。  
   
 ```  
@@ -107,7 +113,7 @@ CMFCFontComboBox();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetselfonta--cmfcfontcomboboxgetselfont"></a><a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
+##  <a name="getselfont"></a>CMFCFontComboBox::GetSelFont  
  擷取目前選取的字型相關資訊。  
   
 ```  
@@ -119,7 +125,7 @@ CMFCFontInfo* GetSelFont() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namembdrawusingfonta--cmfcfontcomboboxmbdrawusingfont"></a><a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
+##  <a name="m_bdrawusingfont"></a>CMFCFontComboBox::m_bDrawUsingFont  
  架構會指出哪一種用來繪製目前的字型下拉式方塊中的項目標籤的字型。  
   
 ```  
@@ -129,7 +135,7 @@ static BOOL m_bDrawUsingFont;
 ### <a name="remarks"></a>備註  
  這個成員設定為`TRUE`導向的架構，用來繪製每個項目標籤的相同字型。 這個成員設定為`FALSE`導向的架構，來繪製每個項目有標籤名稱等同於標籤的字型。 預設值，這個成員是`FALSE`。  
   
-##  <a name="a-nameselectfonta--cmfcfontcomboboxselectfont"></a><a name="selectfont"></a>CMFCFontComboBox::SelectFont  
+##  <a name="selectfont"></a>CMFCFontComboBox::SelectFont  
  選取符合指定的準則從字型下拉式方塊的字型。  
   
 ```  
@@ -163,7 +169,7 @@ BOOL SelectFont(
  [!code-cpp[NVC_MFC_NewControls #&34;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls #&35;](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]  
   
-##  <a name="a-namesetupa--cmfcfontcomboboxsetup"></a><a name="setup"></a>CMFCFontComboBox::Setup  
+##  <a name="setup"></a>CMFCFontComboBox::Setup  
  初始化字型下拉式方塊中的項目清單。  
   
 ```  

@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem::CRichEditCntrItem
+- AFXRICH/CRichEditCntrItem::SyncToRichEditObject
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +91,7 @@ class CRichEditCntrItem : public COleClientItem
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrich.h  
   
-##  <a name="a-namecricheditcntritema--cricheditcntritemcricheditcntritem"></a><a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
+##  <a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
  呼叫此函式建立`CRichEditCntrItem`物件，並將它加入至容器文件。  
   
 ```  
@@ -109,7 +112,7 @@ CRichEditCntrItem(
   
  如需詳細資訊，請參閱[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesynctoricheditobjecta--cricheditcntritemsynctoricheditobject"></a><a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
+##  <a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
  呼叫此函式來同步處理裝置長寬[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，這個**CRichEditCntrltem**所指定的*reo*。  
   
 ```  

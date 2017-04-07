@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vc.mfc.macros.data
+- AFXDISP/DDX_OCBool
+- AFXDISP/DDX_OCBoolRO
+- AFXDISP/DDX_OCColor
+- AFXDISP/DDX_OCColorRO
+- AFXDISP/DDX_OCFloat
+- AFXDISP/DDX_OCFloatRO
+- AFXDISP/DDX_OCInt
+- AFXDISP/DDX_OCIntRO
+- AFXDISP/DDX_OCShort
+- AFXDISP/DDX_OCShortRO
+- AFXDISP/DDX_OCText
+- AFXDISP/DDX_OCTextRO
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 0f8821051cd790d26d190c23db333ccebc9dc9d6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 5c50690c1652c4136b7f52f852ddf201c9dd6c9b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控制項的對話方塊資料交換函式
@@ -60,7 +71,7 @@ ms.lasthandoff: 02/24/2017
 |[DDX_OCText](#ddx_octext)|管理傳送**CString**的 OLE 控制項屬性之間的資料和**CString**資料成員。|  
 |[DDX_OCTextRO](#ddx_octextro)|管理傳送**CString** OLE 控制項的唯讀屬性之間的資料和**CString**資料成員。|  
   
-##  <a name="a-nameddxocboola--ddxocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool  
+##  <a name="ddx_ocbool"></a>DDX_OCBool  
  `DDX_OCBool`函式會管理傳送**BOOL**的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和**BOOL**對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -88,9 +99,9 @@ void AFXAPI DDX_OCBool(
  如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
   
 ### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+  **標頭：** afxdisp.h  
   
-##  <a name="a-nameddxocboolroa--ddxocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO  
+##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
  `DDX_OCBoolRO`函式會管理傳送**BOOL** OLE 控制項在對話方塊中的唯讀屬性之間的資料表單檢視或控制檢視物件和**BOOL**對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -120,7 +131,7 @@ void AFXAPI DDX_OCBoolRO(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxoccolora--ddxoccolor"></a><a name="ddx_occolor"></a>DDX_OCColor  
+##  <a name="ddx_occolor"></a>DDX_OCColor  
  `DDX_OCColor`函式會管理傳送**OLE_COLOR**的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和**OLE_COLOR**對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -150,7 +161,7 @@ void AFXAPI DDX_OCColor(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxoccolorroa--ddxoccolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO  
+##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
  `DDX_OCColorRO`函式會管理傳送**OLE_COLOR** OLE 控制項在對話方塊中的唯讀屬性之間的資料表單檢視或控制檢視物件和**OLE_COLOR**對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -180,7 +191,7 @@ void AFXAPI DDX_OCColorRO(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxocfloata--ddxocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat  
+##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
  `DDX_OCFloat`函式會管理傳送**float** (或**雙**) 的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和**float** (或**雙**) 對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -216,7 +227,7 @@ void AFXAPI DDX_OCFloat(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxocfloatroa--ddxocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
+##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
  `DDX_OCFloatRO`函式會管理傳送**float** (或**雙**) 的 OLE 控制項在對話方塊中，唯讀屬性之間的資料表單檢視或控制檢視物件和**float** (或**雙**) 對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -252,7 +263,7 @@ void AFXAPI DDX_OCFloatRO(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxocinta--ddxocint"></a><a name="ddx_ocint"></a>DDX_OCInt  
+##  <a name="ddx_ocint"></a>DDX_OCInt  
  `DDX_OCInt`函式會管理傳送`int`(或**長**) 的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和`int`(或**長**) 對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -288,7 +299,7 @@ void AFXAPI DDX_OCInt(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxocintroa--ddxocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO  
+##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
  `DDX_OCIntRO`函式會管理傳送`int`(或**長**) 的 OLE 控制項在對話方塊中，唯讀屬性之間的資料表單檢視或控制檢視物件和`int`(或**長**) 對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -324,7 +335,7 @@ void AFXAPI DDX_OCIntRO(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxocshorta--ddxocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort  
+##  <a name="ddx_ocshort"></a>DDX_OCShort  
  `DDX_OCShort`函式管理] 對話方塊的 [表單檢視中的 OLE 控制項的屬性之間的簡短的資料傳送，或控制檢視物件和短的資料成員的對話方塊中，表單檢視，或控制檢視物件。  
   
 ```   
@@ -354,7 +365,7 @@ void AFXAPI DDX_OCShort(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxocshortroa--ddxocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO  
+##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
  `DDX_OCShortRO`函式管理簡短之間傳送資料] 對話方塊的 [表單檢視中的 OLE 控制項的唯讀屬性或控制項檢視物件和短的資料成員的對話方塊中，表單檢視，或控制檢視物件。  
   
 ```   
@@ -384,7 +395,7 @@ void AFXAPI DDX_OCShortRO(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxoctexta--ddxoctext"></a><a name="ddx_octext"></a>DDX_OCText  
+##  <a name="ddx_octext"></a>DDX_OCText  
  **DDX_OCText**函式會管理傳送**CString**的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和**CString**對話方塊、 表單檢視或控制檢視物件的資料成員。  
   
 ```   
@@ -414,7 +425,7 @@ void AFXAPI DDX_OCText(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="a-nameddxoctextroa--ddxoctextro"></a><a name="ddx_octextro"></a>DDX_OCTextRO  
+##  <a name="ddx_octextro"></a>DDX_OCTextRO  
  `DDX_OCTextRO` 函式可管理對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的唯讀屬性，與對話方塊、表單檢視或控制項檢視物件的 `CString` 資料成員之間的 `CString` 資料傳輸。  
   
 ```  

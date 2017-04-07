@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropExchange
+- AFXCTL/CPropExchange
+- AFXCTL/CPropExchange::ExchangeBlobProp
+- AFXCTL/CPropExchange::ExchangeFontProp
+- AFXCTL/CPropExchange::ExchangePersistentProp
+- AFXCTL/CPropExchange::ExchangeProp
+- AFXCTL/CPropExchange::ExchangeVersion
+- AFXCTL/CPropExchange::GetVersion
+- AFXCTL/CPropExchange::IsAsynchronous
+- AFXCTL/CPropExchange::IsLoading
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +95,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>需求  
  **標頭︰** afxctl.h  
   
-##  <a name="a-nameexchangeblobpropa--cpropexchangeexchangeblobprop"></a><a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
  將序列化儲存二進位大型物件 (BLOB) 資料的屬性。  
   
 ```  
@@ -114,7 +123,7 @@ virtual BOOL ExchangeBlobProp(
   
  函式**CArchivePropExchange::ExchangeBlobProp**， **CResetPropExchange::ExchangeBlobProp**，和**CPropsetPropExchange::ExchangeBlobProp**覆寫此純虛擬函式。  
   
-##  <a name="a-nameexchangefontpropa--cpropexchangeexchangefontprop"></a><a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
  交換儲存媒體和控制項之間的字型屬性。  
   
 ```  
@@ -146,7 +155,7 @@ virtual BOOL ExchangeFontProp(
   
  函式**CArchivePropExchange::ExchangeFontProp**， **CResetPropExchange::ExchangeFontProp**，和**CPropsetPropExchange::ExchangeFontProp**覆寫此純虛擬函式。  
   
-##  <a name="a-nameexchangepersistentpropa--cpropexchangeexchangepersistentprop"></a><a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
  交換控制項和檔案之間的屬性。  
   
 ```  
@@ -178,7 +187,7 @@ virtual BOOL ExchangePersistentProp(
   
  函式**CArchivePropExchange::ExchangePersistentProp**， **CResetPropExchange::ExchangePersistentProp**，和**CPropsetPropExchange::ExchangePersistentProp**覆寫此純虛擬函式。  
   
-##  <a name="a-nameexchangepropa--cpropexchangeexchangeprop"></a><a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
  交換儲存媒體和控制項之間的屬性。  
   
 ```  
@@ -220,7 +229,7 @@ virtual BOOL ExchangeProp(
   
  函式**CArchivePropExchange::ExchangeProp**， **CResetPropExchange::ExchangeProp**，和**CPropsetPropExchange::ExchangeProp**覆寫此純虛擬函式。  
   
-##  <a name="a-nameexchangeversiona--cpropexchangeexchangeversion"></a><a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
  若要處理的版本號碼的持續性架構呼叫。  
   
 ```  
@@ -243,7 +252,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零否則為 0。  
   
-##  <a name="a-namegetversiona--cpropexchangegetversion"></a><a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>CPropExchange::GetVersion  
  呼叫此函式可擷取控制項的版本號碼。  
   
 ```  
@@ -253,7 +262,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>傳回值  
  控制版本號碼。  
   
-##  <a name="a-nameisasynchronousa--cpropexchangeisasynchronous"></a><a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
  決定屬性交換會以非同步方式進行。  
   
 ```  
@@ -263,7 +272,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>傳回值  
  傳回 TRUE，如果屬性被交換以非同步的方式，否則為 FALSE。  
   
-##  <a name="a-nameisloadinga--cpropexchangeisloading"></a><a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>CPropExchange::IsLoading  
  呼叫此函式來判斷屬性是否在控制項載入或儲存它。  
   
 ```  

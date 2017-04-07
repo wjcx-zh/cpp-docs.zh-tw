@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
+- CSTRINGT/ATL::CFixedStringT
+- CSTRINGT/ATL::CFixedStringT::CFixedStringT
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +96,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>需求  
  **標頭︰** cstringt.h  
   
-##  <a name="a-namecfixedstringta--cfixedstringtcfixedstringt"></a><a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
  建構 `CFixedStringT` 物件。  
   
 ```
@@ -120,7 +122,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>備註  
  因為建構函式會將輸入的資料複製到新配置的儲存體，您應該注意可能會造成例外狀況的記憶體。 請注意，某些這些建構函式做為轉換函式。  
   
-##  <a name="a-nameoperatoreqa--cfixedstringtoperator-"></a><a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>CFixedStringT::operator =  
  重新初始化現有`CFixedStringT`物件新的資料。  
   
 ```

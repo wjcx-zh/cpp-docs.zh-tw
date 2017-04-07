@@ -296,9 +296,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 0df76ac331827a865068de0488e75e6ec1bb9130
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 1889e0de5f1c7ac588822d8c1268e2775b186542
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm4-class"></a>norm_4 類別
@@ -328,155 +328,155 @@ class norm_4;
   
 |名稱|描述|  
 |----------|-----------------|  
-|norm_4::get_w 方法||  
-|norm_4::get_wx 方法||  
-|norm_4::get_wxy 方法||  
-|norm_4::get_wxyz 方法||  
-|norm_4::get_wxz 方法||  
-|norm_4::get_wxzy 方法||  
-|norm_4::get_wy 方法||  
-|norm_4::get_wyx 方法||  
-|norm_4::get_wyxz 方法||  
-|norm_4::get_wyz 方法||  
-|norm_4::get_wyzx 方法||  
-|norm_4::get_wz 方法||  
-|norm_4::get_wzx 方法||  
-|norm_4::get_wzxy 方法||  
-|norm_4::get_wzy 方法||  
-|norm_4::get_wzyx 方法||  
-|norm_4::get_x 方法||  
-|norm_4::get_xw 方法||  
-|norm_4::get_xwy 方法||  
-|norm_4::get_xwyz 方法||  
-|norm_4::get_xwz 方法||  
-|norm_4::get_xwzy 方法||  
-|norm_4::get_xy 方法||  
-|norm_4::get_xyw 方法||  
-|norm_4::get_xywz 方法||  
-|norm_4::get_xyz 方法||  
-|norm_4::get_xyzw 方法||  
-|norm_4::get_xz 方法||  
-|norm_4::get_xzw 方法||  
-|norm_4::get_xzwy 方法||  
-|norm_4::get_xzy 方法||  
-|norm_4::get_xzyw 方法||  
-|norm_4::get_y 方法||  
-|norm_4::get_yw 方法||  
-|norm_4::get_ywx 方法||  
-|norm_4::get_ywxz 方法||  
-|norm_4::get_ywz 方法||  
-|norm_4::get_ywzx 方法||  
-|norm_4::get_yx 方法||  
-|norm_4::get_yxw 方法||  
-|norm_4::get_yxwz 方法||  
-|norm_4::get_yxz 方法||  
-|norm_4::get_yxzw 方法||  
-|norm_4::get_yz 方法||  
-|norm_4::get_yzw 方法||  
-|norm_4::get_yzwx 方法||  
-|norm_4::get_yzx 方法||  
-|norm_4::get_yzxw 方法||  
-|norm_4::get_z 方法||  
-|norm_4::get_zw 方法||  
-|norm_4::get_zwx 方法||  
-|norm_4::get_zwxy 方法||  
-|norm_4::get_zwy 方法||  
-|norm_4::get_zwyx 方法||  
-|norm_4::get_zx 方法||  
-|norm_4::get_zxw 方法||  
-|norm_4::get_zxwy 方法||  
-|norm_4::get_zxy 方法||  
-|norm_4::get_zxyw 方法||  
-|norm_4::get_zy 方法||  
-|norm_4::get_zyw 方法||  
-|norm_4::get_zywx 方法||  
-|norm_4::get_zyx 方法||  
-|norm_4::get_zyxw 方法||  
-|norm_4::ref_a 方法||  
-|norm_4::ref_b 方法||  
-|norm_4::ref_g 方法||  
-|norm_4::ref_r 方法||  
-|norm_4::ref_w 方法||  
-|norm_4::ref_x 方法||  
-|norm_4::ref_y 方法||  
-|norm_4::ref_z 方法||  
-|norm_4::set_w 方法||  
-|norm_4::set_wx 方法||  
-|norm_4::set_wxy 方法||  
-|norm_4::set_wxyz 方法||  
-|norm_4::set_wxz 方法||  
-|norm_4::set_wxzy 方法||  
-|norm_4::set_wy 方法||  
-|norm_4::set_wyx 方法||  
-|norm_4::set_wyxz 方法||  
-|norm_4::set_wyz 方法||  
-|norm_4::set_wyzx 方法||  
-|norm_4::set_wz 方法||  
-|norm_4::set_wzx 方法||  
-|norm_4::set_wzxy 方法||  
-|norm_4::set_wzy 方法||  
-|norm_4::set_wzyx 方法||  
-|norm_4::set_x 方法||  
-|norm_4::set_xw 方法||  
-|norm_4::set_xwy 方法||  
-|norm_4::set_xwyz 方法||  
-|norm_4::set_xwz 方法||  
-|norm_4::set_xwzy 方法||  
-|norm_4::set_xy 方法||  
-|norm_4::set_xyw 方法||  
-|norm_4::set_xywz 方法||  
-|norm_4::set_xyz 方法||  
-|norm_4::set_xyzw 方法||  
-|norm_4::set_xz 方法||  
-|norm_4::set_xzw 方法||  
-|norm_4::set_xzwy 方法||  
-|norm_4::set_xzy 方法||  
-|norm_4::set_xzyw 方法||  
-|norm_4::set_y 方法||  
-|norm_4::set_yw 方法||  
-|norm_4::set_ywx 方法||  
-|norm_4::set_ywxz 方法||  
-|norm_4::set_ywz 方法||  
-|norm_4::set_ywzx 方法||  
-|norm_4::set_yx 方法||  
-|norm_4::set_yxw 方法||  
-|norm_4::set_yxwz 方法||  
-|norm_4::set_yxz 方法||  
-|norm_4::set_yxzw 方法||  
-|norm_4::set_yz 方法||  
-|norm_4::set_yzw 方法||  
-|norm_4::set_yzwx 方法||  
-|norm_4::set_yzx 方法||  
-|norm_4::set_yzxw 方法||  
-|norm_4::set_z 方法||  
-|norm_4::set_zw 方法||  
-|norm_4::set_zwx 方法||  
-|norm_4::set_zwxy 方法||  
-|norm_4::set_zwy 方法||  
-|norm_4::set_zwyx 方法||  
-|norm_4::set_zx 方法||  
-|norm_4::set_zxw 方法||  
-|norm_4::set_zxwy 方法||  
-|norm_4::set_zxy 方法||  
-|norm_4::set_zxyw 方法||  
-|norm_4::set_zy 方法||  
-|norm_4::set_zyw 方法||  
-|norm_4::set_zywx 方法||  
-|norm_4::set_zyx 方法||  
-|norm_4::set_zyxw 方法||  
+|norm_4::get_w||  
+|norm_4::get_wx||  
+|norm_4::get_wxy||  
+|norm_4::get_wxyz||  
+|norm_4::get_wxz||  
+|norm_4::get_wxzy||  
+|norm_4::get_wy||  
+|norm_4::get_wyx||  
+|norm_4::get_wyxz||  
+|norm_4::get_wyz||  
+|norm_4::get_wyzx||  
+|norm_4::get_wz||  
+|norm_4::get_wzx||  
+|norm_4::get_wzxy||  
+|norm_4::get_wzy||  
+|norm_4::get_wzyx||  
+|norm_4::get_x||  
+|norm_4::get_xw||  
+|norm_4::get_xwy||  
+|norm_4::get_xwyz||  
+|norm_4::get_xwz||  
+|norm_4::get_xwzy||  
+|norm_4::get_xy||  
+|norm_4::get_xyw||  
+|norm_4::get_xywz||  
+|norm_4::get_xyz||  
+|norm_4::get_xyzw||  
+|norm_4::get_xz||  
+|norm_4::get_xzw||  
+|norm_4::get_xzwy||  
+|norm_4::get_xzy||  
+|norm_4::get_xzyw||  
+|norm_4::get_y||  
+|norm_4::get_yw||  
+|norm_4::get_ywx||  
+|norm_4::get_ywxz||  
+|norm_4::get_ywz||  
+|norm_4::get_ywzx||  
+|norm_4::get_yx||  
+|norm_4::get_yxw||  
+|norm_4::get_yxwz||  
+|norm_4::get_yxz||  
+|norm_4::get_yxzw||  
+|norm_4::get_yz||  
+|norm_4::get_yzw||  
+|norm_4::get_yzwx||  
+|norm_4::get_yzx||  
+|norm_4::get_yzxw||  
+|norm_4::get_z||  
+|norm_4::get_zw||  
+|norm_4::get_zwx||  
+|norm_4::get_zwxy||  
+|norm_4::get_zwy||  
+|norm_4::get_zwyx||  
+|norm_4::get_zx||  
+|norm_4::get_zxw||  
+|norm_4::get_zxwy||  
+|norm_4::get_zxy||  
+|norm_4::get_zxyw||  
+|norm_4::get_zy||  
+|norm_4::get_zyw||  
+|norm_4::get_zywx||  
+|norm_4::get_zyx||  
+|norm_4::get_zyxw||  
+|norm_4::ref_a||  
+|norm_4::ref_b||  
+|norm_4::ref_g||  
+|norm_4::ref_r||  
+|norm_4::ref_w||  
+|norm_4::ref_x||  
+|norm_4::ref_y||  
+|norm_4::ref_z||  
+|norm_4::set_w||  
+|norm_4::set_wx||  
+|norm_4::set_wxy||  
+|norm_4::set_wxyz||  
+|norm_4::set_wxz||  
+|norm_4::set_wxzy||  
+|norm_4::set_wy||  
+|norm_4::set_wyx||  
+|norm_4::set_wyxz||  
+|norm_4::set_wyz||  
+|norm_4::set_wyzx||  
+|norm_4::set_wz||  
+|norm_4::set_wzx||  
+|norm_4::set_wzxy||  
+|norm_4::set_wzy||  
+|norm_4::set_wzyx||  
+|norm_4::set_x||  
+|norm_4::set_xw||  
+|norm_4::set_xwy||  
+|norm_4::set_xwyz||  
+|norm_4::set_xwz||  
+|norm_4::set_xwzy||  
+|norm_4::set_xy||  
+|norm_4::set_xyw||  
+|norm_4::set_xywz||  
+|norm_4::set_xyz||  
+|norm_4::set_xyzw||  
+|norm_4::set_xz||  
+|norm_4::set_xzw||  
+|norm_4::set_xzwy||  
+|norm_4::set_xzy||  
+|norm_4::set_xzyw||  
+|norm_4::set_y||  
+|norm_4::set_yw||  
+|norm_4::set_ywx||  
+|norm_4::set_ywxz||  
+|norm_4::set_ywz||  
+|norm_4::set_ywzx||  
+|norm_4::set_yx||  
+|norm_4::set_yxw||  
+|norm_4::set_yxwz||  
+|norm_4::set_yxz||  
+|norm_4::set_yxzw||  
+|norm_4::set_yz||  
+|norm_4::set_yzw||  
+|norm_4::set_yzwx||  
+|norm_4::set_yzx||  
+|norm_4::set_yzxw||  
+|norm_4::set_z||  
+|norm_4::set_zw||  
+|norm_4::set_zwx||  
+|norm_4::set_zwxy||  
+|norm_4::set_zwy||  
+|norm_4::set_zwyx||  
+|norm_4::set_zx||  
+|norm_4::set_zxw||  
+|norm_4::set_zxwy||  
+|norm_4::set_zxy||  
+|norm_4::set_zxyw||  
+|norm_4::set_zy||  
+|norm_4::set_zyw||  
+|norm_4::set_zywx||  
+|norm_4::set_zyx||  
+|norm_4::set_zyxw||  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|norm_4::operator 運算子||  
-|norm_4::operator-運算子||  
-|norm_4::operator * = 運算子||  
-|norm_4::operator / = 運算子||  
-|norm_4::operator + + 運算子||  
-|norm_4::operator + = 運算子||  
-|norm_4::operator = 運算子||  
-|norm_4::operator-= 運算子||  
+|norm_4::operator-||  
+|norm_4::operator-||  
+|norm_4::operator * =||  
+|norm_4::operator / =||  
+|norm_4::operator + +||  
+|norm_4::operator + =||  
+|norm_4::operator =||  
+|norm_4::operator =||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -488,134 +488,134 @@ class norm_4;
   
 |名稱|描述|  
 |----------|-----------------|  
-|norm_4::a 資料成員||  
-|norm_4::ab 資料成員||  
-|norm_4::abg 資料成員||  
-|norm_4::abgr 資料成員||  
-|norm_4::abr 資料成員||  
-|norm_4::abrg 資料成員||  
-|norm_4::ag 資料成員||  
-|norm_4::agb 資料成員||  
-|norm_4::agbr 資料成員||  
-|norm_4::agr 資料成員||  
-|norm_4::agrb 資料成員||  
-|norm_4::ar 資料成員||  
-|norm_4::arb 資料成員||  
-|norm_4::arbg 資料成員||  
-|norm_4::arg 資料成員||  
-|norm_4::argb 資料成員||  
-|norm_4::b 資料成員||  
-|norm_4::ba 資料成員||  
-|norm_4::bag 資料成員||  
-|norm_4::bagr 資料成員||  
-|norm_4::bar 資料成員||  
-|norm_4::barg 資料成員||  
-|norm_4::bg 資料成員||  
-|norm_4::bga 資料成員||  
-|norm_4::bgar 資料成員||  
-|norm_4::bgr 資料成員||  
-|norm_4::bgra 資料成員||  
-|norm_4::br 資料成員||  
-|norm_4::bra 資料成員||  
-|norm_4::brag 資料成員||  
-|norm_4::brg 資料成員||  
-|norm_4::brga 資料成員||  
-|norm_4::g 資料成員||  
-|norm_4::ga 資料成員||  
-|norm_4::gab 資料成員||  
-|norm_4::gabr 資料成員||  
-|norm_4::gar 資料成員||  
-|norm_4::garb 資料成員||  
-|norm_4::gb 資料成員||  
-|norm_4::gba 資料成員||  
-|norm_4::gbar 資料成員||  
-|norm_4::gbr 資料成員||  
-|norm_4::gbra 資料成員||  
-|norm_4::gr 資料成員||  
-|norm_4::gra 資料成員||  
-|norm_4::grab 資料成員||  
-|norm_4::grb 資料成員||  
-|norm_4::grba 資料成員||  
-|norm_4::r 資料成員||  
-|norm_4::ra 資料成員||  
-|norm_4::rab 資料成員||  
-|norm_4::rabg 資料成員||  
-|norm_4::rag 資料成員||  
-|norm_4::ragb 資料成員||  
-|norm_4::rb 資料成員||  
-|norm_4::rba 資料成員||  
-|norm_4::rbag 資料成員||  
-|norm_4::rbg 資料成員||  
-|norm_4::rbga 資料成員||  
-|norm_4::rg 資料成員||  
-|norm_4::rga 資料成員||  
-|norm_4::rgab 資料成員||  
-|norm_4::rgb 資料成員||  
-|norm_4::rgba 資料成員||  
-|norm_4::w 資料成員||  
-|norm_4::wx 資料成員||  
-|norm_4::wxy 資料成員||  
-|norm_4::wxyz 資料成員||  
-|norm_4::wxz 資料成員||  
-|norm_4::wxzy 資料成員||  
-|norm_4::wy 資料成員||  
-|norm_4::wyx 資料成員||  
-|norm_4::wyxz 資料成員||  
-|norm_4::wyz 資料成員||  
-|norm_4::wyzx 資料成員||  
-|norm_4::wz 資料成員||  
-|norm_4::wzx 資料成員||  
-|norm_4::wzxy 資料成員||  
-|norm_4::wzy 資料成員||  
-|norm_4::wzyx 資料成員||  
-|norm_4::x 資料成員||  
-|norm_4::xw 資料成員||  
-|norm_4::xwy 資料成員||  
-|norm_4::xwyz 資料成員||  
-|norm_4::xwz 資料成員||  
-|norm_4::xwzy 資料成員||  
-|norm_4::xy 資料成員||  
-|norm_4::xyw 資料成員||  
-|norm_4::xywz 資料成員||  
-|norm_4::xyz 資料成員||  
-|norm_4::xyzw 資料成員||  
-|norm_4::xz 資料成員||  
-|norm_4::xzw 資料成員||  
-|norm_4::xzwy 資料成員||  
-|norm_4::xzy 資料成員||  
-|norm_4::xzyw 資料成員||  
-|norm_4::y 資料成員||  
-|norm_4::yw 資料成員||  
-|norm_4::ywx 資料成員||  
-|norm_4::ywxz 資料成員||  
-|norm_4::ywz 資料成員||  
-|norm_4::ywzx 資料成員||  
-|norm_4::yx 資料成員||  
-|norm_4::yxw 資料成員||  
-|norm_4::yxwz 資料成員||  
-|norm_4::yxz 資料成員||  
-|norm_4::yxzw 資料成員||  
-|norm_4::yz 資料成員||  
-|norm_4::yzw 資料成員||  
-|norm_4::yzwx 資料成員||  
-|norm_4::yzx 資料成員||  
-|norm_4::yzxw 資料成員||  
-|norm_4::z 資料成員||  
-|norm_4::zw 資料成員||  
-|norm_4::zwx 資料成員||  
-|norm_4::zwxy 資料成員||  
-|norm_4::zwy 資料成員||  
-|norm_4::zwyx 資料成員||  
-|norm_4::zx 資料成員||  
-|norm_4::zxw 資料成員||  
-|norm_4::zxwy 資料成員||  
-|norm_4::zxy 資料成員||  
-|norm_4::zxyw 資料成員||  
-|norm_4::zy 資料成員||  
-|norm_4::zyw 資料成員||  
-|norm_4::zywx 資料成員||  
-|norm_4::zyx 資料成員||  
-|norm_4::zyxw 資料成員||  
+|norm_4::a||  
+|norm_4::ab||  
+|norm_4::abg||  
+|norm_4::abgr||  
+|norm_4::abr||  
+|norm_4::abrg||  
+|norm_4::ag||  
+|norm_4::agb||  
+|norm_4::agbr||  
+|norm_4::agr||  
+|norm_4::agrb||  
+|norm_4::ar||  
+|norm_4::arb||  
+|norm_4::arbg||  
+|norm_4::arg||  
+|norm_4::argb||  
+|norm_4::b||  
+|norm_4::ba||  
+|norm_4::bag||  
+|norm_4::bagr||  
+|norm_4::bar||  
+|norm_4::barg||  
+|norm_4::bg||  
+|norm_4::bga||  
+|norm_4::bgar||  
+|norm_4::bgr||  
+|norm_4::bgra||  
+|norm_4::br||  
+|norm_4::bra||  
+|norm_4::brag||  
+|norm_4::brg||  
+|norm_4::brga||  
+|norm_4::g||  
+|norm_4::ga||  
+|norm_4::gab||  
+|norm_4::gabr||  
+|norm_4::gar||  
+|norm_4::garb||  
+|norm_4::gb||  
+|norm_4::gba||  
+|norm_4::gbar||  
+|norm_4::gbr||  
+|norm_4::gbra||  
+|norm_4::gr||  
+|norm_4::gra||  
+|norm_4::grab||  
+|norm_4::grb||  
+|norm_4::grba||  
+|norm_4::r||  
+|norm_4::ra||  
+|norm_4::rab||  
+|norm_4::rabg||  
+|norm_4::rag||  
+|norm_4::ragb||  
+|norm_4::rb||  
+|norm_4::rba||  
+|norm_4::rbag||  
+|norm_4::rbg||  
+|norm_4::rbga||  
+|norm_4::rg||  
+|norm_4::rga||  
+|norm_4::rgab||  
+|norm_4::rgb||  
+|norm_4::rgba||  
+|norm_4::w||  
+|norm_4::wx||  
+|norm_4::wxy||  
+|norm_4::wxyz||  
+|norm_4::wxz||  
+|norm_4::wxzy||  
+|norm_4::wy||  
+|norm_4::wyx||  
+|norm_4::wyxz||  
+|norm_4::wyz||  
+|norm_4::wyzx||  
+|norm_4::wz||  
+|norm_4::wzx||  
+|norm_4::wzxy||  
+|norm_4::wzy||  
+|norm_4::wzyx||  
+|norm_4::x||  
+|norm_4::xw||  
+|norm_4::xwy||  
+|norm_4::xwyz||  
+|norm_4::xwz||  
+|norm_4::xwzy||  
+|norm_4::xy||  
+|norm_4::xyw||  
+|norm_4::xywz||  
+|norm_4::xyz||  
+|norm_4::xyzw||  
+|norm_4::xz||  
+|norm_4::xzw||  
+|norm_4::xzwy||  
+|norm_4::xzy||  
+|norm_4::xzyw||  
+|norm_4::y||  
+|norm_4::yw||  
+|norm_4::ywx||  
+|norm_4::ywxz||  
+|norm_4::ywz||  
+|norm_4::ywzx||  
+|norm_4::yx||  
+|norm_4::yxw||  
+|norm_4::yxwz||  
+|norm_4::yxz||  
+|norm_4::yxzw||  
+|norm_4::yz||  
+|norm_4::yzw||  
+|norm_4::yzwx||  
+|norm_4::yzx||  
+|norm_4::yzxw||  
+|norm_4::z||  
+|norm_4::zw||  
+|norm_4::zwx||  
+|norm_4::zwxy||  
+|norm_4::zwy||  
+|norm_4::zwyx||  
+|norm_4::zx||  
+|norm_4::zxw||  
+|norm_4::zxwy||  
+|norm_4::zxy||  
+|norm_4::zxyw||  
+|norm_4::zy||  
+|norm_4::zyw||  
+|norm_4::zywx||  
+|norm_4::zyx||  
+|norm_4::zyxw||  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `norm_4`  
@@ -625,7 +625,7 @@ class norm_4;
   
  **命名空間︰** concurrency:: graphics  
   
-##  <a name="a-namectora-norm4"></a><a name="ctor"></a>norm_4 
+##  <a name="ctor"></a>norm_4 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -717,12 +717,12 @@ explicit inline norm_4(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="a-namenorm4sizea-size"></a><a name="norm_4__size"></a>大小 
+##  <a name="norm_4__size"></a>大小 
 
 ```  
 static const int size = 4;  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

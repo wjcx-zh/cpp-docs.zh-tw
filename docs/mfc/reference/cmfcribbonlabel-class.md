@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel::CMFCRibbonLabel
+- AFXRIBBONLABEL/CMFCRibbonLabel::SetACCData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +85,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxRibbonLabel.h  
   
-##  <a name="a-namecmfcribbonlabela--cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
  建構並初始化[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)會顯示指定的文字字串的物件。  
   
 ```  
@@ -98,7 +101,7 @@ CMFCRibbonLabel(
  [in] `bIsMultiLine`  
  `TRUE`若要指定標籤是多行標籤。否則， `FALSE`。  
   
-##  <a name="a-namesetaccdataa--cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
  判斷目前的功能區標籤元素的協助工具資料。  
   
 ```  

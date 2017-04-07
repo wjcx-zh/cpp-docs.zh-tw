@@ -10,6 +10,46 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMenu
+- AFXWIN/CMenu
+- AFXWIN/CMenu::CMenu
+- AFXWIN/CMenu::AppendMenu
+- AFXWIN/CMenu::Attach
+- AFXWIN/CMenu::CheckMenuItem
+- AFXWIN/CMenu::CheckMenuRadioItem
+- AFXWIN/CMenu::CreateMenu
+- AFXWIN/CMenu::CreatePopupMenu
+- AFXWIN/CMenu::DeleteMenu
+- AFXWIN/CMenu::DeleteTempMap
+- AFXWIN/CMenu::DestroyMenu
+- AFXWIN/CMenu::Detach
+- AFXWIN/CMenu::DrawItem
+- AFXWIN/CMenu::EnableMenuItem
+- AFXWIN/CMenu::FromHandle
+- AFXWIN/CMenu::GetDefaultItem
+- AFXWIN/CMenu::GetMenuContextHelpId
+- AFXWIN/CMenu::GetMenuInfo
+- AFXWIN/CMenu::GetMenuItemCount
+- AFXWIN/CMenu::GetMenuItemID
+- AFXWIN/CMenu::GetMenuItemInfo
+- AFXWIN/CMenu::GetMenuState
+- AFXWIN/CMenu::GetMenuString
+- AFXWIN/CMenu::GetSafeHmenu
+- AFXWIN/CMenu::GetSubMenu
+- AFXWIN/CMenu::InsertMenu
+- AFXWIN/CMenu::InsertMenuItem
+- AFXWIN/CMenu::LoadMenu
+- AFXWIN/CMenu::LoadMenuIndirect
+- AFXWIN/CMenu::MeasureItem
+- AFXWIN/CMenu::ModifyMenu
+- AFXWIN/CMenu::RemoveMenu
+- AFXWIN/CMenu::SetDefaultItem
+- AFXWIN/CMenu::SetMenuContextHelpId
+- AFXWIN/CMenu::SetMenuInfo
+- AFXWIN/CMenu::SetMenuItemBitmaps
+- AFXWIN/CMenu::SetMenuItemInfo
+- AFXWIN/CMenu::TrackPopupMenu
+- AFXWIN/CMenu::TrackPopupMenuEx
+- AFXWIN/CMenu::m_hMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -132,7 +172,7 @@ class CMenu : public CObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-nameappendmenua--cmenuappendmenu"></a><a name="appendmenu"></a>CMenu::AppendMenu  
+##  <a name="appendmenu"></a>CMenu::AppendMenu  
  將新的項目附加至結尾的功能表。  
   
 ```  
@@ -212,7 +252,7 @@ BOOL AppendMenu(
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::CreateMenu](#createmenu)。  
   
-##  <a name="a-nameattacha--cmenuattach"></a><a name="attach"></a>CMenu::Attach  
+##  <a name="attach"></a>CMenu::Attach  
  附加至現有的 Windows 功能表`CMenu`物件。  
   
 ```  
@@ -234,7 +274,7 @@ BOOL Attach(HMENU hMenu);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&21;](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="a-namecheckmenuitema--cmenucheckmenuitem"></a><a name="checkmenuitem"></a>CMenu::CheckMenuItem  
+##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
  加入核取記號以或從快顯功能表中功能表項目移除核取記號。  
   
 ```  
@@ -269,7 +309,7 @@ UINT CheckMenuItem(
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::GetMenuState](#getmenustate)。  
   
-##  <a name="a-namecheckmenuradioitema--cmenucheckmenuradioitem"></a><a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
+##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
  會檢查指定的功能表項目，並使其選項項目。  
   
 ```  
@@ -307,7 +347,7 @@ BOOL CheckMenuRadioItem(
 ### <a name="example"></a>範例  
   請參閱範例[ON_COMMAND_RANGE](http://msdn.microsoft.com/library/c52719fc-dd6e-48c9-af79-383f48d608e0)。  
   
-##  <a name="a-namecmenua--cmenucmenu"></a><a name="cmenu"></a>CMenu::CMenu  
+##  <a name="cmenu"></a>CMenu::CMenu  
  建立空的功能表，並將它附加`CMenu`物件。  
   
 ```  
@@ -327,7 +367,7 @@ CMenu();
   
 - [Attach](#attach)  
   
-##  <a name="a-namecreatemenua--cmenucreatemenu"></a><a name="createmenu"></a>CMenu::CreateMenu  
+##  <a name="createmenu"></a>CMenu::CreateMenu  
  會建立一個功能表，並將它附加`CMenu`物件。  
   
 ```  
@@ -347,7 +387,7 @@ BOOL CreateMenu();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&22;](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="a-namecreatepopupmenua--cmenucreatepopupmenu"></a><a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
  建立快顯功能表，並將它附加`CMenu`物件。  
   
 ```  
@@ -367,7 +407,7 @@ BOOL CreatePopupMenu();
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::CreateMenu](#createmenu)。  
   
-##  <a name="a-namedeletemenua--cmenudeletemenu"></a><a name="deletemenu"></a>CMenu::DeleteMenu  
+##  <a name="deletemenu"></a>CMenu::DeleteMenu  
  從功能表中刪除項目。  
   
 ```  
@@ -399,7 +439,7 @@ BOOL DeleteMenu(
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。  
   
-##  <a name="a-namedeletetempmapa--cmenudeletetempmap"></a><a name="deletetempmap"></a>CMenu::DeleteTempMap  
+##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
  自動呼叫`CWinApp`閒置時間處理常式中，刪除任何暫存`CMenu`所建立的物件[FromHandle](#fromhandle)成員函式。  
   
 ```  
@@ -412,7 +452,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&23;](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="a-namedestroymenua--cmenudestroymenu"></a><a name="destroymenu"></a>CMenu::DestroyMenu  
+##  <a name="destroymenu"></a>CMenu::DestroyMenu  
  終結功能表和所使用的任何 Windows 資源。  
   
 ```  
@@ -428,7 +468,7 @@ BOOL DestroyMenu();
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::CreateMenu](#createmenu)。  
   
-##  <a name="a-namedetacha--cmenudetach"></a><a name="detach"></a>CMenu::Detach  
+##  <a name="detach"></a>CMenu::Detach  
  從 [視窗] 功能表會卸離`CMenu`物件，並傳回控制代碼。  
   
 ```  
@@ -444,7 +484,7 @@ HMENU Detach();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&21;](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="a-namedrawitema--cmenudrawitem"></a><a name="drawitem"></a>CMenu::DrawItem  
+##  <a name="drawitem"></a>CMenu::DrawItem  
  當主控描繪功能表會變更的視覺外觀的架構所呼叫。  
   
 ```  
@@ -465,7 +505,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  [!code-cpp[NVC_MFCWindowing #&24;](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="a-nameenablemenuitema--cmenuenablemenuitem"></a><a name="enablemenuitem"></a>CMenu::EnableMenuItem  
+##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
  啟用、 停用，或變暗的功能表項目。  
   
 ```  
@@ -504,7 +544,7 @@ UINT EnableMenuItem(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&25;](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="a-namefromhandlea--cmenufromhandle"></a><a name="fromhandle"></a>CMenu::FromHandle  
+##  <a name="fromhandle"></a>CMenu::FromHandle  
  傳回的指標`CMenu`功能表提供的 Windows 控制代碼的物件。  
   
 ```  
@@ -526,7 +566,7 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::CreateMenu](#createmenu)。  
   
-##  <a name="a-namegetdefaultitema--cmenugetdefaultitem"></a><a name="getdefaultitem"></a>CMenu::GetDefaultItem  
+##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
  判斷指定的功能表的預設功能表項目。  
   
 ```  
@@ -556,7 +596,7 @@ UINT GetDefaultItem(
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="a-namegetmenucontexthelpida--cmenugetmenucontexthelpid"></a><a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
+##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
  擷取識別碼相關聯的內容說明`CMenu`。  
   
 ```  
@@ -569,7 +609,7 @@ DWORD GetMenuContextHelpId() const;
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="a-namegetmenuinfoa--cmenugetmenuinfo"></a><a name="getmenuinfo"></a>CMenu::GetMenuInfo  
+##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
  擷取功能表的資訊。  
   
 ```  
@@ -586,7 +626,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="remarks"></a>備註  
  呼叫此函式來擷取功能表的相關資訊。  
   
-##  <a name="a-namegetmenuitemcounta--cmenugetmenuitemcount"></a><a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
  決定快顯或最上層功能表項目數目。  
   
 ```  
@@ -599,7 +639,7 @@ UINT GetMenuItemCount() const;
 ### <a name="example"></a>範例  
   請參閱範例[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。  
   
-##  <a name="a-namegetmenuitemida--cmenugetmenuitemid"></a><a name="getmenuitemid"></a>CMenu::GetMenuItemID  
+##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
  取得功能表項目所定義的位置上的功能表項目識別碼`nPos`。  
   
 ```  
@@ -616,7 +656,7 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="a-namegetmenuiteminfoa--cmenugetmenuiteminfo"></a><a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
+##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
  擷取功能表項目相關的資訊。  
   
 ```  
@@ -645,7 +685,7 @@ BOOL GetMenuItemInfo(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&26;](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="a-namegetmenustatea--cmenugetmenustate"></a><a name="getmenustate"></a>CMenu::GetMenuState  
+##  <a name="getmenustate"></a>CMenu::GetMenuState  
  傳回指定的功能表項目或項目數目之狀態的快顯功能表中。  
   
 ```  
@@ -687,7 +727,7 @@ UINT GetMenuState(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&27;](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="a-namegetmenustringa--cmenugetmenustring"></a><a name="getmenustring"></a>CMenu::GetMenuString  
+##  <a name="getmenustring"></a>CMenu::GetMenuString  
  將指定的功能表項目的標籤複製到指定的緩衝區。  
   
 ```  
@@ -733,7 +773,7 @@ int GetMenuString(
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="a-namegetsafehmenua--cmenugetsafehmenu"></a><a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
+##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
  傳回`HMENU`包裝此`CMenu`物件，或**NULL** `CMenu`指標。  
   
 ```  
@@ -743,7 +783,7 @@ HMENU GetSafeHmenu() const;
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::LoadMenu](#loadmenu)。  
   
-##  <a name="a-namegetsubmenua--cmenugetsubmenu"></a><a name="getsubmenu"></a>CMenu::GetSubMenu  
+##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
  擷取`CMenu`快顯功能表上的物件。  
   
 ```  
@@ -760,7 +800,7 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::TrackPopupMenu](#trackpopupmenu)。  
   
-##  <a name="a-nameinsertmenua--cmenuinsertmenu"></a><a name="insertmenu"></a>CMenu::InsertMenu  
+##  <a name="insertmenu"></a>CMenu::InsertMenu  
  在所指定的位置插入新的功能表項目`nPosition`並將其他項目移至下的功能表。  
   
 ```  
@@ -820,7 +860,7 @@ BOOL InsertMenu(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&28;](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="a-nameinsertmenuitema--cmenuinsertmenuitem"></a><a name="insertmenuitem"></a>CMenu::InsertMenuItem  
+##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
  在功能表中的指定位置處插入新的功能表項目。  
   
 ```  
@@ -843,7 +883,7 @@ BOOL InsertMenuItem(
 ### <a name="remarks"></a>備註  
  此函式會包裝[InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameloadmenua--cmenuloadmenu"></a><a name="loadmenu"></a>CMenu::LoadMenu  
+##  <a name="loadmenu"></a>CMenu::LoadMenu  
  從應用程式的可執行檔載入功能表資源，並將它附加`CMenu`物件。  
   
 ```  
@@ -867,7 +907,7 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&29;](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="a-nameloadmenuindirecta--cmenuloadmenuindirect"></a><a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
+##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
  從功能表範本在記憶體中載入資源，並將其以附加`CMenu`物件。  
   
 ```  
@@ -895,7 +935,7 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&30;](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="a-namemhmenua--cmenumhmenu"></a><a name="m_hmenu"></a>CMenu::m_hMenu  
+##  <a name="m_hmenu"></a>CMenu::m_hMenu  
  指定`HMENU`控制代碼的 Windows 功能表附加至`CMenu`物件。  
   
 ```  
@@ -905,7 +945,7 @@ HMENU m_hMenu;
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::LoadMenu](#loadmenu)。  
   
-##  <a name="a-namemeasureitema--cmenumeasureitem"></a><a name="measureitem"></a>CMenu::MeasureItem  
+##  <a name="measureitem"></a>CMenu::MeasureItem  
  建立主控描繪樣式功能表時，由架構呼叫。  
   
 ```  
@@ -926,7 +966,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  [!code-cpp[NVC_MFCWindowing #&31;](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="a-namemodifymenua--cmenumodifymenu"></a><a name="modifymenu"></a>CMenu::ModifyMenu  
+##  <a name="modifymenu"></a>CMenu::ModifyMenu  
  變更現有的功能表項目所指定的位置`nPosition`。  
   
 ```  
@@ -984,7 +1024,7 @@ BOOL ModifyMenu(
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="a-nameoperatorhmenua--cmenuoperator-hmenu"></a><a name="operator_hmenu"></a>CMenu::operator HMENU  
+##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
  使用這個運算子來擷取的控制代碼`CMenu`物件。  
   
 ```  
@@ -997,7 +1037,7 @@ operator HMENU() const;
 ### <a name="remarks"></a>備註  
  若要直接呼叫 Windows Api，您可以使用控制代碼。  
   
-##  <a name="a-nameoperatorneqa--cmenuoperator-"></a><a name="operator_neq"></a>CMenu::operator ！ =  
+##  <a name="operator_neq"></a>CMenu::operator ！ =  
  判斷兩個功能表是否以邏輯方式不相等。  
   
 ```  
@@ -1011,7 +1051,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="remarks"></a>備註  
  測試是否不等於右邊的功能表物件左邊的功能表物件。  
   
-##  <a name="a-nameoperatoreqeqa--cmenuoperator-"></a><a name="operator_eq_eq"></a>CMenu::operator = =  
+##  <a name="operator_eq_eq"></a>CMenu::operator = =  
  判斷兩個功能表是否邏輯上相等。  
   
 ```  
@@ -1025,7 +1065,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="remarks"></a>備註  
  測試在左邊的功能表物件是否相等 (的`HMENU`值) 到右邊的功能表物件。  
   
-##  <a name="a-nameremovemenua--cmenuremovemenu"></a><a name="removemenu"></a>CMenu::RemoveMenu  
+##  <a name="removemenu"></a>CMenu::RemoveMenu  
  從功能表中刪除具有相關聯的快顯功能表的功能表項目。  
   
 ```  
@@ -1057,7 +1097,7 @@ BOOL RemoveMenu(
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="a-namesetdefaultitema--cmenusetdefaultitem"></a><a name="setdefaultitem"></a>CMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
  設定預設功能表項目中指定的功能表。  
   
 ```  
@@ -1082,7 +1122,7 @@ BOOL SetDefaultItem(
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="a-namesetmenucontexthelpida--cmenusetmenucontexthelpid"></a><a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
+##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
  使用的內容說明識別碼相關聯`CMenu`。  
   
 ```  
@@ -1102,7 +1142,7 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="example"></a>範例  
   請參閱範例[CMenu::InsertMenu](#insertmenu)。  
   
-##  <a name="a-namesetmenuinfoa--cmenusetmenuinfo"></a><a name="setmenuinfo"></a>CMenu::SetMenuInfo  
+##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
  設定 功能表上的資訊。  
   
 ```  
@@ -1119,7 +1159,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="remarks"></a>備註  
  呼叫此函式可設定 功能表上的特定資訊。  
   
-##  <a name="a-namesetmenuitembitmapsa--cmenusetmenuitembitmaps"></a><a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
+##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
  關聯功能表項目至指定的點陣圖。  
   
 ```  
@@ -1165,7 +1205,7 @@ BOOL SetMenuItemBitmaps(
   
  [!code-cpp[NVC_MFCWindowing #&33;](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="a-namesetmenuiteminfoa--cmenusetmenuiteminfo"></a><a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
+##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
  變更功能表項目相關的資訊。  
   
 ```  
@@ -1188,7 +1228,7 @@ BOOL SetMenuItemInfo(
 ### <a name="remarks"></a>備註  
  此函式會包裝[SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nametrackpopupmenua--cmenutrackpopupmenu"></a><a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
  浮動的快顯功能表顯示在指定的位置，並追蹤的項目在快顯功能表。  
   
 ```  
@@ -1225,7 +1265,7 @@ BOOL TrackPopupMenu(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing #&34;](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="a-nametrackpopupmenuexa--cmenutrackpopupmenuex"></a><a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
+##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
  浮動的快顯功能表顯示在指定的位置，並追蹤的項目在快顯功能表。  
   
 ```  

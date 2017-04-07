@@ -9,10 +9,53 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATLSECURITY/CAccessToken
-- ATL.CAccessToken
 - CAccessToken
-- ATL::CAccessToken
+- ATLSECURITY/ATL::CAccessToken
+- ATLSECURITY/ATL::CAccessToken::Attach
+- ATLSECURITY/ATL::CAccessToken::CheckTokenMembership
+- ATLSECURITY/ATL::CAccessToken::CreateImpersonationToken
+- ATLSECURITY/ATL::CAccessToken::CreatePrimaryToken
+- ATLSECURITY/ATL::CAccessToken::CreateProcessAsUser
+- ATLSECURITY/ATL::CAccessToken::CreateRestrictedToken
+- ATLSECURITY/ATL::CAccessToken::Detach
+- ATLSECURITY/ATL::CAccessToken::DisablePrivilege
+- ATLSECURITY/ATL::CAccessToken::DisablePrivileges
+- ATLSECURITY/ATL::CAccessToken::EnablePrivilege
+- ATLSECURITY/ATL::CAccessToken::EnablePrivileges
+- ATLSECURITY/ATL::CAccessToken::GetDefaultDacl
+- ATLSECURITY/ATL::CAccessToken::GetEffectiveToken
+- ATLSECURITY/ATL::CAccessToken::GetGroups
+- ATLSECURITY/ATL::CAccessToken::GetHandle
+- ATLSECURITY/ATL::CAccessToken::GetImpersonationLevel
+- ATLSECURITY/ATL::CAccessToken::GetLogonSessionId
+- ATLSECURITY/ATL::CAccessToken::GetLogonSid
+- ATLSECURITY/ATL::CAccessToken::GetOwner
+- ATLSECURITY/ATL::CAccessToken::GetPrimaryGroup
+- ATLSECURITY/ATL::CAccessToken::GetPrivileges
+- ATLSECURITY/ATL::CAccessToken::GetProcessToken
+- ATLSECURITY/ATL::CAccessToken::GetProfile
+- ATLSECURITY/ATL::CAccessToken::GetSource
+- ATLSECURITY/ATL::CAccessToken::GetStatistics
+- ATLSECURITY/ATL::CAccessToken::GetTerminalServicesSessionId
+- ATLSECURITY/ATL::CAccessToken::GetThreadToken
+- ATLSECURITY/ATL::CAccessToken::GetTokenId
+- ATLSECURITY/ATL::CAccessToken::GetType
+- ATLSECURITY/ATL::CAccessToken::GetUser
+- ATLSECURITY/ATL::CAccessToken::HKeyCurrentUser
+- ATLSECURITY/ATL::CAccessToken::Impersonate
+- ATLSECURITY/ATL::CAccessToken::ImpersonateLoggedOnUser
+- ATLSECURITY/ATL::CAccessToken::IsTokenRestricted
+- ATLSECURITY/ATL::CAccessToken::LoadUserProfile
+- ATLSECURITY/ATL::CAccessToken::LogonUser
+- ATLSECURITY/ATL::CAccessToken::OpenCOMClientToken
+- ATLSECURITY/ATL::CAccessToken::OpenNamedPipeClientToken
+- ATLSECURITY/ATL::CAccessToken::OpenRPCClientToken
+- ATLSECURITY/ATL::CAccessToken::OpenThreadToken
+- ATLSECURITY/ATL::CAccessToken::PrivilegeCheck
+- ATLSECURITY/ATL::CAccessToken::Revert
+- ATLSECURITY/ATL::CAccessToken::SetDefaultDacl
+- ATLSECURITY/ATL::CAccessToken::SetOwner
+- ATLSECURITY/ATL::CAccessToken::SetPrimaryGroup
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -120,7 +163,7 @@ class CAccessToken
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h  
   
-##  <a name="a-nameattacha--caccesstokenattach"></a><a name="attach"></a>CAccessToken::Attach  
+##  <a name="attach"></a>CAccessToken::Attach  
  呼叫這個方法提供的存取權的語彙基元控制代碼的擁有權。  
   
 ```
@@ -134,7 +177,7 @@ void Attach(HANDLE hToken) throw();
 ### <a name="remarks"></a>備註  
  在偵錯組建，判斷提示就會發生錯誤，如果`CAccessToken`物件已經有存取權杖的擁有權。  
   
-##  <a name="a-namedtora--caccesstokencaccesstoken"></a><a name="dtor"></a>CAccessToken:: ~ CAccessToken  
+##  <a name="dtor"></a>CAccessToken:: ~ CAccessToken  
  解構函式。  
   
 ```
@@ -144,7 +187,7 @@ virtual ~CAccessToken() throw();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-namechecktokenmembershipa--caccesstokenchecktokenmembership"></a><a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership  
+##  <a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership  
  呼叫這個方法來判斷指定的 SID 是否已啟用在`CAccessToken`物件。  
   
 ```
@@ -171,7 +214,7 @@ bool CheckTokenMembership(
 > [!NOTE]
 >  `CAccessToken`物件必須是模擬權杖，且不是主要的權杖。  
   
-##  <a name="a-namecreateimpersonationtokena--caccesstokencreateimpersonationtoken"></a><a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken  
+##  <a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken  
  呼叫這個方法來建立模擬存取權杖。  
   
 ```
@@ -193,7 +236,7 @@ bool CreateImpersonationToken(
 ### <a name="remarks"></a>備註  
  `CreateImpersonationToken`呼叫[DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616)來建立新的模擬語彙基元。  
   
-##  <a name="a-namecreateprimarytokena--caccesstokencreateprimarytoken"></a><a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken  
+##  <a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken  
  呼叫這個方法來建立新的主要權杖。  
   
 ```
@@ -219,7 +262,7 @@ bool CreatePrimaryToken(
 ### <a name="remarks"></a>備註  
  `CreatePrimaryToken`呼叫[DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617)來建立新的主要權杖。  
   
-##  <a name="a-namecreateprocessasusera--caccesstokencreateprocessasuser"></a><a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
+##  <a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
  呼叫這個方法來建立新的處理程序所表示的使用者安全性內容中執行`CAccessToken`物件。  
   
 ```
@@ -275,7 +318,7 @@ bool CreateProcessAsUser(
   
  若要成功，這個方法`CAccessToken`（除非它是限制的權杖），物件必須保留 AssignPrimaryToken 和 IncreaseQuota 權限。  
   
-##  <a name="a-namecreaterestrictedtokena--caccesstokencreaterestrictedtoken"></a><a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken  
+##  <a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken  
  呼叫這個方法來建立新的限制`CAccessToken`物件。  
   
 ```
@@ -311,7 +354,7 @@ bool CreateRestrictedToken(
 > [!IMPORTANT]
 >  當使用`CreateRestrictedToken`，請確認下列事項︰ 現有的權杖是有效的 （而且未由使用者輸入的） 和`SidsToDisable`和`PrivilegesToDelete`同時有效 （也無法由使用者輸入）。 如果方法傳回 false，則拒絕功能。  
   
-##  <a name="a-namedetacha--caccesstokendetach"></a><a name="detach"></a>CAccessToken::Detach  
+##  <a name="detach"></a>CAccessToken::Detach  
  呼叫這個方法，以撤銷存取權杖的擁有權。  
   
 ```
@@ -324,7 +367,7 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>備註  
  這個方法會撤銷`CAccessToken`的存取權杖的擁有權。  
   
-##  <a name="a-namedisableprivilegea--caccesstokendisableprivilege"></a><a name="disableprivilege"></a>CAccessToken::DisablePrivilege  
+##  <a name="disableprivilege"></a>CAccessToken::DisablePrivilege  
  呼叫這個方法，以停用中的權限`CAccessToken`物件。  
   
 ```
@@ -343,7 +386,7 @@ bool DisablePrivilege(
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namedisableprivilegesa--caccesstokendisableprivileges"></a><a name="disableprivileges"></a>CAccessToken::DisablePrivileges  
+##  <a name="disableprivileges"></a>CAccessToken::DisablePrivileges  
  呼叫這個方法，以停用中的一個或多個權限`CAccessToken`物件。  
   
 ```
@@ -362,7 +405,7 @@ bool DisablePrivileges(
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-nameenableprivilegea--caccesstokenenableprivilege"></a><a name="enableprivilege"></a>CAccessToken::EnablePrivilege  
+##  <a name="enableprivilege"></a>CAccessToken::EnablePrivilege  
  呼叫這個方法來啟用的權限在`CAccessToken`物件。  
   
 ```
@@ -381,7 +424,7 @@ bool EnablePrivilege(
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-nameenableprivilegesa--caccesstokenenableprivileges"></a><a name="enableprivileges"></a>CAccessToken::EnablePrivileges  
+##  <a name="enableprivileges"></a>CAccessToken::EnablePrivileges  
  呼叫這個方法來啟用中的一個或多個權限`CAccessToken`物件。  
   
 ```
@@ -400,7 +443,7 @@ bool EnablePrivileges(
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegetdefaultdacla--caccesstokengetdefaultdacl"></a><a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl  
+##  <a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl  
  呼叫此方法以傳回`CAccessToken`物件的預設 DACL。  
   
 ```
@@ -414,7 +457,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="return-value"></a>傳回值  
  如果預設 DACL 已復原，則為 false 否則，就會傳回 true。  
   
-##  <a name="a-namegeteffectivetokena--caccesstokengeteffectivetoken"></a><a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken  
+##  <a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken  
  呼叫此方法來取得`CAccessToken`物件等於目前的執行緒作用中的存取權杖。  
   
 ```
@@ -428,7 +471,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegetgroupsa--caccesstokengetgroups"></a><a name="getgroups"></a>CAccessToken::GetGroups  
+##  <a name="getgroups"></a>CAccessToken::GetGroups  
  呼叫此方法以傳回`CAccessToken`物件的語彙基元的群組。  
   
 ```
@@ -442,7 +485,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegethandlea--caccesstokengethandle"></a><a name="gethandle"></a>CAccessToken::GetHandle  
+##  <a name="gethandle"></a>CAccessToken::GetHandle  
  呼叫這個方法來擷取存取權杖的處理常式。  
   
 ```
@@ -452,7 +495,7 @@ HANDLE GetHandle() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回的控制代碼`CAccessToken`物件的存取權杖。  
   
-##  <a name="a-namegetimpersonationlevela--caccesstokengetimpersonationlevel"></a><a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel  
+##  <a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel  
  呼叫這個方法來取得存取權杖中的模擬等級。  
   
 ```
@@ -467,7 +510,7 @@ bool GetImpersonationLevel(
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegetlogonsessionida--caccesstokengetlogonsessionid"></a><a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId  
+##  <a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId  
  呼叫此方法以取得相關聯的登入工作階段識別碼`CAccessToken`物件。  
   
 ```
@@ -484,7 +527,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="remarks"></a>備註  
  在偵錯組建，判斷提示就會發生錯誤，如果`pluid`是無效的值。  
   
-##  <a name="a-namegetlogonsida--caccesstokengetlogonsid"></a><a name="getlogonsid"></a>CAccessToken::GetLogonSid  
+##  <a name="getlogonsid"></a>CAccessToken::GetLogonSid  
  呼叫此方法以取得相關聯的登入 SID`CAccessToken`物件。  
   
 ```
@@ -501,7 +544,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>備註  
  在偵錯組建，判斷提示就會發生錯誤，如果*pSid*是無效的值。  
   
-##  <a name="a-namegetownera--caccesstokengetowner"></a><a name="getowner"></a>CAccessToken::GetOwner  
+##  <a name="getowner"></a>CAccessToken::GetOwner  
  呼叫此方法以取得相關聯的擁有者`CAccessToken`物件。  
   
 ```
@@ -518,7 +561,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>備註  
  擁有者是由建立此存取權杖生效時的任何物件的預設設定。  
   
-##  <a name="a-namegetprimarygroupa--caccesstokengetprimarygroup"></a><a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
+##  <a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
  呼叫此方法以取得相關聯的主要群組`CAccessToken`物件。  
   
 ```
@@ -535,7 +578,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>備註  
  群組是由建立此存取權杖生效時的任何物件的預設設定。  
   
-##  <a name="a-namegetprivilegesa--caccesstokengetprivileges"></a><a name="getprivileges"></a>CAccessToken::GetPrivileges  
+##  <a name="getprivileges"></a>CAccessToken::GetPrivileges  
  呼叫此方法以取得相關聯的權限`CAccessToken`物件。  
   
 ```
@@ -549,7 +592,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegetprocesstokena--caccesstokengetprocesstoken"></a><a name="getprocesstoken"></a>CAccessToken::GetProcessToken  
+##  <a name="getprocesstoken"></a>CAccessToken::GetProcessToken  
  呼叫這個方法，以所指處理序的存取權杖初始化 `CAccessToken`。  
   
 ```
@@ -569,7 +612,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 ### <a name="remarks"></a>備註  
  呼叫[OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) Win32 函式。  
   
-##  <a name="a-namegetprofilea--caccesstokengetprofile"></a><a name="getprofile"></a>CAccessToken::GetProfile  
+##  <a name="getprofile"></a>CAccessToken::GetProfile  
  呼叫此方法來取得指向 使用者設定檔相關聯的控制代碼`CAccessToken`物件。  
   
 ```
@@ -579,7 +622,7 @@ HANDLE GetProfile() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回的控制代碼，如果沒有設定檔，指向使用者設定檔，則為 NULL。  
   
-##  <a name="a-namegetsourcea--caccesstokengetsource"></a><a name="getsource"></a>CAccessToken::GetSource  
+##  <a name="getsource"></a>CAccessToken::GetSource  
  呼叫此方法來取得來源的`CAccessToken`物件。  
   
 ```
@@ -593,7 +636,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegetstatisticsa--caccesstokengetstatistics"></a><a name="getstatistics"></a>CAccessToken::GetStatistics  
+##  <a name="getstatistics"></a>CAccessToken::GetStatistics  
  呼叫此方法以取得相關聯的資訊`CAccessToken`物件。  
   
 ```
@@ -607,7 +650,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegetterminalservicessessionida--caccesstokengetterminalservicessessionid"></a><a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId  
+##  <a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId  
  呼叫此方法以取得相關聯的終端機服務工作階段識別碼`CAccessToken`物件。  
   
 ```
@@ -621,7 +664,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegetthreadtokena--caccesstokengetthreadtoken"></a><a name="getthreadtoken"></a>CAccessToken::GetThreadToken  
+##  <a name="getthreadtoken"></a>CAccessToken::GetThreadToken  
  呼叫此方法以初始化`CAccessToken`給定執行緒的權杖。  
   
 ```
@@ -646,7 +689,7 @@ bool GetThreadToken(
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegettokenida--caccesstokengettokenid"></a><a name="gettokenid"></a>CAccessToken::GetTokenId  
+##  <a name="gettokenid"></a>CAccessToken::GetTokenId  
  呼叫此方法以取得相關聯的語彙基元 ID`CAccessToken`物件。  
   
 ```
@@ -660,7 +703,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namegettypea--caccesstokengettype"></a><a name="gettype"></a>CAccessToken::GetType  
+##  <a name="gettype"></a>CAccessToken::GetType  
  呼叫這個方法來取得的權杖類型`CAccessToken`物件。  
   
 ```
@@ -677,7 +720,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="remarks"></a>備註  
  **TOKEN_TYPE**列舉型別包含區分主要權杖與模擬語彙基元的值。  
   
-##  <a name="a-namegetusera--caccesstokengetuser"></a><a name="getuser"></a>CAccessToken::GetUser  
+##  <a name="getuser"></a>CAccessToken::GetUser  
  呼叫這個方法來識別相關聯的使用者`CAccessToken`物件。  
   
 ```
@@ -691,7 +734,7 @@ bool GetUser(CSid* pSid) const throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="a-namehkeycurrentusera--caccesstokenhkeycurrentuser"></a><a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser  
+##  <a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser  
  呼叫此方法來取得指向 使用者設定檔相關聯的控制代碼`CAccessToken`物件。  
   
 ```
@@ -701,7 +744,7 @@ HKEY HKeyCurrentUser() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回的控制代碼，如果沒有設定檔，指向使用者設定檔，則為 NULL。  
   
-##  <a name="a-nameimpersonatea--caccesstokenimpersonate"></a><a name="impersonate"></a>CAccessToken::Impersonate  
+##  <a name="impersonate"></a>CAccessToken::Impersonate  
  呼叫這個方法來指派模擬`CAccessToken`到往來文章。  
   
 ```
@@ -720,7 +763,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
   
  [CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用來自動還原模擬的存取權杖。  
   
-##  <a name="a-nameimpersonateloggedonusera--caccesstokenimpersonateloggedonuser"></a><a name="impersonateloggedonuser"></a>CAccessToken::ImpersonateLoggedOnUser  
+##  <a name="impersonateloggedonuser"></a>CAccessToken::ImpersonateLoggedOnUser  
  呼叫此方法可讓呼叫的執行緒來模擬登入之使用者的安全性內容。  
   
 ```
@@ -735,7 +778,7 @@ bool ImpersonateLoggedOnUser() const throw(...);
 > [!IMPORTANT]
 >  如果模擬函式的呼叫失敗，因為任何原因，無法模擬用戶端，並從中進行呼叫的程序的安全性內容中建立用戶端要求。 如果處理程序正在執行做為高特殊權限的帳戶，或以系統管理群組的成員，使用者可能可以執行的動作他或她就否則不允許。 因此，應該一律確認此函式的傳回值。  
   
-##  <a name="a-nameistokenrestricteda--caccesstokenistokenrestricted"></a><a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted  
+##  <a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted  
  呼叫這個方法來測試是否`CAccessToken`物件包含一份 Sid 限制。  
   
 ```
@@ -745,7 +788,7 @@ bool IsTokenRestricted() const throw();
 ### <a name="return-value"></a>傳回值  
  如果物件包含限制 Sid，false，如果不有任何限制 Sid 的清單，或如果方法失敗，則傳回 true。  
   
-##  <a name="a-nameloaduserprofilea--caccesstokenloaduserprofile"></a><a name="loaduserprofile"></a>CAccessToken::LoadUserProfile  
+##  <a name="loaduserprofile"></a>CAccessToken::LoadUserProfile  
  呼叫這個方法來載入使用者設定檔相關聯`CAccessToken`物件。  
   
 ```
@@ -758,7 +801,7 @@ bool LoadUserProfile() throw(...);
 ### <a name="remarks"></a>備註  
  在偵錯組建，判斷提示就會發生錯誤，如果`CAccessToken`未包含有效的語彙基元，或是如果使用者設定檔已經存在。  
   
-##  <a name="a-namelogonusera--caccesstokenlogonuser"></a><a name="logonuser"></a>CAccessToken::LogonUser  
+##  <a name="logonuser"></a>CAccessToken::LogonUser  
  呼叫這個方法來建立與指定的認證相關聯的使用者登入工作階段。  
   
 ```
@@ -792,7 +835,7 @@ bool LogonUser(
 ### <a name="remarks"></a>備註  
  將相關聯的登入的語彙基元所產生的存取權`CAccessToken`。 若要成功，這個方法`CAccessToken`物件必須保留 SE_TCB_NAME 權限持有者識別做為基底的受信任電腦的一部分。 請參閱[LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184)有關所需的權限。  
   
-##  <a name="a-nameopencomclienttokena--caccesstokenopencomclienttoken"></a><a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken  
+##  <a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken  
  呼叫這個方法從 COM 伺服器，處理來自用戶端發出呼叫以初始化內`CAccessToken`COM 用戶端的存取權杖。  
   
 ```
@@ -820,7 +863,7 @@ bool OpenCOMClientToken(
 ### <a name="remarks"></a>備註  
  [CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用來自動還原模擬的存取權杖來建立`bImpersonate`旗標設為*true*。  
   
-##  <a name="a-nameopennamedpipeclienttokena--caccesstokenopennamedpipeclienttoken"></a><a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken  
+##  <a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken  
  呼叫這個方法從伺服器中的製作要求透過具名管道來初始化`CAccessToken`從用戶端的存取權杖。  
   
 ```
@@ -852,7 +895,7 @@ bool OpenNamedPipeClientToken(
 ### <a name="remarks"></a>備註  
  [CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用來自動還原模擬的存取權杖來建立`bImpersonate`旗標設為*true*。  
   
-##  <a name="a-nameopenrpcclienttokena--caccesstokenopenrpcclienttoken"></a><a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken  
+##  <a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken  
  呼叫這個方法從伺服器處理 RPC 用戶端初始化的呼叫中`CAccessToken`從用戶端的存取權杖。  
   
 ```
@@ -884,7 +927,7 @@ bool OpenRPCClientToken(
 ### <a name="remarks"></a>備註  
  [CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用來自動還原模擬的存取權杖來建立`bImpersonate`旗標設為*true*。  
   
-##  <a name="a-nameopenthreadtokena--caccesstokenopenthreadtoken"></a><a name="openthreadtoken"></a>CAccessToken::OpenThreadToken  
+##  <a name="openthreadtoken"></a>CAccessToken::OpenThreadToken  
  呼叫這個方法來設定模擬等級，然後初始化`CAccessToken`給定執行緒的權杖。  
   
 ```
@@ -918,7 +961,7 @@ bool OpenThreadToken(
   
  [CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用來自動還原模擬的存取權杖來建立`bImpersonate`旗標設為*true*。  
   
-##  <a name="a-nameprivilegechecka--caccesstokenprivilegecheck"></a><a name="privilegecheck"></a>CAccessToken::PrivilegeCheck  
+##  <a name="privilegecheck"></a>CAccessToken::PrivilegeCheck  
  呼叫這個方法來判斷指定的權限集合中已啟用**CAccessToken**物件。  
   
 ```
@@ -940,7 +983,7 @@ bool PrivilegeCheck(
 ### <a name="remarks"></a>備註  
  當`PrivilegeCheck`傳回，**屬性**的每個成員[LUID_AND_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379263)結構設 SE_PRIVILEGE_USED_FOR_ACCESS，如果已啟用對應的權限。 這個方法會呼叫[PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) Win32 函式。  
   
-##  <a name="a-namereverta--caccesstokenrevert"></a><a name="revert"></a>CAccessToken::Revert  
+##  <a name="revert"></a>CAccessToken::Revert  
  呼叫這個方法來停止使用模擬語彙基元的執行緒。  
   
 ```
@@ -957,7 +1000,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 ### <a name="remarks"></a>備註  
  可以自動執行的模擬語彙基元回復，與[CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)。  
   
-##  <a name="a-namesetdefaultdacla--caccesstokensetdefaultdacl"></a><a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl  
+##  <a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl  
  呼叫這個方法來設定預設的 DACL`CAccessToken`物件。  
   
 ```
@@ -974,7 +1017,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ### <a name="remarks"></a>備註  
  預設 DACL，為新物件作用中建立與此存取權杖時，會使用預設的 DACL。  
   
-##  <a name="a-namesetownera--caccesstokensetowner"></a><a name="setowner"></a>CAccessToken::SetOwner  
+##  <a name="setowner"></a>CAccessToken::SetOwner  
  呼叫這個方法來設定的擁有者`CAccessToken`物件。  
   
 ```
@@ -991,7 +1034,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 ### <a name="remarks"></a>備註  
  擁有者是用於建立此存取權杖生效時的新物件的預設擁有者。  
   
-##  <a name="a-namesetprimarygroupa--caccesstokensetprimarygroup"></a><a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
+##  <a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
  呼叫這個方法來設定的主要群組`CAccessToken`物件。  
   
 ```

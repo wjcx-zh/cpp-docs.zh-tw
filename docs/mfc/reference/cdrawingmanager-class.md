@@ -10,6 +10,32 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CDrawingManager
+- AFXDRAWMANAGER/CDrawingManager::CreateBitmap_32
+- AFXDRAWMANAGER/CDrawingManager::DrawAlpha
+- AFXDRAWMANAGER/CDrawingManager::DrawRotated
+- AFXDRAWMANAGER/CDrawingManager::DrawEllipse
+- AFXDRAWMANAGER/CDrawingManager::DrawGradientRing
+- AFXDRAWMANAGER/CDrawingManager::DrawRect
+- AFXDRAWMANAGER/CDrawingManager::DrawShadow
+- AFXDRAWMANAGER/CDrawingManager::Fill4ColorsGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient
+- AFXDRAWMANAGER/CDrawingManager::FillGradient2
+- AFXDRAWMANAGER/CDrawingManager::GrayRect
+- AFXDRAWMANAGER/CDrawingManager::HighlightRect
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_ONE
+- AFXDRAWMANAGER/CDrawingManager::HLStoRGB_TWO
+- AFXDRAWMANAGER/CDrawingManager::HSVtoRGB
+- AFXDRAWMANAGER/CDrawingManager::HuetoRGB
+- AFXDRAWMANAGER/CDrawingManager::MirrorRect
+- AFXDRAWMANAGER/CDrawingManager::PixelAlpha
+- AFXDRAWMANAGER/CDrawingManager::PrepareShadowMask
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSL
+- AFXDRAWMANAGER/CDrawingManager::RGBtoHSV
+- AFXDRAWMANAGER/CDrawingManager::SetAlphaPixel
+- AFXDRAWMANAGER/CDrawingManager::SetPixel
+- AFXDRAWMANAGER/CDrawingManager::SmartMixColors
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +123,7 @@ class CDrawingManager : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdrawmanager.h  
   
-##  <a name="a-namecdrawingmanagera--cdrawingmanagercdrawingmanager"></a><a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
+##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager  
  建構[CDrawingManager](../../mfc/reference/cdrawingmanager-class.md)物件。  
   
 ```  
@@ -108,7 +134,7 @@ CDrawingManager(CDC& dc);
  [in] `dc`  
  裝置內容的參考。 `CDrawingManager`繪圖會使用此內容。  
   
-##  <a name="a-namecreatebitmap32a--cdrawingmanagercreatebitmap32"></a><a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
+##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32  
  建立應用程式可以直接寫入至 32 位元與裝置無關點陣圖 (DIB)。  
   
 ```  
@@ -137,7 +163,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 ### <a name="remarks"></a>備註  
  如需如何建立 DIB 點陣圖的詳細資訊，請參閱[CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183491)。  
   
-##  <a name="a-namedrawalphaa--cdrawingmanagerdrawalpha"></a><a name="drawalpha"></a>CDrawingManager::DrawAlpha  
+##  <a name="drawalpha"></a>CDrawingManager::DrawAlpha  
  顯示具有透明或半透明的像素的點陣圖。  
   
 ```  
@@ -164,7 +190,7 @@ void DrawAlpha(
 ### <a name="remarks"></a>備註  
  此方法執行兩個點陣圖 alpha 混色。 如需 alpha 混色的詳細資訊，請參閱[alphablend，還有旁邊](http://msdn.microsoft.com/library/windows/desktop/dd183351)Windows SDK 中。  
   
-##  <a name="a-namedrawellipsea--cdrawingmanagerdrawellipse"></a><a name="drawellipse"></a>CDrawingManager::DrawEllipse  
+##  <a name="drawellipse"></a>CDrawingManager::DrawEllipse  
  繪製橢圓形與提供的填滿和框線色彩。  
   
 ```  
@@ -187,7 +213,7 @@ void DrawEllipse(
 ### <a name="remarks"></a>備註  
  這個方法會傳回不繪製橢圓形，如果其中一個色彩設定為-1。 它也會傳回不繪製橢圓形，如果週框的任一個維度是 0。  
   
-##  <a name="a-namedrawgradientringa--cdrawingmanagerdrawgradientring"></a><a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
+##  <a name="drawgradientring"></a>CDrawingManager::DrawGradientRing  
  繪製信號，使用色彩漸層填滿它。  
   
 ```  
@@ -229,7 +255,7 @@ BOOL DrawGradientRing(
 ### <a name="remarks"></a>備註  
  所定義的矩形`rect`必須至少 5 個像素寬和 5 個像素高。  
   
-##  <a name="a-namedrawlinecdrawingmanagerdrawlineaa--cdrawingmanagerdrawline-cdrawingmanagerdrawlinea"></a><a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>CDrawingManager::DrawLine CDrawingManager::DrawLineA  
  繪製直線。  
   
 ```  
@@ -262,7 +288,7 @@ void DrawLineA(
 ### <a name="remarks"></a>備註  
  如果`clrLine`等於-1。  
   
-##  <a name="a-namedrawrecta--cdrawingmanagerdrawrect"></a><a name="drawrect"></a>CDrawingManager::DrawRect  
+##  <a name="drawrect"></a>CDrawingManager::DrawRect  
  繪製的矩形，以提供的填滿和框線色彩。  
   
 ```  
@@ -285,7 +311,7 @@ void DrawRect(
 ### <a name="remarks"></a>備註  
  此方法傳回時不繪製矩形，如果其中一個色彩設定為-1。 它也會傳回如果任一個矩形的維度是 0。  
   
-##  <a name="a-namedrawshadowa--cdrawingmanagerdrawshadow"></a><a name="drawshadow"></a>CDrawingManager::DrawShadow  
+##  <a name="drawshadow"></a>CDrawingManager::DrawShadow  
  繪製的矩形區域的陰影。  
   
 ```  
@@ -340,7 +366,7 @@ BOOL DrawShadow(
   
  [!code-cpp[NVC_MFC_PropSheetDemo #&1;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]  
   
-##  <a name="a-namefill4colorsgradienta--cdrawingmanagerfill4colorsgradient"></a><a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
+##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient  
  填滿的矩形區域，使用兩個色彩漸層。  
   
 ```  
@@ -381,7 +407,7 @@ void Fill4ColorsGradient(
   
  如果此方法會產生判斷提示失敗`nPercentage`小於 0 或大於 100。  
   
-##  <a name="a-namefillgradienta--cdrawingmanagerfillgradient"></a><a name="fillgradient"></a>CDrawingManager::FillGradient  
+##  <a name="fillgradient"></a>CDrawingManager::FillGradient  
  使用指定的色彩漸層，填滿的矩形區域。  
   
 ```  
@@ -418,7 +444,7 @@ void FillGradient(
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo #&12;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]  
   
-##  <a name="a-namefillgradient2a--cdrawingmanagerfillgradient2"></a><a name="fillgradient2"></a>CDrawingManager::FillGradient2  
+##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2  
  使用指定的色彩漸層，填滿的矩形區域。  
   
 ```  
@@ -450,7 +476,7 @@ void FillGradient2 (
   
  [!code-cpp[NVC_MFC_NewControls #&37;](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]  
   
-##  <a name="a-namegrayrecta--cdrawingmanagergrayrect"></a><a name="grayrect"></a>CDrawingManager::GrayRect  
+##  <a name="grayrect"></a>CDrawingManager::GrayRect  
  使用指定的灰色色彩，填滿的矩形。  
   
 ```  
@@ -482,7 +508,7 @@ BOOL GrayRect(
   
  最大值`nPercentage`為 200。 大於 200 的值不會變更矩形的外觀。 如果值為-1，這個方法會使用`clrDisabled`限制飽和度的矩形。  
   
-##  <a name="a-namehighlightrecta--cdrawingmanagerhighlightrect"></a><a name="highlightrect"></a>CDrawingManager::HighlightRect  
+##  <a name="highlightrect"></a>CDrawingManager::HighlightRect  
  反白顯示的矩形區域。  
   
 ```  
@@ -518,7 +544,7 @@ BOOL HighlightRect(
   
  此方法會使用參數`nTolerance`來判斷是否要反白顯示的矩形區域。 若要反白顯示在矩形中，您的應用程式的背景色彩之間的差異和`clrTransparent`必須是小於`nTolerance`中每個色彩元件 （紅色、 綠色和藍色）。  
   
-##  <a name="a-namehlstorgbonea--cdrawingmanagerhlstorgbone"></a><a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
+##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE  
  從 HLS 表示法，將色彩轉換為 RGB 表示。  
   
 ```  
@@ -546,7 +572,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
   
  這個方法和`CDrawingManager::HLStoRGB_TWO`方法執行相同的作業，但需要不同的值，如`H`參數。 在這種方法，`H`是圓形的百分比。 在`CDrawingManager::HLStoRGB_TWO`方法，`H`是程度，值介於 0 到 360 度，表示這兩個紅色。 比方說，使用`HLStoRGB_ONE`，值為 0.25`H`相當於值為 90 與`HLStoRGB_TWO`。  
   
-##  <a name="a-namehlstorgbtwoa--cdrawingmanagerhlstorgbtwo"></a><a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
+##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO  
  從 HLS 表示法，將色彩轉換為 RGB 表示。  
   
 ```  
@@ -574,7 +600,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
   
  這個方法和[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法執行相同的作業，但需要不同的值，如`H`參數。 在這種方法，`H`是程度，值介於 0 到 360 度，表示這兩個紅色。 在[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法，`H`是圓形的百分比。 比方說，使用`HLStoRGB_ONE`，值為 0.25`H`相當於值為 90 與`HLStoRGB_TWO`。  
   
-##  <a name="a-namehsvtorgba--cdrawingmanagerhsvtorgb"></a><a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
+##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB  
  從 HSV 表示法，將色彩轉換為 RGB 表示。  
   
 ```  
@@ -599,7 +625,7 @@ static COLORREF __stdcall HSVtoRGB(
 ### <a name="remarks"></a>備註  
  色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需有關色彩不同的表示方式的詳細資訊，請參閱[色彩](http://go.microsoft.com/fwlink/linkid=119126)。  
   
-##  <a name="a-namehuetorgba--cdrawingmanagerhuetorgb"></a><a name="huetorgb"></a>CDrawingManager::HuetoRGB  
+##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB  
  將色調值轉換成紅色、 綠色或藍色元件。  
   
 ```  
@@ -648,7 +674,7 @@ static BYTE __stdcall HueToRGB(
   
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)  
   
-##  <a name="a-namemirrorrecta--cdrawingmanagermirrorrect"></a><a name="mirrorrect"></a>CDrawingManager::MirrorRect  
+##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect  
  翻轉的矩形區域。  
   
 ```  
@@ -667,7 +693,7 @@ void MirrorRect(
 ### <a name="remarks"></a>備註  
  這個方法可以反轉所擁有的裝置任何的內容區域`CDrawingManager`類別。 如果`bHorz`設為`TRUE`，這個方法會水平翻轉的區域。 否則，它在區域垂直翻轉。  
   
-##  <a name="a-namepixelalphaa--cdrawingmanagerpixelalpha"></a><a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
+##  <a name="pixelalpha"></a>CDrawingManager::PixelAlpha  
  計算半透明的像素的最終色彩。  
   
 ```  
@@ -714,7 +740,7 @@ static COLORREF __stdcall PixelAlpha(
   
  當您使用的方法具有版本`dstPixel`，最終色彩是組合`dstPixel`和`srcPixel`。 `srcPixel`色彩是部分透明色彩的基準色彩透過`dstPixel`。  
   
-##  <a name="a-nameprepareshadowmaska--cdrawingmanagerprepareshadowmask"></a><a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
+##  <a name="prepareshadowmask"></a>CDrawingManager::PrepareShadowMask  
  建立可用來當做陰影的點陣圖。  
   
 ```  
@@ -744,7 +770,7 @@ static HBITMAP __stdcall PrepareShadowMask (
 ### <a name="remarks"></a>備註  
  如果`nDepth`是設定為 0，這個方法會結束並傳回`NULL`。 如果`nDepth`小於 3，陰影的高度與寬度會設定為 3 個像素為單位。  
   
-##  <a name="a-namergbtohsla--cdrawingmanagerrgbtohsl"></a><a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
+##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL  
  將色彩從紅、 綠和藍 (RGB) 表示法色調、 飽和度和亮度 (HSL) 表示法。  
   
 ```  
@@ -770,7 +796,7 @@ static void __stdcall RGBtoHSL(
   
  傳回的值`H`表示介於 0 和 1 0 和 1 代表紅色之間的小數。 傳回的值`S`和`L`是介於 0 和 1 之間的數字。  
   
-##  <a name="a-namergbtohsva--cdrawingmanagerrgbtohsv"></a><a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
+##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV  
  從 RGB 表示法，將色彩轉換為 HSV 表示。  
   
 ```  
@@ -799,7 +825,7 @@ static void __stdcall RGBtoHSV(
   
  傳回的值`H`是介於 0 和 360 之間的數字 0 到 360 度表示紅色。 傳回值`S`和`V`是介於 0 和 1 之間的數字。  
   
-##  <a name="a-namesetalphapixela--cdrawingmanagersetalphapixel"></a><a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
+##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel  
  色彩點陣圖中的透明像素。  
   
 ```  
@@ -844,7 +870,7 @@ static void __stdcall SetAlphaPixel(
   
  如果`bIsRight`設為`TRUE`，色彩的像素為單位`x`像素的右邊緣的`rect`。 如果是`FALSE`，色彩的像素為單位`x`從左邊的像素`rect`。  
   
-##  <a name="a-namesetpixela--cdrawingmanagersetpixel"></a><a name="setpixel"></a>CDrawingManager::SetPixel  
+##  <a name="setpixel"></a>CDrawingManager::SetPixel  
  變更指定的色彩點陣圖中的單一像素。  
   
 ```  
@@ -869,7 +895,7 @@ static void __stdcall SetPixel(
 |[in] `y`|若要變更點陣圖中像素的 y 座標。|  
 |[in] `color`|新提供的座標所識別的像素色彩。|  
   
-##  <a name="a-namesmartmixcolorsa--cdrawingmanagersmartmixcolors"></a><a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
+##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors  
  結合兩個色彩來根據加權的比率。  
   
 ```  
@@ -900,7 +926,7 @@ static COLORREF __stdcall SmartMixColors(
   
  使用下列公式會計算加權的比率: (color1 * k1 + 色&2; \* k2) /(k1 + k2)。 判定加權的比例之後，方法會計算混合色彩的亮度。 然後將相乘的明暗度`dblLumRatio`。 如果值大於 1.0，方法會設定混合的色彩亮度的新值。 否則，亮度會設為 1.0。  
   
-##  <a name="a-namedrawrotateda--cdrawingmanagerdrawrotated"></a><a name="drawrotated"></a>CDrawingManager::DrawRotated  
+##  <a name="drawrotated"></a>CDrawingManager::DrawRotated  
  旋轉 90 度的來源 DC 內指定的矩形的內容。  
   
 ```  

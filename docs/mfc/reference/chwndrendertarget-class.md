@@ -10,7 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHwndRenderTarget
-- afxrendertarget/CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::CHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::Attach
+- AFXRENDERTARGET/CHwndRenderTarget::CheckWindowState
+- AFXRENDERTARGET/CHwndRenderTarget::Create
+- AFXRENDERTARGET/CHwndRenderTarget::Detach
+- AFXRENDERTARGET/CHwndRenderTarget::GetHwnd
+- AFXRENDERTARGET/CHwndRenderTarget::GetHwndRenderTarget
+- AFXRENDERTARGET/CHwndRenderTarget::ReCreate
+- AFXRENDERTARGET/CHwndRenderTarget::Resize
+- AFXRENDERTARGET/CHwndRenderTarget::m_pHwndRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +102,7 @@ class CHwndRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-nameattacha--chwndrendertargetattach"></a><a name="attach"></a>CHwndRenderTarget::Attach  
+##  <a name="attach"></a>CHwndRenderTarget::Attach  
  會附加至現有的呈現目標物件的介面  
   
 ```  
@@ -103,7 +113,7 @@ void Attach(ID2D1HwndRenderTarget* pTarget);
  `pTarget`  
  現有的呈現目標介面。 不能是 NULL  
   
-##  <a name="a-namecheckwindowstatea--chwndrendertargetcheckwindowstate"></a><a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
+##  <a name="checkwindowstate"></a>CHwndRenderTarget::CheckWindowState  
  指出是否要阻擋此呈現目標相關聯的 HWND。  
   
 ```  
@@ -113,7 +123,7 @@ D2D1_WINDOW_STATE CheckWindowState() const;
 ### <a name="return-value"></a>傳回值  
  值，指出是否與此相關聯的 HWND 呈現目標會阻擋。  
   
-##  <a name="a-namechwndrendertargeta--chwndrendertargetchwndrendertarget"></a><a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
+##  <a name="chwndrendertarget"></a>CHwndRenderTarget::CHwndRenderTarget  
  建構從 HWND CHwndRenderTarget 物件。  
   
 ```  
@@ -124,7 +134,7 @@ CHwndRenderTarget(HWND hwnd = NULL);
  `hwnd`  
  這與相關聯的 HWND 呈現目標  
   
-##  <a name="a-namecreatea--chwndrendertargetcreate"></a><a name="create"></a>CHwndRenderTarget::Create  
+##  <a name="create"></a>CHwndRenderTarget::Create  
  建立呈現目標與視窗相關聯  
   
 ```  
@@ -138,7 +148,7 @@ BOOL Create(HWND hWnd);
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE  
   
-##  <a name="a-namedetacha--chwndrendertargetdetach"></a><a name="detach"></a>CHwndRenderTarget::Detach  
+##  <a name="detach"></a>CHwndRenderTarget::Detach  
  中斷連結物件中的呈現目標介面  
   
 ```  
@@ -148,7 +158,7 @@ ID2D1HwndRenderTarget* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的指標會呈現目標的介面。  
   
-##  <a name="a-namegethwnda--chwndrendertargetgethwnd"></a><a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
+##  <a name="gethwnd"></a>CHwndRenderTarget::GetHwnd  
  傳回與此相關聯的 HWND 呈現目標。  
   
 ```  
@@ -158,7 +168,7 @@ HWND GetHwnd() const;
 ### <a name="return-value"></a>傳回值  
  這與相關聯的 HWND 呈現目標。  
   
-##  <a name="a-namegethwndrendertargeta--chwndrendertargetgethwndrendertarget"></a><a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
+##  <a name="gethwndrendertarget"></a>CHwndRenderTarget::GetHwndRenderTarget  
  傳回 ID2D1HwndRenderTarget 介面。  
   
 ```  
@@ -168,14 +178,14 @@ ID2D1HwndRenderTarget* GetHwndRenderTarget();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1HwndRenderTarget 介面的指標。  
   
-##  <a name="a-namemphwndrendertargeta--chwndrendertargetmphwndrendertarget"></a><a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
+##  <a name="m_phwndrendertarget"></a>CHwndRenderTarget::m_pHwndRenderTarget  
  ID2D1HwndRenderTarget 物件的指標。  
   
 ```  
 ID2D1HwndRenderTarget* m_pHwndRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1hwndrendertargetstara--chwndrendertargetoperator-id2d1hwndrendertarget"></a><a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
+##  <a name="operator_id2d1hwndrendertarget_star"></a>CHwndRenderTarget::operator ID2D1HwndRenderTarget *  
  傳回 ID2D1HwndRenderTarget 介面。  
   
 ```  
@@ -185,7 +195,7 @@ operator ID2D1HwndRenderTarget*();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1HwndRenderTarget 介面的指標。  
   
-##  <a name="a-namerecreatea--chwndrendertargetrecreate"></a><a name="recreate"></a>CHwndRenderTarget::ReCreate  
+##  <a name="recreate"></a>CHwndRenderTarget::ReCreate  
  重新建立呈現目標與視窗相關聯  
   
 ```  
@@ -199,7 +209,7 @@ BOOL ReCreate(HWND hWnd);
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
   
-##  <a name="a-nameresizea--chwndrendertargetresize"></a><a name="resize"></a>CHwndRenderTarget::Resize  
+##  <a name="resize"></a>CHwndRenderTarget::Resize  
  變更為指定之像素大小的呈現目標大小  
   
 ```  

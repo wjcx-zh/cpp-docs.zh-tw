@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
+- AFXWIN/CCheckListBox
+- AFXWIN/CCheckListBox::CCheckListBox
+- AFXWIN/CCheckListBox::Create
+- AFXWIN/CCheckListBox::DrawItem
+- AFXWIN/CCheckListBox::Enable
+- AFXWIN/CCheckListBox::GetCheck
+- AFXWIN/CCheckListBox::GetCheckStyle
+- AFXWIN/CCheckListBox::IsEnabled
+- AFXWIN/CCheckListBox::MeasureItem
+- AFXWIN/CCheckListBox::OnGetCheckPosition
+- AFXWIN/CCheckListBox::SetCheck
+- AFXWIN/CCheckListBox::SetCheckStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -113,7 +125,7 @@ class CCheckListBox : public CListBox
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecchecklistboxa--cchecklistboxcchecklistbox"></a><a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
  建構 `CCheckListBox` 物件。  
   
 ```  
@@ -126,7 +138,7 @@ CCheckListBox();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog #&60;](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cchecklistboxcreate"></a><a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>CCheckListBox::Create  
  建立 Windows 檢查清單方塊，並將它附加`CCheckListBox`物件。  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP**允許這個控制項的定位停駐  
   
-##  <a name="a-namedrawitema--cchecklistboxdrawitem"></a><a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>CCheckListBox::DrawItem  
  架構變更為主控描繪的檢查清單方塊的視覺外觀時呼叫。  
   
 ```  
@@ -196,7 +208,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  如果檢查清單方塊項目不是所有具有相同的高度，檢查清單方塊樣式 (指定在**建立**) 必須是**LBS_OWNERVARIABLE**，而且您必須覆寫[MeasureItem](#measureitem)函式。  
   
-##  <a name="a-nameenablea--cchecklistboxenable"></a><a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>CCheckListBox::Enable  
  呼叫此函式可啟用或停用檢查清單方塊項目。  
   
 ```  
@@ -212,7 +224,7 @@ void Enable(
  `bEnabled`  
  指定是否啟用或停用項目。  
   
-##  <a name="a-namegetchecka--cchecklistboxgetcheck"></a><a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>CCheckListBox::GetCheck  
  擷取指定的核取方塊的狀態。  
   
 ```  
@@ -232,7 +244,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|不會檢查核取方塊。|  
 |`BST_INDETERMINATE`|核取方塊狀態尚未確定。|  
   
-##  <a name="a-namegetcheckstylea--cchecklistboxgetcheckstyle"></a><a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
  呼叫此函式可取得檢查清單方塊的樣式。  
   
 ```  
@@ -245,7 +257,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>備註  
  如需可能的樣式資訊，請參閱[SetCheckStyle](#setcheckstyle)。  
   
-##  <a name="a-nameisenableda--cchecklistboxisenabled"></a><a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
  呼叫此函式可判斷是否已啟用項目。  
   
 ```  
@@ -259,7 +271,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>傳回值  
  非零，如果已啟用此項目。否則為 0。  
   
-##  <a name="a-namemeasureitema--cchecklistboxmeasureitem"></a><a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
  建立使用非預設樣式的檢查清單方塊時，由架構呼叫。  
   
 ```  
@@ -273,7 +285,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>備註  
  根據預設，此成員函式沒有作用。 覆寫此成員函式，並填入`MEASUREITEMSTRUCT`通知 Windows 檢查清單方塊項目維度的結構。 如果檢查清單方塊以建立[LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md)樣式，架構會呼叫此成員函式的清單方塊中的每個項目。 否則，這個成員是只呼叫一次。  
   
-##  <a name="a-nameongetcheckpositiona--cchecklistboxongetcheckposition"></a><a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
  架構會呼叫此函式可取得項目中的位置和大小的核取方塊。  
   
 ```  
@@ -295,7 +307,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>備註  
  預設實作只會傳回的預設位置和大小的核取方塊 ( `rectCheckBox`)。 根據預設，核取方塊對齊左上角的項目，將標準的核取方塊的大小。 可能的情況下您所要的核取方塊，在右側，或想要放大或縮小的核取方塊。 在這些情況下，覆寫`OnGetCheckPosition`來變更項目中的大小和位置 核取方塊。  
   
-##  <a name="a-namesetchecka--cchecklistboxsetcheck"></a><a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>CCheckListBox::SetCheck  
  設定指定的核取方塊的狀態。  
   
 ```  
@@ -320,7 +332,7 @@ void SetCheck(
 |**BST_UNCHECKED**|清除指定的核取方塊。|  
 |**BST_INDETERMINATE**|指定的核取方塊狀態設定為不明確。<br /><br /> 這個狀態才可以使用這個核取方塊樣式`BS_AUTO3STATE`或`BS_3STATE`。 如需詳細資訊，請參閱[按鈕樣式](../../mfc/reference/button-styles.md)。|  
   
-##  <a name="a-namesetcheckstylea--cchecklistboxsetcheckstyle"></a><a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
  呼叫此函式可在檢查清單方塊中設定的核取方塊樣式。  
   
 ```  

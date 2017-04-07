@@ -10,6 +10,30 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPropertySheet
+- AFXDLGS/CPropertySheet
+- AFXDLGS/CPropertySheet::CPropertySheet
+- AFXDLGS/CPropertySheet::AddPage
+- AFXDLGS/CPropertySheet::Construct
+- AFXDLGS/CPropertySheet::Create
+- AFXDLGS/CPropertySheet::DoModal
+- AFXDLGS/CPropertySheet::EnableStackedTabs
+- AFXDLGS/CPropertySheet::EndDialog
+- AFXDLGS/CPropertySheet::GetActiveIndex
+- AFXDLGS/CPropertySheet::GetActivePage
+- AFXDLGS/CPropertySheet::GetPage
+- AFXDLGS/CPropertySheet::GetPageCount
+- AFXDLGS/CPropertySheet::GetPageIndex
+- AFXDLGS/CPropertySheet::GetTabControl
+- AFXDLGS/CPropertySheet::MapDialogRect
+- AFXDLGS/CPropertySheet::OnInitDialog
+- AFXDLGS/CPropertySheet::PressButton
+- AFXDLGS/CPropertySheet::RemovePage
+- AFXDLGS/CPropertySheet::SetActivePage
+- AFXDLGS/CPropertySheet::SetFinishText
+- AFXDLGS/CPropertySheet::SetTitle
+- AFXDLGS/CPropertySheet::SetWizardButtons
+- AFXDLGS/CPropertySheet::SetWizardMode
+- AFXDLGS/CPropertySheet::m_psh
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -140,7 +164,7 @@ class CPropertySheet : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdlgs.h  
   
-##  <a name="a-nameaddpagea--cpropertysheetaddpage"></a><a name="addpage"></a>Cpropertysheet:: Addpage  
+##  <a name="addpage"></a>Cpropertysheet:: Addpage  
  加入屬性工作表中的最右邊的索引標籤的 [提供] 頁面。  
   
 ```  
@@ -165,7 +189,7 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&129;](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]  
   
-##  <a name="a-nameconstructa--cpropertysheetconstruct"></a><a name="construct"></a>CPropertySheet::Construct  
+##  <a name="construct"></a>CPropertySheet::Construct  
  建構 `CPropertySheet` 物件。  
   
 ```  
@@ -233,7 +257,7 @@ void Construct(
   
  [!code-cpp[NVC_MFCDocView #&130;](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]  
   
-##  <a name="a-namecpropertysheeta--cpropertysheetcpropertysheet"></a><a name="cpropertysheet"></a>CPropertySheet::CPropertySheet  
+##  <a name="cpropertysheet"></a>CPropertySheet::CPropertySheet  
  建構 `CPropertySheet` 物件。  
   
 ```  
@@ -302,7 +326,7 @@ CPropertySheet(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&131;](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
   
-##  <a name="a-namecreatea--cpropertysheetcreate"></a><a name="create"></a>CPropertySheet::Create  
+##  <a name="create"></a>CPropertySheet::Create  
  顯示非強制回應屬性工作表。  
   
 ```  
@@ -340,7 +364,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
   
  [!code-cpp[NVC_MFCDocView #&133;](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]  
   
-##  <a name="a-namedomodala--cpropertysheetdomodal"></a><a name="domodal"></a>Cpropertysheet:: Domodal  
+##  <a name="domodal"></a>Cpropertysheet:: Domodal  
  顯示強制回應屬性工作表。  
   
 ```  
@@ -383,7 +407,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>範例  
   請參閱範例[cpropertysheet:: Addpage](#addpage)。  
   
-##  <a name="a-nameenablestackedtabsa--cpropertysheetenablestackedtabs"></a><a name="enablestackedtabs"></a>Cpropertysheet:: Enablestackedtabs  
+##  <a name="enablestackedtabs"></a>Cpropertysheet:: Enablestackedtabs  
  指出是否要在堆疊中的屬性工作表索引標籤的資料列。  
   
 ```  
@@ -402,7 +426,7 @@ void EnableStackedTabs(BOOL bStacked);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&134;](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
   
-##  <a name="a-nameenddialoga--cpropertysheetenddialog"></a><a name="enddialog"></a>CPropertySheet::EndDialog  
+##  <a name="enddialog"></a>CPropertySheet::EndDialog  
  屬性工作表就會終止。  
   
 ```  
@@ -421,7 +445,7 @@ void EndDialog(int nEndID);
 ### <a name="example"></a>範例  
   請參閱範例[CPropertySheet::PressButton](#pressbutton)。  
   
-##  <a name="a-namegetactiveindexa--cpropertysheetgetactiveindex"></a><a name="getactiveindex"></a>CPropertySheet::GetActiveIndex  
+##  <a name="getactiveindex"></a>CPropertySheet::GetActiveIndex  
  取得屬性工作表視窗的使用中頁面的索引編號，然後使用做為參數的 傳回的索引編號`GetPage`。  
   
 ```  
@@ -434,7 +458,7 @@ int GetActiveIndex() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPropertySheet::GetActivePage](#getactivepage)。  
   
-##  <a name="a-namegetactivepagea--cpropertysheetgetactivepage"></a><a name="getactivepage"></a>CPropertySheet::GetActivePage  
+##  <a name="getactivepage"></a>CPropertySheet::GetActivePage  
  擷取屬性工作表視窗的使用中的頁面。  
   
 ```  
@@ -450,7 +474,7 @@ CPropertyPage* GetActivePage() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&135;](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]  
   
-##  <a name="a-namegetpagea--cpropertysheetgetpage"></a><a name="getpage"></a>CPropertySheet::GetPage  
+##  <a name="getpage"></a>CPropertySheet::GetPage  
  傳回的指標，此屬性工作表中指定的頁面。  
   
 ```  
@@ -467,7 +491,7 @@ CPropertyPage* GetPage(int nPage) const;
 ### <a name="example"></a>範例  
   請參閱範例[CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。  
   
-##  <a name="a-namegetpagecounta--cpropertysheetgetpagecount"></a><a name="getpagecount"></a>CPropertySheet::GetPageCount  
+##  <a name="getpagecount"></a>CPropertySheet::GetPageCount  
  判斷目前在屬性工作表中的頁數。  
   
 ```  
@@ -480,7 +504,7 @@ int GetPageCount() const;
 ### <a name="example"></a>範例  
   請參閱範例[CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)。  
   
-##  <a name="a-namegetpageindexa--cpropertysheetgetpageindex"></a><a name="getpageindex"></a>CPropertySheet::GetPageIndex  
+##  <a name="getpageindex"></a>CPropertySheet::GetPageIndex  
  擷取的屬性工作表中指定的頁面索引編號。  
   
 ```  
@@ -500,7 +524,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="example"></a>範例  
   請參閱範例[CPropertySheet::GetActivePage](#getactivepage)。  
   
-##  <a name="a-namegettabcontrola--cpropertysheetgettabcontrol"></a><a name="gettabcontrol"></a>CPropertySheet::GetTabControl  
+##  <a name="gettabcontrol"></a>CPropertySheet::GetTabControl  
  擷取的指標進行索引標籤控制項的特定索引標籤控制項 (也就是使用中的 api [CTabCtrl](../../mfc/reference/ctabctrl-class.md))。  
   
 ```  
@@ -516,7 +540,7 @@ CTabCtrl* GetTabControl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&136;](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]  
   
-##  <a name="a-namempsha--cpropertysheetmpsh"></a><a name="m_psh"></a>CPropertySheet::m_psh  
+##  <a name="m_psh"></a>CPropertySheet::m_psh  
  結構，其成員儲存的特性[PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)。  
   
 ### <a name="remarks"></a>備註  
@@ -527,7 +551,7 @@ CTabCtrl* GetTabControl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&143;](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]  
   
-##  <a name="a-namemapdialogrecta--cpropertysheetmapdialogrect"></a><a name="mapdialogrect"></a>CPropertySheet::MapDialogRect  
+##  <a name="mapdialogrect"></a>CPropertySheet::MapDialogRect  
  將矩形的對話方塊單位轉換為螢幕的單位。  
   
 ```  
@@ -545,7 +569,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  `MapDialogRect`成員函式會取代對話方塊單位`lpRect`與畫面使矩形可用來建立對話方塊或調整控制項的位置 方塊內的單位 （像素）。  
   
-##  <a name="a-nameoninitdialoga--cpropertysheetoninitdialog"></a><a name="oninitdialog"></a>CPropertySheet::OnInitDialog  
+##  <a name="oninitdialog"></a>CPropertySheet::OnInitDialog  
  覆寫來增加屬性工作表的初始設定。  
   
 ```  
@@ -562,7 +586,7 @@ virtual BOOL OnInitDialog();
   
  您不需要此成員函式的訊息對應項目。  
   
-##  <a name="a-namepressbuttona--cpropertysheetpressbutton"></a><a name="pressbutton"></a>CPropertySheet::PressButton  
+##  <a name="pressbutton"></a>CPropertySheet::PressButton  
  模擬屬性工作表中指定的按鈕的選擇。  
   
 ```  
@@ -595,7 +619,7 @@ void PressButton(int nButton);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&137;](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]  
   
-##  <a name="a-nameremovepagea--cpropertysheetremovepage"></a><a name="removepage"></a>CPropertySheet::RemovePage  
+##  <a name="removepage"></a>CPropertySheet::RemovePage  
  從屬性工作表移除頁面，並終結相關聯的視窗。  
   
 ```  
@@ -613,7 +637,7 @@ void RemovePage(int nPage);
 ### <a name="remarks"></a>備註  
  [CPropertyPage](../../mfc/reference/cpropertypage-class.md)物件本身不會損毀的擁有者才`CPropertySheet` 視窗已關閉。  
   
-##  <a name="a-namesetactivepagea--cpropertysheetsetactivepage"></a><a name="setactivepage"></a>CPropertySheet::SetActivePage  
+##  <a name="setactivepage"></a>CPropertySheet::SetActivePage  
  變更使用中的頁面。  
   
 ```  
@@ -637,7 +661,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="example"></a>範例  
   請參閱範例[CPropertySheet::GetActivePage](#getactivepage)。  
   
-##  <a name="a-namesetfinishtexta--cpropertysheetsetfinishtext"></a><a name="setfinishtext"></a>CPropertySheet::SetFinishText  
+##  <a name="setfinishtext"></a>CPropertySheet::SetFinishText  
  設定完成命令按鈕的文字。  
   
 ```  
@@ -654,7 +678,7 @@ void SetFinishText(LPCTSTR lpszText);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&138;](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="a-namesettitlea--cpropertysheetsettitle"></a><a name="settitle"></a>CPropertySheet::SetTitle  
+##  <a name="settitle"></a>CPropertySheet::SetTitle  
  指定屬性工作表的標題 （框架視窗的標題列中顯示的文字）。  
   
 ```  
@@ -676,7 +700,7 @@ void SetTitle(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&139;](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]  
   
-##  <a name="a-namesetwizardbuttonsa--cpropertysheetsetwizardbuttons"></a><a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons  
+##  <a name="setwizardbuttons"></a>CPropertySheet::SetWizardButtons  
  啟用或停用精靈屬性工作表中的 [上一步]、 [下一步] 或 [完成] 按鈕。  
   
 ```  
@@ -709,7 +733,7 @@ void SetWizardButtons(DWORD dwFlags);
   
  [!code-cpp[NVC_MFCDocView #&138;](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
-##  <a name="a-namesetwizardmodea--cpropertysheetsetwizardmode"></a><a name="setwizardmode"></a>Cpropertysheet:: Domodal  
+##  <a name="setwizardmode"></a>Cpropertysheet:: Domodal  
  為精靈建立屬性頁。  
   
 ```  

@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IUMSScheduler
+- IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler
+- CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 658c0d0c9ddb9bbe51134f0a7ea0211be9c39815
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 58ca59224b5d9cdeb282562349642736a1b22c74
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 結構
@@ -52,9 +54,9 @@ struct IUMSScheduler : public IScheduler;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[Iumsscheduler:: Setcompletionlist 方法](#setcompletionlist)|指派`IUMSCompletionList`UMS 執行緒排程器的介面。|  
+|[Iumsscheduler:: Setcompletionlist](#setcompletionlist)|指派`IUMSCompletionList`UMS 執行緒排程器的介面。|  
   
 ## <a name="remarks"></a>備註  
  如果您要實作自訂的排程器進行通訊與資源管理員，而且您想要傳至您的排程器，而不是一般的 Win32 執行緒 UMS 執行緒，您應該提供的實作`IUMSScheduler`介面。 此外，您應該設定排程器原則機碼的原則值`SchedulerKind`是`UmsThreadDefault`。 如果原則指定 UMS 執行緒`IScheduler`介面做為參數傳遞[iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler)方法必須是`IUMSScheduler`介面。  
@@ -73,7 +75,7 @@ struct IUMSScheduler : public IScheduler;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namesetcompletionlista--iumsschedulersetcompletionlist-method"></a><a name="setcompletionlist"></a>Iumsscheduler:: Setcompletionlist 方法  
+##  <a name="setcompletionlist"></a>Iumsscheduler:: Setcompletionlist 方法  
  指派`IUMSCompletionList`UMS 執行緒排程器的介面。  
   
 ```
@@ -89,7 +91,7 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
- [PolicyElementKey 列舉](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [IScheduler 結構](ischeduler-structure.md)   
  [IUMSCompletionList 結構](iumscompletionlist-structure.md)   
  [IResourceManager 結構](iresourcemanager-structure.md)

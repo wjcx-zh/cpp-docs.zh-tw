@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CWinTraitsOR
-- ATL::CWinTraitsOR
 - CWinTraitsOR
+- ATLWIN/ATL::CWinTraitsOR
+- ATLWIN/ATL::CWinTraitsOR::GetWndExStyle
+- ATLWIN/ATL::CWinTraitsOR::GetWndStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CWinTraitsOR
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-namegetwndstylea--cwintraitsorgetwndstyle"></a><a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
  呼叫此函式可擷取組合 （使用邏輯 OR 運算子） 的標準樣式`CWinTraits`物件和所指定的預設樣式`t_dwStyle`。  
   
 ```
@@ -97,7 +98,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>傳回值  
  傳入的樣式的組合`dwStyle`和預設值是由`t_dwStyle`，使用邏輯 OR 運算子。  
   
-##  <a name="a-namegetwndexstylea--cwintraitsorgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
  呼叫此函式可擷取組合 （使用邏輯 OR 運算子） 的延伸樣式`CWinTraits`物件和所指定的預設樣式`t_dwStyle`。  
   
 ```

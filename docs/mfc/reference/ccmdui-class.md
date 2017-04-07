@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCmdUI
+- AFXWIN/CCmdUI
+- AFXWIN/CCmdUI::ContinueRouting
+- AFXWIN/CCmdUI::Enable
+- AFXWIN/CCmdUI::SetCheck
+- AFXWIN/CCmdUI::SetRadio
+- AFXWIN/CCmdUI::SetText
+- AFXWIN/CCmdUI::m_nID
+- AFXWIN/CCmdUI::m_nIndex
+- AFXWIN/CCmdUI::m_pMenu
+- AFXWIN/CCmdUI::m_pOther
+- AFXWIN/CCmdUI::m_pSubMenu
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -105,7 +116,7 @@ class CCmdUI
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecontinueroutinga--ccmduicontinuerouting"></a><a name="continuerouting"></a>CCmdUI::ContinueRouting  
+##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
  呼叫此成員函式，來告訴，繼續傳送目前的訊息處理常式的鏈結中向下的命令路由機制。  
   
 ```  
@@ -115,7 +126,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>備註  
  這是進階的成員函式，應該用於搭配`ON_COMMAND_EX`處理常式，傳回**FALSE**。 如需詳細資訊，請參閱[技術註 6](../../mfc/tn006-message-maps.md)。  
   
-##  <a name="a-nameenablea--ccmduienable"></a><a name="enable"></a>CCmdUI::Enable  
+##  <a name="enable"></a>CCmdUI::Enable  
  呼叫此成員函式可啟用或停用此命令的使用者介面項目。  
   
 ```  
@@ -131,21 +142,21 @@ virtual void Enable(BOOL bOn = TRUE);
   
  [!code-cpp[NVC_MFCDocView #&47;](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="a-namemnida--ccmduimnid"></a><a name="m_nid"></a>CCmdUI::m_nID  
+##  <a name="m_nid"></a>CCmdUI::m_nID  
  功能表項目、 工具列按鈕或由其他使用者介面物件的識別碼`CCmdUI`物件。  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="a-namemnindexa--ccmduimnindex"></a><a name="m_nindex"></a>CCmdUI::m_nIndex  
+##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
  功能表項目、 工具列按鈕或由其他使用者介面物件的索引`CCmdUI`物件。  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="a-namempmenua--ccmduimpmenu"></a><a name="m_pmenu"></a>CCmdUI::m_pMenu  
+##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
  指標 (的`CMenu`型別) 到由功能表`CCmdUI`物件。  
   
 ```  
@@ -155,7 +166,7 @@ CMenu* m_pMenu;
 ### <a name="remarks"></a>備註  
  **NULL**如果不是一個功能表項目。  
   
-##  <a name="a-namempsubmenua--ccmduimpsubmenu"></a><a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
+##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
  指標 (的`CMenu`類型) 來代表包含子功能表`CCmdUI`物件。  
   
 ```  
@@ -165,7 +176,7 @@ CMenu* m_pSubMenu;
 ### <a name="remarks"></a>備註  
  **NULL**如果不是一個功能表項目。 如果子功能表快顯視窗，`m_nID`包含快顯功能表中的第一個項目識別碼。 如需詳細資訊，請參閱[技術提示 21](../../mfc/tn021-command-and-message-routing.md)。  
   
-##  <a name="a-namempothera--ccmduimpother"></a><a name="m_pother"></a>CCmdUI::m_pOther  
+##  <a name="m_pother"></a>CCmdUI::m_pOther  
  指標 (類型的`CWnd`) 的視窗物件，例如工具或狀態的列，會傳送通知。  
   
 ```  
@@ -175,7 +186,7 @@ CWnd* m_pOther;
 ### <a name="remarks"></a>備註  
  **NULL**項目是否為功能表或非`CWnd`物件。  
   
-##  <a name="a-namesetchecka--ccmduisetcheck"></a><a name="setcheck"></a>CCmdUI::SetCheck  
+##  <a name="setcheck"></a>CCmdUI::SetCheck  
  呼叫此成員函式，將此命令的使用者介面項目設定為適當的核取狀態。  
   
 ```  
@@ -189,7 +200,7 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="remarks"></a>備註  
  此成員函式適用於功能表項目和工具列按鈕。 不定狀態只適用於工具列按鈕。  
   
-##  <a name="a-namesetradioa--ccmduisetradio"></a><a name="setradio"></a>CCmdUI::SetRadio  
+##  <a name="setradio"></a>CCmdUI::SetRadio  
  呼叫此成員函式，將此命令的使用者介面項目設定為適當的核取狀態。  
   
 ```  
@@ -203,7 +214,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="remarks"></a>備註  
  此成員函式的運作方式相似`SetCheck`，只不過它作做為選項群組一部分的使用者介面項目。 取消核取 在群組中的其他項目不是自動除非項目本身維護選項群組的行為。  
   
-##  <a name="a-namesettexta--ccmduisettext"></a><a name="settext"></a>CCmdUI::SetText  
+##  <a name="settext"></a>CCmdUI::SetText  
  呼叫此成員函式設定的使用者介面項目，此命令的文字。  
   
 ```  

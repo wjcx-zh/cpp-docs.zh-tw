@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSharedFile
+- AFXADV/CSharedFile
+- AFXADV/CSharedFile::CSharedFile
+- AFXADV/CSharedFile::Detach
+- AFXADV/CSharedFile::SetHandle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class CSharedFile : public CMemFile
 ## <a name="requirements"></a>需求  
  **標頭︰** afxadv.h  
   
-##  <a name="a-namecsharedfilea--csharedfilecsharedfile"></a><a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
  建構`CSharedFile`物件，並為其配置記憶體。  
   
 ```  
@@ -106,7 +110,7 @@ CSharedFile(
  `nGrowBytes`  
  以位元組為單位的記憶體配置遞增值。  
   
-##  <a name="a-namedetacha--csharedfiledetach"></a><a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>CSharedFile::Detach  
  呼叫此函式來關閉記憶體的檔案，並中斷的記憶體區塊。  
   
 ```  
@@ -119,7 +123,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>備註  
  您可以藉由呼叫重新開啟它[SetHandle](#sethandle)，使用傳回的控制代碼**卸離**。  
   
-##  <a name="a-namesethandlea--csharedfilesethandle"></a><a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>CSharedFile::SetHandle  
  呼叫此函式可附加的全域記憶體區塊`CSharedFile`物件。  
   
 ```  

@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComGITPtr<T>
 - CComGITPtr
-- ATL.CComGITPtr
-- ATL.CComGITPtr<T>
-- ATL::CComGITPtr
+- ATLBASE/ATL::CComGITPtr
+- ATLBASE/ATL::CComGITPtr::CComGITPtr
+- ATLBASE/ATL::CComGITPtr::Attach
+- ATLBASE/ATL::CComGITPtr::CopyTo
+- ATLBASE/ATL::CComGITPtr::Detach
+- ATLBASE/ATL::CComGITPtr::GetCookie
+- ATLBASE/ATL::CComGITPtr::Revoke
+- ATLBASE/ATL::CComGITPtr::m_dwCookie
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +102,7 @@ class CComGITPtr
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-nameattacha--ccomgitptrattach"></a><a name="attach"></a>CComGITPtr::Attach  
+##  <a name="attach"></a>CComGITPtr::Attach  
  呼叫這個方法，以在全域介面表 (GIT) 中註冊的介面指標。  
   
 ```
@@ -120,7 +124,7 @@ HRESULT Attach(DWORD dwCookie) throw();
 ### <a name="remarks"></a>備註  
  在偵錯組建中，GIT 不正確，或者 cookie 等於 NULL，將會發生判斷錯誤。  
   
-##  <a name="a-nameccomgitptra--ccomgitptrccomgitptr"></a><a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
+##  <a name="ccomgitptr"></a>CComGITPtr::CComGITPtr  
  建構函式。  
   
 ```
@@ -149,7 +153,7 @@ CComGITPtr(CComGITPtr&& rv);
   
  建構函式利用`rv`是移動建構函式。 將資料從來源移`rv`，然後`rv`已清除。  
   
-##  <a name="a-namedtora--ccomgitptrccomgitptr"></a><a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
+##  <a name="dtor"></a>CComGITPtr:: ~ CComGITPtr  
  解構函式。  
   
 ```
@@ -159,7 +163,7 @@ CComGITPtr(CComGITPtr&& rv);
 ### <a name="remarks"></a>備註  
  移除介面由全域介面資料表 (GIT)，使用[CComGITPtr::Revoke](#revoke)。  
   
-##  <a name="a-namecopytoa--ccomgitptrcopyto"></a><a name="copyto"></a>CComGITPtr::CopyTo  
+##  <a name="copyto"></a>CComGITPtr::CopyTo  
  呼叫這個方法，以將介面由全域介面資料表 (GIT) 複製到傳入的指標。  
   
 ```
@@ -176,7 +180,7 @@ HRESULT CopyTo(T** pp) const throw();
 ### <a name="remarks"></a>備註  
  從 GIT 介面會複製到傳入的指標。 當不再需要時，必須由呼叫端釋放指標。  
   
-##  <a name="a-namedetacha--ccomgitptrdetach"></a><a name="detach"></a>CComGITPtr::Detach  
+##  <a name="detach"></a>CComGITPtr::Detach  
  呼叫這個方法來取消關聯的介面從`CComGITPtr`物件。  
   
 ```
@@ -189,7 +193,7 @@ DWORD Detach() throw();
 ### <a name="remarks"></a>備註  
  移除介面 GIT，從呼叫端決定是否使用[CComGITPtr::Revoke](#revoke)。  
   
-##  <a name="a-namegetcookiea--ccomgitptrgetcookie"></a><a name="getcookie"></a>CComGITPtr::GetCookie  
+##  <a name="getcookie"></a>CComGITPtr::GetCookie  
  呼叫這個方法，傳回從 cookie`CComGITPtr`物件。  
   
 ```
@@ -202,7 +206,7 @@ DWORD GetCookie() const;
 ### <a name="remarks"></a>備註  
  Cookie 是用來識別介面，以及其位置的變數。  
   
-##  <a name="a-namemdwcookiea--ccomgitptrmdwcookie"></a><a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
+##  <a name="m_dwcookie"></a>CComGITPtr::m_dwCookie  
  Cookie。  
   
 ```
@@ -212,7 +216,7 @@ DWORD m_dwCookie;
 ### <a name="remarks"></a>備註  
  Cookie 是用來識別介面，以及其位置的成員變數。  
   
-##  <a name="a-nameoperatoreqa--ccomgitptroperator-"></a><a name="operator_eq"></a>CComGITPtr::operator =  
+##  <a name="operator_eq"></a>CComGITPtr::operator =  
  指派運算子。  
   
 ```
@@ -241,7 +245,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ### <a name="remarks"></a>備註  
  新值指派給`CComGITPtr`從現有的物件或從全域介面資料表參考的物件。  
   
-##  <a name="a-nameoperatordworda--ccomgitptroperator-dword"></a><a name="operator_dword"></a>CComGITPtr::operator DWORD  
+##  <a name="operator_dword"></a>CComGITPtr::operator DWORD  
  相關聯的 cookie 傳回`CComGITPtr`物件。  
   
 ```  
@@ -251,7 +255,7 @@ operator DWORD() const;
 ### <a name="remarks"></a>備註  
  Cookie 是用來識別介面，以及其位置的變數。  
   
-##  <a name="a-namerevokea--ccomgitptrrevoke"></a><a name="revoke"></a>CComGITPtr::Revoke  
+##  <a name="revoke"></a>CComGITPtr::Revoke  
  呼叫此方法以移除目前的介面由全域介面資料表 (GIT)。  
   
 ```

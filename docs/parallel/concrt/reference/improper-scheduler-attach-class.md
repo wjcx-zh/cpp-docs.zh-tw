@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::improper_scheduler_attach
+- improper_scheduler_attach
+- CONCRT/concurrency::improper_scheduler_attach
+- CONCRT/concurrency::improper_scheduler_attach::improper_scheduler_attach
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 57649ddf3662a4610561ec0e109e795985450b9d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: eb112237f7a6abe99bb5462dec171dc38be3e24d
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="improperschedulerattach-class"></a>improper_scheduler_attach 類別
@@ -52,9 +54,9 @@ class improper_scheduler_attach : public std::exception;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[improper_scheduler_attach 建構函式](#ctor)|多載。 建構 `improper_scheduler_attach` 物件。|  
+|[improper_scheduler_attach](#ctor)|多載。 建構 `improper_scheduler_attach` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -66,7 +68,7 @@ class improper_scheduler_attach : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-improperschedulerattach"></a><a name="ctor"></a>improper_scheduler_attach 
+##  <a name="ctor"></a>improper_scheduler_attach 
 
  建構 `improper_scheduler_attach` 物件。  
   

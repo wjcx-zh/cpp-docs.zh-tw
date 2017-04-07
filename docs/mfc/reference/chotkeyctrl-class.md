@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl::CHotKeyCtrl
+- AFXCMN/CHotKeyCtrl::Create
+- AFXCMN/CHotKeyCtrl::CreateEx
+- AFXCMN/CHotKeyCtrl::GetHotKey
+- AFXCMN/CHotKeyCtrl::GetHotKeyName
+- AFXCMN/CHotKeyCtrl::GetKeyName
+- AFXCMN/CHotKeyCtrl::SetHotKey
+- AFXCMN/CHotKeyCtrl::SetRules
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,14 +102,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="a-namechotkeyctrla--chotkeyctrlchotkeyctrl"></a><a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
  建構 `CHotKeyCtrl` 物件。  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="a-namecreatea--chotkeyctrlcreate"></a><a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>CHotKeyCtrl::Create  
  建立熱鍵控制項並將它附加`CHotKeyCtrl`物件。  
   
 ```  
@@ -132,7 +141,7 @@ virtual BOOL Create(
   
  如果您想要使用延伸的視窗樣式與您的控制項，呼叫[CreateEx](#createex)而不是**建立**。  
   
-##  <a name="a-namecreateexa--chotkeyctrlcreateex"></a><a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
  呼叫此函式可建立的控制項 （子視窗），並將它與關聯`CHotKeyCtrl`物件。  
   
 ```  
@@ -166,7 +175,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，指定 Windows 延伸的樣式序言**WS_EX_**。  
   
-##  <a name="a-namegethotkeya--chotkeyctrlgethotkey"></a><a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
  從熱鍵控制項擷取的虛擬索引鍵的程式碼和修飾詞旗標的鍵盤快速鍵。  
   
 ```  
@@ -199,7 +208,7 @@ void GetHotKey(
 ### <a name="remarks"></a>備註  
  虛擬按鍵碼和輔助按鍵一起定義的鍵盤快速鍵。  
   
-##  <a name="a-namegethotkeynamea--chotkeyctrlgethotkeyname"></a><a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
  呼叫此成員函式，以取得快速鍵的當地語系化的名稱。  
   
 ```  
@@ -212,7 +221,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>備註  
  此成員函式所傳回的名稱來自於鍵盤驅動程式。 您可以在當地語系化版本的 Windows 中，安裝非當地語系化的鍵盤驅動程式，反之亦然。  
   
-##  <a name="a-namegetkeynamea--chotkeyctrlgetkeyname"></a><a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
  呼叫此成員函式，以取得指派給指定的虛擬按鍵碼的索引鍵的當地語系化的名稱。  
   
 ```  
@@ -237,7 +246,7 @@ static CString GetKeyName(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog #&69;](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="a-namesethotkeya--chotkeyctrlsethotkey"></a><a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
  設定熱鍵控制項的鍵盤快速鍵。  
   
 ```  
@@ -265,7 +274,7 @@ void SetHotKey(
 ### <a name="remarks"></a>備註  
  虛擬按鍵碼和輔助按鍵一起定義的鍵盤快速鍵。  
   
-##  <a name="a-namesetrulesa--chotkeyctrlsetrules"></a><a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
  呼叫此函式可定義不正確的組合和熱鍵控制項的預設修飾詞組合。  
   
 ```  

@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::DispatchState
+- DispatchState
+- CONCRTRM/concurrency::DispatchState
+- CONCRTRM/concurrency::DispatchState::DispatchState::DispatchState
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_dispatchStateSize
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
+- CONCRTRM/concurrency::DispatchState::DispatchState::m_reserved
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 46c2219464e57da4931596e970199549405d02ec
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a617d1f1d7f68c00c7011daffc6ba59f08c43a1e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="dispatchstate-structure"></a>DispatchState 結構
@@ -54,15 +59,15 @@ struct DispatchState;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Dispatchstate:: Dispatchstate 建構函式](#ctor)|建構新`DispatchState`物件。|  
+|[Dispatchstate:: Dispatchstate](#ctor)|建構新`DispatchState`物件。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[Dispatchstate:: M_dispatchstatesize 資料成員](#m_dispatchstatesize)|此結構，用來進行版本控制的大小。|  
-|[Dispatchstate:: M_fispreviouscontextasynchronouslyblocked 資料成員](#m_fispreviouscontextasynchronouslyblocked)|會告知此內容是否已進入`Dispatch`方法因為先前的內容以非同步方式封鎖。 這只適用於 UMS 排程內容，並設定為值`0`之所有其他執行內容。|  
-|[Dispatchstate:: M_reserved 資料成員](#m_reserved)|保留供未來資訊傳遞的位元。|  
+|[Dispatchstate:: M_dispatchstatesize](#m_dispatchstatesize)|此結構，用來進行版本控制的大小。|  
+|[Dispatchstate:: M_fispreviouscontextasynchronouslyblocked](#m_fispreviouscontextasynchronouslyblocked)|會告知此內容是否已進入`Dispatch`方法因為先前的內容以非同步方式封鎖。 這只適用於 UMS 排程內容，並設定為值`0`之所有其他執行內容。|  
+|[Dispatchstate:: M_reserved](#m_reserved)|保留供未來資訊傳遞的位元。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `DispatchState`  
@@ -72,28 +77,28 @@ struct DispatchState;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora--dispatchstatedispatchstate-constructor"></a><a name="ctor"></a>Dispatchstate:: Dispatchstate 建構函式  
+##  <a name="ctor"></a>Dispatchstate:: Dispatchstate 建構函式  
  建構新`DispatchState`物件。  
   
 ```
 DispatchState();
 ```  
   
-##  <a name="a-namemdispatchstatesizea--dispatchstatemdispatchstatesize-data-member"></a><a name="m_dispatchstatesize"></a>Dispatchstate:: M_dispatchstatesize 資料成員  
+##  <a name="m_dispatchstatesize"></a>Dispatchstate:: M_dispatchstatesize 資料成員  
  此結構，用來進行版本控制的大小。  
   
 ```
 unsigned long m_dispatchStateSize;
 ```  
   
-##  <a name="a-namemfispreviouscontextasynchronouslyblockeda--dispatchstatemfispreviouscontextasynchronouslyblocked-data-member"></a><a name="m_fispreviouscontextasynchronouslyblocked"></a>Dispatchstate:: M_fispreviouscontextasynchronouslyblocked 資料成員  
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>Dispatchstate:: M_fispreviouscontextasynchronouslyblocked 資料成員  
  會告知此內容是否已進入`Dispatch`方法因為先前的內容以非同步方式封鎖。 這只適用於 UMS 排程內容，並設定為值`0`之所有其他執行內容。  
   
 ```
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```  
   
-##  <a name="a-namemreserveda--dispatchstatemreserved-data-member"></a><a name="m_reserved"></a>Dispatchstate:: M_reserved 資料成員  
+##  <a name="m_reserved"></a>Dispatchstate:: M_reserved 資料成員  
  保留供未來資訊傳遞的位元。  
   
 ```

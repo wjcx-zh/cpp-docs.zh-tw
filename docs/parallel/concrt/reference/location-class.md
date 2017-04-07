@@ -9,7 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::location
+- location
+- CONCRT/concurrency::location
+- CONCRT/concurrency::location::location
+- CONCRT/concurrency::location::current
+- CONCRT/concurrency::location::from_numa_node
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1a404f44600addcbf332fabcfc19a7b48dab0c81
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a0b64804ebfea3ad2c172c509aeffd485f4fe30a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="location-class"></a>location 類別
@@ -52,25 +56,25 @@ class location;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[位置建構函式](#ctor)|多載。 建構 `location` 物件。|  
+|[位置](#ctor)|多載。 建構 `location` 物件。|  
 |[~ location 解構函式](#dtor)|終結 `location` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[目前的方法](#current)|傳回 `location` 物件，表示呼叫執行緒執行的最特定位置。|  
-|[from_numa_node 方法](#from_numa_node)|傳回 `location` 物件，該物件代表某一特定的 NUMA 節點。|  
+|[目前](#current)|傳回 `location` 物件，表示呼叫執行緒執行的最特定位置。|  
+|[from_numa_node](#from_numa_node)|傳回 `location` 物件，該物件代表某一特定的 NUMA 節點。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[運算子 ！ = 運算子](#operator_neq)|判斷兩個 `location` 物件是否表示不同的位置。|  
-|[運算子 = 運算子](#operator_eq)|將不同 `location` 物件的內容指派給這一個。|  
-|[運算子 = = 運算子](#operator_eq_eq)|判斷兩個`location`物件代表相同的位置。|  
+|[operator!=](#operator_neq)|判斷兩個 `location` 物件是否表示不同的位置。|  
+|[operator=](#operator_eq)|將不同 `location` 物件的內容指派給這一個。|  
+|[operator==](#operator_eq_eq)|判斷兩個`location`物件代表相同的位置。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `location`  
@@ -80,7 +84,7 @@ class location;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namedtora-location"></a><a name="dtor"></a>~ 位置 
+##  <a name="dtor"></a>~ 位置 
 
  終結 `location` 物件。  
   
@@ -88,7 +92,7 @@ class location;
 ~location();
 ```  
   
-##  <a name="a-namecurrenta-current"></a><a name="current"></a>目前 
+##  <a name="current"></a>目前 
 
  傳回 `location` 物件，表示呼叫執行緒執行的最特定位置。  
   
@@ -99,7 +103,7 @@ static location __cdecl current();
 ### <a name="return-value"></a>傳回值  
  表示呼叫執行緒執行的最特定位置。  
   
-##  <a name="a-namefromnumanodea-fromnumanode"></a><a name="from_numa_node"></a>from_numa_node 
+##  <a name="from_numa_node"></a>from_numa_node 
 
  傳回 `location` 物件，該物件代表某一特定的 NUMA 節點。  
   
@@ -114,7 +118,7 @@ static location __cdecl from_numa_node(unsigned short _NumaNodeNumber);
 ### <a name="return-value"></a>傳回值  
  代表 NUMA 節點的位置，由 `_NumaNodeNumber` 參數所指定。  
   
-##  <a name="a-namectora-location"></a><a name="ctor"></a>位置 
+##  <a name="ctor"></a>位置 
 
  建構 `location` 物件。  
   
@@ -141,7 +145,7 @@ location(
 ### <a name="remarks"></a>備註  
  預設建構的位置表示整個系統。  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>運算子 ！ = 
+##  <a name="operator_neq"></a>運算子 ！ = 
 
  判斷兩個 `location` 物件是否表示不同的位置。  
   
@@ -155,7 +159,7 @@ bool operator!= (const location& _Rhs) const;
 ### <a name="return-value"></a>傳回值  
  如果這兩個位置不同則為 `true`，否則為 `false`。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a>運算子 = 
 
  將不同 `location` 物件的內容指派給這一個。  
   
@@ -169,7 +173,7 @@ location& operator= (const location& _Rhs);
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>運算子 = = 
+##  <a name="operator_eq_eq"></a>運算子 = = 
 
  判斷兩個`location`物件代表相同的位置。  
   

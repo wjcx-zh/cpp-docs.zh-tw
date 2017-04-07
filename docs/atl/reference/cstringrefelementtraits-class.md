@@ -10,8 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringRefElementTraits
-- ATL.CStringRefElementTraits
-- ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElements
+- ATLCOLL/ATL::CStringRefElementTraits::CompareElementsOrdered
+- ATLCOLL/ATL::CStringRefElementTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -78,7 +80,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-namecompareelementsa--cstringrefelementtraitscompareelements"></a><a name="compareelements"></a>CStringRefElementTraits::CompareElements  
+##  <a name="compareelements"></a>CStringRefElementTraits::CompareElements  
  呼叫此靜態函式來比較兩個字串項目相等。  
   
 ```
@@ -95,7 +97,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ### <a name="return-value"></a>傳回值  
  如果項目相等，false 否則，就會傳回 true。  
   
-##  <a name="a-namecompareelementsordereda--cstringrefelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
  呼叫此靜態函式來比較兩個字串的項目。  
   
 ```
@@ -112,7 +114,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="return-value"></a>傳回值  
  如果字串完全相同，零< 0="" if="">`str1`是小於`str2`，或 > 0 如果`str1`大於`str2`。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用來執行比較。  
   
-##  <a name="a-namehasha--cstringrefelementtraitshash"></a><a name="hash"></a>CStringRefElementTraits::Hash  
+##  <a name="hash"></a>CStringRefElementTraits::Hash  
  呼叫此靜態函式來計算雜湊值的指定的字串的項目。  
   
 ```

@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyPage
+- AFXPROPERTYPAGE/CMFCPropertyPage
+- AFXPROPERTYPAGE/CMFCPropertyPage::CMFCPropertyPage
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +92,7 @@ class CMFCPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>需求  
  **標頭︰** afxpropertypage.h  
   
-##  <a name="a-namecmfcpropertypagea--cmfcpropertypagecmfcpropertypage"></a><a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage  
+##  <a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage  
  建構 `CMFCPropertyPage` 物件。  
   
 ```  

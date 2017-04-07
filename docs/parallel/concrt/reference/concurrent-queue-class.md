@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrent_queue/concurrency::concurrent_queue
-- concurrent_queue/Concurrency::concurrent_queue
+- concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::concurrent_queue
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::clear
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::empty
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::get_allocator
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::push
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::try_pop
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_begin
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_end
+- CONCURRENT_QUEUE/concurrency::concurrent_queue::unsafe_size
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +44,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aac7b15db82fbd2ceb801f45ff1b70c293014080
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: d2af8483f38a14454e3aa1aecf28864bab1c6a1a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 類別
@@ -61,7 +70,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`allocator_type`|代表並行佇列之配置器類別的類型。|  
 |`const_iterator`|表示非執行緒安全的型別`const`迭代器並行佇列中的項目。|  
@@ -74,23 +83,23 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[concurrent_queue 建構函式](#ctor)|多載。 建構並行佇列。|  
+|[concurrent_queue](#ctor)|多載。 建構並行佇列。|  
 |[~ concurrent_queue 解構函式](#dtor)|終結並行佇列。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[clear 方法](#clear)|清除並行佇列，終結任何目前項目加入佇列。 這個方法不是並行安全。|  
-|[empty 方法](#empty)|測試如果並行佇列是空的此時會呼叫這個方法。 這個方法是並行安全。|  
-|[get_allocator 方法](#get_allocator)|傳回一份用來建構並行佇列之配置器。 這個方法是並行安全。|  
-|[push 方法](#push)|多載。 將位於尾端的項目，並行佇列的佇列。 這個方法是並行安全。|  
-|[try_pop 方法](#try_pop)|如果有的話，請清除佇列中的項目。 這個方法是並行安全。|  
-|[unsafe_begin 方法](#unsafe_begin)|多載。 傳回迭代器類型的`iterator`或`const_iterator`並行佇列的開頭。 這個方法不是並行安全。|  
-|[unsafe_end 方法](#unsafe_end)|多載。 傳回迭代器類型的`iterator`或`const_iterator`並行佇列的結尾。 這個方法不是並行安全。|  
-|[unsafe_size 方法](#unsafe_size)|傳回佇列中的項目數目。 這個方法不是並行安全。|  
+|[clear](#clear)|清除並行佇列，終結任何目前項目加入佇列。 這個方法不是並行安全。|  
+|[empty](#empty)|測試如果並行佇列是空的此時會呼叫這個方法。 這個方法是並行安全。|  
+|[get_allocator](#get_allocator)|傳回一份用來建構並行佇列之配置器。 這個方法是並行安全。|  
+|[push](#push)|多載。 將位於尾端的項目，並行佇列的佇列。 這個方法是並行安全。|  
+|[try_pop](#try_pop)|如果有的話，請清除佇列中的項目。 這個方法是並行安全。|  
+|[unsafe_begin](#unsafe_begin)|多載。 傳回迭代器類型的`iterator`或`const_iterator`並行佇列的開頭。 這個方法不是並行安全。|  
+|[unsafe_end](#unsafe_end)|多載。 傳回迭代器類型的`iterator`或`const_iterator`並行佇列的結尾。 這個方法不是並行安全。|  
+|[unsafe_size](#unsafe_size)|傳回佇列中的項目數目。 這個方法不是並行安全。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。  
@@ -103,7 +112,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
  **命名空間：** concurrency  
   
-##  <a name="a-namecleara-clear"></a><a name="clear"></a>清除 
+##  <a name="clear"></a>清除 
 
  清除並行佇列，終結任何目前項目加入佇列。 這個方法不是並行安全。  
   
@@ -111,7 +120,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```  
   
-##  <a name="a-namectora-concurrentqueue"></a><a name="ctor"></a>concurrent_queue 
+##  <a name="ctor"></a>concurrent_queue 
 
  建構並行佇列。  
   
@@ -159,7 +168,7 @@ concurrent_queue(_InputIterator _Begin,
   
  第四個建構函式會指定迭代器範圍所提供的值 [ `_Begin`， `_End`)。  
   
-##  <a name="a-namedtora-concurrentqueue"></a><a name="dtor"></a>~ concurrent_queue 
+##  <a name="dtor"></a>~ concurrent_queue 
 
  終結並行佇列。  
   
@@ -167,7 +176,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```  
   
-##  <a name="a-nameemptya-empty"></a><a name="empty"></a>空白 
+##  <a name="empty"></a>空白 
 
  測試如果並行佇列是空的此時會呼叫這個方法。 這個方法是並行安全。  
   
@@ -181,7 +190,7 @@ bool empty() const;
 ### <a name="remarks"></a>備註  
  這個方法時並行安全方面方法的呼叫`push`， `try_pop`，和`empty`，它會檢查由呼叫執行緒的時間，傳回的值可能會不正確。  
   
-##  <a name="a-namegetallocatora-getallocator"></a><a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a>get_allocator 
 
  傳回一份用來建構並行佇列之配置器。 這個方法是並行安全。  
   
@@ -192,7 +201,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>傳回值  
  用來建構並行佇列之配置器的複本。  
   
-##  <a name="a-namepusha-push"></a><a name="push"></a>推播 
+##  <a name="push"></a>推播 
 
  將位於尾端的項目，並行佇列的佇列。 這個方法是並行安全。  
   
@@ -209,7 +218,7 @@ void push(T&& _Src);
 ### <a name="remarks"></a>備註  
  `push`是並行安全方面方法的呼叫`push`， `try_pop`，和`empty`。  
   
-##  <a name="a-nametrypopa-trypop"></a><a name="try_pop"></a>try_pop 
+##  <a name="try_pop"></a>try_pop 
 
  如果有的話，請清除佇列中的項目。 這個方法是並行安全。  
   
@@ -229,7 +238,7 @@ bool try_pop(T& _Dest);
   
  `try_pop`是並行安全方面方法的呼叫`push`， `try_pop`，和`empty`。  
   
-##  <a name="a-nameunsafebegina-unsafebegin"></a><a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a>unsafe_begin 
 
  傳回迭代器類型的`iterator`或`const_iterator`並行佇列的開頭。 這個方法不是並行安全。  
   
@@ -245,7 +254,7 @@ const_iterator unsafe_begin() const;
 ### <a name="remarks"></a>備註  
  迭代器的`concurrent_queue`類別主要是供偵錯，執行速度很慢，以及反覆項目不是並行安全相對於其他佇列作業。  
   
-##  <a name="a-nameunsafeenda-unsafeend"></a><a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a>unsafe_end 
 
  傳回迭代器類型的`iterator`或`const_iterator`並行佇列的結尾。 這個方法不是並行安全。  
   
@@ -261,7 +270,7 @@ const_iterator unsafe_end() const;
 ### <a name="remarks"></a>備註  
  迭代器的`concurrent_queue`類別主要是供偵錯，執行速度很慢，以及反覆項目不是並行安全相對於其他佇列作業。  
   
-##  <a name="a-nameunsafesizea-unsafesize"></a><a name="unsafe_size"></a>unsafe_size 
+##  <a name="unsafe_size"></a>unsafe_size 
 
  傳回佇列中的項目數目。 這個方法不是並行安全。  
   

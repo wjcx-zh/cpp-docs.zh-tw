@@ -10,6 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
+- AFXOLE/COleDropTarget
+- AFXOLE/COleDropTarget::COleDropTarget
+- AFXOLE/COleDropTarget::OnDragEnter
+- AFXOLE/COleDropTarget::OnDragLeave
+- AFXOLE/COleDropTarget::OnDragOver
+- AFXOLE/COleDropTarget::OnDragScroll
+- AFXOLE/COleDropTarget::OnDrop
+- AFXOLE/COleDropTarget::OnDropEx
+- AFXOLE/COleDropTarget::Register
+- AFXOLE/COleDropTarget::Revoke
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +99,7 @@ class COleDropTarget : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-namecoledroptargeta--coledroptargetcoledroptarget"></a><a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
  建構類別的物件`COleDropTarget`。  
   
 ```  
@@ -99,7 +109,7 @@ COleDropTarget();
 ### <a name="remarks"></a>備註  
  呼叫[註冊](#register)此物件關聯的視窗。  
   
-##  <a name="a-nameondragentera--coledroptargetondragenter"></a><a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
  當資料指標第一次拖曳到視窗時，由架構呼叫。  
   
 ```  
@@ -141,7 +151,7 @@ virtual DROPEFFECT OnDragEnter(
   
  如需詳細資訊，請參閱[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameondragleavea--coledroptargetondragleave"></a><a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
  由架構呼叫時，游標離開視窗拖曳作業時生效。  
   
 ```  
@@ -157,7 +167,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  如需詳細資訊，請參閱[IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameondragovera--coledroptargetondragover"></a><a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
  將游標拖曳到視窗時，由架構呼叫。  
   
 ```  
@@ -202,7 +212,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&21;](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="a-nameondragscrolla--coledroptargetondragscroll"></a><a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
  然後再呼叫架構呼叫[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)來判斷是否`point`捲動區域中。  
   
 ```  
@@ -238,7 +248,7 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="remarks"></a>備註  
  當您想要針對此事件提供特殊行為時，覆寫這個函式。 此函式的預設實作會呼叫[CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)，它會傳回`DROPEFFECT_NONE`和捲動資料指標拖曳至視窗的框線的預設捲動區域時的視窗。  
   
-##  <a name="a-nameondropa--coledroptargetondrop"></a><a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>COleDropTarget::OnDrop  
  卸除作業發生時，由架構呼叫。  
   
 ```  
@@ -278,7 +288,7 @@ virtual BOOL OnDrop(
   
  如需詳細資訊，請參閱[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameondropexa--coledroptargetondropex"></a><a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
  卸除作業發生時，由架構呼叫。  
   
 ```  
@@ -328,7 +338,7 @@ virtual DROPEFFECT OnDropEx(
   
  如需詳細資訊，請參閱[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameregistera--coledroptargetregister"></a><a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>COleDropTarget::Register  
  呼叫此函式可註冊您的視窗與 OLE Dll 做為有效的置放目標。  
   
 ```  
@@ -347,7 +357,7 @@ BOOL Register(CWnd* pWnd);
   
  如需詳細資訊，請參閱[RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namerevokea--coledroptargetrevoke"></a><a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>COleDropTarget::Revoke  
  呼叫此函式，然後再終結登錄為置放目標，透過呼叫的任何視窗[註冊](#register)若要移除的置放目標清單。  
   
 ```  

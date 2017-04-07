@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEditView
+- AFXEXT/CEditView
+- AFXEXT/CEditView::CEditView
+- AFXEXT/CEditView::FindText
+- AFXEXT/CEditView::GetBufferLength
+- AFXEXT/CEditView::GetEditCtrl
+- AFXEXT/CEditView::GetPrinterFont
+- AFXEXT/CEditView::GetSelectedText
+- AFXEXT/CEditView::LockBuffer
+- AFXEXT/CEditView::PrintInsideRect
+- AFXEXT/CEditView::SerializeRaw
+- AFXEXT/CEditView::SetPrinterFont
+- AFXEXT/CEditView::SetTabStops
+- AFXEXT/CEditView::UnlockBuffer
+- AFXEXT/CEditView::OnFindNext
+- AFXEXT/CEditView::OnReplaceAll
+- AFXEXT/CEditView::OnReplaceSel
+- AFXEXT/CEditView::OnTextNotFound
+- AFXEXT/CEditView::dwStyleDefault
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -138,7 +156,7 @@ class CEditView : public CCtrlView
 ## <a name="requirements"></a>需求  
  **標頭︰** afxext.h  
   
-##  <a name="a-nameceditviewa--ceditviewceditview"></a><a name="ceditview"></a>CEditView::CEditView  
+##  <a name="ceditview"></a>CEditView::CEditView  
  建構類型 `CEditView` 的物件。  
   
 ```  
@@ -148,7 +166,7 @@ CEditView();
 ### <a name="remarks"></a>備註  
  之後建構物件，您必須呼叫[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)函式使用編輯控制項之前。 如果衍生自`CEditView`並將它加入至範本使用`CWinApp::AddDocTemplate`，架構會呼叫這兩個建構函式和**建立**函式。  
   
-##  <a name="a-namedwstyledefaulta--ceditviewdwstyledefault"></a><a name="dwstyledefault"></a>CEditView::dwStyleDefault  
+##  <a name="dwstyledefault"></a>CEditView::dwStyleDefault  
  包含的預設樣式`CEditView`物件。  
   
 ```  
@@ -158,7 +176,7 @@ static const DWORD dwStyleDefault;
 ### <a name="remarks"></a>備註  
  傳遞做為這個靜態成員`dwStyle`參數**建立**函式可取得的預設樣式`CEditView`物件。  
   
-##  <a name="a-namefindtexta--ceditviewfindtext"></a><a name="findtext"></a>CEditView::FindText  
+##  <a name="findtext"></a>CEditView::FindText  
  呼叫`FindText`函式來搜尋`CEditView`物件的文字緩衝區。  
   
 ```  
@@ -186,7 +204,7 @@ BOOL FindText(
   
  您通常不需要呼叫`FindText`函式，除非您覆寫`OnFindNext`，而它會呼叫`FindText`。  
   
-##  <a name="a-namegetbufferlengtha--ceditviewgetbufferlength"></a><a name="getbufferlength"></a>CEditView::GetBufferLength  
+##  <a name="getbufferlength"></a>CEditView::GetBufferLength  
  呼叫此成員函式，以取得目前在編輯控制項的緩衝區，不包括 null 結束字元的字元數。  
   
 ```  
@@ -196,7 +214,7 @@ UINT GetBufferLength() const;
 ### <a name="return-value"></a>傳回值  
  緩衝區中字串的長度。  
   
-##  <a name="a-namegeteditctrla--ceditviewgeteditctrl"></a><a name="geteditctrl"></a>CEditView::GetEditCtrl  
+##  <a name="geteditctrl"></a>CEditView::GetEditCtrl  
  呼叫`GetEditCtrl`以取得使用 [編輯] 檢視的編輯控制項的參考。  
   
 ```  
@@ -215,7 +233,7 @@ CEdit& GetEditCtrl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&66;](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
-##  <a name="a-namegetprinterfonta--ceditviewgetprinterfont"></a><a name="getprinterfont"></a>CEditView::GetPrinterFont  
+##  <a name="getprinterfont"></a>CEditView::GetPrinterFont  
  呼叫`GetPrinterFont`取得的指標[CFont](../../mfc/reference/cfont-class.md)物件，描述目前印表機字型。  
   
 ```  
@@ -230,7 +248,7 @@ CFont* GetPrinterFont() const;
   
  使用此函數來判斷目前的印表機字型。 如果不想要的印表機字型，請使用[CEditView::SetPrinterFont](#setprinterfont)加以變更。  
   
-##  <a name="a-namegetselectedtexta--ceditviewgetselectedtext"></a><a name="getselectedtext"></a>CEditView::GetSelectedText  
+##  <a name="getselectedtext"></a>CEditView::GetSelectedText  
  呼叫`GetSelectedText`複製到選取的文字`CString`物件，最多的選取範圍或選取範圍中之前的第一個歸位字元的字元結尾。  
   
 ```  
@@ -241,7 +259,7 @@ void GetSelectedText(CString& strResult) const;
  `strResult`  
  參考`CString`會收到所選的文字的物件。  
   
-##  <a name="a-namelockbuffera--ceditviewlockbuffer"></a><a name="lockbuffer"></a>CEditView::LockBuffer  
+##  <a name="lockbuffer"></a>CEditView::LockBuffer  
  呼叫此成員函式，以取得緩衝區的指標。 不應該修改緩衝區。  
   
 ```  
@@ -251,7 +269,7 @@ LPCTSTR LockBuffer() const;
 ### <a name="return-value"></a>傳回值  
  編輯控制項的緩衝區的指標。  
   
-##  <a name="a-nameonfindnexta--ceditviewonfindnext"></a><a name="onfindnext"></a>CEditView::OnFindNext  
+##  <a name="onfindnext"></a>CEditView::OnFindNext  
  搜尋文字中所指定的文字的緩衝區`lpszFind`，在所指定的方向`bNext`，與所指定的區分大小寫`bCase`。  
   
 ```  
@@ -276,7 +294,7 @@ virtual void OnFindNext(
   
  覆寫`OnFindNext`變更的方式`CEditView`-衍生的物件搜尋的文字。 `CEditView`呼叫`OnFindNext`當使用者在標準的 [尋找] 對話方塊中選擇 [找下一個] 按鈕。  
   
-##  <a name="a-nameonreplacealla--ceditviewonreplaceall"></a><a name="onreplaceall"></a>CEditView::OnReplaceAll  
+##  <a name="onreplaceall"></a>CEditView::OnReplaceAll  
  `CEditView`呼叫`OnReplaceAll`當使用者在標準的 [取代] 對話方塊中選取 [全部取代] 按鈕。  
   
 ```  
@@ -303,7 +321,7 @@ virtual void OnReplaceAll(
   
  覆寫`OnReplaceAll`變更的方式`CEditView`-衍生的物件取代文字。  
   
-##  <a name="a-nameonreplacesela--ceditviewonreplacesel"></a><a name="onreplacesel"></a>CEditView::OnReplaceSel  
+##  <a name="onreplacesel"></a>CEditView::OnReplaceSel  
  `CEditView`呼叫`OnReplaceSel`當使用者在標準的 [取代] 對話方塊中選取 [取代] 按鈕。  
   
 ```  
@@ -332,7 +350,7 @@ virtual void OnReplaceSel(
   
  覆寫`OnReplaceSel`變更的方式`CEditView`-衍生的物件取代選取的文字。  
   
-##  <a name="a-nameontextnotfounda--ceditviewontextnotfound"></a><a name="ontextnotfound"></a>CEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>CEditView::OnTextNotFound  
  若要變更預設實作中，Windows 函式會呼叫此函式會覆寫**MessageBeep**。  
   
 ```  
@@ -343,7 +361,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  `lpszFind`  
  要找的文字。  
   
-##  <a name="a-nameprintinsiderecta--ceditviewprintinsiderect"></a><a name="printinsiderect"></a>CEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>CEditView::PrintInsideRect  
  呼叫`PrintInsideRect`列印文字中所指定的矩形*rectLayout*。  
   
 ```  
@@ -375,7 +393,7 @@ UINT PrintInsideRect(
   
  **Rect.bottom**元素*rectLayout*物件遭到變更，讓矩形的維度定義的原始矩形佔用文字的一部分。  
   
-##  <a name="a-nameserializerawa--ceditviewserializeraw"></a><a name="serializeraw"></a>CEditView::SerializeRaw  
+##  <a name="serializeraw"></a>CEditView::SerializeRaw  
  呼叫`SerializeRaw`有`CArchive`物件讀取或寫入的文字`CEditView`文字檔的物件。  
   
 ```  
@@ -389,7 +407,7 @@ void SerializeRaw(CArchive& ar);
 ### <a name="remarks"></a>備註  
  `SerializeRaw`不同於`CEditView`的內部實作`Serialize`，因為它會讀取並寫入的文字，而不需要上述物件描述資料。  
   
-##  <a name="a-namesetprinterfonta--ceditviewsetprinterfont"></a><a name="setprinterfont"></a>CEditView::SetPrinterFont  
+##  <a name="setprinterfont"></a>CEditView::SetPrinterFont  
  呼叫`SetPrinterFont`設為所指定之字型的印表機字型`pFont`。  
   
 ```  
@@ -403,7 +421,7 @@ void SetPrinterFont(CFont* pFont);
 ### <a name="remarks"></a>備註  
  如果您要永遠使用特定字型列印的檢視，包括呼叫`SetPrinterFont`在您的類別`OnPreparePrinting`函式。 此虛擬函式稱為在列印之前，讓字型變更之前，要檢視的內容會列印。  
   
-##  <a name="a-namesettabstopsa--ceditviewsettabstops"></a><a name="settabstops"></a>CEditView::SetTabStops  
+##  <a name="settabstops"></a>CEditView::SetTabStops  
  呼叫此函式可設定定位停駐點的顯示和列印使用。  
   
 ```  
@@ -424,7 +442,7 @@ void SetTabStops(int nTabStops);
   
  [!code-cpp[NVC_MFCDocView #&67;](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
   
-##  <a name="a-nameunlockbuffera--ceditviewunlockbuffer"></a><a name="unlockbuffer"></a>CEditView::UnlockBuffer  
+##  <a name="unlockbuffer"></a>CEditView::UnlockBuffer  
  呼叫此成員函式可解除鎖定緩衝區。  
   
 ```  

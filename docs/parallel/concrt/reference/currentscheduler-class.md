@@ -9,7 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::CurrentScheduler
+- CurrentScheduler
+- CONCRT/concurrency::CurrentScheduler
+- CONCRT/concurrency::CurrentScheduler::Create
+- CONCRT/concurrency::CurrentScheduler::CreateScheduleGroup
+- CONCRT/concurrency::CurrentScheduler::Detach
+- CONCRT/concurrency::CurrentScheduler::Get
+- CONCRT/concurrency::CurrentScheduler::GetNumberOfVirtualProcessors
+- CONCRT/concurrency::CurrentScheduler::GetPolicy
+- CONCRT/concurrency::CurrentScheduler::Id
+- CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
+- CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
+- CONCRT/concurrency::CurrentScheduler::ScheduleTask
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +45,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 514f0abb6e317a7b133203a2f089d492a46ae4c4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 9536dd28eeb375f3b9e018539cefb338812e340b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 類別
@@ -54,16 +65,16 @@ class CurrentScheduler;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[Create 方法](#create)|建立新的排程器所描述的行為`_Policy`參數並將它附加至呼叫的內容。 新建立的排程器會呼叫內容的目前排程器。|  
-|[CreateScheduleGroup 方法](#createschedulegroup)|多載。 建立新的排程群組內呼叫的內容相關聯的排程器。 接受參數的版本`_Placement`會變成優先執行在該參數所指定的位置建立新的排程群組中的工作。|  
-|[Detach 方法](#detach)|卸離目前的排程器，從呼叫的內容，並還原先前附加的排程器視為目前排程器，如果有的話。 這個方法傳回之後，呼叫的內容則由先前已附加至內容使用的排程器`CurrentScheduler::Create`或`Scheduler::Attach`方法。|  
-|[Get 方法](#get)|傳回呼叫的內容，也稱為目前排程器相關聯的排程器的指標。|  
-|[GetNumberOfVirtualProcessors 方法](#getnumberofvirtualprocessors)|傳回呼叫的內容相關聯的排程器目前的虛擬處理器數目。|  
-|[GetPolicy 方法](#getpolicy)|傳回一份目前排程器所建立的原則。|  
-|[Id 方法](#id)|傳回目前的排程器的唯一識別碼。|  
-|[IsAvailableLocation 方法](#isavailablelocation)|判斷某一特定位置是否可在目前的排程器中使用。|  
-|[RegisterShutdownEvent 方法](#registershutdownevent)|Windows 事件的控制代碼傳的原因`_ShutdownEvent`收到信號時，與目前內容相關聯的排程器關閉並終結本身的參數。 此事件收到信號時，所有之前排程器已排定的工作已完成。 透過這個方法可以註冊多個關機事件。|  
-|[ScheduleTask 方法](#scheduletask)|多載。 排程與呼叫的內容相關聯的排程器中的輕量工作。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。|  
+|[建立](#create)|建立新的排程器所描述的行為`_Policy`參數並將它附加至呼叫的內容。 新建立的排程器會呼叫內容的目前排程器。|  
+|[CreateScheduleGroup](#createschedulegroup)|多載。 建立新的排程群組內呼叫的內容相關聯的排程器。 接受參數的版本`_Placement`會變成優先執行在該參數所指定的位置建立新的排程群組中的工作。|  
+|[Detach](#detach)|卸離目前的排程器，從呼叫的內容，並還原先前附加的排程器視為目前排程器，如果有的話。 這個方法傳回之後，呼叫的內容則由先前已附加至內容使用的排程器`CurrentScheduler::Create`或`Scheduler::Attach`方法。|  
+|[取得](#get)|傳回呼叫的內容，也稱為目前排程器相關聯的排程器的指標。|  
+|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|傳回呼叫的內容相關聯的排程器目前的虛擬處理器數目。|  
+|[GetPolicy](#getpolicy)|傳回一份目前排程器所建立的原則。|  
+|[識別碼](#id)|傳回目前的排程器的唯一識別碼。|  
+|[IsAvailableLocation](#isavailablelocation)|判斷某一特定位置是否可在目前的排程器中使用。|  
+|[RegisterShutdownEvent](#registershutdownevent)|Windows 事件的控制代碼傳的原因`_ShutdownEvent`收到信號時，與目前內容相關聯的排程器關閉並終結本身的參數。 此事件收到信號時，所有之前排程器已排定的工作已完成。 透過這個方法可以註冊多個關機事件。|  
+|[ScheduleTask](#scheduletask)|多載。 排程與呼叫的內容相關聯的排程器中的輕量工作。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。|  
   
 ## <a name="remarks"></a>備註  
  如果沒有任何排程器 (請參閱[排程器](scheduler-class.md)) 呼叫內容中的許多方法相關聯`CurrentScheduler`類別將會導致處理序的預設排程器的附件。 這也可能表示將處理序的預設排程器會建立這類呼叫期間。  
@@ -76,7 +87,7 @@ class CurrentScheduler;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namecreatea-create"></a><a name="create"></a>建立 
+##  <a name="create"></a>建立 
 
  建立新的排程器所描述的行為`_Policy`參數並將它附加至呼叫的內容。 新建立的排程器會呼叫內容的目前排程器。  
   
@@ -97,7 +108,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
   
  這個方法可以擲回例外狀況，包括各種[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)和[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)。  
   
-##  <a name="a-namecreateschedulegroupa-createschedulegroup"></a><a name="createschedulegroup"></a>CreateScheduleGroup 
+##  <a name="createschedulegroup"></a>CreateScheduleGroup 
 
  建立新的排程群組內呼叫的內容相關聯的排程器。 接受參數的版本`_Placement`會變成優先執行在該參數所指定的位置建立新的排程群組中的工作。  
   
@@ -119,9 +130,9 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  您必須叫用[版本](schedulegroup-class.md#release)方法，當您在排程工作的排程群組上。 排程器將會損毀排程群組時，所有的工作排入佇列，已完成。  
   
- 請注意，是否您明確建立此排程器，您必須釋放排程群組，然後再發行排程器，將參考從其目前的內容，中斷連結的所有參考。  
+ 請注意，是否您明確建立此排程器，您必須釋放排程群組，然後再從其目前的內容，中斷連結發行排程器，將參考的所有參考。  
   
-##  <a name="a-namedetacha-detach"></a><a name="detach"></a>卸離 
+##  <a name="detach"></a>卸離 
 
  卸離目前的排程器，從呼叫的內容，並還原先前附加的排程器視為目前排程器，如果有的話。 這個方法傳回之後，呼叫的內容則由先前已附加至內容使用的排程器`CurrentScheduler::Create`或`Scheduler::Attach`方法。  
   
@@ -136,7 +147,7 @@ static void __cdecl Detach();
   
  呼叫這個方法從內容都內部，並由排程器或使用一種方法不是附加的內容管理[scheduler:: attach](scheduler-class.md#attach)或[currentscheduler:: Create](#create)方法，將會導致[improper_scheduler_detach](improper-scheduler-detach-class.md)擲回例外狀況。  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>取得 
+##  <a name="get"></a>取得 
 
  傳回呼叫的內容，也稱為目前排程器相關聯的排程器的指標。  
   
@@ -150,7 +161,7 @@ static Scheduler* __cdecl Get();
 ### <a name="remarks"></a>備註  
  如果呼叫的內容目前沒有任何相關聯的排程器，則這個方法會將處理序的預設排程器建立及/或附加至呼叫的內容。 沒有其他的參考會放在`Scheduler`這個方法所傳回的物件。  
   
-##  <a name="a-namegetnumberofvirtualprocessorsa-getnumberofvirtualprocessors"></a><a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
+##  <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors 
 
  傳回呼叫的內容相關聯的排程器目前的虛擬處理器數目。  
   
@@ -166,7 +177,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
   
  這個方法的傳回值是排程器呼叫的內容相關聯的虛擬處理器數目的瞬間取樣。 這個值傳回時可能已過時。  
   
-##  <a name="a-namegetpolicya-getpolicy"></a><a name="getpolicy"></a>GetPolicy 
+##  <a name="getpolicy"></a>GetPolicy 
 
  傳回一份目前排程器所建立的原則。  
   
@@ -180,7 +191,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 ### <a name="remarks"></a>備註  
  如果呼叫的內容目前沒有任何相關聯的排程器，則這個方法會將處理序的預設排程器建立及/或附加至呼叫的內容。  
   
-##  <a name="a-nameida-id"></a><a name="id"></a>識別碼 
+##  <a name="id"></a>識別碼 
 
  傳回目前的排程器的唯一識別碼。  
   
@@ -194,7 +205,7 @@ static unsigned int __cdecl Id();
 ### <a name="remarks"></a>備註  
  這個方法不會導致排程器附件如果呼叫的內容尚未排程器相關聯。  
   
-##  <a name="a-nameisavailablelocationa-isavailablelocation"></a><a name="isavailablelocation"></a>IsAvailableLocation 
+##  <a name="isavailablelocation"></a>IsAvailableLocation 
 
  判斷某一特定位置是否可在目前的排程器中使用。  
   
@@ -214,7 +225,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
   
  請注意，傳回值是某一特定位置是否可用的瞬間取樣。 若有多個排程器，動態資源管理可以隨時在排程器中加入或移除資源。 如果發生這種情況，這個特定位置的可用性可能會改變。  
   
-##  <a name="a-nameregistershutdowneventa-registershutdownevent"></a><a name="registershutdownevent"></a>RegisterShutdownEvent 
+##  <a name="registershutdownevent"></a>RegisterShutdownEvent 
 
  Windows 事件的控制代碼傳的原因`_ShutdownEvent`收到信號時，與目前內容相關聯的排程器關閉並終結本身的參數。 此事件收到信號時，所有之前排程器已排定的工作已完成。 透過這個方法可以註冊多個關機事件。  
   
@@ -224,12 +235,12 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
   
 ### <a name="parameters"></a>參數  
  `_ShutdownEvent`  
- Windows 事件物件，它會在目前內容相關聯的排程器關閉並終結本身時通知執行階段控制代碼。  
+ 當目前的內容相關聯的排程器關閉並終結本身會通知執行階段的 Windows 事件物件控制代碼。  
   
 ### <a name="remarks"></a>備註  
  如果沒有任何附加到呼叫內容的排程器，呼叫這個方法會導致[scheduler_not_attached](scheduler-not-attached-class.md)擲回例外狀況。  
   
-##  <a name="a-namescheduletaska-scheduletask"></a><a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a>ScheduleTask 
 
  排程與呼叫的內容相關聯的排程器中的輕量工作。 輕量工作會置於執行階段所決定的排程群組中。 採用 `_Placement` 參數的版本會造成工作在指定的位置變成優先執行。  
   
@@ -260,7 +271,7 @@ static void __cdecl ScheduleTask(
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)   
- [PolicyElementKey 列舉](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
 
 

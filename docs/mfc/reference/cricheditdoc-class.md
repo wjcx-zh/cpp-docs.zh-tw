@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CRichEditDoc
+- AFXRICH/CRichEditDoc
+- AFXRICH/CRichEditDoc::CreateClientItem
+- AFXRICH/CRichEditDoc::GetStreamFormat
+- AFXRICH/CRichEditDoc::GetView
+- AFXRICH/CRichEditDoc::m_bRTF
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +100,7 @@ class CRichEditDoc : public COleServerDoc
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrich.h  
   
-##  <a name="a-namecreateclientitema--cricheditdoccreateclientitem"></a><a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
+##  <a name="createclientitem"></a>CRichEditDoc::CreateClientItem  
  呼叫此函式建立`CRichEditCntrItem`物件，並將它加入至這份文件。  
   
 ```  
@@ -114,7 +119,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
   
  如需詳細資訊，請參閱[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetstreamformata--cricheditdocgetstreamformat"></a><a name="getstreamformat"></a>CRichEditDoc::GetStreamFormat  
+##  <a name="getstreamformat"></a>CRichEditDoc::GetStreamFormat  
  呼叫此函式可判斷文字格式進行串流處理的豐富的編輯內容。  
   
 ```  
@@ -131,7 +136,7 @@ int GetStreamFormat() const;
 ### <a name="remarks"></a>備註  
  傳回值根據[m_bRTF](#m_brtf)資料成員。 此函數會傳回`SF_RTF`如果`m_bRTF`是**TRUE**，否則`SF_TEXT`。  
   
-##  <a name="a-namegetviewa--cricheditdocgetview"></a><a name="getview"></a>CRichEditDoc::GetView  
+##  <a name="getview"></a>CRichEditDoc::GetView  
  呼叫此函式來存取[CRichEditView](../../mfc/reference/cricheditview-class.md)物件相關聯這`CRichEditDoc`物件。  
   
 ```  
@@ -144,7 +149,7 @@ virtual CRichEditView* GetView() const;
 ### <a name="remarks"></a>備註  
  文字與格式設定資訊都包含在`CRichEditView`物件。 `CRichEditDoc`物件會維護序列化的 OLE 項目。 應該只有一個`CRichEditView`每個`CRichEditDoc`。  
   
-##  <a name="a-namembrtfa--cricheditdocmbrtf"></a><a name="m_brtf"></a>CRichEditDoc::m_bRTF  
+##  <a name="m_brtf"></a>CRichEditDoc::m_bRTF  
  當**TRUE**，表示[CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)和[CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout)應該儲存段落和字元格式特性。  
   
 ```  

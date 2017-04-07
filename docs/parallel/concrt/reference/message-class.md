@@ -9,7 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message
+- message
+- AGENTS/concurrency::message
+- AGENTS/concurrency::message::message
+- AGENTS/concurrency::message::add_ref
+- AGENTS/concurrency::message::msg_id
+- AGENTS/concurrency::message::remove_ref
+- AGENTS/concurrency::message::payload
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 08d67f2899f27a92250d6fedbf755a5413e01ebd
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: c6cc72c1fe9385eabe86194031913b7363d602ff
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="message-class"></a>message 類別
@@ -65,22 +71,22 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[訊息建構函式](#ctor)|多載。 建構 `message` 物件。|  
+|[message](#ctor)|多載。 建構 `message` 物件。|  
 |[~ message 解構函式](#dtor)|終結`message`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[add_ref 方法](#add_ref)|加入的參考計數`message`物件。 用於需要參考計數來決定訊息的存留期的訊息區塊。|  
-|[msg_id 方法](#msg_id)|傳回的識別碼`message`物件。|  
-|[remove_ref 方法](#remove_ref)|參考計數中減去`message`物件。 用於需要參考計數來決定訊息的存留期的訊息區塊。|  
+|[add_ref](#add_ref)|加入的參考計數`message`物件。 用於需要參考計數來決定訊息的存留期的訊息區塊。|  
+|[msg_id](#msg_id)|傳回的識別碼`message`物件。|  
+|[remove_ref](#remove_ref)|參考計數中減去`message`物件。 用於需要參考計數來決定訊息的存留期的訊息區塊。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[承載資料成員](#payload)|封包承載`message`物件。|  
+|[裝載](#payload)|封包承載`message`物件。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -93,7 +99,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameaddrefa-addref"></a><a name="add_ref"></a>add_ref 
+##  <a name="add_ref"></a>add_ref 
 
  加入的參考計數`message`物件。 用於需要參考計數來決定訊息的存留期的訊息區塊。  
   
@@ -104,7 +110,7 @@ long add_ref();
 ### <a name="return-value"></a>傳回值  
  參考計數的新值。  
   
-##  <a name="a-namectora-message"></a><a name="ctor"></a>訊息 
+##  <a name="ctor"></a>訊息 
 
  建構 `message` 物件。  
   
@@ -136,7 +142,7 @@ message(
 ### <a name="remarks"></a>備註  
  建構函式的指標之`message`物件引數則會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)例外狀況如果參數`_Msg`是`NULL`。  
   
-##  <a name="a-namedtora-message"></a><a name="dtor"></a>~ 訊息 
+##  <a name="dtor"></a>~ 訊息 
 
  終結`message`物件。  
   
@@ -144,7 +150,7 @@ message(
 virtual ~message();
 ```  
   
-##  <a name="a-namemsgida-msgid"></a><a name="msg_id"></a>msg_id 
+##  <a name="msg_id"></a>msg_id 
 
  傳回的識別碼`message`物件。  
   
@@ -155,7 +161,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>傳回值  
  `runtime_object_identity`的`message`物件。  
   
-##  <a name="a-namepayloada-payload"></a><a name="payload"></a>裝載 
+##  <a name="payload"></a>裝載 
 
  封包承載`message`物件。  
   
@@ -163,7 +169,7 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="a-nameremoverefa-removeref"></a><a name="remove_ref"></a>remove_ref 
+##  <a name="remove_ref"></a>remove_ref 
 
  參考計數中減去`message`物件。 用於需要參考計數來決定訊息的存留期的訊息區塊。  
   

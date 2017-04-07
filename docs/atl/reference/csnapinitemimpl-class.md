@@ -10,8 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
-- ATL.CSnapInItemImpl
-- ATL::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl::CSnapInItemImpl
+- ATLSNAP/ATL::CSnapInItemImpl::AddMenuItems
+- ATLSNAP/ATL::CSnapInItemImpl::Command
+- ATLSNAP/ATL::CSnapInItemImpl::CreatePropertyPages
+- ATLSNAP/ATL::CSnapInItemImpl::FillData
+- ATLSNAP/ATL::CSnapInItemImpl::GetResultPaneInfo
+- ATLSNAP/ATL::CSnapInItemImpl::GetResultViewType
+- ATLSNAP/ATL::CSnapInItemImpl::GetScopePaneInfo
+- ATLSNAP/ATL::CSnapInItemImpl::Notify
+- ATLSNAP/ATL::CSnapInItemImpl::QueryPagesFor
+- ATLSNAP/ATL::CSnapInItemImpl::SetMenuInsertionFlags
+- ATLSNAP/ATL::CSnapInItemImpl::SetToolbarButtonInfo
+- ATLSNAP/ATL::CSnapInItemImpl::UpdateMenuState
+- ATLSNAP/ATL::CSnapInItemImpl::UpdateToolbarButton
+- ATLSNAP/ATL::CSnapInItemImpl::m_bstrDisplayName
+- ATLSNAP/ATL::CSnapInItemImpl::m_resultDataItem
+- ATLSNAP/ATL::CSnapInItemImpl::m_scopeDataItem
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +125,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsnap.h  
   
-##  <a name="a-nameaddmenuitemsa--csnapinitemimpladdmenuitems"></a><a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
  這個方法會實作的 Win32 函式[IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)。  
   
 ```
@@ -145,7 +161,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED**資料物件都有無效的類型。  
   
-##  <a name="a-namecommanda--csnapinitemimplcommand"></a><a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>CSnapInItemImpl::Command  
  這個方法會實作的 Win32 函式[IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842)。  
   
 ```
@@ -167,7 +183,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED**資料物件都有無效的類型。  
   
-##  <a name="a-namecreatepropertypagesa--csnapinitemimplcreatepropertypages"></a><a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
  這個方法會實作的 Win32 函式[IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846)。  
   
 ```
@@ -199,14 +215,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED**資料物件都有無效的類型。  
   
-##  <a name="a-namecsnapinitemimpla--csnapinitemimplcsnapinitemimpl"></a><a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
  建構 `CSnapInItemImpl` 物件。  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="a-namefilldataa--csnapinitemimplfilldata"></a><a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>CSnapInItemImpl::FillData  
  您可以呼叫此函式擷取項目的相關資訊。  
   
 ```
@@ -223,7 +239,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>備註  
  若要適當地實作此函式，將正確的資訊複製到資料流 ( `pStream`)，取決於所指出的剪貼簿格式`cf`。  
   
-##  <a name="a-namegetresultviewtypea--csnapinitemimplgetresultviewtype"></a><a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
  呼叫此函式可擷取的嵌入式管理單元物件的 [結果] 窗格的檢視類型。  
   
 ```
@@ -243,7 +259,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 允許預設檢視選項。  
   
-##  <a name="a-namegetscopepaneinfoa--csnapinitemimplgetscopepaneinfo"></a><a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
  呼叫此函式可擷取**SCOPEDATAITEM**嵌入式管理單元的結構。  
   
 ```
@@ -254,7 +270,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out]指標**SCOPEDATAITEM**結構`CSnapInItemImpl`物件。  
   
-##  <a name="a-namegetresultpaneinfoa--csnapinitemimplgetresultpaneinfo"></a><a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
  呼叫此函式可擷取**RESULTDATAITEM**嵌入式管理單元的結構。  
   
 ```
@@ -265,28 +281,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out]指標**RESULTDATAITEM**結構`CSnapInItemImpl`物件。  
   
-##  <a name="a-namembstrdisplaynamea--csnapinitemimplmbstrdisplayname"></a><a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
  包含節點的項目顯示的字串。  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="a-namemscopedataitema--csnapinitemimplmscopedataitem"></a><a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
  `SCOPEDATAITEM`嵌入式管理單元中的資料物件的結構。  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="a-namemresultdataitema--csnapinitemimplmresultdataitem"></a><a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
  [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165)嵌入式管理單元中的資料物件的結構。  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="a-namenotifya--csnapinitemimplnotify"></a><a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>CSnapInItemImpl::Notify  
  當使用者起嵌入式管理單元的物件時呼叫。  
   
 ```
@@ -354,14 +370,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED**資料物件都有無效的類型。  
   
-##  <a name="a-namequerypagesfora--csnapinitemimplquerypagesfor"></a><a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
  呼叫以嵌入式管理單元的節點是否支援屬性頁。  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="a-namesetmenuinsertionflagsa--csnapinitemimplsetmenuinsertionflags"></a><a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
  呼叫此函式來修改功能表插入旗標所指定`pInsertionAllowed`，嵌入式管理單元的物件。  
   
 ```
@@ -390,7 +406,7 @@ void SetMenuInsertionFlags(
   
  您不應嘗試設定的位元`pInsertionAllowed`，原先已清除。 MMC 的未來版本可能會使用目前未定義，所以您不應該變更目前未定義的位元的位元。  
   
-##  <a name="a-namesettoolbarbuttoninfoa--csnapinitemimplsettoolbarbuttoninfo"></a><a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
  呼叫此函式來修改任何工具列按鈕樣式的嵌入式管理單元物件之前建立的工具列。  
   
 ```
@@ -432,7 +448,7 @@ void SetToolbarButtonInfo(
   
 - `TBSTYLE_SEP`建立提供小的缺口按鈕群組之間的分隔符號。 具有此樣式的按鈕不會接收使用者輸入。  
   
-##  <a name="a-nameupdatemenustatea--csnapinitemimplupdatemenustate"></a><a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
  呼叫此函式來修改之前插入的嵌入式管理單元物件的內容功能表的功能表項目。  
   
 ```
@@ -480,7 +496,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED**和**MF_UNCHECKED**。  
   
-##  <a name="a-nameupdatetoolbarbuttona--csnapinitemimplupdatetoolbarbutton"></a><a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
  呼叫此函式來修改工具列按鈕，在嵌入式管理單元物件顯示之前。  
   
 ```

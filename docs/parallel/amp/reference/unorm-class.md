@@ -9,8 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::unorm
-- amp/Concurrency::graphics::unorm
+- unorm
+- AMP_SHORT_VECTORS/unorm
+- AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 dev_langs:
 - C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
@@ -34,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: aae5de80bed3b2d3d5c15285c2d12f2f6771a251
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6817568b7dc111776033e935fd2ba3ad5dc4a69a
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm-class"></a>unorm 類別
@@ -52,7 +53,7 @@ class unorm;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[unorm 建構函式](#ctor)|多載。 預設建構函式。 將初始化為 0.0。|  
   
@@ -60,14 +61,14 @@ class unorm;
   
 |名稱|描述|  
 |----------|-----------------|  
-|unorm::operator-運算子||  
-|unorm::operator float 運算子|轉換運算子。 Unorm 數字轉換成浮點數值。|  
-|unorm::operator * = 運算子||  
-|unorm::operator / = 運算子||  
-|unorm::operator + + 運算子||  
-|unorm::operator + = 運算子||  
-|unorm::operator = 運算子||  
-|unorm::operator-= 運算子||  
+|unorm::operator-||  
+|unorm::operator 浮點數|轉換運算子。 Unorm 數字轉換成浮點數值。|  
+|unorm::operator * =||  
+|unorm::operator / =||  
+|unorm::operator + +||  
+|unorm::operator + =||  
+|unorm::operator =||  
+|unorm::operator =||  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `unorm`  
@@ -77,7 +78,7 @@ class unorm;
   
  **命名空間︰** concurrency:: graphics  
   
-##  <a name="a-namectora-unorm"></a><a name="ctor"></a>unorm 
+##  <a name="ctor"></a>unorm 
 
  預設建構函式。 將初始化為 0.0。  
   
@@ -125,5 +126,5 @@ inline explicit unorm(
  用來初始化 norm 物件。  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

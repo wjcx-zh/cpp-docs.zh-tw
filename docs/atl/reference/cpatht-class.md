@@ -9,11 +9,50 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPathT
 - CPathT
-- ATL::CPathT<StringType>
-- ATL::CPathT
-- ATL.CPathT<StringType>
+- ATLPATH/ATL::CPathT
+- ATLPATH/ATL::CPathT::PCXSTR
+- ATLPATH/ATL::CPathT::PXSTR
+- ATLPATH/ATL::CPathT::XCHAR
+- ATLPATH/ATL::CPathT::CPathT
+- ATLPATH/ATL::CPathT::AddBackslash
+- ATLPATH/ATL::CPathT::AddExtension
+- ATLPATH/ATL::CPathT::Append
+- ATLPATH/ATL::CPathT::BuildRoot
+- ATLPATH/ATL::CPathT::Canonicalize
+- ATLPATH/ATL::CPathT::Combine
+- ATLPATH/ATL::CPathT::CommonPrefix
+- ATLPATH/ATL::CPathT::CompactPath
+- ATLPATH/ATL::CPathT::CompactPathEx
+- ATLPATH/ATL::CPathT::FileExists
+- ATLPATH/ATL::CPathT::FindExtension
+- ATLPATH/ATL::CPathT::FindFileName
+- ATLPATH/ATL::CPathT::GetDriveNumber
+- ATLPATH/ATL::CPathT::GetExtension
+- ATLPATH/ATL::CPathT::IsDirectory
+- ATLPATH/ATL::CPathT::IsFileSpec
+- ATLPATH/ATL::CPathT::IsPrefix
+- ATLPATH/ATL::CPathT::IsRelative
+- ATLPATH/ATL::CPathT::IsRoot
+- ATLPATH/ATL::CPathT::IsSameRoot
+- ATLPATH/ATL::CPathT::IsUNC
+- ATLPATH/ATL::CPathT::IsUNCServer
+- ATLPATH/ATL::CPathT::IsUNCServerShare
+- ATLPATH/ATL::CPathT::MakePretty
+- ATLPATH/ATL::CPathT::MatchSpec
+- ATLPATH/ATL::CPathT::QuoteSpaces
+- ATLPATH/ATL::CPathT::RelativePathTo
+- ATLPATH/ATL::CPathT::RemoveArgs
+- ATLPATH/ATL::CPathT::RemoveBackslash
+- ATLPATH/ATL::CPathT::RemoveBlanks
+- ATLPATH/ATL::CPathT::RemoveExtension
+- ATLPATH/ATL::CPathT::RemoveFileSpec
+- ATLPATH/ATL::CPathT::RenameExtension
+- ATLPATH/ATL::CPathT::SkipRoot
+- ATLPATH/ATL::CPathT::StripPath
+- ATLPATH/ATL::CPathT::StripToRoot
+- ATLPATH/ATL::CPathT::UnquoteSpaces
+- ATLPATH/ATL::CPathT::m_strPath
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -145,7 +184,7 @@ class CPathT
 ## <a name="requirements"></a>需求  
  **標頭︰** atlpath.h  
   
-##  <a name="a-nameaddbackslasha--cpathtaddbackslash"></a><a name="addbackslash"></a>CPathT::AddBackslash  
+##  <a name="addbackslash"></a>CPathT::AddBackslash  
  呼叫此方法以建立正確的語法的路徑字串的結尾加上反斜線。 如果路徑中已經有反斜線，就會加入反斜線。  
   
 ```
@@ -155,7 +194,7 @@ void AddBackslash();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathAddBackSlash](http://msdn.microsoft.com/library/windows/desktop/bb773561)。  
   
-##  <a name="a-nameaddextensiona--cpathtaddextension"></a><a name="addextension"></a>CPathT::AddExtension  
+##  <a name="addextension"></a>CPathT::AddExtension  
  呼叫這個方法，將副檔名加入至路徑。  
   
 ```
@@ -172,7 +211,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)。  
   
-##  <a name="a-nameappenda--cpathtappend"></a><a name="append"></a>CPathT::Append  
+##  <a name="append"></a>CPathT::Append  
  呼叫這個方法將字串附加至目前的路徑。  
   
 ```
@@ -189,7 +228,7 @@ BOOL Append(PCXSTR pszMore);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)。  
   
-##  <a name="a-namebuildroota--cpathtbuildroot"></a><a name="buildroot"></a>CPathT::BuildRoot  
+##  <a name="buildroot"></a>CPathT::BuildRoot  
  呼叫這個方法來建立根路徑，從指定的磁碟機數目。  
   
 ```
@@ -203,7 +242,7 @@ void BuildRoot(int iDrive);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)。  
   
-##  <a name="a-namecanonicalizea--cpathtcanonicalize"></a><a name="canonicalize"></a>CPathT::Canonicalize  
+##  <a name="canonicalize"></a>CPathT::Canonicalize  
  呼叫這個方法將路徑轉換成標準格式。  
   
 ```
@@ -213,7 +252,7 @@ void Canonicalize();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)。  
   
-##  <a name="a-namecombinea--cpathtcombine"></a><a name="combine"></a>CPathT::Combine  
+##  <a name="combine"></a>CPathT::Combine  
  呼叫這個方法來串連字串，表示目錄名稱和字串，表示為一個路徑的檔案路徑名稱。  
   
 ```
@@ -230,7 +269,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)。  
   
-##  <a name="a-namecommonprefixa--cpathtcommonprefix"></a><a name="commonprefix"></a>CPathT::CommonPrefix  
+##  <a name="commonprefix"></a>CPathT::CommonPrefix  
  呼叫這個方法來判斷指定的路徑是否共用通用的前置詞，以目前的路徑。  
   
 ```
@@ -247,7 +286,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 ### <a name="remarks"></a>備註  
  前置詞是其中一種類型:"c:\\\\"，"。"，".."，"...\\\\". 如需詳細資訊，請參閱[PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)。  
   
-##  <a name="a-namecompactpatha--cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath  
+##  <a name="compactpath"></a>CPathT::CompactPath  
  呼叫這個方法，以截斷檔案路徑，以符合特定像素寬度，以省略符號取代路徑元件。  
   
 ```
@@ -267,7 +306,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)。  
   
-##  <a name="a-namecompactpathexa--cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx  
+##  <a name="compactpathex"></a>CPathT::CompactPathEx  
  呼叫這個方法，以截斷檔案路徑，以符合指定的字元數，以省略符號取代路徑元件。  
   
 ```
@@ -287,7 +326,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578)。  
   
-##  <a name="a-namecpathta--cpathtcpatht"></a><a name="cpatht"></a>CPathT::CPathT  
+##  <a name="cpatht"></a>CPathT::CPathT  
  建構函式。  
   
 ```
@@ -303,7 +342,7 @@ CPathT() throw();
  *path*  
  路徑字串中。  
   
-##  <a name="a-namefileexistsa--cpathtfileexists"></a><a name="fileexists"></a>CPathT::FileExists  
+##  <a name="fileexists"></a>CPathT::FileExists  
  呼叫這個方法檢查在這個路徑名稱的檔案是否存在。  
   
 ```
@@ -316,7 +355,7 @@ BOOL FileExists() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)。  
   
-##  <a name="a-namefindextensiona--cpathtfindextension"></a><a name="findextension"></a>CPathT::FindExtension  
+##  <a name="findextension"></a>CPathT::FindExtension  
  呼叫這個方法來尋找檔案的副檔名的路徑內的位置。  
   
 ```
@@ -329,7 +368,7 @@ int FindExtension() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)。  
   
-##  <a name="a-namefindfilenamea--cpathtfindfilename"></a><a name="findfilename"></a>CPathT::FindFileName  
+##  <a name="findfilename"></a>CPathT::FindFileName  
  呼叫這個方法，以找出該位置的路徑內的檔案名稱。  
   
 ```
@@ -342,7 +381,7 @@ int FindFileName() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)。  
   
-##  <a name="a-namegetdrivenumbera--cpathtgetdrivenumber"></a><a name="getdrivenumber"></a>CPathT::GetDriveNumber  
+##  <a name="getdrivenumber"></a>CPathT::GetDriveNumber  
  呼叫此方法來搜尋磁碟機代號 'A' 到 'Z' 的範圍內的路徑，並傳回對應的磁碟機數目。  
   
 ```
@@ -355,7 +394,7 @@ int GetDriveNumber() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)。  
   
-##  <a name="a-namegetextensiona--cpathtgetextension"></a><a name="getextension"></a>CPathT::GetExtension  
+##  <a name="getextension"></a>CPathT::GetExtension  
  呼叫這個方法來取得副檔名的路徑。  
   
 ```
@@ -365,7 +404,7 @@ StringType GetExtension() const;
 ### <a name="return-value"></a>傳回值  
  傳回檔案的副檔名。  
   
-##  <a name="a-nameisdirectorya--cpathtisdirectory"></a><a name="isdirectory"></a>CPathT::IsDirectory  
+##  <a name="isdirectory"></a>CPathT::IsDirectory  
  呼叫這個方法，以檢查路徑是否有效的目錄。  
   
 ```
@@ -378,7 +417,7 @@ BOOL IsDirectory() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621)。  
   
-##  <a name="a-nameisfilespeca--cpathtisfilespec"></a><a name="isfilespec"></a>CPathT::IsFileSpec  
+##  <a name="isfilespec"></a>CPathT::IsFileSpec  
  呼叫這個方法來搜尋任何路徑分隔字元的路徑 (例如，':' 或 '\\')。 如果不有存在任何路徑分隔字元，路徑會被視為檔案規格路徑。  
   
 ```
@@ -391,7 +430,7 @@ BOOL IsFileSpec() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)。  
   
-##  <a name="a-nameisprefixa--cpathtisprefix"></a><a name="isprefix"></a>CPathT::IsPrefix  
+##  <a name="isprefix"></a>CPathT::IsPrefix  
  呼叫這個方法來判斷路徑是否包含有效的前置詞傳入之型別的`pszPrefix`。  
   
 ```
@@ -408,7 +447,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)。  
   
-##  <a name="a-nameisrelativea--cpathtisrelative"></a><a name="isrelative"></a>CPathT::IsRelative  
+##  <a name="isrelative"></a>CPathT::IsRelative  
  呼叫這個方法來判斷是否是相對路徑。  
   
 ```
@@ -421,7 +460,7 @@ BOOL IsRelative() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)。  
   
-##  <a name="a-nameisroota--cpathtisroot"></a><a name="isroot"></a>CPathT::IsRoot  
+##  <a name="isroot"></a>CPathT::IsRoot  
  呼叫這個方法，以判斷是否目錄根路徑。  
   
 ```
@@ -434,7 +473,7 @@ BOOL IsRoot() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)。  
   
-##  <a name="a-nameissameroota--cpathtissameroot"></a><a name="issameroot"></a>CPathT::IsSameRoot  
+##  <a name="issameroot"></a>CPathT::IsSameRoot  
  呼叫這個方法來判斷另一個路徑是否有通用的根元件，以目前的路徑。  
   
 ```
@@ -451,7 +490,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)。  
   
-##  <a name="a-nameisunca--cpathtisunc"></a><a name="isunc"></a>CPathT::IsUNC  
+##  <a name="isunc"></a>CPathT::IsUNC  
  呼叫這個方法來判斷路徑是否有效的 UNC （通用命名慣例） 路徑，伺服器和共用。  
   
 ```
@@ -464,7 +503,7 @@ BOOL IsUNC() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)。  
   
-##  <a name="a-nameisuncservera--cpathtisuncserver"></a><a name="isuncserver"></a>CPathT::IsUNCServer  
+##  <a name="isuncserver"></a>CPathT::IsUNCServer  
  呼叫這個方法來判斷路徑是否有效的 UNC （通用命名慣例） 路徑，僅適用於伺服器。  
   
 ```
@@ -477,7 +516,7 @@ BOOL IsUNCServer() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)。  
   
-##  <a name="a-nameisuncserversharea--cpathtisuncservershare"></a><a name="isuncservershare"></a>CPathT::IsUNCServerShare  
+##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare  
  呼叫這個方法來判斷路徑是否有效的 UNC （通用命名慣例） 共用路徑， \\ \ *伺服器*\ *共用*。  
   
 ```
@@ -490,7 +529,7 @@ BOOL IsUNCServerShare() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)。  
   
-##  <a name="a-namemstrpatha--cpathtmstrpath"></a><a name="m_strpath"></a>CPathT::m_strPath  
+##  <a name="m_strpath"></a>CPathT::m_strPath  
  路徑。  
   
 ```
@@ -500,7 +539,7 @@ StringType m_strPath;
 ### <a name="remarks"></a>備註  
  `StringType`會在樣板參數`CPathT`。  
   
-##  <a name="a-namemakeprettya--cpathtmakepretty"></a><a name="makepretty"></a>CPathT::MakePretty  
+##  <a name="makepretty"></a>CPathT::MakePretty  
  呼叫這個方法來將路徑轉換成一致的外觀提供路徑的所有小寫字元。  
   
 ```
@@ -513,7 +552,7 @@ BOOL MakePretty();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)。  
   
-##  <a name="a-namematchspeca--cpathtmatchspec"></a><a name="matchspec"></a>CPathT::MatchSpec  
+##  <a name="matchspec"></a>CPathT::MatchSpec  
  呼叫這個方法來搜尋的路徑包含萬用字元的相符項目類型的字串。  
   
 ```
@@ -530,7 +569,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)。  
   
-##  <a name="a-nameoperatoraddeqa--cpathtoperator-"></a><a name="operator_add_eq"></a>CPathT::operator + =  
+##  <a name="operator_add_eq"></a>CPathT::operator + =  
  這個運算子會將字串附加至路徑。  
   
 ```
@@ -544,7 +583,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>傳回值  
  傳回更新的路徑。  
   
-##  <a name="a-nameoperatorconststringtypeampa--cpathtoperator-const-stringtype-amp"></a><a name="operator_const_stringtype_amp"></a>CPathT::operator const StringType&amp;  
+##  <a name="operator_const_stringtype_amp"></a>CPathT::operator const StringType&amp;  
  這個運算子可以被視為字串的物件。  
   
 ```
@@ -554,7 +593,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>傳回值  
  傳回表示這個物件所管理的目前路徑的字串。  
   
-##  <a name="a-nameoperatorcpathtpcxstra--cpathtoperator-cpathtpcxstr"></a><a name="operator_cpatht__pcxstr"></a>CPathT::operator CPathT::PCXSTR  
+##  <a name="operator_cpatht__pcxstr"></a>CPathT::operator CPathT::PCXSTR  
  這個運算子可以被視為字串的物件。  
   
 ```
@@ -564,7 +603,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>傳回值  
  傳回表示這個物件所管理的目前路徑的字串。  
   
-##  <a name="a-nameoperatorstringtypeampa--cpathtoperator-stringtype-amp"></a><a name="operator_stringtype__amp"></a>CPathT::operator StringType&amp;  
+##  <a name="operator_stringtype__amp"></a>CPathT::operator StringType&amp;  
  這個運算子可以被視為字串的物件。  
   
 ```
@@ -574,7 +613,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 ### <a name="return-value"></a>傳回值  
  傳回表示這個物件所管理的目前路徑的字串。  
   
-##  <a name="a-namepcxstra--cpathtpcxstr"></a><a name="pcxstr"></a>CPathT::PCXSTR  
+##  <a name="pcxstr"></a>CPathT::PCXSTR  
  常數字串類型。  
   
 ```
@@ -584,7 +623,7 @@ typedef StringType::PCXSTR PCXSTR;
 ### <a name="remarks"></a>備註  
  `StringType`會在樣板參數`CPathT`。  
   
-##  <a name="a-namepxstra--cpathtpxstr"></a><a name="pxstr"></a>CPathT::PXSTR  
+##  <a name="pxstr"></a>CPathT::PXSTR  
  字串型別。  
   
 ```
@@ -594,7 +633,7 @@ typedef StringType::PXSTR PXSTR;
 ### <a name="remarks"></a>備註  
  `StringType`會在樣板參數`CPathT`。  
   
-##  <a name="a-namequotespacesa--cpathtquotespaces"></a><a name="quotespaces"></a>CPathT::QuoteSpaces  
+##  <a name="quotespaces"></a>CPathT::QuoteSpaces  
  呼叫這個方法來將路徑括在引號中，如果它包含任何空格。  
   
 ```
@@ -604,7 +643,7 @@ void QuoteSpaces();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)。  
   
-##  <a name="a-namerelativepathtoa--cpathtrelativepathto"></a><a name="relativepathto"></a>CPathT::RelativePathTo  
+##  <a name="relativepathto"></a>CPathT::RelativePathTo  
  呼叫這個方法從一個檔案或資料夾建立相對路徑。  
   
 ```
@@ -634,7 +673,7 @@ BOOL RelativePathTo(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)。  
   
-##  <a name="a-nameremoveargsa--cpathtremoveargs"></a><a name="removeargs"></a>CPathT::RemoveArgs  
+##  <a name="removeargs"></a>CPathT::RemoveArgs  
  呼叫此方法以從路徑移除任何命令列引數。  
   
 ```
@@ -644,7 +683,7 @@ void RemoveArgs();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)。  
   
-##  <a name="a-nameremovebackslasha--cpathtremovebackslash"></a><a name="removebackslash"></a>CPathT::RemoveBackslash  
+##  <a name="removebackslash"></a>CPathT::RemoveBackslash  
  呼叫此方法以從路徑移除尾端的反斜線。  
   
 ```
@@ -654,7 +693,7 @@ void RemoveBackslash();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743)。  
   
-##  <a name="a-nameremoveblanksa--cpathtremoveblanks"></a><a name="removeblanks"></a>CPathT::RemoveBlanks  
+##  <a name="removeblanks"></a>CPathT::RemoveBlanks  
  呼叫此方法以從路徑移除所有開頭和尾端空白。  
   
 ```
@@ -664,7 +703,7 @@ void RemoveBlanks();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)。  
   
-##  <a name="a-nameremoveextensiona--cpathtremoveextension"></a><a name="removeextension"></a>CPathT::RemoveExtension  
+##  <a name="removeextension"></a>CPathT::RemoveExtension  
  如果有的話，請呼叫這個方法來移除路徑的副檔名。  
   
 ```
@@ -674,7 +713,7 @@ void RemoveExtension();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)。  
   
-##  <a name="a-nameremovefilespeca--cpathtremovefilespec"></a><a name="removefilespec"></a>CPathT::RemoveFileSpec  
+##  <a name="removefilespec"></a>CPathT::RemoveFileSpec  
  如果它們，請呼叫這個方法來從路徑移除尾端的檔案名稱及反斜線。  
   
 ```
@@ -687,7 +726,7 @@ BOOL RemoveFileSpec();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)。  
   
-##  <a name="a-namerenameextensiona--cpathtrenameextension"></a><a name="renameextension"></a>CPathT::RenameExtension  
+##  <a name="renameextension"></a>CPathT::RenameExtension  
  呼叫這個方法，以使用新的延伸模組取代檔案的副檔名的路徑中。 如果檔案名稱不包含延伸模組，擴充功能就會附加至路徑的結尾。  
   
 ```
@@ -704,7 +743,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)。  
   
-##  <a name="a-nameskiproota--cpathtskiproot"></a><a name="skiproot"></a>CPathT::SkipRoot  
+##  <a name="skiproot"></a>CPathT::SkipRoot  
  呼叫這個方法來剖析路徑，將忽略磁碟機代號或 UNC （通用命名慣例） 伺服器/共用路徑的任何部分。  
   
 ```
@@ -717,7 +756,7 @@ int SkipRoot() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)。  
   
-##  <a name="a-namestrippatha--cpathtstrippath"></a><a name="strippath"></a>CPathT::StripPath  
+##  <a name="strippath"></a>CPathT::StripPath  
  呼叫這個方法來移除的完整的路徑和檔名的路徑部分。  
   
 ```
@@ -727,7 +766,7 @@ void StripPath();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)。  
   
-##  <a name="a-namestriptoroota--cpathtstriptoroot"></a><a name="striptoroot"></a>CPathT::StripToRoot  
+##  <a name="striptoroot"></a>CPathT::StripToRoot  
  呼叫此方法以移除所有的組件，但不包括根資訊的路徑。  
   
 ```
@@ -740,7 +779,7 @@ BOOL StripToRoot();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)。  
   
-##  <a name="a-nameunquotespacesa--cpathtunquotespaces"></a><a name="unquotespaces"></a>CPathT::UnquoteSpaces  
+##  <a name="unquotespaces"></a>CPathT::UnquoteSpaces  
  呼叫這個方法來移除開頭和路徑的結尾引號。  
   
 ```
@@ -750,7 +789,7 @@ void UnquoteSpaces();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)。  
   
-##  <a name="a-namexchara--cpathtxchar"></a><a name="xchar"></a>CPathT::XCHAR  
+##  <a name="xchar"></a>CPathT::XCHAR  
  字元類型。  
   
 ```

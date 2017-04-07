@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComMultiThreadModelNoCS
 - CComMultiThreadModelNoCS
-- ATL.CComMultiThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS::AutoCriticalSection
+- ATLBASE/ATL::CComMultiThreadModelNoCS::CriticalSection
+- ATLBASE/ATL::CComMultiThreadModelNoCS::ThreadModelNoCS
+- ATLBASE/ATL::CComMultiThreadModelNoCS::Decrement
+- ATLBASE/ATL::CComMultiThreadModelNoCS::Increment
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +86,7 @@ class CComMultiThreadModelNoCS
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-nameautocriticalsectiona--ccommultithreadmodelnocsautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
+##  <a name="autocriticalsection"></a>CComMultiThreadModelNoCS::AutoCriticalSection  
  當使用`CComMultiThreadModelNoCS`、`typedef`名稱`AutoCriticalSection`參考類別[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。  
   
 ```
@@ -105,7 +109,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ### <a name="example"></a>範例  
  請參閱[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。  
   
-##  <a name="a-namecriticalsectiona--ccommultithreadmodelnocscriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
+##  <a name="criticalsection"></a>CComMultiThreadModelNoCS::CriticalSection  
  當使用`CComMultiThreadModelNoCS`、`typedef`名稱`CriticalSection`參考類別[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。  
   
 ```
@@ -128,7 +132,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ### <a name="example"></a>範例  
  請參閱[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。  
   
-##  <a name="a-namedecrementa--ccommultithreadmodelnocsdecrement"></a><a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
+##  <a name="decrement"></a>CComMultiThreadModelNoCS::Decrement  
  靜態函式呼叫 Win32 函式[InterlockedDecrement](http://msdn.microsoft.com/library/windows/desktop/ms683580)，所指向的變數值的遞減`p`。  
   
 ```
@@ -145,7 +149,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 ### <a name="remarks"></a>備註  
  **InterlockedDecrement**防止多個執行緒同時使用此變數。  
   
-##  <a name="a-nameincrementa--ccommultithreadmodelnocsincrement"></a><a name="increment"></a>CComMultiThreadModelNoCS::Increment  
+##  <a name="increment"></a>CComMultiThreadModelNoCS::Increment  
  靜態函式呼叫 Win32 函式[InterlockedIncrement](http://msdn.microsoft.com/library/windows/desktop/ms683614)，其中增加所指向之變數的值`p`。  
   
 ```
@@ -162,7 +166,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
 ### <a name="remarks"></a>備註  
  **InterlockedIncrement**防止多個執行緒同時使用此變數。  
   
-##  <a name="a-namethreadmodelnocsa--ccommultithreadmodelnocsthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
+##  <a name="threadmodelnocs"></a>CComMultiThreadModelNoCS::ThreadModelNoCS  
  當使用`CComMultiThreadModelNoCS`、`typedef`名稱`ThreadModelNoCS`只是參考`CComMultiThreadModelNoCS`。  
   
 ```

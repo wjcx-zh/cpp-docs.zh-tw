@@ -117,7 +117,7 @@ class bitset
   
  **命名空間：** std  
   
-##  <a name="a-namebitsetalla--bitsetall"></a><a name="bitset__all"></a>  bitset::all  
+##  <a name="bitset__all"></a>  bitset::all  
  測試這個位元集中的所有位元，以判斷是否全部設定為 true。  
   
 ```  
@@ -127,7 +127,7 @@ bool all() const;
 ### <a name="return-value"></a>傳回值  
  如果這個集合中的所有位元都為 true，則傳回 true。 如果一或多個位元為 false，則傳回 **false**。  
   
-##  <a name="a-namebitsetanya--bitsetany"></a><a name="bitset__any"></a>  bitset::any  
+##  <a name="bitset__any"></a>  bitset::any  
  測試序列中是否有任何位元設為 1。  
   
 ```  
@@ -188,7 +188,7 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="a-namebitsetbitseta--bitsetbitset"></a><a name="bitset__bitset"></a>  bitset::bitset  
+##  <a name="bitset__bitset"></a>  bitset::bitset  
  建構 `bitset\<N>` 類別的物件，並將此位元初始化為零、某指定值或字串字元中取得的值。  
   
 ```  
@@ -330,7 +330,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).  
 ```  
   
-##  <a name="a-namebitsetcounta--bitsetcount"></a><a name="bitset__count"></a>  bitset::count  
+##  <a name="bitset__count"></a>  bitset::count  
  傳回位元序列中設定的位元數。  
   
 ```  
@@ -385,7 +385,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.  
 ```  
   
-##  <a name="a-namebitsetelementtypea--bitsetelementtype"></a><a name="bitset__element_type"></a>  bitset::element_type  
+##  <a name="bitset__element_type"></a>  bitset::element_type  
  與資料類型 `bool` 同義的類型，可用來參考 bitset 中的元素位元。  
   
 ```  
@@ -440,7 +440,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.  
 ```  
   
-##  <a name="a-namebitsetflipa--bitsetflip"></a><a name="bitset__flip"></a>  bitset::flip  
+##  <a name="bitset__flip"></a>  bitset::flip  
  反轉 bitset 中的所有位元值，或在指定位置反轉單一位元。  
   
 ```  
@@ -509,7 +509,7 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.  
 ```  
   
-##  <a name="a-namebitsetnonea--bitsetnone"></a><a name="bitset__none"></a>  bitset::none  
+##  <a name="bitset__none"></a>  bitset::none  
  測試在 bitset 物件中是否沒有已設為 1 的位元。  
   
 ```  
@@ -564,7 +564,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.  
 ```  
   
-##  <a name="a-namebitsetoperatorneqa--bitsetoperator"></a><a name="bitset__operator_neq"></a>  bitset::operator!=  
+##  <a name="bitset__operator_neq"></a>  bitset::operator!=  
  測試目標 bitset 是否與指定的 bitset 不相等。  
   
 ```  
@@ -622,7 +622,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="a-namebitsetoperatorandeqa--bitsetoperatoramp"></a><a name="bitset__operator_and_eq"></a>  bitset::operator&amp;=  
+##  <a name="bitset__operator_and_eq"></a>  bitset::operator&amp;=  
  以邏輯 **AND** 運算執行 bitset 的位元組合。  
   
 ```  
@@ -685,7 +685,7 @@ After bitwise AND combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
 
-##  <a name="a-namebitsetoperatorlshifta-bitsetoperator"></a><a name="bitset__operator_lshift"></a> bitset::operator\<\<    
+##  <a name="bitset__operator_lshift"></a> bitset::operator\<\<    
   
 將 bitset 中的位元向左移位指定的位置數值，並將結果傳回至新的 bitset。  
   
@@ -734,7 +734,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebitsetoperatorlshifteqa--bitsetoperatorltlt"></a><a name="bitset__operator_lshift_eq"></a>  bitset::operator&lt;&lt;=  
+##  <a name="bitset__operator_lshift_eq"></a>  bitset::operator&lt;&lt;=  
  將 bitset 中的位元向左移位指定的位置數值，並將結果傳回至目標 bitset。  
   
 ```  
@@ -777,7 +777,7 @@ After shifting the bits 2 positions to the left,
  the target bitset b1 becomes: ( 11100 ).  
 ```  
   
-##  <a name="a-namebitsetoperatoreqeqa--bitsetoperator"></a><a name="bitset__operator_eq_eq"></a>  bitset::operator==  
+##  <a name="bitset__operator_eq_eq"></a>  bitset::operator==  
  測試目標 bitset 是否與指定的 bitset 相等。  
   
 ```  
@@ -785,7 +785,7 @@ bool operator==(const bitset\<N>& right) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  要與目標 bitset 比較是否相等的 bitset。  
   
 ### <a name="return-value"></a>傳回值  
@@ -834,7 +834,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.  
 ```  
   
-##  <a name="a-namebitsetoperatorrshifta--bitsetoperatorgtgt"></a><a name="bitset__operator_rshift"></a>  bitset::operator&gt;&gt;  
+##  <a name="bitset__operator_rshift"></a>  bitset::operator&gt;&gt;  
  將 bitset 中的位元向右移位指定的位置數值，並將結果傳回至新的 bitset。  
   
 ```  
@@ -884,7 +884,7 @@ After shifting the bits 1 position to the right,
  the bitset b3 is: ( 01110 ).  
 ```  
   
-##  <a name="a-namebitsetoperatorrshifteqa--bitsetoperatorgtgt"></a><a name="bitset__operator_rshift_eq"></a>  bitset::operator&gt;&gt;=  
+##  <a name="bitset__operator_rshift_eq"></a>  bitset::operator&gt;&gt;=  
  將 bitset 中的位元向右移位指定的位置數值，並將結果傳回至目標 bitset。  
   
 ```  
@@ -928,7 +928,7 @@ After shifting the bits 2 positions to the right,
  the target bitset b1 becomes: ( 00111 ).  
 ```  
   
-##  <a name="a-namebitsetoperatorata--bitsetoperator"></a><a name="bitset__operator_at"></a>  bitset::operator[]  
+##  <a name="bitset__operator_at"></a>  bitset::operator[]  
  如果 bitset 可修改，則傳回位於 bitset 中指定位置的位元參考；否則會傳回該位置的位元值。  
   
 ```  
@@ -969,7 +969,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namebitsetoperatorxoreqa--bitsetoperator"></a><a name="bitset__operator_xor_eq"></a>  bitset::operator^=  
+##  <a name="bitset__operator_xor_eq"></a>  bitset::operator^=  
  以互斥 `OR` 作業執行 bitset 的位元組合。  
   
 ```  
@@ -977,7 +977,7 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  要與目標 bitset 進行位元結合的 bitset。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1031,7 +1031,7 @@ After bitwise exclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="a-namebitsetoperatororeqa--bitsetoperator124"></a><a name="bitset__operator_or_eq"></a>  bitset::operator&#124;=  
+##  <a name="bitset__operator_or_eq"></a>  bitset::operator&#124;=  
  以包含 `OR` 作業執行 bitset 的位元組合。  
   
 ```  
@@ -1039,7 +1039,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  要與目標 bitset 進行位元結合的 bitset。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1094,7 +1094,7 @@ After bitwise inclusive OR combination,
 The parameter bitset b2 remains: ( 01011 ).  
 ```  
   
-##  <a name="a-namebitsetoperatordtora--bitsetoperator"></a><a name="bitset__operator_dtor"></a>  bitset::operator~  
+##  <a name="bitset__operator_dtor"></a>  bitset::operator~  
  反轉目標 bitset 中的所有位元，並傳回結果。  
   
 ```  
@@ -1137,7 +1137,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).  
 ```  
   
-##  <a name="a-namebitsetreferencea--bitsetreference"></a><a name="bitset__reference"></a>  bitset::reference  
+##  <a name="bitset__reference"></a>  bitset::reference  
  Proxy 類別，提供參考給包含於 bitset 中的位元，而 bitset 是用來存取及管理作為 bitset 類別之 `operator[]` 協助程式類別的個別位元。  
   
 ```  
@@ -1153,7 +1153,7 @@ public:
 ```    
   
 ### <a name="parameters"></a>參數  
- ` val`  
+ `val`  
  要指派給 bitset 中位元之 `bool` 類型物件的值。  
   
  `_Bitref`  
@@ -1255,7 +1255,7 @@ After flipping the value of the bit at position 4 in bitset b2,
 After a second flip, the value of the position 4 bit in b2 is now: 1.  
 ```  
   
-##  <a name="a-namebitsetreseta--bitsetreset"></a><a name="bitset__reset"></a>  bitset::reset  
+##  <a name="bitset__reset"></a>  bitset::reset  
  將 bitset 中的所有位元重設為 0，或將指定位置的位元重設為 0。  
   
 ```  
@@ -1311,7 +1311,7 @@ The collecion of bits obtained from resetting all
  the elements of the bitset b1 is: ( 00000 )  
 ```  
   
-##  <a name="a-namebitsetseta--bitsetset"></a><a name="bitset__set"></a>  bitset::set  
+##  <a name="bitset__set"></a>  bitset::set  
  將 bitset 中的所有位元設為 1，或將指定位置的位元設為 1。  
   
 ```   
@@ -1373,7 +1373,7 @@ The collecion of bits obtained from setting all the
  elements of the bitset b1 is: ( 11111 )  
 ```  
   
-##  <a name="a-namebitsetsizea--bitsetsize"></a><a name="bitset__size"></a>  bitset::size  
+##  <a name="bitset__size"></a>  bitset::size  
  傳回 bitset 物件中的位元數。  
   
 ```  
@@ -1414,7 +1414,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.  
 ```  
   
-##  <a name="a-namebitsettesta--bitsettest"></a><a name="bitset__test"></a>  bitset::test  
+##  <a name="bitset__test"></a>  bitset::test  
  測試位於 bitset 中指定位置的位元是否設為 1。  
   
 ```  

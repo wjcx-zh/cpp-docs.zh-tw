@@ -10,11 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CWinTraits
-- CMDIChildWinTraits
-- ATL.CWinTraits
-- CFrameWinTraits
-- ATL::CWinTraits
-- CControlWinTraits
+- ATLWIN/ATL::CWinTraits
+- ATLWIN/ATL::CWinTraits::GetWndExStyle
+- ATLWIN/ATL::CWinTraits::GetWndStyle
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +95,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-namegetwndstylea--cwintraitsgetwndstyle"></a><a name="getwndstyle"></a>CWinTraits::GetWndStyle  
+##  <a name="getwndstyle"></a>CWinTraits::GetWndStyle  
  呼叫此函式可擷取的標準樣式`CWinTraits`物件。  
   
 ```
@@ -111,7 +109,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>傳回值  
  物件的標準的視窗樣式。  
   
-##  <a name="a-namegetwndexstylea--cwintraitsgetwndexstyle"></a><a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
+##  <a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
  呼叫此函式可擷取的延伸的樣式`CWinTraits`物件。  
   
 ```

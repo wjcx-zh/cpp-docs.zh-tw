@@ -9,8 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxanimationcontroller/CAnimationStoryboardEventHandler
 - CAnimationStoryboardEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::CreateInstance
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::OnStoryboardUpdated
+- AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::SetAnimationController
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,14 +84,14 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecanimationstoryboardeventhandlera--canimationstoryboardeventhandlercanimationstoryboardeventhandler"></a><a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
+##  <a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
  建構 CAnimationStoryboardEventHandler 物件。  
   
 ```  
 CAnimationStoryboardEventHandler();
 ```  
   
-##  <a name="a-namecreateinstancea--canimationstoryboardeventhandlercreateinstance"></a><a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance  
+##  <a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance  
  建立 CAnimationStoryboardEventHandler 回呼的執行個體。  
   
 ```  
@@ -104,7 +109,7 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-nameonstoryboardstatuschangeda--canimationstoryboardeventhandleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
+##  <a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
  處理 OnStoryboardStatusChanged 事件，分鏡腳本的狀態變更時，會發生  
   
 ```  
@@ -127,7 +132,7 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ### <a name="return-value"></a>傳回值  
  S_OK，如果方法成功。否則 E_FAIL。  
   
-##  <a name="a-nameonstoryboardupdateda--canimationstoryboardeventhandleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardUpdated  
+##  <a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardUpdated  
  處理更新腳本時，會發生的 OnStoryboardUpdated 事件  
   
 ```  
@@ -141,7 +146,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ### <a name="return-value"></a>傳回值  
  S_OK，如果方法成功。否則 E_FAIL。  
   
-##  <a name="a-namesetanimationcontrollera--canimationstoryboardeventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController  
  儲存路由事件的動畫控制器的指標。  
   
 ```  

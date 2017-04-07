@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::COleIPFrameWnd
+- AFXOLE/COleIPFrameWnd::OnCreateControlBars
+- AFXOLE/COleIPFrameWnd::RepositionFrame
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-namecoleipframewnda--coleipframewndcoleipframewnd"></a><a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
  建構`COleIPFrameWnd`物件，並初始化其就地狀態資訊，儲存在型別的結構**OLEINPLACEFRAMEINFO**。  
   
 ```  
@@ -95,7 +99,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoncreatecontrolbarsa--coleipframewndoncreatecontrolbars"></a><a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
  這個架構會呼叫`OnCreateControlBars`函式時的就地編輯啟動項目。  
   
 ```  
@@ -122,7 +126,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>備註  
  預設實作不做任何動作。 覆寫這個函式來執行時所建立的控制列所需的任何特殊處理。  
   
-##  <a name="a-namerepositionframea--coleipframewndrepositionframe"></a><a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
  這個架構會呼叫`RepositionFrame`配置控制列，並重新定位在就地編輯視窗，讓全部都是可見的成員函式。  
   
 ```  

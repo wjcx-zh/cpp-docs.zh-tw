@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
+- AFXOLE/COleStreamFile
+- AFXOLE/COleStreamFile::COleStreamFile
+- AFXOLE/COleStreamFile::Attach
+- AFXOLE/COleStreamFile::CreateMemoryStream
+- AFXOLE/COleStreamFile::CreateStream
+- AFXOLE/COleStreamFile::Detach
+- AFXOLE/COleStreamFile::GetStream
+- AFXOLE/COleStreamFile::OpenStream
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +100,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
   
-##  <a name="a-nameattacha--colestreamfileattach"></a><a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>COleStreamFile::Attach  
  將使用提供的 OLE 資料流`COleStreamFile`物件。  
   
 ```  
@@ -108,7 +116,7 @@ void Attach(LPSTREAM lpStream);
   
  如需詳細資訊，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecolestreamfilea--colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
  建立 `COleStreamFile` 物件。  
   
 ```  
@@ -124,7 +132,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  如需詳細資訊，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecreatememorystreama--colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
  安全地建立新的資料流通用的共用記憶體不足其中失敗是正常且預期的情況。  
   
 ```  
@@ -143,7 +151,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  如需詳細資訊，請參閱[CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namecreatestreama--colestreamfilecreatestream"></a><a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>COleStreamFile::CreateStream  
  提供的儲存體物件，其中失敗是正常且預期的情況中，安全地建立新的資料流。  
   
 ```  
@@ -175,7 +183,7 @@ BOOL CreateStream(
   
  如需詳細資訊，請參閱[IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedetacha--colestreamfiledetach"></a><a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>COleStreamFile::Detach  
  解除關聯物件的資料流，而不需要關閉資料流。  
   
 ```  
@@ -190,7 +198,7 @@ LPSTREAM Detach();
   
  如需詳細資訊，請參閱[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetstreama--colestreamfilegetstream"></a><a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>COleStreamFile::GetStream  
  呼叫此函式來傳回目前資料流的指標。  
   
 ```  
@@ -200,7 +208,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>傳回值  
  目前資料流介面的指標 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))。  
   
-##  <a name="a-nameopenstreama--colestreamfileopenstream"></a><a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>COleStreamFile::OpenStream  
  開啟現有的資料流。  
   
 ```  

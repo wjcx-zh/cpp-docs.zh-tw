@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IPointerInactiveImpl
+- ATLCTL/ATL::IPointerInactiveImpl
+- ATLCTL/ATL::IPointerInactiveImpl::GetActivationPolicy
+- ATLCTL/ATL::IPointerInactiveImpl::OnInactiveMouseMove
+- ATLCTL/ATL::IPointerInactiveImpl::OnInactiveSetCursor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -85,7 +89,7 @@ class IPointerInactiveImpl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namegetactivationpolicya--ipointerinactiveimplgetactivationpolicy"></a><a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
  擷取物件目前的啟用原則。  
   
 ```
@@ -98,7 +102,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoninactivemousemovea--ipointerinactiveimploninactivemousemove"></a><a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
  將滑鼠指標移過它，表示物件的物件可以引發滑鼠事件的通知。  
   
 ```
@@ -115,7 +119,7 @@ HRESULT OnInactiveMouseMove(
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoninactivesetcursora--ipointerinactiveimploninactivesetcursor"></a><a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
  設定滑鼠指標為非作用中的物件。  
   
 ```

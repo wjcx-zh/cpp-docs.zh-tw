@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceObjectWindowlessImpl
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::GetDropTarget
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::GetWindow
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::OnWindowMessage
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::SetObjectRects
+- ATLCTL/ATL::IOleInPlaceObjectWindowlessImpl::UIDeactivate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +98,7 @@ class IOleInPlaceObjectWindowlessImpl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namecontextsensitivehelpa--ioleinplaceobjectwindowlessimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>IOleInPlaceObjectWindowlessImpl::ContextSensitiveHelp  
  傳回**E_NOTIMPL**。  
   
 ```
@@ -99,7 +108,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>備註  
  請參閱[IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdroptargeta--ioleinplaceobjectwindowlessimplgetdroptarget"></a><a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
+##  <a name="getdroptarget"></a>IOleInPlaceObjectWindowlessImpl::GetDropTarget  
  傳回**E_NOTIMPL**。  
   
 ```
@@ -109,7 +118,7 @@ HRESULT GetDropTarget(IDropTarget** ppDropTarget);
 ### <a name="remarks"></a>備註  
  請參閱[IOleInPlaceObjectWindowless::GetDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms678535)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetwindowa--ioleinplaceobjectwindowlessimplgetwindow"></a><a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
+##  <a name="getwindow"></a>IOleInPlaceObjectWindowlessImpl::GetWindow  
  容器會呼叫此函式可取得控制項的視窗控制代碼。  
   
 ```
@@ -121,7 +130,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  請參閱[IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameinplacedeactivatea--ioleinplaceobjectwindowlessimplinplacedeactivate"></a><a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
+##  <a name="inplacedeactivate"></a>IOleInPlaceObjectWindowlessImpl::InPlaceDeactivate  
  若要停用就地現用控制項容器呼叫。  
   
 ```
@@ -133,7 +142,7 @@ HRESULT InPlaceDeactivate(HWND* phwnd);
   
  請參閱[IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonwindowmessagea--ioleinplaceobjectwindowlessimplonwindowmessage"></a><a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
+##  <a name="onwindowmessage"></a>IOleInPlaceObjectWindowlessImpl::OnWindowMessage  
  分派容器是就地啟用作用中的無視窗控制項的訊息。  
   
 ```
@@ -147,7 +156,7 @@ HRESULT OnWindowMessage(
 ### <a name="remarks"></a>備註  
  請參閱[IOleInPlaceObjectWindowless::OnWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms693783)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namereactivateandundoa--ioleinplaceobjectwindowlessimplreactivateandundo"></a><a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>IOleInPlaceObjectWindowlessImpl::ReactivateAndUndo  
  傳回**E_NOTIMPL**。  
   
 ```
@@ -157,7 +166,7 @@ HRESULT ReactivateAndUndo();
 ### <a name="remarks"></a>備註  
  請參閱[IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetobjectrectsa--ioleinplaceobjectwindowlessimplsetobjectrects"></a><a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
+##  <a name="setobjectrects"></a>IOleInPlaceObjectWindowlessImpl::SetObjectRects  
  呼叫以通知其大小和 （或） 位置已變更的控制項容器。  
   
 ```
@@ -169,7 +178,7 @@ HRESULT SetObjectRects(LPCRECT prcPos, LPCRECT prcClip);
   
  請參閱[IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameuideactivatea--ioleinplaceobjectwindowlessimpluideactivate"></a><a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
+##  <a name="uideactivate"></a>IOleInPlaceObjectWindowlessImpl::UIDeactivate  
  停用和移除控制項的使用者介面支援就地啟動。  
   
 ```

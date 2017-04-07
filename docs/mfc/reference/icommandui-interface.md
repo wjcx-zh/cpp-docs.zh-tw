@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - ICommandUI
+- AFXWINFORMS/ICommandUI
+- AFXWINFORMS/icommandui__Check
+- AFXWINFORMS/ICommandUI::ContinueRouting
+- AFXWINFORMS/ICommandUI::Enabled
+- AFXWINFORMS/ICommandUI::ID
+- AFXWINFORMS/ICommandUI::Index
+- AFXWINFORMS/ICommandUI::Radio
+- AFXWINFORMS/ICommandUI::Text
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +81,7 @@ interface class ICommandUI
   
  如需有關使用者介面的命令在 MFC 中的管理方式的詳細資訊，請參閱[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)。  
   
-## <a name="a-namechecka-icommanduicheck"></a><a name="check"></a>ICommandUI::Check  
+## <a name="check"></a>ICommandUI::Check  
 將此命令的使用者介面項目設定為適當的核取狀態。
 ```
 property UICheckState Check;
@@ -84,7 +92,7 @@ property UICheckState Check;
 - 1 檢查  
 - 不確定設定&2;  
 
-## <a name="a-namecontinueroutinga-icommanduicontinuerouting"></a><a name="continuerouting"></a>ICommandUI::ContinueRouting   
+## <a name="continuerouting"></a>ICommandUI::ContinueRouting   
 會告知命令路由機制，繼續傳送處理常式的鏈結中向下目前的訊息。
 ```
 void ContinueRouting();
@@ -92,7 +100,7 @@ void ContinueRouting();
 ## <a name="remarks"></a>備註
 這是進階的成員函式應該會傳回 FALSE ON_COMMAND_EX 處理常式的搭配使用。 如需詳細資訊，請參閱技術附註 TN006︰ 訊息對應。
 
-## <a name="a-nameenableda-icommanduienabled"></a><a name="enabled"></a>ICommandUI::Enabled 
+## <a name="enabled"></a>ICommandUI::Enabled 
 啟用或停用使用者介面項目，此命令。
 ```
 property bool Enabled;
@@ -100,7 +108,7 @@ property bool Enabled;
 ## <a name="remarks"></a>備註
 這個屬性會啟用或停用使用者介面項目，此命令。 設定 啟用，以 true，讓項目，為 false，則將它停用。
 
-## <a name="a-nameida-icommanduiid"></a><a name="id"></a>ICommandUI::ID  
+## <a name="id"></a>ICommandUI::ID  
 取得 ICommandUI 物件所代表的使用者介面物件的識別碼。
 ```
 property unsigned int ID;
@@ -108,7 +116,7 @@ property unsigned int ID;
 ## <a name="remarks"></a>備註
 這個屬性會取得功能表項目、 工具列按鈕或其他 ICommandUI 物件所代表的使用者介面物件的識別碼 （處理）。
 
-## <a name="a-nameindexa-icommanduiindex"></a><a name="index"></a>ICommandUI::Index   
+## <a name="index"></a>ICommandUI::Index   
 取得 ICommandUI 物件所代表的使用者介面物件的索引。
 ```
 property unsigned int Index;
@@ -116,7 +124,7 @@ property unsigned int Index;
 ## <a name="remarks"></a>備註
 這個屬性會取得功能表項目、 工具列按鈕或其他 ICommandUI 物件所代表的使用者介面物件的索引 （處理）。
 
-## <a name="a-nameradioa-icommanduiradio"></a><a name="radio"></a>ICommandUI::Radio 
+## <a name="radio"></a>ICommandUI::Radio 
 將此命令的使用者介面項目設定為適當的核取狀態。
 ```
 property bool Radio;
@@ -124,7 +132,7 @@ property bool Radio;
 ## <a name="remarks"></a>備註
 此屬性設定為適當的核取狀態的使用者介面項目，此命令。 如果為 true 則啟用項目; 設定電台否則為 FALSE。
 
-## <a name="a-nametexta-icommanduitext"></a><a name="text"></a>ICommandUI::Text 
+## <a name="text"></a>ICommandUI::Text 
 設定使用者介面項目，此命令的文字。
 ```
 property String^ Text;

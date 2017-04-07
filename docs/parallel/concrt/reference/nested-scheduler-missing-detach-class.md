@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::nested_scheduler_missing_detach
+- nested_scheduler_missing_detach
+- CONCRT/concurrency::nested_scheduler_missing_detach
+- CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 0079fea0b157e194947931f88d1cb500167cb6e2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 7ab8dc3761c6f11529b70ec4d71bbaebdfea0493
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 類別
@@ -52,9 +54,9 @@ class nested_scheduler_missing_detach : public std::exception;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[nested_scheduler_missing_detach 建構函式](#ctor)|多載。 建構 `nested_scheduler_missing_detach` 物件。|  
+|[nested_scheduler_missing_detach](#ctor)|多載。 建構 `nested_scheduler_missing_detach` 物件。|  
   
 ## <a name="remarks"></a>備註  
  當您在已由其他排程器擁有或附加的內容上呼叫 `Attach` 物件的`Scheduler` 方法，將排程器巢狀排列在另一個排程器內時，才會擲回這個例外狀況。 並行執行階段會擲回這個例外狀況 」 時，它可以偵測案例來協助找出問題。 並非每個執行個體上隻字未呼叫`CurrentScheduler::Detach`方法一定會擲回這個例外狀況。  
@@ -69,7 +71,7 @@ class nested_scheduler_missing_detach : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-nestedschedulermissingdetach"></a><a name="ctor"></a>nested_scheduler_missing_detach 
+##  <a name="ctor"></a>nested_scheduler_missing_detach 
 
  建構 `nested_scheduler_missing_detach` 物件。  
   

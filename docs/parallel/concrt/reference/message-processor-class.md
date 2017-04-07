@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- agents/concurrency::message_processor
+- message_processor
+- AGENTS/concurrency::message_processor
+- AGENTS/concurrency::message_processor::async_send
+- AGENTS/concurrency::message_processor::sync_send
+- AGENTS/concurrency::message_processor::wait
+- AGENTS/concurrency::message_processor::process_incoming_message
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 98f1c1072916c4cf3670e40ce0c6ddd1a17f1b63
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="messageprocessor-class"></a>message_processor 類別
@@ -57,23 +62,23 @@ class message_processor;
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`type`|類型別名`T`。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[async_send 方法](#async_send)|在衍生類別中覆寫，將訊息置於區塊以非同步的方式。|  
-|[sync_send 方法](#sync_send)|在衍生類別中覆寫，將訊息置於區塊以同步方式。|  
-|[wait 方法](#wait)|當在衍生類別中覆寫時，會等到所有非同步作業完成。|  
+|[async_send](#async_send)|在衍生類別中覆寫，將訊息置於區塊以非同步的方式。|  
+|[sync_send](#sync_send)|在衍生類別中覆寫，將訊息置於區塊以同步方式。|  
+|[等候](#wait)|當在衍生類別中覆寫時，會等到所有非同步作業完成。|  
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[process_incoming_message 方法](#process_incoming_message)|當在衍生類別中覆寫時，會執行到區塊轉寄訊息的處理。 每次新增了新的訊息，並發現佇列是空的呼叫一次。|  
+|[process_incoming_message](#process_incoming_message)|當在衍生類別中覆寫時，會執行到區塊轉寄訊息的處理。 每次新增了新的訊息，並發現佇列是空的呼叫一次。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `message_processor`  
@@ -83,7 +88,7 @@ class message_processor;
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameasyncsenda-asyncsend"></a><a name="async_send"></a>async_send 
+##  <a name="async_send"></a>async_send 
 
  在衍生類別中覆寫，將訊息置於區塊以非同步的方式。  
   
@@ -98,7 +103,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>備註  
  處理器實作應該覆寫這個方法。  
   
-##  <a name="a-nameprocessincomingmessagea-processincomingmessage"></a><a name="process_incoming_message"></a>process_incoming_message 
+##  <a name="process_incoming_message"></a>process_incoming_message 
 
  當在衍生類別中覆寫時，會執行到區塊轉寄訊息的處理。 每次新增了新的訊息，並發現佇列是空的呼叫一次。  
   
@@ -109,7 +114,7 @@ virtual void process_incoming_message() = 0;
 ### <a name="remarks"></a>備註  
  訊息區塊實作應該覆寫這個方法。  
   
-##  <a name="a-namesyncsenda-syncsend"></a><a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a>sync_send 
 
  在衍生類別中覆寫，將訊息置於區塊以同步方式。  
   
@@ -124,7 +129,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="remarks"></a>備註  
  處理器實作應該覆寫這個方法。  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>等候 
+##  <a name="wait"></a>等候 
 
  當在衍生類別中覆寫時，會等到所有非同步作業完成。  
   

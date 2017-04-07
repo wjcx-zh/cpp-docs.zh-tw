@@ -10,10 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
-- ATL.CDefaultHashTraits<T>
-- ATL::CDefaultHashTraits<T>
-- ATL.CDefaultHashTraits
-- ATL::CDefaultHashTraits
+- ATLCOLL/ATL::CDefaultHashTraits
+- ATLCOLL/ATL::CDefaultHashTraits::Hash
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -73,7 +71,7 @@ class CDefaultHashTraits
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-namehasha--cdefaulthashtraitshash"></a><a name="hash"></a>CDefaultHashTraits::Hash  
+##  <a name="hash"></a>CDefaultHashTraits::Hash  
  呼叫此函式來計算雜湊值的指定項目。  
   
 ```

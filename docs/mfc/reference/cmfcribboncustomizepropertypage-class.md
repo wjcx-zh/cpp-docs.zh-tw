@@ -9,16 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- GetThisClass
-- CMFCRibbonCustomizePropertyPage::CreateObject
 - CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage.GetThisClass
-- CMFCRibbonCustomizePropertyPage.CreateObject
-- ~CMFCRibbonCustomizePropertyPage
-- CreateObject
-- CMFCRibbonCustomizePropertyPage.~CMFCRibbonCustomizePropertyPage
-- CMFCRibbonCustomizePropertyPage::GetThisClass
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::AddCustomCategory
+- AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizePropertyPage::OnOK
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -107,7 +102,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="requirements"></a>需求  
  **標頭︰** afxribboncustomizedialog.h  
   
-##  <a name="a-nameaddcustomcategorya--cmfcribboncustomizepropertypageaddcustomcategory"></a><a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  新增自訂的類別，以**命令**下拉式方塊。  
   
 ```  
@@ -127,7 +122,7 @@ void AddCustomCategory(
 ### <a name="remarks"></a>備註  
  這個方法會加入名為類別目錄`lpszName`至**命令**下拉式方塊。 當使用者選取類別目錄時，命令中指定`lstIDS`出現在 [命令] 清單中。  
   
-##  <a name="a-namecmfcribboncustomizepropertypagea--cmfcribboncustomizepropertypagecmfcribboncustomizepropertypage"></a><a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  建構 `CMFCRibbonCustomizePropertyPage` 物件。  
   
 ```  
@@ -138,7 +133,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
  [in] `pRibbonBar`  
  在功能區控制項的指標選項來自訂。  
   
-##  <a name="a-nameonoka--cmfcribboncustomizepropertypageonok"></a><a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
  當使用者按一下系統 Calleld**確定**上**自訂**對話方塊。  
   
 ```  

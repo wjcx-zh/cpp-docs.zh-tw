@@ -9,9 +9,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CTime
 - CTime
-- ATL::CTime
+- ATLTIME/ATL::CTime
+- ATLTIME/ATL::CTime::CTime
+- ATLTIME/ATL::CTime::Format
+- ATLTIME/ATL::CTime::FormatGmt
+- ATLTIME/ATL::CTime::GetAsDBTIMESTAMP
+- ATLTIME/ATL::CTime::GetAsSystemTime
+- ATLTIME/ATL::CTime::GetCurrentTime
+- ATLTIME/ATL::CTime::GetDay
+- ATLTIME/ATL::CTime::GetDayOfWeek
+- ATLTIME/ATL::CTime::GetGmtTm
+- ATLTIME/ATL::CTime::GetHour
+- ATLTIME/ATL::CTime::GetLocalTm
+- ATLTIME/ATL::CTime::GetMinute
+- ATLTIME/ATL::CTime::GetMonth
+- ATLTIME/ATL::CTime::GetSecond
+- ATLTIME/ATL::CTime::GetTime
+- ATLTIME/ATL::CTime::GetYear
+- ATLTIME/ATL::CTime::Serialize64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -111,7 +127,7 @@ class CTime
 ## <a name="requirements"></a>需求  
  **標頭︰** atltime.h  
   
-##  <a name="a-namectimecomparisonoperatorsa--ctime-comparison-operators"></a><a name="ctime_comparison_operators"></a>CTime 比較運算子  
+##  <a name="ctime_comparison_operators"></a>CTime 比較運算子  
  比較運算子。  
   
 ```  
@@ -133,7 +149,7 @@ bool operator>=(CTime time) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&161;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_1.cpp)]  
   
-##  <a name="a-namectimea--ctimectime"></a><a name="ctime"></a>CTime::CTime  
+##  <a name="ctime"></a>CTime::CTime  
  建立新`CTime`物件初始化使用指定的時間。  
   
 ```  
@@ -216,7 +232,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&148;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_2.cpp)]  
   
-##  <a name="a-nameformata--ctimeformat"></a><a name="format"></a>CTime::Format  
+##  <a name="format"></a>CTime::Format  
  呼叫此成員函式建立的日期時間值的格式的表示。  
   
 ```  
@@ -242,7 +258,7 @@ CString Format(UINT nFormatID) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&149;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_3.cpp)]  
   
-##  <a name="a-nameformatgmta--ctimeformatgmt"></a><a name="formatgmt"></a>CTime::FormatGmt  
+##  <a name="formatgmt"></a>CTime::FormatGmt  
  產生對應至此的格式化的字串`CTime`物件。  
   
 ```  
@@ -268,7 +284,7 @@ CString FormatGmt(UINT nFormatID) const;
 ### <a name="example"></a>範例  
  請參閱範例[CTime::Format](#format)。  
   
-##  <a name="a-namegetasdbtimestampa--ctimegetasdbtimestamp"></a><a name="getasdbtimestamp"></a>CTime::GetAsDBTIMESTAMP  
+##  <a name="getasdbtimestamp"></a>CTime::GetAsDBTIMESTAMP  
  呼叫此成員函式，將時間資訊儲存在轉換`CTime`Win32 相容的 DBTIMESTAMP 結構的物件。  
   
 ```  
@@ -288,7 +304,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&150;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_4.cpp)]  
   
-##  <a name="a-namegetassystemtimea--ctimegetassystemtime"></a><a name="getassystemtime"></a>CTime::GetAsSystemTime  
+##  <a name="getassystemtime"></a>CTime::GetAsSystemTime  
  呼叫此成員函式，將時間資訊儲存在轉換`CTime`Win32 相容的物件[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構。  
   
 ```  
@@ -308,7 +324,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&151;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_5.cpp)]  
   
-##  <a name="a-namegetcurrenttimea--ctimegetcurrenttime"></a><a name="getcurrenttime"></a>CTime::GetCurrentTime  
+##  <a name="getcurrenttime"></a>CTime::GetCurrentTime  
  傳回`CTime`物件，代表目前的時間。  
   
 ```  
@@ -321,7 +337,7 @@ static CTime WINAPI GetCurrentTime() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&152;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_6.cpp)]  
   
-##  <a name="a-namegetdaya--ctimegetday"></a><a name="getday"></a>CTime::GetDay  
+##  <a name="getday"></a>CTime::GetDay  
  傳回由天代表`CTime`物件。  
   
 ```  
@@ -337,7 +353,7 @@ int GetDay() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&153;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_7.cpp)]  
   
-##  <a name="a-namegetdayofweeka--ctimegetdayofweek"></a><a name="getdayofweek"></a>CTime::GetDayOfWeek  
+##  <a name="getdayofweek"></a>CTime::GetDayOfWeek  
  傳回所代表的一週天數`CTime`物件。  
   
 ```  
@@ -353,7 +369,7 @@ int GetDayOfWeek() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&154;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_8.cpp)]  
   
-##  <a name="a-namegetgmttma--ctimegetgmttm"></a><a name="getgmttm"></a>CTime::GetGmtTm  
+##  <a name="getgmttm"></a>CTime::GetGmtTm  
  取得**結構 tm** ，其中包含含在此時間的分解`CTime`物件。  
   
 ```  
@@ -375,7 +391,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&155;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_9.cpp)]  
   
-##  <a name="a-namegethoura--ctimegethour"></a><a name="gethour"></a>CTime::GetHour  
+##  <a name="gethour"></a>CTime::GetHour  
  傳回所代表之小時`CTime`物件。  
   
 ```  
@@ -391,7 +407,7 @@ int GetHour() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&156;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_10.cpp)]  
   
-##  <a name="a-namegetlocaltma--ctimegetlocaltm"></a><a name="getlocaltm"></a>CTime::GetLocalTm  
+##  <a name="getlocaltm"></a>CTime::GetLocalTm  
  取得**結構 tm**包含含在此時間的分解`CTime`物件。  
   
 ```  
@@ -413,7 +429,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&157;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_11.cpp)]  
   
-##  <a name="a-namegetminutea--ctimegetminute"></a><a name="getminute"></a>CTime::GetMinute  
+##  <a name="getminute"></a>CTime::GetMinute  
  傳回時間值所表示分鐘`CTime`物件。  
   
 ```  
@@ -429,7 +445,7 @@ int GetMinute() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[GetHour](#gethour)。  
   
-##  <a name="a-namegetmontha--ctimegetmonth"></a><a name="getmonth"></a>CTime::GetMonth  
+##  <a name="getmonth"></a>CTime::GetMonth  
  傳回所代表的當月`CTime`物件。  
   
 ```  
@@ -445,7 +461,7 @@ int GetMonth() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[GetDay](#getday)。  
   
-##  <a name="a-namegetseconda--ctimegetsecond"></a><a name="getsecond"></a>CTime::GetSecond  
+##  <a name="getsecond"></a>CTime::GetSecond  
  傳回由第二個`CTime`物件。  
   
 ```  
@@ -461,7 +477,7 @@ int GetSecond() const throw();
 ### <a name="example"></a>範例  
  請參閱範例[GetHour](#gethour)。  
   
-##  <a name="a-namegettimea--ctimegettime"></a><a name="gettime"></a>CTime::GetTime  
+##  <a name="gettime"></a>CTime::GetTime  
  傳回**__time64_t**值指定`CTime`物件。  
   
 ```  
@@ -474,7 +490,7 @@ __time64_t GetTime() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&158;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_12.cpp)]  
   
-##  <a name="a-namegetyeara--ctimegetyear"></a><a name="getyear"></a>CTime::GetYear  
+##  <a name="getyear"></a>CTime::GetYear  
  傳回所表示的年份`CTime`物件。  
   
 ```  
@@ -490,7 +506,7 @@ int GetYear();
 ### <a name="example"></a>範例  
  請參閱範例[GetDay](#getday)。  
   
-##  <a name="a-nameoperatoreqa--ctimeoperator-"></a><a name="operator_eq"></a>CTime::operator =  
+##  <a name="operator_eq"></a>CTime::operator =  
  指派運算子。  
   
 ```  
@@ -507,7 +523,7 @@ CTime& operator=(__time64_t time) throw();
 ### <a name="remarks"></a>備註  
  這個多載的指派運算子會將來源時間複製到這`CTime`物件。 中的內部時間儲存體`CTime`時區物件無關。 在設定期間，不需要進行時區轉換。  
   
-##  <a name="a-nameoperatoradd-a--ctimeoperator---"></a><a name="operator_add_-"></a>CTime::operator +、-  
+##  <a name="operator_add_-"></a>CTime::operator +、-  
  這些運算子加號和減號運算子`CTimeSpan`和`CTime`物件。  
   
 ```  
@@ -532,7 +548,7 @@ CTimeSpan operator-(CTime time) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&159;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_13.cpp)]  
   
-##  <a name="a-nameoperatoraddeq-eqa--ctimeoperator---"></a><a name="operator_add_eq_-_eq"></a>CTime::operator + =、 =  
+##  <a name="operator_add_eq_-_eq"></a>CTime::operator + =、 =  
  這些運算子加號和減號運算子`CTimeSpan`物件與此`CTime`物件。  
   
 ```  
@@ -553,7 +569,7 @@ CTime& operator-=(CTimeSpan span) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities #&160;](../../atl-mfc-shared/codesnippet/cpp/ctime-class_14.cpp)]  
   
-##  <a name="a-nameserialize64a--ctimeserialize64"></a><a name="serialize64"></a>CTime::Serialize64  
+##  <a name="serialize64"></a>CTime::Serialize64  
   
 > [!NOTE]
 >  這個方法僅在 MFC 專案中。  

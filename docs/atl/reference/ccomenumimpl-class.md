@@ -9,9 +9,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComEnumImpl
-- ATL::CComEnumImpl
 - CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::CComEnumImpl
+- ATLCOM/ATL::CComEnumImpl::Clone
+- ATLCOM/ATL::CComEnumImpl::Init
+- ATLCOM/ATL::CComEnumImpl::Next
+- ATLCOM/ATL::CComEnumImpl::Reset
+- ATLCOM/ATL::CComEnumImpl::Skip
+- ATLCOM/ATL::CComEnumImpl::m_begin
+- ATLCOM/ATL::CComEnumImpl::m_dwFlags
+- ATLCOM/ATL::CComEnumImpl::m_end
+- ATLCOM/ATL::CComEnumImpl::m_iter
+- ATLCOM/ATL::CComEnumImpl::m_spUnk
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,21 +124,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameccomenumimpla--ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
  建構函式。  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="a-namedtora--ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
  解構函式。  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="a-nameinita--ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>CComEnumImpl::Init  
  您必須呼叫這個方法之前將指標傳遞給任何用戶端的列舉程式介面。  
   
 ```
@@ -162,17 +172,14 @@ HRESULT Init(
   
  `flags`參數可讓您指定列舉值應該如何處理傳遞給它的陣列元素。 `flags`可能需要從值的其中一個**CComEnumFlags**列舉型別，如下所示︰  
   
- `enum CComEnumFlags`  
-  
- `{`  
-  
- `AtlFlagNoCopy = 0,`  
-  
- `AtlFlagTakeOwnership = 2, // BitOwn`  
-  
- `AtlFlagCopy = 3           // BitOwn | BitCopy`  
-  
- `};`  
+```  
+enum CComEnumFlags  
+   {  
+   AtlFlagNoCopy = 0,  
+   AtlFlagTakeOwnership = 2, // BitOwn  
+   AtlFlagCopy = 3           // BitOwn | BitCopy  
+   };  
+```  
   
  **AtlFlagNoCopy**表示陣列的存留期不會受到列舉值。 在此情況下，其中一個陣列會是靜態或所識別的物件*pUnk*負責在不再需要時釋放陣列。  
   
@@ -183,7 +190,7 @@ HRESULT Init(
 > [!NOTE]
 >  這個方法的原型指定陣列元素為型別**T**，其中**T**定義為類別樣板參數。 這是相同的型別公開的 COM 介面方法透過[CComEnumImpl::Next](#next)。 這是，不同於[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)，這個類別不支援不同的儲存體和公開資料型別。 陣列中元素的資料型別必須是透過 COM 介面公開的資料類型相同。  
   
-##  <a name="a-nameclonea--ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>CComEnumImpl::Clone  
  這個方法提供實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)方法藉由建立型別的物件`CComEnum`，初始化具有相同的陣列和迭代器使用目前的物件，並傳回新建立的物件上的介面。  
   
 ```
@@ -200,42 +207,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>備註  
  請注意，複製的列舉值永遠不會讓他們自己使用原始的列舉值的資料複本 （或取得所有權 」）。 如有必要，複製的列舉值將保持原始的列舉值 （使用 COM 參考），只要在需要確保資料可供。  
   
-##  <a name="a-namemspunka--ccomenumimplmspunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
  這個智慧型指標會維持物件傳遞至參考[CComEnumImpl::Init](#init)，確保它運作的列舉值的存留期間。  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="a-namembegina--ccomenumimplmbegin"></a><a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>CComEnumImpl::m_begin  
  最後一個元素的陣列，包含要列舉的項目之外的位置指標。  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="a-namemenda--ccomenumimplmend"></a><a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>CComEnumImpl::m_end  
  第一個項目，其中包含要列舉之項目的陣列的指標。  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="a-namemitera--ccomenumimplmiter"></a><a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>CComEnumImpl::m_iter  
  目前的項目，其中包含要列舉之項目的陣列的指標。  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="a-namemdwflagsa--ccomenumimplmdwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
  旗標傳遞給[CComEnumImpl::Init](#init)。  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="a-namenexta--ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>CComEnumImpl::Next  
  這個方法提供實作[IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx)方法。  
   
 ```
@@ -255,7 +262,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namereseta--ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>CComEnumImpl::Reset  
  這個方法提供實作[IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx)方法。  
   
 ```
@@ -265,7 +272,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-nameskipa--ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl::Skip  
+##  <a name="skip"></a>CComEnumImpl::Skip  
  這個方法提供實作[IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx)方法。  
   
 ```

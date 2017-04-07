@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::CHtmlEditCtrl
+- AFXHTML/CHtmlEditCtrl::Create
+- AFXHTML/CHtmlEditCtrl::GetDHtmlDocument
+- AFXHTML/CHtmlEditCtrl::GetStartDocument
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,14 +87,14 @@ class CHtmlEditCtrl: public CWnd,
 ## <a name="requirements"></a>需求  
  **Header:** afxhtml.h  
   
-##  <a name="a-namechtmleditctrla--chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
+##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
  建構 `CHtmlEditCtrl` 物件。  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="a-namecreatea--chtmleditctrlcreate"></a><a name="create"></a>CHtmlEditCtrl::Create  
+##  <a name="create"></a>CHtmlEditCtrl::Create  
  建立 WebBrowser ActiveX 控制項並將它附加`CHtmlEditCtrl`物件。 WebBrowser ActiveX 控制項自動瀏覽至預設文件，並將其放在編輯模式，此函式。  
   
 ```  
@@ -124,7 +129,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  傳回**TRUE**成功時， **FALSE**失敗。  
   
-##  <a name="a-namegetdhtmldocumenta--chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
  擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)內含的 WebBrowser 控制項中目前載入的文件上的介面  
   
 ```  
@@ -135,7 +140,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  文件介面中。  
   
-##  <a name="a-namegetstartdocumenta--chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
+##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
  擷取預設文件載入所包含的 WebBrowser 控制項中的 URL。  
   
 ```  

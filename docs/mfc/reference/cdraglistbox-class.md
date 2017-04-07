@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDragListBox
+- AFXCMN/CDragListBox
+- AFXCMN/CDragListBox::CDragListBox
+- AFXCMN/CDragListBox::BeginDrag
+- AFXCMN/CDragListBox::CancelDrag
+- AFXCMN/CDragListBox::Dragging
+- AFXCMN/CDragListBox::DrawInsert
+- AFXCMN/CDragListBox::Dropped
+- AFXCMN/CDragListBox::ItemFromPt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +102,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="a-namebegindraga--cdraglistboxbegindrag"></a><a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>CDragListBox::BeginDrag  
  由呼叫 framework 發生事件時，就可以開始拖曳作業，例如按下滑鼠左鍵。  
   
 ```  
@@ -111,7 +119,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>備註  
  如果您想要控制在拖曳作業開始時，會發生什麼事，請覆寫這個函式。 預設實作會捕捉到滑鼠，並且會保持在拖曳模式，直到使用者按下滑鼠左鍵或向右按鈕或按 esc 鍵，此時取消拖曳作業。  
   
-##  <a name="a-namecanceldraga--cdraglistboxcanceldrag"></a><a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
  在取消拖曳作業時，由架構呼叫。  
   
 ```  
@@ -125,14 +133,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>備註  
  覆寫這個函式來處理您的清單方塊控制項的任何特殊處理。  
   
-##  <a name="a-namecdraglistboxa--cdraglistboxcdraglistbox"></a><a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
  建構 `CDragListBox` 物件。  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="a-namedragginga--cdraglistboxdragging"></a><a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>CDragListBox::Dragging  
  當被拖曳的清單方塊項目內，由框架呼叫`CDragListBox`物件。  
   
 ```  
@@ -155,7 +163,7 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="remarks"></a>備註  
  預設行為會傳回`DL_MOVECURSOR`。 如果您想要提供額外的功能，請覆寫這個函式。  
   
-##  <a name="a-namedrawinserta--cdraglistboxdrawinsert"></a><a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
  若要繪製具有指定索引的項目之前插入輔助線架構呼叫。  
   
 ```  
@@ -169,7 +177,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>備註  
  值為-1 會清除插入輔助線。 覆寫此函式可修改的外觀或行為插入輔助線。  
   
-##  <a name="a-namedroppeda--cdraglistboxdropped"></a><a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>CDragListBox::Dropped  
  卸除項目內時，由框架呼叫`CDragListBox`物件。  
   
 ```  
@@ -188,7 +196,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>備註  
  預設行為將清單方塊項目和其資料複製到新位置，，然後刪除原始的項目。 覆寫此函式可自訂的預設行為，例如啟用清單方塊項目拖曳到清單中的其他位置的複本。  
   
-##  <a name="a-nameitemfrompta--cdraglistboxitemfrompt"></a><a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
  呼叫此函式可擷取清單方塊項目的以零為起始的索引位於`pt`。  
   
 ```  

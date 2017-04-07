@@ -10,6 +10,41 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSliderCtrl
+- AFXCMN/CSliderCtrl
+- AFXCMN/CSliderCtrl::CSliderCtrl
+- AFXCMN/CSliderCtrl::ClearSel
+- AFXCMN/CSliderCtrl::ClearTics
+- AFXCMN/CSliderCtrl::Create
+- AFXCMN/CSliderCtrl::CreateEx
+- AFXCMN/CSliderCtrl::GetBuddy
+- AFXCMN/CSliderCtrl::GetChannelRect
+- AFXCMN/CSliderCtrl::GetLineSize
+- AFXCMN/CSliderCtrl::GetNumTics
+- AFXCMN/CSliderCtrl::GetPageSize
+- AFXCMN/CSliderCtrl::GetPos
+- AFXCMN/CSliderCtrl::GetRange
+- AFXCMN/CSliderCtrl::GetRangeMax
+- AFXCMN/CSliderCtrl::GetRangeMin
+- AFXCMN/CSliderCtrl::GetSelection
+- AFXCMN/CSliderCtrl::GetThumbLength
+- AFXCMN/CSliderCtrl::GetThumbRect
+- AFXCMN/CSliderCtrl::GetTic
+- AFXCMN/CSliderCtrl::GetTicArray
+- AFXCMN/CSliderCtrl::GetTicPos
+- AFXCMN/CSliderCtrl::GetToolTips
+- AFXCMN/CSliderCtrl::SetBuddy
+- AFXCMN/CSliderCtrl::SetLineSize
+- AFXCMN/CSliderCtrl::SetPageSize
+- AFXCMN/CSliderCtrl::SetPos
+- AFXCMN/CSliderCtrl::SetRange
+- AFXCMN/CSliderCtrl::SetRangeMax
+- AFXCMN/CSliderCtrl::SetRangeMin
+- AFXCMN/CSliderCtrl::SetSelection
+- AFXCMN/CSliderCtrl::SetThumbLength
+- AFXCMN/CSliderCtrl::SetTic
+- AFXCMN/CSliderCtrl::SetTicFreq
+- AFXCMN/CSliderCtrl::SetTipSide
+- AFXCMN/CSliderCtrl::SetToolTips
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -122,7 +157,7 @@ class CSliderCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="a-nameclearsela--csliderctrlclearsel"></a><a name="clearsel"></a>CSliderCtrl::ClearSel  
+##  <a name="clearsel"></a>CSliderCtrl::ClearSel  
  清除目前的選取範圍中的滑桿控制項。  
   
 ```  
@@ -133,7 +168,7 @@ void ClearSel(BOOL bRedraw = FALSE);
  `bRedraw`  
  重繪旗標。 如果這個參數是**TRUE**，滑桿會重新繪製之後會清除選取範圍, 否則滑動軸不重新繪製。  
   
-##  <a name="a-nameclearticsa--csliderctrlcleartics"></a><a name="cleartics"></a>CSliderCtrl::ClearTics  
+##  <a name="cleartics"></a>CSliderCtrl::ClearTics  
  滑桿控制項，會移除目前的刻度標記。  
   
 ```  
@@ -144,7 +179,7 @@ void ClearTics(BOOL bRedraw = FALSE);
  `bRedraw`  
  重繪旗標。 如果這個參數是**TRUE**，滑桿會重新繪製刻度標記會清除之後; 否則滑動軸不重新繪製。  
   
-##  <a name="a-namecreatea--csliderctrlcreate"></a><a name="create"></a>CSliderCtrl::Create  
+##  <a name="create"></a>CSliderCtrl::Create  
  建立滑桿控制項，並將它附加`CSliderCtrl`物件。  
   
 ```  
@@ -178,7 +213,7 @@ virtual BOOL Create(
   
  若要將延伸的視窗樣式套用至滑桿控制項，呼叫[CreateEx](#createex)而不是**建立**。  
   
-##  <a name="a-namecreateexa--csliderctrlcreateex"></a><a name="createex"></a>CSliderCtrl::CreateEx  
+##  <a name="createex"></a>CSliderCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CSliderCtrl`物件。  
   
 ```  
@@ -212,14 +247,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，指定 Windows 延伸的樣式序言**WS_EX_**。  
   
-##  <a name="a-namecsliderctrla--csliderctrlcsliderctrl"></a><a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
+##  <a name="csliderctrl"></a>CSliderCtrl::CSliderCtrl  
  建構 `CSliderCtrl` 物件。  
   
 ```  
 CSliderCtrl();
 ```  
   
-##  <a name="a-namegetbuddya--csliderctrlgetbuddy"></a><a name="getbuddy"></a>CSliderCtrl::GetBuddy  
+##  <a name="getbuddy"></a>CSliderCtrl::GetBuddy  
  擷取在指定位置的滑桿控制項協同視窗的控制代碼。  
   
 ```  
@@ -240,7 +275,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息的行為[TBM_GETBUDDY](http://msdn.microsoft.com/library/windows/desktop/bb760178)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 滑桿控制項樣式的說明，請參閱[Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetchannelrecta--csliderctrlgetchannelrect"></a><a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
+##  <a name="getchannelrect"></a>CSliderCtrl::GetChannelRect  
  擷取的大小和位置，這個周框的滑桿控制項的通道。  
   
 ```  
@@ -254,7 +289,7 @@ void GetChannelRect(LPRECT lprc) const;
 ### <a name="remarks"></a>備註  
  通道是透過將滑桿移和其中包含反白顯示的選取範圍時的區域。  
   
-##  <a name="a-namegetlinesizea--csliderctrlgetlinesize"></a><a name="getlinesize"></a>CSliderCtrl::GetLineSize  
+##  <a name="getlinesize"></a>CSliderCtrl::GetLineSize  
  擷取的程式行，滑桿控制項的大小。  
   
 ```  
@@ -267,7 +302,7 @@ int GetLineSize() const;
 ### <a name="remarks"></a>備註  
  線條大小會影響多少滑桿移動的**TB_LINEUP**和**TB_LINEDOWN**通知。 線條大小的預設值為 1。  
   
-##  <a name="a-namegetnumticsa--csliderctrlgetnumtics"></a><a name="getnumtics"></a>CSliderCtrl::GetNumTics  
+##  <a name="getnumtics"></a>CSliderCtrl::GetNumTics  
  擷取滑桿控制項中的刻度數。  
   
 ```  
@@ -277,7 +312,7 @@ UINT GetNumTics() const;
 ### <a name="return-value"></a>傳回值  
  滑桿控制項中的刻度數。  
   
-##  <a name="a-namegetpagesizea--csliderctrlgetpagesize"></a><a name="getpagesize"></a>CSliderCtrl::GetPageSize  
+##  <a name="getpagesize"></a>CSliderCtrl::GetPageSize  
  擷取滑桿控制項的頁面的大小。  
   
 ```  
@@ -290,7 +325,7 @@ int GetPageSize() const;
 ### <a name="remarks"></a>備註  
  多少滑桿移動的頁面大小會影響**TB_PAGEUP**和**TB_PAGEDOWN**通知。  
   
-##  <a name="a-namegetposa--csliderctrlgetpos"></a><a name="getpos"></a>CSliderCtrl::GetPos  
+##  <a name="getpos"></a>CSliderCtrl::GetPos  
  擷取滑桿的滑桿控制項中目前的位置。  
   
 ```  
@@ -300,7 +335,7 @@ int GetPos() const;
 ### <a name="return-value"></a>傳回值  
  目前位置。  
   
-##  <a name="a-namegetrangea--csliderctrlgetrange"></a><a name="getrange"></a>CSliderCtrl::GetRange  
+##  <a name="getrange"></a>CSliderCtrl::GetRange  
  擷取滑桿控制項在滑桿的最大和最小位置。  
   
 ```  
@@ -319,7 +354,7 @@ void GetRange(
 ### <a name="remarks"></a>備註  
  此函式將值複製到所參考的整數`nMin`和`nMax`。  
   
-##  <a name="a-namegetrangemaxa--csliderctrlgetrangemax"></a><a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
+##  <a name="getrangemax"></a>CSliderCtrl::GetRangeMax  
  擷取滑桿控制項中的最大位置。  
   
 ```  
@@ -329,7 +364,7 @@ int GetRangeMax() const;
 ### <a name="return-value"></a>傳回值  
  控制項的最大的位置。  
   
-##  <a name="a-namegetrangemina--csliderctrlgetrangemin"></a><a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
+##  <a name="getrangemin"></a>CSliderCtrl::GetRangeMin  
  擷取滑桿控制項中的最小位置。  
   
 ```  
@@ -339,7 +374,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>傳回值  
  控制項的最小位置。  
   
-##  <a name="a-namegetselectiona--csliderctrlgetselection"></a><a name="getselection"></a>CSliderCtrl::GetSelection  
+##  <a name="getselection"></a>CSliderCtrl::GetSelection  
  擷取滑桿控制項中目前的選取範圍的開始和結束位置。  
   
 ```  
@@ -355,7 +390,7 @@ void GetSelection(
  `nMax`  
  接收目前的選取範圍的結束位置的整數的參考。  
   
-##  <a name="a-namegetthumblengtha--csliderctrlgetthumblength"></a><a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
+##  <a name="getthumblength"></a>CSliderCtrl::GetThumbLength  
  擷取目前 trackbar 控制項中的滑桿的長度。  
   
 ```  
@@ -368,7 +403,7 @@ int GetThumbLength() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[TBM_GETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760201)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetthumbrecta--csliderctrlgetthumbrect"></a><a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
+##  <a name="getthumbrect"></a>CSliderCtrl::GetThumbRect  
  擷取的大小和滑桿 （捲動方塊），這個周框的滑桿控制項中的位置。  
   
 ```  
@@ -379,7 +414,7 @@ void GetThumbRect(LPRECT lprc) const;
  `lprc`  
  指標`CRect`函式傳回時包含滑桿的週框物件。  
   
-##  <a name="a-namegettica--csliderctrlgettic"></a><a name="gettic"></a>CSliderCtrl::GetTic  
+##  <a name="gettic"></a>CSliderCtrl::GetTic  
  擷取滑桿控制項中的刻度標記位置。  
   
 ```  
@@ -393,7 +428,7 @@ int GetTic(int nTic) const;
 ### <a name="return-value"></a>傳回值  
  指定的刻度標記或-1，否則位置`nTic`未指定有效的索引。  
   
-##  <a name="a-namegetticarraya--csliderctrlgetticarray"></a><a name="getticarray"></a>CSliderCtrl::GetTicArray  
+##  <a name="getticarray"></a>CSliderCtrl::GetTicArray  
  擷取陣列，其中包含的刻度標記的滑桿控制項位置的位址。  
   
 ```  
@@ -403,7 +438,7 @@ DWORD* GetTicArray() const;
 ### <a name="return-value"></a>傳回值  
  陣列，包含滑桿控制項的刻度標記位置的位址。  
   
-##  <a name="a-namegetticposa--csliderctrlgetticpos"></a><a name="getticpos"></a>CSliderCtrl::GetTicPos  
+##  <a name="getticpos"></a>CSliderCtrl::GetTicPos  
  擷取刻度標記的滑桿控制項中的目前實體的位置。  
   
 ```  
@@ -417,7 +452,7 @@ int GetTicPos(int nTic) const;
 ### <a name="return-value"></a>傳回值  
  實體位置，用戶端座標中指定的刻度標記或 – 1，否則`nTic`未指定有效的索引。  
   
-##  <a name="a-namegettooltipsa--csliderctrlgettooltips"></a><a name="gettooltips"></a>CSliderCtrl::GetToolTips  
+##  <a name="gettooltips"></a>CSliderCtrl::GetToolTips  
  如果有的話，請擷取指派給控制項的滑桿，工具提示控制項的控制代碼。  
   
 ```  
@@ -432,7 +467,7 @@ CToolTipCtrl* GetToolTips() const;
   
  滑桿控制項樣式的說明，請參閱[Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetbuddya--csliderctrlsetbuddy"></a><a name="setbuddy"></a>CSliderCtrl::SetBuddy  
+##  <a name="setbuddy"></a>CSliderCtrl::SetBuddy  
  將視窗指派為協同視窗的滑桿控制項。  
   
 ```  
@@ -460,7 +495,7 @@ CWnd* SetBuddy(
   
  滑桿控制項樣式的說明，請參閱[Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetlinesizea--csliderctrlsetlinesize"></a><a name="setlinesize"></a>CSliderCtrl::SetLineSize  
+##  <a name="setlinesize"></a>CSliderCtrl::SetLineSize  
  設定滑桿控制項之線條的大小。  
   
 ```  
@@ -477,7 +512,7 @@ int SetLineSize(int nSize);
 ### <a name="remarks"></a>備註  
  線條大小會影響多少滑桿移動的**TB_LINEUP**和**TB_LINEDOWN**通知。  
   
-##  <a name="a-namesetpagesizea--csliderctrlsetpagesize"></a><a name="setpagesize"></a>CSliderCtrl::SetPageSize  
+##  <a name="setpagesize"></a>CSliderCtrl::SetPageSize  
  設定滑桿控制項的頁面大小。  
   
 ```  
@@ -494,7 +529,7 @@ int SetPageSize(int nSize);
 ### <a name="remarks"></a>備註  
  多少滑桿移動的頁面大小會影響**TB_PAGEUP**和**TB_PAGEDOWN**通知。  
   
-##  <a name="a-namesetposa--csliderctrlsetpos"></a><a name="setpos"></a>CSliderCtrl::SetPos  
+##  <a name="setpos"></a>CSliderCtrl::SetPos  
  將滑桿的目前位置設定滑桿控制項。  
   
 ```  
@@ -505,7 +540,7 @@ void SetPos(int nPos);
  `nPos`  
  指定新的滑桿位置。  
   
-##  <a name="a-namesetrangea--csliderctrlsetrange"></a><a name="setrange"></a>CSliderCtrl::SetRange  
+##  <a name="setrange"></a>CSliderCtrl::SetRange  
  滑桿控制項中的設定範圍 （最小和最大位置）。  
   
 ```  
@@ -525,7 +560,7 @@ void SetRange(
  `bRedraw`  
  重繪的旗標。 如果這個參數是**TRUE**，滑桿範圍會設定之後會重新繪製; 否則滑動軸不重新繪製。  
   
-##  <a name="a-namesetrangemaxa--csliderctrlsetrangemax"></a><a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
+##  <a name="setrangemax"></a>CSliderCtrl::SetRangeMax  
  滑桿控制項中的設定最大範圍。  
   
 ```  
@@ -541,7 +576,7 @@ void SetRangeMax(
  `bRedraw`  
  重繪的旗標。 如果這個參數是**TRUE**，滑桿範圍會設定之後會重新繪製; 否則滑動軸不重新繪製。  
   
-##  <a name="a-namesetrangemina--csliderctrlsetrangemin"></a><a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
+##  <a name="setrangemin"></a>CSliderCtrl::SetRangeMin  
  滑桿控制項中的設定最小範圍。  
   
 ```  
@@ -557,7 +592,7 @@ void SetRangeMin(
  `bRedraw`  
  重繪的旗標。 如果這個參數是**TRUE**，滑桿範圍會設定之後會重新繪製; 否則滑動軸不重新繪製。  
   
-##  <a name="a-namesetselectiona--csliderctrlsetselection"></a><a name="setselection"></a>CSliderCtrl::SetSelection  
+##  <a name="setselection"></a>CSliderCtrl::SetSelection  
  設定目前的選取範圍的開始和結束位置中的滑桿控制項。  
   
 ```  
@@ -573,7 +608,7 @@ void SetSelection(
  `nMax`  
  結束滑桿的位置。  
   
-##  <a name="a-namesetthumblengtha--csliderctrlsetthumblength"></a><a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
+##  <a name="setthumblength"></a>CSliderCtrl::SetThumbLength  
  設定目前 trackbar 控制項中的滑桿的長度。  
   
 ```  
@@ -601,7 +636,7 @@ void SetThumbLength(int nLength);
   
  [!code-cpp[NVC_MFC_CSliderCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
   
-##  <a name="a-namesettica--csliderctrlsettic"></a><a name="settic"></a>CSliderCtrl::SetTic  
+##  <a name="settic"></a>CSliderCtrl::SetTic  
  滑桿控制項中設定刻度的位置。  
   
 ```  
@@ -615,7 +650,7 @@ BOOL SetTic(int nTic);
 ### <a name="return-value"></a>傳回值  
  設定刻度標記; 如果為非零否則為 0。  
   
-##  <a name="a-namesetticfreqa--csliderctrlsetticfreq"></a><a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
+##  <a name="setticfreq"></a>CSliderCtrl::SetTicFreq  
  設定與哪一個刻度標記會顯示在有個滑桿的頻率。  
   
 ```  
@@ -631,7 +666,7 @@ void SetTicFreq(int nFreq);
   
  您必須建立與控制項`TBS_AUTOTICKS`使用此函數的樣式。 如需詳細資訊，請參閱[CSliderCtrl::Create](#create)。  
   
-##  <a name="a-namesettipsidea--csliderctrlsettipside"></a><a name="settipside"></a>CSliderCtrl::SetTipSide  
+##  <a name="settipside"></a>CSliderCtrl::SetTipSide  
  Trackbar 控制項位置的工具提示控制項使用。  
   
 ```  
@@ -648,7 +683,7 @@ int SetTipSide(int nLocation);
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息的行為**TBM_SETTIPSIDE**所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 滑桿控制項，使用**TBS_TOOLTIPS**樣式顯示工具提示。 滑桿控制項樣式的說明，請參閱[Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)中[!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
   
-##  <a name="a-namesettooltipsa--csliderctrlsettooltips"></a><a name="settooltips"></a>CSliderCtrl::SetToolTips  
+##  <a name="settooltips"></a>CSliderCtrl::SetToolTips  
  將工具提示控制項指派給滑桿控制項。  
   
 ```  

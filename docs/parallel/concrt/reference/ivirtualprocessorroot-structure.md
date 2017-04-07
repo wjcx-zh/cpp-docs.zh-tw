@@ -9,7 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrtrm/concurrency::IVirtualProcessorRoot
+- IVirtualProcessorRoot
+- CONCRTRM/concurrency::IVirtualProcessorRoot
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Activate
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::Deactivate
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::EnsureAllTasksVisible
+- CONCRTRM/concurrency::IVirtualProcessorRoot::IVirtualProcessorRoot::GetId
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: ca095a249ee0eb9e1393e232ab7957a7060a2002
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 2635f1c18dd61127360b8398ad1b0da03f1666d7
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 結構
@@ -52,12 +57,12 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[Ivirtualprocessorroot:: Activate 方法](#activate)|執行內容介面相關聯的執行緒 proxy 會導致`pContext`以啟動此虛擬處理器根上執行。|  
-|[Ivirtualprocessorroot:: Deactivate 方法](#deactivate)|造成目前在此停止分派的執行內容的虛擬處理器根上執行的執行緒 proxy。 執行緒 proxy 會繼續執行的呼叫上`Activate`方法。|  
-|[Ivirtualprocessorroot:: Ensurealltasksvisible 方法](#ensurealltasksvisible)|會造成記憶體階層中的個別處理器才會顯示所有處理器在系統上儲存的資料。 它可確保完整的記憶體範圍已經執行的所有處理器上的方法傳回之前。|  
-|[Ivirtualprocessorroot:: Getid 方法](#getid)|傳回虛擬處理器根的唯一識別碼。|  
+|[Ivirtualprocessorroot:: Activate](#activate)|執行內容介面相關聯的執行緒 proxy 會導致`pContext`以啟動此虛擬處理器根上執行。|  
+|[Ivirtualprocessorroot:: Deactivate](#deactivate)|造成目前在此停止分派的執行內容的虛擬處理器根上執行的執行緒 proxy。 執行緒 proxy 會繼續執行的呼叫上`Activate`方法。|  
+|[Ivirtualprocessorroot:: Ensurealltasksvisible](#ensurealltasksvisible)|會造成記憶體階層中的個別處理器才會顯示所有處理器在系統上儲存的資料。 它可確保完整的記憶體範圍已經執行的所有處理器上的方法傳回之前。|  
+|[Ivirtualprocessorroot:: Getid](#getid)|傳回虛擬處理器根的唯一識別碼。|  
   
 ## <a name="remarks"></a>備註  
  每個虛擬處理器根有相關聯的執行資源。 `IVirtualProcessorRoot`介面繼承自[IExecutionResource](iexecutionresource-structure.md)介面。 多個虛擬處理器根可以對應到相同的基礎硬體執行緒。  
@@ -74,7 +79,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
   
  **命名空間：** concurrency  
   
-##  <a name="a-nameactivatea--ivirtualprocessorrootactivate-method"></a><a name="activate"></a>Ivirtualprocessorroot:: Activate 方法  
+##  <a name="activate"></a>Ivirtualprocessorroot:: Activate 方法  
  執行內容介面相關聯的執行緒 proxy 會導致`pContext`以啟動此虛擬處理器根上執行。  
   
 ```
@@ -100,7 +105,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
   
  啟動虛擬處理器根的動作都會增加一個基礎硬體執行緒的訂閱層級。 如需有關訂閱層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-##  <a name="a-namedeactivatea--ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a>Ivirtualprocessorroot:: Deactivate 方法  
+##  <a name="deactivate"></a>Ivirtualprocessorroot:: Deactivate 方法  
  造成目前在此停止分派的執行內容的虛擬處理器根上執行的執行緒 proxy。 執行緒 proxy 會繼續執行的呼叫上`Activate`方法。  
   
 ```
@@ -127,7 +132,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  停用虛擬處理器根動作減一的基礎硬體執行緒的訂閱層級。 如需有關訂閱層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-##  <a name="a-nameensurealltasksvisiblea--ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a>Ivirtualprocessorroot:: Ensurealltasksvisible 方法  
+##  <a name="ensurealltasksvisible"></a>Ivirtualprocessorroot:: Ensurealltasksvisible 方法  
  會造成記憶體階層中的個別處理器才會顯示所有處理器在系統上儲存的資料。 它可確保完整的記憶體範圍已經執行的所有處理器上的方法傳回之前。  
   
 ```
@@ -147,7 +152,7 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_operation`如果從未啟用的虛擬處理器根，會擲回或引數`pContext`不是由這個虛擬處理器根最近發送的執行內容。  
   
-##  <a name="a-namegetida--ivirtualprocessorrootgetid-method"></a><a name="getid"></a>Ivirtualprocessorroot:: Getid 方法  
+##  <a name="getid"></a>Ivirtualprocessorroot:: Getid 方法  
  傳回虛擬處理器根的唯一識別碼。  
   
 ```

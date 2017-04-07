@@ -9,11 +9,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CComObjectRootEx
-- ATL::CComObjectRootEx<ThreadModel>
 - CComObjectRootEx
-- ATL::CComObjectRootEx
-- ATL.CComObjectRootEx<ThreadModel>
+- ATLCOM/ATL::CComObjectRootEx
+- ATLCOM/ATL::CComObjectRootEx
+- ATLCOM/ATL::InternalAddRef
+- ATLCOM/ATL::InternalRelease
+- ATLCOM/ATL::Lock
+- ATLCOM/ATL::Unlock
+- ATLCOM/ATL::FinalConstruct
+- ATLCOM/ATL::FinalRelease
+- ATLCOM/ATL::OuterAddRef
+- ATLCOM/ATL::OuterQueryInterface
+- ATLCOM/ATL::OuterRelease
+- ATLCOM/ATL::InternalQueryInterface
+- ATLCOM/ATL::ObjectMain
+- ATLCOM/ATL::m_dwRef
+- ATLCOM/ATL::m_pOuterUnknown
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,14 +123,14 @@ class CComObjectRootEx : public CComObjectRootBase
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameccomobjectrootexa--ccomobjectrootexccomobjectrootex"></a><a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
+##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
  建構函式會初始化為 0 的參考計數。  
   
 ```
 CComObjectRootEx();
 ```  
   
-##  <a name="a-namefinalconstructa--ccomobjectrootexfinalconstruct"></a><a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
+##  <a name="finalconstruct"></a>CComObjectRootEx::FinalConstruct  
  您可以執行您的物件所需的任何初始化衍生類別中覆寫這個方法。  
   
 ```
@@ -159,7 +170,7 @@ HRESULT FinalConstruct();
   
 -   覆寫`FinalRelease`釋放**IUnknown**指標。  
   
-##  <a name="a-namefinalreleasea--ccomobjectrootexfinalrelease"></a><a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
+##  <a name="finalrelease"></a>CComObjectRootEx::FinalRelease  
  您可以執行任何清除作業所需的物件衍生類別中覆寫這個方法。  
   
 ```
@@ -171,7 +182,7 @@ void FinalRelease();
   
  執行中的清除工作`FinalRelease`最好在程式碼加入至類別的解構函式，因為物件仍然完整建構之起點在`FinalRelease`呼叫。 這可讓您安全地存取最具衍生性的類別所提供的方法。 這是特別重要，釋放之前刪除任何彙總的物件。  
   
-##  <a name="a-nameinternaladdrefa--ccomobjectrootexinternaladdref"></a><a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
+##  <a name="internaladdref"></a>CComObjectRootEx::InternalAddRef  
  非彙總物件的參考計數遞增 1。  
   
 ```
@@ -184,7 +195,7 @@ ULONG InternalAddRef();
 ### <a name="remarks"></a>備註  
  如果執行緒模型為多執行緒、 **InterlockedIncrement**用來防止多個執行緒同時變更參考計數。  
   
-##  <a name="a-nameinternalqueryinterfacea--ccomobjectrootexinternalqueryinterface"></a><a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
+##  <a name="internalqueryinterface"></a>CComObjectRootEx::InternalQueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -214,7 +225,7 @@ static HRESULT InternalQueryInterface(
 ### <a name="remarks"></a>備註  
  `InternalQueryInterface` 只處理 COM 對應表格中的介面。 如果您的物件會彙總，`InternalQueryInterface`不會不會委派給外部未知。 您可以將介面輸入到 COM 對應表格使用巨集[COM_INTERFACE_ENTRY](http://msdn.microsoft.com/library/19dcb768-2e1f-4b8d-a618-453a01a4bd00)或其中一個變化。  
   
-##  <a name="a-nameinternalreleasea--ccomobjectrootexinternalrelease"></a><a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
+##  <a name="internalrelease"></a>CComObjectRootEx::InternalRelease  
  遞減參考計數的非彙總物件加 1。  
   
 ```
@@ -227,7 +238,7 @@ ULONG InternalRelease();
 ### <a name="remarks"></a>備註  
  如果執行緒模型為多執行緒、 **InterlockedDecrement**用來防止多個執行緒同時變更參考計數。  
   
-##  <a name="a-namelocka--ccomobjectrootexlock"></a><a name="lock"></a>CComObjectRootEx::Lock  
+##  <a name="lock"></a>CComObjectRootEx::Lock  
  如果是多執行緒的執行緒模型，這個方法會呼叫 Win32 API 函式[EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608)，透過私用資料成員中取得的等候，直到執行緒可以取得重要區段物件的擁有權。  
   
 ```
@@ -239,7 +250,7 @@ void Lock();
   
  如果執行緒模型為單一執行緒，這個方法沒有作用。  
   
-##  <a name="a-namemdwrefa--ccomobjectrootexmdwref"></a><a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
+##  <a name="m_dwref"></a>CComObjectRootEx::m_dwRef  
  存取記憶體的四個位元組的聯集的一部分。  
   
 ```
@@ -261,7 +272,7 @@ long m_dwRef;
   
  如果物件不會彙總，由存取參考計數`AddRef`和**版本**會儲存在`m_dwRef`。 如果物件彙總，外部指標會儲存在[m_pOuterUnknown](#m_pouterunknown)。  
   
-##  <a name="a-namempouterunknowna--ccomobjectrootexmpouterunknown"></a><a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
+##  <a name="m_pouterunknown"></a>CComObjectRootEx::m_pOuterUnknown  
  存取記憶體的四個位元組的聯集的一部分。  
   
 ```
@@ -284,7 +295,7 @@ IUnknown*
   
  如果物件彙總，外部指標會儲存在`m_pOuterUnknown`。 如果物件不會彙總，由存取參考計數`AddRef`和**版本**會儲存在[m_dwRef](#m_dwref)。  
   
-##  <a name="a-nameobjectmaina--ccomobjectrootexobjectmain"></a><a name="objectmain"></a>CComObjectRootEx::ObjectMain  
+##  <a name="objectmain"></a>CComObjectRootEx::ObjectMain  
  每個類別中列出[物件對應](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f)，一旦初始化模組時，會呼叫此函數並再次時它就會終止。  
   
 ```
@@ -303,7 +314,7 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM&#41;](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
-##  <a name="a-nameouteraddrefa--ccomobjectrootexouteraddref"></a><a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
+##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  參考計數遞增的彙總的外部未知。  
   
 ```
@@ -313,7 +324,7 @@ ULONG OuterAddRef();
 ### <a name="return-value"></a>傳回值  
  值，可用於診斷和測試。  
   
-##  <a name="a-nameouterqueryinterfacea--ccomobjectrootexouterqueryinterface"></a><a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
+##  <a name="outerqueryinterface"></a>CComObjectRootEx::OuterQueryInterface  
  擷取所要求介面的間接指標。  
   
 ```
@@ -330,7 +341,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ### <a name="return-value"></a>傳回值  
  其中一個標準`HRESULT`值。  
   
-##  <a name="a-nameouterreleasea--ccomobjectrootexouterrelease"></a><a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
+##  <a name="outerrelease"></a>CComObjectRootEx::OuterRelease  
  遞減參考計數的彙總的外部未知。  
   
 ```
@@ -340,7 +351,7 @@ ULONG OuterRelease();
 ### <a name="return-value"></a>傳回值  
  在非偵錯組建中，一律傳回 0。 在偵錯組建中，傳回值，可能有助於診斷或測試。  
   
-##  <a name="a-nameunlocka--ccomobjectrootexunlock"></a><a name="unlock"></a>CComObjectRootEx::Unlock  
+##  <a name="unlock"></a>CComObjectRootEx::Unlock  
  如果是多執行緒的執行緒模型，這個方法會呼叫 Win32 API 函式[LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169)，透過私用資料成員中取得重要區段物件的哪一個版本擁有權。  
   
 ```

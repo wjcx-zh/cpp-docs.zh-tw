@@ -10,7 +10,56 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimationController
-- afxanimationcontroller/CAnimationController
+- AFXANIMATIONCONTROLLER/CAnimationController
+- AFXANIMATIONCONTROLLER/CAnimationController::CAnimationController
+- AFXANIMATIONCONTROLLER/CAnimationController::AddAnimationObject
+- AFXANIMATIONCONTROLLER/CAnimationController::AddKeyframeToGroup
+- AFXANIMATIONCONTROLLER/CAnimationController::AnimateGroup
+- AFXANIMATIONCONTROLLER/CAnimationController::CleanUpGroup
+- AFXANIMATIONCONTROLLER/CAnimationController::CreateKeyframe
+- AFXANIMATIONCONTROLLER/CAnimationController::EnableAnimationManagerEvent
+- AFXANIMATIONCONTROLLER/CAnimationController::EnableAnimationTimerEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationController::EnablePriorityComparisonHandler
+- AFXANIMATIONCONTROLLER/CAnimationController::EnableStoryboardEventHandler
+- AFXANIMATIONCONTROLLER/CAnimationController::FindAnimationGroup
+- AFXANIMATIONCONTROLLER/CAnimationController::FindAnimationObject
+- AFXANIMATIONCONTROLLER/CAnimationController::GetKeyframeStoryboardStart
+- AFXANIMATIONCONTROLLER/CAnimationController::GetUIAnimationManager
+- AFXANIMATIONCONTROLLER/CAnimationController::GetUIAnimationTimer
+- AFXANIMATIONCONTROLLER/CAnimationController::GetUITransitionFactory
+- AFXANIMATIONCONTROLLER/CAnimationController::GetUITransitionLibrary
+- AFXANIMATIONCONTROLLER/CAnimationController::IsAnimationInProgress
+- AFXANIMATIONCONTROLLER/CAnimationController::IsValid
+- AFXANIMATIONCONTROLLER/CAnimationController::OnAnimationIntegerValueChanged
+- AFXANIMATIONCONTROLLER/CAnimationController::OnAnimationManagerStatusChanged
+- AFXANIMATIONCONTROLLER/CAnimationController::OnAnimationTimerPostUpdate
+- AFXANIMATIONCONTROLLER/CAnimationController::OnAnimationTimerPreUpdate
+- AFXANIMATIONCONTROLLER/CAnimationController::OnAnimationTimerRenderingTooSlow
+- AFXANIMATIONCONTROLLER/CAnimationController::OnAnimationValueChanged
+- AFXANIMATIONCONTROLLER/CAnimationController::OnBeforeAnimationStart
+- AFXANIMATIONCONTROLLER/CAnimationController::OnHasPriorityCancel
+- AFXANIMATIONCONTROLLER/CAnimationController::OnHasPriorityCompress
+- AFXANIMATIONCONTROLLER/CAnimationController::OnHasPriorityConclude
+- AFXANIMATIONCONTROLLER/CAnimationController::OnHasPriorityTrim
+- AFXANIMATIONCONTROLLER/CAnimationController::OnStoryboardStatusChanged
+- AFXANIMATIONCONTROLLER/CAnimationController::OnStoryboardUpdated
+- AFXANIMATIONCONTROLLER/CAnimationController::RemoveAllAnimationGroups
+- AFXANIMATIONCONTROLLER/CAnimationController::RemoveAnimationGroup
+- AFXANIMATIONCONTROLLER/CAnimationController::RemoveAnimationObject
+- AFXANIMATIONCONTROLLER/CAnimationController::RemoveTransitions
+- AFXANIMATIONCONTROLLER/CAnimationController::ScheduleGroup
+- AFXANIMATIONCONTROLLER/CAnimationController::SetRelatedWnd
+- AFXANIMATIONCONTROLLER/CAnimationController::UpdateAnimationManager
+- AFXANIMATIONCONTROLLER/CAnimationController::CleanUpGroup
+- AFXANIMATIONCONTROLLER/CAnimationController::OnAfterSchedule
+- AFXANIMATIONCONTROLLER/CAnimationController::gkeyframeStoryboardStart
+- AFXANIMATIONCONTROLLER/CAnimationController::m_bIsValid
+- AFXANIMATIONCONTROLLER/CAnimationController::m_lstAnimationGroups
+- AFXANIMATIONCONTROLLER/CAnimationController::m_pAnimationManager
+- AFXANIMATIONCONTROLLER/CAnimationController::m_pAnimationTimer
+- AFXANIMATIONCONTROLLER/CAnimationController::m_pRelatedWnd
+- AFXANIMATIONCONTROLLER/CAnimationController::m_pTransitionFactory
+- AFXANIMATIONCONTROLLER/CAnimationController::m_pTransitionLibrary
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -132,14 +181,14 @@ class CAnimationController : public CObject;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namedtorcanimationcontrollera--canimationcontrollercanimationcontroller"></a><a name="_dtorcanimationcontroller"></a>CAnimationController:: ~ CAnimationController  
+##  <a name="_dtorcanimationcontroller"></a>CAnimationController:: ~ CAnimationController  
  解構函式。 動畫控制器物件終結時呼叫。  
   
 ```  
 virtual ~CAnimationController(void);
 ```   
   
-##  <a name="a-nameaddanimationobjecta--canimationcontrolleraddanimationobject"></a><a name="addanimationobject"></a>CAnimationController::AddAnimationObject  
+##  <a name="addanimationobject"></a>CAnimationController::AddAnimationObject  
  將動畫物件加入至動畫控制器所屬的群組。  
   
 ```  
@@ -156,7 +205,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ### <a name="remarks"></a>備註  
  呼叫這個方法來新增動畫控制器動畫物件。 物件會加入至群組，以根據物件的識別碼 （請參閱 CAnimationBaseObject::SetID）。 動畫控制器將會建立新的群組是否要加入具有指定識別碼的第一個物件。 動畫物件可以加入只使用一個動畫控制器。 如果您需要將物件加入至另一個控制器，請先呼叫 RemoveAnimationObject。 如果您有已經新增到群組的物件呼叫 SetID 與新的識別碼，會從舊的群組中移除並加入至另一個群組指定之識別碼的物件  
   
-##  <a name="a-nameaddkeyframetogroupa--canimationcontrolleraddkeyframetogroup"></a><a name="addkeyframetogroup"></a>CAnimationController::AddKeyframeToGroup  
+##  <a name="addkeyframetogroup"></a>CAnimationController::AddKeyframeToGroup  
  新增到群組的主要畫面格。  
   
 ```  
@@ -178,7 +227,7 @@ BOOL AddKeyframeToGroup(
 ### <a name="remarks"></a>備註  
  通常您不需要呼叫這個方法，請改用 CAnimationController::CreateKeyframe，這會建立並自動新增到群組的建立主要畫面格。  
   
-##  <a name="a-nameanimategroupa--canimationcontrolleranimategroup"></a><a name="animategroup"></a>CAnimationController::AnimateGroup  
+##  <a name="animategroup"></a>CAnimationController::AnimateGroup  
  準備要執行動畫的群組，並選擇性地將其排程。  
   
 ```  
@@ -200,14 +249,14 @@ BOOL AnimateGroup(
 ### <a name="remarks"></a>備註  
  這個方法會建立腳本、 加入動畫變數、 套用轉換和設定主要畫面格的實際工作。 很可能會延遲排程，如果您將 bScheduleNow 設為 FALSE。 在此情況下指定的群組會保留已設定的動畫腳本。 此時，您可以設定的分鏡腳本和動畫變數的事件。 當您真的需要執行動畫呼叫 CAnimationController::ScheduleGroup。  
   
-##  <a name="a-namecanimationcontrollera--canimationcontrollercanimationcontroller"></a><a name="canimationcontroller"></a>CAnimationController::CAnimationController  
+##  <a name="canimationcontroller"></a>CAnimationController::CAnimationController  
  建構動畫控制器。  
   
 ```  
 CAnimationController(void);
 ```   
   
-##  <a name="a-namecleanupgroupa--canimationcontrollercleanupgroup"></a><a name="cleanupgroup"></a>CAnimationController::CleanUpGroup  
+##  <a name="cleanupgroup"></a>CAnimationController::CleanUpGroup  
  若要清除群組已排定動畫架構呼叫。  
   
 ```  
@@ -225,7 +274,7 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>備註  
  這個方法會移除所有的轉換和主要畫面格從指定的群組，因為它們不是相關之後已排定動畫。  
   
-##  <a name="a-namecreatekeyframea--canimationcontrollercreatekeyframe"></a><a name="createkeyframe"></a>CAnimationController::CreateKeyframe  
+##  <a name="createkeyframe"></a>CAnimationController::CreateKeyframe  
  建立隨轉換而改變的主要畫面格，將它加入指定的群組。  
   
 ```  
@@ -259,7 +308,7 @@ CKeyFrame* CreateKeyframe(
 ### <a name="remarks"></a>備註  
  您可以儲存傳回的指標，讓其他的主要畫面格以新建立的主要畫面格為基礎 (請參閱第二個多載)。 即可開始主要畫面格的轉換，請參閱 CBaseTransition::SetKeyframes。 您不需要刪除以這種方式建立的主要畫面格，因為動畫群組會自動刪除它們。 根據其他主要畫面格和轉換建立主要畫面格時要小心，避免循環參照。  
   
-##  <a name="a-nameenableanimationmanagereventa--canimationcontrollerenableanimationmanagerevent"></a><a name="enableanimationmanagerevent"></a>CAnimationController::EnableAnimationManagerEvent  
+##  <a name="enableanimationmanagerevent"></a>CAnimationController::EnableAnimationManagerEvent  
  設定或釋放動畫管理員的狀態變更時要呼叫的處理常式。  
   
 ```  
@@ -276,7 +325,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>備註  
  當處理常式的設定 （啟用） Windows 動畫動畫管理員的狀態變更時，就會呼叫 OnAnimationManagerStatusChanged。  
   
-##  <a name="a-nameenableanimationtimereventhandlera--canimationcontrollerenableanimationtimereventhandler"></a><a name="enableanimationtimereventhandler"></a>CAnimationController::EnableAnimationTimerEventHandler  
+##  <a name="enableanimationtimereventhandler"></a>CAnimationController::EnableAnimationTimerEventHandler  
  設定或釋放計時事件的處理常式和計時更新處理常式。  
   
 ```  
@@ -298,7 +347,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ### <a name="remarks"></a>備註  
  當處理常式會設定 （啟用） Windows 動畫 API 呼叫 OnAnimationTimerPreUpdate，OnAnimationTimerPostUpdate，OnRenderingTooSlow 方法。 您必須啟用 允許 Windows 動畫 API 更新腳本動畫計時器。 否則，您必須呼叫 CAnimationController::UpdateAnimationManager 以直接動畫管理員來更新所有動畫變數的值。  
   
-##  <a name="a-nameenableprioritycomparisonhandlera--canimationcontrollerenableprioritycomparisonhandler"></a><a name="enableprioritycomparisonhandler"></a>CAnimationController::EnablePriorityComparisonHandler  
+##  <a name="enableprioritycomparisonhandler"></a>CAnimationController::EnablePriorityComparisonHandler  
  設定或釋放給呼叫以判斷是否已排程的分鏡腳本可以取消、 結束、 修剪或壓縮的優先順序比較處理常式。  
   
 ```  
@@ -315,7 +364,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ### <a name="remarks"></a>備註  
  Windows 動畫時處理常式的設定 （啟用） 呼叫下列的虛擬方法，根據 dwHandlerType: OnHasPriorityCancel、 OnHasPriorityConclude、 OnHasPriorityTrim、 OnHasPriorityCompress。 dwHandler 可以是下列旗標的組合︰ UI_ANIMATION_PHT_NONE-發行所有處理常式 UI_ANIMATION_PHT_CANCEL-設定取消比較處理常式 UI_ANIMATION_PHT_CONCLUDE-設定-設定的壓縮比較處理常式 UI_ANIMATION_PHT_TRIM 集修剪比較處理常式 UI_ANIMATION_PHT_CANCEL_REMOVE-移除取消比較處理常式 UI_ANIMATION_PHT_CONCLUDE_REMOVE-移除 Conclude 比較處理常式 UI_ANIMATION_PHT_COMPRESS_REMOVE-UI_ANIMATION_PHT_COMPRESS 移除 Conclude 比較處理常式壓縮比較處理常式 UI_ANIMATION_PHT_TRIM_REMOVE-移除空白位置修剪比較處理常式  
   
-##  <a name="a-nameenablestoryboardeventhandlera--canimationcontrollerenablestoryboardeventhandler"></a><a name="enablestoryboardeventhandler"></a>CAnimationController::EnableStoryboardEventHandler  
+##  <a name="enablestoryboardeventhandler"></a>CAnimationController::EnableStoryboardEventHandler  
  設定或釋放分鏡腳本的狀態和更新事件的處理常式。  
   
 ```  
@@ -337,7 +386,7 @@ virtual BOOL EnableStoryboardEventHandler(
 ### <a name="remarks"></a>備註  
  當處理常式的設定 （啟用） 的 Windows 動畫 API 呼叫 OnStoryboardStatusChanges 和 OnStoryboardUpdated 虛擬方法。 處理常式必須設定為指定的動畫群組呼叫 CAnimationController::Animate 之後因為它會建立封裝的 IUIAnimationStoryboard 物件。  
   
-##  <a name="a-namefindanimationgroupa--canimationcontrollerfindanimationgroup"></a><a name="findanimationgroup"></a>CAnimationController::FindAnimationGroup  
+##  <a name="findanimationgroup"></a>CAnimationController::FindAnimationGroup  
  尋找針對動畫群組其群組識別碼。  
   
 ```  
@@ -358,7 +407,7 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>備註  
  使用此方法在執行階段尋找動畫群組。 建立群組，並具有特定識別碼的第一個動畫物件新增至動畫控制器時加入至動畫群組的內部清單。  
   
-##  <a name="a-namefindanimationobjecta--canimationcontrollerfindanimationobject"></a><a name="findanimationobject"></a>CAnimationController::FindAnimationObject  
+##  <a name="findanimationobject"></a>CAnimationController::FindAnimationObject  
  找出包含指定的動畫變數的動畫物件。  
   
 ```  
@@ -384,14 +433,14 @@ BOOL FindAnimationObject(
 ### <a name="remarks"></a>備註  
  它需要尋找從內送的動畫變數的動畫物件時，由事件處理常式呼叫。  
   
-##  <a name="a-namegkeyframestoryboardstarta--canimationcontrollergkeyframestoryboardstart"></a><a name="g_keyframestoryboardstart"></a>CAnimationController::gkeyframeStoryboardStart  
+##  <a name="g_keyframestoryboardstart"></a>CAnimationController::gkeyframeStoryboardStart  
  代表開始腳本的主要畫面格。  
   
 ```  
 static CBaseKeyFrame gkeyframeStoryboardStart;  
 ```  
   
-##  <a name="a-namegetkeyframestoryboardstarta--canimationcontrollergetkeyframestoryboardstart"></a><a name="getkeyframestoryboardstart"></a>CAnimationController::GetKeyframeStoryboardStart  
+##  <a name="getkeyframestoryboardstart"></a>CAnimationController::GetKeyframeStoryboardStart  
  傳回識別啟動腳本的主要畫面格。  
   
 ```  
@@ -404,7 +453,7 @@ static CBaseKeyFrame* GetKeyframeStoryboardStart();
 ### <a name="remarks"></a>備註  
  取得此主要畫面格為基礎的那一刻起，在腳本開始的時間的主要畫面格或轉換。  
   
-##  <a name="a-namegetuianimationmanagera--canimationcontrollergetuianimationmanager"></a><a name="getuianimationmanager"></a>CAnimationController::GetUIAnimationManager  
+##  <a name="getuianimationmanager"></a>CAnimationController::GetUIAnimationManager  
  提供封裝 IUIAnimationManager 物件的存取權。  
   
 ```  
@@ -417,7 +466,7 @@ IUIAnimationManager* GetUIAnimationManager();
 ### <a name="remarks"></a>備註  
  如果目前作業系統不支援 Windows 動畫 API，這個方法會傳回 NULL，並在那之後 CAnimationController::IsValid 上的所有後續呼叫會傳回 FALSE。 您可能需要存取 IUIAnimationManager 才能呼叫它未包裝的動畫控制器的介面方法。  
   
-##  <a name="a-namegetuianimationtimera--canimationcontrollergetuianimationtimer"></a><a name="getuianimationtimer"></a>CAnimationController::GetUIAnimationTimer  
+##  <a name="getuianimationtimer"></a>CAnimationController::GetUIAnimationTimer  
  提供封裝 IUIAnimationTimer 物件的存取權。  
   
 ```  
@@ -430,7 +479,7 @@ IUIAnimationTimer* GetUIAnimationTimer();
 ### <a name="remarks"></a>備註  
  如果目前作業系統不支援 Windows 動畫 API，這個方法會傳回 NULL，並在那之後 CAnimationController::IsValid 上的所有後續呼叫會傳回 FALSE。  
   
-##  <a name="a-namegetuitransitionfactorya--canimationcontrollergetuitransitionfactory"></a><a name="getuitransitionfactory"></a>CAnimationController::GetUITransitionFactory  
+##  <a name="getuitransitionfactory"></a>CAnimationController::GetUITransitionFactory  
  IUIAnimationTransitionFactory 介面或如果無法建立轉換程式庫的 NULL 指標。  
   
 ```  
@@ -443,7 +492,7 @@ IUIAnimationTransitionFactory* GetUITransitionFactory();
 ### <a name="remarks"></a>備註  
  如果目前作業系統不支援 Windows 動畫 API，這個方法會傳回 NULL，並在那之後 CAnimationController::IsValid 上的所有後續呼叫會傳回 FALSE。  
   
-##  <a name="a-namegetuitransitionlibrarya--canimationcontrollergetuitransitionlibrary"></a><a name="getuitransitionlibrary"></a>CAnimationController::GetUITransitionLibrary  
+##  <a name="getuitransitionlibrary"></a>CAnimationController::GetUITransitionLibrary  
  提供封裝 IUIAnimationTransitionLibrary 物件的存取權。  
   
 ```  
@@ -456,7 +505,7 @@ IUIAnimationTransitionLibrary* GetUITransitionLibrary();
 ### <a name="remarks"></a>備註  
  如果目前作業系統不支援 Windows 動畫 API，這個方法會傳回 NULL，並在那之後 CAnimationController::IsValid 上的所有後續呼叫會傳回 FALSE。  
   
-##  <a name="a-nameisanimationinprogressa--canimationcontrollerisanimationinprogress"></a><a name="isanimationinprogress"></a>CAnimationController::IsAnimationInProgress  
+##  <a name="isanimationinprogress"></a>CAnimationController::IsAnimationInProgress  
  會指示是否至少一個群組已播放的動畫。  
   
 ```  
@@ -469,7 +518,7 @@ virtual BOOL IsAnimationInProgress();
 ### <a name="remarks"></a>備註  
  檢查動畫管理員的狀態，並傳回 TRUE，如果狀態為 UI_ANIMATION_MANAGER_BUSY。  
   
-##  <a name="a-nameisvalida--canimationcontrollerisvalid"></a><a name="isvalid"></a>CAnimationController::IsValid  
+##  <a name="isvalid"></a>CAnimationController::IsValid  
  會告知動畫控制器是否有效。  
   
 ```  
@@ -482,56 +531,56 @@ BOOL IsValid() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳回 FALSE，只有在目前的作業系統和建立動畫管理員不支援 Windows 動畫 API 失敗，因為它未註冊。 您需要呼叫 GetUIAnimationManager 初始化 COM 程式庫，讓此旗標的設定之後，至少一次。  
   
-##  <a name="a-namembisvalida--canimationcontrollermbisvalid"></a><a name="m_bisvalid"></a>CAnimationController::m_bIsValid  
+##  <a name="m_bisvalid"></a>CAnimationController::m_bIsValid  
  指定動畫控制器是否為有效。 如果目前的作業系統不支援 Windows 動畫 API，這個成員是設定為 FALSE。  
   
 ```  
 BOOL m_bIsValid;  
 ```  
   
-##  <a name="a-namemlstanimationgroupsa--canimationcontrollermlstanimationgroups"></a><a name="m_lstanimationgroups"></a>CAnimationController::m_lstAnimationGroups  
+##  <a name="m_lstanimationgroups"></a>CAnimationController::m_lstAnimationGroups  
  屬於此動畫控制器動畫群組清單。  
   
 ```  
 CList<CAnimationGroup*, CAnimationGroup*> m_lstAnimationGroups;  
 ```  
   
-##  <a name="a-namempanimationmanagera--canimationcontrollermpanimationmanager"></a><a name="m_panimationmanager"></a>CAnimationController::m_pAnimationManager  
+##  <a name="m_panimationmanager"></a>CAnimationController::m_pAnimationManager  
  儲存的動畫管理員 COM 物件的指標。  
   
 ```  
 ATL::CComPtr<IUIAnimationManager> m_pAnimationManager;  
 ```  
   
-##  <a name="a-namempanimationtimera--canimationcontrollermpanimationtimer"></a><a name="m_panimationtimer"></a>CAnimationController::m_pAnimationTimer  
+##  <a name="m_panimationtimer"></a>CAnimationController::m_pAnimationTimer  
  儲存的動畫計時器 COM 物件的指標。  
   
 ```  
 ATL::CComPtr<IUIAnimationTimer> m_pAnimationTimer;  
 ```  
   
-##  <a name="a-namemprelatedwnda--canimationcontrollermprelatedwnd"></a><a name="m_prelatedwnd"></a>CAnimationController::m_pRelatedWnd  
+##  <a name="m_prelatedwnd"></a>CAnimationController::m_pRelatedWnd  
  可以動畫管理員的狀態已變更，或張貼更新事件發生時，自動重新繪製相關 CWnd 物件指標。 可以是 NULL。  
   
 ```  
 CWnd* m_pRelatedWnd;  
 ```  
   
-##  <a name="a-namemptransitionfactorya--canimationcontrollermptransitionfactory"></a><a name="m_ptransitionfactory"></a>CAnimationController::m_pTransitionFactory  
+##  <a name="m_ptransitionfactory"></a>CAnimationController::m_pTransitionFactory  
  儲存轉換 Factory COM 物件的指標。  
   
 ```  
 ATL::CComPtr<IUIAnimationTransitionFactory> m_pTransitionFactory;  
 ```  
   
-##  <a name="a-namemptransitionlibrarya--canimationcontrollermptransitionlibrary"></a><a name="m_ptransitionlibrary"></a>CAnimationController::m_pTransitionLibrary  
+##  <a name="m_ptransitionlibrary"></a>CAnimationController::m_pTransitionLibrary  
  儲存轉換程式庫的 COM 物件的指標。  
   
 ```  
 ATL::CComPtr<IUIAnimationTransitionLibrary> m_pTransitionLibrary;  
 ```  
   
-##  <a name="a-nameonafterschedulea--canimationcontrolleronafterschedule"></a><a name="onafterschedule"></a>CAnimationController::OnAfterSchedule  
+##  <a name="onafterschedule"></a>CAnimationController::OnAfterSchedule  
  只要已排定的動畫，為指定的群組，由架構呼叫。  
   
 ```  
@@ -545,7 +594,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>備註  
  從指定的群組中移除主要畫面格的預設實作，並且從屬於指定之群組的動畫變數的轉換。 可以在採取任何額外的動作，動畫排程在衍生類別中覆寫。  
   
-##  <a name="a-nameonanimationintegervaluechangeda--canimationcontrolleronanimationintegervaluechanged"></a><a name="onanimationintegervaluechanged"></a>CAnimationController::OnAnimationIntegerValueChanged  
+##  <a name="onanimationintegervaluechanged"></a>CAnimationController::OnAnimationIntegerValueChanged  
  當動畫變數的整數值已變更，由架構呼叫。  
   
 ```  
@@ -576,7 +625,7 @@ virtual void OnAnimationIntegerValueChanged(
 ### <a name="remarks"></a>備註  
  如果您針對特定動畫變數或動畫物件呼叫 EnableIntegerValueChangedEvent 啟用動畫變數的事件，會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。  
   
-##  <a name="a-nameonanimationmanagerstatuschangeda--canimationcontrolleronanimationmanagerstatuschanged"></a><a name="onanimationmanagerstatuschanged"></a>CAnimationController::OnAnimationManagerStatusChanged  
+##  <a name="onanimationmanagerstatuschanged"></a>CAnimationController::OnAnimationManagerStatusChanged  
  StatusChanged 事件來回應來自動畫管理員的架構所呼叫。  
   
 ```  
@@ -595,7 +644,7 @@ virtual void OnAnimationManagerStatusChanged(
 ### <a name="remarks"></a>備註  
  如果您啟用與 EnableAnimationManagerEvent 動畫管理員事件，會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如果它已設定 SetRelatedWnd 的預設實作會更新相關的視窗。  
   
-##  <a name="a-nameonanimationtimerpostupdatea--canimationcontrolleronanimationtimerpostupdate"></a><a name="onanimationtimerpostupdate"></a>CAnimationController::OnAnimationTimerPostUpdate  
+##  <a name="onanimationtimerpostupdate"></a>CAnimationController::OnAnimationTimerPostUpdate  
  動畫更新完成後，由架構呼叫。  
   
 ```  
@@ -605,7 +654,7 @@ virtual void OnAnimationTimerPostUpdate();
 ### <a name="remarks"></a>備註  
  如果您啟用使用 EnableAnimationTimerEventHandler 的計時器事件處理常式會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。  
   
-##  <a name="a-nameonanimationtimerpreupdatea--canimationcontrolleronanimationtimerpreupdate"></a><a name="onanimationtimerpreupdate"></a>CAnimationController::OnAnimationTimerPreUpdate  
+##  <a name="onanimationtimerpreupdate"></a>CAnimationController::OnAnimationTimerPreUpdate  
  動畫更新開始之前，由架構呼叫。  
   
 ```  
@@ -615,7 +664,7 @@ virtual void OnAnimationTimerPreUpdate();
 ### <a name="remarks"></a>備註  
  如果您啟用使用 EnableAnimationTimerEventHandler 的計時器事件處理常式會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。  
   
-##  <a name="a-nameonanimationtimerrenderingtooslowa--canimationcontrolleronanimationtimerrenderingtooslow"></a><a name="onanimationtimerrenderingtooslow"></a>CAnimationController::OnAnimationTimerRenderingTooSlow  
+##  <a name="onanimationtimerrenderingtooslow"></a>CAnimationController::OnAnimationTimerRenderingTooSlow  
  動畫呈現畫面播放速率低於最小的理想畫面播放速率時，由架構呼叫。  
   
 ```  
@@ -629,7 +678,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ### <a name="remarks"></a>備註  
  如果您啟用使用 EnableAnimationTimerEventHandler 的計時器事件處理常式會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 藉由呼叫 IUIAnimationTimer::SetFrameRateThreshold 指定最小的理想畫面播放速率。  
   
-##  <a name="a-nameonanimationvaluechangeda--canimationcontrolleronanimationvaluechanged"></a><a name="onanimationvaluechanged"></a>CAnimationController::OnAnimationValueChanged  
+##  <a name="onanimationvaluechanged"></a>CAnimationController::OnAnimationValueChanged  
  當動畫變數的值變更時，由架構呼叫。  
   
 ```  
@@ -660,7 +709,7 @@ virtual void OnAnimationValueChanged(
 ### <a name="remarks"></a>備註  
  如果您針對特定動畫變數或動畫物件呼叫 EnableValueChangedEvent 啟用動畫變數的事件，會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。  
   
-##  <a name="a-nameonbeforeanimationstarta--canimationcontrolleronbeforeanimationstart"></a><a name="onbeforeanimationstart"></a>CAnimationController::OnBeforeAnimationStart  
+##  <a name="onbeforeanimationstart"></a>CAnimationController::OnBeforeAnimationStart  
  由架構呼叫右之前排定動畫。  
   
 ```  
@@ -674,7 +723,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>備註  
  這個呼叫會路由傳送至相關 CWnd，並可以在動畫啟動為指定的群組之前執行的任何其他動作的衍生類別中覆寫。  
   
-##  <a name="a-nameonhasprioritycancela--canimationcontrolleronhasprioritycancel"></a><a name="onhasprioritycancel"></a>CAnimationController::OnHasPriorityCancel  
+##  <a name="onhasprioritycancel"></a>CAnimationController::OnHasPriorityCancel  
  由架構呼叫來解決排程衝突。  
   
 ```  
@@ -700,7 +749,7 @@ virtual BOOL OnHasPriorityCancel(
 ### <a name="remarks"></a>備註  
  如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CANCEL 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如需有關衝突管理的詳細資訊，請閱讀 Windows 動畫 API 文件 (http://msdn.microsoft.com/library/dd371759(VS.85).aspx)。  
   
-##  <a name="a-nameonhasprioritycompressa--canimationcontrolleronhasprioritycompress"></a><a name="onhasprioritycompress"></a>CAnimationController::OnHasPriorityCompress  
+##  <a name="onhasprioritycompress"></a>CAnimationController::OnHasPriorityCompress  
  由架構呼叫來解決排程衝突。  
   
 ```  
@@ -726,7 +775,7 @@ virtual BOOL OnHasPriorityCompress(
 ### <a name="remarks"></a>備註  
  如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_COMPRESS 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如需有關衝突管理的詳細資訊，請閱讀 Windows 動畫 API 文件 (http://msdn.microsoft.com/library/dd371759(VS.85).aspx)。  
   
-##  <a name="a-nameonhaspriorityconcludea--canimationcontrolleronhaspriorityconclude"></a><a name="onhaspriorityconclude"></a>CAnimationController::OnHasPriorityConclude  
+##  <a name="onhaspriorityconclude"></a>CAnimationController::OnHasPriorityConclude  
  由架構呼叫來解決排程衝突。  
   
 ```  
@@ -752,7 +801,7 @@ virtual BOOL OnHasPriorityConclude(
 ### <a name="remarks"></a>備註  
  如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_CONCLUDE 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如需有關衝突管理的詳細資訊，請閱讀 Windows 動畫 API 文件 (http://msdn.microsoft.com/library/dd371759(VS.85).aspx)。  
   
-##  <a name="a-nameonhasprioritytrima--canimationcontrolleronhasprioritytrim"></a><a name="onhasprioritytrim"></a>CAnimationController::OnHasPriorityTrim  
+##  <a name="onhasprioritytrim"></a>CAnimationController::OnHasPriorityTrim  
  由架構呼叫來解決排程衝突。  
   
 ```  
@@ -778,7 +827,7 @@ virtual BOOL OnHasPriorityTrim(
 ### <a name="remarks"></a>備註  
  如果您使用 CAnimationController::EnablePriorityComparisonHandler 和指定 UI_ANIMATION_PHT_TRIM 來啟用優先順序比較事件，則會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。 如需有關衝突管理的詳細資訊，請閱讀 Windows 動畫 API 文件 (http://msdn.microsoft.com/library/dd371759(VS.85).aspx)。  
   
-##  <a name="a-nameonstoryboardstatuschangeda--canimationcontrolleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>CAnimationController::OnStoryboardStatusChanged  
+##  <a name="onstoryboardstatuschanged"></a>CAnimationController::OnStoryboardStatusChanged  
  由架構呼叫腳本的狀態變更時。  
   
 ```  
@@ -801,7 +850,7 @@ virtual void OnStoryboardStatusChanged(
 ### <a name="remarks"></a>備註  
  如果您啟用使用 CAnimationController::EnableStoryboardEventHandler 腳本事件，會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。  
   
-##  <a name="a-nameonstoryboardupdateda--canimationcontrolleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>CAnimationController::OnStoryboardUpdated  
+##  <a name="onstoryboardupdated"></a>CAnimationController::OnStoryboardUpdated  
  已更新腳本時由架構呼叫。  
   
 ```  
@@ -815,7 +864,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>備註  
  如果您啟用使用 CAnimationController::EnableStoryboardEventHandler 腳本事件，會呼叫這個方法。 可覆寫衍生類別中的該方法來採取應用程式的特定動作。  
   
-##  <a name="a-nameremoveallanimationgroupsa--canimationcontrollerremoveallanimationgroups"></a><a name="removeallanimationgroups"></a>CAnimationController::RemoveAllAnimationGroups  
+##  <a name="removeallanimationgroups"></a>CAnimationController::RemoveAllAnimationGroups  
  動畫控制器中移除所有動畫群組。  
   
 ```  
@@ -825,7 +874,7 @@ void RemoveAllAnimationGroups();
 ### <a name="remarks"></a>備註  
  所有群組將都會刪除，他們的指標，如果儲存在應用程式層級必須都會失效。 如果正在刪除群組 CAnimationGroup::m_bAutodestroyAnimationObjects 為 TRUE，將會刪除隸屬於該群組的所有動畫物件;否則它們的參考到父動畫控制器將會設定為 NULL，而且可以加入另一個控制站。  
   
-##  <a name="a-nameremoveanimationgroupa--canimationcontrollerremoveanimationgroup"></a><a name="removeanimationgroup"></a>CAnimationController::RemoveAnimationGroup  
+##  <a name="removeanimationgroup"></a>CAnimationController::RemoveAnimationGroup  
  動畫控制器中移除具有指定識別碼的動畫群組。  
   
 ```  
@@ -839,7 +888,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ### <a name="remarks"></a>備註  
  這個方法從內部的群組清單移除動畫群組，並將它刪除，因此如果您儲存的指標，該動畫群組時，它必須失效。 如果 CAnimationGroup::m_bAutodestroyAnimationObjects 為 TRUE，就會刪除隸屬於該群組的所有動畫物件;否則它們的參考到父動畫控制器將會設定為 NULL，而且可以加入另一個控制站。  
   
-##  <a name="a-nameremoveanimationobjecta--canimationcontrollerremoveanimationobject"></a><a name="removeanimationobject"></a>CAnimationController::RemoveAnimationObject  
+##  <a name="removeanimationobject"></a>CAnimationController::RemoveAnimationObject  
  移除動畫控制器動畫物件。  
   
 ```  
@@ -858,7 +907,7 @@ void RemoveAnimationObject(
 ### <a name="remarks"></a>備註  
  從動畫控制器及動畫群組中移除動畫物件。 如果特定的物件應該不具有動畫效果，或如果您需要將物件移至另一個動畫控制器，請呼叫此函式。 在上次案例 bNoDelete 必須是 TRUE。  
   
-##  <a name="a-nameremovetransitionsa--canimationcontrollerremovetransitions"></a><a name="removetransitions"></a>CAnimationController::RemoveTransitions  
+##  <a name="removetransitions"></a>CAnimationController::RemoveTransitions  
  移除屬於指定之群組的動畫物件的轉換。  
   
 ```  
@@ -872,7 +921,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ### <a name="remarks"></a>備註  
  群組及其動畫物件進行迴圈，而且針對每個動畫物件呼叫 ClearTransitions(FALSE)。 已排定動畫之後，架構會呼叫這個方法。  
   
-##  <a name="a-nameschedulegroupa--canimationcontrollerschedulegroup"></a><a name="schedulegroup"></a>CAnimationController::ScheduleGroup  
+##  <a name="schedulegroup"></a>CAnimationController::ScheduleGroup  
  排程動畫。  
   
 ```  
@@ -894,7 +943,7 @@ BOOL ScheduleGroup(
 ### <a name="remarks"></a>備註  
  您必須設定為 FALSE 的先前 ScheduleGroup 參數 bScheduleNow 呼叫 AnimateGroup。 您可以指定所需的動畫時間取自 IUIAnimationTimer::GetTime。 如果時間參數是 0.0 時，為目前時間排定的動畫。  
   
-##  <a name="a-namesetrelatedwnda--canimationcontrollersetrelatedwnd"></a><a name="setrelatedwnd"></a>CAnimationController::SetRelatedWnd  
+##  <a name="setrelatedwnd"></a>CAnimationController::SetRelatedWnd  
  建立動畫控制器和視窗之間的關聯性。  
   
 ```  
@@ -908,7 +957,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ### <a name="remarks"></a>備註  
  如果設定相關的 CWnd 物件，動畫控制器可以自動進行更新 （傳送 WM_PAINT 訊息） 的動畫管理員狀態已變更或張貼更新的計時器事件發生時。  
   
-##  <a name="a-nameupdateanimationmanagera--canimationcontrollerupdateanimationmanager"></a><a name="updateanimationmanager"></a>CAnimationController::UpdateAnimationManager  
+##  <a name="updateanimationmanager"></a>CAnimationController::UpdateAnimationManager  
  指示動畫管理員，以更新所有動畫變數的值。  
   
 ```  

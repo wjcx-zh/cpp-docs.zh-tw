@@ -51,8 +51,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 38da17243a00f703313007a0721ccb44b5f3eb75
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0bcd8094d0b07927c8f85baf81d6ae834d283d9d
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="heapset"></a>_heapset
@@ -145,17 +146,9 @@ int main( void )
 OK - heap is fine  
 ```  
   
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
-  
 ## <a name="see-also"></a>另請參閱  
  [記憶體配置](../c-runtime-library/memory-allocation.md)   
  [_heapadd](../c-runtime-library/heapadd.md)   
  [_heapchk](../c-runtime-library/reference/heapchk.md)   
  [_heapmin](../c-runtime-library/reference/heapmin.md)   
  [_heapwalk](../c-runtime-library/reference/heapwalk.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

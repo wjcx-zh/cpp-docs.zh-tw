@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CTabbedPane
+- AFXTABBEDPANE/CTabbedPane
+- AFXTABBEDPANE/CTabbedPane::DetachPane
+- AFXTABBEDPANE/CTabbedPane::EnableTabAutoColor
+- AFXTABBEDPANE/CTabbedPane::FloatTab
+- AFXTABBEDPANE/CTabbedPane::GetTabArea
+- AFXTABBEDPANE/CTabbedPane::GetTabWnd
+- AFXTABBEDPANE/CTabbedPane::HasAutoHideMode
+- AFXTABBEDPANE/CTabbedPane::IsTabLocationBottom
+- AFXTABBEDPANE/CTabbedPane::ResetTabs
+- AFXTABBEDPANE/CTabbedPane::SetTabAutoColors
+- AFXTABBEDPANE/CTabbedPane::m_bTabsAlwaysTop
+- AFXTABBEDPANE/CTabbedPane::m_pTabWndRTC
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -159,7 +171,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 ## <a name="requirements"></a>需求  
  **標頭︰** afxTabbedPane.h  
   
-##  <a name="a-namedetachpanea--ctabbedpanedetachpane"></a><a name="detachpane"></a>CTabbedPane::DetachPane  
+##  <a name="detachpane"></a>CTabbedPane::DetachPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -176,7 +188,7 @@ virtual BOOL DetachPane(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenabletabautocolora--ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
+##  <a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor  
  啟用或停用索引標籤的自動著色。  
   
 ```  
@@ -194,7 +206,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
   
  根據預設，此選項已停用。  
   
-##  <a name="a-namefloattaba--ctabbedpanefloattab"></a><a name="floattab"></a>CTabbedPane::FloatTab  
+##  <a name="floattab"></a>CTabbedPane::FloatTab  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -215,7 +227,7 @@ virtual BOOL FloatTab(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegettabareaa--ctabbedpanegettabarea"></a><a name="gettabarea"></a>CTabbedPane::GetTabArea  
+##  <a name="gettabarea"></a>CTabbedPane::GetTabArea  
  索引標籤式視窗中傳回的大小和索引標籤區域位置。  
   
 ```  
@@ -236,7 +248,7 @@ virtual void GetTabArea(
   
  覆寫這個方法在`CTabbedPane`-衍生的類別，來變更此行為。  
   
-##  <a name="a-namegettabwnda--ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
+##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -247,7 +259,7 @@ CMFCTabCtrl* GetTabWnd() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehasautohidemodea--ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
+##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -258,7 +270,7 @@ virtual BOOL HasAutoHideMode() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameistablocationbottoma--ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
+##  <a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom  
  決定索引標籤是否位於視窗底部。  
   
 ```  
@@ -270,7 +282,7 @@ virtual BOOL IsTabLocationBottom() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namembtabsalwaystopa--ctabbedpanembtabsalwaystop"></a><a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
+##  <a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop  
  應用程式中的索引標籤的預設位置。  
   
 ```  
@@ -284,7 +296,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
   
  預設值是 `FALSE`。  
   
-##  <a name="a-namemptabwndrtca--ctabbedpanemptabwndrtc"></a><a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
+##  <a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC  
  自訂 `CMFCTabCtrl` 衍生物件的執行階段類別資訊。  
   
 ```  
@@ -294,7 +306,7 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ### <a name="remarks"></a>備註  
  設定此靜態成員變數的執行階段類別資訊的指標`CMFCTabCtrl`-衍生物件，如果您使用自訂的索引標籤式的視窗，在索引標籤式窗格。  
   
-##  <a name="a-nameresettabsa--ctabbedpaneresettabs"></a><a name="resettabs"></a>CTabbedPane::ResetTabs  
+##  <a name="resettabs"></a>CTabbedPane::ResetTabs  
  將所有的索引標籤式窗格重設為預設狀態。  
   
 ```  
@@ -304,7 +316,7 @@ static void ResetTabs();
 ### <a name="remarks"></a>備註  
  呼叫這個方法，將會還原成預設狀態的所有索引標籤式的窗格。 呼叫時，這個方法會重設的框線大小和自動色彩狀態的所有索引標籤式窗格。  
   
-##  <a name="a-namesettabautocolorsa--ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
+##  <a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors  
  設定啟用自動色彩功能時所使用的自訂色彩的清單。  
   
 ```  

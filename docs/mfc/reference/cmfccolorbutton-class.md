@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorButton
+- AFXCOLORBUTTON/CMFCColorButton
+- AFXCOLORBUTTON/CMFCColorButton::CMFCColorButton
+- AFXCOLORBUTTON/CMFCColorButton::EnableAutomaticButton
+- AFXCOLORBUTTON/CMFCColorButton::EnableOtherButton
+- AFXCOLORBUTTON/CMFCColorButton::GetAutomaticColor
+- AFXCOLORBUTTON/CMFCColorButton::GetColor
+- AFXCOLORBUTTON/CMFCColorButton::SetColor
+- AFXCOLORBUTTON/CMFCColorButton::SetColorName
+- AFXCOLORBUTTON/CMFCColorButton::SetColumnsNumber
+- AFXCOLORBUTTON/CMFCColorButton::SetDocumentColors
+- AFXCOLORBUTTON/CMFCColorButton::SetPalette
+- AFXCOLORBUTTON/CMFCColorButton::SizeToContent
+- AFXCOLORBUTTON/CMFCColorButton::IsDrawXPTheme
+- AFXCOLORBUTTON/CMFCColorButton::OnDraw
+- AFXCOLORBUTTON/CMFCColorButton::OnDrawBorder
+- AFXCOLORBUTTON/CMFCColorButton::OnDrawFocusRect
+- AFXCOLORBUTTON/CMFCColorButton::OnShowColorPopup
+- AFXCOLORBUTTON/CMFCColorButton::RebuildPalette
+- AFXCOLORBUTTON/CMFCColorButton::UpdateColor
+- AFXCOLORBUTTON/CMFCColorButton::m_bEnabledInCustomizeMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -130,14 +150,14 @@ class CMFCColorButton : public CMFCButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxcolorbutton.h  
   
-##  <a name="a-namecmfccolorbuttona--cmfccolorbuttoncmfccolorbutton"></a><a name="cmfccolorbutton"></a>CMFCColorButton::CMFCColorButton  
+##  <a name="cmfccolorbutton"></a>CMFCColorButton::CMFCColorButton  
  建構新`CMFCColorButton`物件。  
   
 ```  
 CMFCColorButton();
 ```  
   
-##  <a name="a-nameenableautomaticbuttona--cmfccolorbuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCColorButton::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>CMFCColorButton::EnableAutomaticButton  
  啟用或停用色彩選擇器控制項的 「 自動 」 按鈕，並設定自動 （預設） 的色彩。  
   
 ```  
@@ -159,7 +179,7 @@ void EnableAutomaticButton(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameenableotherbuttona--cmfccolorbuttonenableotherbutton"></a><a name="enableotherbutton"></a>CMFCColorButton::EnableOtherButton  
+##  <a name="enableotherbutton"></a>CMFCColorButton::EnableOtherButton  
  啟用或停用的 「 其他 」 按鈕，會出現一般的色彩按鈕下方。  
   
 ```  
@@ -182,7 +202,7 @@ void EnableOtherButton(
 ### <a name="remarks"></a>備註  
  按一下 [其他] 按鈕以顯示一個對話方塊。 如果*bAltColorDlg*參數是`TRUE`、 [CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)會顯示; 否則就會顯示系統的 [色彩] 對話方塊。  
   
-##  <a name="a-namegetautomaticcolora--cmfccolorbuttongetautomaticcolor"></a><a name="getautomaticcolor"></a>CMFCColorButton::GetAutomaticColor  
+##  <a name="getautomaticcolor"></a>CMFCColorButton::GetAutomaticColor  
  擷取目前的自動 （預設） 色彩。  
   
 ```  
@@ -195,7 +215,7 @@ COLORREF GetAutomaticColor() const;
 ### <a name="remarks"></a>備註  
  目前的自動色彩會設定[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)方法。  
   
-##  <a name="a-namegetcolora--cmfccolorbuttongetcolor"></a><a name="getcolor"></a>CMFCColorButton::GetColor  
+##  <a name="getcolor"></a>CMFCColorButton::GetColor  
  擷取目前選取的色彩。  
   
 ```  
@@ -207,7 +227,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisdrawxpthemea--cmfccolorbuttonisdrawxptheme"></a><a name="isdrawxptheme"></a>CMFCColorButton::IsDrawXPTheme  
+##  <a name="isdrawxptheme"></a>CMFCColorButton::IsDrawXPTheme  
  指出是否要將目前的色彩按鈕顯示在 Windows XP 視覺化樣式。  
   
 ```  
@@ -217,7 +237,7 @@ BOOL IsDrawXPTheme() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果有支援視覺化樣式和目前的色彩按鈕會顯示在 Windows XP; 的視覺化樣式否則， `FALSE`。  
   
-##  <a name="a-namembenabledincustomizemodea--cmfccolorbuttonmbenabledincustomizemode"></a><a name="m_benabledincustomizemode"></a>CMFCColorButton::m_bEnabledInCustomizeMode  
+##  <a name="m_benabledincustomizemode"></a>CMFCColorButton::m_bEnabledInCustomizeMode  
  將色彩按鈕設定為自訂模式。  
   
 ```  
@@ -227,7 +247,7 @@ BOOL m_bEnabledInCustomizeMode;
 ### <a name="remarks"></a>備註  
  如果您要加入自訂對話方塊頁面的色彩按鈕 （或允許使用者選擇其他色彩選項，在自訂期間），啟用 按鈕設定`m_bEnabledInCustomizeMode`成員`TRUE`。 根據預設，這個成員設定為`FALSE`。  
   
-##  <a name="a-nameondrawa--cmfccolorbuttonondraw"></a><a name="ondraw"></a>CMFCColorButton::OnDraw  
+##  <a name="ondraw"></a>CMFCColorButton::OnDraw  
  呼叫架構來呈現按鈕的影像。  
   
 ```  
@@ -250,7 +270,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>備註  
  覆寫此方法來自訂轉譯程序。  
   
-##  <a name="a-nameondrawbordera--cmfccolorbuttonondrawborder"></a><a name="ondrawborder"></a>CMFCColorButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCColorButton::OnDrawBorder  
  若要顯示按鈕的框線架構呼叫。  
   
 ```  
@@ -273,7 +293,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>備註  
  覆寫這個函式來自訂 [色彩] 按鈕的框線外觀。  
   
-##  <a name="a-nameondrawfocusrecta--cmfccolorbuttonondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCColorButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCColorButton::OnDrawFocusRect  
  若要顯示焦點矩形按鈕具有焦點時架構呼叫。  
   
 ```  
@@ -292,7 +312,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以自訂的焦點矩形的外觀。  
   
-##  <a name="a-nameonshowcolorpopupa--cmfccolorbuttononshowcolorpopup"></a><a name="onshowcolorpopup"></a>CMFCColorButton::OnShowColorPopup  
+##  <a name="onshowcolorpopup"></a>CMFCColorButton::OnShowColorPopup  
  快顯色軸會顯示之前呼叫。  
   
 ```  
@@ -301,7 +321,7 @@ virtual void OnShowColorPopup();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namerebuildpalettea--cmfccolorbuttonrebuildpalette"></a><a name="rebuildpalette"></a>CMFCColorButton::RebuildPalette  
+##  <a name="rebuildpalette"></a>CMFCColorButton::RebuildPalette  
  初始化`m_pPalette`受保護的資料成員指定的調色盤或預設的系統調色盤。  
   
 ```  
@@ -314,7 +334,7 @@ void RebuildPalette(CPalette* pPal);
 |---------------|-----------------|  
 |[in] `pPal`|邏輯調色盤的指標或`NULL`。 如果`NULL`，會使用預設的系統調色盤。|  
   
-##  <a name="a-namesetcolora--cmfccolorbuttonsetcolor"></a><a name="setcolor"></a>CMFCColorButton::SetColor  
+##  <a name="setcolor"></a>CMFCColorButton::SetColor  
  指定按鈕的色彩。  
   
 ```  
@@ -327,7 +347,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetcolornamea--cmfccolorbuttonsetcolorname"></a><a name="setcolorname"></a>CMFCColorButton::SetColorName  
+##  <a name="setcolorname"></a>CMFCColorButton::SetColorName  
  指定的色彩名稱。  
   
 ```  
@@ -346,7 +366,7 @@ static void SetColorName(
 ### <a name="remarks"></a>備註  
  色彩名稱清單是每個應用程式的全域範圍。 因此，這個方法會將傳輸至其參數[CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname)。  
   
-##  <a name="a-namesetcolumnsnumbera--cmfccolorbuttonsetcolumnsnumber"></a><a name="setcolumnsnumber"></a>CMFCColorButton::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>CMFCColorButton::SetColumnsNumber  
  定義使用者的色彩選擇程序期間呈現給使用者的色彩表中所顯示的資料行數目。  
   
 ```  
@@ -360,7 +380,7 @@ void SetColumnsNumber(int nColumns);
 ### <a name="remarks"></a>備註  
  使用者可以從快顯色軸顯示預先定義之色彩的色彩。 使用此方法在資料表中定義的資料行數目。  
   
-##  <a name="a-namesetdocumentcolorsa--cmfccolorbuttonsetdocumentcolors"></a><a name="setdocumentcolors"></a>CMFCColorButton::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>CMFCColorButton::SetDocumentColors  
  指定一組色彩和集的名稱。 使用顯示的色彩設定[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)物件。  
   
 ```  
@@ -379,7 +399,7 @@ void SetDocumentColors(
 ### <a name="remarks"></a>備註  
  A`CMFCColorButton`物件會維護一份 RGB 值傳送至[CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)物件。 這些色彩色軸顯示時，會顯示其標籤所指定的特殊區段`lpszLabel`參數。  
   
-##  <a name="a-namesetpalettea--cmfccolorbuttonsetpalette"></a><a name="setpalette"></a>CMFCColorButton::SetPalette  
+##  <a name="setpalette"></a>CMFCColorButton::SetPalette  
  指定要在快顯色軸上顯示標準的色彩。  
   
 ```  
@@ -392,7 +412,7 @@ void SetPalette(CPalette* pPalette);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesizetocontenta--cmfccolorbuttonsizetocontent"></a><a name="sizetocontent"></a>CMFCColorButton::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCColorButton::SizeToContent  
  調整大小以配合其文字和影像的按鈕控制項。  
   
 ```  
@@ -408,7 +428,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameupdatecolora--cmfccolorbuttonupdatecolor"></a><a name="updatecolor"></a>CMFCColorButton::UpdateColor  
+##  <a name="updatecolor"></a>CMFCColorButton::UpdateColor  
  當使用者選取一個色彩從色軸會顯示當使用者按一下 [色彩] 按鈕，由架構呼叫。  
   
 ```  

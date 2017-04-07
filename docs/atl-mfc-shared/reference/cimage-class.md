@@ -10,8 +10,47 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CImage
-- ATL.CImage
-- ATL::CImage
+- ATLIMAGE/ATL::CImage
+- ATLIMAGE/ATL::CImage::CImage
+- ATLIMAGE/ATL::CImage::AlphaBlend
+- ATLIMAGE/ATL::CImage::Attach
+- ATLIMAGE/ATL::CImage::BitBlt
+- ATLIMAGE/ATL::CImage::Create
+- ATLIMAGE/ATL::CImage::CreateEx
+- ATLIMAGE/ATL::CImage::Destroy
+- ATLIMAGE/ATL::CImage::Detach
+- ATLIMAGE/ATL::CImage::Draw
+- ATLIMAGE/ATL::CImage::GetBits
+- ATLIMAGE/ATL::CImage::GetBPP
+- ATLIMAGE/ATL::CImage::GetColorTable
+- ATLIMAGE/ATL::CImage::GetDC
+- ATLIMAGE/ATL::CImage::GetExporterFilterString
+- ATLIMAGE/ATL::CImage::GetHeight
+- ATLIMAGE/ATL::CImage::GetImporterFilterString
+- ATLIMAGE/ATL::CImage::GetMaxColorTableEntries
+- ATLIMAGE/ATL::CImage::GetPitch
+- ATLIMAGE/ATL::CImage::GetPixel
+- ATLIMAGE/ATL::CImage::GetPixelAddress
+- ATLIMAGE/ATL::CImage::GetTransparentColor
+- ATLIMAGE/ATL::CImage::GetWidth
+- ATLIMAGE/ATL::CImage::IsDIBSection
+- ATLIMAGE/ATL::CImage::IsIndexed
+- ATLIMAGE/ATL::CImage::IsNull
+- ATLIMAGE/ATL::CImage::IsTransparencySupported
+- ATLIMAGE/ATL::CImage::Load
+- ATLIMAGE/ATL::CImage::LoadFromResource
+- ATLIMAGE/ATL::CImage::MaskBlt
+- ATLIMAGE/ATL::CImage::PlgBlt
+- ATLIMAGE/ATL::CImage::ReleaseDC
+- ATLIMAGE/ATL::CImage::ReleaseGDIPlus
+- ATLIMAGE/ATL::CImage::Save
+- ATLIMAGE/ATL::CImage::SetColorTable
+- ATLIMAGE/ATL::CImage::SetPixel
+- ATLIMAGE/ATL::CImage::SetPixelIndexed
+- ATLIMAGE/ATL::CImage::SetPixelRGB
+- ATLIMAGE/ATL::CImage::SetTransparentColor
+- ATLIMAGE/ATL::CImage::StretchBlt
+- ATLIMAGE/ATL::CImage::TransparentBlt
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -196,7 +235,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 ## <a name="requirements"></a>需求  
  **標頭︰** atlimage.h  
   
-##  <a name="a-namealphablenda--cimagealphablend"></a><a name="alphablend"></a>CImage::AlphaBlend  
+##  <a name="alphablend"></a>CImage::AlphaBlend  
  顯示具有透明或半透明的像素的點陣圖。  
   
 ```
@@ -285,7 +324,7 @@ BOOL AlphaBlend(
   
  當`bBlendOp`設為預設值是**AC_SRC_OVER**，來源點陣圖會透過基礎來源像素的 alpha 值的目的地點陣圖。  
 
-##  <a name="a-nameattacha--cimageattach"></a><a name="attach"></a>CImage::Attach  
+##  <a name="attach"></a>CImage::Attach  
  附加`hBitmap`到`CImage`物件。  
   
 ```
@@ -308,7 +347,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 ### <a name="remarks"></a>備註  
  可以是點陣圖，非 DIB 區段點陣圖或 DIB 區段點陣圖。 請參閱[IsDIBSection](#isdibsection)只適用於 DIB 的方法清單一節的點陣圖。  
   
-##  <a name="a-namebitblta--cimagebitblt"></a><a name="bitblt"></a>CImage::BitBlt  
+##  <a name="bitblt"></a>CImage::BitBlt  
  來源裝置內容的點陣圖複製到這個目前的裝置內容。  
   
 ```
@@ -380,7 +419,7 @@ BOOL BitBlt(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-namecimagea--cimagecimage"></a><a name="cimage"></a>CImage::CImage  
+##  <a name="cimage"></a>CImage::CImage  
  建構 `CImage` 物件。  
   
 ```
@@ -394,7 +433,7 @@ CImage() throw();
   
  使用全域`CImage`不建議在 DLL 中的物件。 如果您需要使用全域`CImage`物件在 DLL 中，呼叫[CImage::ReleaseGDIPlus](#releasegdiplus)明確釋放 GDI + 所使用的資源。  
   
-##  <a name="a-namecreatea--cimagecreate"></a><a name="create"></a>CImage::Create  
+##  <a name="create"></a>CImage::Create  
  建立`CImage`點陣圖，並將它附加至先前建構`CImage`物件。  
   
 ```
@@ -426,7 +465,7 @@ BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="a-namecreateexa--cimagecreateex"></a><a name="createex"></a>CImage::CreateEx  
+##  <a name="createex"></a>CImage::CreateEx  
  建立`CImage`點陣圖，並將它附加至先前建構`CImage`物件。  
   
 ```
@@ -479,14 +518,14 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
 
-##  <a name="a-namedestroya--cimagedestroy"></a><a name="destroy"></a>CImage::Destroy  
+##  <a name="destroy"></a>CImage::Destroy  
  中斷連結從點陣圖`CImage`物件，並終結點陣圖。  
   
 ```
 void Destroy() throw();
 ```  
   
-##  <a name="a-namedetacha--cimagedetach"></a><a name="detach"></a>CImage::Detach  
+##  <a name="detach"></a>CImage::Detach  
  中斷連結從點陣圖`CImage`物件。  
   
 ```
@@ -496,7 +535,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>傳回值  
  卸離，點陣圖的控制代碼或**NULL**如果連接不使用任何點陣圖。  
   
-##  <a name="a-namedrawa--cimagedraw"></a><a name="draw"></a>Cimage  
+##  <a name="draw"></a>Cimage  
  來源裝置內容的點陣圖複製到目前的裝置內容。  
   
 ```
@@ -582,7 +621,7 @@ BOOL Draw(
   
  版本**繪製**，不會指定來源矩形，整個來源影像是預設值。 版本的**繪製**未指定目的地矩形的大小、 來源影像的大小是預設值，而且沒有自動縮放或壓縮會發生。  
   
-##  <a name="a-namegetbitsa--cimagegetbits"></a><a name="getbits"></a>CImage::GetBits  
+##  <a name="getbits"></a>CImage::GetBits  
  擷取指定的像素點陣圖中的實際位元值的指標。  
   
 ```
@@ -598,7 +637,7 @@ void* GetBits() throw();
 > [!NOTE]
 >  這個方法支援只有 DIB 區段的點陣圖。因此，您可以存取的像素`CImage`物件相同的方式就像素 DIB 區段。 傳回的指標會指向的位置 （0，0） 像素。  
   
-##  <a name="a-namegetbppa--cimagegetbpp"></a><a name="getbpp"></a>CImage::GetBPP  
+##  <a name="getbpp"></a>CImage::GetBPP  
  擷取每個像素的位元值。  
   
 ```
@@ -613,7 +652,7 @@ int GetBPP() const throw();
   
  每個像素的位元通常是 1、 4、 8、 16、 24 或 32。 請參閱**biBitCount**成員[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]如需有關此值。  
   
-##  <a name="a-namegetcolortablea--cimagegetcolortable"></a><a name="getcolortable"></a>CImage::GetColorTable  
+##  <a name="getcolortable"></a>CImage::GetColorTable  
  擷取 DIB 區段的調色盤中的項目範圍中的紅色、 綠色、 藍 (RGB) 色彩值。  
   
 ```
@@ -632,7 +671,7 @@ void GetColorTable(UINT iFirstColor,
  `prgbColors`  
  陣列的指標[RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938)結構，以擷取的色彩表項目。  
   
-##  <a name="a-namegetdca--cimagegetdc"></a><a name="getdc"></a>CImage::GetDC  
+##  <a name="getdc"></a>CImage::GetDC  
  擷取目前已選取成它的映像的裝置內容。  
   
 ```
@@ -645,7 +684,7 @@ HDC GetDC() const throw();
 ### <a name="remarks"></a>備註  
  每次呼叫`GetDC`，您必須擁有的後續呼叫[ReleaseDC](#releasedc)。  
   
-##  <a name="a-namegetexporterfilterstringa--cimagegetexporterfilterstring"></a><a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
+##  <a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
  尋找可用的影像格式儲存影像。  
   
 ```
@@ -724,7 +763,7 @@ CImage::GetExporterFilterString(
   
  使用預設分隔字元 ' |' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞給通用儲存檔案對話方塊中，請使用 null 分隔符號 '\0'。  
   
-##  <a name="a-namegetheighta--cimagegetheight"></a><a name="getheight"></a>CImage::GetHeight  
+##  <a name="getheight"></a>CImage::GetHeight  
  擷取的高度，單位為像素的影像。  
   
 ```
@@ -734,7 +773,7 @@ int GetHeight() const throw();
 ### <a name="return-value"></a>傳回值  
  高度，單位為像素的影像。  
   
-##  <a name="a-namegetimporterfilterstringa--cimagegetimporterfilterstring"></a><a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
+##  <a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
  尋找可用的映像格式載入影像。  
   
 ```
@@ -810,7 +849,7 @@ CImage::GetImporterFilterString(
   
  使用預設分隔字元 ' |' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞給一般使用 null 分隔符號 '\0'**開啟舊檔**對話方塊。  
   
-##  <a name="a-namegetmaxcolortableentriesa--cimagegetmaxcolortableentries"></a><a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
+##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  擷取色彩表中的項目的數目上限。  
   
 ```
@@ -823,7 +862,7 @@ int GetMaxColorTableEntries() const throw();
 ### <a name="remarks"></a>備註  
  這個方法支援 DIB 區段點陣圖。  
   
-##  <a name="a-namegetpitcha--cimagegetpitch"></a><a name="getpitch"></a>CImage::GetPitch  
+##  <a name="getpitch"></a>CImage::GetPitch  
  擷取映像的點數。  
   
 ```
@@ -841,7 +880,7 @@ int GetPitch() const throw();
 > [!NOTE]
 >  這個方法支援 DIB 區段點陣圖。  
   
-##  <a name="a-namegetpixela--cimagegetpixel"></a><a name="getpixel"></a>CImage::GetPixel  
+##  <a name="getpixel"></a>CImage::GetPixel  
  擷取指定位置的像素色彩*x*和*y*。  
   
 ```
@@ -858,7 +897,7 @@ COLORREF GetPixel(int x,int y) const throw();
 ### <a name="return-value"></a>傳回值  
  像素的紅色、 綠色、 藍 (RGB) 值。 如果像素超出了目前裁剪區域，傳回的值是**CLR_INVALID**。  
   
-##  <a name="a-namegetpixeladdressa--cimagegetpixeladdress"></a><a name="getpixeladdress"></a>CImage::GetPixelAddress  
+##  <a name="getpixeladdress"></a>CImage::GetPixelAddress  
  擷取像素的確切的位址。  
   
 ```
@@ -880,7 +919,7 @@ void* GetPixelAddress(int x,int y) throw();
 > [!NOTE]
 >  這個方法支援 DIB 區段點陣圖。  
   
-##  <a name="a-namegettransparentcolora--cimagegettransparentcolor"></a><a name="gettransparentcolor"></a>CImage::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>CImage::GetTransparentColor  
  擷取的透明色彩調色盤中的索引的位置。  
   
 ```
@@ -890,7 +929,7 @@ LONG GetTransparentColor() const throw();
 ### <a name="return-value"></a>傳回值  
  透明的色彩索引。  
   
-##  <a name="a-namegetwidtha--cimagegetwidth"></a><a name="getwidth"></a>CImage::GetWidth  
+##  <a name="getwidth"></a>CImage::GetWidth  
  擷取的寬度，單位為像素的影像。  
   
 ```
@@ -900,7 +939,7 @@ int GetWidth() const throw();
 ### <a name="return-value"></a>傳回值  
  點陣圖，單位為像素的寬度。  
   
-##  <a name="a-nameisdibsectiona--cimageisdibsection"></a><a name="isdibsection"></a>CImage::IsDIBSection  
+##  <a name="isdibsection"></a>CImage::IsDIBSection  
  決定是否附加的點陣圖 DIB 區段。  
   
 ```
@@ -927,7 +966,7 @@ bool IsDIBSection() const throw();
   
 - [SetColorTable](#setcolortable)  
   
-##  <a name="a-nameisindexeda--cimageisindexed"></a><a name="isindexed"></a>CImage::IsIndexed  
+##  <a name="isindexed"></a>CImage::IsIndexed  
  決定是否點陣圖的像素會對應到調色盤的色彩。  
   
 ```
@@ -943,7 +982,7 @@ bool IsIndexed() const throw();
 > [!NOTE]
 >  這個方法支援 DIB 區段點陣圖。  
   
-##  <a name="a-nameisnulla--cimageisnull"></a><a name="isnull"></a>CImage::IsNull  
+##  <a name="isnull"></a>CImage::IsNull  
  決定是否目前已載入的點陣圖。  
   
 ```
@@ -953,7 +992,7 @@ bool IsNull() const throw();
 ### <a name="remarks"></a>備註  
  這個方法會傳回**True**點陣圖目前未載入，否則如果**False**。  
   
-##  <a name="a-nameistransparencysupporteda--cimageistransparencysupported"></a><a name="istransparencysupported"></a>CImage::IsTransparencySupported  
+##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
  指出應用程式是否支援透明的點陣圖，並已編譯的 Windows 2000 或更新版本。  
   
 ```
@@ -969,7 +1008,7 @@ static BOOL IsTransparencySupported() throw();
  如果應用程式編譯時與作業系統搭配使用之前 Windows 2000 或 Windows 98，這個方法一定會傳回 0，即使在較新的作業系統上。  
   
 
-##  <a name="a-nameloada--cimageload"></a><a name="load"></a>CImage::Load  
+##  <a name="load"></a>CImage::Load  
  載入影像。  
   
 ```
@@ -992,7 +1031,7 @@ HRESULT Load(IStream* pStream) throw();
   
  有效的影像類型為 BMP、 GIF、 JPEG、 PNG 及 TIFF。  
   
-##  <a name="a-nameloadfromresourcea--cimageloadfromresource"></a><a name="loadfromresource"></a>CImage::LoadFromResource  
+##  <a name="loadfromresource"></a>CImage::LoadFromResource  
  載入的映像，`BITMAP`資源。  
   
 ```
@@ -1018,7 +1057,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>備註  
  資源必須是型別`BITMAP`。  
   
-##  <a name="a-namemaskblta--cimagemaskblt"></a><a name="maskblt"></a>Maskblt  
+##  <a name="maskblt"></a>Maskblt  
  結合使用點陣化操作與指定之的遮罩的來源和目的地點陣圖的色彩資料。  
   
 ```
@@ -1109,10 +1148,10 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>備註  
  這個方法適用於 Windows NT 4.0 版及更新版本的唯一版本。  
   
-##  <a name="a-nameoperatorhbitmapa--cimageoperator-hbitmap"></a><a name="operator_hbitmap"></a>CImage::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>CImage::operator HBITMAP  
  使用這個運算子來取得附加的 Windows GDI 控制代碼的`CImage`物件。 這位操作員便轉型運算子，支援直接使用`HBITMAP`物件。  
   
-##  <a name="a-nameplgblta--cimageplgblt"></a><a name="plgblt"></a>Cimage:: Plgblt  
+##  <a name="plgblt"></a>Cimage:: Plgblt  
  執行從來源裝置內容中的矩形的位元區塊傳輸，變成平行四邊形在目的地裝置內容中。  
   
 ```
@@ -1182,7 +1221,7 @@ BOOL PlgBlt(
   
  這個方法適用於 Windows NT 4.0 版及更新版本的唯一版本。 請參閱[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]如需詳細資訊。  
   
-##  <a name="a-namereleasedca--cimagereleasedc"></a><a name="releasedc"></a>CImage::ReleaseDC  
+##  <a name="releasedc"></a>CImage::ReleaseDC  
  釋放裝置內容。  
   
 ```
@@ -1192,7 +1231,7 @@ void ReleaseDC() const throw();
 ### <a name="remarks"></a>備註  
  因為只有一個點陣圖可以放入裝置內容中選取一次，您必須呼叫`ReleaseDC`每次呼叫[GetDC](#getdc)。  
   
-##  <a name="a-namereleasegdiplusa--cimagereleasegdiplus"></a><a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
+##  <a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
  GDI + 所使用的資源釋出。  
   
 ```
@@ -1202,7 +1241,7 @@ void ReleaseGDIPlus() throw();
 ### <a name="remarks"></a>備註  
  必須呼叫這個方法，以釋放資源配置的全域`CImage`物件。 請參閱[CImage::CImage](#cimage)。  
   
-##  <a name="a-namesavea--cimagesave"></a><a name="save"></a>CImage::Save  
+##  <a name="save"></a>CImage::Save  
  將影像儲存至指定的資料流或檔案在磁碟上。  
   
 ```
@@ -1240,7 +1279,7 @@ HRESULT Save(LPCTSTR pszFileName,
 ### <a name="remarks"></a>備註  
  呼叫此函式可儲存的映像，使用指定的名稱和型別。 如果`guidFileType`不包含參數、 檔案名稱副檔名將用於決定映像格式。 如果提供沒有副檔名，則影像會儲存 BMP 格式。  
   
-##  <a name="a-namesetcolortablea--cimagesetcolortable"></a><a name="setcolortable"></a>CImage::SetColorTable  
+##  <a name="setcolortable"></a>CImage::SetColorTable  
  DIB 區段的調色盤中設定的紅色、 綠色、 藍色 (RGB) 色彩值的項目範圍。  
   
 ```
@@ -1263,7 +1302,7 @@ void SetColorTable(
 ### <a name="remarks"></a>備註  
  這個方法支援 DIB 區段點陣圖。  
   
-##  <a name="a-namesetpixela--cimagesetpixel"></a><a name="setpixel"></a>CImage::SetPixel  
+##  <a name="setpixel"></a>CImage::SetPixel  
  設定在點陣圖中的指定位置的像素色彩。  
   
 ```
@@ -1283,7 +1322,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 ### <a name="remarks"></a>備註  
  如果像素座標所選的裁剪區域外的即時，這個方法將會失敗。  
   
-##  <a name="a-namesetpixelindexeda--cimagesetpixelindexed"></a><a name="setpixelindexed"></a>CImage::SetPixelIndexed  
+##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
  設定像素色彩的色彩位於`iIndex`調色盤的色彩。  
   
 ```
@@ -1300,7 +1339,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
  `iIndex`  
  色彩調色盤中的索引。  
   
-##  <a name="a-namesetpixelrgba--cimagesetpixelrgb"></a><a name="setpixelrgb"></a>CImage::SetPixelRGB  
+##  <a name="setpixelrgb"></a>CImage::SetPixelRGB  
  設定所指定位置的像素*x*和*y*所指示的色彩*r*， *g*，和*b*、 以紅色、 綠色、 藍色 (RGB) 映像。  
   
 ```
@@ -1331,7 +1370,7 @@ void SetPixelRGB(
 ### <a name="remarks"></a>備註  
  紅色、 綠色和藍色參數會分別表示一個介於 0 和 255 之間的數字。 如果您將所有三個參數設定為零，則合併結果色彩為黑色。 如果您設定所有三個參數為 255，合併結果色彩為白色。  
   
-##  <a name="a-namesettransparentcolora--cimagesettransparentcolor"></a><a name="settransparentcolor"></a>CImage::SetTransparentColor  
+##  <a name="settransparentcolor"></a>CImage::SetTransparentColor  
  設定在指定索引位置為透明的色彩。  
   
 ```
@@ -1345,7 +1384,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 ### <a name="return-value"></a>傳回值  
  先前的色彩索引設定為透明。  
   
-##  <a name="a-namestretchblta--cimagestretchblt"></a><a name="stretchblt"></a>CImage::StretchBlt  
+##  <a name="stretchblt"></a>CImage::StretchBlt  
  來源裝置內容的點陣圖複製到這個目前的裝置內容。  
   
 ```
@@ -1424,7 +1463,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
   
-##  <a name="a-nametransparentblta--cimagetransparentblt"></a><a name="transparentblt"></a>Transparentblt  
+##  <a name="transparentblt"></a>Transparentblt  
  來源裝置內容的點陣圖複製到這個目前的裝置內容。  
   
 ```

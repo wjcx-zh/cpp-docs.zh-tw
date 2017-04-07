@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppl/concurrency::affinity_partitioner
+- affinity_partitioner
+- PPL/concurrency::affinity_partitioner
+- PPL/concurrency::affinity_partitioner::affinity_partitioner
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 92da56fd5b84537c2fa01a252dfee202c729cc96
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 066557d522bc18237ccc484be8b59dc53b7e2905
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="affinitypartitioner-class"></a>affinity_partitioner 類別
@@ -52,9 +54,9 @@ class affinity_partitioner;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[affinity_partitioner 建構函式](#ctor)|建構 `affinity_partitioner` 物件。|  
+|[affinity_partitioner](#ctor)|建構 `affinity_partitioner` 物件。|  
 |[~ affinity_partitioner 解構函式](#dtor)|終結`affinity_partitioner`物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -65,7 +67,7 @@ class affinity_partitioner;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namedtora-affinitypartitioner"></a><a name="dtor"></a>~ affinity_partitioner 
+##  <a name="dtor"></a>~ affinity_partitioner 
 
  終結`affinity_partitioner`物件。  
   
@@ -73,7 +75,7 @@ class affinity_partitioner;
 ~affinity_partitioner();
 ```  
   
-##  <a name="a-namectora-affinitypartitioner"></a><a name="ctor"></a>affinity_partitioner 
+##  <a name="ctor"></a>affinity_partitioner 
 
  建構 `affinity_partitioner` 物件。  
   

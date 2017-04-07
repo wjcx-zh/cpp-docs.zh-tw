@@ -33,8 +33,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
@@ -58,9 +59,9 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 4.  [並行執行階段的重大變更](#BK_ConcRT)  
   
-## <a name="a-namevc2015a-visual-c-2015-conformance-changes"></a><a name="VC_2015"></a> Visual C++ 2015 的合規性變更  
+## <a name="VC_2015"></a> Visual C++ 2015 的合規性變更  
   
-###  <a name="a-namebkcrta-c-runtime-library-crt"></a><a name="BK_CRT"></a> C 執行階段程式庫 (CRT)  
+###  <a name="BK_CRT"></a> C 執行階段程式庫 (CRT)  
   
 #### <a name="general-changes"></a>一般變更  
   
@@ -161,7 +162,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **浮點數格式化和剖析** 已引進新的浮點數格式化和剖析演算法來改善正確性。 此變更影響 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 及 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 系列函式及 [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) 一類的函式。  
   
-     舊格式的演算法會產生有限位數的數字，然後以零填滿剩餘的小數位數。 若要產生會對原始浮點數值反覆存取的字串，這通常已經夠合用了，但如果您想要精確值 (或其中最接近的十進位表示)，就會不夠合適。 新的格式演算法會視需要產生足夠多的位數，用來代表該值 (或用來填入指定的精確度)。 做為改進的範例，請考慮列印&2; 的大型乘冪時之結果：  
+     舊格式的演算法會產生有限位數的數字，然後以零填滿剩餘的小數位數。 若要產生會對原始浮點數值反覆存取的字串，這通常已經夠合用了，但如果您想要精確值 (或其中最接近的十進位表示)，就會不夠合適。 新的格式演算法會視需要產生足夠多的位數，用來代表該值 (或用來填入指定的精確度)。 做為改進的範例，請考慮列印 2 的大型乘冪時之結果：  
   
     ```cpp  
     printf("%.0f\n", pow(2.0, 80))  
@@ -180,7 +181,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **%A 和 %a 的精確度** 在此程式庫的舊版中，%A 和 %a 的格式規範之預設精確度是 6。 為了與 C 標準一致，現在此預設精確度為 13。  
   
-     在搭配 %A 或 %a 使用格式字串的任何函式輸出中，此為執行階段行為變更。 在舊版的行為中，使用 %A 規範的輸出可能為 "1.1A2B3Cp+111"。 現在對於相同值的輸出是 "1.1A2B3C4D5E6F7p+111"。 若要取得舊的行為，您可以指定精確度，例如 %.6A。 請參閱[精確度規格](../c-runtime-library/precision-specification.md)。  
+     在搭配 %A 或 %a 使用格式字串的任何函式輸出中，此為執行階段行為變更。 在舊版的行為中，使用 %A 規範的輸出可能為 "1.1A2B3Cp+111"。 現在對於相同值的輸出是 "1.1A2B3C4D5E6F7p+111"。 若要取得舊的行為，您可以指定精確度，例如 %.6A。 請參閱[精確度規格](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)。  
   
 -   **%F 規範** 現在支援 %F 格式/轉換規範。 它的功能相當於 %f 格式規範，不同之處在於無限大和 NaN 的格式使用大寫字母。  
   
@@ -216,7 +217,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **strtof 和 wcstof** The strtof 和 wcstof functions failed to set errno to ERANGE when the value was not representable as a float. 這項問題已獲得修正。 (請注意，這個錯誤是這兩個函數特有的；而 strtod、wcstod、strtold 和 wcstold 函式不受影響。)這是執行階段的重大變更。  
   
--   **alligned 配置函式**：在舊版中，alligned 配置函式 (_aligned_malloc、_aligned_offset_malloc 等等) 會以無訊息方式接受對齊等於 0 的區塊要求。 要求的對齊必須是&2; 的乘冪，而&0; 卻不是。 已修正這個問題，現在會將要求的對齊為 0 視為無效的參數。 這是執行階段的重大變更。  
+-   **alligned 配置函式**：在舊版中，alligned 配置函式 (_aligned_malloc、_aligned_offset_malloc 等等) 會以無訊息方式接受對齊等於 0 的區塊要求。 要求的對齊必須是 2 的乘冪，而 0 卻不是。 已修正這個問題，現在會將要求的對齊為 0 視為無效的參數。 這是執行階段的重大變更。  
   
 -   **堆積函式**：_heapadd、_heapset 和 _heapused 函式已移除。 這些函式已無作用，因為 CRT 已更新為使用 Windows 堆積。  
   
@@ -252,7 +253,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **CLOCKS_PER_SEC** 現在 CLOCKS_PER_SEC 巨集會展開成整數的類型 clock_t，如同 C 語言所要求的。  
   
-####  <a name="a-namebkstla-c-standard-library"></a><a name="BK_STL"></a>C++ 標準程式庫  
+####  <a name="BK_STL"></a>C++ 標準程式庫  
  為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤  (_MSC_VER 是包含此編譯器主要版本的巨集，例如對於 Visual Studio 2013 為 1800。)這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。  
   
 -   **C++ 標準程式庫包含檔案**：有一些變更讓 C++ 標準程式庫標頭可以加入結構。 C++ 標準程式庫標頭可以一些未經指定的方式加入彼此之中。 一般來說，您在撰寫程式碼時，應依據 C++ 標準小心地加入程式碼所需的所有標頭，而不要使用 C++ 標準程式庫標頭相互加入的這項特性。 這使其成為可攜式跨版本和跨平台的程式碼。 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，至少有兩種標頭的變更會影響使用者程式碼。 首先，\<string> 不再包含 \<iterator>。 其次，\<tuple> 現在只會宣告 std::array，而不會加入所有的 \<array>。此函式可以經由下列程式碼建構組合中斷程式碼：您的程式碼具有名為 "array" 的變數及 using 指示詞 "using namespace std;"，而且包含內有 \<tuple> (現在會宣告 std::array) 的 C++ 標準程式庫標頭 (例如 \<functional>)。  
@@ -315,13 +316,13 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **launch::any 與 launch::sync 原則**：nonstandard launch::any 和 launch::sync 原則已移除。 對於 launch::any，請改用 launch:async &#124; launch:deferred。 對於 launch::sync，請改用 launch::deferred。 請參閱 [launch Enumeration](../standard-library/future-enums.md#launch_enumeration)。  
   
-####  <a name="a-namebkmfca-mfc-and-atl"></a><a name="BK_MFC"></a> MFC 與 ATL  
+####  <a name="BK_MFC"></a> MFC 與 ATL  
   
 -   **Microsoft Foundation Classes (MFC)** 因為其大小太大而不再隨附於 Visual Studio 的「一般」安裝。 若要安裝 MFC，請在 Visual Studio 2015 安裝程式中選擇 [自訂] 安裝選項。 如果您已經安裝 Visual Studio 2015，您可以重新執行 Visual Studio 安裝程式，選擇 [自訂] 安裝選項，以及選擇 Microsoft Foundation Classes 來安裝 MFC。 從 [控制台]、[程式和功能]，或從安裝媒體，您可以重新執行 Visual Studio 安裝程式。  
   
      Visual C++ 可轉散發套件仍然包含這個程式庫。  
   
-####  <a name="a-namebkconcrta-concurrency-runtime"></a><a name="BK_ConcRT"></a> 並行執行階段  
+####  <a name="BK_ConcRT"></a> 並行執行階段  
   
 -   **從 Windows.h 產生的巨集與 concurrency::Context::Yield 發生衝突** 並行執行階段之前使用 #undef 取消 Yield 巨集的定義，以避免 Windows.h h 和 concurrency::Context::Yield 函式中定義的 Yield 巨集之間發生衝突。 此 #undef 已移除，並新增了不衝突的對等 API 呼叫 [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution)。 若要解決 Yield 的衝突，您可以更新您的程式碼，改成呼叫 YieldExecution 函式，或在呼叫位置將 Yield 函式名稱加上括弧，如下列範例所示：  
   
@@ -346,7 +347,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   [Update 3 的合規性改進](#VS_Update3)  
   
-###  <a name="a-namevsrtma-conformance-improvements-in-visual-c-2015"></a><a name="VS_RTM"></a> Visual C++ 2015 的合規性改進  
+###  <a name="VS_RTM"></a> Visual C++ 2015 的合規性改進  
   
 -   /Zc:forScope- 選項  
   
@@ -575,9 +576,9 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 -   **placement new 與 delete**  
   
-     為了讓 delete 運算子 (delete Operator) 與 C++&14; 標準一致，已對它加以變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 此變更加入一種全域 delete 運算子，該運算子需要大小參數。 重大變更是如果您先前使用具有相同簽章 (藉此對應至 placement new 運算子) 的 operator delete 函式，就會發生編譯器錯誤 (C2956，於使用 placement new 運算子所在之處發生，因為在程式碼的該位置上，此編譯器會嘗試識別合適且相符的 delete 運算子)。  
+     為了讓 delete 運算子 (delete Operator) 與 C++ 14 標準一致，已對它加以變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 此變更加入一種全域 delete 運算子，該運算子需要大小參數。 重大變更是如果您先前使用具有相同簽章 (藉此對應至 placement new 運算子) 的 operator delete 函式，就會發生編譯器錯誤 (C2956，於使用 placement new 運算子所在之處發生，因為在程式碼的該位置上，此編譯器會嘗試識別合適且相符的 delete 運算子)。  
   
-     函式 `void operator delete(void *, size_t)` 曾是 placement delete 運算子，相當於 C++&11; 中的 placement new 函式 "void \* operator new(size_t, size_t)"。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為 *「一般解除配置函式」* (Usual Deallocation Function) (全域 delete 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。  
+     函式 `void operator delete(void *, size_t)` 曾是 placement delete 運算子，相當於 C++ 11 中的 placement new 函式 "void \* operator new(size_t, size_t)"。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為 *「一般解除配置函式」* (Usual Deallocation Function) (全域 delete 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。  
   
      例如，假設您的程式碼同時定義 placement new 和 placement delete：  
   
@@ -861,7 +862,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
   
-###  <a name="a-namevsupdate1a-conformance-improvements-in-update-1"></a><a name="VS_Update1"></a> Update 1 的合規性改進  
+###  <a name="VS_Update1"></a> Update 1 的合規性改進  
   
 -   **私用的虛擬基底類別與間接繼承**  
   
@@ -948,7 +949,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      此外，雖然編譯器不提供特定的診斷，但內嵌運算子 new 會被視為語式錯誤。  
   
--   對非類別類型** **呼叫 'operator *type*()' (使用者定義的轉換)  
+-   對非類別類型** **呼叫 'operator*type*()' (使用者定義的轉換)  
   
      舊版編譯器允許在非類別類型上呼叫 'operator *type*()'，但以無訊息方式略過。 這種舊行為造成的風險是，會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2228。  
   
@@ -1387,11 +1388,10 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // ok  
     }  
-  
     ```  
   
      範例 (之後)  
@@ -1401,14 +1401,13 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
     {  
         auto iter = std::find(v.begin(), v.end(), 5);  
     }  
-    catch (…)  
+    catch (...)  
     {  
         do_something();   // warning C4702: unreachable code  
     }  
-  
     ```  
   
-###  <a name="a-namevsupdate2a-conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> Update 2 的合規性改進  
+###  <a name="VS_Update2"></a> Update 2 的合規性改進  
   
 -   **運算式 SFINAE 的部分支援也可能會發出其他警告與錯誤**  
   
@@ -1507,7 +1506,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
     ```  
   
--   `volatile` ** 成員變數會禁止隱含定義的建構函式與指派運算子**  
+-   `volatile` **成員變數會禁止隱含定義的建構函式與指派運算子**  
   
      舊版編譯器允許具有 `volatile` 成員變數的類別自動產生預設的複製/移動建構函式及預設的複製/移動指派運算子。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會考慮讓具有揮發性成員變數的類別擁有非 trivial 建構和指派運算子，這樣可防止自動產生這些運算子的預設實作。  當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含 Unonymous 等位之類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。  
   
@@ -1693,7 +1692,7 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
      可能需要先將運算子定義從標頭檔移出，再將其移入對應的原始程式檔，才能修正以此方式撰寫的程式碼。  
   
-###  <a name="a-namevsupdate3a-conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> Update 3 的合規性改進  
+###  <a name="VS_Update3"></a> Update 3 的合規性改進  
   
 -   **std::is_convertable 現在已可偵測自我指派** (標準程式庫)  
   
@@ -2793,8 +2792,3 @@ ms.openlocfilehash: e51b0bda5ef7d68476d0536e7b79987e5da9ec84
   
 ## <a name="see-also"></a>另請參閱  
 [Visual Studio 之 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

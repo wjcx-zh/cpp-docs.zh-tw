@@ -103,7 +103,7 @@ class queue
   
  **命名空間：** std  
   
-##  <a name="a-namequeuebacka--queueback"></a><a name="queue__back"></a>  queue::back  
+##  <a name="queue__back"></a>  queue::back  
  傳回佇列後端最後且最近新增的項目。  
   
 ```  
@@ -146,7 +146,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namequeuecontainertypea--queuecontainertype"></a><a name="queue__container_type"></a>  queue::container_type  
+##  <a name="queue__container_type"></a>  queue::container_type  
  提供要配接之基底容器的類型。  
   
 ```  
@@ -161,7 +161,7 @@ typedef Container container_type;
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `container_type` 的範例，請參閱 [queue](#queue__queue) 的範例。  
   
-##  <a name="a-namequeueemptya--queueempty"></a><a name="queue__empty"></a>  queue::empty  
+##  <a name="queue__empty"></a>  queue::empty  
  測試佇列是否為空白。  
   
 ```  
@@ -205,7 +205,7 @@ The queue q1 is not empty.
 The queue q2 is empty.  
 ```  
   
-##  <a name="a-namequeuefronta--queuefront"></a><a name="queue__front"></a>  queue::front  
+##  <a name="queue__front"></a>  queue::front  
  傳回佇列前端第一個項目的參考。  
   
 ```  
@@ -254,7 +254,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namequeuepopa--queuepop"></a><a name="queue__pop"></a>  queue::pop  
+##  <a name="queue__pop"></a>  queue::pop  
  從佇列前端移除項目。  
   
 ```  
@@ -308,7 +308,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.  
 ```  
   
-##  <a name="a-namequeuepusha--queuepush"></a><a name="queue__push"></a>  queue::push  
+##  <a name="queue__push"></a>  queue::push  
  將項目加入佇列的後端。  
   
 ```  
@@ -354,7 +354,7 @@ The queue length is 3.
 The element at the front of the queue is 10.  
 ```  
   
-##  <a name="a-namequeuequeuea--queuequeue"></a><a name="queue__queue"></a>  queue::queue  
+##  <a name="queue__queue"></a>  queue::queue  
  建構佇列，它可以是空的，或是基底容器物件的複本。  
   
 ```  
@@ -364,7 +364,7 @@ explicit queue(const container_type& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  其中建構佇列為複本的 **const** 容器。  
   
 ### <a name="remarks"></a>備註  
@@ -418,7 +418,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.  
 ```  
   
-##  <a name="a-namequeuesizea--queuesize"></a><a name="queue__size"></a>  queue::size  
+##  <a name="queue__size"></a>  queue::size  
  傳回佇列中的項目數目。  
   
 ```  
@@ -457,7 +457,7 @@ The queue length is 1.
 The queue length is now 2.  
 ```  
   
-##  <a name="a-namequeuesizetypea--queuesizetype"></a><a name="queue__size_type"></a>  queue::size_type  
+##  <a name="queue__size_type"></a>  queue::size_type  
  不帶正負號的整數類型，可以表示佇列中的項目數。  
   
 ```  
@@ -470,7 +470,7 @@ typedef typename Container::size_type size_type;
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `size_type` 的範例，請參閱 [queue::front](#queue__front) 的範例。  
   
-##  <a name="a-namequeuevaluetypea--queuevaluetype"></a><a name="queue__value_type"></a>  queue::value_type  
+##  <a name="queue__value_type"></a>  queue::value_type  
  此類型代表儲存為佇列項目的物件類型。  
   
 ```  

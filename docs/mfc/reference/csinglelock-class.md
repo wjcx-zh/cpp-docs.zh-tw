@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSingleLock
+- AFXMT/CSingleLock
+- AFXMT/CSingleLock::CSingleLock
+- AFXMT/CSingleLock::IsLocked
+- AFXMT/CSingleLock::Lock
+- AFXMT/CSingleLock::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -82,7 +87,7 @@ class CSingleLock
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmt.h  
   
-##  <a name="a-namecsinglelocka--csinglelockcsinglelock"></a><a name="csinglelock"></a>CSingleLock::CSingleLock  
+##  <a name="csinglelock"></a>CSingleLock::CSingleLock  
  建構 `CSingleLock` 物件。  
   
 ```  
@@ -104,7 +109,7 @@ explicit CSingleLock(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities #&19;](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
   
-##  <a name="a-nameislockeda--csinglelockislocked"></a><a name="islocked"></a>CSingleLock::IsLocked  
+##  <a name="islocked"></a>CSingleLock::IsLocked  
  如果與相關聯的物件會決定`CSingleLock`物件為未收到信號 （無法使用）。  
   
 ```  
@@ -117,7 +122,7 @@ BOOL IsLocked();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities #&20;](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
   
-##  <a name="a-namelocka--csinglelocklock"></a><a name="lock"></a>CSingleLock::Lock  
+##  <a name="lock"></a>CSingleLock::Lock  
  呼叫此函式來取得存取權提供給同步處理物件所控制的資源`CSingleLock`建構函式。  
   
 ```  
@@ -137,7 +142,7 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities #&21;](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-##  <a name="a-nameunlocka--csinglelockunlock"></a><a name="unlock"></a>CSingleLock::Unlock  
+##  <a name="unlock"></a>CSingleLock::Unlock  
  釋放同步物件所擁有`CSingleLock`。  
   
 ```  

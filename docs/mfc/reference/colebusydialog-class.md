@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
+- AFXODLGS/COleBusyDialog
+- AFXODLGS/COleBusyDialog::COleBusyDialog
+- AFXODLGS/COleBusyDialog::DoModal
+- AFXODLGS/COleBusyDialog::GetSelectionType
+- AFXODLGS/COleBusyDialog::m_bz
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +104,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxodlgs.h  
   
-##  <a name="a-namecolebusydialoga--colebusydialogcolebusydialog"></a><a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
  此函式只建構`COleBusyDialog`物件。  
   
 ```  
@@ -134,7 +139,7 @@ explicit COleBusyDialog(
   
  如需詳細資訊，請參閱[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedomodala--colebusydialogdomodal"></a><a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>COleBusyDialog::DoModal  
  呼叫此函式來顯示 OLE 伺服器忙碌中或伺服器沒有回應 對話方塊。  
   
 ```  
@@ -155,7 +160,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`傳回**IDOK**，您可以呼叫其他成員函式來擷取設定或已由使用者輸入 對話方塊中的資訊。  
   
-##  <a name="a-namegetselectiontypea--colebusydialoggetselectiontype"></a><a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
  呼叫此函式可取得使用者在 [伺服器忙碌] 對話方塊中選擇的選取項目類型。  
   
 ```  
@@ -168,17 +173,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>備註  
  傳回型別值由**選取**中宣告列舉型別`COleBusyDialog`類別。  
   
- `enum Selection`  
-  
- `{`  
-  
- `switchTo,`  
-  
- `retry,`  
-  
- `callUnblocked`  
-  
- `};`  
+```  
+enum Selection {
+    switchTo,
+    retry,
+    callUnblocked
+    };
+```  
   
  請依照下列這些值的簡短描述︰  
   
@@ -188,7 +189,7 @@ UINT GetSelectionType() const;
   
 - **COleBusyDialog::callUnblocked**呼叫啟用伺服器已解除封鎖。  
   
-##  <a name="a-namembza--colebusydialogmbz"></a><a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>COleBusyDialog::m_bz  
  型別的結構**OLEUIBUSY**可用來控制伺服器忙碌 對話方塊的行為。  
   
 ```  

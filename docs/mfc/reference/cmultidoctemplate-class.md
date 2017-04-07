@@ -10,6 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMultiDocTemplate
+- AFXWIN/CMultiDocTemplate
+- AFXWIN/CMultiDocTemplate::CMultiDocTemplate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +90,7 @@ class CMultiDocTemplate : public CDocTemplate
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecmultidoctemplatea--cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate  
+##  <a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate  
  建構 `CMultiDocTemplate` 物件。  
   
 ```  

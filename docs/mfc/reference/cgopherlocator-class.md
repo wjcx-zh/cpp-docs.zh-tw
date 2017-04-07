@@ -10,6 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
+- AFXINET/CGopherLocator
+- AFXINET/CGopherLocator::CGopherLocator
+- AFXINET/CGopherLocator::GetLocatorType
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +93,7 @@ class CGopherLocator : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxinet.h  
   
-##  <a name="a-namecgopherlocatora--cgopherlocatorcgopherlocator"></a><a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
  此成員函式會呼叫建立`CGopherLocator`物件。  
   
 ```  
@@ -104,7 +107,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>備註  
  絕對不要建立`CGopherLocator`直接物件。 請改為呼叫[CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator)建立並傳回一個指向`CGopherLocator`物件。  
   
-##  <a name="a-namegetlocatortypea--cgopherlocatorgetlocatortype"></a><a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
  呼叫此成員函式，以取得定位器類型。  
   
 ```  
@@ -148,7 +151,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|詢問 + 項目。|  
 |GOPHER_TYPE_GOPHER_PLUS|Gopher + 項目。|  
   
-##  <a name="a-nameoperatorlpctstra--cgopherlocatoroperator-lpctstr"></a><a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
+##  <a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
  這個實用的轉型運算子提供一個有效的方法，以存取包含在 null 結束的 C 字串`CGopherLocator`物件。  
   
 ```  

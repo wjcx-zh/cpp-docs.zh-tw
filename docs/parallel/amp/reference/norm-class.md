@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp_short_vectors/Concurrency::graphics::norm
+- norm
+- AMP_SHORT_VECTORS/norm
+- AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 dev_langs:
 - C++
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
@@ -33,9 +35,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8ff5a99136a75d17d914783496205f1dd1eb4a06
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 6f6477f37a94a0c2a093fd3a63fa8e87463a5a7b
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="norm-class"></a>norm 類別
@@ -51,23 +53,23 @@ class norm;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[norm 建構函式](#ctor)|多載。 預設建構函式。 將初始化為 0.0。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|norm::operator 運算子||  
-|norm::operator-運算子||  
-|norm::operator float 運算子|轉換運算子。 將範數字轉換成浮點數值。|  
-|norm::operator * = 運算子||  
-|norm::operator / = 運算子||  
-|norm::operator + + 運算子||  
-|norm::operator + = 運算子||  
-|norm::operator = 運算子||  
-|norm::operator-= 運算子||  
+|norm::operator-||  
+|norm::operator-||  
+|norm::operator 浮點數|轉換運算子。 將範數字轉換成浮點數值。|  
+|norm::operator * =||  
+|norm::operator / =||  
+|norm::operator + +||  
+|norm::operator + =||  
+|norm::operator =||  
+|norm::operator =||  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `norm`  
@@ -77,7 +79,7 @@ class norm;
   
  **命名空間︰** concurrency:: graphics  
   
-##  <a name="a-namectora-norm"></a><a name="ctor"></a>norm 
+##  <a name="ctor"></a>norm 
 
  預設建構函式。 將初始化為 0.0。  
   
@@ -125,5 +127,5 @@ norm(
  用來初始化物件。  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

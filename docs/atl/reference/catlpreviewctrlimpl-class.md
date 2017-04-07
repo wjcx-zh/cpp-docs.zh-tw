@@ -9,8 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- atlpreviewctrlimpl/ATL::CAtlPreviewCtrlImpl
 - CAtlPreviewCtrlImpl
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::Create
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::Destroy
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::Focus
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::OnPaint
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::Redraw
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::SetHost
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::SetPreviewVisuals
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::SetRect
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::DoPaint
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_plf
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrBack
+- ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -114,7 +127,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 ## <a name="requirements"></a>需求  
  **標頭︰** atlpreviewctrlimpl.h  
   
-##  <a name="a-namecatlpreviewctrlimpla--catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
+##  <a name="catlpreviewctrlimpl"></a>CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl  
  建構預覽控制項物件。  
   
 ```
@@ -124,7 +137,7 @@ CAtlPreviewCtrlImpl(void) : m_clrText(0),
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namedtora--catlpreviewctrlimplcatlpreviewctrlimpl"></a><a name="dtor"></a>CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
+##  <a name="dtor"></a>CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl  
  Destructs 預覽控制項物件。  
   
 ```
@@ -133,7 +146,7 @@ virtual ~CAtlPreviewCtrlImpl(void);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecreatea--catlpreviewctrlimplcreate"></a><a name="create"></a>CAtlPreviewCtrlImpl::Create  
+##  <a name="create"></a>CAtlPreviewCtrlImpl::Create  
  若要建立 Windows 視窗的豐富預覽處理常式呼叫。  
   
 ```
@@ -152,7 +165,7 @@ virtual BOOL Create(HWND hWndParent, const RECT* prc);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namedestroya--catlpreviewctrlimpldestroy"></a><a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy  
+##  <a name="destroy"></a>CAtlPreviewCtrlImpl::Destroy  
  要終結這個控制項需要時，由豐富的預覽處理常式呼叫。  
   
 ```
@@ -161,7 +174,7 @@ virtual void Destroy();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namedopainta--catlpreviewctrlimpldopaint"></a><a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint  
+##  <a name="dopaint"></a>CAtlPreviewCtrlImpl::DoPaint  
  呈現預覽架構呼叫。  
   
 ```
@@ -174,7 +187,7 @@ virtual void DoPaint(HDC hdc);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namefocusa--catlpreviewctrlimplfocus"></a><a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
+##  <a name="focus"></a>CAtlPreviewCtrlImpl::Focus  
  設定輸入這個控制項焦點。  
   
 ```
@@ -183,7 +196,7 @@ virtual void Focus();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namemclrbacka--catlpreviewctrlimplmclrback"></a><a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack  
+##  <a name="m_clrback"></a>CAtlPreviewCtrlImpl::m_clrBack  
  預覽視窗的背景色彩。  
   
 ```
@@ -192,7 +205,7 @@ COLORREF m_clrBack;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namemclrtexta--catlpreviewctrlimplmclrtext"></a><a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText  
+##  <a name="m_clrtext"></a>CAtlPreviewCtrlImpl::m_clrText  
  預覽視窗的文字色彩。  
   
 ```
@@ -201,7 +214,7 @@ COLORREF m_clrText;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namemplfa--catlpreviewctrlimplmplf"></a><a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf  
+##  <a name="m_plf"></a>CAtlPreviewCtrlImpl::m_plf  
  用來在預覽視窗中顯示文字的字型。  
   
 ```
@@ -210,7 +223,7 @@ const LOGFONTW* m_plf;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameonpainta--catlpreviewctrlimplonpaint"></a><a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint  
+##  <a name="onpaint"></a>CAtlPreviewCtrlImpl::OnPaint  
  處理 WM_PAINT 訊息。  
   
 ```
@@ -239,7 +252,7 @@ LRESULT OnPaint(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameredrawa--catlpreviewctrlimplredraw"></a><a name="redraw"></a>CAtlPreviewCtrlImpl::Redraw  
+##  <a name="redraw"></a>CAtlPreviewCtrlImpl::Redraw  
  說明此控制項重繪。  
   
 ```
@@ -248,7 +261,7 @@ virtual void Redraw();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesethosta--catlpreviewctrlimplsethost"></a><a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost  
+##  <a name="sethost"></a>CAtlPreviewCtrlImpl::SetHost  
  設定新的父項對這個控制項。  
   
 ```
@@ -261,7 +274,7 @@ virtual void SetHost(HWND hWndParent);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetpreviewvisualsa--catlpreviewctrlimplsetpreviewvisuals"></a><a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals  
+##  <a name="setpreviewvisuals"></a>CAtlPreviewCtrlImpl::SetPreviewVisuals  
  豐富的預覽處理常式時呼叫必須設定視覺效果豐富的預覽的內容。  
   
 ```
@@ -283,7 +296,7 @@ virtual void SetPreviewVisuals(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetrecta--catlpreviewctrlimplsetrect"></a><a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a>CAtlPreviewCtrlImpl::SetRect  
  設定這個控制項的新周框矩形。  
   
 ```

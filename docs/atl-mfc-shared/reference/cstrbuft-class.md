@@ -9,11 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CStrBufT<TCharType>
-- ATL.CStrBufT
 - CStrBufT
-- ATL::CStrBufT
-- ATL.CStrBufT<TCharType>
+- ATLSIMPSTR/ATL::CStrBufT
+- ATLSIMPSTR/ATL::CStrBufT::CStrBufT
+- ATLSIMPSTR/ATL::CStrBufT::SetLength
+- ATLSIMPSTR/ATL::CStrBufT::AUTO_LENGTH
+- ATLSIMPSTR/ATL::CStrBufT::SET_LENGTH
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +110,7 @@ class CStrBufT
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsimpstr.h  
   
-##  <a name="a-nameautolengtha--cstrbuftautolength"></a><a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
+##  <a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
  自動判斷新的版本字串長度。  
   
 ```
@@ -119,7 +120,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 ### <a name="remarks"></a>備註  
  自動判斷新的版本字串長度。 此字串必須以 null 結束。  
   
-##  <a name="a-namecstrbufta--cstrbuftcstrbuft"></a><a name="cstrbuft"></a>CStrBufT::CStrBufT  
+##  <a name="cstrbuft"></a>CStrBufT::CStrBufT  
  建構緩衝區物件。  
   
 ```
@@ -146,7 +147,7 @@ explicit CStrBufT(StringType& str) throw(...);
   
  請注意，複製建構函式是`private`。  
   
-##  <a name="a-nameoperatorpcxstra--cstrbuftoperator-pcxstr"></a><a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
  直接存取儲存在做為 C 樣式字串相關聯的字串物件中的字元。  
   
 ```  
@@ -159,7 +160,7 @@ operator PCXSTR() const throw();
 ### <a name="remarks"></a>備註  
  呼叫此函式傳回的字串物件的字元緩衝區的指標。 String 物件的內容無法變更與這個指標。  
   
-##  <a name="a-nameoperatorpxstra--cstrbuftoperator-pxstr"></a><a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
+##  <a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
  直接存取儲存在做為 C 樣式字串相關聯的字串物件中的字元。  
   
 ```
@@ -172,21 +173,21 @@ operator PXSTR() throw();
 ### <a name="remarks"></a>備註  
  呼叫此函式傳回的字串物件的字元緩衝區的指標。 開發人員可能會變更與這個指標的字串物件的內容。  
   
-##  <a name="a-namepcxstra--cstrbuftpcxstr"></a><a name="pcxstr"></a>CStrBufT::PCXSTR  
+##  <a name="pcxstr"></a>CStrBufT::PCXSTR  
  常數字串的指標。  
   
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```  
   
-##  <a name="a-namepxstra--cstrbuftpxstr"></a><a name="pxstr"></a>CStrBufT::PXSTR  
+##  <a name="pxstr"></a>CStrBufT::PXSTR  
  字串的指標。  
   
 ```
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
-##  <a name="a-namesetlengtha--cstrbuftsetlength"></a><a name="set_length"></a>CStrBufT::SET_LENGTH  
+##  <a name="set_length"></a>CStrBufT::SET_LENGTH  
  設定字串物件的長度`GetBuffer`時間。  
   
 ```
@@ -198,7 +199,7 @@ static const DWORD SET_LENGTH = 0x02;
   
  決定如果[CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer)和[CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength)建構字串緩衝區物件時，會呼叫。  
   
-##  <a name="a-namesetlengtha--cstrbuftsetlength"></a><a name="setlength"></a>CStrBufT::SetLength  
+##  <a name="setlength"></a>CStrBufT::SetLength  
  設定字元緩衝區的長度。  
   
 ```
@@ -215,7 +216,7 @@ void SetLength(int nLength);
 ### <a name="remarks"></a>備註  
  呼叫此函式可設定的緩衝區物件所代表的字串長度。  
   
-##  <a name="a-namestringtypea--cstrbuftstringtype"></a><a name="stringtype"></a>CStrBufT::StringType  
+##  <a name="stringtype"></a>CStrBufT::StringType  
  其緩衝區是由這個類別樣板的特製化操作字串的型別。  
   
 ```

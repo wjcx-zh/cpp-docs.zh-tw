@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComClassFactoryAutoThread
-- ATL.CComClassFactoryAutoThread
 - CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread
+- ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
+- ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -83,7 +84,7 @@ class CComClassFactoryAutoThread
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-namecreateinstancea--ccomclassfactoryautothreadcreateinstance"></a><a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
  建立指定 CLSID 的物件，並擷取這個物件的介面指標。  
   
 ```
@@ -109,7 +110,7 @@ STDMETHODIMP CreateInstance(
 ### <a name="remarks"></a>備註  
  如果您的模組衍生自[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)，`CreateInstance`會先選取相關聯的 apartment 中建立物件的執行緒。  
   
-##  <a name="a-namelockservera--ccomclassfactoryautothreadlockserver"></a><a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
  遞增和遞減模組鎖定計數藉由呼叫**_Module::Lock**和**_Module::Unlock**分別。  
   
 ```

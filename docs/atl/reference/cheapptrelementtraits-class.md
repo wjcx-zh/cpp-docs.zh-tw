@@ -9,9 +9,10 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHeapPtrElementTraits
 - CHeapPtrElementTraits
-- ATL::CHeapPtrElementTraits
+- ATLCOLL/ATL::CHeapPtrElementTraits
+- ATLCOLL/ATL::CHeapPtrElementTraits::INARGTYPE
+- ATLCOLL/ATL::CHeapPtrElementTraits::OUTARGTYPE
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,14 +91,14 @@ class CHeapPtrElementTraits :
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-nameinargtypea--cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CHeapPtrElementTraits::INARGTYPE  
  若要使用項目加入集合類別物件的資料型別。  
   
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CHeapPtrElementTraits::OUTARGTYPE  
  要用來擷取項目從集合類別物件的資料類型。  
   
 ```

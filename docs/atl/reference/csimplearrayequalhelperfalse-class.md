@@ -9,11 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CSimpleArrayEqualHelperFalse<T>
-- ATL::CSimpleArrayEqualHelperFalse
-- ATL.CSimpleArrayEqualHelperFalse
-- ATL::CSimpleArrayEqualHelperFalse<T>
 - CSimpleArrayEqualHelperFalse
+- ATLSIMPCOLL/ATL::CSimpleArrayEqualHelperFalse
+- ATLSIMPCOLL/ATL::CSimpleArrayEqualHelperFalse::IsEqual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -71,7 +69,7 @@ class CSimpleArrayEqualHelperFalse
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsimpcoll.h  
   
-##  <a name="a-nameisequala--csimplearrayequalhelperfalseisequal"></a><a name="isequal"></a>CSimpleArrayEqualHelperFalse::IsEqual  
+##  <a name="isequal"></a>CSimpleArrayEqualHelperFalse::IsEqual  
  傳回 false。  
   
 ```

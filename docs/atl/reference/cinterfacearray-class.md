@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CInterfaceArray
 - CInterfaceArray
-- ATL::CInterfaceArray
+- ATLCOLL/ATL::CInterfaceArray
+- ATLCOLL/ATL::CInterfaceArray::CInterfaceArray
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +81,7 @@ class CInterfaceArray :
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcoll.h  
   
-##  <a name="a-namecinterfacearraya--cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray  
+##  <a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray  
  建構函式。  
   
 ```

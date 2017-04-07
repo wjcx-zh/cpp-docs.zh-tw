@@ -9,9 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CAtlAutoThreadModuleT
-- ATL::CAtlAutoThreadModuleT
 - CAtlAutoThreadModuleT
+- ATLBASE/ATL::CAtlAutoThreadModuleT
+- ATLBASE/ATL::CAtlAutoThreadModuleT::GetDefaultThreads
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +88,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-namegetdefaultthreadsa--catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
  這個靜態函式會動態計算，並傳回 EXE 模組，根據處理器數目的執行緒數目上限。  
   
 ```

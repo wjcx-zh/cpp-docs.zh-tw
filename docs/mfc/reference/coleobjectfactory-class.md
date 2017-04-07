@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleObjectFactory
+- AFXDISP/COleObjectFactory
+- AFXDISP/COleObjectFactory::COleObjectFactory
+- AFXDISP/COleObjectFactory::GetClassID
+- AFXDISP/COleObjectFactory::IsLicenseValid
+- AFXDISP/COleObjectFactory::IsRegistered
+- AFXDISP/COleObjectFactory::Register
+- AFXDISP/COleObjectFactory::RegisterAll
+- AFXDISP/COleObjectFactory::Revoke
+- AFXDISP/COleObjectFactory::RevokeAll
+- AFXDISP/COleObjectFactory::UnregisterAll
+- AFXDISP/COleObjectFactory::UpdateRegistry
+- AFXDISP/COleObjectFactory::UpdateRegistryAll
+- AFXDISP/COleObjectFactory::GetLicenseKey
+- AFXDISP/COleObjectFactory::OnCreateObject
+- AFXDISP/COleObjectFactory::VerifyLicenseKey
+- AFXDISP/COleObjectFactory::VerifyUserLicense
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -110,7 +126,7 @@ class COleObjectFactory : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-namecoleobjectfactorya--coleobjectfactorycoleobjectfactory"></a><a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
+##  <a name="coleobjectfactory"></a>COleObjectFactory::COleObjectFactory  
  建構`COleObjectFactory`物件，作為未註冊的物件處理站，將它初始化，並將其加入處理站的清單。  
   
 ```  
@@ -160,7 +176,7 @@ COleObjectFactory(
   
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetclassida--coleobjectfactorygetclassid"></a><a name="getclassid"></a>COleObjectFactory::GetClassID  
+##  <a name="getclassid"></a>COleObjectFactory::GetClassID  
  傳回這個處理站所代表的 OLE 類別 ID 的參考。  
   
 ```  
@@ -173,7 +189,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetlicensekeya--coleobjectfactorygetlicensekey"></a><a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
+##  <a name="getlicensekey"></a>COleObjectFactory::GetLicenseKey  
  從控制項的 DLL 要求的唯一授權金鑰，並將其儲存在`BSTR`指向`pbstrKey`。  
   
 ```  
@@ -195,7 +211,7 @@ virtual BOOL GetLicenseKey(
 ### <a name="remarks"></a>備註  
  此函式的預設實作會傳回 0，而且會儲存在中為 nothing `BSTR`。 如果您使用 MFC ActiveX ControlWizard 來建立專案時，ControlWizard 提供覆寫可擷取控制項的授權金鑰。  
   
-##  <a name="a-nameislicensevalida--coleobjectfactoryislicensevalid"></a><a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
+##  <a name="islicensevalid"></a>COleObjectFactory::IsLicenseValid  
  判斷控制項的授權是否有效。  
   
 ```  
@@ -205,7 +221,7 @@ BOOL IsLicenseValid();
 ### <a name="return-value"></a>傳回值  
  TRUE 如果 successul;否則為 false。  
   
-##  <a name="a-nameisregistereda--coleobjectfactoryisregistered"></a><a name="isregistered"></a>COleObjectFactory::IsRegistered  
+##  <a name="isregistered"></a>COleObjectFactory::IsRegistered  
  如果在處理站已向 OLE 系統 Dll，則傳回非零值。  
   
 ```  
@@ -215,7 +231,7 @@ virtual BOOL IsRegistered() const;
 ### <a name="return-value"></a>傳回值  
  已註冊之處理站; 如果為非零否則為 0。  
   
-##  <a name="a-nameoncreateobjecta--coleobjectfactoryoncreateobject"></a><a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
+##  <a name="oncreateobject"></a>COleObjectFactory::OnCreateObject  
  若要建立新的物件架構呼叫。  
   
 ```  
@@ -228,7 +244,7 @@ virtual CCmdTarget* OnCreateObject();
 ### <a name="remarks"></a>備註  
  覆寫此函式以外的其他項目從建立物件[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)傳遞至建構函式。  
   
-##  <a name="a-nameregistera--coleobjectfactoryregister"></a><a name="register"></a>COleObjectFactory::Register  
+##  <a name="register"></a>COleObjectFactory::Register  
  此物件處理站會向 OLE 系統 Dll。  
   
 ```  
@@ -241,7 +257,7 @@ virtual BOOL Register();
 ### <a name="remarks"></a>備註  
  此函式通常會由呼叫[cwinapp:: Initinstance](../../mfc/reference/cwinapp-class.md#initinstance)應用程式啟動時。  
   
-##  <a name="a-nameregisteralla--coleobjectfactoryregisterall"></a><a name="registerall"></a>COleObjectFactory::RegisterAll  
+##  <a name="registerall"></a>COleObjectFactory::RegisterAll  
  向應用程式的物件處理站的所有 OLE 系統 Dll。  
   
 ```  
@@ -254,7 +270,7 @@ static BOOL PASCAL RegisterAll();
 ### <a name="remarks"></a>備註  
  此函式通常會由呼叫[cwinapp:: Initinstance](../../mfc/reference/cwinapp-class.md#initinstance)應用程式啟動時。  
   
-##  <a name="a-namerevokea--coleobjectfactoryrevoke"></a><a name="revoke"></a>COleObjectFactory::Revoke  
+##  <a name="revoke"></a>COleObjectFactory::Revoke  
  撤銷此物件 factory OLE 系統 Dll 登錄。  
   
 ```  
@@ -264,7 +280,7 @@ void Revoke();
 ### <a name="remarks"></a>備註  
  架構會在應用程式終止之前自動呼叫此函式。 必要時，呼叫它的覆寫從[CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance)。  
   
-##  <a name="a-namerevokealla--coleobjectfactoryrevokeall"></a><a name="revokeall"></a>COleObjectFactory::RevokeAll  
+##  <a name="revokeall"></a>COleObjectFactory::RevokeAll  
  撤銷所有具有 OLE 系統 Dll 的應用程式的物件 factory 的註冊。  
   
 ```  
@@ -274,7 +290,7 @@ static void PASCAL RevokeAll();
 ### <a name="remarks"></a>備註  
  架構會在應用程式終止之前自動呼叫此函式。 必要時，呼叫它的覆寫從[CWinApp::ExitInstance](../../mfc/reference/cwinapp-class.md#exitinstance)。  
   
-##  <a name="a-nameunregisteralla--coleobjectfactoryunregisterall"></a><a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
+##  <a name="unregisterall"></a>COleObjectFactory::UnregisterAll  
  取消登錄所有的應用程式的物件 factory。  
   
 ```  
@@ -284,7 +300,7 @@ static BOOL PASCAL UnregisterAll();
 ### <a name="return-value"></a>傳回值  
  如果成功，則為 TRUE，否則為 FALSE。  
   
-##  <a name="a-nameupdateregistrya--coleobjectfactoryupdateregistry"></a><a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
+##  <a name="updateregistry"></a>COleObjectFactory::UpdateRegistry  
  向應用程式的物件處理站的所有 OLE 系統登錄。  
   
 ```  
@@ -308,7 +324,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
      如果您使用 MFC ActiveX ControlWizard 來建立專案時，ControlWizard 提供覆寫，此純虛擬函式。  
   
-##  <a name="a-nameupdateregistryalla--coleobjectfactoryupdateregistryall"></a><a name="updateregistryall"></a>COleObjectFactory::UpdateRegistryAll  
+##  <a name="updateregistryall"></a>COleObjectFactory::UpdateRegistryAll  
  向應用程式的物件處理站的所有 OLE 系統登錄。  
   
 ```  
@@ -325,7 +341,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ### <a name="remarks"></a>備註  
  此函式通常會由呼叫[cwinapp:: Initinstance](../../mfc/reference/cwinapp-class.md#initinstance)應用程式啟動時。  
   
-##  <a name="a-nameverifylicensekeya--coleobjectfactoryverifylicensekey"></a><a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
+##  <a name="verifylicensekey"></a>COleObjectFactory::VerifyLicenseKey  
  確認容器已授權可使用 OLE 控制項。  
   
 ```  
@@ -346,7 +362,7 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
   
  函式[VerifyUserLicense](#verifyuserlicense)確認設計階段授權。  
   
-##  <a name="a-nameverifyuserlicensea--coleobjectfactoryverifyuserlicense"></a><a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
+##  <a name="verifyuserlicense"></a>COleObjectFactory::VerifyUserLicense  
  確認 OLE 控制項的設計階段授權。  
   
 ```  

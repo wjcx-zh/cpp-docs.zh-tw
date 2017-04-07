@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFtpConnection
+- AFXINET/CFtpConnection
+- AFXINET/CFtpConnection::CFtpConnection
+- AFXINET/CFtpConnection::Command
+- AFXINET/CFtpConnection::CreateDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectory
+- AFXINET/CFtpConnection::GetCurrentDirectoryAsURL
+- AFXINET/CFtpConnection::GetFile
+- AFXINET/CFtpConnection::OpenFile
+- AFXINET/CFtpConnection::PutFile
+- AFXINET/CFtpConnection::Remove
+- AFXINET/CFtpConnection::RemoveDirectory
+- AFXINET/CFtpConnection::Rename
+- AFXINET/CFtpConnection::SetCurrentDirectory
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +108,7 @@ class CFtpConnection : public CInternetConnection
 ## <a name="requirements"></a>需求  
  **標頭︰** afxinet.h  
   
-##  <a name="a-namecftpconnectiona--cftpconnectioncftpconnection"></a><a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
+##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
  此成員函式呼叫來建構`CFtpConnection`物件。  
   
 ```  
@@ -151,7 +164,7 @@ CFtpConnection(
 ### <a name="remarks"></a>備註  
  絕對不要建立`CFtpConnection`直接物件。 請改為呼叫[Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)，這樣就可以建立**CFptConnection**物件。  
   
-##  <a name="a-namecommanda--cftpconnectioncommand"></a><a name="command"></a>CFtpConnection::Command  
+##  <a name="command"></a>CFtpConnection::Command  
  將命令直接傳送至 FTP 伺服器。  
   
 ```  
@@ -187,7 +200,7 @@ CInternetFile* Command(
   
  如果發生錯誤時，MFC 會擲回例外狀況型別[CInternetException](../../mfc/reference/cinternetexception-class.md)。  
   
-##  <a name="a-namecreatedirectorya--cftpconnectioncreatedirectory"></a><a name="createdirectory"></a>CFtpConnection::CreateDirectory  
+##  <a name="createdirectory"></a>CFtpConnection::CreateDirectory  
  呼叫此成員函式在已連線的伺服器上建立目錄。  
   
 ```  
@@ -206,7 +219,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
   
  `pstrDirName`參數可以是部分或完整的檔案名稱與目前的目錄。 反斜線 (\\) 或正斜線 （/） 可以當做是名稱的目錄分隔符號。 `CreateDirectory`在使用前，會轉譯為適當的字元的目錄名稱分隔符號。  
   
-##  <a name="a-namegetcurrentdirectorya--cftpconnectiongetcurrentdirectory"></a><a name="getcurrentdirectory"></a>Cftpconnection:: Getcurrentdirectory  
+##  <a name="getcurrentdirectory"></a>Cftpconnection:: Getcurrentdirectory  
  呼叫此成員函式，以取得目前目錄的名稱。  
   
 ```  
@@ -240,7 +253,7 @@ BOOL GetCurrentDirectory(
   
  參數`pstrDirName`或`strDirName`可以是相對於目前目錄是不完整檔案名稱或完整限定。 反斜線 (\\) 或正斜線 （/） 可以當做是名稱的目錄分隔符號。 `GetCurrentDirectory`在使用前，會轉譯為適當的字元的目錄名稱分隔符號。  
   
-##  <a name="a-namegetcurrentdirectoryasurla--cftpconnectiongetcurrentdirectoryasurl"></a><a name="getcurrentdirectoryasurl"></a>Cftpconnection:: Getcurrentdirectoryasurl  
+##  <a name="getcurrentdirectoryasurl"></a>Cftpconnection:: Getcurrentdirectoryasurl  
  呼叫此成員函式，取得目前的目錄名稱做為 URL。  
   
 ```  
@@ -274,7 +287,7 @@ BOOL GetCurrentDirectoryAsURL(
   
  參數`strDirName`可以是相對於目前目錄是不完整檔案名稱或完整限定。 反斜線 (\\) 或正斜線 （/） 可以當做是名稱的目錄分隔符號。 `GetCurrentDirectoryAsURL`在使用前，會轉譯為適當的字元的目錄名稱分隔符號。  
   
-##  <a name="a-namegetfilea--cftpconnectiongetfile"></a><a name="getfile"></a>CFtpConnection::GetFile  
+##  <a name="getfile"></a>CFtpConnection::GetFile  
  呼叫此成員函式，取得從 FTP 伺服器的檔案，並將它儲存在本機電腦上。  
   
 ```  
@@ -334,7 +347,7 @@ BOOL GetFile(
   
  覆寫`dwContext`預設將內容識別碼設定為您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-##  <a name="a-nameopenfilea--cftpconnectionopenfile"></a><a name="openfile"></a>CFtpConnection::OpenFile  
+##  <a name="openfile"></a>CFtpConnection::OpenFile  
  呼叫此成員函式，來開啟檔案進行讀取或寫入 FTP 伺服器上。  
   
 ```  
@@ -380,7 +393,7 @@ CInternetFile* OpenFile(
   
  覆寫`dwContext`預設將內容識別碼設定為您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-##  <a name="a-nameputfilea--cftpconnectionputfile"></a><a name="putfile"></a>CFtpConnection::PutFile  
+##  <a name="putfile"></a>CFtpConnection::PutFile  
  呼叫此成員函式，來儲存 FTP 伺服器上的檔案。  
   
 ```  
@@ -412,7 +425,7 @@ BOOL PutFile(
   
  覆寫`dwContext`預設將內容識別碼設定為您選擇的值。 內容識別碼是與這個特定作業的相關聯`CFtpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-##  <a name="a-nameremovea--cftpconnectionremove"></a><a name="remove"></a>Findfile  
+##  <a name="remove"></a>Findfile  
  呼叫此成員函式，從連接的伺服器中刪除指定的檔案。  
   
 ```  
@@ -429,7 +442,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="remarks"></a>備註  
  `pstrFileName`參數可以是任一個不完整檔名為目前的目錄的相對或完整。 反斜線 (\\) 或正斜線 （/） 可以當做是名稱的目錄分隔符號。 **移除**函式在使用前會轉譯為適當的字元的目錄名稱分隔符號。  
   
-##  <a name="a-nameremovedirectorya--cftpconnectionremovedirectory"></a><a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
+##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
  呼叫此成員函式，從連接的伺服器中移除指定的目錄。  
   
 ```  
@@ -448,7 +461,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
   
  `pstrDirName`參數可以是任一部分或完整完整的檔案名稱與目前的目錄。 反斜線 (\\) 或正斜線 （/） 可以當做是名稱的目錄分隔符號。 `RemoveDirectory`在使用前，會轉譯為適當的字元的目錄名稱分隔符號。  
   
-##  <a name="a-namerenamea--cftpconnectionrename"></a><a name="rename"></a>CFtpConnection::Rename  
+##  <a name="rename"></a>CFtpConnection::Rename  
  呼叫此成員函式，若要重新命名連線的伺服器上指定的檔案。  
   
 ```  
@@ -470,7 +483,7 @@ BOOL Rename(
 ### <a name="remarks"></a>備註  
  `pstrExisting`和`pstrNew`參數可以是任一個不完整檔名為目前的目錄的相對或完整。 反斜線 (\\) 或正斜線 （/） 可以當做是名稱的目錄分隔符號。 **重新命名**在使用前會轉譯為適當的字元的目錄名稱分隔符號。  
   
-##  <a name="a-namesetcurrentdirectorya--cftpconnectionsetcurrentdirectory"></a><a name="setcurrentdirectory"></a>Cftpconnection:: Setcurrentdirectory  
+##  <a name="setcurrentdirectory"></a>Cftpconnection:: Setcurrentdirectory  
  呼叫此成員函式來變更到 FTP 伺服器上的不同目錄。  
   
 ```  

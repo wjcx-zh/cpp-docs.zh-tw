@@ -9,8 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concurrency::call
-- agents/concurrency::call
+- call
+- AGENTS/concurrency::call
+- AGENTS/concurrency::call::call
+- AGENTS/concurrency::call::process_input_messages
+- AGENTS/concurrency::call::process_message
+- AGENTS/concurrency::call::propagate_message
+- AGENTS/concurrency::call::send_message
+- AGENTS/concurrency::call::supports_anonymous_source
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 19244e5527207f852256e646abd18ad298fb28cd
-ms.openlocfilehash: b3cfec104346b212217a6854af2390c412c9e015
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 894540410e2768be1cb679b5108fc8c694ca02d3
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="call-class"></a>call 類別
@@ -61,20 +67,20 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[呼叫建構函式](#ctor)|多載。 建構`call`傳訊區塊。|  
+|[呼叫](#ctor)|多載。 建構`call`傳訊區塊。|  
 |[~ call 解構函式](#dtor)|終結`call`傳訊區塊。|  
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[process_input_messages 方法](#process_input_messages)|輸入訊息上執行的呼叫函式。|  
-|[process_message 方法](#process_message)|處理已接受此訊息`call`傳訊區塊。|  
-|[propagate_message 方法](#propagate_message)|以非同步方式傳遞訊息從`ISource`區塊至此`call`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。|  
-|[send_message 方法](#send_message)|以同步方式傳遞訊息從`ISource`區塊至此`call`傳訊區塊。 它會叫用`send`方法，由來源區塊呼叫時。|  
-|[supports_anonymous_source 方法](#supports_anonymous_source)|覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。 (覆寫[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
+|[process_input_messages](#process_input_messages)|輸入訊息上執行的呼叫函式。|  
+|[process_message](#process_message)|處理已接受此訊息`call`傳訊區塊。|  
+|[propagate_message](#propagate_message)|以非同步方式傳遞訊息從`ISource`這個區塊`call`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。|  
+|[send_message](#send_message)|以同步方式傳遞訊息從`ISource`區塊至此`call`傳訊區塊。 它會叫用`send`方法，由來源區塊呼叫時。|  
+|[supports_anonymous_source](#supports_anonymous_source)|覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。 (覆寫[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -91,7 +97,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-call"></a><a name="ctor"></a>呼叫 
+##  <a name="ctor"></a>呼叫 
 
  建構`call`傳訊區塊。  
   
@@ -124,7 +130,7 @@ call(
   
 ### <a name="parameters"></a>參數  
  `_Func`  
- 為每個接受的訊息就會叫用函式。  
+ 此函式會叫用每一個可接受的訊息。  
   
  `_Filter`  
  篩選函式可判斷是否應該接受所提供的訊息。  
@@ -142,7 +148,7 @@ call(
   
  型別`filter_method`是以簽章仿`bool (T const &)`由此叫用`call`傳訊區塊，以判斷它是否應該接受提供的訊息。  
   
-##  <a name="a-namedtora-call"></a><a name="dtor"></a>~ 呼叫 
+##  <a name="dtor"></a>~ 呼叫 
 
  終結`call`傳訊區塊。  
   
@@ -150,7 +156,7 @@ call(
 ~call();
 ```  
   
-##  <a name="a-nameprocessinputmessagesa-processinputmessages"></a><a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a>process_input_messages 
 
  輸入訊息上執行的呼叫函式。  
   
@@ -161,7 +167,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>參數  
  `_PMessage`  
   
-##  <a name="a-nameprocessmessagea-processmessage"></a><a name="process_message"></a>process_message 
+##  <a name="process_message"></a>process_message 
 
  處理已接受此訊息`call`傳訊區塊。  
   
@@ -173,9 +179,9 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  要處理的訊息指標。  
   
-##  <a name="a-namepropagatemessagea-propagatemessage"></a><a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a>propagate_message 
 
- 以非同步方式傳遞訊息從`ISource`區塊至此`call`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。  
+ 以非同步方式傳遞訊息從`ISource`這個區塊`call`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。  
   
 ```
 virtual message_status propagate_message(
@@ -193,7 +199,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>傳回值  
  A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
   
-##  <a name="a-namesendmessagea-sendmessage"></a><a name="send_message"></a>send_message 
+##  <a name="send_message"></a>send_message 
 
  以同步方式傳遞訊息從`ISource`區塊至此`call`傳訊區塊。 它會叫用`send`方法，由來源區塊呼叫時。  
   
@@ -213,7 +219,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>傳回值  
  A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
   
-##  <a name="a-namesupportsanonymoussourcea-supportsanonymoussource"></a><a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
 
  覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。  
   

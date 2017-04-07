@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleLinksDialog
+- AFXODLGS/COleLinksDialog
+- AFXODLGS/COleLinksDialog::COleLinksDialog
+- AFXODLGS/COleLinksDialog::DoModal
+- AFXODLGS/COleLinksDialog::m_el
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +103,7 @@ class COleLinksDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxodlgs.h  
   
-##  <a name="a-namedomodala--colelinksdialogdomodal"></a><a name="domodal"></a>COleLinksDialog::DoModal  
+##  <a name="domodal"></a>COleLinksDialog::DoModal  
  顯示 OLE [編輯連結] 對話方塊。  
   
 ```  
@@ -118,7 +122,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>備註  
  如果您想要設定的成員初始化不同的對話方塊控制項[m_el](#m_el)結構，應該在執行之前，先呼叫`DoModal`，但在建構對話方塊物件之後。  
   
-##  <a name="a-namecolelinksdialoga--colelinksdialogcolelinksdialog"></a><a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
+##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
  建構 `COleLinksDialog` 物件。  
   
 ```  
@@ -145,7 +149,7 @@ COleLinksDialog (
 ### <a name="remarks"></a>備註  
  此函式建構只`COleLinksDialog`物件。 若要顯示對話方塊，請呼叫[DoModal](#domodal)函式。  
   
-##  <a name="a-namemela--colelinksdialogmel"></a><a name="m_el"></a>COleLinksDialog::m_el  
+##  <a name="m_el"></a>COleLinksDialog::m_el  
  型別的結構**OLEUIEDITLINKS**用來控制行為的編輯連結 對話方塊。  
   
 ```  

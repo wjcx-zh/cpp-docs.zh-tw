@@ -10,6 +10,24 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::CMFCColorPickerCtrl
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetHLS
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetHue
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetLuminance
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::GetSaturation
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SelectCellHexagon
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetHLS
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetHue
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetLuminance
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetLuminanceBarWidth
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetOriginalColor
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetPalette
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetSaturation
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::SetType
+- AFXCOLORPICKERCTRL/CMFCColorPickerCtrl::DrawCursor
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -119,7 +137,7 @@ class CMFCColorPickerCtrl : public CButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxcolorpickerctrl.h  
   
-##  <a name="a-namecmfccolorpickerctrla--cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
+##  <a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
  建構 `CMFCColorPickerCtrl` 物件。  
   
 ```  
@@ -130,7 +148,7 @@ CMFCColorPickerCtrl();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namedrawcursora--cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
+##  <a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
  顯示選取的色彩會指向資料指標之前，由架構呼叫。  
   
 ```  
@@ -149,7 +167,7 @@ virtual void DrawCursor(
 ### <a name="remarks"></a>備註  
  當您需要變更選取的色彩會指向資料指標的形狀時，覆寫這個方法。  
   
-##  <a name="a-namegetcolora--cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
+##  <a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
  擷取使用者選取的色彩。  
   
 ```  
@@ -161,7 +179,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegethlsa--cmfccolorpickerctrlgethls"></a><a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
+##  <a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
  擷取使用者選取之色彩的色調、 亮度及飽和度值。  
   
 ```  
@@ -183,7 +201,7 @@ void GetHLS(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegethuea--cmfccolorpickerctrlgethue"></a><a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
+##  <a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
  擷取使用者選取之色彩的色調元件。  
   
 ```  
@@ -195,7 +213,7 @@ double GetHue() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetluminancea--cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
+##  <a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
  擷取使用者選取之色彩的亮度元件。  
   
 ```  
@@ -207,7 +225,7 @@ double GetLuminance() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetsaturationa--cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
+##  <a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
  擷取使用者選取的色彩的濃度值。  
   
 ```  
@@ -219,7 +237,7 @@ double GetSaturation() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameselectcellhexagona--cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
+##  <a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
  將目前的色彩設定為指定的 RGB 色彩元件或指定的資料格六邊形所定義的色彩。  
   
 ```  
@@ -258,7 +276,7 @@ BOOL SelectCellHexagon(
   
  這個方法的第二個多載設定所指定的資料指標位置的色彩會指到儲存格六邊形目前的色彩。  
   
-##  <a name="a-namesetcolora--cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
+##  <a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
  將目前的色彩設定為指定的 RGB 色彩值。  
   
 ```  
@@ -271,7 +289,7 @@ void SetColor(COLORREF Color);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesethlsa--cmfccolorpickerctrlsethls"></a><a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
+##  <a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
  將目前的色彩設定為指定 HLS 色彩值。  
   
 ```  
@@ -297,7 +315,7 @@ void SetHLS(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesethuea--cmfccolorpickerctrlsethue"></a><a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
+##  <a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
  變更目前所選色彩的色調。  
   
 ```  
@@ -310,7 +328,7 @@ void SetHue(double Hue);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetluminancea--cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
+##  <a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
  變更目前所選色彩的亮度。  
   
 ```  
@@ -323,7 +341,7 @@ void SetLuminance(double Luminance);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesetluminancebarwidtha--cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
+##  <a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
  色彩選擇器控制項中設定亮度列的寬度。  
   
 ```  
@@ -337,7 +355,7 @@ void SetLuminanceBarWidth(int w);
 ### <a name="remarks"></a>備註  
  使用此方法來調整亮度列中，位於**自訂**色彩選擇器控制項的索引標籤。 `w`參數指定新的亮度列寬度。 如果它超過四分之三的工作區寬度，則會忽略寬度的值。  
   
-##  <a name="a-namesetoriginalcolora--cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
+##  <a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
  設定初始選取的色彩。  
   
 ```  
@@ -351,7 +369,7 @@ void SetOriginalColor(COLORREF ref);
 ### <a name="remarks"></a>備註  
  初始化色彩選擇器控制項時，請呼叫這個方法。  
   
-##  <a name="a-namesetpalettea--cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
+##  <a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
  設定目前的色彩調色盤。  
   
 ```  
@@ -365,7 +383,7 @@ void SetPalette(CPalette* pPalette);
 ### <a name="remarks"></a>備註  
  色彩調色盤定義色彩選擇器控制項中的顯示色彩的陣列。  
   
-##  <a name="a-namesetsaturationa--cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
+##  <a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
  變更目前所選色彩的飽和度。  
   
 ```  
@@ -378,7 +396,7 @@ void SetSaturation(double Saturation);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namesettypea--cmfccolorpickerctrlsettype"></a><a name="settype"></a>CMFCColorPickerCtrl::SetType  
+##  <a name="settype"></a>CMFCColorPickerCtrl::SetType  
  設定要顯示色彩選擇器控制項的類型。  
   
 ```  

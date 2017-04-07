@@ -10,6 +10,62 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDHtmlDialog
+- AFXDHTML/CDHtmlDialog
+- AFXDHTML/CDHtmlDialog::CDHtmlDialog
+- AFXDHTML/CDHtmlDialog::CanAccessExternal
+- AFXDHTML/CDHtmlDialog::CreateControlSite
+- AFXDHTML/CDHtmlDialog::DDX_DHtml_AxControl
+- AFXDHTML/CDHtmlDialog::DDX_DHtml_CheckBox
+- AFXDHTML/CDHtmlDialog::DDX_DHtml_ElementText
+- AFXDHTML/CDHtmlDialog::DDX_DHtml_Radio
+- AFXDHTML/CDHtmlDialog::DDX_DHtml_SelectIndex
+- AFXDHTML/CDHtmlDialog::DDX_DHtml_SelectString
+- AFXDHTML/CDHtmlDialog::DDX_DHtml_SelectValue
+- AFXDHTML/CDHtmlDialog::DestroyModeless
+- AFXDHTML/CDHtmlDialog::EnableModeless
+- AFXDHTML/CDHtmlDialog::FilterDataObject
+- AFXDHTML/CDHtmlDialog::GetControlDispatch
+- AFXDHTML/CDHtmlDialog::GetControlProperty
+- AFXDHTML/CDHtmlDialog::GetCurrentUrl
+- AFXDHTML/CDHtmlDialog::GetDHtmlDocument
+- AFXDHTML/CDHtmlDialog::GetDropTarget
+- AFXDHTML/CDHtmlDialog::GetElement
+- AFXDHTML/CDHtmlDialog::GetElementHtml
+- AFXDHTML/CDHtmlDialog::GetElementInterface
+- AFXDHTML/CDHtmlDialog::GetElementProperty
+- AFXDHTML/CDHtmlDialog::GetElementText
+- AFXDHTML/CDHtmlDialog::GetEvent
+- AFXDHTML/CDHtmlDialog::GetExternal
+- AFXDHTML/CDHtmlDialog::GetHostInfo
+- AFXDHTML/CDHtmlDialog::GetOptionKeyPath
+- AFXDHTML/CDHtmlDialog::HideUI
+- AFXDHTML/CDHtmlDialog::IsExternalDispatchSafe
+- AFXDHTML/CDHtmlDialog::LoadFromResource
+- AFXDHTML/CDHtmlDialog::Navigate
+- AFXDHTML/CDHtmlDialog::OnBeforeNavigate
+- AFXDHTML/CDHtmlDialog::OnDocumentComplete
+- AFXDHTML/CDHtmlDialog::OnDocWindowActivate
+- AFXDHTML/CDHtmlDialog::OnFrameWindowActivate
+- AFXDHTML/CDHtmlDialog::OnInitDialog
+- AFXDHTML/CDHtmlDialog::OnNavigateComplete
+- AFXDHTML/CDHtmlDialog::ResizeBorder
+- AFXDHTML/CDHtmlDialog::SetControlProperty
+- AFXDHTML/CDHtmlDialog::SetElementHtml
+- AFXDHTML/CDHtmlDialog::SetElementProperty
+- AFXDHTML/CDHtmlDialog::SetElementText
+- AFXDHTML/CDHtmlDialog::SetExternalDispatch
+- AFXDHTML/CDHtmlDialog::SetHostFlags
+- AFXDHTML/CDHtmlDialog::ShowContextMenu
+- AFXDHTML/CDHtmlDialog::ShowUI
+- AFXDHTML/CDHtmlDialog::TranslateAccelerator
+- AFXDHTML/CDHtmlDialog::TranslateUrl
+- AFXDHTML/CDHtmlDialog::UpdateUI
+- AFXDHTML/CDHtmlDialog::m_bUseHtmlTitle
+- AFXDHTML/CDHtmlDialog::m_nHtmlResID
+- AFXDHTML/CDHtmlDialog::m_pBrowserApp
+- AFXDHTML/CDHtmlDialog::m_spHtmlDoc
+- AFXDHTML/CDHtmlDialog::m_strCurrentUrl
+- AFXDHTML/CDHtmlDialog::m_szHtmlResID
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -148,7 +204,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdhtml.h  
   
-##  <a name="a-nameddxdhtmlhelpermacrosa--ddxdhtml-helper-macros"></a><a name="ddx_dhtml_helper_macros"></a>DDX_DHtml Helper 巨集  
+##  <a name="ddx_dhtml_helper_macros"></a>DDX_DHtml Helper 巨集  
  DDX_DHtml helper 巨集可讓您輕鬆存取常用的 HTML 網頁上的控制項屬性。  
   
 ### <a name="data-exchange-macros"></a>資料交換巨集  
@@ -164,7 +220,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[DDX_DHtml_Frame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_frame_src)|設定或擷取關聯框架的 URL。|  
 |[DDX_DHtml_IFrame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_iframe_src)|設定或擷取關聯框架的 URL。|  
   
-##  <a name="a-namecanaccessexternala--cdhtmldialogcanaccessexternal"></a><a name="canaccessexternal"></a>CDHtmlDialog::CanAccessExternal  
+##  <a name="canaccessexternal"></a>CDHtmlDialog::CanAccessExternal  
  可覆寫，被稱為存取檢查，以查看是否已載入的頁面上的指令碼物件可以存取外部的控制項站台指派。 會檢查以確定分派是安全的指令碼，或是目前的區域是用來對指令碼是不安全的物件。  
   
 ```  
@@ -174,7 +230,7 @@ virtual BOOL CanAccessExternal();
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="a-namecdhtmldialoga--cdhtmldialogcdhtmldialog"></a><a name="cdhtmldialog"></a>CDHtmlDialog::CDHtmlDialog  
+##  <a name="cdhtmldialog"></a>CDHtmlDialog::CDHtmlDialog  
  建構資源型動態 HTML 對話方塊。  
   
 ```  
@@ -212,7 +268,7 @@ CDHtmlDialog(
 ### <a name="remarks"></a>備註  
  第二個建構函式的形式提供透過範本名稱對話方塊資源的存取權。 第三個建構函式的形式提供的資源範本識別碼透過對話方塊資源的存取權。 通常，識別碼開始**IDD_**前置詞。  
   
-##  <a name="a-namedtorcdhtmldialoga--cdhtmldialogcdhtmldialog"></a><a name="_dtorcdhtmldialog"></a>CDHtmlDialog:: ~ CDHtmlDialog  
+##  <a name="_dtorcdhtmldialog"></a>CDHtmlDialog:: ~ CDHtmlDialog  
  終結 CDHtmlDialog 物件。  
   
 ```  
@@ -222,7 +278,7 @@ virtual ~CDHtmlDialog();
 ### <a name="remarks"></a>備註  
  [Cwnd:: Destroywindow](../../mfc/reference/cwnd-class.md#destroywindow)成員函式必須用於摧毀所建立的非強制回應對話方塊[CDialog::Create](../../mfc/reference/cdialog-class.md#create)。  
   
-##  <a name="a-namecreatecontrolsitea--cdhtmldialogcreatecontrolsite"></a><a name="createcontrolsite"></a>CDHtmlDialog::CreateControlSite  
+##  <a name="createcontrolsite"></a>CDHtmlDialog::CreateControlSite  
  可覆寫用來建立裝載 WebBrowser 控制項在對話方塊上的控制項站台執行個體。  
   
 ```  
@@ -246,7 +302,7 @@ virtual BOOL CreateControlSite(
 ### <a name="remarks"></a>備註  
  您可以覆寫此成員函式，以傳回您自己的控制項站台類別的執行個體。  
   
-##  <a name="a-nameddxdhtmlaxcontrola--cdhtmldialogddxdhtmlaxcontrol"></a><a name="ddx_dhtml_axcontrol"></a>CDHtmlDialog::DDX_DHtml_AxControl  
+##  <a name="ddx_dhtml_axcontrol"></a>CDHtmlDialog::DDX_DHtml_AxControl  
  HTML 網頁上的 ActiveX 控制項的屬性值的成員變數之間交換資料。  
   
 ```  
@@ -283,7 +339,7 @@ void DDX_DHtml_AxControl(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCHtmlHttp #&1;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_1.cpp)]  
   
-##  <a name="a-nameddxdhtmlcheckboxa--cdhtmldialogddxdhtmlcheckbox"></a><a name="ddx_dhtml_checkbox"></a>CDHtmlDialog::DDX_DHtml_CheckBox  
+##  <a name="ddx_dhtml_checkbox"></a>CDHtmlDialog::DDX_DHtml_CheckBox  
  HTML 網頁上的核取方塊的成員變數之間交換資料。  
   
 ```  
@@ -306,7 +362,7 @@ void DDX_DHtml_CheckBox(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCHtmlHttp #&2;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_2.cpp)]  
   
-##  <a name="a-nameddxdhtmlelementtexta--cdhtmldialogddxdhtmlelementtext"></a><a name="ddx_dhtml_elementtext"></a>CDHtmlDialog::DDX_DHtml_ElementText  
+##  <a name="ddx_dhtml_elementtext"></a>CDHtmlDialog::DDX_DHtml_ElementText  
  HTML 網頁上的任何 HTML 項目屬性的成員變數之間交換資料。  
   
 ```  
@@ -372,7 +428,7 @@ void DDX_DHtml_ElementText(
  *value*  
  要交換的值。  
   
-##  <a name="a-nameddxdhtmlradioa--cdhtmldialogddxdhtmlradio"></a><a name="ddx_dhtml_radio"></a>CDHtmlDialog::DDX_DHtml_Radio  
+##  <a name="ddx_dhtml_radio"></a>CDHtmlDialog::DDX_DHtml_Radio  
  成員變數，以及 HTML 網頁上的選項按鈕之間交換資料。  
   
 ```  
@@ -392,7 +448,7 @@ void DDX_DHtml_Radio(
  *value*  
  要交換的值。  
   
-##  <a name="a-nameddxdhtmlselectindexa--cdhtmldialogddxdhtmlselectindex"></a><a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::DDX_DHtml_SelectIndex  
+##  <a name="ddx_dhtml_selectindex"></a>CDHtmlDialog::DDX_DHtml_SelectIndex  
  取得或設定 HTML 網頁上的清單方塊的索引。  
   
 ```  
@@ -412,7 +468,7 @@ void DDX_DHtml_SelectIndex(
  *value*  
  要交換的值。  
   
-##  <a name="a-nameddxdhtmlselectstringa--cdhtmldialogddxdhtmlselectstring"></a><a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::DDX_DHtml_SelectString  
+##  <a name="ddx_dhtml_selectstring"></a>CDHtmlDialog::DDX_DHtml_SelectString  
  取得或設定 HTML 網頁上的清單方塊項目 （根據目前的索引） 的顯示文字。  
   
 ```  
@@ -432,7 +488,7 @@ void DDX_DHtml_SelectString(
  *value*  
  要交換的值。  
   
-##  <a name="a-nameddxdhtmlselectvaluea--cdhtmldialogddxdhtmlselectvalue"></a><a name="ddx_dhtml_selectvalue"></a>CDHtmlDialog::DDX_DHtml_SelectValue  
+##  <a name="ddx_dhtml_selectvalue"></a>CDHtmlDialog::DDX_DHtml_SelectValue  
  取得或設定 HTML 網頁上的清單方塊項目 （根據目前的索引） 的值。  
   
 ```  
@@ -455,14 +511,14 @@ void DDX_DHtml_SelectValue(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCHtmlHttp #&3;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_3.cpp)]  
   
-##  <a name="a-namedestroymodelessa--cdhtmldialogdestroymodeless"></a><a name="destroymodeless"></a>CDHtmlDialog::DestroyModeless  
+##  <a name="destroymodeless"></a>CDHtmlDialog::DestroyModeless  
  中斷連結從非強制回應對話方塊`CDHtmlDialog`物件，並終結物件。  
   
 ```  
 void DestroyModeless();
 ```  
   
-##  <a name="a-nameenablemodelessa--cdhtmldialogenablemodeless"></a><a name="enablemodeless"></a>CDHtmlDialog::EnableModeless  
+##  <a name="enablemodeless"></a>CDHtmlDialog::EnableModeless  
  可讓非強制回應對話方塊。  
   
 ```  
@@ -479,7 +535,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namefilterdataobjecta--cdhtmldialogfilterdataobject"></a><a name="filterdataobject"></a>CDHtmlDialog::FilterDataObject  
+##  <a name="filterdataobject"></a>CDHtmlDialog::FilterDataObject  
  可讓篩選所裝載的瀏覽器建立剪貼簿資料物件 對話方塊。  
   
 ```  
@@ -501,7 +557,7 @@ STDMETHOD(FilterDataObject)(
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetcontroldispatcha--cdhtmldialoggetcontroldispatch"></a><a name="getcontroldispatch"></a>CDHtmlDialog::GetControlDispatch  
+##  <a name="getcontroldispatch"></a>CDHtmlDialog::GetControlDispatch  
  擷取`IDispatch`介面上的 ActiveX 控制項內嵌在 HTML 文件傳回[GetDHtmlDocument](#getdhtmldocument)。  
   
 ```  
@@ -520,7 +576,7 @@ HRESULT GetControlDispatch(
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namegetcontrolpropertya--cdhtmldialoggetcontrolproperty"></a><a name="getcontrolproperty"></a>CDHtmlDialog::GetControlProperty  
+##  <a name="getcontrolproperty"></a>CDHtmlDialog::GetControlProperty  
  擷取所要求的屬性指定的 ActiveX 控制項。  
   
 ```  
@@ -558,7 +614,7 @@ VARIANT GetControlProperty(
 ### <a name="remarks"></a>備註  
  多載會列出效率最差頂端到底部最有效率。  
   
-##  <a name="a-namegetcurrenturla--cdhtmldialoggetcurrenturl"></a><a name="getcurrenturl"></a>CDHtmlDialog::GetCurrentUrl  
+##  <a name="getcurrenturl"></a>CDHtmlDialog::GetCurrentUrl  
  擷取與目前的文件，相關聯統一資源定位器 (URL)。  
   
 ```  
@@ -569,7 +625,7 @@ void GetCurrentUrl(CString& szUrl);
  `szUrl`  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含擷取的 URL。  
   
-##  <a name="a-namegetdhtmldocumenta--cdhtmldialoggetdhtmldocument"></a><a name="getdhtmldocument"></a>CDHtmlDialog::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>CDHtmlDialog::GetDHtmlDocument  
  擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)介面上目前所載入的 HTML 文件。  
   
 ```  
@@ -583,7 +639,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT`。 若成功，會傳回 `S_OK`。  
   
-##  <a name="a-namegetdroptargeta--cdhtmldialoggetdroptarget"></a><a name="getdroptarget"></a>CDHtmlDialog::GetDropTarget  
+##  <a name="getdroptarget"></a>CDHtmlDialog::GetDropTarget  
  它正做為置放目標以便提供替代對話方塊時，由內含的 WebBrowser 控制項呼叫[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)。  
   
 ```  
@@ -605,7 +661,7 @@ STDMETHOD(GetDropTarget)(
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetelementa--cdhtmldialoggetelement"></a><a name="getelement"></a>CDHtmlDialog::GetElement  
+##  <a name="getelement"></a>CDHtmlDialog::GetElement  
  傳回的介面上所指定的 HTML 項目`szElementId`。  
   
 ```  
@@ -641,7 +697,7 @@ HRESULT GetElement(
   
  如果有一個以上的項目具有相同識別碼在頁面中，將會失敗的第二個多載。  
   
-##  <a name="a-namegetelementhtmla--cdhtmldialoggetelementhtml"></a><a name="getelementhtml"></a>CDHtmlDialog::GetElementHtml  
+##  <a name="getelementhtml"></a>CDHtmlDialog::GetElementHtml  
  擷取**innerHTML**屬性所識別之 HTML 項目`szElementId`。  
   
 ```  
@@ -655,7 +711,7 @@ BSTR GetElementHtml(LPCTSTR szElementId);
 ### <a name="return-value"></a>傳回值  
  **InnerHTML**屬性所識別之 HTML 項目`szElementId`或**NULL**如果找不到項目。  
   
-##  <a name="a-namegetelementinterfacea--cdhtmldialoggetelementinterface"></a><a name="getelementinterface"></a>CDHtmlDialog::GetElementInterface  
+##  <a name="getelementinterface"></a>CDHtmlDialog::GetElementInterface  
  從所識別的 HTML 元素擷取要求的介面指標`szElementId`。  
   
 ```  
@@ -686,7 +742,7 @@ HRESULT GetElementInterface(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCHtmlHttp #&4;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_4.cpp)]  
   
-##  <a name="a-namegetelementpropertya--cdhtmldialoggetelementproperty"></a><a name="getelementproperty"></a>CDHtmlDialog::GetElementProperty  
+##  <a name="getelementproperty"></a>CDHtmlDialog::GetElementProperty  
  擷取所識別之屬性的值`dispid`所識別的 HTML 項目從`szElementId`。  
   
 ```  
@@ -705,7 +761,7 @@ VARIANT GetElementProperty(
 ### <a name="return-value"></a>傳回值  
  值的屬性，或是如果屬性或項目找不到一個空的 variant。  
   
-##  <a name="a-namegetelementtexta--cdhtmldialoggetelementtext"></a><a name="getelementtext"></a>CDHtmlDialog::GetElementText  
+##  <a name="getelementtext"></a>CDHtmlDialog::GetElementText  
  擷取**innerText**屬性所識別之 HTML 項目`szElementId`。  
   
 ```  
@@ -719,7 +775,7 @@ BSTR GetElementText(LPCTSTR szElementId);
 ### <a name="return-value"></a>傳回值  
  **InnerText**屬性所識別之 HTML 項目`szElementId`或**NULL**如果無法找到的屬性或項目。  
   
-##  <a name="a-namegeteventa--cdhtmldialoggetevent"></a><a name="getevent"></a>CDHtmlDialog::GetEvent  
+##  <a name="getevent"></a>CDHtmlDialog::GetEvent  
  傳回**IHTMLEventObj**目前事件物件的指標。  
   
 ```  
@@ -736,7 +792,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 ### <a name="remarks"></a>備註  
  只能從 DHTML 事件處理常式內呼叫此函式。  
   
-##  <a name="a-namegetexternala--cdhtmldialoggetexternal"></a><a name="getexternal"></a>CDHtmlDialog::GetExternal  
+##  <a name="getexternal"></a>CDHtmlDialog::GetExternal  
  取得主應用程式的`IDispatch`介面。  
   
 ```  
@@ -753,7 +809,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegethostinfoa--cdhtmldialoggethostinfo"></a><a name="gethostinfo"></a>CDHtmlDialog::GetHostInfo  
+##  <a name="gethostinfo"></a>CDHtmlDialog::GetHostInfo  
  擷取主機的 UI 功能。  
   
 ```  
@@ -770,7 +826,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetoptionkeypatha--cdhtmldialoggetoptionkeypath"></a><a name="getoptionkeypath"></a>CDHtmlDialog::GetOptionKeyPath  
+##  <a name="getoptionkeypath"></a>CDHtmlDialog::GetOptionKeyPath  
  擷取使用者喜好設定會儲存在其下的登錄機碼。  
   
 ```  
@@ -792,7 +848,7 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namehideuia--cdhtmldialoghideui"></a><a name="hideui"></a>CDHtmlDialog::HideUI  
+##  <a name="hideui"></a>CDHtmlDialog::HideUI  
  隱藏主機的 UI。  
   
 ```  
@@ -805,7 +861,7 @@ STDMETHOD(HideUI)(void);
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameisexternaldispatchsafea--cdhtmldialogisexternaldispatchsafe"></a><a name="isexternaldispatchsafe"></a>CDHtmlDialog::IsExternalDispatchSafe  
+##  <a name="isexternaldispatchsafe"></a>CDHtmlDialog::IsExternalDispatchSafe  
  指出是否在主機`IDispatch`介面是可安全用於指令碼。  
   
 ```  
@@ -815,7 +871,7 @@ virtual BOOL IsExternalDispatchSafe();
 ### <a name="return-value"></a>傳回值  
  傳回**FALSE**。  
   
-##  <a name="a-nameloadfromresourcea--cdhtmldialogloadfromresource"></a><a name="loadfromresource"></a>CDHtmlDialog::LoadFromResource  
+##  <a name="loadfromresource"></a>CDHtmlDialog::LoadFromResource  
  載入 WebBrowser 控制項 DHTML 對話方塊中指定的資源。  
   
 ```  
@@ -833,7 +889,7 @@ BOOL LoadFromResource(UINT nRes);
 ### <a name="return-value"></a>傳回值  
  **TRUE**如果成功，否則**FALSE**。  
   
-##  <a name="a-namembusehtmltitlea--cdhtmldialogmbusehtmltitle"></a><a name="m_busehtmltitle"></a>CDHtmlDialog::m_bUseHtmlTitle  
+##  <a name="m_busehtmltitle"></a>CDHtmlDialog::m_bUseHtmlTitle  
  指出是否要使用 HTML 文件的標題為對話方塊標題。  
   
 ```  
@@ -843,7 +899,7 @@ BOOL m_bUseHtmlTitle;
 ### <a name="remarks"></a>備註  
  如果**m**_ **bUseHtmlTitle**是**true**、 對話方塊標題設定等於 HTML 文件的標題，否則會使用對話方塊資源中的標題。  
   
-##  <a name="a-namemnhtmlresida--cdhtmldialogmnhtmlresid"></a><a name="m_nhtmlresid"></a>CDHtmlDialog::m_nHtmlResID  
+##  <a name="m_nhtmlresid"></a>CDHtmlDialog::m_nHtmlResID  
  要顯示的資源識別碼的 HTML 資源。  
   
 ```  
@@ -853,28 +909,28 @@ UINT m_nHtmlResID;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCHtmlHttp #&5;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_5.cpp)]  
   
-##  <a name="a-namempbrowserappa--cdhtmldialogmpbrowserapp"></a><a name="m_pbrowserapp"></a>CDHtmlDialog::m_pBrowserApp  
+##  <a name="m_pbrowserapp"></a>CDHtmlDialog::m_pBrowserApp  
  Web 瀏覽器應用程式的指標。  
   
 ```  
 CComPtr <IWebBrowser2> m_pBrowserApp;  
 ```  
   
-##  <a name="a-namemsphtmldoca--cdhtmldialogmsphtmldoc"></a><a name="m_sphtmldoc"></a>CDHtmlDialog::m_spHtmlDoc  
+##  <a name="m_sphtmldoc"></a>CDHtmlDialog::m_spHtmlDoc  
  在 HTML 文件指標。  
   
 ```  
 CComPtr<IHTMLDocument2> m_spHtmlDoc;  
 ```  
   
-##  <a name="a-namemstrcurrenturla--cdhtmldialogmstrcurrenturl"></a><a name="m_strcurrenturl"></a>CDHtmlDialog::m_strCurrentUrl  
+##  <a name="m_strcurrenturl"></a>CDHtmlDialog::m_strCurrentUrl  
  目前的 URL。  
   
 ```  
 CString m_strCurrentUrl;  
 ```  
   
-##  <a name="a-namemszhtmlresida--cdhtmldialogmszhtmlresid"></a><a name="m_szhtmlresid"></a>CDHtmlDialog::m_szHtmlResID  
+##  <a name="m_szhtmlresid"></a>CDHtmlDialog::m_szHtmlResID  
  版本字串的 HTML 資源識別碼。  
   
 ```  
@@ -884,7 +940,7 @@ LPTSTR m_szHtmlResID;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCHtmlHttp #&6;](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_6.cpp)]  
   
-##  <a name="a-namenavigatea--cdhtmldialognavigate"></a><a name="navigate"></a>CDHtmlDialog::Navigate  
+##  <a name="navigate"></a>CDHtmlDialog::Navigate  
  瀏覽至所指定的 URL 所識別的資源`lpszURL`。  
   
 ```  
@@ -916,7 +972,7 @@ void Navigate(
  `dwPostDataLen`  
  傳送 HTTP POST 交易資料。 例如，POST 交易用來傳送 HTML 格式所收集的資料。 如果這個參數未指定任何張貼的資料，**瀏覽**發出 HTTP GET 的交易。 如果 URL 不是 HTTP URL，則會忽略此參數。  
   
-##  <a name="a-nameonbeforenavigatea--cdhtmldialogonbeforenavigate"></a><a name="onbeforenavigate"></a>CDHtmlDialog::OnBeforeNavigate  
+##  <a name="onbeforenavigate"></a>CDHtmlDialog::OnBeforeNavigate  
  瀏覽發生之前引發事件的架構所呼叫。  
   
 ```  
@@ -932,7 +988,7 @@ virtual void OnBeforeNavigate(
  `szUrl`  
  包含要巡覽至 URL 的字串指標。  
   
-##  <a name="a-nameondocumentcompletea--cdhtmldialogondocumentcomplete"></a><a name="ondocumentcomplete"></a>CDHtmlDialog::OnDocumentComplete  
+##  <a name="ondocumentcomplete"></a>CDHtmlDialog::OnDocumentComplete  
  已達成文件時，通知應用程式架構呼叫`READYSTATE_COMPLETE`狀態。  
   
 ```  
@@ -948,7 +1004,7 @@ virtual void OnDocumentComplete(
  `szUrl`  
  包含巡覽至 URL 的字串指標。  
   
-##  <a name="a-nameondocwindowactivatea--cdhtmldialogondocwindowactivate"></a><a name="ondocwindowactivate"></a>CDHtmlDialog::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>CDHtmlDialog::OnDocWindowActivate  
  當文件視窗是啟用或停用時，由架構呼叫。  
   
 ```  
@@ -965,7 +1021,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作所[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonframewindowactivatea--cdhtmldialogonframewindowactivate"></a><a name="onframewindowactivate"></a>CDHtmlDialog::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>CDHtmlDialog::OnFrameWindowActivate  
  框架視窗是啟用或停用時，由架構呼叫。  
   
 ```  
@@ -982,7 +1038,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameoninitdialoga--cdhtmldialogoninitdialog"></a><a name="oninitdialog"></a>CDHtmlDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>CDHtmlDialog::OnInitDialog  
  呼叫以回應**WM_INITDIALOG**訊息。  
   
 ```  
@@ -999,7 +1055,7 @@ virtual BOOL OnInitDialog();
   
  Windows 呼叫`OnInitDialog`函式透過 Mfc 程式庫廠商對話方塊通用標準的通用對話方塊中的程序，而不是透過訊息對應，因此您不需要的訊息對應項目為此成員函式。  
   
-##  <a name="a-nameonnavigatecompletea--cdhtmldialogonnavigatecomplete"></a><a name="onnavigatecomplete"></a>CDHtmlDialog::OnNavigateComplete  
+##  <a name="onnavigatecomplete"></a>CDHtmlDialog::OnNavigateComplete  
  瀏覽至指定的 URL 完成後，由架構呼叫。  
   
 ```  
@@ -1015,7 +1071,7 @@ virtual void OnNavigateComplete(
  `szUrl`  
  包含巡覽至 URL 的字串指標。  
   
-##  <a name="a-nameresizebordera--cdhtmldialogresizeborder"></a><a name="resizeborder"></a>CDHtmlDialog::ResizeBorder  
+##  <a name="resizeborder"></a>CDHtmlDialog::ResizeBorder  
  警示的物件，以便調整其框線空間。  
   
 ```  
@@ -1038,7 +1094,7 @@ STDMETHOD(ResizeBorder)(
 ### <a name="return-value"></a>傳回值  
  傳回**E_NOTIMPL**。  
   
-##  <a name="a-namesetcontrolpropertya--cdhtmldialogsetcontrolproperty"></a><a name="setcontrolproperty"></a>CDHtmlDialog::SetControlProperty  
+##  <a name="setcontrolproperty"></a>CDHtmlDialog::SetControlProperty  
  將 ActiveX 控制項的屬性設定為新值。  
   
 ```  
@@ -1076,7 +1132,7 @@ void SetControlProperty(
  `szPropName`  
  字串，包含要設定之屬性的名稱。  
   
-##  <a name="a-namesetelementhtmla--cdhtmldialogsetelementhtml"></a><a name="setelementhtml"></a>CDHtmlDialog::SetElementHtml  
+##  <a name="setelementhtml"></a>CDHtmlDialog::SetElementHtml  
  設定**innerHTML** HTML 項目的屬性。  
   
 ```  
@@ -1100,7 +1156,7 @@ void SetElementHtml(
  `punkElem`  
  **IUnknown** HTML 項目的指標。  
   
-##  <a name="a-namesetelementpropertya--cdhtmldialogsetelementproperty"></a><a name="setelementproperty"></a>CDHtmlDialog::SetElementProperty  
+##  <a name="setelementproperty"></a>CDHtmlDialog::SetElementProperty  
  設定 HTML 項目的屬性。  
   
 ```  
@@ -1120,7 +1176,7 @@ void SetElementProperty(
  *pVar*  
  屬性的新值。  
   
-##  <a name="a-namesetelementtexta--cdhtmldialogsetelementtext"></a><a name="setelementtext"></a>CDHtmlDialog::SetElementText  
+##  <a name="setelementtext"></a>CDHtmlDialog::SetElementText  
  設定**innerText** HTML 項目的屬性。  
   
 ```  
@@ -1144,7 +1200,7 @@ void SetElementText(
  `punkElem`  
  **IUnknown** HTML 項目的指標。  
   
-##  <a name="a-namesetexternaldispatcha--cdhtmldialogsetexternaldispatch"></a><a name="setexternaldispatch"></a>CDHtmlDialog::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>CDHtmlDialog::SetExternalDispatch  
  設定主機的`IDispatch`介面。  
   
 ```  
@@ -1155,7 +1211,7 @@ void SetExternalDispatch(IDispatch* pdispExternal);
  *pdispExternal*  
  新`IDispatch`介面。  
   
-##  <a name="a-namesethostflagsa--cdhtmldialogsethostflags"></a><a name="sethostflags"></a>CDHtmlDialog::SetHostFlags  
+##  <a name="sethostflags"></a>CDHtmlDialog::SetHostFlags  
  設定主應用程式 UI 的旗標。  
   
 ```  
@@ -1166,7 +1222,7 @@ void SetHostFlags(DWORD dwFlags);
  `dwFlags`  
  可能的值，請參閱[DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameshowcontextmenua--cdhtmldialogshowcontextmenu"></a><a name="showcontextmenu"></a>CDHtmlDialog::ShowContextMenu  
+##  <a name="showcontextmenu"></a>CDHtmlDialog::ShowContextMenu  
  顯示內容功能表時呼叫。  
   
 ```  
@@ -1196,7 +1252,7 @@ STDMETHOD(ShowContextMenu)(
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameshowuia--cdhtmldialogshowui"></a><a name="showui"></a>CDHtmlDialog::ShowUI  
+##  <a name="showui"></a>CDHtmlDialog::ShowUI  
  顯示主機的 UI。  
   
 ```  
@@ -1230,7 +1286,7 @@ STDMETHOD(ShowUI)(
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nametranslateacceleratora--cdhtmldialogtranslateaccelerator"></a><a name="translateaccelerator"></a>CDHtmlDialog::TranslateAccelerator  
+##  <a name="translateaccelerator"></a>CDHtmlDialog::TranslateAccelerator  
  功能表快速鍵訊息處理的呼叫。  
   
 ```  
@@ -1256,7 +1312,7 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nametranslateurla--cdhtmldialogtranslateurl"></a><a name="translateurl"></a>CDHtmlDialog::TranslateUrl  
+##  <a name="translateurl"></a>CDHtmlDialog::TranslateUrl  
  呼叫以修改要載入的 URL。  
   
 ```  
@@ -1282,7 +1338,7 @@ STDMETHOD(TranslateUrl)(
 ### <a name="remarks"></a>備註  
  此成員函式是 CDHtmlDialog 的實作[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameupdateuia--cdhtmldialogupdateui"></a><a name="updateui"></a>CDHtmlDialog::UpdateUI  
+##  <a name="updateui"></a>CDHtmlDialog::UpdateUI  
  呼叫以通知主機命令狀態已變更。  
   
 ```  

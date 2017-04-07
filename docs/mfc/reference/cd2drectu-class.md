@@ -10,7 +10,9 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CD2DRectU
-- afxrendertarget/CD2DRectU
+- AFXRENDERTARGET/CD2DRectU
+- AFXRENDERTARGET/CD2DRectU::CD2DRectU
+- AFXRENDERTARGET/CD2DRectU::IsNull
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -77,7 +79,7 @@ class CD2DRectU : public D2D1_RECT_U;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namecd2drectua--cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
+##  <a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
  建構 CD2DRectU 物件從 CRect 物件。  
   
 ```  
@@ -109,7 +111,7 @@ CD2DRectU(
  `uBottom`  
  來源下方座標  
   
-##  <a name="a-nameisnulla--cd2drectuisnull"></a><a name="isnull"></a>CD2DRectU::IsNull  
+##  <a name="isnull"></a>CD2DRectU::IsNull  
  傳回布林值，指出運算式是否包含任何有效的資料 (Null)。  
   
 ```  
@@ -119,7 +121,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>傳回值  
  矩形的上方、 左側、 底端和正確的值是否設為 0，所有相等，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-nameoperatorcrecta--cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU::operator CRect  
+##  <a name="operator_crect"></a>CD2DRectU::operator CRect  
  將 CD2DRectU 轉換 CRect 物件。  
   
 ```  

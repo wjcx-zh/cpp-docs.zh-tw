@@ -10,7 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CAnimationRect
-- afxanimationcontroller/CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect::CAnimationRect
+- AFXANIMATIONCONTROLLER/CAnimationRect::AddTransition
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetBottom
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetLeft
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetRight
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetTop
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::SetDefaultValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::GetAnimationVariableList
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_bFixedSize
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_bottomValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_leftValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_rightValue
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_szInitial
+- AFXANIMATIONCONTROLLER/CAnimationRect::m_topValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -112,7 +128,7 @@ class CAnimationRect : public CAnimationBaseObject;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-nameaddtransitiona--canimationrectaddtransition"></a><a name="addtransition"></a>CAnimationRect::AddTransition  
+##  <a name="addtransition"></a>CAnimationRect::AddTransition  
  請新增左側、 頂端、 右側和底部座標的轉換。  
   
 ```  
@@ -139,7 +155,7 @@ void AddTransition(
 ### <a name="remarks"></a>備註  
  呼叫此函式可將指定的轉換加入至轉換套用至每個矩形的邊的動畫變數的內部清單。 當您新增的轉換時，它們就會不會立即套用，並儲存在內部清單。 轉換會套用 （加入至腳本，以尋找特定的值） 當您呼叫 CAnimationController::AnimateGroup。 如果您不需要將轉換套用到其中一個矩形的邊，您可以傳遞 NULL。  
   
-##  <a name="a-namecanimationrecta--canimationrectcanimationrect"></a><a name="canimationrect"></a>CAnimationRect::CAnimationRect  
+##  <a name="canimationrect"></a>CAnimationRect::CAnimationRect  
  建構 CAnimationRect 物件。  
   
 ```  
@@ -205,7 +221,7 @@ CAnimationRect(
 ### <a name="remarks"></a>備註  
  建構的物件是使用預設值為左框線、 頂端、 右側和底部，物件識別碼，以及群組識別碼，這將會設定為 0。 它們都可以在執行階段使用 SetDefaultValue 和 SetID 之後變更。  
   
-##  <a name="a-namegetanimationvariablelista--canimationrectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>CAnimationRect::GetAnimationVariableList  
  將封裝的動畫變數放入清單。  
   
 ```  
@@ -218,7 +234,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  函式傳回時，它會包含代表矩形的座標的四個 CAnimationVariable 物件的指標。  
   
-##  <a name="a-namegetbottoma--canimationrectgetbottom"></a><a name="getbottom"></a>CAnimationRect::GetBottom  
+##  <a name="getbottom"></a>CAnimationRect::GetBottom  
  提供存取權 CAnimationVariable 表示下方座標。  
   
 ```  
@@ -231,7 +247,7 @@ CAnimationVariable& GetBottom();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 表示下方座標。  
   
-##  <a name="a-namegetdefaultvaluea--canimationrectgetdefaultvalue"></a><a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>CAnimationRect::GetDefaultValue  
  傳回矩形的界限內的預設值。  
   
 ```  
@@ -244,7 +260,7 @@ CRect GetDefaultValue();
 ### <a name="remarks"></a>備註  
  呼叫此函式可擷取先前已設定的建構函式或 SetDefaultValue 的預設值。  
   
-##  <a name="a-namegetlefta--canimationrectgetleft"></a><a name="getleft"></a>CAnimationRect::GetLeft  
+##  <a name="getleft"></a>CAnimationRect::GetLeft  
  提供存取權 CAnimationVariable 表示左的座標。  
   
 ```  
@@ -257,7 +273,7 @@ CAnimationVariable& GetLeft();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 表示左的座標。  
   
-##  <a name="a-namegetrighta--canimationrectgetright"></a><a name="getright"></a>CAnimationRect::GetRight  
+##  <a name="getright"></a>CAnimationRect::GetRight  
  提供存取權 CAnimationVariable 表示右的座標。  
   
 ```  
@@ -270,7 +286,7 @@ CAnimationVariable& GetRight();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 表示右的座標。  
   
-##  <a name="a-namegettopa--canimationrectgettop"></a><a name="gettop"></a>CAnimationRect::GetTop  
+##  <a name="gettop"></a>CAnimationRect::GetTop  
  提供存取權 CAnimationVariable 代表上方座標。  
   
 ```  
@@ -283,7 +299,7 @@ CAnimationVariable& GetTop();
 ### <a name="remarks"></a>備註  
  您可以呼叫這個方法，以直接存取基礎 CAnimationVariable 代表上方座標。  
   
-##  <a name="a-namegetvaluea--canimationrectgetvalue"></a><a name="getvalue"></a>CAnimationRect::GetValue  
+##  <a name="getvalue"></a>CAnimationRect::GetValue  
  傳回目前的值。  
   
 ```  
@@ -300,7 +316,7 @@ BOOL GetValue(CRect& rect);
 ### <a name="remarks"></a>備註  
  呼叫此函式以擷取動畫矩形的目前值。 如果此方法失敗或基礎 COM 物件的左邊，頂端、 右側和底端尚未初始化，rect 包含建構函式中或 SetDefaultValue 先前設定的預設值。  
   
-##  <a name="a-namembfixedsizea--canimationrectmbfixedsize"></a><a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
+##  <a name="m_bfixedsize"></a>CAnimationRect::m_bFixedSize  
  指定矩形是否具有固定大小。  
   
 ```  
@@ -310,42 +326,42 @@ BOOL m_bFixedSize;
 ### <a name="remarks"></a>備註  
  這個成員為 true，如果矩形的大小是固定且正確然後界值會根據固定的大小仍左上角每次重新計算。 設定此值為 TRUE，以輕鬆地移動螢幕上的矩形。 在此情況下轉換套用至右邊和下方座標都會被忽略。 當您建構物件和/或呼叫 SetDefaultValue 時，會在內部儲存大小。 依預設這個成員是設定為 FALSE。  
   
-##  <a name="a-namembottomvaluea--canimationrectmbottomvalue"></a><a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
+##  <a name="m_bottomvalue"></a>CAnimationRect::m_bottomValue  
  表示下之封裝的動畫變數繫結的動畫矩形。  
   
 ```  
 CAnimationVariable m_bottomValue;  
 ```  
   
-##  <a name="a-namemleftvaluea--canimationrectmleftvalue"></a><a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
+##  <a name="m_leftvalue"></a>CAnimationRect::m_leftValue  
  代表左封裝的動畫變數繫結的動畫矩形。  
   
 ```  
 CAnimationVariable m_leftValue;  
 ```  
   
-##  <a name="a-namemrightvaluea--canimationrectmrightvalue"></a><a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
+##  <a name="m_rightvalue"></a>CAnimationRect::m_rightValue  
  表示權限之封裝的動畫變數繫結的動畫矩形。  
   
 ```  
 CAnimationVariable m_rightValue;  
 ```  
   
-##  <a name="a-namemszinitiala--canimationrectmszinitial"></a><a name="m_szinitial"></a>CAnimationRect::m_szInitial  
+##  <a name="m_szinitial"></a>CAnimationRect::m_szInitial  
  指定初始的動畫矩形的大小。  
   
 ```  
 CSize m_szInitial;  
 ```  
   
-##  <a name="a-namemtopvaluea--canimationrectmtopvalue"></a><a name="m_topvalue"></a>CAnimationRect::m_topValue  
+##  <a name="m_topvalue"></a>CAnimationRect::m_topValue  
  表示最上方之封裝的動畫變數繫結的動畫矩形。  
   
 ```  
 CAnimationVariable m_topValue;  
 ```  
   
-##  <a name="a-nameoperatorrecta--canimationrectoperator-rect"></a><a name="operator_rect"></a>CAnimationRect::operator RECT  
+##  <a name="operator_rect"></a>CAnimationRect::operator RECT  
  將 CAnimationRect 轉換就是 RECT。  
   
 ```  
@@ -358,7 +374,7 @@ operator RECT();
 ### <a name="remarks"></a>備註  
  此函式會在內部呼叫 GetValue。 如果 GetValue 因故失敗，傳回的矩形將包含所有的矩形座標的預設值。  
   
-##  <a name="a-nameoperatoreqa--canimationrectoperator"></a><a name="operator_eq"></a>CAnimationRect::operator =  
+##  <a name="operator_eq"></a>CAnimationRect::operator =  
  指派 CAnimationRect rect。  
   
 ```  
@@ -372,7 +388,7 @@ void operator=(const RECT& rect);
 ### <a name="remarks"></a>備註  
  建議您這麼做之前動畫開始這個運算子會呼叫 SetDefaultValue，重新建立色彩元件的基礎 COM 物件，如果已建立。 如果您已訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件，您需要重新啟用這些事件。  
   
-##  <a name="a-namesetdefaultvaluea--canimationrectsetdefaultvalue"></a><a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>CAnimationRect::SetDefaultValue  
  設定預設值。  
   
 ```  

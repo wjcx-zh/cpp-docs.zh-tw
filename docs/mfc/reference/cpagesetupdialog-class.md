@@ -10,6 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
+- AFXDLGS/CPageSetupDialog
+- AFXDLGS/CPageSetupDialog::CPageSetupDialog
+- AFXDLGS/CPageSetupDialog::CreatePrinterDC
+- AFXDLGS/CPageSetupDialog::DoModal
+- AFXDLGS/CPageSetupDialog::GetDeviceName
+- AFXDLGS/CPageSetupDialog::GetDevMode
+- AFXDLGS/CPageSetupDialog::GetDriverName
+- AFXDLGS/CPageSetupDialog::GetMargins
+- AFXDLGS/CPageSetupDialog::GetPaperSize
+- AFXDLGS/CPageSetupDialog::GetPortName
+- AFXDLGS/CPageSetupDialog::OnDrawPage
+- AFXDLGS/CPageSetupDialog::PreDrawPage
+- AFXDLGS/CPageSetupDialog::m_psd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -109,7 +122,7 @@ class CPageSetupDialog : public CCommonDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdlgs.h  
   
-##  <a name="a-namecpagesetupdialoga--cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
+##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
  呼叫此函式來建構`CPageSetupDialog`物件。  
   
 ```  
@@ -167,7 +180,7 @@ CPageSetupDialog(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&94;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="a-namecreateprinterdca--cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
  建立印表機裝置內容從[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。  
   
 ```  
@@ -177,7 +190,7 @@ HDC CreatePrinterDC();
 ### <a name="return-value"></a>傳回值  
  新建立的印表機裝置內容 (DC) 的控制代碼。  
   
-##  <a name="a-namedomodala--cpagesetupdialogdomodal"></a><a name="domodal"></a>CPageSetupDialog::DoModal  
+##  <a name="domodal"></a>CPageSetupDialog::DoModal  
  呼叫此函式來顯示 Windows 通用 OLE 版面設定對話方塊中，並允許使用者選取各種列印設定選項，例如列印邊界、 大小和方向的紙張，以及目的地印表機。  
   
 ```  
@@ -201,7 +214,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>範例  
   請參閱範例[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)。  
   
-##  <a name="a-namegetdevicenamea--cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
+##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
  呼叫此函式之後`DoModal`來擷取目前所選印表機的名稱。  
   
 ```  
@@ -211,7 +224,7 @@ CString GetDeviceName() const;
 ### <a name="return-value"></a>傳回值  
  所使用的裝置名稱**CPageSetupDialog**物件。  
   
-##  <a name="a-namegetdevmodea--cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
+##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
  呼叫此函式之後呼叫`DoModal`擷取印表機裝置內容的相關資訊`CPageSetupDialog`物件。  
   
 ```  
@@ -221,7 +234,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>傳回值  
  [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)資料結構，其中包含裝置初始化和列印驅動程式的環境的相關資訊。 您必須解除鎖定此結構與 Windows 所佔用的記憶體[GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595)函式中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdrivernamea--cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
+##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
  呼叫此函式之後呼叫[DoModal](../../mfc/reference/cprintdialog-class.md#domodal)來擷取系統定義的印表機裝置驅動程式的名稱。  
   
 ```  
@@ -234,7 +247,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>備註  
  使用指標`CString`所傳回的物件`GetDriverName`的值為`lpszDriverName`呼叫[CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)。  
   
-##  <a name="a-namegetmarginsa--cpagesetupdialoggetmargins"></a><a name="getmargins"></a>CPageSetupDialog::GetMargins  
+##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
  呼叫此函式呼叫之後`DoModal`擷取印表機裝置驅動程式的邊界。  
   
 ```  
@@ -250,7 +263,7 @@ void GetMargins(
  *lpRectMinMargins*  
  指標`RECT`結構或`CRect`物件，描述 （在 1/1000年英吋或 1/100 公釐） 的最小目前選取的印表機列印邊界。 傳遞**NULL**這個參數，如果您不想在這個矩形中。  
   
-##  <a name="a-namegetpapersizea--cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
+##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
  呼叫此函式可擷取選取要列印的紙張大小。  
   
 ```  
@@ -260,7 +273,7 @@ CSize GetPaperSize() const;
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含 （在 1/1000年英吋或 1/100 公釐） 列印選取的紙張大小。  
   
-##  <a name="a-namegetportnamea--cpagesetupdialoggetportname"></a><a name="getportname"></a>CPageSetupDialog::GetPortName  
+##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
  呼叫此函式之後呼叫`DoModal`擷取目前選取的印表機連接埠的名稱。  
   
 ```  
@@ -270,7 +283,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>傳回值  
  目前選取的印表機連接埠的名稱。  
   
-##  <a name="a-namempsda--cpagesetupdialogmpsd"></a><a name="m_psd"></a>CPageSetupDialog::m_psd  
+##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
  型別的結構**PAGESETUPDLG**，其成員儲存對話方塊物件的特性。  
   
 ```  
@@ -286,7 +299,7 @@ PAGESETUPDLG m_psd;
   
  請參閱範例[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)。  
   
-##  <a name="a-nameondrawpagea--cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
+##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
  要繪製列印頁面的螢幕影像架構呼叫。  
   
 ```  
@@ -330,7 +343,7 @@ virtual UINT OnDrawPage(
   
  請注意，您不需要處理的每個案例`nMessage`。 您可以選擇要處理的映像的映像或整個區域的數個元件的一個元件。  
   
-##  <a name="a-namepredrawpagea--cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
+##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
  繪製列印頁面的螢幕影像之前，由框架呼叫。  
   
 ```  

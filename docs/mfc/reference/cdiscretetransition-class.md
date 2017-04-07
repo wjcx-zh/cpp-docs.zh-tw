@@ -10,7 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
-- afxanimationcontroller/CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::CDiscreteTransition
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::Create
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_dblFinalValue
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_delay
+- AFXANIMATIONCONTROLLER/CDiscreteTransition::m_hold
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class CDiscreteTransition : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="a-namecdiscretetransitiona--cdiscretetransitioncdiscretetransition"></a><a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
  建構離散的轉換物件並初始化它的參數。  
   
 ```  
@@ -104,7 +109,7 @@ CDiscreteTransition(
  `hold`  
  用來保留變數的最後一個值的時間量。  
   
-##  <a name="a-namecreatea--cdiscretetransitioncreate"></a><a name="create"></a>CDiscreteTransition::Create  
+##  <a name="create"></a>CDiscreteTransition::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -120,21 +125,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-namemdblfinalvaluea--cdiscretetransitionmdblfinalvalue"></a><a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
  在轉換結束動畫變數的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="a-namemdelaya--cdiscretetransitionmdelay"></a><a name="m_delay"></a>CDiscreteTransition::m_delay  
+##  <a name="m_delay"></a>CDiscreteTransition::m_delay  
  用來延遲時間的瞬間交換器的最終值的時間量。  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
-##  <a name="a-namemholda--cdiscretetransitionmhold"></a><a name="m_hold"></a>CDiscreteTransition::m_hold  
+##  <a name="m_hold"></a>CDiscreteTransition::m_hold  
  用來保留變數的最後一個值的時間量。  
   
 ```  

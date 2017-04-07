@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CFindReplaceDialog
+- AFXDLGS/CFindReplaceDialog
+- AFXDLGS/CFindReplaceDialog::CFindReplaceDialog
+- AFXDLGS/CFindReplaceDialog::Create
+- AFXDLGS/CFindReplaceDialog::FindNext
+- AFXDLGS/CFindReplaceDialog::GetFindString
+- AFXDLGS/CFindReplaceDialog::GetNotifier
+- AFXDLGS/CFindReplaceDialog::GetReplaceString
+- AFXDLGS/CFindReplaceDialog::IsTerminating
+- AFXDLGS/CFindReplaceDialog::MatchCase
+- AFXDLGS/CFindReplaceDialog::MatchWholeWord
+- AFXDLGS/CFindReplaceDialog::ReplaceAll
+- AFXDLGS/CFindReplaceDialog::ReplaceCurrent
+- AFXDLGS/CFindReplaceDialog::SearchDown
+- AFXDLGS/CFindReplaceDialog::m_fr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -120,7 +134,7 @@ class CFindReplaceDialog : public CCommonDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdlgs.h  
   
-##  <a name="a-namecfindreplacedialoga--cfindreplacedialogcfindreplacedialog"></a><a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
+##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
  建構 `CFindReplaceDialog` 物件。  
   
 ```  
@@ -137,7 +151,7 @@ CFindReplaceDialog();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&170;](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
-##  <a name="a-namecreatea--cfindreplacedialogcreate"></a><a name="create"></a>CFindReplaceDialog::Create  
+##  <a name="create"></a>CFindReplaceDialog::Create  
  建立並顯示 尋找 或 尋找/取代對話方塊物件，根據的值`bFindDialogOnly`。  
   
 ```  
@@ -182,7 +196,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
   請參閱範例[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)。  
   
-##  <a name="a-namefindnexta--cfindreplacedialogfindnext"></a><a name="findnext"></a>CFindReplaceDialog::FindNext  
+##  <a name="findnext"></a>CFindReplaceDialog::FindNext  
  若要判斷使用者是否想要搜尋字串的下一個回呼函數中呼叫此函式。  
   
 ```  
@@ -192,7 +206,7 @@ BOOL FindNext() const;
 ### <a name="return-value"></a>傳回值  
  如果使用者想要搜尋的字串; 的下一個非零否則為 0。  
   
-##  <a name="a-namegetfindstringa--cfindreplacedialoggetfindstring"></a><a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
+##  <a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
  呼叫此函式，從您的回呼函式，以取得要尋找的預設字串。  
   
 ```  
@@ -205,7 +219,7 @@ CString GetFindString() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&69;](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="a-namegetnotifiera--cfindreplacedialoggetnotifier"></a><a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
+##  <a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
  呼叫此函式可擷取目前尋找取代 對話方塊的指標。  
   
 ```  
@@ -227,7 +241,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
   
  [!code-cpp[NVC_MFCDocView #&69;](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="a-namegetreplacestringa--cfindreplacedialoggetreplacestring"></a><a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
+##  <a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
  呼叫此函式可擷取目前的取代字串。  
   
 ```  
@@ -240,7 +254,7 @@ CString GetReplaceString() const;
 ### <a name="example"></a>範例  
   請參閱範例[CFindReplaceDialog::GetFindString](#getfindstring)。  
   
-##  <a name="a-nameisterminatinga--cfindreplacedialogisterminating"></a><a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
+##  <a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
  呼叫此函式回呼函式來判斷使用者是否已決定要終止的對話方塊內。  
   
 ```  
@@ -256,7 +270,7 @@ BOOL IsTerminating() const;
 ### <a name="example"></a>範例  
   請參閱範例[CFindReplaceDialog::GetFindString](#getfindstring)。  
   
-##  <a name="a-namemfra--cfindreplacedialogmfr"></a><a name="m_fr"></a>CFindReplaceDialog::m_fr  
+##  <a name="m_fr"></a>CFindReplaceDialog::m_fr  
  用來自訂`CFindReplaceDialog`物件。  
   
 ```  
@@ -271,7 +285,7 @@ FINDREPLACE m_fr;
 ### <a name="example"></a>範例  
   請參閱範例[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)。  
   
-##  <a name="a-namematchcasea--cfindreplacedialogmatchcase"></a><a name="matchcase"></a>CFindReplaceDialog::MatchCase  
+##  <a name="matchcase"></a>CFindReplaceDialog::MatchCase  
  呼叫此函式可判斷使用者是否想要完全符合尋找字串的大小寫。  
   
 ```  
@@ -281,7 +295,7 @@ BOOL MatchCase() const;
 ### <a name="return-value"></a>傳回值  
  非零，如果使用者想要尋找完全符合大小寫的搜尋字串中，搜尋字串的項目否則為 0。  
   
-##  <a name="a-namematchwholeworda--cfindreplacedialogmatchwholeword"></a><a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
+##  <a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
  呼叫此函式可判斷使用者是否想要比對整個的文字。  
   
 ```  
@@ -291,7 +305,7 @@ BOOL MatchWholeWord() const;
 ### <a name="return-value"></a>傳回值  
  非零，如果使用者想要比對整個單字的搜尋字串。否則為 0。  
   
-##  <a name="a-namereplacealla--cfindreplacedialogreplaceall"></a><a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
+##  <a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
  呼叫此函式可判斷使用者是否想要被取代字串的所有項目。  
   
 ```  
@@ -301,7 +315,7 @@ BOOL ReplaceAll() const;
 ### <a name="return-value"></a>傳回值  
  使用者已要求，會取代所有相符的取代字串的字串; 如果為非零否則為 0。  
   
-##  <a name="a-namereplacecurrenta--cfindreplacedialogreplacecurrent"></a><a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
+##  <a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
  呼叫此函式可判斷使用者是否想要取代目前的文字。  
   
 ```  
@@ -311,7 +325,7 @@ BOOL ReplaceCurrent() const;
 ### <a name="return-value"></a>傳回值  
  非零，如果使用者已要求目前所選的字串會取代在取代字串中。否則為 0。  
   
-##  <a name="a-namesearchdowna--cfindreplacedialogsearchdown"></a><a name="searchdown"></a>CFindReplaceDialog::SearchDown  
+##  <a name="searchdown"></a>CFindReplaceDialog::SearchDown  
  呼叫此函式可判斷使用者是否要繼續向下的方向搜尋。  
   
 ```  

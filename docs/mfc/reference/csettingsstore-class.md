@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::CSettingsStore
+- AFXSETTINGSSTORE/CSettingsStore::Close
+- AFXSETTINGSSTORE/CSettingsStore::CreateKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteKey
+- AFXSETTINGSSTORE/CSettingsStore::DeleteValue
+- AFXSETTINGSSTORE/CSettingsStore::Open
+- AFXSETTINGSSTORE/CSettingsStore::Read
+- AFXSETTINGSSTORE/CSettingsStore::Write
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +93,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxsettingsstore.h  
   
-##  <a name="a-nameclosea--csettingsstoreclose"></a><a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>CSettingsStore::Close  
  關閉開啟登錄機碼。  
   
 ```  
@@ -94,7 +103,7 @@ virtual void Close();
 ### <a name="remarks"></a>備註  
  根據預設，呼叫這個方法的解構函式從[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
   
-##  <a name="a-namecreatekeya--csettingsstorecreatekey"></a><a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>CSettingsStore::CreateKey  
  開啟登錄機碼，或不存在時建立。  
   
 ```  
@@ -111,7 +120,7 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ### <a name="remarks"></a>備註  
  `CreateKey`使用`m_hKey`登錄查詢的根。 它會搜尋`pszPath`的子機碼為`m_hKey`。 如果索引鍵不存在，`CreateKey`會加以建立。 否則，它會開啟索引鍵。 `CreateKey`然後設定`m_hKey`建立或開啟的索引鍵。  
   
-##  <a name="a-namecsettingsstorea--csettingsstorecsettingsstore"></a><a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
  建立 `CSettngsStore` 物件。  
   
 ```  
@@ -134,7 +143,7 @@ CSettingsStore(
   
  解構函式的`CSettingsStore`釋放`m_hKey`自動。  
   
-##  <a name="a-namedeletekeya--csettingsstoredeletekey"></a><a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
  刪除登錄機碼及其所有子系。  
   
 ```  
@@ -158,7 +167,7 @@ virtual BOOL DeleteKey(
   
  如果參數`bAdmin`為零，`DeleteKey`搜尋索引鍵，以刪除下`HKEY_CURRENT_USER`。 如果`bAdmin`是零，`DeleteKey`搜尋索引鍵，以刪除下`HKEY_LOCAL_MACHINE`。  
   
-##  <a name="a-namedeletevaluea--csettingsstoredeletevalue"></a><a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
  刪除值，以從`m_hKey`。  
   
 ```  
@@ -172,7 +181,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="a-nameopena--csettingsstoreopen"></a><a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>CSettingsStore::Open  
  開啟登錄機碼。  
   
 ```  
@@ -189,7 +198,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>備註  
  這個方法已成功開啟指定的索引鍵之後，它會設定`m_hKey`這個機碼的控制代碼。  
   
-##  <a name="a-namereada--csettingsstoreread"></a><a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>CSettingsStore::Read  
  從登錄機碼讀取值。  
   
 ```  
@@ -319,7 +328,7 @@ virtual BOOL Read(
 ### <a name="remarks"></a>備註  
  `Read`檢查是否有`pszKey`的子機碼為`m_hKey`。  
   
-##  <a name="a-namewritea--csettingsstorewrite"></a><a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>CSettingsStore::Write  
  將值寫入開啟登錄機碼底下。  
   
 ```  

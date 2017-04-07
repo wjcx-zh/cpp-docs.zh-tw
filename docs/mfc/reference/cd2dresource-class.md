@@ -9,8 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DResource
 - CD2DResource
+- AFXRENDERTARGET/CD2DResource
+- AFXRENDERTARGET/CD2DResource::CD2DResource
+- AFXRENDERTARGET/CD2DResource::Create
+- AFXRENDERTARGET/CD2DResource::Destroy
+- AFXRENDERTARGET/CD2DResource::IsValid
+- AFXRENDERTARGET/CD2DResource::IsAutoDestroy
+- AFXRENDERTARGET/CD2DResource::ReCreate
+- AFXRENDERTARGET/CD2DResource::m_bIsAutoDestroy
+- AFXRENDERTARGET/CD2DResource::m_pParentTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,14 +96,14 @@ class CD2DResource : public CObject;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dresourcea--cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
+##  <a name="_dtorcd2dresource"></a>CD2DResource:: ~ CD2DResource  
  解構函式。 D2D 資源物件終結時呼叫。  
   
 ```  
 virtual ~CD2DResource();
 ```  
   
-##  <a name="a-namecd2dresourcea--cd2dresourcecd2dresource"></a><a name="cd2dresource"></a>CD2DResource::CD2DResource  
+##  <a name="cd2dresource"></a>CD2DResource::CD2DResource  
  建構 CD2DResource 物件。  
   
 ```  
@@ -111,7 +119,7 @@ CD2DResource(
  `bAutoDestroy`  
  指出由擁有者 (pParentTarget) 將會終結物件。  
   
-##  <a name="a-namecreatea--cd2dresourcecreate"></a><a name="create"></a>CD2DResource::Create  
+##  <a name="create"></a>CD2DResource::Create  
  建立 CD2DResource。  
   
 ```  
@@ -125,14 +133,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-namedestroya--cd2dresourcedestroy"></a><a name="destroy"></a>CD2DResource::Destroy  
+##  <a name="destroy"></a>CD2DResource::Destroy  
  終結 CD2DResource 物件。  
   
 ```  
 virtual void Destroy() = 0;  
 ```  
   
-##  <a name="a-nameisautodestroya--cd2dresourceisautodestroy"></a><a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
+##  <a name="isautodestroy"></a>CD2DResource::IsAutoDestroy  
  核取自動終結旗標。  
   
 ```  
@@ -142,7 +150,7 @@ BOOL IsAutoDestroy() const;
 ### <a name="return-value"></a>傳回值  
  如果將由其擁有者; 終結物件，則為 TRUE。否則為 FALSE。  
   
-##  <a name="a-nameisvalida--cd2dresourceisvalid"></a><a name="isvalid"></a>CD2DResource::IsValid  
+##  <a name="isvalid"></a>CD2DResource::IsValid  
  檢查資源的有效性  
   
 ```  
@@ -152,21 +160,21 @@ virtual BOOL IsValid() const = 0;
 ### <a name="return-value"></a>傳回值  
  如果資源無效，則為 TRUE否則為 FALSE。  
   
-##  <a name="a-namembisautodestroya--cd2dresourcembisautodestroy"></a><a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
+##  <a name="m_bisautodestroy"></a>CD2DResource::m_bIsAutoDestroy  
  資源將會破壞擁有者 (CRenderTarget)  
   
 ```  
 BOOL m_bIsAutoDestroy;  
 ```  
   
-##  <a name="a-namempparenttargeta--cd2dresourcempparenttarget"></a><a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
+##  <a name="m_pparenttarget"></a>CD2DResource::m_pParentTarget  
  父 CRenderTarget 指標）  
   
 ```  
 CRenderTarget* m_pParentTarget;  
 ```  
   
-##  <a name="a-namerecreatea--cd2dresourcerecreate"></a><a name="recreate"></a>CD2DResource::ReCreate  
+##  <a name="recreate"></a>CD2DResource::ReCreate  
  重新建立 CD2DResource。  
   
 ```  

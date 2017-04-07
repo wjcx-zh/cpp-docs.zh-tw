@@ -10,6 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCShellTreeCtrl
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::EnableShellContextMenu
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::GetFlags
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::GetItemPath
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::GetRelatedList
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::OnChildNotify
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::OnGetItemIcon
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::OnGetItemText
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::Refresh
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::SelectPath
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::SetFlags
+- AFXSHELLTREECTRL/CMFCShellTreeCtrl::SetRelatedList
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +101,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
  [!code-cpp[NVC_MFC_Explorer #&4;](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_1.h)]  
 [!code-cpp[NVC_MFC_Explorer #&5;](../../mfc/reference/codesnippet/cpp/cmfcshelltreectrl-class_2.cpp)]  
   
-##  <a name="a-nameenableshellcontextmenua--cmfcshelltreectrlenableshellcontextmenu"></a><a name="enableshellcontextmenu"></a>CMFCShellTreeCtrl::EnableShellContextMenu  
+##  <a name="enableshellcontextmenu"></a>CMFCShellTreeCtrl::EnableShellContextMenu  
  啟用快顯功能表。  
   
 ```  
@@ -100,7 +112,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
  [in] `bEnable`  
  布林值，指定是否啟用快顯功能表。  
   
-##  <a name="a-namegetflagsa--cmfcshelltreectrlgetflags"></a><a name="getflags"></a>CMFCShellTreeCtrl::GetFlags  
+##  <a name="getflags"></a>CMFCShellTreeCtrl::GetFlags  
  傳回設定的旗標[CMFCShellTreeCtrl 類別](../../mfc/reference/cmfcshelltreectrl-class.md)物件。  
   
 ```  
@@ -113,7 +125,7 @@ DWORD GetFlags() const;
 ### <a name="remarks"></a>備註  
  在設定旗標`CMFCShellTreeCtrl`方法傳送[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)每次重新整理的物件。 您可以變更旗標[CMFCShellTreeCtrl::SetFlags](#setflags)方法。  
   
-##  <a name="a-namegetitempatha--cmfcshelltreectrlgetitempath"></a><a name="getitempath"></a>CMFCShellTreeCtrl::GetItemPath  
+##  <a name="getitempath"></a>CMFCShellTreeCtrl::GetItemPath  
  擷取中的項目路徑[CMFCShellTreeCtrl 類別](../../mfc/reference/cmfcshelltreectrl-class.md)物件。  
   
 ```  
@@ -137,7 +149,7 @@ BOOL GetItemPath(
   
  如果您未指定`hTreeItem`，這個方法會嘗試取得目前選取項目的字串。 如果在不選取任何項目和`hTreeItem`是`NULL`，這個方法會失敗。  
   
-##  <a name="a-namegetrelatedlista--cmfcshelltreectrlgetrelatedlist"></a><a name="getrelatedlist"></a>CMFCShellTreeCtrl::GetRelatedList  
+##  <a name="getrelatedlist"></a>CMFCShellTreeCtrl::GetRelatedList  
  傳回的指標[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)與此相關聯的物件[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)物件。  
   
 ```  
@@ -150,7 +162,7 @@ CMFCShellListCtrl* GetRelatedList() const;
 ### <a name="remarks"></a>備註  
  使用`CMFCShellListCtrl`物件搭配`CMFCShellTreeCtrl`物件時，您可以建立類似檔案總管的視窗。 使用方法[CMFCShellTreeCtrl::SetRelatedList](#setrelatedlist)關聯兩個類別。 它們會關聯之後，架構會自動更新`CMFCShellListCtrl`如果中的選取範圍`CMFCShellTreeCtrl`變更。  
   
-##  <a name="a-nameonchildnotifya--cmfcshelltreectrlonchildnotify"></a><a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
+##  <a name="onchildnotify"></a>CMFCShellTreeCtrl::OnChildNotify  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -171,7 +183,7 @@ virtual BOOL OnChildNotify(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameongetitemicona--cmfcshelltreectrlongetitemicon"></a><a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
+##  <a name="ongetitemicon"></a>CMFCShellTreeCtrl::OnGetItemIcon  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -188,7 +200,7 @@ virtual int OnGetItemIcon(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameongetitemtexta--cmfcshelltreectrlongetitemtext"></a><a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
+##  <a name="ongetitemtext"></a>CMFCShellTreeCtrl::OnGetItemText  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -202,7 +214,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namerefresha--cmfcshelltreectrlrefresh"></a><a name="refresh"></a>CMFCShellTreeCtrl::Refresh  
+##  <a name="refresh"></a>CMFCShellTreeCtrl::Refresh  
  重新整理，並重新繪製[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)。  
   
 ```  
@@ -212,7 +224,7 @@ void Refresh();
 ### <a name="remarks"></a>備註  
  呼叫這個方法來重新整理中所顯示的項目階層`CMFCShellTreeCtrl`。  
   
-##  <a name="a-nameselectpatha--cmfcshelltreectrlselectpath"></a><a name="selectpath"></a>CMFCShellTreeCtrl::SelectPath  
+##  <a name="selectpath"></a>CMFCShellTreeCtrl::SelectPath  
  選取一個項目中的[CMFCShellTreeCtrl 類別](../../mfc/reference/cmfcshelltreectrl-class.md)根據提供的路徑。  
   
 ```  
@@ -230,7 +242,7 @@ BOOL SelectPath(LPCITEMIDLIST lpidl);
 ### <a name="return-value"></a>傳回值  
  `S_OK`如果登錄成功。，`E_FAIL`否則。  
   
-##  <a name="a-namesetflagsa--cmfcshelltreectrlsetflags"></a><a name="setflags"></a>CMFCShellTreeCtrl::SetFlags  
+##  <a name="setflags"></a>CMFCShellTreeCtrl::SetFlags  
  設定旗標來篩選樹狀目錄的內容。  
   
 ```  
@@ -249,7 +261,7 @@ void SetFlags(
 ### <a name="remarks"></a>備註  
  `CMFCShellTreeCtrl`通過所有設定旗標為[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)。 不同的旗標之值的相關資訊，請參閱[IShellFolder::EnumObjects](http://msdn.microsoft.com/library/windows/desktop/bb775066)。  
   
-##  <a name="a-namesetrelatedlista--cmfcshelltreectrlsetrelatedlist"></a><a name="setrelatedlist"></a>CMFCShellTreeCtrl::SetRelatedList  
+##  <a name="setrelatedlist"></a>CMFCShellTreeCtrl::SetRelatedList  
  將[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件[CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)物件。  
   
 ```  

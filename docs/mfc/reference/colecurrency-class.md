@@ -9,8 +9,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- CURRENCY
 - COleCurrency
+- AFXDISP/COleCurrency
+- AFXDISP/COleCurrency::COleCurrency
+- AFXDISP/COleCurrency::Format
+- AFXDISP/COleCurrency::GetStatus
+- AFXDISP/COleCurrency::ParseCurrency
+- AFXDISP/COleCurrency::SetCurrency
+- AFXDISP/COleCurrency::SetStatus
+- AFXDISP/COleCurrency::m_cur
+- AFXDISP/COleCurrency::m_status
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -104,7 +112,7 @@ class COleCurrency
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="a-namecolecurrencya--colecurrencycolecurrency"></a><a name="colecurrency"></a>COleCurrency::COleCurrency  
+##  <a name="colecurrency"></a>COleCurrency::COleCurrency  
  建構**COleCurrency**物件。  
   
 ```  
@@ -152,7 +160,7 @@ COleCurrency(
   
  [!code-cpp[NVC_MFCOleContainer #&10;](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
   
-##  <a name="a-nameformata--colecurrencyformat"></a><a name="format"></a>COleCurrency::Format  
+##  <a name="format"></a>COleCurrency::Format  
  呼叫此成員函式建立格式化的貨幣值的表示法。  
   
 ```  
@@ -177,7 +185,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&11;](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
   
-##  <a name="a-namegetstatusa--colecurrencygetstatus"></a><a name="getstatus"></a>COleCurrency::GetStatus  
+##  <a name="getstatus"></a>COleCurrency::GetStatus  
  呼叫此成員函式取得的狀態 （有效性） 指定**COleCurrency**物件。  
   
 ```  
@@ -190,15 +198,13 @@ CurrencyStatus GetStatus() const;
 ### <a name="remarks"></a>備註  
  傳回值由定義`CurrencyStatus`列舉中定義的型別**COleCurrency**類別。  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  如需這些狀態值的簡短說明，請參閱下列清單︰  
   
@@ -235,7 +241,7 @@ CurrencyStatus GetStatus() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&12;](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
-##  <a name="a-namemcura--colecurrencymcur"></a><a name="m_cur"></a>COleCurrency::m_cur  
+##  <a name="m_cur"></a>COleCurrency::m_cur  
  基礎[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)這個結構**COleCurrency**物件。  
   
 ### <a name="remarks"></a>備註  
@@ -245,7 +251,7 @@ CurrencyStatus GetStatus() const;
   
  如需詳細資訊，請參閱[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)中的項目[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namemstatusa--colecurrencymstatus"></a><a name="m_status"></a>COleCurrency::m_status  
+##  <a name="m_status"></a>COleCurrency::m_status  
  此資料成員的類型是列舉型別`CurrencyStatus`，定義在**COleCurrency**類別。  
   
 ```  
@@ -292,7 +298,7 @@ enum CurrencyStatus{
     > [!CAUTION]
     >  此資料成員是進階程式設計的情況下。 您應該使用內嵌成員函式[GetStatus](#getstatus)和[SetStatus](#setstatus)。 請參閱`SetStatus`的其他注意事項，關於明確設定此資料成員。  
   
-##  <a name="a-nameoperatoreqa--colecurrencyoperator-"></a><a name="operator_eq"></a>COleCurrency::operator =  
+##  <a name="operator_eq"></a>COleCurrency::operator =  
  這些多載的指派運算子會將來源貨幣值複製到這**COleCurrency**物件。  
   
 ```  
@@ -315,7 +321,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&15;](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
   
-##  <a name="a-nameoperatorplusminusa--colecurrencyoperator---"></a><a name="operator_plus_minus"></a>COleCurrency::operator +、-  
+##  <a name="operator_plus_minus"></a>COleCurrency::operator +、-  
  這些運算子可讓您加入和減去兩個**COleCurrency**與彼此及變更的正負號的值**COleCurrency**值。  
   
 ```  
@@ -336,7 +342,7 @@ COleCurrency operator-() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&16;](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
   
-##  <a name="a-nameoperatorplusminuseqa--colecurrencyoperator---"></a><a name="operator_plus_minus_eq"></a>COleCurrency::operator + =、 =  
+##  <a name="operator_plus_minus_eq"></a>COleCurrency::operator + =、 =  
  可讓您加入和減去**COleCurrency**值與這個**COleCurrency**物件。  
   
 ```  
@@ -356,7 +362,7 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&17;](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="a-nameoperatorstara--colecurrencyoperator--and-"></a><a name="operator_star"></a>COleCurrency::operator * 和 /  
+##  <a name="operator_star"></a>COleCurrency::operator * 和 /  
  可讓您調整**COleCurrency**整數的值。  
   
 ```  
@@ -376,7 +382,7 @@ COleCurrency operator/(long nOperand) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&18;](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="a-nameoperatorstardiveqa--colecurrencyoperator--"></a><a name="operator_star_div_eq"></a>COleCurrency::operator * =、 / =  
+##  <a name="operator_star_div_eq"></a>COleCurrency::operator * =、 / =  
  可讓您調整這**COleCurrency**整數的值。  
   
 ```  
@@ -396,7 +402,7 @@ const COleCurrency& operator/=(long nOperand);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&19;](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
   
-##  <a name="a-nameoperatorstreama--colecurrencyoperator-ltlt-gtgt"></a><a name="operator_stream"></a>COleCurrency::operator &lt; &lt;，&gt;&gt;  
+##  <a name="operator_stream"></a>COleCurrency::operator &lt; &lt;，&gt;&gt;  
  支援診斷傾印，並將儲存至封存檔。  
   
 ```  
@@ -416,7 +422,7 @@ friend CArchive& operator>>(
 ### <a name="remarks"></a>備註  
  擷取 ( ** >> **) 運算子可支援從封存載入。  
   
-##  <a name="a-nameoperatorcurrencya--colecurrencyoperator-currency"></a><a name="operator_currency"></a>COleCurrency::operator 貨幣  
+##  <a name="operator_currency"></a>COleCurrency::operator 貨幣  
  傳回`CURRENCY`結構，其值會複製自這個**COleCurrency**物件。  
   
 ```  
@@ -425,7 +431,7 @@ operator CURRENCY() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameparsecurrencya--colecurrencyparsecurrency"></a><a name="parsecurrency"></a>COleCurrency::ParseCurrency  
+##  <a name="parsecurrency"></a>COleCurrency::ParseCurrency  
  呼叫此成員函式，以讀取貨幣值，將字串剖析。  
   
 ```  
@@ -467,7 +473,7 @@ throw(COleException*);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&13;](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
   
-##  <a name="a-namecolecurrencyrelationaloperatorsa--colecurrency-relational-operators"></a><a name="colecurrency_relational_operators"></a>COleCurrency 關係運算子  
+##  <a name="colecurrency_relational_operators"></a>COleCurrency 關係運算子  
  比較兩個貨幣值，並傳回非零，如果條件為 true;否則為 0。  
   
 ```  
@@ -487,7 +493,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&20;](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
   
-##  <a name="a-namesetcurrencya--colecurrencysetcurrency"></a><a name="setcurrency"></a>COleCurrency::SetCurrency  
+##  <a name="setcurrency"></a>COleCurrency::SetCurrency  
  呼叫此成員函式設定單位和分數部分這**COleCurrency**物件。  
   
 ```  
@@ -508,7 +514,7 @@ void SetCurrency(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer #&14;](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
   
-##  <a name="a-namesetstatusa--colecurrencysetstatus"></a><a name="setstatus"></a>COleCurrency::SetStatus  
+##  <a name="setstatus"></a>COleCurrency::SetStatus  
  呼叫此成員函式設定的狀態 （有效性） 這個**COleCurrency**物件。  
   
 ```  
@@ -522,15 +528,13 @@ void SetStatus(CurrencyStatus  status  );
 ### <a name="remarks"></a>備註  
  *狀態*參數值由定義`CurrencyStatus`列舉型別，其中定義**COleCurrency**類別。  
   
- `enum CurrencyStatus{`  
-  
- `valid = 0,`  
-  
- `invalid = 1,`  
-  
- `null = 2,`  
-  
- `};`  
+```  
+enum CurrencyStatus {
+    valid = 0,
+    invalid = 1,
+    null = 2
+    };  
+```  
   
  如需這些狀態值的簡短說明，請參閱下列清單︰  
   

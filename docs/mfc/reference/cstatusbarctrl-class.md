@@ -10,6 +10,26 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStatusBarCtrl
+- AFXCMN/CStatusBarCtrl
+- AFXCMN/CStatusBarCtrl::CStatusBarCtrl
+- AFXCMN/CStatusBarCtrl::Create
+- AFXCMN/CStatusBarCtrl::CreateEx
+- AFXCMN/CStatusBarCtrl::DrawItem
+- AFXCMN/CStatusBarCtrl::GetBorders
+- AFXCMN/CStatusBarCtrl::GetIcon
+- AFXCMN/CStatusBarCtrl::GetParts
+- AFXCMN/CStatusBarCtrl::GetRect
+- AFXCMN/CStatusBarCtrl::GetText
+- AFXCMN/CStatusBarCtrl::GetTextLength
+- AFXCMN/CStatusBarCtrl::GetTipText
+- AFXCMN/CStatusBarCtrl::IsSimple
+- AFXCMN/CStatusBarCtrl::SetBkColor
+- AFXCMN/CStatusBarCtrl::SetIcon
+- AFXCMN/CStatusBarCtrl::SetMinHeight
+- AFXCMN/CStatusBarCtrl::SetParts
+- AFXCMN/CStatusBarCtrl::SetSimple
+- AFXCMN/CStatusBarCtrl::SetText
+- AFXCMN/CStatusBarCtrl::SetTipText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +120,7 @@ class CStatusBarCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="a-namecreatea--cstatusbarctrlcreate"></a><a name="create"></a>CStatusBarCtrl::Create  
+##  <a name="create"></a>CStatusBarCtrl::Create  
  建立狀態列控制項並將它附加`CStatusBarCtrl`物件。  
   
 ```  
@@ -137,7 +157,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&1;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
   
-##  <a name="a-namecreateexa--cstatusbarctrlcreateex"></a><a name="createex"></a>CStatusBarCtrl::CreateEx  
+##  <a name="createex"></a>CStatusBarCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CStatusBarCtrl`物件。  
   
 ```  
@@ -171,14 +191,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，指定 Windows 延伸的樣式序言**WS_EX_**。  
   
-##  <a name="a-namecstatusbarctrla--cstatusbarctrlcstatusbarctrl"></a><a name="cstatusbarctrl"></a>CStatusBarCtrl::CStatusBarCtrl  
+##  <a name="cstatusbarctrl"></a>CStatusBarCtrl::CStatusBarCtrl  
  建構 `CStatusBarCtrl` 物件。  
   
 ```  
 CStatusBarCtrl();
 ```  
   
-##  <a name="a-namedrawitema--cstatusbarctrldrawitem"></a><a name="drawitem"></a>CStatusBarCtrl::DrawItem  
+##  <a name="drawitem"></a>CStatusBarCtrl::DrawItem  
  當主控描繪狀態列控制項會變更的視覺外觀的架構所呼叫。  
   
 ```  
@@ -196,7 +216,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前此成員函式會結束。  
   
-##  <a name="a-namegetbordersa--cstatusbarctrlgetborders"></a><a name="getborders"></a>CStatusBarCtrl::GetBorders  
+##  <a name="getborders"></a>CStatusBarCtrl::GetBorders  
  擷取目前狀態列控制項的寬度水平及垂直框線和矩形之間的間距。  
   
 ```  
@@ -230,7 +250,7 @@ BOOL GetBorders(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&2;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]  
   
-##  <a name="a-namegeticona--cstatusbarctrlgeticon"></a><a name="geticon"></a>CStatusBarCtrl::GetIcon  
+##  <a name="geticon"></a>CStatusBarCtrl::GetIcon  
  擷取目前狀態列控制項中的組件 （也稱為窗格） 圖示。  
   
 ```  
@@ -261,7 +281,7 @@ HICON GetIcon(int iPart) const;
   
  [!code-cpp[NVC_MFC_CStatusBarCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]  
   
-##  <a name="a-namegetpartsa--cstatusbarctrlgetparts"></a><a name="getparts"></a>CStatusBarCtrl::GetParts  
+##  <a name="getparts"></a>CStatusBarCtrl::GetParts  
  抓取狀態列控制項中的組件的計數。  
   
 ```  
@@ -286,7 +306,7 @@ int GetParts(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&3;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]  
   
-##  <a name="a-namegetrecta--cstatusbarctrlgetrect"></a><a name="getrect"></a>CStatusBarCtrl::GetRect  
+##  <a name="getrect"></a>CStatusBarCtrl::GetRect  
  擷取週框的狀態列控制項中的組件。  
   
 ```  
@@ -308,7 +328,7 @@ BOOL GetRect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&4;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]  
   
-##  <a name="a-namegettexta--cstatusbarctrlgettext"></a><a name="gettext"></a>CStatusBarCtrl::GetText  
+##  <a name="gettext"></a>CStatusBarCtrl::GetText  
  從一個狀態列控制項的指定部分擷取的文字。  
   
 ```  
@@ -346,7 +366,7 @@ int GetText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&5;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]  
   
-##  <a name="a-namegettextlengtha--cstatusbarctrlgettextlength"></a><a name="gettextlength"></a>CStatusBarCtrl::GetTextLength  
+##  <a name="gettextlength"></a>CStatusBarCtrl::GetTextLength  
  擷取長度，以字元為單位，從一個狀態列控制項的指定部分的文字。  
   
 ```  
@@ -376,7 +396,7 @@ int GetTextLength(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&6;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]  
   
-##  <a name="a-namegettiptexta--cstatusbarctrlgettiptext"></a><a name="gettiptext"></a>Cstatusbarctrl:: Gettiptext  
+##  <a name="gettiptext"></a>Cstatusbarctrl:: Gettiptext  
  擷取在狀態列窗格的工具提示文字。  
   
 ```  
@@ -396,7 +416,7 @@ CString GetTipText(int nPane) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&7;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
   
-##  <a name="a-nameissimplea--cstatusbarctrlissimple"></a><a name="issimple"></a>CStatusBarCtrl::IsSimple  
+##  <a name="issimple"></a>CStatusBarCtrl::IsSimple  
  檢查以判斷它是否在簡單模式下狀態視窗控制項。  
   
 ```  
@@ -409,7 +429,7 @@ BOOL IsSimple() const;
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息的行為[SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetbkcolora--cstatusbarctrlsetbkcolor"></a><a name="setbkcolor"></a>CStatusBarCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>CStatusBarCtrl::SetBkColor  
  在狀態列中設定的背景色彩。  
   
 ```  
@@ -429,7 +449,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&8;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
   
-##  <a name="a-nameseticona--cstatusbarctrlseticon"></a><a name="seticon"></a>CStatusBarCtrl::SetIcon  
+##  <a name="seticon"></a>CStatusBarCtrl::SetIcon  
  在狀態列中設定窗格中的圖示。  
   
 ```  
@@ -454,7 +474,7 @@ BOOL SetIcon(
 ### <a name="example"></a>範例  
   請參閱範例[CStatusBarCtrl::SetBkColor](#setbkcolor)。  
   
-##  <a name="a-namesetminheighta--cstatusbarctrlsetminheight"></a><a name="setminheight"></a>CStatusBarCtrl::SetMinHeight  
+##  <a name="setminheight"></a>CStatusBarCtrl::SetMinHeight  
  設定狀態的最小高度列控制項的繪圖區域。  
   
 ```  
@@ -471,7 +491,7 @@ void SetMinHeight(int nMin);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&9;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
   
-##  <a name="a-namesetpartsa--cstatusbarctrlsetparts"></a><a name="setparts"></a>CStatusBarCtrl::SetParts  
+##  <a name="setparts"></a>CStatusBarCtrl::SetParts  
  在狀態列控制項和每個部分的右邊緣的座標中設定部分的數目。  
   
 ```  
@@ -493,7 +513,7 @@ BOOL SetParts(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&10;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]  
   
-##  <a name="a-namesetsimplea--cstatusbarctrlsetsimple"></a><a name="setsimple"></a>CStatusBarCtrl::SetSimple  
+##  <a name="setsimple"></a>CStatusBarCtrl::SetSimple  
  指定狀態列控制項是否會顯示簡單的文字，則顯示所有先前呼叫所設定的控制項組件[SetParts](#setparts)。  
   
 ```  
@@ -510,7 +530,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ### <a name="remarks"></a>備註  
  如果您的應用程式會從非簡單變更狀態列控制項為 simple 時，或反之亦然，系統立即重繪控制項。  
   
-##  <a name="a-namesettexta--cstatusbarctrlsettext"></a><a name="settext"></a>CStatusBarCtrl::SetText  
+##  <a name="settext"></a>CStatusBarCtrl::SetText  
  在狀態列控制項的指定部分設定文字。  
   
 ```  
@@ -539,7 +559,7 @@ BOOL SetText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl #&11;](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
   
-##  <a name="a-namesettiptexta--cstatusbarctrlsettiptext"></a><a name="settiptext"></a>Cstatusbarctrl:: Settiptext  
+##  <a name="settiptext"></a>Cstatusbarctrl:: Settiptext  
  在狀態列中設定一個窗格的工具提示文字。  
   
 ```  

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CEvent
+- AFXMT/CEvent
+- AFXMT/CEvent::CEvent
+- AFXMT/CEvent::PulseEvent
+- AFXMT/CEvent::ResetEvent
+- AFXMT/CEvent::SetEvent
+- AFXMT/CEvent::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -99,7 +105,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>需求  
  **標頭︰** afxmt.h  
   
-##  <a name="a-nameceventa--ceventcevent"></a><a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>CEvent::CEvent  
  建構具名或未命名的`CEvent`物件。  
   
 ```  
@@ -131,7 +137,7 @@ CEvent(
 > [!IMPORTANT]
 >  在建立之後`CEvent`物件，請使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以確保 mutex 不是已經存在。 如果存在非預期地 mutex，可能表示處理序佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序是關閉此控制代碼，並繼續如同在建立物件時發生錯誤。  
   
-##  <a name="a-namepulseeventa--ceventpulseevent"></a><a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>CEvent::PulseEvent  
  設定之事件的狀態 （可用）、 釋放所有等候中執行緒，並將它重設為未收到信號 （無法使用） 自動。  
   
 ```  
@@ -148,7 +154,7 @@ BOOL PulseEvent();
   
  `PulseEvent`使用基本 Win32`PulseEvent`函式，可以暫時移除等候狀態從核心模式的非同步程序呼叫。 因此，`PulseEvent`不可靠，而且不能供新的應用程式。 如需詳細資訊，請參閱[PulseEvent 函式](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
   
-##  <a name="a-namereseteventa--ceventresetevent"></a><a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>CEvent::ResetEvent  
  設定事件的狀態未收到信號，直到明確設定為已收到訊號的[SetEvent](#setevent)成員函式。  
   
 ```  
@@ -163,7 +169,7 @@ BOOL ResetEvent();
   
  此成員函式不是由自動事件。  
   
-##  <a name="a-nameseteventa--ceventsetevent"></a><a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>CEvent::SetEvent  
  釋放所有等候的執行緒會設定為收到信號，事件的狀態。  
   
 ```  
@@ -176,7 +182,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>備註  
  是否手動事件，事件仍會收到信號，直到[ResetEvent](#resetevent)呼叫。 多個執行緒可以在此情況下發行。 如果自動事件，事件會保持已收到訊號，直到釋放單一執行緒。 系統接著會設定事件的狀態為未收到信號。 如果沒有執行緒等候，狀態會保留已收到訊號，直到會釋放一個執行緒。  
   
-##  <a name="a-nameunlocka--ceventunlock"></a><a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>CEvent::Unlock  
  釋放事件物件。  
   
 ```  

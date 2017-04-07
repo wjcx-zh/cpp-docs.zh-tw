@@ -9,7 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ppltasks/concurrency::task
+- task
+- PPLTASKS/concurrency::task
+- PPLTASKS/concurrency::task::task
+- PPLTASKS/concurrency::task::get
+- PPLTASKS/concurrency::task::is_apartment_aware
+- PPLTASKS/concurrency::task::is_done
+- PPLTASKS/concurrency::task::scheduler
+- PPLTASKS/concurrency::task::then
+- PPLTASKS/concurrency::task::wait
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 7bbe0445c59279423665cd7df4eb5972f23ecf78
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
@@ -73,26 +81,26 @@ class task;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[工作建構函式](#ctor)|多載。 建構 `task` 物件。|  
+|[工作](#ctor)|多載。 建構 `task` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[get 方法](#get)|多載。 傳回這個工作產生的結果。 如果工作不在終止狀態，則呼叫 `get` 將會等候工作完成。 在 `result_type` 為 `void` 的工作上被呼叫時，這個方法不會傳回值。|  
-|[is_apartment_aware 方法](#is_apartment_aware)|判斷工作是否解除包裝 Windows 執行階段 `IAsyncInfo` 介面或是從這類工作繼承而來。|  
-|[is_done 方法](#is_done)|判定工作是否完成。|  
-|[排程器方法](#scheduler)|傳回此工作的排程器|  
-|[then 方法](#then)|多載。 將接續工作加入至此工作。|  
-|[wait 方法](#wait)|等候這個工作到達終止狀態。 如果符合所有的工作相依性，而且未經選取供背景工作執行，則 `wait` 可以執行內嵌工作。|  
+|[get](#get)|多載。 傳回這個工作產生的結果。 如果工作不在終止狀態，則呼叫 `get` 將會等候工作完成。 在 `result_type` 為 `void` 的工作上被呼叫時，這個方法不會傳回值。|  
+|[is_apartment_aware](#is_apartment_aware)|判斷工作是否解除包裝 Windows 執行階段 `IAsyncInfo` 介面或是從這類工作繼承而來。|  
+|[is_done](#is_done)|判定工作是否完成。|  
+|[排程器](#scheduler)|傳回此工作的排程器|  
+|[然後](#then)|多載。 將接續工作加入至此工作。|  
+|[等候](#wait)|等候這個工作到達終止狀態。 如果符合所有的工作相依性，而且未經選取供背景工作執行，則 `wait` 可以執行內嵌工作。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[運算子 ！ = 運算子](#operator_neq)|多載。 判斷兩個 `task` 物件是否表示不同的內部工作。|  
-|[運算子 = 運算子](#operator_eq)|多載。 將某個 `task` 物件的內容取代為另一個物件的內容。|  
-|[運算子 = = 運算子](#operator_eq_eq)|多載。 判斷兩個 `task` 物件是否表示相同的內部工作。|  
+|[operator!=](#operator_neq)|多載。 判斷兩個 `task` 物件是否表示不同的內部工作。|  
+|[operator=](#operator_eq)|多載。 將某個 `task` 物件的內容取代為另一個物件的內容。|  
+|[operator==](#operator_eq_eq)|多載。 判斷兩個 `task` 物件是否表示相同的內部工作。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
@@ -105,7 +113,7 @@ class task;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namegeta-get"></a><a name="get"></a>取得 
+##  <a name="get"></a>取得 
 
  傳回這個工作產生的結果。 如果工作不在終止狀態，則呼叫 `get` 將會等候工作完成。 在 `result_type` 為 `void` 的工作上被呼叫時，這個方法不會傳回值。  
   
@@ -124,7 +132,7 @@ void get() const;
 > [!IMPORTANT]
 >  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式中，請勿呼叫[concurrency::task::wait](#wait)或`get`(`wait`呼叫`get`) 會在 STA 執行的程式碼中 否則，執行階段擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這些方法會封鎖目前的執行緒，而且可能會導致應用程式沒有回應。 不過，您可以呼叫`get`方法，以接收前項工作的結果，因為會立即提供結果的工作為基礎的接續。  
   
-##  <a name="a-nameisapartmentawarea-isapartmentaware"></a><a name="is_apartment_aware"></a>is_apartment_aware 
+##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
  判斷工作是否解除包裝 Windows 執行階段 `IAsyncInfo` 介面或是從這類工作繼承而來。  
   
@@ -135,7 +143,7 @@ bool is_apartment_aware() const;
 ### <a name="return-value"></a>傳回值  
  如果工作解除包裝 `true` 介面或是從這類工作繼承而來，則為 `IAsyncInfo`，否則為 `false`。  
   
-##  <a name="a-nameisdonea--taskisdone-method-concurrency-runtime"></a><a name="is_done"></a>task:: is_done 方法 （並行執行階段）  
+##  <a name="is_done"></a>task:: is_done 方法 （並行執行階段）  
  判定工作是否完成。  
   
 ```
@@ -148,7 +156,7 @@ bool is_done() const;
 ### <a name="remarks"></a>備註  
  如果工作已完成或已取消 （不論有無使用者例外狀況），則函數會傳回 true。  
   
-##  <a name="a-nameoperatorneqa-operator"></a><a name="operator_neq"></a>運算子 ！ = 
+##  <a name="operator_neq"></a>運算子 ！ = 
 
  判斷兩個 `task` 物件是否表示不同的內部工作。  
   
@@ -164,7 +172,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>傳回值  
  如果這些物件參考不同的基礎工作則為 `true`，否則為 `false`。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a>運算子 = 
 
  將某個 `task` 物件的內容取代為另一個物件的內容。  
   
@@ -183,7 +191,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>備註  
  由於 `task` 的表現就像智慧型指標，因此在複製指派之後，這個 `task` 物件和 `_Other` 一樣，都表示相同的實際工作。  
   
-##  <a name="a-nameoperatoreqeqa-operator"></a><a name="operator_eq_eq"></a>運算子 = = 
+##  <a name="operator_eq_eq"></a>運算子 = = 
 
  判斷兩個 `task` 物件是否表示相同的內部工作。  
   
@@ -199,7 +207,7 @@ bool operator== (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>傳回值  
  如果這些物件參考相同的基礎工作則為 `true`，否則為 `false`。  
   
-##  <a name="a-nameschedulera--taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>task:: scheduler 方法 （並行執行階段）  
+##  <a name="scheduler"></a>task:: scheduler 方法 （並行執行階段）  
  傳回此工作的排程器  
   
 ```
@@ -209,7 +217,7 @@ scheduler_ptr scheduler() const;
 ### <a name="return-value"></a>傳回值  
  排程器指標  
   
-##  <a name="a-namectora-task"></a><a name="ctor"></a>工作 
+##  <a name="ctor"></a>工作 
 
  建構 `task` 物件。  
   
@@ -259,7 +267,7 @@ task(
   
  如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
-##  <a name="a-namethena-then"></a><a name="then"></a>然後 
+##  <a name="then"></a>然後 
 
  將接續工作加入至此工作。  
   
@@ -320,7 +328,7 @@ __declspec(
   
  如需有關如何使用接續工作組成非同步工作的詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
-##  <a name="a-namewaita-wait"></a><a name="wait"></a>等候 
+##  <a name="wait"></a>等候 
 
  等候這個工作到達終止狀態。 如果符合所有的工作相依性，而且未經選取供背景工作執行，則 `wait` 可以執行內嵌工作。  
   

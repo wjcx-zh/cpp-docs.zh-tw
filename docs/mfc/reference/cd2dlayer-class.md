@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DLayer
 - CD2DLayer
+- AFXRENDERTARGET/CD2DLayer
+- AFXRENDERTARGET/CD2DLayer::CD2DLayer
+- AFXRENDERTARGET/CD2DLayer::Attach
+- AFXRENDERTARGET/CD2DLayer::Create
+- AFXRENDERTARGET/CD2DLayer::Destroy
+- AFXRENDERTARGET/CD2DLayer::Detach
+- AFXRENDERTARGET/CD2DLayer::Get
+- AFXRENDERTARGET/CD2DLayer::GetSize
+- AFXRENDERTARGET/CD2DLayer::IsValid
+- AFXRENDERTARGET/CD2DLayer::m_pLayer
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,14 +101,14 @@ class CD2DLayer : public CD2DResource;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dlayera--cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
+##  <a name="_dtorcd2dlayer"></a>CD2DLayer:: ~ CD2DLayer  
  解構函式。 D2D 圖層物件終結時呼叫。  
   
 ```  
 virtual ~CD2DLayer();
 ```  
   
-##  <a name="a-nameattacha--cd2dlayerattach"></a><a name="attach"></a>CD2DLayer::Attach  
+##  <a name="attach"></a>CD2DLayer::Attach  
  會附加至現有的資源物件的介面  
   
 ```  
@@ -110,7 +119,7 @@ void Attach(ID2D1Layer* pResource);
  `pResource`  
  現有的資源介面。 不能是 NULL  
   
-##  <a name="a-namecd2dlayera--cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
+##  <a name="cd2dlayer"></a>CD2DLayer::CD2DLayer  
  建構 CD2DLayer 物件。  
   
 ```  
@@ -126,7 +135,7 @@ CD2DLayer(
  `bAutoDestroy`  
  指出由擁有者 (pParentTarget) 將會終結物件。  
   
-##  <a name="a-namecreatea--cd2dlayercreate"></a><a name="create"></a>CD2DLayer::Create  
+##  <a name="create"></a>CD2DLayer::Create  
  建立 CD2DLayer。  
   
 ```  
@@ -140,14 +149,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-namedestroya--cd2dlayerdestroy"></a><a name="destroy"></a>CD2DLayer::Destroy  
+##  <a name="destroy"></a>CD2DLayer::Destroy  
  終結 CD2DLayer 物件。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dlayerdetach"></a><a name="detach"></a>CD2DLayer::Detach  
+##  <a name="detach"></a>CD2DLayer::Detach  
  中斷連結物件中的資源介面  
   
 ```  
@@ -157,7 +166,7 @@ ID2D1Layer* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的資源介面指標。  
   
-##  <a name="a-namegeta--cd2dlayerget"></a><a name="get"></a>CD2DLayer::Get  
+##  <a name="get"></a>CD2DLayer::Get  
  傳回 ID2D1Layer 介面  
   
 ```  
@@ -167,7 +176,7 @@ ID2D1Layer* Get();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1Layer 介面的指標。  
   
-##  <a name="a-namegetsizea--cd2dlayergetsize"></a><a name="getsize"></a>CD2DLayer::GetSize  
+##  <a name="getsize"></a>CD2DLayer::GetSize  
  傳回與裝置無關的像素為單位的呈現目標大小  
   
 ```  
@@ -177,7 +186,7 @@ CD2DSizeF GetSize() const;
 ### <a name="return-value"></a>傳回值  
  與裝置無關的像素為單位的呈現目標的目前大小  
   
-##  <a name="a-nameisvalida--cd2dlayerisvalid"></a><a name="isvalid"></a>CD2DLayer::IsValid  
+##  <a name="isvalid"></a>CD2DLayer::IsValid  
  檢查資源的有效性  
   
 ```  
@@ -187,14 +196,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>傳回值  
  如果資源無效，則為 TRUE否則為 FALSE。  
   
-##  <a name="a-namemplayera--cd2dlayermplayer"></a><a name="m_player"></a>CD2DLayer::m_pLayer  
+##  <a name="m_player"></a>CD2DLayer::m_pLayer  
  儲存 ID2D1Layer 物件的指標。  
   
 ```  
 ID2D1Layer* m_pLayer;  
 ```  
   
-##  <a name="a-nameoperatorid2d1layerstara--cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
+##  <a name="operator_id2d1layer_star"></a>CD2DLayer::operator ID2D1Layer *  
  傳回 ID2D1Layer 介面  
   
 ```  

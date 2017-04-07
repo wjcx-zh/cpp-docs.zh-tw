@@ -10,6 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::ContextSensitiveHelp
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::EnableModeless
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::GetWindow
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::OnDocWindowActivate
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::OnFrameWindowActivate
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::ResizeBorder
+- ATLCTL/ATL::IOleInPlaceActiveObjectImpl::TranslateAccelerator
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -86,7 +94,7 @@ class IOleInPlaceActiveObjectImpl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namecontextsensitivehelpa--ioleinplaceactiveobjectimplcontextsensitivehelp"></a><a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
  啟用即時線上說明。  
   
 ```
@@ -99,7 +107,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>備註  
  請參閱[IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameenablemodelessa--ioleinplaceactiveobjectimplenablemodeless"></a><a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
+##  <a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
  可讓非強制回應對話方塊。  
   
 ```
@@ -112,7 +120,7 @@ HRESULT EnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>備註  
  請參閱[IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetwindowa--ioleinplaceactiveobjectimplgetwindow"></a><a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
+##  <a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
  容器會呼叫此函式可取得控制項的視窗控制代碼。  
   
 ```
@@ -124,7 +132,7 @@ HRESULT GetWindow(HWND* phwnd);
   
  請參閱[IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameondocwindowactivatea--ioleinplaceactiveobjectimplondocwindowactivate"></a><a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  當容器的文件視窗是啟用或停用通知控制項。  
   
 ```
@@ -137,7 +145,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>備註  
  請參閱[IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonframewindowactivatea--ioleinplaceactiveobjectimplonframewindowactivate"></a><a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  當容器的最上層框架視窗是啟用或停用通知控制項。  
   
 ```
@@ -150,7 +158,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>備註  
  請參閱[IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameresizebordera--ioleinplaceactiveobjectimplresizeborder"></a><a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
+##  <a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
  通知控制項需要調整大小框線。  
   
 ```
@@ -166,7 +174,7 @@ HRESULT ResizeBorder(
 ### <a name="remarks"></a>備註  
  請參閱[IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nametranslateacceleratora--ioleinplaceactiveobjectimpltranslateaccelerator"></a><a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
+##  <a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  處理從容器的功能表快速鍵訊息。  
   
 ```

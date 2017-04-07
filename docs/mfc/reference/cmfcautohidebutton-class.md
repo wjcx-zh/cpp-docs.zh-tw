@@ -10,6 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCAutoHideButton
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::BringToTop
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::Create
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetAlignment
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetAutoHideWindow
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetParentToolBar
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetRect
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetSize
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::GetTextSize
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::HighlightButton
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsActive
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsHighlighted
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsHorizontal
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsTop
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::IsVisible
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::Move
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::OnDraw
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::OnDrawBorder
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::OnFillBackground
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::ReplacePane
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::ShowAttachedWindow
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::ShowButton
+- AFXAUTOHIDEBUTTON/CMFCAutoHideButton::UnSetAutoHideMode
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -95,7 +118,7 @@ class CMFCAutoHideButton : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxautohidebutton.h  
   
-##  <a name="a-namebringtotopa--cmfcautohidebuttonbringtotop"></a><a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
+##  <a name="bringtotop"></a>CMFCAutoHideButton::BringToTop  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -104,7 +127,7 @@ void BringToTop();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecreatea--cmfcautohidebuttoncreate"></a><a name="create"></a>CMFCAutoHideButton::Create  
+##  <a name="create"></a>CMFCAutoHideButton::Create  
  建立並初始化自動隱藏 按鈕。  
   
 ```  
@@ -140,7 +163,7 @@ virtual BOOL Create(
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="a-namegetalignmenta--cmfcautohidebuttongetalignment"></a><a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
+##  <a name="getalignment"></a>CMFCAutoHideButton::GetAlignment  
  擷取自動隱藏按鈕的對齊方式。  
   
 ```  
@@ -161,7 +184,7 @@ DWORD GetAlignment() const;
   
 - `CBRS_ALIGN_BOTTOM`  
   
-##  <a name="a-namegetautohidewindowa--cmfcautohidebuttongetautohidewindow"></a><a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
+##  <a name="getautohidewindow"></a>CMFCAutoHideButton::GetAutoHideWindow  
  傳回[CDockablePane](../../mfc/reference/cdockablepane-class.md) [自動隱藏] 按鈕相關聯的物件。  
   
 ```  
@@ -174,7 +197,7 @@ CDockablePane* GetAutoHideWindow() const;
 ### <a name="remarks"></a>備註  
  若要將具有 「 自動隱藏按鈕`CDockablePane`，傳遞`CDockablePane`做為參數[CMFCAutoHideButton::Create](#create)方法。  
   
-##  <a name="a-namegetparenttoolbara--cmfcautohidebuttongetparenttoolbar"></a><a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>CMFCAutoHideButton::GetParentToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -185,7 +208,7 @@ CMFCAutoHideBar* GetParentToolBar();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetrecta--cmfcautohidebuttongetrect"></a><a name="getrect"></a>CMFCAutoHideButton::GetRect  
+##  <a name="getrect"></a>CMFCAutoHideButton::GetRect  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -196,7 +219,7 @@ CRect GetRect() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namegetsizea--cmfcautohidebuttongetsize"></a><a name="getsize"></a>CMFCAutoHideButton::GetSize  
+##  <a name="getsize"></a>CMFCAutoHideButton::GetSize  
  決定自動隱藏按鈕的大小。  
   
 ```  
@@ -209,7 +232,7 @@ CSize GetSize() const;
 ### <a name="remarks"></a>備註  
  計算的大小包含了 [自動隱藏] 按鈕的框線大小。  
   
-##  <a name="a-namegettextsizea--cmfcautohidebuttongettextsize"></a><a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
+##  <a name="gettextsize"></a>CMFCAutoHideButton::GetTextSize  
  傳回自動隱藏按鈕文字標籤的大小。  
   
 ```  
@@ -219,7 +242,7 @@ virtual CSize GetTextSize() const;
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含的 [自動隱藏] 按鈕的文字大小。  
   
-##  <a name="a-nameisactivea--cmfcautohidebuttonisactive"></a><a name="isactive"></a>CMFCAutoHideButton::IsActive  
+##  <a name="isactive"></a>CMFCAutoHideButton::IsActive  
  指出自動隱藏按鈕是否為作用中。  
   
 ```  
@@ -232,7 +255,7 @@ BOOL IsActive() const;
 ### <a name="remarks"></a>備註  
  自動隱藏 按鈕時，使用中關聯[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)顯示視窗。  
   
-##  <a name="a-nameishorizontala--cmfcautohidebuttonishorizontal"></a><a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
+##  <a name="ishorizontal"></a>CMFCAutoHideButton::IsHorizontal  
  判斷自動隱藏按鈕是水平或垂直。  
   
 ```  
@@ -245,7 +268,7 @@ BOOL IsHorizontal() const;
 ### <a name="remarks"></a>備註  
  架構設定的方向[CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)您所建立的物件。  您可以使用來控制方向`dwAlignment`中的參數[CMFCAutoHideButton::Create](#create)方法。  
   
-##  <a name="a-nameistopa--cmfcautohidebuttonistop"></a><a name="istop"></a>CMFCAutoHideButton::IsTop  
+##  <a name="istop"></a>CMFCAutoHideButton::IsTop  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -256,7 +279,7 @@ BOOL IsTop() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameisvisiblea--cmfcautohidebuttonisvisible"></a><a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
+##  <a name="isvisible"></a>CMFCAutoHideButton::IsVisible  
  表示 [自動隱藏] 按鈕是否可見。  
   
 ```  
@@ -266,7 +289,7 @@ virtual BOOL IsVisible() const;
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果按鈕是可見的。`FALSE`否則。  
   
-##  <a name="a-nameondrawa--cmfcautohidebuttonondraw"></a><a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
+##  <a name="ondraw"></a>CMFCAutoHideButton::OnDraw  
  當它繪製自動隱藏按鈕時，架構會呼叫這個方法。  
   
 ```  
@@ -280,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>備註  
  如果您想要自訂應用程式中的 自動隱藏按鈕的外觀，建立新的類別衍生自`CMFCAutoHideButton`。 在您的衍生類別中覆寫這個方法。  
   
-##  <a name="a-nameondrawbordera--cmfcautohidebuttonondrawborder"></a><a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>CMFCAutoHideButton::OnDrawBorder  
  當它繪製自動隱藏按鈕的邊框時，架構會呼叫這個方法。  
   
 ```  
@@ -303,7 +326,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>備註  
  如果您想要自訂您的應用程式中的每個自動隱藏 按鈕的框線，建立新的類別衍生自`CMFCAutoHideButton`。 在您的衍生類別中覆寫這個方法。  
   
-##  <a name="a-nameonfillbackgrounda--cmfcautohidebuttononfillbackground"></a><a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
+##  <a name="onfillbackground"></a>CMFCAutoHideButton::OnFillBackground  
  當它填入自動隱藏按鈕的背景時，架構會呼叫這個方法。  
   
 ```  
@@ -322,7 +345,7 @@ virtual void OnFillBackground(
 ### <a name="remarks"></a>備註  
  如果您想要自訂您的應用程式中的 自動隱藏按鈕的背景，建立新的類別衍生自`CMFCAutoHideButton`。 在您的衍生類別中覆寫這個方法。  
   
-##  <a name="a-nameshowattachedwindowa--cmfcautohidebuttonshowattachedwindow"></a><a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
+##  <a name="showattachedwindow"></a>CMFCAutoHideButton::ShowAttachedWindow  
  顯示或隱藏相關聯[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。  
   
 ```  
@@ -333,7 +356,7 @@ void ShowAttachedWindow(BOOL bShow);
  [in] `bShow`  
  布林值，指定是否這個方法會顯示附加`CDockablePane`。  
   
-##  <a name="a-nameshowbuttona--cmfcautohidebuttonshowbutton"></a><a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
+##  <a name="showbutton"></a>CMFCAutoHideButton::ShowButton  
  顯示或隱藏自動隱藏按鈕。  
   
 ```  
@@ -344,7 +367,7 @@ virtual void ShowButton(BOOL bShow);
  [in] `bShow`  
  布林值，指定是否要顯示 [自動隱藏] 按鈕。  
   
-##  <a name="a-namemovea--cmfcautohidebuttonmove"></a><a name="move"></a>CMFCAutoHideButton::Move  
+##  <a name="move"></a>CMFCAutoHideButton::Move  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -356,7 +379,7 @@ void Move(int nOffset);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namereplacepanea--cmfcautohidebuttonreplacepane"></a><a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
+##  <a name="replacepane"></a>CMFCAutoHideButton::ReplacePane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -368,7 +391,7 @@ void ReplacePane(CDockablePane* pNewBar);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameunsetautohidemodea--cmfcautohidebuttonunsetautohidemode"></a><a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>CMFCAutoHideButton::UnSetAutoHideMode  
  停用自動隱藏模式。  
   
 ```  
@@ -381,7 +404,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namehighlightbuttona--cmfcautohidebuttonhighlightbutton"></a><a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
+##  <a name="highlightbutton"></a>CMFCAutoHideButton::HighlightButton  
  反白顯示 [自動隱藏] 按鈕。  
   
 ```  
@@ -394,7 +417,7 @@ virtual void HighlightButton(BOOL bHighlight);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameishighlighteda--cmfcautohidebuttonishighlighted"></a><a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
+##  <a name="ishighlighted"></a>CMFCAutoHideButton::IsHighlighted  
  傳回反白顯示狀態的 [自動隱藏] 按鈕。  
   
 ```  

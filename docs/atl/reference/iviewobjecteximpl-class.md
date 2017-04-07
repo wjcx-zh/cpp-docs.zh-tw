@@ -9,11 +9,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::IViewObjectExImpl<T>
-- ATL.IViewObjectExImpl
-- ATL::IViewObjectExImpl
-- ATL.IViewObjectExImpl<T>
 - IViewObjectExImpl
+- ATLCTL/ATL::IViewObjectExImpl
+- ATLCTL/ATL::IViewObjectExImpl::Draw
+- ATLCTL/ATL::IViewObjectExImpl::Freeze
+- ATLCTL/ATL::IViewObjectExImpl::GetAdvise
+- ATLCTL/ATL::IViewObjectExImpl::GetColorSet
+- ATLCTL/ATL::IViewObjectExImpl::GetExtent
+- ATLCTL/ATL::IViewObjectExImpl::GetNaturalExtent
+- ATLCTL/ATL::IViewObjectExImpl::GetRect
+- ATLCTL/ATL::IViewObjectExImpl::GetViewStatus
+- ATLCTL/ATL::IViewObjectExImpl::QueryHitPoint
+- ATLCTL/ATL::IViewObjectExImpl::QueryHitRect
+- ATLCTL/ATL::IViewObjectExImpl::SetAdvise
+- ATLCTL/ATL::IViewObjectExImpl::Unfreeze
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -94,7 +103,7 @@ class ATL_NO_VTABLE IViewObjectExImpl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namedrawa--iviewobjecteximpldraw"></a><a name="draw"></a>IViewObjectExImpl::Draw  
+##  <a name="draw"></a>IViewObjectExImpl::Draw  
  繪製至裝置內容控制的表示法。  
   
 ```
@@ -115,7 +124,7 @@ STDMETHOD(Draw)(
   
  請參閱[iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namefreezea--iviewobjecteximplfreeze"></a><a name="freeze"></a>IViewObjectExImpl::Freeze  
+##  <a name="freeze"></a>IViewObjectExImpl::Freeze  
  凍結控制項的繪製的表示，因此它並不會變更直到`Unfreeze`。 ATL 實作會傳回**E_NOTIMPL**。  
   
 ```
@@ -129,7 +138,7 @@ STDMETHOD(Freeze)(
 ### <a name="remarks"></a>備註  
  請參閱[IViewObject::Freeze](http://msdn.microsoft.com/library/windows/desktop/ms688728)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetadvisea--iviewobjecteximplgetadvise"></a><a name="getadvise"></a>IViewObjectExImpl::GetAdvise  
+##  <a name="getadvise"></a>IViewObjectExImpl::GetAdvise  
  如果有的話，擷取現有的控制項上，通知接收的連接。  
   
 ```
@@ -144,7 +153,7 @@ STDMETHOD(GetAdvise)(
   
  請參閱[IViewObject::GetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692772)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetcolorseta--iviewobjecteximplgetcolorset"></a><a name="getcolorset"></a>IViewObjectExImpl::GetColorSet  
+##  <a name="getcolorset"></a>IViewObjectExImpl::GetColorSet  
  傳回邏輯繪製的控制項所使用的調色盤。 ATL 實作會傳回**E_NOTIMPL**。  
   
 ```
@@ -160,7 +169,7 @@ STDMETHOD(GetColorSet)(
 ### <a name="remarks"></a>備註  
  請參閱[IViewObject::GetColorSet](http://msdn.microsoft.com/library/windows/desktop/ms686553)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetextenta--iviewobjecteximplgetextent"></a><a name="getextent"></a>IViewObjectExImpl::GetExtent  
+##  <a name="getextent"></a>IViewObjectExImpl::GetExtent  
  擷取控制項的顯示大小以 himetric 為單位 （每個單位&0;.01 公釐） 的控制項類別資料成員從[CComControlBase::m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)。  
   
 ```
@@ -174,7 +183,7 @@ STDMETHOD(GetExtent)(
 ### <a name="remarks"></a>備註  
  請參閱[IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetnaturalextenta--iviewobjecteximplgetnaturalextent"></a><a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent  
+##  <a name="getnaturalextent"></a>IViewObjectExImpl::GetNaturalExtent  
  提供從容器做為使用者調整物件大小的提示。  
   
 ```
@@ -192,7 +201,7 @@ STDMETHOD(GetNaturalExtent)(
   
  請參閱[IViewObjectEx::GetNaturalExtent](http://msdn.microsoft.com/library/windows/desktop/ms683718)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetrecta--iviewobjecteximplgetrect"></a><a name="getrect"></a>IViewObjectExImpl::GetRect  
+##  <a name="getrect"></a>IViewObjectExImpl::GetRect  
  傳回描述要求的繪圖外觀的矩形。 ATL 實作會傳回**E_NOTIMPL**。  
   
 ```
@@ -202,7 +211,7 @@ STDMETHOD(GetRect)(DWORD /* dwAspect */, LPRECTL /* pRect */);
 ### <a name="remarks"></a>備註  
  請參閱[IViewObjectEx::GetRect](http://msdn.microsoft.com/library/windows/desktop/ms695246)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetviewstatusa--iviewobjecteximplgetviewstatus"></a><a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus  
+##  <a name="getviewstatus"></a>IViewObjectExImpl::GetViewStatus  
  傳回物件和支援繪圖外觀的不透明度的相關資訊。  
   
 ```
@@ -214,7 +223,7 @@ STDMETHOD(GetViewStatus)(DWORD* pdwStatus);
   
  請參閱[IViewObjectEx::GetViewStatus](http://msdn.microsoft.com/library/windows/desktop/ms693371)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namequeryhitpointa--iviewobjecteximplqueryhitpoint"></a><a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint  
+##  <a name="queryhitpoint"></a>IViewObjectExImpl::QueryHitPoint  
  檢查是否指定的點是在指定的矩形，並傳回[HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187)值`pHitResult`。  
   
 ```
@@ -233,7 +242,7 @@ STDMETHOD(QueryHitPoint)(
   
  請參閱[IViewObjectEx::QueryHitPoint](http://msdn.microsoft.com/library/windows/desktop/ms691209)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namequeryhitrecta--iviewobjecteximplqueryhitrect"></a><a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect  
+##  <a name="queryhitrect"></a>IViewObjectExImpl::QueryHitRect  
  檢查控制項的顯示矩形是否與指定的位置矩形中的任何時間點，並傳回[HITRESULT](http://msdn.microsoft.com/library/windows/desktop/ms682187)值`pHitResult`。  
   
 ```
@@ -252,7 +261,7 @@ STDMETHOD(QueryHitRect)(
   
  請參閱[IViewObjectEx::QueryHitRect](http://msdn.microsoft.com/library/windows/desktop/ms693797)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetadvisea--iviewobjecteximplsetadvise"></a><a name="setadvise"></a>IViewObjectExImpl::SetAdvise  
+##  <a name="setadvise"></a>IViewObjectExImpl::SetAdvise  
  設定控制項和通知接收之間的連接，以便接收可以收到有關控制項的檢視中的變更。  
   
 ```
@@ -269,7 +278,7 @@ STDMETHOD(SetAdvise)(
   
  請參閱[IViewObject::SetAdvise](http://msdn.microsoft.com/library/windows/desktop/ms683950)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameunfreezea--iviewobjecteximplunfreeze"></a><a name="unfreeze"></a>IViewObjectExImpl::Unfreeze  
+##  <a name="unfreeze"></a>IViewObjectExImpl::Unfreeze  
  Unfreezes 控制項的繪製表示法。 ATL 實作會傳回**E_NOTIMPL**。  
   
 ```
@@ -279,7 +288,7 @@ STDMETHOD(Unfreeze)(DWORD /* dwFreeze */);
 ### <a name="remarks"></a>備註  
  請參閱[IViewObject::Unfreeze](http://msdn.microsoft.com/library/windows/desktop/ms686641)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameclosehandlea--iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
  實作這個方法，以關閉此物件相關聯的控制代碼。  
   
 ```
@@ -301,7 +310,7 @@ HRESULT CloseHandle(HANDLE hHandle);
   
  [!code-cpp[NVC_ATL_Utilities #&135;](../../atl/codesnippet/cpp/iviewobjecteximpl-class_1.cpp)]  
   
-##  <a name="a-nameexecutea--iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>IWorkerThreadClient::Execute  
  實作這個方法與這個物件相關聯的控制代碼會變成已收到訊號時執行程式碼。  
   
 ```

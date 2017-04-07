@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CReBar
+- AFXEXT/CReBar
+- AFXEXT/CReBar::AddBar
+- AFXEXT/CReBar::Create
+- AFXEXT/CReBar::GetReBarCtrl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CReBar : public CControlBar
 ## <a name="requirements"></a>需求  
  **標頭︰** afxext.h  
   
-##  <a name="a-nameaddbara--crebaraddbar"></a><a name="addbar"></a>CReBar::AddBar  
+##  <a name="addbar"></a>CReBar::AddBar  
  呼叫此成員函式加入 rebar 群組列。  
   
 ```  
@@ -131,7 +135,7 @@ BOOL AddBar(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CReBarCtrl #&1;](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="a-namecreatea--crebarcreate"></a><a name="create"></a>CReBar::Create  
+##  <a name="create"></a>CReBar::Create  
  呼叫此成員函式建立 rebar。  
   
 ```  
@@ -161,7 +165,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
   請參閱範例[CReBar::AddBar](#addbar)。  
   
-##  <a name="a-namegetrebarctrla--crebargetrebarctrl"></a><a name="getrebarctrl"></a>Crebar:: Getrebarctrl  
+##  <a name="getrebarctrl"></a>Crebar:: Getrebarctrl  
  此成員函式可讓您直接存取基礎的通用控制項。  
   
 ```  

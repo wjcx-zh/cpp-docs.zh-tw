@@ -10,6 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCToolTipInfo
+- AFXTOOLTIPCTRL/CMFCToolTipInfo
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bBalloonTooltip
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bBoldLabel
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawDescription
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawIcon
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bDrawSeparator
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bRoundedCorners
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_bVislManagerTheme
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrBorder
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrFill
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrFillGradient
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_clrText
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_nGradientAngle
+- AFXTOOLTIPCTRL/CMFCToolTipInfo::m_nMaxDescrWidth
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +102,7 @@ class CMFCToolTipInfo
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtooltipctrl.h  
   
-##  <a name="a-namembballoontooltipa--cmfctooltipinfombballoontooltip"></a><a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
+##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
  指定所有的工具提示的顯示樣式。  
   
 ```  
@@ -98,7 +112,7 @@ BOOL m_bBalloonTooltip;
 ### <a name="remarks"></a>備註  
  `TRUE`指出工具提示使用汽球樣式`FALSE`指出工具提示使用的矩形樣式。  
   
-##  <a name="a-namembboldlabela--cmfctooltipinfombboldlabel"></a><a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
+##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
  指定工具提示文字的字型是否為粗體。  
   
 ```  
@@ -108,7 +122,7 @@ BOOL m_bBoldLabel;
 ### <a name="remarks"></a>備註  
  這個成員設定為`TRUE`以粗體顯示的字型顯示工具提示文字或`FALSE`以非粗體字型顯示工具提示標籤。  
   
-##  <a name="a-namembdrawdescriptiona--cmfctooltipinfombdrawdescription"></a><a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
+##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
  指定是否每個工具提示會顯示描述文字。  
   
 ```  
@@ -118,7 +132,7 @@ BOOL m_bDrawDescription;
 ### <a name="remarks"></a>備註  
  這個成員設定為`TRUE`來顯示說明，或`FALSE`隱藏描述。 您可以在工具提示指定描述，藉由呼叫[CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="a-namembdrawicona--cmfctooltipinfombdrawicon"></a><a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
+##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
  指定是否所有的工具提示會顯示圖示。  
   
 ```  
@@ -128,7 +142,7 @@ BOOL m_bDrawIcon;
 ### <a name="remarks"></a>備註  
  這個成員設定為`TRUE`顯示圖示，在每個工具提示，或`FALSE`顯示沒有圖示的工具提示。  
   
-##  <a name="a-namembdrawseparatora--cmfctooltipinfombdrawseparator"></a><a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
+##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
  指定每一個工具提示是否有其標籤以及其描述之間的分隔符號。  
   
 ```  
@@ -138,7 +152,7 @@ BOOL m_bDrawSeparator;
 ### <a name="remarks"></a>備註  
  這個成員設定為`TRUE`顯示工具提示標籤和描述，之間的分隔符號或`FALSE`沒有分隔符號中顯示工具提示。  
   
-##  <a name="a-namembroundedcornersa--cmfctooltipinfombroundedcorners"></a><a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
+##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
  指定所有的工具提示是否具有圓角。  
   
 ```  
@@ -148,14 +162,14 @@ BOOL m_bRoundedCorners;
 ### <a name="remarks"></a>備註  
  這個成員設定為`TRUE`顯示工具提示上的圓的角或`FALSE`顯示工具提示在矩形的邊角。  
   
-##  <a name="a-namemclrbordera--cmfctooltipinfomclrborder"></a><a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
+##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
  指定所有的工具提示框線的色彩。  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="a-namemclrfilla--cmfctooltipinfomclrfill"></a><a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
+##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
  指定工具提示的背景色彩。  
   
 ```  
@@ -165,7 +179,7 @@ COLORREF m_clrFill;
 ### <a name="remarks"></a>備註  
  如果[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)為-1，工具提示的背景色彩是`m_clrFill`。 否則，`m_clrFill`指定的色彩漸層的開始和`m_clrFillGradient`指定漸層結束色彩。 [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)決定漸層的方向。  
   
-##  <a name="a-namemclrfillgradienta--cmfctooltipinfomclrfillgradient"></a><a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
+##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
  指定工具提示的漸層背景的結束色彩。  
   
 ```  
@@ -175,14 +189,14 @@ COLORREF m_clrFillGradient;
 ### <a name="remarks"></a>備註  
  如果`m_clrFillGradient`為-1，沒有任何漸層。 否則，所指定的初始的漸層色彩[CMFCToolTipInfo::m_clrFill](#m_clrfill) ，並且完成漸層色彩由指定`m_clrFillGradient`。 [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)決定漸層的方向。  
   
-##  <a name="a-namemclrtexta--cmfctooltipinfomclrtext"></a><a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
+##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
  指定所有的工具提示的文字色彩。  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="a-namemngradientanglea--cmfctooltipinfomngradientangle"></a><a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
+##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
  指定的工具提示的背景繪製漸層的角度。  
   
 ```  
@@ -194,14 +208,14 @@ int m_nGradientAngle;
   
  [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill`指定的色彩漸層的開始和[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient`指定漸層結束色彩。 如果`m_clrFillGradient`為-1，沒有任何漸層。  
   
-##  <a name="a-namemnmaxdescrwidtha--cmfctooltipinfomnmaxdescrwidth"></a><a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
+##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
  指定描述每一個工具提示中顯示的最大寬度。 如果描述寬度超過指定的值，表示文字換行。  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="a-namembvislmanagerthemea--cmfctooltipinfombvislmanagertheme"></a><a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
+##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
  指定是否在應用程式的視覺管理員控制所有的工具提示的外觀。  
   
 ```  
@@ -211,7 +225,7 @@ BOOL m_bVislManagerTheme;
 ### <a name="remarks"></a>備註  
  如果`m_bVislManagerTheme`是`TRUE`，每一個工具提示會要求新[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)從應用程式，才能出現在畫面上，並使用該物件中的值來判斷其外觀的視覺管理員。 其他成員您[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)會被忽略。  
   
-##  <a name="a-nameoperatoreqa--cmfctooltipinfooperator"></a><a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

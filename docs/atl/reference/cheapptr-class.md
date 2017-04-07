@@ -9,9 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CHeapPtr
 - CHeapPtr
-- ATL.CHeapPtr
+- ATLCORE/ATL::CHeapPtr
+- ATLCORE/ATL::CHeapPtr::CHeapPtr
+- ATLCORE/ATL::CHeapPtr::Allocate
+- ATLCORE/ATL::CHeapPtr::Reallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +95,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcore.h  
   
-##  <a name="a-nameallocatea--cheapptrallocate"></a><a name="allocate"></a>CHeapPtr::Allocate  
+##  <a name="allocate"></a>CHeapPtr::Allocate  
  呼叫這個方法來儲存物件在堆積上配置記憶體。  
   
 ```
@@ -113,7 +115,7 @@ bool Allocate(size_t nElements = 1) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&77;](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]  
   
-##  <a name="a-namecheapptra--cheapptrcheapptr"></a><a name="cheapptr"></a>CHeapPtr::CHeapPtr  
+##  <a name="cheapptr"></a>CHeapPtr::CHeapPtr  
  建構函式。  
   
 ```
@@ -132,7 +134,7 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&78;](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]  
   
-##  <a name="a-nameoperatoreqa--cheapptroperator-"></a><a name="operator_eq"></a>CHeapPtr::operator =  
+##  <a name="operator_eq"></a>CHeapPtr::operator =  
  指派運算子。  
   
 ```
@@ -150,7 +152,7 @@ CHeapPtr<T, Allocator>& operator=(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities #&80;](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]  
   
-##  <a name="a-namereallocatea--cheapptrreallocate"></a><a name="reallocate"></a>CHeapPtr::Reallocate  
+##  <a name="reallocate"></a>CHeapPtr::Reallocate  
  呼叫這個方法來重新配置在堆積上的記憶體。  
   
 ```

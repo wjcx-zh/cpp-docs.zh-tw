@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleCmdUI
+- AFXDOCOBJ/COleCmdUI
+- AFXDOCOBJ/COleCmdUI::COleCmdUI
+- AFXDOCOBJ/COleCmdUI::Enable
+- AFXDOCOBJ/COleCmdUI::SetCheck
+- AFXDOCOBJ/COleCmdUI::SetText
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +89,7 @@ class COleCmdUI : public CCmdUI
 ## <a name="requirements"></a>需求  
  **標頭︰** afxdocobj.h  
   
-##  <a name="a-namecolecmduia--colecmduicolecmdui"></a><a name="colecmdui"></a>COleCmdUI::COleCmdUI  
+##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
  建構`COleCmdUI`與特定的使用者介面命令相關聯的物件。  
   
 ```  
@@ -107,7 +112,7 @@ COleCmdUI(
 ### <a name="remarks"></a>備註  
  `COleCmdUI`物件提供程式設計介面，以更新 DocObject 使用者介面物件，例如功能表項目或控制列按鈕。 使用者介面物件可以是啟用、 停用、 檢查，和/或透過清除`COleCmdUI`物件。  
   
-##  <a name="a-nameenablea--colecmduienable"></a><a name="enable"></a>COleCmdUI::Enable  
+##  <a name="enable"></a>COleCmdUI::Enable  
  呼叫此函式可設定的命令旗標`COleCmdUI`物件傳遞給**OLECOMDF_ENABLED**，這會告知介面命令是可用且已啟用，或清除命令旗標。  
   
 ```  
@@ -118,7 +123,7 @@ virtual void Enable(BOOL bOn);
  `bOn`  
  指出是否與命令相關聯`COleCmdUI`物件應該啟用或停用。 Nonzero 啟用命令。0 會停用此命令。  
   
-##  <a name="a-namesetchecka--colecmduisetcheck"></a><a name="setcheck"></a>COleCmdUI::SetCheck  
+##  <a name="setcheck"></a>COleCmdUI::SetCheck  
  呼叫此函式可設定狀態的開啟/關閉切換命令。  
   
 ```  
@@ -135,7 +140,7 @@ virtual void SetCheck(int nCheck);
 |**2**|設定的命令，以不確定。無法判斷狀態，因為這個命令的屬性就會採用同時關閉相關的選取範圍中的狀態。|  
 |任何其他值|設定為 off 的命令。|  
   
-##  <a name="a-namesettexta--colecmduisettext"></a><a name="settext"></a>COleCmdUI::SetText  
+##  <a name="settext"></a>COleCmdUI::SetText  
  呼叫此函式來傳回命令的文字名稱或狀態字串。  
   
 ```  

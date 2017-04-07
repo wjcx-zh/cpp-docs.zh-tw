@@ -10,6 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBar
+- AFXOUTLOOKBAR/CMFCOutlookBar
+- AFXOUTLOOKBAR/CMFCOutlookBar::AllowDestroyEmptyTabbedPane
+- AFXOUTLOOKBAR/CMFCOutlookBar::CanAcceptPane
+- AFXOUTLOOKBAR/CMFCOutlookBar::CanSetCaptionTextToTabName
+- AFXOUTLOOKBAR/CMFCOutlookBar::Create
+- AFXOUTLOOKBAR/CMFCOutlookBar::CreateCustomPage
+- AFXOUTLOOKBAR/CMFCOutlookBar::DoesAllowDynInsertBefore
+- AFXOUTLOOKBAR/CMFCOutlookBar::FloatTab
+- AFXOUTLOOKBAR/CMFCOutlookBar::GetButtonsFont
+- AFXOUTLOOKBAR/CMFCOutlookBar::GetTabArea
+- AFXOUTLOOKBAR/CMFCOutlookBar::IsMode2003
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnAfterAnimation
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnBeforeAnimation
+- AFXOUTLOOKBAR/CMFCOutlookBar::OnScroll
+- AFXOUTLOOKBAR/CMFCOutlookBar::RemoveCustomPage
+- AFXOUTLOOKBAR/CMFCOutlookBar::SetButtonsFont
+- AFXOUTLOOKBAR/CMFCOutlookBar::SetMode2003
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -171,7 +188,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 ## <a name="requirements"></a>需求  
  **標頭︰** afxoutlookbar.h  
   
-##  <a name="a-nameallowdestroyemptytabbedpanea--cmfcoutlookbarallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar::AllowDestroyEmptyTabbedPane  
  指定是否可以終結空白的索引標籤式的窗格。  
   
 ```  
@@ -184,7 +201,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 ### <a name="remarks"></a>備註  
  如果無法終結空白的索引標籤式的窗格，架構會隱藏它改為。  
   
-##  <a name="a-namecanacceptpanea--cmfcoutlookbarcanacceptpane"></a><a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
+##  <a name="canacceptpane"></a>CMFCOutlookBar::CanAcceptPane  
  判斷另一個窗格是否可停駐於 Outlook 功能區窗格。  
   
 ```  
@@ -205,7 +222,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  否則，這個方法會做為基底方法運作[CBasePane::CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane)，不過，即使未啟用停駐，outlook 功能區仍然可以啟用嗎停駐到另一個 outlook 功能區。  
   
-##  <a name="a-namecansetcaptiontexttotabnamea--cmfcoutlookbarcansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
+##  <a name="cansetcaptiontexttotabname"></a>CMFCOutlookBar::CanSetCaptionTextToTabName  
  決定索引標籤式窗格的標題是否顯示為 [作用中] 索引標籤相同的文字。  
   
 ```  
@@ -220,7 +237,7 @@ virtual BOOL CanSetCaptionTextToTabName() const;
   
  在 Outlook 2003 模式中，一定會啟用此設定。  
   
-##  <a name="a-namecreatea--cmfcoutlookbarcreate"></a><a name="create"></a>CMFCOutlookBar::Create  
+##  <a name="create"></a>CMFCOutlookBar::Create  
  建立 Outlook 功能區控制項。  
   
 ```  
@@ -270,7 +287,7 @@ virtual BOOL Create(
  [!code-cpp[NVC_MFC_OutlookMultiViews #&1;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]  
 [!code-cpp[NVC_MFC_OutlookMultiViews #&2;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]  
   
-##  <a name="a-namecreatecustompagea--cmfcoutlookbarcreatecustompage"></a><a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
+##  <a name="createcustompage"></a>CMFCOutlookBar::CreateCustomPage  
  建立自訂的 Outlook 列 索引標籤。  
   
 ```  
@@ -302,7 +319,7 @@ CMFCOutlookBarPane* CreateCustomPage(
   
  使用[CMFCOutlookBar::RemoveCustomPage](#removecustompage)刪除自訂頁面。  
   
-##  <a name="a-namedoesallowdyninsertbeforea--cmfcoutlookbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>CMFCOutlookBar::DoesAllowDynInsertBefore  
  指定使用者是否可以停駐窗格在 outlook 功能區上緣。  
   
 ```  
@@ -320,7 +337,7 @@ DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;
 > [!NOTE]
 >  由於動態窗格檢查靜態的停駐窗格的狀態停駐時，您應該盡可能靜態窗格之後固定動態窗格。  
   
-##  <a name="a-namefloattaba--cmfcoutlookbarfloattab"></a><a name="floattab"></a>CMFCOutlookBar::FloatTab  
+##  <a name="floattab"></a>CMFCOutlookBar::FloatTab  
  浮動窗格。  
   
 ```  
@@ -350,7 +367,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>備註  
  這個方法就像[CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab)不同之處在於它不會啟用為 float Outlook 功能區控制項上最後一個剩餘的索引標籤。  
   
-##  <a name="a-namegetbuttonsfonta--cmfcoutlookbargetbuttonsfont"></a><a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
+##  <a name="getbuttonsfont"></a>CMFCOutlookBar::GetButtonsFont  
  傳回文字的字型頁面上的 outlook 功能區按鈕索引標籤。  
   
 ```  
@@ -363,7 +380,7 @@ CFont* GetButtonsFont() const;
 ### <a name="remarks"></a>備註  
  您可以使用此函式來擷取用來在 Outlook 頁面按鈕索引標籤上顯示文字的字型。 您可以藉由呼叫上設定的字型[CMFCOutlookBar::SetButtonsFont](#setbuttonsfont)。  
   
-##  <a name="a-namegettabareaa--cmfcoutlookbargettabarea"></a><a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
+##  <a name="gettabarea"></a>CMFCOutlookBar::GetTabArea  
  決定的大小和 outlook 功能區上的索引標籤區域位置。  
   
 ```  
@@ -386,7 +403,7 @@ virtual void GetTabArea(
   
  從衍生類別中的，這個方法會覆寫`CMFCOutlookBar`來變更此行為。  
   
-##  <a name="a-nameismode2003a--cmfcoutlookbarismode2003"></a><a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
+##  <a name="ismode2003"></a>CMFCOutlookBar::IsMode2003  
  指定是否 outlook 功能區的行為會模擬的 Microsoft Office Outlook 2003。  
   
 ```  
@@ -399,7 +416,7 @@ BOOL IsMode2003() const;
 ### <a name="remarks"></a>備註  
  您可以啟用這個模式使用[CMFCOutlookBar::SetMode2003](#setmode2003)。  
   
-##  <a name="a-nameonafteranimationa--cmfcoutlookbaronafteranimation"></a><a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
+##  <a name="onafteranimation"></a>CMFCOutlookBar::OnAfterAnimation  
  由呼叫[CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab)之後已設定使用中的索引標籤使用動畫。  
   
 ```  
@@ -413,7 +430,7 @@ virtual void OnAfterAnimation(int nPage);
 ### <a name="remarks"></a>備註  
  設定作用中的索引標籤的視覺效果取決於您是否已啟用動畫。 如需詳細資訊，請參閱[CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)。  
   
-##  <a name="a-nameonbeforeanimationa--cmfcoutlookbaronbeforeanimation"></a><a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
+##  <a name="onbeforeanimation"></a>CMFCOutlookBar::OnBeforeAnimation  
  由呼叫[CMFCOutlookBarTabCtrl::SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab)前一個索引標籤頁面設定為使用中 索引標籤，並使用動畫。  
   
 ```  
@@ -429,7 +446,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameonscrolla--cmfcoutlookbaronscroll"></a><a name="onscroll"></a>CMFCOutlookBar::OnScroll  
+##  <a name="onscroll"></a>CMFCOutlookBar::OnScroll  
  如果可以使用向上或向下捲動 outlook 功能區，由架構呼叫。  
   
 ```  
@@ -442,7 +459,7 @@ virtual void OnScroll(BOOL bDown);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameremovecustompagea--cmfcoutlookbarremovecustompage"></a><a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
+##  <a name="removecustompage"></a>CMFCOutlookBar::RemoveCustomPage  
  移除自訂的 Outlook 列 索引標籤頁面。  
   
 ```  
@@ -468,7 +485,7 @@ BOOL RemoveCustomPage(
   
  使用[CBaseTabbedPane::GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow)取得 Outlook 視窗的指標。  
   
-##  <a name="a-namesetbuttonsfonta--cmfcoutlookbarsetbuttonsfont"></a><a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
+##  <a name="setbuttonsfont"></a>CMFCOutlookBar::SetButtonsFont  
  Outlook 功能區按鈕上設定之文字的字型。  
   
 ```  
@@ -487,7 +504,7 @@ void SetButtonsFont(
 ### <a name="remarks"></a>備註  
  使用這個方法來設定 outlook 索引標籤 按鈕上顯示的文字字型。  
   
-##  <a name="a-namesetmode2003a--cmfcoutlookbarsetmode2003"></a><a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
+##  <a name="setmode2003"></a>CMFCOutlookBar::SetMode2003  
  指定是否 outlook 功能區的行為會模擬，Outlook 2003。  
   
 ```  

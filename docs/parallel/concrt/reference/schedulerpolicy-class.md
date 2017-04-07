@@ -9,8 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
+- SchedulerPolicy
 - concrt/concurrency::SchedulerPolicy
-- concrtrm/concurrency::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::SchedulerPolicy
+- concrt/concurrency::SchedulerPolicy::GetPolicyValue
+- concrt/concurrency::SchedulerPolicy::SetConcurrencyLimits
+- concrt/concurrency::SchedulerPolicy::SetPolicyValue
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 68707be387590cf04745d5a53872558d7af8da8c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: a00f7d9cafbd84fc3bbf6b10f322fad6166110cd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 類別
@@ -53,27 +57,27 @@ class SchedulerPolicy;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[SchedulerPolicy 建構函式](#ctor)|多載。 建構新的排程器原則，並填入值[原則機碼](concurrency-namespace-enums.md)並行執行階段排程和資源管理員支援。|  
+|[SchedulerPolicy](#ctor)|多載。 建構新的排程器原則，並填入值[原則機碼](concurrency-namespace-enums.md)並行執行階段排程和資源管理員支援。|  
 |[~ SchedulerPolicy 解構函式](#dtor)|終結排程器原則。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[GetPolicyValue 方法](#getpolicyvalue)|擷取的原則機碼值當做提供`key`參數。|  
-|[SetConcurrencyLimits 方法](#setconcurrencylimits)|同時設定`MinConcurrency`和`MaxConcurrency`上的原則`SchedulerPolicy`物件。|  
-|[SetPolicyValue 方法](#setpolicyvalue)|設定的原則機碼值當做提供`key`參數並傳回舊值。|  
+|[GetPolicyValue](#getpolicyvalue)|擷取的原則機碼值當做提供`key`參數。|  
+|[SetConcurrencyLimits](#setconcurrencylimits)|同時設定`MinConcurrency`和`MaxConcurrency`上的原則`SchedulerPolicy`物件。|  
+|[SetPolicyValue](#setpolicyvalue)|設定的原則機碼值當做提供`key`參數並傳回舊值。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[運算子 = 運算子](#operator_eq)|從另一個排程器原則中指定的排程器原則。|  
+|[operator=](#operator_eq)|從另一個排程器原則中指定的排程器原則。|  
   
 ## <a name="remarks"></a>備註  
- 如需有關使用控制原則`SchedulerPolicy`類別，請參閱[PolicyElementKey 列舉](concurrency-namespace-enums.md)。  
+ 如需有關使用控制原則`SchedulerPolicy`類別，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `SchedulerPolicy`  
@@ -83,7 +87,7 @@ class SchedulerPolicy;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namegetpolicyvaluea-getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue 
+##  <a name="getpolicyvalue"></a>GetPolicyValue 
 
  擷取的原則機碼值當做提供`key`參數。  
   
@@ -101,7 +105,7 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 ### <a name="remarks"></a>備註  
  方法會擲回[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)無效的原則機碼。  
   
-##  <a name="a-nameoperatoreqa-operator"></a><a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a>運算子 = 
 
  從另一個排程器原則中指定的排程器原則。  
   
@@ -119,7 +123,7 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ### <a name="remarks"></a>備註  
  通常，定義新的排程器原則最方便的方法是複製現有的原則，並使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法修改。  
   
-##  <a name="a-namectora-schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy 
+##  <a name="ctor"></a>SchedulerPolicy 
 
  建構新的排程器原則，並填入值[原則機碼](concurrency-namespace-enums.md)並行執行階段排程和資源管理員支援。  
   
@@ -148,7 +152,7 @@ SchedulerPolicy(
   
  第三個建構函式是複製建構函式。 通常，定義新的排程器原則最方便的方法是複製現有的原則，並使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法修改。  
   
-##  <a name="a-namedtora-schedulerpolicy"></a><a name="dtor"></a>~ SchedulerPolicy 
+##  <a name="dtor"></a>~ SchedulerPolicy 
 
  終結排程器原則。  
   
@@ -156,7 +160,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```  
   
-##  <a name="a-namesetconcurrencylimitsa-setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits 
+##  <a name="setconcurrencylimits"></a>SetConcurrencyLimits 
 
  同時設定`MinConcurrency`和`MaxConcurrency`上的原則`SchedulerPolicy`物件。  
   
@@ -178,7 +182,7 @@ void SetConcurrencyLimits(
   
  這個方法也可以擲回[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)針對其他無效值。  
   
-##  <a name="a-namesetpolicyvaluea-setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue 
+##  <a name="setpolicyvalue"></a>SetPolicyValue 
 
  設定的原則機碼值當做提供`key`參數並傳回舊值。  
   
@@ -207,7 +211,7 @@ unsigned int SetPolicyValue(
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
- [PolicyElementKey 列舉](concurrency-namespace-enums.md)   
+ [PolicyElementKey](concurrency-namespace-enums.md)   
  [CurrentScheduler 類別](currentscheduler-class.md)   
  [Scheduler 類別](scheduler-class.md)   
  [工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

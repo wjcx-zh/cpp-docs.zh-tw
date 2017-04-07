@@ -10,6 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CSnapInPropertyPageImpl
+- ATLSNAP/ATL::CSnapInPropertyPageImpl
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::CSnapInPropertyPageImpl
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::CancelToClose
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::Create
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnApply
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnHelp
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnKillActive
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnQueryCancel
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnReset
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnSetActive
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnWizardBack
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnWizardFinish
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::OnWizardNext
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::QuerySiblings
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::SetModified
+- ATLSNAP/ATL::CSnapInPropertyPageImpl::m_psp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,7 +113,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsnap.h  
   
-##  <a name="a-namecanceltoclosea--csnapinpropertypageimplcanceltoclose"></a><a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
+##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
  無法復原的變更已對非強制回應屬性工作表頁中的資料之後，請呼叫此函式。  
   
 ```
@@ -109,7 +125,7 @@ void CancelToClose();
   
  `CancelToClose`成員函式不做任何動作在非強制回應屬性工作表中，因為非強制回應屬性工作表沒有**取消**預設按鈕。  
   
-##  <a name="a-namecsnapinpropertypageimpla--csnapinpropertypageimplcsnapinpropertypageimpl"></a><a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
+##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  建構 `CSnapInPropertyPageImpl` 物件。  
   
 ```
@@ -123,7 +139,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ### <a name="remarks"></a>備註  
  若要初始化的基礎結構，呼叫[CSnapInPropertyPageImpl::Create](#create)。  
   
-##  <a name="a-namecreatea--csnapinpropertypageimplcreate"></a><a name="create"></a>CSnapInPropertyPageImpl::Create  
+##  <a name="create"></a>CSnapInPropertyPageImpl::Create  
  呼叫此函式來初始化屬性頁的基礎結構。  
   
 ```
@@ -136,7 +152,7 @@ HPROPSHEETPAGE Create();
 ### <a name="remarks"></a>備註  
  您應該先呼叫[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)之前呼叫這個函式。  
   
-##  <a name="a-namempspa--csnapinpropertypageimplmpsp"></a><a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
+##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
  `m_psp`是一種結構的成員儲存的特性**PROPSHEETPAGE**。  
   
 ```
@@ -148,7 +164,7 @@ PROPSHEETPAGE m_psp;
   
  如需有關此結構，包括清單的成員，請參閱[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameonapplya--csnapinpropertypageimplonapply"></a><a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
+##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
  使用者按一下時，會呼叫此成員函式**確定**或**立即套用** 按鈕。  
   
 ```
@@ -165,7 +181,7 @@ BOOL OnApply();
   
  預設實作`OnApply`傳回**TRUE**。  
   
-##  <a name="a-nameonhelpa--csnapinpropertypageimplonhelp"></a><a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
+##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
  使用者按一下時，會呼叫此成員函式**協助**屬性頁 按鈕。  
   
 ```
@@ -175,7 +191,7 @@ void OnHelp();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，以顯示 [屬性] 頁面上的說明。  
   
-##  <a name="a-nameonkillactivea--csnapinpropertypageimplonkillactive"></a><a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
+##  <a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
  此成員函式稱為頁面時不會再使用中的頁面。  
   
 ```
@@ -188,7 +204,7 @@ BOOL OnKillActive();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，以執行特殊的資料驗證工作。  
   
-##  <a name="a-nameonquerycancela--csnapinpropertypageimplonquerycancel"></a><a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
+##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
  使用者按一下時，會呼叫此成員函式**取消**按鈕，並取消之前採取動作的地方。  
   
 ```
@@ -203,7 +219,7 @@ BOOL OnQueryCancel();
   
  預設實作`OnQueryCancel`傳回**TRUE**。  
   
-##  <a name="a-nameonreseta--csnapinpropertypageimplonreset"></a><a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
+##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
  使用者按一下時，會呼叫此成員函式**取消** 按鈕。  
   
 ```
@@ -215,7 +231,7 @@ void OnReset();
   
  覆寫此成員函式，來指定程式取得使用者按下時的動作**取消** 按鈕。  
   
-##  <a name="a-nameonsetactivea--csnapinpropertypageimplonsetactive"></a><a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
+##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
  頁面的使用者會選擇並變成使用中的頁面時，會呼叫此成員函式。  
   
 ```
@@ -230,7 +246,7 @@ BOOL OnSetActive();
   
  預設實作會傳回**TRUE**。  
   
-##  <a name="a-nameonwizardbacka--csnapinpropertypageimplonwizardback"></a><a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
+##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
  使用者按一下時，會呼叫此成員函式**回**在精靈中的按鈕。  
   
 ```
@@ -248,7 +264,7 @@ BOOL OnWizardBack();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，來指定使用者必須時採取一些動作**回**按鈕時。  
   
-##  <a name="a-nameonwizardfinisha--csnapinpropertypageimplonwizardfinish"></a><a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
+##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
  使用者按一下時，會呼叫此成員函式**完成**在精靈中的按鈕。  
   
 ```
@@ -261,7 +277,7 @@ BOOL OnWizardFinish();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，來指定使用者必須時採取一些動作**完成**按鈕時。  
   
-##  <a name="a-nameonwizardnexta--csnapinpropertypageimplonwizardnext"></a><a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
+##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
  使用者按一下時，會呼叫此成員函式`Next`在精靈中的按鈕。  
   
 ```
@@ -279,7 +295,7 @@ BOOL OnWizardNext();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，來指定使用者必須時採取一些動作`Next`按鈕時。  
   
-##  <a name="a-namequerysiblingsa--csnapinpropertypageimplquerysiblings"></a><a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
+##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
  呼叫此成員函式，來轉送訊息至屬性工作表中的每一頁。  
   
 ```
@@ -299,7 +315,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="remarks"></a>備註  
  如果頁面傳回非零值，屬性工作表不會傳送訊息至後續頁面。  
   
-##  <a name="a-namesetmodifieda--csnapinpropertypageimplsetmodified"></a><a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
+##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
  若要啟用或停用此成員函式的呼叫**立即套用** 按鈕，根據屬性頁中的設定是否應該套用到適當的外部物件。  
   
 ```

@@ -9,7 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- amp/Concurrency
+- AMP/Concurrency
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: a62955c94771320a64027f4f820434dd5e7984a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 38c3154244b163202bcb8e271f96b393231247ca
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 命名空間 (C++ AMP)
@@ -52,12 +52,12 @@ namespace Concurrency;
   
 ### <a name="namespaces"></a>命名空間  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[Concurrency:: direct3d 命名空間](concurrency-direct3d-namespace.md)|提供支援 D3D 互通性的函式。 可讓順暢地將 D3D 資源 AMP 程式碼中的計算並且使用所建立的資源 AMP D3D 程式碼中，而不需建立中繼副本。 您可以使用 c + + AMP 累加加速運算密集的部份 DirectX 應用程式，並使用 D3D API AMP 計算所產生的資料。|  
-|[Concurrency:: fast_math 命名空間](concurrency-fast-math-namespace.md)|函式的`fast_math`命名空間不符合 C99 標準。 只有每個函式的單精確度版本都會提供。 這些函式會使用 DirectX 內建函式，也就是比對應的函式中`precise_math`命名空間並不需要擴充的雙精確度支援加速器上，但它們是較不精確。 有兩個版本的來源層級相容性的 C99 程式碼; 每個函式這兩個版本使用，並傳回單精確度值。|  
-|[Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)|圖形程式設計提供型別和函式所設計。|  
-|[Concurrency:: precise_math 命名空間](concurrency-precise-math-namespace.md)|函式的`precise_math`命名空間是 C99 標準。 每個函式的單精確度和雙精度版本隨附。 這些函式，包括單精確度函式 — 需要擴充的雙精確度支援加速器上。|  
+|[Concurrency::direct3d 命名空間](concurrency-direct3d-namespace.md)|提供支援 D3D 互通性的函式。 可讓順暢地將 D3D 資源 AMP 程式碼中的計算並且使用所建立的資源 AMP D3D 程式碼中，而不需建立中繼副本。 您可以使用 c + + AMP 累加加速運算密集的部份 DirectX 應用程式，並使用 D3D API AMP 計算所產生的資料。|  
+|[Concurrency::fast_math 命名空間](concurrency-fast-math-namespace.md)|函式的`fast_math`命名空間不符合 C99 標準。 只有每個函式的單精確度版本都會提供。 這些函式會使用 DirectX 內建函式，也就是比對應的函式中`precise_math`命名空間並不需要擴充的雙精確度支援加速器上，但它們是較不精確。 有兩個版本的來源層級相容性的 C99 程式碼; 每個函式這兩個版本使用，並傳回單精確度值。|  
+|[Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)|圖形程式設計提供型別和函式所設計。|  
+|[Concurrency::precise_math 命名空間](concurrency-precise-math-namespace.md)|函式的`precise_math`命名空間是 C99 標準。 每個函式的單精確度和雙精度版本隨附。 這些函式，包括單精確度函式 — 需要擴充的雙精確度支援加速器上。|  
   
 ### <a name="classes"></a>類別  
   
@@ -89,7 +89,7 @@ namespace Concurrency;
   
 ### <a name="operators"></a>運算子  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[運算子 = = 運算子 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|判斷指定的資料結構是否相等。|  
 |[運算子 ！ = 運算子 (c + + AMP)](concurrency-namespace-operators-amp.md#operator_neq)|判斷指定的資料結構是否不相等。|  
@@ -103,27 +103,27 @@ namespace Concurrency;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[all_memory_fence 函式](concurrency-namespace-functions-amp.md#all_memory_fence)|區塊執行的所有執行緒，直到完成為止的所有記憶體存取在磚中。|  
-|[amp_uninitialize 函式](concurrency-namespace-functions-amp.md#amp_uninitialize)|未初始化 c + + AMP 執行階段。|  
-|[atomic_compare_exchange 函式](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|多載。 儲存指定之位置的值等於第一個指定的值，如果第二個指定的值儲存在相同的位置，成為不可部分完成的作業。|  
-|[atomic_exchange 函式](concurrency-namespace-functions-amp.md#atomic_exchange)|多載。 設定儲存在指定的值成為不可部分完成的作業指定的位置的值。|  
-|[atomic_fetch_add 函式](concurrency-namespace-functions-amp.md#atomic_fetch_add)|多載。 設定儲存為該值與指定之的值的總和，成為不可部分完成的作業指定位置的值。|  
-|[atomic_fetch_and 函式](concurrency-namespace-functions-amp.md#atomic_fetch_and)|多載。 設定儲存在指定的位置，以位元的值`and`該值和指定的值，成為不可部分完成的作業。|  
-|[atomic_fetch_dec 函式](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|多載。 遞減值儲存在指定的位置，並將結果儲存在相同的位置，成為不可部分完成的作業。|  
-|[atomic_fetch_inc 函式](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|多載。 遞增儲存在指定位置的值，並將結果儲存在相同的位置，成為不可部分完成的作業。|  
-|[atomic_fetch_max 函式](concurrency-namespace-functions-amp.md#atomic_fetch_max)|多載。 設定儲存在指定的位置，以較大的值的值和指定的值，成為不可部分完成的作業。|  
-|[atomic_fetch_min 函式](concurrency-namespace-functions-amp.md#atomic_fetch_min)|多載。 設定儲存在指定的位置，以較小的值的值和指定的值，成為不可部分完成的作業。|  
-|[atomic_fetch_or 函式](concurrency-namespace-functions-amp.md#atomic_fetch_or)|多載。 設定儲存在指定的位置，以位元的值`or`該值和指定的值，成為不可部分完成的作業。|  
-|[atomic_fetch_sub 函式](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|多載。 設定儲存到該值與指定的值的差異，成為不可部分完成的作業的指定位置的值。|  
-|[atomic_fetch_xor 函式](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|多載。 設定儲存在指定的位置，以位元的值`xor`該值和指定的值，成為不可部分完成的作業。|  
-|[copy 函式](concurrency-namespace-functions-amp.md#copy)|將 c + + AMP 物件複製。 符合所有同步的資料傳輸需求。 快速鍵的程式碼執行的程式碼時，無法複製資料。 此函式的一般形式是`copy(src, dest)`。|  
-|[copy_async 函式](concurrency-namespace-functions-amp.md#copy_async)|複製 c + + AMP 物件並傳回[completion_future](completion-future-class.md)可以等候的。 加速器上執行的程式碼時，無法複製資料。 此函式的一般形式是`copy(src, dest)`。|  
-|[direct3d_abort 函式](concurrency-namespace-functions-amp.md#direct3d_abort)|中止執行函式具有`restrict(amp)`限制子句。|  
-|[direct3d_errorf 函式](concurrency-namespace-functions-amp.md#direct3d_errorf)|列印到 Visual Studio 的格式化的字串**輸出**視窗並引發[runtime_exception](runtime-exception-class.md)格式設定相同的例外狀況的字串。|  
-|[direct3d_printf 函式](concurrency-namespace-functions-amp.md#direct3d_printf)|列印到 Visual Studio 的格式化的字串**輸出**視窗。 從擁有的函式呼叫`restrict(amp)`限制子句。|  
-|[global_memory_fence 函式](concurrency-namespace-functions-amp.md#global_memory_fence)|已完成的所有執行緒，直到所有的全域記憶體存取在磚中的區塊執行。|  
+|[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|區塊執行的所有執行緒，直到完成為止的所有記憶體存取在磚中。|  
+|[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|未初始化 c + + AMP 執行階段。|  
+|[atomic_compare_exchange](concurrency-namespace-functions-amp.md#atomic_compare_exchange)|多載。 儲存指定之位置的值等於第一個指定的值，如果第二個指定的值儲存在相同的位置，成為不可部分完成的作業。|  
+|[atomic_exchange](concurrency-namespace-functions-amp.md#atomic_exchange)|多載。 設定儲存在指定的值成為不可部分完成的作業指定的位置的值。|  
+|[atomic_fetch_add](concurrency-namespace-functions-amp.md#atomic_fetch_add)|多載。 設定儲存為該值與指定之的值的總和，成為不可部分完成的作業指定位置的值。|  
+|[atomic_fetch_and](concurrency-namespace-functions-amp.md#atomic_fetch_and)|多載。 設定儲存在指定的位置，以位元的值`and`該值和指定的值，成為不可部分完成的作業。|  
+|[atomic_fetch_dec](concurrency-namespace-functions-amp.md#atomic_fetch_dec)|多載。 遞減值儲存在指定的位置，並將結果儲存在相同的位置，成為不可部分完成的作業。|  
+|[atomic_fetch_inc](concurrency-namespace-functions-amp.md#atomic_fetch_inc)|多載。 遞增儲存在指定位置的值，並將結果儲存在相同的位置，成為不可部分完成的作業。|  
+|[atomic_fetch_max](concurrency-namespace-functions-amp.md#atomic_fetch_max)|多載。 設定儲存在指定的位置，以較大的值的值和指定的值，成為不可部分完成的作業。|  
+|[atomic_fetch_min](concurrency-namespace-functions-amp.md#atomic_fetch_min)|多載。 設定儲存在指定的位置，以較小的值的值和指定的值，成為不可部分完成的作業。|  
+|[atomic_fetch_or](concurrency-namespace-functions-amp.md#atomic_fetch_or)|多載。 設定儲存在指定的位置，以位元的值`or`該值和指定的值，成為不可部分完成的作業。|  
+|[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|多載。 設定儲存到該值與指定的值的差異，成為不可部分完成的作業的指定位置的值。|  
+|[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|多載。 設定儲存在指定的位置，以位元的值`xor`該值和指定的值，成為不可部分完成的作業。|  
+|[copy](concurrency-namespace-functions-amp.md#copy)|將 c + + AMP 物件複製。 符合所有同步的資料傳輸需求。 快速鍵的程式碼執行的程式碼時，無法複製資料。 此函式的一般形式是`copy(src, dest)`。|  
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|複製 c + + AMP 物件並傳回[completion_future](completion-future-class.md)可以等候的。 加速器上執行的程式碼時，無法複製資料。 此函式的一般形式是`copy(src, dest)`。|  
+|[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|中止執行函式具有`restrict(amp)`限制子句。|  
+|[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|列印到 Visual Studio 的格式化的字串**輸出**視窗並引發[runtime_exception](runtime-exception-class.md)格式設定相同的例外狀況的字串。|  
+|[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|列印到 Visual Studio 的格式化的字串**輸出**視窗。 從擁有的函式呼叫`restrict(amp)`限制子句。|  
+|[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|已完成的所有執行緒，直到所有的全域記憶體存取在磚中的區塊執行。|  
 |[parallel_for_each 函式 (c + + AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|在計算網域中執行的函式。|  
-|[tile_static_memory_fence 函式](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|封鎖直到磚中的所有執行緒的執行`tile_static`已完成的記憶體存取。|  
+|[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|封鎖直到磚中的所有執行緒的執行`tile_static`已完成的記憶體存取。|  
   
 ## <a name="constants"></a>常數  
   
@@ -136,7 +136,7 @@ namespace Concurrency;
  **標頭︰** amp.h  
   
 ## <a name="see-also"></a>另請參閱  
- [參考 (c + + AMP)](reference-cpp-amp.md)
+ [參考 (C++ AMP)](reference-cpp-amp.md)
 
 
 

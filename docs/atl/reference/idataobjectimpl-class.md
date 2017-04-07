@@ -10,6 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
+- ATLCTL/ATL::IDataObjectImpl
+- ATLCTL/ATL::IDataObjectImpl::DAdvise
+- ATLCTL/ATL::IDataObjectImpl::DUnadvise
+- ATLCTL/ATL::IDataObjectImpl::EnumDAdvise
+- ATLCTL/ATL::IDataObjectImpl::EnumFormatEtc
+- ATLCTL/ATL::IDataObjectImpl::FireDataChange
+- ATLCTL/ATL::IDataObjectImpl::GetCanonicalFormatEtc
+- ATLCTL/ATL::IDataObjectImpl::GetData
+- ATLCTL/ATL::IDataObjectImpl::GetDataHere
+- ATLCTL/ATL::IDataObjectImpl::QueryGetData
+- ATLCTL/ATL::IDataObjectImpl::SetData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -93,7 +104,7 @@ class IDataObjectImpl
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-namedadvisea--idataobjectimpldadvise"></a><a name="dadvise"></a>IDataObjectImpl::DAdvise  
+##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
  建立資料物件和通知接收之間的連線。  
   
 ```
@@ -111,7 +122,7 @@ HRESULT DAdvise(
   
  請參閱[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namedunadvisea--idataobjectimpldunadvise"></a><a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
+##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
  終止透過先前建立的連線[DAdvise](#dadvise)。  
   
 ```
@@ -121,7 +132,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameenumdadvisea--idataobjectimplenumdadvise"></a><a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
+##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
  建立列舉值，可逐一查看目前諮詢連接。  
   
 ```
@@ -135,7 +146,7 @@ HRESULT DAdvise(
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-nameenumformatetca--idataobjectimplenumformatetc"></a><a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
+##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
  建立列舉值，可逐一查看**FORMATETC**資料物件支援的結構。  
   
 ```
@@ -150,7 +161,7 @@ HRESULT EnumFormatEtc(
 ### <a name="return-value"></a>傳回值  
  傳回**E_NOTIMPL**。  
   
-##  <a name="a-namefiredatachangea--idataobjectimplfiredatachange"></a><a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
+##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
  將變更通知傳回給目前未受管理的每個通知接收。  
   
 ```
@@ -160,7 +171,7 @@ HRESULT FireDataChange();
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namegetcanonicalformatetca--idataobjectimplgetcanonicalformatetc"></a><a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
+##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
  擷取邏輯上等同**FORMATETC**為更複雜的結構。  
   
 ```
@@ -173,7 +184,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdataa--idataobjectimplgetdata"></a><a name="getdata"></a>IDataObjectImpl::GetData  
+##  <a name="getdata"></a>IDataObjectImpl::GetData  
  從資料物件的資料傳輸至用戶端。  
   
 ```
@@ -187,7 +198,7 @@ HRESULT GetData(
   
  請參閱[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdataherea--idataobjectimplgetdatahere"></a><a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
+##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
  類似於`GetData`，但用戶端必須配置**STGMEDIUM**結構。  
   
 ```
@@ -202,7 +213,7 @@ HRESULT GetDataHere(
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namequerygetdataa--idataobjectimplquerygetdata"></a><a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
+##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
  判斷資料物件是否支援特定**FORMATETC**傳送資料的結構。  
   
 ```
@@ -215,7 +226,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namesetdataa--idataobjectimplsetdata"></a><a name="setdata"></a>IDataObjectImpl::SetData  
+##  <a name="setdata"></a>IDataObjectImpl::SetData  
  將資料從用戶端傳輸至資料物件。  
   
 ```

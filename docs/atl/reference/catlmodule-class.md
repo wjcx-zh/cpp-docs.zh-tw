@@ -9,9 +9,21 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlModule
 - CAtlModule
-- ATL.CAtlModule
+- ATLBASE/ATL::CAtlModule
+- ATLBASE/ATL::CAtlModule::CAtlModule
+- ATLBASE/ATL::CAtlModule::AddCommonRGSReplacements
+- ATLBASE/ATL::CAtlModule::AddTermFunc
+- ATLBASE/ATL::CAtlModule::GetGITPtr
+- ATLBASE/ATL::CAtlModule::GetLockCount
+- ATLBASE/ATL::CAtlModule::Lock
+- ATLBASE/ATL::CAtlModule::Term
+- ATLBASE/ATL::CAtlModule::Unlock
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceD
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceDHelper
+- ATLBASE/ATL::CAtlModule::UpdateRegistryFromResourceS
+- ATLBASE/ATL::CAtlModule::m_libid
+- ATLBASE/ATL::CAtlModule::m_pGIT
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -96,7 +108,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-nameaddcommonrgsreplacementsa--catlmoduleaddcommonrgsreplacements"></a><a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
+##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements  
  覆寫這個方法，以將參數加入至 ATL 登錄元件 （登錄器） 取代對應。  
   
 ```
@@ -115,7 +127,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
   
  請參閱主題[使用可置換的參數 （註冊機構的前置處理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)如需詳細資訊。  
   
-##  <a name="a-nameaddtermfunca--catlmoduleaddtermfunc"></a><a name="addtermfunc"></a>CAtlModule::AddTermFunc  
+##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc  
  加入新的函式，此模組結束時呼叫。  
   
 ```
@@ -132,7 +144,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="a-namecatlmodulea--catlmodulecatlmodule"></a><a name="catlmodule"></a>CAtlModule::CAtlModule  
+##  <a name="catlmodule"></a>CAtlModule::CAtlModule  
  建構函式。  
   
 ```
@@ -142,7 +154,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>備註  
  初始化資料成員，並起始關鍵區段周圍模組的執行緒。  
   
-##  <a name="a-namedtora--catlmodulecatlmodule"></a><a name="dtor"></a>CAtlModule:: ~ CAtlModule  
+##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule  
  解構函式。  
   
 ```
@@ -152,7 +164,7 @@ CAtlModule() throw();
 ### <a name="remarks"></a>備註  
  釋放所有的資料成員。  
   
-##  <a name="a-namegetgitptra--catlmodulegetgitptr"></a><a name="getgitptr"></a>CAtlModule::GetGITPtr  
+##  <a name="getgitptr"></a>CAtlModule::GetGITPtr  
  擷取全域介面資料表的指標。  
   
 ```
@@ -173,7 +185,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
   
  請參閱[IGlobalInterfaceTable](http://msdn.microsoft.com/library/windows/desktop/ms678517)全域介面資料表上的資訊。  
   
-##  <a name="a-namegetlockcounta--catlmodulegetlockcount"></a><a name="getlockcount"></a>CAtlModule::GetLockCount  
+##  <a name="getlockcount"></a>CAtlModule::GetLockCount  
  傳回的鎖定計數。  
   
 ```
@@ -183,7 +195,7 @@ virtual LONG GetLockCount() throw();
 ### <a name="return-value"></a>傳回值  
  傳回的鎖定計數。 這個值可能有助於診斷和偵錯。  
   
-##  <a name="a-namelocka--catlmodulelock"></a><a name="lock"></a>CAtlModule::Lock  
+##  <a name="lock"></a>CAtlModule::Lock  
  鎖定計數遞增。  
   
 ```
@@ -193,21 +205,21 @@ virtual LONG Lock() throw();
 ### <a name="return-value"></a>傳回值  
  鎖定計數遞增，並傳回更新的值。 這個值可能有助於診斷和偵錯。  
   
-##  <a name="a-namemlibida--catlmodulemlibid"></a><a name="m_libid"></a>CAtlModule::m_libid  
+##  <a name="m_libid"></a>CAtlModule::m_libid  
  包含目前模組的 GUID。  
   
 ```
 static GUID m_libid;
 ```  
   
-##  <a name="a-namempgita--catlmodulempgit"></a><a name="m_pgit"></a>CAtlModule::m_pGIT  
+##  <a name="m_pgit"></a>CAtlModule::m_pGIT  
  全域介面資料表的指標。  
   
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```  
   
-##  <a name="a-nameterma--catlmoduleterm"></a><a name="term"></a>CAtlModule::Term  
+##  <a name="term"></a>CAtlModule::Term  
  釋放所有的資料成員。  
   
 ```
@@ -217,7 +229,7 @@ void Term() throw();
 ### <a name="remarks"></a>備註  
  釋放所有的資料成員。 解構函式會呼叫這個方法。  
   
-##  <a name="a-nameunlocka--catlmoduleunlock"></a><a name="unlock"></a>CAtlModule::Unlock  
+##  <a name="unlock"></a>CAtlModule::Unlock  
  減量鎖定計數。  
   
 ```
@@ -227,7 +239,7 @@ virtual LONG Unlock() throw();
 ### <a name="return-value"></a>傳回值  
  減量鎖定計數，並傳回更新的值。 這個值可能有助於診斷和偵錯。  
   
-##  <a name="a-nameupdateregistryfromresourceda--catlmoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD  
  執行指令碼包含在指定的資源，若要註冊或取消註冊物件。  
   
 ```
@@ -265,7 +277,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
   
  這個方法會呼叫[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)和[IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister)。  
   
-##  <a name="a-nameupdateregistryfromresourcedhelpera--catlmoduleupdateregistryfromresourcedhelper"></a><a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
+##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper  
  這個方法會呼叫`UpdateRegistryFromResourceD`執行登錄更新。  
   
 ```
@@ -291,7 +303,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 ### <a name="remarks"></a>備註  
  這個方法提供實作[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)。  
   
-##  <a name="a-nameupdateregistryfromresourcesa--catlmoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS  
  執行指令碼包含在指定的資源，若要註冊或取消註冊物件。 這個方法會以靜態方式連結至 ATL 登錄元件。  
   
 ```

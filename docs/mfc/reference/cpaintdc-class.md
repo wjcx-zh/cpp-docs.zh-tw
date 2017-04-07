@@ -10,6 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CPaintDC
+- AFXWIN/CPaintDC
+- AFXWIN/CPaintDC::CPaintDC
+- AFXWIN/CPaintDC::m_ps
+- AFXWIN/CPaintDC::m_hWnd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CPaintDC : public CDC
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecpaintdca--cpaintdccpaintdc"></a><a name="cpaintdc"></a>CPaintDC::CPaintDC  
+##  <a name="cpaintdc"></a>CPaintDC::CPaintDC  
  建構`CPaintDC`物件，來繪製，準備應用程式視窗，並將[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)結構[m_ps](#m_ps)成員變數。  
   
 ```  
@@ -104,7 +108,7 @@ explicit CPaintDC(CWnd* pWnd);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&97;](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]  
   
-##  <a name="a-namemhwnda--cpaintdcmhwnd"></a><a name="m_hwnd"></a>CPaintDC::m_hWnd  
+##  <a name="m_hwnd"></a>CPaintDC::m_hWnd  
  `HWND`此`CPaintDC`附加物件時。  
   
 ```  
@@ -117,7 +121,7 @@ HWND m_hWnd;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView #&98;](../../mfc/codesnippet/cpp/cpaintdc-class_2.cpp)]  
   
-##  <a name="a-namempsa--cpaintdcmps"></a><a name="m_ps"></a>CPaintDC::m_ps  
+##  <a name="m_ps"></a>CPaintDC::m_ps  
  `m_ps`類型的公用成員變數[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)。  
   
 ```  

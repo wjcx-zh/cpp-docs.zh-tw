@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
+- AFXLINKCTRL/CMFCLinkCtrl
+- AFXLINKCTRL/CMFCLinkCtrl::SetURL
+- AFXLINKCTRL/CMFCLinkCtrl::SetURLPrefix
+- AFXLINKCTRL/CMFCLinkCtrl::SizeToContent
+- AFXLINKCTRL/CMFCLinkCtrl::OnDrawFocusRect
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +94,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>需求  
  **標頭︰** afxlinkctrl.h  
   
-##  <a name="a-nameondrawfocusrecta--cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
  繪製焦點矩形的按鈕前，由架構呼叫。  
   
 ```  
@@ -108,7 +113,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>備註  
  當您想要使用自己的程式碼繪製按鈕的焦點矩形，請覆寫這個方法。  
   
-##  <a name="a-nameseturla--cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
  顯示指定的 URL 做為按鈕文字。  
   
 ```  
@@ -121,7 +126,7 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameseturlprefixa--cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
  設定隱含的通訊協定 (例如，"http:") 的 url。  
   
 ```  
@@ -135,7 +140,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="remarks"></a>備註  
  使用此方法設定的 URL 首碼。 前置詞不會顯示在按鈕的圖示，但您可以使用它來瀏覽至的 URL 目標。  
   
-##  <a name="a-namesizetocontenta--cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
  調整大小，以包含按鈕文字或點陣圖按鈕。  
   
 ```  

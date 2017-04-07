@@ -6,31 +6,54 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- amp/Concurrency::direct3d::abs
+- amp/Concurrency::direct3d::countbits
+- amp/Concurrency::direct3d::create_accelerator_view
+- amp/Concurrency::direct3d::d3d_access_lock
+- amp/Concurrency::direct3d::d3d_access_unlock
+- amp/Concurrency::direct3d::firstbithigh
+- amp/Concurrency::direct3d::get_buffer
+- amp/Concurrency::direct3d::imax
+- amp/Concurrency::direct3d::is_timeout_disabled
+- amp/Concurrency::direct3d::mad
+- amp/Concurrency::direct3d::noise
+- amp/Concurrency::direct3d::radians
+- amp/Concurrency::direct3d::reversebits
+- amp/Concurrency::direct3d::saturate
+- amp/Concurrency::direct3d::smoothstep
+- amp/Concurrency::direct3d::step
+- amp/Concurrency::direct3d::umin
+dev_langs:
+- C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 46cafc3c6d6f21eaf147ef0edfeca7f2c81d64e6
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: ad00006c9ab4f25887cf28ed5b977551c35bda9e
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: direct3d 命名空間函式 (AMP)
 ||||  
 |-|-|-|  
-|[abs 函式](#abs)|[clamp 函式](#clamp)|[countbits 函式](#countbits)|
-|[create_accelerator_view 函式](#create_accelerator_view)|||
-|[d3d_access_lock 函式](#d3d_access_lock)|[d3d_access_try_lock 函式](#d3d_access_try_lock)|[d3d_access_unlock 函式](#d3d_access_unlock)|  
-|[firstbithigh 函式](#firstbithigh)|[firstbitlow 函式](#firstbitlow)|[get_buffer 函式](#get_buffer)|  
-|[imax 函式](#imax)|[imin 函式](#imin)|[is_timeout_disabled 函式](#is_timeout_disabled)|  
-|[mad 函式](#mad)|[make_array 函式](#make_array)|[noise 函式](#noise)|  
-|[radians 函式](#radians)|[rcp 函式](#rcp)|[reversebits 函式](#reversebits)|  
-|[saturate 函式](#saturate)|[sign 函式](#sign)|[smoothstep 函式](#smoothstep)|  
-|[step 函式](#step)|[umax 函式](#umax)|[umin 函式](#umin)|  
+|[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
+|[create_accelerator_view](#create_accelerator_view)|||
+|[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
+|[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
+|[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
+|[mad](#mad)|[make_array](#make_array)|[雜訊](#noise)|  
+|[弧度為單位](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[saturate](#saturate)|[符號](#sign)|[smoothstep](#smoothstep)|  
+|[步驟](#step)|[umax](#umax)|[umin](#umin)|  
+
+## <a name="requirements"></a>需求
+**標頭︰** amp.h**命名空間︰**並行存取
   
-##  <a name="a-nameabsa--abs-function"></a><a name="abs"></a>abs 函式  
+##  <a name="abs"></a>  abs  
  傳回引數的絕對值  
   
 ```  
@@ -44,7 +67,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的絕對值。  
   
-##  <a name="a-nameclampa--clamp-function"></a><a name="clamp"></a>clamp 函式  
+##  <a name="clamp"></a>clamp  
  計算第二個和第三個指定的引數所定義的範圍僅限於第一個指定引數的值。  
   
 ```  
@@ -73,7 +96,7 @@ inline int clamp(
 ### <a name="return-value"></a>傳回值  
  壓制的值`_X`。  
   
-##  <a name="a-namecountbitsa--countbits-function"></a><a name="countbits"></a>countbits 函式  
+##  <a name="countbits"></a>countbits  
  計算集合中的位元 _X 數目  
   
 ```  
@@ -87,7 +110,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回在 _X 組位元數  
 
-## <a name="a-namecreateacceleratorviewa-createacceleratorview-function"></a><a name="create_accelerator_view"></a>create_accelerator_view 函式
+## <a name="create_accelerator_view"></a>create_accelerator_view  
 建立[accelerator_view](accelerator-view-class.md)指標 Direct3D 裝置介面的物件。  
   
 ## <a name="syntax"></a>語法  
@@ -127,7 +150,7 @@ accelerator_view create_accelerator_view(
  C + + AMP 執行階段會提供詳細的錯誤資訊，偵錯模式中使用偵錯 D3D 圖層，如果您使用`D3D11_CREATE_DEVICE_DEBUG`旗標。  
   
   
-##  <a name="a-named3daccesslocka--d3daccesslock-function"></a><a name="d3d_access_lock"></a>d3d_access_lock 函式  
+##  <a name="d3d_access_lock"></a>d3d_access_lock  
  取得 accelerator_view 為了安全地 D3D 上執行的作業與 accelerator_view 共用資源鎖定。 Accelerator_view 和所有的 c + + AMP 資源內部與此 accelerator_view 採取這種鎖定時執行作業，而另一個執行緒擁有 D3D 存取鎖定會封鎖。 這種鎖定為非遞迴︰ 它是從已經擁有鎖定的執行緒呼叫此函式未定義的行為。 它是未定義的行為 accelerator_view 或從包含 D3D 存取鎖定的執行緒 accelerator_view 相關聯的任何資料容器上執行作業。 請參閱 scoped_d3d_access_lock，範圍為基礎的 D3D 存取鎖定的 RAII 樣式類別。  
   
 ```  
@@ -138,7 +161,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
  `_Av`  
  若要鎖定 accelerator_view。  
   
-##  <a name="a-named3daccesstrylocka--d3daccesstrylock-function"></a><a name="d3d_access_try_lock"></a>d3d_access_try_lock 函式  
+##  <a name="d3d_access_try_lock"></a>d3d_access_try_lock  
  嘗試取得 accelerator_view D3D 存取鎖定，而不會封鎖。  
   
 ```  
@@ -152,7 +175,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ### <a name="return-value"></a>傳回值  
  如果已取得鎖定，則為 true 或 false 目前由另一個執行緒。  
   
-##  <a name="a-named3daccessunlocka--d3daccessunlock-function"></a><a name="d3d_access_unlock"></a>d3d_access_unlock 函式  
+##  <a name="d3d_access_unlock"></a>d3d_access_unlock  
  釋放指定 accelerator_view D3D 存取鎖定。 如果呼叫執行緒不適 accelerator_view 的鎖定是未定義的結果。  
   
 ```  
@@ -163,7 +186,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  `_Av`  
  要釋放鎖定為 accelerator_view。  
   
-##  <a name="a-namefirstbithigha--firstbithigh-function"></a><a name="firstbithigh"></a>firstbithigh 函式  
+##  <a name="firstbithigh"></a>firstbithigh  
  取得 _X，開頭為最高序位位元，採用最低位元中的第一組位元位置。  
   
 ```  
@@ -177,7 +200,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  第一個設定位元的位置  
   
-##  <a name="a-namefirstbitlowa--firstbitlow-function"></a><a name="firstbitlow"></a>firstbitlow 函式  
+##  <a name="firstbitlow"></a>firstbitlow  
  取得 _X，開頭為最低位元，向的最高序位位元工作中的第一組位元位置。  
   
 ```  
@@ -191,7 +214,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回的第一個設定位元的位置  
   
-##  <a name="a-namegetbuffera--getbuffer-function"></a><a name="get_buffer"></a>get_buffer 函式  
+##  <a name="get_buffer"></a>get_buffer  
  取得指定的陣列的基礎 Direct3D 緩衝區介面。  
   
 ```  
@@ -216,7 +239,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>傳回值  
  對應至基礎陣列 Direct3D 緩衝區 IUnknown 介面指標。  
   
-##  <a name="a-nameimaxa--imax-function"></a><a name="imax"></a>imax 函式  
+##  <a name="imax"></a>imax  
  判斷引數的最大數值  
   
 ```  
@@ -235,7 +258,7 @@ inline int imax(
 ### <a name="return-value"></a>傳回值  
  傳回引數的最大的數值  
   
-##  <a name="a-nameimina--imin-function"></a><a name="imin"></a>imin 函式  
+##  <a name="imin"></a>imin  
  判斷引數的最小數值  
   
 ```  
@@ -254,7 +277,7 @@ inline int imin(
 ### <a name="return-value"></a>傳回值  
  傳回引數的最小數值  
   
-##  <a name="a-nameistimeoutdisableda--istimeoutdisabled-function"></a><a name="is_timeout_disabled"></a>is_timeout_disabled 函式  
+##  <a name="is_timeout_disabled"></a>is_timeout_disabled  
  傳回布林值旗標，表示逾時已停用的指定 accelerator_view。 這會對應到 Direct3D 裝置建立的 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 旗標。  
   
 ```  
@@ -268,7 +291,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="return-value"></a>傳回值  
  表示逾時已停用的指定 accelerator_view 布林旗標。  
   
-##  <a name="a-namemada--mad-function"></a><a name="mad"></a>mad 函式  
+##  <a name="mad"></a>mad  
  會計算產品的第一個和第二個指定的引數，然後在其中新增第三個指定的引數。  
   
 ```  
@@ -309,7 +332,7 @@ inline unsigned int mad(
 ### <a name="return-value"></a>傳回值  
  The result of `_X` * `_Y` + `_Z`.  
   
-##  <a name="a-namemakearraya--makearray-function"></a><a name="make_array"></a>make_array 函式  
+##  <a name="make_array"></a>make_array  
  建立從 Direct3D 緩衝區介面指標的陣列。  
   
 ```  
@@ -342,7 +365,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>傳回值  
  建立使用所提供的 Direct3D 緩衝區的陣列。  
   
-##  <a name="a-namenoisea--noise-function"></a><a name="noise"></a>noise 函式  
+##  <a name="noise"></a>雜訊  
  產生使用 Perlin 雜訊演算法的隨機值  
   
 ```  
@@ -356,7 +379,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回介於-1 和 1 之間的範圍內的 Perlin 雜訊值  
   
-##  <a name="a-nameradiansa--radians-function"></a><a name="radians"></a>radians 函式  
+##  <a name="radians"></a>弧度為單位  
  將 _X 從角度轉換為弧度  
   
 ```  
@@ -370,7 +393,7 @@ inline float radians(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回從度轉換成弧度 _X  
   
-##  <a name="a-namercpa--rcp-function"></a><a name="rcp"></a>rcp 函式  
+##  <a name="rcp"></a>rcp  
  使用快速的近似值，計算指定的引數的對等。  
   
 ```  
@@ -387,7 +410,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  指定的引數的對等。  
   
-##  <a name="a-namereversebitsa--reversebits-function"></a><a name="reversebits"></a>reversebits 函式  
+##  <a name="reversebits"></a>reversebits  
  反轉 _X 的位元的順序  
   
 ```  
@@ -401,7 +424,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  反轉 _X 中的位元順序會傳回值  
   
-##  <a name="a-namesaturatea--saturate-function"></a><a name="saturate"></a>saturate 函式  
+##  <a name="saturate"></a>saturate  
  鉗制 _X 0 到 1 的範圍內  
   
 ```  
@@ -415,7 +438,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 _X 壓制 0 到 1 的範圍內  
   
-##  <a name="a-namesigna--sign-function"></a><a name="sign"></a>sign 函式  
+##  <a name="sign"></a>符號  
  判斷指定的引數的符號。  
   
 ```  
@@ -429,7 +452,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  引數的符號。  
   
-##  <a name="a-namesmoothstepa--smoothstep-function"></a><a name="smoothstep"></a>smoothstep 函式  
+##  <a name="smoothstep"></a>smoothstep  
  介於 0 和 1，傳回的平滑 Hermite 插補，_X 是否在範圍 [_Min，（_m）]。  
   
 ```  
@@ -452,7 +475,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>傳回值  
  會傳回 0，如果 _X 小於 _Min;1 _X 是否大於 （_m）。否則，值介於 0 和 1 _X 是否在範圍 [_Min，（_m）]  
   
-##  <a name="a-namestepa--step-function"></a><a name="step"></a>step 函式  
+##  <a name="step"></a>步驟  
  比較兩個值，傳回 0 或 1 為基礎的值大於  
   
 ```  
@@ -471,7 +494,7 @@ inline float step(
 ### <a name="return-value"></a>傳回值  
  傳回 1，_X 是否大於或等於 _Y;否則為 0  
   
-##  <a name="a-nameumaxa--umax-function"></a><a name="umax"></a>umax 函式  
+##  <a name="umax"></a>umax  
  判斷引數的最大數值  
   
 ```  
@@ -490,7 +513,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>傳回值  
  傳回引數的最大的數值  
   
-##  <a name="a-nameumina--umin-function"></a><a name="umin"></a>umin 函式  
+##  <a name="umin"></a>umin  
  判斷引數的最小數值  
   
 ```  
@@ -510,5 +533,5 @@ inline unsigned int umin(
  傳回引數的最小數值  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: direct3d 命名空間](concurrency-direct3d-namespace.md)
+ [Concurrency::direct3d 命名空間](concurrency-direct3d-namespace.md)
 

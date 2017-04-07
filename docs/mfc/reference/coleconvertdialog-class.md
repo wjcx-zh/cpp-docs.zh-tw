@@ -10,6 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - COleConvertDialog
+- AFXODLGS/COleConvertDialog
+- AFXODLGS/COleConvertDialog::COleConvertDialog
+- AFXODLGS/COleConvertDialog::DoConvert
+- AFXODLGS/COleConvertDialog::DoModal
+- AFXODLGS/COleConvertDialog::GetClassID
+- AFXODLGS/COleConvertDialog::GetDrawAspect
+- AFXODLGS/COleConvertDialog::GetIconicMetafile
+- AFXODLGS/COleConvertDialog::GetSelectionType
+- AFXODLGS/COleConvertDialog::m_cv
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -102,7 +111,7 @@ class COleConvertDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭︰** afxodlgs.h  
   
-##  <a name="a-namecoleconvertdialoga--coleconvertdialogcoleconvertdialog"></a><a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
+##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
  只有建構`COleConvertDialog`物件。  
   
 ```  
@@ -141,7 +150,7 @@ explicit COleConvertDialog (
   
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)和[OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657)結構。  
   
-##  <a name="a-namedoconverta--coleconvertdialogdoconvert"></a><a name="doconvert"></a>COleConvertDialog::DoConvert  
+##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
  呼叫此函式，從成功傳回之後[DoModal](#domodal)，轉換，或是啟動型別的物件[COleClientItem](../../mfc/reference/coleclientitem-class.md)。  
   
 ```  
@@ -158,7 +167,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="remarks"></a>備註  
  轉換或啟動根據使用者在 [轉換] 對話方塊中選取的資訊項目。  
   
-##  <a name="a-namedomodala--coleconvertdialogdomodal"></a><a name="domodal"></a>COleConvertDialog::DoModal  
+##  <a name="domodal"></a>COleConvertDialog::DoModal  
  呼叫此函式來顯示 OLE 轉換 對話方塊。  
   
 ```  
@@ -179,7 +188,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`傳回**IDOK**，您可以呼叫其他成員函式來擷取設定或已由使用者輸入 對話方塊中的資訊。  
   
-##  <a name="a-namegetclassida--coleconvertdialoggetclassid"></a><a name="getclassid"></a>COleConvertDialog::GetClassID  
+##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
  呼叫此函式可取得**CLSID**轉換 對話方塊中選取的使用者相關聯的項目。  
   
 ```  
@@ -194,7 +203,7 @@ REFCLSID GetClassID() const;
   
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegetdrawaspecta--coleconvertdialoggetdrawaspect"></a><a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
  呼叫此函式可判斷是否在使用者選擇選取的項目顯示為圖示。  
   
 ```  
@@ -213,7 +222,7 @@ DVASPECT GetDrawAspect() const;
   
  繪製層面的詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)資料結構中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
-##  <a name="a-namegeticonicmetafilea--coleconvertdialoggeticonicmetafile"></a><a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
  呼叫此函式可取得中繼檔，其中包含選取的項目圖示的層面的控制代碼。  
   
 ```  
@@ -223,7 +232,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>傳回值  
  如果是以圖示顯示核取方塊，其中包含選取的項目圖示的層面的中繼檔的控制代碼檢查時已藉由選擇關閉對話方塊**確定**，否則為**NULL**。  
   
-##  <a name="a-namegetselectiontypea--coleconvertdialoggetselectiontype"></a><a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
  呼叫此函式可判斷在 [轉換] 對話方塊中選取轉換類型。  
   
 ```  
@@ -236,17 +245,13 @@ UINT GetSelectionType() const;
 ### <a name="remarks"></a>備註  
  傳回型別值由**選取**中宣告列舉型別`COleConvertDialog`類別。  
   
- `enum Selection`  
-  
- `{`  
-  
- `noConversion,`  
-  
- `convertItem,`  
-  
- `activateAs`  
-  
- `};`  
+```  
+enum Selection {
+    noConversion,
+    convertItem,
+    activateAs
+    };  
+```  
   
  請依照下列這些值的簡短描述︰  
   
@@ -256,7 +261,7 @@ UINT GetSelectionType() const;
   
 - **COleConvertDialog::activateAs**傳回做為啟動選項按鈕已選取，如果使用者選取不同的項目，若要啟用，並`DoModal`傳回**IDOK**。  
   
-##  <a name="a-namemcva--coleconvertdialogmcv"></a><a name="m_cv"></a>COleConvertDialog::m_cv  
+##  <a name="m_cv"></a>COleConvertDialog::m_cv  
  型別的結構**OLEUICONVERT**用來控制轉換 對話方塊的行為。  
   
 ```  

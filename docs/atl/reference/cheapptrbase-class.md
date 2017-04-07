@@ -9,9 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CHeapPtrBase
-- ATL::CHeapPtrBase
 - CHeapPtrBase
+- ATLCORE/ATL::CHeapPtrBase
+- ATLCORE/ATL::CHeapPtrBase::AllocateBytes
+- ATLCORE/ATL::CHeapPtrBase::Attach
+- ATLCORE/ATL::CHeapPtrBase::Detach
+- ATLCORE/ATL::CHeapPtrBase::Free
+- ATLCORE/ATL::CHeapPtrBase::ReallocateBytes
+- ATLCORE/ATL::CHeapPtrBase::m_pData
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -100,7 +105,7 @@ class CHeapPtrBase
 ## <a name="requirements"></a>需求  
  **標頭︰** atlcore.h  
   
-##  <a name="a-nameallocatebytesa--cheapptrbaseallocatebytes"></a><a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
+##  <a name="allocatebytes"></a>CHeapPtrBase::AllocateBytes  
  呼叫這個方法來配置記憶體。  
   
 ```
@@ -117,7 +122,7 @@ bool AllocateBytes(size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  在偵錯組建中，如果，就會發生判斷提示失敗[CHeapPtrBase::m_pData](#m_pdata)成員變數現在指向現有的值; 也就是說，不等於 NULL。  
   
-##  <a name="a-nameattacha--cheapptrbaseattach"></a><a name="attach"></a>CHeapPtrBase::Attach  
+##  <a name="attach"></a>CHeapPtrBase::Attach  
  呼叫這個方法來取得現有指標的擁有權。  
   
 ```
@@ -133,7 +138,7 @@ void Attach(T* pData) throw();
   
  在偵錯組建中，如果，就會發生判斷提示失敗[CHeapPtrBase::m_pData](#m_pdata)成員變數現在指向現有的值; 也就是說，不等於 NULL。  
   
-##  <a name="a-namedtora--cheapptrbasecheapptrbase"></a><a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
+##  <a name="dtor"></a>CHeapPtrBase:: ~ CHeapPtrBase  
  解構函式。  
   
 ```
@@ -143,7 +148,7 @@ void Attach(T* pData) throw();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-namedetacha--cheapptrbasedetach"></a><a name="detach"></a>CHeapPtrBase::Detach  
+##  <a name="detach"></a>CHeapPtrBase::Detach  
  呼叫此方法，以釋放指標的擁有權。  
   
 ```
@@ -156,7 +161,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>備註  
  釋放指標的擁有權、 設定[CHeapPtrBase::m_pData](#m_pdata)成員變數為 NULL，並傳回指標的複本。  
   
-##  <a name="a-namefreea--cheapptrbasefree"></a><a name="free"></a>CHeapPtrBase::Free  
+##  <a name="free"></a>CHeapPtrBase::Free  
  呼叫此方法以刪除所指向的物件`CHeapPtrBase`。  
   
 ```
@@ -166,7 +171,7 @@ void Free() throw();
 ### <a name="remarks"></a>備註  
  指向物件`CHeapPtrBase`釋出，而[CHeapPtrBase::m_pData](#m_pdata)成員變數設為 NULL。  
   
-##  <a name="a-namempdataa--cheapptrbasempdata"></a><a name="m_pdata"></a>CHeapPtrBase::m_pData  
+##  <a name="m_pdata"></a>CHeapPtrBase::m_pData  
  指標的資料成員變數。  
   
 ```
@@ -176,7 +181,7 @@ T* m_pData;
 ### <a name="remarks"></a>備註  
  這個成員變數會保留指標資訊。  
   
-##  <a name="a-nameoperatorampa--cheapptrbaseoperator-amp"></a><a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>CHeapPtrBase::operator&amp;  
  I 運算子。  
   
 ```
@@ -187,7 +192,7 @@ T** operator&() throw();
  傳回所指物件的位址`CHeapPtrBase`物件。  
   
 
-##  <a name="a-nameoperatorptra--cheapptrbaseoperator--gt"></a><a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>CHeapPtrBase::operator-&gt;  
 
  成員指標運算子。  
   
@@ -201,7 +206,7 @@ T* operator->() const throw();
 ### <a name="remarks"></a>備註  
  使用這個運算子所指的類別中呼叫的方法`CHeapPtrBase`物件。 在偵錯組建中，如果，就會發生判斷提示失敗`CHeapPtrBase`點為 NULL。  
   
-##  <a name="a-nameoperatortstara--cheapptrbaseoperator-t"></a><a name="operator_t_star"></a>CHeapPtrBase::operator T *  
+##  <a name="operator_t_star"></a>CHeapPtrBase::operator T *  
  轉型運算子。  
   
 ```  
@@ -211,7 +216,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>備註  
  傳回[CHeapPtrBase::m_pData](#m_pdata)。  
   
-##  <a name="a-namereallocatebytesa--cheapptrbasereallocatebytes"></a><a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
+##  <a name="reallocatebytes"></a>CHeapPtrBase::ReallocateBytes  
  呼叫這個方法來重新配置記憶體。  
   
 ```

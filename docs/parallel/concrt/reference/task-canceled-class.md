@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::task_canceled
+- task_canceled
+- CONCRT/concurrency::task_canceled
+- CONCRT/concurrency::task_canceled::task_canceled
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: dcf930c7efd1a7d7b015919b2009440045dd18fe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 8f84564a96557c14eb9491b9d1a1d369326751fd
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="taskcanceled-class"></a>task_canceled 類別
@@ -52,9 +54,9 @@ class task_canceled : public std::exception;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[task_canceled 建構函式](#ctor)|多載。 建構 `task_canceled` 物件。|  
+|[task_canceled](#ctor)|多載。 建構 `task_canceled` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -66,7 +68,7 @@ class task_canceled : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-taskcanceled"></a><a name="ctor"></a>task_canceled 
+##  <a name="ctor"></a>task_canceled 
 
  建構 `task_canceled` 物件。  
   

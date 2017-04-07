@@ -9,9 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CPrivateObjectSecurityDesc
-- ATL::CPrivateObjectSecurityDesc
 - CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::ConvertToAutoInherit
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
+- ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -87,7 +91,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h  
   
-##  <a name="a-nameconverttoautoinherita--cprivateobjectsecuritydescconverttoautoinherit"></a><a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  呼叫這個方法，將安全性描述元和其存取控制清單 (Acl) 轉換成可支援自動傳用可繼承的存取控制項目 (Ace) 的格式。  
   
 ```
@@ -117,7 +121,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>備註  
  這個方法會嘗試判斷是否 Ace 判別存取控制清單 (DACL) 和目前的安全性描述元的系統存取控制清單 (SACL) 被繼承自父安全性描述元中。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403)函式。  
   
-##  <a name="a-namecprivateobjectsecuritydesca--cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  建構函式。  
   
 ```
@@ -127,7 +131,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>備註  
  初始化`CPrivateObjectSecurityDesc`物件。  
   
-##  <a name="a-namedtora--cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
  解構函式。  
   
 ```
@@ -137,7 +141,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>備註  
  解構函式會釋放所有配置的資源，並刪除私用物件的安全性描述元。  
   
-##  <a name="a-namecreatea--cprivateobjectsecuritydesccreate"></a><a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
  呼叫這個方法來配置及初始化呼叫資源管理員所建立的私用物件的自我關聯的安全性描述元。  
   
 ```
@@ -194,7 +198,7 @@ bool Create(
 > [!NOTE]
 >  自我關聯的安全性描述元是記憶體的連續區塊中會儲存所有的安全性資訊的安全性描述元。  
   
-##  <a name="a-namegeta--cprivateobjectsecuritydescget"></a><a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
  呼叫這個方法來擷取私人物件安全性描述元中的資訊。  
   
 ```
@@ -216,7 +220,7 @@ bool Get(
 ### <a name="remarks"></a>備註  
  安全性描述元是結構和相關聯的資料，其中包含安全性實體物件的安全性資訊。  
   
-##  <a name="a-nameoperatoreqa--cprivateobjectsecuritydescoperator-"></a><a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
  指派運算子。  
   
 ```
@@ -230,7 +234,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>傳回值  
  傳回更新`CPrivateObjectSecurityDesc`物件。  
   
-##  <a name="a-nameseta--cprivateobjectsecuritydescset"></a><a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
  呼叫這個方法來修改私用物件的安全性描述元。  
   
 ```

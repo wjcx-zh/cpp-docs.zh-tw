@@ -9,7 +9,9 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- concrt/concurrency::default_scheduler_exists
+- default_scheduler_exists
+- CONCRT/concurrency::default_scheduler_exists
+- CONCRT/concurrency::default_scheduler_exists::default_scheduler_exists
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 527d02e6b79d86c8a194fffa30351efc944db441
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 4272c4658a6dbd85c838ccfd2586eb6a8ec08d81
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="defaultschedulerexists-class"></a>default_scheduler_exists 類別
@@ -54,7 +56,7 @@ class default_scheduler_exists : public std::exception;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[default_scheduler_exists 建構函式](#ctor)|多載。 建構 `default_scheduler_exists` 物件。|  
+|[default_scheduler_exists](#ctor)|多載。 建構 `default_scheduler_exists` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -66,7 +68,7 @@ class default_scheduler_exists : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="a-namectora-defaultschedulerexists"></a><a name="ctor"></a>default_scheduler_exists 
+##  <a name="ctor"></a>default_scheduler_exists 
 
  建構 `default_scheduler_exists` 物件。  
   

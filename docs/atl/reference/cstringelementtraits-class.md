@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL.CStringElementTraits<T>
-- ATL::CStringElementTraits<T>
 - CStringElementTraits
-- ATL.CStringElementTraits
-- ATL::CStringElementTraits
+- CSTRINGT/ATL::CStringElementTraits
+- CSTRINGT/ATL::CStringElementTraits::INARGTYPE
+- CSTRINGT/ATL::CStringElementTraits::OUTARGTYPE
+- CSTRINGT/ATL::CStringElementTraits::CompareElements
+- CSTRINGT/ATL::CStringElementTraits::CompareElementsOrdered
+- CSTRINGT/ATL::CStringElementTraits::CopyElements
+- CSTRINGT/ATL::CStringElementTraits::Hash
+- CSTRINGT/ATL::CStringElementTraits::RelocateElements
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -84,7 +88,7 @@ class CStringElementTraits
 ## <a name="requirements"></a>需求  
  **標頭︰** cstringt.h  
   
-##  <a name="a-namecompareelementsa--cstringelementtraitscompareelements"></a><a name="compareelements"></a>CStringElementTraits::CompareElements  
+##  <a name="compareelements"></a>CStringElementTraits::CompareElements  
  呼叫此靜態函式來比較兩個字串項目相等。  
   
 ```
@@ -101,7 +105,7 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2);
 ### <a name="return-value"></a>傳回值  
  如果項目相等，false 否則，就會傳回 true。  
   
-##  <a name="a-namecompareelementsordereda--cstringelementtraitscompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>CStringElementTraits::CompareElementsOrdered  
  呼叫此靜態函式來比較兩個字串的項目。  
   
 ```
@@ -119,7 +123,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2);
  如果字串完全相同，零< 0="" if="">`str1`是小於`str2`，或 > 0 如果`str1`大於`str2`。 [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法用來執行比較。  
 
   
-##  <a name="a-namecopyelementsa--cstringelementtraitscopyelements"></a><a name="copyelements"></a>CStringElementTraits::CopyElements  
+##  <a name="copyelements"></a>CStringElementTraits::CopyElements  
  呼叫此靜態函式來複製`CString`集合類別物件中儲存項目。  
   
 ```
@@ -142,7 +146,7 @@ static void CopyElements(
 ### <a name="remarks"></a>備註  
  來源和目的地的項目不應該重疊。  
   
-##  <a name="a-namehasha--cstringelementtraitshash"></a><a name="hash"></a>CStringElementTraits::Hash  
+##  <a name="hash"></a>CStringElementTraits::Hash  
  呼叫此靜態函式來計算雜湊值的指定的字串的項目。  
   
 ```
@@ -156,21 +160,21 @@ static ULONG Hash(INARGTYPE str);
 ### <a name="return-value"></a>傳回值  
  傳回使用字串的內容計算的雜湊值。  
   
-##  <a name="a-nameinargtypea--cstringelementtraitsinargtype"></a><a name="inargtype"></a>CStringElementTraits::INARGTYPE  
+##  <a name="inargtype"></a>CStringElementTraits::INARGTYPE  
  若要使用項目加入集合類別物件的資料型別。  
   
 ```
 typedef T::PCXSTR INARGTYPE;
 ```  
   
-##  <a name="a-nameoutargtypea--cstringelementtraitsoutargtype"></a><a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
+##  <a name="outargtype"></a>CStringElementTraits::OUTARGTYPE  
  要用來擷取項目從集合類別物件的資料類型。  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="a-namerelocateelementsa--cstringelementtraitsrelocateelements"></a><a name="relocateelements"></a>CStringElementTraits::RelocateElements  
+##  <a name="relocateelements"></a>CStringElementTraits::RelocateElements  
  呼叫此靜態函式來重新放置`CString`集合類別物件中儲存項目。  
   
 ```

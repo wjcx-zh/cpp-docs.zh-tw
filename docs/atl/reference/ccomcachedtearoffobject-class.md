@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CComCachedTearOffObject
-- ATL.CComCachedTearOffObject
-- ATL.CComCachedTearOffObject<contained>
 - CComCachedTearOffObject
-- ATL::CComCachedTearOffObject<contained>
+- ATLCOM/ATL::CComCachedTearOffObject
+- ATLCOM/ATL::CComCachedTearOffObject::CComCachedTearOffObject
+- ATLCOM/ATL::CComCachedTearOffObject::AddRef
+- ATLCOM/ATL::CComCachedTearOffObject::FinalConstruct
+- ATLCOM/ATL::CComCachedTearOffObject::FinalRelease
+- ATLCOM/ATL::CComCachedTearOffObject::QueryInterface
+- ATLCOM/ATL::CComCachedTearOffObject::Release
+- ATLCOM/ATL::CComCachedTearOffObject::m_contained
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -106,7 +110,7 @@ public CComObjectRootEx<contained
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
   
-##  <a name="a-nameaddrefa--ccomcachedtearoffobjectaddref"></a><a name="addref"></a>CComCachedTearOffObject::AddRef  
+##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
  參考計數遞增`CComCachedTearOffObject`1 的物件。  
   
 ```
@@ -116,7 +120,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>傳回值  
  值，可用於診斷和測試。  
   
-##  <a name="a-nameccomcachedtearoffobjecta--ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
+##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
  建構函式。  
   
 ```
@@ -130,7 +134,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>備註  
  初始化`CComContainedObject`成員[m_contained](#m_contained)。  
   
-##  <a name="a-namedtora--ccomcachedtearoffobjectccomcachedtearoffobject"></a><a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
+##  <a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
  解構函式。  
   
 ```
@@ -140,7 +144,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源並呼叫[FinalRelease](#finalrelease)。  
   
-##  <a name="a-namefinalconstructa--ccomcachedtearoffobjectfinalconstruct"></a><a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
+##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
  呼叫**m_contained::FinalConstruct**建立`m_contained`、 `CComContainedObject` <  `contained`> 物件用來存取您撕類別所實作的介面。  
   
 ```
@@ -150,14 +154,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="a-namefinalreleasea--ccomcachedtearoffobjectfinalrelease"></a><a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
+##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
  呼叫**m_contained::FinalRelease**釋放`m_contained`、 `CComContainedObject` <  `contained`> 物件。  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="a-namemcontaineda--ccomcachedtearoffobjectmcontained"></a><a name="m_contained"></a>CComCachedTearOffObject::m_contained  
+##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)物件衍生自撕類別。  
   
 ```
@@ -171,7 +175,7 @@ CcomContainedObject <contained> m_contained;
 ### <a name="remarks"></a>備註  
  方法`m_contained`繼承用來存取撕介面撕類別中的透過快取撕物件`QueryInterface`， `FinalConstruct`，和`FinalRelease`。  
   
-##  <a name="a-namequeryinterfacea--ccomcachedtearoffobjectqueryinterface"></a><a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -192,7 +196,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  如果要求的介面是**IUnknown**，傳回的指標`CComCachedTearOffObject`的自己**IUnknown**並遞增參考計數。 否則，查詢上撕下類別使用的介面[InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)方法繼承自`CComObjectRootEx`。  
 
   
-##  <a name="a-namereleasea--ccomcachedtearoffobjectrelease"></a><a name="release"></a>CComCachedTearOffObject::Release  
+##  <a name="release"></a>CComCachedTearOffObject::Release  
  遞減參考計數加 1，如果參考計數為 0，會刪除`CComCachedTearOffObject`物件。  
   
 ```

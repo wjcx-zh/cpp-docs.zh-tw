@@ -9,8 +9,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DPathGeometry
 - CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry::CD2DPathGeometry
+- AFXRENDERTARGET/CD2DPathGeometry::Attach
+- AFXRENDERTARGET/CD2DPathGeometry::Create
+- AFXRENDERTARGET/CD2DPathGeometry::Destroy
+- AFXRENDERTARGET/CD2DPathGeometry::Detach
+- AFXRENDERTARGET/CD2DPathGeometry::GetFigureCount
+- AFXRENDERTARGET/CD2DPathGeometry::GetSegmentCount
+- AFXRENDERTARGET/CD2DPathGeometry::Open
+- AFXRENDERTARGET/CD2DPathGeometry::Stream
+- AFXRENDERTARGET/CD2DPathGeometry::m_pPathGeometry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -88,7 +98,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cd2dpathgeometryattach"></a><a name="attach"></a>CD2DPathGeometry::Attach  
+##  <a name="attach"></a>CD2DPathGeometry::Attach  
  會附加至現有的資源物件的介面  
   
 ```  
@@ -99,7 +109,7 @@ void Attach(ID2D1PathGeometry* pResource);
  `pResource`  
  現有的資源介面。 不能是 NULL  
   
-##  <a name="a-namecd2dpathgeometrya--cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
+##  <a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
  建構 CD2DPathGeometry 物件。  
   
 ```  
@@ -115,7 +125,7 @@ CD2DPathGeometry(
  `bAutoDestroy`  
  指出由擁有者 (pParentTarget) 將會終結物件。  
   
-##  <a name="a-namecreatea--cd2dpathgeometrycreate"></a><a name="create"></a>CD2DPathGeometry::Create  
+##  <a name="create"></a>CD2DPathGeometry::Create  
  建立 CD2DPathGeometry。  
   
 ```  
@@ -129,14 +139,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-namedestroya--cd2dpathgeometrydestroy"></a><a name="destroy"></a>CD2DPathGeometry::Destroy  
+##  <a name="destroy"></a>CD2DPathGeometry::Destroy  
  終結 CD2DPathGeometry 物件。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dpathgeometrydetach"></a><a name="detach"></a>CD2DPathGeometry::Detach  
+##  <a name="detach"></a>CD2DPathGeometry::Detach  
  中斷連結物件中的資源介面  
   
 ```  
@@ -146,7 +156,7 @@ ID2D1PathGeometry* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的資源介面指標。  
   
-##  <a name="a-namegetfigurecounta--cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
+##  <a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
  擷取之路徑幾何中的數字的數目。  
   
 ```  
@@ -156,7 +166,7 @@ int GetFigureCount() const;
 ### <a name="return-value"></a>傳回值  
  傳回之路徑幾何中的數字的數目。  
   
-##  <a name="a-namegetsegmentcounta--cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
+##  <a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
  擷取之路徑幾何中的區段數目。  
   
 ```  
@@ -166,14 +176,14 @@ int GetSegmentCount() const;
 ### <a name="return-value"></a>傳回值  
  傳回之路徑幾何中的區段數目。  
   
-##  <a name="a-namemppathgeometrya--cd2dpathgeometrymppathgeometry"></a><a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
+##  <a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
  ID2D1PathGeometry 指標。  
   
 ```  
 ID2D1PathGeometry* m_pPathGeometry;  
 ```  
   
-##  <a name="a-nameopena--cd2dpathgeometryopen"></a><a name="open"></a>CD2DPathGeometry::Open  
+##  <a name="open"></a>CD2DPathGeometry::Open  
  擷取用來填入具有數字和區段之路徑幾何的幾何接收。  
   
 ```  
@@ -183,7 +193,7 @@ ID2D1GeometrySink* Open();
 ### <a name="return-value"></a>傳回值  
  用來填入具有數字和區段之路徑幾何 ID2D1GeometrySink 指標。  
   
-##  <a name="a-namestreama--cd2dpathgeometrystream"></a><a name="stream"></a>CD2DPathGeometry::Stream  
+##  <a name="stream"></a>CD2DPathGeometry::Stream  
  將路徑幾何的內容複製到指定的 ID2D1GeometrySink。  
   
 ```  

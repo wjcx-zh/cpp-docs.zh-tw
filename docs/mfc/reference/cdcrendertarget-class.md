@@ -9,8 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CDCRenderTarget
 - CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::CDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::Attach
+- AFXRENDERTARGET/CDCRenderTarget::BindDC
+- AFXRENDERTARGET/CDCRenderTarget::Create
+- AFXRENDERTARGET/CDCRenderTarget::Detach
+- AFXRENDERTARGET/CDCRenderTarget::GetDCRenderTarget
+- AFXRENDERTARGET/CDCRenderTarget::m_pDCRenderTarget
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +96,7 @@ class CDCRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-nameattacha--cdcrendertargetattach"></a><a name="attach"></a>CDCRenderTarget::Attach  
+##  <a name="attach"></a>CDCRenderTarget::Attach  
  會附加至現有的呈現目標物件的介面  
   
 ```  
@@ -100,7 +107,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
  `pTarget`  
  現有的呈現目標介面。 不能是 NULL  
   
-##  <a name="a-namebinddca--cdcrendertargetbinddc"></a><a name="binddc"></a>CDCRenderTarget::BindDC  
+##  <a name="binddc"></a>CDCRenderTarget::BindDC  
  將呈現目標繫結到它所簽發繪製命令的裝置內容  
   
 ```  
@@ -119,14 +126,14 @@ BOOL BindDC(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
   
-##  <a name="a-namecdcrendertargeta--cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
+##  <a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
  建構 CDCRenderTarget 物件。  
   
 ```  
 CDCRenderTarget();
 ```  
   
-##  <a name="a-namecreatea--cdcrendertargetcreate"></a><a name="create"></a>CDCRenderTarget::Create  
+##  <a name="create"></a>CDCRenderTarget::Create  
  建立 CDCRenderTarget。  
   
 ```  
@@ -140,7 +147,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
   
-##  <a name="a-namedetacha--cdcrendertargetdetach"></a><a name="detach"></a>CDCRenderTarget::Detach  
+##  <a name="detach"></a>CDCRenderTarget::Detach  
  中斷連結物件中的呈現目標介面  
   
 ```  
@@ -150,7 +157,7 @@ ID2D1DCRenderTarget* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的指標會呈現目標的介面。  
   
-##  <a name="a-namegetdcrendertargeta--cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
+##  <a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
  傳回 ID2D1DCRenderTarget 介面  
   
 ```  
@@ -160,14 +167,14 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1DCRenderTarget 介面的指標。  
   
-##  <a name="a-namempdcrendertargeta--cdcrendertargetmpdcrendertarget"></a><a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
+##  <a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
  ID2D1DCRenderTarget 物件的指標。  
   
 ```  
 ID2D1DCRenderTarget* m_pDCRenderTarget;  
 ```  
   
-##  <a name="a-nameoperatorid2d1dcrendertargetstara--cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
+##  <a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
  傳回 ID2D1DCRenderTarget 介面  
   
 ```  

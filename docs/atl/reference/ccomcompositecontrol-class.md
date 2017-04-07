@@ -10,10 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
-- ATL::CComCompositeControl
-- ATL.CComCompositeControl<T>
-- ATL.CComCompositeControl
-- ATL::CComCompositeControl<T>
+- ATLCTL/ATL::CComCompositeControl
+- ATLCTL/ATL::CComCompositeControl::CComCompositeControl
+- ATLCTL/ATL::CComCompositeControl::AdviseSinkMap
+- ATLCTL/ATL::CComCompositeControl::CalcExtent
+- ATLCTL/ATL::CComCompositeControl::Create
+- ATLCTL/ATL::CComCompositeControl::CreateControlWindow
+- ATLCTL/ATL::CComCompositeControl::SetBackgroundColorFromAmbient
+- ATLCTL/ATL::CComCompositeControl::m_hbrBackground
+- ATLCTL/ATL::CComCompositeControl::m_hWndFocus
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -117,7 +122,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>需求  
  **標頭︰** atlctl.h  
   
-##  <a name="a-nameadvisesinkmapa--ccomcompositecontroladvisesinkmap"></a><a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
  呼叫此方法以通知或取消通知複合控制項所裝載的所有控制項。  
   
 ```
@@ -150,7 +155,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>備註  
  這個方法的基底實作會搜尋項目，在事件接收對應。 然後，它會建議或取消通知事件接收對應接收項目所描述之 COM 物件的連接點。 這個成員的方法也會依賴衍生的類別繼承自一個執行個體的事實`IDispEventImpl`為建議使用或 unadvised 接收對應中的每一個控制項。  
   
-##  <a name="a-namecalcextenta--ccomcompositecontrolcalcextent"></a><a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
  呼叫這個方法來計算的大小以**HIMETRIC**單位用來裝載複合控制項的對話方塊資源。  
   
 ```
@@ -167,7 +172,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>備註  
  在傳回的大小`size`參數。  
   
-##  <a name="a-namecreatea--ccomcompositecontrolcreate"></a><a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>CComCompositeControl::Create  
  您可以呼叫這個方法建立複合控制項的控制項視窗。  
   
 ```
@@ -193,7 +198,7 @@ HWND Create(
 ### <a name="remarks"></a>備註  
  這個方法通常會呼叫控制項的就地啟用期間。  
   
-##  <a name="a-nameccomcompositecontrola--ccomcompositecontrolccomcompositecontrol"></a><a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
  建構函式。  
   
 ```
@@ -203,7 +208,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>備註  
  初始化[CComCompositeControl::m_hbrBackground](#m_hbrbackground)和[CComCompositeControl::m_hWndFocus](#m_hwndfocus)為 NULL 的資料成員。  
   
-##  <a name="a-namedtora--ccomcompositecontrolccomcompositecontrol"></a><a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
  解構函式。  
   
 ```
@@ -213,7 +218,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>備註  
  如果存在的話，請刪除背景物件。  
   
-##  <a name="a-namecreatecontrolwindowa--ccomcompositecontrolcreatecontrolwindow"></a><a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
  呼叫這個方法來建立控制項的視窗，並建議任何裝載的控制項。  
   
 ```
@@ -235,21 +240,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[CComCompositeControl::Create](#create)和[CComCompositeControl::AdviseSinkMap](#advisesinkmap)。  
   
-##  <a name="a-namemhbrbackgrounda--ccomcompositecontrolmhbrbackground"></a><a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
  背景筆刷。  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="a-namemhwndfocusa--ccomcompositecontrolmhwndfocus"></a><a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
  目前具有焦點的視窗控制代碼。  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="a-namesetbackgroundcolorfromambienta--ccomcompositecontrolsetbackgroundcolorfromambient"></a><a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
  呼叫這個方法來設定使用容器的背景色彩的複合控制項的背景色彩。  
   
 ```

@@ -9,11 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CAtlModuleT<T>
-- ATL.CAtlModuleT
-- ATL.CAtlModuleT<T>
-- ATL::CAtlModuleT
 - CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT::CAtlModuleT
+- ATLBASE/ATL::CAtlModuleT::InitLibId
+- ATLBASE/ATL::CAtlModuleT::RegisterAppId
+- ATLBASE/ATL::CAtlModuleT::RegisterServer
+- ATLBASE/ATL::CAtlModuleT::UnregisterAppId
+- ATLBASE/ATL::CAtlModuleT::UnregisterServer
+- ATLBASE/ATL::CAtlModuleT::UpdateRegistryAppId
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,7 +96,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
-##  <a name="a-namecatlmoduleta--catlmoduletcatlmodulet"></a><a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
+##  <a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
  建構函式。  
   
 ```
@@ -102,7 +106,7 @@ CAtlModuleT() throw();
 ### <a name="remarks"></a>備註  
  呼叫[CAtlModuleT::InitLibId](#initlibid)。  
   
-##  <a name="a-nameinitlibida--catlmoduletinitlibid"></a><a name="initlibid"></a>CAtlModuleT::InitLibId  
+##  <a name="initlibid"></a>CAtlModuleT::InitLibId  
  初始化資料成員，其中包含目前模組的 GUID。  
   
 ```
@@ -112,7 +116,7 @@ static void InitLibId() throw();
 ### <a name="remarks"></a>備註  
  建構函式呼叫[CAtlModuleT::CAtlModuleT](#catlmodulet)。  
   
-##  <a name="a-nameregisterappida--catlmoduletregisterappid"></a><a name="registerappid"></a>CAtlModuleT::RegisterAppId  
+##  <a name="registerappid"></a>CAtlModuleT::RegisterAppId  
  將 EXE 加入登錄。  
   
 ```
@@ -122,7 +126,7 @@ HRESULT RegisterAppId() throw();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="a-nameregisterservera--catlmoduletregisterserver"></a><a name="registerserver"></a>CAtlModuleT::RegisterServer  
+##  <a name="registerserver"></a>CAtlModuleT::RegisterServer  
  將服務加入至登錄。  
   
 ```
@@ -141,7 +145,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="a-nameunregisterappida--catlmoduletunregisterappid"></a><a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
  從登錄移除 EXE。  
   
 ```
@@ -151,7 +155,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="a-nameunregisterservera--catlmoduletunregisterserver"></a><a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
+##  <a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
  從登錄中移除服務。  
   
 ```
@@ -170,7 +174,7 @@ HRESULT UnregisterServer(
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="a-nameupdateregistryappida--catlmoduletupdateregistryappid"></a><a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
+##  <a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
  更新登錄中的 EXE 資訊。  
   
 ```

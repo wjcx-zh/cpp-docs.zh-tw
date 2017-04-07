@@ -9,8 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- afxrendertarget/CD2DMesh
 - CD2DMesh
+- AFXRENDERTARGET/CD2DMesh
+- AFXRENDERTARGET/CD2DMesh::CD2DMesh
+- AFXRENDERTARGET/CD2DMesh::Attach
+- AFXRENDERTARGET/CD2DMesh::Create
+- AFXRENDERTARGET/CD2DMesh::Destroy
+- AFXRENDERTARGET/CD2DMesh::Detach
+- AFXRENDERTARGET/CD2DMesh::Get
+- AFXRENDERTARGET/CD2DMesh::IsValid
+- AFXRENDERTARGET/CD2DMesh::Open
+- AFXRENDERTARGET/CD2DMesh::m_pMesh
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -92,14 +101,14 @@ class CD2DMesh : public CD2DResource;
 ## <a name="requirements"></a>需求  
  **標頭︰** afxrendertarget.h  
   
-##  <a name="a-namedtorcd2dmesha--cd2dmeshcd2dmesh"></a><a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
+##  <a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
  解構函式。 D2D 網格物件終結時呼叫。  
   
 ```  
 virtual ~CD2DMesh();
 ```  
   
-##  <a name="a-nameattacha--cd2dmeshattach"></a><a name="attach"></a>CD2DMesh::Attach  
+##  <a name="attach"></a>CD2DMesh::Attach  
  會附加至現有的資源物件的介面  
   
 ```  
@@ -110,7 +119,7 @@ void Attach(ID2D1Mesh* pResource);
  `pResource`  
  現有的資源介面。 不能是 NULL  
   
-##  <a name="a-namecd2dmesha--cd2dmeshcd2dmesh"></a><a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
+##  <a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
  建構 CD2DMesh 物件。  
   
 ```  
@@ -126,7 +135,7 @@ CD2DMesh(
  `bAutoDestroy`  
  指出由擁有者 (pParentTarget) 將會終結物件。  
   
-##  <a name="a-namecreatea--cd2dmeshcreate"></a><a name="create"></a>CD2DMesh::Create  
+##  <a name="create"></a>CD2DMesh::Create  
  建立 CD2DMesh。  
   
 ```  
@@ -140,14 +149,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>傳回值  
  如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="a-namedestroya--cd2dmeshdestroy"></a><a name="destroy"></a>CD2DMesh::Destroy  
+##  <a name="destroy"></a>CD2DMesh::Destroy  
  終結 CD2DMesh 物件。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="a-namedetacha--cd2dmeshdetach"></a><a name="detach"></a>CD2DMesh::Detach  
+##  <a name="detach"></a>CD2DMesh::Detach  
  中斷連結物件中的資源介面  
   
 ```  
@@ -157,7 +166,7 @@ ID2D1Mesh* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的資源介面指標。  
   
-##  <a name="a-namegeta--cd2dmeshget"></a><a name="get"></a>CD2DMesh::Get  
+##  <a name="get"></a>CD2DMesh::Get  
  傳回 ID2D1Mesh 介面  
   
 ```  
@@ -167,7 +176,7 @@ ID2D1Mesh* Get();
 ### <a name="return-value"></a>傳回值  
  如果物件尚未初始化為 NULL 的 ID2D1Mesh 介面的指標。  
   
-##  <a name="a-nameisvalida--cd2dmeshisvalid"></a><a name="isvalid"></a>CD2DMesh::IsValid  
+##  <a name="isvalid"></a>CD2DMesh::IsValid  
  檢查資源的有效性  
   
 ```  
@@ -177,14 +186,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>傳回值  
  如果資源無效，則為 TRUE否則為 FALSE。  
   
-##  <a name="a-namempmesha--cd2dmeshmpmesh"></a><a name="m_pmesh"></a>CD2DMesh::m_pMesh  
+##  <a name="m_pmesh"></a>CD2DMesh::m_pMesh  
  ID2D1Mesh 指標。  
   
 ```  
 ID2D1Mesh* m_pMesh;  
 ```  
   
-##  <a name="a-nameopena--cd2dmeshopen"></a><a name="open"></a>CD2DMesh::Open  
+##  <a name="open"></a>CD2DMesh::Open  
  開啟網狀結構母體擴展。  
   
 ```  
@@ -194,7 +203,7 @@ ID2D1TessellationSink* Open();
 ### <a name="return-value"></a>傳回值  
  用來填入網狀結構 ID2D1TessellationSink 指標。  
   
-##  <a name="a-nameoperatorid2d1meshstara--cd2dmeshoperator-id2d1mesh"></a><a name="operator_id2d1mesh_star"></a>CD2DMesh::operator ID2D1Mesh *  
+##  <a name="operator_id2d1mesh_star"></a>CD2DMesh::operator ID2D1Mesh *  
  傳回 ID2D1Mesh 介面  
   
 ```  

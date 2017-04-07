@@ -9,9 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
-- ATL::CDynamicChain
-- ATL.CDynamicChain
 - CDynamicChain
+- ATLWIN/ATL::CDynamicChain
+- ATLWIN/ATL::CDynamicChain::CDynamicChain
+- ATLWIN/ATL::CDynamicChain::CallChain
+- ATLWIN/ATL::CDynamicChain::RemoveChainEntry
+- ATLWIN/ATL::CDynamicChain::SetChainEntry
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -98,7 +101,7 @@ class CDynamicChain
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-namecallchaina--cdynamicchaincallchain"></a><a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>CDynamicChain::CallChain  
  Windows 會將訊息導向至另一個物件的訊息對應。  
   
 ```
@@ -138,14 +141,14 @@ BOOL CallChain(
   
  `CallChain`需要先前呼叫[SetChainEntry](#setchainentry)關聯`dwChainID`物件，其訊息對應值。  
   
-##  <a name="a-namecdynamicchaina--cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
  建構函式。  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="a-namedtora--cdynamicchaincdynamicchain"></a><a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
  解構函式。  
   
 ```
@@ -155,7 +158,7 @@ CDynamicChain();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="a-nameremovechainentrya--cdynamicchainremovechainentry"></a><a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
  從集合中移除指定的訊息對應。  
   
 ```
@@ -169,7 +172,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>傳回值  
  **TRUE**如果從集合中成功移除的訊息對應。 否則， **FALSE**。  
   
-##  <a name="a-namesetchainentrya--cdynamicchainsetchainentry"></a><a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
  將指定的訊息對應新增至集合。  
   
 ```

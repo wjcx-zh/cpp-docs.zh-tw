@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CCtrlView
+- AFXWIN/CCtrlView
+- AFXWIN/CCtrlView::CCtrlView
+- AFXWIN/CCtrlView::OnDraw
+- AFXWIN/CCtrlView::PreCreateWindow
+- AFXWIN/CCtrlView::m_dwDefaultStyle
+- AFXWIN/CCtrlView::m_strClass
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -89,7 +95,7 @@ class CCtrlView : public CView
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="a-namecctrlviewa--cctrlviewcctrlview"></a><a name="cctrlview"></a>CCtrlView::CCtrlView  
+##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
  建構 `CCtrlView` 物件。  
   
 ```  
@@ -108,14 +114,14 @@ CCtrlView(
 ### <a name="remarks"></a>備註  
  建立新的框架視窗，或分隔視窗時，架構會呼叫建構函式。 覆寫[cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)文件連結之後初始化檢視。 呼叫[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)或[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)來建立視窗物件。  
   
-##  <a name="a-namemstrclassa--cctrlviewmstrclass"></a><a name="m_strclass"></a>CCtrlView::m_strClass  
+##  <a name="m_strclass"></a>CCtrlView::m_strClass  
  包含檢視類別的 Windows 類別名稱。  
   
 ```  
 CString m_strClass;  
 ```  
   
-##  <a name="a-namemdwdefaultstylea--cctrlviewmdwdefaultstyle"></a><a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
+##  <a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
  包含檢視類別的預設樣式。  
   
 ```  
@@ -125,7 +131,7 @@ DWORD m_dwDefaultStyle;
 ### <a name="remarks"></a>備註  
  建立視窗時，會套用此樣式。  
   
-##  <a name="a-nameondrawa--cctrlviewondraw"></a><a name="ondraw"></a>CCtrlView::OnDraw  
+##  <a name="ondraw"></a>CCtrlView::OnDraw  
  若要繪製的內容架構呼叫`CCtrlView`物件使用指定的裝置內容。  
   
 ```  
@@ -139,7 +145,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>備註  
  `OnDraw`通常會呼叫傳遞所指定的螢幕裝置內容的螢幕上的`pDC`。  
   
-##  <a name="a-nameprecreatewindowa--cctrlviewprecreatewindow"></a><a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
+##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
  在建立附加至此 `CWnd` 物件的 Windows 視窗前呼叫。  
   
 ```  

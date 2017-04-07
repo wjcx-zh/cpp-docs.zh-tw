@@ -56,9 +56,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 8c4e7cd3040e9d9d6d3c3a5a915118fbc815aebf
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
+ms.openlocfilehash: 789c1fc872f478945de6444c07de069b50074a7f
+ms.lasthandoff: 03/17/2017
 
 ---
 # <a name="unorm2-class"></a>unorm_2 類別
@@ -80,7 +80,7 @@ class unorm_2;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[unorm_2 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
@@ -88,30 +88,30 @@ class unorm_2;
   
 |名稱|描述|  
 |----------|-----------------|  
-|unorm_2::get_x 方法||  
-|unorm_2::get_xy 方法||  
-|unorm_2::get_y 方法||  
-|unorm_2::get_yx 方法||  
-|unorm_2::ref_g 方法||  
-|unorm_2::ref_r 方法||  
-|unorm_2::ref_x 方法||  
-|unorm_2::ref_y 方法||  
-|unorm_2::set_x 方法||  
-|unorm_2::set_xy 方法||  
-|unorm_2::set_y 方法||  
-|unorm_2::set_yx 方法||  
+|unorm_2::get_x||  
+|unorm_2::get_xy||  
+|unorm_2::get_y||  
+|unorm_2::get_yx||  
+|unorm_2:: ref_g||  
+|unorm_2:: ref_r||  
+|unorm_2:: ref_x||  
+|unorm_2:: ref_y||  
+|unorm_2::set_x||  
+|unorm_2::set_xy||  
+|unorm_2::set_y||  
+|unorm_2::set_yx||  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|unorm_2::operator-運算子||  
-|unorm_2::operator * = 運算子||  
-|unorm_2::operator / = 運算子||  
-|unorm_2::operator + + 運算子||  
-|unorm_2::operator + = 運算子||  
-|unorm_2::operator = 運算子||  
-|unorm_2::operator-= 運算子||  
+|unorm_2::operator-||  
+|unorm_2::operator * =||  
+|unorm_2::operator / =||  
+|unorm_2::operator + +||  
+|unorm_2::operator + =||  
+|unorm_2::operator =||  
+|unorm_2::operator =||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -121,16 +121,16 @@ class unorm_2;
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|unorm_2::g 資料成員||  
-|unorm_2::gr 資料成員||  
-|unorm_2::r 資料成員||  
-|unorm_2::rg 資料成員||  
-|unorm_2::x 資料成員||  
-|unorm_2::xy 資料成員||  
-|unorm_2::y 資料成員||  
-|unorm_2::yx 資料成員||  
+|unorm_2::g||  
+|unorm_2::gr||  
+|unorm_2::r||  
+|unorm_2::rg||  
+|unorm_2::x||  
+|unorm_2::xy||  
+|unorm_2::y||  
+|unorm_2::yx||  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `unorm_2`  
@@ -140,7 +140,7 @@ class unorm_2;
   
  **命名空間︰** concurrency:: graphics  
   
-##  <a name="a-namectora-unorm2"></a><a name="ctor"></a>unorm_2 
+##  <a name="ctor"></a>unorm_2 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -214,12 +214,12 @@ explicit inline unorm_2(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="a-nameunorm2sizea-size"></a><a name="unorm_2__size"></a>大小 
+##  <a name="unorm_2__size"></a>大小 
 
 ```  
 static const int size = 2;  
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
 

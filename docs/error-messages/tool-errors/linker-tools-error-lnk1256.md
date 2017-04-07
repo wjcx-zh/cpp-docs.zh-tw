@@ -35,19 +35,19 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 02231366d7b20be51e7b918fe7932fc80a38b169
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5e29e6100b57531c7a29f84e7c0feac53f20cec9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="linker-tools-error-lnk1256"></a>連結器工具錯誤 LNK1256
 ALINK 作業失敗：原因  
   
- LNK1256 的一個常見原因是組件的版本號碼不正確。 在組件版本號碼的任何部分中都不允許值 65535。 組件版本的有效範圍是 0 – 65534。  
+ LNK1256 的一個常見原因是組件的版本號碼不正確。 在組件版本號碼的任何部分中都不允許值 65535。 組件版本的有效範圍是 0-65534。  
   
- 如果 ALINK 找不到具名的金鑰容器，也可能會造成 LNK1256。 刪除金鑰容器，並將它重新加入強式名稱 CSP 使用[Sn.exe （強式名稱工具）](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)。  
+ 如果 ALINK 找不到具名的金鑰容器，也可能會造成 LNK1256。 刪除金鑰容器並將其再次加入強式名稱 CSP 使用[Sn.exe （強式名稱工具）](http://msdn.microsoft.com/Library/c1d2b532-1b8e-4c7a-8ac5-53b801135ec6)。  
   
- LNK1256 的另一個原因是連結器與 Alink.dll 之間的版本不相符。 Visual Studio 安裝損毀可能會造成此問題。 使用**程式和功能**在 Windows 控制台中，修復或重新安裝 Visual Studio。  
+ LNK1256 的另一個原因是連結器與 Alink.dll 之間的版本不相符。 Visual Studio 安裝損毀可能會造成此問題。 使用**程式和功能**Windows 控制台中修復或重新安裝 Visual Studio。  
   
  下列範例會產生 LNK1256：  
   

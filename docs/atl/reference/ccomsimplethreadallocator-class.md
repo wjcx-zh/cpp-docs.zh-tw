@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 377e7f2fa6d8377d46e98b52e9c8f075b10956a8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 04946d07bea39eb739c31a3254355d3527d2e9c3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator 類別
@@ -62,13 +62,13 @@ class CComSimpleThreadAllocator
 |[CComSimpleThreadAllocator::GetThread](#getthread)|選取一個執行緒。|  
   
 ## <a name="remarks"></a>備註  
- `CComSimpleThreadAllocator`管理的執行緒選取[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。 `CComSimpleThreadAllocator::GetThread`透過每個執行緒會直接轉換，並傳回序列中的下一個。  
+ `CComSimpleThreadAllocator`管理執行緒選取項目[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)。 `CComSimpleThreadAllocator::GetThread`只要逐一循環顯示每個執行緒，並傳回序列中的下一個。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
   
 ##  <a name="getthread"></a>CComSimpleThreadAllocator::GetThread  
- 選取指定序列中的下一個執行緒的執行緒。  
+ 選取一個執行緒藉由指定序列中下一個執行緒。  
   
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
@@ -82,10 +82,10 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
  EXE 模組中的執行緒數目上限。  
   
 ### <a name="return-value"></a>傳回值  
- 介於零的整數和 ( `nThreads` – 1)。 識別的 EXE 模組中的執行緒。  
+ 介於零的整數和 ( `nThreads` -1)。 識別一 EXE 模組中的執行緒。  
   
 ### <a name="remarks"></a>備註  
- 您可以覆寫`GetThread`提供選取不同的方法，或請使用`pApt`參數。  
+ 您可以覆寫`GetThread`提供選取不同方法，或請使用`pApt`參數。  
   
  `GetThread`會呼叫[CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)。  
   

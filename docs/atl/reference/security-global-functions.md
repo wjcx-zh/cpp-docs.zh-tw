@@ -1,5 +1,5 @@
 ---
-title: "安全性的全域函式 |Microsoft 文件"
+title: "安全性全域函式 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 368da76305910a0948eb386990a4bcdb84e61396
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ff5afaaf2746d9e07eb9e06a079d34adb2f67109
+ms.lasthandoff: 04/04/2017
 
 ---
-# <a name="security-global-functions"></a>安全性的全域函式
-這些函式提供支援修改 SID 和 ACL 物件。  
+# <a name="security-global-functions"></a>安全性全域函式
+這些函式提供修改 SID 和 ACL 物件的支援。  
   
 > [!IMPORTANT]
 >  下表所列出的函數不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 
 
-##  <a name="a-nameatlgetdacla--atlgetdacl"></a><a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>AtlGetDacl  
  呼叫此函式可擷取所指定物件的判別存取控制清單 (DACL) 資訊。  
   
 > [!IMPORTANT]
@@ -75,23 +75,21 @@ inline bool AtlGetDacl(
   
 ### <a name="parameters"></a>參數  
  `hObject`  
- 要擷取的安全性資訊的物件控制代碼。  
+ 要擷取的安全性資訊物件的控制代碼。  
   
  `ObjectType`  
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別`hObject`參數。  
   
  `pDacl`  
- DACL 物件將會包含擷取的安全性資訊的指標。  
+ 將包含所擷取的安全性資訊的 DACL 物件指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 在偵錯組建，判斷提示就會發生錯誤，如果`hObject`或`pDacl`無效*。*  
-
-v
-
-##  <a name="a-nameatlsetdacla--atlsetdacl"></a><a name="atlsetdacl"></a>AtlSetDacl  
+ 在偵錯組建中，如果有任一個，會發生判斷提示錯誤`hObject`或`pDacl`無效。  
+  
+##  <a name="atlsetdacl"></a>AtlSetDacl  
  呼叫此函式可設定所指定物件的判別存取控制清單 (DACL) 資訊。  
   
 > [!IMPORTANT]
@@ -107,13 +105,13 @@ inline bool AtlSetDacl(
   
 ### <a name="parameters"></a>參數  
  `hObject`  
- 要設定安全性資訊的物件控制代碼。  
+ 要設定安全性資訊的物件的控制代碼。  
   
  `ObjectType`  
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別`hObject`參數。  
   
  `rDacl`  
- DACL，其中包含新的安全性資訊。  
+ 包含新的安全性資訊的 DACL。  
   
  `dwInheritanceFlowControl`  
  繼承的流程控制。 這個值可以是 0 （預設）、 PROTECTED_DACL_SECURITY_INFORMATION 或 UNPROTECTED_DACL_SECURITY_INFORMATION。  
@@ -122,11 +120,11 @@ inline bool AtlSetDacl(
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 在偵錯組建，判斷提示就會發生錯誤，如果`hObject`無效，或如果`dwInheritanceFlowControl`不是其中三個允許的值。  
+ 在偵錯組建，判斷提示就會發生錯誤，如果`hObject`無效，或如果`dwInheritanceFlowControl`不是三個允許值之一。  
 ### <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 
 
-##  <a name="a-nameatlgetgroupsida--atlgetgroupsid"></a><a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
  呼叫此函式可擷取物件的群組安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
@@ -141,13 +139,13 @@ inline bool AtlGetGroupSid(
   
 ### <a name="parameters"></a>參數  
  `hObject`  
- 要從中擷取安全性資訊的物件控制代碼。  
+ 要從中擷取安全性資訊的物件的控制代碼。  
   
  `ObjectType`  
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別`hObject`參數。  
   
  `pSid`  
- 指標`CSid`物件將會包含新的安全性資訊。  
+ 指標`CSid`其中將包含新的安全性資訊的物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
@@ -155,7 +153,7 @@ inline bool AtlGetGroupSid(
 ### <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 
 
-##  <a name="a-nameatlsetgroupsida--atlsetgroupsid"></a><a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
  呼叫此函式可設定物件的群組安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
@@ -170,7 +168,7 @@ inline bool AtlSetGroupSid(
   
 ### <a name="parameters"></a>參數  
  `hObject`  
- 要設定安全性資訊的物件控制代碼。  
+ 要設定安全性資訊的物件的控制代碼。  
   
  `ObjectType`  
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別`hObject`參數。  
@@ -184,7 +182,7 @@ inline bool AtlSetGroupSid(
 ### <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 
 
-##  <a name="a-nameatlgetownersida--atlgetownersid"></a><a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
  呼叫此函式可擷取物件的擁有者安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
@@ -199,13 +197,13 @@ inline bool AtlGetOwnerSid(
   
 ### <a name="parameters"></a>參數  
  `hObject`  
- 要從中擷取安全性資訊的物件控制代碼。  
+ 要從中擷取安全性資訊的物件的控制代碼。  
   
  `ObjectType`  
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別`hObject`參數。  
   
  `pSid`  
- 指標`CSid`物件將會包含新的安全性資訊。  
+ 指標`CSid`其中將包含新的安全性資訊的物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
@@ -213,7 +211,7 @@ inline bool AtlGetOwnerSid(
 ### <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 
 
-##  <a name="a-nameatlsetownersida--atlsetownersid"></a><a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
  呼叫此函式可設定物件的擁有者安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
@@ -228,7 +226,7 @@ inline bool AtlSetOwnerSid(
   
 ### <a name="parameters"></a>參數  
  `hObject`  
- 要設定安全性資訊的物件控制代碼。  
+ 要設定安全性資訊的物件的控制代碼。  
   
  `ObjectType`  
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別`hObject`參數。  
@@ -242,7 +240,7 @@ inline bool AtlSetOwnerSid(
 ### <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 
 
-##  <a name="a-nameatlgetsacla--atlgetsacl"></a><a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>AtlGetSacl  
  呼叫此函式可擷取所指定物件的系統存取控制清單 (SACL) 資訊。  
   
 > [!IMPORTANT]
@@ -258,27 +256,27 @@ inline bool AtlGetSacl(
   
 ### <a name="parameters"></a>參數  
  `hObject`  
- 要從中擷取安全性資訊的物件控制代碼。  
+ 要從中擷取安全性資訊的物件的控制代碼。  
   
  `ObjectType`  
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別`hObject`參數。  
   
  `pSacl`  
- SACL 物件將會包含擷取的安全性資訊的指標。  
+ SACL 物件將會包含所擷取的安全性資訊的指標。  
   
  `bRequestNeededPrivileges`  
- 如果為 true，函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成。  
+ 如果為 true，則函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 如果`AtlGetSacl`多次呼叫許多不同的物件，將會更有效率的方式啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，並使用`bRequestNeededPrivileges`設為 false。  
+ 如果`AtlGetSacl`將許多不同的物件上呼叫多次會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率`bRequestNeededPrivileges`設為 false。  
 
 ### <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 
 
-##  <a name="a-nameatlsetsacla--atlsetsacl"></a><a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>AtlSetSacl  
  呼叫此函式可設定所指定物件的系統存取控制清單 (SACL) 資訊。  
   
 > [!IMPORTANT]
@@ -295,7 +293,7 @@ inline bool AtlSetSacl(
   
 ### <a name="parameters"></a>參數  
  `hObject`  
- 要設定安全性資訊的物件控制代碼。  
+ 要設定安全性資訊的物件的控制代碼。  
   
  `ObjectType`  
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別`hObject`參數。  
@@ -307,20 +305,20 @@ inline bool AtlSetSacl(
  繼承的流程控制。 這個值可以是 0 （預設）、 PROTECTED_SACL_SECURITY_INFORMATION 或 UNPROTECTED_SACL_SECURITY_INFORMATION。  
   
  `bRequestNeededPrivileges`  
- 如果為 true，函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成。  
+ 如果為 true，則函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 在偵錯組建，判斷提示就會發生錯誤，如果`hObject`無效，或如果`dwInheritanceFlowControl`不是其中三個允許的值。  
+ 在偵錯組建，判斷提示就會發生錯誤，如果`hObject`無效，或如果`dwInheritanceFlowControl`不是三個允許值之一。  
   
- 如果`AtlSetSacl`多次呼叫許多不同的物件，將會更有效率的方式啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，並使用`bRequestNeededPrivileges`設為 false。  
+ 如果`AtlSetSacl`將許多不同的物件上呼叫多次會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率`bRequestNeededPrivileges`設為 false。  
 
 ### <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 
 
-##  <a name="a-nameatlgetsecuritydescriptora--atlgetsecuritydescriptor"></a><a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
  呼叫此函式可擷取所指物件的安全性描述元。  
   
 > [!IMPORTANT]
@@ -345,19 +343,19 @@ inline bool AtlGetSecurityDescriptor(
  指定的值從[SE_OBJECT_TYPE](http://msdn.microsoft.com/library/windows/desktop/aa379593)列舉，指出物件所識別的型別*pszObjectName*參數。  
   
  *pSecurityDescriptor*  
- 物件會接收要求的安全性描述元。  
+ 物件，用於接收要求的安全性描述元。  
   
  *requestedInfo*  
  一組[SECURITY_INFORMATION](http://msdn.microsoft.com/library/windows/desktop/aa379573)位元旗標，表示要擷取的安全性資訊的類型。 這個參數可以是下列值的組合。  
   
  `bRequestNeededPrivileges`  
- 如果為 true，函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成。  
+ 如果為 true，則函式會嘗試啟用 SE_SECURITY_NAME 權限，並將它還原完成。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 如果`AtlGetSecurityDescriptor`多次呼叫許多不同的物件，將會更有效率的方式啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，並使用`bRequestNeededPrivileges`設為 false。  
+ 如果`AtlGetSecurityDescriptor`將許多不同的物件上呼叫多次會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率`bRequestNeededPrivileges`設為 false。  
 
 ### <a name="requirements"></a>需求  
  **標頭︰** atlsecurity.h 

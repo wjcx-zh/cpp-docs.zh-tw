@@ -40,9 +40,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bb73604ee4d15f3a71be8514f348ad265064928a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4f06c6ef0b988a348f074d50ce7a33e8015a20fe
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="clongbinary-class"></a>CLongBinary 類別
@@ -58,24 +58,24 @@ class CLongBinary : public CObject
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CLongBinary::CLongBinary](#clongbinary)|建構 `CLongBinary` 物件。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[CLongBinary::m_dwDataLength](#m_dwdatalength)|包含的實際大小，以位元組為單位的資料物件的控制代碼儲存在`m_hData`。|  
+|[CLongBinary::m_dwDataLength](#m_dwdatalength)|包含的實際大小，以位元組為單位的資料物件的控制代碼會儲存在`m_hData`。|  
 |[CLongBinary::m_hData](#m_hdata)|包含 Windows`HGLOBAL`實際影像物件控制代碼。|  
   
 ## <a name="remarks"></a>備註  
- 例如，SQL 資料表中的記錄欄位可能包含代表圖片的點陣圖。 A`CLongBinary`物件會儲存這類物件，並會記錄的大小。  
+ 例如，SQL 資料表中的記錄欄位可能包含代表圖片的點陣圖。 A`CLongBinary`物件會儲存這類物件並追蹤其大小。  
   
 > [!NOTE]
->  一般而言，最好是更好的做法是現在使用[CByteArray](../../mfc/reference/cbytearray-class.md)搭配[DFX_Binary](http://msdn.microsoft.com/library/678021a3-2e46-44d7-8528-71bb692dcc07)函式。 您仍然可以使用`CLongBinary`，但一般而言`CByteArray`提供更多的功能，在 Win32 中，因為不會遇到的 16 位元的大小限制`CByteArray`。 這項建議適用於資料存取物件 (DAO)，以及開放式資料庫連接 (ODBC) 的程式設計。  
+>  一般情況下，它是比較好的作法現在使用[CByteArray](../../mfc/reference/cbytearray-class.md)搭配[DFX_Binary](record-field-exchange-functions.md#dfx_binary)函式。 您仍然可以使用`CLongBinary`，但一般而言`CByteArray`提供更多的功能，在 Win32 中，因為不會遇到的 16 位元的大小限制`CByteArray`。 這項建議適用於資料存取物件 (DAO)，以及開放式資料庫連接 (ODBC) 的程式設計。  
   
- 若要使用`CLongBinary`物件，宣告類型的欄位資料成員`CLongBinary`資料錄集類別中。 此成員會內嵌的類別成員的資料錄集，並在建構資料錄集時，就會建構。 之後`CLongBinary`建構物件、 資料錄欄位交換 (RFX) 機制載入資料物件從目前的記錄資料來源上的欄位，並將它儲存回資料錄，更新記錄時。 RFX 查詢中的資料來源的二進位大型物件的大小會為它配置儲存體 (透過`CLongBinary`物件的`m_hData`資料成員)，並將`HGLOBAL`中資料的控制代碼`m_hData`。 RFX 也會儲存在資料物件的實際大小`m_dwDataLength`資料成員。 使用中的資料物件，可透過`m_hData`，您通常會用來操作資料儲存在 Windows 中的相同技巧`HGLOBAL`處理。  
+ 若要使用`CLongBinary`物件，宣告類型的欄位資料成員`CLongBinary`資料錄集類別中。 這個成員會內嵌的類別成員的資料錄集，而且建構資料錄集時，會在建構。 之後`CLongBinary`建構物件、 資料錄欄位交換 (RFX) 機制載入資料物件從目前的記錄資料來源上的欄位，並將它儲存回資料錄，更新記錄時。 RFX 查詢資料來源的二進位大型物件的大小為其配置儲存區 (透過`CLongBinary`物件的`m_hData`資料成員)，並將`HGLOBAL`中的資料處理`m_hData`。 RFX 也會儲存中的資料物件的實際大小`m_dwDataLength`資料成員。 使用中的資料物件，可透過`m_hData`，您通常會用來操作資料儲存在 Windows 中的相同技巧`HGLOBAL`處理。  
   
  當損毀資料錄集，內嵌`CLongBinary`也終結物件，並取消配置其解構函式`HGLOBAL`資料控制代碼。  
   
@@ -97,7 +97,7 @@ CLongBinary();
 ```  
   
 ##  <a name="m_dwdatalength"></a>CLongBinary::m_dwDataLength  
- 以位元組為單位的資料儲存在儲存實際大小`HGLOBAL`處理`m_hData`。  
+ 以位元組為單位的資料儲存在儲存的實際大小`HGLOBAL`中處理`m_hData`。  
   
 ```  
 SQLULEN m_dwDataLength;  

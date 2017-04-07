@@ -1,77 +1,102 @@
 ---
-title: "IDocHostUIHandlerDispatch Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "IDocHostUIHandlerDispatch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDocHostUIHandlerDispatch interface"
+title: "IDocHostUIHandlerDispatch 介面 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- IDocHostUIHandlerDispatch
+- atlbase/ATL::IDocHostUIHandlerDispatch
+dev_langs:
+- C++
+helpviewer_keywords:
+- IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
 caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# IDocHostUIHandlerDispatch Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 8232df949d3bdcbaab16af1802d7275a9a8642f3
+ms.openlocfilehash: a8765f5191ea2101dc20985e8112e3e06ccd6da0
+ms.lasthandoff: 03/30/2017
 
-已解析和呈現引擎的 Microsoft HTML 的介面。  
+---
+# <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 介面
+要剖析的 Microsoft HTML 和轉譯引擎的介面。  
   
 > [!IMPORTANT]
->  這個類別和其成員不能用於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]執行的應用程式。  
+>  這個類別及其成員無法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式內使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+interface IDocHostUIHandlerDispatch : IDispatch
 ```  
   
-interface IDocHostUIHandlerDispatch : IDispatch  
+## <a name="members"></a>Members  
   
-```  
-  
-## Members  
-  
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
 > [!NOTE]
->  連結列於下表是 [IDocUIHostHandler](https://msdn.microsoft.com/en-us/library/aa753260.aspx) 介面成員的 INet SDK 參考主題。  `IDocHostUIHandlerDispatch` 具有與相同的功能 **IDocUIHostHandler**，具有該差異 `IDocHostUIHandlerDispatch` 分配介面 \(Dispinterface\)，而 **IDocUIHostHandler** 是自訂介面。  
+>  下表中的連結是 INet SDK 參考主題的成員[IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)介面。 `IDocHostUIHandlerDispatch`具有相同的功能為**IDocUIHostHandler**，兩者的差異在於，`IDocHostUIHandlerDispatch`是 dispinterface 而**IDocUIHostHandler**是自訂的介面。  
   
 |||  
 |-|-|  
-|[\<caps:sentence id\="tgt7" sentenceid\="bbafd0070a97938421603b1ef8409510" class\="tgtSentence"\>EnableModeless\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753253.aspx)|從呼叫 [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115)的 MSHTML 實作。  也可稱為 MSHTML 何時顯示強制回應 \(Modal\) UI。|  
-|[\<caps:sentence id\="tgt10" sentenceid\="2cfbfb70fe0af79263134b694d06311c" class\="tgtSentence"\>FilterDataObject\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753254.aspx)|由 MSHTML 呼叫主應用程式可讓主應用程式取代 MSHTML 的資料物件。|  
-|[\<caps:sentence id\="tgt12" sentenceid\="715255e2d7f611c97308a373328e19a0" class\="tgtSentence"\>GetDropTarget\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753255.aspx)|呼叫 MSHTML，此時它是用來，置放目標可讓主應用程式提供替代的 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)。|  
-|[\<caps:sentence id\="tgt14" sentenceid\="5a51a8633a0d2036f843073d6f35a4af" class\="tgtSentence"\>GetExternal\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753256.aspx)|呼叫以取得 MSHTML 主機的 IDispatch 介面。|  
-|[\<caps:sentence id\="tgt16" sentenceid\="ce27e0c2f7ebb0aaa2f9088818dc8347" class\="tgtSentence"\>GetHostInfo\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753257.aspx)|擷取 MSHTML 主應用程式的 UI 功能。|  
-|[\<caps:sentence id\="tgt18" sentenceid\="693bd2149b17c4586cdc167e13e59f0a" class\="tgtSentence"\>GetOptionKeyPath\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753258.aspx)|傳回下一個 MSHTML 儲存使用者偏好設定的登錄機碼。|  
-|[\<caps:sentence id\="tgt20" sentenceid\="7fce94585b477684cc21a38fe9ee288c" class\="tgtSentence"\>HideUI\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753259.aspx)|呼叫，以便將 MSHTML 移除它的功能表和工具列。|  
-|[\<caps:sentence id\="tgt22" sentenceid\="359e4dcbd80b962decf88ef02d66fe14" class\="tgtSentence"\>OnDocWindowActivate\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753261.aspx)|從呼叫 [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281)的 MSHTML 實作。|  
-|[\<caps:sentence id\="tgt24" sentenceid\="8e472d7f3f3064d2ee6fdddd83002b86" class\="tgtSentence"\>OnFrameWindowActivate\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753262.aspx)|從呼叫 [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969)的 MSHTML 實作。|  
-|[\<caps:sentence id\="tgt26" sentenceid\="3fd38deec5e9f4201074e886bfb178a5" class\="tgtSentence"\>ResizeBorder\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753263.aspx)|從呼叫 [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053)的 MSHTML 實作。|  
-|[\<caps:sentence id\="tgt28" sentenceid\="2f382ba3de5494d18b20ccfa348f795e" class\="tgtSentence"\>ShowContextMenu\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753264.aspx)|從呼叫 MSHTML 顯示內容功能表。|  
-|[\<caps:sentence id\="tgt30" sentenceid\="c6978c4c8ab30ae8380439da613bb63c" class\="tgtSentence"\>ShowUI\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753265.aspx)|可讓主應用程式取代 MSHTML 功能表和工具列。|  
-|[\<caps:sentence id\="tgt32" sentenceid\="97bfd5aead25a2d9870b38da4b6745cd" class\="tgtSentence"\>TranslateAccelerator\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753266.aspx)|呼叫 MSHTML，當 [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) 或 [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) 呼叫。|  
-|[\<caps:sentence id\="tgt34" sentenceid\="55c20a6fb6b05f6059d72b2854a7d7e2" class\="tgtSentence"\>TranslateUrl\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753267.aspx)|呼叫 MSHTML 為主應用程式提供機會修改要載入的 URL。|  
-|[\<caps:sentence id\="tgt36" sentenceid\="8fdf7c2c3ebf5fa12ecc909279c951ff" class\="tgtSentence"\>UpdateUI\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/aa753268.aspx)|告知主應用程式命令狀態已變更。|  
+|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|從 MSHTML 實作的呼叫[IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115)。 也稱為 MSHTML 顯示強制回應 UI 時。|  
+|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|允許主機替換 MSHTML 的資料物件的 MSHTML 主機上呼叫。|  
+|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|它正做為置放目標，讓主機提供另一個時，由 MSHTML 呼叫[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)。|  
+|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|若要取得主機的 IDispatch 介面 MSHTML 呼叫。|  
+|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|擷取 MSHTML 主機的 UI 功能。|  
+|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|傳回在其下 MSHTML 儲存使用者喜好設定的登錄機碼。|  
+|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|MSHTML 移除其功能表與工具列時呼叫。|  
+|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|從 MSHTML 實作的呼叫[ioleinplaceactiveobject:: Ondocwindowactivate](http://msdn.microsoft.com/library/windows/desktop/ms687281)。|  
+|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|從 MSHTML 實作的呼叫[ioleinplaceactiveobject:: Onframewindowactivate](http://msdn.microsoft.com/library/windows/desktop/ms683969)。|  
+|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|從 MSHTML 實作的呼叫[ioleinplaceactiveobject:: Resizeborder](http://msdn.microsoft.com/library/windows/desktop/ms680053)。|  
+|[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|從顯示操作功能表 MSHTML 呼叫。|  
+|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|允許主機替換 MSHTML 功能表和工具列。|  
+|[Translateaccelerator 呼叫](https://msdn.microsoft.com/library/aa753266.aspx)|由 MSHTML 呼叫時[:: Translateaccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360)或[iolecontrolsite:: Translateaccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756)呼叫。|  
+|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|呼叫 mshtml 呼叫，讓主機有機會修改要載入的 URL。|  
+|[UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)|通知主機命令狀態已變更。|  
   
-## 備註  
- 可以取代功能表、工具列和內容功能表使用由 Microsoft HTML 剖析和呈現引擎 \(MSHTML\) 透過實作這個介面的主機。  
+## <a name="remarks"></a>備註  
+ 主機可以取代功能表、 工具列和操作功能表和所使用之剖析 Microsoft HTML (MSHTML) 的轉譯引擎實作這個介面。  
   
-## 需求  
- 這個介面的定義是以 IDL 或 C\+\+，如下所示。  
+## <a name="requirements"></a>需求  
+ 此介面的定義可做為 IDL 或 c + +，如下所示。  
   
-|定義型別|檔案|  
-|----------|--------|  
+|定義類型|檔案|  
+|---------------------|----------|  
 |IDL|ATLIFace.idl|  
-|C\+\+|ATLIFace.h \(也包含在 ATLBase.h\)|  
+|C++|ATLIFace.h （也包含在 ATLBase.h）|  
   
-## 請參閱  
- [IDocUIHostHandler](https://msdn.microsoft.com/en-us/library/aa753260.aspx)
+## <a name="see-also"></a>另請參閱  
+ [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
+
+
+
+
+
+
+
+
+
+

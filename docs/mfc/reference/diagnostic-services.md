@@ -49,9 +49,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: e86ca806e5e6f19fa36b3ab33ba7a518da80e86b
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 0e83114e2e6f062b9cb2164cf71bb25792304de0
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="diagnostic-services"></a>診斷服務
@@ -79,9 +79,11 @@ MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵�
 |-|-|  
 |[判斷提示](#assert)|列印訊息，再中止程式，如果指定的運算式評估為**FALSE**中的程式庫的偵錯版本。|  
 |[ASSERT_KINDOF](#assert_kindof)|測試物件是指定類別的物件，還是衍生自指定類別之類別的物件。|  
-|[ASSERT_VALID](#assert_valid)|內部物件的有效性測試藉由呼叫其`AssertValid`成員函式; 通常會覆寫從`CObject`。|  
+|[ASSERT_VALID](#assert_valid)|內部物件的有效性測試藉由呼叫其`AssertValid`成員函式; 通常會覆寫從`CObject`。|
 |[DEBUG_NEW](#debug_new)|提供偵錯模式中所有物件配置的檔案名稱和行號，以協助找出記憶體流失的問題。|  
 |[DEBUG_ONLY](#debug_only)|類似於**ASSERT**但不會測試運算式; 的值適用於程式碼應該只在偵錯模式中執行。|  
+|[請確認且 ENSURE_VALID](#ensure)|用來驗證資料的正確性。|
+|[THIS_FILE](#this_file)|會展開至已編譯之檔案的名稱。|
 |[TRACE](#trace)|提供`printf`-要偵錯版本的程式庫中的功能。|  
 |[確認](#verify)|類似於**ASSERT**但評估程式庫也如同偵錯版本的發行版本中的運算式。|  
   
@@ -93,7 +95,9 @@ MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵�
 |[afxMemDF](#afxmemdf)|全域變數，可控制偵錯記憶體配置器的行為。|  
 |[AfxCheckError](#afxcheckerror)|用來測試所傳遞的全域變數**SCODE**查看如果它是錯誤，若是如此，就會擲回適當的錯誤。|  
 |[AfxCheckMemory](#afxcheckmemory)|檢查目前配置之所有記憶體的完整性。|  
-|[AfxDump](#cdumpcontext_in_mfc_)|如果在偵錯工具中呼叫，則會一面進行偵錯，一面傾印物件的狀態。|  
+|[AfxDebugBreak](#afxdebugbreak)|導致執行中的中斷。|
+|[AfxDump](#cdumpcontext_in_mfc)|如果在偵錯工具中呼叫，則會一面進行偵錯，一面傾印物件的狀態。|  
+|[AfxDump](#afxdump)|將物件狀態傾印偵錯時的內部函式。|
 |[AfxDumpStack](#afxdumpstack)|產生目前堆疊的映像。 這個函式一律會以靜態方式連結。|  
 |[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|啟用記憶體流失傾印。|  
 |[AfxEnableMemoryTracking](#afxenablememorytracking)|開啟和關閉記憶體追蹤。|  
@@ -108,7 +112,49 @@ MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵�
 |-|-|  
 |[AfxDoForAllClasses](#afxdoforallclasses)|對所有指定的函式`CObject`-衍生類別，可支援執行階段類型檢查。|  
 |[AfxDoForAllObjects](#afxdoforallobjects)|對所有指定的函式`CObject`-衍生物件的配置與**新**。|  
+
+### <a name="mfc-compilation-macros"></a>MFC 編譯巨集
+|||
+|-|-|
+|[_AFX_SECURE_NO_WARNINGS，則](#afx_secure_no_warnings)|隱藏關於使用被取代 MFC 的功能的編譯器警告。|  
+
+
+## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS，則
+隱藏關於使用被取代 MFC 的功能的編譯器警告。  
+   
+### <a name="syntax"></a>語法   
+```  
+_AFX_SECURE_NO_WARNINGS  
+```     
+### <a name="example"></a>範例  
+ 如果沒有定義 _AFX_SECURE_NO_WARNINGS，則此程式碼範例會產生編譯器警告。  
   
+ ```cpp
+// define this before including any afx files in stdafx.h
+#define _AFX_SECURE_NO_WARNINGS
+```
+```cpp
+CRichEditCtrl* pRichEdit = new CRichEditCtrl;
+pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
+   CRect(10,10,100,200), pParentWnd, 1);
+char sz[256];
+pRichEdit->GetSelText(sz);
+```
+
+## <a name="afxdebugbreak"></a>AfxDebugBreak
+呼叫此函式會造成中斷 (若要呼叫的位置`AfxDebugBreak`) 執行中的 MFC 應用程式的偵錯版本。  
+
+### <a name="syntax"></a>語法    
+```
+void AfxDebugBreak( );    
+```  
+   
+### <a name="remarks"></a>備註  
+ `AfxDebugBreak`在 MFC 應用程式的發行版本中沒有任何作用，應該移除。 此函式只能用於 MFC 應用程式。 使用 Win32 API 版本， **DebugBreak**、 非 MFC 應用程式中造成中斷。  
+   
+### <a name="requirements"></a>需求  
+ **標頭︰** afxver_.h   
+
 ##  <a name="assert"></a>判斷提示
  會評估其引數。  
   
@@ -240,6 +286,67 @@ DEBUG_ONLY(expression)
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h
 
+ ### <a name="ensure"></a>請確認且 ENSURE_VALID
+用來驗證資料的正確性。  
+   
+### <a name="syntax"></a>語法    
+```
+ENSURE(  booleanExpression )  
+ENSURE_VALID( booleanExpression  )  
+```
+### <a name="parameters"></a>參數  
+ `booleanExpression`  
+ 指定要測試的布林運算式。  
+   
+### <a name="remarks"></a>備註  
+ 這些巨集的目的是要提升驗證的參數。 巨集會阻止進一步處理的程式碼中的參數不正確。 不同於**ASSERT**巨集，**請**巨集擲回的例外狀況，除了產生判斷提示。  
+  
+ 巨集的行為的兩種方式，根據專案組態。 巨集會呼叫**ASSERT**再擲回例外狀況，如果判斷提示失敗。 因此，在偵錯組態 (也就是其中**_DEBUG**定義) 巨集產生判斷提示，以及在發行組態中的例外狀況，巨集產生的例外狀況 (**ASSERT**不會評估發行組態中的運算式)。  
+  
+ 巨集**ENSURE_ARG**類似**請**巨集。  
+  
+ **ENSURE_VALID**呼叫`ASSERT_VALID`巨集 （它只在偵錯組建中沒有影響）。 此外， **ENSURE_VALID**指標為 NULL 時擲回例外狀況。 NULL 測試是在偵錯和發行組態中執行。  
+  
+ 如果其中任何一項測試失敗，警示訊息會顯示在相同的方式**ASSERT**。 如有需要巨集，就會擲回例外狀況無效的引數。  
+### <a name="requirements"></a>需求  
+ **標頭：** afx.h  
+   
+### <a name="see-also"></a>另請參閱  
+ [巨集和全域變數](mfc-macros-and-globals.md)   
+ [確認](#verify)   
+ [ATLENSURE](#altensure)
+
+## <a name="this_file"></a>THIS_FILE
+會展開至已編譯之檔案的名稱。  
+   
+### <a name="syntax"></a>語法    
+```
+THIS_FILE    
+```  
+   
+### <a name="remarks"></a>備註  
+ 會使用資訊**ASSERT**和**確認**巨集。 應用程式精靈和程式碼精靈會將巨集放在他們建立的原始程式檔。  
+   
+### <a name="example"></a>範例  
+```cpp
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+// __FILE__ is one of the six predefined ANSI C macros that the 
+// compiler recognizes. 
+```
+   
+### <a name="requirements"></a>需求  
+ **標頭：** afx.h  
+   
+### <a name="see-also"></a>另請參閱  
+ [巨集和全域變數](mfc-macros-and-globals.md)   
+ [判斷提示](#assert)   
+ [確認](#verify)
+
+
 ##  <a name="trace"></a>追蹤  
  將指定的字串傳送至目前的應用程式的偵錯工具。  
   
@@ -286,7 +393,7 @@ VERIFY(booleanExpression)
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h
 
-##  <a name="cdumpcontext_in_mfc_"></a>afxDump (MFC 中的 CDumpContext)  
+##  <a name="cdumpcontext_in_mfc"></a>afxDump (MFC 中的 CDumpContext)  
  提供應用程式中的基本物件傾印功能。  
   
 ```   
@@ -305,6 +412,31 @@ CDumpContext  afxDump;
 
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h
+
+
+## <a name="afxdump"></a>AfxDump （內部）
+MFC 會使用來傾印偵錯時的物件狀態的內部函式。  
+
+### <a name="syntax"></a>語法    
+```
+void AfxDump(const CObject* pOb);   
+```
+### <a name="parameters"></a>參數  
+ `pOb`  
+ 從衍生類別的物件指標`CObject`。  
+   
+### <a name="remarks"></a>備註  
+ **AfxDump**呼叫物件的`Dump`成員函式，並將所指定的位置資訊`afxDump`變數。 **AfxDump**僅適用於 MFC 的偵錯版本。  
+  
+ 您的程式碼不應該呼叫**AfxDump**，但應該改為呼叫`Dump`成員函式的適當的物件。  
+   
+### <a name="requirements"></a>需求  
+ **標頭：** afx.h  
+   
+### <a name="see-also"></a>另請參閱  
+ [CObject::Dump](cobject-class.md#dump)   
+
+
 
 ##  <a name="afxmemdf"></a>afxMemDF  
  這個變數可從 偵錯工具或程式存取，並可讓您調整配置診斷。  
@@ -383,7 +515,7 @@ BOOL  AfxCheckMemory();
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
  
-##  <a name="mfc_"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>AfxDump (MFC)  
  呼叫此函式在偵錯工具偵錯時傾印物件的狀態中。  
   
 ```   
@@ -398,6 +530,14 @@ void AfxDump(const CObject* pOb);
  **AfxDump**呼叫物件的`Dump`成員函式，並將所指定的位置資訊`afxDump`變數。 **AfxDump**僅適用於 MFC 的偵錯版本。  
   
  您的程式碼不應該呼叫**AfxDump**，但應該改為呼叫`Dump`成員函式的適當的物件。  
+
+### <a name="requirements"></a>需求  
+ **標頭：** afx.h  
+
+### <a name="see-also"></a>另請參閱  
+ [CObject::Dump](cobject-class.md#dump)   
+
+
   
 ##  <a name="afxdumpstack"></a>AfxDumpStack  
  此全域函式可以用來產生目前堆疊的映像。  
@@ -471,7 +611,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  例如下, 表描述上述輸出第一行︰  
   
-|輸出|描述|  
+|輸出|說明|  
 |------------|-----------------|  
 |`00427D55:`|最後一個函式呼叫的傳回位址。|  
 |`DUMP2\DEBUG\DUMP2.EXE!`|包含函式呼叫的模組完整路徑名稱。|  

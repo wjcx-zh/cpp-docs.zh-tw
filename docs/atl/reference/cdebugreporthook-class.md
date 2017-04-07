@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 632167d4f78ef930673450d6d087f32e91b6541f
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1de883341e0a53a1520fa44d99e7907ee1fe10b6
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 類別
-您可以使用這個類別，將偵錯報表傳送至具名管道。  
+使用此類別將偵錯報表傳送至具名的管道。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,20 +66,20 @@ class CDebugReportHook
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|（靜態）自訂報告函式，連結至 C 執行階段偵錯報告處理程序。|  
-|[CDebugReportHook::RemoveHook](#removehook)|呼叫這個方法，以停止偵錯報表傳送到具名管道，並還原先前的報告攔截。|  
-|[CDebugReportHook::SetHook](#sethook)|呼叫這個方法來啟動偵錯報表傳送到具名管道。|  
-|[CDebugReportHook::SetPipeName](#setpipename)|呼叫這個方法來設定電腦和偵錯報表傳送到其中的管道名稱。|  
-|[CDebugReportHook::SetTimeout](#settimeout)|呼叫這個方法，以毫秒為單位，這個類別會等待具名管道，可供設定的時間。|  
+|[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|（靜態）連接到 C 執行階段的自訂報告函式偵錯報表的處理序。|  
+|[CDebugReportHook::RemoveHook](#removehook)|呼叫這個方法，以停止偵錯報表傳送到的具名管道，並還原先前的報告攔截。|  
+|[CDebugReportHook::SetHook](#sethook)|呼叫此方法以開始偵錯報表傳送到的具名管道。|  
+|[CDebugReportHook::SetPipeName](#setpipename)|呼叫此方法以設定電腦和偵錯報表傳送到其中的管道名稱。|  
+|[CDebugReportHook::SetTimeout](#settimeout)|呼叫這個方法來設定以毫秒為單位，這個類別會變成可用的具名管道的等候時間。|  
   
 ## <a name="remarks"></a>備註  
- 在您的服務或應用程式偵錯報表傳送至具名管道的偵錯組建中建立此類別的執行個體。 藉由呼叫所產生的偵錯報告[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)或包裝函式使用此功能，例如[ATLTRACE](http://msdn.microsoft.com/library/c796baa5-e2b9-4814-a27d-d800590b102e)和[ATLASSERT](http://msdn.microsoft.com/library/98e3e0fc-77e2-499b-a6f6-b17a21c6fbd3)巨集。  
+ 在您的服務或應用程式偵錯報表傳送至具名管道的偵錯組建中建立此類別的執行個體。 偵錯報告由呼叫產生[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)或包裝函式使用這個函式，例如[ATLTRACE](debugging-and-error-reporting-macros.md#atltrace)和[ATLASSERT](debugging-and-error-reporting-macros.md#atlassert)巨集。  
   
  使用這個類別可讓您以互動方式偵錯元件在執行非互動式[視窗電台](http://msdn.microsoft.com/library/windows/desktop/ms687096)。  
   
- 請注意，偵錯報告不會傳送使用執行緒的基礎的安全性內容。 暫時停用模擬，以便您可以在其中的低權限之使用者的模擬正在進行中，例如在 web 應用程式的情況下檢視偵錯報告。  
+ 請注意，偵錯報表傳送使用基礎的安全性內容的執行緒。 暫時停用模擬，以便在其中的低權限的使用者進行模擬，例如在 web 應用程式的情況下，可以檢視偵錯報告。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** atlutil.h  
@@ -96,13 +96,13 @@ CDebugReportHook(
   
 ### <a name="parameters"></a>參數  
  `szMachineName`  
- 偵錯輸出應該傳送電腦名稱。 預設為本機電腦。  
+ 偵錯輸出應該傳送的電腦名稱。 預設為本機電腦。  
   
  `szPipeName`  
  偵錯輸出應該傳送的具名管道的名稱。  
   
  `dwTimeout`  
- 時間 （毫秒），這個類別會等待可用的具名管道。  
+ 以毫秒為單位，這個類別會變成可用的具名管道的等候時間。  
   
 ##  <a name="dtor"></a>CDebugReportHook:: ~ CDebugReportHook  
  呼叫[CDebugReportHook::RemoveHook](#removehook)。  
@@ -112,7 +112,7 @@ CDebugReportHook(
 ```  
   
 ##  <a name="cdebugreporthookproc"></a>CDebugReportHook::CDebugReportHookProc  
- 自訂報告函式，連結至 C 執行階段偵錯報告處理程序。  
+ 連接到 C 執行階段的自訂報告函式偵錯報表的處理序。  
   
 ```
 static int __cdecl CDebugReportHookProc(
@@ -123,7 +123,7 @@ static int __cdecl CDebugReportHookProc(
   
 ### <a name="parameters"></a>參數  
  `reportType`  
- 報表 （_CRT_WARN、 _CRT_ERROR 或 _CRT_ASSERT） 的型別。  
+ 報表 （_CRT_WARN、 _CRT_ERROR 或 _CRT_ASSERT） 的類型。  
   
  `message`  
  訊息字串。  
@@ -132,15 +132,15 @@ static int __cdecl CDebugReportHookProc(
  應傳回的值[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 FALSE 如果攔截該訊息能完整處理，因此沒有進一步的報告不需要。 如果為 true`_CrtDbgReport`應該以一般方式報告訊息。  
+ 傳回 FALSE 如果攔截處理的訊息完全而無須任何進一步的報告。 如果為 true`_CrtDbgReport`應該以一般方式報告訊息。  
   
 ### <a name="remarks"></a>備註  
- 報告函式會嘗試開啟具名的管道，與另一端的程序進行通訊。 如果管道忙碌時，報告的函式會等待管道是免費的或在逾時到期。 可以設定逾時，建構函式或呼叫[CDebugReportHook::SetTimeout](#settimeout)。  
+ 報告函式會嘗試開啟具名的管道和與其通訊的另一端的程序。 如果管道忙碌，報告的函式會等待管道是免費或逾時為止。 在逾時可以設定由建構函式或呼叫[CDebugReportHook::SetTimeout](#settimeout)。  
   
- 在呼叫執行緒的基礎的安全性內容中執行此函式中的程式碼，也就是模擬已停用此函式的持續時間。  
+ 在呼叫執行緒的基礎的安全性內容中執行此函式中的程式碼，也就是此函式期間停用模擬。  
   
 ##  <a name="removehook"></a>CDebugReportHook::RemoveHook  
- 呼叫這個方法，以停止偵錯報表傳送到具名管道，並還原先前的報告攔截。  
+ 呼叫這個方法，以停止偵錯報表傳送到的具名管道，並還原先前的報告攔截。  
   
 ```
 void RemoveHook() throw();
@@ -150,17 +150,17 @@ void RemoveHook() throw();
  呼叫[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)還原先前的報告攔截。  
   
 ##  <a name="sethook"></a>CDebugReportHook::SetHook  
- 呼叫這個方法來啟動偵錯報表傳送到具名管道。  
+ 呼叫此方法以開始偵錯報表傳送到的具名管道。  
   
 ```
 void SetHook() throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 呼叫[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)要將偵錯報告經[CDebugReportHookProc](#cdebugreporthookproc)具名管道。 這個類別會追蹤的上一個報告攔截，因此它可以是還原時[RemoveHook](#removehook)呼叫。  
+ 呼叫[_CrtSetReportHook2](../../c-runtime-library/reference/crtsetreporthook2-crtsetreporthookw2.md)要將偵錯報告經[CDebugReportHookProc](#cdebugreporthookproc)具名管道。 這個類別會追蹤的先前報表攔截程序，讓它可以是還原時[RemoveHook](#removehook)呼叫。  
   
 ##  <a name="setpipename"></a>CDebugReportHook::SetPipeName  
- 呼叫這個方法來設定電腦和偵錯報表傳送到其中的管道名稱。  
+ 呼叫此方法以設定電腦和偵錯報表傳送到其中的管道名稱。  
   
 ```
 BOOL SetPipeName(
@@ -170,16 +170,16 @@ BOOL SetPipeName(
   
 ### <a name="parameters"></a>參數  
  `szMachineName`  
- 偵錯輸出應該傳送電腦名稱。  
+ 偵錯輸出應該傳送的電腦名稱。  
   
  `szPipeName`  
  偵錯輸出應該傳送的具名管道的名稱。  
   
 ### <a name="return-value"></a>傳回值  
- 成功時，會傳回 TRUE 失敗，則為 FALSE。  
+ 如果成功，則傳回 TRUE 失敗，則為 FALSE。  
   
 ##  <a name="settimeout"></a>CDebugReportHook::SetTimeout  
- 呼叫這個方法，以毫秒為單位，這個類別會等待具名管道，可供設定的時間。  
+ 呼叫這個方法來設定以毫秒為單位，這個類別會變成可用的具名管道的等候時間。  
   
 ```
 void SetTimeout(DWORD dwTimeout);
@@ -187,7 +187,7 @@ void SetTimeout(DWORD dwTimeout);
   
 ### <a name="parameters"></a>參數  
  `dwTimeout`  
- 時間 （毫秒），這個類別會等待可用的具名管道。  
+ 以毫秒為單位，這個類別會變成可用的具名管道的等候時間。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../atl/reference/atl-classes.md)

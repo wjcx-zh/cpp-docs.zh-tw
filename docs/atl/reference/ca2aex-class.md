@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 65637b63cf23d2e7433b575e95d3f53a53ed76a1
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 979e06cbb4386f61f6490342f16d48739be55e95
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ca2aex-class"></a>CA2AEX 類別
@@ -58,7 +58,7 @@ class CA2AEX
   
 #### <a name="parameters"></a>參數  
  `t_nBufferLength`  
- 轉譯程序中使用之緩衝區的大小。 預設長度為 128 位元組。  
+ 轉譯程序中使用之緩衝區的大小。 預設長度為 128 個位元組。  
   
 ## <a name="members"></a>Members  
   
@@ -71,25 +71,25 @@ class CA2AEX
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CA2AEX::operator LPSTR](#operator_lpstr)|轉換運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CA2AEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
-|[CA2AEX::m_szBuffer](#m_szbuffer)|靜態緩衝區，用來儲存轉換的字串。|  
+|[CA2AEX::m_szBuffer](#m_szbuffer)|靜態緩衝區，用來儲存已轉換的字串。|  
   
 ## <a name="remarks"></a>備註  
  除非需要額外的功能，則使用`CA2TEX`， `CT2AEX`，或**CA2A**自己的程式碼中。  
   
- 這個類別包含固定大小的靜態緩衝區可用來儲存轉換的結果。 如果結果太大，不符合靜態緩衝區，則類別會使用 `malloc` 來配置記憶體，當物件超出範圍時，即釋放記憶體。 這可確保，不同於文字轉換巨集可在舊版的 ATL，這個類別是在迴圈中使用安全的它將不會在堆疊溢位。  
+ 這個類別包含固定大小的靜態緩衝區可用來儲存轉換的結果。 如果結果太大，不符合靜態緩衝區，則類別會使用 `malloc` 來配置記憶體，當物件超出範圍時，即釋放記憶體。 如此可確保，不同於文字轉換巨集可用在舊版的 ATL，這個類別會安全地在迴圈中使用，而且它將不會產生堆疊溢位。  
   
- 如果此類別會配置在堆積和失敗的記憶體，它會呼叫`AtlThrow`使用引數**E_OUTOFMEMORY**。  
+ 如果類別嘗試失敗與堆積上配置記憶體，它會呼叫`AtlThrow`使用引數**E_OUTOFMEMORY**。  
   
- 根據預設，ATL 轉換類別和巨集會使用目前的執行緒 ANSI 字碼頁轉換。  
+ 根據預設，ATL 轉換類別和巨集使用目前的執行緒 ANSI 字碼頁來進行轉換。  
   
  下列巨集根據此類別︰  
   
@@ -97,14 +97,14 @@ class CA2AEX
   
 - `CT2AEX`  
   
- Typedef，下列根據此類別︰  
+ 下列 typedef 根據此類別︰  
   
 - **CA2A**  
   
- 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)。  
+ 這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
   
 ## <a name="example"></a>範例  
- 請參閱[ATL 和 MFC 字串轉換巨集](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)如需使用這些字串轉換巨集的範例。  
+ 請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** atlconv.h  
@@ -122,7 +122,7 @@ CA2AEX(LPCSTR psz) throw(...);
  要轉換的文字字串。  
   
  `nCodePage`  
- 這個類別中未使用。  
+ 此類別中未使用。  
   
 ### <a name="remarks"></a>備註  
  建立做為轉換所需的緩衝區。  
@@ -135,7 +135,7 @@ CA2AEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>備註  
- 釋出配置的緩衝區。  
+ 釋放已配置的緩衝區。  
   
 ##  <a name="m_psz"></a>CA2AEX::m_psz  
  儲存在來源字串的資料成員。  
@@ -145,7 +145,7 @@ LPSTR m_psz;
 ```  
   
 ##  <a name="m_szbuffer"></a>CA2AEX::m_szBuffer  
- 靜態緩衝區，用來儲存轉換的字串。  
+ 靜態緩衝區，用來儲存已轉換的字串。  
   
 ```
 char m_szBuffer[ t_nBufferLength];

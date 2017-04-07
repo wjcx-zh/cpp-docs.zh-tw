@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 69a59fe23b3ca787dee86b1bbdc6775a44903f91
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1742929a31e244e853b426324894e5c8666ebf99
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 類別
@@ -60,18 +60,18 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[IServiceProviderImpl::QueryService](#queryservice)|建立或存取指定的服務，並傳回服務的指定介面的介面指標。|  
+|[IServiceProviderImpl::QueryService](#queryservice)|建立或存取指定的服務，並將介面指標傳回指定服務的介面。|  
   
 ## <a name="remarks"></a>備註  
- `IServiceProvider`介面尋找服務，由其 GUID，並傳回服務的要求之介面的介面指標。 類別`IServiceProviderImpl`提供此介面的預設實作。  
+ `IServiceProvider`介面找出其 GUID 所指定的服務，並在服務上傳回所要求介面的介面指標。 類別`IServiceProviderImpl`提供此介面的預設實作。  
   
- **IServiceProviderImpl**指定其中一個方法︰ [QueryService](#queryservice)，這會建立或存取指定的服務並返回服務的指定介面的介面指標。  
+ **IServiceProviderImpl**指定其中一種方法︰ [QueryService](#queryservice)，建立或存取指定的服務，並將介面指標傳回指定服務的介面。  
   
- `IServiceProviderImpl`使用服務對應，以開始[BEGIN_SERVICE_MAP](http://msdn.microsoft.com/library/3c6ae156-8776-4588-8227-2d234daec236) ，並以結束[END_SERVICE_MAP](http://msdn.microsoft.com/library/9a35d02a-014c-413a-bb0b-bcca11ab45a6)。  
+ `IServiceProviderImpl`使用服務對應，開頭[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)結束[END_SERVICE_MAP](service-map-macros.md#end_service_map)。  
   
- 服務對應包含兩個項目︰ [SERVICE_ENTRY](http://msdn.microsoft.com/library/e65ff9cc-15e8-41cf-b686-f99eb6686ca9)，表示支援的物件，指定的服務識別碼 (SID) 和[SERVICE_ENTRY_CHAIN](http://msdn.microsoft.com/library/09be4ce4-3ccd-4ff2-a95e-a9d5275354c1)，而它會呼叫`QueryService`鏈結至另一個物件。  
+ 服務對應包含兩個項目︰ [SERVICE_ENTRY](service-map-macros.md#service_entry)，表示支援的物件，指定的服務識別碼 (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，而它會呼叫`QueryService`鏈結至另一個物件。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `IServiceProvider`  
@@ -79,10 +79,10 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
  `IServiceProviderImpl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰**於 atlcom.h  
+ **標頭︰** atlcom.h  
   
 ##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
- 建立或存取指定的服務，並傳回服務的指定介面的介面指標。  
+ 建立或存取指定的服務，並將介面指標傳回指定服務的介面。  
   
 ```
 STDMETHOD(QueryService)(
@@ -106,7 +106,7 @@ STDMETHOD(QueryService)(
   
 |傳回值|意義|  
 |------------------|-------------|  
-|S_OK|服務已順利建立或擷取。|  
+|S_OK|已成功建立或擷取服務的時間。|  
 |E_INVALIDARG|一或多個引數無效。|  
 |E_OUTOFMEMORY|記憶體不足，無法建立服務。|  
 |E_UNEXPECTED|發生未知的錯誤。|  
@@ -115,17 +115,17 @@ STDMETHOD(QueryService)(
 ### <a name="remarks"></a>備註  
  `QueryService`傳回所要求的介面中指定的服務的間接指標。 呼叫端會負責在發行時不再需要這個指標。  
   
- 當您呼叫`QueryService`，則傳遞兩個服務識別項 ( `guidService`) 和介面識別碼 ( `riid`)。 `guidService`指定您想要存取的服務和`riid`識別服務的介面。 您會收到間接的介面指標。  
+ 當您呼叫`QueryService`，您傳遞兩個服務識別元 ( `guidService`) 和介面識別項 ( `riid`)。 `guidService`指定您要存取的服務和`riid`識別為服務一部分的介面。 您會收到介面間接指標。  
   
- 實作介面的物件可能也會實作屬於其他服務的介面。 請考慮下列事項：  
+ 實作介面的物件可能也可實作屬於其他服務的介面。 請考慮下列事項：  
   
--   這些介面的一些可能是選擇性的。 並非所有服務描述中定義的介面都有一定是服務的每個實作或每個傳回的物件。  
+-   這些介面的某些可能會是選擇性的。 並非所有的服務描述中定義的介面有一定在每個服務實作或每個傳回的物件上。  
   
--   不同於呼叫`QueryInterface`，傳遞不同的服務識別碼不一定會傳回不同的元件物件模型 (COM) 物件。  
+-   不同於呼叫`QueryInterface`，傳遞不同的服務識別碼不一定表示會傳回不同的元件物件模型 (COM) 物件。  
   
--   傳回的物件可能有其他不屬於服務的定義的介面。  
+-   傳回的物件可能不是服務定義的一部分的其他介面。  
   
- 兩個不同的服務，例如 SID_SMyService 和 SID_SYourService，可以同時指定要使用相同的介面，即使介面的實作可能會有兩個服務之間執行任何動作。 這樣可以運作，因為呼叫`QueryService`（SID_SMyService、 IID_IDispatch） 可能會傳回不同的物件比`QueryService`（SID_SYourService、 IID_IDispatch）。 物件識別不會被視為，當您指定不同的服務識別項。  
+ 兩個不同的服務，例如 SID_SMyService 和 SID_SYourService，可以同時指定要使用相同的介面，即使介面的實作可能會有兩個服務之間執行任何動作。 其運作，因為呼叫`QueryService`（SID_SMyService、 IID_IDispatch） 可能會傳回不同的物件，而非`QueryService`（SID_SYourService、 IID_IDispatch）。 當您指定不同的服務識別項，不會假設物件識別。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

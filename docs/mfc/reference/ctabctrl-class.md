@@ -70,9 +70,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e1d8497b444e4dd5ee1e2803c1a763f67e2e0054
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 150b11e4989cd45ba2a8065c86c07510d00c346c
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 類別
@@ -94,45 +94,45 @@ class CTabCtrl : public CWnd
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[CTabCtrl::AdjustRect](#adjustrect)|計算索引標籤控制項的顯示區域，指定視窗矩形，或計算就會對應至指定的顯示區視窗矩形。|  
+|[CTabCtrl::AdjustRect](#adjustrect)|計算索引標籤控制項的顯示區域提供視窗矩形中，或計算視窗矩形，就會對應至指定的顯示區域。|  
 |[CTabCtrl::Create](#create)|建立索引標籤控制項，並將其附加至執行個體的`CTabCtrl`物件。|  
 |[CTabCtrl::CreateEx](#createex)|建立具有指定的 Windows 延伸樣式 索引標籤控制項，並將其附加至執行個體的`CTabCtrl`物件。|  
-|[CTabCtrl::DeleteAllItems](#deleteallitems)|從索引標籤控制項移除所有項目。|  
+|[CTabCtrl::DeleteAllItems](#deleteallitems)|移除索引標籤控制項中的所有項目。|  
 |[CTabCtrl::DeleteItem](#deleteitem)|移除索引標籤控制項中的項目。|  
-|[CTabCtrl::DeselectAll](#deselectall)|重設在索引標籤控制項中，清除任何已按下的項目。|  
+|[CTabCtrl::DeselectAll](#deselectall)|重設在索引標籤控制項中，清除已按下的任何項目。|  
 |[CTabCtrl::DrawItem](#drawitem)|繪製指定的項目索引標籤控制項。|  
 |[CTabCtrl::GetCurFocus](#getcurfocus)|擷取具有目前焦點所在的索引標籤控制項的索引標籤。|  
 |[CTabCtrl::GetCurSel](#getcursel)|決定索引標籤控制項中目前選取的索引標籤。|  
 |[CTabCtrl::GetExtendedStyle](#getextendedstyle)|擷取目前正在使用的索引標籤控制項中的延伸的樣式。|  
-|[CTabCtrl::GetImageList](#getimagelist)|擷取與索引標籤控制項關聯的映像清單。|  
+|[CTabCtrl::GetImageList](#getimagelist)|擷取影像清單索引標籤控制項相關聯。|  
 |[CTabCtrl::GetItem](#getitem)|擷取索引標籤控制項中的索引標籤的相關資訊。|  
-|[CTabCtrl::GetItemCount](#getitemcount)|擷取索引標籤控制項中的索引標籤的數目。|  
-|[CTabCtrl::GetItemRect](#getitemrect)|擷取索引標籤控制項中的索引標籤，這個周框。|  
+|[CTabCtrl::GetItemCount](#getitemcount)|擷取索引標籤控制項中的索引標籤數目。|  
+|[CTabCtrl::GetItemRect](#getitemrect)|擷取索引標籤控制項中的索引標籤的週框矩形。|  
 |[CTabCtrl::GetItemState](#getitemstate)|擷取指定的索引標籤控制項項目的狀態。|  
 |[CTabCtrl::GetRowCount](#getrowcount)|擷取目前的索引標籤控制項中的索引標籤的資料列數。|  
-|[CTabCtrl::GetToolTips](#gettooltips)|擷取與索引標籤控制項相關聯的工具提示控制項的控制代碼。|  
-|[CTabCtrl::HighlightItem](#highlightitem)|設定索引標籤項目反白顯示狀態。|  
-|[CTabCtrl::HitTest](#hittest)|判斷哪一個索引標籤上，如果有的話，是在指定的螢幕位置。|  
+|[CTabCtrl::GetToolTips](#gettooltips)|擷取索引標籤控制項相關聯的工具提示控制項的控制代碼。|  
+|[CTabCtrl::HighlightItem](#highlightitem)|設定反白顯示的狀態索引標籤項目。|  
+|[CTabCtrl::HitTest](#hittest)|判斷哪些索引標籤上，如果有的話，是在指定的螢幕位置。|  
 |[Ctabctrl:: Insertitem](#insertitem)|索引標籤控制項中插入新的索引標籤。|  
 |[CTabCtrl::RemoveImage](#removeimage)|索引標籤控制項影像清單中移除映像。|  
-|[CTabCtrl::SetCurFocus](#setcurfocus)|將焦點設在索引標籤控制項中指定的索引標籤。|  
+|[CTabCtrl::SetCurFocus](#setcurfocus)|將焦點設定到索引標籤控制項中指定之索引標籤。|  
 |[CTabCtrl::SetCurSel](#setcursel)|索引標籤控制項中選取索引標籤。|  
 |[CTabCtrl::SetExtendedStyle](#setextendedstyle)|設定索引標籤控制項的延伸的樣式。|  
-|[CTabCtrl::SetImageList](#setimagelist)|指派索引標籤控制項影像清單。|  
-|[CTabCtrl::SetItem](#setitem)|設定部分或全部的索引標籤的屬性。|  
-|[CTabCtrl::SetItemExtra](#setitemextra)|設定每個索引標籤上的索引標籤控制項中的應用程式定義的資料保留的位元組數目。|  
-|[CTabCtrl::SetItemSize](#setitemsize)|設定寬度和高度的項目。|  
-|[CTabCtrl::SetItemState](#setitemstate)|設定指定的索引標籤控制項項目的狀態。|  
-|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|設定索引標籤控制項中的最小寬度的項目。|  
+|[CTabCtrl::SetImageList](#setimagelist)|指定的索引標籤控制項影像清單。|  
+|[CTabCtrl::SetItem](#setitem)|設定下列部分或所有索引標籤的屬性。|  
+|[CTabCtrl::SetItemExtra](#setitemextra)|設定每個索引標籤的索引標籤控制項中的應用程式定義的資料保留的位元組數目。|  
+|[CTabCtrl::SetItemSize](#setitemsize)|設定項目的高度與寬度。|  
+|[CTabCtrl::SetItemState](#setitemstate)|將指定的索引標籤控制項項目狀態設定。|  
+|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|索引標籤控制項中設定的最小寬度的項目。|  
 |[CTabCtrl::SetPadding](#setpadding)|設定 （填補） 每個索引標籤的圖示和標籤控制項中的標籤周圍的空間數量。|  
-|[CTabCtrl::SetToolTips](#settooltips)|會指定工具提示控制項索引標籤控制項。|  
+|[CTabCtrl::SetToolTips](#settooltips)|將工具提示控制項指派給索引標籤控制項。|  
   
 ## <a name="remarks"></a>備註  
- 「 索引標籤控制項 」 很類似檔案櫃中的或檔案櫃中的標籤。 藉由使用索引標籤控制項，應用程式可以定義視窗或對話方塊中同一個區域的多個頁面。 每個頁面所組成的一組資訊或一群應用程式會顯示當使用者選取 [對應] 索引標籤的控制項。 一種特殊類型的索引標籤控制項中顯示看起來像按鈕的索引標籤。 按下按鈕應該立即執行而不是顯示在頁面的命令。  
+ 「 索引標籤控制項 」 是類似於筆記本中的分隔線或檔案櫃中的標籤。 藉由使用索引標籤控制項，應用程式可以定義視窗或對話方塊中同一個區域的多個頁面。 每個頁面所組成的一組資訊或一群應用程式會顯示當使用者選取 [對應] 索引標籤的控制項。 一種特殊的索引標籤控制項顯示看起來像按鈕的索引標籤。 按一下按鈕應該立即執行命令，而不要顯示的頁面。  
   
- 這個控制項 (並因此`CTabCtrl`類別) 僅適用於執行 Windows 95/98 和 Windows NT 版本 3.51 下的程式和更新版本。  
+ 這個控制項 (因此`CTabCtrl`類別) 僅適用於 Windows 95/98、 Windows NT 的版本 3.51 下執行的程式和更新版本。  
   
  如需有關使用`CTabCtrl`，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CTabCtrl](../../mfc/using-ctabctrl.md)。  
   
@@ -149,7 +149,7 @@ class CTabCtrl : public CWnd
  **標頭：** afxcmn.h  
   
 ##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
- 計算索引標籤控制項的顯示區域，指定視窗矩形，或計算就會對應至指定的顯示區視窗矩形。  
+ 計算索引標籤控制項的顯示區域提供視窗矩形中，或計算視窗矩形，就會對應至指定的顯示區域。  
   
 ```  
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
@@ -157,13 +157,13 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
   
 ### <a name="parameters"></a>參數  
  `bLarger`  
- 表示要執行哪些作業。 如果這個參數是**TRUE**，`lpRect`指定的顯示矩形，並接收對應視窗矩形。 如果這個參數是**FALSE**，`lpRect`指定視窗矩形，並接收對應的顯示矩形。  
+ 表示要執行哪些作業。 如果這個參數是**TRUE**，`lpRect`指定顯示矩形，並接收對應視窗矩形。 如果這個參數是**FALSE**，`lpRect`指定視窗矩形，並接收對應的顯示矩形。  
   
  `lpRect`  
- 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定指定的矩形或接收的導出的矩形。  
+ 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，以指定給定的矩形，並接收計算出的矩形。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl #&1;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CTabCtrl # 1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
 ##  <a name="create"></a>CTabCtrl::Create  
  建立索引標籤控制項，並將其附加至執行個體的`CTabCtrl`物件。  
@@ -178,39 +178,39 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>參數  
  `dwStyle`  
- 指定索引標籤控制項的樣式。 套用的任何結合[索引標籤控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760549)中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 請參閱**備註**您也可以套用至控制項的視窗樣式的清單。  
+ 指定索引標籤控制項的樣式。 套用的任何組合[ 索引標籤控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760549)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 請參閱**備註**取得一份您也可以套用至控制項的視窗樣式。  
   
  `rect`  
  指定索引標籤控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
   
  `pParentWnd`  
- 指定索引標籤控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
+ 指定的索引標籤控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
   
  `nID`  
  指定索引標籤控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
- **TRUE**物件的初始化是否成功，否則**FALSE**。  
+ **TRUE**如果物件的初始化成功，否則為**FALSE**。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CTabCtrl`兩個步驟中的物件。 首先，呼叫建構函式，並接著呼叫**建立**，這會建立索引標籤控制項，並將其以附加`CTabCtrl`物件。  
+ 您建構`CTabCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後再呼叫**建立**，建立索引標籤控制項，並將它附加至`CTabCtrl`物件。  
   
- 除了索引標籤控制項的樣式，您可以套用下列視窗樣式標籤控制項︰  
+ 除了索引標籤控制項的樣式，您可以套用下列視窗樣式索引標籤控制項︰  
   
-- **WS_CHILD**建立代表索引標籤控制項的子視窗。 不能與`WS_POPUP`樣式。  
+- **WS_CHILD**建立表示索引標籤控制項的子視窗。 不能與`WS_POPUP`樣式。  
   
-- **WS_VISIBLE**會建立一開始即可見的索引標籤控制項。  
+- **WS_VISIBLE**建立起始時是可見的索引標籤控制項。  
   
-- **WS_DISABLED**建立視窗一開始是停用。  
+- **WS_DISABLED**建立視窗一開始停用。  
   
-- **WS_GROUP**指定一組控制項中的使用者可以移動控制項至下一個使用方向鍵的第一個控制項。 所有控制項，以定義**WS_GROUP**樣式之後的第一個控制項屬於相同的群組。 下一個控制項與**WS_GROUP**樣式結束樣式的群組，並啟動下一個群組 （也就是一個群組結尾開始下）。  
+- **WS_GROUP**指定一組控制項所在使用者可以移動一個控制項到下一步 箭號索引鍵的第一個控制項。 所有控制項，以定義**WS_GROUP**樣式之後的第一個控制項必須屬於相同的群組。 下一個控制項與**WS_GROUP**樣式結束樣式的群組，並啟動下一個群組 （也就是說，一個群組結束開始下）。  
   
-- **WS_TABSTOP**的控制項，讓使用者可以使用 TAB 鍵移動指定任意數目。 TAB 鍵移至所指定的下一個控制項的使用者**WS_TABSTOP**樣式。  
+- **WS_TABSTOP**透過這些使用者可以使用 TAB 鍵移動的控制項的指定任意數目的其中一個。 TAB 鍵移至所指定的下一個控制項的使用者**WS_TABSTOP**樣式。  
   
  若要建立具有延伸的視窗樣式 索引標籤控制項，呼叫[CTabCtrl::CreateEx](#createex)而不是**建立**。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl #&2;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CTabCtrl # 2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
   
 ##  <a name="createex"></a>CTabCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CTabCtrl`物件。  
@@ -226,27 +226,27 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>參數  
  `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸視窗樣式，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
  `dwStyle`  
- 指定索引標籤控制項的樣式。 套用的任何結合[索引標籤控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760549)中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 請參閱**備註**中[建立](#create)您也可以套用至控制項的視窗樣式的清單。  
+ 指定索引標籤控制項的樣式。 套用的任何組合[ 索引標籤控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760549)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 請參閱**備註**中[建立](#create)取得一份您也可以套用至控制項的視窗樣式。  
   
  `rect`  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立、 用戶端座標中的視窗的`pParentWnd`。  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
   
  `pParentWnd`  
- 是控制項的父視窗的指標。  
+ 為控制項的父視窗的指標。  
   
  `nID`  
- 控制項的子視窗的 id。  
+ 控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功的話，非零值為 0。  
+ 否則為 0，如果成功則為非零。  
   
 ### <a name="remarks"></a>備註  
- 使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，指定 Windows 延伸的樣式序言**WS_EX_**。  
+ 使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
- `CreateEx`建立具有所指定的延伸視窗樣式控制項`dwExStyle`。 設定擴充特定控制項使用的樣式[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設為這類樣式**TCS_EX_FLATSEPARATORS**。 如需詳細資訊，請參閱說明中的樣式[ 索引標籤控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb760546)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ `CreateEx`建立具有所指定的延伸視窗樣式控制項， `dwExStyle`。 設定擴充特定控制項使用的樣式[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設定做為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設定做為這類樣式**TCS_EX_FLATSEPARATORS**。 如需詳細資訊，請參閱中所述的樣式[ 索引標籤控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb760546)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
  建構 `CTabCtrl` 物件。  
@@ -256,7 +256,7 @@ CTabCtrl();
 ```  
   
 ##  <a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
- 從索引標籤控制項移除所有項目。  
+ 移除索引標籤控制項中的所有項目。  
   
 ```  
 BOOL DeleteAllItems();
@@ -266,7 +266,7 @@ BOOL DeleteAllItems();
  如果成功則為非零；否則為 0。  
   
 ##  <a name="deleteitem"></a>CTabCtrl::DeleteItem  
- 從索引標籤控制項移除指定的項目。  
+ 從索引標籤控制項中移除指定的項目。  
   
 ```  
 BOOL DeleteItem(int nItem);
@@ -274,16 +274,16 @@ BOOL DeleteItem(int nItem);
   
 ### <a name="parameters"></a>參數  
  `nItem`  
- 若要刪除的項目以零為起始的值。  
+ 要刪除的項目以零為起始的值。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl #&3;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CTabCtrl # 3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
 ##  <a name="deselectall"></a>CTabCtrl::DeselectAll  
- 重設在索引標籤控制項中，清除任何已按下的項目。  
+ 重設在索引標籤控制項中，清除已按下的任何項目。  
   
 ```  
 void DeselectAll(BOOL fExcludeFocus);
@@ -291,13 +291,13 @@ void DeselectAll(BOOL fExcludeFocus);
   
 ### <a name="parameters"></a>參數  
  *fExcludeFocus*  
- 指定的項目取消選取範圍的旗標。 如果此參數設為**FALSE**，所有的索引標籤按鈕將會重設。 如果設定為**TRUE**，則除了目前選取的所有索引標籤項目將會重設。  
+ 指定的項目取消選取範圍的旗標。 如果此參數設為**FALSE**，所有的索引標籤按鈕將會重設。 如果設定為**TRUE**，則除了目前所選取的所有索引標籤項目將會重設。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的行為的 Win32 訊息， [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成員函式實作的 Win32 訊息中，行為[TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="drawitem"></a>CTabCtrl::DrawItem  
- 當主控描繪索引標籤控制項變更的視覺外觀的架構所呼叫。  
+ 當主控描繪索引標籤控制項變更的視覺外觀時，架構呼叫。  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -308,9 +308,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
  指標[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)結構，描述要繪製的項目。  
   
 ### <a name="remarks"></a>備註  
- **ItemAction**成員`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。  
+ **ItemAction**隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。  
   
- 根據預設，此成員函式沒有作用。 覆寫此成員函式實作繪圖的主控描繪`CTabCtrl`物件。  
+ 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作主控描繪的繪圖`CTabCtrl`物件。  
   
  應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前此成員函式會結束。  
   
@@ -342,10 +342,10 @@ DWORD GetExtendedStyle();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 表示目前的索引標籤控制項的使用中的延伸的樣式。 這個值會結合[擴充樣式的控制項索引標籤上](http://msdn.microsoft.com/library/windows/desktop/bb760546)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 表示目前使用的索引標籤控制項中的延伸的樣式。 這個值是組合[索引標籤控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb760546)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成員函式實作的 Win32 訊息行為[TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="getimagelist"></a>CTabCtrl::GetImageList  
  擷取與索引標籤控制項關聯的影像清單。  
@@ -355,7 +355,7 @@ CImageList* GetImageList() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，控制項影像清單索引標籤的指標，否則， **NULL**。  
+ 如果成功，控制項影像清單索引標籤的指標否則， **NULL**。  
   
 ##  <a name="getitem"></a>CTabCtrl::GetItem  
  擷取索引標籤控制項中的索引標籤的相關資訊。  
@@ -366,19 +366,19 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
   
 ### <a name="parameters"></a>參數  
  `nItem`  
- 索引標籤的以零為起始的索引。  
+ 以零為起始的索引標籤的索引。  
   
  `pTabCtrlItem`  
- 指標[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)用來指定要擷取之資訊的結構。 也用來接收索引標籤的詳細資訊。 此結構用於搭配`InsertItem`， `GetItem`，和`SetItem`成員函式。  
+ 指標[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)用來指定要擷取之資訊的結構。 也可用來在索引標籤的相關資訊。 此結構會搭配`InsertItem`， `GetItem`，和`SetItem`成員函式。  
   
 ### <a name="return-value"></a>傳回值  
  傳回**TRUE**如果登錄成功。**FALSE**否則。  
   
 ### <a name="remarks"></a>備註  
- 當傳送訊息時，**遮罩**成員會指定要傳回屬性。 如果**遮罩**成員指定`TCIF_TEXT`值**pszText**成員必須包含接收項目文字的緩衝區的位址和**cchTextMax**成員必須指定緩衝區的大小。  
+ 當傳送訊息時，**遮罩**成員指定要傳回的屬性。 如果**遮罩**成員指定`TCIF_TEXT`值**pszText**成員必須包含接收項目文字的緩衝區的位址和**cchTextMax**成員必須指定緩衝區的大小。  
   
  **遮罩**  
- 值，指定其`TCITEM`結構擷取或設定成員。 這個成員可以是零個或以下值的組合︰  
+ 值，指定其`TCITEM`結構擷取或設定成員。 這個成員可以是零或下列值的組合︰  
   
 - `TCIF_TEXT`**PszText**成員是否有效。  
   
@@ -386,7 +386,7 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
   
 - `TCIF_PARAM`**LParam**成員是否有效。  
   
-- `TCIF_RTLREADING`文字的**pszText**希伯來文或阿拉伯文系統上使用由右至左讀取順序顯示。  
+- `TCIF_RTLREADING`文字**pszText**希伯來文或阿拉伯文系統上使用由右至左讀取順序顯示。  
   
 - `TCIF_STATE`**DwState**成員是否有效。  
   
@@ -394,19 +394,19 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
  以 null 終止的字串，包含在索引標籤文字，如果結構包含一個索引標籤的相關資訊的指標。 如果結構接收資訊，這個成員會指定接收在索引標籤文字的緩衝區的位址。  
   
  **cchTextMax**  
- 所指向的緩衝區大小**pszText**。 如果結構不能接收資訊，則會忽略這個成員。  
+ 所指向之緩衝區的大小**pszText**。 如果結構不能接收資訊時，會忽略這個成員。  
   
  `iImage`  
  如果沒有影像的索引在索引標籤控制項影像清單，或-1 的索引。  
   
  **lParam**  
- [] 索引標籤相關聯的應用程式定義的資料。 如果有四個位元組以上的應用程式定義的資料，每個索引標籤上，應用程式必須定義的結構，並使用，而不是`TCITEM`結構。 應用程式定義的結構中的第一個成員必須是[TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)結構。 **TCITEMHEADER**結構等同於`TCITEM`結構，但不含**lParam**成員。 您的結構大小和大小之間的差異**TCITEMHEADER**結構應該等於每個索引標籤的額外位元組數目。  
+ [] 索引標籤相關聯的應用程式定義的資料。 如果有四個位元組以上的應用程式定義的資料，每個索引標籤，應用程式必須定義的結構，並使用它，而不要`TCITEM`結構。 應用程式定義的結構中的第一個成員必須是[TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)結構。 **TCITEMHEADER**結構等同於`TCITEM`結構，但不含**lParam**成員。 您的結構大小的大小之間的差異**TCITEMHEADER**結構應該會等於每個索引標籤的額外位元組數目。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl #&4;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CTabCtrl # 4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
   
 ##  <a name="getitemcount"></a>CTabCtrl::GetItemCount  
- 擷取索引標籤控制項中的索引標籤的數目。  
+ 擷取索引標籤控制項中的索引標籤數目。  
   
 ```  
 int GetItemCount() const;  
@@ -416,10 +416,10 @@ int GetItemCount() const;
  索引標籤控制項中的項目數目。  
   
 ### <a name="example"></a>範例  
-  請參閱範例[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
+  請參閱範例的[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
   
 ##  <a name="getitemrect"></a>CTabCtrl::GetItemRect  
- 擷取指定的索引標籤索引標籤控制項中的週框。  
+ 擷取指定之索引標籤索引標籤控制項中的週框。  
   
 ```  
 BOOL GetItemRect(int nItem,   LPRECT lpRect) const;  
@@ -430,16 +430,16 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
  以零為起始的索引標籤項目索引。  
   
  `lpRect`  
- 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構會接收索引標籤的周框矩形。 這些座標會使用目前的對應模式在檢視區。  
+ 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收 索引標籤的周框的結構。 這些座標會使用目前的對應模式在檢視區。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="example"></a>範例  
-  請參閱範例[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
+  請參閱範例的[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
   
 ##  <a name="getitemstate"></a>CTabCtrl::GetItemState  
- 擷取所識別的索引標籤控制項項目的狀態`nItem`。  
+ 擷取所識別的索引標籤控制項項目狀態`nItem`。  
   
 ```  
 DWORD GetItemState(
@@ -452,18 +452,18 @@ DWORD GetItemState(
  要擷取狀態資訊項目的以零為起始的索引編號。  
   
  `dwMask`  
- 指定要傳回哪一個項目的狀態旗標的遮罩。 值的清單，請參閱的遮罩成員[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 指定要傳回哪些項目的狀態旗標的遮罩。 如需值的清單，請參閱的遮罩成員[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="return-value"></a>傳回值  
- 參考`DWORD`接收狀態資訊的值。 可為下列其中一個值：  
+ 若要參考`DWORD`接收的狀態資訊的值。 可為下列其中一個值：  
   
 |值|說明|  
 |-----------|-----------------|  
 |**TCIS_BUTTONPRESSED**|選取索引標籤控制項項目。|  
-|**TCIS_HIGHLIGHTED**|索引標籤控制項項目會反白顯示，並在索引標籤和文字畫使用目前的醒目提示色彩。 當使用醒目提示色彩，這會是 true 的插補，非遞色色彩。|  
+|**TCIS_HIGHLIGHTED**|索引標籤控制項項目會反白顯示，而且索引標籤和文字則會使用目前的反白顯示色彩繪製。 使用時反白顯示色彩，這會是的則為 true 的插補，非遞色色彩。|  
   
 ### <a name="remarks"></a>備註  
- 所指定項目的狀態**dwState**成員`TCITEM`結構。  
+ 所指定項目的狀態**dwState**隸屬`TCITEM`結構。  
   
 ##  <a name="getrowcount"></a>CTabCtrl::GetRowCount  
  擷取目前的索引標籤控制項中的資料列數。  
@@ -479,20 +479,20 @@ int GetRowCount() const;
  只有索引標籤控制項具有**TCS_MULTILINE**樣式可以有多個資料列的索引標籤。  
   
 ##  <a name="gettooltips"></a>CTabCtrl::GetToolTips  
- 擷取與索引標籤控制項相關聯的工具提示控制項的控制代碼。  
+ 擷取索引標籤控制項相關聯的工具提示控制項的控制代碼。  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，工具提示控制項的控制代碼否則**NULL**。  
+ 如果成功; 時，工具提示控制項的控制代碼否則**NULL**。  
   
 ### <a name="remarks"></a>備註  
- 索引標籤控制項建立工具提示控制項，如果有**TCS_TOOLTIPS**樣式。 您也可以指派至索引標籤控制項的工具提示控制項，使用`SetToolTips`成員函式。  
+ 如果有，索引標籤控制項建立工具提示控制項**TCS_TOOLTIPS**樣式。 您也可以指派至索引標籤控制項的工具提示控制項，使用`SetToolTips`成員函式。  
   
 ##  <a name="highlightitem"></a>CTabCtrl::HighlightItem  
- 設定索引標籤項目反白顯示狀態。  
+ 設定反白顯示的狀態索引標籤項目。  
   
 ```  
 BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
@@ -500,19 +500,19 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
   
 ### <a name="parameters"></a>參數  
  `idItem`  
- 索引標籤控制項項目的以零為起始的索引。  
+ 以零為起始的索引標籤控制項項目索引。  
   
  `fHighlight`  
- 值，指定要設定的反白顯示狀態。 如果這個值是**TRUE**，[] 索引標籤會反白顯示; 如果**FALSE**，[] 索引標籤設為其預設狀態。  
+ 值，指定要設定的反白顯示狀態。 如果此值為**TRUE**，[] 索引標籤會反白顯示; 如果**FALSE**，[] 索引標籤設為其預設狀態。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為&0;。  
+ 如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息[TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成員函式實作的 Win32 訊息[TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="hittest"></a>CTabCtrl::HitTest  
- 判斷哪一個索引標籤上，如果有的話，是在指定的螢幕位置。  
+ 判斷哪些索引標籤上，如果有的話，位於指定的螢幕上的位置。  
   
 ```  
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;  
@@ -520,10 +520,10 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
   
 ### <a name="parameters"></a>參數  
  `pHitTestInfo`  
- 指標[TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]，它會指定要測試的螢幕位置。  
+ 指標[TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]，以指定要測試的螢幕位置。  
   
 ### <a name="return-value"></a>傳回值  
- 如果沒有索引標籤的指定位置，傳回以零起始的索引 索引標籤或-1。  
+ 如果沒有索引標籤位於指定位置，傳回以零為起始的索引標籤或-1 索引。  
   
 ##  <a name="insertitem"></a>Ctabctrl:: Insertitem  
  現有的索引標籤控制項中插入新的索引標籤。  
@@ -571,13 +571,13 @@ LONG InsertItem(
  指標[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構，指定索引標籤的屬性。  
   
  `lpszItem`  
- 包含文字 索引標籤的 null 結尾字串的位址。  
+ 包含的文字 索引標籤的 null 結尾字串的位址。  
   
  `nImage`  
  插入影像清單中之影像的以零為起始的索引。  
   
  `nMask`  
- 指定哪一個`TCITEM`結構要設定的屬性。 可以是零個或以下值的組合︰  
+ 指定哪一個`TCITEM`結構要設定的屬性。 可以是零或下列值的組合︰  
   
 - `TCIF_TEXT`**PszText**成員是否有效。  
   
@@ -585,7 +585,7 @@ LONG InsertItem(
   
 - `TCIF_PARAM`**LParam**成員是否有效。  
   
-- `TCIF_RTLREADING`文字的**pszText**希伯來文或阿拉伯文系統上使用由右至左讀取順序顯示。  
+- `TCIF_RTLREADING`文字**pszText**希伯來文或阿拉伯文系統上使用由右至左讀取順序顯示。  
   
 - `TCIF_STATE`**DwState**成員是否有效。  
   
@@ -599,10 +599,10 @@ LONG InsertItem(
  指定要設定哪些狀態。 如需詳細資訊，請參閱[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，新索引標籤的以零起始的索引否則為-1。  
+ 以零起始的索引，新的索引標籤，如果登錄成功。否則為-1。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl #&5;](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_CTabCtrl # 5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
   
 ##  <a name="removeimage"></a>CTabCtrl::RemoveImage  
  索引標籤控制項影像清單中移除指定的映像。  
@@ -616,10 +616,10 @@ void RemoveImage(int nImage);
  要移除之影像的以零為起始索引。  
   
 ### <a name="remarks"></a>備註  
- 索引標籤控制項更新每個索引標籤的影像索引，好讓每個索引標籤會保持相同的映像相關聯。  
+ 此索引標籤控制項更新每個索引標籤的映像索引，好讓每個索引標籤會保持相同的映像相關聯。  
   
 ##  <a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
- 將焦點設在索引標籤控制項中指定的索引標籤。  
+ 將焦點設定到索引標籤控制項中指定之索引標籤。  
   
 ```  
 void SetCurFocus(int nItem);
@@ -630,7 +630,7 @@ void SetCurFocus(int nItem);
  指定的索引標籤，取得焦點的索引。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成員函式實作的 Win32 訊息行為[TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="setcursel"></a>CTabCtrl::SetCurSel  
  索引標籤控制項中選取索引標籤。  
@@ -641,13 +641,13 @@ int SetCurSel(int nItem);
   
 ### <a name="parameters"></a>參數  
  `nItem`  
- 選取項目以零為起始的索引。  
+ 要選取的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 以零起始的索引，先前選取的索引標籤，如果成功，否則為-1。  
+ 以零為起始的索引，先前選取的索引標籤，如果成功，否則為-1。  
   
 ### <a name="remarks"></a>備註  
- 索引標籤控制項不會傳送**TCN_SELCHANGING**或**TCN_SELCHANGE**通知訊息時使用這個函式來選取索引標籤。 這些通知會傳送使用**WM_NOTIFY**，當使用者按一下，或使用鍵盤來變更索引標籤。  
+ 索引標籤控制項不會傳送**TCN_SELCHANGING**或**TCN_SELCHANGE**通知訊息時使用這個函式選取索引標籤。 這些通知會傳送使用**WM_NOTIFY**，當使用者按一下，或使用鍵盤來變更索引標籤。  
   
 ##  <a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
  設定索引標籤控制項的延伸的樣式。  
@@ -658,19 +658,19 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
   
 ### <a name="parameters"></a>參數  
  `dwNewStyle`  
- 值，指定的索引標籤組合來控制延伸的樣式。  
+ 值，指定的索引標籤組合控制延伸的樣式。  
   
  `dwExMask`  
- A`DWORD`值，指出在哪些樣式`dwNewStyle`會受到影響。 只有在延伸的樣式`dwExMask`將會變更。 因為將保留所有其他樣式。 如果此參數為零，則所有在樣式`dwNewStyle`會受到影響。  
+ A`DWORD`值，指出在哪些樣式`dwNewStyle`會受到影響。 只有在擴充的樣式`dwExMask`將會變更。 因為是，仍會維護所有其他樣式。 如果這個參數是零，則所有樣式中`dwNewStyle`會受到影響。  
   
 ### <a name="return-value"></a>傳回值  
- A`DWORD`值，其中包含先前[擴充樣式的控制項索引標籤上](http://msdn.microsoft.com/library/windows/desktop/bb760546)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ A`DWORD`值，包含先前[索引標籤控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb760546)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="return-value"></a>傳回值  
- 此成員函式實作的 Win32 訊息的行為[TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成員函式實作的 Win32 訊息行為[TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="setimagelist"></a>CTabCtrl::SetImageList  
- 指派索引標籤控制項影像清單。  
+ 指定的索引標籤控制項影像清單。  
   
 ```  
 CImageList* SetImageList(CImageList* pImageList);
@@ -678,13 +678,13 @@ CImageList* SetImageList(CImageList* pImageList);
   
 ### <a name="parameters"></a>參數  
  `pImageList`  
- 若要指派給 索引標籤控制項影像清單的指標。  
+ 要指派給此索引標籤控制項影像清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回前一個影像清單的指標或**NULL**如果沒有上一個映像清單。  
+ 讓指標回到先前的影像清單或**NULL**如果沒有任何先前的影像清單。  
   
 ##  <a name="setitem"></a>CTabCtrl::SetItem  
- 設定部分或全部的索引標籤的屬性。  
+ 設定下列部分或所有索引標籤的屬性。  
   
 ```  
 BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
@@ -695,16 +695,16 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
  項目的以零為起始的索引。  
   
  `pTabCtrlItem`  
- 指標[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構，其中包含新的項目屬性。 **遮罩**成員指定要設定屬性。 如果**遮罩**成員指定`TCIF_TEXT`值**pszText**成員是以 null 終止字串的位址和**cchTextMax**成員會被忽略。  
+ 指標[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構，其中包含新的項目屬性。 **遮罩**成員指定要設定的屬性。 如果**遮罩**成員指定`TCIF_TEXT`值**pszText**成員是以 null 結尾字串的位址和**cchTextMax**成員會被忽略。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="example"></a>範例  
-  請參閱範例[GetItem](#getitem)。  
+  請參閱範例的[GetItem](#getitem)。  
   
 ##  <a name="setitemextra"></a>CTabCtrl::SetItemExtra  
- 設定每個索引標籤上的索引標籤控制項中的應用程式定義的資料保留的位元組數目。  
+ 設定每個索引標籤的索引標籤控制項中的應用程式定義的資料保留的位元組數目。  
   
 ```  
 BOOL SetItemExtra(int nBytes);
@@ -712,13 +712,13 @@ BOOL SetItemExtra(int nBytes);
   
 ### <a name="parameters"></a>參數  
  `nBytes`  
- 若要設定額外的位元組數目。  
+ 若要設定的額外位元組數目。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為&0;。  
+ 如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成員函式實作的 Win32 訊息行為[TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="setitemsize"></a>CTabCtrl::SetItemSize  
  設定索引標籤控制項項目的寬度和高度。  
@@ -735,7 +735,7 @@ CSize SetItemSize(CSize size);
  傳回索引標籤控制項項目的舊寬度和高度。  
   
 ##  <a name="setitemstate"></a>CTabCtrl::SetItemState  
- 設定控制項索引標籤的項目已由狀態`nItem`。  
+ 設定所識別的索引標籤控制項目狀態`nItem`。  
   
 ```  
 BOOL SetItemState(
@@ -746,24 +746,24 @@ BOOL SetItemState(
   
 ### <a name="parameters"></a>參數  
  `nItem`  
- 若要設定的狀態資訊的項目以零為起始的索引編號。  
+ 要設定的狀態資訊項目的以零為起始的索引編號。  
   
  `dwMask`  
- 指定哪一個項目的狀態設定旗標的遮罩。 值的清單，請參閱的遮罩成員[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 指定其中一個項目的狀態旗標，用於設定遮罩。 如需值的清單，請參閱的遮罩成員[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
  `dwState`  
- 參考`DWORD`值，其中包含的狀態資訊。 可為下列其中一個值：  
+ 若要參考`DWORD`值，其中包含狀態資訊。 可為下列其中一個值：  
   
 |值|說明|  
 |-----------|-----------------|  
 |**TCIS_BUTTONPRESSED**|選取索引標籤控制項項目。|  
-|**TCIS_HIGHLIGHTED**|索引標籤控制項項目會反白顯示，並在索引標籤和文字畫使用目前的醒目提示色彩。 當使用醒目提示色彩，這會是 true 的插補，非遞色色彩。|  
+|**TCIS_HIGHLIGHTED**|索引標籤控制項項目會反白顯示，而且索引標籤和文字則會使用目前的反白顯示色彩繪製。 使用時反白顯示色彩，這會是的則為 true 的插補，非遞色色彩。|  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ##  <a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
- 設定索引標籤控制項中的最小寬度的項目。  
+ 索引標籤控制項中設定的最小寬度的項目。  
   
 ```  
 int SetMinTabWidth(int cx);
@@ -771,13 +771,13 @@ int SetMinTabWidth(int cx);
   
 ### <a name="parameters"></a>參數  
  `cx`  
- 索引標籤控制項項目設定的最小寬度。 如果此參數設定為-1 時，控制項就會使用預設索引標籤寬度。  
+ 索引標籤控制項項目設定的最小寬度。 如果這個參數設定為-1 時，控制項將使用的預設索引標籤的寬度。  
   
 ### <a name="return-value"></a>傳回值  
- 先前的最小值 索引標籤寬度。  
+ 先前的最小的索引標籤寬度。  
   
 ### <a name="return-value"></a>傳回值  
- 此成員函式實作的 Win32 訊息的行為[TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 此成員函式實作的 Win32 訊息行為[TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ##  <a name="setpadding"></a>CTabCtrl::SetPadding  
  設定 （填補） 每個索引標籤的圖示和標籤控制項中的標籤周圍的空間數量。  
@@ -791,7 +791,7 @@ void SetPadding(CSize size);
  設定 （填補） 每個索引標籤的圖示和標籤控制項中的標籤周圍的空間數量。  
   
 ##  <a name="settooltips"></a>CTabCtrl::SetToolTips  
- 會指定工具提示控制項索引標籤控制項。  
+ 將工具提示控制項指派給索引標籤控制項。  
   
 ```  
 void SetToolTips(CToolTipCtrl* pWndTip);
@@ -802,10 +802,10 @@ void SetToolTips(CToolTipCtrl* pWndTip);
  工具提示控制項的控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 你可以藉由呼叫相關聯的索引標籤控制項的工具提示控制項`GetToolTips`。  
+ 您可以取得工具提示控制項，藉由呼叫相關聯的索引標籤控制項`GetToolTips`。  
   
 ### <a name="example"></a>範例  
-  請參閱範例[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
+  請參閱範例的[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

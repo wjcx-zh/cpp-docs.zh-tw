@@ -1,35 +1,51 @@
 ---
-title: "編譯器錯誤 C3718 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3718"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3718"
+title: "編譯器錯誤 C3718 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3718
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C3718
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6c93b63c910478c3459948038d74ddc1e8c78877
+ms.lasthandoff: 04/04/2017
 
-僅可以呼叫接收類別成員函式內容中的 'event'  
+---
+# <a name="compiler-error-c3718"></a>編譯器錯誤 C3718
+只接收類別成員函式的內容中呼叫 'event'  
   
- `event` 只能從接收類別呼叫。  
+ `event`只可以從接收的類別呼叫。  
   
-## 範例  
- 下列範例會產生 C3718：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3718:  
   
 ```  
 // C3718.cpp  

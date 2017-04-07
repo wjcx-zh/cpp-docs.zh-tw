@@ -1,40 +1,56 @@
 ---
-title: "編譯器錯誤 C2662 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2662"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2662"
+title: "編譯器錯誤 C2662 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2662
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 編譯器錯誤 C2662
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aa2c22d7fbe8b017617fcad41327feef7f8fd19a
+ms.lasthandoff: 04/04/2017
 
-'function' : 無法將 'this' 指標 number 從 'type1' 轉換成 'type2'  
+---
+# <a name="compiler-error-c2662"></a>編譯器錯誤 C2662
+'function': 無法將轉換 'this' 指標從 'type1' 到 'type2'  
   
- 編譯器不能將 `this` 指標從 `type1`轉換成 `type2`。  
+ 編譯器無法轉換`this`指標從`type1`至`type2`。  
   
- 這項錯誤可能是因在 `const` 物件上叫用非 `const` 成員函式所致。可能的解決方案：  
+ 這個錯誤可能因叫用非`const`成員函式上的`const`物件。  可能的解決方式︰  
   
--   將 `const` 從物件宣告中移除。  
+-   移除`const`從物件宣告。  
   
--   加入 `const` 至成員函式。  
+-   新增`const`成員函式。  
   
- 下列範例會產生 C2662：  
+ 下列範例會產生 C2662:  
   
 ```  
 // C2662.cpp  
@@ -50,7 +66,7 @@ int main() {
 }  
 ```  
   
- 以 **\/clr** 編譯時，您不能呼叫 `const` 或 `volatile` 限定 Managed 型別上的函式。  您不能宣告 Managed 類別的 const 成員函式，因此您不能呼叫 const Managed 物件上的方法。  
+ 編譯時**/clr**，您無法呼叫的函式上`const`或`volatile`限定 managed 型別。 您無法宣告 managed 類別的常數成員函式，因此您無法 const 受管理物件上呼叫方法。  
   
 ```  
 // C2662_b.cpp  
@@ -76,7 +92,7 @@ ref struct N {
 };  
 ```  
   
- 下列範例會產生 C2662：  
+ 下列範例會產生 C2662:  
   
 ```  
 // C2662_c.cpp  

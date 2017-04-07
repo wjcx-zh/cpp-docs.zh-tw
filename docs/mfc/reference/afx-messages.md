@@ -93,9 +93,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 3d2a811f850ca2779066f39fefd8312eb268f603
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 67fa0c6355443bcee478e9cd8d22b50813c0a4b0
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="afx-messages"></a>AFX 訊息
@@ -108,7 +108,7 @@ MFC 中使用這些訊息。
 |-|-|-|-|-|  
 |訊息|描述|[in] `wParam`|`lParam`（所有參數都是 [in] 除非另有指明）。|傳回值|  
 |AFX_WM_ACCGETOBJECT|未使用。|未使用。|不適用。|不適用。|  
-|AFX_WM_ACCGETSTATE|用於協助工具支援。 傳送此訊息可`CMFCPopupMenu`或`CMFCRibbonPanelMenu`擷取目前項目的狀態。|可能是功能表按鈕或分隔符號項目的索引。|未使用。|項目狀態。 如果索引是無效的則為-1 0，表示功能表按鈕沒有任何特殊的屬性。 否則，它是下列旗標的組合︰<br /><br /> TBBS_DISABLED \u2012 項目已停用<br /><br /> 勾選 TBBS_CHECKED \u2012 項目<br /><br /> TBBS_BUTTON \u2012 項目是標準按鈕<br /><br /> 按下 TBBS_PRESSED \u2012 按鈕<br /><br /> TBBS_INDETERMINATE \u2012 未定義狀態<br /><br /> TBBS_SEPARATOR-而不是功能表按鈕，其他功能表項目之間的分隔的這個項目表單|  
+|AFX_WM_ACCGETSTATE|用於協助工具支援。 傳送此訊息可`CMFCPopupMenu`或`CMFCRibbonPanelMenu`擷取目前項目的狀態。|可能是功能表按鈕或分隔符號項目的索引。|未使用。|項目狀態。 如果索引是無效的則為-1 0，表示功能表按鈕沒有任何特殊的屬性。 否則，它是下列旗標的組合︰<br /><br /> TBBS_DISABLED︰ 項目已停用<br /><br /> TBBS_CHECKED — 檢查項目<br /><br /> TBBS_BUTTON — 項目是標準按鈕<br /><br /> TBBS_PRESSED︰ 按鈕已按下<br /><br /> TBBS_INDETERMINATE︰ 未定義的狀態<br /><br /> TBBS_SEPARATOR-而不是功能表按鈕，其他功能表項目之間的分隔的這個項目表單|  
 |AFX_WM_CHANGE_ACTIVE_TAB|架構會傳送此訊息可調整大小的控制列控制項。 處理此訊息，以接收來自通知`CMFCTabCtrl`物件當使用者變更作用中的索引標籤。|索引標籤的索引。|未使用。|為非零。|  
 |AFX_WM_CHANGE_CURRENT_FOLDER|架構會傳送訊息至的父系`CMFCShellListCtrl`當使用者變更目前的資料夾。|未使用。|未使用。|未使用。|  
 |AFX_WM_CHANGEVISUALMANAGER|架構會將此訊息傳送給所有框架視窗中，當使用者變更目前的視覺化管理員。 以回應這個訊息，框架視窗會重新計算其區域，並視需要調整其他參數。 如果您要收到此事件的通知，您可以在應用程式中處理 AFX_WM_CHANGEVISUALMANAGER 訊息。 您必須先呼叫基底類別處理常式 (`OnChangeVisualManager`) 以確保架構的內部處理此事件會發生。|未使用。|未使用。|未使用。|  

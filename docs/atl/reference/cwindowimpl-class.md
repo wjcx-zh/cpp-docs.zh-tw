@@ -1,5 +1,5 @@
 ---
-title: "CWindowImpl 類別 |Microsoft 文件"
+title: "類別 CWindowImpl |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -46,9 +46,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 76827682e96d2aea80880fa7d70c267abe02ee1c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: e9145c3c91eb9507f6383e8971325e5eaab53c3c
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 類別
@@ -72,13 +72,13 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
  您類別的基底類別。 根據預設，基底類別是[CWindow](../../atl/reference/cwindow-class.md)。  
   
  `TWinTraits`  
- A[特性類別](../../atl/understanding-window-traits.md)，定義視窗樣式。 預設為 `CControlWinTraits`。  
+ A [traits 類別](../../atl/understanding-window-traits.md)，定義視窗樣式。 預設為 `CControlWinTraits`。  
   
 ## <a name="members"></a>Members  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWindowImpl::Create](#create)|建立視窗。|  
   
@@ -107,11 +107,11 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 |[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|指向視窗類別的原始視窗程序。|  
   
 ## <a name="remarks"></a>備註  
- 您可以使用`CWindowImpl`來建立視窗或子類別化現有視窗。 `CWindowImpl`視窗程序會使用訊息對應將訊息導向到適當的處理常式。  
+ 您可以使用`CWindowImpl`建立視窗或子類別化現有的視窗。 `CWindowImpl`視窗程序會使用訊息對應訊息導向適當的處理常式。  
   
- `CWindowImpl::Create`建立受管理的視窗類別資訊為基礎的視窗[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)。 `CWindowImpl`包含[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971)巨集，這表示`CWndClassInfo`會註冊新的視窗類別。 如果您想要讓現有視窗類別，衍生您的類別，從`CWindowImpl`，並包含[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)巨集。 在這種情況下，`CWndClassInfo` 會依據現有的類別註冊視窗類別，但是會使用 `CWindowImpl::WindowProc`。 例如：  
+ `CWindowImpl::Create`建立視窗由管理的視窗類別資訊為基礎[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)。 `CWindowImpl`包含[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)巨集，這表示`CWndClassInfo`註冊新的視窗類別。 如果您想要讓現有視窗類別，衍生您的類別從`CWindowImpl`並包含[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)巨集。 在這種情況下，`CWndClassInfo` 會依據現有的類別註冊視窗類別，但是會使用 `CWindowImpl::WindowProc`。 例如:   
   
- [!code-cpp[NVC_ATL_Windowing #&43;](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing # 43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
 > [!NOTE]
 >  由於 `CWndClassInfo` 只會管理一個視窗類別的資訊，因此每個透過 `CWindowImpl` 執行個體所建立的視窗都是以相同的視窗類別為基礎。  
@@ -119,13 +119,13 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
  `CWindowImpl` 也支援視窗子類別化。 `SubclassWindow` 方法會將現有視窗附加至 `CWindowImpl` 物件，並將視窗程序變更至 `CWindowImpl::WindowProc`。 每個 `CWindowImpl` 執行個體都可以子類別化為不同的視窗。  
   
 > [!NOTE]
->  對於任一個`CWindowImpl`物件，呼叫**建立**或`SubclassWindow`。 不要對同一物件叫用兩種方法。  
+>  任何給定的`CWindowImpl`物件，呼叫**建立**或`SubclassWindow`。 不要對同一物件叫用兩種方法。  
   
- 除了`CWindowImpl`，ATL 還提供[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)若要在另一個物件建立所在的視窗。  
+ 除了`CWindowImpl`，ATL 提供[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)到在另一個物件建立所在的視窗。  
   
- 基底類別解構函式 (~ **CWindowImplRoot**) 可確保視窗會消失，物件被終結之前。  
+ 基底類別解構函式 (~ **CWindowImplRoot**) 可確保視窗會消失，就會終結物件之前。  
   
- `CWindowImpl`衍生自**CWindowImplBaseT**，衍生自**CWindowImplRoot**，衍生自**TBase**和[CMessageMap](../../atl/reference/cmessagemap-class.md)。  
+ `CWindowImpl`衍生自**CWindowImplBaseT**，其衍生自**CWindowImplRoot**，其衍生自**TBase**和[CMessageMap](../../atl/reference/cmessagemap-class.md)。  
   
 |如需詳細資訊|請參閱|  
 |--------------------------------|---------|  
@@ -169,19 +169,19 @@ HWND Create(
  [in]A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定視窗的位置。 `RECT`可以傳遞指標或參考。  
   
  `szWindowName`  
- [in]指定的視窗名稱。 預設值是**NULL**。  
+ [in]指定視窗的名稱。 預設值是**NULL**。  
   
  `dwStyle`  
- [in]視窗樣式。 這個值會結合特性類別所提供的視窗樣式。 預設值可讓類別完全控制的樣式特性。 如需可能的值，請參閱[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]視窗樣式。 這個值會結合 traits 類別所提供的視窗樣式。 預設值讓 traits 類別完全掌控樣式。 如需可能的值，請參閱[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
  `dwExStyle`  
- [in]延伸的視窗樣式。 這個值會結合特性類別所提供的視窗樣式。 預設值可讓類別完全控制的樣式特性。 如需可能的值，請參閱[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]延伸的視窗樣式。 這個值會結合 traits 類別所提供的視窗樣式。 預設值讓 traits 類別完全掌控樣式。 如需可能的值，請參閱[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
  `MenuOrID`  
- [in]子視窗中，視窗識別項。 最上層視窗中，請在視窗的功能表控制代碼。 預設值是**0U**。  
+ [in]子視窗的視窗識別項。 最上層視窗中，請在視窗的功能表控制代碼。 預設值是**0U**。  
   
  `lpCreateParam`  
- [in]視窗建立資料指標。 如需完整的說明，請參閱的最後一個參數的描述[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)。  
+ [in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，新建立的視窗控制代碼。 否則， **NULL**。  
@@ -192,10 +192,10 @@ HWND Create(
 > [!NOTE]
 >  請勿呼叫**建立**如果已呼叫[SubclassWindow](#subclasswindow)。  
   
- 若要使用現有的視窗類別為基礎的視窗類別，衍生您的類別，從`CWindowImpl`，並包含[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)巨集。 現有視窗類別的視窗程序儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。 如需詳細資訊，請參閱[CWindowImpl](../../atl/reference/cwindowimpl-class.md)概觀。  
+ 若要使用現有的視窗類別為基礎的視窗類別，衍生您的類別從`CWindowImpl`並包含[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)巨集。 現有視窗類別的視窗程序儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。 如需詳細資訊，請參閱[CWindowImpl](../../atl/reference/cwindowimpl-class.md)概觀。  
   
 > [!NOTE]
->  如果使用 0 做為值`MenuOrID`參數，它必須指定為 0U （預設值） 以避免編譯器錯誤。  
+>  如果使用做為值 0`MenuOrID`參數，它必須指定為 0U （預設值） 若要避免編譯器錯誤。  
   
 ##  <a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
  由呼叫[WindowProc](#windowproc)未處理的訊息對應處理訊息。  
@@ -214,10 +214,10 @@ LRESULT DefWindowProc();
  [in]傳送至視窗的訊息。  
   
  `wParam`  
- [in]其他訊息特定資訊。  
+ [in]其他訊息的特定資訊。  
   
  `lParam`  
- [in]其他訊息特定資訊。  
+ [in]其他訊息的特定資訊。  
   
 ### <a name="return-value"></a>傳回值  
  訊息處理的結果。  
@@ -228,7 +228,7 @@ LRESULT DefWindowProc();
  不含任何參數的函式會自動擷取需要的參數，從目前的訊息。  
   
 ##  <a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
- 傳回目前的訊息，以封裝`MSG`結構。  
+ 傳回目前的訊息，封裝在`MSG`結構。  
   
 ```
 const MSG* GetCurrentMessage();
@@ -261,14 +261,14 @@ static CWndClassInfo& GetWndClassInfo();
  靜態執行個體[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，`CWindowImpl`透過這個方法會取得[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971)巨集，指定新的視窗類別。  
+ 根據預設，`CWindowImpl`透過這個方法會取得[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)巨集，指定新的視窗類別。  
   
- 要在現有視窗類別，衍生您的類別，從`CWindowImpl`，並包含[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)巨集，以覆寫`GetWndClassInfo`。 如需詳細資訊，請參閱[CWindowImpl](../../atl/reference/cwindowimpl-class.md)概觀。  
+ 要讓現有視窗類別，衍生您的類別從`CWindowImpl`並包含[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)巨集，以覆寫`GetWndClassInfo`。 如需詳細資訊，請參閱[CWindowImpl](../../atl/reference/cwindowimpl-class.md)概觀。  
   
  除了使用`DECLARE_WND_CLASS`和`DECLARE_WND_SUPERCLASS`巨集，可以覆寫`GetWndClassInfo`與您自己的實作。  
   
 ##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
- 根據 視窗中，指向一個下列視窗程序。  
+ 視窗中，根據指向下列視窗程序的其中一個。  
   
 ```
 WNDPROC m_pfnSuperWindowProc;
@@ -278,14 +278,14 @@ WNDPROC m_pfnSuperWindowProc;
   
 |視窗類型|視窗程序|  
 |--------------------|----------------------|  
-|視窗會根據新的視窗類別，透過指定[DECLARE_WND_CLASS](http://msdn.microsoft.com/library/55247a72-fb9e-4bde-87f3-747c08076971)巨集。|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) Win32 函式。|  
-|修改現有的類別，透過指定的視窗類別為基礎的視窗[DECLARE_WND_SUPERCLASS](http://msdn.microsoft.com/library/650337b6-4973-41e5-8c36-55f90327bdcd)巨集。|現有視窗類別的視窗程序。|  
-|子類別化的視窗。|子類別化的視窗的原始視窗程序。|  
+|視窗會根據新的視窗類別，透過指定[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)巨集。|[DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572)的 Win32 函式。|  
+|修改現有的類別，透過指定的視窗類別為基礎的視窗[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)巨集。|現有視窗類別的視窗程序。|  
+|子類別化的視窗中。|子類別化的視窗的原始視窗程序。|  
   
- [CWindowImpl::DefWindowProc](#defwindowproc)傳送訊息的視窗程序中所儲存的資訊`m_pfnSuperWindowProc`。  
+ [CWindowImpl::DefWindowProc](#defwindowproc)傳送訊息至視窗程序中儲存的資訊`m_pfnSuperWindowProc`。  
   
 ##  <a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
- 在收到最後一則訊息之後呼叫 (通常`WM_NCDESTROY`)。  
+ 收到的最後一個訊息後呼叫 (通常`WM_NCDESTROY`)。  
   
 ```
 virtual void OnFinalMessage(HWND hWnd);
@@ -293,13 +293,13 @@ virtual void OnFinalMessage(HWND hWnd);
   
 ### <a name="parameters"></a>參數  
  `hWnd`  
- [in]終結視窗控制代碼。  
+ [in]終結視窗的控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 預設實作`OnFinalMessage`不做任何動作，但您可以覆寫這個函式來處理清除，然後再終結視窗。 如果您想要自動刪除您在視窗解構時的物件，您可以呼叫`delete this;`在這個函式。  
+ 預設實作`OnFinalMessage`不做任何動作，但是您可以覆寫這個函式來處理清理，然後再終結視窗。 如果您想要自動刪除您的物件，在視窗解構時，您可以呼叫`delete this;`在這個函式。  
   
 ##  <a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
- 子視窗由`hWnd`，並將它附加`CWindowImpl`物件。  
+ 視窗所識別的子類別`hWnd`並將它附加至`CWindowImpl`物件。  
   
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -307,10 +307,10 @@ BOOL SubclassWindow(HWND hWnd);
   
 ### <a name="parameters"></a>參數  
  `hWnd`  
- [in]在子類別化的視窗控制代碼。  
+ [in]正在子類別化的視窗控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- **TRUE**視窗是否成功子類別，否則**FALSE**。  
+ **TRUE**視窗是否成功地衍生子類別，否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
  子類別化的視窗現在會使用[CWindowImpl::WindowProc](#windowproc)。 原始視窗程序儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
@@ -319,7 +319,7 @@ BOOL SubclassWindow(HWND hWnd);
 >  請勿呼叫`SubclassWindow`如果已呼叫[建立](#create)。  
   
 ##  <a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
- 中斷連結子類別化的視窗，從`CWindowImpl`物件，並還原原始視窗程序，儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
+ 中斷連結的子類別化的視窗`CWindowImpl`物件，並還原原始視窗程序，儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。  
   
 ```
 HWND UnsubclassWindow();
@@ -329,7 +329,7 @@ HWND UnsubclassWindow();
  先前子類別化的視窗控制代碼。  
   
 ##  <a name="windowproc"></a>CWindowImpl::WindowProc  
- 這個靜態函式實作的視窗程序。  
+ 此靜態函式實作的視窗程序。  
   
 ```
 static LRESULT CALLBACK WindowProc(
@@ -347,27 +347,27 @@ static LRESULT CALLBACK WindowProc(
  [in]傳送至視窗的訊息。  
   
  `wParam`  
- [in]其他訊息特定資訊。  
+ [in]其他訊息的特定資訊。  
   
  `lParam`  
- [in]其他訊息特定資訊。  
+ [in]其他訊息的特定資訊。  
   
 ### <a name="return-value"></a>傳回值  
  訊息處理的結果。  
   
 ### <a name="remarks"></a>備註  
- `WindowProc`使用預設的訊息對應 (以宣告[BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554)) 將訊息導向到適當的處理常式。 如有必要，`WindowProc`呼叫[DefWindowProc](#defwindowproc)處理其他訊息。 如果未處理的最後一個訊息，`WindowProc`會進行下列作業︰  
+ `WindowProc`使用預設的訊息對應 (以宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) 將導向至適當的處理常式的訊息。 如有必要，`WindowProc`呼叫[DefWindowProc](#defwindowproc)進行額外的訊息處理。 如果未處理的最後一個訊息，`WindowProc`會進行下列作業︰  
   
--   執行 unsubclassing 如果視窗是 unsubclassed。  
+-   執行 unsubclassing 如果視窗已 unsubclassed。  
   
 -   清除 `m_hWnd`。  
   
 -   呼叫[OnFinalMessage](#onfinalmessage)終結視窗之前。  
   
- 您可以覆寫`WindowProc`提供不同的機制來處理訊息。  
+ 您可以覆寫`WindowProc`提供不同的機制，來處理訊息。  
   
 ## <a name="see-also"></a>另請參閱  
- [BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554)   
+ [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
 

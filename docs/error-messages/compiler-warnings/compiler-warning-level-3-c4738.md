@@ -1,41 +1,57 @@
 ---
-title: "編譯器警告 (層級 3) C4738 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4738"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4738"
+title: "編譯器警告 (層級 3) C4738 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4738
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器警告 (層級 3) C4738
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ce2db890b7b90eedf5b4456e875a06f8f92b0289
+ms.lasthandoff: 04/04/2017
 
+---
+# <a name="compiler-warning-level-3-c4738"></a>編譯器警告 (層級 3) C4738
 在記憶體中儲存 32 位元浮點結果，可能會損失效能  
   
- C4738 是警告指派、轉型、傳遞引數，或其他運算的結果可能需要進行捨入，否則該運算可能會耗盡暫存器而需要使用記憶體 \(溢出\)。  這樣可能會造成效能損失。  
+ C4738 警告的設定、 轉型，結果會傳遞引數，或其他作業可能需要進行捨入，或作業已用盡暫存器，並且需要使用 （溢出） 的記憶體。 這樣可以降低效能。  
   
- 若要解除這項警告並避免捨入，請用 [\/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) 編譯，或使用 `double` 代替 `float`。  
+ 若要解決這個警告，並避免進位，以編譯[/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md)或使用`double`而不是`float`。  
   
- 若要解除這項警告並避免耗盡暫存器，請變更計算順序，並修改您的內嵌使用情形。  
+ 若要解決這個警告，並避免完暫存器，變更計算的順序和修改貴用戶使用內嵌  
   
- 此警告在預設情況下為關閉的。  如需詳細資訊，請參閱[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 此警告預設為關閉。 如需詳細資訊，請參閱[編譯器警告為關閉的預設](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
   
-## 範例  
- 下列範例會產生 C4738：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C4738:  
   
 ```  
 // C4738.cpp  

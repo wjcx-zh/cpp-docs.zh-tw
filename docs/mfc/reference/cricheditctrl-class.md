@@ -110,9 +110,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 9e79a6728471acd08052d87b97645407d1f7cc47
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 262b2b8548f203a210b1aabbe149fe25cf6ad655
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
@@ -134,7 +134,7 @@ class CRichEditCtrl : public CWnd
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRichEditCtrl::CanPaste](#canpaste)|決定是否剪貼簿內容可以貼到此 rich edit 控制項。|  
 |[CRichEditCtrl::CanRedo](#canredo)|判斷是否有任何控制項的重做佇列中的動作。|  
@@ -514,7 +514,7 @@ long FindText(
  指標[FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909)結構搜尋參數與傳回找到的相符項目的範圍。  
   
 ### <a name="return-value"></a>傳回值  
- 以零為起始的字元位置的下一個相符項目。– 1，表示有沒有相符項目。  
+ 以零為起始的字元位置的下一個相符項目。-1，表示有沒有相符項目。  
   
 ### <a name="remarks"></a>備註  
  您可以搜尋 向上或向下中設定適當的範圍參數[CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885)結構內**FINDTEXTEX**結構。  
@@ -746,7 +746,7 @@ BOOL GetModify() const;
  為非零，如果在這個文字`CRichEditCtrl`已修改物件; 否則為 0。  
   
 ### <a name="remarks"></a>備註  
- Windows 會維護內部的旗標，指出是否已變更的 rich edit 控制項的內容。 當編輯控制項第一次建立，而且也可以藉由呼叫清除時，會清除這個旗標[SetModify](#setmodify)成員函式。  
+ Windows 會維護內部的旗標，指出是否已變更的 rich edit 控制項的內容。 當編輯控制項第一次建立，而且也可以藉由呼叫清除時，會清除此旗標[SetModify](#setmodify)成員函式。  
   
  如需詳細資訊，請參閱[EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
@@ -798,7 +798,7 @@ BOOL GetPunctuation(
   
 ### <a name="parameters"></a>參數  
  `fType`  
- 標點符號類型旗標，如中所述`fType`參數[EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 標點符號型別旗標，如中所述`fType`參數[EM_GETPUNCTUATION](http://msdn.microsoft.com/library/windows/desktop/bb774184)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
  `lpPunc`  
  指標[標點符號](http://msdn.microsoft.com/library/windows/desktop/bb787944)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
@@ -1109,10 +1109,10 @@ long LineFromChar(long nIndex) const;
   
 ### <a name="parameters"></a>參數  
  `nIndex`  
- 包含編輯控制項的文字中所需的字元的以零為起始的索引值，或包含為-1。 如果`nIndex`為 – 1，它會指定目前這一行，也就是包含插入號的那一行。  
+ 包含編輯控制項的文字中所需的字元的以零為起始的索引值，或包含-1。 如果`nIndex`為-1，它會指定目前這一行，也就是包含插入號的那一行。  
   
 ### <a name="return-value"></a>傳回值  
- 包含所指定的字元索引的那一行的以零為起始的行號`nIndex`。 如果`nIndex`為 – 1，會傳回包含選取範圍的第一個字元的行號。 如果沒有選取範圍，則會傳回目前的行號。  
+ 包含所指定的字元索引的那一行的以零為起始的行號`nIndex`。 如果`nIndex`為-1，會傳回包含選取範圍的第一個字元的行號。 如果沒有選取範圍，則會傳回目前的行號。  
   
 ### <a name="remarks"></a>備註  
  字元索引會從 rich edit 控制項的開頭的字元數。 用於字元計數，OLE 項目會計算為單一字元。  
@@ -1131,10 +1131,10 @@ int LineIndex(int nLine = -1) const;
   
 ### <a name="parameters"></a>參數  
  `nLine`  
- 包含編輯控制項的文字行的索引值，或包含為-1。 如果`nLine`為 – 1，它會指定目前這一行，也就是包含插入號的那一行。  
+ 包含編輯控制項的文字行的索引值，或包含-1。 如果`nLine`為-1，它會指定目前這一行，也就是包含插入號的那一行。  
   
 ### <a name="return-value"></a>傳回值  
- 在指定的行的字元索引`nLine`或-1，如果在指定的行號，然後編輯控制項中的行數。  
+ 在指定的行的字元索引`nLine`或-1 表示大於指定的行號，然後在編輯控制項中的行數。  
   
 ### <a name="remarks"></a>備註  
  字元索引是指定行從 rich edit 控制項的開頭字元數。  
@@ -1153,7 +1153,7 @@ int LineLength(int nLine = -1) const;
   
 ### <a name="parameters"></a>參數  
  `nLine`  
- 其長度是要擷取的行中指定字元的字元索引。 如果此參數為 – 1，則會傳回目前的行 （包含插入號的行） 的長度，不包括任何長度選取行中的文字。 當`LineLength`稱為單行編輯控制項，這個參數已忽略。  
+ 其長度是要擷取的行中指定字元的字元索引。 如果這個參數是-1，則會傳回目前的行 （包含插入號的行） 的長度，不包括任何長度選取行中的文字。 當`LineLength`稱為單行編輯控制項，這個參數已忽略。  
   
 ### <a name="return-value"></a>傳回值  
  當`LineLength`稱為多行編輯控制項，則傳回值是由指定的行長度 （以位元組為單位） `nLine`。 當`LineLength`稱為單行編輯控制項，則傳回值是編輯控制項中文字的長度 （以位元組為單位）。  
@@ -1183,7 +1183,7 @@ void LineScroll(
  指定要水平捲動字元位置的數目。 會忽略此值，如果 rich edit 控制項已經**ES_RIGHT**或**ES_CENTER**樣式。 [編輯樣式](../../mfc/reference/edit-styles.md)中指定[建立](#create)。  
   
 ### <a name="remarks"></a>備註  
- 編輯控制項在過去的文字編輯控制項中的最後一行不垂直捲動。 如果目前的行加上所指定的線條數目`nLines`超過的編輯控制項中的總行數，值會進行調整，以便編輯控制項的最後一行捲動至編輯控制項視窗的頂端。  
+ 編輯控制項無法以垂直方式捲動過去的文字編輯控制項中的最後一行。 如果目前的行加上所指定的線條數目`nLines`超過的編輯控制項中的總行數，值會進行調整，以便編輯控制項的最後一行捲動至編輯控制項視窗的頂端。  
   
  `LineScroll`可以用於水平捲動，過去的任何一行的最後一個字元。  
   
@@ -1320,7 +1320,7 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
  如果成功，則為非零，否則為，零。 例如，訊息可能會失敗，因為記憶體不足。  
   
 ### <a name="remarks"></a>備註  
- 如果啟用，rich edit 控制項會掃描以判斷它是否符合標準的 URL 格式的文字。 如需這些 URL 格式的清單，請參閱[EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如果啟用，rich edit 控制項就會掃描來判斷它是否符合標準的 URL 格式的文字。 如需這些 URL 格式的清單，請參閱[EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 > [!NOTE]
 >  請勿設定`SetAutoURLDetect`至**TRUE**如果編輯控制項使用**CFE_LINK** Url 以外的文字的效果。 `SetAutoURLDetect`啟用這個效果 url 和停用它的所有其他文字。 請參閱[EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970)如需有關**CFE_LINK**效果。  
@@ -1476,7 +1476,7 @@ void SetOptions(
   
 - `ECO_WANTRETURN`指定當使用者按下 ENTER 鍵，同時將多行 rich edit 控制項在對話方塊中輸入文字時插入所傳回的歸位字元。 如果您未指定此樣式，按下 ENTER 鍵傳送命令至 rich edit 控制項的父視窗，模擬按一下父視窗的預設按鈕 （例如，在對話方塊中 [確定] 按鈕）。 此樣式會有對單行編輯控制項。  
   
-- `ECO_SAVESEL`當控制項遺失焦點時，會保留選取項目。 根據預設，當它重新取得焦點時，會選取整個控制項的內容。  
+- `ECO_SAVESEL`當控制項遺失焦點時，會保留選取項目。 根據預設，當它重新取得焦點時，會選取控制項的整個內容。  
   
 - `ECO_VERTICAL`在垂直方向繪製的文字和物件。 適用於僅亞洲語言。  
   
@@ -1603,7 +1603,7 @@ void SetSel(CHARRANGE& cr);
   
  插入號會放在所啟動的較大表示選取範圍結尾 ( **cpMin**或`nStartChar`) 和 end ( **cpMax**或`nEndChar`) 索引。 此函式的內容捲動`CRichEditCtrl`使插入號是可見。  
   
- 在此選取所有文字`CRichEditCtrl`物件，呼叫`SetSel`與 0 和結束索引為 – 1 的起始索引。  
+ 在此選取所有文字`CRichEditCtrl`物件，呼叫`SetSel`具有開始索引為 0 且結束索引為-1。  
   
  如需詳細資訊，請參閱[EM_EXSETSEL](http://msdn.microsoft.com/library/windows/desktop/bb788007)訊息和[CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
@@ -1679,7 +1679,7 @@ BOOL SetTextMode(UINT fMode);
   
 ### <a name="parameters"></a>參數  
  *fMode*  
- 指定控制項的文字模式和復原層級的參數的新設定。 如需可能值的清單，請參閱的模式參數[EM_SETTEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774286)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 指定控制項的文字模式和復原層級的參數的新設定。 可能的值清單，請參閱的模式參數[EM_SETTEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774286)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為非零，否則為，零。  

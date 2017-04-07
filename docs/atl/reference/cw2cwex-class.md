@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: a85b67a58553dada36f4472ea0683e18bc775493
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 5dca6b31cdd99582e727b634093c3548eef2ecc1
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX 類別
@@ -57,7 +57,7 @@ class CW2CWEX
   
 #### <a name="parameters"></a>參數  
  `t_nBufferLength`  
- 轉譯程序中使用之緩衝區的大小。 預設長度為 128 位元組。  
+ 轉譯程序中使用之緩衝區的大小。 預設長度為 128 個位元組。  
   
 ## <a name="members"></a>Members  
   
@@ -76,14 +76,14 @@ class CW2CWEX
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CW2CWEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
   
 ## <a name="remarks"></a>備註  
  除非需要額外的功能，則使用`CW2CTEX`， `CT2CWEX`，或`CW2W`程式碼中。  
   
- 這個類別會安全地在迴圈中使用，而且不會發生堆疊溢位。 根據預設，ATL 轉換類別和巨集會使用目前的執行緒 ANSI 字碼頁轉換。  
+ 這個類別是安全地在迴圈中使用，而且不會產生堆疊溢位。 根據預設，ATL 轉換類別和巨集使用目前的執行緒 ANSI 字碼頁來進行轉換。  
   
  下列巨集根據此類別︰  
   
@@ -91,14 +91,14 @@ class CW2CWEX
   
 - `CT2CWEX`  
   
- Typedef，下列根據此類別︰  
+ 下列 typedef 根據此類別︰  
   
 - `CW2W`  
   
- 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)。  
+ 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
   
 ## <a name="example"></a>範例  
- 請參閱[ATL 和 MFC 字串轉換巨集](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)如需使用這些字串轉換巨集的範例。  
+ 請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** atlconv.h  
@@ -116,7 +116,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
  要轉換的文字字串。  
   
  `nCodePage`  
- 字碼頁中。 不使用這個類別中。  
+ 字碼頁。 不使用這個類別中。  
   
 ### <a name="remarks"></a>備註  
  配置轉譯程序中使用的緩衝區。  
@@ -129,7 +129,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>備註  
- 釋出配置的緩衝區。  
+ 釋放已配置的緩衝區。  
   
 ##  <a name="m_psz"></a>CW2CWEX::m_psz  
  儲存在來源字串的資料成員。  

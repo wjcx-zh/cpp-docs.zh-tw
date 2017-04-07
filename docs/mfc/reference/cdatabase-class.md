@@ -62,9 +62,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: afcf1f37dbf0f55dc26c7258d130043bffc8c1a8
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cdatabase-class"></a>CDatabase 類別
@@ -80,7 +80,7 @@ class CDatabase : public CObject
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDatabase::CDatabase](#cdatabase)|建構 `CDatabase` 物件。 您必須藉由呼叫初始化物件`OpenEx`或**開啟**。|  
   
@@ -88,7 +88,7 @@ class CDatabase : public CObject
   
 |名稱|說明|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|一系列可回復的呼叫會啟動 「 交易 」 \u2012 `AddNew`，**編輯**，**刪除**，和**更新**類別成員函式`CRecordset`\u2012 上連接的資料來源。 資料來源必須支援的交易**BeginTrans**才能發生效用。|  
+|[CDatabase::BeginTrans](#begintrans)|啟動 「 交易 」 — 一系列的回復呼叫`AddNew`，**編輯**，**刪除**，和**更新**類別成員函式`CRecordset`— 上連接的資料來源。 資料來源必須支援的交易**BeginTrans**才能發生效用。|  
 |[CDatabase::BindParameters](#bindparameters)|可讓您將繫結參數，然後再呼叫`CDatabase::ExecuteSQL`。|  
 |[CDatabase::Cancel](#cancel)|取消非同步作業或從第二個執行緒處理序。|  
 |[CDatabase::CanTransact](#cantransact)|傳回非零，如果資料來源支援交易。|  
@@ -285,7 +285,7 @@ void ExecuteSQL(LPCTSTR lpszSQL);
 ### <a name="remarks"></a>備註  
  以 null 終止字串建立的命令。 `ExecuteSQL`不會傳回資料記錄。 如果您想要處理的記錄，請改為使用資料錄集物件。  
   
- 大部分的資料來源的命令會發出透過資料錄集物件，以便選取資料、 插入新的記錄、 刪除資料錄，以及編輯記錄支援的命令。 不過，並非所有 ODBC 直接支援功能的資料庫類別中，因此有時候您可能需要進行直接 SQL 呼叫與`ExecuteSQL`。  
+ 大部分的資料來源的命令會發出透過資料錄集物件，以便選取資料、 插入新的記錄、 刪除資料錄，以及編輯記錄支援的命令。 但是，並非所有 ODBC 功能直接都支援資料庫類別中，因此您有時可能需要進行直接 SQL 呼叫與`ExecuteSQL`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase # 13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
@@ -398,7 +398,7 @@ BOOL IsOpen() const;
  為非零，如果`CDatabase`目前連接物件; 否則為 0。  
   
 ##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
- 包含公用的控制代碼到 ODBC 資料來源連接 \u2012"連接控制代碼 」。  
+ 包含公用的 ODBC 資料來源連接控制代碼，「 連接控制代碼 」。  
   
 ### <a name="remarks"></a>備註  
  一般來說，就不需要直接存取此成員變數。 相反地，架構會配置控制代碼呼叫時`OpenEx`或**開啟**。 架構會呼叫時，取消配置控制代碼**刪除**運算子`CDatabase`物件。 請注意，**關閉**成員函式不會將它們取消配置的控制代碼。  
@@ -445,7 +445,7 @@ virtual BOOL Open(
   
 ### <a name="parameters"></a>參數  
  `lpszDSN`  
- 指定透過 ODBC 管理員程式名稱登錄與 ODBC 資料來源名稱 \u2012。 如果資料來源名稱值中指定了`lpszConnect`(形式"DSN =\<資料來源 >")，它不可指定一次在`lpszDSN`。 在此情況下，`lpszDSN`應該**NULL**。 否則，您可以傳遞**NULL**如果您想要對使用者顯示資料來源 對話方塊，使用者可在其中選取資料來源。 如需詳細資訊，請參閱 < 備註 >。  
+ 指定資料來源名稱，已登錄的名稱與 ODBC 透過 ODBC 管理員程式。 如果資料來源名稱值中指定了`lpszConnect`(形式"DSN =\<資料來源 >")，它不可指定一次在`lpszDSN`。 在此情況下，`lpszDSN`應該**NULL**。 否則，您可以傳遞**NULL**如果您想要對使用者顯示資料來源 對話方塊，使用者可在其中選取資料來源。 如需詳細資訊，請參閱 < 備註 >。  
   
  `bExclusive`  
  不支援這個版本的類別庫。 目前，判斷提示失敗，則此參數**TRUE**。 永遠開啟資料來源，以共用的 （不是唯一的）。  
@@ -543,7 +543,7 @@ BOOL Rollback();
   請參閱文章[交易︰ 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
 ##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- 在呼叫之前呼叫此成員函式 \u2012`OpenEx`或**開啟**覆寫預設號碼 \u2012 允許嘗試的資料之前的秒來源的連接逾時。  
+ 呼叫此成員函式 — 之前先呼叫`OpenEx`或**開啟**— 若要覆寫預設允許的秒數之前嘗試的資料來源連接逾時。  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);

@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: bb418919c26e3c0054a151b859cdf3f31c5d73a8
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 18da3b079cba8bbccba1a5d9655107620fc41eb8
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdacl-class"></a>CDacl 類別
-這個類別是 DACL （判別存取控制清單） 結構的包裝函式。  
+這個類別是 DACL （任意存取控制清單） 結構的包裝函式。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -69,11 +69,11 @@ class CDacl : public CAcl
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDacl::AddAllowedAce](#addallowedace)|將允許的 ACE （存取控制的項目） 加入至`CDacl`物件。|  
 |[CDacl::AddDeniedAce](#adddeniedace)|新增拒絕的 ACE`CDacl`物件。|  
-|[CDacl::GetAceCount](#getacecount)|在傳回的 Ace （存取控制的項目） 數目`CDacl`物件。|  
+|[CDacl::GetAceCount](#getacecount)|傳回的 Ace （存取控制的項目） 中`CDacl`物件。|  
 |[CDacl::RemoveAce](#removeace)|移除特定的 ACE （存取控制的項目）`CDacl`物件。|  
 |[CDacl::RemoveAllAces](#removeallaces)|移除所有的 Ace 中包含`CDacl`物件。|  
   
@@ -84,13 +84,13 @@ class CDacl : public CAcl
 |[CDacl::operator =](#operator_eq)|指派運算子。|  
   
 ## <a name="remarks"></a>備註  
- 物件的安全性描述元可以包含 DACL。 DACL 包含零或多個 Ace （存取控制的項目） 可識別使用者及群組可以存取的物件。 如果是空的 DACL （也就是包含零個 Ace），沒有明確授與存取，因此會隱含拒絕存取。 不過，如果物件的安全性描述元沒有 DACL，物件是未受保護，而且每個人都有完整存取權限。  
+ 物件的安全性描述元可以包含 DACL。 DACL 包含零或多個 Ace （存取控制的項目） 所識別的使用者和群組，讓他們可以存取的物件。 如果是空的 DACL （也就是說，它包含零個 Ace），不明確授與存取權，因此會隱含拒絕存取。 不過，如果物件的安全性描述元沒有 DACL，物件是未受保護，而且每個人都可完整存取權限。  
   
  若要擷取物件的 DACL，您必須是物件的擁有者，或具有 READ_CONTROL 物件的存取權。 若要變更物件的 DACL，您必須使用 WRITE_DAC 物件的存取權。  
   
- 使用類別方法，可建立、 新增、 移除和刪除 Ace 從`CDacl`物件。 另請參閱[AtlGetDacl](http://msdn.microsoft.com/library/a0973648-0d46-4c1a-914f-bda861fe5d19)和[AtlSetDacl](http://msdn.microsoft.com/library/eb88ccb6-1f1b-444d-b0c9-8d5cd0dd6c0b)。  
+ 使用類別方法，提供建立、 新增、 移除和刪除從 Ace`CDacl`物件。 另請參閱[AtlGetDacl](security-global-functions.md#atlgetdacl)和[AtlSetDacl](security-global-functions.md#atlsetdacl)。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -125,7 +125,7 @@ bool AddAllowedAce(
  指定允許的存取權限的遮罩指定`CSid`物件。  
   
  `AceFlags`  
- 一組控制繼承 ACE 的位元旗標。  
+ 一組控制 ACE 繼承的位元旗標。  
   
  `pObjectType`  
  物件類型。  
@@ -134,13 +134,13 @@ bool AddAllowedAce(
  繼承的物件類型。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**如果 ACE 新增至`CDacl`物件， **false**失敗。  
+ 傳回**true**如果 ACE 新增至`CDacl`物件**false**失敗。  
   
 ### <a name="remarks"></a>備註  
- A`CDacl`物件包含零或多個 Ace （存取控制的項目） 可識別使用者及群組可以存取的物件。 這個方法會加入可讓您存取 ACE`CDacl`物件。  
+ A`CDacl`物件包含零或多個 Ace （存取控制的項目） 所識別的使用者和群組，讓他們可以存取的物件。 這個方法會加入可讓您存取 ACE`CDacl`物件。  
   
 > [!NOTE]
->  第二種`AddAllowedAce`只是在 Windows 2000 和更新版本。  
+>  第二種`AddAllowedAce`才可於 Windows 2000 和更新版本。  
   
  請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可以在中設定各種旗標的描述`AceFlags`參數。  
   
@@ -169,7 +169,7 @@ bool AddDeniedAce(
  指定要拒絕的存取權限的遮罩指定`CSid`物件。  
   
  `AceFlags`  
- 一組控制繼承 ACE 的位元旗標。 預設為 0，在第一種形式的方法。  
+ 一組控制 ACE 繼承的位元旗標。 預設為 0，在第一種形式的方法。  
   
  `pObjectType`  
  物件類型。  
@@ -178,13 +178,13 @@ bool AddDeniedAce(
  繼承的物件類型。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**如果 ACE 新增至`CDacl`物件， **false**失敗。  
+ 傳回**true**如果 ACE 新增至`CDacl`物件**false**失敗。  
   
 ### <a name="remarks"></a>備註  
- A`CDacl`物件包含零或多個 Ace （存取控制的項目） 可識別使用者及群組可以存取的物件。 這個方法會將拒絕存取的 ACE`CDacl`物件。  
+ A`CDacl`物件包含零或多個 Ace （存取控制的項目） 所識別的使用者和群組，讓他們可以存取的物件。 此方法會將拒絕存取的 ACE`CDacl`物件。  
   
 > [!NOTE]
->  第二種`AddDeniedAce`只是在 Windows 2000 和更新版本。  
+>  第二種`AddDeniedAce`才可於 Windows 2000 和更新版本。  
   
  請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可以在中設定各種旗標的描述`AceFlags`參數。  
   
@@ -198,10 +198,10 @@ CDacl () throw();
   
 ### <a name="parameters"></a>參數  
  `rhs`  
- 將現有**ACL** （存取控制清單） 的結構。  
+ 現有**ACL** （存取控制清單） 結構。  
   
 ### <a name="remarks"></a>備註  
- `CDacl`物件，可選擇性地建立使用現有**ACL**結構。 請務必注意，只有 DACL （判別存取控制清單），而且不 SACL （系統存取控制清單），會傳遞做為此參數。 偵錯組建中傳遞 SACL 會判斷提示。 在發行組建傳遞 SACL 會導致 Ace （存取控制的項目） 中的 ACL 會被忽略，而且不會發生錯誤。  
+ `CDacl`物件可以選擇性地建立使用現有**ACL**結構。 請務必注意，只有 DACL （任意存取控制清單），而且不 SACL （系統存取控制清單），會傳遞做為此參數。 在偵錯組建中傳遞 SACL 將會造成判斷提示。 在發行組建中傳遞 SACL 會導致 Ace （存取控制的項目） 中的 ACL，以略過，而且不會發生錯誤。  
   
 ##  <a name="dtor"></a>CDacl:: ~ CDacl  
  解構函式。  
@@ -211,17 +211,17 @@ CDacl () throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 解構函式會釋放取得物件，包括所有的 Ace （存取控制的項目） 所使用的任何資源[CDacl::RemoveAllAces](#removeallaces)。  
+ 解構函式會取得物件，包括所有的 Ace （存取控制的項目） 所使用的任何資源釋出[CDacl::RemoveAllAces](#removeallaces)。  
   
 ##  <a name="getacecount"></a>CDacl::GetAceCount  
- 在傳回的 Ace （存取控制的項目） 數目`CDacl`物件。  
+ 傳回的 Ace （存取控制的項目） 中`CDacl`物件。  
   
 ```
 UINT GetAceCount() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回的 Ace 中包含數字`CDacl`物件。  
+ 傳回中所包含的 Ace 數目`CDacl`物件。  
   
 ##  <a name="operator_eq"></a>CDacl::operator =  
  指派運算子。  
@@ -235,10 +235,10 @@ CDacl& operator= (const ACL& rhs) throw(...);
  指派給現有的物件 ACL （存取控制清單）。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回參考更新的`CDacl`物件。  
+ 將參考傳回給更新`CDacl`物件。  
   
 ### <a name="remarks"></a>備註  
- 您應該確定您只將 DACL （判別存取控制清單） 傳遞給此函式。 傳遞 SACL （系統存取控制清單） 這個函式會導致偵錯組建中的判斷提示，但會導致發行組建中的任何錯誤。  
+ 您應該確定您只對這個函式傳遞 DACL （任意存取控制清單）。 傳遞的 SACL （系統存取控制清單） 這個函式會導致偵錯組建中的判斷提示，但會導致發行組建中的任何錯誤。  
   
 ##  <a name="removeace"></a>CDacl::RemoveAce  
  移除特定的 ACE （存取控制的項目）`CDacl`物件。  
@@ -249,7 +249,7 @@ void RemoveAce(UINT nIndex) throw();
   
 ### <a name="parameters"></a>參數  
  `nIndex`  
- 若要移除 ACE 的項目編製索引。  
+ 若要移除 ACE 項目索引。  
   
 ### <a name="remarks"></a>備註  
  這個方法衍生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
@@ -262,7 +262,7 @@ void RemoveAllAces() throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 移除每個**ACE** （存取控制的項目） 結構 （如果有的話） 中`CDacl`物件。  
+ 移除每個**ACE** （存取控制的項目） （如果有的話） 結構中`CDacl`物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
@@ -270,5 +270,5 @@ void RemoveAllAces() throw();
  [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [類別概觀](../../atl/atl-class-overview.md)   
- [安全性的全域函式](../../atl/reference/security-global-functions.md)
+ [安全性全域函式](../../atl/reference/security-global-functions.md)
 

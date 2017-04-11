@@ -103,7 +103,7 @@ ms.lasthandoff: 03/07/2017
   
 #### <a name="new-and-newh"></a>\<new> 與 \<new.h>  
   
--   **new 和 delete** In previous versions of the library, the implementation-defined operator new 和 delete functions were exported from the runtime library DLL (for example, msvcr120.dll). 這些 operator 函式現在一律以靜態方式連結到您的二進位檔，即使是使用執行階段程式庫 DLL 亦同。  
+-   **new 和 delete** 在此程式庫的舊版中，實作定義的 operator new 和 delete 函式會從此執行階段程式庫 DLL (例如，msvcr120.dll) 中匯出。 這些 operator 函式現在一律以靜態方式連結到您的二進位檔，即使是使用執行階段程式庫 DLL 亦同。  
   
      對於原生或混合程式碼 (/clr) 而言，這不是重大變更，但對於編譯成 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的程式碼，可能會造成您的程式碼無法編譯。 若將程式碼編譯成 /clr:pure，可能必須加入 #include \<new> 或 #include \<new.h> 來暫時解決此變更所造成的建置錯誤。 請注意，/clr:pure 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中已標示為即將淘汰，將從後續版本中移除。  
   
@@ -2505,7 +2505,7 @@ ms.lasthandoff: 03/07/2017
   
 -   因為引進了新的 static_assert 關鍵字，所以您的程式碼中如有同名的識別碼，將會引發名稱衝突。  
   
--   新的 lambda 標記法支援不支援在 IDL UUID 屬性中編寫未加引號的的 GUID。。  
+-   新的 lambda 標記法支援不支援在 IDL UUID 屬性中編寫未加引號的的 GUID。  
   
 -   .NET Framework 4 引進了損毀狀態例外狀況概念，亦即在此例外狀況中，處理序會處於無法復原的損毀狀態。 根據預設，您無法捕捉損毀狀態例外狀況，即使使用可以捕捉所有其他例外狀況的 /EHa 編譯器選項枼無法達成此目的。                 若要明確捕捉損毀狀態例外狀況，請使用 __try-\__except 陳述式。 或是套用 [HandledProcessCorruptedStateExceptions] 屬性啟用函式，以捕捉損毀狀態例外狀況。  此變更主要會影響可能需要擷取損毀狀態例外狀況的系統程式設計人員。 這八個例外狀況包括：STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE。                 如需這些例外狀況的詳細資訊，請參閱 [GetExceptionCode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679356.aspx) 巨集。  
   

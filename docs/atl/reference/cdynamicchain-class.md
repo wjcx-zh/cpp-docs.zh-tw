@@ -41,13 +41,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 4da97d0b3d72400d7e285fde187e6860759900af
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 54137760f2c1ee0f93fd8ad21238710f4b6a4a56
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 類別
-這個類別提供支援動態鏈結的訊息對應的方法。  
+這個類別會提供支援動態鏈結的訊息對應的方法。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -62,7 +62,7 @@ class CDynamicChain
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|建構函式。|  
 |[CDynamicChain:: ~ CDynamicChain](#dtor)|解構函式。|  
@@ -76,27 +76,27 @@ class CDynamicChain
 |[CDynamicChain::SetChainEntry](#setchainentry)|將訊息對應項目加入至集合，或修改現有的項目。|  
   
 ## <a name="remarks"></a>備註  
- `CDynamicChain`管理訊息對應，讓 Windows 訊息導向，在執行階段，另一個物件的訊息對應的集合。  
+ `CDynamicChain`管理訊息對應，啟用 Windows 訊息導向，在執行階段，加入另一個物件的訊息對應的集合。  
   
  若要加入支援的訊息對應的動態鏈結，執行下列作業︰  
   
--   衍生您的類別，從`CDynamicChain`。 在訊息對應中，指定[CHAIN_MSG_MAP_DYNAMIC](http://msdn.microsoft.com/library/7e5c72b7-cb31-4f3b-8a1b-6293804af220)鏈結至另一個物件的預設訊息對應巨集。  
+-   衍生您的類別從`CDynamicChain`。 在訊息對應中，指定[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)鏈結至另一個物件的預設訊息對應巨集。  
   
--   您想要從鏈結至每個的類別的衍生[CMessageMap](../../atl/reference/cmessagemap-class.md)。 `CMessageMap`讓物件公開其訊息對應，對其他物件。  
+-   您想要從鏈結至每個的類別的衍生[CMessageMap](../../atl/reference/cmessagemap-class.md)。 `CMessageMap`讓物件公開至其他物件其訊息對應。  
   
 -   呼叫`CDynamicChain::SetChainEntry`來識別物件和訊息對應您要鏈結。  
   
  例如，假設您的類別定義，如下所示︰  
   
- [!code-cpp[NVC_ATL_Windowing #&88;](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing # 88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
- 用戶端接著會呼叫`CMyWindow::SetChainEntry`:  
+ 用戶端會接著呼叫`CMyWindow::SetChainEntry`:  
   
- [!code-cpp[NVC_ATL_Windowing #&89;](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing # 89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
- 其中`chainedObj`是鏈結的物件，而且是從衍生類別的執行個體`CMessageMap`。 現在，如果`myCtl`收到的訊息，不由處理`OnPaint`或`OnSetFocus`，視窗程序會指示訊息`chainedObj`的預設訊息對應。  
+ 其中`chainedObj`是鏈結的物件，而且是衍生自類別的執行個體`CMessageMap`。 現在，如果`myCtl`收到的訊息，不會處理`OnPaint`或`OnSetFocus`，視窗程序會指示訊息`chainedObj`的預設訊息對應。  
   
- 如需訊息對應鏈結的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)文章 < ATL 視窗類別 >。  
+ 如需訊息對應鏈結的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)本文 < ATL 視窗類別 >。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
@@ -116,7 +116,7 @@ BOOL CallChain(
   
 ### <a name="parameters"></a>參數  
  `dwChainID`  
- [in]唯一識別項相關聯的鍊結的物件以及其訊息對應。  
+ [in]鏈結的物件和其訊息對應相關聯的唯一識別碼。  
   
  `hWnd`  
  [in]接收訊息的視窗控制代碼。  
@@ -125,10 +125,10 @@ BOOL CallChain(
  [in]傳送至視窗的訊息。  
   
  `wParam`  
- [in]其他訊息特定資訊。  
+ [in]其他訊息的特定資訊。  
   
  `lParam`  
- [in]其他訊息特定資訊。  
+ [in]其他訊息的特定資訊。  
   
  `lResult`  
  [out]訊息處理的結果。  
@@ -137,9 +137,9 @@ BOOL CallChain(
  **TRUE**訊息是否完全處理過，否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
- 視窗程序，來叫用`CallChain`，您必須指定[CHAIN_MSG_MAP_DYNAMIC](http://msdn.microsoft.com/library/7e5c72b7-cb31-4f3b-8a1b-6293804af220)中訊息對應巨集。 如需範例，請參閱[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概觀。  
+ 視窗程序來叫用`CallChain`，您必須指定[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)中訊息對應巨集。 如需範例，請參閱[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概觀。  
   
- `CallChain`需要先前呼叫[SetChainEntry](#setchainentry)關聯`dwChainID`物件，其訊息對應值。  
+ `CallChain`需要先前呼叫[SetChainEntry](#setchainentry)關聯`dwChainID`物件和其訊息對應的值。  
   
 ##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
  建構函式。  
@@ -167,7 +167,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
   
 ### <a name="parameters"></a>參數  
  `dwChainID`  
- [in]唯一識別項相關聯的鍊結的物件以及其訊息對應。 您原本定義此值，透過呼叫[SetChainEntry](#setchainentry)。  
+ [in]鏈結的物件和其訊息對應相關聯的唯一識別碼。 您原本定義此值，透過呼叫[SetChainEntry](#setchainentry)。  
   
 ### <a name="return-value"></a>傳回值  
  **TRUE**如果從集合中成功移除的訊息對應。 否則， **FALSE**。  
@@ -184,13 +184,13 @@ BOOL SetChainEntry(
   
 ### <a name="parameters"></a>參數  
  `dwChainID`  
- [in]唯一識別項相關聯的鍊結的物件以及其訊息對應。  
+ [in]鏈結的物件和其訊息對應相關聯的唯一識別碼。  
   
  `pObject`  
- [in]宣告訊息對應鏈結物件的指標。 這個物件必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。  
+ [in]宣告的訊息對應鏈結物件的指標。 此物件必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。  
   
  `dwMsgMapID`  
- [in]訊息對應中的鍊結物件的識別碼。 預設值為 0，用來識別宣告的預設訊息對應[BEGIN_MSG_MAP](http://msdn.microsoft.com/library/8bbb5af9-18b1-48c6-880e-166f599ee554)。 使用指定的替代訊息對應宣告[ALT_MSG_MAP(msgMapID)](http://msdn.microsoft.com/library/2c8871bf-abc0-4d52-bcf7-6b2ab9eb5af8)，傳遞`msgMapID`。  
+ [in]訊息對應中的鍊結物件的識別碼。 預設值為 0，它會識別宣告的預設訊息對應[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 使用指定的替代訊息對應宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，傳遞`msgMapID`。  
   
 ### <a name="return-value"></a>傳回值  
  **TRUE**如果訊息對應成功加入至集合。 否則， **FALSE**。  

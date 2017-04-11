@@ -39,9 +39,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: a4c17a1da8d1be00ebff171af09bc6c8eb81ed44
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2448f2fcd0547e2344dde51392873e3276f2bd09
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 類別
@@ -60,7 +60,7 @@ class CSimpleDialog : public CDialogImplBase
  對話方塊範本資源的資源識別碼。  
   
  *t_bCenter*  
- **TRUE**對話方塊物件為擁有者視窗上置中; 否則**FALSE**。  
+ **TRUE**對話方塊物件擁有者視窗上置中，否則如果**FALSE**。  
   
 ## <a name="members"></a>Members  
   
@@ -71,11 +71,11 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|建立強制回應對話方塊。|  
   
 ## <a name="remarks"></a>備註  
- 會強制回應對話方塊實作的基本功能。 `CSimpleDialog`提供 Windows 通用控制項僅支援。 若要建立並顯示強制回應對話方塊，建立這個類別，提供現有的資源範本名稱 對話方塊中的執行個體。 當使用者按下任何控制項的預先定義的值 （例如 IDOK 或 IDCANCEL） 時，就會關閉對話方塊物件。  
+ 使用 「 基本 」 功能實作強制回應對話方塊。 `CSimpleDialog`提供 Windows 通用控制項僅支援。 若要建立並顯示強制回應對話方塊中，建立此類別，提供現有的資源範本名稱對話方塊中的執行個體。 當使用者按一下與預先定義的值 （例如 IDOK 或 IDCANCEL） 的任何控制項，則會關閉對話方塊物件。  
   
- `CSimpleDialog`可讓您建立只有強制回應對話方塊。 `CSimpleDialog`提供將訊息導向到適當的處理常式會使用預設的訊息對應的對話方塊方塊程序。  
+ `CSimpleDialog`可讓您建立只能強制回應對話方塊。 `CSimpleDialog`提供對話方塊程序，會使用預設的訊息對應訊息導向適當的處理常式。  
   
- 請參閱[實作對話方塊](../../atl/implementing-a-dialog-box.md)如需詳細資訊。  
+ 請參閱[實作對話方塊](../../atl/implementing-a-dialog-box.md)取得更多資訊。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CDialogImplBase`  
@@ -94,15 +94,15 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
   
 ### <a name="parameters"></a>參數  
  `hWndParent`  
- 父系 對話方塊中的控制代碼。 如果未不提供任何值，父代設為目前使用中視窗。  
+ 在對話方塊的 父控制代碼。 如果未不提供任何值，父代會設定為目前使用中視窗。  
   
 ### <a name="return-value"></a>傳回值  
- 如果成功，則傳回的值會是關閉的對話方塊控制項的資源識別碼。  
+ 如果成功，傳回值會是關閉的對話方塊控制項的資源識別碼。  
   
- 如果函式失敗，傳回值為 –&1;。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。  
+ 如果函式失敗，傳回的值為-1。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。  
   
 ### <a name="remarks"></a>備註  
- 對話方塊中正在作用中時，此方法會處理所有的使用者互動。 這是讓對話方塊強制回應。也就是使用者無法互動與其他視窗中，直到關閉對話方塊。  
+ 對話方塊中為使用中時，這個方法會處理所有使用者互動。 這是讓對話方塊強制回應。也就是說，使用者無法互動與其他 windows 中，直到關閉對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

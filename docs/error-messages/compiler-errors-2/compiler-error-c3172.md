@@ -1,37 +1,52 @@
 ---
-title: "編譯器錯誤 C3172 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3172"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3172"
+title: "編譯器錯誤 C3172 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3172
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3172
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: a53e7bc0b8543813e5745773f6a7548eb9a83442
+ms.lasthandoff: 04/04/2017
 
-'module\_name' : 不可以在專案中指定不同的 idl\_module 屬性  
+---
+# <a name="compiler-error-c3172"></a>編譯器錯誤 C3172
+'適於': 無法在專案中指定不同的 idl_module 屬性  
   
- 在編譯的兩個檔案中找到具有相同名稱但 `dllname` 或 `version`參數不同的 [idl\_module](../../windows/idl-module.md) 屬性。  每一次編譯只能指定一個唯一 `idl_module` 屬性。  
+ [idl_module](../../windows/idl-module.md)屬性具有相同名稱但不同`dllname`或`version`兩個在編譯檔案中找不到參數。 只有一個唯一`idl_module`屬性可以指定每個編譯。  
   
- 可以在一個以上原始程式檔中指定完全相同的 `idl_module` 屬性。  
+ 相同`idl_module`屬性都可以指定多個原始程式碼檔中。  
   
- 例如，如果找到下列 `idl_module` 屬性：  
+ 例如，如果下列`idl_module`找不到屬性︰  
   
 ```  
 // C3172.cpp  
@@ -49,4 +64,4 @@ int main() {}
 [ idl_module(name="x", dllname="file.dll", version="1.0") ];  
 ```  
   
- 編譯器會產生 C3172 \(請注意不同的版本值\)。
+ 編譯器會產生 C3172 （請注意不同的版本值）。

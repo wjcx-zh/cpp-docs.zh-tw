@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f104a62144e7fd8ac802c27dfe940a7f96d0e79a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 9185bc18981898d699aa3f3eeb490c76bf5138fb
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 類別
@@ -57,20 +57,20 @@ class CA2CAEX
   
 #### <a name="parameters"></a>參數  
  `t_nBufferLength`  
- 轉譯程序中使用之緩衝區的大小。 預設長度為 128 位元組。  
+ 轉譯程序中使用之緩衝區的大小。 預設長度為 128 個位元組。  
   
 ## <a name="members"></a>Members  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CA2CAEX::CA2CAEX](#ca2caex)|建構函式。|  
 |[CA2CAEX:: ~ CA2CAEX](#dtor)|解構函式。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CA2CAEX::operator LPCSTR](#operator_lpcstr)|轉換運算子。|  
   
@@ -83,7 +83,7 @@ class CA2CAEX
 ## <a name="remarks"></a>備註  
  除非需要額外的功能，則使用`CA2CTEX`， `CT2CAEX`，或**CA2CA**自己的程式碼中。  
   
- 這個類別會安全地在迴圈中使用，而且不會發生堆疊溢位。 根據預設，ATL 轉換類別及巨集將使用目前的執行緒 ANSI 字碼頁，來進行轉換。  
+ 這個類別是安全地在迴圈中使用，而且不會產生堆疊溢位。 根據預設，ATL 轉換類別及巨集將使用目前的執行緒 ANSI 字碼頁，來進行轉換。  
   
  下列巨集根據此類別︰  
   
@@ -91,14 +91,14 @@ class CA2CAEX
   
 - `CT2CAEX`  
   
- Typedef，下列根據此類別︰  
+ 下列 typedef 根據此類別︰  
   
 - **CA2CA**  
   
- 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)。  
+ 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
   
 ## <a name="example"></a>範例  
- 請參閱[ATL 和 MFC 字串轉換巨集](http://msdn.microsoft.com/library/8f53659e-0464-4424-97db-6b8453c49863)如需使用這些字串轉換巨集的範例。  
+ 請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** atlconv.h  
@@ -116,7 +116,7 @@ CA2CAEX(LPCSTR psz) throw(...);
  要轉換的文字字串。  
   
  `nCodePage`  
- 這個類別中未使用。  
+ 此類別中未使用。  
   
 ### <a name="remarks"></a>備註  
  建立做為轉換所需的緩衝區。  
@@ -129,7 +129,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="remarks"></a>備註  
- 釋出配置的緩衝區。  
+ 釋放已配置的緩衝區。  
   
 ##  <a name="m_psz"></a>CA2CAEX::m_psz  
  儲存在來源字串的資料成員。  

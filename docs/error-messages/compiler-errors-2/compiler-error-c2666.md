@@ -1,34 +1,51 @@
 ---
-title: "編譯器錯誤 C2666 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2666"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2666"
+title: "編譯器錯誤 C2666 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2666
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 編譯器錯誤 C2666
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0aa7af12e49f152256c2efe7d16d02e1f1c45f68
+ms.lasthandoff: 04/01/2017
 
-'identifier' : number 多載具有類似的轉換  
+---
+# <a name="compiler-error-c2666"></a>編譯器錯誤 C2666
+'identifier': 數字的多載具有類似的轉換  
   
- 多載函式或運算子模稜兩可。型式參數清單 \(Formal Parameter List\) 可能太類似，以致編譯器無法解決語意模糊。若要解決這項錯誤，請明確轉換實質參數的其中一個或多個。  
+ 多載函式或運算子模稜兩可。   型式參數清單可能太類似編譯器無法解析模稜兩可。  若要解決這個錯誤，明確轉換一或多個實際的參數。  
   
- 下列範例會產生 C2666：  
+ 下列範例會產生 C2666:  
   
 ```  
 // C2666.cpp  
@@ -44,17 +61,17 @@ int main() {
 }  
 ```  
   
- 對 Visual Studio .NET 2003 的編譯器完成一致性處理後也可能會產生這項錯誤：  
+ 這項錯誤也會導致針對 Visual Studio.NET 2003年所進行的編譯器一致性工作︰  
   
--   二進位運算子和使用者定義的指標型別轉換  
+-   二元運算子，以及使用者定義的指標類型轉換  
   
--   限定性條件轉換與自身轉換不同  
+-   限定性條件轉換不是身分識別轉換相同  
   
- 以二元運算子 \<、\>、\<\= 和 \>\= 而言，如果參數型別定義使用者定義的轉換運算子，以轉換成運算元的型別，則現在傳遞的參數會隱含地轉換成該運算元的型別。  現在可能會產生模稜兩可 \(Ambiguity\) 的情況。  
+ 以二元運算子\<，>， \<=、 和 > =、 傳入參數現在就隱含地轉換成運算元的類型如果參數的型別定義使用者定義轉換運算子，將轉換成運算元的類型。 沒有現在可能模稜兩可。  
   
- 若要使程式碼在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本中都有效，請使用函式語法明確呼叫類別運算子。  
+ 針對 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中有效的程式碼，呼叫類別運算子，明確地使用函式語法。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // C2666b.cpp  
@@ -94,7 +111,7 @@ int main()
     T str1( "ABCD" );  
     const char* str2 = "DEFG";  
   
-    // Error – Ambiguous call to operator<()  
+    // Error - Ambiguous call to operator<()  
     // Trying to convert str1 to char* and then call   
     // operator<( const char*, const char* )?  
     //  OR  
@@ -111,7 +128,7 @@ int main()
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2666  
   
 ```  

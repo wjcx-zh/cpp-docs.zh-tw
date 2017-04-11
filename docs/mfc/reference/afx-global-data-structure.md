@@ -36,9 +36,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: f3257f165b6b3937258acc6878ca1044ea7ab31e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 1427efddf9271d273e94c4f62d6d104e7f1c2b48
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
@@ -95,7 +95,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|啟用或停用 Microsoft Active Accessibility 支援。 Active Accessibility 提供可靠的方法以公開使用者介面項目的相關資訊。|  
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|指出是否已啟用 Microsoft Active Accessibility 支援。|  
@@ -131,10 +131,10 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+ [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 
-## <a name="a-namebisosalphablendingsupporta-afxglobaldatabisosalphablendingsupport"></a><a name="bisosalphablendingsupport"></a>AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
+## <a name="bisosalphablendingsupport"></a>AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 指出作業系統是否支援 alpha 混色。  
   
   
@@ -143,17 +143,17 @@ BOOL  bIsOSAlphaBlendingSupport;
 ```  
   
 ### <a name="remarks"></a>備註  
- `TRUE`表示支援 alpha 混色。否則， `FALSE`。  
+ `TRUE`指出 alpha 混色支援;否則， `FALSE`。  
   
 
-## <a name="a-namecleanupa-afxglobaldatacleanup"></a><a name="cleanup"></a>AFX_GLOBAL_DATA::CleanUp
+## <a name="cleanup"></a>AFX_GLOBAL_DATA::CleanUp
 釋出架構配置的資源，例如筆刷、字型和 DLL。  
   
   
 ```  
 void CleanUp();
 ```  
-## <a name="a-named2d1makerotatematrixa-afxglobaldatad2d1makerotatematrix"></a><a name="d2d1makerotatematrix"></a>AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
+## <a name="d2d1makerotatematrix"></a>AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
 建立環繞指定點依特定角度旋轉的旋轉轉換。  
   
   
@@ -172,12 +172,12 @@ HRESULT D2D1MakeRotateMatrix(
  旋轉中心點。  
   
  `matrix`  
- 此方法傳回時，包含新的旋轉轉換。 這個參數，您必須配置儲存體。  
+ 這個方法傳回時，包含新的旋轉轉換。 您必須為此參數來配置儲存空間。  
   
 ### <a name="return-value"></a>傳回值  
  否則會傳回 S_OK，如果成功或錯誤值。  
   
-## <a name="a-namedrawparentbackgrounda-afxglobaldatadrawparentbackground"></a><a name="drawparentbackground"></a>AFX_GLOBAL_DATA::DrawParentBackground
+## <a name="drawparentbackground"></a>AFX_GLOBAL_DATA::DrawParentBackground
 在指定的區域中繪製控制項父代的背景。  
   
   
@@ -201,7 +201,7 @@ BOOL DrawParentBackground(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `TRUE`；否則為 `FALSE`。  
   
-## <a name="a-namedrawtextonglassa-afxglobaldatadrawtextonglass"></a><a name="drawtextonglass"></a>AFX_GLOBAL_DATA::DrawTextOnGlass
+## <a name="drawtextonglass"></a>AFX_GLOBAL_DATA::DrawTextOnGlass
 以指定佈景主題的視覺化樣式繪製指定文字。  
   
   
@@ -242,7 +242,7 @@ BOOL DrawTextOnGlass(
  [in] `dwFlags`  
  旗標的位元組合 (OR)，指定如何繪製指定文字。  
   
- 如果`hTheme`參數是`NULL`或是佈景主題都不支援且已啟用，`nFormat`參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法描述的有效旗標。 如果支援佈景主題， `dwFlags` DrawThemeTextEx [方法的](http://msdn.microsoft.com/library/windows/desktop/bb773317) 參數會描述有效的旗標。  
+ 如果`hTheme`參數是`NULL`或如果您沒有支援並啟用，主題`nFormat`參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法會描述有效的旗標。 如果支援佈景主題， `dwFlags` DrawThemeTextEx [方法的](http://msdn.microsoft.com/library/windows/desktop/bb773317) 參數會描述有效的旗標。  
   
  [in] `nGlowSize`  
  繪製指定文字前已繪製在背景上的光暈效果大小。 預設值為 0。  
@@ -251,7 +251,7 @@ BOOL DrawTextOnGlass(
  用來繪製指定文字的色彩。 預設值為預設色彩。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果佈景主題用來繪製指定的文字;否則， `FALSE`。  
+ `TRUE`如果使用佈景主題來繪製指定的文字;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  佈景主題會定義應用程式的視覺化樣式。 如果 `hTheme` 參數為 `NULL`、不支援 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) 方法，或 [桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) 組合已停用，就不會使用佈景主題來繪製文字。  
@@ -263,9 +263,9 @@ BOOL DrawTextOnGlass(
  [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)   
  [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)   
  [桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [啟用和控制 DWM 撰寫](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [啟用和控制 DWM 組合](http://msdn.microsoft.com/library/windows/desktop/aa969538)
 
-## <a name="a-nameenableaccessibilitysupporta-afxglobaldataenableaccessibilitysupport"></a><a name="enableaccessibilitysupport"></a>AFX_GLOBAL_DATA::EnableAccessibilitySupport
+## <a name="enableaccessibilitysupport"></a>AFX_GLOBAL_DATA::EnableAccessibilitySupport
 啟用或停用 Microsoft Active Accessibility 支援。  
   
   
@@ -287,7 +287,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  [UI 自動化和 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)   
  [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
-## <a name="a-nameexcludetaga-afxglobaldataexcludetag"></a><a name="excludetag"></a>AFX_GLOBAL_DATA::ExcludeTag
+## <a name="excludetag"></a>AFX_GLOBAL_DATA::ExcludeTag
 從指定的緩衝區中移除指定的 XML 標記組。  
   
   
@@ -307,18 +307,18 @@ BOOL ExcludeTag(
  一組的開頭和結尾 XML 標記名稱。  
   
  [輸出] `strTag`  
- 此方法傳回時，`strTag`參數包含的文字之間的開頭和結尾 XML 標記的命名方式是`lpszTag`參數。 修剪任何開頭或尾端空白字元的結果。  
+ 此方法傳回時，`strTag`參數包含文字的開頭和結尾 XML 之間的命名方式的標記`lpszTag`參數。 修剪任何開頭或尾端空白字元的結果。  
   
  [in] `bIsCharsList`  
- `TRUE`轉換中的逸出字元的符號`strTag`參數插入實際逸出字元。`FALSE`不是用來執行轉換。預設值是`FALSE`。 如需詳細資訊，請參閱＜備註＞。  
+ `TRUE`要轉換中的逸出字元的符號`strTag`參數插入實際逸出字元。`FALSE`不是用來執行轉換。預設值是`FALSE`。 如需詳細資訊，請參閱＜備註＞。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `TRUE`；否則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- XML 標記組包含名為開頭和結尾標記的開始和結束的指定緩衝區中的文字執行中的指示。 `strBuffer`參數指定緩衝區，而`lpszTag`參數指定的 XML 標記名稱。  
+ XML 標記組包含名為開頭和結尾標記的開始和結束的指定緩衝區中的文字執行中的指示。 `strBuffer`參數指定的緩衝區中，而`lpszTag`參數指定的 XML 標記名稱。  
   
- 使用下表中的符號，編碼一組指定的緩衝區中的逸出字元。 指定`TRUE`的`bIsCharsList`參數来轉換的符號`strTag`成實際的逸出字元的參數。 下表會使用[_T()](../../c-runtime-library/data-type-mappings.md)巨集，以指定的符號和逸出字元字串。  
+ 使用下表中的符號，編碼一組指定的緩衝區中的逸出字元。 指定`TRUE`如`bIsCharsList`參數轉換中的符號`strTag`成實際的逸出字元的參數。 下表會使用[_T()](../../c-runtime-library/data-type-mappings.md)巨集，以指定的符號和逸出字元字串。  
   
 |符號|逸出字元|  
 |------------|----------------------|  
@@ -330,7 +330,7 @@ BOOL ExcludeTag(
 |_T("GT")|_T(">")|  
 |_T("AMP")|_T("&")|  
   
-## <a name="a-namegetcolora-afxglobaldatagetcolor"></a><a name="getcolor"></a>AFX_GLOBAL_DATA::GetColor
+## <a name="getcolor"></a>AFX_GLOBAL_DATA::GetColor
 擷取指定的使用者介面項目目前的色彩。  
   
   
@@ -346,7 +346,7 @@ COLORREF GetColor(int nColor);
  指定之使用者介面項目的 RGB 色彩值。 如需詳細資訊，請參閱＜備註＞。  
   
 ### <a name="remarks"></a>備註  
- 如果 `nColor` 參數超出範圍，則傳回值為零。 由於零也是有效的 RGB 值，您無法使用這個方法來判斷目前的作業系統是否支援系統色彩。 請改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，傳回`NULL`若色彩不支援。  
+ 如果 `nColor` 參數超出範圍，則傳回值為零。 由於零也是有效的 RGB 值，您無法使用這個方法來判斷目前的作業系統是否支援系統色彩。 請改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，這個方法會傳回`NULL`若色彩不支援。  
   
 ### <a name="see-also"></a>另請參閱  
 
@@ -354,7 +354,7 @@ COLORREF GetColor(int nColor);
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
  [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)
 
-## <a name="a-namegetdirect2dfactorya-afxglobaldatagetdirect2dfactory"></a><a name="getdirect2dfactory"></a>AFX_GLOBAL_DATA::GetDirect2dFactory
+## <a name="getdirect2dfactory"></a>AFX_GLOBAL_DATA::GetDirect2dFactory
  傳回儲存在全域資料的 ID2D1Factory 介面的指標。 介面若未初始化，就會建立介面並設定預設參數。  
   
   
@@ -363,9 +363,9 @@ ID2D1Factory* GetDirect2dFactory();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指向 ID2D1Factory 介面如果 factory 建立成功，或如果建立失敗，則為 NULL 或目前的作業系統沒有 D2D 支援。  
+ 指向 ID2D1Factory 介面 factory 建立成功，則如果建立失敗，則為 NULL 或目前的作業系統不需要 D2D 支援。  
   
-## <a name="a-namegethandcursora--afxglobaldatagethandcursor"></a><a name="gethandcursor"></a>AFX_GLOBAL_DATA::GetHandCursor
+## <a name="gethandcursor"></a>AFX_GLOBAL_DATA::GetHandCursor
 擷取預先定義的資料指標，它有類似手掌的形狀，且識別項是 `IDC_HAND`。  
   
   
@@ -376,7 +376,7 @@ HCURSOR GetHandCursor();
 ### <a name="return-value"></a>傳回值  
  手狀游標的控制代碼。  
 
-## <a name="a-namegetnonclientmetricsa-afxglobaldatagetnonclientmetrics"></a><a name="getnonclientmetrics"></a>AFX_GLOBAL_DATA::GetNonClientMetrics
+## <a name="getnonclientmetrics"></a>AFX_GLOBAL_DATA::GetNonClientMetrics
 擷取與非最小化視窗之非工作區相關聯的度量。  
   
   
@@ -386,7 +386,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
   
 ### <a name="parameters"></a>參數   
  [in、out] `info`  
- A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)結構，其中包含可調整的非最小化視窗之非工作區相關聯的度量。  
+ A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)結構，其中包含與非最小化視窗中非工作區相關聯的可擴充的度量資訊。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果此方法成功。否則， `FALSE`。  
@@ -395,7 +395,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="see-also"></a>另請參閱   
  [NONCLIENTMETRICS 結構](http://msdn.microsoft.com/library/windows/desktop/ff729175)
 
-## <a name="a-namegettextheighta-afxglobaldatagettextheight"></a><a name="gettextheight"></a>AFX_GLOBAL_DATA::GetTextHeight
+## <a name="gettextheight"></a>AFX_GLOBAL_DATA::GetTextHeight
  擷取目前字型的文字字元高度。  
   
   
@@ -405,12 +405,12 @@ int GetTextHeight(BOOL bHorz = TRUE);
   
 ### <a name="parameters"></a>參數   
  [in] `bHorz`  
- `TRUE`若要擷取字元高度時執行文字水平空間。`FALSE`文字以垂直方式執行時擷取字元的高度。 預設值是 `TRUE`。  
+ `TRUE`擷取字元的高度時執行文字水平空間。`FALSE`文字以垂直方式執行時擷取字元的高度。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
- 目前的字型測量之從其遞增元到其下半部的高度。  
+ 目前的字型，其下半部從其遞增元量的高度。  
   
-## <a name="a-namegetwicfactorya-afxglobaldatagetwicfactory"></a><a name="getwicfactory"></a>AFX_GLOBAL_DATA::GetWICFactory
+## <a name="getwicfactory"></a>AFX_GLOBAL_DATA::GetWICFactory
 傳回儲存在全域資料的 IWICImagingFactory 介面的指標。 介面若未初始化，就會建立介面並設定預設參數。  
   
   
@@ -419,9 +419,9 @@ IWICImagingFactory* GetWICFactory();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- IWICImagingFactory 介面如果 factory 建立成功，或如果建立失敗，則為 NULL 或目前的作業系統的指標沒有 WIC 支援。  
+ 指向 IWICImagingFactory 介面 factory 建立成功，則如果建立失敗，則為 NULL 或目前的作業系統不需要 WIC 支援。  
   
-## <a name="a-namegetwritefactorya-afxglobaldatagetwritefactory"></a><a name="getwritefactory"></a>AFX_GLOBAL_DATA::GetWriteFactory
+## <a name="getwritefactory"></a>AFX_GLOBAL_DATA::GetWriteFactory
 傳回儲存在全域資料的 IDWriteFactory 介面的指標。 介面若未初始化，就會建立介面並設定預設參數。  
   
   
@@ -430,10 +430,10 @@ IDWriteFactory* GetWriteFactory();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指向 IDWriteFactory 介面如果 factory 建立成功，或如果建立失敗，則為 NULL 或目前的作業系統沒有 DirectWrite 支援。  
+ 指向 IDWriteFactory 介面 factory 建立成功，則如果建立失敗，則為 NULL 或目前的作業系統不需要 DirectWrite 支援。  
  
-## <a name="a-nameinitd2da-afxglobaldatainitd2d"></a><a name="initd2d"></a>AFX_GLOBAL_DATA::InitD2D
-初始化 D2D、 DirectWrite、 與 WIC 處理站。 初始化主視窗之前先呼叫這個方法。  
+## <a name="initd2d"></a>AFX_GLOBAL_DATA::InitD2D
+初始化 D2D、 DirectWrite 和 WIC 處理站。 初始化主視窗之前先呼叫這個方法。  
   
   
 ```  
@@ -444,15 +444,15 @@ BOOL InitD2D(
   
 ### <a name="parameters"></a>參數   
  `d2dFactoryType`  
- D2D factory 以及它所建立的資源的執行緒模型。  
+ D2D factory 和它所建立的資源的執行緒模型。  
   
  `writeFactoryType`  
  值，指定是否將共用或隔離寫入 factory 物件  
   
 ### <a name="return-value"></a>傳回值  
- 如果處理站所 intilalizrd，FALSE-否則為 true，則傳回  
+ 如果 factory 所 intilalizrd，FALSE-否則為 true，則傳回  
   
-## <a name="a-nameis32biticonsa-afxglobaldatais32biticons"></a><a name="is32biticons"></a>AFX_GLOBAL_DATA::Is32BitIcons
+## <a name="is32biticons"></a>AFX_GLOBAL_DATA::Is32BitIcons
 指出是否支援預先定義的 32 位元圖示。  
   
   
@@ -463,12 +463,12 @@ BOOL Is32BitIcons() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果支援預先定義的 32 位元圖示。否則， `FALSE`。  
+ `TRUE`如果預先定義的 32 位元，支援圖示否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳回`TRUE`架構支援 32 位元內建的圖示，如果作業系統支援 16 位元 / 像素或以上，以及如果映像不會顯示在 高對比。  
+ 這個方法會傳回`TRUE`架構支援 32 位元的內建圖示，如果作業系統支援 16 位元 / 像素或更多，以及如果映像不會顯示在 高對比。  
   
-## <a name="a-nameisaccessibilitysupporta-afxglobaldataisaccessibilitysupport"></a><a name="isaccessibilitysupport"></a>AFX_GLOBAL_DATA::IsAccessibilitySupport
+## <a name="isaccessibilitysupport"></a>AFX_GLOBAL_DATA::IsAccessibilitySupport
 指出是否已啟用 Microsoft Active Accessibility 支援。  
   
   
@@ -480,15 +480,15 @@ BOOL IsAccessibilitySupport() const;
  如果已啟用協助工具支援則為 `TRUE`，否則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- Microsoft Active Accessibility 是過去用來讓應用程式成為可存取的方法。 Microsoft UI 自動化是 Microsoft Windows 的一種新的協助工具模型，能滿足輔助科技產品及自動化測試工具的需求。 如需詳細資訊，請參閱[UI 自動化和 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)。  
+ Microsoft Active Accessibility 是過去用來讓應用程式成為可存取的方法。 Microsoft UI 自動化是 Microsoft Windows 的一種新的協助工具模型，能滿足輔助科技產品及自動化測試工具的需求。   
   
- 使用[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)方法，以啟用或停用 Active Accessibility 支援。  
+ 使用[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)方法以啟用或停用 Active Accessibility 支援。  
   
 
 ### <a name="see-also"></a>另請參閱  
  [UI 自動化和 Microsoft Active Accessibility](http://msdn.microsoft.com/library/87bee662-0a3e-4232-a421-20e7a5968321)
 
-## <a name="a-nameisd2dinitializeda-afxglobaldataisd2dinitialized"></a><a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
+## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  判斷是否已初始化 D2D  
   
   
@@ -497,9 +497,9 @@ BOOL IsD2DInitialized() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果 D2D 已初始化，則為 TRUE否則為 FALSE。  
+ 初始化 D2D; 如果為 TRUE否則為 FALSE。  
   
-## <a name="a-nameisdwmcompositionenableda-afxglobaldataisdwmcompositionenabled"></a><a name="isdwmcompositionenabled"></a>AFX_GLOBAL_DATA::IsDwmCompositionEnabled
+## <a name="isdwmcompositionenabled"></a>AFX_GLOBAL_DATA::IsDwmCompositionEnabled
 提供呼叫 Windows [DwmIsCompositionEnabled](http://msdn.microsoft.com/library/windows/desktop/aa969518) 方法的簡單方式。  
   
   
@@ -512,21 +512,21 @@ BOOL IsDwmCompositionEnabled();
   
 ### <a name="see-also"></a>另請參閱    
  [桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
- [啟用和控制 DWM 撰寫](http://msdn.microsoft.com/library/windows/desktop/aa969538)
+ [啟用和控制 DWM 組合](http://msdn.microsoft.com/library/windows/desktop/aa969538)
 
-## <a name="a-nameishighcontrastmodea-afxglobaldataishighcontrastmode"></a><a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA::IsHighContrastMode
+## <a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA::IsHighContrastMode
  指出目前是否以高對比顯示圖像。    
 ```  
 BOOL IsHighContrastMode() const; 
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果目前顯示影像的黑或白高對比模式，否則， `FALSE`。  
+ `TRUE`如果目前顯示影像的黑色或白色高對比模式，否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 在黑色的高對比模式下，面對光源的邊緣是白色和背景是黑色。 在白色的高對比模式下，面對光源的邊緣是黑色，背景是白色。  
+ 在黑色的高對比模式背對光源為白色，背景是黑色。 在白色高對比模式背對光源是黑色，背景是白色。  
   
-## <a name="a-nameiswindowslayersupportavailablea-afxglobaldataiswindowslayersupportavailable"></a><a name="iswindowslayersupportavailable"></a>AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
+## <a name="iswindowslayersupportavailable"></a>AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable
 指出作業系統是否支援層疊的視窗。  
   
   
@@ -540,7 +540,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 ### <a name="remarks"></a>備註  
  如果支援層疊的視窗，*智慧停駐*標記會使用層疊的視窗。  
   
-## <a name="a-namembusebuiltin32biticonsa-afxglobaldatambusebuiltin32biticons"></a><a name="m_busebuiltin32biticons"></a>AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
+## <a name="m_busebuiltin32biticons"></a>AFX_GLOBAL_DATA::m_bUseBuiltIn32BitIcons
 指出架構使用預先定義的 32 位元色彩圖示或較低解析度的圖示。  
   
   
@@ -553,7 +553,7 @@ BOOL  m_bUseBuiltIn32BitIcons;
   
  這個成員必須在應用程式啟動時設定。  
   
-## <a name="a-namembusesystemfonta-afxglobaldatambusesystemfont"></a><a name="m_busesystemfont"></a>AFX_GLOBAL_DATA::m_bUseSystemFont
+## <a name="m_busesystemfont"></a>AFX_GLOBAL_DATA::m_bUseSystemFont
 指出功能表、工具列和功能區是否使用系統字型。  
   
   
@@ -564,9 +564,9 @@ BOOL m_bUseSystemFont;
 ### <a name="remarks"></a>備註  
  `TRUE`指定要使用系統字型。否則， `FALSE`。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 建構函式會將此成員初始化為 `FALSE`。  
   
- 測試這個成員是不使用的架構，以便判斷字型的唯一方法。 `AFX_GLOBAL_DATA::UpdateFonts`方法也會測試來決定哪些視覺化樣式套用至功能表、 工具列和功能區程式碼可使用的預設及替代字型。  
+ 測試這個成員是不使用的架構，以判斷字型的唯一方式。 `AFX_GLOBAL_DATA::UpdateFonts`方法也會測試預設及替代字型來決定哪些視覺化樣式套用至功能表、 工具列和功能區程式碼。  
   
-## <a name="a-namemhcurhanda-afxglobaldatamhcurhand"></a><a name="m_hcurhand"></a>AFX_GLOBAL_DATA::m_hcurHand
+## <a name="m_hcurhand"></a>AFX_GLOBAL_DATA::m_hcurHand
 儲存手型游標的控制代碼。  
   
   
@@ -574,7 +574,7 @@ BOOL m_bUseSystemFont;
 HCURSOR m_hcurHand;  
 ```  
   
-## <a name="a-namemhcurstretcha-afxglobaldatamhcurstretch"></a><a name="m_hcurstretch"></a>AFX_GLOBAL_DATA::m_hcurStretch
+## <a name="m_hcurstretch"></a>AFX_GLOBAL_DATA::m_hcurStretch
 儲存水平延展游標的控制代碼。  
   
   
@@ -582,7 +582,7 @@ HCURSOR m_hcurHand;
 HCURSOR m_hcurStretch;  
 ```  
 
-## <a name="a-namemhcurstretchverta-afxglobaldatamhcurstretchvert"></a><a name="m_hcurstretchvert"></a>AFX_GLOBAL_DATA::m_hcurStretchVert
+## <a name="m_hcurstretchvert"></a>AFX_GLOBAL_DATA::m_hcurStretchVert
 儲存垂直延展游標的控制代碼。  
   
   
@@ -590,14 +590,14 @@ HCURSOR m_hcurStretch;
 HCURSOR m_hcurStretchVert;  
 ```  
   
-## <a name="a-namemhicontoola-afxglobaldatamhicontool"></a><a name="m_hicontool"></a>AFX_GLOBAL_DATA::m_hiconTool
+## <a name="m_hicontool"></a>AFX_GLOBAL_DATA::m_hiconTool
 儲存工具圖示的控制代碼。  
   
   
 ```  
 HICON m_hiconTool;  
 ```  
-## <a name="a-namemnautohidetoolbarmargina-afxglobaldatamnautohidetoolbarmargin"></a><a name="m_nautohidetoolbarmargin"></a>AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
+## <a name="m_nautohidetoolbarmargin"></a>AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
 指定從最左邊的自動隱藏工具列到停駐列左邊的位移。  
   
   
@@ -608,7 +608,7 @@ int  m_nAutoHideToolBarMargin;
 ### <a name="remarks"></a>備註  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 建構函式會初始化這個成員為 4 個像素。  
   
-## <a name="a-namemnautohidetoolbarspacinga-afxglobaldatamnautohidetoolbarspacing"></a><a name="m_nautohidetoolbarspacing"></a>AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
+## <a name="m_nautohidetoolbarspacing"></a>AFX_GLOBAL_DATA::m_nAutoHideToolBarSpacing
 指定自動隱藏工具列之間的間距。  
   
   
@@ -617,9 +617,9 @@ int   m_nAutoHideToolBarSpacing;
 ```  
   
 ### <a name="remarks"></a>備註  
- `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`建構函式會初始化這個成員為 14 個像素。  
+ `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`建構函式會初始化這個成員為 14 像素為單位。  
   
-## <a name="a-namemndragframethicknessdocka-afxglobaldatamndragframethicknessdock"></a><a name="m_ndragframethicknessdock"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
+## <a name="m_ndragframethicknessdock"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
 指定用來表示停駐的狀態拖曳框架的粗細。  
   
@@ -629,10 +629,10 @@ int  m_nDragFrameThicknessDock;
 ```  
   
 ### <a name="remarks"></a>備註  
- `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`建構函式會初始化這個成員為 3 個像素為單位。  
+ `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`建構函式會初始化這個成員為 3 的像素。  
   
-## <a name="a-namemndragframethicknessfloata-afxglobaldatamndragframethicknessfloat"></a><a name="m_ndragframethicknessfloat"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
-指定用來表示浮動狀態拖曳框架的粗細。  
+## <a name="m_ndragframethicknessfloat"></a>AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat
+指定用來指出浮動狀態拖曳框架的粗細。  
   
   
 ```  
@@ -642,7 +642,7 @@ int  m_nDragFrameThicknessFloat;
 ### <a name="remarks"></a>備註  
  `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` 建構函式會初始化這個成員為 4 個像素。  
   
-## <a name="a-nameonsettingchangea-afxglobaldataonsettingchange"></a><a name="onsettingchange"></a>AFX_GLOBAL_DATA::OnSettingChange
+## <a name="onsettingchange"></a>AFX_GLOBAL_DATA::OnSettingChange
 偵測到桌面功能表動畫和工作列自動隱藏功能的目前狀態。  
   
   
@@ -651,9 +651,9 @@ void OnSettingChange();
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個方法會設定 framework 變數到使用者的桌面的某些屬性的狀態。 這個方法會偵測目前功能表動畫、 功能表淡出，並自動隱藏功能工作列的狀態。  
+ 這個方法會設定 framework 變數之使用者的桌面的某些屬性的狀態。 這個方法偵測功能表動畫，功能表淡出，並自動隱藏功能工作列的目前狀態。  
   
-## <a name="a-nameregisterwindowclassa-afxglobaldataregisterwindowclass"></a><a name="registerwindowclass"></a>AFX_GLOBAL_DATA::RegisterWindowClass
+## <a name="registerwindowclass"></a>AFX_GLOBAL_DATA::RegisterWindowClass
 註冊指定的 MFC 視窗類別。  
   
   
@@ -666,7 +666,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  要註冊之視窗類別的名稱。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功，已註冊的類別的限定的名稱否則，[資源例外狀況](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
+ 如果此方法成功則已註冊類別的限定的名稱否則，[資源例外狀況](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
   
 ### <a name="remarks"></a>備註  
  傳回值是 `lpszClassNamePrefix` 參數字串的冒號分隔清單，並且是表示目前應用程式執行個體之控制代碼的十六進位文字；應用程式游標，即識別項為 IDC_ARROW 的箭號游標；以及背景筆刷。 如需註冊 MFC 視窗類別的詳細資訊，請參閱[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
@@ -675,8 +675,8 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
  [AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
 
-## <a name="a-nameresumea-afxglobaldataresume"></a><a name="resume"></a>AFX_GLOBAL_DATA::Resume
- 重新初始化存取方法，以便支援 Windows 佈景主題和視覺化樣式的內部函式指標。 
+## <a name="resume"></a>AFX_GLOBAL_DATA::Resume
+ 重新初始化存取方法，可支援 Windows 佈景主題和視覺化樣式的內部函式指標。 
   
   
 ```  
@@ -689,7 +689,7 @@ BOOL Resume();
 ### <a name="remarks"></a>備註  
  當收到架構會呼叫這個方法[WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247)訊息。  
   
-## <a name="a-namesetlayeredattriba-afxglobaldatasetlayeredattrib"></a><a name="setlayeredattrib"></a>AFX_GLOBAL_DATA::SetLayeredAttrib
+## <a name="setlayeredattrib"></a>AFX_GLOBAL_DATA::SetLayeredAttrib
 提供呼叫 Windows [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540) 方法的簡單方法。  
   
   
@@ -721,7 +721,7 @@ BOOL SetLayeredAttrib(
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
  [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
 
-## <a name="a-namesetmenufonta-afxglobaldatasetmenufont"></a><a name="setmenufont"></a>AFX_GLOBAL_DATA::SetMenuFont
+## <a name="setmenufont"></a>AFX_GLOBAL_DATA::SetMenuFont
 建立指定的邏輯字型。  
   
   
@@ -736,7 +736,7 @@ BOOL SetMenuFont(
  包含字型的屬性的結構指標。  
   
  [in] `bHorz`  
- `TRUE`若要指定文字執行水平空間。`FALSE`來指定文字以垂直方式執行。  
+ `TRUE`若要指定的文字往返水平空間。`FALSE`來指定文字以垂直方式執行。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果此方法成功。否則， `FALSE`。 在偵錯模式中，這個方法會判斷提示這個方法是否成功。  
@@ -744,7 +744,7 @@ BOOL SetMenuFont(
 ### <a name="remarks"></a>備註  
  這個方法會建立水平的一般字型，加上底線的字型，並會以粗體字用預設功能表項目。 這個方法會選擇性地建立一般的垂直字型。 如需邏輯字型的詳細資訊，請參閱[cfont:: Createfontindirect](../../mfc/reference/cfont-class.md#createfontindirect)。  
   
-## <a name="a-nameupdatefontsa-afxglobaldataupdatefonts"></a><a name="updatefonts"></a>AFX_GLOBAL_DATA::UpdateFonts
+## <a name="updatefonts"></a>AFX_GLOBAL_DATA::UpdateFonts
 重新初始化架構使用的邏輯字型。  
   
   
@@ -755,7 +755,7 @@ void UpdateFonts();
 ### <a name="remarks"></a>備註  
  如需邏輯字型的詳細資訊，請參閱 `CFont::CreateFontIndirect`。  
   
-## <a name="a-nameupdatesyscolorsa-afxglobaldataupdatesyscolors"></a><a name="updatesyscolors"></a>AFX_GLOBAL_DATA::UpdateSysColors
+## <a name="updatesyscolors"></a>AFX_GLOBAL_DATA::UpdateSysColors
 初始化架構使用的色彩、色彩深度、筆刷、畫筆與圖像。  
   
   
@@ -763,7 +763,7 @@ void UpdateFonts();
 void UpdateSysColors();
 ```  
   
-## <a name="a-namebiswindows7a-afxglobaldatabiswindows7"></a><a name="biswindows7"></a>AFX_GLOBAL_DATA::bIsWindows7
+## <a name="biswindows7"></a>AFX_GLOBAL_DATA::bIsWindows7
 表示應用程式是否在 Windows 7 或以上版本執行。  
   
   
@@ -771,7 +771,7 @@ void UpdateSysColors();
 BOOL bIsWindows7;  
 ```  
   
-## <a name="a-nameclractivecaptiongradienta-afxglobaldataclractivecaptiongradient"></a><a name="clractivecaptiongradient"></a>AFX_GLOBAL_DATA::clrActiveCaptionGradient
+## <a name="clractivecaptiongradient"></a>AFX_GLOBAL_DATA::clrActiveCaptionGradient
 指定現用標題的漸層色彩。 通常用於停駐窗格。  
   
   
@@ -779,7 +779,7 @@ BOOL bIsWindows7;
 COLORREF clrActiveCaptionGradient;  
 ```  
   
-## <a name="a-nameclrinactivecaptiongradienta-afxglobaldataclrinactivecaptiongradient"></a><a name="clrinactivecaptiongradient"></a>AFX_GLOBAL_DATA::clrInactiveCaptionGradient
+## <a name="clrinactivecaptiongradient"></a>AFX_GLOBAL_DATA::clrInactiveCaptionGradient
 指定非使用中標號的漸層色彩。 通常用於停駐窗格。  
   
   
@@ -787,7 +787,7 @@ COLORREF clrActiveCaptionGradient;
 COLORREF clrInactiveCaptionGradient;  
 ```  
   
-## <a name="a-namegetitaskbarlista-afxglobaldatagetitaskbarlist"></a><a name="getitaskbarlist"></a>AFX_GLOBAL_DATA::GetITaskbarList
+## <a name="getitaskbarlist"></a>AFX_GLOBAL_DATA::GetITaskbarList
 在全域資料中建立和儲存指標至 `ITaskBarList` 介面。  
   
   
@@ -798,7 +798,7 @@ ITaskbarList *GetITaskbarList();
 ### <a name="return-value"></a>傳回值  
  如果工作列清單物件建立成功則為 `ITaskbarList` 介面的指標中，如果建立失敗，或者如果目前的作業系統版本比 Windows 7 舊則為 `NULL`。  
   
-## <a name="a-namegetitaskbarlist3a-afxglobaldatagetitaskbarlist3"></a><a name="getitaskbarlist3"></a>AFX_GLOBAL_DATA::GetITaskbarList3
+## <a name="getitaskbarlist3"></a>AFX_GLOBAL_DATA::GetITaskbarList3
 在全域資料中建立和儲存指標至 `ITaskBarList3` 介面。  
   
   
@@ -809,7 +809,7 @@ ITaskbarList3 *GetITaskbarList3();
 ### <a name="return-value"></a>傳回值  
  如果工作列清單物件建立成功則為 `ITaskbarList3` 介面的指標中，如果建立失敗，或者如果目前的作業系統版本比 Windows 7 舊則為 `NULL`。  
   
-## <a name="a-namegetshellautohidebarsa-afxglobaldatagetshellautohidebars"></a><a name="getshellautohidebars"></a>AFX_GLOBAL_DATA::GetShellAutohideBars
+## <a name="getshellautohidebars"></a>AFX_GLOBAL_DATA::GetShellAutohideBars
 決定殼層自動隱藏軸的位置。  
   
   
@@ -818,17 +818,17 @@ int GetShellAutohideBars();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 整數值與編碼的旗標，指定位置的自動隱藏軸。 可以結合下列值︰ AFX_AUTOHIDE_BOTTOM、 AFX_AUTOHIDE_TOP、 AFX_AUTOHIDE_LEFT、 AFX_AUTOHIDE_RIGHT。  
+ 整數值與編碼的旗標，指定位置的自動隱藏列。 它可以結合下列的值︰ AFX_AUTOHIDE_BOTTOM、 AFX_AUTOHIDE_TOP、 AFX_AUTOHIDE_LEFT、 AFX_AUTOHIDE_RIGHT。  
   
-## <a name="a-namereleasetaskbarrefsa-afxglobaldatareleasetaskbarrefs"></a><a name="releasetaskbarrefs"></a>AFX_GLOBAL_DATA::ReleaseTaskBarRefs
-釋放介面透過取得`GetITaskbarList`和`GetITaskbarList3`方法。  
+## <a name="releasetaskbarrefs"></a>AFX_GLOBAL_DATA::ReleaseTaskBarRefs
+釋放介面透過`GetITaskbarList`和`GetITaskbarList3`方法。  
   
   
 ```  
 void ReleaseTaskBarRefs();
 ```  
   
-## <a name="a-nameshellcreateitemfromparsingnamea-afxglobaldatashellcreateitemfromparsingname"></a><a name="shellcreateitemfromparsingname"></a>AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
+## <a name="shellcreateitemfromparsingname"></a>AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
 從剖析名稱建立並初始化殼層項目物件。  
   
   
@@ -851,7 +851,7 @@ HRESULT ShellCreateItemFromParsingName(
  參考介面識別碼。  
   
  `ppv`  
- [out]此函式傳回時，包含所要求的介面指標`riid`。 這通常是`IShellItem`或`IShellItem2`。  
+ [out]此函式傳回時，包含所要求的介面指標`riid`。 這通常會是`IShellItem`或`IShellItem2`。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果登錄成功。否則為錯誤值。  

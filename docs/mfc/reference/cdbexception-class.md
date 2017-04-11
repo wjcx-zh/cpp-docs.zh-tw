@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 66b5e6cbfaadd4b57d301de74fc2e0b815956952
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="cdbexception-class"></a>CDBException 類別
@@ -98,7 +98,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_CONNECT_FAIL**資料來源連接失敗。 您傳遞**NULL** `CDatabase`指標資料錄集建構函式和建立連接的後續嘗試根據`GetDefaultConnect`失敗。  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED**要求超過您所提供的儲存體的資料。 如需增加的資料提供儲存體`CString`或`CByteArray`資料類型，請參閱`nMaxLength`引數[RFX_Text](http://msdn.microsoft.com/library/de3c7581-d26c-40cb-81f3-c492ef4809f6)和[RFX_Binary](http://msdn.microsoft.com/library/908ff945-3ad0-43a1-9932-cdcdc8b14915)下 「 巨集和全域變數。 」  
+- **AFX_SQL_ERROR_DATA_TRUNCATED**要求超過您所提供的儲存體的資料。 如需增加的資料提供儲存體`CString`或`CByteArray`資料類型，請參閱`nMaxLength`引數[RFX_Text](record-field-exchange-functions.md#rfx_text)和[RFX_Binary](record-field-exchange-functions.md#rfx_binary)下 「 巨集和全域變數。 」  
   
 - **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED**呼叫`CRecordset::Open`要求動態集失敗。 驅動程式不支援 Dynaset。  
   

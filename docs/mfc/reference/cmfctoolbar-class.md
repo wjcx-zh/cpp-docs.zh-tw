@@ -188,9 +188,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a34997b4b68ddcc8f42869466f17d67f32141d7c
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d592cd2c2bd0d26bc82bf61baad4e01696209236
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
@@ -213,180 +213,180 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[CMFCToolBar::AddBasicCommand](#addbasiccommand)|將功能表命令加入至一定會在使用者開啟功能表時所顯示的命令的清單。|  
-|[CMFCToolBar::AddCommandUsage](#addcommandusage)|一個指定的命令相關聯的計數器遞增。|  
+|[CMFCToolBar::AddBasicCommand](#addbasiccommand)|將功能表命令加入至永遠會在使用者開啟功能表時所顯示的命令的清單。|  
+|[CMFCToolBar::AddCommandUsage](#addcommandusage)|其中一個指定的命令相關聯的計數器遞增。|  
 |[CMFCToolBar::AddToolBarForImageCollection](#addtoolbarforimagecollection)|將影像從使用者介面資源加入至應用程式中的映像的集合。|  
-|[CMFCToolBar::AdjustLayout](#adjustlayout)|重新計算的大小和工具列的位置。 (覆寫[CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout))。|  
+|[CMFCToolBar::AdjustLayout](#adjustlayout)|重新計算的大小和位置 工具列。 (覆寫[cbasepane:: Adjustlayout](../../mfc/reference/cbasepane-class.md#adjustlayout))。|  
 |[CMFCToolBar::AdjustSize](#adjustsize)|重新計算工具列的大小。|  
-|[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)|指定是否可以顯示文字標籤影像的工具列按鈕下方。|  
-|[CMFCToolBar::AreTextLabels](#aretextlabels)|指定影像下方文字標籤是否目前正在顯示的工具列按鈕。|  
+|[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)|指定是否可以顯示文字標籤底下的工具列按鈕上的映像。|  
+|[CMFCToolBar::AreTextLabels](#aretextlabels)|指定影像下方文字標籤是否目前顯示在工具列按鈕上。|  
 |[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)|啟用或停用自動產生的非作用中的按鈕影像。|  
-|[CMFCToolBar::ButtonToIndex](#buttontoindex)|傳回指定之索引[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)這個工具列中的物件。|  
-|[CMFCToolBar::CalcFixedLayout](#calcfixedlayout)|計算的水平大小的工具列。 (覆寫[CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|  
-|[CMFCToolBar::CalcSize](#calcsize)|配置計算程序的一部分的架構所呼叫。 (覆寫[CPane::CalcSize](../../mfc/reference/cpane-class.md#calcsize)。)|  
+|[CMFCToolBar::ButtonToIndex](#buttontoindex)|傳回指定之索引[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)此工具列中的物件。|  
+|[CMFCToolBar::CalcFixedLayout](#calcfixedlayout)|計算工具列的水平大小。 (覆寫[cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|  
+|[CMFCToolBar::CalcSize](#calcsize)|由架構呼叫配置計算程序的一部分。 (覆寫[CPane::CalcSize](../../mfc/reference/cpane-class.md#calcsize)。)|  
 |[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|決定是否工具列和其同層級位於相同的窗格上。|  
 |[CMFCToolBar::CleanUpImages](#cleanupimages)|釋放系統資源配置給下工具列影像。|  
 |[CMFCToolBar::CleanUpLockedImages](#cleanuplockedimages)|釋放系統資源配置的鎖定的工具列影像。|  
-|[CMFCToolBar::CanBeClosed](#canbeclosed)|指定使用者是否可以關閉工具列。 (覆寫[CBasePane::CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed)。)|  
-|[CMFCToolBar::CanBeRestored](#canberestored)|決定是否系統可以工具列後還原到其原始狀態的自訂。|  
-|[CMFCToolBar::CanFocus](#canfocus)|指定是否窗格可以接收焦點。 (覆寫[CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus)。)|  
+|[CMFCToolBar::CanBeClosed](#canbeclosed)|指定使用者是否可以關閉工具列。 (覆寫[cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed)。)|  
+|[CMFCToolBar::CanBeRestored](#canberestored)|決定是否系統可以還原工具列到其原始狀態後自訂。|  
+|[CMFCToolBar::CanFocus](#canfocus)|指定窗格是否能夠接收焦點。 (覆寫[CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus)。)|  
 |[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|決定是否工具列和其同層級位於相同的窗格上。|  
-|[CMFCToolBar::CommandToIndex](#commandtoindex)|傳回在工具列中指定的命令 id 的按鈕索引|  
+|[CMFCToolBar::CommandToIndex](#commandtoindex)|傳回與指定的命令識別碼工具列中按鈕的索引|  
 |[CMFCToolBar::Create](#create)|建立 `CMFCToolBar` 物件。|  
-|[CMFCToolBar::CreateEx](#createex)|建立`CMFCToolBar`使用其他樣式選項時，例如大型圖示的物件。|  
-|[CMFCToolBar::Deactivate](#deactivate)|停用工具列。|  
-|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|啟用或停用**新增或移除按鈕**出現的工具列按鈕。|  
-|[CMFCToolBar::EnableDocking](#enabledocking)|啟用停駐窗格的主框架。 (覆寫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。)|  
+|[CMFCToolBar::CreateEx](#createex)|建立`CMFCToolBar`會使用其他樣式選項，例如大型圖示的物件。|  
+|[CMFCToolBar::Deactivate](#deactivate)|工具列就會停用。|  
+|[Cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)|啟用或停用**新增或移除按鈕**會出現在結尾工具列的按鈕。|  
+|[CMFCToolBar::EnableDocking](#enabledocking)|主框架窗格的停駐啟用。 (覆寫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。)|  
 |[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|啟用或停用工具列按鈕上的大型圖示。|  
-|[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|啟用或停用快速自訂的工具列，讓使用者可以按**Alt**鍵，然後將按鈕拖曳至新位置。|  
+|[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|啟用或停用快速自訂工具列，讓使用者可以按**Alt**鍵，然後將按鈕拖曳至新位置。|  
 |[CMFCToolBar::EnableReflections](#enablereflections)|啟用或停用命令反映。|  
 |[CMFCToolBar::EnableTextLabels](#enabletextlabels)|啟用或停用工具列按鈕影像下方文字標籤。|  
 |[CMFCToolBar::FromHandlePermanent](#fromhandlepermanent)|擷取的指標`CMFCToolBar`物件，其中包含指定的視窗控制代碼。|  
-|[CMFCToolBar::GetAllButtons](#getallbuttons)|傳回在工具列中的按鈕的唯讀清單。|  
-|[CMFCToolBar::GetAllToolbars](#getalltoolbars)|在應用程式會傳回所有工具列唯讀清單。|  
+|[CMFCToolBar::GetAllButtons](#getallbuttons)|在工具列中傳回按鈕的唯讀的清單。|  
+|[CMFCToolBar::GetAllToolbars](#getalltoolbars)|在應用程式會傳回所有工具列的唯讀清單。|  
 |[CMFCToolBar::GetBasicCommands](#getbasiccommands)|傳回唯讀的應用程式中定義的基本命令清單。|  
-|[CMFCToolBar::GetButton](#getbutton)|傳回的指標`CMFCToolBarButton`具有指定的工具列按鈕索引的物件。|  
-|[CMFCToolBar::GetButtonInfo](#getbuttoninfo)|傳回命令 ID、 樣式和指定索引處的按鈕影像索引。|  
-|[CMFCToolBar::GetButtonSize](#getbuttonsize)|在工具列上傳回每個按鈕的尺寸。|  
-|[CMFCToolBar::GetButtonStyle](#getbuttonstyle)|傳回目前的工具列按鈕，指定索引處的樣式。|  
+|[CMFCToolBar::GetButton](#getbutton)|將指標傳回至`CMFCToolBarButton`物件具有指定的工具列按鈕索引。|  
+|[CMFCToolBar::GetButtonInfo](#getbuttoninfo)|傳回命令 ID、 樣式和映像索引的指定索引處的按鈕。|  
+|[CMFCToolBar::GetButtonSize](#getbuttonsize)|傳回維度的每個按鈕的工具列上。|  
+|[CMFCToolBar::GetButtonStyle](#getbuttonstyle)|傳回目前位於指定索引上的工具列按鈕的樣式。|  
 |[CMFCToolBar::GetButtonText](#getbuttontext)|傳回具有指定的索引的按鈕的文字標籤。|  
-|[CMFCToolBar::GetColdImages](#getcoldimages)|在應用程式的冷的工具列按鈕影像的集合中傳回的指標。|  
-|[CMFCToolBar::GetColumnWidth](#getcolumnwidth)|傳回的工具列按鈕的寬度。|  
-|[CMFCToolBar::GetCommandButtons](#getcommandbuttons)|傳回一份應用程式中有指定的命令識別碼，從所有的工具列按鈕。|  
+|[CMFCToolBar::GetColdImages](#getcoldimages)|讓指標回到應用程式中的非作用中工具列按鈕影像的集合。|  
+|[CMFCToolBar::GetColumnWidth](#getcolumnwidth)|傳回工具列按鈕的寬度。|  
+|[CMFCToolBar::GetCommandButtons](#getcommandbuttons)|傳回一份應用程式中有指定的命令識別碼從所有工具列按鈕。|  
 |[CMFCToolBar::GetCount](#getcount)|在工具列上傳回按鈕和分隔線的數目。|  
 |[CMFCToolBar::GetCustomizeButton](#getcustomizebutton)|擷取的指標`CMFCCustomizeButton`與工具列相關聯的物件。|  
-|[CMFCToolBar::GetDefaultImage](#getdefaultimage)|傳回具有指定的命令 ID 的工具列按鈕的預設影像的索引|  
-|[CMFCToolBar::GetDisabledImages](#getdisabledimages)|用於應用程式中的已停用的工具列按鈕的影像集合中傳回的指標。|  
-|[CMFCToolBar::GetDisabledMenuImages](#getdisabledmenuimages)|用於應用程式中已停用的功能表按鈕的影像集合中傳回的指標。|  
-|[CMFCToolBar::GetDroppedDownMenu](#getdroppeddownmenu)|擷取目前正在顯示子功能表的功能表按鈕物件的指標。|  
-|[CMFCToolBar::GetGrayDisabledButtons](#getgraydisabledbuttons)|指定已停用按鈕的影像是否要呈現暗灰色的版本一般按鈕的影像，或從已停用的按鈕影像的集合。|  
+|[CMFCToolBar::GetDefaultImage](#getdefaultimage)|傳回具有指定之命令識別碼的工具列按鈕的預設影像索引|  
+|[CMFCToolBar::GetDisabledImages](#getdisabledimages)|讓指標回到可用來在應用程式中的已停用的工具列按鈕的影像集合。|  
+|[CMFCToolBar::GetDisabledMenuImages](#getdisabledmenuimages)|讓指標回到可用來在應用程式中已停用的功能表按鈕的影像集合。|  
+|[CMFCToolBar::GetDroppedDownMenu](#getdroppeddownmenu)|擷取目前顯示其子功能表的功能表按鈕物件的指標。|  
+|[CMFCToolBar::GetGrayDisabledButtons](#getgraydisabledbuttons)|指定已停用按鈕的影像是否要呈現暗灰色的版本，一般按鈕的影像，或從已停用的按鈕影像的集合。|  
 |[CMFCToolBar::GetHighlightedButton](#gethighlightedbutton)|讓指標回到目前反白顯示的工具列按鈕。|  
-|[CMFCToolBar::GetHotBorder](#gethotborder)|決定工具列按鈕是否為熱追蹤。|  
-|[CMFCToolBar::GetHotTextColor](#gethottextcolor)|傳回文字的色彩反白顯示的工具列按鈕。|  
-|[CMFCToolBar::GetHwndLastFocus](#gethwndlastfocus)|傳回之前工具列未擁有輸入的焦點的視窗控制代碼。|  
-|[CMFCToolBar::GetIgnoreSetText](#getignoresettext)|指定是否設定按鈕標籤的呼叫都會被忽略。|  
+|[CMFCToolBar::GetHotBorder](#gethotborder)|判斷工具列按鈕是否熱追蹤。|  
+|[CMFCToolBar::GetHotTextColor](#gethottextcolor)|傳回反白顯示的工具列按鈕的文字色彩。|  
+|[CMFCToolBar::GetHwndLastFocus](#gethwndlastfocus)|傳回之前工具列未具有輸入的焦點的視窗控制代碼。|  
+|[CMFCToolBar::GetIgnoreSetText](#getignoresettext)|指定是否忽略呼叫設定按鈕的標籤。|  
 |[CMFCToolBar::GetImageSize](#getimagesize)|傳回目前的工具列按鈕影像的大小。|  
-|[CMFCToolBar::GetImages](#getimages)|傳回的指標集合的預設按鈕影像應用程式中。|  
-|[CMFCToolBar::GetImagesOffset](#getimagesoffset)|傳回用來尋找此工具列，工具列按鈕影像的全域清單中的工具列按鈕影像的索引位移。|  
-|[CMFCToolBar::GetInvalidateItemRect](#getinvalidateitemrect)|擷取指定索引處的按鈕就必須重新繪製的工作區的區域。|  
-|[CMFCToolBar::GetItemID](#getitemid)|傳回指定索引處的工具列按鈕的命令 ID。|  
-|[CMFCToolBar::GetItemRect](#getitemrect)|傳回指定索引處的按鈕，這個周框。|  
-|[CMFCToolBar::GetLargeColdImages](#getlargecoldimages)|應用程式中的大型冷的工具列按鈕影像的集合中傳回的指標。|  
-|[CMFCToolBar::GetLargeDisabledImages](#getlargedisabledimages)|傳回集合的應用程式中的大型已停用的工具列按鈕影像的指標。|  
-|[CMFCToolBar::GetLargeImages](#getlargeimages)|應用程式中的大型工具列按鈕影像的集合中傳回的指標。|  
+|[CMFCToolBar::GetImages](#getimages)|傳回的指標集合的預設按鈕影像的應用程式中。|  
+|[CMFCToolBar::GetImagesOffset](#getimagesoffset)|傳回用來尋找工具列按鈕影像的工具列按鈕影像的全域清單在此工具列索引位移。|  
+|[CMFCToolBar::GetInvalidateItemRect](#getinvalidateitemrect)|擷取指定索引處的按鈕必須重繪用戶端區域的區域。|  
+|[CMFCToolBar::GetItemID](#getitemid)|傳回指定索引處的工具列按鈕的命令識別碼。|  
+|[CMFCToolBar::GetItemRect](#getitemrect)|傳回指定索引處的按鈕的週框矩形。|  
+|[CMFCToolBar::GetLargeColdImages](#getlargecoldimages)|讓指標回到應用程式中的大型非作用中工具列按鈕影像的集合。|  
+|[CMFCToolBar::GetLargeDisabledImages](#getlargedisabledimages)|讓指標回到應用程式中的大型已停用的工具列按鈕影像的集合。|  
+|[CMFCToolBar::GetLargeImages](#getlargeimages)|讓指標回到應用程式中的大型工具列按鈕影像的集合。|  
 |[CMFCToolBar::GetLockedColdImages](#getlockedcoldimages)|在工具列上的鎖定冷映像的集合中傳回的指標。|  
 |[CMFCToolBar::GetLockedDisabledImages](#getlockeddisabledimages)|在工具列上的鎖定已停用映像的集合中傳回的指標。|  
 |[CMFCToolBar::GetLockedImages](#getlockedimages)|在工具列上的鎖定的按鈕影像的集合中傳回的指標。|  
-|[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)|傳回已鎖定的工具列影像的預設大小。|  
-|[CMFCToolBar::GetLockedMenuImages](#getlockedmenuimages)|傳回的指標集合的 [鎖定工具列] 功能表上的映像工具列中。|  
-|[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)|傳回應用程式功能表按鈕的大小。|  
-|[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)|傳回應用程式功能表按鈕影像的大小。|  
-|[CMFCToolBar::GetMenuImages](#getmenuimages)|應用程式中的功能表按鈕影像的集合中傳回的指標。|  
-|[CMFCToolBar::GetOrigButtons](#getorigbuttons)|擷取集合的非自訂按鈕的工具列。|  
+|[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)|傳回鎖定的工具列影像的預設大小。|  
+|[CMFCToolBar::GetLockedMenuImages](#getlockedmenuimages)|讓指標回到集合已鎖定工具列的功能表影像的工具列中。|  
+|[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)|傳回應用程式中的功能表按鈕的大小。|  
+|[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)|傳回應用程式中的功能表按鈕影像的大小。|  
+|[CMFCToolBar::GetMenuImages](#getmenuimages)|讓指標回到應用程式中的功能表按鈕影像的集合。|  
+|[CMFCToolBar::GetOrigButtons](#getorigbuttons)|擷取非自訂的按鈕，工具列的集合。|  
 |[CMFCToolBar::GetOrigResetButtons](#getorigresetbuttons)|擷取集合的非自訂的重設按鈕的工具列。|  
 |[CMFCToolBar::GetResourceID](#getresourceid)|擷取工具列的資源識別碼。|  
-|[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)|決定哪些物件、 父框架或擁有者，將命令傳送至工具列。|  
+|[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)|決定哪一個物件，父框架或擁有者，將命令傳送至工具列。|  
 |[CMFCToolBar::GetRowHeight](#getrowheight)|傳回工具列按鈕的高度。|  
-|[CMFCToolBar::GetShowTooltips](#getshowtooltips)|指定的工具列按鈕是否會顯示工具提示。|  
+|[CMFCToolBar::GetShowTooltips](#getshowtooltips)|指定工具列按鈕是否顯示工具提示。|  
 |[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)|擷取工具列的同層級。|  
-|[CMFCToolBar::GetUserImages](#getuserimages)|應用程式中的使用者定義工具列按鈕影像的集合中傳回的指標。|  
+|[CMFCToolBar::GetUserImages](#getuserimages)|讓指標回到應用程式中的使用者定義工具列按鈕影像的集合。|  
 |[CMFCToolBar::HitTest](#hittest)|傳回位於指定位置處的工具列按鈕的索引。|  
 |[CMFCToolBar::InsertButton](#insertbutton)|插入工具列按鈕。|  
 |[CMFCToolBar::InsertSeparator](#insertseparator)|插入工具列中的分隔符號。|  
-|[CMFCToolBar::InvalidateButton](#invalidatebutton)|失效的工具列按鈕，在提供的索引存在的工作區。|  
-|[CMFCToolBar::IsAddRemoveQuickCustomize](#isaddremovequickcustomize)|決定使用者可以新增或移除工具列按鈕使用**自訂**功能表選項。|  
-|[CMFCToolBar::IsAltCustomizeMode](#isaltcustomizemode)|指定是否*快速自訂*用來將按鈕拖曳。|  
-|[CMFCToolBar::IsAutoGrayInactiveImages](#isautograyinactiveimages)|指定是否啟用自動產生的非作用中 （非反白顯示） 按鈕影像。|  
+|[CMFCToolBar::InvalidateButton](#invalidatebutton)|工具列按鈕提供的索引已存在的工作區會導致無效。|  
+|[CMFCToolBar::IsAddRemoveQuickCustomize](#isaddremovequickcustomize)|決定使用者是否可以加入或移除工具列按鈕使用**自訂**功能表選項。|  
+|[CMFCToolBar::IsAltCustomizeMode](#isaltcustomizemode)|指定是否*快速自訂*正將按鈕拖曳。|  
+|[CMFCToolBar::IsAutoGrayInactiveImages](#isautograyinactiveimages)|指定是否啟用自動產生的非作用中 （非-反白顯示） 的按鈕影像。|  
 |[CMFCToolBar::IsBasicCommand](#isbasiccommand)|判斷命令是否在基本命令的清單。|  
-|[CMFCToolBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|決定工具列是否會顯示擴充框線的按鈕。|  
+|[CMFCToolBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|決定工具列是否顯示已延伸框線的按鈕。|  
 |[CMFCToolBar::IsButtonHighlighted](#isbuttonhighlighted)|決定工具列上的按鈕會反白顯示。|  
 |[CMFCToolBar::IsCommandPermitted](#iscommandpermitted)|決定是否要允許的命令。|  
 |[CMFCToolBar::IsCommandRarelyUsed](#iscommandrarelyused)|決定是否很少使用的命令 (請參閱[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions))。|  
 |[CMFCToolBar::IsCustomizeMode](#iscustomizemode)|指定工具列 framework 是否為自訂模式。|  
-|[CMFCToolBar::IsDragButton](#isdragbutton)|決定是否要拖曳的工具列按鈕。|  
+|[CMFCToolBar::IsDragButton](#isdragbutton)|決定是否要拖曳工具列按鈕。|  
 |[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)|判斷是否要包含工具列**自訂** 按鈕。|  
 |[CMFCToolBar::IsFloating](#isfloating)|決定是否要浮動工具列。|  
-|[CMFCToolBar::IsLargeIcons](#islargeicons)|指定是否在應用程式工具列目前顯示大圖示。|  
-|[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|決定是否最近執行命令用來傳送指定的工具列按鈕。|  
+|[CMFCToolBar::IsLargeIcons](#islargeicons)|指定應用程式中的工具列是否目前顯示大圖示。|  
+|[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|決定是否最近執行已傳送命令，從指定的工具列按鈕。|  
 |[CMFCToolBar::IsLocked](#islocked)|決定工具列是否已鎖定。|  
-|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|判斷是否會將工具列和工具列，其同層級置於同一個資料列。|  
+|[Cmfctoolbar:: Isonerowwithsibling](#isonerowwithsibling)|決定是否工具列和工具列，其同層級位於相同的資料列。|  
 |[CMFCToolBar::IsUserDefined](#isuserdefined)|指定工具列是否為使用者定義。|  
 |[CMFCToolBar::LoadBitmap](#loadbitmap)|從應用程式資源載入工具列影像。|  
-|[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|從應用程式資源載入工具列影像。 包含大量的影像。|  
-|[CMFCToolBar::LoadParameters](#loadparameters)|從 Windows 登錄載入全域工具列選項。|  
+|[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|從應用程式資源載入工具列影像。 包含大型影像。|  
+|[CMFCToolBar::LoadParameters](#loadparameters)|從 Windows 登錄載入全域工具列上的選項。|  
 |[CMFCToolBar::LoadState](#loadstate)|從 Windows 登錄載入工具列狀態資訊。 (覆寫[CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate)。)|  
 |[CMFCToolBar::LoadToolBar](#loadtoolbar)|從應用程式資源載入工具列。|  
-|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|從應用程式資源載入工具列使用`CMFCToolBarInfo`helper 類別，可讓應用程式使用大量的影像。|  
-|[CMFCToolBar::OnChangeHot](#onchangehot)|當使用者選取工具列上的按鈕，由架構呼叫。|  
+|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|透過使用從應用程式資源載入工具列`CMFCToolBarInfo`helper 類別，讓應用程式使用大型影像。|  
+|[CMFCToolBar::OnChangeHot](#onchangehot)|當使用者選取工具列上的按鈕時由架構呼叫。|  
 |[CMFCToolBar::OnFillBackground](#onfillbackground)|從架構呼叫[CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint)工具列背景填滿。|  
-|[CMFCToolBar::OnReset](#onreset)|將工具列還原至其原始狀態。|  
-|[CMFCToolBar::OnSetAccData](#onsetaccdata)|(覆寫[CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata)。)|  
+|[CMFCToolBar::OnReset](#onreset)|將工具列還原成原始狀態。|  
+|[CMFCToolBar::OnSetAccData](#onsetaccdata)|(覆寫[cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata)。)|  
 |[CMFCToolBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|工具列按鈕的文字會還原為其預設狀態。|  
 |`CMFCToolBar::OnUpdateCmdUI`|在內部使用。|  
 |[CMFCToolBar::RemoveAllButtons](#removeallbuttons)|從工具列中移除所有的按鈕。|  
 |[CMFCToolBar::RemoveButton](#removebutton)|從工具列中移除具有指定之索引的按鈕。|  
-|[CMFCToolBar::RemoveStateFromRegistry](#removestatefromregistry)|刪除 Windows 登錄中的工具列的狀態資訊。|  
+|[CMFCToolBar::RemoveStateFromRegistry](#removestatefromregistry)|從 Windows 登錄中刪除工具列的狀態資訊。|  
 |[CMFCToolBar::ReplaceButton](#replacebutton)|取代另一個工具列按鈕的工具列按鈕。|  
-|[CMFCToolBar::ResetAll](#resetall)|將所有的工具列還原為原始狀態。|  
+|[CMFCToolBar::ResetAll](#resetall)|將所有工具列都還原成其原始狀態。|  
 |[CMFCToolBar::ResetAllImages](#resetallimages)|清除所有應用程式中的工具列影像集合。|  
 |[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)|還原工具列的原始狀態。|  
-|[CMFCToolBar::SaveState](#savestate)|將工具列的狀態資訊儲存在 Windows 登錄。 (覆寫[CPane::SaveState](../../mfc/reference/cpane-class.md#savestate)。)|  
+|[CMFCToolBar::SaveState](#savestate)|將工具列的狀態資訊儲存在 Windows 登錄中。 (覆寫[CPane::SaveState](../../mfc/reference/cpane-class.md#savestate)。)|  
 |`CMFCToolBar::Serialize`|(覆寫 `CBasePane::Serialize`。)|  
-|[CMFCToolBar::SetBasicCommands](#setbasiccommands)|設定當使用者開啟功能表，一定會顯示的命令清單。|  
-|[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|設定命令 ID、 樣式和影像的工具列按鈕的 ID。|  
+|[CMFCToolBar::SetBasicCommands](#setbasiccommands)|設定永遠會在使用者開啟功能表時所顯示的命令清單。|  
+|[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|設定命令 ID、 樣式和工具列按鈕的影像 ID。|  
 |[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|設定指定索引處的工具列按鈕的樣式。|  
 |[CMFCToolBar::SetButtonText](#setbuttontext)|設定的文字標籤的工具列按鈕。|  
-|[CMFCToolBar::SetButtons](#setbuttons)|設定工具列按鈕。|  
-|[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)|指定當很少使用的命令未出現在應用程式的功能表中。|  
+|[CMFCToolBar::SetButtons](#setbuttons)|集合的工具列按鈕。|  
+|[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)|指定當很少使用的命令未出現在應用程式的功能表。|  
 |[CMFCToolBar::SetCustomizeMode](#setcustomizemode)|啟用或停用應用程式中的所有工具列的自訂模式。|  
-|[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)|指定的工具列上的已停用的按鈕會呈暗灰色，或如果已停用映像會使用已停用按鈕。|  
+|[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)|指定工具列上的已停用的按鈕會呈暗灰色，或如果已停用映像可用的已停用按鈕。|  
 |[CMFCToolBar::SetHeight](#setheight)|設定工具列的高度。|  
 |[CMFCToolBar::SetHotBorder](#sethotborder)|指定工具列按鈕是否熱追蹤。|  
-|[CMFCToolBar::SetHotTextColor](#sethottextcolor)|設定作用的工具列按鈕的文字色彩。|  
+|[CMFCToolBar::SetHotTextColor](#sethottextcolor)|設定作用中工具列按鈕的文字色彩。|  
 |[CMFCToolBar::SetLargeIcons](#setlargeicons)|指定工具列按鈕是否顯示大圖示。|  
 |[CMFCToolBar::SetLockedSizes](#setlockedsizes)|在工具列上設定鎖定的按鈕和鎖定的映像的大小。|  
-|[CMFCToolBar::SetMenuSizes](#setmenusizes)|設定功能表的工具列按鈕和其影像的大小。|  
-|[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|設定無法由使用者執行的命令清單。|  
-|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|在工具列和其同層級置於相同的資料列。|  
+|[CMFCToolBar::SetMenuSizes](#setmenusizes)|設定工具列功能表按鈕和其映像的大小。|  
+|[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|設定無法在使用者所執行的命令清單。|  
+|[Cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling)|工具列和其同層級置於相同的資料列。|  
 |[CMFCToolBar::SetPermament](#setpermament)|指定使用者是否可以關閉工具列。|  
-|[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|指定是否在父框架或擁有者將命令傳送至工具列。|  
-|[CMFCToolBar::SetShowTooltips](#setshowtooltips)|指定是否，架構會顯示工具提示。|  
-|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|指定工具列的同層級。|  
-|[CMFCToolBar::SetSizes](#setsizes)|指定所有的工具列按鈕和影像的大小。|  
+|[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|指定是否在父框架或擁有者的命令傳送至工具列。|  
+|[CMFCToolBar::SetShowTooltips](#setshowtooltips)|指定是否 framework 顯示在工具提示。|  
+|[Cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)|指定工具列的同層級。|  
+|[CMFCToolBar::SetSizes](#setsizes)|指定所有工具列按鈕和映像的大小。|  
 |[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|在工具列上，指定按鈕的屬性。|  
-|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|在工具列和其同層級置於個別的資料列。|  
+|[Cmfctoolbar:: Settworowswithsibling](#settworowswithsibling)|工具列和其同層級置於個別的資料列。|  
 |[CMFCToolBar::SetUserImages](#setuserimages)|應用程式中設定使用者定義的映像的集合。|  
-|[CMFCToolBar::StretchPane](#stretchpane)|垂直或水平伸展工具列。 (覆寫[CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane)。)|  
+|[CMFCToolBar::StretchPane](#stretchpane)|垂直或水平伸展工具列。 (覆寫[cbasepane:: Stretchpane](../../mfc/reference/cbasepane-class.md#stretchpane)。)|  
 |[CMFCToolBar::TranslateChar](#translatechar)|如果指定的按鍵碼對應至有效的鍵盤快速鍵，請執行按鈕命令。|  
-|[CMFCToolBar::UpdateButton](#updatebutton)|更新指定的按鍵的狀態。|  
-|[CMFCToolBar::WrapToolBar](#wraptoolbar)|重新放置在指定的維度內的工具列按鈕。|  
+|[CMFCToolBar::UpdateButton](#updatebutton)|更新指定的按鈕狀態。|  
+|[CMFCToolBar::WrapToolBar](#wraptoolbar)|重新調整位置指定的維度內的工具列按鈕。|  
   
 ### <a name="protected-methods"></a>受保護的方法  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[CMFCToolBar::AllowShowOnList](#allowshowonlist)|決定工具列是否會顯示在清單上**工具列**窗格**自訂**對話方塊。|  
-|[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|計算工具列中按鈕的最大高度。|  
+|[CMFCToolBar::AllowShowOnList](#allowshowonlist)|決定工具列是否會顯示在清單上**工具列**窗格**自訂** 對話方塊。|  
+|[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|計算工具列中按鈕的最大的高度。|  
 |[CMFCToolBar::DoPaint](#dopaint)|工具列會重新繪製。|  
 |[CMFCToolBar::DrawButton](#drawbutton)|工具列按鈕會重新繪製。|  
 |[CMFCToolBar::DrawSeparator](#drawseparator)|在工具列上的分隔符號會重新繪製。|  
-|[CMFCToolBar::OnUserToolTip](#onusertooltip)|顯示按鈕的工具提示時，由架構呼叫。|  
+|[CMFCToolBar::OnUserToolTip](#onusertooltip)|即將顯示工具提示按鈕時由架構呼叫。|  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|高 DPI 模式中，指定是否要調整或不下工具列影像。|  
-|[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|指定大量的影像維度 （高度或寬度） 與一般映像的維度之間的比率。|  
+|[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|在高 DPI 模式中，指定是否要調整或不下工具列影像。|  
+|[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|指定大型影像的維度 （高度或寬度） 和維度的一般映像之間的比率。|  
   
 ## <a name="remarks"></a>備註  
- 若要納入`CMFCToolBar`物件插入您的應用程式，請依照下列步驟執行︰  
+ 若要納入`CMFCToolBar`物件插入您的應用程式，請遵循下列步驟︰  
   
-1.  新增`CMFCToolBar`到主框架視窗物件。  
+1.  新增`CMFCToolBar`主框架視窗的物件。  
   
-2.  當您處理`WM_CREATE`主框架視窗的訊息，呼叫[CMFCToolBar::Create](#create)或[CMFCToolBar::CreateEx](#createex)建立的工具列，並指定其樣式。  
+2.  當您處理`WM_CREATE`主框架視窗的訊息、 呼叫[CMFCToolBar::Create](#create)或[CMFCToolBar::CreateEx](#createex)建立工具列，並指定其樣式。  
   
 3.  呼叫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)指定的停駐樣式。  
   
@@ -395,10 +395,10 @@ class CMFCToolBar : public CMFCBaseToolBar
  `CMFCToolBar`MFC 程式庫類別的基底類別[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)， [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)，和[CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用各種方法的`CMFCToolBar`類別。 此範例示範如何設定標籤文字的視窗的工具列上，設定的框線，設定樣式 窗格中，並啟用**新增或移除按鈕**出現的工具列按鈕。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用各種方法的`CMFCToolBar`類別。 此範例示範如何設定標籤文字的視窗的工具列、 設定的框線，將樣式 窗格中，設定和啟用**新增或移除按鈕**會出現在結尾工具列的按鈕。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_IEDemo #&6;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo #&8;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo # 8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]  
   
 ## <a name="requirements"></a>需求  
  **標頭︰** afxtoolbar.h  
@@ -419,7 +419,7 @@ class CMFCToolBar : public CMFCBaseToolBar
  `CMFCToolBar`  
   
 ##  <a name="addbasiccommand"></a>CMFCToolBar::AddBasicCommand  
- 將功能表命令加入至一定會在使用者開啟功能表時所顯示的命令的清單。  
+ 將功能表命令加入至永遠會在使用者開啟功能表時所顯示的命令的清單。  
   
 ```  
 static void __stdcall AddBasicCommand(UINT uiCmd);
@@ -427,15 +427,15 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
   
 ### <a name="parameters"></a>參數  
  [in] `uiCmd`  
- 指定要新增的命令。  
+ 指定要加入的命令。  
   
 ### <a name="remarks"></a>備註  
- 開啟功能表時，一律會顯示基本命令。 當使用者選擇要檢視最近使用的命令時，這個方法是有意義。  
+ 在功能表開啟時，一律會顯示基本的命令。 當使用者選擇要檢視最近使用的命令時，這個方法是有意義。  
   
- 使用[CMFCToolBar::SetBasicCommands](#setbasiccommands)方法來設定一定會在使用者開啟功能表時所顯示的命令的清單。 使用[CMFCToolBar::GetBasicCommands](#getbasiccommands)方法來擷取基本命令，可由您的應用程式的清單。  
+ 使用[CMFCToolBar::SetBasicCommands](#setbasiccommands)方法，以設定永遠會在使用者開啟功能表時所顯示的命令的清單。 使用[CMFCToolBar::GetBasicCommands](#getbasiccommands)方法來擷取基本的命令，可由您的應用程式的清單。  
   
 ##  <a name="addcommandusage"></a>CMFCToolBar::AddCommandUsage  
- 一個指定的命令相關聯的計數器遞增。  
+ 其中一個指定的命令相關聯的計數器遞增。  
   
 ```  
 static void __stdcall AddCommandUsage(UINT uiCommand);
@@ -448,7 +448,7 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
 ### <a name="remarks"></a>備註  
  當使用者選取功能表項目時，架構會呼叫這個方法。  
   
- 架構會使用命令的計數器，以顯示最近使用的功能表項目。  
+ 架構會使用命令的計數器，可用來顯示最近使用的功能表項目。  
   
  這個方法會使用命令計數器[CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd)方法。  
   
@@ -467,40 +467,40 @@ static BOOL __stdcall AddToolBarForImageCollection(
   
 ### <a name="parameters"></a>參數  
  [in] `uiResID`  
- 資源識別碼工具列與映像的載入。  
+ 資源識別碼的映像包含的工具列來載入。  
   
  [in] `uiBmpResID`  
- 資源識別碼與工具列影像的點陣圖。  
+ 工具列影像的點陣圖的資源識別碼。  
   
  [in] `uiColdResID`  
- 使用 「 冷 」 的工具列影像的點陣圖資源識別碼。  
+ 「 冷 」 的工具列影像的點陣圖的資源識別碼。  
   
  [in] `uiMenuResID`  
- 使用功能表影像的點陣圖資源識別碼。  
+ 功能表影像的點陣圖的資源識別碼。  
   
  [in] `uiDisabledResID`  
- 已停用的工具列影像的點陣圖資源識別碼。  
+ 已停用的工具列影像的點陣圖的資源識別碼。  
   
  [in] `uiMenuDisabledResID`  
- 已停用的功能表影像的點陣圖資源識別碼。  
+ 已停用的功能表影像的點陣圖的資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果方法成功。`FALSE`如果`uiResID`或`uiBmpResID`未指定有效的資源，或發生其他錯誤。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法載入的工具列影像的點陣圖，並將其加入至工具列影像的集合。 這個方法會建立暫存的工具列物件並呼叫[CMFCToolBar::LoadToolBar](#loadtoolbar)。  
+ 呼叫此方法以載入工具列影像的點陣圖，並將它加入至工具列影像的集合。 這個方法會建立暫存的工具列物件並呼叫[CMFCToolBar::LoadToolBar](#loadtoolbar)。  
   
 ##  <a name="adjustlayout"></a>CMFCToolBar::AdjustLayout  
- 重新計算的大小和工具列的位置。  
+ 重新計算的大小和位置 工具列。  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
 ### <a name="remarks"></a>備註  
- 建立工具列後重新計算的大小和位置，請呼叫這個方法。  
+ 若要重新計算的大小和位置建立工具列之後呼叫這個方法。  
   
- 架構會呼叫此方法每次時，必須變更工具列的版面配置。 例如，使用者將另一種控制列移動、 調整應用程式視窗，或自訂工具列時，必須變更版面配置。  
+ 架構會呼叫這個方法必須變更工具列的版面配置每次。 例如，使用者將另一個控制列移動、 調整應用程式視窗，或自訂工具列時，必須變更版面配置。  
   
  覆寫這個方法以提供您自己衍生自的類別中的動態配置`CMFCToolbar`。  
   
@@ -512,29 +512,29 @@ void AdjustSize();
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個方法可確保工具列，以符合父框架的界限內。 如果工具列沒有父框架，這個方法作用。  
+ 這個方法可確保工具列納入父框架的界限。 如果工具列有沒有父框架，這個方法任何作用。  
   
- [CMFCToolBar::AdjustLayout](#adjustlayout)方法會呼叫這個方法，以重新計算的大小，如果在工具列的父系不是`CMFCReBar`物件。  
+ [CMFCToolBar::AdjustLayout](#adjustlayout)方法會呼叫這個方法，以重新計算的大小，如果不是工具列的父`CMFCReBar`物件。  
   
 ##  <a name="allowchangetextlabels"></a>CMFCToolBar::AllowChangeTextLabels  
- 指定是否可以顯示文字標籤影像的工具列按鈕下方。  
+ 指定是否可以顯示文字標籤底下的工具列按鈕上的映像。  
   
 ```  
 virtual BOOL AllowChangeTextLabels() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果允許顯示文字標籤下方的影像。否則`FALSE`。  
+ `TRUE`如果允許顯示影像; 下方的文字標籤否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法稱為自訂對話方塊中，以判斷是否要啟用**顯示文字標籤**上的核取方塊**工具列**頁面選取的工具列。  
+ 呼叫這個方法是 [自訂] 對話方塊，來判斷是否要啟用**顯示文字標籤**上的核取方塊**工具列**頁面選取的工具列。  
   
  預設實作會傳回 `TRUE`。  
   
- 覆寫這個方法在一個物件衍生自`CMFCToolBar`，並傳回`FALSE`時不希望使用者可以決定是否會在影像下方的工具列按鈕上顯示文字標籤。  
+ 覆寫這個方法在衍生自物件`CMFCToolBar`並傳回`FALSE`當您不要使用者決定是否在影像下方的工具列按鈕上顯示文字標籤。  
   
 ##  <a name="allowshowonlist"></a>CMFCToolBar::AllowShowOnList  
- 決定工具列是否會顯示在清單中的工具列上**工具列**窗格**自訂**對話方塊。  
+ 決定工具列是否會顯示在清單中的工具列上**工具列**窗格**自訂** 對話方塊。  
   
 ```  
 virtual BOOL AllowShowOnList() const;  
@@ -544,22 +544,22 @@ virtual BOOL AllowShowOnList() const;
  `TRUE`如果工具列物件可以顯示在清單方塊中，在工具列的 [自訂] 頁面。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 若要判斷是否在工具列的 [自訂] 頁面的清單應該包含特定物件衍生自 framework 會呼叫這個方法`CMFCToolBar`。  
+ 呼叫這個方法來判斷工具列的 [自訂] 頁面上的清單是否應包含衍生自特定的物件架構`CMFCToolBar`。  
   
- 預設實作一定會傳回`TRUE`。 當您不想要出現在自訂 對話方塊的 工具列 清單中的工具列，請覆寫這個方法。  
+ 預設實作一定會傳回`TRUE`。 當您不想要出現在 [自訂] 對話方塊中的 [工具列] 清單中的工具列，請覆寫這個方法。  
   
 ##  <a name="aretextlabels"></a>CMFCToolBar::AreTextLabels  
- 指定影像下方文字標籤是否目前正在顯示的工具列按鈕。  
+ 指定影像下方文字標籤是否目前顯示在工具列按鈕上。  
   
 ```  
 BOOL AreTextLabels() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列按鈕顯示的影像，下方的文字標籤否則`FALSE`。  
+ `TRUE`如果工具列按鈕顯示的影像; 下方的文字標籤否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 使用[CMFCToolBar::EnableTextLabels](#enabletextlabels) ，指定是否要顯示文字。 預設值是 `FALSE`。 呼叫[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)來指定使用者是否可以變更此設定，在自訂 對話方塊。  
+ 使用[CMFCToolBar::EnableTextLabels](#enabletextlabels)可指定是否要顯示的文字。 預設值是 `FALSE`。 呼叫[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)來指定使用者是否可以變更此設定在 [自訂] 對話方塊。  
   
 ##  <a name="autograyinactiveimages"></a>CMFCToolBar::AutoGrayInactiveImages  
  啟用或停用自動產生的非作用中的按鈕影像。  
@@ -576,18 +576,18 @@ static void AutoGrayInactiveImages(
  布林值，指定是否要將非使用中的映像變暗。 如果這個參數是`TRUE`，會以灰色顯示非作用中的映像。 否則，非作用中的映像未呈現灰色。  
   
  [in] `nGrayImagePercentage`  
- 指定非使用中的映像的亮度百分比。 如果`bEnable`是`FALSE`，這個值會被忽略。  
+ 指定非使用中的映像的明亮百分比。 如果`bEnable`是`FALSE`，這個值會被忽略。  
   
  [in] `bRedrawAllToolbars`  
- 布林值，指定是否要重繪應用程式中的所有工具列。 如果這個參數是`TRUE`，這個方法會重新繪製所有的工具列。  
+ 布林值，指定是否要在應用程式中重新繪製所有工具列。 如果這個參數是`TRUE`，這個方法會重新繪製所有工具列。  
   
 ### <a name="remarks"></a>備註  
- 如果`bEnable`是`TRUE`，架構會使用`nGrayImagePercentage`來產生與一般的映像的非作用中的影像。 否則，您必須提供一組非作用中的影像使用[CMFCToolBar::GetColdImages](#getcoldimages)方法。 根據預設，此選項已停用。  
+ 如果`bEnable`是`TRUE`，架構會使用`nGrayImagePercentage`來產生非使用中的影像，從一般的映像。 否則，您必須使用提供的一組非作用中的影像[CMFCToolBar::GetColdImages](#getcoldimages)方法。 根據預設，此選項已停用。  
   
- 如需詳細資訊`nGrayImagePercentage`參數，請參閱[CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages)。  
+ 如需有關`nGrayImagePercentage`參數，請參閱[CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages)。  
   
 ##  <a name="buttontoindex"></a>CMFCToolBar::ButtonToIndex  
- 傳回指定之索引[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)這個工具列中的物件。  
+ 傳回指定之索引[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)此工具列中的物件。  
   
 ```  
 int ButtonToIndex(const CMFCToolBarButton* pButton) const;  
@@ -598,10 +598,10 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
  工具列按鈕物件指標。  
   
 ### <a name="return-value"></a>傳回值  
- 編製索引的`pButton`工具列按鈕，則為-1 指定的按鈕不在此工具列上的內部清單中。  
+ 索引的`pButton`工具列按鈕，則為-1 指定的按鈕不在此工具列上的內部清單中。  
   
 ##  <a name="calcfixedlayout"></a>CMFCToolBar::CalcFixedLayout  
- 計算的水平大小的工具列。  
+ 計算工具列的水平大小。  
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -611,21 +611,21 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="parameters"></a>參數  
  [in] `bStretch`  
- `TRUE`若要自動縮放工具列父框架的大小。  
+ `TRUE`若要延伸的父框架大小工具列。  
   
  [in] `bHorz`  
- `TRUE`若要引導工具列水平空間。`FALSE`調整成垂直工具列。  
+ `TRUE`為設定工具列水平空間。`FALSE`調整成垂直工具列。  
   
 ### <a name="return-value"></a>傳回值  
- A`CSize`物件，指定在工具列的大小。  
+ A`CSize`物件，指定工具列的大小。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會使用計算的工具列大小`CMFCToolBar::CalcLayout`方法。 它會傳遞`LM_STRETCH`設定旗標以`dwMode`參數如果`bStretch`是`TRUE`。 它會傳遞`LM_HORZ`旗標，如果`bHorz`是`TRUE`。  
+ 這個方法會使用計算工具列的大小`CMFCToolBar::CalcLayout`方法。 它會傳遞`LM_STRETCH`旗標，以`dwMode`參數如果`bStretch`是`TRUE`。 它會傳遞`LM_HORZ`旗標，如果`bHorz`是`TRUE`。  
   
- 請參閱 VisualStudioDemo 範例，其中會使用這個方法的範例。  
+ 請參閱 VisualStudioDemo 範例的範例，會使用這個方法。  
   
 ##  <a name="calcmaxbuttonheight"></a>CMFCToolBar::CalcMaxButtonHeight  
- 計算工具列中按鈕的最大高度。  
+ 計算工具列中按鈕的最大的高度。  
   
 ```  
 virtual int CalcMaxButtonHeight();
@@ -635,12 +635,12 @@ virtual int CalcMaxButtonHeight();
  按鈕的最大高度。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會計算在工具列上的所有工具列按鈕之間的最大高度。 高度根據目前的工具列停駐狀態等因素而有所不同。  
+ 這個方法會計算在工具列上的所有工具列按鈕之間的最大高度。 高度會根據目前的工具列停駐狀態等因素而有所不同。  
   
- 這個方法從衍生類別中的覆寫`CMFCToolBar`提供高度計算。  
+ 衍生自的類別中置換此方法`CMFCToolBar`提供您自己的高度計算。  
   
 ##  <a name="calcsize"></a>CMFCToolBar::CalcSize  
- 配置計算程序的一部分的架構所呼叫。  
+ 由架構呼叫配置計算程序的一部分。  
   
 ```  
 virtual CSize CalcSize(BOOL bVertDock);
@@ -648,15 +648,15 @@ virtual CSize CalcSize(BOOL bVertDock);
   
 ### <a name="parameters"></a>參數  
  [in] `bVertDock`  
- `TRUE`若要指定工具列會固定以垂直方式;`FALSE`指定工具列會固定以水平方式。  
+ `TRUE`若要指定的工具列停駐垂直;`FALSE`指定的工具列是否停駐水平。  
   
 ### <a name="return-value"></a>傳回值  
  A`CSize`物件，指定在工具列上的按鈕的整體大小。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會視為會影響每個按鈕，例如文字標籤和框線大小的區域大小的屬性。  
+ 這個方法會將視為會影響每個按鈕，例如文字標籤框線大小的區域大小的屬性。  
   
- 如果工具列會不包含任何按鈕，這個方法會傳回單一的按鈕保留的大小使用[CMFCToolBar::GetButtonSize](#getbuttonsize)方法。  
+ 如果工具列不包含任何按鈕時，這個方法會傳回單一的按鈕保留的大小使用[CMFCToolBar::GetButtonSize](#getbuttonsize)方法。  
   
 ##  <a name="canbeclosed"></a>CMFCToolBar::CanBeClosed  
  指定使用者是否可以關閉工具列。  
@@ -666,34 +666,34 @@ virtual BOOL CanBeClosed() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列可以關閉的使用者資訊。否則`FALSE`。  
+ `TRUE`如果可由使用者; 關閉工具列否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來判斷使用者是否可以關閉工具列。 如果此方法會傳回`TRUE`架構可讓 SC_CLOSE 命令，在工具列的 [系統] 功能表中，使用者可以使用 [自訂] 對話方塊中的工具列的清單中的核取方塊來關閉工具列。  
+ 架構會呼叫這個方法來判斷使用者是否可以關閉工具列。 如果此方法會傳回`TRUE`架構可讓 SC_CLOSE 命令工具列的 [系統] 功能表中，使用者可以關閉工具列使用 [自訂] 對話方塊中的工具列的清單中的核取方塊。  
   
- 預設實作會傳回 `TRUE`。 這個方法從衍生類別中的覆寫`CMFCToolBar`為了讓使用者無法關閉的工具列物件。  
+ 預設實作會傳回 `TRUE`。 衍生自的類別中置換此方法`CMFCToolBar`讓使用者無法關閉的工具列物件。  
   
 ##  <a name="canberestored"></a>CMFCToolBar::CanBeRestored  
- 決定是否系統可以工具列後還原到其原始狀態的自訂。  
+ 決定是否系統可以還原工具列到其原始狀態後自訂。  
   
 ```  
 virtual BOOL CanBeRestored() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果您可以從應用程式資源; 還原工具列否則`FALSE`。  
+ `TRUE`如果您可以從應用程式資源還原工具列否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來判斷是否工具列可以返回到其原始狀態自訂後。 從應用程式資源載入原始的狀態。  
+ 架構會呼叫這個方法，以決定是否工具列可回到其原始狀態後自訂。 從應用程式資源載入原始狀態。  
   
  如果`CanBeRestored`傳回`TRUE`、**工具列**頁面的 [自訂] 對話方塊可讓**重設**選取的工具列按鈕。  
   
- 預設實作會傳回`TRUE`如果工具列時載入它的原始的資源識別碼為非零。 通常，只有使用者定義的工具列無法還原。  
+ 預設實作會傳回`TRUE`工具列時載入它的原始的資源識別碼是否為非零。 通常，只有使用者定義工具列無法還原。  
   
  您可以覆寫`CanBeRestored`方法，以自訂此行為在衍生類別。  
   
 ##  <a name="canfocus"></a>CMFCToolBar::CanFocus  
- 指定是否窗格可以接收焦點。  
+ 指定窗格是否能夠接收焦點。  
   
 ```  
 virtual BOOL CanFocus() const;  
@@ -703,7 +703,7 @@ virtual BOOL CanFocus() const;
  此方法會傳回 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會覆寫基底類別實作時， [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus)，因為工具列物件無法接收焦點。  
+ 這個方法會覆寫基底類別實作中， [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus)，因為工具列物件無法接收焦點。  
   
 ##  <a name="canhandlesiblings"></a>CMFCToolBar::CanHandleSiblings  
  決定是否工具列和其同層級位於相同的窗格上。  
@@ -716,9 +716,9 @@ BOOL CanHandleSiblings();
  如果工具列有同層級而工具列和其同層級位於相同的窗格上則為 `TRUE`，否則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 內部的 CMFCCustomizeButton::CreatePopupMenu 方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果這個方法會傳回`TRUE`，架構會顯示**按鈕顯示於資料列的資料上**或**按鈕顯示於兩個資料列上**按鈕。  
+ 內部 cmfccustomizebutton:: Createpopupmenu 方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果此方法傳回`TRUE`，架構會顯示**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕。  
   
- 您通常不需要使用這個方法。 若要啟用**自訂**按鈕出現在工具列上，呼叫[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)方法。 若要啟用**按鈕顯示於資料列的資料上**或**按鈕顯示於兩個資料列上**按鈕，呼叫[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)。  
+ 您通常不需要使用這個方法。 若要啟用**自訂**按鈕出現在工具列上，呼叫[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)方法。 若要啟用**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕，請呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
   
 ##  <a name="cleanupimages"></a>CMFCToolBar::CleanUpImages  
  釋放系統資源配置給下工具列影像。  
@@ -738,10 +738,10 @@ void CleanUpLockedImages();
 ```  
   
 ### <a name="remarks"></a>備註  
- 您的應用程式的視覺化樣式變更時，請呼叫這個方法。 請參閱 VisualStudioDemo 範例，其中會使用這個方法的範例。  
+ 當您的應用程式的視覺化樣式變更時，請呼叫這個方法。 請參閱 VisualStudioDemo 範例的範例，會使用這個方法。  
   
 ##  <a name="commandtoindex"></a>CMFCToolBar::CommandToIndex  
- 傳回在工具列中指定的命令 id 的按鈕索引  
+ 傳回與指定的命令識別碼工具列中按鈕的索引  
   
 ```  
 int CommandToIndex(
@@ -754,13 +754,13 @@ int CommandToIndex(
  指定命令識別碼。  
   
  [in] `iIndexFirst`  
- 指定做為開頭的起始索引。  
+ 指定從啟動的起始索引。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功，工具列按鈕的以零起始的索引-1，如果沒有按鈕，並提供指定的識別碼。  
+ 如果該方法成功; 工具列按鈕的以零起始的索引-1 表示沒有 按鈕以指定的識別碼。  
   
 ### <a name="remarks"></a>備註  
- A`CMFCToolBar`物件會維護內部清單工具列上的按鈕。 呼叫此函式可擷取索引指定按鈕的命令 ID 的清單中的按鈕。  
+ A`CMFCToolBar`物件會維護的內部清單，在工具列上的按鈕。 呼叫此函式可擷取按鈕指定按鈕的命令 ID 的清單中的索引。  
   
  如果`iIndex`大於 0，這個方法會忽略任何索引鍵的工具列上的按鈕少於`iIndex`。  
   
@@ -779,19 +779,19 @@ virtual BOOL Create(
  工具列的父視窗的指標。  
   
  [in] `dwStyle`  
- 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb760439)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]的樣式清單。  
+ 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb760439)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如樣式清單。  
   
  [in] `nID`  
- 子視窗工具列的識別碼。  
+ 子視窗的工具列的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果此方法成功。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會建立一種控制列，並將其附加至工具列。 它會建立與控制列`TBSTYLE_FLAT`樣式。 呼叫[CMFCToolBar::CreateEx](#createex)如果要使用不同的控制列樣式。  
+ 這個方法會建立一種控制列，並將其附加至工具列。 它會建立具有的控制列`TBSTYLE_FLAT`樣式。 呼叫[CMFCToolBar::CreateEx](#createex)如果要使用不同的控制項列樣式。  
   
 ##  <a name="createex"></a>CMFCToolBar::CreateEx  
- 建立`CMFCToolBar`使用其他樣式選項時，例如大型圖示的物件。  
+ 建立`CMFCToolBar`會使用其他樣式選項，例如大型圖示的物件。  
   
 ```  
 virtual BOOL CreateEx(
@@ -819,31 +819,31 @@ virtual BOOL CreateEx(
  A`CRect`物件，指定工具列視窗框線的寬度。  
   
  [in] `nID`  
- 子視窗工具列的識別碼。  
+ 子視窗的工具列的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功則為非零否則為 0。  
+ 如果此方法成功則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
  這個方法會建立一種控制列，並將其附加至工具列。  
   
- 呼叫這個方法，而不是[CMFCToolBar::Create](#create)當您想要提供特定的樣式。 例如，設定`dwCtrlStyle`至`TBSTYLE_FLAT | TBSTYLE_TRANSPARENT`來建立類似 Internet Explorer 4 所使用的工具列的工具列。  
+ 呼叫這個方法，而不是[CMFCToolBar::Create](#create)當您想要提供特定的樣式。 例如，設定`dwCtrlStyle`至`TBSTYLE_FLAT | TBSTYLE_TRANSPARENT`來建立類似於所使用的 Internet Explorer 4 工具列的工具列。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用`CreateEx`方法`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用`CreateEx`方法`CMFCToolBar`類別。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_IEDemo #&6;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo #&7;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo # 7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
 ##  <a name="deactivate"></a>CMFCToolBar::Deactivate  
- 停用工具列。  
+ 工具列就會停用。  
   
 ```  
 virtual void Deactivate();
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個方法會將焦點移除反白顯示的工具列按鈕，停用工具列。 工具列失去焦點，或已損毀時，架構會呼叫這個方法。  
+ 這個方法會將焦點移除反白顯示的工具列按鈕，停用工具列。 工具列失去焦點或損毀時，架構會呼叫這個方法。  
   
 ##  <a name="dopaint"></a>CMFCToolBar::DoPaint  
  工具列會重新繪製。  
@@ -859,7 +859,7 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="remarks"></a>備註  
  必須重新繪製該工具列的一部分時，架構會呼叫這個方法。  
   
- 覆寫這個方法來自訂物件衍生自外觀`CMFCToolBar`。  
+ 覆寫這個方法以自訂物件衍生自外觀`CMFCToolBar`。  
   
 ##  <a name="drawbutton"></a>CMFCToolBar::DrawButton  
  工具列按鈕會重新繪製。  
@@ -878,7 +878,7 @@ virtual BOOL DrawButton(
  裝置內容的指標。  
   
  [in] `pButton`  
- 若要繪製按鈕指標。  
+ 若要繪製的按鈕指標。  
   
  [in] `pImages`  
  指標，工具列影像。  
@@ -893,7 +893,7 @@ virtual BOOL DrawButton(
  `TRUE`如果按鈕重新繪製。`FALSE`如果會隱藏按鈕。  
   
 ### <a name="remarks"></a>備註  
- [CMFCToolBar::DrawButton](#drawbutton)方法會呼叫這個方法時必須重新繪製該工具列按鈕。  
+ [CMFCToolBar::DrawButton](#drawbutton)工具列按鈕必須重繪時，方法會呼叫這個方法。  
   
  如果您想要自訂的工具列上的按鈕外觀，請覆寫這個方法。  
   
@@ -912,17 +912,17 @@ virtual void DrawSeparator(
  裝置內容的指標。  
   
  [in] `rect`  
- 繪製分隔符號的地方，可像素為單位的位置，這個周框。  
+ 週框繪製分隔符號的位置，可像素為單位的位置。  
   
  [in] `bHorz`  
- `TRUE`如果分隔符號是水平、`FALSE`如果分隔符號是垂直。  
+ `TRUE`如果分隔符號是水平的`FALSE`如果分隔符號是垂直。  
   
 ### <a name="remarks"></a>備註  
- [CMFCToolBar::DoPaint](#dopaint)呼叫這個方法，每個[CMFCToolBar::DrawSeparator](#drawseparator)物件具有`TBBS_SEPARATOR`樣式，而不是呼叫[CMFCToolBar::DrawButton](#drawbutton)這些按鈕。  
+ [CMFCToolBar::DoPaint](#dopaint)呼叫這個方法針對每個[CMFCToolBar::DrawSeparator](#drawseparator)具有物件`TBBS_SEPARATOR`樣式，而不是呼叫[CMFCToolBar::DrawButton](#drawbutton)這些按鈕。  
   
- 這個方法從衍生類別中的覆寫[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)自訂分隔符號 工具列上的外觀。 預設實作會呼叫[CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator)繪製其外觀取決於目前的視覺管理員的分隔符號。  
+ 衍生自的類別中置換此方法[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)自訂分隔符號 工具列上的外觀。 預設實作會呼叫[CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator)繪製其外觀取決於目前的視覺管理員的分隔符號。  
   
-##  <a name="enablecustomizebutton"></a>CMFCToolBar::EnableCustomizeButton  
+##  <a name="enablecustomizebutton"></a>Cmfctoolbar:: Enablecustomizebutton  
  啟用或停用會出現在工具列的 [自訂] 按鈕。  
   
 ```  
@@ -945,26 +945,26 @@ void EnableCustomizeButton(
  啟用或停用 [自訂] 按鈕。  
   
  [in] `iCustomizeCmd`  
- [自訂] 按鈕的命令 ID。  
+ 自訂按鈕的命令識別碼。  
   
  [in] `strCustomizeText`  
- [自訂] 按鈕的文字標籤。  
+ 自訂按鈕的文字標籤。  
   
  [in] `uiCustomizeTextResId`  
  資源字串的自訂按鈕標籤識別碼。  
   
  [in] `bQuickCustomize`  
- 啟用或停用**新增或移除按鈕**下拉按鈕功能表上的選項。  
+ 啟用或停用**新增或移除按鈕**下拉按鈕的功能表上的選項。  
   
 ### <a name="remarks"></a>備註  
- 如果`iCustomizeCmd`為-1，則架構會顯示工具列區域中無法容納多個工具列按鈕時，[自訂] 按鈕。 按鈕會顯示雙重向左箭號或 > 形箭號，表示有更多的按鈕。  
+ 如果`iCustomizeCmd`為-1，架構會顯示自訂按鈕時多個工具列按鈕不適合工具列區域中。 按鈕會顯示兩個向左箭號的 > 形箭號，表示有更多的按鈕。  
   
- 如果`iCustomizeCmd`指定有效的命令識別碼和`bEnable`是`TRUE`，一律會顯示 [自訂] 按鈕。 按鈕有少量向下箭號，並開啟一個包含命令功能表。 此命令會使用所指定的文字標籤`strCustomizeText`。 如果`bQuickCustomize`也`TRUE`，功能表就會顯示**新增或移除按鈕**選項。  
+ 如果`iCustomizeCmd`指定有效的命令識別碼和`bEnable`是`TRUE`，一律會顯示 [自訂] 按鈕。 按鈕會有少量向下箭號，並開啟的功能表包含命令。 此命令會使用所指定的文字標籤`strCustomizeText`。 如果`bQuickCustomize`也`TRUE`，功能表就會顯示**新增或移除按鈕**選項。  
   
- 架構以動態方式加入至功能表工具列區域之前所指定的項目不符合任何按鈕`iCustomizeCmd`。 向下箭號旁邊顯示的 > 形箭號。  
+ 架構動態新增至功能表工具列區域之前由所指定的項目不符合任何按鈕`iCustomizeCmd`。 隨即出現的 > 形箭號旁的向下箭號。  
   
 ##  <a name="enabledocking"></a>CMFCToolBar::EnableDocking  
- 啟用停駐窗格的主框架。  
+ 主框架窗格的停駐啟用。  
   
 ```  
 virtual void EnableDocking(DWORD dwAlignment);
@@ -975,7 +975,7 @@ virtual void EnableDocking(DWORD dwAlignment);
  指定要啟用的停駐對齊。  
   
 ### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作時， [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)，藉由設定`CBasePane::m_dwControlBarStyle`資料成員，才能`AFX_CBRS_FLOAT`。 這個方法接著會傳遞`dwAlignment`基底類別實作。  
+ 此方法擴充的基底類別實作， [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)，藉由設定`CBasePane::m_dwControlBarStyle`資料成員，才能`AFX_CBRS_FLOAT`。 這個方法接著會傳遞`dwAlignment`基底類別實作。  
   
 ##  <a name="enablelargeicons"></a>CMFCToolBar::EnableLargeIcons  
  啟用或停用工具列按鈕上的大型圖示。  
@@ -986,13 +986,13 @@ void EnableLargeIcons(BOOL bEnable);
   
 ### <a name="parameters"></a>參數  
  [in] `bEnable`  
- `TRUE`若要啟用 大圖示、`FALSE`停用大圖示。  
+ `TRUE`若要啟用大型圖示，`FALSE`停用大圖示。  
   
 ### <a name="remarks"></a>備註  
  根據預設，會啟用 大圖示。  
   
 ##  <a name="enablequickcustomization"></a>CMFCToolBar::EnableQuickCustomization  
- 啟用或停用快速自訂的工具列，讓使用者可以按**Alt**鍵，然後將按鈕拖曳至新位置。  
+ 啟用或停用快速自訂工具列，讓使用者可以按**Alt**鍵，然後將按鈕拖曳至新位置。  
   
 ```  
 static void EnableQuickCustomization(BOOL bEnable=TRUE);
@@ -1000,7 +1000,7 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>參數  
  [in] `bEnable`  
- `TRUE`若要啟用快速的自訂`FALSE`來停用快速自訂。  
+ `TRUE`若要啟用快速的自訂`FALSE`停用快速自訂。  
   
 ##  <a name="enablereflections"></a>CMFCToolBar::EnableReflections  
  啟用或停用命令反映。  
@@ -1011,12 +1011,12 @@ void EnableReflections(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>參數  
  [in] `bEnable`  
- `TRUE`若要啟用命令反映。`FALSE`停用命令反映。  
+ `TRUE`若要啟用命令反映;`FALSE`停用命令反映。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法讓包含內嵌的控制項，例如下拉式方塊的工具列按鈕的命令反映。  
+ 呼叫此方法以啟用命令的工具列按鈕的包含內嵌的控制項，例如下拉式方塊的反映。  
   
- 如需命令反映的詳細資訊，請參閱[TN062: Windows 控制項的訊息反映](../../mfc/tn062-message-reflection-for-windows-controls.md)。  
+ 更多關於命令反映的詳細資訊，請參閱[TN062: Windows 控制項訊息反映的](../../mfc/tn062-message-reflection-for-windows-controls.md)。  
   
 ##  <a name="enabletextlabels"></a>CMFCToolBar::EnableTextLabels  
  啟用或停用工具列按鈕影像下方文字標籤。  
@@ -1030,7 +1030,7 @@ void EnableTextLabels(BOOL bEnable=TRUE);
  `TRUE`如果文字標籤出現在工具列按鈕影像。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 如果已啟用文字標籤，在工具列上的所有按鈕會都擴大來提供空間，讓影像下方顯示標籤。 自訂 對話方塊中有**顯示文字標籤**上的核取方塊**工具列**頁面。 當使用者選取一個工具列，並會檢查此選項時，架構會呼叫`EnableTextLabels`針對選取的工具列。 您可以停用核取方塊物件衍生自[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)藉由傳回`FALSE`從[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) 。  
+ 如果已啟用文字標籤，在工具列上的所有按鈕會都擴大來提供用於影像下方顯示標籤的空間。 [自訂] 對話方塊已**顯示文字標籤**上的核取方塊**工具列**頁面。 當使用者選取工具列，並檢查此選項時，架構會呼叫`EnableTextLabels`針對選取的工具列。 您可以停用核取方塊物件衍生自[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)藉由傳回`FALSE`從[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) 。  
   
 ##  <a name="fromhandlepermanent"></a>CMFCToolBar::FromHandlePermanent  
  擷取的指標`CMFCToolBar`物件，其中包含指定的視窗控制代碼。  
@@ -1044,30 +1044,30 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
  若要尋找的視窗控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CMFCToolBar`物件，其中包含指定的視窗控制代碼或`NULL`如果沒有對應`CMFCToolBar`物件存在。  
+ 指標`CMFCToolBar`物件，其中包含指定的視窗控制代碼，或`NULL`如果沒有對應`CMFCToolBar`物件存在。  
   
 ### <a name="remarks"></a>備註  
- 此共用的方法會檢查每個工具列中的應用程式`CMFCToolBar`物件，其中包含指定的視窗控制代碼。  
+ 此共用的方法會檢查在應用程式，為每個工具列`CMFCToolBar`物件，其中包含指定的視窗控制代碼。  
   
 ##  <a name="getallbuttons"></a>CMFCToolBar::GetAllButtons  
- 傳回在工具列中的按鈕的唯讀清單。  
+ 在工具列中傳回按鈕的唯讀的清單。  
   
 ```  
 const CObList& GetAllButtons() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 常數參考[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含一系列[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件。  
+ 常數參考[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含的集合[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件。  
   
 ##  <a name="getalltoolbars"></a>CMFCToolBar::GetAllToolbars  
- 在應用程式會傳回所有工具列唯讀清單。  
+ 在應用程式會傳回所有工具列的唯讀清單。  
   
 ```  
 static const CObList& GetAllToolbars();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 常數參考的[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含一系列`CMFCToolBar`物件。  
+ Const 參考[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含的集合`CMFCToolBar`物件。  
   
 ##  <a name="getbasiccommands"></a>CMFCToolBar::GetBasicCommands  
  傳回唯讀的應用程式中定義的基本命令清單。  
@@ -1077,13 +1077,13 @@ static const CList<UINT,UINT>& GetBasicCommands();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 常數參考的[CList 類別](../../mfc/reference/clist-class.md)物件，其中包含的基本命令集合。  
+ Const 參考[CList 類別](../../mfc/reference/clist-class.md)物件，其中包含基本命令的集合。  
   
 ### <a name="remarks"></a>備註  
- 新增基本命令，藉由呼叫[CMFCToolBar::AddBasicCommand](#addbasiccommand)或[CMFCToolBar::SetBasicCommands](#setbasiccommands)。  
+ 新增基本命令藉由呼叫[CMFCToolBar::AddBasicCommand](#addbasiccommand)或[CMFCToolBar::SetBasicCommands](#setbasiccommands)。  
   
 ##  <a name="getbutton"></a>CMFCToolBar::GetButton  
- 傳回的指標[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)指定索引處的物件。  
+ 將指標傳回至[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)指定索引處的物件。  
   
 ```  
 CMFCToolBarButton* GetButton(int iIndex) const;  
@@ -1094,10 +1094,10 @@ CMFCToolBarButton* GetButton(int iIndex) const;
  指定要傳回的按鈕索引。  
   
 ### <a name="return-value"></a>傳回值  
- 變數的指標，如果有的話，工具列按鈕或`NULL`如果沒有這類的按鈕。  
+ 如果它存在; 工具列按鈕的指標或`NULL`如果沒有這類的按鈕。  
   
 ##  <a name="getbuttoninfo"></a>CMFCToolBar::GetButtonInfo  
- 傳回命令 ID、 樣式和指定索引處的按鈕影像索引。  
+ 傳回命令 ID、 樣式和映像索引的指定索引處的按鈕。  
   
 ```  
 void GetButtonInfo(
@@ -1109,24 +1109,24 @@ void GetButtonInfo(
   
 ### <a name="parameters"></a>參數  
  [in] `nIndex`  
- 在工具列上的按鈕清單中指定的按鈕索引。  
+ 在工具列按鈕清單中指定的按鈕索引。  
   
  [輸出] `nID`  
- 按鈕的命令 ID。  
+ 按鈕的命令識別碼。  
   
  [輸出] `nStyle`  
  按鈕的樣式。  
   
  [輸出] `iImage`  
- 按鈕影像的索引。  
+ 按鈕的影像索引。  
   
 ### <a name="remarks"></a>備註  
- `GetButtonInfo`方法尋找指定之索引處的工具列按鈕，並擷取按鈕的命令 ID、 樣式和影像索引。  
+ `GetButtonInfo`方法尋找指定之索引處的工具列按鈕和擷取的按鈕命令識別碼、 樣式和映像索引。  
   
- 指定索引處的按鈕不存在，架構會將`nID`和`nStyle`為 0，和`iImage`方法傳回時為-1。  
+ 指定索引處的按鈕不存在，架構會將`nID`和`nStyle`為 0，和`iImage`為-1 方法傳回時。  
   
 ##  <a name="getbuttonsize"></a>CMFCToolBar::GetButtonSize  
- 在工具列上傳回每個按鈕的尺寸。  
+ 傳回維度的每個按鈕的工具列上。  
   
 ```  
 CSize GetButtonSize() const;  
@@ -1136,10 +1136,10 @@ CSize GetButtonSize() const;
  A [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)指定維度的每個按鈕的工具列的物件。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetSizes](#setsizes)或[CMFCToolBar::SetLockedSizes](#setlockedsizes)設定工具列上的每個按鈕尺寸。  
+ 呼叫[CMFCToolBar::SetSizes](#setsizes)或[CMFCToolBar::SetLockedSizes](#setlockedsizes)設定工具列上的每個按鈕的維度。  
   
 ##  <a name="getbuttonstyle"></a>CMFCToolBar::GetButtonStyle  
- 傳回目前的工具列按鈕，指定索引處的樣式。  
+ 傳回目前位於指定索引上的工具列按鈕的樣式。  
   
 ```  
 UINT GetButtonStyle(int nIndex) const;  
@@ -1147,13 +1147,13 @@ UINT GetButtonStyle(int nIndex) const;
   
 ### <a name="parameters"></a>參數  
  [in] `nIndex`  
- 指定的工具列按鈕的索引。  
+ 指定工具列按鈕的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 值，指定的樣式的工具列按鈕。 。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)如需可能的樣式的清單。  
+ 值，指定工具列按鈕的樣式。 。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)取得一份可能的樣式。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetButtonStyle](#setbuttonstyle)設定的樣式的工具列按鈕  
+ 呼叫[CMFCToolBar::SetButtonStyle](#setbuttonstyle)設定工具列按鈕的樣式  
   
 ##  <a name="getbuttontext"></a>CMFCToolBar::GetButtonText  
  傳回具有指定的索引的按鈕的文字標籤。  
@@ -1177,36 +1177,36 @@ void GetButtonText(
  工具列按鈕的標籤文字。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetButtonText](#setbuttontext)或[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)文字標籤設定。  
+ 呼叫[CMFCToolBar::SetButtonText](#setbuttontext)或[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)設定的文字標籤。  
   
 ##  <a name="getcoldimages"></a>CMFCToolBar::GetColdImages  
- 在應用程式的冷的工具列按鈕影像的集合中傳回的指標。  
+ 讓指標回到應用程式中的非作用中工具列按鈕影像的集合。  
   
 ```  
 static CMFCToolBarImages* GetColdImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標冷的工具列按鈕影像的集合。  
+ 指標的非作用中工具列按鈕的影像集合。  
   
 ### <a name="remarks"></a>備註  
- 冷映像是指在使用者不互動的工具列按鈕時所使用。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)或[CMFCToolBar::LoadBitmap](#loadbitmap)載入冷的影像。  
+ 冷映像是指在使用者不互動的工具列按鈕時所使用。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)或[CMFCToolBar::LoadBitmap](#loadbitmap)載入原始的映像。  
   
 ##  <a name="getcolumnwidth"></a>CMFCToolBar::GetColumnWidth  
- 傳回的工具列按鈕的寬度。  
+ 傳回工具列按鈕的寬度。  
   
 ```  
 virtual int GetColumnWidth() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指定的工具列按鈕的寬度的值。  
+ 值，指定工具列按鈕的寬度。  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，以計算工具列版面配置。 若要指定不同的資料行寬度工具列在衍生類別中，這個方法會覆寫。  
+ 架構會呼叫這個方法來計算工具列版面配置。 衍生的類別，以指定不同的資料行寬度工具列中，這個方法會覆寫。  
   
 ##  <a name="getcommandbuttons"></a>CMFCToolBar::GetCommandButtons  
- 傳回一份應用程式中有指定的命令識別碼，從所有的工具列按鈕。  
+ 傳回一份應用程式中有指定的命令識別碼從所有工具列按鈕。  
   
 ```  
 static int GetCommandButtons(
@@ -1216,13 +1216,13 @@ static int GetCommandButtons(
   
 ### <a name="parameters"></a>參數  
  [in] `uiCmd`  
- 按鈕的命令 ID。  
+ 按鈕的命令識別碼。  
   
  [輸出] `listButtons`  
- 參考[CObList 類別](../../mfc/reference/coblist-class.md)接收工具列按鈕的清單物件。  
+ 若要參考[CObList 類別](../../mfc/reference/coblist-class.md)接收工具列按鈕清單物件。  
   
 ### <a name="return-value"></a>傳回值  
- 有指定的命令 ID 的按鈕數目  
+ 具有指定的命令識別碼的按鈕數目  
   
 ##  <a name="getcount"></a>CMFCToolBar::GetCount  
  在工具列上傳回按鈕和分隔線的數目。  
@@ -1245,12 +1245,12 @@ CMFCCustomizeButton* GetCustomizeButton();
  指標`CMFCCustomizeButton`與工具列相關聯的物件。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會擷取**自訂**出現結尾的工具列按鈕。 使用[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)方法來加入**自訂**至工具列按鈕。  
+ 這個方法會擷取**自訂**會出現在工具列結尾的按鈕。 使用[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)方法，將**自訂**至工具列按鈕。  
   
- 您可以呼叫[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)方法，以判斷是否包含有效工具列`CMFCCustomizeButton`物件。  
+ 您可以呼叫[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)方法，以判斷工具列是否包含有效`CMFCCustomizeButton`物件。  
   
 ##  <a name="getdefaultimage"></a>CMFCToolBar::GetDefaultImage  
- 傳回具有指定的命令 ID 的工具列按鈕的預設影像的索引  
+ 傳回具有指定之命令識別碼的工具列按鈕的預設影像索引  
   
 ```  
 static int GetDefaultImage(UINT uiID);
@@ -1258,42 +1258,42 @@ static int GetDefaultImage(UINT uiID);
   
 ### <a name="parameters"></a>參數  
  [in] `uiID`  
- 指定按鈕的命令 ID。  
+ 指定按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- 共用的映像清單中的工具列影像的索引。  
+ 共用映像的清單中的工具列影像的索引。  
   
 ### <a name="remarks"></a>備註  
- 使用此共用的方法來擷取具有指定的命令 ID 的工具列按鈕的預設影像的索引 傳回值為共用集合的所有應用程式中的工具列的工具列按鈕影像的索引。 呼叫[CMFCToolBar::GetImages](#getimages)方法，以取得此集合的指標。  
+ 使用此共用的方法來擷取具有指定之命令識別碼的工具列按鈕的預設影像索引 傳回值是共用的應用程式中的所有工具列的工具列按鈕影像集合索引。 呼叫[CMFCToolBar::GetImages](#getimages)方法，以取得此集合的指標。  
   
 ##  <a name="getdisabledimages"></a>CMFCToolBar::GetDisabledImages  
- 用於應用程式中的已停用的工具列按鈕的影像集合中傳回的指標。  
+ 讓指標回到可用來在應用程式中的已停用的工具列按鈕的影像集合。  
   
 ```  
 static CMFCToolBarImages* __stdcall GetDisabledImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標，已停用的工具列按鈕影像的集合。  
+ 集合已停用的工具列按鈕影像的指標。  
   
 ### <a name="remarks"></a>備註  
  使用載入已停用的工具列按鈕影像[CMFCToolBarEditBoxButton 類別](../../mfc/reference/cmfctoolbareditboxbutton-class.md)和[CMFCToolBar::LoadBitmap](#loadbitmap)方法。  
   
 ##  <a name="getdisabledmenuimages"></a>CMFCToolBar::GetDisabledMenuImages  
- 用於應用程式中已停用的功能表按鈕的影像集合中傳回的指標。  
+ 讓指標回到可用來在應用程式中已停用的功能表按鈕的影像集合。  
   
 ```  
 static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 已停用的功能表影像集合指標。  
+ 集合已停用的功能表影像的指標。  
   
 ### <a name="remarks"></a>備註  
- 載入已停用的映像使用[CMFCToolBarEditBoxButton 類別](../../mfc/reference/cmfctoolbareditboxbutton-class.md)方法。  
+ 已停用的映像載入使用[CMFCToolBarEditBoxButton 類別](../../mfc/reference/cmfctoolbareditboxbutton-class.md)方法。  
   
 ##  <a name="getdroppeddownmenu"></a>CMFCToolBar::GetDroppedDownMenu  
- 擷取目前正在顯示子功能表的功能表按鈕物件的指標。  
+ 擷取目前顯示其子功能表的功能表按鈕物件的指標。  
   
 ```  
 CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;  
@@ -1301,23 +1301,23 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
   
 ### <a name="parameters"></a>參數  
  [輸出] `pIndex`  
- 工具列按鈕的集合將會收到的按鈕索引。  
+ 接收的按鈕索引集合中的工具列按鈕。  
   
 ### <a name="return-value"></a>傳回值  
- 顯示子功能表的功能表按鈕物件的指標或`NULL`如果功能表沒有顯示子功能表。  
+ 顯示其子功能表的功能表按鈕物件的指標或`NULL`如果功能表沒有顯示其子功能表。  
   
 ### <a name="remarks"></a>備註  
- 如果這個方法會傳回非`NULL`值和`pIndex`不`NULL`，所指值`pIndex`設為功能表按鈕的工具列按鈕集合中的索引。  
+ 如果這個方法會傳回非`NULL`值和`pIndex`不`NULL`，指之值`pIndex`設為功能表按鈕的工具列按鈕集合中的索引。  
   
 ##  <a name="getgraydisabledbuttons"></a>CMFCToolBar::GetGrayDisabledButtons  
- 指定已停用按鈕的影像是否要呈現暗灰色的版本一般按鈕的影像，或從已停用的按鈕影像的集合。  
+ 指定已停用按鈕的影像是否要呈現暗灰色的版本，一般按鈕的影像，或從已停用的按鈕影像的集合。  
   
 ```  
 BOOL GetGrayDisabledButtons() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`若要變暗的映像的已停用按鈕。`FALSE`取得集合中已停用映像的映像。  
+ `TRUE`變暗的已停用按鈕; 映像的方法`FALSE`取得集合中已停用映像的映像。  
   
 ### <a name="remarks"></a>備註  
  使用[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)呈現暗灰色的映像和集合中已停用映像的映像之間切換。  
@@ -1333,10 +1333,10 @@ CMFCToolBarButton* GetHighlightedButton() const;
  指向工具列按鈕物件。或`NULL`如果沒有按鈕會反白顯示。  
   
 ### <a name="remarks"></a>備註  
- 如果它具有鍵盤焦點時，會反白顯示的工具列按鈕。 如果工具列按鈕的熱追蹤此應用程式中的工具列按鈕時也會反白顯示 (如需詳細資訊，請參閱[CMFCToolBar::GetHotBorder](#gethotborder)和[CMFCToolBar::SetHotBorder](#sethotborder)) 與滑鼠指向它時沒有工具列按鈕或功能表項目具有鍵盤焦點。  
+ 如果它具有鍵盤焦點時，會反白顯示的工具列按鈕。 如果工具列按鈕的熱追蹤此應用程式中的工具列按鈕會也會反白顯示 (如需詳細資訊，請參閱[CMFCToolBar::GetHotBorder](#gethotborder)和[CMFCToolBar::SetHotBorder](#sethotborder)) 和滑鼠指向它時沒有工具列按鈕或功能表項目具有鍵盤焦點。  
   
 ##  <a name="gethotborder"></a>CMFCToolBar::GetHotBorder  
- 決定工具列按鈕是否*熱追蹤*。 如果按鈕是熱追蹤，其反白顯示，當滑鼠移過它。  
+ 判斷工具列按鈕是否*熱追蹤*。 如果按鈕熱追蹤，其反白顯示，當滑鼠移過它。  
   
 ```  
 BOOL GetHotBorder() const;  
@@ -1346,48 +1346,48 @@ BOOL GetHotBorder() const;
  `TRUE`如果工具列按鈕的熱追蹤。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，工具列按鈕的熱追蹤。  
+ 根據預設，工具列按鈕會熱追蹤。  
   
 ##  <a name="gethottextcolor"></a>CMFCToolBar::GetHotTextColor  
- 傳回文字的色彩反白顯示的工具列按鈕。  
+ 傳回反白顯示的工具列按鈕的文字色彩。  
   
 ```  
 static COLORREF GetHotTextColor();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，代表目前的反白顯示的文字色彩。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，表示目前反白顯示的文字色彩。  
   
 ### <a name="remarks"></a>備註  
  呼叫[CMFCToolBar::SetHotTextColor](#sethottextcolor)設定新的文字色彩反白顯示的工具列按鈕。  
   
 ##  <a name="gethwndlastfocus"></a>CMFCToolBar::GetHwndLastFocus  
- 傳回之前工具列未擁有輸入的焦點的視窗控制代碼。  
+ 傳回之前工具列未具有輸入的焦點的視窗控制代碼。  
   
 ```  
 HWND GetHwndLastFocus() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 不從衍生的視窗控制代碼[CMFCBaseToolBar 類別](../../mfc/reference/cmfcbasetoolbar-class.md)，其先前的輸入的焦點，或`NULL`如果沒有這類的時段。  
+ 不衍生自的視窗控制代碼[CMFCBaseToolBar 類別](../../mfc/reference/cmfcbasetoolbar-class.md)，其中先前擁有輸入的焦點，或`NULL`如果沒有這類視窗。  
   
 ### <a name="remarks"></a>備註  
- 當`CMFCToolBar`控制項收到輸入的焦點時，它就會將失去焦點，以便可以在稍後還原視窗的控制代碼。  
+ 當`CMFCToolBar`控制項收到輸入的焦點，它會儲存失去焦點，好讓它可以在稍後還原視窗的控制代碼。  
   
 ##  <a name="getignoresettext"></a>CMFCToolBar::GetIgnoreSetText  
- 指定是否設定按鈕標籤的呼叫都會被忽略。  
+ 指定是否忽略呼叫設定按鈕的標籤。  
   
 ```  
 BOOL GetIgnoreSetText() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果設定按鈕標籤的呼叫都會被忽略。否則， `FALSE`。  
+ `TRUE`如果要設定按鈕的標籤的呼叫都會被忽略;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getimages"></a>CMFCToolBar::GetImages  
- 傳回的指標集合的預設按鈕影像應用程式中。  
+ 傳回的指標集合的預設按鈕影像的應用程式中。  
   
 ```  
 static CMFCToolBarImages* GetImages();
@@ -1410,7 +1410,7 @@ CSize GetImageSize() const;
  A [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)物件，代表目前的工具列按鈕影像的大小。  
   
 ##  <a name="getimagesoffset"></a>CMFCToolBar::GetImagesOffset  
- 傳回用來尋找此工具列，工具列按鈕影像的全域清單中的工具列按鈕影像的索引位移。  
+ 傳回用來尋找工具列按鈕影像的工具列按鈕影像的全域清單在此工具列索引位移。  
   
 ```  
 int GetImagesOffset() const;  
@@ -1420,14 +1420,14 @@ int GetImagesOffset() const;
  工具列影像索引位移。  
   
 ### <a name="remarks"></a>備註  
- 所有工具列預設影像會都儲存在全域[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)清單。 在工具列中的每個按鈕的映像會連續儲存在該清單。 若要計算之影像的索引，加入的按鈕索引工具列中的工具列按鈕的影像清單開頭的位移。  
+ 所有工具列預設影像會都儲存在全域[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)清單。 在工具列中的每個按鈕的映像會由左至右連續儲存該清單中。 若要計算之影像的索引，加入在工具列的按鈕索引的工具列按鈕的影像清單開頭的位移。  
   
- 呼叫[CMFCToolBar::ButtonToIndex](#buttontoindex)取得指標給按鈕的工具列按鈕的索引。  
+ 呼叫[CMFCToolBar::ButtonToIndex](#buttontoindex)取得給您的指標至按鈕的工具列按鈕的索引。  
   
- 呼叫[CMFCToolBar::GetImages](#getimages)取得變數的指標，工具列影像的集合。  
+ 呼叫[CMFCToolBar::GetImages](#getimages)來取得指向工具列影像的集合。  
   
 ##  <a name="getinvalidateitemrect"></a>CMFCToolBar::GetInvalidateItemRect  
- 擷取指定索引處的按鈕就必須重新繪製的工作區的區域。  
+ 擷取指定索引處的按鈕必須重繪用戶端區域的區域。  
   
 ```  
 virtual void GetInvalidateItemRect(
@@ -1437,16 +1437,16 @@ virtual void GetInvalidateItemRect(
   
 ### <a name="parameters"></a>參數  
  [in] `nIndex`  
- 要擷取的工作區 按鈕的索引。  
+ 要擷取工作區按鈕的索引。  
   
  [輸出] `lpRect`  
  指標`RECT`物件，可接收用戶端區域的區域。  
   
 ### <a name="remarks"></a>備註  
- `lpRect`參數不得為`NULL`。 如果提供的索引，有沒有按鈕`lpRect`收到`RECT`會初始化為零的物件。  
+ `lpRect`參數不得為`NULL`。 如果沒有按鈕有提供的索引，`lpRect`接收`RECT`初始化為零的物件。  
   
 ##  <a name="getitemid"></a>CMFCToolBar::GetItemID  
- 傳回指定索引處的工具列按鈕的命令 ID。  
+ 傳回指定索引處的工具列按鈕的命令識別碼。  
   
 ```  
 UINT GetItemID(int nIndex) const;  
@@ -1454,13 +1454,13 @@ UINT GetItemID(int nIndex) const;
   
 ### <a name="parameters"></a>參數  
  [in] `nIndex`  
- 指定的工具列按鈕的索引。  
+ 指定工具列按鈕的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 命令 ID 的工具列按鈕。或如果不存在具有指定之索引的按鈕。  
+ 命令 ID 的工具列按鈕。或如果不存在具有指定之索引按鈕則為零。  
   
 ##  <a name="getitemrect"></a>CMFCToolBar::GetItemRect  
- 傳回指定索引處的按鈕，這個周框。  
+ 傳回指定索引處的按鈕的週框矩形。  
   
 ```  
 virtual void GetItemRect(
@@ -1470,35 +1470,35 @@ virtual void GetItemRect(
   
 ### <a name="parameters"></a>參數  
  [in] `nIndex`  
- 指定的工具列按鈕的索引。  
+ 指定工具列按鈕的索引。  
   
  [輸出] `lpRect`  
- 指標`CRect`接收影像的週框的座標的物件。  
+ 指標`CRect`接收影像的周框的座標的物件。  
   
 ### <a name="remarks"></a>備註  
- `CRect`物件`lpRect`點設定為 0，如果沒有指定索引處的按鈕。  
+ `CRect`物件`lpRect`點設定為 0，如果指定索引處的按鈕不存在。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用`GetItemRect`方法`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用`GetItemRect`方法`CMFCToolBar`類別。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_IEDemo #&6;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo #&9;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo # 9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]  
   
 ##  <a name="getlargecoldimages"></a>CMFCToolBar::GetLargeColdImages  
- 應用程式中的大型冷的工具列按鈕影像的集合中傳回的指標。  
+ 讓指標回到應用程式中的大型非作用中工具列按鈕影像的集合。  
   
 ```  
 static CMFCToolBarImages* GetLargeColdImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標的冷的大型影像集合。  
+ 指標的大型冷影像集合。  
   
 ### <a name="remarks"></a>備註  
  冷映像是指在使用者不互動的工具列按鈕時所使用。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)載入大型冷映像。  
   
 ##  <a name="getlargedisabledimages"></a>CMFCToolBar::GetLargeDisabledImages  
- 傳回集合的應用程式中的大型已停用的工具列按鈕影像的指標。  
+ 讓指標回到應用程式中的大型已停用的工具列按鈕影像的集合。  
   
 ```  
 static CMFCToolBarImages* GetLargeDisabledImages();
@@ -1508,20 +1508,20 @@ static CMFCToolBarImages* GetLargeDisabledImages();
  指標的大型集合停用工具列按鈕影像。  
   
 ### <a name="remarks"></a>備註  
- 大型影像是大型的標準工具列按鈕影像的版本。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)或[CMFCToolBar::LoadBitmap](#loadbitmap)載入大型影像。  
+ 大型影像是大型的規則 工具列按鈕影像的版本。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)或[CMFCToolBar::LoadBitmap](#loadbitmap)載入大型影像。  
   
 ##  <a name="getlargeimages"></a>CMFCToolBar::GetLargeImages  
- 應用程式中的大型工具列按鈕影像的集合中傳回的指標。  
+ 讓指標回到應用程式中的大型工具列按鈕影像的集合。  
   
 ```  
 static CMFCToolBarImages* GetLargeImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標的大型工具列按鈕影像集合。  
+ 指標的大型工具列按鈕的影像集合。  
   
 ### <a name="remarks"></a>備註  
- 大型影像是大型的標準工具列按鈕影像的版本。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)載入大型影像。  
+ 大型影像是大型的規則 工具列按鈕影像的版本。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)載入大型影像。  
   
 ##  <a name="getlockedcoldimages"></a>CMFCToolBar::GetLockedColdImages  
  在工具列上的鎖定冷映像的集合中傳回的指標。  
@@ -1531,14 +1531,14 @@ CMFCToolBarImages* GetLockedColdImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 鎖定冷的映像，集合的指標或`NULL`如果未鎖定工具列。  
+ 鎖定的冷映像的集合的指標或`NULL`如果未鎖定工具列。  
   
 ### <a name="remarks"></a>備註  
  鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。 冷映像是指在使用者不互動的工具列按鈕時所使用。  
   
- 這個方法會傳回`NULL`如果未鎖定工具列。 這個方法也會會判斷提示失敗產生偵錯組建中，如果未鎖定工具列。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ 這個方法會傳回`NULL`如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
   
- 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法，載入已鎖定的冷映像。  
+ 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法以載入鎖定的冷映像。  
   
 ##  <a name="getlockeddisabledimages"></a>CMFCToolBar::GetLockedDisabledImages  
  在工具列上的鎖定已停用映像的集合中傳回的指標。  
@@ -1548,14 +1548,14 @@ CMFCToolBarImages* GetLockedDisabledImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 鎖定已停用映像，集合的指標或`NULL`如果未鎖定工具列。  
+ 指向影像的集合已鎖定已停用，或`NULL`如果未鎖定工具列。  
   
 ### <a name="remarks"></a>備註  
- 鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。 已停用映像是指在架構時所使用的按鈕`TBBS_DISABLED`樣式。  
+ 鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。 已停用的影像是按鈕時，架構會使用這些影像`TBBS_DISABLED`樣式。  
   
- 這個方法會傳回`NULL`如果未鎖定工具列。 這個方法也會會判斷提示失敗產生偵錯組建中，如果未鎖定工具列。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ 這個方法會傳回`NULL`如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
   
- 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法，載入已鎖定停用映像。  
+ 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法以載入鎖定已停用映像。  
   
 ##  <a name="getlockedimages"></a>CMFCToolBar::GetLockedImages  
  在工具列上的鎖定的按鈕影像的集合中傳回的指標。  
@@ -1570,59 +1570,59 @@ CMFCToolBarImages* GetLockedImages();
 ### <a name="remarks"></a>備註  
  鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。  
   
- 這個方法會傳回`NULL`如果未鎖定工具列。 這個方法也會會判斷提示失敗產生偵錯組建中，如果未鎖定工具列。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ 這個方法會傳回`NULL`如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
   
 ##  <a name="getlockedimagesize"></a>CMFCToolBar::GetLockedImageSize  
- 傳回已鎖定的工具列影像的預設大小。  
+ 傳回鎖定的工具列影像的預設大小。  
   
 ```  
 CSize GetLockedImageSize() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A`CSize`結構，指定鎖定的工具列影像或空白的大小`CSize`結構，如果未鎖定工具列。  
+ A`CSize`結構，指定鎖定的工具列影像或空的大小`CSize`結構若未鎖定工具列。  
   
 ### <a name="remarks"></a>備註  
  鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。  
   
- 這個方法會傳回`CSize`結構和零的寬度和高度為零，如果未鎖定工具列。 這個方法也會會判斷提示失敗產生偵錯組建中，如果未鎖定工具列。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ 這個方法會傳回`CSize`結構和零的寬度和高度零，如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
   
  呼叫[CMFCToolBar::SetLockedSizes](#setlockedsizes)方法，以指定鎖定的映像大小。  
   
 ##  <a name="getlockedmenuimages"></a>CMFCToolBar::GetLockedMenuImages  
- 傳回的指標集合的 [鎖定工具列] 功能表上的映像工具列中。  
+ 讓指標回到集合已鎖定工具列的功能表影像的工具列中。  
   
 ```  
 CMFCToolBarImages* GetLockedMenuImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 鎖定的工具列 功能表上的影像，集合的指標或`NULL`如果未鎖定工具列。  
+ 指向影像的集合已鎖定的工具列 功能表，或`NULL`如果未鎖定工具列。  
   
 ### <a name="remarks"></a>備註  
- 鎖定映像是指版本的使用者無法自訂工具列時，架構會使用標準工具列功能表映像。  
+ 鎖定的影像是當使用者無法自訂工具列時，架構會使用一般工具列功能表影像的版本。  
   
- 這個方法會傳回`NULL`如果未鎖定工具列。 這個方法也會會判斷提示失敗產生偵錯組建中，如果未鎖定工具列。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ 這個方法會傳回`NULL`如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
   
- 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法來載入已鎖定的功能表影像。  
+ 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法來載入鎖定的功能表影像。  
   
 ##  <a name="getmenubuttonsize"></a>CMFCToolBar::GetMenuButtonSize  
- 傳回應用程式功能表按鈕的大小。  
+ 傳回應用程式中的功能表按鈕的大小。  
   
 ```  
 static CSize GetMenuButtonSize();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A`CSize`物件，表示功能表按鈕，單位為像素的大小。  
+ A`CSize`物件，表示功能表按鈕，像素為單位的大小。  
   
 ### <a name="remarks"></a>備註  
- 在工具列上的功能表按鈕的大小保留為全域變數中，可以擷取這個靜態方法。  
+ 在工具列上的功能表按鈕的大小會維護與全域變數，而且可以擷取由這個靜態方法。  
   
  呼叫[CMFCToolBar::SetMenuSizes](#setmenusizes)設定這個全域變數。  
   
 ##  <a name="getmenuimages"></a>CMFCToolBar::GetMenuImages  
- 應用程式中的功能表按鈕影像的集合中傳回的指標。  
+ 讓指標回到應用程式中的功能表按鈕影像的集合。  
   
 ```  
 static CMFCToolBarImages* GetMenuImages();
@@ -1634,10 +1634,10 @@ static CMFCToolBarImages* GetMenuImages();
 ### <a name="remarks"></a>備註  
  呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法以載入功能表影像。  
   
- 呼叫[CMFCToolBar::SetMenuSizes](#setmenusizes)方法來設定按鈕和其映像的大小。  
+ 呼叫[CMFCToolBar::SetMenuSizes](#setmenusizes)方法，以設定按鈕和其映像的大小。  
   
 ##  <a name="getmenuimagesize"></a>CMFCToolBar::GetMenuImageSize  
- 傳回應用程式功能表按鈕影像的大小。  
+ 傳回應用程式中的功能表按鈕影像的大小。  
   
 ```  
 static CSize GetMenuImageSize();
@@ -1647,22 +1647,22 @@ static CSize GetMenuImageSize();
  A`CSize`物件，表示功能表影像的大小。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳回影像的大小，維護與全域變數的工具列功能表按鈕上。 呼叫[CMFCToolBar::SetMenuSizes](#setmenusizes)設定這個全域變數。  
+ 這個方法會傳回上維護與全域變數的工具列功能表按鈕的影像大小。 呼叫[CMFCToolBar::SetMenuSizes](#setmenusizes)設定這個全域變數。  
   
 ##  <a name="getorigbuttons"></a>CMFCToolBar::GetOrigButtons  
- 擷取集合的非自訂按鈕的工具列。  
+ 擷取非自訂的按鈕，工具列的集合。  
   
 ```  
 const CObList& GetOrigButtons() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 非自訂按鈕的工具列的清單參考。  
+ 參考的非自訂的按鈕，工具列的清單。  
   
 ### <a name="remarks"></a>備註  
- 它們由使用者自訂之前，架構會建立工具列按鈕的複本。 [CMFCToolBar::SetButtons](#setbuttons)方法將每個按鈕的複本中所提供的陣列加入至原始按鈕的清單。 [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)方法會透過載入從資源檔來還原工具列的原始狀態。  
+ 它們由使用者自訂之前，架構會建立一份工具列按鈕。 [CMFCToolBar::SetButtons](#setbuttons)方法會將複本的每個按鈕所提供的陣列中加入原始按鈕的清單。 [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)方法還原工具列的原始狀態，藉由從資源檔載入它。  
   
- 若要設定的原始程式的工具列按鈕清單，請呼叫[CMFCToolBar::SetOrigButtons](#setorigbuttons)方法。  
+ 若要設定的原始工具列按鈕清單，請呼叫[CMFCToolBar::SetOrigButtons](#setorigbuttons)方法。  
   
 ##  <a name="getorigresetbuttons"></a>CMFCToolBar::GetOrigResetButtons  
  擷取集合的非自訂的重設按鈕的工具列。  
@@ -1672,12 +1672,12 @@ const CObList& GetOrigResetButtons() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 參考的非自訂清單重設工具列的按鈕。  
+ 參考清單的非自訂化重設工具列的按鈕。  
   
 ### <a name="remarks"></a>備註  
  當使用者按一下**重設**按鈕在自訂模式下，架構會使用這個方法來還原已移除從工具列的按鈕。  
   
- [CMFCToolBar::SetButtons](#setbuttons)方法會將每個工具列按鈕的複本加入原始重設按鈕的清單之後，它會呼叫[CMFCToolBar::OnReset](#onreset)方法。 您可以覆寫[CMFCToolBar::OnReset](#onreset)方法，以自訂按鈕的外觀，使用者按下之後**重設** 按鈕。  
+ [CMFCToolBar::SetButtons](#setbuttons)方法會將複本的每個工具列按鈕加入原始重設按鈕的清單之後，它會呼叫[CMFCToolBar::OnReset](#onreset)方法。 您可以覆寫[CMFCToolBar::OnReset](#onreset)方法，以自訂按鈕的外觀之後使用者按下,**重設** 按鈕。  
   
 ##  <a name="getresourceid"></a>CMFCToolBar::GetResourceID  
  擷取工具列的資源識別碼。  
@@ -1687,25 +1687,25 @@ UINT GetResourceID() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在工具列的資源識別碼。  
+ 工具列資源識別碼。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)方法來設定工具列的資源識別碼。  
+ 呼叫[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)方法，以設定工具列的資源識別碼。  
   
 ##  <a name="getroutecommandsviaframe"></a>CMFCToolBar::GetRouteCommandsViaFrame  
- 決定哪些物件、 父框架或擁有者，將命令傳送至工具列。  
+ 決定哪一個物件，父框架或擁有者，將命令傳送至工具列。  
   
 ```  
 BOOL GetRouteCommandsViaFrame();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 非零，如果父框架將命令傳送至工具列。0，表示擁有者會將命令傳送至工具列。  
+ 如果父框架的命令傳送至工具列，則為非零0，表示擁有者會將命令傳送至工具列。  
   
 ### <a name="remarks"></a>備註  
  根據預設，父框架會將命令傳送至工具列。 呼叫[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)來變更此行為。  
   
- 如果這個方法會傳回非零值，您可以使用擷取父框架物件的指標`CMFCToolBar::GetCommandTarget`方法。 請參閱 VisualStudioDemo 範例，其中會使用這個方法的範例。  
+ 如果此方法會傳回非零值，您可以使用擷取父框架物件的指標`CMFCToolBar::GetCommandTarget`方法。 請參閱 VisualStudioDemo 範例的範例，會使用這個方法。  
   
 ##  <a name="getrowheight"></a>CMFCToolBar::GetRowHeight  
  傳回工具列按鈕的高度。  
@@ -1718,20 +1718,20 @@ virtual int GetRowHeight() const;
  工具列按鈕，單位為像素的高度。  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，以計算工具列版面配置。 在衍生類別來指定不同的高度，工具列中，這個方法會覆寫。  
+ 架構會呼叫這個方法來計算工具列版面配置。 在衍生的類別，以指定不同的高度，工具列中，這個方法會覆寫。  
   
 ##  <a name="getshowtooltips"></a>CMFCToolBar::GetShowTooltips  
- 指定的工具列按鈕是否會顯示工具提示。  
+ 指定工具列按鈕是否顯示工具提示。  
   
 ```  
 static BOOL GetShowTooltips();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果工具提示會顯示的工具列按鈕。否則`FALSE`。  
+ `TRUE`如果工具提示顯示的工具列按鈕。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 依預設會顯示工具提示。 您可以變更這個靜態旗標呼叫[CMFCToolBar::SetShowTooltips](#setshowtooltips)。  
+ 根據預設，會顯示工具提示。 您可以變更這個靜態旗標，藉由呼叫[CMFCToolBar::SetShowTooltips](#setshowtooltips)。  
   
 ##  <a name="getsiblingtoolbar"></a>CMFCToolBar::GetSiblingToolBar  
  擷取工具列的同層級。  
@@ -1744,20 +1744,20 @@ CMFCToolBar* GetSiblingToolBar();
  同層級工具列指標。  
   
 ### <a name="remarks"></a>備註  
- 如需有關如何啟用**按鈕顯示於資料列的資料上**和**按鈕顯示於兩個資料列上**按鈕，請參閱[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)。  
+ 如需有關如何啟用**在一個資料列上顯示按鈕**和**在兩個資料列上顯示按鈕**按鈕，請參閱[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
   
 ##  <a name="getuserimages"></a>CMFCToolBar::GetUserImages  
- 應用程式中的使用者定義工具列按鈕影像的集合中傳回的指標。  
+ 讓指標回到應用程式中的使用者定義工具列按鈕影像的集合。  
   
 ```  
 static CMFCToolBarImages* GetUserImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標的所有應用程式中的工具列的使用者定義工具列按鈕影像集合。  
+ 指標集合的應用程式中的所有工具列的使用者定義工具列按鈕影像。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetUserImages](#setuserimages)方法來設定應用程式中的使用者定義的影像集合。  
+ 呼叫[CMFCToolBar::SetUserImages](#setuserimages)方法，以設定應用程式中的使用者定義的映像的集合。  
   
 ##  <a name="hittest"></a>CMFCToolBar::HitTest  
  傳回位於指定位置處的工具列按鈕的索引。  
@@ -1771,7 +1771,7 @@ virtual int HitTest(CPoint point);
  要測試，在工作區座標的點。  
   
 ### <a name="return-value"></a>傳回值  
- 位於指定的位置，則為-1 如果沒有這類的按鈕索引是按鈕的分隔符號。  
+ 位於指定的位置，則為-1 如果沒有這類按鈕的按鈕索引為分隔符號。  
   
 ##  <a name="insertbutton"></a>CMFCToolBar::InsertButton  
  插入工具列按鈕。  
@@ -1792,15 +1792,15 @@ virtual int InsertButton(
  指定要插入的按鈕。  
   
  [in] `iInsertAt`  
- 指定要插入按鈕，以零為起始的位置。  
+ 指定要插入按鈕之以零為起始位置。  
   
 ### <a name="return-value"></a>傳回值  
- 位置的插入 按鈕，或-1 表示錯誤發生。  
+ 位置的已插入按鈕或-1 如果發生錯誤，就會發生。  
   
 ### <a name="remarks"></a>備註  
- 如果`iInsertAt`為-1，這個方法會將按鈕新增至工具列按鈕清單的結尾。  
+ 如果`iInsertAt`為-1，這個方法會將按鈕加入至工具列按鈕清單的結尾。  
   
- 呼叫[CMFCToolBar::InsertSeparator](#insertseparator)方法來插入工具列中的分隔符號。  
+ 呼叫[CMFCToolBar::InsertSeparator](#insertseparator)分隔符號插入工具列的方法。  
   
 ##  <a name="insertseparator"></a>CMFCToolBar::InsertSeparator  
  插入工具列中的分隔符號。  
@@ -1811,20 +1811,20 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
   
 ### <a name="parameters"></a>參數  
  [in] `iInsertAt`  
- 指定要插入在分隔符號之以零為起始的位置。 這個參數必須是大於 0。  
+ 指定要插入在分隔字元之以零為起始的位置。 這個參數必須是大於 0。  
   
 ### <a name="return-value"></a>傳回值  
- 位置的分隔線已插入值或-1 表示錯誤發生。  
+ 位置的插入分隔符號或-1 如果發生錯誤，就會發生。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以兩個現有的按鈕之間插入分隔符號。 如果`iInsertAt`為-1，此方法加入至工具列按鈕清單結尾分隔符號。  
+ 呼叫此方法以兩個現有的按鈕之間插入分隔符號。 如果`iInsertAt`為-1，這個方法加入至工具列按鈕清單結尾的分隔符號。  
   
  您無法使用這個方法，加入空白的工具列中的分隔符號。  
   
- 呼叫[CMFCToolBar::InsertButton](#insertbutton)方法，以插入至工具列按鈕。  
+ 呼叫[CMFCToolBar::InsertButton](#insertbutton)方法插入工具列的按鈕。  
   
 ##  <a name="invalidatebutton"></a>CMFCToolBar::InvalidateButton  
- 失效的工具列按鈕，在提供的索引存在的工作區。  
+ 工具列按鈕提供的索引已存在的工作區會導致無效。  
   
 ```  
 CMFCToolBarButton* InvalidateButton(int nIndex);
@@ -1832,47 +1832,47 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
   
 ### <a name="parameters"></a>參數  
  [in] `nIndex`  
- 工具列中按鈕的以零為起始的索引。  
+ 在工具列中按鈕的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CMFCToolBarButton`物件存在於提供的索引，或`NULL`如果物件不存在。  
+ 指標`CMFCToolBarButton`存在於所提供的索引處的物件或`NULL`如果物件不存在。  
   
 ### <a name="remarks"></a>備註  
- 更新與工具列按鈕相關聯的工作區時，架構會呼叫這個方法。 它會呼叫[CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect)方法的用戶端矩形`CMFCToolBarButton`存在所提供的索引處的物件。  
+ 在更新工具列按鈕與相關聯的工作區時，架構會呼叫這個方法。 它會呼叫[CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect)方法的用戶端矩形`CMFCToolBarButton`存在於所提供的索引處的物件。  
   
 ##  <a name="isaddremovequickcustomize"></a>CMFCToolBar::IsAddRemoveQuickCustomize  
- 決定使用者可以新增或移除工具列按鈕使用**自訂**功能表選項。  
+ 決定使用者是否可以加入或移除工具列按鈕使用**自訂**功能表選項。  
   
 ```  
 BOOL IsAddRemoveQuickCustomize();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果使用者可以使用**自訂**功能表選項，以修改工具列; 否則`FALSE`。  
+ `TRUE`如果使用者可以使用**自訂**功能表選項以修改工具列，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isaltcustomizemode"></a>CMFCToolBar::IsAltCustomizeMode  
- 指定是否*快速自訂*用來將按鈕拖曳。 啟用快速自訂時，使用者可以按下並按住 Alt 鍵，然後將按鈕拖曳至新位置。  
+ 指定是否*快速自訂*正將按鈕拖曳。 啟用快速的自訂時，使用者可以按按住 Alt 鍵，按鈕拖曳至新位置。  
   
 ```  
 static BOOL __stdcall IsAltCustomizeMode();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果正在使用快速自訂拖曳一個按鈕。否則， `FALSE`。  
+ `TRUE`如果正在拖曳的按鈕，使用快速自訂否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isautograyinactiveimages"></a>CMFCToolBar::IsAutoGrayInactiveImages  
- 指定是否啟用自動產生的非作用中 （非反白顯示） 按鈕影像。  
+ 指定是否啟用自動產生的非作用中 （非-反白顯示） 的按鈕影像。  
   
 ```  
 static BOOL IsAutoGrayInactiveImages();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用自動變暗非作用中的映像的選項。否則`FALSE`。  
+ `TRUE`如果已啟用自動 dim 非作用中的映像的選項。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  您可以啟用或停用自動變暗的非作用中的映像藉由呼叫[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)。  
@@ -1889,25 +1889,25 @@ static BOOL IsBasicCommand(UINT uiCmd);
  指定要檢查的命令。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的命令屬於清單的基本命令的方式。否則`FALSE`。  
+ `TRUE`如果指定的命令屬於基本命令; 的清單否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個靜態方法會判斷命令是否已由`uiCmd`屬於基本命令之全域清單。 您可以變更的基本命令清單，藉由呼叫[CMFCToolBar::AddBasicCommand](#addbasiccommand)或[CMFCToolBar::SetBasicCommands](#setbasiccommands)。  
+ 這個靜態方法會判斷命令是否已由`uiCmd`屬於基本命令的全域清單。 您可以藉由呼叫變更的基本命令清單[CMFCToolBar::AddBasicCommand](#addbasiccommand)或[CMFCToolBar::SetBasicCommands](#setbasiccommands)。  
   
 ##  <a name="isbuttonextrasizeavailable"></a>CMFCToolBar::IsButtonExtraSizeAvailable  
- 決定工具列是否會顯示擴充框線的按鈕。  
+ 決定工具列是否顯示已延伸框線的按鈕。  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果列可以顯示按鈕具有額外的框線大小。否則`FALSE`。  
+ `TRUE`如果軸可以選擇顯示按鈕具有額外的框線大小。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 工具列物件傳回`TRUE`如果它可以顯示擴充框線的按鈕。 工具列按鈕時呼叫這個方法也可以處理[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)通知並據以設定其內部的額外框線大小旗標。 此內部旗標可能會稍後擷取藉由呼叫[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)。  
+ 工具列物件傳回`TRUE`若它可顯示已延伸框線的按鈕。 工具列按鈕時呼叫這個方法也可以處理[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)通知，並據以設定其內部的額外框線大小旗標。 此內部旗標可能會稍後擷取藉由呼叫[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)。  
   
- 這個方法從衍生類別中的覆寫`CMFCToolBar`，並傳回`TRUE`如果您的列可以顯示額外的框線大小的工具列按鈕，並傳回`FALSE`否則。 預設實作會傳回 `TRUE`。  
+ 衍生自的類別中置換此方法`CMFCToolBar`並傳回`TRUE`如果您的列可以顯示額外的框線大小的工具列按鈕，並傳回`FALSE`否則。 預設實作會傳回 `TRUE`。  
   
 ##  <a name="isbuttonhighlighted"></a>CMFCToolBar::IsButtonHighlighted  
  判斷指定的按鈕會反白顯示。  
@@ -1918,7 +1918,7 @@ BOOL IsButtonHighlighted(int iButton) const;
   
 ### <a name="parameters"></a>參數  
  [in] `iButton`  
- 指定的工具列按鈕的索引。  
+ 指定工具列按鈕的索引。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果指定的按鈕會反白顯示。，否則， `FALSE`。  
@@ -1940,9 +1940,9 @@ static BOOL IsCommandPermitted(UINT uiCmd);
  `TRUE`如果允許指定的命令。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個靜態方法會判斷命令是否已由`uiCmd`屬於非許可命令之全域清單。  
+ 這個靜態方法會判斷命令是否已由`uiCmd`屬於非允許命令的全域清單。  
   
- 您可以變更非允許的命令清單，藉由呼叫[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)。  
+ 您可以變更非允許命令的清單，藉由呼叫[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)。  
   
 ##  <a name="iscommandrarelyused"></a>CMFCToolBar::IsCommandRarelyUsed  
  決定是否很少使用的命令。  
@@ -1956,12 +1956,12 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
  指定要檢查的命令。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的命令很少使用。否則`FALSE`。  
+ `TRUE`如果指定的命令很少使用;否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- `IsCommandRarelyUsed`方法會傳回`FALSE`一或多個下列情況發生︰  
+ `IsCommandRarelyUsed`方法會傳回`FALSE`發生一或多個下列條件︰  
   
--   指定的命令所屬的基本命令清單  
+-   指定的命令屬於基本命令的清單  
   
 -   指定的命令是其中一個標準命令  
   
@@ -1969,7 +1969,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
   
 -   基本命令的清單是空的  
   
--   超過 20%的命令呼叫會呼叫指定的命令。  
+-   超過 20%的命令呼叫為呼叫指定的命令。  
   
 ##  <a name="iscustomizemode"></a>CMFCToolBar::IsCustomizeMode  
  指定工具列 framework 是否為自訂模式。  
@@ -1979,15 +1979,15 @@ static BOOL IsCustomizeMode();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果架構是在自訂模式。否則`FALSE`。  
+ `TRUE`如果 framework 自訂模式。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 您可以切換為自訂模式藉由呼叫[CMFCToolBar::SetCustomizeMode](#setcustomizemode)。  
+ 您可以藉由呼叫切換自訂模式[CMFCToolBar::SetCustomizeMode](#setcustomizemode)。  
   
- 當使用者叫用自訂 對話方塊中，架構變更的模式 ( [CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md))。  
+ 架構變更的模式，當使用者叫用的自訂對話方塊 ( [CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md))。  
   
 ##  <a name="isdragbutton"></a>CMFCToolBar::IsDragButton  
- 決定是否要拖曳的工具列按鈕。  
+ 決定是否要拖曳工具列按鈕。  
   
 ```  
 BOOL IsDragButton(const CMFCToolBarButton* pButton) const;  
@@ -1998,7 +1998,7 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
  工具列按鈕的指標。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果拖曳至指定的按鈕。否則， `FALSE`。  
+ `TRUE`如果指定的按鈕拖曳至;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
@@ -2013,9 +2013,9 @@ BOOL IsExistCustomizeButton();
  `TRUE`如果工具列包含**自訂**按鈕; 否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 如果這個方法會傳回`TRUE`、 [CMFCToolBar::GetCustomizeButton](#getcustomizebutton)方法傳回的指標**自訂**出現結尾的工具列按鈕。  
+ 如果此方法傳回`TRUE`、 [CMFCToolBar::GetCustomizeButton](#getcustomizebutton)方法將指標傳回至**自訂**會出現在工具列結尾的按鈕。  
   
- 使用[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)方法來加入**自訂**至工具列按鈕。  
+ 使用[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)方法，將**自訂**至工具列按鈕。  
   
 ##  <a name="isfloating"></a>CMFCToolBar::IsFloating  
  決定是否要浮動工具列。  
@@ -2028,7 +2028,7 @@ virtual BOOL IsFloating() const;
  `TRUE`如果浮動工具列。，否則， `FALSE`。  
   
 ##  <a name="islargeicons"></a>CMFCToolBar::IsLargeIcons  
- 指定是否在應用程式工具列目前顯示大圖示。  
+ 指定應用程式中的工具列是否目前顯示大圖示。  
   
 ```  
 static BOOL IsLargeIcons();
@@ -2038,12 +2038,12 @@ static BOOL IsLargeIcons();
  `TRUE`如果應用程式使用大圖示。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetLargeIcons](#setlargeicons)大型圖示和一般圖示之間進行切換。  
+ 呼叫[CMFCToolBar::SetLargeIcons](#setlargeicons)切換大圖示和規則的圖示。  
   
- 架構會自動變更模式，當使用者切換**大圖示**上的核取方塊**選項**頁面**自訂**對話方塊。  
+ 架構會自動變更的模式，當使用者切換**大圖示**上的核取方塊**選項**頁面**自訂** 對話方塊。  
   
 ##  <a name="islastcommandfrombutton"></a>CMFCToolBar::IsLastCommandFromButton  
- 決定是否最近執行命令用來傳送指定的工具列按鈕。  
+ 決定是否最近執行已傳送命令，從指定的工具列按鈕。  
   
 ```  
 static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
@@ -2054,10 +2054,10 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
  按鈕的指標。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果最後一個命令用來傳送 按鈕，`pButton`指定; 否則`FALSE`。  
+ `TRUE`如果最後一個命令已傳送 按鈕，`pButton`指定; 否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會取得變數的指標， [MSG 結構](../../mfc/reference/msg-structure1.md)藉由呼叫`CWnd::GetCurrentMessage`。 然後它會比較`HWND`與按鈕的`MSG::lParam`和`MSG::hwnd`成員，以判斷是否按鈕是命令的來源。  
+ 這個方法會取得的指標[MSG 結構](../../mfc/reference/msg-structure1.md)藉由呼叫`CWnd::GetCurrentMessage`。 然後它會比較`HWND`與按鈕的`MSG::lParam`和`MSG::hwnd`成員以判斷是否在按鈕原先的命令的來源。  
   
 ##  <a name="islocked"></a>CMFCToolBar::IsLocked  
  決定工具列是否已鎖定。  
@@ -2067,15 +2067,15 @@ BOOL IsLocked() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列已鎖定。否則， `FALSE`。  
+ `TRUE`如果鎖定工具列。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳回`TRUE`當使用者無法執行自訂工作，例如重新定位工具列按鈕。  
   
- 鎖定的工具列使用個別的映像清單。 如需這些影像清單的詳細資訊，請參閱[CMFCToolBar::LoadBitmapEx](#loadbitmapex)。  
+ 鎖定的工具列會使用不同的影像清單。 如需這些映像清單的詳細資訊，請參閱[CMFCToolBar::LoadBitmapEx](#loadbitmapex)。  
   
-##  <a name="isonerowwithsibling"></a>CMFCToolBar::IsOneRowWithSibling  
- 判斷是否會將工具列和工具列，其同層級置於同一個資料列。  
+##  <a name="isonerowwithsibling"></a>Cmfctoolbar:: Isonerowwithsibling  
+ 決定是否工具列和工具列，其同層級位於相同的資料列。  
   
 ```  
 BOOL IsOneRowWithSibling();
@@ -2085,9 +2085,9 @@ BOOL IsOneRowWithSibling();
  `TRUE`如果工具列和其同層級位於相同的資料列。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/en-us/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果這個方法會傳回`TRUE`，架構會顯示**按鈕顯示於資料列的資料上** 按鈕。 否則，架構會顯示**按鈕顯示於兩個資料列上** 按鈕。  
+ [Cmfccustomizebutton:: Createpopupmenu](http://msdn.microsoft.com/en-us/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果此方法傳回`TRUE`，架構會顯示**在一個資料列上顯示按鈕** 按鈕。 否則，架構就會顯示**在兩個資料列上顯示按鈕** 按鈕。  
   
- 您通常不需要使用這個方法。 若要啟用**按鈕顯示於資料列的資料上**或**按鈕顯示於兩個資料列上**按鈕，呼叫[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)。  
+ 您通常不需要使用這個方法。 若要啟用**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕，請呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
   
 ##  <a name="isresourcechanged"></a>CMFCToolBar::IsResourceChanged  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -2119,7 +2119,7 @@ BOOL IsUserDefined() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列由使用者資訊。否則`FALSE`。  
+ `TRUE`如果使用者; 建立工具列否則`FALSE`。  
   
 ##  <a name="loadbitmap"></a>CMFCToolBar::LoadBitmap  
  從應用程式資源載入工具列影像。  
@@ -2145,7 +2145,7 @@ virtual BOOL LoadBitmap(
  參考標準功能表影像之點陣圖的資源 ID。  
   
  [in] `bLocked`  
- `TRUE`若要鎖定工具列。否則`FALSE`。  
+ `TRUE`若要鎖定工具列，否則`FALSE`。  
   
  [in] `uiDisabledResID`  
  參考已停用工具列影像之點陣圖的資源 ID。  
@@ -2193,7 +2193,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="loadparameters"></a>CMFCToolBar::LoadParameters  
- 從 Windows 登錄載入全域工具列選項。  
+ 從 Windows 登錄載入全域工具列上的選項。  
   
 ```  
 static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
@@ -2207,7 +2207,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
  如果方法成功，則為非零，否則為零。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會載入功能表動畫類型、 功能表陰影樣式，以及是否要顯示大圖示從 Windows 登錄等全域參數。  
+ 這個方法會載入通用參數，例如功能表動畫類型、 功能表陰影樣式，以及是否要顯示大圖示從 Windows 登錄。  
   
  [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)方法會呼叫這個方法初始化程序的應用程式的一部分。  
   
@@ -2226,7 +2226,7 @@ virtual BOOL LoadState(
  指定 Windows 登錄機碼的相對路徑。  
   
  [in] `nIndex`  
- 指定控制項 ID 的工具列。  
+ 指定工具列的控制項 ID。  
   
  [in] `uiID`  
  指定的資源識別碼的工具列。  
@@ -2253,7 +2253,7 @@ virtual BOOL LoadToolBar(
   
 ### <a name="parameters"></a>參數  
  [in] `uiResID`  
- 在工具列的資源識別碼。  
+ 工具列資源識別碼。  
   
  [in] `uiColdResID`  
  參考非作用中工具列影像之點陣圖的資源 ID。  
@@ -2262,7 +2262,7 @@ virtual BOOL LoadToolBar(
  參考標準功能表影像之點陣圖的資源 ID。  
   
  [in] `bLocked`  
- 布林值，指定是否鎖定工具列。 如果這個參數是`TRUE`，工具列會鎖定。 否則，不鎖定工具列。  
+ 布林值，指定是否不論鎖定工具列。 如果這個參數是`TRUE`，工具列會鎖定。 否則，不鎖定工具列。  
   
  [in] `uiDisabledResID`  
  參考已停用工具列影像之點陣圖的資源 ID。  
@@ -2280,13 +2280,13 @@ virtual BOOL LoadToolBar(
  載入與工具列相關聯的映像的初始化期間，架構會呼叫這個方法。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用`LoadToolBar`方法中的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用`LoadToolBar`方法中的`CMFCToolBar`類別。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_IEDemo #&6;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo #&7;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo # 7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
 ##  <a name="loadtoolbarex"></a>CMFCToolBar::LoadToolBarEx  
- 從應用程式資源載入工具列使用`CMFCToolBarInfo`helper 類別，可讓應用程式使用大量的影像。  
+ 透過使用從應用程式資源載入工具列`CMFCToolBarInfo`helper 類別，讓應用程式使用大型影像。  
   
 ```  
 virtual BOOL LoadToolBarEx(
@@ -2297,31 +2297,31 @@ virtual BOOL LoadToolBarEx(
   
 ### <a name="parameters"></a>參數  
  [in] `uiToolbarResID`  
- 在工具列的資源識別碼。  
+ 工具列資源識別碼。  
   
  [in] `params`  
- 參考`CMFCToolBarInfo`物件，其中包含工具列影像的資源 Id。  
+ 若要參考`CMFCToolBarInfo`物件，其中包含的工具列影像的資源 Id。  
   
  [in] `bLocked`  
- 布林值，指定是否鎖定工具列。 如果這個參數是`TRUE`，工具列會鎖定。 否則，不鎖定工具列。  
+ 布林值，指定是否不論鎖定工具列。 如果這個參數是`TRUE`，工具列會鎖定。 否則，不鎖定工具列。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為非零，否則為零。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法來從應用程式資源載入的工具列影像。  
+ 呼叫此方法以從應用程式資源載入工具列影像。  
   
 ##  <a name="m_dbllargeimageratio"></a>CMFCToolBar::m_dblLargeImageRatio  
- 指定大量的影像維度 （高度或寬度） 與一般映像的維度之間的比率。  
+ 指定大型影像的維度 （高度或寬度） 和維度的一般映像之間的比率。  
   
 ```  
 AFX_IMPORT_DATA static double m_dblLargeImageRatio;  
 ```  
   
 ### <a name="remarks"></a>備註  
- 預設的比例為 2。 您可以變更此值可讓大型工具列映像，放大或縮小。  
+ 預設比例為 2。 您可以變更此值可讓大型工具列影像，較大或變小。  
   
- 當您未指定一組大型映像時，架構會使用此資料成員。 例如，如果您提供的小型影像集合大小為 16 x 16，而且想大型映像大小 24 x 24，1.5 設定此資料成員。  
+ 當您未指定一組大型映像，架構會使用此資料成員。 例如，如果您提供只有一組小型影像大小為 16 x 16，而且想要有大小 24 x 24 的大型影像，設定此資料成員為 1.5。  
   
 ##  <a name="nextmenu"></a>CMFCToolBar::NextMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -2355,7 +2355,7 @@ virtual BOOL OnBeforeRemoveButton(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onchangehot"></a>CMFCToolBar::OnChangeHot  
- 當使用者選取工具列上的按鈕，由架構呼叫。  
+ 當使用者選取工具列上的按鈕時由架構呼叫。  
   
 ```  
 virtual void OnChangeHot(int iHot);
@@ -2366,7 +2366,7 @@ virtual void OnChangeHot(int iHot);
  指定已選取; 工具列按鈕的索引或是-1，如果不選取任何工具列按鈕。  
   
 ### <a name="remarks"></a>備註  
- 覆寫這個方法，以處理程序通知使用者已選取工具列上的按鈕。  
+ 覆寫此方法以處理程序通知使用者選取工具列上的按鈕。  
   
 ##  <a name="onchangevisualmanager"></a>CMFCToolBar::OnChangeVisualManager  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -2389,7 +2389,7 @@ virtual void OnFillBackground(CDC* pDC);
  裝置內容的指標。  
   
 ### <a name="remarks"></a>備註  
- [CMFCToolBar::DoPaint](#dopaint)已填入工具列的背景時呼叫這個方法。 預設實作不做任何動作。  
+ [CMFCToolBar::DoPaint](#dopaint)已滿工具列的背景時呼叫這個方法。 預設實作不做任何動作。  
   
  覆寫這個方法在衍生類別中繪製自訂背景。  
   
@@ -2403,16 +2403,16 @@ virtual void OnGlobalFontsChanged();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onreset"></a>CMFCToolBar::OnReset  
- 將工具列還原至其原始狀態。  
+ 將工具列還原成原始狀態。  
   
 ```  
 virtual void OnReset();
 ```  
   
 ### <a name="remarks"></a>備註  
- 覆寫此方法以處理通知的工具列重設。  
+ 覆寫此方法以處理工具列重設的相關通知。  
   
- 預設實作不做任何動作。 覆寫`OnReset`從衍生類別中`CMFCToolBar`工具列時有 dummy 工具列回到其原始狀態時，必須被取代的按鈕。  
+ 預設實作不做任何動作。 覆寫`OnReset`類別，衍生自中`CMFCToolBar`工具列時有 dummy 工具列回到其原始狀態時，必須被取代的按鈕。  
   
 ##  <a name="onsetaccdata"></a>CMFCToolBar::OnSetAccData  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -2443,12 +2443,12 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
  `TRUE`ifthe 文字已經順利還原;否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 覆寫這個方法，以處理通知的工具列按鈕的文字會變成預設值。  
+ 覆寫此方法以處理程序通知工具列按鈕的文字會變成預設值。  
   
  預設實作會從應用程式資源載入按鈕的文字。  
   
 ##  <a name="onusertooltip"></a>CMFCToolBar::OnUserToolTip  
- 顯示按鈕的工具提示時，由架構呼叫。  
+ 即將顯示工具提示按鈕時由架構呼叫。  
   
 ```  
 virtual BOOL OnUserToolTip(
@@ -2458,18 +2458,18 @@ virtual BOOL OnUserToolTip(
   
 ### <a name="parameters"></a>參數  
  [in] `pButton`  
- 工具提示便會顯示在工具列按鈕的點。  
+ 指向工具列按鈕顯示工具提示的。  
   
  [輸出] `strTTText`  
- 參考`CString`接收工具提示文字的物件。  
+ 若要參考`CString`物件，可接收的工具提示文字。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果`strTTText`已填入之工具提示文字，否則為`FALSE`。  
+ `TRUE`如果`strTTText`填入工具提示文字，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 要顯示的工具列按鈕的工具提示時，架構會呼叫這個方法。 如果`OnUserToolTip`傳回`TRUE`，架構會顯示工具提示，其中包含所傳回的文字`OnUserToolTip`中`strTTText`。 否則，工具提示會包含按鈕的文字。  
+ 工具列按鈕的工具提示即將顯示時，架構會呼叫這個方法。 如果`OnUserToolTip`傳回`TRUE`，架構會顯示工具提示，其中包含所傳回的文字`OnUserToolTip`中`strTTText`。 否則，工具提示會包含按鈕的文字。  
   
- 覆寫`OnUserToolTip`自訂的工具列按鈕的工具提示。 預設實作會呼叫[CMFCToolBar::OnUserToolTip](#onusertooltip)取得的工具提示文字。  
+ 覆寫`OnUserToolTip`自訂工具列按鈕的工具提示。 預設實作會呼叫[CMFCToolBar::OnUserToolTip](#onusertooltip)取得工具提示文字。  
   
 ##  <a name="prevmenu"></a>CMFCToolBar::PrevMenu  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -2483,7 +2483,7 @@ virtual BOOL PrevMenu();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="processcommand"></a>CMFCToolBar::ProcessCommand  
- 文章`WM_COMMAND`訊息主控視窗的工具列。  
+ 文章`WM_COMMAND`擁有工具列的視窗訊息。  
   
 ```  
 BOOL ProcessCommand(CMFCToolBarButton* pButton);
@@ -2491,15 +2491,15 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
   
 ### <a name="parameters"></a>參數  
  [in] `pButton`  
- 指標，工具列上的按鈕。  
+ 在工具列上的按鈕的指標。  
   
 ### <a name="return-value"></a>傳回值  
  這個方法一律會傳回`TRUE`。 MFC 使用`FALSE`內部值。  
   
 ### <a name="remarks"></a>備註  
- 這個方法回傳`WM_COMMAND`主控視窗的工具列藉由呼叫訊息[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)和傳遞做為指定的按鈕的命令 ID`wParam`參數。  
+ 這個方法回傳`WM_COMMAND`藉由呼叫擁有工具列的視窗訊息[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)和傳遞做為指定的按鈕的命令識別碼`wParam`參數。  
   
- 使用[ON_COMMAND](http://msdn.microsoft.com/library/f24f8bda-2cf4-49d5-aa3d-6f2e6bb003f2)巨集對應`WM_COMMAND`的成員函式的訊息。  
+ 使用[ON_COMMAND](message-map-macros-mfc.md#on_command)巨集將對應`WM_COMMAND`成員函式的訊息。  
   
 ##  <a name="removeallbuttons"></a>CMFCToolBar::RemoveAllButtons  
  從工具列中移除所有的按鈕和分隔符號。  
@@ -2520,18 +2520,18 @@ virtual BOOL RemoveButton(int iIndex);
   
 ### <a name="parameters"></a>參數  
  [in] `iIndex`  
- 指定的 [移除] 按鈕以零為起始的索引。  
+ 指定 [移除] 按鈕的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功，或`FALSE`如果不正確的指定的索引或索引參考**自訂** 按鈕。  
+ `TRUE`如果此方法成功，或`FALSE`如果指定的索引不正確，或索引是指**自訂** 按鈕。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會更新受影響的 [移除] 按鈕的其他工具列屬性。 例如，這個方法會從工具列中移除不必要的分隔符號，並重建的快速鍵資料表。  
+ 這個方法會更新受影響的移除按鈕的其他工具列屬性。 例如，這個方法會從工具列中移除不必要的分隔字元，並重建的快速鍵資料表。  
   
- 如需詳細資訊**自訂** 按鈕，請參閱[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)。  
+ 如需有關**自訂**按鈕，請參閱[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)。  
   
 ##  <a name="removestatefromregistry"></a>CMFCToolBar::RemoveStateFromRegistry  
- 刪除 Windows 登錄中的工具列的狀態資訊。  
+ 從 Windows 登錄中刪除工具列的狀態資訊。  
   
 ```  
 virtual BOOL RemoveStateFromRegistry(
@@ -2542,19 +2542,19 @@ virtual BOOL RemoveStateFromRegistry(
   
 ### <a name="parameters"></a>參數  
  [in] `lpszProfileName`  
- 指定的狀態資訊所在位置的登錄機碼。  
+ 指定的登錄機碼的狀態資訊所在的位置。  
   
  [in] `nIndex`  
  工具列控制項 ID。  
   
  [in] `uiID`  
- 在工具列的資源識別碼。 如果這個參數是-1，這個方法會使用[CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid)方法來擷取資源識別碼。  
+ 工具列資源識別碼。 如果這個參數是-1，這個方法會使用[CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid)方法來擷取資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為非零，否則為零。  
   
 ### <a name="remarks"></a>備註  
- 刪除使用者定義的工具列時，架構會呼叫這個方法。  
+ 它會刪除使用者定義工具列時，架構會呼叫這個方法。  
   
  如果您在 Windows 登錄中儲存其他狀態資訊，請覆寫這個方法。  
   
@@ -2570,10 +2570,10 @@ int ReplaceButton(
   
 ### <a name="parameters"></a>參數  
  [in] `uiCmd`  
- 若要取代按鈕的命令 ID。  
+ 要取代的按鈕命令識別碼。  
   
  [in] `button`  
- 參考`CMFCToolBarButton`插入。  
+ 若要參考`CMFCToolBarButton`插入。  
   
  [in] `bAll`  
  布林值，指定是否要取代所有具有所指定的命令 ID 的按鈕`uiCmd`。 如果這個參數是`TRUE`，取代所有具有指定的命令 ID 的按鈕。 否則，會取代第一個按鈕。  
@@ -2582,16 +2582,16 @@ int ReplaceButton(
  會被取代的按鈕數目。 如果不存在具有指定的命令 ID 的按鈕，這是在工具列上，這個方法會傳回 0。  
   
 ### <a name="remarks"></a>備註  
- 當您想要加入無法從資源載入的工具列按鈕，請呼叫這個方法。 您可以在設計階段中建立預留位置 按鈕，並取代為自訂按鈕的按鈕時初始化工具列。 請參閱 VisualStudioDemo 範例，其中會使用這個方法的範例。  
+ 當您想要加入，無法從資源載入工具列按鈕時呼叫這個方法。 您可以在設計階段中建立預留位置按鈕，並初始化工具列時，自訂按鈕取代該按鈕。 請參閱 VisualStudioDemo 範例的範例，會使用這個方法。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何使用`ReplaceButton`方法中的`CMFCToolBar`類別。 此程式碼片段是一部分[IE 示範範例](../../visual-cpp-samples.md)。  
+ 下列範例示範如何使用`ReplaceButton`方法中的`CMFCToolBar`類別。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
   
- [!code-cpp[NVC_MFC_IEDemo #&6;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo #&10;](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo # 10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]  
   
 ##  <a name="resetall"></a>CMFCToolBar::ResetAll  
- 將所有的工具列還原為原始狀態。  
+ 將所有工具列都還原成其原始狀態。  
   
 ```  
 static void __stdcall ResetAll();
@@ -2639,7 +2639,7 @@ virtual BOOL RestoreOriginalState();
  如果方法成功即為 `TRUE`，方法失敗或工具列為使用者定義的，則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法從資源檔載入工具列使用[CMFCToolBar::LoadToolBar](#loadtoolbar)方法。  
+ 這個方法透過使用從資源檔載入工具列[CMFCToolBar::LoadToolBar](#loadtoolbar)方法。  
   
  架構會呼叫這個方法，當使用者選擇**全部重設**按鈕**工具列**自訂對話方塊的頁面。  
   
@@ -2658,7 +2658,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="savestate"></a>CMFCToolBar::SaveState  
- 將工具列的狀態資訊儲存在 Windows 登錄。  
+ 將工具列的狀態資訊儲存在 Windows 登錄中。  
   
 ```  
 virtual BOOL SaveState(
@@ -2675,16 +2675,16 @@ virtual BOOL SaveState(
  工具列控制項 ID。  
   
  [in] `uiID`  
- 在工具列的資源識別碼。  
+ 工具列資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為非零，否則為零。  
   
 ### <a name="remarks"></a>備註  
- 應用程式狀態儲存至登錄時，架構會呼叫這個方法。 如需詳細資訊，請參閱[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)。  
+ 它會將應用程式狀態儲存至登錄時，架構會呼叫這個方法。 如需詳細資訊，請參閱[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)。  
   
 ##  <a name="setbasiccommands"></a>CMFCToolBar::SetBasicCommands  
- 設定當使用者開啟功能表，一定會顯示的命令清單。  
+ 設定永遠會在使用者開啟功能表時所顯示的命令清單。  
   
 ```  
 static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
@@ -2692,17 +2692,17 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
   
 ### <a name="parameters"></a>參數  
  [in] `lstCommands`  
- 參考`CList`包含命令集合的物件。  
+ 若要參考`CList`物件，其中包含命令集合。  
   
 ### <a name="remarks"></a>備註  
- 開啟功能表時，一律會顯示基本命令。 當使用者選擇要檢視最近使用的命令時，這個方法是有意義。  
+ 在功能表開啟時，一律會顯示基本的命令。 當使用者選擇要檢視最近使用的命令時，這個方法是有意義。  
   
- 使用[CMFCToolBar::AddBasicCommand](#addbasiccommand)方法，將命令加入至基本命令的清單。 使用[CMFCToolBar::GetBasicCommands](#getbasiccommands)方法來擷取基本命令，可由您的應用程式的清單。  
+ 使用[CMFCToolBar::AddBasicCommand](#addbasiccommand)方法將命令新增至基本命令的清單。 使用[CMFCToolBar::GetBasicCommands](#getbasiccommands)方法來擷取基本的命令，可由您的應用程式的清單。  
   
- 請參閱總管範例，其中會使用這個方法的範例。  
+ 請參閱在總管的範例會使用這個方法的範例。  
   
 ##  <a name="setbuttoninfo"></a>CMFCToolBar::SetButtonInfo  
- 設定命令 ID、 樣式和影像的工具列按鈕的 ID。  
+ 設定命令 ID、 樣式和工具列按鈕的影像 ID。  
   
 ```  
 void SetButtonInfo(
@@ -2714,26 +2714,26 @@ void SetButtonInfo(
   
 ### <a name="parameters"></a>參數  
  [in] `nIndex`  
- 按鈕時會設定其屬性的以零為起始的索引。  
+ 按鈕設定其屬性的以零為起始的索引。  
   
  [in] `nID`  
- 按鈕的命令 ID。  
+ 按鈕的命令識別碼。  
   
  [in] `nStyle`  
- 按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式清單。  
+ 按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
   
  [in] `iImage`  
- 按鈕 （也就是集合中的工具列影像的索引） 的以零為起始的映像索引。  
+ （也就是下工具列影像集合中索引） 的按鈕之以零為起始的映像索引。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，設定工具列按鈕的屬性。  
+ 呼叫此方法以設定工具列按鈕的屬性。  
   
- 在偵錯組建中，這個方法會產生判斷提示失敗如果所指定的索引`nIndex`不正確。  
+ 在偵錯組建中，這個方法會產生判斷提示失敗如果所指定的索引`nIndex`無效。  
   
- 呼叫[CMFCToolBar::SetButtonStyle](#setbuttonstyle)方法來設定按鈕的樣式。  
+ 呼叫[CMFCToolBar::SetButtonStyle](#setbuttonstyle)方法，以設定按鈕的樣式。  
   
 ##  <a name="setbuttons"></a>CMFCToolBar::SetButtons  
- 設定工具列按鈕。  
+ 集合的工具列按鈕。  
   
 ```  
 virtual BOOL SetButtons(
@@ -2744,21 +2744,21 @@ virtual BOOL SetButtons(
   
 ### <a name="parameters"></a>參數  
  [in] `lpIDArray`  
- 若要插入的命令 Id 的按鈕陣列指標。  
+ 要插入的命令 id 的按鈕陣列的指標。  
   
  [in] `nIDCount`  
  中的項目數`lpIDArray`。  
   
  [in] `bRemapImages`  
- 布林值，指定是否要將現有的按鈕影像與 [插入] 按鈕產生關聯。 如果這個參數是`TRUE`，影像會重新對應。  
+ 布林值，指定是否要將現有的按鈕影像與插入按鈕產生關聯。 如果這個參數是`TRUE`，影像會重新對應。  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功，則為非零，否則為零。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，從工具列移除現有的按鈕，並插入新按鈕的集合。  
+ 呼叫此方法以從工具列移除現有的按鈕，並插入新的按鈕的集合。  
   
- 這個方法會加入**自訂**按鈕的工具列和傳送`AFX_WM_RESETTOOLBAR`訊息給父視窗的工具列。 如需詳細資訊**自訂** 按鈕，請參閱[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)。  
+ 這個方法會加入**自訂**按鈕的工具列和傳送`AFX_WM_RESETTOOLBAR`工具列的父視窗的訊息。 如需有關**自訂**按鈕，請參閱[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)。  
   
 ##  <a name="setbuttonstyle"></a>CMFCToolBar::SetButtonStyle  
  設定指定索引處的工具列按鈕的樣式。  
@@ -2771,10 +2771,10 @@ virtual void SetButtonStyle(
   
 ### <a name="parameters"></a>參數  
  [in] `nIndex`  
- 設定為其樣式的工具列按鈕的以零為起始的索引。  
+ 工具列按鈕的樣式是要設定的以零為起始的索引。  
   
  [in] `nStyle`  
- 按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式清單。  
+ 按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
   
 ### <a name="remarks"></a>備註  
  這個方法會移除`TBBS_PRESSED`樣式如果`nStyle`是`TBBS_DISABLED`因為使用者不能按一下 已停用的按鈕。  
@@ -2802,7 +2802,7 @@ BOOL SetButtonText(
  這個方法會傳回`FALSE`如果提供的索引未參考有效的工具列按鈕。  
   
 ##  <a name="setcommandusageoptions"></a>CMFCToolBar::SetCommandUsageOptions  
- 指定當很少使用的命令未出現在應用程式的功能表中。  
+ 指定當很少使用的命令未出現在應用程式的功能表。  
   
 ```  
 static BOOL SetCommandUsageOptions(
@@ -2812,18 +2812,18 @@ static BOOL SetCommandUsageOptions(
   
 ### <a name="parameters"></a>參數  
  [in] `nStartCount`  
- 指定架構顯示只有基本] 和 [最近使用過的命令之前，必須先執行命令的次數。  
+ 指定在架構顯示只有基本] 和 [最近使用過的命令之前，必須先執行命令的次數。  
   
  [in] `nMinUsagePercentage`  
  必須考量的最近使用過的命令執行命令的時間百分比。  
   
 ### <a name="return-value"></a>傳回值  
- `FALSE`如果`nMinUsagePercentage`等於或大於 100，否則`TRUE`。  
+ `FALSE`如果`nMinUsagePercentage`等於或大於 100，否則為`TRUE`。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以自訂架構使用，以判斷如何基本和最近使用的功能表項目出現的演算法。 如需基本命令的詳細資訊，請參閱[CMFCToolBar::AddBasicCommand](#addbasiccommand)。  
+ 呼叫此方法以自訂的架構用來決定如何基本和最近使用的功能表項目出現的演算法。 如需基本命令的詳細資訊，請參閱[CMFCToolBar::AddBasicCommand](#addbasiccommand)。  
   
- 此類別會使用`CMFCCmdUsageCount`類別來追蹤使用量的命令。 如需此類別的詳細資訊，請參閱[CMFCCmdUsageCount 類別](../../mfc/reference/cmfccmdusagecount-class.md)。  
+ 這個類別會使用`CMFCCmdUsageCount`類別來追蹤使用方式的命令計數。 如需此類別的詳細資訊，請參閱[CMFCCmdUsageCount 類別](../../mfc/reference/cmfccmdusagecount-class.md)。  
   
 ##  <a name="setcustomizemode"></a>CMFCToolBar::SetCustomizeMode  
  啟用或停用應用程式中的所有工具列的自訂模式。  
@@ -2834,16 +2834,16 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>參數  
  [in] `bSet`  
- 布林值，指定是否要啟用或停用自訂模式。 這個參數設定為`TRUE`啟用自訂模式或`FALSE`停用它。  
+ 布林值，指定是否要啟用或停用自訂模式。 這個參數設定為`TRUE`若要啟用自訂模式或`FALSE`停用此功能。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果呼叫這個方法會變更自訂模式。否則`FALSE`。  
+ `TRUE`如果呼叫這個方法會變更的自訂模式。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會調整的版面配置，並重新繪製應用程式中，每個工具列。 呼叫[CMFCToolBar::IsCustomizeMode](#iscustomizemode)方法，以判斷應用程式中自訂模式  
+ 這個方法會調整的版面配置，並重新繪製應用程式中的每個工具列。 呼叫[CMFCToolBar::IsCustomizeMode](#iscustomizemode)方法，以判斷應用程式是否為自訂模式，  
   
 ##  <a name="setgraydisabledbuttons"></a>CMFCToolBar::SetGrayDisabledButtons  
- 指定是否無法使用工具列上的按鈕會以灰色顯示，或是否要使用按鈕無法使用的映像。  
+ 指定是否無法使用工具列上的按鈕會呈暗灰色，或是否使用按鈕無法使用映像。  
   
 ```  
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
@@ -2851,7 +2851,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
   
 ### <a name="parameters"></a>參數  
  [in] `bGrayDisabledButtons`  
- 布林值，指定如何顯示按鈕無法使用。 如果這個參數是`TRUE`，架構變暗的按鈕。 否則，架構會使用按鈕無法使用的影像的集合。  
+ 布林值，指定如何顯示按鈕無法使用。 如果這個參數是`TRUE`，架構會使按鈕變成灰色。 否則，架構會使用按鈕無法使用的影像的集合。  
   
 ### <a name="remarks"></a>備註  
  根據預設，無法使用的按鈕會呈暗灰色。  
@@ -2865,10 +2865,10 @@ void SetHeight(int cyHeight);
   
 ### <a name="parameters"></a>參數  
  [in] `cyHeight`  
- 在工具列中，單位為像素的高度。  
+ 工具列上，單位為像素的高度。  
   
 ### <a name="remarks"></a>備註  
- 將高度設定之後，這個方法會重繪工具列。  
+ 之後它設定的高度，這個方法會重繪工具列。  
   
 ##  <a name="sethelpmode"></a>CMFCToolBar::SetHelpMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -2905,15 +2905,15 @@ void SetHotBorder(BOOL bShowHotBorder);
   
 ### <a name="parameters"></a>參數  
  [in] `bShowHotBorder`  
- 布林值，指定是否要熱追蹤工具列按鈕。 如果這個參數是`TRUE`，工具列熱追蹤它的按鈕。 否則，工具列不會不熱追蹤它的按鈕。  
+ 布林值，指定是否要熱追蹤工具列按鈕。 如果這個參數是`TRUE`，工具列熱追蹤其按鈕。 否則，工具列不會不熱追蹤其按鈕。  
   
 ### <a name="remarks"></a>備註  
- 如果按鈕是熱追蹤，架構會反白顯示的按鈕時在滑鼠移過它。 根據預設，每個工具列熱追蹤它的按鈕。  
+ 如果按鈕熱追蹤，架構會反白顯示的按鈕時在滑鼠移動經過它。 根據預設，每個工具列熱追蹤其按鈕。  
   
- 呼叫[CMFCToolBar::GetHotBorder](#gethotborder)方法，以判斷是否工具列熱追蹤它的按鈕。  
+ 呼叫[CMFCToolBar::GetHotBorder](#gethotborder)方法，以判斷是否工具列熱追蹤其按鈕。  
   
 ##  <a name="sethottextcolor"></a>CMFCToolBar::SetHotTextColor  
- 設定作用的工具列按鈕的文字色彩。  
+ 設定作用中工具列按鈕的文字色彩。  
   
 ```  
 static void SetHotTextColor(COLORREF clrText);
@@ -2921,7 +2921,7 @@ static void SetHotTextColor(COLORREF clrText);
   
 ### <a name="parameters"></a>參數  
  [in] `clrText`  
- 指定的熱追蹤工具列按鈕的文字色彩。  
+ 指定熱追蹤的工具列按鈕的文字色彩。  
   
 ### <a name="remarks"></a>備註  
  如需熱追蹤工具列按鈕的詳細資訊，請參閱[CMFCToolBar::GetHotBorder](#gethotborder)和[CMFCToolBar::SetHotBorder](#sethotborder)。  
@@ -2947,14 +2947,14 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
   
 ### <a name="parameters"></a>參數  
  [in] `bLargeIcons`  
- 布林值，指定要使用的圖示。 如果這個參數是`TRUE`，架構會顯示大圖示。 否則，架構會顯示一般的圖示。  
+ 布林值，指定要使用的圖示。 如果這個參數是`TRUE`，架構會顯示大圖示。 否則，架構會顯示規則的圖示。  
   
 ### <a name="remarks"></a>備註  
- 在使用者變更的狀態時，架構會呼叫這個方法**大圖示**中核取方塊**選項** 索引標籤的**自訂**對話方塊。 這個方法會調整大小的應用程式中所有的工具列。  
+ 使用者變更的狀態時，架構會呼叫這個方法**大圖示**中核取方塊**選項** 索引標籤**自訂** 對話方塊。 這個方法會調整大小的所有應用程式中的工具列。  
   
- 根據預設，架構會顯示一般的圖示。  
+ 根據預設，架構會顯示規則的圖示。  
   
- 如需詳細資訊**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
+ 如需有關**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
   
 ##  <a name="setlockedsizes"></a>CMFCToolBar::SetLockedSizes  
  在工具列上設定鎖定的按鈕和鎖定的映像的大小。  
@@ -2974,10 +2974,10 @@ void SetLockedSizes(
  指定鎖定的工具列影像的大小。  
   
  `bDontScale`  
- 指定是否要調整鎖定工具列影像在高 DPI 模式。  
+ 指定是否調整或無法鎖定工具列影像在高 DPI 模式中。  
   
 ### <a name="remarks"></a>備註  
- 已鎖定 按鈕的預設大小為 23 x 22 像素。 鎖定的映像的預設大小為 16 x 15 像素。  
+ 鎖定按鈕的預設大小為 23 x 22 像素。 鎖定的映像的預設大小為 16 x 15 像素。  
   
  呼叫[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)方法來擷取的大小鎖定映像。 呼叫[CMFCToolBar::GetButtonSize](#getbuttonsize)方法來擷取的大小鎖定工具列按鈕。  
   
@@ -2994,7 +2994,7 @@ void SetMaskMode(BOOL bMasked);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setmenusizes"></a>CMFCToolBar::SetMenuSizes  
- 設定功能表的工具列按鈕和其影像的大小。  
+ 設定工具列功能表按鈕和其映像的大小。  
   
 ```  
 static void __stdcall SetMenuSizes(
@@ -3010,14 +3010,14 @@ static void __stdcall SetMenuSizes(
  指定工具列影像的大小，單位為像素。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，功能表按鈕和其映像有未定義的大小。  
+ 根據預設，功能表按鈕和其映像具有未定義的大小。  
   
  呼叫[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)方法，以判斷功能表按鈕的大小和[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)方法，以判斷功能表按鈕影像的大小。  
   
- 請參閱 IEDemo 和 MSMoneyDemo 範例的範例，請使用這個方法。  
+ 如需範例，請使用這個方法的 IEDemo 和 MSMoneyDemo 範例，請參閱。  
   
 ##  <a name="setnonpermittedcommands"></a>CMFCToolBar::SetNonPermittedCommands  
- 設定無法由使用者執行的命令清單。  
+ 設定無法在使用者所執行的命令清單。  
   
 ```  
 static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
@@ -3025,26 +3025,26 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
   
 ### <a name="parameters"></a>參數  
  [in] `lstCommands`  
- 參考`CList`物件，其中包含無法由使用者執行的命令。  
+ 若要參考`CList`物件，其中包含無法在使用者所執行的命令。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，以防止使用者選取特定命令。 比方說，您可能想要防止使用者選取特定的命令，基於安全性考量。 請參閱 MDITabsDemo 和 MenuSubSet 範例的範例，請使用這個方法。  
+ 呼叫此方法以防止使用者選取特定命令。 例如，您可以防止使用者選取特定的命令，基於安全性考量。 請參閱 MDITabsDemo 和 MenuSubSet 範例如需範例，使用這個方法。  
   
- 這個方法會清除前一份不允許的命令。 根據預設，不允許的命令清單是空的。  
+ 這個方法會清除先前的非允許的命令清單。 根據預設，不允許的命令的清單是空的。  
   
-##  <a name="setonerowwithsibling"></a>CMFCToolBar::SetOneRowWithSibling  
- 在工具列和其同層級置於相同的資料列。  
+##  <a name="setonerowwithsibling"></a>Cmfctoolbar:: Setonerowwithsibling  
+ 工具列和其同層級置於相同的資料列。  
   
 ```  
 void SetOneRowWithSibling();
 ```  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，當使用者按一下**按鈕顯示於資料列的資料上** 按鈕。  
+ 架構會呼叫這個方法，當使用者按一下**在一個資料列上顯示按鈕** 按鈕。  
   
- 呼叫[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)方法，讓**按鈕顯示於資料列的資料上**或**按鈕顯示於兩個資料列上**按鈕。 如果您呼叫[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)工具列，同層級工具列會移至這個工具列的資料列。 否則，此工具列會移到同層級的資料列。  
+ 呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)方法，以啟用**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕。 如果您呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)對於此工具列，同層級工具列會移動到此工具列的資料列。 否則，此工具列會移到同層級的資料列。  
   
- 這個架構會呼叫[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)方法，當使用者按一下**按鈕顯示於兩個資料列上** 按鈕。  
+ 這個架構會呼叫[cmfctoolbar:: Settworowswithsibling](#settworowswithsibling)方法，當使用者按一下**在兩個資料列上顯示按鈕** 按鈕。  
   
 ##  <a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -3075,7 +3075,7 @@ void SetPermament(BOOL bPermament=TRUE);
  呼叫[CMFCToolBar::CanBeClosed](#canbeclosed)方法，以判斷使用者是否可以關閉工具列。  
   
 ##  <a name="setroutecommandsviaframe"></a>CMFCToolBar::SetRouteCommandsViaFrame  
- 指定是否在父框架或擁有者將命令傳送至工具列。  
+ 指定是否在父框架或擁有者的命令傳送至工具列。  
   
 ```  
 void SetRouteCommandsViaFrame(BOOL bValue);
@@ -3086,10 +3086,10 @@ void SetRouteCommandsViaFrame(BOOL bValue);
  如果這個參數是`TRUE`，父框架將命令傳送至工具列。 否則，擁有者會將命令傳送至工具列。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，父框架會將命令傳送至工具列。 呼叫[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)方法，以判斷是否父框架或擁有者將命令傳送至工具列。  
+ 根據預設，父框架會將命令傳送至工具列。 呼叫[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)方法，以判斷是否父框架或擁有者的命令傳送至工具列。  
   
 ##  <a name="setshowtooltips"></a>CMFCToolBar::SetShowTooltips  
- 指定是否，架構會顯示工具提示。  
+ 指定是否 framework 顯示在工具提示。  
   
 ```  
 static void SetShowTooltips(BOOL bValue);
@@ -3100,11 +3100,11 @@ static void SetShowTooltips(BOOL bValue);
  如果這個參數是`TRUE`，架構會顯示工具提示。 否則，架構會隱藏工具提示。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，架構會顯示工具提示。  
+ 根據預設，此架構會顯示工具提示。  
   
- 呼叫[CMFCToolBar::GetShowTooltips](#getshowtooltips)方法，以判斷是否架構顯示工具提示。  
+ 呼叫[CMFCToolBar::GetShowTooltips](#getshowtooltips)方法，以判斷是否在架構顯示工具提示。  
   
-##  <a name="setsiblingtoolbar"></a>CMFCToolBar::SetSiblingToolBar  
+##  <a name="setsiblingtoolbar"></a>Cmfctoolbar:: Setsiblingtoolbar  
  指定工具列的同層級。  
   
 ```  
@@ -3116,14 +3116,14 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
  同層級工具列指標。  
   
 ### <a name="remarks"></a>備註  
- 這個方法可讓**按鈕顯示於資料列的資料上**或**按鈕顯示於兩個資料列上**使用者顯示時，所顯示的按鈕**自訂**快顯功能表。 當您想要讓使用者能夠指定是否要在相同的資料列或不同的資料列上顯示相關的工具列，請呼叫這個方法。  
+ 這個方法可讓**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**使用者顯示時，所顯示的按鈕**自訂**快顯功能表。 當您想要讓使用者能夠指定是否要在相同的資料列或不同的資料列上顯示相關的工具列，請呼叫這個方法。  
   
- 啟用之後，您呼叫這個方法**自訂**會出現在工具列的按鈕。 若要啟用**自訂** 按鈕，請呼叫[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)方法。  
+ 呼叫這個方法，啟用之後，您**自訂**會出現在工具列的按鈕。 若要啟用**自訂**按鈕，請呼叫[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)方法。  
   
  若要擷取工具列的同層級，請呼叫[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)。  
   
 ##  <a name="setsizes"></a>CMFCToolBar::SetSizes  
- 指定所有的工具列按鈕和影像的大小。  
+ 指定所有工具列按鈕和映像的大小。  
   
 ```  
 static void __stdcall SetSizes(
@@ -3133,7 +3133,7 @@ static void __stdcall SetSizes(
   
 ### <a name="parameters"></a>參數  
  [in] `sizeButton`  
- 工具列按鈕，單位為像素的大小。  
+ 工具列按鈕，像素為單位的大小。  
   
  [in] `sizeImage`  
  工具列按鈕影像像素為單位的大小。  
@@ -3156,35 +3156,35 @@ void SetToolBarBtnText(
   
 ### <a name="parameters"></a>參數  
  [in] `nBtnIndex`  
- 工具列按鈕的工具列按鈕清單中以零為起始的索引。  
+ 工具列按鈕清單中的工具列按鈕之以零為起始的索引。  
   
  [in] `szText`  
- 指定工具列按鈕的文字的標籤。  
+ 指定工具列按鈕的文字標籤。  
   
  [in] `bShowText`  
- 如果這個參數是`TRUE`，架構會顯示文字標籤。 否則，架構會隱藏文字標籤。  
+ 如果這個參數是`TRUE`，架構會顯示文字標籤。 否則，架構會隱藏的文字標籤。  
   
  [in] `bShowImage`  
  如果這個參數是`TRUE`，架構會顯示工具列按鈕影像。 否則，架構會隱藏工具列按鈕影像。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，架構會顯示工具列按鈕的影像，但不會顯示的工具列按鈕的文字標籤。  
+ 根據預設，架構會顯示工具列按鈕的影像，但不會顯示工具列按鈕的文字標籤。  
   
- 在偵錯組建中，這個方法會產生判斷提示失敗如果`nBtnIndex`未參考有效的工具列按鈕或工具列按鈕是分隔符號。  
+ 在偵錯組建中，這個方法會產生判斷提示失敗如果`nBtnIndex`未參考有效的工具列按鈕或工具列按鈕為分隔符號。  
   
-##  <a name="settworowswithsibling"></a>CMFCToolBar::SetTwoRowsWithSibling  
- 在工具列和其同層級置於個別的資料列。  
+##  <a name="settworowswithsibling"></a>Cmfctoolbar:: Settworowswithsibling  
+ 工具列和其同層級置於個別的資料列。  
   
 ```  
 void SetTwoRowsWithSibling();
 ```  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，當使用者按一下**按鈕顯示於兩個資料列上** 按鈕。  
+ 架構會呼叫這個方法，當使用者按一下**在兩個資料列上顯示按鈕** 按鈕。  
   
- 呼叫[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)方法，讓**按鈕顯示於資料列的資料上**或**按鈕顯示於兩個資料列上**按鈕。 如果您呼叫[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)工具列，同層級工具列會移至不同的資料列。 否則，此工具列會移至不同的資料列。  
+ 呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)方法，以啟用**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕。 如果您呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)對於此工具列，同層級工具列會移動到個別的資料列。 否則，此工具列會移至不同的資料列。  
   
- 這個架構會呼叫[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)方法，當使用者按一下**按鈕顯示於資料列的資料上** 按鈕。  
+ 這個架構會呼叫[cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling)方法，當使用者按一下**在一個資料列上顯示按鈕** 按鈕。  
   
 ##  <a name="setuserimages"></a>CMFCToolBar::SetUserImages  
  應用程式中設定使用者定義的映像的集合。  
@@ -3198,19 +3198,19 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
  指標的使用者定義的影像集合。  
   
 ### <a name="return-value"></a>傳回值  
- 如果方法成功則為非零否則就是 0 指定`CMFCToolBarImages`物件無效，或在工具列的預設映像大小不同的映像大小。  
+ 如果方法成功則為非零否則為 0 指定`CMFCToolBarImages`物件無效，或從工具列的預設映像大小不同的映像大小。  
   
 ### <a name="remarks"></a>備註  
- 架構會使用使用者定義的影像繪製由使用者自訂的工具列按鈕。 所指定的映像清單`pUserImages`共用應用程式中所有的工具列。  
+ 架構會使用使用者定義的映像繪製使用者所自訂的工具列按鈕。 所指定的映像清單`pUserImages`共用應用程式中所有的工具列。  
   
- 這個方法會產生判斷提示失敗偵錯組建中若指定`CMFCToolBarImages`物件無效，或在工具列的預設映像大小不同的映像大小。  
+ 這個方法會產生判斷提示失敗偵錯組建中若指定`CMFCToolBarImages`物件無效，或從工具列的預設映像大小不同的映像大小。  
   
- OutlookDemo、 ToolTipDemo 和 VisualStudioDemo 範例會使用此方法來設定全域集合的使用者定義的映像。 載入名為 UserImages.bmp，位於應用程式的工作目錄中的檔案。  
+ OutlookDemo、 ToolTipDemo 和 VisualStudioDemo 範例會使用這個方法來設定全域集合的使用者定義的映像。 這些載入名為 UserImages.bmp 位於應用程式的工作目錄中的檔案。  
   
  呼叫[CMFCToolBar::GetUserImages](#getuserimages)方法來擷取應用程式中使用者定義的映像的集合。  
   
 ##  <a name="stretchpane"></a>CMFCToolBar::StretchPane  
- 垂直或水平延伸工具列，必要時重新定位的按鈕。  
+ 垂直或水平伸展工具列和按鈕重新調整位置，如有必要。  
   
 ```  
 virtual CSize StretchPane(
@@ -3220,16 +3220,16 @@ virtual CSize StretchPane(
   
 ### <a name="parameters"></a>參數  
  [in] `nLength`  
- 用來拉長窗格像素為單位數量。  
+ 數量，以像素為單位，所要依據伸展窗格。  
   
  [in] `bVert`  
- 如果`TRUE`，垂直延伸 窗格。 如果`FALSE`，水平延伸 窗格。  
+ 如果`TRUE`，垂直伸展窗格。 如果`FALSE`，水平伸展窗格。  
   
 ### <a name="return-value"></a>傳回值  
- A`CSize`物件，指定工具列工作區的大小。  
+ A`CSize`物件，指定工具列用戶端區域的大小。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫[CMFCToolBar::WrapToolBar](#wraptoolbar)重新定位內延展工具列按鈕。  
+ 這個方法會呼叫[CMFCToolBar::WrapToolBar](#wraptoolbar)來重新調整位置內 [延展] 工具列按鈕。  
   
  傳回值由呼叫[CMFCToolBar::CalcSize](#calcsize)。  
   
@@ -3242,16 +3242,16 @@ virtual BOOL TranslateChar(UINT nChar);
   
 ### <a name="parameters"></a>參數  
  [in] `nChar`  
- 指定以虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 winuser.h.  
+ 指定虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
   
 ### <a name="return-value"></a>傳回值  
- `FALSE`如果指定的按鍵碼無法列印，或者沒有對應至有效的鍵盤快速鍵。`TRUE` ，如果指定的按鍵碼對應至下拉式選單選項; 否則傳回值從[CMFCToolBar::ProcessCommand](#processcommand)。  
+ `FALSE`如果指定的按鍵碼是不可列印或未對應至有效的鍵盤快速鍵。`TRUE`如果指定的按鍵碼對應至一個下拉式功能表選項; 否則傳回值從[CMFCToolBar::ProcessCommand](#processcommand)。  
   
 ### <a name="remarks"></a>備註  
- 按鍵與 Alt 鍵時，架構會呼叫這個方法。  
+ Alt 鍵與按下按鍵時，架構會呼叫這個方法。  
   
 ##  <a name="updatebutton"></a>CMFCToolBar::UpdateButton  
- 更新指定的按鍵的狀態。  
+ 更新指定的按鈕狀態。  
   
 ```  
 void UpdateButton(int nIndex);
@@ -3264,7 +3264,7 @@ void UpdateButton(int nIndex);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="wraptoolbar"></a>CMFCToolBar::WrapToolBar  
- 重新放置在指定的維度內的工具列按鈕。  
+ 重新調整位置指定的維度內的工具列按鈕。  
   
 ```  
 int WrapToolBar(
@@ -3277,28 +3277,28 @@ int WrapToolBar(
   
 ### <a name="parameters"></a>參數  
  [in] `nWidth`  
- 在工具列的最大寬度。  
+ 工具列的最大寬度。  
   
  [in] `nHeight`  
- 在工具列的最大高度。 如果不會使用浮動工具列。  
+ 工具列的最大高度。 如果不會使用浮動工具列。  
   
  [in] `pDC`  
  裝置內容的指標。 如果是 NULL，則會使用工具列的裝置內容。  
   
  [in] `nColumnWidth`  
- 按鈕的寬度。 如果為-1，則會使用目前的寬度。  
+ 按鈕的寬度。 如果-1，則會使用目前的寬度。  
   
  [] in m`nRowHeight`  
- 按鈕的高度。 如果為-1，則會使用目前的高度。  
+ 按鈕的高度。 如果-1，則會使用目前的高度。  
   
 ### <a name="return-value"></a>傳回值  
  工具列按鈕的資料列數目。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會重新定位在包裝其他資料列，如有必要的按鈕的工具列中的按鈕。  
+ 這個方法會重新調整位置工具列上，包裝按鈕，如有必要，其他資料列中的按鈕。  
   
 ##  <a name="m_bdontscaleimages"></a>CMFCToolBar::m_bDontScaleImages  
- 指定要在高 DPI 模式中調整工具列影像。  
+ 指定要在高 DPI 模式縮放工具列影像。  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bDontScaleImages;  
@@ -3312,7 +3312,7 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
  [CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)   
  [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)   
  [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
- [逐步解說︰ 將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

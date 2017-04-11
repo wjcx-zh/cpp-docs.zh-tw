@@ -52,9 +52,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 4cb2a10982ce42f94925b18f1b20ef72f3c3f83a
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
@@ -70,7 +70,7 @@ class CSpinButtonCtrl : public CWnd
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|建構 `CSpinButtonCtrl` 物件。|  
   
@@ -264,10 +264,10 @@ void GetRange32(
   
 ### <a name="parameters"></a>參數  
  *較低*  
- 接收控制項下限的整數的參考。  
+ 整數，接收控制項的較低限制的參考。  
   
  *上限*  
- 接收控制項上限的整數的參考。  
+ 接收控制項的最高上限的整數的參考。  
   
 ### <a name="return-value"></a>傳回值  
  第一個版本會傳回 32 位元值，包含上限和下限。 低序位字組的控制項，上限，而高序位文字較低的限制。  
@@ -361,8 +361,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nLower`和`nUpper`  
- 上限和下限的控制項。 如`SetRange`，都沒有限制可能會大於**UD_MAXVAL**或小於**UD_MINVAL**; 此外，不能超過兩個限制之間的差異**UD_MAXVAL**。 `SetRange32`沒有任何限制置於限制;使用任何整數。  
+ `nLower` 和 `nUpper`  
+ 上限和下限控制項。 如`SetRange`，都沒有限制可能會大於**UD_MAXVAL**或小於**UD_MINVAL**; 此外，不能超過兩個限制之間的差異**UD_MAXVAL**。 `SetRange32`沒有任何限制置於限制;使用任何整數。  
   
 ### <a name="remarks"></a>備註  
  成員函式`SetRange32`設定微調按鈕控制項的 32 位元範圍。  

@@ -1,5 +1,5 @@
 ---
-title: "Ccomsafearray 的 Safearray 類別 |Microsoft 文件"
+title: "CComSafeArray 類別 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -57,9 +57,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e78c0cb7a0e2fb6cc1e1ac4bba9186d4beee98b4
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 類別
@@ -80,21 +80,21 @@ class CComSafeArray
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|建構函式。|  
-|[Ccomsafearray 的 Safearray:: ~ ccomsafearray 的 Safearray](#dtor)|解構函式。|  
+|[CComSafeArray:: ~ CComSafeArray](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComSafeArray::Add](#add)|將一或多個項目 (或 **SAFEARRAY** 結構) 加入 `CComSafeArray`。|  
 |[CComSafeArray::Attach](#attach)|將 **SAFEARRAY** 結構附加至 `CComSafeArray` 物件。|  
 |[CComSafeArray::CopyFrom](#copyfrom)|將 **SAFEARRAY** 結構的內容複製到 `CComSafeArray` 物件中。|  
 |[CComSafeArray::CopyTo](#copyto)|建立 `CComSafeArray` 物件的複本。|  
-|[CComSafeArray::Create](#create)|建立 `CComSafeArray` 物件。|  
-|[CComSafeArray::Destroy](#destroy)|終結 `CComSafeArray` 物件。|  
+|[Ccomsafearray:: Create](#create)|建立 `CComSafeArray` 物件。|  
+|[Ccomsafearray:: Destroy](#destroy)|終結 `CComSafeArray` 物件。|  
 |[CComSafeArray::Detach](#detach)|從 **物件卸離** SAFEARRAY `CComSafeArray` 。|  
 |[CComSafeArray::GetAt](#getat)|從一維陣列中擷取單一項目。|  
 |[CComSafeArray::GetCount](#getcount)|傳回陣列中的元素數目。|  
@@ -111,7 +111,7 @@ class CComSafeArray
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|將值轉換成 **SAFEARRAY** 指標。|  
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|從陣列中擷取項目。|  
@@ -125,13 +125,13 @@ class CComSafeArray
 |[CComSafeArray::m_psa](#m_psa)|此資料成員包含 **SAFEARRAY** 結構的位址。|  
   
 ## <a name="remarks"></a>備註  
- `CComSafeArray`提供的包裝函式[SAFEARRAY 資料型別](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)類別，讓它的簡單的方式來建立及管理單一和多維度陣列幾乎是任何支援變數的型別。  
+ `CComSafeArray`提供的包裝函式[SAFEARRAY 資料型別](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)類別，因此很容易的事來建立及管理幾乎任何支援 VARIANT 類型的單一和多維度陣列。  
   
  `CComSafeArray` 不僅簡化了在處理序之間傳遞陣列的作業，還藉由針對上下限檢查陣列索引值，來提供額外的安全性。  
   
  `CComSafeArray` 的下限開頭可以是任何使用者定義值；不過，透過 C++ 存取的陣列應該使用下限 0。 Visual Basic 等其他語言可能會使用其他界限值 (例如 -10 到 10)。  
   
- 使用[CComSafeArray::Create](#create)建立`CComSafeArray`物件，和[CComSafeArray::Destroy](#destroy)將它刪除。  
+ 使用[ccomsafearray:: Create](#create)建立`CComSafeArray`物件，和[ccomsafearray:: Destroy](#destroy)將它刪除。  
   
  `CComSafeArray` 可包含以下 VARIANT 資料類型的子集︰  
   
@@ -157,7 +157,7 @@ class CComSafeArray
  **標頭︰** atlsafe.h  
   
 ## <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities #&75;](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities # 75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  將一或多個項目 (或 **SAFEARRAY** 結構) 加入 `CComSafeArray`。  
@@ -176,21 +176,21 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
  要加入至陣列的物件數目。  
   
  *pT*  
- 若要加入至陣列的一或多個物件指標。  
+ 若要新增到陣列中的一或多個物件指標。  
   
  *t*  
- 若要加入至陣列物件的參考。  
+ 若要新增到陣列中物件的參考。  
   
  `bCopy`  
- 指出是否應該建立一份資料。 預設值是**TRUE**。  
+ 指出是否應該建立資料的複本。 預設值是**TRUE**。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 新的物件會附加至現有的結尾**SAFEARRAY**物件。 將物件加入至多維度**SAFEARRAY**不支援物件。 新增現有物件的陣列，當兩個陣列必須包含相同類型的項目。  
+ 新的物件會附加至現有的結尾**SAFEARRAY**物件。 將物件加入至多維度**SAFEARRAY**不支援物件。 新增現有物件的陣列，這兩個陣列必須包含相同類型的項目。  
   
- `bCopy`旗標考慮到當項目類型的`BSTR`或**VARIANT**會加入至陣列。 預設值的**TRUE**會確保新的複本是資料的項目加入至陣列時。  
+ `bCopy`旗標列入考量時類型的項目`BSTR`或**VARIANT**會加入至陣列。 預設值**TRUE**會確保新的複本是資料的項目加入至陣列時。  
   
 ##  <a name="attach"></a>CComSafeArray::Attach  
  將 **SAFEARRAY** 結構附加至 `CComSafeArray` 物件。  
@@ -230,7 +230,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
  陣列中的項目數。  
   
  `lLBound`  
- 下限值。也就是說，陣列中的第一個元素的索引。  
+ 下限值。也就是說，陣列中第一個項目的索引。  
   
  `pBound`  
  指標**SAFEARRAYBOUND**結構。  
@@ -239,15 +239,15 @@ CComSafeArray(const SAFEARRAY* psaSrc);
  陣列中的維度數目。  
   
  `saSrc`  
- 參考**SAFEARRAY**結構或`CComSafeArray`物件。 在任一情況下建構函式會使用這個參考陣列的複本，讓建構完成之後不參考之陣列。  
+ 若要參考**SAFEARRAY**結構或`CComSafeArray`物件。 在任一情況下建構函式會使用這個參考陣列的複本以便完成建構後未參考陣列。  
   
  `psaSrc`  
- 指標**SAFEARRAY**結構。 建構函式會使用這個位址，陣列的複本，讓建構完成之後不參考之陣列。  
+ 指標**SAFEARRAY**結構。 建構函式會使用這個位址製作的陣列，以便完成建構後未參考陣列。  
   
 ### <a name="remarks"></a>備註  
  建立 `CComSafeArray` 物件。  
   
-##  <a name="dtor"></a>Ccomsafearray 的 Safearray:: ~ ccomsafearray 的 Safearray  
+##  <a name="dtor"></a>CComSafeArray:: ~ CComSafeArray  
  解構函式。  
   
 ```
@@ -272,7 +272,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個方法的內容複製**SAFEARRAY**到目前`CComSafeArray`物件。 會取代現有的陣列的內容。  
+ 這個方法會複製的內容**SAFEARRAY**到目前`CComSafeArray`物件。 取代現有陣列的內容。  
   
 ##  <a name="copyto"></a>CComSafeArray::CopyTo  
  建立 `CComSafeArray` 物件的複本。  
@@ -289,9 +289,9 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個方法的內容複製`CComSafeArray`物件插入**SAFEARRAY**結構。  
+ 這個方法會複製的內容`CComSafeArray`物件插入**SAFEARRAY**結構。  
   
-##  <a name="create"></a>CComSafeArray::Create  
+##  <a name="create"></a>Ccomsafearray:: Create  
  建立 `CComSafeArray`。  
   
 ```
@@ -310,15 +310,15 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
  陣列中的項目數。  
   
  `lLBound`  
- 下限值。也就是說，陣列中的第一個元素的索引。  
+ 下限值。也就是說，陣列中第一個項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- A`CComSafeArray`物件可以建立從現有**SAFEARRAYBOUND**結構和數字的維度，或藉由在陣列與下限指定的項目數。 如果陣列是從 Visual c + + 存取，而下限應該是 0。 其他語言可能可以使用其他值下限 （例如，項目，例如-10 到 10 的範圍的 Visual Basic 支援陣列）。  
+ A`CComSafeArray`物件可以建立從現有**SAFEARRAYBOUND**結構和數字的維度，或藉由在陣列與下限指定的項目數。 如果陣列是從 Visual c + + 存取，而下限應該是 0。 其他語言可能會允許其他值作為下限 （例如，項目，例如-10 到 10 範圍的 Visual 基本支援陣列）。  
   
-##  <a name="destroy"></a>CComSafeArray::Destroy  
+##  <a name="destroy"></a>Ccomsafearray:: Destroy  
  終結 `CComSafeArray` 物件。  
   
 ```
@@ -339,7 +339,7 @@ LPSAFEARRAY Detach();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回的指標**SAFEARRAY**物件。  
+ 將指標傳回至**SAFEARRAY**物件。  
   
 ### <a name="remarks"></a>備註  
  這個方法會卸離**SAFEARRAY**物件從`CComSafeArray`物件。  
@@ -367,13 +367,13 @@ ULONG GetCount(UINT uDim = 0) const;
   
 ### <a name="parameters"></a>參數  
  `uDim`  
- 陣列的維度。  
+ 陣列維度。  
   
 ### <a name="return-value"></a>傳回值  
  傳回陣列中的元素數目。  
   
 ### <a name="remarks"></a>備註  
- 多維陣列搭配使用時，這個方法會傳回的項目數特定維度中。  
+ 多維陣列搭配使用時，這個方法會在特定維度中傳回的項目數。  
   
 ##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
  傳回陣列中的維度數目。  
@@ -394,13 +394,13 @@ LONG GetLowerBound(UINT uDim = 0) const;
   
 ### <a name="parameters"></a>參數  
  `uDim`  
- 要取得最小值的陣列維度。 如果省略，預設值為 0。  
+ 用來取得下限陣列維度。 如果省略，預設值為 0。  
   
 ### <a name="return-value"></a>傳回值  
  傳回下限。  
   
 ### <a name="remarks"></a>備註  
- 如果下限為 0，這表示類似 C 陣列，其第一個項目都是項目編號 0。 發生錯誤時，例如，無效的維度引數，這個方法會呼叫`AtlThrow`，描述錯誤的 HRESULT。  
+ 如果下限為 0，這表示類似 C 陣列，其第一個項目都是項目號碼 0。 發生錯誤時，例如，無效的維度引數，這個方法會呼叫`AtlThrow`，描述錯誤的 HRESULT。  
   
 ##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
  傳回 `m_psa` 資料成員的位址。  
@@ -410,7 +410,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回的指標[CComSafeArray::m_psa](#m_psa)資料成員。  
+ 將指標傳回至[CComSafeArray::m_psa](#m_psa)資料成員。  
   
 ##  <a name="gettype"></a>CComSafeArray::GetType  
  傳回陣列中儲存之資料的類型。  
@@ -449,10 +449,10 @@ LONG GetUpperBound(UINT uDim = 0) const;
   
 ### <a name="parameters"></a>參數  
  `uDim`  
- 要取得上限的陣列維度。 如果省略，預設值為 0。  
+ 用來取得上限陣列維度。 如果省略，預設值為 0。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回上限。 這個值是內含值，這個維度的最大的有效索引。  
+ 傳回上限。 （含），這個值會是這個維度的最大的有效索引。  
   
 ### <a name="remarks"></a>備註  
  發生錯誤時，例如，無效的維度引數，這個方法會呼叫`AtlThrow`，描述錯誤的 HRESULT。  
@@ -465,10 +465,10 @@ bool IsSizable() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**如果`CComSafeArray`可調整大小， **false**如果不行。  
+ 傳回**true**如果`CComSafeArray`可以調整大小， **false**如果不行。  
   
 ##  <a name="m_psa"></a>CComSafeArray::m_psa  
- 保留的位址**SAFEARRAY**結構的存取。  
+ 保存的位址**SAFEARRAY**存取的結構。  
   
 ```
 LPSAFEARRAY m_psa;
@@ -483,7 +483,7 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
   
 ### <a name="parameters"></a>參數  
  `alIndex`  
- 指標的陣列中每個維度的索引向量。 最左邊 （最大） 的維度是`alIndex`[0] *。*  
+ 向量的每個維度索引陣列中的指標。 最左邊的 （最大） 維度是`alIndex[0]`。  
   
  *t*  
  傳回資料的參考。  
@@ -500,7 +500,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
   
 ### <a name="parameters"></a>參數  
  `alIndex`  
- 指標的陣列中每個維度的索引向量。 最右邊 （最不重要） 的維度是`alIndex`[0]。  
+ 向量的每個維度索引陣列中的指標。 最右邊 （最小顯著性） 維度是`alIndex`[0]。  
   
  *T*  
  指定新項目的值。  
@@ -527,7 +527,7 @@ T& operator[]int nindex) const;
  傳回適當的陣列項目。  
   
 ### <a name="remarks"></a>備註  
- 執行類似的功能[CComSafeArray::GetAt](#getat)，但是這個運算子只能搭配一維陣列。  
+ 執行類似的函數，以[CComSafeArray::GetAt](#getat)，但是這個運算子只能搭配一維陣列。  
   
 ##  <a name="operator_eq"></a>CComSafeArray::operator =  
  指派運算子。  
@@ -567,10 +567,10 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
   
 ### <a name="parameters"></a>參數  
  `pBound`  
- 指標**SAFEARRAYBOUND**結構，其中包含有關項目的數目和陣列的下限。  
+ 指標**SAFEARRAYBOUND**結構，其中包含有關項目數目和陣列的下限。  
   
  `ulCount`  
- 要求的已調整大小的陣列中的物件數目。  
+ 要求的調整大小的陣列中的物件數目。  
   
  `lLBound`  
  下限。  
@@ -579,7 +579,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個方法只會調整大小的最右邊的維度。 它不會調整大小，傳回的陣列**IsResizable**為**false**。  
+ 這個方法只會調整大小最右側的維度。 它不會調整大小的陣列傳回**IsResizable**為**false**。  
   
 ##  <a name="setat"></a>CComSafeArray::SetAt  
  設定一維陣列中的項目值。  
@@ -596,17 +596,17 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
  指定的項目新值。  
   
  `bCopy`  
- 指出是否應該建立一份資料。 預設值是**TRUE**。  
+ 指出是否應該建立資料的複本。 預設值是**TRUE**。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- `bCopy`旗標考慮到當項目類型的`BSTR`或**VARIANT**會加入至陣列。 預設值的**TRUE**會確保新的複本是資料的項目加入至陣列時。  
+ `bCopy`旗標列入考量時類型的項目`BSTR`或**VARIANT**會加入至陣列。 預設值**TRUE**會確保新的複本是資料的項目加入至陣列時。  
   
 ## <a name="see-also"></a>另請參閱  
  [SAFEARRAY 資料類型](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
- [CComSafeArray::Create](#create)   
- [CComSafeArray::Destroy](#destroy)   
+ [Ccomsafearray:: Create](#create)   
+ [Ccomsafearray:: Destroy](#destroy)   
  [類別概觀](../../atl/atl-class-overview.md)
 

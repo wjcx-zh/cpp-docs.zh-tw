@@ -42,9 +42,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 60958f328d78205c3432f35ed4e3e3c4b652ebfe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: ac817cedb4c7ed67e698969b14645f5659aab2ad
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 類別
@@ -68,22 +68,22 @@ class CComContainedObject : public Base
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|建構函式。 初始化擁有者物件的成員指標`IUnknown`。|  
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CComContainedObject::AddRef](#addref)|擁有者物件上的參考計數遞增。|  
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|擷取擁有者物件`IUnknown`。|  
-|[CComContainedObject::QueryInterface](#queryinterface)|擷取要求的擁有者物件的介面指標。|  
-|[CComContainedObject::Release](#release)|遞減參考計數的擁有者物件。|  
+|[CComContainedObject::QueryInterface](#queryinterface)|擷取擁有者物件上所要求介面的指標。|  
+|[CComContainedObject::Release](#release)|擁有者物件的參考計數遞減。|  
   
 ## <a name="remarks"></a>備註  
- 使用 ATL`CComContainedObject`類別中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，和[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject`實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以**IUnknown**。 （擁有者是外部物件的彙總或為其建立撕介面的物件）。`CComContainedObject`呼叫`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，和`OuterRelease`，透過所有繼承`Base`。  
+ 使用 ATL`CComContainedObject`類別中[CComAggObject](../../atl/reference/ccomaggobject-class.md)， [CComPolyObject](../../atl/reference/ccompolyobject-class.md)，和[CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)。 `CComContainedObject`實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以**IUnknown**。 （擁有者是在外部物件的彙總或為其建立的分割介面的物件）。`CComContainedObject`呼叫`CComObjectRootEx`的`OuterQueryInterface`， `OuterAddRef`，和`OuterRelease`、 透過所有繼承`Base`。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `Base`  
@@ -91,7 +91,7 @@ class CComContainedObject : public Base
  `CComContainedObject`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰**於 atlcom.h  
+ **標頭︰** atlcom.h  
   
 ##  <a name="addref"></a>CComContainedObject::AddRef  
  擁有者物件上的參考計數遞增。  
@@ -138,10 +138,10 @@ IUnknown* GetControllingUnknown();
  擁有者物件**IUnknown**。  
   
 ### <a name="remarks"></a>備註  
- 這個方法可能是虛擬如果`Base`已宣告[DECLARE_GET_CONTROLLING_UNKNOWN](http://msdn.microsoft.com/library/82b0199a-a9d5-4f95-a711-fa1ae18e1f77)巨集。  
+ 這個方法可能是虛擬如果`Base`已宣告[DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown)巨集。  
   
 ##  <a name="queryinterface"></a>CComContainedObject::QueryInterface  
- 擷取要求的擁有者物件的介面指標。  
+ 擷取擁有者物件上所要求介面的指標。  
   
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -151,26 +151,26 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
   
 ### <a name="parameters"></a>參數  
  `iid`  
- [in]所要求的介面識別碼。  
+ [in]所要求介面的識別項。  
   
  `ppvObject`  
- [out]所識別的介面指標的指標`iid`。 如果物件不支援這個介面，`ppvObject`設為**NULL**。  
+ [out]所識別的介面指標的指標`iid`。 如果物件不支援這個介面，`ppvObject`設**NULL**。  
   
  `pp`  
- [out]型別所識別的介面指標的指標`Q`。 如果物件不支援這個介面，`pp`設為**NULL**。  
+ [out]型別所識別的介面指標的指標`Q`。 如果物件不支援這個介面，`pp`設**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
 ##  <a name="release"></a>CComContainedObject::Release  
- 遞減參考計數的擁有者物件。  
+ 擁有者物件的參考計數遞減。  
   
 ```
 STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 在偵錯組建**版本**傳回值，可能有助於診斷或測試。 在非偵錯組建中，**版本**一律傳回 0。  
+ 在偵錯組建**發行**傳回值，可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

@@ -131,9 +131,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: ec5969edb26f4dbc2c249f16a8c39498bd01ca44
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 099e027e778090d14dd7dbe24d6732f7eb06b9d9
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
@@ -149,7 +149,7 @@ class CWinApp : public CWinThread
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWinApp::CWinApp](#cwinapp)|建構 `CWinApp` 物件。|  
   
@@ -204,7 +204,7 @@ class CWinApp : public CWinThread
 |[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)|重新啟動管理員註冊此應用程式。|  
 |[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|決定是否重新啟動管理員會重新開啟應用程式意外結束時未開啟的檔案。|  
 |[CWinApp::RestartInstance](#restartinstance)|處理起始重新啟動管理員的應用程式重新啟動。|  
-|[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|決定是否在重新啟動管理員還原 autosaved 檔案時重新啟動應用程式。|  
+|[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|決定是否重新啟動管理員還原 autosaved 檔案時重新啟動應用程式。|  
 |[Cwinapp:: Run](#run)|會執行預設訊息迴圈。 覆寫以自訂訊息迴圈。|  
 |[CWinApp::RunAutomated](#runautomated)|測試應用程式的命令列**/Automation**選項。 已過時。 相反地，使用中的值[CCommandLineInfo::m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated)之後呼叫[ParseCommandLine](#parsecommandline)。|  
 |[CWinApp::RunEmbedded](#runembedded)|測試應用程式的命令列**/內嵌**選項。 已過時。 相反地，使用中的值[CCommandLineInfo::m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)之後呼叫[ParseCommandLine](#parsecommandline)。|  
@@ -242,7 +242,7 @@ class CWinApp : public CWinThread
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|指出使用者是否為說明內容模式 （通常用來叫用 SHIFT + F1）。|  
 |[CWinApp::m_eHelpType](#m_ehelptype)|指定之說明類型的應用程式使用。|  
@@ -259,7 +259,7 @@ class CWinApp : public CWinThread
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|決定重新啟動管理員的操作方式的旗標。|  
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|以毫秒為單位時，自動儲存之間的時間長度。|  
@@ -478,7 +478,7 @@ virtual void DoWaitCursor(int nCode);
   
 ### <a name="parameters"></a>參數  
  `nCode`  
- 如果這個參數是 1，則會顯示等待游標。 如果為 0，將等待游標會還原不遞增參考計數。 如果 – 1，便會結束等待游標。  
+ 如果這個參數是 1，則會顯示等待游標。 如果為 0，將等待游標會還原不遞增參考計數。 如果-1，便會結束等待游標。  
   
 ### <a name="remarks"></a>備註  
  預設實作沙漏游標。 `DoWaitCursor`會維護參考計數。 當正數時，會顯示沙漏游標。  
@@ -1121,15 +1121,12 @@ AFX_HELP_TYPE m_eHelpType;
 ### <a name="remarks"></a>備註  
  **AFX_HELP_TYPE**列舉的定義，如下所示︰  
   
- `enum AFX_HELP_TYPE`  
-  
- `{`  
-  
- `afxWinHelp = 0,`  
-  
- `afxHTMLHelp = 1`  
-  
- `};`  
+```  
+enum AFX_HELP_TYPE {  
+    afxWinHelp = 0,
+    afxHTMLHelp = 1
+    };  
+```  
   
 -   若要設定 HTML 說明的應用程式的說明，請呼叫[SetHelpMode](#sethelpmode)並指定**afxHTMLHelp**。  
   
@@ -1578,19 +1575,15 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
   
  資料成員`CCommandLineInfo`所識別的物件[CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)，下列的列舉類型，定義內的`CCommandLineInfo`類別。  
   
- `enum {`  
-  
- `FileNew,`  
-  
- `FileOpen,`  
-  
- `FilePrint,`  
-  
- `FilePrintTo,`  
-  
- `FileDDE,`  
-  
- `};`  
+```  
+enum {
+    FileNew,
+    FileOpen,
+    FilePrint,
+    FilePrintTo,
+    FileDDE
+    };  
+```
   
  每個這些值的簡短描述，請參閱`CCommandLineInfo::m_nShellCommand`。  
   
@@ -1696,7 +1689,7 @@ DWORD dwCallbackFlags);
   
  當應用程式意外結束時，重新啟動管理員會重新啟動應用程式從命令列，並提供唯一的重新啟動識別碼，則為選擇性的引數。 在此案例中，架構會呼叫`RegisterWithRestartManager`兩次。 第一個呼叫是來自[Afxenablecontrolcontainer](#initinstance)以空字串的字串識別項。 然後，此方法[CWinApp::ProcessShellCommand](#processshellcommand)呼叫`RegisterWithRestartManager`具有唯一的重新啟動識別項。  
   
- 您重新啟動管理員中註冊應用程式之後，重新啟動管理員會監視應用程式。 如果應用程式意外結束，重新啟動管理員會關機程序期間呼叫復原回呼函式。 重新啟動管理員等候`dwPingInterval`復原回呼函式的回應。 如果此時間內復原回呼函式沒有回應，應用程式會結束而不執行復原的回呼函式。  
+ 您重新啟動管理員中註冊應用程式之後，重新啟動管理員會監視應用程式。 如果應用程式意外結束，重新啟動管理員會關機程序期間呼叫復原回呼函式。 重新啟動管理員等候`dwPingInterval`復原回呼函式的回應。 如果復原的回呼函式在此時間內沒有回應，應用程式結束而不執行復原的回呼函式。  
   
  根據預設，dwRestartFlags 不支援，但是可供未來使用。 可能值`dwRestartFlags`如下︰  
   
@@ -1734,7 +1727,7 @@ virtual BOOL CWinApp::RestartInstance();
  這個方法會傳回`FALSE`如果[CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md)決定已開啟的文件。 如果沒有任何開啟的文件，在應用程式通常啟動。  
   
 ##  <a name="restoreautosavedfilesatrestart"></a>CWinApp::RestoreAutosavedFilesAtRestart  
- 決定是否在重新啟動管理員還原 autosaved 檔案時重新啟動應用程式。  
+ 決定是否重新啟動管理員還原 autosaved 檔案時重新啟動應用程式。  
   
 ```  
 virtual BOOL RestoreAutosavedFilesAtRestart() const;  

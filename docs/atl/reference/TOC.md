@@ -225,6 +225,7 @@
 ## [彙總和 Class Factory 巨集](aggregation-and-class-factory-macros.md)
 ## [分類巨集](category-macros.md)
 ## [COM 對應巨集](com-map-macros.md)
+## [COM 介面項目巨集](com-interface-entry-macros.md)
 ## [編譯器選項巨集](compiler-options-macros.md)
 ## [複合控制項巨集](composite-control-macros.md)
 ## [連接點巨集](connection-point-macros.md)

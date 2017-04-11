@@ -1,39 +1,51 @@
 ---
 title: "依分類區分的執行階段常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.runtime"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "分類, 執行階段函式"
-  - "函式 [CRT]"
-  - "函式 [CRT], 執行階段"
-  - "常式, 執行階段"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
+helpviewer_keywords:
+- routines, run-time
+- functions [CRT], run-time
+- categories, run-time functions
+- functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 依分類區分的執行階段常式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
+ms.lasthandoff: 03/30/2017
 
-這個段落會分類列出並描述 Microsoft 執行階段程式庫常式。  為了參考方便，有些常式會在一個以上的分類清單中。  多位元組字元常式和寬字元常式當存在單一位元組常式時，與單一位元組常式相同群組。  
+---
+# <a name="run-time-routines-by-category"></a>依分類區分的執行階段常式
+本節列出並依分類說明 Microsoft 執行階段程式庫常式。 為了參考方便起見，某些常式分別列在一個以上的分類。 多位元組字元常式和寬字元常式會使用其所在的單一位元組字元對應來分組。  
   
- 本章節也提供可用的 .NET Framework 對等方法或類別。  
-  
- Microsoft 執行階段程式庫常式的主要類別為:  
+ Microsoft 執行階段程式庫常式的主要分類如下︰  
   
 |||  
 |-|-|  
@@ -49,5 +61,5 @@ manager: "ghogen"
 |[搜尋和排序](../c-runtime-library/searching-and-sorting.md)|[字串操作](../c-runtime-library/string-manipulation-crt.md)|  
 |[系統呼叫](../c-runtime-library/system-calls.md)|[時間管理](../c-runtime-library/time-management.md)|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

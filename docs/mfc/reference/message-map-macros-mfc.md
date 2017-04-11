@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d4b97ed874b145f9c6d9a9536476243bba0fd1c1
-ms.openlocfilehash: 0c5856dce919ca8ea2d396fbf2523dc45409b519
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
+ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
@@ -62,6 +62,7 @@ ms.lasthandoff: 03/06/2017
 |||  
 |-|-|  
 |[ON_COMMAND](#on_command)|指出哪些函式會處理指定的命令訊息。|  
+|[ON_COMMAND_EX](#on_command_ex)|指出哪些函式會處理指定的命令訊息。|  
 |[ON_CONTROL](#on_control)|指出哪些函式會處理指定的控制項通知訊息。|  
 |[ON_MESSAGE](#on_message)|指出哪些函式會處理使用者定義的訊息。|  
 |[ON_OLECMD](#on_olecmd)|指出哪些函式會處理來自 DocObject 或其容器的功能表命令。|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 03/06/2017
 |-|-|  
 |[ON_COMMAND_RANGE](#on_command_range)|指出哪些函式會處理巨集的前兩個參數中指定之命令 ID 的範圍。|  
 |[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|指出哪些更新處理常式會處理前兩個 pa 中指定的命令 Id 的範圍] rameters 巨集。|  
-|[ON_CONTROL_RANGE](#on_control_range)|指出哪些函式會處理來自在巨集的第二和第三個參數中指定之控制項 ID 範圍的通知。 第一個參數是一個控制項通知訊息，例如**BN_CLICKED**。|  
+|[ON_CONTROL_RANGE](#on_control_range)|指出哪些函式會處理來自在巨集的第二和第三個參數中指定之控制項 ID 範圍的通知。 第一個參數是控制項通知訊息，例如**BN_CLICKED**。|  
   
  如需訊息對應、 訊息對應宣告和分界巨集和訊息對應巨集的詳細資訊，請參閱[訊息對應](../../mfc/reference/message-maps-mfc.md)和[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。 如需訊息對應範圍的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
 
@@ -90,7 +91,7 @@ DECLARE_MESSAGE_MAP( )
 ```  
   
 ### <a name="remarks"></a>備註  
- 使用`DECLARE_MESSAGE_MAP`巨集，在類別宣告的結尾。 接著，在定義類別成員函式的.cpp 檔案，使用`BEGIN_MESSAGE_MAP`巨集、 巨集項目，針對每個訊息處理常式函式，而`END_MESSAGE_MAP`巨集。  
+ 使用`DECLARE_MESSAGE_MAP`巨集，在類別宣告的結尾。 接著，在定義類別的成員函式的.cpp 檔案，使用`BEGIN_MESSAGE_MAP`巨集，每個訊息處理常式函式的巨集項目和`END_MESSAGE_MAP`巨集。  
   
 > [!NOTE]
 >  如果您宣告之後的任何成員`DECLARE_MESSAGE_MAP`，您必須指定新的存取類型 (**公用**， `private`，或`protected`) 它們。  
@@ -110,7 +111,7 @@ class CMainFrame : public CMDIFrameWnd
  **標題:** afxwin.h  
 
 ## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
-開始進行訊息對應的定義。  
+開始訊息對應的定義。  
   
 ### <a name="syntax"></a>語法  
   
@@ -120,13 +121,13 @@ BEGIN_MESSAGE_MAP( theClass, baseClass )
   
 ### <a name="parameters"></a>參數  
  `theClass`  
- 指定的訊息對應之類別的名稱。  
+ 指定的訊息對應的類別名稱。  
   
  `baseClass`  
  指定 `theClass` 基底類別的名稱。  
   
 ### <a name="remarks"></a>備註  
- 在定義類別成員函式的實作 (.cpp) 檔案，啟動的訊息對應`BEGIN_MESSAGE_MAP`巨集，然後針對每個訊息處理常式函式，新增巨集項目，並完成的訊息對應`END_MESSAGE_MAP`巨集。  
+ 在定義類別的成員函式的實作 (.cpp) 檔案，會啟動的訊息對應`BEGIN_MESSAGE_MAP`巨集，然後針對每個訊息處理常式函式，新增巨集項目，並完成的訊息對應`END_MESSAGE_MAP`巨集。  
   
  如需訊息對應的詳細資訊，請參閱[訊息對應](message-maps-mfc.md)  
   
@@ -172,11 +173,11 @@ ON_COMMAND( id, memberFxn )
  命令對應的訊息處理函式名稱。  
   
 ### <a name="remarks"></a>備註  
- 它指出哪些函式會處理命令的使用者介面物件，例如功能表項目或工具列按鈕的命令訊息。  
+ 它會指出哪些函式會處理命令的使用者介面物件，例如功能表項目或工具列按鈕的命令訊息。  
   
- 當命令目標物件接收 Windows **WM_COMMAND**訊息具有指定的識別碼，`ON_COMMAND`會呼叫成員函式`memberFxn`處理訊息。  
+ 當命令目標物件接收 Windows **WM_COMMAND**訊息具有指定的識別碼，`ON_COMMAND`會呼叫此成員函式`memberFxn`以處理訊息。  
   
- 使用`ON_COMMAND`單一命令對應的成員函式。 使用[ON_COMMAND_RANGE](#on_command_range)來對應至一個成員函式的命令 id 的範圍。 只有一個訊息對應項目可以比對指定的命令識別碼。 也就是說，您無法將命令對應至一個以上的處理常式。 如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
+ 使用`ON_COMMAND`對應的成員函式的單一命令。 使用[ON_COMMAND_RANGE](#on_command_range)來對應至一個成員函式的命令 id 的範圍。 只有一個訊息對應項目可以比對指定的命令識別碼。 也就是說，您無法將命令對應至一個以上的處理常式。 如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
   
 ### <a name="example"></a>範例  
 ```cpp  
@@ -187,6 +188,48 @@ END_MESSAGE_MAP()
   
 ### <a name="requirements"></a>需求  
  **標頭︰** afxmsg_.h  
+
+ ## <a name="on_command_ex"></a>ON_COMMAND_EX
+擴充命令處理常式成員函式。  
+   
+### <a name="syntax"></a>語法  
+  ```  
+ON_COMMAND_EX(id, memberFxn);  
+```
+### <a name="parameters"></a>參數  
+ `id`  
+ 命令 ID。  
+  
+ `memberFxn`  
+ 命令對應的訊息處理常式函式的名稱。  
+   
+### <a name="remarks"></a>備註 
+命令訊息處理常式的延伸的格式是供進階使用。 `ON_COMMAND_EX`巨集使用這類訊息處理常式，並提供 [ON_COMMAND] (#on_command) 功能的超集。  擴充的命令處理常式成員函式採用單一參數， **UINT**包含命令 ID，並傳回**BOOL**。 傳回的值應為 true 
+
+這個巨集將命令訊息對應到延伸的命令處理常式成員函式中。  
+   
+### <a name="syntax"></a>語法  
+```  
+ON_COMMAND_EX(id,  memberFxn);  
+```
+### <a name="parameters"></a>參數  
+ `id`  
+ 命令 ID。  
+  
+ `memberFxn`  
+ 命令對應的訊息處理函式名稱。  
+   
+### <a name="remarks"></a>備註  
+ 命令訊息處理常式的延伸的格式是供進階使用。 `ON_COMMAND_EX`巨集使用這類訊息處理常式，而且它提供的超集[ON_COMMAND](message-map-macros-mfc.md#on_command)功能。 擴充的命令處理常式成員函式採用單一參數， **UINT**包含命令 ID，並傳回**BOOL**。 傳回的值應為 TRUE 表示已處理命令。否則路由將會繼續其他命令目標物件。  
+如需詳細資訊，請參閱 < 技術提示 [TN006︰ 訊息對應] tm006-訊息-maps.md)。  
+   
+### <a name="requirements"></a>需求  
+ 標頭檔︰ afxmsg_.h  
+   
+### <a name="see-also"></a>另請參閱  
+ [ON_COMMAND](message-map-macros-mfc.md#on_command)   
+ [TN006︰ 訊息對應] tm006-訊息-maps.md)
+
   
 ## <a name="on_control"></a>ON_CONTROL
 指出哪些函式會處理自訂控制項通知訊息。  
@@ -199,7 +242,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
   
 ### <a name="parameters"></a>參數  
  `wNotifyCode`  
- 控制項的通知程式碼。  
+ 控制項通知碼。  
   
  `id`  
  命令 ID。  
@@ -210,7 +253,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 ### <a name="remarks"></a>備註  
  控制項通知訊息是從控制項傳送至其父視窗。  
   
- 應該有完全`ON_CONTROL`中的每一個都必須對應至訊息處理常式函式的控制項通知訊息的訊息對應巨集陳述式。  
+ 應該有正好一個`ON_CONTROL`巨集的每一個都必須對應至訊息處理常式函式的控制項通知訊息的訊息對應中的陳述式。  
   
  如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
   
@@ -234,12 +277,12 @@ ON_MESSAGE( message, memberFxn )
  `memberFxn`  
  訊息對應的訊息處理常式函式的名稱。  
   
- 函式的型別必須是`afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`。  
+ 函式的類型必須是`afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`。  
   
 ### <a name="remarks"></a>備註  
  使用者定義的訊息會顯示任何訊息不是標準的 Windows`WM_MESSAGE`訊息。 當選取的訊息識別碼，您必須使用的範圍內的值`WM_USER`(0x0400) 至 0x7FFF 或`WM_APP`(0x8000) 至 0xBFFF。 如需有關訊息識別碼的詳細資訊，請參閱[WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930)。  
   
- 應該有完全`ON_MESSAGE`中的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應巨集陳述式。  
+ 應該有正好一個`ON_MESSAGE`巨集的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應中的陳述式。  
   
 > [!NOTE]
 >  使用者定義的訊息，除了`ON_MESSAGE`處理較不常見的 Windows 訊息。 如需詳細資訊，請參閱知識庫文件[99848︰ 資訊︰ 使用 ON_MESSAGE() 巨集對應較不常見訊息](http://go.microsoft.com/fwlink/?linkId=192022)。  
@@ -282,66 +325,66 @@ ON_OLECMD( pguid, olecmdid, id )
   
 ### <a name="parameters"></a>參數  
  `pguid`  
- 此命令所屬的命令群組的識別碼。 使用**NULL**標準的群組。  
+ 此命令屬於哪個命令群組的識別碼。 使用**NULL**標準的群組。  
   
  *olecmdid*  
- OLE 命令識別項。  
+ OLE 命令的識別碼。  
   
  `id`  
- 功能表識別碼、 工具列 ID、 按鈕識別碼或其他資源或物件發出命令的識別碼。  
+ 功能表識別碼、 工具列 ID、 按鈕 ID 或其他資源或物件發出命令的識別碼。  
   
 ### <a name="remarks"></a>備註  
- `IOleCommandTarget`允許容器接收來自 DocObject 使用者介面、 命令，並允許容器來傳送相同的命令 (例如新增、 開啟、 另存新檔和在 [檔案] 功能表中，列印和複製、 貼上、 復原，依此類推 [編輯] 功能表) 以 DocObject。  
+ `IOleCommandTarget`允許容器接收來自 DocObject 使用者介面中的命令，並允許容器來傳送相同的命令 (例如新增、 開啟、 另存新檔，以及在 [檔案] 功能表中，列印和複製、 貼上、 復原，依此類推 [編輯] 功能表) 以 DocObject。  
   
- `IOleCommandTarget`會比使用 OLE Automation 的`IDispatch`。 `IOleCommandTarget`完全依賴一組標準的命令也很少具有引數，且涉及到任何型別資訊 （型別安全就會受到影響的命令引數）。 如果您需要將分派具有引數的命令，使用[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)。  
+ `IOleCommandTarget`會比 OLE Automation 的簡單`IDispatch`。 `IOleCommandTarget`完全依賴一組標準的命令也很少需要引數，並不涉及任何類型資訊 （型別安全就會受到影響的命令引數）。 如果您需要分派命令與引數，使用[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)。  
   
- `IOleCommandTarget`標準功能表命令已由 MFC 實作中的下列巨集︰  
+ `IOleCommandTarget`標準功能表命令已由 MFC 實作在下列巨集︰  
   
  **ON_OLECMD_CLEARSELECTION （)**  
   
- 分派清除編輯命令。 實作為︰  
+ 將分派清除編輯命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`  
   
  **ON_OLECMD_COPY （)**  
   
- 分派編輯複製命令。 實作為︰  
+ 將分派編輯複製命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`  
   
  **ON_OLECMD_CUT （)**  
   
- 分派編輯剪下 命令。 實作為︰  
+ 將分派編輯剪下 命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`  
   
  **ON_OLECMD_NEW （)**  
   
- 分派新檔案 命令。 實作為︰  
+ 將分派檔案到新的命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`  
   
  **ON_OLECMD_OPEN （)**  
   
- 分派開啟檔案 命令。 實作為︰  
+ 將分派檔案開啟的命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`  
   
  **ON_OLECMD_PAGESETUP （)**  
   
- 將分派檔案版面設定 命令。 實作為︰  
+ 將分派檔案 版面設定命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`  
   
  **ON_OLECMD_PASTE （)**  
   
- 分派編輯貼上 命令。 實作為︰  
+ 將分派編輯貼上 命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`  
   
  **ON_OLECMD_PASTESPECIAL （)**  
   
- 分派編輯選擇性貼上命令。 實作為︰  
+ 將分派編輯選擇性貼上命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`  
   
@@ -359,37 +402,37 @@ ON_OLECMD( pguid, olecmdid, id )
   
  **ON_OLECMD_REDO （)**  
   
- 分派編輯取消復原命令。 實作為︰  
+ 將分派編輯取消復原命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`  
   
  **ON_OLECMD_SAVE （)**  
   
- 分派儲存檔案的命令。 實作為︰  
+ 將分派儲存檔案的命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`  
   
  **ON_OLECMD_SAVE_AS （)**  
   
- 將分派檔案另存新檔命令。 實作為︰  
+ 將分派檔案另存新檔 命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`  
   
  **ON_OLECMD_SAVE_COPY_AS （)**  
   
- 分派複製存新檔命令。 實作為︰  
+ 將分派檔案存複本命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`  
   
  **ON_OLECMD_SELECTALL （)**  
   
- 分派編輯選取的所有命令。 實作為︰  
+ 將分派編輯選取的所有命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`  
   
  **ON_OLECMD_UNDO （)**  
   
- 分派編輯命令。 實作為︰  
+ 將分派編輯 Undo 命令。 實作為︰  
   
  `ON_OLECMD(NULL, OLECMDID_UNDO, ID_EDIT_UNDO)`  
   
@@ -401,7 +444,7 @@ ON_OLECMD( pguid, olecmdid, id )
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
 ## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
-Windows **RegisterWindowMessage**函數用來定義新的視窗訊息，保證是唯一在整個系統。  
+Windows **RegisterWindowMessage**函式用來定義新的視窗訊息，保證是唯一的整個系統。  
   
 ### <a name="syntax"></a>語法  
   
@@ -439,7 +482,7 @@ END_MESSAGE_MAP()
  [使用者定義的處理常式](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE    
-指出哪些函式會處理已註冊的 Windows RegisterWindowMessage 函式的訊息。  
+指出哪些函式會處理註冊 Windows RegisterWindowMessage 函式的訊息。  
   
 ### <a name="syntax"></a>語法  
   
@@ -455,7 +498,7 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
  訊息對應到 CWinThread 訊息處理常式函式的名稱。  
   
 ### <a name="remarks"></a>備註  
- RegisterWindowMessage 用來定義新的視窗訊息，保證是唯一在整個系統。 CWinThread 類別時，必須使用 ON_REGISTERED_THREAD_MESSAGE 而不是 ON_REGISTERED_MESSAGE。 
+ RegisterWindowMessage 用來定義新的視窗訊息，保證是唯一的整個系統。 CWinThread 類別時，必須使用 ON_REGISTERED_THREAD_MESSAGE 而不是 ON_REGISTERED_MESSAGE。 
   
 ### <a name="requirements"></a>需求  
  **標頭︰** afxmsg_.h  
@@ -474,10 +517,10 @@ ON_THREAD_MESSAGE( message, memberFxn )
  訊息 ID。  
   
  `memberFxn`  
- 名稱`CWinThread`-訊息的訊息對應的處理常式函式。  
+ 名稱`CWinThread`-訊息-訊息對應的處理常式函式。  
   
 ### <a name="remarks"></a>備註  
- `ON_THREAD_MESSAGE`必須使用而不是`ON_MESSAGE`當您有`CWinThread`類別。 使用者定義的訊息會顯示任何訊息不是標準的 Windows **WM_MESSAGE**訊息。 應該有完全`ON_THREAD_MESSAGE`中的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應巨集陳述式。  
+ `ON_THREAD_MESSAGE`必須使用而不是`ON_MESSAGE`當您有`CWinThread`類別。 使用者定義的訊息會顯示任何訊息不是標準的 Windows **WM_MESSAGE**訊息。 應該有正好一個`ON_THREAD_MESSAGE`巨集的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應中的陳述式。  
   
 ### <a name="requirements"></a>需求  
  **標頭︰** afxole.h  
@@ -499,7 +542,7 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
  訊息對應的訊息處理常式函式的名稱。  
   
 ### <a name="remarks"></a>備註  
- 應該有完全`ON_UPDATE_COMMAND_UI`中為每個必須對應至訊息處理常式函式的使用者介面更新命令訊息對應巨集陳述式。  
+ 應該有正好一個`ON_UPDATE_COMMAND_UI`巨集的訊息處理常式函式必須對應每個使用者介面更新命令訊息對應中的陳述式。  
   
  如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
   
@@ -510,7 +553,7 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
  [CCmdUI 類別](ccmdui-class.md)
 
 ## <a name="on_command_range"></a>ON_COMMAND_RANGE  
-您可以使用這個巨集對應至單一訊息處理函式的命令 Id 的連續範圍。  
+使用此巨集將命令 Id 的連續範圍對應到單一訊息處理常式函式。  
   
 ### <a name="syntax"></a>語法
   
@@ -520,20 +563,20 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
   
 ### <a name="parameters"></a>參數  
  `id1`  
- 命令 ID 的命令 Id 連續範圍的開頭。  
+ 命令 Id 的連續範圍的開頭的命令識別碼。  
   
  `id2`  
- 命令 ID 的命令 Id 的連續範圍結尾。  
+ 命令 ID 的命令 Id 連續範圍的結尾。  
   
  `memberFxn`  
- 命令對應的訊息處理常式函式的名稱。  
+ 命令所對應的訊息處理常式函式的名稱。  
   
 ### <a name="remarks"></a>備註  
  範圍的識別碼開頭`id1`，並結束`id2`。  
   
- 使用`ON_COMMAND_RANGE`來對應至一個成員函式的命令 Id 的範圍。 使用[ON_COMMAND](#on_command)單一命令對應的成員函式。 只有一個訊息對應項目可以比對指定的命令識別碼。 也就是說，您無法將命令對應至一個以上的處理常式。 如需有關對應訊息範圍的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
+ 使用`ON_COMMAND_RANGE`來對應至一個成員函式的命令 Id 的範圍。 使用[ON_COMMAND](#on_command)對應的成員函式的單一命令。 只有一個訊息對應項目可以比對指定的命令識別碼。 也就是說，您無法將命令對應至一個以上的處理常式。 如需有關對應訊息範圍的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
   
- 沒有任何自動式支援訊息對應範圍，因此您必須自行將巨集。  
+ 沒有支援自動訊息對應範圍，因此您必須自行將巨集。  
   
 ### <a name="example"></a>範例  
 ```cpp  
@@ -560,7 +603,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
  **標頭︰** afxmsg_.h  
 
 ## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE    
-將連續的命令 Id 對應至單一更新訊息處理函式。  
+將連續的命令 Id 對應至單一更新訊息處理常式函式。  
   
 ### <a name="syntax"></a>語法  
   
@@ -570,24 +613,24 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
   
 ### <a name="parameters"></a>參數  
  `id1`  
- 命令 ID 的命令 Id 連續範圍的開頭。  
+ 命令 Id 的連續範圍的開頭的命令識別碼。  
   
  `id2`  
- 命令 ID 的命令 Id 的連續範圍結尾。  
+ 命令 ID 的命令 Id 連續範圍的結尾。  
   
  `memberFxn`  
- 更新訊息處理常式函式命令所對應的名稱。  
+ 更新訊息處理常式函式，命令所對應的名稱。  
   
 ### <a name="remarks"></a>備註  
  更新處理常式更新功能表項目和工具列按鈕與命令相關聯的狀態訊息。 範圍的識別碼開頭`id1`，並結束`id2`。  
   
- 沒有任何自動式支援訊息對應範圍，因此您必須自行將巨集。  
+ 沒有支援自動訊息對應範圍，因此您必須自行將巨集。  
   
 ### <a name="requirements"></a>需求  
  **標頭︰** afxmsg_.h  
 
 ## <a name="on_control_range"></a>ON_CONTROL_RANGE     
-使用這個巨集，例如將連續的控制項 Id 對應至指定的 Windows 通知訊息的單一訊息處理函式**BN_CLICKED**。  
+使用這個巨集，例如對應至指定的 Windows 通知訊息的單一訊息處理常式函式的控制項 Id 的連續範圍**BN_CLICKED**。  
   
 ### <a name="syntax"></a>語法  
   
@@ -597,7 +640,7 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
   
 ### <a name="parameters"></a>參數  
  `wNotifyCode`  
- 您的處理常式回應的通知程式碼。  
+ 您的處理常式有回應通知的程式碼。  
   
  `id1`  
  命令 ID 的控制項 Id 連續範圍的開頭。  
@@ -611,9 +654,9 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 ### <a name="remarks"></a>備註  
  範圍的識別碼開頭`id1`，並結束`id2`。 指定通知來自任何對應的控制項，會呼叫處理常式。  
   
- 沒有任何自動式支援訊息對應範圍，因此您必須自行將巨集。  
+ 沒有支援自動訊息對應範圍，因此您必須自行將巨集。  
   
- 如需有關如何實作的控制項 Id 範圍的處理常式函式的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
+ 如需實作的控制項識別碼範圍的處理常式函式的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
   
 ### <a name="requirements"></a>需求  
  **標頭︰** afxmsg_.h  

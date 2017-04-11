@@ -34,17 +34,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: dbc2045eae70cacd42e13ddb7cc8ecb3d60b8596
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53a3144fe8e87f36a1a5149d292130a9913b646a
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="compiler-error-c2435"></a>編譯器錯誤 C2435
-'var': 動態初始化需要受管理的 CRT，無法編譯以 /clr: safe  
+'var': 動態初始設定必須有 managed 的 CRT，不能以 /clr: safe 編譯  
   
- **/Clr: pure**和**/clr: safe** Visual Studio 2015 中的編譯器選項已被取代。  
+ **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
- 全域 – 應用程式網域變數的初始化需要使用 CRT `/clr:pure`，這不會產生可驗證映像。  
+ 通用的每個應用程式網域變數的初始設定需要編譯的 CRT `/clr:pure`，這不會產生可驗證的影像。  
   
  如需詳細資訊，請參閱[appdomain](../../cpp/appdomain.md)和[程序](../../cpp/process.md)。  
   

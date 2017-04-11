@@ -53,9 +53,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: c567d97c613ad517372b454456535165fadbd3ae
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cmap-class"></a>CMap 類別
@@ -96,7 +96,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CMap::GetCount](#getcount)|在此對應中傳回的項目數。|  
 |[CMap::GetHashTableSize](#gethashtablesize)|傳回雜湊表中的項目數目。|  
@@ -115,9 +115,9 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[CMap::operator]](#operator_at)|將項目插入對應 \u2012 運算子替代`SetAt`。|  
+|[CMap::operator]](#operator_at)|將項目插入對應 — 運算子替代`SetAt`。|  
   
 ## <a name="remarks"></a>備註  
  一旦您已插入對應的索引鍵-值組 （項目），您就可以有效率地擷取，或刪除使用可以存取它的金鑰組。 您也可以逐一查看對應中的所有項目。  
@@ -126,7 +126,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  全域 helper 函式，這個類別呼叫的特定成員函式必須是可自訂的大部分的使用`CMap`類別。 請參閱[集合類別 Helper](../../mfc/reference/collection-class-helpers.md)的巨集和全域節`MFC``Reference`。  
   
- `CMap`覆寫[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)支援序列化和傾印的項目。 如果對應會儲存至封存使用`Serialize`，每個地圖元素會依次序列化。 預設實作`SerializeElements`helper 函式沒有位元的寫入。 如需序列化的指標集合的項目資訊衍生自`CObject`或其他使用者定義型別，請參閱[如何︰ 建立類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。  
+ `CMap`覆寫[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)支援序列化和傾印的項目。 如果對應會儲存至封存使用`Serialize`，每個地圖元素會依次序列化。 預設實作`SerializeElements`helper 函式沒有的位元寫入。 如需序列化的指標集合的項目資訊衍生自`CObject`或其他使用者定義型別，請參閱[如何︰ 建立類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。  
   
  如果您需要個別的項目對應 （索引鍵和值） 中的診斷傾印，您必須設定為 1 或更大的傾印內容的深度。  
   

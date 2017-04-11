@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 30c9235f16581c86ab5612522909dc366b1ce17e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
+ms.openlocfilehash: 471ba42f25a4e237db03f2516288a7b33a0efd63
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="catlexception-class"></a>CAtlException 類別
@@ -61,9 +61,9 @@ class CAtlException
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[CAtlException::operator HRESULT](#operator_hresult)|將轉換的 HRESULT 值的目前物件。|  
+|[CAtlException::operator HRESULT](#operator_hresult)|將轉換的 HRESULT 值目前的物件。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -72,7 +72,7 @@ class CAtlException
 |[CAtlException::m_hr](#m_hr)|HRESULT 物件所建立，用來儲存錯誤狀況的類型的變數。|  
   
 ## <a name="remarks"></a>備註  
- A`CAtlException`物件代表與 ATL 作業相關的例外狀況。 `CAtlException`類別包含儲存表示，轉換運算子，可讓您將處理例外狀況，就好像 HRESULT 的例外狀況原因的狀態碼的公用資料成員。  
+ A`CAtlException`物件都代表與 ATL 作業相關的例外狀況。 `CAtlException`類別包含儲存之原因的例外狀況，並可讓您將例外狀況，就好像 HRESULT 轉型運算子的狀態碼的公用資料成員。  
   
  一般情況下，您會呼叫`AtlThrow`而不是建立`CAtlException`直接物件。  
   
@@ -92,7 +92,7 @@ CAtlException() throw();
  `HRESULT`錯誤碼。  
   
 ##  <a name="operator_hresult"></a>CAtlException::operator HRESULT 
- 將轉換的 HRESULT 值的目前物件。  
+ 將轉換的 HRESULT 值目前的物件。  
   
 ```  
 operator HRESULT() const throw ();
@@ -106,9 +106,9 @@ HRESULT m_hr;
 ```  
   
 ### <a name="remarks"></a>備註  
- 將錯誤狀況的資料成員。 HRESULT 值由建構函式，設定[CAtlException::CAtlException](#catlexception)。  
+ 儲存錯誤狀況的資料成員。 HRESULT 值由建構函式，設定[CAtlException::CAtlException](#catlexception)。  
   
 ## <a name="see-also"></a>另請參閱  
- [AtlThrow](http://msdn.microsoft.com/library/2bd111da-8170-488d-914a-c9bf6b6765f7)   
+ [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
  [類別概觀](../../atl/atl-class-overview.md)
 

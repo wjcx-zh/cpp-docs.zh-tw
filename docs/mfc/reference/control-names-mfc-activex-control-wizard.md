@@ -1,86 +1,104 @@
 ---
-title: "MFC ActiveX 控制項精靈、控制項名稱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.ctl.names"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控制項精靈, 控制項名稱"
+title: "控制項名稱，MFC ActiveX 控制項精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.ctl.names
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MFC ActiveX 控制項精靈、控制項名稱
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 28ef331cb66ee184c4bc104fedddf69e9296367c
+ms.lasthandoff: 04/04/2017
 
-指定控制項類別和屬性頁類別的名稱、控制項的型別名稱及型別識別項。  除了 \[簡短名稱\] 之外，所有其他欄位都可以單獨地進行編輯。  如果您變更 \[簡短名稱\] 當中的文字，這個頁面中所有其他欄位的名稱也都將反映此變更。  這項命名行為可讓您在開發控制項時能更容易識別所有的名稱。  
+---
+# <a name="control-names-mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈、控制項名稱
+指定之名稱的控制項類別和屬性頁類別的型別名稱，並輸入您的控制項的識別項。 除了**簡短名稱**，單獨進行編輯的所有其他欄位。 如果您變更的文字**簡短名稱**，變更會反映在此頁面中的所有其他欄位的名稱。 這項命名行為被為了讓您開發您的控制項時容易識別的所有名稱。  
   
  **簡短名稱**  
- 提供控制項的縮寫名稱。  依照預設，這個名稱是根據您在**新增專案**對話方塊中提供的專案名稱而定。  您所提供的名稱將決定類別名稱、型別名稱及型別識別項，除非您個別變更這些欄位。  
+ 提供控制項的縮寫的名稱。 根據預設，這個名稱會根據您在中提供的專案名稱上**新專案** 對話方塊。 您提供的名稱判斷類別名稱、 型別名稱和類型識別項，除非您個別變更這些欄位。  
   
  **控制項類別名稱**  
- 依照預設，控制項類別的名稱是根據簡短名稱而定，以 `C` 開頭並以 `Ctrl` 結尾。  例如，如果控制項的簡短名稱是 `Price`，則控制項類別名稱就是 `CPriceCtrl`。  
+ 根據預設的控制項類別名稱根據簡短名稱，與`C`做為前置詞和`Ctrl`做為尾碼。 例如，如果您的控制項的簡短名稱是`Price`，控制項類別名稱是`CPriceCtrl`。  
   
- **控制項 .h 檔案**  
- 依照預設，標頭檔的名稱是根據簡短名稱而定，以 `Ctrl` 為結尾，而且副檔名為 `.h`。  例如，如果控制項的簡短名稱是 `Price`，則標頭檔名稱就是 `PriceCtrl.h`。  此一欄位中的名稱應符合控制項類別名稱。  
+ **控制.h 檔案**  
+ 根據預設，標頭檔的名稱根據簡短名稱，與`Ctrl`做為尾碼和`.h`做為副檔名。 例如，如果您的控制項的簡短名稱是`Price`，標頭檔名稱是`PriceCtrl.h`。 此欄位中的名稱應符合控制項類別名稱。  
   
- **控制項 .cpp 檔案**  
- 依照預設，標頭檔的名稱是根據簡短名稱而定，以 `Ctrl` 為結尾，而且副檔名為 `.cpp`。  例如，如果控制項的簡短名稱是 `Price`，則標頭檔名稱就是 `PriceCtrl.cpp`。  此一欄位中的名稱應符合標頭名稱。  
+ **控制.cpp 檔案**  
+ 根據預設，標頭檔的名稱根據簡短名稱，與`Ctrl`做為尾碼和`.cpp`做為副檔名。 例如，如果您的控制項的簡短名稱是`Price`，標頭檔名稱是`PriceCtrl.cpp`。 此欄位中的名稱應該符合的標頭名稱。  
   
  **控制項型別名稱**  
- 依照預設，控制項型別的名稱是根據簡短名稱而定，後面接著 `Control`。  例如，如果控制項的簡短名稱是 `Price`，則控制項類別的型別名稱就是 `Price Control`。  如果變更這個欄位中的值，請確定名稱會反應出繼承 \(Inheritance\)。  
+ 根據預設，控制項類型的名稱根據簡短名稱，後面接著`Control`。 例如，如果您的控制項的簡短名稱是`Price`，控制項的類別類型名稱是`Price Control`。 如果您變更此欄位中的值，請確定此名稱指出繼承。  
   
- **控制項型別 ID**  
- 設定控制項類別的控制項型別 ID。  當加入至專案時，控制項會將這個字串寫入登錄。  容器應用程式 \(Container Application\) 會使用這個字串來建立控制項的執行個體。  
+ **控制項類型識別碼**  
+ 設定控制項類別的控制項類型識別碼。 控制項加入至專案時，將此字串寫入至登錄。 容器應用程式會使用這個字串，來建立控制項的執行個體。  
   
- 依照預設，控制項型別 ID 是根據專案名稱以及簡短名稱而定，專案名稱也就是您在 \[**新增專案**\] 對話方塊中指示的名稱。  這個名稱應與型別名稱相符。  
+ 根據預設，控制項類型識別碼根據專案名稱，也就是您指示中**新專案**對話方塊中，以及簡短名稱。 這個名稱應該符合的型別名稱。  
   
- 控制項型別 ID 依預設會顯示如下：  
+ 根據預設，控制項類型 ID 會顯示如下︰  
   
- *ProjectName*.*ShortName*Ctrl.1  
+ *ProjectName.ShortName*Ctrl.1  
   
- 如果變更這個對話方塊中的簡短名稱，控制項型別 ID 則會顯示如下：  
+ 如果您變更的簡短名稱，在此對話方塊中，控制項類型識別碼會出現，如下所示︰  
   
- *ProjectName*.*NewShortName*Ctrl.1  
+ *ProjectName.NewShortName*Ctrl.1  
   
  **屬性頁類別名稱**  
- 依照預設，屬性頁類別的名稱是根據簡短名稱而定，以 `C` 開頭並以 `PropPage` 結尾。  例如，如果控制項的簡短名稱是 `Price`，則屬性頁的類別名稱就是 `CPricePropPage`。  這個名稱應與控制項類別名稱相符，後面附加 `PropPage`。  
+ 根據預設，屬性頁類別的名稱根據簡短名稱，與`C`做為前置詞和`PropPage`做為尾碼。 例如，如果您的控制項的簡短名稱是`Price`，屬性頁類別名稱是`CPricePropPage`。 此名稱應符合控制項類別名稱，加上`PropPage`。  
   
- **屬性頁 .h 檔案**  
- 依照預設，屬性頁標頭檔的名稱是根據簡短名稱而定，以 `PropPage` 為結尾，而且副檔名為 `.h`。  例如，如果控制項的簡短名稱是 `Price`，則屬性頁的標頭檔名稱就是 `PricePropPage.h`。  這個名稱應與類別名稱相符。  
+ **屬性頁.h 檔案**  
+ 根據預設，屬性頁標頭檔的名稱為根據的簡短名稱，以`PropPage`做為尾碼和`.h`做為副檔名。 例如，如果您的控制項的簡短名稱是`Price`，屬性頁面標頭檔名稱是`PricePropPage.h`。 此名稱必須符合類別名稱。  
   
- **屬性頁 .cpp 檔案**  
- 依照預設，屬性頁實作檔的名稱是根據簡短名稱而定，以 `PropPage` 結尾，而且副檔名為 `.cpp`。  例如，如果控制項的簡短名稱是 `Price`，則屬性頁的標頭檔名稱就是 `PricePropPage.cpp`。  這個名稱應與標頭檔名稱相符。  
+ **屬性頁.cpp 檔案中**  
+ 根據預設，屬性頁的實作檔的名稱為根據的簡短名稱，以`PropPage`做為尾碼和`.cpp`做為副檔名。 例如，如果您的控制項的簡短名稱是`Price`，屬性頁面標頭檔名稱是`PricePropPage.cpp`。 此名稱必須符合標頭檔名稱。  
   
- **屬性頁型別名稱**  
- 依照預設，屬性頁型別名稱是根據簡短名稱而定，後面接著 `Property Page`。  例如，如果控制項的簡短名稱是 `Price`，則屬性頁的型別名稱就是 `Price Property Page`。  如果變更這個欄位中的值，請確定名稱會反映控制項類別。  
+ **屬性頁的型別名稱**  
+ 根據預設，屬性頁的型別名稱根據簡短名稱，後面接著`Property Page`。 例如，如果您的控制項的簡短名稱是`Price`，屬性頁的型別名稱是`Price Property Page`。 如果您變更此欄位中的值，請確定名稱會表示控制項類別。  
   
- **屬性頁型別 ID**  
- 設定屬性頁類別的 ID。  當套用至專案時，控制項會將這個字串寫入登錄。  容器應用程式會使用這個字串來建立控制項屬性頁的執行個體。  
+ **屬性頁類型識別碼**  
+ 設定屬性頁類別的識別碼。 控制項將套用至專案時，在登錄中寫入這個字串。 容器應用程式會使用這個字串建立的控制項屬性頁的執行個體。  
   
- 依照預設，屬性頁型別 ID 是根據專案名稱以及簡短名稱而定，專案名稱也就是您在 \[**新增專案**\] 對話方塊中指示的名稱。  這個名稱應與型別名稱相符。  
+ 根據預設，屬性頁類型 ID 根據專案名稱，也就是您指示中**新專案**對話方塊中，以及簡短名稱。 這個名稱應該符合的型別名稱。  
   
- 屬性頁型別 ID 依預設會顯示如下：  
+ 根據預設，屬性頁類型 ID 會顯示如下︰  
   
- *ProjectName*.*ShortName*PropPage.1  
+ *ProjectName.ShortName*PropPage.1  
   
- 如果變更這個對話方塊中的簡短名稱，屬性頁型別 ID 則會顯示如下：  
+ 如果您變更此對話方塊中的簡短名稱，屬性頁類型 ID 會出現，如下所示︰  
   
- *ProjectName*.*NewShortName*PropPage.1  
+ *ProjectName.NewShortName*PropPage.1  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項精靈](../../mfc/reference/mfc-activex-control-wizard.md)   
- [應用程式設定，MFC ActiveX 控制項精靈](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [MFC ActiveX 控制項精靈、控制項設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
- [為 Visual C\+\+ 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)
+ [MFC ActiveX 控制項精靈、 應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [MFC ActiveX 控制項精靈、 控制項設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
+ [為 Visual C++ 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)
+
+

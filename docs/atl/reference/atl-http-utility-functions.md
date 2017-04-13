@@ -11,9 +11,9 @@ caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0f55ad2529ac32647d72336b426e0790f5617561
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
@@ -58,7 +58,7 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  ATL_URL 旗標控制此函式的行為。 
 
-- `ATL_URL_BROWSER_MODE`不會進行編碼或解碼字元之後"#"或"？"，並不會移除尾端空白字元之後"？"。 如果未指定此值，會編碼整個 URL，並移除尾端空白字元。
+- `ATL_URL_BROWSER_MODE`不會進行編碼或解碼字元之後"#"或"？"，而不移除尾端空白字元之後"？"。 如果未指定此值，會編碼整個 URL，並移除尾端空白字元。
 - `ATL_URL_DECODE`將所有 %xx 序列都轉換成字元，包括逸出序列之前在剖析 URL。
 - `ATL_URL_ENCODE_PERCENT`任何遇到的百分比符號會將編碼。 根據預設，未編碼的百分比符號。
 - `ATL_URL_ENCODE_SPACES_ONLY`空間只會將編碼。
@@ -101,7 +101,7 @@ inline BOOL AtlCombineUrl(
  變數，其中包含以字元為單位的長度指標`szBuffer`。 如果函式成功，變數就會收到不包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
   
  `dwFlags`  
- 控制此函式的行為的旗標。 請參閱[ATL_URL 旗標](http://msdn.microsoft.com/library/76e8cc5c-4e17-4eb1-ac29-a94d5256c4a7)。  
+ 控制此函式的行為的旗標。 請參閱[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
   
 ### <a name="return-value"></a>傳回值  
  傳回**TRUE**成功時， **FALSE**失敗。  

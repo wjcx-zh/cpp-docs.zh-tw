@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 86437fca7bfeef662bef9fe8311fb746a661264d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: a052194893db90177b88eea8f80435777ae37773
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-warning-c4867"></a>編譯器警告 C4867
@@ -44,9 +44,9 @@ ms.lasthandoff: 02/24/2017
   
  成員函式的指標未正確初始化。  
   
- Visual c + + 2005 所完成之編譯器一致性處理，可以產生這個警告︰ 增強的成員指標一致性。  編譯 Visual c + + 2005年之前的程式碼現在會產生 C4867。  
+ 針對 Visual c + + 2005年所進行的編譯器一致性工作可能會產生這個警告︰ 增強的指標對成員一致性。  Visual c + + 2005年之前編譯的程式碼現在會產生 C4867。  
   
- 為錯誤一律發出這個警告。 使用[警告](../../preprocessor/warning.md)pragma 來停用這個警告。 如需 C4867 和 MFC/ATL 的詳細資訊，請參閱[_ATL_ENABLE_PTM_WARNING](http://msdn.microsoft.com/Library/00b9ff5c-9834-4c40-911e-ee88d512c4af)。  
+ 為錯誤，永遠會發出這個警告。 使用[警告](../../preprocessor/warning.md)pragma 來停用這個警告。 如需 C4867 和 MFC/ATL 的詳細資訊，請參閱[_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C4867。  

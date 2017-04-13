@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c11d9a2d56f17d814873d36868b8fb6cf3deac43
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 2ac30fa747b13c469846c51e9826242fdf54f8c1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
@@ -175,7 +175,7 @@ DECLARE_DYNCREATE(class_name)
 ### <a name="remarks"></a>備註  
  架構會使用這項功能，以動態方式建立新的物件。 例如，新建立的檢視當您開啟新文件。 文件、 檢視和框架類別應該支援動態建立，因為架構需要動態地建立。  
   
- 新增`DECLARE_DYNCREATE`類別的.h 模組中的巨集然後包含該模組中所有.cpp 模組需要存取此類別的物件。  
+ 新增`DECLARE_DYNCREATE`類別的.h 模組中的巨集然後包含所有需要存取此類別的物件.cpp 模組中的該模組。  
   
  如果`DECLARE_DYNCREATE`隨附於類別宣告中，然後`IMPLEMENT_DYNCREATE`必須包含在類別實作。  
   
@@ -478,7 +478,7 @@ DECLARE_OLECREATE(class_name)
  **標頭**: afxdisp.h  
 
 ##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
- 這個巨集或[IMPLEMENT_OLECREATE_FLAGS](http://msdn.microsoft.com/library/d1589f6a-5a69-4742-b07c-4c621cfd040d)必須出現在使用任何類別實作檔`DECLARE_OLECREATE`。  
+ 這個巨集或[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)必須出現在使用任何類別實作檔`DECLARE_OLECREATE`。  
   
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)  

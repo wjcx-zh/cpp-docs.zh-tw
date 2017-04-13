@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 73def19ecc0577d35054a7384d57c88fd2760499
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
@@ -55,6 +55,7 @@ ms.lasthandoff: 04/04/2017
 |-|-|  
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|宣告的訊息對應會使用類別將訊息與函式對應 (必須在類別宣告中使用)。|  
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|開始進行訊息對應的定義 (必須在類別實作中使用)。|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|開始訊息對應包含單一的樣板引數的類別類型上的定義。 |
 |[END_MESSAGE_MAP](#end_message_map)|結束訊息對應的定義 (必須在類別實作中使用)。|  
   
 ### <a name="message-mapping-macros"></a>訊息對應巨集  
@@ -81,34 +82,6 @@ ms.lasthandoff: 04/04/2017
   
  如需訊息對應、 訊息對應宣告和分界巨集和訊息對應巨集的詳細資訊，請參閱[訊息對應](../../mfc/reference/message-maps-mfc.md)和[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。 如需訊息對應範圍的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
 
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- 宣告該類別定義的訊息對應。 每個`CCmdTarget`位在程式中的衍生的類別必須提供處理訊息的訊息對應。  
-  
-### <a name="syntax"></a>語法  
-  
-```    
-DECLARE_MESSAGE_MAP( )  
-```  
-  
-### <a name="remarks"></a>備註  
- 使用`DECLARE_MESSAGE_MAP`巨集，在類別宣告的結尾。 接著，在定義類別的成員函式的.cpp 檔案，使用`BEGIN_MESSAGE_MAP`巨集，每個訊息處理常式函式的巨集項目和`END_MESSAGE_MAP`巨集。  
-  
-> [!NOTE]
->  如果您宣告之後的任何成員`DECLARE_MESSAGE_MAP`，您必須指定新的存取類型 (**公用**， `private`，或`protected`) 它們。  
-  
- 如需訊息對應和`DECLARE_MESSAGE_MAP`巨集，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
-  
-### <a name="example"></a>範例  
-```cpp  
-class CMainFrame : public CMDIFrameWnd
-{
-   DECLARE_MESSAGE_MAP()
-
-   // Remainder of class declaration omitted.
-``` 
-  
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
 
 ## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
 開始訊息對應的定義。  
@@ -140,6 +113,61 @@ END_MESSAGE_MAP()
   
 ### <a name="requirements"></a>需求  
  **標題:** afxwin.h 
+
+##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+開始訊息對應包含單一的樣板引數的類別類型上的定義。  
+   
+### <a name="syntax"></a>語法  
+  ```
+BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
+```
+### <a name="parameters"></a>參數  
+ `theClass`  
+ 指定的訊息對應的類別名稱。    
+ `type_name`  
+ 指定類別的範本參數名稱。    
+ `baseClass`  
+ 指定 `theClass` 基底類別的名稱。  
+   
+### <a name="remarks"></a>備註  
+ 這個巨集就類似於[BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map)巨集; 不過，此巨集用於包含單一的樣板引數的類別。  
+  
+ 在您類別的方法實作區段，會啟動的訊息對應**BEGIN_TEMPLATE_MESSAGE_MAP**巨集; 然後新增巨集項目針對每個訊息處理常式方法，如同標準訊息對應。 如同**BEGIN_MESSAGE_MAP**巨集，完成與範本訊息對應[END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map)巨集。  
+  
+ 如需實作訊息對應的樣板類別的詳細資訊，請參閱[How to︰ 建立樣板類別的訊息對應](../how-to-create-a-message-map-for-a-template-class.md)。  
+   
+### <a name="requirements"></a>需求  
+ **標題:** afxwin.h  
+ 
+## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+ 宣告該類別定義的訊息對應。 每個`CCmdTarget`位在程式中的衍生的類別必須提供處理訊息的訊息對應。  
+  
+### <a name="syntax"></a>語法  
+  
+```    
+DECLARE_MESSAGE_MAP( )  
+```  
+  
+### <a name="remarks"></a>備註  
+ 使用`DECLARE_MESSAGE_MAP`巨集，在類別宣告的結尾。 接著，在定義類別的成員函式的.cpp 檔案，使用`BEGIN_MESSAGE_MAP`巨集，每個訊息處理常式函式的巨集項目和`END_MESSAGE_MAP`巨集。  
+  
+> [!NOTE]
+>  如果您宣告之後的任何成員`DECLARE_MESSAGE_MAP`，您必須指定新的存取類型 (**公用**， `private`，或`protected`) 它們。  
+  
+ 如需訊息對應和`DECLARE_MESSAGE_MAP`巨集，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
+  
+### <a name="example"></a>範例  
+```cpp  
+class CMainFrame : public CMDIFrameWnd
+{
+   DECLARE_MESSAGE_MAP()
+
+   // Remainder of class declaration omitted.
+``` 
+  
+### <a name="requirements"></a>需求  
+ **標題:** afxwin.h  
+
 
 ## <a name="end_message_map"></a>END_MESSAGE_MAP
 結束訊息對應的定義。  
@@ -498,7 +526,7 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
  訊息對應到 CWinThread 訊息處理常式函式的名稱。  
   
 ### <a name="remarks"></a>備註  
- RegisterWindowMessage 用來定義新的視窗訊息，保證是唯一的整個系統。 CWinThread 類別時，必須使用 ON_REGISTERED_THREAD_MESSAGE 而不是 ON_REGISTERED_MESSAGE。 
+ RegisterWindowMessage 用來定義新的視窗訊息，保證是唯一的整個系統。 ON_REGISTERED_THREAD_MESSAGE 必須代替 ON_REGISTERED_MESSAGE，當您有 CWinThread 類別。 
   
 ### <a name="requirements"></a>需求  
  **標頭︰** afxmsg_.h  

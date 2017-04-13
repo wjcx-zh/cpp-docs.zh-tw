@@ -38,9 +38,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 59d41497bafd9782c0849a03e0354e338b7f8467
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 6d58bdd55887962bac4644df0ab93f8f5dfe9835
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="dhtml-event-maps"></a>DHTML 事件對應
@@ -140,7 +140,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ### <a name="remarks"></a>備註  
  DHTML 事件對應加入至您的類別，提供資訊給**CDHtmlDialog** ，可以用來引發 HTML 項目或與您的類別處理函式的網頁中的 ActiveX 控制項的路由事件。  
   
- 位置`BEGIN_DHTML_EVENT_MAP`後面接著巨集的類別定義 (.h) 檔中`DHTML_EVENT`巨集的事件類別是處理 (例如，`DHTML_EVENT_ONMOUSEOVER`為 mouseover 事件)。 使用[END_DHTML_EVENT_MAP_INLINE](http://msdn.microsoft.com/library/0cfec092-20ee-49f3-bc38-56d6a5572db2)巨集，以標記事件對應的結尾。 這些巨集實作下列函數︰  
+ 位置`BEGIN_DHTML_EVENT_MAP`後面接著巨集的類別定義 (.h) 檔中`DHTML_EVENT`巨集的事件類別是處理 (例如，`DHTML_EVENT_ONMOUSEOVER`為 mouseover 事件)。 使用[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)巨集，以標記事件對應的結尾。 這些巨集實作下列函數︰  
   
  `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`  
   
@@ -827,7 +827,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
  要處理的事件分派識別碼。  
   
  `elemName`  
- 當做事件來源之 HTML 項目的 HTML 標記。  
+ 取得事件的 HTML 項目的 HTML 標記。  
   
  `memberFxn`  
  事件處理常式函式。  
@@ -999,7 +999,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
 ### <a name="remarks"></a>備註  
  如果分頁是 HTML 資源， *url*必須是資源的識別碼 (也就是"123"，不 123 或 ID_HTMLRES1) 的字串表示。  
   
- 頁面識別碼， *mapName*，是用來將連結的任意符號所內嵌 DHTML 事件對應至 URL 事件項目對應。 它會受限於 DHTML 和 URL 事件對應的範圍中。  
+ 頁面識別碼， *mapName*，是用來連結任意符號所內嵌 DHTML 事件對應至 URL 事件項目對應。 它會受限於 DHTML 和 URL 事件對應的範圍中。  
   
 ### <a name="example"></a>範例  
  請參閱中的範例[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)。  

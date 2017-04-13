@@ -1,29 +1,46 @@
 ---
-title: "嚴重錯誤 C1208 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C1208"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1208"
+title: "嚴重錯誤 C1208 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C1208
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1208
 ms.assetid: 4eefd8f0-5c2e-4a11-9e63-293e1139db65
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 嚴重錯誤 C1208
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 53fd2d14541d8b4cd80fac2f532a8f289ae82092
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="fatal-error-c1208"></a>嚴重錯誤 C1208
 所安裝的執行階段版本不支援在堆疊上配置參考類別  
   
  如果您有目前版本的編譯器，但 Common Language Runtime 來自舊版本，就會發生 C1208。  

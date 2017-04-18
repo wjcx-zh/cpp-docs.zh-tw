@@ -41,9 +41,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 7dc1f904d1c3f76635a49db1747578e2ce0b0b3b
-ms.lasthandoff: 04/04/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 4de4d9a0764bb2f25eaf63c302fa03ebc12e3cee
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 巨集和全域
@@ -124,7 +124,7 @@ Mfc 程式庫可以分成兩個主要區段: （1） 的 MFC 類別和 （2） �
   
 -   [分派對應](dispatch-maps.md)  
   
- 此外，MFC 提供函式，呼叫[AfxEnableControlContainer](http://msdn.microsoft.com/library/7aa0b9d2-5329-4bc3-9d41-856e30fe2c2b)啟用任何 OLE 容器開發 MFC 4.0 的完整支援內嵌 OLE 控制項。  
+ 此外，MFC 提供函式，呼叫[AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer)啟用任何 OLE 容器開發 MFC 4.0 的完整支援內嵌 OLE 控制項。  
   
 ## <a name="ole-controls"></a>OLE 控制項  
   

@@ -34,9 +34,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: d2855f44e05e095f8e1e5cf992eacaafcbe8464d
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c2440"></a>編譯器錯誤 C2440
@@ -260,10 +260,12 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 ## <a name="example"></a>範例  
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
-2017 和更新版本的 visual Studio 正確引發編譯器錯誤與使用 Visual Studio 2015 中未被攔截，可能會導致損毀的初始設定式清單的物件建立相關或未定義的執行階段行為。 根據 N4594 13.3.1.7p1，在 copy-list-initialization 中，編譯器需要考慮使用明確建構函式來進行多載解析，但必須在實際選擇該多載時引發錯誤。
-下列兩個範例是在 Visual Studio 2015 中編譯，但無法在 Visual Studio 2017 中編譯。
+2017 和更新版本的 visual Studio 正確引發編譯器錯誤來使用 Visual Studio 2015 中未被攔截，可能會導致損毀的初始設定式清單的物件建立相關或未定義的執行階段行為。 在 C + + 17 複製-清單初始化，編譯器需要考慮的多載解析的明確建構函式，但如果實際上選擇該多載，則必須引發錯誤。
 
-```
+下列範例會在 Visual Studio 2015 中，但不是在 Visual Studio 2017 編譯。
+
+```cpp  
+// C2440j.cpp  
 struct A
 {
     explicit A(int) {} 
@@ -272,25 +274,33 @@ struct A
 
 int main()
 {
-    A a1 = { 1 }; // error C3445: copy-list-initialization of 'A' cannot use an explicit constructor
-    const A& a2 = { 1 }; // error C2440: 'initializing': cannot convert from 'int' to 'const A &'
-
+    const A& a2 = { 1 }; // error C2440: 'initializing': cannot 
+                         // convert from 'int' to 'const A &'
 }
-```
+```  
+  
+若要更正錯誤，請使用直接初始化︰  
+  
+```cpp  
+// C2440k.cpp  
+struct A
+{
+    explicit A(int) {} 
+    A(double) {}
+};
 
-若要更正錯誤，請使用直接初始化︰
-
-```
-A a1{ 1 };
-const A& a2{ 1 };
-```
+int main()
+{
+    const A& a2{ 1 };
+}  
+```  
 
 ## <a name="example"></a>範例
 ### <a name="cv-qualifiers-in-class-construction"></a>類別建構中的 cv 限定詞
 
 在 Visual Studio 2015 中，透過建構函式呼叫來產生類別物件時，編譯器有時會錯誤地忽略 cv 限定詞。 這可能會導致當機或意外執行階段行為。 下列範例會在 Visual Studio 2015 中編譯，但會引發編譯器錯誤在 Visual Studio 2017 和更新版本︰
 
-```
+```cpp
 struct S 
 {
     S(int);

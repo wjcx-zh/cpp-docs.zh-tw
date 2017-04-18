@@ -30,19 +30,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 634e33f4989046767f17fce15377fe6f4959bd8d
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: e322c3af297c288ec6c9ccdb1c04e58d0a5759ff
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="string-conversion-macros"></a>字串轉換巨集
 這些巨集提供轉換功能的字串。  
   
-|||  
-|-|-|  
-|[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)|字串類型之間轉換的巨集的集合。|  
-|[DEVMODE 和 TEXTMETRIC 字串轉換巨集](http://msdn.microsoft.com/library/85cebec0-2a18-48e5-9c1c-99d5b7f15425)|一組內字串轉換的巨集`DEVMODE`和`TEXTMETRIC`結構。|  
-  
+ 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL 和 MFC 字串轉換巨集  
  這裡討論的字串轉換巨集對於 ATL 及 MFC 而言都有效。 如需 MFC 字串轉換的詳細資訊，請參閱[TN059︰ 使用的 MFC MBCS/Unicode 轉換巨集](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)和[MFC 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)。  
   
@@ -80,8 +76,6 @@ MACRONAME( address_of_structure )
 |**_UNICODE**和**OLE2ANSI**|**W**|**A**|  
   
  下表列出`DEVMODE`和`TEXTMETRIC`字串轉換巨集。  
-  
-### <a name="devmode-and-textmetric-string-conversion-macros"></a>DEVMODE 和 TEXTMETRIC 字串轉換巨集  
   
 |||  
 |-|-|  

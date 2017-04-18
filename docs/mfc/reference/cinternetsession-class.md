@@ -49,9 +49,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 0d9ff419c0275d9ab426b4e60102918794aa5221
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
+ms.openlocfilehash: 1bc8f21cd68741a4b0560ea3e1cb678be50dcf89
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
@@ -75,9 +75,9 @@ class CInternetSession : public CObject
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CInternetSession::Close](#close)|網際網路工作階段結束時，關閉網際網路連線。|  
+|[CInternetSession::Close](#close)|當網際網路工作階段結束時，關閉網際網路連線。|  
 |[CInternetSession::EnableStatusCallback](#enablestatuscallback)|建立狀態回呼常式。|  
-|[CInternetSession::GetContext](#getcontext)|網際網路工作階段結束時，關閉網際網路連線。|  
+|[CInternetSession::GetContext](#getcontext)|當網際網路工作階段結束時，關閉網際網路連線。|  
 |[CInternetSession::GetCookie](#getcookie)|傳回指定的 URL 和所有其父代 Url 的 cookie。|  
 |[CInternetSession::GetCookieLength](#getcookielength)|擷取指定的 cookie 儲存在緩衝區長度的變數。|  
 |[Cinternetsession:: Getftpconnection](#getftpconnection)|開啟與伺服器的 FTP 工作階段。 使用者登入。|  
@@ -109,9 +109,9 @@ class CInternetSession : public CObject
   
  [SetOption](#setoption)可讓您設定您的工作階段，例如逾時值，重試，次數的查詢選項等等。  
   
- `CInternetSession`成員函式[SetCookie](#setcookie)， [GetCookie](#getcookie)，和[GetCookieLength](#getcookielength)提供管理透過此伺服器和指令碼維護用戶端工作站的狀態資訊的 Win32 cookie 資料庫的方法。  
+ `CInternetSession`成員函式[SetCookie](#setcookie)， [GetCookie](#getcookie)，和[GetCookieLength](#getcookielength)提供管理 Win32 cookie 資料庫，透過此伺服器和指令碼維護用戶端工作站的狀態資訊的方法。  
   
- 基本的網際網路程式設計工作的詳細資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)。 如需使用 MFC WinInet 類別的一般資訊，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
+ 如需基本網際網路程式設計工作的詳細資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)。 如需使用 MFC WinInet 類別的一般資訊，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
   
 > [!NOTE]
 > `CInternetSession`將會擲回[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)不支援的服務類型。 目前支援下列服務類型︰ FTP、 HTTP、 gopher 和檔案。  
@@ -153,7 +153,7 @@ CInternetSession(
   
 - `INTERNET_OPEN_TYPE_PROXY`透過 CERN proxy 的連線。  
   
- 與不同類型 proxy 的連接資訊，請參閱[一般 FTP 用戶端應用程式中的步驟](../../mfc/steps-in-a-typical-ftp-client-application.md)。  
+ 如需使用不同類型 proxy 的連接資訊，請參閱[一般 FTP 用戶端應用程式中的步驟](../../mfc/steps-in-a-typical-ftp-client-application.md)。  
   
  *pstrProxyName*  
  慣用 CERN proxy 名稱如果`dwAccessType`設為`INTERNET_OPEN_TYPE_PROXY`。 預設值是**NULL**。  
@@ -166,12 +166,12 @@ CInternetSession(
   
 - `INTERNET_FLAG_DONT_CACHE`不會快取資料，在本機或任何閘道伺服器。  
   
-- `INTERNET_FLAG_OFFLINE`下載作業透過持續性的快取沒有問題。 如果項目不存在於快取中，會傳回適當的錯誤程式碼。 這個旗標可能會合併使用位元`OR`( **|**) 運算子。  
+- `INTERNET_FLAG_OFFLINE`下載作業感到滿意，透過持續性的快取。 如果項目不存在於快取中，會傳回適當的錯誤程式碼。 這個旗標可能會合併使用位元`OR`( **|**) 運算子。  
   
 ### <a name="remarks"></a>備註  
  **CInternetSession**是在應用程式呼叫的第一個網際網路函式。 它會初始化內部資料結構，並準備進行後續的呼叫，從應用程式。  
   
- 如果可以開啟沒有網際網路連線，`CInternetSession`會擲回[AfxThrowInternetException](http://msdn.microsoft.com/library/c9645b10-9541-48b2-8b0c-94ca33fed3cb)。  
+ 如果可以開啟沒有網際網路連線，`CInternetSession`會擲回[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
@@ -205,7 +205,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
   
  因為回呼會在要求處理期間，應用程式應該花費中用來防止網路的資料輸送量降低的回呼，盡可能少的時間。 例如，放在回呼中的對話方塊可能是這類長時間作業伺服器終止要求。  
   
- 無法移除狀態回撥，只要任何回呼為擱置中。  
+ 只要任何回呼為擱置中，無法移除狀態回呼。  
   
  若要以非同步方式處理任何作業，您必須建立自己的執行緒，或使用 MFC WinInet 函式。  
   
@@ -220,9 +220,9 @@ DWORD_PTR GetContext() const;
  應用程式定義的內容識別項。  
   
 ### <a name="remarks"></a>備註  
- [OnStatusCallback](#onstatuscallback)所傳回的內容識別碼的用法**GetContext**報告特定的應用程式的狀態。 例如，使用者啟動牽涉到傳回狀態資訊的網際網路要求，狀態回呼就會使用報告狀態的內容識別碼上該特定要求。 如果在使用者啟動兩個不同網際網路要求兩者都涉及傳回狀態資訊`OnStatusCallback`使用內容識別項，會傳回有關其相對應的要求的狀態。 因此，內容識別項用於所有回呼作業狀態，而且相關聯的工作階段，直到該工作階段結束為止。  
+ [OnStatusCallback](#onstatuscallback)所傳回的內容識別碼的用法**GetContext**報告特定的應用程式的狀態。 例如，使用者啟動牽涉到傳回狀態資訊的網際網路要求，狀態回呼就會使用報告狀態的內容識別碼上該特定要求。 如果在使用者啟動兩個不同網際網路要求兩者都涉及傳回狀態資訊`OnStatusCallback`傳回有關其相對應的要求的狀態會使用內容識別碼。 因此，內容識別項用於所有回呼作業狀態，而且相關聯的工作階段，直到該工作階段結束為止。  
   
- 非同步作業的詳細資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)。  
+ 如需有關非同步作業的詳細資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)。  
   
 ##  <a name="getcookie"></a>CInternetSession::GetCookie  
  此成員函式實作的 Win32 函式的行為[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
@@ -281,7 +281,7 @@ static DWORD GetCookieLength(
  包含 cookie 名稱的字串指標。  
   
 ### <a name="return-value"></a>傳回值  
- A`DWORD`值，指出 cookie，儲存在緩衝區的長度。 如果任何 cookie，零名稱所指示`pstrCookieName`存在。  
+ A`DWORD`值，指出 cookie，儲存在緩衝區的長度。 如果沒有 cookie 零名稱所指示`pstrCookieName`存在。  
   
 ### <a name="remarks"></a>備註  
  這個值由[GetCookie](#getcookie)。  
@@ -452,7 +452,7 @@ virtual void OnStatusCallback(
   
  [!code-cpp[NVC_MFCHtmlHttp # 8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]  
   
- 非同步作業的詳細資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)。  
+ 如需有關非同步作業的詳細資訊，請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)。  
   
 ##  <a name="openurl"></a>Cinternetsession:: Openurl  
  呼叫此成員函式將指定的要求傳送至 HTTP 伺服器，並允許用戶端指定其他的 RFC822 MIME 或連同要求一起傳送的 HTTP 標頭。  
@@ -474,7 +474,7 @@ CStdioFile* OpenURL(
  應用程式定義的值隨回呼中傳回的控制代碼。  
   
  `dwFlags`  
- 描述如何處理此連線的旗標。 請參閱**備註**為有效的旗標的詳細資訊。 有效的旗標如下︰  
+ 描述如何處理此連線的旗標。 請參閱**備註**如需有關有效的旗標。 有效的旗標如下︰  
   
 - **INTERNET_FLAG_TRANSFER_ASCII**預設值。 將檔案傳輸 ASCII 文字。  
   
@@ -583,7 +583,7 @@ BOOL SetOption(
   
 - `INTERNET_FLAG_DONT_CACHE`不會快取資料，在本機或任何閘道伺服器。  
   
-- `INTERNET_FLAG_OFFLINE`下載作業透過持續性的快取沒有問題。 如果項目不存在於快取中，會傳回適當的錯誤程式碼。 這個旗標可能會合併使用位元`OR`( **|**) 運算子。  
+- `INTERNET_FLAG_OFFLINE`下載作業感到滿意，透過持續性的快取。 如果項目不存在於快取中，會傳回適當的錯誤程式碼。 這個旗標可能會合併使用位元`OR`( **|**) 運算子。  
   
 ### <a name="return-value"></a>傳回值  
  如果作業成功，值為**TRUE**傳回。 如果發生錯誤，值為**FALSE**傳回。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  

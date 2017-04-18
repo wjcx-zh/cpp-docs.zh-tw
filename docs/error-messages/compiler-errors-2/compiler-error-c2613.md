@@ -1,29 +1,46 @@
 ---
-title: "編譯器錯誤 C2613 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-csharp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "C2613"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2613"
+title: "編譯器錯誤 C2613 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- C2613
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2613
 ms.assetid: d8fa7b32-08cb-4bb4-96e7-c04dded0e917
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C2613
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 7fe570526ab78611d5504946f3b86490e65626dd
+ms.lasthandoff: 04/12/2017
 
+---
+# <a name="compiler-error-c2613"></a>編譯器錯誤 C2613
 結尾的 ',' 在基底類別清單中不合法  
   
  基底類別清單中的最後一個基底之後，出現一個逗號。

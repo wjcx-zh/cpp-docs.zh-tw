@@ -34,21 +34,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: d7ce6fbec9278893fd4f3f6b75c74ef91718646b
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
+ms.openlocfilehash: 5f6719ade94bdbca9659405995fe09bfade57230
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="compiler-error-c3917"></a>編譯器錯誤 C3917
-'property': 過時的建構宣告樣式  
+'*屬性*': 過時的建構宣告樣式  
   
-屬性或事件定義中使用舊的版本中的語法。  
+屬性或事件定義中使用語法從 Visual Studio 2005 之前的版本。  
   
 如需詳細資訊，請參閱[屬性](../../windows/property-cpp-component-extensions.md)。  
   
 ## <a name="example"></a>範例  
   
-```  
+```cpp  
 // C3917.cpp  
 // compile with: /clr /c  
 public ref class  C {  

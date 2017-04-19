@@ -6,6 +6,13 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- ios/std::ios
+- ios/std::streamoff
+- ios/std::streampos
+- ios/std::streamsize
+- ios/std::wios
+- ios/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 caps.latest.revision: 13
 manager: ghogen
@@ -21,7 +28,7 @@ ms.lasthandoff: 02/24/2017
 |[ios](#ios)|[streamoff](#streamoff)|[streampos](#streampos)|  
 |[streamsize](#streamsize)|[wios](#wios)|[wstreampos](#wstreampos)|  
   
-##  <a name="a-nameiosa--ios"></a><a name="ios"></a>  ios  
+##  <a name="ios"></a>  ios  
  支援來自舊 iostream 程式庫的 ios 類別。  
   
 ```  
@@ -31,7 +38,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>備註  
  此類型與範本類別 [basic_ios](../standard-library/basic-ios-class.md) 同義，該範本類別是為具有預設字元特性之 `char` 類型的元素特製化的範本類別。  
   
-##  <a name="a-namestreamoffa--streamoff"></a><a name="streamoff"></a>  streamoff  
+##  <a name="streamoff"></a>  streamoff  
  支援內部作業。  
   
 ```  
@@ -45,7 +52,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 ### <a name="remarks"></a>備註  
  此類型是帶正負號的整數，描述可儲存與各種資料流定位作業有關之位元組位移的物件。 其表示法至少有 32 值位元。 它不一定大到足以代表資料流內的任意位元組位置。 **streamoff(-1)** 值通常表示有錯誤的位移。  
   
-##  <a name="a-namestreamposa--streampos"></a><a name="streampos"></a>  streampos  
+##  <a name="streampos"></a>  streampos  
  保留緩衝區指標或檔案指標的目前位置。  
   
 ```  
@@ -78,7 +85,7 @@ int main( )
 7  
 ```  
   
-##  <a name="a-namestreamsizea--streamsize"></a><a name="streamsize"></a>  streamsize  
+##  <a name="streamsize"></a>  streamsize  
  表示資料流的大小。  
   
 ```  
@@ -111,7 +118,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namewiosa--wios"></a><a name="wios"></a>  wios  
+##  <a name="wios"></a>  wios  
  支援來自舊 iostream 程式庫的 wios 類別。  
   
 ```  
@@ -121,7 +128,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ### <a name="remarks"></a>備註  
  此類型與範本類別 [basic_ios](../standard-library/basic-ios-class.md) 同義，該範本類別是為具有預設字元特性之 `wchar_t` 類型的元素特製化的範本類別。  
   
-##  <a name="a-namewstreamposa--wstreampos"></a><a name="wstreampos"></a>  wstreampos  
+##  <a name="wstreampos"></a>  wstreampos  
  保留緩衝區指標或檔案指標的目前位置。  
   
 ```  

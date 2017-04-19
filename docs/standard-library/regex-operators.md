@@ -14,6 +14,8 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
+dev_langs:
+- C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 caps.latest.revision: 12
 manager: ghogen
@@ -30,7 +32,7 @@ ms.lasthandoff: 02/24/2017
 |[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  不同物件的不等於比較。  
   
 ```  
@@ -147,7 +149,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  運算子&lt;  
+##  <a name="operator_lt_"></a>  運算子&lt;  
  不同物件的小於比較。  
   
 ```  
@@ -255,7 +257,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  運算子&lt;&lt;  
+##  <a name="operator_lt__lt_"></a>  運算子&lt;&lt;  
  在資料流中插入 sub_match。  
   
 ```  
@@ -313,7 +315,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  運算子&lt;=  
+##  <a name="operator_lt__eq"></a>  運算子&lt;=  
  不同物件的小於或等於比較。  
   
 ```  
@@ -421,7 +423,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  不同物件的等於比較。  
   
 ```  
@@ -546,7 +548,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  不同物件的大於比較。  
   
 ```  
@@ -654,7 +656,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  運算子&gt;=  
+##  <a name="operator_gt__eq"></a>  運算子&gt;=  
  不同物件的大於或等於比較。  
   
 ```  

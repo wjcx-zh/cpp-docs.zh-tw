@@ -6,6 +6,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- locale/std::has_facet
+- locale/std::isalnum
+- locale/std::isalpha
+- locale/std::iscntrl
+- locale/std::isdigit
+- locale/std::isgraph
+- locale/std::islower
+- locale/std::isprint
+- locale/std::ispunct
+- locale/std::isspace
+- locale/std::isupper
+- locale/std::isxdigit
+- locale/std::tolower
+- locale/std::toupper
+- locale/std::use_facet
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
@@ -24,7 +40,7 @@ ms.lasthandoff: 02/24/2017
 |[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|  
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|  
   
-##  <a name="a-namehasfaceta--hasfacet"></a><a name="has_facet"></a>  has_facet  
+##  <a name="has_facet"></a>  has_facet  
  測試特定的 facet 是否在指定的地區設定中儲存。  
   
 ```  
@@ -63,7 +79,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-nameisalnuma--isalnum"></a><a name="isalnum"></a>  isalnum  
+##  <a name="isalnum"></a>  isalnum  
  測試地區設定中的項目是否為字母或數字字元。  
   
 ```  
@@ -127,7 +143,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.  
 ```  
   
-##  <a name="a-nameisalphaa--isalpha"></a><a name="isalpha"></a>  isalpha  
+##  <a name="isalpha"></a>  isalpha  
  測試地區設定中的元素是否為字母字元。  
   
 ```  
@@ -188,7 +204,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameiscntrla--iscntrl"></a><a name="iscntrl"></a>  iscntrl  
+##  <a name="iscntrl"></a>  iscntrl  
  測試地區設定中的項目是否為控制字元。  
   
 ```  
@@ -249,7 +265,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisdigita--isdigit"></a><a name="isdigit"></a>  isdigit  
+##  <a name="isdigit"></a>  isdigit  
  測試地區設定中的項目是否為數字字元。  
   
 ```  
@@ -310,7 +326,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisgrapha--isgraph"></a><a name="isgraph"></a>  isgraph  
+##  <a name="isgraph"></a>  isgraph  
  測試地區設定中的項目是否為英數字元或標點符號字元。  
   
 ```  
@@ -371,7 +387,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameislowera--islower"></a><a name="islower"></a>  islower  
+##  <a name="islower"></a>  islower  
  測試地區設定中的項目是否為小寫。  
   
 ```  
@@ -432,7 +448,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisprinta--isprint"></a><a name="isprint"></a>  isprint  
+##  <a name="isprint"></a>  isprint  
  測試地區設定中的項目是否為可列印的字元。  
   
 ```  
@@ -492,7 +508,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameispuncta--ispunct"></a><a name="ispunct"></a>  ispunct  
+##  <a name="ispunct"></a>  ispunct  
  測試地區設定中的項目是否為標點符號字元。  
   
 ```  
@@ -553,7 +569,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisspacea--isspace"></a><a name="isspace"></a>  isspace  
+##  <a name="isspace"></a>  isspace  
  測試地區設定中的項目是否為空白字元。  
   
 ```  
@@ -614,7 +630,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisuppera--isupper"></a><a name="isupper"></a>  isupper  
+##  <a name="isupper"></a>  isupper  
  測試地區設定中的元素是否為大寫。  
   
 ```  
@@ -675,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameisxdigita--isxdigit"></a><a name="isxdigit"></a>  isxdigit  
+##  <a name="isxdigit"></a>  isxdigit  
  測試地區設定中的項目是否為用來表示十六進位數字的字元。  
   
 ```  
@@ -738,7 +754,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nametolowera--tolower"></a><a name="tolower"></a>  tolower  
+##  <a name="tolower"></a>  tolower  
  將字元轉換為小寫。  
   
 ```  
@@ -783,7 +799,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nametouppera--toupper"></a><a name="toupper"></a>  toupper  
+##  <a name="toupper"></a>  toupper  
  將字元轉換為大寫。  
   
 ```  
@@ -828,7 +844,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameusefaceta--usefacet"></a><a name="use_facet"></a>  use_facet  
+##  <a name="use_facet"></a>  use_facet  
  傳回儲存在地區設定中指定之類型的 facet 的參考。  
   
 ```  

@@ -10,9 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - system_error/std::error_condition
-- std::error_condition
 - error_condition
-- std.error_condition
+- system_error/std::error_condition::value_type
+- system_error/std::error_condition::assign
+- system_error/std::error_condition::category
+- system_error/std::error_condition::clear
+- system_error/std::error_condition::message
+- system_error/std::error_condition::operator bool
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -90,7 +94,7 @@ class error_condition;
   
  **命名空間：** std  
   
-##  <a name="a-nameerrorconditionassigna--errorconditionassign"></a><a name="error_condition__assign"></a>  error_condition::assign  
+##  <a name="error_condition__assign"></a>  error_condition::assign  
  可針對錯誤狀況指派錯誤碼值和分類。  
   
 ```
@@ -107,7 +111,7 @@ void assign(value_type val, const error_category& _Cat);
 ### <a name="remarks"></a>備註  
  成員函式會儲存 `val` 作為錯誤碼值，並儲存 `_Cat` 的指標。  
   
-##  <a name="a-nameerrorconditioncategorya--errorconditioncategory"></a><a name="error_condition__category"></a>  error_condition::category  
+##  <a name="error_condition__category"></a>  error_condition::category  
  傳回錯誤分類。  
   
 ```
@@ -119,7 +123,7 @@ const error_category& category() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameerrorconditioncleara--errorconditionclear"></a><a name="error_condition__clear"></a>  error_condition::clear  
+##  <a name="error_condition__clear"></a>  error_condition::clear  
  清除錯誤碼值和分類。  
   
 ```
@@ -129,7 +133,7 @@ clear();
 ### <a name="remarks"></a>備註  
  成員函式會儲存零的錯誤碼值以及 [generic_category](../standard-library/system-error-functions.md#generic_category) 物件的指標。  
   
-##  <a name="a-nameerrorconditionerrorconditiona--errorconditionerrorcondition"></a><a name="error_condition__error_condition"></a>  error_condition::error_condition  
+##  <a name="error_condition__error_condition"></a>  error_condition::error_condition  
  建構類型 `error_condition` 的物件。  
   
 ```
@@ -158,7 +162,7 @@ error_condition(_Enum _Errcode,
   
  第三個建構函式會儲存 `(value_type)_Errcode` 作為錯誤碼值，並儲存 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。  
   
-##  <a name="a-nameerrorconditionmessagea--errorconditionmessage"></a><a name="error_condition__message"></a>  error_condition::message  
+##  <a name="error_condition__message"></a>  error_condition::message  
  傳回錯誤碼的名稱。  
   
 ```
@@ -171,7 +175,7 @@ string message() const;
 ### <a name="remarks"></a>備註  
  此成員函式會傳回 `category().message(value())`。  
   
-##  <a name="a-nameerrorconditionoperatoreqeqa--errorconditionoperator"></a><a name="error_condition__operator_eq_eq"></a>  error_condition::operator==  
+##  <a name="error_condition__operator_eq_eq"></a>  error_condition::operator==  
  測試 `error_condition` 物件是否相等。  
   
 ```
@@ -190,7 +194,7 @@ bool operator==(const error_condition& right) const;
 ### <a name="remarks"></a>備註  
  成員運算子會傳回 `category() == right.category() && value == right.value()`。  
   
-##  <a name="a-nameerrorconditionoperatorneqa--errorconditionoperator"></a><a name="error_condition__operator_neq"></a>  error_condition::operator!=  
+##  <a name="error_condition__operator_neq"></a>  error_condition::operator!=  
  測試 `error_condition` 物件是否不相等。  
   
 ```
@@ -209,7 +213,7 @@ bool operator!=(const error_condition& right) const;
 ### <a name="remarks"></a>備註  
  成員運算子會傳回 `!(*this == right)`。  
   
-##  <a name="a-nameerrorconditionoperatorlta--errorconditionoperatorlt"></a><a name="error_condition__operator_lt_"></a>  error_condition::operator&lt;  
+##  <a name="error_condition__operator_lt_"></a>  error_condition::operator&lt;  
  測試 `error_condition` 物件是否小於傳入以進行比較的 `error_code` 物件。  
   
 ```
@@ -228,7 +232,7 @@ bool operator<(const error_condition& right) const;
 ### <a name="remarks"></a>備註  
  成員運算子會傳回 `category() < right.category() || category() == right.category() && value < right.value()`。  
   
-##  <a name="a-nameerrorconditionoperatoreqa--errorconditionoperator"></a><a name="error_condition__operator_eq"></a>  error_condition::operator=  
+##  <a name="error_condition__operator_eq"></a>  error_condition::operator=  
  將新的列舉值指派給 `error_condition` 物件。  
   
 ```
@@ -251,7 +255,7 @@ error_condition(_Enum error,
 ### <a name="remarks"></a>備註  
  成員運算子會儲存 `(value_type)error` 作為錯誤碼值，並儲存 [generic_category](../standard-library/system-error-functions.md#generic_category) 的指標。 它會傳回 `*this`。  
   
-##  <a name="a-nameerrorconditionoperatorboola--errorconditionoperator-bool"></a><a name="error_condition__operator_bool"></a>  error_condition::operator bool  
+##  <a name="error_condition__operator_bool"></a>  error_condition::operator bool  
  轉換 `error_condition` 類型的變數。  
   
 ```
@@ -264,7 +268,7 @@ explicit operator bool() const;
 ### <a name="remarks"></a>備註  
  只有當 [value](#error_condition__value) 不等於零時，運算子才會傳回可以轉換成 `true` 的值。 傳回類型僅可轉換為 `bool`，而非 `void *` 或其他已知的純量類型。  
   
-##  <a name="a-nameerrorconditionvaluea--errorconditionvalue"></a><a name="error_condition__value"></a>  error_condition::value  
+##  <a name="error_condition__value"></a>  error_condition::value  
  傳回預存的錯誤碼值。  
   
 ```
@@ -276,7 +280,7 @@ value_type value() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-nameerrorconditionvaluetypea--errorconditionvaluetype"></a><a name="error_condition__value_type"></a>  error_condition::value_type  
+##  <a name="error_condition__value_type"></a>  error_condition::value_type  
  此類型表示預存的錯誤碼值。  
   
 ```

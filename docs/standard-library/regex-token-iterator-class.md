@@ -10,31 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_token_iterator
-- std::regex_token_iterator
 - regex/std::regex_token_iterator
-- std::regex_token_iterator::regex_type
 - regex/std::regex_token_iterator::regex_type
-- std::regex_token_iterator::value_type
 - regex/std::regex_token_iterator::value_type
-- std::regex_token_iterator::iterator_category
 - regex/std::regex_token_iterator::iterator_category
-- std::regex_token_iterator::difference_type
 - regex/std::regex_token_iterator::difference_type
-- std::regex_token_iterator::pointer
 - regex/std::regex_token_iterator::pointer
-- std::regex_token_iterator::reference
 - regex/std::regex_token_iterator::reference
-- std::regex_token_iterator::operator==
 - regex/std::regex_token_iterator::operator==
-- std::regex_token_iterator::operator!=
 - regex/std::regex_token_iterator::operator!=
-- std::regex_token_iterator::operator*
 - regex/std::regex_token_iterator::operator*
-- std::regex_token_iterator::operator->
 - regex/std::regex_token_iterator::operator->
-- std::regex_token_iterator::operator++
 - regex/std::regex_token_iterator::operator++
-- std::regex_token_iterator::operator!=
 - regex/std::regex_token_iterator::operator!=
 dev_langs:
 - C++
@@ -127,7 +114,7 @@ private:
   
  **命名空間：** std  
   
-##  <a name="a-nameregextokeniteratordifferencetypea--regextokeniteratordifferencetype"></a><a name="regex_token_iterator__difference_type"></a>  regex_token_iterator::difference_type  
+##  <a name="regex_token_iterator__difference_type"></a>  regex_token_iterator::difference_type  
  迭代器差值的類型。  
   
 ```  
@@ -233,7 +220,7 @@ match == aa
 match == z  
 ```  
   
-##  <a name="a-nameregextokeniteratoriteratorcategorya--regextokeniteratoriteratorcategory"></a><a name="regex_token_iterator__iterator_category"></a>  regex_token_iterator::iterator_category  
+##  <a name="regex_token_iterator__iterator_category"></a>  regex_token_iterator::iterator_category  
  迭代器分類的類型。  
   
 ```  
@@ -343,7 +330,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperatorneqa--regextokeniteratoroperator"></a><a name="regex_token_iterator__operator_neq"></a>  regex_token_iterator::operator!=  
+##  <a name="regex_token_iterator__operator_neq"></a>  regex_token_iterator::operator!=  
  比較迭代器是否不相等。  
   
 ```  
@@ -457,7 +444,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperatorstara--regextokeniteratoroperator"></a><a name="regex_token_iterator__operator_star"></a>  regex_token_iterator::operator*  
+##  <a name="regex_token_iterator__operator_star"></a>  regex_token_iterator::operator*  
  存取指定的子對應項目。  
   
 ```  
@@ -567,7 +554,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperatoraddadda--regextokeniteratoroperator"></a><a name="regex_token_iterator__operator_add_add"></a>  regex_token_iterator::operator++  
+##  <a name="regex_token_iterator__operator_add_add"></a>  regex_token_iterator::operator++  
  遞增迭代器。  
   
 ```  
@@ -681,7 +668,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperatoreqeqa--regextokeniteratoroperator"></a><a name="regex_token_iterator__operator_eq_eq"></a>  regex_token_iterator::operator==  
+##  <a name="regex_token_iterator__operator_eq_eq"></a>  regex_token_iterator::operator==  
  比較迭代器是否相等。  
   
 ```  
@@ -795,7 +782,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratoroperator-gta--regextokeniteratoroperator-gt"></a><a name="regex_token_iterator__operator-_gt_"></a>  regex_token_iterator::operator-&gt;  
+##  <a name="regex_token_iterator__operator-_gt_"></a>  regex_token_iterator::operator-&gt;  
  存取指定的子對應項目。  
   
 ```  
@@ -905,7 +892,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratorpointera--regextokeniteratorpointer"></a><a name="regex_token_iterator__pointer"></a>  regex_token_iterator::pointer  
+##  <a name="regex_token_iterator__pointer"></a>  regex_token_iterator::pointer  
  要比對的指標類型。  
   
 ```  
@@ -1015,7 +1002,7 @@ match == z
 ### <a name="remarks"></a>備註  
  此類型與 `sub_match<BidIt>*`同義，其中 `BidIt` 是範本參數。  
   
-##  <a name="a-nameregextokeniteratorreferencea--regextokeniteratorreference"></a><a name="regex_token_iterator__reference"></a>  regex_token_iterator::reference  
+##  <a name="regex_token_iterator__reference"></a>  regex_token_iterator::reference  
  子對應的參考類型。  
   
 ```  
@@ -1125,7 +1112,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratorregextokeniteratora--regextokeniteratorregextokeniterator"></a><a name="regex_token_iterator__regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
+##  <a name="regex_token_iterator__regex_token_iterator"></a>  regex_token_iterator::regex_token_iterator  
  建構迭代器。  
   
 ```  
@@ -1267,7 +1254,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratorregextypea--regextokeniteratorregextype"></a><a name="regex_token_iterator__regex_type"></a>  regex_token_iterator::regex_type  
+##  <a name="regex_token_iterator__regex_type"></a>  regex_token_iterator::regex_type  
  要比對的規則運算式類型。  
   
 ```  
@@ -1377,7 +1364,7 @@ match == z
   
 ```  
   
-##  <a name="a-nameregextokeniteratorvaluetypea--regextokeniteratorvaluetype"></a><a name="regex_token_iterator__value_type"></a>  regex_token_iterator::value_type  
+##  <a name="regex_token_iterator__value_type"></a>  regex_token_iterator::value_type  
  子對應的類型。  
   
 ```  

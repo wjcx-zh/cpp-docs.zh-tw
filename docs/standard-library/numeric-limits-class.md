@@ -9,10 +9,40 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::numeric_limits
-- std.numeric_limits
 - numeric_limits
 - limits/std::numeric_limits
+- limits/std::numeric_limits::denorm_min
+- limits/std::numeric_limits::digits
+- limits/std::numeric_limits::digits10
+- limits/std::numeric_limits::epsilon
+- limits/std::numeric_limits::has_denorm
+- limits/std::numeric_limits::has_denorm_loss
+- limits/std::numeric_limits::has_infinity
+- limits/std::numeric_limits::has_quiet_NaN
+- limits/std::numeric_limits::has_signaling_NaN
+- limits/std::numeric_limits::infinity
+- limits/std::numeric_limits::is_bounded
+- limits/std::numeric_limits::is_exact
+- limits/std::numeric_limits::is_iec559
+- limits/std::numeric_limits::is_integer
+- limits/std::numeric_limits::is_modulo
+- limits/std::numeric_limits::is_signed
+- limits/std::numeric_limits::is_specialized
+- limits/std::numeric_limits::lowest
+- limits/std::numeric_limits::max
+- limits/std::numeric_limits::max_digits10
+- limits/std::numeric_limits::max_exponent
+- limits/std::numeric_limits::max_exponent10
+- limits/std::numeric_limits::min
+- limits/std::numeric_limits::min_exponent
+- limits/std::numeric_limits::min_exponent10
+- limits/std::numeric_limits::quiet_NaN
+- limits/std::numeric_limits::radix
+- limits/std::numeric_limits::round_error
+- limits/std::numeric_limits::round_style
+- limits/std::numeric_limits::signaling_NaN
+- limits/std::numeric_limits::tinyness_before
+- limits/std::numeric_limits::traps
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -103,7 +133,7 @@ class numeric_limits
   
  **命名空間：** std  
   
-##  <a name="a-namenumericlimitsdenormmina--numericlimitsdenormmin"></a><a name="numeric_limits__denorm_min"></a>  numeric_limits::denorm_min  
+##  <a name="numeric_limits__denorm_min"></a>  numeric_limits::denorm_min  
  傳回未標準化的最小非零值。  
   
 ```  
@@ -159,7 +189,7 @@ The smallest nonzero denormalized value
 0  
 ```  
   
-##  <a name="a-namenumericlimitsdigitsa--numericlimitsdigits"></a><a name="numeric_limits__digits"></a>  numeric_limits::digits  
+##  <a name="numeric_limits__digits"></a>  numeric_limits::digits  
  傳回基數數字的數目，其中該類型可以在不減少有效位數的情況下表示。  
   
 ```  
@@ -200,7 +230,7 @@ int main( )
 63  
 ```  
   
-##  <a name="a-namenumericlimitsdigits10a--numericlimitsdigits10"></a><a name="numeric_limits__digits10"></a>  numeric_limits::digits10  
+##  <a name="numeric_limits__digits10"></a>  numeric_limits::digits10  
  傳回十進位數字的數目，其中該類型可以在不減少有效位數的情況下表示。  
   
 ```  
@@ -242,7 +272,7 @@ int main( )
 The float is; 100000000  
 ```  
   
-##  <a name="a-namenumericlimitsepsilona--numericlimitsepsilon"></a><a name="numeric_limits__epsilon"></a>  numeric_limits::epsilon  
+##  <a name="numeric_limits__epsilon"></a>  numeric_limits::epsilon  
  函式會傳回可針對資料類型代表的 1 到大於 1 的最小值之間的差異。  
   
 ```  
@@ -291,7 +321,7 @@ The difference between 1 and the smallest value greater than 1
  for long double objects is: 2.22045e-016  
 ```  
   
-##  <a name="a-namenumericlimitshasdenorma--numericlimitshasdenorm"></a><a name="numeric_limits__has_denorm"></a>  numeric_limits::has_denorm  
+##  <a name="numeric_limits__has_denorm"></a>  numeric_limits::has_denorm  
  測試類型是否允許未標準化的值。  
   
 ```  
@@ -334,7 +364,7 @@ Whether double objects allow denormalized values: 1
 Whether long int objects allow denormalized values: 0  
 ```  
   
-##  <a name="a-namenumericlimitshasdenormlossa--numericlimitshasdenormloss"></a><a name="numeric_limits__has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
+##  <a name="numeric_limits__has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
  測試偵測到的精確度遺失是否為未標準化遺失，而非不精確的結果。  
   
 ```  
@@ -377,7 +407,7 @@ Whether double objects can detect denormalized loss: 1
 Whether long int objects can detect denormalized loss: 0  
 ```  
   
-##  <a name="a-namenumericlimitshasinfinitya--numericlimitshasinfinity"></a><a name="numeric_limits__has_infinity"></a>  numeric_limits::has_infinity  
+##  <a name="numeric_limits__has_infinity"></a>  numeric_limits::has_infinity  
  測試類型是否有正無限大的表示。  
   
 ```  
@@ -420,7 +450,7 @@ Whether double objects have infinity: 1
 Whether long int objects have infinity: 0  
 ```  
   
-##  <a name="a-namenumericlimitshasquietnana--numericlimitshasquietnan"></a><a name="numeric_limits__has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
+##  <a name="numeric_limits__has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
  測試類型是否有不是數字 (NAN) 的無訊息 (非訊號) 表示。  
   
 ```  
@@ -463,7 +493,7 @@ Whether double objects have quiet_NaN: 1
 Whether long int objects have quiet_NaN: 0  
 ```  
   
-##  <a name="a-namenumericlimitshassignalingnana--numericlimitshassignalingnan"></a><a name="numeric_limits__has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
+##  <a name="numeric_limits__has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
  測試類型是否有不是數字 (NAN) 的訊號表示。  
   
 ```  
@@ -506,7 +536,7 @@ Whether double objects have a signaling_NaN: 1
 Whether long int objects have a signaling_NaN: 0  
 ```  
   
-##  <a name="a-namenumericlimitsinfinitya--numericlimitsinfinity"></a><a name="numeric_limits__infinity"></a>  numeric_limits::infinity  
+##  <a name="numeric_limits__infinity"></a>  numeric_limits::infinity  
  類型的正無限大表示 (如果有的話)。  
   
 ```  
@@ -557,7 +587,7 @@ The representation of infinity for type double is: 1.#INF
 The representation of infinity for type long double is: 1.#INF  
 ```  
   
-##  <a name="a-namenumericlimitsisboundeda--numericlimitsisbounded"></a><a name="numeric_limits__is_bounded"></a>  numeric_limits::is_bounded  
+##  <a name="numeric_limits__is_bounded"></a>  numeric_limits::is_bounded  
  測試類型可能代表的一組值是否為有限值。  
   
 ```  
@@ -608,7 +638,7 @@ Whether long int objects have bounded set of representable values: 1
 Whether unsigned char objects have bounded set of representable values: 1  
 ```  
   
-##  <a name="a-namenumericlimitsisexacta--numericlimitsisexact"></a><a name="numeric_limits__is_exact"></a>  numeric_limits::is_exact  
+##  <a name="numeric_limits__is_exact"></a>  numeric_limits::is_exact  
  測試執行計算的類型是否沒有進位誤差。  
   
 ```  
@@ -659,7 +689,7 @@ Whether long int objects have calculations free of rounding errors: 1
 Whether unsigned char objects have calculations free of rounding errors: 1  
 ```  
   
-##  <a name="a-namenumericlimitsisiec559a--numericlimitsisiec559"></a><a name="numeric_limits__is_iec559"></a>  numeric_limits::is_iec559  
+##  <a name="numeric_limits__is_iec559"></a>  numeric_limits::is_iec559  
  測試類型是否符合 IEC 559 標準。  
   
 ```  
@@ -706,7 +736,7 @@ Whether int objects conform to iec559 standards: 0
 Whether unsigned char objects conform to iec559 standards: 0  
 ```  
   
-##  <a name="a-namenumericlimitsisintegera--numericlimitsisinteger"></a><a name="numeric_limits__is_integer"></a>  numeric_limits::is_integer  
+##  <a name="numeric_limits__is_integer"></a>  numeric_limits::is_integer  
  測試類型是否有整數表示。  
   
 ```  
@@ -753,7 +783,7 @@ Whether int objects have an integral representation: 1
 Whether unsigned char objects have an integral representation: 1  
 ```  
   
-##  <a name="a-namenumericlimitsismoduloa--numericlimitsismodulo"></a><a name="numeric_limits__is_modulo"></a>  numeric_limits::is_modulo  
+##  <a name="numeric_limits__is_modulo"></a>  numeric_limits::is_modulo  
  測試「類型」是否有模數表示。  
   
 ```  
@@ -800,7 +830,7 @@ Whether signed char objects have a modulo representation: 1
 Whether unsigned char objects have a modulo representation: 1  
 ```  
   
-##  <a name="a-namenumericlimitsissigneda--numericlimitsissigned"></a><a name="numeric_limits__is_signed"></a>  numeric_limits::is_signed  
+##  <a name="numeric_limits__is_signed"></a>  numeric_limits::is_signed  
  測試類型是否有正負號表示。  
   
 ```  
@@ -847,7 +877,7 @@ Whether signed char objects have a signed representation: 1
 Whether unsigned char objects have a signed representation: 0  
 ```  
   
-##  <a name="a-namenumericlimitsisspecializeda--numericlimitsisspecialized"></a><a name="numeric_limits__is_specialized"></a>  numeric_limits::is_specialized  
+##  <a name="numeric_limits__is_specialized"></a>  numeric_limits::is_specialized  
  測試類型是否在範本類別 `numeric_limits`中定義了明確特製化。  
   
 ```  
@@ -898,7 +928,7 @@ Whether int objects have an explicit specialization in the class: 1
 Whether int* objects have an explicit specialization in the class: 0  
 ```  
   
-##  <a name="a-namenumericlimitslowesta--numericlimitslowest"></a><a name="numeric_limits__lowest"></a>  numeric_limits::lowest  
+##  <a name="numeric_limits__lowest"></a>  numeric_limits::lowest  
  傳回最大負數的有限值。  
   
 ```  
@@ -911,7 +941,7 @@ static Type lowest() throw();
 ### <a name="remarks"></a>備註  
  傳回類型的最大負數有限值 (如果是整數類型，通常是 `min` `()`，如果是浮點數類型則是 `-``max` `()`)。 如果 `is_bounded` 是 `true`，則傳回值有意義。  
   
-##  <a name="a-namenumericlimitsmaxa--numericlimitsmax"></a><a name="numeric_limits__max"></a>  numeric_limits::max  
+##  <a name="numeric_limits__max"></a>  numeric_limits::max  
  傳回類型的最大有限值。  
   
 ```  
@@ -950,7 +980,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namenumericlimitsmaxdigits10a--numericlimitsmaxdigits10"></a><a name="numeric_limits__max_digits10"></a>  numeric_limits::max_digits10  
+##  <a name="numeric_limits__max_digits10"></a>  numeric_limits::max_digits10  
  傳回十進位數字的數值，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。  
   
 ```  
@@ -963,7 +993,7 @@ static int max_digits10 = 0;
 ### <a name="remarks"></a>備註  
  此成員儲存十進位數字的數值，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。  
   
-##  <a name="a-namenumericlimitsmaxexponenta--numericlimitsmaxexponent"></a><a name="numeric_limits__max_exponent"></a>  numeric_limits::max_exponent  
+##  <a name="numeric_limits__max_exponent"></a>  numeric_limits::max_exponent  
  傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。  
   
 ```  
@@ -1006,7 +1036,7 @@ The maximum radix-based exponent for type double is:  1024
 The maximum radix-based exponent for type long double is:  1024  
 ```  
   
-##  <a name="a-namenumericlimitsmaxexponent10a--numericlimitsmaxexponent10"></a><a name="numeric_limits__max_exponent10"></a>  numeric_limits::max_exponent10  
+##  <a name="numeric_limits__max_exponent10"></a>  numeric_limits::max_exponent10  
  傳回當&10; 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。  
   
 ```  
@@ -1049,7 +1079,7 @@ The maximum base 10 exponent for type double is:  308
 The maximum base 10 exponent for type long double is:  308  
 ```  
   
-##  <a name="a-namenumericlimitsmina--numericlimitsmin"></a><a name="numeric_limits__min"></a>  numeric_limits::min  
+##  <a name="numeric_limits__min"></a>  numeric_limits::min  
  傳回類型的最小標準化數值。  
   
 ```  
@@ -1096,7 +1126,7 @@ The minimum value for type int is:  -2147483648
 The minimum value for type short int is:  -32768  
 ```  
   
-##  <a name="a-namenumericlimitsminexponenta--numericlimitsminexponent"></a><a name="numeric_limits__min_exponent"></a>  numeric_limits::min_exponent  
+##  <a name="numeric_limits__min_exponent"></a>  numeric_limits::min_exponent  
  傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。  
   
 ```  
@@ -1139,7 +1169,7 @@ The minimum radix-based exponent for type double is:  -1021
 The minimum radix-based exponent for type long double is:  -1021  
 ```  
   
-##  <a name="a-namenumericlimitsminexponent10a--numericlimitsminexponent10"></a><a name="numeric_limits__min_exponent10"></a>  numeric_limits::min_exponent10  
+##  <a name="numeric_limits__min_exponent10"></a>  numeric_limits::min_exponent10  
  傳回當&10; 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。  
   
 ```  
@@ -1182,7 +1212,7 @@ The minimum base 10 exponent for type double is:  -307
 The minimum base 10 exponent for type long double is:  -307  
 ```  
   
-##  <a name="a-namenumericlimitsquietnana--numericlimitsquietnan"></a><a name="numeric_limits__quiet_nan"></a>  numeric_limits::quiet_NaN  
+##  <a name="numeric_limits__quiet_nan"></a>  numeric_limits::quiet_NaN  
  傳回類型非數字 (NAN) 的無訊息表示。  
   
 ```  
@@ -1225,7 +1255,7 @@ The quiet NaN for type int is:  0
 The quiet NaN for type long double is:  1.#QNAN  
 ```  
   
-##  <a name="a-namenumericlimitsradixa--numericlimitsradix"></a><a name="numeric_limits__radix"></a>  numeric_limits::radix  
+##  <a name="numeric_limits__radix"></a>  numeric_limits::radix  
  傳回用來表示類型的整數基底 (稱為基數)。  
   
 ```  
@@ -1268,7 +1298,7 @@ The base for type int is:  2
 The base for type long double is:  2  
 ```  
   
-##  <a name="a-namenumericlimitsrounderrora--numericlimitsrounderror"></a><a name="numeric_limits__round_error"></a>  numeric_limits::round_error  
+##  <a name="numeric_limits__round_error"></a>  numeric_limits::round_error  
  傳回類型的最大進位誤差。  
   
 ```  
@@ -1308,7 +1338,7 @@ The maximum rounding error for type int is:  0
 The maximum rounding error for type long double is:  0.5  
 ```  
   
-##  <a name="a-namenumericlimitsroundstylea--numericlimitsroundstyle"></a><a name="numeric_limits__round_style"></a>  numeric_limits::round_style  
+##  <a name="numeric_limits__round_style"></a>  numeric_limits::round_style  
  傳回一個值，該值描述實作可選擇用來將浮點值捨入為整數值的各種方法。  
   
 ```  
@@ -1352,7 +1382,7 @@ The rounding style for a double type is now: 1
 The rounding style for an int type is: 0  
 ```  
   
-##  <a name="a-namenumericlimitssignalingnana--numericlimitssignalingnan"></a><a name="numeric_limits__signaling_nan"></a>  numeric_limits::signaling_NaN  
+##  <a name="numeric_limits__signaling_nan"></a>  numeric_limits::signaling_NaN  
  傳回類型非數字 (NAN) 的訊號表示。  
   
 ```  
@@ -1389,7 +1419,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namenumericlimitstinynessbeforea--numericlimitstinynessbefore"></a><a name="numeric_limits__tinyness_before"></a>  numeric_limits::tinyness_before  
+##  <a name="numeric_limits__tinyness_before"></a>  numeric_limits::tinyness_before  
  測試類型是否可以判斷某個值太小，而無法在捨入前以標準化數值表示。  
   
 ```  
@@ -1436,7 +1466,7 @@ Whether long int types can detect tinyness before rounding: 0
 Whether unsigned char types can detect tinyness before rounding: 0  
 ```  
   
-##  <a name="a-namenumericlimitstrapsa--numericlimitstraps"></a><a name="numeric_limits__traps"></a>  numeric_limits::traps  
+##  <a name="numeric_limits__traps"></a>  numeric_limits::traps  
  測試要報告算術例外狀況的設限是否會針對類型實作。  
   
 ```  

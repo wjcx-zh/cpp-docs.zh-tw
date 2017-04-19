@@ -10,9 +10,10 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_chunklist
-- stdext.cache_chunklist
 - stdext::cache_chunklist
 - cache_chunklist
+- allocators/stdext::cache_chunklist::allocate
+- allocators/stdext::cache_chunklist::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class cache_chunklist
   
  **命名空間：** stdext  
   
-##  <a name="a-namecachechunklistallocatea--cachechunklistallocate"></a><a name="cache_chunklist__allocate"></a>  cache_chunklist::allocate  
+##  <a name="cache_chunklist__allocate"></a>  cache_chunklist::allocate  
  配置記憶體區塊。  
   
 ```
@@ -99,7 +100,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecachechunklistcachechunklista--cachechunklistcachechunklist"></a><a name="cache_chunklist__cache_chunklist"></a>  cache_chunklist::cache_chunklist  
+##  <a name="cache_chunklist__cache_chunklist"></a>  cache_chunklist::cache_chunklist  
  建構類型 `cache_chunklist` 的物件。  
   
 ```
@@ -108,7 +109,7 @@ cache_chunklist();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecachechunklistdeallocatea--cachechunklistdeallocate"></a><a name="cache_chunklist__deallocate"></a>  cache_chunklist::deallocate  
+##  <a name="cache_chunklist__deallocate"></a>  cache_chunklist::deallocate  
  從指定位置起算的儲存體中，釋放指定數目的物件。  
   
 ```

@@ -12,7 +12,11 @@ f1_keywords:
 - allocators/stdext::max_fixed_size
 - max_fixed_size
 - stdext::max_fixed_size
-- stdext.max_fixed_size
+- allocators/stdext::max_fixed_size::allocated
+- allocators/stdext::max_fixed_size::deallocated
+- allocators/stdext::max_fixed_size::full
+- allocators/stdext::max_fixed_size::released
+- allocators/stdext::max_fixed_size::saved
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -79,7 +83,7 @@ class max_fixed_size
   
  **命名空間：** stdext  
   
-##  <a name="a-namemaxfixedsizeallocateda--maxfixedsizeallocated"></a><a name="max_fixed_size__allocated"></a>  max_fixed_size::allocated  
+##  <a name="max_fixed_size__allocated"></a>  max_fixed_size::allocated  
  遞增已配置的記憶體區塊計數。  
   
 ```
@@ -95,7 +99,7 @@ void allocated(std::size_t _Nx = 1);
 ### <a name="remarks"></a>備註  
  此成員函式不會執行任何動作。 每次 `cache_freelist::allocate` 成功呼叫運算子 `new` 之後，都會呼叫此成員函式。 引數 `_Nx` 是運算子 `new` 所配置之區塊中的記憶體區塊數目。  
   
-##  <a name="a-namemaxfixedsizedeallocateda--maxfixedsizedeallocated"></a><a name="max_fixed_size__deallocated"></a>  max_fixed_size::deallocated  
+##  <a name="max_fixed_size__deallocated"></a>  max_fixed_size::deallocated  
  遞減已配置的記憶體區塊計數。  
   
 ```
@@ -111,7 +115,7 @@ void deallocated(std::size_t _Nx = 1);
 ### <a name="remarks"></a>備註  
  此成員函式不會執行任何動作。 每次 `cache_freelist::deallocate` 呼叫運算子 `delete` 之後，都會呼叫此成員函式。 引數 `_Nx` 是運算子 `delete` 所解除配置之區塊中的記憶體區塊數目。  
   
-##  <a name="a-namemaxfixedsizefulla--maxfixedsizefull"></a><a name="max_fixed_size__full"></a>  max_fixed_size::full  
+##  <a name="max_fixed_size__full"></a>  max_fixed_size::full  
  傳回指定是否應該為可用清單新增更多記憶體區塊的值。  
   
 ```
@@ -124,7 +128,7 @@ bool full();
 ### <a name="remarks"></a>備註  
  此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果此呼叫傳回 `true`，`deallocate` 便會將記憶體區塊放到可用清單上，如果傳回 false，`deallocate` 則會呼叫運算子 `delete` 來將區塊解除配置。  
   
-##  <a name="a-namemaxfixedsizemaxfixedsizea--maxfixedsizemaxfixedsize"></a><a name="max_fixed_size__max_fixed_size"></a>  max_fixed_size::max_fixed_size  
+##  <a name="max_fixed_size__max_fixed_size"></a>  max_fixed_size::max_fixed_size  
  建構類型 `max_fixed_size` 的物件。  
   
 ```
@@ -134,7 +138,7 @@ max_fixed_size();
 ### <a name="remarks"></a>備註  
  此建構函式會將預存值 `_Nblocks` 初始化為零。  
   
-##  <a name="a-namemaxfixedsizereleaseda--maxfixedsizereleased"></a><a name="max_fixed_size__released"></a>  max_fixed_size::released  
+##  <a name="max_fixed_size__released"></a>  max_fixed_size::released  
  遞減可用清單上的記憶體區塊計數。  
   
 ```
@@ -144,7 +148,7 @@ void released();
 ### <a name="remarks"></a>備註  
  遞減預存值 `_Nblocks`。 每當 `cache_freelist::allocate` 從可用清單中移除記憶體區塊時，都會呼叫目前 [max 類別](../standard-library/allocators-header.md)的 `released` 成員函式。  
   
-##  <a name="a-namemaxfixedsizesaveda--maxfixedsizesaved"></a><a name="max_fixed_size__saved"></a>  max_fixed_size::saved  
+##  <a name="max_fixed_size__saved"></a>  max_fixed_size::saved  
  遞增可用清單上的記憶體區塊計數。  
   
 ```

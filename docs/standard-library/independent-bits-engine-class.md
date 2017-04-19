@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - independent_bits_engine
-- std::independent_bits_engine
 - random/std::independent_bits_engine
 dev_langs:
 - C++

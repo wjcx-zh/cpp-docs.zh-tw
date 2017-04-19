@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::operator delete
+- new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
@@ -21,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 |[operator delete](#operator_delete)|[operator delete[]](#operator_delete_arr)|[operator new](#operator_new)|  
 |[operator new[]](#operator_new_arr)|  
   
-##  <a name="a-nameoperatordeletea--operator-delete"></a><a name="operator_delete"></a>  operator delete  
+##  <a name="operator_delete"></a>  operator delete  
  由 delete 陳述式呼叫的函式，藉此取消配置物件個體的儲存區。  
   
 ```
@@ -50,7 +53,7 @@ void operator delete(void* ptr,
 ### <a name="example"></a>範例  
   如需使用 `operator delete` 的範例，請參閱 [operator new](../standard-library/new-operators.md#operator_new)。  
   
-##  <a name="a-nameoperatordeletearra--operator-delete"></a><a name="operator_delete_arr"></a>  operator delete[]  
+##  <a name="operator_delete_arr"></a>  operator delete[]  
  由 delete 陳述式呼叫的函式，藉此取消配置物件陣列的儲存區。  
   
 ```
@@ -77,7 +80,7 @@ void operator delete[](void* ptr,
 ### <a name="example"></a>範例  
   如需使用 `operator delete[]` 的範例，請參閱 [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)。  
   
-##  <a name="a-nameoperatornewa--operator-new"></a><a name="operator_new"></a>  operator new  
+##  <a name="operator_new"></a>  operator new  
  new 運算式所呼叫來為個別物件配置儲存體的函式。  
   
 ```
@@ -172,7 +175,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatornewarra--operator-new"></a><a name="operator_new_arr"></a>  operator new[]  
+##  <a name="operator_new_arr"></a>  operator new[]  
  new 運算式所呼叫來為物件陣列配置儲存體的配置函式。  
   
 ```

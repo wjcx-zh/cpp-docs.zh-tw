@@ -10,8 +10,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - istrstream
-- std::istrstream
-- std.istrstream
+- strstream/std::istrstream::rdbuf
+- strstream/std::istrstream::str
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -74,7 +74,7 @@ class istrstream : public istream
   
  **命名空間：** std  
   
-##  <a name="a-nameistrstreamistrstreama--istrstreamistrstream"></a><a name="istrstream__istrstream"></a>  istrstream::istrstream  
+##  <a name="istrstream__istrstream"></a>  istrstream::istrstream  
  建構類型 `istrstream` 的物件。  
   
 ```
@@ -103,7 +103,7 @@ istrstream(
 ### <a name="remarks"></a>備註  
  所有建構函式都會呼叫 [istream](../standard-library/istream-typedefs.md#istream)( **sb**) 來將基底類別初始化，其中 **sb** 是 [strstreambuf](../standard-library/strstreambuf-class.md) 類別的預存物件。 前兩個建構函式還會一併呼叫 `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ) 來將 **sb** 初始化。 其餘兩個建構函式會改為呼叫 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。  
   
-##  <a name="a-nameistrstreamrdbufa--istrstreamrdbuf"></a><a name="istrstream__rdbuf"></a>  istrstream::rdbuf  
+##  <a name="istrstream__rdbuf"></a>  istrstream::rdbuf  
  傳回指向資料流相關 strstreambuf 物件的指標。  
   
 ```
@@ -119,7 +119,7 @@ strstreambuf *rdbuf() const
 ### <a name="example"></a>範例  
   如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount)。  
   
-##  <a name="a-nameistrstreamstra--istrstreamstr"></a><a name="istrstream__str"></a>  istrstream::str  
+##  <a name="istrstream__str"></a>  istrstream::str  
  呼叫 [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze)，然後傳回指向受控制序列開頭的指標。  
   
 ```

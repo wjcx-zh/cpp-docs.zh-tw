@@ -37,9 +37,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c4c0e4de99d0d700f04f235a4bd5f7afd83937fb
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 904069e809876beefbc05c7dc0ddb83bee8e5c94
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="c-floating-point-constants"></a>C 浮點常數
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/24/2017
  &nbsp;&nbsp; **E**  *sign*<sub>opt</sub> *digit-sequence*  
   
  *sign*：下列其中一個  
- &nbsp;&nbsp; **+ –**  
+ &nbsp;&nbsp; **+ -**  
   
  *digit-sequence*：  
  &nbsp;&nbsp; *digit*  
@@ -80,7 +80,7 @@ ms.lasthandoff: 02/24/2017
 25E-4     /* =  0.0025 */  
 ```  
   
- 除非前面加上負號 (**–**)，否則浮點常數為正數。 此時，負號會視為一元算術負運算子。 浮點常數有 `float`、`double` 或 `long double` 型別。  
+ 除非前面加上負號 (**-**)，否則浮點常數為正數。 此時，負號會視為一元算術負運算子。 浮點常數有 `float`、`double` 或 `long double` 型別。  
   
  沒有**f**、**F**、**l** 或 **L** 後置字元的浮點常數是 `double` 型別。 如果後置字元是字母 **f** 或 **F**，常數則是 `float` 型別。 如果後置字元是字母 **l** 或 **L**，則是 `long double` 型別。 例如:   
   

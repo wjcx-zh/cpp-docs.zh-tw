@@ -36,9 +36,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9ab3901fa8e167af8b559c6100460f67bd4ed0e7
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 78bc75930f3e7aadd2bf147b9c6565f8c0c87a84
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="byte-classification"></a>位元組分類
@@ -58,13 +58,13 @@ ms.lasthandoff: 03/30/2017
 |[_ismbbalpha、_ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|`isalpha &#124;&#124; _ismbbkalnum`|  
 |[_ismbbgraph、_ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|與 `_ismbbprint` 相同，但 `_ismbbgraph` 不包含空格字元 (0x20)|  
 |[_ismbbkalnum、_ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|標點符號以外的非 ASCII 文字符號。 例如，僅限字碼頁 932，`_ismbbkalnum` 會測試片假名英數字元|  
-|[_ismbbkana、_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|片假名 (0xA1 – 0xDF)，僅限字碼頁 932|  
-|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文字符號或非 ASCII 標點符號。 例如，僅限字碼頁 932， `_ismbbkprint` 會測試片假名英數字元或片假名標點符號 (範圍：0xA1-0xDF)。|  
+|[_ismbbkana、_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|片假名 (0xA1 - 0xDF)，僅限字碼頁 932|  
+|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文字符號或非 ASCII 標點符號。 例如，僅限字碼頁 932，`_ismbbkprint` 會測試片假名英數字元或片假名標點符號 (範圍：0xA1 - 0xDF)。|  
 |[_ismbbkpunct、_ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|非 ASCII 標點符號。 例如，只在字碼頁 932 中的片假名標點符號之 `_ismbbkpunct` 測試。|  
-|[_ismbblead、_ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|多位元組字元的第一個位元組 例如，僅限在字碼頁 932 中，有效範圍是 0x81-0x9F 以及 0xE0-0xFC。|  
+|[_ismbblead、_ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|多位元組字元的第一個位元組 例如，僅限在字碼頁 932 中，有效範圍是 0x81 - 0x9F 和 0xE0 - 0xFC。|  
 |[_ismbbprint、_ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint &#124;&#124; _ismbbkprint. ismbbprint` 包含空格字元 (0x20)|  
 |[_ismbbpunct、_ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct &#124;&#124; _ismbbkpunct`|  
-|[_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|多位元組字元的第二個位元組 例如，僅限在字碼頁 932 中，有效範圍是 0x40-0x7E 以及 0x80-0xEC。|  
+|[_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|多位元組字元的第二個位元組 例如，僅限在字碼頁 932 中，有效範圍是 0x40 - 0x7E 和 0x80 - 0xEC。|  
 |[_ismbslead、_ismbslead_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|前導位元組 (於字串內容中)|  
 |[ismbstrail、_ismbstrail_l](../c-runtime-library/reference/ismbslead-ismbstrail-ismbslead-l-ismbstrail-l.md)|後隨位元組 (於字串內容中)|  
 |[_mbbtype、_mbbtype_l](../c-runtime-library/reference/mbbtype-mbbtype-l.md)|根據上一個位元組傳回位元組類型|  

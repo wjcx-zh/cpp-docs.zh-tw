@@ -58,9 +58,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b0dabfdf6540a09a08f7b7a3dec05fd5aa9d07fa
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ec0c11cf43080389363fc682aad9511a958e6edd
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
@@ -94,7 +94,7 @@ unsigned long _inpd(
  這些函式會傳回從 `port`讀取而來的位元組、字組或雙字組。 不會傳回錯誤。  
   
 ## <a name="remarks"></a>備註  
- `_inp`、 `_inpw`及 `_inpd` 函式會從指定的輸入連接埠讀取位元組、字組及雙字組。 輸入的值可以是 0-65535 之間任何不帶正負號的短整數。  
+ `_inp`、 `_inpw`及 `_inpd` 函式會從指定的輸入連接埠讀取位元組、字組及雙字組。 輸入的值可以是 0 - 65535 之間任何不帶正負號的 short 整數。  
   
  因為這些函式會直接讀取 I/O 連接埠，所以無法在 Windows NT、 Windows 2000、Windows XP 及 Windows Server 2003 的使用者程式碼中使用。  
   

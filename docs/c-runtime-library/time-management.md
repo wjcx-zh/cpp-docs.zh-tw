@@ -38,9 +38,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: baf07427498c6b1f60ceca67112251be794a7451
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 665210ecf78fa0c76d598c9116fc19dc391a0585
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="time-management"></a>時間管理
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/30/2017
 |[_ftime、_ftime32、_ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)、[_ftime_s、_ftime32_s、_ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|將目前的系統時間儲存在類型 `struct _timeb` 或類型 `struct``__timeb64` 這些具有 `_s` 尾碼的函式版本比較安全。|  
 |[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|對開啟的檔案上設定修改時間|  
 |[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)|將時間從類型 `time_t` 轉換為 `struct tm`，或從類型 `__time64_t` 轉換為 `struct tm`。這些具有 `_s` 尾碼的函式版本比較安全。|  
-|[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|將時間從類型 `time_t` 轉換為 `struct tm` ，或從類型 `__time64_t` 轉換為 `struct tm` 這些具有 `_s` 尾碼的函式版本比較安全。|  
+|[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)|將時間從類型 `time_t` 轉換為 `struct tm`，或從類型 `__time64_t` 轉換為經過本機校正的 `struct tm`。 這些具有 `_s` 尾碼的函式版本比較安全。|  
 |[_mkgmtime、_mkgmtime32、_mkgmtime64](../c-runtime-library/reference/mkgmtime-mkgmtime32-mkgmtime64.md)|將時間轉換為格林威治標準時間的月曆值。|  
 |[mktime、_mktime32、_mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md)|將時間轉換為月曆值。|  
 |[_strdate、_wstrdate](../c-runtime-library/reference/strdate-wstrdate.md)、[_strdate_s、_wstrdate_s](../c-runtime-library/reference/strdate-s-wstrdate-s.md)|以字串形式傳回目前的系統日期。 這些具有 `_s` 尾碼的函式版本比較安全。|  

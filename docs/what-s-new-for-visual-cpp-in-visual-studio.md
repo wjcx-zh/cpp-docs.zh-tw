@@ -27,9 +27,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: d3ac5f5e54334e42ad48304d26a4f32b1b598459
-ms.openlocfilehash: dbed9eaf443d7392373d1eeba81bc0095c5bd1b4
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
+ms.lasthandoff: 04/01/2017
 
 ---
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/07/2017
 - 版本控制：現在，每次 Visual C++ 工具組更新時，都只會更新內建前置處理器巨集 _MSC_VER 的值。 如需詳細資訊，請參閱 [Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/) (Visual C++ 編譯器版本)。
 - 新的工具組版面配置︰編譯器和相關建置工具在開發電腦上具有新的位置和目錄結構。 新的版面配置可並存安裝多個版本的編譯器。 如需詳細資訊，請參閱 [Compiler Tools Layout in Visual Studio "15"](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/) (Visual Studio "15" 中的編譯器工具版面配置)。
 - 改善的診斷：輸出視窗現在會顯示發生錯誤的資料行。 如需詳細資訊，請參閱 [C++ compiler diagnostics improvements in VS "15" Preview 5](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/) (VS "15" Preview 5 中的 C++ 編譯器診斷改善)。
-- 使用共同常式時，已移除實驗關鍵字 "yield" (在 /await 參數下)。 您應該更新程式碼以改用 "co_yield”。 如需詳細資訊，請參閱 Visual C++ 小組部落格。 
+- 使用共同常式時，已移除實驗關鍵字 "yield" (在 /await 參數下)。 您應該更新程式碼以改用 "co_yield"。 如需詳細資訊，請參閱 Visual C++ 小組部落格。 
 
 ## <a name="c-libraries"></a>C++ 程式庫
 
@@ -113,7 +113,7 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 * C++ 原生專案的組態變更效能現已提升，而 C++/CLI 專案的組態變更效能則更佳。 解決方案組態在首次啟用時將會較快，而它在後續啟用時將能幾乎瞬間完成。
 
 ### <a name="intellisense"></a>Intellisense  
-* 現在預設使用新的 SQLite 型資料庫引擎。 這會加速資料庫作業，如「移至定義」和「尋找所有參考」，也會大幅改善初始解決方案剖析階段。 設定已移至 [工具] > [選項] > [文字編輯器] > [\C/C++\] > [進階]\(原位於 [C/C++] > [\實驗\] 下)。
+* 現在預設使用新的 SQLite 型資料庫引擎。 這會加速資料庫作業，如「移至定義」和「尋找所有參考」，也會大幅改善初始解決方案剖析階段。 設定已移至 [工具] > [選項] > [文字編輯器] > [C/C++] > [進階] (原位於 [C/C++] > [實驗] 下)。
 
 * 我們已對未使用先行編譯標頭檔的專案及檔案提升 IntelliSense 效能，將會為目前檔案中的標頭建立自動先行編譯標頭檔。
 
@@ -127,7 +127,7 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 
   ![成員清單篩選](media/mlfiltering.png "成員清單篩選")
 
-* 新增了實驗性的預測性 IntelliSense 功能，提供成員清單中出現項目的內容相關篩選。 請參閱 [C++ IntelliSense Improvements – Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/) (C++ IntelliSense 改善 - 預測性 IntelliSense 和篩選)。
+* 新增了實驗性的預測性 IntelliSense 功能，提供成員清單中出現項目的內容相關篩選。 請參閱 [C++ IntelliSense Improvements - Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/) (C++ IntelliSense 改善 - 預測性 IntelliSense 和篩選)。
 
 * [尋找所有參考]\(Shift+F12) 現在可協助您輕鬆地解決，即使是在複雜的程式碼基底中也是一樣。 它提供進階分組、篩選、排序、在結果內搜尋和顏色標示 (適用於某些語言)，因此您可以清楚了解您的參考。 針對 C++，新的 UI 包含要讀取或寫入變數的相關資訊。
 
@@ -148,7 +148,7 @@ Visual Studio 2017 引進「開啟資料夾」功能，可讓您在包含原始�
   -    Launch.json，用以自訂偵錯經驗。
 
 ### <a name="cmake-support-via-open-folder"></a>透過開啟資料夾的 CMake 支援
-Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Visual Studio 中的 CMake 支援) 和 [CMake support in Visual Studio 2017 – what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Visual Studio 2017 中的 CMake 支援 – RC.2 更新新功能)。 使用「開啟資料夾」開啟 CMake 專案將會自動針對 C++ 編輯、建置和偵錯設定環境。
+Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Visual Studio 中的 CMake 支援) 和 [CMake support in Visual Studio 2017 - what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Visual Studio 2017 中的 CMake 支援 - RC.2 更新的新功能)。 使用「開啟資料夾」開啟 CMake 專案將會自動針對 C++ 編輯、建置和偵錯設定環境。
 
 * 無須在根資料夾中建立 CppProperties.json 檔案，C++ IntelliSense 即可運作。 此外，我們新增了下拉式清單，可讓使用者輕易地切換 CMake 和 CppProperties.json 檔案所提供的設定。
 

@@ -33,12 +33,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 7ff37399842c7c8d41f8b7d15660c73b8a11f19f
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
+ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
+ms.lasthandoff: 04/05/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
+這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」與「過去」表示 Visual Studio 2013 及更舊版本。 
+ 
+ 如需 Visual Studio 2017 的資訊，請參閱 [Visual Studio 2017 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)及[Visual Studio 2017 中 Visual C++ 的合規性改進](../cpp-conformance-improvements-2017.md)。 
+ > [!NOTE]
+ > Visual Studio 2015 與 Visual Studio 2017 之間沒有二進位檔重大變更。
+
 當您升級到 Visual C++ 編譯器的新版本時，先前正常編譯及執行的程式碼可能會發生編譯和/或執行階段錯誤。 新版本中會造成這類問題的變更稱為 *「重大變更」*(Breaking Change)，在進行 C++ 語言標準、函式簽章或記憶體內部物件配置的修改時通常都會有重大變更。  
   
  為了避免發生難以偵測及診斷的執行階段錯誤，我們建議您絕不要以靜態方式連結至使用不同版本編譯器所編譯的二進位檔。 此外，當您升級 EXE 或 DLL 專案時，請務必也要升級它所連結的程式庫。 若是使用 CRT (C 執行階段) 或 C++ 標準程式庫 (C++ 標準程式庫) 類型，請勿在使用不同版本編譯器所編譯的二進位檔 (包括 DLL) 之間傳遞這些類型。 如需詳細資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
@@ -47,9 +53,6 @@ ms.lasthandoff: 03/07/2017
   
  此外，隨著編譯器合規性不斷改進，有時候可能會改變編譯器解讀您現有原始程式碼的方式。 當發生這種情況時，可能會在您建置時發生不同或新的錯誤，甚至程式碼的行為與上版組建不同，而且看似正常運作。 這些雖然不像本文件中討論的其他變更屬於重大變更，但解決這些問題仍可能需要變更原始程式碼。  
   
- 這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」與「過去」表示 Visual Studio 2013 及更舊版本。 
- 
- 如需 Visual Studio 2017 的資訊，請參閱 [Visual Studio 2017 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)及[Visual Studio 2017 中 Visual C++ 的合規性改進](../cpp-conformance-improvements-2017.md)。
   
 1.  [C 執行階段 (CRT) 程式庫的重大變更](#BK_CRT)  
   
@@ -103,7 +106,7 @@ ms.lasthandoff: 03/07/2017
   
 #### <a name="new-and-newh"></a>\<new> 與 \<new.h>  
   
--   **new 和 delete** 在此程式庫的舊版中，實作定義的 operator new 和 delete 函式會從此執行階段程式庫 DLL (例如，msvcr120.dll) 中匯出。 這些 operator 函式現在一律以靜態方式連結到您的二進位檔，即使是使用執行階段程式庫 DLL 亦同。  
+-   **new 和 delete** In previous versions of the library, the implementation-defined operator new 和 delete functions were exported from the runtime library DLL (for example, msvcr120.dll). 這些 operator 函式現在一律以靜態方式連結到您的二進位檔，即使是使用執行階段程式庫 DLL 亦同。  
   
      對於原生或混合程式碼 (/clr) 而言，這不是重大變更，但對於編譯成 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的程式碼，可能會造成您的程式碼無法編譯。 若將程式碼編譯成 /clr:pure，可能必須加入 #include \<new> 或 #include \<new.h> 來暫時解決此變更所造成的建置錯誤。 請注意，/clr:pure 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中已標示為即將淘汰，將從後續版本中移除。  
   
@@ -949,7 +952,7 @@ ms.lasthandoff: 03/07/2017
   
      此外，雖然編譯器不提供特定的診斷，但內嵌運算子 new 會被視為語式錯誤。  
   
--   對非類別類型** **呼叫 'operator*type*()' (使用者定義的轉換)  
+-   **對非類別類型呼叫 'operator *type*()' (使用者定義的轉換)**  
   
      舊版編譯器允許在非類別類型上呼叫 'operator *type*()'，但以無訊息方式略過。 這種舊行為造成的風險是，會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2228。  
   

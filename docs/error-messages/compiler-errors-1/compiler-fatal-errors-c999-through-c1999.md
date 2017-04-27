@@ -88,6 +88,86 @@ f1_keywords:
 - C1901
 - C1903
 - C1904
+helpviewer_keywords:
+- C1012
+- C1013
+- C1014
+- C1016
+- C1018
+- C1019
+- C1020
+- C1021
+- C1022
+- C1023
+- C1034
+- C1035
+- C1036
+- C1037
+- C1038
+- C1041
+- C1045
+- C1047
+- C1048
+- C1049
+- C1053
+- C1063
+- C1068
+- C1069
+- C1070
+- C1074
+- C1077
+- C1082
+- C1086
+- C1087
+- C1088
+- C1089
+- C1090
+- C1091
+- C1098
+- C1099
+- C1100
+- C1101
+- C1102
+- C1103
+- C1104
+- C1105
+- C1108
+- C1109
+- C1110
+- C1111
+- C1112
+- C1114
+- C1190
+- C1193
+- C1195
+- C1196
+- C1201
+- C1202
+- C1205
+- C1206
+- C1207
+- C1208
+- C1209
+- C1210
+- C1211
+- C1300
+- C1301
+- C1302
+- C1306
+- C1310
+- C1312
+- C1352
+- C1353
+- C1383
+- C1384
+- C1451
+- C1505
+- C1508
+- C1510
+- C1852
+- C1901
+- C1903
+- C1904
 dev_langs:
 - C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
@@ -111,13 +191,18 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: e8d1696e325ac6a005636aa1d874d30b9c296e91
-ms.lasthandoff: 04/12/2017
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
+ms.lasthandoff: 04/24/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>編譯器嚴重錯誤 C999 至 C1999
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
+  
+> [!NOTE]
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+  
+ 您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
 |錯誤|訊息|  
 |-----------|-------------|  
@@ -130,7 +215,7 @@ ms.lasthandoff: 04/12/2017
 |[嚴重錯誤 C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|無法辨識的旗標 '*字串*'in'*選項*'|  
 |[嚴重錯誤 C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|沒有指定輸入檔案|  
 |[嚴重錯誤 C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|編譯器限制: 巨集巢狀結構太深，請簡化|  
-|[嚴重錯誤 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|尋找先行編譯的標頭時出現非預期的檔案結尾。 您忘記新增 ' #include*檔案*>' 到您的來源？|  
+|[嚴重錯誤 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|尋找先行編譯的標頭時出現非預期的檔案結尾。 您忘記新增 ' #include <*檔案*>' 到您的來源？|  
 |嚴重錯誤 C1012|無對應的括弧︰ 遺漏 '*字元*"|  
 |嚴重錯誤 C1013|編譯器限制: 左括號太多，請簡化運算式或分為數個陳述式|  
 |嚴重錯誤 C1014|include 檔太多︰ 深度 =*數目*|  
@@ -152,7 +237,7 @@ ms.lasthandoff: 04/12/2017
 |嚴重錯誤 C1041|無法開啟程式資料庫 '*檔案*'; 如果要將多個 CL。EXE 寫入相同。PDB 檔案中，請使用 /FS|  
 |嚴重錯誤 C1045|編譯器限制: 連結規格巢狀結構太深|  
 |[嚴重錯誤 C1046](../../error-messages/compiler-errors-1/fatal-error-c1046.md)|編譯器限制︰*結構*巢狀結構太深|  
-|嚴重錯誤 C1047|物件或程式庫檔案 '*檔案*' 使用比其他物件，則重建舊物件和程式庫更舊的編譯器建立|  
+|嚴重錯誤 C1047|物件或程式庫檔案 '*檔案*' 已使用較舊的編譯器建立比其他物件，則重建舊物件和程式庫|  
 |嚴重錯誤 C1048|未知的選項 '*字串*'in'*選項*'|  
 |嚴重錯誤 C1049|無效的數值引數 '*值*'|  
 |[嚴重錯誤 C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|程式資料庫檔案 '*檔案*'，格式已過時，將其刪除並重新編譯|  

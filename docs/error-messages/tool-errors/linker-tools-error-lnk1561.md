@@ -1,40 +1,60 @@
 ---
-title: "連結器工具錯誤 LNK1561 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1561"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1561"
+title: "連結器工具錯誤 LNK1561 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- LNK1561
+dev_langs:
+- C++
+helpviewer_keywords:
+- LNK1561
 ms.assetid: cb0b709b-7c9c-4496-8a4e-9e1e4aefe447
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 連結器工具錯誤 LNK1561
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: fbc63a58cd4e276aa2a3f77baeea07d1912eda98
+ms.lasthandoff: 04/24/2017
 
+---
+# <a name="linker-tools-error-lnk1561"></a>連結器工具錯誤 LNK1561
 必須定義進入點  
   
- 連結器找不到任何進入點 \(Entry Point\)。  您可能想要以連結 DLL 的方式來連結，此時您應該使用 [\/DLL](../../build/reference/dll-build-a-dll.md) 選項來連結。  您可能也忘了指定進入點的名稱；請以 [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) 選項來連結。  
+連結器找不到進入點。 此錯誤有幾個原因︰  
+-   您可能不包含要連結的檔案清單中定義進入點的檔案。 請確認包含進入點函式的檔案會連結到您的應用程式。  
+-   您定義使用錯誤的函式簽章; 的進入點比方說，您可能有拼字錯誤或用於大小寫的函式名稱，或未正確指定傳回型別或參數型別。 根據預設，連結器會尋找`main`或`wmain`主控台應用程式中，函式`WinMain`或`wWinMain`for Windows 應用程式的函式或`DllMain`需要初始化的 dll。  
+-   您可能不會指定[/DLL](../../build/reference/dll-build-a-dll.md)選項時建置 DLL。  
+-   您指定可能的進入點函式名稱不正確時所使用[/ENTRY](../../build/reference/entry-entry-point-symbol.md)連結器選項。  
+-   如果您使用[LIB](../../build/reference/lib-reference.md)工具來建立 DLL，請您指定一個.def 檔案。 如果是的話，移除.def 檔從組建。    
   
- 否則，您就應該在程式碼中包含 main、wmain、WinMain 或 wMain 函式。  
+建置應用程式，當連結器會尋找*進入點*，啟動您的程式碼呼叫此函式。 這是將應用程式載入和執行階段初始化之後呼叫的函式。 您必須提供應用程式進入點函式，或您的應用程式無法執行。 進入點是選用的 DLL。 根據預設，連結器會尋找有其中幾個特定名稱和簽章，例如進入點函式`int main(int, char**)`。 您可以指定另一個函式名稱的項目點使用 /ENTRY 連結器選項。  
   
- 如果您使用 [LIB](../../build/reference/lib-reference.md)，並打算建置 .dll，則導致此錯誤的其中一個原因是您提供了 .def 檔。  若是如此，請從組建中移除 .def 檔。  
+## <a name="example"></a>範例  
+ 下列範例會產生 LNK1561:  
   
- 下列範例會產生 LNK1561：  
-  
-```  
+```cpp  
 // LNK1561.cpp  
 // LNK1561 expected  
 int i;  

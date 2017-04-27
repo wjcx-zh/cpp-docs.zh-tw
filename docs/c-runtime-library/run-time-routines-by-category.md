@@ -37,13 +37,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 2e9fdeff96af536b1e742b6b15f59805ab231608
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 7c22002fa6b98213913a3cff1b8f0e851f22c6d3
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="run-time-routines-by-category"></a>依分類區分的執行階段常式
-本節列出並依分類說明 Microsoft 執行階段程式庫常式。 為了參考方便起見，某些常式分別列在一個以上的分類。 多位元組字元常式和寬字元常式會使用其所在的單一位元組字元對應來分組。  
+本節列出並依分類說明 Microsoft 執行階段程式庫常式。 為了參考方便起見，某些常式分別列在一個以上的分類。 多位元組字元常式和寬字元常式會使用其所在的單一位元組字元對應項目來分組。  
   
  Microsoft 執行階段程式庫常式的主要分類如下︰  
   

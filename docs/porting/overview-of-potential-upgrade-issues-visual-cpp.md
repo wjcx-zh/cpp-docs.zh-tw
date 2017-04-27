@@ -12,8 +12,9 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 translationtype: Human Translation
-ms.sourcegitcommit: fb1f9f25be6d32f15324c8d3a7bd5069ca869a35
-ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
@@ -47,7 +48,7 @@ ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
   
 2.  如果您無法 (或不想要) 重建靜態程式庫，請嘗試連結到 legacy_stdio_definitions.lib。 如果它滿足您靜態程式庫的連結時間相依性，則您會想要完整測試二進位檔中所使用的靜態程式庫，確保未受到任何[對通用 CRT 進行的行為變更](visual-cpp-change-history-2003-2015.md#BK_CRT)的不良影響。  
   
-3.  如果 legacy_stdio_definitions.lib 不符合靜態程式庫的相依性，或程式庫因上述行為變更而未與通用 CRT 搭配運作，則建議將靜態程式庫封裝到與正確 Microsoft C 執行階段版本所連結的 DLL。 例如，如果使用 Visual C++ 2013 來建置靜態程式庫，則也要使用 Visual C++ 2013 和 Visual C++ 2013 程式庫來建置此 DLL。 透過將程式庫建置到 DLL，可以封裝為其與特定 Microsoft C 執行階段版本之相依性的實作詳細資料。 (請注意，您需要小心 DLL 介面不會「洩露」所使用 C 執行階段的詳細資料，例如，跨 DLL 界限傳回 FILE*，或傳回 malloc 配置的指標並預期呼叫者釋放它)。  
+3.  如果 legacy_stdio_definitions.lib 不符合靜態程式庫的相依性，或程式庫因上述行為變更而未與通用 CRT 搭配運作，則建議將靜態程式庫封裝到與正確 Microsoft C 執行階段版本所連結的 DLL。 例如，如果使用 Visual C++ 2013 來建置靜態程式庫，則也要使用 Visual C++ 2013 和 Visual C++ 2013 程式庫來建置此 DLL。 透過將程式庫建置到 DLL，可以封裝為其與特定 Microsoft C 執行階段版本之相依性的實作詳細資料。 (請注意，您需要小心 DLL 介面不會洩露所使用 C 執行階段的詳細資料；例如，跨 DLL 界限傳回 FILE*，或傳回 malloc 配置的指標並預期呼叫者釋放它)。  
   
  在單一程序中使用多個 CRT 不會造成問題，也不會造成本身的問題 (事實上，大部分程序最後都會載入多個 CRT DLL；例如，Windows 作業系統元件將取決於 msvcrt.dll，CLR 則取決於其專屬的私用 CRT)。 因不同 CRT 的狀態而造成混亂時，就會產生問題。 例如，您不應該使用 msvcr110.dll!malloc 來配置記憶體並嘗試使用 msvcr120.dll!free 將該記憶體解除配置，而且您不應該嘗試使用 msvcr110!fopen 來開啟 FILE 並嘗試使用 msvcr120!fread 來讀取該 FILE。 只要您不要因不同 CRT 的狀態而造成混亂，就可以放心地在單一程序中載入多個 CRT。  
   
@@ -66,13 +67,13 @@ ms.openlocfilehash: 6951129578e28251cef8eb54abb4ef790eb7f944
 ### <a name="lnk2019-unresolved-external"></a>LNK2019：無法解析的外部  
  針對無法解析的符號，您可能需要修復專案設定。  
   
--   •   如果原始程式檔位於非預設位置，則要新增專案 include 目錄的路徑嗎？  
+-   如果原始程式檔位於非預設位置，則要新增專案 include 目錄的路徑嗎？  
   
--   •   如果外部定義於 .lib 檔案中，則您已在專案屬性中指定 lib 路徑嗎，以及該處實際所在的 .lib 檔案版本正確嗎？  
+-   如果外部定義於 .lib 檔案中，則您已在專案屬性中指定 lib 路徑嗎，以及該處實際所在的 .lib 檔案版本正確嗎？  
   
--   •   嘗試連結到使用不同 Visual Studio 版本所編譯的 .lib 檔案嗎？ 如果是的話，請參閱有關程式庫和工具組相依性的上一節。  
+-   嘗試連結到使用不同 Visual Studio 版本所編譯的 .lib 檔案嗎？ 如果是的話，請參閱有關程式庫和工具組相依性的上一節。  
   
--   •   呼叫網站上的引數類型實際符合函式的現有多載嗎？ 確認函式簽章以及呼叫此函式之程式碼中任何 typedef 的基礎類型都是您預期的類型。  
+-   呼叫位置上的引數類型實際符合函式的現有多載嗎？ 確認函式簽章以及呼叫此函式之程式碼中任何 typedef 的基礎類型都是您預期的類型。  
   
  若要疑難排解無法解析的符號錯誤，您可以嘗試使用 dumpbin.exe 來檢查二進位檔中定義的符號。 請嘗試下列的命令列，檢視程式庫中定義的符號：  
   
@@ -116,7 +117,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  您可以按下 F12 [移至定義]，來查看定義討論中類型的位置。  
   
- 這裡的 [/showIncludes](../build/reference/showincludes-list-include-files.md) 編譯器選項十分有用。 在專案的 [屬性頁面] 對話方塊中，開啟 [C/C++]、[進階] 頁面，然後將 [顯示 Include 檔] 設為 [是]。 然後重建您的專案，並查看輸出視窗中的 #includes 清單。  每個標頭都會縮排在包含它的標頭下方。  
+ 這裡的 [/showIncludes](../build/reference/showincludes-list-include-files.md) 編譯器選項十分有用。 在專案的 [屬性頁面] 對話方塊中，開啟 [C/C++] 和 [進階] 頁面，然後將 [顯示 Include 檔] 設為 [是]。 然後重建您的專案，並查看輸出視窗中的 #includes 清單。  每個標頭都會縮排在包含它的標頭下方。  
   
 ## <a name="errors-involving-crt-functions"></a>涉及 CRT 函式的錯誤  
  多年來，已對 C 執行階段進行許多變更。 已新增許多安全版本的函式，並已移除一些函式。 此外，如本文稍早所述，已在 Visual Studio 2015 中將 Microsoft 的 CRT 實作重構為新的二進位檔和相關聯的 .lib 檔案。  
@@ -167,9 +168,4 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 ## <a name="see-also"></a>另請參閱  
  [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
  [Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

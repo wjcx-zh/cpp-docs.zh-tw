@@ -30,26 +30,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: cf1442e98cdd7489a395bec211cda1bbb037bae2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 85238c2cf07398bd74040a7d5d3c6c2e6a6b8fc3
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="summary-of-declarations"></a>宣告摘要
 `declaration`:  
- *declaration-specifiers attribute-seq* opt*init-declarator-list*opt**;**  
+ *declaration-specifiers attribute-seq* <sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**  
   
  /\* *attribute-seq* 是 Microsoft 專有 */  
   
  *declaration-specifiers*：  
- *storage-class-specifier declaration-specifiers*opt  
+ *storage-class-specifier declaration-specifiers*<sub>opt</sub>  
   
- *type-specifier declaration-specifiers*opt  
+ *type-specifier declaration-specifiers*<sub>opt</sub>  
   
- *type-qualifier declaration-specifiers*opt  
+ *type-qualifier declaration-specifiers*<sub>opt</sub>  
   
  *attribute-seq*：            /\* *attribute-seq* 是 Microsoft 專有 \*/  
- *attribute attribute-seq* opt  
+ *attribute attribute-seq* <sub>opt</sub>  
   
  *attribute*：其中一個      /* Microsoft 專有 \*/  
  ||||  
@@ -120,23 +120,23 @@ ms.lasthandoff: 02/24/2017
  `volatile`  
   
  `declarator`:  
- `pointer`opt*direct-declarator*  
+ `pointer`<sub>opt</sub> *direct-declarator*  
   
  *direct-declarator*：  
  *identifier*  
   
  **(**  *declarator*  **)**  
   
- *direct-declarator*  **[**  *constant-expression* opt**]**  
+ *direct-declarator*  **[**  *constant-expression* <sub>opt</sub>**]**  
   
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* 新樣式的宣告子 \*/  
   
- *direct-declarator*  **(**  *identifier-list*opt**)** /* 過時樣式的宣告子 \*/  
+ *direct-declarator*  **(**  *identifier-list*<sub>opt</sub>**)** /* 已淘汰之樣式的宣告子 \*/  
   
  `pointer`:  
- **\*** *type-qualifier-list*opt  
+ **\*** *type-qualifier-list*<sub>opt</sub>  
   
- **\*** *type-qualifier-list*opt`pointer`  
+ **\*** *type-qualifier-list*<sub>opt</sub>`pointer`  
   
  *parameter-type-list*：                           /\* 參數清單 \*/  
  *parameter-list*  
@@ -154,7 +154,7 @@ ms.lasthandoff: 02/24/2017
  *type-qualifier-list type-qualifier*  
   
  *enum-specifier*：  
- **enum**  *identifier*opt**{** *enumerator-list* **}**  
+ **enum**  *identifier*<sub>opt</sub>**{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   
@@ -172,7 +172,7 @@ ms.lasthandoff: 02/24/2017
  *identifier*  
   
  *struct-or-union-specifier*：  
- *struct-or-union identifier*opt**{** *struct-declaration-list* **}** *struct-or-union identifier*  
+ *struct-or-union identifier*<sub>opt</sub>**{** *struct-declaration-list* **}** *struct-or-union identifier*  
   
  *struct-or-union*：  
  **struct**  
@@ -188,9 +188,9 @@ ms.lasthandoff: 02/24/2017
  *specifier-qualifier-list struct-declarator-list*  **;**  
   
  *specifier-qualifier-list*：  
- *type-specifier specifier-qualifier-list*opt  
+ *type-specifier specifier-qualifier-list*<sub>opt</sub>  
   
- *type-qualifier specifier-qualifier-list*opt  
+ *type-qualifier specifier-qualifier-list*<sub>opt</sub>  
   
  *struct-declarator-list*：  
  *struct-declarator struct-declarator-list*  **,**  *struct-declarator*  
@@ -198,12 +198,12 @@ ms.lasthandoff: 02/24/2017
  *struct-declarator*：  
  *declarator*  
   
- *type-specifier declarator*opt**:** *constant-expression*  
+ *type-specifier declarator*<sub>opt</sub>**:** *constant-expression*  
   
  *parameter-declaration*：  
  *declaration-specifiers declarator* /* 具名宣告子 \*/  
   
- *declaration-specifiers abstract-declarator*opt**/\*** 匿名宣告子 **\*/**  
+ *declaration-specifiers abstract-declarator*<sub>opt</sub>**/\*** 匿名宣告子 **\*/**  
   
  *identifier-list*：**/\*** 適用於舊樣式宣告子 **\* /**  
  *identifier*  
@@ -213,14 +213,14 @@ ms.lasthandoff: 02/24/2017
  *abstract-declarator*：**/\***搭配匿名宣告子使用 **\*/**  
  *pointer*  
   
- `pointer`opt*direct-abstract-declarator*  
+ `pointer`<sub>opt</sub>*direct-abstract-declarator*  
   
  *direct-abstract-declarator*：  
  **(**  *abstract-declarator*  **)**  
   
- *direct-abstract-declarator*opt**[** *constant-expression*opt**]**  
+ *direct-abstract-declarator*<sub>opt</sub>**[** *constant-expression*<sub>opt</sub>**]**  
   
- *direct-abstract-declarator*opt**(** *parameter-type-list* opt**)**  
+ *direct-abstract-declarator*<sub>opt</sub>**(** *parameter-type-list* <sub>opt</sub>**)**  
   
  *initializer*：  
  *assignment-expression*  
@@ -235,13 +235,13 @@ ms.lasthandoff: 02/24/2017
  *initializer-list*  **,**  *initializer*  
   
  *type-name*：  
- *specifier-qualifier-list abstract-declarator*opt  
+ *specifier-qualifier-list abstract-declarator*<sub>opt</sub>  
   
  *typedef-name*：  
  *identifier*  
   
  *extended-decl-modifier-seq*：/\*   Microsoft 專有 \*/  
- *extended-decl-modifier*opt  
+ *extended-decl-modifier*<sub>opt</sub>  
   
  *extended-decl-modifier-seq extended-decl-modifier*  
   

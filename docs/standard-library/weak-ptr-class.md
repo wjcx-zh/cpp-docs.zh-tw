@@ -10,24 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - weak_ptr
-- std::weak_ptr
 - memory/std::weak_ptr
-- std::weak_ptr::element_type
 - memory/std::weak_ptr::element_type
-- std::weak_ptr::expired
 - memory/std::weak_ptr::expired
-- std::weak_ptr::lock
 - memory/std::weak_ptr::lock
-- std::weak_ptr::owner_before
 - memory/std::weak_ptr::owner_before
-- std::weak_ptr::reset
 - memory/std::weak_ptr::reset
-- std::weak_ptr::swap
 - memory/std::weak_ptr::swap
-- std::weak_ptr::use_count
 - memory/std::weak_ptr::use_count
-- std::weak_ptr::operator=
 - memory/std::weak_ptr::operator=
+- memory/std::weak_ptr::element_type
+- memory/std::weak_ptr::expired
+- memory/std::weak_ptr::lock
+- memory/std::weak_ptr::owner_before
+- memory/std::weak_ptr::reset
+- memory/std::weak_ptr::swap
+- memory/std::weak_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -128,7 +126,7 @@ public:
   
  **命名空間：** std  
   
-##  <a name="a-nameweakptrelementtypea--elementtype"></a><a name="weak_ptr__element_type"></a>  element_type  
+##  <a name="weak_ptr__element_type"></a>  element_type  
  項目的類型。  
   
 ```  
@@ -163,7 +161,7 @@ int main()
 *wp0.lock() == 5  
 ```  
   
-##  <a name="a-nameweakptrexpireda--expired"></a><a name="weak_ptr__expired"></a>  expired  
+##  <a name="weak_ptr__expired"></a>  expired  
  測試擁有權是否已到期。  
   
 ```  
@@ -219,7 +217,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="a-nameweakptrlocka--lock"></a><a name="weak_ptr__lock"></a>  lock  
+##  <a name="weak_ptr__lock"></a>  lock  
  取得資源的獨佔擁有權。  
   
 ```  
@@ -275,7 +273,7 @@ wp.expired() == true
 (bool)wp.lock() == false  
 ```  
   
-##  <a name="a-nameweakptroperatoreqa--operator"></a><a name="weak_ptr__operator_eq"></a>  operator=  
+##  <a name="weak_ptr__operator_eq"></a>  operator=  
  取代所擁有的資源。  
   
 ```  
@@ -334,7 +332,7 @@ int main()
 *wp1.lock() == 10  
 ```  
   
-##  <a name="a-nameweakptrownerbeforea--ownerbefore"></a><a name="weak_ptr__owner_before"></a>  owner_before  
+##  <a name="weak_ptr__owner_before"></a>  owner_before  
  如果這個 `weak_ptr` 排序在所提供的指標之前 (或小於)，則傳回 `true`。  
   
 ```  
@@ -352,7 +350,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>備註  
  如果 `*this` 為 `ordered before``ptr`，則範本成員函式傳回 `true`。  
   
-##  <a name="a-nameweakptrreseta--reset"></a><a name="weak_ptr__reset"></a>  reset  
+##  <a name="weak_ptr__reset"></a>  reset  
  釋放所擁有的資源。  
   
 ```  
@@ -393,7 +391,7 @@ wp.expired() == false
 wp.expired() == true  
 ```  
   
-##  <a name="a-nameweakptrswapa--swap"></a><a name="weak_ptr__swap"></a>  swap  
+##  <a name="weak_ptr__swap"></a>  swap  
  交換兩個 `weak_ptr` 物件。  
   
 ```  
@@ -461,7 +459,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-nameweakptrusecounta--usecount"></a><a name="weak_ptr__use_count"></a>  use_count  
+##  <a name="weak_ptr__use_count"></a>  use_count  
  指定之 `shared_ptr` 物件的計數數目。  
   
 ```  
@@ -500,7 +498,7 @@ wp.use_count() == 1
 wp.use_count() == 2  
 ```  
   
-##  <a name="a-nameweakptrweakptra--weakptr"></a><a name="weak_ptr__weak_ptr"></a>  weak_ptr  
+##  <a name="weak_ptr__weak_ptr"></a>  weak_ptr  
  建構 `weak_ptr`。  
   
 ```  

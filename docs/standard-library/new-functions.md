@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- new/std::nothrow
+- new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 caps.latest.revision: 10
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|  
   
-##  <a name="a-namenothrowa--nothrow"></a><a name="nothrow"></a>  nothrow  
+##  <a name="nothrow"></a>  nothrow  
  為 **new** 和 **delete** 的 `nothrow` 版本提供要用來作為引數的物件。  
   
 ```  
@@ -33,7 +36,7 @@ extern const std::nothrow_t nothrow;
 ### <a name="example"></a>範例  
   如需如何使用 `std::nothrow_t` 作為函式參數的範例，請參閱 [operator new](../standard-library/new-operators.md#operator_new) 和 [operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)。  
   
-##  <a name="a-namesetnewhandlera--setnewhandler"></a><a name="set_new_handler"></a>  set_new_handler  
+##  <a name="set_new_handler"></a>  set_new_handler  
  安裝要在 `operator new` 嘗試配置記憶體失敗時呼叫的使用者函式。  
   
 ```  

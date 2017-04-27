@@ -9,10 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext.cache_suballoc
 - allocators/stdext::cache_suballoc
 - stdext::cache_suballoc
 - cache_suballoc
+- allocators/stdext::cache_suballoc::allocate
+- allocators/stdext::cache_suballoc::deallocate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -81,7 +82,7 @@ class cache_suballoc
   
  **命名空間：** stdext  
   
-##  <a name="a-namecachesuballocallocatea--cachesuballocallocate"></a><a name="cache_suballoc__allocate"></a>  cache_suballoc::allocate  
+##  <a name="cache_suballoc__allocate"></a>  cache_suballoc::allocate  
  配置記憶體區塊。  
   
 ```
@@ -99,7 +100,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecachesuballoccachesuballoca--cachesuballoccachesuballoc"></a><a name="cache_suballoc__cache_suballoc"></a>  cache_suballoc::cache_suballoc  
+##  <a name="cache_suballoc__cache_suballoc"></a>  cache_suballoc::cache_suballoc  
  建構類型 `cache_suballoc` 的物件。  
   
 ```
@@ -108,7 +109,7 @@ cache_suballoc();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namecachesuballocdeallocatea--cachesuballocdeallocate"></a><a name="cache_suballoc__deallocate"></a>  cache_suballoc::deallocate  
+##  <a name="cache_suballoc__deallocate"></a>  cache_suballoc::deallocate  
  從指定位置起算的儲存體中，釋放指定數目的物件。  
   
 ```

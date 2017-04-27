@@ -34,9 +34,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 1088f17c1d758589fba146f82b2544ae17090a22
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ba1dd940e6dfe9bb749de1473850a245fa8073a9
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>在 Visual Studio 中使用原生多目標來建置舊專案  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/24/2017
   
 最新版 Visual Studio 支援專案的原生多目標和往返。 原生多目標是使用舊版 Visual Studio 所安裝的工具組來建置的最新 IDE 能力。 往返是最新 IDE 載入舊版 IDE 所建立的專案而不對專案進行任何變更的能力。 如果您並存安裝最新版 Visual Studio 與現有版本，則可以搭配使用新版 IDE 與現有版本的編譯器和工具來建置專案。 您小組的其他成員可以繼續在舊版 Visual Studio 中使用專案。  
   
-當您使用舊版工具組時，可以利用許多最新 IDE 功能，但不能利用 C++ 編譯器、程式庫和建置工具中的最先進功能。 例如，您無法使用新的語言一致性改善、新偵錯和程式碼分析功能，或取得最新工具組的更快速建置輸送量。 也會有一些 IDE 功能與舊版工具組不相容。 例如，記憶體分析工具中可能會遺失類型資訊，而且重構作業「轉換為原始字串常值」會產生當您使用 Visual Studio 2012 或舊版工具組時不會編譯之符合 C++11 標準的程式碼。
+當您使用舊版工具組時，可以利用許多最新 IDE 功能，但不能利用 C++ 編譯器、程式庫和建置工具中的最先進功能。 例如，您無法使用新的語言一致性改善、新偵錯和程式碼分析功能，或取得最新工具組的更快速建置輸送量。 也會有一些 IDE 功能與舊版工具組不相容。 例如，記憶體分析工具中可能會遺失類型資訊，而且重構作業**轉換為原始字串常值**會產生當您使用 Visual Studio 2012 或舊版工具組時不會編譯之符合 C++11 標準的程式碼。
 
 ## <a name="how-to-use-native-multi-targeting-in-visual-studio"></a>如何在 Visual Studio 中使用原生多目標
 並存安裝 Visual Studio 與舊版本之後，請在新版 Visual Studio 中開啟現有專案。 載入專案時，Visual Studio 會詢問您是否要將它升級成使用最新的 C++ 編譯器和程式庫。 因為您想要專案保留舊版編譯器和程式庫，所以請選擇 [取消] 按鈕。  

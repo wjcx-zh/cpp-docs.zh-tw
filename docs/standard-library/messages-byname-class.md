@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - messages_byname
-- std::messages_byname
-- std.messages_byname
 - xlocmes/std::messages_byname
 dev_langs:
 - C++

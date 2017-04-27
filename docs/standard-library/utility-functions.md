@@ -6,6 +6,12 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- utility/std::exchange
+- utility/std::forward
+- utility/std::make_pair
+- utility/std::move
+- utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
@@ -21,7 +27,7 @@ ms.lasthandoff: 02/24/2017
 |[exchange](#exchange)|[forward](#forward)|[get 函式 &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
-##  <a name="a-nameexchangea--exchange"></a><a name="exchange"></a> exchange  
+##  <a name="exchange"></a> exchange  
  **(C++14)** 指派新值給物件，並傳回其舊值。  
   
 ```cpp  
@@ -70,7 +76,7 @@ The new value of c1 after exchange is: 2
 */  
 ```  
   
-##  <a name="a-nameforwarda--forward"></a><a name="forward"></a>  forward  
+##  <a name="forward"></a>  forward  
  如果引數是右值或右值參考，有條件地將引數轉型為右值參考。 這會將引數的右值特性還原為轉送函式，以支援完美轉送。  
   
 ```
@@ -98,7 +104,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
   
  還原引數的原始值右值特性以執行多載解析，稱為「完美轉送」。 完美轉送讓樣板函式接受任何參考類型的引數，並在正確的多載解析需要時還原它的右值特性。 透過完美轉送，您可以保存右值的移動語意，避免必須為只變更其引數參考類型的函式提供多載。  
   
-##  <a name="a-namegeta--get"></a><a name="get"></a>  get  
+##  <a name="get"></a>  get  
  依索引位置或依類型從 `pair` 物件取得元素。  
   
 ```
@@ -193,7 +199,7 @@ int main()
 }
 ```  
   
-##  <a name="a-namemakepaira--makepair"></a><a name="make_pair"></a>  make_pair  
+##  <a name="make_pair"></a>  make_pair  
  樣板函式，可用來建構 `pair` 類型物件，其中元件類型是根據做為參數傳遞的資料類型自動選擇。  
   
 ```
@@ -238,7 +244,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 ### <a name="example"></a>範例  
   如需如何使用協助程式函式 `make_pair` 宣告並初始化配對的範例，請參閱 [pair 結構](../standard-library/pair-structure.md)。  
   
-##  <a name="a-namemovea--move"></a><a name="move"></a>  move  
+##  <a name="move"></a>  move  
  無條件地將它的引數轉型為右值參考，因而表示如果其類型已啟用移動，就可以移動它。  
   
 ```
@@ -263,7 +269,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
   
  如果傳入`Arg` 的值為左值 (也就是它有名稱或它的位址可以使用)，當移動時它會失效。 在移動之後，請不要使用它的名稱或位址來參考傳入 `Arg` 的值。  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  交換兩個 [pair 結構](../standard-library/pair-structure.md)物件的項目。  
   
 ```

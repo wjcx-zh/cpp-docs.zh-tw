@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- set/std::swap (map)
+- set/std::swap (multiset)
 ms.assetid: d1277d14-8502-46c0-b820-bcda820f9406
 caps.latest.revision: 7
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[swap (map)](#swap)|[swap (multiset)](#swap_multiset)|  
   
-##  <a name="a-nameswapa--swap--map"></a><a name="swap"></a>  swap  (map)
+##  <a name="swap"></a>  swap  (map)
  交換兩個集合的項目。  
   
 ```
@@ -45,7 +48,7 @@ void swap(set<Key, Traits, Allocator>& left, set<Key, Traits, Allocator>& right)
 ### <a name="example"></a>範例  
   如需使用 `swap` 樣板版本的範例，請參閱成員函式 [set::swap](../standard-library/set-class.md#set__swap) 的程式碼範例。  
   
-##  <a name="a-nameswapmultiseta--swap--multiset"></a><a name="swap_multiset"></a>  swap  (multiset)
+##  <a name="swap_multiset"></a>  swap  (multiset)
  交換兩個 multiset 的項目。  
   
 ```

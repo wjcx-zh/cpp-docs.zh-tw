@@ -11,8 +11,6 @@ ms.topic: article
 f1_keywords:
 - time_put_byname
 - xloctime/std::time_put_byname
-- std.time_put_byname
-- std::time_put_byname
 dev_langs:
 - C++
 helpviewer_keywords:

@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 caps.latest.revision: 11
 manager: ghogen
@@ -17,7 +18,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; 列舉
   
-##  <a name="a-namememoryorderenuma--memoryorder-enum"></a><a name="memory_order_enum"></a> memory_order 列舉  
+##  <a name="memory_order_enum"></a> memory_order 列舉  
  為記憶體位置上的同步處理作業提供符號名稱。 這些作業會影響一個執行緒的指派如何在其他執行緒中變成可見。  
   
 ```

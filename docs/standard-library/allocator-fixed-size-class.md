@@ -14,8 +14,6 @@ f1_keywords:
 - allocators/stdext::allocator_fixed_size
 - allocator_fixed_size
 - stdext::allocators::allocator_fixed_size
-- allocators.allocator_fixed_size
-- stdext.allocators.allocator_fixed_size
 dev_langs:
 - C++
 helpviewer_keywords:

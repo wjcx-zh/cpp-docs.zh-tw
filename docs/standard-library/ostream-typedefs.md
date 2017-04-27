@@ -6,6 +6,9 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- ostream/std::ostream
+- ostream/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
 caps.latest.revision: 11
 manager: ghogen
@@ -20,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |-|-|  
 |[ostream](#ostream)|[wostream](#wostream)|  
   
-##  <a name="a-nameostreama--ostream"></a><a name="ostream"></a>  ostream  
+##  <a name="ostream"></a>  ostream  
  從根據 `char` 特製化的 basic_ostream 和根據 `char` 特製化的 `char_traits` 建立型別。  
   
 ```
@@ -30,7 +33,7 @@ typedef basic_ostream<char, char_traits<char>> ostream;
 ### <a name="remarks"></a>備註  
  這個型別與專為具有預設字元特性之 `char` 型別項目所特製的樣板類別 [basic_ostream](../standard-library/basic-ostream-class.md) 同義。  
   
-##  <a name="a-namewostreama--wostream"></a><a name="wostream"></a>  wostream  
+##  <a name="wostream"></a>  wostream  
  從根據 `wchar_t` 特製化的 basic_ostream 和根據 `wchar_t` 特製化的 `char_traits` 建立型別。  
   
 ```

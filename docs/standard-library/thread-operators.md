@@ -6,6 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
 caps.latest.revision: 11
 manager: ghogen
@@ -22,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 |[operator&lt;](#operator_lt_)|[operator&lt;&lt;](#operator_lt__lt_)|[operator&lt;=](#operator_lt__eq)|  
 |[operator==](#operator_eq_eq)|  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="operator_gt__eq"></a>  operator&gt;=  
  判斷某個 `thread::id` 物件是否大於或等於另一個。  
   
 ```cpp  
@@ -44,7 +45,7 @@ bool operator>= (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="operator_gt_"></a>  operator&gt;  
  判斷某個 `thread::id` 物件是否大於另一個。  
   
 ```cpp  
@@ -66,7 +67,7 @@ bool operator> (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="operator_lt__eq"></a>  operator&lt;=  
  判斷某個 `thread::id` 物件是否小於或等於另一個。  
   
 ```cpp  
@@ -88,7 +89,7 @@ bool operator<= (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="operator_lt_"></a>  operator&lt;  
  判斷某個 `thread::id` 物件是否小於另一個。  
   
 ```cpp  
@@ -112,7 +113,7 @@ bool operator<(
   
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="operator_neq"></a>  operator!=  
  比較兩個 `thread::id` 物件是否不相等。  
   
 ```cpp  
@@ -134,7 +135,7 @@ bool operator!= (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="operator_eq_eq"></a>  operator==  
  比較兩個 `thread::id` 物件是否相等。  
   
 ```cpp  
@@ -156,7 +157,7 @@ bool operator== (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
  將 `thread::id` 物件的文字表示插入資料流。  
   
 ```cpp  

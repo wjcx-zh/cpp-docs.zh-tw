@@ -37,8 +37,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: e289b439f53b987f57face51952d54dc16002edd
-ms.openlocfilehash: f378805dc00885c10816c989da22f13357b8f894
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 46dd7f80b9a81148d529afe4b537fbf203e20173
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="floating-point-support"></a>浮點支援
@@ -102,7 +103,7 @@ Microsoft C 執行階段程式庫 (CRT) 提供許多浮點數學程式庫函式�
   
  [erf、erff、erfl、erfc、erfcf、erfcl](../c-runtime-library/reference/erf-erff-erfl-erfc-erfcf-erfcl.md)  
   
- [exp、expf](../c-runtime-library/reference/exp-expf.md)  
+ [exp、expf、expl](../c-runtime-library/reference/exp-expf.md)  
   
  [exp2、exp2f、exp2l](../c-runtime-library/reference/exp2-exp2f-exp2l.md)  
   
@@ -272,8 +273,3 @@ Microsoft C 執行階段程式庫 (CRT) 提供許多浮點數學程式庫函式�
   
 ## <a name="see-also"></a>另請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

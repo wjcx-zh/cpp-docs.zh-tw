@@ -1,30 +1,53 @@
 ---
-title: "連結器工具錯誤和警告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "錯誤 [C++]"
-  - "錯誤 [C++], 連結器"
-  - "連結器 [C++], 錯誤和警告"
+title: "連結器工具錯誤和警告 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- errors [C++]
+- linker [C++], errors and warnings
+- errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 連結器工具錯誤和警告
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 55a178e48f6189a0159943c36a26c5179456343f
+ms.lasthandoff: 04/24/2017
 
-LINK、LIB、DUMPBIN 和 EDITBIN 會產生這些錯誤和警告。  若要取得特定錯誤訊息的說明，請在 \[輸出\] 視窗中以滑鼠按一下錯誤代碼並按下 F1、在索引的 \[尋找\] 方塊中輸入錯誤代碼，或按下方連結。  
+---
+# <a name="linker-tools-errors-and-warnings"></a>連結器工具錯誤和警告
+連結、 LIB、 DUMPBIN 和 EDITBIN 產生這些錯誤和警告。 若要取得特定錯誤訊息的說明，請 [輸出] 視窗中的錯誤代碼上按一下滑鼠並按下 F1 時，輸入中的錯誤號碼**尋找**方塊在索引中，或按下方的連結。  
+  
+> [!NOTE]
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤或警告會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+  
+您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
+  
+## <a name="in-this-section"></a>本節內容
   
  [連結器工具錯誤 LNK1000](../../error-messages/tool-errors/linker-tools-error-lnk1000.md)  
   

@@ -210,7 +210,7 @@ ms.lasthandoff: 04/04/2017
   
  *identifier-list*  **,**  *identifier*  
   
- *abstract-declarator*：**/\***搭配匿名宣告子使用 **\*/**  
+ *abstract-declarator* ： **/\*** 搭配匿名宣告子使用 **\*/**  
  *pointer*  
   
  `pointer`<sub>opt</sub>*direct-abstract-declarator*  

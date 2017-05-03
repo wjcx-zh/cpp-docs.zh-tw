@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # JavaScript 整合 (C++/CX)
-請參閱 [建立 Windows 執行階段元件](../Topic/Creating%20Windows%20Runtime%20Components.md)。  
+請參閱 [建立 Windows 執行階段元件](http://msdn.microsoft.com/library/9a6b8f0a-7d5e-40a0-a9c5-a59b4908e133)。  
   
 ## 請參閱  
  [與其他語言間的互通性](../cppcx/interoperating-with-other-languages-c-cx.md)

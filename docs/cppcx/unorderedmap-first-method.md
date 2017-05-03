@@ -30,7 +30,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
  迭代器，指定對應中的第一個元素。  
   
 ## 備註  
- 若要保留 First\(\) 所傳回的迭代器，為使用 [auto](../Topic/auto%20\(C++\).md) 型别推斷關鍵字進行宣告的變數指派傳回值，是很方便的方式。 例如，`auto x = myUnorderedMap->First();`。  
+ 若要保留 First\(\) 所傳回的迭代器，為使用 [auto](~/cpp/auto-cpp.md) 型别推斷關鍵字進行宣告的變數指派傳回值，是很方便的方式。 例如，`auto x = myUnorderedMap->First();`。  
   
 ## 需求  
  **標頭：**collection.h  

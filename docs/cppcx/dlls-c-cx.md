@@ -21,7 +21,7 @@ caps.handback.revision: 21
 ## [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件 DLL  
  在大部分的情況下，當您想建立用於 [!INCLUDE[win8_appname_long](../cppcx/includes/win8-appname-long-md.md)] 應用程式的 DLL 時，請使用該名稱的專案範本，將其建立為 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件。 您可以為具有公用或私用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 型别的 DLL 建立 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件專案。[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]元件可從任何以 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]相容語言撰寫的應用程式存取。 根據預設，[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件專案的編譯器設定會使用 **\/ZW** 參數。 .winmd 檔案必須具有根命名空間的相同名稱。 例如，名為 A.B.C.MyClass 的類別必須在名為 A.winmd、A.B.winmd 或 A.B.C.winmd 的中繼資料檔案中定義，才能執行個體化。 DLL 的名稱不需符合 .winmd 檔案名稱。  
   
- 如需詳細資訊，請參閱[在 C\+\+ 中建立 Windows 執行階段元件](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)。  
+ 如需詳細資訊，請參閱[在 C\+\+ 中建立 Windows 執行階段元件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)。  
   
 #### 在您的專案中參考協力廠商 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件二進位檔  
   

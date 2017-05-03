@@ -25,9 +25,9 @@ caps.handback.revision: 10
   
 |選項|描述|  
 |--------|--------|  
-|[\/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> \/ZW:nostdlib|啟用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 語言擴充功能。<br /><br /> `nostdlib` 參數可防止編譯器使用標準、預先定義的搜尋路徑來尋找組件和 .winmd 檔案。<br /><br /> [\/ZW](../build/reference/zw-windows-runtime-compilation.md) 編譯器選項會隱含指定下列編譯器選項：<br /><br /> -   [\/FI](../build/reference/fi-name-forced-include-file.md) vccorlib.h，強制包含 vccorlib.h 標頭檔，此檔案定義編譯器所需的許多類型。<br />-   [\/FU](../Topic/-FU%20\(Name%20Forced%20%23using%20File\).md) Windows.winmd，強制包含 Windows.winmd 中繼資料檔，此檔案由作業系統提供，且定義 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 中的許多類型。<br />-   [\/FU](../Topic/-FU%20\(Name%20Forced%20%23using%20File\).md) Platform.winmd，強制包含 Platform.winmd 中繼資料檔，此檔案由編譯器提供，且定義 Platform 命名空間系列中的大部分類型。|  
+|[\/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> \/ZW:nostdlib|啟用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 語言擴充功能。<br /><br /> `nostdlib` 參數可防止編譯器使用標準、預先定義的搜尋路徑來尋找組件和 .winmd 檔案。<br /><br /> [\/ZW](../build/reference/zw-windows-runtime-compilation.md) 編譯器選項會隱含指定下列編譯器選項：<br /><br /> -   [\/FI](../build/reference/fi-name-forced-include-file.md) vccorlib.h，強制包含 vccorlib.h 標頭檔，此檔案定義編譯器所需的許多類型。<br />-   [\/FU](~/build/reference/fu-name-forced-hash-using-file.md) Windows.winmd，強制包含 Windows.winmd 中繼資料檔，此檔案由作業系統提供，且定義 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 中的許多類型。<br />-   [\/FU](~/build/reference/fu-name-forced-hash-using-file.md) Platform.winmd，強制包含 Platform.winmd 中繼資料檔，此檔案由編譯器提供，且定義 Platform 命名空間系列中的大部分類型。|  
 |[\/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|將以 *dir* 參數指定的目錄加入搜尋路徑中，供編譯器用來尋找組件和 .winmd 檔案。|  
-|[\/FU](../Topic/-FU%20\(Name%20Forced%20%23using%20File\).md) *檔案*|強制包含指定的模組或 .winmd 檔案。 也就是說，您不需要在原始程式碼中指定 `#using`*檔案*。 編譯器會自動強制包含其本身的 Windows 中繼資料檔 Platform.winmd。|  
+|[\/FU](~/build/reference/fu-name-forced-hash-using-file.md) *檔案*|強制包含指定的模組或 .winmd 檔案。 也就是說，您不需要在原始程式碼中指定 `#using`*檔案*。 編譯器會自動強制包含其本身的 Windows 中繼資料檔 Platform.winmd。|  
 |\/D "WINAPI\_FAMILY\=2"|建立定義以允許使用與 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 相容的 Win32 SDK 子集。|  
   
 ## 連結器選項  

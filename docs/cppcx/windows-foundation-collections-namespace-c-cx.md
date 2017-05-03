@@ -50,4 +50,4 @@ namespace Windows {
  **命名空間：**Windows::Foundation::Collections  
   
 ## 請參閱  
- [Windows::Foundation 命名空間](../Topic/Windows::Foundation%20Namespace.md)
+ [Windows::Foundation 命名空間](~/windows/windows-foundation-namespace.md)

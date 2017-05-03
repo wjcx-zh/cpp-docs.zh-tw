@@ -32,7 +32,7 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
 ```  
   
 ## 備註  
- 如果您遇到此例外狀況，請確定您已要求適當的功能，並且已在應用程式的封裝資訊清單中執行必要的宣告。 如需詳細資訊，請參閱[使用資訊清單設計工具設定 Windows 8.1 應用程式套件](../Topic/Configure%20a%20Windows%208.1%20app%20package%20by%20using%20the%20manifest%20designer.md)與 [COMException](../cppcx/platform-comexception-class.md) 類別。  
+ 如果您遇到此例外狀況，請確定您已要求適當的功能，並且已在應用程式的封裝資訊清單中執行必要的宣告。 如需詳細資訊，請參閱[使用資訊清單設計工具設定 Windows 8.1 應用程式套件](http://msdn.microsoft.com/library/24c58b7f-9c6d-41c3-b385-c1e8497d5b2d)與 [COMException](../cppcx/platform-comexception-class.md) 類別。  
   
 ## 需求  
  **最低支援用戶端：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

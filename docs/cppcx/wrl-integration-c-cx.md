@@ -19,7 +19,7 @@ caps.handback.revision: 9
 您可以將 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 程式碼與 [!INCLUDE[cppwrl](../cppcx/includes/cppwrl-md.md)] \([!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)]\) 程式碼自由混合使用。 在同一個轉譯單位中，可以使用以 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 物件的控制代碼 \(`^`\) 標記法宣告的物件，以及以 [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 智慧型指標 \(`ComPtr<T>`\) 標記法宣告的物件。 不過，您必須手動處理傳回值、[!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] HRESULT 錯誤碼和 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 例外狀況。  
   
 ## [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 開發  
- 如需撰寫和使用 [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 元件的詳細資訊，請參閱 [Windows Runtime C\+\+ Template Library \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)。  
+ 如需撰寫和使用 [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 元件的詳細資訊，請參閱 [Windows Runtime C\+\+ Template Library \(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md)。  
   
 ## 範例  
  下列程式碼片段示範以 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 和 [!INCLUDE[cppwrl_short](../cppcx/includes/cppwrl-short-md.md)] 來使用 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 類別以及檢查中繼資料檔。  

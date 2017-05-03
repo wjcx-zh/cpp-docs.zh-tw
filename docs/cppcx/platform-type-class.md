@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 7
 ---
 # Platform::Type 類別
-包含與類型 \(特別是此項\)、字串名稱和 typecode 相關的執行階段資訊。 可以透過針對任何物件呼叫 [Object::GetType 方法](../cppcx/object-gettype-method.md)或針對類別或結構名稱使用 [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) 運算子取得。  
+包含與類型 \(特別是此項\)、字串名稱和 typecode 相關的執行階段資訊。 可以透過針對任何物件呼叫 [Object::GetType 方法](../cppcx/object-gettype-method.md)或針對類別或結構名稱使用 [typeid](~/windows/typeid-cpp-component-extensions.md) 運算子取得。  
   
 ## 語法  
   

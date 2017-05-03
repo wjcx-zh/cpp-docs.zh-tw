@@ -69,4 +69,4 @@ template <typename T, typename E>
   
 ## 請參閱  
  [\(NOTINBUILD\) Platform 命名空間](http://msdn.microsoft.com/zh-tw/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)   
- [在 C\+\+ 中建立 Windows 執行階段元件](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)
+ [在 C\+\+ 中建立 Windows 執行階段元件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)

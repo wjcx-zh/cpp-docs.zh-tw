@@ -16,13 +16,13 @@ manager: "ghogen"
 caps.handback.revision: 27
 ---
 # Visual C++ 語言參考 (C++-CX)
-[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 是一組可讓您使用盡可能接近現代 C\+\+ 的慣用語來建立 Windows 應用程式與 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件的 C\+\+ 語言擴充功能。 您可以使用 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]，透過容易與 Visual C\#、Visual Basic、JavaScript 與其他支援 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 的語言互動的原生程式碼，撰寫 Windows 應用程式與元件。 針對少數需要直接存取原始 COM 介面或使用非例外狀況程式碼的情況，您可以使用 [Windows Runtime C\+\+ Template Library \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)。  
+[!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 是一組可讓您使用盡可能接近現代 C\+\+ 的慣用語來建立 Windows 應用程式與 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件的 C\+\+ 語言擴充功能。 您可以使用 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]，透過容易與 Visual C\#、Visual Basic、JavaScript 與其他支援 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 的語言互動的原生程式碼，撰寫 Windows 應用程式與元件。 針對少數需要直接存取原始 COM 介面或使用非例外狀況程式碼的情況，您可以使用 [Windows Runtime C\+\+ Template Library \(WRL\)](~/windows/windows-runtime-cpp-template-library-wrl.md)。  
   
  新的模型代表 Windows 上新一代的原生 C\+\+ 程式設計。 您可以使用此模型建立：  
   
 -   可使用 XAML 定義使用者介面及使用原生堆疊的 C\+\+ Windows 應用程式。 如需詳細資訊，請參閱[在 C\+\+ 中建立 "hello world" 應用程式 \(Windows 10\)](http://msdn.microsoft.com/library/windows/apps/dn996906.aspx)。  
   
--   可供 JavaScript 型 Windows 應用程式使用的 C\+\+ [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件。 如需詳細資訊，請參閱[在 C\+\+ 中建立 Windows 執行階段元件](http://msdn.microsoft.com/library/hh441569.aspx)[在 C\+\+ 中建立 Windows 執行階段元件](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)。  
+-   可供 JavaScript 型 Windows 應用程式使用的 C\+\+ [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件。 如需詳細資訊，請參閱[在 C\+\+ 中建立 Windows 執行階段元件](http://msdn.microsoft.com/library/hh441569.aspx)[在 C\+\+ 中建立 Windows 執行階段元件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)。  
   
 -   Windows DirectX 遊戲與細膩圖像處理應用程式。 如需詳細資訊，請參閱[使用 DirectX 來建立簡單的通用 Windows 平台 \(UWP\) 遊戲](http://msdn.microsoft.com/library/windows/apps/xaml/mt210793.aspx)。  
   

@@ -100,7 +100,7 @@ UnorderedMapView(
  可提供函式物件用來比較兩個機碼是否相等的類型。 預設是 [std::equal\_to\<K\>](../standard-library/equal-to-struct.md)。  
   
  `m`  
- 用來初始化 UnorderedMapView 之 [std::unordered\_map](../standard-library/unordered-map-class.md) 的參考或 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)。  
+ 用來初始化 UnorderedMapView 之 [std::unordered\_map](../standard-library/unordered-map-class.md) 的參考或 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md)。  
   
  `first`  
  用來初始化 UnorderedMapView 的項目範圍中，第一個元素的輸入迭代器。  

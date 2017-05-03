@@ -19,9 +19,9 @@ caps.handback.revision: 14
 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 支援 `public enum class` 關鍵字，類似於標準 C\+\+ `scoped  enum`。 當您使用以 `public enum class` 關鍵字所宣告的列舉程式時，您必須使用列舉識別項來限定每一個列舉值的範圍。  
   
 ## 備註  
- 不具有存取規範 \(例如 `public enum class`\) 的 `public` 視為標準 C\+\+ [限定範圍列舉](../Topic/Enumerations%20\(C++\).md)。  
+ 不具有存取規範 \(例如 `public enum class`\) 的 `public` 視為標準 C\+\+ [限定範圍列舉](~/cpp/enumerations-cpp.md)。  
   
- 雖然 `public enum class`本身要求類型必須為 int32，或旗標列舉的 uint32，但 `public enum struct` 或 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 宣告可以具有任何整數類型的基礎類型。 下列語法描述 `public enum class` 或 `public enum struct` 的部分。 如需詳細資訊，請參閱[enum class](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md)。  
+ 雖然 `public enum class`本身要求類型必須為 int32，或旗標列舉的 uint32，但 `public enum struct` 或 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 宣告可以具有任何整數類型的基礎類型。 下列語法描述 `public enum class` 或 `public enum struct` 的部分。 如需詳細資訊，請參閱[enum class](~/windows/enum-class-cpp-component-extensions.md)。  
   
  本範例示範如何定義公用列舉類別：  
   

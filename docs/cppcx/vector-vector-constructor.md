@@ -94,7 +94,7 @@ Vector(
  用來初始化目前 Vector 中各個項目的值。  
   
  `v`  
- 用來初始化目前 Vector 之 [std::vector](../Topic/vector%20Class%201.md) 的 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)。  
+ 用來初始化目前 Vector 之 [std::vector](../Topic/vector%20Class%201.md) 的 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md)。  
   
  `ptr`  
  用來初始化目前 Vector 之 `std::vector` 的指標。  
@@ -106,10 +106,10 @@ Vector(
  用來初始化目前 Vector 的 [std::array](../Topic/vector%20Class%201.md) 物件。  
   
  `first`  
- 用來初始化目前 Vector 之物件序列中的第一個項目。 透過「*完美轉送*」\(Perfect Forwarding\) 的方式傳遞的 `first` 型别。 如需詳細資訊，請參閱[右值參考宣告子：&&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md)。  
+ 用來初始化目前 Vector 之物件序列中的第一個項目。 透過「*完美轉送*」\(Perfect Forwarding\) 的方式傳遞的 `first` 型别。 如需詳細資訊，請參閱[右值參考宣告子：&&](~/cpp/rvalue-reference-declarator-amp-amp.md)。  
   
  `last`  
- 用來初始化目前 Vector 之物件序列中的最後一個項目。 透過「*完美轉送*」\(Perfect Forwarding\) 的方式傳遞的 `last` 型别。 如需詳細資訊，請參閱[右值參考宣告子：&&](../Topic/Rvalue%20Reference%20Declarator:%20&&.md)。  
+ 用來初始化目前 Vector 之物件序列中的最後一個項目。 透過「*完美轉送*」\(Perfect Forwarding\) 的方式傳遞的 `last` 型别。 如需詳細資訊，請參閱[右值參考宣告子：&&](~/cpp/rvalue-reference-declarator-amp-amp.md)。  
   
 ## 需求  
  **標頭：**collection.h  

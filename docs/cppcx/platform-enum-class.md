@@ -34,7 +34,7 @@ public class Enum
  Enum 類別繼承 [Platform::Object 類別](../cppcx/platform-object-class.md) 的 Equals\(\)、GetHashCode\(\) 和 ToString\(\) 方法。  
   
 ## 備註  
- 使用 [public enum class](../Topic/enum%20class%20%20\(C++%20Component%20Extensions\).md) 關鍵字建立列舉。 請勿明確使用 Platform::Enum 型別。 如需詳細資訊，請參閱[列舉](../cppcx/enums-c-cx.md)。  
+ 使用 [public enum class](~/windows/enum-class-cpp-component-extensions.md) 關鍵字建立列舉。 請勿明確使用 Platform::Enum 型別。 如需詳細資訊，請參閱[列舉](../cppcx/enums-c-cx.md)。  
   
 ## 需求  
  **最低支援用戶端：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  

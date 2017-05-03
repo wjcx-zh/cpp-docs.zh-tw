@@ -22,7 +22,7 @@ manager: "ghogen"
 caps.handback.revision: 6
 ---
 # Platform::Collections 命名空間
-Platform::Collection 命名空間包含 `Map`、`MapView`、`Vector` 和 `VectorView` 類別。 這些類別是 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空間中定義的相對應介面的具象實作。 實體集合類型無法橫跨 ABI 移植 \(例如，當 Javascript 或 C\# 程式呼叫 C\+\+ 元件時\)，但是可以隱含地轉換成對應的介面類型。 例如，如果您實作公用方法來填入和傳回集合，請使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在內部實作集合，並使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作為傳回類型。 如需詳細資訊，請參閱 [集合](../cppcx/collections-c-cx.md) 與 [在 C\+\+ 中建立 Windows 執行階段元件](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)。  
+Platform::Collection 命名空間包含 `Map`、`MapView`、`Vector` 和 `VectorView` 類別。 這些類別是 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空間中定義的相對應介面的具象實作。 實體集合類型無法橫跨 ABI 移植 \(例如，當 Javascript 或 C\# 程式呼叫 C\+\+ 元件時\)，但是可以隱含地轉換成對應的介面類型。 例如，如果您實作公用方法來填入和傳回集合，請使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在內部實作集合，並使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作為傳回類型。 如需詳細資訊，請參閱 [集合](../cppcx/collections-c-cx.md) 與 [在 C\+\+ 中建立 Windows 執行階段元件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)。  
   
  您可以從 [std::vector](../Topic/vector%20Class%201.md) 建構 Platform::Collections::Vector，也可以從 [std::map](../cppcx/platform-collections-map-class.md) 建構 [Platform::Collections::Map](../standard-library/map-class.md)。  
   

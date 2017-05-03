@@ -34,7 +34,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^
  指向 Vector 中第一項元素的迭代器。  
   
 ## 備註  
- 若要保留 First\(\) 所傳回的迭代器，為使用 [auto](../Topic/auto%20\(C++\).md) 型别推斷關鍵字進行宣告的變數指派傳回值，是很方便的方式。 例如，`auto x = myVector->First();`。 此迭代器知道集合的長度。  
+ 若要保留 First\(\) 所傳回的迭代器，為使用 [auto](~/cpp/auto-cpp.md) 型别推斷關鍵字進行宣告的變數指派傳回值，是很方便的方式。 例如，`auto x = myVector->First();`。 此迭代器知道集合的長度。  
   
  當您需要對 STL 函式傳遞成對的迭代器時，請使用不受限的函式 [Windows::Foundation::Collections::begin](../cppcx/begin-function.md) 和 [Windows::Foundation::Collections::end](../cppcx/end-function.md)  
   

@@ -16,7 +16,7 @@ manager: "ghogen"
 caps.handback.revision: 15
 ---
 # 轉型 (C++/CX)
-[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]類型可以使用四種不同的轉換運算子：[static\_cast 運算子](../cpp/static-cast-operator.md)、[dynamic\_cast 運算子](../cpp/dynamic-cast-operator.md)、[safe\_cast 運算子](../Topic/safe_cast%20\(C++%20Component%20Extensions\).md)和 [reinterpret\_cast 運算子](../cpp/reinterpret-cast-operator.md)。 如果無法執行轉換，`safe_cast` 和 `static_cast` 會擲回例外狀況。此外，[static\_cast 運算子](../cpp/static-cast-operator.md)也可以執行編譯階段類型檢查。 如果 `dynamic_cast` 無法轉換類型，則會傳回 `nullptr`。 雖然 `reinterpret_cast` 會傳回非 null 值，但是可能無效。 因此，我們建議您不要使用 `reinterpret_cast`，除非您知道轉型成功。 此外，我們也建議您不要在 [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 程式碼中使用 C\-style 轉型，因為它們與 `reinterpret_cast` 相同。  
+[!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]類型可以使用四種不同的轉換運算子：[static\_cast 運算子](../cpp/static-cast-operator.md)、[dynamic\_cast 運算子](../cpp/dynamic-cast-operator.md)、[safe\_cast 運算子](~/windows/safe-cast-cpp-component-extensions.md)和 [reinterpret\_cast 運算子](../cpp/reinterpret-cast-operator.md)。 如果無法執行轉換，`safe_cast` 和 `static_cast` 會擲回例外狀況。此外，[static\_cast 運算子](../cpp/static-cast-operator.md)也可以執行編譯階段類型檢查。 如果 `dynamic_cast` 無法轉換類型，則會傳回 `nullptr`。 雖然 `reinterpret_cast` 會傳回非 null 值，但是可能無效。 因此，我們建議您不要使用 `reinterpret_cast`，除非您知道轉型成功。 此外，我們也建議您不要在 [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 程式碼中使用 C\-style 轉型，因為它們與 `reinterpret_cast` 相同。  
   
  編譯器和執行階段也會執行隱含轉型，例如，當實值類型或內建類型當做引數傳遞給參數類型為 `Object^` 的方法時，所進行的 boxing 作業。 理論上，隱含轉型不應該在執行階段造成例外狀況。如果編譯器無法執行隱含轉換，則會在編譯時期引發錯誤。  
   

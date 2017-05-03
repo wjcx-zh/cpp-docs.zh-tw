@@ -36,7 +36,7 @@ Object::GetType()
   
  您可以使用 Windows API 中的 [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) 類別在 Windows 元件和應用程式之間傳遞類型資訊，這種方式和使用的語言無關。 T[Platform::Type 類別](../cppcx/platform-type-class.md) 擁有用來在 `Type` 和 `TypeName` 之間轉換的運算子。  
   
- 例如，在 XAML 頁面之間瀏覽時，就可以使用 [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md) 運算子傳回類別名稱的 `Platform::Type` 物件：  
+ 例如，在 XAML 頁面之間瀏覽時，就可以使用 [typeid](~/windows/typeid-cpp-component-extensions.md) 運算子傳回類別名稱的 `Platform::Type` 物件：  
   
 ```  
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  

@@ -136,7 +136,7 @@ caps.handback.revision: 28
  如需詳細資訊，請參閱[委派](../cppcx/delegates-c-cx.md)。  
   
 ### 例外狀況  
- 在 C\+\+\/CX 中，您可以攔截自訂例外狀況類型、[std::exception](../Topic/exception%20Class1.md) 類型和 [Platform::Exception](../cppcx/platform-exception-class.md) 類型。  
+ 在 C\+\+\/CX 中，您可以攔截自訂例外狀況類型、[std::exception](~/standard-library/exception-class.md) 類型和 [Platform::Exception](../cppcx/platform-exception-class.md) 類型。  
   
  如需詳細資訊，請參閱[例外狀況](../cppcx/exceptions-c-cx.md)。  
   
@@ -146,7 +146,7 @@ caps.handback.revision: 28
  如需詳細資訊，請參閱[事件](../cppcx/events-c-cx.md)。  
   
 ### 轉型  
- C\+\+\/CX 支援標準 C\+\+ 轉型運算子 [static\_cast](../cpp/static-cast-operator.md)、[dynamic\_cast](../cpp/dynamic-cast-operator.md) 和 [reinterpret\_cast](../cpp/reinterpret-cast-operator.md)。此外，[safe\_cast](../Topic/safe_cast%20\(C++%20Component%20Extensions\).md) 也是 C\+\+\/CX 專用的運算子。  
+ C\+\+\/CX 支援標準 C\+\+ 轉型運算子 [static\_cast](../cpp/static-cast-operator.md)、[dynamic\_cast](../cpp/dynamic-cast-operator.md) 和 [reinterpret\_cast](../cpp/reinterpret-cast-operator.md)。此外，[safe\_cast](~/windows/safe-cast-cpp-component-extensions.md) 也是 C\+\+\/CX 專用的運算子。  
   
  如需詳細資訊，請參閱[轉型](../cppcx/casting-c-cx.md)。  
   

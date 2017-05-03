@@ -52,7 +52,7 @@ Map(
  一個型別，提供函式物件，可以根據排序鍵比較兩個項目值，判斷它們在 Map 中的相對順序。  
   
  `m`  
- 用來初始化目前 Map 之 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) 的參考或 [map 類別](../standard-library/map-class.md)。  
+ 用來初始化目前 Map 之 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) 的參考或 [map 類別](../standard-library/map-class.md)。  
   
  `first`  
  用來初始化目前 Map 的項目範圍中，第一個項目的輸入迭代器。  

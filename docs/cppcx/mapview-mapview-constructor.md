@@ -57,7 +57,7 @@ MapView(::std::initializer_list<
  函式物件。這個函式物件可以根據排序機碼比較兩個元素值，判斷它們在 MapView 中的相對順序。  
   
  `m`  
- 用來初始化目前 MapView 之 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md) 的參考或 [map 類別](../standard-library/map-class.md)。  
+ 用來初始化目前 MapView 之 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md) 的參考或 [map 類別](../standard-library/map-class.md)。  
   
  `first`  
  用來初始化目前 MapView 的項目範圍中，第一個項目的輸入迭代器。  

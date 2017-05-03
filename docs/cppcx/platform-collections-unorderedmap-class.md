@@ -100,4 +100,4 @@ ref class Map sealed;
  [Platform::Collections::Map 類別](../cppcx/platform-collections-map-class.md)   
  [Platform::Collections::UnorderedMapView 類別](../cppcx/platform-collections-unorderedmapview-class.md)   
  [集合](../cppcx/collections-c-cx.md)   
- [在 C\+\+ 中建立 Windows 執行階段元件](../Topic/Creating%20Windows%20Runtime%20Components%20in%20C++.md)
+ [在 C\+\+ 中建立 Windows 執行階段元件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)

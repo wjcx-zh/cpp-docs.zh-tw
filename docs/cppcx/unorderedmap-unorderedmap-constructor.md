@@ -106,7 +106,7 @@ UnorderedMap();
  可為機碼產生雜湊值的函式物件。 如果是 [hash 類別](../Topic/hash%20Class%201.md)支援的機碼類型，那麼這個參數預設為該類別。  
   
  `m`  
- 用來初始化目前 UnorderedMap 之 [std::unordered\_map](../standard-library/unordered-map-class.md) 的參考或 [Lvalues 和 Rvalues](../Topic/Lvalues%20and%20Rvalues%20\(Visual%20C++\).md)。  
+ 用來初始化目前 UnorderedMap 之 [std::unordered\_map](../standard-library/unordered-map-class.md) 的參考或 [Lvalues 和 Rvalues](~/cpp/lvalues-and-rvalues-visual-cpp.md)。  
   
  il  
  將用來初始化對應之 [std::pair](../standard-library/initializer-list-class.md) 物件的 [std::initializer\_list](../standard-library/pair-structure.md)。  

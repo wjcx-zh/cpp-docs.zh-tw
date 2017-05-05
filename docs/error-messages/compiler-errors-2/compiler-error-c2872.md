@@ -34,25 +34,26 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: d53dbd9429ba3c1a525b85a3ef9f2e70152ddfa2
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c81fc315c4bb893b96876b7b67b42806a3246583
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2872"></a>編譯器錯誤 C2872
-'symbol': 模稜兩可的符號  
+'*符號*': 模稜兩可的符號  
   
-編譯器無法判斷在參考的符號。  
+編譯器無法判斷在參考的符號。 具有指定名稱的多個符號會位於範圍內。 編譯器發現模稜兩可的符號，請參閱下列錯誤訊息，取得檔案位置和宣告的資訊。 若要修正此問題，您可以完整限定的模稜兩可的符號使用它的命名空間，例如`std::byte`或`::byte`。 您也可以使用[命名空間別名](../../cpp/namespaces-cpp.md#namespace_aliases)來釐清您的原始程式碼中的符號的使用者包含的命名空間提供方便使用簡短名稱。  
   
-如果包含的標頭檔，就會發生 C2872 [using 指示詞](../../cpp/namespaces-cpp.md#using_directives)，後續的標頭檔會包含和它包含也會在指定的命名空間中的類型`using`指示詞。 指定`using`指示詞只是在標頭檔所指定的所有之後`#include`。  
+如果包含的標頭檔，就會發生 C2872 [using 指示詞](../../cpp/namespaces-cpp.md#using_directives)，並在後續的標頭檔中包含其中包含的型別，也在指定的命名空間`using`指示詞。 指定`using`指示詞只是在標頭檔所指定的所有之後`#include`。  
   
- 如需 C2872 的詳細資訊，請參閱知識庫文件[PRB︰ 編譯器錯誤當您使用 #import Visual c + +.NET 中的 XML](http://support.microsoft.com/kb/316317)和[」 錯誤 C2872: '平台': 模稜兩可的符號 」 錯誤訊息，當您使用 Visual Studio 2013 Windows::Foundation::Metadata 命名空間](https://support.microsoft.com/kb/2890859)。  
+ 如需 C2872 的詳細資訊，請參閱知識庫文章[PRB︰ 編譯器錯誤當您使用 #import Visual c + +.NET 中的 XML](http://support.microsoft.com/kb/316317)和["錯誤 C2872: 'Platform': 模稜兩可的符號"Visual Studio 2013 中使用 Windows::Foundation::Metadata 命名空間時，會產生錯誤訊息。](https://support.microsoft.com/kb/2890859)。  
   
 ## <a name="example"></a>範例  
- 下列範例會產生 C2872:  
+ 下列範例會產生 C2872，因為模稜兩可的參考對名為的變數`i`; 兩個具有相同名稱的變數是在範圍內︰  
   
 ```cpp  
 // C2872.cpp  
+// compile with: cl /EHsc C2872.cpp  
 namespace A {  
    int i;  
 }  
@@ -60,8 +61,10 @@ namespace A {
 using namespace A;  
 int i;  
 int main() {  
-   ::i++;   // ok  
-   A::i++;   // ok  
-   i++;   // C2872 ::i or A::i?  
+   ::i++;   // ok, uses i from global namespace  
+   A::i++;   // ok, uses i from namespace A  
+   i++;   // C2872 ambiguous: ::i or A::i? 
+   // To fix this issue, use the fully qualified name
+   // for the intended variable. 
 }  
 ```

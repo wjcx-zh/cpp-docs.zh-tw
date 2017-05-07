@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 129ad6a0359fbee402b39c5e7ff498602e97479d
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7cd85d29ee14376b46d05ac5cfa95496fffdc9e5
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2815"></a>編譯器錯誤 C2815
-'operator delete': 第一個正式參數必須是 ' void *'，但使用 'param'  
+'operator delete': 第一個型式參數必須是 ' void *'，但使用的 'param'  
   
- 任何使用者定義[delete 運算子](../../standard-library/new-operators.md#operator_delete)函式必須接受類型的第一個正式參數`void *`。  
+ 任何使用者定義[運算子 delete](../../standard-library/new-operators.md#op_delete)函式必須接受類型的第一個型式參數`void *`。  
   
  下列範例會產生 C2815:  
   

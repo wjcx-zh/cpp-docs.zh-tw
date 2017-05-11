@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40c56f3ebd01ac809b48c48dcda85ef8a3217be4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 210a0a2b353d691916c8f091205518bb67e375df
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feholdexcept"></a>feholdexcept
@@ -65,7 +66,6 @@ ms.lasthandoff: 02/24/2017
 int feholdexcept(  
    fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -73,10 +73,10 @@ int feholdexcept(
  `fenv_t` 物件的指標，包含浮點環境複本。  
   
 ## <a name="return-value"></a>傳回值  
- 如果且只有在函式能夠順利開啟連續浮點例外狀況處理時，才傳回零。  
+ 如果且只有函式是能夠順利開啟非停止浮點例外狀況處理則傳回零。  
   
 ## <a name="remarks"></a>備註  
- `feholdexcept` 函式用來將目前浮點環境的狀態儲存在由 `penv` 指向的 `fenv_t` 物件中，並將環境設定為不會因浮點例外狀況而中斷執行。 這稱之為連續模式。  此模式會繼續執行，直到使用 [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183) 或 [feupdateenv](../../c-runtime-library/reference/feupdateenv.md) 還原環境為止。  
+ `feholdexcept` 函式用來將目前浮點環境的狀態儲存在由 `penv` 指向的 `fenv_t` 物件中，並將環境設定為不會因浮點例外狀況而中斷執行。 這稱之為連續模式。  此模式會繼續執行，直到使用 [fesetenv](fesetenv1.md) 或 [feupdateenv](../../c-runtime-library/reference/feupdateenv.md) 還原環境為止。  
   
  您可以在需要隱藏呼叫端一或多個浮點例外狀況的副程式開頭使用此函式。 若要報告例外狀況，您只要使用 [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md) 清除不想要的例外狀況，然後呼叫 `feupdateenv` 即可結束連續模式。  
   
@@ -93,5 +93,5 @@ int feholdexcept(
 ## <a name="see-also"></a>另請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
- [fesetenv](http://msdn.microsoft.com/Library/a34b2705-0bd4-452e-a30f-eea3898d8183)   
+ [fesetenv](fesetenv1.md)   
  [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

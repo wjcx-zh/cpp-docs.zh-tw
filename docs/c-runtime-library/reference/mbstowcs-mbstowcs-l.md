@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 484ecd12490eab00c02fb4184edcaa55f346c3a8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 436e581907e3b651716e819a9c82a24eed2e4b8e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs、_mbstowcs_l
@@ -103,13 +104,13 @@ size_t _mbstowcs_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `mbstowcs` 成功轉換來源字串，則會傳回已轉換的多位元組字元數。 如果 `wcstr` 引數為 `NULL`，函式會傳回目的字串所需的大小 (以寬字元為單位)。 如果 `mbstowcs` 遇到無效的多位元組字元，則傳回 -1。 如果傳回值是 `count`，則寬字元字串不會以 Null 結束。  
+ 如果 `mbstowcs` 成功轉換來源字串，則會傳回已轉換的多位元組字元數。 如果 `wcstr` 引數為 `NULL`，函式會傳回目的字串所需的大小 (以寬字元為單位)。 如果`mbstowcs`遇到無效的多位元組字元，則傳回-1。 如果傳回值是 `count`，則寬字元字串不會以 Null 結束。  
   
 > [!IMPORTANT]
 >  確定 `wcstr` 和 `mbstr` 沒有重疊，而且 `count` 正確反映要轉換的多位元組字元數。  
   
 ## <a name="remarks"></a>備註  
- `mbstowcs` 函式最多可將 `mbstr` 所指向的 `count` 個多位元組字元，轉換成目前地區設定所決定的對應寬字元字串。 它會將產生的寬字元字串儲存在以 `wcstr` 表示的位址。 結果會類似於對 `mbtowc` 的一連串呼叫。 如果 `mbstowcs` 在發生 `count` 之前或期間遇到單一位元組的 Null 字元 ('\0')，則會將 Null 字元轉換成寬字元的 Null 字元 (L'\0') 並停止。 因此，只有在轉換期間遇到 Null 字元時，`wcstr` 的寬字元字串才會以 Null 結束。 如果 `wcstr` 和 `mbstr` 所指向的序列重疊，則行為是未定義的。  
+ `mbstowcs` 函式最多可將 `mbstr` 所指向的 `count` 個多位元組字元，轉換成目前地區設定所決定的對應寬字元字串。 它會儲存所代表的位址在產生的寬字元字串`wcstr`。 結果會類似於對 `mbtowc` 的一連串呼叫。 如果 `mbstowcs` 在發生 `count` 之前或期間遇到單一位元組的 Null 字元 ('\0')，則會將 Null 字元轉換成寬字元的 Null 字元 (L'\0') 並停止。 因此，只有在轉換期間遇到 Null 字元時，`wcstr` 的寬字元字串才會以 Null 結束。 如果 `wcstr` 和 `mbstr` 所指向的序列重疊，則行為是未定義的。  
   
  如果 `wcstr` 引數為 `NULL`，`mbstowcs` 會傳回轉換所產生的寬字元數，但不包括 Null 結束字元。 來源字串必須以 Null 結束，才能傳回正確的值。 如果您需要產生的寬字元字串以 Null 結束，請將一個 Null 新增至傳回的值。  
   
@@ -222,9 +223,6 @@ Convert back to wide-character string:
   Characters converted: 2  
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   

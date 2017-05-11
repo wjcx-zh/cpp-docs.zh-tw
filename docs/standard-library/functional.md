@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: dcac506c06aac3c29ba2251af4281a713eec7491
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
@@ -126,22 +127,22 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind_function)|將引數繫結至可呼叫物件。|  
-|[bind1st](../standard-library/functional-functions.md#bind1st_function)|協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd_function)|協助程式樣板函式，可建立配接器，透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。|  
-|[bit_and](../standard-library/functional-functions.md#bit_and_function)|傳回兩個參數的位元邏輯 AND (二元運算子 &)。|  
-|[bit_not](../standard-library/functional-functions.md#bit_not_function)|傳回參數的位元邏輯補數 (運算子 ~)。|  
-|[bit_or](../standard-library/functional-functions.md#bit_or_function)|傳回兩個參數的位元邏輯 OR (運算子 &#124;)。|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor_function)|傳回兩個參數的位元邏輯 XOR (運算子 ^)。|  
-|[cref](../standard-library/functional-functions.md#cref_function)|從引數建構常數`reference_wrapper`。|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn_function)|產生簡單呼叫包裝函式。|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun_function)|協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)|協助程式樣板函式，可用來建構使用參考引數初始化時之成員函式的物件配接器。|  
-|[not1](../standard-library/functional-functions.md#not1_function)|傳回一元述詞的補數。|  
-|[not2](../standard-library/functional-functions.md#not2_function)|傳回二元述詞的補數。|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)|協助程式樣板函式，可用來將一元和二元函式指標分別轉換成一元和二元可調適性函式。|  
-|[ref](../standard-library/functional-functions.md#ref_function)|從引數建構 `reference_wrapper` 。|  
-|[swap](../standard-library/functional-functions.md#swap_function)|交換兩個 `function` 物件。|  
+|[bind](../standard-library/functional-functions.md#bind)|將引數繫結至可呼叫物件。|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|協助程式樣板函式，可建立配接器，透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|傳回兩個參數的位元邏輯 AND (二元運算子 &)。|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|傳回參數的位元邏輯補數 (運算子 ~)。|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|傳回兩個參數的位元邏輯 OR (運算子 &#124;)。|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|傳回兩個參數的位元邏輯 XOR (運算子 ^)。|  
+|[cref](../standard-library/functional-functions.md#cref)|從引數建構常數`reference_wrapper`。|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|產生簡單呼叫包裝函式。|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|協助程式樣板函式，可用來建構使用參考引數初始化時之成員函式的物件配接器。|  
+|[not1](../standard-library/functional-functions.md#not1)|傳回一元述詞的補數。|  
+|[not2](../standard-library/functional-functions.md#not2)|傳回二元述詞的補數。|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|協助程式樣板函式，可用來將一元和二元函式指標分別轉換成一元和二元可調適性函式。|  
+|[ref](../standard-library/functional-functions.md#ref)|從引數建構 `reference_wrapper` 。|  
+|[swap](../standard-library/functional-functions.md#swap)|交換兩個 `function` 物件。|  
   
 ### <a name="structs"></a>結構  
   
@@ -175,8 +176,8 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/functional-operators.md#operator_eq_eq)|不允許可呼叫物件的等號比較。|  
-|[operator!=](../standard-library/functional-operators.md#operator_neq)|不允許可呼叫物件的不等比較。|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|不允許可呼叫物件的等號比較。|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|不允許可呼叫物件的不等比較。|  
   
 ## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   

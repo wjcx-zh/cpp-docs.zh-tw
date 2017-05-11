@@ -1,56 +1,73 @@
 ---
 title: "fgetc、fgetwc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fgetwc"
-  - "fgetc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_fgettc"
-  - "fgetwc"
-  - "fgetc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fgettc 函式"
-  - "字元, 讀取"
-  - "fgetc 函式"
-  - "fgettc 函式"
-  - "fgetwc 函式"
-  - "從資料流讀取字元"
-  - "資料流, 讀取字元來源"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fgetwc
+- fgetc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _fgettc
+- fgetwc
+- fgetc
+dev_langs:
+- C++
+helpviewer_keywords:
+- fgettc function
+- characters, reading
+- _fgettc function
+- fgetc function
+- streams, reading characters from
+- reading characters from streams
+- fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# fgetc、fgetwc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5a0a697a4ba7cfea7c24809796179861fccc2f68
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-從資料流讀取一個字元。  
+---
+# <a name="fgetc-fgetwc"></a>fgetc、fgetwc
+從資料流讀取字元。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int fgetc(   
@@ -61,40 +78,40 @@ wint_t fgetwc(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `stream`  
- 指向 `FILE` 結構的指標。  
+ `FILE` 結構的指標。  
   
-## 傳回值  
- `fgetc` 傳回作為 `int` 讀取的字元或傳回`EOF` 表示錯誤或檔案結尾。  `fgetwc` 返回，如 [wint\_t](../../c-runtime-library/standard-types.md)，對應至字元的寬字元讀取或傳回 `WEOF` 來表示錯誤或檔案結尾。  對於兩個函式，請使用 `feof` 或 `ferror` 區別錯誤和文件結尾條件。  如果讀取錯誤，資料流的錯誤指示器被設定。  如果 `stream` 為 `NULL`，`fgetc` 和 `fgetwc`叫用無效參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，這些函式會將 `errno` 設定為 `EINVAL` 並傳回 `EOF`。  
+## <a name="return-value"></a>傳回值  
+ `fgetc` 會傳回已讀取為 `int` 的字元，或傳回 `EOF` 表示錯誤或檔案結尾。 `fgetwc` 會以 [wint_t](../../c-runtime-library/standard-types.md) 形式傳回對應至所讀取字元的寬字元，或傳回 `WEOF` 表示錯誤或檔案結尾。 針對這兩個函式，使用 `feof` 或 `ferror` 來區分錯誤與檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果 `stream` 為 `NULL`，則 `fgetc` 和 `fgetwc` 會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EOF`。  
   
-## 備註  
- 這些函式從與 `stream` 相關聯的檔案的目前位置讀取單一字元。  函式會將關聯的檔案指標 \(如果有定義\)指向下一個字元。  如果資料流已在檔案結尾，資料流的檔案結尾標記會被設定。  
+## <a name="remarks"></a>備註  
+ 所有這些函式都會從與 `stream` 相關聯檔案的目前位置讀取單一字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。  
   
- `fgetc` 與 `getc` 相等，不過，只有實作為函式，而不是函式和巨集。  
+ `fgetc` 相當於 `getc`，但僅實作為函式，而不是函式和巨集。  
   
- `fgetwc` 為`fgetc` 的寬字元版本；它將 `c` 根據是否 `stream` 在文字模式或二進為模式開啟決定作為多位元組字元或寬字元來讀取。  
+ `fgetwc` 是 `fgetc` 的寬字元版本，根據以文字模式還是二進位模式開啟 `stream`，將 `c` 讀取為多位元組字元或寬字元。  
   
- 有 `_nolock` 結尾的版本是相同的，除非它們受到其他執行緒干擾。  
+ 具有 `_nolock` 尾碼的版本完全一致，不同之處在於不受保護，不能免於其他執行緒的干擾。  
   
- 如需處理寬字元和多位元組字元的詳細資訊文字和二進位模式的詳細資訊，請參閱 [Unicode 文字和二進位模式的資料流 I\/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。  
+ 如需在文字和二進位模式中處理寬字元和多位元組字元的詳細資訊，請參閱[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|\_UNICODE & \_MBCS 未定義|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_fgettc`|`fgetc`|`fgetc`|`fgetwc`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|功能|必要的標頭|  
-|--------|-----------|  
-|`fgetc`|\<stdio.h\>|  
-|`fgetwc`|\<stdio.h\> 或 \<wchar.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`fgetc`|\<stdio.h>|  
+|`fgetwc`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_fgetc.c  
@@ -131,27 +148,21 @@ int main( void )
 }  
 ```  
   
-## Input: crt\_fgetc.txt  
+## <a name="input-crtfgetctxt"></a>輸入：crt_fgetc.txt  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
 Line one.  
 Line two.  
 ```  
   
-## .NET Framework 對等用法  
-  
--   [System::IO::StreamReader::Read](https://msdn.microsoft.com/en-us/library/system.io.streamreader.read.aspx).  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)

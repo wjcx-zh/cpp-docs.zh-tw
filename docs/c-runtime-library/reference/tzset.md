@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d52530de55147945f12f664d882ce0cda18f8e17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tzset"></a>_tzset
@@ -69,9 +70,9 @@ void _tzset( void );
 ```  
   
 ## <a name="remarks"></a>備註  
- `_tzset` 函式會使用環境變數 `TZ` 目前的設定，將值指派給下列三個全域變數： `_daylight`、 `_timezone`和 `_tzname`。 [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 和 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 函式會使用這些變數來進行國際標準時間 (UTC) 到當地時間的更正，`time` 函式則會用這些變數進行系統時間到 UTC 的計算。 請使用下列語法來設定 `TZ` 環境變數：  
+ `_tzset` 函式會使用環境變數 `TZ` 目前的設定，將值指派給下列三個全域變數： `_daylight`、 `_timezone`和 `_tzname`。 [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 和 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 函式會使用這些變數來進行國際標準時間 (UTC) 到本地時間的更正， `time` 函式則會用這些變數進行系統時間到 UTC 的計算。 請使用下列語法來設定 `TZ` 環境變數：  
   
- `set` `TZ`=`tzn`[+ &#124; –]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
   
  `tzn`  
  三個字母的時區名稱，例如 PST (太平洋標準時間)。 您必須指定從本地時間到 UTC 的正確位移。  
@@ -99,7 +100,7 @@ set TZ=GST-1GDT
   
  此命令會使用 GST 表示德國標準時間，並假設 UTC 比德國晚一小時 (也就是說，德國比 UTC 快一個小時) 以及德國會遵守日光節約時間。  
   
- 如果未設定 `TZ` 值，_`tzset` 會嘗試使用作業系統所指定的時區資訊。 在 Windows 作業系統中，這項資訊是在 [控制台] 的 [日期/時間] 應用程式中指定。 如果 `_tzset` 無法取得這項資訊，它會使用預設值 PST8PDT，表示太平洋時區。  
+ 如果`TZ`未設定值，`_tzset`嘗試使用作業系統所指定的時區資訊。 在 Windows 作業系統中，這項資訊是在 [控制台] 的 [日期/時間] 應用程式中指定。 如果 `_tzset` 無法取得這項資訊，它會使用預設值 PST8PDT，表示太平洋時區。  
   
  根據 `TZ` 環境變數的值，在呼叫 `_daylight`時會將下列值指派給全域變數 `_timezone`、 `_tzname` 和 `_tzset` ：  
   
@@ -154,9 +155,6 @@ _daylight = 1
 _timezone = 28800  
 _tzname[0] = Pacific Standard Time  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   

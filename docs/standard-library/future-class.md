@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::future
+- future/std::future::future
+- future/std::future::get
+- future/std::future::share
+- future/std::future::valid
+- future/std::future::wait
+- future/std::future::wait_for
+- future/std::future::wait_until
 dev_langs:
 - C++
 ms.assetid: 495e82c3-5341-4e37-87dd-b40107fbdfb6
@@ -32,10 +39,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6de4fecd3f5f65ac48cbb49f2ed4f874f4283487
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2a062caf9b28a48f2195f96b3a22f95a15c7149e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="future-class"></a>future 類別
@@ -57,31 +65,31 @@ class future;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[future::future 建構函式](#future__future_constructor)|建構 `future` 物件。|  
+|[future](#future)|建構 `future` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[future::get](#future__get_method)|擷取以相關的非同步狀態儲存的結果。|  
-|[future::share](#future__share_method)|將物件轉換為 `shared_future`。|  
-|[future::valid](#future__valid_method)|指定物件是否不是空的。|  
-|[future::wait](#future__wait_method)|封鎖目前的執行緒，直到相關的非同步狀態變成就緒為止。|  
-|[future::wait_for](#future__wait_for_method)|封鎖直到相關的非同步狀態變成就緒為止，或直到指定的時間已過為止。|  
-|[future::wait_until](#future__wait_until_method)|封鎖直到相關的非同步狀態變成就緒為止，或直到到了指定的時間點為止。|  
+|[get](#get)|擷取以相關的非同步狀態儲存的結果。|  
+|[共用](#share)|將物件轉換為 `shared_future`。|  
+|[有效](#valid)|指定物件是否不是空的。|  
+|[等候](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|  
+|[wait_for](#wait_for)|封鎖直到相關聯的非同步狀態就緒為止，或直到指定的時間已過為止。|  
+|[wait_until](#wait_until)|封鎖直到相關聯的非同步狀態就緒為止，或直到到了指定的時間點為止。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[future::operator=](#future__operator_eq)|從指定的物件轉移相關的非同步狀態。|  
+|[future::operator=](#op_eq)|從指定的物件轉移相關的非同步狀態。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**future  
+ **標頭︰** \<未來 >  
   
  **命名空間：** std  
   
-##  <a name="a-namefuturefutureconstructora--futurefuture-constructor"></a><a name="future__future_constructor"></a>  future::future 建構函式  
+##  <a name="future"></a>  future::future 建構函式  
  建構 `future` 物件。  
   
 ```
@@ -98,7 +106,7 @@ future(future&& Other) noexcept;
   
  第二個建構函式建構 `future` 物件並從 `Other` 中轉移關聯的非同步狀態。 `Other` 已不再具有相關的非同步狀態。  
   
-##  <a name="a-namefuturegetmethoda--futureget"></a><a name="future__get_method"></a>  future::get  
+##  <a name="get"></a>  future::get  
  擷取以相關的非同步狀態儲存的結果。  
   
 ```
@@ -117,7 +125,7 @@ Ty get();
   
  在其他特製化中，此方法會從預存值中移動其傳回值。 因此，請只呼叫此方法一次。  
   
-##  <a name="a-namefutureoperatoreqa--futureoperator"></a><a name="future__operator_eq"></a>  future::operator=  
+##  <a name="op_eq"></a>  future::operator=  
  從指定的物件轉移相關的非同步狀態。  
   
 ```
@@ -134,7 +142,7 @@ future& operator=(future&& Right) noexcept;
 ### <a name="remarks"></a>備註  
  在轉移之後，`Right` 便不再具有相關的非同步狀態。  
   
-##  <a name="a-namefuturesharemethoda--futureshare"></a><a name="future__share_method"></a>  future::share  
+##  <a name="share"></a>  future::share  
  將物件轉換為 [shared_future](../standard-library/shared-future-class.md) 物件。  
   
 ```
@@ -144,7 +152,7 @@ shared_future<Ty> share();
 ### <a name="return-value"></a>傳回值  
  `shared_future(move(*this))`  
   
-##  <a name="a-namefuturevalidmethoda--futurevalid"></a><a name="future__valid_method"></a>  future::valid  
+##  <a name="valid"></a>  future::valid  
  指定物件是否具有相關的非同步狀態。  
   
 ```
@@ -154,7 +162,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>傳回值  
  如果物件有關聯的非同步狀態，就是 `true`，否則為 `false`。  
   
-##  <a name="a-namefuturewaitmethoda--futurewait"></a><a name="future__wait_method"></a>  future::wait  
+##  <a name="wait"></a>  future::wait  
  封鎖目前的執行緒，直到相關的非同步狀態變成「就緒」為止。  
   
 ```cpp  
@@ -164,7 +172,7 @@ void wait() const;
 ### <a name="remarks"></a>備註  
  相關的非同步狀態只有在其非同步提供者已儲存傳回值或已儲存例外狀況時，才會變成「就緒」。  
   
-##  <a name="a-namefuturewaitformethoda--futurewaitfor"></a><a name="future__wait_for_method"></a>  future::wait_for  
+##  <a name="wait_for"></a>  future::wait_for  
  封鎖目前的執行緒，直到相關的非同步狀態變成「就緒」為止，或直到指定的時間間隔已過為止。  
   
 ```
@@ -177,12 +185,12 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
  [chrono::duration](../standard-library/duration-class.md) 物件，會指定執行緒封鎖的時間間隔上限。  
   
 ### <a name="return-value"></a>傳回值  
- [future_status](../standard-library/future-enums.md#future_status_enumeration)，會指出傳回的原因。  
+ [future_status](../standard-library/future-enums.md#future_status)，會指出傳回的原因。  
   
 ### <a name="remarks"></a>備註  
  相關的非同步狀態只有在其非同步提供者已儲存傳回值或已儲存例外狀況時，才會變成就緒。  
   
-##  <a name="a-namefuturewaituntilmethoda--futurewaituntil"></a><a name="future__wait_until_method"></a>  future::wait_until  
+##  <a name="wait_until"></a>  future::wait_until  
  封鎖目前的執行緒，直到相關的非同步狀態變成「就緒」為止，或直到指定的時間點過後為止。  
   
 ```cpp  
@@ -195,7 +203,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
  [chrono::time_point](../standard-library/time-point-class.md) 物件，會指定可將執行緒解除封鎖的時間。  
   
 ### <a name="return-value"></a>傳回值  
- [future_status](../standard-library/future-enums.md#future_status_enumeration)，會指出傳回的原因。  
+ [future_status](../standard-library/future-enums.md#future_status)，會指出傳回的原因。  
   
 ### <a name="remarks"></a>備註  
  相關的非同步狀態只有在其非同步提供者已儲存傳回值或已儲存例外狀況時，才會變成「就緒」。  

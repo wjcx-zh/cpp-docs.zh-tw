@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 71e7784eefcfa69d12de2229b360845d1fd99a30
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4c36da30cfc69140a47e779025acb579bb687df2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
@@ -105,10 +106,10 @@ wint_t _ungetwch_nolock(
  要推送的字元。  
   
 ## <a name="return-value"></a>傳回值  
- 成功時，兩個函式都會傳回 `c` 字元。 如果發生錯誤，`_ungetch` 會傳回值 `EOF`，而 `_ungetwch` 會傳回 `WEOF`。  
+ 成功時，兩個函式都會傳回 `c` 字元。 如果沒有發生錯誤，`_ungetch`傳回值的`EOF`和`_ungetwch`傳回`WEOF`。  
   
 ## <a name="remarks"></a>備註  
- 這些函式會將字元 `c` 推送回主控台，因而導致 `c` 成為 `_getch` 或 `_getche` (或 `_getwch` 或 `_getwche`) 所讀取的下一個字元。 如果在下次讀取之前多次呼叫 `_ungetch` 和 `_ungetwch`，則會失敗。 `c` 引數不能是 `EOF` (或 `WEOF`)。  
+ 這些函式推入字元`c`回到主控台中，造成`c`要讀取的下一個字元`_getch`或`_getche`(或`_getwch`或`_getwche`)。 如果在下次讀取之前多次呼叫 `_ungetch` 和 `_ungetwch`，則會失敗。 `c` 引數不能是 `EOF` (或 `WEOF`)。  
   
  具有 `_nolock` 尾碼的版本完全一致，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。  
   

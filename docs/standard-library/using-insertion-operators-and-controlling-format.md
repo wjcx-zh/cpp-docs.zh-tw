@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: bfab56fe6847015adff4013d075893e982d5d2f4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>使用插入運算子和控制格式
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
   
 - [基數](#vclrfradixanchor6)  
   
-##  <a name="a-namevclrfoutputwidthanchor3a-output-width"></a><a name="vclrfoutputwidthanchor3"></a> 輸出寬度  
+##  <a name="vclrfoutputwidthanchor3"></a> 輸出寬度  
  若要對齊輸出，您必須將 `setw` 操作工具放入資料流中，或呼叫**寬度**成員函式，以指定每個項目的輸出寬度。 此範例會以至少 10 個字元的寬度靠右對齊資料行中的值：  
   
 ```  
@@ -134,7 +135,7 @@ Jimmy     35.36
   
  `setw` 和**寬度**都不會截斷值。 如果格式化輸出超過寬度，則會根據資料流的精確度設定列印整個值。 `setw` 和**寬度**只會影響下列欄位。 在列印欄位之後，欄位寬度會回復原預設行為 (必要寬度)。 不過，其他資料流格式選項在變更之前仍然有效。  
   
-##  <a name="a-namevclrfalignmentanchor4a-alignment"></a><a name="vclrfalignmentanchor4"></a> 對齊  
+##  <a name="vclrfalignmentanchor4"></a> 對齊  
  輸出資料流預設為靠右對齊文字。 若要將前述範例中的名稱靠左對齊，並將數值靠右對齊，請依照下列方式取代 **for** 迴圈：  
   
 ```  
@@ -156,7 +157,7 @@ Stan     4358.24
   
  使用 [setiosflags](../standard-library/iomanip-functions.md#setiosflags) 操作工具和 `left` 列舉值可設定靠左對齊旗標。 此列舉值定義於 [ios](../standard-library/basic-ios-class.md) 類別中，因此其參考必須包含 **ios::** 前置詞。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) 操作工具會關閉靠左對齊旗標。 不同於**寬度**和 `setw`，`setiosflags` 和 `resetiosflags` 的效果是永久性的。  
   
-##  <a name="a-namevclrfprecisionanchor5a-precision"></a><a name="vclrfprecisionanchor5"></a> 整數位數  
+##  <a name="vclrfprecisionanchor5"></a> 整數位數  
  浮點精確度的預設值為六。 例如，數值 3466.9768 會列印為 3466.98。 若要變更此值的列印方式，請使用 [setprecision](../standard-library/iomanip-functions.md#setprecision) 操作工具。 此操作工具有兩個旗標：[固定](../standard-library/ios-functions.md#fixed)和[科學](../standard-library/ios-functions.md#scientific)。 如果設定了[固定](../standard-library/ios-functions.md#fixed)，則此數值會列印為 3466.976800。 如果設定了**科學**，則會列印為 3.4669773+003。  
   
  若要以具有一個有效位數的[對齊](#vclrfalignmentanchor4)方式顯示浮點數，請以下列方式取代 **for** 迴圈：  
@@ -208,7 +209,7 @@ Stan    4.4e+003
   
  同樣地，程式會在小數點後面列印一位數。 如果設定了 **ios::fixed** 或 **ios::scientific**，整數位數值將會決定小數點後面的位數。 如果未設定任一旗標，精確度值將會決定有效位數的總數。 `resetiosflags` 操作工具會清除這些旗標。  
   
-##  <a name="a-namevclrfradixanchor6a-radix"></a><a name="vclrfradixanchor6"></a> 基數  
+##  <a name="vclrfradixanchor6"></a> 基數  
  **dec**、**oct** 和 **hex** 操作工具會設定輸入和輸出的預設基數。 例如，如果您將 **hex** 操作工具插入輸出資料流中，物件會正確地將整數的內部資料表示法轉譯成十六進位的輸出格式。 如果清除[大寫](../standard-library/ios-functions.md#uppercase)旗標 (預設值)，將會以小寫的 a 到 f 顯示數字；否則會以大寫顯示。 預設基數是 **dec** (十進位)。  
   
 ## <a name="quoted-strings-c14"></a>使用引號的字串 (C++14)  
@@ -229,7 +230,7 @@ std::cout <<extracted;   //   This
   
  此行為可以手動修改，但為了讓字串的往返更簡便、C++14 在 `<iomanip>` 中加入了 `std::quoted` 資料流操作工具。 在插入時，`quoted()` 會在字串兩側加上分隔符號 (預設為雙引號 '"')，並在進行擷取時使資料流擷取所有字元，直到最後一個分隔符號為止。 任何內嵌引號都會以逸出字元 (預設為 '\\\\') 逸出。  
   
- 分隔符號只會出現在資料流物件中；它們不會出現在擷取的字串中，但會出現在 [basic_stringstream::str](../standard-library/basic-stringstream-class.md#basic_stringstream__str)() 傳回的字串中。  
+ 分隔符號只會出現在資料流物件中；它們不會出現在擷取的字串中，但會出現在 [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)() 傳回的字串中。  
   
  插入和擷取作業的空白行為與字串在程式碼中的呈現方式無關，因此無論輸入字串是原始字串常值還是一般字串，加上引號的運算子都有效用。 輸入字串無論採用何種格式，都可以有內嵌引號、換行符號、定位字元等項目，且 quoted() 操作工具會保留前述所有的項目。  
   

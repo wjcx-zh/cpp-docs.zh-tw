@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f72361dec79e82a5e4f531ad686978010f01450e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 014346887441678f53872aa7b791931e89361a5c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="messagesbyname-class"></a>messages_byname 類別
@@ -71,7 +72,7 @@ protected:
  初始參考計數。  
   
 ## <a name="remarks"></a>備註  
- 其行為取決於具名地區設定 `_Locname`。 每個建構函式都會以 [messages](../standard-library/messages-class.md#messages__messages)\<CharType>( `_Refs`) 將其基底物件初始化。  
+ 其行為取決於具名地區設定 `_Locname`。 每個建構函式都會以 [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`) 將其基底物件初始化。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<locale>  

@@ -1,51 +1,68 @@
 ---
-title: "_fcvt_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fcvt_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fcvt_s"
-  - "_fcvt_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fcvt_s 函式"
-  - "轉換浮點, 到字串"
-  - "fcvt_s 函式"
-  - "浮點函式, 將數值轉換為字串"
+title: _fcvt_s | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fcvt_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fcvt_s
+- _fcvt_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- fcvt_s function
+- converting floating point, to strings
+- floating-point functions, converting number to string
+- _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
----
-# _fcvt_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9c282757ae79367cdc2ee72b3f3ce8d0e50983fa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-轉換浮點數值至字串。  這是 [\_fcvt](../../c-runtime-library/reference/fcvt.md) 的安全性強化版本，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md) 所述。  
+---
+# <a name="fcvts"></a>_fcvt_s
+將浮點數轉換為字串。 這是如 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [_lfind](../../c-runtime-library/reference/fcvt.md) 版本。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 errno_t _fcvt_s(   
@@ -66,67 +83,67 @@ errno_t _fcvt_s(
 ); // C++ only  
 ```  
   
-#### 參數  
- \[out\] `buffer`  
- 所提供的緩衝區將保留轉換的結果。  
+#### <a name="parameters"></a>參數  
+ [輸出] `buffer`  
+ 保留轉換結果之提供的緩衝區。  
   
- \[in\] `sizeInBytes`  
- 緩衝區的大小 \(以位元組為單位\)。  
+ [in] `sizeInBytes`  
+ 以位元組為單位的緩衝區大小。  
   
- \[in\] `value`  
- 被轉換的數字。  
+ [in] `value`  
+ 要轉換的數字。  
   
- \[in\] `count`  
- 小數點後的位數。  
+ [in] `count`  
+ 小數點後的小數位數。  
   
- \[out\] `dec`  
- 要儲存的小數點位置的指標。  
+ [輸出] `dec`  
+ 預存小數點位置的指標。  
   
- \[out\] `sign`  
- 要儲存的標記指標的指標。  
+ [輸出] `sign`  
+ 預存正負號指標的指標。  
   
-## 傳回值  
- 如果成功，則為零。  如果發生失敗，則傳回值為錯誤碼。  錯誤碼在 Errno.h 中定義。  如需這些錯誤的清單，請參閱 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，則為零。 如果失敗，傳回的值會是錯誤碼。 錯誤碼於 Errno.h 中定義。 如需這些錯誤的清單，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
- 在無效的參數的情況下，如下表所示，這個函式叫用無效的參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，函式將 `errno` 設置為 `EINVAL` 並回傳 `EINVAL` 。  
+ 如果是下表所列的無效參數，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
   
-### 錯誤狀況  
+### <a name="error-conditions"></a>錯誤狀況  
   
-|`buffer`|`sizeInBytes`|值|count|dec|sign|傳回|在 `buffer` 的值|  
-|--------------|-------------------|-------|-----------|---------|----------|--------|-------------------|  
-|`NULL`|any|any|any|any|any|`EINVAL`|未修改。|  
-|不是 `NULL` \(指向有效的記憶體\)|\<\=0|any|any|any|any|`EINVAL`|未修改。|  
-|any|any|any|any|`NULL`|any|`EINVAL`|未修改。|  
-|any|any|any|any|any|`NULL`|`EINVAL`|未修改。|  
+|`buffer`|`sizeInBytes`|值|count|dec|Sign|傳回|`buffer` 中的值|  
+|--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
+|`NULL`|任何|任何|任何|任何|任何|`EINVAL`|未修改。|  
+|非 `NULL` (指向有效的記憶體)|<=0|any|任何|任何|任何|`EINVAL`|未修改。|  
+|any|任何|任何|任何|`NULL`|任何|`EINVAL`|未修改。|  
+|any|任何|任何|任何|任何|`NULL`|`EINVAL`|未修改。|  
   
  **安全性問題**  
   
- 如果 `buffer`沒有指向有效的記憶體且不是 `NULL` ， `_fcvt_s` 會發生存取被拒。  
+ 如果 `buffer` 不指向有效的記憶體，而且不是 `NULL`，則 `_fcvt_s` 可能會產生存取違規。  
   
-## 備註  
- `_fcvt_s` 函式將浮點數轉換成空的終止字串。  `value` 參數是要轉換的雙精確度浮點數。  `_fcvt_s` 中 `value` 數值為字串並將 null 字元 \(「\\ 0 」\)。  `count`參數指定小數點之後需要倍儲存的位數。  剩餘數字四捨五入到 `count` 位元。  如果精準度小於 `count` 的數字，字串填補零。  
+## <a name="remarks"></a>備註  
+ `_fcvt_s` 函式會將浮點數轉換成以 Null 結束的字元字串。 `value` 參數是要轉換的浮點數。 `_fcvt_s` 會將 `value` 的數字儲存為字串，並在結尾處附加 Null 字元 ('\0')。 `count` 參數會指定小數點後要儲存的位數。 多餘的數字會四捨五入至 `count` 位置。 如果有效位數少於 `count`，則以零填補字串。  
   
- 只有數值資料儲存。  小數點的位置與 `value` 的符號可以從 `dec` 和 `sign` 取得在呼叫之後。  `dec` 參數指向一個整數值；此整數值告知小數點位置與字串的開頭。  0 或負整數值表示小數點在第一個數字左邊加入水平軸。  表示 `value`的正負號整數參數的 `sign` 。  整數設為 0，如果 `value` 為正值且設為非零值，如果 `value` 是負值。  
+ 字串中只能儲存數字。 呼叫之後，可從 `dec` 和 `sign` 取得小數點位置和 `value` 的正負號。 `dec` 參數指向整數值，此整數值會提供字串開頭的小數點位置。 零或負整數值表示小數點位於第一位數字的左邊。 參數 `sign` 指向表示 `value` 正負號的整數。 如果 `value` 是正值，則整數設定為 0；如果 `value` 是負值，則整數設定為非零的數字。  
   
- 足夠容納任何浮點數值的 `_CVTBUFSIZE` 長度的緩衝區。  
+ 長度 `_CVTBUFSIZE` 的緩衝區足可供任何浮點值使用。  
   
- 在 `_ecvt_s` 和 `_fcvt_s` 的差異在於 `count` 參數的說明。  `_ecvt_s`將`count`解譯為輸出字串的數值總數，而且`_fcvt_s` 將c`ount`解譯為小數點之後的數值數。  
+ `_ecvt_s` 和 `_fcvt_s` 之間的差異位於 `count` 參數解譯中。 `_ecvt_s`解譯`count`做為輸出字串中的位數總數和`_fcvt_s`解譯`count`小數點之後位數的數目。  
   
- 在 C\+\+ 中，此函式的使用被簡化為使用樣板多載。使用多載可以自動推斷緩衝區的大小而不必在參數中指明大小。  如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
   
- 此函式的偵錯版本會先將緩衝區填入 0xFD 。  若要停用此行為，請使用 [\_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
+ 此函式的偵錯版本會先用 0xFD 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|功能|必要的標頭|選擇性標頭|  
-|--------|-----------|-----------|  
-|`_fcvt_s`|\<stdlib.h\>|\<errno.h\>|  
+|函式|必要的標頭|選擇性標頭|  
+|--------------|---------------------|---------------------|  
+|`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
   
- 如需詳細資訊，請參閱介紹中的 [相容性](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
- **程式庫:** [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)的所有版本。  
+ **程式庫︰**所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // fcvt_s.c  
@@ -155,14 +172,14 @@ int main()
 }  
 ```  
   
-  **Converted value: 120000**   
-## .NET Framework 對等用法  
- <xref:System.Convert.ToString%2A>  
+```Output  
+Converted value: 120000  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [atof、\_atof\_l、\_wtof、\_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md)   
- [\_gcvt\_s](../../c-runtime-library/reference/gcvt-s.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)
+ [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)   
+ [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)

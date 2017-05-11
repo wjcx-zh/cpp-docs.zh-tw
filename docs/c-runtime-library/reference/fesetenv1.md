@@ -1,5 +1,5 @@
 ---
-title: fesetenv1 | Microsoft Docs
+title: "fesetenv |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40e20a2c6a3f3c22b9206ce078146b44bb841f68
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 96453fb182aa3c14bec8a296899cfcd15d39222c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="fesetenv"></a>fesetenv
@@ -65,15 +66,14 @@ ms.lasthandoff: 02/24/2017
 int fesetenv(  
    const fenv_t *penv  
 );  
-  
 ```  
   
 #### <a name="parameters"></a>參數  
  `penv`  
- `fenv_t` 物件的指標，包含 [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) 或 [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9) 呼叫設定的浮點環境。 您也可以使用 FE_DFL_ENV 巨集指定預設啟動浮點環境。  
+ `fenv_t` 物件的指標，包含 [fegetenv](fegetenv1.md) 或 [feholdexcept](feholdexcept2.md) 呼叫設定的浮點環境。 您也可以使用 FE_DFL_ENV 巨集指定預設啟動浮點環境。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功設定環境，則傳回 0。        否則，傳回非零值。  
+ 如果成功設定環境，則傳回 0。 否則，傳回非零值。  
   
 ## <a name="remarks"></a>備註  
  `fesetenv` 函式會從由儲存在 `penv` 指向之 `fenv_t` 物件的值中，設定目前的浮點環境。 浮點點環境是一組會影響浮點計算的狀態旗標和控制項模式。 這包括捨入模式以及處理浮點例外狀況的狀態旗標。  如果 `penv` 不是 FE_DFL_ENV 或不指向有效的 `fenv_t` 物件，則不定義後續行為。  

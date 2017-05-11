@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 7771de57070961751e16294bc966e08843baef4c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 212b2b5af678bd39b4ecc7d6622c71db20db5a26
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
@@ -60,20 +61,20 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/tuple-operators.md#operator_eq_eq)|比較 `tuple` 物件 (等於)|  
-|[operator!=](../standard-library/tuple-operators.md#operator_neq)|比較 `tuple` 物件 (不等於)|  
-|[operator<](../standard-library/tuple-operators.md#operator_lt_)|比較 `tuple` 物件 (小於)|  
-|[operator<=](../standard-library/tuple-operators.md#operator_lt__eq)|比較 `tuple` 物件 (小於或等於)|  
-|[operator>](../standard-library/tuple-operators.md#operator_gt_)|比較 `tuple` 物件 (大於)|  
-|[operator>=](../standard-library/tuple-operators.md#operator_gt__eq)|比較 `tuple` 物件 (大於或等於)|  
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|比較 `tuple` 物件 (等於)|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|比較 `tuple` 物件 (不等於)|  
+|[operator<](../standard-library/tuple-operators.md#op_lt)|比較 `tuple` 物件 (小於)|  
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|比較 `tuple` 物件 (小於或等於)|  
+|[operator>](../standard-library/tuple-operators.md#op_gt)|比較 `tuple` 物件 (大於)|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|比較 `tuple` 物件 (大於或等於)|  
   
 ### <a name="functions"></a>函式  
   
 |||  
 |-|-|  
-|[get](../standard-library/tuple-functions.md#get_function)|從 `tuple` 物件取得項目。|  
-|[make_tuple](../standard-library/tuple-functions.md#make_tuple_function)|從元素值製作 `tuple`。|  
-|[tie](../standard-library/tuple-functions.md#tie_function)|從元素參考製作 `tuple`。|  
+|[get](../standard-library/tuple-functions.md#get)|從 `tuple` 物件取得項目。|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|從元素值製作 `tuple`。|  
+|[tie](../standard-library/tuple-functions.md#tie)|從元素參考製作 `tuple`。|  
   
 ## <a name="see-also"></a>另請參閱  
  [\<array>](../standard-library/array.md)

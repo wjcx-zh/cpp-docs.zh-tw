@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 200e62472c8c6002cdc45181ad019a1d78ca7977
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c46338445598ef77e6b8a4c1c261962fe9e7ff0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="valuecompare-class-ltmapgt"></a>value_compare 類別 (&lt;map&gt;)
@@ -64,7 +65,7 @@ protected:
  對於集和多重集而言 (這些是簡單容器，其中索引鍵值和項目值相同)，`value_compare` 相當於 `key_compare`；但對於對應和多重對應則否，因為項目型別 `pair` 的值與項目的索引鍵值不同。  
   
 ## <a name="example"></a>範例  
-  如需如何宣告和使用 [ 的範例，請參閱 ](../standard-library/map-class.md#map__value_comp)value_comp`value_compare` 範例。  
+  如需如何宣告和使用 [ 的範例，請參閱 ](../standard-library/map-class.md#value_comp)value_comp`value_compare` 範例。  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<map>  

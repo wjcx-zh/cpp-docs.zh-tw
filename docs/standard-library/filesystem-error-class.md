@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 79a5556d0d0806462893bb4165f7d6fc2d3a986f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 87ae0515eba774f73ee0d4283a020ce27c3fbe6f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="filesystemerror-class"></a>filesystem_error 類別
@@ -92,7 +93,7 @@ const char *what() const noexcept;
  成員函式會傳回 NTBS 的指標，最好是由 runtime_error::what()、system_error::what()、mymesg、mypval1.native_string() 和 mypval2.native_string() 組成 。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** filesystem  
+ **標頭︰** \<filesystem >  
   
  **命名空間：**std::experimental::filesystem  
   

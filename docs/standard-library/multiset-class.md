@@ -9,10 +9,48 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::multiset
 - set/std::multiset
-- std.multiset
 - multiset
+- set/std::multiset::allocator_type
+- set/std::multiset::const_iterator
+- set/std::multiset::const_pointer
+- set/std::multiset::const_reference
+- set/std::multiset::const_reverse_iterator
+- set/std::multiset::difference_type
+- set/std::multiset::iterator
+- set/std::multiset::key_compare
+- set/std::multiset::key_type
+- set/std::multiset::pointer
+- set/std::multiset::reference
+- set/std::multiset::reverse_iterator
+- set/std::multiset::size_type
+- set/std::multiset::value_compare
+- set/std::multiset::value_type
+- set/std::multiset::begin
+- set/std::multiset::cbegin
+- set/std::multiset::cend
+- set/std::multiset::clear
+- set/std::multiset::count
+- set/std::multiset::crbegin
+- set/std::multiset::crend
+- set/std::multiset::emplace
+- set/std::multiset::emplace_hint
+- set/std::multiset::empty
+- set/std::multiset::end
+- set/std::multiset::equal_range
+- set/std::multiset::erase
+- set/std::multiset::find
+- set/std::multiset::get_allocator
+- set/std::multiset::insert
+- set/std::multiset::key_comp
+- set/std::multiset::lower_bound
+- set/std::multiset::max_size
+- set/std::multiset::rbegin
+- set/std::multiset::rend
+- set/std::multiset::size
+- set/std::multiset::swap
+- set/std::multiset::upper_bound
+- set/std::multiset::value_comp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f1b633b3793e99c24d0ae386a73e38e08cca088f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ff713a2813798c82b42ecc814d433e64ba2a51a6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="multiset-class"></a>multiset 類別
@@ -79,13 +118,13 @@ class multiset
   
 -   樣板類別，因為它提供的功能是泛型，因此與做為項目包含的特定資料類型是獨立的。 使用的資料類型是在類別樣板中指定為參數 (和比較函式與配置器一起指定)。  
   
- multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](#multiset__insert) 和 [multiset](#multiset__multiset) 擁有以較弱的輸入迭代器作為範本參數的版本，其功能需求比雙向迭代器的類別所保證的還要少。 不同的迭代器概念因其功能的修改而形成關聯的系列。 每個迭代器概念有自己的一組需求，因此，使用它們的演算法必須將其假設限制為該迭代器類型的需求。 可假設輸入迭代器可能已取值來參考某個物件，而且可能會遞增為序列中的下一個迭代器。 這是最基本的一組功能，但已足以在類別成員函式的內容中，有意義地溝通迭代器 [ `First`, `Last`) 的範圍。  
+ multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](#insert) 和 [multiset](#multiset) 擁有以較弱的輸入迭代器作為範本參數的版本，其功能需求比雙向迭代器的類別所保證的還要少。 不同的迭代器概念因其功能的修改而形成關聯的系列。 每個迭代器概念有自己的一組需求，因此，使用它們的演算法必須將其假設限制為該迭代器類型的需求。 可假設輸入迭代器可能已取值來參考某個物件，而且可能會遞增為序列中的下一個迭代器。 這是最基本的一組功能，但已足以在類別成員函式的內容中，有意義地溝通迭代器 [ `First`, `Last`) 的範圍。  
   
  選擇容器類型時，通常應根據應用程式所需的搜尋和插入類型。 關聯的容器已針對查閱、插入和移除作業最佳化。 明確支援這些作業的成員函式很有效率，以與容器中的項目數目之對數成正比的平均時間執行它們。 插入項目不會使任何迭代器無效，移除項目則僅會使特別指向被移除項目的迭代器無效。  
   
  當關聯值與其索引鍵的條件由應用程式滿足時，多重集應該是首選的關聯容器。 多重集的項目可以是多重，並當做自己的排序鍵，因此索引鍵不是唯一的。 例如，這種結構的模型是文字的已排序清單，其中文字可以出現多次。 如果不允許文字的多個項目，則集合是適當的容器結構。 如果唯一定義做為值附加至唯一關鍵字清單，則對應是包含這個資料的適當結構。 如果定義不是唯一的，則多重對應是首選容器。  
   
- 多重集是藉由呼叫 `Compare` 類型的預存函式物件，排序它所控制的序列。 這個預存物件是可藉由呼叫成員函式 [key_comp](#multiset__key_comp) 來存取的比較函式。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 *f*( *x*, *y*) 是有兩個引數物件 *x* 和 *y* 以及傳回值 **true** 或 **false** 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 *f*( *x,y*) 和 *f*( *y,x*) 皆為 false 時即相等，則施加於集合的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。  
+ 多重集是藉由呼叫 `Compare` 類型的預存函式物件，排序它所控制的序列。 這個預存物件是可藉由呼叫成員函式 [key_comp](#key_comp) 來存取的比較函式。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 *f*( *x*, *y*) 是有兩個引數物件 *x* 和 *y* 以及傳回值 **true** 或 **false** 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 *f*( *x,y*) 和 *f*( *y,x*) 皆為 false 時即相等，則施加於集合的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。  
   
  在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)  
   
@@ -93,70 +132,70 @@ class multiset
   
 |||  
 |-|-|  
-|[multiset](#multiset__multiset)|建構一個空的 `multiset`，或是指定之 `multiset` 的全部或部分複本。|  
+|[multiset](#multiset)|建構一個空的 `multiset`，或是指定之 `multiset` 的全部或部分複本。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#multiset__allocator_type)|`allocator` 物件之 `multiset` 類別的 typedef。|  
-|[const_iterator](#multiset__const_iterator)|可以在 `const` 中讀取 `multiset` 項目的雙向迭代器的 typedef。|  
-|[const_pointer](#multiset__const_pointer)|在 `const` 中指向 `multiset` 項目的指標之 typedef。|  
-|[const_reference](#multiset__const_reference)|指向儲存在 `const` 中的 `multiset` 項目的參考之 typedef，用以讀取和執行 `const` 作業。|  
-|[const_reverse_iterator](#multiset__const_reverse_iterator)|可以在 `const` 中讀取任何 `multiset` 項目的雙向迭代器的 typedef。|  
-|[difference_type](#multiset__difference_type)|範圍 (介於迭代器所指的項目) 中 `multiset` 的項目數量的帶正負號整數 typedef。|  
-|[iterator](#multiset__iterator)|雙向迭代器的 typedef，可以讀取或修改 `multiset` 中的任何項目。|  
-|[key_compare](#multiset__key_compare)|函式物件之 typedef，可比較兩個索引鍵以判斷兩個項目在 `multiset` 中的相對順序。|  
-|[key_type](#multiset__key_type)|函式物件之 typedef，可比較兩個排序鍵以判斷兩個項目在 `multiset` 中的相對順序。|  
-|[pointer](#multiset__pointer)|在 `multiset` 中指向項目的指標之 typedef。|  
-|[reference](#multiset__reference)|`multiset` 中預存項目的參考之 typedef。|  
-|[reverse_iterator](#multiset__reverse_iterator)|雙向迭代器的 typedef，可以讀取或修改反轉 `multiset` 中的項目。|  
-|[size_type](#multiset__size_type)|不帶正負號的整數類型，可以表示 `multiset` 中的項目數。|  
-|[value_compare](#multiset__value_compare)|可將兩個項目做為排序鍵進行比較之函式物件的 typedef，以判斷項目在 `multiset` 中的相對順序。|  
-|[value_type](#multiset__value_type)|typedef，在做為值的產能上，描述做為 `multiset` 的項目儲存的物件。|  
+|[allocator_type](#allocator_type)|`allocator` 物件之 `multiset` 類別的 typedef。|  
+|[const_iterator](#const_iterator)|可以在 `const` 中讀取 `multiset` 項目的雙向迭代器的 typedef。|  
+|[const_pointer](#const_pointer)|在 `const` 中指向 `multiset` 項目的指標之 typedef。|  
+|[const_reference](#const_reference)|指向儲存在 `const` 中的 `multiset` 項目的參考之 typedef，用以讀取和執行 `const` 作業。|  
+|[const_reverse_iterator](#const_reverse_iterator)|可以在 `const` 中讀取任何 `multiset` 項目的雙向迭代器的 typedef。|  
+|[difference_type](#difference_type)|範圍 (介於迭代器所指的項目) 中 `multiset` 的項目數量的帶正負號整數 typedef。|  
+|[iterator](#iterator)|雙向迭代器的 typedef，可以讀取或修改 `multiset` 中的任何項目。|  
+|[key_compare](#key_compare)|函式物件之 typedef，可比較兩個索引鍵以判斷兩個項目在 `multiset` 中的相對順序。|  
+|[key_type](#key_type)|函式物件之 typedef，可比較兩個排序鍵以判斷兩個項目在 `multiset` 中的相對順序。|  
+|[pointer](#pointer)|在 `multiset` 中指向項目的指標之 typedef。|  
+|[reference](#reference)|`multiset` 中預存項目的參考之 typedef。|  
+|[reverse_iterator](#reverse_iterator)|雙向迭代器的 typedef，可以讀取或修改反轉 `multiset` 中的項目。|  
+|[size_type](#size_type)|不帶正負號的整數類型，可以表示 `multiset` 中的項目數。|  
+|[value_compare](#value_compare)|可將兩個項目做為排序鍵進行比較之函式物件的 typedef，以判斷項目在 `multiset` 中的相對順序。|  
+|[value_type](#value_type)|typedef，在做為值的產能上，描述做為 `multiset` 的項目儲存的物件。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[begin](#multiset__begin)|傳回指向 `multiset` 中的第一個項目的迭代器。|  
-|[cbegin](#multiset__cbegin)|傳回常數迭代器，為 `multiset` 中的第一個項目定址。|  
-|[cend](#multiset__cend)|傳回常數迭代器，為 `multiset` 中最後一個項目的下一個位置定址。|  
-|[clear](#multiset__clear)|清除 `multiset` 的所有項目。|  
-|[count](#multiset__count)|傳回 `multiset` 中索引鍵符合指定為參數之索引鍵的項目數目。|  
-|[crbegin](#multiset__crbegin)|傳回常數迭代器，為反轉集合中的第一個項目定址。|  
-|[crend](#multiset__crend)|傳回常數迭代器，為反轉集合中最後一個項目的下一個位置定址。|  
-|[emplace](#multiset__emplace)|將就地建構的項目插入 `multiset` 中。|  
-|[emplace_hint](#multiset__emplace_hint)|將就地建構的項目 (含位置提示) 插入 `multiset` 中。|  
-|[empty](#multiset__empty)|測試 `multiset` 是否為空白。|  
-|[end](#multiset__end)|傳回 `multiset` 中，指向最後一個項目後面的位置之迭代器。|  
-|[equal_range](#multiset__equal_range)|傳回一對迭代器。 配對中第一個迭代器指向 `multiset` 中索引鍵大於指定索引鍵的第一個項目。 配對中第二個迭代器指向 `multiset` 中索引鍵等於或大於指定索引鍵的第一個項目。|  
-|[erase](#multiset__erase)|從指定的位置移除 `multiset` 中的項目或項目範圍，或移除符合指定之索引鍵的項目。|  
-|[find](#multiset__find)|傳回迭代器，指向 `multiset` 中索引鍵等於指定索引鍵的第一個項目的位置。|  
-|[get_allocator](#multiset__get_allocator)|傳回用來建構 `allocator` 的 `multiset` 物件複本。|  
-|[insert](#multiset__insert)|將項目或項目範圍插入至 `multiset`。|  
-|[key_comp](#multiset__key_comp)|提供可比較兩個排序鍵的函式物件，以判斷兩個項目在 `multiset` 中的相對順序。|  
-|[lower_bound](#multiset__lower_bound)|傳回迭代器，指向 `multiset` 中索引鍵等於或大於特定索引鍵的第一個項目。|  
-|[max_size](#multiset__max_size)|傳回 `multiset` 的最大長度。|  
-|[rbegin](#multiset__rbegin)|傳回指向反轉 `multiset` 中的第一個項目的迭代器。|  
-|[rend](#multiset__rend)|傳回反轉 `multiset` 中，指向最後一個項目的下一個位置之迭代器。|  
-|[size](#multiset__size)|傳回 `multiset` 中的項目數目。|  
-|[swap](#multiset__swap)|交換兩個 `multiset` 的項目。|  
-|[upper_bound](#multiset__upper_bound)|傳回迭代器，指向 `multiset` 中索引鍵大於特定索引鍵的第一個項目。|  
-|[value_comp](#multiset__value_comp)|擷取 `multiset` 中用於排序項目值的比較物件之複本。|  
+|[begin](#begin)|傳回指向 `multiset` 中的第一個項目的迭代器。|  
+|[cbegin](#cbegin)|傳回常數迭代器，為 `multiset` 中的第一個項目定址。|  
+|[cend](#cend)|傳回常數迭代器，為 `multiset` 中最後一個項目的下一個位置定址。|  
+|[clear](#clear)|清除 `multiset` 的所有項目。|  
+|[count](#count)|傳回 `multiset` 中索引鍵符合指定為參數之索引鍵的項目數目。|  
+|[crbegin](#crbegin)|傳回常數迭代器，為反轉集合中的第一個項目定址。|  
+|[crend](#crend)|傳回常數迭代器，為反轉集合中最後一個項目的下一個位置定址。|  
+|[emplace](#emplace)|將就地建構的項目插入 `multiset` 中。|  
+|[emplace_hint](#emplace_hint)|將就地建構的項目 (含位置提示) 插入 `multiset` 中。|  
+|[empty](#empty)|測試 `multiset` 是否為空白。|  
+|[end](#end)|傳回 `multiset` 中，指向最後一個項目後面的位置之迭代器。|  
+|[equal_range](#equal_range)|傳回一對迭代器。 配對中第一個迭代器指向 `multiset` 中索引鍵大於指定索引鍵的第一個項目。 配對中第二個迭代器指向 `multiset` 中索引鍵等於或大於指定索引鍵的第一個項目。|  
+|[erase](#erase)|從指定的位置移除 `multiset` 中的項目或項目範圍，或移除符合指定之索引鍵的項目。|  
+|[find](#find)|傳回迭代器，指向 `multiset` 中索引鍵等於指定索引鍵的第一個項目的位置。|  
+|[get_allocator](#get_allocator)|傳回用來建構 `allocator` 的 `multiset` 物件複本。|  
+|[insert](#insert)|將項目或項目範圍插入至 `multiset`。|  
+|[key_comp](#key_comp)|提供可比較兩個排序鍵的函式物件，以判斷兩個項目在 `multiset` 中的相對順序。|  
+|[lower_bound](#lower_bound)|傳回迭代器，指向 `multiset` 中索引鍵等於或大於特定索引鍵的第一個項目。|  
+|[max_size](#max_size)|傳回 `multiset` 的最大長度。|  
+|[rbegin](#rbegin)|傳回指向反轉 `multiset` 中的第一個項目的迭代器。|  
+|[rend](#rend)|傳回反轉 `multiset` 中，指向最後一個項目的下一個位置之迭代器。|  
+|[size](#size)|傳回 `multiset` 中的項目數目。|  
+|[swap](#swap)|交換兩個 `multiset` 的項目。|  
+|[upper_bound](#upper_bound)|傳回迭代器，指向 `multiset` 中索引鍵大於特定索引鍵的第一個項目。|  
+|[value_comp](#value_comp)|擷取 `multiset` 中用於排序項目值的比較物件之複本。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator=](#multiset__operator_eq)|用另一個 `multiset` 的複本取代 `multiset` 的項目。|  
+|[operator=](#op_eq)|用另一個 `multiset` 的複本取代 `multiset` 的項目。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<set>  
   
  **命名空間：** std  
   
-##  <a name="a-namemultisetallocatortypea--multisetallocatortype"></a><a name="multiset__allocator_type"></a>  multiset::allocator_type  
+##  <a name="allocator_type"></a>  multiset::allocator_type  
  一種類型，代表 multiset 物件的配置器類別。  
   
 ```  
@@ -169,9 +208,9 @@ typedef Allocator allocator_type;
  如需有關 `Allocator` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。  
   
 ### <a name="example"></a>範例  
-  如需使用 `allocator_type` 的範例，請參閱 [get_allocator](#multiset__get_allocator) 的範例。  
+  如需使用 `allocator_type` 的範例，請參閱 [get_allocator](#get_allocator) 的範例。  
   
-##  <a name="a-namemultisetbegina--multisetbegin"></a><a name="multiset__begin"></a>  multiset::begin  
+##  <a name="begin"></a>  multiset::begin  
  傳回迭代器，定址對象是 multiset 中的第一個元素。  
   
 ```  
@@ -222,7 +261,7 @@ The first element of ms1 is 1
 The first element of ms1 is now 2  
 ```  
   
-##  <a name="a-namemultisetcbegina--multisetcbegin"></a><a name="multiset__cbegin"></a>  multiset::cbegin  
+##  <a name="cbegin"></a>  multiset::cbegin  
  傳回 `const` 迭代器，為範圍中的第一個項目定址。  
   
 ```  
@@ -245,7 +284,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namemultisetcenda--multisetcend"></a><a name="multiset__cend"></a>  multiset::cend  
+##  <a name="cend"></a>  multiset::cend  
  傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。  
   
 ```  
@@ -258,7 +297,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>備註  
  `cend` 用來測試迭代器是否已超過其範圍結尾。  
   
- 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 且可修改的任何種類 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -270,7 +309,7 @@ auto i2 = Container.cend();
   
  `cend` 所傳回的值不應該取值。  
   
-##  <a name="a-namemultisetcleara--multisetclear"></a><a name="multiset__clear"></a>  multiset::clear  
+##  <a name="clear"></a>  multiset::clear  
  清除 multiset 的所有元素。  
   
 ```  
@@ -307,7 +346,7 @@ The size of the multiset is initially 2.
 The size of the multiset after clearing is 0.  
 ```  
   
-##  <a name="a-namemultisetconstiteratora--multisetconstiterator"></a><a name="multiset__const_iterator"></a>  multiset::const_iterator  
+##  <a name="const_iterator"></a>  multiset::const_iterator  
  一種類型，提供可讀取 multiset 中 **const** 元素的雙向迭代器。  
   
 ```  
@@ -318,9 +357,9 @@ typedef implementation-defined const_iterator;
  類型 `const_iterator` 無法用來修改元素的值。  
   
 ### <a name="example"></a>範例  
-  如需使用 `const_iterator` 的範例，請參閱 [begin](#multiset__begin) 的範例。  
+  如需使用 `const_iterator` 的範例，請參閱 [begin](#begin) 的範例。  
   
-##  <a name="a-namemultisetconstpointera--multisetconstpointer"></a><a name="multiset__const_pointer"></a>  multiset::const_pointer  
+##  <a name="const_pointer"></a>  multiset::const_pointer  
  一種類型，提供 multiset 中 **const** 元素的指標。  
   
 ```  
@@ -330,9 +369,9 @@ typedef typename allocator_type::const_pointer const_pointer;
 ### <a name="remarks"></a>備註  
  類型 `const_pointer` 無法用來修改元素的值。  
   
- 在大多數情況下，應該使用 [iterator](#multiset__iterator) 來存取 multiset 物件中的元素。  
+ 在大多數情況下，應該使用 [iterator](#iterator) 來存取 multiset 物件中的元素。  
   
-##  <a name="a-namemultisetconstreferencea--multisetconstreference"></a><a name="multiset__const_reference"></a>  multiset::const_reference  
+##  <a name="const_reference"></a>  multiset::const_reference  
  一種類型，提供對儲存在 multiset 中以供讀取和執行 **const** 運算之 **const** 元素的參考。  
   
 ```  
@@ -372,7 +411,7 @@ int main( )
 The first element in the multiset is 10.  
 ```  
   
-##  <a name="a-namemultisetconstreverseiteratora--multisetconstreverseiterator"></a><a name="multiset__const_reverse_iterator"></a>  multiset::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  multiset::const_reverse_iterator  
  一種類型，提供可讀取 multiset 中任何 **const** 元素的雙向迭代器。  
   
 ```  
@@ -383,9 +422,9 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
  類型 `const_reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 multiset。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `const_reverse_iterator` 的範例，請參閱 [rend](#multiset__rend) 的範例。  
+  如需如何宣告及使用 `const_reverse_iterator` 的範例，請參閱 [rend](#rend) 的範例。  
   
-##  <a name="a-namemultisetcounta--multisetcount"></a><a name="multiset__count"></a>  multiset::count  
+##  <a name="count"></a>  multiset::count  
  傳回 multiset 中索引鍵符合參數指定之索引鍵的項目數。  
   
 ```  
@@ -393,7 +432,7 @@ size_type count(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要從 multiset 中比對之項目的索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -445,7 +484,7 @@ The number of elements in ms1 with a sort key of 2 is: 1.
 The number of elements in ms1 with a sort key of 3 is: 0.  
 ```  
   
-##  <a name="a-namemultisetcrbegina--multisetcrbegin"></a><a name="multiset__crbegin"></a>  multiset::crbegin  
+##  <a name="crbegin"></a>  multiset::crbegin  
  傳回 const 迭代器，用於定址反轉 Multiset 中的第一個項目。  
   
 ```  
@@ -490,7 +529,7 @@ int main( )
 The first element in the reversed multiset is 30.  
 ```  
   
-##  <a name="a-namemultisetcrenda--multisetcrend"></a><a name="multiset__crend"></a>  multiset::crend  
+##  <a name="crend"></a>  multiset::crend  
  傳回常數迭代器，定址對象是反轉 multiset 中最後一個元素後面的位置。  
   
 ```  
@@ -501,7 +540,7 @@ const_reverse_iterator crend() const;
  常數反轉雙向迭代器，定址對象是反轉 multiset 中最後一個元素後面的位置 (未反轉 multiset 中第一個元素前面的位置)。  
   
 ### <a name="remarks"></a>備註  
- `crend` 是與反轉 multiset 搭配使用，就如同 [end](#multiset__end) 是與 multiset 搭配使用一樣。  
+ `crend` 是與反轉 multiset 搭配使用，就如同 [end](#end) 是與 multiset 搭配使用一樣。  
   
  有 `crend` 的傳回值時，無法修改 multiset 物件。  
   
@@ -533,7 +572,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemultisetdifferencetypea--multisetdifferencetype"></a><a name="multiset__difference_type"></a>  multiset::difference_type  
+##  <a name="difference_type"></a>  multiset::difference_type  
  一種帶正負號的整數類型，可用來代表範圍 (介於迭代器所指的元素之間) 中 multiset 的元素數目。  
   
 ```  
@@ -541,7 +580,7 @@ typedef typename allocator_type::difference_type difference_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type` 通常用來代表迭代器 ` first` 和 ` last` 之間範圍 [ ` first`, ` last`) 內的元素數目，包括 ` first` 所指的元素以及上限到 ` last` 所指元素 (但不包含此元素) 的元素範圍。  
+ `difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type` 通常用來代表迭代器 `first` 和 `last` 之間範圍 [ `first`, `last`) 內的元素數目，包括 `first` 所指的元素以及上限到 `last` 所指元素 (但不包含此元素) 的元素範圍。  
   
  請注意，儘管 `difference_type` 適用於符合輸入迭代器需求的所有迭代器，其中包括可反轉容器 (例如 set) 所支援之雙向迭代器的類別，但只有隨機存取容器 (例如 vector) 所提供的隨機存取迭代器，才支援迭代器之間的減法。  
   
@@ -603,7 +642,7 @@ The number '20' occurs 2 times in multiset ms1.
 The number of elements in the multiset ms1 is: 3.  
 ```  
   
-##  <a name="a-namemultisetemplacea--multisetemplace"></a><a name="multiset__emplace"></a>  multiset::emplace  
+##  <a name="emplace"></a>  multiset::emplace  
  將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。  
   
 ```  
@@ -668,7 +707,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemultisetemplacehinta--multisetemplacehint"></a><a name="multiset__emplace_hint"></a>  multiset::emplace_hint  
+##  <a name="emplace_hint"></a>  multiset::emplace_hint  
  將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。  
   
 ```  
@@ -694,9 +733,9 @@ iterator emplace_hint(
   
  在定位期間，如果擲回例外狀況，則不會修改容器的狀態。  
   
- 如需程式碼範例，請參閱 [set::emplace_hint](../standard-library/set-class.md#set__emplace_hint)。  
+ 如需程式碼範例，請參閱 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)。  
   
-##  <a name="a-namemultisetemptya--multisetempty"></a><a name="multiset__empty"></a>  multiset::empty  
+##  <a name="empty"></a>  multiset::empty  
  測試 multiset 是否是空的。  
   
 ```  
@@ -737,7 +776,7 @@ The multiset ms1 is not empty.
 The multiset ms2 is empty.  
 ```  
   
-##  <a name="a-namemultisetenda--multisetend"></a><a name="multiset__end"></a>  multiset::end  
+##  <a name="end"></a>  multiset::end  
  傳回超出結尾 (past-the-end) 迭代器。  
   
 ```  
@@ -756,9 +795,9 @@ iterator end();
   
  **end** 所傳回的值不應該被取值。  
   
- 如需程式碼範例，請參閱 [multiset::find](#multiset__find)。  
+ 如需程式碼範例，請參閱 [multiset::find](#find)。  
   
-##  <a name="a-namemultisetequalrangea--multisetequalrange"></a><a name="multiset__equal_range"></a>  multiset::equal_range  
+##  <a name="equal_range"></a>  multiset::equal_range  
  傳回一組迭代器，分別指向 multiset 中索引鍵大於指定索引鍵的第一個元素，以及指向 multiset 中索引鍵等於或大於該索引鍵的第一個元素。  
   
 ```  
@@ -768,11 +807,11 @@ pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
- 一組迭代器，其中第一個是索引鍵的 [lower_bound](#multiset__lower_bound)，第二個是索引鍵的 [upper_bound](#multiset__upper_bound)。  
+ 一組迭代器，其中第一個是索引鍵的 [lower_bound](#lower_bound)，第二個是索引鍵的 [upper_bound](#upper_bound)。  
   
  若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之 `pr` 配對的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
   
@@ -834,7 +873,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The multiset ms1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="a-namemultiseterasea--multiseterase"></a><a name="multiset__erase"></a>  multiset::erase  
+##  <a name="erase"></a>  multiset::erase  
  從 multiset 中指定的位置移除某個元素或某個範圍的元素，或移除符合指定索引鍵的元素。  
   
 ```  
@@ -868,9 +907,9 @@ size_type erase(
  針對第三個成員函式，會傳回已從 multiset 移除的元素數目。  
   
 ### <a name="remarks"></a>備註  
- 如需程式碼範例，請參閱 [set::erase](../standard-library/set-class.md#set__erase)。  
+ 如需程式碼範例，請參閱 [set::erase](../standard-library/set-class.md#erase)。  
   
-##  <a name="a-namemultisetfinda--multisetfind"></a><a name="multiset__find"></a>  multiset::find  
+##  <a name="find"></a>  multiset::find  
  傳回迭代器，其表示 multiset 中索引鍵等於指定索引鍵的元素的位置。  
   
 ```  
@@ -953,7 +992,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-namemultisetgetallocatora--multisetgetallocator"></a><a name="multiset__get_allocator"></a>  multiset::get_allocator  
+##  <a name="get_allocator"></a>  multiset::get_allocator  
  傳回一份用來建構 multiset 的配置器物件複本。  
   
 ```  
@@ -1018,7 +1057,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemultisetinserta--multisetinsert"></a><a name="multiset__insert"></a>  multiset::insert  
+##  <a name="insert"></a>  multiset::insert  
  將某個元素或元素範圍插入 multiset 中。  
   
 ```  
@@ -1067,10 +1106,10 @@ IList);
 |參數|描述|  
 |`Val`|要插入至 multiset 的元素值。|  
 |`Where`|要開始搜尋正確的插入點的地方。 (若該點緊接於 `Where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|  
-|`ValTy`|範本參數，可指定 multiset 可用來建構 [value_type](../standard-library/map-class.md#map__value_type) 之元素的引數類型，並將 `Val` 以引數形式完整轉送。|  
+|`ValTy`|範本參數，可指定 multiset 可用來建構 [value_type](../standard-library/map-class.md#value_type) 之元素的引數類型，並將 `Val` 以引數形式完整轉送。|  
 |`First`|要複製之第一個元素的位置。|  
 |`Last`|要複製之最一個元素後方的位置。|  
-|`InputIterator`|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#map__value_type) 物件的類型。|  
+|`InputIterator`|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|  
 |`IList`|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -1083,13 +1122,13 @@ IList);
   
  在只插入一個元素的期間，若擲出例外狀況，則不會修改容器的狀態。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。  
   
- 容器的 [value_type](../standard-library/map-class.md#map__value_type) 是屬於容器的 typedef，而就 set 而言，`multiset<V>::value_type` 是類型 `const V`。  
+ 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而就 set 而言，`multiset<V>::value_type` 是類型 `const V`。  
   
  範圍成員函式 (5) 會將元素值序列插入至 multiset，而 multiset 對應至範圍 `[First, Last)` 中迭代器指定的每個元素；因此不會插入 `Last`。 容器成員函式 `end()` 是指容器中最後一個元素後方的位置；例如，陳述式 `s.insert(v.begin(), v.end());` 會將 `v` 的所有元素插入至 `s`。  
   
  初始設定式清單成員函式 (6) 會使用 [initializer_list](../standard-library/initializer-list.md) 將元素複製到 multiset。  
   
- 針對插入就地建構 (也就是未執行任何複製或移動作業) 的元素，請參閱 [multiset::emplace](#multiset__emplace) 和 [multiset::emplace_hint](#multiset__emplace_hint)。  
+ 針對插入就地建構 (也就是未執行任何複製或移動作業) 的元素，請參閱 [multiset::emplace](#emplace) 和 [multiset::emplace_hint](#emplace_hint)。  
   
 ### <a name="example"></a>範例  
   
@@ -1182,7 +1221,7 @@ int main()
   
 ```  
   
-##  <a name="a-namemultisetiteratora--multisetiterator"></a><a name="multiset__iterator"></a>  multiset::iterator  
+##  <a name="iterator"></a>  multiset::iterator  
  一種類型，提供可讀取 multiset 中任何元素的常數[雙向迭代器](../standard-library/bidirectional-iterator-tag-struct.md)。  
   
 ```  
@@ -1190,9 +1229,9 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#multiset__begin) 的範例。  
+  如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#begin) 的範例。  
   
-##  <a name="a-namemultisetkeycompa--multisetkeycomp"></a><a name="multiset__key_comp"></a>  multiset::key_comp  
+##  <a name="key_comp"></a>  multiset::key_comp  
  擷取一份用來排序 multiset 中索引鍵的比較物件複本。  
   
 ```  
@@ -1211,7 +1250,7 @@ key_compare key_comp() const;
   
  如果 *x* 在排序次序中絕對位於 *y* 的前面，此函式就會傳回 true。  
   
- 請注意，[key_compare](#multiset__key_compare) 和 [value_compare](#multiset__value_compare) 都與範本參數 `Compare` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
+ 請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與範本參數 `Compare` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
   
 ### <a name="example"></a>範例  
   
@@ -1264,7 +1303,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of ms2.  
 ```  
   
-##  <a name="a-namemultisetkeycomparea--multisetkeycompare"></a><a name="multiset__key_compare"></a>  multiset::key_compare  
+##  <a name="key_compare"></a>  multiset::key_compare  
  一種提供函式物件的類型，該函式物件可比較兩個排序鍵來判斷 multiset 中兩個元素的相對順序。  
   
 ```  
@@ -1277,9 +1316,9 @@ typedef Compare key_compare;
  如需有關 `Compare` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `key_compare` 的範例，請參閱 [key_comp](#multiset__key_comp) 的範例。  
+  如需如何宣告及使用 `key_compare` 的範例，請參閱 [key_comp](#key_comp) 的範例。  
   
-##  <a name="a-namemultisetkeytypea--multisetkeytype"></a><a name="multiset__key_type"></a>  multiset::key_type  
+##  <a name="key_type"></a>  multiset::key_type  
  一種提供函式物件的類型，該函式物件可比較排序鍵來判斷 multiset 中兩個元素的相對順序。  
   
 ```  
@@ -1292,9 +1331,9 @@ typedef Key key_type;
  如需有關 `Key` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `key_type` 的範例，請參閱 [value_type](#multiset__value_type) 的範例。  
+  如需如何宣告及使用 `key_type` 的範例，請參閱 [value_type](#value_type) 的範例。  
   
-##  <a name="a-namemultisetlowerbounda--multisetlowerbound"></a><a name="multiset__lower_bound"></a>  multiset::lower_bound  
+##  <a name="lower_bound"></a>  multiset::lower_bound  
  傳回迭代器，指向 multiset 中索引鍵等於或大於指定索引鍵的第一個元素。  
   
 ```  
@@ -1304,7 +1343,7 @@ iterator lower_bound(const Key& key);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1359,7 +1398,7 @@ The multiset ms1 doesn't have an element with a key of 40.
 The element of ms1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="a-namemultisetmaxsizea--multisetmaxsize"></a><a name="multiset__max_size"></a>  multiset::max_size  
+##  <a name="max_size"></a>  multiset::max_size  
  傳回 multiset 的最大長度。  
   
 ```  
@@ -1389,7 +1428,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemultisetmultiseta--multisetmultiset"></a><a name="multiset__multiset"></a>  multiset::multiset  
+##  <a name="multiset"></a>  multiset::multiset  
  建構一個空的 multiset，或是某個其他 multiset 之全部或部分複本的 multiset。  
   
 ```  
@@ -1453,11 +1492,11 @@ multiset (
 |`IList`|從中複製項目的 initializer_list。|  
   
 ### <a name="remarks"></a>備註  
- 所有建構函式都會儲存一種配置器物件，此物件可管理 multiset 的記憶體儲存，且之後藉由呼叫 [get_allocator](#multiset__get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
+ 所有建構函式都會儲存一種配置器物件，此物件可管理 multiset 的記憶體儲存，且之後藉由呼叫 [get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
   
  所有建構函式都會將其 multiset 初始化。  
   
- 所有建構函式都會儲存一個 Compare 類型的函式物件，此物件可用來在 multiset 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#multiset__key_comp) 即可傳回此物件。  
+ 所有建構函式都會儲存一個 Compare 類型的函式物件，此物件可用來在 multiset 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#key_comp) 即可傳回此物件。  
   
  前三個建構函式會指定空的初始 multiset，第二個建構函式會指定建立元素順序時所要使用的比較函式類型 ( `Comp`)，而第三個建構函式則會明確指定所要使用的配置器類型 ( `Al`)。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。  
   
@@ -1570,7 +1609,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-namemultisetoperatoreqa--multisetoperator"></a><a name="multiset__operator_eq"></a>  multiset::operator=  
+##  <a name="op_eq"></a>  multiset::operator=  
  將此 `multiset` 的元素以另一個 `multiset` 的元素取代。  
   
 ```  
@@ -1584,10 +1623,10 @@ multiset& operator=(multiset&& right);
 |||  
 |-|-|  
 |參數|說明|  
-|` right`|要從中複製或移除元素的 `multiset`。|  
+|`right`|要從中複製或移除元素的 `multiset`。|  
   
 ### <a name="remarks"></a>備註  
- `operator=` 會依據所使用的參考類型 (lvalue 或 rvalue)，將 ` right` 中的元素複製或移到這個 `multiset`。 在這個位於 `operator=` 之前 `multiset` 中的所有元素都會被捨棄。  
+ `operator=` 會依據所使用的參考類型 (lvalue 或 rvalue)，將 `right` 中的元素複製或移到這個 `multiset`。 在這個位於 `operator=` 之前 `multiset` 中的所有元素都會被捨棄。  
   
 ### <a name="example"></a>範例  
   
@@ -1626,7 +1665,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-namemultisetpointera--multisetpointer"></a><a name="multiset__pointer"></a>  multiset::pointer  
+##  <a name="pointer"></a>  multiset::pointer  
  一種類型，提供 multiset 中元素的指標。  
   
 ```  
@@ -1636,9 +1675,9 @@ typedef typename allocator_type::pointer pointer;
 ### <a name="remarks"></a>備註  
  類型 **pointer** 可用來修改元素的值。  
   
- 在大多數情況下，應該使用 [iterator](#multiset__iterator) 來存取 multiset 物件中的元素。  
+ 在大多數情況下，應該使用 [iterator](#iterator) 來存取 multiset 物件中的元素。  
   
-##  <a name="a-namemultisetrbegina--multisetrbegin"></a><a name="multiset__rbegin"></a>  multiset::rbegin  
+##  <a name="rbegin"></a>  multiset::rbegin  
  傳回迭代器，用於定址反轉 Multiset 中的第一個項目。  
   
 ```  
@@ -1712,7 +1751,7 @@ The reversed multiset is: 30 20 10
 After the erasure, the first element in the reversed multiset is 20.  
 ```  
   
-##  <a name="a-namemultisetreferencea--multisetreference"></a><a name="multiset__reference"></a>  multiset::reference  
+##  <a name="reference"></a>  multiset::reference  
  一種類型，提供對儲存在 multiset 中元素的參考。  
   
 ```  
@@ -1747,7 +1786,7 @@ int main( )
 The first element in the multiset is 10.  
 ```  
   
-##  <a name="a-namemultisetrenda--multisetrend"></a><a name="multiset__rend"></a>  multiset::rend  
+##  <a name="rend"></a>  multiset::rend  
  傳回迭代器，定址對象是反轉 multiset 中最後一個元素後面的位置。  
   
 ```  
@@ -1760,7 +1799,7 @@ reverse_iterator rend();
  反轉雙向迭代器，定址對象是反轉 multiset 中最後一個元素後面的位置 (未反轉 multiset 中第一個元素前面的位置)。  
   
 ### <a name="remarks"></a>備註  
- `rend` 是與反轉 multiset 搭配使用，就如同 [end](#multiset__end) 是與 multiset 搭配使用一樣。  
+ `rend` 是與反轉 multiset 搭配使用，就如同 [end](#end) 是與 multiset 搭配使用一樣。  
   
  如果將 `rend` 的傳回值指派給 `const_reverse_iterator`，便無法修改 multiset 物件。 如果將 `rend` 的傳回值指派給 `reverse_iterator`，則可以修改 multiset 物件。  
   
@@ -1817,7 +1856,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemultisetreverseiteratora--multisetreverseiterator"></a><a name="multiset__reverse_iterator"></a>  multiset::reverse_iterator  
+##  <a name="reverse_iterator"></a>  multiset::reverse_iterator  
  一種類型，提供可讀取或修改反轉 multiset 中元素的雙向迭代器。  
   
 ```  
@@ -1828,9 +1867,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
  類型 `reverse_iterator` 是用來反向逐一查看 multiset。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `reverse_iterator` 的範例，請參閱 [rbegin](#multiset__rbegin) 的範例。  
+  如需如何宣告及使用 `reverse_iterator` 的範例，請參閱 [rbegin](#rbegin) 的範例。  
   
-##  <a name="a-namemultisetsizea--multisetsize"></a><a name="multiset__size"></a>  multiset::size  
+##  <a name="size"></a>  multiset::size  
  傳回 multiset 中的元素數目。  
   
 ```  
@@ -1869,7 +1908,7 @@ The multiset length is 1.
 The multiset length is now 2.  
 ```  
   
-##  <a name="a-namemultisetsizetypea--multisetsizetype"></a><a name="multiset__size_type"></a>  multiset::size_type  
+##  <a name="size_type"></a>  multiset::size_type  
  一種不帶正負號的整數類型，可代表 multiset 中的元素數目。  
   
 ```  
@@ -1877,9 +1916,9 @@ typedef typename allocator_type::size_type size_type;
 ```  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#multiset__size) 的範例。  
+  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例。  
   
-##  <a name="a-namemultisetswapa--multisetswap"></a><a name="multiset__swap"></a>  multiset::swap  
+##  <a name="swap"></a>  multiset::swap  
  交換兩個 multiset 的元素。  
   
 ```  
@@ -1888,7 +1927,7 @@ void swap(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  提供要與目標 multiset 交換之元素的引數 multiset。  
   
 ### <a name="remarks"></a>備註  
@@ -1944,7 +1983,7 @@ After swapping with ms2, list ms1 is: 100 200.
 After swapping with ms3, list ms1 is: 300.  
 ```  
   
-##  <a name="a-namemultisetupperbounda--multisetupperbound"></a><a name="multiset__upper_bound"></a>  multiset::upper_bound  
+##  <a name="upper_bound"></a>  multiset::upper_bound  
  傳回迭代器，指向 multiset 中索引鍵大於指定索引鍵的第一個元素。  
   
 ```  
@@ -1954,7 +1993,7 @@ iterator upper_bound(const Key& key);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2009,7 +2048,7 @@ The first element of ms1 with a key greater than
 that of the initial element of ms1 is: 20.  
 ```  
   
-##  <a name="a-namemultisetvaluecompa--multisetvaluecomp"></a><a name="multiset__value_comp"></a>  multiset::value_comp  
+##  <a name="value_comp"></a>  multiset::value_comp  
  擷取一份用來排序 multiset 中元素值的比較物件複本。  
   
 ```  
@@ -2028,7 +2067,7 @@ value_compare value_comp() const;
   
  如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 true。  
   
- 請注意，[key_compare](#multiset__key_compare) 和 [value_compare](#multiset__value_compare) 都與範本參數 `Compare` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
+ 請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與範本參數 `Compare` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
   
 ### <a name="example"></a>範例  
   
@@ -2081,7 +2120,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of ms1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of ms2.  
 ```  
   
-##  <a name="a-namemultisetvaluecomparea--multisetvaluecompare"></a><a name="multiset__value_compare"></a>  multiset::value_compare  
+##  <a name="value_compare"></a>  multiset::value_compare  
  一種提供函式物件的類型，該函式物件可比較兩個排序鍵來判斷它們在 multiset 中的相對順序。  
   
 ```  
@@ -2091,14 +2130,14 @@ typedef key_compare value_compare;
 ### <a name="remarks"></a>備註  
  `value_compare` 與範本參數 `Compare` 同義。  
   
- 請注意，[key_compare](#multiset__key_compare) 和 **value_compare** 都與範本參數 `Compare` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
+ 請注意，[key_compare](#key_compare) 和 **value_compare** 都與範本參數 `Compare` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
   
  如需有關 `Compare` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `value_compare` 的範例，請參閱 [value_comp](#multiset__value_comp) 的範例。  
+  如需如何宣告及使用 `value_compare` 的範例，請參閱 [value_comp](#value_comp) 的範例。  
   
-##  <a name="a-namemultisetvaluetypea--multisetvaluetype"></a><a name="multiset__value_type"></a>  multiset::value_type  
+##  <a name="value_type"></a>  multiset::value_type  
  一種類型，描述以 multiset 的元素形式儲存且功能為值的物件。  
   
 ```  
@@ -2108,7 +2147,7 @@ typedef Key value_type;
 ### <a name="remarks"></a>備註  
  `value_type` 與範本參數 `Key` 同義。  
   
- 請注意，[key_type](#multiset__key_type) 和 `value_type` 都與範本參數 **Key** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
+ 請注意，[key_type](#key_type) 和 `value_type` 都與範本參數 **Key** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
   
  如需有關 `Key` 的詳細資訊，請參閱該主題的＜備註＞一節。  
   

@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ca10c4b759f9dafbfe4ffd3d6ac4a4b8c0d5b1dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4704adafeefcb9acff9bdb41428075f34439cc39
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
@@ -66,13 +67,13 @@ ms.lasthandoff: 02/24/2017
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|告知記憶體回收，指示的位址是前往配置儲存體且可連接。|  
 |[default_delete](../standard-library/memory-functions.md#default_delete)|刪除使用 `operator new` 配置的物件。 適合搭配 `unique_ptr` 使用。|  
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|動態轉型為 `shared_ptr`。|  
-|[get_deleter](../standard-library/memory-functions.md#get_deleter_function)|從 `shared_ptr` 取得刪除者。|  
+|[get_deleter](../standard-library/memory-functions.md#get_deleter)|從 `shared_ptr` 取得刪除者。|  
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|傳回任何記憶體回收行程所假設之指標安全的類型。|  
 |[get_temporary_buffer](../standard-library/memory-functions.md#get_temporary_buffer)|為項目序列 (不超過指定的項目數目) 配置暫時儲存區。|  
 |[make_shared](../standard-library/memory-functions.md#make_shared)|建立並傳回 `shared_ptr`，它會指向使用預設配置器從零個或多個引數建構的配置物件。|  
 |[make_unique](../standard-library/memory-functions.md#make_unique)|建立並傳回 [unique_ptr](../standard-library/unique-ptr-class.md)0，它會指向從零個或多個引數建構的配置物件。|  
 |[owner_less](../standard-library/memory-functions.md#owner_less)|允許按擁有權混合比較共用指標和弱式指標。|  
-|[pointer_safety](../standard-library/memory-enums.md#pointer_safety_enumeration)|`get_pointer_safety` 所有可能的傳回值的列舉。|  
+|[pointer_safety](../standard-library/memory-enums.md#pointer_safety)|`get_pointer_safety` 所有可能的傳回值的列舉。|  
 |[return_temporary_buffer](../standard-library/memory-functions.md#return_temporary_buffer)|將使用 `get_temporary_buffer` 樣板函式配置的暫存記憶體取消配置。|  
 |[static_pointer_cast](../standard-library/memory-functions.md#static_pointer_cast)|靜態轉型至 `shared_ptr`。|  
 |[swap](../standard-library/memory-functions.md#swap)|交換兩個 `shared_ptr` 或 `weak_ptr` 物件。|  
@@ -87,13 +88,13 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/memory-operators.md#operator_neq)|測試指定類別的配置器物件之間是否不等。|  
-|[operator==](../standard-library/memory-operators.md#operator_eq_eq)|測試指定類別的配置器物件之間是否相等。|  
-|[operator>=](../standard-library/memory-operators.md#operator_gt__eq)|測試指定之類別的一個配置器物件是否大於或等於第二個配置器物件。|  
-|[operator<](../standard-library/memory-operators.md#operator_lt_)|測試指定之類別的一個物件是否小於第二個物件。|  
-|[operator\<=](../standard-library/memory-operators.md#operator_lt__eq)|測試指定之類別的一個物件是否小於或等於第二個物件。|  
-|[operator>](../standard-library/memory-operators.md#operator_gt_)|測試指定之類別的一個物件是否大於第二個物件。|  
-|[operator<<](../standard-library/memory-operators.md#operator_lt__lt_)|`shared_ptr` 插入者。|  
+|[operator!=](../standard-library/memory-operators.md#op_neq)|測試指定類別的配置器物件之間是否不等。|  
+|[operator==](../standard-library/memory-operators.md#op_eq_eq)|測試指定類別的配置器物件之間是否相等。|  
+|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|測試指定之類別的一個配置器物件是否大於或等於第二個配置器物件。|  
+|[operator<](../standard-library/memory-operators.md#op_lt)|測試指定之類別的一個物件是否小於第二個物件。|  
+|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|測試指定之類別的一個物件是否小於或等於第二個物件。|  
+|[operator>](../standard-library/memory-operators.md#op_gt)|測試指定之類別的一個物件是否大於第二個物件。|  
+|[operator<<](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` 插入者。|  
   
 ### <a name="classes"></a>類別  
   

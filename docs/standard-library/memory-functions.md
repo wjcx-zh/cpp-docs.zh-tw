@@ -7,61 +7,63 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::addressof
 - memory/std::addressof
-- std::align
 - memory/std::align
-- std::allocate_shared
 - memory/std::allocate_shared
-- std::const_pointer_cast
 - memory/std::const_pointer_cast
-- std::declare_no_pointers
 - memory/std::declare_no_pointers
-- std::declare_reachable
 - memory/std::declare_reachable
-- std::default_delete
 - memory/std::default_delete
-- std::dynamic_pointer_cast
 - memory/std::dynamic_pointer_cast
-- std::get_deleter_function
-- memory/std::get_deleter_function
-- std::get_pointer_safety
+- memory/std::get_deleter
 - memory/std::get_pointer_safety
-- std::get_temporary_buffer
 - memory/std::get_temporary_buffer
-- std::make_shared
 - memory/std::make_shared
-- std::make_unique
 - memory/std::make_unique
-- std::owner_less
 - memory/std::owner_less
-- std::return_temporary_buffer
 - memory/std::return_temporary_buffer
-- std::static_pointer_cast
 - memory/std::static_pointer_cast
-- std::swap
 - memory/std::swap
-- std::undeclare_no_pointers
 - memory/std::undeclare_no_pointers
-- std::undeclare_reachable
 - memory/std::undeclare_reachable
-- std::uninitialized_copy
 - memory/std::uninitialized_copy
-- std::uninitialized_copy_n
 - memory/std::uninitialized_copy_n
-- std::uninitialized_fill
 - memory/std::uninitialized_fill
-- std::uninitialized_fill_n
 - memory/std::uninitialized_fill_n
+- memory/std::addressof
+- memory/std::align
+- memory/std::allocate_shared
+- memory/std::const_pointer_cast
+- memory/std::declare_no_pointers
+- memory/std::declare_reachable
+- memory/std::default_delete
+- memory/std::dynamic_pointer_cast
+- memory/std::get_deleter
+- memory/std::get_pointer_safety
+- memory/std::get_temporary_buffer
+- memory/std::make_shared
+- memory/std::make_unique
+- memory/std::owner_less
+- memory/std::return_temporary_buffer
+- memory/std::static_pointer_cast
+- memory/std::undeclare_no_pointers
+- memory/std::undeclare_reachable
+- memory/std::uninitialized_copy
+- memory/std::uninitialized_copy_n
+- memory/std::uninitialized_fill
+- memory/std::uninitialized_fill_n
+dev_langs:
+- C++
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bab363d16555ca66ce0b57aad4ac8f3d9aaad21b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 4d6d010f7f910a89565ef8cd7c07ddbb2f054759
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
@@ -69,14 +71,14 @@ ms.lasthandoff: 02/24/2017
 |-|-|-|  
 |[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|  
 |[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|  
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter 函式](#get_deleter_function)|  
+|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|  
 |[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|  
 |[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|  
 |[static_pointer_cast](#static_pointer_cast)|[swap (C++ 標準程式庫)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|  
 |[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|  
 |[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|  
   
-##  <a name="a-nameaddressofa--addressof"></a><a name="addressof"></a>  addressof  
+##  <a name="addressof"></a>  addressof  
  取得物件真正的位址。  
   
 ```  
@@ -93,7 +95,7 @@ T* addressof(T& Val);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="a-namealigna--align"></a><a name="align"></a>  align  
+##  <a name="align"></a>  align  
  將指定大小的儲存體 (由特定對齊規格所對齊) 放入指定儲存體的第一個可能位址。  
   
 ```  
@@ -150,7 +152,7 @@ while (alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.   
 ```  
   
-##  <a name="a-nameallocateshareda--allocateshared"></a><a name="allocate_shared"></a>  allocate_shared  
+##  <a name="allocate_shared"></a>  allocate_shared  
  建立 `shared_ptr`，指向透過使用指定的配置器為特定類型配置及建構的物件。 傳回 `shared_ptr`。  
   
 ```  
@@ -169,7 +171,7 @@ allocate_shared(Allocator Alloc, Types&&... Args);
 ### <a name="remarks"></a>備註  
  此函式會建立 `shared_ptr``<Type>` 物件，這是 `Alloc` 所配置和建構之 `Type(``Args``...)` 的指標。  
   
-##  <a name="a-nameconstpointercasta--constpointercast"></a><a name="const_pointer_cast"></a>  const_pointer_cast  
+##  <a name="const_pointer_cast"></a>  const_pointer_cast  
  常數轉型成 shared_ptr。  
   
 ```  
@@ -217,7 +219,7 @@ int main()
 sp1 == 3  
 ```  
   
-##  <a name="a-namedeclarenopointersa--declarenopointers"></a><a name="declare_no_pointers"></a>  declare_no_pointers  
+##  <a name="declare_no_pointers"></a>  declare_no_pointers  
  通知記憶體回收行程，指出基底位址指標和區塊大小所定義之記憶體區塊中的字元未包含任何可追蹤的指標。  
   
 ```  
@@ -230,13 +232,13 @@ void declare_no_pointers(
   
 |參數|說明|  
 |---------------|-----------------|  
-|` ptr`|已不再包含可追蹤指標的第一個位元位址。|  
-|`_Size`|起始位置在 ` ptr` 之未包含任何可追蹤指標的區塊大小。|  
+|`ptr`|已不再包含可追蹤指標的第一個位元位址。|  
+|`_Size`|起始位置在 `ptr` 之未包含任何可追蹤指標的區塊大小。|  
   
 ### <a name="remarks"></a>備註  
- 此函式會通知任何`garbage collector`，指出位址範圍 `[`` ptr``,` ` ptr` `+` `_Size``)` 已不再包含可追蹤的指標。 (除非設定為 `reachable`，否則不得對任何指向已配置儲存體的指標進行取值)。  
+ 此函式會通知任何`garbage collector`的位址範圍`[ ptr, ptr + _Size)`不再包含可追蹤的指標。 (除非設定為 `reachable`，否則不得對任何指向已配置儲存體的指標進行取值)。  
   
-##  <a name="a-namedeclarereachablea--declarereachable"></a><a name="declare_reachable"></a>  declare_reachable  
+##  <a name="declare_reachable"></a>  declare_reachable  
  告知記憶體回收，指示的位址是前往配置儲存體且可連接。  
   
 ```  
@@ -244,13 +246,13 @@ void declare_reachable(void* ptr);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` ptr`  
+ `ptr`  
  指向可存取、已配置之有效儲存區域的指標。  
   
 ### <a name="remarks"></a>備註  
- 如果 ` ptr` 不是 Null，此函式便會通知任何記憶體回收行程，指出 ` ptr` 此後即可供存取 (指向有效的已配置儲存體)。  
+ 如果 `ptr` 不是 Null，此函式便會通知任何記憶體回收行程，指出 `ptr` 此後即可供存取 (指向有效的已配置儲存體)。  
   
-##  <a name="a-namedefaultdeletea--defaultdelete"></a><a name="default_delete"></a>  default_delete  
+##  <a name="default_delete"></a>  default_delete  
  刪除使用 `operator new` 配置的物件。 適合搭配 `unique_ptr` 使用。  
 ```  
 struct default_delete {
@@ -269,7 +271,7 @@ struct default_delete {
 ### <a name="remarks"></a>備註  
  此範本類別描述 `deleter`，它會刪除與 `operator new` 一起配置的純量物件，適合與範本類別 `unique_ptr` 一起使用。 它也具有明確的特製化 `default_delete<Type[]>`。  
   
-##  <a name="a-namedynamicpointercasta--dynamicpointercast"></a><a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
+##  <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast  
  動態轉換成 shared_ptr。  
   
 ```  
@@ -331,7 +333,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-namegetdeleterfunctiona--getdeleter-function"></a><a name="get_deleter_function"></a>  get_deleter 函式  
+##  <a name="get_deleter"></a>get_deleter
  從 shared_ptr 取得刪除者。  
   
 ```  
@@ -397,7 +399,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true  
 ```  
   
-##  <a name="a-namegetpointersafetya--getpointersafety"></a><a name="get_pointer_safety"></a>  get_pointer_safety  
+##  <a name="get_pointer_safety"></a>  get_pointer_safety  
  傳回任何記憶體回收行程所假設之指標安全的類型。  
   
 ```  
@@ -407,7 +409,7 @@ pointer_safety get_pointer_safety();
 ### <a name="remarks"></a>備註  
  此函式會傳回任何自動`garbage collector`所採用的指標安全類型。  
   
-##  <a name="a-namegettemporarybuffera--gettemporarybuffer"></a><a name="get_temporary_buffer"></a>  get_temporary_buffer  
+##  <a name="get_temporary_buffer"></a>  get_temporary_buffer  
  為項目序列 (不超過指定的項目數目) 配置暫時儲存區。  
   
 ```  
@@ -416,7 +418,7 @@ pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` count`  
+ `count`  
  所要求的元素數目上限，將針對這些元素配置記憶體。  
   
 ### <a name="return-value"></a>傳回值  
@@ -460,7 +462,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.  
 ```  
   
-##  <a name="a-namemakeshareda--makeshared"></a><a name="make_shared"></a>  make_shared  
+##  <a name="make_shared"></a>  make_shared  
  建立並傳回 `shared_ptr`，它會指向使用預設配置器從零個或多個引數建構的配置物件。 配置並建構指定類別的物件和 `shared_ptr` 來管理共用的物件擁有權，並傳回 `shared_ptr`。  
   
 ```  
@@ -554,7 +556,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3  
 ```  
   
-##  <a name="a-namemakeuniquea--makeunique"></a><a name="make_unique"></a>  make_unique  
+##  <a name="make_unique"></a>  make_unique  
  建立並傳回指向指定類型之物件的 [unique_ptr](../standard-library/unique-ptr-class.md)，該類型是使用指定的引數所建構。  
   
 ```scr  
@@ -608,7 +610,7 @@ typename enable_if<extent<T>::value != 0,
   
   當您看到與 `unique_ptr` 有關的錯誤 C2280 時，通常都是因為您嘗試叫用它的複製建構函式，這是一個被刪除的函式。  
   
-##  <a name="a-nameownerlessa--ownerless"></a><a name="owner_less"></a>  owner_less  
+##  <a name="owner_less"></a>  owner_less  
  允許按擁有權混合比較共用指標和弱式指標。 如果成員函式 `owner_before` 將 left 參數排序在 right 參數之前，便會傳回 `true`。  
   
 ```  
@@ -652,13 +654,13 @@ struct owner_less<weak_ptr<Type>>
  `_left`  
  共用指標或弱式指標。  
   
- ` right`  
+ `right`  
  共用指標或弱式指標。  
   
 ### <a name="remarks"></a>備註  
- 這些範本類型會將其所有成員運算子都定義成傳回 ` left``.owner_before(`` right``)`。  
+ 這些範本類型會將其所有成員運算子都定義成傳回 `left``.owner_before(``right``)`。  
   
-##  <a name="a-namereturntemporarybuffera--returntemporarybuffer"></a><a name="return_temporary_buffer"></a>  return_temporary_buffer  
+##  <a name="return_temporary_buffer"></a>  return_temporary_buffer  
  將使用 `get_temporary_buffer` 樣板函式配置的暫存記憶體取消配置。  
   
 ```  
@@ -711,7 +713,7 @@ The number of elements that the allocated memory
  could store is given by: resultPair.second = 7.  
 ```  
   
-##  <a name="a-namestaticpointercasta--staticpointercast"></a><a name="static_pointer_cast"></a>  static_pointer_cast  
+##  <a name="static_pointer_cast"></a>  static_pointer_cast  
  靜態轉型至 shared_ptr。  
   
 ```  
@@ -769,7 +771,7 @@ int main()
 sp1->val == 3  
 ```  
   
-##  <a name="a-nameswapa--swap-c-standard-library"></a><a name="swap"></a>  swap (C++ 標準程式庫)  
+##  <a name="swap"></a>  swap (C++ 標準程式庫)  
  交換兩個 shared_ptr 或 weak_ptr 物件。  
   
 ```  
@@ -850,7 +852,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-nameundeclarenopointersa--undeclarenopointers"></a><a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
+##  <a name="undeclare_no_pointers"></a>  undeclare_no_pointers  
  通知記憶體回收行程，基底位址指標和區塊大小定義的記憶體區塊中的字元現在可能會包含可追蹤的指標。  
   
 ```  
@@ -860,9 +862,9 @@ void undeclare_no_pointers(
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式會通知任何`garbage collector`，指出位址範圍 `[`` ptr``,` ` ptr` `+` `_Size``)` 現在可能包含 `traceable pointers`。  
+ 此函式會通知任何`garbage collector`的位址範圍`[ptr, ptr + _Size)`現在可能會包含`traceable pointers`。  
   
-##  <a name="a-nameundeclarereachablea--undeclarereachable"></a><a name="undeclare_reachable"></a>  undeclare_reachable  
+##  <a name="undeclare_reachable"></a>  undeclare_reachable  
  通知 `garbage_collector`，指定的記憶體位置無法連接。  
   
 ```  
@@ -874,12 +876,12 @@ Type *undeclare_reachable(Type* ptr);
   
 |參數|說明|  
 |---------------|-----------------|  
-|` ptr`|指向要宣告為不可存取之記憶體位置的指標。|  
+|`ptr`|指向要宣告為不可存取之記憶體位置的指標。|  
   
 ### <a name="remarks"></a>備註  
- 如果 ` ptr` 不是 `null`，此函式就會通知任何`garbage collector`，指出 ` ptr` 此後 `reachable`。 它會傳回等於 ` ptr` 的 `safely derived` 指標。  
+ 如果 `ptr` 不是 `null`，此函式就會通知任何`garbage collector`，指出 `ptr` 此後 `reachable`。 它會傳回等於 `ptr` 的 `safely derived` 指標。  
   
-##  <a name="a-nameuninitializedcopya--uninitializedcopy"></a><a name="uninitialized_copy"></a>  uninitialized_copy  
+##  <a name="uninitialized_copy"></a>  uninitialized_copy  
  從指定的來源範圍將物件複製到未初始化的目的範圍內。  
   
 ```  
@@ -888,17 +890,17 @@ ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, Forw
 ```  
   
 ### <a name="parameters"></a>參數  
- ` first`  
+ `first`  
  輸入迭代器，為來源範圍中的第一個項目定址。  
   
- ` last`  
+ `last`  
  輸入迭代器，為來源範圍中的最後一個項目定址。  
   
- ` dest`  
+ `dest`  
  正向迭代器，為目的範圍中的第一個項目定址。  
   
 ### <a name="return-value"></a>傳回值  
- 正向迭代器，除非來源範圍是空的且迭代器定址 *first*，否則定址對象會是目的範圍後的第一個位置。  
+ 定址目的範圍，超過第一個位置，除非來源範圍是空的正向迭代器和迭代器定址 * first.*  
   
 ### <a name="remarks"></a>備註  
  這個演算法允許記憶體配置與物件建構分開處理。  
@@ -980,7 +982,7 @@ int main()
 }
 ```  
   
-##  <a name="a-nameuninitializedcopyna--uninitializedcopyn"></a><a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
+##  <a name="uninitialized_copy_n"></a>  uninitialized_copy_n  
  從輸入迭代器建立所指定項目數的複本。 複本會放在正向迭代器中。  
   
 ```  
@@ -992,32 +994,30 @@ ForwardIterator uninitialized_copy_n(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` first`  
+ `first`  
  輸入迭代器，參考要複製的物件。  
   
- ` count`  
+ `count`  
  帶正負號或不帶正負號的整數類型，指定複製物件的次數。  
   
- ` dest`  
+ `dest`  
  正向迭代器，參考放置新複本的位置。  
   
 ### <a name="return-value"></a>傳回值  
- 正向迭代器，定址目的之外的第一個位置。 如果來源範圍是空的，迭代器的定址對象就會是 ` first`。  
+ 正向迭代器，定址目的之外的第一個位置。 如果來源範圍是空的迭代器位址`first`。  
   
 ### <a name="remarks"></a>備註  
  樣板函式有效地執行下列：  
   
- `for (; 0 < count; -- count)`  
-  
- `new ((void *)&*` ` dest` `++)`  
-  
- `iterator_traits<InputIterator>::value_type(*` ` first` `++);`  
-  
- `return dest;`  
+```cpp  
+    for (; 0 < count; --count)  
+        new ((void *)&* dest++) iterator_traits<InputIterator>::value_type(*first++);  
+    return dest;  
+```  
   
  除非程式碼擲回例外狀況。 在這種情況下，會終結所有建構的物件，並重新擲回例外狀況。  
   
-##  <a name="a-nameuninitializedfilla--uninitializedfill"></a><a name="uninitialized_fill"></a>  uninitialized_fill  
+##  <a name="uninitialized_fill"></a>  uninitialized_fill  
  將所指定值的物件複製到未初始化的目的範圍內。  
   
 ```  
@@ -1026,13 +1026,13 @@ void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type&
 ```  
   
 ### <a name="parameters"></a>參數  
- ` first`  
+ `first`  
  正向迭代器，定址對象是要起始之目的範圍中的第一個元素。  
   
- ` last`  
+ `last`  
  正向迭代器，定址對象是要起始之目的範圍中的最後一個元素。  
   
- ` val`  
+ `val`  
  用來初始化目的範圍的值。  
   
 ### <a name="remarks"></a>備註  
@@ -1086,7 +1086,7 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25   
 ```  
   
-##  <a name="a-nameuninitializedfillna--uninitializedfilln"></a><a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
+##  <a name="uninitialized_fill_n"></a>  uninitialized_fill_n  
  將所指定值的物件複製到未初始化目的範圍的指定項目數內。  
   
 ```  
@@ -1095,13 +1095,13 @@ void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` first`  
+ `first`  
  正向迭代器，為目的範圍中要起始的第一個項目定址。  
   
- ` count`  
+ `count`  
  要初始化的項目數目。  
   
- ` val`  
+ `val`  
  用來初始化目的範圍的值。  
   
 ### <a name="remarks"></a>備註  

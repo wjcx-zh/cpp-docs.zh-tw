@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - geometric_distribution
-- std::geometric_distribution
 - random/std::geometric_distribution
-- std::geometric_distribution::reset
 - random/std::geometric_distribution::reset
-- std::geometric_distribution::p
 - random/std::geometric_distribution::p
-- std::geometric_distribution::param
 - random/std::geometric_distribution::param
-- std::geometric_distribution::min
 - random/std::geometric_distribution::min
-- std::geometric_distribution::max
 - random/std::geometric_distribution::max
-- std::geometric_distribution::operator()
 - random/std::geometric_distribution::operator()
-- std::geometric_distribution::param_type
 - random/std::geometric_distribution::param_type
-- std::geometric_distribution::param_type::p
 - random/std::geometric_distribution::param_type::p
-- std::geometric_distribution::param_type::operator==
 - random/std::geometric_distribution::param_type::operator==
-- std::geometric_distribution::param_type::operator!=
 - random/std::geometric_distribution::param_type::operator!=
+- random/std::geometric_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -56,10 +46,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: 51952b8649f73120b6a017ae9b64e3e01f42f70e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 210d7e859c3022e7f70f953fdbe2da3ad60c5f0a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 類別
@@ -105,8 +96,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[geometric_distribution::geometric_distribution](#geometric_distribution__geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|  
-|`geometric_distribution::operator()`||[geometric_distribution::param_type](#geometric_distribution__param_type)|  
+|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|  
+|`geometric_distribution::operator()`||[param_type](#param_type)|  
   
 屬性函式 `p()` 會傳回儲存的分佈參數 `p` 的值。  
   
@@ -235,7 +226,7 @@ Distribution for 100 samples:
   
 **命名空間：** std  
   
-##  <a name="a-namegeometricdistributiongeometricdistributiona--geometricdistributiongeometricdistribution"></a><a name="geometric_distribution__geometric_distribution"></a>  geometric_distribution::geometric_distribution  
+##  <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution  
 建構分佈。  
   
 ```  
@@ -257,7 +248,7 @@ explicit geometric_distribution(const param_type& parm);
   
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
   
-##  <a name="a-namegeometricdistributionparamtypea--geometricdistributionparamtype"></a><a name="geometric_distribution__param_type"></a>  geometric_distribution::param_type  
+##  <a name="param_type"></a>  geometric_distribution::param_type  
 儲存分佈的參數。  
   
 ```  

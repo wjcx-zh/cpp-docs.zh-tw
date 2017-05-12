@@ -49,10 +49,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 170e385a5741ced5612c060a7a537a05b4668432
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0bc689cdf4a76412afd44c88357321cdc0778b40
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="feupdateenv"></a>feupdateenv
@@ -66,12 +67,12 @@ int feupdateenv(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  `penv`  
- `fenv_t` 物件的指標，包含 [fegetenv](http://msdn.microsoft.com/Library/61df848d-6ba8-4c6e-be35-216436fe7736) 或 [feholdexcept](http://msdn.microsoft.com/Library/c286ace3-ec39-482a-be8b-f998d31003d9) 呼叫設定的浮點環境。 您也可以使用 FE_DFL_ENV 巨集指定預設啟動浮點環境。  
+ `fenv_t` 物件的指標，包含 [fegetenv](fegetenv1.md) 或 [feholdexcept](feholdexcept2.md) 呼叫設定的浮點環境。 您也可以使用 FE_DFL_ENV 巨集指定預設啟動浮點環境。  
   
 ## <a name="return-value"></a>傳回值  
- 如果順利完成所有動作，則傳回 0。        否則，傳回非零值。  
+ 如果順利完成所有動作，則傳回 0。 否則，傳回非零值。  
   
 ## <a name="remarks"></a>備註  
  `feupdateenv` 函式會執行多個動作。 首先，它會將目前引發的浮點例外狀況狀態旗標儲存在自動儲存體中。 然後，它會從儲存在由 `penv` 指向之 `fenv_t` 物件的值中，設定目前的浮點環境。 如果 `penv` 不是 FE_DFL_ENV 或不指向有效的 `fenv_t` 物件，則不定義後續行為。 最後，`feupdateenv` 引發儲存在本機的浮點例外狀況。  

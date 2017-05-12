@@ -34,13 +34,13 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: e4c9409ef12c72b5e763a1cd6c563ed25d34b327
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2e0d9af0a16a009041c88e4ec0da0b92ef8eeb3d
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2817"></a>編譯器錯誤 C2817
 'operator delete' 的傳回類型必須是 'void'  
   
-多載[delete 運算子](../../standard-library/new-operators.md#operator_delete)函式無法傳回值。
+多載[運算子 delete](../../standard-library/new-operators.md#op_delete)函式無法傳回值。
 

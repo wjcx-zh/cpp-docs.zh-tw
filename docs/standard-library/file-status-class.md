@@ -35,14 +35,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: 954da8df11c2382887717baa61070acc0b6070b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1095fbeeceb33fd9dedf0ad1217eab1a052f5ba1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="filestatus-class"></a>file_status 類別
-包裝 [file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type) 和檔案的 [perms](../standard-library/filesystem-enumerations.md#filesystem__perms)。  
+包裝 [file_type](../standard-library/filesystem-enumerations.md#file_type) 和檔案的 [perms](../standard-library/filesystem-enumerations.md#perms)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -82,25 +83,25 @@ void type(file_type ftype) noexcept
   
  取得或設定 file_type。  
   
-## <a name="permissions"></a>permissions  
+## <a name="permissions"></a>權限  
   
-``cpp  
+```cpp  
 perms permissions() const noexcept  
 void permissions(perms mask) noexcept   
 ```  
   
- Gets or sets the file permissions.  
+ 取得或設定檔案權限。  
   
- Use the setter to make a file readonly or remove the readonly attribute.  
+ 使用 setter 將檔案設成唯讀或移除唯讀屬性。  
   
-## Requirements  
- **Header:** \<filesystem>  
+## <a name="requirements"></a>需求  
+ **標頭︰** \<filesystem >  
   
- **Namespace:** std::experimental::filesystem, std::experimental::filesystem::v1  
+ **命名空間︰** std::experimental::filesystem、 std::experimental::filesystem::v1  
   
-## See Also  
- [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
- [path Class](../standard-library/path-class.md)   
+## <a name="see-also"></a>另請參閱  
+ [標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)   
+ [path 類別](../standard-library/path-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)
 
 

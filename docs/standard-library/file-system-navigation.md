@@ -30,14 +30,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: f376ad55945cf9f23579406ae73866f93c17008b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="file-system-navigation"></a>檔案系統巡覽
-\<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 例如，這表示 `is_fifo(const path&)` 在 Windows 上一律會傳回 `false` 。 截至 Visual Studio 2015 RTM 為止，此標頭所依據的技術規格草案，尚未獲選為 C++17 標準。 您可以在從 `std::experimental::filesystem::v1` `std::experimental::filesystem` 命名空間中找到其成員。  
+\<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 例如，這表示 `is_fifo(const path&)` 在 Windows 上一律會傳回 `false` 。   
   
 ## <a name="overview"></a>概觀  
 使用 \<filesystem> API 進行下列工作：  
@@ -175,7 +176,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 若要執行此程式碼，請將其貼到完整範例上方的 `main` 之前，並取消註解 main 中呼叫程式碼的那一行。  
   
 ### <a name="converting-between-path-and-string-types"></a>在路徑和字串類型之間轉換  
-`path` 物件隱含可以轉換成 `std::wstring` 或 `std::string`的能力。 這表示您可以將路徑傳遞至 [wofstream::open](../standard-library/basic-ofstream-class.md#basic_ofstream__open) 這類函式，如此範例中所示：  
+`path` 物件隱含可以轉換成 `std::wstring` 或 `std::string`的能力。 這表示您可以將路徑傳遞至 [wofstream::open](../standard-library/basic-ofstream-class.md#open) 這類函式，如此範例中所示：  
   
 ```cpp  
 // filesystem_path_conversion.cpp  

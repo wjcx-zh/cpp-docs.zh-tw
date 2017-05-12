@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 40fe628e045d8aa8930560ba8ab88a9e203022e3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 78ec6b782a5dd0c78e3e2724fd06258d17fdbe67
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
@@ -91,7 +92,7 @@ int _mbtowc_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 **mbchar** 不是 **NULL**，且 `mbchar` 所指向的物件會形成有效的多位元組字元，`mbtowc` 會傳回多位元組字元的長度 (以位元組為單位)。 如果 `mbchar` 為 **NULL**，或是它所指向的物件是寬字元的 Null 字元 (L'\0')，此函式會傳回 0。 如果 `mbchar` 所指向的物件未在前 *count* 個字元中形成有效的多位元組字元，則會傳回 -1。  
+ 如果 **mbchar** 不是 **NULL**，且 `mbchar` 所指向的物件會形成有效的多位元組字元，`mbtowc` 會傳回多位元組字元的長度 (以位元組為單位)。 如果 `mbchar` 為 **NULL**，或是它所指向的物件是寬字元的 Null 字元 (L'\0')，此函式會傳回 0。 如果物件的`mbchar`指向不會構成有效的多位元組字元內第一個*計數*字元，則傳回-1。  
   
 ## <a name="remarks"></a>備註  
  如果 `mbchar` 不是 **NULL**，`mbtowc` 函式會將 `mbchar` 所指向的 *count* 個或更少個位元組，轉換成對應的寬字元。 如果 *wchar* 不是 **NULL**，`mbtowc` 會將產生的寬字元儲存在 *wchar*。 `mbtowc` 不會檢查超過 `MB_CUR_MAX` 的位元組。 `mbtowc` 會針對與地區設定相關的行為使用目前的地區設定；`_mbtowc_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
@@ -166,9 +167,6 @@ Attempt to convert when target is NULL
 Attempt to convert a NULL pointer to a wide character:  
   Bytes converted: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   

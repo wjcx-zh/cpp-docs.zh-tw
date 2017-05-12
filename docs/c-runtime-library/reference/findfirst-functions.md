@@ -118,10 +118,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7d0417e6533124cc49e909687d7bc232523c302
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: baf853db4fe1a23ee726423a052604a0db8764c9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
@@ -188,7 +189,7 @@ intptr_t _wfindfirst64i32(
  檔案資訊緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，`_findfirst` 會傳回唯一搜尋控制代碼以識別符合 `filespec` 規格的檔案或檔案群組，這可用於後續 [_findnext](../../c-runtime-library/reference/findnext-functions.md) 或 `_findclose` 呼叫。 否則，`_findfirst` 會傳回 -1，並將 `errno` 設為下列其中一個值。  
+ 如果成功，`_findfirst` 會傳回唯一搜尋控制代碼以識別符合 `filespec` 規格的檔案或檔案群組，這可用於後續 [_findnext](../../c-runtime-library/reference/findnext-functions.md) 或 `_findclose` 呼叫。 否則，`_findfirst`傳回-1，並設定`errno`至下列值之一。  
   
  `EINVAL`  
  參數無效：`filespec` 或 `fileinfo` 是 `NULL`。 或者，作業系統傳回未預期的錯誤。  
@@ -260,10 +261,7 @@ intptr_t _wfindfirst64i32(
 |`_wfindfirst32i64`|\<io.h> 或 \<wchar.h>|  
 |`_wfindfirst64i32`|\<io.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::IO::DirectoryInfo::GetFiles](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.getfiles.aspx)  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統呼叫](../../c-runtime-library/system-calls.md)   

@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a156bcbefa4d3636a2a4b1978378a815a8d0fed9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 528634e98da7f57ee915124d38f20277495efcdb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istrstream-class"></a>istrstream 類別
@@ -60,21 +61,21 @@ class istrstream : public istream
   
 |||  
 |-|-|  
-|[istrstream](#istrstream__istrstream)|建構類型 `istrstream` 的物件。|  
+|[istrstream](#istrstream)|建構類型 `istrstream` 的物件。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[rdbuf](#istrstream__rdbuf)|將指標傳回至資料流的相關 `strstreambuf` 物件。|  
-|[str](#istrstream__str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze)，然後傳回指向受控制序列開頭的指標。|  
+|[rdbuf](#rdbuf)|將指標傳回至資料流的相關 `strstreambuf` 物件。|  
+|[str](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後傳回指向受控制序列開頭的指標。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<strstream>  
   
  **命名空間：** std  
   
-##  <a name="istrstream__istrstream"></a>  istrstream::istrstream  
+##  <a name="istrstream"></a>  istrstream::istrstream  
  建構類型 `istrstream` 的物件。  
   
 ```
@@ -103,7 +104,7 @@ istrstream(
 ### <a name="remarks"></a>備註  
  所有建構函式都會呼叫 [istream](../standard-library/istream-typedefs.md#istream)( **sb**) 來將基底類別初始化，其中 **sb** 是 [strstreambuf](../standard-library/strstreambuf-class.md) 類別的預存物件。 前兩個建構函式還會一併呼叫 `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ) 來將 **sb** 初始化。 其餘兩個建構函式會改為呼叫 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。  
   
-##  <a name="istrstream__rdbuf"></a>  istrstream::rdbuf  
+##  <a name="rdbuf"></a>  istrstream::rdbuf  
  傳回指向資料流相關 strstreambuf 物件的指標。  
   
 ```
@@ -117,10 +118,10 @@ strstreambuf *rdbuf() const
  成員函式會傳回預存資料流緩衝區 (屬於 [strstreambuf](../standard-library/strstreambuf-class.md) 的 pointer 類型) 的位址。  
   
 ### <a name="example"></a>範例  
-  如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#strstreambuf__pcount)。  
+  如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。  
   
-##  <a name="istrstream__str"></a>  istrstream::str  
- 呼叫 [freeze](../standard-library/strstreambuf-class.md#strstreambuf__freeze)，然後傳回指向受控制序列開頭的指標。  
+##  <a name="str"></a>  istrstream::str  
+ 呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後傳回指向受控制序列開頭的指標。  
   
 ```
 char *str();
@@ -130,10 +131,10 @@ char *str();
  指向受控制序列開頭的指標。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會傳回 [rdbuf](#istrstream__rdbuf) -> [str](../standard-library/strstreambuf-class.md#strstreambuf__str)。  
+ 成員函式會傳回 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)。  
   
 ### <a name="example"></a>範例  
-  如需使用 **str** 的範例，請參閱 [strstream::str](../standard-library/strstreambuf-class.md#strstreambuf__str)。  
+  如需使用 **str** 的範例，請參閱 [strstream::str](../standard-library/strstreambuf-class.md#str)。  
   
 ## <a name="see-also"></a>另請參閱  
  [istream](../standard-library/istream-typedefs.md#istream)   

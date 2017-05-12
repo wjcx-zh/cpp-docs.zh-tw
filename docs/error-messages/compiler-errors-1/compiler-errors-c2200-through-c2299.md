@@ -28,7 +28,6 @@ f1_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -54,7 +53,6 @@ helpviewer_keywords:
 - C2265
 - C2269
 - C2278
-- C2280
 - C2281
 - C2282
 - C2288
@@ -82,9 +80,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8e3f009def24f09cbc8b373a81ea63ed6bd922ed
-ms.lasthandoff: 04/24/2017
+ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
+ms.openlocfilehash: f47a6fe23a8a0bf18f9c5c4399162d836667cab6
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="compiler-errors-c2200-through-c2299"></a>編譯器錯誤 C2200 到 C2299
@@ -177,7 +175,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2277](compiler-error-c2277.md)|'*函式*': 無法取得此成員函式的位址|  
 |編譯器錯誤 C2278|已過時。|  
 |[編譯器錯誤 C2279](compiler-error-c2279.md)|例外狀況規格不能出現在 typedef 宣告中|  
-|編譯器錯誤 C2280|'*類別*::*函式*': 嘗試參考已刪除的函式|  
+|[編譯器錯誤 C2280](compiler-error-c2280.md)|'*類別*::*函式*': 嘗試參考已刪除的函式|  
 |編譯器錯誤 C2281|'*類別*::*函式*': 只能在第一個宣告上刪除函式|  
 |編譯器錯誤 C2282|'*function1*'無法覆寫'*function2*'|  
 |[編譯器錯誤 C2283](compiler-error-c2283.md)|'*識別碼*': 純規範或抽象覆寫規範不可使用未命名的類別結構|  

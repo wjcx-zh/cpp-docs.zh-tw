@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 4c83adc4b7365518275d5d54ac927012abc29657
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e2ebbb8eb6e6f250376b0ef2b43dae261a642d69
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  使用已編譯的程式碼中**/clr**，此標頭會封鎖。  
+>  使用編譯的程式碼中**/clr**，此標頭會遭到封鎖。  
   
  「非同步提供者」會儲存函式呼叫的結果。 「非同步傳回物件」可用來擷取函式呼叫的結果。 「相關非同步狀態」可提供非同步提供者與一或多個非同步傳回物件之間的通訊。  
   
@@ -89,21 +90,21 @@ ms.lasthandoff: 02/24/2017
   
 ### <a name="functions"></a>函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[async 函式](../standard-library/future-functions.md#async_function)|代表非同步提供者。|  
-|[future_category 函式](../standard-library/future-functions.md#future_category_function)|傳回對 `error_category` 物件的參考，此物件會描述 `future` 物件之相關錯誤的特性。|  
-|[make_error_code 函式](../standard-library/future-functions.md#make_error_code_function)|建立具有 `error_category` 物件的 `error_code`，該物件會描述 `future` 錯誤的特性。|  
-|[make_error_condition 函式](../standard-library/future-functions.md#make_error_condition_function)|建立具有 `error_category` 物件的 `error_condition`，該物件會描述 `future` 錯誤的特性。|  
-|[swap 函式](../standard-library/future-functions.md#swap_function)|將一個 `promise` 物件的「相關非同步狀態」與另一個物件的該狀態交換。|  
+|[async](../standard-library/future-functions.md#async)|代表非同步提供者。|  
+|[future_category](../standard-library/future-functions.md#future_category)|傳回對 `error_category` 物件的參考，此物件會描述 `future` 物件之相關錯誤的特性。|  
+|[make_error_code](../standard-library/future-functions.md#make_error_code)|建立具有 `error_category` 物件的 `error_code`，該物件會描述 `future` 錯誤的特性。|  
+|[make_error_condition](../standard-library/future-functions.md#make_error_condition)|建立具有 `error_category` 物件的 `error_condition`，該物件會描述 `future` 錯誤的特性。|  
+|[swap](../standard-library/future-functions.md#swap)|將一個 `promise` 物件的「相關非同步狀態」與另一個物件的該狀態交換。|  
   
 ### <a name="enumerations"></a>列舉  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[future_errc 列舉](../standard-library/future-enums.md#future_errc_enumeration)|為 `future_error` 類別所回報的錯誤提供符號名稱。|  
-|[future_status 列舉](../standard-library/future-enums.md#future_status_enumeration)|為計時的 wait 函式可傳回的原因提供符號名稱。|  
-|[launch 列舉](../standard-library/future-enums.md#launch_enumeration)|代表一種位元遮罩類型，描述範本函式 `async` 可能的模式。|  
+|[future_errc](../standard-library/future-enums.md#future_errc)|為 `future_error` 類別所回報的錯誤提供符號名稱。|  
+|[future_status](../standard-library/future-enums.md#future_status)|為計時的 wait 函式可傳回的原因提供符號名稱。|  
+|[啟動](../standard-library/future-enums.md#launch)|代表一種位元遮罩類型，描述範本函式 `async` 可能的模式。|  
   
 ## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

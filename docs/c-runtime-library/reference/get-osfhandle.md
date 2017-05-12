@@ -53,10 +53,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2e96f911e6784744eb539f6ce2b1961102d9869d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 314f57a38cdabb4257624550f6686075a5b61697
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
@@ -75,7 +76,7 @@ intptr_t _get_osfhandle(
  現有的檔案描述元。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `fd` 有效，則為作業系統檔案控制代碼。 否則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則此函式會傳回 `INVALID_HANDLE_VALUE` (-1)，並將 `errno` 設為 `EBADF`，表示無效的檔案控制代碼。  
+ 如果 `fd` 有效，則為作業系統檔案控制代碼。 否則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則此函數會傳回`INVALID_HANDLE_VALUE`(-1)，並設定`errno`至`EBADF`，表示檔案控制代碼無效。  
   
 ## <a name="remarks"></a>備註  
  若要關閉以 `_get_osfhandle` 開啟的檔案，請呼叫 `_close`。 呼叫 `_close` 也會關閉基礎控制代碼，因此不必在原始控制代碼上呼叫 Win32 函式 `CloseHandle`。  
@@ -86,10 +87,7 @@ intptr_t _get_osfhandle(
 |-------------|---------------------|  
 |`_get_osfhandle`|\<io.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   

@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d5f2d015ecc2f027712bc81f1ea538f88e130662
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d54444dcd6f0b22527dc2362cfdee5f2b1c33b60
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getch-getwch"></a>_getch、_getwch
@@ -79,7 +80,7 @@ wint_t _getwch( void );
  傳回讀取的字元。 不會傳回錯誤。  
   
 ## <a name="remarks"></a>備註  
- `_getch` 和 `_getwch` 函式從主控台讀取單一字元，且不回應該字元。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。  
+ `_getch`和`_getwch`函式從主控台讀取為單一字元，而不回應的字元。 這些函式都不可以用來讀取 CTRL+C。 在讀取功能鍵或方向鍵時，每個函式必須呼叫兩次；第一次呼叫會傳回 0 或 0xE0，而第二次呼叫會傳回實際的按鍵碼。  
   
  這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getch_nolock、_getwch_nolock](../../c-runtime-library/reference/getch-nolock-getwch-nolock.md)。  
   
@@ -100,7 +101,7 @@ wint_t _getwch( void );
   
 ## <a name="example"></a>範例  
   
-```  
+```C  
 // crt_getch.c  
 // compile with: /c  
 // This program reads characters from  
@@ -126,13 +127,13 @@ int main( void )
 }  
 ```  
   
+```Input  
+abcdefy
+```
+  
 ```Output  
-  
-abcdeyType 'Y' when finished typing keys: Y  
+Type 'Y' when finished typing keys: Y  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 對等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   

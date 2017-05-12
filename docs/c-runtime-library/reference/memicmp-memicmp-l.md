@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e7547d6ff0e62e8bc4c449d55c5f06f1c9349092
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 72cdb770716181ee5ac6b93b94d36fcd49bab7dd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp、_memicmp_l
@@ -152,9 +153,6 @@ int main( void )
 Compare 'Those Who Will Not Learn from' to 'THOSE WHO WILL NOT LEARN FROM'  
 First is equal to second.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   

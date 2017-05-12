@@ -1,59 +1,76 @@
 ---
 title: "_mkdir、_wmkdir | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wmkdir"
-  - "_mkdir"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-filesystem-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_mkdir"
-  - "tmkdir"
-  - "_tmkdir"
-  - "wmkdir"
-  - "_wmkdir"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mkdir 函式"
-  - "_tmkdir 函式"
-  - "_wmkdir 函式"
-  - "目錄 [C++], 建立"
-  - "資料夾 [C++], 建立"
-  - "mkdir 函式"
-  - "tmkdir 函式"
-  - "wmkdir 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wmkdir
+- _mkdir
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-filesystem-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _mkdir
+- tmkdir
+- _tmkdir
+- wmkdir
+- _wmkdir
+dev_langs:
+- C++
+helpviewer_keywords:
+- _wmkdir function
+- folders [C++], creating
+- wmkdir function
+- directories [C++], creating
+- mkdir function
+- tmkdir function
+- _mkdir function
+- _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# _mkdir、_wmkdir
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8352612a254b0abec8f632151246f5a32f39121a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="mkdir-wmkdir"></a>_mkdir、_wmkdir
 建立新目錄。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -65,45 +82,45 @@ int _wmkdir(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `dirname`  
  新目錄的路徑。  
   
-## 傳回值  
- 如果新目錄建立，這些函式都會傳回值 0。  在錯誤，則函式會傳回– 1 並加以設定 `errno` 。  
+## <a name="return-value"></a>傳回值  
+ 如果已建立新目錄，所有這些函式都會傳回值 0。 在錯誤的函式會傳回-1 並將設定`errno`，如下所示。  
   
  `EEXIST`  
- 因為 `dirname` 是現有的檔案、目錄或裝置的名稱，目錄未建立。  
+ 因為 `dirname` 是現有檔案、目錄或裝置的名稱，所以不會建立目錄。  
   
  `ENOENT`  
- 找不到路徑 。  
+ 找不到路徑。  
   
- 如需更多關於這些和其他回傳碼的資訊，請參閱 [\_doserrno 、 errno 、 \_sys\_errlist 、和 \_sys\_nerr \(\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr\)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
+ 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `_mkdir` 函式會以指定的 *dirname 的*新目錄。`_mkdir` 只能建立每個呼叫新目錄，則 `dirname` 只最後元件可以將新的目錄。  `_mkdir` 不會轉譯路徑分隔符號。  在 Windows NT，反斜線 \(\\\) 或正斜線 \(\/\) 是字串的有效路徑分隔符號在執行階段常式。  
+## <a name="remarks"></a>備註  
+ `_mkdir` 函式會使用指定的 *dirname* 建立新目錄。 每次呼叫 `_mkdir` 只能建立一個新目錄，因此只有 `dirname` 的最後一個元件可以命名新目錄。 `_mkdir` 不會轉譯路徑分隔符號。 在 Windows NT 中，反斜線 (\\) 和正斜線 (/) 都是執行階段常式中字元字串的有效路徑分隔符號。  
   
- `_wmkdir` 是 `_mkdir` 的寬字元版本。 `_wmkdir` 的 `dirname` 引數是寬字元字串。  `_wmkdir` 和 `_mkdir` 其餘行為相同。  
+ `_wmkdir` 是寬字元版本的 `_mkdir`；`dirname` 的 `_wmkdir` 引數是寬字元字串。 否則，`_wmkdir` 和 `_mkdir` 的行為即會相同。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|Tchar.h 常式|未定義 \_UNICODE and \_MBCS|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|------------------------------|----------------|-------------------|  
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmkdir`|`_mkdir`|`_mkdir`|`_wmkdir`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_mkdir`|\<direct.h\>|  
-|`_wmkdir`|\<direct.h\>  或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_mkdir`|\<direct.h>|  
+|`_wmkdir`|\<direct.h> 或 \<wchar.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_makedir.c  
@@ -128,7 +145,7 @@ int main( void )
 }  
 ```  
   
-## 範例輸出  
+## <a name="sample-output"></a>範例輸出  
   
 ```  
 Directory '\testtmp' was successfully created  
@@ -144,13 +161,7 @@ Directory '\testtmp' was successfully created
 Directory '\testtmp' was successfully removed  
 ```  
   
-## .NET Framework 對等用法  
-  
--   [System::IO::Directory::CreateDirectory](https://msdn.microsoft.com/en-us/library/system.io.directory.createdirectory.aspx)  
-  
--   [System::IO::DirectoryInfo::CreateSubdirectory](https://msdn.microsoft.com/en-us/library/system.io.directoryinfo.createsubdirectory.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [目錄控制](../../c-runtime-library/directory-control.md)   
- [\_chdir、\_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [\_rmdir、\_wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)
+ [_chdir、_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
+ [_rmdir、_wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)

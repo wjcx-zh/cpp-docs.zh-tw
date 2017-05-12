@@ -10,96 +10,94 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - unordered_map
-- std::unordered_map
 - unordered_map/std::unordered_map
-- std::unordered_map::allocator_type
 - unordered_map/std::unordered_map::allocator_type
-- std::unordered_map::const_iterator
 - unordered_map/std::unordered_map::const_iterator
-- std::unordered_map::const_local_iterator
 - unordered_map/std::unordered_map::const_local_iterator
-- std::unordered_map::const_pointer
 - unordered_map/std::unordered_map::const_pointer
-- std::unordered_map::const_reference
 - unordered_map/std::unordered_map::const_reference
-- std::unordered_map::difference_type
 - unordered_map/std::unordered_map::difference_type
-- std::unordered_map::hasher
 - unordered_map/std::unordered_map::hasher
-- std::unordered_map::iterator
 - unordered_map/std::unordered_map::iterator
-- std::unordered_map::key_equal
 - unordered_map/std::unordered_map::key_equal
-- std::unordered_map::key_type
 - unordered_map/std::unordered_map::key_type
-- std::unordered_map::local_iterator
 - unordered_map/std::unordered_map::local_iterator
-- std::unordered_map::mapped_type
 - unordered_map/std::unordered_map::mapped_type
-- std::unordered_map::pointer
 - unordered_map/std::unordered_map::pointer
-- std::unordered_map::reference
 - unordered_map/std::unordered_map::reference
-- std::unordered_map::size_type
 - unordered_map/std::unordered_map::size_type
-- std::unordered_map::value_type
 - unordered_map/std::unordered_map::value_type
-- std::unordered_map::at
 - unordered_map/std::unordered_map::at
-- std::unordered_map::begin
 - unordered_map/std::unordered_map::begin
-- std::unordered_map::bucket
 - unordered_map/std::unordered_map::bucket
-- std::unordered_map::bucket_count
 - unordered_map/std::unordered_map::bucket_count
-- std::unordered_map::bucket_size
 - unordered_map/std::unordered_map::bucket_size
-- std::unordered_map::cbegin
 - unordered_map/std::unordered_map::cbegin
-- std::unordered_map::cend
 - unordered_map/std::unordered_map::cend
-- std::unordered_map::clear
 - unordered_map/std::unordered_map::clear
-- std::unordered_map::count
 - unordered_map/std::unordered_map::count
-- std::unordered_map::emplace
 - unordered_map/std::unordered_map::emplace
-- std::unordered_map::emplace_hint
 - unordered_map/std::unordered_map::emplace_hint
-- std::unordered_map::empty
 - unordered_map/std::unordered_map::empty
-- std::unordered_map::end
 - unordered_map/std::unordered_map::end
-- std::unordered_map::equal_range
 - unordered_map/std::unordered_map::equal_range
-- std::unordered_map::erase
 - unordered_map/std::unordered_map::erase
-- std::unordered_map::find
 - unordered_map/std::unordered_map::find
-- std::unordered_map::get_allocator
 - unordered_map/std::unordered_map::get_allocator
-- std::unordered_map::hash_function
-- unordered_map/std::unordered_map::hash_function
-- std::unordered_map::insert
+- unordered_map/std::unordered_map::hash
 - unordered_map/std::unordered_map::insert
-- std::unordered_map::key_eq
 - unordered_map/std::unordered_map::key_eq
-- std::unordered_map::load_factor
 - unordered_map/std::unordered_map::load_factor
-- std::unordered_map::max_bucket_count
 - unordered_map/std::unordered_map::max_bucket_count
-- std::unordered_map::max_load_factor
 - unordered_map/std::unordered_map::max_load_factor
-- std::unordered_map::max_size
 - unordered_map/std::unordered_map::max_size
-- std::unordered_map::rehash
 - unordered_map/std::unordered_map::rehash
-- std::unordered_map::size
 - unordered_map/std::unordered_map::size
-- std::unordered_map::swap
 - unordered_map/std::unordered_map::swap
-- std::unordered_map::unordered_map
 - unordered_map/std::unordered_map::unordered_map
+- unordered_map/std::unordered_map::allocator_type
+- unordered_map/std::unordered_map::const_iterator
+- unordered_map/std::unordered_map::const_local_iterator
+- unordered_map/std::unordered_map::const_pointer
+- unordered_map/std::unordered_map::const_reference
+- unordered_map/std::unordered_map::difference_type
+- unordered_map/std::unordered_map::hasher
+- unordered_map/std::unordered_map::iterator
+- unordered_map/std::unordered_map::key_equal
+- unordered_map/std::unordered_map::key_type
+- unordered_map/std::unordered_map::local_iterator
+- unordered_map/std::unordered_map::mapped_type
+- unordered_map/std::unordered_map::pointer
+- unordered_map/std::unordered_map::reference
+- unordered_map/std::unordered_map::size_type
+- unordered_map/std::unordered_map::value_type
+- unordered_map/std::unordered_map::at
+- unordered_map/std::unordered_map::begin
+- unordered_map/std::unordered_map::bucket
+- unordered_map/std::unordered_map::bucket_count
+- unordered_map/std::unordered_map::bucket_size
+- unordered_map/std::unordered_map::cbegin
+- unordered_map/std::unordered_map::cend
+- unordered_map/std::unordered_map::clear
+- unordered_map/std::unordered_map::count
+- unordered_map/std::unordered_map::emplace
+- unordered_map/std::unordered_map::emplace_hint
+- unordered_map/std::unordered_map::empty
+- unordered_map/std::unordered_map::end
+- unordered_map/std::unordered_map::equal_range
+- unordered_map/std::unordered_map::erase
+- unordered_map/std::unordered_map::find
+- unordered_map/std::unordered_map::get_allocator
+- unordered_map/std::unordered_map::hash_function
+- unordered_map/std::unordered_map::insert
+- unordered_map/std::unordered_map::key_eq
+- unordered_map/std::unordered_map::load_factor
+- unordered_map/std::unordered_map::max_bucket_count
+- unordered_map/std::unordered_map::max_load_factor
+- unordered_map/std::unordered_map::max_size
+- unordered_map/std::unordered_map::rehash
+- unordered_map/std::unordered_map::size
+- unordered_map/std::unordered_map::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -123,10 +121,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 82ef90b457ea875cc9237ad4aae73202c13ad4ea
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8e32440470dd576757e631ec7c74971dc5338a6c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="unorderedmap-class"></a>unordered_map 類別
@@ -159,76 +158,76 @@ class unordered_map;
 |||  
 |-|-|  
 |類型定義|說明|  
-|[unordered_map::allocator_type](#unordered_map__allocator_type)|管理儲存體的配置器類型。|  
-|[unordered_map::const_iterator](#unordered_map__const_iterator)|用於受控制序列的常數迭代器類型。|  
-|[unordered_map::const_local_iterator](#unordered_map__const_local_iterator)|用於受控制序列的常數 Bucket 迭代器類型。|  
-|[unordered_map::const_pointer](#unordered_map__const_pointer)|項目的常數指標類型。|  
-|[unordered_map::const_reference](#unordered_map__const_reference)|項目的常數參考類型。|  
-|[unordered_map::difference_type](#unordered_map__difference_type)|兩個項目之間帶正負號距離的類型。|  
-|[unordered_map::hasher](#unordered_map__hasher)|雜湊函式的類型。|  
-|[unordered_map::iterator](#unordered_map__iterator)|受控制序列之迭代器的類型。|  
-|[unordered_map::key_equal](#unordered_map__key_equal)|比較函式的類型。|  
-|[unordered_map::key_type](#unordered_map__key_type)|排序索引鍵的類型。|  
-|[unordered_map::local_iterator](#unordered_map__local_iterator)|用於受控制序列的 Bucket 迭代器類型。|  
-|[unordered_map::mapped_type](#unordered_map__mapped_type)|與每個索引鍵關聯的對應值類型。|  
-|[unordered_map::pointer](#unordered_map__pointer)|項目的指標類型。|  
-|[unordered_map::reference](#unordered_map__reference)|項目的參考類型。|  
-|[unordered_map::size_type](#unordered_map__size_type)|兩個項目之間不帶正負號距離的類型。|  
-|[unordered_map::value_type](#unordered_map__value_type)|元素的類型。|  
+|[allocator_type](#allocator_type)|管理儲存體的配置器類型。|  
+|[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
+|[const_local_iterator](#const_local_iterator)|用於受控制序列的常數 Bucket 迭代器類型。|  
+|[const_pointer](#const_pointer)|項目的常數指標類型。|  
+|[const_reference](#const_reference)|項目的常數參考類型。|  
+|[difference_type](#difference_type)|兩個項目之間帶正負號距離的類型。|  
+|[hasher](#hasher)|雜湊函式的類型。|  
+|[iterator](#iterator)|受控制序列之迭代器的類型。|  
+|[key_equal](#key_equal)|比較函式的類型。|  
+|[key_type](#key_type)|排序索引鍵的類型。|  
+|[local_iterator](#local_iterator)|用於受控制序列的 Bucket 迭代器類型。|  
+|[mapped_type](#mapped_type)|與每個索引鍵關聯的對應值類型。|  
+|[pointer](#pointer)|項目的指標類型。|  
+|[reference](#reference)|項目的參考類型。|  
+|[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|  
+|[value_type](#value_type)|元素的類型。|  
   
 |||  
 |-|-|  
 |成員函式|說明|  
-|[unordered_map::at](#unordered_map__at)|尋找具有指定之索引鍵的項目。|  
-|[unordered_map::begin](#unordered_map__begin)|指定受控制序列的開頭。|  
-|[unordered_map::bucket](#unordered_map__bucket)|取得索引鍵值的值區數目。|  
-|[unordered_map::bucket_count](#unordered_map__bucket_count)|取得 Bucket 的數目。|  
-|[unordered_map::bucket_size](#unordered_map__bucket_size)|取得 Bucket 大小。|  
-|[unordered_map::cbegin](#unordered_map__cbegin)|指定受控制序列的開頭。|  
-|[unordered_map::cend](#unordered_map__cend)|指定受控制序列的結尾。|  
-|[unordered_map::clear](#unordered_map__clear)|移除所有項目。|  
-|[unordered_map::count](#unordered_map__count)|尋找符合指定索引鍵的項目數目。|  
-|[unordered_map::emplace](#unordered_map__emplace)|加入就地建構的項目。|  
-|[unordered_map::emplace_hint](#unordered_map__emplace_hint)|加入就地建構的項目，含提示。|  
-|[unordered_map::empty](#unordered_map__empty)|測試項目是否不存在。|  
-|[unordered_map::end](#unordered_map__end)|指定受控制序列的結尾。|  
-|[unordered_map::equal_range](#unordered_map__equal_range)|尋找符合指定之索引鍵的範圍。|  
-|[unordered_map::erase](#unordered_map__erase)|移除位於指定位置的項目。|  
-|[unordered_map::find](#unordered_map__find)|尋找符合指定之索引鍵的元素。|  
-|[unordered_map::get_allocator](#unordered_map__get_allocator)|取得已儲存的配置器物件。|  
-|[unordered_map::hash_function](#unordered_map__hash_function)|取得儲存的雜湊函式物件。|  
-|[unordered_map::insert](#unordered_map__insert)|加入項目。|  
-|[unordered_map::key_eq](#unordered_map__key_eq)|取得儲存的比較函式物件。|  
-|[unordered_map::load_factor](#unordered_map__load_factor)|計算每個值區的平均項目數。|  
-|[unordered_map::max_bucket_count](#unordered_map__max_bucket_count)|取得 Bucket 最大數目。|  
-|[unordered_map::max_load_factor](#unordered_map__max_load_factor)|取得或設定每個 Bucket 最大項目數。|  
-|[unordered_map::max_size](#unordered_map__max_size)|取得受控制序列的大小上限。|  
-|[unordered_map::rehash](#unordered_map__rehash)|重建雜湊資料表。|  
-|[unordered_map::size](#unordered_map__size)|計算元素的數目。|  
-|[unordered_map::swap](#unordered_map__swap)|交換兩個容器的內容。|  
-|[unordered_map::unordered_map](#unordered_map__unordered_map)|建構容器物件。|  
+|[at](#at)|尋找具有指定之索引鍵的項目。|  
+|[begin](#begin)|指定受控制序列的開頭。|  
+|[值區](#bucket)|取得索引鍵值的值區數目。|  
+|[bucket_count](#bucket_count)|取得 Bucket 的數目。|  
+|[bucket_size](#bucket_size)|取得 Bucket 大小。|  
+|[cbegin](#cbegin)|指定受控制序列的開頭。|  
+|[cend](#cend)|指定受控制序列的結尾。|  
+|[clear](#clear)|移除所有項目。|  
+|[count](#count)|尋找符合指定索引鍵的項目數目。|  
+|[emplace](#emplace)|加入就地建構的項目。|  
+|[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|  
+|[empty](#empty)|測試項目是否不存在。|  
+|[end](#end)|指定受控制序列的結尾。|  
+|[equal_range](#equal_range)|尋找符合指定之索引鍵的範圍。|  
+|[erase](#erase)|移除位於指定位置的項目。|  
+|[find](#find)|尋找符合指定之索引鍵的元素。|  
+|[get_allocator](#get_allocator)|取得已儲存的配置器物件。|  
+|[hash_function](#hash)|取得儲存的雜湊函式物件。|  
+|[insert](#insert)|加入項目。|  
+|[key_eq](#key_eq)|取得儲存的比較函式物件。|  
+|[load_factor](#load_factor)|計算每個值區的平均項目數。|  
+|[max_bucket_count](#max_bucket_count)|取得 Bucket 最大數目。|  
+|[max_load_factor](#max_load_factor)|取得或設定每個 Bucket 最大項目數。|  
+|[max_size](#max_size)|取得受控制序列的大小上限。|  
+|[rehash](#rehash)|重建雜湊資料表。|  
+|[size](#size)|計算元素的數目。|  
+|[swap](#swap)|交換兩個容器的內容。|  
+|[unordered_map](#unordered_map)|建構容器物件。|  
   
 |||  
 |-|-|  
 |運算子|說明|  
-|[unordered_map::operator[]](#unordered_map__operator_at)|尋找或插入具有指定索引鍵的項目。|  
-|[unordered_map::operator=](#unordered_map__operator_eq)|複製雜湊資料表。|  
+|[unordered_map::operator[]](#op_at)|尋找或插入具有指定索引鍵的項目。|  
+|[unordered_map::operator=](#op_eq)|複製雜湊資料表。|  
   
 ## <a name="remarks"></a>備註  
- 物件會排列它所控制序列的順序，方式是呼叫兩個預存物件，一個是 [unordered_map::key_equal](#unordered_map__key_equal) 類型的比較函式物件，一個是 [unordered_map::hasher](#unordered_map__hasher) 類型的雜湊函式物件。 您可以透過呼叫成員函式 [unordered_map::key_eq](#unordered_map__key_eq)`()` 存取第一個預存物件；透過呼叫成員函式 [unordered_map::hash_function](#unordered_map__hash_function)`()` 存取第二個預存物件。 具體來說，只有在兩個引數值具有對等順序，對於 `X` 類型的所有值 `Y` 和 `Key`，呼叫 `key_eq()(X, Y)` 才會傳回 true，呼叫 `hash_function()(keyval)` 會產生 `size_t` 類型值的分佈。 不同於樣板類別 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)，樣板類別 `unordered_map` 的物件可保證 `key_eq()(X, Y)` 針對受控制序列的任何兩個元素永遠是 false。 (索引鍵是唯一的)。  
+ 物件會排列它所控制序列的順序，方式是呼叫兩個預存物件，一個是 [unordered_map::key_equal](#key_equal) 類型的比較函式物件，一個是 [unordered_map::hasher](#hasher) 類型的雜湊函式物件。 您可以透過呼叫成員函式 [unordered_map::key_eq](#key_eq)`()` 存取第一個預存物件；透過呼叫成員函式 [unordered_map::hash_function](#hash)`()` 存取第二個預存物件。 具體來說，只有在兩個引數值具有對等順序，對於 `X` 類型的所有值 `Y` 和 `Key`，呼叫 `key_eq()(X, Y)` 才會傳回 true，呼叫 `hash_function()(keyval)` 會產生 `size_t` 類型值的分佈。 不同於樣板類別 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)，樣板類別 `unordered_map` 的物件可保證 `key_eq()(X, Y)` 針對受控制序列的任何兩個元素永遠是 false。 (索引鍵是唯一的)。  
   
- 物件也會儲存最大載入因數，指定每個 Bucket 所需的項目平均數目上限。 如果插入元素會使 [unordered_map::load_factor](#unordered_map__load_factor)`()` 超出最大的載入因數，容器會增加值區的數目並視需要重建雜湊資料表。  
+ 物件也會儲存最大載入因數，指定每個 Bucket 所需的項目平均數目上限。 如果插入元素會使 [unordered_map::load_factor](#load_factor)`()` 超出最大的載入因數，容器會增加值區的數目並視需要重建雜湊資料表。  
   
  受控制序列中實際的項目順序取決於雜湊函式、比較函式、插入順序、最大載入因數和 Bucket 目前數目。 一般來說，您無法預測受控制序列中的項目順序。 不過，您永遠可以確保，有對等順序的任何項目子集在受控制序列中為相鄰。  
   
- 物件會透過 [unordered_map::allocator_type](#unordered_map__allocator_type) 類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須具有和 `allocator` 樣板類別物件相同的外部介面。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。  
+ 物件會透過 [unordered_map::allocator_type](#allocator_type) 類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須具有和 `allocator` 樣板類別物件相同的外部介面。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** \<unordered_map>  
   
  **命名空間：** std  
   
-##  <a name="a-nameunorderedmapallocatortypea--unorderedmapallocatortype"></a><a name="unordered_map__allocator_type"></a>  unordered_map::allocator_type  
+##  <a name="allocator_type"></a>  unordered_map::allocator_type  
  管理儲存體的配置器類型。  
   
 ```  
@@ -265,7 +264,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmapata--unorderedmapat"></a><a name="unordered_map__at"></a>  unordered_map::at  
+##  <a name="at"></a>  unordered_map::at  
  在 unordered_map 中尋找具有指定索引鍵值的項目。  
   
 ```  
@@ -278,7 +277,7 @@ const Ty& at(const Key& key) const;
 |||  
 |-|-|  
 |參數|描述|  
-|` key`|要尋找的索引鍵值。|  
+|`key`|要尋找的索引鍵值。|  
   
 ### <a name="return-value"></a>傳回值  
  所找到項目之資料值的參考。  
@@ -313,7 +312,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameunorderedmapbegina--unorderedmapbegin"></a><a name="unordered_map__begin"></a>  unordered_map::begin  
+##  <a name="begin"></a>  unordered_map::begin  
  指定受控制序列或值區的開頭。  
   
 ```  
@@ -377,7 +376,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapbucketa--unorderedmapbucket"></a><a name="unordered_map__bucket"></a>  unordered_map::bucket  
+##  <a name="bucket"></a>  unordered_map::bucket  
  取得索引鍵值的值區數目。  
   
 ```  
@@ -430,7 +429,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmapbucketcounta--unorderedmapbucketcount"></a><a name="unordered_map__bucket_count"></a>  unordered_map::bucket_count  
+##  <a name="bucket_count"></a>  unordered_map::bucket_count  
  取得 Bucket 的數目。  
   
 ```  
@@ -516,7 +515,7 @@ max_load_factor() == 0.1
 
 ```  
   
-##  <a name="a-nameunorderedmapbucketsizea--unorderedmapbucketsize"></a><a name="unordered_map__bucket_size"></a>  unordered_map::bucket_size  
+##  <a name="bucket_size"></a>  unordered_map::bucket_size  
  取得 Bucket 大小  
   
 ```  
@@ -569,7 +568,7 @@ bucket('a') == 7
 bucket_size(7) == 1  
 ```  
   
-##  <a name="a-nameunorderedmapcbegina--unorderedmapcbegin"></a><a name="unordered_map__cbegin"></a>  unordered_map::cbegin  
+##  <a name="cbegin"></a>  unordered_map::cbegin  
  傳回 `const` 迭代器，為範圍中的第一個項目定址。  
   
 ```  
@@ -592,7 +591,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-nameunorderedmapcenda--unorderedmapcend"></a><a name="unordered_map__cend"></a>  unordered_map::cend  
+##  <a name="cend"></a>  unordered_map::cend  
  傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。  
   
 ```  
@@ -605,7 +604,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>備註  
  `cend` 用來測試迭代器是否已超過其範圍結尾。  
   
- 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 且可修改的任何種類 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -616,7 +615,7 @@ auto i2 = Container.cend();
   
  `cend` 所傳回的值不應該取值。  
   
-##  <a name="a-nameunorderedmapcleara--unorderedmapclear"></a><a name="unordered_map__clear"></a>  unordered_map::clear  
+##  <a name="clear"></a>  unordered_map::clear  
  移除所有項目。  
   
 ```  
@@ -624,7 +623,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>備註  
- 成員函式呼叫 [unordered_map::erase](#unordered_map__erase)`(` [unordered_map::begin](#unordered_map__begin)`(),` [unordered_map::end](#unordered_map__end)`())`。  
+ 成員函式呼叫 [unordered_map::erase](#erase)`(` [unordered_map::begin](#begin)`(),` [unordered_map::end](#end)`())`。  
   
 ### <a name="example"></a>範例  
   
@@ -682,7 +681,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmapconstiteratora--unorderedmapconstiterator"></a><a name="unordered_map__const_iterator"></a>  unordered_map::const_iterator  
+##  <a name="const_iterator"></a>  unordered_map::const_iterator  
  用於受控制序列的常數迭代器類型。  
   
 ```  
@@ -724,7 +723,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapconstlocaliteratora--unorderedmapconstlocaliterator"></a><a name="unordered_map__const_local_iterator"></a>  unordered_map::const_local_iterator  
+##  <a name="const_local_iterator"></a>  unordered_map::const_local_iterator  
  用於受控制序列的常數 Bucket 迭代器類型。  
   
 ```  
@@ -771,7 +770,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapconstpointera--unorderedmapconstpointer"></a><a name="unordered_map__const_pointer"></a>  unordered_map::const_pointer  
+##  <a name="const_pointer"></a>  unordered_map::const_pointer  
  項目的常數指標類型。  
   
 ```  
@@ -816,7 +815,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapconstreferencea--unorderedmapconstreference"></a><a name="unordered_map__const_reference"></a>  unordered_map::const_reference  
+##  <a name="const_reference"></a>  unordered_map::const_reference  
  項目的常數參考類型。  
   
 ```  
@@ -861,7 +860,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapcounta--unorderedmapcount"></a><a name="unordered_map__count"></a>  unordered_map::count  
+##  <a name="count"></a>  unordered_map::count  
  尋找符合指定索引鍵的項目數目。  
   
 ```  
@@ -873,7 +872,7 @@ size_type count(const Key& keyval) const;
  要搜尋的索引鍵值。  
   
 ### <a name="remarks"></a>備註  
- 成員函式傳回由 [unordered_map::equal_range](#unordered_map__equal_range)`(keyval)` 分隔之範圍中的元素數。  
+ 成員函式傳回由 [unordered_map::equal_range](#equal_range)`(keyval)` 分隔之範圍中的元素數。  
   
 ### <a name="example"></a>範例  
   
@@ -914,7 +913,7 @@ count('b') == 1
 count('C') == 0  
 ```  
   
-##  <a name="a-nameunorderedmapdifferencetypea--unorderedmapdifferencetype"></a><a name="unordered_map__difference_type"></a>  unordered_map::difference_type  
+##  <a name="difference_type"></a>  unordered_map::difference_type  
  兩個項目之間帶正負號距離的類型。  
   
 ```  
@@ -971,7 +970,7 @@ end()-begin() == 3
 begin()-end() == -3  
 ```  
   
-##  <a name="a-nameunorderedmapemplacea--unorderedmapemplace"></a><a name="unordered_map__emplace"></a>  unordered_map::emplace  
+##  <a name="emplace"></a>  unordered_map::emplace  
  將就地建構元素 (沒有執行複製或移動作業) 插入到 unordered_map。  
   
 ```  
@@ -996,9 +995,9 @@ pair<iterator, bool>  emplace( Args&&... args);
   
  在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。  
   
- 如需程式碼範例，請參閱 [map::emplace](../standard-library/map-class.md#map__emplace)。  
+ 如需程式碼範例，請參閱 [map::emplace](../standard-library/map-class.md#emplace)。  
   
-##  <a name="a-nameunorderedmapemplacehinta--unorderedmapemplacehint"></a><a name="unordered_map__emplace_hint"></a>  unordered_map::emplace_hint  
+##  <a name="emplace_hint"></a>  unordered_map::emplace_hint  
  插入就地建構元素 (沒有執行複製或移動作業)，其中含位置提示。  
   
 ```  
@@ -1024,11 +1023,11 @@ iterator emplace_hint(const_iterator where, Args&&... args);
   
  在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。  
   
- 元素的 [value_type](../standard-library/map-class.md#map__value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
+ 元素的 [value_type](../standard-library/map-class.md#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
- 如需程式碼範例，請參閱 [map::emplace_hint](../standard-library/map-class.md#map__emplace_hint)。  
+ 如需程式碼範例，請參閱 [map::emplace_hint](../standard-library/map-class.md#emplace_hint)。  
   
-##  <a name="a-nameunorderedmapemptya--unorderedmapempty"></a><a name="unordered_map__empty"></a>  unordered_map::empty  
+##  <a name="empty"></a>  unordered_map::empty  
  測試項目是否不存在。  
   
 ```  
@@ -1093,7 +1092,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmapenda--unorderedmapend"></a><a name="unordered_map__end"></a>  unordered_map::end  
+##  <a name="end"></a>  unordered_map::end  
  指定受控制序列的結尾。  
   
 ```  
@@ -1113,7 +1112,7 @@ const_local_iterator end(size_type nbucket) const;
 ### <a name="remarks"></a>備註  
  前兩個成員函式會傳回指向序列結尾之外的正向迭代器。 最後兩個成員函式會傳回指向值區 `nbucket`結尾之外的正向迭代器。  
   
-##  <a name="a-nameunorderedmapequalrangea--unorderedmapequalrange"></a><a name="unordered_map__equal_range"></a>  unordered_map::equal_range  
+##  <a name="equal_range"></a>  unordered_map::equal_range  
  尋找符合指定之索引鍵的範圍。  
   
 ```  
@@ -1179,7 +1178,7 @@ equal_range('x'):
 equal_range('b'): [b, 2]  
 ```  
   
-##  <a name="a-nameunorderedmaperasea--unorderedmaperase"></a><a name="unordered_map__erase"></a>  unordered_map::erase  
+##  <a name="erase"></a>  unordered_map::erase  
  從指定的位置移除 unordered_map 中的元素或元素範圍，或移除符合指定索引鍵的元素。  
   
 ```  
@@ -1207,9 +1206,9 @@ size_type erase(const key_type& Key);
  在第三個成員函式中，傳回已從 unordered_map 移除的元素數。  
   
 ### <a name="remarks"></a>備註  
- 如需程式碼範例，請參閱 [map::erase](../standard-library/map-class.md#map__erase)。  
+ 如需程式碼範例，請參閱 [map::erase](../standard-library/map-class.md#erase)。  
   
-##  <a name="a-nameunorderedmapfinda--unorderedmapfind"></a><a name="unordered_map__find"></a>  unordered_map::find  
+##  <a name="find"></a>  unordered_map::find  
  尋找符合指定之索引鍵的元素。  
   
 ```  
@@ -1221,7 +1220,7 @@ const_iterator find(const Key& keyval) const;
  要搜尋的索引鍵值。  
   
 ### <a name="remarks"></a>備註  
- 成員函式傳回 [unordered_map::equal_range](#unordered_map__equal_range)`(keyval).first`。  
+ 成員函式傳回 [unordered_map::equal_range](#equal_range)`(keyval).first`。  
   
 ### <a name="example"></a>範例  
   
@@ -1267,7 +1266,7 @@ find('A') == false
 find('b') == true: [b, 2]  
 ```  
   
-##  <a name="a-nameunorderedmapgetallocatora--unorderedmapgetallocator"></a><a name="unordered_map__get_allocator"></a>  unordered_map::get_allocator  
+##  <a name="get_allocator"></a>  unordered_map::get_allocator  
  取得已儲存的配置器物件。  
   
 ```  
@@ -1304,7 +1303,7 @@ int main()
 al == std::allocator() is true  
 ```  
   
-##  <a name="a-nameunorderedmaphashfunctiona--unorderedmaphashfunction"></a><a name="unordered_map__hash_function"></a>  unordered_map::hash_function  
+##  <a name="hash"></a>  unordered_map::hash_function  
  取得儲存的雜湊函式物件。  
   
 ```  
@@ -1341,7 +1340,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmaphashera--unorderedmaphasher"></a><a name="unordered_map__hasher"></a>  unordered_map::hasher  
+##  <a name="hasher"></a>  unordered_map::hasher  
  雜湊函式的類型。  
   
 ```  
@@ -1378,7 +1377,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086  
 ```  
   
-##  <a name="a-nameunorderedmapinserta--unorderedmapinsert"></a><a name="unordered_map__insert"></a>  unordered_map::insert  
+##  <a name="insert"></a>  unordered_map::insert  
  將某個項目或項目範圍插入 unordered_map 中。  
   
 ```  
@@ -1421,10 +1420,10 @@ IList);
 |參數|描述|  
 |`Val`|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_map 中的項目值。|  
 |`Where`|要開始搜尋正確的插入點的地方|  
-|`ValTy`|範本參數，指定 unordered_map 可用於建構 [value_type](../standard-library/map-class.md#map__value_type) 之元素的引數類型，並將 `Val` 作為引數完美轉送。|  
+|`ValTy`|範本參數，指定 unordered_map 可用於建構 [value_type](../standard-library/map-class.md#value_type) 之元素的引數類型，並將 `Val` 作為引數完美轉送。|  
 |`First`|要複製之第一個元素的位置。|  
 |`Last`|要複製之最一個元素後方的位置。|  
-|`InputIterator`|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#map__value_type) 物件的類型。|  
+|`InputIterator`|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|  
 |`IList`|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -1439,17 +1438,17 @@ IList);
   
  若要存取單一項目成員函式所傳回之 `pair``pr` 的迭代器元件，請使用 `pr.first`；若要對所傳回之 pair 內的迭代器進行取值，請使用 `*pr.first` 來提供項目。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
   
- 容器的 [value_type](../standard-library/map-class.md#map__value_type) 是屬於容器的 typedef，而就 map 而言，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
+ 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而就 map 而言，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
  範圍成員函式 (5) 會將項目值的序列插入對應至每個項目的 unordered_map，而這些項目是由範圍 `[First, Last)` 中的迭代器指定；因此不會插入 `Last`。 容器成員函式 `end()` 會參考容器中最後一個項目之後的位置。例如陳述式 `m.insert(v.begin(), v.end());` 嘗試將 `v` 的所有項目插入 `m`。 只會插入具有範圍中唯一值的元素；若重複則會忽略。 若要觀察哪些元素會遭到拒絕，請使用單一元素版本的 `insert`。  
   
  初始設定式清單成員函式 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 將元素複製到 unordered_map。  
   
- 針對插入就地建構的元素 (也就是沒有執行複製或移動作業)，請參閱 [unordered_map::emplace](#unordered_map__emplace) 和 [unordered_map::emplace_hint](#unordered_map__emplace_hint)。  
+ 針對插入就地建構的元素 (也就是沒有執行複製或移動作業)，請參閱 [unordered_map::emplace](#emplace) 和 [unordered_map::emplace_hint](#emplace_hint)。  
   
- 如需程式碼範例，請參閱 [map::insert](../standard-library/map-class.md#map__insert)。  
+ 如需程式碼範例，請參閱 [map::insert](../standard-library/map-class.md#insert)。  
   
-##  <a name="a-nameunorderedmapiteratora--unorderedmapiterator"></a><a name="unordered_map__iterator"></a>  unordered_map::iterator  
+##  <a name="iterator"></a>  unordered_map::iterator  
  受控制序列之迭代器的類型。  
   
 ```  
@@ -1491,7 +1490,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapkeyeqa--unorderedmapkeyeq"></a><a name="unordered_map__key_eq"></a>  unordered_map::key_eq  
+##  <a name="key_eq"></a>  unordered_map::key_eq  
  取得儲存的比較函式物件。  
   
 ```  
@@ -1530,7 +1529,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmapkeyequala--unorderedmapkeyequal"></a><a name="unordered_map__key_equal"></a>  unordered_map::key_equal  
+##  <a name="key_equal"></a>  unordered_map::key_equal  
  比較函式的類型。  
   
 ```  
@@ -1569,7 +1568,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false  
 ```  
   
-##  <a name="a-nameunorderedmapkeytypea--unorderedmapkeytype"></a><a name="unordered_map__key_type"></a>  unordered_map::key_type  
+##  <a name="key_type"></a>  unordered_map::key_type  
  排序索引鍵的類型。  
   
 ```  
@@ -1623,7 +1622,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmaploadfactora--unorderedmaploadfactor"></a><a name="unordered_map__load_factor"></a>  unordered_map::load_factor  
+##  <a name="load_factor"></a>  unordered_map::load_factor  
  計算每個值區的平均項目數。  
   
 ```  
@@ -1631,7 +1630,7 @@ float load_factor() const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 成員函式傳回 `(float)`[unordered_map::size](#unordered_map__size)`() / (float)`[unordered_map::bucket_count](#unordered_map__bucket_count)`()`，亦即每個值區的平均元素數。  
+ 成員函式傳回 `(float)`[unordered_map::size](#size)`() / (float)`[unordered_map::bucket_count](#bucket_count)`()`，亦即每個值區的平均元素數。  
   
 ### <a name="example"></a>範例  
   
@@ -1709,7 +1708,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmaplocaliteratora--unorderedmaplocaliterator"></a><a name="unordered_map__local_iterator"></a>  unordered_map::local_iterator  
+##  <a name="local_iterator"></a>  unordered_map::local_iterator  
  值區迭代器的類型。  
   
 ```  
@@ -1756,7 +1755,7 @@ int main()
 [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapmappedtypea--unorderedmapmappedtype"></a><a name="unordered_map__mapped_type"></a>  unordered_map::mapped_type  
+##  <a name="mapped_type"></a>  unordered_map::mapped_type  
  與每個索引鍵關聯的對應值類型。  
   
 ```  
@@ -1810,7 +1809,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapmaxbucketcounta--unorderedmapmaxbucketcount"></a><a name="unordered_map__max_bucket_count"></a>  unordered_map::max_bucket_count  
+##  <a name="max_bucket_count"></a>  unordered_map::max_bucket_count  
  取得 Bucket 最大數目。  
   
 ```  
@@ -1896,7 +1895,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmapmaxloadfactora--unorderedmapmaxloadfactor"></a><a name="unordered_map__max_load_factor"></a>  unordered_map::max_load_factor  
+##  <a name="max_load_factor"></a>  unordered_map::max_load_factor  
  取得或設定每個 Bucket 最大項目數。  
   
 ```  
@@ -1989,7 +1988,7 @@ max_load_factor() == 0.1
   
 ```  
   
-##  <a name="a-nameunorderedmapmaxsizea--unorderedmapmaxsize"></a><a name="unordered_map__max_size"></a>  unordered_map::max_size  
+##  <a name="max_size"></a>  unordered_map::max_size  
  取得受控制序列的大小上限。  
   
 ```  
@@ -2023,7 +2022,7 @@ int main()
 max_size() == 536870911  
 ```  
   
-##  <a name="a-nameunorderedmapoperatorata--unorderedmapoperator"></a><a name="unordered_map__operator_at"></a>  unordered_map::operator[]  
+##  <a name="op_at"></a>  unordered_map::operator[]  
  尋找或插入具有指定索引鍵的項目。  
   
 ```  
@@ -2047,7 +2046,7 @@ Ty& operator[](Key&& keyval);
   
  `operator[]` 可用來將元素插入使用 *m*[_ *Key*] = `DataValue` 的對應 *m* 中，其中 `DataValue` 是具有索引鍵值 \_ *Key* 之元素的 `mapped_type` 值。  
   
- 當使用 `operator[]` 插入項目時，傳回的參考不會指出插入是變更預先存在的項目，還是建立新的項目。 成員函式 [find](../standard-library/map-class.md#map__find) 和 [insert](../standard-library/map-class.md#map__insert) 可用來判斷具有指定索引鍵的元素在插入之前是否已經存在。  
+ 當使用 `operator[]` 插入項目時，傳回的參考不會指出插入是變更預先存在的項目，還是建立新的項目。 成員函式 [find](../standard-library/map-class.md#find) 和 [insert](../standard-library/map-class.md#insert) 可用來判斷具有指定索引鍵的元素在插入之前是否已經存在。  
   
 ### <a name="example"></a>範例  
   
@@ -2106,9 +2105,9 @@ c2["abc"] == 1
 ```  
   
 ### <a name="remarks"></a>備註  
- 成員函式會將迭代器 `where` 判斷為 [unordered_map::insert](#unordered_map__insert)`(` [unordered_map::value_type](#unordered_map__value_type)`(keyval, Ty())` 的傳回值。 (如果沒有此類項目存在，它會插入具有指定之索引鍵的項目)。然後傳回 `(*where).second` 的參考。  
+ 成員函式會將迭代器 `where` 判斷為 [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())` 的傳回值。 (如果沒有此類項目存在，它會插入具有指定之索引鍵的項目)。然後傳回 `(*where).second` 的參考。  
   
-##  <a name="a-nameunorderedmapoperatoreqa--unorderedmapoperator"></a><a name="unordered_map__operator_eq"></a>  unordered_map::operator=  
+##  <a name="op_eq"></a>  unordered_map::operator=  
  使用來自另一個 unordered_map 的項目來取代這個 unordered_map 的項目。  
   
 ```  
@@ -2122,12 +2121,12 @@ unordered_map& operator=(unordered_map&& right);
 |||  
 |-|-|  
 |參數|描述|  
-|` right`|此運算子函式從中指派內容的 unordered_map。|  
+|`right`|此運算子函式從中指派內容的 unordered_map。|  
   
 ### <a name="remarks"></a>備註  
- 第一個版本會將 ` right` 中的所有元素複製到這個 unordered_map。  
+ 第一個版本會將 `right` 中的所有元素複製到這個 unordered_map。  
   
- 第二個版本會將 ` right` 中的所有元素移至這個 unordered_map。  
+ 第二個版本會將 `right` 中的所有元素移至這個 unordered_map。  
   
  這個 unordered_map 中 `operator`= executes 之前的所有項目都會被捨棄。  
   
@@ -2168,7 +2167,7 @@ int main( )
    }  
 ```  
   
-##  <a name="a-nameunorderedmappointera--unorderedmappointer"></a><a name="unordered_map__pointer"></a>  unordered_map::pointer  
+##  <a name="pointer"></a>  unordered_map::pointer  
  項目的指標類型。  
   
 ```  
@@ -2213,7 +2212,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapreferencea--unorderedmapreference"></a><a name="unordered_map__reference"></a>  unordered_map::reference  
+##  <a name="reference"></a>  unordered_map::reference  
  項目的參考類型。  
   
 ```  
@@ -2258,7 +2257,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmaprehasha--unorderedmaprehash"></a><a name="unordered_map__rehash"></a>  unordered_map::rehash  
+##  <a name="rehash"></a>  unordered_map::rehash  
  重建雜湊資料表。  
   
 ```  
@@ -2334,7 +2333,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1  
 ```  
   
-##  <a name="a-nameunorderedmapsizea--unorderedmapsize"></a><a name="unordered_map__size"></a>  unordered_map::size  
+##  <a name="size"></a>  unordered_map::size  
  計算元素的數目。  
   
 ```  
@@ -2400,7 +2399,7 @@ size == 2
 empty() == false  
 ```  
   
-##  <a name="a-nameunorderedmapsizetypea--unorderedmapsizetype"></a><a name="unordered_map__size_type"></a>  unordered_map::size_type  
+##  <a name="size_type"></a>  unordered_map::size_type  
  兩個項目之間不帶正負號距離的類型。  
   
 ```  
@@ -2435,7 +2434,7 @@ int main()
 size == 0  
 ```  
   
-##  <a name="a-nameunorderedmapswapa--unorderedmapswap"></a><a name="unordered_map__swap"></a>  unordered_map::swap  
+##  <a name="swap"></a>  unordered_map::swap  
  交換兩個容器的內容。  
   
 ```  
@@ -2447,7 +2446,7 @@ void swap(unordered_map& right);
  要交換的容器。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會交換 `*this` 和 `right`之間受控制的序列。 如果是 [unordered_map::get_allocator](#unordered_map__get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
+ 成員函式會交換 `*this` 和 `right`之間受控制的序列。 如果是 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
   
 ### <a name="example"></a>範例  
   
@@ -2505,7 +2504,7 @@ int main()
 [c, 3] [b, 2] [a, 1]  
 ```  
   
-##  <a name="a-nameunorderedmapunorderedmapa--unorderedmapunorderedmap"></a><a name="unordered_map__unordered_map"></a>  unordered_map::unordered_map  
+##  <a name="unordered_map"></a>  unordered_map::unordered_map  
  建構容器物件。  
   
 ```  
@@ -2710,7 +2709,7 @@ int main()
  [a, 1] [b, 2] [c, 3]
  ```  
   
-##  <a name="a-nameunorderedmapvaluetypea--unorderedmapvaluetype"></a><a name="unordered_map__value_type"></a>  unordered_map::value_type  
+##  <a name="value_type"></a>  unordered_map::value_type  
  元素的類型。  
   
 ```  

@@ -59,10 +59,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a9db88e2797e5828a007c21fd7f7fdde135ff4bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 51b82c6a60eb8024c267e07e1327c8afd7928eea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset、_mbsnbset_l
@@ -104,9 +105,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset` 會傳回變更後字串的指標。  
   
 ## <a name="remarks"></a>備註  
- `_mbsnbset` 和 `_mbsnbset_l` 函式會將 `str` 的最多前 `count` 個位元組設為 `c`。 如果 `count` 大於 `str` 的長度，則會使用 `str` 的長度，而非 `count`。 如果 `c` 是多位元組字元，而且無法將其完全設定到 `count` 所指定的最後一個位元組，則此最後一個位元組會以空白的字元填補。 `_mbsnbset` 和 `_mbsnbset_l` 並不會在 `str` 的結尾置入結束 Null。  
+ `_mbsnbset` 和 `_mbsnbset_l` 函式會將 `str` 的最多前 `count` 個位元組設為 `c`。 如果 `count` 大於 `str` 的長度，則會使用 `str` 的長度，而非 `count`。 如果 `c` 是多位元組字元，而且無法將其完全設定到 `count` 所指定的最後一個位元組，則此最後一個位元組會以空白的字元填補。 `_mbsnbset`和`_mbsnbset_l`並不會終止 null 結尾的`str`。  
   
- `_mbsnbset` 和 `_mbsnbset_l` 類似於 `_mbsnset`，但會設定 `count` 個位元組而非 `count` 個字元的 `c`。  
+ `_mbsnbset`和`_mbsnbset_l`類似於`_mbsnset`，只不過它會設定`count`位元組而非`count`字元`c`。  
   
  如果 `str` 是 `NULL`，或 `count` 為零，則此函式會產生無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行， `errno` 會設為 `EINVAL` ，且此函式會傳回 `NULL`。 此外，如果 `c` 不是有效的多位元組字元，則會將 `errno` 設為 `EINVAL`，並改用一個空格。  
   
@@ -155,9 +156,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

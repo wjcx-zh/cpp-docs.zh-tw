@@ -36,10 +36,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 25cfc0cc7c9f22a495b409e6e08d133b0f29ff8e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
@@ -139,12 +140,12 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="enumerations"></a>列舉  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[copy_options 列舉](../standard-library/filesystem-enumerations.md#filesystem__copy_options)|此列舉會搭配使用 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60)，並在已存在目的地檔案時決定行為。|  
-|[directory_options 列舉](../standard-library/filesystem-enumerations.md#filesystem__directory_options)|指定目錄迭代器之選項的列舉。|  
-|[file_type 列舉](../standard-library/filesystem-enumerations.md#filesystem__file_type)|檔案類型的列舉。|  
-|[perms 列舉](../standard-library/filesystem-enumerations.md#filesystem__perms)|用來傳達權限和權限選項的位元遮罩類型|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|列舉搭配使用 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) ，並在已存在目的地檔案時決定行為。|  
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|  
+|[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|  
+|[權限](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|  
   
 ## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

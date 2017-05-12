@@ -6,22 +6,24 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: a6617109-2cec-4a69-948f-6c87116eda5f
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ff42eebac50a016990a26dc358684dd70a33af84
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 46b2da82830b734ffd44eba5f72e8c5e912c3915
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 運算子
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  測試成對運算子左側的物件是否不等於右側的物件。  
   
 ```  
@@ -33,10 +35,10 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  **pair** 型別的物件。  
   
- ` right`  
+ `right`  
  `pair` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -92,7 +94,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  測試成對運算子左側的物件是否等於右側的物件。  
   
 ```  
@@ -101,17 +103,17 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  **pair** 型別的物件。  
   
- ` right`  
+ `right`  
  `pair` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果 pair 相等，則為 **true**；如果 `pair` 不相等，則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 如果配對的每個項目都相等，則其中一對等於另一對。 函式會傳回 ` left`。 **first** == ` right`. **first** && ` left`. **second** == ` right`. **second**。 如果其中一對的第一個或第二個項目不等於另一對的對應項目，則這兩對不相等。  
+ 如果配對的每個項目都相等，則其中一對等於另一對。 函式會傳回 `left`。 **first** == `right`. **first** && `left`. **second** == `right`. **second**。 如果其中一對的第一個或第二個項目不等於另一對的對應項目，則這兩對不相等。  
   
 ### <a name="example"></a>範例  
   
@@ -151,7 +153,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  測試成對運算子左側的物件是否小於右側的物件。  
   
 ```  
@@ -160,17 +162,17 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  運算子左側 `pair` 類型的物件。  
   
- ` right`  
+ `right`  
  運算子右側 `pair` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果運算子左側的 `pair` 必定小於運算子右側的 `pair`，則為 **true**；否則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- ` left` 小於且不等於 ` right.`，即所謂的 ` left``pair` 物件必小於 ` right``pair` 物件。  
+ `left` `pair`物件，即所謂必小於`right``pair`物件，如果`left`小於且不等於`right`。  
   
  在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。  
   
@@ -221,7 +223,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  測試成對運算子左側的物件是否小於或等於右側的物件。  
   
 ```  
@@ -233,10 +235,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  運算子左側 `pair` 類型的物件。  
   
- ` right`  
+ `right`  
  運算子右側 `pair` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -302,7 +304,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  測試成對運算子左側的物件是否大於右側的物件。  
   
 ```  
@@ -314,17 +316,17 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  運算子左側 `pair` 類型的物件。  
   
- ` right`  
+ `right`  
  運算子右側 `pair` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
  如果運算子左邊的 `pair` 必定大於運算子右邊的 `pair`，則為 **true**；否則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- ` left` 大於且不等於 ` right.`，` left``pair` 物件即所謂必大於 ` right``pair` 物件。  
+ `left` `pair`物件，即所謂必大於`right``pair`物件，如果`left`大於且不等於`right`。  
   
  在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。  
   
@@ -385,7 +387,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  測試成寺運算子左側的物件是否大於或等於右側的物件。  
   
 ```  
@@ -397,10 +399,10 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  運算子左側 `pair` 類型的物件。  
   
- ` right`  
+ `right`  
  運算子右側 `pair` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  

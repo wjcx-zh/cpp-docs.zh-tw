@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - fisher_f_distribution
-- std::fisher_f_distribution
 - random/std::fisher_f_distribution
-- std::fisher_f_distribution::reset
 - random/std::fisher_f_distribution::reset
-- std::fisher_f_distribution::m
 - random/std::fisher_f_distribution::m
-- std::fisher_f_distribution::n
 - random/std::fisher_f_distribution::n
-- std::fisher_f_distribution::param
 - random/std::fisher_f_distribution::param
-- std::fisher_f_distribution::min
 - random/std::fisher_f_distribution::min
-- std::fisher_f_distribution::max
 - random/std::fisher_f_distribution::max
-- std::fisher_f_distribution::operator()
 - random/std::fisher_f_distribution::operator()
-- std::fisher_f_distribution::param_type
 - random/std::fisher_f_distribution::param_type
-- std::fisher_f_distribution::param_type::m
 - random/std::fisher_f_distribution::param_type::m
-- std::fisher_f_distribution::param_type::n
 - random/std::fisher_f_distribution::param_type::n
-- std::fisher_f_distribution::param_type::operator==
 - random/std::fisher_f_distribution::param_type::operator==
-- std::fisher_f_distribution::param_type::operator!=
 - random/std::fisher_f_distribution::param_type::operator!=
+- random/std::fisher_f_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 3a0fc233334909249f75978ba095cb3f31af90dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 98a51009b6aaccf9e7799fa4bb124ec001ccca0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 類別
@@ -107,8 +96,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[fisher_f_distribution::fisher_f_distribution](#fisher_f_distribution__fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[fisher_f_distribution::param_type](#fisher_f_distribution__param_type)|  
+|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|  
+|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|  
   
  屬性函式 `m()` 和 `n()` 會分別傳回儲存的分佈參數 `m` 和 `n` 的值。  
   
@@ -262,7 +251,7 @@ Distribution for 10 samples:
   
  **命名空間：** std  
   
-##  <a name="a-namefisherfdistributionfisherfdistributiona--fisherfdistributionfisherfdistribution"></a><a name="fisher_f_distribution__fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
+##  <a name="fisher_f_distribution"></a>  fisher_f_distribution::fisher_f_distribution  
  建構分佈。  
   
 ```  
@@ -287,7 +276,7 @@ explicit fisher_f_distribution(const param_type& parm);
   
  第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
   
-##  <a name="a-namefisherfdistributionparamtypea--fisherfdistributionparamtype"></a><a name="fisher_f_distribution__param_type"></a>  fisher_f_distribution::param_type  
+##  <a name="param_type"></a>  fisher_f_distribution::param_type  
  儲存分佈的參數。  
   
 ```cpp  

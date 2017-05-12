@@ -270,9 +270,9 @@ ms.lasthandoff: 02/24/2017
   
 -   **placement new 與 delete**  
   
-     為了讓 delete 運算子 (delete Operator) 與 C++&14; 標準一致，已對它加以變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 此變更加入一種全域 delete 運算子，該運算子需要大小參數。 重大變更是如果您先前使用具有相同簽章 (藉此對應至 placement new 運算子) 的 operator delete 函式，就會發生編譯器錯誤 (C2956，於使用 placement new 運算子所在之處發生，因為在程式碼的該位置上，此編譯器會嘗試識別合適且相符的 delete 運算子)。  
+     為了讓 delete 運算子 (delete Operator) 與 C++ 14 標準一致，已對它加以變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 此變更加入一種全域 delete 運算子，該運算子需要大小參數。 重大變更是如果您先前使用具有相同簽章 (藉此對應至 placement new 運算子) 的 operator delete 函式，就會發生編譯器錯誤 (C2956，於使用 placement new 運算子所在之處發生，因為在程式碼的該位置上，此編譯器會嘗試識別合適且相符的 delete 運算子)。  
   
-     函式 `void operator delete(void *, size_t)` 曾是 placement delete 運算子，相當於 C++&11; 中的 placement new 函式 "void \* operator new(size_t, size_t)"。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為 *「一般解除配置函式」* (Usual Deallocation Function) (全域 delete 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。  
+     函式 `void operator delete(void *, size_t)` 曾是 placement delete 運算子，相當於 C++ 11 中的 placement new 函式 "void \* operator new(size_t, size_t)"。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為 *「一般解除配置函式」* (Usual Deallocation Function) (全域 delete 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。  
   
      例如，假設您的程式碼同時定義 placement new 和 placement delete：  
   
@@ -606,7 +606,7 @@ ms.lasthandoff: 02/24/2017
   
      此外，雖然編譯器不提供特定的診斷，但內嵌運算子 new 會被視為語式錯誤。  
   
--   對非類別類型** **呼叫 'operator*type*()' (使用者定義的轉換)  
+-   對非類別類型 呼叫 'operator type()' (使用者定義的轉換) **  
   
      舊版編譯器允許在非類別類型上呼叫 'operator *type*()'，但以無訊息方式略過。 這種舊行為造成的風險是，會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2228。  
   
@@ -1130,7 +1130,7 @@ ms.lasthandoff: 02/24/2017
     };  
     ```  
   
--   `volatile` **成員變數會禁止隱含定義的建構函式與指派運算子**  
+-   `volatile`  **成員變數會禁止隱含定義的建構函式與指派運算子**  
   
      舊版編譯器允許具有 `volatile` 成員變數的類別自動產生預設的複製/移動建構函式及預設的複製/移動指派運算子。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會考慮讓具有揮發性成員變數的類別擁有非 trivial 建構和指派運算子，這樣可防止自動產生這些運算子的預設實作。  當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含 Unonymous 等位之類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。  
   

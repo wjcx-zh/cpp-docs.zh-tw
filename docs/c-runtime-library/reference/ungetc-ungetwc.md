@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f33416614f18a5a1cd7a61ccf4acfb9276de8e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3bab0bd81a8a17fd32c244bab0dd30658564d257
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="ungetc-ungetwc"></a>ungetc、ungetwc
@@ -85,12 +86,12 @@ wint_t ungetwc(
  `FILE` 結構的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，所有這些函式都會傳回字元引數 `c`。 如果無法回推 `c` 或是未讀取任何字元，則輸入資料流不會變更，且 `ungetc` 會傳回 `EOF`；`ungetwc` 會傳回 `WEOF`。 如果 `stream` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會傳回 `EOF` 或 `WEOF`，且 `errno` 會設定為 `EINVAL`。  
+ 如果成功，所有這些函式會傳回字元引數`c`。 如果無法回推 `c` 或是未讀取任何字元，則輸入資料流不會變更，且 `ungetc` 會傳回 `EOF`；`ungetwc` 會傳回 `WEOF`。 如果 `stream` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會傳回 `EOF` 或 `WEOF`，且 `errno` 會設定為 `EINVAL`。  
   
  如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
- `ungetc` 函式會將字元 `c` 推入至 `stream`，並清除檔案結尾指標。 資料流必須是開啟可供讀取。 對 `stream` 的後續讀取作業會從 `c` 開始。 會忽略嘗試使用 `ungetc` 將 `EOF` 推至資料流。  
+ `ungetc` 函式會將字元 `c` 推入至 `stream`，並清除檔案結尾指標。 資料流必須是開啟可供讀取。 後續讀取作業上`stream`開頭`c`。 會忽略嘗試使用 `ungetc` 將 `EOF` 推至資料流。  
   
  如果在從資料流讀取字元之前呼叫 `fflush`、`fseek`、`fsetpos` 或 `rewind`，`ungetc` 放在資料流的字元可能會被刪除。 檔案位置指標將具有在回推字元之前它所具有的值。 對應至資料流外部儲存體會保持不變。 在針對文字資料流的成功 `ungetc` 呼叫，將不會指定檔案位置指標，直到所有回推的字元都已讀取或捨棄為止。 在針對二進位資料流的每個成功 `ungetc` 呼叫，檔案位置指標會減少；如果其值在呼叫之前為 0，該值在呼叫之後為未定義。  
   
@@ -148,9 +149,6 @@ int main( void )
       521aNumber = 521  
 Next character in stream = 'a'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

@@ -10,8 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mem_fun1_t
-- std.mem_fun1_t
-- std::mem_fun1_t
 - xfunctional/std::mem_fun1_t
 dev_langs:
 - C++
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 434e4032216922071d60d7a7ad6a36b7f6135f7e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 6f9335afb06b8d07f96dc3d0fc320016a0aad7ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="memfun1t-class"></a>mem_fun1_t 類別
@@ -77,7 +76,7 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
  此範本類別會在私用成員物件中儲存一份 `_Pm` 的複本，這必須是 **Type** 類別之成員函式的指標。 它會將其成員函式 `operator()` 定義為傳回 ( **_Pleft**->\* `_Pm`)( **right**)。  
   
 ## <a name="example"></a>範例  
-  通常並不直接使用 `mem_fun1_t` 的建構函式，而協助程式函式 `mem_fun` 可用來調整成員函式。 如需如何使用成員函式配接器的範例，請參閱 [mem_fun](../standard-library/functional-functions.md#mem_fun_function)。  
+  通常並不直接使用 `mem_fun1_t` 的建構函式，而協助程式函式 `mem_fun` 可用來調整成員函式。 如需如何使用成員函式配接器的範例，請參閱 [mem_fun](../standard-library/functional-functions.md#mem_fun)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<functional>  

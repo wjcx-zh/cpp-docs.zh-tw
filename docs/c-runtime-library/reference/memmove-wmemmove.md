@@ -1,50 +1,67 @@
 ---
 title: "memmove、wmemmove | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "memmove"
-  - "wmemmove"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "memmove"
-  - "wmemmove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "memmove 函式"
-  - "wmemmove 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- memmove
+- wmemmove
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- memmove
+- wmemmove
+dev_langs:
+- C++
+helpviewer_keywords:
+- wmemmove function
+- memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# memmove、wmemmove
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2f8c6199d65c5865110774dcd0d2e5623d515467
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-移動一個緩衝區至另一個。  這些函式已有更安全的版本可用，請參閱 [memmove\_s、wmemmove\_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md)。  
+---
+# <a name="memmove-wmemmove"></a>memmove、wmemmove
+將某個緩衝區移到另一個緩衝區。 這些函式已有更安全的版本可用，請參閱 [memmove_s、wmemmove_s](../../c-runtime-library/reference/memmove-s-wmemmove-s.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void *memmove(  
@@ -59,25 +76,25 @@ wchar_t *wmemmove(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `dest`  
- 目的物件。  
+ 目的地物件。  
   
  `src`  
- 物件來源  
+ 來源物件。  
   
  `count`  
- 要複製的位元組數目 \(`memmove`\) 或字元 \(`wmemmove`\)。  
+ 要複製的位元組 (`memmove`) 或字元 (`wmemmove`) 數目。  
   
-## 傳回值  
- `dest` 的值  
+## <a name="return-value"></a>傳回值  
+ `dest` 的值。  
   
-## 備註  
- 複製 `count` 位元組\(`memmove`\) 或字元\(`wmemmove`\)從 `src` 的字元加入至 `dest` 如果來源區域和目的地陣列區域重疊，兩個函式皆保證原始來源位元組在重疊的區域在覆寫之前複製。  
+## <a name="remarks"></a>備註  
+ 複製`count`位元組 (`memmove`) 或字元 (`wmemmove`) 從`src`至`dest`。 如果來源區域與目的地的某些區域重疊，這兩個函式可確保先複製重疊區域中的原始來源位元組，再進行覆寫。  
   
- **安全性提示** 確定目的緩衝區大於或等於來源緩衝區。  如需詳細資訊，請參閱 [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) 。  
+ **安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- `memmove` 和 `wmemmove` 函式才會被取代，如果常數 `_CRT_SECURE_DEPRECATE_MEMORY` 在包含陳述式之前針對要被取代的函式，如以下範例所示:  
+ 如果為了使函式被取代，在包含的陳述式之前就已定義常數 `memmove`，則 `wmemmove` 和 `_CRT_SECURE_DEPRECATE_MEMORY` 函式就只能被取代，如下列範例所示：  
   
 ```  
 #define _CRT_SECURE_DEPRECATE_MEMORY  
@@ -87,16 +104,16 @@ or
 #include <wchar.h>  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`memmove`|\<string.h\>|  
-|`wmemmove`|\<wchar.h\>|  
+|-------------|---------------------|  
+|`memmove`|\<string.h>|  
+|`wmemmove`|\<wchar.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_memcpy.c  
@@ -125,16 +142,16 @@ int main( void )
 }  
 ```  
   
-  **The string: aabbcc**  
-**New string: aaaabb**  
-**The string: aabbcc**  
-**New string: aaaabb**   
-## .NET Framework 對等用法  
- [System::Buffer::BlockCopy](https://msdn.microsoft.com/en-us/library/system.buffer.blockcopy.aspx)  
+```Output  
+The string: aabbcc  
+New string: aaaabb  
+The string: aabbcc  
+New string: aaaabb  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   
- [\_memccpy](../../c-runtime-library/reference/memccpy.md)   
+ [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [strcpy、wcscpy、\_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy、\_strncpy\_l、wcsncpy、\_wcsncpy\_l、\_mbsncpy、\_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)
+ [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)

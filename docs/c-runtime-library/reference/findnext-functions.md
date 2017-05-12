@@ -120,10 +120,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1a79f5859d35b324b4469918bf1107da32f651c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 58132a9c16f23d7885432b05a459cc348c0bf915
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64
@@ -190,7 +191,7 @@ int _wfindnext64i32(
  檔案資訊緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，會傳回 0。 否則，會傳回 -1，並將 `errno` 設為表示失敗本質的值。 下表顯示可能的錯誤碼。  
+ 如果成功，則傳回 0。 否則，傳回-1，並設定`errno`為值，表示失敗的性質。 下表顯示可能的錯誤碼。  
   
  `EINVAL`  
  參數無效：`fileinfo` 是 `NULL`。 或者，作業系統傳回未預期的錯誤。  
@@ -257,9 +258,6 @@ int _wfindnext64i32(
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統呼叫](../../c-runtime-library/system-calls.md)   

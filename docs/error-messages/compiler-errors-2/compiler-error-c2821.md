@@ -34,15 +34,15 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 5a8000d7867ec7a18730a5d95538f21ffb3a0b2e
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 774c191bb3da3c5382c4aff7d48c8d6ae5ca7e68
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="compiler-error-c2821"></a>編譯器錯誤 C2821
-'operator new' 的第一個正式參數必須是 '不帶正負號的 int'  
+'operator new' 的第一個型式參數必須是 'unsigned 的 int'  
   
-第一個正式參數[new 運算子](../../standard-library/new-operators.md#operator_new)必須是不帶正負號`int`。  
+第一個型式參數[運算子 new](../../standard-library/new-operators.md#op_new)必須是不帶正負號`int`。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C2821:  

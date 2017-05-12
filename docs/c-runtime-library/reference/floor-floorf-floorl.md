@@ -1,55 +1,72 @@
 ---
 title: "floor、floorf、floorl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "floorf"
-  - "floorl"
-  - "floor"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "floor"
-  - "floorl"
-  - "_floorl"
-  - "floorf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "計算值的下限"
-  - "floor 函式"
-  - "floorf 函式"
-  - "floorl 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- floorf
+- floorl
+- floor
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- floor
+- floorl
+- _floorl
+- floorf
+dev_langs:
+- C++
+helpviewer_keywords:
+- floor function
+- floorf function
+- calculating floors of values
+- floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# floor、floorf、floorl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: ac3b84ab134b4b67dc7bd6ed5086d2f295b10156
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-計算值的最低限度值。  
+---
+# <a name="floor-floorf-floorl"></a>floor、floorf、floorl
+計算最小值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double floor(  
@@ -69,31 +86,31 @@ long double floorl(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `x`  
- 浮點值  
+ 浮點值。  
   
-## 傳回值  
- `floor` 函式會傳回表示小於或等於 `x`的最大的整數值的浮點值。  不會回傳錯誤。  
+## <a name="return-value"></a>傳回值  
+ `floor` 函式會傳回浮點值，代表小於或等於 `x` 的最大整數。 不會傳回錯誤。  
   
 |輸入|SEH 例外狀況|Matherr 例外狀況|  
-|--------|--------------|------------------|  
-|± QNAN,IND|無|\_DOMAIN|  
+|-----------|-------------------|-----------------------|  
+|± QNAN、IND|無|_DOMAIN|  
   
- `floor` 會使用 Streaming SIMD Extensions 2\(SSE2\) 的實作。  如需有關使用 SSE2 實作的詳細資訊和限制，請參閱 [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
+ `floor` 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
-## 備註  
- C\+\+ 允許多載，因此您可以呼叫會接受並傳回 `float` 與 `long double` 值的 `floor` 多載。  在 C 程式，`floor` 一律接受並傳回 `double`。  
+## <a name="remarks"></a>備註  
+ C++ 允許多載，因此您可以呼叫採用並傳回 `float` 和 `long double` 值之 `floor` 的多載。 在 C 程式中，`floor` 會一律採用並傳回 `double`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|Function|必要的標頭|  
-|--------------|-----------|  
-|`floor`, `floorf`, `floorl`|\<math.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`floor`, `floorf`, `floorl`|\<math.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_floor.c  
@@ -121,14 +138,14 @@ int main( void )
 }  
 ```  
   
-  **2.8 的最低限度值為 2.000000。**  
-**\-2.8 的最低限度值為 \-3.000000。**  
-**2.8 的 ceil 是 3.000000**  
-**\-2.8 的 ceil 是 \-2.000000**   
-## .NET Framework 對等用法  
- [System::Math::Floor](https://msdn.microsoft.com/en-us/library/system.math.floor.aspx)  
+```Output  
+The floor of 2.8 is 2.000000  
+The floor of -2.8 is -3.000000  
+The ceil of 2.8 is 3.000000  
+The ceil of -2.8 is -2.000000  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [ceil、ceilf、ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [round、roundf、roundl](../../c-runtime-library/reference/round-roundf-roundl.md)   

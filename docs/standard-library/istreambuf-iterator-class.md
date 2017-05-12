@@ -40,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: f06fb6bbc667be97267bb0a84564e6a36c837528
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 942f61a053e77bf3d677f51cc30d39b5f4c76db6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator 類別
@@ -73,38 +74,38 @@ class istreambuf_iterator
   
 |||  
 |-|-|  
-|[istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)|建構 `istreambuf_iterator`，初始化以從輸入資料流讀取字元。|  
+|[istreambuf_iterator](#istreambuf_iterator)|建構 `istreambuf_iterator`，初始化以從輸入資料流讀取字元。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#istreambuf_iterator__char_type)|類型，提供 `ostreambuf_iterator` 的字元類型。|  
-|[int_type](#istreambuf_iterator__int_type)|類型，提供 `istreambuf_iterator` 的整數類型。|  
-|[istream_type](#istreambuf_iterator__istream_type)|類型，提供 `istream_iterator` 的資料流類型。|  
-|[streambuf_type](#istreambuf_iterator__streambuf_type)|類型，提供 `istreambuf_iterator` 的資料流類型。|  
-|[traits_type](../standard-library/istream-iterator-class.md#istream_iterator__traits_type)|類型，提供 `istream_iterator` 的字元特性類型。|  
+|[char_type](#char_type)|類型，提供 `ostreambuf_iterator` 的字元類型。|  
+|[int_type](#int_type)|類型，提供 `istreambuf_iterator` 的整數類型。|  
+|[istream_type](#istream_type)|類型，提供 `istream_iterator` 的資料流類型。|  
+|[streambuf_type](#streambuf_type)|類型，提供 `istreambuf_iterator` 的資料流類型。|  
+|[traits_type](../standard-library/istream-iterator-class.md#traits_type)|類型，提供 `istream_iterator` 的字元特性類型。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[equal](#istreambuf_iterator__equal)|測試兩個輸入資料流緩衝區迭代器是否相等。|  
+|[equal](#equal)|測試兩個輸入資料流緩衝區迭代器是否相等。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator*](#istreambuf_iterator__operator_star)|取值運算子傳回資料流的下一個字元。|  
-|[operator++](#istreambuf_iterator__operator_add_add)|從輸入資料流傳回下一個字元，或在遞增之前複製物件並傳回複本。|  
-|[operator->](#istreambuf_iterator__operator-_gt_)|傳回成員的值 (如果有)。|  
+|[operator*](#op_star)|取值運算子傳回資料流的下一個字元。|  
+|[operator++](#op_add_add)|從輸入資料流傳回下一個字元，或在遞增之前複製物件並傳回複本。|  
+|[operator->](#operator-_gt)|傳回成員的值 (如果有)。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<iterator>  
   
  **命名空間：** std  
   
-##  <a name="istreambuf_iterator__char_type"></a>  istreambuf_iterator::char_type  
+##  <a name="char_type"></a>  istreambuf_iterator::char_type  
  類型，提供 `ostreambuf_iterator` 的字元類型。  
   
 ```
@@ -147,7 +148,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__equal"></a>  istreambuf_iterator::equal  
+##  <a name="equal"></a>  istreambuf_iterator::equal  
  測試兩個輸入資料流緩衝區迭代器是否相等。  
   
 ```
@@ -192,7 +193,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__int_type"></a>  istreambuf_iterator::int_type  
+##  <a name="int_type"></a>  istreambuf_iterator::int_type  
  類型，提供 `istreambuf_iterator` 的整數類型。  
   
 ```
@@ -221,7 +222,7 @@ The inttype1 = 100.
 *\  
 ```  
   
-##  <a name="istreambuf_iterator__istream_type"></a>  istreambuf_iterator::istream_type  
+##  <a name="istream_type"></a>  istreambuf_iterator::istream_type  
  類型，提供 `istreambuf_iterator` 的資料流類型。  
   
 ```
@@ -232,9 +233,9 @@ typedef basic_istream<CharType, Traits> istream_type;
  此類型與 `basic_istream`\< **CharType**, **Traits**> 同義。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `istream_type` 的範例，請參閱 [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)。  
+  如需如何宣告及使用 `istream_type` 的範例，請參閱 [istreambuf_iterator](#istreambuf_iterator)。  
   
-##  <a name="istreambuf_iterator__istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
+##  <a name="istreambuf_iterator"></a>  istreambuf_iterator::istreambuf_iterator  
  建構會初始化以從輸入資料流讀取字元的 istreambuf_iterator。  
   
 ```
@@ -284,7 +285,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__operator_star"></a>  istreambuf_iterator::operator*  
+##  <a name="op_star"></a>  istreambuf_iterator::operator*  
  取值運算子傳回資料流的下一個字元。  
   
 ```
@@ -322,7 +323,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__operator_add_add"></a>  istreambuf_iterator::operator++  
+##  <a name="op_add_add"></a>  istreambuf_iterator::operator++  
  從輸入資料流傳回下一個字元，或在遞增之前複製物件並傳回複本。  
   
 ```
@@ -364,7 +365,7 @@ int main( )
 }  
 ```  
   
-##  <a name="istreambuf_iterator__operator-_gt_"></a>  istreambuf_iterator::operator-&gt;  
+##  <a name="istreambuf_iterator__operator-_gt"></a>  istreambuf_iterator::operator-&gt;  
  傳回成員的值 (如果有)。  
   
 ```
@@ -374,7 +375,7 @@ const Elem* operator->() const;
 ### <a name="return-value"></a>傳回值  
  運算子會傳回 **&\*\*this**。  
   
-##  <a name="istreambuf_iterator__streambuf_type"></a>  istreambuf_iterator::streambuf_type  
+##  <a name="streambuf_type"></a>  istreambuf_iterator::streambuf_type  
  一種類型，提供 istreambuf_iterator 的資料流類型。  
   
 ```
@@ -385,9 +386,9 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
  此類型與 `basic_streambuf`\< **CharType**, **Traits**> 同義。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 **istreambuf_type** 的範例，請參閱 [istreambuf_iterator](#istreambuf_iterator__istreambuf_iterator)。  
+  如需如何宣告及使用 **istreambuf_type** 的範例，請參閱 [istreambuf_iterator](#istreambuf_iterator)。  
   
-##  <a name="istreambuf_iterator__traits_type"></a>  istreambuf_iterator::traits_type  
+##  <a name="traits_type"></a>  istreambuf_iterator::traits_type  
  類型，提供 `istream_iterator` 的字元特性類型。  
   
 ```

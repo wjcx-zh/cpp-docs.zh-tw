@@ -9,10 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.fpos
-- std::fpos
 - iosfwd/std::fpos
 - fpos
+- ios/std::fpos::seekpos
+- ios/std::fpos::state
+- ios/std::fpos::operator streamoff
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: 35d52be41d8d8ac113d15e78196b30a02aacb415
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: dfa9ee908b89c94b2eea95c450f67ca71031cf45
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="fpos-class"></a>fpos 類別
@@ -67,33 +69,33 @@ class fpos
   
 |||  
 |-|-|  
-|[fpos](#fpos__fpos)|建立一個物件，其中包含與資料流中的位置 (位移) 有關的資訊。|  
+|[fpos](#fpos)|建立一個物件，其中包含與資料流中的位置 (位移) 有關的資訊。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[seekpos](#fpos__seekpos)|僅限 C++ 標準程式庫內部使用。 請勿從您的程式碼呼叫此方法。|  
-|[state](#fpos__state)|設定或傳回轉換狀態。|  
+|[seekpos](#seekpos)|僅限 C++ 標準程式庫內部使用。 請勿從您的程式碼呼叫此方法。|  
+|[state](#state)|設定或傳回轉換狀態。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator!=](#fpos__operator_neq)|測試檔案位置指標是否不相等。|  
-|[operator+](#fpos__operator_add)|遞增檔案位置指標|  
-|[operator+=](#fpos__operator_add_eq)|遞增檔案位置指標|  
-|[operator-](#fpos__operator-)|減少檔案位置指標。|  
-|[operator-=](#fpos__operator-_eq)|減少檔案位置指標。|  
-|[operator==](#fpos__operator_eq_eq)|測試檔案位置指標是否相等。|  
-|[operator streamoff](#fpos__operator_streamoff)|將類型 `fpos` 的物件轉換成類型 `streamoff` 的物件。|  
+|[operator!=](#op_neq)|測試檔案位置指標是否不相等。|  
+|[operator+](#op_add)|遞增檔案位置指標|  
+|[operator+=](#op_add_eq)|遞增檔案位置指標|  
+|[operator-](#operator-)|減少檔案位置指標。|  
+|[operator-=](#operator-_eq)|減少檔案位置指標。|  
+|[operator==](#op_eq_eq)|測試檔案位置指標是否相等。|  
+|[operator streamoff](#op_streamoff)|將類型 `fpos` 的物件轉換成類型 `streamoff` 的物件。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<ios>  
   
  **命名空間：** std  
   
-##  <a name="a-namefposfposa--fposfpos"></a><a name="fpos__fpos"></a>  fpos::fpos  
+##  <a name="fpos"></a>  fpos::fpos  
  建立一個物件，其中包含與資料流中的位置 (位移) 有關的資訊。  
   
 ```  
@@ -117,7 +119,7 @@ fpos(Statetype _State, fpos_t _Filepos);
   
  第二個建構函式會儲存一個零位移及 `_State` 物件。  
   
-##  <a name="a-namefposoperatorneqa--fposoperator"></a><a name="fpos__operator_neq"></a>  fpos::operator!=  
+##  <a name="op_neq"></a>  fpos::operator!=  
  測試檔案位置指標是否不相等。  
   
 ```  
@@ -125,14 +127,14 @@ bool operator!=(const fpos<Statetype>& right) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  以比較目標為依據的檔案位置指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果檔案位置指標不相等，即為 **true**；否則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會傳回 **!**( **\*this ==** ` right`)。  
+ 成員函式會傳回 `!(*this == right)`。  
   
 ### <a name="example"></a>範例  
   
@@ -186,7 +188,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namefposoperatoradda--fposoperator"></a><a name="fpos__operator_add"></a>  fpos::operator+  
+##  <a name="op_add"></a>  fpos::operator+  
  遞增檔案位置指標  
   
 ```  
@@ -204,9 +206,9 @@ fpos<Statetype> operator+(streamoff _Off) const;
  此成員函式會傳回 **fpos(\*this) +=** `_Off`。  
   
 ### <a name="example"></a>範例  
-  如需 `operator+` 的使用方式範例，請參閱 [operator!=](#fpos__operator_neq)。  
+  如需 `operator+` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
   
-##  <a name="a-namefposoperatoraddeqa--fposoperator"></a><a name="fpos__operator_add_eq"></a>  fpos::operator+=  
+##  <a name="op_add_eq"></a>  fpos::operator+=  
  遞增檔案位置指標  
   
 ```  
@@ -224,9 +226,9 @@ fpos<Statetype>& operator+=(streamoff _Off);
  成員函式會將 `_Off` 新增至預存的位移成員物件，然後傳回 **\*this**。 針對檔案中的定位，通常僅當二進位資料流沒有依存於狀態的編碼時，結果才有效。  
   
 ### <a name="example"></a>範例  
-  如需 `operator+=` 的使用方式範例，請參閱 [operator!=](#fpos__operator_neq)。  
+  如需 `operator+=` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
   
-##  <a name="a-namefposoperator-a--fposoperator-"></a><a name="fpos__operator-"></a>  fpos::operator-  
+##  <a name="fpos__operator-"></a>  fpos::operator-  
  減少檔案位置指標。  
   
 ```  
@@ -236,19 +238,19 @@ fpos<Statetype> operator-(streamoff _Off) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  檔案位置。  
   
  `_Off`  
  資料流位移。  
   
 ### <a name="return-value"></a>傳回值  
- 第一個成員函式會傳回 **(streamoff)\*this - (streamoff)**` right`。 第二個成員函式會傳回 **fpos(\*this) -=** `_Off`。  
+ 第一個成員函式會傳回 `(streamoff)*this - (streamoff) right`。 第二個成員函式會傳回 `fpos(*this) -= _Off`。  
   
 ### <a name="example"></a>範例  
-  如需 `operator-` 的使用方式範例，請參閱 [operator!=](#fpos__operator_neq)。  
+  如需 `operator-` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
   
-##  <a name="a-namefposoperator-eqa--fposoperator-"></a><a name="fpos__operator-_eq"></a>  fpos::operator-=  
+##  <a name="fpos__operator-_eq"></a>  fpos::operator-=  
  減少檔案位置指標。  
   
 ```  
@@ -260,15 +262,15 @@ fpos<Statetype>& operator-=(streamoff _Off);
  資料流位移。  
   
 ### <a name="return-value"></a>傳回值  
- 此成員函式會傳回 **fpos(\*this) -=** `_Off`。  
+ 成員函式會傳回 `fpos(*this) -= _Off`。  
   
 ### <a name="remarks"></a>備註  
  針對檔案中的定位，通常僅當二進位資料流沒有依存於狀態的編碼時，結果才有效。  
   
 ### <a name="example"></a>範例  
-  如需 `operator-=` 的使用方式範例，請參閱 [operator!=](#fpos__operator_neq)。  
+  如需 `operator-=` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
   
-##  <a name="a-namefposoperatoreqeqa--fposoperator"></a><a name="fpos__operator_eq_eq"></a>  fpos::operator==  
+##  <a name="op_eq_eq"></a>  fpos::operator==  
  測試檔案位置指標是否相等。  
   
 ```  
@@ -276,19 +278,19 @@ bool operator==(const fpos<Statetype>& right) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  以比較目標為依據的檔案位置指標。  
   
 ### <a name="return-value"></a>傳回值  
  如果檔案位置指標相等，即為 **true**；否則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 **(streamoff)\*this == (streamoff)**` right`。  
+ 成員函式會傳回 `(streamoff)*this == (streamoff)right`。  
   
 ### <a name="example"></a>範例  
-  如需 `operator+=` 的使用方式範例，請參閱 [operator!=](#fpos__operator_neq)。  
+  如需 `operator+=` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
   
-##  <a name="a-namefposoperatorstreamoffa--fposoperator-streamoff"></a><a name="fpos__operator_streamoff"></a>  fpos::operator streamoff  
+##  <a name="op_streamoff"></a>  fpos::operator streamoff  
  將 `fpos` 類型的物件轉換成 `streamoff` 類型的物件。  
   
 ```  
@@ -325,14 +327,14 @@ int main( )
 0  
 ```  
   
-##  <a name="a-namefposseekposa--fposseekpos"></a><a name="fpos__seekpos"></a>  fpos::seekpos  
+##  <a name="seekpos"></a>  fpos::seekpos  
  此方法僅限 C++ 標準程式庫內部使用。 請勿從您的程式碼呼叫此方法。  
   
 ```  
 fpos_t seekpos() const;
 ```  
   
-##  <a name="a-namefposstatea--fposstate"></a><a name="fpos__state"></a>  fpos::state  
+##  <a name="state"></a>  fpos::state  
  設定或傳回轉換狀態。  
   
 ```  

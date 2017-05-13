@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d1831c28a8aab99478fb362d46db352674a360df
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c659b24b2d8364af4303c0667841224560914cd6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb、_mbctombb_l
@@ -87,14 +88,14 @@ unsigned int _mbctombb_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，`_mbctombb` 和 `_mbctombb_l` 會傳回對應至 `c` 的單一位元組字元；否則會傳回 `c`。  
+ 如果成功的話，`_mbctombb`和`_mbctombb_l`傳回對應至單一位元組字元`c`; 否則它會傳回`c`。  
   
 ## <a name="remarks"></a>備註  
- `_mbctombb` 和 `_mbctombb_l` 函式會將指定的多位元組字元轉換成對應之單一位元組的多位元組字元。 這些字元必須對應至 0x20-0x7E 或 0xA1-0xDF 範圍內的單一位元組字元，才能進行轉換。  
+ `_mbctombb`和`_mbctombb_l`函式會將指定的多位元組字元轉換成對應的單一位元組多位元組字元。 字元必須對應到 0x20-0x7E 或 0xA1-範圍內的單一位元組字元轉換 0xDF。  
   
  輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這個沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本與其相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- 在舊版中，`_mbctombb` 稱為 `zentohan`。 請改用 _`mbctombb`。  
+ 在舊版中，`_mbctombb` 稱為 `zentohan`。 請改用 `_mbctombb` 。  
   
 ## <a name="requirements"></a>需求  
   
@@ -104,9 +105,6 @@ unsigned int _mbctombb_l(
 |`_mbctombb_l`|\<mbstring.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   

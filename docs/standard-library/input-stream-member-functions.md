@@ -13,6 +13,7 @@ dev_langs:
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
+f1_keywords: []
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
 caps.latest.revision: 7
 author: corob-msft
@@ -32,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d270a9790f33fe5258108663f9618f0da1ed5b37
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 04820d66b272d284940971d1661b4c41f116aa2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="input-stream-member-functions"></a>輸入資料流成員函式
@@ -43,20 +45,20 @@ ms.lasthandoff: 02/24/2017
   
 - [輸入資料流的 open 函式](#vclrftheopenfunctionforinputstreamsanchor11)  
   
-- [get 函式](#vclrfthegetfunctionanchor12)  
+- [Get](#vclrfthegetfunctionanchor12)  
   
-- [getline 函式](#vclrfthegetlinefunctionanchor13)  
+- [Getline](#vclrfthegetlinefunctionanchor13)  
   
-- [read 函式](#vclrfthereadfunctionanchor14)  
+- [唯讀](#vclrfthereadfunctionanchor14)  
   
 - [seekg 和 tellg 函式](#vclrftheseekgandtellgfunctionsanchor7)  
   
 - [輸入資料流的 close 函式](#vclrftheclosefunctionforinputstreamsanchor15)  
   
-##  <a name="a-namevclrftheopenfunctionforinputstreamsanchor11a-the-open-function-for-input-streams"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> 輸入資料流的 open 函式  
+##  <a name="vclrftheopenfunctionforinputstreamsanchor11"></a> 輸入資料流的 open 函式  
  如果您使用輸入檔案資料流 (ifstream)，就必須將該資料流與特定的磁碟檔案建立關聯。 您可以在建構函式中進行此操作，或是使用 **open** 函式。 不論是上述哪一種情況，引數都相同。  
   
- 當您開啟與輸入資料流關聯的檔案時，通常需指定 [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) 旗標 (預設模式為 **ios::in**)。 如需 **open_mode** 旗標的清單，請參閱 [open 函式](#vclrftheopenfunctionforinputstreamsanchor11)。 這些旗標可以與位元 OR ( &#124; ) 運算子合併使用。  
+ 當您開啟與輸入資料流關聯的檔案時，通常需指定 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 旗標 (預設模式為 **ios::in**)。 取得一份**open_mode**旗標，請參閱[開啟](#vclrftheopenfunctionforinputstreamsanchor11)。 這些旗標可以與位元 OR ( &#124; ) 運算子合併使用。  
   
  若要讀取檔案，請先使用 **fail** 成員函式來判斷它是否存在：  
   
@@ -67,7 +69,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="a-namevclrfthegetfunctionanchor12a-the-get-function"></a><a name="vclrfthegetfunctionanchor12"></a> get 函式  
+##  <a name="vclrfthegetfunctionanchor12"></a>Get
  未格式化的 **get** 成員函式運作方式與 **>>** 運算子相同，但有兩個例外。 第一，**get** 函式包含空白字元，但在已設定 **skipws** 旗標 (預設) 的情況下，擷取器則會排除空白字元。 第二，**get** 函式較不可能導致將繫結的輸出資料流 (例如 `cout`) 清除。  
   
  **get** 函式的變化可指定緩衝區位址，以及要讀取的字元數上限。 這對於限制傳送給特定變數的字元數來說，相當有用，如以下範例所示：  
@@ -101,7 +103,7 @@ int main()
 1234  
 ```  
   
-##  <a name="a-namevclrfthegetlinefunctionanchor13a-the-getline-function"></a><a name="vclrfthegetlinefunctionanchor13"></a> getline 函式  
+##  <a name="vclrfthegetlinefunctionanchor13"></a>Getline
  **getline** 成員函式與 **get** 函式類似。 這兩個函式都允許使用第三引數來指定輸入的終止字元。 預設值是新行字元。 這兩個函式都會保留一個字元作為所需的終止字元。 不過，**get** 會保留資料流中的終止字元，而 **getline** 則是會移除終止字元。  
   
  以下範例會指定輸入資料流的終止字元：  
@@ -127,7 +129,7 @@ int main( )
 test  
 ```  
   
-##  <a name="a-namevclrfthereadfunctionanchor14a-the-read-function"></a><a name="vclrfthereadfunctionanchor14"></a> read 函式  
+##  <a name="vclrfthereadfunctionanchor14"></a>唯讀
  **read** 成員函式會從檔案將位元組讀取到指定的記憶體區域。 長度引數會決定所讀取的位元組數目。 如果您未將該引數包含在內，則在到達檔案的實際結尾時就會停止讀取，或在文字模式檔案的案例中，則是會在讀取到內嵌的 `EOF` 字元時停止讀取。  
   
  此範例會從薪資檔案將二進位記錄讀取到結構中：  
@@ -158,7 +160,7 @@ int main()
   
  程式會假設資料記錄是完全依照結構指定的方式格式化，沒有任何終止歸位字元或換行字元。  
   
-##  <a name="a-namevclrftheseekgandtellgfunctionsanchor7a-the-seekg-and-tellg-functions"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> seekg 和 tellg 函式  
+##  <a name="vclrftheseekgandtellgfunctionsanchor7"></a> seekg 和 tellg 函式  
  輸入檔案資料流會保留內部指標，該指標指向檔案中接下來要讀取資料的位置。 您可以使用 `seekg` 函式來設定這個指標，如下所示：  
   
 ```  
@@ -212,7 +214,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namevclrftheclosefunctionforinputstreamsanchor15a-the-close-function-for-input-streams"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> 輸入資料流的 close 函式  
+##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> 輸入資料流的 close 函式  
  **close** 成員函式會關閉與輸入檔案資料流關聯的磁碟檔案，然後釋出作業系統控制代碼。 [ifstream](../standard-library/basic-ifstream-class.md) 解構函式會為您關閉檔案，但如果您需要為相同的資料流物件開啟另一個檔案，則可以使用 **close** 函式。  
   
 ## <a name="see-also"></a>另請參閱  

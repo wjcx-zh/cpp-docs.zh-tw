@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 01fb7ae608b710fca96b073e7b3ea0dcf07dbc53
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0e3e8a35d2b33417e952155313307aa55f181eb4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
@@ -91,10 +92,10 @@ void * _aligned_offset_realloc_dbg(
  原始程式檔中的行號，其中要求 `aligned_offset_realloc` 作業，或為 NULL。  
   
 ## <a name="return-value"></a>傳回值  
- `_aligned_offset_realloc_dbg` 會傳回重新配置後 (且可能有移動) 記憶體區塊的 Void 指標。 若大小為&0;，且緩衝區引數不是 `NULL`，則傳回值為 `NULL`，或者，若沒有足夠的可用記憶體將區塊展開為指定大小，傳回值也會是 NULL。 在第一種情況中，會釋放原始區塊。 在第二種情況中，原始區塊會保留不變。 儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要取得 Void 類型以外的指標，請對傳回值使用類型轉換。  
+ `_aligned_offset_realloc_dbg` 會傳回重新配置後 (且可能有移動) 記憶體區塊的 Void 指標。 若大小為 0，且緩衝區引數不是 `NULL`，則傳回值為 `NULL`，或者，若沒有足夠的可用記憶體將區塊展開為指定大小，傳回值也會是 NULL。 在第一種情況中，會釋放原始區塊。 在第二種情況中，原始區塊會保留不變。 儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要取得 Void 類型以外的指標，請對傳回值使用類型轉換。  
   
 ## <a name="remarks"></a>備註  
- `_aligned_offset_realloc_dbg` 是 [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md) 函式的偵錯版本。 當 [_DEBUG](../../c-runtime-library/debug.md) 未定義時，每個 `_aligned_offset_realloc_dbg` 的呼叫會降至 `aligned_offset_realloc` 的呼叫。 \_`aligned_offset_realloc` 和 `_aligned_offset_realloc_dbg` 都會重新配置基底堆積中的記憶體區塊，但 `_aligned_offset_realloc_dbg` 還容納數種偵錯功能：在區塊的使用者部分的任一端使用緩衝區以測試遺漏，以及追蹤特定配置類型的區塊類型參數，還有判斷配置要求來源的 `filename`/`linenumber` 資訊。  
+ `_aligned_offset_realloc_dbg` 是 [_aligned_offset_realloc](../../c-runtime-library/reference/aligned-offset-realloc.md) 函式的偵錯版本。 當 [_DEBUG](../../c-runtime-library/debug.md) 未定義時，每個 `_aligned_offset_realloc_dbg` 的呼叫會降至 `_aligned_offset_realloc` 的呼叫。 `_aligned_offset_realloc` 和 `_aligned_offset_realloc_dbg` 都會重新配置基底堆積中的記憶體區塊，但 `_aligned_offset_realloc_dbg` 還容納數種偵錯功能：在區塊的使用者部分的任一端使用緩衝區以測試遺漏，以及追蹤特定配置類型的區塊類型參數，還有判斷配置要求來源的 `filename`/`linenumber` 資訊。  
   
  和 [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) 一樣，`_aligned_offset_realloc_dbg` 也可讓結構對齊結構中的位移。  
   
@@ -114,9 +115,6 @@ void * _aligned_offset_realloc_dbg(
   
 ## <a name="libraries"></a>程式庫  
  僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

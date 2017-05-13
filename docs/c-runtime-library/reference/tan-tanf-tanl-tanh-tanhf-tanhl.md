@@ -72,10 +72,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 94ad2866dc8b2284d674ccfa284646aac9a68efa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f52084801f695fe6c435e9c46520a6b2b3c9e754
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan、tanf、tanl、tanh、tanhf、tanhl
@@ -121,7 +122,7 @@ long double tanhl(
  角度 (弧度)。  
   
 ## <a name="return-value"></a>傳回值  
- `tan` 函式會傳回 `x` 的正切。 如果 `x` 大於或等於 263，或小於或等於 -263，結果中會發生精確度流失。  
+ `tan` 函式會傳回 `x` 的正切。 如果`x`是大於或等於 263，或小於或等於-263，就會發生遺失精確度結果。  
   
  `tanh` 函式會傳回 `x` 的雙曲正切。 不會傳回錯誤。  
   
@@ -168,12 +169,6 @@ int main( void )
 tan( 0.785398 ) = 1.000000  
 tanh( 1.000000 ) = 0.761594  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
-  
--   [System::Math::Tan](https://msdn.microsoft.com/en-us/library/system.math.tan.aspx)  
-  
--   [System::Math::Tanh](https://msdn.microsoft.com/en-us/library/system.math.tanh.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

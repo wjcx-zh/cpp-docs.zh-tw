@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8cda9bb597a24cc3e7988ba8ef4c4f8103861ea3
-ms.openlocfilehash: 3b559db7a8d8f8fbc0672d8d8a644579fd9e1ca8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4648fb28d20951b045abde39d0238de81a133f0c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
@@ -88,7 +89,7 @@ long double atanhl(
  浮點值。  
   
 ## <a name="return-value"></a>傳回值  
- `atanh` 函式會傳回 `x` 的反雙曲正切 (Arc 雙曲正切)。 若 `x` 大於 1，或小於 –1，`errno` 會設為 `EDOM`，且結果為無訊息 NaN。 若 `x` 等於 1 或 -1，則會分別傳回無限大的正數或負數，且 `errno` 會設為 `ERANGE`。  
+ `atanh` 函式會傳回 `x` 的反雙曲正切 (Arc 雙曲正切)。 如果`x`大於 1 或小於-1，`errno`設`EDOM`且結果為無訊息 NaN。 若 `x` 等於 1 或 -1，則會分別傳回無限大的正數或負數，且 `errno` 會設為 `ERANGE`。  
   
 |輸入|SEH 例外狀況|`Matherr` 例外狀況|  
 |-----------|-------------------|-------------------------|  
@@ -133,9 +134,6 @@ int main( void )
 tanh( 0.785398 ) = 0.655794  
 atanh( 0.655794 ) = 0.785398  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

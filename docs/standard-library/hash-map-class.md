@@ -11,10 +11,48 @@ ms.topic: article
 f1_keywords:
 - stdext::hash_map
 - hash_map/stdext::hash_map
-- std.hash_map
-- stdext.hash_map
-- std::hash_map
 - hash_map
+- hash_map/stdext::hash_map::allocator_type
+- hash_map/stdext::hash_map::const_iterator
+- hash_map/stdext::hash_map::const_pointer
+- hash_map/stdext::hash_map::const_reference
+- hash_map/stdext::hash_map::const_reverse_iterator
+- hash_map/stdext::hash_map::difference_type
+- hash_map/stdext::hash_map::iterator
+- hash_map/stdext::hash_map::key_compare
+- hash_map/stdext::hash_map::key_type
+- hash_map/stdext::hash_map::mapped_type
+- hash_map/stdext::hash_map::pointer
+- hash_map/stdext::hash_map::reference
+- hash_map/stdext::hash_map::reverse_iterator
+- hash_map/stdext::hash_map::size_type
+- hash_map/stdext::hash_map::value_type
+- hash_map/stdext::hash_map::at
+- hash_map/stdext::hash_map::begin
+- hash_map/stdext::hash_map::cbegin
+- hash_map/stdext::hash_map::cend
+- hash_map/stdext::hash_map::clear
+- hash_map/stdext::hash_map::count
+- hash_map/stdext::hash_map::crbegin
+- hash_map/stdext::hash_map::crend
+- hash_map/stdext::hash_map::emplace
+- hash_map/stdext::hash_map::emplace_hint
+- hash_map/stdext::hash_map::empty
+- hash_map/stdext::hash_map::end
+- hash_map/stdext::hash_map::equal_range
+- hash_map/stdext::hash_map::erase
+- hash_map/stdext::hash_map::find
+- hash_map/stdext::hash_map::get_allocator
+- hash_map/stdext::hash_map::insert
+- hash_map/stdext::hash_map::key_comp
+- hash_map/stdext::hash_map::lower_bound
+- hash_map/stdext::hash_map::max_size
+- hash_map/stdext::hash_map::rbegin
+- hash_map/stdext::hash_map::rend
+- hash_map/stdext::hash_map::size
+- hash_map/stdext::hash_map::swap
+- hash_map/stdext::hash_map::upper_bound
+- hash_map/stdext::hash_map::value_comp
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,10 +76,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 21f5925e6b5e7ac3dcaa32262ad2c39eac4d6827
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e16f164014497c2065c0632534d914067b88bb36
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="hashmap-class"></a>hash_map 類別
@@ -94,13 +133,13 @@ class hash_map
   
  當關聯值與其索引鍵的條件由應用程式滿足時，hash_map 應該要當成首選的關聯容器。 這個類型結構的模型是已排序的唯一關鍵字清單，舉例而言，其中關聯的字串值可提供定義。 相反地，如果文字具有一個以上的正確定義，並且索引鍵不是唯一的，則 hash_multimap 是首選容器。 另一方面，如果只儲存文字清單，則 hash_set 是正確的容器。 如果允許出現多次文字，則 hash_multiset 即是適當的容器結構。  
   
- hash_map 會藉由呼叫 [value_compare](../standard-library/value-compare-class.md) 類別的預存雜湊 `Traits` 物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](#hash_map__key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與 [hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> 類別的物件相同。 更明確地說，針對 `Key` 類型的所有 `Key` 值，`Traits`( `Key` ) 呼叫會產生 `size_t` 類型值的分佈。  
+ hash_map 會藉由呼叫 [value_compare](../standard-library/value-compare-class.md) 類別的預存雜湊 `Traits` 物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與 [hash_compare](../standard-library/hash-compare-class.md)<Key, less\<Key>> 類別的物件相同。 更明確地說，針對 `Key` 類型的所有 `Key` 值，`Traits`( `Key` ) 呼叫會產生 `size_t` 類型值的分佈。  
   
  通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 f(x y) 是有兩個引數物件 `x` 和 `y` 以及傳回值 `true` 或 `false` 的函式物件。 如果二元述詞為非自反、非對稱且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 在 f(x, y) 和 f(y, x) 為 false 時定義為相等，則施加於 hash_map 的順序是嚴格弱式順序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。  
   
  受控制序列中實際的項目順序取決於雜湊函式、排序函式以及儲存於此容器物件中雜湊資料表目前的大小。 您無法判斷目前雜湊資料表的大小，因此一般而言，無法預測受控制序列中項目的順序。 插入項目不會使任何迭代器無效，移除項目則僅會使特別指向被移除項目的迭代器無效。  
   
- hash_map 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](#hash_map__insert) 和 [hash_map](#hash_map__hash_map) 擁有以較弱的輸入迭代器作為範本參數的版本，其功能需求比雙向迭代器的類別所保證的還要少。 不同的迭代器概念因其功能的修改而形成關聯的系列。 每個迭代器概念有自己的一組需求，因此使用它們的演算法必須將其假設限制為該迭代器類型的需求。 可假設輸入迭代器可能已取值來參考某個物件，而且可能會遞增為序列中的下一個迭代器。 這是最小的一組功能，不過，已足以在類別成員函式的內容中有意義地溝通迭代器 `[First, Last)` 範圍。  
+ hash_map 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](#insert) 和 [hash_map](#hash_map) 擁有以較弱的輸入迭代器作為範本參數的版本，其功能需求比雙向迭代器的類別所保證的還要少。 不同的迭代器概念因其功能的修改而形成關聯的系列。 每個迭代器概念有自己的一組需求，因此使用它們的演算法必須將其假設限制為該迭代器類型的需求。 可假設輸入迭代器可能已取值來參考某個物件，而且可能會遞增為序列中的下一個迭代器。 這是最小的一組功能，不過，已足以在類別成員函式的內容中有意義地溝通迭代器 `[First, Last)` 範圍。  
   
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
@@ -108,72 +147,72 @@ class hash_map
   
 |||  
 |-|-|  
-|[hash_map](#hash_map__hash_map)|建構一個空的 `hash_map`，或是其他 `hash_map` 的全部或部分複本。|  
+|[hash_map](#hash_map)|建構一個空的 `hash_map`，或是其他 `hash_map` 的全部或部分複本。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#hash_map__allocator_type)|類型，表示 `allocator` 物件的 `hash_map` 類別。|  
-|[const_iterator](#hash_map__const_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的 `hash_map` 項目。|  
-|[const_pointer](#hash_map__const_pointer)|類型，提供 `const` 中 `hash_map` 項目之指標。|  
-|[const_reference](#hash_map__const_reference)|類型，提供儲存在 `const` 中供讀取和執行 `hash_map` 作業之 `const` 項目的參考。|  
-|[const_reverse_iterator](#hash_map__const_reverse_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的任何 `hash_map` 項目。|  
-|[difference_type](#hash_map__difference_type)|帶正負號的整數類型，可以用來表示範圍 (介於迭代器所指的項目) 中 `hash_map` 的項目數。|  
-|[iterator](#hash_map__iterator)|類型，其提供可讀取或修改 `hash_map` 中任何項目的雙向迭代器。|  
-|[key_compare](#hash_map__key_compare)|類型，提供可以比較兩個排序鍵的函式物件，以判斷兩個項目在 `hash_map` 中的相對順序。|  
-|[key_type](#hash_map__key_type)|類型，描述構成 `hash_map` 每個項目的排序鍵物件。|  
-|[mapped_type](#hash_map__mapped_type)|類型，表示儲存在 `hash_map` 中的資料類型。|  
-|[pointer](#hash_map__pointer)|類型，其提供 `hash_map` 中項目的指標。|  
-|[reference](#hash_map__reference)|類型，提供儲存在 `hash_map` 中之項目的參考。|  
-|[reverse_iterator](#hash_map__reverse_iterator)|類型，提供可以讀取或修改反轉 `hash_map` 中之項目的雙向迭代器。|  
-|[size_type](#hash_map__size_type)|不帶正負號的整數類型，可以表示 `hash_map` 中的項目數。|  
-|[value_type](#hash_map__value_type)|類型，提供可將兩個項目做為排序鍵進行比較之函式物件，以判斷項目在 `hash_map` 中的相對順序。|  
+|[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `hash_map` 類別。|  
+|[const_iterator](#const_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的 `hash_map` 項目。|  
+|[const_pointer](#const_pointer)|類型，提供 `const` 中 `hash_map` 項目之指標。|  
+|[const_reference](#const_reference)|類型，提供儲存在 `const` 中供讀取和執行 `hash_map` 作業之 `const` 項目的參考。|  
+|[const_reverse_iterator](#const_reverse_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的任何 `hash_map` 項目。|  
+|[difference_type](#difference_type)|帶正負號的整數類型，可以用來表示範圍 (介於迭代器所指的項目) 中 `hash_map` 的項目數。|  
+|[iterator](#iterator)|類型，其提供可讀取或修改 `hash_map` 中任何項目的雙向迭代器。|  
+|[key_compare](#key_compare)|類型，提供可以比較兩個排序鍵的函式物件，以判斷兩個項目在 `hash_map` 中的相對順序。|  
+|[key_type](#key_type)|類型，描述構成 `hash_map` 每個項目的排序鍵物件。|  
+|[mapped_type](#mapped_type)|類型，表示儲存在 `hash_map` 中的資料類型。|  
+|[pointer](#pointer)|類型，其提供 `hash_map` 中項目的指標。|  
+|[reference](#reference)|類型，提供儲存在 `hash_map` 中之項目的參考。|  
+|[reverse_iterator](#reverse_iterator)|類型，提供可以讀取或修改反轉 `hash_map` 中之項目的雙向迭代器。|  
+|[size_type](#size_type)|不帶正負號的整數類型，可以表示 `hash_map` 中的項目數。|  
+|[value_type](#value_type)|類型，提供可將兩個項目做為排序鍵進行比較之函式物件，以判斷項目在 `hash_map` 中的相對順序。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[hash_map::at](#hash_map__at)|在 `hash_map` 尋找具有指定索引鍵值的項目。|  
-|[begin](#hash_map__begin)|傳回迭代器，為 `hash_map` 中的第一個項目定址。|  
-|[hash_map::cbegin](#hash_map__cbegin)|傳回常數迭代器，為 `hash_map` 中的第一個項目定址。|  
-|[hash_map::cend](#hash_map__cend)|傳回常數迭代器，為 `hash_map` 中最後一個項目的下一個位置定址。|  
-|[clear](#hash_map__clear)|清除 `hash_map` 的所有項目。|  
-|[count](#hash_map__count)|傳回 `hash_map` 中索引鍵符合參數指定之索引鍵的項目數目。|  
-|[hash_map::crbegin](#hash_map__crbegin)|傳回常數迭代器，為反轉 `hash_map` 中的第一個項目定址。|  
-|[hash_map::crend](#hash_map__crend)|傳回常數迭代器，為反轉 `hash_map` 中最後一個項目的下一個位置定址。|  
-|[hash_map::emplace](#hash_map__emplace)|將就地建構的項目插入 `hash_map` 中。|  
-|[hash_map::emplace_hint](#hash_map__emplace_hint)|將就地建構的項目 (含位置提示) 插入 `hash_map` 中。|  
-|[empty](#hash_map__empty)|測試 `hash_map` 是否為空白。|  
-|[end](#hash_map__end)|傳回迭代器，為 `hash_map` 中最後一個項目的下一個位置定址。|  
-|[equal_range](#hash_map__equal_range)|傳回一組迭代器，分別指向 `hash_map` 中索引鍵大於特定索引鍵的第一個項目，以及指向 `hash_map` 中索引鍵等於或大於該索引鍵的第一個項目。|  
-|[erase](#hash_map__erase)|從指定位置移除在 `hash_map` 中的項目或某個範圍的項目。|  
-|[find](#hash_map__find)|傳回迭代器，為 `hash_map` 中索引鍵等於指定索引鍵項目位置定址。|  
-|[get_allocator](#hash_map__get_allocator)|傳回用來建構 `allocator` 的 `hash_map` 物件複本。|  
-|[insert](#hash_map__insert)|將項目或項目範圍插入至 `hash_map`。|  
-|[key_comp](#hash_map__key_comp)|傳回迭代器，指向 `hash_map` 中索引鍵值等於或大於特定索引鍵值的第一個項目。|  
-|[lower_bound](#hash_map__lower_bound)|傳回迭代器，指向 `hash_map` 中索引鍵值等於或大於特定索引鍵值的第一個項目。|  
-|[max_size](#hash_map__max_size)|傳回 `hash_map` 的最大長度。|  
-|[rbegin](#hash_map__rbegin)|傳回迭代器，為反轉 `hash_map` 中的第一個項目定址。|  
-|[rend](#hash_map__rend)|傳回迭代器，為反轉 `hash_map` 中最後一個項目的下一個位置定址。|  
-|[size](#hash_map__size)|傳回 `hash_map` 中項目的數目。|  
-|[swap](#hash_map__swap)|交換兩個 `hash_map` 的項目。|  
-|[upper_bound](#hash_map__upper_bound)|傳回迭代器，其會指向 `hash_map` 中索引鍵值大於特定索引鍵值的第一個項目。|  
-|[value_comp](#hash_map__value_comp)|擷取 `hash_map` 中用於排序項目值之比較物件的複本。|  
+|[at](#at)|在 `hash_map` 尋找具有指定索引鍵值的項目。|  
+|[begin](#begin)|傳回迭代器，為 `hash_map` 中的第一個項目定址。|  
+|[cbegin](#cbegin)|傳回常數迭代器，為 `hash_map` 中的第一個項目定址。|  
+|[cend](#cend)|傳回常數迭代器，為 `hash_map` 中最後一個項目的下一個位置定址。|  
+|[clear](#clear)|清除 `hash_map` 的所有項目。|  
+|[count](#count)|傳回 `hash_map` 中索引鍵符合參數指定之索引鍵的項目數目。|  
+|[crbegin](#crbegin)|傳回常數迭代器，為反轉 `hash_map` 中的第一個項目定址。|  
+|[crend](#crend)|傳回常數迭代器，為反轉 `hash_map` 中最後一個項目的下一個位置定址。|  
+|[emplace](#emplace)|將就地建構的項目插入 `hash_map` 中。|  
+|[emplace_hint](#emplace_hint)|將就地建構的項目 (含位置提示) 插入 `hash_map` 中。|  
+|[empty](#empty)|測試 `hash_map` 是否為空白。|  
+|[end](#end)|傳回迭代器，為 `hash_map` 中最後一個項目的下一個位置定址。|  
+|[equal_range](#equal_range)|傳回一組迭代器，分別指向 `hash_map` 中索引鍵大於特定索引鍵的第一個項目，以及指向 `hash_map` 中索引鍵等於或大於該索引鍵的第一個項目。|  
+|[erase](#erase)|從指定位置移除在 `hash_map` 中的項目或某個範圍的項目。|  
+|[find](#find)|傳回迭代器，為 `hash_map` 中索引鍵等於指定索引鍵項目位置定址。|  
+|[get_allocator](#get_allocator)|傳回用來建構 `allocator` 的 `hash_map` 物件複本。|  
+|[insert](#insert)|將項目或項目範圍插入至 `hash_map`。|  
+|[key_comp](#key_comp)|傳回迭代器，指向 `hash_map` 中索引鍵值等於或大於特定索引鍵值的第一個項目。|  
+|[lower_bound](#lower_bound)|傳回迭代器，指向 `hash_map` 中索引鍵值等於或大於特定索引鍵值的第一個項目。|  
+|[max_size](#max_size)|傳回 `hash_map` 的最大長度。|  
+|[rbegin](#rbegin)|傳回迭代器，為反轉 `hash_map` 中的第一個項目定址。|  
+|[rend](#rend)|傳回迭代器，為反轉 `hash_map` 中最後一個項目的下一個位置定址。|  
+|[size](#size)|傳回 `hash_map` 中項目的數目。|  
+|[swap](#swap)|交換兩個 `hash_map` 的項目。|  
+|[upper_bound](#upper_bound)|傳回迭代器，其會指向 `hash_map` 中索引鍵值大於特定索引鍵值的第一個項目。|  
+|[value_comp](#value_comp)|擷取 `hash_map` 中用於排序項目值之比較物件的複本。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#hash_map__operator_at)|將具有特定索引鍵值的項目插入 `hash_map` 中。|  
-|[hash_map::operator=](#hash_map__operator_eq)|用另一個 `hash_map` 的複本取代 `hash_map` 的項目。|  
+|[operator&#91;&#93;](#op_at)|將具有特定索引鍵值的項目插入 `hash_map` 中。|  
+|[hash_map::operator=](#op_eq)|用另一個 `hash_map` 的複本取代 `hash_map` 的項目。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<hash_map>  
   
  **命名空間：** stdext  
   
-##  <a name="a-namehashmapallocatortypea--hashmapallocatortype"></a><a name="hash_map__allocator_type"></a>  hash_map::allocator_type  
+##  <a name="allocator_type"></a>  hash_map::allocator_type  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -185,9 +224,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 ```  
   
 ### <a name="example"></a>範例  
-  如需使用 `allocator_type` 的範例，請參閱 [get_allocator](#hash_map__get_allocator) 的範例。  
+  如需使用 `allocator_type` 的範例，請參閱 [get_allocator](#get_allocator) 的範例。  
   
-##  <a name="a-namehashmapata--hashmapat"></a><a name="hash_map__at"></a>  hash_map::at  
+##  <a name="at"></a>  hash_map::at  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -205,7 +244,7 @@ const Type& at(const Key& key) const;
 |||  
 |-|-|  
 |參數|說明|  
-|` key`|所要尋找之元素的索引鍵值。|  
+|`key`|所要尋找之元素的索引鍵值。|  
   
 ### <a name="return-value"></a>傳回值  
  所找到項目之資料值的參考。  
@@ -242,7 +281,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapbegina--hashmapbegin"></a><a name="hash_map__begin"></a>  hash_map::begin  
+##  <a name="begin"></a>  hash_map::begin  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -302,7 +341,7 @@ The first element of hm1 is 0.
 The first element of hm1 is now 1.  
 ```  
   
-##  <a name="a-namehashmapcbegina--hashmapcbegin"></a><a name="hash_map__cbegin"></a>  hash_map::cbegin  
+##  <a name="cbegin"></a>  hash_map::cbegin  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -345,7 +384,7 @@ int main( )
 The first element of hm1 is 2.  
 ```  
   
-##  <a name="a-namehashmapcenda--hashmapcend"></a><a name="hash_map__cend"></a>  hash_map::cend  
+##  <a name="cend"></a>  hash_map::cend  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -396,7 +435,7 @@ int main( )
 The value of last element of hm1 is 30.  
 ```  
   
-##  <a name="a-namehashmapcleara--hashmapclear"></a><a name="hash_map__clear"></a>  hash_map::clear  
+##  <a name="clear"></a>  hash_map::clear  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -446,7 +485,7 @@ The size of the hash_map is initially 2.
 The size of the hash_map after clearing is 0.  
 ```  
   
-##  <a name="a-namehashmapconstiteratora--hashmapconstiterator"></a><a name="hash_map__const_iterator"></a>  hash_map::const_iterator  
+##  <a name="const_iterator"></a>  hash_map::const_iterator  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -460,7 +499,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>備註  
  類型 `const_iterator` 無法用來修改元素的值。  
   
- hash_map 所定義的 `const_iterator` 會指向作為 [value_type](#hash_map__value_type) 之物件的元素，value_type 的類型為 `pair`*\<***const Key, Type***>*，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
+ hash_map 所定義的 `const_iterator` 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 `pair`*\<***const Key, Type***>*，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
   
  若要對指向 hash_map 中某個元素的 `const_iterator``cIter` 進行取值，請使用 **->** 運算子。  
   
@@ -469,9 +508,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="example"></a>範例  
-  如需使用 `const_iterator` 的範例，請參閱 [begin](#hash_map__begin) 的範例。  
+  如需使用 `const_iterator` 的範例，請參閱 [begin](#begin) 的範例。  
   
-##  <a name="a-namehashmapconstpointera--hashmapconstpointer"></a><a name="hash_map__const_pointer"></a>  hash_map::const_pointer  
+##  <a name="const_pointer"></a>  hash_map::const_pointer  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -485,11 +524,11 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ### <a name="remarks"></a>備註  
  類型 `const_pointer` 無法用來修改元素的值。  
   
- 在大多數情況下，應該使用 [iterator](#hash_map__iterator) 來存取 hash_map 物件中的元素。  
+ 在大多數情況下，應該使用 [iterator](#iterator) 來存取 hash_map 物件中的元素。  
   
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
-##  <a name="a-namehashmapconstreferencea--hashmapconstreference"></a><a name="hash_map__const_reference"></a>  hash_map::const_reference  
+##  <a name="const_reference"></a>  hash_map::const_reference  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -546,7 +585,7 @@ The key of the first element in the hash_map is 1.
 The data value of the first element in the hash_map is 10.  
 ```  
   
-##  <a name="a-namehashmapconstreverseiteratora--hashmapconstreverseiterator"></a><a name="hash_map__const_reverse_iterator"></a>  hash_map::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  hash_map::const_reverse_iterator  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -560,7 +599,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>備註  
  類型 `const_reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 hash_map。  
   
- hash_map 所定義的 `const_reverse_iterator` 會指向作為 [value_type](#hash_map__value_type) 之物件的元素，value_type 的類型為 `pair`\< **const Key, Type**>，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
+ hash_map 所定義的 `const_reverse_iterator` 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 `pair`\< **const Key, Type**>，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
   
  若要對指向 hash_map 中某個元素的 `const_reverse_iterator``crIter` 進行取值，請使用 **->** 運算子。  
   
@@ -569,9 +608,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `const_reverse_iterator` 的範例，請參閱 [rend](#hash_map__rend) 的範例。  
+  如需如何宣告及使用 `const_reverse_iterator` 的範例，請參閱 [rend](#rend) 的範例。  
   
-##  <a name="a-namehashmapcounta--hashmapcount"></a><a name="hash_map__count"></a>  hash_map::count  
+##  <a name="count"></a>  hash_map::count  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -583,7 +622,7 @@ size_type count(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要從 hash_map 中比對之元素的索引鍵值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -641,7 +680,7 @@ The number of elements in hm1 with a sort key of 2 is: 1.
 The number of elements in hm1 with a sort key of 3 is: 0.  
 ```  
   
-##  <a name="a-namehashmapcrbegina--hashmapcrbegin"></a><a name="hash_map__crbegin"></a>  hash_map::crbegin  
+##  <a name="crbegin"></a>  hash_map::crbegin  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -656,7 +695,7 @@ const_reverse_iterator crbegin() const;
  常數反轉雙向迭代器，定址對象是反轉 [hash_map](../standard-library/hash-map-class.md) 中的第一個元素，或未反轉 `hash_map` 中的最後一個元素。  
   
 ### <a name="remarks"></a>備註  
- `crbegin` 是與反轉 hash_map 搭配使用，就如同 [begin](#hash_map__begin) 是與 `hash_map` 搭配使用一樣。  
+ `crbegin` 是與反轉 hash_map 搭配使用，就如同 [begin](#begin) 是與 `hash_map` 搭配使用一樣。  
   
  有 `crbegin` 的傳回值時，無法修改 `hash_map` 物件。  
   
@@ -693,7 +732,7 @@ int main( )
 The first element of the reversed hash_map hm1 is 3.  
 ```  
   
-##  <a name="a-namehashmapcrenda--hashmapcrend"></a><a name="hash_map__crend"></a>  hash_map::crend  
+##  <a name="crend"></a>  hash_map::crend  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -708,7 +747,7 @@ const_reverse_iterator crend() const;
  常數反轉雙向迭代器，定址對象是反轉 [hash_map](../standard-library/hash-map-class.md) 中最後一個元素後面的位置 (未反轉 `hash_map` 中第一個元素前面的位置)。  
   
 ### <a name="remarks"></a>備註  
- `crend` 是與反轉 `hash_map` 搭配使用，就如同 [hash_map::end](#hash_map__end) 是與 `hash_map` 搭配使用一樣。  
+ `crend` 是與反轉 `hash_map` 搭配使用，就如同 [hash_map::end](#end) 是與 `hash_map` 搭配使用一樣。  
   
  有 `crend` 的傳回值時，無法修改 `hash_map` 物件。  
   
@@ -748,7 +787,7 @@ int main( )
 The last element of the reversed hash_map hm1 is 3.  
 ```  
   
-##  <a name="a-namehashmapdifferencetypea--hashmapdifferencetype"></a><a name="hash_map__difference_type"></a>  hash_map::difference_type  
+##  <a name="difference_type"></a>  hash_map::difference_type  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -818,7 +857,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 20.  
 ```  
   
-##  <a name="a-namehashmapemplacea--hashmapemplace"></a><a name="hash_map__emplace"></a>  hash_map::emplace  
+##  <a name="emplace"></a>  hash_map::emplace  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -837,7 +876,7 @@ emplace(
 |||  
 |-|-|  
 |參數|說明|  
-|` val`|用來移動建構要插入到 [hash_map](../standard-library/hash-map-class.md) 中之元素的值，除非 `hash_map` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|  
+|`val`|用來移動建構要插入到 [hash_map](../standard-library/hash-map-class.md) 中之元素的值，除非 `hash_map` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|  
   
 ### <a name="return-value"></a>傳回值  
  `emplace` 成員函式會傳回一個配對，如果已進行插入，此配對的 bool 元件就會傳回 true，如果 `hash_map` 已經包含元素，其中該元素的索引鍵具有對等的排序值，且其 iterator 元件傳回新元素的插入位址或元素已在的位址，則會傳回 false。  
@@ -845,7 +884,7 @@ emplace(
  若要存取此成員函式所傳回之配對 `pr` 的 iterator 元件，請使用 `pr.first`，若要取其值，請使用 `*(pr.first)`。 若要存取此成員函式所傳回之配對 `pr` 的 `bool` 元件，請使用 `pr.second`，若要取其值，請使用 `*(pr.second)`。  
   
 ### <a name="remarks"></a>備註  
- 元素的 [hash_map::value_type](#hash_map__value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
+ 元素的 [hash_map::value_type](#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
  從 Visual C++ .NET 2003 開始，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
@@ -878,7 +917,7 @@ After the emplace insertion, hm1 contains:
  1 => a  
 ```  
   
-##  <a name="a-namehashmapemplacehinta--hashmapemplacehint"></a><a name="hash_map__emplace_hint"></a>  hash_map::emplace_hint  
+##  <a name="emplace_hint"></a>  hash_map::emplace_hint  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -897,14 +936,14 @@ iterator emplace_hint(
 |||  
 |-|-|  
 |參數|說明|  
-|` val`|用來移動建構要插入到 [hash_map](../standard-library/hash-map-class.md) 中之元素的值，除非 `hash_map` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|  
+|`val`|用來移動建構要插入到 [hash_map](../standard-library/hash-map-class.md) 中之元素的值，除非 `hash_map` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|  
 |`_Where`|一個有關要從哪裡開始搜尋正確插入點的提示。|  
   
 ### <a name="return-value"></a>傳回值  
- [hash_multimap::emplace](../standard-library/hash-multimap-class.md#hash_multimap__emplace) 成員函式會傳回迭代器，此迭代器指向新元素在 `hash_map` 中的插入位置，或具有對等排序之現有元素的所在位置。  
+ [hash_multimap::emplace](../standard-library/hash-multimap-class.md#emplace) 成員函式會傳回迭代器，此迭代器指向新元素在 `hash_map` 中的插入位置，或具有對等排序之現有元素的所在位置。  
   
 ### <a name="remarks"></a>備註  
- 元素的 [hash_map::value_type](#hash_map__value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
+ 元素的 [hash_map::value_type](#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
  如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入。  
   
@@ -939,7 +978,7 @@ After the emplace insertion, hm1 contains:
  1 => a  
 ```  
   
-##  <a name="a-namehashmapemptya--hashmapempty"></a><a name="hash_map__empty"></a>  hash_map::empty  
+##  <a name="empty"></a>  hash_map::empty  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -990,7 +1029,7 @@ The hash_map hm1 is not empty.
 The hash_map hm2 is empty.  
 ```  
   
-##  <a name="a-namehashmapenda--hashmapend"></a><a name="hash_map__end"></a>  hash_map::end  
+##  <a name="end"></a>  hash_map::end  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1059,7 +1098,7 @@ The value of last element of hm1 is 30.
 The value of last element of hm1 is now 20.  
 ```  
   
-##  <a name="a-namehashmapequalrangea--hashmapequalrange"></a><a name="hash_map__equal_range"></a>  hash_map::equal_range  
+##  <a name="equal_range"></a>  hash_map::equal_range  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1073,11 +1112,11 @@ pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要與所搜尋之 hash_map 中元素的排序鍵比較的引數索引鍵值。  
   
 ### <a name="return-value"></a>傳回值  
- 一組迭代器，其中第一個是索引鍵的 [lower_bound](#hash_map__lower_bound)，第二個是索引鍵的 [upper_bound](#hash_map__upper_bound)。  
+ 一組迭代器，其中第一個是索引鍵的 [lower_bound](#lower_bound)，第二個是索引鍵的 [upper_bound](#upper_bound)。  
   
  若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
   
@@ -1145,7 +1184,7 @@ A direct call of upper_bound( 2 ) gives 30,
 The hash_map hm1 doesn't have an element with a key less than 40.  
 ```  
   
-##  <a name="a-namehashmaperasea--hashmaperase"></a><a name="hash_map__erase"></a>  hash_map::erase  
+##  <a name="erase"></a>  hash_map::erase  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1164,13 +1203,13 @@ size_type erase(const key_type& key);
  `_Where`  
  要從 hash_map 中移除之項目的位置。  
   
- ` first`  
+ `first`  
  從 hash_map 中移除之第一個項目的位置。  
   
- ` last`  
+ `last`  
  從 hash_map 中移除的最後一個項目之後的位置。  
   
- ` key`  
+ `key`  
  要從 hash_map 中移除之項目的索引鍵值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1267,7 +1306,7 @@ After another element with a key equal to that
 of the 2nd element is deleted, the hash_map hm3 is: 0 3.  
 ```  
   
-##  <a name="a-namehashmapfinda--hashmapfind"></a><a name="hash_map__find"></a>  hash_map::find  
+##  <a name="find"></a>  hash_map::find  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1281,7 +1320,7 @@ const_iterator find(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要以所搜尋之 hash_map 中元素的排序鍵比對的索引鍵值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1290,7 +1329,7 @@ const_iterator find(const Key& key) const;
 ### <a name="remarks"></a>備註  
  **find** 會傳回迭代器，定址對象是 hash_map 中，在根據小於可比較性關聯來引發排序的二元述詞下，其排序鍵等於引數索引鍵的元素。  
   
- 如果將 **find** 的傳回值指派給 [const_iterator](#hash_map__const_iterator)，便無法修改 hash_map 物件。 如果將 **find** 的傳回值指派給 [iterator](#hash_map__iterator)，則可以修改 hash_map 物件。  
+ 如果將 **find** 的傳回值指派給 [const_iterator](#const_iterator)，便無法修改 hash_map 物件。 如果將 **find** 的傳回值指派給 [iterator](#iterator)，則可以修改 hash_map 物件。  
   
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
@@ -1345,7 +1384,7 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="a-namehashmapgetallocatora--hashmapgetallocator"></a><a name="hash_map__get_allocator"></a>  hash_map::get_allocator  
+##  <a name="get_allocator"></a>  hash_map::get_allocator  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1421,7 +1460,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmaphashmapa--hashmaphashmap"></a><a name="hash_map__hash_map"></a>  hash_map::hash_map  
+##  <a name="hash_map"></a>  hash_map::hash_map  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1485,11 +1524,11 @@ hash_map(
 |`IList`|initializer_list|  
   
 ### <a name="remarks"></a>備註  
- 所有建構函式都會儲存一種配置器物件，此物件可管理 hash_map 的記憶體儲存，且之後藉由呼叫 [get_allocator](#hash_map__get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
+ 所有建構函式都會儲存一種配置器物件，此物件可管理 hash_map 的記憶體儲存，且之後藉由呼叫 [get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
   
  所有建構函式都會將其 hash_map 初始化。  
   
- 所有建構函式都會儲存一個 `Traits` 類型的函式物件，此物件可用來在 hash_map 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#hash_map__key_comp) 即可傳回此物件。  
+ 所有建構函式都會儲存一個 `Traits` 類型的函式物件，此物件可用來在 hash_map 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#key_comp) 即可傳回此物件。  
   
  前三個建構函式會指定空的初始 hash_map，此外，第二個建構函式還會指定建立元素順序時所要使用的比較函式類型 ( `Comp`)，而第三個建構函式則會明確指定所要使用的配置器類型 ( `Al`)。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。  
   
@@ -1499,7 +1538,7 @@ hash_map(
   
  最後一個建構函式會移動 hash_map `Right`。  
   
-##  <a name="a-namehashmapinserta--hashmapinsert"></a><a name="hash_map__insert"></a>  hash_map::insert  
+##  <a name="insert"></a>  hash_map::insert  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1535,10 +1574,10 @@ iterator insert(
 |||  
 |-|-|  
 |參數|描述|  
-|` val`|要插入到 hash_map 中之元素的值，除非 hash_map 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|  
+|`val`|要插入到 hash_map 中之元素的值，除非 hash_map 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|  
 |`_Where`|一個有關要從哪裡開始搜尋正確插入點的提示。|  
-|` first`|要從 hash_map 複製之第一個元素的位置。|  
-|` last`|緊接在要從 hash_map 複製之最後一個元素後面的位置。|  
+|`first`|要從 hash_map 複製之第一個元素的位置。|  
+|`last`|緊接在要從 hash_map 複製之最後一個元素後面的位置。|  
   
 ### <a name="return-value"></a>傳回值  
  第一個 **insert** 成員函式會傳回一個配對，如果已進行插入，此配對的 bool 元件就會傳回 true，如果 hash_map 已經包含元素，其中該元素的索引鍵具有對等的排序值，且其 iterator 元件傳回新元素的插入位址或元素已在的位址，則會傳回 false。  
@@ -1550,7 +1589,7 @@ iterator insert(
  最後兩個 **insert** 成員函式的行為與前兩個相同，差異在於它們會移動建構所插入的值。  
   
 ### <a name="remarks"></a>備註  
- 元素的 [value_type](../standard-library/map-class.md#map__value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
+ 元素的 [value_type](../standard-library/map-class.md#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
  針對插入的提示版本，如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入。  
   
@@ -1663,7 +1702,7 @@ After the move insertion, hm4 contains:
  2 => b  
 ```  
   
-##  <a name="a-namehashmapiteratora--hashmapiterator"></a><a name="hash_map__iterator"></a>  hash_map::iterator  
+##  <a name="iterator"></a>  hash_map::iterator  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1675,7 +1714,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 ```  
   
 ### <a name="remarks"></a>備註  
- hash_map 所定義的 **iterator** 會指向作為 [value_type](#hash_map__value_type) 之物件的元素，value_type 的類型為 **pair\<const Key, Type>**，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
+ hash_map 所定義的 **iterator** 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 **pair\<const Key, Type>**，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
   
  若要對指向 multimap 中某個元素的 **iterator**`Iter` 進行取值，請使用 **->** 運算子。  
   
@@ -1686,9 +1725,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#hash_map__begin) 的範例。  
+  如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#begin) 的範例。  
   
-##  <a name="a-namehashmapkeycompa--hashmapkeycomp"></a><a name="hash_map__key_comp"></a>  hash_map::key_comp  
+##  <a name="key_comp"></a>  hash_map::key_comp  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1705,9 +1744,9 @@ key_compare key_comp() const;
 ### <a name="remarks"></a>備註  
  預存物件會定義成員函式  
   
- **bool operator**( **const Key&** ` left`**, const Key&** ` right`);  
+ **bool operator**( **const Key&** `left`**, const Key&** `right`);  
   
- 如果 ` left` 在前面且在排序次序中不等於 ` right`，此函式就會傳回 **true**。  
+ 如果 `left` 在前面且在排序次序中不等於 `right`，此函式就會傳回 **true**。  
   
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
@@ -1764,7 +1803,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapkeycomparea--hashmapkeycompare"></a><a name="hash_map__key_compare"></a>  hash_map::key_compare  
+##  <a name="key_compare"></a>  hash_map::key_compare  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1783,9 +1822,9 @@ typedef Traits key_compare;
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `key_compare` 的範例，請參閱 [key_comp](#hash_map__key_comp) 的範例。  
+  如需如何宣告及使用 `key_compare` 的範例，請參閱 [key_comp](#key_comp) 的範例。  
   
-##  <a name="a-namehashmapkeytypea--hashmapkeytype"></a><a name="hash_map__key_type"></a>  hash_map::key_type  
+##  <a name="key_type"></a>  hash_map::key_type  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1804,9 +1843,9 @@ typedef Key key_type;
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `key_type` 的範例，請參閱 [value_type](#hash_map__value_type) 的範例。  
+  如需如何宣告及使用 `key_type` 的範例，請參閱 [value_type](#value_type) 的範例。  
   
-##  <a name="a-namehashmaplowerbounda--hashmaplowerbound"></a><a name="hash_map__lower_bound"></a>  hash_map::lower_bound  
+##  <a name="lower_bound"></a>  hash_map::lower_bound  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1820,11 +1859,11 @@ const_iterator lower_bound(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要與所搜尋之 hash_map 中元素的排序鍵比較的引數索引鍵值。  
   
 ### <a name="return-value"></a>傳回值  
- [iterator](#hash_map__iterator) 或 [const_iterator](#hash_map__const_iterator)，定址對象是 hash_map 中索引鍵等於或大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_map 中最後一個元素後面的位置。  
+ [iterator](#iterator) 或 [const_iterator](#const_iterator)，定址對象是 hash_map 中索引鍵等於或大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_map 中最後一個元素後面的位置。  
   
  如果將 `lower_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_map 物件。 如果將 `lower_bound` 的傳回值指派給 **iterator**，則可以修改 hash_map 物件。  
   
@@ -1882,7 +1921,7 @@ The hash_map hm1 doesn't have an element with a key of 4.
 The element of hm1 with a key matching that of the last element is: 30.  
 ```  
   
-##  <a name="a-namehashmapmappedtypea--hashmapmappedtype"></a><a name="hash_map__mapped_type"></a>  hash_map::mapped_type  
+##  <a name="mapped_type"></a>  hash_map::mapped_type  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1901,9 +1940,9 @@ typedef Type mapped_type;
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `key_type` 的範例，請參閱 [value_type](#hash_map__value_type) 的範例。  
+  如需如何宣告及使用 `key_type` 的範例，請參閱 [value_type](#value_type) 的範例。  
   
-##  <a name="a-namehashmapmaxsizea--hashmapmaxsize"></a><a name="hash_map__max_size"></a>  hash_map::max_size  
+##  <a name="max_size"></a>  hash_map::max_size  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1942,7 +1981,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapoperatorata--hashmapoperator"></a><a name="hash_map__operator_at"></a>  hash_map::operator[]  
+##  <a name="op_at"></a>  hash_map::operator[]  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -1960,7 +1999,7 @@ Type& operator[](Key&& key);
 |||  
 |-|-|  
 |參數|說明|  
-|` key`|所要插入之元素的索引鍵值。|  
+|`key`|所要插入之元素的索引鍵值。|  
   
 ### <a name="return-value"></a>傳回值  
  所插入項目之資料值的參考。  
@@ -1972,9 +2011,9 @@ Type& operator[](Key&& key);
   
  `m[ key] = DataValue`;  
   
- 其中 DataValue 是索引鍵值為 ` key` 之元素的 `mapped_type` 值。  
+ 其中 DataValue 是索引鍵值為 `key` 之元素的 `mapped_type` 值。  
   
- 使用 `operator[]` 來插入元素時，傳回的參考不會指出插入是變更預先存在的元素，還是建立新的元素。 成員函式 [find](../standard-library/map-class.md#map__find) 和 [insert](../standard-library/map-class.md#map__insert) 可用來判斷具有指定索引鍵的元素在插入之前是否已經存在。  
+ 使用 `operator[]` 來插入元素時，傳回的參考不會指出插入是變更預先存在的元素，還是建立新的元素。 成員函式 [find](../standard-library/map-class.md#find) 和 [insert](../standard-library/map-class.md#insert) 可用來判斷具有指定索引鍵的元素在插入之前是否已經存在。  
   
 ### <a name="example"></a>範例  
   
@@ -2038,7 +2077,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapoperatoreqa--hashmapoperator"></a><a name="hash_map__operator_eq"></a>  hash_map::operator=  
+##  <a name="op_eq"></a>  hash_map::operator=  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2056,10 +2095,10 @@ hash_map& operator=(hash_map&& right);
 |||  
 |-|-|  
 |參數|說明|  
-|` right`|要複製到 `hash_map` 中的 [hash_map 類別](../standard-library/hash-map-class.md)。|  
+|`right`|要複製到 `hash_map` 中的 [hash_map 類別](../standard-library/hash-map-class.md)。|  
   
 ### <a name="remarks"></a>備註  
- 清除 `hash_map` 中的任何現有項目之後，`operator=` 會將 ` right` 的內容複製或移到 `hash_map` 中。  
+ 清除 `hash_map` 中的任何現有項目之後，`operator=` 會將 `right` 的內容複製或移到 `hash_map` 中。  
   
 ### <a name="example"></a>範例  
   
@@ -2099,7 +2138,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmappointera--hashmappointer"></a><a name="hash_map__pointer"></a>  hash_map::pointer  
+##  <a name="pointer"></a>  hash_map::pointer  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2113,11 +2152,11 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ### <a name="remarks"></a>備註  
  類型 **pointer** 可用來修改元素的值。  
   
- 在大多數情況下，應該使用 [iterator](#hash_map__iterator) 來存取 hash_map 物件中的元素。  
+ 在大多數情況下，應該使用 [iterator](#iterator) 來存取 hash_map 物件中的元素。  
   
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
-##  <a name="a-namehashmaprbegina--hashmaprbegin"></a><a name="hash_map__rbegin"></a>  hash_map::rbegin  
+##  <a name="rbegin"></a>  hash_map::rbegin  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2134,9 +2173,9 @@ reverse_iterator rbegin();
  反轉雙向迭代器，定址對象是反轉 hash_map 中的第一個元素，或未反轉 hash_map 中的最後一個元素。  
   
 ### <a name="remarks"></a>備註  
- `rbegin` 是與反轉 hash_map 搭配使用，就如同 [begin](#hash_map__begin) 是與 hash_map 搭配使用一樣。  
+ `rbegin` 是與反轉 hash_map 搭配使用，就如同 [begin](#begin) 是與 hash_map 搭配使用一樣。  
   
- 如果將 `rbegin` 的傳回值指派給 [const_reverse_iterator](#hash_map__const_reverse_iterator)，便無法修改 hash_map 物件。 如果將 `rbegin` 的傳回值指派給 [reverse_iterator](#hash_map__reverse_iterator)，則可以修改 hash_map 物件。  
+ 如果將 `rbegin` 的傳回值指派給 [const_reverse_iterator](#const_reverse_iterator)，便無法修改 hash_map 物件。 如果將 `rbegin` 的傳回值指派給 [reverse_iterator](#reverse_iterator)，則可以修改 hash_map 物件。  
   
  `rbegin` 可用來向後逐一查看 hash_map。  
   
@@ -2201,7 +2240,7 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the first element in the reversed hash_map is 2.  
 ```  
   
-##  <a name="a-namehashmapreferencea--hashmapreference"></a><a name="hash_map__reference"></a>  hash_map::reference  
+##  <a name="reference"></a>  hash_map::reference  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2265,7 +2304,7 @@ The data value of first element in the hash_map is 10.
 The modified data value of first element is 15.  
 ```  
   
-##  <a name="a-namehashmaprenda--hashmaprend"></a><a name="hash_map__rend"></a>  hash_map::rend  
+##  <a name="rend"></a>  hash_map::rend  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2282,9 +2321,9 @@ reverse_iterator rend();
  反轉雙向迭代器，定址對象是反轉 hash_map 中最後一個元素後面的位置 (未反轉 hash_map 中第一個元素前面的位置)。  
   
 ### <a name="remarks"></a>備註  
- `rend` 是與反轉 hash_map 搭配使用，就如同 [end](#hash_map__end) 是與 hash_map 搭配使用一樣。  
+ `rend` 是與反轉 hash_map 搭配使用，就如同 [end](#end) 是與 hash_map 搭配使用一樣。  
   
- 如果將 `rend` 的傳回值指派給 [const_reverse_iterator](#hash_map__const_reverse_iterator)，便無法修改 hash_map 物件。 如果將 `rend` 的傳回值指派給 [reverse_iterator](#hash_map__reverse_iterator)，則可以修改 hash_map 物件。  
+ 如果將 `rend` 的傳回值指派給 [const_reverse_iterator](#const_reverse_iterator)，便無法修改 hash_map 物件。 如果將 `rend` 的傳回值指派給 [reverse_iterator](#reverse_iterator)，則可以修改 hash_map 物件。  
   
  `rend` 可以用來測試反轉迭代器是否已到達其 hash_map 的結尾。  
   
@@ -2355,7 +2394,7 @@ The reversed hash_map is: 3 2 1 .
 After the erasure, the last element in the reversed hash_map is 2.  
 ```  
   
-##  <a name="a-namehashmapreverseiteratora--hashmapreverseiterator"></a><a name="hash_map__reverse_iterator"></a>  hash_map::reverse_iterator  
+##  <a name="reverse_iterator"></a>  hash_map::reverse_iterator  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2369,7 +2408,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 ### <a name="remarks"></a>備註  
  類型 `reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 hash_map。  
   
- hash_map 所定義的 `reverse_iterator` 會指向作為 [value_type](#hash_map__value_type) 之物件的元素，value_type 的類型為 **pair\<const Key, Type>**，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
+ hash_map 所定義的 `reverse_iterator` 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 **pair\<const Key, Type>**，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
   
  若要對指向 hash_map 中某個元素的 `reverse_iterator``rIter` 進行取值，請使用 -> 運算子。  
   
@@ -2378,9 +2417,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `reverse_iterator` 的範例，請參閱 [rbegin](#hash_map__rbegin) 的範例。  
+  如需如何宣告及使用 `reverse_iterator` 的範例，請參閱 [rbegin](#rbegin) 的範例。  
   
-##  <a name="a-namehashmapsizea--hashmapsize"></a><a name="hash_map__size"></a>  hash_map::size  
+##  <a name="size"></a>  hash_map::size  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2429,7 +2468,7 @@ The hash_map length is 1.
 The hash_map length is now 2.  
 ```  
   
-##  <a name="a-namehashmapsizetypea--hashmapsizetype"></a><a name="hash_map__size_type"></a>  hash_map::size_type  
+##  <a name="size_type"></a>  hash_map::size_type  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2444,9 +2483,9 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#hash_map__size) 的範例  
+  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例  
   
-##  <a name="a-namehashmapswapa--hashmapswap"></a><a name="hash_map__swap"></a>  hash_map::swap  
+##  <a name="swap"></a>  hash_map::swap  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2458,7 +2497,7 @@ void swap(hash_map& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  提供要與目標 hash_map 交換之元素的引數 hash_map。  
   
 ### <a name="remarks"></a>備註  
@@ -2520,7 +2559,7 @@ After swapping with hm2, hash_map hm1 is: 100 200.
 After swapping with hm3, hash_map hm1 is: 300.  
 ```  
   
-##  <a name="a-namehashmapupperbounda--hashmapupperbound"></a><a name="hash_map__upper_bound"></a>  hash_map::upper_bound  
+##  <a name="upper_bound"></a>  hash_map::upper_bound  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2534,11 +2573,11 @@ const_iterator upper_bound(const Key& key) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` key`  
+ `key`  
  要與所搜尋之 hash_map 中元素的排序鍵值比較的引數索引鍵值。  
   
 ### <a name="return-value"></a>傳回值  
- [iterator](#hash_map__iterator) 或 [const_iterator](#hash_map__const_iterator)，定址對象是 hash_map 中索引鍵大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_map 中最後一個元素後面的位置。  
+ [iterator](#iterator) 或 [const_iterator](#const_iterator)，定址對象是 hash_map 中索引鍵大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_map 中最後一個元素後面的位置。  
   
  如果將傳回值指派給 `const_iterator`，便無法修改 hash_map 物件。 如果將傳回值指派給 **iterator**，則可以修改 hash_map 物件。  
   
@@ -2597,7 +2636,7 @@ The 1st element of hm1 with a key greater than that
  of the initial element of hm1 is: 20.  
 ```  
   
-##  <a name="a-namehashmapvaluecompa--hashmapvaluecomp"></a><a name="hash_map__value_comp"></a>  hash_map::value_comp  
+##  <a name="value_comp"></a>  hash_map::value_comp  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2612,11 +2651,11 @@ value_compare value_comp() const;
  傳回 hash_map 用來排序其元素的比較函式物件。  
   
 ### <a name="remarks"></a>備註  
- 就 hash_map *m* 而言，如果兩個元素 *e*1 *(k*1 *, d*1 *)* 和 *e*2 *(k*2 *, d*2 *)* 是 [value_type](#hash_map__value_type) 類型的物件，其中 *k*1 和 *k*2 是其 [key_type](#hash_map__key_type) 類型的索引鍵，而 `d`1 和 `d`2 是其 [mapped_type](#hash_map__mapped_type) 類型的資料，則 *m.*`value_comp`*( )(e*1 *, e*2 *)* 會等於 *m.*`key_comp`*( ) (k*1 *, k*2 *)*。 預存物件會定義成員函式  
+ 就 hash_map *m* 而言，如果兩個元素 *e*1 *(k*1 *, d*1 *)* 和 *e*2 *(k*2 *, d*2 *)* 是 [value_type](#value_type) 類型的物件，其中 *k*1 和 *k*2 是其 [key_type](#key_type) 類型的索引鍵，而 `d`1 和 `d`2 是其 [mapped_type](#mapped_type) 類型的資料，則 *m.*`value_comp`*( )(e*1 *, e*2 *)* 會等於 *m.*`key_comp`*( ) (k*1 *, k*2 *)*。 預存物件會定義成員函式  
   
- **bool operator**( **value_type&** ` left`, **value_type&** ` right`) **;**  
+ **bool operator**( **value_type&** `left`, **value_type&** `right`) **;**  
   
- 如果 ` left` 的索引鍵值在前面且在排序次序中不等於 ` right` 的索引鍵值，此函式就會傳回 **true**。  
+ 如果 `left` 的索引鍵值在前面且在排序次序中不等於 `right` 的索引鍵值，此函式就會傳回 **true**。  
   
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
@@ -2665,7 +2704,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namehashmapvaluetypea--hashmapvaluetype"></a><a name="hash_map__value_type"></a>  hash_map::value_type  
+##  <a name="value_type"></a>  hash_map::value_type  
   
 > [!NOTE]
 >  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
@@ -2677,7 +2716,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `value_type` 會宣告為 `pair` *\<***const**[key_type](#hash_map__key_type), [mapped_type](#hash_map__mapped_type)*>* 而不是 `pair`**\<key_type, mapped_type>**，因為無法使用非常數迭代器或參考來變更關聯容器的索引鍵。  
+ `value_type` 會宣告為 `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>* 而不是 `pair`**\<key_type, mapped_type>**，因為無法使用非常數迭代器或參考來變更關聯容器的索引鍵。  
   
  在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   

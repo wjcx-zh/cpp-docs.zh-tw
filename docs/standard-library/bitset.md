@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 16b937177f092dda215d0149ab5a6b798822fade
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: d0b9f494cec6212616813f9d622b97ff9d54bd3e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
@@ -57,11 +58,11 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator&](../standard-library/bitset-operators.md#operator_amp_)|在兩個位元集之間執行位元 AND。|  
-|[operator<\<](../standard-library/bitset-operators.md#operator_lt__lt_)|將位元序列的文字表示插入標準輸出資料流。|  
-|[operator>>](../standard-library/bitset-operators.md#operator_gt__gt_)|將位元序列的文字表示插入標準輸入資料流。|  
-|[operator^](../standard-library/bitset-operators.md#operator_xor)|在兩個位元集之間執行位元 EXCLUSIVE-OR。|  
-|[operator&#124;](../standard-library/bitset-operators.md#operator_or)|在兩個位元集之間執行位元 OR。|  
+|[operator&](../standard-library/bitset-operators.md#op_amp)|在兩個位元集之間執行位元 AND。|  
+|[operator<\<](../standard-library/bitset-operators.md#op_lt_lt)|將位元序列的文字表示插入標準輸出資料流。|  
+|[operator>>](../standard-library/bitset-operators.md#op_gt_gt)|將位元序列的文字表示插入標準輸入資料流。|  
+|[operator^](../standard-library/bitset-operators.md#op_xor)|在兩個位元集之間執行位元 EXCLUSIVE-OR。|  
+|[operator&#124;](../standard-library/bitset-operators.md#op_or)|在兩個位元集之間執行位元 OR。|  
   
 ### <a name="classes"></a>類別  
   

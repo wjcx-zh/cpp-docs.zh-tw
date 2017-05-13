@@ -1,123 +1,141 @@
 ---
 title: "gslice_array 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::gslice_array"
-  - "gslice_array"
-  - "valarray/std::gslice_array"
-  - "std.gslice_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gslice_array 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- gslice_array
+- valarray/std::gslice_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# gslice_array 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bebbeb68503c4a3838aeab48d530d899fef2b699
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
-支援一般配量之內部，其他的樣板類別透過在一般切割定義的子集陣列之間的作業物件 valarray。  
+---
+# <a name="gslicearray-class"></a>gslice_array 類別
+可藉由提供 valarray 之一般切割所定義的子集陣列之間的作業，支援一般切割物件的內部、輔助的範本類別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-template<class Type>  
-   class gslice_array : public gsplice {  
+template <class Type>  
+class gslice_array : public gsplice {  
 public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator=(  
-      const Type& x  
-   ) const;  
-  
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
+    typedef Type value_type;  
+    void operator=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator=(const Type& x) const;
+
+ 
+ 
+    void operator*=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator/=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator%=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator+=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator-=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator^=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator&=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator|=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator<<=(const valarray<Type>& x) const;
+
+ 
+ 
+    void operator>>=(const valarray<Type>& x) const;
+
+ 
+ 
 // The rest is private or implementation defined  
 }  
 ```  
   
-## 備註  
- 類別與物件描述項目序列 **valarray\<Type\>** 物件中選取類別 [gslice](../standard-library/gslice-class.md) 的 **gs** 一起說明儲存物件類別 [valarray](../standard-library/valarray-class.md)**\<Type\>va** 的參考的物件。  
+## <a name="remarks"></a>備註  
+ 此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之 **va** 物件的參考與 [gslice](../standard-library/gslice-class.md) 類別的 **gs** 物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的元素序列。  
   
- 您可以撰寫表單 [VA &#91;&#93; gs](../Topic/valarray::operator.md)的運算式只建構 **gslice\_array\<Type\>** 物件。  gslice\_array 類別的成員函式接著會與對應的函式簽章定義為 **valarray\<Type\>**，不過，選取的項目序列只會受到影響。  
+ 您只能藉由撰寫 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式來建構 **gslice_array\<Type>** 物件。 gslice_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。  
   
- 樣板類別由某些 valarray 作業直接在程式間接建置，因此無法使用。  切割註標運算子使用內部輔助樣板類別:  
+ 此範本類別是由某些 valarray 運算間接建立的，無法直接在程式中使用。 配量註標運算子會改用內部輔助範本類別：  
   
- `gslice_array`\<`valarray`\<\[**型別**\]\>\[**型別**\]\>::**const** `operator[]` \(**gslice&**\)。  
+ `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**)。  
   
- 您可以撰寫表單 **va\[gsl\]**的運算式只建構 **gslice\_array\<Type\>** 物件，預設的 **gsl** valarray **va**。  gslice\_array 類別的成員函式接著會與對應的函式簽章定義為 **valarray\<Type\>**，不過，選取的項目序列只會受到影響。  順序由 gslice\_array 由預設建構函式、索引在第一個切割區段的第一個項目，數目的在每個切割的項目和項目之間距離的三個參數定義在每個切割。  
+ 您只能藉由撰寫 **va[gsl]** 格式的運算式，為 valarray **va** 的配量 **gsl** 建構 **gslice_array\<Type>** 物件。 gslice_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。 gslice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即第一個配量中第一個元素的索引、每個配量中的元素數目，以及每個配量中元素之間的距離。  
   
- 在下列範例中：  
+ 在以下範例中：  
   
 ```  
 const size_t lv[] = {2, 3};  
 const size_t dv[] = {7, 2};  
-const valarray<size_t> len(lv, 2), str(dv, 2);  
+const valarray<size_t> len(lv, 2), str(dv, 2);
+
 // va[gslice(3, len, str)] selects elements with  
 //   indices 3, 5, 7, 10, 12, 14  
 ```  
   
- 索引必須是有效才能程序可以有效。  
+ 索引必須有效，程序才能有效。  
   
-## 範例  
- 中的 [gslice::gslice](../Topic/gslice::gslice.md) 參閱本範例說明如何宣告和使用 slice\_array。  
+## <a name="example"></a>範例  
+ 如需如何宣告及使用 slice_array 的範例，請參閱 [gslice::gslice](../standard-library/gslice-class.md#gslice) 的範例。  
   
-## 需求  
- **標頭：** \<valarray\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<valarray>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

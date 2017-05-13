@@ -9,10 +9,12 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::basic_istringstream
 - sstream/std::basic_istringstream
 - basic_istringstream
-- std.basic_istringstream
+- sstream/std::basic_istringstream::allocator_type
+- sstream/std::basic_istringstream::rdbuf
+- sstream/std::basic_istringstream::str
+- sstream/std::basic_istringstream::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ff32ad28b272e16273742b040e0ed62850e3e15e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: dd5ffa6d31f78fe71fdc099c39dd6ad719a217cf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream 類別
@@ -69,41 +72,41 @@ class basic_istringstream : public basic_istream<Elem, Tr>
   
 |||  
 |-|-|  
-|[basic_istringstream](#basic_istringstream__basic_istringstream)|建構類型 `basic_istringstream` 的物件。|  
+|[basic_istringstream](#basic_istringstream)|建構類型 `basic_istringstream` 的物件。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#basic_istringstream__allocator_type)|此類型是範本參數 `Alloc`的同義字。|  
+|[allocator_type](#allocator_type)|此類型是範本參數 `Alloc`的同義字。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[rdbuf](#basic_istringstream__rdbuf)|將 `pointer` 類型之預存資料流緩衝區的位址傳回至 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>。|  
-|[str](#basic_istringstream__str)|設定或取得字串緩衝區中的文字，而不需要變更寫入位置。|  
-|[swap](#basic_istringstream__swap)|用所提供物件的值交換這個 `basic_istringstream` 物件中的值。|  
+|[rdbuf](#rdbuf)|將 `pointer` 類型之預存資料流緩衝區的位址傳回至 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>。|  
+|[str](#str)|設定或取得字串緩衝區中的文字，而不需要變更寫入位置。|  
+|[swap](#swap)|用所提供物件的值交換這個 `basic_istringstream` 物件中的值。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator=](#basic_istringstream__operator_eq)|從物件參數將值指派給這個 `basic_istringstream` 物件。|  
+|[operator=](#op_eq)|從物件參數將值指派給這個 `basic_istringstream` 物件。|  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<sstream>  
   
  **命名空間：** std  
   
-##  <a name="a-namebasicistringstreamallocatortypea--basicistringstreamallocatortype"></a><a name="basic_istringstream__allocator_type"></a>  basic_istringstream::allocator_type  
+##  <a name="allocator_type"></a>  basic_istringstream::allocator_type  
  此類型是範本參數 `Alloc`的同義字。  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-##  <a name="a-namebasicistringstreambasicistringstreama--basicistringstreambasicistringstream"></a><a name="basic_istringstream__basic_istringstream"></a>  basic_istringstream::basic_istringstream  
+##  <a name="basic_istringstream"></a>  basic_istringstream::basic_istringstream  
  建構類型 `basic_istringstream` 的物件。  
   
 ```  
@@ -120,22 +123,22 @@ basic_istringstream(
   
 ### <a name="parameters"></a>參數  
  `_Mode`  
- [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) 中的其中一個列舉。  
+ [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。  
   
- ` str`  
+ `str`  
  `basic_string` 類型的物件。  
   
- ` right`  
+ `right`  
  `basic_istringstream` 物件的右值參考。  
   
 ### <a name="remarks"></a>備註  
  第一個建構函式會藉由呼叫 [basic_istream](../standard-library/basic-istream-class.md)( `sb`) 初始化基底類別，其中 `sb` 是 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`> 類別的預存物件。 它也會藉由呼叫 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`) 初始化 `sb`。  
   
- 第二個建構函式會藉由呼叫 `basic_istream(sb)` 初始化基底類別。 它也會藉由呼叫 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( ` str`, `_Mode` &#124; `ios_base::in`) 初始化 `sb`。  
+ 第二個建構函式會藉由呼叫 `basic_istream(sb)` 初始化基底類別。 它也會藉由呼叫 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`) 初始化 `sb`。  
   
- 第三個建構函式會使用視為右值參考的 ` right` 內容初始化物件。  
+ 第三個建構函式會使用視為右值參考的 `right` 內容初始化物件。  
   
-##  <a name="a-namebasicistringstreamoperatoreqa--basicistringstreamoperator"></a><a name="basic_istringstream__operator_eq"></a>  basic_istringstream::operator=  
+##  <a name="op_eq"></a>  basic_istringstream::operator=  
  從物件參數將值指派給這個 `basic_istringstream` 物件。  
   
 ```  
@@ -143,13 +146,13 @@ basic_istringstream& operator=(basic_istringstream&& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  `basic_istringstream` 物件的右值參考。  
   
 ### <a name="remarks"></a>備註  
- 成員運算子會使用 ` right` 的內容 (視為右值參考移動指派) 來取代物件的內容。  
+ 成員運算子會使用 `right` 的內容 (視為右值參考移動指派) 來取代物件的內容。  
   
-##  <a name="a-namebasicistringstreamrdbufa--basicistringstreamrdbuf"></a><a name="basic_istringstream__rdbuf"></a>  basic_istringstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_istringstream::rdbuf  
  將 **pointer** 類型之預存資料流緩衝區的位址傳回至 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>。  
   
 ```  
@@ -160,9 +163,9 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
  basic_stringbuf< **Elem**, **Tr**, `Alloc`> 的 **pointer** 類型之預存資料流緩衝區的位址。  
   
 ### <a name="example"></a>範例  
-  如需使用 `rdbuf` 的範例，請參閱 [basic_filebuf:: close](../standard-library/basic-filebuf-class.md#basic_filebuf__close)。  
+  如需使用 `rdbuf` 的範例，請參閱 [basic_filebuf:: close](../standard-library/basic-filebuf-class.md#close)。  
   
-##  <a name="a-namebasicistringstreamstra--basicistringstreamstr"></a><a name="basic_istringstream__str"></a>  basic_istringstream::str  
+##  <a name="str"></a>  basic_istringstream::str  
  設定或取得字串緩衝區中的文字，而不需要變更寫入位置。  
   
 ```  
@@ -181,12 +184,12 @@ void str(
  傳回 [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`> 類別的物件，其受控制的序列是由 **\*this** 所控制的序列複本。  
   
 ### <a name="remarks"></a>備註  
- 第一個成員函式會傳回 [rdbuf](#basic_istringstream__rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#basic_stringbuf__str)。 第二個成員函式會呼叫 `rdbuf` -> **str**( `_Newstr`)。  
+ 第一個成員函式會傳回 [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str)。 第二個成員函式會呼叫 `rdbuf` -> **str**( `_Newstr`)。  
   
 ### <a name="example"></a>範例  
-  如需使用 **str** 的範例，請參閱 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#basic_stringbuf__str)。  
+  如需使用 **str** 的範例，請參閱 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str)。  
   
-##  <a name="a-namebasicistringstreamswapa--basicistringstreamswap"></a><a name="basic_istringstream__swap"></a>  basic_istringstream::swap  
+##  <a name="swap"></a>  basic_istringstream::swap  
  交換兩個 `basic_istringstream` 物件的值。  
   
 ```  
@@ -197,10 +200,10 @@ void swap(basic_istringstream& right);
   
 |參數|說明|  
 |---------------|-----------------|  
-|` right`|`basic_istringstream` 物件的 `lvalue` 參考。|  
+|`right`|`basic_istringstream` 物件的 `lvalue` 參考。|  
   
 ### <a name="remarks"></a>備註  
- 成員函式會將此物件的值與 ` right` 的值交換。  
+ 成員函式會將此物件的值與 `right` 的值交換。  
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76db8cf45132bc76ab56028eb139585ca663c68d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 2838a1c79ad97bfd665a367b2a597cb20ac70097
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="getenv-wgetenv"></a>getenv、_wgetenv
@@ -164,9 +165,6 @@ int main( void )
 Original LIB variable is: C:\progra~1\devstu~1\vc\lib  
 New LIB variable is: c:\mylib;c:\yourlib  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   

@@ -10,28 +10,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - bernoulli_distribution
-- std::bernoulli_distribution
 - random/std::bernoulli_distribution
-- std::bernoulli_distribution::reset
 - random/std::bernoulli_distribution::reset
-- std::bernoulli_distribution::p
 - random/std::bernoulli_distribution::p
-- std::bernoulli_distribution::param
 - random/std::bernoulli_distribution::param
-- std::bernoulli_distribution::min
 - random/std::bernoulli_distribution::min
-- std::bernoulli_distribution::max
 - random/std::bernoulli_distribution::max
-- std::bernoulli_distribution::operator()
 - random/std::bernoulli_distribution::operator()
-- std::bernoulli_distribution::param_type
 - random/std::bernoulli_distribution::param_type
-- std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::p
-- std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator==
-- std::bernoulli_distribution::param_type::operator!=
 - random/std::bernoulli_distribution::param_type::operator!=
+- random/std::bernoulli_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -55,10 +45,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: d8805d79029d30a374e80e85ba319581c3804d24
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6711efe0bf60bc9320e1d97c83de50dcc3020971
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 類別
@@ -103,8 +94,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[bernoulli_distribution::bernoulli_distribution](#bernoulli_distribution__bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
-|`bernoulli_distribution::operator()`||[bernoulli_distribution::param_type](#bernoulli_distribution__param_type)|  
+|[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|  
+|`bernoulli_distribution::operator()`||[param_type](#param_type)|  
   
 屬性成員 `p()` 會傳回目前儲存的分佈參數值 `p`。  
   
@@ -185,7 +176,7 @@ false :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
   
 **命名空間：** std  
   
-##  <a name="a-namebernoullidistributionbernoullidistributiona--bernoullidistributionbernoullidistribution"></a><a name="bernoulli_distribution__bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution  
+##  <a name="bernoulli_distribution"></a>  bernoulli_distribution::bernoulli_distribution  
 建構分佈。  
   
 ```  
@@ -207,7 +198,7 @@ explicit bernoulli_distribution(const param_type& parm);
   
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
   
-##  <a name="a-namebernoullidistributionparamtypea--bernoullidistributionparamtype"></a><a name="bernoulli_distribution__param_type"></a>  bernoulli_distribution::param_type  
+##  <a name="param_type"></a>  bernoulli_distribution::param_type  
 包含分佈的參數。  
   
 struct param_type {  

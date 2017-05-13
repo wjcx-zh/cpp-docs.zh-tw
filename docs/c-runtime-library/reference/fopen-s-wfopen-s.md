@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1def8ed4a365aa82f1d22dcab512ef0f68fbb4d5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 168d1cd797f9f7d6080f2da7aefeb8859c7f2232
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
@@ -99,9 +100,9 @@ errno_t _wfopen_s(
   
 ### <a name="error-conditions"></a>錯誤狀況  
   
-|`pFile`|`filename`|`mode`|傳回值|`pFile` 的內容|  
+|`pFile`|`filename`|`mode`|傳回值|`pFile` 的內容。|  
 |-------------|----------------|------------|------------------|------------------------|  
-|`NULL`|任何|任何|`EINVAL`|未變更|  
+|`NULL`|any|任何|`EINVAL`|未變更|  
 |any|`NULL`|任何|`EINVAL`|未變更|  
 |any|any|NULL|`EINVAL`|未變更|  
   
@@ -119,9 +120,9 @@ errno_t _wfopen_s(
 ## <a name="unicode-support"></a>Unicode 支援  
  `fopen_s` 支援 Unicode 檔案資料流。 若要開啟新的或現有的 Unicode 檔案，請將指定所需編碼方式的 `ccs` 旗標傳遞給 `fopen_s`：  
   
- `fopen_s(&fp, "newfile.txt", "rw,`   `ccs=`  `encoding` `");`  
+ `fopen_s(&fp, "newfile.txt", "rw, ccs=`*編碼方式*`");`  
   
- `encoding` 的允許值為 `UNICODE`、 `UTF-8`和 `UTF-16LE`。 如果未對 `encoding` 指定值，則 `fopen_s` 會使用 ANSI 編碼方式。  
+ 允許的值為*編碼*是`UNICODE`， `UTF-8`，和`UTF-16LE`。 如果那里任何指定的值*編碼*，`fopen_s`使用 ANSI 編碼方式。  
   
  如果檔案已經存在，而且已開啟來進行讀取或附加，則位元順序標記 (BOM) (如果已在檔案中) 會決定編碼方式。 BOM 編碼方式的優先順序高於 `ccs` 旗標所指定的編碼方式。 當 BOM 不存在或如果檔案為新檔案時，只能使用 `ccs` 編碼方式。  
   
@@ -140,7 +141,7 @@ errno_t _wfopen_s(
   
  開啟以供在 Unicode 模式下寫入的檔案會有 BOM 自動寫入其中。  
   
- 如果 `mode` 為 "`a, ccs=<encoding>`"，則 `fopen_s` 會先嘗試同時以讀取存取和寫入存取來開啟檔案。 如果成功，則函式會讀取 BOM 以判斷檔案的編碼方式，如果不成功，則函式會使用檔案的預設編碼方式。 在任一情況下，`fopen_s` 都會接著以唯寫存取重新開啟檔案。 (這只適用於 `a` 模式，但不適用於 `a+`。)  
+ 如果`mode`是 」，ccs =*編碼*"，`fopen_s`第一次嘗試開啟檔案讀取和寫入權限。 如果成功，則函式會讀取 BOM 以判斷檔案的編碼方式，如果不成功，則函式會使用檔案的預設編碼方式。 在任一情況下，`fopen_s` 都會接著以唯寫存取重新開啟檔案。 (這只適用於 `a` 模式，但不適用於 `a+`。)  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -172,19 +173,19 @@ errno_t _wfopen_s(
   
  在附加到檔案之前，`"a"` 模式不會移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 在附加到檔案之前，`"a+"` 模式會移除 EOF 標記。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 附加至使用 CTRL+Z EOF 標記終止的資料流檔案時，需要 `"a+"` 模式。  
   
- 指定 `"r+",``"w+",` 或 `"a+"` 存取類型時，同時允許讀取和寫入。 (表示檔案是要開啟以供「更新」之用。)不過，當您從讀取切換為寫入時，輸入作業一定會遇到 EOF 標記。 如果沒有 EOF，您就必須使用檔案定位函式的介入呼叫。 檔案定位函式包含 `fsetpos`、`fseek` 和 `rewind`。 當您從寫入切換為讀取時，您必須使用 `fflush` 或檔案定位函式的介入呼叫。  
+ 當`"r+"`，`"w+",`或`"a+"`指定存取型別，允許進行讀取和寫入。 (表示檔案是要開啟以供「更新」之用。)不過，當您從讀取切換為寫入時，輸入作業一定會遇到 EOF 標記。 如果沒有 EOF，您就必須使用檔案定位函式的介入呼叫。 檔案定位函式包含 `fsetpos`、`fseek` 和 `rewind`。 當您從寫入切換為讀取時，您必須使用 `fflush` 或檔案定位函式的介入呼叫。  
   
  除了上面的值之外，還可以將下列字元包含在 `mode`，指定新行字元的轉譯模式：  
   
  `t`  
  以文字 (已轉譯) 模式開啟。 在這個模式中，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在為了以 `"a+"` 讀取/寫入而開啟的檔案中，`fopen_s` 會盡可能檢查檔案結尾是否有 Ctrl+Z，並加以移除。 之所以這樣做，是因為使用 `fseek` 和 `ftell` 在以 Ctrl+Z 結束的檔案內移動可能會讓 `fseek` 在檔案結尾附近產生不當行為。  
   
- 此外在文字模式下，歸位字元與換行字元組合會在輸入中轉譯成單一換行字元，而換行字元會在輸出中轉譯成歸位字元與換行字元組合。 Unicode 資料流 I/O 函式在文字模式 (預設) 下運作時，會假設來源或目的資料流是多位元組字元的序列。 因此，Unicode 資料流輸入函式會將多位元組字元轉換為寬字元 (就像呼叫 `mbtowc` 函式一樣)。 基於相同的原因，Unicode 資料流輸出函式會將寬字元轉換為多位元組字元 (就像呼叫 `wctomb` 函式一樣)。  
+ 此外，在文字模式下，歸位字元傳回換行字元組合會轉譯成單一換行字元上輸入，並換行字元會轉譯為歸位字元傳回換行字元組合，在輸出上。 Unicode 資料流 I/O 函式在文字模式 (預設) 下運作時，會假設來源或目的資料流是多位元組字元的序列。 因此，Unicode 資料流輸入函式會將多位元組字元轉換為寬字元 (就像呼叫 `mbtowc` 函式一樣)。 基於相同的原因，Unicode 資料流輸出函式會將寬字元轉換為多位元組字元 (就像呼叫 `wctomb` 函式一樣)。  
   
  `b`  
  以二進位 (未轉譯) 模式開啟；抑制涉及歸位字元和換行字元的轉譯。  
   
- 如果 `mode` 中未指定 `t` 或 `b`，則預設轉譯模式是透過全域變數 [_fmode](../../c-runtime-library/fmode.md) 所定義。 如果引數前置 `t` 或 `b` ，則函式失敗並傳回 `NULL`。  
+ 如果 `t` 中未指定 `b` 或 `mode`，則預設轉譯模式由全域變數 [_fmode](../../c-runtime-library/fmode.md)定義。 如果引數前置 `t` 或 `b` ，則函式失敗並傳回 `NULL`。  
   
  如需在 Unicode 和多位元組資料流 I/O 中使用文字和二進位模式的詳細資訊，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。  
   
@@ -192,7 +193,7 @@ errno_t _wfopen_s(
  啟用關聯 `filename` 的認可旗標，以便在呼叫 `fflush` 或 `_flushall` 時，將檔案緩衝區的內容直接寫入磁碟。  
   
  `n`  
- 將關聯 `filename` 的認可旗標重設為 "no-commit"。 這是預設值。 如果將程式與 COMMODE.OBJ 連結，也會覆寫全域認可旗標。 除非您明確連結程式與 COMMODE.OBJ，否則全域認可旗標的預設值為 "no-commit" (請參閱[連結選項](../../c-runtime-library/link-options.md))。  
+ 將關聯 `filename` 的認可旗標重設為 "no-commit"。 這是預設值。 如果將程式與 COMMODE.OBJ 連結，也會覆寫全域認可旗標。 除非您明確連結程式與 COMMODE.OBJ，否則全域認可旗標的預設值為 "no-commit" (請參閱 [Link Options](../../c-runtime-library/link-options.md))。  
   
  `N`  
  指定子處理序不繼承檔案。  
@@ -216,11 +217,11 @@ errno_t _wfopen_s(
   
 |模式字串中的字元|`_open`/`_sopen` 的對等 `oflag` 值|  
 |-------------------------------|----------------------------------------------------|  
-|`a`|`_O_WRONLY &#124; _O_APPEND`(通常為 `_O_WRONLY &#124; _O_CREAT &#124;``_O_APPEND`)|  
+|`a`|`_O_WRONLY &#124; _O_APPEND`(通常為 `_O_WRONLY &#124; _O_CREAT &#124; _O_APPEND`)|  
 |`a+`|`_O_RDWR &#124; _O_APPEND` (通常為 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(通常為 `_O_WRONLY &#124;``_O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY`(通常為 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`w+`|`_O_RDWR`(通常為 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
@@ -252,9 +253,8 @@ errno_t _wfopen_s(
   
 ## <a name="example"></a>範例  
   
-```  
-  
-      // crt_fopen_s.c  
+```C  
+// crt_fopen_s.c  
 // This program opens two files. It uses  
 // fclose to close the first file and  
 // _fcloseall to close all remaining files.  
@@ -314,12 +314,6 @@ The file 'crt_fopen_s.c' was opened
 The file 'data2' was opened  
 Number of files closed by _fcloseall: 1  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
-  
--   [System::IO::File::Open](https://msdn.microsoft.com/en-us/library/system.io.file.open.aspx)  
-  
--   <xref:System.IO.FileStream.%23ctor%2A>  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

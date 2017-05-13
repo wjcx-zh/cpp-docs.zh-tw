@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b8310730b9b1c700402cc8d6d35eea3abc893dfe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: bd53960a97cc6647008b683e354df664941428e9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="freea"></a>_freea
@@ -78,7 +79,7 @@ void _freea(
 ## <a name="remarks"></a>備註  
  `_freea` 函式會取消配置 [_malloca](../../c-runtime-library/reference/malloca.md) 呼叫先前所配置的記憶體區塊 (`memblock`)。 `_freea` 確認是否在堆積或堆疊上配置記憶體。 如果配置於堆疊，則 `_freea` 不會執行任何動作。 如果配置於堆積，所釋放的位元組數目相當於配置區塊時所要求的位元組數目。 如果 `memblock` 是 `NULL`，則會忽略指標，並立即傳回 `_freea`。 嘗試釋放無效指標 (未由 `_malloca` 所配置之記憶體區塊的指標) 可能會影響後續配置要求，並導致錯誤。  
   
- 如果 _`freea` 發現堆積上已配置記憶體，則會在內部呼叫 `free`。 記憶體在堆積還是堆疊上取決於在記憶體之已配置記憶體正前方的位址所放置的標記。  
+ `_freea`呼叫`free`內部如果找到，在堆積上配置記憶體。 記憶體在堆積還是堆疊上取決於在記憶體之已配置記憶體正前方的位址所放置的標記。  
   
  若釋放記憶體發生錯誤，會使用來自作業系統且具有失敗性質的資訊設定 `errno`。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -98,9 +99,6 @@ void _freea(
   
 ## <a name="example"></a>範例  
  請參閱 [_malloca](../../c-runtime-library/reference/malloca.md) 的範例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   

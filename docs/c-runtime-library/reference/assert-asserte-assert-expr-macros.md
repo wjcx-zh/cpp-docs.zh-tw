@@ -53,10 +53,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 99698cf158118a876a3bb78edaaa52f2b9177d0a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: a0d8c456f20fc048bab91ec5bc9e1639b93adb6d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT、_ASSERTE、_ASSERT_EXPR 巨集
@@ -86,11 +87,11 @@ _ASSERTE(
  顯示在報表中的寬字串。  
   
 ## <a name="remarks"></a>備註  
- `_ASSERT_EXPR`, 、 `_ASSERT` 及 `_ASSERTE` 巨集可以讓您在偵錯程序期間，利用清楚簡單的機制來檢查假設。 這些巨集不需要括在 `#ifdef` 陳述式中，以避免在應用程式的零售組建中被呼叫，所以極具彈性。 此彈性來自使用 [_DEBUG](../../c-runtime-library/debug.md) 巨集。 只有在編譯時期定義 `_DEBUG` 時，才可使用 `_ASSERT_EXPR`、`_ASSERT` 及 `_ASSERTE`。 若未定義 `_DEBUG` ，將會在前置處理期間移除對這些巨集的呼叫。  
+ `_ASSERT_EXPR`, 、 `_ASSERT` 及 `_ASSERTE` 巨集可以讓您在偵錯程序期間，利用清楚簡單的機制來檢查假設。 這些巨集不需要括在 `#ifdef` 陳述式中，以避免在應用程式的零售組建中被呼叫，所以極具彈性。 此彈性來自使用 [_DEBUG](../../c-runtime-library/debug.md) 巨集。 僅當`_ASSERT_EXPR`, `_ASSERT` 、 `_ASSERTE` 及 `_DEBUG` 。 若未定義 `_DEBUG` ，將會在前置處理期間移除對這些巨集的呼叫。  
   
- `_ASSERT_EXPR`、`_ASSERT` 及 `_ASSERTE` 會在結果 `false` (0) 時，評估其 `booleanExpression` 引數，其會列印診斷訊息並呼叫 [_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)，以產生偵錯報表。 `_ASSERT` 巨集會列印簡單的診斷訊息；  `_ASSERTE` 會在訊息中加入失敗運算式的字串表示法； `_ASSERT_EXPR` 會在診斷訊息中加入 `message` 字串。 當 `booleanExpression` 評估為非零值時，這些巨集不會執行任何動作。  
+ `_ASSERT_EXPR`, `_ASSERT` 及 `_ASSERTE` 會在結果 `booleanExpression` (0) 時，評估其 `false` 引數，其會列印診斷訊息並呼叫 [_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) ，以產生偵錯報表。 `_ASSERT` 巨集會列印簡單的診斷訊息；  `_ASSERTE` 會在訊息中加入失敗運算式的字串表示法； `_ASSERT_EXPR` 會在診斷訊息中加入 `message` 字串。 當 `booleanExpression` 評估為非零值時，這些巨集不會執行任何動作。  
   
- `_ASSERT_EXPR`、`_ASSERT` 及 `_ASSERTE` 會叫用 `_CrtDbgReportW`，讓所有的輸出都呈現寬字元。 `_ASSERTE` 會正確地列印 `booleanExpression` 中的 Unicode 字元，而 `_ASSERT_EXPR` 則會列印 `message` 中的 Unicode 字元。  
+ `_ASSERT_EXPR`, `_ASSERT` 及 `_ASSERTE` 會叫用 `_CrtDbgReportW`，讓所有的輸出都呈現寬字元。 `_ASSERTE` 會正確地列印 `booleanExpression` 中的 Unicode 字元，而 `_ASSERT_EXPR` 則會列印 `message`中的 Unicode 字元。  
   
  因為 `_ASSERTE` 巨集會指定失敗的運算式，而 `_ASSERT_EXPR` 則可讓您指定所產生之報表中的訊息，所以使用者無須參考應用程式的原始程式碼，就能找出問題。 但其缺點在於，每一個由 `message` 所列印的 `_ASSERT_EXPR` 及每一個由 `_ASSERTE` 評估的運算式都會以字串常數形式包含在您應用程式的輸出 (偵錯版本) 檔案中。 因此，當對 `_ASSERT_EXPR` 或 `_ASSERTE`的呼叫十分大量時，這些運算式可能會讓您的輸出檔案大小大幅增大。  
   
@@ -102,9 +103,9 @@ _ASSERTE(
   
  當目的地為偵錯訊息視窗，而使用者按一下 [重試]  按鈕時，若已有啟用 Just-in-Time (JIT) 偵錯， `_CrtDbgReportW` 會傳回 1，讓 `_ASSERT_EXPR`、 `_ASSERT` 及 `_ASSERTE` 巨集啟動偵錯程式。  
   
- 如需報告程序的詳細資訊，請參閱 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函式。 如需如何解決判斷提示失敗，以及如何使用這些巨集作為偵錯之錯誤處理機制的詳細資訊，請參閱[使用巨集來進行驗證和報告](/visualstudio/debugger/macros-for-reporting)。  
+ 如需報告程序的詳細資訊，請參閱 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函式。 如需如何解決判斷提示失敗，以及如何使用這些巨集作為偵錯之錯誤處理機制的詳細資訊，請參閱 [使用的巨集來進行驗證和報告](/visualstudio/debugger/macros-for-reporting)。  
   
- 除了 `_ASSERT` 巨集之外，[assert](../../c-runtime-library/reference/assert-macro-assert-wassert.md) 巨集還可用於驗證程式邏輯。 此巨集可在偵錯版與發行版的程式庫中使用。 [_RPT、_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 偵錯巨集也可用於產生偵錯報表，但其無法評估運算式。 `_RPT` 巨集會產生簡單的報表。 `_RPTF` 巨集會在所產生的報表中，加入來源檔案及報表巨集呼叫所在的行號。 此外也提供這些巨集的寬字元版本 (`_RPTWn`、 `_RPTFWn`)。 寬字元版本與窄字元版本相同，但所有字串參數及輸出皆會使用寬字元字串。  
+ 除了 `_ASSERT` 巨集之外， [assert](../../c-runtime-library/reference/assert-macro-assert-wassert.md) 巨集還可用於驗證程式邏輯。 此巨集可在偵錯版與發行版的程式庫中使用。 [_RPT、_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 偵錯巨集也可用於產生偵錯報表，但其無法評估運算式。 `_RPT` 巨集會產生簡單的報表。 `_RPTF` 巨集會在所產生的報表中，加入來源檔案及報表巨集呼叫所在的行號。 此外也提供這些巨集的寬字元版本 (`_RPTWn`、 `_RPTFWn`)。 寬字元版本與窄字元版本相同，但所有字串參數及輸出皆會使用寬字元字串。  
   
  雖然 `_ASSERT_EXPR`、`_ASSERT` 及 `_ASSERTE` 均為巨集，並可透過加入 \<crtdbg.h> 的方式使用，但在定義了 `_DEBUG` 的情況下，因為這些巨集會呼叫其他執行階段函式，所以應用程式仍須連結偵錯版的 C 執行階段程式庫。  
   
@@ -188,9 +189,6 @@ crt_ASSERT_macro.c(58) :
 crt_ASSERT_macro.c(59) : Assertion failed: p1 == p2  
 'I am p1' != 'I am p2'  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   

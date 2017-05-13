@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2218210801bff38094d06d96736a7f05f7be29cf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9814916e32878a1e1a11f534fce64aeaf2f6a57e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getcwddbg-wgetcwddbg"></a>_getcwd_dbg、_wgetcwd_dbg
@@ -108,9 +109,9 @@ wchar_t *_wgetcwd_dbg(
  如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
- `_getcwd_dbg` 和 `_wgetcwd_dbg` 函式與 `_getcwd` 和 `_wgetcwd` 相同，唯一不同的是當定義 _`DEBUG` 時，若 `malloc` 是作為第一個參數進行傳遞，這些函式會使用偵錯版本的 `_malloc_dbg` 和 `NULL` 來配置記憶體。 如需詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
+ `_getcwd_dbg`和`_wgetcwd_dbg`函式完全相同`_getcwd`和`_wgetcwd`不同之處在於，當`_DEBUG`是定義，這些函式使用的偵錯版本`malloc`和`_malloc_dbg`配置記憶體，如果`NULL`當做第一個參數傳遞。 如需詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
   
- 在大多數情況中，您不需要明確地呼叫這些函式。 但您可以定義 `_CRTDBG_MAP_ALLOC` 旗標。 定義 `_CRTDBG_MAP_ALLOC` 時，呼叫`_getcwd` 和 `_wgetcwd` 會分別重新對應至 `_getcwd_dbg` 和 `_wgetcwd_dbg`，且 `blockType` 會設為 `_NORMAL_BLOCK`。 因此，您不需要呼叫這些函式，除非您想要將堆積區塊標示為 `_CLIENT_BLOCK`。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。  
+ 在大多數情況中，您不需要明確地呼叫這些函式。 但您可以定義 `_CRTDBG_MAP_ALLOC` 旗標。 定義 `_CRTDBG_MAP_ALLOC` 時，呼叫 `_getcwd` 和 `_wgetcwd` 會分別重新對應至 `_getcwd_dbg` 和 `_wgetcwd_dbg`，且 `blockType` 會設為 `_NORMAL_BLOCK`。 因此，您不需要呼叫這些函式，除非您想要將堆積區塊標示為 `_CLIENT_BLOCK`。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。  
   
 ## <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -125,10 +126,7 @@ wchar_t *_wgetcwd_dbg(
 |`_getcwd_dbg`|\<crtdbg.h>|  
 |`_wgetcwd_dbg`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- <xref:System.Environment.CurrentDirectory%2A>  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [_getcwd、_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   

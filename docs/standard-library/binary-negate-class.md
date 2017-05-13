@@ -10,9 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xfunctional/std::binary_negate
-- std::binary_negate
 - binary_negate
-- std.binary_negate
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f71f13f00a458a375d4be98e9229b305ba9b751c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: ae604ad5fcac5bfe827e335330097a902457723d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binarynegate-class"></a>binary_negate 類別
@@ -76,7 +75,7 @@ public:
 ## <a name="remarks"></a>備註  
  此樣板類別會儲存二元函式 object _ *Func* 的複本。 它會在傳回下列項目時定義其成員函式 `operator()`：**!**\_ *Func(left, right)。*  
   
- `binary_negate` 建構函式很少會直接使用。 通常會優先以 Helper 函式 [not2](../standard-library/functional-functions.md#not2_function) 來宣告和使用 **binary_negator** 配接器述詞。  
+ `binary_negate` 建構函式很少會直接使用。 通常會優先以 Helper 函式 [not2](../standard-library/functional-functions.md#not2) 來宣告和使用 **binary_negator** 配接器述詞。  
   
 ## <a name="example"></a>範例  
   

@@ -21,10 +21,11 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d54e1d5071414f1e8f6ae96391aa1659397bbcb3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
@@ -289,7 +290,7 @@ T1 resetiosflags(ios_base::fmtflags Mask);
  要清除的旗標。  
   
 ### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags), _ *Mask*)，然後傳回 **str**。  
+ 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*)，然後傳回 **str**。  
   
 ### <a name="example"></a>範例  
   如需使用 `resetiosflags` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -306,7 +307,7 @@ T3 setbase(int _Base);
  數字基底。  
   
 ### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#ios_base__fmtflags))，然後傳回 **str**。 此處的 **mask** 是以下列方式決定：  
+ 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags))，然後傳回 **str**。 此處的 **mask** 是以下列方式決定：  
   
 -   如果 _ *Base* 為 8，則 **mask** 為 `ios_base::`[oct](../standard-library/ios-functions.md#oct)。  
   
@@ -314,7 +315,7 @@ T3 setbase(int _Base);
   
 -   如果 _ *Base* 為 16，則 **mask** 為 `ios_base::`[hex](../standard-library/ios-functions.md#hex)。  
   
--   如果 _ *Base* 是任何其他值，則 mask 為 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#ios_base__fmtflags)(0)。  
+-   如果 _ *Base* 是任何其他值，則 mask 為 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0)。  
   
 ### <a name="example"></a>範例  
   如需使用 `setbase` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -332,7 +333,7 @@ T4 setfill(Elem Ch);
  將用來填滿靠右對齊顯示中空格的字元。  
   
 ### <a name="return-value"></a>傳回值  
- 範本操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [fill](../standard-library/basic-ios-class.md#basic_ios__fill)( `Ch`)，然後傳回 **str**。 **Elem** 類型必須與資料流 **str** 的元素類型相同。  
+ 範本操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`)，然後傳回 **str**。 **Elem** 類型必須與資料流 **str** 的元素類型相同。  
   
 ### <a name="example"></a>範例  
   如需使用 `setfill` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -349,7 +350,7 @@ T2 setiosflags(ios_base::fmtflags Mask);
  要設定的旗標。  
   
 ### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [setf](../standard-library/ios-base-class.md#ios_base__setf)(_ *Mask*)，然後傳回 **str**。  
+ 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*)，然後傳回 **str**。  
   
 ### <a name="example"></a>範例  
   如需使用 `setiosflags` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -366,7 +367,7 @@ T5 setprecision(streamsize Prec);
  浮點數值的有效位數。  
   
 ### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [precision](../standard-library/ios-base-class.md#ios_base__precision)( `Prec`)，然後傳回 **str**。  
+ 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`)，然後傳回 **str**。  
   
 ### <a name="example"></a>範例  
   如需使用 `setprecision` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
@@ -383,7 +384,7 @@ T6 setw(streamsize Wide);
  顯示欄位的寬度。  
   
 ### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [width](../standard-library/ios-base-class.md#ios_base__width)(_ *Wide*)，然後傳回 **str**。  
+ 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*)，然後傳回 **str**。  
   
 ### <a name="remarks"></a>備註  
  setw 只會設定資料流中下一個元素的寬度，而且必須插入在您想要為其指定寬度的每個元素前面。  

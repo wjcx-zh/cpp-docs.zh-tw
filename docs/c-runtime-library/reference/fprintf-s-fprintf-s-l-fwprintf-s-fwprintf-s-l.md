@@ -62,10 +62,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d6fc4a71132483e4eb8646fe5394994a0af7fbd6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6ca073e8021d10b81245327d04b358b8c410ef0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
@@ -77,24 +78,24 @@ ms.lasthandoff: 02/24/2017
 int fprintf_s(   
    FILE *stream,  
    const char *format [,  
-   argument ]...  
+   argument_list ]  
 );  
 int _fprintf_s_l(   
    FILE *stream,  
    const char *format,  
    locale_t locale [,  
-   argument ]...  
+   argument_list ]  
 );  
 int fwprintf_s(   
    FILE *stream,  
    const wchar_t *format [,  
-   argument ]...  
+   argument_list ]  
 );  
 int _fwprintf_s_l(   
    FILE *stream,  
    const wchar_t *format,  
    locale_t locale [,  
-   argument ]…  
+   argument_list ]  
 );  
 ```  
   
@@ -105,8 +106,8 @@ int _fwprintf_s_l(
  `format`  
  格式控制字串。  
   
- `argument`  
- 選擇性引數。  
+ `argument_list`  
+ 格式字串的選擇性引數。  
   
  `locale`  
  要使用的地區設定。  
@@ -115,7 +116,7 @@ int _fwprintf_s_l(
  `fprintf_s` 會傳回寫入的位元組數。 `fwprintf_s` 會傳回寫入的寬字元數。 發生輸出錯誤時，所有這些函式都會改為傳回負值。  
   
 ## <a name="remarks"></a>備註  
- `fprintf_s` 會格式化一連串的字元和值，並將其列印至輸出 `stream`。 每個 `argument` 函式 (如果有的話) 都是根據 `format` 中的對應格式規格進行轉換和輸出。 針對 `fprintf_s`，`format` 引數的語法和用法與在 `printf_s` 中相同。  
+ `fprintf_s` 會格式化一連串的字元和值，並將其列印至輸出 `stream`。 在每個引數`argument_list`（如果有的話） 會轉換和輸出中的對應格式規格根據`format`。 `format`引數會使用[格式規格語法 printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
  `fwprintf_s` 是寬字元版本的 `fprintf_s`；在 `fwprintf_s` 中，`format` 是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 `fprintf_s` 目前不支援輸出至 UNICODE 資料流。  
   
@@ -124,7 +125,7 @@ int _fwprintf_s_l(
 > [!IMPORTANT]
 >  確認 `format` 不是使用者定義的字串。  
   
- 與不安全版本相同 (請參閱 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md))，如果 `stream` 或 `format` 是 Null 指標，則這些函式會驗證其參數，並叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 這些函式與不安全版本的差異在於也會一併驗證格式字串本身。 如果有任何未知或錯誤格式的格式規範，則這些函式會產生無效參數例外狀況。 在所有情況下，如果允許繼續執行，此函式會傳回 -1，並將 `errno` 設為 `EINVAL`。 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 與不安全版本相同 (請參閱 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md))，如果 `stream` 或 `format` 是 Null 指標，則這些函式會驗證其參數，並叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 格式字串本身也會進行驗證。 如果有任何未知或錯誤格式的格式規範，則這些函式會產生無效參數例外狀況。 在所有情況下，如果允許繼續執行，此函式會傳回 -1，並將 `errno` 設為 `EINVAL`。 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -146,7 +147,7 @@ int _fwprintf_s_l(
   
 ## <a name="example"></a>範例  
   
-```  
+```C  
 // crt_fprintf_s.c  
 // This program uses fprintf_s to format various  
 // data and print it to the file named FPRINTF_S.OUT. It  
@@ -179,9 +180,6 @@ this is a string
 10  
 1.500000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

@@ -6,18 +6,20 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 21162b7c25e09f2f77d2da1f4ee7797e68ec1e94
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 268723c43d61761e2b0a01d337adecc3336e01f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; 列舉
   
-##  <a name="a-namecodecvtmodeenumerationa--codecvtmode-enumeration"></a><a name="codecvt_mode_enumeration"></a>  codecvt_mode 列舉  
+##  <a name="codecvt_mode"></a>  codecvt_mode 列舉  
  指定[地區設定](../standard-library/locale-class.md) Facet 的設定資訊。  
   
 ```  

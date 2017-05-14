@@ -1,53 +1,71 @@
 ---
 title: "fmod、fmodf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fmod"
-  - "fmodf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fmod"
-  - "_fmodl"
-  - "fmodf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "計算浮點數餘數"
-  - "fmodf 函式"
-  - "fmod 函式"
-  - "浮點數，計算餘數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fmod
+- fmodf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- fmod
+- _fmodl
+- fmodf
+dev_langs:
+- C++
+helpviewer_keywords:
+- calculating floating-point remainders
+- fmodf function
+- fmod function
+- floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# fmod、fmodf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 09e647a4b99f887d11cb2dcd64e0fd680870ae2b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-計算浮點數餘數。  
+---
+# <a name="fmod-fmodf"></a>fmod、fmodf
+計算浮點餘數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double fmod(   
@@ -68,27 +86,27 @@ float fmodf(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `x`, `y`  
- 浮點數的值。  
+ 浮點值。  
   
-## 傳回值  
- `fmod` 會傳回 `x` \/ `y` 的浮點數餘數。  如果 `y` 的值為 0.0，`fmod` 就會傳回無訊息 NaN。  如需以 `printf` 系列表示無訊息 NaN 的詳細資訊，請參閱 [](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md "printf, _printf_l, wprintf, _wprintf_l")。  
+## <a name="return-value"></a>傳回值  
+ `fmod` 會傳回 `x` / `y` 的浮點餘數。 如果 `y` 的值為 0.0，則 `fmod` 會傳回無訊息 NaN。 如需透過 `printf` 系列表示無訊息 NaN 的資訊，請參閱 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)。  
   
-## 備註  
- `fmod` 函式計算 `x` \/ `y` 的浮點數餘數 `f`，將此餘數代入 `x` \= `i` `*` `y` \+ `f`，其中 `i` 為整數，`f` 的正負號與 `x` 相同，並且 `f` 的絕對值小於 `y` 的絕對值。  
+## <a name="remarks"></a>備註  
+ 如果 `x` = `i` `*` `y` + `f`，`fmod` 函式會計算 `x` / `y` 的浮點餘數 `f`，其中 `i` 是整數、`f` 的正負號與 `x` 相同，而且 `f` 的絕對值小於 `y` 的絕對值。  
   
- C\+\+ 允許多載，因此您可以呼叫 `fmod` 不同版本的多載。  在 C 程式中， `fmod` 一律接受並傳回雙精確度浮點數。  
+ C++ 允許多載，因此您可以呼叫 `fmod` 的多載。 在 C 程式中，`fmod` 一律會採用兩個雙精度浮點數並傳回一個雙精度浮點數。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|功能|必要的標頭|  
-|--------|-----------|  
-|`fmod`, `fmodf`|\<math.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`fmod`, `fmodf`|\<math.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_fmod.c  
@@ -106,13 +124,13 @@ int main( void )
 }  
 ```  
   
-  **\-10.00 \/ 3.00 的餘數為 \-1.000000**   
-## .NET Framework 對等用法  
- [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
+```Output  
+The remainder of -10.00 / 3.00 is -1.000000  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [ceil、ceilf、ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [fabs、 fabsf fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
+ [fabs、fabsf、fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
  [floor、floorf、floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [\_CIfmod](../../c-runtime-library/cifmod.md)
+ [_CIfmod](../../c-runtime-library/cifmod.md)

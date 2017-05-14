@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6e25dd5424ad471bade7289db4ea0684fab1f689
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 283186349d84225fdf9d1d52ec04817a12f3d27f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist 類別
@@ -68,21 +69,21 @@ class cache_chunklist
   
 |||  
 |-|-|  
-|[cache_chunklist](#cache_chunklist__cache_chunklist)|建構類型 `cache_chunklist` 的物件。|  
+|[cache_chunklist](#cache_chunklist)|建構類型 `cache_chunklist` 的物件。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[allocate](#cache_chunklist__allocate)|配置記憶體區塊。|  
-|[deallocate](#cache_chunklist__deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|  
+|[allocate](#allocate)|配置記憶體區塊。|  
+|[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<allocators>  
   
  **命名空間：** stdext  
   
-##  <a name="cache_chunklist__allocate"></a>  cache_chunklist::allocate  
+##  <a name="allocate"></a>  cache_chunklist::allocate  
  配置記憶體區塊。  
   
 ```
@@ -100,7 +101,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="cache_chunklist__cache_chunklist"></a>  cache_chunklist::cache_chunklist  
+##  <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist  
  建構類型 `cache_chunklist` 的物件。  
   
 ```
@@ -109,7 +110,7 @@ cache_chunklist();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="cache_chunklist__deallocate"></a>  cache_chunklist::deallocate  
+##  <a name="deallocate"></a>  cache_chunklist::deallocate  
  從指定位置起算的儲存體中，釋放指定數目的物件。  
   
 ```

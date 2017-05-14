@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3572e73b569abfff0a32fe2cd7ea0f4f5c265582
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a21c91fba99623ae7c97ef1455278617746fc310
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 類別
@@ -72,7 +73,7 @@ protected:
  初始參考計數。  
   
 ## <a name="remarks"></a>備註  
- 其行為取決於[具名](../standard-library/locale-class.md#locale__name)地區設定 `_Locname`。 每個建構函式會以 [time_put](../standard-library/time-put-class.md#time_put__time_put)\<CharType, OutputIterator>( `_Refs`) 初始化其基底物件。  
+ 其行為取決於[具名](../standard-library/locale-class.md#name)地區設定 `_Locname`。 每個建構函式會以 [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`) 初始化其基底物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<locale>  

@@ -190,10 +190,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7cd9b98172f30248c40d2b0b8410b19f4a0cafec
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 42bd88a29dbefe48c59742ab8fc982355262f66e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>編譯器嚴重錯誤 C999 至 C1999
@@ -219,7 +220,7 @@ ms.lasthandoff: 04/24/2017
 |嚴重錯誤 C1012|無對應的括弧︰ 遺漏 '*字元*"|  
 |嚴重錯誤 C1013|編譯器限制: 左括號太多，請簡化運算式或分為數個陳述式|  
 |嚴重錯誤 C1014|include 檔太多︰ 深度 =*數目*|  
-|嚴重錯誤 C1016|#ifdef / #ifndef 必須是識別項|  
+|嚴重錯誤 C1016|#ifdef/#ifndef 必須是識別項|  
 |[嚴重錯誤 C1017](../../error-messages/compiler-errors-1/fatal-error-c1017.md)|無效的整數常數運算式|  
 |嚴重錯誤 C1018|未預期的 #elif|  
 |嚴重錯誤 C1019|未預期的 #else|  
@@ -241,6 +242,7 @@ ms.lasthandoff: 04/24/2017
 |嚴重錯誤 C1048|未知的選項 '*字串*'in'*選項*'|  
 |嚴重錯誤 C1049|無效的數值引數 '*值*'|  
 |[嚴重錯誤 C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|程式資料庫檔案 '*檔案*'，格式已過時，將其刪除並重新編譯|  
+|[嚴重錯誤 C1052](fatal-error-c1052.md)|程式資料庫檔案 '*filename*'，所產生連結器使用 /debug: fastlink; 編譯器無法更新這類 PDB 檔案; 請將它刪除或使用 /Fd 指定其他 PDB 檔案名稱|  
 |嚴重錯誤 C1053|'*函式*': 函式太大|  
 |[嚴重錯誤 C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|編譯器限制: 初始設定式巢狀結構太深，請簡化|  
 |[嚴重錯誤 C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|編譯器限制: 索引鍵不足|  
@@ -290,16 +292,16 @@ ms.lasthandoff: 04/24/2017
 |嚴重錯誤 C1110|太多巢狀範本/泛型定義|  
 |嚴重錯誤 C1111|太多範本/泛型參數|  
 |嚴重錯誤 C1112|編譯器限制︰ `'number`' 巨集引數太多，僅*數目*允許|  
-|[嚴重錯誤 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using '*檔案*'|  
+|[嚴重錯誤 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using 失敗 '*檔案*'|  
 |嚴重錯誤 C1114|'*檔案*': WinRT 不支援 #using managed 組件|  
 |[嚴重錯誤 C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|呼叫 getprocaddress 失敗 '*函式*'|  
 |[嚴重錯誤 C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|呼叫 CryptoAPI 失敗，請重新安裝 Visual Studio 或作業系統|  
 |[嚴重錯誤 C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自動配置超過*大小*|  
 |[嚴重錯誤 C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|區段數目超過目的檔格式的限制: 請以 /bigobj 編譯|  
-|[嚴重錯誤 C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#錯誤︰*訊息*|  
+|[嚴重錯誤 C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error:*訊息*|  
 |嚴重錯誤 C1190|Managed 目標程式碼需要 '/clr' 選項|  
 |[嚴重錯誤 C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*檔案*' 只能在全域範圍匯入|  
-|[嚴重錯誤 C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using '*檔案*'|  
+|[嚴重錯誤 C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using 失敗 '*檔案*'|  
 |嚴重錯誤 C1193|在預期的錯誤*檔案*(*列*) 未達到|  
 |嚴重錯誤 C1195|在相同的命令列中使用 /Yu 和 /Yc 與 /clr 選項不相容|  
 |嚴重錯誤 C1196|'*識別碼*': 類型程式庫中找到的識別項'*typelib*' 不是有效的 c + + 識別項|  

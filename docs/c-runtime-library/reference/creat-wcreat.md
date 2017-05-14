@@ -1,58 +1,76 @@
 ---
 title: "_creat、_wcreat | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_creat"
-  - "_wcreat"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcreat"
-  - "_wcreat"
-  - "_creat"
-  - "tcreat"
-  - "_tcreat"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wcreat 函式"
-  - "_wcreat 函式"
-  - "檔案 [C#], 建立"
-  - "_creat 函式"
-  - "tcreat 函式"
-  - "creat 函式"
-  - "_tcreat 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _creat
+- _wcreat
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcreat
+- _wcreat
+- _creat
+- tcreat
+- _tcreat
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcreat function
+- _wcreat function
+- files [C++], creating
+- _creat function
+- tcreat function
+- creat function
+- _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _creat、_wcreat
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f034e2b80cc1bd3e7b5fc4578a6f5e77a060593c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
-建立新檔案。  `_creat` 和 `_wcreat` 已被取代；使用 [\_sopen\_s、\_wsopen\_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md) 。  
+---
+# <a name="creat-wcreat"></a>_creat、_wcreat
+建立新檔案。 `_creat` 和 `_wcreat` 已被取代，請改用 [_sopen_s、_wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _creat(   
@@ -65,57 +83,57 @@ int _wcreat(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `filename`  
  新檔案的名稱。  
   
  `pmode`  
- 使用權限設定。  
+ 權限設定。  
   
-## 傳回值  
- 這些函式，如果成功則傳回建立檔案的檔案描述項。  否則，如下表所示，函式會傳回 – 1 和 `errno` 集合。  
+## <a name="return-value"></a>傳回值  
+ 這些函式若成功，則傳回所建立檔案的檔案描述項。 否則，函式會傳回-1，並設定`errno`下表所示。  
   
 |`errno` 設定|說明|  
-|----------------|--------|  
-|`EACCES`|`filename` 指定一個現有唯讀檔或指定目錄而非檔案。|  
-|`EMFILE`|沒有可用的檔案描述。|  
+|---------------------|-----------------|  
+|`EACCES`|`filename` 會指定現有的唯讀檔案，或指定目錄而不是檔案。|  
+|`EMFILE`|沒有更多檔案描述項可用。|  
 |`ENOENT`|找不到指定的檔案。|  
   
- 如果 `filename` 為 NULL，則會叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 \-1。  
+ 如果 `filename` 為 NULL，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設定為 `EINVAL` ，並傳回 -1。  
   
- 如需更多關於這些和其他回傳碼的資訊，請參閱 [\_doserrno 、 errno 、 \_sys\_errlist 、和 \_sys\_nerr \(\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr\)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
+ 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `_creat` 函式會建立新的檔案或開啟並縮短現有項目。  `_wcreat` 是 `_creat` 的寬字元版本。 `_wcreat` 的 `filename` 引數是寬字元字串。  `_wcreat` 和 `_creat` 其餘行為相同。  
+## <a name="remarks"></a>備註  
+ `_creat` 函式會建立新的檔案，或開啟並截斷現有的檔案。 `_wcreat` 是寬字元版本的 `_creat`；`filename` 的 `_wcreat` 引數是寬字元字串。 否則，`_wcreat` 和 `_creat` 的行為即會相同。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|Tchar.h 常式|未定義 \_UNICODE and \_MBCS|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|------------------------------|----------------|-------------------|  
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcreat`|`_creat`|`_creat`|`_wcreat`|  
   
- 如果 `filename` 指定的檔案不存在，則建立新檔案。與特定使用權限集合和撰寫開啟。  如果檔案已經存在，而且它的使用權限設定為允許寫入， `_creat` 截斷檔案對長度為 0，終結目前的內容，並開啟它來寫入。  使用權限設定，`pmode`，只適用於新建立的檔案。  在第一次關閉後，新的檔案接收指定的使用權限設定。  整數運算式 `pmode` 包含定義於 SYS\\Stat.h 裏的表示常值 `_S_IWRITE` 和 `_S_IREAD` 其一或兩者兼有的整數表達式。  當給定兩個常值時，它們以位元連接藉由 `OR` 運算子\(  **&#124;**\).  `pmode` 參數會設為下列其中一個值。  
+ 如果 `filename` 所指定的檔案不存在，則會使用指定的權限設定建立新的檔案，然後開啟檔案以供寫入。 如果檔案已存在且其權限設定允許寫入，`_creat` 會將檔案長度截斷至 0 並終結先前的內容，然後開啟檔案以供寫入。 權限設定 `pmode` 只會套用至新建立的檔案。 新檔案會在第一次關閉之後收到指定的權限設定。 整數運算式 `pmode` 包含 SYS\Stat.h 中所定義的資訊清單常數 `_S_IWRITE` 及 (或) `_S_IREAD`。 指定兩個常數時，會使用位元 `OR` 運算子 (**&#124;**) 加以聯結。 `pmode` 參數會設定為下列其中一個值。  
   
 |值|定義|  
-|-------|--------|  
-|`_S_IWRITE`|允許的寫入。|  
-|`_S_IREAD`|允許的讀取。|  
+|-----------|----------------|  
+|`_S_IWRITE`|允許寫入。|  
+|`_S_IREAD`|允許讀取。|  
 |`_S_IREAD &#124; _S_IWRITE`|允許讀取和寫入。|  
   
- 如果沒有寫入權限，則檔案是唯讀的。  所有檔案都是可讀取的；唯寫權限是不可能的。  模式 `_S_IWRITE` 和 `_S_IREAD``| _S_IWRITE` 模式等價。  使用 `_creat` 開啟的檔案在相容性模式永遠開啟 \(請參閱 [\_sopen](../../c-runtime-library/reference/sopen-wsopen.md)\) 的 `_SH_DENYNO`。  
+ 若沒有指定寫入權限，則檔案為唯讀。 所有檔案皆為可讀取；不可能授與僅限寫入權限。 因此，模式 `_S_IWRITE` 和 `_S_IREAD | _S_IWRITE` 相同。 使用 `_creat` 開啟的檔案一律會在具有 `_SH_DENYNO` 的相容性模式中開啟 (請參閱 [_sopen](../../c-runtime-library/reference/sopen-wsopen.md))。  
   
- `_creat` 在設定存取權限之前提供 `pmode` 目前的檔案存取權限遮罩 \(請參閱 [\_umask](../../c-runtime-library/reference/umask.md)\) 。  `_creat` 是主要為了前一個程式庫的相容性所提供。  `_open` 和 `_O_CREAT` 和 `_O_TRUNC` 的呼叫中以 `oflag` 參數等於 `_creat` 且指定新程式碼為較好的。  
+ `_creat` 會在設定權限之前，將目前的檔案權限遮罩套用至 `pmode` (請參閱 [_umask](../../c-runtime-library/reference/umask.md))。 `_creat` 主要是為了與先前的程式庫相容所提供。 在 `oflag` 參數中使用 `_O_CREAT` 和 `_O_TRUNC` 呼叫 `_open` 相當於 `_creat`，並且適用於新的程式碼。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|選擇性標頭|  
-|--------|-----------|-----------|  
-|`_creat`|\<io.h\>|\<sys\/types.h\>, \<sys\/stat.h\>, \<errno.h\>|  
-|`_wcreat`|\<io.h\> or \<wchar.h\>|\<sys\/types.h\>, \<sys\/stat.h\>, \<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_creat`|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
+|`_wcreat`|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_creat.c  
@@ -146,13 +164,16 @@ int main( void )
 }  
 ```  
   
-  **建立的資料檔案。**   
-## 請參閱  
- [低層級 I\/O](../../c-runtime-library/low-level-i-o.md)   
- [\_chmod、\_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
- [\_chsize](../../c-runtime-library/reference/chsize.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [\_dup、\_dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [\_sopen、\_wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
- [\_umask](../../c-runtime-library/reference/umask.md)
+```Output  
+Created data file.  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
+ [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
+ [_chsize](../../c-runtime-library/reference/chsize.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_dup、_dup2](../../c-runtime-library/reference/dup-dup2.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
+ [_sopen、_wsopen](../../c-runtime-library/reference/sopen-wsopen.md)   
+ [_umask](../../c-runtime-library/reference/umask.md)

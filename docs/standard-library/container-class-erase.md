@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 0a28e1ff0def707926a67e1fea77f40e9927c0c4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: aeb81554bdc50db44e9e8d4ee66369149eceb875
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="container-classerase"></a>容器類別::erase
@@ -56,7 +57,7 @@ iterator erase(
 ```  
   
 ## <a name="remarks"></a>備註  
- 第一個成員函式會移除 _*Where* 所指向之受控制序列中的元素。 第二個成員函式會移除 [` first`, ` last`) 範圍中受控制序列中的元素。 兩者皆會傳回迭代器，其指定任何移除的元素之後的第一個剩餘元素；如果沒有這個元素，則為 [end](../standard-library/container-class-end.md)。  
+ 第一個成員函式中移除指向受控制序列的項目*_Where*。 第二個成員函式會移除 [`first`, `last`) 範圍中受控制序列中的元素。 兩者皆會傳回迭代器，其指定任何移除的元素之後的第一個剩餘元素；如果沒有這個元素，則為 [end](../standard-library/container-class-end.md)。  
   
  只有當複製作業擲回例外狀況時，成員函式才會擲回例外狀況。  
   

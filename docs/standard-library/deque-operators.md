@@ -10,19 +10,20 @@ f1_keywords: []
 ms.assetid: 482d7c92-54c7-493b-99e6-2a73617481a5
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 18fafc735fe05dbba24058394bbcd7fefd45cffd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9d7f8ff1d198e8608cb5aa96852dc5b263277e02
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; 運算子
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  測試運算子左邊的 deque 物件是否不等於右邊的 deque 物件。  
   
 ```
@@ -68,7 +69,7 @@ The deques are not equal.
 *\  
 ```  
   
-##  <a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  測試運算子左邊的 deque 物件是否小於右邊的 deque 物件。  
   
 ```
@@ -118,7 +119,7 @@ Deque c1 is less than deque c2.
 *\   
 ```  
   
-##  <a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  測試運算子左邊的 deque 物件是否小於或等於右邊的 deque 物件。  
   
 ```
@@ -169,7 +170,7 @@ Deque c1 is less than or equal to deque c2.
   
 ```  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  測試運算子左邊的 deque 物件是否等於右邊的 deque 物件。  
   
 ```
@@ -223,7 +224,7 @@ The deques are not equal.
   
 ```  
   
-##  <a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  測試運算子左邊的 deque 物件是否大於右邊的 deque 物件。  
   
 ```
@@ -275,7 +276,7 @@ Deque c1 is greater than deque c2.
   
 ```  
   
-##  <a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  測試運算子左邊的 deque 物件是否大於或等於右邊的 deque 物件。  
   
 ```

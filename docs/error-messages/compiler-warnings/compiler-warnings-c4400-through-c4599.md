@@ -39,7 +39,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -101,7 +100,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4463
 - C4464
 - C4472
 - C4480
@@ -144,10 +142,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: 123fea75676708aa557a4b4bb5aced1712ca86e4
-ms.lasthandoff: 04/28/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: ed1f641e226f85aefcebf5ecf127c1345dc0b1b2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>編譯器警告 C4400 透過 C4599
@@ -215,14 +214,14 @@ ms.lasthandoff: 04/28/2017
 |編譯器警告 （層級 1） C4453|'*類型*': '[WebHostHidden]' 類型不應之已發行介面上的公用型別不是 '[WebHostHidden]'|  
 |編譯器警告 （層級 1） C4454|'*函式*' 多個輸入參數數目所多載 [defaultoverload] 指定。 挑選 '*宣告*' 為預設多載|  
 |編譯器警告 （層級 1） C4455|' 運算子*運算子*': 不會啟動底線的常值後置字元識別項保留|  
-|編譯器警告 （層級 3） C4456|宣告的 '*識別碼*' 會隱藏先前的區域宣告|  
-|編譯器警告 （層級 3） C4457|宣告的 '*識別碼*' 會隱藏函式參數|  
-|編譯器警告 （層級 3） C4458|宣告的 '*識別碼*' 會隱藏類別成員|  
-|編譯器警告 （層級 3） C4459|宣告的 '*識別碼*' 會隱藏全域宣告|  
+|[編譯器警告 （層級 4） C4456](compiler-warning-level-4-c4456.md)|宣告的 '*識別碼*' 會隱藏先前的區域宣告|  
+|[編譯器警告 （層級 4） C4457](compiler-warning-level-4-c4457.md)|宣告的 '*識別碼*' 會隱藏函式參數|  
+|[編譯器警告 （層級 4） C4458](compiler-warning-level-4-c4458.md)|宣告的 '*識別碼*' 會隱藏類別成員|  
+|[編譯器警告 （層級 4） C4459](compiler-warning-level-4-c4459.md)|宣告的 '*識別碼*' 會隱藏全域宣告|  
 |[編譯器警告 (層級 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT &#124; managed' 運算子'*運算子*'，具有參考所傳遞參數。 'WinRT &#124; managed' 運算子'*運算子*'具有來自不同語意 c + + 運算子'*cpp_operator*'，您是否想要傳值方式傳遞？|  
 |[編譯器警告 (層級 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': 這個類別具有完成項' ！*完成項*'，但沒有解構函式 ' ~*dtor*'|  
 |[編譯器警告 (層級 1) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*類型*': 無法判斷類型的 GUID。 程式可能在執行階段失敗。|  
-|編譯器警告 C4463|溢位。指派 '*值*'給只能保留值的位元欄位'*min_value*'to'*max_value*'|  
+|[編譯器警告 （層級 4） C4463](compiler-warning-level-4-c4463.md)|溢位。指派 '*值*'給只能保留值的位元欄位'*min_value*'to'*max_value*'|  
 |編譯器警告 C4464|相對 include 路徑包含 '..'|  
 |[編譯器警告 (層級 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|浮點控制 pragma 在 /clr 下會被忽略|  
 |[編譯器警告 （層級 4） C4471](compiler-warning-level-4-c4471.md)|'*列舉*': 不限範圍列舉的向前宣告必須含有基礎類型 (假設為 int)|  

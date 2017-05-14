@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d06d072dd62eed102c3073cd1cd7a0c112e674bb
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 9ae60a13db0f975aca84c74caed43327e5bd1267
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cdialog-class"></a>CDialog 類別
@@ -74,13 +75,13 @@ class CDialog : public CWnd
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CDialog::CDialog](#cdialog)|建構 `CDialog` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CDialog::Create](#create)|初始化`CDialog`物件。 建立非強制回應對話方塊，並將它附加至`CDialog`物件。|  
 |[CDialog::CreateIndirect](#createindirect)|（沒有資源為基礎） 從記憶體中的對話方塊範本建立非強制回應對話方塊。|  
@@ -99,7 +100,7 @@ class CDialog : public CWnd
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CDialog::OnCancel](#oncancel)|若要執行的取消按鈕或 ESC 鍵的動作會覆寫。 預設會關閉對話方塊和**DoModal**傳回**IDCANCEL**。|  
 |[CDialog::OnOK](#onok)|覆寫以執行強制回應對話方塊中的 [確定] 按鈕的動作。 預設會關閉對話方塊和`DoModal`傳回**IDOK**。|  
@@ -269,7 +270,7 @@ virtual BOOL CreateIndirect(
   
  使用`CWnd::DestroyWindow`終結對話方塊中所建立的函式`CreateIndirect`函式。  
   
- 包含 ActiveX 控制項的對話方塊需要額外的資訊中提供**DLGINIT**資源。 如需詳細資訊，請參閱知識庫文章 Q231591，"如何︰ 使用對話方塊範本來建立 ActiveX 控制項與 MFC 對話方塊。 」 知識庫文件可在 MSDN Library 中的 Visual Studio 文件或在[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 包含 ActiveX 控制項的對話方塊需要額外的資訊中提供**DLGINIT**資源。 如需詳細資訊，請參閱知識庫文章 Q231591，"如何︰ 使用對話方塊範本來建立 ActiveX 控制項與 MFC 對話方塊。 」 知識庫文件位於[http://support.microsoft.com](http://support.microsoft.com/)。  
   
 ##  <a name="domodal"></a>CDialog::DoModal  
  呼叫此成員函式，來叫用強制回應對話方塊，並傳回完成的對話方塊結果。  
@@ -379,7 +380,7 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>備註  
  若要間接建立強制回應對話方塊中，第一次配置全域記憶體區塊，並填入對話方塊範本。 然後呼叫空`CDialog`建構對話方塊物件的建構函式。 接下來，呼叫`InitModalIndirect`儲存至記憶體中的對話方塊範本控制代碼。 建立並顯示 [Windows] 對話方塊之後，當[DoModal](#domodal)呼叫成員函式。  
   
- 包含 ActiveX 控制項的對話方塊需要額外的資訊中提供**DLGINIT**資源。 如需詳細資訊，請參閱知識庫文章 Q231591，"如何︰ 使用對話方塊範本來建立 ActiveX 控制項與 MFC 對話方塊。 」 知識庫文件可在 MSDN Library 中的 Visual Studio 文件或在[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 包含 ActiveX 控制項的對話方塊需要額外的資訊中提供**DLGINIT**資源。 如需詳細資訊，請參閱知識庫文章 Q231591，"如何︰ 使用對話方塊範本來建立 ActiveX 控制項與 MFC 對話方塊。 」 知識庫文件位於[http://support.microsoft.com](http://support.microsoft.com/)。  
   
 ##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
  呼叫以將矩形的對話方塊單位轉換成螢幕單位。  

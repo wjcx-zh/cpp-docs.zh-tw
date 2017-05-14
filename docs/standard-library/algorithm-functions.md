@@ -8,253 +8,171 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- std::adjacent_find
 - adjacent_find
 - algorithm/std::all_of
-- std::all_of
 - all_of
 - algorithm/std::any_of
-- std::any_of
 - any_of
 - algorithm/std::binary_search
-- std::binary_search
 - binary_search
 - algorithm/std::copy
-- std::copy
 - copy
 - algorithm/std::copy_backward
-- std::copy_backward
 - copy_backward
 - algorithm/std::copy_if
-- std::copy_if
 - copy_if
 - algorithm/std::copy_n
-- std::copy_n
 - copy_n
 - algorithm/std::equal
-- std::equal
 - equal
 - algorithm/std::equal_range
-- std::equal_range
 - equal_range
 - algorithm/std::fill
-- std::fill
 - fill
 - algorithm/std::fill_n
-- std::fill_n
 - fill_n
 - algorithm/std::find
-- std::find
 - find
 - algorithm/std::find_end
-- std::find_end
 - find_end
 - algorithm/std::find_first_of
-- std::find_first_of
 - find_first_of
 - algorithm/std::find_if
-- std::find_if
 - find_if
 - algorithm/std::find_if_not
-- std::find_if_not
 - find_if_not
 - algorithm/std::for_each
-- std::for_each
 - for_each
 - algorithm/std::generate
-- std::generate
 - generate
 - algorithm/std::generate_n
-- std::generate_n
 - generate_n
 - algorithm/std::includes
-- std::includes
 - includes
 - algorithm/std::inplace_merge
-- std::inplace_merge
 - inplace_merge
 - algorithm/std::is_heap
-- std::is_heap
 - is_heap
 - algorithm/std::is_heap_until
-- std::is_heap_until
 - is_heap_until
 - algorithm/std::is_partitioned
-- std::is_partitioned
 - is_partitioned
 - algorithm/std::is_permutation
-- std::is_permutation
 - is_permutation
 - algorithm/std::is_sorted
-- std::is_sorted
 - is_sorted
 - algorithm/std::is_sorted_until
-- std::is_sorted_until
 - is_sorted_until
 - algorithm/std::iter_swap
-- std::iter_swap
 - iter_swap
 - algorithm/std::lexicographical_compare
-- std::lexicographical_compare
 - lexicographical_compare
 - algorithm/std::lower_bound
-- std::lower_bound
 - lower_bound
 - algorithm/std::make_heap
-- std::make_heap
 - make_heap
 - algorithm/std::max
-- std::max
 - max
 - algorithm/std::max_element
-- std::max_element
 - max_element
 - algorithm/std::merge
-- std::merge
 - merge
 - algorithm/std::min
-- std::min
 - min
 - algorithm/std::minmax
-- std::minmax
 - minmax
 - algorithm/std::minmax_element
-- std::minmax_element
 - minmax_element
 - algorithm/std::min_element
-- std::min_element
 - min_element
 - algorithm/std::mismatch
-- std::mismatch
 - mismatch
 - algorithm/std::move
-- std::move
 - move
 - algorithm/std::move_backward
-- std::move_backward
 - move_backward
 - algorithm/std::next_permutation
-- std::next_permutation
 - next_permutation
 - algorithm/std::none_of
-- std::none_of
 - none_of
 - algorithm/std::nth_element
-- std::nth_element
 - nth_element
 - algorithm/std::partial_sort
-- std::partial_sort
 - partial_sort
 - algorithm/std::partial_sort_copy
-- std::partial_sort_copy
 - partial_sort_copy
 - algorithm/std::partition
-- std::partition
 - partition
 - algorithm/std::partition_point
-- std::partition_point
 - partition_point
 - algorithm/std::pop_heap
-- std::pop_heap
 - pop_heap
 - algorithm/std::prev_permutation
-- std::prev_permutation
 - prev_permutation
 - algorithm/std::push_heap
-- std::push_heap
 - push_heap
 - algorithm/std::random_shuffle
-- std::random_shuffle
 - random_shuffle
 - algorithm/std::remove
-- std::remove
 - remove
 - algorithm/std::remove_copy
-- std::remove_copy
 - remove_copy
 - algorithm/std::remove_copy_if
-- std::remove_copy_if
 - remove_copy_if
 - algorithm/std::remove_if
-- std::remove_if
 - remove_if
 - algorithm/std::replace
-- std::replace
 - replace
 - algorithm/std::replace_copy
-- std::replace_copy
 - replace_copy
 - algorithm/std::replace_copy_if
-- std::replace_copy_if
 - replace_copy_if
 - algorithm/std::replace_if
-- std::replace_if
 - replace_if
 - algorithm/std::reverse
-- std::reverse
 - reverse
 - algorithm/std::reverse_copy
-- std::reverse_copy
 - reverse_copy
 - algorithm/std::rotate
-- std::rotate
 - rotate
 - algorithm/std::rotate_copy
-- std::rotate_copy
 - rotate_copy
 - algorithm/std::search
-- std::search
 - search
 - algorithm/std::search_n
-- std::search_n
 - search_n
 - algorithm/std::set_difference
-- std::set_difference
 - set_difference
 - algorithm/std::set_intersection
-- std::set_intersection
 - set_intersection
 - algorithm/std::set_symmetric_difference
-- std::set_symmetric_difference
 - set_symmetric_difference
 - algorithm/std::set_union
-- std::set_union
 - set_union
 - algorithm/std::shuffle
-- std::shuffle
 - shuffle
 - algorithm/std::sort
-- std::sort
 - sort
 - algorithm/std::sort_heap
-- std::sort_heap
 - sort_heap
 - algorithm/std::stable_partition
-- std::stable_partition
 - stable_partition
 - algorithm/std::stable_sort
-- std::stable_sort
 - stable_sort
 - algorithm/std::swap_ranges
-- std::swap_ranges
 - swap_ranges
 - algorithm/std::transform
-- std::transform
 - transform
 - algorithm/std::unique
-- std::unique
 - unique
 - algorithm/std::unique_copy
-- std::unique_copy
 - unique_copy
 - algorithm/std::upper_bound
-- std::upper_bound
 - upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- std::count
 - count
 - xutility/std::equal
 - xutility/std::fill
@@ -266,15 +184,21 @@ f1_keywords:
 - xutility/std::move_backward
 - xutility/std::reverse
 - xutility/std::rotate
+- algorithm/std::count_if
+- algorithm/std::partition_copy
+- algorithm/std::swap
+dev_langs:
+- C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
 caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9916f5be3319b430104201387d6ab5b9b476e1c8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
@@ -306,11 +230,11 @@ ms.lasthandoff: 02/24/2017
 |[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|  
 |[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|  
 |[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|  
-|[std::shuffle](#std__shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
+|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|  
 |[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|  
 |[upper_bound](#upper_bound)|  
   
-##  <a name="a-nameadjacentfinda--adjacentfind"></a><a name="adjacent_find"></a> adjacent_find  
+##  <a name="adjacent_find"></a> adjacent_find  
  搜尋等於或符合指定之條件的兩個相鄰項目。  
   
 ```  
@@ -406,7 +330,7 @@ There are two adjacent elements where the second is twice the first.
  They have values of 10 & 20.  
 ```  
   
-##  <a name="a-nameallofa--allof"></a><a name="all_of"></a> all_of  
+##  <a name="all_of"></a> all_of  
  當條件出現在指定的範圍中的每個項目時，傳回 `true`。  
   
 ```  
@@ -433,7 +357,7 @@ template<class InputIterator, class Predicate>
 ### <a name="remarks"></a>備註  
  針對範圍 `[0,Last - first)` 中的每個 `N`，只有在述詞 `comp(*(_First + N))` 是 `true` 時，這個範本函式才會傳回 `true`。  
   
-##  <a name="a-nameanyofa--anyof"></a><a name="any_of"></a> any_of  
+##  <a name="any_of"></a> any_of  
  當條件出現在指定的項目範圍至少一次時，傳回 `true`。  
   
 ```  
@@ -460,9 +384,9 @@ template<class InputIterator, class UnaryPredicate>
 ### <a name="remarks"></a>備註  
  針對下列範圍中的某個 `N`，這個範本函式只有在下列情況下才會傳回 `true`：  
   
- 範圍為 `[0,`  `last`  `-`   `first` `)`，而情況是述詞 `comp``(*(` `first` `+ N))` 為 true。  
+ `[0, last - first)`述詞`comp(*(first + N))`為 true。  
   
-##  <a name="a-namebinarysearcha--binarysearch"></a><a name="binary_search"></a> binary_search  
+##  <a name="binary_search"></a> binary_search  
  測試已排序的範圍中是否有等於指定之值 (或在二元述詞指定的意義上，相當於該值) 的項目。  
   
 ```  
@@ -492,7 +416,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
  必要的值，比對元素值或必須符合條件的元素值與二元述詞所指定的元素值。  
   
  `comp`  
- 使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞接受兩個引數，並且在符合時傳回 `true`，不符合時則傳回 `false`。  
+ 使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 `true`，不符合時則傳回 `false`。  
   
 ### <a name="return-value"></a>傳回值  
  如果在範圍中找到等於或對等於所指定值的元素，則為 `true`；否則為 `false`。  
@@ -506,7 +430,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
  正向迭代器的實值類型必須是小於比較才能建立此順序：因此若提供兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元素之間的排序。  
   
- 隨機存取迭代器的演算法複雜度是對數，否則為線性，並且與步驟數目成正比 (`last` – `first`)。  
+ 演算法的複雜度是對數隨機存取迭代器和線性否則與數目成正比的步驟 ( `last`  -  `first`)。  
   
 ### <a name="example"></a>範例  
   
@@ -590,7 +514,7 @@ int main( )
 }   
 ```  
   
-##  <a name="a-namecopya--copy"></a><a name="copy"></a> copy  
+##  <a name="copy"></a> copy  
  從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以正向方向指派它們新位置。  
   
 ```  
@@ -612,7 +536,7 @@ template<class InputIterator, class OutputIterator>
  輸出迭代器，用於定址目的範圍中第一個項目的位置。  
   
 ### <a name="return-value"></a>傳回值  
- 輸出迭代器，定址目的範圍中最後一個元素之後的位置，也就是說，此迭代器會定址 `result` + (`last` –  `first`)。  
+ 輸出迭代器定址，也就是會在目標範圍中最後一個項目的後面一個位置，迭代器定址`result`+ ( `last`  -   `first` )。  
   
 ### <a name="remarks"></a>備註  
  來源範圍必須是有效的，而且必須在目的端有足夠的空間保留所有項目的複本。  
@@ -679,7 +603,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )  
 ```  
   
-##  <a name="a-namecopybackwarda--copybackward"></a><a name="copy_backward"></a>  copy_backward  
+##  <a name="copy_backward"></a>  copy_backward  
  從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以反向方向指派它們新位置。  
   
 ```  
@@ -701,7 +625,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  雙向迭代器，在目的範圍中越過最後一個項目的位置定址。  
   
 ### <a name="return-value"></a>傳回值  
- 輸出迭代器，定址目的範圍中最後一個元素之後的位置，也就是說，此迭代器會定址 `destEnd` + (`last` –  `first`)。  
+ 輸出迭代器定址，也就是會在目標範圍中最後一個項目的後面一個位置，迭代器定址`destEnd`-( `last`  -   `first` )。  
   
 ### <a name="remarks"></a>備註  
  來源範圍必須是有效的，而且必須在目的端有足夠的空間保留所有項目的複本。  
@@ -765,7 +689,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namecopyifa--copyif"></a><a name="copy_if"></a> copy_if  
+##  <a name="copy_if"></a> copy_if  
  在某範圍的元素中，複製所指定條件為 `true` 的元素。  
   
 ```  
@@ -800,7 +724,7 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
   
  範圍 `[0, last - first)` 中的每個 `N`，才能嚴格地從最低值開始增加 `N` 值。 如果 `dest` 和 `first` 指定儲存區域，`dest` 不得在範圍 `[` `first``,` `last``)`內。  
   
-##  <a name="a-namecopyna--copyn"></a><a name="copy_n"></a> copy_n  
+##  <a name="copy_n"></a> copy_n  
  複製指定的項目數目。  
   
 ```  
@@ -825,9 +749,9 @@ template<class InputIterator, class Size, class OutputIterator>
  傳回輸出迭代器，其中已將元素複製過去。 它和第三個參數 `dest` 的傳回值相同。  
   
 ### <a name="remarks"></a>備註  
- 這個範本函式會針對範圍 `[0,` `count``)` 中的每個 `N` 評估一次 `*(dest + N) = *(first + N))`，才能嚴格地從最低值開始增加 `N` 值。 它接著會傳回 `dest` `+ N`。 如果 `dest` 和 `first` 指定儲存區域，`dest` 不得在範圍 `[``first``,` `Last``)`內。  
+ 樣板函式評估`*(dest + N) = *(first + N))`一次針對每個`N`範圍`[0, count)`，嚴格增加值`N`從最低值開始。 然後它會傳回 `dest + N`。 如果`dest`和`first`指定儲存區域，`dest`不得在範圍`[first, last)`。  
   
-##  <a name="a-namecounta--count"></a><a name="count"></a> count  
+##  <a name="count"></a> count  
  傳回範圍中值符合指定值的項目數目。  
   
 ```  
@@ -893,7 +817,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.  
 ```  
   
-##  <a name="a-namecountifa--countif"></a><a name="count_if"></a> count_if  
+##  <a name="count_if"></a> count_if  
  傳回範圍中值符合指定條件的元素數。  
   
 ```  
@@ -963,7 +887,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.  
 ```  
   
-##  <a name="a-nameequala--equal"></a><a name="equal"></a> equal  
+##  <a name="equal"></a> equal  
  逐一比較兩個範圍的每個項目是否相等 (或在二元述詞指定的意義上，是否對等)。  
   
  比較不同容器類型 (例如 `vector` 和 `list`) 中的元素時、比較不同的元素類型時，或需要比較容器的子範圍時，請使用 `std::equal`。 否則，在比較相同容器類型中相同類型的元素時，請使用提供給每個容器的非成員 `operator==`。  
@@ -1060,7 +984,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameequalrangea--equalrange"></a><a name="equal_range"></a> equal_range  
+##  <a name="equal_range"></a> equal_range  
  如果提供排序範圍，則會尋找所有元素都等於指定值的子範圍。  
   
 ```  
@@ -1103,7 +1027,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
   
  `equal_range` 所傳回迭代器配對定義之可能空子範圍的元素，將會等於所使用述詞定義之意義中的 `val`。  
   
- 隨機存取迭代器的演算法複雜度是對數，否則為線性，並且與步驟數目成正比 (`last` – `first`)。  
+ 演算法的複雜度是對數隨機存取迭代器和線性否則與數目成正比的步驟 ( `last`  -  `first`)。  
   
 ### <a name="example"></a>範例  
   
@@ -1223,7 +1147,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefilla--fill"></a><a name="fill"></a> fill  
+##  <a name="fill"></a> fill  
  將相同的新值指派到指定範圍內的每個項目。  
   
 ```  
@@ -1288,7 +1212,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )  
 ```  
   
-##  <a name="a-namefillna--filln"></a><a name="fill_n"></a> fill_n  
+##  <a name="fill_n"></a> fill_n  
  將新值指派給範圍中以特定元素開頭的指定元素數目。  
   
 ```  
@@ -1364,7 +1288,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefinda--find"></a><a name="find"></a> find  
+##  <a name="find"></a> find  
  在範圍中找出有指定值的第一個項目的位置。  
   
 ```  
@@ -1393,7 +1317,7 @@ InputIterator find(
   
  如需使用 `find()` 的程式碼範例，請參閱 [find_if](../standard-library/algorithm-functions.md#find_if)。  
   
-##  <a name="a-namefindenda--findend"></a><a name="find_end"></a> find_end  
+##  <a name="find_end"></a> find_end  
  在範圍中尋找與指定序列相同 (或在二元述詞指定的意義上，相當於該序列) 的最後一個子序列。  
   
 ```  
@@ -1533,7 +1457,7 @@ There is a sequence of elements in v1 that are equivalent to those
  in v2 under the binary predicate twice and that begins at position 8.  
 ```  
   
-##  <a name="a-namefindfirstofa--findfirstof"></a><a name="find_first_of"></a> find_first_of  
+##  <a name="find_first_of"></a> find_first_of  
  在目標範圍內搜尋第一次出現的任何多個值，或第一次出現的任何多個項目 (在二元述詞指定的意義上，相當於指定之項目集合)。  
   
 ```  
@@ -1676,7 +1600,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namefindifa--findif"></a><a name="find_if"></a> find_if  
+##  <a name="find_if"></a> find_if  
  在範圍中找出滿足特定條件的第一個項目的位置。  
   
 ```  
@@ -1789,7 +1713,7 @@ int main()
   
 ```  
   
-##  <a name="a-namefindifnota--findifnot"></a><a name="find_if_not"></a> find_if_not  
+##  <a name="find_if_not"></a> find_if_not  
  傳回指定範圍中不滿足條件的第一個項目。  
   
 ```  
@@ -1818,7 +1742,7 @@ InputIterator find_if_not(
   
  如需快速適用於 `find_if_not()` 的程式碼範例，請參閱 [find_if](../standard-library/algorithm-functions.md#find_if)。  
   
-##  <a name="a-nameforeacha--foreach"></a><a name="for_each"></a> for_each  
+##  <a name="for_each"></a> for_each  
  將指定的函式物件以正向順序套用至範圍內的每個項目，並傳回函式物件。  
   
 ```  
@@ -1847,7 +1771,7 @@ Function for_each(
   
  參考的範圍必須有效；所有指標必須是可取值且在序列中，還必須要可以從第一個位置開始透過增量而取得最後一個位置。  
   
- 複雜度為線性，最多有 (`last` –  `first`) 次比較。  
+ 複雜度為線性，最多 ( `last`  -   `first`) 比較。  
   
 ### <a name="example"></a>範例  
   
@@ -1962,7 +1886,7 @@ The average of the elements of v1 is:
  Average ( v1mod2 ) = 10.  
 ```  
   
-##  <a name="a-namegeneratea--generate"></a><a name="generate"></a> generate  
+##  <a name="generate"></a> generate  
  將函式物件產生的值指派給範圍內的每個項目。  
   
 ```  
@@ -1988,7 +1912,7 @@ void generate(
   
  參考的範圍必須有效；所有指標必須是可取值且在序列中，還必須要可以從第一個位置開始透過增量而取得最後一個位置。  
   
- 複雜度為線性，因此需要對產生器執行明確的 (`last` –  `first`) 呼叫。  
+ 複雜度為線性，完全 ( `last`  -   `first`) 呼叫所需要的產生器。  
   
 ### <a name="example"></a>範例  
   
@@ -2033,7 +1957,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).  
 ```  
   
-##  <a name="a-namegeneratena--generaten"></a><a name="generate_n"></a> generate_n  
+##  <a name="generate_n"></a> generate_n  
  將函式物件產生的值指派給範圍內的指定項目數，並返回到超過最後一個指定值的位置。  
   
 ```  
@@ -2105,7 +2029,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameincludesa--includes"></a><a name="includes"></a> includes  
+##  <a name="includes"></a> includes  
  測試一個排序範圍是否包含第二個排序範圍內的所有項目，其中項目之間的順序或等價準則可由二元述詞指定。  
   
 ```  
@@ -2155,7 +2079,7 @@ bool includes(
   
  輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 更精確地說，演算法會測試所指定二元述詞下第一個排序範圍中的所有元素是否都有第二個排序範圍中元素的對等順序。  
   
- 此演算法的複雜度為線性，非空白來源範圍最多有 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 次比較。  
+ 演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-(* last2-first2 *))-1 非空白來源範圍的比較。  
   
 ### <a name="example"></a>範例  
   
@@ -2306,7 +2230,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.  
 ```  
   
-##  <a name="a-nameinplacemergea--inplacemerge"></a><a name="inplace_merge"></a> inplace_merge  
+##  <a name="inplace_merge"></a> inplace_merge  
  將兩個連續排序範圍內的項目結合成單一排序範圍，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -2342,7 +2266,7 @@ void inplace_merge(
   
  每個排序連續範圍都必須根據 `inplace_merge` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。 因為會保留每個範圍內元素的相對順序，所以這項作業十分穩定。 兩個來源範圍中有對等元素時，結合範圍之第一個範圍中的元素會優先於第二個範圍中的元素。  
   
- 因為演算法會將記憶體配置給暫存緩衝區，所以複雜度取決於可用記憶體。 如果有足夠的記憶體可用，則最好的情況是具有 (* last – first*) – 1 次比較的線性；如果沒有輔助記憶體可用，則最差狀況是 *N* log *(N)*，其中 *N* = (*last – first*)。  
+ 因為演算法會將記憶體配置給暫存緩衝區，所以複雜度取決於可用記憶體。 如果足夠的記憶體可用時，最好的情況下為線性，(* 上次-先*)-1 比較; 如果沒有輔助記憶體可用，最壞的情況下是*N*記錄*(N)*，其中*N* = (* 上次-先*)。  
   
 ### <a name="example"></a>範例  
   
@@ -2455,7 +2379,7 @@ Merged inplace with binary predicate mod_lesser specified,
  vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )  
 ```  
   
-##  <a name="a-nameisheapa--isheap"></a><a name="is_heap"></a> is_heap  
+##  <a name="is_heap"></a> is_heap  
  如果在指定範圍內的項目形成堆積，則傳回 `true`。  
   
 ```  
@@ -2479,7 +2403,7 @@ bool is_heap(
  隨機存取迭代器，表示範圍結尾。  
   
  `comp`  
- 要測試以排序元素的條件。 二元述詞會接受單一引數，並傳回 `true` 或 `false`。  
+ 要測試以排序元素的條件。 二元述詞會採用單一引數並傳回`true`或`false`。  
   
 ### <a name="return-value"></a>傳回值  
  如果指定範圍內的元素形成堆積，則傳回 `true`，否則會傳回 `false`。  
@@ -2491,7 +2415,7 @@ bool is_heap(
   
  `is_heap_until` `(`  `first` `,`  `last` `,`  `comp` `) ==`  `last`.  
   
-##  <a name="a-nameisheapuntila--isheapuntil"></a><a name="is_heap_until"></a> is_heap_until  
+##  <a name="is_heap_until"></a> is_heap_until  
  傳回位於範圍 [ `begin`, `end`) 中不符合堆積排序條件之第一個元素的迭代器；如果範圍形成堆積，則傳回 `end`。  
   
 ```  
@@ -2525,7 +2449,7 @@ RandomAccessIterator is_heap_until(
   
  第二個樣板函式的行為與第一個樣板函式相同，但會使用述詞 `compare` (而不是 `std::less<>`) 做為堆積排序條件。  
   
-##  <a name="a-nameispartitioneda--ispartitioned"></a><a name="is_partitioned"></a> is_partitioned  
+##  <a name="is_partitioned"></a> is_partitioned  
  如果在指定範圍內針對條件測試為 `true` 的所有項目都是在測試為 `true` 的任何項目之前，傳回 `false`。  
   
 ```  
@@ -2552,7 +2476,7 @@ bool is_partitioned(
 ### <a name="remarks"></a>備註  
  只有在透過 `comp` 分割 `[` `first``,` `last``)` 中的所有元素時，這個範本函式才會傳回 `true`；亦即，`[` `first``,` `last``)` 中 `comp``(X)` 為 true 的所有元素 `X`發生在 `comp``(Y)` 為 `false`的所有元素 `Y` 之前。  
   
-##  <a name="a-nameispermutationa--ispermutation"></a><a name="is_permutation"></a> is_permutation  
+##  <a name="is_permutation"></a> is_permutation  
  如果兩個範圍包含相同的項目，則不論項目的順序是否相同，都會傳回 true。 使用 C++14 程式碼中的雙重範圍多載，因為如果第二個範圍超過第一個範圍，只為第二個範圍採用單一迭代器的多載不會偵測到差異；而如果第二個範圍比第一個範圍短，則會導致未定義的行為。  
   
 ```  
@@ -2608,7 +2532,7 @@ bool is_permutation(
 ### <a name="remarks"></a>備註  
  `is_permutation` 在最壞的情況有二次方的複雜性。  
   
- 第一個範本函式會假設範圍中開頭為 `First2` 的元素數目，與 [ `First1`, `Last1`) 指定範圍的元素數目相同。 如果第二個範圍中有多個項目，就會忽略它們；如果更少，就會發生未定義的行為。 第三個樣板函式 (C++&14; 和更新版本) 不會進行這項假設。  兩者都會傳回 `true`，但前題是針對 [`First1`, `Last1`) 指定範圍中的每個項目 X，X == Y 所在的相同範圍內的項目 Y 數，與以 `First2` 或 [`First2, Last2).` 開頭的範圍中數目相同。在這裡，`operator==` 必須在其運算元之間執行成對比較。  
+ 第一個範本函式會假設範圍中開頭為 `First2` 的元素數目，與 [ `First1`, `Last1`) 指定範圍的元素數目相同。 如果第二個範圍中有多個項目，就會忽略它們；如果更少，就會發生未定義的行為。 第三個樣板函式 (C++ 14 和更新版本) 不會進行這項假設。  兩者都會傳回 `true`，但前題是針對 [`First1`, `Last1`) 指定範圍中的每個項目 X，X == Y 所在的相同範圍內的項目 Y 數，與以 `First2` 或 [`First2, Last2).` 開頭的範圍中數目相同。在這裡，`operator==` 必須在其運算元之間執行成對比較。  
   
  第二個和第四個樣板函式的行為相同，不同之處是它們會以 `Pred(X, Y)` 取代 `operator==(X, Y)`。 若要正常運作，述詞必須對稱、自反和轉移。  
   
@@ -2668,7 +2592,7 @@ int main()
   
 ```  
   
-##  <a name="a-nameissorteda--issorted"></a><a name="is_sorted"></a> is_sorted  
+##  <a name="is_sorted"></a> is_sorted  
  如果在指定範圍內的項目為已排序順序，則傳回 `true`。  
   
 ```  
@@ -2699,7 +2623,7 @@ bool is_sorted(
   
  第二個範本函式會傳回 `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`。 `comp` 述詞函式會執行順序比較。  
   
-##  <a name="a-nameissorteduntila--issorteduntil"></a><a name="is_sorted_until"></a> is_sorted_until  
+##  <a name="is_sorted_until"></a> is_sorted_until  
  傳回 `ForwardIterator`，以設定為指定範圍中依排序順序的最後一個元素。  
   
  第二個版本可讓您提供 `BinaryPredicate` 函式，此函式會在兩個指定元素處於排序順序時傳回 `true`，否則為 `false`。  
@@ -2736,7 +2660,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `comp``(X, Y)`。  
   
-##  <a name="a-nameiterswapa--iterswap"></a><a name="iter_swap"></a> iter_swap  
+##  <a name="iter_swap"></a> iter_swap  
  交換由一組指定之迭代器所參考的兩個值。  
   
 ```  
@@ -2890,7 +2814,7 @@ After exchanging first elements,
  & deque deq2 is: deq2 = ( 0 5 ).  
 ```  
   
-##  <a name="a-namelexicographicalcomparea--lexicographicalcompare"></a><a name="lexicographical_compare"></a> lexicographical_compare  
+##  <a name="lexicographical_compare"></a> lexicographical_compare  
  逐一比較兩個序列之間的每個項目，判斷兩者較小者。  
   
 ```  
@@ -3034,7 +2958,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.  
 ```  
   
-##  <a name="a-namelowerbounda--lowerbound"></a><a name="lower_bound"></a> lower_bound  
+##  <a name="lower_bound"></a> lower_bound  
  在已排序範圍中尋找值大於或相當於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -3078,7 +3002,7 @@ ForwardIterator lower_bound(
   
  正向迭代器的實值類型必須小於比較才能建立此順序：因此若提供兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元素之間的排序。  
   
- 隨機存取迭代器的演算法複雜度是對數，否則為線性，並且與步驟數目成正比 (`last – first`)。  
+ 隨機存取迭代器的演算法複雜度是對數，否則為線性，並且與步驟數目成正比 (`last - first`)。  
   
 ### <a name="example"></a>範例  
   
@@ -3171,7 +3095,7 @@ int main( )
   
 ```  
   
-##  <a name="a-namemakeheapa--makeheap"></a><a name="make_heap"></a> make_heap  
+##  <a name="make_heap"></a> make_heap  
  將在指定範圍內的項目轉換為堆積，其中第一個項目是最大，而且排序準則可由二元述詞指定。  
   
 ```  
@@ -3207,7 +3131,7 @@ void make_heap(
   
  堆積是實作優先順序佇列的理想方式，並且用於實作 C++ 標準程式庫容器配接器 [priority_queue 類別](../standard-library/priority-queue-class.md)。  
   
- 複雜度為線性，需要有 3 \* (*last – first*) 次比較。  
+ 複雜度為線性，需要 3 \* (* 姓氏-名字 *) 的比較。  
   
 ### <a name="example"></a>範例  
   
@@ -3251,7 +3175,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemaxa--max"></a><a name="max"></a> max  
+##  <a name="max"></a> max  
  比較兩個物件並傳回兩者較大者，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -3464,7 +3388,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).  
 ```  
   
-##  <a name="a-namemaxelementa--maxelement"></a><a name="max_element"></a> max_element  
+##  <a name="max_element"></a> max_element  
  在指定的範圍內尋找第一個最大項目，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -3492,7 +3416,7 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>備註  
  參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。  
   
- 複雜性為線性：非空白範圍需要 (`last` –  `first`) – 1 次比較。  
+ 複雜度為線性: ( `last`  -   `first`)-1 比較所需的非空白的範圍。  
   
 ### <a name="example"></a>範例  
   
@@ -3594,7 +3518,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namemergea--merge"></a><a name="merge"></a> merge  
+##  <a name="merge"></a> merge  
  將兩個排序來源範圍內的所有項目結合成單一排序目的範圍，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -3650,7 +3574,7 @@ OutputIterator merge(
   
  輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。  
   
- 此演算法的複雜度為線性，最多有 (*last1 – first1*) – (*last2 – first2*) – 1 次比較。  
+ 演算法的複雜度為線性，最多 (* last1-first1*)-(* last2-first2*)-1 比較。  
   
  [list 類別](../standard-library/list-class.md)提供成員函式 "merge" 來合併兩個清單的元素。  
   
@@ -3764,7 +3688,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namemina--min"></a><a name="min"></a> min  
+##  <a name="min"></a> min  
  比較兩個物件並傳回兩者較小者，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -3975,7 +3899,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).  
 ```  
   
-##  <a name="a-nameminelementa--minelement"></a><a name="min_element"></a> min_element  
+##  <a name="min_element"></a> min_element  
  在指定的範圍內尋找第一個最小項目，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -4003,7 +3927,7 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
 ### <a name="remarks"></a>備註  
  參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。  
   
- 複雜性為線性：非空白範圍需要 (`last` – `first`) – 1 次比較。  
+ 複雜度為線性: ( `last`  -  `first`)-1 比較所需的非空白的範圍。  
   
 ### <a name="example"></a>範例  
   
@@ -4115,7 +4039,7 @@ The smallest element in v1 under the mod_lesser
  binary predicate is: 0  
 ```  
   
-##  <a name="a-nameminmaxelementa--minmaxelement"></a><a name="minmax_element"></a> minmax_element  
+##  <a name="minmax_element"></a> minmax_element  
  在一個呼叫中執行 `min_element` 和 `max_element` 所執行的工作。  
   
 ```  
@@ -4162,7 +4086,7 @@ template<class ForwardIterator, class BinaryPredicate>
   
  如果序列不是空的，此函式最多執行 `3 * (``last` `-`  `first` `- 1) / 2` 次比較。  
   
-##  <a name="a-nameminmaxa--minmax"></a><a name="minmax"></a> minmax  
+##  <a name="minmax"></a> minmax  
  比較兩個輸入參數並作為一組傳回，從小排到大。  
   
 ```  
@@ -4212,7 +4136,7 @@ template<class Type, class BinaryPredicate>
   
  此函式只會執行一個比較。  
   
-##  <a name="a-namemismatcha--mismatch"></a><a name="mismatch"></a> mismatch  
+##  <a name="mismatch"></a> mismatch  
  逐一比較兩個範圍的每個項目，找出差異發生的第一個位置。  
   
  使用 C++14 程式碼中的雙重範圍多載，因為如果第二個範圍超過第一個範圍，只為第二個範圍採用單一迭代器的多載不會偵測到差異；而如果第二個範圍比第一個範圍短，則會導致未定義的行為。  
@@ -4372,7 +4296,7 @@ Press a key
   
 ```  
   
-##  <a name="a-namealgmovea--ltalggt-move"></a><a name="alg_move"></a>  &lt;alg&gt; move  
+##  <a name="alg_move"></a>  &lt;alg&gt; move  
  移動與所指定範圍相關聯的項目。  
   
 ```  
@@ -4395,9 +4319,9 @@ template<class InputIterator, class OutputIterator>
  要包含已移動項目的輸出迭代器。  
   
 ### <a name="remarks"></a>備註  
- 這個範本函式會針對範圍 `[0,` `last` `-`  `first``)` 中的每個 `N` 評估一次 `*(``dest` `+ N) =`  move `(*(` `first` `+ N)))`，才能嚴格地從最低值開始增加 `N` 值。 它接著會傳回 `dest` `+ N`。 如果 `dest` 和 `first` 指定儲存區域，`dest` 不得在範圍 `[` `first``,` `last``)`內。  
+ 樣板函式評估`*(dest + N) = move(*(first + N))`一次針對每個`N`範圍`[0, last - first)`，嚴格增加值`N`從最低值開始。 然後它會傳回 `dest + N`。 如果`dest`和`first`指定儲存區域，`dest`不得在範圍`[first, last)`。  
   
-##  <a name="a-namemovebackwarda--movebackward"></a><a name="move_backward"></a> move_backward  
+##  <a name="move_backward"></a> move_backward  
  將一個迭代器的項目移至另一個迭代器。 從指定範圍內的最後一個項目開始移動，並以該範圍內的第一個項目結束。  
   
 ```  
@@ -4420,11 +4344,11 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
  雙向迭代器，在目的範圍中越過最後一個項目的位置定址。  
   
 ### <a name="remarks"></a>備註  
- 這個範本函式會針對範圍 `[0,` `last` `-`  `first``)` 中的每個 `N` 評估一次 `*(``destEnd` `- N - 1) =` `move``(*(``last` `- N - 1)))`，才能嚴格地從最低值開始增加 `N` 值。 它接著會傳回 `destEnd` `- (``last` `-` `first``)`。 如果 `destEnd` 和 `first` 指定儲存區域，`destEnd` 不得在範圍 `[` `first``,` `last``)`內。  
+ 樣板函式評估`*(destEnd - N - 1) = move(*(last - N - 1))`一次針對每個`N`範圍`[0, last - first)`，嚴格增加值`N`從最低值開始。 然後它會傳回 `destEnd - (last - first)`。 如果`destEnd`和`first`指定儲存區域，`destEnd`不得在範圍`[first, last)`。  
   
  `move` 和 `move_backward` 的功能等同於搭配使用 `copy` 和 `copy_backward` 與移動迭代器。  
   
-##  <a name="a-namenextpermutationa--nextpermutation"></a><a name="next_permutation"></a> next_permutation  
+##  <a name="next_permutation"></a> next_permutation  
  重新排列範圍的項目，讓原始順序由語彙方面下一個較大的排列取代 (如果有的話)，其中下一個的意義可由二元述詞指定。  
   
 ```  
@@ -4454,7 +4378,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
  預設二元述詞為小於，而且範圍中的元素必須小於比較值，確保已正確定義下一個排列。  
   
- 複雜度為線性，最多有 (*last – first*)/2 次交換。  
+ 複雜度為線性，最多 (* 姓氏-名字 *) / 2 交換。  
   
 ### <a name="example"></a>範例  
   
@@ -4595,7 +4519,7 @@ After another next_permutation of vector v1,
  v1 =   ( -3 -2 -1 1 0 2 3 ).  
 ```  
   
-##  <a name="a-namenthelementa--nthelement"></a><a name="nth_element"></a> nth_element  
+##  <a name="nth_element"></a> nth_element  
  分割某範圍的元素，將序列的第 *n* 個元素正確放入範圍中，以便在它前面的所有元素小於或等於它，而且序列中在它後面的所有元素大於或等於它。  
   
 ```  
@@ -4627,7 +4551,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
   
  如果任一個都不小於另一個，則元素對等，但不一定相等。  
   
- 平均排序複雜度是與 *last – first* 有關的線性。  
+ 排序複雜度的平均值為相對於線性 * 姓氏-名字 *。  
   
 ### <a name="example"></a>範例  
   
@@ -4695,7 +4619,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namenoneofa--noneof"></a><a name="none_of"></a> none_of  
+##  <a name="none_of"></a> none_of  
  當條件從未出現在指定的範圍中的項目時，傳回 `true`。  
   
 ```  
@@ -4717,9 +4641,9 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
  如果在所指出範圍至少偵測不到一次條件，則會傳回 `true`；如果偵測到條件，則會傳回 `false`。  
   
 ### <a name="remarks"></a>備註  
- 針對範圍 `[0,` `last` `-`  `first``)` 中的某個 `N`，只有在述詞 `comp``(*(` `first` `+ N))` 一律是 `false` 時，這個範本函式才會傳回 `true`。  
+ 範本函式會傳回`true`才，某些`N`範圍`[0, last - first)`，述詞`comp(*(first + N))`一律`false`。  
   
-##  <a name="a-namepartialsorta--partialsort"></a><a name="partial_sort"></a> partial_sort  
+##  <a name="partial_sort"></a> partial_sort  
  將範圍中指定的較小項目數目排列成非遞減排列，或是依據二元述詞指定的順序準則。  
   
 ```  
@@ -4831,7 +4755,7 @@ Partially resorted (UDgreater) vector:
  v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )  
 ```  
   
-##  <a name="a-namepartialsortcopya--partialsortcopy"></a><a name="partial_sort_copy"></a> partial_sort_copy  
+##  <a name="partial_sort_copy"></a> partial_sort_copy  
  從來源範圍將項目複製到目的範圍，其中來源項目是依小於排序，或依據二元述詞指定的順序準則。  
   
 ```  
@@ -4952,7 +4876,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namepartitiona--partition"></a><a name="partition"></a> partition  
+##  <a name="partition"></a> partition  
  將範圍中的項目分類為兩個斷續集合，而滿足一元述詞的項目在無法滿足一元述詞的項目之前。  
   
 ```  
@@ -4982,7 +4906,7 @@ template<class BidirectionalIterator, class Predicate>
   
  如果 *Pr* (*a*, *b*) 為 false 且 *Pr* (*b*, *a*) 為 false (其中 *Pr* 是參數指定的述詞)，則元素 *a* 和 *b* 對等，但不一定相等。 **partition** 演算法不穩定，因此不保證保留對等元素的相對順序。 **stable_partition** 演算法確實會保留這個原始順序。  
   
- 複雜度為線性：套用 ( `last` –  `first`) 次 `comp`，最多有 ( `last` –  `first`)/2 次交換。  
+ 複雜度為線性︰ 有 ( `last`  -   `first`) 應用程式的`comp`且最 ( `last`  -   `first`) / 2 交換。  
   
 ### <a name="example"></a>範例  
   
@@ -5023,7 +4947,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namepartitioncopya--partitioncopy"></a><a name="partition_copy"></a> partition_copy  
+##  <a name="partition_copy"></a> partition_copy  
  將條件是 `true` 的項目複製到一個目的地，並將條件是 `false` 的項目複製到另一個目的地。 項目必須來自指定的範圍。  
   
 ```  
@@ -5055,9 +4979,9 @@ template<class InputIterator, class OutputIterator1, class OutputIterator2, clas
  要測試的條件。 這是由定義要測試之條件的使用者定義述詞函式物件所提供。 述詞會接受單一引數，並傳回 `true` 或 `false`。  
   
 ### <a name="remarks"></a>備註  
- 如果 `_Pred``(X)` 為 true，這個範本函式會將 `[` `first``,` `last``)` 中的每個元素 `X` 複製至 `*``dest1``++` 或 `*``dest2``++ if not`。 它會傳回 `pair<OutputIterator1, OutputIterator2>(``dest1``,` `dest2``)`。  
+ 樣板函式會將每個項目複製`X`中`[first,last)`至`*dest1++`如果`_Pred(X)`為 true，或`*dest2++`如果不是。 它會傳回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。  
   
-##  <a name="a-namepartitionpointa--partitionpoint"></a><a name="partition_point"></a> partition_point  
+##  <a name="partition_point"></a> partition_point  
  傳回給定範圍中不滿足條件的第一個項目。 排序項目，以便滿足條件的項目在不滿足條件的項目之前。  
   
 ```  
@@ -5083,9 +5007,9 @@ template<class ForwardIterator, class Predicate>
  傳回參照不符合 `comp` 所測試條件之第一個元素的 `ForwardIterator`；如果找不到，則會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 這個範本函式會尋找 `[` `first``,``last``)` 中 `comp(*it)` 為 `false` 的第一個迭代器 `it`。 序列必須依 `comp` 進行排序。  
+ 樣板函式會尋找第一個迭代器`it`中`[first, last)`其`comp(*it)`是`false`。 序列必須依 `comp` 進行排序。  
   
-##  <a name="a-namepopheapa--popheap"></a><a name="pop_heap"></a> pop_heap  
+##  <a name="pop_heap"></a> pop_heap  
  從堆積的前面移動最大的項目至範圍的倒數第二個位置，然後從其餘項目形成新的堆積。  
   
 ```  
@@ -5122,7 +5046,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
  結尾不包括新增元素的範圍必須是堆積。  
   
- 複雜度為對數，最多需要 log (*last – first*) 次比較。  
+ 複雜度為對數，最多需要記錄檔 (* 姓氏-名字 *) 的比較。  
   
 ### <a name="example"></a>範例  
   
@@ -5186,7 +5110,7 @@ int main( )  {
 }  
 ```  
   
-##  <a name="a-nameprevpermutationa--prevpermutation"></a><a name="prev_permutation"></a> prev_permutation  
+##  <a name="prev_permutation"></a> prev_permutation  
  重新排列範圍的元素，讓原始順序由語彙方面上一個較大的排列取代 (如果有的話)，其中上一個的意義可由二元述詞指定。  
   
 ```  
@@ -5221,7 +5145,7 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
  預設二元述詞為小於，而且範圍中的元素必須小於比較值，確保已正確定義上一個排列。  
   
- 複雜度為線性，最多有 (`last` –  `first`)/2 次交換。  
+ 複雜度為線性，最多 ( `last`  -   `first`) / 2 交換。  
   
 ### <a name="example"></a>範例  
   
@@ -5357,7 +5281,7 @@ After another prev_permutation of vector v1,
  v1 =   ( -3 -2 0 2 -1 1 3 ).  
 ```  
   
-##  <a name="a-namepushheapa--pushheap"></a><a name="push_heap"></a> push_heap  
+##  <a name="push_heap"></a> push_heap  
  將在範圍結尾的項目加入至由範圍中之前項目所組成的現有堆積。  
   
 ```  
@@ -5394,7 +5318,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
  結尾不包括新增元素的範圍必須是堆積。  
   
- 複雜度為對數，最多需要 log (*last – first*) 次比較。  
+ 複雜度為對數，最多需要記錄檔 (*上次-先*) 比較。  
   
 ### <a name="example"></a>範例  
   
@@ -5463,10 +5387,10 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerandomshufflea--randomshuffle"></a><a name="random_shuffle"></a> random_shuffle  
- std::random_shuffle() 函式已遭取代，取代為 [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle)。 如需程式碼範例及詳細資訊，請參閱 [\<random>](../standard-library/random.md) 以及 Stackoverflow 文章 [Why are std::random_shuffle methods being deprecated in C++14?](http://go.microsoft.com/fwlink/?LinkId=397954)(std::random_shuffle 方法為何在 C++14 中遭到取代？)。  
+##  <a name="random_shuffle"></a> random_shuffle  
+ Std::random_shuffle() 函式已被取代，取代[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 如需程式碼範例和詳細資訊，請參閱[\<隨機 >](../standard-library/random.md)以及 stackoverflow 文章[std:: random_shuffle 方法為何正在取代 C + + 14？](http://go.microsoft.com/fwlink/?LinkId=397954)。  
   
-##  <a name="a-nameremovea--remove"></a><a name="remove"></a> remove  
+##  <a name="remove"></a>  remove  
  從指定範圍中排除指定的值，而不會干擾其餘項目的順序，並傳回沒有指定值、新範圍的結尾。  
   
 ```  
@@ -5495,7 +5419,7 @@ template<class ForwardIterator, class Type>
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜性為線性；有針對相等的 (`last` –  `first`) 比較。  
+ 複雜度為線性;有 ( `last`  -   `first`) 相等比較。  
   
  [list 類別](../standard-library/list-class.md)具有更具效率之成員函式版本的 **remove**，而這也會重新連結指標。  
   
@@ -5545,7 +5469,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-nameremovecopya--removecopy"></a><a name="remove_copy"></a> remove_copy  
+##  <a name="remove_copy"></a> remove_copy  
  從來源範圍將項目複製到目的範圍，不過不會複製一個指定值的項目，也不會干擾其餘項目的順序，並傳回新目的範圍結尾。  
   
 ```  
@@ -5579,7 +5503,7 @@ template<class InputIterator, class OutputIterator, class Type>
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性；有針對相等的 (`last` –  `first`) 比較，而且最多有 (`last` –  `first`) 個指派。  
+ 複雜度為線性;有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派。  
   
 ### <a name="example"></a>範例  
   
@@ -5624,7 +5548,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremovecopyifa--removecopyif"></a><a name="remove_copy_if"></a> remove_copy_if  
+##  <a name="remove_copy_if"></a> remove_copy_if  
  從來源範圍將項目複製到目的範圍，不過不會複製滿足述詞的項目，也不會干擾其餘項目的順序，並傳回新目的範圍結尾。  
   
 ```  
@@ -5658,7 +5582,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性：有針對相等的 (`last` –  `first`) 比較，而且最多有 (`last` –  `first`) 個指派。  
+ 複雜度為線性︰ 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派。  
   
  如需這些函式運作方式的相關資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
   
@@ -5712,7 +5636,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameremoveifa--removeif"></a><a name="remove_if"></a> remove_if  
+##  <a name="remove_if"></a> remove_if  
  從指定範圍中排除滿足述詞的項目，而不會干擾其餘項目的順序，並傳回沒有指定值、新範圍的結尾。  
   
 ```  
@@ -5741,7 +5665,7 @@ template<class ForwardIterator, class Predicate>
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜性為線性；有針對相等的 (`last` –  `first`) 比較。  
+ 複雜度為線性︰ 有 ( `last`  -   `first`) 相等比較。  
   
  list 具有更具效率之成員函式版本的 remove，而這會重新連結指標。  
   
@@ -5795,7 +5719,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacea--replace"></a><a name="replace"></a> replace  
+##  <a name="replace"></a> replace  
  檢查範圍內的每個項目，如果符合指定的值則予以取代。  
   
 ```  
@@ -5823,7 +5747,7 @@ void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, c
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性；有針對相等的 (`last` – `first`) 比較，而且最多有 (`last` – `first`) 個新值指派。  
+ 複雜度為線性;有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派新值。  
   
 ### <a name="example"></a>範例  
   
@@ -5863,7 +5787,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopya--replacecopy"></a><a name="replace_copy"></a> replace_copy  
+##  <a name="replace_copy"></a> replace_copy  
  檢查來源範圍內的每個項目，如果符合指定的值則予以取代，同時將結果複製到新目的範圍。  
   
 ```  
@@ -5903,7 +5827,7 @@ int main( ) {
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性：有針對相等的 (`last` – `first`) 比較，而且最多有 (`last` – `first`) 個新值指派。  
+ 複雜度為線性︰ 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派新值。  
   
 ### <a name="example"></a>範例  
   
@@ -5962,7 +5886,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplacecopyifa--replacecopyif"></a><a name="replace_copy_if"></a> replace_copy_if  
+##  <a name="replace_copy_if"></a> replace_copy_if  
  檢查來源範圍內的每個項目，如果滿足指定的述詞則予以取代，同時將結果複製到新目的範圍。  
   
 ```  
@@ -6002,7 +5926,7 @@ OutputIterator replace_copy_if(
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性；有針對相等的 (`last` – `first`) 比較，而且最多有 (`last` – `first`) 個新值指派。  
+ 複雜度為線性;有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派新值。  
   
 ### <a name="example"></a>範例  
   
@@ -6068,7 +5992,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereplaceifa--replaceif"></a><a name="replace_if"></a> replace_if  
+##  <a name="replace_if"></a> replace_if  
  檢查範圍內的每個項目，如果滿足指定的述詞則予以取代。  
   
 ```  
@@ -6099,7 +6023,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性：有針對相等的 (`last` – `first`) 比較，而且最多有 (`last` – `first`) 個新值指派。  
+ 複雜度為線性︰ 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派新值。  
   
 ### <a name="example"></a>範例  
   
@@ -6145,7 +6069,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namereversea--reverse"></a><a name="reverse"></a> reverse  
+##  <a name="reverse"></a> reverse  
  反轉範圍內項目的順序。  
   
 ```  
@@ -6206,7 +6130,7 @@ The modified vector v1 with values reversed is:
  ( 9 8 7 6 5 4 3 2 1 0 ).  
 ```  
   
-##  <a name="a-namereversecopya--reversecopy"></a><a name="reverse_copy"></a> reverse_copy  
+##  <a name="reverse_copy"></a> reverse_copy  
  反轉來源範圍內項目的順序，並將其複製到目的範圍  
   
 ```  
@@ -6274,7 +6198,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namerotatea--rotate"></a><a name="rotate"></a> rotate  
+##  <a name="rotate"></a> rotate  
  交換兩個相鄰範圍的項目。  
   
 ```  
@@ -6296,7 +6220,7 @@ template<class ForwardIterator>
 ### <a name="remarks"></a>備註  
  參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。  
   
- 複雜度為線性，最多有 (`last` –  `first`) 次交換。  
+ 複雜度為線性，最多 ( `last`  -   `first`) 交換。  
   
 ### <a name="example"></a>範例  
   
@@ -6373,7 +6297,7 @@ After the rotation of a single deque element to the back,
  d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-namerotatecopya--rotatecopy"></a><a name="rotate_copy"></a> rotate_copy  
+##  <a name="rotate_copy"></a> rotate_copy  
  交換來源範圍內兩個相鄰範圍的項目，並將結果複製到目的範圍。  
   
 ```  
@@ -6405,7 +6329,7 @@ OutputIterator rotate_copy(
 ### <a name="remarks"></a>備註  
  參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。  
   
- 複雜度為線性，最多有 (`last` –  `first`) 次交換。  
+ 複雜度為線性，最多 ( `last`  -   `first`) 交換。  
   
 ### <a name="example"></a>範例  
   
@@ -6466,7 +6390,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesearcha--search"></a><a name="search"></a> search  
+##  <a name="search"></a> search  
  在目標範圍中搜尋第一個序列，其項目等於指定項目序列中的項目，或在二元述詞指定的意義上，其項目相當於指定序列中的項目。  
   
 ```  
@@ -6611,7 +6535,7 @@ There is a sequence of elements in v1 that are equivalent
  and the first one begins at position 2.  
 ```  
   
-##  <a name="a-namesearchna--searchn"></a><a name="search_n"></a> search_n  
+##  <a name="search_n"></a> search_n  
  在範圍中搜尋包含指定項目數的第一個子序列，這些項目具有特定值或在二元述詞指定的意義上與該值關聯。  
   
 ```  
@@ -6741,7 +6665,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
  predicate one_half in v1 and the first one begins at position 15.  
 ```  
   
-##  <a name="a-namesetdifferencea--setdifference"></a><a name="set_difference"></a> set_difference  
+##  <a name="set_difference"></a> set_difference  
  將屬於一個排序來源範圍但不屬於第二個排序來源範圍的所有項目聯集為單一排序的目的範圍，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -6797,7 +6721,7 @@ OutputIterator set_difference(
   
  輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，使得第一個來源範圍中的元素比第二個來源範圍多，則目的範圍會包含第一個來源範圍中這些元素的發生次數超過第二個來源範圍中這些元素的發生次數的數目。  
   
- 此演算法的複雜度為線性，非空白來源範圍最多有 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 次比較。  
+ 演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-( *last2-first2*))-1 非空白來源範圍的比較。  
   
 ### <a name="example"></a>範例  
   
@@ -6918,7 +6842,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetintersectiona--setintersection"></a><a name="set_intersection"></a> set_intersection  
+##  <a name="set_intersection"></a> set_intersection  
  將屬於兩個排序來源範圍的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -6974,7 +6898,7 @@ OutputIterator set_intersection(
   
  輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。  
   
- 此演算法的複雜度為線性，非空白來源範圍最多有 2 \* ((*last1 – first1*) + (*last2 – first2*)) – 1 次比較。  
+ 演算法的複雜度為線性，最多有 2 \* (( *last1-first1*) + ( *last2-first2*))-1 非空白來源範圍的比較。  
   
 ### <a name="example"></a>範例  
   
@@ -7089,7 +7013,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namesetsymmetricdifferencea--setsymmetricdifference"></a><a name="set_symmetric_difference"></a> set_symmetric_difference  
+##  <a name="set_symmetric_difference"></a> set_symmetric_difference  
  將屬於兩個排序來源範圍之一 (但非兩者) 的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -7145,7 +7069,7 @@ OutputIterator set_symmetric_difference(
   
  輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的項目，且這些項目在其中一個來源範圍中出現的數目，超過在第二個來源範圍中出現的數目，則目的範圍會包含同時出現之數目的絕對值。  
   
- 此演算法的複雜度為線性，非空白來源範圍最多有 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 次比較。  
+ 演算法的複雜度為線性，最多有 2 \* ((*last1-first1*)-(*last2-first2*))-1 非空白來源範圍的比較。  
   
 ### <a name="example"></a>範例  
   
@@ -7266,7 +7190,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namesetuniona--setunion"></a><a name="set_union"></a> set_union  
+##  <a name="set_union"></a> set_union  
  將至少屬於兩個排序來源範圍之一的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。  
   
 ```  
@@ -7321,7 +7245,7 @@ OutputIterator set_union(
   
  輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。  
   
- 此演算法的複雜度為線性，最多有 2 \* ((*last1 – first1*) – (*last2 – first2*)) – 1 次比較。  
+ 演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-( *last2-first2*))-1 比較。  
   
 ### <a name="example"></a>範例  
   
@@ -7442,7 +7366,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namestdshufflea--stdshuffle"></a><a name="std__shuffle"></a> std::shuffle  
+##  <a name="shuffle"></a> std::shuffle  
  使用亂數產生器隨機播放 (重新整理) 指定範圍的元素。  
   
 ```  
@@ -7466,7 +7390,7 @@ void shuffle(RandomAccessIterator first,
 ### <a name="remarks"></a>備註  
  如需詳細資訊，以及使用 `shuffle()` 的程式碼範例，請參閱 [\<random>](../standard-library/random.md)。  
   
-##  <a name="a-namesorta--sort"></a><a name="sort"></a> sort  
+##  <a name="sort"></a> sort  
  將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則。  
   
 ```  
@@ -7498,7 +7422,7 @@ template<class RandomAccessIterator, class Predicate>
   
  如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort` 演算法不穩定，因此不保證保留對等元素的相對順序。 `stable_sort` 演算法確實會保留這個原始順序。  
   
- 平均排序複雜度為 *O*(*N* log *N*)，其中 *N* =  *last – first*。  
+ 排序複雜度的平均值是*O*( *N*記錄*N*)，其中*N* =  *上次-先*。  
   
 ### <a name="example"></a>範例  
   
@@ -7568,7 +7492,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )  
 ```  
   
-##  <a name="a-namesortheapa--sortheap"></a><a name="sort_heap"></a> sort_heap  
+##  <a name="sort_heap"></a> sort_heap  
  將堆積轉換為排序的範圍。  
   
 ```  
@@ -7609,7 +7533,7 @@ template<class RandomAccessIterator, class Predicate>
   
  參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。  
   
- 複雜度最多為 *N* log *N*，其中 *N* = (*last – first*)。  
+ 複雜度為最*N*記錄*N*，其中*N* = (*上次-先*)。  
   
 ### <a name="example"></a>範例  
   
@@ -7661,7 +7585,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namestablepartitiona--stablepartition"></a><a name="stable_partition"></a> stable_partition  
+##  <a name="stable_partition"></a> stable_partition  
  將範圍中的項目分類為兩個斷續集合，而滿足一元述詞的項目在無法滿足一元述詞的項目之前，保留對等項目的相對順序。  
   
 ```  
@@ -7736,7 +7660,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namestablesorta--stablesort"></a><a name="stable_sort"></a> stable_sort  
+##  <a name="stable_sort"></a> stable_sort  
  將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則，並保留對等項目的相對順序。  
   
 ```  
@@ -7766,7 +7690,7 @@ void stable_sort(
   
  如果任一個都不小於另一個，則元素對等，但不一定相等。 **sort** 演算法穩定，並且保證保留對等元素的相對順序。  
   
- `stable_sort` 的執行階段複雜度取決於可用記憶體數量，但最佳狀況 (具有足夠的記憶體) 是 *O*(*N* log *N*)，而最差狀況是 *O*(*N* (log *N* )2)，其中 *N* =  *last – First.* 通常，**sort** 演算法大幅快於 `stable_sort`。  
+ 執行時間複雜性`stable_sort`取決於可用的記憶體數量是最好的情況下 （要有足夠的記憶體），但*O*( *N*記錄*N*) 最壞的情況下，且*O*( *N* (記錄*N* ) 2)，其中*N* =  *上次-第一次。* 通常，**sort** 演算法大幅快於 `stable_sort`。  
   
 ### <a name="example"></a>範例  
   
@@ -7835,7 +7759,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a> swap  
+##  <a name="swap"></a> swap  
  第一個覆寫會交換兩個物件的值。 第二個覆寫會交換兩個物件陣列之間的值。  
   
 ```  
@@ -7916,7 +7840,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).  
 ```  
   
-##  <a name="a-nameswaprangesa--swapranges"></a><a name="swap_ranges"></a> swap_ranges  
+##  <a name="swap_ranges"></a> swap_ranges  
  將某個範圍的項目與另一個相等大小之範圍的項目交換。  
   
 ```  
@@ -7944,7 +7868,7 @@ ForwardIterator2 swap_ranges(
 ### <a name="remarks"></a>備註  
  參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。 第二個範圍都必須與第一個範圍一樣大。  
   
- 複雜度為執行 `last1` –  `first1` 次交換的線性。 如果正在交換相同類型之容器中的元素，則應該使用來自該容器的 `swap` 成員函式，原因是成員函式通常具有常數複雜度。  
+ 複雜度為線性， `last1`  -   `first1`交換執行。 如果正在交換相同類型之容器中的元素，則應該使用來自該容器的 `swap` 成員函式，原因是成員函式通常具有常數複雜度。  
   
 ### <a name="example"></a>範例  
   
@@ -8007,7 +7931,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).  
 ```  
   
-##  <a name="a-nametransforma--transform"></a><a name="transform"></a> transform  
+##  <a name="transform"></a> transform  
  將指定的函式物件應用至來源範圍中的每個項目，或是一組來自兩個來源範圍的項目，並複製函式物件的傳回值到目的範圍。  
   
 ```  
@@ -8050,9 +7974,9 @@ OutputIterator transform(
 ### <a name="remarks"></a>備註  
  參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，必須可透過遞增從第一個位置到達最後一個位置。 目的範圍必須夠大，才能包含已轉換的來源範圍。  
   
- 如果 `result` 設定成等於演算法第一版中的 `first1`，則來源和目的範圍會相同，並且就地修改序列。 但 `result` 不會定址範圍 [`first1` +1, `last1`) 內的位置。  
+ 如果`result`設為等於`first1`演算法的第一版，則來源和目的範圍會相同，並會就地修改序列。 但是`result`可能無法解決範圍內的位置 [`first1` + 1、 `last1`)。  
   
- 複雜度為線性，最多有 (`last1` –  `first1`) 次比較。  
+ 複雜度為線性，最多 (`last1` -  `first1`) 比較。  
   
 ### <a name="example"></a>範例  
   
@@ -8141,7 +8065,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
  v3 = ( 320 180 80 20 0 20 80 ).  
 ```  
   
-##  <a name="a-nameuniquea--unique"></a><a name="unique"></a> unique  
+##  <a name="unique"></a> unique  
  移除在指定範圍內彼此相鄰的重複項目。  
   
 ```  
@@ -8178,7 +8102,7 @@ template<class ForwardIterator, class Predicate>
   
  參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。 **unique** 演算法不會變更序列中的元素數，而且所修改序列結尾之外的元素是可取值但未指定。  
   
- 複雜度為線性，需要有 (`last` –  `first`) – 1 次比較。  
+ 複雜度為線性，需要 ( `last`  -   `first`)-1 比較。  
   
  list 提供更具效率的成員函式 "unique"，後者的效能可能較佳。  
   
@@ -8271,7 +8195,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).  
 ```  
   
-##  <a name="a-nameuniquecopya--uniquecopy"></a><a name="unique_copy"></a> unique_copy  
+##  <a name="unique_copy"></a> unique_copy  
  將來源範圍的項目複製到目的範圍，但是彼此相鄰的重複項目除外。  
   
 ```  
@@ -8311,7 +8235,7 @@ OutputIterator unique_copy( InputIterator first,
   
  參考的範圍必須有效；所有指標都必須可以取值，而且在一個序列中，可透過遞增從第一個位置到達最後一個位置。  
   
- 複雜度為線性，需要有 (`last` –  `first`) 次比較。  
+ 複雜度為線性，需要 ( `last`  -   `first`) 比較。  
   
 ### <a name="example"></a>範例  
   
@@ -8385,7 +8309,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-nameupperbounda--upperbound"></a><a name="upper_bound"></a> upper_bound  
+##  <a name="upper_bound"></a> upper_bound  
  在已排序範圍中尋找值大於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。  
   
 ```  

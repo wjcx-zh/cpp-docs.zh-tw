@@ -6,21 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- limits/std::float_denorm_style
+- limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e0f4b6ca5d11207787f9ff4f27b21dbbc78080c0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 519cc2c696b5dcb67fed79fd04c3e7d66e7d0ad9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 列舉
 |||  
 |-|-|  
-|[float_denorm_style 列舉](#float_denorm_style_enumeration)|[float_round_style 列舉](#float_round_style_enumeration)|  
+|[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|  
   
-##  <a name="a-namefloatdenormstyleenumerationa--floatdenormstyle-enumeration"></a><a name="float_denorm_style_enumeration"></a>  float_denorm_style 列舉  
+##  <a name="float_denorm_style"></a>  float_denorm_style 列舉  
  此列舉會說明實作可選擇用來代表反正規化浮點值的各種方法 (反正規化浮點值是指太小而無法表示為正規化值的值)：  
   
 ```
@@ -40,9 +44,9 @@ enum float_denorm_style {
 - **denorm_present**，表示反正規化形式存在。  
   
 ### <a name="example"></a>範例  
-  如需可存取此列舉之值的範例，請參閱 [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#numeric_limits__has_denorm)。  
+  如需可存取此列舉之值的範例，請參閱 [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)。  
   
-##  <a name="a-namefloatroundstyleenumerationa--floatroundstyle-enumeration"></a><a name="float_round_style_enumeration"></a>  float_round_style 列舉  
+##  <a name="float_round_style"></a>  float_round_style 列舉  
  此列舉會說明實作可選擇用來將浮點值捨入為整數值的各種方法。  
   
 ```
@@ -68,7 +72,7 @@ enum float_round_style {
 - **round_toward_neg_infinity**，表示捨入至較小的負數。  
   
 ### <a name="example"></a>範例  
-  如需可存取此列舉之值的範例，請參閱 [numeric_limits::round_style](../standard-library/numeric-limits-class.md#numeric_limits__round_style)。  
+  如需可存取此列舉之值的範例，請參閱 [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style)。  
   
 ## <a name="see-also"></a>另請參閱  
  [\<limits>](../standard-library/limits.md)

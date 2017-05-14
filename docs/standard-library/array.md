@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 565c3deaa98b4a01d02e5e63767de2beecd5a1bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3458390f8e6dcaee229346c66d569a5486ae74c4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
@@ -60,19 +61,19 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/array-operators.md#operator_eq_eq)|陣列比較，相等|  
-|[operator!=](../standard-library/array-operators.md#operator_neq)|陣列比較，不相等|  
-|[operator\<](../standard-library/array-operators.md#operator_lt_)|陣列比較，小於|  
-|[operator>=](../standard-library/array-operators.md#operator_gt__eq)|陣列比較，大於或相等|  
-|[operator>](../standard-library/array-operators.md#operator_gt_)|陣列比較，大於|  
-|[operator<=](../standard-library/array-operators.md#operator_lt__eq)|陣列比較，小於或相等|  
+|[operator==](../standard-library/array-operators.md#op_eq_eq)|陣列比較，相等|  
+|[operator!=](../standard-library/array-operators.md#op_neq)|陣列比較，不相等|  
+|[operator\<](../standard-library/array-operators.md#op_lt)|陣列比較，小於|  
+|[operator>=](../standard-library/array-operators.md#op_gt_eq)|陣列比較，大於或相等|  
+|[operator>](../standard-library/array-operators.md#op_gt)|陣列比較，大於|  
+|[operator<=](../standard-library/array-operators.md#op_lt_eq)|陣列比較，小於或相等|  
   
 ### <a name="functions"></a>函式  
   
 |||  
 |-|-|  
-|[get](../standard-library/array-functions.md#get_function)|取得指定的陣列元素。|  
-|[swap](../standard-library/array-functions.md#swap_function)|交換其中一個陣列的內容與另一個陣列的內容。|  
+|[get](../standard-library/array-functions.md#get)|取得指定的陣列元素。|  
+|[swap](../standard-library/array-functions.md#swap)|交換其中一個陣列的內容與另一個陣列的內容。|  
   
 ## <a name="see-also"></a>另請參閱  
  [\<tuple>](../standard-library/tuple.md)   

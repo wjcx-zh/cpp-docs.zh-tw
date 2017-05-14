@@ -1,47 +1,64 @@
 ---
-title: "atexit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "atexit"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "atexit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "atexit 函式"
-  - "處理, 在結束時"
+title: atexit | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- atexit
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- atexit
+dev_langs:
+- C++
+helpviewer_keywords:
+- processing, at exit
+- atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# atexit
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6d0d85ffc7f3ed71a26a947dd66c710e76388e96
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-處理指定的函式在匯出。  
+---
+# <a name="atexit"></a>atexit
+於結束時處理指定的函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int atexit(  
@@ -49,28 +66,28 @@ int atexit(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `func`  
- 要呼叫的函式。  
+ 即將呼叫的函式。  
   
-## 傳回值  
- `atexit` 會傳回 0，如果成功則為非零值，則會發生錯誤。  
+## <a name="return-value"></a>傳回值  
+ 若成功，則 `atexit` 傳回 0；若發生錯誤，則為非零值。  
   
-## 備註  
- `atexit` 函式會傳遞 \(`func`\) 所呼叫的函式位址，當程式通常時結束。  對 `atexit` 的後續呼叫會執行目前函式的暫存器，初始 \(LIFO\) 命令。  函式會傳遞至 `atexit` 不能接受參數。  `atexit` 和 `_onexit` 使用堆積保留函式暫存器。  因此，可以註冊函式數目由堆積記憶體的限制。  
+## <a name="remarks"></a>備註  
+ 當程式正常終止時，會在呼叫函式的位址時 (`func`) 傳遞 `atexit` 函式。 後續呼叫 `atexit` 會建立依後進先出 (LIFO) 順序執行的函式的暫存器。 傳遞至 `atexit` 的函式不接受參數。 `atexit` 和 `_onexit` 使用堆積保存函式暫存器。 因此，可以登錄的函式數目僅受限於堆積記憶體。  
   
- 在 `atexit` 函式中的程式碼不應該包含在可能已經卸載的任何 DLL 的任何相依性，在呼叫 `atexit` 函式時。  
+ `atexit` 函式中的程式碼不應包含對任何 DLL的相依性，DLL 可能已在呼叫 `atexit` 函式時卸載。  
   
- 若要產生 ANSI 相容的應用程式，請使用 ANSI 標準 `atexit` 函式 \(而不是相同的 `_onexit` 函式\)。  
+ 若要產生符合 ANSI 規範的應用程式，請使用 ANSI 標準 `atexit` 函式 (不是類似的 `_onexit` 函式)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`atexit`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`atexit`|\<stdlib.h>|  
   
-## 範例  
- 在呼叫 `atexit` 時，這個程式推入執行的堆疊的四個函式上。  當程式結束，這些程式會在為時執行，第一個基礎。  
+## <a name="example"></a>範例  
+ 此程式會在呼叫 `atexit` 時將四個函式推入要執行的函式堆疊。 當程式結束時，這些程式會依後進先出的基礎執行。  
   
 ```  
 // crt_atexit.c  
@@ -109,13 +126,13 @@ void fn4()
 }  
 ```  
   
-  **這會先執行。**  
-**這是執行的下一個。**   
-## .NET Framework 對等用法  
- [System::Diagnostics::Process::Exited](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.exited.aspx)  
+```Output  
+This is executed first.  
+This is executed next.  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_onexit，\_onexit\_m](../../c-runtime-library/reference/onexit-onexit-m.md)
+ [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_onexit、_onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)

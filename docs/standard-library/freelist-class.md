@@ -1,68 +1,132 @@
 ---
 title: "freelist 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext::freelist"
-  - "freelist"
-  - "stdext.freelist"
-  - "allocators/stdext::freelist"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "freelist 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext::freelist
+- freelist
+- allocators/stdext::freelist
+- allocators/stdext::freelist::pop
+- allocators/stdext::freelist::push
+dev_langs:
+- C++
+helpviewer_keywords:
+- freelist class
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# freelist 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0e08b6f737616cf764f797681c5492840a9b044a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
-處理記憶體區塊清單。  
+---
+# <a name="freelist-class"></a>freelist 類別
+可管理記憶體區塊的清單。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+template <std::size_t Sz, class Max>  
+class freelist
+ : public Max
 ```  
-template <std::size_t Sz, class Max> class freelist  
-    : public Max  
-```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |參數|說明|  
-|--------|--------|  
-|`Sz`|項目數目是陣列的配置。|  
-|`Max`|表示項目的最大數目上限類別將存放在可用清單。  最大類別可以是 [max\_none](../standard-library/max-none-class.md)、 [max\_unbounded](../standard-library/max-unbounded-class.md)、 [max\_fixed\_size](../standard-library/max-fixed-size-class.md)或 [max\_variable\_size](../standard-library/max-variable-size-class.md)。|  
+|---------------|-----------------|  
+|`Sz`|要配置的陣列元素數目。|  
+|`Max`|max 類別，表示可在可用清單中儲存的元素數量上限。 max 類別可以是 [max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_fixed_size](../standard-library/max-fixed-size-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。|  
   
-## 備註  
- 這個範本類別處理大小 `Sz` 記憶體區塊清單具有最大類別取決於清單中的最大長度的傳入 `Max`。  
+## <a name="remarks"></a>備註  
+ 此範本類別會使用清單最大長度 (由傳入 `Max` 的 max 類別所決定)，來管理 `Sz` 大小的記憶體區塊清單。  
   
-### 建構函式  
-  
-|||  
-|-|-|  
-|[freelist](../Topic/freelist::freelist.md)|建構屬於 `freelist` 類型的物件。|  
-  
-### 成員函式  
+### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[pop](../Topic/freelist::pop.md)|從可用清單移除第一個記憶體區塊。|  
-|[push](../Topic/freelist::push.md)|將記憶體區塊加入至清單。|  
+|[freelist](#freelist)|建構類型 `freelist` 的物件。|  
   
-## 需求  
- **標題:** \<配置器\>  
+### <a name="member-functions"></a>成員函式  
   
- **命名空間：**stdext  
+|||  
+|-|-|  
+|[pop](#pop)|從可用清單中移除第一個記憶體區塊。|  
+|[push](#push)|將記憶體區塊新增至清單中。|  
   
-## 請參閱  
- [\<allocators\>](../standard-library/allocators-header.md)
+## <a name="requirements"></a>需求  
+ **標頭︰**\<allocators>  
+  
+ **命名空間：** stdext  
+  
+##  <a name="freelist"></a>  freelist::freelist  
+ 建構類型 `freelist` 的物件。  
+  
+```
+freelist();
+```  
+  
+### <a name="remarks"></a>備註  
+  
+##  <a name="pop"></a>  freelist::pop  
+ 從可用清單中移除第一個記憶體區塊。  
+  
+```
+void *pop();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 傳回從清單中移除之記憶體區塊的指標。  
+  
+### <a name="remarks"></a>備註  
+ 如果清單是空的，成員函式會傳回 `NULL`。 否則，會從清單中移除第一個記憶體區塊。  
+  
+##  <a name="push"></a>  freelist::push  
+ 將記憶體區塊新增至清單中。  
+  
+```
+bool push(void* ptr);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|描述|  
+|---------------|-----------------|  
+|`ptr`|要新增至可用清單的記憶體區塊指標。|  
+  
+### <a name="return-value"></a>傳回值  
+ 如果 max 類別的 `full` 函式傳回 `false`，即為 `true`；否則 `push` 函式會傳回 `false`。  
+  
+### <a name="remarks"></a>備註  
+ 如果 max 類別的 `full` 函式傳回 `false`，此成員函式會將 `ptr` 所指向的記憶體區塊新增至清單開頭。  
+  
+## <a name="see-also"></a>另請參閱  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

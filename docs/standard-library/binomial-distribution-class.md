@@ -10,32 +10,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - binomial_distribution
-- std::binomial_distribution
 - random/std::binomial_distribution
-- std::binomial_distribution::reset
 - random/std::binomial_distribution::reset
-- std::binomial_distribution::p
 - random/std::binomial_distribution::p
-- std::binomial_distribution::t
 - random/std::binomial_distribution::t
-- std::binomial_distribution::param
 - random/std::binomial_distribution::param
-- std::binomial_distribution::min
 - random/std::binomial_distribution::min
-- std::binomial_distribution::max
 - random/std::binomial_distribution::max
-- std::binomial_distribution::operator()
 - random/std::binomial_distribution::operator()
-- std::binomial_distribution::param_type
 - random/std::binomial_distribution::param_type
-- std::binomial_distribution::param_type::p
 - random/std::binomial_distribution::param_type::p
-- std::binomial_distribution::param_type::t
 - random/std::binomial_distribution::param_type::t
-- std::binomial_distribution::param_type::operator==
 - random/std::binomial_distribution::param_type::operator==
-- std::binomial_distribution::param_type::operator!=
 - random/std::binomial_distribution::param_type::operator!=
+- random/std::binomial_distribution::param_type
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -59,10 +47,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 8b334da1953b67965c95c8c61e9426d9020132ed
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 38de1b8245612bca84c381c143b4a12e9f08c83e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 類別
@@ -110,8 +99,8 @@ public:
   
 ||||  
 |-|-|-|  
-|[binomial_distribution::binomial_distribution](#binomial_distribution__binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|  
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[binomial_distribution::param_type](#binomial_distribution__param_type)|  
+|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|  
+|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|  
   
 屬性成員 `t()` 和 `p()` 會分別傳回目前儲存的分佈參數值 `t` 和 `p`。  
   
@@ -257,7 +246,7 @@ Histogram for 100 samples:
   
 **命名空間：** std  
   
-##  <a name="a-namebinomialdistributionbinomialdistributiona--binomialdistributionbinomialdistribution"></a><a name="binomial_distribution__binomial_distribution"></a>  binomial_distribution::binomial_distribution  
+##  <a name="binomial_distribution"></a>  binomial_distribution::binomial_distribution  
 建構分佈。  
   
 ```  
@@ -282,7 +271,7 @@ explicit binomial_distribution(const param_type& parm);
   
 第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
   
-##  <a name="a-namebinomialdistributionparamtypea--binomialdistributionparamtype"></a><a name="binomial_distribution__param_type"></a>  binomial_distribution::param_type  
+##  <a name="param_type"></a>  binomial_distribution::param_type  
 儲存分佈的所有參數。  
   
 ```cpp  

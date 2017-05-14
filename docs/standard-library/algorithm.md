@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 5d460e3f135015a3eb29f4f3a27a5f4cba615179
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 8deaefffa7afe676a7c8634c4c6c40e784aed982
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
@@ -147,7 +148,7 @@ ms.lasthandoff: 02/24/2017
 |[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)|將屬於兩個排序來源範圍之一 (但非兩者) 的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。|  
 |[set_union](../standard-library/algorithm-functions.md#set_union)|將至少屬於兩個排序來源範圍之一的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。|  
 |[sort](../standard-library/algorithm-functions.md#sort)|將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則。|  
-|[shuffle](../standard-library/algorithm-functions.md#std__shuffle)|使用亂數產生器隨機播放 (重新整理) 指定範圍的項目。|  
+|[shuffle](../standard-library/algorithm-functions.md#shuffle)|使用亂數產生器隨機播放 (重新整理) 指定範圍的項目。|  
 |[sort_heap](../standard-library/algorithm-functions.md#sort_heap)|將堆積轉換為排序的範圍。|  
 |[stable_partition](../standard-library/algorithm-functions.md#stable_partition)|將範圍中的項目分類為兩個斷續集合，而滿足一元述詞的項目在無法滿足一元述詞的項目之前，保留對等項目的相對順序。|  
 |[stable_sort](../standard-library/algorithm-functions.md#stable_sort)|將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則，並保留對等項目的相對順序。|  

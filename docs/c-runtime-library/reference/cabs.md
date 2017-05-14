@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 649c3d34e1ebcfc7af2fa3ef0b500dc1f630a967
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 930ef18229737fee03d03308c45f5ffb3615cdcd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="cabs"></a>_cabs
@@ -80,7 +81,7 @@ double _cabs(
  成功時，`_cabs` 會傳回其引數的絕對值。 溢位時，`_cabs` 會傳回 `HUGE_VAL`，並將 `errno` 設為 `ERANGE`。 您可以使用 [_matherr](../../c-runtime-library/reference/matherr.md) 變更錯誤處理。  
   
 ## <a name="remarks"></a>備註  
- `_cabs` 函式會計算複數的絕對值，這必須是 [_complex](../../c-runtime-library/standard-types.md) 類型的結構。 結構 `z` 包含實數元件 `x` 和虛數元件 `y`。 `_cabs` 呼叫會產生等同於運算式 `sqrt`( `z.x``*``z.x``+``z.y`*`z.y` ) 的值。  
+ `_cabs` 函式會計算複數的絕對值，這必須是 [_complex](../../c-runtime-library/standard-types.md) 類型的結構。 結構 `z` 包含實數元件 `x` 和虛數元件 `y`。 呼叫`_cabs`產生同等的運算式值`sqrt( z.x * z.x + z.y * z.y )`。  
   
 ## <a name="requirements"></a>需求  
   
@@ -114,9 +115,6 @@ int main( void )
 ```Output  
 The absolute value of 3.000000 + 4.000000i is 5.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - condition_variable/std::condition_variable_any
+- condition_variable/std::condition_variable_any::condition_variable_any
+- condition_variable/std::condition_variable_any::notify_all
+- condition_variable/std::condition_variable_any::notify_one
+- condition_variable/std::condition_variable_any::wait
+- condition_variable/std::condition_variable_any::wait_for
+- condition_variable/std::condition_variable_any::wait_until
 dev_langs:
 - C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a04164eb30bdb0403f131d64a31b9c7d9cb5656f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0c72f22ed2962b3d1a200e99ace2c56d69194c78
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 類別
@@ -50,26 +57,26 @@ class condition_variable_any;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[condition_variable_any::condition_variable_any 建構函式](#condition_variable_any__condition_variable_any_constructor)|建構 `condition_variable_any` 物件。|  
+|[condition_variable_any](#condition_variable_any)|建構 `condition_variable_any` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[condition_variable_any::notify_all](#condition_variable_any__notify_all_method)|解除封鎖所有等候 `condition_variable_any` 物件的執行緒。|  
-|[condition_variable_any::notify_one](#condition_variable_any__notify_one_method)|解除封鎖其中一個等候 `condition_variable_any` 物件的執行緒。|  
-|[condition_variable_any::wait](#condition_variable_any__wait_method)|封鎖執行緒。|  
-|[condition_variable_any::wait_for](#condition_variable_any__wait_for_method)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|  
-|[condition_variable_any::wait_until](#condition_variable_any__wait_until_method)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|  
+|[notify_all](#notify_all)|解除封鎖所有等候 `condition_variable_any` 物件的執行緒。|  
+|[notify_one](#notify_one)|解除封鎖其中一個等候 `condition_variable_any` 物件的執行緒。|  
+|[等候](#wait)|封鎖執行緒。|  
+|[wait_for](#wait_for)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|  
+|[wait_until](#wait_until)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**condition_variable  
+ **標頭︰** \<condition_variable >  
   
  **命名空間：** std  
   
-##  <a name="a-nameconditionvariableanyconditionvariableanyconstructora--conditionvariableanyconditionvariableany-constructor"></a><a name="condition_variable_any__condition_variable_any_constructor"></a>  condition_variable_any::condition_variable_any 建構函式  
+##  <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any 建構函式  
  建構 `condition_variable_any` 物件。  
   
 ```
@@ -79,21 +86,21 @@ condition_variable_any();
 ### <a name="remarks"></a>備註  
  如果可用的記憶體不足，建構函式會擲回具有 `not_enough_memory` 錯誤碼的 [system_error](../standard-library/system-error-class.md) 物件。 如果因為無法使用其他部分資源，而無法建構物件，建構函式會擲回具有 `resource_unavailable_try_again` 錯誤碼的 `system_error` 物件。  
   
-##  <a name="a-nameconditionvariableanynotifyallmethoda--conditionvariableanynotifyall"></a><a name="condition_variable_any__notify_all_method"></a>  condition_variable_any::notify_all  
+##  <a name="notify_all"></a>  condition_variable_any::notify_all  
  解除封鎖所有等候 `condition_variable_any` 物件的執行緒。  
   
 ```
 void notify_all() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanynotifyonemethoda--conditionvariableanynotifyone"></a><a name="condition_variable_any__notify_one_method"></a>  condition_variable_any::notify_one  
+##  <a name="notify_one"></a>  condition_variable_any::notify_one  
  解除封鎖其中一個等候 `condition_variable_any` 物件的執行緒。  
   
 ```
 void notify_one() noexcept;
 ```  
   
-##  <a name="a-nameconditionvariableanywaitmethoda--conditionvariableanywait"></a><a name="condition_variable_any__wait_method"></a>  condition_variable_any::wait  
+##  <a name="wait"></a>  condition_variable_any::wait  
  封鎖執行緒。  
   
 ```
@@ -112,7 +119,7 @@ void wait(Lock& Lck, Predicate Pred);
  傳回 `true` 或 `false` 的任何運算式。  
   
 ### <a name="remarks"></a>備註  
- 系統會封鎖第一個方法，直到 `condition_variable_any` 物件收到 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 的呼叫訊號為止。 它也可能會假性喚醒。  
+ 系統會封鎖第一個方法，直到 `condition_variable_any` 物件收到 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 的呼叫訊號為止。 它也可能會假性喚醒。  
   
  第二種方法則會執行下列程式碼。  
   
@@ -121,7 +128,7 @@ while (!Pred())
     wait(Lck);
 ```    
   
-##  <a name="a-nameconditionvariableanywaitformethoda--conditionvariableanywaitfor"></a><a name="condition_variable_any__wait_for_method"></a>  condition_variable_any::wait_for  
+##  <a name="wait_for"></a>  condition_variable_any::wait_for  
  封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。  
   
 ```
@@ -148,7 +155,7 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
  第二個方法會傳回 `Pred` 的值。  
   
 ### <a name="remarks"></a>備註  
- 系統會封鎖第一個方法，直到 `condition_variable_any` 物件收到 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 的呼叫通知，或已歷時 `Rel_time` 時間間隔為止。 它也可能會假性喚醒。  
+ 系統會封鎖第一個方法，直到 `condition_variable_any` 物件收到 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 的呼叫通知，或已歷時 `Rel_time` 時間間隔為止。 它也可能會假性喚醒。  
   
  第二種方法則會執行下列程式碼。  
   
@@ -160,7 +167,7 @@ while(!Pred())
 return true;
 ```  
   
-##  <a name="a-nameconditionvariableanywaituntilmethoda--conditionvariableanywaituntil"></a><a name="condition_variable_any__wait_until_method"></a>  condition_variable_any::wait_until  
+##  <a name="wait_until"></a>  condition_variable_any::wait_until  
  封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。  
   
 ```
@@ -199,7 +206,7 @@ void wait_until(
  傳回 `bool` 的方法會傳回 `Pred` 的值。  
   
 ### <a name="remarks"></a>備註  
- 系統會封鎖第一個方法，直到 `condition_variable` 物件收到 [notify_one](../standard-library/condition-variable-class.md#condition_variable__notify_one_method) 或 [notify_all](../standard-library/condition-variable-class.md#condition_variable__notify_all_method) 的呼叫訊號，或直到 `Abs_time` 為止。 它也可能會假性喚醒。  
+ 系統會封鎖第一個方法，直到 `condition_variable` 物件收到 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 的呼叫訊號，或直到 `Abs_time` 為止。 它也可能會假性喚醒。  
   
  第二種方法則會執行下列程式碼。  
   

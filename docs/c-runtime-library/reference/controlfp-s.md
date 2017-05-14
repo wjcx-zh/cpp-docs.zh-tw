@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 022dd9188a043ccb5a17a3e9040e0c8969acf7ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 4345539f7ecd836280bed94c4bb2b125dfa08107
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="controlfps"></a>_controlfp_s
@@ -99,7 +100,7 @@ errno_t _controlfp_s(
   
  `_control87` 與 `_controlfp_s` 之間的差異在於它們如何處理 `DENORMAL` 值。 針對 Intel (x86)、[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 和 ARM 平台，`_control87` 可以設定和清除 DENORMAL OPERAND 例外狀況遮罩。 `_controlfp_s` 不會修改 DENORMAL OPERAND 例外狀況遮罩。 這個範例示範差異：  
   
-```  
+```C  
 _control87( _EM_INVALID, _MCW_EM );   
 // DENORMAL is unmasked by this call.  
 unsigned int current_word = 0;  
@@ -111,7 +112,7 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
   
  Intel (x86) 衍生的平台支援硬體中的 DENORMAL 輸入和輸出值。 x86 行為是保留 DENORMAL 值。 支援 SSE2 的 ARM 平台和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 平台會清除 DENORMAL 運算元和結果，或強制為零。 `_controlfp_s`、`_controlfp` 和 `_control87` 函式提供遮罩來變更此行為。 下列範例示範如何使用此遮罩：  
   
-```  
+```C  
 unsigned int current_word = 0;  
 _controlfp_s(&current_word, _DN_SAVE, _MCW_DN);     
 // Denormal values preserved on ARM platforms and on x64 processors with  
@@ -127,9 +128,9 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
  如果未正確地設定遮罩，則此函式會產生無效參數例外狀況 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 若允許繼續執行，此函式會傳回 `EINVAL`，並將 `errno` 設為 `EINVAL`。  
   
- 此函式會被忽略，當您使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)編譯，因為 common language runtime (CLR) 僅支援預設浮點有效位數。  
+ 當您使用時，此函式會忽略[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)編譯，因為 common language runtime (CLR) 只支援預設的浮點精確度。  
   
- **十六進位值**  
+### <a name="mask-constants-and-values"></a>遮罩常數和值  
   
  針對 `_MCW_EM` 遮罩，清除它會設定例外狀況，以允許硬體例外狀況；設定它則會隱藏例外狀況。 如果發生 `_EM_UNDERFLOW` 或 `_EM_OVERFLOW`，則除非執行下一個浮點指令，否則不會擲回任何硬體例外狀況。 若要在 `_EM_UNDERFLOW` 或 `_EM_OVERFLOW` 之後立即產生硬體例外狀況，請呼叫 FWAIT MASM 指令。  
   
@@ -151,14 +152,12 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
   
 ## <a name="example"></a>範例  
   
-```  
-  
-      // crt_contrlfp_s.c  
+```C  
+// crt_contrlfp_s.c  
 // processor: x86  
 // This program uses _controlfp_s to output the FP control   
 // word, set the precision to 24 bits, and reset the status to   
 // the default.  
-//  
   
 #include <stdio.h>  
 #include <float.h>  
@@ -193,9 +192,7 @@ int main( void )
 }  
 ```  
   
-## <a name="output"></a>輸出  
-  
-```  
+```Output  
 Original: 0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 24-bit:   0xa001f  
@@ -203,9 +200,6 @@ Original: 0x9001f
 Default:  0x9001f  
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
-  
-## <a name="net-framework-equivalent"></a>NET Framework 對等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

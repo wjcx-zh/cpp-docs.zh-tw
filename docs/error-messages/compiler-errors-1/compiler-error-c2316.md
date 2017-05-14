@@ -34,18 +34,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fd99248bdfca428b01921e80eb902d482c0e95be
-ms.lasthandoff: 04/12/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 60e5fb2346c92b3005e7cbfe1663d43cc0a12cdc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-error-c2316"></a>編譯器錯誤 C2316
-'exception': 無法攔截，因為無法存取解構函式及/或複製建構函式  
+
+> '*例外狀況*': 無法攔截，因為無法存取解構函式和/或複製建構函式  
   
- 以傳值方式或以傳址方式攔截到例外狀況，但是複製建構函式及/或指派運算子都無法存取。  
+以傳值方式或以傳址方式攔截到例外狀況，但是複製建構函式及/或指派運算子都無法存取。  
   
- 舊版本的編譯器接受此程式碼，但是現在卻產生錯誤。  
+此程式碼的 Visual Studio 2003 之前, 的 Visual c + + 版本接受，但現在會產生錯誤。  
+  
+Visual Studio 2015 中的一致性變更進行套用至錯誤的 catch 陳述式的 MFC 例外狀況衍生自這個錯誤`CException`。 因為`CException`繼承私用複製建構函式，類別和其系出物件是不可複製，因此無法傳遞的值，這也表示他們無法攔截的值。 Catch 陳述式，由無法攔截的例外狀況，在執行階段，會使先前的值所攔截 MFC 例外狀況，但現在，編譯器可正確識別這種情況以及報告錯誤 C2316。 若要修正此問題，我們建議您使用 MFC TRY/CATCH 巨集，而不是撰寫自己的例外狀況處理常式，但不是適用於您的程式碼，如果攔截 MFC 例外狀況的參考而。   
   
 ## <a name="example"></a>範例  
  下列範例會產生 C2316：  

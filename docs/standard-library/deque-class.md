@@ -9,10 +9,49 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.deque
 - deque
-- std::deque
 - deque/std::deque
+- deque/std::deque::allocator_type
+- deque/std::deque::const_iterator
+- deque/std::deque::const_pointer
+- deque/std::deque::const_reference
+- deque/std::deque::const_reverse_iterator
+- deque/std::deque::difference_type
+- deque/std::deque::iterator
+- deque/std::deque::pointer
+- deque/std::deque::reference
+- deque/std::deque::reverse_iterator
+- deque/std::deque::size_type
+- deque/std::deque::value_type
+- deque/std::deque::assign
+- deque/std::deque::at
+- deque/std::deque::back
+- deque/std::deque::begin
+- deque/std::deque::cbegin
+- deque/std::deque::cend
+- deque/std::deque::clear
+- deque/std::deque::crbegin
+- deque/std::deque::crend
+- deque/std::deque::emplace
+- deque/std::deque::emplace_back
+- deque/std::deque::emplace_front
+- deque/std::deque::empty
+- deque/std::deque::end
+- deque/std::deque::erase
+- deque/std::deque::front
+- deque/std::deque::get_allocator
+- deque/std::deque::insert
+- deque/std::deque::max_size
+- deque/std::deque::pop_back
+- deque/std::deque::pop_front
+- deque/std::deque::push_back
+- deque/std::deque::push_front
+- deque/std::deque::rbegin
+- deque/std::deque::rend
+- deque/std::deque::resize
+- deque/std::deque::shrink_to_fit
+- deque/std::deque::size
+- deque/std::deque::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +76,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 804c10035a7c304a631c3afc30a0ca32c02f90c2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6d3f4d5eee3da48a8503b18695f68db91c22d391
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="deque-class"></a>deque 類別
@@ -65,11 +105,11 @@ class deque
   
  當成員函式必須插入或清除 deque 的項目時，就會發生 deque 重新配置：  
   
--   如果您將元素插入空的序列，或者將元素清除以保留空的序列，則 [begin](#deque__begin) 和 [end](#deque__end) 稍早所傳回的迭代器會變成無效。  
+-   如果您將元素插入空的序列，或者將元素清除以保留空的序列，則 [begin](#begin) 和 [end](#end) 稍早所傳回的迭代器會變成無效。  
   
 -   如果將一個項目插入 deque 的第一個位置，則指定現有項目的所有迭代器 (而非參考) 都會變成無效。  
   
--   如果將一個元素插入 deque 的結尾，則指定現有元素的 [end](#deque__end) 和所有迭代器 (而非參考) 都會變成無效。  
+-   如果將一個元素插入 deque 的結尾，則指定現有元素的 [end](#end) 和所有迭代器 (而非參考) 都會變成無效。  
   
 -   如果在 deque 前面清除了一個項目，則只有遭清除項目的迭代器和參考會變成無效。  
   
@@ -81,70 +121,70 @@ class deque
   
 |||  
 |-|-|  
-|[deque](#deque__deque)|可建構 `deque.`。系統提供多個建構函式，讓您藉由下列不同方式設定新的 `deque` 內容：清空、載入指定數量的空元素、使用從其他 `deque` 移動或複製的內容、使用迭代器移動或複製內容，以及將一個元素複製達 `deque`` count` 次。 有些建構函式可使用自訂的 `allocator` 來建立項目。|  
+|[deque](#deque)|建構 `deque.`。多個建構函式可供設定新的 `deque` 內容，且有不同的方式：清空；載入指定的空項目數；從另一個 `deque` 移動或複製的內容；使用迭代器移動或複製的內容；以及複製到 `deque` 達 `count` 次的一個項目。 有些建構函式可使用自訂的 `allocator` 來建立項目。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#deque__allocator_type)|類型，表示 `allocator` 物件的 `deque` 類別。|  
-|[const_iterator](#deque__const_iterator)|類型，提供可以存取和讀取 `deque` 中項目做為 `const` 的隨機存取迭代器。|  
-|[const_pointer](#deque__const_pointer)|類型，提供 `deque` 中的項目指標做為 `const.`。|  
-|[const_reference](#deque__const_reference)|類型，提供在 `deque` 中供讀取和其他作業使用之項目做為 `const.` 的參考。|  
-|[const_reverse_iterator](#deque__const_reverse_iterator)|類型，提供可以存取和讀取 `deque` 中項目做為 `const` 的隨機存取迭代器。 會以反向檢視 deque。 如需詳細資訊，請參閱 [reverse_iterator 類別](../standard-library/reverse-iterator-class.md)。|  
-|[difference_type](#deque__difference_type)|類型，提供兩個隨機存取迭代器的差異，這些迭代器參考相同 `deque` 中的項目。|  
-|[iterator](#deque__iterator)|類型，提供隨機存取迭代器，該迭代器可讀取或修改 `deque` 中的任何項目。|  
-|[pointer](#deque__pointer)|類型，其提供 `deque` 中項目的指標。|  
-|[reference](#deque__reference)|類型，提供儲存在 `deque` 中之項目的參考。|  
-|[reverse_iterator](#deque__reverse_iterator)|類型，提供隨機存取迭代器，該迭代器可讀取或修改 `deque` 中的項目。 會以反向順序檢視 deque。|  
-|[size_type](#deque__size_type)|計算 `deque` 中項目數目的類型。|  
-|[value_type](#deque__value_type)|類型，表示儲存在 `deque` 中的資料類型。|  
+|[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `deque` 類別。|  
+|[const_iterator](#const_iterator)|類型，提供可以存取和讀取 `deque` 中項目做為 `const` 的隨機存取迭代器。|  
+|[const_pointer](#const_pointer)|類型，提供 `deque` 中的項目指標做為 `const.`。|  
+|[const_reference](#const_reference)|類型，提供在 `deque` 中供讀取和其他作業使用之項目做為 `const.` 的參考。|  
+|[const_reverse_iterator](#const_reverse_iterator)|類型，提供可以存取和讀取 `deque` 中項目做為 `const` 的隨機存取迭代器。 會以反向檢視 deque。 如需詳細資訊，請參閱 [reverse_iterator 類別](../standard-library/reverse-iterator-class.md)。|  
+|[difference_type](#difference_type)|類型，提供兩個隨機存取迭代器的差異，這些迭代器參考相同 `deque` 中的項目。|  
+|[iterator](#iterator)|類型，提供隨機存取迭代器，該迭代器可讀取或修改 `deque` 中的任何項目。|  
+|[pointer](#pointer)|類型，其提供 `deque` 中項目的指標。|  
+|[reference](#reference)|類型，提供儲存在 `deque` 中之項目的參考。|  
+|[reverse_iterator](#reverse_iterator)|類型，提供隨機存取迭代器，該迭代器可讀取或修改 `deque` 中的項目。 會以反向順序檢視 deque。|  
+|[size_type](#size_type)|計算 `deque` 中項目數目的類型。|  
+|[value_type](#value_type)|類型，表示儲存在 `deque` 中的資料類型。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[assign](#deque__assign)|清除 `deque` 中的項目，並複製新的項目序列至目標 `deque`。|  
-|[at](#deque__at)|傳回 `deque` 中指定位置的項目參考。|  
-|[back](#deque__back)|傳回 `deque` 的最後一個項目的參考。|  
-|[begin](#deque__begin)|傳回 `deque` 中對第一個項目定址的隨機存取迭代器。|  
-|[cbegin](#deque__cbegin)|傳回 `deque` 中第一個項目的常數迭代器。|  
-|[cend](#deque__cend)|傳回指向 `deque` 結尾之外的 `const` 隨機存取迭代器。|  
-|[clear](#deque__clear)|清除 `deque` 的所有項目。|  
-|[crbegin](#deque__crbegin)|傳回 `deque` 中以相反順序檢視之第一個項目的隨機存取常數迭代器。|  
-|[crend](#deque__crend)|傳回 `deque` 中以相反順序檢視之第一個項目的隨機存取常數迭代器。|  
-|[emplace](#deque__emplace)|將就地建構的項目插入 `deque` 的指定位置。|  
-|[emplace_back](#deque__emplace_back)|將就地建構的項目加入 `deque` 的結尾。|  
-|[emplace_front](#deque__emplace_front)|將就地建構的項目加入 `deque` 的開頭。|  
-|[empty](#deque__empty)|如果 `deque` 包含零個項目，則傳回 `true`，而如果它包含一或多個項目，則傳回 `false`。|  
-|[end](#deque__end)|傳回指向 `deque` 結尾之外的隨機存取迭代器。|  
-|[erase](#deque__erase)|從指定位置移除在 `deque` 中的項目或某個項目範圍。|  
-|[front](#deque__front)|傳回 `deque` 中第一個項目的參考。|  
-|[get_allocator](#deque__get_allocator)|傳回用來建構 `allocator` 的 `deque` 物件複本。|  
-|[insert](#deque__insert)|將一個項目、多個項目或一定範圍的項目在指定位置插入 `deque`。|  
-|[max_size](#deque__max_size)|傳回 `deque` 的最大可能長度。|  
-|[pop_back](#deque__pop_back)|清除 `deque` 結尾的項目。|  
-|[pop_front](#deque__pop_front)|清除 `deque` 開頭的項目。|  
-|[push_back](#deque__push_back)|將項目加入 `deque` 的結尾。|  
-|[push_front](#deque__push_front)|將項目加入 `deque` 的開頭。|  
-|[rbegin](#deque__rbegin)|傳回反轉的 `deque` 中第一個項目的隨機存取迭代器。|  
-|[rend](#deque__rend)|傳回在反轉的 `deque` 中恰好指向最後一個項目之外的隨機存取迭代器。|  
-|[resize](#deque__resize)|指定 `deque` 的新大小。|  
-|[shrink_to_fit](#deque__shrink_to_fit)|捨棄多餘的容量。|  
-|[size](#deque__size)|傳回 `deque` 中項目的數目。|  
-|[swap](#deque__swap)|交換兩個 `deque` 的項目。|  
+|[assign](#assign)|清除 `deque` 中的項目，並複製新的項目序列至目標 `deque`。|  
+|[at](#at)|傳回 `deque` 中指定位置的項目參考。|  
+|[back](#back)|傳回 `deque` 的最後一個項目的參考。|  
+|[begin](#begin)|傳回 `deque` 中對第一個項目定址的隨機存取迭代器。|  
+|[cbegin](#cbegin)|傳回 `deque` 中第一個項目的常數迭代器。|  
+|[cend](#cend)|傳回指向 `deque` 結尾之外的 `const` 隨機存取迭代器。|  
+|[clear](#clear)|清除 `deque` 的所有項目。|  
+|[crbegin](#crbegin)|傳回 `deque` 中以相反順序檢視之第一個項目的隨機存取常數迭代器。|  
+|[crend](#crend)|傳回 `deque` 中以相反順序檢視之第一個項目的隨機存取常數迭代器。|  
+|[emplace](#emplace)|將就地建構的項目插入 `deque` 的指定位置。|  
+|[emplace_back](#emplace_back)|將就地建構的項目加入 `deque` 的結尾。|  
+|[emplace_front](#emplace_front)|將就地建構的項目加入 `deque` 的開頭。|  
+|[empty](#empty)|如果 `deque` 包含零個項目，則傳回 `true`，而如果它包含一或多個項目，則傳回 `false`。|  
+|[end](#end)|傳回指向 `deque` 結尾之外的隨機存取迭代器。|  
+|[erase](#erase)|從指定位置移除在 `deque` 中的項目或某個項目範圍。|  
+|[front](#front)|傳回 `deque` 中第一個項目的參考。|  
+|[get_allocator](#get_allocator)|傳回用來建構 `allocator` 的 `deque` 物件複本。|  
+|[insert](#insert)|將一個項目、多個項目或一定範圍的項目在指定位置插入 `deque`。|  
+|[max_size](#max_size)|傳回 `deque` 的最大可能長度。|  
+|[pop_back](#pop_back)|清除 `deque` 結尾的項目。|  
+|[pop_front](#pop_front)|清除 `deque` 開頭的項目。|  
+|[push_back](#push_back)|將項目加入 `deque` 的結尾。|  
+|[push_front](#push_front)|將項目加入 `deque` 的開頭。|  
+|[rbegin](#rbegin)|傳回反轉的 `deque` 中第一個項目的隨機存取迭代器。|  
+|[rend](#rend)|傳回在反轉的 `deque` 中恰好指向最後一個項目之外的隨機存取迭代器。|  
+|[resize](#resize)|指定 `deque` 的新大小。|  
+|[shrink_to_fit](#shrink_to_fit)|捨棄多餘的容量。|  
+|[size](#size)|傳回 `deque` 中項目的數目。|  
+|[swap](#swap)|交換兩個 `deque` 的項目。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#deque__operator_at)|傳回在指定位置上 `deque` 項目的參考。|  
-|[operator=](#deque__operator_eq)|用另一個 `deque` 的複本取代 `deque` 的項目。|  
+|[operator&#91;&#93;](#op_at)|傳回在指定位置上 `deque` 項目的參考。|  
+|[operator=](#op_eq)|用另一個 `deque` 的複本取代 `deque` 的項目。|  
   
 ## <a name="requirements"></a>需求  
  **標頭**：\<deque>  
   
-##  <a name="a-namedequeallocatortypea--dequeallocatortype"></a><a name="deque__allocator_type"></a>  deque::allocator_type  
+##  <a name="allocator_type"></a>  deque::allocator_type  
  此類型代表 deque 物件的配置器類別。  
   
 ```  
@@ -155,9 +195,9 @@ typedef Allocator allocator_type;
  **allocator_type** 與範本參數 **Allocator** 同義。  
   
 ### <a name="example"></a>範例  
-  請參閱 [get_allocator](#deque__get_allocator) 的範例。  
+  請參閱 [get_allocator](#get_allocator) 的範例。  
   
-##  <a name="a-namedequeassigna--dequeassign"></a><a name="deque__assign"></a>  deque::assign  
+##  <a name="assign"></a>  deque::assign  
  清除 deque 中的元素，並複製一組新的元素至目標 deque。  
   
 ```  
@@ -248,7 +288,7 @@ int main()
 d1 = 5678c1 =102030c1 =5060c1 =4444444  
 ```  
   
-##  <a name="a-namedequeata--dequeat"></a><a name="deque__at"></a>  deque::at  
+##  <a name="at"></a>  deque::at  
  傳回 deque 中指定位置的元素參考。  
   
 ```  
@@ -295,7 +335,7 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="a-namedequebacka--dequeback"></a><a name="deque__back"></a>  deque::back  
+##  <a name="back"></a>  deque::back  
  傳回 deque 的最後一個元素參考。  
   
 ```  
@@ -341,7 +381,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10  
 ```  
   
-##  <a name="a-namedequebegina--dequebegin"></a><a name="deque__begin"></a>  deque::begin  
+##  <a name="begin"></a>  deque::begin  
  傳回迭代器，定址對象是 deque 中的第一個元素。  
   
 ```  
@@ -390,7 +430,7 @@ The first element of c1 is 1
 The first element of c1 is now 20  
 ```  
   
-##  <a name="a-namedequecbegina--dequecbegin"></a><a name="deque__cbegin"></a>  deque::cbegin  
+##  <a name="cbegin"></a>  deque::cbegin  
  傳回 `const` 迭代器，為範圍中的第一個項目定址。  
   
 ```  
@@ -413,7 +453,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="a-namedequecenda--dequecend"></a><a name="deque__cend"></a>  deque::cend  
+##  <a name="cend"></a>  deque::cend  
  傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。  
   
 ```  
@@ -426,7 +466,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>備註  
  `cend` 用來測試迭代器是否已超過其範圍結尾。  
   
- 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 且可修改的任何種類 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -438,7 +478,7 @@ auto i2 = Container.cend();
   
  `cend` 所傳回的值不應該取值。  
   
-##  <a name="a-namedequecleara--dequeclear"></a><a name="deque__clear"></a>  deque::clear  
+##  <a name="clear"></a>  deque::clear  
  清除 deque 的所有元素。  
   
 ```  
@@ -473,7 +513,7 @@ The size of the deque is initially 3
 The size of the deque after clearing is 0  
 ```  
   
-##  <a name="a-namedequeconstiteratora--dequeconstiterator"></a><a name="deque__const_iterator"></a>  deque::const_iterator  
+##  <a name="const_iterator"></a>  deque::const_iterator  
  類型，提供可以存取和讀取 deque 中 **const** 元素的隨機存取迭代器。  
   
 ```  
@@ -484,9 +524,9 @@ typedef implementation-defined const_iterator;
  類型 `const_iterator` 無法用來修改元素的值。  
   
 ### <a name="example"></a>範例  
-  請參閱 [back](#deque__back) 的範例。  
+  請參閱 [back](#back) 的範例。  
   
-##  <a name="a-namedequeconstpointera--dequeconstpointer"></a><a name="deque__const_pointer"></a>  deque::const_pointer  
+##  <a name="const_pointer"></a>  deque::const_pointer  
  提供 deque 中 `const` 元素的指標。  
   
 ```
@@ -494,9 +534,9 @@ typedef typename Allocator::const_pointer const_pointer;
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 `const_pointer` 無法用來修改元素的值。 [迭代器](#deque__iterator)通常用來存取 deque 元素。  
+ 類型 `const_pointer` 無法用來修改元素的值。 [迭代器](#iterator)通常用來存取 deque 元素。  
   
-##  <a name="a-namedequeconstreferencea--dequeconstreference"></a><a name="deque__const_reference"></a>  deque::const_reference  
+##  <a name="const_reference"></a>  deque::const_reference  
  此類型可提供 deque 中預存的 **const** 元素參考，以讀取和執行 **const** 運算。  
   
 ```  
@@ -538,7 +578,7 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="a-namedequeconstreverseiteratora--dequeconstreverseiterator"></a><a name="deque__const_reverse_iterator"></a>  deque::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a>  deque::const_reverse_iterator  
  此類型提供的隨機存取迭代器，可讀取 deque 中的任何 **const** 元素。  
   
 ```  
@@ -549,9 +589,9 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
  類型 `const_reverse_iterator` 無法修改元素的值，而是用來以反向逐一查看 deque。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用迭代器的範例，請參閱 [rbegin](#deque__rbegin) 的範例。  
+  如需如何宣告及使用迭代器的範例，請參閱 [rbegin](#rbegin) 的範例。  
   
-##  <a name="a-namedequecrbegina--dequecrbegin"></a><a name="deque__crbegin"></a>  deque::crbegin  
+##  <a name="crbegin"></a>  deque::crbegin  
  將 const 迭代器傳回給反向 deque 中的第一個項目。  
   
 ```  
@@ -597,7 +637,7 @@ The first element of deque is 1.
 The first element of the reversed deque is 2.  
 ```  
   
-##  <a name="a-namedequecrenda--dequecrend"></a><a name="deque__crend"></a>  deque::crend  
+##  <a name="crend"></a>  deque::crend  
  傳回 const 迭代器，其定址對象為反向 deque 中最後一個元素的下一個位置。  
   
 ```  
@@ -608,7 +648,7 @@ const_reverse_iterator crend() const;
  const 反向隨機存取迭代器，其定址對象為反向 [deque](../standard-library/deque-class.md) 中最後一個元素的下一個位置 (此位置優先於未反向 deque 中的第一個元素)。  
   
 ### <a name="remarks"></a>備註  
- `crend` 搭配反向 `deque` 使用，就如同 [array::cend](../standard-library/array-class-stl.md#array__cend) 搭配 `deque` 使用。  
+ `crend` 搭配反向 `deque` 使用，就如同 [array::cend](../standard-library/array-class-stl.md#cend) 搭配 `deque` 使用。  
   
  有 `crend` 的傳回值時 (適當遞減)，無法修改 `deque` 物件。  
   
@@ -643,7 +683,7 @@ int main( )
 1  
 ```  
   
-##  <a name="a-namedequedequea--dequedeque"></a><a name="deque__deque"></a>  deque::deque  
+##  <a name="deque"></a>  deque::deque  
  建構特定大小的 deque、使用特定值的元素或特定配置器來建構 deque，或將其建構為其他一些 deque 的所有或部分複本。  
   
 ```  
@@ -690,9 +730,9 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
   
  前兩個建構函式會指定空的初始 deque，第二個建構函式也會指定所要使用的配置器類型 ( `_Al`)。  
   
- 第三個建構函式會將指定數目 ( ` count`) 的元素重複，指定為類別 `Type` 的預設值。  
+ 第三個建構函式會將指定數目 ( `count`) 的元素重複，指定為類別 `Type` 的預設值。  
   
- 第四及第五個建構函式會指定 ` val` 值的 ( `Count`) 元素重複。  
+ 第四及第五個建構函式會指定 `val` 值的 ( `Count`) 元素重複。  
   
  第六個建構函式會指定 `Right` deque 的複本。  
   
@@ -908,7 +948,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namedequedifferencetypea--dequedifferencetype"></a><a name="deque__difference_type"></a>  deque::difference_type  
+##  <a name="difference_type"></a>  deque::difference_type  
  此類型可提供兩個迭代器 (其參考相同 deque 內的元素) 之間的差異。  
   
 ```  
@@ -961,7 +1001,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.  
 ```  
   
-##  <a name="a-namedequeemplacea--dequeemplace"></a><a name="deque__emplace"></a>  deque::emplace  
+##  <a name="emplace"></a>  deque::emplace  
  將就地建構的元素插入 deque 的指定位置。  
   
 ```  
@@ -976,7 +1016,7 @@ iterator emplace(
 |-|-|  
 |參數|說明|  
 |`_Where`|第一個元素插入 [deque](../standard-library/deque-class.md) 的位置。|  
-|` val`|插入 `deque` 的項目值。|  
+|`val`|插入 `deque` 的項目值。|  
   
 ### <a name="return-value"></a>傳回值  
  函式會傳回迭代器，此迭代器指向新元素在 deque 中的插入位置。  
@@ -1026,7 +1066,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30  
 ```  
   
-##  <a name="a-namedequeemplacebacka--dequeemplaceback"></a><a name="deque__emplace_back"></a>  deque::emplace_back  
+##  <a name="emplace_back"></a>  deque::emplace_back  
  將就地建構的元素新增至 deque 的結尾。  
   
 ```  
@@ -1038,7 +1078,7 @@ void emplace_back(Type&& val);
 |||  
 |-|-|  
 |參數|說明|  
-|` val`|新增至 [deque](../standard-library/deque-class.md) 結尾的元素。|  
+|`val`|新增至 [deque](../standard-library/deque-class.md) 結尾的元素。|  
   
 ### <a name="example"></a>範例  
   
@@ -1076,7 +1116,7 @@ New last element: 2
 Moved last element: 2  
 ```  
   
-##  <a name="a-namedequeemplacefronta--dequeemplacefront"></a><a name="deque__emplace_front"></a>  deque::emplace_front  
+##  <a name="emplace_front"></a>  deque::emplace_front  
  將就地建構的元素新增至 deque 的結尾。  
   
 ```  
@@ -1088,7 +1128,7 @@ void emplace_front(Type&& val);
 |||  
 |-|-|  
 |參數|說明|  
-|` val`|新增至 [deque](../standard-library/deque-class.md) 開頭的元素。|  
+|`val`|新增至 [deque](../standard-library/deque-class.md) 開頭的元素。|  
   
 ### <a name="example"></a>範例  
   
@@ -1126,7 +1166,7 @@ New last element: 2
 Moved last element: 2  
 ```  
   
-##  <a name="a-namedequeemptya--dequeempty"></a><a name="deque__empty"></a>  deque::empty  
+##  <a name="empty"></a>  deque::empty  
  測試 deque 是否為空白。  
   
 ```  
@@ -1161,7 +1201,7 @@ int main( )
 The deque is not empty.  
 ```  
   
-##  <a name="a-namedequeenda--dequeend"></a><a name="deque__end"></a>  deque::end  
+##  <a name="end"></a>  deque::end  
  傳回迭代器，其定址對象為 deque 中最後一個元素的下一個位置。  
   
 ```  
@@ -1218,7 +1258,7 @@ The new next-to-last integer of c1 is 400
 The deque is now: 10 400 30  
 ```  
   
-##  <a name="a-namedequeerasea--dequeerase"></a><a name="deque__erase"></a>  deque::erase  
+##  <a name="erase"></a>  deque::erase  
  從指定位置移除 deque 中的元素或某個範圍內的元素。  
   
 ```  
@@ -1231,10 +1271,10 @@ iterator erase(iterator first, iterator last);
  `_Where`  
  要從 deque 中移除之元素的位置。  
   
- ` first`  
+ `first`  
  從 deque 中移除之第一個元素的位置。  
   
- ` last`  
+ `last`  
  從 deque 中移除之最後一個元素以外的位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1287,7 +1327,7 @@ After erasing the first element, the deque becomes:  20 30 40 50
 After erasing all elements but the first, deque becomes: 20   
 ```  
   
-##  <a name="a-namedequefronta--dequefront"></a><a name="deque__front"></a>  deque::front  
+##  <a name="front"></a>  deque::front  
  傳回 deque 中第一個元素的參考。  
   
 ```  
@@ -1334,7 +1374,7 @@ The first integer of c1 is 10
 The second integer of c1 is 11  
 ```  
   
-##  <a name="a-namedequegetallocatora--dequegetallocator"></a><a name="deque__get_allocator"></a>  deque::get_allocator  
+##  <a name="get_allocator"></a>  deque::get_allocator  
  傳回一份用來建構 deque 的配置器物件複本。  
   
 ```  
@@ -1370,7 +1410,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namedequeinserta--dequeinsert"></a><a name="deque__insert"></a>  deque::insert  
+##  <a name="insert"></a>  deque::insert  
  將一或多個元素或範圍內的元素，插入 deque 的指定位置。  
   
 ```  
@@ -1416,7 +1456,7 @@ IList);
 ### <a name="remarks"></a>備註  
  任何插入作業都可能相當耗費資源。  
   
-##  <a name="a-namedequeiteratora--dequeiterator"></a><a name="deque__iterator"></a>  deque::iterator  
+##  <a name="iterator"></a>  deque::iterator  
  此類型提供可讀取或修改 deque 中任何元素的隨機存取迭代器。  
   
 ```  
@@ -1427,9 +1467,9 @@ typedef implementation-defined iterator;
  類型 **iterator** 可用來修改元素的值。  
   
 ### <a name="example"></a>範例  
-  請參閱 [begin](#deque__begin) 的範例。  
+  請參閱 [begin](#begin) 的範例。  
   
-##  <a name="a-namedequemaxsizea--dequemaxsize"></a><a name="deque__max_size"></a>  deque::max_size  
+##  <a name="max_size"></a>  deque::max_size  
  傳回 deque 的最大長度。  
   
 ```  
@@ -1458,7 +1498,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namedequeoperatorata--dequeoperator"></a><a name="deque__operator_at"></a>  deque::operator[]  
+##  <a name="op_at"></a>  deque::operator[]  
  傳回在指定位置上 deque 元素的參考。  
   
 ```  
@@ -1506,7 +1546,7 @@ The first integer of c1 is 10
 The second integer of c1 is 20  
 ```  
   
-##  <a name="a-namedequeoperatoreqa--dequeoperator"></a><a name="deque__operator_eq"></a>  deque::operator=  
+##  <a name="op_eq"></a>  deque::operator=  
  將此 deque 的元素以另一個 deque 的元素取代。  
   
 ```  
@@ -1520,10 +1560,10 @@ deque& operator=(deque&& right);
 |||  
 |-|-|  
 |參數|說明|  
-|` right`|此 deque 可提供新的內容。|  
+|`right`|此 deque 可提供新的內容。|  
   
 ### <a name="remarks"></a>備註  
- 第一個覆寫會將元素從 ` right` (作業的來源) 複製到這個 deque。 第二個覆寫會將元素從 ` right` 移動到這個 deque。  
+ 第一個覆寫會將元素從 `right` (作業的來源) 複製到這個 deque。 第二個覆寫會將元素從 `right` 移動到這個 deque。  
   
  如果元素在運算子執行之前就已包含在這個 deque 中，即會遭到移除。  
   
@@ -1580,7 +1620,7 @@ int main( )
  }  
 ```  
   
-##  <a name="a-namedequepointera--dequepointer"></a><a name="deque__pointer"></a>  deque::pointer  
+##  <a name="pointer"></a>  deque::pointer  
  提供指向 [deque](../standard-library/deque-class.md) 中的元素指標。  
   
 ```unstlib  
@@ -1588,9 +1628,9 @@ typedef typename Allocator::pointer pointer;
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 **pointer** 可用來修改元素的值。 [迭代器](#deque__iterator)通常用來存取 deque 元素。  
+ 類型 **pointer** 可用來修改元素的值。 [迭代器](#iterator)通常用來存取 deque 元素。  
   
-##  <a name="a-namedequepopbacka--dequepopback"></a><a name="deque__pop_back"></a>  deque::pop_back  
+##  <a name="pop_back"></a>  deque::pop_back  
  刪除 deque 結尾的元素。  
   
 ```  
@@ -1630,7 +1670,7 @@ The last element is: 2
 After deleting the element at the end of the deque, the last element is: 1  
 ```  
   
-##  <a name="a-namedequepopfronta--dequepopfront"></a><a name="deque__pop_front"></a>  deque::pop_front  
+##  <a name="pop_front"></a>  deque::pop_front  
  刪除 deque 開頭的元素。  
   
 ```  
@@ -1670,7 +1710,7 @@ The second element is: 2
 After deleting the element at the beginning of the deque, the first element is: 2  
 ```  
   
-##  <a name="a-namedequepushbacka--dequepushback"></a><a name="deque__push_back"></a>  deque::push_back  
+##  <a name="push_back"></a>  deque::push_back  
  將元素新增至 deque 結尾。  
   
 ```  
@@ -1684,12 +1724,12 @@ void push_back(Type&& val);
 |||  
 |-|-|  
 |參數|描述|  
-|` val`|新增至 deque 結尾的元素。|  
+|`val`|新增至 deque 結尾的元素。|  
   
 ### <a name="remarks"></a>備註  
  如果擲回例外狀況，deque 會保持不變，並重新擲回例外狀況。  
   
-##  <a name="a-namedequepushfronta--dequepushfront"></a><a name="deque__push_front"></a>  deque::push_front  
+##  <a name="push_front"></a>  deque::push_front  
  將元素新增至 deque 的開頭。  
   
 ```  
@@ -1703,7 +1743,7 @@ void push_front(Type&& val);
 |||  
 |-|-|  
 |參數|說明|  
-|` val`|新增至 deque 開頭的元素。|  
+|`val`|新增至 deque 開頭的元素。|  
   
 ### <a name="remarks"></a>備註  
  如果擲回例外狀況，deque 會保持不變，並重新擲回例外狀況。  
@@ -1745,7 +1785,7 @@ New first element: 2
 Moved first element: a  
 ```  
   
-##  <a name="a-namedequerbegina--dequerbegin"></a><a name="deque__rbegin"></a>  deque::rbegin  
+##  <a name="rbegin"></a>  deque::rbegin  
  將迭代器傳回給反向 deque 中的第一個項目。  
   
 ```  
@@ -1758,7 +1798,7 @@ reverse_iterator rbegin();
  反向隨機存取迭代器，其定址對象為反向 deque 中的第一個項目，或未反向 deque 中的最後一個項目。  
   
 ### <a name="remarks"></a>備註  
- `rbegin` 是與反向 deque 搭配使用，就如同 [begin](#deque__begin) 是與 deque 搭配使用一樣。  
+ `rbegin` 是與反向 deque 搭配使用，就如同 [begin](#begin) 是與 deque 搭配使用一樣。  
   
  如果 `rbegin` 的傳回值已指派給 `const_reverse_iterator`，則無法修改 deque 物件。 如果 `rbegin` 的傳回值已指派給 `reverse_iterator`，則可以修改 deque 物件。  
   
@@ -1818,7 +1858,7 @@ The reversed deque is: 30 20 10
 Last element in deque is now 40.  
 ```  
   
-##  <a name="a-namedequereferencea--dequereference"></a><a name="deque__reference"></a>  deque::reference  
+##  <a name="reference"></a>  deque::reference  
  此類型可提供儲存在 deque 中之元素的參考。  
   
 ```  
@@ -1853,7 +1893,7 @@ The first element is 10
 The second element is 20  
 ```  
   
-##  <a name="a-namedequerenda--dequerend"></a><a name="deque__rend"></a>  deque::rend  
+##  <a name="rend"></a>  deque::rend  
  傳回迭代器，其定址對象是反向 deque 中最後一個元素的下一個位置。  
   
 ```  
@@ -1866,7 +1906,7 @@ reverse_iterator rend();
  反向隨機存取迭代器，其定址對象為反向 deque 中最後一個元素的下一個位置 (此位置優先於未反向 deque 中的第一個元素)。  
   
 ### <a name="remarks"></a>備註  
- `rend` 是與反向 deque 搭配使用，就如同 [end](#deque__end) 是與 deque 搭配使用一樣。  
+ `rend` 是與反向 deque 搭配使用，就如同 [end](#end) 是與 deque 搭配使用一樣。  
   
  如果 `rend` 的傳回值已指派給 `const_reverse_iterator`，則無法修改 deque 物件。 如果 `rend` 的傳回值已指派給 `reverse_iterator`，則可以修改 deque 物件。  
   
@@ -1935,7 +1975,7 @@ The reversed deque is: 30 20 10
 The modified reversed deque is: 30 20 40   
 ```  
   
-##  <a name="a-namedequeresizea--dequeresize"></a><a name="deque__resize"></a>  deque::resize  
+##  <a name="resize"></a>  deque::resize  
  指定 deque 的新大小。  
   
 ```  
@@ -1948,7 +1988,7 @@ void resize(size_type _Newsize, Type val);
  `_Newsize`  
  deque 的新大小。  
   
- ` val`  
+ `val`  
  如果新大小超過原始大小，則會將新元素的值新增至 deque。 如果省略此值，則為新元素的類別指定預設值。  
   
 ### <a name="remarks"></a>備註  
@@ -1958,7 +1998,7 @@ void resize(size_type _Newsize, Type val);
   
  如果 deque 現在的大小與所要求的大小相同，則不會採取任何動作。  
   
- [size](#deque__size) 會反映 deque 目前的大小。  
+ [size](#size) 會反映 deque 目前的大小。  
   
 ### <a name="example"></a>範例  
   
@@ -2000,7 +2040,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20  
 ```  
   
-##  <a name="a-namedequereverseiteratora--dequereverseiterator"></a><a name="deque__reverse_iterator"></a>  deque::reverse_iterator  
+##  <a name="reverse_iterator"></a>  deque::reverse_iterator  
  此類型提供的隨機存取迭代器，可讀取或修改反向 deque 中的元素。  
   
 ```  
@@ -2013,7 +2053,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="example"></a>範例  
   請參閱 rbegin 的範例。  
   
-##  <a name="a-namedequeshrinktofita--dequeshrinktofit"></a><a name="deque__shrink_to_fit"></a>  deque::shrink_to_fit  
+##  <a name="shrink_to_fit"></a>  deque::shrink_to_fit  
  捨棄多餘的容量。  
   
 ```  
@@ -2052,7 +2092,7 @@ Current size of v1 = 1
 Current size of v1 = 1  
 ```  
   
-##  <a name="a-namedequesizea--dequesize"></a><a name="deque__size"></a>  deque::size  
+##  <a name="size"></a>  deque::size  
  傳回 deque 中的元素數目。  
   
 ```  
@@ -2091,7 +2131,7 @@ The deque length is 1.
 The deque length is now 2.  
 ```  
   
-##  <a name="a-namedequesizetypea--dequesizetype"></a><a name="deque__size_type"></a>  deque::size_type  
+##  <a name="size_type"></a>  deque::size_type  
  此類型可計算 deque 中元素的數目。  
   
 ```  
@@ -2099,9 +2139,9 @@ typedef typename Allocator::size_type size_type;
 ```  
   
 ### <a name="example"></a>範例  
-  請參閱 [size](#deque__size) 的範例。  
+  請參閱 [size](#size) 的範例。  
   
-##  <a name="a-namedequeswapa--dequeswap"></a><a name="deque__swap"></a>  deque::swap  
+##  <a name="swap"></a>  deque::swap  
  交換兩個 deque 的項目。  
   
 ```  
@@ -2112,11 +2152,11 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
- 提供要交換元素的 deque，或要與 deque ` left` 交換元素的 deque。  
+ `right`  
+ 提供要交換元素的 deque，或要與 deque `left` 交換元素的 deque。  
   
- ` left`  
- 要與 deque ` right` 交換元素的 deque。  
+ `left`  
+ 要與 deque `right` 交換元素的 deque。  
   
 ### <a name="example"></a>範例  
   
@@ -2173,7 +2213,7 @@ After swapping with c3, deque c1 is: 100
 After swapping with c2, deque c1 is: 1 2 3  
 ```  
   
-##  <a name="a-namedequevaluetypea--dequevaluetype"></a><a name="deque__value_type"></a>  deque::value_type  
+##  <a name="value_type"></a>  deque::value_type  
  此類型表示儲存在 deque 中的資料類型。  
   
 ```  

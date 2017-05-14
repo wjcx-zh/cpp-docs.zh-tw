@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e4f0eff8758694e97bfb310f9cfa650cb28cefa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0600d44b2b87ed3bb56e7d1c64fffd762e77aff2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
@@ -106,7 +107,7 @@ wchar_t *_wtmpnam(
  將保留所產生名稱，並且將與函式所傳回之名稱相同的指標。 這便於儲存產生的名稱。  
   
 ## <a name="return-value"></a>傳回值  
- 若發生失敗，這些函式均會傳回產生之名稱的指標或 `NULL`。 若您嘗試超過 `TMP_MAX` (請參閱 STDIO.H) 次呼叫 `tmpnam`，或是您使用 `_tempnam` 而且在 TMP 環境變數和 `dir` 參數中指定了無效的目錄名稱，就會發生失敗。  
+ 若發生失敗，這些函式均會傳回產生之名稱的指標或 `NULL`。 如果您嘗試使用，就會發生失敗超過`TMP_MAX`（請參閱 STDIO。H） 呼叫`tmpnam`或如果您使用`_tempnam`，而且沒有指定在 TMP 環境變數和不正確的目錄名稱`dir`參數。  
   
 > [!NOTE]
 >  `tmpnam` 和 `_wtmpnam` 所傳回的指標指向內部靜態緩衝區。 不應呼叫 [free](../../c-runtime-library/reference/free.md) 來解除配置這些指標。 需要針對 `_tempnam` 和 `_wtempnam` 配置的指標呼叫 `free`。  
@@ -192,9 +193,6 @@ int main( void )
 \s1gk. is safe to use as a temporary file.  
 C:\DOCUME~1\user\LOCALS~1\Temp\2\stq2 is safe to use as a temporary file.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

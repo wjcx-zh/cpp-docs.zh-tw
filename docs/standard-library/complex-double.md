@@ -1,75 +1,88 @@
 ---
-title: "complex&lt;double&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.complex<double>"
-  - "complex<double>"
-  - "std::complex<double>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "複雜 < 雙 > 函式"
+title: complex&lt;double&gt; | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std.complex<double>
+- complex<double>
+- std::complex<double>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# complex&lt;double&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3b5e57b3bda68995f24a21ffedb9d533e7c65a0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-描述可儲存皆為 **double** 類型之物件的有序對，第一個代表複數的實部，而第二個代表虛部。  
+---
+# <a name="complexltdoublegt"></a>complex&lt;double&gt;
+描述一個物件，該物件會儲存一組類型皆為 **double** 之物件的有序對，第一個代表複數的實數部分，而第二個代表虛數部分。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
-template<>  
-   class complex<double> {  
-public:  
-   constexpr complex(  
-      double _RealVal = 0,   
-      double _ImagVal = 0  
-   );  
-  
-   constexpr complex(  
-      const complex<double>& _ComplexNum  
-   );  
-   constexpr explicit complex(  
-      const complex<long double>& _ComplexNum  
-   );  
-   // rest same as template class complex  
-};  
+```
+template <>
+class complex<double> {
+public:
+    constexpr complex(
+    double RealVal = 0,
+    double ImagVal = 0);
+
+constexpr complex(const complex<double>& complexNum);
+
+constexpr explicit complex(const complex<long double>& complexNum);
+// rest same as template class complex
+};
 ```  
   
-#### 參數  
- `_RealVal`  
- 用於建構中複數實部的 **double** 類型值。  
+#### <a name="parameters"></a>參數  
+ `RealVal`  
+ 要建構之複數實數部分的 **double** 類型值。  
   
- `_ImagVal`  
- 用於建構中複數虛部的 **double** 類型值。  
+ `ImagVal`  
+ 要建構之複數虛數部分的 **double** 類型值。  
   
- `_ComplexNum`  
- **float** 類型或 `long double` 類型的複數，其實部及虛部用於初始化建構中 **double** 類型之複數。  
+ `complexNum`  
+ **float** 類型或 `long double` 類型的複數，其實數及虛數部分用於初始化要建構之 **double** 類型的複數。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  **double** 類型的複數。  
   
-## 備註  
- 針對 **double** 類型的複數類別之複數範本類別明確特製化，和範本類別的差異只在於其定義的建構函式。 允許從 **float** 到 **double** 的隱含轉換，但從 `long double` 轉換成 **double** 必須是**明確**的。**明確**使用時就無法使用指派語法將類型轉換初始化。  
+## <a name="remarks"></a>備註  
+ **double** 類型 complex 類別的 complex 範本類別明確特製化，其與範本類別的差異只在於所定義的建構函式。 允許從 **float** 到 **double** 的隱含轉換，但從 `long double` 轉換成 **double** 必須是**明確**的。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。  
   
- 如需有關此樣板類別 `complex`, ，請參閱 [complex 類別](../standard-library/complex-class.md)。 如需範本類別 `complex` 的成員清單，請參閱  
+ 如需 `complex` 範本類別的詳細資訊，請參閱 [complex 類別](../standard-library/complex-class.md)。 如需範本類別 `complex` 的成員清單，請參閱  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // complex_comp_dbl.cpp  
 // compile with: /EHsc  
 #include <complex>  
@@ -109,14 +122,28 @@ int main( )
         << argc3 << " radians, which is " << argc3 * 180 / pi  
         << " degrees." << endl;  
 }  
+\* Output:   
+Specifying initial real & imaginary parts,  
+ as type double gives c1 = (4,5)  
+Implicit conversion from type float to type double,  
+ gives c2double = (4,5)  
+Explicit conversion from type float to type double,  
+ gives c3longdouble = (4,5)  
+The modulus of c3 is recovered from c3 using: abs ( c3 ) = 6.40312  
+Argument of c3 is recovered from c3 using:  
+ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.  
+*\  
 ```  
   
- **指定初始的真實及虛數部分，做為類型 double 提供 c1 \= \(4,5\) 的隱含轉換，從 float double 型別，可讓 c2double \= 從 float double 型別，可讓 c3longdouble \(4,5\) 明確轉換 \= \(4，5\) 的 c3 模數從使用 c3 復原︰ abs \(c3\) \= 6.40312 c3 引數從使用 c3 復原︰ 引數 \(c3\) \= 0.896055 弧度為單位，這是 51.3402 度。**   
-## 需求  
- **標頭：**\<complex\>  
+## <a name="requirements"></a>需求  
+ **標頭**：\<complex>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [complex 類別](../standard-library/complex-class.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

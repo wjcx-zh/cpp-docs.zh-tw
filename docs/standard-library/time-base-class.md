@@ -1,64 +1,87 @@
 ---
 title: "time_base 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.time_base"
-  - "std::time_base"
-  - "time_base"
-  - "locale/std::time_base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "time_base 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- time_base
+- locale/std::time_base
+dev_langs:
+- C++
+helpviewer_keywords:
+- time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# time_base 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 86e27eec232094c1e57120f6f811c96b4e4a4871
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
-類別可做為類別的基底類別 \(Base Class\) 範本 Facet 把 time\_get 分類，定義列舉型別 **dateorder** 和型別的常數。  
+---
+# <a name="timebase-class"></a>time_base 類別
+此類別會當成基底類別提供給樣板類別 time_get 的 facet，僅定義列舉類型 **dateorder** 和此類型的數個常數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class time_base : public locale::facet {
+public:
+    enum dateorder {no_order,
+    dmy,
+ mdy,
+    ymd,
+ ydm};
+    time_base(
+ size_t _Refs = 0)
+ ~time_base();
+
+};
 ```  
-class time_base : public locale::facet {  
-public:  
-    enum dateorder {no_order, dmy, mdy, ymd, ydm};  
-    time_base(  
-        size_t _Refs = 0  
-    )  
-    ~time_base();  
-};  
-```  
   
-## 備註  
- 每個常數 Draw 一種排序日期的元件。  常數是:  
+## <a name="remarks"></a>備註  
+ 每個常數特性都會以不同的方式描述，來將日期元件排序。 這些常數如下：  
   
--   **no\_order** 不指定特定順序。  
+- **no_order** 不會指定特定順序。  
   
--   **dmy** 在 1979 年 12 月 2 日指定命令天，月，年，然後。  
+- **dmy** 指定該順序依序為日、月、年，如 2 日 12 月 1979 年。  
   
--   **mdy** 在 1979 年 12 月 2 日指定命令月、日，，然後年份，。  
+- **mdy** 指定該順序依序為月、日、年，如 12 月 2 日，1979 年。  
   
--   **ymd** 在 1979\/12\/2. 指定命令，表示月份日期，然後，。  
+- **ymd** 指定該順序依序為年、月、日，如 1979/12/2。  
   
--   **ydm** 在 1979 年指定命令中，日期，然後月份，:2 減一。  
+- **ydm** 指定該順序依序為年、日、月，如 1979：2 日 12 月。  
   
-## 需求  
- **Header:** \<地區設定\>  
+## <a name="requirements"></a>需求  
+ **標頭︰**\<locale>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+
+
+

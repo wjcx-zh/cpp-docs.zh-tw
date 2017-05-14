@@ -76,10 +76,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b84c039c715c8c7a45a84a37c1a1fd34db988403
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4bf1e3ad35fb03891f9c861255919752d0403d70
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
@@ -122,7 +123,7 @@ int _fstat64i32(
  儲存結果的結構指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果取得檔案狀態資訊，則傳回 0。 –1 的傳回值表示錯誤。 如果檔案描述元無效或 `buffer` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，在檔案描述元無效的情形中，`errno` 會設為 `EBADF`，如果 `buffer` 為 `NULL`，則會設為 `EINVAL`。  
+ 如果取得檔案狀態資訊，則傳回 0。 傳回值-1 表示錯誤。 如果檔案描述元無效或 `buffer` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，在檔案描述元無效的情形中，`errno` 會設為 `EBADF`，如果 `buffer` 為 `NULL`，則會設為 `EINVAL`。  
   
 ## <a name="remarks"></a>備註  
  `_fstat` 函式會取得與 `fd` 相關聯之開啟的檔案的相關資訊，並將它儲存在 `buffer` 結構中。 定義於 SYS\Stat.h 中，`_stat` 結構包含下列欄位。  
@@ -159,7 +160,7 @@ int _fstat64i32(
   
  這些函式的變化支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數值後置字元 (`32` 或 `64`) 表示所使用的時間類型大小，第二個後置字元為 `i32` 或 `i64`，表示檔案大小是以 32 位元或 64 位元整數來表示。  
   
- `_fstat` 相當於 `_fstat64i32`，且 `struct``_stat` 包含 64 位元時間。 上述情況只有在定義 `_USE_32BIT_TIME_T` 時才不成立，在此情況下，會採用舊版行為，也就是 `_fstat` 使用 32 位元時間，且 `struct``_stat` 包含 32 位元時間。 對於 `_fstati64` 也是如此。  
+ `_fstat` 相當於 `_fstat64i32`，且 `struct _stat` 包含 64 位元時間。 上述情況只有在定義 `_USE_32BIT_TIME_T` 時才不成立，在此情況下，會採用舊版行為，也就是 `_fstat` 使用 32 位元時間，且 `struct _stat` 包含 32 位元時間。 對於 `_fstati64` 也是如此。  
   
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 的時間類型和檔案長度類型版本  
   
@@ -251,9 +252,6 @@ int main( void )
 File size     : 16  
 Time modified : Wed May 07 15:25:11 2003  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   

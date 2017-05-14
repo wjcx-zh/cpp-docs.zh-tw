@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3836d13d9f050ebdd7ed7502e11bbde2da76992a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 50f17486f72a272d45c45fc3f0c6b25a7b4b6c56
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint、iswprint、_isprint_l、_iswprint_l
@@ -96,7 +97,7 @@ int _iswprint_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `c` 表示特定的可列印字元，這些常式都會傳回非零值。 如果 `c` 是可列印的字元─這包括空白字元 (0x20 – 0x7E)，`isprint` 會傳回非零值。 如果 `c` 是可列印的寬字元─這包括空白寬字元，`iswprint` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
+ 如果 `c` 表示特定的可列印字元，這些常式都會傳回非零值。 `isprint`傳回非零值，如果`c`是可列印的字元，包括空格字元 (0x20-0x7E)。 如果 `c` 是可列印的寬字元─這包括空白寬字元，`iswprint` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
  這些函式之測試條件的結果取決於地區設定的 `LC_CTYPE` 類別設定；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本使用目前地區設定來處理任何地區設定相關行為；具有 `_l` 尾碼的版本則完全相同，但會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -118,9 +119,6 @@ int _iswprint_l(
 |`_iswprint_l`|\<ctype.h> 或 \<wchar.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   

@@ -70,10 +70,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3c2cd297e325b32e7edb8b521acad5e9a3ced6b1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c33c5d786d92146ba87e42942e6007bb5addd8d5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
@@ -152,10 +153,7 @@ int _vfwprintf_p_l(
   
  \* UNIX V 相容性的必要項目。  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

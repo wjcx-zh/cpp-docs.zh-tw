@@ -92,10 +92,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b7c3ecb3795889944c74e582ce26038d52529908
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9650e07c35fc72f9dd5b73c32c472d0f48f6277a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
@@ -165,7 +166,7 @@ unsigned char *_mbsnset_l(
   
  `_mbsnset` 會驗證其參數，如果 `str` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`_mbsnset` 會傳回 NULL 並將 `errno` 設為 `EINVAL`。 `_strnset` 和 `_wcsnset` 不會驗證其參數。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 尾碼的版本與其相同，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -209,9 +210,6 @@ int main( void )
 Before: This is a test  
 After:  **** is a test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::String::Replace](https://msdn.microsoft.com/en-us/library/system.string.replace.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

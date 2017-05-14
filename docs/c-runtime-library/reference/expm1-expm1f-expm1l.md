@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 0fbce9639718ca7316494b1f573a817d8ab0e6f1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0ebd79ed048bad988ca8a31f0f2f8d5427b84675
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1、expm1f、expm1l
@@ -88,7 +89,7 @@ long double expm1l(
  浮點指數值。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，`expm1` 函式會傳回表示 e<sup>x</sup> – 1 的浮點值。 溢位時，`expm1` 傳回 `HUGE_VAL`、`expm1f` 傳回 `HUGE_VALF`、`expm1l` 傳回 `HUGE_VALL`，而 `errno` 設為 `ERANGE`。 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ `expm1`函式會傳回浮點值，代表 e<sup>x</sup> -1，如果成功的話。 溢位時，`expm1` 傳回 `HUGE_VAL`、`expm1f` 傳回 `HUGE_VALF`、`expm1l` 傳回 `HUGE_VALL`，而 `errno` 設為 `ERANGE`。 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
  因為 C++ 允許多載，所以您可以呼叫採用並傳回 `expm1` 和 `float` 值的 `long double` 的多載。 在 C 程式中，`expm1` 會一律採用並傳回 `double`。  
@@ -99,10 +100,7 @@ long double expm1l(
 |-------------|---------------------|  
 |`expm1`, `expm1f`, `expm1l`|\<math.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

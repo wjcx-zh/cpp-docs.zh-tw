@@ -1,54 +1,72 @@
 ---
 title: "putchar、putwchar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "putchar"
-  - "putwchar"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "putchar"
-  - "putwchar"
-  - "_puttchar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_puttchar 函式"
-  - "字元, 撰寫"
-  - "putchar 函式"
-  - "putwchar 函式"
-  - "標準輸出, 寫入至"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- putchar
+- putwchar
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- putchar
+- putwchar
+- _puttchar
+dev_langs:
+- C++
+helpviewer_keywords:
+- putchar function
+- _puttchar function
+- characters, writing
+- standard output, writing to
+- putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# putchar、putwchar
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1d1cf554b7d359c3bd761656df60881c4be514b8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-寫入一個字元給 **stdout**。  
+---
+# <a name="putchar-putwchar"></a>putchar、putwchar
+將字元寫入至 **stdout**。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -60,39 +78,39 @@ wint_t putwchar(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `c`  
  待寫入字元。  
   
-## 傳回值  
- 傳回寫入的字元。  若要表示錯誤或文件關閉條件， `putc` 和 `putchar` 會傳回 `EOF`；`putwc` 和 `putwchar` 傳回 **WEOF**。  對於所有四個常式，請使用 [ferror](../../c-runtime-library/reference/ferror.md) 或 [feof](../../c-runtime-library/reference/feof.md) 來檢查錯誤或檔案結尾。  如果傳遞一個 null 指標給 `stream`，這些函式會產生一個無效的參數例外狀況，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，它們會傳回 `EOF` 或 **WEOF**，並將 `errno` 設定為`EINVAL`。  
+## <a name="return-value"></a>傳回值  
+ 傳回寫入的字元。 為了指出錯誤或檔案結束狀況，`putc` 和 `putchar` 會傳回 `EOF`；`putwc` 和 `putwchar` 會傳回 **WEOF**。 針對所有四個常式，使用 [ferror](../../c-runtime-library/reference/ferror.md) 或 [feof](../../c-runtime-library/reference/feof.md) 可檢查是否有錯誤或檔案是否已結束。 如果針對 `stream` 傳遞了 null 指標，則這些函式會產生無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `EOF` 或 **WEOF**，並將 `errno` 設為 `EINVAL`。  
   
- 如需更多關於這些和其他回傳碼的資訊，請參閱 [\_doserrno 、 errno 、 \_sys\_errlist 和 \_sys\_nerr \(\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr\)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
+ 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `putc` 常式給輸出 `stream` 的目前位置寫入單一字元 `c`。  任何整數可以傳遞至 `putc`，但只有較低 8 位元組會寫入。  `putchar` 常式和 **putc\(** `c`**、stdout \)**都相同。  對於每個常式，，如果讀取錯誤發生，資料流的錯誤指示器會被設定。  `putc` 和 `putchar` 分別是類似於 `fputc` 和 `_fputchar`，但是都會被實作為函式和巨集 \(請參閱 [選取函式和巨集之間](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)\)。  `putwc` 和 `putwchar`  分別為 `putc` 和  `putchar` 的寬字元版本。  
+## <a name="remarks"></a>備註  
+ `putc` 常式會將單一字元 `c` 寫入至目前位置的輸出 `stream`。 任何整數都可以傳遞至 `putc`，但只會寫入較低的 8 位元。 `putchar` 常式與 **putc(**`c`**, stdout)** 相同。 針對每個常式，如果發生讀取錯誤，則會設定資料流的錯誤指標。 `putc` 和 `putchar` 分別類似於 `fputc` 和 `_fputchar`，但會當做函式和巨集來實作 (請參閱[在函式和巨集之間選擇](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md))。 `putwc` 和 `putwchar` 分別是寬字元版本的 `putc` 和 `putchar`。  
   
- 與 **\_nolock** 結尾的版本相同，但不會防止被其他執行緒干擾。  因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。  這些函式只能用在安全執行緒內容 \(例如單一執行緒應用程式\) 或呼叫範圍已經處理執行緒隔離的地方。  
+ 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_puttchar`|`putchar`|`putchar`|**putwchar**|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`putchar`|\<stdio.h\>|  
-|`putwchar`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`putchar`|\<stdio.h>|  
+|`putwchar`|\<stdio.h> 或 \<wchar.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。  與主控台關聯的標準資料流控制代碼 \(`stdin`、`stdout` 和 `stderr`\) 必須重新導向，然後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。  如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_putchar.c  
@@ -116,19 +134,13 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 This is the line of output  
 ```  
   
-## .NET Framework 對等用法  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
-  
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)

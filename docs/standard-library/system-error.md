@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: ad53550cce165587057910e3cd4c77427fb1cd55
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8f3441306b21ca1111cf2fd2d377a1b233e7ad86
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
@@ -75,15 +76,15 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator==](../standard-library/system-error-operators.md#operator_eq_eq)|測試運算子左邊的物件是否等於右邊的物件。|  
-|[operator!=](../standard-library/system-error-operators.md#operator_neq)|測試運算子左邊的物件是否不等於右邊的物件。|  
-|[operator<](../standard-library/system-error-operators.md#operator_lt_)|測試物件是否小於傳入的物件以進行比較。|  
+|[operator==](../standard-library/system-error-operators.md#op_eq_eq)|測試運算子左邊的物件是否等於右邊的物件。|  
+|[operator!=](../standard-library/system-error-operators.md#op_neq)|測試運算子左邊的物件是否不等於右邊的物件。|  
+|[operator<](../standard-library/system-error-operators.md#op_lt)|測試物件是否小於傳入的物件以進行比較。|  
   
 ### <a name="enumerations"></a>列舉  
   
 |||  
 |-|-|  
-|[errc](../standard-library/system-error-enums.md#errc_enumeration)|提供在 `<errno.h>` 中由 Posix 所定義的所有錯誤程式碼巨集的符號名稱。|  
+|[errc](../standard-library/system-error-enums.md#errc)|提供在 `<errno.h>` 中由 Posix 所定義的所有錯誤程式碼巨集的符號名稱。|  
   
 ### <a name="classes-and-structs"></a>類別和結構  
   

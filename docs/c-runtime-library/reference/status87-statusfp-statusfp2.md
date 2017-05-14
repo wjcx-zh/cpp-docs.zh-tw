@@ -66,10 +66,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: a42b5d8811e108b727671921322423d186d73afd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 69a19aaa457ffc52c431a9ca1c3597a475a10994
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87、_statusfp、_statusfp2
@@ -100,7 +101,7 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
   
  建議針對同時具有 x87 和 SSE2 浮點處理器的晶片 (例如 Pentium IV) 使用 `_statusfp2`。 對於 `_statusfp2`，針對 x87 或 SSE2 浮點處理器使用浮點狀態字組來填入位址。 針對支援 x87 和 SSE2 浮點處理器的晶片，如果使用 `_statusfp` 或 `_controlfp`，而且動作因參照 x87 或 SSE2 浮點狀態字組而不明確，則 EM_AMBIGUOUS 會設為 1。 只有 x86 平台才支援 `_statusfp2` 函式。  
   
- 這些函式不是適用於[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime (CLR) 只支援預設浮點有效位數。  
+ 這些函式不是適用於[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime (CLR) 只支援預設的浮點精確度。  
   
 ## <a name="requirements"></a>需求  
   
@@ -155,9 +156,6 @@ Status = 0x00000000 - clear
 Status = 0x00000003 - inexact, underflow  
 Status = 0x00080003 - inexact, underflow, denormal  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

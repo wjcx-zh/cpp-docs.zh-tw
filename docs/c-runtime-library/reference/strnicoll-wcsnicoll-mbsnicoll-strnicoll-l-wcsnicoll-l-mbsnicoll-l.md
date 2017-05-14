@@ -1,89 +1,106 @@
 ---
 title: "_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbsnicoll_l"
-  - "_mbsnicoll"
-  - "_wcsnicoll_l"
-  - "_strnicoll"
-  - "_strnicoll_l"
-  - "_wcsnicoll"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wcshicoll_l"
-  - "_ftcsncicoll"
-  - "strnicoll_l"
-  - "_wcsnicoll"
-  - "mbsnicoll_l"
-  - "_strnicoll"
-  - "mbsnicoll"
-  - "_ftcsnicoll"
-  - "wcsnicoll"
-  - "_tcsnicoll"
-  - "_mbsnicoll"
-  - "strinicoll"
-  - "_tcsncicoll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcsncicoll 函式"
-  - "_ftcsnicoll 函式"
-  - "_mbsnicoll 函式"
-  - "_mbsnicoll_l 函式"
-  - "_strnicoll 函式"
-  - "_strnicoll_l 函式"
-  - "_tcsncicoll 函式"
-  - "_tcsnicoll 函式"
-  - "_wcsnicoll 函式"
-  - "_wcsnicoll_l 函式"
-  - "字碼頁, 用於字串比較"
-  - "ftcsncicoll 函式"
-  - "ftcsnicoll 函式"
-  - "mbsnicoll 函式"
-  - "mbsnicoll_l 函式"
-  - "字串 [C++], 依字碼頁比較"
-  - "strnicoll 函式"
-  - "strnicoll_l 函式"
-  - "tcsncicoll 函式"
-  - "tcsnicoll 函式"
-  - "wcsnicoll 函式"
-  - "wcsnicoll_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbsnicoll_l
+- _mbsnicoll
+- _wcsnicoll_l
+- _strnicoll
+- _strnicoll_l
+- _wcsnicoll
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- wcshicoll_l
+- _ftcsncicoll
+- strnicoll_l
+- _wcsnicoll
+- mbsnicoll_l
+- _strnicoll
+- mbsnicoll
+- _ftcsnicoll
+- wcsnicoll
+- _tcsnicoll
+- _mbsnicoll
+- strinicoll
+- _tcsncicoll
+dev_langs:
+- C++
+helpviewer_keywords:
+- code pages, using for string comparisons
+- ftcsncicoll function
+- mbsnicoll_l function
+- _ftcsnicoll function
+- mbsnicoll function
+- _tcsnicoll function
+- _wcsnicoll_l function
+- _mbsnicoll function
+- tcsncicoll function
+- strnicoll function
+- _ftcsncicoll function
+- wcsnicoll_l function
+- _mbsnicoll_l function
+- _tcsncicoll function
+- strnicoll_l function
+- wcsnicoll function
+- _strnicoll_l function
+- _wcsnicoll function
+- ftcsnicoll function
+- strings [C++], comparing by code page
+- tcsnicoll function
+- _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7ec663519e02eebc92809be336f285a5629190b0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-使用地區設定特定的資訊來比較字串。  
+---
+# <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
+使用地區設定特定資訊，以比較字串。  
   
 > [!IMPORTANT]
->  `_mbsnicoll` 和 `_mbsnicoll_l`不能用於在 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbsnicoll` 和 `_mbsnicoll_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _strnicoll(  
@@ -121,62 +138,59 @@ int _mbsnicoll_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `string1, string2`  
- 以 Null 結束的待比較字串。  
+ 以 Null 終止的待比較字串  
   
  `count`  
- 要比較的字元數。  
+ 要比較的字元數  
   
  `locale`  
- 使用的地區設定。  
+ 要使用的地區設定。  
   
-## 傳回值  
- 這些函式都會傳回暗指 `string1` 和 `string2`的子關聯性的值*，* 如下所示。  
+## <a name="return-value"></a>傳回值  
+ 所有這些函式傳回值，指出子字串的關聯性`string1`和`string2`、，如下所示。  
   
 |傳回值|string1 與 string2 的關係|  
-|---------|---------------------------|  
-|\< 0|`string1` 小於 `string2`|  
-|0|`string1` 與 `string2` 相同|  
-|\> 0|`string1` 大於 `string2`|  
+|------------------|----------------------------------------|  
+|< 0|`string1` 小於 `string2`|  
+|0|`string1` 等於 `string2`|  
+|> 0|`string1` 大於 `string2`|  
   
- 這些函式都會傳回 `_NLSCMPERROR`。  若要使用 `_NLSCMPERROR`，請 include STRING.H 或 MBSTRING.H。  如果 `string1` 或 `string2` 包含在定序序列的網域之外之寬字元程式碼，`_wcsnicoll` 可能會失敗。  發生錯誤時， `_wcsnicoll` 會將 `errno` 設定為 `EINVAL`。  要檢查呼叫 `_wcsnicoll`的錯誤，將`errno` 設為 0 並檢查 `errno` 在呼叫`_wcsnicoll`之後**.**  
+ 所有這些函式都會傳回 `_NLSCMPERROR`。 若要使用 `_NLSCMPERROR`，請包括 STRING.H 或 MBSTRING.H。 如果 `string1` 或 `string2` 包含定序順序之網域外部的寬字元碼，則 `_wcsnicoll` 會失敗。 發生錯誤時，`_wcsnicoll` 可能會將 `errno` 設定為 `EINVAL`。 若要在呼叫 `_wcsnicoll` 時檢查是否發生錯誤，請將 `errno` 設定為 0，然後在呼叫 `_wcsnicoll` 之後檢查 `errno`。  
   
-## 備註  
- 這些函式都會根據字碼頁在 `string1` 和 `string2` 執行的第一個 `count` 字元的不區分大小寫的比較。  這些函式應該只有在字碼頁上，字元集順序和字典字元順序存在差異，且這些差異影響到字串比較時，才會使用。  這些函式版本沒有 `_l` 尾碼來使用目前的地區設定和字碼頁。  以`_l`為字尾的版本也相同，不同處為使用傳遞過來的地區設定。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+## <a name="remarks"></a>備註  
+ 所有這些函式都會根據字碼頁來執行 `string1` 與 `string2` 中前 `count` 個字元的區分大小寫比較。 只有在字元集順序與字碼頁中的字典編撰字元順序不同時，以及字串比較注意這項差異時，才應該使用這些函式。 沒有 `_l` 尾碼的這些函式版本使用目前的地區設定及字碼頁。 與版本`_l`尾碼是一樣的只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
- 這些函式全都會驗證它們的參數。  如果 `string1` 或 `string2` 為 null 指標，或如果 `INT_MAX` 大於 ，無效的參數處理常式會被叫用，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，這些函式會傳回 `_NLSCMPERROR`，並將 `errno` 設為 `EINVAL`**.**。  
+ 這些函式全都會驗證它們的參數。 如果 `string1` 或 `string2` 是 Null 指標，或如果計數大於 `INT_MAX`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `_NLSCMPERROR`，並將 `errno` 設為 `EINVAL`**。**  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncicoll`|`_strnicoll`|`_mbsnbicoll`|`_wcsnicoll`|  
-|`_tcsnicoll`|`_strnicoll`|[\_mbsnbicoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
+|`_tcsnicoll`|`_strnicoll`|[_mbsnbicoll](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|`_wcsnicoll`|  
 |`_tcsnicoll_l`|`_strnicoll_l`|`_mbsnbicoll_l`|`_wcsnicoll_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_strnicoll`, `_strnicoll_l`|\<string.h\>|  
-|`_wcsnicoll`, `_wcsnicoll_l`|\<wchar.h\> 或 \<string.h\>|  
-|`_mbsnicoll`, `_mbsnicoll_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strnicoll`, `_strnicoll_l`|\<string.h>|  
+|`_wcsnicoll`, `_wcsnicoll_l`|\<wchar.h> 或 \<string.h>|  
+|`_mbsnicoll`, `_mbsnicoll_l`|\<mbstring.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 對等用法  
- [System::String::Compare](https://msdn.microsoft.com/en-us/library/system.string.compare.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [地區設定](../../c-runtime-library/locale.md)   
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll 函式](../../c-runtime-library/strcoll-functions.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [\_mbsnbcoll、\_mbsnbcoll\_l、\_mbsnbicoll、\_mbsnbicoll\_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
- [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcmp、wcscmp、\_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [\_stricmp、\_wcsicmp、\_mbsicmp、\_stricmp\_l、\_wcsicmp\_l、\_mbsicmp\_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
- [strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strxfrm、wcsxfrm、\_strxfrm\_l、\_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [_mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l](../../c-runtime-library/reference/mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)   
+ [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)   
+ [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

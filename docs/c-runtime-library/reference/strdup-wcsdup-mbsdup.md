@@ -1,71 +1,88 @@
 ---
 title: "_strdup、_wcsdup、_mbsdup | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strdup"
-  - "_mbsdup"
-  - "_wcsdup"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsdup"
-  - "mbsdup"
-  - "_mbsdup"
-  - "_strdup"
-  - "_ftcsdup"
-  - "_wcsdup"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wcsdup 函式"
-  - "ftcsdup 函式"
-  - "_ftcsdup 函式"
-  - "mbsdup 函式"
-  - "strdup 函式"
-  - "_strdup 函式"
-  - "_wcsdup 函式"
-  - "複製字串"
-  - "重複字串"
-  - "複製字串 [c + +]"
-  - "_mbsdup 函式"
-  - "複製字串 [c + +]"
-  - "tcsdup 函式"
-  - "_tcsdup 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strdup
+- _mbsdup
+- _wcsdup
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsdup
+- mbsdup
+- _mbsdup
+- _strdup
+- _ftcsdup
+- _wcsdup
+dev_langs:
+- C++
+helpviewer_keywords:
+- wcsdup function
+- ftcsdup function
+- _ftcsdup function
+- mbsdup function
+- strdup function
+- _strdup function
+- _wcsdup function
+- copying strings
+- duplicating strings
+- strings [C++], copying
+- _mbsdup function
+- strings [C++], duplicating
+- tcsdup function
+- _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _strdup、_wcsdup、_mbsdup
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 959fe23b5d1af1c783bc06485cdcbcfc877b8990
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
+---
+# <a name="strdup-wcsdup-mbsdup"></a>_strdup、_wcsdup、_mbsdup
 重複字串。  
   
 > [!IMPORTANT]
->  不可在於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中執行的應用程式中使用 `_mbsdup`。 如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 不可在於 `_mbsdup` 中執行的應用程式中使用                  [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。 如需詳細資訊，請參閱                  [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 char *_strdup(  
@@ -79,39 +96,39 @@ unsigned char *_mbsdup(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `strSource`  
  以 Null 結束的來源字串。  
   
-## 傳回值  
- 這些函式全都會傳回所複製字串之儲存位置的指標，或是在無法配置儲存區時，傳回 `NULL`。  
+## <a name="return-value"></a>傳回值  
+ 這些函式全都會傳回所複製字串之儲存位置的指標，或是在無法配置儲存區時，傳回 `NULL` 。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  `_strdup` 函式呼叫 [malloc](../../c-runtime-library/reference/malloc.md) 來配置 `strSource` 複本的儲存空間，然後將 `strSource` 複製到配置的空間。  
   
- `_wcsdup` 和 `_mbsdup` 是寬字元和多位元組字元版本的 `_strdup`。`_wcsdup` 的引數和傳回值是寬字元字串；`_mbsdup` 的引數和傳回值則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
+ `_wcsdup` 和 `_mbsdup` 是寬字元和多位元組字元版本的 `_strdup`。 `_wcsdup` 的引數和傳回值是寬字元字串； `_mbsdup` 的引數和傳回值則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE 和 \_MBCS|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsdup`|`_strdup`|`_mbsdup`|`_wcsdup`|  
   
- 因為 `_strdup` 呼叫 `malloc` 來配置 `strSource` 複本的儲存空間，所以一律在由 `_strdup` 的呼叫所傳回的指標上呼叫 [free](../../c-runtime-library/reference/free.md) 常式以釋放這個記憶體，是較好的做法。  
+ 因為 `_strdup` 呼叫 `malloc` 來配置 `strSource`複本的儲存空間，所以一律在由 [的呼叫所傳回的指標上呼叫](../../c-runtime-library/reference/free.md) free `_strdup`常式以釋放這個記憶體，是較好的做法。  
   
- 如果已定義 `_DEBUG` 和 `_CRTDBG_MAP_ALLOC`，則 `_strdup` 和 `_wcsdup` 會由 `_strdup_dbg` 和 `_wcsdup_dbg` 的呼叫所取代，以便對記憶體配置進行偵錯。 如需詳細資訊，請參閱 [\_strdup\_dbg、\_wcsdup\_dbg](../../c-runtime-library/reference/strdup-dbg-wcsdup-dbg.md)。  
+ 如果已定義 `_DEBUG` 和 `_CRTDBG_MAP_ALLOC` ，則 `_strdup` 和 `_wcsdup` 會由 `_strdup_dbg` 和 `_wcsdup_dbg` 的呼叫所取代，以便對記憶體配置進行偵錯。 如需詳細資訊，請參閱 [_strdup_dbg、_wcsdup_dbg](../../c-runtime-library/reference/strdup-dbg-wcsdup-dbg.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_strdup`|\<string.h\>|  
-|`_wcsdup`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbsdup`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strdup`|\<string.h>|  
+|`_wcsdup`|\<string.h> 或 \<wchar.h>|  
+|`_mbsdup`|\<mbstring.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_strdup.c  
@@ -131,20 +148,18 @@ int main( void )
 ```  
   
 ```Output  
-Original: This is the buffer text Copy:     This is the buffer text  
+Original: This is the buffer text  
+Copy:     This is the buffer text  
 ```  
   
-## .NET Framework 對等用法  
- [System::String::Clone](https://msdn.microsoft.com/en-us/library/system.string.clone.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [memset、wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcat、wcscat、\_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp、wcscmp、\_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strncat、\_strncat\_l、wcsncat、\_wcsncat\_l、\_mbsncat、\_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy、\_strncpy\_l、wcsncpy、\_wcsncpy\_l、\_mbsncpy、\_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

@@ -40,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 37cbfa635ee301c9f5f5e860d7469020efd8160f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 327cf7f1b8e2e9ad088dd553b96e403650f7182b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="operator"></a>operator!=
@@ -55,15 +56,14 @@ ms.lasthandoff: 02/24/2017
 ## <a name="syntax"></a>語法  
   
 ```  
- 
-    template <class Ty>  
+template <class Ty>  
 bool operator!=(
     const Container <Ty>& left,  
     const Container <Ty>& right);
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回 **!**(_*Left* **==** ` right`)。  
+ 傳回 `!(left == right)`。  
   
 ## <a name="see-also"></a>另請參閱  
  [\<範例容器>](../standard-library/sample-container.md)

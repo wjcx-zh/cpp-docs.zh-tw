@@ -55,10 +55,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e482d061fa5692a6a6ca54c618ffcf90a194c6c9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bfd25184e2542c8f1f3c4e1e975397685328b64b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
@@ -134,9 +135,6 @@ int main( void )
 ```Output  
 The remainder of -10.00 / 3.00 is -1.000000  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Math::IEEERemainder](https://msdn.microsoft.com/en-us/library/system.math.ieeeremainder.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

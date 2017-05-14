@@ -14,10 +14,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: aa35f177bcb986e141d0e46e48dc007a96f94498
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 3fe398e0424ff6fc24eff9b084759aa10c46e98a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 函式
@@ -62,12 +63,12 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
  資料流。  
   
 ### <a name="remarks"></a>備註  
- 操作工具會擷取並捨棄任何符合下列條件的元素 `ch`：[use_facet](../standard-library/basic-filebuf-class.md#basic_filebuf__open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#ios_base__getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) 為 true。  
+ 操作工具會擷取並捨棄任何符合下列條件的元素 `ch`：[use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) 為 true。  
   
- 此函數如果在擷取元素時遇到檔案結尾，就會呼叫 [setstate](../standard-library/basic-ios-class.md#basic_ios__setstate)( **eofbit**)。 它會傳回 `_Istr`。  
+ 此函數如果在擷取元素時遇到檔案結尾，就會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)。 它會傳回 `_Istr`。  
   
 ### <a name="example"></a>範例  
-  如需使用 `ws` 的範例，請參閱 [operator>>](../standard-library/istream-operators.md#operator_gt__gt_)。  
+  如需使用 `ws` 的範例，請參閱 [operator>>](../standard-library/istream-operators.md#op_gt_gt)。  
   
 ## <a name="see-also"></a>另請參閱  
  [\<istream>](../standard-library/istream.md)

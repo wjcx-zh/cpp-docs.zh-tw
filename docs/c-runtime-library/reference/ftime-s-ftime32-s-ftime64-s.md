@@ -1,61 +1,78 @@
 ---
 title: "_ftime_s、_ftime32_s、_ftime64_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ftime_s"
-  - "_ftime64_s"
-  - "_ftime32_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ftime_s"
-  - "_ftime64_s"
-  - "ftime_s"
-  - "_ftime32_s"
-  - "ftime32_s"
-  - "ftime64_s"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ftime32_s 函式"
-  - "ftime_s 函式"
-  - "_ftime64_s 函式"
-  - "目前時間"
-  - "ftime64_s 函式"
-  - "時間，取得目前的"
-  - "_ftime_s 函式"
-  - "_ftime32_s 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ftime_s
+- _ftime64_s
+- _ftime32_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ftime_s
+- _ftime64_s
+- ftime_s
+- _ftime32_s
+- ftime32_s
+- ftime64_s
+dev_langs:
+- C++
+helpviewer_keywords:
+- ftime32_s function
+- ftime_s function
+- _ftime64_s function
+- current time
+- ftime64_s function
+- time, getting current
+- _ftime_s function
+- _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# _ftime_s、_ftime32_s、_ftime64_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 20611bb1f40ae900ad2653395da6a0d8279252db
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-取得目前的時間。 這些是舊版 [\_ftime、\_ftime32、\_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 中所述的安全性增強 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)。  
+---
+# <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s、_ftime32_s、_ftime64_s
+取得目前時間。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 版本。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 errno_t _ftime_s(   
@@ -69,48 +86,48 @@ errno_t _ftime64_s(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `timeptr`  
- 指標 `_timeb,``__timeb32`, ，或 `__timeb64` 結構。  
+ 指標`_timeb`， `__timeb32`，或`__timeb64`結構。  
   
-## 傳回值  
- 如果成功，失敗的錯誤代碼。 如果 `timeptr` 為 `NULL`，則傳回值是 `EINVAL`。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，則為零，如果失敗，則為錯誤碼。 如果 `timeptr` 為 `NULL`，則傳回值是 `EINVAL`。  
   
-## 備註  
- `_ftime_s` 函式取得目前的當地時間，並將它儲存在結構中所指 `timeptr`*。*`_timeb,``__timeb32`,，和`__timeb64` SYS\\Timeb.h 中所定義的結構。 它們包含下表中所列出的四個欄位。  
+## <a name="remarks"></a>備註  
+ `_ftime_s`函式取得目前的當地時間，並將它儲存在結構中所指`timeptr`。 `_timeb`， `__timeb32`，和`__timeb64`SYS\Timeb.h 中所定義的結構。 它們包含下表中所列出的四個欄位。  
   
  `dstflag`  
- 若日光節約時間已目前生效的當地時區為非零。 \(請參閱 [\_tzset](../../c-runtime-library/reference/tzset.md) 如需說明如何判斷日光節約時間。\)  
+ 若日光節約時間目前於本地時區已生效，則為非零。 (如需如何判斷日光節約時間的說明，請參閱 [_tzset](../../c-runtime-library/reference/tzset.md)。)  
   
  `millitm`  
- 為以毫秒為單位的秒數部分。  
+ 秒數的分數，以毫秒為單位。  
   
  `time`  
- 時間 （秒） 午夜 \(00: 00:00\)、 1970 年 1 月 1 日國際標準時間 \(UTC\)。  
+ 自國際標準時間 (UTC) 1970 年 1 月 1 日午夜 (00:00:00) 以來的時間，以秒為單位。  
   
  `timezone`  
- 以分鐘為單位的差異進時，切換 UTC 與本地時間。 值 `timezone` 設定全域變數的值從 `_timezone` \(請參閱 `_tzset`\)。  
+ UTC 和當地時間之間的時差，向西推進，以分鐘為單位。 `timezone` 的值由全域變數 `_timezone` 的值設定 (請參閱 `_tzset`)。  
   
- `_ftime64_s`, 它會使用 `__timeb64` 結構，可讓檔案建立日期來表示總 23:59:59，3000 年 12 月 31 日 UTC; 而 `_ftime32_s` 只代表 23:59:59 2038 年 1 月 18 日 UTC 日期。 午夜過後，1970 年 1 月 1 日是所有這些函式的日期範圍的下限。  
+ 使用 `__timeb64` 結構的 `_ftime64_s`，允許表示至 3000 年 12 月 31 日 23:59:59 UTC 為止的日期，而 `_ftime32_s` 只能表示至 2038 年 1 月 18 日23:59:59 UTC 的日期。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。  
   
- `_ftime_s` 相當於 `_ftime64_s` 和 `_timeb` 包含 64 位元時間。 也是如此除非 \_`USE_32BIT_TIME_T` 定義，在此情況下舊的行為是作用中; \_`ftime_s` 會使用 32 位元時間和 `_timeb` 包含 32 位元時間。  
+ `_ftime_s` 相當於 `_ftime64_s`，且 `_timeb` 包含 64 位元時間。 上述情況只有在定義 `_USE_32BIT_TIME_T` 時才成立，在此情況下，會採用舊版行為，也就是 `_ftime_s` 使用 32 位元時間，且 `_timeb` 包含 32 位元時間。  
   
- `_ftime_s` 會驗證其參數。 如果傳遞 null 做為指標 `timeptr`, ，函式叫用無效參數處理常式中所述 [參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將 `errno` 到 `EINVAL`。  
+ `_ftime_s` 會驗證其參數。 如果以 `timeptr` 傳遞 Null 指標，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會將 `errno` 設為 `EINVAL`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |函式|必要的標頭|  
-|--------|-----------|  
-|`_ftime_s`|\< s \> 和 \< sys\/timeb.h \>|  
-|`_ftime32_s`|\< s \> 和 \< sys\/timeb.h \>|  
-|`_ftime64_s`|\< s \> 和 \< sys\/timeb.h \>|  
+|--------------|---------------------|  
+|`_ftime_s`|\<sys/types.h> 和 \<sys/timeb.h>|  
+|`_ftime32_s`|\<sys/types.h> 和 \<sys/timeb.h>|  
+|`_ftime64_s`|\<sys/types.h> 和 \<sys/timeb.h>|  
   
- 如需相容性詳細資訊，請參閱簡介中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
+## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_ftime64_s.c  
@@ -156,16 +173,17 @@ int main( void )
 ```  
   
 ```Output  
-自 1970 年 1 月 1 日 (UTC) 的秒數︰ 1051553334 毫秒︰ 230 UTC 與本地時間之間的分鐘︰ 480 日光節約時間的旗標 （1 代表日光節約時間已生效）︰ 1 的時間是星期一 4 月 28 日 11:08:54.230 2003年  
+Seconds since midnight, January 1, 1970 (UTC): 1051553334  
+Milliseconds: 230  
+Minutes between UTC and local time: 480  
+Daylight savings time flag (1 means Daylight time is in effect): 1  
+The time is Mon Apr 28 11:08:54.230 2003  
 ```  
   
-## .NET Framework 對等用法  
- [System::DateTime::Now](https://msdn.microsoft.com/en-us/library/system.datetime.now.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
- [asctime、\_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime、\_ctime32、\_ctime64、\_wctime、\_wctime32、\_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime、\_gmtime32、\_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime，\_localtime32，\_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [time、\_time32、\_time64](../../c-runtime-library/reference/time-time32-time64.md)
+ [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
+ [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
+ [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
+ [localtime、_localtime32、_localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
+ [time、_time32、_time64](../../c-runtime-library/reference/time-time32-time64.md)

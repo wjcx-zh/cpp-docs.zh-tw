@@ -51,10 +51,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 18cf0578ea136ea6c84bb351b4bc087f3282910b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e398d641cde32b90b4502b9ae38dc3918aa65704
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="expanddbg"></a>_expand_dbg
@@ -170,9 +171,6 @@ Size of block after _expand_dbg of 1 more long: 164
   
 ## <a name="comment"></a>註解  
  此程式的輸出取決於您的電腦能否展開所有區段。 如果所有區段都能展開，就會在 [輸出] 區段反映輸出。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   

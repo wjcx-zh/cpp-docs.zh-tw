@@ -10,15 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - random_device
-- std::random_device
 - random/std::random_device
-- std::random_device::min
 - random/std::random_device::min
-- std::random_device::max
 - random/std::random_device::max
-- std::random_device::entropy
 - random/std::random_device::entropy
-- std::random_device::operator()
+- random/std::random_device::operator()
+- random/std::random_device::entropy
 - random/std::random_device::operator()
 dev_langs:
 - C++
@@ -43,10 +40,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d755f15b9f8dc575eb95d65822adfae3fdb568dd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 842e4f9b53a06373df8e00f64b1ab24a48a5c6b9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="randomdevice-class"></a>random_device 類別
@@ -80,8 +78,8 @@ public:
   
 |||  
 |-|-|  
-|[random_device::random_device](#random_device__random_device)|[random_device::entropy](#random_device__entropy)|  
-|[random_device::operator()](#random_device__operator__)||  
+|[random_device](#random_device)|[entropy](#entropy)|  
+|[random_device::operator()](#op_call)||  
   
 ## <a name="remarks"></a>備註  
 此類別會描述亂數的來源，且允許 (但不一定需要) 是不具決定性，或是由 ISO C++ 標準以密碼編譯保護。 在 Visual Studio 實作中，產生的值是不具決定性且以密碼編譯保護，但執行速度比從引擎及引擎配接器 (例如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)，對大多數應用程式而言是高品質且快速的引擎選擇) 建立的產生器更慢。  
@@ -132,7 +130,7 @@ a random value == 213725214
   
  **命名空間：** std  
   
-##  <a name="a-namerandomdevicerandomdevicea--randomdevicerandomdevice"></a><a name="random_device__random_device"></a>  random_device::random_device  
+##  <a name="random_device"></a>  random_device::random_device  
 建構產生器。  
   
 ```  
@@ -142,7 +140,7 @@ random_device(const std::string& = "");
 ### <a name="remarks"></a>備註  
 建構函式會視需要初始化產生器，忽略字串參數。 若無法初始化 `random_device`，會擲出衍生自 [exception](../standard-library/exception-class.md) 之實作定義類型的值。  
   
-##  <a name="a-namerandomdeviceentropya--randomdeviceentropy"></a><a name="random_device__entropy"></a>  random_device::entropy  
+##  <a name="entropy"></a>  random_device::entropy  
 評估來源的隨機性。  
   
 ```  
@@ -152,7 +150,7 @@ double entropy() const noexcept;
 ### <a name="remarks"></a>備註  
 成員函式會傳回來源隨機性的評估 (測量單位為位元)。  
   
-##  <a name="a-namerandomdeviceoperatora--randomdeviceoperator"></a><a name="random_device__operator__"></a>  random_device::operator()  
+##  <a name="op_call"></a>  random_device::operator()  
 傳回隨機值。  
   
 ```  

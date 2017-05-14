@@ -10,21 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sub_match
-- std::sub_match
 - regex/std::sub_match
-- std::sub_match::matched
 - regex/std::sub_match::matched
-- std::sub_match::compare
 - regex/std::sub_match::compare
-- std::sub_match::length
 - regex/std::sub_match::length
-- std::sub_match::str
 - regex/std::sub_match::str
-- std::sub_match::difference_type
 - regex/std::sub_match::difference_type
-- std::sub_match::iterator
 - regex/std::sub_match::iterator
-- std::sub_match::value_type
 - regex/std::sub_match::value_type
 dev_langs:
 - C++
@@ -49,10 +41,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: 1a2b0c43fd5942e6f4b9ddd54c50db8bc8e8218f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 12d12497fa96d7cf4185ad3664908a56be1078c9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="submatch-class"></a>sub_match 類別
@@ -85,7 +78,7 @@ public:
  子相符項目的迭代器類型。  
   
 ## <a name="remarks"></a>備註  
- 此樣板類別描述一個物件，該物件會指定與 [regex_match 函式](../standard-library/regex-functions.md#regex_match_function)或 [regex_search 函式](../standard-library/regex-functions.md#regex_search_function)呼叫中的擷取群組相符的字元序列。 類型為 [match_results 類別](../standard-library/match-results-class.md)的物件會保存這些物件的陣列，每個陣列分別代表用於搜尋之規則運算式中的一個擷取群組。  
+ 此範本類別描述物件，指定的呼叫中的擷取群組相符的字元序列[regex_match](../standard-library/regex-functions.md#regex_match)或[regex_search](../standard-library/regex-functions.md#regex_search)。 類型為 [match_results 類別](../standard-library/match-results-class.md)的物件會保存這些物件的陣列，每個陣列分別代表用於搜尋之規則運算式中的一個擷取群組。  
   
  如果擷取群組與物件的資料成員不符，則 `matched` 為 false，且兩個迭代器 `first` 和 `second` (繼承自基底 `std::pair`) 相等。 如果擷取群組相符，則 `matched` 為 true，迭代器 `first` 會指向目標序列中符合擷取群組的第一個字元，而 `second` 會指向目標序列中符合擷取群組之最後一個字元後的一個位置。 請注意，如果零長度與成員相符，則 `matched` 為零，且兩個迭代器相等，並且都會指向相符項目的位置。  
   
@@ -100,7 +93,7 @@ public:
   
  **命名空間：** std  
   
-##  <a name="a-namesubmatchcomparea--submatchcompare"></a><a name="sub_match__compare"></a>  sub_match::compare  
+##  <a name="compare"></a>  sub_match::compare  
  比較子相符項目與序列。  
   
 ```  
@@ -183,7 +176,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchdifferencetypea--submatchdifferencetype"></a><a name="sub_match__difference_type"></a>  sub_match::difference_type  
+##  <a name="difference_type"></a>  sub_match::difference_type  
  迭代器差值的類型。  
   
 ```  
@@ -246,7 +239,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchiteratora--submatchiterator"></a><a name="sub_match__iterator"></a>  sub_match::iterator  
+##  <a name="iterator"></a>  sub_match::iterator  
  迭代器的類型。  
   
 ```  
@@ -309,7 +302,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchlengtha--submatchlength"></a><a name="sub_match__length"></a>  sub_match::length  
+##  <a name="length"></a>  sub_match::length  
  傳回子相符項目的長度。  
   
 ```  
@@ -372,7 +365,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchmatcheda--submatchmatched"></a><a name="sub_match__matched"></a>  sub_match::matched  
+##  <a name="matched"></a>  sub_match::matched  
  指出比對是否成功。  
   
 ```  
@@ -435,7 +428,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchoperatorbasicstringltvaluetypegta--submatchoperator-basicstringltvaluetypegt"></a><a name="sub_match__operator_basic_string_lt_value_type_gt_"></a>  sub_match::operator basic_string&lt;value_type&gt;  
+##  <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;  
  將子相符項目轉換成字串。  
   
 ```  
@@ -498,7 +491,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchstra--submatchstr"></a><a name="sub_match__str"></a>  sub_match::str  
+##  <a name="str"></a>  sub_match::str  
  將子對應轉換成字串。  
   
 ```  
@@ -561,7 +554,7 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-##  <a name="a-namesubmatchvaluetypea--submatchvaluetype"></a><a name="sub_match__value_type"></a>  sub_match::value_type  
+##  <a name="value_type"></a>  sub_match::value_type  
  元素的類型。  
   
 ```  

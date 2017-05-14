@@ -70,10 +70,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 412f586184fa49ca4106ca09f5a031ea3cefc00e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0f42cbf4c10d1567c829f6e47821120e43623f2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
@@ -178,9 +179,6 @@ int main()
 (10,23): Error C2111 : <some error text>  
   (Related to symbol '<symbol>' defined on line 5).  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

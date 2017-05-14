@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ad82a85b00f04620bf52bdf478c5293905b75aca
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2c0c5fafe959710621de041581751c7b295fb1cc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l
@@ -140,15 +141,12 @@ int _vfwprintf_s_l(
   
 |常式|必要的標頭|選擇性標頭|  
 |-------------|---------------------|----------------------|  
-|`vfprintf_s`, _`vfprintf_s_l`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
-|`vfwprintf_s`, _`vfwprintf_s_l`|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  
+|`vfprintf_s`, `_vfprintf_s_l`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
+|`vfwprintf_s`, `_vfwprintf_s_l`|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|  
   
  \* UNIX V 相容性的必要項目。  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

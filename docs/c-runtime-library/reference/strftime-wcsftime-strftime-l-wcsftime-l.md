@@ -1,58 +1,76 @@
 ---
 title: "strftime、wcsftime、_strftime_l、_wcsftime_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strftime"
-  - "_wcsftime_l"
-  - "_strftime_l"
-  - "wcsftime"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-time-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsftime"
-  - "strftime"
-  - "wcsftime"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_strftime_l 函式"
-  - "strftime 函式"
-  - "tcsftime 函式"
-  - "_wcsftime_l 函式"
-  - "wcsftime 函式"
-  - "_tcsftime 函式"
-  - "時間字串"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strftime
+- _wcsftime_l
+- _strftime_l
+- wcsftime
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-time-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsftime
+- strftime
+- wcsftime
+dev_langs:
+- C++
+helpviewer_keywords:
+- _strftime_l function
+- strftime function
+- tcsftime function
+- _wcsftime_l function
+- wcsftime function
+- _tcsftime function
+- time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# strftime、wcsftime、_strftime_l、_wcsftime_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1a5331b77e218c5fe5796b2df6d0f61578657758
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-格式字串時間。  
+---
+# <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
+設定時間字串的格式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_t strftime(  
@@ -83,153 +101,141 @@ size_t _wcsftime_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `strDest`  
  輸出字串。  
   
  `maxsize`  
- `strDest` 緩衝區的大小，以字元 \(`char` 或 `wchart_t`測量\)。  
+ `strDest` 緩衝區的大小，以字元 (`char` 或 `wchart_t`) 為單位。  
   
  `format`  
  格式控制字串。  
   
  `timeptr`  
- `tm`資料結構  
+ `tm` 資料結構。  
   
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 傳回`strftime` 中 `strDest` 位置的字元數，並且此 `wcsftime` 所傳回的寬字元對應的數量。  
+## <a name="return-value"></a>傳回值  
+ `strftime` 會傳回放在 `strDest` 中的字元數，而 `wcsftime` 會傳回對應的寬字元數。  
   
- 如果包括結束的 null 字元總數比`maxsize`多，則 `strftime` 和 `wcsftime` 會傳回 0，而 `strDest` 內容為不定。  
+ 如果總字元數 (包括結束 Null) 超個 `maxsize`，`strftime` 和 `wcsftime` 會傳回 0 且無法確定 `strDest` 的內容。  
   
- `strDest` 中的字元數與可能增加到 `format` 傳遞格式化程式碼常值字元以及所有字元數目相等的 `format` 。  字串的結尾的 NULL 未計算在傳回值中。  
+ `strDest` 中的字元數等於 `format` 中的常值字元數加上可能透過格式代碼新增至 `format` 的任何字元數。 字串的結束 Null 不會計入傳回值。  
   
-## 備註  
- `strftime`和`wcsftime`函式依照提供的`format`引數格式化`timeptr`中的`tm`時間值，並將結果儲存在`strDest`*.*緩衝區。最多只有`maxsize` 的字元會被放置到字串中。  如需欄位的描述 `timeptr` 結構的詳細資訊，請參閱 [asctime](../../c-runtime-library/reference/asctime-wasctime.md)。  `wcsftime` 是與 `strftime`相等的寬字元；其為寬字元字串的字串指標引數點。  這三個函式其餘部分的運作相同。  
+## <a name="remarks"></a>備註  
+ `strftime`和`wcsftime`函式格式`tm`時間值中的`timeptr`根據提供`format`引數和存放區的緩衝區中的結果`strDest`。 字串中最多可放置 `maxsize` 個字元。 如需 `timeptr` 結構中的欄位說明，請參閱 [asctime](../../c-runtime-library/reference/asctime-wasctime.md)。 `wcsftime` 是 `strftime` 的寬字元對應項，其字串指標引數會指向寬字元字串。 除此之外，這些函式的行為相同。  
   
 > [!NOTE]
->  在 Visual C\+\+ 2005 之前的版本中，文件描述了 `wcsftime` `format` 參數以具有資料型別，則為 `const wchar_t *`，但是 `format` 資料型別的實際實作是 `const char *`。  更新 `format`資料型別的實作反映先前與目前文件，例如， `const wchar_t *`。  
+>  Visual C++ 2005 之前的版本文件將 `wcsftime` 的 `format` 參數描述成具有資料類型 `const wchar_t *`，但 `format` 資料類型的實際實作為 `const char *`。 實作`format`資料類型已更新以反映的先前和目前文件，也就是`const wchar_t *`。  
   
- 這個函式會驗證它的參數。  如果 `strDest`、 `format`或`timeptr` 為 null 指標，則為，如果 `timeptr` 處理的 `tm` 資料結構無效 \(例如，\)，則包含超出時間或日期範圍值\)，或者，如果 `format` 字串包含無效的格式化程式碼，無效的參數叫用處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EINVAL`。  
+ 這個函式會驗證它的參數。 如果`strDest`， `format`，或`timeptr`為 null 指標，或如果`tm`資料結構所定址`timeptr`無效 （例如，如果它包含超出範圍值的時間或日期），或如果`format`字串包含無效的格式化程式碼、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EINVAL`。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|\_UNICODE &  \_MBCS 未定義|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|-----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- `format` 引數包含一個或多個程式碼;在 `printf`中，格式化程式碼在百分比符號 \(`%`\) 之後。  不從`%`開始的字元原封不動的複製到 `strDest`*.*目前地區設定的 `LC_TIME` 分類會影響 `strftime`輸出格式。\(如需`LC_TIME`的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。\)沒有 `_l`尾碼的函式使用目前設定的地區設定。  這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於將地區設定設為參數，而不使用目前的地區設定。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `format` 引數是由一或多個程式碼所組成；例如在 `printf` 中，格式代碼前會加上百分比符號 (`%`)。 不是以字元`%`會複製到不變`strDest`。 目前地區設定的 `LC_TIME` 分類會影響 `strftime` 的輸出格式 (如需 `LC_TIME` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md))。沒有 `_l` 後置字元的函式會使用目前設定的地區設定。 具有 `_l` 後置字元的函式版本與其相同，只不過它會採用地區設定作為參數，並使用該地區設定，而不是目前設定的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- `strftime` 的格式化程式碼如下所列:  
+ 以下列出 `strftime` 的格式代碼：  
   
  `%a`  
- 星期日期名稱的縮寫  
+ 工作日名稱縮寫  
   
  `%A`  
- 完整的星期名稱  
+ 完整工作日名稱  
   
  `%b`  
- 月份名稱的縮寫。  
+ 月份名稱縮寫  
   
  `%B`  
- 月份的完整名稱。  
+ 完整月份名稱  
   
  `%c`  
- 日期和時間表示適合地區設定  
+ 適用於地區設定的日期和時間表示  
   
  `%d`  
- 月份的日期為十進位數字 \(01 – 31\) 。  
+ 月份 (01 – 31) 的十進位數字日期  
   
  `%H`  
- 時間以24 小時格式 \(00 – 23\) 表示  
+ 24 小時制的小時 (00-23)  
   
  `%I`  
- 時間以12 小時格式 \(01 – 12\) 表示  
+ 12 小時制 (01-12) 的  
   
  `%j`  
- 年份的天為十進位數字 \(001 – 366\) 。  
+ 一天的年份為十進位數字 (001 到 366)  
   
  `%m`  
- 月份為十進位數字 \(01 – 12\) 。  
+ 月份 (01-12) 的十進位數字  
   
  `%M`  
- 分鐘數為十進位數字 \(00 – 59\) 。  
+ 十進位數字為分鐘 (00-59)  
   
  `%p`  
- 目前地區設定的 A.M.\/P.M. 為12 小時制的指示器。  
+ 目前地區設定的上下/下午 12 小時制的指標  
   
  `%S`  
- 秒數為十進位數字 \(00 – 59\)  
+ 第二個十進位數字 (00-59)  
   
  `%U`  
- 年的星期為十進位數字\(00 – 53\)，有星期日為星期的第一天資訊  
+ 十進位數字，其中星期日是週第一天的年度週次 (00-53)  
   
  `%w`  
- 星期日期為十進位數字 \(0 – 6 ；星期日是 0\)  
+ Weekday 為十進位數字 (0-6;星期日是 0）  
   
  `%W`  
- 年的星期為十進位數字\(00 – 53\)，有星期一為星期的第一天資訊  
+ 十進位數字，以星期一做為一週的第一天的年度週次 (00-53)  
   
  `%x`  
- 目前地區設定的日期表示。  
+ 適用於目前地區設定的日期表示  
   
  `%X`  
- 目前地區設定的時間表示。  
+ 適用於目前地區設定的時間表示  
   
  `%y`  
- 沒有世紀的年份，為十進位數字 \(00 – 99\)  
+ 不含世紀，為十進位數字的年份 (00-99)  
   
  `%Y`  
- 有世紀的年份，為十進位數字。  
+ 含世紀的年份，以十進位數字表示  
   
  `%z, %Z`  
- 根據登錄設定，任何時區名稱或時區縮寫；如果時區不明，則沒有任何字元  
+ 時區名稱或時區縮寫，視登錄設定而定；如果時區不明，則沒有任何字元  
   
  `%%`  
  百分比符號  
   
- 在 `printf` 函式，則 `#` 旗標可能會提供所有格式化程式碼的前置字元。  在這種情況下，格式化程式碼的意義如下變更。  
+ 如同 `printf` 函式，`#` 旗標前面可以加上任何格式代碼。 在此情況下，格式代碼的意義會變更如下。  
   
 |格式化程式碼|意義|  
-|------------|--------|  
-|`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|`#` 旗標會被忽略。|  
-|`%#c`|為目前地區設定為適當完整日期和時間。  例如:「1995 年 3 月 14 日，星期二，12:41: 29 」。|  
-|`%#x`|適合目前地區設定的完整日期表示。  例如:「1995 年 3 月 14 日，星期二」。|  
-|`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|移除前置零 \(如果有的話\)。|  
+|-----------------|-------------|  
+|`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|會忽略 `#` 旗標。|  
+|`%#c`|適用於目前地區設定的完整日期和時間表示。 例如：「1995 年 3 月 14 日星期二 12:41:29」。|  
+|`%#x`|適用於目前地區設定的完整日期表示。 例如：「1995 年 3 月 14 日星期二」。|  
+|`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|移除前置零 (如果有)。|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`strftime`|\<time.h\>|  
-|`wcsftime`|\<time.h\> or \<wchar.h\>|  
-|`_strftime_l`|\<time.h\>|  
-|`_wcsftime_l`|\<time.h\> or \<wchar.h\>|  
+|-------------|---------------------|  
+|`strftime`|\<time.h>|  
+|`wcsftime`|\<time.h> 或 \<wchar.h>|  
+|`_strftime_l`|\<time.h>|  
+|`_wcsftime_l`|\<time.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  請參閱 [time](../../c-runtime-library/reference/time-time32-time64.md) 的範例。  
   
-## .NET Framework 對等用法  
-  
--   [System::DateTime::ToLongDateString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongdatestring.aspx)  
-  
--   [System::DateTime::ToLongTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.tolongtimestring.aspx)  
-  
--   [System::DateTime::ToShortDateString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring.aspx)  
-  
--   [System::DateTime::ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshorttimestring.aspx)  
-  
--   [System::DateTime::ToString](https://msdn.microsoft.com/en-us/library/system.datetime.tostring.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [地區設定](../../c-runtime-library/locale.md)   
  [時間管理](../../c-runtime-library/time-management.md)   
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
+ [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [strcoll 函式](../../c-runtime-library/strcoll-functions.md)   
- [strxfrm、wcsxfrm、\_strxfrm\_l、\_wcsxfrm\_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+ [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)

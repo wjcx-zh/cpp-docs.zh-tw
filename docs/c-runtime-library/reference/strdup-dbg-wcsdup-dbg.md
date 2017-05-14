@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 22798d52d78a822c538055b55fd8f10660de780c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 477fca0e1849099502acea0b5d5a17fb00622b35
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg、_wcsdup_dbg
@@ -121,9 +122,6 @@ wchar_t *_wcsdup_dbg(
   
 ## <a name="libraries"></a>程式庫  
  所有偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::String::Clone](https://msdn.microsoft.com/en-us/library/system.string.clone.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

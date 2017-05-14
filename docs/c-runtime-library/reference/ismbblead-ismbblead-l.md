@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 187561adb3c524e12a851e0537859f0be942be17
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 08d76a2e7fb30ffcef7e8fb8b96b5bf42a1454c6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead、_ismbblead_l
@@ -91,9 +92,9 @@ int _ismbblead_l(
  如果整數 `c` 是多位元組字元的第一個位元組，則會傳回非零值。  
   
 ## <a name="remarks"></a>備註  
- 多位元組字元是由一個前導位元組，後面接著一個後置位元組所組成。 前導位元組會以所處指定字元集的特定範圍來識別。 例如，單獨在字碼頁 932 中，前導位元組的範圍為 0x81-0x9F 和 0xE0-0xFC。  
+ 多位元組字元是由一個前導位元組，後面接著一個後置位元組所組成。 前導位元組會以所處指定字元集的特定範圍來識別。 例如，在字碼頁 932 中，前導位元組範圍 0x81-0x9F 和 0xE0-0xFC。  
   
- `_ismbblead` 使用目前的地區設定進行地區設定相關行為。 `_ismbblead_l` 也相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `_ismbblead` 使用目前的地區設定進行地區設定相關行為。 `_ismbblead_l` 也相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -111,9 +112,6 @@ int _ismbblead_l(
  \* 針對此測試條件的資訊清單常數。  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   

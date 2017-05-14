@@ -10,12 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - reference_wrapper
-- std::reference_wrapper
 - functional/std::reference_wrapper
 - type_traits/std::reference_wrapper
 - xrefwrap/std::reference_wrapper
 - type_traits/std::reference_wrapper::get
 - type_traits/std::reference_wrapper::operator()
+- functional/std::reference_wrapper::result_type
+- functional/std::reference_wrapper::type
+- functional/std::reference_wrapper::get
+- functional/std::reference_wrapper::operator()
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -40,10 +43,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f0e7b22e4fbd6f54d390adfe70f7bfb99e4bc5df
-ms.openlocfilehash: 1b6968f2300e5214575cc5385c136d6f27bab10a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57485779c1813a0537829a940047d688907a82a7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper 類別
@@ -76,39 +80,39 @@ private:
   
 `Ty` 類型必須是物件類型或函式類型，否則靜態判斷提示會在編譯期間失敗。  
   
-Helper 函式 [std::ref](functional-functions.md#ref_function) 和 [std::cref](functional-functions.md#cref_function) 可用來建立 `reference_wrapper` 物件。  
+Helper 函式 [std::ref](functional-functions.md#ref) 和 [std::cref](functional-functions.md#cref) 可用來建立 `reference_wrapper` 物件。  
   
 ### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[reference_wrapper::reference_wrapper](#reference_wrapper)|建構 `reference_wrapper`。|  
+|[reference_wrapper](#reference_wrapper)|建構 `reference_wrapper`。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[reference_wrapper::result_type](#result_type)|包裝之參考的弱式結果類型。|  
-|[reference_wrapper::type](#type)|包裝的參考類型。|  
+|[result_type](#result_type)|包裝之參考的弱式結果類型。|  
+|[型別](#type)|包裝的參考類型。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[reference_wrapper::get](#get)|取得包裝的參考。|  
+|[get](#get)|取得包裝的參考。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[reference_wrapper::operator Ty&amp;](#operator_ty_amp_)|取得包裝的參考指標。|  
-|[reference_wrapper::operator()](#operator_call)|呼叫包裝的參考。|  
+|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|取得包裝的參考指標。|  
+|[reference_wrapper::operator()](#op_call)|呼叫包裝的參考。|  
 ## <a name="requirements"></a>需求  
  **標頭：**\<functional>  
   
  **命名空間：** std  
   
-##  <a name="a-namegeta--referencewrapperget"></a><a name="get"></a>  reference_wrapper::get  
+##  <a name="get"></a>  reference_wrapper::get  
  取得包裝的參考。  
   
 ```  
@@ -145,7 +149,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="a-nameoperatortyampa--referencewrapperoperator-tyamp"></a><a name="operator_ty_amp_"></a>  reference_wrapper::operator Ty&amp;  
+##  <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;  
  取得包裝的參考。  
   
 ```  
@@ -179,7 +183,7 @@ i = 1
 (int)rwi = 1  
 ```  
   
-##  <a name="a-nameoperatorcalla--referencewrapperoperator"></a><a name="operator_call"></a>  reference_wrapper::operator()  
+##  <a name="op_call"></a>  reference_wrapper::operator()  
  呼叫包裝的參考。  
   
 ```  
@@ -222,7 +226,7 @@ int main() {
 rwi(3) = -3  
 ```  
   
-##  <a name="a-namereferencewrappera--referencewrapperreferencewrapper"></a><a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
+##  <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper  
  建構 `reference_wrapper`。  
   
 ```  
@@ -270,7 +274,7 @@ rwi = 1
 i = -1  
 ```  
   
-##  <a name="a-nameresulttypea--referencewrapperresulttype"></a><a name="result_type"></a>  reference_wrapper::result_type  
+##  <a name="result_type"></a>  reference_wrapper::result_type  
  包裝之參考的弱式結果類型。  
   
 ```  
@@ -307,7 +311,7 @@ int main() {
 val = -3  
 ```  
   
-##  <a name="a-nametypea--referencewrappertype"></a><a name="type"></a>  reference_wrapper::type  
+##  <a name="type"></a>  reference_wrapper::type  
  包裝的參考類型。  
   
 ```  
@@ -348,7 +352,7 @@ rwi = 1
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [cref 函式](../standard-library/functional-functions.md#cref_function)   
- [ref 函式](../standard-library/functional-functions.md#ref_function)
+ [cref](../standard-library/functional-functions.md#cref)   
+ [ref](../standard-library/functional-functions.md#ref)
 
 

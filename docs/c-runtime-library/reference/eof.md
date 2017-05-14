@@ -53,10 +53,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 454e4870f63d5a66c67f493e065c328bdb72837e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 79e55c9b1496ef7a6050e5f0ed5a5c05b1616b73
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="eof"></a>_eof
@@ -75,7 +76,7 @@ int _eof(
  參考已開啟檔案的檔案描述項。  
   
 ## <a name="return-value"></a>傳回值  
- 如果目前的位置是檔案結尾，`_eof` 會傳回 1；否則會傳回 0。 傳回值 -1 表示錯誤；在此情況下會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，`errno` 會設定為 `EBADF`，表示無效的檔案描述項。  
+ 如果目前的位置是檔案結尾，`_eof` 會傳回 1；否則會傳回 0。 傳回值-1 表示錯誤。在此情況下，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，`errno` 會設定為 `EBADF`，表示無效的檔案描述項。  
   
 ## <a name="remarks"></a>備註  
  `_eof` 函式會判斷是否已達到與 `fd` 相關聯之檔案的結尾。  
@@ -139,9 +140,6 @@ This file contains some text.
 ```  
 Number of bytes read = 29  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤處理](../../c-runtime-library/error-handling-crt.md)   

@@ -1,47 +1,64 @@
 ---
 title: "vscanf、vwscanf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vscanf"
-  - "vwscanf"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vscanf"
-  - "vwscanf"
-  - "_vtscanf"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vscanf
+- vwscanf
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vscanf
+- vwscanf
+- _vtscanf
+dev_langs:
+- C++
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# vscanf、vwscanf
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 8f122fc5d04b603fa654d0515287cd0b48f51434
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-從標準輸入資料流讀取格式化的資料。  有更多這些函式的安全版本可用；請參閱 [vscanf\_s、vwscanf\_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md)。  
+---
+# <a name="vscanf-vwscanf"></a>vscanf、vwscanf
+從標準輸入資料流讀取格式化資料。 這些函式已有更安全的版本，請參閱 [vscanf_s、vwscanf_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int vscanf(  
@@ -55,46 +72,46 @@ int vwscanf(
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `format`  
  格式控制字串。  
   
  `arglist`  
  變數引數清單。  
   
-## 傳回值  
- 傳回成功轉換和指定的欄位數；傳回值不包括讀取但未指定的欄位。  傳回值 0 表示未指定欄位。  
+## <a name="return-value"></a>傳回值  
+ 傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。  
   
- 如果 `format` 為 `NULL` 指標，則叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，這些函式會傳回 `EOF`，並將 `errno` 設為 `EINVAL`。  
+ 如果 `format` 為 `NULL` 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `EOF`，並將 `errno` 設為 `EINVAL`。  
   
- 如需有關這些錯誤碼及其他錯誤碼的詳細資訊，請參閱 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的相關資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `vscanf` 函式會從標準輸入資料流 `stdin` 讀取資料並將資料寫入 `arglist` 引數所指定的位置。  清單中的所有引數都必須是變數的指標，這些變數的類型對應至 `format` 的類型規範。  如果在重疊的字串之間執行複製，則行為是未定義的。  
+## <a name="remarks"></a>備註  
+ `vscanf` 函式會讀取標準輸入資料流 `stdin` 的資料，並將資料寫入 `arglist` 引數清單指定的位置。 清單中的每個引數都必須是變數的指標，而變數的類型對應至 `format` 中的類型指定名稱。 如果在重疊的字串之間進行複製，則行為是未定義的。  
   
 > [!IMPORTANT]
->  當您使用 `vscanf` 讀取字串時，為 `%s` 格式永遠指定寬度 \(例如 `"%32s"` 而不是`"%s"`\);否則，格式化不正確的輸入可能會造成緩衝區滿溢。  或者，也可以使用 [vscanf\_s、vwscanf\_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md) 或 [fgets](../../c-runtime-library/reference/fgets-fgetws.md)。  
+>  使用 `vscanf` 讀取字串時，請一律指定 `%s` 格式的寬度 (例如，`"%32s"`，而非 `"%s"`)；否則，格式不正確的輸入會造成緩衝區滿溢。 或者，您可以使用 [vscanf_s, vwscanf_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md) 或 [fgets](../../c-runtime-library/reference/fgets-fgetws.md)。  
   
- `vwscanf` 是 `vscanf` 的寬字元版本。 `vwscanf` 的 `format` 引數是寬字元字串。  如果資料流是以 ANSI 模式開啟，則 `vwscanf` 和 `vscanf` 的行為相同。  `vscanf` 不支援從 UNICODE 資料流輸入。  
+ `vwscanf` 是寬字元版本的 `vscanf`；`format` 的 `vwscanf` 引數是寬字元字串。 如果資料流在 ANSI 模式中開啟，則 `vwscanf` 和 `vscanf` 的行為相同。 `vscanf` 不支援來自 UNICODE 資料流的輸入。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vtscanf`|`vscanf`|`vscanf`|`vwscanf`|  
   
  如需詳細資訊，請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`vscanf`|\<stdio.h\>|  
-|`vwscanf`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`vscanf`|\<stdio.h>|  
+|`vwscanf`|\<stdio.h> 或 \<wchar.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。  與主控台關聯的標準資料流控制代碼 \(`stdin`、`stdout` 和 `stderr`\) 必須重新導向，然後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。  如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_vscanf.c  
@@ -141,24 +158,21 @@ int main( void )
   
 ```  
   
-  **`71 98.6 h z 位元組字元 36 92.3 y n 寬字元`欄位輸入數目為 6**  
-**The contents are: 71 98.599998 h z Byte characters**  
-**欄位輸入數目是 6。**  
-**The contents are: 36 92.300003 y n Wide characters**   
-## .NET Framework 對等用法  
+```Output  
   
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
+      71 98.6 h z Byte characters  
+36 92.3 y n Wide charactersThe number of fields input is 6  
+The contents are: 71 98.599998 h z Byte characters  
+The number of fields input is 6  
+The contents are: 36 92.300003 y n Wide characters  
+```  
   
--   [System::Console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)  
-  
--   請參閱 `Parse` 方法，例如 [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)。  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [地區設定](../../c-runtime-library/locale.md)   
- [fscanf、\_fscanf\_l、fwscanf、\_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [printf、\_printf\_l、wprintf、\_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [sscanf、\_sscanf\_l、swscanf、\_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [vscanf\_s、vwscanf\_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md)
+ [fscanf、_fscanf_l、fwscanf、_fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sscanf、_sscanf_l、swscanf、_swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [vscanf_s、vwscanf_s](../../c-runtime-library/reference/vscanf-s-vwscanf-s.md)

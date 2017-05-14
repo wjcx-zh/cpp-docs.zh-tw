@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aa913890892aefc0ff74cbc8f7c66a8f4375e796
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 23ae0c873ef956499c46800abebba62cb656557b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
@@ -137,7 +138,7 @@ int _ismbcl2_l(
 |`_ismbcl2`|JIS 層級─2：0x989F<=`c`<=0xEAA4。|  
 |`_ismbcl2_l`|JIS 層級─2：0x989F<=`c`<=0xEAA4。|  
   
- 函式會檢查所指定的 `c` 值符合如上所述的測試條件，但不會檢查 `c` 是否為有效的多位元組字元。 如果較低的位元組介於 0x00─0x3F、0x7F 或 0xFD─0xFF 的範圍內，這些函式會傳回非零值，指出字元符合測試條件。 使用 [_ismbbtrail](../../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) 來測試是否已定義多位元組字元。  
+ 函式會檢查所指定的 `c` 值符合如上所述的測試條件，但不會檢查 `c` 是否為有效的多位元組字元。 如果較低的位元組介於 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 的範圍內，這些函式會傳回非零值，指出字元符合測試條件。 使用 [_ismbbtrail](../../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md) 來測試是否已定義多位元組字元。  
   
  **結束特定字碼頁 932**  
   
@@ -153,9 +154,6 @@ int _ismbcl2_l(
 |`_ismbcl2_l`|\<mbstring.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   

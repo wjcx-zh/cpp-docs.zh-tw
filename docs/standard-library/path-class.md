@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: acc0ecd4edaf1e58977dcbdeb483d497a72bc4c8
-ms.openlocfilehash: b6f1fb2eacdc12857978d03ccbd98ee5da3047e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d1739ef33378358a9d195b79c1ba7ace7bf54acf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="path-class"></a>path 類別
@@ -612,7 +613,7 @@ wstring wstring() const;
  針對 wchar_t 序列，將儲存在 mypath 的序列轉換成主機系統偏好的編碼，並傳回儲存在類型 wstring 物件中。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** filesystem  
+ **標頭︰** \<filesystem >  
   
  **命名空間：**std::experimental::filesystem
   

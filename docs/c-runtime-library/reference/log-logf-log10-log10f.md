@@ -1,60 +1,78 @@
 ---
 title: "log、logf、log10、log10f | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "log10f"
-  - "logf"
-  - "log10"
-  - "log"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "logf"
-  - "_log10l"
-  - "log"
-  - "_logl"
-  - "log10f"
-  - "log10"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "計算對數"
-  - "log10f 函式"
-  - "log10 函式"
-  - "log 函式"
-  - "logf 函式"
-  - "對數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- log10f
+- logf
+- log10
+- log
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- logf
+- _log10l
+- log
+- _logl
+- log10f
+- log10
+dev_langs:
+- C++
+helpviewer_keywords:
+- calculating logarithms
+- log10f function
+- log10 function
+- log function
+- logf function
+- logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# log、logf、log10、log10f
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 22c41d6b2712954f05249192c3a5e386b8102554
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
-計算。  
+---
+# <a name="log-logf-log10-log10f"></a>log、logf、log10、log10f
+計算對數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -84,36 +102,36 @@ float log10f (
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *x*  
- 要找出其對數的值。  
+ 要求得其對數的值。  
   
-## 傳回值  
- **log** 函式傳回自然對數 \(基底 *x* e\)，如果成功。  log10 函式傳回以 10 為基底之對數。  如果 *x* 為負數，這些函式會傳回不確定，預設為。  如果 *x* 為 0，則會傳回 INF \(無限\)。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，**log** 函式會傳回 *x* 的自然對數 (以 e 為底數)。 log10 函式會傳回以 10 為底數的對數。 如果 *x* 是負數，這些函式預設會傳回不定值。 如果 *x* 為 0，則會傳回 INF (無限)。  
   
 |輸入|SEH 例外狀況|Matherr 例外狀況|  
-|--------|--------------|------------------|  
-|± QNAN,IND|無|\_DOMAIN|  
-|± 0|ZERODIVIDE|\_SING|  
-|x \< 0|INVALID|\_DOMAIN|  
+|-----------|-------------------|-----------------------|  
+|± QNAN、IND|無|_DOMAIN|  
+|± 0|ZERODIVIDE|_SING|  
+|x < 0|INVALID|_DOMAIN|  
   
- **log** 與 `log10` 會使用 Streaming SIMD Extensions 2\(SSE2\) 的實作。  請參閱 [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md) 以取得詳細資訊及使用限制 SSE2 實作。  
+ **log** 和 `log10` 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
-## 備註  
- C\+\+ 允許多載，因此您可以呼叫 **log**和 `log10` 的多載。  在 C 程式，**log** 和 `log10` 一律接受並傳回 。  
+## <a name="remarks"></a>備註  
+ C++ 允許多載，因此您可以呼叫 **log** 和 `log10` 的多載。 在 C 程式中，**log** 和 `log10` 會一律採用並傳回雙精度浮點數。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|**log**, `logf`, `log10`, `log10f`|\<math.h\>|  
+|-------------|---------------------|  
+|**log**、`logf`、`log10`、`log10f`|\<math.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_log.c  
@@ -137,14 +155,14 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 log( 9000.00 ) = 9.104980  
 log10( 9000.00 ) = 3.954243  
 ```  
   
- 若要產生其他基底對數，請使用數學關聯性 \(式\):記錄 \=\= 自然對數 \(a\)\/自然對數 \(B\) 的基礎 b。  
+ 若要產生其他底數的對數，請使用數學關聯︰a 的對數底數 b == 自然對數 (a) / 自然對數 (b)。  
   
 ```  
 // logbase.cpp  
@@ -166,22 +184,16 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 Log base 2 of 65536.000000 is 16.000000  
 ```  
   
-## .NET Framework 對等用法  
-  
--   [System::Math::Log](https://msdn.microsoft.com/en-us/library/system.math.log.aspx)  
-  
--   [System::Math::Log10](https://msdn.microsoft.com/en-us/library/system.math.log10.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [exp、expf](../../c-runtime-library/reference/exp-expf.md)   
- [\_matherr](../../c-runtime-library/reference/matherr.md)   
+ [exp、 expf，總管](../../c-runtime-library/reference/exp-expf.md)   
+ [_matherr](../../c-runtime-library/reference/matherr.md)   
  [pow、powf、powl](../../c-runtime-library/reference/pow-powf-powl.md)   
- [\_CIlog](../../c-runtime-library/cilog.md)   
- [\_CIlog10](../../c-runtime-library/cilog10.md)
+ [_CIlog](../../c-runtime-library/cilog.md)   
+ [_CIlog10](../../c-runtime-library/cilog10.md)

@@ -35,10 +35,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 3928493eeb4aa09511b3e58d27383c7a480d06ad
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 7050def4c0350e4bdbba3baf348fe5b971e0b20a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 標準程式庫的函式物件
@@ -83,7 +84,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```  
   
- 傳遞給 `remove_if` 的最後一個引數是傳回布林值 ( *「述詞」*(Predicate)) 的函式物件。 如果函式物件的結果為 `true`，則會從迭代器 ` first` 和 ` last` 所存取的容器中移除該項目。 您可以使用引數 ` pred` 的 [\<functional>](../standard-library/functional.md) 標頭中所宣告的任何函式物件，或自行建立。  
+ 傳遞給 `remove_if` 的最後一個引數是傳回布林值 ( *「述詞」*(Predicate)) 的函式物件。 如果函式物件的結果為 `true`，則會從迭代器 `first` 和 `last` 所存取的容器中移除該項目。 您可以使用引數 `pred` 的 [\<functional>](../standard-library/functional.md) 標頭中所宣告的任何函式物件，或自行建立。  
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

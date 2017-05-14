@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 02ce6e15184a7ef6acb07218564c9e1d5a7dcddd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
@@ -56,12 +57,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#operator_neq)|測試運算子左邊的堆疊物件是否不等於右邊的堆疊物件。|  
-|[operator<](../standard-library/stack-operators.md#operator_eq_eq)|測試運算子左邊的堆疊物件是否小於右邊的堆疊物件。|  
-|[operator\<=](../standard-library/stack-operators.md#operator_lt_)|測試運算子左邊的堆疊物件是否小於或等於右邊的堆疊物件。|  
-|[operator==](../standard-library/stack-operators.md#operator_lt__eq)|測試運算子左邊的堆疊物件是否等於右邊的堆疊物件。|  
-|[operator>](../standard-library/stack-operators.md#operator_gt_)|測試運算子左邊的堆疊物件是否大於右邊的堆疊物件。|  
-|[operator>=](../standard-library/stack-operators.md#operator_gt__eq)|測試運算子左邊的堆疊物件是否大於或等於右邊的堆疊物件。|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|測試運算子左邊的堆疊物件是否不等於右邊的堆疊物件。|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|測試運算子左邊的堆疊物件是否小於右邊的堆疊物件。|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|測試運算子左邊的堆疊物件是否小於或等於右邊的堆疊物件。|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|測試運算子左邊的堆疊物件是否等於右邊的堆疊物件。|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|測試運算子左邊的堆疊物件是否大於右邊的堆疊物件。|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|測試運算子左邊的堆疊物件是否大於或等於右邊的堆疊物件。|  
   
 ### <a name="classes"></a>類別  
   

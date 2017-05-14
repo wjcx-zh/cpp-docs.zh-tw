@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3473da1104d9bc4578fbeb9d29bbbca3ddc9e0dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: ba4268b990a98059dfd5eabeef2009def809adb3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana、_ismbbkana_l
@@ -84,7 +85,7 @@ int _ismbbkana_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果整數 `c` 是片假名符號，則 `_ismbbkana` 會傳回非零值；否則會傳回 0。 針對地區設定相關的字元資訊，`_ismbbkana` 會使用目前的地區設定。 `_ismbbkana_l`，除了它使用的是傳入的地區設定物件。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 如果整數 `c` 是片假名符號，則 `_ismbbkana` 會傳回非零值；否則會傳回 0。 針對地區設定相關的字元資訊，`_ismbbkana` 會使用目前的地區設定。 `_ismbbkana_l` 也相同，但是它使會傳入的地區設定物件。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
@@ -94,9 +95,6 @@ int _ismbbkana_l(
 |`_ismbbkana_l`|\<mbctype.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   

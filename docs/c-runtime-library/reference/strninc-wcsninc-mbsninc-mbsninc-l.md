@@ -69,10 +69,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: a019117da70bc81bcf2ffd79c750f8862bc50c0b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8390fc524393f221f32dd3a4b10080c88055a227
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc、_wcsninc、_mbsninc、_mbsninc_l
@@ -125,7 +126,7 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsninc`|`_strninc`|`_mbsninc`|`_wcsninc`|  
   
- `_strninc` 和 `_wcsninc` 是 `_mbsninc` 的單一位元組字元字串和寬字元字串版本。 只有針對此對應才提供 `_wcsninc` 和 `_strninc`，除此之外都不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。  
+ `_strninc`和`_wcsninc`是單一位元組字元字串和寬字元字串版本`_mbsninc`。 只有針對此對應才提供 `_wcsninc` 和 `_strninc`，除此之外都不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。  
   
  `_mbsninc_l` 也相同，但是它會改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -139,9 +140,6 @@ unsigned char *_mbsninc(
 |`_wcsninc`|\<tchar.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

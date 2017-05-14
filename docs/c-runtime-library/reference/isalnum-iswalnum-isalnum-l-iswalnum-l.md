@@ -1,62 +1,79 @@
 ---
 title: "isalnum、iswalnum、_isalnum_l、_iswalnum_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_iswalnum_l"
-  - "_isalnum_l"
-  - "iswalnum"
-  - "isalnum"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_istalnum_l"
-  - "_iswalnum_l"
-  - "iswalnum"
-  - "_isalnum_l"
-  - "isalnum"
-  - "_istalnum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_isalnum_l 函式"
-  - "_ismbcalnum_l 函式"
-  - "_istalnum 函式"
-  - "_istalnum_l 函式"
-  - "_iswalnum_l 函式"
-  - "isalnum 函式"
-  - "istalnum 函式"
-  - "iswalnum 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _iswalnum_l
+- _isalnum_l
+- iswalnum
+- isalnum
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _istalnum_l
+- _iswalnum_l
+- iswalnum
+- _isalnum_l
+- isalnum
+- _istalnum
+dev_langs:
+- C++
+helpviewer_keywords:
+- _istalnum function
+- _ismbcalnum_l function
+- iswalnum function
+- isalnum function
+- istalnum function
+- _isalnum_l function
+- _istalnum_l function
+- _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# isalnum、iswalnum、_isalnum_l、_iswalnum_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 14e5ecd35a6f844dd7d304f10167e690f7df970e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 判斷整數是否代表英數字元。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int isalnum(   
@@ -75,42 +92,39 @@ int _iswalnum_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `c`  
- 要測試的整數。  
+ 待測試整數。  
   
  `locale`  
- 使用的地區設定。  
+ 要使用的地區設定。  
   
-## 傳回值  
- 每一個這些常式在 `c` 是表示一個字母字元時回傳非零值。  `isalnum` 在傳入 `c` 予 `isalpha` 或 `isdigit` 為非零時回傳非零值，也就是在 `c` 是 A \- Z ， a \- z 或 0 \- 9 時。  `iswalnum` 在傳入 `c` 予 `iswalpha` 或 `iswdigit` 為非零時回傳零值。  每一個這些常式在傳入 `c` 沒有達到測試條件時回傳零。  
+## <a name="return-value"></a>傳回值  
+ 如果 `c` 表示特定的英數字元，則這些常式都會傳回非零。 `isalnum`傳回非零值，如果`isalpha`或`isdigit`非零代表`c`，也就是如果`c`是在範圍內 A-Z、 a-z 或 0-9。 如果 `iswalpha` 或 `iswdigit` 對於 `c` 為非零，則 `iswalnum` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
- 有 `_l` 尾碼的這些函式，其版本使用傳入的地區設定，而不使用目前的地區設定。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- 如果 `c` 不是 EOF 或介於 0 到 0xFF \(含\) 之間，`isalnum` 和 `_isalnum_l` 的行為是未定義。  當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
+ 如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `isalnum` 和 `_isalnum_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
-|`_istalnum`|`isalnum`|[\_ismbcalnum](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswalnum`|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
+|`_istalnum`|`isalnum`|[_ismbcalnum](../../c-runtime-library/reference/ismbcalnum-functions.md)|`iswalnum`|  
 |`_istalnum_l`|`_isalnum_l`|`_ismbcalnum_l`|`_iswalnum_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`isalnum`|\<ctype.h\>|  
-|`iswalnum`|\<ctype.h\> 或 \<wchar.h\>|  
-|`_isalnum_l`|\<ctype.h\>|  
-|`_iswalnum_l`|\<ctype.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`isalnum`|\<ctype.h>|  
+|`iswalnum`|\<ctype.h> 或 \<wchar.h>|  
+|`_isalnum_l`|\<ctype.h>|  
+|`_iswalnum_l`|\<ctype.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 對等用法  
- [System::Char::IsLetterOrDigit](https://msdn.microsoft.com/en-us/library/system.char.isletterordigit.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)

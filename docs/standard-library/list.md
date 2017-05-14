@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 6c8b7cc67cc2c35b7a02cea7d60c812cf2d9bb92
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ce9fb66784027d81acaac6e98ad0f6a6121da956
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
@@ -54,12 +55,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/list-operators.md#operator_neq)|測試運算子左邊的清單物件是否不等於右邊的清單物件。|  
-|[operator<](../standard-library/list-operators.md#operator_lt_)|測試運算子左邊的清單物件是否小於右邊的清單物件。|  
-|[operator\<=](../standard-library/list-operators.md#operator_lt__eq)|測試運算子左邊的清單物件是否小於或等於右邊的清單物件。|  
-|[operator==](../standard-library/list-operators.md#operator_eq_eq)|測試運算子左邊的清單物件是否等於右邊的清單物件。|  
-|[operator>](../standard-library/list-operators.md#operator_gt_)|測試運算子左邊的清單物件是否大於右邊的清單物件。|  
-|[operator>=](../standard-library/list-operators.md#operator_gt__eq)|測試運算子左邊的清單物件是否大於或等於右邊的清單物件。|  
+|[operator!=](../standard-library/list-operators.md#op_neq)|測試運算子左邊的清單物件是否不等於右邊的清單物件。|  
+|[operator<](../standard-library/list-operators.md#op_lt)|測試運算子左邊的清單物件是否小於右邊的清單物件。|  
+|[operator\<=](../standard-library/list-operators.md#op_gt_eq)|測試運算子左邊的清單物件是否小於或等於右邊的清單物件。|  
+|[operator==](../standard-library/list-operators.md#op_eq_eq)|測試運算子左邊的清單物件是否等於右邊的清單物件。|  
+|[operator>](../standard-library/list-operators.md#op_gt)|測試運算子左邊的清單物件是否大於右邊的清單物件。|  
+|[operator>=](../standard-library/list-operators.md#op_gt_eq)|測試運算子左邊的清單物件是否大於或等於右邊的清單物件。|  
   
 ### <a name="classes"></a>類別  
   

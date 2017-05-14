@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d888b6d16e0a71168e0615d89bbd1d03c51afad8
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e834b5be6b7d31d1f1516799462d57330bf4ceb2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="effects-of-buffering"></a>緩衝的效果
@@ -65,7 +66,7 @@ int main( )
 cout <<"Please wait..." <<flush;  
 ```  
   
- 這個步驟會排清緩衝區，確保訊息在等待前即印出。 您也可以使用 `endl` 操作工具，排清緩衝區以及輸出歸位字元–換行符號，或者您可以使用 `cin` 物件。 這個物件 (與 `cerr` 或 `clog` 物件) 通常會繫結至 `cout` 物件。 因此，只要使用 `cin` (或 `cerr` 或 `clog` 物件) 就會排清 `cout` 物件。  
+ 這個步驟會排清緩衝區，確保訊息在等待前即印出。 您也可以使用`endl`操作工具，排清緩衝區以及輸出歸位字元傳回的換行，或者您可以使用`cin`物件。 這個物件 (與 `cerr` 或 `clog` 物件) 通常會繫結至 `cout` 物件。 因此，只要使用 `cin` (或 `cerr` 或 `clog` 物件) 就會排清 `cout` 物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [輸出資料流](../standard-library/output-streams.md)

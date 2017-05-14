@@ -57,14 +57,15 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e1e2211a34a7cc146d1ce3b791927ffc206edaef
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: e329acaad53c8990f335394bbcb8f0401d71c463
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
-中止執行緒； `_endthread` 會中止由 `_beginthread` 建立的執行緒，而  `_endthreadex` 會終止由`_beginthreadex`建立的執行緒。  
+中止執行緒； `_endthread` 會中止由 `_beginthread` 建立的執行緒，而  `_endthreadex` 會終止由 `_beginthreadex`建立的執行緒。  
   
 ## <a name="syntax"></a>語法  
   
@@ -87,7 +88,7 @@ void _endthreadex(
   
  `_endthread` 會自動關閉執行緒控制代碼 (此行為與 Win32 `ExitThread` API 不同)。因此，當您使用 `_beginthread` 和 `_endthread` 時，不要藉由呼叫 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API，明確地關閉執行緒控制代碼。  
   
- 像 Win32 `ExitThread` API 一樣， `_endthreadex` 不會關閉執行緒控制代碼。 因此，當您使用 `_beginthreadex` 和 `_endthreadex` 時，您必須呼叫 Win32 `CloseHandle` API，以關閉執行緒控制代碼。  
+ 像 Win32 `ExitThread` API 一樣， `_endthreadex` 不會關閉執行緒控制代碼。 因此，當您使用 `_beginthreadex` 和 `_endthreadex`時，您必須呼叫 Win32 `CloseHandle` API，以關閉執行緒控制代碼。  
   
 > [!NOTE]
 >  `_endthread` 和 `_endthreadex` 會導致在執行緒中暫止的 C++ 解構函式不會被呼叫。  
@@ -105,10 +106,7 @@ void _endthreadex(
  僅限 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的多執行緒版本。  
   
 ## <a name="example"></a>範例  
- 請參閱 [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md) 的範例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 請參閱 [_beginthread](../../c-runtime-library/reference/beginthread-beginthreadex.md)的範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   

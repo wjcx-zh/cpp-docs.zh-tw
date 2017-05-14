@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 828ca38d754d40729f8d09cb22526fb872605024
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 99ab02233eed70ab92e1aabcf567d9cfc244c101
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph、_ismbbgraph_l
@@ -90,7 +91,7 @@ int _ismbbgraph_l (
 ( _PUNCT | _UPPER | _LOWER | _DIGIT ) || _ismbbkprint  
 ```  
   
- 非零代表 `c`，0 則代表不是。 針對任何地區設定相關行為，`_ismbbgraph` 會使用目前的地區設定。 `_ismbbgraph_l` 完全相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 的 `c`為非零，否則會傳回 0。 針對任何地區設定相關行為，`_ismbbgraph` 會使用目前的地區設定。 `_ismbbgraph_l` 也相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
@@ -103,9 +104,6 @@ int _ismbbgraph_l (
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   

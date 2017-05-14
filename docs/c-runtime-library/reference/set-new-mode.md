@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 069a7dd22950e7ae9826ff2cf8c542025f14facd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 57a578f8accf7244d71c0d8791a6e898ead7d242
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setnewmode"></a>_set_new_mode
@@ -73,7 +74,7 @@ int _set_new_mode(
  `malloc` 的新處理常式模式；有效值為 0 或 1。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回為 `malloc` 設定的前一個處理常式模式。 傳回值 1 表示無法配置記憶體時，`malloc` 之前會呼叫新的處理常式模式；傳回值 0 則表示不會呼叫。 如果 `newhandlermode` 引數不等於 0 或 1，則會傳回 –1。  
+ 傳回為 `malloc` 設定的前一個處理常式模式。 傳回值 1 表示無法配置記憶體時，`malloc` 之前會呼叫新的處理常式模式；傳回值 0 則表示不會呼叫。 如果`newhandlermode`引數不等於 0 或 1，傳回-1。  
   
 ## <a name="remarks"></a>備註  
  C++ `_set_new_mode` 函式會設定 [malloc](../../c-runtime-library/reference/malloc.md) 的新處理常式模式。 新的處理常式模式表示失敗時，`malloc` 是否呼叫 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 所設定的新處理常式。 根據預設，`malloc` 不會在失敗時呼叫新的處理常式來配置記憶體。 您可以覆寫這個預設行為，因此，在 `malloc` 無法配置記憶體時，`malloc` 會呼叫新的處理常式，其方法與 `new` 運算子因相同原因而失敗時所執行的方法相同。 如需詳細資訊，請參閱《C++ 語言參考》中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md) 運算子。 若要覆寫預設值，請及早在程式中呼叫：  
@@ -93,9 +94,6 @@ _set_new_mode(1)
 |`_set_new_mode`|\<new.h>|  
   
  如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   

@@ -50,10 +50,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d13a24974a6c722301c6361a13f9d9178cd70220
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 602ed9f5b1ff3c809055d9a231f81ee649bab8e8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="setjmp"></a>setjmp
@@ -95,9 +96,6 @@ int setjmp(
   
 ## <a name="example"></a>範例  
  請參閱 [_fpreset](../../c-runtime-library/reference/fpreset.md) 的範例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   

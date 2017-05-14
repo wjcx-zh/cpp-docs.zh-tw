@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9fc67bbf6c900a79825fe62b6882c4459c348d61
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: d91f7b780c8f17fbe1e12a195b6a7cf2eaad3d2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="putenv-wputenv"></a>_putenv、_wputenv
@@ -89,7 +90,7 @@ int _wputenv(
  環境字串定義。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，則傳回 0；如果發生錯誤，則傳回 -1。  
+ 傳回 0，如果成功則為-1 在錯誤的情況下。  
   
 ## <a name="remarks"></a>備註  
  `_putenv` 函式會加入新的環境變數，或修改現有環境變數的值。 環境變數會定義處理序所執行的環境 (例如，要與程式連結之程式庫的預設搜尋路徑)。 `_wputenv` 是寬字元版本的 `_putenv`；`envstring` 的 `_wputenv` 引數是寬字元字串。  
@@ -106,7 +107,7 @@ int _wputenv(
   
  請不要直接變更環境項目，而是使用 `_putenv` 或 `_wputenv` 進行變更。 特別的是，直接釋出 `_environ[]` 全域陣列的元素可能會造成需要處理的無效記憶體。  
   
- `getenv` 和 `_putenv` 使用全域變數 `_environ` 來存取環境資料表；`_wgetenv` 和 `_wputenv` 使用 `_wenviron`。 `_putenv` 和 `_wputenv` 可能會變更 `_environ` 和 `_wenviron` 的值，進而讓 `main` 的 `_envp` 引數和 `wmain` 的 _`wenvp` 引數失效。 因此，較安全的作法是使用 `_environ` 或 `_wenviron` 來存取環境資訊。 如需 `_putenv` 和 `_wputenv` 與全域變數之關聯的詳細資訊，請參閱 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。  
+ `getenv` 和 `_putenv` 使用全域變數 `_environ` 來存取環境資料表；`_wgetenv` 和 `_wputenv` 使用 `_wenviron`。 `_putenv`和`_wputenv`可能的值變更`_environ`和`_wenviron`，因此失效`_envp`引數`main`和`_wenvp`引數`wmain`。 因此，較安全的作法是使用 `_environ` 或 `_wenviron` 來存取環境資訊。 如需 `_putenv` 和 `_wputenv` 與全域變數之關聯的詳細資訊，請參閱 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。  
   
 > [!NOTE]
 >  `_putenv` 和 `_getenv` 系列的函式不是安全執行緒。 `_putenv` 正在修改字串時，`_getenv` 可能會傳回字串指標，因而導致隨機失敗。 確定這些函式的呼叫已同步。  
@@ -122,9 +123,6 @@ int _wputenv(
   
 ## <a name="example"></a>範例  
  如需如何使用 `_putenv` 的範例，請參閱 [getenv、_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   

@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 78c12c22f85eb9ba50b1ea5a92f6f3bb171e01a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 48718acb6ad8773f876251962fd4b643993c27e8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
@@ -110,7 +111,7 @@ long double erfcl(
   
  ![x 的誤差函式](../../c-runtime-library/reference/media/crt_erf_formula.PNG "CRT_erf_formula")  
   
- 補充高斯錯誤函式定義為 1 – erf(x)。 `erf` 函式會傳回範圍 -1.0 到 1.0 的值。 不會傳回錯誤。 `erfc` 函式會傳回範圍 0 到 2 的值。 若 `x` 對於 `erfc` 而言過大，會將 `errno` 變數設為 `ERANGE`。  
+ 補充高斯錯誤函式定義為 1-erf （x)。 `erf` 函式會傳回範圍 -1.0 到 1.0 的值。 不會傳回錯誤。 `erfc` 函式會傳回範圍 0 到 2 的值。 若 `x` 對於 `erfc` 而言過大，會將 `errno` 變數設為 `ERANGE`。  
   
  因為 C++ 允許多載，所以您可以呼叫採用並傳回 `erf` 和 `erfc` 類型的 `float` 和 `long double` 的多載。 在 C 程式中，`erf` 和 `erfc` 會一律採用並傳回 `double`。  
   
@@ -120,10 +121,7 @@ long double erfcl(
 |--------------|---------------------|  
 |`erf`, `erff`, `erfl`, `erfc`, `erfcf`, `erfcl`|\<math.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)

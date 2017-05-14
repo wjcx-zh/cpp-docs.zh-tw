@@ -1,86 +1,103 @@
 ---
 title: "strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "strncat"
-  - "_strncat_l"
-  - "_mbsncat"
-  - "_mbsncat_l"
-  - "wcsncat"
-  - "wcsncat_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_tcsncat_l"
-  - "_wcsncat_l"
-  - "_tcsnccat_l"
-  - "_mbsncat"
-  - "_strncat_l"
-  - "strncat"
-  - "_tcsnccat"
-  - "_mbsncat_l"
-  - "_ftcsncat"
-  - "wcsncat"
-  - "_tcsncat"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcsncat 函式"
-  - "_mbsncat 函式"
-  - "_mbsncat_l 函式"
-  - "_tcsncat 函式"
-  - "_tcsncat_l 函式"
-  - "_tcsnccat 函式"
-  - "_tcsnccat_l 函式"
-  - "附加字串"
-  - "字元 [C++], 附加至字串"
-  - "串連字串"
-  - "ftcsncat 函式"
-  - "mbsncat 函式"
-  - "mbsncat_l 函式"
-  - "字串串連 [C++]"
-  - "字串 [C++], 附加"
-  - "strncat 函式"
-  - "tcsncat 函式"
-  - "tcsncat_l 函式"
-  - "tcsnccat 函式"
-  - "tcsnccat_l 函式"
-  - "wcsncat 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- strncat
+- _strncat_l
+- _mbsncat
+- _mbsncat_l
+- wcsncat
+- wcsncat_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _tcsncat_l
+- _wcsncat_l
+- _tcsnccat_l
+- _mbsncat
+- _strncat_l
+- strncat
+- _tcsnccat
+- _mbsncat_l
+- _ftcsncat
+- wcsncat
+- _tcsncat
+dev_langs:
+- C++
+helpviewer_keywords:
+- concatenating strings
+- ftcsncat function
+- tcsncat_l function
+- _tcsnccat_l function
+- _tcsncat function
+- strncat function
+- _ftcsncat function
+- mbsncat function
+- mbsncat_l function
+- strings [C++], appending
+- wcsncat function
+- tcsnccat function
+- tcsnccat_l function
+- _tcsnccat function
+- string concatenation [C++]
+- appending strings
+- characters [C++], appending to strings
+- _mbsncat function
+- _tcsncat_l function
+- _mbsncat_l function
+- tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
 caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 29
----
-# strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 9406308f6a435d8225763f935d986f8d1f9504f6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-曾加一個字串的字元。  這些函式已有更安全的版本可用，請參閱 [strncat\_s、\_strncat\_s\_l、wcsncat\_s、\_wcsncat\_s\_l、\_mbsncat\_s、\_mbsncat\_s\_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) 。  
+---
+# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
+附加字串字元。 這些函式已有更安全的版本可供使用，請參閱 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)。  
   
 > [!IMPORTANT]
->  `_mbsncat` and `_mbsncat_l`不能用於在 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbsncat` 和 `_mbsncat_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 char *strncat(  
@@ -131,9 +148,9 @@ unsigned char *_mbsncat_l(
 ); // C++ only  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `strDest`  
- 以 Null 結束的結束字串。  
+ 以 Null 終止的目的地字串。  
   
  `strSource`  
  以 Null 結束的來源字串。  
@@ -144,43 +161,43 @@ unsigned char *_mbsncat_l(
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 傳回一個指標到目的地字串。  未保留表示錯誤的傳回值。  
+## <a name="return-value"></a>傳回值  
+ 傳回目的字元字串的指標。 未保留表示錯誤的傳回值。  
   
-## 備註  
- `strncat` 函式，附加至多， `strSource` 第一個 `count` 字元至 `strDest`中。  `strSource` 的初始字元覆寫 `strDest`結束的 null 字元。  如果 null 字元出現在 `strSource` ， `count` 字元附加前，附加 `strncat` 從 `strSource`中的所有字元，由 null 字元。  如果 `count` 大於 `strSource` 的長度，長度為 `strSource` 而非 `count` 的。  在所有情況下，結果產生的字串是以 null 字元結束。  如果在重疊的字串之間執行複製，則行為是未定義的。  
+## <a name="remarks"></a>備註  
+ `strncat` 函式最多會將 `strSource` 的前 `count` 個字元附加至 `strDest`。 否則，`strSource` 的初始字元會覆寫 `strDest` 的終止 Null 字元。 如果在附加 `count` 個字元之前，`strSource` 中已出現 Null 字元，則 `strncat` 會附加 `strSource` 中直到 Null 字元的所有字元。 如果 `count` 大於 `strSource` 的長度，則會使用 `strSource` 的長度來取代 `count`。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。  
   
 > [!IMPORTANT]
->  `strncat` 不會檢查 `strDest`的足夠的空間;所以緩衝區滿溢的一個可能的原因。  記住 `count` 條件附加的字元數;會在 `strDest`大小的一項限制。  請參閱下列範例。  如需詳細資訊，請參閱 [Avoiding Buffer Overruns](http://msdn.microsoft.com/library/windows/desktop/ms717795) 。  
+>  `strncat` 不會檢查 `strDest` 中是否有足夠的空間，所以它是造成緩衝區滿溢的潛在原因。 請記住，`count` 會限制附加的字元數目，它不是 `strDest` 大小的限制。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- `wcsncat` 和 `_mbsncat` 是 `strncat` 的寬字元和多位元組字元版本。  `wcsncat` 的字串引數和傳回值是寬字元字串，而 `_mbsncat` 的引數和傳回值則是多位元組字元字串。  這三個函式其餘部分的運作相同。  
+ `wcsncat` 和 `_mbsncat` 是寬字元和多位元組字元版本的 `strncat`。 `wcsncat` 的字串引數與傳回值是寬字元字串；`_mbsncat` 的引數和傳回值則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
- 輸出值受地區設定的`LC_CTYPE` 分類設定所影響。如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 。  這些函式沒有以 `_l` 後綴的版本在這些地區相依的行為上使用目前的地區設定，而以 `_l` 後綴版本除了它們會使用傳入的地區設定參數之外運作相同。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- 在 C\+\+ 中，這些函式有範本多載。  如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這些函式具有範本多載。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsncat`|`strncat`|`_mbsnbcat`|`wcsncat`|  
 |`_tcsncat_l`|`_strncat_l`|`_mbsnbcat_l`|`_wcsncat_l`|  
   
 > [!NOTE]
->  `_strncat_l` 和 `_wcsncat_l` 沒有地區設定相關屬性並不會直接呼叫。  它們提供內部所使用的 `_tcsncat_l`。  
+>  `_strncat_l` 和 `_wcsncat_l` 沒有任何地區設定相依性，不是用於直接呼叫。 它們是提供給 `_tcsncat_l` 內部使用。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`strncat`|\<string.h\>|  
-|`wcsncat`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbsncat`|\<mbstring.h\>|  
-|`_mbsncat_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strncat`|\<string.h>|  
+|`wcsncat`|\<string.h> 或 \<wchar.h>|  
+|`_mbsncat`|\<mbstring.h>|  
+|`_mbsncat_l`|\<mbstring.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_strncat.c  
@@ -219,7 +236,7 @@ int main( void )
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 string can hold up to 39 characters  
@@ -227,22 +244,19 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)  
 ```  
   
- 請注意 `BadAppend` 造成緩衝區滿溢。  
+ 請注意，`BadAppend` 造成緩衝區溢位。  
   
-## .NET Framework 對等用法  
- [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [\_mbsnbcat、\_mbsnbcat\_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
- [strcat、wcscat、\_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp、wcscmp、\_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy、wcscpy、\_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy、\_strncpy\_l、wcsncpy、\_wcsncpy\_l、\_mbsncpy、\_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [\_strset、\_strset\_l、\_wcsset、\_wcsset\_l、\_mbsset、\_mbsset\_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
+ [_mbsnbcat、_mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
+ [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
+ [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
+ [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
+ [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)

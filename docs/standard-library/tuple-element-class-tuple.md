@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 54bfdd8a1f095478282af39354a6e9a91ba32891
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="tupleelement-class"></a>tuple_element 類別
@@ -108,7 +109,7 @@ typedef `tuple_element_t` 是 `tuple_element<Index, Tuple>::type` 的方便別�
   
 `pair` 類型的樣板特製化都提供單一成員 typedef，`type`，也就是在配對中指定位置的元素類型同義字，保留了任何 const 及/或 volatile 限定性條件。 typedef `tuple_element_t` 是 `tuple_element<N, pair<T1, T2>>::type` 的方便別名。  
   
-使用 [get Function &lt;utility&gt;](../standard-library/utility-functions.md#get) 傳回指定位置的元素或 (在 C++14 / Visual Studio 2015) 指定類型的元素。 
+使用[get 函式&lt;公用程式&gt;](../standard-library/utility-functions.md#get)傳回項目中指定的位置，或指定的型別。 
   
 ## <a name="example"></a>範例  
   

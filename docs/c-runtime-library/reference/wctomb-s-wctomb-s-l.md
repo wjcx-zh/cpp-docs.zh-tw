@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 94973bf59580354aed75b8c7a3a154f415060163
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: ac97c0bc957c28d8d0837199157d52d4ac0536e1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
@@ -115,7 +116,7 @@ errno_t _wctomb_s_l(
 ## <a name="remarks"></a>備註  
  `wctomb_s` 函式會將其 `wchar` 引數轉換成對應的多位元組字元，並將結果儲存在 `mbchar`。 您可以在任何程式的任何點呼叫函式。  
   
- 如果 `wctomb_s` 將寬字元轉換成多位元組字元，它會將寬字元的位元組數目 (絕不會大於 `MB_CUR_MAX`) 放入 `pRetValue` 指向的整數。 如果 `wchar` 是寬字元的 Null 字元 (L'\0')，`wctomb_s` 會用 1 填入 `pRetValue`。 如果目標指標 `mbchar` 是 NULL，則 `wctomb_s` 會將 0 放入 `pRetValue`。 如果目前的地區設定不可能轉換，`wctomb_s` 會在 `pRetValue` 中放入 -1。  
+ 如果 `wctomb_s` 將寬字元轉換成多位元組字元，它會將寬字元的位元組數目 (絕不會大於 `MB_CUR_MAX`) 放入 `pRetValue` 指向的整數。 如果 `wchar` 是寬字元的 Null 字元 (L'\0')，`wctomb_s` 會用 1 填入 `pRetValue`。 如果目標指標 `mbchar` 是 NULL，則 `wctomb_s` 會將 0 放入 `pRetValue`。 如果轉換不可能在目前的地區設定， `wctomb_s` -1 會置於`pRetValue`。  
   
  `wctomb_s` 會針對與地區設定相關的資訊使用目前的地區設定，`_wctomb_s_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -154,9 +155,6 @@ Convert a wide character:
    Characters converted: 1  
    Multibyte character: a  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   

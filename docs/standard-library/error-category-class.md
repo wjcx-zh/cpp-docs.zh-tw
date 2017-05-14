@@ -39,10 +39,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 7700ffce8b04f9caad33c08f03f0585c29a43efd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8a2a37464e5edb5a5fde1def70d2f0728524fad2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="errorcategory-class"></a>error_category 類別
@@ -61,31 +62,31 @@ class error_category;
   
 |||  
 |-|-|  
-|[value_type](#error_category__value_type)|此類型表示預存的錯誤碼值。|  
+|[value_type](#value_type)|此類型表示預存的錯誤碼值。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[default_error_condition](#error_category__default_error_condition)|儲存錯誤狀況物件的錯誤碼值。|  
-|[equivalent](#error_category__equivalent)|傳回的值可指定錯誤物件是否相等。|  
-|[message](#error_category__message)|傳回指定錯誤碼的名稱。|  
-|[name](#error_category__name)|傳回分類的名稱。|  
+|[default_error_condition](#default_error_condition)|儲存錯誤狀況物件的錯誤碼值。|  
+|[equivalent](#equivalent)|傳回的值可指定錯誤物件是否相等。|  
+|[message](#message)|傳回指定錯誤碼的名稱。|  
+|[name](#name)|傳回分類的名稱。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator==](#error_category__operator_eq_eq)|測試 `error_category` 物件是否相等。|  
-|[operator!=](#error_category__operator_neq)|測試 `error_category` 物件是否不相等。|  
-|[operator<](#error_category__operator_lt_)|測試 [error_category](../standard-library/error-category-class.md) 物件是否小於傳入以進行比較的 `error_category` 物件。|  
+|[operator==](#op_eq_eq)|測試 `error_category` 物件是否相等。|  
+|[operator!=](#op_neq)|測試 `error_category` 物件是否不相等。|  
+|[operator<](#op_lt)|測試 [error_category](../standard-library/error-category-class.md) 物件是否小於傳入以進行比較的 `error_category` 物件。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<system_error>  
   
  **命名空間：** std  
   
-##  <a name="error_category__default_error_condition"></a>  error_category::default_error_condition  
+##  <a name="default_error_condition"></a>  error_category::default_error_condition  
  儲存錯誤狀況物件的錯誤碼值。  
   
 ```
@@ -103,7 +104,7 @@ virtual error_condition default_error_condition(int _Errval) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="error_category__equivalent"></a>  error_category::equivalent  
+##  <a name="equivalent"></a>  error_category::equivalent  
  傳回的值可指定錯誤物件是否相等。  
   
 ```
@@ -130,7 +131,7 @@ virtual bool equivalent(const error_code& _Code,
   
  第二個成員函式會傳回 `*this == _Code.category() && _Code.value() == _Errval`。  
   
-##  <a name="error_category__message"></a>  error_category::message  
+##  <a name="message"></a>  error_category::message  
  傳回指定錯誤碼的名稱。  
   
 ```
@@ -148,7 +149,7 @@ virtual string message(error_code::value_type val) const = 0;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="error_category__name"></a>  error_category::name  
+##  <a name="name"></a>  error_category::name  
  傳回分類的名稱。  
   
 ```
@@ -160,7 +161,7 @@ virtual const char *name() const = 0;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="error_category__operator_eq_eq"></a>  error_category::operator==  
+##  <a name="op_eq_eq"></a>  error_category::operator==  
  測試 `error_category` 物件是否相等。  
   
 ```
@@ -179,7 +180,7 @@ bool operator==(const error_category& right) const;
 ### <a name="remarks"></a>備註  
  此成員運算子會傳回 `this == &right`。  
   
-##  <a name="error_category__operator_neq"></a>  error_category::operator!=  
+##  <a name="op_neq"></a>  error_category::operator!=  
  測試 `error_category` 物件是否不相等。  
   
 ```
@@ -198,7 +199,7 @@ bool operator!=(const error_category& right) const;
 ### <a name="remarks"></a>備註  
  此成員運算子會傳回 `(!*this == right)`。  
   
-##  <a name="error_category__operator_lt_"></a>  error_category::operator&lt;  
+##  <a name="op_lt"></a>  error_category::operator&lt;  
  測試 [error_category](../standard-library/error-category-class.md) 物件是否小於傳入以進行比較的 `error_category` 物件。  
   
 ```
@@ -217,7 +218,7 @@ bool operator<(const error_category& right) const;
 ### <a name="remarks"></a>備註  
  此成員運算子會傳回 `this < &right`。  
   
-##  <a name="error_category__value_type"></a>  error_category::value_type  
+##  <a name="value_type"></a>  error_category::value_type  
  此類型表示預存的錯誤碼值。  
   
 ```

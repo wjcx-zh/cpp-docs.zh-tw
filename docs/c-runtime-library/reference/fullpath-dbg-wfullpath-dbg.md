@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 13dea0e3f4fdaef74d4806373376d5c84904ce8f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
@@ -109,7 +110,7 @@ wchar_t *_wfullpath_dbg(
  每個函式會傳回包含絕對路徑名稱之緩衝區的指標 (`absPath`)。 若有錯誤 (例如，傳入 `relPath` 的值包含的磁碟機代號無效或是找不到，或是建立的絕對路徑名稱 (`absPath`) 的長度大於 `maxLength`)，函式會傳回 `NULL`。  
   
 ## <a name="remarks"></a>備註  
- `_fullpath_dbg` 和 `_wfullpath_dbg` 函式與 `_fullpath` 和 `_wfullpath` 相同，唯一不同的是當 **_**`DEBUG` 已定義時，若 NULL 是作為第一個參數來進行傳遞，則這些函式會使用 `malloc`、`_malloc_dbg` 的偵錯版本來配置記憶體。 如需 `_malloc_dbg` 之偵錯版本的詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
+ `_fullpath_dbg`和`_wfullpath_dbg`函式完全相同`_fullpath`和`_wfullpath`不同之處在於，當`_DEBUG`是定義，這些函式使用的偵錯版本`malloc`，`_malloc_dbg`來配置記憶體，如果 NULL 當做第一個參數傳遞。 如需 `_malloc_dbg` 之偵錯版本的詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
   
  在大多數情況中，您不需要明確地呼叫這些函式。 但您可以定義 `_CRTDBG_MAP_ALLOC` 旗標。 定義 `_CRTDBG_MAP_ALLOC` 時，呼叫 `_fullpath` 和 `_wfullpath` 會分別重新對應至 `_fullpath_dbg` 和 `_wfullpath_dbg`，且 `blockType` 會設為 `_NORMAL_BLOCK`。 因此，您不需要呼叫這些函式，除非您想要將堆積區塊標示為 `_CLIENT_BLOCK`。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。  
   
@@ -126,10 +127,7 @@ wchar_t *_wfullpath_dbg(
 |`_fullpath_dbg`|\<crtdbg.h>|  
 |`_wfullpath_dbg`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- <xref:System.IO.File.Create%2A>  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   

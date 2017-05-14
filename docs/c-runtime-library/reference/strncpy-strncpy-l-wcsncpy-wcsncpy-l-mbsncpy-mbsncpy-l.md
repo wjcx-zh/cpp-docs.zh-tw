@@ -89,10 +89,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ef1eac9e7e9accc4d46cef80ec9719e645b0f294
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: da3d85085d7b9dbe914acd4515252b8b4637a6dc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
@@ -295,9 +296,6 @@ Buffer overrun: s = 'ars.' (should be 'test')
 ```  
   
  自動變數的配置以及錯誤偵測和程式碼保護的層級可能會隨變更的編譯器設定而異。 建置在其他編譯環境中，或藉由其他編譯器選項建置時，此範例可能會有不同的結果。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::String::Copy](https://msdn.microsoft.com/en-us/library/system.string.copy.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

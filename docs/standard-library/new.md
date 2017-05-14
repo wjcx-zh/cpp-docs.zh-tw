@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: ad237fd3f28e7adfd380e6c2adf0510bfcf5248d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e804f35db459c7fe50bb36fa8eeaf795d04cc621
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
@@ -76,10 +77,10 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator delete](../standard-library/new-operators.md#operator_delete)|由 delete 陳述式呼叫的函式，藉此取消配置物件個體的儲存區。|  
-|[operator delete&#91;&#93;](../standard-library/new-operators.md#operator_delete_arr)|由 delete 陳述式呼叫的函式，藉此取消配置物件陣列的儲存區。|  
-|[operator new](../standard-library/new-operators.md#operator_new)|由 new 陳述式呼叫的函式，藉此配置物件個體的儲存區。|  
-|[operator new&#91;&#93;](../standard-library/new-operators.md#operator_new_arr)|由 new 陳述式呼叫的函式，藉此配置物件陣列的儲存區。|  
+|[operator delete](../standard-library/new-operators.md#op_delete)|由 delete 陳述式呼叫的函式，藉此取消配置物件個體的儲存區。|  
+|[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|由 delete 陳述式呼叫的函式，藉此取消配置物件陣列的儲存區。|  
+|[operator new](../standard-library/new-operators.md#op_new)|由 new 陳述式呼叫的函式，藉此配置物件個體的儲存區。|  
+|[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|由 new 陳述式呼叫的函式，藉此配置物件陣列的儲存區。|  
   
 ### <a name="classes"></a>類別  
   

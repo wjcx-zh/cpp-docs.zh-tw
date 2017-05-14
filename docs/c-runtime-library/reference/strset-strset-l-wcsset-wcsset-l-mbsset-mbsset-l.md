@@ -86,10 +86,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33fbfa70740b7a179aaf817ad61579d752d351ba
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9db9c684f27f2cae103cf3071332a5d7fa90e8d9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
@@ -146,7 +147,7 @@ unsigned char *_mbsset_l(
 ## <a name="remarks"></a>備註  
  `_strset` 函式會將所有的 `str` 字元 (終止的 Null 字元除外) 設成 `c`，轉換成 `char`。 `_wcsset` 和 `_mbsset_l` 是 `_strset` 的寬字元和多位元組字元版本，而引數和傳回值的資料類型會隨之改變。 除此之外，這些函式的行為相同。  
   
- `_mbsset` 會驗證其參數。 如果 `str` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`_mbsset` 會傳回 `NULL`，且 `errno` 會設為 `EINVAL`。 `_strset` 和 `_wcsset` 不會驗證其參數。  
+ `_mbsset` 會驗證其參數。 如果 `str` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`_mbsset` 會傳回 `NULL`，且 `errno` 設為 `EINVAL`。 `_strset` 和 `_wcsset` 不會驗證其參數。  
   
  輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些函式的版本均相同，除了沒有 `_l` 後置字元的函式會使用目前的地區設定，而具有 `_l` 後置字元的函式會改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -195,9 +196,6 @@ int main( void )
 Before: Fill the string with something.  
 After:  *******************************  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

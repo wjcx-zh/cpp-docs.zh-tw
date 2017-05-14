@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: f352a9efb06dc0267abcf1d4174c48dcbaae78a2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
@@ -73,15 +74,15 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator+](../standard-library/string-operators.md#operator_add)|串連兩個字串物件。|  
-|[operator!=](../standard-library/string-operators.md#operator_neq)|測試運算子左邊的字串物件是否不等於右邊的字串物件。|  
-|[operator==](../standard-library/string-operators.md#operator_eq_eq)|測試運算子左邊的字串物件是否等於右邊的字串物件。|  
-|[operator<](../standard-library/string-operators.md#operator_lt_)|測試運算子左邊的字串物件是否小於右邊的字串物件。|  
-|[operator<=](../standard-library/string-operators.md#operator_lt__eq)|測試運算子左邊的字串物件是否小於或等於右邊的字串物件。|  
-|[operator<\<](../standard-library/string-operators.md#operator_lt__lt_)|將字串插入至輸出資料流的範本函式。|  
-|[operator>](../standard-library/string-operators.md#operator_gt_)|測試運算子左邊的字串物件是否大於右邊的字串物件。|  
-|[operator>=](../standard-library/string-operators.md#operator_gt__eq)|測試運算子左邊的字串物件是否大於或等於右邊的字串物件。|  
-|[operator>>](../standard-library/string-operators.md#operator_gt__gt_)|從輸入資料流擷取字串的範本函式。|  
+|[operator+](../standard-library/string-operators.md#op_add)|串連兩個字串物件。|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|測試運算子左邊的字串物件是否不等於右邊的字串物件。|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|測試運算子左邊的字串物件是否等於右邊的字串物件。|  
+|[operator<](../standard-library/string-operators.md#op_lt)|測試運算子左邊的字串物件是否小於右邊的字串物件。|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|測試運算子左邊的字串物件是否小於或等於右邊的字串物件。|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|將字串插入至輸出資料流的範本函式。|  
+|[operator>](../standard-library/string-operators.md#op_gt)|測試運算子左邊的字串物件是否大於右邊的字串物件。|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|測試運算子左邊的字串物件是否大於或等於右邊的字串物件。|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|從輸入資料流擷取字串的範本函式。|  
   
 ### <a name="specialized-template-functions"></a>特製化樣板函式  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[getline 樣板函式](../standard-library/string-functions.md#getline)|從輸入資料流一行一行地擷取字串。|  
+|[getline 範本](../standard-library/string-functions.md#getline)|從輸入資料流一行一行地擷取字串。|  
   
 ### <a name="classes"></a>類別  
   

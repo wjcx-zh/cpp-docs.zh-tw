@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 160eac8642d463b367ae218cecb9b1ad5984f4a3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3267090567017a0aba7100d464a628bd0a0bcbea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;範例容器&gt;)
@@ -56,15 +57,14 @@ ms.lasthandoff: 02/24/2017
 ## <a name="syntax"></a>語法  
   
 ```  
- 
-    template <class Ty>  
+template <class Ty>  
 bool operator<=(
     const Container <Ty>& left,  
     const Container <Ty>& right);
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 傳回 **!**(_*Right* < \_*Left*)。  
+ 傳回 `!(right < left)`。  
   
 ## <a name="see-also"></a>另請參閱  
  [\<範例容器>](../standard-library/sample-container.md)

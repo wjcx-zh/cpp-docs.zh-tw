@@ -114,10 +114,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8611402652268e0a85170a36355619e5c7335ac
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 巨集
@@ -162,7 +163,7 @@ _RPTFWn(
  `format` 使用的替換引數。  
   
 ## <a name="remarks"></a>備註  
- 所有這些巨集都會接受 `reportType` 和 `format` 參數。 此外，它們也可能最多接受四個其他引數，以附加至巨集名稱的號碼表示。 例如，`_RPT0` 和 `_RPTF0` 不接受任何額外引數、`_RPT1` 和 `_RPTF1` 接受 `arg1`，而 `_RPT2` 和 `_RPTF2` 接受 `arg1` 和 `arg2`，以此類推。  
+ 所有這些巨集接受`reportType`和`format`參數。 此外，它們也可能最多接受四個其他引數，以附加至巨集名稱的號碼表示。 例如，`_RPT0` 和 `_RPTF0` 不接受任何額外引數、`_RPT1` 和 `_RPTF1` 接受 `arg1`，而 `_RPT2` 和 `_RPTF2` 接受 `arg1` 和 `arg2`，以此類推。  
   
  `_RPT` 和 `_RPTF` 巨集類似於 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函式，原因是它們可以用來追蹤偵錯程序期間的應用程式進度。 不過，因為這些巨集不需要括在 `#ifdef` 陳述式中，即可避免在應用程式的零售組建中呼叫它們，所以比 `printf` 更具彈性。 這種彈性的達成是使用 [_DEBUG](../../c-runtime-library/debug.md) 巨集；只有在定義 `_DEBUG` 旗標時，才能使用 `_RPT` 和 `_RPTF` 巨集。 若未定義 `_DEBUG` ，將會在前置處理期間移除對這些巨集的呼叫。  
   
@@ -202,9 +203,6 @@ _RPTFWn(
   
 ## <a name="example"></a>範例  
  請參閱 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 主題中的範例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 2a1c5b467ba9f96af0bc8e402715a0a427c73eeb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: cd787e4c18cf947760a31b5ee61f5ce7b83a7a2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
@@ -110,7 +111,7 @@ unsigned int _mbsnextc_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 所有這些函式都會傳回 `str` 中下一個字元的整數值。  
+ 所有這些函式傳回的整數值中的下一個字元`str`。  
   
 ## <a name="remarks"></a>備註  
  `_mbsnextc` 函式會傳回 `str` 中下一個多位元組字元的整數值，不用將字串指標提前。 `_mbsnextc` 根據目前使用的[多位元組字碼頁](../../c-runtime-library/code-pages.md)來辨識多位元組字元序列。  
@@ -125,7 +126,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc` 和 `_wcsnextc` 是 `_mbsnextc` 的單一位元組字元字串和寬字元字串版本。 `_wcsnextc` 會傳回 `string` 中下一個寬字元的整數值；`_strnextc` 會傳回 `string` 中下一個單位元組字元的整數值。 只有針對此對應才提供 `_strnextc` 和 `_wcsnextc`，除此之外都不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。  
+ `_strnextc`和`_wcsnextc`是單一位元組字元字串和寬字元字串版本`_mbsnextc`。 `_wcsnextc` 會傳回 `string` 中下一個寬字元的整數值；`_strnextc` 會傳回 `string` 中下一個單位元組字元的整數值。 只有針對此對應才提供 `_strnextc` 和 `_wcsnextc`，除此之外都不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。  
   
  `_mbsnextc_l` 也相同，但是它會改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -139,9 +140,6 @@ unsigned int _mbsnextc_l(
 |`_wcsnextc`|\<tchar.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

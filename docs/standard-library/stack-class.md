@@ -42,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 81467a48b08fab628da94b217c2925010f3118fe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 57f6d4a94348e8565a8c8e21b248335d9d9c651d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="stack-class"></a>stack 類別
@@ -66,7 +67,7 @@ class stack
  用來實作堆疊的基礎容器類型。 預設值是 `deque`*\<Type>* 類別。  
   
 ## <a name="remarks"></a>備註  
- 堆疊物件第一個樣板參數中約定之類別 **Type** 的項目，與 [value_type](#stack__value_type) 同義，且必須符合第二個樣板參數所約定之基礎容器類別 **Container** 中的項目類型。 **Type** 必須是可指派的，如此就能複製該類型的物件，並將值指派給該類型的變數。  
+ 堆疊物件第一個樣板參數中約定之類別 **Type** 的項目，與 [value_type](#value_type) 同義，且必須符合第二個樣板參數所約定之基礎容器類別 **Container** 中的項目類型。 **Type** 必須是可指派的，如此就能複製該類型的物件，並將值指派給該類型的變數。  
   
  堆疊適用的基礎容器類別包括 [deque](../standard-library/deque-class.md), [list 類別](../standard-library/list-class.md)及 [vector 類別](../standard-library/vector-class.md)，或任何其他支援 **back**、`push_back` 及 `pop_back` 作業的序列容器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。  
   
@@ -82,32 +83,32 @@ class stack
   
 |||  
 |-|-|  
-|[stack](#stack__stack)|建構空的，或是基底容器物件複本的 `stack`。|  
+|[stack](#stack)|建構空的，或是基底容器物件複本的 `stack`。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#stack__container_type)|提供基底容器以讓 `stack` 調整的類型。|  
-|[size_type](#stack__size_type)|不帶正負號的整數類型，可以表示 `stack` 中的項目數。|  
-|[value_type](#stack__value_type)|此類型代表儲存為 `stack` 項目的物件類型。|  
+|[container_type](#container_type)|提供基底容器以讓 `stack` 調整的類型。|  
+|[size_type](#size_type)|不帶正負號的整數類型，可以表示 `stack` 中的項目數。|  
+|[value_type](#value_type)|此類型代表儲存為 `stack` 項目的物件類型。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[empty](#stack__empty)|測試 `stack` 是否為空白。|  
-|[pop](#stack__pop)|從 `stack` 頂端移除項目。|  
-|[push](#stack__push)|將項目加入 `stack` 的頂端。|  
-|[size](#stack__size)|傳回 `stack` 中項目的數目。|  
-|[top](#stack__top)|傳回 `stack` 頂端項目的參考。|  
+|[empty](#empty)|測試 `stack` 是否為空白。|  
+|[pop](#pop)|從 `stack` 頂端移除項目。|  
+|[push](#push)|將項目加入 `stack` 的頂端。|  
+|[size](#size)|傳回 `stack` 中項目的數目。|  
+|[top](#top)|傳回 `stack` 頂端項目的參考。|  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<stack>  
   
  **命名空間：** std  
   
-##  <a name="stack__container_type"></a>  stack::container_type  
+##  <a name="container_type"></a>  stack::container_type  
  提供要配接之基底容器的類型。  
   
 ```  
@@ -120,9 +121,9 @@ typedef Container container_type;
  如需 `Container` 的詳細資訊，請參閱 [stack 類別](../standard-library/stack-class.md)主題的＜備註＞一節。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `container_type` 的範例，請參閱 [stack::stack](#stack__stack) 的範例。  
+  如需如何宣告及使用 `container_type` 的範例，請參閱 [stack::stack](#stack) 的範例。  
   
-##  <a name="stack__empty"></a>  stack::empty  
+##  <a name="empty"></a>  stack::empty  
  測試堆疊是否為空。  
   
 ```  
@@ -165,7 +166,7 @@ The stack s1 is not empty.
 The stack s2 is empty.  
 ```  
   
-##  <a name="stack__pop"></a>  stack::pop  
+##  <a name="pop"></a>  stack::pop  
  從堆疊頂端移除項目。  
   
 ```  
@@ -219,7 +220,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.  
 ```  
   
-##  <a name="stack__push"></a>  stack::push  
+##  <a name="push"></a>  stack::push  
  將項目加入至堆疊的最上方結尾。  
   
 ```  
@@ -265,7 +266,7 @@ The stack length is 3.
 The element at the top of the stack is 30.  
 ```  
   
-##  <a name="stack__size"></a>  stack::size  
+##  <a name="size"></a>  stack::size  
  傳回堆疊中的項目數。  
   
 ```  
@@ -304,7 +305,7 @@ The stack length is 1.
 The stack length is now 2.  
 ```  
   
-##  <a name="stack__size_type"></a>  stack::size_type  
+##  <a name="size_type"></a>  stack::size_type  
  不帶正負號的整數類型，可以表示堆疊中的項目數。  
   
 ```  
@@ -315,9 +316,9 @@ typedef typename Container::size_type size_type;
  此類型與由堆疊所配接的基底容器 `size_type` 同義。  
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#stack__size) 的範例。  
+  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例。  
   
-##  <a name="stack__stack"></a>  stack::stack  
+##  <a name="stack"></a>  stack::stack  
  建構空的堆疊，或是基底容器類別複本的堆疊。  
   
 ```  
@@ -369,7 +370,7 @@ int main( )
 The element at the top of stack vsi2 is 1.  
 ```  
   
-##  <a name="stack__top"></a>  stack::top  
+##  <a name="top"></a>  stack::top  
  傳回堆疊頂端項目的參考。  
   
 ```  
@@ -417,7 +418,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.  
 ```  
   
-##  <a name="stack__value_type"></a>  stack::value_type  
+##  <a name="value_type"></a>  stack::value_type  
  一個類型，代表堆疊中儲存為項目的物件類型。  
   
 ```  

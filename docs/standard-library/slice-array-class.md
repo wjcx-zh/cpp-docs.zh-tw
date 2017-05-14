@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a56db37d5684438bac79bbc2d0273fcfbc53a2c1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 97770a32fe661daf972753384d69b47badbcb7aa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="slicearray-class"></a>slice_array 類別
@@ -97,10 +98,10 @@ public:
   
  `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`)。  
   
- 您只能藉由撰寫 [va&#91;sl&#93;](../standard-library/valarray-class.md#valarray__operator_at) 格式的運算式，為 valarray **va** 的配量 **sl** 建構 **slice_array\<Type>** 物件。 slice_array 類別的成員函式接著會像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的項目序列會受到影響。 slice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即配量中第一個項目的索引、項目數，以及項目之間的距離。 從由 **va**[ `slice`(2, 5, 3)] 所宣告之 valarray **va** 所剪下的 slice_array，會選取含有 **va** 之索引 2、5、8、11 及 14 的項目。 索引必須有效，程序才能有效。  
+ 您只能藉由撰寫 [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式，為 valarray **va** 的配量 **sl** 建構 **slice_array\<Type>** 物件。 slice_array 類別的成員函式接著會像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的項目序列會受到影響。 slice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即配量中第一個項目的索引、項目數，以及項目之間的距離。 從由 **va**[ `slice`(2, 5, 3)] 所宣告之 valarray **va** 所剪下的 slice_array，會選取含有 **va** 之索引 2、5、8、11 及 14 的項目。 索引必須有效，程序才能有效。  
   
 ## <a name="example"></a>範例  
- 如需如何宣告及使用 slice_array 的範例，請參閱 [slice::slice](../standard-library/slice-class.md#slice__slice) 的範例。  
+ 如需如何宣告及使用 slice_array 的範例，請參閱 [slice::slice](../standard-library/slice-class.md#slice) 的範例。  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<valarray>  

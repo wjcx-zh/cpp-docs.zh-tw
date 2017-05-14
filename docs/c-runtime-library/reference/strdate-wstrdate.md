@@ -61,10 +61,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: eeb7effb83af15b5ff25f9c3e8dd5e61ca185217
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 108f846641f548f093719626ba08912c6b437f2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strdate-wstrdate"></a>_strdate、_wstrdate
@@ -147,9 +148,6 @@ int main()
 ```Output  
 OS date: 04/25/03  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::DateTime::Parse](https://msdn.microsoft.com/en-us/library/system.datetime.parse.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   

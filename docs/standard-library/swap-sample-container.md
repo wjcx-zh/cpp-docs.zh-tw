@@ -35,17 +35,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 8e9bced8766b9e856dbb10a0e5931a6640850fa4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 2caa31718c21b08dd4e008fce9c92e12ab5b93b8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;sample container&gt;)
 > [!NOTE]
 >  本主題位於 Visual C++ 文件內，可做為 C++ 標準程式庫中所用容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。  
   
- Executes ` left.`[swap](../standard-library/container-class-swap.md)(_*Right*)。  
+ Executes `left.`[swap](../standard-library/container-class-swap.md)`(right)`.  
   
 ## <a name="syntax"></a>語法  
   

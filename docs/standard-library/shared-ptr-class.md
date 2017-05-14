@@ -10,30 +10,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - shared_ptr
-- std::shared_ptr
 - memory/std::shared_ptr
-- std::shared_ptr::element_type
 - memory/std::shared_ptr::element_type
-- std::shared_ptr::get
 - memory/std::shared_ptr::get
-- std::shared_ptr::owner_before
 - memory/std::shared_ptr::owner_before
-- std::shared_ptr::reset
 - memory/std::shared_ptr::reset
-- std::shared_ptr::swap
 - memory/std::shared_ptr::swap
-- std::shared_ptr::unique
 - memory/std::shared_ptr::unique
-- std::shared_ptr::use_count
 - memory/std::shared_ptr::use_count
-- std::shared_ptr::operator boolean-type
 - memory/std::shared_ptr::operator boolean-type
-- std::shared_ptr::operator*
 - memory/std::shared_ptr::operator*
-- std::shared_ptr::operator=
 - memory/std::shared_ptr::operator=
-- std::shared_ptr::operator->
 - memory/std::shared_ptr::operator->
+- memory/std::shared_ptr::element_type
+- memory/std::shared_ptr::get
+- memory/std::shared_ptr::owner_before
+- memory/std::shared_ptr::reset
+- memory/std::shared_ptr::swap
+- memory/std::shared_ptr::unique
+- memory/std::shared_ptr::use_count
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -57,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: d3638923d92759e5bbc379b8f1da633931fd7254
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sharedptr-class"></a>shared_ptr 類別
@@ -105,7 +101,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 -   如果它是從指向該資源的 [weak_ptr 類別](../standard-library/weak-ptr-class.md)物件所建構，或者  
   
--   如果已將該資源的擁有權指派給它，不論是利用 [shared_ptr::operator=](#shared_ptr__operator_eq) 或藉由呼叫成員函式 [shared_ptr::reset](#shared_ptr__reset)。  
+-   如果已將該資源的擁有權指派給它，不論是利用 [shared_ptr::operator=](#op_eq) 或藉由呼叫成員函式 [shared_ptr::reset](#reset)。  
   
  擁有資源的 `shared_ptr` 物件也會共用控制區塊。 控制區塊會存放：  
   
@@ -152,36 +148,36 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
   
 |||  
 |-|-|  
-|[shared_ptr::shared_ptr](#shared_ptr__shared_ptr)|建構 `shared_ptr`。|  
-|[shared_ptr::~shared_ptr](#shared_ptr___dtorshared_ptr)|終結 `shared_ptr`。|  
+|[shared_ptr](#shared_ptr)|建構 `shared_ptr`。|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|終結 `shared_ptr`。|  
   
 ### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[shared_ptr::element_type](#shared_ptr__element_type)|元素的類型。|  
-|[shared_ptr::get](#shared_ptr__get)|取得擁有的資源位址。|  
-|[shared_ptr::owner_before](#shared_ptr__owner_before)|如果這個 `shared_ptr` 排序在所提供的指標之前 (或小於)，則傳回 true。|  
-|[shared_ptr::reset](#shared_ptr__reset)|取代所擁有的資源。|  
-|[shared_ptr::swap](#shared_ptr__swap)|交換兩個 `shared_ptr` 物件。|  
-|[shared_ptr::unique](#shared_ptr__unique)|測試擁有的資源是否唯一。|  
-|[shared_ptr::use_count](#shared_ptr__use_count)|計算資源擁有者的數目。|  
+|[element_type](#element_type)|元素的類型。|  
+|[get](#get)|取得擁有的資源位址。|  
+|[owner_before](#owner_before)|如果這個 `shared_ptr` 排序在所提供的指標之前 (或小於)，則傳回 true。|  
+|[reset](#reset)|取代所擁有的資源。|  
+|[swap](#swap)|交換兩個 `shared_ptr` 物件。|  
+|[unique](#unique)|測試擁有的資源是否唯一。|  
+|[use_count](#use_count)|計算資源擁有者的數目。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#shared_ptr__operator_boolean-type)|測試擁有的資源是否存在。|  
-|[shared_ptr::operator*](#shared_ptr__operator_star)|取得指定的值。|  
-|[shared_ptr::operator=](#shared_ptr__operator_eq)|取代所擁有的資源。|  
-|[shared_ptr::operator-&gt;](#shared_ptr__operator-_gt_)|取得指定值的指標。|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|測試擁有的資源是否存在。|  
+|[shared_ptr::operator*](#op_star)|取得指定的值。|  
+|[shared_ptr::operator=](#op_eq)|取代所擁有的資源。|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|取得指定值的指標。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<memory>  
   
  **命名空間：** std  
   
-##  <a name="a-namesharedptrelementtypea--sharedptrelementtype"></a><a name="shared_ptr__element_type"></a>  shared_ptr::element_type  
+##  <a name="element_type"></a>  shared_ptr::element_type  
  元素的類型。  
   
 ```  
@@ -215,7 +211,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptrgeta--sharedptrget"></a><a name="shared_ptr__get"></a>  shared_ptr::get  
+##  <a name="get"></a>  shared_ptr::get  
  取得擁有的資源位址。  
   
 ```  
@@ -252,7 +248,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5  
 ```  
   
-##  <a name="a-namesharedptroperatorboolean-typea--sharedptroperator-boolean-type"></a><a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
+##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
  測試擁有的資源是否存在。  
   
 ```  
@@ -290,7 +286,7 @@ int main()
 (bool)sp1 == true  
 ```  
   
-##  <a name="a-namesharedptroperatorstara--sharedptroperator"></a><a name="shared_ptr__operator_star"></a>  shared_ptr::operator*  
+##  <a name="op_star"></a>  shared_ptr::operator*  
  取得指定的值。  
   
 ```  
@@ -323,7 +319,7 @@ int main()
 *sp0 == 5  
 ```  
   
-##  <a name="a-namesharedptroperatoreqa--sharedptroperator"></a><a name="shared_ptr__operator_eq"></a>  shared_ptr::operator=  
+##  <a name="op_eq"></a>  shared_ptr::operator=  
  取代所擁有的資源。  
   
 ```  
@@ -385,7 +381,7 @@ int main()
 *sp0 == 10  
 ```  
   
-##  <a name="a-namesharedptroperator-gta--sharedptroperator-gt"></a><a name="shared_ptr__operator-_gt_"></a>  shared_ptr::operator-&gt;  
+##  <a name="shared_ptr__operator-_gt"></a>  shared_ptr::operator-&gt;  
  取得指定值的指標。  
   
 ```  
@@ -421,7 +417,7 @@ sp0->first == 1
 sp0->second == 2  
 ```  
   
-##  <a name="a-namesharedptrownerbeforea--sharedptrownerbefore"></a><a name="shared_ptr__owner_before"></a>  shared_ptr::owner_before  
+##  <a name="owner_before"></a>  shared_ptr::owner_before  
  如果這個 `shared_ptr` 排序在所提供的指標之前 (或小於)，則傳回 true。  
   
 ```  
@@ -439,7 +435,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
 ### <a name="remarks"></a>備註  
  如果 `*this` 為 `ordered before``ptr`，則樣板成員函式會傳回 true。  
   
-##  <a name="a-namesharedptrreseta--sharedptrreset"></a><a name="shared_ptr__reset"></a>  shared_ptr::reset  
+##  <a name="reset"></a>  shared_ptr::reset  
  取代所擁有的資源。  
   
 ```  
@@ -524,7 +520,7 @@ int main()
 *sp == 15  
 ```  
   
-##  <a name="a-namesharedptrsharedptra--sharedptrsharedptr"></a><a name="shared_ptr__shared_ptr"></a>  shared_ptr::shared_ptr  
+##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
  建構 `shared_ptr`。  
   
 ```  
@@ -657,7 +653,7 @@ int main()
 *sp5 == 15  
 ```  
   
-##  <a name="a-namesharedptrdtorsharedptra--sharedptrsharedptr"></a><a name="shared_ptr___dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
+##  <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
  終結 `shared_ptr`。  
   
 ```  
@@ -711,7 +707,7 @@ use count == 2
 use count == 1  
 ```  
   
-##  <a name="a-namesharedptrswapa--sharedptrswap"></a><a name="shared_ptr__swap"></a>  shared_ptr::swap  
+##  <a name="swap"></a>  shared_ptr::swap  
  交換兩個 `shared_ptr` 物件。  
   
 ```  
@@ -779,7 +775,7 @@ int main()
 *wp1 == 5  
 ```  
   
-##  <a name="a-namesharedptruniquea--sharedptrunique"></a><a name="shared_ptr__unique"></a>  shared_ptr::unique  
+##  <a name="unique"></a>  shared_ptr::unique  
  測試擁有的資源是否唯一。  
   
 ```  
@@ -825,7 +821,7 @@ sp1.unique() == true
 sp1.unique() == false  
 ```  
   
-##  <a name="a-namesharedptrusecounta--sharedptrusecount"></a><a name="shared_ptr__use_count"></a>  shared_ptr::use_count  
+##  <a name="use_count"></a>  shared_ptr::use_count  
  計算資源擁有者的數目。  
   
 ```  

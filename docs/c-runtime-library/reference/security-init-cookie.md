@@ -1,75 +1,89 @@
 ---
-title: "__security_init_cookie | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__security_init_cookie"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "security_init_cookie"
-  - "__security_init_cookie"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__security_init_cookie 函式"
-  - "全域安全性 cookie"
-  - "安全性 cookie [C++]"
-  - "security_init_cookie 函式"
+title: __security_init_cookie | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __security_init_cookie
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- security_init_cookie
+- __security_init_cookie
+dev_langs:
+- C++
+helpviewer_keywords:
+- security cookie [C++]
+- __security_init_cookie function
+- security_init_cookie function
+- global security cookie
 ms.assetid: 32119905-0897-4a1c-84ca-bffd16c9b2af
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# __security_init_cookie
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 6c1bf74e3b597026af02e2fdd4dc6cec327793dd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
+---
+# <a name="securityinitcookie"></a>__security_init_cookie
 初始化全域安全性 Cookie。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void __security_init_cookie(void);  
 ```  
   
-## 備註  
- 全域安全性 Cookie 用於在以 [\/GS \(緩衝區安全性檢查\)](../../build/reference/gs-buffer-security-check.md) 編譯的程式碼中，以及在使用例外處理的程式碼中，提供緩衝區滿溢保護。  在進入滿溢保護的函式時，此 Cookie 會放在堆疊上，然後結束時，在堆疊上的值會與全域 Cookie 進行比較。  它們之間的任何差異表示已發生緩衝區滿溢，並導致程式立即終止。  
+## <a name="remarks"></a>備註  
+ 全域安全性 Cookie 用於在以 [/GS (緩衝區安全性檢查)](../../build/reference/gs-buffer-security-check.md) 編譯的程式碼以及在使用例外狀況處理的程式碼中，提供緩衝區滿溢保護。 在進入滿溢保護的函式時，此 Cookie 會放在堆疊上，然後結束時，在堆疊上的值會與全域 Cookie 進行比較。 它們之間的任何差異表示已發生緩衝區滿溢，並導致程式立即終止。  
   
- 一般而言，`__security_init_cookie` 初始化時會由 CRT 呼叫它。  如果您略過 CRT 初始化 \(例如，如果您使用 [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) 指定進入點\)，則您必須自行呼叫 `__security_init_cookie`。  如果沒有呼叫 `__security_init_cookie`，會將全域安全性 Cookie 設定為預設值，且緩衝區滿溢保護會遭到入侵。  由於攻擊者可以利用此預設 Cookie 值擊敗緩衝區滿溢檢查，所以建議您定義您自己的進入點時務必呼叫 `__security_init_cookie`。  
+ 一般而言，`__security_init_cookie` 初始化時會由 CRT 呼叫它。 如果您略過 CRT 初始化 (例如，如果您使用 [/ENTRY](../../build/reference/entry-entry-point-symbol.md) 指定進入點)，則必須自行呼叫 `__security_init_cookie`。 如果沒有呼叫 `__security_init_cookie`，會將全域安全性 Cookie 設定為預設值，且緩衝區滿溢保護會遭到入侵。 由於攻擊者可以利用此預設 Cookie 值擊敗緩衝區滿溢檢查，所以建議您定義您自己的進入點時務必呼叫 `__security_init_cookie`。  
   
- 必須先呼叫`__security_init_cookie`，才能輸入任何滿溢保護的函式；否則將會偵測到假性的緩衝區滿溢。  如需詳細資訊，請參閱[C 執行階段錯誤 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)。  
+ 必須先呼叫`__security_init_cookie`，才能輸入任何滿溢保護的函式；否則將會偵測到假性的緩衝區滿溢。 如需詳細資訊，請參閱 [C 執行階段錯誤 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  請參閱 [C 執行階段錯誤 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md) 中的範例。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`__security_init_cookie`|\<process.h\>|  
+|-------------|---------------------|  
+|`__security_init_cookie`|\<process.h>|  
   
- `__security_init_cookie` 是標準的 C 執行階段程式庫的 Microsoft 擴充功能。  如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ `__security_init_cookie` 是標準的 C 執行階段程式庫的 Microsoft 擴充功能。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 對等用法  
- 不適用。這個函式只能從原生程式碼呼叫，而非 Managed 程式碼。  
-  
-## 請參閱  
- [深入了解編譯器安全性檢查](http://go.microsoft.com/fwlink/?linkid=7260)
+## <a name="see-also"></a>另請參閱  
+ [Compiler Security Checks In Depth](http://go.microsoft.com/fwlink/?linkid=7260) (深入了解編譯器安全性檢查)

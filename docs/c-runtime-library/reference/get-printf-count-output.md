@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9f45a13d9911e82b2b624689fa6b9e5eb4b20d97
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
+ms.openlocfilehash: 2645201f1c5dfd7c8f23e86b43ef360ef5cb6e91
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
@@ -70,7 +71,7 @@ int _get_printf_count_output();
  如果支援 `%n` 則為非零，如果 `%n` 不受支援則為 0。  
   
 ## <a name="remarks"></a>備註  
- 如果 `%n` 不受支援 (預設值)，在任何 `printf` 函式的格式字串中遭遇 `%n` 時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果 `%n` 啟用支援 (請參閱 [_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md))，則 `%n` 的行為會如 [printf 類型欄位字元](../../c-runtime-library/printf-type-field-characters.md)中所述。  
+ 如果 `%n` 不受支援 (預設值)，在任何 `printf` 函式的格式字串中遭遇 `%n` 時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果`%n`已啟用支援 (請參閱[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 然後`%n`中所述的行為[格式規格語法︰ printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="requirements"></a>需求  
   
@@ -83,5 +84,6 @@ int _get_printf_count_output();
 ## <a name="example"></a>範例  
  請參閱[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)的範例。  
   
-## <a name="net-framework-equivalent"></a>NET Framework 對等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。
+## <a name="see-also"></a>另請參閱  
+[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)  
+

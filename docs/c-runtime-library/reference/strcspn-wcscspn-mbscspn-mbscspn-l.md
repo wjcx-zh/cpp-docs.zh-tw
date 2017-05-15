@@ -1,68 +1,85 @@
 ---
 title: "strcspn、wcscspn、_mbscspn、_mbscspn_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_mbscspn_l"
-  - "wcscspn"
-  - "_mbscspn"
-  - "strcspn"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "strcspn"
-  - "_mbscspn"
-  - "wcscspn"
-  - "_ftcscspn"
-  - "_tcscspn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcscspn 函式"
-  - "_mbscspn 函式"
-  - "_mbscspn_l 函式"
-  - "_tcscspn 函式"
-  - "ftcscspn 函式"
-  - "mbscspn 函式"
-  - "mbscspn_l 函式"
-  - "strcspn 函式"
-  - "字串 [C++], 搜尋"
-  - "tcscspn 函式"
-  - "wcscspn 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _mbscspn_l
+- wcscspn
+- _mbscspn
+- strcspn
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- strcspn
+- _mbscspn
+- wcscspn
+- _ftcscspn
+- _tcscspn
+dev_langs:
+- C++
+helpviewer_keywords:
+- strings [C++], searching
+- ftcscspn function
+- strcspn function
+- _mbscspn function
+- mbscspn_l function
+- wcscspn function
+- tcscspn function
+- _ftcscspn function
+- _mbscspn_l function
+- mbscspn function
+- _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# strcspn、wcscspn、_mbscspn、_mbscspn_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: ace0d86645c213c37c76b93227557a38af6eb321
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-傳回字串中第一個相符於字元集的字元索引。  
+---
+# <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
+傳回字串中屬於字元集之第一個出現的字元索引。  
   
 > [!IMPORTANT]
->  `_mbschr` and `_mbschr_l`不能用於 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbschr` 和 `_mbschr_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_t strcspn(  
@@ -84,7 +101,7 @@ size_t _mbscspn_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `str`  
  以 Null 結束的搜尋字串。  
   
@@ -94,36 +111,36 @@ size_t _mbscspn_l(
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 這些函式傳回 `strCharSet` 中第一個字元在 `str` 中的索引。  如果在 `str` 中的字元都不是 `strCharSet`，則傳回值是 `str`的長度。  
+## <a name="return-value"></a>傳回值  
+ 這些函式會傳回 `str` 中位於 `strCharSet` 的第一個字元索引。 如果 `str` 中沒有位於 `strCharSet` 的字元，則傳回值會是 `str` 的長度。  
   
  未保留表示錯誤的傳回值。  
   
-## 備註  
- `wcscspn` 和 `_mbscspn` 是 `strcspn` 的寬字元和多位元組字元版本。  `wcscspn` 的引數是寬字元字串，而 `_mbscspn` 的引數和傳回值則是多位元組字元字串。  
+## <a name="remarks"></a>備註  
+ `wcscspn` 和 `_mbscspn` 是寬字元和多位元組字元版本的 `strcspn`。 `wcscspn` 的引數是寬字元字串，而 `_mbscspn` 的引數則是多位元組字元字串。  
   
- `_mbscspn` 會驗證其參數。  如果 `str` 或 `strCharSet` 為 null 指標，則叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EINVAL`。  `strcspn` 和 `wcscspn` 並不驗證它們的參數。  這三個函式其餘部分的運作相同。  
+ `_mbscspn` 會驗證其參數。 如果 `str` 或 `strCharSet` 為 null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EINVAL`。 `strcspn` 和 `wcscspn` 不會驗證其參數。 除此之外，這三個函式的行為相同。  
   
- 輸出值受地區設定的`LC_CTYPE` 分類設定所影響。如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 。  這些函式沒有以 `_l` 後綴的版本在這些地區相依的行為上使用目前的地區設定，而以 `_l` 後綴版本除了它們會使用傳入的地區設定參數之外運作相同。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcscspn`|`strcspn`|`_mbscspn`|`wcscspn`|  
 |`n/a`|`n/a`|`_mbscspn_l`|`n/a`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`strcspn`|\<string.h\>|  
-|`wcscspn`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbscspn`, `_mbscspn_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`strcspn`|\<string.h>|  
+|`wcscspn`|\<string.h> 或 \<wchar.h>|  
+|`_mbscspn`, `_mbscspn_l`|\<mbstring.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_strcspn.c  
@@ -148,22 +165,22 @@ int main( void )
 }  
 ```  
   
-  **strcspn\( "xyzbxz", "abc" \) \= 3**  
-**strcspn\( "xyzbxz", "xyz" \) \= 0**  
-**strcspn\( "xyzbxz", "no match" \) \= 6**  
-**strcspn\( "xyzbxz", "" \) \= 6**  
-**strcspn\( "", "abc" \) \= 0**  
-**strcspn\( "", "" \) \= 0**   
-## .NET Framework 對等用法  
- [System::String::Substring](https://msdn.microsoft.com/en-us/library/system.string.substring.aspx)  
+```Output  
+strcspn( "xyzbxz", "abc" ) = 3  
+strcspn( "xyzbxz", "xyz" ) = 0  
+strcspn( "xyzbxz", "no match" ) = 6  
+strcspn( "xyzbxz", "" ) = 6  
+strcspn( "", "abc" ) = 0  
+strcspn( "", "" ) = 0  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strncat、\_strncat\_l、wcsncat、\_wcsncat\_l、\_mbsncat、\_mbsncat\_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp、wcsncmp、\_mbsncmp、\_mbsncmp\_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy、\_strncpy\_l、wcsncpy、\_wcsncpy\_l、\_mbsncpy、\_mbsncpy\_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [\_strnicmp、\_wcsnicmp、\_mbsnicmp、\_strnicmp\_l、\_wcsnicmp\_l、\_mbsnicmp\_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、\_mbsrchr、\_mbsrchr\_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn、wcsspn、\_mbsspn、\_mbsspn\_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+ [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
+ [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
+ [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
+ [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
+ [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
+ [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)

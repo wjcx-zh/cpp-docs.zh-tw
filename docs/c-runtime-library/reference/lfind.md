@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4101348ee1344accb0a0117c997dceb1c79d0b40
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 7c597501d90e4816ffda3b0300109d3b51afc51c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="lfind"></a>_lfind
@@ -143,9 +144,6 @@ int main( )
 ```Output  
 Hello found  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Collections::ArrayList::Contains](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.contains.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   

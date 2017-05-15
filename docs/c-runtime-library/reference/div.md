@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9e1389e2d8623e7e96ef3ad6af8772ee7026ec76
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: e1e92656713a31d3057dfe180bd1cb4e819ceb5b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="div"></a>div
@@ -89,9 +90,9 @@ lldiv_t div(
  使用 `int` 類型的引數呼叫 `div` 會傳回 `div_t` 類型的結構，其中包括商數和餘數。 具有 `long` 類型引數之多載的傳回值為 `ldiv_t`。 `div_t` 和 `ldiv_t` 是在 STDLIB.H 中定義。  
   
 ## <a name="remarks"></a>備註  
- `div` 函式會將 `numer` 除以 `denom`，藉此計算商數和餘數。 [div_t](../../c-runtime-library/standard-types.md) 結構包含商數 `int``quot` 和餘數 `int``rem`。 商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。  
+ `div` 函式會將 `numer` 除以 `denom`，藉此計算商數和餘數。 [div_t](../../c-runtime-library/standard-types.md) 結構包含商數 `int quot` 和餘數 `int rem`。 商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。  
   
- 接受 `long` 或 `long long` 類型之引數的多載僅適用於 C++ 程式碼。 傳回型別 [ldiv_t](../../c-runtime-library/standard-types.md) 包含成員 `long``quot` 和 `long``rem`，而傳回型別 [lldiv_t](../../c-runtime-library/standard-types.md) 包含成員 `long long quot` 和 `long long rem`，其意義與 `div_t` 的成員相同。  
+ 接受 `long` 或 `long long` 類型之引數的多載僅適用於 C++ 程式碼。 傳回型別 [ldiv_t](../../c-runtime-library/standard-types.md) 包含成員 `long quot` 和 `long rem`，而傳回型別 [lldiv_t](../../c-runtime-library/standard-types.md) 包含成員 `long long quot` 和 `long long rem`，其意義與 `div_t` 的成員相同。  
   
 ## <a name="requirements"></a>需求  
   
@@ -138,9 +139,6 @@ int main( int argc, char *argv[] )
 x is 876, y is 13  
 The quotient is 67, and the remainder is 5  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

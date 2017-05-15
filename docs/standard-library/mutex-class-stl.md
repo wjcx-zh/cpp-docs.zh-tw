@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::mutex
+- mutex/std::mutex::mutex
+- mutex/std::mutex::lock
+- mutex/std::mutex::native_handle
+- mutex/std::mutex::try_lock
+- mutex/std::mutex::unlock
 dev_langs:
 - C++
 ms.assetid: 7999d055-f74f-4303-810f-8d3c9cde2f69
@@ -31,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ff3e7e71c678ffc9bdead79ec56ad94f8e297a16
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e08c7c13d1e182bc3299f11769eddb699b03ab3f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="mutex-class-c-standard-library"></a>mutex 類別 (C++ 標準程式庫)
@@ -52,24 +58,24 @@ class mutex;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[mutex::mutex 建構函式](#mutex__mutex_constructor)|建構 `mutex` 物件。|  
-|[mutex::~mutex 解構函式](#mutex___dtormutex_destructor)|釋放 `mutex` 物件使用的所有資源。|  
+|[mutex](#mutex)|建構 `mutex` 物件。|  
+|[mutex::~mutex 解構函式](#dtormutex_destructor)|釋放 `mutex` 物件使用的所有資源。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[mutex::lock 方法](#mutex__lock_method)|封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。|  
-|[mutex::native_handle 方法](#mutex__native_handle_method)|傳回表示 mutex 控制代碼的實作特定類型。|  
-|[mutex::try_lock 方法](#mutex__try_lock_method)|嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。|  
-|[mutex::unlock 方法](#mutex__unlock_method)|釋放 `mutex` 的擁有權。|  
+|[lock](#lock)|封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。|  
+|[native_handle](#native_handle)|傳回表示 mutex 控制代碼的實作特定類型。|  
+|[try_lock](#try_lock)|嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。|  
+|[unlock](#unlock)|釋放 `mutex` 的擁有權。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**mutex  
+ **標頭︰** \<mutex >  
   
  **命名空間：** std  
   
-##  <a name="a-namemutexlockmethoda--mutexlock-method"></a><a name="mutex__lock_method"></a>  mutex::lock 方法  
+##  <a name="lock"></a>mutex:: lock
  封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。  
   
 ```cpp  
@@ -79,14 +85,14 @@ void lock();
 ### <a name="remarks"></a>備註  
  如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
   
-##  <a name="a-namemutexmutexconstructora--mutexmutex-constructor"></a><a name="mutex__mutex_constructor"></a>  mutex::mutex 建構函式  
+##  <a name="mutex"></a>  mutex::mutex 建構函式  
  建構未鎖定的 `mutex` 物件。  
   
 ```cpp  
 constexpr mutex() noexcept;
 ```  
   
-##  <a name="a-namemutexdtormutexdestructora--mutexmutex-destructor"></a><a name="mutex___dtormutex_destructor"></a>  mutex::~mutex 解構函式  
+##  <a name="dtormutex_destructor"></a>  mutex::~mutex 解構函式  
  釋出 `mutex` 物件所使用的任何資源。  
   
 ```cpp  
@@ -96,7 +102,7 @@ constexpr mutex() noexcept;
 ### <a name="remarks"></a>備註  
  如果執行解構函式時物件已鎖定，則行為是未定義的。  
   
-##  <a name="a-namemutexnativehandlemethoda--mutexnativehandle-method"></a><a name="mutex__native_handle_method"></a>  mutex::native_handle 方法  
+##  <a name="native_handle"></a>mutex:: native_handle
  傳回表示 mutex 控制代碼的實作特定類型。 您可以利用實作特定的方式來使用 mutex 控制代碼。  
   
 ```
@@ -106,7 +112,7 @@ native_handle_type native_handle();
 ### <a name="return-value"></a>傳回值  
  `native_handle_type` 會定義為 `Concurrency::critical_section *`，這會轉換為 `void *`。  
   
-##  <a name="a-namemutextrylockmethoda--mutextrylock-method"></a><a name="mutex__try_lock_method"></a>  mutex::try_lock 方法  
+##  <a name="try_lock"></a>mutex:: try_lock
  嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。  
   
 ```cpp  
@@ -119,7 +125,7 @@ bool try_lock();
 ### <a name="remarks"></a>備註  
  如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
   
-##  <a name="a-namemutexunlockmethoda--mutexunlock-method"></a><a name="mutex__unlock_method"></a>  mutex::unlock 方法  
+##  <a name="unlock"></a>mutex:: unlock
  釋放 `mutex` 的擁有權。  
   
 ```cpp  

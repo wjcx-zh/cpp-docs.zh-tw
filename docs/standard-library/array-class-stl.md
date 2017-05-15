@@ -10,70 +10,67 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - array
-- std::array
 - array/std::array
-- std::array::const_iterator
 - array/std::array::const_iterator
-- std::array::const_pointer
 - array/std::array::const_pointer
-- std::array::const_reference
 - array/std::array::const_reference
-- std::array::const_reverse_iterator
 - array/std::array::const_reverse_iterator
-- std::array::difference_type
 - array/std::array::difference_type
-- std::array::iterator
 - array/std::array::iterator
-- std::array::pointer
 - array/std::array::pointer
-- std::array::reference
 - array/std::array::reference
-- std::array::reverse_iterator
 - array/std::array::reverse_iterator
-- std::array::size_type
 - array/std::array::size_type
-- std::array::value_type
 - array/std::array::value_type
-- std::array::assign
 - array/std::array::assign
-- std::array::at
 - array/std::array::at
-- std::array::back
 - array/std::array::back
-- std::array::begin
 - array/std::array::begin
-- std::array::cbegin
 - array/std::array::cbegin
-- std::array::cend
 - array/std::array::cend
-- std::array::crbegin
 - array/std::array::crbegin
-- std::array::crend
 - array/std::array::crend
-- std::array::data
 - array/std::array::data
-- std::array::empty
 - array/std::array::empty
-- std::array::end
 - array/std::array::end
-- std::array::fill
 - array/std::array::fill
-- std::array::front
 - array/std::array::front
-- std::array::max_size
 - array/std::array::max_size
-- std::array::rbegin
 - array/std::array::rbegin
-- std::array::rend
 - array/std::array::rend
-- std::array::size
 - array/std::array::size
-- std::array::swap
 - array/std::array::swap
-- std::array::operator=
 - array/std::array::operator=
-- std::array::operator[]
 - array/std::array::operator[]
+- array/std::array::const_iterator
+- array/std::array::const_pointer
+- array/std::array::const_reference
+- array/std::array::const_reverse_iterator
+- array/std::array::difference_type
+- array/std::array::iterator
+- array/std::array::pointer
+- array/std::array::reference
+- array/std::array::reverse_iterator
+- array/std::array::size_type
+- array/std::array::value_type
+- array/std::array::assign
+- array/std::array::at
+- array/std::array::back
+- array/std::array::begin
+- array/std::array::cbegin
+- array/std::array::cend
+- array/std::array::crbegin
+- array/std::array::crend
+- array/std::array::data
+- array/std::array::empty
+- array/std::array::end
+- array/std::array::fill
+- array/std::array::front
+- array/std::array::max_size
+- array/std::array::rbegin
+- array/std::array::rend
+- array/std::array::size
+- array/std::array::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -97,10 +94,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 0e5e79e423d268da61ac9062edd099330f742b59
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9ac4c0becd32ca50e4f56fb38218b4c69cc4d0bd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
@@ -125,47 +123,47 @@ class array;
   
 |||  
 |-|-|  
-|類型定義|描述|  
-|[array::const_iterator](#array__const_iterator)|用於受控制序列的常數迭代器類型。|  
-|[array::const_pointer](#array__const_pointer)|項目的常數指標類型。|  
-|[array::const_reference](#array__const_reference)|項目的常數參考類型。|  
-|[array::const_reverse_iterator](#array__const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|  
-|[array::difference_type](#array__difference_type)|兩個項目之間帶正負號距離的類型。|  
-|[array::iterator](#array__iterator)|受控制序列之迭代器的類型。|  
-|[array::pointer](#array__pointer)|項目的指標類型。|  
-|[array::reference](#array__reference)|項目的參考類型。|  
-|[array::reverse_iterator](#array__reverse_iterator)|受控制序列的反向迭代器類型。|  
-|[array::size_type](#array__size_type)|兩個項目之間不帶正負號距離的類型。|  
-|[array::value_type](#array__value_type)|元素的類型。|  
+|類型定義|說明|  
+|[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
+|[const_pointer](#const_pointer)|項目的常數指標類型。|  
+|[const_reference](#const_reference)|項目的常數參考類型。|  
+|[const_reverse_iterator](#const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|  
+|[difference_type](#difference_type)|兩個項目之間帶正負號距離的類型。|  
+|[iterator](#iterator)|受控制序列之迭代器的類型。|  
+|[pointer](#pointer)|項目的指標類型。|  
+|[reference](#reference)|項目的參考類型。|  
+|[reverse_iterator](#reverse_iterator)|受控制序列的反向迭代器類型。|  
+|[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|  
+|[value_type](#value_type)|元素的類型。|  
   
 |||  
 |-|-|  
 |成員函式|說明|  
-|[array::array](#array__array)|建構陣列物件。|  
-|[array::assign](#array__assign)|取代所有項目。|  
-|[array::at](#array__at)|存取指定位置的項目。|  
-|[array::back](#array__back)|存取最後一個項目。|  
-|[array::begin](#array__begin)|指定受控制序列的開頭。|  
-|[array::cbegin](#array__cbegin)|將隨機存取常數迭代器傳回陣列中的第一個項目。|  
-|[array::cend](#array__cend)|傳回隨機存取指向陣列結尾之後一個項目的常數迭代器。|  
-|[array::crbegin](#array__crbegin)|將常數迭代器傳回反向陣列中的第一個項目。|  
-|[array::crend](#array__crend)|將常數迭代器傳回反向陣列的結尾。|  
-|[array::data](#array__data)|取得第一個項目的位址。|  
-|[array::empty](#array__empty)|測試項目是否存在。|  
-|[array::end](#array__end)|指定受控制序列的結尾。|  
-|[array::fill](#array__fill)|取代所有具有指定值的項目。|  
-|[array::front](#array__front)|存取第一個項目。|  
-|[array::max_size](#array__max_size)|計算元素的數目。|  
-|[array::rbegin](#array__rbegin)|指定反向受控制序列的開頭。|  
-|[array::rend](#array__rend)|指定反向受控制序列的結尾。|  
-|[array::size](#array__size)|計算元素的數目。|  
-|[array::swap](#array__swap)|交換兩個容器的內容。|  
+|[array](#array)|建構陣列物件。|  
+|[assign](#assign)|取代所有項目。|  
+|[at](#at)|存取指定位置的項目。|  
+|[back](#back)|存取最後一個項目。|  
+|[begin](#begin)|指定受控制序列的開頭。|  
+|[cbegin](#cbegin)|將隨機存取常數迭代器傳回陣列中的第一個項目。|  
+|[cend](#cend)|傳回隨機存取指向陣列結尾之後一個項目的常數迭代器。|  
+|[crbegin](#crbegin)|將常數迭代器傳回反向陣列中的第一個項目。|  
+|[crend](#crend)|將常數迭代器傳回反向陣列的結尾。|  
+|[data](#data)|取得第一個項目的位址。|  
+|[empty](#empty)|測試項目是否存在。|  
+|[end](#end)|指定受控制序列的結尾。|  
+|[fill](#fill)|取代所有具有指定值的項目。|  
+|[front](#front)|存取第一個項目。|  
+|[max_size](#max_size)|計算元素的數目。|  
+|[rbegin](#rbegin)|指定反向受控制序列的開頭。|  
+|[rend](#rend)|指定反向受控制序列的結尾。|  
+|[size](#size)|計算元素的數目。|  
+|[swap](#swap)|交換兩個容器的內容。|  
   
 |||  
 |-|-|  
 |運算子|描述|  
-|[array::operator=](#array__operator_eq)|取代受控制的序列。|  
-|[array::operator[]](#array__operator_at)|存取指定位置的項目。|  
+|[array::operator=](#op_eq)|取代受控制的序列。|  
+|[array::operator[]](#op_at)|存取指定位置的項目。|  
   
 ## <a name="remarks"></a>備註  
  該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如：  
@@ -181,7 +179,7 @@ array<int, 4> ai = { 1, 2, 3 };
   
  **命名空間：** std  
   
-##  <a name="array__array"></a> array::array  
+##  <a name="array"></a> array::array  
  建構陣列物件。  
   
 ```  
@@ -236,8 +234,8 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__assign"></a> array::assign  
-在 C++11 中已淘汰，已取代為 [fill](#array__fill)。 取代所有項目。  
+##  <a name="assign"></a> array::assign  
+在 C++11 中已淘汰，已取代為 [fill](#fill)。 取代所有項目。  
   
 ```  
 void assign(const Ty& val);
@@ -288,7 +286,7 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="array__at"></a> array::at  
+##  <a name="at"></a> array::at  
  存取指定位置的項目。  
   
 ```  
@@ -333,7 +331,7 @@ int main()
   
 ```  
   
-##  <a name="array__back"></a> array::back  
+##  <a name="back"></a> array::back  
  存取最後一個項目。  
   
 ```  
@@ -378,7 +376,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__begin"></a> array::begin  
+##  <a name="begin"></a> array::begin  
  指定受控制序列的開頭。  
   
 ```  
@@ -423,7 +421,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__cbegin"></a> array::cbegin  
+##  <a name="cbegin"></a> array::cbegin  
  傳回 `const` 迭代器，為範圍中的第一個項目定址。  
   
 ```  
@@ -446,7 +444,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="array__cend"></a> array::cend  
+##  <a name="cend"></a> array::cend  
  傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。  
   
 ```  
@@ -459,7 +457,7 @@ const_iterator cend() const noexcept;
 ### <a name="remarks"></a>備註  
  `cend` 用來測試迭代器是否已超過其範圍結尾。  
   
- 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 且可修改的任何種類 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.end();
@@ -471,7 +469,7 @@ auto i2 = Container.cend();
   
  `cend` 所傳回的值不應該取值。  
   
-##  <a name="array__const_iterator"></a> array::const_iterator  
+##  <a name="const_iterator"></a> array::const_iterator  
  用於受控制序列的常數迭代器類型。  
   
 ```  
@@ -522,7 +520,7 @@ it2: 0
   
 ```  
   
-##  <a name="array__const_pointer"></a> array::const_pointer  
+##  <a name="const_pointer"></a> array::const_pointer  
  項目的常數指標類型。  
   
 ```  
@@ -566,7 +564,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__const_reference"></a> array::const_reference  
+##  <a name="const_reference"></a> array::const_reference  
  項目的常數參考類型。  
   
 ```  
@@ -610,7 +608,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__const_reverse_iterator"></a> array::const_reverse_iterator  
+##  <a name="const_reverse_iterator"></a> array::const_reverse_iterator  
  用於受控制序列的常數反向迭代器類型。  
   
 ```  
@@ -654,7 +652,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__crbegin"></a> array::crbegin  
+##  <a name="crbegin"></a> array::crbegin  
  將常數迭代器傳回反向陣列中的第一個項目。  
   
 ```  
@@ -697,7 +695,7 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="array__crend"></a> array::crend  
+##  <a name="crend"></a> array::crend  
  傳回 const 迭代器，其定址反轉陣列中最後一個元素的下一個位置。  
   
 ```  
@@ -708,7 +706,7 @@ const_reverse_iterator crend() const noexcept;
  const 反轉隨機存取迭代器，其定址反轉陣列中最後一個元素的下一個位置 (此位置在未反轉的陣列中優先於第一個元素)。  
   
 ### <a name="remarks"></a>備註  
- `crend` 用於反向陣列，就如同 [array::cend](#array__cend) 用於陣列一樣。  
+ `crend` 用於反向陣列，就如同 [array::cend](#cend) 用於陣列一樣。  
   
  有 `crend` 的傳回值時 (適當遞減)，無法修改陣列物件。  
   
@@ -740,7 +738,7 @@ int main( )
 1  
 ```  
   
-##  <a name="array__data"></a> array::data  
+##  <a name="data"></a> array::data  
  取得第一個項目的位址。  
   
 ```  
@@ -786,7 +784,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__difference_type"></a> array::difference_type  
+##  <a name="difference_type"></a> array::difference_type  
  兩個項目之間帶正負號距離的類型。  
   
 ```  
@@ -830,7 +828,7 @@ int main()
 -4  
 ```  
   
-##  <a name="array__empty"></a> array::empty  
+##  <a name="empty"></a> array::empty  
  測試項目是否不存在。  
   
 ```  
@@ -880,7 +878,7 @@ false
 true  
 ```  
   
-##  <a name="array__end"></a> array::end  
+##  <a name="end"></a> array::end  
  指定受控制序列的結尾。  
   
 ```  
@@ -926,7 +924,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__fill"></a> array::fill  
+##  <a name="fill"></a> array::fill  
  清除陣列，並將指定的項目複製到空陣列。  
   
 ```  
@@ -970,7 +968,7 @@ int main( )
 }  
 ```  
   
-##  <a name="array__front"></a> array::front  
+##  <a name="front"></a> array::front  
  存取第一個項目。  
   
 ```  
@@ -1015,7 +1013,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__iterator"></a> array::iterator  
+##  <a name="iterator"></a> array::iterator  
  受控制序列之迭代器的類型。  
   
 ```  
@@ -1066,7 +1064,7 @@ it2: 0
   
 ```  
   
-##  <a name="array__max_size"></a> array::max_size  
+##  <a name="max_size"></a> array::max_size  
  計算元素的數目。  
   
 ```  
@@ -1109,7 +1107,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__operator_at"></a> array::operator[]  
+##  <a name="op_at"></a> array::operator[]  
  存取指定位置的項目。  
   
 ```  
@@ -1125,7 +1123,7 @@ constexpr const_reference operator[](size_type off) const;
 ### <a name="remarks"></a>備註  
  成員函式會傳回位於 `off` 位置的受控制序列項目的參考。 如果位置不正確，就不會定義行為。  
   
-也會提供非成員 [get](array-functions.md#get_function) 函式，以取得 `array` 之元素的參考。  
+也會提供非成員 [get](array-functions.md#get) 函式，以取得 `array` 之元素的參考。  
   
 ### <a name="example"></a>範例  
   
@@ -1161,7 +1159,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="array__operator_eq"></a> array::operator=  
+##  <a name="op_eq"></a> array::operator=  
  取代受控制的序列。  
   
 ```  
@@ -1213,7 +1211,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__pointer"></a> array::pointer  
+##  <a name="pointer"></a> array::pointer  
  項目的指標類型。  
   
 ```  
@@ -1257,7 +1255,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__rbegin"></a> array::rbegin  
+##  <a name="rbegin"></a> array::rbegin  
  指定反向受控制序列的開頭。  
   
 ```  
@@ -1302,7 +1300,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__reference"></a> array::reference  
+##  <a name="reference"></a> array::reference  
  項目的參考類型。  
   
 ```  
@@ -1346,7 +1344,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__rend"></a> array::rend  
+##  <a name="rend"></a> array::rend  
  指定反向受控制序列的結尾。  
   
 ```  
@@ -1391,7 +1389,7 @@ int main()
 0  
 ```  
   
-##  <a name="array__reverse_iterator"></a> array::reverse_iterator  
+##  <a name="reverse_iterator"></a> array::reverse_iterator  
  受控制序列的反向迭代器類型。  
   
 ```  
@@ -1435,7 +1433,7 @@ int main()
 3  
 ```  
   
-##  <a name="array__size"></a> array::size  
+##  <a name="size"></a> array::size  
  計算元素的數目。  
   
 ```  
@@ -1478,7 +1476,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__size_type"></a> array::size_type  
+##  <a name="size_type"></a> array::size_type  
  兩個元素之間不帶正負號距離的類型。  
   
 ```  
@@ -1522,7 +1520,7 @@ int main()
 4  
 ```  
   
-##  <a name="array__swap"></a> array::swap  
+##  <a name="swap"></a> array::swap  
 將這個陣列的內容與另一個陣列交換。  
   
 ```  
@@ -1536,7 +1534,7 @@ void swap(array& right);
 ### <a name="remarks"></a>備註  
 成員函式會交換 `*this` 和 `right`之間受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。  
 
-也會有非成員 [swap](array-functions.md#swap_function) 函式可用來交換兩個 `array` 執行個體。  
+也會有非成員 [swap](array-functions.md#swap) 函式可用來交換兩個 `array` 執行個體。  
   
 ### <a name="example"></a>範例  
   
@@ -1585,7 +1583,7 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="array__value_type"></a> array::value_type  
+##  <a name="value_type"></a> array::value_type  
  元素的類型。  
   
 ```  

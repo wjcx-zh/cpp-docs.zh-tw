@@ -10,6 +10,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - mutex/std::timed_mutex
+- mutex/std::timed_mutex::timed_mutex
+- mutex/std::timed_mutex::lock
+- mutex/std::timed_mutex::try_lock
+- mutex/std::timed_mutex::try_lock_for
+- mutex/std::timed_mutex::try_lock_until
+- mutex/std::timed_mutex::unlock
 dev_langs:
 - C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
@@ -31,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 72861fe588cf038743d5c44f22a420e690f63993
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 40622e83235c4df32ec9afd25905ffdde2b97be7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="timedmutex-class"></a>timed_mutex 類別
@@ -52,25 +59,25 @@ class timed_mutex;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[timed_mutex::timed_mutex 建構函式](#timed_mutex__timed_mutex_constructor)|建構未鎖定的 `timed_mutex` 物件。|  
-|[timed_mutex::~timed_mutex 解構函式](#timed_mutex___dtortimed_mutex_destructor)|釋放 `timed_mutex` 物件使用的任何資源。|  
+|[timed_mutex](#timed_mutex)|建構未鎖定的 `timed_mutex` 物件。|  
+|[timed_mutex::~timed_mutex 解構函式](#dtortimed_mutex_destructor)|釋放 `timed_mutex` 物件使用的任何資源。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[timed_mutex::lock 方法](#timed_mutex__lock_method)|封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。|  
-|[timed_mutex::try_lock 方法](#timed_mutex__try_lock_method)|嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。|  
-|[timed_mutex::try_lock_for 方法](#timed_mutex__try_lock_for_method)|嘗試取得所指定時間間隔內 `mutex` 的所有權。|  
-|[timed_mutex::try_lock_until 方法](#timed_mutex__try_lock_until_method)|嘗試取得所指定時間間隔之前 `mutex` 的所有權。|  
-|[timed_mutex::unlock 方法](#timed_mutex__unlock_method)|釋放 `mutex` 的擁有權。|  
+|[lock](#lock)|封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。|  
+|[try_lock](#try_lock)|嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。|  
+|[try_lock_for](#try_lock_for)|嘗試取得所指定時間間隔內 `mutex` 的所有權。|  
+|[try_lock_until](#try_lock_until)|嘗試取得所指定時間間隔之前 `mutex` 的所有權。|  
+|[unlock](#unlock)|釋放 `mutex` 的擁有權。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**mutex  
+ **標頭︰** \<mutex >  
   
  **命名空間：** std  
   
-##  <a name="a-nametimedmutexlockmethoda--timedmutexlock-method"></a><a name="timed_mutex__lock_method"></a>  timed_mutex::lock 方法  
+##  <a name="lock"></a>timed_mutex:: lock
  封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。  
   
 ```cpp  
@@ -80,14 +87,14 @@ void lock();
 ### <a name="remarks"></a>備註  
  如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
   
-##  <a name="a-nametimedmutextimedmutexconstructora--timedmutextimedmutex-constructor"></a><a name="timed_mutex__timed_mutex_constructor"></a>  timed_mutex::timed_mutex 建構函式  
+##  <a name="timed_mutex"></a>  timed_mutex::timed_mutex 建構函式  
  建構未鎖定的 `timed_mutex` 物件。  
   
 ```cpp  
 timed_mutex();
 ```  
   
-##  <a name="a-nametimedmutexdtortimedmutexdestructora--timedmutextimedmutex-destructor"></a><a name="timed_mutex___dtortimed_mutex_destructor"></a>  timed_mutex::~timed_mutex 解構函式  
+##  <a name="dtortimed_mutex_destructor"></a>  timed_mutex::~timed_mutex 解構函式  
  釋放 `mutex` 物件使用的任何資源。  
   
 ```cpp  
@@ -97,7 +104,7 @@ timed_mutex();
 ### <a name="remarks"></a>備註  
  如果執行解構函式時物件已鎖定，則行為是未定義的。  
   
-##  <a name="a-nametimedmutextrylockmethoda--timedmutextrylock-method"></a><a name="timed_mutex__try_lock_method"></a>  timed_mutex::try_lock 方法  
+##  <a name="try_lock"></a>timed_mutex:: try_lock
  嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。  
   
 ```cpp  
@@ -110,7 +117,7 @@ bool try_lock();
 ### <a name="remarks"></a>備註  
  如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
   
-##  <a name="a-nametimedmutextrylockformethoda--timedmutextrylockfor-method"></a><a name="timed_mutex__try_lock_for_method"></a>  timed_mutex::try_lock_for 方法  
+##  <a name="try_lock_for"></a>timed_mutex:: try_lock_for
  嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。  
   
 ```cpp  
@@ -128,7 +135,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>備註  
  如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
   
-##  <a name="a-nametimedmutextrylockuntilmethoda--timedmutextrylockuntil-method"></a><a name="timed_mutex__try_lock_until_method"></a>  timed_mutex::try_lock_until 方法  
+##  <a name="try_lock_until"></a>timed_mutex:: try_lock_until
  嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。  
   
 ```cpp  
@@ -148,7 +155,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="remarks"></a>備註  
  如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。  
   
-##  <a name="a-nametimedmutexunlockmethoda--timedmutexunlock-method"></a><a name="timed_mutex__unlock_method"></a>  timed_mutex::unlock 方法  
+##  <a name="unlock"></a>timed_mutex:: unlock
  釋放 `mutex` 的擁有權。  
   
 ```cpp  

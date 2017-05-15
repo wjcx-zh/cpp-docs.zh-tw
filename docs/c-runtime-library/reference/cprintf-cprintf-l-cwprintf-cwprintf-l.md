@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d761621d23ab97d951199e7790e71f224394f92c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
@@ -88,22 +89,18 @@ ms.lasthandoff: 02/24/2017
   
 ```  
 int _cprintf(   
-   const char * format [,   
-   argument] ...   
+   const char * format [, argument_list]  
 );  
-int _cprintf_l(   
+int _cprintf_l(  
    const char * format,  
-   locale_t locale [,  
-   argument] …   
+   locale_t locale [, argument_list]  
 );  
 int _cwprintf(  
-   const wchar * format [,   
-   argument] …  
+   const wchar * format [, argument_list]  
 );  
 int _cwprintf_l(  
    const wchar * format,  
-   locale_t locale [,   
-   argument] …  
+   locale_t locale [, argument_list]  
 );  
 ```  
   
@@ -111,8 +108,8 @@ int _cwprintf_l(
  `format`  
  格式控制字串。  
   
- `argument`  
- 選擇性參數。  
+ `argument_list`  
+ 格式字串的選擇性參數。  
   
  `locale`  
  要使用的地區設定。  
@@ -121,9 +118,9 @@ int _cwprintf_l(
  已列印的字元數。  
   
 ## <a name="remarks"></a>備註  
- 這些函式會使用 `_putch` 函式 (`_putwch` 用於 `_cwprintf`) 來輸出字元，直接格式化一系列的字元和值，並將其列印到主控台。 每個 `argument` (如果有的話) 是根據 `format`中的對應格式規格進行轉換和輸出。 此格式具有與 [printf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) 函式的 `format` 參數相同的形式和功能。 不同於 `fprintf`、`printf` 和 `sprintf` 函式，`_cprintf` 和 `_cwprintf` 在輸出時不會將換行字元轉譯為歸位字元-換行字元 (CR-LF) 組合。  
+ 這些函式會使用 `_putch` 函式 (`_putwch` 用於 `_cwprintf`) 來輸出字元，直接格式化一系列的字元和值，並將其列印到主控台。 在每個引數`argument_list`（如果有的話） 會轉換和輸出對應格式規格中根據`format`。 `format`引數會使用[格式規格語法 printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 不同於`fprintf`， `printf`，和`sprintf`函式，兩者都不`_cprintf`也`_cwprintf`換行字元轉譯為歸位字元-換 (CR-LF) 組合輸出時。  
   
- 一項重要的差異在於 `_cwprintf` 會在 Windows NT 中使用時顯示 Unicode 字元。 不同於 `_cprintf`，`_cwprintf` 會使用目前的主控台地區設定。  
+ 重要的差異在於`_cwprintf`會顯示在 Windows 中使用時的 Unicode 字元。 不同於 `_cprintf`，`_cwprintf` 會使用目前的主控台地區設定。  
   
  這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定參數，而不使用目前的地區設定。  
   
@@ -175,9 +172,6 @@ int main( void )
 ```Output  
 -16  001d  62511  A Test  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   

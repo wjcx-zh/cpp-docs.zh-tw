@@ -1,101 +1,61 @@
 ---
 title: "indirect_array 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.indirect_array"
-  - "valarray/std::indirect_array"
-  - "std::indirect_array"
-  - "indirect_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "indirect_array 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- valarray/std::indirect_array
+- indirect_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# indirect_array 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 7a5b105b9c812d81dfbbe5905bb593bba1b98ef8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
-支援物件是 valarrays 的子集會在子集陣列之間的作業的內部，其他的樣板類別透過指定之父代的索引子集定義 valarray。  
+---
+# <a name="indirectarray-class"></a>indirect_array 類別
+對於指定父代 valarray 索引子集而定義的子集陣列，可藉由提供這些子集之間的作業，支援 valarray 子集物件的內部、輔助的範本類別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
-template<class Type>  
-   class indirect_array {  
-public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
   
-   void operator=(  
-      const Type& x  
-   ) const;  
   
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
+## <a name="remarks"></a>備註  
+ 此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之 **va** 物件的參考與 **valarray<size_t>** 類別的 **xa** 物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的元素序列。  
   
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
+ 您只能藉由撰寫 **va[xa]** 格式的運算式來建構 **indirect_array\<Type>** 物件。 indirect_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。  
   
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
+ 此序列是由 **xa.**[size](../standard-library/valarray-class.md#size) 元素所構成，其中元素 `I` 會變成 **va** 內的索引 **xa**[ `I`]。  
   
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-// The rest is private or implementation defined  
-}  
-```  
-  
-## 備註  
- 類別會描述與物件類別 **valarray\<size\_t\>xa** 一起儲存物件類別 [valarray](../standard-library/valarray-class.md)**\<Type\>va** 的參考，，描述項目序列 **valarray\<Type\>** 物件中選取的物件。  
-  
- 您可以撰寫表單 **va\[xa\]**的運算式只建構 **indirect\_array\<Type\>** 物件。  indirect\_array 類別的成員函式接著會與對應的函式簽章定義為 **valarray\<Type\>**，不過，選取的項目序列只會受到影響。  
-  
- **xa.**序列包含[大小](../Topic/valarray::size.md) 項目， `I` 成為索引 **xa**`I`\[\] 在 **va**內。  
-  
-## 範例：  
+## <a name="example"></a>範例：  
   
 ```  
 // indirect_array.cpp  
@@ -134,17 +94,19 @@ int main( )
 }  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
-The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).  
-The modified operand valarray is:  ( 0 -1 10 -1 10 -1 10 -1 8 -1 ).  
+The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
+The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).  
 ```  
   
-## 需求  
- **標頭：** \<valarray\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<valarray>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

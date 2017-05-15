@@ -35,10 +35,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 7f32ee8a40da16ac919f0c3d8be05573f7b78c3a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bfe398bf4829d6ef86543890bea28a351bcb4a3d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this 類別
@@ -67,14 +68,14 @@ protected:
   
  建構函式、解構函式和指派運算子會受到保護以防止意外誤用。 範本引數類型 `Ty` 必須是衍生類別的類型。  
   
- 如需使用方式的範例，請參閱 [enable_shared_from_this::shared_from_this](#enable_shared_from_this__shared_from_this)。  
+ 如需使用方式的範例，請參閱 [enable_shared_from_this::shared_from_this](#shared_from_this)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<memory>  
   
  **命名空間：** std  
   
-##  <a name="enable_shared_from_this__shared_from_this"></a>  enable_shared_from_this::shared_from_this  
+##  <a name="shared_from_this"></a>  enable_shared_from_this::shared_from_this  
  產生的 `shared_ptr` 會與現有的 `shared_ptr` 擁有者共用執行個體擁有權。  
   
 ```  
@@ -120,5 +121,5 @@ sp2->val == 3
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [enable_shared_from_this::shared_from_this](#enable_shared_from_this__shared_from_this)   
+ [enable_shared_from_this::shared_from_this](#shared_from_this)   
  [shared_ptr 類別](../standard-library/shared-ptr-class.md)

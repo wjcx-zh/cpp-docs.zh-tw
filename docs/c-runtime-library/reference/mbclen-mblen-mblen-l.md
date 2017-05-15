@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c0a3a001234439314f682984b01496aff960b366
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f8e2a1bf9282298d3d41183c0d335e49e89f1b42
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen、mblen、_mblen_l
@@ -106,7 +107,7 @@ int _mblen_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- `_mbclen` 會根據多位元組字元 `c` 是 1 或 2 個位元組長，傳回 1 或 2。 `_mbclen` 不會傳回錯誤。 如果 `mbstr` 不是 `NULL`，`mblen` 會傳回多位元組字元的長度 (以位元組為單位)。 如果 `mbstr` 為 `NULL`，或是指向寬字元的 Null 字元，`mblen` 會傳回 0。 如果 `mbstr` 所指向的物件未在前 `count` 個字元中形成有效的多位元組字元，`mblen` 會傳回 -1。  
+ `_mbclen` 會根據多位元組字元 `c` 是 1 或 2 個位元組長，傳回 1 或 2。 `_mbclen` 不會傳回錯誤。 如果 `mbstr` 不是 `NULL`，`mblen` 會傳回多位元組字元的長度 (以位元組為單位)。 如果 `mbstr` 為 `NULL`，或是指向寬字元的 Null 字元，`mblen` 會傳回 0。 如果物件的`mbstr`指向不會構成有效的多位元組字元內第一個`count`字元，`mblen`傳回-1。  
   
 ## <a name="remarks"></a>備註  
  `_mbclen` 函式會傳回多位元組字元 `c` 的長度 (以位元組為單位)。 如果 `c` 未指向隱含呼叫 `_ismbblead` 所決定之多位元組字元的前導位元組，`_mbclen` 的結果會無法預測。  
@@ -171,9 +172,6 @@ Convert wide character to multibyte character:
 Length in bytes of multibyte character 61: 1  
 Length in bytes of NULL multibyte character 0: 0  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   

@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 636825d8dc49ed0d4d7beaa03328b7a3f20f668e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: a369890d41b58fb3865780291822b4e7e045e919
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 運算子
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator+](#operator_add)|  
-|[operator-](#operator-)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|  
+|[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  測試運算子左邊的迭代器物件是否不等於右邊的迭代器物件。  
   
 ```  
@@ -37,10 +39,10 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  **iterator** 類型的物件。  
   
- ` right`  
+ `right`  
  **iterator** 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -111,7 +113,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  測試運算子左邊的迭代器物件是否等於右邊的迭代器物件。  
   
 ```  
@@ -137,10 +139,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  iterator 類型的物件。  
   
- ` right`  
+ `right`  
  iterator 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -149,7 +151,7 @@ bool operator==(
 ### <a name="remarks"></a>備註  
  一個迭代器物件與另一個迭代器物件如果定址對象是容器中的相同元素，兩者便相等。 如果兩個迭代器指向容器中不同的元素，它們便不相等。  
   
- 前兩個範本運算子只有在 ` left` 和 ` right` 都儲存相同的迭代器時，才會傳回 true。 第三個範本運算子只有在 ` left` 和 ` right` 都儲存相同的資料流指標時，才會傳回 true。 第四個範本運算子會傳回 ` left.equal ( right)`。  
+ 前兩個範本運算子只有在 `left` 和 `right` 都儲存相同的迭代器時，才會傳回 true。 第三個範本運算子只有在 `left` 和 `right` 都儲存相同的資料流指標時，才會傳回 true。 第四個範本運算子會傳回 ` left.equal ( right)`。  
   
 ### <a name="example"></a>範例  
   
@@ -213,7 +215,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="a-nameoperatorlta--operatorlt"></a><a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  測試運算子左邊的迭代器物件是否小於右邊的迭代器物件。  
   
 ```  
@@ -222,10 +224,10 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  **iterator** 類型的物件。  
   
- ` right`  
+ `right`  
  **iterator** 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -300,7 +302,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorlteqa--operatorlt"></a><a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  測試運算子左邊的迭代器物件是否小於或等於右邊的迭代器物件。  
   
 ```  
@@ -309,10 +311,10 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  iterator 類型的物件。  
   
- ` right`  
+ `right`  
  iterator 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -391,7 +393,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorgta--operatorgt"></a><a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  測試運算子左邊的迭代器物件是否大於右邊的迭代器物件。  
   
 ```  
@@ -400,10 +402,10 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  iterator 類型的物件。  
   
- ` right`  
+ `right`  
  iterator 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -476,7 +478,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatorgteqa--operatorgt"></a><a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  測試運算子左邊的迭代器物件是否大於或等於右邊的迭代器物件。  
   
 ```  
@@ -485,10 +487,10 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  iterator 類型的物件。  
   
- ` right`  
+ `right`  
  iterator 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -567,7 +569,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  將位移新增至迭代器，並傳回定址對象是在新位移位置中插入之元素的 `move_iterator` 或 `reverse_iterator`。  
   
 ```  
@@ -588,11 +590,11 @@ operator+(
  `_Off`  
  要為常數 move_iterator 或常數 reverse_iterator 調整位移的位置數目。  
   
- ` right`  
+ `right`  
  要調整位移的迭代器。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回總和 ` right` + `_Off`。  
+ 傳回總和 `right` + `_Off`。  
   
 ### <a name="example"></a>範例  
   
@@ -643,7 +645,7 @@ The iterator rVPOS1 now points to the fifth element
  in the reversed sequence: 2.  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>  operator-  
  將一個迭代器減去另一個，並傳回差異。  
   
 ```  
@@ -659,19 +661,19 @@ Tdiff operator-(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  迭代器。  
   
- ` right`  
+ `right`  
  迭代器。  
   
 ### <a name="return-value"></a>傳回值  
  兩個迭代器之間的差異`.`  
   
 ### <a name="remarks"></a>備註  
- 第一個範本運算子會傳回 ` left.base() -  right.base()`。  
+ 第一個範本運算子會傳回 `left.base() - right.base()`。  
   
- 第二個範本運算子會傳回 ` right.current -  left.current`。  
+ 第二個範本運算子會傳回 `right.current - left.current`。  
   
  `Tdiff` 取決於所傳回運算式的類型。 否則為 `RandomIterator1::difference_type`。  
   

@@ -61,10 +61,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3370ea3fcad8874fe9bdcd737d2488509f740fd6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: 2c71b97e925ab23c893eefd6092efffe57bea3a7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv、_wsearchenv
@@ -144,9 +145,8 @@ void _wsearchenv(
   
 ## <a name="example"></a>範例  
   
-```  
-  
-      // crt_searchenv.c  
+```C  
+// crt_searchenv.c  
 // compile with: /W3  
 // This program searches for a file in  
 // a directory that's specified by an environment variable.  
@@ -174,9 +174,6 @@ int main( void )
 Path for CL.EXE:  
 C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄控制](../../c-runtime-library/directory-control.md)   

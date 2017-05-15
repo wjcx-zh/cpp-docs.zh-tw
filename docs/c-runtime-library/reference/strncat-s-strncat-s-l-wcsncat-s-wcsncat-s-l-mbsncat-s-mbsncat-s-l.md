@@ -74,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 81de28f343535df964284cd204921352951c2bd6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 18f40484e5af5033d8a9093dd18137a884c6d531
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
@@ -386,9 +387,6 @@ Secure template overload example:
 Invalid parameter handler invoked: (L"Buffer is too small" && 0)  
     new contents of dest: ''  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::String::Concat](https://msdn.microsoft.com/en-us/library/system.string.concat.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 23b9a848acb3e1dcd5003fb9369de2c1daf55ce9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 16d166f205f026977673e39bd539b377496bdc0c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
@@ -72,7 +73,7 @@ int _resetstkoflw ( void );
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 如果函式成功則為非零值，失敗則為&0;。  
+ 如果函式成功則為非零值，失敗則為 0。  
   
 ## <a name="remarks"></a>備註  
  `_resetstkoflw` 函式從堆疊溢位狀況復原，讓程式繼續執行而不是因嚴重的例外狀況錯誤而失敗。 如果未呼叫 `_resetstkoflw` 函式，在前一個例外狀況之後便沒有防護頁面。 下次發生堆疊溢位時，完全沒有任何例外狀況，且處理序會終止而不發出警告。  
@@ -119,7 +120,7 @@ int _resetstkoflw ( void );
   
  在有些情況下 **_resetstkoflw** 可能會失敗，即使是使用於正確的位置，例如在 **__except** 區塊內。 如果即使是在回溯堆疊之後，仍沒有足夠的堆疊空間可執行 **_resetstkoflw** 而不寫入至堆疊的最後一頁，那麼 **_resetstkoflw** 便無法將堆疊的最後一頁重設為防護頁面，並且會傳回 0，表示失敗。 因此，安全地使用此函式應該要包含檢查傳回值，而不是假設堆疊的使用是安全的。  
   
- 結構化的例外處理不會抓取`STATUS_STACK_OVERFLOW`與編譯該應用程式時的例外狀況`/clr`(請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md))。  
+ 結構化例外狀況處理不會抓取`STATUS_STACK_OVERFLOW`應用程式編譯時的例外狀況`/clr`(請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md))。  
   
 ## <a name="requirements"></a>需求  
   
@@ -327,9 +328,6 @@ int main ( )
 Stack overflow!  
 Recovered from stack overflow and allocated 100,000 bytes using _alloca.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [_alloca](../../c-runtime-library/reference/alloca.md)

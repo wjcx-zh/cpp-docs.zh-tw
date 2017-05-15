@@ -60,10 +60,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 377ebdd79e201a2b7a017eb3ce34c6ced0062702
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: bb000bddd8f376587aa7614d135f39e09771ccb7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="time-time32-time64"></a>time、_time32、_time64
@@ -91,9 +92,9 @@ __time64_t _time64(
  以秒為單位傳回自 1970 年 1 月 1 日午夜所經過的時間，或是如果發生錯誤則傳回 -1。  
   
 ## <a name="remarks"></a>備註  
- `time` 函式會傳回根據系統時鐘自國際標準時間 (UTC) 1970 年 1 月 1 日午夜 (00:00:00) 起所經過的秒數。 傳回的值會儲存在 `timer` 所指定的位置。 此參數可能是 `NULL`，而在此情況下不會儲存傳回的值。  
+ `time` 函式會傳回根據系統時鐘自國際標準時間 (UTC) 1970 年 1 月 1 日午夜 (00:00:00) 起所經過的秒數。 傳回的值會儲存在 `timer`所指定的位置。 此參數可能是 `NULL`，而在此情況下不會儲存傳回的值。  
   
- `time` 是 `_time64` 的包裝函式，而根據預設，`time_t` 相當於 `__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元`time_t`，您可以定義 `_USE_32BIT_TIME_T`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗；不允許在 64 位元平台上使用此巨集。  
+ `time` 是 `_time64` 的包裝函式，而按照預設， `time_t` 相當於 `__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元 `time_t`，您可以定義 `_USE_32BIT_TIME_T`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗；不允許在 64 位元平台上使用此巨集。  
   
 ## <a name="requirements"></a>需求  
   
@@ -254,9 +255,6 @@ Christmas            Sat Dec 25 12:00:00 1993
   
 Today is Friday, day 25 of April in the year 2003.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   

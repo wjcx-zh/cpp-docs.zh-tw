@@ -36,10 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: e7f431f18a1ddd6097fc5a4790a1a3688d3bda92
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 67ba9e9a670ac187d15fe53729d8cdac475472ce
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
@@ -92,13 +93,13 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/iterator-operators.md#operator_neq)|測試運算子左邊的迭代器物件是否不等於右邊的迭代器物件。|  
-|[operator==](../standard-library/iterator-operators.md#operator_eq_eq)|測試運算子左邊的迭代器物件是否等於右邊的迭代器物件。|  
-|[operator<](../standard-library/iterator-operators.md#operator_lt_)|測試運算子左邊的迭代器物件是否小於右邊的迭代器物件。|  
-|[operator\<=](../standard-library/iterator-operators.md#operator_lt__eq)|測試運算子左邊的迭代器物件是否小於或等於右邊的迭代器物件。|  
-|[operator>](../standard-library/iterator-operators.md#operator_gt_)|測試運算子左邊的迭代器物件是否大於右邊的迭代器物件。|  
-|[operator>=](../standard-library/iterator-operators.md#operator_gt__eq)|測試運算子左邊的迭代器物件是否大於或等於右邊的迭代器物件。|  
-|[operator+](../standard-library/iterator-operators.md#operator_add)|將位移新增至迭代器，並傳回新的 `reverse_iterator`，定址在新的位移位置中插入的項目。|  
+|[operator!=](../standard-library/iterator-operators.md#op_neq)|測試運算子左邊的迭代器物件是否不等於右邊的迭代器物件。|  
+|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|測試運算子左邊的迭代器物件是否等於右邊的迭代器物件。|  
+|[operator<](../standard-library/iterator-operators.md#op_lt)|測試運算子左邊的迭代器物件是否小於右邊的迭代器物件。|  
+|[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|測試運算子左邊的迭代器物件是否小於或等於右邊的迭代器物件。|  
+|[operator>](../standard-library/iterator-operators.md#op_gt)|測試運算子左邊的迭代器物件是否大於右邊的迭代器物件。|  
+|[operator>=](../standard-library/iterator-operators.md#op_gt_eq)|測試運算子左邊的迭代器物件是否大於或等於右邊的迭代器物件。|  
+|[operator+](../standard-library/iterator-operators.md#op_add)|將位移新增至迭代器，並傳回新的 `reverse_iterator`，定址在新的位移位置中插入的項目。|  
 |[operator-](../standard-library/iterator-operators.md#operator-)|將一個迭代器減去另一個，並傳回差異。|  
   
 ### <a name="classes"></a>類別  

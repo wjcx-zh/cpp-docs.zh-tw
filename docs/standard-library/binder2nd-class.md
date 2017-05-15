@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.binder2nd
 - binder2nd
 - xfunctional/std::binder2nd
-- std::binder2nd
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: f19b476ae903c915d4231621c39a88bf70b08685
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 9a2f3f31798d1cdadf00e95b9f393e93a20d29ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="binder2nd-class"></a>binder2nd 類別
@@ -85,7 +84,7 @@ protected:
 ## <a name="remarks"></a>備註  
  此樣板類別會將二元函式物件 _ *Func* 的複本儲存在 **op** 中，並將 `right` 的複本儲存在 **value** 中。 它會在傳回下列項目時定義其成員函式 `operator()`：**op**( `left`, **value**)。  
   
- 如果 `Func` 是 **Operation** 類型的物件且 c 是常數，則 [bind2nd](../standard-library/functional-functions.md#bind2nd_function) ( `Func`, `c` ) 相當於 `binder2nd` 類別建構函式 `binder2nd`\< **Operation**> ( `Func`, `c` )，而且更方便。  
+ 如果 `Func` 是 **Operation** 類型的物件且 c 是常數，則 [bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`, `c` ) 相當於 `binder2nd` 類別建構函式 `binder2nd`\< **Operation**> ( `Func`, `c` )，而且更方便。  
   
 ## <a name="example"></a>範例  
   

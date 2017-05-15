@@ -1,60 +1,160 @@
 ---
 title: "max_variable_size 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext::max_variable_size"
-  - "allocators/stdext::max_variable_size"
-  - "stdext.max_variable_size"
-  - "max_variable_size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_variable_size 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext::max_variable_size
+- allocators/stdext::max_variable_size
+- max_variable_size
+- allocators/stdext::max_variable_size::allocated
+- allocators/stdext::max_variable_size::deallocated
+- allocators/stdext::max_variable_size::full
+- allocators/stdext::max_variable_size::released
+- allocators/stdext::max_variable_size::saved
+dev_langs:
+- C++
+helpviewer_keywords:
+- max_variable_size class
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# max_variable_size 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: dbb2405313f9b58bc6c5634410a5c378e0f0abca
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
-描述 [類別的最大](../standard-library/allocators-header.md) 限制的物件 [freelist](../standard-library/freelist-class.md) 大致上與數目成比例的最大長度的物件配置記憶體區塊。  
+---
+# <a name="maxvariablesize-class"></a>max_variable_size 類別
+描述 [max 類別](../standard-library/allocators-header.md)物件，此物件可將 [freelist](../standard-library/freelist-class.md) 物件的長度上限限制為與已配置的記憶體區塊數目大致成正比。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class max_variable_size
 ```  
-class max_variable_size  
-```  
   
-### 建構函式  
+### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[max\_variable\_size](../Topic/max_variable_size::max_variable_size.md)|建構類型 `max_variable_size` 的物件。|  
+|[max_variable_size](#max_variable_size)|建構類型 `max_variable_size` 的物件。|  
   
-### 成員函式  
+### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[配置](../Topic/max_variable_size::allocated.md)|配置的記憶體區塊的計數遞增。|  
-|[解除配置](../Topic/max_variable_size::deallocated.md)|遞減的計數配置記憶體區塊。|  
-|[完整](../Topic/max_variable_size::full.md)|傳回值，這個值會指定是否應該以可用的清單中加入更多的記憶體區塊。|  
-|[發行](../Topic/max_variable_size::released.md)|遞減計數的記憶體區塊上可用的清單。|  
-|[儲存](../Topic/max_variable_size::saved.md)|可用清單上的記憶體區塊的計數遞增。|  
+|[allocated](#allocated)|遞增已配置的記憶體區塊計數。|  
+|[deallocated](#deallocated)|遞減已配置的記憶體區塊計數。|  
+|[full](#full)|傳回指定是否應該為可用清單新增更多記憶體區塊的值。|  
+|[released](#released)|遞減可用清單上的記憶體區塊計數。|  
+|[saved](#saved)|遞增可用清單上的記憶體區塊計數。|  
   
-## 需求  
- **標頭：**\<allocators\>  
+## <a name="requirements"></a>需求  
+ **標頭︰**\<allocators>  
   
- **命名空間：**stdext  
+ **命名空間：** stdext  
   
-## 請參閱  
- [\<allocators\>](../standard-library/allocators-header.md)
+##  <a name="allocated"></a>  max_variable_size::allocated  
+ 遞增已配置的記憶體區塊計數。  
+  
+```
+void allocated(std::size_t _Nx = 1);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|說明|  
+|---------------|-----------------|  
+|`_Nx`|遞增值。|  
+  
+### <a name="remarks"></a>備註  
+ 此成員函式會將 `_Nx` 加到預存值 `_Nallocs`。 每次 `cache_freelist::allocate` 成功呼叫運算子 `new` 之後，都會呼叫此成員函式。 引數 `_Nx` 是運算子 `new` 所配置之區塊中的記憶體區塊數目。  
+  
+##  <a name="deallocated"></a>  max_variable_size::deallocated  
+ 遞減已配置的記憶體區塊計數。  
+  
+```
+void deallocated(std::size_t _Nx = 1);
+```  
+  
+### <a name="parameters"></a>參數  
+  
+|參數|說明|  
+|---------------|-----------------|  
+|`_Nx`|遞增值。|  
+  
+### <a name="remarks"></a>備註  
+ 此成員函式會從預存值 `_Nallocs` 減去 `_Nx`。 每次 `cache_freelist::deallocate` 呼叫運算子 `delete` 之後，都會呼叫此成員函式。 引數 `_Nx` 是運算子 `delete` 所解除配置之區塊中的記憶體區塊數目。  
+  
+##  <a name="full"></a>  max_variable_size::full  
+ 傳回指定是否應該為可用清單新增更多記憶體區塊的值。  
+  
+```
+bool full();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 如果 `_Nallocs / 16 + 16 <= _Nblocks`，便傳回 `true`。  
+  
+### <a name="remarks"></a>備註  
+ 此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果此呼叫傳回 `true`，`deallocate` 便會將記憶體區塊放到可用清單上，如果傳回 false，`deallocate` 則會呼叫運算子 `delete` 來將區塊解除配置。  
+  
+##  <a name="max_variable_size"></a>  max_variable_size::max_variable_size  
+ 建構類型 `max_variable_size` 的物件。  
+  
+```
+max_variable_size();
+```  
+  
+### <a name="remarks"></a>備註  
+ 此建構函式會將預存值 `_Nblocks` 和 `_Nallocs` 初始化為零。  
+  
+##  <a name="released"></a>  max_variable_size::released  
+ 遞減可用清單上的記憶體區塊計數。  
+  
+```
+void released();
+```  
+  
+### <a name="remarks"></a>備註  
+ 此成員函式會遞減預存值 `_Nblocks`。 每當 `cache_freelist::allocate` 從可用清單中移除記憶體區塊時，都會呼叫目前 max 類別的 `released` 成員函式。  
+  
+##  <a name="saved"></a>  max_variable_size::saved  
+ 遞增可用清單上的記憶體區塊計數。  
+  
+```
+void saved();
+```  
+  
+### <a name="remarks"></a>備註  
+ 此成員函式會遞增預存值 `_Nblocks`。 每當 `cache_freelist::deallocate` 將記憶體區塊放到可用清單上時，都會呼叫此成員函式。  
+  
+## <a name="see-also"></a>另請參閱  
+ [\<allocators>](../standard-library/allocators-header.md)
+
+
+
+

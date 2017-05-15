@@ -1,78 +1,89 @@
 ---
 title: "equal_to 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::equal_to"
-  - "equal_to"
-  - "xfunctional/std::equal_to"
-  - "std.equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_to 函式"
-  - "equal_to 結構"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- equal_to
+- xfunctional/std::equal_to
+dev_langs:
+- C++
+helpviewer_keywords:
+- equal_to function
+- equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# equal_to 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bac0d0114b10fc4ac7a83a60f21db5218cb3f1c8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
-二進位的斷詞使用引述執行等於計算 \(`運算元operator==`\)。  
+---
+# <a name="equalto-struct"></a>equal_to 結構
+在其引數執行等號比較運算 ( `operator==`) 的二元述詞。  
   
-## 語法  
-  
-```  
-template<class Type = void>  
-   struct equal_to : public binary_function<Type, Type, bool>   
-   {  
-      bool operator()(  
-         const Type& Left,   
-         const Type& Right  
-      ) const;  
-   };  
-  
-// specialized transparent functor for operator==  
-template<>  
-   struct equal_to<void>  
-   {  
-      template<class Type1, class Type2>  
-      auto operator()(Type1&& Left, Type2&& Right) const  
-         -> decltype(std::forward<Type1>(Left)  
-            == std::forward<Type2>(Right));  
-   };  
+## <a name="syntax"></a>語法  
   
 ```  
+template <class Type = void>  
+struct equal_to : public binary_function<Type, Type, bool>   
+ {  
+    bool operator()(const Type& Left, const Type& Right) const; 
+ };  
+ 
+// specialized transparent functor for operator== 
+template <>  
+struct equal_to<void>  
+ {  
+    template <class T, class U>  
+    auto operator()(T&& Left, U&& Right) const 
+      ->  decltype(std::forward<T>(Left) == std::forward<U>(Right));
+ };  
+```  
   
-#### 參數  
- `Type`, `Type1`, `Type2`  
- 任何支援`operator==`接受指定或推斷型別的運算元之類型。  
+#### <a name="parameters"></a>參數  
+ `Type`, `T`, `U`  
+ 支援 `operator==` 的任何類型，其接受指定或推斷類型的運算元。  
   
  `Left`  
- 等比較運算的左運算元。  非特製化樣板接受型別 `Type` 的左值參考引數。  特製化樣板在左值和右值推斷型別 `Type1` 參考引數能完美轉送。  
+ 等號比較運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
   
  `Right`  
- 等比較運算的右運算元。  非特製化樣板接受型別 `Type` 的左值參考引數。  特製化樣板在左值和右值推斷的型別 `Type2`參考引數能完美轉送。  
+ 等號比較運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
   
-## 傳回值  
- `Left` `==` `Right` 的結果。  特製化樣板能完善結果的轉送，其具有 `operator==`所傳回的型別。  
+## <a name="return-value"></a>傳回值  
+ `Left``==``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator==` 所傳回的類型。  
   
-## 備註  
- 型別 `Type` 的物件必須是相等可比較的。  這需要 `operator==` 定義在物件符合等價關聯的屬性上。  所有內建數值和指標型別滿足這個要求。  
+## <a name="remarks"></a>備註  
+ `Type` 類型的物件必須可進行等號比較。 在物件集合上定義的 `operator==` 必須符合等價關聯的數學屬性，才能進行此作業。 所有內建的數字和指標類型皆符合這項需求。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // functional_equal_to.cpp  
 // compile with: /EHsc  
 #include <vector>  
@@ -123,7 +134,11 @@ int main( )
 }  
 ```  
   
-  **The vector v1 \= \( 0 1 4 5 8 9 \)**  
-**The vector v2 \= \( \-0 1 \-4 5 \-8 9 \)**  
-**The result of the element\-wise equal\_to comparison**  
-**between v1 & v2 is: \( 1 1 0 1 0 1 \)**
+```Output  
+The vector v1 = ( 0 1 4 5 8 9 )  
+The vector v2 = ( -0 1 -4 5 -8 9 )  
+The result of the element-wise equal_to comparison  
+between v1 & v2 is: ( 1 1 0 1 0 1 )  
+```
+
+

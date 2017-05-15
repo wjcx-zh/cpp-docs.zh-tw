@@ -63,10 +63,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c70908d3c884eed962560e0a5284c66c3c234a7e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 3b7b1d4165edb3a7e34cda665de195759784eedc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s、_wsearchenv_s
@@ -115,7 +116,7 @@ errno_t _wsearchenv_s(
  要儲存此完整路徑的緩衝區。  
   
  [in] `numberOfElements`  
- `pathname` 緩衝區的大小。  
+ 大小`pathname`緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
  如果成功，就是零，如果失敗，則為錯誤碼。  
@@ -193,9 +194,6 @@ int main( void )
 Path for CL.EXE:  
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄控制](../../c-runtime-library/directory-control.md)   

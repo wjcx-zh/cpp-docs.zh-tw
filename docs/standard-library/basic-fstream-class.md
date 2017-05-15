@@ -9,10 +9,13 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::basic_fstream
 - basic_fstream
 - fstream/std::basic_fstream
-- std.basic_fstream
+- fstream/std::basic_fstream::close
+- fstream/std::basic_fstream::is_open
+- fstream/std::basic_fstream::open
+- fstream/std::basic_fstream::rdbuf
+- fstream/std::basic_fstream::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 43723f5e423cd864b228f9a3c5bf05ee71b2b8c3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f9d52128703d021ba3a880ff899ca71b144e89ec
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicfstream-class"></a>basic_fstream 類別
@@ -102,24 +106,24 @@ Writing to a basic_fstream object...
   
 |||  
 |-|-|  
-|[basic_fstream](#basic_fstream__basic_fstream)|建構類型 `basic_fstream` 的物件。|  
+|[basic_fstream](#basic_fstream)|建構類型 `basic_fstream` 的物件。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[close](#basic_fstream__close)|關閉檔案。|  
-|[is_open](#basic_fstream__is_open)|判斷檔案是否為開啟。|  
-|[open](#basic_fstream__open)|開啟檔案。|  
-|[rdbuf](#basic_fstream__rdbuf)|將 pointer 類型之預存資料流緩衝區的位址傳回至 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>。|  
-|[swap](#basic_fstream__swap)|將這個物件的內容與另一個 `basic_fstream` 物件的內容交換。|  
+|[close](#close)|關閉檔案。|  
+|[is_open](#is_open)|判斷檔案是否為開啟。|  
+|[open](#open)|開啟檔案。|  
+|[rdbuf](#rdbuf)|將 pointer 類型之預存資料流緩衝區的位址傳回至 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>。|  
+|[swap](#swap)|將這個物件的內容與另一個 `basic_fstream` 物件的內容交換。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<fstream>  
   
  **命名空間：** std  
   
-##  <a name="a-namebasicfstreambasicfstreama--basicfstreambasicfstream"></a><a name="basic_fstream__basic_fstream"></a>  basic_fstream::basic_fstream  
+##  <a name="basic_fstream"></a>  basic_fstream::basic_fstream  
  建構類型 `basic_fstream` 的物件。  
   
 ```  
@@ -143,7 +147,7 @@ basic_fstream(basic_fstream&& right);
  要開啟之檔案的名稱。  
   
  `_Mode`  
- [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) 中的其中一個列舉。  
+ [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。  
   
  `_Prot`  
  預設檔案開啟保護，相當於 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。  
@@ -151,14 +155,14 @@ basic_fstream(basic_fstream&& right);
 ### <a name="remarks"></a>備註  
  第一個建構函式會藉由呼叫 [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**) 初始化基底類別，其中 **sb** 是 [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**> 類別的預存物件。 它也會藉由呼叫 `basic_filebuf`\< **Elem**, **Tr**> 初始化 **sb**。  
   
- 第二個和第三個建構函式會藉由呼叫 `basic_iostream`( **sb**) 初始化基底類別。 它也會藉由呼叫 `basic_filebuf`\< **Elem**, **Tr**>，再呼叫 **sb.**[open](../standard-library/basic-filebuf-class.md#basic_filebuf__open)(_ *檔名*, `_Mode`) 初始化 **sb**。 如果第二個函式會傳回 null 指標，建構函式會呼叫 [setstate](../standard-library/basic-ios-class.md#basic_ios__setstate)( **failbit**)。  
+ 第二個和第三個建構函式會藉由呼叫 `basic_iostream`( **sb**) 初始化基底類別。 它也會藉由呼叫 `basic_filebuf`\< **Elem**, **Tr**>，再呼叫 **sb.**[open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode`) 初始化 **sb**。 如果第二個函式會傳回 null 指標，建構函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。  
   
  第四個建構函式會使用視為右值參考的 `right` 內容初始化物件。  
   
 ### <a name="example"></a>範例  
   如需使用 `basic_fstream` 的範例，請參閱 [streampos](../standard-library/ios-typedefs.md#streampos)。  
   
-##  <a name="a-namebasicfstreamclosea--basicfstreamclose"></a><a name="basic_fstream__close"></a>  basic_fstream::close  
+##  <a name="close"></a>  basic_fstream::close  
  關閉檔案。  
   
 ```  
@@ -166,12 +170,12 @@ void close();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會呼叫 [rdbuf](#basic_fstream__rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#basic_filebuf__close)。  
+ 此成員函式會呼叫 [rdbuf](#rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#close)。  
   
 ### <a name="example"></a>範例  
-  如需如何使用 **close** 的範例，請參閱 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#basic_filebuf__close)。  
+  如需如何使用 **close** 的範例，請參閱 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。  
   
-##  <a name="a-namebasicfstreamisopena--basicfstreamisopen"></a><a name="basic_fstream__is_open"></a>  basic_fstream::is_open  
+##  <a name="is_open"></a>  basic_fstream::is_open  
  判斷檔案是否為開啟。  
   
 ```  
@@ -182,12 +186,12 @@ bool is_open() const;
  若已開啟檔案，即為 **true**；否則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [rdbuf](#basic_fstream__rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#basic_filebuf__is_open)。  
+ 此成員函式會傳回 [rdbuf](#rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#is_open)。  
   
 ### <a name="example"></a>範例  
-  如需如何使用 `is_open` 的範例，請參閱 [basic_filebuf:: is_open](../standard-library/basic-filebuf-class.md#basic_filebuf__is_open)。  
+  如需如何使用 `is_open` 的範例，請參閱 [basic_filebuf:: is_open](../standard-library/basic-filebuf-class.md#is_open)。  
   
-##  <a name="a-namebasicfstreamopena--basicfstreamopen"></a><a name="basic_fstream__open"></a>  basic_fstream::open  
+##  <a name="open"></a>  basic_fstream::open  
  開啟檔案。  
   
 ```  
@@ -215,18 +219,18 @@ void open(
  要開啟之檔案的名稱。  
   
  `_Mode`  
- [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode) 中的其中一個列舉。  
+ [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。  
   
  `_Prot`  
  預設檔案開啟保護，相當於 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會呼叫 [rdbuf](#basic_fstream__rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#basic_filebuf__open)(_ *檔名*, `_Mode`)。 如果該函式會傳回 null 指標，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#basic_ios__setstate)( **failbit**)。  
+ 此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode`)。 如果該函式會傳回 null 指標，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。  
   
 ### <a name="example"></a>範例  
-  如需如何使用 **open** 的範例，請參閱 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#basic_filebuf__open)。  
+  如需如何使用 **open** 的範例，請參閱 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)。  
   
-##  <a name="a-namebasicfstreamoperatoreqa--basicfstreamoperator"></a><a name="basic_fstream__operator_eq"></a>  basic_fstream::operator=  
+##  <a name="op_eq"></a>  basic_fstream::operator=  
  將來自指定資料流物件的內容指派給此物件。 這是一個移動指派，涉及不會留下複本的 rvalue。  
   
 ```  
@@ -234,16 +238,16 @@ basic_fstream& operator=(basic_fstream&& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  `basic_fstream` 物件的 lvalue 參考。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 `*this`。  
   
 ### <a name="remarks"></a>備註  
- 成員運算子會使用 ` right` 的內容 (被視為 rvalue 參考) 來取代物件的內容。  
+ 成員運算子會使用 `right` 的內容 (被視為 rvalue 參考) 來取代物件的內容。  
   
-##  <a name="a-namebasicfstreamrdbufa--basicfstreamrdbuf"></a><a name="basic_fstream__rdbuf"></a>  basic_fstream::rdbuf  
+##  <a name="rdbuf"></a>  basic_fstream::rdbuf  
  將 pointer 類型之預存資料流緩衝區的位址傳回至 [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>。  
   
 ```  
@@ -254,9 +258,9 @@ basic_filebuf<Elem, Tr> *rdbuf() const
  預存資料流緩衝區的位址。  
   
 ### <a name="example"></a>範例  
-  如需如何使用 `rdbuf` 的範例，請參閱 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#basic_filebuf__close)。  
+  如需如何使用 `rdbuf` 的範例，請參閱 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。  
   
-##  <a name="a-namebasicfstreamswapa--basicfstreamswap"></a><a name="basic_fstream__swap"></a>  basic_fstream::swap  
+##  <a name="swap"></a>  basic_fstream::swap  
  交換兩個 `basic_fstream` 物件的內容。  
   
 ```  
@@ -264,11 +268,11 @@ void swap(basic_fstream& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  `basic_fstream` 物件的 `lvalue` 參考。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會將此物件的內容與 ` right` 的內容交換。  
+ 成員函式會將此物件的內容與 `right` 的內容交換。  
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

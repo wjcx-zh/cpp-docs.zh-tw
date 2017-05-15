@@ -12,6 +12,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - output streams, member functions
+f1_keywords: []
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -31,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 84964b0a49b236bae056125de8155b18880eb378
-ms.openlocfilehash: 62d10faef9b1958f0ad5cee7b8ff2b4e491c617a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
@@ -43,7 +45,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="the-open-function-for-output-streams"></a>輸出資料流的 open 函式  
  若要使用輸出檔案資料流 ([ofstream](../standard-library/basic-ofstream-class.md))，您必須在建構函式或是 **open** 函式中，將該資料流與特定的磁碟檔案建立關聯。 如果您使用 **open** 函式，您就可以重複使用相同的資料流物件搭配一系列檔案。 不論使用哪一種，描述檔案的引數都一樣。  
   
- 當您開啟與輸出資料流相關聯的檔案時，通常會指定 **open_mode** 旗標。 您可以使用位元 OR ( &#124; ) 運算子，來合併這些在 `ios` 類別中定義為列舉程式的旗標。 如需列舉程式的清單，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#ios_base__openmode)。  
+ 當您開啟與輸出資料流相關聯的檔案時，通常會指定 **open_mode** 旗標。 您可以使用位元 OR ( &#124; ) 運算子，來合併這些在 `ios` 類別中定義為列舉程式的旗標。 如需列舉程式的清單，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。  
   
  有三種常見的輸出資料流情況會牽涉到模式選項：  
   
@@ -81,7 +83,7 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put-function"></a>put 函式  
+## <a name="the-put"></a>Put
  **put** 函式會將一個字元寫入輸出資料流。 下列兩個陳述式的預設值都相同，但第二個會受到資料流的格式引數影響：  
   
 ```  
@@ -91,7 +93,7 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write-function"></a>write 函式  
+## <a name="the-write"></a>寫入
  **write** 函式會寫入輸出檔案資料流的記憶體區塊。 長度引數會指定要寫入的位元組數目。 這個範例會建立輸出檔案資料流，並將 `Date` 結構的二進位值寫入它：  
   
 ```  
@@ -123,7 +125,7 @@ int main( )
   
  輸出資料流解構函式只有在建構函式或是 **open** 成員函式開啟檔案後，才會自動關閉資料流的檔案。 如果您將已開啟之檔案的檔案描述元傳遞給建構函式，或使用 **attach** 成員函式，您必須明確地關閉檔案。  
   
-##  <a name="a-namevclrferrorprocessingfunctionsanchor10a-error-processing-functions"></a><a name="vclrferrorprocessingfunctionsanchor10"></a> 錯誤處理函式  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> 錯誤處理函式  
  寫入資料流時，請使用下列成員函式來測試是否發生錯誤：  
   
 |函式|傳回值|  

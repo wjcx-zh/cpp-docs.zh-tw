@@ -1,37 +1,52 @@
 ---
 title: "integer_sequence 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "type_traits/std::index_sequence"
-  - "type_traits/std::make_index_sequence"
-  - "type_traits/std::integer_sequence"
-  - "type_traits/std::make_integer_sequence"
-  - "type_traits/std::index_sequence_for"
-  - "integer_sequence"
-  - "std.integer_sequence"
-  - "std::integer_sequence"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "integer_sequence"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- type_traits/std::index_sequence
+- type_traits/std::make_index_sequence
+- type_traits/std::integer_sequence
+- type_traits/std::make_integer_sequence
+- type_traits/std::index_sequence_for
+- integer_sequence
+dev_langs:
+- C++
+helpviewer_keywords:
+- integer_sequence
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# integer_sequence 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 533bb3094949d0f339f67fade4e199a6210b2d26
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
-表示整數序列。 可用來推算並展開做為引數傳遞至函式之 variadic 類型中的參數封裝，例如 std::tuple\<T...>。  
+---
+# <a name="integersequence-class"></a>integer_sequence 類別
+表示整數序列。 可用來推算並展開作為引數傳遞給函式之 variadic 類型 (例如 std::tuple\<T...>) 中的參數封裝。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,11 +73,11 @@ struct integer_sequence
  直接傳遞至函式的參數封裝可以是未經過任何特殊程式庫協助程式的封裝。 當參數封裝是傳遞至函式之類型的一部分，且您需要索引來存取項目時，則將它解除封裝最簡單的方式是使用 `integer_sequence` 和其相關類型別名 `make_integer_sequence`、`index_sequence`、`make_index_sequence` 和 `index_sequence_for`。  
   
 ## <a name="example"></a>範例  
- 下列範例根據原始提案 [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html)。 它會顯示如何使用 `integer_sequence` 從 `std::array<T,N>` 建立 `std::tuple`，以及如何使用 `integer_sequence` 取得 tuple 成員。  
+ 以下範例是以原始提案 [N3658](http://open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3658.html) 為基礎。 它會顯示如何使用 `integer_sequence` 從 `std::array<T,N>` 建立 `std::tuple`，以及如何使用 `integer_sequence` 取得 tuple 成員。  
   
  在 `a2t` 函式中，根據 `size_t` 整數類資料類型，`index_sequence` 是 `integer_sequence` 的別名。 `make_index_sequence` 是編譯時期的別名，會以呼叫端傳入之陣列相同的項目數，建立以零為起始的 `index_sequence`。 `a2t` 會將 `index_sequence` 以值傳遞至 `a2t_`，其中運算式 `a[I]...` 會解除封裝 `I`，然後項目會饋送至 `make_tuple`，它會使用它們做為個別引數。 例如，如果序列包含三個項目，則 `make_tuple` 稱為 make_tuple (a[0]、a[1]、a[2])。 當然，陣列項目本身可以是任何類型。  
   
- 套用函式接受 [std::tuple](../standard-library/tuple-class.md), ，並使用產生的 integer_sequence `tuple_size` 協助程式類別。 請注意， [std::decay_t](../standard-library/decay-class.md)_is 必要因為 [tuple_size](../standard-library/tuple-size-class-tuple.md) 不適用於參考型別。 `apply_` 函式會解除封裝 tuple 成員，並且將它們當作個別引數轉送至函式呼叫。 在此範例中，函式是會列印出值的簡單 lambda 運算式。  
+ apply 函式會接受 [std::tuple](../standard-library/tuple-class.md)，並使用 `tuple_size` 協助程式類別來產生 integer_sequence。 請注意，[std::decay_t](../standard-library/decay-class.md) 是必要的，因為 [tuple_size](../standard-library/tuple-size-class-tuple.md) 不適用於參考類型。 `apply_` 函式會解除封裝 tuple 成員，並且將它們當作個別引數轉送至函式呼叫。 在此範例中，函式是會列印出值的簡單 Lambda 運算式。  
   
 ```  
   
@@ -122,13 +137,14 @@ int main()
   
 ```  
   
-  若要針對參數封裝製作 `index_sequence`，請使用 `index_sequence_for`\<T...>，這是 `make_index_sequence`\<sizeof...(T)> 的別名  
+  若要為參數封裝建立 `index_sequence`，請使用 `index_sequence_for`\<T...>，這是 `make_index_sequence`\<sizeof...(T)> 的別名  
   
 ## <a name="requirements"></a>需求  
  標頭：<type_traits>  
   
  命名空間：std  
   
-## <a name="see-also"></a>請參閱  
- [省略符號和 Variadic 樣板](../cpp/ellipses-and-variadic-templates.md)
+## <a name="see-also"></a>另請參閱  
+ [省略符號和 Variadic 範本](../cpp/ellipses-and-variadic-templates.md)
+
 

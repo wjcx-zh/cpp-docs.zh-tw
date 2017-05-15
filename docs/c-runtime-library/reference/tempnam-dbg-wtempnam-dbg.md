@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4f407dce7825a593273206ada02680d6da99e9a0
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 260c5ae7348516683d8e749a2dcb6cdac6ea0943
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg、_wtempnam_dbg
@@ -108,7 +109,7 @@ wchar_t *_wtempnam_dbg(
 > 不需要針對  `free` 和 `free_dbg` 配置的指標呼叫 `_tempnam_dbg` (或 `_wtempnam_dbg`)。  
   
 ## <a name="remarks"></a>備註  
- `_tempnam_dbg` 和 `_wtempnam_dbg` 函式與 `_tempnam` 和 `_wtempnam` 相同，唯一不同的是當定義 `_DEBUG` 時，若 `NULL` 是作為第一個參數進行傳遞，這些函式會使用偵錯版本的 `malloc` 和 `_malloc_dbg` 來配置記憶體。 如需詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
+ `_tempnam_dbg`和`_wtempnam_dbg`函式完全相同`_tempnam`和`_wtempnam`不同之處在於，當`_DEBUG`是定義，這些函式使用的偵錯版本`malloc`和`_malloc_dbg`來配置記憶體，如果`NULL`當做第一個參數傳遞。 如需詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
   
  在大多數情況中，您不需要明確地呼叫這些函式。 但您可以定義 `_CRTDBG_MAP_ALLOC` 旗標。 定義 `_CRTDBG_MAP_ALLOC` 時，呼叫 `_tempnam` 和 `_wtempnam` 會分別重新對應至 `_tempnam_dbg` 和 `_wtempnam_dbg`，且 `blockType` 會設為 `_NORMAL_BLOCK`。 因此，您不需要呼叫這些函式，除非您想要將堆積區塊標示為 `_CLIENT_BLOCK`。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。  
   
@@ -124,10 +125,7 @@ wchar_t *_wtempnam_dbg(
 |-------------|---------------------|  
 |`_tempnam_dbg`, `_wtempnam_dbg`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [_tempnam、_wtempnam、tmpnam、_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)   

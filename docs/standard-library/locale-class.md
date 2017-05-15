@@ -10,9 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocale/std::locale
-- std::locale
-- std.locale
 - locale
+- locale/std::locale::category
+- locale/std::locale::combine
+- locale/std::locale::name
+- locale/std::locale::classic
+- locale/std::locale::global
+- locale/std::locale::operator( )
+- locale/std::locale::facet
+- locale/std::locale::id
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,10 +42,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: c32deb2524dc56925d3235c170f6ff0219c1b28c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 6e33e125d2689d37443bec58c5b01f5b7e72ccfd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="locale-class"></a>locale 類別
@@ -60,7 +67,7 @@ static locale::id id;
   
  您可以定義這些 facet 的開放集合。 您也可以建構地區設定物件來指定任意數目的 facet。  
   
- 這些 facet 的預先定義群組代表在「標準 C 程式庫」中傳統上由 `setlocale` 函式管理的[地區設定分類](#locale__category)。  
+ 這些 facet 的預先定義群組代表在「標準 C 程式庫」中傳統上由 `setlocale` 函式管理的[地區設定分類](#category)。  
   
  分類 collate (LC_COLLATE) 包含下列 facet：  
   
@@ -124,7 +131,7 @@ messages<wchar_t>
   
  iostreams 類別使用某些預先定義的 facet，以控制數值轉換和文字序列之間來回轉換。  
   
- locale 類別的物件也會將地區設定名稱儲存為 [string](../standard-library/string-typedefs.md#string) 類別的物件。 使用無效的地區設定名稱來建構地區設定 facet 或地區設定物件時，會擲回 [runtime_error](../standard-library/runtime-error-class.md) 類別的物件。 如果地區設定物件無法確定 C-Style 地區設定正確對應於物件所表示的項目，儲存的地區設定名稱為 `"*"`。 否則，您可以在「標準 C 程式庫」內，針對地區設定物件 `Loc`，建立相符的地區設定，方法是呼叫 `setlocale`(LC_ALL `,` `Loc`. [name](#locale__name)`().c_str()`)。  
+ locale 類別的物件也會將地區設定名稱儲存為 [string](../standard-library/string-typedefs.md#string) 類別的物件。 使用無效的地區設定名稱來建構地區設定 facet 或地區設定物件時，會擲回 [runtime_error](../standard-library/runtime-error-class.md) 類別的物件。 如果地區設定物件無法確定 C-Style 地區設定正確對應於物件所表示的項目，儲存的地區設定名稱為 `"*"`。 否則，您可以在「標準 C 程式庫」內，針對地區設定物件 `Loc`，建立相符的地區設定，方法是呼叫 `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`)。  
   
  在這個實作，您也可以呼叫靜態成員函式：  
   
@@ -154,35 +161,35 @@ cout.imbue(loc);
   
 |||  
 |-|-|  
-|[locale](#locale__locale)|建立地區設定、地區設定複本，或 facet 或分類已被其他地區設定的 facet 或分類取代的地區設定複本。|  
+|[locale](#locale)|建立地區設定、地區設定複本，或 facet 或分類已被其他地區設定的 facet 或分類取代的地區設定複本。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[category](#locale__category)|整數類型，提供位元遮罩值以表示標準 facet 系列。|  
+|[category](#category)|整數類型，提供位元遮罩值以表示標準 facet 系列。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[combine](#locale__combine)|將指定之地區設定的 facet 插入至目標地區設定。|  
-|[name](#locale__name)|傳回儲存的地區設定名稱。|  
+|[combine](#combine)|將指定之地區設定的 facet 插入至目標地區設定。|  
+|[name](#name)|傳回儲存的地區設定名稱。|  
   
 ### <a name="static-functions"></a>靜態函式  
   
 |||  
 |-|-|  
-|[classic](#locale__classic)|此靜態成員函式傳回表示傳統 C 地區設定的地區設定物件。|  
-|[global](#locale__global)|重設程式的預設地區設定。|  
+|[classic](#classic)|此靜態成員函式傳回表示傳統 C 地區設定的地區設定物件。|  
+|[global](#global)|重設程式的預設地區設定。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator!=](#locale__operator_neq)|測試兩個地區設定是否不等。|  
-|[operator( )](#locale__operator__)|比較兩個 `basic_string` 物件。|  
-|[operator==](#locale__operator_eq_eq)|測試兩個地區設定是否相等。|  
+|[operator!=](#op_neq)|測試兩個地區設定是否不等。|  
+|[operator( )](#op_call)|比較兩個 `basic_string` 物件。|  
+|[operator==](#op_eq_eq)|測試兩個地區設定是否相等。|  
   
 ### <a name="classes"></a>類別  
   
@@ -196,7 +203,7 @@ cout.imbue(loc);
   
  **命名空間：** std  
   
-##  <a name="a-namelocalecategorya--localecategory"></a><a name="locale__category"></a>  locale::category  
+##  <a name="category"></a>  locale::category  
  整數類型，提供位元遮罩值以表示標準 facet 系列。  
   
 ```  
@@ -234,7 +241,7 @@ static const int none = 0;
   
  您可以像在 **monetary** &#124; **time** 中一樣，使用 `OR` 搭配這些常數來代表任意的分類群組。  
   
-##  <a name="a-namelocaleclassica--localeclassic"></a><a name="locale__classic"></a>  locale::classic  
+##  <a name="classic"></a>  locale::classic  
  此靜態成員函式傳回表示傳統 C 地區設定的地區設定物件。  
   
 ```  
@@ -286,7 +293,7 @@ The previous locale was classic.
 The current locale is not classic.  
 ```  
   
-##  <a name="a-namelocalecombinea--localecombine"></a><a name="locale__combine"></a>  locale::combine  
+##  <a name="combine"></a>  locale::combine  
  將指定之地區設定的 facet 插入至目標地區設定。  
   
 ```  
@@ -331,7 +338,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namefacetclassa--facet-class"></a><a name="facet_class"></a>  facet 類別  
+##  <a name="facet_class"></a>  facet 類別  
  做為所有地區設定 facet 之基底類別的類別。  
 
 ```    
@@ -350,7 +357,7 @@ private:
   
  在這類情況下，基底類別 facet 的建構函式應該有一個為零的 `_Refs` 引數。 當不再需要該物件時，系統就會將它刪除。 因此，只有在您需要負責物件存留期的罕見情況下，您才需要提供一個不為零的 _ *Refs* 引數。  
   
-##  <a name="a-namelocaleglobala--localeglobal"></a><a name="locale__global"></a>  locale::global  
+##  <a name="global"></a>  locale::global  
  重設程式的預設地區設定。 這會同時影響 C 和 C++ 的全域地區設定。  
   
 ```  
@@ -395,7 +402,7 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="a-nameidclassa--id-class"></a><a name="id_class"></a>  id 類別  
+##  <a name="id_class"></a>  id 類別  
  此成員類別提供唯一 facet 項目識別，做為用於地區設定中查詢 facet 的索引鍵。  
   
 class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
@@ -403,7 +410,7 @@ class id { protected:    id(); private:    id(const id&) // not defined void ope
 ### <a name="remarks"></a>備註  
  此成員類別描述每個唯一的地區設定 facet 所需的靜態成員物件。 請注意，您無法複製或指派 **id** 類別的物件。  
   
-##  <a name="a-namelocalelocalea--localelocale"></a><a name="locale__locale"></a>  locale::locale  
+##  <a name="locale"></a>  locale::locale  
  建立地區設定、地區設定複本，或 facet 或分類已被其他地區設定的 facet 或分類取代的地區設定複本。  
   
 ```  
@@ -494,7 +501,7 @@ int main( ) {
 }  
 ```  
   
-##  <a name="a-namelocalenamea--localename"></a><a name="locale__name"></a>  locale::name  
+##  <a name="name"></a>  locale::name  
  傳回儲存的地區設定名稱。  
   
 ```  
@@ -531,7 +538,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.  
 ```  
   
-##  <a name="a-namelocaleoperatorneqa--localeoperator"></a><a name="locale__operator_neq"></a>  locale::operator!=  
+##  <a name="op_neq"></a>  locale::operator!=  
  測試兩個地區設定是否不等。  
   
 ```  
@@ -539,7 +546,7 @@ bool operator!=(const locale& right) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  其中一個要測試是否不相等的地區設定。  
   
 ### <a name="return-value"></a>傳回值  
@@ -588,7 +595,7 @@ locales loc1 (German_Germany.1252) and
  loc3 (English_United States.1252) are not equal.  
 ```  
   
-##  <a name="a-namelocaleoperatora--localeoperator"></a><a name="locale__operator__"></a>  locale::operator()  
+##  <a name="op_call"></a>  locale::operator()  
  比較兩個 `basic_string` 物件。  
   
 ```  
@@ -599,14 +606,14 @@ bool operator()(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  左字串。  
   
- ` right`  
+ `right`  
  右字串。  
   
 ### <a name="return-value"></a>傳回值  
- 成員函式會傳回：  
+ 成員函式會傳回下列值：  
   
 -   –1，表示第一個序列比第二個序列小。  
   
@@ -620,7 +627,7 @@ bool operator()(
 ```  
 const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 
-return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) <0);
+return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```  
   
  因此，您可以使用地區設定物件作為函式物件。  
@@ -656,7 +663,7 @@ int main( )
 0  
 ```  
   
-##  <a name="a-namelocaleoperatoreqeqa--localeoperator"></a><a name="locale__operator_eq_eq"></a>  locale::operator==  
+##  <a name="op_eq_eq"></a>  locale::operator==  
  測試兩個地區設定是否相等。  
   
 ```  
@@ -664,7 +671,7 @@ bool operator==(const locale& right) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  其中一個要測試是否相等的地區設定。  
   
 ### <a name="return-value"></a>傳回值  

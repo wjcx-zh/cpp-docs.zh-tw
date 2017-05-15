@@ -33,10 +33,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: c7f3b346bc8abeab0c6bd913fc0b554bef4ed208
-ms.openlocfilehash: a817bc264a762d6043b80a68d966a9e8420c72b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 89cbb528d14117feac1f04863f0f4082969f22d9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
 ### <a name="quick-tips"></a>快速提示  
  以下是使用 `<random>` 時要記住的一些提示：  
   
--   在大部分的用途中，URNG 都會產生必須由分佈所圖形化的原始位元 (需要注意的例外狀況是 [std::shuffle()](../standard-library/algorithm-functions.md#std__shuffle)，原因是它直接使用 URNG)。  
+-   在大部分的用途中，URNG 都會產生必須由分佈所圖形化的原始位元 (需要注意的例外狀況是 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)，原因是它直接使用 URNG)。  
   
 -   因為執行 URNG 或分佈是修改作業，所以無法安全地同時呼叫 URNG 或分佈的單一具現化。 如需詳細資訊，請參閱 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 02/24/2017
   
  在 `<random>` 標頭中，有多個選項可供選擇，而且其中任何選項都優於過期的 C Runtime 函式 `rand()`。 如需 `rand()` 所發生錯誤以及 `<random>` 如何解決這些缺點的詳細資訊，請參閱[本影片](http://go.microsoft.com/fwlink/LinkId=397615)。  
   
-##  <a name="a-namecodea-examples"></a><a name="code"></a> 範例  
+##  <a name="code"></a> 範例  
  下列程式碼範例示範如何產生一些亂數，在此情況下，其中有五個使用以不具決定性的種子建立的產生器。  
   
 ```cpp  
@@ -228,9 +229,9 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
 此程式碼使用測試範本函式，示範兩個不同的隨機：隨機化整數向量，並隨機播放已編製索引資料的陣列。 測試函式的第一次呼叫會使用具有加密保護，且不具決定性、不可植入、不可重複的 URNG `random_device`。 第二個測試回合使用 `mersenne_twister_engine` 做為 URNG，並搭配決定性 32 位元常數種子，這表示結果是可重複的。 第三個測試回合將來自 `mersenne_twister_engine` 的32 位元不具決定性結果植入 `random_device`。 第四個測試回合透過使用填入 `random_device` 結果的[種子序列](../standard-library/seed-seq-class.md)，將此情況延伸，這可以有效地提供比 32 位元更多的不具決定性隨機性 (但還是不具加密保護)。 如需詳細資訊，請繼續閱讀本文。  
   
-##  <a name="a-namelistinga-categorized-listing"></a><a name="listing"></a> 分類清單  
+##  <a name="listing"></a> 分類清單  
   
-###  <a name="a-nameurngsa-uniform-random-number-generators"></a><a name="urngs"></a> 統一亂數產生器  
+###  <a name="urngs"></a> 統一亂數產生器  
  通常會根據這些屬性描述 URNG：  
   
 1. **期間長度**：它使用多少個反覆項目來重複一串產生的數字序列。 愈長愈好。  
@@ -241,13 +242,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  下列各節列出 `<random>` 標頭中提供的統一亂數產生器 (URNG)。  
   
-####  <a name="a-namerda-non-deterministic-generator"></a><a name="rd"></a> 不具決定性產生器  
+####  <a name="rd"></a> 不具決定性產生器  
   
 |||  
 |-|-|  
 |[random_device 類別](../standard-library/random-device-class.md)|使用外部裝置，產生不具決定性且以加密編譯方式保護的隨機序列。 通常用於植入引擎。 低效能，品質很高。 如需詳細資訊，請參閱[備註](#comments)。|  
   
-####  <a name="a-nametypedefsa-engine-typedefs-with-predefined-parameters"></a><a name="typedefs"></a> 具有預先定義參數的引擎 Typedef  
+####  <a name="typedefs"></a> 具有預先定義參數的引擎 Typedef  
  用於具現化引擎和引擎配接器。 如需詳細資訊，請參閱[引擎和分佈](#engdist)。  
   
 - `default_random_engine`：預設的引擎。   
@@ -280,7 +281,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 - `ranlux48_base`：用做 `ranlux48` 的基底。   
  `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
-####  <a name="a-nameenga-engine-templates"></a><a name="eng"></a> 引擎範本  
+####  <a name="eng"></a> 引擎範本  
  引擎範本用做獨立 URNG，或用做傳遞給[引擎配接器](#engadapt)的基底引擎。 這些通常使用[預先定義的引擎 typedef](#typedefs) 進行具現化，並傳遞給[分佈](#distributions)。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。  
   
 |||  
@@ -289,7 +290,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |[mersenne_twister_engine 類別](../standard-library/mersenne-twister-engine-class.md)|使用梅森旋轉演算法，產生隨機序列。 最為複雜，但品質最高 (random_device 類別除外)。 效能極為快速。|  
 |[subtract_with_carry_engine 類別](../standard-library/subtract-with-carry-engine-class.md)|使用帶進位減法演算法，以產生隨機序列。 改善 `linear_congruential_engine`，但是品質和效能比 `mersenne_twister_engine` 還要低。|  
   
-####  <a name="a-nameengadapta-engine-adaptor-templates"></a><a name="engadapt"></a> 引擎配接器範本  
+####  <a name="engadapt"></a> 引擎配接器範本  
  引擎配接器是可配接其他 (基底) 引擎的範本。 這些通常使用[預先定義的引擎 typedef](#typedefs) 進行具現化，並傳遞給[分佈](#distributions)。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。  
   
 |||  
@@ -300,7 +301,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  [[引擎範本](#eng)]  
   
-###  <a name="a-namedistributionsa-random-number-distributions"></a><a name="distributions"></a> 亂數分佈  
+###  <a name="distributions"></a> 亂數分佈  
  下列各節列出 `<random>` 標頭中提供的分佈。 分佈是一個後續處理機制，通常使用 URNG 輸出做為輸入，並透過定義的統計可能性密度函式來散發輸出。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。  
   
 #### <a name="uniform-distributions"></a>統一分佈  
@@ -330,7 +331,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|  
 |[cauchy_distribution 類別](../standard-library/cauchy-distribution-class.md)|產生實數 (浮點) 值的柯西分佈。|  
 |[chi_squared_distribution 類別](../standard-library/chi-squared-distribution-class.md)|產生實數 (浮點) 值的卡方分佈。|  
-|[fisher_f_distribution 類別](../standard-library/fisher-f-distribution-class.md)|產生實數 (浮點) 值的 F 分佈 (也稱為「史耐德柯 F 分佈」或「費雪-史耐德柯分佈」)。|  
+|[fisher_f_distribution 類別](../standard-library/fisher-f-distribution-class.md)|產生的 F 分佈 （也稱為 Snedecor 的 F 分佈或費雪 Snedecor 分佈） 實數 （浮點） 值。|  
 |[lognormal_distribution 類別](../standard-library/lognormal-distribution-class.md)|產生實數 (浮點) 值的對數常態分佈。|  
 |[normal_distribution 類別](../standard-library/normal-distribution-class.md)|產生實數 (浮點) 值的常態 (高斯) 分佈。|  
 |[student_t_distribution 類別](../standard-library/student-t-distribution-class.md)|產生實數 (浮點) 值的學生 *t* 分佈。|  
@@ -376,7 +377,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |`operator<<`|將狀態資訊寫入資料流。|  
 |`operator>>`|從資料流中擷取狀態資訊。|  
   
-##  <a name="a-nameengdista-engines-and-distributions"></a><a name="engdist"></a> 引擎和分佈  
+##  <a name="engdist"></a> 引擎和分佈  
  如需 `<random>` 中所定義的每個範本類別分類的詳細資訊，請參閱下列各節。 這兩個範本類別分類採用類型做為引數，並使用共用範本參數名稱，以描述允許做為實際引數類型的類型屬性，如下所示：  
   
 - `IntType` 指出 `short`、`int`、`long`、`long long`、`unsigned short`、`unsigned int`、`unsigned long` 或 `unsigned long long`。  
@@ -459,7 +460,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
   
  如需詳細資訊，請參閱本文之前的連結中，本主題下面的參考副主題。  
   
-##  <a name="a-namecommentsa-remarks"></a><a name="comments"></a> 備註  
+##  <a name="comments"></a> 備註  
  在 Visual Studio 中，有兩個極為有用的 URNG (`mt19937` 和 `random_device`)，如此比較表所示：  
   
 |URNG|快速|具有加密保護|可植入|具決定性|  

@@ -58,10 +58,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 70b71755436db29f60b1f8a4da8f2da216dcaf31
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5b5b2e5bca54f65a6fa54d43f92f60a704135110
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
@@ -89,12 +90,12 @@ long double acosl(
   
 #### <a name="parameters"></a>參數  
  `x`  
- 值介於 –1 和 1 之間，以計算反餘弦值 (反餘弦)。  
+ 介於-1 和 1，這是要計算反餘弦 （反餘弦） 之間的值。  
   
 ## <a name="return-value"></a>傳回值  
  `acos` 函式會傳回 0 到 π 弧度之間的 `x` 反餘弦值。  
   
- 根據預設，如果 `x` 小於 –1 或大於 1，則 `acos` 傳回不確定值。  
+ 根據預設，如果`x`小於-1 或大於 1，`acos`傳回無限期。  
   
 |輸入|SEH 例外狀況|Matherr 例外狀況|  
 |-----------|-------------------|-----------------------|  
@@ -159,9 +160,6 @@ int main( int ac, char* av[] )
 Arcsine of 0.000000 = 0.000000  
 Arccosine of 0.000000 = 1.570796  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Math::Acos](https://msdn.microsoft.com/en-us/library/system.math.acos.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

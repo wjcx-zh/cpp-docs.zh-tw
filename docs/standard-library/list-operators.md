@@ -10,19 +10,20 @@ f1_keywords: []
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 617ac2187ec3cd6d46cec6076fa72cc437803714
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 5713a02d534f8e4e2245ba3d181d78c529adbe79
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 運算子
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;](#operator_gt_)|[operator&gt;=](#operator_gt__eq)|  
-|[operator&lt;](#operator_lt_)|[operator&lt;=](#operator_lt__eq)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  測試運算子左邊的清單物件是否不等於右邊的清單物件。  
   
 ```
@@ -69,7 +70,7 @@ Lists not equal.
 *\  
 ```  
   
-##  <a name="operator_lt_"></a>  operator&lt;  
+##  <a name="op_lt"></a>  operator&lt;  
  測試運算子左邊的清單物件是否小於右邊的清單物件。  
   
 ```
@@ -120,7 +121,7 @@ List c1 is less than list c2.
 *\   
 ```  
   
-##  <a name="operator_lt__eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
  測試運算子左邊的清單物件是否小於或等於右邊的清單物件。  
   
 ```
@@ -171,7 +172,7 @@ List c1 is less than or equal to list c2.
 *\  
 ```  
   
-##  <a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  測試運算子左邊的清單物件是否等於右邊的清單物件。  
   
 ```
@@ -218,7 +219,7 @@ The lists are equal.
 *\  
 ```  
   
-##  <a name="operator_gt_"></a>  operator&gt;  
+##  <a name="op_gt"></a>  operator&gt;  
  測試運算子左邊的清單物件是否大於右邊的清單物件。  
   
 ```
@@ -269,7 +270,7 @@ List c1 is greater than list c2.
 *\  
 ```  
   
-##  <a name="operator_gt__eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
  測試運算子左邊的清單物件是否大於或等於右邊的清單物件。  
   
 ```

@@ -68,10 +68,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7b0107b94853080f1c6adfa114a7a207dde7b36f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f1fb949ba33299a8d18c41341b5fd76a776ee387
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos、cosf、cosl、cosh、coshf、coshl
@@ -117,7 +118,7 @@ long double coshl(
  角度 (弧度)。  
   
 ## <a name="return-value"></a>傳回值  
- `x` 的餘弦值或雙曲餘弦值。 如果 `x` 大於或等於 263，或小於或等於 -263，`cos`、`cosf` 或 `cosl` 呼叫結果中會缺少精確度。  
+ `x` 的餘弦值或雙曲餘弦值。 如果`x`大於或等於 263，或小於或等於-263，遺失精確度結果中的呼叫`cos`， `cosf`，或`cosl`，就會發生。  
   
  根據預設，如果 `cosh`、`coshf` 或 `coshl` 呼叫中的結果太大，則此函式會傳回 `HUGE_VAL`，並將 `errno` 設為 `ERANGE`。  
   
@@ -140,12 +141,6 @@ long double coshl(
   
 ## <a name="example"></a>範例  
  請參閱 [sin、sinf、sinl、sinh、sinhf、sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md) 中的範例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
-  
--   [System::Math::Cos](https://msdn.microsoft.com/en-us/library/system.math.cos.aspx)  
-  
--   [System::Math::Cosh](https://msdn.microsoft.com/en-us/library/system.math.cosh.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

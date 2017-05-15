@@ -9,41 +9,41 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::bind
 - functional/std::bind
-- std::bind1st
 - functional/std::bind1st
-- std::bind2nd
 - functional/std::bind2nd
-- std::bit_and
 - functional/std::bit_and
-- std::bit_not
 - functional/std::bit_not
-- std::bit_or
 - functional/std::bit_or
-- std::bit_xor
 - functional/std::bit_xor
-- std::cref
 - functional/std::cref
 - type_traits/std::cref
-- std::mem_fn
 - functional/std::mem_fn
-- std::mem_fun
 - functional/std::mem_fun
-- std::mem_fun_ref
 - functional/std::mem_fun_ref
-- std::not1
 - functional/std::not1
-- std::not2
 - functional/std::not2
-- std::ptr_fun
 - functional/std::ptr_fun
-- std::ref
 - functional/std::ref
 - type_traits/std::ref
-- std::swap
 - functional/std::swap
 - type_traits/std::swap
+- functional/std::bind
+- functional/std::bind1st
+- functional/std::bind2nd
+- functional/std::bit_and
+- functional/std::bit_not
+- functional/std::bit_or
+- functional/std::bit_xor
+- functional/std::cref
+- functional/std::mem_fn
+- functional/std::mem_fun
+- functional/std::mem_fun_ref
+- functional/std::not1
+- functional/std::not2
+- functional/std::ptr_fun
+- functional/std::ref
+- functional/std::swap
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -53,23 +53,24 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 9437109e3e03f2b8bfb39bf2b4ca75e520b59c80
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 16d93ad5a46dccbc53fa67a08e2f8432b18f14b5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函式
 ||||  
 |-|-|-|  
-|[bind](#bind_function)|[bind1st](#bind1st_function)|[bind2nd](#bind2nd_function)|  
-|[bit_and](#bit_and_function)|[bit_not](#bit_not_function)|[bit_or](#bit_or_function)|  
-|[bit_xor](#bit_xor_function)|[cref](#cref_function)|[mem_fn](#mem_fn_function)|  
-|[mem_fun](#mem_fun_function)|[mem_fun_ref](#mem_fun_ref_function)|[not1](#not1_function)|  
-|[not2](#not2_function)|[ptr_fun](#ptr_fun_function)|[ref](#ref_function)|  
-|[swap](#swap_function)|  
+|[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
+|[bit_and](#bit_and)|[bit_not](#bit_not)|[bit_or](#bit_or)|  
+|[bit_xor](#bit_xor)|[cref](#cref)|[mem_fn](#mem_fn)|  
+|[mem_fun](#mem_fun)|[mem_fun_ref](#mem_fun_ref)|[not1](#not1)|  
+|[not2](#not2)|[ptr_fun](#ptr_fun)|[ref](#ref)|  
+|[swap](#swap)|  
   
-##  <a name="a-namebindfunctiona--bind"></a><a name="bind_function"></a>  bind  
+##  <a name="bind"></a>  bind  
  將引數繫結至可呼叫物件。  
   
 ```  
@@ -96,7 +97,7 @@ unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 ### <a name="remarks"></a>備註  
  `Fty, T1, T2, ..., TN` 類型必須是複製建構，且對於 `w1, w2, ..., wN` 某些值來說，`INVOKE(fn, t1, ..., tN)` 必須是有效的運算式。  
   
- 第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 `g(u1, u2, ..., uM)` 的效果為 `INVOKE(f, v1, v2, ..., vN,` [result_of](../standard-library/result-of-class.md) `<Fty` `cv` `(V1, V2, ..., VN)>::type)`，其中 `cv` 是 `g` 的 cv 限定詞，而繫結引數 `v1, v2, ..., vN` 的值和類型則依下列指定方式來判斷。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。  
+ 第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 效果`g(u1, u2, ..., uM)`是`INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`，其中`cv`是 cv 限定詞的`g`值和繫結的引數型別`v1, v2, ..., vN`會依照下列指定決定。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。  
   
  第二個範本函式會傳回含 `result_type` 巢狀類型的轉送呼叫包裝函式 `g`，該類型與 `Ret` 同義。 `g(u1, u2, ..., uM)` 的效果為 `INVOKE(f, v1, v2, ..., vN, Ret)`，其中 `cv` 是 `g` 的 cv 限定詞，而繫結引數 `v1, v2, ..., vN` 的值和類型則依下列指定方式來判斷。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單和指定的傳回類型，來製作可呼叫物件。  
   
@@ -168,7 +169,7 @@ int main()
 3^2 == 9  
 ```  
   
-##  <a name="a-namebind1stfunctiona--bind1st"></a><a name="bind1st_function"></a>  bind1st  
+##  <a name="bind1st"></a>  bind1st  
  協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。  
   
 ```  
@@ -180,11 +181,11 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
  `func`  
  要轉換為一元函式物件的二元函式物件。  
   
- ` left`  
+ `left`  
  二元函式物件的第一個引數所要繫結的值。  
   
 ### <a name="return-value"></a>傳回值  
- 透過將二元函式物件的第一個引數繫結至 ` left.` 值，所產生的一元函式物件。  
+ 一元函式物件所產生的繫結至值的二元函式物件的第一個引數`left`。  
   
 ### <a name="remarks"></a>備註  
  函式繫結器是一種函式配接器，其會傳回函式物件，因此可用於特定類型的函式組合，以建構更複雜且強大的運算式。  
@@ -258,7 +259,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebind2ndfunctiona--bind2nd"></a><a name="bind2nd_function"></a>  bind2nd  
+##  <a name="bind2nd"></a>  bind2nd  
  協助程式樣板函式，可建立配接器，透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。  
   
 ```  
@@ -270,11 +271,11 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
  `func`  
  要轉換為一元函式物件的二元函式物件。  
   
- ` right`  
+ `right`  
  二元函式物件的第二個引數所要繫結的值。  
   
 ### <a name="return-value"></a>傳回值  
- 透過將二元函式物件的第二個引數繫結至 ` right.` 值，所產生的一元函式物件。  
+ 一元函式物件所產生的繫結至值的二元函式物件的第二個引數`right`。  
   
 ### <a name="remarks"></a>備註  
  函式繫結器是一種函式配接器，其會傳回函式物件，因此可用於特定類型的函式組合，以建構更複雜且強大的運算式。  
@@ -348,7 +349,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.  
 ```  
   
-##  <a name="a-namebitandfunctiona--bitand"></a><a name="bit_and_function"></a>  bit_and  
+##  <a name="bit_and"></a>  bit_and  
  在其引數執行位元 AND 運算 (二元 `operator&`) 的預先定義函式物件。  
   
 ```  
@@ -370,14 +371,14 @@ struct bit_and<void>
 ```  
   
 ### <a name="parameters"></a>參數  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  支援 `operator&` 的任何類型，其接受指定或推斷類型的運算元。  
   
  `Left`  
- 位元 AND 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 ` T` 推斷類型的左值和右值參考引數。  
+ 位元 AND 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
   
  `Right`  
- 位元 AND 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 ` U` 推斷類型的左值和右值參考引數。  
+ 位元 AND 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
   
 ### <a name="return-value"></a>傳回值  
  `Left``&``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator&` 所傳回的類型。  
@@ -385,7 +386,7 @@ struct bit_and<void>
 ### <a name="remarks"></a>備註  
  對於基本資料類型，`bit_and` 仿函數僅限於整數類型，或會實作二元 `operator&` 的使用者定義類型。  
   
-##  <a name="a-namebitnotfunctiona--bitnot"></a><a name="bit_not_function"></a>  bit_not  
+##  <a name="bit_not"></a>  bit_not  
  在其引數執行位元補數 (NOT) 運算 (一元 `operator~`) 的預先定義函式物件。  
   
 ```  
@@ -417,7 +418,7 @@ struct bit_not<void>
 ### <a name="remarks"></a>備註  
  對於基本資料類型，`bit_not` 仿函數僅限於整數類型，或會實作二元 `operator~` 的使用者定義類型。  
   
-##  <a name="a-namebitorfunctiona--bitor"></a><a name="bit_or_function"></a>  bit_or  
+##  <a name="bit_or"></a>  bit_or  
  在其引數執行位元 OR 運算 (`operator|`) 的預先定義函式物件。  
   
 ```  
@@ -439,14 +440,14 @@ struct bit_or<void>
 ```  
   
 ### <a name="parameters"></a>參數  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  支援 `operator|` 的任何類型，其接受指定或推斷類型的運算元。  
   
  `Left`  
- 位元 OR 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 ` T` 推斷類型的左值和右值參考引數。  
+ 位元 OR 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
   
  `Right`  
- 位元 OR 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 ` U` 推斷類型的左值和右值參考引數。  
+ 位元 OR 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
   
 ### <a name="return-value"></a>傳回值  
  `Left``|``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator|` 所傳回的類型。  
@@ -454,7 +455,7 @@ struct bit_or<void>
 ### <a name="remarks"></a>備註  
  對於基本資料類型，`bit_or` 函式僅限於整數類型，或會實作 `operator|` 的使用者定義類型。  
   
-##  <a name="a-namebitxorfunctiona--bitxor"></a><a name="bit_xor_function"></a>  bit_xor  
+##  <a name="bit_xor"></a>  bit_xor  
  在其引數執行位元 XOR 運算 (二元 `operator^`) 的預先定義函式物件。  
   
 ```  
@@ -476,14 +477,14 @@ struct bit_xor<void>
 ```  
   
 ### <a name="parameters"></a>參數  
- `Type`, ` T`, ` U`  
+ `Type`, `T`, `U`  
  支援 `operator^` 的任何類型，其接受指定或推斷類型的運算元。  
   
  `Left`  
- 位元 XOR 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 ` T` 推斷類型的左值和右值參考引數。  
+ 位元 XOR 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
   
  `Right`  
- 位元 XOR 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 ` U` 推斷類型的左值和右值參考引數。  
+ 位元 XOR 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
   
 ### <a name="return-value"></a>傳回值  
  `Left``^``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator^` 所傳回的類型。  
@@ -491,7 +492,7 @@ struct bit_xor<void>
 ### <a name="remarks"></a>備註  
  對於基本資料類型，`bit_xor` 仿函數僅限於整數類型，或會實作二元 `operator^` 的使用者定義類型。  
   
-##  <a name="a-namecreffunctiona--cref"></a><a name="cref_function"></a>  cref  
+##  <a name="cref"></a>  cref  
  從引數建構常數`reference_wrapper`。  
   
 ```  
@@ -545,7 +546,7 @@ cref(i) = 1
 cref(neg)(i) = -1  
 ```  
   
-##  <a name="a-namememfnfunctiona--memfn"></a><a name="mem_fn_function"></a>  mem_fn  
+##  <a name="mem_fn"></a>  mem_fn  
  產生簡單呼叫包裝函式。  
   
 ```  
@@ -606,7 +607,7 @@ int main()
 3*2 == 6  
 ```  
   
-##  <a name="a-namememfunfunctiona--memfun"></a><a name="mem_fun_function"></a>  mem_fun  
+##  <a name="mem_fun"></a>  mem_fun  
  協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。  
   
 ```  
@@ -690,7 +691,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-namememfunreffunctiona--memfunref"></a><a name="mem_fun_ref_function"></a>  mem_fun_ref  
+##  <a name="mem_fun_ref"></a>  mem_fun_ref  
  Helper 範本函式，用以在使用參考引數初始化時建構成員函式的物件配接器。  
   
 ```  
@@ -792,7 +793,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13   
 ```  
   
-##  <a name="a-namenot1functiona--not1"></a><a name="not1_function"></a>  not1  
+##  <a name="not1"></a>  not1  
  傳回一元述詞的補數。  
   
 ```  
@@ -801,7 +802,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` pred`  
+ `pred`  
  要變為負值的一元述詞。  
   
 ### <a name="return-value"></a>傳回值  
@@ -860,7 +861,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.  
 ```  
   
-##  <a name="a-namenot2functiona--not2"></a><a name="not2_function"></a>  not2  
+##  <a name="not2"></a>  not2  
  傳回二元述詞的補數。  
   
 ```  
@@ -932,7 +933,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )  
 ```  
   
-##  <a name="a-nameptrfunfunctiona--ptrfun"></a><a name="ptr_fun_function"></a>  ptr_fun  
+##  <a name="ptr_fun"></a>  ptr_fun  
  Helper 範本函式，可用來將一元和二元函式指標分別轉換成一元和二元可調適性函式。  
   
 ```  
@@ -958,7 +959,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 ### <a name="example"></a>範例  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
-##  <a name="a-namereffunctiona--ref"></a><a name="ref_function"></a>  ref  
+##  <a name="ref"></a>  ref  
  從引數建構 `reference_wrapper` 。  
   
 ```  
@@ -1047,7 +1048,7 @@ tiger lion cougar
 tiger cougar  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap"></a><a name="swap_function"></a>  swap  
+##  <a name="swap"></a>  swap  
  交換兩個 `function` 物件。  
   
 ```  

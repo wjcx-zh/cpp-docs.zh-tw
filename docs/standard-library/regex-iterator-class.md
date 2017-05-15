@@ -10,17 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_iterator
-- std::regex_iterator
 - regex/std::regex_iterator
-- std::regex_iterator::operator==
 - regex/std::regex_iterator::operator==
-- std::regex_iterator::operator!=
 - regex/std::regex_iterator::operator!=
-- std::regex_iterator::operator*
 - regex/std::regex_iterator::operator*
-- std::regex_iterator::operator->
 - regex/std::regex_iterator::operator->
-- std::regex_iterator::operator++
 - regex/std::regex_iterator::operator++
 dev_langs:
 - C++
@@ -45,10 +39,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 248e9ba676b906af62f6804f4939e04158a8e2ef
-ms.openlocfilehash: 8bfed3b74020bce20f18700d30573f01cdfd2adc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: e73e90efd7248c6e8af5bfb406481623457c33c3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="regexiterator-class"></a>regex_iterator 類別
@@ -94,7 +89,7 @@ private:
  子相符項目的迭代器類型。  
   
  `Elem`  
- 要比對的項目類型。  
+ 要符合之項目的類型。  
   
  `RXtraits`  
  項目的 Traits 類別。  
@@ -105,20 +100,20 @@ private:
 ## <a name="examples"></a>範例  
  如需規則運算式的相關範例，請參閱下列主題：  
   
-- [regex_match 函式](../standard-library/regex-functions.md#regex_match_function)  
+- [regex_match](../standard-library/regex-functions.md#regex_match)  
   
-- [regex_replace 函式](../standard-library/regex-functions.md#regex_replace_function)  
+- [regex_replace](../standard-library/regex-functions.md#regex_replace)  
   
-- [regex_search 函式](../standard-library/regex-functions.md#regex_search_function)  
+- [regex_search](../standard-library/regex-functions.md#regex_search)  
   
-- [swap 函式](../standard-library/regex-functions.md#swap_function)  
+- [swap](../standard-library/regex-functions.md#swap)  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<regex>  
   
  **命名空間：** std  
   
-##  <a name="a-nameregexiteratordifferencetypea--regexiteratordifferencetype"></a><a name="regex_iterator__difference_type"></a>  regex_iterator::difference_type  
+##  <a name="difference_type"></a>  regex_iterator::difference_type  
  迭代器差值的類型。  
   
 ```  
@@ -171,7 +166,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratoriteratorcategorya--regexiteratoriteratorcategory"></a><a name="regex_iterator__iterator_category"></a>  regex_iterator::iterator_category  
+##  <a name="iterator_category"></a>  regex_iterator::iterator_category  
  迭代器分類的類型。  
   
 ```  
@@ -224,7 +219,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratoroperatorneqa--regexiteratoroperator"></a><a name="regex_iterator__operator_neq"></a>  regex_iterator::operator!=  
+##  <a name="op_neq"></a>  regex_iterator::operator!=  
  比較迭代器是否不相等。  
   
 ```  
@@ -281,7 +276,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratoroperatorstara--regexiteratoroperator"></a><a name="regex_iterator__operator_star"></a>  regex_iterator::operator*  
+##  <a name="op_star"></a>  regex_iterator::operator*  
  存取指定的相符項目。  
   
 ```  
@@ -334,7 +329,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratoroperatoraddadda--regexiteratoroperator"></a><a name="regex_iterator__operator_add_add"></a>  regex_iterator::operator++  
+##  <a name="op_add_add"></a>  regex_iterator::operator++  
  遞增迭代器。  
   
 ```  
@@ -390,7 +385,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratoroperatoreqa--regexiteratoroperator"></a><a name="regex_iterator__operator_eq"></a>  regex_iterator::operator=  
+##  <a name="op_eq"></a>  regex_iterator::operator=  
  比較迭代器是否相等。  
   
 ```  
@@ -447,7 +442,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratoroperator-gta--regexiteratoroperator-gt"></a><a name="regex_iterator__operator-_gt_"></a>  regex_iterator::operator-&gt;  
+##  <a name="regex_iterator__operator-_gt"></a>  regex_iterator::operator-&gt;  
  存取指定的相符項目。  
   
 ```  
@@ -500,7 +495,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratorpointera--regexiteratorpointer"></a><a name="regex_iterator__pointer"></a>  regex_iterator::pointer  
+##  <a name="pointer"></a>  regex_iterator::pointer  
  要比對的指標類型。  
   
 ```  
@@ -553,7 +548,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratorreferencea--regexiteratorreference"></a><a name="regex_iterator__reference"></a>  regex_iterator::reference  
+##  <a name="reference"></a>  regex_iterator::reference  
  對應的參考類型。  
   
 ```  
@@ -607,7 +602,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratorregexiteratora--regexiteratorregexiterator"></a><a name="regex_iterator__regex_iterator"></a>  regex_iterator::regex_iterator  
+##  <a name="regex_iterator"></a>  regex_iterator::regex_iterator  
  建構迭代器。  
   
 ```  
@@ -679,7 +674,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratorregextypea--regexiteratorregextype"></a><a name="regex_iterator__regex_type"></a>  regex_iterator::regex_type  
+##  <a name="regex_type"></a>  regex_iterator::regex_type  
  要比對的規則運算式類型。  
   
 ```  
@@ -733,7 +728,7 @@ match == a
 match == a  
 ```  
   
-##  <a name="a-nameregexiteratorvaluetypea--regexiteratorvaluetype"></a><a name="regex_iterator__value_type"></a>  regex_iterator::value_type  
+##  <a name="value_type"></a>  regex_iterator::value_type  
  相符項目的類型。  
   
 ```  

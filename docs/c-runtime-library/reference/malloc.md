@@ -49,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f259e869535e00bf0dd4f18e6a4d8d02e4054685
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="malloc"></a>malloc
@@ -93,7 +94,7 @@ void *malloc(
 |[fputs](../../c-runtime-library/reference/fputs-fputws.md)|[_getdcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)|[scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)||  
 |[fread](../../c-runtime-library/reference/fread.md)|[gets](../../c-runtime-library/gets-getws.md)|[_searchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)||  
   
- C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 函式會設定 `malloc` 的新處理常式模式。 此新的處理常式模式會指出失敗時，`malloc` 是否會呼叫 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 所設定的新處理常式。 根據預設，`malloc` 不會在失敗時呼叫新的處理常式來配置記憶體。 您可以覆寫這個預設行為，因此，在 `malloc` 無法配置記憶體時，`malloc` 會呼叫新的處理常式，其方法與 `new` 運算子因相同原因而失敗時所執行的方法相同。 若要覆寫預設值，請呼叫`_set_new_mode(1)`早期在您的程式或與 NEWMODE 的連結。OBJ (請參閱[連結選項](../../c-runtime-library/link-options.md))。  
+ C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 函式會設定 `malloc` 的新處理常式模式。 此新的處理常式模式會指出失敗時，`malloc` 是否會呼叫 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 所設定的新處理常式。 根據預設，`malloc` 不會在失敗時呼叫新的處理常式來配置記憶體。 您可以覆寫這個預設行為，因此，在 `malloc` 無法配置記憶體時，`malloc` 會呼叫新的處理常式，其方法與 `new` 運算子因相同原因而失敗時所執行的方法相同。 若要覆寫預設值，請呼叫`_set_new_mode(1)`早期在您的程式或與 NEWMODE 連結。OBJ (請參閱[Link 選項](../../c-runtime-library/link-options.md))。  
   
  當應用程式與偵錯版本的 C 執行階段程式庫相連結時，`malloc` 會解析為 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。  
   
@@ -146,9 +147,6 @@ int main( void )
 Memory space allocated for path name  
 Memory freed  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   

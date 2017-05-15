@@ -25,10 +25,11 @@ f1_keywords:
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5ca6c94270b97f8b6e48871699628415e2133778
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: c2af4555aca38e0c8997a5a1ba6f3dac34f30b3c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 函式
@@ -162,7 +163,7 @@ bool isalpha(CharType Ch, const locale& Loc)
  如果所測試的元素是字母字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **alpha**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -223,7 +224,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
  如果所測試的元素是控制字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -284,7 +285,7 @@ bool isdigit(CharType Ch, const locale& Loc)
  如果所測試的元素是數字字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **digit**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -345,7 +346,7 @@ bool isgraph(CharType Ch, const locale& Loc)
  如果所測試的元素是英數字元或標點符號字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **graph**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -406,7 +407,7 @@ bool islower(CharType Ch, const locale& Loc)
  如果所測試的元素是小寫字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **lower**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -467,7 +468,7 @@ bool isprint(CharType Ch, const locale& Loc)
  如果所測試的元素是可列印字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **print**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -527,7 +528,7 @@ bool ispunct(CharType Ch, const locale& Loc)
  如果所測試的元素是標點符號字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **punct**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -588,7 +589,7 @@ bool isspace(CharType Ch, const locale& Loc)
  如果所測試的元素是空白字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **space**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -649,7 +650,7 @@ bool isupper(CharType Ch, const locale& Loc)
  如果所測試的元素是大寫字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **upper**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -710,7 +711,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
  如果所測試的元素是用來表示十六進位數字的字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#ctype__is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`)。  
   
  十六進位數字會使用以 16 為底數的方式來表示數字，其中是使用數字 0 到 9 再加上不區分大小寫的字母 A 到 F，來表示十進位數字 0 到 15。  
   
@@ -773,7 +774,7 @@ CharType tolower(CharType Ch, const locale& Loc)
  已轉換為小寫的字元。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#ctype__tolower)( `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`)。  
   
 ### <a name="example"></a>範例  
   
@@ -818,7 +819,7 @@ CharType toupper(CharType Ch, const locale& Loc)
  已轉換為大寫的字元。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#ctype__toupper)( `Ch`)。  
+ 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`)。  
   
 ### <a name="example"></a>範例  
   

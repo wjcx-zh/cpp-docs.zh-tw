@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9939a9c3586367f048a173fb75e17d5c9f67c387
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c8a3b6e7df9f46ebf299f2fe5472461f1944b055
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="setnewhandler"></a>_set_new_handler
@@ -115,7 +116,7 @@ _set_new_mode(1)
   
  ，或使用 Newmode.obj 連結。  
   
- 如果提供使用者定義的 `operator new`，則失敗時不會自動呼叫新的處理常式函式。  
+ 如果使用者定義`operator new`提供新的處理常式函式不會自動呼叫失敗。  
   
  如需詳細資訊，請參閱《C++ 語言參考》中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md)。  
   
@@ -177,9 +178,6 @@ Allocation failed. Coalescing heap.
 This application has requested the Runtime to terminate it in an unusual way.  
 Please contact the application's support team for more information.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   

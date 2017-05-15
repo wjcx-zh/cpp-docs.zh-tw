@@ -72,10 +72,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 17978f1c6f934783236df5a36464ab44f8254903
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: e864aca13c5ae83b3806a95026a05f8f408e9071
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltsharedmutexgt"></a>&lt;shared_mutex&gt;
@@ -91,7 +92,7 @@ ms.lasthandoff: 02/24/2017
   
 |函式|說明|  
 |---------------|-----------------|  
-|[swap 函式](../standard-library/shared-mutex.md#function_swap)|交換函式參數所參考的共用 mutex 物件內容。|  
+|[swap](../standard-library/shared-mutex.md#function_swap)|交換函式參數所參考的共用 mutex 物件內容。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -128,11 +129,11 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
  `shared_lock` 樣板類別會延伸對計時鎖定的支援，並將擁有權轉移到共用的 mutex。 擁有權可在建構期間或完成之後取得，並可轉移到另一個 `shared_lock` 物件。 `shared_lock` 類型的物件可以移動，但無法複製。  
   
 > [!WARNING]
->  Visual Studio 2015 中的 C++ 標準程式庫同步處理類型是以 Windows 同步處理原始物件為根據，且不再使用 ConcRT (除非目標平台是 Windows XP)。 <shared_mutex> 中定義的類型不應與任何 ConcRT 類型或函式搭配使用。  
+>  從 Visual Studio 2015 開始，c + + 標準程式庫同步處理類型根據 Windows 同步處理原始物件，且不再使用 ConcRT （除非目標平台是 Windows XP）。 <shared_mutex> 中定義的類型不應與任何 ConcRT 類型或函式搭配使用。  
   
 ## <a name="classes"></a>類別  
   
-###  <a name="a-nameclasssharedmutexa-sharedmutex-class"></a><a name="class_shared_mutex"></a> shared_mutex 類別  
+###  <a name="class_shared_mutex"></a> shared_mutex 類別  
  `shared_mutex` 類別會利用共用擁有權語意來實作非遞迴的 mutex。  
   
 ```cpp  
@@ -158,7 +159,7 @@ class shared_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedtimedmutexa-sharedtimedmutex-class"></a><a name="class_shared_timed_mutex"></a> shared_timed_mutex 類別  
+###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex 類別  
  `shared_timed_mutex` 類別會利用符合計時 mutex 類型需求的共用擁有權語意，來實作非遞迴的 mutex。  
   
 ```cpp  
@@ -189,7 +190,7 @@ class shared_timed_mutex {
    };  
 ```
 
-###  <a name="a-nameclasssharedlocka-sharedlock-class"></a><a name="class_shared_lock"></a> shared_lock 類別  
+###  <a name="class_shared_lock"></a> shared_lock 類別  
  樣板類別 `shared_lock` 會控制某個範圍內共用 mutex 物件的共用擁有權。 樣板參數必須是共用的 mutex 類型。  
 
 ```cpp  
@@ -236,7 +237,7 @@ class shared_lock {
 
 ## <a name="functions"></a>函式  
   
-###  <a name="a-namefunctionswapa-swap-function"></a><a name="function_swap"></a> swap 函式  
+###  <a name="function_swap"></a>交換
  交換 `shared_lock` 物件。  
   
 ```cpp  

@@ -44,10 +44,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bbe0589b9f0b02a738e8367002986c1669935605
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 9545a1c559574bd5dc86e8924a65db9bea8cf9ae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 類別
@@ -78,7 +79,7 @@ class wstring_convert
   
 -   配置的轉換物件的指標 (在終結 wbuffer_convert 物件時釋放)  
   
--   [state_type](#wstring_convert__state_type) 類型的轉換狀態物件  
+-   [state_type](#state_type) 類型的轉換狀態物件  
   
 -   轉換計數  
   
@@ -86,32 +87,32 @@ class wstring_convert
   
 |||  
 |-|-|  
-|[wstring_convert](#wstring_convert__wstring_convert)|建構類型 `wstring_convert` 的物件。|  
+|[wstring_convert](#wstring_convert)|建構類型 `wstring_convert` 的物件。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[byte_string](#wstring_convert__byte_string)|代表位元組字串的類型。|  
-|[wide_string](#wstring_convert__wide_string)|代表寬字串的類型。|  
-|[state_type](#wstring_convert__state_type)|代表轉換狀態的類型。|  
-|[int_type](#wstring_convert__int_type)|代表整數的類型。|  
+|[byte_string](#byte_string)|代表位元組字串的類型。|  
+|[wide_string](#wide_string)|代表寬字串的類型。|  
+|[state_type](#state_type)|代表轉換狀態的類型。|  
+|[int_type](#int_type)|代表整數的類型。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[from_bytes](#wstring_convert__from_bytes)|將位元組字串轉換為寬字串。|  
-|[to_bytes](#wstring_convert__to_bytes)|將寬字串轉換為位元組字串。|  
-|[converted](#wstring_convert__converted)|傳回成功轉換的數目。|  
-|[state](#wstring_convert__state)|傳回表示轉換狀態的物件。|  
+|[from_bytes](#from_bytes)|將位元組字串轉換為寬字串。|  
+|[to_bytes](#to_bytes)|將寬字串轉換為位元組字串。|  
+|[converted](#converted)|傳回成功轉換的數目。|  
+|[state](#state)|傳回表示轉換狀態的物件。|  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<locale>  
   
  **命名空間：** std  
   
-##  <a name="wstring_convert__byte_string"></a>  wstring_convert::byte_string  
+##  <a name="byte_string"></a>  wstring_convert::byte_string  
  代表位元組字串的類型。  
   
 ```
@@ -121,7 +122,7 @@ typedef std::basic_string<char> byte_string;
 ### <a name="remarks"></a>備註  
  此類型是 `std::basic_string<char>` 的同義字。  
   
-##  <a name="wstring_convert__converted"></a>  wstring_convert::converted  
+##  <a name="converted"></a>  wstring_convert::converted  
  傳回成功轉換的數目。  
   
 ```
@@ -134,7 +135,7 @@ size_t converted() const;
 ### <a name="remarks"></a>備註  
  成功轉換的數目會儲存在轉換計數物件中。  
   
-##  <a name="wstring_convert__from_bytes"></a>  wstring_convert::from_bytes  
+##  <a name="from_bytes"></a>  wstring_convert::from_bytes  
  將位元組字串轉換為寬字串。  
   
 ```
@@ -150,7 +151,7 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|  
 |`Byte`|要轉換的單一元素位元組序列。|  
 |`ptr`|要轉換的 C-style、以 Null 結束的字元序列。|  
-|`Bstr`|要轉換的 [byte_string](#wstring_convert__byte_string)。|  
+|`Bstr`|要轉換的 [byte_string](#byte_string)。|  
 |`first`|在字元範圍中要轉換的第一個字元。|  
 |`last`|在字元範圍中要轉換的最後一個字元。|  
   
@@ -162,7 +163,7 @@ wide_string from_bytes(const char* first, const char* last);
   
  成功轉換的輸入項目數目會儲存在轉換計數物件中。 如果未發生轉換錯誤，成員函式會傳回已轉換的寬字串。 否則，如果物件是以 wide-string 錯誤訊息的初始設定式建構，則成員函式會傳回 wide-string 錯誤訊息物件。 否則，成員函式會擲回 [range_error](../standard-library/range-error-class.md) 類別的物件。  
   
-##  <a name="wstring_convert__int_type"></a>  wstring_convert::int_type  
+##  <a name="int_type"></a>  wstring_convert::int_type  
  代表整數的類型。  
   
 ```
@@ -172,7 +173,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 ### <a name="remarks"></a>備註  
  此類型是 `wide_string::traits_type::int_type` 的同義字。  
   
-##  <a name="wstring_convert__state"></a>  wstring_convert::state  
+##  <a name="state"></a>  wstring_convert::state  
  傳回表示轉換狀態的物件。  
   
 ```
@@ -184,7 +185,7 @@ state_type state() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="wstring_convert__state_type"></a>  wstring_convert::state_type  
+##  <a name="state_type"></a>  wstring_convert::state_type  
  代表轉換狀態的類型。  
   
 ```
@@ -194,7 +195,7 @@ typedef typename Codecvt::state_type state_type;
 ### <a name="remarks"></a>備註  
  此類型描述可代表轉換狀態的物件。 此類型是 `Codecvt::state_type` 的同義字。  
   
-##  <a name="wstring_convert__to_bytes"></a>  wstring_convert::to_bytes  
+##  <a name="to_bytes"></a>  wstring_convert::to_bytes  
  將寬字串轉換為位元組字串。  
   
 ```
@@ -210,7 +211,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |---------------|-----------------|  
 |`Char`|要轉換的寬字元。|  
 |`Wptr`|要轉換的 C-style、以 Null 結束的序列 (開始於 `wptr`)。|  
-|`Wstr`|要轉換的 [wide_string](#wstring_convert__wide_string)。|  
+|`Wstr`|要轉換的 [wide_string](#wide_string)。|  
 |`first`|項目範圍中要轉換的第一個項目。|  
 |`last`|項目範圍中要轉換的最後一個項目。|  
   
@@ -219,7 +220,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
   
  成功轉換的輸入項目數目會儲存在轉換計數物件中。 如果未發生轉換錯誤，成員函式會傳回已轉換的位元組字串。 否則，如果物件是以 byte-string 錯誤訊息的初始設定式建構，則成員函式會傳回 byte-string 錯誤訊息物件。 否則，成員函式會擲回 [range_error](../standard-library/range-error-class.md) 類別的物件。  
   
-##  <a name="wstring_convert__wide_string"></a>  wstring_convert::wide_string  
+##  <a name="wide_string"></a>  wstring_convert::wide_string  
  代表寬字串的類型。  
   
 ```
@@ -229,7 +230,7 @@ typedef std::basic_string<Elem> wide_string;
 ### <a name="remarks"></a>備註  
  此類型是 `std::basic_string<Elem>` 的同義字。  
   
-##  <a name="wstring_convert__wstring_convert"></a>  wstring_convert::wstring_convert  
+##  <a name="wstring_convert"></a>  wstring_convert::wstring_convert  
  建構類型 `wstring_convert` 的物件。  
   
 ```
@@ -243,9 +244,9 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 |參數|說明|  
 |---------------|-----------------|  
 |`*Pcvt`|`Codecvt` 類型的物件，用以執行轉換。|  
-|`_State`|[state_type](#wstring_convert__state_type) 類型的物件，代表轉換狀態。|  
-|`_Berr`|發生錯誤時顯示的 [byte_string](#wstring_convert__byte_string)。|  
-|`Werr`|發生錯誤時顯示的 [wide_string](#wstring_convert__wide_string)。|  
+|`_State`|[state_type](#state_type) 類型的物件，代表轉換狀態。|  
+|`_Berr`|發生錯誤時顯示的 [byte_string](#byte_string)。|  
+|`Werr`|發生錯誤時顯示的 [wide_string](#wide_string)。|  
   
 ### <a name="remarks"></a>備註  
  第一個建構函式會將 *Pcvt_arg* 儲存於[轉換物件](../standard-library/wstring-convert-class.md)中

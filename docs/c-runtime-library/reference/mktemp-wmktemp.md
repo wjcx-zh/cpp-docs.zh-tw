@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: b6b5f2f059084e1f5dd66d75b5f5af5f2ade2473
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 1e56ba6f238c62a220966701e7b1ced1dd2ec4ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp、_wmktemp
@@ -104,7 +105,7 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tmktemp`|`_mktemp`|`_mktemp`|`_wmktemp`|  
   
- `template` 引數的格式為 `base`XXXXXX，其中 `base` 是您所提供之新檔案名稱的一部分，而每個 X 是 `_mktemp` 所提供的字元預留位置。 `template` 中的每個預留位置字元必須是大寫 X。`_mktemp` 會保留 `base`，並以字母字元取代後置 X 的第一個 X。 `_mktemp` 會以五位數值取代接著的後置 X；此值是識別呼叫處理序 (在多執行緒程式中則識別呼叫執行緒) 的唯一號碼。  
+ `template`引數的形式`base` *XXXXXX*，其中`base`屬於您提供的新檔案名稱，而且每個 X 是所提供的字元預留位置`_mktemp`。 `template` 中的每個預留位置字元必須是大寫 X。`_mktemp` 會保留 `base`，並以字母字元取代後置 X 的第一個 X。 `_mktemp` 會以五位數值取代接著的後置 X；此值是識別呼叫處理序 (在多執行緒程式中則識別呼叫執行緒) 的唯一號碼。  
   
  每次成功呼叫 `_mktemp` 都會修改 `template`。 之後，每次使用相同的 `template` 引數從相同的處理序或執行緒呼叫時，`_mktemp` 都會檢查是否有任何檔案名稱符合先前呼叫中 `_mktemp` 所傳回的名稱。 如果指定的名稱不存在檔案，`_mktemp` 會傳回該名稱。 如果之前傳回的所有名稱都存在檔案，`_mktemp` 會以從 'a' 到 'z' 的順序中下一個可用的小寫字母，取代先前傳回的名稱中所使用的字母字元，以建立新的名稱。 例如，如果 `base` 是：  
   
@@ -230,9 +231,6 @@ Unique filename is fnz03912
 Problem creating the template.  
 Out of unique filenames.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   

@@ -50,14 +50,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c7bf8e09b7af4153bae3bfa0f80c002149ff3ee9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 5875a26dc5758674665fba2fde5b51c2ff53420e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="alloca"></a>_alloca
-在堆疊上配置記憶體。 此函式已被取代，因為更安全的版本使用。請參閱[_malloca](../../c-runtime-library/reference/malloca.md)。  
+在堆疊上配置記憶體。 此函式已被取代，因為更安全的版本可用;請參閱[_malloca](../../c-runtime-library/reference/malloca.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -77,7 +78,7 @@ void *_alloca(
  如果無法配置空間，則會產生堆疊溢位例外狀況。 堆疊溢位例外狀況不是 C++ 例外狀況，而是結構化例外狀況。 您必須使用[結構化例外狀況處理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而不是使用 C++ 例外狀況處理。  
   
 ## <a name="remarks"></a>備註  
- `_alloca`配置`size`程式堆疊中的位元組。 （不只是超出範圍配置） 時，呼叫的函式結束時，會自動釋放已配置的空間。 因此，不會成功所傳回的指標值`_alloca`做為引數[免費](../../c-runtime-library/reference/free.md)。  
+ `_alloca`配置`size`位元組程式堆疊。 （不超出範圍只是通過配置） 時，呼叫的函式結束時，會自動釋放已配置的空間。 因此，不會傳遞所傳回的指標值`_alloca`做為引數[可用](../../c-runtime-library/reference/free.md)。  
   
  在例外狀況處理常式 (EH) 中明確呼叫 `_alloca` 有一些限制。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，在下列任何情節中明確呼叫 `_alloca`，會在傳回至呼叫的 EH 常式期間導致程式失敗：  
   
@@ -92,7 +93,7 @@ void *_alloca(
 > [!IMPORTANT]
 >  在 Windows XP 中，如果在 try/catch 區塊中呼叫 `_alloca`，則必須在 catch 區塊中呼叫 [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md)。  
   
- 除了上述限制，當使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項，`_alloca`不能在`__except`區塊。 如需詳細資訊，請參閱 [/clr 限制](../../build/reference/clr-restrictions.md)。  
+ 除了上述的限制，當使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項，`_alloca`不能用於在`__except`區塊。 如需詳細資訊，請參閱 [/clr Restrictions](../../build/reference/clr-restrictions.md)。  
   
 ## <a name="requirements"></a>需求  
   
@@ -157,9 +158,6 @@ int main()
 ```Output  
 Allocated 1000 bytes of stack at 0x0012FB50  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   

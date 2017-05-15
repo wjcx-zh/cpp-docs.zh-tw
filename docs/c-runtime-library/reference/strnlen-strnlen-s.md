@@ -84,10 +84,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f7cba068af7ec6f14970d174d2b3e9b4121d7c40
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9a0a0e0f9b020b635b6de27a1ae111378152291b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
@@ -157,7 +158,7 @@ size_t _mbstrnlen_l(
   
  這些函式都會傳回 `str` 中的字元數，但不包含結束的 Null 字元。 但 `strnlen` 和 `strnlen_s` 會將字串解譯為單一位元組字元字串，因此即使字串包含多位元組字元，傳回值也會一律等於位元組數。 `wcsnlen` 和 `wcsnlen_s` 分別是寬字元版本的 `strnlen` 和 `strnlen_s`；`wcsnlen` 和 `wcsnlen_s` 的引數是寬字元，且字元的計數是以寬字元為單位。 除此之外，`wcsnlen` 和 `strnlen` 的行為相同，`strnlen_s` 和 `wcsnlen_s` 也一樣。  
   
- `strnlen`、`wcsnlen,` 和 `_mbsnlen` 不會驗證其參數。 若 `str` 為 `NULL`，會發生存取違規。  
+ `strnlen``wcsnlen`，和`_mbsnlen`不會驗證它們的參數。 若 `str` 為 `NULL`，會發生存取違規。  
   
  `strnlen_s` 和 `wcsnlen_s` 會驗證其參數。 若 `str` 為 `NULL`，函式會傳回 0。  
   
@@ -188,9 +189,8 @@ size_t _mbstrnlen_l(
   
 ## <a name="example"></a>範例  
   
-```  
-  
-      // crt_strnlen.c  
+```C  
+// crt_strnlen.c  
   
 #include <string.h>  
   
@@ -224,9 +224,6 @@ than the maximum size specified, the maximum size is
 returned rather than the actual size of the string.  
  Length: 100   
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::String::Length](https://msdn.microsoft.com/en-us/library/system.string.length.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

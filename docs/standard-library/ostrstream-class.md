@@ -1,69 +1,183 @@
 ---
 title: "ostrstream 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.oststream"
-  - "oststream"
-  - "std::oststream"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ostrstream 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ostrstream
+- strstream/std::ostrstream::freeze
+- strstream/std::ostrstream::pcount
+- strstream/std::ostrstream::rdbuf
+- strstream/std::ostrstream::str
+dev_langs:
+- C++
+helpviewer_keywords:
+- ostrstream class
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# ostrstream 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2ed85552778f3bbf7346001e4dd4c858177ce49b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
-說明會控制如何在類別 [strstreambuf](../standard-library/strstreambuf-class.md) 的資料流緩衝區中插入元素和編碼物件的物件。  
+---
+# <a name="ostrstream-class"></a>ostrstream 類別
+描述一個物件，該物件可控制將項目和編碼物件插入 [strstreambuf](../standard-library/strstreambuf-class.md) 類別的資料流緩衝區中。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+class ostrstream : public ostream
 ```  
   
-class ostrstream : public ostream  
-  
-```  
-  
-## 備註  
+## <a name="remarks"></a>備註  
  此物件會儲存類別 `strstreambuf` 的物件。  
   
 > [!NOTE]
->  這個類別已被取代。  請考慮改用 [ostringstream](../Topic/ostringstream.md) 或 [wostringstream](../Topic/wostringstream.md)。  
+>  這個類別已被取代。 請考慮改用 [ostringstream](../standard-library/sstream-typedefs.md#ostringstream) 或 [wostringstream](../standard-library/sstream-typedefs.md#wostringstream)。  
   
-### 建構函式  
-  
-|||  
-|-|-|  
-|[ostrstream](../Topic/ostrstream::ostrstream.md)|建構類型 `ostrstream` 的物件。|  
-  
-### 成員函式  
+### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[凍結](../Topic/ostrstream::freeze.md)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|  
-|[pcount](../Topic/ostrstream::pcount.md)|傳回寫入至受控制序列的元素計數。|  
-|[rdbuf](../Topic/ostrstream::rdbuf.md)|將指標傳回至資料流的相關 `strstreambuf` 物件。|  
-|[str](../Topic/ostrstream::str.md)|呼叫 [freeze](../Topic/strstreambuf::freeze.md)，然後將指標傳回至受控制序列的開頭。|  
+|[ostrstream](#ostrstream)|建構類型 `ostrstream` 的物件。|  
   
-## 需求  
- **標頭：**\<strstream\>  
+### <a name="member-functions"></a>成員函式  
   
- **命名空間:** std  
+|||  
+|-|-|  
+|[freeze](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|  
+|[pcount](#pcount)|傳回寫入至受控制序列的元素計數。|  
+|[rdbuf](#rdbuf)|將指標傳回至資料流的相關 `strstreambuf` 物件。|  
+|[str](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後傳回指向受控制序列開頭的指標。|  
   
-## 請參閱  
- [ostream](../Topic/ostream.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+## <a name="requirements"></a>需求  
+ **標頭：**\<strstream>  
+  
+ **命名空間：** std  
+  
+##  <a name="freeze"></a>  ostrstream::freeze  
+ 導致資料流緩衝區無法在資料流緩衝區作業中使用。  
+  
+```
+void freeze(bool _Freezeit = true);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_Freezeit`  
+ `bool`，指出您是否要凍結資料流。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會呼叫 [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*)。  
+  
+### <a name="example"></a>範例  
+  如需使用 **freeze** 的範例，請參閱 [strstream::freeze](../standard-library/strstreambuf-class.md#freeze)。  
+  
+##  <a name="ostrstream"></a>  ostrstream::ostrstream  
+ 建構類型 `ostrstream` 的物件。  
+  
+```
+ostrstream();
+
+ostrstream(char* ptr,
+    streamsize count,
+    ios_base::openmode _Mode = ios_base::out);
+```  
+  
+### <a name="parameters"></a>參數  
+ `ptr`  
+ 緩衝區。  
+  
+ `count`  
+ 以位元組為單位的緩衝區大小。  
+  
+ `_Mode`  
+ 緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。  
+  
+### <a name="remarks"></a>備註  
+ 這兩個建構函式會呼叫 [ostream](../standard-library/ostream-typedefs.md#ostream)( **sb**) 來初始化基底類別，其中 **sb** 是類別 [strstreambuf](../standard-library/strstreambuf-class.md) 的已儲存物件。 第一個建構函式同時呼叫 `strstreambuf` 來初始化 **sb**。 第二個建構函式使用下列其中一種方法初始化基底類別：  
+  
+-   如果 `_Mode` & **ios_base::app**== 0，則 `ptr` 必須指定 `count` 項目陣列的第一個項目，且建構函式會呼叫 `strstreambuf`( `ptr`, `count`, `ptr`)。  
+  
+-   否則，`ptr` 必須指定 count 項目陣列 (包含 C 字串) 第一個項目，其第一個項目是由 `ptr` 指定，且建構函式會呼叫 `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) )。  
+  
+##  <a name="pcount"></a>  ostrstream::pcount  
+ 傳回寫入至受控制序列的元素計數。  
+  
+```
+streamsize pcount() const;
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 寫入受控制序列的項目數。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回 [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount)。  
+  
+### <a name="example"></a>範例  
+  如需使用 `pcount` 的範例，請參閱 [strstream::pcount](../standard-library/strstreambuf-class.md#pcount)。  
+  
+##  <a name="rdbuf"></a>  ostrstream::rdbuf  
+ 將指標傳回至資料流的相關 strstreambuf 物件。  
+  
+```
+strstreambuf *rdbuf() const
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 指向資料流相關 strstreambuf 物件的指標。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會將類型 **pointer** 的已儲存資料流緩衝區位址傳回 [strstreambuf](../standard-library/strstreambuf-class.md)。  
+  
+### <a name="example"></a>範例  
+  如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。  
+  
+##  <a name="str"></a>  ostrstream::str  
+ 呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回至受控制序列的開頭。  
+  
+```
+char *str();
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 指向受控制序列開頭的指標。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)。  
+  
+### <a name="example"></a>範例  
+  如需使用 **str** 的範例，請參閱 [strstream::str](../standard-library/strstreambuf-class.md#str)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [ostream](../standard-library/ostream-typedefs.md#ostream)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostreams 慣例](../standard-library/iostreams-conventions.md)
+ [iostream 慣例](../standard-library/iostreams-conventions.md)
+
+
+
+

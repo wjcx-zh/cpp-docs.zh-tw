@@ -10,10 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - ctype
-- std::ctype
-- std.ctype
-- CType
 - xlocale/std::ctype
+- locale/std::ctype::char_type
+- locale/std::ctype::do_is
+- locale/std::ctype::do_narrow
+- locale/std::ctype::do_scan_is
+- locale/std::ctype::do_scan_not
+- locale/std::ctype::do_tolower
+- locale/std::ctype::do_toupper
+- locale/std::ctype::do_widen
+- locale/std::ctype::is
+- locale/std::ctype::narrow
+- locale/std::ctype::scan_is
+- locale/std::ctype::scan_not
+- locale/std::ctype::tolower
+- locale/std::ctype::toupper
+- locale/std::ctype::widen
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +49,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 08c792c0ab211a5ea8e83d026790322242decb81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2e99ceb296bd3f620ce1bd58e8b0de6b6132299b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ctype-class"></a>ctype 類別
@@ -78,39 +91,39 @@ class ctype : public ctype_base;
   
 |||  
 |-|-|  
-|[ctype](#ctype__ctype)|`ctype` 類別物件的建構函式，這些物件做為字元的地區設定 facet。|  
+|[ctype](#ctype)|`ctype` 類別物件的建構函式，這些物件做為字元的地區設定 facet。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#ctype__char_type)|類型，描述由地區設定使用的字元。|  
+|[char_type](#char_type)|類型，描述由地區設定使用的字元。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[do_is](#ctype__do_is)|虛擬函式，呼叫以測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。|  
-|[do_narrow](#ctype__do_narrow)|虛擬函式，呼叫以將地區設定使用的 `CharType` 類型字元轉換為原生字元集中 `char` 類型的對應字元。|  
-|[do_scan_is](#ctype__do_scan_is)|虛擬函式，呼叫以尋找範圍中符合指定之遮罩的第一個字元。|  
-|[do_scan_not](#ctype__do_scan_not)|虛擬函式，呼叫以尋找範圍中不符合指定之遮罩的第一個字元。|  
-|[do_tolower](#ctype__do_tolower)|虛擬函式，呼叫以將字元或字元範圍轉換為小寫。|  
-|[do_toupper](#ctype__do_toupper)|虛擬函式，呼叫以將字元或字元範圍轉換為大寫。|  
-|[do_widen](#ctype__do_widen)|虛擬函式，呼叫以將原生字元集中 `char` 類型的字元轉換為地區設定使用的 `CharType` 類型的對應字元。|  
-|[is](#ctype__is)|測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。|  
-|[narrow](#ctype__narrow)|將地區設定使用的 `CharType` 類型的字元轉換為原生字元集中 char 類型的對應字元。|  
-|[scan_is](#ctype__scan_is)|尋找範圍中符合指定之遮罩的第一個字元。|  
-|[scan_not](#ctype__scan_not)|尋找範圍中不符合指定之遮罩的第一個字元。|  
-|[tolower](#ctype__tolower)|將字元或字元範圍轉換為小寫。|  
-|[toupper](#ctype__toupper)|將字元或字元範圍轉換為大寫。|  
-|[widen](#ctype__widen)|將原生字元集中 `char` 類型的字元轉換為地區設定使用的 `CharType` 類型的對應字元。|  
+|[do_is](#do_is)|虛擬函式，呼叫以測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。|  
+|[do_narrow](#do_narrow)|虛擬函式，呼叫以將地區設定使用的 `CharType` 類型字元轉換為原生字元集中 `char` 類型的對應字元。|  
+|[do_scan_is](#do_scan_is)|虛擬函式，呼叫以尋找範圍中符合指定之遮罩的第一個字元。|  
+|[do_scan_not](#do_scan_not)|虛擬函式，呼叫以尋找範圍中不符合指定之遮罩的第一個字元。|  
+|[do_tolower](#do_tolower)|虛擬函式，呼叫以將字元或字元範圍轉換為小寫。|  
+|[do_toupper](#do_toupper)|虛擬函式，呼叫以將字元或字元範圍轉換為大寫。|  
+|[do_widen](#do_widen)|虛擬函式，呼叫以將原生字元集中 `char` 類型的字元轉換為地區設定使用的 `CharType` 類型的對應字元。|  
+|[is](#is)|測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。|  
+|[narrow](#narrow)|將地區設定使用的 `CharType` 類型的字元轉換為原生字元集中 char 類型的對應字元。|  
+|[scan_is](#scan_is)|尋找範圍中符合指定之遮罩的第一個字元。|  
+|[scan_not](#scan_not)|尋找範圍中不符合指定之遮罩的第一個字元。|  
+|[tolower](#tolower)|將字元或字元範圍轉換為小寫。|  
+|[toupper](#toupper)|將字元或字元範圍轉換為大寫。|  
+|[widen](#widen)|將原生字元集中 `char` 類型的字元轉換為地區設定使用的 `CharType` 類型的對應字元。|  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<locale>  
   
  **命名空間：** std  
   
-##  <a name="a-namectypechartypea--ctypechartype"></a><a name="ctype__char_type"></a>  ctype::char_type  
+##  <a name="char_type"></a>  ctype::char_type  
  類型，描述由地區設定使用的字元。  
   
 ```  
@@ -121,9 +134,9 @@ typedef CharType char_type;
  此類型與範本參數 **CharType** 同義。  
   
 ### <a name="example"></a>範例  
-  請參閱成員函式 [widen](#ctype__widen) 的範例，其會使用 `char_type` 作為傳回值。  
+  請參閱成員函式 [widen](#widen) 的範例，其會使用 `char_type` 作為傳回值。  
   
-##  <a name="a-namectypectypea--ctypectype"></a><a name="ctype__ctype"></a>  ctype::ctype  
+##  <a name="ctype"></a>  ctype::ctype  
  ctype 類別物件的建構函式，可作為字元的地區設定 Facet。  
   
 ```  
@@ -141,13 +154,13 @@ explicit ctype(size_t _Refs = 0);
   
 -   1：物件的存留期必須以手動方式管理。  
   
--   \> 0：未定義這些值。  
+-   \>1︰ 未定義這些值。  
   
- 由於解構函式會受到保護，因此沒有直接的範例。  
+ 無法提供任何直接範例，因為解構函式受到保護。  
   
  建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其 `locale::facet` 基底物件。  
   
-##  <a name="a-namectypedoisa--ctypedois"></a><a name="ctype__do_is"></a>  ctype::do_is  
+##  <a name="do_is"></a>  ctype::do_is  
  虛擬函式，呼叫以測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。  
   
 ```  
@@ -187,9 +200,9 @@ virtual const CharType *do_is(
  [ctype_base](../standard-library/ctype-base-class.md) 類別 (其為 ctype 衍生來源) 會提供遮罩值，來分類字元的屬性。 第一個成員函式可以接受第一個參數的運算式，該參數稱為位元遮罩，由邏輯位元運算子 (&#124;、&、^、~) 透過遮罩值組合構成。  
   
 ### <a name="example"></a>範例  
-  請參閱 [is](#ctype__is) 的範例，其會呼叫 `do_is`。  
+  請參閱 [is](#is) 的範例，其會呼叫 `do_is`。  
   
-##  <a name="a-namectypedonarrowa--ctypedonarrow"></a><a name="ctype__do_narrow"></a>  ctype::do_narrow  
+##  <a name="do_narrow"></a>  ctype::do_narrow  
  虛擬函式，呼叫以將地區設定使用的 `CharType` 類型字元轉換為原生字元集中 `char` 類型的對應字元。  
   
 ```  
@@ -227,12 +240,12 @@ virtual const CharType* do_narrow(
  第二個受保護的成員函式會傳回原生字元 (從 `CharType` 類型字元轉換而來) 目的範圍的指標。  
   
 ### <a name="remarks"></a>備註  
- 第二個受保護的成員範本函式會在 `dest`[ `I`] 中儲存 `I` 的值 `do_narrow`( `first` [ `I`], `default`)，間隔為 [0, `last` – `first`)。  
+ 第二個受保護的成員樣板函式存放區中的`dest`[ `I`] 值`do_narrow`( `first` [ `I`]， `default`)，如`I`間隔 [0， `last`  -  `first`)。  
   
 ### <a name="example"></a>範例  
-  請參閱 [narrow](#ctype__narrow) 的範例，其會呼叫 `do_narrow`。  
+  請參閱 [narrow](#narrow) 的範例，其會呼叫 `do_narrow`。  
   
-##  <a name="a-namectypedoscanisa--ctypedoscanis"></a><a name="ctype__do_scan_is"></a>  ctype::do_scan_is  
+##  <a name="do_scan_is"></a>  ctype::do_scan_is  
  虛擬函式，呼叫以尋找範圍中符合指定之遮罩的第一個字元。  
   
 ```  
@@ -256,12 +269,12 @@ virtual const CharType *do_scan_is(
  範圍中，符合指定遮罩之第一個字元的指標。 如果值不存在，則函式會傳回 `last.`。  
   
 ### <a name="remarks"></a>備註  
- 受保護的成員函式會傳回 [ `first`, `last`) 範圍中的最小指標 `ptr`，其 [do_is](#ctype__do_is)( `maskVal`, * `ptr`) 為 true。  
+ 受保護的成員函式會傳回 [ `first`, `last`) 範圍中的最小指標 `ptr`，其 [do_is](#do_is)( `maskVal`, * `ptr`) 為 true。  
   
 ### <a name="example"></a>範例  
-  請參閱 [scan_is](#ctype__scan_is) 的範例，其會呼叫 `do_scan_is`。  
+  請參閱 [scan_is](#scan_is) 的範例，其會呼叫 `do_scan_is`。  
   
-##  <a name="a-namectypedoscannota--ctypedoscannot"></a><a name="ctype__do_scan_not"></a>  ctype::do_scan_not  
+##  <a name="do_scan_not"></a>  ctype::do_scan_not  
  虛擬函式，呼叫以尋找範圍中不符合指定之遮罩的第一個字元。  
   
 ```  
@@ -285,12 +298,12 @@ virtual const CharType *do_scan_not(
  範圍中，不符合指定遮罩之第一個字元的指標。 如果值不存在，則函式會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 受保護的成員函式會傳回 [ `first`, `last`) 範圍中的最小指標 `ptr`，其 [do_is](#ctype__do_is)( `maskVal`, * `ptr`) 為 false。  
+ 受保護的成員函式會傳回 [ `first`, `last`) 範圍中的最小指標 `ptr`，其 [do_is](#do_is)( `maskVal`, * `ptr`) 為 false。  
   
 ### <a name="example"></a>範例  
-  請參閱 [scan_not](#ctype__scan_not) 的範例，其會呼叫 `do_scan_not`。  
+  請參閱 [scan_not](#scan_not) 的範例，其會呼叫 `do_scan_not`。  
   
-##  <a name="a-namectypedotolowera--ctypedotolower"></a><a name="ctype__do_tolower"></a>  ctype::do_tolower  
+##  <a name="do_tolower"></a>  ctype::do_tolower  
  要將字元或字元範圍轉換為小寫時所呼叫的虛擬函式。  
   
 ```  
@@ -316,12 +329,12 @@ virtual const CharType *do_tolower(
  第一個受保護的成員函式會傳回 `ch` 參數的小寫形式。 如果沒有任何小寫形式存在，它會傳回 `ch`。 第二個受保護的成員函式會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 第二個受保護的成員範本函式會將 `I` 的每個 `first` [ `I`] 元素取代為 `do_tolower`( `first` [ `I`])，間隔為 [0, `last` – `first`)。  
+ 第二個受保護的成員樣板函式會取代每個項目`first`[ `I`]，如`I`間隔 [0， `last`  -  `first`)，與`do_tolower`( `first` [ `I`])。  
   
 ### <a name="example"></a>範例  
-  請參閱 [tolower](#ctype__tolower) 的範例，其會呼叫 `do_tolower`。  
+  請參閱 [tolower](#tolower) 的範例，其會呼叫 `do_tolower`。  
   
-##  <a name="a-namectypedotouppera--ctypedotoupper"></a><a name="ctype__do_toupper"></a>  ctype::do_toupper  
+##  <a name="do_toupper"></a>  ctype::do_toupper  
  虛擬函式，呼叫以將字元或字元範圍轉換為大寫。  
   
 ```  
@@ -347,12 +360,12 @@ virtual const CharType *do_toupper(
  第一個受保護的成員函式會傳回 `ch` 參數的大寫形式。 如果沒有任何大寫形式存在，它會傳回 `ch`。 第二個受保護的成員函式會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 第二個受保護的成員範本函式會將 `I` 的每個 `first` [ `I`] 元素取代為 `do_toupper`( `first` [ `I`])，間隔為 [0, `last` – `first`)。  
+ 第二個受保護的成員樣板函式會取代每個項目`first`[ `I`]，如`I`間隔 [0， `last`  -  `first`)，與`do_toupper`( `first` [ `I`])。  
   
 ### <a name="example"></a>範例  
-  請參閱 [toupper](#ctype__toupper) 的範例，其會呼叫 `do_toupper`。  
+  請參閱 [toupper](#toupper) 的範例，其會呼叫 `do_toupper`。  
   
-##  <a name="a-namectypedowidena--ctypedowiden"></a><a name="ctype__do_widen"></a>  ctype::do_widen  
+##  <a name="do_widen"></a>  ctype::do_widen  
  虛擬函式，呼叫以將原生字元集中 `char` 類型的字元轉換為地區設定使用的 `CharType` 類型的對應字元。  
   
 ```  
@@ -387,9 +400,9 @@ virtual const char *do_widen(
  第二個受保護的成員範本函式會在 `dest`[ `I`] 中儲存 `I` 的值 `do_widen`( `first`[ `I`])，間隔為 [0, `last` - `first`)。  
   
 ### <a name="example"></a>範例  
-  請參閱 [widen](#ctype__widen) 的範例，其會呼叫 `do_widen`。  
+  請參閱 [widen](#widen) 的範例，其會呼叫 `do_widen`。  
   
-##  <a name="a-namectypeisa--ctypeis"></a><a name="ctype__is"></a>  ctype::is  
+##  <a name="is"></a>  ctype::is  
  測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。  
   
 ```  
@@ -465,7 +478,7 @@ int main() {
 }  
 ```  
   
-##  <a name="a-namectypenarrowa--ctypenarrow"></a><a name="ctype__narrow"></a>  ctype::narrow  
+##  <a name="narrow"></a>  ctype::narrow  
  將地區設定使用的 `CharType` 類型字元轉換為原生字元集中 `char` 類型的對應字元。  
   
 ```  
@@ -501,7 +514,7 @@ const CharType* narrow(
  第二個成員函式會傳回原生字元 (從 `CharType` 類型字元轉換而來) 目的範圍的指標。  
   
 ### <a name="remarks"></a>備註  
- 第一個成員函式會傳回 [do_narrow](#ctype__do_narrow)( `ch`, `default`)。 第二個成員函式會傳回 [do_narrow](#ctype__do_narrow) ( `first`, `last`, `default`, `dest`)。 只有基本來源字元的 `narrow` 下方保證會有唯一的反向影像 `CharType`。 針對這些基本來源字元，下列非變異值會保留：`narrow` ( [widen](#ctype__widen) ( **c** ), 0 ) == **c**。  
+ 第一個成員函式會傳回 [do_narrow](#do_narrow)( `ch`, `default`)。 第二個成員函式會傳回 [do_narrow](#do_narrow) ( `first`, `last`, `default`, `dest`)。 只有基本來源字元的 `narrow` 下方保證會有唯一的反向影像 `CharType`。 針對這些基本來源字元，下列非變異值會保留：`narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**。  
   
 ### <a name="example"></a>範例  
   
@@ -529,7 +542,7 @@ int main( )
 Xhello everyone  
 ```  
   
-##  <a name="a-namectypescanisa--ctypescanis"></a><a name="ctype__scan_is"></a>  ctype::scan_is  
+##  <a name="scan_is"></a>  ctype::scan_is  
  尋找範圍中符合指定之遮罩的第一個字元。  
   
 ```  
@@ -553,7 +566,7 @@ const CharType *scan_is(
  範圍中，符合指定遮罩之第一個字元的指標。 如果值不存在，則函式會傳回 `last.`。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會傳回 [do_scan_is](#ctype__do_scan_is)( `maskVal`, `first`, `last`)。  
+ 成員函式會傳回 [do_scan_is](#do_scan_is)( `maskVal`, `first`, `last`)。  
   
 ### <a name="example"></a>範例  
   
@@ -581,7 +594,7 @@ int main( )
 The first punctuation is "," at position: 5  
 ```  
   
-##  <a name="a-namectypescannota--ctypescannot"></a><a name="ctype__scan_not"></a>  ctype::scan_not  
+##  <a name="scan_not"></a>  ctype::scan_not  
  尋找範圍中不符合指定之遮罩的第一個字元。  
   
 ```  
@@ -605,7 +618,7 @@ const CharType *scan_not(
  範圍中，不符合指定遮罩之第一個字元的指標。 如果值不存在，則函式會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會傳回 [do_scan_not](#ctype__do_scan_not)( `maskVal`, `first`, `last`)。  
+ 成員函式會傳回 [do_scan_not](#do_scan_not)( `maskVal`, `first`, `last`)。  
   
 ### <a name="example"></a>範例  
   
@@ -633,7 +646,7 @@ int main( )
 First nonalpha character is "," at position: 5  
 ```  
   
-##  <a name="a-namectypetolowera--ctypetolower"></a><a name="ctype__tolower"></a>  ctype::tolower  
+##  <a name="tolower"></a>  ctype::tolower  
  將字元或字元範圍轉換為小寫。  
   
 ```  
@@ -659,7 +672,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
  第二個成員函式會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 第一個成員函式會傳回 [do_tolower](#ctype__do_tolower)( `ch`)。 第二個成員函式會傳回 [do_tolower](#ctype__do_tolower)( `first`, `last`)。  
+ 第一個成員函式會傳回 [do_tolower](#do_tolower)( `ch`)。 第二個成員函式會傳回 [do_tolower](#do_tolower)( `first`, `last`)。  
   
 ### <a name="example"></a>範例  
   
@@ -686,7 +699,7 @@ int main( )
 The lowercase string is: hello, my name is john  
 ```  
   
-##  <a name="a-namectypetouppera--ctypetoupper"></a><a name="ctype__toupper"></a>  ctype::toupper  
+##  <a name="toupper"></a>  ctype::toupper  
  將字元或字元範圍轉換為大寫。  
   
 ```  
@@ -710,7 +723,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
  第二個成員函式會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 第一個成員函式會傳回 [do_toupper](#ctype__do_toupper)( `ch`)。 第二個成員函式會傳回 [do_toupper](#ctype__do_toupper)( `first`, `last`)。  
+ 第一個成員函式會傳回 [do_toupper](#do_toupper)( `ch`)。 第二個成員函式會傳回 [do_toupper](#do_toupper)( `first`, `last`)。  
   
 ### <a name="example"></a>範例  
   
@@ -737,7 +750,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN  
 ```  
   
-##  <a name="a-namectypewidena--ctypewiden"></a><a name="ctype__widen"></a>  ctype::widen  
+##  <a name="widen"></a>  ctype::widen  
  將原生字元集中 `char` 類型的字元轉換為地區設定使用的 `CharType` 類型的對應字元。  
   
 ```  
@@ -764,7 +777,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
  第二個成員函式會傳回 `CharType` 類型字元 (用於從 `char` 類型原生字元轉換的地區設定) 的目的範圍的指標。  
   
 ### <a name="remarks"></a>備註  
- 第一個成員函式會傳回 [do_widen](#ctype__do_widen)( `byte`)。 第二個成員函式會傳回 [do_widen](#ctype__do_widen)( `first`, `last`, `dest`)。  
+ 第一個成員函式會傳回 [do_widen](#do_widen)( `byte`)。 第二個成員函式會傳回 [do_widen](#do_widen)( `first`, `last`, `dest`)。  
   
 ### <a name="example"></a>範例  
   

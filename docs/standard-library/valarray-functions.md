@@ -6,13 +6,32 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- valarray/std::abs
+- valarray/std::acos
+- valarray/std::asin
+- valarray/std::atan
+- valarray/std::atan2
+- valarray/std::cos
+- valarray/std::cosh
+- valarray/std::exp
+- valarray/std::log
+- valarray/std::log10
+- valarray/std::pow
+- valarray/std::sin
+- valarray/std::sinh
+- valarray/std::sqrt
+- valarray/std::swap
+- valarray/std::tan
+- valarray/std::tanh
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5f3a65a4c4ea8c1c4bd6c5b689863b34e7d41da3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: c5d52ee25c8afaa531413859a57f97e014d568e8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 函式
@@ -25,7 +44,7 @@ ms.lasthandoff: 02/24/2017
 |[sinh](#sinh)|[sqrt](#sqrt)|[swap](#swap)|  
 |[tan](#tan)|[tanh](#tanh)|  
   
-##  <a name="a-nameabsa--abs"></a><a name="abs"></a>  abs  
+##  <a name="abs"></a>  abs  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的絕對值相等。  
   
 ```  
@@ -34,7 +53,7 @@ valarray<Type> abs(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -77,7 +96,7 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .  
 ```  
   
-##  <a name="a-nameacosa--acos"></a><a name="acos"></a> acos  
+##  <a name="acos"></a> acos  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反餘弦值相等。  
   
 ```  
@@ -86,7 +105,7 @@ valarray<Type> acos(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -146,7 +165,7 @@ The arccosine of the initial valarray is:
          0  radians, which is            0  degrees  
 ```  
   
-##  <a name="a-nameasina--asin"></a><a name="asin"></a>  asin  
+##  <a name="asin"></a>  asin  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反正弦值相等。  
   
 ```  
@@ -155,7 +174,7 @@ valarray<Type> asin(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -164,7 +183,7 @@ valarray<Type> asin(const valarray<Type>& left);
 ### <a name="remarks"></a>備註  
  傳回的項目單位是以弧度為單位。  
   
- 傳回值是介於 +pi/2 和 –pi/2 之間的主值，與正弦值輸入一致。  
+ 傳回值是主體值之間 + pi/2 和-pi/2 的正弦值一致值的輸入。  
   
 ### <a name="example"></a>範例  
   
@@ -215,7 +234,7 @@ The arcsine of the initial valarray is:
     1.5708  radians, which is           90  degrees  
 ```  
   
-##  <a name="a-nameatana--atan"></a><a name="atan"></a>  atan  
+##  <a name="atan"></a>  atan  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反正切主值相等。  
   
 ```  
@@ -224,7 +243,7 @@ valarray<Type> atan(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -233,7 +252,7 @@ valarray<Type> atan(const valarray<Type>& left);
 ### <a name="remarks"></a>備註  
  傳回的項目單位是以弧度為單位。  
   
- 傳回值是介於 +pi/2 和 –pi/2 之間的主值，與正切值輸入一致。  
+ 傳回值是主體值之間 + pi/2 和-pi/2 的正切函數一致值的輸入。  
   
 ### <a name="example"></a>範例  
   
@@ -287,7 +306,7 @@ The arcsine of the initial valarray is:
     1.5608  radians, which is      89.4271  degrees  
 ```  
   
-##  <a name="a-nameatan2a--atan2"></a><a name="atan2"></a>  atan2  
+##  <a name="atan2"></a>  atan2  
  傳回 valarray，而常數及 valarray 項目組合指定之笛卡兒座標分量的反正切值會與其中的項目相等。  
   
 ```  
@@ -302,27 +321,27 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  常數數值資料型別，或其項目提供反正切值引數 y 座標值的輸入 valarray。  
   
- ` right`  
+ `right`  
  常數數值資料型別，或其項目提供反正切值引數 x 座標值的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
  Valarray，其項目 `I` 等同於以下的反正切值：  
   
-- 針對第一個樣板函式，` left` [ *I* ] / *_Righ*t [ *I* ]。  
+- 針對第一個樣板函式，`left` [ *I* ] / *_Righ*t [ *I* ]。  
   
-- 針對第二個樣板函式，` left` [ *I* ] / ` right`。  
+- 針對第二個樣板函式，`left` [ *I* ] / `right`。  
   
-- 針對第三個樣板函式，` left` / ` right` [ *I* ]。  
+- 針對第三個樣板函式，`left` / `right` [ *I* ]。  
   
 ### <a name="remarks"></a>備註  
  傳回的項目單位是以弧度為單位。  
   
- 此函式會保留引數中因為標準正切函數函式遺失的元件正負號資訊，這項象限知識可指派傳回值介於 +pi 和 +pi 之間的唯一角度。  
+ 此函式會保留遺失標準的正切函數的引數中的元件的符號相關資訊，這項知識的四分色方塊可讓傳回值，指定唯一的角度，介於 + pi 和-pi。  
   
- 如果 ` left` 和 ` right` 的項目數目不同，則結果為未定義。  
+ 如果 `left` 和 `right` 的項目數目不同，則結果為未定義。  
   
 ### <a name="example"></a>範例  
   
@@ -377,7 +396,7 @@ The atan2 ( y / x ) of the initial valarrays is:
  -0.785398  radians, which is          -45degrees  
 ```  
   
-##  <a name="a-namecosa--cos"></a><a name="cos"></a>  cos  
+##  <a name="cos"></a>  cos  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的餘弦值相等。  
   
 ```  
@@ -386,7 +405,7 @@ valarray<Type> cos(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -451,7 +470,7 @@ The cosine of the initial valarray is:
 -1  
 ```  
   
-##  <a name="a-namecosha--cosh"></a><a name="cosh"></a>  cosh  
+##  <a name="cosh"></a>  cosh  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的雙曲餘弦值相等。  
   
 ```  
@@ -460,7 +479,7 @@ valarray<Type> cosh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -530,7 +549,7 @@ The hyperbolic cosine of the initial valarray is:
 11.592  
 ```  
   
-##  <a name="a-nameexpa--exp"></a><a name="exp"></a>  exp  
+##  <a name="exp"></a>  exp  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的自然指數值相等。  
   
 ```  
@@ -539,7 +558,7 @@ valarray<Type> exp(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -590,7 +609,7 @@ The natural exponential of the initial valarray is:
 22026.5  
 ```  
   
-##  <a name="a-nameloga--log"></a><a name="log"></a>  log  
+##  <a name="log"></a>  log  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的自然對數值相等。  
   
 ```  
@@ -599,7 +618,7 @@ valarray<Type> log(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -650,7 +669,7 @@ The natural logarithm of the initial valarray is:
 4.38203  
 ```  
   
-##  <a name="a-namelog10a--log10"></a><a name="log10"></a>  log10  
+##  <a name="log10"></a>  log10  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的常用對數值 (底數為 10 的對數) 相等。  
   
 ```  
@@ -659,7 +678,7 @@ valarray<Type> log10(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -712,7 +731,7 @@ The common logarithm of the initial valarray is:
 2  
 ```  
   
-##  <a name="a-namepowa--pow"></a><a name="pow"></a>  pow  
+##  <a name="pow"></a>  pow  
  在輸入的 valarray 項目和常數上運作，傳回 valarray，其中的項目等於指定基底以指定指數自乘的乘冪，而該基底由輸入的 valarray 之項目指定或由常數指定，且該指數由輸入的 valarray 或常數指定。  
   
 ```  
@@ -736,23 +755,23 @@ pow(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  輸入 valarray，其中的項目提供每個要指數化之項目的基底。  
   
- ` right`  
+ `right`  
  輸入 valarray，其中的項目提供每個要指數化之項目的次方。  
   
 ### <a name="return-value"></a>傳回值  
  Valarray，其中的項目 `I` 相同於：  
   
-- 針對第一個樣板函式，` left` [ *I* ] 的 ` right` [ *I* ] 次方。  
+- 針對第一個樣板函式，`left` [ *I* ] 的 `right` [ *I* ] 次方。  
   
-- 針對第二個樣板函式，` left` [ *I* ] 的 ` right` 次方。  
+- 針對第二個樣板函式，`left` [ *I* ] 的 `right` 次方。  
   
-- 針對第三個樣板函式，` left` 的 ` right` [ *I* ] 次方。  
+- 針對第三個樣板函式，`left` 的 `right` [ *I* ] 次方。  
   
 ### <a name="remarks"></a>備註  
- 如果 ` left` 和 ` right` 的項目數目不同，則結果為未定義。  
+ 如果 `left` 和 `right` 的項目數目不同，則結果為未定義。  
   
 ### <a name="example"></a>範例  
   
@@ -805,7 +824,7 @@ n = 4   gives 256
 n = 5   gives 1024  
 ```  
   
-##  <a name="a-namesina--sin"></a><a name="sin"></a>  sin  
+##  <a name="sin"></a>  sin  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的正弦值相等。  
   
 ```  
@@ -814,7 +833,7 @@ valarray<Type> sin(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -879,7 +898,7 @@ The sine of the initial valarray is:
 -2.06823e-013  
 ```  
   
-##  <a name="a-namesinha--sinh"></a><a name="sinh"></a>  sinh  
+##  <a name="sinh"></a>  sinh  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的雙曲正弦值相等。  
   
 ```  
@@ -888,7 +907,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -897,7 +916,7 @@ valarray<Type> sinh(const valarray<Type>& left);
 ### <a name="remarks"></a>備註  
  恆等於根據指數函式定義的雙曲正弦值：  
   
- sinh ( *z* ) = ( exp ( *z* ) – exp ( - *z* ) ) / 2  
+ sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2  
   
 ### <a name="example"></a>範例  
   
@@ -958,7 +977,7 @@ The hyperbolic sine of the initial valarray is:
 11.5487  
 ```  
   
-##  <a name="a-namesqrta--sqrt"></a><a name="sqrt"></a>  sqrt  
+##  <a name="sqrt"></a>  sqrt  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的平方根相等。  
   
 ```  
@@ -967,7 +986,7 @@ valarray<Type> sqrt(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1009,7 +1028,7 @@ The initial valarray is: ( 0 1 4 9 16 ).
 The square root of the initial valarray is: ( 0 1 2 3 4 ).  
 ```  
   
-##  <a name="a-nameswapa--swap"></a><a name="swap"></a>  swap  
+##  <a name="swap"></a>  swap  
  交換兩個 valarray 的項目。  
   
 ```  
@@ -1023,13 +1042,13 @@ void swap(
   
 |參數|描述|  
 |---------------|-----------------|  
-|` left`|`valarray` 類型的物件。|  
-|` right`|`valarray` 類型的物件。|  
+|`left`|`valarray` 類型的物件。|  
+|`right`|`valarray` 類型的物件。|  
   
 ### <a name="remarks"></a>備註  
  樣板函式會執行 ` left.swap( right)`。  
   
-##  <a name="a-nametana--tan"></a><a name="tan"></a>  tan  
+##  <a name="tan"></a>  tan  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的正切值相等。  
   
 ```  
@@ -1038,7 +1057,7 @@ valarray<Type> tan(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1103,7 +1122,7 @@ The tangent of the initial valarray is:
 -9.6701e+012  
 ```  
   
-##  <a name="a-nametanha--tanh"></a><a name="tanh"></a>  tanh  
+##  <a name="tanh"></a>  tanh  
  在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的雙曲正切值相等。  
   
 ```  
@@ -1112,7 +1131,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  要由成員函式操作其項目的輸入 valarray。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1121,7 +1140,7 @@ valarray<Type> tanh(const valarray<Type>& left);
 ### <a name="remarks"></a>備註  
  恆等於根據指數函式定義的雙曲正切值：  
   
- tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) – exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
+ tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
   
 ### <a name="example"></a>範例  
   

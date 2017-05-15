@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 321520b3638fb062f10d114a03ec9e4525b44173
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4222a9cbce6094ca69120d819906e59d0fbd094c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar、_fputwchar
@@ -85,12 +86,12 @@ wint_t _fputwchar(
  待寫入字元。  
   
 ## <a name="return-value"></a>傳回值  
- 所有這些函式都會傳回寫入的字元。 針對 `_fputchar`，傳回值 `EOF` 表示錯誤。 針對 `_fputwchar`，傳回值 `WEOF` 表示錯誤。 如果 c 是 `NULL`，則這些函式會產生無效參數例外狀況 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，這些函式會傳回 `EOF` (或 `WEOF`)，並將 `errno` 設為 `EINVAL`。  
+ 所有這些函式都會傳回寫入的字元。 針對 `_fputchar`，傳回值 `EOF` 表示錯誤。 針對 `_fputwchar`，傳回值 `WEOF` 表示錯誤。 如果 c 是 `NULL`，則這些函式會產生無效參數例外狀況 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，它們會傳回`EOF`(或`WEOF`) 並設定`errno`至`EINVAL`。  
   
- 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
- 這兩個函式都會將單一字元 `c` 寫入至 `stdout`，並適當地往前移動指標。 `_fputchar` 相當於 `fputc(``stdout )`。 它也相當於 `putchar`，但僅實作為函式，而不是函式和巨集。 與 `fputc` 和 `putchar` 不同，這些函式與 ANSI 標準不相容。  
+ 這兩個函式都會將單一字元 `c` 寫入至 `stdout`，並適當地往前移動指標。 `_fputchar` 相當於 `fputc( stdout )`。 它也相當於 `putchar`，但僅實作為函式，而不是函式和巨集。 與 `fputc` 和 `putchar` 不同，這些函式與 ANSI 標準不相容。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -131,12 +132,6 @@ int main( void )
 ```Output  
 This is a test of _fputchar!!  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
-  
--   [System::IO::StreamWriter::Write](https://msdn.microsoft.com/en-us/library/system.io.streamwriter.write.aspx)  
-  
--   [System::Console::Write](https://msdn.microsoft.com/en-us/library/system.console.write.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

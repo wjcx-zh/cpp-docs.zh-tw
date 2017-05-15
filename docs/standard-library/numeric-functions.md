@@ -6,13 +6,20 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- numeric/std::accumulate
+- numeric/std::adjacent_difference
+- numeric/std::inner_product
+- numeric/std::iota
+- numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 caps.latest.revision: 13
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 88c311b28caa80d4c4292888be501feae797ce27
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: d194bebeb13d9a5e4648a7c74192047fe093576d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函式
@@ -21,7 +28,7 @@ ms.lasthandoff: 02/24/2017
 |[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|  
 |[iota](#iota)|[partial_sum](#partial_sum)|  
   
-##  <a name="a-nameaccumulatea--accumulate"></a><a name="accumulate"></a>  accumulate  
+##  <a name="accumulate"></a>  accumulate  
  藉由計算連續的部分總和來計算指定範圍內所有元素 (包括某個初始值) 的總和，或是計算連續部分結果 (同樣是使用指定的二進位運算而非加總來計算出) 的結果。  
   
 ```  
@@ -37,23 +44,23 @@ Type accumulate(
 ```  
   
 ### <a name="parameters"></a>參數   
- ` first`  
+ `first`  
  輸入迭代器，定址對象是要根據指定的二進位運算加總或合併之範圍中的第一個元素。  
   
- ` last`  
+ `last`  
  輸入迭代器，定址對象是要根據指定的二進位運算加總或合併之範圍中的最後一個元素，這是在反覆累積中實際包含的最終元素的後面一個位置。  
   
- ` val`  
+ `val`  
  每個元素會根據指定的二進位運算，依次與其相加或合併的初始值。  
   
  `binary_op`  
  要套用至指定範圍內每個元素的二進位運算，以及其先前套用的結果。  
   
 ### <a name="return-value"></a>傳回值  
- 針對第一個範本函式，會傳回指定範圍內 ` val` 與所有元素的總和，或針對第二個範本函式，會傳回將所指定的二進位運算 (而非加總) 套用到 ( *PartialResult, \*Iter*) 的結果，其中 *PartialResult* 是先前套用運算的結果，而 `Iter` 則是指向該範圍中某個元素的迭代器。  
+ 針對第一個範本函式，會傳回指定範圍內 `val` 與所有元素的總和，或針對第二個範本函式，會傳回將所指定的二進位運算 (而非加總) 套用到 ( *PartialResult, \*Iter*) 的結果，其中 *PartialResult* 是先前套用運算的結果，而 `Iter` 則是指向該範圍中某個元素的迭代器。  
   
 ### <a name="remarks"></a>備註  
- 初始值可確保當範圍空白時會有一個妥善定義的結果，在此案例中會傳回 ` val`。 此二進位運算不一定要是關聯或交替運算。 結果會初始化為初始值 ` val`，然後 *result* = `binary_op` ( *result*, **\***`Iter`) 會在整個範圍經過反覆計算，其中 `Iter` 是指向範圍中後續元素的迭代器。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。  
+ 初始值可確保當範圍空白時會有一個妥善定義的結果，在此案例中會傳回 `val`。 此二進位運算不一定要是關聯或交替運算。 結果會初始化為初始值 `val`，然後 *result* = `binary_op` ( *result*, **\***`Iter`) 會在整個範圍經過反覆計算，其中 `Iter` 是指向範圍中後續元素的迭代器。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。  
   
 ### <a name="example"></a>範例  
   
@@ -154,7 +161,7 @@ The vector of partial products is:
  ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).  
 ```  
   
-##  <a name="a-nameadjacentdifferencea--adjacentdifference"></a><a name="adjacent_difference"></a>  adjacent_difference  
+##  <a name="adjacent_difference"></a>  adjacent_difference  
  計算在輸入範圍中每個項目及其前置項之間的後續差異並將結果輸出至目的範圍，或計算一般化程序的結果，其中由另一個指定的二進位運算取代差異作業。  
   
 ```  
@@ -173,10 +180,10 @@ OutputIterator adjacent_difference(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` first`  
+ `first`  
  輸入迭代器，為輸入範圍中的第一個項目定址，該範圍中的項目與其各自的前置項要有差異，或一對值要由另一個指定的二進位運算作業。  
   
- ` last`  
+ `last`  
  輸入迭代器，為輸入範圍中的最後一個項目定址，該範圍中的項目與其各自的前置項要有差異，或一對值要由另一個指定的二進位運算作業。  
   
  `result`  
@@ -186,12 +193,12 @@ OutputIterator adjacent_difference(
  要套用在一般化作業中的二進位運算，取代差異程序的減法運算。  
   
 ### <a name="return-value"></a>傳回值  
- 輸出迭代器，定址對象是目的範圍的結尾：`result` + ( ` last` - ` first`)。  
+ 輸出迭代器，定址對象是目的範圍的結尾：`result` + ( `last` - `first`)。  
   
 ### <a name="remarks"></a>備註  
- 輸出迭代器 _ *result* 可以與輸入迭代器 * first* 相同，以便就地計算 `adjacent_difference`。  
+ 輸出迭代器 _*結果*允許做為輸入的迭代器的同一個迭代器為 * 首先，* 以便`adjacent_difference`s 可以就地計算。  
   
- 針對輸入範圍中的 *a*1、*a*2、*a*3 值序列，第一個範本函式會將後續 **partial_difference**s *a*1、*a*2 - *a*1、a3 – *a*2 儲存在目的範圍中。  
+ 值的序列1， 2， 3，在輸入範圍內，第一個樣板函式會儲存連續**partial_difference**s 1， 2- 1、 a3- 2，目的範圍中的。  
   
  針對輸入範圍中的 *a*1、*a*2、*a*3 值序列，第二個範本函式會將後續 **partial_difference**s *a*1、*a*2 `binary_op` *a*1、*a*3 `binary_op` *a*2 儲存在目的範圍中。  
   
@@ -258,7 +265,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameinnerproducta--innerproduct"></a><a name="inner_product"></a>  inner_product  
+##  <a name="inner_product"></a>  inner_product  
  計算兩個範圍的元素乘積總和並將它加到指定的初始值，或計算一般化程序的結果，其中總和及乘積二進位運算會由其他指定的二進位運算取代。  
   
 ```  
@@ -280,16 +287,16 @@ Type inner_product(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` first1`  
+ `first1`  
  輸入迭代器，定址對象是要計算出與第二個範圍之內乘積或一般化內乘積的第一個範圍中的第一個元素。  
   
- ` last1`  
+ `last1`  
  輸入迭代器，定址對象是要計算出與第二個範圍之內乘積或一般化內乘積的第一個範圍中的最後一個元素。  
   
- ` first2`  
+ `first2`  
  輸入迭代器，定址對象是要計算出與第一個範圍之內乘積或一般化內乘積的第二個範圍中的第一個元素。  
   
- ` val`  
+ `val`  
  範圍之間的內乘積或一般化內乘積要與其相加的初始值。  
   
  *binary_op1*  
@@ -301,18 +308,18 @@ Type inner_product(
 ### <a name="return-value"></a>傳回值  
  第一個成員函式會傳回元素乘積的總和，然後為它加上指定的初始值。 因此，針對 *a*i 和 *b*i 值，它會傳回：  
   
- ` val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) +  
+ `val`+ ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
- 方法是以 ` val` + (\* *a*i \* \* *b*i ) 反覆取代 ` val`。  
+ 藉由反覆地取代`val`與`val`+ ( 我\* *b*我)。  
   
  第二個成員函式會傳回：  
   
- ` val` _ *Binary_op1* ( *a*1 \_ *Binary_op2* *b*1 ) \_ *Binary_op1* ( *a*2 \_ *Binary_op2* *b*2 ) \_ *Binary_op1*  
+ `val`*binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ...*binary_op1* ( *a*n *binary_op2* *b*n )  
   
- 方法是以 ` val` _ *Binary_op1* (\* *a*i \_ *Binary_op2* \* *b*i ) 反覆取代 ` val`。  
+ 藉由反覆地取代`val`與`val` *binary_op1* ( 我*binary_op2* *b*我)。  
   
 ### <a name="remarks"></a>備註  
- 初始值可確保當範圍空白時會有一個妥善定義的結果，在此案例中會傳回 ` val`。 這些二進位運算不一定要是關聯或交替運算。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。  
+ 初始值可確保當範圍空白時會有一個妥善定義的結果，在此案例中會傳回 `val`。 這些二進位運算不一定要是關聯或交替運算。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。  
   
 ### <a name="example"></a>範例  
   
@@ -404,7 +411,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameiotaa--iota"></a><a name="iota"></a>  iota  
+##  <a name="iota"></a>  iota  
  儲存一個開始值，以第一個元素開始，然後在間隔 `[ first,  last)` 的每一個元素中，以該值的後續增量 ( ` value++`) 填滿。  
   
 ```  
@@ -413,13 +420,13 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` first`  
+ `first`  
  輸入迭代器，定址對象是要填入的範圍中的第一個元素。  
   
- ` last`  
+ `last`  
  輸入迭代器，定址對象是要填入的範圍中的最後一個元素。  
   
- ` value`  
+ `value`  
  要儲存在第一個元素中並針對後續元素進行後續增量的開始值。  
   
 ### <a name="remarks"></a>備註  
@@ -465,7 +472,7 @@ int main(void)
 }  
 ```  
   
-##  <a name="a-namepartialsuma--partialsum"></a><a name="partial_sum"></a>  partial_sum  
+##  <a name="partial_sum"></a>  partial_sum  
  計算在輸入範圍中從第一個元素到第 *i* 個元素的一系列總和，然後將每個這類總和的結果儲存在目的範圍的第 *i* 個元素中，或計算一般化程序的結果，其中總和運算會由另一個指定的二進位運算取代。  
   
 ```  
@@ -484,10 +491,10 @@ OutputIterator partial_sum(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` first`  
+ `first`  
  輸入迭代器，定址範圍中要部分加總或根據指定的二進位運算合併的第一個項目。  
   
- ` last`  
+ `last`  
  輸入迭代器，定址範圍中要部分加總或根據指定的二進位運算合併的最後一個項目，這是在反覆累積中實際包含的最終項目之外的一個位置。  
   
  `result`  
@@ -497,14 +504,14 @@ OutputIterator partial_sum(
  要套用在一般化作業中的二進位運算，取代部分總和程序的總和運算。    
   
 ### <a name="return-value"></a>傳回值  
- 輸出迭代器，定址對象是目的範圍的結尾：`result` + ( ` last` - ` first`)。  
+ 輸出迭代器，定址對象是目的範圍的結尾：`result` + ( `last` - `first`)。  
   
 ### <a name="remarks"></a>備註  
- 允許輸出迭代器 `result` 與輸入迭代器 ` first` 相同，因此部分總和可以就地計算。  
+ 允許輸出迭代器 `result` 與輸入迭代器 `first` 相同，因此部分總和可以就地計算。  
   
  針對輸入範圍中的 *a*1、*a*2、*a*3 值序列，第一個範本函式會將後續部分總和儲存在目的範圍中，其中第 *i* 個元素是由 (  ( ( *a*1 + *a*2) + *a*3) *a*i) 指定。  
   
- 針對輸入範圍中的 *a*1、*a*2、*a*3 值序列，第二個範本函式會將後續部分總和儲存在目的範圍中，其中第 i 個元素是由 (  ( ( *a*1`binary_op` *a*2 ) `binary_op` *a*3 ) *a*i) 指定。  
+ 值的序列1， 2， 3，在輸入範圍中，第二個樣板函式會儲存在目的範圍中，第 i 項目由所提供的後續部分總和 ((( 1 `binary_op` 2) `binary_op` 3) 我)。  
   
  二進位運算 `binary_op` 不需要是關聯或交替，因為套用的作業順序已完全指定。  
   

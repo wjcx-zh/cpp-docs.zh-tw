@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 64d619e9826e896633aaa35d64d0148bede7879b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 09187e54126553331a6100fa11c98a730434db12
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint、_ismbbprint_l
@@ -90,7 +91,7 @@ int _ismbbprint_l(
 isprint || _ismbbkprint  
 ```  
   
- 非零代表 `c`，0 則代表不是。 針對任何地區設定相關行為，`_ismbbprint` 會使用目前的地區設定。 `_ismbbprint_l` 完全相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 非零代表 `c`，0 則代表不是。 針對任何地區設定相關行為，`_ismbbprint` 會使用目前的地區設定。 `_ismbbprint_l` 也相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
@@ -100,9 +101,6 @@ isprint || _ismbbkprint
 |`_ismbbprint_l`|\<mbctype.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   

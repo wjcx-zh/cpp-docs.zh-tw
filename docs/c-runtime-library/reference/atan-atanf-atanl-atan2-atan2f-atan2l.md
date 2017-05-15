@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 9478bce81c89d642fbcad296ffc53e1312a177c2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 53291ede13fdd83a531052743ae22ef8bb146b0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
@@ -119,7 +120,7 @@ long double atan2l(
  任何數字。  
   
 ## <a name="return-value"></a>傳回值  
- `atan` 會傳回 –π/2 到 π/2 弧度之間的 `x` 反正切值。 `atan2` 會傳回 –π 到 π 弧度之間的 `y/x` 反正切值。 如果 `x` 為 0，則 `atan` 傳回 0。 如果 `atan2` 的兩個參數都是 0，則函式會傳回 0。 所有結果都以弧度為單位。  
+ `atan`傳回的反正切值`x`範圍-π/2 到 π/2 弧度中。 `atan2`傳回的反正切值`y/x`範圍 π 成 π 弧度中。 如果 `x` 為 0，則 `atan` 傳回 0。 如果 `atan2` 的兩個參數都是 0，則函式會傳回 0。 所有結果都以弧度為單位。  
   
  `atan2` 使用這兩個參數的符號來判斷傳回值的象限。  
   
@@ -170,12 +171,6 @@ int main( int ac, char* av[] )
 Arctangent of 5.000000: 1.373401  
 Arctangent of 0.500000 / 5.000000: 0.099669  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
-  
--   [System::Math::Atan](https://msdn.microsoft.com/en-us/library/system.math.atan.aspx)  
-  
--   [System::Math::Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

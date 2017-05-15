@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dead533ee11db7c40faa7d3611b30c6a6159ee50
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 200337a53155b27b76a944d025c8fb013c29c4e6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
@@ -108,7 +109,7 @@ size_t _wcstombs_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `wcstombs` 成功轉換多位元組字串，即會傳回寫入多位元組輸出字串的位元組數目，不包括終止的 `NULL` (如果有的話)。 如果 `mbstr` 引數為 `NULL`，則 `wcstombs` 會傳回目的字串所需的大小 (以位元組為單位)。 如果 `wcstombs` 遇到它無法轉換成多位元組字元的寬字元，它會傳回轉換成類型 `size_t` 的 –&1;，並將 `errno` 設為 `EILSEQ`。  
+ 如果 `wcstombs` 成功轉換多位元組字串，即會傳回寫入多位元組輸出字串的位元組數目，不包括終止的 `NULL` (如果有的話)。 如果 `mbstr` 引數為 `NULL`，則 `wcstombs` 會傳回目的字串所需的大小 (以位元組為單位)。 如果`wcstombs`遇到寬字元不能轉換的多位元組字元，則傳回-1 轉換為類型`size_t`並設定`errno`至`EILSEQ`。  
   
 ## <a name="remarks"></a>備註  
  `wcstombs` 函式會將 `wcstr` 指向的寬字元字串轉換成對應的多位元組字元，並將結果儲存在 `mbstr` 陣列中。 `count` 參數指出可以儲存在多位元組輸出字串的最大位元組數 (亦即 `mbstr` 的大小)。 轉換寬字元字串時通常不知道需要多少個位元組。 某些寬字元只需要輸出字串的一個位元組，有些則需要兩個。 如果多位元組輸出字串為輸入字串的每個寬字元都提供兩個位元組 (包括寬字元 `NULL`)，結果保證符合。  
@@ -117,7 +118,7 @@ size_t _wcstombs_l(
   
  如果 `mbstr` 引數為 `NULL`，則 `wcstombs` 會傳回目的字串所需的大小 (以位元組為單位)。  
   
- `wcstombs` 會驗證其參數。 如果 `wcstr` 是 `NULL`，或如果 `count` 大於 `INT_MAX`，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會將 `errno` 設定為 `EINVAL` 並傳回 -1。  
+ `wcstombs` 會驗證其參數。 如果`wcstr`是`NULL`，或如果`count`大於`INT_MAX`，此函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會將 `errno` 設定為 `EINVAL` 並傳回 -1。  
   
  `wcstombs` 會針對任何與地區設定相關的行為使用目前的地區設定，`_wcstombs_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -172,9 +173,6 @@ Convert wide-character string:
    Characters converted: 13  
     Multibyte character: Hello, world.  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   

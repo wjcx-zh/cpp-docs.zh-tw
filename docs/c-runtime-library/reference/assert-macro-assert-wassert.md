@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: ad3410852975757c34220e2de19f696ba3b7c718
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 97bdb002953c07aba3bf7951a6f94a058c977f9d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 巨集、_assert、_wassert
@@ -96,7 +97,7 @@ void _wassert(
  判斷提示失敗之原始程式檔中的行號。  
   
 ## <a name="remarks"></a>備註  
- `assert` 巨集通常可用來找出程式開發期間的邏輯錯誤。 此巨集可在發生未預期的情況時，用來停止程式執行，方法是實作 `expression` 引數，僅在程式運作不正常時評估為 `false` 。 您可以定義巨集 `NDEBUG`，在編譯時期關閉判斷提示檢查。 您可以使用 `assert` 命令列選項關閉 **assert** 巨集，而不需要修改原始程式檔。 您可以在包含 \<assert.h> 前使用 `#define NDEBUG` 指示詞，以關閉來源程式碼的 `assert` 巨集。  
+ `assert` 巨集通常可用來找出程式開發期間的邏輯錯誤。 此巨集可在發生未預期的情況時，用來停止程式執行，方法是實作 `expression` 引數，僅在程式運作異常時評估為 `false` 。 您可以定義巨集 `NDEBUG`，在編譯時期關閉判斷提示檢查。 您可以使用 `assert` 命令列選項關閉 **assert** 巨集，而不需要修改原始程式檔。 您可以在包含 \<assert.h> 前使用 `#define NDEBUG` 指示詞，以關閉來源程式碼的 `assert` 巨集。  
   
  當 `expression` 評估為 `false` (0)，並呼叫 [abort](../../c-runtime-library/reference/abort.md) 以終止程式執行時，`assert` 巨集會列印診斷訊息。 如果 `expression` 為 `true` (非零)，則不會採取任何動作。 診斷訊息包含失敗的運算式，以及判斷提示失敗之原始程式檔的名稱及其中的行號。  
   
@@ -169,9 +170,6 @@ A problem caused the program to stop working correctly. Windows will close the p
 ```  
   
  如果已安裝偵錯工具，請選擇 [偵錯]  按鈕以啟動偵錯工具，或選擇 [關閉程式]  結束。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Diagnostics::Debug::Assert](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.assert.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤處理](../../c-runtime-library/error-handling-crt.md)   

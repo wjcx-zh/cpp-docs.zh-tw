@@ -1,79 +1,87 @@
 ---
 title: "linear_congruential_engine 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.tr1.linear_congruential_engine"
-  - "random/std::tr1::linear_congruential_engine"
-  - "linear_congruential_engine"
-  - "std::tr1::linear_congruential_engine"
-  - "tr1.linear_congruential_engine"
-  - "tr1::linear_congruential_engine"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "linear_congruential_engine 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- linear_congruential_engine
+- random/std::linear_congruential_engine
+dev_langs:
+- C++
+helpviewer_keywords:
+- linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# linear_congruential_engine 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: bbb733e102af57627c00006816bb8d955877d0f8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
+---
+# <a name="linearcongruentialengine-class"></a>linear_congruential_engine 類別
 依線性同餘演算法產生隨機序列。  
   
-## 語法  
-  
+## <a name="syntax"></a>語法  
 ```  
-template<class UIntType, UIntType A, UIntType C, UIntType M>  
 class linear_congruential_engine{  
-public:  
-    // types  
-    typedef UIntType result_type;  
-  
-    // engine characteristics  
-    static constexpr result_type multiplier = a;  
-    static constexpr result_type increment = c;  
-    static constexpr result_type modulus = m;  
-    static constexpr result_type min() { return c == 0u ? 1u: 0u; }  
-    static constexpr result_type max() { return m - 1u; }  
-    static constexpr result_type default_seed = 1u;  
-  
-    // constructors and seeding functions  
-    explicit linear_congruential_engine(result_type s = default_seed);  
-    template<class Sseq> explicit linear_congruential_engine(Sseq& q);  
-    void seed(result_type s = default_seed);  
-    template<class Sseq> void seed(Sseq& q);  
-  
-    // generating functions  
-    result_type operator()();  
-    void discard(unsigned long long z);  
-};  
+   public:  // types  
+   typedef UIntType result_type;  
+   // engine characteristics  
+   static constexpr result_type multiplier = a;  
+   static constexpr result_type increment = c;  
+   static constexpr result_type modulus = m;  
+   static constexpr result_type min() { return c == 0u  1u: 0u; }  
+   static constexpr result_type max() { return m - 1u; }  
+   static constexpr result_type default_seed = 1u;  
+   // constructors and seeding functions  
+   explicit linear_congruential_engine(result_type s = default_seed);
+   template <class Sseq>  
+   explicit linear_congruential_engine(Sseq& q);
+   void seed(result_type s = default_seed);
+   template <class Sseq>  
+   void seed(Sseq& q);
+   // generating functions  
+   result_type operator()();
+   void discard(unsigned long long z);
+   };  
 ```  
-  
-#### 參數  
+#### <a name="parameters"></a>參數  
  `UIntType`  
- 不帶正負號的整數結果類型。 可能的類型，請參閱 [\<random\>](../standard-library/random.md)。  
+ 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
   
  `A`  
- **乘數**。**前置條件**：請參閱＜備註＞一節。  
+ **乘數**。 **前置條件**：請參閱＜備註＞一節。  
   
  `C`  
- **遞增**。**前置條件**：請參閱＜備註＞一節。  
+ **遞增**。 **前置條件**：請參閱＜備註＞一節。  
   
  `M`  
- **模數**。**前置條件**：請參閱備註。  
+ **模數**。 **前置條件**：請參閱備註。  
   
-## Members  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
@@ -82,37 +90,40 @@ public:
   
  `default_seed` 是一個成員常數，定義為 `1u`，用做 `linear_congruential_engine::seed` 的預設參數值以及單一值建構函式。  
   
- 如需引擎成員的詳細資訊，請參閱 [\<random\>](../standard-library/random.md)。  
+ 如需引擎成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
-## 備註  
- `linear_congruential_engine` 範本類別是最簡單的產生器引擎，但不具有最快或最高的品質。 和此引擎相較之下較為改進的是 [substract\_with\_carry\_engine](../standard-library/subtract-with-carry-engine-class.md)。 但這些引擎都不像 [mersenne\_twister\_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。  
+## <a name="remarks"></a>備註  
+ `linear_congruential_engine` 範本類別是最簡單的產生器引擎，但不具有最快或最高的品質。 和此引擎相較之下較為改進的是 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。  
   
- 此引擎使用週期關聯 \(*「週期」*\(Period\)\) `x(i) = (A * x(i-1) + C) mod M`，產生使用者指定之不帶正負號的整數類型的值。  
+ 此引擎使用週期關聯 ( *period*) `x(i) = (A * x(i-1) + C) mod M` 來產生使用者指定之不帶正負號的整數類型值。  
   
  若 `M` 為零，則此模數作業所使用的值為 `numeric_limits<result_type>::max() + 1`。 引擎的狀態會是上次傳回的值；若沒有對 `operator()` 執行任何呼叫，則引擎的狀態是初始值。  
   
  若 `M` 不是零，則範本引數 `A` 和 `C` 的值必須小於 `M`。  
   
- 雖然您可以直接建構從此引擎的產生器，您也可以使用其中一個這些預先定義的 typedef。  
+ 雖然您可以直接從此引擎建構產生器，但您也可以使用下列其中一個預先定義的 typedef。  
   
- `minstd_rand0`: 1988年最低標準引擎 （Lewis、 Goodman 及 Miller，1969 年）。  
+ `minstd_rand0`：1988 最低標準引擎 (Lewis、Goodman 及 Miller，1969 年)。  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;  
 ```  
   
- `minstd_rand`︰ 升級的最低標準引擎 `minstd_rand0` （Park、 Miller 及 Stockmeyer，1993 年）。  
+ `minstd_rand`：更新的最低標準引擎 `minstd_rand0` (Park、Miller 及 Stockmeyer，1993 年)。  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;  
 ```  
   
- 如需線性同餘引擎演算法的詳細資訊，請參閱 Wikipedia 文章 [線性同餘方法產生器](http://go.microsoft.com/fwlink/?LinkId=402446)。  
+ 如需有關線性同餘引擎演算法的詳細資訊，請參閱 Wikipedia 文章[線性同餘方法](http://go.microsoft.com/fwlink/LinkId=402446)。  
   
-## 需求  
- **標頭：**\<random\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<random>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [\<random\>](../standard-library/random.md)
+## <a name="see-also"></a>另請參閱  
+ [\<random>](../standard-library/random.md)
+
+
+

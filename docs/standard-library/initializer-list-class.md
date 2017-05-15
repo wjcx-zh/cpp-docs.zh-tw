@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 2ac3e7fa456e5d3ff04bc5d974c87a9cbb055fea
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 542a13de6e8b97f736ea2cfcdf8956c2f261c1e4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="initializerlist-class"></a>initializer_list 類別
@@ -70,7 +71,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[initializer_list](../standard-library/forward-list-class.md#forward_list__forward_list)|建構類型 `initializer_list` 的物件。|  
+|[initializer_list](../standard-library/forward-list-class.md#forward_list)|建構類型 `initializer_list` 的物件。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
@@ -87,16 +88,16 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
   
 |||  
 |-|-|  
-|[begin](#initializer_list__begin)|傳回 `initializer_list` 中第一個項目的指標。|  
-|[end](#initializer_list__end)|傳回超出 `initializer_list` 中最後一個項目的項目指標。|  
-|[size](#initializer_list__size)|傳回 `initializer_list` 中項目的數目。|  
+|[begin](#begin)|傳回 `initializer_list` 中第一個項目的指標。|  
+|[end](#end)|傳回超出 `initializer_list` 中最後一個項目的項目指標。|  
+|[size](#size)|傳回 `initializer_list` 中項目的數目。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<initializer_list>  
   
  **命名空間：** std  
   
-##  <a name="initializer_list__begin"></a>  initializer_list::begin  
+##  <a name="begin"></a>  initializer_list::begin  
  傳回 `initializer_list` 中第一個項目的指標。  
   
 ```  
@@ -108,7 +109,7 @@ constexpr const InputIterator* begin() const noexcept;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="initializer_list__end"></a>  initializer_list::end  
+##  <a name="end"></a>  initializer_list::end  
  傳回超出 `initializer list` 中最後一個項目的項目指標。  
   
 ```  
@@ -118,7 +119,7 @@ constexpr const InputIterator* end() const noexcept;
 ### <a name="return-value"></a>傳回值  
  超出清單中最後一個項目的項目指標。 如果清單是空的，這個指標會與清單中第一個項目的指標相同。  
   
-##  <a name="initializer_list__initializer_list"></a>  initializer_list::initializer_list  
+##  <a name="initializer_list"></a>  initializer_list::initializer_list  
  建構類型 `initializer_list` 的物件。  
   
 ```  
@@ -199,7 +200,7 @@ int main()
 c1 = 3c2 = 5 4 3 2 1c3 = 5 4 3 2 1c4 = 5 4c5 = 5 4  
 ```  
   
-##  <a name="initializer_list__size"></a>  initializer_list::size  
+##  <a name="size"></a>  initializer_list::size  
  傳回清單中項目的數目。  
   
 ```  

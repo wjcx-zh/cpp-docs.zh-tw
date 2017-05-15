@@ -1,53 +1,70 @@
 ---
 title: "fseek、_fseeki64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_fseeki64"
-  - "fseek"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fseek"
-  - "_fseeki64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_fseeki64 函式"
-  - "檔案指標 [C++]"
-  - "檔案指標 [C++], 移動"
-  - "fseek 函式"
-  - "fseeki64 函式"
-  - "搜尋檔案指標"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _fseeki64
+- fseek
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- fseek
+- _fseeki64
+dev_langs:
+- C++
+helpviewer_keywords:
+- _fseeki64 function
+- fseeki64 function
+- fseek function
+- file pointers [C++], moving
+- file pointers [C++]
+- seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# fseek、_fseeki64
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 0d0c0bf620f1b89b9decceed3db9434dae4f9437
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-移動檔案指標至指定的位置。  
+---
+# <a name="fseek-fseeki64"></a>fseek、_fseeki64
+將檔案指標移至指定的位置。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int fseek(   
@@ -62,57 +79,57 @@ int _fseeki64(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `stream`  
- 指向 `FILE` 結構的指標。  
+ `FILE` 結構的指標。  
   
  `offset`  
- `origin` 的位元組數。  
+ 來自 `origin` 的位元組數目。  
   
  `origin`  
  初始位置。  
   
-## 傳回值  
- 如果成功，`fseek` 及 `_fseeki64` 則傳回 true。  否則，會傳回非零的值。  在不能達到搜尋的裝置上，傳回值為未定義。  如果 `stream` 為 null 指標，或是，如果 `origin` 不是以下其中一個允許的值， `fseek` 和 `_fseeki64` 叫用無效的參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 \-1。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，`fseek` 和 `_fseeki64` 會傳回 0。 否則，它會傳回非零值。 在無法搜尋的裝置上，傳回的值為未定義。 如果 `stream` 是 Null 指標，或如果 `origin` 不是其中一個如下所述的允許值，則`fseek` 和 `_fseeki64` 會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設定為 `EINVAL` ，並傳回 -1。  
   
-## 備註  
- `fseek` 和 `_fseeki64` 函式移動與 `stream` 關連的檔案指標 \(如果有的話\) 至從 `origin` 位移 `offset` 位元組的新位置。在資料流的下一個作業會在新位置時發生。  在資料流開啟更新時，下一個作業可能會讀取或寫入。  origin 引數必須是下列其中一個定義於 STDIO.H 的常數:  
+## <a name="remarks"></a>備註  
+ `fseek`和`_fseeki64`函式的移動檔案指標 （如果有的話） 相關聯`stream`至新位置`offset`位元組從`origin`。 資料流的下一個作業會在新位置進行。 在開啟以供更新的資料流中，下一項作業可能是讀取或寫入。 引數的原點必須是下列常數之一，於 STDIO.H 中定義：  
   
  `SEEK_CUR`  
- 檔案指標目前的位置。  
+ 檔案指標的目前位置。  
   
  `SEEK_END`  
  檔案結尾。  
   
  `SEEK_SET`  
- 檔案的開頭。  
+ 檔案開頭。  
   
- 您可以使用 `fseek` 和 `_fseeki64` 重新定位指標至檔案的任何位置。  指標也可以在檔案結尾之外放置。  `fseek` 和 `_fseeki64`清除檔案結尾標記和忽略任何先前對 `stream` 的 `ungetc` 呼叫。  
+ 您可以使用 `fseek` 和 `_fseeki64` 將指標重新放置在檔案中的任何位置。 指標也可以放置在超過檔案結尾的位置。 `fseek`和`_fseeki64`清除檔案結尾指標，並取消任何之前的效果`ungetc`針對呼叫`stream`。  
   
- 當檔案為附加資料開啟時，目前的檔案位置取決於最後一個 I\/O 作業，而不是寫入將發生的位置。  如果在為附加開啟的檔案未發生 I\/O 作業，檔案位置是檔案的開頭。  
+ 檔案因為附加資料而開啟時，目前的檔案位置取決於最後一個 I/O 作業，而不是下一次寫入的位置。 如果開啟以供附加的檔案上尚未發生任何 I/O 作業，該檔案的位置是檔案的開頭。  
   
- 文字模式下開啟的資料流，因為回車符轉譯會導致 `fseek` 和 `_fseeki64` 產生未定義結果，讓  `fseek` 和 `_fseeki64` 的使用具有限制。  唯一保證 `fseek` 和 `_fseeki64`作業在文字模式下開啟的資料流工作如下:  
+ 在文字模式中開啟資料流的`fseek`和`_fseeki64`有限使用，因為會造成歸位字元與換行字元傳回翻譯`fseek`和`_fseeki64`來產生非預期的結果。 唯一`fseek`和`_fseeki64`保證可以在文字模式開啟的資料流上運作的作業︰  
   
--   尋找於相對於任何原始值位移 0。  
+-   相對於任何原點值，位移為 0 的搜尋。  
   
--   從檔案開頭加上當使用 `fseek` 時 `ftell` 回傳的位移值或是當使用 `_fseeki64` 時 `_ftelli64` 回傳的位移值尋找這個物件。  
+-   搜尋從位移的值與檔案的開頭傳回呼叫`ftell`時使用`fseek`或`_ftelli64`時使用`_fseeki64`。  
   
- 在文字模式下，CTRL\+Z 也會在輸入時解譯成檔案結尾字元。  開啟為讀取\/寫入的檔案中， `fopen` 及所有相關的常式會檢查檔案結尾是否有 CTRL\+Z，並加以移除 \(如果可能\)。  之所以這樣做，是因為使用 `fseek` 和 `ftell` 或是 `_fseeki64` 及 `_ftelli64` 在以 CTRL\+Z 結束的檔案內移動可能會讓 `fseek` 或是 `_fseeki64` 在檔案結尾附近產生不正確的行為。  
+ 此外，在文字模式中，Ctrl+Z 會在輸入時被解譯成檔案結尾字元。 在檔案開啟供讀取/寫入時，`fopen` 和所有相關的常式檢查檔案結尾是否有 CTRL+Z，並在可能時將它移除。 之所以這麼做，是因為合併使用 `fseek` 和`ftell` 或 `_fseeki64` 和 `_ftelli64`以在 CTRL+Z 結尾的檔案內移動可能會讓 `fseek` 或 `_fseeki64` 在檔案結尾附近產生不當行為。  
   
- 當 CRT 開啟開始位元順序標記 \(BOM\) 的檔案時，檔案指標位於 BOM 之後 \(也就是在檔案的實際內容的開頭\)。  如果您必須對檔案作 `fseek` ，請使用 `ftell` 以得到初始位置再作 `fseek` 而不是使用位置 0。  
+ 當 CRT 開啟以位元順序標記 (BOM) 開頭的檔案時，檔案指標的位置在 BOM 之後 (也就是在檔案實際內容的開頭)。 如果您需要 `fseek` 檔案的開頭，請使用 `ftell` 取得初始位置，並 `fseek` 至該位置，而不是位置 0。  
   
- 這個函式在執行期間鎖定其他執行緒因此具備執行緒安全。  如需非鎖定版本，請參閱 [\_fseek\_nolock、\_fseeki64\_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)。  
+ 此函式於執行期間鎖定其他執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_fseek_nolock、_fseeki64_nolock](../../c-runtime-library/reference/fseek-nolock-fseeki64-nolock.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|功能|必要的標頭|  
-|--------|-----------|  
-|`fseek`|\<stdio.h\>|  
-|`_fseeki64`|\<stdio.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`fseek`|\<stdio.h>|  
+|`_fseeki64`|\<stdio.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_fseek.c  
@@ -147,17 +164,14 @@ int main( void )
 }  
 ```  
   
-  **File pointer is set to middle of first line.**  
-**This is the file 'fseek.out'.**   
-## .NET Framework 對等用法  
+```Output  
+File pointer is set to middle of first line.  
+This is the file 'fseek.out'.  
+```  
   
--   [System::IO::FileStream::Position](https://msdn.microsoft.com/en-us/library/system.io.filestream.position.aspx)  
-  
--   [System::IO::FileStream::Seek](https://msdn.microsoft.com/en-us/library/system.io.filestream.seek.aspx)  
-  
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [fopen、\_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [ftell、\_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
- [\_lseek、\_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
+ [ftell、_ftelli64](../../c-runtime-library/reference/ftell-ftelli64.md)   
+ [_lseek、_lseeki64](../../c-runtime-library/reference/lseek-lseeki64.md)   
  [rewind](../../c-runtime-library/reference/rewind.md)

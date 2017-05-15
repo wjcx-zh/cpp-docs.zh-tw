@@ -6,24 +6,26 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2a1f1c21cdcd42e7e8d33eb6405297fc88635d87
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 運算子
 ||||  
 |-|-|-|  
-|[operator&amp;](#operator_amp_)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator_xor](#operator_xor)|[operator_or](#operator_or)|  
+|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator^](#op_xor)|[operator|](#op_or)|  
   
-##  <a name="a-nameoperatorampa--operatoramp"></a><a name="operator_amp_"></a>  operator&amp;  
+##  <a name="op_amp"></a> operator&amp;  
  在兩個 bitset 之間執行位元 `AND`。  
   
 ```  
@@ -35,14 +37,14 @@ operator&(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  兩個 bitset 的第一個 bitset，其相關元素會使用位元 `AND` 結合。  
   
- ` right`  
+ `right`  
  兩個 valarray 的第二個 valarray，其相關元素會使用位元 `AND` 結合。  
   
 ### <a name="return-value"></a>傳回值  
- bitset，其元素是在 ` left` 和 ` right` 的對應元素上執行 `AND` 運算的結果。  
+ bitset，其元素是在 `left` 和 `right` 的對應元素上執行 `AND` 運算的結果。  
   
 ### <a name="example"></a>範例  
   
@@ -72,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  將位元序列的文字表示插入輸出資料流。  
   
 ```  
@@ -80,12 +82,11 @@ bitset 3: 0001
 template <class CharType, class Traits, size_t N>  
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,  
-    const bitset<N>& 
-    right);
+    const bitset<N>& right);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` right`  
+ `right`  
  要當做字串插入輸出資料流之 **bitset\<N>** 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -127,7 +128,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  將位元字元的字串讀入 bitset。  
   
 ```  
@@ -144,7 +145,7 @@ _Istr,
  `_Istr`  
  在輸入資料流中輸入以插入 bitset 的字串。  
   
- ` right`  
+ `right`  
  要從輸入資料流接收位元的 bitset。  
   
 ### <a name="return-value"></a>傳回值  
@@ -210,7 +211,7 @@ int main()
 }  
 ```  
   
-##  <a name="a-nameoperatorxora--operatorxor"></a><a name="operator_xor"></a>  operator_xor  
+##  <a name="op_xor"></a>  operator^  
  在兩個 bitset 之間執行位元 `EXCLUSIVE-OR`。  
   
 ```  
@@ -222,14 +223,14 @@ operator^(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  兩個 bitset 的第一個 bitset，其相關元素會使用位元 `EXCLUSIVE-OR` 結合。  
   
- ` right`  
+ `right`  
  兩個 valarray 的第二個 valarray，其相關元素會使用位元 `EXCLUSIVE-OR` 結合。  
   
 ### <a name="return-value"></a>傳回值  
- bitset，其元素是在 ` left` 和 ` right` 的對應元素上執行 `EXCLUSIVE-OR` 運算的結果。  
+ bitset，其元素是在 `left` 和 `right` 的對應元素上執行 `EXCLUSIVE-OR` 運算的結果。  
   
 ### <a name="example"></a>範例  
   
@@ -259,7 +260,7 @@ bitset 2: 0011
 bitset 3: 0110  
 ```  
   
-##  <a name="a-nameoperatorora--operatoror"></a><a name="operator_or"></a>  operator_or  
+##  <a name="op_or"></a>運算子 |  
  在兩個 bitset 之間執行位元 `OR`。  
   
 ```  
@@ -271,14 +272,14 @@ operator|(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  兩個 bitset 的第一個 bitset，其相關元素會使用位元 `OR` 結合。  
   
- ` right`  
+ `right`  
  兩個 valarray 的第二個 valarray，其相關元素會使用位元 `OR` 結合。  
   
 ### <a name="return-value"></a>傳回值  
- bitset，其元素是在 ` left` 和 ` right` 的對應元素上執行 `OR` 運算的結果。  
+ bitset，其元素是在 `left` 和 `right` 的對應元素上執行 `OR` 運算的結果。  
   
 ### <a name="example"></a>範例  
   

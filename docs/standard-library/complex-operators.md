@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords: []
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b0852cc3fd3531e05791cfce952853265b4458b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: ef11e8bca4971b4fb07669907b2234c90a040ef8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 運算子
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[operator&gt;&gt;](#operator_gt__gt_)|[operator&lt;&lt;](#operator_lt__lt_)|  
-|[operator*](#operator_star)|[operator+](#operator_add)|[operator-](#operator-)|  
-|[operator/](#operator_)|[operator==](#operator_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|  
+|[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
+|[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="a-nameoperatorneqa--operator"></a><a name="operator_neq"></a>  operator!=  
+##  <a name="op_neq"></a>  operator!=  
  測試兩個複數間的不相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。  
   
 ```  
@@ -44,10 +46,10 @@ bool operator!=(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  用作測試不相等的複數或其參數類型的物件。  
   
- ` right`  
+ `right`  
  用作測試不相等的複數或其參數類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -158,7 +160,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="a-nameoperatorstara--operator"></a><a name="operator_star"></a>  operator*  
+##  <a name="op_star"></a>  operator*  
  將兩個複數相乘，其中之一或兩者都可能屬於實部和虛部類型的子集。  
   
 ```  
@@ -180,10 +182,10 @@ complex<Type> operator*(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  兩個複數的第一個或某個數字 (其為要以 * 運算相乘之複數的參數類型)。  
   
- ` right`  
+ `right`  
  兩個複數的第二個或某個數字 (其為要以 * 運算相乘之複數的參數類型)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -252,7 +254,7 @@ int main( )
 }  
 ```  
   
-##  <a name="a-nameoperatoradda--operator"></a><a name="operator_add"></a>  operator+  
+##  <a name="op_add"></a>  operator+  
  將兩個複數相加，其中之一或兩者都可能屬於實部和虛部類型的子集。  
   
 ```  
@@ -277,17 +279,17 @@ complex<Type> operator+(const complex<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  兩個複數的第一個或某個數字 (其為要以 + 運算相加之複數的參數類型)。  
   
- ` right`  
+ `right`  
  兩個複數的第二個或某個數字 (其為要以 + 運算相加之複數的參數類型)。  
   
 ### <a name="return-value"></a>傳回值  
  兩個數字相加得出的複數，這兩個數字的值和類型由參數輸入來指定。  
   
 ### <a name="remarks"></a>備註  
- 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。 一元運算子會傳回 ` left.`。  
+ 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。 一元運算子會傳回`left`。  
   
 ### <a name="example"></a>範例  
   
@@ -389,7 +391,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.  
 ```  
   
-##  <a name="a-nameoperator-a--operator-"></a><a name="operator-"></a>  operator-  
+##  <a name="operator-"></a>  operator-  
  將兩個複數相減，其中之一或兩者都可能屬於實部和虛部類型的子集。  
   
 ```   
@@ -413,14 +415,14 @@ complex<Type> operator-(const complex<Type>& left);
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  兩個複數的第一個或某個數字 (其為要以 - 運算相減之複數的參數類型)。  
   
- ` right`  
+ `right`  
  兩個複數的第二個或某個數字 (其為要以 - 運算相減之複數的參數類型)。  
   
 ### <a name="return-value"></a>傳回值  
- ` left` 和 ` right` 相減得出的複數，這兩個數字的值由參數輸入來指定。  
+ `left` 和 `right` 相減得出的複數，這兩個數字的值由參數輸入來指定。  
   
 ### <a name="remarks"></a>備註  
  系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
@@ -527,7 +529,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.  
 ```  
   
-##  <a name="a-nameoperatora--operator"></a><a name="operator_"></a>  operator/  
+##  <a name="op_div"></a>  operator/  
  將兩個複數相除，其中之一或兩者都可能屬於實部和虛部類型的子集。  
   
 ```   
@@ -548,10 +550,10 @@ complex<Type> operator*(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  某個複數或數字 (其為要以 / 運算相除之複數分子的參數類型)。  
   
- ` right`  
+ `right`  
  某個複數或數字 (其為要以 / 運算相除之複數分母的參數類型)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -643,7 +645,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.  
 ```  
   
-##  <a name="a-nameoperatorltlta--operatorltlt"></a><a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  將指定的複數插入輸出資料流中。  
   
 ```   
@@ -657,7 +659,7 @@ basic_ostream<Elem, Traits>& operator<<(
  `Ostr`  
  要輸入複數的輸出資料流。  
   
- ` right`  
+ `right`  
  要輸入輸出資料流中的複數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -701,7 +703,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="a-nameoperatoreqeqa--operator"></a><a name="operator_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a>  operator==  
  測試兩個複數間的相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。  
   
 ```  
@@ -723,10 +725,10 @@ bool operator==(
 ```  
   
 ### <a name="parameters"></a>參數  
- ` left`  
+ `left`  
  用作測試不相等的複數或其參數類型的物件。  
   
- ` right`  
+ `right`  
  用作測試不相等的複數或其參數類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -837,7 +839,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="a-nameoperatorgtgta--operatorgtgt"></a><a name="operator_gt__gt_"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
  從輸入資料流擷取複數值。  
   
 ```  
@@ -852,11 +854,11 @@ basic_istream<Elem, Traits>& operator>>(
  `Istr`  
  要擷取複數的來源輸入資料流。  
   
- ` right`  
+ `right`  
  要從輸入資料流擷取的複數。  
   
 ### <a name="return-value"></a>傳回值  
- 從 `Istr` 讀取指定複數的值，並將它傳入 ` right.`。  
+ 讀取從指定的複數值`Istr`並傳回其`right`。  
   
 ### <a name="remarks"></a>備註  
  有效的輸入格式為  

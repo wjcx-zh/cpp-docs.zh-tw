@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::const_mem_fun_ref_t
 - const_mem_fun_ref_t
-- std.const_mem_fun_ref_t
 - xfunctional/std::const_mem_fun_ref_t
 dev_langs:
 - C++
@@ -36,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: cb5fd219cb69b7cd6edd2d5eb5b9abd0ab819369
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: f156aeb90b3569aa1fd65f06b520f294f0869541
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="constmemfunreft-class"></a>const_mem_fun_ref_t 類別
@@ -71,7 +70,7 @@ class const_mem_fun_ref_t
  此範本類別會在私用成員物件中儲存一份 `Pm` 的複本，這必須是 **Type** 類別之成員函式的指標。 它會在傳回下列項目時定義其成員函式 `operator()`：( **left**.\* `Pm`)() **const**。  
   
 ## <a name="example"></a>範例  
- 通常並不直接使用 `const_mem_fun_ref_t` 的建構函式，而協助程式函式 `mem_fun_ref` 可用來調整成員函式。 如需如何使用成員函式配接器的範例，請參閱 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref_function)。  
+ 通常並不直接使用 `const_mem_fun_ref_t` 的建構函式，而協助程式函式 `mem_fun_ref` 可用來調整成員函式。 如需如何使用成員函式配接器的範例，請參閱 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<functional>  

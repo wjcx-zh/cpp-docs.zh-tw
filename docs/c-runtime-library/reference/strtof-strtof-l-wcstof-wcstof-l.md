@@ -65,10 +65,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9c22c290b97e8306961198870083bbf18cf770dd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1a08c836ed0048e27957662371d352b3316e6975
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strtof-strtofl-wcstof-wcstofl"></a>strtof、_strtof_l、wcstof、_wcstof_l
@@ -108,7 +109,7 @@ float wcstof_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- `strtof` 會傳回浮點數的值，但表示法可能造成溢位時例外，在此情況下函式會傳回 +/–`HUGE_VALF`。 `HUGE_VALF` 的正負號符合無法表示之值的正負號。 如果沒有任何轉換可執行，`strtof` 會傳回 0，否則會發生反向溢位。  
+ `strtof`傳回值的浮點數，除了當表示法會造成溢位，情況為函式傳回 + /-`HUGE_VALF`。 `HUGE_VALF` 的正負號符合無法表示之值的正負號。 如果沒有任何轉換可執行，`strtof` 會傳回 0，否則會發生反向溢位。  
   
  `wcstof` 傳回類似 `strtof` 的值。 如果發生溢位或反向溢位且叫用無效的參數處理常式，這兩個函式的 `errno` 都會設為 `ERANGE`，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
   
@@ -132,7 +133,7 @@ float wcstof_l(
   
  [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`e` &#124; `E`}[`sign`]`digits`]  
   
- `whitespace` 包含可忽略的空格及定位字元；`sign` 是加號 (`+`) 或減號 (`–`)；而且 `digits` 是一或多個十進位數字。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面可以接著指數，包含簡介字母 (`e` 或 `E`) 以及選擇性帶正負號的整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。  
+ `whitespace` 包含可忽略的空格及定位字元；`sign` 是加號 (`+`) 或減號 (`-`)；而且 `digits` 是一或多個十進位數字。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面可以接著指數，包含簡介字母 (`e` 或 `E`) 以及選擇性帶正負號的整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。  
  
  這些函式的 UCRT 版本不支援轉換 Fortran 樣式 (`d` 或 `D`) 指數字母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。
   

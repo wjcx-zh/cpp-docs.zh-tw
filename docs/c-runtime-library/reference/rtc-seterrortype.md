@@ -50,10 +50,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: da5f95812b750da5f337eb459cf136b7eb827c5c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 78f056e65523a39477bf138e6bd1664e0945a899
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
@@ -71,10 +72,10 @@ ms.lasthandoff: 02/24/2017
   
 #### <a name="parameters"></a>參數  
  *errnum*  
- 數字，介於零與 [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md) 所傳回的值減一之間。  
+ 數字，介於 0 與 [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md)傳回的值之間。  
   
  *ErrType*  
- 值，會指派給此 *errnum*。 例如，您可以使用 **_CRT_ERROR**。 如果您是使用 `_CrtDbgReport` 作為錯誤處理常式，則 *ErrType* 只能是 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 中所定義的其中一個符號。 如果您有自己的錯誤處理常式 ([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md))，則可以有數目與 *errnum*相同的 *ErrType*。  
+ 值，會指派給此 *errnum*。 例如，您可以使用 **_CRT_ERROR**。 若是使用 `_CrtDbgReport` 做為您的錯誤處理常式， *ErrType* 可能會是 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)中唯一定的符號。 若您有自己的錯誤處理常式 ([_RTC_SetErrorFunc](../../c-runtime-library/reference/rtc-seterrorfunc.md))，您可以有可以有和 *errnum*等量的 *ErrType*。  
   
  _RTC_ERRTYPE_IGNORE 的 *ErrType* 對 `_CrtSetReportMode`而言有特殊意義；此錯誤會予忽略。  
   
@@ -96,9 +97,6 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [_RTC_GetErrDesc](../../c-runtime-library/reference/rtc-geterrdesc.md)   

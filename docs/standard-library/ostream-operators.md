@@ -12,18 +12,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 72389624e776a2e8334490c37a5ca628e033ffaa
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 運算子
 ||  
 |-|  
-|[operator&lt;&lt;](#operator_lt__lt_)|  
+|[operator&lt;&lt;](#op_lt_lt)|  
   
-##  <a name="operator_lt__lt_"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
  將各種類型寫入資料流。  
   
 ```
@@ -106,7 +107,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
  資料流。  
   
 ### <a name="remarks"></a>備註  
- `basic_ostream` 類別也會定義數個插入運算子。 如需詳細資訊，請參閱 [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt_)。  
+ `basic_ostream` 類別也會定義數個插入運算子。 如需詳細資訊，請參閱 [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)。  
   
  樣板函式  
   
@@ -117,7 +118,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 決定開頭位於 `str` 之序列的長度 N = `traits_type::`[length](../standard-library/char-traits-struct.md#char_traits__length)( `str`)，然後插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#ios_base__width)，則函式會另外插入重複的 `_Ostr.``width` - N 填滿字元。 在以下情況重複項目會排在序列之前：當 (`_Ostr`. [flags](../standard-library/ios-base-class.md#ios_base__flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否則，重複項目會接在序列後面。 函式會傳回 `_Ostr`。  
+ 決定開頭位於 `str` 之序列的長度 N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`)，然後插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，則函式會另外插入重複的 `_Ostr.``width` - N 填滿字元。 在以下情況重複項目會排在序列之前：當 (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否則，重複項目會接在序列後面。 函式會傳回 `_Ostr`。  
   
  樣板函式  
   
@@ -148,14 +149,18 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 不同之處在於開頭位於 `str` 之序列的每個項目 `_Ch` 會呼叫 `_Ostr.`[put](../standard-library/basic-ostream-class.md#basic_ostream__put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#basic_ios__widen)( `_Ch`)) 來轉換為類型 `Elem` 的物件。  
+ 不同之處在於開頭位於 `str` 之序列的每個項目 `_Ch` 會呼叫 `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)) 來轉換為類型 `Elem` 的物件。  
   
  樣板函式  
   
-``cpp template <class _Elem, class _Tr> basic_ostream<Elem, _Tr>& operator<<( basic_ostream<Elem, _Tr>& _Ostr, char _Ch);
+```cpp
+template <class _Elem, class _Tr>
+basic_ostream<Elem, _Tr>& operator<<(
+    basic_ostream<Elem, _Tr>& _Ostr,
+    char _Ch);
 ```  
   
- behaves the same as  
+ 行為相同於  
   
 ```cpp  
 template <class _Elem, class _Tr>

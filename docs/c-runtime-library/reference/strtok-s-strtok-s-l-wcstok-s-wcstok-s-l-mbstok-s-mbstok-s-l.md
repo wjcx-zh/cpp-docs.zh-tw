@@ -74,10 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bd731aed33b3c05a55b9a6dc2a365f68a5d343dc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4313f785ba5197c3659e74384b7d6ecda8e8c7be
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l
@@ -175,8 +176,8 @@ _locale_tlocale
 |-------------|---------------------|  
 |`strtok_s`|\<string.h>|  
 |`_strtok_s_l`|\<string.h>|  
-|`wcstok_s,`<br /><br /> `_wcstok_s_l`|\<string.h> 或 \<wchar.h>|  
-|`_mbstok_s,`<br /><br /> `_mbstok_s_l`|\<mbstring.h>|  
+|`wcstok_s`,<br /><br /> `_wcstok_s_l`|\<string.h> 或 \<wchar.h>|  
+|`_mbstok_s`,<br /><br /> `_mbstok_s_l`|\<mbstring.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
@@ -246,9 +247,6 @@ Tokens:
         time.  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

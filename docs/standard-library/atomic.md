@@ -75,10 +75,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 8346982360dbc6ecfaae296e48da9464b91190b4
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: 0727a9bab67872237ffe6f747bd0be3f538eb01d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
@@ -93,7 +94,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  使用已編譯的程式碼中**/clr**，此標頭會封鎖。  
+>  使用編譯的程式碼中**/clr**，此標頭會遭到封鎖。  
   
  不可部分完成作業有兩個重要屬性，可協助您使用多個執行緒來正確操作物件，而不使用 Mutex 鎖定。  
   
@@ -191,35 +192,35 @@ ms.lasthandoff: 02/24/2017
   
 |名稱|說明|  
 |----------|-----------------|  
-|[atomic_compare_exchange_strong 函式](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_function)|執行「不可部分完成比較和交換」作業。|  
-|[atomic_compare_exchange_strong_explicit 函式](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit_function)|執行「不可部分完成比較和交換」作業。|  
-|[atomic_compare_exchange_weak 函式](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_function)|執行「弱式不可部分完成比較和交換」作業。|  
-|[atomic_compare_exchange_weak_explicit 函式](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit_function)|執行「弱式不可部分完成比較和交換」作業。|  
-|[atomic_exchange 函式](../standard-library/atomic-functions.md#atomic_exchange_function)|取代預存值。|  
-|[atomic_exchange_explicit 函式](../standard-library/atomic-functions.md#atomic_exchange_explicit_function)|取代預存值。|  
-|[atomic_fetch_add 函式](../standard-library/atomic-functions.md#atomic_fetch_add_function)|將指定的值加入現有預存值。|  
-|[atomic_fetch_add_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_add_explicit_function)|將指定的值加入現有預存值。|  
-|[atomic_fetch_and 函式](../standard-library/atomic-functions.md#atomic_fetch_and_function)|對指定的值和現有預存值執行位元 `and`。|  
-|[atomic_fetch_and_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_and_explicit_function)|對指定的值和現有預存值執行位元 `and`。|  
-|[atomic_fetch_or 函式](../standard-library/atomic-functions.md#atomic_fetch_or_function)|對指定的值和現有預存值執行位元 `or`。|  
-|[atomic_fetch_or_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_or_explicit_function)|對指定的值和現有預存值執行位元 `or`。|  
-|[atomic_fetch_sub 函式](../standard-library/atomic-functions.md#atomic_fetch_sub_function)|將現有預存值減去指定的值。|  
-|[atomic_fetch_sub_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit_function)|將現有預存值減去指定的值。|  
-|[atomic_fetch_xor 函式](../standard-library/atomic-functions.md#atomic_fetch_xor_function)|對指定的值和現有預存值執行位元 `exclusive or`。|  
-|[atomic_fetch_xor_explicit 函式](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit_function)|對指定的值和現有預存值執行位元 `exclusive or`。|  
-|[atomic_flag_clear 函式](../standard-library/atomic-functions.md#atomic_flag_clear_function)|將 `atomic_flag` 物件中的旗標設定為 `false`。|  
-|[atomic_flag_clear_explicit 函式](../standard-library/atomic-functions.md#atomic_flag_clear_explicit_function)|將 `atomic_flag` 物件中的旗標設定為 `false`。|  
-|[atomic_flag_test_and_set 函式](../standard-library/atomic-functions.md#atomic_flag_test_and_set_function)|將 `atomic_flag` 物件中的旗標設定為 `true`。|  
-|[atomic_flag_test_and_set_explicit 函式](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit_function)|將 `atomic_flag` 物件中的旗標設定為 `true`。|  
-|[atomic_init 函式](../standard-library/atomic-functions.md#atomic_init_function)|設定 `atomic` 物件中的預存值。|  
-|[atomic_is_lock_free 函式](../standard-library/atomic-functions.md#atomic_is_lock_free_function)|指定所指定物件上的不可部分完成作業是否為「無鎖定」。|  
-|[atomic_load 函式](../standard-library/atomic-functions.md#atomic_load_function)|以不可部分完成的方式擷取值。|  
-|[atomic_load_explicit 函式](../standard-library/atomic-functions.md#atomic_load_explicit_function)|以不可部分完成的方式擷取值。|  
-|[atomic_signal_fence 函式](../standard-library/atomic-functions.md#atomic_signal_fence_function)|作為「範圍」，可在下列範圍之間建立記憶體順序需求：具有相同執行緒中所執行訊號處理常式之呼叫執行緒中的範圍。|  
-|[atomic_store 函式](../standard-library/atomic-functions.md#atomic_store_function)|以不可部分完成的方式儲存值。|  
-|[atomic_store_explicit 函式](../standard-library/atomic-functions.md#atomic_store_explicit_function)|以不可部分完成的方式儲存值。|  
-|[atomic_thread_fence 函式](../standard-library/atomic-functions.md#atomic_thread_fence_function)|作為「範圍」，可建立與其他範圍有關的記憶體順序需求。|  
-|[kill_dependency 函式](../standard-library/atomic-functions.md#kill_dependency_function)|中斷可能的相依性鏈結。|  
+|[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|執行「不可部分完成比較和交換」作業。|  
+|[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|執行「不可部分完成比較和交換」作業。|  
+|[atomic_compare_exchange_weak](../standard-library/atomic-functions.md#atomic_compare_exchange_weak)|執行「弱式不可部分完成比較和交換」作業。|  
+|[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)|執行「弱式不可部分完成比較和交換」作業。|  
+|[atomic_exchange](../standard-library/atomic-functions.md#atomic_exchange)|取代預存值。|  
+|[atomic_exchange_explicit](../standard-library/atomic-functions.md#atomic_exchange_explicit)|取代預存值。|  
+|[atomic_fetch_add](../standard-library/atomic-functions.md#atomic_fetch_add)|將指定的值加入現有預存值。|  
+|[atomic_fetch_add_explicit](../standard-library/atomic-functions.md#atomic_fetch_add_explicit)|將指定的值加入現有預存值。|  
+|[atomic_fetch_and](../standard-library/atomic-functions.md#atomic_fetch_and)|對指定的值和現有預存值執行位元 `and`。|  
+|[atomic_fetch_and_explicit](../standard-library/atomic-functions.md#atomic_fetch_and_explicit)|對指定的值和現有預存值執行位元 `and`。|  
+|[atomic_fetch_or](../standard-library/atomic-functions.md#atomic_fetch_or)|對指定的值和現有預存值執行位元 `or`。|  
+|[atomic_fetch_or_explicit](../standard-library/atomic-functions.md#atomic_fetch_or_explicit)|對指定的值和現有預存值執行位元 `or`。|  
+|[atomic_fetch_sub](../standard-library/atomic-functions.md#atomic_fetch_sub)|將現有預存值減去指定的值。|  
+|[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|將現有預存值減去指定的值。|  
+|[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|對指定的值和現有預存值執行位元 `exclusive or`。|  
+|[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|對指定的值和現有預存值執行位元 `exclusive or`。|  
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|將 `atomic_flag` 物件中的旗標設定為 `false`。|  
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|將 `atomic_flag` 物件中的旗標設定為 `false`。|  
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|將 `atomic_flag` 物件中的旗標設定為 `true`。|  
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|將 `atomic_flag` 物件中的旗標設定為 `true`。|  
+|[atomic_init](../standard-library/atomic-functions.md#atomic_init)|設定 `atomic` 物件中的預存值。|  
+|[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|指定所指定物件上的不可部分完成作業是否為「無鎖定」。|  
+|[atomic_load](../standard-library/atomic-functions.md#atomic_load)|以不可部分完成的方式擷取值。|  
+|[atomic_load_explicit](../standard-library/atomic-functions.md#atomic_load_explicit)|以不可部分完成的方式擷取值。|  
+|[atomic_signal_fence](../standard-library/atomic-functions.md#atomic_signal_fence)|作為「範圍」，可在下列範圍之間建立記憶體順序需求：具有相同執行緒中所執行訊號處理常式之呼叫執行緒中的範圍。|  
+|[atomic_store](../standard-library/atomic-functions.md#atomic_store)|以不可部分完成的方式儲存值。|  
+|[atomic_store_explicit](../standard-library/atomic-functions.md#atomic_store_explicit)|以不可部分完成的方式儲存值。|  
+|[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|作為「範圍」，可建立與其他範圍有關的記憶體順序需求。|  
+|[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|中斷可能的相依性鏈結。|  
   
 ## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   

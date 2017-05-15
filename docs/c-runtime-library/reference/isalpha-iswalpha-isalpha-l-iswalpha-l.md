@@ -1,64 +1,81 @@
 ---
 title: "isalpha、iswalpha、_isalpha_l、_iswalpha_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "iswalpha"
-  - "_iswalpha_l"
-  - "isalpha"
-  - "_isalpha_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_istalpha"
-  - "_ismbcalpha_l"
-  - "isalpha"
-  - "_isalpha_l"
-  - "iswalpha"
-  - "_istalpha_l"
-  - "_iswalpha_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_isalpha_l 函式"
-  - "_ismbcalpha 函式"
-  - "_ismbcalpha_l 函式"
-  - "_istalpha 函式"
-  - "_istalpha_l 函式"
-  - "_iswalpha_l 函式"
-  - "isalpha 函式"
-  - "istalpha 函式"
-  - "iswalpha 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- iswalpha
+- _iswalpha_l
+- isalpha
+- _isalpha_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _istalpha
+- _ismbcalpha_l
+- isalpha
+- _isalpha_l
+- iswalpha
+- _istalpha_l
+- _iswalpha_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- _iswalpha_l function
+- _isalpha_l function
+- _ismbcalpha_l function
+- _istalpha_l function
+- _ismbcalpha function
+- isalpha function
+- iswalpha function
+- istalpha function
+- _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# isalpha、iswalpha、_isalpha_l、_iswalpha_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 6e8a0fce6ad16a34a8c6e51d1810fd7116a79e17
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
-判斷整數是否代表英文字元。  
+---
+# <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
+判斷整數是否代表字母字元。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int isalpha(   
@@ -77,42 +94,39 @@ int _iswalpha_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `c`  
- 要測試的整數。  
+ 待測試整數。  
   
  `locale`  
- 使用不是目前的地區設定的地區設定。  
+ 取代目前地區設定而使用的地區設定。  
   
-## 傳回值  
- 每一個這些常式在 `c` 是表示一個字母字元時回傳非零值。  `c` 如果在範圍 A\-Z 或 a\-z 內，`isalpha` 會傳回非零的值。  `iswalpha` 會傳回一個非零值只於 `iswupper` 或 `iswlower` 為非零的寬字元;也就是任何一個寬字元於實作環境定義的 `iswcntrl`、 `iswdigit`、 `iswpunct`或 `iswspace` 之中時都不是非零。  每一個這些常式在傳入 `c` 沒有達到測試條件時回傳零。  
+## <a name="return-value"></a>傳回值  
+ 如果 `c` 表示特定的字母字元，則這些常式都會傳回非零。 `isalpha`傳回非零值，如果`c`A-Z 或 a-z 的範圍內。 只有針對 `iswupper` 或`iswlower` 為非零值的寬字元，`iswalpha` 才會傳回非零值；也就是說，對於屬於任何實作定義字元集中的寬字元，且 `iswcntrl`、`iswdigit`、`iswpunct`或 `iswspace` 均非為非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
- 有 `_l` 尾碼的這些函式，其版本使用傳入的地區設定，而不使用目前的地區設定。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
- 如果 `c` 不是 EOF 或介於 0 到 0xFF \(含\) 之間，`isalpha` 和 `_isalpha_l` 的行為是未定義。  當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
+ 如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `isalpha` 和 `_isalpha_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_istalpha`|`isalpha`|`_ismbcalpha`|`iswalpha`|  
 |`_istalpha_l`|`_isalpha_l`|`_ismbcalpha_l`|`_iswalpha_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`isalpha`|\<ctype.h\>|  
-|`iswalpha`|\<ctype.h\> 或 \<wchar.h\>|  
-|`_isalpha_l`|\<ctype.h\>|  
-|`_iswalpha_l`|\<ctype.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`isalpha`|\<ctype.h>|  
+|`iswalpha`|\<ctype.h> 或 \<wchar.h>|  
+|`_isalpha_l`|\<ctype.h>|  
+|`_iswalpha_l`|\<ctype.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## .NET Framework 對等用法  
- [System::Char::IsLetter](https://msdn.microsoft.com/en-us/library/system.char.isletter.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)

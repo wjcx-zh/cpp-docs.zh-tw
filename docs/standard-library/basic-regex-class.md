@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - basic_regex
-- std::basic_regex
 - regex/std::basic_regex
 dev_langs:
 - C++
@@ -35,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 7b3665d0193f1d1fd658942d6e45b7a6229c9b32
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f7b9afbe09fe010596a40f37eba9b0679a38268c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="basicregex-class"></a>basic_regex 類別
@@ -107,7 +107,7 @@ class basic_regex {
  項目的 Traits 類別。  
   
 ## <a name="remarks"></a>備註  
- 此樣板類別描述保存規則運算式的物件。 這個樣板類別的物件可以傳遞至樣板函式 [regex_match Function](../standard-library/regex-functions.md#regex_match_function)、[regex_search Function](../standard-library/regex-functions.md#regex_search_function) 和 [regex_replace Function](../standard-library/regex-functions.md#regex_replace_function) (以及適當的文字字串引數)，以搜尋符合規則運算式的文字。 這個樣板類別有兩個特製化：類型定義 [regex](../standard-library/regex-typedefs.md#regex_typedef) 適用於 `char` 類型元素，[wregex](../standard-library/regex-typedefs.md#wregex_typedef) 適用於 `wchar_t` 類型元素。  
+ 此樣板類別描述保存規則運算式的物件。 此樣板類別的物件可以傳遞至樣板函式[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，和[regex_replace](../standard-library/regex-functions.md#regex_replace)，以及適當的文字字串引數，以搜尋符合規則運算式的文字。 這個樣板類別有兩個特製化：類型定義 [regex](../standard-library/regex-typedefs.md#regex) 適用於 `char` 類型元素，[wregex](../standard-library/regex-typedefs.md#wregex) 適用於 `wchar_t` 類型元素。  
   
  樣板引數 `RXtraits` 描述此樣板類別支援之規則運算式語法的各種重要屬性。 指定這些規則運算式特性的類別必須具有和 [regex_traits Class](../standard-library/regex-traits-class.md) 樣板類別物件相同的外部介面。  
   
@@ -130,7 +130,7 @@ class basic_regex {
   
  **命名空間：** std  
   
-##  <a name="a-namebasicregexassigna--basicregexassign"></a><a name="basic_regex__assign"></a>  basic_regex::assign  
+##  <a name="assign"></a>  basic_regex::assign  
  將值指派給規則運算式物件。  
   
 ```  
@@ -280,7 +280,7 @@ int main()
 match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc") == true  
 ```  
   
-##  <a name="a-namebasicregexbasicregexa--basicregexbasicregex"></a><a name="basic_regex__basic_regex"></a>  basic_regex::basic_regex  
+##  <a name="basic_regex"></a>  basic_regex::basic_regex  
  建構規則運算式物件  
   
 ```  
@@ -353,7 +353,7 @@ explicit basic_regex(
   
  第一個建構函式會建構空的 `basic_regex` 物件。 其他建構函式會建構 `basic_regex` 物件，其保存運算元序列所描述的規則運算式。  
   
- 空的 `basic_regex` 物件傳遞至 [regex_match Function](../standard-library/regex-functions.md#regex_match_function)、[regex_search Function](../standard-library/regex-functions.md#regex_search_function) 或 [regex_replace Function](../standard-library/regex-functions.md#regex_replace_function) 時，並不符合任何字元序列。  
+ 空白`basic_regex`物件不符合任何字元序列時傳遞至[regex_match](../standard-library/regex-functions.md#regex_match)， [regex_search](../standard-library/regex-functions.md#regex_search)，或[regex_replace](../standard-library/regex-functions.md#regex_replace)。  
   
 ### <a name="example"></a>範例  
   
@@ -437,7 +437,7 @@ int main()
 match("abc", "") == falsematch("abc", "abcd") == falsematch("abc", "abc") == truematch("abc", "abc") == truematch(string("abcd"), "abc") == falsematch(string("abc"), "abc") == true"abc" mark_count == 0"(abc)" mark_count == 1getloc == imbued == truematch("abc", "abc") == true  
 ```  
   
-##  <a name="a-namebasicregexflagtypea--basicregexflagtype"></a><a name="basic_regex__flag_type"></a>  basic_regex::flag_type  
+##  <a name="flag_type"></a>  basic_regex::flag_type  
  語法選項旗標類型。  
   
 ```  
@@ -445,7 +445,7 @@ typedef regex_constants::syntax_option_type flag_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#regex_constants__syntax_option_type) 同義。  
+ 此類型與 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type) 同義。  
   
 ### <a name="example"></a>範例  
   
@@ -532,7 +532,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexflagsa--basicregexflags"></a><a name="basic_regex__flags"></a>  basic_regex::flags  
+##  <a name="flags"></a>  basic_regex::flags  
  傳回語法選項旗標。  
   
 ```  
@@ -540,7 +540,7 @@ flag_type flags() const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 `flag_type` 引數的值，再將該值傳遞至 [basic_regex::assign](#basic_regex__assign) 成員函式之一的最新呼叫；如果沒有這類呼叫，則會將該值傳遞至建構函式。  
+ 此成員函式會傳回 `flag_type` 引數的值，再將該值傳遞至 [basic_regex::assign](#assign) 成員函式之一的最新呼叫；如果沒有這類呼叫，則會將該值傳遞至建構函式。  
   
 ### <a name="example"></a>範例  
   
@@ -627,7 +627,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexgetloca--basicregexgetloc"></a><a name="basic_regex__getloc"></a>  basic_regex::getloc  
+##  <a name="getloc"></a>  basic_regex::getloc  
  傳回儲存的地區設定物件。  
   
 ```  
@@ -635,7 +635,7 @@ locale_type getloc() const;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#regex_traits__getloc)`()`。  
+ 此成員函式會傳回 `traits.`[regex_traits::getloc](../standard-library/regex-traits-class.md#getloc)`()`。  
   
 ### <a name="example"></a>範例  
   
@@ -722,7 +722,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregeximbuea--basicregeximbue"></a><a name="basic_regex__imbue"></a>  basic_regex::imbue  
+##  <a name="imbue"></a>  basic_regex::imbue  
  修改儲存的地區設定物件。  
   
 ```  
@@ -734,7 +734,7 @@ locale_type imbue(locale_type loc);
  要儲存的地區設定物件。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會清空 `*this` 並傳回 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#regex_traits__imbue)`(loc)`。  
+ 此成員函式會清空 `*this` 並傳回 `traits.`[regex_traits::imbue](../standard-library/regex-traits-class.md#imbue)`(loc)`。  
   
 ### <a name="example"></a>範例  
   
@@ -821,7 +821,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexlocaletypea--basicregexlocaletype"></a><a name="basic_regex__locale_type"></a>  basic_regex::locale_type  
+##  <a name="locale_type"></a>  basic_regex::locale_type  
  儲存的地區設定物件類型。  
   
 ```  
@@ -829,7 +829,7 @@ typedef typename RXtraits::locale_type locale_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與 [regex_traits::locale_type](../standard-library/regex-traits-class.md#regex_traits__locale_type) 同義。  
+ 此類型與 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type) 同義。  
   
 ### <a name="example"></a>範例  
   
@@ -916,7 +916,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexmarkcounta--basicregexmarkcount"></a><a name="basic_regex__mark_count"></a>  basic_regex::mark_count  
+##  <a name="mark_count"></a>  basic_regex::mark_count  
  傳回符合的子運算式數目。  
   
 ```  
@@ -1011,7 +1011,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexoperatoreqa--basicregexoperator"></a><a name="basic_regex__operator_eq"></a>  basic_regex::operator=  
+##  <a name="op_eq"></a>  basic_regex::operator=  
  將值指派給規則運算式物件。  
   
 ```  
@@ -1124,7 +1124,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexswapa--basicregexswap"></a><a name="basic_regex__swap"></a>  basic_regex::swap  
+##  <a name="swap"></a>  basic_regex::swap  
  交換兩個規則運算式物件。  
   
 ```  
@@ -1223,7 +1223,7 @@ match(string("abc"), "abc") == true
 getloc == imbued == true  
 ```  
   
-##  <a name="a-namebasicregexvaluetypea--basicregexvaluetype"></a><a name="basic_regex__value_type"></a>  basic_regex::value_type  
+##  <a name="value_type"></a>  basic_regex::value_type  
  元素類型。  
   
 ```  
@@ -1320,11 +1320,11 @@ getloc == imbued == true
   
 ## <a name="see-also"></a>另請參閱  
  [\<regex>](../standard-library/regex.md)   
- [regex_match 函式](../standard-library/regex-functions.md#regex_match_function)   
- [regex_search 函式](../standard-library/regex-functions.md#regex_search_function)   
- [regex_replace 函式](../standard-library/regex-functions.md#regex_replace_function)   
- [regex](../standard-library/regex-typedefs.md#regex_typedef)   
- [wregex](../standard-library/regex-typedefs.md#wregex_typedef)   
+ [regex_match](../standard-library/regex-functions.md#regex_match)   
+ [regex_search](../standard-library/regex-functions.md#regex_search)   
+ [regex_replace](../standard-library/regex-functions.md#regex_replace)   
+ [regex](../standard-library/regex-typedefs.md#regex)   
+ [wregex](../standard-library/regex-typedefs.md#wregex)   
  [regex_traits 類別](../standard-library/regex-traits-class.md)
 
 

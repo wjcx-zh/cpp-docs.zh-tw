@@ -9,10 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::pointer_to_binary_function
-- xfunctional/std::pointer_to_binary_function
-- pointer_to_binary_function
-- std.pointer_to_binary_function
+- xfunctional/std::pointer_to_binary
+- pointer_to_binary
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -37,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9a806934810286e22fdea70c2af982de10f48ee5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: a510056f33bce7720896e56c7ea7798729dd831a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="pointertobinaryfunction-class"></a>pointer_to_binary_function 類別
@@ -77,7 +76,7 @@ public:
  二元函式指標是函式物件，可傳遞至預期二元函式做為參數的任何 C++ 標準程式庫演算法，但它不具可調適性。 若要使用它來搭配配接器 (例如與值繫結或使用它搭配否定運算子)，您都必須提供它能夠進行這類調適的巢狀類型：**first_argument_type**、**second_argument_type** 和 **result_type**。 透過 `pointer_to_binary_function` 的轉換可讓函式配接器使用二元函式指標。  
   
 ## <a name="example"></a>範例  
- `pointer_to_binary_function` 的建構函式很少會直接使用。 如需如何宣告並使用 `pointer_to_binary_function` 配接器述詞的範例，請參閱協助程式函式 [ptr_fun](../standard-library/functional-functions.md#ptr_fun_function)。  
+ `pointer_to_binary_function` 的建構函式很少會直接使用。 如需如何宣告並使用 `pointer_to_binary_function` 配接器述詞的範例，請參閱協助程式函式 [ptr_fun](../standard-library/functional-functions.md#ptr_fun)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：**\<functional>  

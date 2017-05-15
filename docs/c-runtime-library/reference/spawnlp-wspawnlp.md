@@ -1,59 +1,76 @@
 ---
-title: "_spawnlp, _wspawnlp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_wspawnlp"
-  - "_spawnlp"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-process-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_wspawnlp"
-  - "wspawnlp"
-  - "_spawnlp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wspawnlp 函式"
-  - "_spawnlp 函式"
-  - "處理序, 建立"
-  - "處理序, 執行新的"
-  - "_wspawnlp 函式"
-  - "處理序建立"
-  - "spawnlp 函式"
+title: "_spawnlp、_wspawnlp | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _wspawnlp
+- _spawnlp
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-process-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _wspawnlp
+- wspawnlp
+- _spawnlp
+dev_langs:
+- C++
+helpviewer_keywords:
+- wspawnlp function
+- _spawnlp function
+- processes, creating
+- processes, executing new
+- _wspawnlp function
+- process creation
+- spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _spawnlp, _wspawnlp
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 66172824d106860b6fa4408f85cba4a10bce696e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
+---
+# <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 建立和執行新處理序。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 intptr_t _spawnlp(  
@@ -74,7 +91,7 @@ intptr_t _wspawnlp(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `mode`  
  呼叫處理序的執行模式。  
   
@@ -82,10 +99,10 @@ intptr_t _wspawnlp(
  待執行檔案的路徑。  
   
  `arg0, arg1, ... argn`  
- 引數指標的清單。`arg0` 引數通常是 `cmdname` 的指標。`arg1` 到 `argn` 的引數是形成新引數清單之字元字串的指標。`argn`之後必須有一個 `NULL` 指標，以標記引數清單的結尾。  
+ 引數指標的清單。 `arg0` 引數通常是 `cmdname`的指標。 `arg1` 到 `argn` 的引數是形成新引數清單之字元字串的指標。 `argn`之後必須有一個 `NULL` 指標，以標記引數清單的結尾。  
   
-## 傳回值  
- 同步的 `_spawnlp`  或 `_wspawnlp`  \(為 `mode` 指定的 `_P_WAIT` \) 的傳回值是新處理序的結束狀態。 非同步 `_spawnlp` 或 `_wspawnlp` \(為 `mode` 指定的 `_P_NOWAIT` 或 `_P_NOWAITO`\) 的傳回值是處理序控制代碼。 如果處理序正常終止，結束狀態為 0。 如果繁衍的處理序會用非零的引數明確呼叫 `exit` 常式，您就可以將結束狀態設為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值為 –1 表示錯誤 \(新處理序未啟動\)。 在這種情況下，`errno` 會設為下列其中一個值。  
+## <a name="return-value"></a>傳回值  
+ 同步 `_spawnlp` 或 `_wspawnlp` (為 `mode` 指定的 `_P_WAIT`) 的傳回值是新處理序的結束狀態。 非同步 `_spawnlp` 或 `_wspawnlp` (為`_P_NOWAIT` 指定的 `_P_NOWAITO` 或 `mode`) 的傳回值是處理序控制代碼。 如果處理序正常終止，結束狀態為 0。 如果繁衍的處理序會用非零的引數明確呼叫 `exit` 常式，您就可以將結束狀態設為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示的錯誤 （新處理序未啟動）。 在這種情況下， `errno` 會設為下列其中一個值。  
   
  `E2BIG`  
  引數清單超過 1024 個位元組。  
@@ -102,40 +119,34 @@ intptr_t _wspawnlp(
  `ENOMEM`  
  可用記憶體不足，無法執行新處理序。  
   
- 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些傳回碼和其他傳回碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  所有這些函式都會建立和執行新的處理序，並將每個命令列引數作為個別參數傳遞，也會使用 `PATH` 環境變數尋找要執行的檔案。  
   
- 這些函式會驗證它們的參數。 如果 `cmdname` 或 `arg0` 是空字串或 null 指標，則這些函式會產生無效參數例外狀況， 如[參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 \-1。 未繁衍任何新處理序。  
+ 這些函式會驗證它們的參數。 如果 `cmdname` 或 `arg0` 是空字串或 null 指標，則這些函式會產生無效參數例外狀況， 如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 -1。 未繁衍任何新處理序。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_spawnlp`|\<process.h\>|  
-|`_wspawnlp`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`_spawnlp`|\<process.h>|  
+|`_wspawnlp`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
- 請參閱 [\_spawn、\_wspawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)中的範例。  
+## <a name="example"></a>範例  
+ 請參閱 [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md)中的範例。  
   
-## .NET Framework 對等用法  
-  
--   [System::Diagnostics::Process 類別](https://msdn.microsoft.com/en-us/library/system.diagnostics.process.aspx)  
-  
--   [System::Diagnostics::ProcessStartInfo 類別](https://msdn.microsoft.com/en-us/library/system.diagnostics.processstartinfo.aspx)  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
- [\_spawn、\_wspawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)   
+ [_spawn、_wspawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   
- [\_exec、\_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, \_Exit, \_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [\_flushall](../../c-runtime-library/reference/flushall.md)   
- [\_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [\_onexit，\_onexit\_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [\_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
- [system、\_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+ [_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)   
+ [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
+ [_flushall](../../c-runtime-library/reference/flushall.md)   
+ [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
+ [_onexit、_onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
+ [_setmbcp](../../c-runtime-library/reference/setmbcp.md)   
+ [system、_wsystem](../../c-runtime-library/reference/system-wsystem.md)

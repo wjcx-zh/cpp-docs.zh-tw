@@ -1,54 +1,71 @@
 ---
 title: "_dup、_dup2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_dup"
-  - "_dup2"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_dup2"
-  - "_dup"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_dup 函式"
-  - "_dup2 函式"
-  - "dup 函式"
-  - "dup2 函式"
-  - "檔案控制代碼 [C++], 複製"
-  - "檔案控制代碼 [C++], 重新指派"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _dup
+- _dup2
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _dup2
+- _dup
+dev_langs:
+- C++
+helpviewer_keywords:
+- _dup2 function
+- dup function
+- file handles [C++], duplicating
+- file handles [C++], reassigning
+- dup2 function
+- _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# _dup、_dup2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: a85a26fbe7ab8417ea9ecd3c43745789117ac856
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
-建立開啟檔案 \(`_dup`\) 的第二個檔案描述項，或重新指派檔案描述項 \(`_dup2`\)。  
+---
+# <a name="dup-dup2"></a>_dup、_dup2
+建立已開啟檔案的第二個檔案描述項 (`_dup`)，或重新指派檔案描述項 (`_dup2`)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _dup(   
@@ -60,37 +77,37 @@ int _dup2(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `fd`, `fd1`  
- 參考開啟檔案的檔案描述項。  
+ 參考已開啟檔案的檔案描述項。  
   
  `fd2`  
  任何檔案描述項。  
   
-## 傳回值  
- `_dup` 會傳回新的檔案描述項。  `_dup2` 會傳回 0 以表示成功。  如果發生錯誤，每一個函式皆傳回 – 1 並在檔案描述無效時，將 `errno` 設為 `EBADF` ；如果沒有其他可用的檔案描述項，則設為 `EMFILE`。  在無效檔案描述項的情況下，函式也會叫用無效的參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
+## <a name="return-value"></a>傳回值  
+ `_dup` 會傳回新的檔案描述項。 `_dup2` 會傳回 0，表示作業成功。 如果發生錯誤時，每個函式會傳回-1 和集合`errno`至`EBADF`如果的檔案描述項無效，或以`EMFILE`如果沒有更多檔案描述項可用。 如果檔案描述項無效，函式也會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
   
- 如需更多關於這些和其他回傳碼的資訊，請參閱 [\_doserrno 、 errno 、 \_sys\_errlist 、和 \_sys\_nerr \(\_doserrno, errno, \_sys\_errlist, and \_sys\_nerr\)](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
+ 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `_dup` 和 `_dup2` 函式將第二個檔案描述項與目前開啟的檔案作關聯。  這些函式可用於關聯預先定義的檔案描述項，例如 `stdout`，或者與不同檔案作關聯。  使用任一檔案描述項，檔案中的作業可以在其上執行。  檔案中允許的存取類型不會受到新建立描述項的影響。  `_dup` 為指定之檔案傳回下一個可用的檔案描述項。  `_dup2` 強制 `fd2` 參考檔案與 `fd1`相同。  如果 `fd2` 在呼叫時與開啟檔案作關聯，則會關閉該檔案。  
+## <a name="remarks"></a>備註  
+ `_dup` 和 `_dup2` 函式會建立第二個檔案描述項與目前開啟之檔案的關聯。 這些函式可用來建立預先定義之檔案描述項 (例如針對 `stdout`) 與其他檔案的關聯。 可使用任一檔案描述項來執行檔案作業。 建立新的描述項不會影響檔案所允許的存取類型。 `_dup` 會傳回指定檔案的下一個可用的檔案描述項。 `_dup2` 會強制 `fd2` 與 `fd1` 參考相同的檔案。 如果 `fd2` 在呼叫時與已開啟的檔案相關聯，則會關閉該檔案。  
   
- `_dup` 和 `_dup2` 接受檔案描述做為參數。  若要將資料流 `(FILE *)` 傳至任一中的函式，請使用 [\_fileno](../../c-runtime-library/reference/fileno.md)。  `fileno` 常式會傳回目前與指定資料流關聯的檔案描述項。  下列範例顯示如何將 `stderr` \(定義在 Stdio.h 中的 `FILE` `*` \) 與檔案描述項關聯：  
+ `_dup` 和 `_dup2` 會接受檔案描述項作為參數。 若要將資料流 `(FILE *)` 傳遞至上述任一函式，請使用 [_fileno](../../c-runtime-library/reference/fileno.md)。 `fileno` 常式會傳回目前與指定資料流相關聯的檔案描述項。 下列範例示範如何建立 `stderr` (在 Stdio.h 中定義為 `FILE` `*`) 與檔案描述項的關聯：  
   
 ```  
 int cstderr = _dup( _fileno( stderr ));  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_dup`|\<io.h\>|  
-|`_dup2`|\<io.h\>|  
+|-------------|---------------------|  
+|`_dup`|\<io.h>|  
+|`_dup2`|\<io.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。  與主控台關聯的標準資料流控制代碼 \(`stdin`、`stdout` 和 `stderr`\) 必須重新導向，然後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_dup.c  
@@ -144,12 +161,16 @@ int main( void )
 }  
 ```  
   
-  **結果會先顯示在stdout**  
-**這些結果會再顯於stdout**  
-**'data'這檔案中會包含:**  
-**這些會在'data'這檔案中**   
-## 請參閱  
- [低層級 I\/O](../../c-runtime-library/low-level-i-o.md)   
- [\_close](../../c-runtime-library/reference/close.md)   
- [\_creat、\_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [\_open、\_wopen](../../c-runtime-library/reference/open-wopen.md)
+```Output  
+This goes to stdout first  
+This goes to stdout  
+  
+The file 'data' contains:  
+This goes to file 'data'  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
+ [_close](../../c-runtime-library/reference/close.md)   
+ [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
+ [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)

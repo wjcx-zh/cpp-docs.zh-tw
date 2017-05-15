@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4c4f63690395398698624fd75d1450ef4bcb7287
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 9131d9769d96d7668db180c5c9595ea786770e8b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg、_wgetdcwd_dbg
@@ -95,7 +96,7 @@ wchar_t *_wgetdcwd_dbg(
  路徑的儲存位置。  
   
  `maxlen`  
- 路徑的最大長度 (以字元為單位)：`_getdcwd_dbg` 為 `char`，且 `_wgetdcwd_dbg` 為 `wchar_t`。  
+ 路徑的最大長度 (以字元為單位)：`char` 的 `_getdcwd_dbg`，以及 `wchar_t` 的 `_wgetdcwd_dbg`。  
   
  `blockType`  
  要求的記憶體區塊類型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
@@ -127,10 +128,7 @@ wchar_t *_wgetdcwd_dbg(
 |`_getdcwd_dbg`|\<crtdbg.h>|  
 |`_wgetdcwd_dbg`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- <xref:System.Environment.CurrentDirectory%2A?displayProperty=fullName>  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [_getdcwd、_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   

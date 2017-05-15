@@ -60,10 +60,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e207ec2a158bbc311ae181e71b9170cf2e48e76d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: deb4333b36bf0b3eb2080d838ef3f23a052cf262
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="makepath-wmakepath"></a>_makepath、_wmakepath
@@ -165,9 +166,6 @@ Path extracted with _splitpath:
   Filename: makepath  
   Ext: .c  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::IO::File::Create](https://msdn.microsoft.com/en-us/library/system.io.file.create.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   

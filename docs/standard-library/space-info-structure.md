@@ -31,10 +31,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 77314d99a34f109e556b8583b06ce51acce288bc
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: e8573fab6f0d1a1ad43a9be2e3be1ddd8f556748
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="spaceinfo-structure"></a>space_info 結構
@@ -61,14 +62,14 @@ struct space_info    {
 |`unsigned long long free`|表示不用來代表磁碟區資料的位元組數目。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：** filesystem  
+ **標頭︰** \<filesystem >  
   
  **命名空間：**std::experimental::filesystem  
   
 ## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
- [space 函式](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
+ [空間](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
  [檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)
 
 

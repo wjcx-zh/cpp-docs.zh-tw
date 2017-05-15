@@ -36,10 +36,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: d9f3bbe8cddea347e1663d8963c4496bcf8d7319
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
   
  **命名空間：**std::experimental::filesystem  
 
-##  <a name="filesystem__copy_options"></a>  copy_options
+##  <a name="copy_options"></a>  copy_options
 此位元遮罩值的列舉可搭配 [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 和 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 函式來指定行為。  
   
 ### <a name="syntax"></a>語法  
@@ -85,7 +86,7 @@ enum class copy_options {
 |`create_hard_links`|建立永久連結，而不要複製檔案。|  
   
 
-##  <a name="filesystem__directory_options"></a> directory_options
+##  <a name="directory_options"></a> directory_options
 指定是否要遵循目錄的符號連結，或忽略它們。  
   
 ### <a name="syntax"></a>語法  
@@ -103,7 +104,7 @@ enum class directory_options {
 |`none`|預設行為︰忽略目錄的符號連結。 權限遭拒是一種錯誤。|  
 |`follow_directory_symlink`|將目錄的符號連結視為實際的目錄。|  
   
-##  <a name="filesystem__file_type"></a>  file_type
+##  <a name="file_type"></a>  file_type
 檔案類型的列舉。 支援的值為 regular、directory、not_found 和 unknown。  
   
 ### <a name="syntax"></a>語法  
@@ -137,7 +138,7 @@ enum class file_type {
 |`socket`|7|代表 UNIX 系統上的通訊端。 (不支援。)|  
 |`unknown`|8|代表無法判斷狀態的檔案。|  
   
-##  <a name="filesystem__perms"></a>  perms
+##  <a name="perms"></a>  perms
 檔案權限的旗標。 支援的值基本上為 "readonly" 和 all。 對於唯讀檔案，未設定任何 *_write 位元。 否則會設定 `all` 位元 (0x0777)。  
   
 ### <a name="syntax"></a>語法  

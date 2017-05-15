@@ -56,10 +56,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6bfbae9b083563f0f9a6b0c30e02fb79f413d52d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f197e4f6341508f05e566f45566f26a18be43bed
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="crtdbgreport-crtdbgreportw"></a>_CrtDbgReport、_CrtDbgReportW
@@ -106,9 +107,9 @@ int _CrtDbgReportW(
  `format` 使用的選擇性替換引數。  
   
 ## <a name="return-value"></a>傳回值  
- 若發生錯誤，`_CrtDbgReport` 和 `_CrtDbgReportW` 會針對所有報表目的地傳回 –1；若無發生錯誤則傳回 0。 但如果報表目的地是偵錯訊息視窗，且使用者按一下 [重試] 按鈕，這些函式會傳回 1。 若使用者在偵錯訊息視窗中按一下 [中止] 按鈕，這些函示會立即中止且不會傳回值。  
+ 針對所有報表目的地、`_CrtDbgReport`和`_CrtDbgReportW`傳回-1，如果發生錯誤，0，如果未發生錯誤。 但如果報表目的地是偵錯訊息視窗，且使用者按一下 [重試] 按鈕，這些函式會傳回 1。 若使用者在偵錯訊息視窗中按一下 [中止] 按鈕，這些函示會立即中止且不會傳回值。  
   
- [_RPT、_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 偵錯巨集會呼叫 `_CrtDbgReport` 以產生偵錯報告。 這些巨集的寬字元版本以及 [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)、`_RPTW``n` 和 `_RPTFW``n`，均會使用 `_CrtDbgReportW` 產生偵錯報告。 若有啟用 Just-In-Time (JIT) 偵錯，則當 `_CrtDbgReport` 或 `_CrtDbgReportW` 傳回 1 時，這些巨集就會啟動偵錯工具。  
+ [_RPT、_RPTF](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md) 偵錯巨集會呼叫 `_CrtDbgReport` 以產生偵錯報告。 這些巨集的寬字元版本以及 [_ASSERT&#91;E&#93;](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)、`_RPTW n` 和 `_RPTFW n`，均會使用 `_CrtDbgReportW` 產生偵錯報告。 若有啟用 Just-In-Time (JIT) 偵錯，則當 `_CrtDbgReport` 或 `_CrtDbgReportW` 傳回 1 時，這些巨集就會啟動偵錯工具。  
   
 ## <a name="remarks"></a>備註  
  `_CrtDbgReport` 和 `_CrtDbgReportW` 可以將偵錯報表傳送至三個不同的目的地：偵錯報表檔案、偵錯監視器 ([!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 偵錯工具) 或偵錯訊息視窗。 兩個組態函式：[_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 和 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md)，可用於指定每個報表類型的一或多個目的地。 這些函式可供分別控制報告目的地和每個報表類型的目的地。 例如，可能指定只有 `reportType` 的 `_CRT_WARN` 要傳送至偵錯監視器，而 `reportType` 的 `_CRT_ASSERT` 則要傳送至偵錯訊息視窗和使用者定義的報表檔案。  
@@ -157,16 +158,6 @@ int main(int argc, char *argv[]) {
 ```  
   
  如需如何變更報表函式的範例，請參閱 [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
-  
--   [System::Diagnostics::Debug::Write](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.write.aspx)  
-  
--   [System::Diagnostics::Debug::Writeline](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeline.aspx)  
-  
--   [System::Diagnostics::Debug::WriteIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writeif.aspx)  
-  
--   [System::Diagnostics::Debug::WriteLineIf](https://msdn.microsoft.com/en-us/library/system.diagnostics.debug.writelineif.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   

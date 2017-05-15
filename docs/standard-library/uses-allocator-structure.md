@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: dd3ef61dd94137788805234edc22da33a0c21b0a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: fefe7aba7df9c6f41e515017a13cdbe8dba1b56e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="usesallocator-structure"></a>uses_allocator 結構
@@ -51,7 +52,7 @@ struct uses_allocator<packaged_task<Ty>, Alloc> : true_type;
 ```  
   
 ## <a name="requirements"></a>需求  
- **標頭：**future  
+ **標頭︰** \<未來 >  
   
  **命名空間：** std  
   

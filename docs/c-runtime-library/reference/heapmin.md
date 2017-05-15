@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c839e372e2385928346693b0a74be0af2781882a
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4f980d2b8df9f8eb2f2337e4dd0888e63c2451ed
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="heapmin"></a>_heapmin
@@ -70,12 +71,12 @@ int _heapmin( void );
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 若成功， `_heapmin` 會傳回 0；否則此函式會傳回 -1，並將 `errno` 設為 `ENOSYS`。  
+ 若成功，`_heapmin` 會傳回 0；否則此函式會傳回 -1，並將 `errno` 設為 `ENOSYS`。  
   
  如需此傳回碼與其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
- `_heapmin` 函式透過釋放未使用的堆積記憶體給作業系統，將堆積最小化。 若作業系統不支援 `_heapmin` (例如，Windows 98)，此函式會傳回 -1，並將 `errno` 設為 `ENOSYS`。  
+ `_heapmin` 函式透過釋放未使用的堆積記憶體給作業系統，將堆積最小化。 如果作業系統不支援`_heapmin`（例如 Windows 98），則函數會傳回-1，並設定`errno`至`ENOSYS`。  
   
 ## <a name="requirements"></a>需求  
   
@@ -83,10 +84,7 @@ int _heapmin( void );
 |-------------|---------------------|---------------------|  
 |`_heapmin`|\<malloc.h>|\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   

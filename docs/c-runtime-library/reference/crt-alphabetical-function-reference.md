@@ -30,10 +30,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: e289b439f53b987f57face51952d54dc16002edd
-ms.openlocfilehash: f88073e7b336c058463dee183eb055db992a3fff
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 7c3b6c4b5d8c1c479be20e7437441f9fcdba7007
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="crt-alphabetical-function-reference"></a>CRT 依字母順序排列的函式參考
@@ -1237,9 +1238,9 @@ C 執行階段 (CRT) 程式庫參考文件是依照常式使用字母順序排�
   
  [_ismbbalnum_l](../../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)  
   
- [_ismbbalpha](http://msdn.microsoft.com/en-us/8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0)  
+ [_ismbbalpha](ismbbalpha-ismbbalpha-l.md)  
   
- [_ismbbalpha_l](http://msdn.microsoft.com/en-us/8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0)  
+ [_ismbbalpha_l](ismbbalpha-ismbbalpha-l.md)  
   
  [_ismbbblank](../../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)  
   

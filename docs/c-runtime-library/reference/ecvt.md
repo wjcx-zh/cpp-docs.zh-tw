@@ -1,50 +1,67 @@
 ---
-title: "_ecvt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_ecvt"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_ecvt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ecvt 函式"
-  - "轉換雙精度浮點數"
-  - "ecvt 函式"
-  - "數字, 轉換"
+title: _ecvt | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _ecvt
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _ecvt
+dev_langs:
+- C++
+helpviewer_keywords:
+- _ecvt function
+- numbers, converting
+- converting double numbers
+- ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# _ecvt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: c3992066b5b305a7b9de6ef47c6ba42e15da2518
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-將 `double` 數字轉換成字串。  這些函式已有更安全的版本可用，請參閱 [\_ecvt\_s](../../c-runtime-library/reference/ecvt-s.md)。  
+---
+# <a name="ecvt"></a>_ecvt
+將 `double` 數字轉換為字串。 這個函式已有更安全的版本可用；請參閱 [_ecvt_s](../../c-runtime-library/reference/ecvt-s.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 char *_ecvt(   
@@ -55,9 +72,9 @@ char *_ecvt(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `value`  
- 被轉換的數字。  
+ 要轉換的數字。  
   
  `count`  
  儲存的位數。  
@@ -66,33 +83,33 @@ char *_ecvt(
  儲存的小數點位置。  
   
  `sign`  
- 轉換數字的正負號  
+ 已轉換數字的正負號。  
   
-## 傳回值  
- `_ecvt` 將指標傳回數值字串;，如果發生錯誤，則為 null。  
+## <a name="return-value"></a>傳回值  
+ `_ecvt` 會傳回位數字串的指標；如果發生錯誤，則為 NULL。  
   
-## 備註  
- `_ecvt` 函式轉換成浮點數的字串。  `value` 參數是要轉換的雙精確度浮點數。  這個函式將由 `count` `value` 數值為字串並將 null 字元 \(「\\ 0 "\)。  如果數字數目的 `value` 超出 `count`，低序位數字捨入。  如果小於 `count` 的數字有，字串填補零。  
+## <a name="remarks"></a>備註  
+ `_ecvt` 函式會將浮點數轉換為字元字串。 `value` 參數是要轉換的浮點數。 此函式最多可將 `count` 位數的 `value` 儲存為字串，並在結尾處附加 null 字元 ('\0')。 如果 `value` 的位數超過 `count`，則會將低位數四捨五入。 如果少於 `count` 個位數，則以零填補字串。  
   
- `_ecvt` 所傳回的數值總數不會超過 `_CVTBUFSIZE`。  
+ `_ecvt` 傳回的總位數不會超過 `_CVTBUFSIZE`。  
   
- 只有數值資料儲存。  小數點的位置與 `value` 的符號可以從 `dec` 和 `sign` 取得在呼叫之後。  將小數點位置的整數值的 `dec` 參數點與字串的開頭。  0 或負整數值表示小數點在第一個數字左邊加入水平軸。  表示要轉換的數字的正負號整數的 `sign` 參數\)。  如果整數值是 0，它是正數。  否則，數值為負數。  
+ 字串中只能儲存數字。 呼叫之後，可從 `dec` 和 `sign` 取得小數點位置和 `value` 的正負號。 `dec` 參數指向整數值，並提供字串開頭的小數點位置。 0 或負整數值表示小數點位於第一位數字的左邊。 `sign` 參數指向表示已轉換數字正負號的整數。 如果整數值為 0，則數字為正數。 否則，數字為負數。  
   
- 在 `_ecvt` 和 `_fcvt` 的差異在於 `count` 參數的說明。  `_ecvt` 解譯 `count` ，在數值總數輸出字串，而 `_fcvt` ，說明 `count` 做為數字的小數點之後。  
+ `_ecvt` 和 `_fcvt` 之間的差異位在 `count` 參數解譯中。 `_ecvt` 將 `count` 解譯為輸出字串的位數總數，而 `_fcvt` 將 `count` 解譯為小數點後的位數。  
   
- 請注意 `_ecvt` 和 `_fcvt` 使用單一靜態配置轉換的緩衝區。  每個呼叫這些常式都會終結之前呼叫的結果。  
+ `_ecvt` 和 `_fcvt` 使用單一靜態配置的緩衝區來進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。  
   
- 這個函式會驗證它的參數。  如果 `dec` 或`sign`為 NULL或`count`為 0，則會叫用無效參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行， `errno` 會設為 `EINVAL` ，並回傳 NULL。  
+ 這個函式會驗證它的參數。 如果 `dec` 或 `sign` 為 NULL，或 `count` 為 0，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則 `errno` 會設定為 `EINVAL`，且會傳回 NULL。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|功能|必要的標頭|  
-|--------|-----------|  
-|`_ecvt`|\<stdlib.h\>|  
+|函式|必要的標頭|  
+|--------------|---------------------|  
+|`_ecvt`|\<stdlib.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_ecvt.c  
@@ -117,13 +134,13 @@ int main( void )
 }  
 ```  
   
-  **來源:3.1415926535 緩衝區:「3141592654 "十進位:1 個標記:0**   
-## .NET Framework 對等用法  
- [System::Convert::ToString](https://msdn.microsoft.com/en-us/library/system.convert.tostring.aspx)  
+```Output  
+source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [atof、\_atof\_l、\_wtof、\_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
- [\_fcvt](../../c-runtime-library/reference/fcvt.md)   
- [\_gcvt](../../c-runtime-library/reference/gcvt.md)
+ [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   
+ [_fcvt](../../c-runtime-library/reference/fcvt.md)   
+ [_gcvt](../../c-runtime-library/reference/gcvt.md)

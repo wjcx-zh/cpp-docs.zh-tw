@@ -45,10 +45,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 2b28a11cc3b1c27029e7ac0ced52c9b898163b66
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0bd6b73c99eccffc7661cc4b43f97ab46890c5ee
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="directoryentry-class"></a>directory_entry 類別
@@ -61,7 +62,7 @@ class directory_entry;
 ```  
   
 ## <a name="remarks"></a>備註  
- 此類別會儲存 [path](../standard-library/path-class.md) 類型的物件。 預存的 `path` 可以是 [path 類別](../standard-library/path-class.md)的執行個體，或衍生自 `path` 之類型的執行個體。 它也會儲存兩個 [file_type](../standard-library/filesystem-enumerations.md#filesystem__file_type) 值；一個代表已知的預存檔案名稱狀態，另一個則代表已知檔案名稱的符號連結狀態。  
+ 此類別會儲存 [path](../standard-library/path-class.md) 類型的物件。 預存的 `path` 可以是 [path 類別](../standard-library/path-class.md)的執行個體，或衍生自 `path` 之類型的執行個體。 它也會儲存兩個 [file_type](../standard-library/filesystem-enumerations.md#file_type) 值；一個代表已知的預存檔案名稱狀態，另一個則代表已知檔案名稱的符號連結狀態。  
   
  如需詳細資訊與程式碼範例，請參閱[檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)。  
   

@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: e90ee470e3cf990240f3c586c23fe8fd3d487f3d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="1-object"></a>_1 物件
@@ -54,7 +55,7 @@ namespace placeholders {
 ```  
   
 ## <a name="remarks"></a>備註  
- 在 [bind 函式](../standard-library/functional-functions.md#bind_function)所傳回物件的函式呼叫中，`_1, _2, ... _M` 物件是分別指定第一個、第二個... 第 M 個引數的預留位置。 您可以使用 `_N` 來指定在評估繫結運算式時，應該插入第 N 個引數的位置。  
+ 物件`_1, _2, ... _M`預留位置會指定第一、 第二個，...，Mth 引數，分別在函式呼叫所傳回的物件[繫結](../standard-library/functional-functions.md#bind)。 您可以使用 `_N` 來指定在評估繫結運算式時，應該插入第 N 個引數的位置。  
   
  在此實作中，`M` 的值為 20。  
   
@@ -116,6 +117,6 @@ int main()
  **命名空間：** std  
   
 ## <a name="see-also"></a>另請參閱  
- [bind 函式](../standard-library/functional-functions.md#bind_function)   
+ [繫結](../standard-library/functional-functions.md#bind)   
  [is_placeholder 類別](../standard-library/is-placeholder-class.md)
 

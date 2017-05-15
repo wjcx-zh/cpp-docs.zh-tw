@@ -1,68 +1,85 @@
 ---
 title: "scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wscanf_s"
-  - "_wscanf_s_l"
-  - "scanf_s"
-  - "_scanf_s_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wscanf_s"
-  - "_tscanf_s_l"
-  - "_wscanf_s_l"
-  - "scanf_s"
-  - "_tscanf_s"
-  - "_scanf_s_l"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "從輸入資料流讀取資料 [c + +]"
-  - "緩衝區 [C++]，緩衝區滿溢"
-  - "_scanf_s_l 函式"
-  - "_wscanf_s_l 函式"
-  - "tscanf_s_l 函式"
-  - "tscanf_s 函式"
-  - "scanf_s 函式"
-  - "從輸入資料流讀取的資料 [c + +]"
-  - "wscanf_s 函式"
-  - "_tscanf_s_l 函式"
-  - "_tscanf_s 函式"
-  - "scanf_s_l 函式"
-  - "從輸入資料流格式化的資料 [c + +]"
-  - "wscanf_s_l 函式"
-  - "緩衝區 [C++]，避免滿溢"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- wscanf_s
+- _wscanf_s_l
+- scanf_s
+- _scanf_s_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- wscanf_s
+- _tscanf_s_l
+- _wscanf_s_l
+- scanf_s
+- _tscanf_s
+- _scanf_s_l
+dev_langs:
+- C++
+helpviewer_keywords:
+- reading data [C++], from input streams
+- buffers [C++], buffer overruns
+- _scanf_s_l function
+- _wscanf_s_l function
+- tscanf_s_l function
+- tscanf_s function
+- scanf_s function
+- data [C++], reading from input stream
+- wscanf_s function
+- _tscanf_s_l function
+- _tscanf_s function
+- scanf_s_l function
+- formatted data [C++], from input streams
+- wscanf_s_l function
+- buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
 caps.latest.revision: 33
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 33
----
-# scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.mt:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: f0fe562e732764eff13741450abadb7ae6d52932
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-從標準輸入資料流讀取格式化資料。 這些版本 [scanf、\_scanf\_l、wscanf、\_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 中所述，具有安全性增強功能， [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)。  
+---
+# <a name="scanfs-scanfsl-wscanfs-wscanfsl"></a>scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l
+從標準輸入資料流讀取格式化資料。 這些版本的 [scanf、_scanf_l、wscanf、_wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int scanf_s(  
@@ -85,7 +102,7 @@ int _wscanf_s_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `format`  
  格式控制字串。  
   
@@ -95,15 +112,15 @@ int _wscanf_s_l(
  `locale`  
  要使用的地區設定。  
   
-## 傳回值  
- 這會在成功轉換並指派時傳回欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值為 `EOF` 時表示錯誤，或表示第一次嘗試讀取字元時遇到檔案結尾字元或字串結尾字元。 如果 `format` 是 `NULL` 指標、 無效參數處理常式叫用時，所述 [參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則 `scanf_s` 和 `wscanf_s` 會傳回 `EOF`，且 `errno` 設為 `EINVAL`。  
+## <a name="return-value"></a>傳回值  
+ 這會在成功轉換並指派時傳回欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值為 `EOF` 時表示錯誤，或表示第一次嘗試讀取字元時遇到檔案結尾字元或字串結尾字元。 如果 `format` 為 `NULL` 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則 `scanf_s` 和 `wscanf_s` 會傳回 `EOF`，且 `errno` 設為 `EINVAL`。  
   
- 如需這些錯誤碼及其他錯誤碼的詳細資訊，請參閱 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  `scanf_s` 函式會從標準輸入資料流 `stdin` 讀取資料，並將資料寫入至由 `argument` 指定的位置。 每個 `argument` 必須是 `format` 中對應至型別指定名稱的型別變數指標。 如果在重疊的字串之間進行複製，則行為是未定義的。  
   
- `wscanf_s` 是寬字元版本的 `scanf_s`；`format` 的 `wscanf_s` 引數是寬字元字串。 如果資料流在 ANSI 模式中開啟，則 `wscanf_s` 和 `scanf_s` 的行為相同。`scanf_s` 目前不支援來自 UNICODE 資料流的輸入。  
+ `wscanf_s` 是寬字元版本的 `scanf_s`；`format` 的 `wscanf_s` 引數是寬字元字串。 如果資料流在 ANSI 模式中開啟，則 `wscanf_s` 和 `scanf_s` 的行為相同。 `scanf_s` 目前不支援來自 UNICODE 資料流的輸入。  
   
  這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定參數，而不使用目前的執行緒地區設定。  
   
@@ -116,7 +133,7 @@ int _wscanf_s_l(
  緩衝區大小包含結束的 null。 您可以使用寬度規格欄位，以確保在讀取的語彙基元可納入緩衝區。 如果沒有使用寬度規格欄位，則讀取的語彙基元太大而無法納入緩衝區中，並且不會寫入該緩衝區。  
   
 > [!NOTE]
->  大小參數為型別 `unsigned`，而非 `size_t`。 使用靜態轉型轉換 `size_t` 值 `unsigned` 64 位元的組建組態。  
+>  大小參數為型別 `unsigned`，而非 `size_t`。 使用靜態轉型，以針對 64 位元組建組態，將 `size_t` 值轉換成 `unsigned`。  
   
  下列範例顯示緩衝區大小參數會描述字元數目上限，而非位元組。 呼叫 `wscanf_s` 時，緩衝區型別所指示的字元寬度不符合格式指定名稱所指示的字元寬度。  
   
@@ -139,27 +156,27 @@ wscanf_s(L"%9S", ws, (unsigned)_countof(ws));
   
  `scanf_s("%4c", &c, (unsigned)_countof(c)); // not null terminated`  
   
- 如需詳細資訊，請參閱[scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。  
+ 如需詳細資訊，請參閱 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE 和 \_MBCS|\_MBCS 已定義|\_UNICODE 已定義|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tscanf_s`|`scanf_s`|`scanf_s`|`wscanf_s`|  
 |`_tscanf_s_l`|`_scanf_s_l`|`_scanf_s_l`|`_wscanf_s_l`|  
   
  如需詳細資訊，請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`scanf_s`、 `_scanf_s_l`|\<stdio.h\>|  
-|`wscanf_s`, `_wscanf_s_l`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`scanf_s`, `_scanf_s_l`|\<stdio.h>|  
+|`wscanf_s`, `_wscanf_s_l`|\<stdio.h> 或 \<wchar.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 \(`stdin`、`stdout` 和 `stderr`\) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_scanf_s.c  
@@ -199,22 +216,17 @@ int main( void )
  `36 92.3 y n Wide characters`  
   
 ```Output  
-欄位輸入的數目為的 6 的內容︰ 71 98.599998 h z 位元組字元的輸入欄位數目為的 6 的內容︰ 36 92.300003 y n 寬字元  
+The number of fields input is 6  
+The contents are: 71 98.599998 h z Byte characters  
+The number of fields input is 6  
+The contents are: 36 92.300003 y n Wide characters  
 ```  
   
-## .NET Framework 對等用法  
-  
--   [System::Console::Read](https://msdn.microsoft.com/en-us/library/system.console.read.aspx)  
-  
--   [System::Console::ReadLine](https://msdn.microsoft.com/en-us/library/system.console.readline.aspx)  
-  
--   另請參閱 `Parse` 方法，例如 [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)。  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [地區設定](../../c-runtime-library/locale.md)   
- [fscanf、\_fscanf\_l、fwscanf、\_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [printf、\_printf\_l、wprintf、\_wprintf\_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [sscanf、\_sscanf\_l、swscanf、\_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
+ [fscanf、_fscanf_l、fwscanf、_fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+ [sscanf、_sscanf_l、swscanf、_swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)

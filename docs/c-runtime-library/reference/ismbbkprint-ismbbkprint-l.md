@@ -55,10 +55,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 407711898b7c08dcf9b65ae81bc8f556969034bf
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 17b20969e6164dd4457343f3bd9b17598fc7d705
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint、_ismbbkprint_l
@@ -84,7 +85,7 @@ int _ismbbkprint_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果整數 `c` 是非 ASCII 文字或非 ASCII 標點符號，則 `_ismbbkprint` 會傳回非零值；否則會傳回 0。 例如，僅限字碼頁 932， `_ismbbkprint` 會測試片假名英數字元或片假名標點符號 (範圍：0xA1-0xDF)。 針對任何地區設定相關的字元設定，`_ismbbkprint` 會使用目前的地區設定。 `_ismbbkprint_l` 完全相同，除了它使用的是傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 如果整數`_ismbbkprint` 是非 ASCII 文字或非 ASCII 標點符號，則 `c` 會傳回非零值；如果不是，則傳回 0。 例如，僅限字碼頁 932，`_ismbbkprint` 會測試片假名英數字元或片假名標點符號 (範圍：0xA1 - 0xDF)。 針對任何地區設定相關的字元設定，`_ismbbkprint` 會使用目前的地區設定。 `_ismbbkprint_l` 也相同，除了它使用的是傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
@@ -94,9 +95,6 @@ int _ismbbkprint_l(
 |`_ismbbkprint_l`|\<mbctype.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   

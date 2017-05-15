@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 7947bb8de34b5e80321ddacf03e4606a53b5dc90
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 1ad2bb0cd27d24d7051f782b4ed72a1014fb5ec6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
@@ -74,7 +75,7 @@ int _setmaxstdio(
  在 `stdio` 層級同時開啟之檔案數目的新上限。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，會傳回 `newmax`；否則為 –1。  
+ 傳回`newmax`如果成功; 否則為-1。  
   
  如果 `newmax` 小於 `_IOB_ENTRIES` 或大於作業系統中可用的處理常式數目上限，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
   
@@ -100,9 +101,6 @@ int _setmaxstdio(
   
 ## <a name="example"></a>範例  
  如需 `_setmaxstdio` 的使用範例，請參閱 [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)

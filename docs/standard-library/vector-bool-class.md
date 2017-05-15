@@ -38,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 088bf359fefd09bf4ea71ffceacd9139fbdbfba2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 535ce75fb600b919b5e255bc580a93e448e81d59
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 類別
@@ -63,40 +64,40 @@ class vector<bool, Allocator>
   
 |||  
 |-|-|  
-|[const_pointer](#vector_lt_bool_gt___const_pointer)|`const_iterator` 的 typedef，可做為常數指標指向 `vector<bool>` 的布林值項目。|  
-|[const_reference](#vector_lt_bool_gt___const_reference)|`bool` 的 typedef。 在初始化之後，就無法觀察原始值的更新。|  
-|[pointer](#vector_lt_bool_gt___pointer)|`iterator` 的 typedef，可做為指標指向 `vector<bool>` 的布林值項目。|  
+|[const_pointer](#const_pointer)|`const_iterator` 的 typedef，可做為常數指標指向 `vector<bool>` 的布林值項目。|  
+|[const_reference](#const_reference)|`bool` 的 typedef。 在初始化之後，就無法觀察原始值的更新。|  
+|[pointer](#pointer)|`iterator` 的 typedef，可做為指標指向 `vector<bool>` 的布林值項目。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[flip](#vector_lt_bool_gt___flip)|會反轉 `vector<bool>` 中的所有位元。|  
-|[swap](#vector_lt_bool_gt___swap)|交換兩個 `vector<bool>` 的項目。|  
-|[operator&#91;&#93;](#vector_lt_bool_gt___operator_at)|傳回在指定位置上 `vector<bool>` 項目的模擬參考。|  
-|`at`|作用與非特製化的 [vector](../standard-library/vector-class.md)::at 函式相同，不過，它使用 Proxy 類別 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)。 另請參閱 [operator&#91;&#93;](#vector_lt_bool_gt___operator_at)。|  
-|`front`|作用與非特製化的 [vector](../standard-library/vector-class.md)::front 函式相同，不過，它使用 Proxy 類別 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)。 另請參閱 [operator&#91;&#93;](#vector_lt_bool_gt___operator_at)。|  
-|`back`|作用與非特製化的 [vector](../standard-library/vector-class.md)::back 函式相同，不過，它使用 Proxy 類別 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)。 另請參閱 [operator&#91;&#93;](#vector_lt_bool_gt___operator_at)。|  
+|[flip](#flip)|會反轉 `vector<bool>` 中的所有位元。|  
+|[swap](#swap)|交換兩個 `vector<bool>` 的項目。|  
+|[operator&#91;&#93;](#op_at)|傳回在指定位置上 `vector<bool>` 項目的模擬參考。|  
+|`at`|作用與非特製化的 [vector](../standard-library/vector-class.md)::at 函式相同，不過，它使用 Proxy 類別 [vector\<bool>::reference](#reference_class)。 另請參閱 [operator&#91;&#93;](#op_at)。|  
+|`front`|作用與非特製化的 [vector](../standard-library/vector-class.md)::front 函式相同，不過，它使用 Proxy 類別 [vector\<bool>::reference](#reference_class)。 另請參閱 [operator&#91;&#93;](#op_at)。|  
+|`back`|作用與非特製化的 [vector](../standard-library/vector-class.md)::back 函式相同，不過，它使用 Proxy 類別 [vector\<bool>::reference](#reference_class)。 另請參閱 [operator&#91;&#93;](#op_at)。|  
   
 ### <a name="proxy-class"></a>Proxy 類別  
   
 |||  
 |-|-|  
-|[vector\<bool> reference 類別](#vector_lt_bool_gt___reference_class)|類別，做為 Proxy 以模擬 `bool&` 行為，而且其物件可以提供對 `vector<bool>` 物件中項目 (單一位元) 的參考。|  
+|[vector\<bool> reference 類別](#reference_class)|類別，做為 Proxy 以模擬 `bool&` 行為，而且其物件可以提供對 `vector<bool>` 物件中項目 (單一位元) 的參考。|  
   
 ## <a name="requirements"></a>需求  
  **標頭**：\<vector>  
   
  **命名空間：** std  
   
-##  <a name="vector_lt_bool_gt___const_pointer"></a>  vector\<bool>::const_pointer  
+##  <a name="const_pointer"></a>  vector\<bool>::const_pointer  
  類型，描述可以做為常數指標的物件，指向由 `vector<bool>` 物件所包含序列的布林值項目。  
   
 ```  
 typedef const_iterator const_pointer;  
 ```  
   
-##  <a name="vector_lt_bool_gt___const_reference"></a>  vector\<bool>::const_reference  
+##  <a name="const_reference"></a>  vector\<bool>::const_reference  
  類型，描述可以做為常數參考的物件，指向由 `vector<bool>` 物件所包含序列的布林值項目。  
   
 ```  
@@ -104,9 +105,9 @@ typedef bool const_reference;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊和程式碼範例，請參閱 [vector&lt;bool&gt;::reference::operator=](#vector_lt_bool_gt___reference_operator_eq)。  
+ 如需詳細資訊和程式碼範例，請參閱 [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)。  
   
-##  <a name="vector_lt_bool_gt___flip"></a>  vector\<bool>::flip  
+##  <a name="flip"></a>  vector\<bool>::flip  
  會反轉 `vector<bool>` 中的所有位元。  
   
 ```  
@@ -144,7 +145,7 @@ int main()
   
 ```  
   
-##  <a name="vector_lt_bool_gt___operator_at"></a>  vector\<bool>::operator[]  
+##  <a name="op_at"></a>  vector\<bool>::operator[]  
  傳回在指定位置上 `vector<bool>` 項目的模擬參考。  
   
 ```  
@@ -161,7 +162,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 |`Pos`|`vector<bool>` 項目的位置。|  
   
 ### <a name="return-value"></a>傳回值  
- [vector\<bool>::reference](#vector_lt_bool_gt___reference_class) 或 [vector\<bool>::const_reference](#vector_lt_bool_gt___const_reference) 物件，包含索引項目的值。  
+ [vector\<bool>::reference](#reference_class) 或 [vector\<bool>::const_reference](#const_reference) 物件，包含索引項目的值。  
   
  如果指定的位置大於或等於容器大小，則結果是未定義。  
   
@@ -198,18 +199,18 @@ int main()
 }  
 ```  
   
-##  <a name="vector_lt_bool_gt___pointer"></a>  vector\<bool>::pointer  
+##  <a name="pointer"></a>  vector\<bool>::pointer  
  類型，描述可以做為指標的物件，指向由 `vector<bool>` 物件所包含序列的布林值項目。  
   
 ```  
 typedef iterator pointer;  
 ```  
   
-##  <a name="vector_lt_bool_gt___reference_class"></a>  vector\<bool>::reference Class  
+##  <a name="reference_class"></a>  vector\<bool>::reference Class  
  `vector<bool>::reference` 類別是 [vector\<bool> 類別](../standard-library/vector-bool-class.md)提供的 Proxy 類別，用來模擬 `bool&`。  
   
 ### <a name="remarks"></a>備註  
- 需要模擬參考，因為 C++ 原生不允許對位元的直接參考。 `vector<bool>` 對每個項目只使用一個位元，您可以使用這個 Proxy 類別來參考位元。 不過，因為某些指派無效，參考模擬不完整。 例如，因為 `vector<bool>::reference` 物件位址無法採用，使用 [vector\<bool>::operator&#91;&#93;](#vector_lt_bool_gt___operator_at) 的下列程式碼不正確：  
+ 需要模擬參考，因為 C++ 原生不允許對位元的直接參考。 `vector<bool>` 對每個項目只使用一個位元，您可以使用這個 Proxy 類別來參考位元。 不過，因為某些指派無效，參考模擬不完整。 例如，因為 `vector<bool>::reference` 物件位址無法採用，使用 [vector\<bool>::operator&#91;&#93;](#op_at) 的下列程式碼不正確：  
   
 ```cpp  
 vector<bool> vb;  
@@ -218,7 +219,7 @@ bool* pb = &vb[1]; // conversion error - do not use
 bool& refb = vb[1];   // conversion error - do not use  
 ```  
   
-###  <a name="vector_lt_bool_gt___reference_flip"></a>  vector\<bool>::reference::flip  
+###  <a name="reference_flip"></a>  vector\<bool>::reference::flip  
  反轉所參考 [vector\<bool>](../standard-library/vector-bool-class.md) 項目的布林值。  
   
 ```  
@@ -264,7 +265,7 @@ The vector with first element flipped is:
     false false false true true  
 ```  
   
-###  <a name="vector_lt_bool_gt___reference_operator_bool"></a>  vector\<bool>::reference::operator bool  
+###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool  
  提供從 `vector<bool>::reference` 至 `bool` 的隱含轉換。  
   
 ```  
@@ -277,7 +278,7 @@ operator bool() const;
 #### <a name="remarks"></a>備註  
  這個運算子無法修改 `vector<bool>` 物件。  
   
-###  <a name="vector_lt_bool_gt___reference_operator_eq"></a>  vector\<bool>::reference::operator=  
+###  <a name="reference_operator_eq"></a>  vector\<bool>::reference::operator=  
  將布林值指派給位元，或是將參考的項目所表示的值指派給位元。  
   
 ```  
@@ -363,8 +364,8 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false  
 ```  
   
-##  <a name="vector_lt_bool_gt___swap"></a>  vector\<bool>::swap  
- 靜態成員函式，透過使用 Proxy 類別 [vector\<bool>::reference](#vector_lt_bool_gt___reference_class)，交換布林值向量 (`vector<bool>`) 的兩個項目。  
+##  <a name="swap"></a>  vector\<bool>::swap  
+ 靜態成員函式，透過使用 Proxy 類別 [vector\<bool>::reference](#reference_class)，交換布林值向量 (`vector<bool>`) 的兩個項目。  
   
 ```  
 static void swap(

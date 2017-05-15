@@ -8,31 +8,32 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - regex_match
-- std::regex_match
 - regex/std::regex_match
 - regex_replace
-- std::regex_replace
 - regex/std::regex_replace
 - regex_search
-- std::regex_search
 - regex/std::regex_search
 - regex/std::swap
+- regex/std::swap
+dev_langs:
+- C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 28fdbf1c00c44711538b7c163053eeca5a0c47e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
+ms.openlocfilehash: 0b803ecc31331cdfed9b178ca2e919606482aa33
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函式
 ||||  
 |-|-|-|  
-|[regex_match 函式](#regex_match_function)|[regex_replace 函式](#regex_replace_function)|[regex_search 函式](#regex_search_function)|  
-|[swap 函式](#swap_function)|  
+|[regex_match](#regex_match)|[regex_replace](#regex_replace)|[regex_search](#regex_search)|  
+|[swap](#swap)|  
   
-##  <a name="a-nameregexmatchfunctiona--regexmatch-function"></a><a name="regex_match_function"></a>  regex_match 函式  
+##  <a name="regex_match"></a>regex_match
  測試規則運算式是否符合整個目標字串。  
   
 ```  
@@ -121,7 +122,7 @@ bool regex_match(
  要比對的序列結尾。  
   
  `match`  
- 比對結果。 對應至 Elem 類型：[smatch](../standard-library/regex-typedefs.md#smatch_typedef) (針對 string)、[wsmatch](../standard-library/regex-typedefs.md#wsmatch_typedef) (針對 wstring)、[cmatch](../standard-library/regex-typedefs.md#cmatch_typedef) (針對 char*)，或 [wcmatch](../standard-library/regex-typedefs.md#wcmatch_typedef) (針對 wchar_t\*)。  
+ 比對結果。 對應至 Elem 類型：[smatch](../standard-library/regex-typedefs.md#smatch) (針對 string)、[wsmatch](../standard-library/regex-typedefs.md#wsmatch) (針對 wstring)、[cmatch](../standard-library/regex-typedefs.md#cmatch) (針對 char*)，或 [wcmatch](../standard-library/regex-typedefs.md#wcmatch) (針對 wchar_t\*)。  
   
  `ptr`  
  要比對之序列開頭的指標。 如果 ptr 為 char*，則請使用 cmatch 和 regex。 如果 ptr 為 wchar_t\*，則使用 wcmatch 和 wregex。  
@@ -133,7 +134,7 @@ bool regex_match(
  要比對的字串。 對應至類型 Elem。  
   
 ### <a name="remarks"></a>備註  
- 只有在整個運算元序列 `str` 完全符合規則運算式引數 `re` 時，每個範本函式才會傳回 true。 使用 [regex_search](../standard-library/regex-functions.md#regex_search_function) 來比對目標序列內的子字串，以及使用 regex_iterator 來尋找多個相符項。 使用 `match_results` 物件的函式會設定其成員，以反映比對是否成功，而且，如果成功，規則運算式中的各種擷取群組會擷取到什麼。  
+ 只有在整個運算元序列 `str` 完全符合規則運算式引數 `re` 時，每個範本函式才會傳回 true。 使用 [regex_search](../standard-library/regex-functions.md#regex_search) 來比對目標序列內的子字串，以及使用 regex_iterator 來尋找多個相符項。 使用 `match_results` 物件的函式會設定其成員，以反映比對是否成功，而且，如果成功，規則運算式中的各種擷取群組會擷取到什麼。  
   
  使用 `match_results` 物件的函式會設定其成員，以反映比對是否成功，而且，如果成功，規則運算式中的各種擷取群組會擷取到什麼。  
   
@@ -192,7 +193,7 @@ int _tmain(int argc, _TCHAR* argv[])
   
 ```  
   
-##  <a name="a-nameregexreplacefunctiona--regexreplace-function"></a><a name="regex_replace_function"></a>  regex_replace 函式  
+##  <a name="regex_replace"></a>regex_replace
  取代符合的規則運算式。  
   
 ```  
@@ -298,7 +299,7 @@ replacement == AdAeAf
 replacement == Adaeaf  
 ```  
   
-##  <a name="a-nameregexsearchfunctiona--regexsearch-function"></a><a name="regex_search_function"></a>  regex_search 函式  
+##  <a name="regex_search"></a>regex_search
  搜尋規則運算式相符項目。  
   
 ```  
@@ -447,7 +448,7 @@ search(string, "abc") == true
   matched: "abc"  
 ```  
   
-##  <a name="a-nameswapfunctiona--swap-function"></a><a name="swap_function"></a>  swap 函式  
+##  <a name="swap"></a>  swap
  交換兩個 basic_regex 或 match_results 物件。  
   
 ```  

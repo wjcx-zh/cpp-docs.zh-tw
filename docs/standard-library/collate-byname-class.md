@@ -1,32 +1,47 @@
 ---
 title: "collate_byname 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std::collate_byname"
-  - "locale/std::collate_byname"
-  - "std.collate_byname"
-  - "collate_byname"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collate_byname 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- locale/std::collate_byname
+- collate_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
 caps.latest.revision: 24
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# collate_byname 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 0552fd2b76859166ea84ec17433ee5d04b5dcb19
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
+---
+# <a name="collatebyname-class"></a>collate_byname 類別
 衍生的樣板類別，描述可以做為特定地區設定的定序 facet 的物件，啟用有關字串排序慣例的文化特性區域特定資訊的擷取。  
   
 ## <a name="syntax"></a>語法  
@@ -51,21 +66,22 @@ protected:
   
 #### <a name="parameters"></a>參數  
  `_Locname`  
- 具名的地區設定。  
+ 具名地區設定。  
   
  `_Refs`  
- 初始的參考計數。  
+ 初始參考計數。  
   
 ## <a name="remarks"></a>備註  
- 此樣板類別描述可以做為物件 [地區設定 facet](../standard-library/locale-class.md#facet_class) 型別的 [collate](../standard-library/collate-class.md#collate__collate)\< CharType>。 其行為取決於 [名為](../standard-library/locale-class.md#locale__name) 地區設定 `_Locname`。 每個建構函式初始化具有其基底物件 [collate](../standard-library/collate-class.md#collate__collate)\< CharType>( `_Refs`)。  
+ 範本類別描述的物件，可作為 [collate](../standard-library/collate-class.md#collate)\<CharType> 類型的[地區設定 Facet](../standard-library/locale-class.md#facet_class)。 其行為取決於[具名](../standard-library/locale-class.md#name)地區設定 `_Locname`。 每個建構函式會以 [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) 初始化其基底物件。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \< 地區設定>  
+ **標頭︰**\<locale>  
   
- **命名空間︰** std  
+ **命名空間：** std  
   
-## <a name="see-also"></a>請參閱  
- [C + + 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
 
 
 

@@ -1,84 +1,101 @@
 ---
 title: "_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_strlwr_l"
-  - "_strlwr"
-  - "_wcslwr_l"
-  - "_mbslwr_l"
-  - "_wcslwr"
-  - "_mbslwr"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-multibyte-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_strlwr"
-  - "wcslwr_l"
-  - "_ftcslwr"
-  - "mbslwr_l"
-  - "_mbslwr"
-  - "_wcslwr"
-  - "strlwr_l"
-  - "_tcslwr"
-  - "mbslwr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ftcslwr 函式"
-  - "_mbslwr 函式"
-  - "_mbslwr_l 函式"
-  - "_strlwr 函式"
-  - "_strlwr_l 函式"
-  - "_tcslwr 函式"
-  - "_tcslwr_l 函式"
-  - "_wcslwr 函式"
-  - "_wcslwr_l 函式"
-  - "大小寫, 轉換"
-  - "轉換大小寫"
-  - "轉換大小寫, CRT 函式"
-  - "ftcslwr 函式"
-  - "mbslwr 函式"
-  - "mbslwr_l 函式"
-  - "字串轉換 [C++], 大小寫"
-  - "字串 [C++], 大小寫"
-  - "字串 [C++], 轉換大小寫"
-  - "strlwr_l 函式"
-  - "tcslwr 函式"
-  - "tcslwr_l 函式"
-  - "wcslwr_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _strlwr_l
+- _strlwr
+- _wcslwr_l
+- _mbslwr_l
+- _wcslwr
+- _mbslwr
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-multibyte-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _strlwr
+- wcslwr_l
+- _ftcslwr
+- mbslwr_l
+- _mbslwr
+- _wcslwr
+- strlwr_l
+- _tcslwr
+- mbslwr
+dev_langs:
+- C++
+helpviewer_keywords:
+- tcslwr function
+- _strlwr function
+- converting case
+- string conversion [C++], case
+- mbslwr function
+- _strlwr_l function
+- strlwr_l function
+- _wcslwr function
+- ftcslwr function
+- strings [C++], case
+- _tcslwr_l function
+- _wcslwr_l function
+- wcslwr_l function
+- mbslwr_l function
+- tcslwr_l function
+- _tcslwr function
+- converting case, CRT functions
+- _ftcslwr function
+- _mbslwr function
+- case, converting
+- strings [C++], converting case
+- _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
 caps.latest.revision: 36
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 36
----
-# _strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 4955b5741413458b4a24a1b359343174ad484f2a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
-將一個字串轉換為小寫。  更多這些函式的可用安全版本，請參閱 [\_strlwr\_s、\_strlwr\_s\_l、\_mbslwr\_s、\_mbslwr\_s\_l、\_wcslwr\_s、\_wcslwr\_s\_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)。  
+---
+# <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
+將字串轉換成小寫。 這些函式已有更安全的版本可供使用，請參閱 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](../../c-runtime-library/reference/strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)。  
   
 > [!IMPORTANT]
->  `_mbslwr` and `_mbslwr_l`不能用於在 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbslwr` 和 `_mbslwr_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 char *_strlwr(  
@@ -131,43 +148,43 @@ unsigned char *_mbslwr_l(
 ); // C++ only  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `str`  
- 將以 Null 結束之字串轉換為小寫。  
+ 要轉換為小寫的以 Null 終止的字串。  
   
  `locale`  
- 使用的地區設定。  
+ 要使用的地區設定。  
   
-## 傳回值  
- 每一個這些函式都會傳回已轉換後的字符串的指標。  由於修改已完成，則傳回的指標與傳遞輸入引數的指標相同。  未保留表示錯誤的傳回值。  
+## <a name="return-value"></a>傳回值  
+ 所有這些函式都會傳回已轉換的字串指標。 因為修改已就地完成，所以傳回的指標和傳遞為輸入引數的指標相同。 未保留表示錯誤的傳回值。  
   
-## 備註  
- `_strlwr` 函式轉換 `str` 中的所有大寫字母為小寫取決於地區設定分類的 `LC_CTYPE` 設定。  其他字元不會受到影響。  如需`LC_CTYPE`的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  這些版本沒有這種功能，without`_l` 後置字元使用當前區域設置為他們的語言環境相關的行為;版本與`_l` 後置字元是相同的，只是它們使用的，而不是通過語言環境。  如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+## <a name="remarks"></a>備註  
+ `_strlwr` 函式會將 `str` 中的任何大寫字母轉換為小寫，如地區設定的 `LC_CTYPE` 類別設定所定。 不會影響其他字元。 如需 `LC_CTYPE` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些功能，但不包含新版`_l`後置詞使用地區設定相關的行為使用目前地區設定; 具有版本`_l`尾碼是一樣的只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
- `_wcslwr` 和 `_mbslwr` 函式是 `_strlwr`寬字元和多位元組字元版本。  `_wcslwr` 的引數和傳回值是寬字元字串，而 `_mbslwr` 的引數和傳回值則是多位元組字元字串。  這三個函式其餘部分的運作相同。  
+ `_wcslwr` 和 `_mbslwr` 函式是 `_strlwr` 的寬字元及多位元組字元版本。 `_wcslwr` 的引數和傳回值是寬字元字串；`_mbslwr` 的引數和傳回值則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
- 如果 `str` 為 `NULL` 指標，則無效參數處理常式會被叫用，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，這些函式會傳回原始字串並將 `errno` 設為 `EINVAL` 。  
+ 若 `str` 為 `NULL` 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回原始字串並將 `errno` 設為 `EINVAL`。  
   
- 在 C\+\+ 中，這些函式具有多載樣板，可以叫用更新、更安全的這些函式的相對版本。  如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcslwr`|`_strlwr`|`_mbslwr`|`_wcslwr`|  
 |`_tcslwr_l`|`_strlwr_l`|`_mbslwr_l`|`_wcslwr_l`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_strlwr`, `_strlwr_l`|\<string.h\>|  
-|`_wcslwr`, `_wcslwr_l`|\<string.h\> 或 \<wchar.h\>|  
-|`_mbslwr`, `_mbslwr_l`|\<mbstring.h\>|  
+|-------------|---------------------|  
+|`_strlwr`, `_strlwr_l`|\<string.h>|  
+|`_wcslwr`, `_wcslwr_l`|\<string.h> 或 \<wchar.h>|  
+|`_mbslwr`, `_mbslwr_l`|\<mbstring.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_strlwr.c  
@@ -197,13 +214,13 @@ int main( void )
 }  
 ```  
   
-  **Mixed: The String to End All Strings\!**  
-**Lower: the string to end all strings\!**  
-**Upper: THE STRING TO END ALL STRINGS\!**   
-## .NET Framework 對等用法  
- [System::String::ToLower](https://msdn.microsoft.com/en-us/library/system.string.tolower.aspx)  
+```Output  
+Mixed: The String to End All Strings!  
+Lower: the string to end all strings!  
+Upper: THE STRING TO END ALL STRINGS!  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
- [\_strupr、\_strupr\_l、\_mbsupr、\_mbsupr\_l、\_wcsupr\_l、\_wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)
+ [_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](../../c-runtime-library/reference/strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md)

@@ -1,51 +1,69 @@
 ---
-title: "qsort | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "qsort"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ntdll.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "qsort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "qsort 函式"
-  - "快速排序演算法"
-  - "排序陣列"
-  - "陣列 [CRT]，排序"
+title: qsort | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- qsort
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ntdll.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- qsort
+dev_langs:
+- C++
+helpviewer_keywords:
+- qsort function
+- quick-sort algorithm
+- sorting arrays
+- arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# qsort
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: b71bdc6b2b2bff50645a7ce8ae1ef88ad4d6dd91
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-執行快速排序。  這些函式已有更安全的版本可用，請參閱 [qsort\_s](../../c-runtime-library/reference/qsort-s.md)。  
+---
+# <a name="qsort"></a>qsort
+執行快速排序。 目前有比這個函式更安全的版本；請參閱 [qsort_s](../../c-runtime-library/reference/qsort-s.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void qsort(  
@@ -56,49 +74,49 @@ void qsort(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `base`  
  目標陣列的開頭。  
   
  `num`  
- 陣列大小（以元素為單位）。  
+ 陣列大小 (以項目計)。  
   
  `width`  
- 項目大小 \(以位元組為單位\)。  
+ 項目大小 (以位元組計)。  
   
  `compare`  
- 比較的兩個陣列元素和傳回值指定其關聯性的使用者提供的常式的指標。  
+ 使用者提供之常式的指標，該常式比較兩個陣列元素，然後傳回一個指定其關聯性的值。  
   
-## 備註  
- `qsort` 函式實作快速排序演算法來排序陣列中的 `num` 項目，以每個 `width` 位元組為單位。  `base` 引數是指向將排序陣列的基底。  `qsort` 使用已排序項目覆寫此陣列。  
+## <a name="remarks"></a>備註  
+ `qsort` 函式會實作快速排序演算法，來排序 `num` 項目陣列，每個項目 `width` 個位元組。 `base` 引數是要排序之陣列基底的指標。 `qsort` 使用已排序的項目來覆寫這個陣列。  
   
- 在排序過程中，`qsort` 會呼叫 `compare` 常式一次或多次，並於每次呼叫傳遞兩個陣列元素的指標。  
+ `qsort` 在搜尋時會呼叫 `compare` 常式一或多次，每次呼叫會將指標傳遞至兩個陣列元素。  
   
 ```  
-compare( (void *) & elem1, (void *) & elem2 );  
+compare( (void *) & elem1, (void *) & elem2 );  
 ```  
   
- 常式比較項目並傳回下列其中一個值。  
+ 常式會比較這些項目，然後傳回下列其中一個值。  
   
-|比較函式的傳回值|說明|  
-|--------------|--------|  
-|\< 0|`elem1` 小於 `elem2`|  
+|比較函式傳回值|描述|  
+|-----------------------------------|-----------------|  
+|< 0|`elem1` 小於 `elem2`|  
 |0|`elem1` 相當於 `elem2`|  
-|\> 0|`elem1` 大於 `elem2`|  
+|> 0|`elem1` 大於 `elem2`|  
   
- 陣列以比較函式所定義的遞增順序排序。  若要以遞減順序排序陣列，反轉在比較函式中關於大於或小於的運算符。  
+ 陣列是以比較函式所定義的遞增順序排序。 若要以遞減順序排序陣列，請將比較函式中的「大於」和「小於」意義反轉。  
   
- 這個函式會驗證它的參數。  如果 `compare` 或 `num` 是 `NULL`，或是如果 `base` 為 `NULL` 且\*`num` 為非零，或是 `width` 小於零，將會叫用無效的參數的處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  如果允許繼續執行，則函式會回傳並將 `errno` 設定為 `EINVAL`。  
+ 這個函式會驗證它的參數。 如果 `compare` 或 `num` 是 `NULL`，或者如果 `base` 是 `NULL` 且 *`num` 為非零值，或如果 `width` 小於零，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會傳回此函式，並將 `errno` 設為 `EINVAL`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`qsort`|\<stdlib.h\> 和 \<search.h\>|  
+|-------------|---------------------|  
+|`qsort`|\<stdlib.h> 和 \<search.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_qsort.c  
@@ -138,11 +156,11 @@ int compare( const void *arg1, const void *arg2 )
 }  
 ```  
   
-  **boy deserves every favor good**   
-## .NET Framework 對等用法  
- [System::Collections::ArrayList::Sort](https://msdn.microsoft.com/en-us/library/system.collections.arraylist.sort.aspx)  
+```Output  
+boy deserves every favor good  
+```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
- [\_lsearch](../../c-runtime-library/reference/lsearch.md)
+ [_lsearch](../../c-runtime-library/reference/lsearch.md)

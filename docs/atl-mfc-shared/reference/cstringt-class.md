@@ -71,10 +71,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c9537755f2147d0ded67ecd887414f317952418d
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 4f5e485611b1a8f38375c9a95a959ddf48e3663c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="cstringt-class"></a>CStringT 類別
@@ -105,19 +106,19 @@ public CSimpleStringT<BaseType,
  `StringTraits`  
  判斷字串類別是否需要 C 執行階段 (CRT) 程式庫支援和字串資源位於何處。 可以是下列其中一項：  
   
-- **StrTraitATL<> </>** |`char` |**TCHAR、 ChTraitsCRT<> </> ** |`char` |**TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124;`char` &#124;**TCHAR、 ChTraitsCRT < wchar_t** &#124;`char` &#124;**TCHAR >>**  
   
      類別所需 CRT 支援並搜尋所指定的模組中的資源字串`m_hInstResource`（應用程式的模組類別的成員）。  
   
-- **StrTraitATL<> </>** |`char` |**TCHAR、 ChTraitsOS<> </> ** |`char` |**TCHAR > >**  
+- **StrTraitATL < wchar_t** &#124;`char` &#124;**TCHAR、 ChTraitsOS < wchar_t** &#124;`char` &#124;**TCHAR >>**  
   
      類別不需要 CRT 支援及尋找所指定的模組中的資源字串`m_hInstResource`（應用程式的模組類別的成員）。  
   
-- **StrTraitMFC<> </>** |`char` |**TCHAR、 ChTraitsCRT<> </> ** |`char` |**TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124;`char` &#124;**TCHAR、 ChTraitsCRT < wchar_t** &#124;`char` &#124;**TCHAR >>**  
   
      類別會要求 CRT 支援並使用標準的 MFC 搜尋演算法的資源字串的搜尋。  
   
-- **StrTraitMFC<> </>** |`char` |**TCHAR、 ChTraitsOS<> </> ** |`char` |**TCHAR > >**  
+- **StrTraitMFC < wchar_t** &#124;`char` &#124;**TCHAR、 ChTraitsOS < wchar_t** &#124;`char` &#124;**TCHAR >>**  
   
      類別不需要 CRT 支援並使用標準的 MFC 搜尋演算法的資源字串的搜尋。  
   
@@ -125,14 +126,14 @@ public CSimpleStringT<BaseType,
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CStringT::CStringT](#cstringt)|建構`CStringT`物件以各種方式。|  
 |[CStringT:: ~ CStringT](#_dtorcstringt)|終結 `CStringT` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CStringT::AllocSysString](#allocsysstring)|配置`BSTR`從`CStringT`資料。|  
 |[CStringT::AnsiToOem](#ansitooem)|可讓 OEM 字元集的 ANSI 字元集的就地轉換。|  
@@ -201,7 +202,7 @@ public CSimpleStringT<BaseType,
  `CString``CStringA`，和`CStringW`從 MFC DLL (MFC90 匯出。DLL)，絕不會從使用者 Dll。 這為了防止`CStringT`從正在定義多次。  
   
 > [!NOTE]
->  如果您在匯出時遇到連結器錯誤`CString`-從 MFC 擴充 DLL，Visual c + +.NET 2002年中衍生的類別，並套用因應措施述知識庫文件 < 連結錯誤當您匯入 CString-Derived 類別 > (Q309801)，因為此問題已修正在 Visual c + +.NET 2003年中，您應該移除因應措施程式碼。 您可以在 MSDN Library 光碟或是在找到知識庫文章[http://support.microsoft.com/support](http://support.microsoft.com/support)。  
+>  如果您在匯出時遇到連結器錯誤`CString`-從 MFC 擴充 DLL，Visual c + +.NET 2002年中衍生的類別，並套用因應措施述知識庫文件 < 連結錯誤當您匯入 CString-Derived 類別 > (Q309801)，因為此問題已修正在 Visual c + +.NET 2003年中，您應該移除因應措施程式碼。 您可以找到知識庫文件在[http://support.microsoft.com/support](http://support.microsoft.com/support)。  
   
  以 MFC 為基礎的應用程式中有下列的字串類型︰  
   
@@ -240,10 +241,10 @@ public CSimpleStringT<BaseType,
 ## <a name="cstringt-predefined-types"></a>CStringT 預先定義的類型  
  因為`CStringT`使用非範本引數定義字元類型 (任一[wchar_t](../../c-runtime-library/standard-types.md)或[char](../../c-runtime-library/standard-types.md)) 支援，方法參數的型別可能很複雜情況下。 若要簡化此問題，一組預先定義的型別定義，且使用整個`CStringT`類別。 下表列出各種類型︰  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |`XCHAR`|單一字元 (請`wchar_t`或`char`) 使用相同的字元類型，做為`CStringT`物件。|  
-|**YCHAR**|單一字元 (請`wchar_t`或`char`) 與相反的字元類型`CStringT`物件。|  
+|**YCHAR**|單一字元 (請`wchar_t`或`char`) 搭配相反的字元類型為`CStringT`物件。|  
 |`PXSTR`|字元字串的指標 (可能是`wchar_t`或`char`) 使用相同的字元類型，做為`CStringT`物件。|  
 |**PYSTR**|字元字串的指標 (可能是`wchar_t`或`char`) 與相反的字元類型`CStringT`物件。|  
 |`PCXSTR`|指標**const**字元字串 (請`wchar_t`或`char`) 使用相同的字元類型，做為`CStringT`物件。|  
@@ -335,7 +336,7 @@ int Collate(PCXSTR psz) const throw();
  另一個字串用於比較。  
   
 ### <a name="return-value"></a>傳回值  
- 如果字串完全相同，零< 0="" if="" this="">`CStringT`物件是小於`psz`，或 > 0，表示這個`CStringT`物件是否大於`psz`。  
+ 如果是相同的字串則為零，< 0，表示這個`CStringT`物件是小於`psz`，或 > 0，表示這個`CStringT`物件是否大於`psz`。  
   
 ### <a name="remarks"></a>備註  
  一般文字函式`_tcscoll`，定義在 TCHAR。H，對應為`strcoll`， `wcscoll`，或`_mbscoll`，取決於編譯時期定義的字元集。 每個函式執行區分大小寫字串的比較，根據的字碼頁目前使用中。 如需詳細資訊，請參閱[strcoll、 wcscoll、 _mbscoll、 _strcoll_l、 _wcscoll_l、 _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。  
@@ -352,7 +353,7 @@ int CollateNoCase(PCXSTR psz) const throw();
  另一個字串用於比較。  
   
 ### <a name="return-value"></a>傳回值  
- 如果字串完全相同 （忽略大小寫） < 0="" if="" this=""> `CStringT`物件是小於`psz`（忽略大小寫），或 > 0，表示這個`CStringT`物件是否大於`psz`（忽略大小寫）。  
+ 如果字串都是零相同 （忽略大小寫），< 0，表示這個`CStringT`物件是小於`psz`（忽略大小寫） 或 > 0，表示這個`CStringT`物件是否大於`psz`（忽略大小寫）。  
   
 ### <a name="remarks"></a>備註  
  一般文字函式`_tcscoll`，定義在 TCHAR。H，對應為`stricoll`， `wcsicoll`，或`_mbsicoll`，取決於編譯時期定義的字元集。 每個函式會執行不區分大小寫比較的字串，根據目前使用中的字碼頁。 如需詳細資訊，請參閱[strcoll、 wcscoll、 _mbscoll、 _strcoll_l、 _wcscoll_l、 _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。  
@@ -372,7 +373,7 @@ int Compare(PCXSTR psz) const;
  另一個字串用於比較。  
   
 ### <a name="return-value"></a>傳回值  
- 如果字串完全相同，零< 0="" if="" this="">`CStringT`物件是小於`psz`，或 > 0，表示這個`CStringT`物件是否大於`psz`。  
+ 如果是相同的字串則為零，< 0，表示這個`CStringT`物件是小於`psz`，或 > 0，表示這個`CStringT`物件是否大於`psz`。  
   
 ### <a name="remarks"></a>備註  
  一般文字函式`_tcscmp`，定義在 TCHAR。H，對應為`strcmp`， `wcscmp`，或`_mbscmp`，取決於編譯時期定義的字元集。 每個函式執行區分大小寫字串的比較，並不會受到地區設定。 如需詳細資訊，請參閱[strcmp、 wcscmp、 _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)。  
@@ -396,7 +397,7 @@ int CompareNoCase(PCXSTR psz) const throw();
  另一個字串用於比較。  
   
 ### <a name="return-value"></a>傳回值  
- 如果是相同的字串 （忽略大小寫） <0 if="" this=""></0> `CStringT`物件是小於`psz`（忽略大小寫），或 > 0，表示這個`CStringT`物件是否大於`psz`（忽略大小寫）。  
+ 零，如果字串完全相同 （忽略大小寫），< 0，表示這個`CStringT`物件是小於`psz`（忽略大小寫） 或 > 0，表示這個`CStringT`物件是否大於`psz`（忽略大小寫）。  
   
 ### <a name="remarks"></a>備註  
  一般文字函式`_tcsicmp`，定義在 TCHAR。H，對應為`_stricmp`，`_wcsicmp`或`_mbsicmp`，取決於編譯時期定義的字元集。 每個函式會執行不區分大小寫字串的比較。 比較取決於`LC_CTYPE`方面的地區設定，但不是`LC_COLLATE`。 如需詳細資訊，請參閱[_stricmp、 _wcsicmp、 _mbsicmp、 _stricmp_l、 _wcsicmp_l、 _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)。  
@@ -491,7 +492,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
  單一字元。  
   
  `pszSrc`  
- 以 null 結束的字串複製到這個`CStringT`物件。  
+ 以 null 結束的字串複製到這`CStringT`物件。  
   
  `pStringMgr`  
  指標，memory manager`CStringT`物件。 如需有關`IAtlStringMgr`和記憶體管理`CStringT`，請參閱[記憶體管理與 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。  
@@ -650,7 +651,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ### <a name="remarks"></a>備註  
  此函式格式化並儲存一連串字元和值`CStringT`。 每個選擇性引數 （如果有的話） 會轉換和輸出中的對應格式規格根據`pszFormat`或從所識別的字串資源`nFormatID`。  
   
- 如果字串物件本身為參數，以提供，則呼叫會失敗`Format`。 例如，下列程式碼會造成無法預期的結果︰  
+ 呼叫會失敗，如果字串物件本身為參數，以提供`Format`。 例如，下列程式碼會造成無法預期的結果︰  
   
  [!code-cpp[NVC_ATLMFC_Utilities 116](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_11.cpp)]  
   
@@ -1265,7 +1266,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
   
  如`CStringA`，`Replace`適用於 ANSI 或多位元組 (MBCS) 字元。 如`CStringW`，`Replace`搭配寬字元。  
   
- 如`CString`，字元資料型別選取在編譯時期，根據是否定義下表中的常數。  
+ 如`CString`，字元資料型別已選取在編譯時期，根據是否定義下表中的常數。  
   
 |定義的常數|字元資料類型|  
 |----------------------|-------------------------|  

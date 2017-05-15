@@ -1,91 +1,790 @@
 ---
 title: "complex 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "complex"
-  - "std::complex"
-  - "std.complex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "complex 類別"
-  - "複數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- complex
+- complex/std::complex::value_type
+- complex/std::complex::imag
+- complex/std::complex::real
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex numbers
+- complex class
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# complex 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8f5f401e61aab91d24679ffdc8d796fb9138ee61
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
-樣板類別描述儲存型別 \[**型別**\] 兩個物件，代表複數的實數部分表示虛數一個  
+---
+# <a name="complex-class"></a>complex 類別
+此範本類別描述一個物件，該物件會儲存兩個類型皆為 **Type** 的物件，其中一個代表複數的實數部分，而另一個代表虛數部分。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-   template<class   
-   Type  
-   >  
+ 
+template <class   
+Type>  
 class complex  
 ```  
   
-## 備註  
- 類別 \[**型別**\] 物件:  
+## <a name="remarks"></a>備註  
+ **Type** 類別的物件：  
   
--   沒有公用預設建構函式、解構函式、複製建構函式和指派運算子的一般行為。  
+-   具有公用預設建構函式、解構函式、複製建構函式和指派運算子，且這些都具有傳統行為。  
   
--   您可以指定整數或浮點數值，則型別轉換成與一般行為的這類值。  
+-   可指派整數或浮點值，或轉換類型為具有傳統行為的值。  
   
--   定義算術運算子和數學函式，如有需要，為與一般行為的浮點型別定義。  
+-   可視需要定義算術運算子和數學函式，將其定義為具有傳統行為的浮點類型。  
   
- 特別是，細微的差異可能不存在於工作和預設建構之間遵循的複製建構。  在類別 \[**型別**\] 物件的作業都可能不會擲回例外狀況。  
+ 特別是在指派之後，細微的差異可能不存在於複製建構和預設建構之間。 **Type** 類別物件的作業可能不會擲回例外狀況。  
   
- 樣板的明確特製化將三個浮點型別的複雜存在分類。  在這個實作中，其他輸入 \[**型別**\] 的值為會將角色對實際計算的 **double** 和 **double** ，結果指派回型別 \[**型別**\]`.`儲存的物件  
+ 有三個浮點類型具備 complex 範本類別的明確特製化。 在這項實作中，任何 **Type** 類型以外的值皆會轉換類型為 **double** 以進行實際計算，並將 **double** 結果指派回 **Type**`.` 類型的預存物件。  
   
-### 建構函式  
-  
-|||  
-|-|-|  
-|[複雜](../Topic/complex::complex.md)|建構一個複數有指定的實數及虛數或做為其他複數複本。|  
-  
-### Typedef  
+### <a name="constructors"></a>建構函式  
   
 |||  
 |-|-|  
-|[value\_type](../Topic/complex::value_type.md)|表示用於資料型別表示複數的實數及虛數型別。|  
+|[complex](#complex)|建構具有指定實數與虛數部分或作為其他一些複數複本的複數。|  
   
-### 成員函式  
-  
-|||  
-|-|-|  
-|[imag](../Topic/complex::imag.md)|擷取複數的虛數部分。|  
-|[real](../Topic/complex::real.md)|擷取複數的實數部分。|  
-  
-### 運算子  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[operator\*\=](../Topic/complex::operator*=.md)|將目標複數的因素，可能很複雜或是相同複數的實數及虛數部分。|  
-|[operator\+\=](../Topic/complex::operator+=.md)|將數字加入至目標複數，增加的數目可能是複雜或型別相同將複數的實數及虛數部分。|  
-|[operator\-\=](../Topic/complex::operator-=1.md)|從目標複數減去數字，減去的數目可能是複雜或型別相同將複數的實數及虛數部分。|  
-|[operator\/\=](../Topic/complex::operator-=2.md)|由除數除以另一個目標複數，可能很複雜或是相同複數的實數及虛數部分。|  
-|[operator\=](../Topic/complex::operator=.md)|將數字加入至目標複數，數字指定可能複雜或型別相同指派複數的實數及虛數部分。|  
+|[value_type](#value_type)|類型，表示用來代表複數之實數和虛數部分的資料類型。|  
   
-## 需求  
- **Header**: \<複雜\>  
+### <a name="member-functions"></a>成員函式  
   
- **命名空間:** std  
+|||  
+|-|-|  
+|[imag](#imag)|擷取複數的虛數部分。|  
+|[real](#real)|擷取複數的實數部分。|  
   
-## 請參閱  
- [complex Members](http://msdn.microsoft.com/zh-tw/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="operators"></a>運算子  
+  
+|||  
+|-|-|  
+|[operator*=](#op_star_eq)|將目標複數乘以某個因數，該因數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。|  
+|[operator+=](#op_add_eq)|將目標複數加上某個數字，此加數可能是複雜類型，或者是與複數被加數的實數和虛數部分相同的類型。|  
+|[operator-=](#operator-_eq)|將目標複數減去某個數字，此減數可能是複雜類型，或者是與複數被減數的實數和虛數部分相同的類型。|  
+|[operator/=](#op_div_eq)|將目標複數除以某個除數，該除數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。|  
+|[operator=](#op_eq)|將目標複數指派某個數字，這個指派的數字可能是複雜類型，或者是與目標複數的實數和虛數部分相同的類型。|  
+  
+## <a name="requirements"></a>需求  
+ **標頭**：\<complex>  
+  
+ **命名空間：** std  
+  
+##  <a name="complex"></a>  complex::complex  
+ 建構具有指定實數與虛數部分或作為其他一些複數複本的複數。  
+  
+```  
+constexpr complex(
+    const T& 
+    _RealVal = 0  ,   
+    const T& 
+    _ImagVal = 0);
+
+    template <class Other>  
+constexpr complex(
+    const complex<Other>& 
+    complexNum);
+```  
+  
+### <a name="parameters"></a>參數  
+ `_RealVal`  
+ 用於初始化建構中複數之實數部分的值。  
+  
+ `_ImagVal`  
+ 用於初始化建構中複數之虛數部分的值。  
+  
+ `complexNum`  
+ 其實數及虛數用於初始化建構中之複數的複數。  
+  
+### <a name="remarks"></a>備註  
+ 第一個建構函式會將預存的實數部分初始化為 _ *RealVal*，並將預存的虛數部分初始化為 \_ *Imagval*。 第二個建構函式會將預存的實數部分初始化為 `complexNum`**.real**() 並將預存的虛數部分初始化為 `complexNum`**.imag**()。  
+  
+ 在此實作中，若轉譯器不支援成員樣板函式，此樣板：  
+  
+```  
+template <class Other>  
+complex(const complex<Other>& right);
+```  
+  
+ 取代為：  
+  
+```  
+ 
+complex(const complex& right);
+```  
+  
+ 此為複製建構函式。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_complex.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;   
+  
+   // The first constructor specifies real & imaginary parts  
+   complex <double> c1 ( 4.0 , 5.0 );  
+   cout << "Specifying initial real & imaginary parts,"  
+        << "c1 = " << c1 << endl;   
+  
+   // The second constructor initializes values of the real &  
+   // imaginary parts using those of another complex number  
+   complex <double> c2 ( c1 );  
+   cout << "Initializing with the real and imaginary parts of c1,"  
+        << " c2 = " << c2 << endl;   
+  
+   // Complex numbers can be initialized in polar form  
+   // but will be stored in Cartesian form  
+   complex <double> c3 ( polar ( sqrt( (double)8 ) , pi / 4 ) );  
+   cout << "c3 = polar ( sqrt ( 8 ) , pi / 4 ) = " << c3 << endl;   
+  
+   // The modulus and argument of a complex number can be recovered  
+   double absc3 = abs ( c3 );  
+   double argc3 = arg ( c3 );  
+   cout << "The modulus of c3 is recovered from c3 using: abs ( c3 ) = "  
+        << absc3 << endl;  
+   cout << "Argument of c3 is recovered from c3 using:\n arg ( c3 ) = "  
+        << argc3 << " radians, which is " << argc3 * 180 / pi  
+        << " degrees." << endl;  
+}  
+```  
+  
+##  <a name="imag"></a>  complex::imag  
+ 擷取複數的虛數部分。  
+  
+```  
+T imag() const;
+
+ 
+T imag(const T& right);
+```  
+  
+### <a name="parameters"></a>參數  
+ `right`  
+ 要擷取其虛數部分的複數。  
+  
+### <a name="return-value"></a>傳回值  
+ 複數的虛數部分。  
+  
+### <a name="remarks"></a>備註  
+ 若為複數 *a + bi*，虛數部分或分量為 *Im(a + bi) = b*。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_imag.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   complex <double> c1 ( 4.0 , 3.0 );  
+   cout << "The complex number c1 = " << c1 << endl;  
+  
+   double dr1 = c1.real ( );  
+   cout << "The real part of c1 is c1.real ( ) = "  
+        << dr1 << "." << endl;  
+  
+   double di1 = c1.imag ( );  
+   cout << "The imaginary part of c1 is c1.imag ( ) = "  
+        << di1 << "." << endl;  
+}  
+```  
+  
+```Output  
+The complex number c1 = (4,3)  
+The real part of c1 is c1.real ( ) = 4.  
+The imaginary part of c1 is c1.imag ( ) = 3.  
+```  
+  
+##  <a name="op_star_eq"></a>  complex::operator*=  
+ 將目標複數乘以某個因數，該因數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。  
+  
+```  
+template <class Other>  
+complex& operator*=(const complex<Other>& right);
+
+complex<Type>& operator*=(const Type& right);
+
+complex<Type>& operator*=(const complex<Type>& right);
+```  
+  
+### <a name="parameters"></a>參數  
+ `right`  
+ 複數或與目標複數之參數相同類型的數字。  
+  
+### <a name="return-value"></a>傳回值  
+ 複數，其已乘以指定的參數數字。  
+  
+### <a name="remarks"></a>備註  
+ 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_op_me.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main() {  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> multiplied by type complex<double>  
+   complex <double> cl1 ( polar ( 3.0 , pi / 6 ) );  
+   complex <double> cr1 ( polar ( 2.0 , pi / 3 ) );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   complex <double> cs1 = cl1 * cr1;  
+   cout << "Quotient of two complex numbers is: cs1 = cl1 * cr1 = "  
+        << cs1 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl1 *= cr1;  
+   cout << "Quotient of two complex numbers is also: cl1 *= cr1 = "  
+        << cl1 << endl;  
+  
+   double abscl1 = abs ( cl1 );  
+   double argcl1 = arg ( cl1 );  
+   cout << "The modulus of cl1 is: " << abscl1 << endl;  
+   cout << "The argument of cl1 is: "<< argcl1 << " radians, which is "   
+        << argcl1 * 180 / pi << " degrees." << endl << endl;   
+  
+   // Example of the second member function  
+   // type complex<double> multiplied by type double  
+   complex <double> cl2 ( polar ( 3.0 , pi / 6 ) );  
+   double cr2 = 5.0;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   complex <double> cs2 = cl2 * cr2;  
+   cout << "Quotient of two complex numbers is: cs2 = cl2 * cr2 = "   
+        << cs2 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl2 *= cr2;  
+   cout << "Quotient of two complex numbers is also: cl2 *= cr2 = "  
+        << cl2 << endl;  
+  
+   double abscl2 = abs ( cl2 );  
+   double argcl2 = arg ( cl2 );  
+   cout << "The modulus of cl2 is: " << abscl2 << endl;  
+   cout << "The argument of cl2 is: "<< argcl2 << " radians, which is "   
+        << argcl2 * 180 / pi << " degrees." << endl;  
+}  
+```  
+  
+##  <a name="op_add_eq"></a>  complex::operator+=  
+ 將目標複數加上某個數字，此加數可能是複雜類型，或者是與複數被加數的實數和虛數部分相同的類型。  
+  
+```  
+template <class Other>  
+complex<Type>& operator+=(const complex<Other>& right);
+
+complex<Type>& operator+=(const Type& right);
+
+complex<Type>& operator+=(const complex<Type>& right);
+```  
+  
+### <a name="parameters"></a>參數  
+ `right`  
+ 複數或與目標複數之參數相同類型的數字。  
+  
+### <a name="return-value"></a>傳回值  
+ 複數，其已加上指定的參數數字。  
+  
+### <a name="remarks"></a>備註  
+ 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_op_pe.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> added to type complex<double>  
+   complex <double> cl1 ( 3.0 , 4.0 );  
+   complex <double> cr1 ( 2.0 , -1.0 );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   complex <double> cs1 = cl1 + cr1;  
+   cout << "The sum of the two complex numbers is: cs1 = cl1 + cr1 = "  
+        << cs1 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl1 += cr1;  
+   cout << "The complex number cr1 added to the complex number cl1 is:"  
+        << "\n cl1 += cr1 = " << cl1 << endl;  
+  
+   double abscl1 = abs ( cl1 );  
+   double argcl1 = arg ( cl1 );  
+   cout << "The modulus of cl1 is: " << abscl1 << endl;  
+   cout << "The argument of cl1 is: "<< argcl1 << " radians, which is "   
+        << argcl1 * 180 / pi << " degrees." << endl << endl;   
+  
+   // Example of the second member function  
+   // type double added to type complex<double>  
+   complex <double> cl2 ( -2 , 4 );  
+   double cr2 =5.0;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   complex <double> cs2 = cl2 + cr2;  
+   cout << "The sum of the two complex numbers is: cs2 = cl2 + cr2 = "   
+        << cs2 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl2 += cr2;  
+   cout << "The complex number cr2 added to the complex number cl2 is:"  
+        << "\n cl2 += cr2 = " << cl2 << endl;  
+  
+   double abscl2 = abs ( cl2 );  
+   double argcl2 = arg ( cl2 );  
+   cout << "The modulus of cl2 is: " << abscl2 << endl;  
+   cout << "The argument of cl2 is: "<< argcl2 << " radians, which is "   
+        << argcl2 * 180 / pi << " degrees." << endl << endl;  
+}  
+```  
+  
+```Output  
+The left-side complex number is cl1 = (3,4)  
+The right-side complex number is cr1 = (2,-1)  
+The sum of the two complex numbers is: cs1 = cl1 + cr1 = (5,3)  
+The complex number cr1 added to the complex number cl1 is:  
+ cl1 += cr1 = (5,3)  
+The modulus of cl1 is: 5.83095  
+The argument of cl1 is: 0.54042 radians, which is 30.9638 degrees.  
+  
+The left-side complex number is cl2 = (-2,4)  
+The right-side complex number is cr2 = 5  
+The sum of the two complex numbers is: cs2 = cl2 + cr2 = (3,4)  
+The complex number cr2 added to the complex number cl2 is:  
+ cl2 += cr2 = (3,4)  
+The modulus of cl2 is: 5  
+The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.  
+```  
+  
+##  <a name="complex__operator-_eq"></a>  complex::operator-=  
+ 將目標複數減去某個數字，此減數可能是複雜類型，或者是與複數被減數的實數和虛數部分相同的類型。  
+  
+```  
+template <class Other>  
+complex<Type>& operator-=(const complex<Other>& complexNum);
+
+complex<Type>& operator-=(const Type& _RealPart);
+
+complex<Type>& operator-=(const complex<Type>& complexNum);
+```  
+  
+### <a name="parameters"></a>參數  
+ `complexNum`  
+ 複數，其為目標複數的減數。  
+  
+ `_RealPart`  
+ 實數，其為目標複數的減數。  
+  
+### <a name="return-value"></a>傳回值  
+ 複數，其已減去指定的參數數字。  
+  
+### <a name="remarks"></a>備註  
+ 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_op_se.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> subtracted from type complex<double>  
+   complex <double> cl1 ( 3.0 , 4.0 );  
+   complex <double> cr1 ( 2.0 , -1.0 );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   complex <double> cs1 = cl1 - cr1;  
+   cout << "The difference between the two complex numbers is:"  
+        << "\n cs1 = cl1 - cr1 = " << cs1 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl1 -= cr1;  
+   cout << "Complex number cr1 subtracted from complex number cl1 is:"  
+        << "\n cl1 -= cr1 = " << cl1 << endl;  
+  
+   double abscl1 = abs ( cl1 );  
+   double argcl1 = arg ( cl1 );  
+   cout << "The modulus of cl1 is: " << abscl1 << endl;  
+   cout << "The argument of cl1 is: "<< argcl1 << " radians, which is "   
+        << argcl1 * 180 / pi << " degrees." << endl << endl;   
+  
+   // Example of the second member function  
+   // type double subtracted from type complex<double>  
+   complex <double> cl2 ( 2.0 , 4.0 );  
+   double cr2 = 5.0;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   complex <double> cs2 = cl2 - cr2;  
+   cout << "The difference between the two complex numbers is:"  
+        << "\n cs2 = cl2 - cr2 = " << cs2 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl2  -= cr2;  
+   cout << "Complex number cr2 subtracted from complex number cl2 is:"  
+        << "\n cl2 -= cr2 = " << cl2 << endl;  
+  
+   double abscl2 = abs ( cl2 );  
+   double argcl2 = arg ( cl2 );  
+   cout << "The modulus of cl2 is: " << abscl2 << endl;  
+   cout << "The argument of cl2 is: "<< argcl2 << " radians, which is "   
+        << argcl2 * 180 / pi << " degrees." << endl << endl;  
+}  
+```  
+  
+```Output  
+The left-side complex number is cl1 = (3,4)  
+The right-side complex number is cr1 = (2,-1)  
+The difference between the two complex numbers is:  
+ cs1 = cl1 - cr1 = (1,5)  
+Complex number cr1 subtracted from complex number cl1 is:  
+ cl1 -= cr1 = (1,5)  
+The modulus of cl1 is: 5.09902  
+The argument of cl1 is: 1.3734 radians, which is 78.6901 degrees.  
+  
+The left-side complex number is cl2 = (2,4)  
+The right-side complex number is cr2 = 5  
+The difference between the two complex numbers is:  
+ cs2 = cl2 - cr2 = (-3,4)  
+Complex number cr2 subtracted from complex number cl2 is:  
+ cl2 -= cr2 = (-3,4)  
+The modulus of cl2 is: 5  
+The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.  
+```  
+  
+##  <a name="op_div_eq"></a>  complex::operator/=  
+ 將目標複數除以某個除數，該除數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。  
+  
+```  
+template <class Other>  
+complex<Type>& operator/=(const complex<Other>& complexNum);
+
+complex<Type>& operator/=(const Type& _RealPart);
+
+complex<Type>& operator/=(const complex<Type>& complexNum);
+```  
+  
+### <a name="parameters"></a>參數  
+ `complexNum`  
+ 複數，其為目標複數的減數。  
+  
+ `_RealPart`  
+ 實數，其為目標複數的減數。  
+  
+### <a name="return-value"></a>傳回值  
+ 複數，其已除以指定的參數數字。  
+  
+### <a name="remarks"></a>備註  
+ 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_op_de.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> divided by type complex<double>  
+   complex <double> cl1 ( polar (3.0 , pi / 6 ) );  
+   complex <double> cr1 ( polar (2.0 , pi / 3 ) );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   complex <double> cs1 = cl1 / cr1;  
+   cout << "The quotient of the two complex numbers is: cs1 = cl1 /cr1 = "  
+        << cs1 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl1 /= cr1;  
+   cout << "Quotient of two complex numbers is also: cl1 /= cr1 = "  
+        << cl1 << endl;  
+  
+   double abscl1 = abs ( cl1 );  
+   double argcl1 = arg ( cl1 );  
+   cout << "The modulus of cl1 is: " << abscl1 << endl;  
+   cout << "The argument of cl1 is: "<< argcl1 << " radians, which is "   
+        << argcl1 * 180 / pi << " degrees." << endl << endl;   
+  
+   // Example of the second member function  
+   // type complex<double> divided by type double  
+   complex <double> cl2 ( polar (3.0 , pi / 6 ) );  
+   double cr2 =5;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   complex <double> cs2 = cl2 / cr2;  
+   cout << "The quotient of the two complex numbers is: cs2 /= cl2 cr2 = "   
+        << cs2 << endl;  
+  
+   // This is equivalent to the following operation  
+   cl2 /= cr2;  
+   cout << "Quotient of two complex numbers is also: cl2 = /cr2 = "  
+        << cl2 << endl;  
+  
+   double abscl2 = abs ( cl2 );  
+   double argcl2 = arg ( cl2 );  
+   cout << "The modulus of cl2 is: " << abscl2 << endl;  
+   cout << "The argument of cl2 is: "<< argcl2 << " radians, which is "   
+        << argcl2 * 180 / pi << " degrees." << endl << endl;  
+}  
+```  
+  
+```Output  
+The left-side complex number is cl1 = (2.59808,1.5)  
+The right-side complex number is cr1 = (1,1.73205)  
+The quotient of the two complex numbers is: cs1 = cl1 /cr1 = (1.29904,-0.75)  
+Quotient of two complex numbers is also: cl1 /= cr1 = (1.29904,-0.75)  
+The modulus of cl1 is: 1.5  
+The argument of cl1 is: -0.523599 radians, which is -30 degrees.  
+  
+The left-side complex number is cl2 = (2.59808,1.5)  
+The right-side complex number is cr2 = 5  
+The quotient of the two complex numbers is: cs2 /= cl2 cr2 = (0.519615,0.3)  
+Quotient of two complex numbers is also: cl2 = /cr2 = (0.519615,0.3)  
+The modulus of cl2 is: 0.6  
+The argument of cl2 is: 0.523599 radians, which is 30 degrees.  
+```  
+  
+##  <a name="op_eq"></a>  complex::operator=  
+ 將目標複數指派某個數字，這個指派的數字可能是複雜類型，或者是與目標複數的實數和虛數部分相同的類型。  
+  
+```  
+template <class Other>  
+complex<Type>& operator=(const complex<Other>& right);
+
+complex<Type>& operator=(const Type& right);
+```  
+  
+### <a name="parameters"></a>參數  
+ `right`  
+ 複數或與目標複數之參數相同類型的數字。  
+  
+### <a name="return-value"></a>傳回值  
+ 複數，其已指派指定的參數數字。  
+  
+### <a name="remarks"></a>備註  
+ 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_op_as.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   double pi = 3.14159265359;  
+  
+   // Example of the first member function  
+   // type complex<double> assigned to type complex<double>  
+   complex <double> cl1 ( 3.0 , 4.0 );  
+   complex <double> cr1 ( 2.0 , -1.0 );  
+   cout << "The left-side complex number is cl1 = " << cl1 << endl;  
+   cout << "The right-side complex number is cr1 = " << cr1 << endl;  
+  
+   cl1  = cr1;  
+   cout << "The complex number cr1 assigned to the complex number cl1 is:"  
+        << "\n cl1 = cr1 = " << cl1 << endl;  
+  
+   // Example of the second member function  
+   // type double assigned to type complex<double>  
+   complex <double> cl2 ( -2 , 4 );  
+   double cr2 =5.0;  
+   cout << "The left-side complex number is cl2 = " << cl2 << endl;  
+   cout << "The right-side complex number is cr2 = " << cr2 << endl;  
+  
+   cl2 = cr2;  
+   cout << "The complex number cr2 assigned to the complex number cl2 is:"  
+        << "\n cl2 = cr2 = " << cl2 << endl;  
+  
+   cl2 = complex<double>(3.0, 4.0);  
+   cout << "The complex number (3, 4) assigned to the complex number cl2 is:"  
+        << "\n cl2 = " << cl2 << endl;  
+}  
+```  
+  
+```Output  
+The left-side complex number is cl1 = (3,4)  
+The right-side complex number is cr1 = (2,-1)  
+The complex number cr1 assigned to the complex number cl1 is:  
+ cl1 = cr1 = (2,-1)  
+The left-side complex number is cl2 = (-2,4)  
+The right-side complex number is cr2 = 5  
+The complex number cr2 assigned to the complex number cl2 is:  
+ cl2 = cr2 = (5,0)  
+The complex number (3, 4) assigned to the complex number cl2 is:  
+ cl2 = (3,4)  
+```  
+  
+##  <a name="real"></a>  complex::real  
+ 取得或設定複數的實數部分。  
+  
+```  
+constexpr T real() const;
+
+ 
+T real(const T& right);
+```  
+  
+### <a name="parameters"></a>參數  
+ `right`  
+ 要擷取其實數部分的複數。  
+  
+### <a name="return-value"></a>傳回值  
+ 複數的實數部分。  
+  
+### <a name="remarks"></a>備註  
+ 若為複數 *a + bi*，實數部分或分量為 *Re(a + bi) = a*。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_class_real.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+  
+   complex <double> c1 ( 4.0 , 3.0 );  
+   cout << "The complex number c1 = " << c1 << endl;  
+  
+   double dr1 = c1.real ( );  
+   cout << "The real part of c1 is c1.real ( ) = "  
+        << dr1 << "." << endl;  
+  
+   double di1 = c1.imag ( );  
+   cout << "The imaginary part of c1 is c1.imag ( ) = "  
+        << di1 << "." << endl;  
+}  
+```  
+  
+```Output  
+The complex number c1 = (4,3)  
+The real part of c1 is c1.real ( ) = 4.  
+The imaginary part of c1 is c1.imag ( ) = 3.  
+```  
+  
+##  <a name="value_type"></a>  complex::value_type  
+ 類型，表示用來代表複數之實數和虛數部分的資料類型。  
+  
+```  
+ 
+typedef Type value_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ `value_type` 是 complex 類別 **Type** 範本參數的同義字。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// complex_valuetype.cpp  
+// compile with: /EHsc  
+#include <complex>  
+#include <iostream>  
+  
+int main( )  
+{  
+   using namespace std;  
+   complex <double>::value_type a = 3, b = 4;  
+  
+   complex <double> c1 ( a , b );  
+   cout << "Specifying initial real & imaginary parts"  
+      << "\nof type value_type: "  
+      << "c1 = " << c1 << "." << endl;  
+}  
+```  
+  
+```Output  
+Specifying initial real & imaginary parts  
+of type value_type: c1 = (3,4).  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [complex 成員](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

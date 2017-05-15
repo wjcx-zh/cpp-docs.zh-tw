@@ -17,7 +17,6 @@ f1_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 helpviewer_keywords:
@@ -29,7 +28,6 @@ helpviewer_keywords:
 - C2131
 - C2136
 - C2176
-- C2178
 - C2187
 - C2189
 dev_langs:
@@ -53,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 3716dbf66c2cf1c35c26df6dfd95fb1c0946e68d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: c724fd7907f7ec3f0ce8f096faf88d4ec66ae970
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="compiler-errors-c2100-through-c2199"></a>編譯器錯誤s C2100 through C2199
@@ -99,7 +98,7 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C2127|'*識別碼*': 不合法的 'constexpr' 實體具有非常數運算式初始化|  
 |[編譯器錯誤 C2128](compiler-error-c2128.md)|'*函式*': alloc_text/same_seg 僅適用使用 C 連結的函式|  
 |[編譯器錯誤 C2129](compiler-error-c2129.md)|靜態函式 '*識別碼*' 宣告但未定義|  
-|[編譯器錯誤 C2130](compiler-error-c2130.md)|#行必須是字串，包含檔名，找到 '*語彙基元*'|  
+|[編譯器錯誤 C2130](compiler-error-c2130.md)|#line 必須有字串，包含檔名，找到 '*語彙基元*'|  
 |編譯器錯誤 C2131|運算式未評估為常數|  
 |[編譯器錯誤 C2132](compiler-error-c2132.md)|語法錯誤: 未預期的識別項|  
 |[編譯器錯誤 C2133](compiler-error-c2133.md)|'*識別碼*': 大小未知|  
@@ -147,7 +146,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2175](compiler-error-c2175.md)|'*地區設定*': 無效的地區設定|  
 |編譯器錯誤 C2176|傳回陳述式不得出現在建構函式相關之 function-try-block 的處理常式中|  
 |[編譯器錯誤 C2177](compiler-error-c2177.md)|常數太大|  
-|編譯器錯誤 C2178|'*識別碼*'不可以宣告與'*規範*' 規範|  
+|[編譯器錯誤 C2178](compiler-error-c2178.md)|'*識別碼*'不可以宣告與'*規範*' 規範|  
 |[編譯器錯誤 C2179](compiler-error-c2179.md)|'*類型*': 屬性引數不可使用類型參數|  
 |[編譯器錯誤 C2180](compiler-error-c2180.md)|控制運算式具有類型 '*類型*'|  
 |[編譯器錯誤 C2181](compiler-error-c2181.md)|不合法的 else (沒有相符的 if)|  

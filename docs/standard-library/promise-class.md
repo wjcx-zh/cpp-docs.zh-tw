@@ -10,6 +10,13 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - future/std::promise
+- future/std::promise::promise
+- future/std::promise::get_future
+- future/std::promise::set_exception
+- future/std::promise::set_exception_at_thread_exit
+- future/std::promise::set_value
+- future/std::promise::set_value_at_thread_exit
+- future/std::promise::swap
 dev_langs:
 - C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
@@ -31,10 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ad79ecc3497182a451ef85ea53c8ec5603fdca69
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 2f052d1af76e8f874e2bbe0187a82b838e47f45e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="promise-class"></a>promise 類別
@@ -53,34 +61,34 @@ class promise;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[promise::promise 建構函式](#promise__promise_constructor)|建構 `promise` 物件。|  
+|[承諾](#promise)|建構 `promise` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[promise::get_future](#promise__get_future_method)|傳回與這項承諾相關聯的 [future](../standard-library/future-class.md)。|  
-|[promise::set_exception](#promise__set_exception_method)|以不可部分完成的方式設定這項承諾的結果以指出例外狀況。|  
-|[promise::set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)|以不可部分完成的方式設定這項承諾的結果以指出例外狀況，而且只有在目前執行緒中所有執行緒區域物件已終結後 (通常是在執行緒結束) 傳遞通知。|  
-|[promise::set_value](#promise__set_value_method)|以不可部分完成的方式設定這項承諾的結果以指出值。|  
-|[promise::set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)|以不可部分完成的方式設定這項承諾的結果以指出值，而且只有在目前執行緒中所有執行緒區域物件已終結後 (通常是在執行緒結束) 傳遞通知。|  
-|[promise::swap](#promise__swap_method)|交換這個承諾與指定之承諾物件的「相關聯非同步狀態」。|  
+|[get_future](#get_future)|傳回與這項承諾相關聯的 [future](../standard-library/future-class.md)。|  
+|[set_exception](#set_exception)|以不可部分完成的方式設定這項承諾的結果以指出例外狀況。|  
+|[set_exception_at_thread_exit](#set_exception_at_thread_exit)|以不可部分完成的方式設定這項承諾的結果以指出例外狀況，而且只有在目前執行緒中所有執行緒區域物件已終結後 (通常是在執行緒結束) 傳遞通知。|  
+|[set_value](#set_value)|以不可部分完成的方式設定這項承諾的結果以指出值。|  
+|[set_value_at_thread_exit](#set_value_at_thread_exit)|以不可部分完成的方式設定這項承諾的結果以指出值，而且只有在目前執行緒中所有執行緒區域物件已終結後 (通常是在執行緒結束) 傳遞通知。|  
+|[swap](#swap)|交換這個承諾與指定之承諾物件的「相關聯非同步狀態」。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|說明|  
 |----------|-----------------|  
-|[promise::operator=](#promise__operator_eq)|這個承諾物件共用狀態的指派。|  
+|[promise::operator=](#op_eq)|這個承諾物件共用狀態的指派。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `promise`  
   
 ## <a name="requirements"></a>需求  
- **標頭：**future  
+ **標頭︰** \<未來 >  
   
  **命名空間：** std  
   
-##  <a name="a-namepromisegetfuturemethoda--promisegetfuture"></a><a name="promise__get_future_method"></a>  promise::get_future  
+##  <a name="get_future"></a>  promise::get_future  
  傳回 [future](../standard-library/future-class.md) 物件，它具有和這個承諾相同的「相關聯非同步狀態」。  
   
 ```
@@ -92,7 +100,7 @@ future<Ty> get_future();
   
  如果已經針對具有同一個相關聯的非同步狀態的承諾物件呼叫這個方法，方法會擲回 `future_error` 為 `error_code` 的 `future_already_retrieved`。  
   
-##  <a name="a-namepromiseoperatoreqa--promiseoperator"></a><a name="promise__operator_eq"></a>  promise::operator=  
+##  <a name="op_eq"></a>  promise::operator=  
  從指定的 `promise` 物件轉移「相關聯非同步狀態」。  
   
 ```
@@ -109,7 +117,7 @@ promise& operator=(promise&& Other) noexcept;
 ### <a name="remarks"></a>備註  
  此運算子會從 `Other` 轉移相關聯非同步狀態。 轉移之後，`Other` 是空的。  
   
-##  <a name="a-namepromisepromiseconstructora--promisepromise-constructor"></a><a name="promise__promise_constructor"></a>  promise::promise 建構函式  
+##  <a name="promise"></a>  promise::promise 建構函式  
  建構 `promise` 物件。  
   
 ```
@@ -133,7 +141,7 @@ promise(promise&& Other) noexcept;
   
  第三個建構函式會建構 `promise` 物件，並從 `Other` 中轉移相關聯非同步狀態，並將 `Other` 保留為空的。  
   
-##  <a name="a-namepromisesetexceptionmethoda--promisesetexception"></a><a name="promise__set_exception_method"></a>  promise::set_exception  
+##  <a name="set_exception"></a>  promise::set_exception  
  以不可部分完成的方式將例外狀況儲存為此 `promise` 物件的結果，並將「相關聯非同步狀態」設定為「就緒」。  
   
 ```
@@ -147,11 +155,11 @@ void set_exception(exception_ptr Exc);
 ### <a name="remarks"></a>備註  
  如果 `promise` 物件沒有相關聯非同步狀態，則這個方法會擲回含有 `no_state` 錯誤碼的 [future_error](../standard-library/future-error-class.md)。  
   
- 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫`set_exception`、[set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)、[set_value](#promise__set_value_method) 或 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。  
+ 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫`set_exception`、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。  
   
  由於此方法的緣故，封鎖於相關聯非同步狀態上的任何執行緒會解除封鎖。  
   
-##  <a name="a-namepromisesetexceptionatthreadexitmethoda--promisesetexceptionatthreadexit"></a><a name="promise__set_exception_at_thread_exit_method"></a>  promise::set_exception_at_thread_exit  
+##  <a name="set_exception_at_thread_exit"></a>  promise::set_exception_at_thread_exit  
  以不可部分完成方式設定這個 `promise` 的結果以指出例外狀況，而且只有在目前執行緒中所有執行緒區域物件已終結後 (通常是在執行緒結束) 傳遞通知。  
   
 ```
@@ -165,11 +173,11 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 ### <a name="remarks"></a>備註  
  如果 promise 物件沒有「相關聯非同步狀態」，則這個方法會擲回含有 `no_state` 錯誤碼的 [future_error](../standard-library/future-error-class.md)。  
   
- 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫 [set_exception](#promise__set_exception_method)、`set_exception_at_thread_exit`、[set_value](#promise__set_value_method) 或 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。  
+ 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫 [set_exception](#set_exception)、`set_exception_at_thread_exit`、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。  
   
- 與 [set_exception](#promise__set_exception_method) 相反，直到目前執行緒的所有執行緒區域物件皆已終結後，這個方法才會將相關聯非同步狀態設為就緒。 通常，除非目前的執行緒結束，否則被封鎖於關聯非同步狀態的執行緒不會解除封鎖。  
+ 與 [set_exception](#set_exception) 相反，直到目前執行緒的所有執行緒區域物件皆已終結後，這個方法才會將相關聯非同步狀態設為就緒。 通常，除非目前的執行緒結束，否則被封鎖於關聯非同步狀態的執行緒不會解除封鎖。  
   
-##  <a name="a-namepromisesetvaluemethoda--promisesetvalue"></a><a name="promise__set_value_method"></a>  promise::set_value  
+##  <a name="set_value"></a>  promise::set_value  
  以不可部分完成的方式將值儲存為此 `promise` 物件的結果，並將「相關聯非同步狀態」設定為「就緒」。  
   
 ```
@@ -186,7 +194,7 @@ void promise<void>::set_value();
 ### <a name="remarks"></a>備註  
  如果 `promise` 物件沒有相關聯非同步狀態，則這個方法會擲回含有 `no_state` 錯誤碼的 [future_error](../standard-library/future-error-class.md)。  
   
- 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫[set_exception](#promise__set_exception_method)、[set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)、`set_value` 或 [set_value_at_thread_exit](#promise__set_value_at_thread_exit_method)，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。  
+ 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫[set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、`set_value` 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。  
   
  由於此方法的緣故，封鎖於相關聯非同步狀態上的任何執行緒會解除封鎖。  
   
@@ -198,7 +206,7 @@ void promise<void>::set_value();
   
  對於特製化的 `promise<void>`，儲存值不存在。  
   
-##  <a name="a-namepromisesetvalueatthreadexitmethoda--promisesetvalueatthreadexit"></a><a name="promise__set_value_at_thread_exit_method"></a>  promise::set_value_at_thread_exit  
+##  <a name="set_value_at_thread_exit"></a>  promise::set_value_at_thread_exit  
  以不可部分完成的方式將值儲存為此 `promise` 物件的結果。  
   
 ```
@@ -215,7 +223,7 @@ void promise<void>::set_value_at_thread_exit();
 ### <a name="remarks"></a>備註  
  如果 promise 物件沒有「相關聯非同步狀態」，則這個方法會擲回含有 `no_state` 錯誤碼的 [future_error](../standard-library/future-error-class.md)。  
   
- 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫 [set_exception](#promise__set_exception_method)、[set_exception_at_thread_exit](#promise__set_exception_at_thread_exit_method)、[set_value](#promise__set_value_method) 或 `set_value_at_thread_exit`，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。  
+ 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫 [set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 `set_value_at_thread_exit`，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。  
   
  與 `set_value` 相反，直到目前執行緒的所有執行緒區域物件皆已終結後，才會將相關聯非同步狀態設為就緒。 通常，除非目前的執行緒結束，否則被封鎖於關聯非同步狀態的執行緒不會解除封鎖。  
   
@@ -227,7 +235,7 @@ void promise<void>::set_value_at_thread_exit();
   
  對於特製化的 `promise<void>`，儲存值不存在。  
   
-##  <a name="a-namepromiseswapmethoda--promiseswap"></a><a name="promise__swap_method"></a>  promise::swap  
+##  <a name="swap"></a>  promise::swap  
  交換這個承諾物件與指定之物件的「相關聯非同步狀態」。  
   
 ```

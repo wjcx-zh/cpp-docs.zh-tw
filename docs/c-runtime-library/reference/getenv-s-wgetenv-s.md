@@ -56,10 +56,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 77720b4c6057913f8167dc0ceb9a6ac398c7c1c2
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
+ms.openlocfilehash: de79cb66e33564f321dd3277528d67a8d7e0ddc0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s、_wgetenv_s
@@ -163,9 +164,8 @@ errno_t _wgetenv_s(
   
 ## <a name="example"></a>範例  
   
-```  
-  
-      // crt_getenv_s.c  
+```C  
+// crt_getenv_s.c  
 // This program uses getenv_s to retrieve  
 // the LIB environment variable and then uses  
 // _putenv to change it to a new value.  
@@ -224,9 +224,6 @@ int main( void )
 Original LIB variable is: c:\vctools\lib;c:\vctools\atlmfc\lib;c:\vctools\PlatformSDK\lib;c:\vctools\Visual Studio SDKs\DIA Sdk\lib;c:\vctools\Visual Studio SDKs\BSC Sdk\lib  
 New LIB variable is: c:\mylib;c:\yourlib  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Environment::GetEnvironmentVariable](https://msdn.microsoft.com/en-us/library/system.environment.getenvironmentvariable.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   

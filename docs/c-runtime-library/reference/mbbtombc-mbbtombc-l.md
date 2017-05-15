@@ -55,10 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: aea0adf064d61e0104bc15f9cc3825dd9f7e186f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 4cf69d6876ffb96bfd7939eebb4c564f66e98037
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc、_mbbtombc_l
@@ -90,7 +91,7 @@ unsigned int _mbbtombc_l(
  如果 `_mbbtombc` 成功將 `c` 轉換，則會傳回多位元組字元；否則會傳回 `c`。  
   
 ## <a name="remarks"></a>備註  
- `_mbbtombc` 函式會將指定的單一位元組的多位元組字元轉換成對應之雙位元組的多位元組字元。 要轉換的字元範圍必須介於 0x20 – 0x7E 或 0xA1 – 0xDF。  
+ `_mbbtombc` 函式會將指定的單一位元組的多位元組字元轉換成對應之雙位元組的多位元組字元。 字元必須是介於 0x20-0x7E 或 0xA1-要轉換的 0xDF。  
   
  輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些函式版本是一樣的，只不過 `_mbbtombc` 會針對地區設定相關的行為使用目前的地區設定，而 `_mbbtombc_l` 改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -104,9 +105,6 @@ unsigned int _mbbtombc_l(
 |`_mbbtombc_l`|\<mbstring.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   

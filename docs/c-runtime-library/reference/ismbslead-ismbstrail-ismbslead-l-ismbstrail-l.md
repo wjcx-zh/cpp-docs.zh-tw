@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: e0f3aa666b38966699cbf8a98032318f9eb938e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 5c74c39a90896f9c04bfc945b420238795b11b74
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
@@ -113,7 +114,7 @@ int _ismbstrail_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果該字元是前導位元組，則 `_ismbslead` 會傳回 –1，而如果該字元是後隨位元組，則 `_ismbstrail` 會傳回 –1。 如果輸入字串有效，但不是前導位元組或後隨位元組，則這些函式會傳回零。 如果有任一個引數是 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `NULL` ，並將 `errno` 設為 `EINVAL`。  
+ `_ismbslead`如果字元是前導位元組，則傳回-1 和`_ismbstrail`如果字元是後隨位元組，則傳回-1。 如果輸入字串有效，但不是前導位元組或後隨位元組，則這些函式會傳回零。 如果有任一個引數是 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `NULL` ，並將 `errno` 設為 `EINVAL`。  
   
 ## <a name="remarks"></a>備註  
  因為字串內容也列入考量，`_ismbslead` 和 `_ismbstrail` 比 `_ismbblead` 和 `_ismbbtrail` 版本慢。  
@@ -132,9 +133,6 @@ int _ismbstrail_l(
  \* 針對此測試條件的資訊清單常數。  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   

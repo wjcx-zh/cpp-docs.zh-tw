@@ -52,10 +52,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde424088fad3661105e92b0a7aa035137bed249
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="chsize"></a>_chsize
@@ -78,7 +79,7 @@ int _chsize(
  檔案的新長度 (位元組)。  
   
 ## <a name="return-value"></a>傳回值  
- 如果已成功變更檔案大小，則 `_chsize` 會傳回值 0。 傳回值 -1 表示發生錯誤︰如果鎖定所指定檔案的存取，則 `errno` 設為 `EACCES`；如果指定的檔案是唯讀或描述元無效，則設為 `EBADF`；如果裝置上沒有空間，則設為 `ENOSPC`；如果 `size` 小於零，則設為 `EINVAL`。  
+ 如果已成功變更檔案大小，則 `_chsize` 會傳回值 0。 傳回值-1 表示錯誤︰`errno`設`EACCES`如果指定的檔案已鎖定，無法存取，為`EBADF`如果指定的檔案是唯讀，或描述項無效，`ENOSPC`如果沒有空間保留在裝置上，或`EINVAL`如果`size`小於零。  
   
  如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -134,12 +135,6 @@ File length before: 0
 Size successfully changed  
 File length after:  329678  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
-  
--   [System::IO::Stream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.stream.setlength.aspx)  
-  
--   [System::IO::FileStream::SetLength](https://msdn.microsoft.com/en-us/library/system.io.filestream.setlength.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   

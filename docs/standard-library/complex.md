@@ -35,54 +35,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: c1753b0f4f017c6d02fc41c427285e6adae6521b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 02d651b3e3ca4dc643b01463a85762a6427b8e83
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
-定義容器範本複數類別和各種支援的範本。  
+定義容器範本類別**複雜**以及其支援的範本。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
 #include <complex>  
-  
 ```  
   
 ## <a name="remarks"></a>備註  
  複數是一組有序對的實數。 以純綷幾何的術語來講，複數平面為實數的二維平面。 區別複數平面和實數平面最特別的特質在於，是因為它有額外的代數結構。 此代數結構有兩種基本運算：  
   
--   加法，定義為 (*a, b*) + (*c, d*) = (*a + c, b + d)*  
+-   Addition defined as (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)  
   
--   乘法，定義為 (*a, b*) \* (*c, d*) = (*ac - bd, ad + bc*)  
+-   Multiplication defined as (*a*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*)  
   
  從標準代數的意義來說，一組複數集合搭配複數加法和複數乘法的運算是一個體。  
   
 -   加法和乘法運算是可交換和可結合的，且乘法可分配到加法，和實數體上的實數加法與乘法如出一轍。  
   
--   複數 (*0, 0*) 為加法單位元素，而 (*1, 0*) 為乘法單位元素。  
+-   複數 （0，0） 為加法和 （1，0） 為乘法。  
   
--   複數 (*a, b*) 的加法反元素為 (*-a, -b*)，而除了 (*0, 0*) 之外，所有這類複數的乘法反元素為   
+-   針對複數的加法反元素 (， *b*) 是 (-、-*b*)，以及除了所有這類複數的乘法逆元 （0，0） 是  
   
-     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>)  
+     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
- 藉由將複數 *z = (a, b)* 表示為 *z = a + bi* 的形式，其中 *i*<sup>2</sup> *=* -1，實數集合的代數規則即可套用至複數集合和其分量。 例如:   
+ 來表示複數*z* = (， *b*) 形式*z* =  + *bi*，其中*我*<sup>2</sup> =-1，規則，實數集合的代數可以套用至一組複數集合和其元件。 例如:   
   
- (1 + 2*i*) \* (2 + 3*i*)    = 1\*(2 + 3*i*) + 2*i*\*(2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
+  (1 + 2*i*) \* (2 + 3*i*)  
+  = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
+  = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
+  = (2 - 6) + (3 + 4)*i*  
+  = -4 + 7*i*  
   
- = (2 –6) + (3 + 4)*i* = -4 + 7*i*  
-  
- 複數系統為體，但不為有序體。 複數沒有順序可言，不像實數及其子集的體，所以不等式不適用於複數，不像實數 (一種有序體) 可以使用不等式。  
+ 複數系統為體，但不為有序體。 任何排序複數之因為沒有欄位的實際數字和及其子集，所以不等式不適用於複雜的數字時為實數。  
   
  有三種常用來表示複數 *z* 的形式：  
   
--   笛卡兒座標形式：*z = a + bi*  
+-   Cartesian: *z* = *a* + *bi*  
   
--   極座標形式：*z = r* (cos *+ i*sin)  
+-   Polar: *z* = *r* (cos *p* + *i* sin *p*)  
   
--   指數形式：*z = r \** exp()  
+-   Exponential: *z* = *r* \* *e*<sup>*ip*</sup>  
   
  這些複數標準表示法所使用的術語可參考如下：  
   
@@ -90,11 +92,11 @@ ms.lasthandoff: 02/24/2017
   
 -   虛數的笛卡兒座標分量，或虛數部分 *b*。  
   
--   複數的模，又稱絕對值：P。  
+-   模數或複數的絕對值*r*。  
   
--   幅角或相角。  
+-   引數角或相角*p*以弧度為單位。  
   
- 除非另有指定，否則要求可傳回多個值的函式傳回其大於 -pi 和小於或等於 +pi 的幅角之主值，讓這些函式保持為單值函式。 所有角度都要以弧度表示，其中一個圓為 2 pi 弧度 (360 度)。  
+ 除非另行指定，可傳回多個值的函式所要傳回其引數之主值大於-π 且小於高於或等於 + π 地進行單一值。 所有角度必須以弧度為單位，都表示其中一個圓為 2 π 弧度 （360 度）。  
   
 ### <a name="functions"></a>函式  
   
@@ -123,22 +125,22 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/complex-operators.md#operator_neq)|測試兩個複數間的不相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。|  
-|[operator*](../standard-library/complex-operators.md#operator_star)|將兩個複數相乘，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
-|[operator+](../standard-library/complex-operators.md#operator_add)|將兩個複數相加，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|測試兩個複數間的不相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。|  
+|[operator*](../standard-library/complex-operators.md#op_star)|將兩個複數相乘，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
+|[operator+](../standard-library/complex-operators.md#op_add)|將兩個複數相加，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
 |[operator-](../standard-library/complex-operators.md#operator-)|將兩個複數相減，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
-|[operator/](../standard-library/complex-operators.md#operator_)|將兩個複數相除，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
-|[operator<\<](../standard-library/complex-operators.md#operator_lt__lt_)|將複數插入至輸出資料流的範本函式。|  
-|[operator==](../standard-library/complex-operators.md#operator_eq_eq)|測試兩個複數間的相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。|  
-|[operator>>](../standard-library/complex-operators.md#operator_gt__gt_)|從輸入資料流擷取複數值的範本函式。|  
+|[operator/](../standard-library/complex-operators.md#op_div)|將兩個複數相除，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
+|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|將複數插入至輸出資料流的範本函式。|  
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|測試兩個複數間的相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。|  
+|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|從輸入資料流擷取複數值的範本函式。|  
   
 ### <a name="classes"></a>類別  
   
 |||  
 |-|-|  
-|[complex\<double>](../standard-library/complex-double.md)|此明確特製化的範本類別描述一個物件，該物件會儲存一組類型皆為 **double** 之物件的有序對，第一個代表複數的實數部分，而第二個代表虛數部分。|  
-|[complex\<float>](../standard-library/complex-float.md)|此明確特製化的範本類別描述一個物件，該物件會儲存一組類型皆為 **float** 之物件的有序對，第一個代表複數的實數部分，而第二個代表虛數部分。|  
-|[complex\<long double>](../standard-library/complex-long-double.md)|此明確特製化的範本類別描述一個物件，該物件會儲存一組類型皆為 `long double` 之物件的有序對，第一個代表複數的實數部分，而第二個代表虛數部分。|  
+|[complex\<double>](../standard-library/complex-double.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**double**，其中第一個代表複數的實數部分，而第二個代表虛部。|  
+|[complex\<float>](../standard-library/complex-float.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**float**，其中第一個代表複數的實數部分，而第二個代表虛部。|  
+|[complex\<long double>](../standard-library/complex-long-double.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**長雙精度**，其中第一個代表複數的實數部分，而第二個代表虛部。|  
 |[complex](../standard-library/complex-class.md)|此範本類別描述用來代表複數系統，並執行複數算術運算的物件。|  
   
 ### <a name="literals"></a>常值  
@@ -146,7 +148,7 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|傳回 `complex<long double>{0.0L, static_cast<long double>(d)}`。|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|傳回︰`complex<long double>{0.0L, static_cast<long double>(d)}`|  
 |`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|傳回 `complex<double>{0.0, static_cast<double>(d)}`。|  
 |`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|傳回 `complex<float>{0.0f, static_cast<float>(d)}`。|  
   

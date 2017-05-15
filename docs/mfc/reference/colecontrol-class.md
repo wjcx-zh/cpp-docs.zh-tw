@@ -203,10 +203,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1f6eeb9802636ebf78f7e5d0b20a188e08a903a6
-ms.lasthandoff: 04/04/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
+ms.openlocfilehash: 7f98ac382549509874bd570307a05ccea5ed657a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
@@ -228,7 +229,7 @@ class COleControl : public CWnd
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[COleControl::AmbientAppearance](#ambientappearance)|擷取目前控制項的外觀。|  
 |[COleControl::AmbientBackColor](#ambientbackcolor)|傳回環境 BackColor 屬性值。|  
@@ -754,7 +755,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="remarks"></a>備註  
  此函式通常會呼叫**PX_**系列的函式來載入或儲存 OLE 控制項的特定使用者定義的屬性。  
   
- 如果控制項精靈已經用來建立 OLE 控制項的專案，此函式的覆寫的版本會序列化所支援的內建屬性`COleControl`基底類別函式呼叫`COleControl::DoPropExchange`。 當您新增到您的 OLE 控制項的使用者定義的屬性，您必須修改此函式可序列化新的屬性。 序列化的詳細資訊，請參閱文章[ActiveX 控制項︰ 序列化](../../mfc/mfc-activex-controls-serializing.md)。  
+ 如果控制項精靈已經用來建立 OLE 控制項的專案，此函式的覆寫的版本會序列化所支援的內建屬性`COleControl`基底類別函式呼叫`COleControl::DoPropExchange`。 當您新增到您的 OLE 控制項的使用者定義的屬性，您必須修改此函式可序列化新的屬性。 如需序列化的詳細資訊，請參閱文章[ActiveX 控制項︰ 序列化](../../mfc/mfc-activex-controls-serializing.md)。  
   
 ##  <a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint  
  重新繪製已子類別化 Windows 控制項從 OLE 控制項。  
@@ -1832,7 +1833,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
  為非零，如果已初始化控制項。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 架構的實作**idispatch:: Invoke**呼叫**IsInvokeAllowed**判斷指定的函式 (由`dispid`) 可能會叫用。 OLE 控制項的預設行為是讓自動化方法，以初始化的控制項; 時，才會叫用不過， **IsInvokeAllowed**是虛擬函式，而且可能會覆寫必要 （例如，當為 automation 伺服器使用的控制項）。 如需詳細資訊，請參閱知識庫文章 Q166472，"如何︰ 使用 OLE 控制項為 Automation 伺服器。 」 知識庫文件可在 MSDN Library 中的 Visual Studio 文件或在[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 架構的實作**idispatch:: Invoke**呼叫**IsInvokeAllowed**判斷指定的函式 (由`dispid`) 可能會叫用。 OLE 控制項的預設行為是讓自動化方法，以初始化的控制項; 時，才會叫用不過， **IsInvokeAllowed**是虛擬函式，而且可能會覆寫必要 （例如，當為 automation 伺服器使用的控制項）。 如需詳細資訊，請參閱知識庫文章 Q166472，"如何︰ 使用 OLE 控制項為 Automation 伺服器。 」 知識庫文件位於[http://support.microsoft.com](http://support.microsoft.com/)。  
   
 ##  <a name="ismodified"></a>COleControl::IsModified  
  決定是否已修改控制項的狀態。  
@@ -2745,7 +2746,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>備註  
  指定的格式是其中一個先前放置在控制項物件使用[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)或[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)延遲轉譯為成員函式。 此函式的預設實作會呼叫`OnRenderFileData`或`OnRenderGlobalData`分別，如果提供的儲存體中的檔案或記憶體。 如果要求的格式是`CF_METAFILEPICT`或永續性的屬性設定格式，預設實作會呈現適當的資料，並傳回非零值。 否則，它會傳回 0，不做任何動作。  
   
- 如果*-> tymed lpStgMedium*是**TYMED_NULL**、 **STGMEDIUM**應該配置，並填入所指定*-> tymed lpFormatEtc*。 如果沒有**TYMED_NULL**、 **STGMEDIUM**應填入資料的位置。  
+ 如果*lpStgMedium]-> [tymed*是**TYMED_NULL**、 **STGMEDIUM**應該配置，並填入所指定*lpFormatEtc]-> [tymed*。 如果沒有**TYMED_NULL**、 **STGMEDIUM**應填入資料的位置。  
   
  覆寫此函式可提供您要求的格式和 「 中 」 的資料。 根據您的資料，您可以改為覆寫這個函式的其他版本的其中一個。 如果您的資料是小型且固定的大小，會覆寫`OnRenderGlobalData`。 如果您在檔案中，或資料的大小不固定，覆寫`OnRenderFileData`。  
   
@@ -2898,7 +2899,7 @@ virtual BOOL OnSetObjectRects(
  為非零，如果已接受重新定位。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會自動重新定位和調整大小的控制項視窗的控點，並傳回**TRUE**。  
+ 預設實作自動重新定位和調整大小的控制項視窗的控點，並傳回**TRUE**。  
   
  覆寫這個函式來變更此函式的預設行為。  
   
@@ -3089,7 +3090,7 @@ BOOL ReleaseCapture();
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果控制項目前具有滑鼠擷取，則會釋放擷取。 否則，此函式沒有任何作用。  
+ 如果控制項目前具有滑鼠擷取，則會擷取發行。 否則，此函式沒有任何作用。  
   
 ##  <a name="releasedc"></a>COleControl::ReleaseDC  
  釋放容器的無視窗控制項時，釋放由其他應用程式使用的裝置內容顯示裝置內容。  

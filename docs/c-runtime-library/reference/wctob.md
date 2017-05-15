@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 6c72cc32c5bd48bc6b7fc9c9187797f056ec7712
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 8eee02245359e71f32944f1a1f5c7180223553e3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="wctob"></a>wctob
@@ -72,7 +73,7 @@ int wctob(
  要轉譯的值。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `wctob` 成功轉換寬字元，只有當多位元組字元剛好一個位元組長時，才會傳回自己的多位元組字元表示法。 如果`wctob` 遇到它無法轉換成多位元組字元的寬字元，或多位元組字元不是剛好一個位元組長，則傳回 -1。  
+ 如果 `wctob` 成功轉換寬字元，只有當多位元組字元剛好一個位元組長時，才會傳回自己的多位元組字元表示法。 如果`wctob`遇到多位元組字元或多位元組字元不能轉換的寬字元不是正好一個位元組長，則傳回-1。  
   
 ## <a name="remarks"></a>備註  
  如果多位元組字元剛好一個位元組長，`wctob` 函式會將 `wchar` 包含的寬字元轉換成由傳回的 `int` 值傳遞的對應多位元組字元。  
@@ -120,9 +121,6 @@ int main( void )
 ```Output  
 Determined the corresponding multibyte character to be "A".  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   

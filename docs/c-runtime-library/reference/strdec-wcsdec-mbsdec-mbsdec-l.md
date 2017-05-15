@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c372d65ca9d3c49aee32cb51fea67859dc11a7fb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
@@ -103,16 +104,16 @@ unsigned char *_mbsdec_l(
   
 #### <a name="parameters"></a>參數  
  `start`  
- 來源字串中的任何字元 (若為 `_mbsdec` 和 _`mbsdec_l` 則為任何多位元組字元的第一個位元組) 的指標；`start` 必須在來源字串中的 `current` 之前。  
+ 指標的任何字元 (或`_mbsdec`和`_mbsdec_l`，任何多位元組字元的第一個位元組) 中的來源字串。`start`必須優先於`current`來源字串中。  
   
  `current`  
- 來源字串中的任何字元 (若為 `_mbsdec` 和 _`mbsdec_l` 則為任何多位元組字元的第一個位元組) 的指標；`current` 必須在來源字串中的 `start` 之後。  
+ 指標的任何字元 (或`_mbsdec`和`_mbsdec_l`，任何多位元組字元的第一個位元組) 中的來源字串。`current`必須遵循`start`來源字串中。  
   
  `locale`  
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- `_mbsdec`、_`mbsdec_l`、`_strdec` 和 `_wcsdec` 會各自傳回緊接在 `current` 之前的字元指標；如果 `start` 的值大於或等於 `current` 的值，`_mbsdec` 會傳回 `NULL`。 `_tcsdec` 會對應至其中一個函式，而其傳回值則取決於此對應。  
+ `_mbsdec``_mbsdec_l`， `_strdec`，和`_wcsdec`每個傳回的前置字元的指標`current`;`_mbsdec`傳回`NULL`如果的值`start`大於或等於`current`。 `_tcsdec` 會對應至其中一個函式，而其傳回值則取決於此對應。  
   
 ## <a name="remarks"></a>備註  
  `_mbsdec` 和 `_mbsdec_l` 函式會傳回緊接在包含 `start` 的字串中 `current` 之前的多位元組字元的第一個位元組指標。  
@@ -197,9 +198,6 @@ int main()
 }  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

@@ -34,10 +34,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 76f96a1e0b88e7b43a2d4efa55cc57e84efdb3b5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
+ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="remarks"></a>備註  
  `<type_traits>` 中的類別和範本用來支援編譯期間的類型推斷、分類與轉換、偵測類型相關的錯誤，以及協助您最佳化您的一般程式碼。 這些類別和範本包含描述類型屬性的一元類型特性、描述類型之間關係的二元類型特性，以及修改類型屬性的轉換特性。  
   
- 若要支援類型特性，則定義 Helper 類別 `integral_constant`。 它具有範本特製化 `true_type` 和 `false_type`，可形成類型述詞的基底類別。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞「為 True」時，會直接或間接地公開衍生自 [true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)。 當類型述詞「為 False」時，會直接或間接地公開衍生自 [false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)。  
+ 若要支援類型特性，則定義 Helper 類別 `integral_constant`。 它具有範本特製化 `true_type` 和 `false_type`，可形成類型述詞的基底類別。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞「為 True」時，會直接或間接地公開衍生自 [true_type](../standard-library/type-traits-typedefs.md#true_type)。 當類型述詞「為 False」時，會直接或間接地公開衍生自 [false_type](../standard-library/type-traits-typedefs.md#false_type)。  
   
  *類型修飾詞*或*轉換特性*是採用一或多個範本引數的範本，且具有一個成員 `type`，這是已修改類型的同義字。  
   
@@ -79,8 +80,8 @@ using add_const_t = typename add_const<T>::type;
 |||  
 |-|-|  
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|從類型及值建立整數常數。|  
-|[true_type](../standard-library/type-traits-typedefs.md#true_type_typedef)|存有具有 True 值的整數常數。|  
-|[false_type](../standard-library/type-traits-typedefs.md#false_type_typedef)|存有具有 False 值的整數常數。|  
+|[true_type](../standard-library/type-traits-typedefs.md#true_type)|存有具有 True 值的整數常數。|  
+|[false_type](../standard-library/type-traits-typedefs.md#false_type)|存有具有 False 值的整數常數。|  
   
  主要的類型類別  
   

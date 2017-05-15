@@ -54,10 +54,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 60c3b2c8c897558d45dc644cfef5c99b336cf06f
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: f23b0e3105532357ba9d31634a999c98df366552
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、wcstold、_wcstold_l
@@ -97,7 +98,7 @@ long double wcstold_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- `strtold` 會傳回浮點數的值當成 `long double`，但表示法可能造成溢位時例外，在此情況下函式會傳回 +/–`HUGE_VALL`。 `HUGE_VALL` 的正負號符合無法表示之值的正負號。 如果沒有任何轉換可執行，`strtold` 會傳回 0，否則會發生反向溢位。  
+ `strtold`傳回當做浮點數的值`long double`，除了當表示法會造成溢位 — 在此情況下，此函數會傳回 + /-`HUGE_VALL`。 `HUGE_VALL` 的正負號符合無法表示之值的正負號。 如果沒有任何轉換可執行，`strtold` 會傳回 0，否則會發生反向溢位。  
   
  `wcstold` 傳回類似 `strtold` 的值。 如果發生溢位或反向溢位且叫用無效的參數處理常式，這兩個函式的 `errno` 都會設為 `ERANGE`，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
   
@@ -121,7 +122,7 @@ long double wcstold_l(
   
  [`whitespace`] [`sign`] [`digits`] [`.digits`] [ {`d` &#124; `D` &#124; `e` &#124; `E`}[`sign`]`digits`]  
   
- `whitespace` 包含可忽略的空格及定位字元；`sign` 是加號 (`+`) 或減號 (`–`)；而且 `digits` 是一或多個十進位數字。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面會接著包含簡介字母 (`d`、`D`、`e` 或 `E`) 的指數以及選擇性的帶正負號整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。  
+ `whitespace` 包含可忽略的空格及定位字元；`sign` 是加號 (`+`) 或減號 (`-`)；而且 `digits` 是一或多個十進位數字。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面會接著包含簡介字母 (`d`、`D`、`e` 或 `E`) 的指數以及選擇性的帶正負號整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。  
   
 ## <a name="requirements"></a>需求  
   
@@ -163,9 +164,6 @@ string = 3.1415926535898This stopped it
    Stopped scan at: This stopped it  
   
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Convert::ToDouble](https://msdn.microsoft.com/en-us/library/system.convert.todouble.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   

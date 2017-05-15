@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 704101f267c1d63ffc5def918f031bfc9b257e67
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: f1698faaf860ab5b1e2e8579d2077c09c2a46114
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="safe-libraries-c-standard-library"></a>安全程式庫：C++ 標準程式庫
@@ -54,17 +55,17 @@ Visual C++ 隨附的程式庫 (包括 C++ 標準程式庫) 已做了數項改進
   
 |可能不安全的方法|更安全的對等項目|  
 |-------------------------------|----------------------|  
-|[basic_string::copy](../standard-library/basic-string-class.md#basic_string__copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#basic_string___copy_s)|  
-|[char_traits::copy](../standard-library/char-traits-struct.md#char_traits__copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#char_traits___copy_s)|  
+|[copy](../standard-library/basic-string-class.md#copy)|[basic_string::_Copy_s](../standard-library/basic-string-class.md#copy_s)|  
+|[copy](../standard-library/char-traits-struct.md#copy)|[char_traits::_Copy_s](../standard-library/char-traits-struct.md#copy_s)|  
   
  如果您呼叫上述任何一個可能不安全的方法，或不當使用迭代器，編譯器將會產生[編譯器警告 (層級 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 如需如何停用這些警告的相關資訊，請參閱 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)  
   
  [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)  
   
- [已檢查的迭代器](../standard-library/checked-iterators.md)  
+ [Checked Iterators](../standard-library/checked-iterators.md)  
   
  [偵錯迭代器支援](../standard-library/debug-iterator-support.md)  
   

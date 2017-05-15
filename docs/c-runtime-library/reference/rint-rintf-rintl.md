@@ -55,10 +55,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 43afc4c9e39fdf8eaf2719afa0a79dceafd7de7b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 1b4d0544e2a5656451d67d8fa206df5eb86a4919
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
@@ -133,9 +134,6 @@ rintf(-2.800000) is -3
 rintl(2.500000) is 3  
 rintl(-2.500000) is -3  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::Math::Round](https://msdn.microsoft.com/en-us/library/system.math.round.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

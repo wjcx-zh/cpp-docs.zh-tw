@@ -59,10 +59,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: bde781215787a1d39a58c69b344eb8d41f7b3c52
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: e068c6711630976a2d8b3baea01010bc5e34ed6e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s、_localtime32_s、_localtime64_s
@@ -120,28 +121,28 @@ errno_t _localtime64_s(
  結構類型 [tm](../../c-runtime-library/standard-types.md) 的欄位儲存下列值，每個值都是 `int`。  
   
  `tm_sec`  
- 分鐘之後的秒數 (0 – 59)。  
+ 分鐘之後的秒數 (0-59)。  
   
  `tm_min`  
- 小時之後的分鐘 (0 – 59)。  
+ 小時之後的分鐘 (0-59)。  
   
  `tm_hour`  
- 午夜之後的小時 (0 – 23)。  
+ 午夜之後的小時 (0-23)。  
   
  `tm_mday`  
- 月份的日期 (1 – 31)。  
+ 日期的月份 (1-31)。  
   
  `tm_mon`  
- 月份 (0─11；1 月 = 0)。  
+ 月 (0-11。年 1 月 = 0）。  
   
  `tm_year`  
  年份 (目前年份減去 1900)。  
   
  `tm_wday`  
- 週中的日 (0─6；星期日 = 0）。  
+ 一週天數 (0-6;星期日 = 0）。  
   
  `tm_yday`  
- 年中的日 (0 – 365；1 月 1 日 = 0)。  
+ 年中的日 (0-365;年 1 月 1 = 0)。  
   
  `tm_isdst`  
  若日光節約時間已生效則為正值；如果日光節約時間沒有作用則為 0。如果日光節約時間的狀態是未知，則為負值。 如果 `TZ` 環境變數已設定，C 執行階段程式庫將假設適用於美國之規則，以實作日光節約時間 (DST) 的計算。  
@@ -211,9 +212,6 @@ int main( void )
 ```  
 Fri Apr 25 01:19:27 PM  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::DateTime::ToLocalTime](https://msdn.microsoft.com/en-us/library/system.datetime.tolocaltime.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   

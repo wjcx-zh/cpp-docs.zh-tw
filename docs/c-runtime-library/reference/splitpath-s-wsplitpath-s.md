@@ -57,10 +57,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3b4b1a35e2abcbeb128a36443eb4c5e5aa2a15e9
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s、_wsplitpath_s
@@ -159,7 +160,7 @@ errno_t _wsplitpath_s(
  如果有任何緩衝區太短而無法保留結果，這些函式會將所有緩衝區清除成空字串、將 `errno` 設定為 `ERANGE`，並傳回 `ERANGE`。  
   
 ## <a name="remarks"></a>備註  
- `_splitpath_s` 函式會將一個路徑分割為它的四個元件。 `_splitpath_s` 會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。 `_wsplitpath_s`是 `_splitpath_s` 的寬字元版本；`_``wsplitpath_s` 的引數是寬字元字串。 否則，這些函式的行為相同。  
+ `_splitpath_s` 函式會將一個路徑分割為它的四個元件。 `_splitpath_s` 會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。 `_wsplitpath_s` 是 `_splitpath_s` 的寬字元版本；`_``wsplitpath_s` 的引數是寬字元字串。 否則，這些函式的行為相同。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -195,9 +196,6 @@ errno_t _wsplitpath_s(
   
 ## <a name="example"></a>範例  
  請參閱 [_makepath_s、_wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md) 的範例。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   

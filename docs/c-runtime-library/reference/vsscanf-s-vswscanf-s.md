@@ -1,47 +1,64 @@
 ---
 title: "vsscanf_s、vswscanf_s | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "vswscanf_s"
-  - "vsscanf_s"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "vsscanf_s"
-  - "vswscanf_s"
-  - "_vstscanf_s"
-dev_langs: 
-  - "C++"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- vswscanf_s
+- vsscanf_s
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- vsscanf_s
+- vswscanf_s
+- _vstscanf_s
+dev_langs:
+- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# vsscanf_s、vswscanf_s
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
+ms.openlocfilehash: 0c193b05dc7e8b1279343e729aa98ae5ed8bc153
+ms.contentlocale: zh-tw
+ms.lasthandoff: 03/30/2017
 
-從字串讀取格式化的資料。  這些 [vsscanf、vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) 版本有安全性增強功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
+---
+# <a name="vsscanfs-vswscanfs"></a>vsscanf_s、vswscanf_s
+從字串讀取格式化的資料。 這些是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [vsscanf、vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) 版本。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int vsscanf_s(  
@@ -56,53 +73,53 @@ int vswscanf_s(
 );   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `buffer`  
- 預存資料  
+ 已儲存資料  
   
  `format`  
- 格式控制字串。  如需詳細資訊，請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  
+ 格式控制字串。 如需詳細資訊，請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  
   
  `arglist`  
  變數引數清單。  
   
-## 傳回值  
- 每個這些函式都會傳回成功轉換和指派的欄位數；傳回值不包括已讀取但未指派的欄位。  傳回值 0 表示未指定欄位。  如果發生錯誤，或者在第一個轉換前就已經到達字串結尾，則傳回值是 `EOF`。  
+## <a name="return-value"></a>傳回值  
+ 所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 傳回值是 `EOF`，其表示發生錯誤或在進行第一次轉換之前就到達字串結尾。  
   
- 如果 `buffer` 或 `format` 為 `NULL` 指標，則叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，這些函式會傳回 \-1 並將`errno` 設定為 `EINVAL`  
+ 如果 `buffer` 或 `format` 為 `NULL` 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則這些函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
   
- 如需有關這些錯誤碼及其他錯誤碼的詳細資訊，請參閱 [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## 備註  
- `vsscanf_s` 函式會將 `buffer` 的資料讀取到 `arglist` 引數清單中的每個引數所指定的位置。  引數清單中的引數會指定變數的指標，這些變數的類型對應至 `format` 的類型規範。  不同於較不安全版本 `vsscanf`，當您使用類型欄位字元 `c`、`C`、`s`、`S` 或用 `[]` 括住的字串控制項集合時，需要緩衝區大小參數。  緩衝區大小 \(以字元為單位\) 必須當做在需要它的每個緩衝區參數之後的額外參數提供。  
+## <a name="remarks"></a>備註  
+ `vsscanf_s` 函式會將 `buffer` 的資料讀入 `arglist` 引數清單各引數所指定的位置。 引數清單中的引數指定變數的指標，而變數的類型對應至 `format` 中的類型指定名稱。 與不安全版本 `vsscanf` 不同，使用類型欄位字元 `c`、`C`、`s`、`S`，或用 `[]` 括住的字串控制集時，需要緩衝區大小參數。 必須提供以字元為單位的緩衝區大小，作為緊接在每個需要它之緩衝區參數後的額外參數。  
   
- 緩衝區大小包括終止 null。  寬度規格欄位可用來確保讀入的語彙基元會放入緩衝區。  如果沒有使用寬度規格欄位，而且讀入的語彙基元太大而無法放入緩衝區中，則沒有任何資料寫入該緩衝區。  
+ 緩衝區大小包含結束的 null。 寬度規格欄位可以用來確保讀入的 Token 可納入緩衝區。 如果沒有使用寬度規格欄位，則讀取的語彙基元太大而無法納入緩衝區中，並且不會寫入該緩衝區。  
   
- 如需詳細資訊，請參閱[scanf\_s、\_scanf\_s\_l、wscanf\_s、\_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)與[scanf 類型欄位字元](../../c-runtime-library/scanf-type-field-characters.md)。  
+ 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 類型欄位字元](../../c-runtime-library/scanf-type-field-characters.md)。  
   
 > [!NOTE]
->  大小參數的類型是 `unsigned`，不是 `size_t`。  
+>  大小參數為型別 `unsigned`，而非 `size_t`。  
   
- `format` 引數控制輸入欄位的解譯，而且在形式和功能上與 `scanf_s` 函式的 `format` 引數相同。  如果在重疊的字串之間執行複製，則行為是未定義的。  
+ `format` 引數會控制輸入欄位的解譯，而且形式和功能與 `scanf_s` 函式的 `format` 引數相同。 如果在重疊的字串之間進行複製，則行為是未定義的。  
   
- `vswscanf_s` 是 `vsscanf_s` 的寬字元版本，`vswscanf_s` 的引數是寬字元字串。  `vsscanf_s` 不會處理多位元組十六位元字元。  `vswscanf_s` 不會處理 Unicode 全形十六位元或「相容性區域」字元。  否則 `vswscanf_s` 和 `vsscanf_s` 的行為相同。  
+ `vswscanf_s` 是 `vsscanf_s` 的寬字元版本；`vswscanf_s` 的引數是寬字元字串。 `vsscanf_s` 不會處理多位元組十六進位字元。 `vswscanf_s` 不會處理 Unicode 全形十六進位或「相容性區域」字元。 否則 `vswscanf_s` 和 `vsscanf_s` 的行為相同。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|TCHAR.H 常式|未定義 \_UNICODE & \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|----------------------------|----------------|-------------------|  
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|------------------------------------|--------------------|-----------------------|  
 |`_vstscanf_s`|`vsscanf_s`|`vsscanf_s`|`vswscanf_s`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`vsscanf_s`|\<stdio.h\>|  
-|`vswscanf_s`|\<stdio.h\> 或 \<wchar.h\>|  
+|-------------|---------------------|  
+|`vsscanf_s`|\<stdio.h>|  
+|`vswscanf_s`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_vsscanf_s.c  
@@ -147,17 +164,17 @@ int main( void )
 }  
 ```  
   
-  **字串    \= 15**  
-**字元 \= 1**  
-**整數：\= 15**  
-**Real:     \= 15.000000**   
-## .NET Framework 對等用法  
- 請參閱 `Parse` 方法，例如 [System::Double::Parse](https://msdn.microsoft.com/en-us/library/system.double.parse.aspx)。  
+```Output  
+String    = 15  
+Character = 1  
+Integer:  = 15  
+Real:     = 15.000000  
+```  
   
-## 請參閱  
- [資料流 I\/O](../../c-runtime-library/stream-i-o.md)   
- [scanf、\_scanf\_l、wscanf、\_wscanf\_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sscanf、\_sscanf\_l、swscanf、\_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
- [sscanf\_s、\_sscanf\_s\_l、swscanf\_s、\_swscanf\_s\_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
- [sprintf、\_sprintf\_l、swprintf、\_swprintf\_l、\_\_swprintf\_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
+ [scanf、_scanf_l、wscanf、_wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
+ [sscanf、_sscanf_l、swscanf、_swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)   
+ [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)   
+ [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [vsscanf、vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md)

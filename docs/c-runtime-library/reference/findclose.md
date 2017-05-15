@@ -50,10 +50,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 75a2b674f392b19bb37f26c977e8b79de7e715bb
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: fcd76f8daec9c90374989a82f4b4b2f85b4cb5c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="findclose"></a>_findclose
@@ -72,7 +73,7 @@ int _findclose(
  搜尋先前 `_findfirst` 呼叫所傳回的控制代碼。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，`_findclose` 會傳回 0。 否則，它會傳回 –1，並將 `errno` 設為 `ENOENT`，指出無法再找到相符檔案。  
+ 如果成功，`_findclose` 會傳回 0。 否則，它會傳回-1，並設定`errno`至`ENOENT`，指出沒有相符的檔案，找不到。  
   
 ## <a name="requirements"></a>需求  
   
@@ -80,10 +81,7 @@ int _findclose(
 |--------------|---------------------|  
 |`_findclose`|\<io.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
+ 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統呼叫](../../c-runtime-library/system-calls.md)   

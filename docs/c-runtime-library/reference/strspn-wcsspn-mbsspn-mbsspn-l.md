@@ -67,10 +67,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3c74f2265aa3112e7fdc3c1d644c4a63a8009ba6
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 71c5c3e7d3dd747926a02940c5ef95f9d1ef243f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn、wcsspn、_mbsspn、_mbsspn_l
@@ -112,7 +113,7 @@ size_t _mbsspn_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回指定完全由 `strCharSet` 中字元組成之 `str` 中子字串長度的整數值*。* 如果 `str` 以不在 `strCharSet` 中的字元開頭，則函式會傳回 0。  
+ 傳回整數值，指定中的子字串長度`str`由完全個字元組成`strCharSet`。 如果`str`開頭的字元不能在`strCharSet`，函數會傳回 0。  
   
 ## <a name="remarks"></a>備註  
  `strspn` 函式傳回 `str` 中不屬於 `strCharSet` 字元集的第一個字元索引。 搜尋不包含終止的 Null 字元。  
@@ -164,9 +165,6 @@ int main( void )
 ```Output  
 The portion of 'cabbage' containing only a, b, or c is 5 bytes long  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- [System::String::Substring](https://msdn.microsoft.com/en-us/library/system.string.substring.aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

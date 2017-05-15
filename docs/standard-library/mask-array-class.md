@@ -1,101 +1,62 @@
 ---
 title: "mask_array 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.mask_array"
-  - "mask_array"
-  - "std::mask_array"
-  - "valarray/std::mask_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mask_array 類別"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mask_array
+- valarray/std::mask_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# mask_array 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: bdc17f9cd2964cc18895b7fe4063aabd054268a1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
+---
+# <a name="maskarray-class"></a>mask_array 類別
 可藉由提供子集之間的作業，以布林運算式指定，並支援父代 valarray 子集物件的內部、輔助的範本類別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```  
-template<class Type>  
-   class mask_array {  
-public:  
-   typedef Type value_type;  
-   void operator=(  
-      const valarray<Type>& x  
-   ) const;  
   
-   void operator=(  
-      const Type& x  
-   ) const;  
   
-   void operator*=(  
-      const valarray<Type>& x  
-   ) const;  
+## <a name="remarks"></a>備註  
+ 此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之 **va** 物件的參考與 [valarray\<bool>](../standard-library/valarray-bool-class.md) 類別的 **ba** 物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的元素序列。  
   
-   void operator/=(  
-      const valarray<Type>& x  
-   ) const;  
+ 您只能藉由撰寫 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式來建構 **mask_array\<Type>** 物件。 mask_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。  
   
-   void operator%=(  
-      const valarray<Type>& x  
-   ) const;  
+ 序列最多包含 **ba.size** 個項目。 只有在 *ba* [ **J**] 為 true 時才會包含項目 *J*。 因此，序列中的項目數會和 **ba**中的 true 項目數相同。 如果 `I` 是 **ba**中最低 true 項目的索引，則 **va**[ `I`] 便是選取之序列中的第零個項目。  
   
-   void operator+=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator-=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator^=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator&=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator|=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator<<=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-   void operator>>=(  
-      const valarray<Type>& x  
-   ) const;  
-  
-// The rest is private or implementation defined  
-}  
-```  
-  
-## 備註  
- 此類別會描述物件，該物件會儲存類別 [valarray](../standard-library/valarray-class.md)**\<類型\>** 的 **va** 物件參考，以及類別 [valarray\<bool\>](../standard-library/valarray-bool-class.md) 的 **ba** 物件參考，後者描述從 **valarray\<類型\>** 物件選取項目的序列。  
-  
- 您建構 **mask\_array\<類型\>** 物件的方法，只能藉由撰寫 [va&#91;ba&#93;](../Topic/valarray::operator.md) 格式的運算式來完成。 mask\_array 類別的成員函式行為接著便會像是針對 **valarray\<類型\>** 定義的對應函式簽章一樣，不過只有選取的項目序列會受到影響。  
-  
- 序列最多包含 **ba.size** 個項目。 只有在 **ba**\[*J*\] 為 true 時才會包含項目 *J*。 因此，序列中的項目數會和 **ba** 中的 true 項目數相同。 如果 `I` 是 **ba** 中最低 true 項目的索引，則 **va**\[`I`\] 便是選取之序列中的第零個項目。  
-  
-## 範例：  
+## <a name="example"></a>範例：  
   
 ```  
 // mask_array.cpp  
@@ -129,17 +90,19 @@ int main( )
 }  
 ```  
   
-### 輸出  
+### <a name="output"></a>輸出  
   
 ```  
-The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).  
-The modified operand valarray is:  ( 0 -1 2 -1 10 -1 10 -1 10 -1 ).  
+The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
+The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).  
 ```  
   
-## 需求  
- **標頭：**\<valarray\>  
+## <a name="requirements"></a>需求  
+ **標頭：**\<valarray>  
   
- **命名空間:** std  
+ **命名空間：** std  
   
-## 請參閱  
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+

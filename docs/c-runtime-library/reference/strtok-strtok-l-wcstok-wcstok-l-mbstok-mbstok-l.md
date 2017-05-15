@@ -72,10 +72,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d203033a5cb07ca4e6888cca7cbf4bba1b1da9da
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
+ms.openlocfilehash: 07948b7fc08bbc41e2e899e190842be98746aeab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/04/2017
 
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
@@ -125,7 +126,7 @@ unsigned char *_mbstok(
 > [!IMPORTANT]
 >  這些函式可能會帶來因緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- 第一次呼叫 `strtok` 時，函式會略過前導分隔符號，並傳回 `strToken` 中第一個 Token 的指標，終止具有 Null 字元的 Token。 一連串的 `strtok` 呼叫可以中斷超出 `strToken` 剩餘部分的多個 Token。 只要在該呼叫傳回的 `token` 後面插入一個 Null 字元，每次呼叫 `strtok` 都會修改 `strToken`。 若要讀取 `strToken` 的下一個 Token，請以 `strToken` 引數的 `NULL` 值呼叫 `strtok`。 `NULL` `strToken` 引數會令 `strtok` 在修改過的 `strToken` 中搜尋下一個 Token。 `strDelimit` 引數可以接受呼叫與呼叫之間的任何值，所以分隔符號集可能會有所不同。  
+ 第一次呼叫 `strtok` 時，函式會略過前導分隔符號，並傳回 `strToken` 中第一個 Token 的指標，終止具有 Null 字元的 Token。 一連串的 `strtok` 呼叫可以中斷超出 `strToken` 剩餘部分的多個 Token。 每次呼叫`strtok`修改`strToken`插入之後的 null 字元`token`該呼叫所傳回。 若要讀取 `strToken` 的下一個 Token，請以 `strToken` 引數的 `NULL` 值呼叫 `strtok`。 `NULL` `strToken` 引數會令 `strtok` 在修改過的 `strToken` 中搜尋下一個 Token。 `strDelimit` 引數可以接受呼叫與呼叫之間的任何值，所以分隔符號集可能會有所不同。  
   
  輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -194,9 +195,6 @@ Tokens:
  more  
  tokens  
 ```  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

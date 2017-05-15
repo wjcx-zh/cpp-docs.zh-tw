@@ -37,10 +37,11 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 537930868e47fd1e947a99ff808d870532c38c58
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: fa98856bc7e55ca78effb64c806a95cab60a68a5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 類別
@@ -68,21 +69,21 @@ class cache_suballoc
   
 |||  
 |-|-|  
-|[cache_suballoc](#cache_suballoc__cache_suballoc)|建構類型 `cache_suballoc` 的物件。|  
+|[cache_suballoc](#cache_suballoc)|建構類型 `cache_suballoc` 的物件。|  
   
 ### <a name="member-functions"></a>成員函式  
   
 |||  
 |-|-|  
-|[allocate](#cache_suballoc__allocate)|配置記憶體區塊。|  
-|[deallocate](#cache_suballoc__deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|  
+|[allocate](#allocate)|配置記憶體區塊。|  
+|[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|  
   
 ## <a name="requirements"></a>需求  
  **標頭︰**\<allocators>  
   
  **命名空間：** stdext  
   
-##  <a name="cache_suballoc__allocate"></a>  cache_suballoc::allocate  
+##  <a name="allocate"></a>  cache_suballoc::allocate  
  配置記憶體區塊。  
   
 ```
@@ -100,7 +101,7 @@ void *allocate(std::size_t count);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="cache_suballoc__cache_suballoc"></a>  cache_suballoc::cache_suballoc  
+##  <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc  
  建構類型 `cache_suballoc` 的物件。  
   
 ```
@@ -109,7 +110,7 @@ cache_suballoc();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="cache_suballoc__deallocate"></a>  cache_suballoc::deallocate  
+##  <a name="deallocate"></a>  cache_suballoc::deallocate  
  從指定位置起算的儲存體中，釋放指定數目的物件。  
   
 ```

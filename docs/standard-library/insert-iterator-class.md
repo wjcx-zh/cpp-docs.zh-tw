@@ -37,10 +37,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 9ff1d22bafa778db24fb489d33e83b1a553711e5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 79e0603aeafe714b891e5564d68cbed6ede89768
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="insertiterator-class"></a>insert_iterator 類別
@@ -64,29 +65,29 @@ class insert_iterator;
   
 |||  
 |-|-|  
-|[insert_iterator](#insert_iterator__insert_iterator)|建構 `insert_iterator`，將項目插入容器中的指定位置。|  
+|[insert_iterator](#insert_iterator)|建構 `insert_iterator`，將項目插入容器中的指定位置。|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#insert_iterator__container_type)|類型，表示要執行一般插入的容器。|  
-|[reference](#insert_iterator__reference)|類型，提供關聯容器控制之序列中項目的參考。|  
+|[container_type](#container_type)|類型，表示要執行一般插入的容器。|  
+|[reference](#reference)|類型，提供關聯容器控制之序列中項目的參考。|  
   
 ### <a name="operators"></a>運算子  
   
 |||  
 |-|-|  
-|[operator*](#insert_iterator__operator_star)|取值運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行一般插入。|  
-|[operator++](#insert_iterator__operator_add_add)|將 `insert_iterator` 遞增至可儲存值的下一個位置。|  
-|[operator=](#insert_iterator__operator_eq)|指派運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行一般插入。|  
+|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行一般插入。|  
+|[operator++](#op_add_add)|將 `insert_iterator` 遞增至可儲存值的下一個位置。|  
+|[operator=](#op_eq)|指派運算子，用來實作輸出迭代器運算式 * `i` = `x` 以進行一般插入。|  
   
 ## <a name="requirements"></a>需求  
  **標頭**：\<iterator>  
   
  **命名空間：** std  
   
-##  <a name="insert_iterator__container_type"></a>  insert_iterator::container_type  
+##  <a name="container_type"></a>  insert_iterator::container_type  
  類型，表示要執行一般插入的容器。  
   
 ```
@@ -126,7 +127,7 @@ The list L2 is: ( 40 20 10 ).
 *\  
 ```  
   
-##  <a name="insert_iterator__insert_iterator"></a>  insert_iterator::insert_iterator  
+##  <a name="insert_iterator"></a>  insert_iterator::insert_iterator  
  建構 `insert_iterator`，將項目插入容器中的指定位置。  
   
 ```
@@ -189,7 +190,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_star"></a>  insert_iterator::operator*  
+##  <a name="op_star"></a>  insert_iterator::operator*  
  對傳回所定址之元素的插入迭代器進行取值。  
   
 ```
@@ -246,7 +247,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_add_add"></a>  insert_iterator::operator++  
+##  <a name="op_add_add"></a>  insert_iterator::operator++  
  將 **insert_iterator** 遞增至可儲存值的下一個位置。  
   
 ```
@@ -307,7 +308,7 @@ After the insertions, the vector vec becomes:
 *\  
 ```  
   
-##  <a name="insert_iterator__operator_eq"></a>  insert_iterator::operator=  
+##  <a name="op_eq"></a>  insert_iterator::operator=  
  將值插入到容器中並傳回已更新成指向新元素的迭代器。  
   
 ```
@@ -386,7 +387,7 @@ After the insertions, the list L is:
 *\  
 ```  
   
-##  <a name="insert_iterator__reference"></a>  insert_iterator::reference  
+##  <a name="reference"></a>  insert_iterator::reference  
  類型，提供關聯容器控制之序列中項目的參考。  
   
 ```

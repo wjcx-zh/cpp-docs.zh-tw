@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 2e3bdbd8bfe0b288d9f6dec5251ffeff2e3c5f81
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
+ms.openlocfilehash: 8c2f3d928d305baa4fce49eb55ee8c6a65cd794b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
@@ -55,12 +56,12 @@ ms.lasthandoff: 02/24/2017
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/queue-operators.md#operator_neq)|測試運算子左邊的佇列物件是否不等於右邊的佇列物件。|  
-|[operator<](../standard-library/queue-operators.md#operator_lt_)|測試運算子左邊的佇列物件是否小於右邊的佇列物件。|  
-|[operator\<=](../standard-library/queue-operators.md#operator_lt__eq)|測試運算子左邊的佇列物件是否小於或等於右邊的佇列物件。|  
-|[operator==](../standard-library/queue-operators.md#operator_eq_eq)|測試運算子左邊的佇列物件是否等於右邊的佇列物件。|  
-|[operator>](../standard-library/queue-operators.md#operator_gt_)|測試運算子左邊的佇列物件是否大於右邊的佇列物件。|  
-|[operator>=](../standard-library/queue-operators.md#operator_gt__eq)|測試運算子左邊的佇列物件是否大於或等於右邊的佇列物件。|  
+|[operator!=](../standard-library/queue-operators.md#op_neq)|測試運算子左邊的佇列物件是否不等於右邊的佇列物件。|  
+|[operator<](../standard-library/queue-operators.md#op_lt)|測試運算子左邊的佇列物件是否小於右邊的佇列物件。|  
+|[operator\<=](../standard-library/queue-operators.md#op_gt_eq)|測試運算子左邊的佇列物件是否小於或等於右邊的佇列物件。|  
+|[operator==](../standard-library/queue-operators.md#op_eq_eq)|測試運算子左邊的佇列物件是否等於右邊的佇列物件。|  
+|[operator>](../standard-library/queue-operators.md#op_gt)|測試運算子左邊的佇列物件是否大於右邊的佇列物件。|  
+|[operator>=](../standard-library/queue-operators.md#op_gt_eq)|測試運算子左邊的佇列物件是否大於或等於右邊的佇列物件。|  
   
 ### <a name="classes"></a>類別  
   

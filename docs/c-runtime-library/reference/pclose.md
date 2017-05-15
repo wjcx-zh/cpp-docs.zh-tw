@@ -51,10 +51,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 33826176b57dbc26c023e0556993ade7dc3e9cfd
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
+ms.openlocfilehash: 0a6163775f7e8592a48a8011e8d72eea008dd5c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/01/2017
 
 ---
 # <a name="pclose"></a>_pclose
@@ -77,7 +78,7 @@ FILE *stream
  從 `_popen` 的先前呼叫傳回值。  
   
 ## <a name="return-value"></a>傳回值  
- 傳回終止命令處理程式的結束狀態；如果發生錯誤，則傳回 -1。 傳回值的格式與 `_cwait` 的格式相同，但低序位位元組與高序位位元組會互換。 如果資料流為 **NULL**，`_pclose` 會將 `errno` 設定為 `EINVAL` 並傳回 -1。  
+ 如果發生錯誤，傳回結束命令處理器，則為-1 的結束狀態。 傳回值的格式與 `_cwait` 的格式相同，但低序位位元組與高序位位元組會互換。 如果資料流為 **NULL**，`_pclose` 會將 `errno` 設定為 `EINVAL` 並傳回 -1。  
   
  如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
@@ -94,9 +95,6 @@ FILE *stream
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="net-framework-equivalent"></a>.NET Framework 同等  
- 不適用。 若要呼叫標準 C 函式，請使用 `PInvoke`。 如需詳細資訊，請參閱[平台叫用範例](http://msdn.microsoft.com/Library/15926806-f0b7-487e-93a6-4e9367ec689f)。  
   
 ## <a name="see-also"></a>另請參閱  
  [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   

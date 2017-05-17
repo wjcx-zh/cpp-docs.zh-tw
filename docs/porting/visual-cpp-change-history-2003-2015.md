@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 705a5fd040b3cba1d3e8be1ac9e2a22ef1f98eb9
-ms.openlocfilehash: 4e419ebbdd1a5fcc178436f2ec6151a3d02c1a21
-ms.lasthandoff: 04/05/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
+ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/28/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
@@ -317,7 +318,7 @@ ms.lasthandoff: 04/05/2017
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **launch::any 與 launch::sync 原則**：nonstandard launch::any 和 launch::sync 原則已移除。 對於 launch::any，請改用 launch:async &#124; launch:deferred。 對於 launch::sync，請改用 launch::deferred。 請參閱 [launch Enumeration](../standard-library/future-enums.md#launch_enumeration)。  
+-   **launch::any 與 launch::sync 原則**：nonstandard launch::any 和 launch::sync 原則已移除。 對於 launch::any，請改用 launch:async &#124; launch:deferred。 對於 launch::sync，請改用 launch::deferred。 請參閱 [launch Enumeration](../standard-library/future-enums.md#launch)。  
   
 ####  <a name="BK_MFC"></a> MFC 與 ATL  
   
@@ -864,6 +865,752 @@ ms.lasthandoff: 04/05/2017
 -   **複製建構函式**  
   
      在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
+
+<!--From here to VS_Update1 added 04/21/2017-->
+
+-   **宣告為 extern "C" 的 main 現在需要傳回類型。**  
+
+下列程式碼現在會產生 C4430。 
+```cpp
+extern "C" __cdecl main(){} // C4430
+```
+若要修正錯誤，請新增傳回類型：
+```cpp
+extern "C" int __cdecl main(){} // OK
+```
+
+ -   **成員初始設定式中不允許 typename**  
+
+下列程式碼現在會產生 C2059：
+ ```cpp
+template<typename T>
+struct S1 : public T::type
+{
+    S1() : typename T::type() // C2059
+    {
+    }
+};
+
+struct S2 {
+    typedef S2 type;
+};
+
+S1<S2> s;
+```
+若要修正錯誤，請從初始設定式中移除 `typename`：
+```cpp
+S1() : T::type() // OK
+...
+```
+
+-   **進行明確特製化時會忽略儲存類別。** 
+
+在下列程式碼中，會忽略靜態儲存類別規範 
+```cpp
+template <typename T>
+void myfunc(T h)
+{
+}
+
+template<>
+static void myfunc(double h) // static is ignored
+{
+}
+
+```
+
+-   **類別範本內 static_assert 中所使用的常數將一律失敗。**  
+
+下列程式碼會導致 static_assert 一律失敗：
+```cpp
+template <size_t some_value>
+struct S1
+{
+    static_assert(false, "default not valid"); // always invoked
+
+};
+
+//other partial specializations here
+```
+
+若要解決這個問題，請將值包裝於 struct 中：
+```cpp
+template <size_t some_value>
+struct constant_false {
+    static const bool value = false;
+};
+
+template <size_t some_value>
+struct S1
+{
+    static_assert(constant_false<some_value>::value, "default not valid");
+};
+
+//other partial specializations here
+```
+
+-   **針對向前宣告強制執行規則(只適用於 C)。**  
+
+下列程式碼現在會產生 C2065：
+```cpp
+struct token_s;
+typedef int BOOL;
+typedef int INT;
+
+
+
+typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
+```
+
+若要修正問題，請新增適當的向前宣告：
+
+```cpp
+struct token_s;
+typedef int BOOL;
+typedef int INT;
+
+// forward declarations:
+typedef struct token_s TOKEN; 
+typedef TOKEN *PTOKEN;
+
+typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
+```
+
+-   **以更一致的方式強制執行函式指標類型**  
+
+下列程式碼現在會產生 C2197：
+
+```cpp
+typedef int(*F1)(int);
+typedef int(*F2)(int, int);
+
+void func(F1 f, int v1, int v2)
+{
+    f(v1, v2); // C2197
+}
+```
+
+-   **模稜兩可的呼叫多載函式**  
+
+下列程式碼現在會產生 C266：'N::bind': 模稜兩可的呼叫多載函式
+```cpp 
+template<typename R, typename T, typename T1, typename A1>
+void bind(R(T::*)(T1), A1&&);
+
+namespace N
+{
+    template <typename T, typename R, typename ... Tx>
+    void bind(R(T::*)(Tx...), T* ptr);
+}
+
+using namespace N;
+
+class Manager
+{
+public:
+    void func(bool initializing);
+
+    void mf()
+    {
+        bind(&Manager::func, this); //C2668
+    }
+};
+```
+
+若要修正錯誤，您可以完整限定對繫結的呼叫︰N::bind(...)。 不過，如果這項變更顯然是透過未宣告的識別項 (C2065) 進行的，則可能適合使用 'using' 宣告來修正此問題。
+
+此模式經常發生於 Microsoft::WRL 命名空間中的 ComPtr 和其他類型。
+
+-   **修正不正確的位址**  
+
+下列程式碼現在會產生 C2440：'=': 無法從 'type *' 轉換為 'type'。 若要修正錯誤，請將 &(type) 變更為 (type)，以及將 (&f()) 變更為 (f())。
+ 
+```cpp
+\\ C
+typedef void (*type)(void);
+ 
+void f(int i, type p);
+void g(int);
+void h(void)
+{
+    f(0, &(type)g);
+}
+ 
+\\ C++
+typedef void(*type)(void);
+ 
+type f();
+ 
+void g(type);
+ 
+void h()
+{
+    g(&f());
+}
+
+```
+
+-   **字串常值是常數陣列**  
+
+下列程式碼現在會產生 C2664：f(void *)': 無法將引數 1 從 'const char (*)[2]' 轉換為 'void *'
+```cpp
+void f(void *);
+ 
+void h(void)
+{
+    f(&__FUNCTION__); 
+    void *p = &"";
+}
+```
+
+若要修正錯誤，請將函式參數類型變更為 'const void*'，要不然也可以變更 h 的內容，使其看起來如下：
+
+```cpp
+void h(void)
+{
+    char name[] = __FUNCTION__;
+    f( name); 
+    void *p = &"";
+}
+
+```
+
+-   **C++11 UDL 字串**  
+
+下列程式碼現在會產生錯誤 C3688︰常值後置字元 'L' 無效; 找不到常值運算子或常值運算子範本 'operator ""L'
+
+
+```cpp
+#define MACRO
+
+#define STRCAT(x, y) x\#\#y
+
+int main(){
+
+    auto *val1 = L"string"MACRO;
+    auto *val2 = L"hello "L"world";
+
+    std::cout << STRCAT(L"hi ", L"there");
+}
+```
+若要修正錯誤，請將程式碼變更為下列內容：
+
+```cpp
+#define MACRO
+
+// Remove ##. Strings are automatically
+// concatenated so they are not needed
+#define STRCAT(x, y) x y
+
+int main(){
+    //Add space after closing quote
+    auto *val1 = L"string" MACRO;
+    auto *val2 = L"hello " L"world";
+
+    std::cout << STRCAT(L"hi ", L"there");
+}
+
+```
+在上述範例中，不再將 `MACRO` 剖析為兩個語彙基元 (字串後面接著巨集)。  現在會將它剖析為單一語彙基元 UDL。  這同樣適用於 L""L""，此字串先前會剖析為 L"" 和 L""，而現在會剖析為 L""L 和 ""。
+
+字串串連規則也會符合規範，這表示 L"a" "b" 相當於 L"ab"。 舊版的 Visual Studio 不接受字元寬度不同之字串的串連。
+
+
+-   **已移除 C++11 空字元**  
+
+下列程式碼現在會產生錯誤 C2137︰空的字元常值
+
+```cpp
+bool check(wchar_t c){
+    return c == L''; //implicit null character
+}
+```
+
+若要修正錯誤，請將程式碼變更為下列內容：
+
+```cpp
+bool check(wchar_t c){
+    return c == L'\0';
+}
+```
+
+-   **無法依值攔截 MFC 例外狀況，因為它們是不可複製的**  
+
+MFC 應用程式中的下列程式碼現在會造成錯誤 C2316︰'D': 無法攔截，因為無法存取或刪除解構函式及/或複製建構函式
+
+```cpp
+struct B {
+public:
+    B();
+private:
+    B(const B &);
+};
+
+struct D : public B {
+};
+
+int main()
+{
+    try
+    {
+    }
+    catch (D) // C2316
+    {
+    }
+}
+
+```
+若要修正程式碼，您可以將 catch 區塊變更為 `catch (const D &)'，但更好的解決方案通常是使用 MFC TRY/CATCH 巨集。
+
+-   **alignof 現在是關鍵字**  
+
+下列程式碼現在會產生錯誤 C2332：'class': 遺漏標記名稱。 若要修正程式碼，您必須將類別重新命名，或者，如果類別正在執行與 alignof 相同的工作，則只需使用新的關鍵字來取代類別。
+```cpp
+class alignof{}
+```
+
+-   **constexpr 現在是關鍵字**  
+
+下列程式碼現在會產生錯誤 C2059︰語法錯誤: ')'。 若要修正程式碼，您必須將任何名為 "constexpr" 的函式或變數名稱重新命名。 
+```cpp
+int constexpr() {return 1;}
+```
+
+-   **可移動的類型不能是 const**  
+
+當函式傳回想要移動的類型時，它的傳回類型不應是 const。
+
+-   **刪除複製建構函式**  
+
+下列程式碼現在會產生 C2280：'S::S(S &&)': 嘗試參考被刪除的函式：
+
+```cpp
+struct S{
+    S(int, int);
+    S(const S&) = delete;
+    S(S&&) = delete;
+};
+
+S s2 = S(2, 3); //C2280
+```
+若要修正錯誤，請針對 S2 使用直接初始化：
+```cpp
+struct S{
+    S(int, int);
+    S(const S&) = delete;
+    S(S&&) = delete;
+};
+
+S s2 = {2,3}; //OK
+```
+
+-   **只有在未擷取任何 lambda 時，才會產生函式指標轉換**  
+
+下列程式碼會在 Visual Studio 2015 中產生 C2664。 
+
+```cpp
+void func(int(*)(int)) {}
+
+int main() {
+
+    func([=](int val) { return val; });
+}
+```
+若要修正錯誤，請從擷取清單中移除 `=`。
+
+-   **涉及轉換運算子的模稜兩可呼叫**  
+
+下列程式碼現在會產生錯誤 C2440：「類型轉換」：無法從 'S2' 轉換成 'S1'：
+
+```cpp 
+struct S1 {
+    S1(int);
+};
+
+struct S2 {
+    operator S1();
+    operator int();
+};
+
+void f(S2 s2)
+{
+
+    (S1)s2;
+
+}
+```
+若要修正錯誤，請明確地呼叫轉換運算子：
+
+```cpp
+void f(S2 s2)
+{
+    //Explicitly call the conversion operator
+    s2.operator S1();
+    // Or
+    S1((int)s2);
+}
+
+```
+
+下列程式碼現在會產生錯誤 C2593：「運算子 =」是模稜兩可的：
+
+```cpp
+struct S1 {};
+
+struct S2 {
+    operator S1&();
+    operator S1() const;
+};
+
+void f(S1 *p, S2 s)
+{
+    *p = s;
+}
+```
+若要修正錯誤，請明確地呼叫轉換運算子：
+```cpp
+void f(S1 *p, S2 s)
+{
+       *p = s.operator S1&();
+}
+```
+
+-   **修正非靜態資料成員初始化 (NSDMI) 中無效的複製初始化**  
+
+下列程式碼現在會產生 C2664 錯誤：'S1::S1(S1 &&)': 無法將引數 1 從 'bool' 轉換為 'const S1 &'：
+```cpp
+struct S1 {
+    explicit S1(bool);
+};
+
+struct S2 {
+    S1 s2 = true; // error
+};
+```
+若要修正錯誤，請使用直接初始化：
+```cpp
+struct S2 {
+S1 s1{true}; // OK
+};
+```
+
+-   **存取 decltype 陳述式內的建構函式**  
+
+下列程式碼現在會產生 C2248：'S::S': 無法存取類別 'S' 中的 Private 成員：
+```cpp
+class S {
+    S();
+public:
+    int i;
+};
+
+class S2 {
+    auto f() -> decltype(S().i);
+};
+```
+若要修正錯誤，請在 S 中針對 S2 新增 friend 宣告：
+```cpp
+class S {
+    S();
+    friend class S2; // Make S2 a friend
+public:
+    int i;
+};
+```
+
+-   **lambda 預設的 ctor 會被隱含刪除**  
+
+下列程式碼現在會產生錯誤 C3497︰您無法建構 Lambda 的執行個體：
+```cpp
+void func(){
+    auto lambda = [](){};    
+ 
+    decltype(lambda) other;
+}
+```
+若要修正錯誤，無須呼叫預設建構函式。 如果 lambda 不會擷取任何項目，則可將它轉換為函式指標。
+
+-   **具有已刪除指派運算子的 Lambda**  
+
+下列程式碼現在會產生錯誤 C2280：
+
+```cpp
+#include <memory>
+#include <type_traits>
+
+template <typename T, typename D>
+std::unique_ptr<T, typename std::remove_reference<D &&>::type> wrap_unique(T *p, D &&d);
+
+void f(int i)
+{
+    auto encodedMsg = wrap_unique<unsigned char>(nullptr, [i](unsigned char *p) {
+    });
+    encodedMsg = std::move(encodedMsg);
+}
+```
+若要修正錯誤，請使用 functor 類別取代 lambda，或者無須使用指派運算子。
+
+-   **嘗試使用已刪除的複製建構函式來移動物件**  
+
+下列程式碼現在會產生錯誤 C2280：'moveable::moveable(const moveable &)': 嘗試參考被刪除的函式
+```cpp
+struct moveable {
+
+    moveable() = default;
+    moveable(moveable&&) = default;
+    moveable(const moveable&) = delete;
+};
+
+struct S {
+    S(moveable && m) :
+        m_m(m)//copy constructor deleted
+    {}
+    moveable m_m;
+};
+
+```
+若要修正錯誤，請改用 std:: move：
+```cpp
+S(moveable && m) :
+    m_m(std::move(m))
+```
+-   **區域類別無法參考稍後在相同函式中定義的其他區域類別**  
+
+下列程式碼現在會產生錯誤 C2079︰'s' 使用未定義的 struct 'main::S2'
+```cpp
+int main()
+{
+    struct S2;
+    struct S1 {
+        void f() {
+            S2 s;
+        }
+    };
+    struct S2 {};
+}
+```
+若要修正錯誤，請將 S2 的定義往上移動：
+```cpp
+int main()
+{
+    struct S2 { //moved up
+    };
+ 
+struct S1 {
+    void f() {
+        S2 s;
+        }
+    };
+}
+```
+
+-   **無法在衍生的 ctor 主體中呼叫受保護的基底 ctor。**  
+
+下列程式碼現在會產生錯誤 C2248：'S1::S1': 無法存取類別 'S1' 中所宣告之受保護的成員
+```cpp
+struct S1 {
+protected:
+    S1();
+};
+
+struct S2 : public S1 {
+    S2() {
+        S1();
+    }
+};
+```
+若要修正錯誤，請在 S2 中，從建構函式中移除對 S1() 的呼叫，接著視需要將其放在另一個函式中。
+
+-   **{} 會防止指標轉換**  
+
+下列程式碼現在會產生 C2439：'S::p': 無法將成員初始化    
+```cpp
+struct S {
+    S() : p({ 0 }) {}
+    void *p;
+};
+```
+若要修正錯誤，請移除 0 周圍的括號，不然可改用 `nullptr`，如下列範例所示：
+```cpp
+struct S {
+    S() : p(nullptr) {}
+    void *p;
+};
+```
+
+-   **含有括號的不正確巨集定義與使用方式**  
+
+下列範例現在會產生錯誤 C2008：';': 未預期會出現在巨集定義中的字元
+```cpp
+#define A; //cause of error
+
+struct S {
+    A(); // error
+};
+```
+若要修正問題，請將第一行變更為 `#define A();`
+
+下列程式碼會產生錯誤 C2059︰語法錯誤: ')'
+```cpp
+
+//notice the space after 'A'
+#define A () ;
+
+struct S {
+    A();
+};
+```
+若要修正程式碼，請移除 A 和 () 之間的空格。
+
+下列程式碼會產生錯誤 C2091︰函式傳回函式：
+
+```cpp
+
+#define DECLARE void f()
+
+struct S {
+    DECLARE();
+};
+```
+若要修正錯誤，請在 S 中移除 DECLARE 之後的括號：`DECLARE;`。
+
+下列程式碼會產生錯誤 C2062︰未預期的類型 'int'
+
+```cpp
+#define A (int)
+
+struct S {
+    A a;
+};
+```
+若要修正問題，請定義 A，如下：
+```cpp
+#define A int
+```
+
+-   **宣告中額外的括弧**  
+
+下列程式碼會產生錯誤 C2062︰未預期的類型 'int'
+```cpp
+
+struct S {
+    int i;
+    (int)j;
+};
+```
+若要修正錯誤，請移除 `j` 的括號。 如果為了清楚起見而需要括號，則使用 typedef。
+
+-   **編譯器產生的建構函式和 __declspec(novtable)**  
+
+在 Visual Studio 2015 中，與 __declspec(dllimport) 結合使用時，在含有虛擬基底類別的抽象類別中，由編譯器所產生的內嵌建構函式可能暴露 __declspec(novtable) 不當用法的可能性會提高。
+
+-   **auto 在 direct-list-initialization 中需要有單一運算式** 下列程式碼現在會產生錯誤 C3518：'testPositions': 在 direct-list-initialization 內容中，'auto' 的類型只能從單一初始設定式運算式推算
+
+```cpp
+auto testPositions{
+    std::tuple<int, int>{13, 33},
+    std::tuple<int, int>{-23, -48},
+    std::tuple<int, int>{38, -12},
+    std::tuple<int, int>{-21, 17}
+};
+```
+若要修正錯誤，一個可能方式是初始化 testPositions，如下：
+
+```cpp
+std::tuple<int, int> testPositions[]{
+    std::tuple<int, int>{13, 33},
+    std::tuple<int, int>{-23, -48},
+    std::tuple<int, int>{38, -12},
+    std::tuple<int, int>{-21, 17}
+};
+```
+
+-   **針對 is_convertible 檢查類型與類型指標**  
+
+下列程式碼現在會導致靜態判斷提示失敗。 
+
+```cpp
+struct B1 {
+private:
+    B1(const B1 &);
+};
+struct B2 : public B1 {};
+struct D : public B2 {};
+
+static_assert(std::is_convertible<D, B2>::value, "fail");
+```
+若要修正錯誤，請變更 static_assert，使它能夠比較 D 和 B2 的指標：
+
+```cpp
+static_assert(std::is_convertible<D*, B2*>::value, "fail");
+```
+
+-   **declspec(novtable) 宣告必須一致**  
+
+declspec 宣告在所有程式庫之間必須一致。 下列程式碼現在會產生一個定義規則 (ODR) 違規：
+
+```cpp
+
+//a.cpp
+class __declspec(dllexport)
+    A {
+public:
+    A();
+    A(const A&);
+    virtual ~A();
+private:
+    int i;
+};
+
+A::A() {}
+A::~A() {}
+A::A(const A&) {}
+
+//b.cpp
+// compile with cl.exe /nologo /LD /EHsc /Osx b.cpp
+#pragma comment(lib, "A")
+class __declspec(dllimport) A
+{
+public: A();
+         A(const A&);
+         virtual ~A();
+private:
+    int i;
+};
+
+struct __declspec(novtable) __declspec(dllexport) B
+    : virtual public A {
+    virtual void f() = 0;
+};
+
+//c.cpp
+#pragma comment(lib, "A")
+#pragma comment(lib, "B")
+class __declspec(dllimport) A
+{
+public:
+    A();
+    A(const A&);
+    virtual ~A();
+private:
+    int i;
+};
+struct  /* __declspec(novtable) */ __declspec(dllimport) B // Error. B needs to be novtable here also.
+    : virtual public A
+{
+    virtual void f() = 0;
+};
+
+struct C : virtual B
+{
+    virtual void f();
+};
+
+void C::f() {}
+C c;
+```
+
+
   
 ###  <a name="VS_Update1"></a> Update 1 的合規性改進  
   
@@ -1509,7 +2256,7 @@ ms.lasthandoff: 04/05/2017
   
     ```  
   
--   `volatile` **成員變數會禁止隱含定義的建構函式與指派運算子**  
+-   `volatile`  **成員變數會禁止隱含定義的建構函式與指派運算子**  
   
      舊版編譯器允許具有 `volatile` 成員變數的類別自動產生預設的複製/移動建構函式及預設的複製/移動指派運算子。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會考慮讓具有揮發性成員變數的類別擁有非 trivial 建構和指派運算子，這樣可防止自動產生這些運算子的預設實作。  當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含 Unonymous 等位之類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。  
   
@@ -2795,3 +3542,4 @@ ms.lasthandoff: 04/05/2017
   
 ## <a name="see-also"></a>另請參閱  
 [Visual Studio 之 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)
+

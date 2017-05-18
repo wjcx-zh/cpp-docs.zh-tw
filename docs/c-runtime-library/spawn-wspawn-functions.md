@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -73,9 +73,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 1794395cd9e6684788458aad424336efbc421c0a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函式
@@ -268,8 +270,3 @@ from SPAWN!
  [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)   
  [_setmbcp](../c-runtime-library/reference/setmbcp.md)   
  [system、_wsystem](../c-runtime-library/reference/system-wsystem.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

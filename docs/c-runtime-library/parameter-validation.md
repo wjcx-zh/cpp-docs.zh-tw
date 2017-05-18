@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 749e734bc4657efff3f0dfaeb735a0ea69375d02
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="parameter-validation"></a>參數驗證
@@ -51,8 +53,3 @@ ms.openlocfilehash: 749e734bc4657efff3f0dfaeb735a0ea69375d02
 ## <a name="see-also"></a>另請參閱  
  [CRT 的安全性功能](../c-runtime-library/security-features-in-the-crt.md)   
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

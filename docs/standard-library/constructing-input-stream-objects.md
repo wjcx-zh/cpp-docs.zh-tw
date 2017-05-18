@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 7e8c664bd6632f480ba53b9dedea914bbc8e4dd7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/24/2017
   
 - [輸入字串資料流建構函式](#vclrfinputstringstreamconstructorsanchor9)  
   
-##  <a name="a-namevclrfinputfilestreamconstructorsanchor8a-input-file-stream-constructors"></a><a name="vclrfinputfilestreamconstructorsanchor8"></a> 輸入檔案資料流建構函式  
+##  <a name="vclrfinputfilestreamconstructorsanchor8"></a> 輸入檔案資料流建構函式  
  下列兩種方式可用來建立輸入檔案資料流：  
   
 -   使用 `void` 引數建構函式，然後呼叫 `open` 成員函式：  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
     ifstream myFile("filename");
 ```  
   
-##  <a name="a-namevclrfinputstringstreamconstructorsanchor9a-input-string-stream-constructors"></a><a name="vclrfinputstringstreamconstructorsanchor9"></a> 輸入字串資料流建構函式  
+##  <a name="vclrfinputstringstreamconstructorsanchor9"></a> 輸入字串資料流建構函式  
  輸入字串資料流建構函式需要您已預先配置並初始化的儲存體位址：  
   
 ```  

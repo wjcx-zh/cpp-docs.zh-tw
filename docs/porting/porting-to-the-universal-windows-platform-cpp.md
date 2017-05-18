@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
@@ -48,7 +50,7 @@ ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
   
  若您有傳統桌面的 Win32 DLL，並想要從 UWP 應用程式加以呼叫，您也可以執行此作業。 使用這類程序可以為現有的傳統 Windows 桌面的 C++ 應用程式或跨平台標準 C++ 程式碼建立 UWP 使用者介面層。 請參閱[做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)。  
   
-##  <a name="a-namebk81storeappa-porting-a-windows-81-store-app-to-the-uwp"></a><a name="BK_81StoreApp"></a> 將 Windows 8.1 市集應用程式移植到 UWP  
+##  <a name="BK_81StoreApp"></a> 將 Windows 8.1 市集應用程式移植到 UWP  
  如果您有 Windows 8.1 市集應用程式，您可以使用此程序，讓它在 UWP 和執行 Windows 10 的任何裝置上運作。  最好先使用 Visual Studio 2017 將專案建置為 Windows 8.1 專案，藉此先排除編譯器和程式庫之變更會引起的任何問題。 完成此作業之後，有兩種方式可將其轉換為 Windows 10 UWP 專案。 最簡單的方式 (如下列程序所述) 就是建立通用 Windows 專案，然後將現有的程式碼複製到其中。 若您是使用 Windows 8.1 桌面及 Windows 8.1 Phone 的通用專案，則您的專案將會從兩個不同的配置的 XAML 開始，但最後則會演變成可以調整成顯示器大小的單一動態配置。  
   
 #### <a name="to-port-a-windows-81-store-app-to-the-uwp"></a>將 Windows 8.1 市集應用程式移植到 UWP  
@@ -92,7 +94,7 @@ ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
   
 11. 針對應用程式支援的每個裝置類型，請在模擬器或實體裝置上執行和偵錯應用程式。 若要執行模擬器，您需要在實體電腦上執行 Visual Studio，而不是虛擬機器。  
   
-##  <a name="a-namebk81componenta-porting-a-windows-81-runtime-component-to-the-uwp"></a><a name="BK_81Component"></a> 將 Windows 8.1 執行階段元件移植到 UWP  
+##  <a name="BK_81Component"></a> 將 Windows 8.1 執行階段元件移植到 UWP  
  如果您的 DLL 或 Windows 執行階段元件已經適用於 Windows 8.1 市集應用程式，您即可使用此程序，取得適用 UWP 和 Windows 10 的元件或 DLL。 基本程序為建立新的專案，並將您的程式碼複製到其中。  
   
 #### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>將 Windows 8.1 執行階段元件移植到 UWP  
@@ -131,9 +133,4 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>另請參閱  
  [Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [開發適用於通用 Windows 平台 (UWP) 的應用程式](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

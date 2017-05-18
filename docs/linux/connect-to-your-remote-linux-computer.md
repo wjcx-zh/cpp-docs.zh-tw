@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: 0c3a944ab5067a465a014c5f63775bbf16ac0b4d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 
@@ -59,8 +61,3 @@ ms.openlocfilehash: 0c3a944ab5067a465a014c5f63775bbf16ac0b4d
 1. 按一下 [連線] 按鈕，嘗試連線到遠端電腦。  如果連線失敗，將會以紅色標出需要變更的輸入方塊。
 
    ![連線管理員錯誤](media/settings_connectionmanagererror.png)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

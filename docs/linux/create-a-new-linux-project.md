@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: e0a92f82413702c639af4a2cd4c4cc62abcce2b2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 
@@ -47,10 +49,5 @@ ms.openlocfilehash: e0a92f82413702c639af4a2cd4c4cc62abcce2b2
    | **主控台應用程式 (Linux)** | 以任何 Linux 電腦為目標的專案，並撰寫範例程式碼以將文字輸出至主控台
    | **空專案 (Linux)**       | 以任何 Linux 電腦為目標的專案，但未撰寫任何範例程式碼
    | **Makefile 專案 (Linux)**    | 以任何使用標準 Makefile 建置系統所建置之 Linux 電腦為目標的專案
-
-
-
-
-<!--HONumber=Feb17_HO4-->
 
 

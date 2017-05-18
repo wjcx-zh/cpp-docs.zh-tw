@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: ca8d4e9a44f4550d02e6d224ce0130d15e81da14
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 02/24/2017
   
 - [輸出字串資料流建構函式](#vclrfoutputstringstreamconstructorsanchor2)  
   
-##  <a name="a-namevclrfoutputfilestreamconstructorsanchor1a-output-file-stream-constructors"></a><a name="vclrfoutputfilestreamconstructorsanchor1"></a> 輸出檔案資料流建構函式  
+##  <a name="vclrfoutputfilestreamconstructorsanchor1"></a> 輸出檔案資料流建構函式  
  您可以使用下列兩種方式之一來建構輸出檔案資料流：  
   
 -   使用預設建構函式，然後呼叫 `open` 成員函式。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 02/24/2017
     ofstream myFile("filename", ios_base::out);
 ```  
   
-##  <a name="a-namevclrfoutputstringstreamconstructorsanchor2a-output-string-stream-constructors"></a><a name="vclrfoutputstringstreamconstructorsanchor2"></a> 輸出字串資料流建構函式  
+##  <a name="vclrfoutputstringstreamconstructorsanchor2"></a> 輸出字串資料流建構函式  
  若要建構輸出字串資料流，您可以透過下列方式使用 `ostringstream`：  
   
 ```  

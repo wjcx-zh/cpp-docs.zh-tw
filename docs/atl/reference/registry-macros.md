@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 3a3abf5ad29b50c7f6708f02fd7c5aa193b3591c
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -54,7 +55,7 @@ ms.lasthandoff: 02/24/2017
  **標頭︰**於 atlcom.h  
   
     
-##  <a name="a-nameatlstaticregistrya--atlstaticregistry"></a><a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
  一個符號，指出您想要在物件，以避免相依於 ATL 物件的註冊程式碼DLL。  
   
 ```
@@ -66,7 +67,7 @@ ms.lasthandoff: 02/24/2017
   
  [!code-cpp[NVC_ATL_EventHandlingSample #&5;](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="a-namedeclarelibida--declarelibid"></a><a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>DECLARE_LIBID  
  提供方法讓取得 ATL *libid*型別程式庫。  
   
 ```
@@ -83,14 +84,14 @@ DECLARE_LIBID( libid )
 ### <a name="example"></a>範例  
  非屬性化精靈產生的 ATL 專案都有使用這個巨集的範例。  
   
-##  <a name="a-namedeclarenoregistrya--declarenoregistry"></a><a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
  使用`DECLARE_NO_REGISTRY`如果您想要避免這個巨集隨即出現的類別的任何預設 ATL 登錄。  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="a-namedeclareregistrya--declareregistry"></a><a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>DECLARE_REGISTRY  
  進入系統登錄中的標準的類別註冊或移除系統登錄。  
   
 ```
@@ -123,7 +124,7 @@ DECLARE_REGISTRY(
   
  當您建立的物件，或控制使用 ATL 加入類別精靈時，精靈會自動實作指令碼為基礎的登錄的支援，並將[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)巨集，以您的檔案。 若不想使用指令碼架構登錄支援，您需要使用這個巨集來取代`DECLARE_REGISTRY`。 `DECLARE_REGISTRY`只會插入到登錄上面所述的五個基本按鍵。 您必須手動撰寫程式碼中插入其他金鑰登錄。  
   
-##  <a name="a-namedeclareregistryappidresourceida--declareregistryappidresourceid"></a><a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
  指定自動註冊所需的資訊*appid*。  
   
 ```
@@ -145,7 +146,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="example"></a>範例  
  加入類別程式碼精靈加入 ATL 專案的類別必須使用這個巨集的範例。  
   
-##  <a name="a-namedeclareregistryresourcea--declareregistryresource"></a><a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
  取得包含登錄檔的具名的資源，並執行指令碼，請輸入在系統登錄的物件，或移除系統登錄。  
   
 ```
@@ -168,7 +169,7 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  如需可置換的參數和指令碼的詳細資訊，請參閱文章[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。  
   
-##  <a name="a-namedeclareregistryresourceida--declareregistryresourceid"></a><a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
  相同[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)不同之處在於它會使用精靈產生**UINT**來識別資源，而不是字串名稱。  
   
 ```

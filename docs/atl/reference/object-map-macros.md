@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: f03ca61c6ab3c550c316b380d34eb5fa4f3b61de
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
    
-##  <a name="a-namedeclareobjectdescriptiona--declareobjectdescription"></a><a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
+##  <a name="declare_object_description"></a>DECLARE_OBJECT_DESCRIPTION  
  可讓您指定的類別物件的文字描述。  
   
 ```
@@ -71,7 +72,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&123;](../../atl/codesnippet/cpp/object-map-macros_1.h)]  
   
-##  <a name="a-nameobjectentryautoa--objectentryauto"></a><a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
+##  <a name="object_entry_auto"></a>OBJECT_ENTRY_AUTO  
  輸入物件對應中的 ATL 物件、 更新登錄，並建立物件的執行個體。  
   
 ```
@@ -102,7 +103,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 |類別層級初始化和清除|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
 
   
-##  <a name="a-nameobjectentrynoncreateableexautoa--objectentrynoncreateableexauto"></a><a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
+##  <a name="object_entry_non_createable_ex_auto"></a>OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO  
  可讓您指定應該註冊並初始化物件，而不應該透過 `CoCreateInstance` 從外部建立。  
   
 ```

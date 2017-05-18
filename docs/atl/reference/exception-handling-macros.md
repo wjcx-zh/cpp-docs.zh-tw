@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
 ms.openlocfilehash: 9d99551d8dbe116c9f4fafeb9602e471839003a7
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -47,7 +48,7 @@ ms.lasthandoff: 02/24/2017
 |[_ATLCATCHALL](#_atlcatchall)|處理相關聯中發生之錯誤的陳述式`_ATLTRY`。|  
 |[_ATLTRY](#_atltry)|標記受保護的程式碼區段，其中可能會發生錯誤。|  
   
-##  <a name="a-nameatlcatcha--atlcatch"></a><a name="_atlcatch"></a>_ATLCATCH  
+##  <a name="_atlcatch"></a>_ATLCATCH  
  處理相關聯中發生之錯誤的陳述式`_ATLTRY`。  
   
 ```
@@ -61,7 +62,7 @@ _ATLCATCH(e)
 ### <a name="remarks"></a>備註  
  搭配`_ATLTRY`。 解析成 c + +[攔截 (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)處理 c + + 例外狀況的指定型別。  
   
-##  <a name="a-nameatlcatchalla--atlcatchall"></a><a name="_atlcatchall"></a>_ATLCATCHALL  
+##  <a name="_atlcatchall"></a>_ATLCATCHALL  
  處理相關聯中發生之錯誤的陳述式`_ATLTRY`。  
   
 ```
@@ -71,7 +72,7 @@ _ATLCATCHALL
 ### <a name="remarks"></a>備註  
  搭配`_ATLTRY`。 解析成 c + + [catch](../../cpp/try-throw-and-catch-statements-cpp.md)處理所有類型的 c + + 例外狀況。  
   
-##  <a name="a-nameatltrya--atltry"></a><a name="_atltry"></a>_ATLTRY  
+##  <a name="_atltry"></a>_ATLTRY  
  標記受保護的程式碼區段，其中可能會發生錯誤。  
   
 ```

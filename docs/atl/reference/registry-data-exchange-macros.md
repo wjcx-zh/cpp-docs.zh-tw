@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: ee3c1d639ee4a6c6bd6cf26a8c59bb1a37a4fa02
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰** atlplus.h  
    
-##  <a name="a-namebeginrdxmapa--beginrdxmap"></a><a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
+##  <a name="begin_rdx_map"></a>BEGIN_RDX_MAP  
  標記登錄資料交換對應的開頭。  
   
 ```
@@ -71,14 +72,14 @@ BEGIN_RDX_MAP
   
  全域函式[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或建立具有相同名稱的成員函式`BEGIN_RDX_MAP`和`END_RDX_MAP`巨集，應該使用，只要您的程式碼需要系統登錄和 RDX 對應所指定的變數之間交換資料。  
   
-##  <a name="a-nameendrdxmapa--endrdxmap"></a><a name="end_rdx_map"></a>END_RDX_MAP  
+##  <a name="end_rdx_map"></a>END_RDX_MAP  
  登錄資料交換對應結束標記。  
   
 ```
 END_RDX_MAP
 ```  
   
-##  <a name="a-namerdxbinarya--rdxbinary"></a><a name="rdx_binary"></a>RDX_BINARY  
+##  <a name="rdx_binary"></a>RDX_BINARY  
  關聯型別為 BYTE 的指定的成員變數中指定的登錄項目。  
   
 ```
@@ -109,7 +110,7 @@ RDX_BINARY(
 ### <a name="remarks"></a>備註  
  這個巨集用於搭配`BEGIN_RDX_MAP`和`END_RDX_MAP`巨集，以指定的登錄項目相關聯的成員變數。 全域函式[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或建立具有相同名稱的成員函式`BEGIN_RDX_MAP`和`END_RDX_MAP`巨集，應該用來執行 RDX 對應中的系統登錄和成員變數之間交換資料。  
   
-##  <a name="a-namerdxcstringtexta--rdxcstringtext"></a><a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
+##  <a name="rdx_cstring_text"></a>RDX_CSTRING_TEXT  
  關聯類型 CString 的指定的成員變數中指定的登錄項目。  
   
 ```
@@ -140,7 +141,7 @@ RDX_CSTRING_TEXT(
 ### <a name="remarks"></a>備註  
  這個巨集用於搭配`BEGIN_RDX_MAP`和`END_RDX_MAP`巨集，以指定的登錄項目相關聯的成員變數。 全域函式[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或建立具有相同名稱的成員函式`BEGIN_RDX_MAP`和`END_RDX_MAP`巨集，應該用來執行 RDX 對應中的系統登錄和成員變數之間交換資料。  
   
-##  <a name="a-namerdxdworda--rdxdword"></a><a name="rdx_dword"></a>RDX_DWORD  
+##  <a name="rdx_dword"></a>RDX_DWORD  
  指定的登錄項目關聯至指定的成員變數的類型為 DWORD。  
   
 ```
@@ -171,7 +172,7 @@ RDX_DWORD(
 ### <a name="remarks"></a>備註  
  這個巨集用於搭配`BEGIN_RDX_MAP`和`END_RDX_MAP`巨集，以指定的登錄項目相關聯的成員變數。 全域函式[RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)，或建立具有相同名稱的成員函式`BEGIN_RDX_MAP`和`END_RDX_MAP`巨集，應該用來執行 RDX 對應中的系統登錄和成員變數之間交換資料。  
   
-##  <a name="a-namerdxtexta--rdxtext"></a><a name="rdx_text"></a>RDX_TEXT  
+##  <a name="rdx_text"></a>RDX_TEXT  
  將指定的登錄項目與指定的成員變數的型別 TCHAR 產生關聯。  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: b6119279234558998fad1f220239a29618c69cc5
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -50,7 +51,7 @@ ms.lasthandoff: 02/24/2017
 |[AfxDaoInit](#afxdaoinit)|初始化 DAO 資料庫引擎。|  
 |[AfxDaoTerm](#afxdaoterm)|終止 DAO 資料庫引擎。|  
   
-##  <a name="a-nameafxdaoinita--afxdaoinit"></a><a name="afxdaoinit"></a>AfxDaoInit  
+##  <a name="afxdaoinit"></a>AfxDaoInit  
  此函式會初始化 DAO 資料庫引擎。  
   
 ```  
@@ -68,7 +69,7 @@ throw(CDaoException*);
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="a-nameafxdaoterma--afxdaoterm"></a><a name="afxdaoterm"></a>AfxDaoTerm  
+##  <a name="afxdaoterm"></a>AfxDaoTerm  
  此函式會終止 DAO 資料庫引擎。  
   
 ```  

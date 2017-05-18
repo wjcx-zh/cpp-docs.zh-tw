@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: 9fb8a907c8052c9816d6b87247e903a63f34a5be
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -53,7 +54,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
 
-##  <a name="a-namebeginsinkmapa--beginsinkmap"></a><a name="begin_sink_map"></a>BEGIN_SINK_MAP  
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP  
  宣告事件接收對應的複合控制項的開頭。  
   
 ```
@@ -70,7 +71,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="remarks"></a>備註  
  CE ATL 實作 ActiveX 事件接收唯一支援的傳回值型別 HRESULT 或 void 從您的事件處理常式方法。任何傳回的值不受支援，且其行為未定義。  
   
-##  <a name="a-nameendsinkmapa--endsinkmap"></a><a name="end_sink_map"></a>END_SINK_MAP  
+##  <a name="end_sink_map"></a>END_SINK_MAP  
  宣告為複合控制項事件接收對應的結尾。  
   
 ```
@@ -83,7 +84,7 @@ END_SINK_MAP()
 ### <a name="remarks"></a>備註  
  CE ATL 實作 ActiveX 事件接收唯一支援的傳回值型別 HRESULT 或 void 從您的事件處理常式方法。任何傳回的值不受支援，且其行為未定義。  
   
-##  <a name="a-namesinkentrya--sinkentry"></a><a name="sink_entry"></a>SINK_ENTRY  
+##  <a name="sink_entry"></a>SINK_ENTRY  
  處理常式函式宣告 ( `fn`) 為指定的事件 ( `dispid`)，來識別控制項的`id`。  
   
 ```
@@ -106,7 +107,7 @@ SINK_ENTRY( id, dispid, fn )
 ### <a name="remarks"></a>備註  
  CE ATL 實作 ActiveX 事件接收唯一支援的傳回值型別 HRESULT 或 void 從您的事件處理常式方法。任何傳回的值不受支援，且其行為未定義。  
   
-##  <a name="a-namesinkentryexa--sinkentryex-and-sinkentryexp"></a><a name="sink_entry_ex"></a>SINK_ENTRY_EX 和 SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX 和 SINK_ENTRY_EX_P
  處理常式函式宣告 ( `fn`) 為指定的事件 ( `dispid`)，分派介面的 ( *iid)*，來識別控制項`id`。  
   
 ```
@@ -136,7 +137,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ### <a name="remarks"></a>備註  
  CE ATL 實作 ActiveX 事件接收唯一支援的傳回值型別 HRESULT 或 void 從您的事件處理常式方法。任何傳回的值不受支援，且其行為未定義。  
   
-##  <a name="a-namesinkentryinfoa--sinkentryinfo-and-sinkentryinfop"></a><a name="sink_entry_info"></a>SINK_ENTRY_INFO 和 SINK_ENTRY_INFO_P  
+##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO 和 SINK_ENTRY_INFO_P  
  使用`SINK_ENTRY_INFO`巨集來提供所需的資訊事件接收對應[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)相關的處理常式函式的路由事件。  
   
 ```

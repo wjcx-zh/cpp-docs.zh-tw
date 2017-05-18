@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: 09ce0024b7a98729b28968fff081ed105b5463e1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 
@@ -55,9 +57,4 @@ ms.openlocfilehash: 09ce0024b7a98729b28968fff081ed105b5463e1
    `sudo service ssh start`
    
    這會啟動服務並在背景中執行，以準備好接受連線。
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

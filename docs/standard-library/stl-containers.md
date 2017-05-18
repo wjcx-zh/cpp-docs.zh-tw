@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
 ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -45,7 +46,7 @@ ms.lasthandoff: 02/24/2017
   
  容器可以分為三類：序列容器、關聯容器和容器配接器。  
   
-##  <a name="a-namesequencecontainersa-sequence-containers"></a><a name="sequence_containers"></a> 序列容器  
+##  <a name="sequence_containers"></a> 序列容器  
  序列容器維護您指定之插入項目的順序。  
   
  `vector` 容器的行為就像陣列，不過可以視需要自動擴增。 它是隨機存取和連續儲存，而且長度有高度彈性。 因此 (和基於其他原因)，`vector` 是大多數應用程式慣用的序列容器。 若不確定要使用何種序列容器，就使用 vector 開始吧！ 如需詳細資訊，請參閱 [vector 類別](../standard-library/vector-class.md)。  

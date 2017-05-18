@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: ffa72acc58e0ac1a387e67e6542abcd466be9640
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -99,7 +100,7 @@ struct CPrintInfo
 ## <a name="requirements"></a>需求  
  **標頭︰** afxext.h  
   
-##  <a name="a-namegetfrompagea--cprintinfogetfrompage"></a><a name="getfrompage"></a>CPrintInfo::GetFromPage  
+##  <a name="getfrompage"></a>CPrintInfo::GetFromPage  
  呼叫此函式以擷取要列印的第一頁的數目。  
   
 ```  
@@ -114,7 +115,7 @@ UINT GetFromPage() const;
 ### <a name="remarks"></a>備註  
  這是使用者在 [列印] 對話方塊中指定的值，而且會儲存在`CPrintDialog`所參考物件`m_pPD`成員。 如果使用者未指定值，預設為文件的第一頁。  
   
-##  <a name="a-namegetmaxpagea--cprintinfogetmaxpage"></a><a name="getmaxpage"></a>CPrintInfo::GetMaxPage  
+##  <a name="getmaxpage"></a>CPrintInfo::GetMaxPage  
  呼叫此函式可擷取文件的最後一頁的數目。  
   
 ```  
@@ -129,7 +130,7 @@ UINT GetMaxPage() const;
 ### <a name="remarks"></a>備註  
  這個值會儲存在`CPrintDialog`所參考物件`m_pPD`成員。  
   
-##  <a name="a-namegetminpagea--cprintinfogetminpage"></a><a name="getminpage"></a>CPrintInfo::GetMinPage  
+##  <a name="getminpage"></a>CPrintInfo::GetMinPage  
  呼叫此函式可擷取文件的第一頁的數目。  
   
 ```  
@@ -144,7 +145,7 @@ UINT GetMinPage() const;
 ### <a name="remarks"></a>備註  
  這個值會儲存在`CPrintDialog`所參考物件`m_pPD`成員。  
   
-##  <a name="a-namegetoffsetpagea--cprintinfogetoffsetpage"></a><a name="getoffsetpage"></a>CPrintInfo::GetOffsetPage  
+##  <a name="getoffsetpage"></a>CPrintInfo::GetOffsetPage  
  呼叫此函式可擷取位移，從 DocObject 用戶端列印多個 DocObject 項目時。  
   
 ```  
@@ -159,7 +160,7 @@ UINT GetOffsetPage() const;
 ### <a name="remarks"></a>備註  
  這個值由參考**m_nOffsetPage**成員。 您的文件的第一頁編號**m_nOffsetPage**值 + 1 時列印成 DocObject 與其他使用中的文件。 **M_nOffsetPage**是有效的成員才**m_bDocObject**值是**TRUE**。  
   
-##  <a name="a-namegettopagea--cprintinfogettopage"></a><a name="gettopage"></a>CPrintInfo::GetToPage  
+##  <a name="gettopage"></a>CPrintInfo::GetToPage  
  呼叫此函式以擷取要列印的最後一頁的數目。  
   
 ```  
@@ -174,13 +175,13 @@ UINT GetToPage() const;
 ### <a name="remarks"></a>備註  
  這是使用者在 [列印] 對話方塊中指定的值，而且會儲存在`CPrintDialog`所參考物件`m_pPD`成員。 如果使用者未指定值，預設為文件的最後一頁。  
   
-##  <a name="a-namembcontinueprintinga--cprintinfombcontinueprinting"></a><a name="m_bcontinueprinting"></a>CPrintInfo::m_bContinuePrinting  
+##  <a name="m_bcontinueprinting"></a>CPrintInfo::m_bContinuePrinting  
  包含旗標，指出架構是否應該繼續列印迴圈。  
   
 ### <a name="remarks"></a>備註  
  如果您要列印時分頁，您可以將這個成員設定**FALSE**在覆寫`CView::OnPrepareDC`一旦達到文件結尾。 您不需要修改此變數，如果您已指定在開始列印工作使用的文件的長度`SetMaxPage`成員函式。 `m_bContinuePrinting`成員是類型的公用變數**BOOL**。  
   
-##  <a name="a-namembdirecta--cprintinfombdirect"></a><a name="m_bdirect"></a>CPrintInfo::m_bDirect  
+##  <a name="m_bdirect"></a>CPrintInfo::m_bDirect  
  架構會將這個成員設定為**TRUE**如果 [列印] 對話方塊中將被略過直接列印。**FALSE**否則。  
   
 ### <a name="remarks"></a>備註  
@@ -188,19 +189,19 @@ UINT GetToPage() const;
   
  您通常不會變更這個成員，但如果您變更，變更之前呼叫[CView::DoPreparePrinting](../../mfc/reference/cview-class.md#doprepareprinting)在覆寫[CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)。  
   
-##  <a name="a-namembdocobjecta--cprintinfombdocobject"></a><a name="m_bdocobject"></a>CPrintInfo::m_bDocObject  
+##  <a name="m_bdocobject"></a>CPrintInfo::m_bDocObject  
  包含旗標，指出是否要列印的文件 DocObject。  
   
 ### <a name="remarks"></a>備註  
  資料成員`m_dwFlags`和**m_nOffsetPage**不正確的除非此旗標是**TRUE**。  
   
-##  <a name="a-namembpreviewa--cprintinfombpreview"></a><a name="m_bpreview"></a>CPrintInfo::m_bPreview  
+##  <a name="m_bpreview"></a>CPrintInfo::m_bPreview  
  包含旗標，指出是否要預覽文件。  
   
 ### <a name="remarks"></a>備註  
  這是由架構取決於哪些執行命令的使用者設定。 [列印] 對話方塊中，不會顯示預覽列印工作。 **M_bPreview**成員是類型的公用變數**BOOL**。  
   
-##  <a name="a-namemdwflagsa--cprintinfomdwflags"></a><a name="m_dwflags"></a>CPrintInfo::m_dwFlags  
+##  <a name="m_dwflags"></a>CPrintInfo::m_dwFlags  
  包含指定 DocObject 列印作業的旗標的組合。  
   
 ### <a name="remarks"></a>備註  
@@ -222,13 +223,13 @@ UINT GetToPage() const;
   
 - **PRINTFLAG_PRINTTOFILE**  
   
-##  <a name="a-namemlpuserdataa--cprintinfomlpuserdata"></a><a name="m_lpuserdata"></a>CPrintInfo::m_lpUserData  
+##  <a name="m_lpuserdata"></a>CPrintInfo::m_lpUserData  
  包含使用者建立的結構的指標。  
   
 ### <a name="remarks"></a>備註  
  您可以使用此儲存不想將儲存在您的檢視類別的特定列印的資料。 **M_lpUserData**成員是類型的公用變數**LPVOID**。  
   
-##  <a name="a-namemncurpagea--cprintinfomncurpage"></a><a name="m_ncurpage"></a>CPrintInfo::m_nCurPage  
+##  <a name="m_ncurpage"></a>CPrintInfo::m_nCurPage  
  包含目前的頁面數目。  
   
 ### <a name="remarks"></a>備註  
@@ -236,40 +237,40 @@ UINT GetToPage() const;
   
  第一次叫用預覽模式時，架構會讀取這個成員來決定一開始應該先預覽文件的哪一頁的值。 您可以設定的值，這個成員的覆寫中`CView::OnPreparePrinting`輸入預覽模式時，維護使用者的文件中的目前位置。 `m_nCurPage`成員是類型的公用變數**UINT**。  
   
-##  <a name="a-namemnjobnumbera--cprintinfomnjobnumber"></a><a name="m_njobnumber"></a>CPrintInfo::m_nJobNumber  
+##  <a name="m_njobnumber"></a>CPrintInfo::m_nJobNumber  
  指出目前的列印工作的作業系統所指派的工作數目。  
   
 ### <a name="remarks"></a>備註  
  這個值可能是**SP_ERROR**如果還沒有列印工作 (也就是如果`CPrintInfo`物件新建構，而且尚未使用列印)，或正在啟動工作時發生錯誤。  
   
-##  <a name="a-namemnnumpreviewpagesa--cprintinfomnnumpreviewpages"></a><a name="m_nnumpreviewpages"></a>CPrintInfo::m_nNumPreviewPages  
+##  <a name="m_nnumpreviewpages"></a>CPrintInfo::m_nNumPreviewPages  
  包含的頁數，顯示在預覽模式。它可以是 1 或 2。  
   
 ### <a name="remarks"></a>備註  
  **M_nNumPreviewPages**成員是類型的公用變數**UINT**。  
   
-##  <a name="a-namemnoffsetpagea--cprintinfomnoffsetpage"></a><a name="m_noffsetpage"></a>CPrintInfo::m_nOffsetPage  
+##  <a name="m_noffsetpage"></a>CPrintInfo::m_nOffsetPage  
  包含在結合的 DocObject 列印工作之前特定 DocObject 的第一頁的頁數。  
   
-##  <a name="a-namemppda--cprintinfomppd"></a><a name="m_ppd"></a>CPrintInfo::m_pPD  
+##  <a name="m_ppd"></a>CPrintInfo::m_pPD  
  包含一個指向`CPrintDialog`物件用來顯示列印工作的 [列印] 對話方塊。  
   
 ### <a name="remarks"></a>備註  
  `m_pPD`成員是宣告為指標的公用變數`CPrintDialog`。  
   
-##  <a name="a-namemrectdrawa--cprintinfomrectdraw"></a><a name="m_rectdraw"></a>CPrintInfo::m_rectDraw  
+##  <a name="m_rectdraw"></a>CPrintInfo::m_rectDraw  
  指定頁面的可用繪圖區域的邏輯座標。  
   
 ### <a name="remarks"></a>備註  
  您可以在覆寫，請參閱此`CView::OnPrint`。 您可以使用這個成員來追蹤您列印頁首、 頁尾等等之後，仍可以使用哪個區域。 **M_rectDraw**成員是類型的公用變數`CRect`。  
   
-##  <a name="a-namemstrpagedesca--cprintinfomstrpagedesc"></a><a name="m_strpagedesc"></a>CPrintInfo::m_strPageDesc  
+##  <a name="m_strpagedesc"></a>CPrintInfo::m_strPageDesc  
  包含格式字串，用來顯示頁碼，在預覽列印中;這個字串包含兩個子字串，另一個用於單一頁面上，一個用於雙頁面顯示每個以 '\n' 字元結尾。  
   
 ### <a name="remarks"></a>備註  
  架構會使用 「 頁面 %u\npages%u-%u\n"做為預設值。 如果您想要以不同格式的頁面數字，指定格式字串中的覆寫`CView::OnPreparePrinting`。 **M_strPageDesc**成員是類型的公用變數`CString`。  
   
-##  <a name="a-namesetmaxpagea--cprintinfosetmaxpage"></a><a name="setmaxpage"></a>CPrintInfo::SetMaxPage  
+##  <a name="setmaxpage"></a>CPrintInfo::SetMaxPage  
  呼叫此函式可指定文件的最後一頁的數目。  
   
 ```  
@@ -286,7 +287,7 @@ void SetMaxPage(UINT nMaxPage);
 ### <a name="example"></a>範例  
   請參閱範例[CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)。  
   
-##  <a name="a-namesetminpagea--cprintinfosetminpage"></a><a name="setminpage"></a>CPrintInfo::SetMinPage  
+##  <a name="setminpage"></a>CPrintInfo::SetMinPage  
  呼叫此函式可指定文件的第一頁的數目。  
   
 ```  

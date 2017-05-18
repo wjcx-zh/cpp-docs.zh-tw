@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -31,9 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 214bca780d3ffe508d9e5e3bd9d78392df2f35b9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="return-statement-c"></a>return 陳述式 (C)
@@ -93,8 +95,3 @@ i = 2147483647, ll = 4611686014132420609
   
 ## <a name="see-also"></a>另請參閱  
  [陳述式](../c-language/statements-c.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,9 +35,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
 ms.openlocfilehash: 48e5d1fe207089733caa5ed9e8ca30c2de21f95f
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -58,7 +59,7 @@ OLE Automation 提供方式呼叫方法，及跨應用程式中存取屬性。 M
 |[DISP_PROPERTY_PARAM](#disp_property_param)|定義 OLE automation 屬性的 Get 和 Set 函式採用參數和名稱。|  
 |[DISP_DEFVALUE](#disp_defvalue)|將現有的屬性設為物件的預設值。|  
   
-##  <a name="a-namedeclaredispatchmapa--declaredispatchmap"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
  如果`CCmdTarget`-衍生的類別，在程式中支援 OLE Automation，類別必須提供公開其方法和屬性的分派對應。  
   
 ```   
@@ -79,7 +80,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>需求  
  **標題:** afxwin.h  
 
-##  <a name="a-namebegindispatchmapa--begindispatchmap"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
  宣告您的分派對應的定義。  
   
 ```  
@@ -99,7 +100,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
 
-##  <a name="a-nameenddispatchmapa--enddispatchmap"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
  結束您的分派對應的定義。  
   
 ```   
@@ -112,7 +113,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
 
-##  <a name="a-namedispfunctiona--dispfunction"></a><a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>DISP_FUNCTION  
  分派對應中定義的 OLE automation 函式。  
   
 ```   
@@ -198,7 +199,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="a-namedisppropertya--dispproperty"></a><a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>DISP_PROPERTY  
  分派對應中定義的 OLE automation 屬性。  
   
 ```   
@@ -245,7 +246,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="a-namedisppropertyexa--disppropertyex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
  用來取得及設定屬性的值，在分派對應的函式定義 OLE automation 屬性和名稱。  
   
 ```   
@@ -281,7 +282,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="a-namedisppropertynotifya--disppropertynotify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
  定義 OLE automation 屬性與通知分派對應中。  
   
 ```   
@@ -332,7 +333,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="a-namedisppropertyparama--disppropertyparam"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
  存取使用不同的屬性會定義**取得**和`Set`成員函式。  
   
 ```   
@@ -387,7 +388,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="a-namedispdefvaluea--dispdefvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
  將現有的屬性設為物件的預設值。  
   
 ```   

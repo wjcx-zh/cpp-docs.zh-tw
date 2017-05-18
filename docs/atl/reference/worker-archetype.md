@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: 046160644cca3bd23e4293a3c52692d2b4c94cd5
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -78,7 +79,7 @@ ms.lasthandoff: 02/24/2017
 ### <a name="requirements"></a>需求  
  **標頭︰** atlutil.h  
   
-## <a name="a-nameexecuteaworkerarchetypeexecute"></a><a name="execute"></a>WorkerArchetype::Execute
+## <a name="execute"></a>WorkerArchetype::Execute
 呼叫來處理工作項目。  
   
   
@@ -100,7 +101,7 @@ void Execute(
  `pOverlapped`  
  指標[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)結構，用來建立的工作項目排入佇列的佇列。  
   
-## <a name="a-nameinitializea-workerarchetypeinitialize"></a><a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a>WorkerArchetype::Initialize
 呼叫以初始化背景工作物件之前的任何要求轉寄給`WorkerArchetype::Execute`。  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -113,7 +114,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>傳回值  
  傳回**TRUE**成功時， **FALSE**失敗。  
   
-## <a name="a-namerequesttypea-workerarchetyperequesttype"></a><a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a>WorkerArchetype::RequestType
 Typedef，可處理的背景工作類別的工作項目類型。  
   
 ```  
@@ -123,7 +124,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>備註  
  此類型必須做的第一個參數`WorkerArchetype::Execute`和必須能夠從 ULONG_PTR 來回轉換。  
   
-## <a name="a-nameterminatea-workerarchetypeterminate"></a><a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a>WorkerArchetype::Terminate
 停止背景工作物件初始化之後的所有要求已都傳遞至呼叫`WorkerArchetype::Execute`)。  
     
 ``` 

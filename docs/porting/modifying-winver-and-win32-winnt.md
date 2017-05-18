@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,9 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 73c02454c535c030846c5a3dfca74818182baafb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="modifying-winver-and-win32winnt"></a>修改 WINVER 和 _WIN32_WINNT
@@ -81,9 +83,4 @@ Visual C++ 不再支援將 Windows 95、Windows 98、Windows ME、Windows NT 或
   
 ## <a name="see-also"></a>另請參閱  
  [之前的產品變更](http://msdn.microsoft.com/en-us/91fa1713-0778-4b6b-82f7-0fe0a23ab1db)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

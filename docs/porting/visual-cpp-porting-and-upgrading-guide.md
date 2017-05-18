@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,9 +30,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
 ms.openlocfilehash: eb4787147a249addbab6c6c2afabf67d2497f78b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
@@ -110,9 +112,4 @@ ms.openlocfilehash: eb4787147a249addbab6c6c2afabf67d2497f78b
   
 ## <a name="see-also"></a>另請參閱  
  [Visual C++](../visual-cpp-in-visual-studio.md)
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

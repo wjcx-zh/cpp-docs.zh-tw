@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 8cdedc5cfac9d49df812ae6fcfcc548201b1edb5
 ms.openlocfilehash: f32926b6efd4ffb9c0541c0574a479c13dac01df
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
    
-##  <a name="a-namedeclarewndclassa--declarewndclass"></a><a name="declare_wnd_class"></a>DECLARE_WND_CLASS  
+##  <a name="declare_wnd_class"></a>DECLARE_WND_CLASS  
  可讓您指定新的視窗類別名稱。 將這個巨集放在 ATL ActiveX 控制項的控制項類別。  
   
 ```
@@ -81,7 +82,7 @@ DECLARE_WND_CLASS( WndClassName )
   
  如需在 ATL 中使用 windows 的詳細資訊，請參閱文章[ATL 視窗類別](../../atl/atl-window-classes.md)。  
 
-##  <a name="a-namedeclarewndclass2a--declarewndclass2"></a><a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2  
+##  <a name="declare_wnd_class2"></a>DECLARE_WND_CLASS2  
  (Visual Studio 2017)類似於 DECLARE_WND_CLASS，具有額外的參數，使用 /permissive-option 編譯時，避免因為相依名稱錯誤。
   
 ```
@@ -99,7 +100,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 如果您使用 /permissive-option，然後 DECLARE_WND_CLASS 會造成編譯錯誤因為有相依的名稱。 DECLARE_WND_CLASS2 會要求您明確地將這個巨集使用中，而且不會在 /permissive-flag 錯誤類別。
 否則這個巨集等同於[DECLARE_WND_CLASS](#declare_wnd_class)。
    
-##  <a name="a-namedeclarewndsuperclassa--declarewndsuperclass"></a><a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS  
+##  <a name="declare_wnd_superclass"></a>DECLARE_WND_SUPERCLASS  
  可讓您指定類別的參數。 將這個巨集放在 ATL ActiveX 控制項的控制項類別。  
   
 ```
@@ -127,7 +128,7 @@ DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
   
  如需在 ATL 中使用 windows 的詳細資訊，請參閱文章[ATL 視窗類別](../../atl/atl-window-classes.md)。  
   
-##  <a name="a-namedeclarewndclassexa--declarewndclassex"></a><a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX  
+##  <a name="declare_wnd_class_ex"></a>DECLARE_WND_CLASS_EX  
  可讓您指定新的視窗類別依據現有視窗類別名稱。 將這個巨集放在 ATL ActiveX 控制項的控制項類別。  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -74,9 +74,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: bdb69f6744c45cacaf4c403967842302f2dc9865
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="sal-annotations"></a>SAL 註釋
@@ -86,8 +88,3 @@ ms.openlocfilehash: bdb69f6744c45cacaf4c403967842302f2dc9865
   
 ## <a name="see-also"></a>另請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

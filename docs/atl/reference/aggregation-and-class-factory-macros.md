@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 4509f7be36e45cf96a938e30ec0f82ec0c9836b5
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰**於 atlcom.h  
    
-##  <a name="a-namedeclareaggregatablea--declareaggregatable"></a><a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
+##  <a name="declare_aggregatable"></a>DECLARE_AGGREGATABLE  
  指定可以彙總您的物件。  
   
 ```
@@ -76,7 +77,7 @@ DECLARE_AGGREGATABLE( x )
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&121;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="a-namedeclareclassfactorya--declareclassfactory"></a><a name="declare_classfactory"></a>DECLARE_CLASSFACTORY  
+##  <a name="declare_classfactory"></a>DECLARE_CLASSFACTORY  
  宣告[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)是 class factory。  
   
 ```
@@ -89,7 +90,7 @@ DECLARE_CLASSFACTORY()
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM&#55;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_2.h)]  
   
-##  <a name="a-nameccomclassfactoryclassa--ccomclassfactory-class"></a><a name="ccomclassfactory_class"></a>CComClassFactory 類別  
+##  <a name="ccomclassfactory_class"></a>CComClassFactory 類別  
  這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面。  
   
 ```
@@ -114,7 +115,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
   
 - [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)使用[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)，這會建構一個[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)物件。  
   
-##  <a name="a-namedeclareclassfactoryexa--declareclassfactoryex"></a><a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX  
+##  <a name="declare_classfactory_ex"></a>DECLARE_CLASSFACTORY_EX  
  宣告`cf`是 class factory。  
   
 ```
@@ -133,7 +134,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM&#8;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]  
   
-##  <a name="a-namedeclareclassfactory2a--declareclassfactory2"></a><a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2  
+##  <a name="declare_classfactory2"></a>DECLARE_CLASSFACTORY2  
  宣告[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)是 class factory。  
   
 ```
@@ -150,7 +151,7 @@ DECLARE_CLASSFACTORY2( lic )
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM&#2;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]  
   
-##  <a name="a-nameccomclassfactory2classa--ccomclassfactory2-class"></a><a name="ccomclassfactory2_class"></a>CComClassFactory2 類別  
+##  <a name="ccomclassfactory2_class"></a>CComClassFactory2 類別  
  這個類別會實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面。  
   
 ```
@@ -183,7 +184,7 @@ class  CComClassFactory2 : public IClassFactory2,
   
  `CComClassFactory2`衍生自兩者**CComClassFactory2Base**和*授權*。 **CComClassFactory2Base**，反而是衍生自**IClassFactory2**和**CComObjectRootEx\< CComGlobalsThreadModel >**。  
   
-##  <a name="a-namedeclareclassfactoryautothreada--declareclassfactoryautothread"></a><a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD  
+##  <a name="declare_classfactory_auto_thread"></a>DECLARE_CLASSFACTORY_AUTO_THREAD  
  宣告[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)是 class factory。  
   
 ```
@@ -198,7 +199,7 @@ DECLARE_CLASSFACTORY_AUTO_THREAD()
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM&#9;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="a-nameccomclassfactoryautothreadclassa--ccomclassfactoryautothread-class"></a><a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread 類別  
+##  <a name="ccomclassfactoryautothread_class"></a>CComClassFactoryAutoThread 類別  
  這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，並讓您在多個 apartment 中建立的物件。  
   
 > [!IMPORTANT]
@@ -216,7 +217,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
   
  [!code-cpp[NVC_ATL_COM&#9;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]  
   
-##  <a name="a-namedeclareclassfactorysingletona--declareclassfactorysingleton"></a><a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON  
+##  <a name="declare_classfactory_singleton"></a>DECLARE_CLASSFACTORY_SINGLETON  
  宣告[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)是 class factory。  
   
 ```
@@ -233,7 +234,7 @@ DECLARE_CLASSFACTORY_SINGLETON( obj )
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM&#10;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="a-nameccomclassfactorysingletonclassa--ccomclassfactorysingleton-class"></a><a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton 類別  
+##  <a name="ccomclassfactorysingleton_class"></a>CComClassFactorySingleton 類別  
  此類別衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md) ，並使用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。  
   
 > [!IMPORTANT]
@@ -255,7 +256,7 @@ class CComClassFactorySingleton : public CComClassFactory
   
  [!code-cpp[NVC_ATL_COM&#10;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]  
   
-##  <a name="a-namedeclaregetcontrollingunknowna--declaregetcontrollingunknown"></a><a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN  
+##  <a name="declare_get_controlling_unknown"></a>DECLARE_GET_CONTROLLING_UNKNOWN  
  虛擬函式宣告為`GetControllingUnknown`。  
   
 ```
@@ -265,7 +266,7 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 ### <a name="remarks"></a>備註  
  將這個巨集新增至您的物件，如果您收到編譯器錯誤訊息指出`GetControllingUnknown`是未定義 (例如，在**CComAggregateCreator**)。  
   
-##  <a name="a-namedeclarenotaggregatablea--declarenotaggregatable"></a><a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE  
+##  <a name="declare_not_aggregatable"></a>DECLARE_NOT_AGGREGATABLE  
  指定您的物件不能彙總。  
   
 ```
@@ -284,7 +285,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&121;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]  
   
-##  <a name="a-namedeclareonlyaggregatablea--declareonlyaggregatable"></a><a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE  
+##  <a name="declare_only_aggregatable"></a>DECLARE_ONLY_AGGREGATABLE  
  指定您的物件必須彙總。  
   
 ```
@@ -303,7 +304,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&125;](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_8.h)]  
   
-##  <a name="a-namedeclarepolyaggregatablea--declarepolyaggregatable"></a><a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE  
+##  <a name="declare_poly_aggregatable"></a>DECLARE_POLY_AGGREGATABLE  
  指定的執行個體**CComPolyObject \< ** *x* ** > **建立您的物件時所建立。  
   
 ```
@@ -321,7 +322,7 @@ DECLARE_POLY_AGGREGATABLE( x )
   
  `DECLARE_POLY_AGGREGATABLE`巨集就會自動宣告物件中如果您使用 ATL 控制項精靈來建立完整的控制權。  
   
-##  <a name="a-namedeclareprotectfinalconstructa--declareprotectfinalconstruct"></a><a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT  
+##  <a name="declare_protect_final_construct"></a>DECLARE_PROTECT_FINAL_CONSTRUCT  
 
  保護您的物件遭到刪除 (期間[FinalConstruct](ccomobjectrootex-class.md#finalconstruct)) 內部彙總的物件會遞增參考計數則遞減計數為 0。  
   
@@ -329,7 +330,7 @@ DECLARE_POLY_AGGREGATABLE( x )
 DECLARE_PROTECT_FINAL_CONSTRUCT()
 ```  
   
-##  <a name="a-namedeclareviewstatusa--declareviewstatus"></a><a name="declare_view_status"></a>DECLARE_VIEW_STATUS  
+##  <a name="declare_view_status"></a>DECLARE_VIEW_STATUS  
  將這個巨集放在 ATL ActiveX 控制項的控制項類別，以指定**forced VIEWSTATUS**旗標的容器。  
   
 ```

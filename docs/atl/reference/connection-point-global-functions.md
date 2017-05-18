@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 8271f512141e4d2cc274d180b31e1ad33bfc354e
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰** atlbase.h  
    
-##  <a name="a-nameatladvisea--atladvise"></a><a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>AtlAdvise  
  建立物件連接點與用戶端接收器之間的連接。  
   
 > [!IMPORTANT]
@@ -88,7 +89,7 @@ HRESULT    AtlAdvise(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&91;](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="a-nameatlunadvisea--atlunadvise"></a><a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>AtlUnadvise  
  終止所建立的連線[AtlAdvise](#atladvise)。  
   
 > [!IMPORTANT]
@@ -117,7 +118,7 @@ HRESULT    AtlUnadvise(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&96;](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="a-nameatladvisesinkmapa--atladvisesinkmap"></a><a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
  呼叫此函式可通知或取消通知在物件接收器事件對應中的所有項目。  
   
 > [!IMPORTANT]

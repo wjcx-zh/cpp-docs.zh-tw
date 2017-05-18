@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: 13823feb06e7fecb2e81a01f3c88e3664de01d30
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -52,7 +53,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>需求  
  **標頭︰** atlsnap.h 
    
-##  <a name="a-namebeginextensionsnapinnodeinfomapa--beginextensionsnapinnodeinfomap"></a><a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="begin_extension_snapin_nodeinfo_map"></a>BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP  
  標記的嵌入式管理單元延伸資料類別對應的開頭。  
   
 ```
@@ -69,7 +70,7 @@ BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP(classname)
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&105;](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="a-namebeginsnapintoolbaridmapa--beginsnapintoolbaridmap"></a><a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
+##  <a name="begin_snapintoolbarid_map"></a>BEGIN_SNAPINTOOLBARID_MAP  
  宣告的嵌入式管理單元物件的工具列識別碼對應的開頭。  
   
 ```
@@ -83,7 +84,7 @@ BEGIN_SNAPINTOOLBARID_MAP(_class)
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&106;](../../atl/codesnippet/cpp/snap-in-object-macros_2.h)]  
   
-##  <a name="a-nameendextensionsnapinnodeinfomapa--endextensionsnapinnodeinfomap"></a><a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
+##  <a name="end_extension_snapin_nodeinfo_map"></a>END_EXTENSION_SNAPIN_NODEINFO_MAP  
  標記嵌入式管理單元延伸資料類別對應的結尾。  
   
 ```
@@ -96,7 +97,7 @@ END_EXTENSION_SNAPIN_NODEINFO_MAP()
 ### <a name="example"></a>範例  
  請參閱範例[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)。  
   
-##  <a name="a-nameendsnapintoolbaridmapa--endsnapintoolbaridmap"></a><a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
+##  <a name="end_snapintoolbarid_map"></a>END_SNAPINTOOLBARID_MAP  
  宣告對應的結尾工具列 ID 嵌入式管理單元的物件。  
   
 ```
@@ -110,7 +111,7 @@ END_SNAPINTOOLBARID_MAP( _class )
 ### <a name="example"></a>範例  
  請參閱範例[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)。  
   
-##  <a name="a-nameextensionsnapindataclassa--extensionsnapindataclass"></a><a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
+##  <a name="extension_snapin_dataclass"></a>EXTENSION_SNAPIN_DATACLASS  
  新增嵌入式管理單元延伸資料類別資料成員**ISnapInItemImpl**-衍生的類別。  
   
 ```
@@ -127,7 +128,7 @@ EXTENSION_SNAPIN_DATACLASS(dataClass )
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing #&105;](../../atl/codesnippet/cpp/snap-in-object-macros_1.h)]  
   
-##  <a name="a-nameextensionsnapinnodeinfoentrya--extensionsnapinnodeinfoentry"></a><a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
+##  <a name="extension_snapin_nodeinfo_entry"></a>EXTENSION_SNAPIN_NODEINFO_ENTRY  
  新增嵌入式管理單元延伸資料的類別圖的嵌入式管理單元延伸資料類別。  
   
 ```
@@ -144,7 +145,7 @@ EXTENSION_SNAPIN_NODEINFO_ENTRY( dataClass )
 ### <a name="example"></a>範例  
  請參閱範例[BEGIN_EXTENSION_SNAPIN_NODEINFO_MAP](#begin_extension_snapin_nodeinfo_map)。  
   
-##  <a name="a-namesnapinmenuida--snapinmenuid"></a><a name="snapinmenuid"></a>SNAPINMENUID  
+##  <a name="snapinmenuid"></a>SNAPINMENUID  
  您可以使用這個巨集來宣告的嵌入式管理單元物件的內容功能表資源。  
   
 ```
@@ -155,7 +156,7 @@ SNAPINMENUID( id )
  `id`  
  [in]識別的嵌入式管理單元物件的內容功能表。  
   
-##  <a name="a-namesnapintoolbaridentrya--snapintoolbaridentry"></a><a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
+##  <a name="snapintoolbarid_entry"></a>SNAPINTOOLBARID_ENTRY  
  您可以使用這個巨集輸入嵌入式管理單元物件工具列識別碼對應的工具列 ID。  
   
 ```

@@ -5,7 +5,7 @@ ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
@@ -26,9 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
 ms.openlocfilehash: db868094a8f10ad05ed6f95bf8a4c8a29a2c941e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 
@@ -65,9 +67,4 @@ ms.openlocfilehash: db868094a8f10ad05ed6f95bf8a4c8a29a2c941e
 * 使用 [其他偵錯工具命令] 項目，可以將特定偵錯工具選項傳遞至 GDB。  例如，您可能想要忽略 SIGILL (不合法指令) 訊號。  您可以使用 **handle** 命令來進行這項作業。  如上所示將下列項目新增至 [其他偵錯工具命令] 項目：
 
   ```handle SIGILL nostop noprint```
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

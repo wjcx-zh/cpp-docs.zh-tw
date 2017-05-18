@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
 ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 02/24/2017
 |[DYNAMIC_DOWNCAST](#dynamic_downcast)|檢查是否為合法轉換時，會轉換類別物件的指標的指標。|  
 |[STATIC_DOWNCAST](#static_downcast)|從一種相關類型的指標類別會轉換成物件的指標。 在偵錯組建中，會導致**ASSERT**如果物件不是 」 的 「 目標型別。|  
   
-##  <a name="a-namedynamicdowncasta--dynamicdowncast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
+##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
  提供便利的類別物件的指標的指標轉型檢查是否為合法的轉型時。  
   
 ```   
@@ -74,7 +75,7 @@ DYNAMIC_DOWNCAST(class, pointer)
   
  如果指標所參考的物件 」 的 「 識別的類別，此巨集會傳回適當的指標。 如果不是合法的轉換，巨集會傳回**NULL**。  
   
-##  <a name="a-namestaticdowncasta--staticdowncast"></a><a name="static_downcast"></a>STATIC_DOWNCAST  
+##  <a name="static_downcast"></a>STATIC_DOWNCAST  
  轉換 （cast) *pobject*指標*class_name*物件。  
   
 ```   

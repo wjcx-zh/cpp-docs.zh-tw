@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -37,9 +37,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 709ba57e3cca392d2440c7ad528125dc31070cac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="crtdbgmapalloc"></a>_CRTDBG_MAP_ALLOC
@@ -49,8 +51,3 @@ ms.openlocfilehash: 709ba57e3cca392d2440c7ad528125dc31070cac
   
 ## <a name="see-also"></a>另請參閱  
  [控制旗標](../c-runtime-library/control-flags.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

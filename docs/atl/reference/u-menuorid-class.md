@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,9 +37,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
 ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -80,14 +81,14 @@ class _U_MENUorID
 ## <a name="requirements"></a>需求  
  **標頭︰** atlwin.h  
   
-##  <a name="a-nameumenuoridmhmenua--umenuoridmhmenu"></a><a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
  類別會保存的值傳遞至其中一個建構函式為公用`HMENU`資料成員。  
   
 ```
 HMENU m_hMenu;
 ```  
   
-##  <a name="a-nameumenuoridumenuorida--umenuoridumenuorid"></a><a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
  **UINT**引數只會轉換成`HMENU`建構函式和結果儲存在該類別的單一資料成員， [m_hMenu](#_u_menuorid__m_hmenu)。  
   
 ```

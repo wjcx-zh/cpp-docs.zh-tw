@@ -26,15 +26,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 9b35cb78e482ad9441939f1d7eae5d214d13ab4f
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
+ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/10/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中的 C++ 編譯器一致性改善
-
+如需更新版本 15.3 的改進功能，請參閱 [Visual Studio 更新版本 15.3 中的錯誤 (Bug) 修正](#update_153)。
 ## <a name="new-language-features"></a>新的語言功能  
 編譯器支援一般化 constexpr 和 NSDMI 彙總，現在完整呈現 C++14 標準中新增的功能。 請注意，編譯器仍缺乏一些來自 C++11 和 C++98 標準的功能。 請參閱 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)，以取得顯示編譯器目前狀態的表格。
 
@@ -193,7 +194,7 @@ int main()
     std::atomic<int> i(0);
     printf("%i\n", i.load());
 ```
-或者先執行靜態轉型來轉換物件，再將其傳遞︰
+或者先執行靜態轉型來轉換物件，再傳遞它︰
 ```cpp  
     struct S {/* as before */} s(0);
     printf("%i\n", static_cast<int>(s))
@@ -278,16 +279,6 @@ static_assert(test2, "PASS2");
 根據 C++ 標準，宣告於匿名命名空間中的類別具有內部連結，因此無法匯出。 在 Visual Studio 2015 和更早的版本中，並未強制執行此規則。 在 Visual Studio 2017 中，會部分強制執行此規則。 下列範例會在 Visual Studio 2017 中引發這個錯誤：「錯誤 C2201: 'const `anonymous namespace'::S1::`vftable'': 必須具有外部連結以便匯出/匯入。」
 
 ```cpp
-namespace
-{
-    struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
-}
-```
-
-### <a name="classes-declared-in-anonymous-namespaces"></a>宣告於匿名命名空間中的類別
-根據 C++ 標準，宣告於匿名命名空間中的類別具有內部連結，因此無法匯出。 在 Visual Studio 2015 和更早的版本中，並未強制執行此規則。 在 Visual Studio 2017 中，會部分強制執行此規則。 下列範例會在 Visual Studio 2017 中引發這個錯誤：「錯誤 C2201: 'const `anonymous namespace'::S1::`vftable'': 必須具有外部連結以便匯出/匯入。」
-
-```cpp
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
@@ -357,6 +348,241 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
        r2->Value;
 }
 ```
+
+## <a name="update_153"></a> Visual Studio 2017 更新版本 15.3
+### <a name="calls-to-deleted-member-templates"></a>對已刪除之成員範本的呼叫
+在舊版的 Visual Studio 中，編譯器在某些情況下針對呼叫已刪除之成員範本的語式錯誤會無法發出錯誤。而可能造成在執行階段當機。 下列程式碼現在會產生 C2280：「'int S<int>::f<int>(void)': 嘗試參考被刪除的函式」:
+```cpp
+template<typename T> 
+struct S { 
+template<typename U> static int f() = delete; 
+}; 
+ 
+void g() 
+{ 
+decltype(S<int>::f<int>()) i; // this should fail 
+}
+```
+若要修正錯誤，請將 i 宣告為 `int`。
+
+### <a name="pre-condition-checks-for-type-traits"></a>類型特性的先決條件檢查
+Visual Studio 2017 更新版本 15.3 改進了類型特性的先決條件檢查，以更嚴格地遵守標準。 此類檢查是可供指派的。 在更新版本 15.3 中，下列程式碼會產生 C2139：
+
+```cpp
+struct S; 
+enum E; 
+ 
+static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
+static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+```
+
+### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>原生至 Managed 封送處理上的新編譯器警告和執行階段檢查
+從 Managed 函式對原生函式的呼叫需要封送處理。 CLR 會執行封送處理，但它並不了解 C++ 語意。 如果您以傳值方式傳遞原生物件，CLR 將會呼叫物件的複製建構函式，或是使用 BitBlt，這可能在執行階段導致未定義的行為。 
+ 
+現在，編譯器如果可以在編譯時期時知道含有已刪除之 copy ctor 的原生物件會在原生和 Managed 界限之間以傳值方式傳遞，就會發出警告。 針對編譯器在編譯時期所不知道的那些情況，它會插入執行階段檢查，如此一來在發生語式錯誤的封送處理時，程式將會立即呼叫 std::terminate。 在更新版本 15.3 中，下列程式碼會產生 C4606：「'A': 跨越原生與管理邊界傳遞引數值需要有效的複製建構函式。 否則不會定義執行階段行為」。
+```cpp
+class A 
+{ 
+public: 
+A() : p_(new int) {} 
+~A() { delete p_; } 
+ 
+A(A const &) = delete; 
+A(A &&rhs) { 
+p_ = rhs.p_; 
+} 
+ 
+private: 
+int *p_; 
+}; 
+ 
+#pragma unmanaged 
+ 
+void f(A a) 
+{ 
+} 
+ 
+#pragma managed 
+ 
+int main() 
+{ 
+    f(A()); // This call from managed to native requires marshalling. The CLR doesn't understand C++ and uses BitBlt, which will result in a double-free later. 
+}
+```
+若要修正錯誤，請移除 `#pragma managed` 指示詞，以將呼叫者標示為原生並避免封送處理。 
+
+### <a name="experimental-api-warning-for-winrt"></a>WinRT 的實驗性 API 警告
+針對實驗和意見反應所發行的 WinRT API 會以 `Windows.Foundation.Metadata.ExperimentalAttribute` 裝飾。 在更新版本 15.3 中，在遇到該屬性時，編譯器會產生警告 C4698。 舊版 Windows SDK 中的一些 API 已經以該屬性裝飾，而對這些 API 的呼叫將會啟動此編譯器警告的觸發。 新版的 Windows SDK 將從所有隨附的型別移除該屬性，但如果您使用舊版的 SDK，則需要針對隨附型別的所有呼叫隱藏這些警告。
+下列程式碼會產生警告 C4698：「'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' 僅供評估之用。後續版本可能會變更或移除此功能」：
+```cpp
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+```
+
+若要停用該警告，請加入 #pragma：
+
+```cpp
+#pragma warning(push) 
+#pragma warning(disable:4698) 
+ 
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() 
+ 
+#pragma warning(pop)
+```
+### <a name="out-of-line-definition-of-a-template-member-function"></a>範本成員函式的程式碼外部定義 
+更新版本 15.3 在遇到範本成員函式的程式碼外部定義 (其並未在類別中宣告) 時會產生錯誤。 下列程式碼現在會產生錯誤 C2039：'f': 不是 'S' 的成員：
+
+```cpp
+struct S {}; 
+ 
+template <typename T> 
+void S::f(T t) {}
+```
+
+若要修正錯誤，請將宣告加入類別：
+
+```cpp
+struct S { 
+    template <typename T> 
+    void f(T t); 
+}; 
+template <typename T> 
+void S::f(T t) {}
+```
+
+### <a name="attempting-to-take-the-address-of-this-pointer"></a>嘗試取得 "this" 指標的位址
+在 C++ 中，'this' 是 X 之型別指標的 prvalue。您無法取得 'this' 的位址，或將它繫結至 lvalue 參考。 在舊版的 Visual Studio 中，編譯器可讓您執行轉型以避開此限制。 在更新版本 15.3 中，編譯器會產生錯誤 C2664。
+
+### <a name="conversion-to-an-inaccessible-base-class"></a>轉換成無法存取的基底類別
+當您嘗試將型別轉換為無法存取的基底類別時，更新版本 15.3 會產生錯誤。 編譯器現在會引發  
+「錯誤 C2243: 'type cast': 從 'D *' 至 'B *' 的轉換已存在，但無法存取」。 下列程式碼是語式錯誤的，且可能在執行階段造成當機。 現在編譯器遇到如下程式碼時會產生 C2243：
+
+```cpp
+#include <memory> 
+ 
+class B { }; 
+class D : B { }; // should be public B { }; 
+ 
+void f() 
+{ 
+   std::unique_ptr<B>(new D()); 
+}
+```
+### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>成員函式的程式碼外部定義不允許預設引數
+範本類別中成員函式的程式碼外部定義不允許預設引數。  編譯器會在 /permissive 下發出警告，以及在 /permissive 下發出硬式錯誤。在舊版的 Visual Studio 中，下列語式錯誤的程式碼可能會造成執行階段當機。 更新版本 15.3 會產生警告 C5034：'A<T>::f': 在程式碼外部定義的類別範本成員不得使用預設引數:
+```cpp
+ 
+template <typename T> 
+struct A { 
+    T f(T t, bool b = false); 
+}; 
+ 
+template <typename T> 
+T A<T>::f(T t, bool b = false) 
+{ 
+... 
+}
+```
+若要修正錯誤，請移除 "= false" 預設引數。 
+
+### <a name="use-of-offsetof-with-compound-member-designator"></a>使用 offsetrof 搭配複合成員指示項
+在更新版本 15.3 中，如果使用 offsetof(T, m) 而其中 m 是「複合成員指示項」，則會在您使用 /Wall 選項編譯時產生警告。 下列程式碼的語式錯誤，且可能在執行階段造成當機。 更新版本 15.3 會產生「警告 C4841: 使用非標準擴充: offseto 中有複合成員指示項」:
+
+```cpp
+  
+struct A { 
+int arr[10]; 
+}; 
+ 
+// warning C4841: non-standard extension used: compound member designator in offsetof 
+constexpr auto off = offsetof(A, arr[2]);
+```
+若要修正程式碼，您可以使用 pragma 來停用警告，或是變更程式碼不要使用 offsetof： 
+
+```cpp
+#pragma warning(push) 
+#pragma warning(disable: 4841) 
+constexpr auto off = offsetof(A, arr[2]); 
+#pragma warning(pop) 
+```
+
+### <a name="using-offsetof-with-static-data-member-or-member-function"></a>使用 offsetof 搭配靜態資料成員或成員函式
+在更新版本 15.3 中，如果使用 offsetof(T, m) 而其中 m 參考靜態資料成員或成員函式，將會導致錯誤。 下列程式碼會產生「錯誤 C4597: 未定義的行為: offsetof 套用至成員函式 'foo'」和「錯誤 C4597: 未定義的行為: offsetof 套用至靜態資料成員 'bar'」：
+```cpp
+ 
+#include <cstddef> 
+ 
+struct A { 
+int foo() { return 10; } 
+static constexpr int bar = 0; 
+}; 
+ 
+constexpr auto off = offsetof(A, foo); 
+Constexpr auto off2 = offsetof(A, bar);
+```
+ 
+此程式碼的語式錯誤，且可能在執行階段造成當機。 若要修正錯誤，請變更程式碼以不再叫用未定義的行為。 這是不可移植且 C++ 標準不允許的程式碼。
+
+### <a name="new-warning-on-declspec-attributes"></a>針對 declspec 屬性的新警告
+在更新版本 15.3 中，如果在外部 "C" 連結規格前套用了 __declspec(…)，編譯器不再會忽略該屬性。 先前，編輯器會忽略該屬性，這可能有執行階段隱含式。 當設定 `/Wall /WX` 選項時，下列程式碼會產生「警告 C4768: 連結規格前的 __declspec 屬性被忽略」：
+
+```cpp
+ 
+__declspec(noinline) extern "C" HRESULT __stdcall
+```
+
+若要修正此警告，請先加入 extern "C"：
+
+```cpp
+extern "C" __declspec(noinline) HRESULT __stdcall
+```
+
+### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和對已刪除之解構函式的呼叫
+在舊版的 Visual Studio 中，在與 'decltype' 相關聯的運算式內容中呼叫已刪除的解構函式時，編譯器並不會偵測到。 在更新版本 15.3 中，下列程式碼會產生「錯誤 C2280:  'A<T>::~A(void)': 嘗試參考被刪除的函式」：
+
+```cpp
+template<typename T> 
+struct A 
+{ 
+   ~A() = delete; 
+}; 
+ 
+template<typename T> 
+auto f() -> A<T>; 
+ 
+template<typename T> 
+auto g(T) -> decltype((f<T>())); 
+ 
+void h() 
+{ 
+   g(42); 
+}
+```
+### <a name="unitialized-const-variables"></a>未初始化的 const 變數
+如果 'const' 變數未初始化，C++ 編譯器將不會發出診斷，而 Visual Studio 2017 RTW 版本會發生回歸。 Visual Studio 2017 Update 1 已修正此回歸。 下列程式碼現在會產生「警告 C4132: 'Value': 應初始化常數物件」：
+
+```cpp
+const int Value;
+```
+若要修正錯誤，請將值指派給 `Value`。
+
+### <a name="empty-declarations"></a>空白宣告
+Visual Studio 2017 更新版本 15.3 現在會針對所有型別的空白宣告發出警告，而不是只針對內建型別。 下列程式碼現在針對四種宣告，都會產生層級 2 C4091 警告：
+
+```cpp
+struct A {};
+template <typename> struct B {};
+enum C { c1, c2, c3 };
+ 
+int;    // warning C4091 : '' : ignored on left of 'int' when no variable is declared
+A;      // warning C4091 : '' : ignored on left of 'main::A' when no variable is declared
+B<int>; // warning C4091 : '' : ignored on left of 'B<int>' when no variable is declared
+C;      // warning C4091 : '' : ignored on left of 'C' when no variable is declared
+```
+
+若要移除警告，只要將空白宣告註解化或移除即可。  在未命名物件可能具有副作用 (例如 RAII) 的情況下，應該提供名稱給它。
+ 
+在 /Wv:18 下會排除警告，且預設會在警告層級 W2 下開啟。
+
 
 ## <a name="see-also"></a>另請參閱  
 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)  

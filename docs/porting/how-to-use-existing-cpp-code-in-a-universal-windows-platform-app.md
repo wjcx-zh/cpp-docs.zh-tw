@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,9 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
 ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
@@ -74,7 +76,7 @@ ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
   
 3.  [將 C++ 程式庫移植到 Windows 執行階段元件](#BK_WinRTComponent)  
   
-##  <a name="a-namebkwin32dlla-using-a-win32-dll-in-a-universal-windows-platform-app"></a><a name="BK_Win32DLL"></a> 在通用 Windows 平台應用程式中使用 Win32 DLL  
+##  <a name="BK_Win32DLL"></a> 在通用 Windows 平台應用程式中使用 Win32 DLL  
  為使安全性和可靠性更佳，通用 Windows 應用程式會在受限制的執行階段環境中執行，因此您不能像在傳統 Windows 桌面應用程式那樣使用任何的原生 DLL。 如果您有 DLL 的原始程式碼，就可以移植程式碼，使其在 UWP 上執行。 首先可變更幾個專案設定和專案檔案中繼資料，將該專案識別為 UWP 專案。 您需要使用 /ZW 選項啟用 C++/CX 來編譯程式庫。 由於與該環境相關聯的控制項更加嚴格，因此 UWP 應用程式中不允許特定 API 呼叫。 請參閱[適用於 Windows 執行階段應用程式和通用 Windows 平台 (UWP) 應用程式的 Win32 和 COM](https://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
   
  下列程序適用於您具有使用 __declspec (dllexport) 公開函式的原生 DLL 案例。  
@@ -209,7 +211,7 @@ ms.openlocfilehash: 4ea001f8f60a771e46a99960c14201cf6afabc99
   
     ```  
   
-##  <a name="a-namebkstaticliba-using-a-native-c-static-library-in-a-uwp-app"></a><a name="BK_StaticLib"></a> 在 UWP 應用程式中使用原生 C++ 靜態程式庫  
+##  <a name="BK_StaticLib"></a> 在 UWP 應用程式中使用原生 C++ 靜態程式庫  
  您可以在 UWP 專案中使用原生 C++ 靜態程式庫，但是要注意一些限制。 請先閱讀這個關於使用 C++/CX 之靜態程式庫的[主題](https://msdn.microsoft.com/library/hh771041.aspx)。 您可以從 UWP 應用程式存取靜態程式庫中的原生程式碼，但不是建議您在這類靜態程式庫中建立公用 ref 型別。 如果您以 /ZW 選項編譯靜態程式庫時，會警告管理員 (實際上偽裝為連結器)：  
   
 ```  
@@ -230,7 +232,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
      請不要在方案總管的 [參考] 節點中新增參考。 此機制僅適用於 Windows 執行階段元件。  
   
-##  <a name="a-namebkwinrtcomponenta-porting-a-c-library-to-a-windows-runtime-component"></a><a name="BK_WinRTComponent"></a> 將 C++ 程式庫移植到 Windows 執行階段元件  
+##  <a name="BK_WinRTComponent"></a> 將 C++ 程式庫移植到 Windows 執行階段元件  
  如果您想要從 UWP 應用程式中使用靜態程式庫中的原生 API，而且有原生程式庫的原始程式碼，您就可以將程式碼移植到 Windows 執行階段元件。 它將不再是靜態程式庫，而是 DLL。 您可以在任何 C++ UWP 應用程式中使用，但與靜態程式庫不同的是，您可以加入 ref 型別與用戶端可在任何 UWP 應用程式程式碼中使用的其他 C++/CX 建構，不論語言為何。 因此，您可以從 C#、Visual Basic 或 JavaScript 存取這些型別。  基本程序是建立 Windows 執行階段元件專案，將靜態程式庫的程式碼複製到其中，然後解決將程式碼從標準的 C++ 編譯移至 /ZW 編譯時引發的任何錯誤。  
   
 #### <a name="to-port-a-c-library-to-a-windows-runtime-component"></a>若要將 C++ 程式庫移植到 Windows 執行階段元件  
@@ -257,8 +259,3 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
 ## <a name="see-also"></a>另請參閱  
  [移植到通用 Windows 平台](../porting/porting-to-the-universal-windows-platform-cpp.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

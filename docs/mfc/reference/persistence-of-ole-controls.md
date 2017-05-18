@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,9 +34,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
 ms.openlocfilehash: b8bbf72a1ea16b37dabf88c5d41a34b1a03ba0d1
+ms.contentlocale: zh-tw
 ms.lasthandoff: 02/24/2017
 
 ---
@@ -66,7 +67,7 @@ OLE 控制項的其中一個功能是屬性持續性 (或序列化)，其允許 
   
  此外，提供 `AfxOleTypeMatchGuid` 全域函式來測試 `TYPEDESC` 與指定 GUID 之間的相符項目。  
   
-##  <a name="a-namepxbloba--pxblob"></a><a name="px_blob"></a>PX_Blob  
+##  <a name="px_blob"></a>PX_Blob  
  呼叫此函式內控制項的`DoPropExchange`来序列化或儲存二進位大型物件 (BLOB) 資料的屬性初始化的成員函式。  
   
 ```  
@@ -111,7 +112,7 @@ hBlobDefault
   
  請注意，`PX_Blob`會配置記憶體，使用 Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API，當載入 BLOB 類型屬性。 您必須負責釋放這個記憶體。 因此，控制項的解構函式應該呼叫[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) BLOB 類型屬性來釋放控制代碼註冊至您的控制項配置任何記憶體。  
   
-##  <a name="a-namepxboola--pxbool"></a><a name="px_bool"></a>PX_Bool  
+##  <a name="px_bool"></a>PX_Bool  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**BOOL**。  
   
 ```  
@@ -154,7 +155,7 @@ bValue  ,
 ### <a name="remarks"></a>備註  
  要讀取或寫入變數所參考的屬性值`bValue`視需要。 如果`bDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxcolora--pxcolor"></a><a name="px_color"></a>PX_Color  
+##  <a name="px_color"></a>PX_Color  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**OLE_COLOR**。  
   
 ```  
@@ -196,7 +197,7 @@ clrDefault);
 ### <a name="remarks"></a>備註  
  要讀取或寫入變數所參考的屬性值`clrValue`視需要。 如果`clrDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxcurrencya--pxcurrency"></a><a name="px_currency"></a>PX_Currency  
+##  <a name="px_currency"></a>PX_Currency  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**貨幣**。  
   
 ```  
@@ -239,7 +240,7 @@ cyValue  ,
 ### <a name="remarks"></a>備註  
  要讀取或寫入變數所參考的屬性值`cyValue`視需要。 如果`cyDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxdatapatha--pxdatapath"></a><a name="px_datapath"></a>PX_DataPath  
+##  <a name="px_datapath"></a>PX_DataPath  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或資料路徑屬性的型別初始化[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)。  
   
 ```  
@@ -275,7 +276,7 @@ pPX,
 ### <a name="remarks"></a>備註  
  資料路徑屬性來實作非同步控制項屬性。 要讀取或寫入變數所參考的屬性值`dataPathProperty`視需要。  
   
-##  <a name="a-namepxdoublea--pxdouble"></a><a name="px_double"></a>PX_Double  
+##  <a name="px_double"></a>PX_Double  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**雙**。  
   
 ```  
@@ -318,7 +319,7 @@ doubleValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`doubleValue`視需要。 如果`doubleDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxfonta--pxfont"></a><a name="px_font"></a>PX_Font  
+##  <a name="px_font"></a>PX_Font  
  呼叫此函式內控制項的`DoPropExchange`来序列化或 type 字型的屬性初始化的成員函式。  
   
 ```  
@@ -364,7 +365,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入`font`、`CFontHolder`參考，適當的時候。 如果`pFontDesc`和`pFontDispAmbient`指定，它們用來初始化屬性的預設值，在需要時。 如果因為任何原因而無法控制序列化程序，會使用這些值。 一般而言，您將傳遞**NULL**的`pFontDesc`環境所傳回的值和`COleControl::AmbientFont`的`pFontDispAmbient`。 請注意，傳回字型物件`COleControl::AmbientFont`必須釋放呼叫**IFontDisp::Release**成員函式。  
   
-##  <a name="a-namepxfloata--pxfloat"></a><a name="px_float"></a>PX_Float  
+##  <a name="px_float"></a>PX_Float  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**float**。  
   
 ```  
@@ -407,7 +408,7 @@ floatValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`floatValue`視需要。 如果`floatDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxiunknowna--pxiunknown"></a><a name="px_iunknown"></a>PX_IUnknown  
+##  <a name="px_iunknown"></a>PX_IUnknown  
  呼叫此函式內控制項的`DoPropExchange`要序列化或初始化物件，而所表示的屬性成員函式**IUnknown**-衍生的介面。  
   
 ```  
@@ -449,7 +450,7 @@ pUnkDefault
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考*pUnk*視需要。 如果`pUnkDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxlonga--pxlong"></a><a name="px_long"></a>PX_Long  
+##  <a name="px_long"></a>PX_Long  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**長**。  
   
 ```  
@@ -492,7 +493,7 @@ lValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`lValue`視需要。 如果`lDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxpicturea--pxpicture"></a><a name="px_picture"></a>PX_Picture  
+##  <a name="px_picture"></a>PX_Picture  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或初始化控制項的圖片屬性。  
   
 ```  
@@ -535,7 +536,7 @@ pict  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`pict`視需要。 如果`pictDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxshorta--pxshort"></a><a name="px_short"></a>PX_Short  
+##  <a name="px_short"></a>PX_Short  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**簡短**。  
   
 ```  
@@ -578,7 +579,7 @@ sValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`sValue`視需要。 如果`sDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxulonga--pxulong"></a><a name="px_ulong"></a>PX_ULong  
+##  <a name="px_ulong"></a>PX_ULong  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**ULONG**。  
   
 ```  
@@ -621,7 +622,7 @@ ulValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`ulValue`視需要。 如果`ulDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxushorta--pxushort"></a><a name="px_ushort"></a>PX_UShort  
+##  <a name="px_ushort"></a>PX_UShort  
  呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化`unsigned`**簡短**。  
   
 ```  
@@ -664,7 +665,7 @@ usValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考*usValue*視需要。 如果*usDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxstringa--pxstring"></a><a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>PXstring  
  呼叫此函式內控制項的**DoPropExchange**来序列化或初始化字元字串屬性的成員函式。  
   
 ```  
@@ -707,7 +708,7 @@ strValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`strValue`視需要。 如果`strDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
   
-##  <a name="a-namepxvbxfontconverta--pxvbxfontconvert"></a><a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
+##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
  呼叫此函式內控制項的`DoPropExchange`成員函式來轉換 VBX 控制項的字型相關屬性來初始化的字型屬性。  
   
 ```  

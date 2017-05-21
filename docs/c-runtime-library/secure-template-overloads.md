@@ -1,101 +1,122 @@
 ---
 title: "安全範本多載 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES"
-  - "_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT"
-  - "安全範本多載"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES
+- _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
+- secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 安全範本多載
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
+ms.openlocfilehash: 507270783542ca0f76632c180b23330653b0018f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 04/24/2017
 
-許多 CRT 函式已被取代而建議使用較新，安全性增強版本 \(例如， `strcpy_s` 是 `strcpy`的更安全的取代\)。  CRT 提供範本多載幫助減輕較安全的變數轉換。  
+---
+# <a name="secure-template-overloads"></a>安全範本多載
+Microsoft 已取代許多 C 執行階段程式庫 (CRT) 函數，並改為使用能增強安全性的版本。 例如，使用較安全的 `strcpy_s` 來取代 `strcpy`。 已被取代的函數是安全性錯誤的常見來源，因為它們並無法防止能覆寫記憶體的作業。 根據預設，編譯器會在您使用這些函數時產生取代警告。 CRT 針對這些函數提供 C++ 範本多載，來讓使用者能更輕鬆地轉換至較安全的版本。  
   
- 例如，因為 `strcpy` 已被取代，此程式碼會產生警告:  
+例如，此程式碼片段會產生警告，因為 `strcpy` 已被取代：  
   
- `char szBuf[10];`  
+```cpp  
+char szBuf[10];  
+strcpy(szBuf, "test"); // warning: deprecated  
+```
   
- `strcpy(szBuf, "test"); // warning: deprecated`  
+取代警告的目的是要讓您知道您的程式碼可能不安全。 如果您已確定程式碼無法覆寫記憶體，則會有幾個選擇。 您可以選擇忽略該警告、在 include 陳述式之前定義符號 `_CRT_SECURE_NO_WARNINGS` 來使 CRT 標頭隱藏警告，或是更新程式碼以使用 `strcpy_s`：  
   
- 您可以忽略警告。  定義 `_CRT_SECURE_NO_WARNINGS`符號以隱藏警告或使用 `strcpy_s`以更新程式碼:  
+```cpp  
+char szBuf[10];  
+strcpy_s(szBuf, 10, "test"); // security-enhanced _s function  
+```
   
- `char szBuf[10];`  
+範本多載能提供其他選擇。 如果您將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 1，會啟用標準 CRT 函數的範本多載以自動呼叫較安全的版本。 如果 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 為 1，您將不必對程式碼做出任何變更。 其幕後作業為將對 `strcpy` 的呼叫變更為對 `strcpy_s` 的呼叫，同時自動提供大小引數。  
   
- `strcpy_s(szBuf, 10, "test"); // security-enhanced _s function`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1  
   
- 範本多載提供其他選項。  定義 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 為 1 啟用自動呼叫更安全的變數標準的 CRT 多載函式範本。  如果 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 為 1，則對程式碼的變更不是必要的。  在幕後，對 `strcpy` 的呼叫會變更為呼叫 `strcpy_s` 的方式與自動提供的大小引數。  
+// ...  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1`  
+char szBuf[10];  
+strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")  
+```  
   
- `...`  
-  
- `char szBuf[10];`  
-  
- `strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")`  
-  
- `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 不會影響使用計算的函式，例如 `strncpy`。  若要啟用計數函式樣板的多載，請將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定義為 1。  不過，在進行設定之前，因此請確定您的程式碼會將字元計數，而非緩衝區的大小 \(此為一個常見錯誤\) 。  此外，如果呼叫安全變數，則在函式呼叫後明確地將 null 結束字元在緩衝區結尾的程式碼是不必要的。  如果您需要攔截行為，請參閱 [\_TRUNCATE](../c-runtime-library/truncate.md)。  
+巨集 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 並不會影響採用計數的函數 (例如 `strncpy`)。 若要針對 Count 函數啟用範本多載，請將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定義為 1。 不過，在這麼做之前，請確定您的程式碼是傳遞字元的計數，而非緩衝區的大小 (這是一個常見的錯誤)。 此外，在呼叫安全版本的情況下，於函數呼叫後在緩衝區末端明確寫入 null 結束字元的程式碼是不必要的。 如果您需要截斷行為，請參閱 [_TRUNCATE](../c-runtime-library/truncate.md)。  
   
 > [!NOTE]
->  巨集 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 要求 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 也會定義為 1。  如果 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 已定義，在 1 和 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 被定義為 0，應用程式不會執行任何範本多載。  
+>  巨集 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 也需要將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 1。 如果 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 定義為 1，且 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 0，應用程式將不會執行任何範本多載。  
   
- 定義 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 到 1 可加強 Variant \(結尾為「\_s 的」的範本\) 多載。  在這種情況下，否則，如果 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 為 1，則一小變更必須對原始程式碼:  
+當您將 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 定義為 1 時，會啟用安全版本 (名稱結尾為 "_s") 的範本多載。 在此情況下，如果 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 為 1，便必須對原始程式碼做出一項小變更：  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1  
   
- `...`  
+// ...  
   
- `char szBuf[10];`  
+char szBuf[10];  
+strcpy_s(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")  
+```  
   
- `strcpy_s(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")`  
+ 只有函數的名稱需要變更 (加入 "_s")，範本多載會負責提供大小引數。  
   
- 需要變更函式的名稱 \(將「\_s」\);範本多載負責提供大小引數。  
+ 根據預設，`_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 和 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 會定義為 0 (已停用)，且 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 會定義為 1 (已啟用)。  
   
- 根據預設， `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 和 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` 被定義為0 \(停用\) ，而且 `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` 是定義為 1 \(啟用\)。  
+ 請注意，這些範本多載僅適用於靜態陣列。 動態配置的緩衝區需要進行其他的原始程式碼變更。 讓我們重新造訪上述的範例：  
   
- 請注意這些範本多載為靜態陣列才有作用。  動態配置的緩衝區需要額外的原始程式碼變更。  再次存取上述範例:  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES 1`  
+// ...  
   
- `...`  
+char *szBuf = (char*)malloc(10);  
+strcpy(szBuf, "test"); // still deprecated; you have to change it to  
+                       // strcpy_s(szBuf, 10, "test");  
+```  
   
- `char *szBuf = (char*)malloc(10);`  
+ 以及這個範例：  
   
- `strcpy(szBuf, "test"); // still deprecated; have to change to`  
+```cpp  
+#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1  
   
- `// strcpy_s(szBuf, 10, "test");`  
+// ...  
   
- 和這段程式碼：  
+char *szBuf = (char*)malloc(10);  
+strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to  
+                         // strcpy_s(szBuf, 10, "test");  
+```  
   
- `#define _CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES 1`  
-  
- `...`  
-  
- `char *szBuf = (char*)malloc(10);`  
-  
- `strcpy_s(szBuf, "test"); // doesn't compile; have to change to`  
-  
- `// strcpy_s(szBuf, 10, "test");`  
-  
-## 請參閱  
- [CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)   
+## <a name="see-also"></a>另請參閱  
+ [CRT 的安全性功能](../c-runtime-library/security-features-in-the-crt.md)   
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

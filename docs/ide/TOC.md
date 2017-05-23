@@ -21,6 +21,8 @@
 ### [說明檔 (HTML 說明)](help-files-html-help.md)
 ### [說明檔 (WinHelp)](help-files-winhelp.md)
 ### [提示檔案](hint-files.md)
+### [屬性頁面 XML 檔案](property-page-xml-files.md)
+### [.vcxproj 和.props 檔案結構](vcxproj-file-structure.md)
 ## [使用應用程式精靈建立桌面專案](creating-desktop-projects-by-using-application-wizards.md)
 ### [其他語言的精靈支援](wizard-support-for-other-languages.md)
 ### [建立自訂精靈](creating-a-custom-wizard.md)

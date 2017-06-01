@@ -75,7 +75,9 @@ ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 類別
-`CMFCStatusBar`類別會實作類似於狀態列`CStatusBar`類別。 不過， `CMFCStatusBar` 類別具有 `CStatusBar` 類別所未提供的功能，例如能夠顯示影像、動畫和進度列，而且能夠回應滑鼠按兩下。  
+`CMFCStatusBar`類別會實作類似於狀態列`CStatusBar`類別。 不過， `CMFCStatusBar` 類別具有 `CStatusBar` 類別所未提供的功能，例如能夠顯示影像、動畫和進度列，而且能夠回應滑鼠按兩下。 
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]   
   
 ## <a name="syntax"></a>語法  
   
@@ -171,7 +173,7 @@ class CMFCStatusBar : public CPane
  **標頭︰** afxstatusbar.h  
   
 ##  <a name="calcfixedlayout"></a>CMFCStatusBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -188,7 +190,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="commandtoindex"></a>CMFCStatusBar::CommandToIndex  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int CommandToIndex(UINT nIDFind) const;  
@@ -202,7 +204,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="create"></a>CMFCStatusBar::Create  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL Create(
@@ -221,7 +223,7 @@ BOOL Create(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="createex"></a>CMFCStatusBar::CreateEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL CreateEx(
@@ -242,7 +244,7 @@ BOOL CreateEx(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="doesallowdyninsertbefore"></a>CMFCStatusBar::DoesAllowDynInsertBefore  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
@@ -316,7 +318,7 @@ int GetCount() const;
  在狀態列中的窗格數目。  
   
 ##  <a name="getdrawextendedarea"></a>CMFCStatusBar::GetDrawExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL GetDrawExtendedArea() const;  
@@ -327,7 +329,7 @@ BOOL GetDrawExtendedArea() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getextendedarea"></a>CMFCStatusBar::GetExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL GetExtendedArea(CRect& rect) const;  
@@ -341,7 +343,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getitemid"></a>CMFCStatusBar::GetItemID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT GetItemID(int nIndex) const;  
@@ -355,7 +357,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getitemrect"></a>CMFCStatusBar::GetItemRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetItemRect(
@@ -370,7 +372,7 @@ void GetItemRect(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getpaneinfo"></a>CMFCStatusBar::GetPaneInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPaneInfo(
@@ -389,7 +391,7 @@ void GetPaneInfo(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getpaneprogress"></a>CMFCStatusBar::GetPaneProgress  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 long GetPaneProgress(int nIndex) const;  
@@ -403,7 +405,7 @@ long GetPaneProgress(int nIndex) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getpanestyle"></a>CMFCStatusBar::GetPaneStyle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT GetPaneStyle(int nIndex) const;  
@@ -417,7 +419,7 @@ UINT GetPaneStyle(int nIndex) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getpanetext"></a>CMFCStatusBar::GetPaneText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPaneText(
@@ -499,7 +501,7 @@ virtual void OnDrawPane(
  覆寫這個方法在`CMFCStatusBar`-衍生類別，即可自訂窗格的外觀。  
   
 ##  <a name="precreatewindow"></a>CMFCStatusBar::PreCreateWindow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -513,7 +515,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setdrawextendedarea"></a>CMFCStatusBar::SetDrawExtendedArea  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetDrawExtendedArea(BOOL bSet = TRUE);
@@ -525,7 +527,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setindicators"></a>CMFCStatusBar::SetIndicators  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL SetIndicators(
@@ -627,7 +629,7 @@ void SetPaneIcon(
  如果沒有任何執行中的動畫， [CMFCStatusBar::SetPaneAnimation](#setpaneanimation)已設定，動畫將會停止。  
   
 ##  <a name="setpaneinfo"></a>CMFCStatusBar::SetPaneInfo  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPaneInfo(
@@ -671,7 +673,7 @@ void SetPaneProgress(
  若要使用此函式指定的窗格，您必須呼叫[CMFCStatusBar::EnablePaneProgressBar](#enablepaneprogressbar)第一次。  
   
 ##  <a name="setpanestyle"></a>CMFCStatusBar::SetPaneStyle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetPaneStyle(
@@ -686,7 +688,7 @@ void SetPaneStyle(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setpanetext"></a>CMFCStatusBar::SetPaneText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL SetPaneText(

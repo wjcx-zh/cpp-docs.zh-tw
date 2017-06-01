@@ -97,6 +97,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 類別
 實作包含一組功能區項目的面板。 繪製面板時，會在指定的面板大小下，顯示盡可能多的項目。  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+ 
   
 ## <a name="syntax"></a>語法  
   
@@ -450,7 +453,7 @@ LPCTSTR GetName() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getparentbutton"></a>CMFCRibbonPanel::GetParentButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonBaseElement* GetParentButton() const;  
@@ -471,7 +474,7 @@ CMFCRibbonCategory* GetParentCategory() const;
  包含此功能區面板的功能區類別指標。  
   
 ##  <a name="getparentmenubar"></a>CMFCRibbonPanel::GetParentMenuBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
@@ -696,7 +699,7 @@ virtual BOOL IsMainPanel() const;
  主要的功能區面板會顯示在使用者選取的應用程式按鈕時。  
   
 ##  <a name="ismenumode"></a>CMFCRibbonPanel::IsMenuMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsMenuMode() const;  
@@ -707,7 +710,7 @@ BOOL IsMenuMode() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onkey"></a>CMFCRibbonPanel::OnKey  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnKey(UINT nChar);

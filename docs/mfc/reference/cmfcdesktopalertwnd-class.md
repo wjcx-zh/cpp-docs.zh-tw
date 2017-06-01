@@ -62,7 +62,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd`類別實作來通知使用者有關的事件在螢幕上會出現非強制回應對話方塊的功能。  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -288,7 +289,7 @@ BOOL HasSmallCaption() const;
  您可以使用這個方法來判斷快顯視窗是否有小型的標題或一般大小標題。 根據預設，小標題是 7 個像素高。 您可以藉由呼叫 Windows API 函式來取得一般大小標題的高度`GetSystemMetrics(SM_CYCAPTION)`。  
   
 ##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeShow(CPoint&);
@@ -319,7 +320,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
  如果您想要在使用者按一下 [警示] 視窗中的連結時收到通知，請覆寫這個方法在衍生類別中。  
   
 ##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnCommand(
@@ -336,7 +337,7 @@ virtual BOOL OnCommand(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -348,7 +349,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL ProcessCommand(HWND hwnd);
@@ -442,7 +443,7 @@ void SetTransparency(BYTE nTransparency);
  呼叫此函式可設定的快顯視窗的透明度。  
   
 ##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetDialogSize();

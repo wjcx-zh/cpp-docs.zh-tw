@@ -56,6 +56,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl 類別
 擴充工具提示實作根據[CToolTipCtrl 類別](../../mfc/reference/ctooltipctrl-class.md)。 根據 `CMFCToolTipCtrl` 類別的工具提示可以顯示圖示、標籤和描述。 您可以使用漸層填滿、自訂文字和框線色彩、粗體文字、圓角或氣球樣式，自訂其視覺外觀。  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>語法  
   
@@ -165,7 +167,7 @@ theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
  **標頭︰** afxtooltipctrl.h  
   
 ##  <a name="cmfctooltipctrl"></a>CMFCToolTipCtrl::CMFCToolTipCtrl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCToolTipCtrl(CMFCToolTipInfo* pParams = NULL);
@@ -220,7 +222,7 @@ virtual void OnDrawBorder(
  若要自訂的工具提示框線外觀的衍生類別中，這個方法會覆寫。  
   
 ##  <a name="ondrawdescription"></a>CMFCToolTipCtrl::OnDrawDescription  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize OnDrawDescription(
@@ -359,7 +361,7 @@ virtual void SetDescription(const CString strDesrciption);
  描述文字會顯示在分隔符號下方的工具提示。  
   
 ##  <a name="setfixedwidth"></a>CMFCToolTipCtrl::SetFixedWidth  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetFixedWidth(
@@ -374,7 +376,7 @@ void SetFixedWidth(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="sethotribbonbutton"></a>CMFCToolTipCtrl::SetHotRibbonButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
@@ -386,7 +388,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setlocation"></a>CMFCToolTipCtrl::SetLocation  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetLocation(CPoint pt);

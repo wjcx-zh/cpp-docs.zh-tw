@@ -59,7 +59,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。  
-  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -157,7 +158,7 @@ CMFCAutoHideButton* AddAutoHideWindow(
 - `CBRS_ALIGN_BOTTOM`  
   
 ##  <a name="allowshowonpanemenu"></a>CMFCAutoHideBar::AllowShowOnPaneMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
@@ -168,7 +169,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="calcfixedlayout"></a>CMFCAutoHideBar::CalcFixedLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -194,7 +195,7 @@ CMFCAutoHideBar();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="create"></a>CMFCAutoHideBar::Create  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL Create(
@@ -255,7 +256,7 @@ int CMFCAutoHideBar::m_nShowAHWndDelay = 400;
  當使用者將滑鼠游標置於`CMFCAutoHideButton`，架構會顯示相關聯的視窗之前，會稍微延遲。 這個參數會決定該延遲，以毫秒為單位的長度。  
   
 ##  <a name="onshowcontrolbarmenu"></a>CMFCAutoHideBar::OnShowControlBarMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnShowControlBarMenu(CPoint);
@@ -299,7 +300,7 @@ virtual void SetActiveInGroup(BOOL bActive);
  請參閱[CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup)。  
   
 ##  <a name="setrecentvisiblestate"></a>CMFCAutoHideBar::SetRecentVisibleState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetRecentVisibleState(BOOL bState);

@@ -62,7 +62,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 具有 Microsoft Outlook [ **巡覽窗格** ] 視覺外觀的索引標籤控制項。  
-  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -290,7 +290,7 @@ int GetBorderSize() const;
  框線的大小，單位為像素。  
   
 ##  <a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetVisiblePageButtons() const;  
@@ -447,7 +447,7 @@ BOOL SetToolbarImageList(
  不應該呼叫這個方法，如果不在 Microsoft Office 2003 模式。 如需詳細資訊，請參閱[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)。  
   
 ##  <a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetVisiblePageButtons(int nVisiblePageButtons);

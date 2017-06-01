@@ -54,6 +54,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 類別
 實作具有可拆式索引標籤之窗格的功能。  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>語法  
   
@@ -173,7 +175,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
  **標頭︰** afxTabbedPane.h  
   
 ##  <a name="detachpane"></a>CTabbedPane::DetachPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL DetachPane(
@@ -208,7 +210,7 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
  根據預設，此選項已停用。  
   
 ##  <a name="floattab"></a>CTabbedPane::FloatTab  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL FloatTab(
@@ -250,7 +252,7 @@ virtual void GetTabArea(
  覆寫這個方法在`CTabbedPane`-衍生的類別，來變更此行為。  
   
 ##  <a name="gettabwnd"></a>CTabbedPane::GetTabWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCTabCtrl* GetTabWnd() const;  
@@ -261,7 +263,7 @@ CMFCTabCtrl* GetTabWnd() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasAutoHideMode() const;  

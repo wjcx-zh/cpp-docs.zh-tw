@@ -86,6 +86,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 類別
 包含快顯功能表的工具列按鈕。  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>語法  
   
@@ -221,7 +222,7 @@ CMFCToolBarMenuButton(
  [!code-cpp[NVC_MFC_WordPad #&9;](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]  
   
 ##  <a name="comparewith"></a>CMFCToolBarMenuButton::CompareWith  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;  
@@ -235,7 +236,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="copyfrom"></a>CMFCToolBarMenuButton::CopyFrom  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -314,7 +315,7 @@ void DrawDocumentIcon(
  這個方法會採用文件圖示，並將它繪製功能表 按鈕，在所指定之區域的中央`rectImage`。  
   
 ##  <a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableQuickCustomize();
@@ -323,7 +324,7 @@ void EnableQuickCustomize();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="hasbutton"></a>CMFCToolBarMenuButton::HasButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasButton() const;  
@@ -334,7 +335,7 @@ virtual BOOL HasButton() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="havehotborder"></a>CMFCToolBarMenuButton::HaveHotBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HaveHotBorder() const;  
@@ -345,7 +346,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isborder"></a>CMFCToolBarMenuButton::IsBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsBorder() const;  
@@ -356,7 +357,7 @@ virtual BOOL IsBorder() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isclickedonmenu"></a>CMFCToolBarMenuButton::IsClickedOnMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsClickedOnMenu() const;  
@@ -367,7 +368,7 @@ BOOL IsClickedOnMenu() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isquickmode"></a>CMFCToolBarMenuButton::IsQuickMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsQuickMode();
@@ -504,7 +505,7 @@ static BOOL m_bAlwaysCallOwnerDraw;
  當這個成員變數設定為`TRUE`，按鈕會一律呼叫[CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage)方法，以在按鈕上顯示影像。 當`m_bAlwaysCallOwnerDraw`是`FALSE`，按鈕本身繪製影像，如果預先定義的映像。 否則，它會呼叫`OnDrawMenuImage`。  
   
 ##  <a name="onaftercreatepopupmenu"></a>CMFCToolBarMenuButton::OnAfterCreatePopupMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnAfterCreatePopupMenu();
@@ -513,7 +514,7 @@ virtual void OnAfterCreatePopupMenu();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onbeforedrag"></a>CMFCToolBarMenuButton::OnBeforeDrag  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnBeforeDrag() const;  
@@ -524,7 +525,7 @@ virtual BOOL OnBeforeDrag() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="oncalculatesize"></a>CMFCToolBarMenuButton::OnCalculateSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -543,7 +544,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="oncancelmode"></a>CMFCToolBarMenuButton::OnCancelMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCancelMode();
@@ -552,7 +553,7 @@ virtual void OnCancelMode();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onchangeparentwnd"></a>CMFCToolBarMenuButton::OnChangeParentWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -564,7 +565,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onclick"></a>CMFCToolBarMenuButton::OnClick  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnClick(
@@ -596,7 +597,7 @@ virtual BOOL OnClickMenuItem();
  若要自訂功能表項目處理，覆寫`OnClickMenuItem`從衍生類別中`CMFCToolBarMenuButton`類別。 您也必須覆寫[CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu)並將需要在衍生類別的執行個體的特殊處理的功能表按鈕。  
   
 ##  <a name="oncontexthelp"></a>CMFCToolBarMenuButton::OnContextHelp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -610,7 +611,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ondraw"></a>CMFCToolBarMenuButton::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(
@@ -637,7 +638,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ondrawoncustomizelist"></a>CMFCToolBarMenuButton::OnDrawOnCustomizeList  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -673,7 +674,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
  當使用者從工具列功能表按鈕開啟下拉式選單，則架構會呼叫此函數。  
   
 ##  <a name="resetimagetodefault"></a>CMFCToolBarMenuButton::ResetImageToDefault  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ResetImageToDefault();
@@ -682,7 +683,7 @@ virtual void ResetImageToDefault();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="savebarstate"></a>CMFCToolBarMenuButton::SaveBarState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SaveBarState();
@@ -692,7 +693,7 @@ virtual void SaveBarState();
  建立工具列按鈕拖放作業的結果時，架構會呼叫這個方法。 這個方法會呼叫[CMFCPopupMenu::SaveState](../../mfc/reference/cmfcpopupmenu-class.md#savestate)方法的最上層的快顯功能表，這會導致重新建立其功能表快顯功能表的 [父] 按鈕。  
   
 ##  <a name="serialize"></a>CMFCToolBarMenuButton::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -759,7 +760,7 @@ void SetMenuPaletteMode(
  在調色盤模式中，所有功能表項目會都顯示為多個資料行的調色盤。 使用指定的資料列數目`nPaletteRows`。  
   
 ##  <a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetMessageWnd(CWnd* pWndMessage);

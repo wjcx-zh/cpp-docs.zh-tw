@@ -410,7 +410,7 @@ int AddPage(LPCTSTR lpszPageLabel);
  新網頁的以零為起始的索引。  
   
 ##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int AddSeparator(int nGroup);
@@ -496,7 +496,7 @@ CMFCTasksPane();
 ```  
   
 ##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void CollapseAllGroups(BOOL bCollapse = TRUE);
@@ -544,7 +544,7 @@ BOOL CollapseGroup(
  摺疊的群組顯示只在群組標題。隱藏的工作清單。  
   
 ##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
@@ -648,7 +648,7 @@ void EnableNavigationToolbar(
  根據預設，此架構不會顯示瀏覽工具列。 如果未顯示 [導覽] 工具列，瀏覽按鈕位於標題的停駐列。  
   
 ##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void EnableOffsetCustomControls(BOOL bEnable);
@@ -797,7 +797,7 @@ int GetHorzMargin() const;
  工作窗格和用戶端區域的邊緣之間的預設間距是 12 個像素。  
   
 ##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetNextPages(CStringList& lstNextPages) const;  
@@ -838,7 +838,7 @@ int GetPagesCount() const;
  在 [工作] 窗格中的分頁數目。  
   
 ##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void GetPreviousPages(CStringList& lstPrevPages) const;  
@@ -850,7 +850,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;  
@@ -966,7 +966,7 @@ int GetTasksHorzOffset() const;
  工作的預設水平位移是 12 個像素。  
   
 ##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksIconHorzOffset() const;  
@@ -977,7 +977,7 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTasksIconVertOffset() const;  
@@ -1001,7 +1001,7 @@ int GetVertMargin() const;
  垂直邊界是工作窗格和工作區邊緣之間的間距。 垂直邊界的預設值為 12 個像素。  
   
 ##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsAccessibilityCompatible();
@@ -1051,7 +1051,7 @@ BOOL IsForwardButtonEnabled() const;
  [下一頁] 按鈕可讓您向前巡覽歷程記錄中的工作頁面。  
   
 ##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsGroupCollapseEnabled() const;  
@@ -1082,7 +1082,7 @@ BOOL IsNavigationToolbarEnabled() const;
  `TRUE`如果未啟用瀏覽工具列。否則， `FALSE`。  
   
 ##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsToolBox() const;  
@@ -1113,7 +1113,7 @@ BOOL IsWrapTasksEnabled() const;
  `TRUE`如果工作字串換行。，否則， `FALSE`。  
   
 ##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL LoadState(
@@ -1142,7 +1142,7 @@ virtual void OnActivateTasksPanePage();
  覆寫這個方法在衍生類別到自訂工作窗格 頁面的外觀。  
   
 ##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCancel();
@@ -1180,7 +1180,7 @@ virtual void OnClickTask(
  在衍生類別時按下工作時執行自訂程式碼中的，這個方法會覆寫。  
   
 ##  <a name="onok"></a>CMFCTasksPane::OnOK  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnOK();
@@ -1225,7 +1225,7 @@ virtual void OnPressHomeButton();
  覆寫這個方法在衍生類別來執行自訂程式碼，當使用者按一下主瀏覽 按鈕。  
   
 ##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnPressOtherButton(
@@ -1240,7 +1240,7 @@ virtual void OnPressOtherButton(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
@@ -1254,7 +1254,7 @@ virtual BOOL OnSetAccData(long lVal);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -1269,7 +1269,7 @@ virtual void OnUpdateCmdUI(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1283,7 +1283,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void RecalcLayout(BOOL bRedraw = TRUE);
@@ -1377,7 +1377,7 @@ BOOL RemoveTask(
  `TRUE`如果函式成功。`FALSE`如果`nGroup`或`nTask`不正確。  
   
 ##  <a name="savestate"></a>CMFCTasksPane::SaveState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL SaveState(
@@ -1396,7 +1396,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="serialize"></a>CMFCTasksPane::Serialize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void Serialize(CArchive& ar);
@@ -1638,7 +1638,7 @@ void SetTasksHorzOffset(int n = -1);
  預設的水平位移是 12 個像素。  
   
 ##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetTasksIconHorzOffset(int n = -1);
@@ -1650,7 +1650,7 @@ void SetTasksIconHorzOffset(int n = -1);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetTasksIconVertOffset(int n = -1);
@@ -1736,7 +1736,7 @@ BOOL SetWindowHeight(
  呼叫[CMFCTasksPane::AddWindow](#addwindow)新增工作 視窗的控制項。  
   
 ##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ShowCommandMessageString(UINT uiCmdId);

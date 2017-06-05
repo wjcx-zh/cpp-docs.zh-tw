@@ -100,6 +100,7 @@ ms.lasthandoff: 03/31/2017
 # <a name="cwinappex-class"></a>CWinAppEx 類別
 `CWinAppEx`處理應用程式狀態、 儲存狀態至登錄、 從登錄載入狀態、 初始化應用程式管理員和提供連結，這些相同的應用程式管理員。  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -321,7 +322,7 @@ BOOL EnableUserTools(
  如需有關使用者工具，以及如何將它們合併到您的應用程式的詳細資訊，請參閱[使用者定義工具](../../mfc/user-defined-tools.md)。  
   
 ##  <a name="exitinstance"></a>CWinAppEx::ExitInstance  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int ExitInstance();
@@ -373,7 +374,7 @@ CContextMenuManager* GetContextMenuManager();
  如果未初始化 CContextMenuManager 物件，此函數會呼叫[CWinAppEx::InitContextMenuManager](#initcontextmenumanager)它傳回的指標之前。  
   
 ##  <a name="getdataversion"></a>CWinAppEx::GetDataVersion  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetDataVersion() const;  
@@ -762,7 +763,7 @@ BOOL InitTooltipManager();
  如果您的應用程式已取得工具提示管理員，而且您呼叫`InitTooltipManager`，您的應用程式[ASSERT](diagnostic-services.md#assert)失敗。 因此，您不應該呼叫`InitTooltipManager`如果您建立`CTooltipManager`直接物件。 如果您不想要使用自訂`CTooltipManager`，您應該使用`GetTooltipManager`建立`CTooltipManager`物件。  
   
 ##  <a name="isresourcesmartupdate"></a>CWinAppEx::IsResourceSmartUpdate  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsResourceSmartUpdate() const;  
@@ -936,7 +937,7 @@ virtual BOOL OnViewDoubleClick(
  為了支援自訂滑鼠行為，您必須呼叫此函式處理時`WM_LBUTTONDBLCLK`訊息。 這個方法會執行與所提供的檢視表識別碼相關聯的命令`iViewId`。 如需自訂滑鼠行為的詳細資訊，請參閱[鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)。  
   
 ##  <a name="onworkspaceidle"></a>CWinAppEx::OnWorkspaceIdle  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnWorkspaceIdle(CWnd*);

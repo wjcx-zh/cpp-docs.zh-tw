@@ -51,6 +51,7 @@ ms.lasthandoff: 02/24/2017
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 類別
 當使用者按住最上層工具列按鈕時出現的工具列。  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -119,7 +120,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
  **標頭：** afxdropdowntoolbar.h  
   
 ##  <a name="allowshowonpanemenu"></a>CMFCDropDownToolBar::AllowShowOnPaneMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL AllowShowOnPaneMenu() const;  
@@ -170,7 +171,7 @@ virtual BOOL LoadBitmap(
  呼叫 `LoadBitmapEx` 方法可在建立工具列之後載入其他影像。  
   
 ##  <a name="loadtoolbar"></a>CMFCDropDownToolBar::LoadToolBar  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL LoadToolBar(
@@ -197,7 +198,7 @@ virtual BOOL LoadToolBar(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onlbuttonup"></a>CMFCDropDownToolBar::OnLButtonUp  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 afx_msg void OnLButtonUp(
@@ -212,7 +213,7 @@ afx_msg void OnLButtonUp(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onmousemove"></a>CMFCDropDownToolBar::OnMouseMove  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 afx_msg void OnMouseMove(
@@ -227,7 +228,7 @@ afx_msg void OnMouseMove(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onsendcommand"></a>CMFCDropDownToolBar::OnSendCommand  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -241,7 +242,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onupdatecmdui"></a>CMFCDropDownToolBar::OnUpdateCmdUI  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnUpdateCmdUI(

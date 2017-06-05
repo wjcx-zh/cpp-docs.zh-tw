@@ -101,6 +101,9 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 `CMDIChildWndEx`類別提供的 Windows 功能多重文件介面 (MDI) 子視窗。 該擴充功能的[CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)。 當 MDI 應用程式使用特定 MFC 類別時，Framework 必須有這個類別。  
+ 
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ## <a name="syntax"></a>語法  
   
@@ -238,7 +241,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
  延後的視窗位置結構的控制代碼。  
   
 ##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanShowOnMDITabs();
@@ -348,7 +351,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
  呼叫這個方法來啟用停駐於主框架的對齊方式。 您可以傳遞 CBRS_ALIGN_ 旗標的組合 (如需詳細資訊，請參閱[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking))。  
   
 ##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CDockingManager* GetDockingManager();
@@ -427,7 +430,7 @@ CBasePane* GetPane(UINT nID);
  窗格的指標如果找到，否則`NULL`。  
   
 ##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -661,7 +664,7 @@ void RemovePaneFromDockManager(
  指標，會取代 [移除] 窗格的窗格。  
   
 ##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetRelatedTabGroup(CMFCTabCtrl* p);
@@ -673,7 +676,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void ShowPane(

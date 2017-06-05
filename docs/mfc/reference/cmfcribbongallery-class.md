@@ -79,6 +79,7 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 類別
 實作 Office 2007 樣式的功能區組件庫。  
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>語法  
   
@@ -330,7 +331,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
  呼叫這個方法來啟用或停用 Office XP 樣式提要欄位，在左側的功能表。  
   
 ##  <a name="getcompactsize"></a>CMFCRibbonGallery::GetCompactSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
@@ -344,7 +345,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getdroppeddown"></a>CMFCRibbonGallery::GetDroppedDown  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -371,7 +372,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getgroupoffset"></a>CMFCRibbonGallery::GetGroupOffset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int GetGroupOffset() const;  
@@ -438,7 +439,7 @@ int GetPaletteID() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getregularsize"></a>CMFCRibbonGallery::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -452,7 +453,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getselecteditem"></a>CMFCRibbonGallery::GetSelectedItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetSelectedItem() const;  
@@ -463,7 +464,7 @@ int GetSelectedItem() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="hasmenu"></a>CMFCRibbonGallery::HasMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasMenu() const;  
@@ -498,7 +499,7 @@ BOOL IsMenuResizeEnabled() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ismenuresizevertical"></a>CMFCRibbonGallery::IsMenuResizeVertical  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsMenuResizeVertical() const;  
@@ -521,7 +522,7 @@ BOOL IsMenuSideBar() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onafterchangerect"></a>CMFCRibbonGallery::OnAfterChangeRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnAfterChangeRect(CDC* pDC);
@@ -533,7 +534,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ondraw"></a>CMFCRibbonGallery::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -576,7 +577,7 @@ virtual void OnDrawPaletteIcon(
  您可以覆寫這個方法在衍生類別訂功能區組件庫中。  
   
 ##  <a name="onenable"></a>CMFCRibbonGallery::OnEnable  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnEnable(BOOL bEnable);
@@ -588,7 +589,7 @@ virtual void OnEnable(BOOL bEnable);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onrtlchanged"></a>CMFCRibbonGallery::OnRTLChanged  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -619,7 +620,7 @@ void RemoveItemToolTips();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="selectitem"></a>CMFCRibbonGallery::SelectItem  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SelectItem(int nItemIndex);

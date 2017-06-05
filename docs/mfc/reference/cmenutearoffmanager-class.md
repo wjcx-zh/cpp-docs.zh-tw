@@ -53,6 +53,8 @@ ms.lasthandoff: 02/24/2017
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 類別
 管理 Tear-Off 功能表。 Tear-Off 功能表是在功能表列上的功能表。 使用者可以取下功能表列中的 Tear-Off 功能表，讓 Tear-Off 功能表浮動。  
   
+   [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+   
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -97,7 +99,7 @@ class CMenuTearOffManager : public CObject
  **標頭︰** afxmenutearoffmanager.h  
   
 ##  <a name="build"></a>CMenuTearOffManager::Build  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Build(
@@ -122,7 +124,7 @@ CMenuTearOffManager();
  在大部分情況下，您不應該建立`CMenuTearOffManager`手動。 您的應用程式的架構建立`CMenuTearOffManager`物件當您呼叫[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。  
   
 ##  <a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 LPCTSTR GetRegPath() const;  
@@ -159,7 +161,7 @@ BOOL Initialize(
  從功能表識別碼的範圍`uiTearOffMenuFirst`至`uiTearOffMenuLast`必須是連續的間隔。 此間隔定義 tear-off 功能表可在應用程式中同時顯示的數目。  
   
 ##  <a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsDynamicID(UINT uiID) const;  
@@ -173,7 +175,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="parse"></a>CMenuTearOffManager::Parse  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 UINT Parse(CString& str);
@@ -187,7 +189,7 @@ UINT Parse(CString& str);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="reset"></a>CMenuTearOffManager::Reset  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void Reset(HMENU hmenu);
@@ -199,7 +201,7 @@ void Reset(HMENU hmenu);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setinuse"></a>CMenuTearOffManager::SetInUse  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetInUse(
@@ -214,7 +216,7 @@ void SetInUse(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 void SetupTearOffMenus(HMENU hMenu);

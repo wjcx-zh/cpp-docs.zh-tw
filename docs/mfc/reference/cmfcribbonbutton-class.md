@@ -97,6 +97,8 @@ ms.lasthandoff: 02/24/2017
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 類別
 `CMFCRibbonButton` 類別實作可以放置在功能區列項目 (例如面板、快速存取工具列和快顯功能表) 上的按鈕。  
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ## <a name="syntax"></a>語法  
   
@@ -230,7 +232,7 @@ void AddSubItem(
  指定要加入的按鈕，功能表項目陣列項目索引加入功能表項目的陣列結尾處的項目-1。  
   
 ##  <a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL CanBeStretched();
@@ -241,7 +243,7 @@ virtual BOOL CanBeStretched();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="cleanupsizes"></a>CMFCRibbonButton::CleanUpSizes  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void CleanUpSizes();
@@ -250,7 +252,7 @@ virtual void CleanUpSizes();
 ### <a name="remarks"></a>備註  
   
 ##  <a name="closepopupmenu"></a>CMFCRibbonButton::ClosePopupMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void ClosePopupMenu();
@@ -301,7 +303,7 @@ CMFCRibbonButton(
  [!code-cpp[NVC_MFC_RibbonApp #&6;](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
   
 ##  <a name="drawbottomtext"></a>CMFCRibbonButton::DrawBottomText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CSize DrawBottomText(
@@ -318,7 +320,7 @@ CSize DrawBottomText(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="drawimage"></a>CMFCRibbonButton::DrawImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void DrawImage(
@@ -335,7 +337,7 @@ virtual void DrawImage(
 ### <a name="remarks"></a>備註  
   
 ##  <a name="drawribbontext"></a>CMFCRibbonButton::DrawRibbonText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual int DrawRibbonText(
@@ -372,7 +374,7 @@ int FindSubItemIndexByID(UINT uiID) const;
  以零起始的索引子相關聯的項目的`uiID`。 如果沒有這類項目-1。  
   
 ##  <a name="getcommandrect"></a>CMFCRibbonButton::GetCommandRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetCommandRect() const;  
@@ -383,7 +385,7 @@ CRect GetCommandRect() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getcompactsize"></a>CMFCRibbonButton::GetCompactSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
@@ -397,7 +399,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="geticon"></a>CMFCRibbonButton::GetIcon  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 HICON GetIcon(BOOL bLargeIcon = TRUE) const;  
@@ -425,7 +427,7 @@ int GetImageIndex(BOOL bLargeImage) const;
  按鈕的影像相關聯的影像清單中的索引。  
   
 ##  <a name="getimagesize"></a>CMFCRibbonButton::GetImageSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetImageSize(RibbonImageType type) const;  
@@ -439,7 +441,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getintermediatesize"></a>CMFCRibbonButton::GetIntermediateSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -463,7 +465,7 @@ HMENU GetMenu() const;
  Windows 功能表指派給按鈕，控制代碼`NULL`沒有指派功能表。  
   
 ##  <a name="getmenurect"></a>CMFCRibbonButton::GetMenuRect  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 CRect GetMenuRect() const;  
@@ -474,7 +476,7 @@ CRect GetMenuRect() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getregularsize"></a>CMFCRibbonButton::GetRegularSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC);
@@ -488,7 +490,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="getsubitems"></a>CMFCRibbonButton::GetSubItems  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;  
@@ -499,7 +501,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
 ### <a name="remarks"></a>備註  
   
 ##  <a name="gettextrowheight"></a>CMFCRibbonButton::GetTextRowHeight  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 int GetTextRowHeight() const;  
@@ -510,7 +512,7 @@ int GetTextRowHeight() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="gettooltiptext"></a>CMFCRibbonButton::GetToolTipText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual CString GetToolTipText() const;  
@@ -521,7 +523,7 @@ virtual CString GetToolTipText() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="hascompactmode"></a>CMFCRibbonButton::HasCompactMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasCompactMode() const;  
@@ -532,7 +534,7 @@ virtual BOOL HasCompactMode() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="hasintermediatemode"></a>CMFCRibbonButton::HasIntermediateMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasIntermediateMode() const;  
@@ -543,7 +545,7 @@ virtual BOOL HasIntermediateMode() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="haslargemode"></a>CMFCRibbonButton::HasLargeMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasLargeMode() const;  
@@ -554,7 +556,7 @@ virtual BOOL HasLargeMode() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="hasmenu"></a>CMFCRibbonButton::HasMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL HasMenu() const;  
@@ -565,7 +567,7 @@ virtual BOOL HasMenu() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isalwaysdrawborder"></a>CMFCRibbonButton::IsAlwaysDrawBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsAlwaysDrawBorder() const;  
@@ -576,7 +578,7 @@ virtual BOOL IsAlwaysDrawBorder() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isalwayslargeimage"></a>CMFCRibbonButton::IsAlwaysLargeImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsAlwaysLargeImage() const;  
@@ -587,7 +589,7 @@ virtual BOOL IsAlwaysLargeImage() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isapplicationbutton"></a>CMFCRibbonButton::IsApplicationButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsApplicationButton() const;  
@@ -598,7 +600,7 @@ virtual BOOL IsApplicationButton() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton::IsCommandAreaHighlighted  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsCommandAreaHighlighted() const;  
@@ -619,7 +621,7 @@ BOOL IsDefaultCommand() const;
  `TRUE`如果您已啟用的功能區按鈕; 的預設命令`FALSE`否則。  
   
 ##  <a name="isdefaultpanelbutton"></a>CMFCRibbonButton::IsDefaultPanelButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsDefaultPanelButton() const;  
@@ -630,7 +632,7 @@ virtual BOOL IsDefaultPanelButton() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="isdrawtooltipimage"></a>CMFCRibbonButton::IsDrawTooltipImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsDrawTooltipImage() const;  
@@ -641,7 +643,7 @@ virtual BOOL IsDrawTooltipImage() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="islargeimage"></a>CMFCRibbonButton::IsLargeImage  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsLargeImage() const;  
@@ -652,7 +654,7 @@ BOOL IsLargeImage() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton::IsMenuAreaHighlighted  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsMenuAreaHighlighted() const;  
@@ -663,7 +665,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ismenuonbottom"></a>CMFCRibbonButton::IsMenuOnBottom  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsMenuOnBottom() const;  
@@ -674,7 +676,7 @@ BOOL IsMenuOnBottom() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ispopupdefaultmenulook"></a>CMFCRibbonButton::IsPopupDefaultMenuLook  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual BOOL IsPopupDefaultMenuLook() const;  
@@ -695,7 +697,7 @@ BOOL IsRightAlignMenu() const;
  `TRUE`如果是靠右對齊。否則`FALSE`。  
   
 ##  <a name="issinglelinetext"></a>CMFCRibbonButton::IsSingleLineText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 BOOL IsSingleLineText() const;  
@@ -706,7 +708,7 @@ BOOL IsSingleLineText() const;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="oncalctextsize"></a>CMFCRibbonButton::OnCalcTextSize  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnCalcTextSize(CDC* pDC);
@@ -732,7 +734,7 @@ virtual void OnClick(CPoint point);
  覆寫這個方法在衍生類別中的，如果您想要處理這個事件。  
   
 ##  <a name="ondraw"></a>CMFCRibbonButton::OnDraw  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDraw(CDC* pDC);
@@ -744,7 +746,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="ondrawborder"></a>CMFCRibbonButton::OnDrawBorder  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void OnDrawBorder(CDC* pDC);
@@ -756,7 +758,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ### <a name="remarks"></a>備註  
   
 ##  <a name="onfillbackground"></a>CMFCRibbonButton::OnFillBackground  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual COLORREF OnFillBackground(CDC* pDC);
@@ -837,7 +839,7 @@ void SetDefaultCommand(BOOL bSet=TRUE);
  `bSet`是只有當按鈕的功能表。 如果`bSet`是`TRUE`，按鈕可以執行其預設的命令，而且指定的快顯功能表會出現只有當使用者按一下按鈕右邊的箭號。 否則，按鈕無法執行其預設的命令，而且不論 [區域] 按鈕的使用者按一下快顯功能表會出現。  
   
 ##  <a name="setdescription"></a>CMFCRibbonButton::SetDescription  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SetDescription(LPCTSTR lpszText);
@@ -896,7 +898,7 @@ void SetMenu(
  當應用程式會將功能表指定給按鈕時，按鈕會顯示在右側箭號。 如果`bIsDefaultCommand`是`TRUE`，只有當使用者按一下箭號時，才會出現的功能表。 如果使用者按一下按鈕時，它預設會執行命令。 如果`bIsDefaultCommand`是`FALSE`，功能表會出現在按鈕上的任意處按一下。  
   
 ##  <a name="setparentcategory"></a>CMFCRibbonButton::SetParentCategory  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
@@ -919,7 +921,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
  如果`TRUE`，是靠右對齊。 否則，功能表會靠左對齊  
   
 ##  <a name="settext"></a>CMFCRibbonButton::SetText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+
   
 ```  
 virtual void SetText(LPCTSTR lpszText);

@@ -42,7 +42,7 @@ ms.lasthandoff: 02/24/2017
 
    ![連線管理員](media/settings_connectionmanager.png)
 
-   在任一情況下，都會顯示 [Connect to Remote System] (連線到遠端系統) 視窗。
+   在任一情況下，都會顯示 [Connect to Remote System]\(連線到遠端系統) 視窗。
    
    ![連線到遠端系統](media/connect.png)
 

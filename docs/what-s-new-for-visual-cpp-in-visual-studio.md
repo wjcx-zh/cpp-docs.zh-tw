@@ -26,9 +26,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
 ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
+ms.contentlocale: zh-tw
 ms.lasthandoff: 04/01/2017
 
 ---
@@ -113,7 +114,7 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 * C++ 原生專案的組態變更效能現已提升，而 C++/CLI 專案的組態變更效能則更佳。 解決方案組態在首次啟用時將會較快，而它在後續啟用時將能幾乎瞬間完成。
 
 ### <a name="intellisense"></a>Intellisense  
-* 現在預設使用新的 SQLite 型資料庫引擎。 這會加速資料庫作業，如「移至定義」和「尋找所有參考」，也會大幅改善初始解決方案剖析階段。 設定已移至 [工具] > [選項] > [文字編輯器] > [C/C++] > [進階] (原位於 [C/C++] > [實驗] 下)。
+* 現在預設使用新的 SQLite 型資料庫引擎。 這會加速資料庫作業，如「移至定義」和「尋找所有參考」，也會大幅改善初始解決方案剖析階段。 設定已移至 [工具] > [選項] > [文字編輯器] > [C/C++] > [進階]\(原位於 [C/C++] > [實驗] 下)。
 
 * 我們已對未使用先行編譯標頭檔的專案及檔案提升 IntelliSense 效能，將會為目前檔案中的標頭建立自動先行編譯標頭檔。
 

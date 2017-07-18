@@ -54,7 +54,7 @@ ms.lasthandoff: 03/22/2017
 
 * [遠端專案目錄] 是在遠端 Linux 電腦上建置這個特定專案的位置。  這會預設為上面所設定之根目錄下的 **$(RemoteRootDir)/$(ProjectName)**，其會擴充到目前專案後命名的目錄。
 
-* 最後，若要變更預設 C 和 C++ 編譯器，或者使用連結器和封存器來建置專案，請使用 [Tools Defaults] (工具預設值) 區段中的適當項目。  這些可以設定成使用特定版本的 GCC，甚至 Clang 編譯器 (舉例來說)。
+* 最後，若要變更預設 C 和 C++ 編譯器，或者使用連結器和封存器來建置專案，請使用 [Tools Defaults]\(工具預設值) 區段中的適當項目。  這些可以設定成使用特定版本的 GCC，甚至 Clang 編譯器 (舉例來說)。
 
 ## <a name="vc-directories"></a>VC++ 目錄
 根據預設，Visual Studio 不會包含 Linux 電腦中的任何系統層級包含檔案。  例如，Visual Studio 中沒有 **/usr/include** 目錄中的項目。  如需完整 [IntelliSense](/visualstudio/ide/using-intellisense) 支援，您必須將這些檔案複製到開發電腦上的某個位置，並將 Visual Studio 指向這個位置。  其中一個選項是使用 scp (安全複製) 來複製檔案。  在 Windows 10 上，您可以使用 [Bash on Windows](https://msdn.microsoft.com/commandline/wsl/about) 來執行 scp。  針對舊版 Windows，您將使用 [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) 這類項目。

@@ -21,10 +21,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c6ac9fb7400bd0c37d1da5a0c6bd66ccbf7abd6c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 7995451c0c89fbef55bd96291978775f89932f3b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
@@ -526,7 +527,7 @@ ms.lasthandoff: 02/24/2017
   
 -   **複製建構函式**  
   
-     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
+     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 Visual Studio 2015 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
   
 ##  <a name="VS_Update1"></a> Update 1 的合規性改進  
   
@@ -606,7 +607,7 @@ ms.lasthandoff: 02/24/2017
   
      此外，雖然編譯器不提供特定的診斷，但內嵌運算子 new 會被視為語式錯誤。  
   
--   對非類別類型 呼叫 'operator type()' (使用者定義的轉換) **  
+-   **對非類別類型呼叫 'operator *type*()' (使用者定義的轉換)**  
   
      舊版編譯器允許在非類別類型上呼叫 'operator *type*()'，但以無訊息方式略過。 這種舊行為造成的風險是，會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2228。  
   
@@ -1388,7 +1389,7 @@ ms.lasthandoff: 02/24/2017
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     若要續使用屬性化 ATL 程式碼，直到編譯器停止支援為止，可將 `/Wv:18` 或 `/wd:4467` 命令列引數傳遞給編譯器，或在原始程式碼中新增 `#pragma warning(disable:4467)` 來停用此警告。  
+     若要續使用屬性化 ATL 程式碼，直到編譯器停止支援為止，可將 `/Wv:18` 或 `/wd4467` 命令列引數傳遞給編譯器，或在原始程式碼中新增 `#pragma warning(disable:4467)` 來停用此警告。  
   
      範例 1 (之前)  
   

@@ -30,17 +30,17 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d8916543ac7432a75e6651a8ca4e123567c2fc1d
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 本移植案例研究的設計，是為了讓您了解什麼是典型移植專案、您可能遇到的問題類型，並提供一些可用於解決移植問題的一般秘訣和訣竅。 這不是最終移植指南，因為移植專案的體驗主要取決於程式碼的細節。  
   
 ## <a name="spy"></a>Spy++  
- Spy++ 是 Windows 桌面廣泛使用的 GUI 診斷工具，提供有關 Windows 桌面上之使用者介面項目的各種資訊。 它會顯示完整的 Windows 階層架構，並可存取有關每個視窗和控制項的中繼資料。 這個實用的應用程式多年來一直隨附於 Visual Studio。 我們找到一個之前在 Visual C++ 6.0 中編譯過的舊版，並將其移植到 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)]。 Visual Studio 2017 的體驗應該幾乎完全相同。
+ Spy++ 是 Windows 桌面廣泛使用的 GUI 診斷工具，提供有關 Windows 桌面上之使用者介面項目的各種資訊。 它會顯示完整的 Windows 階層架構，並可存取有關每個視窗和控制項的中繼資料。 這個實用的應用程式多年來一直隨附於 Visual Studio。 我們找到一個之前在 Visual C++ 6.0 中編譯過的舊版，並將其移植到 Visual Studio 2015。 Visual Studio 2017 的體驗應該幾乎完全相同。
   
  我們認為這個案例是移植使用 MFC 和 Win32 API 之 Windows 桌面應用程式的典型案例，特別適用於 Visual C++ 6.0 之後便沒有再以 Visual C++ 的各版更新過的舊專案。  
   
@@ -84,7 +84,7 @@ warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not m
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h(40): fatal error C1189: #error:  MFC does not support WINVER less than 0x0501.  Please change the definition of WINVER in your project properties or precompiled header.  
 ```  
   
- Microsoft 不再支援 Windows XP，因此即使可在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中將其設為目標，您也應該逐步淘汰應用程式對該版的支援，並建議使用者採用新版 Windows。  
+ Microsoft 不再支援 Windows XP，因此即使可在 Visual Studio 2015 中將其設為目標，您也應該逐步淘汰應用程式對該版的支援，並建議使用者採用新版 Windows。  
   
  若要解決這個錯誤，請定義 WINVER，並將 [專案屬性] 設定更新為目前要設為目標的 Windows 最低版本。 在[這裡](http://msdn.microsoft.com/library/windows/desktop/aa383745.aspx)尋找各種 Windows 版本之值的表格。  
   

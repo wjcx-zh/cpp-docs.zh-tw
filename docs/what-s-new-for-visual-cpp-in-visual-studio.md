@@ -27,16 +27,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 71ae904790532cde7ffe559648ccd13a59b88051
+ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
+ms.openlocfilehash: 58b5a3f2e5ce491ba7ba185c90bb6b4a2dca3101
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 06/30/2017
 
 ---
 
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新功能
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 帶來 Visual C++ 環境的多個更新與修正。 我們修正了編譯器及工具中超過 250 個 Bug 與回報的問題，其中多為客戶透過 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") 所提交。 感謝您回報 Bug！  如需所有 Visual Studio 中之新功能的詳細資訊，請瀏覽 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的新功能](https://go.microsoft.com/fwlink/?linkid=834481)。
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 帶來 Visual C++ 環境的多個更新與修正。 我們修正了編譯器及工具中超過 250 個 Bug 與回報的問題，其中多為客戶透過 [Microsoft Connect](https://connect.microsoft.com/VisualStudio "Microsoft Connect") 所提交。 感謝您回報 Bug！  如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的新功能](https://go.microsoft.com/fwlink/?linkid=834481)。
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -95,7 +95,7 @@ ms.lasthandoff: 04/01/2017
 * 如需完整的 STL 改善清單，請參閱 [STL Fixes In VS 2017 RTM](https://blogs.msdn.microsoft.com/vcblog/2017/02/06/stl-fixes-in-vs-2017-rtm/) (VS 2017 RTM 中的 STL 修正)。
 
 ### <a name="open-source-library-support"></a>開放原始碼程式庫支援  
-Vcpkg 是一種開放原始碼命令列工具，可大幅簡化在 Visual Studio 中取得和建置開放原始碼 C++ 靜態程式庫和 DLL 的程序。 如需詳細資訊，請參閱 [Vcpkg updates: Static linking is now available](https://blogs.msdn.microsoft.com/vcblog/2016/11/01/vcpkg-updates-static-linking-is-now-available/) (Vcpkg 更新︰現在已提供靜態連結)。
+Vcpkg 是一種開放原始碼命令列工具，可大幅簡化在 Visual Studio 中取得和建置開放原始碼 C++ 靜態程式庫和 DLL 的程序。 如需詳細資訊，請參閱 [vcpkg：C++ 的套件管理員](vcpkg.md)。
 
 ### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0  
 CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如需詳細資訊，請參閱 [CppRestSDK 2.9.0 is available on GitHub](https://blogs.msdn.microsoft.com/vcblog/2016/10/21/cpprestsdk-2-9-0-is-available-on-github/)(GitHub 上可用的 CppRestSDK 2.9.0)。
@@ -144,9 +144,9 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 Visual Studio 2017 引進「開啟資料夾」功能，可讓您在包含原始程式碼的資料夾中編寫程式碼、建置和偵錯，而不需要建立任何方案或專案。 如果您的專案不是 MSBuild 專案，則這可讓開始使用 Visual Studio 更為簡單。 運用「開啟資料夾」，即可存取 Visual Studio 已針對 MSBuild 專案所提供的強大程式碼了解、編輯、建置和偵錯功能。 如需詳細資訊，請參閱 [Bring your C++ codebase to Visual Studio with “Open Folder”](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/bring-your-c-codebase-to-visual-studio-with-open-folder/) (使用「開啟資料夾」將您的 C++ 程式碼基底移轉至 Visual Studio)。
 
 * [開啟資料夾] 體驗的改良。 您可以透過這些 JSON 檔案自訂體驗︰
-  -    CppProperties.json，用以自訂 IntelliSense 及瀏覽體驗。
-  -    Tasks.json，用以自訂建置步驟。 
-  -    Launch.json，用以自訂偵錯經驗。
+  - CppProperties.json，用以自訂 IntelliSense 及瀏覽體驗。
+  - Tasks.json，用以自訂建置步驟。 
+  - Launch.json，用以自訂偵錯經驗。
 
 ### <a name="cmake-support-via-open-folder"></a>透過開啟資料夾的 CMake 支援
 Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/cmake-support-in-visual-studio/) (Visual Studio 中的 CMake 支援) 和 [CMake support in Visual Studio 2017 - what’s new in the RC.2 update](https://blogs.msdn.microsoft.com/vcblog/2016/12/20/cmake-support-in-visual-studio-2017-whats-new-in-the-rc-update/) (Visual Studio 2017 中的 CMake 支援 - RC.2 更新的新功能)。 使用「開啟資料夾」開啟 CMake 專案將會自動針對 C++ 編輯、建置和偵錯設定環境。

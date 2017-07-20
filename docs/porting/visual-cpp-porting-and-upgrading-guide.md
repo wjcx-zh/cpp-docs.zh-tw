@@ -31,10 +31,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: eb4787147a249addbab6c6c2afabf67d2497f78b
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: d548106a8820c9eea4e6c2956615fff8c6cd514c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/24/2017
 |[移植協力廠商程式庫](porting-third-party-libraries.md)|如何使用 **vcpkg** 命令列工具，將舊版開放原始碼程式庫移植至使用較新 Visual C++ 工具組所編譯的版本。|  
 |[移植和升級：範例和案例研究](porting-and-upgrading-examples-and-case-studies.md)|在本節中，我們將移植和升級幾個範例和應用程式，並討論這些經驗和結果。 您可能發現閱讀這些內容有助於了解移植和升級程序的相關作業。 我們將在整個過程中討論升級的秘訣和訣竅，並示範如何修正特定錯誤。|  
 |[移植到通用 Windows 平台](porting-to-the-universal-windows-platform-cpp.md)|包含將程式碼移植到 Windows 10 的相關資訊。|  
-|[針對 UNIX 使用者的 Visual C++ 簡介](introduction-to-visual-cpp-for-unix-users.md)|提供資訊給剛開始使用 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]，並想更有效率使用的 UNIX 使用者。|  
+|[針對 UNIX 使用者的 Visual C++ 簡介](introduction-to-visual-cpp-for-unix-users.md)|提供資訊給剛開始使用 Visual C++，並想更有效率使用它的 UNIX 使用者。|  
 |[從 UNIX 移植到 Win32](porting-from-unix-to-win32.md)|討論將 UNIX 應用程式移轉至 Windows 的選擇。|  
 |[C++/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)|詳細說明如何升級 Managed Extensions for C++ 語法，以使用新語法。 如需詳細資訊，請參閱[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)。|  
   

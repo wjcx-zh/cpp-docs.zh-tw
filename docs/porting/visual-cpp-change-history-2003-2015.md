@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5ef479e2818cb9226830cc34f3fe9f8e59202e89
-ms.openlocfilehash: bb69ad913af2fd4777c5b4e64bde0758beb73822
+ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
+ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/28/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
@@ -109,7 +109,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **new 和 delete** In previous versions of the library, the implementation-defined operator new 和 delete functions were exported from the runtime library DLL (for example, msvcr120.dll). 這些 operator 函式現在一律以靜態方式連結到您的二進位檔，即使是使用執行階段程式庫 DLL 亦同。  
   
-     對於原生或混合程式碼 (/clr) 而言，這不是重大變更，但對於編譯成 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的程式碼，可能會造成您的程式碼無法編譯。 若將程式碼編譯成 /clr:pure，可能必須加入 #include \<new> 或 #include \<new.h> 來暫時解決此變更所造成的建置錯誤。 請注意，/clr:pure 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中已標示為即將淘汰，將從後續版本中移除。  
+     對於原生或混合程式碼 (/clr) 而言，這不是重大變更，但對於編譯成 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的程式碼，可能會造成您的程式碼無法編譯。 若將程式碼編譯成 /clr:pure，可能必須加入 #include \<new> 或 #include \<new.h> 來暫時解決此變更所造成的建置錯誤。 請注意，/clr:pure 在 Visual Studio 2015 中已淘汰，並可能在後續版本中移除。  
   
 #### <a name="processh"></a>\<process.h>  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 04/28/2017
 ####  <a name="BK_STL"></a>C++ 標準程式庫  
  為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤  (_MSC_VER 是包含此編譯器主要版本的巨集，例如對於 Visual Studio 2013 為 1800。)這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。  
   
--   **C++ 標準程式庫包含檔案**：有一些變更讓 C++ 標準程式庫標頭可以加入結構。 C++ 標準程式庫標頭可以一些未經指定的方式加入彼此之中。 一般來說，您在撰寫程式碼時，應依據 C++ 標準小心地加入程式碼所需的所有標頭，而不要使用 C++ 標準程式庫標頭相互加入的這項特性。 這使其成為可攜式跨版本和跨平台的程式碼。 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，至少有兩種標頭的變更會影響使用者程式碼。 首先，\<string> 不再包含 \<iterator>。 其次，\<tuple> 現在只會宣告 std::array，而不會加入所有的 \<array>。此函式可以經由下列程式碼建構組合中斷程式碼：您的程式碼具有名為 "array" 的變數及 using 指示詞 "using namespace std;"，而且包含內有 \<tuple> (現在會宣告 std::array) 的 C++ 標準程式庫標頭 (例如 \<functional>)。  
+-   **C++ 標準程式庫包含檔案**：有一些變更讓 C++ 標準程式庫標頭可以加入結構。 C++ 標準程式庫標頭可以一些未經指定的方式加入彼此之中。 一般來說，您在撰寫程式碼時，應依據 C++ 標準小心地加入程式碼所需的所有標頭，而不要使用 C++ 標準程式庫標頭相互加入的這項特性。 這使其成為可攜式跨版本和跨平台的程式碼。 在 Visual Studio 2015 中，至少有兩種標頭的變更會影響使用者程式碼。 首先，\<string> 不再包含 \<iterator>。 其次，\<tuple> 現在只會宣告 std::array，而不會加入所有的 \<array>。此函式可以經由下列程式碼建構組合中斷程式碼：您的程式碼具有名為 "array" 的變數及 using 指示詞 "using namespace std;"，而且包含內有 \<tuple> (現在會宣告 std::array) 的 C++ 標準程式庫標頭 (例如 \<functional>)。  
   
 -   **steady_clock**：為求穩定及單純，[steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 實作已變更為遵循 C++ 標準的要求。 現在 steady_clock 以 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 為基礎，而 high_resolution_clock 現在是 steady_clock 的 typedef。 如此一來，在 Visual C++ 中， steady_clock::time_point 現在是 chrono::time_point<steady_clock> 的 typedef；不過，這不一定也會發生在其他實作中。  
   
@@ -280,7 +280,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **std::allocator::deallocate** 在 Visual C++ 2013 和舊版中，std::allocator::deallocate(p, n) 忽略針對 n 而傳遞進來的引數。  C++ 標準永遠要求 n 與做為第一個引數傳遞的值相等，該值傳遞至配置的引動過程，其中此配置會傳回 p。 不過，在目前版本中，會檢查 n 的值。 對於所傳遞之 n 的引數和此標準要求不同的程式碼，這有可能會在執行階段當機。  
   
--   **hash_map 與 hash_set**：非標準的標頭檔案 hash_map 及 hash_set 在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中已標示為即將淘汰，將從後續版本中移除。 請改用 unordered_map 和 unordered_set。  
+-   **hash_map 與 hash_set**：非標準的標頭檔案 hash_map 及 hash_set 在 Visual Studio 2015 中已淘汰，並將於後續版本中移除。 請改用 unordered_map 和 unordered_set。  
   
 -   **comparators 與 operator()**：現在關聯容器 (\<map> 系列) 會要求其比較子指定可呼叫常數的函式呼叫運算子。 現在比較子類別宣告中的下列程式碼無法編譯：  
   
@@ -294,7 +294,7 @@ ms.lasthandoff: 04/28/2017
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **類型特性** The old names for 類型特性 from an earlier version of the C++ draft standard have been removed. 這些在 C++11 中已有所變更，且已在 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中更新為 C++11 的值。 下表顯示舊名稱和新名稱。  
+-   **類型特性** The old names for 類型特性 from an earlier version of the C++ draft standard have been removed. 這些在 C++11 中已有所變更，且已在 Visual Studio 2015 中更新為 C++11 的值。 下表顯示舊名稱和新名稱。  
   
     |舊名稱|新名稱|  
     |--------------|--------------|  
@@ -864,7 +864,7 @@ ms.lasthandoff: 04/28/2017
   
 -   **複製建構函式**  
   
-     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 [!INCLUDE[vs_dev14](../ide/includes/vs_dev14_md.md)] 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
+     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 Visual Studio 2015 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 

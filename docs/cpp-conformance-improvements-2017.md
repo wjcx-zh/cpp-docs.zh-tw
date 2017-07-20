@@ -1,7 +1,7 @@
 ---
 title: "C++ 編譯器一致性改善 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 06/05/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -9,8 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: BrianPeek
-ms.author: brpeek
+author: mikeblome
+ms.author: mblome
 manager: ghogen
 translation.priority.ht:
 - cs-cz
@@ -27,10 +27,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ee7e4f3e09f5b1512182d17fda9033a45ad4aa5b
-ms.openlocfilehash: c4bfe76d3b57962fe10df1d55f6ec5b58f70a38a
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: d00951204a358ec064f69035b7dd6ac5adc08ed9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 06/08/2017
 
 ---
    
@@ -143,7 +143,7 @@ int main()
 ```
 
 ### <a name="constexpr"></a>constexpr
-在 constexpr 內容中條件式評估作業的左運算元無效時，Visual Studio 2017 會正確地引發錯誤。 下列程式碼是在 Visual Studio 2015 中編譯，但無法在 Visual Studio 2017 中編譯：
+在 constexpr 內容中條件式評估作業的左運算元無效時，Visual Studio 2017 會正確地引發錯誤。 下列程式碼可使用 Visual Studio 2015 編譯，但不能用 Visual Studio 2017 編譯 (C3615 constexpr 函式 'f' 無法產生常數運算式)：
 
 ```cpp  
 template<int N>
@@ -154,7 +154,7 @@ struct array
 
 constexpr bool f(const array<1> &arr)
 {
-       return arr.size() == 10 || arr.size() == 11; // error starting in Visual Studio 2017
+       return arr.size() == 10 || arr.size() == 11; // C3615    
 }
 ```
 若要更正錯誤，請將 array::size() 函式宣告為 constexpr，或從 f 中移除 constexpr 限定詞。 
@@ -355,12 +355,12 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 ```cpp
 template<typename T> 
 struct S { 
-template<typename U> static int f() = delete; 
+   template<typename U> static int f() = delete; 
 }; 
  
 void g() 
 { 
-decltype(S<int>::f<int>()) i; // this should fail 
+   decltype(S<int>::f<int>()) i; // this should fail 
 }
 ```
 若要修正錯誤，請將 i 宣告為 `int`。
@@ -372,8 +372,8 @@ Visual Studio 2017 更新版本 15.3 改進了類型特性的先決條件檢查�
 struct S; 
 enum E; 
  
-static_assert(!__is_assignable(S, S), "fail"); // this is allowed in VS2017 RTM, but should fail 
-static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 RTM, but should fail
+static_assert(!__is_assignable(S, S), "fail"); // C2139 in 15.3
+static_assert(__is_convertible_to(E, E), "fail"); // C2139 in 15.3
 ```
 
 ### <a name="new-compiler-warning-and-runtime-checks-on-native-to-managed-marshaling"></a>原生至 Managed 封送處理上的新編譯器警告和執行階段檢查
@@ -384,16 +384,16 @@ static_assert(__is_convertible_to(E, E), "fail"); // this is allowed in VS2017 R
 class A 
 { 
 public: 
-A() : p_(new int) {} 
-~A() { delete p_; } 
+   A() : p_(new int) {} 
+   ~A() { delete p_; } 
  
-A(A const &) = delete; 
-A(A &&rhs) { 
-p_ = rhs.p_; 
+   A(A const &) = delete; 
+   A(A &&rhs) { 
+   p_ = rhs.p_; 
 } 
  
 private: 
-int *p_; 
+   int *p_; 
 }; 
  
 #pragma unmanaged 
@@ -415,7 +415,7 @@ int main()
 針對實驗和意見反應所發行的 WinRT API 會以 `Windows.Foundation.Metadata.ExperimentalAttribute` 裝飾。 在更新版本 15.3 中，在遇到該屬性時，編譯器會產生警告 C4698。 舊版 Windows SDK 中的一些 API 已經以該屬性裝飾，而對這些 API 的呼叫將會啟動此編譯器警告的觸發。 新版的 Windows SDK 將從所有隨附的型別移除該屬性，但如果您使用舊版的 SDK，則需要針對隨附型別的所有呼叫隱藏這些警告。
 下列程式碼會產生警告 C4698：「'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' 僅供評估之用。後續版本可能會變更或移除此功能」：
 ```cpp
-Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
+Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
 ```
 
 若要停用該警告，請加入 #pragma：
@@ -435,7 +435,7 @@ Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
 struct S {}; 
  
 template <typename T> 
-void S::f(T t) {}
+void S::f(T t) {} //C2039: 'f': is not a member of 'S'
 ```
 
 若要修正錯誤，請將宣告加入類別：
@@ -460,7 +460,7 @@ void S::f(T t) {}
 #include <memory> 
  
 class B { }; 
-class D : B { }; // should be public B { }; 
+class D : B { }; // C2243. should be public B { }; 
  
 void f() 
 { 
@@ -477,7 +477,7 @@ struct A {
 }; 
  
 template <typename T> 
-T A<T>::f(T t, bool b = false) 
+T A<T>::f(T t, bool b = false) // C5034
 { 
 ... 
 }
@@ -527,7 +527,7 @@ Constexpr auto off2 = offsetof(A, bar);
 
 ```cpp
  
-__declspec(noinline) extern "C" HRESULT __stdcall
+__declspec(noinline) extern "C" HRESULT __stdcall //C4768
 ```
 
 若要修正此警告，請先加入 extern "C"：
@@ -535,6 +535,7 @@ __declspec(noinline) extern "C" HRESULT __stdcall
 ```cpp
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
+這個警告預設關閉，且只會影響以 `/Wall /WX` 編譯的程式碼。
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和對已刪除之解構函式的呼叫
 在舊版的 Visual Studio 中，在與 'decltype' 相關聯的運算式內容中呼叫已刪除的解構函式時，編譯器並不會偵測到。 在更新版本 15.3 中，下列程式碼會產生「錯誤 C2280:  'A<T>::~A(void)': 嘗試參考被刪除的函式」：
@@ -557,11 +558,11 @@ void h()
    g(42); 
 }
 ```
-### <a name="unitialized-const-variables"></a>未初始化的 const 變數
+### <a name="uninitialized-const-variables"></a>未初始化的 const 變數
 如果 'const' 變數未初始化，C++ 編譯器將不會發出診斷，而 Visual Studio 2017 RTW 版本會發生回歸。 Visual Studio 2017 Update 1 已修正此回歸。 下列程式碼現在會產生「警告 C4132: 'Value': 應初始化常數物件」：
 
 ```cpp
-const int Value;
+const int Value; //C4132
 ```
 若要修正錯誤，請將值指派給 `Value`。
 
@@ -583,6 +584,108 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
  
 在 /Wv:18 下會排除警告，且預設會在警告層級 W2 下開啟。
 
+
+### <a name="stdisconvertible-for-array-types"></a>陣列類型的 std::is_convertible
+舊版編譯器對陣列類型的 [std::is_convertible](standard-library/is-convertible-class.md) 會給出不正確的結果。 這要求程式庫作者在使用 `std::is_convertable<…>` 類型特性時，以特殊案例處理 Visual C++ 編譯器。 下例中，靜態判斷提示能夠通過舊版 Visual Studio，但在 Visual Studio 2017 更新版本 15.3 失敗：
+
+```cpp
+#include <type_traits>
+ 
+using Array = char[1];
+ 
+static_assert(std::is_convertible<Array, Array>::value);
+static_assert((std::is_convertible<const Array, const Array>::value), "");
+static_assert((std::is_convertible<Array&, Array>::value), "");
+static_assert((std::is_convertible<Array, Array&>::value), "");
+```
+
+**std::is_convertible<From, To>** 的計算是查看 imaginary 函式是否正確定義：
+```cpp 
+   To test() { return std::declval<From>(); }
+``` 
+
+### <a name="private-destructors-and-stdisconstructible"></a>私人解構函式和 std::is_constructible
+舊版編譯器在決定[std::is_constructible](standard-library/is-constructible-class.md) 結果時，會忽略解構函式是否是私人的。 現在會考慮。 下例中，靜態判斷提示能夠通過舊版 Visual Studio，但在 Visual Studio 2017 更新版本 15.3 失敗：
+
+```cpp
+#include <type_traits>
+ 
+class PrivateDtor {
+   PrivateDtor(int) { }
+private:
+   ~PrivateDtor() { }
+};
+ 
+// This assertion used to succeed. It now correctly fails.
+static_assert(std::is_constructible<PrivateDtor, int>::value);
+```  
+
+私人解構函式會讓類型成為不可建構的。 **std::is_constructible<T, Args…>** 的計算就好像已撰寫下列宣告：
+```cpp 
+   T obj(std::declval<Args>()…)
+``` 
+這個呼叫暗示解構函式呼叫。
+
+### <a name="c2668-ambiguous-overload-resolution"></a>C2668：語意模糊的多載解析
+舊版編譯器在同時透過使用宣告和引數相依查閱找到多個候選項目時，有時偵測不到語意模糊。 這會導致選擇錯誤的多載和未預期的執行階段行為。 在下列範例中，Visual Studio 2017 更新版本 15.3 會正確引發「C2668 'f'：多載函式的語意模糊呼叫」：
+
+```cpp
+namespace N {
+   template<class T>
+   void f(T&, T&);
+ 
+   template<class T>
+   void f();
+}
+ 
+template<class T>
+void f(T&, T&);
+ 
+struct S {};
+void f()
+{
+   using N::f; 
+ 
+   S s1, s2;
+   f(s1, s2); // C2668
+}
+```
+為修正程式碼，如果您想要呼叫 ::f()，請移除使用 N::f 的陳述式。
+
+### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660：區域函式宣告和引數相依查閱
+區域函式宣告會將函式宣告隱藏在封閉範圍中，停用引數相依查閱。
+不過，舊版的 Visual C++ 編譯器在這種情況下會執行引數相依查閱，有可能導致選擇錯誤的多載和未預期的執行階段行為。 錯誤通常是因為區域函式宣告的簽章不正確而發生。 在下列範例中，Visual Studio 2017 更新版本 15.3 會正確引發「C2660 'f'：函式不接受 2 個引數」：
+
+```cpp
+struct S {}; 
+void f(S, int);
+ 
+void g()
+{
+   void f(S); // C2660 'f': function does not take 2 arguments:
+   // or void f(S, int);
+   S s;
+   f(s, 0);
+}
+```
+
+若要修正此問題，請變更或移除 **f(S)** 簽章。
+
+### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038：初始設定式清單中的初始化順序
+類別成員會依其宣告的順序初始化，而不是依它們在初始設定式清單中出現的順序。 當初始設定式清單的順序和宣告順序不一致時，舊版編譯器未發出警告。 如果某個成員的初始化依存於清單中另一個已初始化的成員，這可能導致未定義的執行階段行為。 在下列範例中，Visual Studio 2017 更新版本 15.3 (使用 /Wall 或 /WX) 會引發警告「C5038：資料成員 'A::y' 會在資料成員 'A::x' 之後初始化」：
+
+```cpp
+struct A
+{
+    A(int a) : y(a), x(y) {} // Initialized in reverse, y reused
+    int x;
+    int y;
+};
+
+```
+若要修正問題，請排列整理初始設定式清單的順序，讓它和宣告順序相同。 當一或兩個初始設定式參考基底類別成員時，就會引發類似的警告。
+
+請注意，這個警告預設關閉，且只會影響以 /Wall 或 /WX 編譯的程式碼。
 
 ## <a name="see-also"></a>另請參閱  
 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)  

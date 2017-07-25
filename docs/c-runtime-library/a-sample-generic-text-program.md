@@ -1,36 +1,52 @@
 ---
 title: "泛型文字程式範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_TCHAR 類型"
-  - "對應, TCHAR.H 資料類型"
-  - "泛型文字範例 [CRT]"
-  - "TCHAR 類型"
-  - "TCHAR.H 資料類型, 對應"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TCHAR type
+- mappings, TCHAR.H data types
+- generic-text example [CRT]
+- TCHAR type
+- TCHAR.H data types, mapping
 ms.assetid: a03de0db-8118-4bd9-a03f-640e8dfc5ed3
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 泛型文字程式範例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 0cdc18215fe80c4165ffa03a5d789af0ebc95b40
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="a-sample-generic-text-program"></a>泛型文字程式範例
 **Microsoft 特定的**  
   
- 下列程式 GENTEXT.C，提供使用的更詳細的說明在 TCHAR.H 定義的泛用文字對應:  
+ 以下的程式 GENTEXT.C 會提供更詳盡的圖例，說明如何使用 TCHAR.H 中定義的泛用文字對應：  
   
 ```  
 // GENTEXT.C  
@@ -71,7 +87,7 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
   
 ```  
   
- 如果 `_MBCS` 已定義，有下列 MBCS 程式的 GENTEXT.C 對應:  
+ `_MBCS` 如已定義，GENTEXT.C 就會對應至以下的 MBCS 程式︰  
   
 ```  
 // crt_mbcsgtxt.c  
@@ -109,7 +125,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- 如果 `_UNICODE` 已定義， GENTEXT.C 對應至下列 Unicode 程式的版本。  如需使用 `wmain` 以 Unicode 程式以取代 `main`，請參閱在 *C 語言參考中的*[使用 wmain](../c-language/using-wmain.md) 。  
+ `_UNICODE` 如已定義，GENTEXT.C 就會對應至以下程式的 Unicode 版本。 如需使用 Unicode 程式的 `wmain` 取代 `main` 的詳細資訊，請參閱在 *C 語言參考*中[使用 wmain](../c-language/using-wmain.md)。  
   
 ```  
 // crt_unicgtxt.c  
@@ -147,7 +163,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 }  
 ```  
   
- 如果 `_MBCS` 和 `_UNICODE` 未定義， GENTEXT.C 對應到單一位元組 ASCII 碼，如下所示:  
+ 如果 `_MBCS` 和 `_UNICODE` 皆未定義，GENTEXT.C 就會對應至單一位元組的 ASCII 碼，如下所示︰  
   
 ```  
 // crt_sbcsgtxt.c  
@@ -186,7 +202,7 @@ int __cdecl main(int argc, char **argv, char **envp)
   
  **END Microsoft 特定的**  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型文字對應](../c-runtime-library/generic-text-mappings.md)   
  [資料類型對應](../c-runtime-library/data-type-mappings.md)   
  [常數和全域變數對應](../c-runtime-library/constant-and-global-variable-mappings.md)   

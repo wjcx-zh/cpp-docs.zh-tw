@@ -1,62 +1,77 @@
 ---
 title: "資料類型對應 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_TXCHAR"
-  - "_TUCHAR"
-  - "_TINT"
-  - "_TSCHAR"
-  - "_TCHAR"
-  - "TCHAR::H"
-  - "TCHAR"
-  - "_T"
-  - "_TEXT"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_T 類型"
-  - "_TCHAR 類型"
-  - "_TEXT 類型"
-  - "_TINT 類型"
-  - "_TSCHAR 類型"
-  - "_TUCHAR 類型"
-  - "_TXCHAR 類型"
-  - "泛型文字資料類型"
-  - "T 類型"
-  - "TCHAR 類型"
-  - "TCHAR.H 資料類型, 在其中定義的對應"
-  - "TEXT 類型"
-  - "TINT 類型"
-  - "TSCHAR 類型"
-  - "TUCHAR 類型"
-  - "TXCHAR 類型"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _TXCHAR
+- _TUCHAR
+- _TINT
+- _TSCHAR
+- _TCHAR
+- TCHAR::H
+- TCHAR
+- _T
+- _TEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TXCHAR type
+- TINT type
+- _TCHAR type
+- TSCHAR type
+- TEXT type
+- TCHAR type
+- TCHAR.H data types, mappings defined in
+- generic-text data types
+- _TINT type
+- TUCHAR type
+- TXCHAR type
+- _TSCHAR type
+- T type
+- _TUCHAR type
+- _TEXT type
+- _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 資料類型對應
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 4a5b7610ac3e83a8c3f05db330798e85c82cce2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-這些資料型別的對應在 TCHAR.H 定義並視 `_UNICODE` 或 `_MBCS` 常數是否在程式中定義。  
+---
+# <a name="data-type-mappings"></a>資料類型對應
+這些資料類型對應都是在 TCHAR.H 中定義，並視程式中是否定義常數 `_UNICODE` 或 `_MBCS` 而定。  
   
- 如需相關資訊，請參閱 [使用與 \_MBCS 程式碼的 TCHAR.H 資料型別](../text/using-tchar-h-data-types-with-mbcs-code.md)。  
+ 如需相關資訊，請參閱[使用含有 _MBCS 程式碼的 TCHAR.H 資料類型](../text/using-tchar-h-data-types-with-mbcs-code.md)。  
   
-### 泛用文字資料型別對應  
+### <a name="generic-text-data-type-mappings"></a>泛型文字資料類型對應  
   
-|泛型文字<br /><br /> 資料型別名稱|SBCS \(\_UNICODE,<br /><br /> \_MBCS not<br /><br /> 已定義的\)|\_MBCS<br /><br /> 已定義|\_UNICODE<br /><br /> 已定義|  
-|---------------------|-------------------------------------------------|--------------------|-----------------------|  
+|泛型文字<br /><br /> 資料類型名稱|SBCS (_UNICODE、<br /><br /> _MBCS 未<br /><br /> 定義)|_MBCS<br /><br /> 已定義的|_UNICODE<br /><br /> 已定義的|  
+|--------------------------------------|----------------------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_tfinddata_t`|`_finddata_t`|`_finddata_t`|`_wfinddata_t`|  
 |`_tfinddata64_t`|`__finddata64_t`|`__finddata64_t`|`__wfinddata64_t`|  
@@ -65,9 +80,9 @@ manager: "ghogen"
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` 或 `_TEXT`|沒有作用 \(被前置處理器移除\)|沒有作用 \(被前置處理器移除\)|`L` \(將下列字元或字串轉換成其 Unicode 的對應\)|  
+|`_T` 或 `_TEXT`|無效果 (已為前置處理器移除)|無效果 (已為前置處理器移除)|`L` (將下列字元或字串轉換成其 Unicode 對應項目)|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型文字對應](../c-runtime-library/generic-text-mappings.md)   
  [常數和全域變數對應](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [常式對應](../c-runtime-library/routine-mappings.md)   

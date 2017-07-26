@@ -1,43 +1,58 @@
 ---
 title: "常式對應 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.mappings"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_tWinMain"
-  - "泛用文字對應"
-  - "TCHAR.H 資料類型, 常式對應的清單"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.mappings
+dev_langs:
+- C++
+helpviewer_keywords:
+- _tWinMain
+- TCHAR.H data types, list of routine mappings
+- generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 常式對應
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1b716aacca01e72f917fe4b4083c79d39546b6c4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-泛用文字常式會在 TCHAR.H. 定義。  `_tccpy` 和 `_tclen` 對應到 MBCS 模型的函式；它們會對應至巨集或內嵌函式在 SBCS 模型和 Unicode 的完整性。  如需泛用文字常式的詳細資訊，請參閱有關對應 `SBCS`\( `_MBCS`\) 的說明主題 ，或者 `_UNICODE`相關的常式。  
+---
+# <a name="routine-mappings"></a>常式對應
+泛型文字常式對應是在 TCHAR.H 中定義。 `_tccpy` 和 `_tclen` 對應至 MBCS 模型中的函式，為求完整性，它們會對應至 SBCS 和 Unicode 模式中的巨集或內嵌函式。 如需泛型文字常式的相關資訊，請參閱對應的 `SBCS`、`_MBCS` 或 `_UNICODE` 相關常式的＜說明＞主題。  
   
- 在下表左欄列出的更多關於個別常式的特定資訊是在此文件中無法使用的。  不過，您可以輕鬆地查閱對應 `SBCS`的資訊 \(例如 `_MBCS`\)，或者 `_UNICODE`相關的常式。  使用在 **Help** 功能表的 **Search** 訂單查閱下面所列的所有泛用文字常式。  
+ 本文件無法使用下表左欄所列個別常式的詳細資訊。 不過，您可以輕鬆查閱有關對應的 `SBCS`、`_MBCS` 或 `_UNICODE` 相關常式的資訊。 使用 [說明] 功能表的 [搜尋] 命令來查詢下列任一泛型文字常式。  
   
- 如需相關資訊，請參閱 [TCHAR.H 裡泛用文字的對應](../text/generic-text-mappings-in-tchar-h.md)。  
+ 如需相關資訊，請參閱 [TCHAR.H 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|一般文字常式名稱|SBCS \(\_UNICODE & MBCS 未定義\)|已定義 \_MBCS|已定義 \_UNICODE|  
-|--------------|-----------------------------------|----------------|-------------------|  
+|泛型文字常式名稱|SBCS (_UNICODE 和 MBCS 未定義)|_MBCS 已定義|_UNICODE 已定義|  
+|--------------------------------|-------------------------------------------|--------------------|-----------------------|  
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|  
 |`_cgetts_s`|`_cgets_s`|`_cgets_s`|`_cgetws_s`|  
 |`_cputts`|`_cputs`|`_cputs`|`_cputws`|  
@@ -65,7 +80,7 @@ manager: "ghogen"
 |`_istgraph`|`isgraph`|`_ismbcgraph`|`iswgraph`|  
 |`_istlead`|一律傳回 false|`_ismbblead`|一律傳回 false|  
 |`_istleadbyte`|一律傳回 false|`isleadbyte`|一律傳回 false|  
-|`_istlegal`|永遠傳回 true|`_ismbclegal`|永遠傳回 true|  
+|`_istlegal`|一律傳回 true|`_ismbclegal`|一律傳回 true|  
 |`_istlower`|`islower`|`_ismbclower`|`iswlower`|  
 |`_istprint`|`isprint`|`_ismbcprint`|`iswprint`|  
 |`_istpunct`|`ispunct`|`_ismbcpunct`|`iswpunct`|  
@@ -273,7 +288,7 @@ manager: "ghogen"
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型文字對應](../c-runtime-library/generic-text-mappings.md)   
  [資料類型對應](../c-runtime-library/data-type-mappings.md)   
  [常數和全域變數對應](../c-runtime-library/constant-and-global-variable-mappings.md)   

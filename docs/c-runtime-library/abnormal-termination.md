@@ -1,60 +1,78 @@
 ---
-title: "_abnormal_termination | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_abnormal_termination"
-apilocation: 
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr90.dll"
-  - "msvcr120.dll"
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr100.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_abnormal_termination"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_abnormal_termination"
+title: _abnormal_termination | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _abnormal_termination
+apilocation:
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr90.dll
+- msvcr120.dll
+- msvcrt.dll
+- msvcr80.dll
+- msvcr100.dll
+apitype: DLLExport
+f1_keywords:
+- _abnormal_termination
+dev_langs:
+- C++
+helpviewer_keywords:
+- _abnormal_termination
 ms.assetid: 952970a4-9586-4c3d-807a-db729448c91c
 caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# _abnormal_termination
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d826dd3c0293393a960657f45ac4b68370d7030c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-表示 [try\-finally 陳述式](../cpp/try-finally-statement.md) 的 `__finally` 區塊是編碼，當系統執行終止處理常式一份內部清單中。  
+---
+# <a name="abnormaltermination"></a>_abnormal_termination
+指出當系統正在執行終止處理常式的內部清單時，是否輸入 [try-finally 陳述式](../cpp/try-finally-statement.md)的 `__finally` 區塊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 int   _abnormal_termination(  
    );  
 ```  
   
-## 傳回值  
- 如果系統 *回溯* 堆疊則為`true`，;否則為 `false`。  
+## <a name="return-value"></a>傳回值  
+ 如果系統「回溯」堆疊則為 `true`，否則為 `false`。  
   
-## 備註  
- 這是用來將內部功能處理回溯例外狀況並不適合從使用者程式碼呼叫。  
+## <a name="remarks"></a>備註  
+ 這是用來管理回溯例外狀況的內部函式，不是從使用者程式碼呼叫。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|\_abnormal\_termination|excpt.h|  
+|-------------|---------------------|  
+|_abnormal_termination|excpt.h|  
   
-## 請參閱  
- [try\-finally 陳述式](../cpp/try-finally-statement.md)
+## <a name="see-also"></a>另請參閱  
+ [try-finally 陳述式](../cpp/try-finally-statement.md)

@@ -1,60 +1,78 @@
 ---
-title: "__p__commode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__p__commode"
-apilocation: 
-  - "msvcr110.dll"
-  - "msvcrt.dll"
-  - "msvcr120.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr80.dll"
-  - "msvcr110_clr0400.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__p__commode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__p__commode"
+title: __p__commode | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __p__commode
+apilocation:
+- msvcr110.dll
+- msvcrt.dll
+- msvcr120.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr80.dll
+- msvcr110_clr0400.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- __p__commode
+dev_langs:
+- C++
+helpviewer_keywords:
+- __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
 caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# __p__commode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: cdb058b0173e15d17f47a90d6101aca65954c814
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-`_commode` 全域變數的指標，為檔案 I\/O 作業中指定預設的 *檔案提交模式* 。  
+---
+# <a name="pcommode"></a>__p__commode
+指向 `_commode` 全域變數會指定檔案 I/O 作業的預設「檔案認可模式」。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 int * __p__commode(  
    );  
 ```  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  `_commode` 全域變數的指標。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  `__p__commode` 函式僅供內部使用，不應該從使用者程式碼呼叫。  
   
- 檔案認可模式指定重要資料時寫入磁碟。  如需詳細資訊，請參閱[fflush](../c-runtime-library/reference/fflush.md)。  
+ 檔案認可模式會指定重要資料寫入磁碟的時機。 如需詳細資訊，請參閱 [fflush](../c-runtime-library/reference/fflush.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|\_\_p\_\_commode|internal.h|
+|-------------|---------------------|  
+|__p\__commode|internal.h|

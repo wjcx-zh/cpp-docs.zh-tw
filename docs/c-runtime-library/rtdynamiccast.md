@@ -1,43 +1,61 @@
 ---
-title: "__RTDynamicCast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "__RTDynamicCast"
-apilocation: 
-  - "msvcr90.dll"
-  - "msvcr110.dll"
-  - "msvcr120.dll"
-  - "msvcrt.dll"
-  - "msvcr100.dll"
-  - "msvcr80.dll"
-  - "msvcr110_clr0400.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "__RTDynamicCast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__RTDynamicCast"
+title: __RTDynamicCast | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- __RTDynamicCast
+apilocation:
+- msvcr90.dll
+- msvcr110.dll
+- msvcr120.dll
+- msvcrt.dll
+- msvcr100.dll
+- msvcr80.dll
+- msvcr110_clr0400.dll
+apitype: DLLExport
+f1_keywords:
+- __RTDynamicCast
+dev_langs:
+- C++
+helpviewer_keywords:
+- __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# __RTDynamicCast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ee7eea2815f3e836f862c9797ab46b909fef8cf8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-[dynamic\_cast](../cpp/dynamic-cast-operator.md) 運算子的執行階段實作。  
+---
+# <a name="rtdynamiccast"></a>__RTDynamicCast
+[dynamic_cast](../cpp/dynamic-cast-operator.md) 運算子的執行階段實作。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 PVOID __RTDynamicCast (  
@@ -49,33 +67,33 @@ PVOID __RTDynamicCast (
    ) throw(...)  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `inptr`  
- 多型物件的指標。  
+ 多形物件的指標。  
   
  `VfDelta`  
- 物件中虛擬函式指標的位移。  
+ 物件中的虛擬函式指標位移。  
   
  `SrcType`  
- `inptr` 參數指向的對靜態物件。  
+ `inptr` 參數指向的物件靜態類型。  
   
  `TargetType`  
- 轉型的預期的結果。  
+ 轉換的預計結果。  
   
  `isReference`  
- 如果輸入是參考，則是`true`；如果輸入是指標，則是`false` 。  
+如果輸入是參考則為  `true`，如果輸入是指標則為 `false`。  
   
-## 傳回值  
- 如果成功，則為對適當的子物件的指標；否則，則為NULL。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，則為適當子物件的指標，否則為 NULL。  
   
-## 例外狀況  
- 如果輸入至`dynamic_cast<>`的是指標而且轉換失敗，則為`bad_cast()`。  
+## <a name="exceptions"></a>例外狀況  
+ 如果 `dynamic_cast<>` 的輸入是參考且轉換失敗，則為 `bad_cast()`。  
   
-## 備註  
- 將 `inptr` 型別轉換為 `TargetType` 型別的的物件 。  如果 `TargetType` 是指標，`inptr` 的型別必須為指標，或是如果 `TargetType` 為參考，它就是 l\-value。  `TargetType` 必須是指向先前定義的類別或是 「空指標」的指標或參考。  
+## <a name="remarks"></a>備註  
+ 將 `inptr` 轉換為 `TargetType` 類型的物件。 如果 `TargetType` 是指標，則 `inptr` 類型必須是指標；或如果 `TargetType` 是參考，則為左值 (l-value)。 `TargetType` 必須是先前定義的類別類型的指標或參考，或是為 void 的指標。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|\_\_RTDynamicCast|rtti.h|
+|-------------|---------------------|  
+|__RTDynamicCast|rtti.h|

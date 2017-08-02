@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -113,10 +113,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: a33c5071549695c11ba4820679d5d7059b7f5a5c
-ms.lasthandoff: 04/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 1406e086818ea6f71d32e345aaf3d0d79b91940c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="data-type-constants"></a>資料類型常數
@@ -151,9 +152,9 @@ ms.lasthandoff: 04/01/2017
   
 |常數|值|描述|  
 |--------------|-----------|-----------------|  
-|**DBL_DIG**|15|# 位十進位數字精確度|  
+|**DBL_DIG**|15|十進位位數精確度|  
 |**DBL_EPSILON**|2.2204460492503131e-016|最小，因此 1.0+**DBL_EPSILON** !=1.0|  
-|**DBL_MANT_DIG**|53|# 個位元 (在尾數中)|  
+|**DBL_MANT_DIG**|53|尾數中的位元數|  
 |**DBL_MAX**|1.7976931348623158e+308|最大值|  
 |**DBL_MAX_10_EXP**|308|最大十進位指數|  
 |**DBL_MAX_EXP**|1024|最大二進位指數|  

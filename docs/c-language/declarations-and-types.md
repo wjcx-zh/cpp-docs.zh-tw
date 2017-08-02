@@ -1,39 +1,54 @@
 ---
 title: "宣告和類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "資料類型 [C]"
-  - "宣告 [C++], C"
-  - "宣告 [C++], 類型"
-  - "類型 [C]"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data types [C]
+- types [C]
+- declarations [C++], C
+- declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 宣告和類型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 366ddba0f24b9b33b2244e965534ad81d1e82492
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-本節將描述變數、函式及類型的宣告和初始化。  C 語言包括一組標準的基本資料類型。  您也可以根據已定義的類型宣告新類型，藉此加入自己的資料類型，稱為「衍生類型」\(Derived Type\)。  將會討論下列主題：  
+---
+# <a name="declarations-and-types"></a>宣告和類型
+本節將描述變數、函式及類型的宣告和初始化。 C 語言包括一組標準的基本資料類型。 您也可以根據已定義的類型宣告新類型，藉此加入自己的資料類型，稱為「衍生類型」(Derived Type)。 我們將討論下列主題：  
   
 -   [宣告概觀](../c-language/overview-of-declarations.md)  
   
 -   [儲存類別](../c-language/c-storage-classes.md)  
   
--   [類型規範](../c-language/c-type-specifiers.md)  
+-   [類型指定名稱](../c-language/c-type-specifiers.md)  
   
 -   [類型限定詞](../c-language/type-qualifiers.md)  
   
@@ -43,13 +58,13 @@ manager: "ghogen"
   
 -   [初始化](../c-language/initialization.md)  
   
--   [基本類型儲存區](../c-language/storage-of-basic-types.md)  
+-   [基本類型的儲存空間](../c-language/storage-of-basic-types.md)  
   
--   [不完整類型](../c-language/incomplete-types.md)  
+-   [不完整的類型](../c-language/incomplete-types.md)  
   
 -   [Typedef 宣告](../c-language/typedef-declarations.md)  
   
--   [擴充儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)  
+-   [擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [C 語言參考](../c-language/c-language-reference.md)

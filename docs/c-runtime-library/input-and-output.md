@@ -1,43 +1,60 @@
 ---
 title: "輸入和輸出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.io"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "I/O [CRT]"
-  - "I/O [CRT], 常式"
-  - "I/O 常式"
-  - "輸入常式"
-  - "輸出常式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.io
+dev_langs:
+- C++
+helpviewer_keywords:
+- input routines
+- I/O [CRT]
+- I/O routines
+- I/O [CRT], routines
+- output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 輸入和輸出
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 79ede2f4d96f0dd985b5b68cf83e641cbba10f3e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-I\/O 函式來回檔案和裝置讀取和寫入資料。  檔案 I\/O 作業在文字模式或二進位模式下發生。  Microsoft Run\-Time 程式庫有三種類型的 I\/O 函式有：  
+---
+# <a name="input-and-output"></a>輸入和輸出
+I/O 函式會針對檔案和裝置進行讀取和寫入。 檔案 I/O 作業會以文字模式或二進位模式進行。 Microsoft 執行階段程式庫有三種 I/O 函式：  
   
--   [資料流 I\/O](../c-runtime-library/stream-i-o.md) 函式會將資料當做個別字元資料流。  
+-   [資料流 I/O](../c-runtime-library/stream-i-o.md) 函式會將資料視為個別字元的資料流。  
   
--   [低階 I\/O](../c-runtime-library/low-level-i-o.md) 函式比資料流 I\/O 所提供之叫用作業系統直接低階作業的。  
+-   [低層級 I/O](../c-runtime-library/low-level-i-o.md) 函式會針對比資料流 I/O 所提供還要更低層級的作業，直接叫用作業系統。  
   
--   [主控台和連接埠 I\/O](../c-runtime-library/console-and-port-i-o.md) 函式會直接寫入主控台 \(鍵盤和螢幕\) 或 I\/O 埠讀取或寫入 \(例如印表機通訊埠\)。  
+-   [主控台和連接埠 I/O](../c-runtime-library/console-and-port-i-o.md) 函式會直接讀取或寫入至主控台 (鍵盤和螢幕) 或 I/O 連接埠 (例如印表機連接埠)。  
   
     > [!NOTE]
-    >  由於目前函式在緩衝區而低階函式不是，函式的這兩種型別通常不相容。  用於管理特定檔案，請使用完整的資料流或低階函式。  
+    >  由於資料流函式會進行緩衝處理，而低層級函式不會，因此這兩種類型的函式通常不會相容。 處理特定檔案時，請不要同時使用資料流和低層級函式。  
   
-## 請參閱  
- [依分類區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)
+## <a name="see-also"></a>另請參閱  
+ [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

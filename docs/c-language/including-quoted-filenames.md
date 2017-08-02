@@ -1,32 +1,47 @@
 ---
 title: "包含加引號的檔案名稱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 789a047e-ea38-4c99-b71d-a2ad9c81daee
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 包含加引號的檔案名稱
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 70b5e68fc8a3c0c23b291220e4faf387e9aa11c2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-**ANSI 3.8.2**：針對可包含的原始程式檔支援以引號括住的名稱  
+---
+# <a name="including-quoted-filenames"></a>包含加引號的檔案名稱
+**ANSI 3.8.2**：針對可包含原始程式檔的加引號名稱支援  
   
- 如果您以兩組雙引號 \(" "\) 指定 Include 檔完整明確的路徑規格，前置處理器只會搜尋該路徑規格並忽略標準目錄。  
+ 如果您以兩組雙引號 (" ") 指定 Include 檔完整明確的路徑規格，前置處理器只會搜尋該路徑規格並忽略標準目錄。  
   
- 當 Include 檔指定為 [\#include](../preprocessor/hash-include-directive-c-cpp.md) "path\-spec" 時，目錄搜尋會先從父檔案的目錄開始，繼續進行到其上二層檔案的目錄。  因此，搜尋會從包含處理中原始程式檔的目錄相對位置開始進行。  如果沒有上二層檔案，也找不到此檔案，則會繼續搜尋，如同以角括弧括住檔案名稱一般。  
+ 針對指定為 [#include](../preprocessor/hash-include-directive-c-cpp.md) "path-spec" 的 Include 檔案，目錄搜尋會先從父檔案的目錄開始，並繼續搜尋任何父父代檔案的目錄。 因此，搜尋會從包含處理中原始程式檔的目錄相對位置開始進行。 如果沒有上二層檔案，也找不到此檔案，則會繼續搜尋，如同以角括弧括住檔案名稱一般。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [前置處理指示詞](../c-language/preprocessing-directives.md)

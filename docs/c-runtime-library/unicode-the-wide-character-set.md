@@ -1,38 +1,53 @@
 ---
 title: "Unicode：寬字元集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.international"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "Unicode [C++], 寬字元集"
-  - "寬字元 [C++], Unicode"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.international
+dev_langs:
+- C++
+helpviewer_keywords:
+- Unicode [C++], wide character set
+- wide characters [C++], Unicode
 ms.assetid: b6a05a21-59a5-4d30-8c85-2dbe185f7a74
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# Unicode：寬字元集
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 29991216bd5ee6cb76908ef408cc56240a726e26
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-寬字元是兩個位元組雙語字元碼。  任何全球現代計算環境中所使用的字元，包括各種技術符號和特殊印刷字元在內，都可以根據 Unicode 規格，以寬字元來表示。  開發和維護包括 Microsoft 的大型 Consortium， Unicode 標準多現在接受。  
+---
+# <a name="unicode-the-wide-character-set"></a>Unicode：寬字元集
+寬字元是 2 個位元組的多語系字元碼。 在全球現代計算中使用的任何字元 (包括技術符號和特殊發行字元)，可以根據 Unicode 規格，以寬字元表示。 Unicode 標準是由包括 Microsoft 在內的數個大型組織所開發並維護，而且現在已廣為接受。  
   
- 寬字元是 `wchar_t`型別。  寬字元字串是以 `wchar_t[]`陣列來作表示，並且以`wchar_t*` 指標指著。  您可以用任何 ASCII 字元，可藉由在字元前面加上字母`L`，用寬字元表示。  例如，L'\\0' 是終止的寬 \(16 位元\) `NULL` 字元。  同樣的，任何 ASCII 字串常值可以寬字元字串常值來作表示，藉由在 ASCII 常值的前面加上字母 L \(L"Hello"\)。  
+ 寬字元的類型是 `wchar_t`。 寬字元字串會以 `wchar_t[]` 陣列呈現，且由 `wchar_t*` 指標指向。 任何 ASCII 字元都能以寬字元呈現，方法是在該字元前附加字母 `L`。 例如，L'\0' 是結束寬 (16 位元) `NULL` 字元。 同樣地，任何 ASCII 字串常值都能以寬字元字串常值呈現，方法是在 ASCII 常值前附加字母 L (L"Hello")。  
   
- 一般來說，寬字元需要的記憶體空間要比多位元組字元多，但處理較快。  除此之外，在多位元組編碼裡一次只能表示一個地區設定，然而全世界所有的字元集都可以同時用 Unicode 表示。  
+ 一般而言，寬字元會比多位元組字元佔用更多的記憶體空間，但處理起來更快。 此外，在多位元組編碼中，一次只能呈現一個地區設定，而世界所有字元集都可由 Unicode 表示形式，同時呈現。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [國際化](../c-runtime-library/internationalization.md)   
- [依分類區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)
+ [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

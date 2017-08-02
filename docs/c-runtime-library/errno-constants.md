@@ -1,139 +1,156 @@
 ---
 title: "errno 常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ENOEXEC"
-  - "ENOMEM"
-  - "E2BIG"
-  - "STRUNCATE"
-  - "ENOENT"
-  - "EMFILE"
-  - "EBADF"
-  - "EDEADLOCK"
-  - "EXDEV"
-  - "EILSEQ"
-  - "EINVAL"
-  - "EDOM"
-  - "EACCES"
-  - "ERANGE"
-  - "ENOSPC"
-  - "EAGAIN"
-  - "EEXIST"
-  - "ECHILD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "E2BIG 常數"
-  - "EACCES 常數"
-  - "EAGAIN 常數"
-  - "EBADF 常數"
-  - "ECHILD 常數"
-  - "EDEADLOCK 常數"
-  - "EDOM 常數"
-  - "EEXIST 常數"
-  - "EILSEQ 常數"
-  - "EINVAL 常數"
-  - "EMFILE 常數"
-  - "ENOENT 常數"
-  - "ENOEXEC 常數"
-  - "ENOMEM 常數"
-  - "ENOSPC 常數"
-  - "ERANGE 常數"
-  - "errno 常數"
-  - "EXDEV 常數"
-  - "STRUNCATE 常數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ENOEXEC
+- ENOMEM
+- E2BIG
+- STRUNCATE
+- ENOENT
+- EMFILE
+- EBADF
+- EDEADLOCK
+- EXDEV
+- EILSEQ
+- EINVAL
+- EDOM
+- EACCES
+- ERANGE
+- ENOSPC
+- EAGAIN
+- EEXIST
+- ECHILD
+dev_langs:
+- C++
+helpviewer_keywords:
+- ENOEXEC constant
+- EBADF constant
+- EAGAIN constant
+- EINVAL constant
+- ENOENT constant
+- errno constants
+- E2BIG constant
+- EMFILE constant
+- EDEADLOCK constant
+- ENOSPC constant
+- EDOM constant
+- ENOMEM constant
+- EACCES constant
+- EEXIST constant
+- STRUNCATE constant
+- ERANGE constant
+- ECHILD constant
+- EXDEV constant
+- EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# errno 常數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 993d61cf94df06c01623f231f3a4915d0ec8cc41
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-## 語法  
+---
+# <a name="errno-constants"></a>errno 常數
+## <a name="syntax"></a>語法  
   
 ```  
   
 #include <errno.h>  
 ```  
   
-## 備註  
- **errno** 值是常數在各種錯誤狀況的事件中指派給 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的 。  
+## <a name="remarks"></a>備註  
+ **errno** 值為在發生各種錯誤情況的事件中指派給 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的常數。  
   
- ERRNO.H 包含 **errno** 值的定義。  不過，不是所有在 ERRNO.H 的定義都是給 32 位元 Windows 作業系統使用的。  某些在 ERRNO.H 的值存在維護與作業系統 UNIX 系列的相容性。  
+ ERRNO.H 包含 **errno** 值的定義。 不過，ERRNO.H 中所提供的定義並非全都會用於 32 位元的 Windows 作業系統。 ERRNO.H 中的某些值之所以存在，是為了維持與 UNIX 系列作業系統之間的相容性。  
   
- 在 32 位元 Windows 作業系統的 **errno** 值是XENIX 系統中**errno**的子集 。  因此， **errno** 值不一定和Windows 作業系統的系統呼叫回傳的實際錯誤碼相同。  若要存取實際作業系統錯誤碼，請使用包含此值的 [\_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 變數。  
+ 32 位元 Windows 作業系統中的 **errno** 值，為 XENIX 系統中 **errno** 值的子集。 因此，**errno** 值和由 Windows 作業系統的系統呼叫所傳回的實際錯誤碼並不一定相同。 若要存取實際的作業系統錯誤碼，請使用包含此值的 [_doserrno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 變數。  
   
- 支援下列 **errno** 值：  
+ 支援的 **errno** 值如下：  
   
  **ECHILD**  
- 沒有產生的處理序。  
+ 沒有繁衍的處理序。  
   
  **EAGAIN**  
- 沒有流程。  嘗試建立新的處理序失敗，因為沒有處理位置或沒有足夠的記憶體，或是最高巢狀層次結尾。  
+ 沒有額外的處理序。 建立新處理序的嘗試已失敗，因為已經沒有更多的處理序位置，或是沒有足夠的記憶體，或是已達到最大巢狀層次。  
   
  **E2BIG**  
  引數清單太長。  
   
  **EACCES**  
- 使用權限遭拒。  檔案的使用權限設定不允許指定的權限。  這個錯誤表示嘗試存取檔案 \(或是存取目錄\) 是與文件屬性不相容的方法。  
+ 權限遭拒。 檔案的權限設定不允許指定的存取。 此錯誤顯示嘗試存取檔案 (或在某些情況下為存取目錄) 的方式不符合檔案的屬性。  
   
- 例如，當嘗試從不開啟時的檔案讀取，開啟撰寫的現有唯讀檔案，或開啟目錄而不是檔案時，可能會發生錯誤。  在 MS\-DOS 作業系統版本 3.0 和以後， **EACCES** 也可能表示鎖定或共用違規。  
+ 例如，在嘗試讀取未開啟的檔案、開啟現有唯讀檔案以進行寫入，或是開啟目錄而非檔案時，便可能會發生該錯誤。 在 MS-DOS 作業系統 3.0 版或更新版本之下，**EACCES** 也可能表示鎖定或共用違規。  
   
- 錯誤也會發生為指定檔案或目錄重新命名或移除現有的目錄。  
+ 在嘗試對檔案或目錄進行重新命名，或是移除現有目錄時，也可能會發生該錯誤。  
   
  **EBADF**  
- 錯誤的檔案編號。  有兩個原因: 1\) 指定的檔案描述項不是有效值也無法開啟檔案。2\) 嘗試將開啟的檔案或裝置撰寫成唯讀存取。  
+ 檔案編號錯誤。 有兩個可能的原因：1) 指定的檔案描述項不是有效的值，或未參考開啟檔案。 2) 嘗試寫入以唯讀存取方式開啟的檔案或裝置。  
   
  **EDEADLOCK**  
- 會發生資源死結。  對數學函式的引數不是函式的定義域。  
+ 會發生資源死結。 數學函式的引數沒有位於函式的定義域中。  
   
  **EDOM**  
- 算術引數。  
+ 數學引數。  
   
  **EEXIST**  
- 檔案存在。  嘗試建立已經存在的檔案。  例如， **\_O\_CREAT** 和 **\_O\_EXCL** 旗標在 **\_open** 呼叫指定，不過具此名檔案已經存在。  
+ 檔案存在。 嘗試建立已存在的檔案。 例如，在 **_open** 呼叫中指定 **_O_CREAT** 和 **_O_EXCL** 旗標，但是命名的檔案已經存在。  
   
  **EILSEQ**  
- 不合法的位元組序列 \(例如，在 MBCS 字串\)。  
+ 不合法的位元組序列 (例如在 MBCS 字串中)。  
   
  **EINVAL**  
- 無效的引數。  無效值為其中一個給所指定函式的引數。  例如，當置放檔案指標時\(傳遞至 **fseek**的呼叫\)給原點的值是在檔案的開頭之前。  
+ 無效引數。 為函式的其中一個引數提供無效的值。 例如，在放置檔案指標 (透過呼叫 **fseek**) 時，為原點所提供的值是位於檔案的開頭之前。  
   
  **EMFILE**  
- 太多開啟的檔案。  沒有可用的檔案描述項，因此，無法開啟其他檔案。  
+ 開啟太多檔案。 沒有更多檔案描述項可用，因此已無法開啟更多檔案。  
   
  **ENOENT**  
- 沒有這類檔案或目錄。  指定的檔案或目錄不存在或找不到。  每當至指定的檔案不存在或路徑的元件不指定現有的目錄時，這個訊息可能發生。  
+ 無此檔案或目錄。 指定的檔案或目錄不存在或找不到。 在指定的檔案不存在，或是路徑的某個元件並沒有指定現有目錄的情況下，便可能會出現此訊息。  
   
  **ENOEXEC**  
- Exec 格式錯誤。  嘗試執行不可執行檔或具有無效的可執行檔格式的檔案。  
+ Exec 格式錯誤。 嘗試執行不可執行或是具有無效可執行檔格式的檔案。  
   
  **ENOMEM**  
- 不夠核心。  沒有足夠的記憶體以嘗試的運算子是可用的。  例如，當沒有足夠的記憶體可用執行子處理序時，或當**\_getcwd** 的設定無法滿足該要求時，可能會發生這個訊息。  
+ 沒有足夠的核心。 沒有足夠的記憶體可供嘗試的運算子使用。 例如，當沒有足夠記憶體以執行子處理序，或是無法滿足 **_getcwd** 呼叫中的配置要求時，便可能會出現此訊息。  
   
  **ENOSPC**  
- 沒有在裝置留下任何空間。  裝置已沒有任何空間供寫入 \(例如，磁碟已滿\)。  
+ 裝置無剩餘空間。 裝置上已沒有空間可供寫入 (例如當磁碟已滿時)。  
   
  **ERANGE**  
- 結果太大。  對數學函式的引數太大，造成部分或完整顯著性位元會遺失結果的。  這個錯誤發生於其他函式，也可能會發生在引數比預期大時 \(例如，**\_getcwd** 的引數 超出預期的*緩衝區* 長度\)。  
+ 結果太大。 針對數學函式的引數太大，導致結果部分或完全失去的精確度。 當引數比預期的還要大 (例如，當針對 **_getcwd** 的 *buffer* 引數比預期的還要長) 時，此錯誤也有可能在其他函式中發生。  
   
  **EXDEV**  
- 跨裝置的連結。  嘗試將檔案移到不同的裝置 \(使用 **rename** 函式\)。  
+ 跨裝置連結。 嘗試將檔案移至不同的裝置 (使用 **rename** 函式)。  
   
  **STRUNCATE**  
- 字串複製或串連造成截斷的字串。  請參閱 [\_TRUNCATE](../c-runtime-library/truncate.md)。  
+ 字串複製或串連導致截斷的字串。 請參閱 [_TRUNCATE](../c-runtime-library/truncate.md)。  
   
- 下列值為與 Posix 的相容性支援。  它們是在非 Posix 系統需要的值。  
+ 下列值支援與 Posix 之間的相容性。 它們在非 Posix 系統上為必要值。  
   
 ```  
 #define E2BIG [argument list too long]  
@@ -217,5 +234,5 @@ caps.handback.revision: 8
 #define EXDEV [cross device link]  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [全域常數](../c-runtime-library/global-constants.md)

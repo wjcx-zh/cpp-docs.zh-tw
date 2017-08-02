@@ -1,46 +1,63 @@
 ---
 title: "多執行緒程式庫效能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "程式庫, 多執行緒"
-  - "多執行緒程式庫"
-  - "效能, 多執行緒"
-  - "執行緒 [C++], 效能"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- threading [C++], performance
+- libraries, multithreaded
+- performance, multithreading
+- multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# 多執行緒程式庫效能
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: b2a6f6535092043fe2f32c08fbb522ff3c367063
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-單一執行緒 CRT 已無法使用。  本主題討論如何從多個執行緒的程式庫取得最高性能。  
+---
+# <a name="multithreaded-libraries-performance"></a>多執行緒程式庫效能
+單一執行緒 CRT 已不再提供使用。 本主題會討論從多執行緒程式庫取得最大效能的方法。  
   
-## 最大化效能  
- 改善了多執行緒的程式庫的效能並接近現在已排除的單一執行緒的程式庫的效能。  針對這些需要更高的效能情況下，有許多新功能。  
+## <a name="maximizing-performance"></a>將效能最大化  
+ 多執行緒程式庫的效能已經受到改善，並非常接近已被取代之單一執行緒程式庫的效能。 針對那些需要更高效能的情況，現已提供數種新功能。  
   
--   獨立資料流鎖定允許您鎖定資料流並使用直接存取資料流的 [\_nolock 函式](../c-runtime-library/nolock-functions.md) 。  這可讓鎖定用法在重要迴圈外提取。  
+-   獨立資料流鎖定可讓您鎖定資料流，然後使用可直接存取資料流的 [_nolock 函式](../c-runtime-library/nolock-functions.md)。 這可從重要迴圈中將鎖定的使用提至外面。  
   
--   各個執行緒地區設定減少多執行緒案例中地區設定存取的成本 \(請參閱 [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)\)。  
+-   個別執行緒的地區設定可降低多執行緒案例的地區設定存取成本 (請參閱 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md))。  
   
--   地區設定相關的函式 \(名稱結尾為 \_l\) 會將地區設定做為參數，取消大量成本 \(例如， [printf、\_printf\_l、wprintf、\_wprintf\_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)\)。  
+-   與地區設定相關的函式 (名稱以 _l 作為結尾) 會以參數的形式接受地區設定，以移除大量成本 (例如，[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md))。  
   
--   對常見的字碼頁的最佳化減少許多簡短作業的成本。  
+-   針對常用字碼頁的最佳化，可降低許多簡短作業的成本。  
   
--   定義 [\_CRT\_DISABLE\_PERFCRIT\_LOCKS](../c-runtime-library/crt-disable-perfcrit-locks.md) 強制任何 I\/O 作業假設單一執行緒的 I\/O 模型和使用函式的 \_nolock 形式。  這允許高度 I\/O 的單一執行緒應用程式取得更好的效能。  
+-   定義 [_CRT_DISABLE_PERFCRIT_LOCKS](../c-runtime-library/crt-disable-perfcrit-locks.md)可強制所有 I/O 作業採用單一執行緒 I/O 模型，並使用函式的 _nolock 版本。 這可提供高度以 I/O 為基礎的單一執行緒應用程式，以取得更加的效能。  
   
--   CRT 堆積控制代碼的公開可讓您啟用 CRT 堆積的 Windows Low Fragmentation Heap \(LFH\)，可大幅改善高度縮放的情況的效能。  
+-   公開 CRT 堆積控制代碼可讓您針對 CRT 堆積啟用 Windows 低分散堆積 (LFH)，這可以大幅提升高度調整案例的效能。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

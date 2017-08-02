@@ -1,34 +1,51 @@
 ---
 title: "不完整的類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C], 不完整的類型"
-  - "不完整的類型"
-  - "結構, 不完整的"
-  - "類型 [C], 不完整的"
-  - "等位, 不完整的"
-  - "void 關鍵字 [C]"
-  - "void 關鍵字 [C], 不完整的"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- void keyword [C], incomplete
+- types [C], incomplete
+- incomplete types
+- unions, incomplete
+- arrays [C], incomplete types
+- void keyword [C]
+- structures, incomplete
 ms.assetid: 01bc0cf6-9fa7-458c-9371-ecbe54ea6aee
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 不完整的類型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: ebc73813c28f5ccd25b28cadf283412a204b57d3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-不完整類型是一種描述識別項的類型，但缺少判斷識別項大小所需的資訊。  「不完整類型」可以是：  
+---
+# <a name="incomplete-types"></a>不完整的類型
+不完整類型是一種描述識別項的類型，但缺少判斷識別項大小所需的資訊。 「不完整類型」可以是：  
   
 -   您尚未指定成員的結構類型。  
   
@@ -36,9 +53,9 @@ caps.handback.revision: 6
   
 -   您尚未指定維度的陣列類型。  
   
- void 類型是一種無法完成的不完整類型。  若要完成不完整類型，請指定遺漏的資訊。  下列範例顯示如何建立和完成不完整類型。  
+ void 類型是一種無法完成的不完整類型。 若要完成不完整類型，請指定遺漏的資訊。 下列範例顯示如何建立和完成不完整類型。  
   
--   若要建立不完整的結構類型，請宣告一個結構類型，但不指定其成員。  在此範例中，`ps` 指標會指向名為 `student` 的不完整結構類型。  
+-   若要建立不完整的結構類型，請宣告一個結構類型，但不指定其成員。 在此範例中，`ps` 指標會指向名為 `student` 的不完整結構類型。  
   
     ```  
     struct student *ps;  
@@ -53,7 +70,7 @@ caps.handback.revision: 6
     }                   /* student structure now completed */  
     ```  
   
--   若要建立不完整的陣列類型，請宣告一個陣列類型，而不指定其重複計數。  例如：  
+-   若要建立不完整的陣列類型，請宣告一個陣列類型，而不指定其重複計數。 例如：  
   
     ```  
     char a[];  /* a has incomplete type */  
@@ -65,5 +82,5 @@ caps.handback.revision: 6
     char a[25]; /* a now has complete type */  
     ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告和類型](../c-language/declarations-and-types.md)

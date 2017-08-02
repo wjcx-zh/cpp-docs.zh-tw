@@ -1,48 +1,65 @@
 ---
 title: "C 位元欄位 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "位元欄位"
-  - "bitfields"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- bitfields
+- bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# C 位元欄位
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: e0370ea8d0d519ca10f3035c7a84748d0888e8d7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-除了結構或等位的成員宣告子之外，結構宣告子也可以是指定的位元數，稱為位元欄位 \(Bit Field\)」它的長度從欄位名稱的宣告子產生以冒號分隔。  位元欄位會解譯成整數類資料型別。  
+---
+# <a name="c-bit-fields"></a>C 位元欄位
+除了結構或等位成員的宣告子之外，結構宣告子也可以指定為位元數目 (稱為「位元欄位」)。 其長度是依冒號從欄位名稱的宣告子所設定。 位元欄位會以整數類型解譯。  
   
-## 語法  
- *結構宣告子*:  
- *宣告子*  
+## <a name="syntax"></a>語法  
+ *struct-declarator*：  
+ *declarator*  
   
- *型別規範宣告子*  選取               **:**  *常數運算式*  
+ *type-specifier declarator* opt**:** *constant-expression*  
   
- *常數運算式* 以位元組指定欄位的寬度。  *型別指定名稱* 對 `declarator` 的型別規範必須是 `unsigned int`、  **帶正負號的整數** ，則為 `int`，而且 *常數運算* 式必須是非負數的整數值。  如果值為零，宣告沒有 `declarator`。  傳回位元欄位的位元欄位、指標位元欄位和函式不允許。  選擇性 `declarator` 命名位元欄位。  位元欄位只能宣告為結構的一部分。  傳址運算子 \(**&**\) 無法套用的位元欄位元件。  
+ *constant-expression* 會以位元指定欄位的寬度。 `declarator` 的 *type-specifier* 必須是 `unsigned int`、**signed int** 或 `int`，而且 *constant-expression* 必須是非負值的整數值。 若該值是零，宣告沒有 `declarator`。 不允許位元欄位陣列、位元欄位指標與傳回位元欄位的函式。 選擇性的 `declarator` 會為位元欄位命名。 位元欄位只能宣告為結構的一部分。 address-of 運算子 (**&**) 無法套用至位元欄位元件。  
   
- 未命名的位元欄位無法參考，因此，它們在執行階段的內容無法預期。  它們可以為對齊目的而被當做「錯誤」的欄位。  指定寬度為 0 的未命名的位元欄位以確保遵循它在 *結構宣告清單之成員的* 儲存在 `int` 界限開始。  
+ 無法參考未具名位元欄位，而且其內容在執行階段無法預測。 它們可以當作「虛設」欄位使用，以用於對齊用途。 未具名的位元欄位寬度指定為 0 時，可保證 *struct-declaration-list* 中跟隨在其後的成員儲存區是以 `int` 界限開始。  
   
- 位元欄位必須夠長以包含這個位元。  例如，這兩個陳述式不是合法的:  
+ 位元欄位也必須夠長，以包含位元模式。 例如，這兩個陳述式不合法：  
   
 ```  
 short a:17;        /* Illegal! */  
 int long y:33;     /* Illegal! */  
 ```  
   
- 這個範例會定義名為的二維陣列的結構的具名 `screen`。  
+ 此範例定義名為 `screen` 之結構的二維陣列。  
   
 ```  
 struct   
@@ -54,15 +71,15 @@ struct
 } screen[25][80];  
 ```  
   
- 包含 2000 個元素的陣列。  每個項目都是包含四個位元欄位成員的個別結構: `icon`、 `color`、 `underline`和 `blink`。  每個結構的大小是兩個位元組。  
+ 陣列包含 2,000 個元素。 每個元素都是個別的結構，其中包含四個位元欄位成員：`icon`、`color`、`underline` 與 `blink`。 每個結構的大小都是兩位元組。  
   
- 位元欄位的語意與整數型別相同。  這表示無論欄位有多少位元組，位元欄位用都會與相同基底類型會使用的表示方法。  
+ 位元欄位具有與整數類型相同的語意。 此表示位元欄位在運算式的使用方式，就像使用相同基底類型的變化一樣，而不論位元欄位中有多少位元。  
   
- **Microsoft 專有的**  
+ **Microsoft 特定的**  
   
- 為 `int` 定義的位元欄位會分正負號。  對 ANSI C 標準的 Microsoft 擴充功能允許 `char` 和 **long** 型別 \( **signed** \) 和 `unsigned`位元欄位。  具有基底型別的 **long**、 **short**或**signed** `char` \(或 `unsigned`\) 強制對齊未命名的位元欄位的界限所適用的基底型別。  
+ 定義為 `int` 的位元欄位會被視為帶正負號。 Microsoft 的 ANSI C 標準延伸模組允許為位元欄位使用 `char` 與 **long** 類型 (「帶正負號」與 `unsigned`)。 具有基底類型 **long**、**short** 或 `char` (「帶正負號」或 `unsigned`) 的未具名位元欄位會強制對齊基底類型適用的界限。  
   
- 位元欄位在整數中配置從最小顯著性到最有效的位元。  下列程式碼中。  
+ 位元欄位是在整數內依最小顯著性到最高有效位元的順序配置。 在下列程式碼中  
   
 ```  
 struct mybitfields  
@@ -80,16 +97,16 @@ int main( void );
 }  
 ```  
   
- 將位元安排如下:  
+ 位元排列如下：  
   
 ```  
 00000001 11110010  
 cccccccb bbbbaaaa  
 ```  
   
- 因為處理器的 8086 系列在高位元組之前儲存低位元組的整數值，整數上面的 `0x01F2` 在實體記憶體將會儲存為 `0xF2` 中 `0x01`後面。  
+ 因為 8086 系列處理器會先儲存整數值的低位元組，再儲存高位元組，上面的整數 `0x01F2` 將儲存到實體記憶體作為 `0xF2`，後面接著 `0x01`。  
   
- **END Microsoft 專有**  
+ **END Microsoft 特定的**  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構宣告](../c-language/structure-declarations.md)

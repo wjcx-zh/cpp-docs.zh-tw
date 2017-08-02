@@ -1,69 +1,86 @@
 ---
 title: "檔案讀取/寫入存取常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.constants.file"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "檔案讀取/寫入的存取常數"
-  - "常數 [C++], 檔案屬性"
-  - "檔案讀取/寫入存取常數"
-  - "讀取/寫入存取常數"
-  - "寫入存取常數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.constants.file
+dev_langs:
+- C++
+helpviewer_keywords:
+- read/write access constants
+- write access constants
+- access constants for file read/write
+- constants [C++], file attributes
+- file read/write access constants
 ms.assetid: 56cd1d22-39a5-4fcf-bea2-7046d249e8ee
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 檔案讀取/寫入存取常數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 2ec7e14c3bc943405eb115214f9b2eb424180b4e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-## 語法  
+---
+# <a name="file-readwrite-access-constants"></a>檔案讀取/寫入存取常數
+## <a name="syntax"></a>語法  
   
 ```  
   
 #include <stdio.h>  
 ```  
   
-## 備註  
- 這些常數可指定存取檔案要求的型別 \(如「a」， 「r」或「w」\) 。  [平移模式](../c-runtime-library/file-translation-constants.md) \(「b」或「t」\) 和 [對磁碟模式](../c-runtime-library/commit-to-disk-constants.md) \(「c」或「n」\)都可依照存取類型指定。  
+## <a name="remarks"></a>備註  
+ 這些常數會指定對檔案要求的存取類型 ("a"、"r" 或 "w")。 [轉譯模式](../c-runtime-library/file-translation-constants.md) ("b" 或 "t") 和[認可到磁碟模式](../c-runtime-library/commit-to-disk-constants.md) ("c" 或 "n") 都可以與存取類型一起指定。  
   
- 存取型別如下。  
+ 存取類型說明如下。  
   
- **「a」**。  
- 開啟以附加撰寫在檔案結尾；如果檔案不存在，請先建立檔案。  任何寫入作業都發生在檔案結尾。  雖然檔案指標可以使用`fseek`或 **rewind**重新調整位置，但是在執行任何寫入作業之前，指標永遠會移回至檔案結尾。  
+ **"a"**  
+ 開啟以寫入該檔案結尾 (附加)；如果該檔案不存在，便會先建立檔案。 所有的寫入作業都會在檔案結尾進行。 即使檔案指標可以使用 `fseek` 或 **rewind** 重新調整位置，但是在執行任何寫入作業之前，一律會移回至檔案結尾。  
   
- **"a\+"**。  
- 與上面相同，但是也允許讀取。  
+ **"a+"**  
+ 與上方所述相同，但也允許讀取。  
   
  **"r"**  
- 開啟以讀取。  如果檔案不存在或找不到檔案，則開啟檔案的呼叫將會失敗。  
+ 開啟以讀取。 如果檔案不存在或找不到，開啟檔案的呼叫就會失敗。  
   
- **"r\+"**  
- 開啟以進行讀取和寫入。  如果檔案不存在或找不到檔案，則開啟檔案的呼叫將會失敗。  
+ **"r+"**  
+ 開啟以進行讀取和寫入。 如果檔案不存在或找不到，開啟檔案的呼叫就會失敗。  
   
  **"w"**  
- 開啟空白檔案以寫入。  如果指定的檔案已存在，其內容將被終結。  
+ 開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。  
   
- **"w\+"**  
- 開啟空白檔案以進行讀取和寫入。  如果指定的檔案已存在，其內容將被終結。  
+ **"w+"**  
+ 開啟空白檔案以進行讀取和寫入。 如果指定的檔案已存在，其內容將被終結。  
   
- 當 "r\+", "w\+"或 "a\+"型別被指定為˙存取類型時，讀取和寫入將同時被允許 \(表示檔案是要開啟以供「更新」之用\)。  然而，在您在讀取和寫入之間切換時，必須有 `fflush`、 `fsetpos`、 `fseek` 或 **rewind** 作業的介入。  目前位置可以為 `fsetpos` 或 `fseek` 作業被指定。  
+ 指定 "r+"、"w+"或 "a+" 類型時，會同時允許讀取和寫入 (表示檔案是要開啟以供「更新」之用)。 不過，當您在讀取和寫入之間切換時，必須有中間的 `fflush`、`fsetpos`、`fseek` 或 **rewind** 作業。 可以針對 `fsetpos` 或 `fseek` 作業指定目前位置。  
   
-## 請參閱  
- [\_fdopen、\_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
- [fopen、\_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen、\_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
- [\_fsopen、\_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
- [\_popen、\_wpopen](../c-runtime-library/reference/popen-wpopen.md)   
+## <a name="see-also"></a>另請參閱  
+ [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
+ [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
+ [freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   
+ [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
+ [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md)   
  [全域常數](../c-runtime-library/global-constants.md)

@@ -1,94 +1,109 @@
 ---
 title: "逸出序列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "(') 單引號"
-  - "? 符號"
-  - "? 符號, 逸出序列字元"
-  - "逸出序列中的 \ 符號"
-  - "\a 逸出序列"
-  - "\f 逸出序列"
-  - "\n 逸出序列"
-  - "\r 逸出序列"
-  - "\t 逸出序列"
-  - "\v 逸出序列"
-  - "退格鍵逸出序列"
-  - "警示字元 \a 逸出序列"
-  - "歸位字元"
-  - "控制字元逸出序列"
-  - "雙反斜線"
-  - "逸出字元"
-  - "逸出序列"
-  - "換頁字元 \f 逸出序列"
-  - "十六進位逸出序列"
-  - "水平定位字元 \t 逸出序列"
-  - "新行字元 \n 逸出序列"
-  - "非圖形控制字元"
-  - "八進位逸出序列"
-  - "問號, 常值"
-  - "引號, single"
-  - "定位字元 \t 逸出序列"
-  - "垂直定位字元 \v 逸出序列"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- "\r escape sequence"
+- double backslash
+- horizontal-tab 	 escape sequence
+- (') single quotation mark
+- "bell character \a escape sequence"
+- escape sequences
+- hexadecimal escape sequence
+- carriage returns
+- tab 	 escape sequence
+- "\f escape sequence"
+- quotation marks, single
+- "formfeed \f escape sequence"
+- "\v escape sequence"
+- control character escape sequences
+- " symbol in escape sequences"
+- octal escape sequence
+- escape characters
+- "newline character \n escape sequence"
+- nongraphic control characters
+- question mark, literal
+- "\n escape sequence"
+- "vertical tab \v escape sequence"
+- "\a escape sequence"
+- '? symbol'
+- '? symbol, escape sequence character'
+- "	 escape sequence"
+- backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 逸出序列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: f8c15c7419f440626f590488a3e7bf52a2282041
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-由一個反斜線 \(**\\**\)，後面加上一個字母或數字組合所組成的字元組合，稱為「逸出序列」。 若要表示新行字元、單引號或字元常數中的某些其他字元，您必須使用逸出序列。  逸出序列視為單一字元，因此是有效的字元常數。  
+---
+# <a name="escape-sequences"></a>逸出序列
+由一個反斜線 (**\\**)，後面加上一個字母或數字組合所組成的字元組合，稱為「逸出序列」。 若要表示新行字元、單引號或字元常數中的某些其他字元，您必須使用逸出序列。 逸出序列視為單一字元，因此是有效的字元常數。  
   
- 逸出序列通常用來指定終端機和印表機動作，例如歸位字元和定位鍵移動。  它們也可以用來提供非列印字元和通常具有特殊意義的字元 \(例如雙引號 **"**\) 之常值表示。  下表列出 ANSI 逸出序列，以及它們所表示的意義。  
+ 逸出序列通常用來指定終端機和印表機動作，例如歸位字元和定位鍵移動。 它們也可以用來提供非列印字元和通常具有特殊意義之字元 (例如雙引號 **"**) 的常值表示。 下表列出 ANSI 逸出序列，以及它們所表示的意義。  
   
- 請注意，在問號前面加上反斜線 \(**\\?**\) 指定常值問號，以避免字元序列被錯誤解譯為三併詞。  如需詳細資訊，請參閱[三併詞](../c-language/trigraphs.md)。  
+ 請注意，在問號前面加上反斜線 (**\\?**) 表示為常值問號，以避免字元序列被錯誤解譯為三併詞。 如需詳細資訊，請參閱[三併詞](../c-language/trigraphs.md)。  
   
-### 逸出序列  
+### <a name="escape-sequences"></a>逸出序列  
   
 |逸出序列|表示|  
-|----------|--------|  
-|**\\a**|鈴響 \(警示\)|  
-|**\\b**|退格鍵|  
-|**\\f**|Formfeed|  
-|**\\n**|換行|  
-|**\\r**|歸位字元|  
-|**\\t**|水平 Tab|  
-|**\\v**|垂直 Tab|  
+|---------------------|----------------|  
+|**\a**|鈴響 (警示)|  
+|**\b**|退格鍵|  
+|**\f**|Formfeed|  
+|**\n**|換行|  
+|**\r**|歸位字元|  
+|**\t**|水平 Tab|  
+|**\v**|垂直 Tab|  
 |**\\'**|單引號|  
 |**\\"**|雙引號|  
 |**\\\\**|反斜線|  
 |**\\?**|常值問號|  
 |**\\** *ooo*|八進位標記法的 ASCII 字元|  
-|**\\x** *hh*|十六進位標記法的 ASCII 字元|  
-|**\\x** *hhhh*|十六進位標記法的 Unicode 字元，如果這個逸出序列用於寬字元常數或 Unicode 字串常值。<br /><br /> 例如，`WCHAR f = L'\x4e00'` 或 `WCHAR b[] = L"The Chinese character for one is \x4e00"`。|  
+|**\x** *hh*|十六進位標記法的 ASCII 字元|  
+|**\x** *hhhh*|十六進位標記法的 Unicode 字元，如果這個逸出序列用於寬字元常數或 Unicode 字串常值。<br /><br /> 例如，`WCHAR f = L'\x4e00'` 或 `WCHAR b[] = L"The Chinese character for one is \x4e00"`。|  
   
  **Microsoft 特定的**  
   
- 如果反斜線後接著的字元未出現在上表中，編譯器會將這個未定義的字元視為字元本身。  例如，`\c` 會被視為 `c`。  
+ 如果反斜線後接著的字元未出現在上表中，編譯器會將這個未定義的字元視為字元本身。 例如，`\c` 會被視為 `c`。  
   
  **END Microsoft 特定的**  
   
- 逸出序列可用來傳送非圖形控制字元至顯示裝置。  例如，在終端機或印表機上，ESC 字元 \(**\\033**\) 通常用來做為控制命令的第一個字元。  有些逸出序列是裝置特定的。  例如，垂直索引標籤和換頁字元逸出序列 \(**\\v** 和 **\\f**\) 不會影響螢幕輸出，但它們可執行適當的印表機操作。  
+ 逸出序列可用來傳送非圖形控制字元至顯示裝置。 例如，在終端機或印表機上，ESC 字元 (**\033**) 通常用來做為控制命令的第一個字元。 有些逸出序列是裝置特定的。 例如，垂直 tab 字元和換頁字元逸出序列 (**\v** 和 **\f**) 不會影響螢幕輸出，但它們可執行適當的印表機操作。  
   
- 您也可以使用反斜線 \(**\\**\) 做為接續字元。  當新行字元 \(等同於按下 RETURN 鍵\) 緊接在反斜線後面，編譯器會忽略反斜線和新行字元，並且將下一行視為上一行的一部分。  這主要用於大於單行的前置處理器定義。  例如：  
+ 您也可以使用反斜線 (**\\**) 做為接續字元。 當新行字元 (等同於按下 RETURN 鍵) 緊接在反斜線後面，編譯器會忽略反斜線和新行字元，並且將下一行視為上一行的一部分。 這主要用於大於單行的前置處理器定義。 例如:   
   
 ```  
 #define assert(exp) \  
 ( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [C 字元常數](../c-language/c-character-constants.md)

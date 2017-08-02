@@ -1,51 +1,68 @@
 ---
 title: "複合陳述式 (C) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "複合陳述式"
-  - "陳述式, 複合"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- compound statements
+- statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 複合陳述式 (C)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 5c576ea616bce80f86f599501370e7d88797901e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-複合陳述式 \(也稱為「區塊」\) 通常會以另一個陳述式主體的形式出現，例如 **if** 陳述式。  [宣告和類型](../c-language/declarations-and-types.md)將描述可能出現在複合陳述式開頭的宣告形式和意義。  
+---
+# <a name="compound-statement-c"></a>複合陳述式 (C)
+複合陳述式 (也稱為「區塊」) 通常會以另一個陳述式主體的形式出現，例如 **if** 陳述式。 [宣告和類型](../c-language/declarations-and-types.md)會描述可能出現在複合陳述式開頭的宣告形式和意義。  
   
-## 語法  
- *compound\-statement*：  
- **{**  *declaration\-list*  opt *statement\-list* opt **}**  
+## <a name="syntax"></a>語法  
+ *compound-statement*:  
+ **{**  *declaration-list* opt*statement-list*opt**}**  
   
- *declaration\-list*：  
- *宣告*  
+ *declaration-list*:  
+ *declaration*  
   
- *declaration\-list 宣告*  
+ *declaration-list declaration*  
   
- *statement\-list*：  
+ *statement-list*:  
  s*tatement*  
   
- *statement\-list 陳述式*  
+ *statement-list statement*  
   
- 如果出現宣告，則必須位於任何陳述式前面。  在複合陳述式開頭宣告之每個識別項的範圍，都會從其宣告點延伸至區塊結尾。  除非內部區塊中存在相同識別項的宣告，否則都可在整個區塊中看見此範圍。  
+ 如果出現宣告，則必須位於任何陳述式前面。 在複合陳述式開頭宣告之每個識別項的範圍，都會從其宣告點延伸至區塊結尾。 除非內部區塊中存在相同識別項的宣告，否則都可在整個區塊中看見此範圍。  
   
- 除非以 **register**、**static** 或 `extern` 另外明確宣告，否則複合陳述式中的識別項會假設為 **auto**，但函式除外，函式只能是 `extern`。  您可以在函式宣告中省略 `extern` 規範，且函式仍會是 `extern`。  
+ 除非以 **register**、**static** 或 `extern` 另外明確宣告，否則複合陳述式中的識別項會假設為 **auto**，但函式除外，函式只能是 `extern`。 您可以在函式宣告中省略 `extern` 規範，且函式仍會是 `extern`。  
   
- 如果變數或函式在複合陳述式中是以儲存類別 `extern` 宣告，則不會配置儲存，且不允許初始化。  宣告會參考其他位置所定義的外部變數或函式。  
+ 如果變數或函式在複合陳述式中是以儲存類別 `extern` 宣告，則不會配置儲存，且不允許初始化。 宣告會參考其他位置所定義的外部變數或函式。  
   
- 在區塊中以 **auto** 或 **register** 關鍵字宣告的變數會重新配置，而且如有需要，會在每次進入複合陳述式時初始化。  這些變數不是在複合陳述式結束之後定義。  如果區塊內宣告的變數擁有 **static** 屬性，則變數會在程式開始執行時初始化，並且在程式執行過程中保留其值。  如需有關 **static** 的詳細資訊，請參閱[儲存類別](../c-language/c-storage-classes.md)。  
+ 在區塊中以 **auto** 或 **register** 關鍵字宣告的變數會重新配置，而且如有需要，會在每次進入複合陳述式時初始化。 這些變數不是在複合陳述式結束之後定義。 如果區塊內宣告的變數擁有 **static** 屬性，則變數會在程式開始執行時初始化，並且在程式執行過程中保留其值。 如需有關 **static** 的詳細資訊，請參閱[儲存類別](../c-language/c-storage-classes.md)。  
   
  這個範例將示範複合陳述式：  
   
@@ -60,5 +77,5 @@ if ( i > 0 )
   
  在這個範例中，如果 `i` 大於 0，則複合陳述式內的所有陳述式會依序執行。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [陳述式](../c-language/statements-c.md)

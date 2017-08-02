@@ -1,63 +1,80 @@
 ---
 title: "stdin、stdout、stderr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdin"
-  - "stderr"
-  - "stdout"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "標準錯誤資料流"
-  - "標準輸入資料流"
-  - "標準輸出資料流"
-  - "stderr 函式"
-  - "stdin 函式"
-  - "stdout 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdin
+- stderr
+- stdout
+dev_langs:
+- C++
+helpviewer_keywords:
+- stdout function
+- standard output stream
+- standard error stream
+- stdin function
+- standard input stream
+- stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# stdin、stdout、stderr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 331b60a8cd06e42c032c6d8c81b58b8e4f4501ae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-## 語法  
+---
+# <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
+## <a name="syntax"></a>語法  
   
 ```  
   
-      FILE *stdin;   
-FILE *stdout;   
-FILE *stderr;   
+      FILE *stdin;   
+FILE *stdout;   
+FILE *stderr;   
 #include <stdio.h>  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  這些是輸入、輸出和錯誤輸出的標準資料流。  
   
- 根據預設，標準輸出和標準錯誤列印至螢幕，標準輸入從鍵盤讀取。  
+ 根據預設，標準輸入是從鍵盤讀取，而標準輸出與標準錯誤則會列印至螢幕。  
   
- 下列資料流指標可存取標準資料流:  
+ 下列資料流指標可用來存取標準資料流：  
   
-|指標|資料流|  
-|--------|---------|  
+|Pointer|資料流|  
+|-------------|------------|  
 |`stdin`|標準輸入|  
 |**stdout**|標準輸出|  
 |`stderr`|標準錯誤|  
   
- 這些指標可以用來做為函式的引數。  某些功能，例如 **getchar** 和 `putchar`，就會自動使用 `stdin` 和 **stdout** 。  
+ 這些指標可以作為函式的引數使用。 某些函式 (例如 **getchar** 和 `putchar`) 會自動使用 `stdin` 和 **stdout**。  
   
- 這些指標是常數，且無法指派新的值。  `freopen` 函式可以重新導向資料流到磁碟檔案或其他裝置。  作業系統可讓您變更程式的標準輸入和輸出導向在命令陣序。  
+ 這些指標是常數，且無法指派新值給它們。 `freopen` 函式可用來將資料流重新導向到磁碟檔案或其他裝置。 作業系統可讓您在命令層級對程式的標準輸入和輸出進行重新導向。  
   
-## 請參閱  
- [資料流 I\/O](../c-runtime-library/stream-i-o.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料流 I/O](../c-runtime-library/stream-i-o.md)   
  [全域常數](../c-runtime-library/global-constants.md)

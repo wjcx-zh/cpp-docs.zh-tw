@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: eb9db9ea42d50faa6e7a693c95795036e650a760
+ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
+ms.openlocfilehash: 3aa56b70b02500998665289e69480570cfa39166
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="run-time-error-checking"></a>執行階段錯誤檢查
-C 執行階段程式庫包含支援執行階段錯誤檢查 (RTC) 的函式。 執行階段錯誤檢查可讓您建置您的程式報告特定類型的執行階段錯誤。 您要指定報告錯誤的方式，以及報告哪些類型的錯誤。 如需詳細資訊，請參閱[執行階段錯誤檢查](http://msdn.microsoft.com/Library/dc7b2f1e-5ff6-42e0-89b3-dc9dead83ee1)。  
+C 執行階段程式庫包含支援執行階段錯誤檢查 (RTC) 的函式。 執行階段錯誤檢查可讓您建置您的程式報告特定類型的執行階段錯誤。 您要指定報告錯誤的方式，以及報告哪些類型的錯誤。 如需詳細資訊，請參閱[如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。  
   
  使用下列函式來自訂您的程式執行執行階段錯誤檢查的方式。  
   
@@ -59,5 +59,4 @@ C 執行階段程式庫包含支援執行階段錯誤檢查 (RTC) 的函式。 �
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)   
  [/RTC (執行階段錯誤檢查)](../build/reference/rtc-run-time-error-checks.md)   
  [runtime_checks](../preprocessor/runtime-checks.md)   
- [RTC 範例](http://msdn.microsoft.com/en-us/b3415b09-f6fd-43dc-8c02-9a910bc2574e)   
  [偵錯常式](../c-runtime-library/debug-routines.md)

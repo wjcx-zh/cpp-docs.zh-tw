@@ -1,50 +1,67 @@
 ---
 title: "基本類型的儲存空間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "算術運算 [C++], 類型"
-  - "資料類型 [C], 規範"
-  - "資料類型 [C], 儲存體"
-  - "double 資料類型, 儲存體"
-  - "浮點數, 儲存體"
-  - "int 資料類型"
-  - "整數類型"
-  - "整數類型, 儲存體"
-  - "long double 關鍵字 [C], 儲存體"
-  - "long 關鍵字 [C]"
-  - "short 資料類型"
-  - "signed 類型 [C++], 儲存體"
-  - "規範 [C++], 類型"
-  - "儲存 [C++], 類型"
-  - "儲存類型 [C++]"
-  - "類型規範 [C++], 大小"
-  - "類型 [C], 算術"
-  - "unsigned 類型 [C++], 儲存體"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- specifiers [C++], type
+- integral types, storage
+- storage [C++], types
+- floating-point numbers, storage
+- type specifiers [C++], sizes
+- arithmetic operations [C++], types
+- int data type
+- short data type
+- signed types [C++], storage
+- long double keyword [C], storage
+- long keyword [C]
+- double data type, storage
+- types [C], arithmetic
+- integral types
+- data types [C], specifiers
+- storing types [C++]
+- unsigned types [C++], storage
+- data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 基本類型的儲存空間
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 5a42f5c0e4592fc397ac51d610ed6ca1495c4504
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
+---
+# <a name="storage-of-basic-types"></a>基本類型的儲存空間
 下表摘要說明與每個基本類型相關聯的儲存區。  
   
-### 基本類型的大小  
+### <a name="sizes-of-fundamental-types"></a>基本類型的大小  
   
-|類型|儲存區|  
-|--------|---------|  
+|類型|存放裝置|  
+|----------|-------------|  
 |`char`、`unsigned char`、**signed char**|1 個位元組|  
 |**short**、**unsigned short**|2 個位元組|  
 |`int`, `unsigned int`|4 個位元組|  
@@ -53,7 +70,7 @@ caps.handback.revision: 6
 |**double**|8 個位元組|  
 |`long double`|8 個位元組|  
   
- C 資料類型屬於一般分類。  「整數類資料類型」包括 `char`、`int`、**short**、**long**、**signed**、`unsigned` 和 `enum`。  「浮點類型」包括 **float**、**double** 和 `long double`。  「算術類型」包括所有浮點和整數類資料類型。  
+ C 資料類型屬於一般分類。 「整數類資料類型」包括 `char`、`int`、**short**、**long**、**signed**、`unsigned` 和 `enum`。 「浮點類型」包括 **float**、**double** 和 `long double`。 「算術類型」包括所有浮點和整數類資料類型。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告和類型](../c-language/declarations-and-types.md)

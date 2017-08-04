@@ -1,39 +1,56 @@
 ---
 title: "回溯相容性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.programs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "回溯相容性"
-  - "回溯相容性, C 執行階段程式庫"
-  - "相容性, C 執行階段程式庫"
-  - "CRT, 相容性"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRT, compatibility
+- backward compatibility, C run-time libraries
+- compatibility, C run-time libraries
+- backward compatibility
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 回溯相容性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: eb334c84fb0b0eb04b9ef48443beedeece23eb0e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-對於產品版本之間的相容性，程式庫 OLDNAMES.LIB 對應舊名稱的新名稱。  例如， `_open`的 `open` 對應。  只有在您編譯命令列選項的下列組合時，您必須使用 OLDNAMES.LIB 明確連結:  
+---
+# <a name="backward-compatibility"></a>回溯相容性
+針對產品版本之間的相容性，程式庫 OLDNAMES.LIB 會將舊名稱對應到新名稱。 例如，`open` 會對應到 `_open`。 只有當您使用下列命令列選項組合來編譯時，才必須明確地與 OLDNAMES.LIB 連結：  
   
--   `/Zl` \(省略預設程式庫名稱從目的檔\) 和 `/Ze` \(預設值—使用 Microsoft 擴充功能\)  
+-   `/Zl` (省略來自物件檔案的預設程式庫名稱) 與 `/Ze` (預設值 — 使用 Microsoft 延伸模組)  
   
--   `/link` \(連結器控制項\)，則為 `/NOD` \(沒有預設程式庫搜尋\) 和 `/Ze`  
+-   `/link` (連結器控制)、`/NOD` (無預設程式庫搜尋) 與 `/Ze`  
   
- 如需編譯器命令列選項的詳細資訊，請參閱 [編譯器參考](../build/reference/compiler-options.md)。  
+ 如需編譯器命令列選項的詳細資訊，請參閱[編譯器參考](../build/reference/compiler-options.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [相容性](../c-runtime-library/compatibility.md)

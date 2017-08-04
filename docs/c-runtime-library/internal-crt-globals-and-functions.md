@@ -15,6 +15,7 @@ apiname:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -81,6 +82,7 @@ apiname:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -224,6 +226,9 @@ apiname:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -273,7 +278,8 @@ apiname:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 apilocation:
 - api-ms-win-crt-math-l1-1-0.dll
 - api-ms-win-crt-heap-l1-1-0.dll
@@ -287,6 +293,8 @@ apilocation:
 - api-ms-win-crt-private-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- vcruntime140_app.dll
+- msvcp140_app.dll
 apitype: DLLExport
 f1_keywords:
 - __acrt_iob_func
@@ -295,6 +303,7 @@ f1_keywords:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -361,6 +370,7 @@ f1_keywords:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -504,6 +514,9 @@ f1_keywords:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -553,7 +566,8 @@ f1_keywords:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -563,6 +577,7 @@ helpviewer_keywords:
 - __badioinfo
 - __BuildCatchObject
 - __BuildCatchObjectHelper
+- __C_specific_handler
 - _calloc_base
 - _chkesp
 - _chvalidator
@@ -629,6 +644,7 @@ helpviewer_keywords:
 - __CxxLongjmpUnwind
 - __CxxQueryExceptionSize
 - __CxxRegisterExceptionObject
+- _CxxThrowException
 - __CxxUnregisterExceptionObject
 - __daylight
 - _dclass
@@ -772,6 +788,9 @@ helpviewer_keywords:
 - __setlc_active
 - _SetWinRTOutOfMemoryExceptionCallback
 - _sopen_dispatch
+- __std_exception_copy
+- __std_exception_destroy
+- __std_type_info_destroy_list
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -821,7 +840,8 @@ helpviewer_keywords:
 - __wcsncnt
 - __winitenv
 - _wsopen_dispatch
-- __C_specific_handler
+- _Xbad_alloc
+- _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 caps.latest.revision: 12
 author: corob-msft
@@ -843,17 +863,19 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b339a9eb92fcb97733b259c3c7c25e7e89784c67
+ms.sourcegitcommit: ac823b16dbcb3ef2bac984a8d0634ac51198dae4
+ms.openlocfilehash: e82838570d8c01d4ecc36fda384a102c415618ae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 06/02/2017
 
 ---
-# <a name="internal-crt-globals-and-functions"></a>內部 CRT 全域和函式
+# <a name="internal-crt-globals-and-functions"></a>內部 CRT 全域和函式  
+  
 C 執行階段 (CRT) 程式庫包含僅用於支援公用程式庫介面的函式和全域變數。 其中有一些會公開在公用標頭中作為實作詳細資料。 雖然可以透過公用匯出存取這些函式和全域變數，但它們卻不是供您用於程式碼中。 我們建議您變更使用這些函式和全域變數的所有程式碼，而改用公用程式庫的同等項目。 這些函式可能會隨著版本而變更。 我們將這些函式列於此處以協助您識別它們。 如果有其他文件就會提供連結，但這些實作詳細資料通常未獲記載。  
   
 ## <a name="internal-crt-globals-and-value-macros"></a>內部 CRT 全域和值巨集  
- 這些全域變數和巨集定義可用於實作 CRT。  
+  
+這些全域變數和巨集定義可用於實作 CRT。  
   
 |名稱|  
 |----------|  
@@ -957,6 +979,7 @@ C 執行階段 (CRT) 程式庫包含僅用於支援公用程式庫介面的函�
 |__CxxLongjmpUnwind|  
 |__CxxQueryExceptionSize|  
 |__CxxRegisterExceptionObject|  
+|_CxxThrowException|  
 |__CxxUnregisterExceptionObject|  
 |__daylight|  
 |_dclass|  
@@ -1118,6 +1141,9 @@ C 執行階段 (CRT) 程式庫包含僅用於支援公用程式庫介面的函�
 |[__setusermatherr](../c-runtime-library/setusermatherr.md)|  
 |_SetWinRTOutOfMemoryExceptionCallback|  
 |_sopen_dispatch|  
+|__std_exception_copy|  
+|__std_exception_destroy|  
+|__std_type_info_destroy_list|  
 |__stdio_common_vfprintf|  
 |__stdio_common_vfprintf_p|  
 |__stdio_common_vfprintf_s|  
@@ -1168,6 +1194,8 @@ C 執行階段 (CRT) 程式庫包含僅用於支援公用程式庫介面的函�
 |__wcsncnt|  
 |[__wgetmainargs](../c-runtime-library/getmainargs-wgetmainargs.md)|  
 |_wsopen_dispatch|  
+|_Xbad_alloc|  
+|_Xlength_error|  
   
 ## <a name="see-also"></a>另請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

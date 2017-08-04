@@ -1,47 +1,64 @@
 ---
 title: "運算錯誤常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_PLOSS"
-  - "_UNDERFLOW"
-  - "_TLOSS"
-  - "_SING"
-  - "_DOMAIN"
-  - "_OVERFLOW"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_DOMAIN 常數"
-  - "_OVERFLOW 常數"
-  - "_PLOSS 常數"
-  - "_SING 常數"
-  - "_TLOSS 常數"
-  - "_UNDERFLOW 常數"
-  - "DOMAIN 常數"
-  - "運算錯誤常數"
-  - "OVERFLOW 常數"
-  - "PLOSS 常數"
-  - "SING 常數"
-  - "TLOSS 常數"
-  - "UNDERFLOW 常數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _PLOSS
+- _UNDERFLOW
+- _TLOSS
+- _SING
+- _DOMAIN
+- _OVERFLOW
+dev_langs:
+- C++
+helpviewer_keywords:
+- _TLOSS constant
+- _SING constant
+- PLOSS constant
+- UNDERFLOW constant
+- _UNDERFLOW constant
+- _OVERFLOW constant
+- DOMAIN constant
+- OVERFLOW constant
+- TLOSS constant
+- SING constant
+- _DOMAIN constant
+- _PLOSS constant
+- math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 運算錯誤常數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 8dd5321d924d02ef7669166a210b193329abc13a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-## 語法  
+---
+# <a name="math-error-constants"></a>運算錯誤常數
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -49,20 +66,20 @@ caps.handback.revision: 6
   
 ```  
   
-## 備註  
- 這個執行階段程式庫的數學常式可能產生算術錯誤常數。  
+## <a name="remarks"></a>備註  
+ 執行階段程式庫的數學常式可能會產生數學錯誤常數。  
   
- 當數學錯誤發生時，如下述對應至在MATH.H定義的例外狀況型別的錯誤，也會被`_matherr`函式擲回。  
+ 這些錯誤 (如下所述) 會對應至在 MATH.H 中定義的例外狀況類型，並會在發生數學錯誤時由 `_matherr` 函式傳回。  
   
 |常數|意義|  
-|--------|--------|  
-|`_DOMAIN`|函式的引數是在函式定義域之外。|  
-|`_OVERFLOW`|結果太大而無法以函式的傳回型別表示。|  
-|`_PLOSS`|部分的重點遺失。|  
-|`_SING`|引數稀有:函式的引數具有無效值。\(例如，0會被傳遞至要求非零值得函式。\)|  
-|`_TLOSS`|發生重點遺失的總數。|  
+|--------------|-------------|  
+|`_DOMAIN`|函式的引數位於函式的定義域之外。|  
+|`_OVERFLOW`|結果太大而無法以函式的傳回類型表示。|  
+|`_PLOSS`|發生精確度部分遺失。|  
+|`_SING`|引數獨特性：函式的引數具有不合法的值。 (例如，值 0 傳遞至要求非零值的函式)。|  
+|`_TLOSS`|發生精確度完全遺失。|  
 |`_UNDERFLOW`|結果太小而無法表示。|  
   
-## 請參閱  
- [\_matherr](../c-runtime-library/reference/matherr.md)   
+## <a name="see-also"></a>另請參閱  
+ [_matherr](../c-runtime-library/reference/matherr.md)   
  [全域常數](../c-runtime-library/global-constants.md)

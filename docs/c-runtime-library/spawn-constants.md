@@ -1,61 +1,76 @@
 ---
 title: "spawn 常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_P_NOWAIT"
-  - "_P_OVERLAY"
-  - "_P_WAIT"
-  - "_P_DETACH"
-  - "_P_NOWAITO"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_P_DETACH 常數"
-  - "_P_NOWAIT 常數"
-  - "_P_NOWAITO 常數"
-  - "_P_OVERLAY 常數"
-  - "_P_WAIT 常數"
-  - "P_DETACH 常數"
-  - "P_NOWAIT 常數"
-  - "P_NOWAITO 常數"
-  - "P_OVERLAY 常數"
-  - "P_WAIT 常數"
-  - "spawn 常數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _P_NOWAIT
+- _P_OVERLAY
+- _P_WAIT
+- _P_DETACH
+- _P_NOWAITO
+dev_langs:
+- C++
+helpviewer_keywords:
+- _P_OVERLAY constant
+- P_DETACH constant
+- P_OVERLAY constant
+- P_NOWAIT constant
+- _P_DETACH constant
+- _P_NOWAIT constant
+- _P_NOWAITO constant
+- P_NOWAITO constant
+- spawn constants
+- P_WAIT constant
+- _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# spawn 常數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 89b430cf7e64d64137cd5f844573d0fe5a3a3bc7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-## 語法  
+---
+# <a name="spawn-constants"></a>spawn 常數
+## <a name="syntax"></a>語法  
   
 ```  
 #include <process.h>  
 ```  
   
-## 備註  
- 在繁衍作業期間前和期間中， `mode` 引數識別呼叫程序所採取的動作。  `mode` 的下列值的是可能出現的:  
+## <a name="remarks"></a>備註  
+ `mode` 引數會決定在 spawn 作業之前及期間，呼叫處理序所採取的動作。 `mode` 可能有下列值：  
   
 |常數|意義|  
-|--------|--------|  
-|`_P_OVERLAY`|用新程序覆疊呼叫程序，破壞函式呼叫程序 \(與 `_exec` 呼叫作用相同\)。|  
-|`_P_WAIT`|暫停呼叫執行緒，直到處理序的完成執行 \(同步 `_spawn`\)。|  
-|`_P_NOWAIT`, `_P_NOWAITO`|繼續與新處理序 \(非同步 `_spawn`\) 同時執行呼叫程序。|  
-|`_P_DETACH`|繼續執行呼叫程序;處理序在背景執行，沒有對主控台或鍵盤上的存取。  呼叫 `_cwait` 至新處理序將會失敗。  這是一項非同步 `_spawn`。|  
+|--------------|-------------|  
+|`_P_OVERLAY`|重疊呼叫處理序與新的處理序，會終結呼叫處理序 (與 `_exec` 呼叫的效果相同)。|  
+|`_P_WAIT`|暫停呼叫執行緒直到新的處理序執行完成 (同步的 `_spawn`)。|  
+|`_P_NOWAIT`, `_P_NOWAITO`|同時繼續執行呼叫處理序與新的處理序 (非同步的 `_spawn`)。|  
+|`_P_DETACH`|繼續執行呼叫處理序，新處理序在背景執行，但無法存取主控台或鍵盤。 針對新處理序呼叫 `_cwait` 將會失敗。 這是非同步 `_spawn`。|  
   
-## 請參閱  
- [\_spawn、\_wspawn 函式](../c-runtime-library/spawn-wspawn-functions.md)   
+## <a name="see-also"></a>另請參閱  
+ [_spawn、_wspawn 函式](../c-runtime-library/spawn-wspawn-functions.md)   
  [全域常數](../c-runtime-library/global-constants.md)

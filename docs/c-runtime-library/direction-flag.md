@@ -1,34 +1,51 @@
 ---
 title: "方向旗標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.flags"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "方向旗標"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.flags
+dev_langs:
+- C++
+helpviewer_keywords:
+- direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 方向旗標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 8c1595b20e9f601bb5a86c68e63d9176e86e7b96
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-方向旗標是 80x86 Intel 處理器特有的 CPU 旗標。  這個屬性適用於任何使用 REP \(repeat\) 前綴的組合語言指令，例如 MOVS 、 MOVSD 、 MOVSW 等。  方向旗標被清除之後，提供給適用指令的位置會增加。  
+---
+# <a name="direction-flag"></a>方向旗標
+方向旗標為針對 Intel 80x86 處理器的 CPU 旗標。 它會套用至使用 REP (repeat) 前置詞的所有組譯碼指示，例如 MOVS、MOVSD、MOVSW 等。 如果方向旗標已清除，將會增加提供給適用指示的位址。  
   
- C 執行階段常式假設方向旗標是清除的狀態。  如果您與其他函式一起使用 C 執行階段函式，您必須確定其他函式不會處理方向旗標或還原到原來的狀態。  在進入時預期方向旗標是清除的狀態可以使執行階段程式嗎執行得更快更有效率。  
+ C 執行階段常式會假設方向旗標已清除。 如果您是以其他函式搭配 C 執行階段函式，則必須確定其他函式不會更動方向旗標，或是會將它還原為原始狀態。 若能在輸入時預期方向旗標已清除，將能使執行階段程式碼更加快速及有效率。  
   
- C 執行階段程式庫，例如字串修改和緩衝區修改程式，預期方向旗標是清空的狀態。  
+ C 執行階段程式庫函式 (例如字串操作和緩衝區操作常式) 將會預期方向旗標已清除。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

@@ -1,33 +1,50 @@
 ---
 title: "在函式和巨集之間選擇的建議 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "c.functions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "函式 [CRT], 和巨集比較"
-  - "巨集, 和函式比較"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- c.functions
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [CRT], vs. macros
+- macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 在函式和巨集之間選擇的建議
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 30b5a2c779e12dc16c37222f00ec45f296825498
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-大部分 Microsoft 執行階段程式庫常式為編譯或組譯的函式，不過有些常式會實作為巨集。  在標頭檔中宣告函式和常式的巨集版本時，巨集定義的優先順序最高，因為他永遠出現在函式宣告之後。  當您叫用實作為函式和巨集的常式時，您可以用兩種方式強制編譯器使用函式版本：  
+---
+# <a name="recommendations-for-choosing-between-functions-and-macros"></a>在函式和巨集之間選擇的建議
+大部分的 Microsoft 執行階段程式庫常式都是編譯或組合函式，但有些常式會實作為巨集。 當標頭檔案同時宣告常式的函式和巨集版本時，巨集定義會有較高的優先權，因為它一律會出現在函式宣告之後。 當您叫用同時實作為函式和巨集的常式時，有兩種方法可以強制編譯器使用函式版本：  
   
--   將名稱放在括號內。  
+-   用括號括住常式的名稱。  
   
     ```  
     #include <ctype.h>  
@@ -36,20 +53,20 @@ caps.handback.revision: 7
                         // function version of toupper.  
     ```  
   
--   將「undefined」與 `#undef` 指示詞的巨集定義：  
+-   使用 `#undef` 指示詞對巨集定義做出「取消定義」：  
   
     ```  
     #include <ctype.h>  
     #undef _toupper  
     ```  
   
- 如果您需要在函式和程式庫常式的巨集實作之間選擇，請考慮下列交易：  
+ 如果您需要在程式庫常式的函式和巨集實作之間做選擇，請考慮下列取捨：  
   
--   **Speed versus size** 使用巨集的主要優點是執行時間較快。  在前置處理中，每次使用時巨集展開 \(取代為其定義\) 內嵌。  不論有多少次呼叫，功能定義只發生一次。  巨集可以增加程式碼大小，但沒有額外負荷與函式呼叫。  
+-   **速度與大小**：使用巨集的主要優點，在於它的執行時間較快。 在前置處理期間，每次使用巨集時，該巨集都會於內嵌展開 (由其定義取代)。 不論呼叫函式定義的次數為何，它都只會出現一次。 巨集可能會增加程式碼的大小，但不會有和函式呼叫相關的額外負荷。  
   
--   **函式評估** 評估位址的函式；巨集則否。  因此您無法仔需要指標的內容中使用巨集名稱。  例如，您可以宣告指標到函式，但不是指標到巨集。  
+-   **函式評估**：函式會針對位址進行評估，而巨集不會。 因此您無法在需要指標的內容中使用巨集名稱。 例如，您可以針對函式宣告指標，但不能針對巨集宣告指標。  
   
--   **Type\-checking** ，當您宣告函式時，編譯器會檢查引數型別。  由於您無法宣告巨集，編譯器無法檢查巨集引數型別：雖然它可以檢查傳遞給巨集的引數數目。  
+-   **類型檢查**：當您宣告函式時，編譯器可以檢查引數類型。 由於您無法宣告巨集，所以編譯器無法檢查巨集的引數類型，雖然它可以檢查傳遞至巨集的引數數目。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

@@ -1,41 +1,58 @@
 ---
-title: "符合 ANSI C 標準 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Ansi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ANSI [C++], C 標準"
-  - "相容性 [C++], ANSI C"
-  - "符合 ANSI C 標準"
-  - "慣例 [C++], Microsoft 的擴充功能"
-  - "Microsoft 擴充功能命名慣例"
-  - "命名慣例 [C++], Microsoft 程式庫"
-  - "底線"
-  - "底線, 前置"
+title: "ANSI C 合規性 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Ansi
+dev_langs:
+- C++
+helpviewer_keywords:
+- underscores, leading
+- compatibility [C++], ANSI C
+- compliance with ANSI C
+- conventions [C++], Microsoft extensions
+- underscores
+- naming conventions [C++], Microsoft library
+- ANSI [C++], C standard
+- Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 符合 ANSI C 標準
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 7e6c5d4045f0b71890a34d845b898844ca550ca8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-所有 Microsoft 特定識別項的命名慣例在這個執行階段系統 \(例如函式、巨集、常數、變數和型別定義\) 是 ANSI 標準。  本文件，按照 ANSI\/ISO C 標準的所有執行階段函式被注意為 ANSI 相容。  ANSI 相容的應用程式只能使用這些 ANSI 相容函式。  
+---
+# <a name="ansi-c-compliance"></a>ANSI C 合規性
+執行階段系統中所有 Microsoft 特定識別碼 (例如函式、巨集、常數、變數與類型定義) 的命名慣例都符合 ANSI 標準。 在此文件中，依照 ANSI/ISO C 標準的所有執行階段函式都標示為與 ANSI 相容。 符合 ANSI 標準的應用程式應該只使用這些與 ANSI 相容的函式。  
   
- Microsoft 特定函式和全域變數名稱從單一底線為開頭。  在您的程式碼範圍內，這些名稱只能在本機覆寫。  例如，當您包含 Microsoft 執行階段標頭檔時，您仍然可以宣告具有相同名稱的區域變數會覆寫 Microsoft 特定功能的 `_open` 。  不過，您無法針對全域函式或全域變數使用這個名稱。  
+ Microsoft 特定函式與全域變數的開頭都是一個底線字元。 這些名稱只能在程式碼的範圍內以區域方式覆寫。 例如，當您包含 Microsoft 執行階段標頭檔時，仍然能透過宣告相同名稱的區域變數，以區域方式覆寫名為 `_open` 的 Microsoft 特定函式。 然而，您無法為自己的全域函式或全域變數使用此名稱。  
   
- Microsoft 專有的巨集和資訊清單常數名稱開始從兩個底線，或者以大寫字母後面會加上一個前置底線。  範圍這些識別項是絕對的。  例如，您無法使用此使用 Microsoft 特定識別項 **\_UPPER** 。  
+ Microsoft 特定巨集與資訊清單常數名稱的開頭是兩個底線字元，或是一個前置底線字元加上一個大寫字母。 這些識別碼的範圍是絕對範圍。 例如，您無法針對此理由使用 Microsoft 特定識別碼 **_UPPER**。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [相容性](../c-runtime-library/compatibility.md)

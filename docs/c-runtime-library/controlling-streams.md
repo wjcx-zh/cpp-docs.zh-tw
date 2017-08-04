@@ -1,52 +1,67 @@
 ---
 title: "控制資料流 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Controlling Streams"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "控制資料流"
-  - "資料流"
-  - "資料流, 控制"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Controlling Streams
+dev_langs:
+- C++
+helpviewer_keywords:
+- streams, controlling
+- controlling streams
+- streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 控制資料流
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 4551a4a47e2fbfbb3fdc687103fbd3e4e6a47046
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-[fopen](../c-runtime-library/reference/fopen-wfopen.md) 傳回型別為 `FILE`之物件的位址。  您可以使用這個位址做為 `stream` 引數套用至多個程式庫函式會在開啟檔案的各種作業。  對於位元組資料流，所有輸入發生，就像是每個字元會藉由呼叫 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md)讀取，因此，所有輸出結果，就像是每個字元會藉由呼叫 [fputc](../c-runtime-library/reference/fputc-fputwc.md)寫入。  對於位元組資料流，所有輸入發生，就像是每個字元會藉由呼叫 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md)讀取，因此，所有輸出結果，就像是每個字元會藉由呼叫 [fputc](../c-runtime-library/reference/fputc-fputwc.md)寫入。  
+---
+# <a name="controlling-streams"></a>控制資料流
+[fopen](../c-runtime-library/reference/fopen-wfopen.md) 會傳回類型為 `FILE` 之物件的位址。 您可以使用此位址作為數個程式庫函式的 `stream` 引數，以在開啟檔案上執行各種作業。 針對位元組資料流，所有輸入發生的情況都會有如每個字元是透過呼叫 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) 的方式讀取，且所有輸出發生的情況都會有如每個字元是透過呼叫 [fputc](../c-runtime-library/reference/fputc-fputwc.md) 的方式寫入。 針對寬資料流，所有輸入發生的情況都會有如每個字元是透過呼叫 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) 的方式讀取，且所有輸出發生的情況都會有如每個字元是透過呼叫 [fputwc](../c-runtime-library/reference/fputc-fputwc.md) 的方式寫入。  
   
- 您可以藉由呼叫 [fclose](../c-runtime-library/reference/fclose-fcloseall.md)關閉檔案中，之後， `FILE` 物件的位址無效。  
+ 您可以透過呼叫 [fclose](../c-runtime-library/reference/fclose-fcloseall.md) 來關閉檔案，在那之後 `FILE` 物件的位址將會無效。  
   
- `FILE` 物件所儲存之資料流的狀態，包括：  
+ `FILE` 物件會儲存資料流的狀態，包括：  
   
--   錯誤指示器集合遇到非零會造成讀取或寫入錯誤的函式。  
+-   由遇到讀取或寫入錯誤的函式設為非零的錯誤指標。  
   
--   檔案結尾標記由函式設定為非零，該函式在讀取時遇到檔案結尾。  
+-   由在讀取時遇到檔案結尾的函式設為非零的檔案結尾指標。  
   
--   如果檔案可能支援當地語系化的需求，檔案位置指示器在資料流的下一個位元組讀取或寫入。  
+-   在檔案可以支援位置要求的情況下，指定資料流中要讀取或寫入之下一個位元組的檔案位置指標。  
   
--   [資料流狀態](../c-runtime-library/stream-states.md) 指定資料流是否會接受讀取及\/或寫入，且資料流是否未繫結，以及一個雙位元組的或寬度放置。  
+-   [資料流狀態](../c-runtime-library/stream-states.md)能指定資料流是否會接受讀取和/或寫入，以及資料流是未繫結、位元組導向，或是寬導向。  
   
--   轉換狀態記住任何部分已安裝或產生的通用多位元組字元狀態，以及其中任一個將位元組序列的狀態在檔案中\)。  
+-   轉換狀態會記得所有已部分組合或產生的一般化多位元組字元的狀態，以及檔案內字元組序列的所有移位狀態。  
   
--   檔案緩衝區指定陣列物件位址和大小程式庫函式可以使用以改善效能、讀取和寫入資料流寫入作業。  
+-   檔案緩衝區會指定程式庫函式可用來改善資料流讀取和寫入作業效能的陣列物件位址和大小。  
   
- 請您不要更改任何儲存在 `FILE` 物件或儲存在您為使用者指定的檔案緩衝器物件的值。  您無法複製 `FILE` 物件，並且 portably 使用複製的位址為 `stream` 引數對程式庫函式。  
+ 請不要變更儲存在 `FILE` 物件中，或是您指定搭配該物件使用之檔案緩衝區中的任何值。 您不能複製 `FILE` 物件，並改為使用該複本的位址作為針對程式庫函式的 `stream` 引數。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [檔案和資料流](../c-runtime-library/files-and-streams.md)

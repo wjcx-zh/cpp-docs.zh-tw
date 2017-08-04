@@ -1,80 +1,97 @@
 ---
 title: "檔案屬性常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A_HIDDEN"
-  - "_A_NORMAL"
-  - "_A_SUBDIR"
-  - "_A_RDONLY"
-  - "A_NORMAL"
-  - "A_SUBDIR"
-  - "_A_SYSTEM"
-  - "c.constants.file"
-  - "_A_HIDDEN"
-  - "A_RDONLY"
-  - "_A_ARCH"
-  - "A_ARCH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_A_ARCH 常數"
-  - "_A_HIDDEN 常數"
-  - "_A_NORMAL 常數"
-  - "_A_RDONLY 常數"
-  - "_A_SUBDIR 常數"
-  - "_A_SYSTEM 常數"
-  - "常數 [C++], 檔案屬性"
-  - "檔案屬性常數 [C++]"
-  - "檔案 [C++], 檔案屬性常數"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- A_HIDDEN
+- _A_NORMAL
+- _A_SUBDIR
+- _A_RDONLY
+- A_NORMAL
+- A_SUBDIR
+- _A_SYSTEM
+- c.constants.file
+- _A_HIDDEN
+- A_RDONLY
+- _A_ARCH
+- A_ARCH
+dev_langs:
+- C++
+helpviewer_keywords:
+- constants [C++], file attributes
+- file attribute constants [C++]
+- _A_SYSTEM constant
+- files [C++], file attribute constants
+- _A_SUBDIR constant
+- _A_ARCH constant
+- _A_NORMAL constant
+- _A_HIDDEN constant
+- _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 檔案屬性常數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: 66c0f112230098288c32058415490dd0b578f357
+ms.contentlocale: zh-tw
+ms.lasthandoff: 05/18/2017
 
-## 語法  
+---
+# <a name="file-attribute-constants"></a>檔案屬性常數
+## <a name="syntax"></a>語法  
   
 ```  
   
 #include <io.h>  
 ```  
   
-## 備註  
- 這些常數指定函式或目錄的指定目前屬性檔案。  
+## <a name="remarks"></a>備註  
+ 這些常數會指定函式所指定檔案或目錄的目前屬性。  
   
- 屬性是由下列資訊清單常數表示:  
+ 屬性會由下列所示常數來代表：  
   
  `_A_ARCH`  
- Archive。  設定每當檔案變更，並用備份命令清除。  值:0x20  
+ 封存。 每當 BACKUP 命令變更或清除檔案時即設定。 值：0x20  
   
  `_A_HIDDEN`  
- 隱藏的檔案  除非使用 \/AH 選項，通常不常以 DIR 命令參閱。  如需一般資料以及檔案的傳回資訊有這個屬性。  值:0x02  
+ 隱藏的檔案。 除非您使用 /AH 選項，否則使用 DIR 命令時並不常見。 傳回一般檔案以及具有此屬性之檔案的相關資訊。 值：0x02  
   
  `_A_NORMAL`  
- 一般。  檔案可以讀取或寫入，不受限制。  值:0x00  
+ 一般。 檔案可進行讀取或寫入而不受限制。 值：0x00  
   
  `_A_RDONLY`  
- 唯讀。  檔案無法開啟供寫入，因此，具有相同名稱的檔案無法建立。  值: 0x01  
+ 唯讀。 無法開啟檔案以進行寫入，也無法建立具有相同名稱的檔案。 值：0x01  
   
  `_A_SUBDIR`  
- 子目錄。  值:0x10  
+ 子目錄。 值：0x10  
   
  `_A_SYSTEM`  
- 系統檔案。  除非使用 \/AS 選項，通常不以 DIR 命令參閱。  值:0x04  
+ 系統檔案。 除非使用 /AS 選項，否則使用 DIR 命令時並不常見。 值：0x04  
   
- 多個常數可以結合或運算子 \(&#124;\)。  
+ 可以使用 OR 運算子 (&#124;) 結合多個常數。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [檔案名稱搜尋函式](../c-runtime-library/filename-search-functions.md)   
  [全域常數](../c-runtime-library/global-constants.md)

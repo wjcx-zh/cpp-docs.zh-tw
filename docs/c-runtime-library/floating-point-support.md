@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 46dd7f80b9a81148d529afe4b537fbf203e20173
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 3c30aa62fb24f1536c865b43e8147d030efc4c58
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="floating-point-support"></a>浮點支援
@@ -171,6 +171,8 @@ Microsoft C 執行階段程式庫 (CRT) 提供許多浮點數學程式庫函式�
  [_gcvt](../c-runtime-library/reference/gcvt.md)  
   
  [_gcvt_s](../c-runtime-library/reference/gcvt-s.md)  
+  
+ [_get_FMA3_enable、_set_FMA3_enable](../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)  
   
  [hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl](../c-runtime-library/reference/hypot-hypotf-hypotl-hypot-hypotf-hypotl.md)  
   

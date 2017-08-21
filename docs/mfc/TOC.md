@@ -637,7 +637,7 @@
 ## [TN060：新 Windows 通用控制項](tn060-the-new-windows-common-controls.md)
 ## [TN061：ON_NOTIFY 和 WM_NOTIFY 訊息](tn061-on-notify-and-wm-notify-messages.md)
 ## [TN062：Windows 控制項的訊息反映](tn062-message-reflection-for-windows-controls.md)
-## [TN063：偵錯網際網路擴充 DLL](tn063-debugging-internet-extension-dlls.md)
+## [TN063：偵錯網際網路 MFC 延伸模組 DLL](tn063-debugging-internet-extension-dlls.md)
 ## [TN064：ActiveX 控制項中的 Apartment Model 執行緒](tn064-apartment-model-threading-in-activex-controls.md)
 ## [TN065：OLE Automation 伺服程式的雙重介面支援](tn065-dual-interface-support-for-ole-automation-servers.md)
 ## [TN066：常見 MFC 3.x 至 4.0 移植問題](tn066-common-mfc-3-x-to-4-0-porting-issues.md)

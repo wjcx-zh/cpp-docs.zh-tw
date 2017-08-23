@@ -11,10 +11,11 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 24ae58e6d8948572248a1595c59714bdf2c6f3f5
-ms.lasthandoff: 04/01/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 8d1d9d769d4cb7df5c34b42f6c104ef3c2e959bd
+ms.openlocfilehash: 8edf2d66cefca86fe51a64c9a15f83e9de040f63
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/01/2017
 ### <a name="toolset"></a>Toolset  
  obj 和 lib 檔案格式定義良好並且極少變更。 有時會針對這些檔案格式進行新增，但這些新增通常不會影響較新工具組使用較舊工具組所產生的物件檔案和程式庫。 這裡的一個最大例外狀況是您使用 /GL (連結時產生程式碼/整個程式最佳化) 進行編譯。 如果您使用 /GL 進行編譯，則只能使用用來產生所產生之物件檔案的相同工具組來連結此物件檔案。 因此，如果您使用 /GL 以及使用 Visual Studio 2017 (v141) 編譯器來產生物件檔案，則必須使用 Visual Studio 2017 (v141) 連結器來連結它。 原因是 /GL 物件內的內部資料結構在工具組的主要版本中不穩定，而且較新工具組不了解較舊的資料格式。  
   
- C++ 沒有穩定的應用程式二進位介面 (ABI)。 Visual C++ 會維持版本之所有次要版本的穩定 ABI。 例如，Visual Studio 2017 和其所有更新都是與二進位檔相容。 但是，在 Visual C++ 的主要版本之間，ABI 不一定相容 (2015 和 2017 除外，它們_是_與二進位檔相容)。 即，我們可能會對 C++ 類型版面配置、名稱裝飾、例外狀況處理和 C++ ABI 的其他部分進行重大變更。 因此，如果您的物件檔案包含具有 C++ 連結的外部符號，則該物件檔案可能未正確地連結到使用 Visual C++ 工具組之不同主要版本所產生的物件檔案。 請注意，在這裡，「可能無法運作」有許多可能的結果︰連結可能完全失敗 (例如，如果名稱裝飾已變更)、連結可能成功但項目無法在執行階段運作 (例如，類型版面配置已變更)，或項目可能在許多情況下運作，而未發生錯誤。 也請注意，雖然 C++ ABI 不穩定，但是 COM 所需的 C ABI 和 C++ ABI 子集則十分穩定。  
+ C++ 沒有穩定的應用程式二進位介面 (ABI)。 Visual C++ 會維持版本之所有次要版本的穩定 ABI。 例如，Visual Studio 2017 和其所有更新都是與二進位檔相容。 但是，在 Visual C++ 的主要版本之間，ABI 不一定相容 (2015 和 2017 除外，它們_是_與二進位檔相容)。 即，我們可能會對 C++ 類型版面配置、名稱裝飾、例外狀況處理和 C++ ABI 的其他部分進行重大變更。 因此，如果您的物件檔案包含具有 C++ 連結的外部符號，則該物件檔案可能未正確地連結到使用 Visual C++ 工具組之不同主要版本所產生的物件檔案。 請注意，這裡的「可能無法運作」有許多可能的結果︰連結可能完全失敗 (例如，如果名稱裝飾已變更)、連結可能成功但項目無法在執行階段運作 (例如，類型版面配置已變更)，或項目在許多情況下可能可以運作且不會發生錯誤。 也請注意，雖然 C++ ABI 不穩定，但是 COM 所需的 C ABI 和 C++ ABI 子集則十分穩定。  
   
 ### <a name="libraries"></a>程式庫  
 
@@ -166,6 +167,5 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
  如需詳細資訊，請參閱[從 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 如需 MBCS 與Unicode 的一般資訊，請參閱 [Visual C++ 中的文字和字串](../text/text-and-strings-in-visual-cpp.md)和[國際化](../c-runtime-library/internationalization.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)
- [Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)
+ [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md) [Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)
 

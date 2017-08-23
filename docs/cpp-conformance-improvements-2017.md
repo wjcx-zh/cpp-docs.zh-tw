@@ -26,16 +26,16 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
-ms.openlocfilehash: d00951204a358ec064f69035b7dd6ac5adc08ed9
+ms.translationtype: HT
+ms.sourcegitcommit: 467fc9fdbdf1df73590e5ca498067eb2a5b5c900
+ms.openlocfilehash: 42b93960a6e0b829f3501c92a081953cf1051be4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/14/2017
 
 ---
    
 # <a name="c-conformance-improvements-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中的 C++ 編譯器一致性改善
-如需更新版本 15.3 的改進功能，請參閱 [Visual Studio 更新版本 15.3 中的錯誤 (Bug) 修正](#update_153)。
+
 ## <a name="new-language-features"></a>新的語言功能  
 編譯器支援一般化 constexpr 和 NSDMI 彙總，現在完整呈現 C++14 標準中新增的功能。 請注意，編譯器仍缺乏一些來自 C++11 和 C++98 標準的功能。 請參閱 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)，以取得顯示編譯器目前狀態的表格。
 
@@ -55,12 +55,33 @@ ms.lasthandoff: 06/08/2017
 
 **一般化範圍架構的 for 迴圈** (不需要編譯器參數)：範圍架構的 for 迴圈不再需要 begin() 和 end() 傳回相同類型的物件。 這可讓 end() 傳回 sentinel 物件，例如 Ranges-V3 提案中所定義範圍使用的物件。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (一般化範圍架構的 For 迴圈) 和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3) (GitHub 上的 range-v3 程式庫)。 
 
+**Visual Studio 2017 15.3 版**：
+
+**constexpr lambda**：Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱 [Constexpr Lambda](http://open-std.org/JTC1/SC22/WG21/docs/papers/2015/n4487.pdf) \(英文\)。
+
+**函式樣板中的 if constexpr**：函式樣板可以包含 `if constexpr` 陳述式，以啟用編譯時間分支。 如需詳細資訊，請參閱 [if constexpr](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0128r1.html) \(英文\)。
+
+**搭配初始設定式的選取範圍陳述式**：`if` 陳述式可以包含會在陳述式之內於區塊範圍導入變數的初始設定式。 如需詳細資訊，請參閱[搭配初始設定式的選取範圍陳述式](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0305r1.html) \(英文\)。
+
+**[[maybe_unused]] 和 [[nodiscard]] 屬性**：這兩個新屬性可以個別用來將實體未使用時的警告設為無聲，以及在函式呼叫的傳回值被捨棄時建立警告。 如需詳細資訊，請參閱 [maybe_unused 屬性的用字方式](http://open-std.org/JTC1/SC22/WG21/docs/papers/2016/p0212r0.pdf) \(英文\) 及[unused、nodiscard 及 fallthrough 屬性的提案](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0068r0.pdf) \(英文\)。
+
+**使用不重複的屬性命名空間**：新的語法可以在屬性清單中僅啟用單一命名空間識別項。 如需詳細資訊，請參閱 [C++ 中的屬性](cpp/attributes2.md)。
+
+**結構化繫結**：現在可以在單一宣告中儲存針對其元件具有個別名稱的值，前提是該值必須為陣列、std::tuple 或 std::pair，或是僅具公用非靜態資料成員。 如需詳細資訊，請參閱[結構化繫結](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf) \(英文\)。
+
+**列舉類別值的建構規則**：當列舉的定義未導入列舉程式，且來源使用 list-initialization 語法時，從範圍列舉的基礎類型到列舉本身之間現在已有隱含/非縮小的轉換。 如需詳細資訊，請參閱[列舉類別值的建構規則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf) \(英文\)。
+
+**透過值擷取 *this**：Lambda 運算式中的 "\*this" 物件現已可以透過值進行擷取。 這可促成在平行及非同步作業中叫用 Lambda 的案例，特別是在較新的電腦架構上。 如需詳細資訊，請參閱[Lambda 透過值將 \*this 擷取為 [=,\*this]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html) \(英文\)。
+
+**針對 bool 移除 operator++**：`bool` 類型已不再支援 operator++。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
+
+**移除已取代的 "register" 關鍵字**：先前已取代 (且被 Visual C++ 編譯器忽略) 的 `register` 關鍵字，現在已從語言中移除。 如需詳細資訊，請參閱[移除 register 關鍵字的已取代用途](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html) \(英文\)。
 
 如需到 Visual Studio 2015 Update 3 為止的完整一致性改善清單，請參閱 [Visual C++ What's New 2003 through 2015](https://msdn.microsoft.com/en-us/library/mt723604.aspx)(從 2003 到 2015 的 Visual C++ 新功能)。
 
 ## <a name="bug-fixes"></a>Bug 修正
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
-Visual Studio 2017 使用 Visual Studio 2015 中攔截不到且可能導致當機或未定義執行階段行為的初始設定式清單，正確地引發與建立物件相關的編譯器錯誤。  根據 N4594 13.3.1.7p1，在 copy-list-initialization 中，編譯器需要考慮使用明確建構函式來進行多載解析，但必須在實際選擇該多載時引發錯誤。 
+Visual Studio 2017 使用 Visual Studio 2015 中攔截不到且可能導致當機或未定義執行階段行為的初始設定式清單，正確地引發與建立物件相關的編譯器錯誤。 根據 N4594 13.3.1.7p1，在 copy-list-initialization 中，編譯器需要考慮使用明確建構函式來進行多載解析，但必須在實際選擇該多載時引發錯誤。 
 
 下列兩個範例是在 Visual Studio 2015 中編譯，但無法在 Visual Studio 2017 中編譯。
 ```cpp  
@@ -276,14 +297,14 @@ constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
 ### <a name="classes-declared-in-anonymous-namespaces"></a>宣告於匿名命名空間中的類別
-根據 C++ 標準，宣告於匿名命名空間中的類別具有內部連結，因此無法匯出。 在 Visual Studio 2015 和更早的版本中，並未強制執行此規則。 在 Visual Studio 2017 中，會部分強制執行此規則。 下列範例會在 Visual Studio 2017 中引發這個錯誤：「錯誤 C2201: 'const `anonymous namespace'::S1::`vftable'': 必須具有外部連結以便匯出/匯入。」
+根據 C++ 標準，宣告於匿名命名空間中的類別具有內部連結，因此無法匯出。 在 Visual Studio 2015 和更早的版本中，並未強制執行此規則。 在 Visual Studio 2017 中，會部分強制執行此規則。 下列範例會在 Visual Studio 2017 中引發這個錯誤：「錯誤 C2201: const anonymous namespace::S1::vftable: 必須具有外部連結以便匯出/匯入。」
 
 ```cpp
 struct __declspec(dllexport) S1 { virtual void f() {} }; //C2201
 ```
 
 ### <a name="default-initializers-for-value-class-members-ccli"></a>實值類別成員的預設初始設定式 (C++/CLI)
-在 Visual Studio 2015 和以前版本中，編譯器允許 (但忽略) 實值類別成員的預設成員初始設定式。  實值類別的預設初始化一律會以零初始化成員；不允許預設建構函式。  在 Visual Studio 2017 中，預設成員初始設定式會引發編譯器錯誤，如這個範例中所示︰
+在 Visual Studio 2015 和以前版本中，編譯器允許 (但忽略) 實值類別成員的預設成員初始設定式。 實值類別的預設初始化一律會以零初始化成員；不允許預設建構函式。 在 Visual Studio 2017 中，預設成員初始設定式會引發編譯器錯誤，如這個範例中所示︰
 
 ```cpp  
 value struct V
@@ -349,7 +370,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a> Visual Studio 2017 更新版本 15.3
+## <a name="update_153"></a> Visual Studio 2017 15.3 版中的錯誤修正
 ### <a name="calls-to-deleted-member-templates"></a>對已刪除之成員範本的呼叫
 在舊版的 Visual Studio 中，編譯器在某些情況下針對呼叫已刪除之成員範本的語式錯誤會無法發出錯誤。而可能造成在執行階段當機。 下列程式碼現在會產生 C2280：「'int S<int>::f<int>(void)': 嘗試參考被刪除的函式」:
 ```cpp
@@ -366,7 +387,7 @@ void g()
 若要修正錯誤，請將 i 宣告為 `int`。
 
 ### <a name="pre-condition-checks-for-type-traits"></a>類型特性的先決條件檢查
-Visual Studio 2017 更新版本 15.3 改進了類型特性的先決條件檢查，以更嚴格地遵守標準。 此類檢查是可供指派的。 在更新版本 15.3 中，下列程式碼會產生 C2139：
+Visual Studio 2017 15.3 版改進了類型特性的先決條件檢查，以更嚴格地遵守標準。 此類檢查是可供指派的。 在更新版本 15.3 中，下列程式碼會產生 C2139：
 
 ```cpp
 struct S; 
@@ -412,7 +433,7 @@ int main()
 若要修正錯誤，請移除 `#pragma managed` 指示詞，以將呼叫者標示為原生並避免封送處理。 
 
 ### <a name="experimental-api-warning-for-winrt"></a>WinRT 的實驗性 API 警告
-針對實驗和意見反應所發行的 WinRT API 會以 `Windows.Foundation.Metadata.ExperimentalAttribute` 裝飾。 在更新版本 15.3 中，在遇到該屬性時，編譯器會產生警告 C4698。 舊版 Windows SDK 中的一些 API 已經以該屬性裝飾，而對這些 API 的呼叫將會啟動此編譯器警告的觸發。 新版的 Windows SDK 將從所有隨附的型別移除該屬性，但如果您使用舊版的 SDK，則需要針對隨附型別的所有呼叫隱藏這些警告。
+針對實驗和意見反應所發行的 WinRT API 會以 `Windows.Foundation.Metadata.ExperimentalAttribute` 裝飾。 在 Visual Studio 2017 15.3 版中，在遇到該屬性時，編譯器會產生警告 C4698。 舊版 Windows SDK 中的一些 API 已經以該屬性裝飾，而對這些 API 的呼叫將會啟動此編譯器警告的觸發。 新版的 Windows SDK 將從所有隨附的型別移除該屬性，但如果您使用舊版的 SDK，則需要針對隨附型別的所有呼叫隱藏這些警告。
 下列程式碼會產生警告 C4698：「'Windows::Storage::IApplicationDataStatics2::GetForUserAsync' 僅供評估之用。後續版本可能會變更或移除此功能」：
 ```cpp
 Windows::Storage::IApplicationDataStatics2::GetForUserAsync() //C4698
@@ -429,7 +450,7 @@ Windows::Storage::IApplicationDataStatics2::GetForUserAsync()
 #pragma warning(pop)
 ```
 ### <a name="out-of-line-definition-of-a-template-member-function"></a>範本成員函式的程式碼外部定義 
-更新版本 15.3 在遇到範本成員函式的程式碼外部定義 (其並未在類別中宣告) 時會產生錯誤。 下列程式碼現在會產生錯誤 C2039：'f': 不是 'S' 的成員：
+Visual Studio 2017 15.3 版在遇到未在類別中宣告之樣板成員函式的程式碼外部定義時會產生錯誤。 下列程式碼現在會產生錯誤 C2039：'f': 不是 'S' 的成員：
 
 ```cpp
 struct S {}; 
@@ -450,11 +471,10 @@ void S::f(T t) {}
 ```
 
 ### <a name="attempting-to-take-the-address-of-this-pointer"></a>嘗試取得 "this" 指標的位址
-在 C++ 中，'this' 是 X 之型別指標的 prvalue。您無法取得 'this' 的位址，或將它繫結至 lvalue 參考。 在舊版的 Visual Studio 中，編譯器可讓您執行轉型以避開此限制。 在更新版本 15.3 中，編譯器會產生錯誤 C2664。
+在 C++ 中，'this' 是 X 之型別指標的 prvalue。您無法取得 'this' 的位址，或將它繫結至 lvalue 參考。 在舊版的 Visual Studio 中，編譯器可讓您執行轉型以避開此限制。 在 Visual Studio 2017 15.3 版中，編譯器會產生錯誤 C2664。
 
 ### <a name="conversion-to-an-inaccessible-base-class"></a>轉換成無法存取的基底類別
-當您嘗試將型別轉換為無法存取的基底類別時，更新版本 15.3 會產生錯誤。 編譯器現在會引發  
-「錯誤 C2243: 'type cast': 從 'D *' 至 'B *' 的轉換已存在，但無法存取」。 下列程式碼是語式錯誤的，且可能在執行階段造成當機。 現在編譯器遇到如下程式碼時會產生 C2243：
+當您嘗試將類型轉換為無法存取的基底類別時，Visual Studio 2017 15.3 版會產生錯誤。 編譯器現在會引發「錯誤 C2243: 'type cast': 從 'D *' 至 'B *' 的轉換已存在，但無法存取」。 下列程式碼是語式錯誤的，且可能在執行階段造成當機。 現在編譯器遇到如下程式碼時會產生 C2243：
 
 ```cpp
 #include <memory> 
@@ -468,7 +488,9 @@ void f()
 }
 ```
 ### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>成員函式的程式碼外部定義不允許預設引數
-範本類別中成員函式的程式碼外部定義不允許預設引數。  編譯器會在 /permissive 下發出警告，以及在 /permissive 下發出硬式錯誤。在舊版的 Visual Studio 中，下列語式錯誤的程式碼可能會造成執行階段當機。 更新版本 15.3 會產生警告 C5034：'A<T>::f': 在程式碼外部定義的類別範本成員不得使用預設引數:
+不得在樣板類別之成員函式的程式碼外部定義上使用預設引數。編譯器會在 /permissive 底下發出警告，並在 /permissive- 底下發出硬碟錯誤。 
+
+在舊版的 Visual Studio 中，下列語式錯誤的程式碼可能會導致執行階段當機。 Visual Studio 2017 15.3 版會產生「警告 C5034: 'A<T>::f': 在程式碼外部定義的類別範本成員不得使用預設引數」：
 ```cpp
  
 template <typename T> 
@@ -485,7 +507,7 @@ T A<T>::f(T t, bool b = false) // C5034
 若要修正錯誤，請移除 "= false" 預設引數。 
 
 ### <a name="use-of-offsetof-with-compound-member-designator"></a>使用 offsetrof 搭配複合成員指示項
-在更新版本 15.3 中，如果使用 offsetof(T, m) 而其中 m 是「複合成員指示項」，則會在您使用 /Wall 選項編譯時產生警告。 下列程式碼的語式錯誤，且可能在執行階段造成當機。 更新版本 15.3 會產生「警告 C4841: 使用非標準擴充: offseto 中有複合成員指示項」:
+在 Visual Studio 2017 15.3 版中，如果使用 offsetof(T, m) (其中 m 是「複合成員指示項」)，則會在您使用 /Wall 選項編譯時產生警告。 下列程式碼的語式錯誤，且可能在執行階段造成當機。 Visual Studio 2017 15.3 版會產生「警告 C4841: 使用非標準擴充: offseto 中有複合成員指示項」:
 
 ```cpp
   
@@ -506,7 +528,7 @@ constexpr auto off = offsetof(A, arr[2]);
 ```
 
 ### <a name="using-offsetof-with-static-data-member-or-member-function"></a>使用 offsetof 搭配靜態資料成員或成員函式
-在更新版本 15.3 中，如果使用 offsetof(T, m) 而其中 m 參考靜態資料成員或成員函式，將會導致錯誤。 下列程式碼會產生「錯誤 C4597: 未定義的行為: offsetof 套用至成員函式 'foo'」和「錯誤 C4597: 未定義的行為: offsetof 套用至靜態資料成員 'bar'」：
+在 Visual Studio 2017 15.3 版中，如果使用 offsetof(T, m) (其中 m 代表靜態資料成員或成員函式)，將會導致錯誤。 下列程式碼會產生「錯誤 C4597: 未定義的行為: offsetof 套用至成員函式 'foo'」和「錯誤 C4597: 未定義的行為: offsetof 套用至靜態資料成員 'bar'」：
 ```cpp
  
 #include <cstddef> 
@@ -523,7 +545,7 @@ Constexpr auto off2 = offsetof(A, bar);
 此程式碼的語式錯誤，且可能在執行階段造成當機。 若要修正錯誤，請變更程式碼以不再叫用未定義的行為。 這是不可移植且 C++ 標準不允許的程式碼。
 
 ### <a name="new-warning-on-declspec-attributes"></a>針對 declspec 屬性的新警告
-在更新版本 15.3 中，如果在外部 "C" 連結規格前套用了 __declspec(…)，編譯器不再會忽略該屬性。 先前，編輯器會忽略該屬性，這可能有執行階段隱含式。 當設定 `/Wall /WX` 選項時，下列程式碼會產生「警告 C4768: 連結規格前的 __declspec 屬性被忽略」：
+在 Visual Studio 2017 15.3 版中，如果在外部 "C" 連結規格前套用了 __declspec(…)，編譯器不再會忽略該屬性。 先前，編輯器會忽略該屬性，這可能有執行階段隱含式。 當設定 `/Wall /WX` 選項時，下列程式碼會產生「警告 C4768: 連結規格前的 __declspec 屬性被忽略」：
 
 ```cpp
  
@@ -538,7 +560,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 這個警告預設關閉，且只會影響以 `/Wall /WX` 編譯的程式碼。
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype 和對已刪除之解構函式的呼叫
-在舊版的 Visual Studio 中，在與 'decltype' 相關聯的運算式內容中呼叫已刪除的解構函式時，編譯器並不會偵測到。 在更新版本 15.3 中，下列程式碼會產生「錯誤 C2280:  'A<T>::~A(void)': 嘗試參考被刪除的函式」：
+在舊版的 Visual Studio 中，在與 'decltype' 相關聯的運算式內容中呼叫已刪除的解構函式時，編譯器並不會偵測到。 在 Visual Studio 2017 15.3 版中，下列程式碼會產生「錯誤 C2280:  'A<T>::~A(void)': 嘗試參考被刪除的函式」：
 
 ```cpp
 template<typename T> 
@@ -559,7 +581,7 @@ void h()
 }
 ```
 ### <a name="uninitialized-const-variables"></a>未初始化的 const 變數
-如果 'const' 變數未初始化，C++ 編譯器將不會發出診斷，而 Visual Studio 2017 RTW 版本會發生回歸。 Visual Studio 2017 Update 1 已修正此回歸。 下列程式碼現在會產生「警告 C4132: 'Value': 應初始化常數物件」：
+如果 'const' 變數未初始化，C++ 編譯器將不會發出診斷，而 Visual Studio 2017 RTW 版本會發生回歸。 Visual Studio 2017 15.3 版已修正此迴歸。 下列程式碼現在會產生「警告 C4132: 'Value': 應初始化常數物件」：
 
 ```cpp
 const int Value; //C4132
@@ -567,7 +589,7 @@ const int Value; //C4132
 若要修正錯誤，請將值指派給 `Value`。
 
 ### <a name="empty-declarations"></a>空白宣告
-Visual Studio 2017 更新版本 15.3 現在會針對所有型別的空白宣告發出警告，而不是只針對內建型別。 下列程式碼現在針對四種宣告，都會產生層級 2 C4091 警告：
+Visual Studio 2017 15.3 版現在會針對所有類型的空白宣告發出警告，而不是只針對內建類型。 下列程式碼現在針對四種宣告，都會產生層級 2 C4091 警告：
 
 ```cpp
 struct A {};
@@ -580,13 +602,13 @@ B<int>; // warning C4091 : '' : ignored on left of 'B<int>' when no variable is 
 C;      // warning C4091 : '' : ignored on left of 'C' when no variable is declared
 ```
 
-若要移除警告，只要將空白宣告註解化或移除即可。  在未命名物件可能具有副作用 (例如 RAII) 的情況下，應該提供名稱給它。
+若要移除警告，只要將空白宣告註解化或移除即可。 在未命名物件可能具有副作用 (例如 RAII) 的情況下，應該提供名稱給它。
  
 在 /Wv:18 下會排除警告，且預設會在警告層級 W2 下開啟。
 
 
 ### <a name="stdisconvertible-for-array-types"></a>陣列類型的 std::is_convertible
-舊版編譯器對陣列類型的 [std::is_convertible](standard-library/is-convertible-class.md) 會給出不正確的結果。 這要求程式庫作者在使用 `std::is_convertable<…>` 類型特性時，以特殊案例處理 Visual C++ 編譯器。 下例中，靜態判斷提示能夠通過舊版 Visual Studio，但在 Visual Studio 2017 更新版本 15.3 失敗：
+舊版編譯器對陣列類型的 [std::is_convertible](standard-library/is-convertible-class.md) 會給出不正確的結果。 這要求程式庫作者在使用 `std::is_convertible<…>` 類型特性時，以特殊案例處理 Visual C++ 編譯器。 下例中，靜態判斷提示能夠通過舊版 Visual Studio，但在 Visual Studio 2017 15.3 版中失敗：
 
 ```cpp
 #include <type_traits>
@@ -594,9 +616,9 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 using Array = char[1];
  
 static_assert(std::is_convertible<Array, Array>::value);
-static_assert((std::is_convertible<const Array, const Array>::value), "");
-static_assert((std::is_convertible<Array&, Array>::value), "");
-static_assert((std::is_convertible<Array, Array&>::value), "");
+static_assert(std::is_convertible<const Array, const Array>::value, "");
+static_assert(std::is_convertible<Array&, Array>::value, "");
+static_assert(std::is_convertible<Array, Array&>::value, "");
 ```
 
 **std::is_convertible<From, To>** 的計算是查看 imaginary 函式是否正確定義：
@@ -605,7 +627,7 @@ static_assert((std::is_convertible<Array, Array&>::value), "");
 ``` 
 
 ### <a name="private-destructors-and-stdisconstructible"></a>私人解構函式和 std::is_constructible
-舊版編譯器在決定[std::is_constructible](standard-library/is-constructible-class.md) 結果時，會忽略解構函式是否是私人的。 現在會考慮。 下例中，靜態判斷提示能夠通過舊版 Visual Studio，但在 Visual Studio 2017 更新版本 15.3 失敗：
+舊版編譯器在決定 [std::is_constructible](standard-library/is-constructible-class.md) 的結果時，會忽略解構函式是否是私人的。 現在會考慮。 下例中，靜態判斷提示能夠通過舊版 Visual Studio，但在 Visual Studio 2017 15.3 版中失敗：
 
 ```cpp
 #include <type_traits>
@@ -627,7 +649,7 @@ static_assert(std::is_constructible<PrivateDtor, int>::value);
 這個呼叫暗示解構函式呼叫。
 
 ### <a name="c2668-ambiguous-overload-resolution"></a>C2668：語意模糊的多載解析
-舊版編譯器在同時透過使用宣告和引數相依查閱找到多個候選項目時，有時偵測不到語意模糊。 這會導致選擇錯誤的多載和未預期的執行階段行為。 在下列範例中，Visual Studio 2017 更新版本 15.3 會正確引發「C2668 'f'：多載函式的語意模糊呼叫」：
+舊版編譯器在同時透過使用宣告和引數相依查閱找到多個候選項目時，有時偵測不到語意模糊。 這會導致選擇錯誤的多載和未預期的執行階段行為。 在下列範例中，Visual Studio 2017 15.3 版會正確引發「C2668 'f': 多載函式的語意模糊呼叫」：
 
 ```cpp
 namespace N {
@@ -654,7 +676,7 @@ void f()
 
 ### <a name="c2660-local-function-declarations-and-argument-dependent-lookup"></a>C2660：區域函式宣告和引數相依查閱
 區域函式宣告會將函式宣告隱藏在封閉範圍中，停用引數相依查閱。
-不過，舊版的 Visual C++ 編譯器在這種情況下會執行引數相依查閱，有可能導致選擇錯誤的多載和未預期的執行階段行為。 錯誤通常是因為區域函式宣告的簽章不正確而發生。 在下列範例中，Visual Studio 2017 更新版本 15.3 會正確引發「C2660 'f'：函式不接受 2 個引數」：
+不過，舊版的 Visual C++ 編譯器在這種情況下會執行引數相依查閱，有可能導致選擇錯誤的多載和未預期的執行階段行為。 錯誤通常是因為區域函式宣告的簽章不正確而發生。 在下列範例中，Visual Studio 2017 15.3 版會正確引發「C2660 'f': 函式不接受 2 個引數」：
 
 ```cpp
 struct S {}; 
@@ -672,7 +694,7 @@ void g()
 若要修正此問題，請變更或移除 **f(S)** 簽章。
 
 ### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038：初始設定式清單中的初始化順序
-類別成員會依其宣告的順序初始化，而不是依它們在初始設定式清單中出現的順序。 當初始設定式清單的順序和宣告順序不一致時，舊版編譯器未發出警告。 如果某個成員的初始化依存於清單中另一個已初始化的成員，這可能導致未定義的執行階段行為。 在下列範例中，Visual Studio 2017 更新版本 15.3 (使用 /Wall 或 /WX) 會引發警告「C5038：資料成員 'A::y' 會在資料成員 'A::x' 之後初始化」：
+類別成員會依其宣告的順序初始化，而不是依它們在初始設定式清單中出現的順序。 當初始設定式清單的順序和宣告順序不一致時，舊版編譯器未發出警告。 如果某個成員的初始化依存於清單中另一個已初始化的成員，這可能導致未定義的執行階段行為。 在下列範例中，Visual Studio 2017 15.3 版 (使用 /Wall) 會引發警告「C5038: 資料成員 'A::y' 會在資料成員 'A::x' 之後初始化」：
 
 ```cpp
 struct A
@@ -685,7 +707,7 @@ struct A
 ```
 若要修正問題，請排列整理初始設定式清單的順序，讓它和宣告順序相同。 當一或兩個初始設定式參考基底類別成員時，就會引發類似的警告。
 
-請注意，這個警告預設關閉，且只會影響以 /Wall 或 /WX 編譯的程式碼。
+請注意，這個警告預設關閉，且只會影響以 /Wall 編譯的程式碼。
 
 ## <a name="see-also"></a>另請參閱  
 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)  

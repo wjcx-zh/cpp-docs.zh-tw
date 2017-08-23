@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: dfe2d5cb2180585879bba9f912253f71f7aa3805
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: eaa816f145dc46ca45ea761ab52f9c3bb7d9e343
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="c-run-time-library-reference"></a>C 執行階段程式庫參考
@@ -76,8 +76,8 @@ Microsoft 執行階段程式庫提供一些為 Microsoft Windows 作業系統設
  [執行階段錯誤檢查](../c-runtime-library/run-time-error-checking.md)  
  提供支援執行階段錯誤檢查的函式連結。  
   
- [執行階段程式庫行為](../build/run-time-library-behavior.md)  
- 討論 CRT DLL 的進入點。  
+ [DLL 和 Visual C++ 執行階段程式庫行為](../build/run-time-library-behavior.md)  
+ 討論用於 DLL 的進入點和啟動程式碼。  
   
  [Visual C++ 程式庫](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
  提供 Visual C++ 隨附之各種程式庫的連結，這些程式庫包括 ATL、MFC、OLE DB 樣板、C 執行階段程式庫和 C++ 標準程式庫。  

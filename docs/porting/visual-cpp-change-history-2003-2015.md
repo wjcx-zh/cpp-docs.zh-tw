@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: 482b404293cc1eea9879b09de52fb277cc1bd2a0
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 5c910e117ea484b6b181b0d81de84cdc22a53fc1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
@@ -69,7 +69,7 @@ ms.lasthandoff: 06/01/2017
   
 #### <a name="general-changes"></a>一般變更  
   
--   **重構的二進位檔** CRT 程式庫已重構成兩個不同的二進位檔：通用 CRT (ucrtbase)，其中包含大部分的標準功能，以及 VC 執行階段程式庫 (vcruntime140)，其中包含編譯器相關的功能，例如例外狀況處理和內建。 如果您正使用預設的專案設定，則這項變更不會對您造成影響，因為此連結器會自動使用新的預設程式庫。 如果您已將此專案的 **連結器** 屬性 **忽略所有預設程式庫** 設定為 **是** ，或您在命令列使用 /NODEFAULTLIB 連結器選項，則必須更新程式庫清單 (在 **其他相依性** 屬性中)，藉此包含新的、重構的程式庫。 請將舊的 CRT 程式庫 (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) 取代為對等的重構程式庫。 這兩個重構程式庫中的任何一個皆有靜態 (.lib) 和動態 (.dll) 版本，也都有發行 (沒有後置詞) 和偵錯版本 (具有 "d" 後置詞)。 此動態版本具有您可與其連結的匯入程式庫。 這兩個重構程式庫為：通用的 CRT，特別是 ucrtbase.dll 或 .lib、ucrtbased.dll 或 .lib，以及 VC 執行階段程式庫，即 libvcruntime.lib、libvcruntime.dll、libvcruntimed.lib 和 libvcruntimed.dll。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。  
+-   **重構的二進位檔** CRT 程式庫已重構成兩個不同的二進位檔：通用 CRT (ucrtbase)，其中包含大部分的標準功能，以及 VC 執行階段程式庫 (vcruntime)，其中包含編譯器相關的功能，例如例外狀況處理和內建。 如果您正使用預設的專案設定，則這項變更不會對您造成影響，因為此連結器會自動使用新的預設程式庫。 如果您已將此專案的 **連結器** 屬性 **忽略所有預設程式庫** 設定為 **是** ，或您在命令列使用 /NODEFAULTLIB 連結器選項，則必須更新程式庫清單 (在 **其他相依性** 屬性中)，藉此包含新的、重構的程式庫。 請將舊的 CRT 程式庫 (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) 取代為對等的重構程式庫。 這兩個重構程式庫中的任何一個皆有靜態 (.lib) 和動態 (.dll) 版本，也都有發行 (沒有後置詞) 和偵錯版本 (具有 "d" 後置詞)。 此動態版本具有您可與其連結的匯入程式庫。 這兩個重構程式庫為：通用的 CRT (具體而言，即 ucrtbase.dll 或 .lib、ucrtbased.dll 或 .lib) 及 VC 執行階段程式庫 (即 libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib，以及 vcruntimed*version*.dll)。 Visual Studio 2015 和 Visual Studio 2017 中的 *version* 皆為 140。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。  
   
 #### <a name="localeh"></a>\<locale.h>  
   
@@ -1423,7 +1423,7 @@ struct S2 : public S1 {
 
 -   **{} 會防止指標轉換**  
 
-下列程式碼現在會產生 C2439：'S::p': 無法將成員初始化    
+下列程式碼現在會產生 C2439：'S::p': 無法將成員初始化   
 ```cpp
 struct S {
     S() : p({ 0 }) {}

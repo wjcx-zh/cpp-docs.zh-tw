@@ -1,5 +1,5 @@
 ---
-title: "支援的平台 (Visual C++) | Microsoft Docs"
+title: Supported Platforms (Visual C++) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,17 +32,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0192e9bd6ef9d93e274c43c24137a27e5aa53dab
-ms.openlocfilehash: c0c209c16ad4a264b851321a2879104112da81f2
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 78fac089c9b21825bfb014fe6f26776bac58bd93
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="supported-platforms-visual-c"></a>支援的平台 (Visual C++)
-使用 [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] 所建置的應用程式可以在各種平台上做為目標執行，如下所示。  
+# <a name="supported-platforms-visual-c"></a>Supported Platforms (Visual C++)
+
+Apps built by using [!INCLUDE[vsprvs](assembler/masm/includes/vsprvs_md.md)] can be targeted to various platforms, as follows.  
   
-|作業系統|x86|x64|ARM|  
+|Operating System|x86|x64|ARM|  
 |----------------------|---------|---------|---------|  
 |Windows XP|X*|X*||  
 |[!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)]|X*|X*||  
@@ -54,14 +55,18 @@ ms.lasthandoff: 02/24/2017
 |Windows 8.1|X|X|X|  
 |Windows 10|X|X|X|  
 |Android **|X|X|X|  
-|iOS **|X|X|x|  
+|iOS **|X|X|X|  
+|Linux ***|X|X|X|  
   
- \* 您可以使用 Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012 Update 1 (含) 以後版本隨附的 Windows XP 平台工具組，建置 Windows XP 和 [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)] 專案。 如需如何使用這個平台工具組的相關資訊，請參閱[為 Windows XP 設定程式](build/configuring-programs-for-windows-xp.md)。 如需變更平台工具組的其他資訊，請參閱[如何：修改目標 Framework 和平台工具組](build/how-to-modify-the-target-framework-and-platform-toolset.md)。  
+\* You can use the Windows XP platform toolset included in Visual Studio 2017, Visual Studio 2015, Visual Studio 2013, and Visual Studio 2012 Update 1 or later to build Windows XP and [!INCLUDE[WinXPSvr](build/includes/winxpsvr_md.md)] projects. For information on how to use this platform toolset, see [Configuring Programs for Windows XP](build/configuring-programs-for-windows-xp.md). For additional information on changing the platform toolset, see [How to: Modify the Target Framework and Platform Toolset](build/how-to-modify-the-target-framework-and-platform-toolset.md).  
   
- ** 您可以安裝 Visual Studio 2015 安裝程式中的選擇性 Visual C++ for Cross Platform Mobile Development 元件，將 iOS 或 Android 平台設為目標。 如需指示，請參閱[安裝適用於跨平台行動裝置開發的 Visual C++](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)。 若要建置 iOS 程式碼，您必須具有 Mac 電腦，並且符合其他需求。 如需必要條件清單和安裝指示，請參閱[安裝和設定工具以使用 iOS 建置](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios)。 您可以配合目標硬體來建置 x86 或 ARM 程式碼。 使用 x86 組態為 iOS 模擬器、Microsoft Visual Studio Emulator for Android 和一些 Android 裝置進行建置。 使用 ARM 組態為 iOS 裝置和大部分 Android 裝置進行建置。  
+\*\* You can install the **Mobile development with C++** workload in the Visual Studio installer (or the optional **Visual C++ for Cross Platform Mobile Development** component in Visual Studio 2015 setup) to target iOS or Android platforms. For instructions, see [Install Visual C++ for Cross-Platform Mobile Development](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). To build iOS code, you must have a Mac computer and meet other requirements. For a list of prerequisites and installation instructions, see [Install And Configure Tools to Build using iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). You can build x86 or ARM code to match the target hardware. Use x86 configurations to build for the iOS simulator, Microsoft Visual Studio Emulator for Android, and some Android devices. Use ARM configurations to build for iOS devices and most Android devices.  
   
- 如需如何設定目標平台組態的資訊，請參閱[如何：將 Visual C++ 專案設定成以 64 位元平台為目標](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。  
+\*\*\* You can install the **Linux development with C++** workload in the Visual Studio installer to target Linux platforms. For instructions, see [Download, Install and Setup the Linux Workload](linux/download-install-and-setup-the-linux-development-workload.md). This toolset compiles your executable on the target machine, so you can build for any supported architecture.  
+
+For information about how to set the target platform configuration, see [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
   
-## <a name="see-also"></a>另請參閱  
- [Visual Studio 版本中的 Visual C++ 工具和功能](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
- [快速入門](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)
+## <a name="see-also"></a>See Also  
+
+[Visual C++ Tools and Features in Visual Studio Editions](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)   
+[Getting Started](/visualstudio/ide/getting-started-with-visual-cpp-in-visual-studio)

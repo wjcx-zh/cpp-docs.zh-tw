@@ -1,62 +1,77 @@
 ---
-title: "建置 C/C++ 程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vcbuilding"
-  - "buildingaprogramVC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "組建 [C++]"
-  - "組建 [C++], 選項"
-  - "專案 [C++], 建置"
-  - "Visual C++ 專案, 建置"
-  - "Visual C++, 建置選項"
+title: Building C/C++ Programs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vcbuilding
+- buildingaprogramVC
+dev_langs:
+- C++
+helpviewer_keywords:
+- builds [C++]
+- Visual C++ projects, building
+- projects [C++], building
+- builds [C++], options
+- Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 建置 C/C++ 程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 05e5b8707d968707f12c1a9b19c511adaa99ddd2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/30/2017
 
-您可以在 Visual Studio 中或命令列上，建置 Visual C\+\+ 專案。  Visual Studio IDE 使用 [MSBuild](../build/msbuild-visual-cpp.md)，來建置專案和方案。  在命令列上，您可以使用 C\/C\+\+ 編譯器 \(cl.exe\) 及連結器 \(link.exe\)，來建置簡單的專案。  如要在命令列上建置更複雜的專案，可以使用 MSBuild 或 [NMAKE](../build/nmake-reference.md)。  如需使用 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 建置專案和方案的概觀，請參閱[Compiling and Building](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md)。  
+---
+# <a name="building-cc-programs"></a>Building C/C++ Programs
+
+You can build Visual C++ projects either in Visual Studio or on the command line. The Visual Studio IDE uses [MSBuild](../build/msbuild-visual-cpp.md) to build projects and solutions. On the command line, you can use the C/C++ compiler (cl.exe) and linker (link.exe) to build simple projects. To build more complex projects on the command line, you can use MSBuild or [NMAKE](../build/nmake-reference.md). For an overview about how to use [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to build projects and solutions, see [Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
-## 在本節中  
- [在 Visual Studio 中建置 C\+\+ 專案](../ide/building-cpp-projects-in-visual-studio.md)  
- 討論如何使用 Visual Studio IDE，來建置 C\/C\+\+ 專案。  
+## <a name="in-this-section"></a>In This Section  
+
+[Building C++ Projects in Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)  
+Discusses how to use the Visual Studio IDE to build your C/C++ project.  
   
- [在命令列中建置](../build/building-on-the-command-line.md)  
- 討論如何使用 Visual Studio 中包含的 C\/C\+\+ 命令列編譯器及建置工具。  
+[Build C/C++ code on the command line](../build/building-on-the-command-line.md)  
+Discusses how to use the C/C++ command-line compiler and build tools that are included in Visual Studio.  
   
- [建置 C\/C\+\+ 隔離應用程式和並存組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
- 描述 Windows 桌面應用程式的部署模型，其基於隔離應用程式及並存組件的想法。  
+[Building C/C++ Isolated Applications and Side-by-side Assemblies](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
+Describes the deployment model for Windows Desktop applications, based on the idea of isolated applications and side-by-side assemblies.  
   
- [C\/C\+\+ 建置參考](../build/reference/c-cpp-building-reference.md)  
- 提供參考文章連結，包含以 C\+\+ 建置程式，和編譯器及連結器選項，以及各種建置工具的連結。  
+[C/C++ Building Reference](../build/reference/c-cpp-building-reference.md)  
+Provides links to reference articles about program building in C++, compiler and linker options, and various build tools.  
   
- [為 64 位元設定程式](../build/configuring-programs-for-64-bit-visual-cpp.md)  
- 說明如何設定 Visual Studio 及命令列以使用 64 位元工具組，及如何將 64 位元架構做為目標，以及討論當程式碼移至 64 位元架構時常見的移轉問題。  
+[Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md)  
+Describes how to configure both Visual Studio and the command line to use the 64-bit toolset and how to target 64-bit architectures, and discusses common migration issues when code is moved to 64-bit architectures.  
   
- [為 ARM 處理器設定程式](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
- 描述 ARM 處理器所使用的慣例，以及討論當程式碼移至 ARM 架構時常見的移轉問題。  
+[Configure Visual C++ for ARM processors](../build/configuring-programs-for-arm-processors-visual-cpp.md)  
+Describes the conventions used by ARM processors, and discusses common migration issues when code is moved to ARM architectures.  
   
- [為 Windows XP 設定 C\+\+ 11 程式](../build/configuring-programs-for-windows-xp.md)  
- 描述如何設定平台工具組，以將 Windows XP 開發做為目標。  
+[Configuring Programs for Windows XP](../build/configuring-programs-for-windows-xp.md)  
+Describes how to set the Platform Toolset to target Windows XP development.  
   
-## 相關章節  
- [NIB: Samples Included in Visual C\+\+](http://msdn.microsoft.com/zh-tw/c9ec56b3-2bbd-49b4-8a4c-9ed4b78b7a84)  
- 提供展示 Visual C\+\+ 及它所支援各種程式庫和技術之能力的範例程式碼連結。  
-  
- [Compiling and Building](../Topic/Compiling%20and%20Building%20in%20Visual%20Studio.md)  
- 說明 Visual Studio 建置系統和工具。
+## <a name="related-sections"></a>Related Sections  
+ [Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ Describes the Visual Studio build system and tools.

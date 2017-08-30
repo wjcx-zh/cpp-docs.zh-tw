@@ -1,5 +1,5 @@
 ---
-title: "Visual C++ 變更歷程記錄 2003 - 2015 | Microsoft Docs"
+title: Visual C++ change history 2003 - 2015 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,140 +33,140 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 5c910e117ea484b6b181b0d81de84cdc22a53fc1
+ms.sourcegitcommit: 7e1281daaf729de6935774ba34e2387bf82446e8
+ms.openlocfilehash: ab1d4fed84fb7fc0dee28c0663bfb1afbee3c019
 ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
-這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」與「過去」表示 Visual Studio 2013 及更舊版本。 
+# <a name="visual-c-change-history-2003---2015"></a>Visual C++ change history 2003 - 2015
+This article describes all the breaking changes from Visual Studio 2015 going back to Visual Studio 2003, and in this article the terms "new behavior" or "now" refer to Visual Studio 2015 and later. The terms "old behavior" and "before" refer to Visual Studio 2013 and earlier releases. 
  
- 如需 Visual Studio 2017 的資訊，請參閱 [Visual Studio 2017 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)及[Visual Studio 2017 中 Visual C++ 的合規性改進](../cpp-conformance-improvements-2017.md)。 
+ For information about Visual Studio 2017, see [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) and [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md). 
  > [!NOTE]
- > Visual Studio 2015 與 Visual Studio 2017 之間沒有二進位檔重大變更。
+ > There are no binary breaking changes between Visual Studio 2015 and Visual Studio 2017.
 
-當您升級到 Visual C++ 編譯器的新版本時，先前正常編譯及執行的程式碼可能會發生編譯和/或執行階段錯誤。 新版本中會造成這類問題的變更稱為 *「重大變更」*(Breaking Change)，在進行 C++ 語言標準、函式簽章或記憶體內部物件配置的修改時通常都會有重大變更。  
+When you upgrade to a new version of the Visual C++ compiler, you might encounter compilation and/or runtime errors in code that previously compiled and ran correctly. Changes in the new version that cause such problems are known as *breaking changes*, and typically they're required by modifications in the C++ language standard, function signatures, or the layout of objects in memory.  
   
- 為了避免發生難以偵測及診斷的執行階段錯誤，我們建議您絕不要以靜態方式連結至使用不同版本編譯器所編譯的二進位檔。 此外，當您升級 EXE 或 DLL 專案時，請務必也要升級它所連結的程式庫。 若是使用 CRT (C 執行階段) 或 C++ 標準程式庫 (C++ 標準程式庫) 類型，請勿在使用不同版本編譯器所編譯的二進位檔 (包括 DLL) 之間傳遞這些類型。 如需詳細資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
+ To avoid run-time errors that are difficult to detect and diagnose, we recommend that you never statically link to binaries that were compiled by using different versions of the compiler. Also, when you upgrade an EXE or DLL project, make sure to upgrade the libraries that it links to. If you're using CRT (C Runtime) or C++ Standard Library (C++ Standard Library) types, don't pass them between binaries (including DLLs) that were compiled by using different versions of the compiler. For more information, see [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).  
   
- 我們還要建議您不要為不是 COM 介面或 POD 物件的物件撰寫依賴特定配置的程式碼。 如果您撰寫了這種程式碼，則必須確定它在升級之後可以正確運作。 如需詳細資訊，請參閱 [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)。  
+ We further recommend that you never write code that depends on a particular layout for an object that is not a COM interface or a POD object. If you do write such code, then you must ensure that it works after you upgrade. For more information, see [Portability At ABI Boundaries](../cpp/portability-at-abi-boundaries-modern-cpp.md).  
   
- 此外，隨著編譯器合規性不斷改進，有時候可能會改變編譯器解讀您現有原始程式碼的方式。 當發生這種情況時，可能會在您建置時發生不同或新的錯誤，甚至程式碼的行為與上版組建不同，而且看似正常運作。 這些雖然不像本文件中討論的其他變更屬於重大變更，但解決這些問題仍可能需要變更原始程式碼。  
+ Additionally, ongoing improvements to compiler conformance can sometimes change how the compiler understands your existing source code. When this happens, you might encounter new or different errors during your build, or even behavioral differences in code that previously built and seemed to run correctly. Although these are not breaking changes like the ones discussed in this document, source code changes might be needed to resolve these issues.  
   
   
-1.  [C 執行階段 (CRT) 程式庫的重大變更](#BK_CRT)  
+1.  [C Runtime (CRT) Library Breaking Changes](#BK_CRT)  
   
-2.  [標準 C++ 與 C++ 標準程式庫的重大變更](#BK_STL)  
+2.  [Standard C++ and C++ Standard Library Breaking Changes](#BK_STL)  
   
-3.  [MFC 與 ATL 的重大變更](#BK_MFC)  
+3.  [MFC and ATL Breaking Changes](#BK_MFC)  
   
-4.  [並行執行階段的重大變更](#BK_ConcRT)  
+4.  [Concurrency Runtime Breaking Changes](#BK_ConcRT)  
   
-## <a name="VC_2015"></a> Visual C++ 2015 的合規性變更  
+## <a name="VC_2015"></a> Visual C++ 2015 Conformance Changes  
   
-###  <a name="BK_CRT"></a> C 執行階段程式庫 (CRT)  
+###  <a name="BK_CRT"></a> C Runtime Library (CRT)  
   
-#### <a name="general-changes"></a>一般變更  
+#### <a name="general-changes"></a>General Changes  
   
--   **重構的二進位檔** CRT 程式庫已重構成兩個不同的二進位檔：通用 CRT (ucrtbase)，其中包含大部分的標準功能，以及 VC 執行階段程式庫 (vcruntime)，其中包含編譯器相關的功能，例如例外狀況處理和內建。 如果您正使用預設的專案設定，則這項變更不會對您造成影響，因為此連結器會自動使用新的預設程式庫。 如果您已將此專案的 **連結器** 屬性 **忽略所有預設程式庫** 設定為 **是** ，或您在命令列使用 /NODEFAULTLIB 連結器選項，則必須更新程式庫清單 (在 **其他相依性** 屬性中)，藉此包含新的、重構的程式庫。 請將舊的 CRT 程式庫 (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) 取代為對等的重構程式庫。 這兩個重構程式庫中的任何一個皆有靜態 (.lib) 和動態 (.dll) 版本，也都有發行 (沒有後置詞) 和偵錯版本 (具有 "d" 後置詞)。 此動態版本具有您可與其連結的匯入程式庫。 這兩個重構程式庫為：通用的 CRT (具體而言，即 ucrtbase.dll 或 .lib、ucrtbased.dll 或 .lib) 及 VC 執行階段程式庫 (即 libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib，以及 vcruntimed*version*.dll)。 Visual Studio 2015 和 Visual Studio 2017 中的 *version* 皆為 140。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。  
+-   **Refactored binaries** The CRT Library  has been refactored into a two different binaries, a Universal CRT (ucrtbase), which contains most of the standard functionality, and a VC Runtime Library (vcruntime), which contains the compiler-related functionality, such as exception handling, and intrinsics. If you are using the default project settings, then this change does not impact you since the linker will use the new default libraries automatically. If you have set the project's **Linker** property **Ignore All Default Libraries** to **Yes** or you are using the /NODEFAULTLIB linker option on the command line, then you must update your list of libraries (in the **Additional Dependencies** property) to include the new, refactored libraries. Replace the old CRT library (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) with the equivalent refactored libraries. For each of the two refactored libraries, there are static (.lib) and dynamic (.dll) versions, and release (with no suffix) and debug versions (with the "d" suffix). The dynamic versions have an import library that you link with. The two refactored libraries are Universal CRT, specifically ucrtbase.dll or .lib, ucrtbased.dll or .lib, and the VC runtime library, libvcruntime.lib, vcruntime*version*.dll, libvcruntimed.lib, and vcruntimed*version*.dll. The *version* in both Visual Studio 2015 and Visual Studio 2017 is 140. See [CRT Library Features](../c-runtime-library/crt-library-features.md).  
   
 #### <a name="localeh"></a>\<locale.h>  
   
--   **localeconv** 現在如有啟用 [per-thread locale](../parallel/multithreading-and-locales.md)，在 locale.h 中宣告的 [localeconv](../c-runtime-library/reference/localeconv.md) 函式也能正常運作。 在此程式庫的舊版中，這個函式會傳回全域地區設定的 lconv 資料，而非此執行緒的地區設定。  
+-   **localeconv** The [localeconv](../c-runtime-library/reference/localeconv.md) function declared in locale.h now works correctly when [per-thread locale](../parallel/multithreading-and-locales.md) is enabled. In previous versions of the library, this function would return the lconv data for the global locale, not the thread's locale.  
   
-     如果您使用個別執行緒的地區設定，您應該要檢查 localeconv 的使用情況，查看您的程式碼是否假設傳回的 lconv 資料為全域地區設定，並加以適當修改。  
+     If you use per thread locale, you should check your use of localeconv to see if your code assumes that the lconv data returned is for the global locale and modify it appropriately.  
   
 #### <a name="mathh"></a>\<math.h>  
   
--   **數學程式庫函式 C++ 多載**：在舊版中，\<math.h> 只為數學程式庫函式定義了一部分 C++ 多載，而未定義全部。 \<cmath> 定義了剩餘的多載。因此，若要取得所有的多載，必須加入 \<cmath> 標頭。 但對於只加入 \<math.h> 的程式碼，函式多載解析將會是一大問題。 現在，所有的 C++ 多載皆已從 \<math.h> 中移除，而且全部都歸入 \<cmath>。  
+-   **C++ overloads of math library functions** In previous versions, \<math.h> defined some, but not all, of the C++ overloads for the math library functions. \<cmath> defined the remaining overloads, so to get all of the overloads, one needed to include the \<cmath> header. This led to problems with function overload resolution in code that only included \<math.h>. Now, all C++ overloads have been removed from \<math.h> and are now present only in \<cmath>.  
   
-     若要解析錯誤，請加入 <cmath>，從而取得從 \<math.h> 中移除的函式宣告。 下表列出已移動的函式。  
+     To resolve errors, include <cmath> to get the declarations of the functions that were removed from \<math.h>. The following table lists the functions that were moved.  
   
-     已移動的函式：  
+     Functions that were moved:  
   
-    1.  double abs(double) 和 float abs(float)  
+    1.  double abs(double) and float abs(float)  
   
-    2.  double pow(double, int)、float pow(float, float)、float pow(float, int)、long double pow(long double, long double)、long double pow(long double, int)  
+    2.  double pow(double, int), float pow(float, float), float pow(float, int), long double pow(long double, long double), long double pow(long double, int)  
   
-    3.  下列浮點函式的浮點數和 long double 版本：acos、acosh、asin、asinh、atan、atanh、atan2、cbrt、ceil、copysign、cos、cosh、erf、erfc、exp、exp2、expm1、fabs、fdim、floor、fma、fmax、fmin、fmod、frexp、hypot、ilogb、ldexp、lgamma、llrint、llround、log、log10、log1p、log2、lrint、lround、modf、nearbyint、nextafter、nexttoward、remainder、remquo、rint、round、scalbln、scalbn、sin、sinh、sqrt、tan、tanh、tgamma、trunc  
+    3.  float and long double versions of floating point functions acos, acosh, asin, asinh, atan, atanh, atan2, cbrt, ceil, copysign, cos, cosh, erf, erfc, exp, exp2, expm1, fabs, fdim, floor, fma, fmax, fmin, fmod, frexp, hypot, ilogb, ldexp, lgamma, llrint, llround, log, log10, log1p, log2, lrint, lround, modf, nearbyint, nextafter, nexttoward, remainder, remquo, rint, round, scalbln, scalbn, sin, sinh, sqrt, tan, tanh, tgamma, trunc  
   
-     如果您有使用 abs 搭配浮點類型撰寫的程式碼，且該程式碼只包含 math.h 標頭，則此浮點版本將不再可用，因此即使使用浮點引數，現在仍會將該呼叫解析成 abs(int)。 這會產生此錯誤：  
+     If you have code that uses abs with a floating point type that only includes the math.h header, the floating point versions will no longer be available, so the call, even with a floating point argument, now resolves to abs(int). This produces the error:  
   
     ```Output  
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data  
     ```  
   
-     這個警告的修正方法是將對 abs 的呼叫取代為浮點版本的 abs，例如雙精度浮點引數的 fabs 或浮點引數的 fabsf，或包含 cmath 標頭，即可繼續使用 abs。  
+     The fix for this warning is to replace the call to abs with a floating point version of abs, such as fabs for a double argument or fabsf for a float argument, or include the cmath header and continue to use abs.  
   
--   **浮點的一致性** 針對特殊案例的輸入，例如 NaN 和無限大，為了與 IEEE-754 和 C11 附錄 F 規格更加一致，此數學程式庫已有許多變更。 例如，在舊版的程式庫中通常將無訊息的 NaN 輸入視為錯誤，如今已不再視為錯誤。 請參閱 [IEEE 754 標準](http://grouper.ieee.org/groups/754) 和 [C11 標準](http://www.iso-9899.info/wiki/The_Standard)的附錄 F。  
+-   **Floating point conformance** Many changes to the math library have been made to improve conformance to the IEEE-754 and C11 Annex F specifications with respect to special case inputs such as NaNs and infinities. For example, quiet NaN inputs, which were often treated as errors in previous versions of the library, are no longer treated as errors. See [IEEE 754 Standard](http://grouper.ieee.org/groups/754) and Annex F of the [C11 Standard](http://www.iso-9899.info/wiki/The_Standard).  
   
-     這些變更不會造成編譯時期錯誤，但根據此標準，可能會導致程式的行為不同且更加正確。  
+     These changes won't cause compile-time errors, but might cause programs to behave differently and more correctly according to the standard.  
   
--   **FLT_ROUNDS** 這是在 Visual Studio 2013 中，展開為常數運算式的 FLT_ROUNDS 巨集，因為此捨入模式為可在執行階段設定的，例如可由呼叫 fesetround 設定，所以這是不正確的。 FLT_ROUNDS 巨集現在是動態的，而且會正確反映目前的捨入模式。  
+-   **FLT_ROUNDS** In Visual Studio 2013, the FLT_ROUNDS macro expanded to a constant expression, which was incorrect because the rounding mode is configurable at runtime, for example, by calling fesetround. The FLT_ROUNDS macro is now dynamic and correctly reflects the current rounding mode.  
   
-#### <a name="new-and-newh"></a>\<new> 與 \<new.h>  
+#### <a name="new-and-newh"></a>\<new> and \<new.h>  
   
--   **new 和 delete** In previous versions of the library, the implementation-defined operator new 和 delete functions were exported from the runtime library DLL (for example, msvcr120.dll). 這些 operator 函式現在一律以靜態方式連結到您的二進位檔，即使是使用執行階段程式庫 DLL 亦同。  
+-   **new and delete** In previous versions of the library, the implementation-defined operator new and delete functions were exported from the runtime library DLL (for example, msvcr120.dll). These operator functions are now always statically linked into your binaries, even when using the runtime library DLLs.  
   
-     對於原生或混合程式碼 (/clr) 而言，這不是重大變更，但對於編譯成 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的程式碼，可能會造成您的程式碼無法編譯。 若將程式碼編譯成 /clr:pure，可能必須加入 #include \<new> 或 #include \<new.h> 來暫時解決此變更所造成的建置錯誤。 請注意，/clr:pure 在 Visual Studio 2015 中已淘汰，並可能在後續版本中移除。  
+     This is not a breaking change for native or mixed code (/clr), however for code compiled as [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), this might cause your code to fail to compile. If you compile code as /clr:pure, you may need to add #include \<new> or #include \<new.h> to work around build errors due to this change. Note that /clr:pure is deprecated in Visual Studio 2015 and might be removed in future releases.  
   
 #### <a name="processh"></a>\<process.h>  
   
--   **_beginthread 與 _beginthreadex**：The [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) 與 [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) 函式現在可以包含對定義有執行緒持時間之執行緒程序的模組參考。 這有助於確保在執行緒執行到完成之前，不會卸載模組。  
+-   **_beginthread and _beginthreadex** The [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) and [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) functions now hold a reference to the module in which the thread procedure is defined for the duration of the thread. This helps to ensure that modules are not unloaded until a thread has run to completion.  
   
 #### <a name="stdargh"></a>\<stdarg.h>  
   
--   **va_start 與參考類型**：[va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 現在會在編譯 C++ 程式碼時，於編譯期間驗證傳遞給其自身的引數不是參考類型。 此 C++ 標準禁止參考類型引數。  
+-   **va_start and reference types** When compiling C++ code, [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) now validates at compile-time that the argument passed to it is not of reference type. Reference-type arguments are prohibited by the C++ Standard.  
   
-#### <a name="stdioh-and-conioh"></a>\<stdio.h> 與 \<conio.h>  
+#### <a name="stdioh-and-conioh"></a>\<stdio.h> and \<conio.h>  
   
--   **printf 與 scanf 系列的函式現在會在函式中定義。** 所有 printf 與 scanf 函式的定義均已移至 \<stdio.h>、\<conio.h> 及其他 CRT 標頭內。 對於區域宣告這些函式，但不包含適當的 CRT 標頭之任何程式而言，這是會導致連結器錯誤 (LNK2019，無法解析的外部符號) 的重大變更。 如有可能，您應更新程式碼，將 CRT標頭 (亦即加入 #include \<stdio.h>) 及內嵌函式加入其中；若您不想修改程式碼來加入這些標頭檔案，也可以採用替代解決方法，在您的連結器輸入 legacy_stdio_definitions.lib 中新增額外的程式庫。  
+-   **The printf and scanf family of functions are now defined inline.** The definitions of all of the printf and scanf functions have been moved inline into \<stdio.h>, \<conio.h>, and other CRT headers. This is a breaking change that leads to a linker error (LNK2019, unresolved external symbol) for any programs that declared these functions locally without including the appropriate CRT headers. If possible, you should update the code to include the CRT headers (that is, add #include \<stdio.h>) and the inline functions, but if you do not want to modify your code to include these header files, an alternative solution is to add an additional library to your linker input, legacy_stdio_definitions.lib.  
   
-     若要將您在此 IDE 中的連結器輸入加入這個程式庫，請開啟專案節點的操作功能表，選擇 [屬性] ，接著在 [專案屬性]  對話方塊中選擇 [連結器] ，並編輯 [連結器輸入]  ，將 legacy_stdio_definitions.lib 加入此分號分隔的清單。  
+     To add this library to your linker input in the IDE, open the context menu for the project node, choose **Properties**, then in the **Project Properties** dialog box, choose **Linker**, and edit the **Linker Input** to add legacy_stdio_definitions.lib to the semi-colon-separated list.  
   
-     如果您的專案以靜態程式庫連結，且此程式庫使用早於 2015的 Visual C++ 版本編譯，則此連結器可能會報告無法解析的外部符號。 這些錯誤可能會參考 _iob、_iob_func 的內部 stdio 定義，或某些以 _imp\_* 格式宣告之 stdio 函式的相關匯入。 Microsoft 建議當您升級專案時，應以最新版本的 Visual C++ 編譯器和程式庫重新編譯所有的靜態程式庫。 如果該程式庫是協力廠商程式庫，其來源無法取得，您應該向協力廠商要求更新的二進位檔，或將該程式庫的使用方式封裝成不同的 DLL，其中您使用舊版的 Visual C++ 編譯器和程式庫編譯該 DLL。  
+     If your project links with static libraries that were compiled with a release of Visual C++ earlier than 2015, the linker might report an unresolved external symbol. These errors might reference internal stdio definitions for _iob, _iob_func, or related imports for certain stdio functions in the form of _imp\_*. Microsoft recommends that you recompile all static libraries with the latest version of the Visual C++ compiler and libraries when you upgrade a project. If the library is a third-party library for which source is not available, you should either request an updated binary from the third party or encapsulate your usage of that library into a separate DLL that you compile with the older version of the Visual C++ compiler and libraries.  
   
     > [!WARNING]
-    >  如果您要以 Windows SDK 8.1 或更早版本連結，您可能會遇到這些無法解析的外部符號錯誤。 在該情況下，您應該如先前所述地將 legacy_stdio_definitions.lib 加入連結器輸入來解決此錯誤。  
+    >  If you are linking with Windows SDK 8.1 or earlier, you might encounter these unresolved external symbol errors. In that case, you should resolve the error by adding legacy_stdio_definitions.lib to the linker input as described previously.  
   
-     若要疑難排解未解析之符號錯誤的問題，可以嘗試使用 [dumpbin.exe](../build/reference/dumpbin-reference.md) 檢查二進位檔中定義的符號。 請嘗試下列的命令列，檢視程式庫中定義的符號。  
+     To troubleshoot unresolved symbol errors, you can try using [dumpbin.exe](../build/reference/dumpbin-reference.md) to examine the symbols defined in a binary. Try the following command line to view symbols defined in a library.  
   
     ```cpp  
     dumpbin.exe /LINKERMEMBER somelibrary.lib  
     ```  
   
--   **gets 與 _getws**：[gets](../c-runtime-library/gets-getws.md) 與 [_getws](../c-runtime-library/gets-getws.md) 函式已移除。 gets 函式已從 C11 中的 C 標準程式庫移除，因為無法安全地使用該函式。 _getws 函式曾是 Microsoft 擴充功能，相當於 gets，但卻是用於寬字串。 您可以考慮使用這些函式的替代函式 [fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md) 及 [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
+-   **gets and _getws** The [gets](../c-runtime-library/gets-getws.md) and [_getws](../c-runtime-library/gets-getws.md) functions have been removed. The gets function was removed from the C Standard Library in C11 because it cannot be used securely. The _getws function was a Microsoft extension that was equivalent to gets but for wide strings. As alternatives to these functions, consider use of [fgets](../c-runtime-library/reference/fgets-fgetws.md), [fgetws](../c-runtime-library/reference/fgets-fgetws.md), [gets_s](../c-runtime-library/reference/gets-s-getws-s.md), and [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md).  
   
--   **_cgets 與 _cgetws**：[_cgets](../c-runtime-library/cgets-cgetws.md) 與 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函式已移除。 您可以考慮使用這些函式的替代函數 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 與 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
+-   **_cgets and _cgetws** The [_cgets](../c-runtime-library/cgets-cgetws.md) and [_cgetws](../c-runtime-library/cgets-cgetws.md) functions have been removed. As alternatives to these functions, consider use of [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) and [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md).  
   
--   **無限大與 NaN 格式** 在舊版本中，會使用一組 Visual C++ 特定的 Sentinel 字串，將無限大和 NaN 格式化。  
+-   **Infinity and NaN Formatting** In previous versions, infinities and NaNs would be formatted using a set of Visual C++-specific sentinel strings.  
   
-    -   無限大：1.#INF  
+    -   Infinity: 1.#INF  
   
-    -   無訊息的 NaN：1.#QNAN  
+    -   Quiet NaN: 1.#QNAN  
   
-    -   訊號 NaN：1.#SNAN  
+    -   Signaling NaN: 1.#SNAN  
   
-    -   不確定的 NaN：1.#IND  
+    -   Indefinite NaN: 1.#IND  
   
-     其中任何一項都可能有正負號的前置詞，也可能根據欄位寬度和精確度而有稍微不同的格式 (有時會有不尋常的效果，例如：printf("%.2f\n", INFINITY) 可能會列印 1.#J，因為有可能會將 #INF「四捨五入」為 2 位數的精確度)。 C99 導入了無限大和 NaN 格式化方式之新的需求。 現在的 Visual C++ 實作符合這些需求。 新的字串如下：  
+     Any of these may have been prefixed by a sign and may have been formatted slightly differently depending on field width and precision (sometimes with unusual effects, e.g. printf("%.2f\n", INFINITY) would print 1.#J because the #INF would be "rounded" to a precision of 2 digits). C99 introduced new requirements on how infinities and NaNs are to be formatted. The Visual C++ implementation now conforms to these requirements. The new strings are as follows:  
   
-    -   無限大：inf  
+    -   Infinity: inf  
   
-    -   無訊息的 NaN：nan  
+    -   Quiet NaN: nan  
   
-    -   訊號 NaN：nan(snan)  
+    -   Signaling NaN: nan(snan)  
   
-    -   不確定的 NaN：nan(ind)  
+    -   Indefinite NaN:nan(ind)  
   
-     其中任何一項都可以有正負號的前置詞。 如果使用了大寫格式規範 (%F，而非 %f)，則此字串會視需要以大寫字母 (INF，而非 inf) 列印。  
+     Any of these may be prefixed by a sign. If a capital format specifier is used (%F instead of %f) then the strings are printed in capital letters (INF instead of inf), as is required.  
   
-     [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函式在經過修改之後，已可剖析這些新字串，讓這些字串可以透過 printf 及 scanf 來回。  
+     The [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) functions have been modified to parse these new strings, so these strings will round-trip through printf and scanf.  
   
--   **浮點數格式化和剖析** 已引進新的浮點數格式化和剖析演算法來改善正確性。 此變更影響 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 及 [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 系列函式及 [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) 一類的函式。  
+-   **Floating point formatting and parsing** New floating point formatting and parsing algorithms have been introduced to improve correctness. This change affects the [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) and [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) families of functions, as well as functions like [strtod](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  
   
-     舊格式的演算法會產生有限位數的數字，然後以零填滿剩餘的小數位數。 若要產生會對原始浮點數值反覆存取的字串，這通常已經夠合用了，但如果您想要精確值 (或其中最接近的十進位表示)，就會不夠合適。 新的格式演算法會視需要產生足夠多的位數，用來代表該值 (或用來填入指定的精確度)。 做為改進的範例，請考慮列印 2 的大型乘冪時之結果：  
+     The old formatting algorithms would generate only a limited number of digits, then would fill the remaining decimal places with zero. This is usually good enough to generate strings that will round-trip back to the original floating point value, but it's not great if you want the exact value (or the closest decimal representation thereof). The new formatting algorithms generate as many digits as are required to represent the value (or to fill the specified precision). As an example of the improvement; consider the results when printing a large power of two:  
   
     ```cpp  
     printf("%.0f\n", pow(2.0, 80))  
@@ -177,126 +177,126 @@ ms.lasthandoff: 08/11/2017
         Old:  1208925819614629200000000    New:  1208925819614629174706176  
     ```  
   
-     舊的剖析演算法只會考慮輸入字串中最多 17 個有效位數，並會捨棄其餘位數。 這足以產生字串所代表值的非常接近之近似值，而且通常會產生非常接近捨入正確的結果。 新的實作會考慮所有出現的位數，而且會針對所有輸入 (長度最多 768 位數) 產生正確捨入的結果。 此外，這些函式現在會遵循捨入模式 (可透過 fesetround 控制)。  這可能是行為重大變更，因為這些函式可能會輸出不同的結果。 新的結果永遠比舊的結果正確。  
+     The old parsing algorithms would consider only up to 17 significant digits from the input string and would discard the rest of the digits. This is sufficient to generate a very close approximation of the value represented by the string, and the result is usually very close to the correctly rounded result. The new implementation considers all present digits and produces the correctly rounded result for all inputs (up to 768 digits in length). In addition, these functions now respect the rounding mode (controllable via fesetround).  This is a potentially breaking behavior change because these functions might output different results. The new results are always more correct than the old results.  
   
--   **十六進位和無限大/NaN 浮點數剖析** 如同上面所述，浮點數剖析演算法現在會剖析十六進位的浮點數字串 (例如那些由 %a 和 %A printf 格式規範所產生的)，和剖析所有由此 printf 函式產生的無限大和 NaN 字串。  
+-   **Hexadecimal and infinity/NaN floating point parsing** The floating point parsing algorithms will now parse hexadecimal floating point strings (such as those generated by the %a and %A printf format specifiers) and all infinity and NaN strings that are generated by the printf functions, as described above.  
   
--   **%A 和 %a 零填補** %a 和 %A 格式規範會將浮點數格式化為十六進位的尾數和二進位的指數。 在舊版，printf 函式無法正確對字串進行零填補。 例如，printf("%07.0a\n", 1.0) 會列印 00x1p+0，但這應該是 0x01p+0 才對。 這項問題已獲得修正。  
+-   **%A and %a zero padding** The %a and %A format specifiers format a floating point number as a hexadecimal mantissa and binary exponent. In previous versions, the printf functions would incorrectly zero-pad strings. For example, printf("%07.0a\n", 1.0) would print 00x1p+0, where it should print 0x01p+0. This has been fixed.  
   
--   **%A 和 %a 的精確度** 在此程式庫的舊版中，%A 和 %a 的格式規範之預設精確度是 6。 為了與 C 標準一致，現在此預設精確度為 13。  
+-   **%A and %a precision** The default precision of the %A and %a format specifiers was 6 in previous versions of the library. The default precision is now 13 for conformance with the C Standard.  
   
-     在搭配 %A 或 %a 使用格式字串的任何函式輸出中，此為執行階段行為變更。 在舊版的行為中，使用 %A 規範的輸出可能為 "1.1A2B3Cp+111"。 現在對於相同值的輸出是 "1.1A2B3C4D5E6F7p+111"。 若要取得舊的行為，您可以指定精確度，例如 %.6A。 請參閱[精確度規格](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision)。  
+     This is a runtime behavior change in the output of any function that uses a format string with %A or %a. In the old behavior, the output using the %A specifier might be "1.1A2B3Cp+111". Now the output for the same value is "1.1A2B3C4D5E6F7p+111". To get the old behavior, you can specify the precision, for example, %.6A. See [Precision Specification](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md#precision).  
   
--   **%F 規範** 現在支援 %F 格式/轉換規範。 它的功能相當於 %f 格式規範，不同之處在於無限大和 NaN 的格式使用大寫字母。  
+-   **%F specifier** The %F format/conversion specifier is now supported. It is functionally equivalent to the %f format specifier, except that infinities and NaNs are formatted using capital letters.  
   
-     在舊版中，此實作用來剖析 F 和 N 為長度修飾詞。 這種行為可追溯至分段位址空間的年代：這些長度修飾詞曾分別用來表示遠指標和近指標，如同 %Fp 或 %Ns。 已移除這種行為。 如果遇到 %F，現在會將它視為 %F 格式規範；如果遇到 %N 時，現在會將它視為無效的參數。  
+     In previous versions, the implementation used to parse F and N as length modifiers. This behavior dated back to the age of segmented address spaces: these length modifiers were used to indicate far and near pointers, respectively, as in %Fp or %Ns. This behavior has been removed. If %F is encountered, it is now treated as the %F format specifier; if %N is encountered, it is now treated as an invalid parameter.  
   
--   **指數格式** %e 和 %E 格式規範會將浮點數格式化為十進位的尾數和指數。 在某些情況下，%g 和 %G 格式規範也會將數字格式化為這種形式。 在舊版中，CRT 永遠會產生具有三位數指數的字串。 例如，printf("%e\n", 1.0) 會列印 1.000000e+000。 這是不正確的：如果可使用一位數或兩位數表示該指數，則 C 要求只能列印兩位數。  
+-   **Exponent formatting** The %e and %E format specifiers format a floating point number as a decimal mantissa and exponent. The %g and %G format specifiers also format numbers in this form in some cases. In previous versions, the CRT would always generate strings with three-digit exponents. For example, printf("%e\n", 1.0) would print 1.000000e+000. This was incorrect: C requires that if the exponent is representable using only one or two digits, then only two digits are to be printed.  
   
-     Visual Studio 2005 加入了全域合規性參數：[_set_output_format](../c-runtime-library/set-output-format.md)。 程式可以用引數 _TWO_DIGIT_EXPONENT 呼叫這個函式，以啟用符合標準的指數列印。 這項預設行為已變更為符合標準的指數列印模式。  
+     In Visual Studio 2005 a global conformance switch was added: [_set_output_format](../c-runtime-library/set-output-format.md). A program could call this function with the argument _TWO_DIGIT_EXPONENT, to enable conforming exponent printing. The default behavior has been changed to the standards-conforming exponent printing mode.  
   
--   **格式字串驗證** 在舊版中，printf 和 scanf 函式會以無訊息模式接受許多無效的格式字串，有時會產生不尋常的作用。 例如，會將 %hlhlhld 視為 %d。 現在會將所有無效的格式字串視為無效的參數。  
+-   **Format string validation** In previous versions, the printf and scanf functions would silently accept many invalid format strings, sometimes with unusual effects. For example, %hlhlhld would be treated as %d. All invalid format strings are now treated as invalid parameters.  
   
--   **fopen 模式字串驗證**  
+-   **fopen mode string validation**  
   
-     在舊版中，fopen 系列的函式會以無訊息模式接受某些無效的模式字串 (例如：r+b+)。 現在會偵測到無效的模式字串並將其視為無效的參數。  
+     In previous versions, the fopen family of functions silently accepted some invalid mode strings (e.g. r+b+). Invalid mode strings are now detected and treated as invalid parameters.  
   
 -   **_O_U8TEXT mode**  
   
-     [_setmode](../c-runtime-library/reference/setmode.md) 函式現在已可正確回報 in_O_U8TEXT 模式中開啟的資料流模式。 在此程式庫的舊版中，它會報告這類資料流為在 _O_WTEXT 中所開啟。  
+     The [_setmode](../c-runtime-library/reference/setmode.md) function now correctly reports the mode for streams opened in_O_U8TEXT mode. In previous versions of the library, it would report such streams as being opened in _O_WTEXT.  
   
-     如果您的程式碼解譯 _O_WTEXT 模式，其中資料流的編碼是 UTF-8，這就會是一項重大變更。 如果您的應用程式不支援 UTF_8，請考慮將這項日漸普遍之編碼方式的支援加入。  
+     This is a breaking change if your code interprets the _O_WTEXT mode for streams where the encoding is UTF-8. If your application doesn't support UTF_8, consider adding support for this increasingly common encoding.  
   
--   **snprintf 與 vsnprintf**：[snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 與 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 函式現已實作。 舊版程式碼通常提供這些函式的巨集版本之定義，因為 CRT 程式庫並沒有將它們實作，但是在較新版本中已不再需要。 現在若在加入 <\<tdio.h> 之前先將 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 或 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 定義為巨集，編譯將會失敗，並傳回錯誤指出巨集的定義位置。  
+-   **snprintf and vsnprintf** The [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) and [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) functions are now implemented. Older code often provided definitions macro versions of these functions because they were not implemented by the CRT library, but these are no longer needed in newer versions. If [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) or [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) is defined as a macro before including \<stdio.h>, compilation now fails with an error that indicates where the macro was defined.  
   
-     一般來說，修正這個問題的方式為刪除使用者程式碼中 snprintf 或 vsnprintf 的任何宣告。  
+     Normally, the fix to this problem is to delete any declarations of snprintf or vsnprintf in user code.  
   
--   **tmpnam 產生可使用的檔案名稱** 在舊版中，tmpnam 和 tmpnam_s 函式會在磁碟機的根目錄中 (例如 \sd3c.) 產生檔案名稱。 現在這些函式會在暫存目錄中產生可用的檔案名稱路徑。  
+-   **tmpnam Generates Usable File Names** In previous versions, the tmpnam and tmpnam_s functions generated file names in the root of the drive (such as \sd3c.). These functions now generate usable file name paths in a temporary directory.  
   
--   **FILE 封裝**：在舊版中，\<stdio.h> 中完整定義了 FILE 類型，方便使用者程式碼可以連接到 FILE 修改其內容。 stdio 程式庫已變更為隱藏實作詳細資料。 因此，現在在 \<stdio.h> 中已將 FILE 定義為不透明類型，而且無法從此 CRT 的外部存取其成員。  
+-   **FILE Encapsulation** In previous versions, the FILE type was completely defined in \<stdio.h>, so it was possible for user code to reach into a FILE and modify its internals. The stdio library has been changed to hide implementation details. As part of this, FILE as defined in \<stdio.h> is now an opaque type and its members are inaccessible from outside of the CRT itself.  
   
--   **_outp 與 _inp**：函式 [_outp](../c-runtime-library/outp-outpw-outpd.md)、[_outpw](../c-runtime-library/outp-outpw-outpd.md)、[_outpd](../c-runtime-library/outp-outpw-outpd.md)、[_inp](../c-runtime-library/inp-inpw-inpd.md)、[_inpw](../c-runtime-library/inp-inpw-inpd.md) 及 [_inpd](../c-runtime-library/inp-inpw-inpd.md) 已移除。  
+-   **_outp and _inp** The functions [_outp](../c-runtime-library/outp-outpw-outpd.md), [_outpw](../c-runtime-library/outp-outpw-outpd.md), [_outpd](../c-runtime-library/outp-outpw-outpd.md), [_inp](../c-runtime-library/inp-inpw-inpd.md), [_inpw](../c-runtime-library/inp-inpw-inpd.md), and [_inpd](../c-runtime-library/inp-inpw-inpd.md) have been removed.  
   
-#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>、\<malloc.h> 及 \<sys/stat.h>  
+#### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>, \<malloc.h>, and \<sys/stat.h>  
   
--   **strtof 和 wcstof** The strtof 和 wcstof functions failed to set errno to ERANGE when the value was not representable as a float. 這項問題已獲得修正。 (請注意，這個錯誤是這兩個函數特有的；而 strtod、wcstod、strtold 和 wcstold 函式不受影響。)這是執行階段的重大變更。  
+-   **strtof and wcstof** The strtof and wcstof functions failed to set errno to ERANGE when the value was not representable as a float. This has been fixed. (Note that this error was specific to these two functions; the strtod, wcstod, strtold, and wcstold functions were unaffected.) This is a runtime breaking change.  
   
--   **alligned 配置函式**：在舊版中，alligned 配置函式 (_aligned_malloc、_aligned_offset_malloc 等等) 會以無訊息方式接受對齊等於 0 的區塊要求。 要求的對齊必須是 2 的乘冪，而 0 卻不是。 已修正這個問題，現在會將要求的對齊為 0 視為無效的參數。 這是執行階段的重大變更。  
+-   **Aligned allocation functions** In previous versions, the aligned allocation functions (_aligned_malloc, _aligned_offset_malloc, etc.) would silently accept requests for a block with an alignment of 0. The requested alignment must be a power of two, which zero is not. This has been fixed, and a requested alignment of 0 is now treated as an invalid parameter. This is a runtime breaking change.  
   
--   **堆積函式**：_heapadd、_heapset 和 _heapused 函式已移除。 這些函式已無作用，因為 CRT 已更新為使用 Windows 堆積。  
+-   **Heap functions** The _heapadd, _heapset, and _heapused functions have been removed. These functions have been nonfunctional since the CRT was updated to use the Windows heap.  
   
--   **smalheap**：smalheap 連結選項已移除。 請參閱[連結選項](../c-runtime-library/link-options.md)。  
+-   **smallheap** The smalheap link option has been removed. See [Link Options](../c-runtime-library/link-options.md).  
   
 #### <a name="stringh"></a>\<string.h>  
   
--   **wcstok** 已變更 wcstok 函式的簽章為符合 C 標準所需的簽章。 在此程式庫的舊版中，這個函式的簽章是：  
+-   **wcstok** The signature of the wcstok function has been changed to match what is required by the C Standard. In previous versions of the library, the signature of this function was:  
   
     ```cpp  
     wchar_t* wcstok(wchar_t*, wchar_t const*)  
     ```  
   
-     它使用內部個別執行緒內容來追蹤呼叫之間的狀態，如同 strtok 所執行的。 此函式現在已有 wchar_t* wcstok(wchar_t\*、wchar_t const\*、wchar_t\*\*) 特徵標記，需要呼叫端使用第三個引數將內容傳遞給此函式。  
+     It used an internal, per-thread context to track state across calls, as is done for strtok. The function now has the signature wchar_t* wcstok(wchar_t\*, wchar_t const\*, wchar_t\*\*), and requires the caller to pass the context as a third argument to the function.  
   
-     已將舊的簽章加入新的 _wcstok 函式，藉此簡化移植。 在編譯 C++ 程式碼時，還有一個具有舊簽章的 wcstok 內嵌多載。 會將這個多載宣告為已被取代。 在 C 程式碼中，您可能會定義 _CRT_NON_CONFORMING_WCSTOK，讓 _wcstok 用來取代 wcstok。  
+     A new _wcstok function has been added with the old signature to ease porting. When compiling C++ code, there is also an inline overload of wcstok that has the old signature. This overload is declared as deprecated. In C code, you may define_CRT_NON_CONFORMING_WCSTOK to cause _wcstok to be used in place of wcstok.  
   
 #### <a name="timeh"></a>\<time.h>  
   
--   **clock**：在舊版中，[clock](../c-runtime-library/reference/clock.md) 函式透過 Windows API [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx) 來實作。 連同這項實作，clock 函式會受系統時間影響，因此並不一定是單調函式。 已根據 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 重新實作 clock 函式，因此該函式現在是單調函式。  
+-   **clock** In previous versions, the [clock](../c-runtime-library/reference/clock.md) function was implemented using the Windows API [GetSystemTimeAsFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). With this implementation, the clock function was sensitive to the system time, and was thus not necessarily monotonic. The clock function has been reimplemented in terms of [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) and is now monotonic.  
   
--   **fstat and _utime**：在舊版中，[_stat](../c-runtime-library/reference/stat-functions.md)、[fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md) 及 [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 函式無法正確處理日光節約時間。 在 Visual Studio 2013 之前，這些函式全都未正確調整標準時間的時間，如同它們是在日光節約時間一樣。  
+-   **fstat and _utime** In previous versions, the [_stat](../c-runtime-library/reference/stat-functions.md), [fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md), and [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) functions handle daylight savings time incorrectly. Prior to Visual Studio 2013, all of these functions incorrectly adjusted standard time times as if they were in daylight time.  
   
-     在 Visual Studio 2013 中，已在 _stat 系列的函式中修正此問題，但是在 fstat 和 _utime 系列的函式中，類似的問題未獲修正。 這導致因為函式之間不一致所產生的問題。 現在已修正 fstat 和 _utime 系列的函式，因此這些函式現在全都能正確且一致地處理日光節約時間。  
+     In Visual Studio 2013, the problem was fixed in the _stat family of functions, but the similar problems in the fstat and _utime families of functions were not fixed. This led to problems due to the inconsistency between the functions. The fstat and _utime families of functions have now been fixed, so all of these functions now handle daylight savings time correctly and consistently.  
   
--   **asctime**：在舊版中，當日期只有單一位數時，[asctime](../c-runtime-library/reference/asctime-wasctime.md) 函式會在其前填補零，例如 Fri Jun 06 08:00:00 2014。 此規格需要這類天數以空格填補，例如：Fri Jun  6 08:00:00 2014。 這項問題已獲得修正。  
+-   **asctime** In previous versions, the [asctime](../c-runtime-library/reference/asctime-wasctime.md) function would pad single-digit days with a leading zero, for example: Fri Jun 06 08:00:00 2014. The specification requires that such days be padded with a leading space, e.g. Fri Jun  6 08:00:00 2014. This has been fixed.  
   
--   **strftime 和 wcsftime** The strftime 和 wcsftime functions now support the %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u, and %V format specifiers. 此外，會剖析 E 和 O 修飾詞 (但也會將其忽略)。  
+-   **strftime and wcsftime** The strftime and wcsftime functions now support the %C, %D, %e, %F, %g, %G, %h, %n, %r, %R, %t, %T, %u, and %V format specifiers. Additionally, the E and O modifiers are parsed but ignored.  
   
-     會指定 %c 格式規範為對於目前地區設定產生「適當的日期和時間表示法」。 在 C 的地區設定中，這個表示法必須與 %a %b %e %T %Y 相同。 這和由 asctime 所產生的格式相同。 在舊版中，%c 格式規範未正確使用 MM/DD/YY HH:MM:SS 表示法將時間格式化。 這項問題已獲得修正。  
+     The %c format specifier is specified as producing an "appropriate date and time representation" for the current locale. In the C locale, this representation is required to be the same as %a %b %e %T %Y. This is the same form as is produced by asctime. In previous versions, the %c format specifier incorrectly formatted times using a MM/DD/YY HH:MM:SS representation. This has been fixed.  
   
--   **timespec 與 TIME_UTC**：\<time.h> 標頭現在可使用 C11 標準定義 timespec 類型與 timespec_get 函式。 此外也定義了 TIME_UTC 巨集，可與 timespec_get 函式搭配使用。 這對於其中任何一項有衝突定義的程式碼而言是重大變更。  
+-   **timespec and TIME_UTC** The \<time.h> header now defines the timespec type and the timespec_get function from the C11 Standard. In addition, the TIME_UTC macro, for use with the timespec_get function, is now defined. This is a breaking change for code that has a conflicting definition for any of these.  
   
--   **CLOCKS_PER_SEC** 現在 CLOCKS_PER_SEC 巨集會展開成整數的類型 clock_t，如同 C 語言所要求的。  
+-   **CLOCKS_PER_SEC** The CLOCKS_PER_SEC macro now expands to an integer of type clock_t, as required by the C language.  
   
-####  <a name="BK_STL"></a>C++ 標準程式庫  
- 為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤  (_MSC_VER 是包含此編譯器主要版本的巨集，例如對於 Visual Studio 2013 為 1800。)這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。  
+####  <a name="BK_STL"></a> C++ Standard Library  
+ To enable new optimizations and debugging checks, the Visual Studio implementation of the C++ Standard Library intentionally breaks binary compatibility from one version to the next. Therefore, when the C++ Standard Library is used, object files and static libraries that are compiled by using different versions can't be mixed in one binary (EXE or DLL), and C++ Standard Library objects can't be passed between binaries that are compiled by using different versions. Such mixing emits linker errors about _MSC_VER mismatches. (_MSC_VER is the macro that contains the compiler's major version—for example, 1800 for Visual Studio 2013.) This check cannot detect DLL mixing, and cannot detect mixing that involves Visual C++ 2008 or earlier.  
   
--   **C++ 標準程式庫包含檔案**：有一些變更讓 C++ 標準程式庫標頭可以加入結構。 C++ 標準程式庫標頭可以一些未經指定的方式加入彼此之中。 一般來說，您在撰寫程式碼時，應依據 C++ 標準小心地加入程式碼所需的所有標頭，而不要使用 C++ 標準程式庫標頭相互加入的這項特性。 這使其成為可攜式跨版本和跨平台的程式碼。 在 Visual Studio 2015 中，至少有兩種標頭的變更會影響使用者程式碼。 首先，\<string> 不再包含 \<iterator>。 其次，\<tuple> 現在只會宣告 std::array，而不會加入所有的 \<array>。此函式可以經由下列程式碼建構組合中斷程式碼：您的程式碼具有名為 "array" 的變數及 using 指示詞 "using namespace std;"，而且包含內有 \<tuple> (現在會宣告 std::array) 的 C++ 標準程式庫標頭 (例如 \<functional>)。  
+-   **C++ Standard Library include files** Some changes have been made to the include structure in the C++ Standard Library headers. C++ Standard Library headers are allowed to include each other in unspecified ways. In general, you should write your code so that it carefully includes all of the headers that it needs according to the C++ standard and doesn't rely on which C++ Standard Library headers include which other C++ Standard Library headers. This makes code portable across versions and platforms. At least two header changes in Visual Studio 2015 affect user code. First, \<string> no longer includes \<iterator>. Second, \<tuple> now declares std::array without including all of \<array>, which can break code through the following combination of code constructs: your code has a variable named "array", and you have a using-directive "using namespace std;", and you include a C++ Standard Library header (such as \<functional>) that includes \<tuple>, which now declares std::array.  
   
--   **steady_clock**：為求穩定及單純，[steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 實作已變更為遵循 C++ 標準的要求。 現在 steady_clock 以 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 為基礎，而 high_resolution_clock 現在是 steady_clock 的 typedef。 如此一來，在 Visual C++ 中， steady_clock::time_point 現在是 chrono::time_point<steady_clock> 的 typedef；不過，這不一定也會發生在其他實作中。  
+-   **steady_clock** The \<chrono> implementation of [steady_clock](../standard-library/steady-clock-struct.md) has changed to meet the C++ Standard requirements for steadiness and monotonicity. steady_clock is now based on [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) and high_resolution_clock is now a typedef for steady_clock. As a result, in Visual C++ steady_clock::time_point is now a typedef for chrono::time_point<steady_clock>; however, this is not necessarily the case for other implementations.  
   
--   **配置器和常數** 我們現在要求配置器的等號/不等比較要在兩邊接受常數引數。  如果您的配置器定義這些運算子，如下所示：  
+-   **allocators and const** We now require allocator equality/inequality comparisons to accept const arguments on both sides.  If your allocators define these operators as follows:  
   
     ```cpp  
     bool operator==(const MyAlloc& other)  
     ```  
   
-     您應該將其更新，藉此將它們宣告為常數成員。  
+     You should update these to declare them as const members.  
   
     ```cpp  
     bool operator==(const MyAlloc& other) const  
     ```  
   
--   **const elements**：C++ 標準一律禁止常數項目 (例如 vector\<const T> 或 set\<const T>) 的容器。 Visual C++ 2013 及更早版本接受這類容器。 在目前版本中，這類容器無法編譯。  
+-   **const elements** The C++ standard has always forbidden containers of const elements (such as vector\<const T> or set\<const T>). Visual C++ 2013 and earlier accepted such containers. In the current version, such containers fail to compile.  
   
--   **std::allocator::deallocate** 在 Visual C++ 2013 和舊版中，std::allocator::deallocate(p, n) 忽略針對 n 而傳遞進來的引數。  C++ 標準永遠要求 n 與做為第一個引數傳遞的值相等，該值傳遞至配置的引動過程，其中此配置會傳回 p。 不過，在目前版本中，會檢查 n 的值。 對於所傳遞之 n 的引數和此標準要求不同的程式碼，這有可能會在執行階段當機。  
+-   **std::allocator::deallocate** In Visual C++ 2013 and earlier, std::allocator::deallocate(p, n) ignored the argument passed in for n.  The C++ standard has always required that n be equal to the value passed as the first argument to the invocation of allocate which returned p. However, in the current version, the value of n is inspected. Code that passes arguments for n that differ from what the standard requires might crash at runtime.  
   
--   **hash_map 與 hash_set**：非標準的標頭檔案 hash_map 及 hash_set 在 Visual Studio 2015 中已淘汰，並將於後續版本中移除。 請改用 unordered_map 和 unordered_set。  
+-   **hash_map and hash_set** The non-standard header files hash_map and hash_set are deprecated in Visual Studio 2015 and will be removed in a future release. Use unordered_map and unordered_set instead.  
   
--   **comparators 與 operator()**：現在關聯容器 (\<map> 系列) 會要求其比較子指定可呼叫常數的函式呼叫運算子。 現在比較子類別宣告中的下列程式碼無法編譯：  
+-   **comparators and operator()** Associative containers (the \<map> family) now require their comparators to have const-callable function call operators. The following code in a comparator class declaration now fails to compile:  
   
     ```cpp  
     bool operator()(const X& a, const X& b)  
     ```  
   
-     若要解決這個錯誤，請將此函式宣告變更為：  
+     To resolve this error, change the function declaration to:  
   
     ```cpp  
     bool operator()(const X& a, const X& b) const  
     ```  
   
--   **類型特性** The old names for 類型特性 from an earlier version of the C++ draft standard have been removed. 這些在 C++11 中已有所變更，且已在 Visual Studio 2015 中更新為 C++11 的值。 下表顯示舊名稱和新名稱。  
+-   **type traits** The old names for type traits from an earlier version of the C++ draft standard have been removed. These were changed in C++11 and have been updated to the C++11 values in Visual Studio 2015. The following table shows the old and new names.  
   
-    |舊名稱|新名稱|  
+    |Old name|New name|  
     |--------------|--------------|  
     |add_reference|add_lvalue_reference|  
     |has_default_constructor|is_default_constructible|  
@@ -318,50 +318,50 @@ ms.lasthandoff: 08/11/2017
     |has_trivial_move_assign|is_trivially_move_assignable|  
     |has_trivial_destructor|is_trivially_destructible|  
   
--   **launch::any 與 launch::sync 原則**：nonstandard launch::any 和 launch::sync 原則已移除。 對於 launch::any，請改用 launch:async &#124; launch:deferred。 對於 launch::sync，請改用 launch::deferred。 請參閱 [launch Enumeration](../standard-library/future-enums.md#launch)。  
+-   **launch::any and launch::sync policies** The nonstandard launch::any and launch::sync policies were removed. Instead, for launch::any, use launch:async &#124; launch:deferred. For launch::sync, use launch::deferred. See [launch Enumeration](../standard-library/future-enums.md#launch).  
   
-####  <a name="BK_MFC"></a> MFC 與 ATL  
+####  <a name="BK_MFC"></a> MFC and ATL  
   
--   **Microsoft Foundation Classes (MFC)** 因為其大小太大而不再隨附於 Visual Studio 的「一般」安裝。 若要安裝 MFC，請在 Visual Studio 2015 安裝程式中選擇 [自訂] 安裝選項。 如果您已經安裝 Visual Studio 2015，您可以重新執行 Visual Studio 安裝程式，選擇 [自訂] 安裝選項，以及選擇 Microsoft Foundation Classes 來安裝 MFC。 從 [控制台]、[程式和功能]，或從安裝媒體，您可以重新執行 Visual Studio 安裝程式。  
+-   **Microsoft Foundation Classes (MFC)** is no longer included in a "Typical" install of Visual Studio because of its large size. To install MFC, choose the Custom install option in Visual Studio 2015 setup. If you already have Visual Studio 2015 installed, you can install MFC by re-running Visual Studio setup, choosing the Custom install option, and choosing Microsoft Foundation Classes. You can re-run Visual Studio setup from the Control Panel, Programs and Features, or from the installation media.  
   
-     Visual C++ 可轉散發套件仍然包含這個程式庫。  
+     The Visual C++ Redistributable Package still includes this library.  
   
-####  <a name="BK_ConcRT"></a> 並行執行階段  
+####  <a name="BK_ConcRT"></a> Concurrency Runtime  
   
--   **從 Windows.h 產生的巨集與 concurrency::Context::Yield 發生衝突** 並行執行階段之前使用 #undef 取消 Yield 巨集的定義，以避免 Windows.h h 和 concurrency::Context::Yield 函式中定義的 Yield 巨集之間發生衝突。 此 #undef 已移除，並新增了不衝突的對等 API 呼叫 [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution)。 若要解決 Yield 的衝突，您可以更新您的程式碼，改成呼叫 YieldExecution 函式，或在呼叫位置將 Yield 函式名稱加上括弧，如下列範例所示：  
+-   **Yield macro from Windows.h conflicting with concurrency::Context::Yield** The Concurrency Runtime previously used #undef to undefine the Yield macro to avoid conflicts between the Yield macro defined in Windows.h h and the concurrency::Context::Yield function. This #undef has been removed and a new non-conflicting equivalent API call [concurrency::Context::YieldExecution](../parallel/concrt/reference/context-class.md#yieldexecution) has been added. To work around conflicts with Yield, you can either update your code to call the YieldExecution function instead, or surround the Yield function name with parentheses at call sites, as in the following example:  
   
     ```cpp  
     (concurrency::Context::Yield)();  
     ```  
   
-## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Visual C++ 2015 的編譯器合規性改進  
- 從舊版升級程式碼時，也可能會因為 Visual C++ 2015 的合規性改進而造成一些編譯器錯誤。 這些改進對於舊版 Visual C++ 的二進位相容性沒有影響，但可能會產生過去從未發生的編譯器錯誤。 如需詳細資訊，請參閱[Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ 2003 至 2015 的新功能)。  
+## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Compiler Conformance Improvements in Visual C++ 2015  
+ When upgrading code from previous versions, you might also encounter compiler errors that are due to conformance improvements made in Visual C++ 2015. These improvements do not break binary compatibility from earlier versions of Visual C++, but they can produce compiler errors where none were emitted before. For more information, see [Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md).  
   
- 在 Visual C++ 2015 中，隨著編譯器合規性不斷改進，有時候可能會改變編譯器解讀您現有原始程式碼的方式。 當發生這種情況時，可能會在您建置時發生不同或新的錯誤，甚至程式碼的行為與上版組建不同，而且看似正常運作。  
+ In Visual C++ 2015, ongoing improvements to compiler conformance can sometimes change how the compiler understands your existing source code. When this happens, you might encounter new or different errors during your build, or even behavioral differences in code that previously built and seemed to run correctly.  
   
- 所幸這些差異對於您大部分的原始程式碼影響很小，甚至完全沒有影響。即使有需要變更原始程式碼或進行其他變更才能解決這些差異，這類修正通常很少而且簡單明瞭。 我們加入了許多先前接受，但後來可能需要變更的原始程式碼範例 *(之前)*，以及用以更正的修正 *(之後)*。  
+ Fortunately, these differences  have little or no impact on most of your source code and when source code or other changes are needed to address these differences,  fixes are usually small and straight-forward. We've included many examples of previously-acceptable source code that might need to be changed *(before)* and the fixes to correct them *(after)*.  
   
- 雖然這些差異可脦會影響您的原始程式碼或其他組建成品，但不會影響每版 Visual C++ 更新之間的二進位相容性。 「重大變更」是較重大的變更類型，會影響二進位檔相容性，但這些類型的二進位相容性只會在 Visual C++ 的主要版本之間中斷。 例如 Visual C++ 2013 與 Visual C++ 2015 之間。 如需 Visual C++ 2013 與 Visual C++ 2015 之間的重大變更資訊，請參閱 [Visual C++ 2015 的合規性變更](#VC_2015)。  
+ Although these differences can affect your source code or other build artifacts, they don't affect binary compatibility between updates to Visual C++ versions. A more-severe kind of change, the  *breaking change* can affect binary compatibility, but these kinds of binary compatibility breaks only occur between major versions of Visual C++. For example, between Visual C++ 2013 and Visual C++ 2015. For information on the breaking changes that occurred between Visual C++ 2013 and Visual C++ 2015, see [Visual C++ 2015 Conformance Changes](#VC_2015).  
   
--   [Visual C++ 2015 的合規性改進](#VS_RTM)  
+-   [Conformance Improvements in Visual C++ 2015](#VS_RTM)  
   
--   [Update 1 的合規性改進](#VS_Update1)  
+-   [Conformance Improvements in Update 1](#VS_Update1)  
   
--   [Update 2 的合規性改進](#VS_Update2)  
+-   [Conformance Improvements in Update 2](#VS_Update2)  
   
--   [Update 3 的合規性改進](#VS_Update3)  
+-   [Conformance Improvements in Update 3](#VS_Update3)  
   
-###  <a name="VS_RTM"></a> Visual C++ 2015 的合規性改進  
+###  <a name="VS_RTM"></a> Conformance Improvements in Visual C++ 2015  
   
--   /Zc:forScope- 選項  
+-   /Zc:forScope- option  
   
-     編譯器選項 **/Zc:forScope-** 已被取代，在未來的發行版本中將會移除  
+     The compiler option **/Zc:forScope-** is deprecated and will be removed in a future release.  
   
     ```cpp  
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release  
     ```  
   
-     該選項通常是在非標準程式碼的迴圈變數應該已經超出範圍 (根據該標準) 之後，用來允許此非標準程式碼。 只有當您使用 /Za 選項編譯時才需要這樣做，因為在沒有指定 /Za 的情況下，總是允許在迴圈結束之後使用 for 迴圈變數。 如果您不在意標準一致性 (例如，如果您並沒有打算將程式碼設計成可移植到其他編譯器)，則可以關閉 /Za 選項 (或將停用語言擴充功能屬性設為 No)。 如果您在意撰寫可攜式且符合標準規範的程式碼，就應該要重寫程式碼，將這類變數的宣告移至該迴圈外，使其符合此標準。  
+     The option was usually used in order to allow nonstandard code that uses loop variables after the point where, according to the standard, they should have gone out of scope. It was only necessary when you are compiling with the /Za option, since without /Za, using a for loop variable after the end of the loop is always allowed. If you don't care about standards conformance (for example, if your code isn't meant to portable to other compilers), you could turn off the /Za option (or set the Disable Language Extensions property to No). If you do care about writing portable, standards-compliant code, you should rewrite your code so that it conforms to the standard by moving the declaration of such variables to a point outside the loop.  
   
     ```cpp  
     // C2065 expected  
@@ -374,17 +374,17 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
--   **/Zg 編譯器選項**  
+-   **/Zg compiler option**  
   
-     /Zg 編譯器選項 (產生函式原型) 不再提供使用。 這個編譯器選項之前已遭取代。  
+     The /Zg compiler option (Generate Function Prototypes) is no longer available. This compiler option was previously deprecated.  
   
--   您再也無法從命令列藉由 mstest.exe 使用 C++ /CLI 來執行單元測試。 請改用 vstest.console.exe。 請參閱 [VSTest.Console.exe 命令列選項](/devops-test-docs/test/vstest-console-exe-command-line-options)。  
+-   You can no longer run unit tests with C++/CLI from the command-line with mstest.exe. Instead, use vstest.console.exe. See [VSTest.Console.exe command-line options](/devops-test-docs/test/vstest-console-exe-command-line-options).  
   
--   **可變動的關鍵字**  
+-   **mutable keyword**  
   
-     在之前 `mutable` 儲存類別規範可以正確無誤編譯的位置中，已再也無法允許此儲存類別規範。 現在，此編譯器會發生錯誤 C2071 (不合法的儲存類別)。 根據該標準，可變動的規範只可以套用至類別資料成員的名稱，而不能套用至宣告為常數或靜態的名稱，也不能套用至參考的成員。  
+     The `mutable` storage class specifier is no longer allowed in places where previously it compiled without error. Now, the compiler gives error C2071 (illegal storage class). According to the standard, the mutable specifier can be applied only to names of class data members, and cannot be applied to names declared const or static, and cannot be applied to reference members.  
   
-     例如，請參考下列程式碼：  
+     For example, consider the following code:  
   
     ```cpp  
     struct S   
@@ -394,17 +394,17 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     舊版的 Visual C++ 編譯器可接受這種做法，但現在該編譯器會產生下列錯誤：  
+     Previous versions of the Visual C++ compiler accepted this, but now the compiler gives the following error:  
   
     ```Output  
     error C2071: 'S::r': illegal storage class  
     ```  
   
-     若要修正此錯誤，只需移除多餘的可變動關鍵字。  
+     To fix the error, simply remove the redundant mutable keyword.  
   
--   **char_16_t 與 char32_t**  
+-   **char_16_t and char32_t**  
   
-     您再也無法使用 `char16_t` 或 `char32_t` 做為 typedef 的別名，因為現在會將這些類型視為內建類型。 對於使用者和程式庫作者來說，將 char16_t 和 char32_t 分別定義為 uint16_t 和 uint32_t 的別名是很常見的做法。  
+     You can no longer use `char16_t` or `char32_t` as aliases in a typedef, because these types are now treated as built-in. It was common for users and library authors to define char16_t and char32_t as aliases of uint16_t and uint32_t, respectively.  
   
     ```cpp  
     #include <cstdint>  
@@ -422,11 +422,11 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     若要更新您的程式碼，請移除此 typedef 宣告，重新命名與這些名稱衝突的任何其他識別項。  
+     To update your code, remove the typedef declarations and rename any other identifiers that collide with these names.  
   
--   **非類型範本參數**  
+-   **Non-type template parameters**  
   
-     在您提供明確的樣板引數之際，和非類型樣板參數有關的特定程式碼之類型相容性檢查即為正確。 例如，下列程式碼可在舊版的 Visual C++ 中正確無誤地編譯。  
+     Certain code that involves non-type template parameters is now correctly checked for type compatibility when you provide explicit template arguments. For example, the following code compiled without error in previous versions of Visual C++.  
   
     ```cpp  
     struct S1  
@@ -448,27 +448,27 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     在目前的編譯器中，按照常理則會發生錯誤，因為該樣板參數類型與樣板引數不相符 (該參數是指向常數成員的指標，但該函式 f 卻是非常數函式)：  
+     The current compiler correctly gives an error, because the template parameter type doesn't match the template argument (the parameter is a pointer to a const member, but the function f is non-const):  
   
     ```Output  
     error C2893: Failed to specialize function template 'void S2::f(void)'note: With the following template arguments:note: 'C=S1'note: 'Function=S1::f'  
     ```  
   
-     若要解決程式碼中的這個錯誤，請確定您使用的樣板引數的類型與此樣板參數的宣告類型相符。  
+     To address this error in your code, make sure that the type of the template argument you use matches the declared type of the template parameter.  
   
 -   **__declspec(align)**  
   
-     該編譯器已不再接受函式上的 `__declspec(align)` 。 之前的編譯器一律將它忽略，但現在會產生編譯器錯誤。  
+     The compiler no longer accepts `__declspec(align)` on functions. This was always ignored, but now it produces a compiler error.  
   
     ```cpp  
     error C3323: 'alignas' and '__declspec(align)' are not allowed on function declarations  
     ```  
   
-     若要修正這個問題，請從此函式宣告中移除 `__declspec(align)` 。 因為它沒有任何作用，移除它並不會變更任何項目。  
+     To fix this problem, remove `__declspec(align)` from the function declaration. Since it had no effect, removing it does not change anything.  
   
--   **例外狀況處理**  
+-   **Exception handling**  
   
-     有幾個例外狀況處理的變更。 首先，例外狀況物件必須可複製或可移動。 下列程式碼可在 [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)] 中編譯，但無法在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中編譯：  
+     There are a couple of changes to exception handling. First, exception objects have to be either copyable or movable. The following code compiled in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but does not compile in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     struct S  
@@ -486,7 +486,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     問題是出在於此複製建構函式是私用的，無法如同處理例外狀況的正常過程中發生的物件一樣複製，因此並不能複製該物件。 相同情況也發生在宣告複製建構函式為 `explicit`的時候。  
+     The problem is that the copy constructor is private, so the object cannot be copied as happens in the normal course of handling an exception. The same applies when the copy constructor is declared `explicit`.  
   
     ```cpp  
     struct S  
@@ -502,9 +502,9 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     若要更新您的程式碼，請確定例外狀況物件的複製建構函式是公用的，而且不是標示為 `explicit`。  
+     To update your code, make sure that the copy constructor for your exception object is public and not marked `explicit`.  
   
-     以傳值方式攔截例外狀況也需要可複製的例外狀況物件。 下列程式碼可在 [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)] 中編譯，但無法在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中編譯：  
+     Catching an exception by value also requires the exception object to be copyable. The following code compiled in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but does not compile in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     struct B  
@@ -529,7 +529,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     您可以藉由變更 `catch` 的參數類型為參考來修正此問題。  
+     You can fix this issue by changing the parameter type for the `catch` to a reference.  
   
     ```cpp  
     catch (D& d)  
@@ -538,9 +538,9 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
--   **後接巨集的字串常值**  
+-   **String literals followed by macros**  
   
-     該編譯器現在支援使用者定義常值。 因此，會將後面接著巨集且不含任何中間空白字元的字串常值解譯為使用者定義常值，這可能會產生錯誤或非預期的結果。 例如，在舊版編譯器中，下列程式碼可順利編譯：  
+     The compiler now supports user defined literals. As a consequence, string literals followed by macros without any intervening whitespace are interpreted as user-defined literals, which might produce errors or unexpected results. For example, in previous compilers the following code compiled successfully:  
   
     ```cpp  
     #define _x "there"  
@@ -555,36 +555,36 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     該編譯器會將其解譯為後面接著巨集的字串常值 "hello"，並且將該巨集展開成 "there"，然後再將這兩個字串常值串連成一個。 在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中，編譯器會將它解譯為使用者定義的常值，但是因為沒有定義相符的使用者定義常值 _x，所以會產生錯誤。  
+     The compiler interpreted this as a string literal "hello" followed by a macro, which is expanded "there", and then the two string literals were concatenated into one. In [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], the compiler interprets this as a user-defined literal, but since there is no matching user-defined literal _x defined, it gives an error.  
   
     ```Output  
     error C3688: invalid literal suffix '_x'; literal operator or literal operator template 'operator ""_x' not found  
     note: Did you forget a space between the string literal and the prefix of the following string literal?  
     ```  
   
-     若要修正這個問題，請在此字串常值和巨集之間加入空格。  
+     To fix this problem, add a space between the string literal and the macro.  
   
--   **相鄰字串常值**  
+-   **Adjacent string literals**  
   
-     如同前面所述，因為字串剖析時相關變更的緣故，在舊版的 Visaul C++ 版本中，會將不含任何空白字元的相鄰字串常值 (寬字元或窄字元字串常值) 解譯為單一的串連字串。 在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中，您必須在兩個字串之間加入空白字元。 例如，下列程式碼必須有所變更：  
+     Similarly to the previous, due to related changes in string parsing, adjacent string literals (either wide or narrow character string literals) without any whitespace were interpreted as a single concatenated string in previous releases of Visaul C++. In [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], you must now add whitespace between the two strings. For example, the following code must be changed:  
   
     ```cpp  
     char * str = "abc""def";  
     ```  
   
-     只要在兩個字串之間加入空格即可。  
+     Simply add a space in between the two strings.  
   
     ```cpp  
     char * str = "abc" "def";  
     ```  
   
--   **placement new 與 delete**  
+-   **Placement new and delete**  
   
-     為了讓 delete 運算子 (delete Operator) 與 C++ 14 標準一致，已對它加以變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 此變更加入一種全域 delete 運算子，該運算子需要大小參數。 重大變更是如果您先前使用具有相同簽章 (藉此對應至 placement new 運算子) 的 operator delete 函式，就會發生編譯器錯誤 (C2956，於使用 placement new 運算子所在之處發生，因為在程式碼的該位置上，此編譯器會嘗試識別合適且相符的 delete 運算子)。  
+     A change has been made to the delete operator in order to bring it into conformance with C++14 standard. Details of the standards change can be found at [C++ Sized Deallocation](http://isocpp.org/files/papers/n3778.html). The changes add a form of the global delete operator that takes a size parameter. The breaking change is that if you were previously using an operator delete with the same signature (to correspond with a placement new operator), you will receive a compiler error (C2956, which occurs at the point where the placement new is used, since that's the position in code where the compiler tries to identify an appropriate matching delete operator).  
   
-     函式 `void operator delete(void *, size_t)` 曾是 placement delete 運算子，相當於 C++ 11 中的 placement new 函式 "void \* operator new(size_t, size_t)"。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為 *「一般解除配置函式」* (Usual Deallocation Function) (全域 delete 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。  
+     The function `void operator delete(void *, size_t)` was a placement delete operator corresponding to the placement new function "void \* operator new(size_t, size_t)" in C++11. With C++14 sized deallocation, this delete function is now a *usual deallocation function* (global delete operator). The standard requires that if the use of a placement new looks up a corresponding delete function and finds a usual deallocation function, the program is ill-formed.  
   
-     例如，假設您的程式碼同時定義 placement new 和 placement delete：  
+     For example, suppose your code defines both a placement new and a placement delete:  
   
     ```cpp  
     void * operator new(std::size_t, std::size_t);  
@@ -592,22 +592,22 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     您已定義的 placement delete 運算子和新的全域調整大小 delete 運算子之間的函式簽章比對會導致此問題發生。 針對 placement new 和 delete 運算子，請考慮是否可以使用 size_t 以外的不同類型。  請注意 size_t typedef 的類型是編譯器相依的；它是 Visual C++ 中不帶正負號的 int 之 typedef。 較佳的解決方案是使用這類列舉類型：  
+     The problem occurs because of the match in function signatures between a placement delete operator you've defined, and the new global sized delete operator. Consider whether you can use a different type other than size_t for any placement new and delete operators.  Note that the type of the size_t typedef is compiler-dependent; it is a typedef for unsigned int in Visual C++. A good solution is to use an enumerated type such as this:  
   
     ```cpp  
     enum class my_type : size_t {};  
   
     ```  
   
-     然後，變更 placement new 和 delete 的定義，藉此使用此類型取代 size_t 做為第二個引數。 您也需要更新對 placement new 的呼叫，藉此傳遞新的類型 (例如，使用 `static_cast<my_type>` 從整數值加以轉換)，並且更新 new 和 delete 的定義，用來轉換回整數類型。 您不需要為此使用列舉；具有 size_t 成員的類別類型也可以運作。  
+     Then, change your definition of placement new and delete to use this type as the second argument instead of size_t. You’ll also need to update the calls to placement new to pass the new type (for example, by using `static_cast<my_type>` to convert from the integer value) and update the definition of new and delete to cast back to the integer type. You don’t need to use an enum for this; a class type with a size_t member would also work.  
   
-     替代方案是您或許可以完全排除 placement new。 如果您的程式碼使用 placement new 實作記憶體集區，其中 placement 引數是此物件所配置或已刪除的大小，則調整大小解除配置功能或許會很適合取代您自己自訂的記憶體集區程式碼，而且您可以不使用 placement 函式，只使用您自己的雙引數 delete 運算子，用來取代此 placement 函式。  
+     An alternative solution is that you might be able to eliminate the placement new altogether. If your code uses placement new to implement a memory pool where the placement argument is the size of the object being allocated or deleted, then sized deallocation feature might be suitable to replace your own custom memory pool code, and you can get rid of the placement functions and just use your own two-argument delete operator instead of the placement functions.  
   
-     如果您不想立即更新您的程式碼，則可以使用編譯器選項 /Zc:sizedDealloc- 來還原舊版的行為。 如果您使用這個選項，則此雙引數 delete 函式將不存在，也不會與您的 placement delete 運算子發生衝突。  
+     If you don't want to update your code immediately, you can revert to the old behavior by using the compiler option /Zc:sizedDealloc-. If you use this option, the two-argument delete functions don’t exist and won't cause a conflict with your placement delete operator.  
   
--   **等位資料成員**  
+-   **Union data members**  
   
-     等位資料成員不再具有參考類型。 下列程式碼可在 [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)] 順利編譯，但在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 會產生錯誤。  
+     Data members of unions can no longer have reference types. The following code compiled successfully in [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], but produces an error in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
   
     ```cpp  
     union U1   
@@ -625,7 +625,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     前一個程式碼會產生下列錯誤：  
+     The preceding code produces the following errors:  
   
     ```Output  
   
@@ -634,9 +634,9 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     若要解決這個問題，請將參考類型變更為指標或值。 將此類型變更為指標需要變更使用此等位欄位的程式碼。 將此程式碼變更為值也可能會變更此等位中儲存的資料，這會影響其他欄位，因為在等位類型中的欄位會共用相同的記憶體。 根據值的大小而定，它也可能會變更等位的大小。  
+     To address this issue, change reference types either to a pointer or a value. Changing the type to a pointer requires changes in the code that uses the union field. Changing the code to a value would change the data stored in the union, which affects other fields since fields in union types share the same memory. Depending on the size of the value, it might also change the size of the union.  
   
--   現在匿名等位與標準更一致。 舊版的編譯器會產生匿名等位的明確建構函式和解構函式。 這些在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中已刪除。  
+-   Anonymous unions are now more conformant to the standard. Previous versions of the compiler generated an explicit constructor and destructor for anonymous unions. These are deleted in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)].  
   
     ```cpp  
     struct S   
@@ -654,7 +654,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     前一個程式碼會在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 產生下列錯誤：  
+     The preceding code generates the following error in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)]:  
   
     ```cpp  
     error C2280: '<unnamed-type-u>::<unnamed-type-u>(void)': attempting to reference a deleted function  
@@ -662,7 +662,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     若要解決這個問題，請提供您自己的建構函式和 (或) 解構函式之定義。  
+     To resolve this issue, provide your own definitions of the constructor and/or destructor.  
   
     ```cpp  
     struct S   
@@ -681,9 +681,9 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
--   **具匿名結構的等位**  
+-   **Unions with anonymous structs**  
   
-     為了符合標準，此執行階段行為為了等位中匿名結構的成員而有所變更。 建立這類等位時，不再隱含呼叫等位中匿名結構成員的建構函式。 此外，當此等位超出範圍時，將不再隱含呼叫等位中的匿名結構成員的解構函式。 請考慮下列程式碼，其中等位 U 包含匿名結構，該結構包含成員，此成員為具有解構函式的具名結構 S。  
+     In order to conform with the standard, the runtime behavior has changed for members of anonymous structures in unions. The constructor for anonymous structure members in a union is no longer implicitly called when such a union is created. Also, the destructor for anonymous structure members in a union is no longer implicitly called when the union goes out of scope. Consider the following code, in which a union U contains an anonymous structure that contains a member which is a named structure S that has a destructor.  
   
     ```cpp  
     #include <stdio.h>  
@@ -719,13 +719,13 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     在 [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)] 中，會在建立此等位時呼叫 S 建構函式，而且當函式 f 的堆疊已清除時，會呼叫 S 的解構函式。 但在 [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)] 中，不會呼叫此建構函式和解構函式。 該編譯器會提供有關這項行為變更的警告。  
+     In [!INCLUDE[cpp_dev12_long](../build/reference/includes/cpp_dev12_long_md.md)], the constructor for S is called when the union is created, and the destructor for S is called when the stack for function f is cleaned up. But in [!INCLUDE[cpp_dev14_long](../porting/includes/cpp_dev14_long_md.md)], the constructor and destructor are not called. The compiler gives a warning about this behavior change.  
   
     ```Output  
     warning C4587: 'U::s': behavior change: constructor is no longer implicitly calledwarning C4588: 'U::s': behavior change: destructor is no longer implicitly called  
     ```  
   
-     若要還原原始行為，請對此匿名結構命名。 不論編譯器版本為何，非匿名結構的執行階段行為是相同的。  
+     To restore the original behavior, give the anonymous structure a name. The runtime behavior of non-anonymous structures is the same, regardless of the compiler version.  
   
     ```cpp  
     #include <stdio.h>  
@@ -762,7 +762,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     或者，請嘗試將建構函式和解構函式的程式碼移到新的函式，並加入這些來自此等位之建構函式和解構函式的函式呼叫。  
+     Alternatively, try moving the constructor and destructor code into new functions, and add calls to these functions from the constructor and destructor for the union.  
   
     ```cpp  
     #include <stdio.h>  
@@ -799,11 +799,11 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
--   **範本解析**  
+-   **Template resolution**  
   
-     已變更樣板的名稱解析。 在 C++ 中，在考慮名稱解析的候選時，也可能產生這種情況：一或多個考慮為可能符合的名稱產生無效的樣板具現化。 這些無效的具現化通常不會造成編譯器錯誤，也就是稱為 SFINAE (替代失敗是不是錯誤) 的原則。  
+     Changes have been made to name resolution for templates. In C++, when considering candidates for the resolution of a name, it can be the case that one or more names under consideration as potential matches produces an invalid template instantiation. These invalid instantiations do not normally cause compiler errors, a principle which is known as SFINAE (Substitution Failure Is Not An Error).  
   
-     現在，如果 SFINAE 需要此編譯器具現化類別樣板的特製化，則在這個程序期間發生的任何錯誤都會是編譯器錯誤。 在舊版中，此編譯器會忽略這類錯誤。 例如，請參考下列程式碼：  
+     Now, if SFINAE requires the compiler to instantiate the specialization of a class template, then any errors that occur during this process are compiler errors. In previous versions, the compiler would ignore such errors. For example, consider the following code:  
   
     ```cpp  
     #include <type_traits>  
@@ -843,7 +843,7 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     如果您使用目前的編譯器編譯時，會產生下列錯誤：  
+     If you compile with the current compiler, you get the following error:  
   
     ```Output  
   
@@ -858,30 +858,30 @@ ms.lasthandoff: 08/11/2017
   
     ```  
   
-     這是因為在進行 is_base_of 之第一個引動過程的時候，尚未定義類別 'D'。  
+     This is because at the point of the first invocation of the is_base_of the class 'D' has not yet been defined.  
   
-     在這種情況下，除非已宣告此類別，否則使用這類類型特性並不能修正問題。 如果您將 B 和 D 的定義移至此程式碼檔案開頭，則可解決此錯誤。 如果此定義位於標頭檔中，請檢查標頭檔之 include 陳述式的順序，藉此確定在使用有問題的樣板之前，會先編譯任何類別的定義。  
+     In this case, the fix is not to use such type traits until the class has been defined. If you move the definitions of B and D to the beginning of the code file, the error is resolved. If the definitions are in header files, check the order of the include statements for the header files to make sure that any class definitions are compiled before the problematic templates are used.  
   
--   **複製建構函式**  
+-   **Copy constructors**  
   
-     在 [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] 與 Visual Studio 2015 中，若類別具有使用者定義的移動建構函式，但沒有使用者定義的複製建構函式，則編譯器將會為該類別產生複製建構函式。 在 Dev14 中，也會將這個隱含產生的複製建構函式標示為"= delete"。  
+     In both [!INCLUDE[vs_dev12](../atl-mfc-shared/includes/vs_dev12_md.md)] and Visual Studio 2015, the compiler generates a copy constructor for a class if that class has a user-defined move constructor but no user-defined copy constructor. In Dev14, this implicitly generated copy constructor is also marked "= delete".  
 
 <!--From here to VS_Update1 added 04/21/2017-->
 
--   **宣告為 extern "C" 的 main 現在需要傳回類型。**  
+-   **main declared as extern "C" now requires a return type.**  
 
-下列程式碼現在會產生 C4430。 
+The following code now produces C4430. 
 ```cpp
 extern "C" __cdecl main(){} // C4430
 ```
-若要修正錯誤，請新增傳回類型：
+To fix the error, add the return type:
 ```cpp
 extern "C" int __cdecl main(){} // OK
 ```
 
- -   **成員初始設定式中不允許 typename**  
+ -   **typename is not allowed in a member initializer**  
 
-下列程式碼現在會產生 C2059：
+The following code now produces C2059:
  ```cpp
 template<typename T>
 struct S1 : public T::type
@@ -897,15 +897,15 @@ struct S2 {
 
 S1<S2> s;
 ```
-若要修正錯誤，請從初始設定式中移除 `typename`：
+To fix the error, remove `typename` from the initializer:
 ```cpp
 S1() : T::type() // OK
 ...
 ```
 
--   **進行明確特製化時會忽略儲存類別。** 
+-   **The storage class on explicit specializations is ignored.** 
 
-在下列程式碼中，會忽略靜態儲存類別規範 
+In the following code, the static storage class specifier is ignored 
 ```cpp
 template <typename T>
 void myfunc(T h)
@@ -919,9 +919,9 @@ static void myfunc(double h) // static is ignored
 
 ```
 
--   **類別範本內 static_assert 中所使用的常數將一律失敗。**  
+-   **A constant used in a static_assert inside a class template will always fail.**  
 
-下列程式碼會導致 static_assert 一律失敗：
+The following code causes the static_assert to always fail:
 ```cpp
 template <size_t some_value>
 struct S1
@@ -933,7 +933,7 @@ struct S1
 //other partial specializations here
 ```
 
-若要解決這個問題，請將值包裝於 struct 中：
+To work around this, wrap the value in a struct:
 ```cpp
 template <size_t some_value>
 struct constant_false {
@@ -949,9 +949,9 @@ struct S1
 //other partial specializations here
 ```
 
--   **針對向前宣告強制執行規則(只適用於 C)。**  
+-   **Rules enforced for forward declarations. (Applies only to C.)**  
 
-下列程式碼現在會產生 C2065：
+The following code now produces C2065:
 ```cpp
 struct token_s;
 typedef int BOOL;
@@ -962,7 +962,7 @@ typedef int INT;
 typedef int(*PFNTERM)(PTOKEN, BOOL, INT); // C2065: 'PTOKEN' : undeclared identifier
 ```
 
-若要修正問題，請新增適當的向前宣告：
+To fix the problem add the proper forward declarations:
 
 ```cpp
 struct token_s;
@@ -976,9 +976,9 @@ typedef TOKEN *PTOKEN;
 typedef int(*PFNTERM)(PTOKEN, BOOL, INT);
 ```
 
--   **以更一致的方式強制執行函式指標類型**  
+-   **More consistent enforcement of function pointer types**  
 
-下列程式碼現在會產生 C2197：
+The following code now produces C2197:
 
 ```cpp
 typedef int(*F1)(int);
@@ -990,9 +990,9 @@ void func(F1 f, int v1, int v2)
 }
 ```
 
--   **模稜兩可的呼叫多載函式**  
+-   **Ambiguous calls to overloaded functions**  
 
-下列程式碼現在會產生 C266：'N::bind': 模稜兩可的呼叫多載函式
+The following code now produces C266: 'N::bind': ambiguous call to overloaded function
 ```cpp 
 template<typename R, typename T, typename T1, typename A1>
 void bind(R(T::*)(T1), A1&&);
@@ -1017,13 +1017,13 @@ public:
 };
 ```
 
-若要修正錯誤，您可以完整限定對繫結的呼叫︰N::bind(...)。 不過，如果這項變更顯然是透過未宣告的識別項 (C2065) 進行的，則可能適合使用 'using' 宣告來修正此問題。
+To fix the error, you can fully qualify the call to bind: N::bind(...). However, if this change is manifest through an undeclared identifier (C2065), then it may be appropriate to fix this with a 'using' declaration instead.
 
-此模式經常發生於 Microsoft::WRL 命名空間中的 ComPtr 和其他類型。
+This pattern happens frequently with ComPtr and other types in the Microsoft::WRL namespace.
 
--   **修正不正確的位址**  
+-   **Fix incorrect address of**  
 
-下列程式碼現在會產生 C2440：'=': 無法從 'type *' 轉換為 'type'。 若要修正錯誤，請將 &(type) 變更為 (type)，以及將 (&f()) 變更為 (f())。
+The following code now produces C2440:  '=': cannot convert from 'type *' to 'type'. To fix the error, change &(type) to (type) and (&f()) to (f()).
  
 ```cpp
 \\ C
@@ -1050,9 +1050,9 @@ void h()
 
 ```
 
--   **字串常值是常數陣列**  
+-   **String literal is a constant array**  
 
-下列程式碼現在會產生 C2664：f(void *)': 無法將引數 1 從 'const char (*)[2]' 轉換為 'void *'
+The following code now produces C2664: 'void f(void *)': cannot convert argument 1 from 'const char (*)[2]' to 'void *'
 ```cpp
 void f(void *);
  
@@ -1063,7 +1063,7 @@ void h(void)
 }
 ```
 
-若要修正錯誤，請將函式參數類型變更為 'const void*'，要不然也可以變更 h 的內容，使其看起來如下：
+To fix the error, change the function parameter type to 'const void*', or else change the body of h to look like this:
 
 ```cpp
 void h(void)
@@ -1075,9 +1075,9 @@ void h(void)
 
 ```
 
--   **C++11 UDL 字串**  
+-   **C++11 UDL strings**  
 
-下列程式碼現在會產生錯誤 C3688︰常值後置字元 'L' 無效; 找不到常值運算子或常值運算子範本 'operator ""L'
+The following code now produces error C3688: invalid literal suffix 'L'; literal operator or literal operator template 'operator ""L' not found
 
 
 ```cpp
@@ -1093,7 +1093,7 @@ int main(){
     std::cout << STRCAT(L"hi ", L"there");
 }
 ```
-若要修正錯誤，請將程式碼變更為下列內容：
+To fix the error, change the code to this:
 
 ```cpp
 #define MACRO
@@ -1111,14 +1111,14 @@ int main(){
 }
 
 ```
-在上述範例中，不再將 `MACRO` 剖析為兩個語彙基元 (字串後面接著巨集)。  現在會將它剖析為單一語彙基元 UDL。  這同樣適用於 L""L""，此字串先前會剖析為 L"" 和 L""，而現在會剖析為 L""L 和 ""。
+In the example above, `MACRO` is no longer parsed as two tokens (a string followed by a macro).  Now it is parsed as a single token UDL.  The same applies to L""L"", which was parsed previously as L"" and L"", and is now parsed as L""L and "".
 
-字串串連規則也會符合規範，這表示 L"a" "b" 相當於 L"ab"。 舊版的 Visual Studio 不接受字元寬度不同之字串的串連。
+String concatenation rules were also brought into compliance with the standard, which means L"a" "b" is equivalent to L"ab". Previous editions of Visual Studio did not accept concatenation of strings with different character width.
 
 
--   **已移除 C++11 空字元**  
+-   **C++11 empty character removed**  
 
-下列程式碼現在會產生錯誤 C2137︰空的字元常值
+The following code now produces error C2137: empty character constant
 
 ```cpp
 bool check(wchar_t c){
@@ -1126,7 +1126,7 @@ bool check(wchar_t c){
 }
 ```
 
-若要修正錯誤，請將程式碼變更為下列內容：
+To fix the error, change the code to this:
 
 ```cpp
 bool check(wchar_t c){
@@ -1134,9 +1134,9 @@ bool check(wchar_t c){
 }
 ```
 
--   **無法依值攔截 MFC 例外狀況，因為它們是不可複製的**  
+-   **MFC exceptions can't be caught by value because they are not copyable**  
 
-MFC 應用程式中的下列程式碼現在會造成錯誤 C2316︰'D': 無法攔截，因為無法存取或刪除解構函式及/或複製建構函式
+The following code in an MFC application now causes error C2316: 'D': cannot be caught as the destructor and/or copy constructor are inaccessible or deleted
 
 ```cpp
 struct B {
@@ -1160,29 +1160,29 @@ int main()
 }
 
 ```
-若要修正程式碼，您可以將 catch 區塊變更為 `catch (const D &)'，但更好的解決方案通常是使用 MFC TRY/CATCH 巨集。
+To fix the code, you can change the catch block to `catch (const D &)' but the better solution is usually to use the MFC TRY/CATCH macros.
 
--   **alignof 現在是關鍵字**  
+-   **alignof is now a keyword**  
 
-下列程式碼現在會產生錯誤 C2332：'class': 遺漏標記名稱。 若要修正程式碼，您必須將類別重新命名，或者，如果類別正在執行與 alignof 相同的工作，則只需使用新的關鍵字來取代類別。
+The following code now produces error C2332: 'class': missing tag name. To fix the code you must rename the class or, if the class is performing the same work as alignof, just replace the class with the new keyword.
 ```cpp
 class alignof{}
 ```
 
--   **constexpr 現在是關鍵字**  
+-   **constexpr is now a keyword**  
 
-下列程式碼現在會產生錯誤 C2059︰語法錯誤: ')'。 若要修正程式碼，您必須將任何名為 "constexpr" 的函式或變數名稱重新命名。 
+The following code now produces error C2059: syntax error: ')'. To fix the code, you must rename any function or variable names that are called "constexpr". 
 ```cpp
 int constexpr() {return 1;}
 ```
 
--   **可移動的類型不能是 const**  
+-   **Movable types cannot be const**  
 
-當函式傳回想要移動的類型時，它的傳回類型不應是 const。
+When a function returns a type that is intended to be moved, its return type should not be const.
 
--   **刪除複製建構函式**  
+-   **Deleted copy constructors**  
 
-下列程式碼現在會產生 C2280：'S::S(S &&)': 嘗試參考被刪除的函式：
+The following code now produces C2280 'S::S(S &&)': attempting to reference a deleted function:
 
 ```cpp
 struct S{
@@ -1193,7 +1193,7 @@ struct S{
 
 S s2 = S(2, 3); //C2280
 ```
-若要修正錯誤，請針對 S2 使用直接初始化：
+To fix the error, use direct initialization for S2:
 ```cpp
 struct S{
     S(int, int);
@@ -1204,9 +1204,9 @@ struct S{
 S s2 = {2,3}; //OK
 ```
 
--   **只有在未擷取任何 lambda 時，才會產生函式指標轉換**  
+-   **Conversion to function pointer only generated when no lambda capture**  
 
-下列程式碼會在 Visual Studio 2015 中產生 C2664。 
+The following code produces C2664 in Visual Studio 2015. 
 
 ```cpp
 void func(int(*)(int)) {}
@@ -1216,11 +1216,11 @@ int main() {
     func([=](int val) { return val; });
 }
 ```
-若要修正錯誤，請從擷取清單中移除 `=`。
+To fix the error, remove the `=` from the capture list.
 
--   **涉及轉換運算子的模稜兩可呼叫**  
+-   **Ambiguous calls involving conversion operators**  
 
-下列程式碼現在會產生錯誤 C2440：「類型轉換」：無法從 'S2' 轉換成 'S1'：
+The following code now produces error C2440: 'type cast': cannot convert from 'S2' to 'S1':
 
 ```cpp 
 struct S1 {
@@ -1239,7 +1239,7 @@ void f(S2 s2)
 
 }
 ```
-若要修正錯誤，請明確地呼叫轉換運算子：
+To fix the error, explicitly call the conversion operator:
 
 ```cpp
 void f(S2 s2)
@@ -1252,7 +1252,7 @@ void f(S2 s2)
 
 ```
 
-下列程式碼現在會產生錯誤 C2593：「運算子 =」是模稜兩可的：
+The following code now produces error C2593: 'operator =' is ambiguous:
 
 ```cpp
 struct S1 {};
@@ -1267,7 +1267,7 @@ void f(S1 *p, S2 s)
     *p = s;
 }
 ```
-若要修正錯誤，請明確地呼叫轉換運算子：
+To fix the error, explicitly call the conversion operator:
 ```cpp
 void f(S1 *p, S2 s)
 {
@@ -1275,9 +1275,9 @@ void f(S1 *p, S2 s)
 }
 ```
 
--   **修正非靜態資料成員初始化 (NSDMI) 中無效的複製初始化**  
+-   **Fix invalid copy initialization in non-static data member initialization (NSDMI)**  
 
-下列程式碼現在會產生 C2664 錯誤：'S1::S1(S1 &&)': 無法將引數 1 從 'bool' 轉換為 'const S1 &'：
+The following code now produces error C2664: 'S1::S1(S1 &&)': cannot convert argument 1 from 'bool' to 'const S1 &':
 ```cpp
 struct S1 {
     explicit S1(bool);
@@ -1287,16 +1287,16 @@ struct S2 {
     S1 s2 = true; // error
 };
 ```
-若要修正錯誤，請使用直接初始化：
+To fix the error, use direct initialization:
 ```cpp
 struct S2 {
 S1 s1{true}; // OK
 };
 ```
 
--   **存取 decltype 陳述式內的建構函式**  
+-   **Accessing constructors inside decltype statements**  
 
-下列程式碼現在會產生 C2248：'S::S': 無法存取類別 'S' 中的 Private 成員：
+The following code now produces C2248: 'S::S': cannot access private member declared in class 'S':
 ```cpp
 class S {
     S();
@@ -1308,7 +1308,7 @@ class S2 {
     auto f() -> decltype(S().i);
 };
 ```
-若要修正錯誤，請在 S 中針對 S2 新增 friend 宣告：
+To fix the error, add a friend declaration for S2 in S:
 ```cpp
 class S {
     S();
@@ -1318,9 +1318,9 @@ public:
 };
 ```
 
--   **lambda 預設的 ctor 會被隱含刪除**  
+-   **Default ctor of lambda is implicitly deleted**  
 
-下列程式碼現在會產生錯誤 C3497︰您無法建構 Lambda 的執行個體：
+The following code now produces error C3497: you cannot construct an instance of a lambda:
 ```cpp
 void func(){
     auto lambda = [](){};    
@@ -1328,11 +1328,11 @@ void func(){
     decltype(lambda) other;
 }
 ```
-若要修正錯誤，無須呼叫預設建構函式。 如果 lambda 不會擷取任何項目，則可將它轉換為函式指標。
+To fix the error, remove the need for the default constructor to be called. If the lambda does not capture anything then it can be cast to a function pointer.
 
--   **具有已刪除指派運算子的 Lambda**  
+-   **Lambdas with a deleted assignment operator**  
 
-下列程式碼現在會產生錯誤 C2280：
+The following code now produces error C2280:
 
 ```cpp
 #include <memory>
@@ -1348,11 +1348,11 @@ void f(int i)
     encodedMsg = std::move(encodedMsg);
 }
 ```
-若要修正錯誤，請使用 functor 類別取代 lambda，或者無須使用指派運算子。
+To fix the error, replace the lambda with a functor class or remove the need to use the assignment operator.
 
--   **嘗試使用已刪除的複製建構函式來移動物件**  
+-   **Attempting to move an object with deleted copy constructor**  
 
-下列程式碼現在會產生錯誤 C2280：'moveable::moveable(const moveable &)': 嘗試參考被刪除的函式
+The following code now produces  error C2280: 'moveable::moveable(const moveable &)': attempting to reference a deleted function
 ```cpp
 struct moveable {
 
@@ -1369,14 +1369,14 @@ struct S {
 };
 
 ```
-若要修正錯誤，請改用 std:: move：
+To fix the error, use std::move instead:
 ```cpp
 S(moveable && m) :
     m_m(std::move(m))
 ```
--   **區域類別無法參考稍後在相同函式中定義的其他區域類別**  
+-   **Local class can't reference other local class defined later in the same function**  
 
-下列程式碼現在會產生錯誤 C2079︰'s' 使用未定義的 struct 'main::S2'
+The following code now produces error C2079: 's' uses undefined struct 'main::S2'
 ```cpp
 int main()
 {
@@ -1389,7 +1389,7 @@ int main()
     struct S2 {};
 }
 ```
-若要修正錯誤，請將 S2 的定義往上移動：
+To fix the error, move up the definition of S2:
 ```cpp
 int main()
 {
@@ -1404,9 +1404,9 @@ struct S1 {
 }
 ```
 
--   **無法在衍生的 ctor 主體中呼叫受保護的基底 ctor。**  
+-   **Cannot call a protected base ctor in the body of derived ctor.**  
 
-下列程式碼現在會產生錯誤 C2248：'S1::S1': 無法存取類別 'S1' 中所宣告之受保護的成員
+The following code now produces error C2248: 'S1::S1': cannot access protected member declared in class 'S1'
 ```cpp
 struct S1 {
 protected:
@@ -1419,18 +1419,18 @@ struct S2 : public S1 {
     }
 };
 ```
-若要修正錯誤，請在 S2 中，從建構函式中移除對 S1() 的呼叫，接著視需要將其放在另一個函式中。
+To fix the error, in S2 remove the call to S1() from the constructor and if necessary put it in another function.
 
--   **{} 會防止指標轉換**  
+-   **{} prevents conversion to pointer**  
 
-下列程式碼現在會產生 C2439：'S::p': 無法將成員初始化   
+The following code now produces C2439 'S::p': member could not be initialized   
 ```cpp
 struct S {
     S() : p({ 0 }) {}
     void *p;
 };
 ```
-若要修正錯誤，請移除 0 周圍的括號，不然可改用 `nullptr`，如下列範例所示：
+To fix the error, remove the braces from around the 0 or else use `nullptr` instead, as shown in this example:
 ```cpp
 struct S {
     S() : p(nullptr) {}
@@ -1438,9 +1438,9 @@ struct S {
 };
 ```
 
--   **含有括號的不正確巨集定義與使用方式**  
+-   **Incorrect macro definition and usage with parentheses**  
 
-下列範例現在會產生錯誤 C2008：';': 未預期會出現在巨集定義中的字元
+The following example now produces error C2008: ';': unexpected in macro definition
 ```cpp
 #define A; //cause of error
 
@@ -1448,9 +1448,9 @@ struct S {
     A(); // error
 };
 ```
-若要修正問題，請將第一行變更為 `#define A();`
+To fix the problem change the top line to `#define A();`
 
-下列程式碼會產生錯誤 C2059︰語法錯誤: ')'
+The following code produces error C2059: syntax error: ')'
 ```cpp
 
 //notice the space after 'A'
@@ -1460,9 +1460,9 @@ struct S {
     A();
 };
 ```
-若要修正程式碼，請移除 A 和 () 之間的空格。
+To fix the code remove the space between A and ().
 
-下列程式碼會產生錯誤 C2091︰函式傳回函式：
+The following code produces error C2091: function returns function:
 
 ```cpp
 
@@ -1472,9 +1472,9 @@ struct S {
     DECLARE();
 };
 ```
-若要修正錯誤，請在 S 中移除 DECLARE 之後的括號：`DECLARE;`。
+To fix the error, remove the parentheses after DECLARE in S: `DECLARE;`.
 
-下列程式碼會產生錯誤 C2062︰未預期的類型 'int'
+The following code produces error C2062: type 'int' unexpected
 
 ```cpp
 #define A (int)
@@ -1483,14 +1483,14 @@ struct S {
     A a;
 };
 ```
-若要修正問題，請定義 A，如下：
+To fix the problem, define A like this:
 ```cpp
 #define A int
 ```
 
--   **宣告中額外的括弧**  
+-   **Extra parens in declarations**  
 
-下列程式碼會產生錯誤 C2062︰未預期的類型 'int'
+The following code produces error C2062: type 'int' unexpected
 ```cpp
 
 struct S {
@@ -1498,13 +1498,13 @@ struct S {
     (int)j;
 };
 ```
-若要修正錯誤，請移除 `j` 的括號。 如果為了清楚起見而需要括號，則使用 typedef。
+To fix the error, remove the parens from `j`. If the parens are needed for clarity, then use a typedef.
 
--   **編譯器產生的建構函式和 __declspec(novtable)**  
+-   **Compiler-generated constructors and __declspec(novtable)**  
 
-在 Visual Studio 2015 中，與 __declspec(dllimport) 結合使用時，在含有虛擬基底類別的抽象類別中，由編譯器所產生的內嵌建構函式可能暴露 __declspec(novtable) 不當用法的可能性會提高。
+In Visual Studio 2015, there is an increased likelihood that inline compiler-generated constructors of abstract classes with virtual base classes may expose improper usage of __declspec(novtable) when used in combination with __declspec(dllimport).
 
--   **auto 在 direct-list-initialization 中需要有單一運算式** 下列程式碼現在會產生錯誤 C3518：'testPositions': 在 direct-list-initialization 內容中，'auto' 的類型只能從單一初始設定式運算式推算
+-   **auto requires single expression in direct-list-initialization** The following code now produces error C3518: 'testPositions': in a direct-list-initialization context the type for 'auto' can only be deduced from a single initializer expression
 
 ```cpp
 auto testPositions{
@@ -1514,7 +1514,7 @@ auto testPositions{
     std::tuple<int, int>{-21, 17}
 };
 ```
-若要修正錯誤，一個可能方式是初始化 testPositions，如下：
+To fix the error, one possibility is to initialize testPositions as follows:
 
 ```cpp
 std::tuple<int, int> testPositions[]{
@@ -1525,9 +1525,9 @@ std::tuple<int, int> testPositions[]{
 };
 ```
 
--   **針對 is_convertible 檢查類型與類型指標**  
+-   **Checking types vs. pointers to types for is_convertible**  
 
-下列程式碼現在會導致靜態判斷提示失敗。 
+The following code now causes the static assertion to fail. 
 
 ```cpp
 struct B1 {
@@ -1539,15 +1539,15 @@ struct D : public B2 {};
 
 static_assert(std::is_convertible<D, B2>::value, "fail");
 ```
-若要修正錯誤，請變更 static_assert，使它能夠比較 D 和 B2 的指標：
+To fix the error, change the static_assert so that it compares pointers to D and B2:
 
 ```cpp
 static_assert(std::is_convertible<D*, B2*>::value, "fail");
 ```
 
--   **declspec(novtable) 宣告必須一致**  
+-   **declspec(novtable) declarations must be consistent**  
 
-declspec 宣告在所有程式庫之間必須一致。 下列程式碼現在會產生一個定義規則 (ODR) 違規：
+declspec declarations must be consistent across all libraries. The following code will now produce a one-definition rule (ODR) violation:
 
 ```cpp
 
@@ -1612,11 +1612,11 @@ C c;
 
 
   
-###  <a name="VS_Update1"></a> Update 1 的合規性改進  
+###  <a name="VS_Update1"></a> Conformance Improvements in Update 1  
   
--   **私用的虛擬基底類別與間接繼承**  
+-   **Private virtual base classes and indirect inheritance**  
   
-     舊版編譯器允許衍生的類別呼叫其*間接衍生*`private virtual`的基底類別成員函式。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2280。  
+     Previous versions of the compiler allowed a derived class to call member functions of its *indirectly-derived*`private virtual` base classes. This old behavior was incorrect and does not conform to the C++ standard. The compiler no longer accepts code written in this way and issues compiler error C2280 as a result.  
   
     ```Output  
   
@@ -1624,7 +1624,7 @@ C c;
   
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     class base  
@@ -1643,7 +1643,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     class base;  // as above  
@@ -1658,7 +1658,7 @@ C c;
   
     ```  
   
-     -或-  
+     -or -  
   
     ```cpp  
     class base;  // as above  
@@ -1673,9 +1673,9 @@ C c;
   
     ```  
   
--   **多載的運算子 new 與運算子 delete**  
+-   **Overloaded operator new and operator delete**  
   
-     舊版編譯器允許非成員 `operator new` 和非成員 `operator delete` 被宣告為靜態，以及在全域命名空間以外的命名空間中宣告。  這種舊行為造成的風險是，程式不會呼叫程式設計人員所預期的 `new` 或 `delete` 運算子實作，導致無訊息的錯誤執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2323。  
+     Previous versions of the compiler allowed non-member `operator new` and non-member `operator delete` to be declared static, and to be declared in namespaces other than the global namespace.  This old behavior created a risk that the program would not call the `new` or `delete` operator implementation that the programmer intended, resulting in silent bad runtime behavior. The compiler no longer accepts code written in this way and issues compiler error C2323 instead.  
   
     ```Output  
   
@@ -1683,25 +1683,25 @@ C c;
   
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     static inline void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // error C2323  
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'  
   
     ```  
   
-     此外，雖然編譯器不提供特定的診斷，但內嵌運算子 new 會被視為語式錯誤。  
+     Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.  
   
--   **對非類別類型呼叫 'operator *type*()' (使用者定義的轉換)**  
+-   **Calling 'operator *type*()' (user-defined conversion) on non-class types**  
   
-     舊版編譯器允許在非類別類型上呼叫 'operator *type*()'，但以無訊息方式略過。 這種舊行為造成的風險是，會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C2228。  
+     Previous versions of the compiler allowed 'operator *type*()' to be called on non-class types while silently ignoring it. This old behavior created a risk of silent bad code generation, resulting in unpredictable runtime behavior. The compiler no longer accepts code written in this way and issues compiler error C2228 instead.  
   
     ```Output  
   
@@ -1709,7 +1709,7 @@ C c;
   
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     typedef int index_t;  
@@ -1721,7 +1721,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     typedef int index_t;  
@@ -1733,15 +1733,15 @@ C c;
   
     ```  
   
--   **詳細類型指定名稱中有重複的類型名稱**  
+-   **Redundant typename in elaborated type specifiers**  
   
-     舊版編譯器允許複雜的類型規範中有 `typename` ，但這種方式撰寫的程式碼語意不正確。 編譯器不再接受以這種方式撰寫的程式碼，並會發出編譯器錯誤 C3406。  
+     Previous versions of the compiler allowed `typename` in an elaborated type specifiers; code written in this way is semantically incorrect. The compiler no longer accepts code written in this way and issues compiler error C3406 instead.  
   
     ```Output  
     error C3406: 'typename' cannot be used in an elaborated type specifier  
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     template <typename class T>  
@@ -1749,7 +1749,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     template <class T>  // alternatively, could be 'template <typename T>'; 'typename' is not elaborating a type specifier in this case  
@@ -1757,11 +1757,11 @@ C c;
   
     ```  
   
--   **從初始設定式清單推斷陣列類型**  
+-   **Type deduction of arrays from an initializer list**  
   
-     舊版編譯器不支援初始設定式清單的陣列類型推斷。 編譯器現在支援這種形式的類型推斷，而這樣一來，使用初始設定式清單呼叫函式範本現在可能會模稜兩可，也可能和舊版編譯器選擇不同的多載。 若要解決這些問題，程式現在必須明確指定程式設計人員所要的多載。  
+     Previous versions of the compiler did not support type deduction of arrays from an initializer list. The compiler now supports this form of type deduction and, as a result, calls to function templates using initializer lists might now be ambiguous or a different overload might be chosen than in previous versions of the compiler. To resolve these issues, the program must now explicitly specify the overload that the programmer intended.  
   
-     當這種新行為讓多載解析考慮和過去的候選項目同樣適合的其他候選項目時，呼叫就會變得模稜兩可，而編譯器則會發出編譯器錯誤 C2668。  
+     When this new behavior causes overload resolution to consider an additional candidate that is equally as good as the historic candidate, the call becomes ambiguous and the compiler issues compiler error C2668 as a result.  
   
     ```Output  
   
@@ -1769,7 +1769,7 @@ C c;
   
     ```  
   
-     範例 1：模稜兩可地呼叫多載函式 (之前)  
+     Example 1: Ambiguous call to overloaded function (before)  
   
     ```cpp  
     // In previous versions of the compiler, code written in this way would unambiguously call f(int, Args...)  
@@ -1787,7 +1787,7 @@ C c;
   
     ```  
   
-     範例 1：模稜兩可地呼叫多載函式 (之後)  
+     Example 1: ambiguous call to overloaded function (after)  
   
     ```cpp  
     template < typename... Args>  
@@ -1804,9 +1804,9 @@ C c;
   
     ```  
   
-     當這種新行為讓多載解析考慮比過去的候選項目更適合的其他候選項目時，呼叫會明確解析為新的候選項目，讓程式行為變得和程式設計人員預期的不同。  
+     When this new behavior causes overload resolution to consider an additional candidate that is a better match than the historic candidate, the call resolves unambiguously to the new candidate, causing a change in program behavior that is probably different than the programmer intended.  
   
-     範例 2：多載解析的變更 (之前)  
+     Example 2: change in overload resolution (before)  
   
     ```cpp  
     // In previous versions of the compiler, code written in this way would unambiguously call f(S, Args...)  
@@ -1830,7 +1830,7 @@ C c;
   
     ```  
   
-     範例 2：多載解析的變更 (之後)  
+     Example 2: change in overload resolution (after)  
   
     ```cpp  
     struct S;  // as before  
@@ -1849,9 +1849,9 @@ C c;
   
     ```  
   
--   **還原 switch 陳述式警告**  
+-   **Restoration of switch statement warnings**  
   
-     舊版編譯器移除了先前存在的和 `switch` 陳述式相關的警告，現在已還原這些警告。 編譯器現在會發出還原的警告，而與特定情況相關的警告 (包括預設的情況) 都會在包含違規情況的程式行發出，而不是在 switch 陳述式的最後一行發出。 現在，在和過去不一樣的程式行中發出警告的結果是，以前使用 `#pragma warning(disable:####)` 隱藏的警告，可能不會如預期隱藏起來。 若想要如預期隱藏這些警告，就必須將 `#pragma warning(disable:####)` 指示詞移至第一個可能違規情況的上一行。 以下是還原的警告。  
+     A Previous version of the compiler removed previously-existing warnings related to `switch` statements; these warnings have now been restored. The compiler now issues the restored warnings, and warnings related to specific cases (including the default case) are now issued on the line containing the offending case, rather than on the last line of the switch statement. As a result of now issuing those warnings on different lines than in the past, warnings previously suppressed by using `#pragma warning(disable:####)` may no longer be suppressed as intended. To suppress these warnings as intended, it might be necessary to move the `#pragma warning(disable:####)` directive to a line above the first potentially-offending case. The following are the restored warnings.  
   
     ```Output  
     warning C4060: switch statement contains no 'case' or 'default' labels  
@@ -1895,7 +1895,7 @@ C c;
     Warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given  
     ```  
   
-     C4063 範例 (之前)  
+     Example of C4063 (before)  
   
     ```cpp  
     class settings  
@@ -1929,7 +1929,7 @@ C c;
   
     ```  
   
-     C4063 範例 (之後)  
+     Example of C4063 (after)  
   
     ```cpp  
     class settings { ... };  // as above  
@@ -1955,41 +1955,41 @@ C c;
   
     ```  
   
-     其他還原警告的範例會於其各自文件中提供。  
+     Examples of the other restored warnings are provided in their documentation.  
   
--   **#include：路徑名稱使用上層目錄指定名稱 '..'** (只影響 /Wall /WX)  
+-   **#include: use of parent-directory specifier '..' in pathname** (only affects /Wall /WX)  
   
-     舊版編譯器未偵測到 在  `#include` 指示詞的路徑名稱中是否使用上層目錄指定名稱 '..'。 以這種方式撰寫的程式碼通常會包含因為錯誤使用專案相對路徑而存在於專案以外的標頭。 這種舊行為造成的風險是，編譯程式時所包含的原始程式檔，可能不是程式設計人員想要的檔案，或是這些相對路徑無法移植到其他建置環境。 編譯器現在會偵測以這種方式撰寫的程式碼，並通知程式設計人員，如已啟用，還會發出選擇性的編譯器警告 C4464。  
+     Previous versions of the compiler did not detect the use of the parent-directory specifier '..' in the pathname of  `#include` directives. Code written in this way is usually intended to include headers that exist outside of the project by incorrectly using project-relative paths. This old behavior created a risk that the program could be compiled by including a different source file than the programmer intended, or that these relative paths would not be portable to other build environments. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C4464, if enabled.  
   
     ```Output  
     warning C4464: relative include path contains '..'  
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     #include "..\headers\C4426.h"  // emits warning C4464  
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     #include "C4426.h"  // add absolute path to 'headers\' to your project's include directories  
   
     ```  
   
-     此外，雖然編譯器不會提供特定的診斷，但仍建議您不要使用上層目錄指定名稱 ".." 來指定專案的 include 目錄。  
+     Additionally, although the compiler does not give a specific diagnostic, we also recommend that the parent-directory specifier ".." should note be used to specify your project's include directories.  
   
--   **#pragma optimize() 擴充超出了標頭檔結尾** (只會影響 /Wall /WX)  
+-   **#pragma optimize() extends past end of header file** (only affects /Wall /WX)  
   
-     舊版編譯器未偵測到最佳化旗標設定的變更，這會逸出包含在轉譯單位內的標頭檔。 編譯器現在會偵測以這種方式撰寫的程式碼，並通知程式設計人員，如已啟用，還會在違反 `#include`的位置發出選擇性的編譯器警告 C4426。 只有當變更與編譯器命令列引數設定的最佳化旗標發生衝突時，才會發出這個警告。  
+     Previous versions of the compiler did not detect changes to  optimization flag settings that escape a header file included within a translation unit. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C4426 at the location of the offending `#include`, if enabled. This warning is only issued if the changes conflict with the optimization flags set by command-line arguments to the compiler.  
   
     ```Output  
     warning C4426: optimization flags changed after including header, may be due to #pragma optimize()  
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     // C4426.h  
@@ -2002,7 +2002,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     // C4426.h  
@@ -2016,15 +2016,15 @@ C c;
   
     ```  
   
--   **不相符的 #pragma warning(push)** 和 **#pragma warning(pop)** (只影響 /Wall /WX)  
+-   **Mismatched #pragma warning(push)** and **#pragma warning(pop)** (only affects /Wall /WX)  
   
-     舊版編譯器偵測不到要與不同原始程式碼檔案中，`#pragma warning(pop)` 狀態變更配對的 `#pragma warning(push)` 狀態變更，這種規劃極為罕見。 這種舊行為造成的風險是，編譯程式所啟用的警告集合不是程式設計人員想要的集合，可能導致無訊息的錯誤執行階段行為。 現在編譯器會偵測以此方式撰寫的程式碼，通知其程式設計人員，同時在符合 `#pragma warning(pop)` 的位置發出選擇性的編譯器警告 C5031 (如有啟用)。 此警告包含參考對應 #pragma warning(push) 位置的附註。  
+     Previous versions of the compiler did not detect `#pragma warning(push)` state changes being paired with `#pragma warning(pop)` state changes in a different source file, which is rarely intended. This old behavior created a risk that the program would be compiled with a different set of warnings enabled than the programmer intended, possibly resulting in silent bad runtime behavior. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C5031 at the location of the matching `#pragma warning(pop)`, if enabled. This warning includes a note referencing the location of the corresponding #pragma warning(push).  
   
     ```Output  
     warning C5031: #pragma warning(pop): likely mismatch, popping warning state pushed in different file  
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     // C5031_part1.h  
@@ -2047,7 +2047,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     // C5031_part1.h  
@@ -2072,17 +2072,17 @@ C c;
   
     ```  
   
-     以此方式撰寫的程式碼雖然不常見，但有時是刻意為之。 以此方式撰寫的程式碼對於 `#include` 順序的變更十分敏感；如有可能，建議原始程式碼檔案獨立管理警告狀態。  
+     Though uncommon, code written in this way is sometimes intentional. Code written in this way is sensitive to changes in `#include` order; when possible, we recommend that source code files manage warning state in a self-contained way.  
   
--   **不相符的 #pragma warning(push)** (只會影響 /Wall /WX)  
+-   **Unmatched #pragma warning(push)** (only affects /Wall /WX)  
   
-     舊版編譯器轉在轉譯單位的結尾未偵測到不相符的 `#pragma warning(push)` 狀態變更。 編譯器現在會偵測以這種方式撰寫的程式碼，並通知程式設計人員，如已啟用，還會在不符合 #pragma warning(push) 的位置發出選擇性的編譯器警告 C5032。 只有轉譯單位沒有任何編譯錯誤時，才會發出這個警告。  
+     Previous versions of the compiler did not detect unmatched `#pragma warning(push)` state changes at the end of a translation unit. The compiler now detects and notifies the programmer of code written in this way and issues an optional compiler warning C5032 at the location of the unmatched #pragma warning(push), if enabled. This warning is only issued if there are no compilation errors in the translation unit.  
   
     ```Output  
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)  
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     // C5032.h  
@@ -2098,7 +2098,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     // C5032.h  
@@ -2115,23 +2115,23 @@ C c;
   
     ```  
   
--   **改進之後的 #pragma 警告狀態追蹤也可能會發出其他警告**  
+-   **Additional warnings might be issued as a result of improved #pragma warning state tracking**  
   
-     舊版編譯器過去追蹤 #pragma 警告狀態變更的能力不佳，無法發出所有預期出現的警告。 這種行為造成的風險是，某些有效隱藏警告的情況，不是程式設計人員所預想的情況。 編譯器現在追蹤 #pragma 警告狀態的能力更強大，特別是關於範本內部的 #pragma 警告狀態變更，可以選擇性發出新的警告 C5031 和 C5032，它們的目的是協助程式設計人員找出非預期使用的 `#pragma warning(push)` 和 `#pragma warning(pop)`。  
+     Previous versions of the compiler tracked #pragma warning state changes insufficiently well to issue all intended warnings. This behavior created a risk that certain warnings would be effectively suppressed in circumstances different than the programmer intended. The compiler now tracks #pragma warning state more robustly -- especially related to #pragma warning state changes inside of templates -- and optionally issues new warnings C5031 and C5032 which are intended to help the programmer locate unintended uses of `#pragma warning(push)` and `#pragma warning(pop)`.  
   
-     由於改良的 #pragma 警告狀態變更追蹤，以前錯誤隱藏的警告或以前與錯誤診斷問題有關的警告，現在都可能會發出。  
+     As a result of improved #pragma warning state change tracking, warnings formerly incorrectly suppressed or warnings related to issues formerly misdiagnosed might now be issued.  
   
--   **不可能執行到之程式碼的識別改善**  
+-   **Improved identification of unreachable code**  
   
-     C++ 標準程式庫的變更，以及比舊版編譯器強大的內嵌函式呼叫能力，可能會讓編譯器證明不可能執行到某些程式碼。 這種新行為可能會導致新的警告 C4720 的執行個體，且更頻繁地發出這個警告。  
+     C++ Standard Library changes and improved ability to inline function calls over previous versions of the compiler might allow the compiler to prove that certain code is now unreachable. This new behavior can result in new and more-frequently issued instances of warning C4720.  
   
     ```Output  
     warning C4720: unreachable code  
     ```  
   
-     在許多情況下，只有啟用最佳化編譯時，才可能發出這個警告；因為最佳化可能內嵌更多的函式呼叫、消除多餘的程式碼，或者可能判斷某不可能執行到些程式碼。 我們觀察到，新的警告 C4720 執行個體經常發生在 try/catch 區塊，尤其是在使用 [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True)時。  
+     In many cases, this warning might only be issued when compiling with optimizations enabled, since optimizations may inline more function calls, eliminate redundant code, or otherwise make it possible to determine that certain code is unreachable. We have observed that new instances of warning C4720 have frequently occurred in try/catch blocks, especially in relation to use of [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     try  
@@ -2144,7 +2144,7 @@ C c;
     }  
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     try  
@@ -2157,20 +2157,20 @@ C c;
     }  
     ```  
   
-###  <a name="VS_Update2"></a> Update 2 的合規性改進  
+###  <a name="VS_Update2"></a> Conformance Improvements in Update 2  
   
--   **運算式 SFINAE 的部分支援也可能會發出其他警告與錯誤**  
+-   **Additional warnings and errors might be issued as a result of partial support for expression SFINAE**  
   
-     舊版編譯器因為缺少對運算式 SFINAE 的支援，所以無法剖析 `decltype` 指定名稱內某些種類的運算式。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會剖析這些運算式，並隨著一致性逐漸改進來提供運算式 SFINAE 的部分支援。 如此一來，編譯器現在就會發出在舊版編譯器未剖析的運算式中找到的警告與錯誤。  
+     Previous versions of the compiler did not parse certain kinds of expressions inside `decltype` specifiers due to lack of  support for expression SFINAE. This old behavior was incorrect and does not conform to the C++ standard. The compiler now parses these expressions and has partial support for expression SFINAE due to  ongoing conformance improvements. As a result, the compiler now issues warnings and errors found in  expressions that previous versions of the compiler did not parse.  
   
-     當此新行為剖析包含尚未宣告之類型的 `decltype` 運算式時，編譯器會發出編譯器錯誤 C2039。  
+     When this new behavior parses a `decltype` expression that includes a type that has not yet been declared, the compiler issues compiler error C2039 as a result.  
   
     ```Output  
   
     error C2039: 'type': is not a member of '`global namespace''  
     ```  
   
-     範例 1：使用未宣告的型別 (之前)  
+     Example 1:  use of an undeclared type (before)  
   
     ```cpp  
     struct s1  
@@ -2184,7 +2184,7 @@ C c;
   
     ```  
   
-     範例 1 (之後)  
+     Example 1 (after)  
   
     ```cpp  
     struct s1  
@@ -2200,7 +2200,7 @@ C c;
   
     ```  
   
-     當此新行為剖析缺少必要 `typename` 關鍵字的 `decltype` 運算式以將相依名稱指定為類型時，編譯器會發出編譯器警告 C4346 與編譯器錯誤 C2923。  
+     When this new behavior parses a `decltype` expression that is missing a necessary use of the `typename` keyword to specify that a dependent name is a type, the compiler issues  compiler warning C4346 together with compiler error C2923.  
   
     ```Output  
   
@@ -2213,7 +2213,7 @@ C c;
     error C2923: 's1': 'S2<T>::Type' is not a valid template type argument for parameter 'T'  
     ```  
   
-     範例 2：相依名稱不是型別 (之前)  
+     Example 2: dependent name is not a type (before)  
   
     ```cpp  
     template < typename T>  
@@ -2239,7 +2239,7 @@ C c;
   
     ```  
   
-     範例 2 (之後)  
+     Example 2 (after)  
   
     ```cpp  
     template < typename T> struct s1 { ... };  // as above  
@@ -2256,9 +2256,9 @@ C c;
   
     ```  
   
--   `volatile`  **成員變數會禁止隱含定義的建構函式與指派運算子**  
+-   `volatile` **member variables prevent implicitly defined constructors and assignment operators**  
   
-     舊版編譯器允許具有 `volatile` 成員變數的類別自動產生預設的複製/移動建構函式及預設的複製/移動指派運算子。 這個舊的行為不正確，而且不符合 C++ 標準。 編譯器現在會考慮讓具有揮發性成員變數的類別擁有非 trivial 建構和指派運算子，這樣可防止自動產生這些運算子的預設實作。  當此類別是等位 (或類別內的匿名等位) 的成員時，就會將等位 (或包含 Unonymous 等位之類別) 的複製/移動建構函式和複製/移動指派運算子隱含定義為已刪除。 在未明確定義的情況下，嘗試建構或複製等位 (或包含匿名等位的類別) 將會發生錯誤，導致編譯器發出編譯器錯誤 C2280。  
+     Previous versions of the compiler allowed a class that has `volatile` member variables to have default copy/move constructors and default copy/move assignment operators automatically generated. This old behavior was incorrect and does not conform to the C++ standard. The compiler now considers a class that has volatile member variables to have non-trivial construction and assignment operators which prevents default implementations of these operators from being automatically generated.  When such a class is a member of a union (or an anonymous union inside of a class), the copy/move constructors and copy/move assignment operators of the union (or the class containing the unonymous union) will be implicitly defined as deleted. Attempting to construct or copy the union (or class containing the anonymous union) without explicitly defining them is an error and the compiler  issues compiler error C2280 as a result.  
   
     ```Output  
   
@@ -2266,7 +2266,7 @@ C c;
   
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     struct A  
@@ -2290,7 +2290,7 @@ C c;
     B b2(b1);  // error C2280  
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     struct A  
@@ -2314,15 +2314,15 @@ C c;
     B b2(b1);  // error C2280  
     ```  
   
--   **靜態成員函式不支援 cv 限定詞**  
+-   **Static member functions do not support cv-qualifiers.**  
   
-     舊版 Visual C++ 2015 允許靜態成員函式擁有 cv 限定詞。 此行為起因於 Visual C++ 2015 與 Visual C++ 2015 Update 1 的迴歸；Visual C++ 2013 與舊版 Visual C++ 拒絕以此方式撰寫的程式碼。 Visual C++ 2015 與 Visual C++ 2015 Update 1 的行為不正確，且不符合 C++ 標準。  Visual Studio 2015 Update 2 拒絕以此方式撰寫的程式碼，並會發出編譯器錯誤 C2511。  
+     Previous versions of Visual C++ 2015 allowed static member functions to have cv-qualifiers. This behavior is due to a regression in Visual C++ 2015 and Visual C++ 2015 Update 1; Visual C++ 2013 and previous versions of Visual C++ reject code written in this way. The behavior of Visual C++ 2015 and Visual C++ 2015 Update 1 is incorrect and does not conform to the C++ standard.  Visual Studio 2015 Update 2 rejects code written in this way and issues compiler error C2511 instead.  
   
     ```Output  
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'  
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     struct A  
@@ -2334,7 +2334,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example(after)  
   
     ```cpp  
     struct A  
@@ -2346,9 +2346,9 @@ C c;
   
     ```  
   
--   **WinRT 程式碼不允許向前宣告列舉** (僅影響 /ZW)  
+-   **Forward declaration of enum is not allowed in WinRT code** (affects /ZW only)  
   
-     為 Windows 執行階段 (WinRT) 編譯的程式碼不允許向前宣告 `enum` 類型，類似於使用 /clr 編譯器參數為 .Net Framework 編譯 Managed C++ 程式碼的情形。 此行為可確保一律得知列舉的大小，並能正確將其投影至 WinRT 型別系統。 編譯器拒絕以此方式撰寫的程式碼，且會發出編譯器錯誤 C2599 以及編譯器錯誤 C3197。  
+     Code compiled for the Windows Runtime (WinRT) doesn't allow `enum` types to be forward declared, similarly to when managed C++ code is compiled for the .Net Framework using the /clr compiler switch. This behavior is ensures that the size of an enumeration is always known and can be correctly projected to the WinRT type system. The compiler rejects code written in this way and  issues compiler error C2599 together with compiler error C3197.  
   
     ```Output  
   
@@ -2362,7 +2362,7 @@ C c;
   
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     namespace A {  
@@ -2387,7 +2387,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
               // forward declaration of CustomEnum removed  
@@ -2410,9 +2410,9 @@ C c;
   
     ```  
   
--   **不得從內部宣告多載的非成員運算子 new 與運算子 delete** (層級 1 (/ W1) 預設為開啟)  
+-   **Overloaded non-member operator new and operator delete may not be declared inline** (Level 1 (/W1) on-by-default)  
   
-     舊版編譯器不會在以內嵌方式宣告多載的非成員運算子 new 與運算子 delete 函式時發出警告。 以此方式撰寫的程式碼語式錯誤 (不需要診斷)，且可能因為 new 與 delete 運算子不相符 (尤其在搭配調整大小後的解除配置使用時)，而導致難以診斷的記憶體問題。   編譯器現在會發出編譯器警告 C4595，協助識別以此方式撰寫的程式碼。  
+     Previous versions of the compiler do not issue a warning when non-member operator new and operator delete functions are declared inline. Code written in this way is ill-formed (no diagnostic required) and can cause memory issues  resulting from mismatched new and delete operators (especially when used together with sized deallocation) that can be difficult to diagnose.   The compiler now issues compiler warning C4595 to help identify code written in this way.  
   
     ```Output  
   
@@ -2420,7 +2420,7 @@ C c;
   
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
               inline void* operator new(size_t sz)  // warning C4595  
@@ -2430,7 +2430,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
               void* operator new(size_t sz)  // removed inline  
@@ -2440,17 +2440,17 @@ C c;
   
     ```  
   
-     可能需要先將運算子定義從標頭檔移出，再將其移入對應的原始程式檔，才能修正以此方式撰寫的程式碼。  
+     Fixing code that's written in this way might require that the operator definitions be moved out of a header file and into a corresponding source file.  
   
-###  <a name="VS_Update3"></a> Update 3 的合規性改進  
+###  <a name="VS_Update3"></a> Conformance Improvements in Update 3  
   
--   **std::is_convertable 現在已可偵測自我指派** (標準程式庫)  
+-   **std::is_convertable now detects self-assignment**  (standard library)  
   
-     當舊版 `std::is_convertable` 類型特性的複製建構函式被刪除或為私用時，其無法正確地偵測類別類型的自我指派。 現在在套用到複製建構函式被刪除或為私用的類別類型時，`std::is_convertable<>::value` 會正確設定為 `false`。  
+     Previous versions of the `std::is_convertable` type-trait did not correctly detect self-assignment of a class type when its copy constructor is deleted or private. Now, `std::is_convertable<>::value` is correctly set to `false` when applied to a class type with a deleted or private copy constructor.  
   
-     此變更沒有相關聯的編譯器診斷。  
+     There is no compiler diagnostic associated with this change.  
   
-     範例  
+     Example  
   
     ```cpp  
     #include <type_traits>  
@@ -2470,18 +2470,18 @@ C c;
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");  
     ```  
   
-     在舊版 Visual C++ 中，因為 `std::is_convertable<>::value` 不正確地設定為 `true`，致使此範例底部的靜態判斷提示能夠通過。 `std::is_convertable<>::value` 現在會正確地設定為 `false`，讓靜態判斷提示失敗。  
+     In previous versions of Visual C++, the static assertions at the bottom of this example pass because `std::is_convertable<>::value` was incorrectly set to `true`. Now, `std::is_convertable<>::value` is correctly set to `false`, causing the static assertions to fail.  
   
--   **預設或已刪除的 trivial 複製及移動建構函式會採用存取指定名稱**  
+-   **Defaulted or deleted trivial copy and move constructors respect access specifiers**  
   
-     舊版編譯器不會檢查預設或已刪除之 trivial 複製及移動建構函式的存取指定名稱，就允許其接受呼叫。 這個舊的行為不正確，而且不符合 C++ 標準。 在某些情況下，這項舊行為的風險是會產生無訊息的錯誤程式碼，導致無法預期的執行階段行為。 編譯器現在會檢查預設或已刪除之 trivial 複製及移動建構函式的存取指定名稱，據此決定其是否可以接受呼叫；若無法呼叫，即發出編譯器警告 C2248。  
+     Previous versions of the compiler did not check the access specifier of defaulted or deleted trivial copy and move constructors before allowing them to be called. This old behavior was incorrect and does not conform to the C++ standard. In some cases, this old  behavior created a risk of silent bad code generation, resulting in unpredictable runtime behavior. The compiler now checks the access specifier  of defaulted or deleted trivial copy and move constructors to determine whether it can be called, and if not, issues compiler warning C2248 as a result.  
   
     ```Output  
   
     error C2248: 'S::S' cannot access private member declared in class 'S'  
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```cpp  
     class S {  
@@ -2501,7 +2501,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```cpp  
     class S {  
@@ -2521,17 +2521,17 @@ C c;
   
     ```  
   
--   **屬性化 ATL 程式碼支援已標示為即將淘汰** (層級 1 (/W1) 預設為開啟)  
+-   **Deprecation of attributed ATL code support** (Level 1 (/W1) on-by-default)  
   
-     舊版編譯器支援屬性化 ATL 程式碼。 [自 Visual C++ 2008 開始下一個階段移除對屬性化 ATL 程式碼支援的下一個階段](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)起，即已將屬性化 ATL 程式碼標示為即將淘汰。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。  
+     Previous versions of the compiler supported attributed ATL code. As the next phase of removing support for attributed ATL code that [began in Visual C++ 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), attributed ATL code has been deprecated. The compiler now issues compiler warning C4467 to help identify this kind of deprecated code.  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
     ```  
   
-     若要續使用屬性化 ATL 程式碼，直到編譯器停止支援為止，可將 `/Wv:18` 或 `/wd:4467` 命令列引數傳遞給編譯器，或在原始程式碼中新增 `#pragma warning(disable:4467)` 來停用此警告。  
+     If you want to continue using attributed ATL code until support is removed from the compiler, you can disable this warning by passing the `/Wv:18` or `/wd:4467` command line arguments to the compiler, or by adding  `#pragma warning(disable:4467)` in your source code.  
   
-     範例 1 (之前)  
+     Example 1 (before)  
   
     ```cpp  
               [uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")]  
@@ -2539,16 +2539,16 @@ C c;
   
     ```  
   
-     範例 1 (之後)  
+     Example 1 (after)  
   
     ```cpp  
     __declspec(uuid("594382D9-44B0-461A-8DE3-E06A3E73C5EB")) A {};  
   
     ```  
   
-     您偶爾可能會需要或想要建立 IDL 檔案，以避免使用已標示為即將淘汰的 ATL 屬性，如下列範例程式碼所示  
+     Sometimes you might need or want to create an IDL file to avoid the use deprecated ATL attributes, as in the example code below  
   
-     範例 2 (之前)  
+     Example 2 (before)  
   
     ```cpp  
     [emitidl];  
@@ -2568,11 +2568,11 @@ C c;
   
     ```  
   
-     首先，請建立 *.idl 檔案；產生的 vc140.idl 檔案可用於取得包含介面及註釋的 \*.idl 檔案。  
+     First, create the *.idl file; the vc140.idl generated file can be used to obtain an \*.idl file containing the interfaces and annotations.  
   
-     接著請在您的組建中新增 MIDL 步驟，確保 C++ 介面定義能夠順利產生。  
+     Next, add a MIDL step to your build to make sure that the C++ interface definitions are generated.  
   
-     範例 2 IDL (之後)  
+     Example 2 IDL (after)  
   
     ```cpp  
     import "docobj.idl";  
@@ -2603,9 +2603,9 @@ C c;
   
     ```  
   
-     然後請直接在實作檔案中使用 ATL，如下列範例程式碼所示。  
+     Then, use ATL directly in the implementation file, as in the example code below.  
   
-     範例 2 實作 (之後)  
+     Example 2  Implementation (after)  
   
     ```cpp  
     #include <idl.header.h>  
@@ -2623,9 +2623,9 @@ C c;
   
     ```  
   
--   **先行編譯的標頭檔 (PCH) 與不相符的 #include 指示詞** (僅影響 /Wall /WX)  
+-   **Precompiled header (PCH) files and mismatched #include directives** (only affects /Wall /WX)  
   
-     使用先行編譯的標頭檔 (PCH) 時，舊版編譯器接受 `-Yc` 與 `-Yu` 編譯之間原始程式碼中的 `#include` 指示詞不相符。 編譯器現在已不再接受以此方式撰寫的程式碼。   現在在使用 PCH 檔案時，編譯器會發出編譯器警告 CC4598 協助識別不相符的 `#include` 指示詞。  
+     Previous versions of the compiler accepted mismatched `#include` directives in source files between `-Yc` and `-Yu` compilations when using precompiled header (PCH)  files. Code written in this way is no longer accepted by the compiler.   The compiler now issues compiler warning CC4598 to help identify mismatched `#include` directives when using PCH files.  
   
     ```Output  
   
@@ -2633,7 +2633,7 @@ C c;
   
     ```  
   
-     範例 (之前)：  
+     Example (before):  
   
      X.cpp (-Ycc.h)  
   
@@ -2653,7 +2653,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
      X.cpp (-Ycc.h)  
   
@@ -2673,9 +2673,9 @@ C c;
   
     ```  
   
--   **先行編譯的標頭檔 (PCH) 與不相符的 include 目錄** (僅影響 /Wall /WX)  
+-   **Precompiled header (PCH) files and mismatched include directories** (only affects /Wall /WX)  
   
-     使用先行編譯的標頭檔 (PCH) 時，舊版編譯器接受 `-Yc` 與 `-Yu` 編譯之間編譯器的 include 目錄 (`-I`) 命令列引數不相符。 編譯器現在已不再接受以此方式撰寫的程式碼。   現在在使用 PCH 檔案時，編譯器會發出編譯器警告 CC4599 協助識別不相符的 include 目錄 (`-I`) 命令列引數。  
+     Previous versions of the compiler accepted mismatched include directory (`-I`) command line arguments to the compiler between `-Yc` and `-Yu` compilations when using precompiled header (PCH)  files. Code written in this way is no longer accepted by the compiler.   The compiler now issues compiler warning CC4599 to help identify mismatched include directory (`-I`) command line arguments when using PCH files.  
   
     ```Output  
   
@@ -2683,7 +2683,7 @@ C c;
   
     ```  
   
-     範例 (之前)  
+     Example (before)  
   
     ```ms-dos  
   
@@ -2692,7 +2692,7 @@ C c;
   
     ```  
   
-     範例 (之後)  
+     Example (after)  
   
     ```ms-dos  
   
@@ -2701,11 +2701,11 @@ C c;
   
     ```  
   
-## <a name="visual-c-2013-conformance-changes"></a>Visual C++ 2013 的合規性變更  
+## <a name="visual-c-2013-conformance-changes"></a>Visual C++ 2013 Conformance Changes  
   
-### <a name="compiler"></a>編譯器  
+### <a name="compiler"></a>Compiler  
   
--   final 關鍵字現在會在先前編譯過的位置產生無法解析的符號錯誤：  
+-   The final keyword now generates an unresolved symbol error where it would have compiled previously:  
   
     ```cpp  
     struct S1 {  
@@ -2723,9 +2723,9 @@ C c;
   
     ```  
   
-     在舊版中，由於呼叫是虛擬呼叫，因此不會發出錯誤，儘管如此，程式還是會在執行階段損毀。 現在，由於已知類別為 final，因此會發出連結器錯誤。 在此範例中，您可連結包含 S2::f 定義的 obj 來修正此錯誤。  
+     In earlier versions, an error wasn't issued because the call was a virtual call; nevertheless, the program would crash at runtime. Now, a linker error is issued because the class is known to be final. In this example, to fix the error, you would link against the obj that contains the definition of S2::f.  
   
--   當您在命名空間中使用 friend 函式時，必須先重新宣告 friend 函式，才能加以參考，否則將會收到錯誤。這是因為編譯器現在遵循了 ISO C++ 標準。 例如，下面程式碼將不再進行編譯：  
+-   When you use friend functions in namespaces, you must re-declare the friend function before you refer to it or you will get an error because the compiler now conforms to the ISO C++ Standard. For example, this no longer compiles:  
   
     ```cpp  
     namespace NS {  
@@ -2741,7 +2741,7 @@ C c;
   
     ```  
   
-     若要更正這個程式碼，請宣告 friend 函式：  
+     To correct this code, declare the friend function:  
   
     ```cpp  
     namespace NS {  
@@ -2758,7 +2758,7 @@ C c;
   
     ```  
   
--   此 C++ 標準不允許在類別中明確特製化。 雖然 Visual C++ 在某些情況下允許這種做法，但是在像下列範例這樣的情況下，現在就會產生錯誤，因為編譯器不會將第二個函式視為第一個函式的特製化。  
+-   The C++ Standard does not allow explicit specialization in a class. Although Visual C++ allows it in some cases, in cases such as the following example, an error is now generated because the compiler doesn't consider the second function to be a specialization of the first one.  
   
     ```cpp  
     template < int N>  
@@ -2772,14 +2772,14 @@ C c;
   
     ```  
   
-     若要更正這個程式碼，請修改第二個函式：  
+     To correct this code, modify the second function:  
   
     ```cpp  
     template <> void f(char& val);  
   
     ```  
   
--   Visual C++ 已不會再嘗試清楚區別下列範例中的兩個函式，且現在還會發出錯誤：  
+-   Visual C++ no longer tries to disambiguate the two functions in the following example, and now emits an error:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2791,7 +2791,7 @@ C c;
   
     ```  
   
-     若要更正這個程式碼，請釐清呼叫：  
+     To correct this code, clarify the call:  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2803,7 +2803,7 @@ C c;
   
     ```  
   
--   在編譯器符合 ISO C++11 規範之前，下列程式碼會加以編譯，致使 x 解析為 int 類型：  
+-   Before the compiler was made compliant with ISO C++11, the following code would have compiled and caused x to resolve to type int:  
   
     ```cpp  
     auto x = {0};  
@@ -2811,7 +2811,7 @@ C c;
   
     ```  
   
-     此程式碼現在會將 x 解析為類型 std::initializer_list\<int>，並在下一行嘗試將 x 指派給類型 int 時引發錯誤  (預設不會進行轉換)。若要更正此程式碼，請使用 int 取代 auto︰  
+     This code now resolves x to a type of std::initializer_list\<int> and causes an error on the next line that tries to assign x to type int. (There is no conversion by default.) To correct this code, use int to replace auto:  
   
     ```cpp  
     int x = {0};  
@@ -2819,7 +2819,7 @@ C c;
   
     ```  
   
--   當右側值的類型不符合左側要初始化的值類型時，將無法再彙總初始化，而且會發出錯誤。因為根據 C++11 ISO 標準的要求，初始化必須在不縮小轉換的情況下統一執行。 過去在舊版中如可使用縮小轉換，會發出[編譯器警告 (層級 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) 警告，而不會發出錯誤。  
+-   Aggregate initialization is no longer allowed when the type of the right-hand value does not match the type of the left-hand value that's being initialized, and an error is issued because the ISO C++11 Standard requires uniform initialization to work without narrowing conversions. Previously, if a narrowing conversion was available, a [Compiler Warning (level 4) C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) warning would have been issued instead of an error.  
   
     ```cpp  
     int i = 0;  
@@ -2827,7 +2827,7 @@ C c;
   
     ```  
   
-     若要更正這個程式碼，請加入明確的縮小轉換：  
+     To correct this code, add an explicit narrowing conversion:  
   
     ```cpp  
     int i = 0;  
@@ -2835,14 +2835,14 @@ C c;
   
     ```  
   
--   下列初始化已無法再執行：  
+-   The following initialization is no longer allowed:  
   
     ```cpp  
     void *p = {{0}};  
   
     ```  
   
-     若要更正這個程式碼，請使用下列任一形式：  
+     To correct this code, use either of these forms:  
   
     ```cpp  
     void *p = 0;  
@@ -2851,7 +2851,7 @@ C c;
   
     ```  
   
--   名稱查閱已變更。 Visual Studio 2012 與 Visual Studio 2013 中的 Visual C++ 會以不同方式解析下列程式碼︰  
+-   Name lookup has changed. The following code is resolved differently in Visual C++ in Visual Studio 2012 and Visual C++ in Visual Studio 2013:  
   
     ```cpp  
     enum class E1 { a };  
@@ -2865,9 +2865,9 @@ C c;
   
     ```  
   
-     在 Visual Studio 2012 的 Visual C++ 中，運算式 E1::b 中的 E1 會解析為全域範圍的 ::E1。 在 Visual Studio 2013 的 Visual C++ 中，運算式 E1::b 中的 E1 會解析為 main() 中的 typedef E2 定義且類型為 ::E2。  
+     In Visual C++ in Visual Studio 2012, the E1 in expression E1::b resolved to ::E1 in the global scope. In Visual C++ in Visual Studio 2013, E1 in expression E1::b resolves to the typedef E2 definition in main() and has type ::E2.  
   
--   物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它具有虛擬函式，但沒有具有虛擬函式的基底類別，則編譯器的物件模型會在資料成員配置之後在虛擬函式表中插入指標。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以 Visual Studio 2013 的 Visual C++ 已將其移除。 例如，請參考這個程式碼：  
+-   Object layout has changed. On x64, the object layout of a class may change from previous releases. If it has a virtual function but it doesn’t have a base class that has a virtual function, the object model of the compiler inserts a pointer to a virtual function table after the data member layout. This means the layout may not be optimal in all cases. In previous releases, an optimization for x64 would try to improve the layout for you, but because it failed to work correctly in complex code situations, it was removed in Visual C++ in Visual Studio 2013. For example, consider this code:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2881,7 +2881,7 @@ C c;
   
     ```  
   
--   在 Visual Studio 2013 的 Visual C++ 中，x64 上 sizeof(S2) 的結果為 48，但在舊版中會評估為 32。 若要讓 x64 之 Visual Studio 2013 中的 Visual C++ 將此評估為 32，可新增具有虛擬函式的虛擬基底類別︰  
+-   In Visual C++ in Visual Studio 2013, the result of sizeof(S2) on x64 is 48, but in previous releases, it evaluates to 32. To make this evaluate to 32 in Visual C++ in Visual Studio 2013 for x64, add a dummy base class that has a virtual function:  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2898,7 +2898,7 @@ C c;
   
     ```  
   
-     若要在您的程式碼中尋找舊版嘗試最佳化的位置，可使用該版本的編譯器搭配 /W3 編譯器選項一起執行，同時開啟警告 4370。 例如：  
+     To find places in your code that an earlier release would have tried to optimize, use a compiler from that release together with the /W3 compiler option and turn on Warning 4370. For example:  
   
     ```cpp  
     #pragma warning(default:4370)  
@@ -2914,9 +2914,9 @@ C c;
   
     ```  
   
-     在 Visual Studio 2013 之 Visual C++ 之前的 Visual C++ 編譯器中，此程式碼會輸出如下訊息︰「警告 C4370: 'S2': 因為可提供較佳的封裝，類別配置可能已在舊版本的編譯器中變更」  
+     On Visual C++ compilers before Visual C++ in Visual Studio 2013, this code outputs this message: warning C4370: 'S2' : layout of class has changed from a previous version of the compiler due to better packing  
   
-     在所有 Visual C++ 版本中，x86 編譯器都具有相同的配置不佳問題。 例如，如果這個程式碼是為 x86 而編譯：  
+     The x86 compiler has the same sub-optimal layout issue in all versions of Visual C++. For example, if this code is compiled for x86:  
   
     ```cpp  
     struct S {  
@@ -2927,7 +2927,7 @@ C c;
   
     ```  
   
-     Sizeof (S) 的結果為 24。 不過，如果您使用剛才提到的 x64 解決方法，則此結果可以減少為 16：  
+     The result of sizeof(S) is 24. However, this can be reduced to 16 if you use the workaround just mentioned for x64:  
   
     ```cpp  
     struct dummy {  
@@ -2942,34 +2942,34 @@ C c;
   
     ```  
   
-### <a name="standard-library"></a>標準程式庫  
- Visual Studio 2013 中的 Visual C++ 可偵測 _ITERATOR_DEBUG_LEVEL 中不相符的情況 (這是在 Visual C++ 2010 中所實作) 以及 RuntimeLibrary 不相符的情況。 當編譯器選項 /MT (靜態發行)、/MTd (靜態偵錯)、/MD (動態發行) 及 /MDd (動態偵錯) 混用時即會發生這些情況。  
+### <a name="standard-library"></a>Standard Library  
+ Visual C++ in Visual Studio 2013 detects mismatches in _ITERATOR_DEBUG_LEVEL, which was implemented in Visual C++ 2010, and RuntimeLibrary mismatches. These occur when compiler options /MT (static release), /MTd (static debug), /MD (dynamic release), and /MDd (dynamic debug) are mixed.  
   
--   若您的程式碼認可舊版的模擬別名範本，必須加以變更。 例如過去使用 allocator_traits\<A>::rebind_alloc\<U>::other，現在必須改成宣告 allocator_traits\<A>::rebind_alloc\<U>。 雖然 ratio_add\<R1, R2>::type 已不再需要 ，而且我們建議您宣告 ratio_add\<R1, R2>，但因為 \<N, D> 的縮減比率必須是類型 typedef (若已縮減，則類型相同)，所以仍會編譯前者。  
+-   If your code acknowledges the previous release's simulated alias templates, you have to change it. For example, instead of allocator_traits\<A>::rebind_alloc\<U>::other, now you have to say allocator_traits\<A>::rebind_alloc\<U>. Although ratio_add\<R1, R2>::type is no longer necessary and we now recommend that you say ratio_add\<R1, R2>, the former will still compile because ratio\<N, D> is required to have a "type" typedef for a reduced ratio, which will be the same type if it's already reduced.  
   
--   呼叫 std::min() 或 std::max() 時，必須使用 #include \<algorithm>。  
+-   You must use #include \<algorithm> when you call std::min() or std::max().  
   
--   若您現有的程式碼使用舊版的模擬範圍列舉 (包裝在命名空間中傳統不限範圍的列舉)，必須加以變更。 例如，若您參考了類型 std::future_status::future_status，您現在必須宣告 std::future_status。 但大多數的程式碼不受影響，例如 std::future_status::ready 仍會加以編譯。  
+-   If your existing code uses the previous release’s simulated scoped enums—traditional unscoped enums wrapped in namespaces—you have to change it. For example, if you referred to the type std::future_status::future_status, now you have to say std::future_status. However, most code is unaffected—for example, std::future_status::ready still compiles.  
   
--   明確運算子 bool() 會比運算子 unspecified-bool-type() 更為嚴格。 明確運算子 bool() 允許明確轉換為 bool (例如對 shared_ptr\<X > sp 而言，static_cast\<bool>(sp) 與 bool b(sp) 均有效)，同時也允許 Boolean-testable 依據內容轉換為 bool ( 例如 if (sp)、!sp、sp 等等)。 但明確運算子 bool() 禁止隱含轉換為 bool，因此您不得宣告 bool b = sp；而對於 bool 傳回類型，您不能宣告傳回 sp。  
+-   explicit operator bool() is stricter than operator unspecified-bool-type(). explicit operator bool() permits explicit conversions to bool—for example, given shared_ptr\<X> sp, both static_cast\<bool>(sp) and bool b(sp) are valid—and Boolean-testable "contextual conversions" to bool—for example, if (sp), !sp, sp && whatever. However, explicit operator bool() forbids implicit conversions to bool, so you can't say bool b = sp; and given a bool return type, you can't say return sp.  
   
--   因為現在是實作真正的 variadic 範本，所以 _VARIADIC_MAX 與相關的巨集不會有任何作用。 如果您仍然定義 _VARIADIC_MAX，則會直接將它忽略。 如果您認可我們的巨集機制主要在於以任何其他方式支援模擬的 variadic 樣板，那麼您必須變更程式碼。  
+-   Now that real variadic templates are implemented, _VARIADIC_MAX and related macros have no effect. If you're still defining _VARIADIC_MAX, it is just ignored. If you acknowledged our macro machinery intended to support simulated variadic templates in any other way, you have to change your code.  
   
--   除了一般關鍵字之外，C++ 標準程式庫標頭現在禁止將隨內容改變的關鍵字 "override" 及 "final" 巨集化。  
+-   In addition to ordinary keywords, C++ Standard Library headers now forbid the macro-izing of the context-sensitive keywords "override" and "final".  
   
--   reference_wrapper/ref()/cref() 現在禁止繫結到暫存物件。  
+-   reference_wrapper/ref()/cref() now forbid binding to temporary objects.  
   
--   \<random> 現在會嚴格實施其編譯時期前置條件。  
+-   \<random> now strictly enforces its compile-time preconditions.  
   
--   各種不同的 C++ 標準程式庫類型特性都有「T 應為完整的類型」這項前置條件。 雖然編譯器現在會更嚴格實施這項條件，但並非所有情況下都能實施  (因為 C++ 標準程式庫前置條件違規會觸發未經定義的行為，所以這項標準無法保證一定能夠實施)。  
+-   Various C++ Standard Library type traits have the precondition "T shall be a complete type". Although the compiler now enforces this more strictly, it may not enforce it in all situations. (Because C++ Standard Library precondition violations trigger undefined behavior, the Standard doesn't guarantee enforcement.)  
   
--   C++ 標準程式庫不支援 /clr:oldSyntax。  
+-   The C++ Standard Library does not support /clr:oldSyntax.  
   
--   C++11 的 common_type<> 指定會出現未預期及預期外的結果，特別是會讓 common_type\<int, int>::type 傳回 int&&。 因此，Visual C++ 實作了針對程式庫工作小組問題 2141 所提出的解決方法，讓 common_type\<int, int="">::type 傳回 int。  
+-   The C++11 specification for common_type<> had unexpected and undesired consequences; in particular, it makes common_type\<int, int>::type return int&&. Therefore, Visual C++ implements the Proposed Resolution for Library Working Group issue 2141, which makes common_type\<int, int="">::type return int.  
   
-     這項變更的副作用就是無法再使用識別案例 (common_type\<T> 不一定會產生類型 T)。 這個結果符合建議的解決方法，不過它會破壞依賴之前行為的任何程式碼。  
+     As a side-effect of this change, the identity case no longer works (common_type\<T> does not always result in type T). This complies with the Proposed Resolution, but it breaks any code that relied on the previous behavior.  
   
-     如需識別類型特性，請勿使用 <type_traits> 中定義的非標準 std::identity，其不適用於 \<void>。 請改為依照您的需求，實作自己的識別類型特性。 以下為範例：  
+     If you require an identity type trait, don't use the non-standard std::identity that's defined in <type_traits>                 because it won't work for \<void>                 . Instead, implement your own identity type trait to suit your needs. Here's an example:  
   
     ```cpp  
     template < typename T> struct Identity {  
@@ -2978,49 +2978,49 @@ C c;
   
     ```  
   
-### <a name="mfc-and-atl"></a>MFC 和 ATL  
+### <a name="mfc-and-atl"></a>MFC and ATL  
   
--   因為 Unicode 現在已相當普遍，MBCS 的使用率大幅降低，所以Visual Studio 已不再隨附 MFC MBCS 程式庫。 這項變更也讓 MFC 與 Windows SDK 本身更為相符，因為許多新的控制項和訊息都限用 Unicode。 但您必須繼續使用 MBCS MFC 程式庫 (可從 MSDN 下載中心下載)。 Visual C++ 可轉散發套件仍然包含這個程式庫。  
+-  **Visual Studio 2013 only**: MFC MBCS Library is not included in Visual Studio because Unicode is so popular and use of MBCS is significantly reduced. This change also keeps MFC more closely aligned with the Windows SDK itself, because many of the new controls and messages are Unicode-only. However, if you must continue to use the MFC MBCS library, you can download it from the MSDN Download Center at [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770). The Visual C++ Redistributable Package still includes this library.  (Note: The MBCS DLL is included in Visual C++ setup components in Visual Studio 2015 and later).
   
--   MFC 功能區的協助工具已有變更。  一改過去的單層架構，現在改為階層式架構。 您仍可呼叫 CRibbonBar::EnableSingleLevelAccessibilityMode() 來使用舊行為。  
+-   Accessibility for the MFC ribbon is changed.  Instead of a one-level architecture, there is now a hierarchical architecture. You can still use the old behavior by calling CRibbonBar::EnableSingleLevelAccessibilityMode().  
   
--   CDatabase::GetConnect 方法已移除。 為使安全性變得更好，連接字串現在會加密儲存，而且只在必要時解密；其無再以純文字格式傳回。  此字串可使用 CDatabase::Dump 方法取得。  
+-   CDatabase::GetConnect method is removed. To improve security, the connection string is now stored encrypted and is decrypted only as needed; it cannot be returned as plain text.  The string can be obtained by using the CDatabase::Dump method.  
   
--   CWnd::OnPowerBroadcast 的簽章已變更。 這個訊息處理常式的簽章已變更為接受 LPARAM 做為第二個參數。  
+-   Signature of CWnd::OnPowerBroadcast is changed. The signature of this message handler is changed to take an LPARAM as the second parameter.  
   
--   簽章已變更為可容納訊息處理常式。 下列函式的參數清單已變更為使用新加入的 ON_WM_* 訊息處理常式：  
+-   Signatures are changed to accommodate message handlers. The parameter lists of the following functions have been changed to use newly added ON_WM_* message handlers:  
   
-    -   CWnd::OnDisplayChange 已變更為 (UINT, int, int)，而不再是 (WPARAM, LPARAM)，所以可以在訊息對應中使用新的 ON_WM_DISPLAYCHANGE 巨集。  
+    -   CWnd::OnDisplayChange changed to (UINT, int, int) instead of (WPARAM, LPARAM) so that the new ON_WM_DISPLAYCHANGE macro can be used in the message map.  
   
-    -   CFrameWnd::OnDDEInitiate 已變更為 (CWnd*, UINT, UNIT)，而不再是 (WPARAM, LPARAM)，所以可以在訊息對應中使用新的 ON_WM_DDE_INITIATE 巨集。  
+    -   CFrameWnd::OnDDEInitiate changed to (CWnd*, UINT, UNIT) instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_INITIATE macro can be used in the message map.  
   
-    -   CFrameWnd::OnDDEInitiate 已變更為 (CWnd*, HANDLE)，而不再是 (WPARAM, LPARAM)，所以可以在訊息對應中使用新的 ON_WM_DDE_EXECUTE 巨集。  
+    -   CFrameWnd::OnDDEExecute changed to (CWnd*, HANDLE) instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_EXECUTE macro can be used in the message map.  
   
-    -   CFrameWnd::OnDDETerminate 已變更為 (CWnd*)，而不再是 (WPARAM，LPARAM)，所以可以在訊息對應中使用新的 ON_WM_DDE_TERMINATE 巨集。  
+    -   CFrameWnd::OnDDETerminate changed to (CWnd*) as the parameter instead of (WPARAM, LPARAM) so that the new ON_WM_DDE_TERMINATE macro can be used in the message map.  
   
-    -   CMFCMaskedEdit::OnCut 已變更不使用任何參數，而不再是 (WPARAM, LPARAM)，所以可以在訊息對應中使用新的 ON_WM_CUT 巨集。  
+    -   CMFCMaskedEdit::OnCut changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_CUT macro can be used in the message map.  
   
-    -   CMFCMaskedEdit::OnCut 已變更不使用任何參數，而不再是 (WPARAM, LPARAM)，所以可以在訊息對應中使用新的 ON_WM_CLEAR 巨集。  
+    -   CMFCMaskedEdit::OnClear changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_CLEAR macro can be used in the message map.  
   
-    -   CMFCMaskedEdit::OnCut 已變更不使用任何參數，而不再是 (WPARAM, LPARAM)，所以可以在訊息對應中使用新的 ON_WM_PASTE 巨集。  
+    -   CMFCMaskedEdit::OnPaste changed to no parameters instead of (WPARAM, LPARAM) so that the new ON_WM_PASTE macro can be used in the message map.  
   
--   MFC 標頭中的 \#ifdefs 已移除。 MFC 標頭檔案中許多與不支援之 Windows 版本相關的 #ifdefs (WINVER &lt; 0x0501) 已移除。  
+-   \#ifdefs in the MFC header files are removed. Numerous #ifdefs in the MFC header files related to unsupported versions of Windows (WINVER &lt; 0x0501) are removed.  
   
--   ATL DLL (atl120.dll) 已移除。 現在提供的 ATL 為標頭和靜態程式庫 (atls.lib)。  
+-   ATL DLL (atl120.dll) is removed. ATL is now provided as headers and a static library (atls.lib).  
   
--   Atlsd.lib、atlsn.lib 和 atlsnd.lib 已移除。 Atls.lib 不再具有字元集相依性或偵錯/發行專屬的程式碼。 由於對於 Unicode/ANSI 和偵錯/發行，它的運作方式相同，因此只需要一個版本的程式庫。  
+-   Atlsd.lib, atlsn.lib, and atlsnd.lib are removed. Atls.lib no longer has character-set dependencies or code that's specific for debug/release. Because it works the same for Unicode/ANSI and debug/release, only one version of the library is required.  
   
--   ATL/MFC 追蹤工具會隨 ATL DLL 移除，追蹤機制也有所簡化。 CTraceCategory 建構函式現在可接受一個參數 (分類名稱)；TRACE 巨集會呼叫 CRT 偵錯報告函式。  
+-   ATL/MFC Trace tool is removed together with the ATL DLL, and the tracing mechanism is simplified. The CTraceCategory constructor now takes one parameter (the category name), and the TRACE macros call the CRT debug reporting functions.  
   
-## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 的重大變更  
+## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 Breaking Changes  
   
-### <a name="compiler"></a>編譯器  
+### <a name="compiler"></a>Compiler  
   
--   /Yl 編譯器選項已變更。 編譯器預設會使用此選項，在某些情況下，可能會導致 LNK2011 錯誤。 如需詳細資訊，請參閱 [/Yl (Inject PCH Reference for Debug Library)](../build/reference/yl-inject-pch-reference-for-debug-library.md) (/Yl (插入偵錯程式庫的 PCH 參考))。  
+-   The /Yl compiler option has changed. By default, the compiler uses this option, which can lead to LNK2011 errors under certain conditions. For more information, see [/Yl (Inject PCH Reference for Debug Library)](../build/reference/yl-inject-pch-reference-for-debug-library.md).  
   
--   在使用 /clr 編譯的程式碼中，列舉類別關鍵字會定義 C++11 列舉，而不會定義通用語言執行平台 (CLR) 列舉。 若要定義 CLR 列舉，其協助工具必須明確。  
+-   In code that's compiled by using /clr, the enum class keyword defines a C++11 enum, not a common language runtime (CLR) enum. To define a CLR enum, you must be explicit about its accessibility.  
   
--   使用範本關鍵字明確釐清相依名稱 (符合 C++ 語言標準)。 在下列範例中，反白顯示的範本關鍵字是解析模稜兩可問題的必備項目。 如需詳細資訊，請參閱 [Name Resolution for Dependent Types](../cpp/name-resolution-for-dependent-types.md) (相依類型的名稱解析)。  
+-   Use the template keyword to explicitly disambiguate a dependent name (C++ Language Standard compliance). In the following example, the highlighted template keyword is mandatory to resolve the ambiguity. For more information, see [Name Resolution for Dependent Types](../cpp/name-resolution-for-dependent-types.md).  
   
     ```cpp  
     template < typename X = "", typename = "" AY = "">  
@@ -3028,7 +3028,7 @@ C c;
   
     ```  
   
--   類型 float 的常數運算式已不可再用為範本引數，如下列範例所示。  
+-   Constant expression of type float is no longer allowed as a template argument, as shown in the following example.  
   
     ```cpp  
     template<float n=3.14>  
@@ -3036,104 +3036,96 @@ C c;
   
     ```  
   
--   使用 /GS 命令列選項編譯並具有差一 (off-by-one) 弱點的程式碼可能會在執行階段期間導致處理序終止，如下列虛擬程式碼範例所示。  
+-   Code that's compiled by using the /GS command-line option and that has an off-by-one vulnerability may lead to process termination at                 runtime, as shown in the following pseudocode example.  
   
     ```cpp  
     char buf[MAX]; int cch; ManipulateString(buf, &cch); // ... buf[cch] = '\0'; // if cch >= MAX, process will terminate  
     ```  
   
--   x86 組建的預設結構已變更為 SSE2；因此，編譯器可能會發出 SSE 指令，並會使用 XMM 暫存器執行浮點計算。 若要還原成先前的行為，可使用 /arch:IA32 編譯器旗標將架構指定為 IA32。  
+-   The default architecture for x86 builds is changed to SSE2; therefore, the compiler may emit SSE instructions, and will use the XMM                 registers to perform floating-point calculations. If you want to revert to previous behavior, then use the /arch:IA32 compiler flag to specify the                 architecture as IA32.  
   
--   編譯器可能會發出下列警告：[編譯器警告 (層級 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)及 C4701，但先前不會如此。 編譯器會加強對使用指標類型未經初始化之區域變數的檢查。  
+-   The compiler may issue warnings [Compiler Warning (level 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) and C4701 where previously it did not. The compiler applies stronger checks for use of                 uninitialized local variables of pointer type.  
   
--   如有指定新連結器旗標指定 /HIGHENTROPYVA，Windows 8 通常會導致記憶體配置傳回 64 位元的位址                  (在 Windows 8 之前，這類配置更常傳回小於 2 GB 的位址)。這可能會暴露現有程式碼中的指標截斷 Bug。 此參數預設為開啟。  若要停用此行為，請指定 /HIGHENTROPYVA:NO。  
+-   When the new linker flag /HIGHENTROPYVA is specified, Windows 8 typically causes memory allocations to return a 64-bit address.                 (Prior to Windows 8, such allocations more often returned addresses that were less than 2 GB.)  This may expose pointer truncation bugs in existing code. By default, this switch is on.  To disable this behavior, specify /HIGHENTROPYVA:NO.  
   
--   對於 Managed 組建，Managed 編譯器 (Visual Basic /C#) 也支援 /HIGHENTROPYVA。  但在此情況下，/HIGHENTROPYVA 參數預設為關閉。  
+-   The managed compiler (Visual Basic/C#) also supports /HIGHENTROPYVA for managed builds.  However, in this case,                 the /HIGHENTROPYVAswitch is off by default.  
   
 ### <a name="ide"></a>IDE  
   
--   雖然我們建議您不要使用 C++/CLI 建立 Windows Form 應用程式，但仍能維護現有的 C++ /CLI 應用程式。 若您已經建立了 Windows Form 應用程式或任何其他 .NET UI 應用程式，請使用 C# 或 Visual Basic。 唯有在互通性的考量下，才使用 C++/CLI。  
+-   Although we recommend that you do not create Windows Forms applications in C++/CLI, maintenance of existing C++/CLI UI applications is supported. If you have to create a Windows Forms application, or any other .NET UI application, use C# or Visual Basic. Use C++/CLI for interoperability purposes only.  
   
-### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>平行模式程式庫與並行執行階段程式庫  
- UmsThreadDefault 的 SchedulerType 列舉已標示為即將淘汰。 指定 UmsThreadDefault 會產生已標示為即將淘汰警告，並會在內部對應回 ThreadScheduler。  
+### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>Parallel Patterns Library and Concurrency Runtime Library  
+ The SchedulerType enumeration of UmsThreadDefault is deprecated. Specification of UmsThreadDefault produces a deprecated warning, and internally maps back to the ThreadScheduler.  
   
-### <a name="standard-library"></a>標準程式庫  
+### <a name="standard-library"></a>Standard Library  
   
--   以下是 C++98/03 與 C++11 標準之間的重大變更。在 Visual Studio 2012 的 Visual C++ 中使用明確範本引數呼叫 make_pair() (例如make_pair\<int, int >(x, y)) 通常不會執行編譯。 解決方法是只呼叫 make_pair()，而不要指定明確範本引數 (例如 make_pair(x, y))。 提供明確的範本引數會導致函式失效。 若您需要精確控制所產生的類型，請使用 pair，而不要使用 make_pair (例如 pair\<short, short>(int1, int2))。  
+-   Following a breaking change between the C++98/03 and C++11 standards, using explicit template arguments to call make_pair()—as inmake_pair\<int, int>(x, y)—typically does not compile in Visual C++ in Visual Studio 2012. The solution is to always call make_pair()without explicit template arguments—as in make_pair(x, y). Providing explicit template arguments defeats the purpose of the function. If you require precise control over the resulting type, use pair instead of make_pair—as in pair\<short, short>(int1, int2).  
   
--   C++98/03 與 C++11 標準之間的另一項重大變更︰當 A 隱含表示可轉換成 B，B 隱含表示可轉換成 C，但並未隱含表示可轉換成 C 時，C++98/03 與 Visual C++ 2010 允許pair\<A, X> 轉換 (隱含或明確) 成 pair\<C, X>  (另一個類型 X 不是此處的重點，而不是 pair 中第一種類型的專用類型)。因為 C++11 與 Visual Studio 2012 中的 Visual C++ 偵測到 A 並未隱含表示可轉換成 C，所以會從多載解析中移除 pair 轉換。 這對許多狀況而言是好的改變。 例如多載 func(const pair\<int, int>&) 及 func(const pair\<string, string>&)，以及呼叫 字串 func() 並指定pair\<const char *, const char \*> 將會透過這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 make_pair (static_cast\<B>(a)、 x) 傳遞給需要 pair\<C, X> 的函式。  
+-   Another breaking change between the C++98/03 and C++11 standards: When A is implicitly convertible to B and B is implicitly convertible to C, but A is not implicitly convertible to C, C++98/03 and Visual C++ 2010 permitted pair\<A, X> to be converted (implicitly or explicitly) to pair\<C, X>. (The other type, X, is not of interest here, and this is not specific to the first type in the pair.) Because C++11 and Visual C++ in Visual Studio 2012 detect that A is not implicitly convertible to C, they remove the pair conversion from overload resolution. This is a positive change for many scenarios. For example, overloading func(const pair\<int, int>&) and func(const pair\<string, string>&), and calling func() with pair\<const char *, const char \*> will compile with this change. However, this change breaks code that relied on aggressive pair conversions. Such code can typically be fixed by performing one part of the conversion explicitly—for example, by passing make_pair(static_cast\<B>(a), x) to a function that expects pair\<C, X>.  
   
--   Visual C++ 2010 可模擬 variadic 範本 (例如 make_shared\<T>(arg1, arg2, argN)) 高達 10 個引數之多，方法是停止前置處理器機器的多載與特製化。 Visual Studio 2012 的 Visual C++ 中將此限制縮減為 5 成引數，以改善大多數使用者的編譯時間及編譯器的記憶體耗用量。 但您可以藉由將 _VARIADIC_MAX 明確定義為 10 來將整個專案設定成先前的限制。  
+-   Visual C++ 2010 simulated variadic templates—for example, make_shared\<T>(arg1, arg2, argN)—up to a limit of 10 arguments, by stamping out overloads and specializations with preprocessor machinery. In Visual C++ in Visual Studio 2012, this limit is reduced to 5 arguments to improve compile times and compiler memory consumption for the majority of users. However, you can set the previous limit by explicitly defining _VARIADIC_MAX as 10, project-wide.  
   
--   當包含 C++ 標準程式庫標頭時，C++11 17.6.4.3.1 [macro.names]/2 會禁止將關鍵字巨集化。 當標頭偵測巨集化的關鍵字時，會發出編譯器錯誤  (定義 _ALLOW_KEYWORD_MACROS 可允許編譯這類程式碼，但極力建議不要如此定義)。預設會允許巨集化的 new，而這是唯一允許的例外狀況，原因是標頭會使用 #pragma push_macro("new")/#undef new/#pragma pop_macro("new") 全面自我保護。 定義 _ENFORCE_BAN_OF_MACRO_NEW 不全然如其名稱所示。  
+-   C++11 17.6.4.3.1 [macro.names]/2 forbids macro-izing keywords when C++ Standard Library headers are included. The headers now emit compiler errors if they detect macro-ized keywords. (Defining _ALLOW_KEYWORD_MACROS allows such code to compile, but we strongly discourage that usage.) As an exception, macro-ized new is permitted by default, because the headers comprehensively defend themselves by using #pragma push_macro("new")/#undef new/#pragma pop_macro("new"). Defining _ENFORCE_BAN_OF_MACRO_NEW does exactly what its name implies.  
   
--   為實作各種最佳化及偵錯檢查，C++ 標準程式庫實作是刻意中斷了各版 Visual Studio (2005、2008、2010、2012) 之間的二進位相容性。 當使用 C++ 標準程式庫時，這會導致無法將物件檔案與使用不同版本編譯的靜態程式庫混合成一個二進位檔 (EXE 或 DLL)，而且也無法在使用不同版本編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 混合物件檔案與靜態程式庫 (並用由 Visual Studio 2010 編譯的 C++ 標準程式庫與 Visual Studio 2012 之 Visual C++ 編譯的 C++ 標準程式庫) 會發出有關於 _MSC_VER 不符的連結器錯誤，其中 _MSC_VER 是包含編譯器主要版本 (Visual Studio 2012 的 Visual C++ 為 1700) 的巨集。 這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。  
+-   To implement various optimizations and debugging checks, the C++ Standard Library implementation intentionally breaks binary compatibility among versions of Visual Studio (2005, 2008, 2010, 2012). When the C++ Standard Library is used, this forbids the mixing of object files and static libraries that are compiled by using different versions into one binary (EXE or DLL), and forbids the passing of C++ Standard Library objects between binaries that are compiled by using different versions. The mixing of object files and static libraries (using the C++ Standard Library that were compiled by using Visual C++ 2010 with those that were compiled by using Visual C++ in Visual Studio 2012 emits linker errors about _MSC_VER mismatch, where _MSC_VER is the macro that contains the compiler's major version (1700 for Visual C++ in Visual Studio 2012). This check cannot detect DLL mixing, and cannot detect mixing that involves Visual C++ 2008 or earlier.  
   
--   除了偵測 _ITERATOR_DEBUG_LEVEL 不符的情況 (由 Visual Studio 2010 之 Visual C++ 實作) 之外，Visual Studio 2012 的 Visual C++ 還會偵測執行階段程式庫不符的錯誤。 當混用編譯器選項 /MT (靜態發行)、/MTd (靜態偵錯)、/MD (動態發行) 及 /MDd (動態偵錯) 時，即會發生這些情況。  
+-   In addition to detecting _ITERATOR_DEBUG_LEVEL mismatches, which was implemented in Visual C++ 2010, Visual C++ in Visual Studio 2012 detects Runtime Library mismatches. These occur when the compiler options /MT (static release), /MTd (static debug), /MD (dynamic release), and /MDd (dynamic debug) are mixed.  
   
--   在舊版中 operator\<()、operator>(), operator\<=() 及 operator>=() 可供 std::unordered_map andstdext::hash_map 容器系列使用，但不盡實用。 因此 Visual Studio 2012 的 Visual C++ 移除了這些非標準運算子。 此外，thestd::unordered_map 系列的 operator==() 與 operator!=() 實作經擴充之後，已涵蓋了 stdext::hash_map 系列  (建議您避免在新的程式碼中使用 thestdext::hash_map 系列)。  
+-   operator\<(), operator>(), operator\<=(), and operator>=() were previously available for the std::unordered_map andstdext::hash_map families of containers, although their implementations were not actually useful. These non-standard operators have been removed in Visual C++ in Visual Studio 2012. Additionally, the implementation of operator==() and operator!=() for thestd::unordered_map family has been extended to cover the stdext::hash_map family. (We recommend that you avoid the use of thestdext::hash_map family in new code.)  
   
--   C++11 22.4.1.4 [locale.codecvt] 指定 codecvt::length() 及 codecvt::do_length() 應使用可修改 stateT i 參數，但 Visual C++ 2010 則是使用 const stateT&。 而 Visual Studio 2012 的 Visual C++ 因為遵循標準而採用了 stateT&。 對於想要覆寫虛擬函式 do_length() 的使用者而言，此差異相當大。  
+-   C++11 22.4.1.4 [locale.codecvt] specifies that codecvt::length() and codecvt::do_length() should take modifiable stateT&parameters, but Visual C++ 2010 took const stateT&. Visual C++ in Visual Studio 2012 takes stateT& as mandated by the standard. This difference is significant for anyone who is attempting to override the virtual function do_length().  
   
 ### <a name="crt"></a>CRT  
   
--   new 與 malloc() 中使用的 C 執行階段 (CRT) 堆積已不再是私用。 CRT 現在會使用處理序堆積。 這表示當堆積不會在 DLL 卸載之後終結，致使靜態連結到 CRT 的 DLL 必須在卸載之前，先清除 DLL 程式碼所配置的記憶體。  
+-   The C Runtime (CRT) heap, which is used for new and malloc(), is no longer private. The CRT now uses the process heap. This means that the heap is not destroyed when a DLL is unloaded, so DLLs that link statically to the CRT must ensure memory that's allocated by the DLL code is cleaned up before it’s unloaded.  
   
--   Iscsymf() 函式利用負數值進行判斷提示。  
+-   The iscsymf() function asserts with negative values.  
   
--   threadlocaleinfostruct 結構已變更為可接受地區設定函式的變更。  
+-   The threadlocaleinfostruct struct has changed to accommodate the changes to locale functions.  
   
--   具有對應內建函式的 CRT 函式 (例如 memxxx()、strxxx()) 已從 intrin.h 中移除。 若這些函式中只包含 intrin.h，現在也必須加入相對應的 CRT 標頭。  
+-   CRT functions that have corresponding intrinsics such as memxxx(), strxxx() are removed from intrin.h. If you included intrin.h only for these functions, you must now include the corresponding CRT headers.  
   
-### <a name="mfc-and-atl"></a>MFC 和 ATL  
+### <a name="mfc-and-atl"></a>MFC and ATL  
   
--   因為移除了 Fusion 支援 (afxcomctl32.h)，所以所有在 afxcomctl32.h 中定義的方法也一併移除。 標頭檔 afxcomctl32.h 與 afxcomctl32.inl 已刪除。  
+-   Removed Fusion support (afxcomctl32.h); therefore, all methods that are defined in afxcomctl32.h have been removed. Header files afxcomctl32.h and afxcomctl32.inl have been deleted.  
   
--   將 CDockablePane::RemoveFromDefaultPaneDivider 的名稱變更為 CDockablePane::RemoveFromDefaultPaneDividier。  
+-   Changed the name of CDockablePane::RemoveFromDefaultPaneDividier to CDockablePane::RemoveFromDefaultPaneDivider.  
   
--   變更了 CFileDialog::SetDefExt 的特徵標記，改為使用 LPCTSTR。這會影響 Unicode 組建。  
+-   Changed the signature of CFileDialog::SetDefExt to use LPCTSTR; therefore, Unicode builds are affected.  
   
--   移除了過時的 ATL 追蹤分類。  
+-   Removed obsolete ATL tracing categories.  
   
--   將 CRect CBasePane::MoveWindow 的特徵標記變更為使用 const CRect。  
+-   Changed the signature of CBasePane::MoveWindow to take a const CRect.  
   
--   將 CMFCEditBrowseCtrl::EnableBrowseButton 的特徵標記。  
+-   Changed the signature of CMFCEditBrowseCtrl::EnableBrowseButton.  
   
--   移除了 CMFCBaseTabCtrl 的 m_fntTabs 與 m_fntTabsBold。  
+-   Removed m_fntTabs and m_fntTabsBold from CMFCBaseTabCtrl.  
   
--   為 CMFCRibbonStatusBarPane 建構函式新增了參數  (這是預設參數，所以沒有來源中斷的問題)。  
+-   Added a parameter to the CMFCRibbonStatusBarPane constructors. (It is a default parameter, and so it is not source-breaking.)  
   
--   為 CMFCRibbonCommandsListBox 建構函式新增了參數  (這是預設參數，所以沒有來源中斷的問題)。  
+-   Added a parameter to the CMFCRibbonCommandsListBox constructor. (It is a default parameter, and so it is not source-breaking.)  
   
--   移除了 AFXTrackMouse API (及相關的計時器程序)。 請改用 Win32 TrackMouseEvent API。  
+-   Removed the AFXTrackMouse API (and related timer proc). Use the Win32 TrackMouseEvent API instead.  
   
--   為 CFolderPickerDialog 建構函式新增了參數  (這是預設參數，所以沒有來源中斷的問題)。  
+-   Added a parameter to the CFolderPickerDialog constructor. (It is a default parameter, and so it is not source-breaking.)  
   
--   變更了 CFileStatus 結構大小︰m_attribute 成員從 BYTE 變更為 DWORD (以符合從 GetFileAttributes 傳回的值)。  
+-   CFileStatus structure size changed: The m_attribute member changed from BYTE to DWORD (to match the value that's returned fromGetFileAttributes).  
   
--   CRichEditCtrl 與 CRichEditView 在 Unicode 組建中現在會使用 MSFTEDIT_CLASS (RichEdit 4.1 控制)，而不會使用 RICHEDIT_CLASS (RichEdit 3.0 控制)。  
+-   CRichEditCtrl and CRichEditView use MSFTEDIT_CLASS (RichEdit 4.1 control) instead of RICHEDIT_CLASS (RichEdit 3.0 control) in Unicode builds.  
   
--   因為 AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground 在 Windows Vista、 Windows 7 及 Windows 8 中恆為 TRUE，所以予以移除。  
+-   Removed AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground because it is always TRUE on Windows Vista, Windows 7, and Windows 8.  
   
--   因為 AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable 在 Windows Vista、 Windows 7 及 Windows 8 中恆為 TRUE，所以予以移除。  
+-   Removed AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable because it is always TRUE on Windows Vista, Windows 7, and Windows 8.  
   
--   移除了 AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea。 直接在 Windows Vista、Windows 7 及 Windows 8 上呼叫 Windows API。  
+-   Removed AFX_GLOBAL_DATA::DwmExtendFrameIntoClientArea. Call Windows API directly on Windows Vista, Windows 7, and Windows 8.  
   
--   移除了 AFX_GLOBAL_DATA::DwmDefWindowProc。 直接在 Windows Vista、Windows 7 及 Windows 8 上呼叫 Windows API。  
+-   Removed AFX_GLOBAL_DATA::DwmDefWindowProc. Call Windows API directly on Windows Vista, Windows 7, and Windows 8.  
   
--   將 AFX_GLOBAL_DATA::DwmIsCompositionEnabled 重新命名為 IsDwmCompositionEnabled，以避免名稱衝突。  
+-   Renamed AFX_GLOBAL_DATA::DwmIsCompositionEnabled to IsDwmCompositionEnabled to eliminate name collision.  
   
--   變更了許多 MFC 內部計時器的識別碼，並將定義移至 afxres.h (AFX_TIMER_ID_ *)。  
+-   Changed identifiers for a number of MFC internal timers and moved the definitions to afxres.h (AFX_TIMER_ID_*).  
   
--   變更了 OnExitSizeMove 方法的特徵標記，以符合 ON_WM_EXITSIZEMOVE 巨集︰  
-  
-    -   CFrameWndEx  
-  
-    -   CMDIFrameWndEx  
-  
-    -   CPaneFrameWnd  
-  
--   變更了 OnDWMCompositionChanged 的名稱及特徵標記，以符合 ON_WM_DWMCOMPOSITIONCHANGED 巨集︰  
+-   Changed the signature of OnExitSizeMove method to agree with the ON_WM_EXITSIZEMOVE macro:  
   
     -   CFrameWndEx  
   
@@ -3141,7 +3133,15 @@ C c;
   
     -   CPaneFrameWnd  
   
--   變更了 OnMouseLeave 方法的特徵標記，以符合 ON_WM_MOUSELEAVE 巨集：  
+-   Changed the name and signature of OnDWMCompositionChanged to agree with the ON_WM_DWMCOMPOSITIONCHANGED macro:  
+  
+    -   CFrameWndEx  
+  
+    -   CMDIFrameWndEx  
+  
+    -   CPaneFrameWnd  
+  
+-   Changed the signature of OnMouseLeave method to agree with the ON_WM_MOUSELEAVE macro:  
   
     -   CMFCCaptionBar  
   
@@ -3167,21 +3167,21 @@ C c;
   
     -   CMFCAutoHideBar  
   
--   變更了 OnPowerBroadcast 的特徵標記，以符合 ON_WM_POWERBROADCAST 巨集：  
+-   Changed the signature of OnPowerBroadcast to agree with the ON_WM_POWERBROADCAST macro:  
   
     -   CFrameWndEx  
   
     -   CMDIFrameWndEx  
   
--   變更了 OnStyleChanged 的特徵標記，以符合 ON_WM_STYLECHANGED 巨集︰  
+-   Changed the signature of OnStyleChanged to agree with the ON_WM_STYLECHANGED macro:  
   
     -   CMFCListCtrl  
   
     -   CMFCStatusBar  
   
--   將內部方法 FontFamilyProcFonts 重新命名為 FontFamalyProcFonts。  
+-   Renamed the internal method FontFamalyProcFonts to FontFamilyProcFonts.  
   
--   移除了多個全域靜態 CString 物件，以解決一些狀況的記憶體流失問題 (由 #defines 取代)，同時也移除了下列類別成員變數︰  
+-   Removed numerous global static CString objects to eliminate memory leaks in some situations (replaced with #defines), and the following class member variables:  
   
     -   CKeyBoardManager::m_strDelimiter  
   
@@ -3203,13 +3203,13 @@ C c;
   
     -   CMFCPropertyGridProperty::m_strFormat  
   
--   變更了 CKeyboardManager::ShowAllAccelerators 的特徵標記，並移除了快速鍵分隔符號參數。  
+-   Changed the signature of CKeyboardManager::ShowAllAccelerators and removed the accelerator delimiter parameter.  
   
--   新增了 CPropertyPage::GetParentSheet，並在 CPropertyPage 類別中改為呼叫 GetParent，以取得正確的父工作表視窗，而該視窗可能是 CPropertyPage 的父視窗或祖視窗。 您可能必須變更您的程式碼，才能呼叫 GetParentSheet 而不是 GetParent。  
+-   Added CPropertyPage::GetParentSheet, and in the CPropertyPage class, call it instead of GetParent to get the correct parent sheet window, which may be the parent or a grandparent window to CPropertyPage. You might have to change your code to call GetParentSheet instead ofGetParent.  
   
--   修正了 ATLBASE.H 中不對稱的 #pragma warning(push) ATLBASE，其會導致警告不正確地停用。 這些警告現在在 ATLBASE 經過剖析之後，都會正確地啟用。  
+-   Fixed unbalanced #pragma warning(push) in ATLBASE.H, which caused warnings to be disabled incorrectly. Those warnings are now enabled correctly after ATLBASE.H has been parsed.  
   
--   移動了 AFX_GLOBAL_DATA to _AFX_D2D_STATE 中與 D2D 相關的方法：  
+-   Moved D2D-related methods from AFX_GLOBAL_DATA to _AFX_D2D_STATE:  
   
     -   GetDirectD2dFactory  
   
@@ -3225,113 +3225,113 @@ C c;
   
     -   D2D1MakeRotateMatrix  
   
-    -   不再呼叫 afxGlobalData.IsD2DInitialized 而改為呼叫 AfxGetD2DState->IsD2DInitialized。  
+    -   Instead of calling, for example, afxGlobalData.IsD2DInitialized, call AfxGetD2DState->IsD2DInitialized.  
   
--   移除了 \atlmfc\include\ 資料中過時的 ATL*.CPP 檔案。  
+-   Removed obsolete ATL*.CPP files from the \atlmfc\include\ folder.  
   
--   將 afxGlobalData 初始化移至隨選，而不是在 CRT 初始化階段，以滿足 DLLMain 需求。  
+-   Moved afxGlobalData initialization to on-demand instead of at CRT initialization time, to satisfy DLLMain requirements.  
   
--   為 CMFCOutlookBarPane 類別新增了 RemoveButtonByIndex 方法。  
+-   Added the RemoveButtonByIndex method to the CMFCOutlookBarPane class.  
   
--   將 CMFCCmdUsageCount::IsFreqeuntlyUsedCmd 更正為 IsFrequentlyUsedCmd。  
+-   Corrected CMFCCmdUsageCount::IsFreqeuntlyUsedCmd to IsFrequentlyUsedCmd.  
   
--   將幾個 RestoreOriginalstate 執行個體更正為 RestoreOriginalState (CMFCToolBar、CMFCMenuBar、CMFCOutlookBarPane)。  
+-   Corrected several instances of RestoreOriginalstate to RestoreOriginalState (CMFCToolBar, CMFCMenuBar, CMFCOutlookBarPane).  
   
--   從 CDockablePane 中移除了未使用的方法：SetCaptionStyle、IsDrawCaption、IsHideDisabledButtons、GetRecentSiblingPaneInfo 與 CanAdjustLayout。  
+-   Removed unused methods from CDockablePane: SetCaptionStyle, IsDrawCaption, IsHideDisabledButtons, GetRecentSiblingPaneInfo, andCanAdjustLayout.  
   
--   移除了 CDockablePane 的靜態成員變數 m_bCaptionText 與 m_bHideDisabledButtons。  
+-   Removed CDockablePane static member variables m_bCaptionText and m_bHideDisabledButtons.  
   
--   為 CMFCFontComboBox 新增了覆寫 DeleteString 方法。  
+-   Added an override DeleteString method to CMFCFontComboBox.  
   
--   從 CPane 中移除了未使用的方法︰GetMinLength 及 IsLastPaneOnLastRow。  
+-   Removed unused methods from CPane: GetMinLength and IsLastPaneOnLastRow.  
   
--   將 CPane::GetDockSiteRow(CDockingPanesRow *) 重新命名為 CPane::SetDockSiteRow。  
+-   Renamed CPane::GetDockSiteRow(CDockingPanesRow *) to CPane::SetDockSiteRow.  
   
-## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 的重大變更  
+## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 Breaking Changes  
   
-### <a name="compiler"></a>編譯器  
+### <a name="compiler"></a>Compiler  
   
--   auto 關鍵字已有新的預設意義。 因為舊的意義甚少使用，所以這項變更對於大多數的應用程式沒有影響。  
+-   The auto keyword has a new default meaning. Because use of the old meaning is rare, most applications will not be affected by this change.  
   
--   因為引進了新的 static_assert 關鍵字，所以您的程式碼中如有同名的識別碼，將會引發名稱衝突。  
+-   The new static_assert keyword is introduced, which will cause a name conflict if there is already an identifier by that name in your code.  
   
--   新的 lambda 標記法支援不支援在 IDL UUID 屬性中編寫未加引號的的 GUID。  
+-   Support for the new lambda notation excludes support for coding an unquoted GUID in an IDL uuid attribute.  
   
--   .NET Framework 4 引進了損毀狀態例外狀況概念，亦即在此例外狀況中，處理序會處於無法復原的損毀狀態。 根據預設，您無法捕捉損毀狀態例外狀況，即使使用可以捕捉所有其他例外狀況的 /EHa 編譯器選項枼無法達成此目的。                 若要明確捕捉損毀狀態例外狀況，請使用 __try-\__except 陳述式。 或是套用 [HandledProcessCorruptedStateExceptions] 屬性啟用函式，以捕捉損毀狀態例外狀況。  此變更主要會影響可能需要擷取損毀狀態例外狀況的系統程式設計人員。 這八個例外狀況包括：STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE。                 如需這些例外狀況的詳細資訊，請參閱 [GetExceptionCode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679356.aspx) 巨集。  
+-   The .NET Framework 4 introduces the concept of corrupted state exceptions, which are exceptions that leave a process in an unrecoverable                 corrupted state. By default, you cannot catch a corrupted state exception, even with the /EHa compiler option that catches all other exceptions.                 To explicitly catch a corrupted state exception, use __try-\__except statements. Or, apply the [HandledProcessCorruptedStateExceptions]attribute                 to enable a function to catch corrupted state exceptions.  This change affects primarily system programmers who might have to catch a corrupted                 state exception. The eight exceptions are STATUS_ACCESS_VIOLATION, STATUS_STACK_OVERFLOW, EXCEPTION_ILLEGAL_INSTRUCTION,                 EXCEPTION_IN_PAGE_ERROR, EXCEPTION_INVALID_DISPOSITION, EXCEPTION_NONCONTINUABLE_EXCEPTION, EXCEPTION_PRIV_INSTRUCTION, STATUS_UNWIND_CONSOLIDATE.                 For more information about these exceptions, see the [GetExceptionCode](https://msdn.microsoft.com/en-us/library/windows/desktop/ms679356.aspx) macro.  
   
--   相較於舊版，修改後的 /GS 編譯器選項會更密集地監視緩衝區滿溢狀況。 此版可能會在堆疊中插入額外安全性檢查，因而造成效能降低。 使用新的 __declspec(safebuffers) 關鍵字可指示編譯器對於特定函式不要插入安全性檢查。  
+-   The revised /GS compiler option guards against buffer overruns more comprehensively than in earlier versions. This version might insert additional security checks in the stack that might decrease performance. Use the new __declspec(safebuffers) keyword to instruct the compiler to not insert security checks for a particular function.  
   
--   若同時使用 /GL (整個程式最佳化) 與 /clr (通用語言執行平台編譯) 編譯器選項進行編譯，將會忽略 /GLoption。 變更的原因是並用這兩個編譯器所能選項的好處並不多。 此變更讓建置的效能獲得提升。  
+-   If you compile with both the /GL (Whole Program Optimization) and /clr (Common Language Runtime Compilation) compiler options, the /GLoption is ignored. This change was made because the combination of compiler options provided little benefit. As a result of this change, the performance of the build is improved.  
   
--   Visual C++ 2010 預設會停用對三併詞的支援。 若要啟用三併詞的支援，可使用 /Zc: trigraphs 編譯器選項。 三併詞包含兩個連續的問號 ("？") 後接唯一的第三個字元。 編譯器會以對應的標點符號字元取代三併詞。 例如編譯器會將 "??=" 取代成 '#' 字元。 若在 C 原始程式檔中使用的字元集不含某些標點符號字元的慣用圖形表示，您可改用三併詞。  
+-   By default, support for trigraphs is disabled in Visual C++ 2010 . Use the /Zc:trigraphs compiler option to enable trigraphs support. A trigraph consists of two consecutive question marks ("??") followed by a unique third character. The compiler replaces a trigraph with a corresponding punctuation character. For example, the compiler replaces the "??=" trigraph with the '#' character. Use trigraphs in C source files that use a character set that does not contain convenient graphic representations for some punctuation characters.  
   
--   連結器已不再支援 Windows 98 的最佳化。 若指定忽略 /OPT:WIN98 或 /OPT:NOWIN98 ，/OPT (最佳化) 選項會產生編譯時期錯誤。  
+-   The linker no longer supports optimizing for Windows 98. The /OPT (Optimizations) option produces a compile time error if you specify/OPT:WIN98 or /OPT:NOWIN98.  
   
--   由 RuntimeLibrary 與 DebugInformationFormat 建置系統屬性指定的預設編譯器選項已有變更。 這些屬性預設會在 Visual C++ 第 7.0 版到 10.0 版所建立的專案中指定。 若您移轉了 Visual C++ 6.0 所建立的專案，請考慮是否要指定這些屬性的值。  
+-   The default compiler options that are specified by the RuntimeLibrary and DebugInformationFormat build system properties have been changed. By default, these build properties are specified in projects that are created by Visual C++ releases 7.0 through 10.0. If you migrate a project that was created by Visual C++ 6.0, consider whether to specify a value for these properties.  
   
--   在 Visual C++ 2010 中，RuntimeLibrary = MultiThreaded (/MD) 且 DebugInformationFormat = ProgramDatabase (/Zi)。 在 Visual C++ 9.0 中，RuntimeLibrary = MultiThreaded (/MT) 且 DebugInformationFormat = Disabled。  
+-   In Visual C++ 2010, RuntimeLibrary = MultiThreaded (/MD) and DebugInformationFormat = ProgramDatabase (/Zi). In Visual C++ 9.0,RuntimeLibrary = MultiThreaded (/MT) and DebugInformationFormat = Disabled.  
   
 ### <a name="clr"></a>CLR  
   
--   Microsoft C# 與 Visual Basic 編譯器現在都不會產生任何主要 interop 組件 (非 PIA)。 非 PIA 組件不需要部署相關的主要 interop 組件 (PIA)，就能使用 COM 類型。 取用 Visual C# 或 Visual Basic 所產生的非 PIA 組件時，必須在您參考編譯命中的 PIA 組件，才能參考使用該程式庫的任何非 PIA 組件。  
+-   The Microsoft C# and Visual Basic compilers can now produce a no primary interop assembly (no-PIA). A no-PIA assembly can use COM types without the deployment of the relevant primary interop assembly (PIA). When consuming no-PIA assemblies produced by Visual C# or Visual Basic, you must reference the PIA assembly on the compile command before you reference any no-PIA assembly that uses the library.  
   
-### <a name="visual-c-projects-and-msbuild"></a>Visual C++ Projects 與 MSBuild  
+### <a name="visual-c-projects-and-msbuild"></a>Visual C++ Projects and MSBuild  
   
--   Visual C++ 專案現在會使用 MSBuild 工具。 因此，專案檔會使用新的 XML 檔案格式與 .vcxproj 檔案後置字元。 Visual C++ 2010 會自動舊版 Visual Studio 的專案檔轉換成新的檔案格式。 現有的專案若是使用舊版的建置工具 VCBUILD.exe 或專案檔案後置字元.vcproj，便會受到影響。  
+-   Visual C++ projects are now based on the MSBuild tool. Consequently, project files use a new XML file format and a .vcxproj file suffix. Visual C++ 2010 automatically converts project files from earlier versions of Visual Studio to the new file format. An existing project is affected if it depends on the previous build tool, VCBUILD.exe, or project file suffix, .vcproj.  
   
--   舊版的 Visual C++ 支援延遲評估屬性工作表。 例如，父屬性工作表雖無法匯入子屬性工作表，但可使用子系中定義的變數來定義其他變數。 延遲評估讓父系在子屬性工作表匯入之前就能使用子變數。 在 Visual Cc++ 2010 中，因為 MSBuild 只支援早期評估，所以無法在專案工作表變數定義之前先行使用。  
+-   In earlier releases, Visual C++ supported the late evaluation of property sheets. For example, a parent property sheet could import a child property sheet, and the parent could use a variable defined in the child to define other variables. Late evaluation enabled the parent to use the child variable even before the child property sheet was imported. In Visual C++ 2010, a project sheet variable cannot be used before it is defined because MSBuild supports only early evaluation.  
   
 ### <a name="ide"></a>IDE  
   
--   此應用程式的終止對話方塊不會再結束應用程式。 在舊版中，當 abort() 或 terminate() 函式關閉應用程式的零售版本時，C 執行階段程式庫會在主控台視窗或對話方塊中顯示應用程式終止訊息。 此訊息只顯示部分：「此應用程式要求執行階段以異常方式將其終止。 如需詳細資訊，請連絡應用程式支援小組。」                 因為 Windows 會接著顯示目前的終止處理常式 (通常為 Windows 錯誤報告 (Dr. Watson) 對話方塊或 Visual Studio 偵錯工具)，讓此應用程式終止訊息顯得多餘。 自 Visual Studio 2010 起，C 執行階段程式庫不再顯示此訊息。 此外，此執行階段會造成應用程式無法在偵錯工具啟動前結束。 僅當您使用了此應用程式終止訊息的舊行為，這項重大變更對您才有影響。  
+-   The application termination dialog box no longer ends an application. In previous releases, when the abort() or terminate() function closed the                 retail build of an application, the C Run-Time Library displayed an application termination message in a console window or dialog box. The message said in part, "This                 application has requested the Runtime to terminate it in an unusual way. Please contact the application's support team for more information."                 The application termination message was redundant because Windows subsequently displayed the current termination handler, which was usually the Windows Error Reporting                 (Dr. Watson) dialog box or the Visual Studio debugger. Starting in Visual Studio 2010, the C Run-Time Library does not display the message. Furthermore, the runtime                 prevents the application from ending before a debugger starts. This is a breaking change only if you depend on the previous behavior of the application termination                 message.  
   
--   僅限 Visual Studio 2010：IntelliSense 不適用於 C++/CLI 程式碼或屬性；「尋找所有參考」不適用於本機變數；程式碼模型不會從匯入的組件擷取類型名稱，也不會將類型解析成完整名稱。  
+-   Specifically for Visual Studio 2010, IntelliSense does not work for C++/CLI code or attributes, Find All References does not work for local                 variables, and Code Model does not retrieve type names from imported assemblies or resolve types to their fully qualified names.  
   
-### <a name="libraries"></a>程式庫  
+### <a name="libraries"></a>Libraries  
   
--   SafeInt 類別包含在 Visual C++ 中，而且不再需要個個別下載。 僅當您開發的類別名稱也稱為 SafeInt 時，此重大變更對您才有影響。  
+-   The SafeInt class is included in Visual C++ and is no longer in a separate download. This is a breaking change only if you have developed a class that is also named "SafeInt".  
   
--   程式庫部署模型不再使用訊清單來尋找特定版本的動態連結程式庫。 取而代之地是在每個動態連結程式庫名稱中加入其版本號碼，讓您可以使用該名稱尋找程式庫。  
+-   The libraries deployment model no longer uses manifests to find a particular version of a dynamic link library. Instead, the name of each dynamic link library contains its version number, and you use that name to locate the library.  
   
--   在舊版的 Visual Studio 中，您可以重建執行階段程式庫。 在 Visual C++ 2010 中，您已無法再建置自己的 C 執行階段程式庫檔案。  
+-   In previous versions of Visual Studio, you could rebuild the run time libraries. Visual C++ 2010 no longer supports building your own copies of the C run time library files.  
   
-### <a name="standard-library"></a>標準程式庫  
+### <a name="standard-library"></a>Standard Library  
   
--   其他許多標頭檔已不再會自動加入 \<iterator> 標頭。 新做法是當您需要獨立迭代器的支援時，明確加入該標頭。僅當現有的專案使用舊版建置工具 VCBUILD.exe 或專案檔後置字元 .vcproj.interator > 標頭時才會受到影響。  
+-   The \<iterator>                 header is no longer included automatically by many other header files. Instead, include that header explicitly if you require support                 for the standalone iterators defined in the An existing project is affected if it depends on the previous build tool, VCBUILD.exe, or project file suffix,                  .vcproj.interator> header.  
   
--   \<algorithm> 標頭中的 checked_* 與 unchecked_\* 函式已移除。 \<iterator>> 標頭中的 checked_iteratorclass 已移除，但新增了 unchecked_array_iterator 類別。  
+-   In the \<algorithm>                 header, the checked_* and unchecked_\* functions are removed. And in the \<iterator>> header, the                  checked_iteratorclass is removed, and the unchecked_array_iterator class has been added.  
   
--   CComPtr::CComPtr(int) 建構函式已移除。 該建構函式允許從 NULL 巨集建構 CComPtr 物件，但這非必要，並因此而從非零整數產生了無意義的建構。  
+-   The CComPtr::CComPtr(int) constructor is removed. That constructor allowed a CComPtr object to be constructed from the NULL macro, but was unnecessary and allowed nonsensical constructions from non-zero integers.  
   
-     CComPtr 仍可從 NULL (定義是 0) 建構定義，但若從常值 0 以外的整數建構將會失敗。 請改用 nullptr。  
+     A CComPtr can still be constructed from NULL, which is defined as 0, but will fail if constructed from an integer other than literal 0. use nullptr instead.  
   
--   下列 ctype 成員函式已移除︰ctype::_Do_narrow_s、ctype::_Do_widen_s、ctype::_narrow_s、ctype::_widen_s。 若應用程式使用下列其中一個成員函式，必須使用對應的不安全版本取代︰ctype:: do_narrow、ctype:: do_widen、ctype:: narrow、ctype:: widen。  
+-   The following ctype member functions were removed: ctype::_Do_narrow_s, ctype::_Do_widen_s, ctype::_narrow_s, ctype::_widen_s. If an application uses one of these member functions, you must replace it with the corresponding non-secure version: ctype::do_narrow,ctype::do_widen, ctype::narrow, ctype::widen.  
   
-### <a name="crt-mfc-and-atl-libraries"></a>CRT、MFC 及 ATL 程式庫  
+### <a name="crt-mfc-and-atl-libraries"></a>CRT, MFC, and ATL Libraries  
   
--   使用者已無法再建置 CRT、MFC 及 ATL 程式庫。 例如未提供適當的 nmake 檔案。                 但使用者仍能存取這些程式庫的原始程式碼。 說明 Microsoft 用以建置這些程式庫之 MSBuild 選項的文件，可能會張貼在 Visual C++ 小組部落格中。  
+-   Support has been removed for users to build the CRT, MFC, and ATL libraries. For example, an appropriate nmake file is not provided.                 However, users still have access to the source code for these libraries. And a document that describes the MSBuild options that Microsoft uses to build these                 libraries will probably be posted in a Visual C++ Team Blog.  
   
--   IA64 的 MFC 支援已移除。 但仍支援 IA64 上的 CRT、 ATL。  
+-   MFC support for IA64 has been removed. However, support for the CRT and ATL on IA64 is still provided.  
   
--   序數在 MFC 模組定義 (.def) 檔案中已無法再重複使用。 此變更表示次數版本之間的序數不再不同，而且 Service Pack 及快速修正工程版本的二進位相容性將有所改進。  
+-   Ordinals are no longer reused in MFC module-definition (.def) files. This change means ordinals will not be different between minor versions, and binary compatibility for service packs and quick fix engineering releases will be improved.  
   
--   CDocTemplate 類別新增了虛擬函式。 這個新的虛擬函式是 [CDocTemplate 類別](../mfc/reference/cdoctemplate-class.md)。 舊版的 OpenDocumentFile 具有兩個參數。 新版則具有三個參數。 若要支援重新啟動管理員，任何衍生自 CDocTemplate 的類別都必須實作具有三個參數的版本。 新的參數是 bAddToMRU。  
+-   A new virtual function was added to the CDocTemplate class. This new virtual function is [CDocTemplate Class](../mfc/reference/cdoctemplate-class.md). The previous version of OpenDocumentFile had two parameters. The new version has three parameters. To support the restart manager, any class derived from CDocTemplate must implement the version that has three parameters. The new parameter is bAddToMRU.  
   
-### <a name="macros-and-environment-variables"></a>巨集與環境變數  
+### <a name="macros-and-environment-variables"></a>Macros and Environment Variables  
   
--   環境變數 __MSVCRT_HEAP_SELECT 已不再支援。 此環境變數已予移除，而且不提供任何取代項目。  
+-   The environment variable __MSVCRT_HEAP_SELECT is no longer supported. This environment variable is removed and there is no replacement.  
   
-### <a name="microsoft-macro-assembler-reference"></a>Microsoft 巨集組合程式參考  
+### <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler Reference  
   
--   Microsoft 巨集組合程式參考編譯器移除了幾個指示詞。 移除的指示詞包括：.186、.286、.286P、.287、.8086、.8087 及 .NO87。  
+-   Several directives were removed from the Microsoft Macro Assembler Reference compiler. The removed directives are .186, .286, .286P, .287,.8086, .8087, and .NO87.  
   
-## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 的重大變更  
+## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 Breaking Changes  
   
-### <a name="compiler"></a>編譯器  
+### <a name="compiler"></a>Compiler  
   
--   不再支援 Windows 95、Windows 98、Windows ME 及 Windows NT 平台。 這些作業系統已從目標平台清單中移除。  
+-   The Windows 95, Windows 98, Windows ME, and Windows NT platforms are no longer supported. These operating systems have been removed from the list of targeted platforms.  
   
--   此編譯器已不再支援多個直接關聯到 ATL 伺服器的屬性。 以下是不再支援的屬性︰  
+-   The compiler no longer supports multiple attributes that were directly associated with ATL Server. The following attributes are no longer supported:  
   
     -   perf_counter  
   
@@ -3349,21 +3349,21 @@ C c;
   
     -   tag_name  
   
-### <a name="visual-c-projects"></a>Visual C++ 專案  
+### <a name="visual-c-projects"></a>Visual C++ Projects  
   
--   從舊版的 Visual Studio 升級專案時，可能須修改 WINVER 及 _WIN32_WINNT 巨集，使其大於或等於 0x0500。  
+-   When upgrading projects from previous versions of Visual Studio, you might have to modify the WINVER and _WIN32_WINNT macros so that they are greater than or equal to 0x0500.  
   
--   自 Visual Studio 2008 起，[新增專案精靈] 不再提供建立 C++ SQL Server 專案的選項。 使用舊版 Visual Studio 建立的 SQL Server 專案仍可正常地編譯及運作。  
+-   Beginning with Visual Studio 2008, the new project wizard does not have an option to create a C++ SQL Server project. SQL Server projects created by using an earlier version of Visual Studio will still compile and work correctly.  
   
--   Windows API 標頭檔 Winable.h 已移除。 請改為加入 Winuser.h。  
+-   The Windows API header file Winable.h has been removed. Include Winuser.h instead.  
   
--   Windows API 程式庫 Rpcndr.lib 已移除。 請改為連結 rpcrt4.lib。  
+-   The Windows API library Rpcndr.lib has been removed. Link with rpcrt4.lib instead.  
   
 ### <a name="crt"></a>CRT  
   
--   對 Windows 95、Windows 98、Windows Millennium Edition 及 Windows NT 4.0 的支援已移除。  
+-   Support for Windows 95, Windows 98, Windows Millennium Edition, and Windows NT 4.0 has been removed.  
   
--   以下是移除的全域變數︰  
+-   The following global variables have been removed:  
   
     -   _osplatform  
   
@@ -3375,7 +3375,7 @@ C c;
   
     -   _winver  
   
--   下列函式已移除。 請改用 Windows API 函式 GetVersion 或 GetVersionEx︰  
+-   The following functions have been removed. Use the Windows API functions GetVersion or GetVersionEx instead:  
   
     -   _get_osplatform  
   
@@ -3387,159 +3387,159 @@ C c;
   
     -   _get_winver  
   
--   SAL 註釋的語法已變更。 如需詳細資訊，請參閱 [SAL 註釋](../c-runtime-library/sal-annotations.md)。  
+-   The syntax for SAL Annotations has changed. For more information, see [SAL Annotations](../c-runtime-library/sal-annotations.md).  
   
--   IEEE 篩選現在支援 SSE 4.1 指令集。 如需詳細資訊，請參閱 [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt。  
+-   The IEEE filter now supports the SSE 4.1 instruction set. For more information, see [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md)_fpieee_flt.  
   
--   Visual Studio 隨附的 C 執行階段程式庫已不再使用系統 DLL msvcrt.dll。  
+-   The C Run-Time Libraries that ship with Visual Studio are no longer dependent on the system DLL msvcrt.dll.  
   
-### <a name="standard-library"></a>標準程式庫  
+### <a name="standard-library"></a>Standard Library  
   
--   對 Windows 95、Windows 98、Windows Millennium Edition 及 Windows NT 4.0 的支援已移除。  
+-   Support for Windows 95, Windows 98, Windows Millennium Edition, and Windows NT 4.0 has been removed.  
   
--   在定義 _HAS_ITERATOR_DEBUGGING (Visual Studio 2010 之後由[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代) 的偵錯模式中編譯時，應用程式現在已可斷定迭代器何時須嘗試遞增或遞減過去的基礎容器界限。  
+-   When compiling in debug mode with _HAS_ITERATOR_DEBUGGING defined (superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) after Visual Studio 2010), an application will now assert when an iterator attempts to increment or decrement past the bounds of the underlying container.  
   
--   現在堆疊類別的成員變數 C 在宣告後會受到保護。 此成員變數先前宣告為公用。  
+-   The member variable c of the stack Class is now declared protected. Previously, this member variable was declared public.  
   
--   money_get::do_get 的行為已變更。 先前剖析之貨幣金額的小數位數若多於為 frac_digits 呼叫的小數位數，將會使用 do_get 全部取用。 現在，do_get 會在取用最多的 frac_digits 字元之後停止剖析。  
+-   The behavior of money_get::do_get has changed. Previously, when parsing a monetary amount with more fraction digits than are called for by frac_digits, do_get used to consume them all. Now, do_get stops parsing after consuming at most frac_digits characters.  
   
 ### <a name="atl"></a>ATL  
   
--   若不使用 CRT，即無法建置 ATL。 在舊版 Visual Studio 中，您可以使用 #define ATL_MIN_CRT 讓 ATL 專案使用最少的 CRT。 在 Visual C++ 2008 中，無論是否定義 ATL_MIN_CRT，所有 ATL 專案都會使用最少的 CRT。  
+-   ATL cannot be built without a dependency on CRT. In earlier versions of Visual Studio, you could use #define ATL_MIN_CRT to make an ATL project minimally dependent on CRT. In Visual C++ 2008, all ATL projects are minimally dependent on CRT regardless of whether ATL_MIN_CRT is defined.  
   
--   ATL Server 程式碼基底已發行到 CodePlex 成為共用原始碼專案，而且不再隨 Visual Studio 一起安裝。 atlenc.h 中的資料編碼與解碼類別，以及 atlutil.h 與 atlpath.h 中的公用程式函式與類別皆予保留，現在是 ATL 程式庫的一部分。 有幾個與 ATL Server 相關聯的檔案已不再屬於 Visual Studio 的一部分。  
+-   The ATL Server codebase has been released as a shared source project on CodePlex and is not installed as part of Visual Studio. Data encoding and decoding classes from atlenc.h and utility functions and classes from atlutil.h and atlpath.h have been kept and are now part of the ATL library. Several files associated with ATL Server are no longer part of Visual Studio.  
   
--   有些函式已不再包含在 DLL 中， 但仍然位於匯入程式庫。 這不會影響靜態使用函式的程式碼。 只有動態使用這些函式的程式碼才會受到影響。  
+-   Some functions are no longer included in the DLL. They are still located in the import library. This will not affect code that uses the functions statically. It will affect only the code that uses these functions dynamically.  
   
--   基於安全考量，巨集 PROP_ENTRY 及 PROP_ENTRY_EX 已標示為即將淘汰，會由巨集 PROP_ENTRY_TYPE 及 PROP_ENTRY_TYPE_EX 取代。  
+-   The macros PROP_ENTRY and PROP_ENTRY_EX have been deprecated and replaced with the macros PROP_ENTRY_TYPE andPROP_ENTRY_TYPE_EX for security reasons.  
   
-### <a name="atlmfc-shared-classes"></a>ATL/MFC 共用類別  
+### <a name="atlmfc-shared-classes"></a>ATL/MFC Shared Classes  
   
--   若不使用 CRT，即無法建置 ATL。 在舊版 Visual Studio 中，您可以使用 #define ATL_MIN_CRT 讓 ATL 專案使用最少的 CRT。 在 Visual C++ 2008 中，無論是否定義 ATL_MIN_CRT，所有 ATL 專案都會使用最少的 CRT。  
+-   ATL cannot be built without a dependency on CRT. In earlier versions of Visual Studio, you could use #define ATL_MIN_CRT to make an ATL project minimally dependent on CRT. In Visual C++ 2008, all ATL projects are minimally dependent on CRT regardless of whether ATL_MIN_CRT is defined.  
   
--   ATL Server 程式碼基底已發行到 CodePlex 成為共用原始碼專案，而且不再隨 Visual Studio 一起安裝。 atlenc.h 中的資料編碼與解碼類別，以及 atlutil.h 與 atlpath.h 中的公用程式函式與類別皆予保留，現在是 ATL 程式庫的一部分。 有幾個與 ATL Server 相關聯的檔案已不再屬於 Visual Studio 的一部分。  
+-   The ATL Server codebase has been released as a shared source project on CodePlex and is not installed as part of Visual Studio. Data encoding and decoding classes from atlenc.h and utility functions and classes from atlutil.h and atlpath.h have been kept and are now part of the ATL library. Several files associated with ATL Server are no longer part of Visual Studio.  
   
--   有些函式已不再包含在 DLL 中， 但仍然位於匯入程式庫。 這不會影響靜態使用函式的程式碼。 只有動態使用這些函式的程式碼才會受到影響。  
+-   Some functions are no longer included in the DLL. They are still located in the import library. This will not affect code that uses the functions statically. It will affect only the code that uses these functions dynamically.  
   
 ### <a name="mfc"></a>MFC  
   
--   CTime 類別︰CTime 類別現在接受自西元 1/1/1900 起的日期， 而不是西元 1/1/1970。              
--   MFC 對話方塊中控制項的索引標籤︰當在索引標籤順序中插入 MFC ActiveX 控制項時，會影響 MFC 對話方塊中多個控制項的正確索引標籤順序。 此變更修正了這個問題。  
+-   CTime Class: The CTime class now accepts dates starting from 1/1/1900 C.E. instead of 1/1/1970 C.E.              
+-   Tab order of controls in MFC dialogs: The correct tab order of multiple controls in an MFC dialog is disturbed if an MFC ActiveX control is inserted in the tab order. This change corrects that problem.  
   
-     例如建立具有 ActiveX 控制項與幾個編輯控制項的 MFC 對話方塊應用程式。 將 ActiveX 控制項置於編輯控制項的索引標籤定位中間。 啟動應用程式中，再按一下索引標籤順序位於 ActiveX 控制項之後的編輯控制項，然後按一下索引標籤。 在此變更之前，焦點會從 ActiveX 控制項轉往該編輯控制項，而不會轉往索引標籤順序中的下一個編輯控制項。  
+     For example, create an MFC dialog application that has an ActiveX control and several edit controls. Position the ActiveX control in the middle of the tab order of the edit controls. Start the application, click an edit control whose tab order is after the ActiveX control, then tab. Prior to this change, the focus went to the edit control following the ActiveX control instead of the next edit control in the tab order.  
   
--   CFileDialog 類別︰CFileDialog 類別的自訂範本無法自動移植到 Windows Vista。 這些範本仍可使用，但沒有額外的功能，也沒有 Windows Vista [樣式] 對話方塊的外觀。  
+-   CFileDialog Class:   Custom templates for the CFileDialog class cannot be automatically ported to Windows Vista. They are still usable, but will not have the additional functionality or looks of Windows Vista style dialogs.  
   
--   CWnd 類別及 CFrameWnd 類別︰CWnd::GetMenuBarInfo 方法已移除。  
+-   CWnd Class and CFrameWnd Class:    The CWnd::GetMenuBarInfo method was removed.  
   
-     CFrameWnd::GetMenuBarInfo 方法現在已經不是虛擬方法。 如需詳細資訊，請參閱 Windows SDK 中的 "GetMenuBarInfo Function" (GetMenuBarInfo 函式)。  
+     The CFrameWnd::GetMenuBarInfo method is now a non-virtual method. For more information, see GetMenuBarInfo Functionin the Windows SDK.  
   
--   MFC ISAPI 支援︰ MFC 已無法再透過網際網路伺服器應用程式發展介面 (ISAPI) 建置應用程式。 若要建置 ISAPI 應用程式，請直接呼叫 ISAPI 延伸模組。  
+-   MFC ISAPI support:  MFC no longer supports building applications with the Internet Server Application Programming Interface (ISAPI). If you want to build an ISAPI application, call the ISAPI extensions directly.  
   
--   已標示為即將淘汰的 ANSI API：有幾個 ANSI 版本的 MFC 方法已標示為即將淘汰。 在您後續的應用程式中，須改用這些方法的 Unicode 版本。 如需詳細資訊，請參閱＜Windows Vista 通用控制項的組建需求＞。  
+-   Deprecated ANSI APIs:    The ANSI versions of several MFC methods are deprecated. Use the Unicode versions of those methods in your future applications. For more information, see Build Requirements for Windows Vista Common Controls.  
   
-## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 的重大變更  
+## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 Breaking Changes  
   
 ### <a name="crt"></a>CRT  
   
--   許多函式已標示為即將淘汰。 請參閱＜已標示為即將淘汰的 CRT 函式＞。  
+-   Many functions have been deprecated. See Deprecated CRT Functions.  
   
--   許多函式現在會驗證其參數，並在提供的參數無效時停止執行。 這可中斷程式碼傳遞無效的參數，並利用函式忽略這些參數或只是傳回錯誤碼。 請參閱＜參數驗證＞。  
+-   Many functions now validate their parameters, halting execution if given invalid parameters. This may break code that passes invalid parameters and relies on the function ignoring them or just returning an error code. See Parameter Validation.  
   
--   現在會使用檔案描述元值 -2 指定輸出無法使用 stdout 及 stderr，例如在沒有主控台視窗的 Windows 應用程式中。 先前使用的值為 -1。 如需詳細資訊，請參閱 [_fileno](../c-runtime-library/reference/fileno.md)。  
+-   The file descriptor value -2 is now used to indicate that stdout and stderr are not available for output, as for example in a Windows application that has no console window. The previous value used was -1. For more information, see [_fileno](../c-runtime-library/reference/fileno.md).  
   
--   單一執行緒的 CRT 程式庫 libc.lib 與 libcd.lib 已移除。 請使用多執行緒的 CRT 程式庫。 /ML 編譯器旗標已不再支援。 針對多執行緒程式碼與單一執行緒程式碼的效能可能會出現大幅差異的情況新增了一些非鎖定版本的功能。  
+-   The single-threaded CRT libraries, libc.lib and libcd.lib, have been removed. Use the multi-threaded CRT libraries. The /ML compiler flag is no longer supported. Non-locking versions of some functions have been added in cases where the performance difference between the multithreaded code and the single-threaded code is potentially significant.  
   
--   pow, double pow(int, int) 的多載已移除，以更加貼近標準的要求。  
+-   The overload of pow, double pow(int, int), was removed to better conform with the standard.  
   
--   有鑑於 %n 格式指定名稱本身就不安全，所以所有 printf 系列函式預設都不再提供此支援。 當出現 %n 時的預設行為是叫用無效參數處理常式。 若要啟用 %n 支援，請使用 _set_printf_count_output (also see_get_printf_count_output)。  
+-   The %n format specifier is no longer supported by default in any of the printf family of functions because it is inherently insecure. The default behavior if %n is encountered is to invoke the invalid parameter handler. To enable %n support, use _set_printf_count_output (also see_get_printf_count_output).  
   
--   對於帶正負號的零，sprintf 現在會列印負號。  
+-   sprintf now prints the negative sign of a signed zero.  
   
--   swprintf 已變更為符合標準，所以現在會需要 size 參數。 不使用 size 參數的 swprintf 格式已標示為即將淘汰。  
+-   swprintf has been changed to conform with the Standard; it now requires a size parameter. The form of swprintf without a size parameter has been deprecated.  
   
--   _set_security_error_handler 已移除。 移除任何對該函式的呼叫。預設處理常式在處安全性錯誤上安全性更高。  
+-   _set_security_error_handler has been removed. Remove any calls to that function; the default handler is a much safer way of dealing with security errors.  
   
--   time_t 現在是 64 位元值 (除非定義了 _USE_32BIT_TIME_T)。  
+-   time_t is now a 64-bit value (unless _USE_32BIT_TIME_T is defined).  
   
--   _spawn、_wspawn 函式現在在成功的狀態下，會依照 C 標準的規定保留原有的錯誤號。  
+-   The _spawn, _wspawn Functions now leave errno untouched on success, as specified by the C Standard.  
   
--   RTC 現在預設會使用寬字元。  
+-   RTC now uses wide characters by default.  
   
--   浮點控制字組支援函式已標示為即將淘汰，不再供使用 /CLR 或 /CLR:PURE 編譯而來的應用程式使用。 受影響的函式包括：_clear87、_clearfp、_control87、_controlfp、_fpreset、_status87、_statusfp。 您可以藉由定義 _CRT_MANAGED_FP_NO_DEPRECATE 來停用已標示為即將淘汰的警告，但在 Managed 程式碼中使用這些函式可能會造成無法預期且不受支援的結果。  
+-   Floating-point control word support functions have been deprecated for applications compiled with /CLR or /CLR:PURE. The affected functions are _clear87, _clearfp, _control87, _controlfp, _fpreset, _status87, _statusfp. You can disable the deprecation warning by defining _CRT_MANAGED_FP_NO_DEPRECATE, but the use of these functions in managed code is unpredictable and unsupported.  
   
--   有些函式現在會傳回 const 指標。 舊的 非 const 行為可藉由定義 _CONST_RETURN 重新啟用。 受影響的函式包括：  
+-   Some functions now return const pointers. The old, non-const behavior can be reinstated by defining _CONST_RETURN. The affected functions are  
   
-    1.  memchr、wmemchr  
+    1.  memchr, wmemchr  
   
-    2.  strchr、wcschr、_mbschr、_mbschr_l  
+    2.  strchr, wcschr, _mbschr, _mbschr_l  
   
-    3.  strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l  
+    3.  strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l  
   
-    4.  strrchr、wcsrchr、_mbsrchr、_mbsrchr_l  
+    4.  strrchr, wcsrchr, _mbsrchr, _mbsrchr_l  
   
-    5.  strstr、wcsstr、_mbsstr、_mbsstr_l  
+    5.  strstr, wcsstr, _mbsstr, _mbsstr_l  
   
--   當連結到 Setargv.obj 或 Wsetargv.obj 之後，即使將萬用字元括引雙引號，也無法在命令列上隱藏展開的萬用字元。 如需詳細資訊，請參閱 [Expanding Wildcard Arguments](../c-language/expanding-wildcard-arguments.md) (展開萬用字元引數)。  
+-   When linking with Setargv.obj or Wsetargv.obj, it is no longer possible to suppress the expansion of a wildcard character on the command line by enclosing it in double quotes. For more information, see [Expanding Wildcard Arguments](../c-language/expanding-wildcard-arguments.md).  
   
-### <a name="standard-library-2005"></a>標準程式庫 (2005)  
+### <a name="standard-library-2005"></a>Standard Library (2005)  
   
--   例外狀況類別 (位於 \<exception> 標頭中) 已移至 std 命名空間。 在舊版中，此類別位於全域命名空間。 若要解決有關於找不到例外狀況類別的錯誤，可在您的程式碼中新增下列 using 陳述式︰using namespace std;  
+-   The exception class (located in the \<exception> header) has been moved to the std namespace. In previous versions, this class was in the global namespace. To resolve any errors indicating that the exception class cannot be found, add the following using statement to your code:                 using namespace std;  
   
--   當呼叫 valarray::resize() 時，valarray 的內容會遺失，而且會取代以預設值。 resize() 方法主要在重新初始化 valarray，而不是像vector 一樣動態增加。  
+-   When calling valarray::resize(), the contents of the valarray will be lost and will be replaced by default values. The resize() method is intended to reinitialize the valarray rather than grow it dynamically like a vector.  
   
--   偵錯迭代器︰使用偵錯版本之 C 執行階段程式庫建置的應用程式若是不正確地使用迭代器，可能會在執行階段看到判斷提示。 若要停用這些判斷提示，必須將 _HAS_ITERATOR_DEBUGGING (Visual Studio 2010 之後由 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代) 定義為 0。 如需詳細資訊，請參閱[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。  
+-   Debug Iterators: Applications built with a debug version of the C-Runtime Library and which use iterators incorrectly might begin to see asserts at runtime. To disable these asserts, you must define _HAS_ITERATOR_DEBUGGING (superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) after Visual Studio 2010) to 0. For more information, see [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
-## <a name="visual-c-net-2003-breaking-changes"></a>Visual c + +.NET 2003 的重大變更  
+## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 Breaking Changes  
   
-### <a name="compiler"></a>編譯器  
+### <a name="compiler"></a>Compiler  
   
--   定義的前置處理器指示詞現在需要右括號 (C2004)。  
+-   Closing parentheses now required for the defined preprocessor directive (C2004).  
   
--   明確特製化已無法再從主要範本 ([編譯器錯誤 C2146](../error-messages/compiler-errors-1/compiler-error-c2146.md)) 中尋找範本參數。  
+-   Explicit specializations no longer find template parameters from primary template ([Compiler Error C2146](../error-messages/compiler-errors-1/compiler-error-c2146.md)).  
   
--   受保護的成員只可透過繼承自類別 (A) (其 (n) 為([編譯器錯誤 C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md) 的成員) 之類別 (B) 的成員函式存取。  
+-   A protected member (n) can only be accessed through a member function of a class (B) that inherits from the class (A) of which it (n) is a member ([Compiler Error C2247](../error-messages/compiler-errors-1/compiler-error-c2247.md)).  
   
--   編譯器中改進後的協助工具現在會偵測無法存取的基底類別 ([編譯器錯誤 C2248](../error-messages/compiler-errors-1/compiler-error-c2248.md))。  
+-   Improved accessibility checks in compiler now detect inaccessible base classes ([Compiler Error C2248](../error-messages/compiler-errors-1/compiler-error-c2248.md)).  
   
--   若解構函式及 (或) 複製建構函式無法存取，即無法捕捉任何例外狀況 (C2316)。  
+-   An exception cannot be caught if the destructor and/or copy constructor is inaccessible (C2316).  
   
--   函式指標已不再有任何預設引數 ([編譯器錯誤 C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md))。  
+-   Default arguments on pointers to functions no longer allowed ([Compiler Error C2383](../error-messages/compiler-errors-1/compiler-error-c2383.md)).  
   
--   靜態資料成員無法再透過衍生類別初始化 ([編譯器錯誤 C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md))。  
+-   A static data member cannot be initialized via derived class ([Compiler Error C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md)).  
   
--   依據標準規定不得初始化 typedef，而且現在會產生編譯器錯誤 ([編譯器錯誤 C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md))。  
+-   The initialization of a typedef is not allowed by the standard and now generates a compiler error ([Compiler Error C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).  
   
--   bool 現在是正確的類型 ([編譯器錯誤 C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md))。  
+-   bool is now a proper type ([Compiler Error C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).  
   
--   UDC 現在可以建立具有多載運算子的模稜兩可 ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md))。  
+-   A UDC can now create ambiguity with overloaded operators ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).  
   
--   多個運算式現在會被視為有效的 null 指標常數 ([編譯器錯誤 C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md))。  
+-   More expressions are now considered valid null pointer constants ([Compiler Error C2668](../error-messages/compiler-errors-2/compiler-error-c2668.md)).  
   
--   過去編譯器可以隱含表示的 template<> 現在必須明確存在 ([編譯器錯誤 C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md))。  
+-   template<> is now required in places where the compiler would previously imply it ([Compiler Error C2768](../error-messages/compiler-errors-2/compiler-error-c2768.md)).  
   
--   若函式已透過範本類別明確特製化，即不得在類別外部明確特製化成員函式 ([編譯器錯誤 C2910](../error-messages/compiler-errors-2/compiler-error-c2910.md))。  
+-   The expilicit specialization of a member function ourside the class is not valid if the function has already been explicitly specialized via a template class specialization ([Compiler Error C2910](../error-messages/compiler-errors-2/compiler-error-c2910.md)).  
   
--   浮動點非類型範本參數不得再使用 ([編譯器錯誤 C2993](../error-messages/compiler-errors-2/compiler-error-c2993.md))。  
+-   Floating point non-type template parameters are no longer allowed ([Compiler Error C2993](../error-messages/compiler-errors-2/compiler-error-c2993.md)).  
   
--   類別範本不得用為範本類型引數 (C3206)。  
+-   Class templates are not allowed as template type arguments (C3206).  
   
--   包含命名空間已不再導入 Friend 函式名稱 ([編譯器錯誤 C3767](../error-messages/compiler-errors-2/compiler-error-c3767.md))。  
+-   Friend function names are no longer introduced into containing namespace ([Compiler Error C3767](../error-messages/compiler-errors-2/compiler-error-c3767.md)).  
   
--   編譯器不允許巨集中有任何額外的逗點 (C4002)。  
+-   The compiler will no longer accept extra commas in a macro (C4002).  
   
--   預設會初始化使用 form () 之初始設定式建構的 POD 類型物件 (C4345)。  
+-   An object of POD type constructed with an initializer of the form () will be default-initialized (C4345).  
   
--   當將相依名稱視為類型時，現在需要 typename ([編譯器警告 (層級 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md))。  
+-   typename is now required if a dependent name is to be treated as a type ([Compiler Warning (level 1) C4346](../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)).  
   
--   先前被誤認為樣板特製化的函式現在已能正確辨認 (C4347)。  
+-   Functions that were incorrectly considered template specializations are no longer considered so (C4347).  
   
--   靜態資料成員無法透過衍生類別初始化 (C4356)。  
+-   Static data members cannot be initialized via derived class (C4356).  
   
--   必須先定義類別的樣板特製化，才能在傳回類別中加以使用 ([編譯器警告 (層級 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md))。  
+-   A class template specialization needs to be defined before it was used in a return type ([Compiler Warning (level 3) C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)).  
   
--   編譯器現在會回報無法存取的程式碼 (C4702)。  
+-   The compiler now reports unreachable code (C4702).  
   
-## <a name="see-also"></a>另請參閱  
-[Visual Studio 之 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)
+## <a name="see-also"></a>See Also  
+[What's New for Visual C++ in Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md)
 

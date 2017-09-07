@@ -1,75 +1,96 @@
 ---
-title: "/Wp64 (偵測 64 位元可移植性問題) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.Detect64BitPortabilityProblems"
-  - "VC.Project.VCCLCompilerTool.Detect64BitPortabilityProblems"
-  - "/wp64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Wp64 編譯器選項 [C++]"
-  - "64 位元編譯器 [C++], 偵測可移植性問題"
-  - "Wp64 編譯器選項 [C++]"
-  - "-Wp64 編譯器選項 [C++]"
+title: -Wp64 (Detect 64-Bit Portability Issues) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.Detect64BitPortabilityProblems
+- VC.Project.VCCLCompilerTool.Detect64BitPortabilityProblems
+- /wp64
+dev_langs:
+- C++
+helpviewer_keywords:
+- 64-bit compiler [C++], detecting portability problems
+- /Wp64 compiler option [C++]
+- -Wp64 compiler option [C++]
+- Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
 caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 21
----
-# /Wp64 (偵測 64 位元可移植性問題)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 06f035f2208558f99e50833c576896a2088f5ed6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/30/2017
 
-這個編譯器選項已過時。 在 Visual Studio 2013 之前的 Visual Studio 版本中，這會在同時使用 [\_\_w64](../../cpp/w64.md) 關鍵字標記的類型上，偵測到 64 位元可攜性問題。  
+---
+# <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (Detect 64-Bit Portability Issues)
+
+This compiler option is obsolete. In versions of Visual Studio before Visual Studio 2013, this detects 64-bit portability problems on types that are also marked with the [__w64](../../cpp/w64.md) keyword.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 /Wp64  
 ```  
   
-## 備註  
- 根據預設，在 Visual Studio 2013 之前的 Visual Studio 版本中，**\/Wp64** 編譯器選項在 Visual C\+\+ 32 位元編譯器和 Visual C\+\+ 64 位元編譯器中處於關閉狀態。  
+## <a name="remarks"></a>Remarks  
+
+By default, in versions of Visual Studio before Visual Studio 2013, the **/Wp64** compiler option is off in the Visual C++ compiler that builds 32-bit x86 code, and on in the Visual C++ compiler that builds 64-bit, x64 code.  
   
 > [!IMPORTANT]
->  [\/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) 編譯器選項和 [\_\_w64](../../cpp/w64.md) 關鍵字在 Visual Studio 2010 和 Visual Studio 2012 中已被取代，並且從 Visual Studio 2013 開始將不提供支援。 如果您轉換使用這個參數的專案，則在轉換期間將不會移轉參數。 若要在 Visual Studio 2010 或 Visual Studio 2012 中使用這個選項，您必須在專案屬性的 \[命令列\] 區段中，於 \[其他選項\] 下輸入編譯器參數。 如果您在命令列上使用 **\/Wp64** 編譯器選項，則編譯器會發出命令列警告 D9002。 請改用以 64 位元平台為目標的 Visual C\+\+ 編譯器，並指定 [\/W4](../../build/reference/compiler-option-warning-level.md) 選項，而非使用這個選項和關鍵字來偵測 64 位元可攜性問題。 如需詳細資訊，請參閱[為 64 位元設定程式](../../build/configuring-programs-for-64-bit-visual-cpp.md)。  
+>  The [/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) compiler option and [__w64](../../cpp/w64.md) keyword are deprecated in Visual Studio 2010 and Visual Studio 2012, and not supported starting in Visual Studio 2013. If you convert a project that uses this switch, the switch will not be migrated during conversion. To use this option in Visual Studio 2010 or Visual Studio 2012, you must type the compiler switch under **Additional Options** in the **Command Line** section of the project properties. If you use the **/Wp64** compiler option on the command line, the compiler issues Command-Line Warning D9002. Instead of using this option and keyword to detect 64-bit portability issues, use a Visual C++ compiler that targets a 64-bit platform and specify the [/W4](../../build/reference/compiler-option-warning-level.md) option. For more information, see [Configure Visual C++ for 64-bit, x64 targets](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
   
- 您可以如同在 64 位元作業系統上使用下列類型的變數一樣，在 32 位元作業系統上對其進行測試：  
+Variables of the following types are tested on a 32-bit operating system as if they were being used on a 64-bit operating system:  
   
 -   int  
   
 -   long  
   
--   指標  
+-   pointer  
   
- 如果您經常使用 64 位元編譯器編譯您的應用程式，可以在 32 位元編譯中只停用 **\/Wp64**，因為 64 位元編譯器會偵測到所有的問題。 如需如何將目標設定為 Windows 64 位元作業系統的詳細資訊，請參閱[為 64 位元設定程式](../../build/configuring-programs-for-64-bit-visual-cpp.md)。  
+ If you regularly compile your application by using a compiler that builds 64-bit, x64 code, you can just disable **/Wp64** in your 32-bit compilations because the 64-bit compiler will detect all issues. For more information about how to target a Windows 64-bit operating system, see [Configure Visual C++ for 64-bit, x64 targets](../../build/configuring-programs-for-64-bit-visual-cpp.md).  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>To set this compiler option in the Visual Studio development environment  
   
-1.  開啟專案的 \[屬性頁\] 對話方塊。  
+1.  Open the project **Property Pages** dialog box.  
   
-     如需詳細資訊，請參閱[如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+     For more information, see [Working with Project Properties](../../ide/working-with-project-properties.md).  
   
-2.  按一下 \[C\/C\+\+\] 資料夾。  
+2.  Click the **C/C++** folder.  
   
-3.  按一下 \[命令列\] 屬性頁。  
+3.  Click the **Command Line** property page.  
   
-4.  修改 \[其他選項\] 方塊，以包含 **\/Wp64**。  
+4.  Modify the **Additional Options** box to include **/Wp64**.  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>To set this compiler option programmatically  
   
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>。  
+-   See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>.  
   
-## 請參閱  
- [編譯器選項](../../build/reference/compiler-options.md)   
- [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
- [為 64 位元設定程式](../../build/configuring-programs-for-64-bit-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+
+[Compiler Options](../../build/reference/compiler-options.md)   
+[Setting Compiler Options](../../build/reference/setting-compiler-options.md)   
+[Configure Visual C++ for 64-bit, x64 targets](../../build/configuring-programs-for-64-bit-visual-cpp.md)

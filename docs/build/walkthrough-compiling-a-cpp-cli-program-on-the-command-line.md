@@ -1,52 +1,68 @@
 ---
-title: "逐步解說：在命令列上編譯 C++/CLI 程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'Walkthrough: Compiling a C++/CLI Program on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 caps.latest.revision: 11
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 逐步解說：在命令列上編譯 C++/CLI 程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 44d67c8e7f83ca5433436cf6b851e3f066a930ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/30/2017
 
-您可以建立以通用語言執行階段 \(CLR\) 為目標且使用 .NET Framework 的 Visual C\+\+ 程式，並在命令列上建置它們。  Visual C\+\+ 支援 C\+\+\/CLI 程式設計語言，其具有其他類型及運算子，以將 .NET 程式設計模型設定為目標。  如需 C\+\+\/CLI 語言的簡介，請參閱 [Pure C\+\+：Hello, C\+\+\/CLI](http://msdn.microsoft.com/magazine/cc163681.aspx) \(英文\)。  如需一般資訊，請參閱 [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。  
+---
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Walkthrough: Compiling a C++/CLI Program on the Command Line
+You can create Visual C++ programs that target the Common Language Runtime (CLR) and use the .NET Framework, and build them on the command line. Visual C++ supports the C++/CLI programming language, which has additional types and operators to target the .NET programming model. For an introduction to the C++/CLI language, see [Pure C++: Hello, C++/CLI](http://msdn.microsoft.com/magazine/cc163681.aspx). For general information, see [.NET Programming with C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  
   
- 在此逐步解說中，您可以使用文字編輯器來建立基本的 C\+\+\/CLI 程式，然後在命令列上進行編譯。  \(您可以使用自己的 C\+\+\/CLI 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C\+\+\/CLI 程式碼範例。  這項技術對於建置和測試不包含 UI 項目的小模組非常有用\)。  
+ In this walkthrough, you use a text editor to create a basic C++/CLI program, and then compile it on the command line. (You can use your own C++/CLI program instead of typing the one that's shown, or you can use a C++/CLI code sample from another help article. This technique is useful for building and testing small modules that contain no UI elements.)  
   
 > [!NOTE]
->  您還可以使用 Visual Studio IDE，來編譯 C\+\+\/CLI 程式。  如需詳細資訊，請參閱[逐步解說：編譯針對 Visual Studio 中 CLR 的 C\+\+ 程式](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。  
+>  You can also use the Visual Studio IDE to compile C++/CLI programs. For more information, see [Walkthrough: Compiling a C++ Program that Targets the CLR in Visual Studio](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md).  
   
-## 必要條件  
- 您必須了解 C\+\+ 語言的基本概念。  
+## <a name="prerequisites"></a>Prerequisites  
+ You must understand the fundamentals of the C++ language.  
   
-## 編譯 C\+\+\/CLI 程式  
- 下列步驟顯示如何編譯使用 .NET Framework 類別的 C\+\+\/CLI 主控台應用程式。  
+## <a name="compiling-a-ccli-program"></a>Compiling a C++/CLI Program  
+ The following steps show how to compile a C++/CLI console application that uses .NET Framework classes.  
   
- 若要啟用 C\+\+\/CLI 的編譯，您必須使用 [\/clr](../build/reference/clr-common-language-runtime-compilation.md) 編譯器選項。  Visual C\+\+ 編譯器會產生包含 MSIL 程式碼或混合的 MSIL 和機器碼的 .exe 檔案，並會連結至所需的 .NET Framework 程式庫。  
+ To enable compilation for C++/CLI, you must use the [/clr](../build/reference/clr-common-language-runtime-compilation.md) compiler option. The Visual C++ compiler generates an .exe file that contains MSIL code—or mixed MSIL and native code—and links to the required .NET Framework libraries.  
   
-#### 在命令列上編譯 C\+\+\/CLI 應用程式  
+#### <a name="to-compile-a-ccli-application-on-the-command-line"></a>To compile a C++/CLI application on the command line  
   
-1.  開啟 \[開發人員命令提示字元\] 視窗   \(在 \[開始\] 視窗上，開啟 \[應用程式\]。  開啟您 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 版本下的 \[Visual Studio Tools\] 資料夾，然後選擇 \[開發人員命令提示字元\] 捷徑\)。如需如何開啟 \[命令提示字元\] 視窗的詳細資訊，請參閱[設定命令列建置的路徑和環境變數](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。  
+1.  Open a **Developer Command Prompt** window. For specific instructions, see [To open a developer command prompt window](../build/building-on-the-command-line.md#developer_command_prompt).  
   
-     若要成功編譯程式碼，需要系統管理員認證，具體取決於電腦的作業系統及組態。  若要以系統管理員身分執行 \[命令提示字元\] 視窗，請開啟 \[開發人員命令提示字元\]  的捷徑功能表，然後選擇 \[以系統管理員身分執行\]。  
+     Administrator credentials may be required to successfully compile the code, depending on the computer's operating system and configuration. To run the command prompt window as an administrator, right-click to open the shortcut menu for the command prompt and then choose **More**, **Run as administrator**.  
   
-2.  在命令提示字元處，輸入 **notepad basicclr.cpp**。  
+2.  At the command prompt, enter **notepad basicclr.cpp**.  
   
-     當系統提示您建立檔案時，選擇 \[是\]。  
+     Choose **Yes** when you are prompted to create a file.  
   
-3.  在 \[記事本\] 中，輸入下列行：  
+3.  In Notepad, enter these lines:  
   
     ```  
     int main()  
@@ -55,20 +71,21 @@ manager: "ghogen"
     }  
     ```  
   
-4.  在功能表列上，選擇 \[檔案\]、\[儲存\]。  
+4.  On the menu bar, choose **File**, **Save**.  
   
-     您即已建立 Visual C\+\+ 原始程式檔，其使用 <xref:System> 命名空間中的 .NET Framework 類別 \(<xref:System.Console>\)。  
+     You have created a Visual C++ source file that uses a .NET Framework class (<xref:System.Console>) in the <xref:System> namespace.  
   
-5.  在命令提示字元處，輸入 **cl \/clr basicclr.cpp**。  cl.exe 編譯器會將原始程式碼編譯為包含 MSIL 的 .obj 檔案，然後執行連結器，以產生名為 basicclr.exe 的可執行程式  
+5.  At the command prompt, enter **cl /clr basicclr.cpp**. The cl.exe compiler compiles the source code into an .obj file that contains MSIL, and then runs the linker to generate an executable program named basicclr.exe.  
   
-6.  若要執行 basicclr.exe 程式，請在命令提示字元下，輸入 **basicclr**。  
+6.  To run the basicclr.exe program, at the command prompt, enter **basicclr**.  
   
-     程式會顯示下列文字並結束：  
+     The program displays this text and exits:  
   
-  **這是 C\+\+\/CLI 程式。**  
+    ```Output  
+    This is a C++/CLI program.  
+    ```  
   
-## 請參閱  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/zh-tw/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [C\+\+ 語言參考](../cpp/cpp-language-reference.md)   
- [建置 C\/C\+\+ 程式](../build/building-c-cpp-programs.md)   
- [編譯器選項](../build/reference/compiler-options.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [Building C/C++ Programs](../build/building-c-cpp-programs.md)   
+ [Compiler Options](../build/reference/compiler-options.md)

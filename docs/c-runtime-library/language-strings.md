@@ -33,15 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: dfbd15b0da6e09b825a1562f006416e975603ab5
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="language-strings"></a>語言字串
-`setlocale` 和 `_create_locale` 函式可以在不使用 Unicode 字碼頁的作業系統上，使用由 Windows NLS API 所支援的語言。 如需依作業系統版本分類的支援語言清單，請參閱[國家語言支援 (NLS) API 參考](http://msdn.microsoft.com/goglobal/bb896001.aspx) \(英文\)。 語言字串可以是支援語言清單的「語言」和「語言名稱縮寫」欄位中的任何值。 C 執行階段程式庫實作也支援下列語言字串：  
+`setlocale` 和 `_create_locale` 函式可以在不使用 Unicode 字碼頁的作業系統上，使用由 Windows NLS API 所支援的語言。 如需依作業系統版本分類的支援語言清單，請參閱[國家語言支援 (NLS) API 參考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) \(英文\)。 語言字串可以是支援語言清單的「語言」和「語言名稱縮寫」欄位中的任何值。 如需依作業系統版本分類的語言支援詳細資訊，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](http://msdn.microsoft.com/goglobal/bb896001.aspx) \(英文\)   
+  
+C 執行階段程式庫實作也支援下列語言字串：  
   
 |語言字串|對等的地區設定名稱|  
 |---------------------|----------------------------|  

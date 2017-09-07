@@ -33,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 708651f59ceff638482264e3fc57228e8a1822b2
+ms.translationtype: HT
+ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
+ms.openlocfilehash: 272ce38cee55661a3f4a1eb751c8808b355b59be
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
-國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各種 Windows 作業系統版本支援的國家/地區名稱清單，請參閱[國家語言支援 (NLS) API 參考](http://msdn.microsoft.com/goglobal/bb896001.aspx)。在這些清單中，國家/地區字串可以是 [地區設定 - 語言 (國家/地區)]  欄中的任一國家值，或 [國家或地區名稱縮寫]  欄中的任一縮寫。  
+國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各種 Windows 作業系統版本所支援的國家/地區清單，請參閱[國家語言支援 (NLS) API 參考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) \(英文\)。 在該清單中，國家/地區字串可以是 [Locale - Language Country/Region] \(地區設定 - 語言國家/地區\) 欄中的任何國家/地區值，或是 [Country or Region name abbreviation] \(國家或地區名稱縮寫\) 欄中的任何縮寫。 如需依 Windows 作業系統版本分類的其他語言支援資訊，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](http://msdn.microsoft.com/goglobal/bb896001.aspx) \(英文\)  
   
  C 執行階段程式庫實作也支援下列其他國家/地區字串和縮寫：  
   

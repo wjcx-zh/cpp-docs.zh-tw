@@ -1,59 +1,75 @@
 ---
-title: ".netmodule 檔做為連結器輸入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".netmodule"
-  - "連結 [C++], 模組"
-  - "模組, Visual C++"
-  - "MSIL 連結"
+title: .netmodule Files as Linker Input | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MSIL linking
+- linking [C++], modules
+- .netmodules
+- modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
 caps.latest.revision: 22
-caps.handback.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# .netmodule 檔做為連結器輸入
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: e0d6309625eebb93f317a9a968302dbf34abb285
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/30/2017
 
-link.exe 現在接受 MSIL .obj 或 .netmodule 做為輸入。  連結器產生的輸出檔將是組件或 .netmodule 沒有在輸入至連結器的執行階段相依性任何 .obj 或 .netmodule。  
+---
+# <a name="netmodule-files-as-linker-input"></a>.netmodule Files as Linker Input
+link.exe now accepts MSIL .obj and .netmodules as input. The output file produced by the linker will be an assembly or a .netmodule with no run-time dependency on any of the .obj or .netmodules that were input to the linker.  
   
- .netmodule 是由 Visual C\+\+ 編譯器以 [\/LN \(建立 MSIL 模組\)](../../build/reference/ln-create-msil-module.md) 建立，或是由連結器以 [\/NOASSEMBLY \(建立 MSIL 模組\)](../../build/reference/noassembly-create-a-msil-module.md) 建立。.obj 永遠都是在 Visual C\+\+ 編譯中建立。  其他 Visual Studio 編譯器是使用 **\/target:module** 編譯器選項。  
+ .netmodules are created by the Visual C++ compiler with [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) or by the linker with [/NOASSEMBLY (Create a MSIL Module)](../../build/reference/noassembly-create-a-msil-module.md). .objs are always created in a Visual C++ compilation. For other Visual Studio compilers, use the **/target:module** compiler option.  
   
- 在大部分情況下，您必須傳遞給連結器從建立 .netmodule 的 Visual C\+\+ 編譯的 .obj 檔，除非 .netmodule 建立 [\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)。  MSIL .netmodule 必須是純 MSIL，可以由 Visual C\+\+ 編譯器使用 **\/clr:safe** 產生。  其他 Visual Studio 編譯器是預設為產生純 MSIL 模組。  
+ In most cases, you will need to pass to the linker the .obj file from the Visual C++ compilation that created the .netmodule, unless the .netmodule was created with [/clr (Common Language Runtime Compilation)](../../build/reference/clr-common-language-runtime-compilation.md). MSIL .netmodules used as input to the linker must be pure MSIL, which can be produced by the Visual C++ compiler using **/clr:safe**. The **/clr:pure** and **/clr:safe** compiler options are deprecated in Visual Studio 2015. The .NET Visual Studio compilers produce pure MSIL modules by default.  
   
- 如需如何從命令列叫用連結器的詳細資訊，請參閱[連結器命令列語法](../../build/reference/linker-command-line-syntax.md)和[設定命令列建置的路徑和環境變數](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。  
+ For information on how to invoke the linker from the command line, see [Linker Command-Line Syntax](../../build/reference/linker-command-line-syntax.md), [Build C/C++ code on the command line](../../build/building-on-the-command-line.md), and [Set the Path and Environment Variables for Command-Line Builds](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
- 傳遞 .netmodule 或 .dll 檔給由 Visual C\+\+ 編譯器以 **\/clr** 或是以 **\/clr:pure** 編譯的連結器可能會產生連結器錯誤。  如需詳細資訊，請參閱[選擇 .netmodule 輸入檔的格式](../../build/reference/choosing-the-format-of-netmodule-input-files.md)。  
+ Passing a .netmodule or .dll file to the linker that was compiled by the Visual C++ compiler with **/clr** or with **/clr:pure** can result in a linker error. For more information, see [Choosing the Format of .netmodule Input Files](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
   
- 連結器接受原生 .obj 檔案以及用 **\/clr**、**\/clr:pure** 或 **\/clr:safe** 編譯的 MSIL .obj 檔案。  傳遞相同組建中的混合 .obj 時，所產生輸出檔案的可驗證性將預設為相當於輸入模組最低層級的可驗證性。  例如，如果您傳遞安全的純 .obj 給連結器，輸出檔案將會是純檔案。  [\/CLRIMAGETYPE \(指定 CLR 映像類型\)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) 可讓您指定較低層級可驗證性，以配合您的需要。  
+ The linker accepts native .obj files as well as MSIL .obj files compiled with **/clr**, **/clr:pure**, or **/clr:safe**. When passing mixed .objs in the same build, the verifiability of the resulting output file will, by default, be equal to the lowest level of verifiability of the input modules. For example, if you pass a safe and pure .obj to the linker, the output file will be pure. [/CLRIMAGETYPE (Specify Type of CLR Image)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) lets you specify a lower level of verifiability, if that is what you need.  
   
- 如果您目前擁有由兩個或兩個以上組件組成的應用程式，而您要讓應用程式包含在一個組件中，您必須重新編譯組件，然後連結 .obj 或 .netmodules來產生單一組件。  
+ If you currently have an application that is composed of two or more assemblies and you want the application to be contained in one assembly, you must recompile the assemblies and then link the .objs or .netmodules to produce a single assembly.  
   
- 您必須在建立可執行檔映像時，使用 [\/ENTRY \(進入點符號\)](../../build/reference/entry-entry-point-symbol.md) 指定進入點。  
+ You must specify an entry point using [/ENTRY (Entry-Point Symbol)](../../build/reference/entry-entry-point-symbol.md) when creating an executable image.  
   
- 當連接與 MSIL .obj 或 .netmodule 檔案，請使用 [\/LTCG \(連結時間產生程式碼\)](../../build/reference/ltcg-link-time-code-generation.md)，則為，否則當連結器遭遇 MSIL .obj 或 .netmodule 時，它將會重新啟動與 \/LTCG 的連結。  
+ When linking with an MSIL .obj or .netmodule file, use [/LTCG (Link-time Code Generation)](../../build/reference/ltcg-link-time-code-generation.md), otherwise when the linker encounters the MSIL .obj or .netmodule, it will restart the link with /LTCG.  
   
- MSIL .obj 或 .netmodule 檔案也可以傳遞給 cl.exe。  
+ MSIL .obj or .netmodule files can also be passed to cl.exe.  
   
- 輸入 MSIL .obj 或 .netmodule 檔案無法具有內嵌資源。  資源是以 [\/ASSEMBLYRESOURCE \(內嵌 Managed 資源\)](../../build/reference/assemblyresource-embed-a-managed-resource.md) 連結器選項，或以 **\/resource** 編譯器選項，在其他 Visual Studio 編譯器中內嵌於輸出檔案中 \(模組或組件\)。  
+ Input MSIL .obj or .netmodule files cannot have embedded resources. A resource is embedded in an output file (module or assembly) with [/ASSEMBLYRESOURCE (Embed a Managed Resource)](../../build/reference/assemblyresource-embed-a-managed-resource.md) linker option or with the **/resource** compiler option in other Visual Studio compilers.  
   
- 執行 MSIL 連結時，而且如果不同時指定 [\/LTCG \(連結時間產生程式碼\)](../../build/reference/ltcg-link-time-code-generation.md)，將會看到報告連結重新啟動的資訊訊息。  這項訊息可加以忽略，但若要以 MSIL 連結改進連結器效能，請明確指定 **\/LTCG**。  
+ When performing MSIL linking, and if you do not also specify [/LTCG (Link-time Code Generation)](../../build/reference/ltcg-link-time-code-generation.md), you will see an informational message reporting that the link is restarting. This message can be ignored, but to improve linker performance with MSIL linking, explicitly specify **/LTCG**.  
   
-## 範例  
- 在 C\+\+ 程式碼中，會針對非系統例外狀況叫用對應 try 的 catch 區塊。  但是，CLR 預設會以 <xref:System.Runtime.CompilerServices.RuntimeWrappedException> 包裝非系統例外狀況。  從 Visual C\+\+ 和非 Visual C\+\+ 模組建立組件，而且當 try 區塊擲回非系統例外狀況時，您希望從 C\+\+ 程式碼中 catch 區塊的對應 try 子句中叫用此區塊時，則必須針對 C\+\+ 模組將  
+## <a name="example"></a>Example  
+ In C++ code the catch block of a corresponding try will be invoked for a non System exception. However, by default, the CLR wraps non System exceptions with <xref:System.Runtime.CompilerServices.RuntimeWrappedException>. When an assembly is created from Visual C++ and non Visual C++ modules and you want a catch block in C++ code to be invoked from its corresponding try clause when the try block throws a non System exception, you must add the  
   
- \[assembly:System::Runtime::CompilerServices::RuntimeCompatibility\(WrapNonExceptionThrows\=false\)\] 屬性加入到原始程式碼中。  
+ [assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)] attribute to the source code for the non C++ modules.  
   
 ```  
 // MSIL_linking.cpp  
@@ -78,8 +94,8 @@ int main() {
 */  
 ```  
   
-## 範例  
- 可藉由變更 WrapNonExceptionThrows 屬性的布林值，修改 Visual C\+\+ 程式碼攔截非系統例外狀況的能力。  
+## <a name="example"></a>Example  
+ By changing the Boolean value of the WrapNonExceptionThrows attribute, you modify the ability of the Visual C++ code to catch a non System exception.  
   
 ```  
 // MSIL_linking_2.cs  
@@ -102,7 +118,10 @@ class MLinkTest {
 }  
 ```  
   
-  **在 C\+\+ 原始程式碼檔中攔截到的非系統例外狀況**   
-## 請參閱  
- [LINK 輸入檔](../../build/reference/link-input-files.md)   
- [連結器選項](../../build/reference/linker-options.md)
+```Output  
+caught non System exception in C++ source code file  
+```  
+  
+## <a name="see-also"></a>See Also  
+ [LINK Input Files](../../build/reference/link-input-files.md)   
+ [Linker Options](../../build/reference/linker-options.md)

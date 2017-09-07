@@ -1,69 +1,70 @@
 ---
-title: "如何：在命令列啟用 64 位元 Visual C++ 工具組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "64 位元編譯器 [C++], 命令列用法"
-  - "64 位元編譯器 [C++], 在命令列啟用工具組"
-  - "命令列 [C++], 64 位元編譯器"
-  - "IPF"
-  - "IPF, 命令列編譯器"
-  - "Itanium [C++]"
-  - "Itanium [C++], 命令列編譯器"
-  - "x64 [C++]"
-  - "x64 [C++], 命令列編譯器"
+title: 'How to: Enable a 64-Bit Visual C++ Toolset on the Command Line | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- x64 [C++]
+- 64-bit compiler [C++], command line usage
+- 64-bit compiler [C++], toolset enabling at command line
+- command line [C++], 64-bit compiler
+- Itanium [C++], command-line compiler
+- IPF
+- Itanium [C++]
+- IPF, command-line compiler
+- x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
 caps.latest.revision: 30
-caps.handback.revision: 30
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 如何：在命令列啟用 64 位元 Visual C++ 工具組
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 88cd06c4ca6ac57fdb677cfc56fd8972983df4c1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 08/30/2017
 
-Visual C\+\+ 包含的編譯器可以用來建立在 32 位元、64 位元或 ARM 架構 Windows 作業系統上執行的應用程式。  
+---
+# <a name="how-to-enable-a-64-bit-x64-hosted-visual-c-toolset-on-the-command-line"></a>How to: Enable a 64-Bit, x64 hosted Visual C++ toolset on the command line
+
+Visual C++ includes compilers, linkers, and other tools that you can use to create platform-specific versions of your apps that can run on 32-bit, 64-bit, or ARM-based Windows operating systems. Other optional Visual Studio workloads let you use C++ tools to target other platforms, such as iOS, Android, and Linux. The default build architecture uses 32-bit, x86-hosted tools to build 32-bit, x86-native Windows code. However, you probably have a 64-bit computer. You can take advantage of the processor and memory space available to 64-bit code by using the 64-bit, x64-hosted toolset when you build code for x86, x64, or ARM processors.
   
 > [!NOTE]
->  如需每個 Visual C\+\+ 版本隨附之特定工具的詳細資訊，請參閱 [Visual Studio 版本中的 Visual C\+\+ 工具和樣板](../ide/visual-cpp-tools-and-templates-in-visual-studio-editions.md)。  
+>  For information about the specific tools that are included with each Visual C++ edition, see [Visual C++ Tools and Features in Visual Studio Editions](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).  
 >   
->  如需如何使用 Visual Studio IDE 建立 64 位元應用程式的詳細資訊，請參閱 [如何：將 Visual C\+\+ 專案設定成以 64 位元平台為目標](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。  
+>  For information about how to use the Visual Studio IDE to create 64-bit applications, see [How to: Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).  
   
- [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 包含適用於 x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 和 ARM 目標的 32 位元、x86 裝載、原生和跨平台編譯器。  當 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 安裝在 64 位元 Windows 作業系統上時，會為每個目標 \(x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 和 ARM\) 安裝 32 位元、x86 裝載的原生和跨平台編譯器，以及 64 位元、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 裝載的原生和跨平台編譯器。  每個目標的 32 位元和 64 位元編譯器都會產生相同的程式碼，但是 64 位元編譯器為先行編譯標頭符號和整個程式最佳化 \([\/GL](../build/reference/gl-whole-program-optimization.md)、[\/LTCG](../build/reference/ltcg-link-time-code-generation.md)\) 選項支援較多的記憶體。  如果使用 32 位元編譯器時遇到記憶體限制，請嘗試使用 64 位元編譯器。  
+When you install a C++ workload in the Visual Studio installer, it always installs 32-bit, x86-hosted, native and cross compiler tools to build x86 and x64 code. If you include the Universal Windows Platform workload, it also installs x86-hosted cross compiler tools to build ARM code. If you install these workloads on a 64-bit, x64 processor, you also get 64-bit native and cross compiler tools to build x86, x64, and ARM code. The 32-bit and 64-bit tools generate identical code, but the 64-bit tools support more memory for precompiled header symbols and the Whole Program Optimization ([/GL](../build/reference/gl-whole-program-optimization.md) and [/LTCG](../build/reference/ltcg-link-time-code-generation.md)) options. If you run into memory limits when you use the 32-bit tools, try the 64-bit tools.  
+
+## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Use a 64-bit hosted developer command prompt shortcut
   
- 當 Visual Studio 安裝在 64 位元的 Windows 作業系統上時，64 位元的原生 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 與 x86 跨平台編譯器會有額外的命令提示字元捷徑可用。  若要在 Windows 8 存取這些命令提示字元，請開啟 \[**開始**\] 畫面中的 \[**所有應用程式**\]。  在已安裝 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]\] 的版本下，開啟 \[Visual Studio Tools\]，然後選擇其中一個原生工具或跨工具命令提示字元。  在舊版 Windows 中，選擇 \[**開始**\]，展開 \[**所有程式**\]、\[**[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]**\]、\[**Visual Studio Tools**\]，然後選擇命令列提示字元。  
+When Visual Studio is installed on a 64-bit Windows operating system, additional developer command prompt shortcuts for the 64-bit, x64-hosted native and cross compilers are available. To access these command prompts on Windows 10, on the **Start** menu, open the folder for your version of Visual Studio, for example **Visual Studio 2017**, and then choose one of the x64 native or cross-tool developer command prompts. To access these command prompts on Windows 8, on the **Start** screen, open **All apps**. Under the heading for the installed version of Visual Studio, open the **Visual Studio** folder (in older versions of Visual Studio, it may be named **Visual Studio Tools**). On earlier versions of Windows, choose **Start**, expand **All Programs**, the folder for your version of **Visual Studio** (and on older versions of Visual Studio, **Visual Studio Tools**). For more information, see [Developer command prompt shortcuts](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts).  
   
-## Vcvarsall.bat  
- 執行 vcvarsall.bat 命令檔設定啟用編譯器工具組的路徑和環境變數，即可在命令列使用任何編譯器。  由於沒有 \[命令提示字元\] 捷徑來讓 64 位元工具組將 x86 或 ARM 平台做為目標，因此請在 \[命令提示字元\] 視窗中使用 vcvarsall.bat，以改用 64 位元工具組。  如需詳細資訊，請參閱[設定命令列建置的路徑和環境變數](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。  
+## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Use Vcvarsall.bat to set a 64-bit hosted build architecture
   
- 下列步驟顯示如何設定 \[命令提示字元\]，來使用 64 位元原生工具組，將 x86、x64 和 ARM 平台做為目標。  
+Any of the native or cross compiler tools build configurations can be used on the command line by running the vcvarsall.bat command file. This command file configures the path and environment variables that enable a particular build architecture in an existing command prompt window. For specific instructions, see [Developer command files and locations](../build/building-on-the-command-line.md#developer_command_files) .  
   
-#### 執行 vcvarsall.bat 以使用 64 位元工具組  
-  
-1.  在命令提示字元下，變更至 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 安裝目錄   \(該位置視系統和 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 安裝而定，但一般位置為 C:\\Program Files \(x86\)\\Microsoft Visual Studio *version*\\VC\\\)。例如，輸入：  
-  
-     cd "\\Program Files \(x86\)\\Microsoft Visual Studio 12.0\\VC"  
-  
-2.  若要針對將 x64 平台做為目標的 64 位元命令列組建，設定此 \[命令提示字元\] 視窗，請在命令提示字元下，輸入：  
-  
-     `vcvarsall amd64`  
-  
-3.  若要針對將 x86 平台做為目標的 64 位元命令列組建，設定此 \[命令提示字元\] 視窗，請在命令提示字元下，輸入：  
-  
-     `vcvarsall amd64_x86`  
-  
-4.  若要針對將 ARM 平台做為目標的 64 位元命令列組建，設定此 \[命令提示字元\] 視窗，請在命令提示字元下，輸入：  
-  
-     `vcvarsall amd64_arm`  
-  
-## 請參閱  
- [為 64 位元設定程式](../build/configuring-programs-for-64-bit-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+
+[Configure Visual C++ for 64-bit, x64 targets](../build/configuring-programs-for-64-bit-visual-cpp.md)

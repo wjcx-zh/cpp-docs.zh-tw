@@ -1,5 +1,5 @@
 ---
-title: "針對 UNIX 使用者的 Visual C++ 簡介 | Microsoft Docs"
+title: Introduction to Visual C++ for UNIX Users | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,56 +31,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c1955bece0c8cdadb4a151ee06fa006402666a4
-ms.openlocfilehash: 524be35ec1e1db511b7fd4c2ab2b87d83c54325c
+ms.translationtype: HT
+ms.sourcegitcommit: a43e0425c129cf99ed2374845a4350017bebb188
+ms.openlocfilehash: 6eaba7ea947bc6a9c79c67745876bc0d67e73314
 ms.contentlocale: zh-tw
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="introduction-to-visual-c-for-unix-users"></a>針對 UNIX 使用者的 Visual C++ 簡介
-本文提供資訊給剛開始使用 Visual C++，並想更有效率使用 Visual C++ 的 UNIX 使用者。  
+# <a name="introduction-to-visual-c-for-unix-users"></a>Introduction to Visual C++ for UNIX Users
+
+This topic provides information for UNIX users who are new to Visual C++ and want to become productive with Visual C++ and the Visual Studio Integrated Development Environment (IDE).  
   
-## <a name="getting-started-on-the-command-line"></a>從命令列開始使用  
- 您可以透過與使用 UNIX 命令列環境類似的方式，從命令列使用 Visual C++。 您可以從命令提示字元，使用命令列 C 和 C++ 編譯器 (CL.EXE) 和工具進行編譯，包括 Microsoft 版的 UNIX make 公用程式 NMAKE.EXE。  
+## <a name="getting-started-on-the-command-line"></a>Getting Started on the Command Line  
+
+You can use Visual C++ from the command line in a similar way that you would use a UNIX command-line environment. You compile from the command prompt by using the command-line C and C++ compiler (CL.EXE), linker (LINK.EXE), and other tools, including NMAKE.EXE, the Microsoft version of the UNIX make utility.  
   
- 在 UNIX 中，命令會安裝在通用資料夾中，例如 /usr/bin。 在 Visual C++ 中，命令列工具會安裝在您的安裝目錄 VC\bin 中 (Program Files\Microsoft Visual Studio 8\VC\bin 的一般安裝位置)。 若要使用命令列工具，請執行位於安裝目錄 Common7\Tools 中的 vsvars32.bat。 這會將 bin 目錄加入您的路徑，並設定從命令列編譯 Visual C++ 程式所需的其他路徑。 如需詳細資訊，請參閱[在命令列中建置](../build/building-on-the-command-line.md)和[逐步解說：在命令列上編譯原生 C++ 程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
+In UNIX, commands are installed in a common folder, such as /usr/bin. In Visual C++, the command-line tools are installed in your Visual Studio installation directory in the VC\bin subdirectory and its subdirectories. Unlike UNIX, these tools are not available in a plain command prompt window. To use the command-line tools, use a developer command prompt shortcut, or run a developer command file such as vcvarsall.bat. This sets up the path and other environment variables that are necessary to compile Visual C++ programs from the command line. For more information, see [Build C/C++ code on the command line](../build/building-on-the-command-line.md) and [Walkthrough: Compiling a Native C++ Program on the Command Line](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
-> [!NOTE]
->  如果您從 [開始] 功能表使用 [Visual Studio 命令列提示字元] 開啟命令提示字元，系統會為您執行 vsvars32.bat。  
+To open a developer command prompt shortcut, enter *developer command prompt* in the desktop search control and choose the **Developer Command Prompt** result for your version of Visual Studio. To choose a developer command prompt that is preconfigured for a particular host and target architecture, open the **Start** menu (the Windows icon in the corner of the desktop) and then scroll to the folder for your version of Visual Studio, such as **Visual Studio 2017**. Open the folder and choose the command prompt shortcut for your preferred host and target architecture.
   
- 為了利用 Visual Studio 偵錯工具、陳述式完成等更強大的功能，您需要使用這個開發環境。  
+To take advantage of more powerful features, such as the Visual Studio debugger, IntelliSense code look-up and statement completion, visual designers, project management, and so on, you need to use the Visual Studio IDE.  
   
-## <a name="debugging-your-code"></a>偵錯您的程式碼  
- 如果您使用命令列並在開發工作站上執行應用程式，當您的程式碼遇到記憶體存取違規、未處理的例外狀況或其他無法復原的錯誤時，便會顯示一個可執行 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 偵錯工具的對話方塊。 如果您按一下 [確定]，則會啟動 Visual Studio 開發環境，並將偵錯工具開啟到失敗點。 您可以透過這個方式來偵錯應用程式，在這種情況下，只有在以 [/Z7、/Zi、/ZI (偵錯資訊格式)](../build/reference/z7-zi-zi-debug-information-format.md) 參數編譯時，才能使用原始程式碼。 如需詳細資訊，請參閱[偵錯原生程式碼](/visualstudio/debugger/debugging-native-code)和[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
+## <a name="debugging-your-code"></a>Debugging Your Code  
+
+If you use the command line and run your applications on your development workstation, you will see that a dialog box to run the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] debugger is displayed when your code encounters a memory access violation, unhandled exception, or other unrecoverable errors. If you click **OK**, then the Visual Studio development environment is started, and the debugger will open to the point of failure. It is possible to debug your applications this way, and, in this case, your source code would only be available if you compiled with the [/Z7, /Zi, /ZI (Debug Information Format)](../build/reference/z7-zi-zi-debug-information-format.md) switch. For more information, see [Debugging Native Code](/visualstudio/debugger/debugging-native-code) and [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="using-the-development-environment"></a>使用開發環境  
- 使用開發環境編輯和建置「專案」中的原始程式碼會比較容易。 專案是來源和相關檔案的集合，這些檔案會編譯成一個單位，例如程式庫或可執行檔。 專案也包含檔案建置方式的相關資訊。 專案的相關資訊會儲存在副檔名為 .prj 的專案檔中。  
+## <a name="using-the-development-environment"></a>Using the Development Environment  
+
+It is easier to use the development environment to edit and build your source code in a *project*. A project is a collection of source and related files that will be compiled into a single unit, such as a library or executable. A project also contains information on how the files are to be built. Information about projects is stored in a project file with the extension .prj.  
   
- 應用程式是由多個程式庫和可執行檔所組成，並儲存在屬於單一「方案」的多個專案中，其中每個程式庫和可執行檔可能是以一組不同的編譯器選項，或甚至不同的語言所建置。 方案是將多個專案群組在一起的抽象容器。 方案的相關資訊會儲存在副檔名為 .sln 的方案檔中。 如需詳細資訊，請參閱 [Visual Studio 中的方案和專案](/visualstudio/ide/solutions-and-projects-in-visual-studio)和[使用 Visual Studio IDE 進行 C++ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
+An application that consists of multiple libraries and executables, each potentially built with a different set of compiler options or even in a different language, are stored in multiple projects that are part of a single *solution*. A solution is an abstraction for a container to group multiple projects together. Information about solutions is stored in a solution file with the extension .sln. For more information, see [Solutions and Projects in Visual Studio](/visualstudio/ide/solutions-and-projects-in-visual-studio) and [Using the Visual Studio IDE for C++ Desktop Development](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
   
-## <a name="importing-your-existing-code"></a>匯入現有的程式碼  
- 您可以透過 Visual C++ 來使用現有的程式碼，並將其設定為以 Makefile 或不以 Makefile 編譯，再放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 專案。 如需詳細資訊，請參閱**從現有程式碼檔建立專案精靈**。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
+## <a name="importing-your-existing-code"></a>Importing Your Existing Code 
+ 
+You can use Visual C++ to build existing code that is set up to compile with or without a makefile and put it into a [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] project. For more information, see [How to: Create a C++ Project from Existing Code](../ide/how-to-create-a-cpp-project-from-existing-code.md).  
   
-## <a name="creating-a-new-project"></a>建立新專案  
- 您可以在開發環境中建立新專案。 Visual C++ 提供許多範本，其中的標準程式碼適用於各種常見專案。 您可以使用應用程式精靈，來產生具有適用於各種應用程式類型之程式碼大綱的專案。  
+## <a name="creating-a-new-project"></a>Creating a New Project  
+
+You can create new projects in the development environment. Visual C++ provides numerous templates that provide standard code for various common projects. You can use application wizards to generate projects with code outlines for various application types.  
   
- 您可以使用 [主控台應用程式 (Win32) 精靈]，從空專案開始。 選取 [空專案] 核取方塊。 您可以稍後再將新的和現有的檔案加入專案。  
+You can start with an empty project by using the **Console Application (Win32) Wizard**. Select the **Empty Project** check box. You can then add new and existing files to the project later.  
   
- 當您建立專案時，您必須命名專案。 根據預設，專案名稱等於從專案建置之動態連結程式庫 (DLL) 或可執行檔的名稱。 如需詳細資訊，請參閱[建立方案與專案](/visualstudio/ide/creating-solutions-and-projects)。  
+When you create a project, you must name the project. By default, the project name equals the name of the dynamic-link library (DLL) or executable that is build from the project. For more information, see [Creating Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).  
   
-## <a name="microsoft-specific-modifiers"></a>Microsoft 專有的修飾詞  
- Visual C++ 包含標準 C++ 程式語言的幾個擴充功能。 這些擴充功能可用來指定儲存類別屬性、函式呼叫慣例和基底定址等。 如需所有 Visual C++ 延伸模組的完整清單，請參閱 [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
+## <a name="microsoft-specific-modifiers"></a>Microsoft-Specific Modifiers  
+
+Visual C++ contains several extensions to the standard C++ programming language to support programming for Windows operating systems. These extensions are used to specify storage class attributes, function calling conventions, and based addressing, among other things. For a complete list of all Visual C++ extensions, see [Microsoft-Specific Modifiers](../cpp/microsoft-specific-modifiers.md).  
   
- 您可以使用 **/Za** 編譯器選項，來停用 C++ 的所有 Microsoft 特定延伸模組。 如果您想要撰寫程式碼以在多個平台上執行，建議使用這個選項。 如需 **/Za** 編譯器選項的詳細資訊，請參閱 [/Za、/Ze (停用語言延伸模組)](../build/reference/za-ze-disable-language-extensions.md)。 如需 Visual C++ 一致性的詳細資訊，請參閱[非標準行為](../cpp/nonstandard-behavior.md)。  
+You can disable all Microsoft-specific extensions to C++ by using the **/Za** compiler option. This option is recommended if you want to write code to run on multiple platforms. For more information on the **/Za** compiler option, see [/Za, /Ze (Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md). For more information on Visual C++ conformance, see [Nonstandard Behavior](../cpp/nonstandard-behavior.md).  
   
-## <a name="precompiled-headers"></a>先行編譯標頭檔  
- Microsoft C 和 C++ 編譯器提供對任何 C 或 C++ 程式碼進行先行編譯的選項，包括內嵌程式碼。 您可以使用這項效能功能來編譯穩定的程式碼主體，並將程式碼的編譯狀態儲存在檔案中，然後在後續編譯期間，將先行編譯的程式碼與仍在開發中的程式碼結合。 由於穩定的程式碼不需要重新編譯，因此每個後續編譯的速度會更快。  
+## <a name="precompiled-headers"></a>Precompiled Headers  
+
+The Microsoft C and C++ compilers provide options for precompiling any C or C++ code, including inline code. Using this performance feature, you can compile a stable body of code, store the compiled state of the code in a file, and, during subsequent compilations, combine the precompiled code with code that is still under development. Each subsequent compilation is faster because the stable code does not need to be recompiled.  
   
- 預設會在 **stdafx.h** 和 **stdafx.cpp** 檔案中指定所有先行編譯的程式碼。 除非您取消選取 [先行編譯標頭檔] 選項，否則 [新增專案精靈] 會自動為您建立這些檔案。 如需先行編譯標頭檔的詳細資訊，請參閱[建立先行編譯標頭檔](../build/reference/creating-precompiled-header-files.md)。  
+By default, all precompiled code is specified in the files **stdafx.h** and **stdafx.cpp**. The **New Project** wizard will automatically create these files for you unless you deselect the **Precompiled header** option. For more information on precompiled headers, see [Creating Precompiled Header Files](../build/reference/creating-precompiled-header-files.md).  
   
-## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱[從 UNIX 移植到 Win32](../porting/porting-from-unix-to-win32.md)。  
+## <a name="related-sections"></a>Related Sections  
+
+For more information, see [Porting from UNIX to Win32](../porting/porting-from-unix-to-win32.md).  
   
-## <a name="see-also"></a>另請參閱  
- [建置 C/C++ 程式](../build/building-c-cpp-programs.md)
+## <a name="see-also"></a>See Also  
+
+[Building C/C++ Programs](../build/building-c-cpp-programs.md)

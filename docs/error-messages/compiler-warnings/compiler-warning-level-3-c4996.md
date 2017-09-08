@@ -1,7 +1,7 @@
 ---
-title: "編譯器警告 （層級 3） C4996 |Microsoft 文件"
+title: Compiler Warning (level 3) C4996 | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 06/07/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -34,55 +34,56 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 9a0c25772fadec86a893b8c7c4af09072eb0476f
+ms.translationtype: MT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 9b745d570155d7460b1ffb113ce0afcd0b67dedd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="compiler-warning-level-3-c4996"></a>編譯器警告 （層級 3） C4996
-編譯器遇到已被取代的宣告。  
+# <a name="compiler-warning-level-3-c4996"></a>Compiler Warning (level 3) C4996
+
+The compiler encountered a deprecated declaration.  
   
-這個警告或錯誤有數個可能意義的詳細資訊，視內容而定。  
+This warning or error has several possible meanings, depending on the context.  
   
-當編譯器遇到函式或標示為的變數，就會發生 C4996[取代](../../cpp/deprecated-cpp.md)使用`__declspec(deprecated)`修飾詞。 當您嘗試存取函式、 類別成員或具有 C + + 14 的 typedef，也會發出這個警告`[[deprecated]]`屬性。 如需詳細資訊，請參閱[c + + 標準屬性](../../cpp/attributes2.md)。 您可以使用這個屬性自行文件庫，警告您有關已被取代的函式、 成員或 typedef 的用戶端。  
+C4996 occurs when the compiler encounters a function or variable that is marked as [deprecated](../../cpp/deprecated-cpp.md) by using a `__declspec(deprecated)` modifier. This warning is also issued when you attempt to access a function, class member or typedef that has the C++14 `[[deprecated]]` attribute. For more information, see [C++ Standard Attributes](../../cpp/attributes2.md). You can use this attribute yourself in your libraries to warn your clients about deprecated functions, members, or typedefs.  
   
-Visual Studio 中有數個函式、成員函式、範本函式，以及程式庫中的全域變數皆標示為已被取代。 這些函式可能有不同的慣用名稱、可能不安全，或可能已有更安全的變體，甚至可能已經過時。 許多錯誤訊息包含建議的替代已被取代的函式或全域變數。  
+Several functions, member functions, template functions, and global variables in the libraries in Visual Studio are marked as deprecated. These functions may have a different preferred name, may be insecure or have a more secure variant, or may be obsolete. Many error messages include a suggested replacement for the deprecated function or global variable.  
   
-若要修正此問題，我們通常建議您變更程式碼，改為使用建議的更安全的或更新函式和全域變數。 如果您需要使用現有的函式或變數的可攜性的理由，警告可以關閉。  
+To fix this issue, we usually recommend you change your code to use the suggested safer or updated functions and global variables instead. If you need to use the existing functions or variables for portability reasons, the warning can be turned off.  
   
-您可以使用關閉的特定程式碼行警告[警告](../../preprocessor/warning.md)pragma `#pragma warning(suppress : 4996)`。 您可以關閉該檔案內使用警告 pragma `#pragma warning(disable : 4996)`。 您可以關閉它全域命令列組建中使用**/wd4996**命令列選項。 若要關閉 Visual Studio IDE 中的專案的警告，請開啟**屬性頁**對話方塊中，選取**組態屬性**， **C/c + +**，**進階**頁面上，並編輯**停用特定警告**屬性將`4996`。  您也可以使用前置處理器巨集關閉某些程式庫中使用已被取代警告的特定的類別。 以下將詳述這些巨集。  
+You can turn off the warning for a specific line of code by using the [warning](../../preprocessor/warning.md) pragma `#pragma warning(suppress : 4996)`. You can turn it off within a file by using the warning pragma `#pragma warning(disable : 4996)`. You can turn it off globally in command line builds by using the **/wd4996** command line option. To turn off the warning for a project in the Visual Studio IDE, open the **Property Pages** dialog, select the **Configuration Properties**, **C/C++**, **Advanced** page and edit the **Disable Specific Warnings** property to add `4996`.  You can also use preprocessor macros to turn off certain specific classes of deprecation warnings used in the libraries. These macros are described below.  
   
-以下是一些 C4996 的程式庫來源。  
+Here are some of the library sources of C4996.  
   
-## <a name="posix-function-names"></a>POSIX 函式名稱  
+## <a name="posix-function-names"></a>POSIX function names  
   
-**此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 和 c + + 一致的名稱︰** *new_name*。 **請參閱線上說明以取得詳細資料。**  
+**The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name:** *new_name*. **See online help for details.**  
   
-Microsoft 已重新命名以符合 C99 與 C + + 03 規則實作所定義的全域函式名稱的 CRT 中的某些 POSIX 函式。 原始 POSIX 名稱已被取代，函式本身。 在大多數情況下，POSIX 函式名稱前會加上底線來表示符合標準的名稱。 編譯器會發出已被取代警告原始函式名稱，並建議的慣用的名稱。  
+Microsoft has renamed some POSIX functions in the CRT to conform with C99 and C++03 rules for implementation-defined global function names. Only the original POSIX names are deprecated, not the functions themselves. In most cases, a leading underscore was added to the POSIX function name to create a standard conformant name. The compiler issues a deprecation warning for the original function name, and suggests the preferred name.  
   
-若要修正此問題，我們通常建議您變更程式碼以改用建議的函式名稱。 不過，更新的名稱是 Microsoft 特定的。 如果您需要使用現有的函式名稱的可攜性的理由，您可以關閉這些警告。 POSIX 函式仍在原來的名稱下文件庫中。  
+To fix this issue, we usually recommend you change your code to use the suggested function names instead. However, the updated names are Microsoft-specific. If you need to use the existing function names for portability reasons, you can turn these warnings off. The POSIX functions are still available in the library under their original names.  
   
-若要關閉這些函式已被取代的警告，請定義前置處理器巨集 **_CRT_NONSTDC_NO_WARNINGS**。 您可以在命令列中加上選項 `/D_CRT_NONSTDC_NO_WARNINGS`來加以定義。 若要在 Visual Studio 中定義此巨集，請開啟您專案的 [屬性頁]  對話方塊。 展開 [組態屬性] 、[C/C++] 、[前置處理器] 。 在 [前置處理器定義] 中，加入 `_CRT_NONSTDC_NO_WARNINGS`。 選擇 [確定]  加以儲存，然後重建您的專案。 若要只在特定的來源檔案中定義此巨集，請在包含標頭檔的該行前加入 `#define _CRT_NONSTDC_NO_WARNINGS` 一行。  
+To turn off deprecation warnings for these functions, define the preprocessor macro **_CRT_NONSTDC_NO_WARNINGS**. You can define this at the command line by including the option `/D_CRT_NONSTDC_NO_WARNINGS`. To define this macro in Visual Studio, open the **Property Pages** dialog for your project. Expand **Configuration Properties**, **C/C++**, **Preprocessor**. In **Preprocessor Definitions**, add `_CRT_NONSTDC_NO_WARNINGS`. Choose **OK** to save, and then rebuild your project. To define this macro only in specific source files, add the line `#define _CRT_NONSTDC_NO_WARNINGS` before any line that includes a header file.  
   
-## <a name="unsafe-crt-library-functions"></a>不安全的 CRT 程式庫函式  
+## <a name="unsafe-crt-library-functions"></a>Unsafe CRT Library functions  
   
- **此函式或變數可能不安全。請考慮使用***safe_version* **改為。  若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**  
+ **This function or variable may be unsafe. Consider using**  *safe_version* **instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS.  See online help for details.**  
   
- Microsoft 已取代一些 CRT 和 c + + 標準程式庫函式和全域變數，以更安全的版本。 在大部分情況下，已被取代的函式可讓未核取的讀取或寫入存取權可能會導致嚴重的安全性問題的緩衝區。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。  
+ Microsoft has deprecated some CRT and C++ Standard Library functions and globals in favor of more secure versions. In most cases, the deprecated functions allow unchecked read or write access to buffers, which can lead to serious security issues. The compiler issues a deprecation warning for these functions, and suggests the preferred function.  
   
- 若要修正此問題，我們建議您使用函式或變數*safe_version*改為。 如果您已驗證，就不可能緩衝區覆寫或 overread 會出現在您的程式碼，而且您無法變更的程式碼可攜性的理由，您可以關閉警告。  
+ To fix this issue, we recommend you use the function or variable *safe_version* instead. If you have verified that it's not possible for a buffer overwrite or overread to occur in your code, and you cannot change the code for portability reasons, you can turn off the warning.  
    
- 若要關閉 CRT 中這些函式已被取代的警告，請定義 **_CRT_SECURE_NO_WARNINGS**。 若要為全域變數關閉已被取代的警告，請定義 **_CRT_SECURE_NO_WARNINGS_GLOBALS**。 如需有關這些已被取代的函式和全域變數的詳細資訊，請參閱[CRT 中安全性功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全程式庫︰ c + + 標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)。  
+ To turn off deprecation warnings for these functions in the CRT, define **_CRT_SECURE_NO_WARNINGS**. To turn off warnings about deprecated global variables, define **_CRT_SECURE_NO_WARNINGS_GLOBALS**. For more information about these deprecated functions and globals, see [Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md) and [Safe Libraries: C++ Standard Library](../../standard-library/safe-libraries-cpp-standard-library.md).  
   
-## <a name="unsafe-standard-library-functions"></a>不安全的標準程式庫函式  
+## <a name="unsafe-standard-library-functions"></a>Unsafe Standard Library functions  
   
- **' std::** *function_name* **::\_未核取\_迭代器::\_Deprecate' 呼叫 std::** *function_name* **參數的可能不安全-此呼叫須由呼叫端確認傳遞的值正確無誤。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。請參閱有關如何使用 Visual c + + ' Checked Iterators' 的文件**  
+ **'std::** *function_name* **::\_Unchecked\_iterators::\_Deprecate' Call to std::** *function_name* **with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'**  
   
-因為某些 c + + 標準程式庫範本函式不會檢查參數正確，這個警告會出現在偵錯組建。 在大部分情況下，這是因為沒有足夠的資訊提供給函數，以便檢查容器範圍中，或可能不正確地使用迭代器，與函式。 這個警告有助於您識別這些函式使用，因為它們可能會在程式中的安全性漏洞的來源。 如需詳細資訊，請參閱 [Checked Iterators](../../standard-library/checked-iterators.md)。  
+This warning appears in debug builds because certain C++ Standard Library template functions do not check parameters for correctness. In most cases, this is because not enough information is available to the function to check container bounds, or because iterators may be used incorrectly with the function. This warning helps you identify these function uses, because they may be a source of security holes in your program. For more information, see [Checked Iterators](../../standard-library/checked-iterators.md).  
   
-例如，這個警告即會出現在偵錯模式中傳遞的項目指標`std::copy`而非一般陣列。 若要修正此問題，請使用適當地宣告的陣列，讓程式庫可以檢查陣列範圍，並且進行繫結檢查。  
+For example, this warning appears in Debug mode if you pass an element pointer to `std::copy` instead of a plain array. To fix this issue, use an appropriately declared array, so the library can check the array extents and do bounds checking.  
   
 ```cpp  
 // C4996_copyarray.cpp
@@ -97,7 +98,7 @@ void example(char const * const src) {
 } 
 ```  
   
-有數個標準程式庫演算法已更新為 C + + 14 中有 「 雙重範圍 」 版本。 如果您使用的雙重範圍版本時，第二個範圍會提供必要的繫結檢查︰  
+Several standard library algorithms were updated to have "dual range" versions in C++14. If you use the dual range versions, the second range provides the necessary bounds checking:  
   
 ```cpp  
 // C4996_containers.cpp
@@ -118,7 +119,7 @@ bool example(
 }
 ```  
   
-這個範例示範幾種標準程式庫可能會用來檢查迭代器使用的多個方法，當未核取的使用方式可能有危險︰  
+This example demonstrates several more ways the standard library may be used to check iterator usage, and when unchecked usage may be dangerous:  
   
 ```cpp  
 // C4996_standard.cpp
@@ -203,11 +204,11 @@ int main()
 }  
 ```  
   
-如果您已確認您的程式碼不能有緩衝區滿溢的情況會觸發這個警告的標準程式庫函式中的錯誤，您可能想要關閉此警告。 若要關閉這些函式的警告，請定義 **_SCL_SECURE_NO_WARNINGS**。   
+If you have verified that your code cannot have a buffer overrun error in the Standard Library functions that trigger this warning, you may want to turn this warning off. To turn off warnings for these functions, define **_SCL_SECURE_NO_WARNINGS**.   
   
-## <a name="example-checked-iterators-enabled"></a>範例︰ 已檢查的迭代器已啟用  
+## <a name="example-checked-iterators-enabled"></a>Example: Checked iterators enabled  
   
-如果您不要使用已檢查的迭代器，以編譯時也會發生 C4996`_ITERATOR_DEBUG_LEVEL`定義為 1 或 2。 它會設定為 2，根據預設，偵錯模式組建，以及零售組建的 0。 如需詳細資訊，請參閱 [Checked Iterators](../../standard-library/checked-iterators.md) 。  
+C4996 can also occur if you do not use a checked iterator when compiling with `_ITERATOR_DEBUG_LEVEL` defined as 1 or 2. It is set to 2 by default for debug mode builds, and to 0 for retail builds. See [Checked Iterators](../../standard-library/checked-iterators.md) for more information.  
   
 ```cpp  
 // C4996_checked.cpp  
@@ -229,29 +230,29 @@ int main() {
 }  
 ```  
   
-## <a name="unsafe-mfc-or-atl-code"></a>不安全的 MFC 或 ATL 程式碼  
+## <a name="unsafe-mfc-or-atl-code"></a>Unsafe MFC or ATL code  
   
-如果您使用 MFC 或 ATL 中已被取代的函式，基於安全性理由，也可能會發生 C4996。  
+C4996 can also occur if you use MFC or ATL functions that were deprecated for security reasons.  
   
-若要修正此問題，我們強烈建議您變更程式碼，改為使用更新的函式。  
+To fix this issue, we strongly recommend you change your code to use updated functions instead.  
   
-如需如何隱藏這些警告的資訊，請參閱[_afx_secure_no_warnings，則](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)和[_ATL_SECURE_NO_WARNINGS](http://msdn.microsoft.com/Library/587d29d8-a75a-44a3-bec8-f724087e5e73)。  
+For information on how to suppress these warnings, see [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings).  
   
-## <a name="obsolete-crt-functions-and-variables"></a>過時的 CRT 函式和變數  
+## <a name="obsolete-crt-functions-and-variables"></a>Obsolete CRT functions and variables  
   
-**此函式或變數已被取代的較新的文件庫或作業系統功能。請考慮使用** *new_item* **改為。如需詳細資料，請參閱線上說明。**  
+**This function or variable has been superceded by newer library or operating system functionality. Consider using** *new_item* **instead. See online help for details.**  
   
-某些程式庫函式與全域變數因為過時而被取代。 這些函式及變數可能會從後續版本的程式庫中移除。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。  
+Some library functions and global variables are deprecated as obsolete. These functions and variables may be removed in a future version of the library. The compiler issues a deprecation warning for these items, and suggests the preferred alternative.  
   
-若要修正此問題，我們建議您變更程式碼以使用建議的函式或變數。  
+To fix this issue, we recommend you change your code to use the suggested function or variable.  
   
-若要關閉這些項目之已被取代的警告，請定義 **_CRT_OBSOLETE_NO_WARNINGS**。 如需詳細資訊，請參閱文件中所列之已被取代的函式或變數。  
+To turn off deprecation warnings for these items, define **_CRT_OBSOLETE_NO_WARNINGS**. For more information, see the documentation for the deprecated function or variable.  
   
-## <a name="example-marshalling-errors-in-clr-code"></a>範例︰ 封送處理 CLR 程式碼中的錯誤  
+## <a name="example-marshalling-errors-in-clr-code"></a>Example: Marshalling errors in CLR code  
   
-當您使用 CLR 封送處理程式庫時，也可能會發生 C4996。 在此情況下，C4996 是錯誤而非警告。 當您使用時，就會發生此錯誤[marshal_as](../../dotnet/marshal-as.md)需要兩個資料類型之間進行轉換[marshal_context 類別](../../dotnet/marshal-context-class.md)。 當封送處理程式庫不支援某項轉換時，您也可以收到這個錯誤。 如需封送處理程式庫的詳細資訊，請參閱 [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md)。  
+C4996 can also occur when you use the CLR marshaling library. In this case C4996 is an error, not a warning. This error occurs when you use [marshal_as](../../dotnet/marshal-as.md) to convert between two data types that require a [marshal_context Class](../../dotnet/marshal-context-class.md). You can also receive this error when the marshaling library does not support a conversion. For more information about the marshaling library, see [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md).  
   
-這個範例會產生 c4996 錯誤，因為封送處理程式庫需要內容，才能從轉換`System::String`至`const char *`。  
+This example generates C4996 because the marshaling library requires a context to convert from a `System::String` to a `const char *`.  
   
 ```cpp  
 // C4996_Marshal.cpp  
@@ -272,9 +273,9 @@ int main() {
 }  
 ```
   
-## <a name="example-user-defined-deprecated-function"></a>範例︰ 使用者定義已被取代函式  
+## <a name="example-user-defined-deprecated-function"></a>Example: User-defined deprecated function  
   
-您可以使用自己的程式碼中已被取代的屬性，當您不再建議使用的特定函式警告呼叫端。 在此範例中，使用函數的程式行及行已被取代的函式宣告的會產生 C4996。  
+You can use the deprecated attribute in your own code to warn callers when you no longer recommend use of certain functions. In this example, C4996 is generated for the line on which the deprecated function is declared, and for the line on which the function is used.  
   
 ```cpp  
 // C4996.cpp  

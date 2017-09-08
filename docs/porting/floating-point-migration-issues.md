@@ -1,7 +1,7 @@
 ---
-title: "浮點數的移轉問題 | Microsoft Docs"
+title: Floating-point migration issues | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -29,36 +29,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30a331ca93d704539d32d003333f4f0a2823fb
-ms.openlocfilehash: b84e3edcba95e75b877e0acf2651d3d1a9ac8816
+ms.translationtype: HT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 597513f15331c01c796932e82e94e891df0b8fab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="floating-point-migration-issues"></a>浮點數的移轉問題  
+# <a name="floating-point-migration-issues"></a>Floating-point migration issues  
   
-有時候，當您將專案升級至較新版本的 Visual Studio 時，可能會發現某些浮點運算的結果已變更。 這通常是因下列兩個原因之一所導致：由於產生程式碼的變更充分利用可用的處理器，以及 C 執行階段程式庫 (CRT) 中用於數學函式的演算法有 Bug 修正或變更。 一般來說，新的結果會在語言標準所指定的限制範圍內，因此是正確的。 請繼續閱讀以了解變更的項目，以及如何取得之前函式所得的相同結果 (若有必要的話)。  
+Sometimes when you upgrade your projects to a newer version of Visual Studio, you may find that the results of certain floating-point operations have changed. This generally happens for one of two reasons: Code generation changes that take better advantage of the available processor, and bug fixes or changes to the algorithms used in math functions in the C runtime library (CRT). In general, the new results are correct to within the limits specified by the language standard. Read on to find out what's changed, and if it's important, how to get the same results your functions got before.  
 
-## <a name="new-math-functions-and-universal-crt-changes"></a>新的數學函式和通用的 CRT 變更  
+## <a name="new-math-functions-and-universal-crt-changes"></a>New math functions and Universal CRT changes  
   
-好幾年來，Visual Studio 就已提供大多數的 CRT 數學函式，但是自 Visual Studio 2013 起，才包含所有 ISO C99 所需的函式。 實作這些函式可以平衡效能與正確性。 因為要在每個情況中產生正確的四捨五入結果可能極為昂貴，所以這些函式會設計成有效率產生最接近正確四捨五入結果的近似值。 在大部分情況下，產生的結果是在正確四捨五入結果的 +/-1 *ulp* 內，但也可能出現較大的誤差。 如果您之前是使用不同的數學程式庫來取得這些函式，則結果的變更可能是因為實作差異導致。   
+Most CRT math functions have been available in Visual Studio for years, but starting in Visual Studio 2013, all of the functions required by ISO C99 are included. These functions are implemented to balance performance with correctness. Because producing the correctly rounded result in every case may be prohibitively expensive, these functions are designed to efficiently produce a close approximation to the correctly rounded result. In most cases, the result produced is within +/-1 unit of least precision, or *ulp*, of the correctly rounded result, though there may be cases where there is greater inaccuracy. If you were using a different math library to get these functions before, implementation differences may be responsible for the change in your results.   
     
-在將數學函式移至 Visual Studio 2015 的通用 CRT 時，即已使用一些新的演算法，並將於 Visual Studio 2013 新發現的數個函式實作 Bug 加以修正。 如果浮點數計算是使用這些函式，這些變更可能會導致計算結果出現可偵測到的差異。 有 Bug 問題的函式是 erf、exp2、remainder、remquo、scalbln、scalbn 及其浮點與長雙精度的變化。  Visual Studio 2015 的其他變更已修正保留浮點數狀態文字時發生的問題，以及 _clear87、_clearfp、fegetenv、fesetenv 和 feholdexcept 函式例外狀況的狀態資訊問題。  
+When the math functions were moved to the Universal CRT in Visual Studio 2015, some new algorithms were used, and several bugs in the implementation of the functions that were new in Visual Studio 2013 were fixed. These changes can lead to detectable differences in the results of floating-point calculations that use these functions. The functions that had bug issues were erf, exp2, remainder, remquo, scalbln, and scalbn, and their float and long double variants.  Other changes in Visual Studio 2015 fixed issues in preserving floating point status word and exception state information in _clear87, _clearfp, fegetenv, fesetenv, and feholdexcept functions.  
   
-## <a name="processor-differences-and-compiler-flags"></a>處理器的差異和編譯器旗標  
+## <a name="processor-differences-and-compiler-flags"></a>Processor differences and compiler flags  
   
-許多浮點數學程式庫函式對不同的 CPU 架構會有不同的實作。 例如，32 位元 x86 CRT 的實作可能和 64 位元 x64 CRT 的實作不同。 此外，某些函式對指定的 CPU 架構可能有多種實作。 在執行階段，會根據 CPU 支援的指令集動態選取最有效率的實作。 例如，在 32 位元 x86 CRT，有些函式同時有 x87 實作和 SSE2 實作。 在支援 SSE2 的 CPU 上執行時，會使用較快的 SSE2 實作。 在不支援 SSE2 的 CPU 上執行時，會使用較慢的 x87 實作。 您可能會在移轉舊版程式碼時看到這種情況，因為 Visual Studio 2012 已將預設 x86 編譯器架構選項變更為 [/arch:SSE2](../build/reference/arch-x86.md)。 由於數學程式庫函式的不同實作可能會使用不同的 CPU 指令和不同的演算法來產生結果，因此函式在不同的平台中可能會產生不同的結果。 在大部分情況下，結果是在正確四捨五入結果的 +/-1 ulp 內，但實際的結果可能因 CPU 而異。  
+Many of the floating point math library functions have different implementations for different CPU architectures. For example, the 32-bit x86 CRT may have a different implementation than the 64-bit x64 CRT. In addition, some of the functions may have multiple implementations for a given CPU architecture. The most efficient implementation is selected dynamically at run-time depending on the instruction sets supported by the CPU. For example, in the 32-bit x86 CRT, some functions have both an x87 implementation and an SSE2 implementation. When running on a CPU that supports SSE2, the faster SSE2 implementation is used. When running on a CPU that does not support SSE2, the slower x87 implementation is used. You may see this when migrating old code, because the default x86 compiler architecture option changed to [/arch:SSE2](../build/reference/arch-x86.md) in Visual Studio 2012. Because different implementations of the math library functions may use different CPU instructions and different algorithms to produce their results, the functions may produce different results on different platforms. In most cases, the results are within +/-1 ulp of the correctly rounded result, but the actual results may vary across CPUs.  
   
-相較於舊程式碼與新程式碼來看，即使是使用相同編譯器旗標，Visual Studio 不同浮點數模式的程式碼產生正確性增強功能，也可能影響浮點數運算的結果。 例如，在指定 [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (預設值) 或 **/fp:strict** 時，Visual Studio 2010 所產生的程式碼可能並未正確透過運算式來傳播中繼的非數字 (NaN) 值。 因此，如果某些運算式是在舊版編譯器中提供數值結果，現在即可正確產生 NaN 結果。 您可能也會發覺到差異，因為針對 **/fp:fast** 啟用的程式碼最佳化現可利用更多的處理器功能。 這些最佳化可以使用較少的指示，但或許會影響產生的結果，因為系統已移除部分先前可見的中繼作業。  
+Code-generation correctness improvements in different floating point modes in Visual Studio can also affect the results of floating-point operations when old code is compared to new code, even when using the same compiler flags. For example, the code generated by Visual Studio 2010 when [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (the default) or **/fp:strict** was specified may not have propagated intermediate not-a-number (NaN) values through expressions correctly. Thus, some expressions that gave a numeric result in older compilers may now correctly produce a NaN result. You may also see differences because the code optimizations enabled for **/fp:fast** now take advantage of more processor features. These optimizations can use fewer instructions, but may impact the generated results because some previously visible intermediate operations have been removed.  
   
-## <a name="how-to-get-identical-results"></a>如何取得相同的結果  
+## <a name="how-to-get-identical-results"></a>How to get identical results  
   
-在大部分情況下，最新的編譯器和程式庫中的浮點數變更可帶來更快及/或更正確的行為。 當 SSE2 指示取代 x87 指示時，您甚至可能會發覺更好的處理器電源效能。 但是，如果您的程式碼必須精確地複寫舊版編譯器的浮點數行為，請考慮使用 Visual Studio 原生多目標功能，並使用舊版工具組來建置受影響的專案。 如需詳細資訊，請參閱[在 Visual Studio 中使用原生多目標來建置舊專案](use-native-multi-targeting.md)。  
+In most cases, the floating-point changes in the newest compilers and libraries result in faster or more correct behavior, or both. You may even see better processor power performance when SSE2 instructions replace x87 instructions. However, if you have code that must precisely replicate the floating point behavior of an older compiler, consider using Visual Studio native multi-targeting capabilities, and build the affected project with the older toolset. For more information, see [Use native multi-targeting in Visual Studio to build old projects](use-native-multi-targeting.md).  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>See also  
   
-[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)  
+[Upgrading Projects from Earlier Versions of Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Overview of potential upgrade issues (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md)  
 

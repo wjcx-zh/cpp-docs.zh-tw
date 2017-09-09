@@ -1,5 +1,5 @@
 ---
-title: "&lt;chrono&gt; 函式 | Microsoft Docs"
+title: '&lt;chrono&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,48 +12,48 @@ f1_keywords:
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 68c68070265c8cc7ff4d6c5c070b4e7849d50a91
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7fcec92b9d5b3dabcb0b5c53c1b9bf581dd71cab
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltchronogt-functions"></a>&lt;chrono&gt; 函式
+# <a name="ltchronogt-functions"></a>&lt;chrono&gt; functions
 ||||  
 |-|-|-|  
 |[duration_cast](#duration_cast)|[time_point_cast](#time_point_cast)|  
   
 
-##  <a name="duration_cast"></a>duration_cast
- 將 `duration` 物件轉換為指定的類型。  
+##  <a name="duration_cast"></a>  duration_cast
+ Casts a `duration` object to a specified type.  
   
 ```  
 template <class To, class Rep, class Period>  
 constexpr To duration_cast(const duration<Rep, Period>& Dur);
 ```  
   
-### <a name="return-value"></a>傳回值  
- `To` 類型的 `duration` 物件，代表時間間隔 `Dur`，如果必須符合目標類型則會截斷。  
+### <a name="return-value"></a>Return Value  
+ A `duration` object of type `To` that represents the time interval `Dur`, which is truncated if it has to fit into the target type.  
   
-### <a name="remarks"></a>備註  
- 如果 `To` 是 `duration` 的具現化，此函式不會參與多載解析。  
+### <a name="remarks"></a>Remarks  
+ If `To` is an instantiation of `duration`, this function does not participate in overload resolution.  
   
-##  <a name="time_point_cast"></a>time_point_cast
- 將 [time_point](../standard-library/time-point-class.md) 物件轉換為指定的類型。  
+##  <a name="time_point_cast"></a>  time_point_cast
+ Casts a [time_point](../standard-library/time-point-class.md) object to a specified type.  
   
 ```  
 template <class To, class Clock, class Duration>  
 time_point<Clock, To> time_point_cast(const time_point<Clock, Duration>& Tp);
 ```  
   
-### <a name="return-value"></a>傳回值  
- 具有 `To` 類型之持續時間的 `time_point` 物件。  
+### <a name="return-value"></a>Return Value  
+ A `time_point` object that has a duration of type `To`.  
   
-### <a name="remarks"></a>備註  
- 除非 `To` 是 [duration](../standard-library/duration-class.md) 的具現化，否則此函式不會參與多載解析。  
+### <a name="remarks"></a>Remarks  
+ Unless `To` is an instantiation of [duration](../standard-library/duration-class.md), this function does not participate in overload resolution.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<chrono>](../standard-library/chrono.md)
 
 

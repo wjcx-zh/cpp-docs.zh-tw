@@ -1,29 +1,33 @@
 ---
-title: "&lt;allocators&gt; 運算子 | Microsoft Docs"
+title: '&lt;allocators&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- allocators/std::operator!=
+- allocators/std::operator==
+dev_langs:
+- C++
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0a2da6c72e8900c0cea86c30c6b8511e6b256ff9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ef4366ab1d13e96a432de4929f86ef27f86e60e7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 運算子
+# <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; operators
 |||  
 |-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a> operator!=  
- 測試指定類別的配置器物件之間是否不等。  
+##  <a name="op_neq"></a>  operator!=  
+ Tests for inequality between allocator objects of a specified class.  
   
 ```
 template <class Type, class Sync>  
@@ -32,21 +36,21 @@ bool operator!=(
     const allocator_base<Type, Sync>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|要測試是否不相等的其中一個配置器物件。|  
-|`right`|要測試是否不相等的其中一個配置器物件。|  
+|`left`|One of the allocator objects to be tested for inequality.|  
+|`right`|One of the allocator objects to be tested for inequality.|  
   
-### <a name="return-value"></a>傳回值  
- 如果配置器物件不相等，則為 **true**；如果配置器物件相等，則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the allocator objects are not equal; **false** if allocator objects are equal.  
   
-### <a name="remarks"></a>備註  
- 範本運算子會傳回 `!(left == right)`。  
+### <a name="remarks"></a>Remarks  
+ The template operator returns `!(left == right)`.  
   
-##  <a name="op_eq_eq"></a> operator==  
- 測試指定類別的配置器物件之間是否相等。  
+##  <a name="op_eq_eq"></a>  operator==  
+ Tests for equality between allocator objects of a specified class.  
   
 ```
 template <class Type, class Sync>  
@@ -55,20 +59,20 @@ bool operator==(
     const allocator_base<Type, Sync>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|要測試是否相等的其中一個配置器物件。|  
-|`right`|要測試是否相等的其中一個配置器物件。|  
+|`left`|One of the allocator objects to be tested for equality.|  
+|`right`|One of the allocator objects to be tested for equality.|  
   
-### <a name="return-value"></a>傳回值  
- 如果配置器物件相等，則為 **true**；如果配置器物件不相等，則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the allocator objects are equal; **false** if allocator objects are not equal.  
   
-### <a name="remarks"></a>備註  
- 這個範本運算子會傳回 `left.equals(right)`。  
+### <a name="remarks"></a>Remarks  
+ This template operator returns `left.equals(right)`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

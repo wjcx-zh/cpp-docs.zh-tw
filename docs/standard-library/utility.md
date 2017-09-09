@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <utility>
-- utility/std::<utility>
-- std.<utility>
-- std::<utility>
+- <utility>", "utility/std::<utility>", "std::<utility>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,64 +33,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a65dea30745ce3afa680c0851fe33cc9f386404
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cd4b8e005352db1da07b37373b27c317b80405ff
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
-可定義 C++ 標準程式庫類型、函式與運算子，並協助建構及管理成對的物件，當需要將兩個物件視為一體時相當實用。  
+Defines C++ Standard Library types, functions, and operators that help to construct and manage pairs of objects, which are useful whenever two objects need to be treated as if they were one.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <utility>  
   
 ```  
   
-## <a name="remarks"></a>備註  
- C++ 標準程式庫中很廣泛地運用配對。 做為引數並傳回不同函式的值，以及做為容器的項目型別，例如 [map 類別](../standard-library/map-class.md)和 [multimap 類別](../standard-library/multimap-class.md)時，都需要用到配對。 \<map> 會自動納入 \<utility> 標頭，以協助管理其索引及成對的鍵/值型別項目。  
+## <a name="remarks"></a>Remarks  
+ Pairs are widely used in the C++ Standard Library. They are required both as the arguments and return values for various functions and as element types for containers such as [map class](../standard-library/map-class.md) and [multimap class](../standard-library/multimap-class.md). The \<utility> header is automatically included by \<map> to assist in managing their key/value pair type elements.  
   
-### <a name="classes"></a>類別  
-  
-|||  
-|-|-|  
-|[tuple_element](../standard-library/tuple-element-class-tuple.md)|包裝 `pair` 項目類型的類別。|  
-|[tuple_size](../standard-library/tuple-size-class-tuple.md)|類別，其中包裝 `pair` 項目計數。|  
-  
-### <a name="functions"></a>函式  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[forward](../standard-library/utility-functions.md#forward)|保留引數的參考類型 (可能是 `lvalue` 或 `rvalue`)，避免被完整轉寄遮蔽。|  
-|[get](../standard-library/utility-functions.md#get)|函式，其可從 `pair` 物件取得項目。|  
-|[make_pair](../standard-library/utility-functions.md#make_pair)|範本協助程式函式，可用以建構 `pair` 類型的物件，而其中的元件類型會以傳遞為參數的資料類型做為基礎。|  
-|[move](../standard-library/utility-functions.md#move)|傳回已傳入的引數，做為 `rvalue` 參考。|  
-|[swap](../standard-library/utility-functions.md#swap)|交換兩個 `pair` 物件的項目。|  
+|[tuple_element](../standard-library/tuple-element-class-tuple.md)|A class that wraps the type of a `pair` element.|  
+|[tuple_size](../standard-library/tuple-size-class-tuple.md)|A class that wraps `pair` element count.|  
   
-### <a name="operators"></a>運算子  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/utility-operators.md#op_neq)|測試成對運算子左側的物件是否不等於右側的物件。|  
-|[operator==](../standard-library/utility-operators.md#op_eq_eq)|測試成對運算子左側的物件是否等於右側的物件。|  
-|[operator<](../standard-library/utility-operators.md#op_lt)|測試成對運算子左側的物件是否小於右側的物件。|  
-|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|測試成對運算子左側的物件是否小於或等於右側的物件。|  
-|[operator>](../standard-library/utility-operators.md#op_gt)|測試成對運算子左側的物件是否大於右側的物件。|  
-|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|測試成寺運算子左側的物件是否大於或等於右側的物件。|  
+|[forward](../standard-library/utility-functions.md#forward)|Preserves the reference type (either `lvalue` or `rvalue`) of the argument from being obscured by perfect forwarding.|  
+|[get](../standard-library/utility-functions.md#get)|A function that gets an element from a `pair` object.|  
+|[make_pair](../standard-library/utility-functions.md#make_pair)|A template helper function used to construct objects of type `pair`, where the component types are based on the data types passed as parameters.|  
+|[move](../standard-library/utility-functions.md#move)|Returns the passed in argument as an `rvalue` reference.|  
+|[swap](../standard-library/utility-functions.md#swap)|Exchanges the elements of two `pair` objects.|  
   
-### <a name="structs"></a>結構  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator!=](../standard-library/utility-operators.md#op_neq)|Tests if the pair object on the left side of the operator is not equal to the pair object on the right side.|  
+|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Tests if the pair object on the left side of the operator is equal to the pair object on the right side.|  
+|[operator<](../standard-library/utility-operators.md#op_lt)|Tests if the pair object on the left side of the operator is less than the pair object on the right side.|  
+|[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Tests if the pair object on the left side of the operator is less than or equal to the pair object on the right side.|  
+|[operator>](../standard-library/utility-operators.md#op_gt)|Tests if the pair object on the left side of the operator is greater than the pair object on the right side.|  
+|[operator>=](../standard-library/utility-operators.md#op_gt_eq)|Tests if the pair object on the left side of the operator is greater than or equal to the pair object on the right side.|  
+  
+### <a name="structs"></a>Structs  
   
 |||  
 |-|-|  
 |[identity](../standard-library/identity-structure.md)||  
-|[pair](../standard-library/pair-structure.md)|類型，其提供可將兩個物件視為單一物件的功能。|  
+|[pair](../standard-library/pair-structure.md)|A type that provides for the ability to treat two objects as a single object.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;sstream&gt; typedef | Microsoft Docs'
+title: '&lt;sstream&gt; typedefs | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,14 +18,14 @@ f1_keywords:
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
 caps.latest.revision: 9
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 62a679bc28854c9f8744f206a938115ca6e7c1d9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 98f4577e96d5ab5f25a9856734848ddef3d56016
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; typedef
+# <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; typedefs
 ||||  
 |-|-|-|  
 |[istringstream](#istringstream)|[ostringstream](#ostringstream)|[stringbuf](#stringbuf)|  
@@ -33,86 +33,86 @@ ms.lasthandoff: 04/19/2017
 |[wstringbuf](#wstringbuf)|[wstringstream](#wstringstream)|  
   
 ##  <a name="istringstream"></a>  istringstream  
- 建立已在 `char` 樣板參數上特製化的 `basic_istringstream` 類型。  
+ Creates a type `basic_istringstream` specialized on a `char` template parameter.  
   
 ```  
 typedef basic_istringstream<char> istringstream;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板類別 [basic_istringstream](../standard-library/basic-istringstream-class.md) 同義，已針對 `char` 類型的項目進行特製化。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_istringstream](../standard-library/basic-istringstream-class.md), specialized for elements of type `char`.  
   
 ##  <a name="ostringstream"></a>  ostringstream  
- 建立已在 `char` 樣板參數上特製化的 `basic_ostringstream` 類型。  
+ Creates a type `basic_ostringstream` specialized on a `char` template parameter.  
   
 ```  
 typedef basic_ostringstream<char> ostringstream;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板類別 [basic_ostringstream](../standard-library/basic-ostringstream-class.md) 同義，已針對 `char` 類型的項目進行特製化。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_ostringstream](../standard-library/basic-ostringstream-class.md), specialized for elements of type `char`.  
   
 ##  <a name="stringbuf"></a>  stringbuf  
- 建立已在 `char` 樣板參數上特製化的 `basic_stringbuf` 類型。  
+ Creates a type `basic_stringbuf` specialized on a `char` template parameter.  
   
 ```  
 typedef basic_stringbuf<char> stringbuf;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板類別 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) 同義，已針對 `char` 類型的項目進行特製化。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_stringbuf](../standard-library/basic-stringbuf-class.md), specialized for elements of type `char`.  
   
 ##  <a name="stringstream"></a>  stringstream  
- 建立已在 `char` 樣板參數上特製化的 `basic_stringstream` 類型。  
+ Creates a type `basic_stringstream` specialized on a `char` template parameter.  
   
 ```  
 typedef basic_stringstream<char> stringstream;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板類別 [basic_stringstream](../standard-library/basic-stringstream-class.md) 同義，已針對 `char` 類型的項目進行特製化。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_stringstream](../standard-library/basic-stringstream-class.md), specialized for elements of type `char`.  
   
 ##  <a name="wistringstream"></a>  wistringstream  
- 建立已在 `wchar_t` 樣板參數上特製化的 `basic_istringstream` 類型。  
+ Creates a type `basic_istringstream` specialized on a `wchar_t` template parameter.  
   
 ```  
 typedef basic_istringstream<wchar_t> wistringstream;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板類別 [basic_istringstream](../standard-library/basic-istringstream-class.md) 同義，已針對 `wchar_t` 類型的項目進行特製化。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_istringstream](../standard-library/basic-istringstream-class.md), specialized for elements of type `wchar_t`.  
   
 ##  <a name="wostringstream"></a>  wostringstream  
- 建立已在 `wchar_t` 樣板參數上特製化的 `basic_ostringstream` 類型。  
+ Creates a type `basic_ostringstream` specialized on a `wchar_t` template parameter.  
   
 ```  
 typedef basic_ostringstream<wchar_t> wostringstream;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板類別 [basic_ostringstream](../standard-library/basic-ostringstream-class.md) 同義，已針對 `wchar_t` 類型的項目進行特製化。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_ostringstream](../standard-library/basic-ostringstream-class.md), specialized for elements of type `wchar_t`.  
   
 ##  <a name="wstringbuf"></a>  wstringbuf  
- 建立已在 `wchar_t` 樣板參數上特製化的 `basic_stringbuf` 類型。  
+ Creates a type `basic_stringbuf` specialized on a `wchar_t` template parameter.  
   
 ```  
 typedef basic_stringbuf<wchar_t> wstringbuf;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板類別 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) 同義，已針對 `wchar_t` 類型的項目進行特製化。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_stringbuf](../standard-library/basic-stringbuf-class.md), specialized for elements of type `wchar_t`.  
   
 ##  <a name="wstringstream"></a>  wstringstream  
- 建立已在 `wchar_t` 樣板參數上特製化的 `basic_stringstream` 類型。  
+ Creates a type `basic_stringstream` specialized on a `wchar_t` template parameter.  
   
 ```  
 typedef basic_stringstream<wchar_t> wstringstream;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板類別 [basic_stringstream](../standard-library/basic-stringstream-class.md) 同義，已針對 `wchar_t` 類型的項目進行特製化。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_stringstream](../standard-library/basic-stringstream-class.md), specialized for elements of type `wchar_t`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<sstream>](../standard-library/sstream.md)
 
 

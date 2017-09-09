@@ -1,5 +1,5 @@
 ---
-title: "is_placeholder 類別 | Microsoft Docs"
+title: is_placeholder Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_placeholder
 - functional/std::is_placeholder
 dev_langs:
 - C++
@@ -34,26 +33,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: a3624a752a500410ad906ba43a6c65310ba1cb41
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 15cd09104039d45df72e2bc0476d9d6005b69a68
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isplaceholder-class"></a>is_placeholder 類別
-測試類型是否是預留位置。  
+# <a name="isplaceholder-class"></a>is_placeholder Class
+Tests if type is a placeholder.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 struct is_placeholder {  
    static const int value;  
    };  
   
-## <a name="remarks"></a>備註  
- 如果類型 `Ty` 不是預留位置，常數值 `value` 就會是 0；否則其值會是它所繫結之函式呼叫引數的位置。 您可以使用它來判斷第 N 個預留位置 `_N` 的值 `N`。  
+## <a name="remarks"></a>Remarks  
+ The constant value `value` is 0 if the type `Ty` is not a placeholder; otherwise, its value is the position of the function call argument that it binds to. You use it to determine the value `N` for the Nth placeholder `_N`.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__is_placeholder.cpp   
@@ -83,12 +82,12 @@ int main()
 3  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [_1 Object](../standard-library/1-object.md)
 
 

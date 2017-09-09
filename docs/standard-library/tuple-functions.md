@@ -1,5 +1,5 @@
 ---
-title: "&lt;tuple&gt; 函式 | Microsoft Docs"
+title: '&lt;tuple&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,20 +18,27 @@ dev_langs:
 ms.assetid: bc6be38f-5258-4c14-b81b-63caa335fd44
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: acf980e3bcd491eb08dee0c87ee1762dc25b417b
+helpviewer_keywords:
+- std::get [C++]
+- std::make_tuple [C++]
+- std::tie [C++]
+- std::get [C++]
+- std::make_tuple [C++]
+- std::tie [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8853217b74474559ea00fe0819ec819bde5f9a3d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函式
+# <a name="lttuplegt-functions"></a>&lt;tuple&gt; functions
 ||||  
 |-|-|-|  
 |[get](#get)|[make_tuple](#make_tuple)|[tie](#tie)|  
   
-##  <a name="get"></a> get
- 從 `tuple` 物件取得項目，依索引或 ( C++14) 依類型。  
+##  <a name="get"></a>  get
+ Gets an element from a `tuple` object, by index or (in C++14) by type.  
   
 ```  
 // by index:
@@ -61,25 +68,25 @@ template <class T, class... Types>
    constexpr T&& get(tuple<Types...>&& Tuple) noexcept;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Index`  
- 要取得的項目索引。  
+ The index of the element to get.  
   
  `Types`  
- Tuple 中宣告的類型序列，按宣告順序。  
+ The sequence of types declared in the tuple, in declaration order.  
   
  `T`  
- 要取得的元素類型。  
+ The type of the element to get.  
   
  `Tuple`  
- 包含任何數目元素的 Std::tuple。  
+ A std::tuple that contains any number of elements.  
   
-### <a name="remarks"></a>備註  
- 範本函式傳回位於索引 `Index`的值參考，或 `T` 物件中的類型 `tuple` 。  
+### <a name="remarks"></a>Remarks  
+ The template functions return a reference to the value at index `Index`, or of type `T` in the `tuple` object.  
   
- 如果 Tuple 不是包含剛剛好一個類型 T 的元素，呼叫 `get<T>(Tuple)` 就會產生編譯器錯誤。  
+ Calling `get<T>(Tuple)` will produce a compiler error if Tuple contains more or less than one element of type T.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>   
@@ -108,27 +115,27 @@ int main() {
 0 1.42 Call me Tuple  
 ```  
   
-##  <a name="make_tuple"></a>make_tuple
- 從元素值製作 `tuple`。  
+##  <a name="make_tuple"></a>  make_tuple
+ Makes a `tuple` from element values.  
   
 ```  
 template <class T1, class T2, ..., class TN>  
    tuple<V1, V2, ..., VN> make_tuple(const T1& t1, const T2& t2, ..., const TN& tN);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `TN`  
- 第 N 個函式參數的類型。  
+ The type of the Nth function parameter.  
   
  `tN`  
- 第 N 個函式參數的值。  
+ The value of the Nth function parameter.  
   
-### <a name="remarks"></a>備註  
- 樣板函式會傳回 `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`，其中當對應類型 `Ti` 為 `cv` `reference_wrapper<X>` 時，每個類型 `Vi` 都是 `X&`，否則為 `Ti`。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`, where each type `Vi` is `X&` when the corresponding type `Ti` is `cv` `reference_wrapper<X>`; otherwise, it is `Ti`.  
   
- `make_tuple` 的其中一個優點是，編譯器會自動決定所儲存物件的類型，不需要明確指定。 當您使用 `make_tuple<int, int>(1, 2)` 時不要使用明確樣板引數 (例如 `make_tuple`)，因為它具有不必要的詳細資訊，並新增可能導致編譯錯誤的複雜右值參考問題。  
+ One advantage of `make_tuple` is that the types of objects that are being stored are determined automatically by the compiler and do not have to be explicitly specified. Don't use explicit template arguments such as `make_tuple<int, int>(1, 2)` when you use `make_tuple` because it is unnecessarily verbose and adds complex rvalue reference problems that might cause compilation failure.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__make_tuple.cpp   
@@ -165,22 +172,22 @@ int main() {
  4 5 6 7  
 ```  
   
-##  <a name="tie"></a>將繫結
- 從元素參考製作 `tuple`。  
+##  <a name="tie"></a>  tie
+ Makes a `tuple` from element references.  
   
 ```  
 template <class T1, class T2, ..., class TN>  
 tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `TN`  
- 第 N 個 tuple 元素的基底類型。  
+ The base type of the Nth tuple element.  
   
-### <a name="remarks"></a>備註  
- 此範本函式會傳回 `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`。  
+### <a name="remarks"></a>Remarks  
+ The template function returns `tuple<T1&, T2&, ..., TN&>(t1, t2, ..., tN)`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__tie.cpp   
@@ -221,7 +228,7 @@ int main() {
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)
 
 

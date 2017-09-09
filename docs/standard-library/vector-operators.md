@@ -1,49 +1,64 @@
 ---
-title: "&lt;vector&gt; 運算子| Microsoft Docs"
+title: '&lt;vector&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- vector/std::operator!=
+- vector/std::operator&gt;
+- vector/std::operator&gt;=
+- vector/std::operator&lt;
+- vector/std::operator&lt;=
+- vector/std::operator==
+dev_langs:
+- C++
 ms.assetid: 1d14f312-6f59-4ec7-88ae-95f89a558823
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4f99e943ce0dfa6a8450b795723e9dc209d3770a
+helpviewer_keywords:
+- std::operator!= (vector)
+- std::operator&gt; (vector)
+- std::operator&gt;= (vector)
+- std::operator&lt; (vector)
+- std::operator&lt;= (vector)
+- std::operator== (vector)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4e320c84696c4ad6272514fd20b72693128a5716
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltvectorgt-operators"></a>&lt;vector&gt; 運算子
+# <a name="ltvectorgt-operators"></a>&lt;vector&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 測試運算子左邊的物件是否不等於右邊的物件。  
+ Tests if the object on the left side of the operator is not equal to the object on the right side.  
   
 ```  
 bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
  `right`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>傳回值  
- 如果向量不相等為 **true**；如果向量相等則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vectors are not equal; **false** if the vectors are equal.  
   
-### <a name="remarks"></a>備註  
- 如果有相同數目的元素，且個別元素擁有相同的值，則兩個向量相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ Two vectors are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_ne.cpp  
@@ -70,24 +85,24 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="op_lt"></a>  運算子&lt;  
- 測試運算子左邊的物件是否小於右邊的物件。  
+##  <a name="op_lt"></a>  operator&lt;  
+ Tests if the object on the left side of the operator is less than the object on the right side.  
   
 ```  
 bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
  `right`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的向量小於運算子右邊的向量為 **true**；反之為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is less than the vector on the right side of the operator; otherwise **false**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_lt.cpp  
@@ -118,24 +133,24 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="op_lt_eq"></a>  運算子&lt;=  
- 測試運算子左邊的物件是否小於或等於右邊的物件。  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Tests if the object on the left side of the operator is less than or equal to the object on the right side.  
   
 ```  
 bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
  `right`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>傳回值  
- 若運算子左邊的向量小於或等於右邊的向量為 **true**；反之為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is less than or equal to the vector on the right side of the operator; otherwise **false**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_le.cpp  
@@ -167,26 +182,26 @@ Vector v1 is less than or equal to vector v2.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 測試運算子左邊的物件是否等於右邊的物件。  
+ Tests if the object on the left side of the operator is equal to the object on the right side.  
   
 ```  
 bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
  `right`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>傳回值  
- 若運算子左邊的向量等於右邊的向量為 **true**；反之為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is equal to the vector on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 如果有相同數目的元素，且個別元素擁有相同的值，則兩個向量相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ Two vectors are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_eq.cpp  
@@ -213,24 +228,24 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="op_gt"></a>  運算子&gt;  
- 測試運算子左邊的物件是否大於右邊的物件。  
+##  <a name="op_gt"></a>  operator&gt;  
+ Tests if the object on the left side of the operator is greater than the object on the right side.  
   
 ```  
 bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
  `right`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的向量大於運算子右邊的向量為 **true**；反之為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is greater than the vector on the right side of the operator; otherwise **false**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_gt.cpp  
@@ -262,24 +277,24 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="op_gt_eq"></a>  運算子&gt;=  
- 測試運算子左邊的物件是否大於或等於右邊的物件。  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Tests if the object on the left side of the operator is greater than or equal to the object on the right side.  
   
 ```  
 bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
  `right`  
- 類型 **vector** 的物件。  
+ An object of type **vector**.  
   
-### <a name="return-value"></a>傳回值  
- 若運算子左邊的向量大於或等於右邊的向量為 **true**；反之為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the vector on the left side of the operator is greater than or equal to the vector on the right side of the vector; otherwise **false**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // vector_op_ge.cpp  
@@ -311,7 +326,7 @@ int main( )
 Vector v1 is greater than or equal to vector v2.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<vector>](../standard-library/vector.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;string&gt; typedef | Microsoft Docs'
+title: '&lt;string&gt; typedefs | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,30 +14,30 @@ f1_keywords:
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d9bc4c7f814c44d91ec1cff881107fdc92949368
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 07de226afac564c50618d212648a63b90069c902
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedef
+# <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedefs
 ||||  
 |-|-|-|  
 |[string](#string)|[u16string](#u16string)|[u32string](#u32string)|  
 |[wstring](#wstring)|  
   
 ##  <a name="string"></a>  string  
- 類型，描述使用 `char` 類型的項目特製化樣板類別 [basic_string](../standard-library/basic-string-class.md)。  
+ A type that describes a specialization of the template class [basic_string](../standard-library/basic-string-class.md) with elements of type `char`.  
   
- 其他特製化 `basic_string` 的 typedef 包含 [wstring](../standard-library/string-typedefs.md#wstring)、[u16string](../standard-library/string-typedefs.md#u16string) 及 [u32string](../standard-library/string-typedefs.md#u32string)。  
+ Other typedefs that specialize `basic_string` include [wstring](../standard-library/string-typedefs.md#wstring), [u16string](../standard-library/string-typedefs.md#u16string), and [u32string](../standard-library/string-typedefs.md#u32string).  
   
 ```cpp  
 typedef basic_string<char, char_traits<char>, allocator<char>> string;
 ```  
   
-### <a name="remarks"></a>備註  
- 以下宣告是相同的：  
+### <a name="remarks"></a>Remarks  
+ The following are equivalent declarations:  
   
 ```cpp  
 string str("");
@@ -45,43 +45,43 @@ string str("");
 basic_string<char> str("");
 ```  
   
- 如需 string 建構函式的清單，請參閱 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。  
+ For a list of string constructors, see [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="u16string"></a>  u16string  
- 類型，描述使用 `char16_t` 類型的項目特製化樣板類別 [basic_string](../standard-library/basic-string-class.md)。  
+ A type that describes a specialization of the template class [basic_string](../standard-library/basic-string-class.md) with elements of type `char16_t`.  
   
- 其他特製化 `basic_string` 的 typedef 包含 [wstring](../standard-library/string-typedefs.md#wstring)、[string](../standard-library/string-typedefs.md#string) 及 [u32string](../standard-library/string-typedefs.md#u32string)。  
+ Other typedefs that specialize `basic_string` include [wstring](../standard-library/string-typedefs.md#wstring), [string](../standard-library/string-typedefs.md#string), and [u32string](../standard-library/string-typedefs.md#u32string).  
   
 ```cpp  
 typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16string;
 ```  
   
-### <a name="remarks"></a>備註  
- 如需 string 建構函式的清單，請參閱 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。  
+### <a name="remarks"></a>Remarks  
+ For a list of string constructors, see [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="u32string"></a>  u32string  
- 類型，描述使用 `char32_t` 類型的項目特製化樣板類別 [basic_string](../standard-library/basic-string-class.md)。  
+ A type that describes a specialization of the template class [basic_string](../standard-library/basic-string-class.md) with elements of type `char32_t`.  
   
- 其他特製化 `basic_string` 的 typedef 包含 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 及 [wstring](../standard-library/string-typedefs.md#wstring)。  
+ Other typedefs that specialize `basic_string` include [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), and [wstring](../standard-library/string-typedefs.md#wstring).  
   
 ```cpp  
 typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32string;
 ```  
   
-### <a name="remarks"></a>備註  
- 如需 string 建構函式的清單，請參閱 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。  
+### <a name="remarks"></a>Remarks  
+ For a list of string constructors, see [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 ##  <a name="wstring"></a>  wstring  
- 類型，描述使用 `wchar_t` 類型的項目特製化樣板類別 [basic_string](../standard-library/basic-string-class.md)。  
+ A type that describes a specialization of the template class [basic_string](../standard-library/basic-string-class.md) with elements of type `wchar_t`.  
   
- 其他特製化 `basic_string` 的 typedef 包含 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 及 [u32string](../standard-library/string-typedefs.md#u32string)。  
+ Other typedefs that specialize `basic_string` include [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), and [u32string](../standard-library/string-typedefs.md#u32string).  
   
 ```cpp  
 typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t>> wstring;
 ```  
   
-### <a name="remarks"></a>備註  
- 以下宣告是相同的：  
+### <a name="remarks"></a>Remarks  
+ The following are equivalent declarations:  
   
 ```cpp  
 wstring wstr(L"");
@@ -89,12 +89,12 @@ wstring wstr(L"");
 basic_string<wchar_t> wstr(L"");
 ```  
   
- 如需 string 建構函式的清單，請參閱 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。  
+ For a list of string constructors, see [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).  
   
 > [!NOTE]
->  `wchar_t` 的大小是由實作定義。 如果您的程式碼取決於 `wchar_t` 的特定大小，請檢查您的平台實作 (例如，使用 `sizeof(wchar_t)`)。 如果您需要的字串字元類型保證會在所有平台上具有相同寬度，請使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。  
+>  The size of `wchar_t` is implementation-defined. If your code depends on `wchar_t` to be a certain size, check your platform's implementation (for example, with `sizeof(wchar_t)`). If you need a string character type with a width that is guaranteed to remain the same on all platforms, use [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string), or [u32string](../standard-library/string-typedefs.md#u32string).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<string>](../standard-library/string.md)
 
 

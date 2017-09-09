@@ -1,5 +1,5 @@
 ---
-title: "is_base_of 類別 | Microsoft Docs"
+title: is_base_of Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_base_of
 - type_traits/std::is_base_of
 dev_langs:
 - C++
@@ -35,34 +34,34 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 22b1f7f93d82fbe5780352c11cb9024b8305d79c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 061d16596c8e85196e8f2d14f60ab08ac93c1fa2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isbaseof-class"></a>is_base_of 類別
-測試某個類型是否為另一個類型的基底。  
+# <a name="isbaseof-class"></a>is_base_of Class
+Tests whether one type is base of another.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Base, class Derived>  
 struct is_base_of;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Base`  
- 要測試的基底類別。  
+ The base class to test for.  
   
  `Derived`  
- 要測試的衍生類型。  
+ The derived type to test for.  
   
-## <a name="remarks"></a>備註  
- 如果類型 `Base` 是類型 `Derived` 的基底類別，則類型述詞的執行個體為 true，否則為 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Base` is a base class of the type `Derived`, otherwise it holds false.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -97,12 +96,12 @@ is_base_of<base, derived> == true
 is_base_of<derived, base> == false  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_convertible 類別](../standard-library/is-convertible-class.md)
+ [is_convertible Class](../standard-library/is-convertible-class.md)
 

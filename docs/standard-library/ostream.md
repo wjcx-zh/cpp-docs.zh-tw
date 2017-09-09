@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<ostream>
-- <ostream>
-- ostream/std::<ostream>
-- std::<ostream>
+- <ostream>", "ostream/std::<ostream>", "std::<ostream>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4b8e9c4f86ac9bab261824c10a8e6d8c3506bc1a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 53af26cc0abcca122e8b1ba17d0346e477d6f82b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
-定義樣板類別 [basic_ostream](../standard-library/basic-ostream-class.md)，這會調解 iostream 的插入作業。 這個標頭也會定義幾個相關的操作工具。 (通常會由另一個 iostreams 標頭為您包含這個標頭。 您很少需要直接包含這個標頭。)  
+Defines the template class [basic_ostream](../standard-library/basic-ostream-class.md), which mediates insertions for the iostreams. The header also defines several related manipulators. (This header is typically included for you by another of the iostreams headers. You rarely need to include it directly.)  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <ostream>  
@@ -57,35 +54,35 @@ ms.lasthandoff: 04/29/2017
   
 |||  
 |-|-|  
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|從根據 `char` 特製化的 `basic_ostream` 和根據 `char` 特製化的 `char_traits` 建立類型。|  
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|從根據 `wchar_t` 特製化的 `basic_ostream` 和根據 `wchar_t` 特製化的 `char_traits` 建立類型。|  
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Creates a type from `basic_ostream` that is specialized on `char` and `char_traits` specialized on `char`.|  
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Creates a type from `basic_ostream` that is specialized on `wchar_t` and `char_traits` specialized on `wchar_t`.|  
   
-### <a name="manipulators"></a>操作工具  
-  
-|||  
-|-|-|  
-|[endl](../standard-library/ostream-functions.md#endl)|結束一行並清除緩衝區。|  
-|[ends](../standard-library/ostream-functions.md#ends)|結束字串。|  
-|[flush](../standard-library/ostream-functions.md#flush)|清除緩衝區。|  
-|[swap](../standard-library/ostream-functions.md#swap)|將左 `basic_ostream` 物件參數的值與右 `basic_ostream` 物件參數的值交換。|  
-  
-### <a name="operators"></a>運算子  
+### <a name="manipulators"></a>Manipulators  
   
 |||  
 |-|-|  
-|[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|將各種類型寫入資料流。|  
+|[endl](../standard-library/ostream-functions.md#endl)|Terminates a line and flushes the buffer.|  
+|[ends](../standard-library/ostream-functions.md#ends)|Terminates a string.|  
+|[flush](../standard-library/ostream-functions.md#flush)|Flushes the buffer.|  
+|[swap](../standard-library/ostream-functions.md#swap)|Exchanges the values of the left `basic_ostream` object parameter for those of the right `basic_ostream` object parameter.|  
   
-### <a name="classes"></a>類別  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[basic_ostream](../standard-library/basic-ostream-class.md)|這個樣板類別所描述的物件，可控制將項目和編碼物件插入資料流緩衝區中。|  
+|[operator<<](../standard-library/ostream-operators.md#op_lt_lt)|Writes various types to the stream.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[basic_ostream](../standard-library/basic-ostream-class.md)|The template class describes an object that controls insertion of elements and encoded objects into a stream buffer.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

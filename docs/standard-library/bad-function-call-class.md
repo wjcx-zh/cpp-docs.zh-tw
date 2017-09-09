@@ -1,5 +1,5 @@
 ---
-title: "bad_function_call 類別 | Microsoft Docs"
+title: bad_function_call Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- bad_function_call
 - functional/std::bad_function_call
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: 89ec0f614151128decfbc2c0a451ca9f55f4e85e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 190102376f909550e887482434268afed6fe547b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="badfunctioncall-class"></a>bad_function_call 類別
-報告錯誤的函式呼叫。  
+# <a name="badfunctioncall-class"></a>bad_function_call Class
+Reports a bad function call.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class bad_function_call  
@@ -52,6 +51,6 @@ class bad_function_call
  };  
 ```  
   
-## <a name="remarks"></a>備註  
- 此類別描述所擲回的例外狀況，表示對 [function 類別](../standard-library/function-class.md)的 `operator()` 呼叫。
+## <a name="remarks"></a>Remarks  
+ The class describes an exception thrown to indicate that a call to `operator()` on a [function Class](../standard-library/function-class.md)
 

@@ -5,52 +5,11 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <shared_mutex>
-- shared_mutex/std::swap
-- shared_mutex/std::shared_lock
-- shared_mutex/std::shared_lock::shared_lock
-- shared_mutex/std::shared_lock::operator=
-- shared_mutex/std::shared_lock::operator =
-- shared_mutex/std::shared_lock::lock
-- shared_mutex/std::shared_lock::try_lock
-- shared_mutex/std::shared_lock::try_lock_for
-- shared_mutex/std::shared_lock::try_lock_until
-- shared_mutex/std::shared_lock::unlock
-- shared_mutex/std::shared_lock::swap
-- shared_mutex/std::shared_lock::release
-- shared_mutex/std::shared_lock::owns_lock
-- shared_mutex/std::shared_lock::operator bool
-- shared_mutex/std::shared_lock::mutex
-- shared_mutex/std::shared_mutex
-- shared_mutex/std::shared_mutex::native_handle_type
-- shared_mutex/std::shared_mutex::shared_mutex
-- shared_mutex/std::shared_mutex::operator=
-- shared_mutex/std::shared_mutex::operator =
-- shared_mutex/std::shared_mutex::lock
-- shared_mutex/std::shared_mutex::try_lock
-- shared_mutex/std::shared_mutex::unlock
-- shared_mutex/std::shared_mutex::lock_shared
-- shared_mutex/std::shared_mutex::try_lock_shared
-- shared_mutex/std::shared_mutex::unlock_shared
-- shared_mutex/std::shared_mutex::native_handle
-- shared_mutex/std::shared_timed_mutex
-- shared_mutex/std::shared_timed_mutex::shared_timed_mutex
-- shared_mutex/std::shared_timed_mutex::operator=
-- shared_mutex/std::shared_timed_mutex::operator =
-- shared_mutex/std::shared_timed_mutex::lock
-- shared_mutex/std::shared_timed_mutex::try_lock
-- shared_mutex/std::shared_timed_mutex::try_lock_for
-- shared_mutex/std::shared_timed_mutex::try_lock_until
-- shared_mutex/std::shared_timed_mutex::unlock
-- shared_mutex/std::shared_timed_mutex::lock_shared
-- shared_mutex/std::shared_timed_mutex::try_lock_shared
-- shared_mutex/std::shared_timed_mutex::try_lock_shared_for
-- shared_mutex/std::shared_timed_mutex::try_lock_shared_until
-- shared_mutex/std::shared_timed_mutex::unlock_shared
+- <shared_mutex>", "shared_mutex/std::swap", "shared_mutex/std::shared_lock", "shared_mutex/std::shared_lock::shared_lock", "shared_mutex/std::shared_lock::operator=", "shared_mutex/std::shared_lock::operator =", "shared_mutex/std::shared_lock::lock", "shared_mutex/std::shared_lock::try_lock", "shared_mutex/std::shared_lock::try_lock_for", "shared_mutex/std::shared_lock::try_lock_until", "shared_mutex/std::shared_lock::unlock", "shared_mutex/std::shared_lock::swap", "shared_mutex/std::shared_lock::release", "shared_mutex/std::shared_lock::owns_lock", "shared_mutex/std::shared_lock::operator bool", "shared_mutex/std::shared_lock::mutex", "shared_mutex/std::shared_mutex", "shared_mutex/std::shared_mutex::native_handle_type", "shared_mutex/std::shared_mutex::shared_mutex", "shared_mutex/std::shared_mutex::operator=", "shared_mutex/std::shared_mutex::operator =", "shared_mutex/std::shared_mutex::lock", "shared_mutex/std::shared_mutex::try_lock", "shared_mutex/std::shared_mutex::unlock", "shared_mutex/std::shared_mutex::lock_shared", "shared_mutex/std::shared_mutex::try_lock_shared", "shared_mutex/std::shared_mutex::unlock_shared", "shared_mutex/std::shared_mutex::native_handle", "shared_mutex/std::shared_timed_mutex", "shared_mutex/std::shared_timed_mutex::shared_timed_mutex", "shared_mutex/std::shared_timed_mutex::operator=", "shared_mutex/std::shared_timed_mutex::operator =", "shared_mutex/std::shared_timed_mutex::lock", "shared_mutex/std::shared_timed_mutex::try_lock", "shared_mutex/std::shared_timed_mutex::try_lock_for", "shared_mutex/std::shared_timed_mutex::try_lock_until", "shared_mutex/std::shared_timed_mutex::unlock", "shared_mutex/std::shared_timed_mutex::lock_shared", "shared_mutex/std::shared_timed_mutex::try_lock_shared", "shared_mutex/std::shared_timed_mutex::try_lock_shared_for", "shared_mutex/std::shared_timed_mutex::try_lock_shared_until", "shared_mutex/std::shared_timed_mutex::unlock_shared
 dev_langs:
 - C++
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
@@ -72,29 +31,29 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: e864aca13c5ae83b3806a95026a05f8f408e9071
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 00352c9bcf207b551c0a1a2c86bcc4c7c81e6e68
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltsharedmutexgt"></a>&lt;shared_mutex&gt;
-<shared_mutex> 標頭提供同步處理原始物件，來保護可供多個執行緒存取的共用資料。 除了 mutex 類別所提供的獨佔存取權控制，共用的 mutex 類別也允許由多個執行緒共用擁有權以進行非獨佔存取。 共用的 mutex 可用來控制可供數個執行緒讀取，而不會造成競爭情形，但必須由單一執行緒獨佔寫入的資源。  
+The <shared_mutex> header provides synchronization primitives for protection of shared data that can be accessed by multiple threads. In addition to the exclusive access control provided by mutex classes, the shared mutex classes also allow shared ownership by multiple threads for non-exclusive access. Shared mutexes can be used to control resources that can be read by several threads without causing a race condition, but must be written exclusively by a single thread.  
   
- <shared_mutex> 標頭會定義類別 `shared_mutex` 和 `shared_timed_mutex`、樣板類別 `shared_lock` 及樣板函式 `swap`，以支援共用的 mutex。  
+ The header <shared_mutex> defines the classes `shared_mutex` and `shared_timed_mutex`, the template class `shared_lock`, and the template function `swap` for shared mutex support.  
   
-|類別|說明|  
+|Classes|Description|  
 |-------------|-----------------|  
-|[shared_mutex 類別](../standard-library/shared-mutex.md#class_shared_mutex)|共用的 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|  
-|[shared_timed_mutex 類別](../standard-library/shared-mutex.md#class_shared_timed_mutex)|共用的計時 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|  
-|[shared_lock 類別](../standard-library/shared-mutex.md#class_shared_lock)|樣板類別，會包裝共用的 mutex 包裝以支援計時鎖定作業，並以非獨佔方式供多個執行緒共用。|  
+|[shared_mutex Class](../standard-library/shared-mutex.md#class_shared_mutex)|A shared mutex type that can be locked exclusively by one agent or shared non-exclusively by multiple agents.|  
+|[shared_timed_mutex Class](../standard-library/shared-mutex.md#class_shared_timed_mutex)|A shared timed mutex type that can be locked exclusively by one agent or shared non-exclusively by multiple agents.|  
+|[shared_lock Class](../standard-library/shared-mutex.md#class_shared_lock)|A template class that wraps a shared mutex to support timed lock operations and non-exclusive sharing by multiple agents.|  
   
-|函式|說明|  
+|Functions|Description|  
 |---------------|-----------------|  
-|[swap](../standard-library/shared-mutex.md#function_swap)|交換函式參數所參考的共用 mutex 物件內容。|  
+|[swap](../standard-library/shared-mutex.md#function_swap)|Swaps the content of the shared mutex objects referenced by the function parameters.|  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 namespace std {
@@ -107,34 +66,34 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 }
 ```  
   
-## <a name="remarks"></a>備註  
- `shared_mutex` 類別的執行個體是「共用的 mutex 類型」，此類型可控制某個範圍內 mutex 的共用擁有權。 共用的 mutex 類型符合 mutex 類型以及成員的所有需求，以支援共用的非獨佔擁有權。  
+## <a name="remarks"></a>Remarks  
+ An instance of the class `shared_mutex` is a *shared mutex type*, a type that controls the shared ownership of a mutex within a scope. A shared mutex type meets all the requirements of a mutex type, as well as members to support shared non-exclusive ownership.  
   
- 共用的 mutex 類型支援 `lock_shared`、`unlock_shared` 和 `try_lock_shared` 等其他方法：  
+ A shared mutex type supports the additional methods `lock_shared`, `unlock_shared`, and `try_lock_shared`:  
   
--   `lock_shared` 方法會封鎖呼叫執行緒，直到執行緒取得 mutex 的共用擁有權。  
+-   The `lock_shared` method blocks the calling thread until the thread obtains shared ownership of the mutex.  
   
--   `unlock_shared` 方法會釋放呼叫執行緒所持有之 mutex 的共用擁有權。  
+-   The `unlock_shared` method releases shared ownership of the mutex held by the calling thread.  
   
--   `try_lock_shared` 方法會嘗試在不造成封鎖的情況下取得 mutex 的共用擁有權。 它的傳回型別會轉換成 `bool`，如果方法取得擁有權則為 `true`，否則為 `false`。  
+-   The `try_lock_shared` method tries to obtain shared ownership of the mutex without blocking. Its return type is convertible to `bool` and is `true` if the method obtains ownership, but is otherwise `false`.  
   
- `shared_timed_mutex` 類別是「共用的計時 mutex 類型」，此類型符合共用 mutex 類型和計時 mutex 類型的需求。  
+ The class `shared_timed_mutex` is a *shared timed mutex type*, a type that meets the requirements of both a shared mutex type and a timed mutex type.  
   
- 共用的計時 mutex 類型支援 `try_lock_shared_for` 和 `try_lock_shared_until` 等其他方法：  
+ A shared timed mutex type supports the additional methods `try_lock_shared_for` and `try_lock_shared_until`:  
   
--   `try_lock_shared_for` 方法會嘗試取得 mutex 的共用擁有權，直到經過了參數所指定的持續時間為止。 如果持續時間不是正數，此方法就相當於 `try_lock_shared`。 除非取得了共用擁有權，否則此方法不會在指定的持續期間內傳回。 如果方法取得擁有權，它的傳回值會是 `true`，否則為 `false`。  
+-   The `try_lock_shared_for` method attempts to obtain shared ownership of the mutex until the duration specified by the parameter has passed. If the duration is not positive, the method is equivalent to `try_lock_shared`. The method does not return within the duration specified unless shared ownership is obtained. Its return value is `true` if the method obtains ownership, but is otherwise `false`.  
   
--   `try_lock_shared_until` 方法會嘗試取得 mutex 的共用擁有權，直到經過了指定的絕對時間為止。 如果已經過了指定的時間，此方法就相當於 `try_lock_shared`。 除非取得了共用擁有權，否則此方法不會在指定的時間之前傳回。 如果方法取得擁有權，它的傳回值會是 `true`，否則為 `false`。  
+-   The `try_lock_shared_until` method attempts to obtain shared ownership of the mutex until the specified absolute time has passed. If the specified time has already passed, the method is equivalent to `try_lock_shared`. The method does not return before the time specified unless shared ownership is obtained. Its return value is `true` if the method obtains ownership, but is otherwise `false`.  
   
- `shared_lock` 樣板類別會延伸對計時鎖定的支援，並將擁有權轉移到共用的 mutex。 擁有權可在建構期間或完成之後取得，並可轉移到另一個 `shared_lock` 物件。 `shared_lock` 類型的物件可以移動，但無法複製。  
+ The `shared_lock` template class extends support for timed locking and transfer of ownership to a shared mutex. Ownership of the mutex may be obtained at or after construction, and may be transferred to another `shared_lock` object. Objects of type `shared_lock` can be moved, but not copied.  
   
 > [!WARNING]
->  從 Visual Studio 2015 開始，c + + 標準程式庫同步處理類型根據 Windows 同步處理原始物件，且不再使用 ConcRT （除非目標平台是 Windows XP）。 <shared_mutex> 中定義的類型不應與任何 ConcRT 類型或函式搭配使用。  
+>  Beginning in Visual Studio 2015, the C++ Standard Library synchronization types are based on Windows synchronization primitives and no longer use ConcRT (except when the target platform is Windows XP). The types defined in <shared_mutex> should not be used with any ConcRT types or functions.  
   
-## <a name="classes"></a>類別  
+## <a name="classes"></a>Classes  
   
-###  <a name="class_shared_mutex"></a> shared_mutex 類別  
- `shared_mutex` 類別會利用共用擁有權語意來實作非遞迴的 mutex。  
+###  <a name="class_shared_mutex"></a> shared_mutex Class  
+ Class `shared_mutex` implements a non-recursive mutex with shared ownership semantics.  
   
 ```cpp  
 class shared_mutex {
@@ -159,8 +118,8 @@ class shared_mutex {
    };  
 ```
 
-###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex 類別  
- `shared_timed_mutex` 類別會利用符合計時 mutex 類型需求的共用擁有權語意，來實作非遞迴的 mutex。  
+###  <a name="class_shared_timed_mutex"></a> shared_timed_mutex Class  
+ Class `shared_timed_mutex` implements a non-recursive mutex with shared ownership semantics that meets the requirements of a timed mutex type.  
   
 ```cpp  
 class shared_timed_mutex {
@@ -190,8 +149,8 @@ class shared_timed_mutex {
    };  
 ```
 
-###  <a name="class_shared_lock"></a> shared_lock 類別  
- 樣板類別 `shared_lock` 會控制某個範圍內共用 mutex 物件的共用擁有權。 樣板參數必須是共用的 mutex 類型。  
+###  <a name="class_shared_lock"></a> shared_lock Class  
+ Template class `shared_lock` controls the shared ownership of a shared mutex object within a scope. The template parameter must be a shared mutex type.  
 
 ```cpp  
 class shared_lock {
@@ -235,25 +194,25 @@ class shared_lock {
    };  
 ```
 
-## <a name="functions"></a>函式  
+## <a name="functions"></a>Functions  
   
-###  <a name="function_swap"></a>交換
- 交換 `shared_lock` 物件。  
+###  <a name="function_swap"></a> swap
+ Swaps the `shared_lock` objects.  
   
 ```cpp  
 template <class Mutex>
 void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 ```  
   
- 交換兩個 `shared_lock` 物件的內容。 效力等同於 `x``.swap(``y``)`。  
+ Exchanges the content of two `shared_lock` objects. Effectively the same as `x.swap(y)`.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** \<shared_mutex >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<shared_mutex>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

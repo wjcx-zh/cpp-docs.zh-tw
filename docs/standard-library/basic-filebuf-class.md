@@ -1,16 +1,15 @@
 ---
-title: "basic_filebuf 類別 | Microsoft Docs"
+title: basic_filebuf Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - fstream/std::basic_filebuf
-- basic_filebuf
 - fstream/std::basic_filebuf::char_type
 - fstream/std::basic_filebuf::int_type
 - fstream/std::basic_filebuf::off_type
@@ -31,7 +30,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_filebuf class
+- std::basic_filebuf [C++]
+- std::basic_filebuf [C++], char_type
+- std::basic_filebuf [C++], int_type
+- std::basic_filebuf [C++], off_type
+- std::basic_filebuf [C++], pos_type
+- std::basic_filebuf [C++], traits_type
+- std::basic_filebuf [C++], close
+- std::basic_filebuf [C++], is_open
+- std::basic_filebuf [C++], open
+- std::basic_filebuf [C++], overflow
+- std::basic_filebuf [C++], pbackfail
+- std::basic_filebuf [C++], seekoff
+- std::basic_filebuf [C++], seekpos
+- std::basic_filebuf [C++], setbuf
+- std::basic_filebuf [C++], Swap
+- std::basic_filebuf [C++], sync
+- std::basic_filebuf [C++], uflow
+- std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 caps.latest.revision: 24
 author: corob-msft
@@ -51,40 +67,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 87fb5398d931436e4e08c1e62d6bf9b1e8d2aa7b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b38c38e2332da84bdc995a2ac379ce19516b64a0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicfilebuf-class"></a>basic_filebuf 類別
-描述資料流緩衝區，其控制類型 `Elem` 的項目 (其字元特性由類別 `Tr` 所決定)，與外部檔案中儲存的項目序列之間的往來傳輸。  
+# <a name="basicfilebuf-class"></a>basic_filebuf Class
+Describes a stream buffer that controls the transmission of elements of type `Elem`, whose character traits are determined by the class `Tr`, to and from a sequence of elements stored in an external file.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_filebuf : public basic_streambuf<Elem, Tr>  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- 檔案緩衝區的基本項目。  
+ The basic element of the file buffer.  
   
  `Tr`  
- 檔案緩衝區之基本元素的特性 (通常是 `char_traits`< `Elem`>)。  
+ The traits of the basic element of the file buffer (usually `char_traits`< `Elem`>).  
   
-## <a name="remarks"></a>備註  
- 範本類別描述資料流緩衝區，其控制類型 `Elem` 的項目 (其字元特性由類別 `Tr` 所決定)，與外部檔案中儲存的項目序列之間的往來傳輸。  
+## <a name="remarks"></a>Remarks  
+ The template class describes a stream buffer that controls the transmission of elements of type `Elem`, whose character traits are determined by the class `Tr`, to and from a sequence of elements stored in an external file.  
   
 > [!NOTE]
->  類型 `basic_filebuf` 的物件是在類型 `char *` 的內部緩衝區內建立，不論類型參數 `Elem` 所指定的 `char_type`。 這表示在寫入內部緩衝區之前，Unicode 字串 (包含 `wchar_t` 字元) 會轉換為 ANSI 字串 (包含 `char` 字元)。 若要在緩衝區中儲存 Unicode 字串，請建立 `wchar_t` 類型的新緩衝區，並使用 [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf)`()` 方法來設定它。 若要查看示範此行為的範例，請參閱以下範例。  
+>  Objects of type `basic_filebuf` are created with an internal buffer of type `char *` regardless of the `char_type` specified by the type parameter `Elem`. This means that a Unicode string (containing `wchar_t` characters) will be converted to an ANSI string (containing `char` characters) before it is written to the internal buffer. To store Unicode strings in the buffer, create a new buffer of type `wchar_t` and set it using the [basic_streambuf::pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf)`()` method. To see an example that demonstrates this behavior, see below.  
   
- 類別 `basic_filebuf`< `Elem`, `Tr`> 的物件會儲存檔案指標，而檔案指標指定 `FILE` 物件以控制與開啟的檔案相關聯的資料流。 它也會將指標儲存至兩個檔案轉換 Facet，以供受保護成員函式 [overflow](#overflow) 和 [underflow](#underflow) 使用。 如需詳細資訊，請參閱 [basic_filebuf::open](#open)。  
+ An object of class `basic_filebuf`< `Elem`, `Tr`> stores a file pointer, which designates the `FILE` object that controls the stream associated with an open file. It also stores pointers to two file conversion facets for use by the protected member functions [overflow](#overflow) and [underflow](#underflow). For more information, see [basic_filebuf::open](#open).  
   
-## <a name="example"></a>範例  
- 下列範例示範如何強制類型 `basic_filebuf<wchar_t>` 的物件，以藉由呼叫 `pubsetbuf()` 方法，在其內部緩衝區中儲存 Unicode 字元。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to force an object of type `basic_filebuf<wchar_t>` to store Unicode characters in its internal buffer by calling the `pubsetbuf()` method.  
   
 ```  
 // unicode_basic_filebuf.cpp  
@@ -201,46 +217,46 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 72 00 6c 00 64 00 00 00 00 00 00 00 00 00 00 00   r.l.d...........  
 ```  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_filebuf](#basic_filebuf)|建構類型 `basic_filebuf` 的物件。|  
+|[basic_filebuf](#basic_filebuf)|Constructs an object of type `basic_filebuf`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|將類型名稱與 `Elem` 樣板參數產生關聯。|  
-|[int_type](#int_type)|在 `basic_filebuf` 的範圍中製作此類型，相當於在 `Tr` 範圍中的同名類型。|  
-|[off_type](#off_type)|在 `basic_filebuf` 的範圍中製作此類型，相當於在 `Tr` 範圍中的同名類型。|  
-|[pos_type](#pos_type)|在 `basic_filebuf` 的範圍中製作此類型，相當於在 `Tr` 範圍中的同名類型。|  
-|[traits_type](#traits_type)|將類型名稱與 `Tr` 樣板參數產生關聯。|  
+|[char_type](#char_type)|Associates a type name with the `Elem` template parameter.|  
+|[int_type](#int_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[off_type](#off_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[pos_type](#pos_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[traits_type](#traits_type)|Associates a type name with the `Tr` template parameter.|  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[close](#close)|關閉檔案。|  
-|[is_open](#is_open)|指出檔案是否為開啟。|  
-|[open](#open)|開啟檔案。|  
-|[overflow](#overflow)|受保護的虛擬函式，可在將新字元插入已滿的緩衝區時呼叫。|  
-|[pbackfail](#pbackfail)|受保護的虛擬成員函式會嘗試將項目放回輸入資料流，然後將其設成目前的項目 (由下一個指標指向)。|  
-|[seekoff](#seekoff)|受保護的虛擬成員函式會嘗試改變受控制資料流的目前位置。|  
-|[seekpos](#seekpos)|受保護的虛擬成員函式會嘗試改變受控制資料流的目前位置。|  
-|[setbuf](#setbuf)|受保護的虛擬成員函式會執行每個衍生資料流緩衝區的特定作業。|  
-|[Swap](#swap)|針對提供之 `basic_filebuf` 參數的內容，交換此 `basic_filebuf` 的內容。|  
-|[sync](#sync)|受保護的虛擬函式會嘗試與任何相關聯的外部資料流同步處理控制資料流。|  
-|[uflow](../standard-library/basic-streambuf-class.md#uflow)|用於從輸入資料流擷取目前項目之受保護的虛擬函式。|  
-|[underflow](#underflow)|用於從輸入資料流擷取目前項目之受保護的虛擬函式。|  
+|[close](#close)|Closes a file.|  
+|[is_open](#is_open)|Indicates whether a file is open.|  
+|[open](#open)|Opens a file.|  
+|[overflow](#overflow)|A protected virtual function that can be called when a new character is inserted into a full buffer.|  
+|[pbackfail](#pbackfail)|The protected virtual member function tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).|  
+|[seekoff](#seekoff)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[seekpos](#seekpos)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[setbuf](#setbuf)|The protected virtual member function performs an operation particular to each derived stream buffer.|  
+|[Swap](#swap)|Exchanges the content of this `basic_filebuf` for the content of the provided `basic_filebuf` parameter.|  
+|[sync](#sync)|Protected, virtual function tries to synchronize the controlled streams with any associated external streams.|  
+|[uflow](../standard-library/basic-streambuf-class.md#uflow)|Protected, virtual function to extract the current element from the input stream.|  
+|[underflow](#underflow)|Protected, virtual function to extract the current element from the input stream.|  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<fstream>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<fstream>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-##  <a name="basic_filebuf"></a> basic_filebuf::basic_filebuf  
- 建構類型 `basic_filebuf` 的物件。  
+##  <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf  
+ Constructs an object of type `basic_filebuf`.  
   
 ```  
 basic_filebuf();
@@ -248,35 +264,35 @@ basic_filebuf();
 basic_filebuf(basic_filebuf&& right);
 ```  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會在控制輸入緩衝區和輸出緩衝區的所有指標中儲存 Null 指標。 它也會將 Null 指標儲存在檔案指標中。  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores a null pointer in all the pointers controlling the input buffer and the output buffer. It also stores a null pointer in the file pointer.  
   
- 第二個建構函式會使用視為右值參考的 `right` 內容初始化物件。  
+ The second constructor initializes the object with the contents of `right`, treated as an rvalue reference.  
   
-##  <a name="char_type"></a> basic_filebuf::char_type  
- 將類型名稱與 **Elem** 範本參數建立關聯。  
+##  <a name="char_type"></a>  basic_filebuf::char_type  
+ Associates a type name with the **Elem** template parameter.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
-##  <a name="close"></a> basic_filebuf::close  
- 關閉檔案。  
+##  <a name="close"></a>  basic_filebuf::close  
+ Closes a file.  
   
 ```  
 basic_filebuf<Elem, Tr> *close();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果檔案指標為 Null 指標，則成員函式會傳回 Null 指標。  
+### <a name="return-value"></a>Return Value  
+ The member function returns a null pointer if the file pointer is a null pointer.  
   
-### <a name="remarks"></a>備註  
- **close** 會呼叫 `fclose`(**fp**)。 如果該函式傳回非零值，則函式會傳回 Null 指標。 否則，它會傳回 **this**，表示已成功關閉檔案。  
+### <a name="remarks"></a>Remarks  
+ **close** calls `fclose`( **fp**). If that function returns a nonzero value, the function returns a null pointer. Otherwise, it returns **this** to indicate that the file was successfully closed.  
   
- 針對寬資料流，如果在開啟資料流之後或最後一次呼叫 `streampos` 之後進行過任何插入，則函式會呼叫 [overflow](#overflow)。 它也會插入還原初始轉換狀態所需的任何序列，方法是視需要使用檔案轉換 Facet **fac** 來呼叫 **fac.unshift**。 因此，產生之 `char` 類型的每個元素 **byte** 都會寫入至檔案指標 **fp** 所指定的相關聯資料流，就像後續呼叫 `fputc`(**byte**, **fp**) 形式一樣。 如果 **fac.unshift** 呼叫或任何寫入失敗，則函式會失敗。  
+ For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to `streampos`, the function calls [overflow](#overflow). It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet **fac** to call **fac.unshift** as needed. Each element **byte** of type `char` thus produced is written to the associated stream designated by the file pointer **fp** as if by successive calls of the form `fputc`( **byte**, **fp**). If the call to **fac.unshift** or any write fails, the function does not succeed.  
   
-### <a name="example"></a>範例  
-  下列範例假設目前目錄中有兩個檔案︰basic_filebuf_close.txt (內容為 "testing") 和 iotest.txt (內容為 "ssss")。  
+### <a name="example"></a>Example  
+  The following sample assumes two files in the current directory: basic_filebuf_close.txt (contents is "testing") and iotest.txt (contents is "ssss").  
   
 ```  
 // basic_filebuf_close.cpp  
@@ -323,24 +339,24 @@ s
 1  
 ```  
   
-##  <a name="int_type"></a> basic_filebuf::int_type  
- 使 basic_filebuf 範圍中的這個類型，相當於 **Tr** 範圍中的同名類型。  
+##  <a name="int_type"></a>  basic_filebuf::int_type  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
-##  <a name="is_open"></a> basic_filebuf::is_open  
- 指出檔案是否為開啟。  
+##  <a name="is_open"></a>  basic_filebuf::is_open  
+ Indicates whether a file is open.  
   
 ```  
 bool is_open() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果檔案指標不為 Null 指標，則為 **true**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the file pointer is not a null pointer.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_filebuf_is_open.cpp  
@@ -364,15 +380,15 @@ false
 true  
 ```  
   
-##  <a name="off_type"></a> basic_filebuf::off_type  
- 使 basic_filebuf 範圍中的這個類型，相當於 **Tr** 範圍中的同名類型。  
+##  <a name="off_type"></a>  basic_filebuf::off_type  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
-##  <a name="open"></a> basic_filebuf::open  
- 開啟檔案。  
+##  <a name="open"></a>  basic_filebuf::open  
+ Opens a file.  
   
 ```  
 basic_filebuf<Elem, Tr> *open(
@@ -394,115 +410,115 @@ basic_filebuf<Elem, Tr> *open(
     ios_base::openmode _Mode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Filename`  
- 要開啟之檔案的名稱。  
+ The name of the file to open.  
   
  `_Mode`  
- [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
- 預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。  
+ The default file opening protection, equivalent to the `shflag` parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
   
-### <a name="return-value"></a>傳回值  
- 如果檔案指標為 Null 指標，則函式會傳回 Null 指標。 否則，它會傳回 **this**。  
+### <a name="return-value"></a>Return Value  
+ If the file pointer is a null pointer, the function returns a null pointer. Otherwise, it returns **this**.  
   
-### <a name="remarks"></a>備註  
- 成員函式會開啟檔名為 *filename* 的檔案，方法是呼叫 [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**)。 **strmode** 取決於 **mode &**~( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode))：  
+### <a name="remarks"></a>Remarks  
+ The member function opens the file with filename *filename*, by calling [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**). **strmode** is determined from **mode &**~( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [binary](../standard-library/ios-base-class.md#openmode)):  
   
-- **ios_base::in** 變成 **"r"** (開啟現有檔案進行讀取)。  
+- **ios_base::in** becomes **"r"** (open existing file for reading).  
   
-- [ios_base::out](../standard-library/ios-base-class.md#fmtflags) 或 **ios_base::out &#124; ios_base::trunc** 變成 **"w"** (截斷現有檔案，或建立以進行寫入)。  
+- [ios_base::out](../standard-library/ios-base-class.md#fmtflags) or **ios_base::out &#124; ios_base::trunc** becomes **"w"** (truncate existing file or create for writing).  
   
-- **ios_base::out &#124; app** 變成 **"a"** (開啟現有檔案以附加所有寫入)。  
+- **ios_base::out &#124; app** becomes **"a"** (open existing file for appending all writes).  
   
-- **ios_base::in &#124; ios_base::out** 變成 **"r+"** (開啟現有檔案以進行讀取和寫入)。  
+- **ios_base::in &#124; ios_base::out** becomes **"r+"** (open existing file for reading and writing).  
   
-- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** 變成 **"w+"** (截斷現有檔案，或建立以進行讀取和寫入)。  
+- **ios_base::in &#124; ios_base::out &#124; ios_base::trunc** becomes **"w+"** (truncate existing file or create for reading and writing).  
   
-- **ios_base::in &#124; ios_base::out &#124; ios_base::app** 變成 **"a+"** (開啟現有檔案以讀取和附加所有寫入)。  
+- **ios_base::in &#124; ios_base::out &#124; ios_base::app** becomes **"a+"** (open existing file for reading and for appending all writes).  
   
- 如果 **mode & ios_base::binary** 為非零，則此函式會將 **b** 附加至 **strmode**以開啟二進位資料流，而不是文字資料流。 它接著會將 `fopen` 所傳回的值儲存在檔案指標 **fp** 中。 如果 **mode & ios_base::ate** 為非零，而且檔案指標不是 Null 指標，則此函式會呼叫 `fseek`( **fp**, 0, `SEEK_END`) 以在檔案結尾放置資料流。 如果該定位作業失敗，則函式會呼叫 [close](#close)(**fp**)，並將 Null 指標儲存在檔案指標中。  
+ If **mode & ios_base::binary** is nonzero, the function appends **b** to **strmode** to open a binary stream instead of a text stream. It then stores the value returned by `fopen` in the file pointer **fp**. If **mode & ios_base::ate** is nonzero and the file pointer is not a null pointer, the function calls `fseek`( **fp**, 0, `SEEK_END`) to position the stream at end of file. If that positioning operation fails, the function calls [close](#close)( **fp**) and stores a null pointer in the file pointer.  
   
- 如果檔案指標不是 Null 指標，則此函式會判斷檔案轉換 Facet：`use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc))，以供 [underflow](#underflow) 和 [overflow](#overflow) 使用。  
+ If the file pointer is not a null pointer, the function determines the file conversion facet: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)), for use by [underflow](#underflow) and [overflow](#overflow).  
   
- 如果檔案指標為 Null 指標，則函式會傳回 Null 指標。 否則，它會傳回 **this**。  
+ If the file pointer is a null pointer, the function returns a null pointer. Otherwise, it returns **this**.  
   
-### <a name="example"></a>範例  
-  如需使用 **open** 的範例，請參閱 [basic_filebuf::close](#close)。  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](#close) for an example that uses **open**.  
   
-##  <a name="op_eq"></a> basic_filebuf::operator=  
- 指派此資料流緩衝區物件的內容。 這是一個移動指派，涉及不會留下複本的右值。  
+##  <a name="op_eq"></a>  basic_filebuf::operator=  
+ Assign the content of this stream buffer object. This is a move assignment involving an rvalue that does not leave a copy behind.  
   
 ```  
 basic_filebuf& operator=(basic_filebuf&& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- [basic_filebuf](../standard-library/basic-filebuf-class.md) 物件的右值參考。  
+ An rvalue reference to a [basic_filebuf](../standard-library/basic-filebuf-class.md) object.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 *this。  
+### <a name="return-value"></a>Return Value  
+ Returns *this.  
   
-### <a name="remarks"></a>備註  
- 成員運算子會使用 `right` 的內容 (被視為 rvalue 參考) 來取代物件的內容。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+### <a name="remarks"></a>Remarks  
+ The member operator replaces the contents of the object by using the contents of `right`, treated as an rvalue reference. For more information, see [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-##  <a name="overflow"></a> basic_filebuf::overflow  
- 將新字元插入已滿的緩衝區時呼叫。  
+##  <a name="overflow"></a>  basic_filebuf::overflow  
+ Called when a new character is inserted into a full buffer.  
   
 ```  
 virtual int_type overflow(int_type _Meta = traits_type::eof);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- 要插入緩衝區的字元，或 **traits_type::eof**。  
+ The character to insert into the buffer or **traits_type::eof**.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式不成功，則傳回 **traits_type::eof**。 否則會傳回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof**. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
-### <a name="remarks"></a>備註  
- 如果 _*Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，受保護虛擬成員函式會致力於將元素 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 插入輸出緩衝區。 它可以透過下列各種方式來執行：  
+### <a name="remarks"></a>Remarks  
+ If _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the protected virtual member function endeavors to insert the element **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) into the output buffer. It can do so in various ways:  
   
--   如果有寫入位置可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。  
+-   If a write position is available, it can store the element into the write position and increment the next pointer for the output buffer.  
   
--   為輸出緩衝區配置新的或額外的儲存空間，即可提供寫入位置。  
+-   It can make a write position available by allocating new or additional storage for the output buffer.  
   
--   它可以轉換輸出緩衝區中的任何暫止輸出，後接 **ch**，方法是視需要使用檔案轉換 Facet **fac** 來呼叫 **fac.out**。 因此，產生之 *char* 類型的每個元素 `ch` 都會寫入至檔案指標 **fp** 所指定的相關聯資料流，就像後續呼叫 `fputc`(**ch**, **fp**) 形式一樣。 如果任何轉換或寫入失敗，則函式會失敗。  
+-   It can convert any pending output in the output buffer, followed by **ch**, by using the file conversion facet **fac** to call **fac.out** as needed. Each element `ch` of type *char* thus produced is written to the associated stream designated by the file pointer **fp** as if by successive calls of the form `fputc`( **ch**, **fp**). If any conversion or write fails, the function does not succeed.  
   
-##  <a name="pbackfail"></a> basic_filebuf::pbackfail  
- 嘗試將元素放回輸入資料流，然後將其設成目前元素 (透過下一個指標所指向)。  
+##  <a name="pbackfail"></a>  basic_filebuf::pbackfail  
+ Tries to put back an element into the input stream, then make it the current element (pointed to by the next pointer).  
   
 ```  
 virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- 要插入緩衝區的字元，或 **traits_type::eof**。  
+ The character to insert into the buffer, or **traits_type::eof**.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式不成功，則傳回 **traits_type::eof**。 否則會傳回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof**. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
-### <a name="remarks"></a>備註  
- 受保護虛擬成員函式會將元素放回輸入緩衝區，然後將其設成目前元素 (透過下一個指標所指向)。 如果 _*Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，要推回的元素實際上是一個已在資料流中目前元素之前的元素。 否則會以 **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 取代該元素。 此函式可以透過下列各種方式來放回元素：  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function puts back an element into the input buffer and then makes it the current element (pointed to by the next pointer). If _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the element to push back is effectively the one already in the stream before the current element. Otherwise, that element is replaced by **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). The function can put back an element in various ways:  
   
--   如果有 putback 位置可供使用，而且儲存在其中的元素與 **ch** 相等，則可遞減輸入緩衝區的下一個指標。  
+-   If a putback position is available, and the element stored there compares equal to **ch**, it can decrement the next pointer for the input buffer.  
   
--   如果函式可讓 `putback` 位置可供使用，則可以這麼做，並將下一個指標設定為指向該位置，然後將 **ch** 儲存在該位置中。  
+-   If the function can make a `putback` position available, it can do so, set the next pointer to point at that position, and store **ch** in that position.  
   
--   如果函式可以推送回元素的輸入資料流，它可以這樣做，例如藉由呼叫`ungetc`項目的型別`char`。  
+-   If the function can push back an element onto the input stream, it can do so, such as by calling `ungetc` for an element of type `char`.  
   
-##  <a name="pos_type"></a> basic_filebuf::pos_type  
- 使 basic_filebuf 範圍中的這個類型，相當於 **Tr** 範圍中的同名類型。  
+##  <a name="pos_type"></a>  basic_filebuf::pos_type  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
-##  <a name="seekoff"></a> basic_filebuf::seekoff  
- 嘗試改變受控制資料流的目前位置。  
+##  <a name="seekoff"></a>  basic_filebuf::seekoff  
+ Tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekoff(off_type _Off,
@@ -510,52 +526,52 @@ virtual pos_type seekoff(off_type _Off,
     ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 要搜尋的 `_Way` 相對位置。  
+ The position to seek for relative to `_Way`.  
   
  `_Way`  
- 位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。  
+ The starting point for offset operations. See [seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.  
   
  `_Which`  
- 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>傳回值  
- 傳回新位置或無效的資料流位置。  
+### <a name="return-value"></a>Return Value  
+ Returns the new position or an invalid stream position.  
   
-### <a name="remarks"></a>備註  
- 受保護虛擬成員函式會致力於改變受控制資料流的目前位置。 對於類別 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 的物件，`fpos_t` 類型的物件可以代表資料流位置，這類型的物件可儲存用來剖析寬資料流所需的位移和任何狀態資訊。 位移零指定資料流的第一個元素 ([pos_type](../standard-library/basic-streambuf-class.md#pos_type) 類型的物件會儲存至少一個 `fpos_t` 物件)。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to alter the current positions for the controlled streams. For an object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, a stream position can be represented by an object of type `fpos_t`, which stores an offset and any state information needed to parse a wide stream. Offset zero designates the first element of the stream. (An object of type [pos_type](../standard-library/basic-streambuf-class.md#pos_type) stores at least an `fpos_t` object.)  
   
- 針對開啟進行讀取和寫入的檔案，輸入和輸出資料流會一前一後地放置在一起。 若要切換插入與擷取，您必須呼叫 [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) 或 [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)。 `pubseekoff` 呼叫 (因而 `seekoff` 呼叫) 具有[文字資料流](../c-runtime-library/text-and-binary-streams.md)、[二進位資料流](../c-runtime-library/text-and-binary-streams.md)和[寬資料流](../c-runtime-library/byte-and-wide-streams.md)的各種限制。  
+ For a file opened for both reading and writing, both the input and output streams are positioned in tandem. To switch between inserting and extracting, you must call either [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) or [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Calls to `pubseekoff` (and hence to `seekoff`) have various limitations for [text streams](../c-runtime-library/text-and-binary-streams.md), [binary streams](../c-runtime-library/text-and-binary-streams.md), and [wide streams](../c-runtime-library/byte-and-wide-streams.md).  
   
- 如果檔案指標 **fp** 為 Null 指標，則函式失敗。 否則，它會致力於呼叫 `fseek`( **fp**, `_Off`, `_Way`) 來改變資料流位置。 如果該函式成功，而且可以呼叫 `fgetpos`( **fp**, **&fposn**) 來決定所產生的位置 **fposn**，則函式會成功。 如果函式成功，則會傳回包含 **fposn**的 **pos_type** 類型值。 否則會傳回無效的資料流位置。  
+ If the file pointer **fp** is a null pointer, the function fails. Otherwise, it endeavors to alter the stream position by calling `fseek`( **fp**, `_Off`, `_Way`). If that function succeeds and the resulting position **fposn** can be determined by calling `fgetpos`( **fp**, **&fposn**), the function succeeds. If the function succeeds, it returns a value of type **pos_type** containing **fposn**. Otherwise, it returns an invalid stream position.  
   
-##  <a name="seekpos"></a> basic_filebuf::seekpos  
- 嘗試改變受控制資料流的目前位置。  
+##  <a name="seekpos"></a>  basic_filebuf::seekpos  
+ Tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Sp`  
- 要搜尋的位置。  
+ The position to seek for.  
   
  `_Which`  
- 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>傳回值  
- 如果檔案指標 **fp** 為 Null 指標，則函式失敗。 否則，它會致力於呼叫 `fsetpos`( **fp**, **&fposn**) 來改變資料流位置，其中 **fposn** 是 `pos` 中所儲存的 `fpos_t` 物件。 如果該函式成功，則函式會傳回 `pos`。 否則會傳回無效的資料流位置。 若要判斷資料流位置是否無效，請比較傳回值與 `pos_type(off_type(-1))`。  
+### <a name="return-value"></a>Return Value  
+ If the file pointer **fp** is a null pointer, the function fails. Otherwise, it endeavors to alter the stream position by calling `fsetpos`( **fp**, **&fposn**), where **fposn** is the `fpos_t` object stored in `pos`. If that function succeeds, the function returns `pos`. Otherwise, it returns an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.  
   
-### <a name="remarks"></a>備註  
- 受保護虛擬成員函式會致力於改變受控制資料流的目前位置。 對於類別 [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**> 的物件，`fpos_t` 類型的物件可以代表資料流位置，這類型的物件可儲存用來剖析寬資料流所需的位移和任何狀態資訊。 位移零指定資料流的第一個元素 (`pos_type` 類型的物件會儲存至少一個 `fpos_t` 物件)。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to alter the current positions for the controlled streams. For an object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>, a stream position can be represented by an object of type `fpos_t`, which stores an offset and any state information needed to parse a wide stream. Offset zero designates the first element of the stream. (An object of type `pos_type` stores at least an `fpos_t` object.)  
   
- 針對開啟進行讀取和寫入的檔案，輸入和輸出資料流會一前一後地放置在一起。 若要切換插入與擷取，您必須呼叫 [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) 或 [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)。 `pubseekoff` 呼叫 (因而 `seekoff` 呼叫) 具有文字資料流、二進位資料流和寬資料流的各種限制。  
+ For a file opened for both reading and writing, both the input and output streams are positioned in tandem. To switch between inserting and extracting, you must call either [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) or [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos). Calls to `pubseekoff` (and hence to `seekoff`) have various limitations for text streams, binary streams, and wide streams.  
   
- 針對寬資料流，如果在開啟資料流之後或最後一次呼叫 `streampos` 之後進行過任何插入，則函式會呼叫 [overflow](#overflow)。 它也會插入還原初始轉換狀態所需的任何序列，方法是視需要使用檔案轉換 Facet **fac** 來呼叫 **fac**`.``unshift`。 因此，產生之 `char` 類型的每個元素 **byte** 都會寫入至檔案指標 **fp** 所指定的相關聯資料流，就像後續呼叫 `fputc`(**byte**, **fp**) 形式一樣。 如果 **fac.unshift** 呼叫或任何寫入失敗，則函式會失敗。  
+ For a wide stream, if any insertions have occurred since the stream was opened, or since the last call to `streampos`, the function calls [overflow](#overflow). It also inserts any sequence needed to restore the initial conversion state, by using the file conversion facet **fac** to call **fac**`.unshift` as needed. Each element **byte** of type `char` thus produced is written to the associated stream designated by the file pointer **fp** as if by successive calls of the form `fputc`( **byte**, **fp**). If the call to **fac.unshift** or any write fails, the function does not succeed.  
   
-##  <a name="setbuf"></a> basic_filebuf::setbuf  
- 執行每個衍生資料流緩衝區的特定作業。  
+##  <a name="setbuf"></a>  basic_filebuf::setbuf  
+ Performs an operation particular to each derived stream buffer.  
   
 ```  
 virtual basic_streambuf<Elem, Tr> *setbuf(
@@ -563,68 +579,68 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Buffer`  
- 緩衝區的指標。  
+ Pointer to a buffer.  
   
  `count`  
- 緩衝區的大小。  
+ Size of the buffer.  
   
-### <a name="return-value"></a>傳回值  
- 如果檔案指標 `fp` 為 Null 指標，則受保護成員函式會傳回零。  
+### <a name="return-value"></a>Return Value  
+ The protected member function returns zero if the file pointer `fp` is a null pointer.  
   
-### <a name="remarks"></a>備註  
- `setbuf` 會呼叫 `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**) ) 以提供開始於 _*Buffer* 之 `count` 元素的陣列，作為資料流的緩衝區。 如果該函式傳回非零值，則函式會傳回 Null 指標。 否則，它會傳回 **this** 以發出成功訊號。  
+### <a name="remarks"></a>Remarks  
+ `setbuf` calls `setvbuf`( **fp**, ( `char` \*) `_Buffer`, `_IOFBF`, `count` \* `sizeof` ( **Elem**) ) to offer the array of `count` elements beginning at _ *Buffer* as a buffer for the stream. If that function returns a nonzero value, the function returns a null pointer. Otherwise, it returns **this** to signal success.  
   
-##  <a name="swap"></a> basic_filebuf::swap  
- 將這個 `basic_filebuf` 的內容和提供的 `basic_filebuf` 內容交換。  
+##  <a name="swap"></a>  basic_filebuf::swap  
+ Exchanges the contents of this `basic_filebuf` for the contents of the provided `basic_filebuf`.  
   
 ```  
 void swap(basic_filebuf& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 對其他 `basic_filebuf` 的 `lvalue` 參考。  
+ An `lvalue` reference to another `basic_filebuf`.  
   
-##  <a name="sync"></a> basic_filebuf::sync  
- 嘗試與任何相關聯外部資料流同步處理受控制資料流。  
+##  <a name="sync"></a>  basic_filebuf::sync  
+ Tries to synchronize the controlled streams with any associated external streams.  
   
 ```  
 virtual int sync();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果檔案指標 **fp** 為 Null 指標，則會傳回零。 否則，只有在 [overflow](#overflow) 和 `fflush`( **fp**) 呼叫成功將任何暫止輸出清除到資料流時，才會傳回零。  
+### <a name="return-value"></a>Return Value  
+ Returns zero if the file pointer **fp** is a null pointer. Otherwise, it returns zero only if calls to both [overflow](#overflow) and `fflush`( **fp**) succeed in flushing any pending output to the stream.  
   
-##  <a name="traits_type"></a> basic_filebuf::traits_type  
- 將類型名稱與 **Tr** 範本參數建立關聯。  
+##  <a name="traits_type"></a>  basic_filebuf::traits_type  
+ Associates a type name with the **Tr** template parameter.  
   
 ```  
 typedef Tr traits_type;  
 ```  
   
-##  <a name="underflow"></a> basic_filebuf::underflow  
- 從輸入資料流擷取目前元素。  
+##  <a name="underflow"></a>  basic_filebuf::underflow  
+ Extracts the current element from the input stream.  
   
 ```  
 virtual int_type underflow();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式不成功，則傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。 否則，它會傳回如＜備註＞小節所述進行轉換的 **ch**。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Otherwise, it returns **ch**, converted as described in the Remarks section.  
   
-### <a name="remarks"></a>備註  
- 受保護虛擬成員函式會致力於從輸入緩衝區中擷取目前元素 **ch**，並將此元素傳回為 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**)。 它可以透過下列各種方式來執行：  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function endeavors to extract the current element **ch** from the input stream, and return the element as **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**). It can do so in various ways:  
   
--   如果有讀取位置可供使用，它會接受 **ch** 作為儲存在讀取位置中的元素，並前進到輸入緩衝區的下一個指標。  
+-   If a read position is available, it takes **ch** as the element stored in the read position and advances the next pointer for the input buffer.  
   
--   它可以讀取類型的一或多個項目`char`，像是由表單的後續呼叫`fgetc`(**fp**)，並將其轉換的項目**ch**型別的**Elem**呼叫使用檔案轉換 facet /fac **fac.in**視。 如果任何讀取或轉換失敗，則函式會失敗。  
+-   It can read one or more elements of type `char`, as if by successive calls of the form `fgetc`(**fp**), and convert them to an element **ch** of type **Elem** by using the file conversion facet fac to call **fac.in** as needed. If any read or conversion fails, the function does not succeed.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<fstream>](../standard-library/fstream.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

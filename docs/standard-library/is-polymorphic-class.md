@@ -1,5 +1,5 @@
 ---
-title: "is_polymorphic 類別 | Microsoft Docs"
+title: is_polymorphic Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_polymorphic
 - type_traits/std::is_polymorphic
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: bf02c7042b7b2a2535ab9d81116d4d97b557c21b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d159193b9c1700309c45e8d00879f9a6dd98538a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ispolymorphic-class"></a>is_polymorphic 類別
-測試類型是否有虛擬函式。  
+# <a name="ispolymorphic-class"></a>is_polymorphic Class
+Tests if type has a virtual function.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_polymorphic;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查詢的類型。  
+ The type to query.  
   
-## <a name="remarks"></a>備註  
- 如果類型 `Ty` 是一個宣告或繼承虛擬函式的類別，則 predicate 類型的執行個體為 true，否則為 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that declares or inherits a virtual function, otherwise it holds false.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_polymorphic.cpp   
@@ -110,12 +109,12 @@ is_polymorphic<trivial> == false
 is_polymorphic<throws> == true  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_abstract 類別](../standard-library/is-abstract-class.md)
+ [is_abstract Class](../standard-library/is-abstract-class.md)
 

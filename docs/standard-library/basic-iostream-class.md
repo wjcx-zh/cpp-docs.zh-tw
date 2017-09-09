@@ -1,5 +1,5 @@
 ---
-title: "basic_iostream 類別 | Microsoft Docs"
+title: basic_iostream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - istream/std::basic_iostream
-- basic_iostream
 - istream/std::basic_iostream::swap
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3a71df6cc23c0c8f4e6faeb39474c363ed1bd412
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4dfef84872abb7bc821b87e3eb442b76ebbb6e50
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basiciostream-class"></a>basic_iostream 類別
-可執行輸入和輸出的資料流類別。  
+# <a name="basiciostream-class"></a>basic_iostream Class
+A stream class that can do both input and output.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
@@ -60,34 +59,34 @@ public:
 };  
 ```  
   
-## <a name="remarks"></a>備註  
- 此樣板類別描述透過其基底類別 [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> 控制插入的物件，和透過其基底類別 [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`> 擷取的物件。 兩個物件共用通用的虛擬基底類別 [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>。 它們也會以 `Elem` 類型的項目 (其字元特性由類別 `Tr` 決定) 管理通用的資料流緩衝區。 此建構函式會藉由 `basic_istream`( **strbuf**) 和 `basic_ostream`( **strbuf**) 初始化其基底類別。  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that controls insertions, through its base class [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`>, and extractions, through its base class [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`>. The two objects share a common virtual base class [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>. They also manage a common stream buffer, with elements of type `Elem`, whose character traits are determined by the class `Tr`. The constructor initializes its base classes through `basic_istream`( **strbuf**) and `basic_ostream`( **strbuf**).  
   
-### <a name="constructors"></a>建構函式  
-  
-|||  
-|-|-|  
-|[basic_iostream](#basic_iostream)|建立 `basic_iostream` 物件。|  
-  
-### <a name="member-functions"></a>成員函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[swap](#swap)|將提供之 `basic_iostream` 物件的內容與此物件的內容交換。|  
+|[basic_iostream](#basic_iostream)|Create a `basic_iostream` object.|  
   
-### <a name="operators"></a>運算子  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|將指定的 `basic_iostream` 物件值指派給這個物件。 這是一個移動指派，涉及不會留下複本的 `rvalue`。|  
+|[swap](#swap)|Exchanges the contents of the provided `basic_iostream` object for the contents of this object.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<istream>  
+### <a name="operators"></a>Operators  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Assigns the value of a specified `basic_iostream` object to this object. This is a move assignment involving an `rvalue` that does not leave a copy behind.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<istream>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_iostream"></a>  basic_iostream::basic_iostream  
- 建立 `basic_iostream` 物件。  
+ Create a `basic_iostream` object.  
   
 ```  
 explicit basic_iostream(basic_streambuf<Elem, Tr>* strbuf);
@@ -97,49 +96,49 @@ basic_iostream(basic_iostream&& right);
 basic_iostream();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- 現有的 `basic_streambuf` 物件。  
+ An existing `basic_streambuf` object.  
   
  `right`  
- 現有的 `basic_iostream` 物件，用來建構新的 `basic_iostream`。  
+ An existing `basic_iostream` object that is used to construct a new `basic_iostream`.  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會藉由 `basic_istream(strbuf)` 和 `basic_ostream(strbuf)` 初始化基底物件。  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base objects by way of `basic_istream(strbuf)` and `basic_ostream(strbuf)`.  
   
- 第二個建構函式呼叫來初始化基底物件`move(right)`。  
+ The second constructor initializes the base objects by calling `move(right)`.  
   
 ##  <a name="op_eq"></a>  basic_iostream::operator=  
- 將指定的 `basic_iostream` 物件值指派給這個物件。 這是一個移動指派，涉及不會留下複本的右值。  
+ Assign the value of a specified `basic_iostream` object to this object. This is a move assignment involving an rvalue that does not leave a copy behind.  
   
 ```  
 basic_iostream& operator=(basic_iostream&& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要指派之來源 `basic_iostream` 物件的 `rvalue` 參考。  
+ An `rvalue` reference to a `basic_iostream` object to assign from.  
   
-### <a name="remarks"></a>備註  
- 此成員運算子會呼叫`swap(right)`。  
+### <a name="remarks"></a>Remarks  
+ The member operator calls `swap(right)`.  
   
 ##  <a name="swap"></a>  basic_iostream::swap  
- 將提供之 `basic_iostream` 物件的內容與此物件的內容交換。  
+ Exchanges the contents of the provided `basic_iostream` object for the contents of this object.  
   
 ```  
 void swap(basic_iostream& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要交換的 `basic_iostream` 物件。  
+ The `basic_iostream` object to swap.  
   
-### <a name="remarks"></a>備註  
- 成員函式呼叫`swap(right)`。  
+### <a name="remarks"></a>Remarks  
+ The member function calls `swap(right)`.  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

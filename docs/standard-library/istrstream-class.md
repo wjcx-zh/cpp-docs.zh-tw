@@ -1,5 +1,5 @@
 ---
-title: "istrstream 類別 | Microsoft Docs"
+title: istrstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- istrstream
 - strstream/std::istrstream::rdbuf
 - strstream/std::istrstream::str
 dev_langs:
@@ -35,48 +34,48 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 528634e98da7f57ee915124d38f20277495efcdb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 79a3e8b3d0aca0f711d1d49e8c73da8a11592b69
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istrstream-class"></a>istrstream 類別
-描述一個物件，此物件可控制如何從 [strstreambuf](../standard-library/strstreambuf-class.md) 類別的資料流緩衝區中擷取元素和編碼物件。  
+# <a name="istrstream-class"></a>istrstream Class
+Describes an object that controls extraction of elements and encoded objects from a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 class istrstream : public istream
 ```  
   
-## <a name="remarks"></a>備註  
- 此物件會儲存類別 `strstreambuf` 的物件。  
+## <a name="remarks"></a>Remarks  
+ The object stores an object of class `strstreambuf`.  
   
 > [!NOTE]
->  這個類別已被取代。 請考慮改用 [istringstream](../standard-library/sstream-typedefs.md#istringstream) 或 [wistringstream](../standard-library/sstream-typedefs.md#wistringstream)。  
+>  This class is deprecated. Consider using [istringstream](../standard-library/sstream-typedefs.md#istringstream) or [wistringstream](../standard-library/sstream-typedefs.md#wistringstream) instead.  
   
-### <a name="constructors"></a>建構函式  
-  
-|||  
-|-|-|  
-|[istrstream](#istrstream)|建構類型 `istrstream` 的物件。|  
-  
-### <a name="member-functions"></a>成員函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[rdbuf](#rdbuf)|將指標傳回至資料流的相關 `strstreambuf` 物件。|  
-|[str](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後傳回指向受控制序列開頭的指標。|  
+|[istrstream](#istrstream)|Constructs an object of type `istrstream`.|  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<strstream>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[rdbuf](#rdbuf)|Returns a pointer to the stream's associated `strstreambuf` object.|  
+|[str](#str)|Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<strstream>  
+  
+ **Namespace:** std  
   
 ##  <a name="istrstream"></a>  istrstream::istrstream  
- 建構類型 `istrstream` 的物件。  
+ Constructs an object of type `istrstream`.  
   
 ```
 explicit istrstream(
@@ -94,53 +93,53 @@ istrstream(
     int count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `count`  
- 緩衝區 ( `ptr`) 的長度。  
+ The length of the buffer ( `ptr`).  
   
  `ptr`  
- 用來將緩衝區初始化的內容。  
+ The contents with which the buffer is initialized.  
   
-### <a name="remarks"></a>備註  
- 所有建構函式都會呼叫 [istream](../standard-library/istream-typedefs.md#istream)( **sb**) 來將基底類別初始化，其中 **sb** 是 [strstreambuf](../standard-library/strstreambuf-class.md) 類別的預存物件。 前兩個建構函式還會一併呼叫 `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ) 來將 **sb** 初始化。 其餘兩個建構函式會改為呼叫 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。  
+### <a name="remarks"></a>Remarks  
+ All the constructors initialize the base class by calling [istream](../standard-library/istream-typedefs.md#istream)( **sb**), where **sb** is the stored object of class [strstreambuf](../standard-library/strstreambuf-class.md). The first two constructors also initialize **sb** by calling `strstreambuf`( ( **const**`char` \*) `ptr`, 0 ). The remaining two constructors instead call `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).  
   
 ##  <a name="rdbuf"></a>  istrstream::rdbuf  
- 傳回指向資料流相關 strstreambuf 物件的指標。  
+ Returns a pointer to the stream's associated strstreambuf object.  
   
 ```
 strstreambuf *rdbuf() const
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向資料流相關 strstreambuf 物件的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the stream's associated strstreambuf object.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回預存資料流緩衝區 (屬於 [strstreambuf](../standard-library/strstreambuf-class.md) 的 pointer 類型) 的位址。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the address of the stored stream buffer, of type pointer to [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-### <a name="example"></a>範例  
-  如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。  
+### <a name="example"></a>Example  
+  See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `rdbuf`.  
   
 ##  <a name="str"></a>  istrstream::str  
- 呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後傳回指向受控制序列開頭的指標。  
+ Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.  
   
 ```
 char *str();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向受控制序列開頭的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the controlled sequence.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
   
-### <a name="example"></a>範例  
-  如需使用 **str** 的範例，請參閱 [strstream::str](../standard-library/strstreambuf-class.md#str)。  
+### <a name="example"></a>Example  
+  See [strstream::str](../standard-library/strstreambuf-class.md#str) for a sample that uses **str**.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [istream](../standard-library/istream-typedefs.md#istream)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

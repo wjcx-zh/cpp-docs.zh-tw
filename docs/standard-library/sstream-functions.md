@@ -1,5 +1,5 @@
 ---
-title: "&lt;sstream&gt; 函式 | Microsoft Docs"
+title: '&lt;sstream&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,20 +11,20 @@ f1_keywords:
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 3b5d850026627127e539d39faca18574d72d2ff8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 18aa039a12f773de2af4d27767661fdafa96abe5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltsstreamgt-functions"></a>&lt;sstream&gt; 函式
+# <a name="ltsstreamgt-functions"></a>&lt;sstream&gt; functions
 ||  
 |-|  
 |[swap](#sstream_swap)|  
   
 ##  <a name="sstream_swap"></a>  swap  
- 在 `sstream` 物件之間交換值。  
+ Exchanges the values between two `sstream` objects.  
   
 ```  
 template <class Elem, class Tr, class Alloc>  
@@ -48,17 +48,17 @@ void swap(
     basic_stringstream<Elem, Tr, Alloc>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`sstream` 物件的參考。|  
-|`right`|`sstream` 物件的參考。|  
+|`left`|Reference to an `sstream` object.|  
+|`right`|Reference to an `sstream` object.|  
   
-### <a name="remarks"></a>備註  
- 樣板函式會執行 `left.swap(right)`。  
+### <a name="remarks"></a>Remarks  
+ The template function executes `left.swap(right)`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<sstream>](../standard-library/sstream.md)
 
 

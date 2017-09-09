@@ -1,5 +1,5 @@
 ---
-title: "&lt;iomanip&gt; 函式 | Microsoft Docs"
+title: '&lt;iomanip&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,14 +21,26 @@ f1_keywords:
 ms.assetid: 3ddde610-70cc-4cfa-8a89-3e83d1d356a8
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: cc990171c1196a35f0fe90d99ee1cbdbca337c9a
+helpviewer_keywords:
+- std::get_money [C++]
+- std::get_time [C++]
+- std::put_money [C++]
+- std::put_time [C++]
+- std::quoted [C++]
+- std::resetiosflags [C++]
+- std::setbase [C++]
+- std::setfill [C++]
+- std::setiosflags [C++]
+- std::setprecision [C++]
+- std::setw [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 32d7b79f7ccefb3b0ab349fd646c8001f0eddda3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
+# <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; functions
 ||||  
 |-|-|-|  
 |[get_money](#iomanip_get_money)|[get_time](#iomanip_get_time)|[put_money](#iomanip_put_money)|  
@@ -37,86 +49,86 @@ ms.lasthandoff: 04/29/2017
 |[setprecision](#setprecision)|[setw](#setw)|  
   
 ##  <a name="iomanip_get_money"></a>  get_money  
- 使用所需的格式從資料流中擷取貨幣值，並在參數中傳回該值。  
+ Extracts a monetary value from a stream using the desired format, and returns the value in a parameter.  
   
 ```  
 template <class Money>  
 T7 get_money(Money& _Amount, bool _Intl);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  _Amount  
- 所擷取的貨幣值。  
+ The extracted monetary value.  
   
  _Intl  
- 如果為 `true`，便會使用國際格式。 預設值是 `false`。  
+ If `true`, use international format. The default value is `false`.  
   
-### <a name="remarks"></a>備註  
- 操作工具會傳回一個物件，從資料流 `str` 中擷取此物件時，其行為會像`formatted input function`一樣，此函式會呼叫與 `str` 關聯之地區設定 facet `money_get` 的成員函式 `get`，其中會使用 `_Intl` 來指出使用國際格式。 如果成功，該呼叫就會在 `_Amount` 中儲存所擷取的貨幣值。 接著，操作工具會傳回 `str`。  
+### <a name="remarks"></a>Remarks  
+ The manipulator returns an object that, when extracted from the stream `str`, behaves as a `formatted input function` that calls the member function `get` for the locale facet `money_get` associated with `str`, using `_Intl` to indicate international format. If successful, the call stores in `_Amount` the extracted monetary value. The manipulator then returns `str`.  
   
- `Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `str` 相同之 `basic_string` 的具現化。  
+ `Money` must be of type `long double` or an instantiation of `basic_string` with the same element and traits parameters as `str`.  
   
 ##  <a name="iomanip_get_time"></a>  get_time  
- 使用所需的格式從資料流中擷取時間值。 在參數中以時間結構的形式傳回值。  
+ Extracts a time value from a stream using a desired format. Returns the value in a parameter as a time structure.  
   
 ```  
 template <class Elem>  
 T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Tptr`  
- 採用時間結構形式的時間。  
+ The time in the form of a time structure.  
   
  `_Fmt`  
- 用來取得時間值的所需格式。  
+ The desired format to use to obtain the time value.  
   
-### <a name="remarks"></a>備註  
- 操作工具會傳回一個物件，從資料流 `str` 中擷取此物件時，其行為會像`formatted input function`一樣，此函式會呼叫與 `str` 關聯之地區設定 facet `time_get` 的成員函式 `get`，其中會使用 `tptr` 來指出時間結構，以及使用 `fmt` 來指出以 Null 結束之格式字串的開頭。 如果成功，該呼叫就會在時間結構中，儲存與所擷取之任何時間欄位關聯的值。 接著，操作工具會傳回 `str`。  
+### <a name="remarks"></a>Remarks  
+ The manipulator returns an object that, when extracted from the stream `str`, behaves as a `formatted input function` that calls the member function `get` for the locale facet `time_get` associated with `str`, using `tptr` to indicate the time structure and `fmt` to indicate the beginning of a null-terminated format string. If successful, the call stores in the time structure the values associated with any extracted time fields. The manipulator then returns `str`.  
   
 ##  <a name="iomanip_put_money"></a>  put_money  
- 使用所需的格式將金額插入到資料流中。  
+ Inserts a monetary amount using the desired format into a stream.  
   
 ```  
 template <class Money>  
 T8 put_money(const Money& _Amount, bool _Intl);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Amount`  
- 要插入到資料流中的金額。  
+ The monetary amount to insert into the stream.  
   
  `_Intl`  
- 如果操作工具應該使用國際格式，請設定為 `true`，否則，請設定為 `false`。  
+ Set to `true` if manipulator should use international format, `false` if it should not.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 `str`。  
+### <a name="return-value"></a>Return Value  
+ Returns `str`.  
   
-### <a name="remarks"></a>備註  
- 操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像已格式化的輸出函式一樣，此函式會呼叫與 `str` 關聯之地區設定 facet `money_put` 的成員函式 `put`。 如果成功，該呼叫就會插入適當格式化的 `amount`，其中會使用 `_Intl` 來指出使用國際格式，以及使用 `str.fill()` 作為填滿元素。 接著，操作工具會傳回 `str`。  
+### <a name="remarks"></a>Remarks  
+ The manipulator returns an object that, when inserted into the stream `str`, behaves as a formatted output function that calls the member function `put` for the locale facet `money_put` associated with `str`. If successful, the call inserts `amount` suitably formatted, using `_Intl` to indicate international format and `str.fill()`, as the fill element. The manipulator then returns `str`.  
   
- `Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `str` 相同之 `basic_string` 的具現化。  
+ `Money` must be of type `long double` or an instantiation of `basic_string` with the same element and traits parameters as `str`.  
   
 ##  <a name="iomanip_put_time"></a>  put_time  
- 使用指定的格式將來自時間結構的時間值寫入到資料流中。  
+ Writes a time value from a time structure to a stream by using a specified format.  
   
 ```  
 template <class Elem>  
 T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Tptr`  
- 時間結構中所提供要寫入到資料流中的時間值。  
+ The time value to write to the stream, provided in a time structure.  
   
  `_Fmt`  
- 寫入時間值時所需的格式。  
+ The desired format to write the time value.  
   
-### <a name="remarks"></a>備註  
- 操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像`formatted output function`一樣。 輸出函式會呼叫與 `str` 關聯之地區設定 facet `time_put` 的成員函式 `put`。 輸出函式會使用 `_Tptr` 來指出時間結構，以及使用 `_Fmt` 來指出以 NUL 結束之格式字串的開頭。 如果成功，該呼叫就會插入來自格式字串的常值字串，並轉換來自時間結構的值。 接著，操作工具會傳回 `str`。  
+### <a name="remarks"></a>Remarks  
+ The manipulator returns an object that, when inserted into the stream `str`, behaves as a `formatted output function`. The output function calls the member function `put` for the locale facet `time_put` associated with `str`. The output function uses `_Tptr` to indicate the time structure and `_Fmt` to indicate the beginning of a NUL-terminated format string. If successful, the call inserts literal text from the format string and converted values from the time structure. The manipulator then returns `str`.  
   
 ##  <a name="quoted"></a>  quoted  
- **(C++14 的新功能)** iostream 操作工具，可允許使用 >> 和 << 運算子，將字串便利地往返傳入和傳出資料流。  
+ **(New in C++14)** An iostream manipulator that enables convenient round-tripping of strings into and out of streams using the >> and << operators.  
   
 ```  
 quoted(std::string str) // or wstring  
@@ -125,21 +137,21 @@ quoted(std::string str, char delimiter, char escape) // or wide versions
 quoted(const char* str, char delimiter, char escape) // or wide versions  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `str`  
- std::string, char*、字串常值或原始字串常值，或這當中任何一項的寬版本 (例如 std::wstring, wchar_t\*)。  
+ A std::string, char*, string literal or raw string literal, or a wide version of any of these (e.g. std::wstring, wchar_t\*).  
   
  `delimiter`  
- 使用者指定的字元或寬字元，用作字串開頭和結尾的分隔符號。  
+ A user-specified character, or wide character, to use as the delimiter for the beginning and end of the string.  
   
  `escape`  
- 使用者指定的字元或寬字元，用作字串內逸出序列的逸出字元。  
+ A user-specified character, or wide character, to use as the escape character for escape sequences within the string.  
   
-### <a name="remarks"></a>備註  
- 請參閱[使用插入運算子和控制格式](../standard-library/using-insertion-operators-and-controlling-format.md)。  
+### <a name="remarks"></a>Remarks  
+ See [Using Insertion Operators and Controlling Format](../standard-library/using-insertion-operators-and-controlling-format.md).  
   
-### <a name="example"></a>範例  
-  這個範例將示範如何使用 `quoted` 與預設分隔符號，及使用縮小字串逸出字元。 同樣支援寬字串。  
+### <a name="example"></a>Example  
+  This example shows how to use `quoted` with the default delimiter and escape character using narrow strings. Wide strings are equally supported.  
   
 ```cpp  
 #include <iostream>  
@@ -194,8 +206,8 @@ Press Enter to exit
 */  
 ```  
   
-### <a name="example"></a>範例  
-  下列範例將示範如何提供分隔符號和/或逸出字元給自訂：  
+### <a name="example"></a>Example  
+  The following example shows how to provide custom a delimiter and/or escape character:  
   
 ```cpp  
 #include <iostream>  
@@ -279,117 +291,117 @@ Press Enter to exit
 ```  
   
 ##  <a name="resetiosflags"></a>  resetiosflags  
- 清除指定的旗標。  
+ Clears the specified flags.  
   
 ```  
 T1 resetiosflags(ios_base::fmtflags Mask);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Mask`  
- 要清除的旗標。  
+ The flags to clear.  
   
-### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*)，然後傳回 **str**。  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [setf](../standard-library/ios-base-class.md#setf)( `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*), and then returns **str**.  
   
-### <a name="example"></a>範例  
-  如需使用 `resetiosflags` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `resetiosflags`.  
   
 ##  <a name="setbase"></a>  setbase  
- 設定整數的基底。  
+ Set base for integers.  
   
 ```  
 T3 setbase(int _Base);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Base`  
- 數字基底。  
+ The number base.  
   
-### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags))，然後傳回 **str**。 此處的 **mask** 是以下列方式決定：  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. `setf`( **mask**, [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags)), and then returns **str**. Here, **mask** is determined as follows:  
   
--   如果 _ *Base* 為 8，則 **mask** 為 `ios_base::`[oct](../standard-library/ios-functions.md#oct)。  
+-   If _ *Base* is 8, then **mask** is `ios_base::`[oct](../standard-library/ios-functions.md#oct).  
   
--   如果 _ *Base* 為 10，則 mask 為 `ios_base::`[dec](../standard-library/ios-functions.md#dec)。  
+-   If _ *Base* is 10, then mask is `ios_base::`[dec](../standard-library/ios-functions.md#dec).  
   
--   如果 _ *Base* 為 16，則 **mask** 為 `ios_base::`[hex](../standard-library/ios-functions.md#hex)。  
+-   If _ *Base* is 16, then **mask** is `ios_base::`[hex](../standard-library/ios-functions.md#hex).  
   
--   如果 _ *Base* 是任何其他值，則 mask 為 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0)。  
+-   If _ *Base* is any other value, then mask is `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0).  
   
-### <a name="example"></a>範例  
-  如需使用 `setbase` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `setbase`.  
   
 ##  <a name="setfill"></a>  setfill  
- 設定將用來填滿靠右對齊顯示中的空格字元。  
+ Sets the character that will be used to fill spaces in a right-justified display.  
   
 ```  
 template <class Elem>  
 T4 setfill(Elem Ch);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 將用來填滿靠右對齊顯示中空格的字元。  
+ The character that will be used to fill spaces in a right-justified display.  
   
-### <a name="return-value"></a>傳回值  
- 範本操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`)，然後傳回 **str**。 **Elem** 類型必須與資料流 **str** 的元素類型相同。  
+### <a name="return-value"></a>Return Value  
+ The template manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [fill](../standard-library/basic-ios-class.md#fill)( `Ch`), and then returns **str**. The type **Elem** must be the same as the element type for the stream **str**.  
   
-### <a name="example"></a>範例  
-  如需使用 `setfill` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `setfill`.  
   
 ##  <a name="setiosflags"></a>  setiosflags  
- 設定指定的旗標。  
+ Sets the specified flags.  
   
 ```  
 T2 setiosflags(ios_base::fmtflags Mask);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Mask`  
- 要設定的旗標。  
+ The flags to set.  
   
-### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*)，然後傳回 **str**。  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*), and then returns **str**.  
   
-### <a name="example"></a>範例  
-  如需使用 `setiosflags` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `setiosflags`.  
   
 ##  <a name="setprecision"></a>  setprecision  
- 設定浮點值的有效位數。  
+ Sets the precision for floating-point values.  
   
 ```  
 T5 setprecision(streamsize Prec);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Prec`  
- 浮點數值的有效位數。  
+ The precision for floating-point values.  
   
-### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`)，然後傳回 **str**。  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [precision](../standard-library/ios-base-class.md#precision)( `Prec`), and then returns **str**.  
   
-### <a name="example"></a>範例  
-  如需使用 `setprecision` 的範例，請參閱 [setw](../standard-library/iomanip-functions.md#setw)。  
+### <a name="example"></a>Example  
+  See [setw](../standard-library/iomanip-functions.md#setw) for an example of using `setprecision`.  
   
 ##  <a name="setw"></a>  setw  
- 指定資料流中下一個元素的顯示欄位寬度。  
+ Specifies the width of the display field for the next element in the stream.  
   
 ```  
 T6 setw(streamsize Wide);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Wide`  
- 顯示欄位的寬度。  
+ The width of the display field.  
   
-### <a name="return-value"></a>傳回值  
- 操作工具會傳回一個物件，從資料流 **str** 中擷取此物件或將其插入到該資料流時，會呼叫 **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*)，然後傳回 **str**。  
+### <a name="return-value"></a>Return Value  
+ The manipulator returns an object that, when extracted from or inserted into the stream **str**, calls **str**. [width](../standard-library/ios-base-class.md#width)(_ *Wide*), then returns **str**.  
   
-### <a name="remarks"></a>備註  
- setw 只會設定資料流中下一個元素的寬度，而且必須插入在您想要為其指定寬度的每個元素前面。  
+### <a name="remarks"></a>Remarks  
+ setw sets the width only for the next element in the stream and must be inserted before each element whose width you want to specify.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iomanip_setw.cpp   
@@ -604,7 +616,7 @@ l4 = 4096
 l5 = 65536  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<iomanip>](../standard-library/iomanip.md)
 
 

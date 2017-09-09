@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- istream/std::<istream>
-- std.<istream>
-- <istream>
-- std::<istream>
+- istream/std::<istream>", "<istream>", "std::<istream>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a329d340709ca5d74f6a52c6ee6c8070ef2faa7f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7891190468f04f2fade1156fceb406e33bdf6431
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
-定義範本類別 basic_istream，以調解 iostreams 的擷取，並定義範本類別 basic_iostream，以調解插入和擷取。 標頭也會定義相關的操作工具。 此標頭檔通常會由其他 iostreams 標頭為您納入；您很少需要直接將其納入。  
+Defines the template class basic_istream, which mediates extractions for the iostreams, and the template class basic_iostream, which mediates both insertions and extractions. The header also defines a related manipulator. This header file is typically included for you by another iostreams header; you rarely have to include it directly.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <istream>  
@@ -57,35 +54,35 @@ ms.lasthandoff: 04/29/2017
   
 |||  
 |-|-|  
-|[iostream](../standard-library/istream-typedefs.md#iostream)|`char` 的特殊化類型 `basic_iostream`。|  
-|[istream](../standard-library/istream-typedefs.md#istream)|`char` 的特殊化類型 `basic_istream`。|  
-|[wiostream](../standard-library/istream-typedefs.md#wiostream)|針對 **wchar** 特殊化的 `basic_iostream` 類型。|  
-|[wistream](../standard-library/istream-typedefs.md#wistream)|針對 **wchar** 特殊化的 `basic_istream` 類型。|  
+|[iostream](../standard-library/istream-typedefs.md#iostream)|A type `basic_iostream` specialized on `char`.|  
+|[istream](../standard-library/istream-typedefs.md#istream)|A type `basic_istream` specialized on `char`.|  
+|[wiostream](../standard-library/istream-typedefs.md#wiostream)|A type `basic_iostream` specialized on **wchar**.|  
+|[wistream](../standard-library/istream-typedefs.md#wistream)|A type `basic_istream` specialized on **wchar**.|  
   
-### <a name="manipulators"></a>操作工具  
-  
-|||  
-|-|-|  
-|[ws](../standard-library/istream-functions.md#ws)|略過資料流中的空白字元。|  
-|[swap](../standard-library/istream-functions.md#istream_swap)|交換兩個資料流物件。|  
-  
-### <a name="operators"></a>運算子  
+### <a name="manipulators"></a>Manipulators  
   
 |||  
 |-|-|  
-|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|從資料流中擷取字元和字串。|  
+|[ws](../standard-library/istream-functions.md#ws)|Skips white space in the stream.|  
+|[swap](../standard-library/istream-functions.md#istream_swap)|Exchanges two stream objects.|  
   
-### <a name="classes"></a>類別  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[basic_iostream](../standard-library/basic-iostream-class.md)|可執行輸入和輸出的資料流類別。|  
-|[basic_istream](../standard-library/basic-istream-class.md)|此範本類別描述一個物件，此物件可控制如何從具有 **Elem** 類型 (也稱為 [char_type](../standard-library/basic-ios-class.md#char_type)) 之元素的資料流緩衝區擷取元素和編碼物件，其中該類型的字元特性是由 **Tr** 類別 (也稱為 [traits_type](../standard-library/basic-ios-class.md#traits_type)) 所決定。|  
+|[operator>>](../standard-library/istream-operators.md#op_gt_gt)|Extracts characters and strings from the stream.|  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[basic_iostream](../standard-library/basic-iostream-class.md)|A stream class that can do both input and output.|  
+|[basic_istream](../standard-library/basic-istream-class.md)|The template class describes an object that controls extraction of elements and encoded objects from a stream buffer with elements of type **Elem**, also known as [char_type](../standard-library/basic-ios-class.md#char_type), whose character traits are determined by the class **Tr**, also known as [traits_type](../standard-library/basic-ios-class.md#traits_type).|  
+  
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

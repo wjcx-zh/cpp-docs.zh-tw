@@ -1,5 +1,5 @@
 ---
-title: "gslice_array 類別 | Microsoft Docs"
+title: gslice_array Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- gslice_array
 - valarray/std::gslice_array
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bebbeb68503c4a3838aeab48d530d899fef2b699
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c20c44c8b84f7b15d84cc0c298dbde1f6dd4bafb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="gslicearray-class"></a>gslice_array 類別
-可藉由提供 valarray 之一般切割所定義的子集陣列之間的作業，支援一般切割物件的內部、輔助的範本類別。  
+# <a name="gslicearray-class"></a>gslice_array Class
+An internal, auxiliary template class that supports general slice objects by providing operations between subset arrays defined by the general slice of a valarray.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type>  
@@ -103,18 +102,18 @@ public:
 }  
 ```  
   
-## <a name="remarks"></a>備註  
- 此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之 **va** 物件的參考與 [gslice](../standard-library/gslice-class.md) 類別的 **gs** 物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的元素序列。  
+## <a name="remarks"></a>Remarks  
+ The class describes an object that stores a reference to an object **va** of class [valarray](../standard-library/valarray-class.md)**\<Type>**, along with an object **gs** of class [gslice](../standard-library/gslice-class.md) which describes the sequence of elements to select from the **valarray\<Type>** object.  
   
- 您只能藉由撰寫 [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式來建構 **gslice_array\<Type>** 物件。 gslice_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。  
+ You construct a **gslice_array\<Type>** object only by writing an expression of the form [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). The member functions of class gslice_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected.  
   
- 此範本類別是由某些 valarray 運算間接建立的，無法直接在程式中使用。 配量註標運算子會改用內部輔助範本類別：  
+ The template class is created indirectly by certain valarray operations and cannot be used directly in the program. An internal auxiliary template class instead is used by the slice subscript operator:  
   
- `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**)。  
+ `gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**).  
   
- 您只能藉由撰寫 **va[gsl]** 格式的運算式，為 valarray **va** 的配量 **gsl** 建構 **gslice_array\<Type>** 物件。 gslice_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。 gslice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即第一個配量中第一個元素的索引、每個配量中的元素數目，以及每個配量中元素之間的距離。  
+ You construct a **gslice_array\<Type>** object only by writing an expression of the form **va[gsl]**, for a slice **gsl** of valarray **va**. The member functions of class gslice_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected. The sequence controlled by the gslice_array is defined by the three parameters of the slice constructor, the index of the first element in the first slice, the number of elements in each slice, and the distance between the elements in each slice.  
   
- 在以下範例中：  
+ In the following example:  
   
 ```  
 const size_t lv[] = {2, 3};  
@@ -125,17 +124,17 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
 //   indices 3, 5, 7, 10, 12, 14  
 ```  
   
- 索引必須有效，程序才能有效。  
+ The indices must be valid for the procedure to be valid.  
   
-## <a name="example"></a>範例  
- 如需如何宣告及使用 slice_array 的範例，請參閱 [gslice::gslice](../standard-library/gslice-class.md#gslice) 的範例。  
+## <a name="example"></a>Example  
+ See the example for [gslice::gslice](../standard-library/gslice-class.md#gslice) for an example of how to declare and use a slice_array.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

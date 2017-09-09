@@ -1,23 +1,27 @@
 ---
-title: "&lt;hash_set&gt; 運算子 | Microsoft Docs"
+title: '&lt;hash_set&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- hash_set/std::operator!=
+- hash_set/std::operator==
+dev_langs:
+- C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5434d1dc44724cf876a42323140877ba38cb2b45
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f01351ff8564091ac6778b8846bfd52d18eb896c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 運算子
+# <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[operator==](#op_eq_eq)|  
@@ -26,30 +30,30 @@ ms.lasthandoff: 04/29/2017
 ##  <a name="op_neq"></a>  operator!=  
   
 > [!NOTE]
->  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 測試運算子左邊的 hash_set 物件是否不等於右邊的 hash_set 物件。  
+ Tests if the hash_set object on the left side of the operator is not equal to the hash_set object on the right side.  
   
 ```  
 bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- `hash_set` 類型的物件。  
+ An object of type `hash_set`.  
   
  `right`  
- `hash_set` 類型的物件。  
+ An object of type `hash_set`.  
   
-### <a name="return-value"></a>傳回值  
- 如果 hash_set 不相等，便會傳回 **true**；如果 hash_set 相等，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_sets are not equal; **false** if hash_sets are equal.  
   
-### <a name="remarks"></a>備註  
- hash_set 物件之間的比較是以其元素之間的成對比較為基礎。 兩個 hash_set 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_set objects is based on a pairwise comparison between their elements. Two hash_sets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- 成員[< hash_map >](../standard-library/hash-map.md)和[< hash_set >](../standard-library/hash-set.md)標頭檔位於[stdext 命名空間](../standard-library/stdext-namespace.md)。
+ Members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are in the [stdext Namespace](../standard-library/stdext-namespace.md).
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_op_ne.cpp  
@@ -91,30 +95,30 @@ The hash_sets hs1 and hs3 are equal.
 ##  <a name="op_eq_eq"></a>  operator==  
   
 > [!NOTE]
->  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 測試運算子左邊的 hash_set 物件是否等於右邊的 hash_set 物件。  
+ Tests if the hash_set object on the left side of the operator is equal to the hash_set object on the right side.  
   
 ```  
 bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- `hash_set` 類型的物件。  
+ An object of type `hash_set`.  
   
  `right`  
- `hash_set` 類型的物件。  
+ An object of type `hash_set`.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 hash_set 等於運算子右邊的 hash_set，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_set on the left side of the operator is equal to the hash_set on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- hash_set 物件之間的比較是以其元素的成對比較為基礎。 兩個 hash_set 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_set objects is based on a pairwise comparison of their elements. Two hash_sets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_set_op_eq.cpp  
@@ -156,30 +160,30 @@ The hash_sets s1 and s3 are equal.
 ##  <a name="neq_hash_multiset"></a>  operator!= (hash_multiset)  
   
 > [!NOTE]
->  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 測試運算子左邊的 hash_multiset 物件是否不等於右邊的 hash_multiset 物件。  
+ Tests if the hash_multiset object on the left side of the operator is not equal to the hash_multiset object on the right side.  
   
 ```  
 bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- `hash_multiset` 類型的物件。  
+ An object of type `hash_multiset`.  
   
  `right`  
- `hash_multiset` 類型的物件。  
+ An object of type `hash_multiset`.  
   
-### <a name="return-value"></a>傳回值  
- 如果 hash_multiset 不相等，便會傳回 **true**；如果 hash_multiset 相等，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multisets are not equal; **false** if hash_multisets are equal.  
   
-### <a name="remarks"></a>備註  
- hash_multiset 物件之間的比較是以其元素之間的成對比較為基礎。 兩個 hash_multiset 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_multiset objects is based on a pairwise comparison between their elements. Two hash_multisets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hashset_op_ne.cpp  
@@ -221,30 +225,30 @@ The hash_multisets hs1 and hs3 are equal.
 ##  <a name="eq_eq_hash_multiset"></a>  operator== (hash_multiset)  
   
 > [!NOTE]
->  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 測試運算子左邊的 hash_multiset 物件是否等於右邊的 hash_multiset 物件。  
+ Tests if the hash_multiset object on the left side of the operator is equal to the hash_multiset object on the right side.  
   
 ```  
 bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- `hash_multiset` 類型的物件。  
+ An object of type `hash_multiset`.  
   
  `right`  
- `hash_multiset` 類型的物件。  
+ An object of type `hash_multiset`.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 hash_multiset 等於運算子右邊的 hash_multiset，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multiset on the left side of the operator is equal to the hash_multiset on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- hash_multiset 物件之間的比較是以其元素的成對比較為基礎。 兩個 hash_multiset 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_multiset objects is based on a pairwise comparison of their elements. Two hash_multisets are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 請參閱[stdext 命名空間](../standard-library/stdext-namespace.md)如需詳細資訊。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multiset_op_eq.cpp  
@@ -283,7 +287,7 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<hash_set>](../standard-library/hash-set.md)
 
 

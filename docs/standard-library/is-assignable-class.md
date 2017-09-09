@@ -1,5 +1,5 @@
 ---
-title: "is_assignable 類別 | Microsoft Docs"
+title: is_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_assignable
 - type_traits/std::is_assignable
 dev_langs:
 - C++
@@ -34,39 +33,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 208853a8e173797a37da60a824d06341e279ea34
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c0e6d35e76a7bfddc1fbbc7eb7fa634fe7ed07c4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isassignable-class"></a>is_assignable 類別
-測試是否可將 `From` 類型的值指派給 `To` 類型。  
+# <a name="isassignable-class"></a>is_assignable Class
+Tests whether a value of `From` type can be assigned to a `To` type.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class To, class From>  
 struct is_assignable;
 ```  
   
-#### <a name="parameters"></a>參數  
- 以  
- 接收指派的物件類型。  
+#### <a name="parameters"></a>Parameters  
+ To  
+ The type of the object that receives the assignment.  
   
- 寄件者  
- 提供值的物件類型。  
+ From  
+ The type of the object that provides the value.  
   
-## <a name="remarks"></a>備註  
- 未評估的運算式 `declval<To>() = declval<From>()` 必須格式正確。 `From` 和 `To` 兩者必須是完整類型 `void`，或是界限未知的陣列。  
+## <a name="remarks"></a>Remarks  
+ The unevaluated expression `declval<To>() = declval<From>()` must be well-formed. Both `From` and `To` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

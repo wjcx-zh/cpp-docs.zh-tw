@@ -1,5 +1,5 @@
 ---
-title: "&lt;exception&gt; 函式 | Microsoft Docs"
+title: '&lt;exception&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,13 +20,25 @@ f1_keywords:
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
 caps.latest.revision: 12
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 08d2a2161a2596cebb27175c55023d5313c7b908
-ms.lasthandoff: 02/24/2017
+helpviewer_keywords:
+- std::current_exception [C++]
+- std::get_terminate [C++]
+- std::get_unexpected [C++]
+- std::make_exception_ptr [C++]
+- std::rethrow_exception [C++]
+- std::set_terminate [C++]
+- std::set_unexpected [C++]
+- std::terminate [C++]
+- std::uncaught_exception [C++]
+- std::unexpected [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ac885e7157fb144f45403d493473b3ae1a8921a4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 函式
+# <a name="ltexceptiongt-functions"></a>&lt;exception&gt; functions
 ||||  
 |-|-|-|  
 |[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|  
@@ -35,83 +47,83 @@ ms.lasthandoff: 02/24/2017
 |[unexpected](#unexpected)|  
   
 ##  <a name="current_exception"></a>  current_exception  
- 取得目前例外狀況的智慧型指標。  
+ Obtains a smart pointer to the current exception.  
   
 ```cpp  
 exception_ptr current_exception();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向目前例外狀況的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 物件。  
+### <a name="return-value"></a>Return Value  
+ An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object pointing to the current exception.  
   
-### <a name="remarks"></a>備註  
- 在 catch 區塊中呼叫 `current_exception` 函式。 如果例外狀況正在進行中，而且 catch 區塊可以攔截例外狀況，則 `current_exception` 函式會傳回參考例外狀況的 `exception_ptr` 物件。 否則，函式會傳回 Null `exception_ptr` 物件。  
+### <a name="remarks"></a>Remarks  
+ Call the `current_exception` function in a catch block. If an exception is in flight and the catch block can catch the exception, the `current_exception` function returns an `exception_ptr` object that references the exception. Otherwise, the function returns a null `exception_ptr` object.  
   
- 不論 `catch` 陳述式是否指定[例外狀況宣告](../cpp/try-throw-and-catch-statements-cpp.md)陳述式，`current_exception` 函式都會擷取執行中的例外狀況。  
+ The `current_exception` function captures the exception that is in flight regardless of whether the `catch` statement specifies an [exception-declaration](../cpp/try-throw-and-catch-statements-cpp.md) statement.  
   
- 若不重新擲回例外狀況，則會在 `catch` 區塊結尾呼叫目前例外狀況的解構函式。 不過，即使在解構函式中呼叫 `current_exception` 函式，該函式仍會傳回參考目前例外狀況的 `exception_ptr` 物件。  
+ The destructor for the current exception is called at the end of the `catch` block if you do not rethrow the exception. However, even if you call the `current_exception` function in the destructor, the function returns an `exception_ptr` object that references the current exception.  
   
- `current_exception` 函式的後續呼叫會傳回參考目前例外狀況不同複本的 `exception_ptr` 物件。 因此，物件比較結果會是不相等，因為兩者參考不同的複本 (即使複本的二進位值相同也一樣)。  
+ Successive calls to the `current_exception` function return `exception_ptr` objects that refer to different copies of the current exception. Consequently, the objects compare as unequal because they refer to different copies, even though the copies have the same binary value.  
   
 ##  <a name="make_exception_ptr"></a>  make_exception_ptr  
- 建立持有例外狀況複本的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 物件。  
+ Creates an [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object that holds a copy of an exception.  
   
 ```cpp  
 template <class E>  
 exception_ptr make_exception_ptr(E Except);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Except`  
- 具有待複製例外狀況的類別。 雖然任何類別物件都可以是 `make_exception_ptr` 函式的引數，但一般會指定 [exception 類別](../standard-library/exception-class.md)物件作為其引數。  
+ The class with the exception to copy. Usually, you specify an [exception class](../standard-library/exception-class.md) object as the argument to the `make_exception_ptr` function, although any class object can be the argument.  
   
-### <a name="return-value"></a>傳回值  
- [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 物件，指向 `Except` 的目前例外狀況複本。  
+### <a name="return-value"></a>Return Value  
+ An [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) object pointing to a copy of the current exception for `Except`.  
   
-### <a name="remarks"></a>備註  
- 呼叫 `make_exception_ptr` 函式相當於擲回 C++ 例外狀況、在 catch 區塊中攔截例外狀況，然後呼叫 [current_exception](../standard-library/exception-functions.md#current_exception) 函式以傳回參考例外狀況的 `exception_ptr` 物件。 Microsoft 實作`make_exception_ptr` 函式比在擲回例外狀況之後攔截來得更有效率。  
+### <a name="remarks"></a>Remarks  
+ Calling the `make_exception_ptr` function is equivalent to throwing a C++ exception, catching it in a catch block, and then calling the [current_exception](../standard-library/exception-functions.md#current_exception) function to return an `exception_ptr` object that references the exception. The Microsoft implementation of the `make_exception_ptr` function is more efficient than throwing and then catching an exception.  
   
- 一般來說，應用程式通常不需要使用 `make_exception_ptr` 函式，所以我們不建議使用此功能。  
+ An application typically does not require the `make_exception_ptr` function, and we discourage its use.  
   
 ##  <a name="rethrow_exception"></a>  rethrow_exception  
- 擲回做為參數傳遞的例外狀況。  
+ Throws an exception passed as a parameter.  
   
 ```cpp  
 void rethrow_exception(exception_ptr P);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `P`  
- 要重新擲回的已攔截例外狀況。 如果 `P` 是 null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)，函式會擲回 [std::bad_exception](../standard-library/bad-exception-class.md)。  
+ The caught exception to re-throw. If `P` is a null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), the function throws [std::bad_exception](../standard-library/bad-exception-class.md).  
   
-### <a name="remarks"></a>備註  
- 將攔截到的例外狀況儲存在 `exception_ptr` 物件之後，主執行緒即可處理物件。 在主執行緒中呼叫 `rethrow_exception` 函式，並使用 `exception_ptr` 物件做為其引數。 `rethrow_exception` 函式會從 `exception_ptr` 物件擷取例外狀況，然後在主執行緒的內容中擲回該例外狀況。  
+### <a name="remarks"></a>Remarks  
+ After you store a caught exception in an `exception_ptr` object, the primary thread can process the object. In your primary thread, call the `rethrow_exception` function together with the `exception_ptr` object as its argument. The `rethrow_exception` function extracts the exception from the `exception_ptr` object and then throws the exception in the context of the primary thread.  
   
 ##  <a name="get_terminate"></a>  get_terminate  
- 取得目前的 `terminate_handler` 函式。  
+ Obtains the current `terminate_handler` function.  
   
 ```cpp  
 terminate_handler get_terminate();
 ```  
   
 ##  <a name="set_terminate"></a>  set_terminate  
- 建立新 `terminate_handler`，在程式終止時呼叫。  
+ Establishes a new `terminate_handler` to be called at the termination of the program.  
   
 ```  
 terminate_handler set_terminate(terminate_handler fnew) throw();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `fnew`  
- 要在終止時呼叫的函式。  
+ The function to be called at termination.  
   
-### <a name="return-value"></a>傳回值  
- 先前用來在終止時呼叫的函式位址。  
+### <a name="return-value"></a>Return Value  
+ The address of the previous function that used to be called at termination.  
   
-### <a name="remarks"></a>備註  
- 此函式會將新的 [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) 建立為 * `fnew` 函式。 因此，`fnew` 不能是 null 指標。 此函數會傳回上一個終止處理常式的位址。  
+### <a name="remarks"></a>Remarks  
+ The function establishes a new [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) as the function * `fnew`. Thus, `fnew` must not be a null pointer. The function returns the address of the previous terminate handler.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // exception_set_terminate.cpp  
@@ -141,32 +153,32 @@ int main()
 ```  
   
 ##  <a name="get_unexpected"></a>  get_unexpected  
- 取得目前的 `unexpected_handler` 函式。  
+ Obtains the current `unexpected_handler` function.  
   
 ```cpp  
 unexpected_handler get_unexpected();
 ```  
   
 ##  <a name="set_unexpected"></a>  set_unexpected  
- 建立新的 `unexpected_handler`，當未預期的例外狀況發生時擲回。  
+ Establishes a new `unexpected_handler` to be when an unexpected exception is encountered.  
   
 ```  
 unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `fnew`  
- 當未預期的例外狀況發生時要呼叫的函式。  
+ The function to be called when an unexpected exception is encountered.  
   
-### <a name="return-value"></a>傳回值  
- 上一個 `unexpected_handler` 的位址。  
+### <a name="return-value"></a>Return Value  
+ The address of the previous `unexpected_handler`.  
   
-### <a name="remarks"></a>備註  
- `fnew` 不能是 null 指標。  
+### <a name="remarks"></a>Remarks  
+ `fnew` must not be a null pointer.  
   
- C++ 標準要求在函式擲回例外狀況時，必須呼叫 `unexpected`。 目前的實作不支援此項目。 下列範例會直接呼叫 `unexpected`，這會引發呼叫 `unexpected_handler`。  
+ The C++ Standard requires that `unexpected` is called when a function throws an exception that is not on its throw list. The current implementation does not support this. The following example calls `unexpected` directly, which then calls the `unexpected_handler`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // exception_set_unexpected.cpp  
@@ -193,31 +205,31 @@ int main()
 ```  
   
 ##  <a name="terminate"></a>  terminate  
- 呼叫終止處理常式。  
+ Calls a terminate handler.  
   
 ```  
 void terminate();
 ```  
   
-### <a name="remarks"></a>備註  
- 函式會呼叫終止處理常式，其為 `void` 類型的函式。 如果程式直接呼叫 **terminate**，終止處理常式即為 [set_terminate](../standard-library/exception-functions.md#set_terminate) 呼叫最近設定的項目。 如果在 throw 運算式的評估期間因故呼叫 **terminate**，終止處理常式就會在評估 throw 運算式後立即生效。  
+### <a name="remarks"></a>Remarks  
+ The function calls a terminate handler, a function of type `void`. If **terminate** is called directly by the program, the terminate handler is the one most recently set by a call to [set_terminate](../standard-library/exception-functions.md#set_terminate). If **terminate** is called for any of several other reasons during evaluation of a throw expression, the terminate handler is the one in effect immediately after evaluating the throw expression.  
   
- 終止處理常式可能無法傳回至其呼叫端。 在程式啟動時，終止處理常式會呼叫一個函數，其會呼叫 **abort**。  
+ A terminate handler may not return to its caller. At program startup, the terminate handler is a function that calls **abort**.  
   
-### <a name="example"></a>範例  
-  如需 **terminate** 的用法範例，請參閱 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。  
+### <a name="example"></a>Example  
+  See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of **terminate**.  
   
 ##  <a name="uncaught_exception"></a>  uncaught_exception  
- 只有當系統正在處理擲回的例外狀況時，才傳回 `true`。  
+ Returns `true` only if a thrown exception is being currently processed.  
   
 ```  
 bool uncaught_exception();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在完成 throw 運算式評估之後，以及完成相符處理常式中例外狀況宣告的初始化之前，或呼叫 [unexpected](../standard-library/exception-functions.md#unexpected) 作為 throw 運算式的結果之前，系統會傳回 `true`。 特別之處在於：如果呼叫 `uncaught_exception` 的解構函式在例外狀況回溯期間受到叫用，則會傳回 `true`。 `uncaught_exception` 僅支援 Windows CE 5.00 或更新版本的裝置，包括 Windows Mobile 2005 平台。  
+### <a name="return-value"></a>Return Value  
+ Returns `true` after completing evaluation of a throw expression and before completing initialization of the exception declaration in the matching handler or calling [unexpected](../standard-library/exception-functions.md#unexpected) as a result of the throw expression. In particular, `uncaught_exception` will return `true` when called from a destructor that is being invoked during an exception unwind. On devices, `uncaught_exception` is only supported on Windows CE 5.00 and higher versions, including Windows Mobile 2005 platforms.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // exception_uncaught_exception.cpp  
@@ -271,31 +283,31 @@ In Test::~Test("outside try block")
 ```  
   
 ##  <a name="unexpected"></a>  unexpected  
- 呼叫未預期的處理常式。  
+ Calls the unexpected handler.  
   
 ```  
 void unexpected();
 ```  
   
-### <a name="remarks"></a>備註  
- C++ 標準要求在函式擲回例外狀況時，必須呼叫 `unexpected`。 目前的實作不支援此項目。 範例會直接呼叫 `unexpected`，這會引發呼叫非預期的處理常式。  
+### <a name="remarks"></a>Remarks  
+ The C++ Standard requires that `unexpected` is called when a function throws an exception that is not on its throw list. The current implementation does not support this. The example calls `unexpected` directly, which calls the unexpected handler.  
   
- 函式會呼叫未預期的處理常式，其為 `void` 類型的函式。 如果程式直接呼叫 `unexpected`，未預期的處理常式即為 [set_unexpected](../standard-library/exception-functions.md#set_unexpected) 呼叫最近設定的項目。  
+ The function calls an unexpected handler, a function of type `void`. If `unexpected` is called directly by the program, the unexpected handler is the one most recently set by a call to [set_unexpected](../standard-library/exception-functions.md#set_unexpected).  
   
- 未預期的處理常式可能無法傳回至其呼叫端。 它可能會透過下列方式來終止程式執行：  
+ An unexpected handler may not return to its caller. It may terminate execution by:  
   
--   擲回例外狀況規格中提列的物件，或者，如果程式直接呼叫未預期的處理常式，則會擲回任何類型的物件。  
+-   Throwing an object of a type listed in the exception specification or an object of any type if the unexpected handler is called directly by the program.  
   
--   擲回 [bad_exception](../standard-library/bad-exception-class.md) 類型的物件。  
+-   Throwing an object of type [bad_exception](../standard-library/bad-exception-class.md).  
   
--   呼叫 [terminate](../standard-library/exception-functions.md#terminate)、**abort** 或 **exit**( `int`)。  
+-   Calling [terminate](../standard-library/exception-functions.md#terminate), **abort** or **exit**( `int`).  
   
- 在程式啟動時，未預期的處理常式會呼叫一個函數，其會呼叫 [terminate](../standard-library/exception-functions.md#terminate)。  
+ At program startup, the unexpected handler is a function that calls [terminate](../standard-library/exception-functions.md#terminate).  
   
-### <a name="example"></a>範例  
-  如需 **unexpected.** 的用法範例，請參閱 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。  
+### <a name="example"></a>Example  
+  See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of **unexpected.**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<exception>](../standard-library/exception.md)
 
 

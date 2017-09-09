@@ -1,5 +1,5 @@
 ---
-title: "is_rvalue_reference 類別 | Microsoft Docs"
+title: is_rvalue_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_rvalue_reference
 - type_traits/std::is_rvalue_reference
 dev_langs:
 - C++
@@ -35,38 +34,38 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 748a717c1f49206457bded1cd11be2dd30753f6f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: def660ab87c5fc9ea47814fe5bcd7e4c2cfb4118
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isrvaluereference-class"></a>is_rvalue_reference 類別
-測試類型是否為 rvalue 參考。  
+# <a name="isrvaluereference-class"></a>is_rvalue_reference Class
+Tests if type is an rvalue reference.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_rvalue_reference;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查詢的類型。  
+ The type to query.  
   
-## <a name="remarks"></a>備註  
- 如果類型 `Ty` 是 [rvalue 參考](../cpp/rvalue-reference-declarator-amp-amp.md)，此類型述詞執行個體的值就會是 true。  
+## <a name="remarks"></a>Remarks  
+ An instance of this type predicate holds true if the type `Ty` is an [rvalue reference](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
+ [Lvalues and Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)
 
 
 

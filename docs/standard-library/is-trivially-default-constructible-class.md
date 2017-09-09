@@ -1,5 +1,5 @@
 ---
-title: "is_trivially_default_constructible 類別 | Microsoft Docs"
+title: is_trivially_default_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_default_constructible
 - type_traits/std::is_trivially_default_constructible
 dev_langs:
 - C++
@@ -34,50 +33,50 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: dd41fbdcc33250bc60a0b919b17dd52862549a77
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7378e982af31c1030012934924a053666fb4fff2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible 類別
-測試類型是否有 trivial 預設建構函式。  
+# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible Class
+Tests if type has trivial default constructor.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_trivially_default_constructible;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查詢的類型。  
+ The type to query.  
   
-## <a name="remarks"></a>備註  
- 如果 `Ty` 類型是具有 trivial 建構函式的類別，則類型述詞的執行個體保留 true，否則保留 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial constructor, otherwise it holds false.  
   
- 在下列情況下，類別 `Ty` 的預設建構函式是 trivial：  
+ A default constructor for a class `Ty` is trivial if:  
   
--   它是以隱含方式宣告的預設建構函式  
+-   it is an implicitly declared default constructor  
   
--   類別 `Ty` 沒有虛擬函式  
+-   the class `Ty` has no virtual functions  
   
--   類別 `Ty` 沒有虛擬基底  
+-   the class `Ty` has no virtual bases  
   
--   類別 `Ty` 的所有直接基底都有 trivial 建構函式  
+-   all the direct bases of the class `Ty` have trivial constructors  
   
--   類別類型的所有非靜態資料成員的類別都具有 trivial 建構函式  
+-   the classes of all the non-static data members of class type have trivial constructors  
   
--   類別的類型陣列的所有非靜態資料成員的類別，都具有 trivial 建構函式  
+-   the classes of all the non-static data members of type array of class have trivial constructors  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

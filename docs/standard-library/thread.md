@@ -1,5 +1,5 @@
 ---
-title: "&lt;執行緒&gt;|Microsoft 文件"
+title: '&lt;thread&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,67 +31,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 496269689428e73dc78893092844afb1650da20d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6603589c5aa80e1c3e09fa19222c32d8f91c7dc3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
-包含標準標頭\<執行緒 > 若要定義類別`thread`和各種支援的函式。  
+Include the standard header \<thread> to define the class `thread` and various supporting functions.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <thread>  
 ```  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  使用編譯的程式碼中**/clr**，此標頭會遭到封鎖。  
+>  In code that is compiled by using **/clr**, this header is blocked.  
   
- `__STDCPP_THREADS__`巨集定義為非零值，指出執行緒會受到此標頭。  
+ The `__STDCPP_THREADS__` macro is defined as a nonzero value to indicate that threads are supported by this header.  
   
 ## <a name="members"></a>Members  
   
-### <a name="public-classes"></a>公用類別  
+### <a name="public-classes"></a>Public Classes  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread 類別](../standard-library/thread-class.md)|定義用來觀察和管理應用程式中執行的執行緒的物件。|  
+|[thread Class](../standard-library/thread-class.md)|Defines an object that is used to observe and manage a thread of execution in an application.|  
   
-### <a name="public-structures"></a>公用結構  
+### <a name="public-structures"></a>Public Structures  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[hash 結構 (C++ 標準程式庫)](../standard-library/hash-structure-stl.md)|定義成員函式的傳回值，唯一取決於`thread::id`。 成員函式定義[雜湊](../standard-library/hash-class.md)適用於類型的對應值的函式`thread::id`索引值的分佈。|  
+|[hash Structure (C++ Standard Library)](../standard-library/hash-structure-stl.md)|Defines a member function that returns a value that is uniquely determined by a `thread::id`. The member function defines a [hash](../standard-library/hash-class.md) function that is suitable for mapping values of type `thread::id` to a distribution of index values.|  
   
-### <a name="public-functions"></a>公用函式  
+### <a name="public-functions"></a>Public Functions  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[get_id](../standard-library/thread-functions.md#get_id)|可唯一識別執行目前的執行緒。|  
-|[sleep_for](../standard-library/thread-functions.md#sleep_for)|封鎖呼叫執行緒。|  
-|[sleep_until](../standard-library/thread-functions.md#sleep_until)|封鎖呼叫執行緒，至少直到指定的時間。|  
-|[swap](../standard-library/thread-functions.md#swap)|交換兩個狀態`thread`物件。|  
-|[yield](../standard-library/thread-functions.md#yield)|向作業系統表示執行其他執行緒，即使目前的執行緒通常會繼續執行。|  
+|[get_id](../standard-library/thread-functions.md#get_id)|Uniquely identifies the current thread of execution.|  
+|[sleep_for](../standard-library/thread-functions.md#sleep_for)|Blocks the calling thread.|  
+|[sleep_until](../standard-library/thread-functions.md#sleep_until)|Blocks the calling thread at least until the specified time.|  
+|[swap](../standard-library/thread-functions.md#swap)|Exchanges the states of two `thread` objects.|  
+|[yield](../standard-library/thread-functions.md#yield)|Signals the operating system to run other threads, even if the current thread would ordinarily continue to run.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[運算子 > = 運算子](../standard-library/thread-operators.md#op_gt_eq)|判斷某個 `thread::id` 物件是否大於或等於另一個。|  
-|[運算子 > 運算子](../standard-library/thread-operators.md#op_gt)|判斷某個 `thread::id` 物件是否大於另一個。|  
-|[運算子 < = 運算子](../standard-library/thread-operators.md#op_lt_eq)|判斷某個 `thread::id` 物件是否小於或等於另一個。|  
-|[運算子 < 運算子](../standard-library/thread-operators.md#op_lt)|判斷某個 `thread::id` 物件是否小於另一個。|  
-|[運算子 ！ = 運算子](../standard-library/thread-operators.md#op_neq)|比較兩個 `thread::id` 物件是否不相等。|  
-|[運算子 = = 運算子](../standard-library/thread-operators.md#op_eq_eq)|比較兩個 `thread::id` 物件是否相等。|  
-|[運算子 << 運算子](../standard-library/thread-operators.md#op_lt_lt)|將 `thread::id` 物件的文字表示插入資料流。|  
+|[operator>= Operator](../standard-library/thread-operators.md#op_gt_eq)|Determines whether one `thread::id` object is greater than or equal to another.|  
+|[operator> Operator](../standard-library/thread-operators.md#op_gt)|Determines whether one `thread::id` object is greater than another.|  
+|[operator<= Operator](../standard-library/thread-operators.md#op_lt_eq)|Determines whether one `thread::id` object is less than or equal to another.|  
+|[operator< Operator](../standard-library/thread-operators.md#op_lt)|Determines whether one `thread::id` object is less than another.|  
+|[operator!= Operator](../standard-library/thread-operators.md#op_neq)|Compares two `thread::id` objects for inequality.|  
+|[operator== Operator](../standard-library/thread-operators.md#op_eq_eq)|Compares two `thread::id` objects for equality.|  
+|[operator<< Operator](../standard-library/thread-operators.md#op_lt_lt)|Inserts a text representation of a `thread::id` object into a stream.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

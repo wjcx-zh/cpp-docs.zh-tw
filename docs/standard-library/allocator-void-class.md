@@ -1,5 +1,5 @@
 ---
-title: "allocator&lt;void&gt; 類別 | Microsoft Docs"
+title: allocator&lt;void&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ef8af7f3ea22529eed77e2259add8fcde21fbd57
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3ebd7d3b528043a8102d0c8ceabf126fb5f69edb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 類別
-`void` 類型的範本類別配置器特製化，用於定義在此內容中具有意義的類型。  
+# <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; Class
+A specialization of the template class allocator to type `void`, defining the types that make sense in this context.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>
@@ -65,24 +65,24 @@ class allocator<void> {
 };
 ```  
   
-## <a name="remarks"></a>備註  
- 此類別明確地特製化 *void* 類型的範本類別 [allocator](../standard-library/allocator-class.md)。 其建構函式和指派運算子的行為與範本類別相同，但只會定義下列類型︰  
+## <a name="remarks"></a>Remarks  
+ The class explicitly specializes template class [allocator](../standard-library/allocator-class.md) for type *void.* Its constructors and assignment operator behave the same as for the template class, but it defines only the following types:  
   
-- [const_pointer](../standard-library/allocator-class.md#const_pointer)。  
+- [const_pointer](../standard-library/allocator-class.md#const_pointer).  
   
 - [pointer](../standard-library/allocator-class.md#pointer).  
   
-- [value_type](../standard-library/allocator-class.md#value_type)。  
+- [value_type](../standard-library/allocator-class.md#value_type).  
   
-- [rebind](../standard-library/allocator-class.md#rebind)，一種巢狀範本類別。  
+- [rebind](../standard-library/allocator-class.md#rebind), a nested template class.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

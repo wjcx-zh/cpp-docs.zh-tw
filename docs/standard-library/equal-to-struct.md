@@ -1,15 +1,14 @@
 ---
-title: "equal_to 結構 | Microsoft Docs"
+title: equal_to Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- equal_to
 - xfunctional/std::equal_to
 dev_langs:
 - C++
@@ -36,17 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: bac0d0114b10fc4ac7a83a60f21db5218cb3f1c8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 21ed5f4db02ed8fa096a7e10271e5c3a5d9a3261
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="equalto-struct"></a>equal_to 結構
-在其引數執行等號比較運算 ( `operator==`) 的二元述詞。  
+# <a name="equalto-struct"></a>equal_to Struct
+A binary predicate that performs the equality operation ( `operator==`) on its arguments.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type = void>  
@@ -65,23 +64,23 @@ struct equal_to<void>
  };  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支援 `operator==` 的任何類型，其接受指定或推斷類型的運算元。  
+ Any type that supports an `operator==` that takes operands of the specified or inferred types.  
   
  `Left`  
- 等號比較運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
+ The left operand of the equality operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 等號比較運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
+ The right operand of the equality operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>傳回值  
- `Left``==``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator==` 所傳回的類型。  
+## <a name="return-value"></a>Return Value  
+ The result of `Left == Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator==`.  
   
-## <a name="remarks"></a>備註  
- `Type` 類型的物件必須可進行等號比較。 在物件集合上定義的 `operator==` 必須符合等價關聯的數學屬性，才能進行此作業。 所有內建的數字和指標類型皆符合這項需求。  
+## <a name="remarks"></a>Remarks  
+ The objects of type `Type` must be equality-comparable. This requires that the `operator==` defined on the set of objects satisfies the mathematical properties of an equivalence relation. All of the built-in numeric and pointer types satisfy this requirement.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_equal_to.cpp  

@@ -1,5 +1,5 @@
 ---
-title: "const_mem_fun_ref_t 類別 | Microsoft Docs"
+title: const_mem_fun_ref_t Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- const_mem_fun_ref_t
 - xfunctional/std::const_mem_fun_ref_t
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: f156aeb90b3569aa1fd65f06b520f294f0869541
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b37404e3b7d2f0f199e5adb70e324721f97f81a6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="constmemfunreft-class"></a>const_mem_fun_ref_t 類別
-配接器類別，這個類別可在使用參考引數初始化 **const** 成員函式 (其不接受任何引數) 時，將其當作一元函式物件來呼叫。  
+# <a name="constmemfunreft-class"></a>const_mem_fun_ref_t Class
+An adapter class that allows a **const** member function that takes no arguments to be called as a unary function object when initialized with a reference argument.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Result, class Type>
@@ -56,30 +55,30 @@ class const_mem_fun_ref_t
  };
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Pm`  
- 指標，指向要轉換成函式物件之 **Type** 類別的成員函式。  
+ A pointer to the member function of class **Type** to be converted to a function object.  
   
  `left`  
- 要對其呼叫 `Pm` 成員函式的物件。  
+ The object that the `Pm` member function is called on.  
   
-## <a name="return-value"></a>傳回值  
- 具適應性的一元函式。  
+## <a name="return-value"></a>Return Value  
+ An adaptable unary function.  
   
-## <a name="remarks"></a>備註  
- 此範本類別會在私用成員物件中儲存一份 `Pm` 的複本，這必須是 **Type** 類別之成員函式的指標。 它會在傳回下列項目時定義其成員函式 `operator()`：( **left**.\* `Pm`)() **const**。  
+## <a name="remarks"></a>Remarks  
+ The template class stores a copy of `Pm`, which must be a pointer to a member function of class **Type**, in a private member object. It defines its member function `operator()` as returning ( **left**.\* `Pm`)() **const**.  
   
-## <a name="example"></a>範例  
- 通常並不直接使用 `const_mem_fun_ref_t` 的建構函式，而協助程式函式 `mem_fun_ref` 可用來調整成員函式。 如需如何使用成員函式配接器的範例，請參閱 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)。  
+## <a name="example"></a>Example  
+ The constructor of `const_mem_fun_ref_t` is not usually used directly; the helper function `mem_fun_ref` is used to adapt member functions. See [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref) for an example of how to use member function adaptors.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "&lt;堆疊&gt;|Microsoft 文件"
+title: '&lt;stack&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<stack>
-- std::<stack>
-- <stack>
+- std::<stack>", "<stack>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,43 +34,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a769d1f945c6a79c0941a505e3291ae0f5529bbd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4f63ff66c50d830feb3fe34b2102bd9ed47e6eb2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
-定義樣板類別堆疊和兩個支援的樣板。  
+Defines the template class stack and two supporting templates.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <stack>  
   
 ```  
   
-### <a name="operators"></a>運算子  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/stack-operators.md#op_neq)|測試運算子左邊的堆疊物件是否不等於右邊的堆疊物件。|  
-|[operator<](../standard-library/stack-operators.md#op_lt)|測試運算子左邊的堆疊物件是否小於右邊的堆疊物件。|  
-|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|測試運算子左邊的堆疊物件是否小於或等於右邊的堆疊物件。|  
-|[operator==](../standard-library/stack-operators.md#op_eq_eq)|測試運算子左邊的堆疊物件是否等於右邊的堆疊物件。|  
-|[operator>](../standard-library/stack-operators.md#op_gt)|測試運算子左邊的堆疊物件是否大於右邊的堆疊物件。|  
-|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|測試運算子左邊的堆疊物件是否大於或等於右邊的堆疊物件。|  
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Tests if the stack object on the left side of the operator is not equal to the stack object on the right side.|  
+|[operator<](../standard-library/stack-operators.md#op_lt)|Tests if the stack object on the left side of the operator is less than the stack object on the right side.|  
+|[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Tests if the stack object on the left side of the operator is less than or equal to the stack object on the right side.|  
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Tests if the stack object on the left side of the operator is equal to the stack object on the right side.|  
+|[operator>](../standard-library/stack-operators.md#op_gt)|Tests if the stack object on the left side of the operator is greater than the stack object on the right side.|  
+|[operator>=](../standard-library/stack-operators.md#op_gt_eq)|Tests if the stack object on the left side of the operator is greater than or equal to the stack object on the right side.|  
   
-### <a name="classes"></a>類別  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[stack 類別](../standard-library/stack-class.md)|範本容器配接器類別，其提供的功能限制將對項目的存取限制為最近加入一些基礎容器類型的項目。|  
+|[stack Class](../standard-library/stack-class.md)|A template container adaptor class that provides a restriction of functionality limiting access to the element most recently added to some underlying container type.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

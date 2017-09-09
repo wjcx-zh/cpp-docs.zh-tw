@@ -1,5 +1,5 @@
 ---
-title: "array 類別 (C++ 標準程式庫)| Microsoft Docs"
+title: array Class (C++ Standard Library)| Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- array
 - array/std::array
 - array/std::array::const_iterator
 - array/std::array::const_pointer
@@ -74,7 +73,66 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- array class
+- std::array [C++]
+- std::array [C++], const_iterator
+- std::array [C++], const_pointer
+- std::array [C++], const_reference
+- std::array [C++], const_reverse_iterator
+- std::array [C++], difference_type
+- std::array [C++], iterator
+- std::array [C++], pointer
+- std::array [C++], reference
+- std::array [C++], reverse_iterator
+- std::array [C++], size_type
+- std::array [C++], value_type
+- std::array [C++], assign
+- std::array [C++], at
+- std::array [C++], back
+- std::array [C++], begin
+- std::array [C++], cbegin
+- std::array [C++], cend
+- std::array [C++], crbegin
+- std::array [C++], crend
+- std::array [C++], data
+- std::array [C++], empty
+- std::array [C++], end
+- std::array [C++], fill
+- std::array [C++], front
+- std::array [C++], max_size
+- std::array [C++], rbegin
+- std::array [C++], rend
+- std::array [C++], size
+- std::array [C++], swap
+- ', '
+- std::array [C++], const_iterator
+- std::array [C++], const_pointer
+- std::array [C++], const_reference
+- std::array [C++], const_reverse_iterator
+- std::array [C++], difference_type
+- std::array [C++], iterator
+- std::array [C++], pointer
+- std::array [C++], reference
+- std::array [C++], reverse_iterator
+- std::array [C++], size_type
+- std::array [C++], value_type
+- std::array [C++], assign
+- std::array [C++], at
+- std::array [C++], back
+- std::array [C++], begin
+- std::array [C++], cbegin
+- std::array [C++], cend
+- std::array [C++], crbegin
+- std::array [C++], crend
+- std::array [C++], data
+- std::array [C++], empty
+- std::array [C++], end
+- std::array [C++], fill
+- std::array [C++], front
+- std::array [C++], max_size
+- std::array [C++], rbegin
+- std::array [C++], rend
+- std::array [C++], size
+- std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 caps.latest.revision: 22
 author: corob-msft
@@ -94,93 +152,93 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9ac4c0becd32ca50e4f56fb38218b4c69cc4d0bd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f202256a16b30d606317d457778ab4eda3eea715
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
-說明的物件可控制長度 `N` 之 `Ty` 類型項目的序列。 序列會儲存成陣列 `Ty`，包含在 `array<Ty, N>` 物件中。  
+# <a name="array-class-c-standard-library"></a>array Class (C++ Standard Library)
+Describes an object that controls a sequence of length `N` of elements of type `Ty`. The sequence is stored as an array of `Ty`, contained in the `array<Ty, N>` object.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty, std::size_t N>  
 class array;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|說明|  
-|`Ty`|元素的類型。|  
-|`N`|元素數。|  
+|Parameter|Description|  
+|`Ty`|The type of an element.|  
+|`N`|The number of elements.|  
   
 ## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|類型定義|說明|  
-|[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
-|[const_pointer](#const_pointer)|項目的常數指標類型。|  
-|[const_reference](#const_reference)|項目的常數參考類型。|  
-|[const_reverse_iterator](#const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|  
-|[difference_type](#difference_type)|兩個項目之間帶正負號距離的類型。|  
-|[iterator](#iterator)|受控制序列之迭代器的類型。|  
-|[pointer](#pointer)|項目的指標類型。|  
-|[reference](#reference)|項目的參考類型。|  
-|[reverse_iterator](#reverse_iterator)|受控制序列的反向迭代器類型。|  
-|[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|  
-|[value_type](#value_type)|元素的類型。|  
+|Type Definition|Description|  
+|[const_iterator](#const_iterator)|The type of a constant iterator for the controlled sequence.|  
+|[const_pointer](#const_pointer)|The type of a constant pointer to an element.|  
+|[const_reference](#const_reference)|The type of a constant reference to an element.|  
+|[const_reverse_iterator](#const_reverse_iterator)|The type of a constant reverse iterator for the controlled sequence.|  
+|[difference_type](#difference_type)|The type of a signed distance between two elements.|  
+|[iterator](#iterator)|The type of an iterator for the controlled sequence.|  
+|[pointer](#pointer)|The type of a pointer to an element.|  
+|[reference](#reference)|The type of a reference to an element.|  
+|[reverse_iterator](#reverse_iterator)|The type of a reverse iterator for the controlled sequence.|  
+|[size_type](#size_type)|The type of an unsigned distance between two elements.|  
+|[value_type](#value_type)|The type of an element.|  
   
 |||  
 |-|-|  
-|成員函式|說明|  
-|[array](#array)|建構陣列物件。|  
-|[assign](#assign)|取代所有項目。|  
-|[at](#at)|存取指定位置的項目。|  
-|[back](#back)|存取最後一個項目。|  
-|[begin](#begin)|指定受控制序列的開頭。|  
-|[cbegin](#cbegin)|將隨機存取常數迭代器傳回陣列中的第一個項目。|  
-|[cend](#cend)|傳回隨機存取指向陣列結尾之後一個項目的常數迭代器。|  
-|[crbegin](#crbegin)|將常數迭代器傳回反向陣列中的第一個項目。|  
-|[crend](#crend)|將常數迭代器傳回反向陣列的結尾。|  
-|[data](#data)|取得第一個項目的位址。|  
-|[empty](#empty)|測試項目是否存在。|  
-|[end](#end)|指定受控制序列的結尾。|  
-|[fill](#fill)|取代所有具有指定值的項目。|  
-|[front](#front)|存取第一個項目。|  
-|[max_size](#max_size)|計算元素的數目。|  
-|[rbegin](#rbegin)|指定反向受控制序列的開頭。|  
-|[rend](#rend)|指定反向受控制序列的結尾。|  
-|[size](#size)|計算元素的數目。|  
-|[swap](#swap)|交換兩個容器的內容。|  
+|Member Function|Description|  
+|[array](#array)|Constructs an array object.|  
+|[assign](#assign)|Replaces all elements.|  
+|[at](#at)|Accesses an element at a specified position.|  
+|[back](#back)|Accesses the last element.|  
+|[begin](#begin)|Designates the beginning of the controlled sequence.|  
+|[cbegin](#cbegin)|Returns a random-access const iterator to the first element in the array.|  
+|[cend](#cend)|Returns a random-access const iterator that points just beyond the end of the array.|  
+|[crbegin](#crbegin)|Returns a const iterator to the first element in a reversed array.|  
+|[crend](#crend)|Returns a const iterator to the end of a reversed array.|  
+|[data](#data)|Gets the address of the first element.|  
+|[empty](#empty)|Tests whether elements are present.|  
+|[end](#end)|Designates the end of the controlled sequence.|  
+|[fill](#fill)|Replaces all elements with a specified value.|  
+|[front](#front)|Accesses the first element.|  
+|[max_size](#max_size)|Counts the number of elements.|  
+|[rbegin](#rbegin)|Designates the beginning of the reversed controlled sequence.|  
+|[rend](#rend)|Designates the end of the reversed controlled sequence.|  
+|[size](#size)|Counts the number of elements.|  
+|[swap](#swap)|Swaps the contents of two containers.|  
   
 |||  
 |-|-|  
-|運算子|描述|  
-|[array::operator=](#op_eq)|取代受控制的序列。|  
-|[array::operator[]](#op_at)|存取指定位置的項目。|  
+|Operator|Description|  
+|[array::operator=](#op_eq)|Replaces the controlled sequence.|  
+|[array::operator[]](#op_at)|Accesses an element at a specified position.|  
   
-## <a name="remarks"></a>備註  
- 該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如：  
+## <a name="remarks"></a>Remarks  
+ The type has a default constructor `array()` and a default assignment operator `operator=`, and satisfies the requirements for an `aggregate`. Therefore, objects of type `array<Ty, N>` can be initialized by using an aggregate initializer. For example,  
   
 ```  
 array<int, 4> ai = { 1, 2, 3 };  
 ```  
   
- 建立含有四個整數值的物件 `ai`，將前三個項目分別初始化為值 1、 2 和 3，並將第四個項目初始化為 0。  
+ creates the object `ai` that holds four integer values, initializes the first three elements to the values 1, 2, and 3, respectively, and initializes the fourth element to 0.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<array>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<array>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-##  <a name="array"></a> array::array  
- 建構陣列物件。  
+##  <a name="array"></a>  array::array  
+ Constructs an array object.  
   
 ```  
 array();
@@ -188,16 +246,16 @@ array();
 array(const array& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *right*  
- 要插入的物件或範圍。  
+ Object or range to insert.  
   
-### <a name="remarks"></a>備註  
-預設建構函式 `array()` 會讓受控制序列處於未初始化狀態 (預設為初始化)。 您使用它來指定未初始化的受控制序列。  
+### <a name="remarks"></a>Remarks  
+The default constructor `array()` leaves the controlled sequence uninitialized (or default initialized). You use it to specify an uninitialized controlled sequence.  
   
-複製建構函式 `array(const array& right)` 會使用序列 [*right*`.begin()`, *right*`.end()`) 來初始化受控制序列。 您使用它來指定初始受控制序列，這個初始受控制序列是陣列物件 *right* 所控制序列的複本。  
+The copy constructor `array(const array& right)` initializes the controlled sequence with the sequence [*right*`.begin()`, *right*`.end()`). You use it to specify an initial controlled sequence that is a copy of the sequence controlled by the array object *right*.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_array.cpp   
@@ -234,21 +292,21 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="assign"></a> array::assign  
-在 C++11 中已淘汰，已取代為 [fill](#fill)。 取代所有項目。  
+##  <a name="assign"></a>  array::assign  
+Obsolete in C++11, replaced by [fill](#fill). Replaces all elements.  
   
 ```  
 void assign(const Ty& val);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `val`  
- 要指派的值。  
+ The value to assign.  
   
-### <a name="remarks"></a>備註  
- 成員函式會將 `*this` 所控制的序列取代為 `val` 值的 `N` 元素重複。  
+### <a name="remarks"></a>Remarks  
+ The member function replaces the sequence controlled by `*this` with a repetition of `N` elements of value `val`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_assign.cpp   
@@ -286,8 +344,8 @@ int main()
 4 4 4 4  
 ```  
   
-##  <a name="at"></a> array::at  
- 存取指定位置的項目。  
+##  <a name="at"></a>  array::at  
+ Accesses an element at a specified position.  
   
 ```  
 reference at(size_type off);
@@ -295,14 +353,14 @@ reference at(size_type off);
 constexpr const_reference at(size_type off) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `off`  
- 要存取的項目的位置。  
+ Position of element to access.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回位於 `off` 位置的受控制序列項目的參考。 如果該位置無效，函式就會擲回類別 `out_of_range` 的物件。  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reference to the element of the controlled sequence at position `off`. If that position is invalid, the function throws an object of class `out_of_range`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_at.cpp   
@@ -331,8 +389,8 @@ int main()
   
 ```  
   
-##  <a name="back"></a> array::back  
- 存取最後一個項目。  
+##  <a name="back"></a>  array::back  
+ Accesses the last element.  
   
 ```  
 reference back();
@@ -340,10 +398,10 @@ reference back();
 constexpr const_reference back() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回受控制序列的最後一個項目的參考，絕對不能空白。  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reference to the last element of the controlled sequence, which must be non-empty.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_back.cpp   
@@ -376,18 +434,18 @@ int main()
 3  
 ```  
   
-##  <a name="begin"></a> array::begin  
- 指定受控制序列的開頭。  
+##  <a name="begin"></a>  array::begin  
+ Designates the beginning of the controlled sequence.  
   
 ```  
 iterator begin() noexcept;  
 const_iterator begin() const noexcept;  
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式傳回的隨機存取迭代器，指向序列的第一個項目 (或空序列結尾以外的位置)。  
+### <a name="remarks"></a>Remarks  
+ The member functions return a random-access iterator that points at the first element of the sequence (or just beyond the end of an empty sequence).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_begin.cpp   
@@ -421,20 +479,20 @@ int main()
 0  
 ```  
   
-##  <a name="cbegin"></a> array::cbegin  
- 傳回 `const` 迭代器，為範圍中的第一個項目定址。  
+##  <a name="cbegin"></a>  array::cbegin  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const noexcept;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `const` 隨機存取迭代器，指向範圍的第一個項目，或指向空白範圍結尾 (空白範圍 `cbegin() == cend()`) 之外的位置。  
+### <a name="return-value"></a>Return Value  
+ A `const` random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>備註  
- 傳回值為 `cbegin` 時，無法修改範圍中的項目。  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮使用 `Container` 作為支援 `begin()` 和 `cbegin()` 之任何種類的可修改 (非 `const`) 容器。  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -444,20 +502,20 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator  
 ```  
   
-##  <a name="cend"></a> array::cend  
- 傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。  
+##  <a name="cend"></a>  array::cend  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const noexcept;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向範圍結尾之外的隨機存取迭代器。  
+### <a name="return-value"></a>Return Value  
+ A random-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>備註  
- `cend` 用來測試迭代器是否已超過其範圍結尾。  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -467,19 +525,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- `cend` 所傳回的值不應該取值。  
+ The value returned by `cend` should not be dereferenced.  
   
-##  <a name="const_iterator"></a> array::const_iterator  
- 用於受控制序列的常數迭代器類型。  
+##  <a name="const_iterator"></a>  array::const_iterator  
+ The type of a constant iterator for the controlled sequence.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所描述的物件可作為受控制序列的常數隨機存取迭代器。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant random-access iterator for the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_const_iterator.cpp  
@@ -520,17 +578,17 @@ it2: 0
   
 ```  
   
-##  <a name="const_pointer"></a> array::const_pointer  
- 項目的常數指標類型。  
+##  <a name="const_pointer"></a>  array::const_pointer  
+ The type of a constant pointer to an element.  
   
 ```  
 typedef const Ty *const_pointer;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所描述的物件可以作為序列之元素的常數指標。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant pointer to elements of the sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_const_pointer.cpp   
@@ -564,17 +622,17 @@ int main()
 0  
 ```  
   
-##  <a name="const_reference"></a> array::const_reference  
- 項目的常數參考類型。  
+##  <a name="const_reference"></a>  array::const_reference  
+ The type of a constant reference to an element.  
   
 ```  
 typedef const Ty& const_reference;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所說明的物件可作為受控制序列之元素的常數參考。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant reference to an element of the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_const_reference.cpp   
@@ -608,17 +666,17 @@ int main()
 0  
 ```  
   
-##  <a name="const_reverse_iterator"></a> array::const_reverse_iterator  
- 用於受控制序列的常數反向迭代器類型。  
+##  <a name="const_reverse_iterator"></a>  array::const_reverse_iterator  
+ The type of a constant reverse iterator for the controlled sequence.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所描述的物件可作為受控制序列的常數反向迭代器。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant reverse iterator for the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_const_reverse_iterator.cpp   
@@ -652,20 +710,20 @@ int main()
 3  
 ```  
   
-##  <a name="crbegin"></a> array::crbegin  
- 將常數迭代器傳回反向陣列中的第一個項目。  
+##  <a name="crbegin"></a>  array::crbegin  
+ Returns a const iterator to the first element in a reversed array.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- const 反轉隨機存取迭代器，其定址反轉陣列中的第一個項目，或定址未反轉陣列中的最後一個項目。  
+### <a name="return-value"></a>Return Value  
+ A const reverse random-access iterator addressing the first element in a reversed array or addressing what had been the last element in the unreversed array.  
   
-### <a name="remarks"></a>備註  
- 有 `crbegin` 的傳回值時，無法修改陣列物件。  
+### <a name="remarks"></a>Remarks  
+ With the return value of `crbegin`, the array object cannot be modified.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // array_crbegin.cpp  
@@ -695,26 +753,26 @@ The first element of array is 1.
 The first element of the reversed array is 2.  
 ```  
   
-##  <a name="crend"></a> array::crend  
- 傳回 const 迭代器，其定址反轉陣列中最後一個元素的下一個位置。  
+##  <a name="crend"></a>  array::crend  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed array.  
   
 ```  
 const_reverse_iterator crend() const noexcept;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- const 反轉隨機存取迭代器，其定址反轉陣列中最後一個元素的下一個位置 (此位置在未反轉的陣列中優先於第一個元素)。  
+### <a name="return-value"></a>Return Value  
+ A const reverse random-access iterator that addresses the location succeeding the last element in a reversed array (the location that had preceded the first element in the unreversed array).  
   
-### <a name="remarks"></a>備註  
- `crend` 用於反向陣列，就如同 [array::cend](#cend) 用於陣列一樣。  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed array just as [array::cend](#cend) is used with a array.  
   
- 有 `crend` 的傳回值時 (適當遞減)，無法修改陣列物件。  
+ With the return value of `crend` (suitably decremented), the array object cannot be modified.  
   
- `crend` 可以用來測試反轉迭代器是否已到達其陣列的結尾。  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its array.  
   
- `crend` 所傳回的值不應該取值。  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // array_crend.cpp  
@@ -738,8 +796,8 @@ int main( )
 1  
 ```  
   
-##  <a name="data"></a> array::data  
- 取得第一個項目的位址。  
+##  <a name="data"></a>  array::data  
+ Gets the address of the first element.  
   
 ```  
 Ty *data();
@@ -747,10 +805,10 @@ Ty *data();
 const Ty *data() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 這些成員函式會傳回受控制序列中第一個元素的位址。  
+### <a name="remarks"></a>Remarks  
+ The member functions return the address of the first element in the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_data.cpp   
@@ -784,17 +842,17 @@ int main()
 0  
 ```  
   
-##  <a name="difference_type"></a> array::difference_type  
- 兩個項目之間帶正負號距離的類型。  
+##  <a name="difference_type"></a>  array::difference_type  
+ The type of a signed distance between two elements.  
   
 ```  
 typedef std::ptrdiff_t difference_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此帶正負號的整數類型所描述的物件可代表受控制序列中任何兩個項目位址之間的差距。 它是 `std::ptrdiff_t` 類型的同義字。  
+### <a name="remarks"></a>Remarks  
+ The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence. It is a synonym for the type `std::ptrdiff_t`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_difference_type.cpp   
@@ -828,17 +886,17 @@ int main()
 -4  
 ```  
   
-##  <a name="empty"></a> array::empty  
- 測試項目是否不存在。  
+##  <a name="empty"></a>  array::empty  
+ Tests whether no elements are present.  
   
 ```  
 constexpr bool empty() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 唯有 `N == 0` 時，成員函式才會傳回 true。  
+### <a name="remarks"></a>Remarks  
+ The member function returns true only if `N == 0`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_empty.cpp   
@@ -878,8 +936,8 @@ false
 true  
 ```  
   
-##  <a name="end"></a> array::end  
- 指定受控制序列的結尾。  
+##  <a name="end"></a>  array::end  
+ Designates the end of the controlled sequence.  
   
 ```  
 reference end();
@@ -887,10 +945,10 @@ reference end();
 const_reference end() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回指向序列結尾之外的隨機存取迭代器。  
+### <a name="remarks"></a>Remarks  
+ The member functions return a random-access iterator that points just beyond the end of the sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_end.cpp   
@@ -924,24 +982,24 @@ int main()
 3  
 ```  
   
-##  <a name="fill"></a> array::fill  
- 清除陣列，並將指定的項目複製到空陣列。  
+##  <a name="fill"></a>  array::fill  
+ Erases a array and copies the specified elements to the empty array.  
   
 ```  
 void fill(const Type& val);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|說明|  
-|`val`|插入陣列中之項目的值。|  
+|Parameter|Description|  
+|`val`|The value of the element being inserted into the array.|  
   
-### <a name="remarks"></a>備註  
- `fill` 會以指定的值取代陣列的每個項目。  
+### <a name="remarks"></a>Remarks  
+ `fill` replaces each element of the array with the specified value.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // array_fill.cpp  
@@ -968,8 +1026,8 @@ int main( )
 }  
 ```  
   
-##  <a name="front"></a> array::front  
- 存取第一個項目。  
+##  <a name="front"></a>  array::front  
+ Accesses the first element.  
   
 ```  
 reference front();
@@ -977,10 +1035,10 @@ reference front();
 constexpr const_reference front() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回受控制序列的第一個項目的參考，絕對不能空白。  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reference to the first element of the controlled sequence, which must be non-empty.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_front.cpp   
@@ -1013,17 +1071,17 @@ int main()
 0  
 ```  
   
-##  <a name="iterator"></a> array::iterator  
- 受控制序列之迭代器的類型。  
+##  <a name="iterator"></a>  array::iterator  
+ The type of an iterator for the controlled sequence.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型說明可作為受控制序列之隨機存取迭代器的物件。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a random-access iterator for the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_iterator.cpp   
@@ -1064,17 +1122,17 @@ it2: 0
   
 ```  
   
-##  <a name="max_size"></a> array::max_size  
- 計算元素的數目。  
+##  <a name="max_size"></a>  array::max_size  
+ Counts the number of elements.  
   
 ```  
 constexpr size_type max_size() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 `N`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `N`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_max_size.cpp   
@@ -1107,8 +1165,8 @@ int main()
 4  
 ```  
   
-##  <a name="op_at"></a> array::operator[]  
- 存取指定位置的項目。  
+##  <a name="op_at"></a>  array::operator[]  
+ Accesses an element at a specified position.  
   
 ```  
 reference operator[](size_type off);
@@ -1116,16 +1174,16 @@ reference operator[](size_type off);
 constexpr const_reference operator[](size_type off) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `off`  
- 要存取的項目的位置。  
+ Position of element to access.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回位於 `off` 位置的受控制序列項目的參考。 如果位置不正確，就不會定義行為。  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reference to the element of the controlled sequence at position `off`. If that position is invalid, the behavior is undefined.  
   
-也會提供非成員 [get](array-functions.md#get) 函式，以取得 `array` 之元素的參考。  
+There is also a non-member [get](array-functions.md#get) function available to get a reference to an element of an `array`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_operator_sub.cpp   
@@ -1159,21 +1217,21 @@ int main()
 1 3  
 ```  
   
-##  <a name="op_eq"></a> array::operator=  
- 取代受控制的序列。  
+##  <a name="op_eq"></a>  array::operator=  
+ Replaces the controlled sequence.  
   
 ```  
 array <Value>%  operator=(array <Value>% right);
 ```  
   
-### <a name="parameters"></a>參數  
- 向右  
- 要複製的容器。  
+### <a name="parameters"></a>Parameters  
+ right  
+ Container to copy.  
   
-### <a name="remarks"></a>備註  
- 成員運算子會將 `right` 的每個元素指派給受控制序列的對應元素，然後傳回 `*this`。 您使用它將受控制序列取代為 `right` 中受控制序列的複本。  
+### <a name="remarks"></a>Remarks  
+ The member operator assigns each element of `right` to the corresponding element of the controlled sequence, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in `right`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_operator_as.cpp   
@@ -1211,17 +1269,17 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="pointer"></a> array::pointer  
- 項目的指標類型。  
+##  <a name="pointer"></a>  array::pointer  
+ The type of a pointer to an element.  
   
 ```  
 typedef Ty *pointer;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所描述的物件可以作為序列之元素的指標。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a pointer to elements of the sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_pointer.cpp   
@@ -1255,18 +1313,18 @@ int main()
 0  
 ```  
   
-##  <a name="rbegin"></a> array::rbegin  
- 指定反向受控制序列的開頭。  
+##  <a name="rbegin"></a>  array::rbegin  
+ Designates the beginning of the reversed controlled sequence.  
   
 ```  
 reverse_iterator rbegin()noexcept;  
 const_reverse_iterator rbegin() const noexcept;  
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回指向受控制序列結尾之外的反向迭代器。 因此，它會指定反向序列的開頭。  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reverse iterator that points just beyond the end of the controlled sequence. Hence, it designates the beginning of the reverse sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_rbegin.cpp   
@@ -1300,17 +1358,17 @@ int main()
 3  
 ```  
   
-##  <a name="reference"></a> array::reference  
- 項目的參考類型。  
+##  <a name="reference"></a>  array::reference  
+ The type of a reference to an element.  
   
 ```  
 typedef Ty& reference;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所說明的物件可做為受控制序列之元素的參考。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a reference to an element of the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_reference.cpp   
@@ -1344,18 +1402,18 @@ int main()
 0  
 ```  
   
-##  <a name="rend"></a> array::rend  
- 指定反向受控制序列的結尾。  
+##  <a name="rend"></a>  array::rend  
+ Designates the end of the reversed controlled sequence.  
   
 ```  
 reverse_iterator rend()noexcept;  
 const_reverse_iterator rend() const noexcept;  
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式傳回的反向迭代器，指向序列的第一個項目 (或空序列結尾以外的位置)。 因此，它會指定反向序列的結尾。  
+### <a name="remarks"></a>Remarks  
+ The member functions return a reverse iterator that points at the first element of the sequence (or just beyond the end of an empty sequence)). Hence, it designates the end of the reverse sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_rend.cpp   
@@ -1389,17 +1447,17 @@ int main()
 0  
 ```  
   
-##  <a name="reverse_iterator"></a> array::reverse_iterator  
- 受控制序列的反向迭代器類型。  
+##  <a name="reverse_iterator"></a>  array::reverse_iterator  
+ The type of a reverse iterator for the controlled sequence.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所描述的物件可作為受控制序列的反向迭代器。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a reverse iterator for the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_reverse_iterator.cpp   
@@ -1433,17 +1491,17 @@ int main()
 3  
 ```  
   
-##  <a name="size"></a> array::size  
- 計算元素的數目。  
+##  <a name="size"></a>  array::size  
+ Counts the number of elements.  
   
 ```  
 constexpr size_type size() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 `N`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `N`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_size.cpp   
@@ -1476,17 +1534,17 @@ int main()
 4  
 ```  
   
-##  <a name="size_type"></a> array::size_type  
- 兩個元素之間不帶正負號距離的類型。  
+##  <a name="size_type"></a>  array::size_type  
+ The type of an unsigned distance between two element.  
   
 ```  
 typedef std::size_t size_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此不帶正負號的整數類型所描述的物件可代表任何受控制序列的長度。 它是 `std::size_t` 類型的同義字。  
+### <a name="remarks"></a>Remarks  
+ The unsigned integer type describes an object that can represent the length of any controlled sequence. It is a synonym for the type `std::size_t`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_size_type.cpp   
@@ -1520,23 +1578,23 @@ int main()
 4  
 ```  
   
-##  <a name="swap"></a> array::swap  
-將這個陣列的內容與另一個陣列交換。  
+##  <a name="swap"></a>  array::swap  
+Swaps the contents of this array with another array.  
   
 ```  
 void swap(array& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要與之交換內容的陣列。  
+ Array to swap contents with.  
   
-### <a name="remarks"></a>備註  
-成員函式會交換 `*this` 和 `right`之間受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。  
+### <a name="remarks"></a>Remarks  
+The member function swaps the controlled sequences between `*this` and `right`. It performs a number of element assignments and constructor calls proportional to `N`.  
 
-也會有非成員 [swap](array-functions.md#swap) 函式可用來交換兩個 `array` 執行個體。  
+There is also a non-member [swap](array-functions.md#swap) function available to swap two `array` instances.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_swap.cpp   
@@ -1583,17 +1641,17 @@ int main()
 0 1 2 3  
 ```  
   
-##  <a name="value_type"></a> array::value_type  
- 元素的類型。  
+##  <a name="value_type"></a>  array::value_type  
+ The type of an element.  
   
 ```  
 typedef Ty value_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型是範本參數 `Ty`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Ty`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__array_value_type.cpp   
@@ -1631,7 +1689,7 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

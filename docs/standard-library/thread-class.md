@@ -1,5 +1,5 @@
 ---
-title: "thread 類別 | Microsoft Docs"
+title: thread Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -40,100 +40,110 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b1c5282d284a70917c6c14511bacda305180d778
+helpviewer_keywords:
+- std::thread [C++]
+- std::thread [C++], thread
+- std::thread [C++], detach
+- std::thread [C++], get_id
+- std::thread [C++], hardware_concurrency
+- std::thread [C++], join
+- std::thread [C++], joinable
+- std::thread [C++], native_handle
+- std::thread [C++], swap
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a1fbc3d94a1f2081bc29fd7b469f87bc54b89728
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="thread-class"></a>thread 類別
-定義一個物件，用來觀察和管理應用程式內執行的執行緒。  
+# <a name="thread-class"></a>thread Class
+Defines an object that's used to observe and manage a thread of execution within an application.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 class thread;
 ```  
   
-## <a name="remarks"></a>備註  
- 您可以使用 `thread` 物件，來觀察和管理應用程式內執行的執行緒。 使用預設建構函式建立的執行緒物件不會與執行的任何執行緒產生關聯。 使用可呼叫物件建構的執行緒物件會建立執行的新執行緒，並在該執行緒中呼叫可呼叫的物件。 執行緒物件可以移動，但無法複製。 因此，執行的執行緒只能與一個執行緒物件產生關聯。  
+## <a name="remarks"></a>Remarks  
+ You can use a `thread` object to observe and manage a thread of execution within an application. A thread object that's created by using the default constructor is not associated with any thread of execution. A thread object that's constructed by using a callable object creates a new thread of execution and calls the callable object in that thread. Thread objects can be moved but not copied. Therefore, a thread of execution can be associated with only one thread object.  
   
- 執行的每個執行緒都有 `thread::id` 類型的唯一識別碼。 函式 `this_thread::get_id` 會傳回呼叫執行緒的識別碼。 成員函式 `thread::get_id` 會傳回執行緒物件所管理之執行緒的識別碼。 針對預設建構的執行緒物件，`thread::get_id` 方法所傳回的物件值會與所有預設建構的執行緒物件相同，但不同於 `this_thread::get_id` 針對可在呼叫期間加入之執行的任何執行緒所傳回的值。  
+ Every thread of execution has a unique identifier of type `thread::id`. The function `this_thread::get_id` returns the identifier of the calling thread. The member function `thread::get_id` returns the identifier of the thread that's managed by a thread object. For a default-constructed thread object, the `thread::get_id` method returns an object that has a value that's the same for all default-constructed thread objects and different from the value that's returned by `this_thread::get_id` for any thread of execution that could be joined at the time of the call.  
   
 ## <a name="members"></a>Members  
   
-### <a name="public-classes"></a>公用類別  
+### <a name="public-classes"></a>Public Classes  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread::id 類別](#id_class)|可唯一識別相關聯的執行緒。|  
+|[thread::id Class](#id_class)|Uniquely identifies the associated thread.|  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread](#thread)|建構 `thread` 物件。|  
+|[thread](#thread)|Constructs a `thread` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[卸離](#detach)|從 `thread` 物件中斷連結相關聯的執行緒。|  
-|[get_id](#get_id)|傳回相關聯執行緒的唯一識別碼。|  
-|[hardware_concurrency](#hardware_concurrency)|靜態。 傳回硬體執行緒內容的估計數目。|  
-|[join](#join)|封鎖，直到相關聯的執行緒完成為止。|  
-|[可加入](#joinable)|指定是否可加入相關聯的執行緒。|  
-|[native_handle](#native_handle)|傳回代表執行緒控制代碼的實作特定類型。|  
-|[swap](#swap)|與指定 `thread` 物件交換物件狀態。|  
+|[detach](#detach)|Detaches the associated thread from the `thread` object.|  
+|[get_id](#get_id)|Returns the unique identifier of the associated thread.|  
+|[hardware_concurrency](#hardware_concurrency)|Static. Returns an estimate of the number of hardware thread contexts.|  
+|[join](#join)|Blocks until the associated thread completes.|  
+|[joinable](#joinable)|Specifies whether the associated thread is joinable.|  
+|[native_handle](#native_handle)|Returns the implementation-specific type that represents the thread handle.|  
+|[swap](#swap)|Swaps the object state with a specified `thread` object.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[thread::operator=](#op_eq)|將執行緒關聯至目前的 `thread` 物件。|  
+|[thread::operator=](#op_eq)|Associates a thread with the current `thread` object.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰** \<執行緒 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<thread>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-##  <a name="detach"></a>thread:: detach
- 中斷連結相關聯的執行緒。 作業系統會變成負責在終止時釋放執行緒資源。  
+##  <a name="detach"></a>  thread::detach
+ Detaches the associated thread. The operating system becomes responsible for releasing thread resources on termination.  
   
 ```
 void detach();
 ```  
   
-### <a name="remarks"></a>備註  
- 呼叫 `detach` 之後，後續呼叫 [get_id](#get_id) 會傳回 [id](#id_class)。  
+### <a name="remarks"></a>Remarks  
+ After a call to `detach`, subsequent calls to [get_id](#get_id) return [id](#id_class).  
   
- 如果與呼叫物件相關聯的執行緒不是可加入的，函式會擲回 [system_error](../standard-library/system-error-class.md)，且錯誤碼為 `invalid_argument`。  
+ If the thread that's associated with the calling object is not joinable, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `invalid_argument`.  
   
- 如果與呼叫物件相關聯的執行緒無效，函式會擲回 `system_error`，且錯誤碼為 `no_such_process`。  
+ If the thread that's associated with the calling object is invalid, the function throws a `system_error` that has an error code of `no_such_process`.  
   
-##  <a name="get_id"></a>thread:: get_id
- 取得相關聯執行緒的唯一識別碼。  
+##  <a name="get_id"></a>  thread::get_id
+ Returns a unique identifier for the associated thread.  
   
 ```
 id get_id() const noexcept;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 可唯一識別相關聯執行緒的 [thread:: id](#id_class) 物件，或者，如果沒有與物件相關聯的執行緒，則會傳回 `thread::id()`。  
+### <a name="return-value"></a>Return Value  
+ A [thread::id](#id_class) object that uniquely identifies the associated thread, or `thread::id()` if no thread is associated with the object.  
   
-##  <a name="hardware_concurrency"></a>thread:: hardware_concurrency
- 靜態方法，會傳回硬體執行緒內容的估計數目。  
+##  <a name="hardware_concurrency"></a>  thread::hardware_concurrency
+ Static method that returns an estimate of the number of hardware thread contexts.  
   
 ```
 static unsigned int hardware_concurrency() noexcept;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 硬體執行緒內容的估計數目。 如果無法計算或無法妥善定義值，此方法就會傳回 0。  
+### <a name="return-value"></a>Return Value  
+ An estimate of the number of hardware thread contexts. If the value cannot be computed or is not well defined, this method returns 0.  
   
-##  <a name="id_class"></a>  thread::id 類別  
- 針對程序中執行的每個執行緒提供唯一識別碼。  
+##  <a name="id_class"></a>  thread::id Class  
+ Provides a unique identifier for each thread of execution in the process.  
   
 ```
 class thread::id {
@@ -141,76 +151,76 @@ class thread::id {
 };
 ```  
   
-### <a name="remarks"></a>備註  
- 預設建構函式所建立的物件，不會針對任何現有的執行緒比較是否等於 `thread::id` 物件。  
+### <a name="remarks"></a>Remarks  
+ The default constructor creates an object that does not compare equal to the `thread::id` object for any existing thread.  
   
- 所有預設建構的 `thread::id` 物件都會比較是否相等。  
+ All default-constructed `thread::id` objects compare equal.  
   
-##  <a name="join"></a>thread:: join
- 封鎖，直到與呼叫物件相關聯之執行的執行緒完成為止。  
+##  <a name="join"></a>  thread::join
+ Blocks until the thread of execution that's associated with the calling object completes.  
   
 ```
 void join();
 ```  
   
-### <a name="remarks"></a>備註  
- 如果呼叫成功，針對呼叫物件後續呼叫 [get_id](#get_id) 就會傳回預設的 [thread:: id](#id_class)，而其不會比較是否等於任何現有執行緒的 `thread::id`；如果呼叫失敗，則 `get_id` 所傳回的值就會保持不變。  
+### <a name="remarks"></a>Remarks  
+ If the call succeeds, subsequent calls to [get_id](#get_id) for the calling object return a default [thread::id](#id_class) that does not compare equal to the `thread::id` of any existing thread; if the call does not succeed, the value that's returned by `get_id` is unchanged.  
   
-##  <a name="joinable"></a>thread:: joinable
- 指定是否「可加入」相關聯的執行緒。  
+##  <a name="joinable"></a>  thread::joinable
+ Specifies whether the associated thread is *joinable*.  
   
 ```
 bool joinable() const noexcept;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果「可加入」相關聯的執行緒，即為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the associated thread is *joinable*; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 如果 `get_id() != id()`，執行緒物件就是「可加入」。  
+### <a name="remarks"></a>Remarks  
+ A thread object is *joinable* if `get_id() != id()`.  
   
-##  <a name="native_handle"></a>thread:: native_handle
- 傳回代表執行緒控制代碼的實作特定類型。 您可以利用實作特定的方式來使用執行緒控制代碼。  
+##  <a name="native_handle"></a>  thread::native_handle
+ Returns the implementation-specific type that represents the thread handle. The thread handle can be used in implementation-specific ways.  
   
 ```
 native_handle_type native_handle();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `native_handle_type` 會定義為 Win32 `HANDLE`，這會轉換為 `void *`。  
+### <a name="return-value"></a>Return Value  
+ `native_handle_type` is defined as a Win32 `HANDLE` that's cast as `void *`.  
   
 ##  <a name="op_eq"></a>  thread::operator=  
- 將指定物件的執行緒關聯至目前的物件。  
+ Associates the thread of a specified object with the current object.  
   
 ```
 thread& operator=(thread&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Other`  
- `thread` 物件。  
+ A `thread` object.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>備註  
- 如果呼叫物件是可加入的，方法即會呼叫 detach。  
+### <a name="remarks"></a>Remarks  
+ The method calls detach if the calling object is joinable.  
   
- 建立關聯之後，會將 `Other` 設為預設建構狀態。  
+ After the association is made, `Other` is set to a default-constructed state.  
   
-##  <a name="swap"></a>thread:: swap
- 與指定 `thread` 物件的狀態交換物件狀態。  
+##  <a name="swap"></a>  thread::swap
+ Swaps the object state with that of a specified `thread` object.  
   
 ```
 void swap(thread& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Other`  
- `thread` 物件。  
+ A `thread` object.  
   
-##  <a name="thread"></a>  thread::thread 建構函式  
- 建構 `thread` 物件。  
+##  <a name="thread"></a>  thread::thread Constructor  
+ Constructs a `thread` object.  
   
 ```
 thread() noexcept;
@@ -220,25 +230,25 @@ explicit thread(Fn&& F, Args&&... A);
 thread(thread&& Other) noexcept;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `F`  
- 由執行緒執行的應用程式定義函式。  
+ An application-defined function to be executed by the thread.  
   
  `A`  
- 要傳遞至 `F` 的引數清單。  
+ A list of arguments to be passed to `F`.  
   
  `Other`  
- 現有的 `thread` 物件。  
+ An existing `thread` object.  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會建構未關聯至執行之執行緒的物件。 針對建構物件呼叫 `get_id` 所傳回的值是 `thread::id()`。  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object that's not associated with a thread of execution. The value that's returned by a call to `get_id` for the constructed object is `thread::id()`.  
   
- 第二個建構函式會建構與執行的新執行緒相關聯的物件，並執行虛擬函式 `INVOKE` (定義於 [\<functional>](../standard-library/functional.md))。 如果沒有足夠的資源可用來啟動新的執行緒，此函式就會擲回 [system_error](../standard-library/system-error-class.md) 物件，且錯誤碼為 `resource_unavailable_try_again`。 如果呼叫 `F` 因發生無法攔截的例外狀況而終止，則會呼叫 [terminate](../standard-library/exception-functions.md#terminate)。  
+ The second constructor constructs an object that's associated with a new thread of execution and executes the pseudo-function `INVOKE` that's defined in [\<functional>](../standard-library/functional.md). If not enough resources are available to start a new thread, the function throws a [system_error](../standard-library/system-error-class.md) object that has an error code of `resource_unavailable_try_again`. If the call to `F` terminates with an uncaught exception, [terminate](../standard-library/exception-functions.md#terminate) is called.  
   
- 第三個建構函式會建構與 `Other` 相關聯之執行緒相關聯的物件。 接著會將 `Other` 設為預設建構狀態。  
+ The third constructor constructs an object that's associated with the thread that's associated with `Other`. `Other` is then set to a default-constructed state.  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<thread>](../standard-library/thread.md)
 
 

@@ -1,136 +1,149 @@
 ---
-title: "&lt;sstream&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "std.<sstream>"
-  - "std::<sstream>"
-  - "<sstream>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sstream 標頭"
+title: '&lt;sstream&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- std::<sstream>", "<sstream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
 caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# &lt;sstream&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0b89c3d36a89daeb119ba30886289fd5a848cce6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
-定義支援在配置陣列物件儲存的 iostreams 作業的範本類別。  這類序列加入至樣板類別可自動轉換為 [basic\_string](../standard-library/basic-string-class.md)物件。  
+---
+# <a name="ltsstreamgt"></a>&lt;sstream&gt;
+Defines several template classes that support iostreams operations on sequences stored in an allocated array object. Such sequences are easily converted to and from objects of template class [basic_string](../standard-library/basic-string-class.md).  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
-```  
-namespace std {  
-template<class CharType,  
-    class Traits = char_traits<CharType>,  
-    class Allocator = allocator<CharType> >  
-    class basic_stringbuf;  
-typedef basic_stringbuf<char> stringbuf;  
-typedef basic_stringbuf<wchar_t> wstringbuf;  
-  
-template<class CharType,  
-    class Traits = char_traits<CharType>,  
-    class Allocator = allocator<CharType> >  
-    class basic_istringstream;  
-typedef basic_istringstream<char> istringstream;  
-typedef basic_istringstream<wchar_t> wistringstream;  
-  
-template<class CharType,  
-    class Traits = char_traits<CharType>,  
-    class Allocator = allocator<CharType> >  
-    class basic_ostringstream;  
-typedef basic_ostringstream<char> ostringstream;  
-typedef basic_ostringstream<wchar_t> wostringstream;  
-  
-template<class CharType,  
-    class Traits = char_traits<CharType>,  
-    class Allocator = allocator<CharType> >  
-    class basic_stringstream;  
-typedef basic_stringstream<char> stringstream;  
-typedef basic_stringstream<wchar_t> wstringstream;  
-  
-        // TEMPLATE FUNCTIONS  
-template<class CharType, class Traits, class Allocator>  
-    void swap(  
-        basic_stringbuf<CharType, Traits, Allocator>& _Left,  
-        basic_stringbuf<CharType, Traits, Allocator>& _Right  
-    );   
-template<class CharType, class Traits, class Allocator>  
-    void swap(  
-        basic_istringstream<CharType, Traits, Allocator>& _Left,  
-        basic_istringstream<CharType, Traits, Allocator>& _Right  
-    );  
-template<class CharType, class Traits, class Allocator>  
-    void swap(  
-        basic_ostringstream<CharType, Traits, Allocator>& _Left,  
-        basic_ostringstream<CharType, Traits, Allocator>& _Right  
-    );  
-template<class CharType, class Traits, class Allocator>  
-    void swap (  
-        basic_stringstream<CharType, Traits, Allocator>& _Left,  
-        basic_stringstream<CharType, Traits, Allocator>& _Right  
-    );  
-}  // namespace std  
-  
+```
+namespace std {
+template <class CharType, class Traits = char_traits<CharType>, class Allocator = allocator<CharType>>
+class basic_stringbuf;
+typedef basic_stringbuf<char>  
+stringbuf;
+typedef basic_stringbuf<wchar_t> wstringbuf;
+
+template <class CharType, class Traits = char_traits<CharType>, class Allocator = allocator<CharType>>
+class basic_istringstream;
+typedef basic_istringstream<char>  
+istringstream;
+typedef basic_istringstream<wchar_t> wistringstream;
+
+template <class CharType, class Traits = char_traits<CharType>, class Allocator = allocator<CharType>>
+class basic_ostringstream;
+typedef basic_ostringstream<char>  
+ostringstream;
+typedef basic_ostringstream<wchar_t> wostringstream;
+
+template <class CharType, class Traits = char_traits<CharType>, class Allocator = allocator<CharType>>
+class basic_stringstream;
+typedef basic_stringstream<char>  
+stringstream;
+typedef basic_stringstream<wchar_t> wstringstream;
+// TEMPLATE FUNCTIONS
+template <class CharType, class Traits, class Allocator>
+void swap(
+    basic_stringbuf<CharType, Traits, Allocator>& left,
+    basic_stringbuf<CharType, Traits, Allocator>& right);
+
+template <class CharType, class Traits, class Allocator>
+void swap(
+    basic_istringstream<CharType, Traits, Allocator>& left,
+    basic_istringstream<CharType, Traits, Allocator>& right);
+
+template <class CharType, class Traits, class Allocator>
+void swap(
+    basic_ostringstream<CharType, Traits, Allocator>& left,
+    basic_ostringstream<CharType, Traits, Allocator>& right);
+
+template <class CharType, class Traits, class Allocator>
+void swap (
+    basic_stringstream<CharType, Traits, Allocator>& left,
+    basic_stringstream<CharType, Traits, Allocator>& right);
+
+}  // namespace std
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
-|--------|--------|  
-|`_Left`|對 `sstream` 物件的參考。|  
-|`_Right`|對 `sstream` 物件的參考。|  
+|Parameter|Description|  
+|---------------|-----------------|  
+|`left`|Reference to an `sstream` object.|  
+|`right`|Reference to an `sstream` object.|  
   
-## 備註  
- 型別 `char *` 物件在 [\<strstream\>](../standard-library/strstream.md) 可以使用功能為資料流。  不過， `<strstream>` 已被取代，並使用 `<sstream>` 盡量。  
+## <a name="remarks"></a>Remarks  
+ Objects of type `char *` can use the functionality in [\<strstream>](../standard-library/strstream.md) for streaming. However, `<strstream>` is deprecated and the use of `<sstream>` is encouraged.  
   
-### Typedef  
-  
-|||  
-|-|-|  
-|[istringstream](../Topic/istringstream.md)|建立型別在 `char` 樣板參數特製化的 `basic_istringstream` 。|  
-|[ostringstream](../Topic/ostringstream.md)|建立型別在 `char` 樣板參數特製化的 `basic_ostringstream` 。|  
-|[stringbuf](../Topic/stringbuf.md)|建立型別在 `char` 樣板參數特製化的 `basic_stringbuf` 。|  
-|[stringstream](../Topic/stringstream.md)|建立型別在 `char` 樣板參數特製化的 `basic_stringstream` 。|  
-|[wistringstream](../Topic/wistringstream.md)|建立型別在 `wchar_t` 樣板參數特製化的 `basic_istringstream` 。|  
-|[wostringstream](../Topic/wostringstream.md)|建立型別在 `wchar_t` 樣板參數特製化的 `basic_ostringstream` 。|  
-|[wstringbuf](../Topic/wstringbuf.md)|建立型別在 `wchar_t` 樣板參數特製化的 `basic_stringbuf` 。|  
-|[wstringstream](../Topic/wstringstream.md)|建立型別在 `wchar_t` 樣板參數特製化的 `basic_stringstream` 。|  
-  
-### 操作工具  
+### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[交換](../Topic/%3Csstream%3E%20swap.md)|若要在兩個 `sstream` 物件之間的值。|  
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Creates a type `basic_istringstream` specialized on a `char` template parameter.|  
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Creates a type `basic_ostringstream` specialized on a `char` template parameter.|  
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Creates a type `basic_stringbuf` specialized on a `char` template parameter.|  
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Creates a type `basic_stringstream` specialized on a `char` template parameter.|  
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Creates a type `basic_istringstream` specialized on a `wchar_t` template parameter.|  
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Creates a type `basic_ostringstream` specialized on a `wchar_t` template parameter.|  
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Creates a type `basic_stringbuf` specialized on a `wchar_t` template parameter.|  
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Creates a type `basic_stringstream` specialized on a `wchar_t` template parameter.|  
   
-### 類別  
+### <a name="manipulators"></a>Manipulators  
   
 |||  
 |-|-|  
-|[basic\_stringbuf](../standard-library/basic-stringbuf-class.md)|往返於陣列物件中的元素順序描述控制項型別 **Elem**的項目傳輸，性格特性類別取決於 **Tr**資料流緩衝區。|  
-|[basic\_istringstream](../standard-library/basic-istringstream-class.md)|描述物件項目的控制項擷取並輸入從類別 [basic\_stringbuf](../standard-library/basic-stringbuf-class.md)\<**Elem**， **Tr**， `Alloc`\>資料流緩衝區的物件，其中含有型別 **Elem**的元素，類別取決於性格特性 **Tr**，因此，項目會依類別配置 `Alloc`配置器。|  
-|[basic\_ostringstream](../standard-library/basic-ostringstream-class.md)|描述物件項目的控制項插入並輸入物件的類別 [basic\_stringbuf](../standard-library/basic-stringbuf-class.md)\<**Elem**， **Tr**， `Alloc`\>資料流緩衝區，以型別 **Elem**的元素，類別取決於性格特性 **Tr**，因此，項目會依類別配置 `Alloc`配置器。|  
-|[basic\_stringstream](../standard-library/basic-stringstream-class.md)|描述物件控制項目的插入和擷取並輸入物件使用 [basic\_stringbuf](../standard-library/basic-stringbuf-class.md)\<類別，**ElemTr**， `Alloc`\>資料流緩衝區，以型別 **Elem**的元素，類別取決於性格特性 **Tr**，因此，項目會依類別配置 `Alloc`配置器。|  
+|[swap](../standard-library/sstream-functions.md#sstream_swap)|Exchanges the values between two `sstream` objects.|  
   
-## 需求  
+### <a name="classes"></a>Classes  
   
--   **標題:** \<sstream\>  
+|||  
+|-|-|  
+|[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Describes a stream buffer that controls the transmission of elements of type **Elem**, whose character traits are determined by the class **Tr**, to and from a sequence of elements stored in an array object.|  
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|Describes an object that controls extraction of elements and encoded objects from a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, with elements of type **Elem**, whose character traits are determined by the class **Tr**, and whose elements are allocated by an allocator of class `Alloc`.|  
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|Describes an object that controls insertion of elements and encoded objects into a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, with elements of type **Elem**, whose character traits are determined by the class **Tr**, and whose elements are allocated by an allocator of class `Alloc`.|  
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|Describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, with elements of type **Elem**, whose character traits are determined by the class **Tr**, and whose elements are allocated by an allocator of class `Alloc`.|  
   
--   **命名空間:** std  
+## <a name="requirements"></a>Requirements  
   
-## 請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C\+\+ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostreams 慣例](../standard-library/iostreams-conventions.md)
+- **Header:** \<sstream>  
+  
+- **Namespace:** std  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
+
+
+
+

@@ -1,5 +1,5 @@
 ---
-title: "slice 類別 | Microsoft Docs"
+title: slice Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,14 +10,16 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - valarray/std::slice
-- slice
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
 dev_langs:
 - C++
 helpviewer_keywords:
-- slice class
+- std::slice [C++]
+- std::slice [C++], size
+- std::slice [C++], start
+- std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 caps.latest.revision: 23
 author: corob-msft
@@ -37,59 +39,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1732814d42a3c20e9c0248d61bd93f830c073bd9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2fb661edd99dba7d187988ee0e3401f3fc784724
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="slice-class"></a>slice 類別
-valarray 的一個公用程式類別，用來定義父代 valarray 的一維子集。 如果 valarray 被視為含有陣列中所有元素的二維矩陣，則配量會從二維陣列中擷取一維的向量。  
+# <a name="slice-class"></a>slice Class
+A utility class to valarray that is used to define one-dimensional subsets of a parent valarray. If a valarray is regarded as a two-dimensional matrix with all elements in an array, then the slice extracts a vector in one dimension out of the two-dimensional array.  
   
-## <a name="remarks"></a>備註  
- 此類別會儲存用來描述類型 [slice_array](../standard-library/slice-array-class.md) 之物件特性的參數。當類別 slice 的物件顯示為類別 [valarray](../standard-library/valarray-class.md#op_at)**\<Type>** 之物件的引數時，將會間接建構 valarray 的子集。 會指定從父 valarray 選取之子集的預存值包括：  
+## <a name="remarks"></a>Remarks  
+ The class stores the parameters that characterize an object of type [slice_array](../standard-library/slice-array-class.md) The subset of a valarray is indirectly constructed when an object of class slice appears as an argument for an object of class [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. The stored values that specify the subset selected from the parent valarray include:  
   
--   valarray 中的起始索引。  
+-   A starting index in the valarray.  
   
--   總長度，或配量中的項目數。  
+-   A total length, or number of elements in the slice.  
   
--   分散，或 valarray 中後續索引之間的距離。  
+-   A stride, or distance between subsequent indices of elements in the valarray.  
   
- 如果配量定義的集合是常數 valarray 的子集，則配量會是新的 valarray。 如果配量定義的集合是非常數 valarray 的子集，則配量會有原始 valarray 的參考語意。 非常數 valarrays 的評估機制可節省時間和記憶體。  
+ If the set defined by a slice is the subset of a constant valarray, then the slice is a new valarray. If the set defined by a slice is the subset of a nonconstant valarray, then the slice has reference semantics to the original valarray. The evaluation mechanism for nonconstant valarrays saves time and memory.  
   
- 只有在配量所定義的來源和目的地子集相異，且所有索引皆有效時，才能保證 valarray 的作業。  
+ Operations on valarrays are guaranteed only if the source and destination subsets defined by the slices are distinct and all indices are valid.  
   
-### <a name="constructors"></a>建構函式  
-  
-|||  
-|-|-|  
-|[slice](#slice)|定義 `valarray` 的子集，其中包含等距且在指定項目開始的一些項目。|  
-  
-### <a name="member-functions"></a>成員函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[size](#size)|尋找 `valarray` 之配量中的項目數。|  
-|[start](#start)|尋找 `valarray` 之配量的起始索引。|  
-|[stride](#stride)|尋找 `valarray` 之配量的元素之間的距離。|  
+|[slice](#slice)|Defines a subset of a `valarray` that consists of a number of elements that are an equal distance apart and that start at a specified element.|  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<valarray>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[size](#size)|Finds the number of elements in a slice of a `valarray`.|  
+|[start](#start)|Finds the starting index of a slice of a `valarray`.|  
+|[stride](#stride)|Finds the distance between elements in a slice of a `valarray`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
+  
+ **Namespace:** std  
   
 ##  <a name="size"></a>  slice::size  
- 尋找 valarray 之配量中的項目數。  
+ Finds the number of elements in a slice of a valarray.  
   
 ```  
 size_t size() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- valarray 之配量中的項目數。  
+### <a name="return-value"></a>Return Value  
+ The number of elements in a slice of a valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_size.cpp  
@@ -142,7 +144,7 @@ The size of slice vaSlice is: 6.
 ```  
   
 ##  <a name="slice"></a>  slice::slice  
- 定義 valarray 的子集，其中包含等距且以指定項目開始的一些項目。  
+ Defines a subset of a valarray that consists of a number of elements that are an equal distance apart and that start at a specified element.  
   
 ```  
 slice();
@@ -153,23 +155,23 @@ slice(
     size_t stride);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_StartIndex`  
- 子集中第一個項目的 valarray 索引。  
+ The valarray index of the first element in the subset.  
   
  `_Len`  
- 子集中的項目數。  
+ The number of elements in the subset.  
   
  `stride`  
- 子集中項目之間的距離。  
+ The distance between elements in the subset.  
   
-### <a name="return-value"></a>傳回值  
- 預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個建構函式會針對起始索引儲存 `_StartIndex`、針對總長度儲存 `_Len`，以及針對分散儲存 `stride`。  
+### <a name="return-value"></a>Return Value  
+ The default constructor stores zeros for the starting index, total length, and stride. The second constructor stores `_StartIndex` for the starting index, `_Len` for the total length, and `stride` for the stride.  
   
-### <a name="remarks"></a>備註  
- 分散可能是負數。  
+### <a name="remarks"></a>Remarks  
+ The stride may be negative.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_ctor.cpp  
@@ -211,16 +213,16 @@ va[slice( 1, 7, 3)] = ( 4 10 16 22 28 34 40 ).
 ```  
   
 ##  <a name="start"></a>  slice::start  
- 尋找 valarray 之配量的起始索引。  
+ Finds the starting index of a slice of a valarray.  
   
 ```  
 size_t start() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- valarray 之配量的起始索引。  
+### <a name="return-value"></a>Return Value  
+ The starting index of a slice of a valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_start.cpp  
@@ -267,16 +269,16 @@ The start index of slice vaSlice is: 3.
 ```  
   
 ##  <a name="stride"></a>  slice::stride  
- 尋找 valarray 之配量中項目之間的距離。  
+ Finds the distance between elements in a slice of a valarray.  
   
 ```  
 size_t stride() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- valarray 之配量中項目之間的距離。  
+### <a name="return-value"></a>Return Value  
+ The distance between elements in a slice of a valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // slice_stride.cpp  
@@ -322,7 +324,7 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

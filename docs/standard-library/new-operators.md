@@ -1,5 +1,5 @@
 ---
-title: "&lt;new&gt; 運算子 | Microsoft Docs"
+title: '&lt;new&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,21 +12,21 @@ f1_keywords:
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 8
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 52633103180338b6db7b96f2d76391f58e1f4c35
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e5e0dc48d0aeb09da07654043addd81b096bbcc6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltnewgt-operators"></a>&lt;new&gt; 運算子
+# <a name="ltnewgt-operators"></a>&lt;new&gt; operators
 ||||  
 |-|-|-|  
 |[operator delete](#op_delete)|[operator delete[]](#op_delete_arr)|[operator new](#op_new)|  
 |[operator new[]](#op_new_arr)|  
   
 ##  <a name="op_delete"></a>  operator delete  
- 由 delete 陳述式呼叫的函式，藉此取消配置物件個體的儲存區。  
+ The function called by a delete expression to deallocate storage for individual of objects.  
   
 ```
 void operator delete(void* ptr) throw();
@@ -38,24 +38,24 @@ void operator delete(void* ptr,
     const std::nothrow_t&) throw();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 要藉由刪除來讓值變成無效的指標。  
+ The pointer whose value is to be rendered invalid by the deletion.  
   
-### <a name="remarks"></a>備註  
- 呼叫第一個函式的是 delete 運算式，用來將 `ptr` 的值變成無效。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受 `ptr` 的值，該值為 Null 或是先前對 [operator new](../standard-library/new-operators.md#op_new)( **size_t**) 的呼叫所傳回的值。  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a delete expression to render the value of `ptr` invalid. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to [operator new](../standard-library/new-operators.md#op_new)( **size_t**).  
   
- `ptr` 之 Null 值的預設行為是不執行任何動作。 `ptr` 的任何其他值必須是某個呼叫所傳回的值，如先前所述。 `ptr` 的這類非 Null 值的預設行為是回收先前呼叫所配置的儲存體。 關於要在什麼情況下，藉由後續呼叫 `operator new`( **size_t**)，或是呼叫 `calloc`( **size_t**)、`malloc`( **size_t**) 或 `realloc`( **void\***, **size_t**) 中任何一個，來配置部分或全部這類回收的儲存體，則並未指定。  
+ The default behavior for a null value of `ptr` is to do nothing. Any other value of `ptr` must be a value returned earlier by a call as previously described. The default behavior for such a nonnull value of `ptr` is to reclaim storage allocated by the earlier call. It is unspecified under what conditions part or all of such reclaimed storage is allocated by a subsequent call to `operator new`( **size_t**), or to any of `calloc`( **size_t**), `malloc`( **size_t**), or `realloc`( **void\***, **size_t**).  
   
- 呼叫第二個函式的是與 **new**( **std::size_t**) 格式之 new 運算式對應的位置 delete 運算式。 它不會執行任何動作。  
+ The second function is called by a placement delete expression corresponding to a new expression of the form **new**( **std::size_t**). It does nothing.  
   
- 呼叫第三個函式的是與 **new**( **std::size_t**, **conststd::nothrow_t&**) 格式之 new 運算式對應的位置 delete 運算式。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受 `ptr` 的值，該值為 Null 或是先前對 `operator new`( **size_t**) 的呼叫所傳回的值。 預設行為是評估 **delete**( `ptr`)。  
+ The third function is called by a placement delete expression corresponding to a new expression of the form **new**( **std::size_t**, **conststd::nothrow_t&**). The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to `operator new`( **size_t**). The default behavior is to evaluate **delete**( `ptr`).  
   
-### <a name="example"></a>範例  
-  如需使用 `operator delete` 的範例，請參閱 [operator new](../standard-library/new-operators.md#op_new)。  
+### <a name="example"></a>Example  
+  See [operator new](../standard-library/new-operators.md#op_new) for an example that use `operator delete`.  
   
 ##  <a name="op_delete_arr"></a>  operator delete[]  
- 由 delete 陳述式呼叫的函式，藉此取消配置物件陣列的儲存區。  
+ The function called by a delete expression to deallocate storage for an array of objects.  
   
 ```
 void operator delete[](void* ptr) throw();
@@ -67,22 +67,22 @@ void operator delete[](void* ptr,
     const std::nothrow_t&) throw();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- 要藉由刪除來讓值變成無效的指標。  
+ The pointer whose value is to be rendered invalid by the deletion.  
   
-### <a name="remarks"></a>備註  
- 呼叫第一個函式的是 `delete[]` 運算式，用來將 `ptr` 的值變成無效。 此函式可被取代，因為程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受 `ptr` 的值，該值為 Null 或是先前對 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **size_t**) 的呼叫所傳回的值。 `ptr` 之 Null 值的預設行為是不執行任何動作。 `ptr` 的任何其他值必須是某個呼叫所傳回的值，如先前所述。 `ptr` 的這類非 Null 值的預設行為是回收先前呼叫所配置的儲存體。 關於要在什麼情況下，藉由後續呼叫 [operator new](../standard-library/new-operators.md#op_new)( **size_t**)，或是呼叫 `calloc`( **size_t**)、`malloc`( **size_t**) 或 `realloc`( **void\***, **size_t**) 中任何一個，來配置部分或全部這類回收的儲存體，則並未指定。  
+### <a name="remarks"></a>Remarks  
+ The first function is called by an `delete[]` expression to render the value of `ptr` invalid. The function is replaceable because the program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)( **size_t**). The default behavior for a null value of `ptr` is to do nothing. Any other value of `ptr` must be a value returned earlier by a call as previously described. The default behavior for such a nonnull value of `ptr` is to reclaim storage allocated by the earlier call. It is unspecified under what conditions part or all of such reclaimed storage is allocated by a subsequent call to [operator new](../standard-library/new-operators.md#op_new)( **size_t**), or to any of `calloc`( **size_t**), `malloc`( **size_t**), or `realloc`( **void\***, **size_t**).  
   
- 呼叫第二個函式的是與 `new[]`( **std::size_t**) 格式之 `new[]` 運算式對應的位置 `delete[]` 運算式。 它不會執行任何動作。  
+ The second function is called by a placement `delete[]` expression corresponding to a `new[]` expression of the form `new[]`( **std::size_t**). It does nothing.  
   
- 呼叫第三個函式的是與 `new[]`( **std::size_t**, **const std::nothrow_t&**) 格式之 `new[]` 運算式對應的位置 delete 運算式。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受 `ptr` 的值，該值為 Null 或是先前對 operator `new[]`( **size_t**) 的呼叫所傳回的值。 預設行為是評估 `delete[]`( `ptr`)。  
+ The third function is called by a placement delete expression corresponding to a `new[]` expression of the form `new[]`( **std::size_t**, **const std::nothrow_t&**). The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is to accept a value of `ptr` that is null or that was returned by an earlier call to operator `new[]`( **size_t**). The default behavior is to evaluate `delete[]`( `ptr`).  
   
-### <a name="example"></a>範例  
-  如需使用 `operator delete[]` 的範例，請參閱 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。  
+### <a name="example"></a>Example  
+  See [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) for examples of the use of `operator delete[]`.  
   
 ##  <a name="op_new"></a>  operator new  
- new 運算式所呼叫來為個別物件配置儲存體的函式。  
+ The function called by a new-expression to allocate storage for individual objects.  
   
 ```
 void* operator new(std::size_t count) throw(bad_alloc);
@@ -94,46 +94,46 @@ void* operator new(std::size_t count,
     void* ptr) throw();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要配置的儲存體位元組數。  
+ The number of bytes of storage to be allocated.  
   
  `ptr`  
- 必須傳回指標。  
+ The pointer to be returned.  
   
-### <a name="return-value"></a>傳回值  
- 新配置之儲存體的最低位元組位址指標。 或 `ptr.`  
+### <a name="return-value"></a>Return Value  
+ A pointer to the lowest byte address of the newly-allocated storage. Or `ptr.`  
   
-### <a name="remarks"></a>備註  
- 呼叫第一個函式的是 new 運算式，用來配置已適當校準之 `count` 個位元組的儲存體，以代表該大小的任何物件。 程式可以使用此函式簽章來定義替代函式，以取代「C++ 標準程式庫」所定義的預設版本，因此可加以取代。  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a new expression to allocate `count` bytes of storage suitably aligned to represent any object of that size. The program can define an alternate function with this function signature that replaces the default version defined by the C++ Standard Library and so is replaceable.  
   
- 所需的行為是只在可依要求配置儲存體的情況下才傳回非 Null 指標。 每個這類配置都會為與任何其他已配置儲存體皆不相鄰的儲存體產生一個指標。 在由後續的呼叫所配置之儲存體的順序和相鄰性方面，並未指定。 也未指定初始預存值。 傳回的指標會指向已配置之儲存體的開頭 (最低位元組位址)。 如果 count 為零，傳回的值便不會等於函式所傳回的任何其他值。  
+ The required behavior is to return a nonnull pointer only if storage can be allocated as requested. Each such allocation yields a pointer to storage disjoint from any other allocated storage. The order and contiguity of storage allocated by successive calls is unspecified. The initial stored value is unspecified. The returned pointer points to the start (lowest byte address) of the allocated storage. If count is zero, the value returned does not compare equal to any other value returned by the function.  
   
- 預設行為是執行迴圈。 在該迴圈內，函式會先嘗試配置所要求的儲存體。 至於該嘗試是否涉及對 `malloc`( **size_t**) 的呼叫，並未指定。 如果該嘗試成功，函式就會傳回已配置之儲存體的指標。 否則，函式會呼叫指定的 [new 處理常式](../standard-library/new-typedefs.md#new_handler)。 如果所呼叫的函式返回，迴圈就會重複執行。 當嘗試配置所要求的儲存體成功時，或當所呼叫的函式並未返回時，迴圈便會終止。  
+ The default behavior is to execute a loop. Within the loop, the function first attempts to allocate the requested storage. Whether the attempt involves a call to `malloc`( **size_t**) is unspecified. If the attempt is successful, the function returns a pointer to the allocated storage. Otherwise, the function calls the designated [new handler](../standard-library/new-typedefs.md#new_handler). If the called function returns, the loop repeats. The loop terminates when an attempt to allocate the requested storage is successful or when a called function does not return.  
   
- 所需的 new 處理常式行為是執行下列其中一項操作：  
+ The required behavior of a new handler is to perform one of the following operations:  
   
--   讓更多儲存體可供配置，然後返回。  
+-   Make more storage available for allocation and then return.  
   
--   呼叫 **abort** 或 **exit**( `int`)。  
+-   Call either **abort** or **exit**( `int`).  
   
--   擲回 **bad_alloc** 類型的物件。  
+-   Throw an object of type **bad_alloc.**  
   
- [new 處理常式](../standard-library/new-typedefs.md#new_handler)的預設行為是擲回 `bad_alloc` 類型的物件。 Null 指標會指定預設的 new 處理常式。  
+ The default behavior of a [new handler](../standard-library/new-typedefs.md#new_handler) is to throw an object of type `bad_alloc`. A null pointer designates the default new handler.  
   
- 在由後續對 `operator new`( **size_t**) 的呼叫所配置之儲存體的順序和相鄰性方面，並未指定，也未指定儲存在該處的初始值。  
+ The order and contiguity of storage allocated by successive calls to `operator new`( **size_t**) is unspecified, as are the initial values stored there.  
   
- 呼叫第二個函式的是位置 new 運算式，用來配置已適當校準之 `count` 個位元組的儲存體，以代表該大小的任何物件。 程式可以使用此函式簽章來定義替代函式，以取代「C++ 標準程式庫」所定義的預設版本，因此可加以取代。  
+ The second function is called by a placement new expression to allocate `count` bytes of storage suitably aligned to represent any object of that size. The program can define an alternate function with this function signature that replaces the default version defined by the C++ Standard Library and so is replaceable.  
   
- 預設行為是在該函式成功時傳回 `operator new`( `count`)。 否則，會傳回 Null 指標。  
+ The default behavior is to return `operator new`( `count`) if that function succeeds. Otherwise, it returns a null pointer.  
   
- 呼叫第三個函式的是 **new** ( *args*) T 格式的位置 **new** 運算式。此處的 *args* 是由單一物件指標所組成。 這對於在已知位址建構物件來說，相當有用。 此函式會傳回 *ptr*。  
+ The third function is called by a placement **new** expression, of the form **new** ( *args*) T. Here, *args* consists of a single object pointer. This can be useful for constructing an object at a known address. The function returns *ptr*.  
   
- 若要釋出 `operator new` 所配置的儲存體，請呼叫 [operator delete](../standard-library/new-operators.md#op_delete)。  
+ To free storage allocated by `operator new`, call [operator delete](../standard-library/new-operators.md#op_delete).  
   
- 如需有關 new 的擲回或不擲回行為的詳細資訊，請參閱 [new 和 delete 運算子](../cpp/new-and-delete-operators.md)。  
+ For information on throwing or nonthrowing behavior of new, see [The new and delete Operators](../cpp/new-and-delete-operators.md).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_op_new.cpp  
@@ -177,7 +177,7 @@ int main( )
 ```  
   
 ##  <a name="op_new_arr"></a>  operator new[]  
- new 運算式所呼叫來為物件陣列配置儲存體的配置函式。  
+ The allocation function called by a new expression to allocate storage for an array of objects.  
   
 ```
 void* operator new[](std::size_t count) throw(std::bad_alloc);
@@ -189,28 +189,28 @@ void* operator new[](std::size_t count,
     void* ptr) throw();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要為陣列物件配置的儲存體位元組數。  
+ The number of bytes of storage to be allocated for the array object.  
   
  `ptr`  
- 必須傳回指標。  
+ The pointer to be returned.  
   
-### <a name="return-value"></a>傳回值  
- 新配置之儲存體的最低位元組位址指標。 或 `ptr.`  
+### <a name="return-value"></a>Return Value  
+ A pointer to the lowest byte address of the newly-allocated storage. Or `ptr.`  
   
-### <a name="remarks"></a>備註  
- 呼叫第一個函式的是 `new[]` 運算式，用來配置已適當校準之 `count` 個位元組的儲存體，以代表等於或小於該大小的任何陣列物件。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為與 [operator new](../standard-library/new-operators.md#op_new)( **size_t**) 的行為相同。 預設行為是傳回 `operator new`( `count`)。  
+### <a name="remarks"></a>Remarks  
+ The first function is called by a `new[]` expression to allocate `count` bytes of storage suitably aligned to represent any array object of that size or smaller. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The required behavior is the same as for [operator new](../standard-library/new-operators.md#op_new)( **size_t**). The default behavior is to return `operator new`( `count`).  
   
- 呼叫第二個函式的是位置 `new[]` 運算式，用來配置已適當校準之 `count` 個位元組的儲存體，以代表該大小的任何陣列物件。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 預設行為是在該函式成功時傳回 **operatornew**( `count`)。 否則，會傳回 Null 指標。  
+ The second function is called by a placement `new[]` expression to allocate `count` bytes of storage suitably aligned to represent any array object of that size. The program can define a function with this function signature that replaces the default version defined by the C++ Standard Library. The default behavior is to return **operatornew**( `count`) if that function succeeds. Otherwise, it returns a null pointer.  
   
- 呼叫第三個函式的是 **new** ( *args*) **T**[ **N**] 格式的位置 `new[]` 運算式。 此處的 *args* 是由單一物件指標所組成。 函式會傳回 `ptr`。  
+ The third function is called by a placement `new[]` expression, of the form **new** ( *args*) **T**[ **N**]. Here, *args* consists of a single object pointer. The function returns `ptr`.  
   
- 若要釋出 `operator new[]` 所配置的儲存體，請呼叫 [operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)。  
+ To free storage allocated by `operator new[]`, call [operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr).  
   
- 如需有關 new 的擲回或不擲回行為的詳細資訊，請參閱 [new 和 delete 運算子](../cpp/new-and-delete-operators.md)。  
+ For information on throwing or nonthrowing behavior of new, see [The new and delete Operators](../cpp/new-and-delete-operators.md).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // new_op_alloc.cpp  
@@ -251,7 +251,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<new>](../standard-library/new.md)
 
 

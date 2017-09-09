@@ -1,44 +1,61 @@
 ---
-title: "&lt;typeinfo&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "typeinfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typeinfo 標頭"
+title: '&lt;typeinfo&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- typeinfo
+dev_langs:
+- C++
+helpviewer_keywords:
+- typeinfo header
 ms.assetid: 97ebc4d0-0e0e-41c3-9787-fdef2e38e56f
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# &lt;typeinfo&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7a53f312f7a9cbaccfe143fe341227c2cd913fb6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
-包含標準標頭 `<typeinfo>` 定義數個型別與型別識別運算子 [typeid 運算子](../cpp/typeid-operator.md)，產生如需靜態和動態型別的相關資訊。  
+---
+# <a name="lttypeinfogt"></a>&lt;typeinfo&gt;
+Include the standard header `<typeinfo>` to define several types associated with the type-identification operator [typeid Operator](../cpp/typeid-operator.md), which yields information about both static and dynamic types.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #include <typeinfo>  
   
 ```  
   
-## 備註  
- 如需 typeinfo\>定義之類別的 \<詳細資訊，請參閱下列主題:  
+## <a name="remarks"></a>Remarks  
+ For information on classes defined in \<typeinfo>, see the following topics:  
   
--   [bad\_cast 例外狀況](../cpp/bad-cast-exception.md)  
+- [bad_cast Exception](../cpp/bad-cast-exception.md)  
   
--   [bad\_typeid 例外狀況](../cpp/bad-typeid-exception.md)  
+- [bad_typeid Exception](../cpp/bad-typeid-exception.md)  
   
--   [type\_info 類別](../cpp/type-info-class.md)
+- [type_info Class](../cpp/type-info-class.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "&lt;valarray&gt; 函式 | Microsoft Docs"
+title: '&lt;valarray&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,14 +27,32 @@ f1_keywords:
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
 caps.latest.revision: 12
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c5d52ee25c8afaa531413859a57f97e014d568e8
+helpviewer_keywords:
+- std::abs [C++]
+- std::acos [C++]
+- std::asin [C++]
+- std::atan [C++]
+- std::atan2
+- std::cos [C++]
+- std::cosh [C++]
+- std::exp [C++]
+- std::log [C++]
+- std::log10
+- std::pow [C++]
+- std::sin [C++]
+- std::sinh [C++]
+- std::sqrt [C++]
+- std::swap [C++]
+- std::tan [C++]
+- std::tanh [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 35a42bfd4584e4451fecd6700574301adcabf20d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 函式
+# <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; functions
 ||||  
 |-|-|-|  
 |[abs](#abs)|[acos](#acos)|[asin](#asin)|  
@@ -45,21 +63,21 @@ ms.lasthandoff: 04/19/2017
 |[tan](#tan)|[tanh](#tanh)|  
   
 ##  <a name="abs"></a>  abs  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的絕對值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> abs(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的絕對值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_abs.cpp  
@@ -96,27 +114,27 @@ The initial valarray is: 0 -1 -2 -3 4 5 6 7 8 .
 The absolute value of the initial valarray is: 0 1 2 3 4 5 6 7 8 .  
 ```  
   
-##  <a name="acos"></a> acos  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反餘弦值相等。  
+##  <a name="acos"></a>  acos  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the arccosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> acos(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的反餘弦值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arccosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>備註  
- 傳回的項目單位是以弧度為單位。  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- 傳回值是介於 0 和 +pi 之間的主值，與餘弦值輸入一致。  
+ The return value is a principal value between 0 and +pi that is consistent with the cosine value input.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_acos.cpp  
@@ -166,26 +184,26 @@ The arccosine of the initial valarray is:
 ```  
   
 ##  <a name="asin"></a>  asin  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反正弦值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the arcsine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> asin(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的反正弦值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arcsine of the elements of the input valarray.  
   
-### <a name="remarks"></a>備註  
- 傳回的項目單位是以弧度為單位。  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- 傳回值是主體值之間 + pi/2 和-pi/2 的正弦值一致值的輸入。  
+ The return value is a principal value between +pi/2 and -pi/2 that is consistent with the sine value input.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_asin.cpp  
@@ -235,26 +253,26 @@ The arcsine of the initial valarray is:
 ```  
   
 ##  <a name="atan"></a>  atan  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反正切主值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the principal value of the arctangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> atan(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的反正切值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the arctangent of the elements of the input valarray.  
   
-### <a name="remarks"></a>備註  
- 傳回的項目單位是以弧度為單位。  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- 傳回值是主體值之間 + pi/2 和-pi/2 的正切函數一致值的輸入。  
+ The return value is a principal value between +pi/2 and -pi/2 that is consistent with the tangent value input.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_atan.cpp  
@@ -307,7 +325,7 @@ The arcsine of the initial valarray is:
 ```  
   
 ##  <a name="atan2"></a>  atan2  
- 傳回 valarray，而常數及 valarray 項目組合指定之笛卡兒座標分量的反正切值會與其中的項目相等。  
+ Returns a valarray whose elements are equal to the arctangent of the Cartesian components specified by a combination of constants and elements of valarrays.  
   
 ```  
 template <class Type>  
@@ -320,30 +338,30 @@ template <class Type>
 valarray<Type> atan2(const Type& left, const valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 常數數值資料型別，或其項目提供反正切值引數 y 座標值的輸入 valarray。  
+ The constant numerical data type or input valarray whose elements provide the values for the y-coordinate of the arctangent argument.  
   
  `right`  
- 常數數值資料型別，或其項目提供反正切值引數 x 座標值的輸入 valarray。  
+ The constant numerical data type or input valarray whose elements provide the values for the x-coordinate of the arctangent argument.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其項目 `I` 等同於以下的反正切值：  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements `I` are equal to the arctangent of:  
   
-- 針對第一個樣板函式，`left` [ *I* ] / *_Righ*t [ *I* ]。  
+- `left` [ *I* ] / *_Righ*t [ *I* ] for the first template function.  
   
-- 針對第二個樣板函式，`left` [ *I* ] / `right`。  
+- `left` [ *I* ] / `right` for the second template function.  
   
-- 針對第三個樣板函式，`left` / `right` [ *I* ]。  
+- `left` / `right` [ *I* ] for the third template function.  
   
-### <a name="remarks"></a>備註  
- 傳回的項目單位是以弧度為單位。  
+### <a name="remarks"></a>Remarks  
+ The units of the returned elements are in radians.  
   
- 此函式會保留遺失標準的正切函數的引數中的元件的符號相關資訊，這項知識的四分色方塊可讓傳回值，指定唯一的角度，介於 + pi 和-pi。  
+ This function preserves information about the signs of the components in the argument that is lost by the standard tangent function, and this knowledge of the quadrant enables the return value to be assigned a unique angle between +pi and -pi.  
   
- 如果 `left` 和 `right` 的項目數目不同，則結果為未定義。  
+ If `left` and `right` have a different number of elements, the result is undefined.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_atan2.cpp  
@@ -397,21 +415,21 @@ The atan2 ( y / x ) of the initial valarrays is:
 ```  
   
 ##  <a name="cos"></a>  cos  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的餘弦值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the cosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> cos(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的絕對值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_cos.cpp  
@@ -471,26 +489,26 @@ The cosine of the initial valarray is:
 ```  
   
 ##  <a name="cosh"></a>  cosh  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的雙曲餘弦值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> cosh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的雙曲餘弦值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>備註  
- 恆等於根據指數函式定義的雙曲餘弦值：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic cosine in terms of exponential function:  
   
  cosh ( *z* ) = ( exp ( *z* ) + exp ( - *z* ) ) / 2  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_cosh.cpp  
@@ -550,21 +568,21 @@ The hyperbolic cosine of the initial valarray is:
 ```  
   
 ##  <a name="exp"></a>  exp  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的自然指數值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the natural exponential of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> exp(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的自然指數相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the natural exponential of the elements of the input valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_exp.cpp  
@@ -610,21 +628,21 @@ The natural exponential of the initial valarray is:
 ```  
   
 ##  <a name="log"></a>  log  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的自然對數值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the natural logarithm of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> log(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的絕對值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the absolute value of the elements of the input valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_log.cpp  
@@ -670,21 +688,21 @@ The natural logarithm of the initial valarray is:
 ```  
   
 ##  <a name="log10"></a>  log10  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的常用對數值 (底數為 10 的對數) 相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the base 10 or common logarithm of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> log10(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的常用對數相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the common logarithm of the elements of the input valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_log10.cpp  
@@ -732,7 +750,7 @@ The common logarithm of the initial valarray is:
 ```  
   
 ##  <a name="pow"></a>  pow  
- 在輸入的 valarray 項目和常數上運作，傳回 valarray，其中的項目等於指定基底以指定指數自乘的乘冪，而該基底由輸入的 valarray 之項目指定或由常數指定，且該指數由輸入的 valarray 或常數指定。  
+ Operates on the elements of input valarrays and constants, returning a valarray whose elements are equal to a base specified either by the elements of an input valarray or a constant raised to an exponent specified either by the elements of an input valarray or a constant.  
   
 ```  
 template <class Type>  
@@ -754,26 +772,26 @@ pow(
     const valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 輸入 valarray，其中的項目提供每個要指數化之項目的基底。  
+ The input valarray whose elements supply the base for each element to be exponentiated.  
   
  `right`  
- 輸入 valarray，其中的項目提供每個要指數化之項目的次方。  
+ The input valarray whose elements supply the power for each element to be exponentiated.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目 `I` 相同於：  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements `I` are equal to:  
   
-- 針對第一個樣板函式，`left` [ *I* ] 的 `right` [ *I* ] 次方。  
+- `left` [ *I* ] raised to the power `right` [ *I* ] for the first template function.  
   
-- 針對第二個樣板函式，`left` [ *I* ] 的 `right` 次方。  
+- `left` [ *I* ] raised to the power `right` for the second template function.  
   
-- 針對第三個樣板函式，`left` 的 `right` [ *I* ] 次方。  
+- `left` raised to the power `right` [ *I* ] for the third template function.  
   
-### <a name="remarks"></a>備註  
- 如果 `left` 和 `right` 的項目數目不同，則結果為未定義。  
+### <a name="remarks"></a>Remarks  
+ If `left` and `right` have a different number of elements, the result is undefined.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <valarray>  
@@ -825,21 +843,21 @@ n = 5   gives 1024
 ```  
   
 ##  <a name="sin"></a>  sin  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的正弦值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the sine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sin(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的正弦值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the sine of the elements of the input valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sin.cpp  
@@ -899,26 +917,26 @@ The sine of the initial valarray is:
 ```  
   
 ##  <a name="sinh"></a>  sinh  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的雙曲正弦值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic sine of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sinh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的雙曲正弦值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic sine of the elements of the input valarray.  
   
-### <a name="remarks"></a>備註  
- 恆等於根據指數函式定義的雙曲正弦值：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic sine in terms of exponential function:  
   
  sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sinh.cpp  
@@ -978,21 +996,21 @@ The hyperbolic sine of the initial valarray is:
 ```  
   
 ##  <a name="sqrt"></a>  sqrt  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的平方根相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the square root of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> sqrt(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的平方根相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the square root of the elements of the input valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_sqrt.cpp  
@@ -1029,7 +1047,7 @@ The square root of the initial valarray is: ( 0 1 2 3 4 ).
 ```  
   
 ##  <a name="swap"></a>  swap  
- 交換兩個 valarray 的項目。  
+ Exchanges the elements of two valarrays.  
   
 ```  
 template <class Type>  
@@ -1038,32 +1056,32 @@ void swap(
     valarray<Type>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|`valarray` 類型的物件。|  
-|`right`|`valarray` 類型的物件。|  
+|`left`|An object of type `valarray`.|  
+|`right`|An object of type `valarray`.|  
   
-### <a name="remarks"></a>備註  
- 樣板函式會執行 ` left.swap( right)`。  
+### <a name="remarks"></a>Remarks  
+ The template function executes ` left.swap( right)`.  
   
 ##  <a name="tan"></a>  tan  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的正切值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the tangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> tan(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的正切值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the tangent of the elements of the input valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_tan.cpp  
@@ -1123,26 +1141,26 @@ The tangent of the initial valarray is:
 ```  
   
 ##  <a name="tanh"></a>  tanh  
- 在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的雙曲正切值相等。  
+ Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic tangent of the elements of the input valarray.  
   
 ```  
 template <class Type>  
 valarray<Type> tanh(const valarray<Type>& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要由成員函式操作其項目的輸入 valarray。  
+ The input valarray whose elements are to be operated on by the member function.  
   
-### <a name="return-value"></a>傳回值  
- Valarray，其中的項目和輸入之 valarray 項目的雙曲餘弦值相等。  
+### <a name="return-value"></a>Return Value  
+ A valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.  
   
-### <a name="remarks"></a>備註  
- 恆等於根據指數函式定義的雙曲正切值：  
+### <a name="remarks"></a>Remarks  
+ Identities defining the hyperbolic tangent in terms of the exponential function:  
   
  tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // valarray_tanh.cpp  
@@ -1201,7 +1219,7 @@ The hyperbolic tangent of the initial valarray is:
 0.996272  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<valarray>](../standard-library/valarray.md)
 
 

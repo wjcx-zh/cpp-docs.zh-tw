@@ -1,11 +1,11 @@
 ---
-title: "&lt;functional&gt; 函式 | Microsoft Docs"
+title: '&lt;functional&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -47,20 +47,54 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- functional functions
+- std::bind [C++]
+- std::bind1st
+- std::bind2nd
+- std::bit_and [C++]
+- std::bit_not [C++]
+- std::bit_or [C++]
+- std::bit_xor [C++]
+- std::cref [C++]
+- 
+- std::mem_fn [C++]
+- std::mem_fun [C++]
+- std::mem_fun_ref [C++]
+- std::not1
+- std::not2
+- std::ptr_fun [C++]
+- std::ref [C++]
+- 
+- std::swap [C++]
+- 
+- std::bind [C++]
+- std::bind1st
+- std::bind2nd
+- std::bit_and [C++]
+- std::bit_not [C++]
+- std::bit_or [C++]
+- std::bit_xor [C++]
+- std::cref [C++]
+- std::mem_fn [C++]
+- std::mem_fun [C++]
+- std::mem_fun_ref [C++]
+- std::not1
+- std::not2
+- std::ptr_fun [C++]
+- std::ref [C++]
+- std::swap [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
 caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 16d93ad5a46dccbc53fa67a08e2f8432b18f14b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2bfc2d23e642167528730a8abee406931625b3bd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函式
+# <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; functions
 ||||  
 |-|-|-|  
 |[bind](#bind)|[bind1st](#bind1st)|[bind2nd](#bind2nd)|  
@@ -71,7 +105,7 @@ ms.lasthandoff: 04/19/2017
 |[swap](#swap)|  
   
 ##  <a name="bind"></a>  bind  
- 將引數繫結至可呼叫物件。  
+ Binds arguments to a callable object.  
   
 ```  
 template <class Fty, class T1, class T2, ..., class TN>  
@@ -81,43 +115,43 @@ template <class Ret, class Fty, class T1, class T2, ..., class TN>
 unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Fty`  
- 要呼叫的物件類型。  
+ The type of the object to call.  
   
  `TN`  
- 第 N 個呼叫引數類型。  
+ The type of the Nth call argument.  
   
  `fn`  
- 要呼叫的物件。  
+ The object to call.  
   
  `tN`  
- 第 N 個呼叫引數。  
+ The Nth call argument.  
   
-### <a name="remarks"></a>備註  
- `Fty, T1, T2, ..., TN` 類型必須是複製建構，且對於 `w1, w2, ..., wN` 某些值來說，`INVOKE(fn, t1, ..., tN)` 必須是有效的運算式。  
+### <a name="remarks"></a>Remarks  
+ The types `Fty, T1, T2, ..., TN` must be copy constructible, and `INVOKE(fn, t1, ..., tN)` must be a valid expression for some values `w1, w2, ..., wN`.  
   
- 第一個範本函式會傳回含弱式結果類型的轉送呼叫包裝函式 `g`。 效果`g(u1, u2, ..., uM)`是`INVOKE(f, v1, v2, ..., vN, ` [result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`，其中`cv`是 cv 限定詞的`g`值和繫結的引數型別`v1, v2, ..., vN`會依照下列指定決定。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單來製作可呼叫物件。  
+ The first template function returns a forwarding call wrapper `g` with a weak result type. The effect of `g(u1, u2, ..., uM)` is `INVOKE(f, v1, v2, ..., vN, `[result_of](../standard-library/result-of-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, where `cv` is the cv-qualifiers of `g` and the values and types of the bound arguments `v1, v2, ..., vN` are determined as specified below. You use it to bind arguments to a callable object to make a callable object with a tailored argument list.  
   
- 第二個範本函式會傳回含 `result_type` 巢狀類型的轉送呼叫包裝函式 `g`，該類型與 `Ret` 同義。 `g(u1, u2, ..., uM)` 的效果為 `INVOKE(f, v1, v2, ..., vN, Ret)`，其中 `cv` 是 `g` 的 cv 限定詞，而繫結引數 `v1, v2, ..., vN` 的值和類型則依下列指定方式來判斷。 您可以使用它將引數繫結至可呼叫的物件，以利用量身訂做的引數清單和指定的傳回類型，來製作可呼叫物件。  
+ The second template function returns a forwarding call wrapper `g` with a nested type `result_type` that is a synonym for `Ret`. The effect of `g(u1, u2, ..., uM)` is `INVOKE(f, v1, v2, ..., vN, Ret)`, where `cv` is the cv-qualifiers of `g` and the values and types of the bound arguments `v1, v2, ..., vN` are determined as specified below. You use it to bind arguments to a callable object to make a callable object with a tailored argument list and with a specified return type.  
   
- 繫結引數 `v1, v2, ..., vN` 的值及其對應的 `V1, V2, ..., VN` 類型，取決於對 `bind` 與呼叫包裝函式 `g` cv 限定詞 `cv` 的呼叫中，`Ti` 類型的對應引數類型 `ti`，如下所示：  
+ The values of the bound arguments `v1, v2, ..., vN` and their corresponding types `V1, V2, ..., VN` depend on the type of the corresponding argument `ti` of type `Ti` in the call to `bind` and the cv-qualifiers `cv` of the call wrapper `g` as follows:  
   
- 如果 `ti` 是 `reference_wrapper<T>` 類型，`vi` 引數即為 `ti.get()`，而其 `Vi` 類型為 `T&`；  
+ if `ti` is of type `reference_wrapper<T>` the argument `vi` is `ti.get()` and its type `Vi` is `T&`;  
   
- 如果 `std::is_bind_expression<Ti>::value` 的值是 `true`，`vi` 引數即為 `ti(u1, u2, ..., uM)`，而其 `Vi` 類型為 `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`；  
+ if the value of `std::is_bind_expression<Ti>::value` is `true` the argument `vi` is `ti(u1, u2, ..., uM)` and its type `Vi` is `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;  
   
- 如果 `std::is_placeholder<Ti>::value` 的 `j` 值不是零，`vi` 引數即為 `uj`，而其 `Vi` 類型為 `Uj&`；  
+ if the value `j` of `std::is_placeholder<Ti>::value` is not zero the argument `vi` is `uj` and its type `Vi` is `Uj&`;  
   
- 否則，引數 `vi` 是 `ti`，而其 `Vi` 類型為 `Ti` `cv` `&`。  
+ otherwise the argument `vi` is `ti` and its type `Vi` is `Ti` `cv` `&`.  
   
- 例如，假設以 `f(int, int)` 函式來看，運算式 `bind(f, _1, 0)` 會傳回轉送呼叫包裝函式 `cw`，以讓 `cw(x)` 呼叫 `f(x, 0)`。 運算式 `bind(f, 0, _1)` 會傳回轉送呼叫包裝函式`cw`，以讓 `cw(x)` 呼叫 `f(0, x)`。  
+ For example, given a function `f(int, int)` the expression `bind(f, _1, 0)` returns a forwarding call wrapper `cw` such that `cw(x)` calls `f(x, 0)`. The expression `bind(f, 0, _1)` returns a forwarding call wrapper `cw` such that `cw(x)` calls `f(0, x)`.  
   
- 除了引數 `fn` 以外，呼叫 `bind` 的引數數目必須等於可以傳遞至可呼叫物件 `fn` 的引數數目。 因此，`bind(cos, 1.0)` 為正確，而 `bind(cos)` 和 `bind(cos, _1, 0.0)` 不正確。  
+ The number of arguments in a call to `bind` in addition to the argument `fn` must be equal to the number of arguments that can be passed to the callable object `fn`. Thus, `bind(cos, 1.0)` is correct, and both `bind(cos)` and `bind(cos, _1, 0.0)` are incorrect.  
   
- 針對呼叫 `bind` 的所有預留位置引數，在呼叫包裝函式的函數呼叫中，由 `bind` 所傳回的引數數目必須至少與最大編號的 `is_placeholder<PH>::value` 值一樣大。 因此，`bind(cos, _2)(0.0, 1.0)` 為正確 (並傳回 `cos(1.0)`)，而 `bind(cos, _2)(0.0)` 不正確。  
+ The number of arguments in the function call to the call wrapper returned by `bind` must be at least as large as the highest numbered value of `is_placeholder<PH>::value` for all of the placeholder arguments in the call to `bind`. Thus, `bind(cos, _2)(0.0, 1.0)` is correct (and returns `cos(1.0)`), and `bind(cos, _2)(0.0)` is incorrect.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__bind.cpp   
@@ -170,29 +204,29 @@ int main()
 ```  
   
 ##  <a name="bind1st"></a>  bind1st  
- 協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。  
+ A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the first argument of the binary function to a specified value.  
   
 ```  
 template <class Operation, class Type>  
 binder1st <Operation> bind1st (const Operation& func, const Type& left);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `func`  
- 要轉換為一元函式物件的二元函式物件。  
+ The binary function object to be converted to a unary function object.  
   
  `left`  
- 二元函式物件的第一個引數所要繫結的值。  
+ The value to which the first argument of the binary function object is to be bound.  
   
-### <a name="return-value"></a>傳回值  
- 一元函式物件所產生的繫結至值的二元函式物件的第一個引數`left`。  
+### <a name="return-value"></a>Return Value  
+ The unary function object that results from binding the first argument of the binary function object to the value `left`.  
   
-### <a name="remarks"></a>備註  
- 函式繫結器是一種函式配接器，其會傳回函式物件，因此可用於特定類型的函式組合，以建構更複雜且強大的運算式。  
+### <a name="remarks"></a>Remarks  
+ Function binders are a kind of function adaptor and, because they return function objects, can be used in certain types of function composition to construct more complicated and powerful expressions.  
   
- 如果 `func` 是 `Operation` 類型的物件且 `c` 是常數，則 `bind1st` ( `func`, `c`) 相當於 [binder1st](../standard-library/binder1st-class.md) 類別建構函式 `binder1st`< `Operation`> ( `func`, `c`)，而且更方便。  
+ If `func` is an object of type `Operation` and `c` is a constant, then `bind1st` ( `func`, `c`) is equivalent to the [binder1st](../standard-library/binder1st-class.md) class constructor `binder1st`< `Operation`> ( `func`, `c`) and is more convenient.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_bind1st.cpp  
@@ -260,29 +294,29 @@ The number of elements in v1 less than 10 is: 2.
 ```  
   
 ##  <a name="bind2nd"></a>  bind2nd  
- 協助程式樣板函式，可建立配接器，透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。  
+ A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the second argument of the binary function to a specified value.  
   
 ```  
 template <class Operation, class Type>  
 binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `func`  
- 要轉換為一元函式物件的二元函式物件。  
+ The binary function object to be converted to a unary function object.  
   
  `right`  
- 二元函式物件的第二個引數所要繫結的值。  
+ The value to which the second argument of the binary function object is to be bound.  
   
-### <a name="return-value"></a>傳回值  
- 一元函式物件所產生的繫結至值的二元函式物件的第二個引數`right`。  
+### <a name="return-value"></a>Return Value  
+ The unary function object that results from binding the second argument of the binary function object to the value `right`.  
   
-### <a name="remarks"></a>備註  
- 函式繫結器是一種函式配接器，其會傳回函式物件，因此可用於特定類型的函式組合，以建構更複雜且強大的運算式。  
+### <a name="remarks"></a>Remarks  
+ Function binders are a kind of function adaptor and, because they return function objects, can be used in certain types of function composition to construct more complicated and powerful expressions.  
   
- 如果 `func` 是 **Operation** 類型的物件且 `c` 是常數，則 `bind2nd` ( `func`, `c` ) 相當於 [binder2nd](../standard-library/binder2nd-class.md) 類別建構函式 **binder2nd\<Operation>** ( `func`, `c` )，而且更方便。  
+ If `func` is an object of type **Operation** and `c` is a constant, then `bind2nd` ( `func`, `c` ) is equivalent to the [binder2nd](../standard-library/binder2nd-class.md) class constructor **binder2nd\<Operation>** ( `func`, `c` ) and more convenient.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_bind2nd.cpp  
@@ -350,7 +384,7 @@ The number of elements in v1 less than 10 is: 2.
 ```  
   
 ##  <a name="bit_and"></a>  bit_and  
- 在其引數執行位元 AND 運算 (二元 `operator&`) 的預先定義函式物件。  
+ A predefined function object that performs the bitwise AND operation (binary `operator&`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -370,24 +404,24 @@ struct bit_and<void>
 };
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支援 `operator&` 的任何類型，其接受指定或推斷類型的運算元。  
+ Any type that supports an `operator&` that takes operands of the specified or inferred types.  
   
  `Left`  
- 位元 AND 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
+ The left operand of the bitwise AND operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 位元 AND 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
+ The right operand of the bitwise AND operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>傳回值  
- `Left``&``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator&` 所傳回的類型。  
+### <a name="return-value"></a>Return Value  
+ The result of `Left & Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator&`.  
   
-### <a name="remarks"></a>備註  
- 對於基本資料類型，`bit_and` 仿函數僅限於整數類型，或會實作二元 `operator&` 的使用者定義類型。  
+### <a name="remarks"></a>Remarks  
+ The `bit_and` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator&`.  
   
 ##  <a name="bit_not"></a>  bit_not  
- 在其引數執行位元補數 (NOT) 運算 (一元 `operator~`) 的預先定義函式物件。  
+ A predefined function object that performs the bitwise complement (NOT) operation (unary `operator~`) on its argument.  
   
 ```  
 template <class Type = void>  
@@ -405,21 +439,21 @@ struct bit_not<void>
  };  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Type`  
- 支援一元 `operator~` 的類型。  
+ A type that supports a unary `operator~`.  
   
  `Right`  
- 位元補數運算的運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完整轉寄 `Type` 推斷類型的左值或右值參考引數。  
+ The operand of the bitwise complement operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of an lvalue or rvalue reference argument of inferred type `Type`.  
   
-### <a name="return-value"></a>傳回值  
- `~``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator~` 所傳回的類型。  
+### <a name="return-value"></a>Return Value  
+ The result of `~ Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator~`.  
   
-### <a name="remarks"></a>備註  
- 對於基本資料類型，`bit_not` 仿函數僅限於整數類型，或會實作二元 `operator~` 的使用者定義類型。  
+### <a name="remarks"></a>Remarks  
+ The `bit_not` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator~`.  
   
 ##  <a name="bit_or"></a>  bit_or  
- 在其引數執行位元 OR 運算 (`operator|`) 的預先定義函式物件。  
+ A predefined function object that performs the bitwise OR operation ( `operator|`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -439,24 +473,24 @@ struct bit_or<void>
 };
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支援 `operator|` 的任何類型，其接受指定或推斷類型的運算元。  
+ Any type that supports an `operator|` that takes operands of the specified or inferred types.  
   
  `Left`  
- 位元 OR 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
+ The left operand of the bitwise OR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 位元 OR 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
+ The right operand of the bitwise OR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>傳回值  
- `Left``|``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator|` 所傳回的類型。  
+### <a name="return-value"></a>Return Value  
+ The result of `Left | Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator|`.  
   
-### <a name="remarks"></a>備註  
- 對於基本資料類型，`bit_or` 函式僅限於整數類型，或會實作 `operator|` 的使用者定義類型。  
+### <a name="remarks"></a>Remarks  
+ The `bit_or` functor is restricted to integral types for the basic data types, or to user-defined types that implement `operator|`.  
   
 ##  <a name="bit_xor"></a>  bit_xor  
- 在其引數執行位元 XOR 運算 (二元 `operator^`) 的預先定義函式物件。  
+ A predefined function object that performs the bitwise XOR operation (binary `operator^`) on its arguments.  
   
 ```  
 template <class Type = void>  
@@ -476,24 +510,24 @@ struct bit_xor<void>
 };
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支援 `operator^` 的任何類型，其接受指定或推斷類型的運算元。  
+ Any type that supports an `operator^` that takes operands of the specified or inferred types.  
   
  `Left`  
- 位元 XOR 運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
+ The left operand of the bitwise XOR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 位元 XOR 運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
+ The right operand of the bitwise XOR operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-### <a name="return-value"></a>傳回值  
- `Left``^``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator^` 所傳回的類型。  
+### <a name="return-value"></a>Return Value  
+ The result of `Left ^ Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator^`.  
   
-### <a name="remarks"></a>備註  
- 對於基本資料類型，`bit_xor` 仿函數僅限於整數類型，或會實作二元 `operator^` 的使用者定義類型。  
+### <a name="remarks"></a>Remarks  
+ The `bit_xor` functor is restricted to integral types for the basic data types, or to user-defined types that implement binary `operator^`.  
   
 ##  <a name="cref"></a>  cref  
- 從引數建構常數`reference_wrapper`。  
+ Constructs a const `reference_wrapper` from an argument.  
   
 ```  
 template <class Ty>  
@@ -503,17 +537,17 @@ template <class Ty>
 reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 要包裝的引數類型。  
+ The type of the argument to wrap.  
   
  `arg`  
- 要包裝的引數。  
+ The argument to wrap.  
   
-### <a name="remarks"></a>備註  
- 第一個函式會傳回 `reference_wrapper<const Ty>(arg.get())`。 您可以使用此項目，來包裝 const 參考。 第二個函式會傳回 `reference_wrapper<const Ty>(arg)`。 您可以使用此項目，將已包裝的參考重新包裝為 const 參考。  
+### <a name="remarks"></a>Remarks  
+ The first function returns `reference_wrapper<const Ty>(arg.get())`. You use it to wrap a const reference. The second function returns `reference_wrapper<const Ty>(arg)`. You use it to rewrap a wrapped reference as a const reference.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__cref.cpp   
@@ -547,28 +581,28 @@ cref(neg)(i) = -1
 ```  
   
 ##  <a name="mem_fn"></a>  mem_fn  
- 產生簡單呼叫包裝函式。  
+ Generates a simple call wrapper.  
   
 ```  
 template <class Ret, class Ty>  
 unspecified mem_fn(Ret Ty::*pm);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ret`  
- 包裝函式的傳回類型。  
+ The return type of the wrapped function.  
   
  `Ty`  
- 成員函式指標的類型。  
+ The type of the member function pointer.  
   
-### <a name="remarks"></a>備註  
- 範本函式會傳回含弱式結果類型的簡單呼叫包裝函式 `cw`，以讓運算式 `cw(t, a2, ..., aN)` 相當於 `INVOKE(pm, t, a2, ..., aN)`。 它不會擲回任何例外狀況。  
+### <a name="remarks"></a>Remarks  
+ The template function returns a simple call wrapper `cw`, with a weak result type, such that the expression `cw(t, a2, ..., aN)` is equivalent to `INVOKE(pm, t, a2, ..., aN)`. It does not throw any exceptions.  
   
- 僅有當 `Ty` 類型是含有 cv 限定詞 `cv` 的成員函式指標 (不需使用引數) 時，傳回的呼叫包裝函式會衍生自 `std::unary_function<cv Ty*, Ret>` (因此 `result_type` 巢狀類型會定義為與 `Ret` 同義，而 `argument_type` 巢狀類型則與 `cv Ty*` 同義)。  
+ The returned call wrapper is derived from `std::unary_function<cv Ty*, Ret>` (hence defining the nested type `result_type` as a synonym for `Ret` and the nested type `argument_type` as a synonym for `cv Ty*`) only if the type `Ty` is a pointer to member function with cv-qualifier `cv` that takes no arguments.  
   
- 僅有當 `Ty` 類型是含有 cv 限定詞 `cv` 的成員函式指標 (需使用 `T2` 類型的一個引數) 時，傳回的呼叫包裝函式會衍生自 `std::binary_function<cv Ty*, T2, Ret>` (因此 `result_type` 巢狀類型會定義為與 `Ret` 同義、`first argument_type` 巢狀類型與 `cv Ty*` 同義，且 `second argument_type` 巢狀類型與 `T2` 同義)。  
+ The returned call wrapper is derived from `std::binary_function<cv Ty*, T2, Ret>` (hence defining the nested type `result_type` as a synonym for `Ret`, the nested type `first argument_type` as a synonym for `cv Ty*`, and the nested type `second argument_type` as a synonym for `T2`) only if the type `Ty` is a pointer to member function with cv-qualifier `cv` that takes one argument, of type `T2`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__mem_fn.cpp   
@@ -608,7 +642,7 @@ int main()
 ```  
   
 ##  <a name="mem_fun"></a>  mem_fun  
- 協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。  
+ Helper template functions used to construct function object adaptors for member functions when initialized with pointer arguments.  
   
 ```  
 template <class Result, class Type>  
@@ -624,14 +658,14 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pmem`  
- 要轉換成函式物件之 **Type** 類別的成員函式指標。  
+ A pointer to the member function of class **Type** to be converted to a function object.  
   
-### <a name="return-value"></a>傳回值  
- 類型為 `mem_fun_t` 或 `mem_fun1_t` 的 **const** 或 **non_const** 函式物件。  
+### <a name="return-value"></a>Return Value  
+ A **const** or **non_const** function object of type `mem_fun_t` or `mem_fun1_t`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_mem_fun.cpp  
@@ -692,7 +726,7 @@ int main( )
 ```  
   
 ##  <a name="mem_fun_ref"></a>  mem_fun_ref  
- Helper 範本函式，用以在使用參考引數初始化時建構成員函式的物件配接器。  
+ Helper template functions used to construct function object adaptors for member functions when initialized by using reference arguments.  
   
 ```  
 template <class Result, class Type>  
@@ -708,14 +742,14 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) const);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pmem`  
- 要轉換成函式物件之 `Type` 類別的成員函式指標。  
+ A pointer to the member function of class `Type` to be converted to a function object.  
   
-### <a name="return-value"></a>傳回值  
- 類別為 `mem_fun_ref_t` 或 `mem_fun1_ref_t` 的 `const` 或 `non_const` 函式物件 。  
+### <a name="return-value"></a>Return Value  
+ A `const` or `non_const` function object of type `mem_fun_ref_t` or `mem_fun1_ref_t`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_mem_fun_ref.cpp  
@@ -794,24 +828,24 @@ With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```  
   
 ##  <a name="not1"></a>  not1  
- 傳回一元述詞的補數。  
+ Returns the complement of a unary predicate.  
   
 ```  
 template <class UnaryPredicate>  
 unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pred`  
- 要變為負值的一元述詞。  
+ The unary predicate to be negated.  
   
-### <a name="return-value"></a>傳回值  
- 一元述詞，其為所修改之一元述詞的負值。  
+### <a name="return-value"></a>Return Value  
+ A unary predicate that is the negation of the unary predicate modified.  
   
-### <a name="remarks"></a>備註  
- 如果 `unary_negate` 是建構自 **Pred**( *x*) 一元述詞，則它會傳回 **!Pred**( *x*)。  
+### <a name="remarks"></a>Remarks  
+ If a `unary_negate` is constructed from a unary predicate **Pred**( *x*), then it returns **!Pred**( *x*).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_not1.cpp  
@@ -862,24 +896,24 @@ The number of elements in v1 not greater than 10 is: 3.
 ```  
   
 ##  <a name="not2"></a>  not2  
- 傳回二元述詞的補數。  
+ Returns the complement of a binary predicate.  
   
 ```  
 template <class BinaryPredicate>  
 binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `func`  
- 要變為負值的二元述詞。  
+ The binary predicate to be negated.  
   
-### <a name="return-value"></a>傳回值  
- 二元述詞，其為所修改之二元述詞的負值。  
+### <a name="return-value"></a>Return Value  
+ A binary predicate that is the negation of the binary predicate modified.  
   
-### <a name="remarks"></a>備註  
- 如果 `binary_negate` 是建構自 **BinPred**( *x*, *y*) 二元述詞，則它會傳回 ! **BinPred**( *x*, *y*)。  
+### <a name="remarks"></a>Remarks  
+ If a `binary_negate` is constructed from a binary predicate **BinPred**( *x*, *y*), then it returns ! **BinPred**( *x*, *y*).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // functional_not2.cpp  
@@ -934,7 +968,7 @@ Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```  
   
 ##  <a name="ptr_fun"></a>  ptr_fun  
- Helper 範本函式，可用來將一元和二元函式指標分別轉換成一元和二元可調適性函式。  
+ Helper template functions used to convert unary and binary function pointers, respectively, into unary and binary adaptable functions.  
   
 ```  
 template <class Arg, class Result>  
@@ -944,23 +978,23 @@ template <class Arg1, class Arg2, class Result>
 pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(Result (*pfunc)(Arg1, Arg2));
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pfunc`  
- 要轉換成可調適性函式的一元或二元函式指標。  
+ The unary or binary function pointer to be converted to an adaptable function.  
   
-### <a name="return-value"></a>傳回值  
- 第一個範本函式會傳回一元函式 [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`, **Result**>(* `pfunc`)。  
+### <a name="return-value"></a>Return Value  
+ The first template function returns the unary function [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`, **Result**>(* `pfunc`).  
   
- 第二個範本函式會傳回二元函式 [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **Result**>(* `pfunc`)。  
+ The second template function returns binary function [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **Result**>(* `pfunc`).  
   
-### <a name="remarks"></a>備註  
- 函式指標是函式物件，可傳遞給需要以參數形式使用函式的任何 C++ 標準程式庫演算法，但它不具可調適性。 若要使用它來搭配配接器 (例如與值繫結或使用它搭配否定運算子)，您必須為其提供能夠進行這類調適的巢狀類型。 由 `ptr_fun` helper 函式進行的一元和二元函式指標轉換，可讓函式配接器使用一元和二元函式指標。  
+### <a name="remarks"></a>Remarks  
+ A function pointer is a function object and may be passed to any C++ Standard Library algorithm that is expecting a function as a parameter, but it is not adaptable. To use it with an adaptor, such as binding a value to it or using it with a negator, it must be supplied with the nested types that make such an adaptation possible. The conversion of unary and binary function pointers by the `ptr_fun` helper function allows the function adaptors to work with unary and binary function pointers.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
  [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]  
   
 ##  <a name="ref"></a>  ref  
- 從引數建構 `reference_wrapper` 。  
+ Constructs a `reference_wrapper` from an argument.  
   
 ```  
 template <class Ty>  
@@ -970,11 +1004,11 @@ template <class Ty>
 reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
 ```  
   
-### <a name="return-value"></a>傳回值  
- `arg`的參考，尤其是 `reference_wrapper<Ty>(arg)`。  
+### <a name="return-value"></a>Return Value  
+ A reference to `arg`; specifically, `reference_wrapper<Ty>(arg)`.  
   
-### <a name="example"></a>範例  
-  下列範例會定義兩個函式：一個繫結至字串變數，另一個繫結至呼叫 `ref`所計算之字串變數的參考。 當變數的值變更時，第一個函式會繼續使用舊的值，第二個函式則使用新的值。  
+### <a name="example"></a>Example  
+  The following example defines two functions: one bound to a string variable, the other bound to a reference of the string variable computed by a call to `ref`. When the value of the variable changes, the first function continues to use the old value and the second function uses the new value.  
   
 ```cpp  
 #include <algorithm>  
@@ -1049,27 +1083,27 @@ tiger cougar
 ```  
   
 ##  <a name="swap"></a>  swap  
- 交換兩個 `function` 物件。  
+ Swaps two `function` objects.  
   
 ```  
 template <class Fty>  
 void swap(function<Fty>& f1, function<Fty>& f2);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Fty`  
- 函式物件所控制的類型。  
+ The type controlled by the function objects.  
   
  `f1`  
- 第一個函式物件。  
+ The first function object.  
   
  `f2`  
- 第二個函式物件。  
+ The second function object.  
   
-### <a name="remarks"></a>備註  
- 函式會傳回 `f1.swap(f2)`。  
+### <a name="remarks"></a>Remarks  
+ The function returns `f1.swap(f2)`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__swap.cpp   
@@ -1112,7 +1146,7 @@ empty == false
 val == -3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<functional>](../standard-library/functional.md)
 
 

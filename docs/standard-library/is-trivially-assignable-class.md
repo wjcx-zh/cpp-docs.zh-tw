@@ -1,5 +1,5 @@
 ---
-title: "is_trivially_assignable 類別 | Microsoft Docs"
+title: is_trivially_assignable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_trivially_assignable
 - type_traits/std::is_trivially_assignable
 dev_langs:
 - C++
@@ -35,38 +34,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4b640307631b1407e5309adaa63b39e100839f91
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 581df77e2017881e80349494f48415868a854aeb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallyassignable-class"></a>is_trivially_assignable 類別
-測試是否可將 `From` 類型的值透過極簡方式指派給 `To` 類型  
+# <a name="istriviallyassignable-class"></a>is_trivially_assignable Class
+Tests whether a value of `From` type can be trivially assigned to `To` type  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class To, class From>  
 struct is_trivially_assignable;
 ```  
   
-#### <a name="parameters"></a>參數  
- 以  
- 接收指派的物件類型。  
+#### <a name="parameters"></a>Parameters  
+ To  
+ The type of the object that receives the assignment.  
   
- 寄件者  
- 提供值的物件類型。  
+ From  
+ The type of the object that provides the value.  
   
-## <a name="remarks"></a>備註  
- 運算式 `declval<To>() = declval<From>()` 必須格式正確，且編譯器必須已知它不需要任何非極簡作業。 `From` 和 `To` 兩者必須是完整類型 `void`，或是界限未知的陣列。  
+## <a name="remarks"></a>Remarks  
+ The expression `declval<To>() = declval<From>()` must be well-formed, and must be known to the compiler to require no non-trivial operations. Both `From` and `To` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<stdexcept>
-- std::<stdexcept>
-- <stdexcept>
+- std::<stdexcept>", "<stdexcept>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,15 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a01f0cf531196d59815eb87f03ee9d8a15574088
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 42d6d48b08732712b4b7c7898b937017197b20a0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
-定義數個標準類別，用於報告例外狀況。 類別構成的衍生階層全都衍生自 [exception](../standard-library/exception-class.md)，而且類別會包含兩種一般的例外狀況類型：邏輯錯誤和執行階段錯誤。 邏輯錯誤會造成程式設計錯誤。 它們衍生自基底類別 logic_error，也包含：  
+Defines several standard classes used for reporting exceptions. The classes form a derivation hierarchy all derived from class [exception](../standard-library/exception-class.md) and include two general types of exceptions: logical errors and run-time errors. The logical errors are caused programmer mistakes. They derive from the base class logic_error and include:  
   
 -   `domain_error`  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 02/24/2017
   
 -   `out_of_range`  
   
- 執行階段錯誤會由於程式庫函式或執行階段系統中的錯誤而造成。 它們衍生自基底類別 runtime_error，也包含：  
+ The run-time errors occur because of mistakes in either the library functions or in the run-time system. They derive from the base class runtime_error and include:  
   
 -   `overflow_error`  
   
@@ -61,22 +59,22 @@ ms.lasthandoff: 02/24/2017
   
 -   `underflow_error`  
   
-### <a name="classes"></a>類別  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[domain_error 類別](../standard-library/domain-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告網域錯誤。|  
-|[invalid_argument 類別](../standard-library/invalid-argument-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告無效的引數。|  
-|[length_error 類別](../standard-library/length-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告嘗試產生的物件太長而無法指定。|  
-|[logic_error 類別](../standard-library/logic-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告在程式執行前假定可偵測的錯誤，例如邏輯前置條件的違規。|  
-|[out_of_range 類別](../standard-library/out-of-range-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告引數超出其有效範圍。|  
-|[overflow_error 類別](../standard-library/overflow-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告算術溢位。|  
-|[range_error 類別](../standard-library/range-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告報告範圍錯誤。|  
-|[runtime_error 類別](../standard-library/runtime-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告僅當程式執行時假定可偵測的錯誤。|  
-|[underflow_error 類別](../standard-library/underflow-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告算術反向溢位。|  
+|[domain_error Class](../standard-library/domain-error-class.md)|The class serves as the base class for all exceptions thrown to report a domain error.|  
+|[invalid_argument Class](../standard-library/invalid-argument-class.md)|The class serves as the base class for all exceptions thrown to report an invalid argument.|  
+|[length_error Class](../standard-library/length-error-class.md)|The class serves as the base class for all exceptions thrown to report an attempt to generate an object too long to be specified.|  
+|[logic_error Class](../standard-library/logic-error-class.md)|The class serves as the base class for all exceptions thrown to report errors presumably detectable before the program executes, such as violations of logical preconditions.|  
+|[out_of_range Class](../standard-library/out-of-range-class.md)|The class serves as the base class for all exceptions thrown to report an argument that is out of its valid range.|  
+|[overflow_error Class](../standard-library/overflow-error-class.md)|The class serves as the base class for all exceptions thrown to report an arithmetic overflow.|  
+|[range_error Class](../standard-library/range-error-class.md)|The class serves as the base class for all exceptions thrown to report a range error.|  
+|[runtime_error Class](../standard-library/runtime-error-class.md)|The class serves as the base class for all exceptions thrown to report errors presumably detectable only when the program executes.|  
+|[underflow_error Class](../standard-library/underflow-error-class.md)|The class serves as the base class for all exceptions thrown to report an arithmetic underflow.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

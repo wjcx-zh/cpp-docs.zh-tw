@@ -1,5 +1,5 @@
 ---
-title: "aligned_union 類別 | Microsoft Docs"
+title: aligned_union Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- aligned_union
 - type_traits/std::aligned_union
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: d6ecefd7d6877bc65bbf6f5542ae6b7f318a9d27
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9d8ce527325e68acbb31260910a8baa6fb18d32c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="alignedunion-class"></a>aligned_union 類別
-提供夠大並適當對齊的 POD 類型來儲存等位類型，以及所需的大小。  
+# <a name="alignedunion-class"></a>aligned_union Class
+Provides a POD type large enough and suitably aligned to store a union type, and the size required.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <std::size_t Len, class... Types>  
@@ -54,18 +53,18 @@ template <std::size_t Len, class... Types>
 using aligned_union_t = typename aligned_union<Len, Types...>::type;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Len`  
- 等位中最大類型的對齊值。  
+ The alignment value for the largest type in the union.  
   
  `Types`  
- 基礎等位中的不同類型。  
+ The distinct types in the underlying union.  
   
-## <a name="remarks"></a>備註  
- 使用此範本類別，即可取得將等位儲存在未初始化儲存空間中所需的對齊和大小。 成員 typedef `type` 會命名適合儲存 `Types` 中所列之任何類型的 POD 類型；大小下限為 `Len`。 類型 `std::size_t` 的靜態成員 `alignment_value` 包含 `Types` 中所列之所有類型需要的最嚴格對齊。  
+## <a name="remarks"></a>Remarks  
+ Use the template class to get the alignment and size needed to store a union in uninitialized storage. The member typedef `type` names a POD type suitable for storage of any type listed in `Types`; the minimum size is `Len`. The static member `alignment_value` of type `std::size_t` contains the strictest alignment required of all the types listed in `Types`.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用 `aligned_union` 配置對齊的堆疊緩衝區來放置等位。  
+## <a name="example"></a>Example  
+ The following example shows how to use `aligned_union` to allocate an aligned stack buffer to place a union.  
   
 ```  
 // std__type_traits__aligned_union.cpp  
@@ -101,12 +100,12 @@ int main()
 value of u->i is 1065353216  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [alignment_of 類別](../standard-library/alignment-of-class.md)
+ [alignment_of Class](../standard-library/alignment-of-class.md)
 

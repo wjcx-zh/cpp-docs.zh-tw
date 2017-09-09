@@ -1,5 +1,5 @@
 ---
-title: "allocator_variable_size 類別 | Microsoft Docs"
+title: allocator_variable_size Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,15 +9,14 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- allocators::allocator_variable_size
 - allocators/stdext::allocator_variable_size
-- allocator_variable_size
 - allocators/stdext::allocators::allocator_variable_size
 - stdext::allocators::allocator_variable_size
 dev_langs:
 - C++
 helpviewer_keywords:
-- allocator_variable_size class
+- stdext::allocator_variable_size
+- stdext::allocators [C++], allocator_variable_size
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
 caps.latest.revision: 16
 author: corob-msft
@@ -37,38 +36,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6988caeb45667d4aa326282fc3ceab126de89dc2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 33089c7b3df48d870d9176a2b27abc09d1d71d84
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatorvariablesize-class"></a>allocator_variable_size 類別
-描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_variable_size](../standard-library/max-variable-size-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。  
+# <a name="allocatorvariablesize-class"></a>allocator_variable_size Class
+Describes an object that manages storage allocation and freeing for objects of type `Type` using a cache of type [cache_freelist](../standard-library/cache-freelist-class.md) with a length managed by [max_variable_size](../standard-library/max-variable-size-class.md).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type>  
 class allocator_variable_size;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|配置器所配置的元素類型。|  
+|`Type`|The type of elements allocated by the allocator.|  
   
-## <a name="remarks"></a>備註  
- [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 巨集會將此類別傳遞為下列陳述式中的 `name` 參數：`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`  
+## <a name="remarks"></a>Remarks  
+ The [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) macro passes this class as the `name` parameter in the following statement: `ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **命名空間：** stdext  
+ **Namespace:** stdext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

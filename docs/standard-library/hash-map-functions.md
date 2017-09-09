@@ -1,5 +1,5 @@
 ---
-title: "&lt;hash_map&gt; 函式 | Microsoft Docs"
+title: '&lt;hash_map&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
 caps.latest.revision: 9
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 394a9ffe15c256a43cdf16ffd164f2e907ab0535
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ec849090b13c7d978d3686eb9ed4d68409ecf4e7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lthashmapgt-functions"></a>&lt;hash_map&gt; 函式
+# <a name="lthashmapgt-functions"></a>&lt;hash_map&gt; functions
 |||  
 |-|-|  
 |[swap](#swap)|[swap (hash_map)](#swap_hash_map)|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 04/29/2017
 ##  <a name="swap_hash_map"></a>  swap (hash_map)  
   
 > [!NOTE]
->  這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。  
+>  This API is obsolete. The alternative is [unordered_map Class](../standard-library/unordered-map-class.md).  
   
- 交換兩個 hash_map 的元素。  
+ Exchanges the elements of two hash_maps.  
   
 ```
 void swap(
@@ -37,24 +37,24 @@ void swap(
     hash_map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要與 map `left` 交換元素的 hash_map。  
+ The hash_map whose elements are to be exchanged with those of the map `left`.  
   
  `left`  
- 要與 map `right` 交換元素的 hash_map。  
+ The hash_map whose elements are to be exchanged with those of the map `right`.  
   
-### <a name="remarks"></a>備註  
- 範本函式是在容器類別 hash_map 特製化的演算法，用來執行成員函式 `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*)。 這是編譯器所執行的函式範本部分排序執行個體。 當因範本函式多載而導致範本與函式呼叫的比對不是唯一的時，編譯器就會選取最特製化的範本函式版本。 演算法標頭檔案中函式版本的一般範本 **template \<class T> void swap(T&, T&)** 會依指派運作而作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class hash_map to execute the member function `left.`[swap](../standard-library/basic-ios-class.md#swap)*(right*). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function, **template \<class T> void swap(T&, T&)**, in the algorithm header file works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
 ##  <a name="swap"></a>  swap  
   
 > [!NOTE]
->  這個 API 已過時。 替代方案是 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)。  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- 交換兩個 hash_multimap 的元素。  
+ Exchanges the elements of two hash_multimaps.  
   
 ```
 void swap(
@@ -62,19 +62,19 @@ void swap(
     hash_multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要與 map `left` 交換元素的 hash_multimap。  
+ The hash_multimap whose elements are to be exchanged with those of the map `left`.  
   
  `left`  
- 要與 map `right` 交換元素的 hash_multimap。  
+ The hash_multimap whose elements are to be exchanged with those of the map `right`.  
   
-### <a name="remarks"></a>備註  
- 範本函式是在容器類別 hash_multimap 特製化的演算法，用來執行成員函式 `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`。 這是編譯器所執行的函式範本部分排序執行個體。 當因範本函式多載而導致範本與函式呼叫的比對不是唯一的時，編譯器就會選取最特製化的範本函式版本。 演算法標頭檔案中函式版本的一般範本 **template \<class T> void swap(T&, T&)** 會依指派運作而作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
+### <a name="remarks"></a>Remarks  
+ The template function is an algorithm specialized on the container class hash_multimap to execute the member function `left.`[swap](../standard-library/hash-multimap-class.md#swap)*(right*`)`. This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function, **template \<class T> void swap(T&, T&)**, in the algorithm header file works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<hash_map>](../standard-library/hash-map.md)
 
 

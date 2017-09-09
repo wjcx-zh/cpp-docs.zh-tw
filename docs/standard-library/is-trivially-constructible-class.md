@@ -1,5 +1,5 @@
 ---
-title: "is_trivially_constructible 類別 | Microsoft Docs"
+title: is_trivially_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- is_trivially_constructible
 - type_traits/std::is_trivially_constructible
 dev_langs:
 - C++
@@ -35,38 +34,39 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4acc8f686d918391966949134a5c2b3c1a0a41a5
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fe756def468770270140ebc7cb6c9a91f2b926b2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallyconstructible-class"></a>is_trivially_constructible 類別
-測試類型在使用指定引數類型的情況下，是否是可透過極簡方式建構的類型。  
+# <a name="istriviallyconstructible-class"></a>is_trivially_constructible Class
+Tests whether a type is trivially constructible when the specified argument types are used.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T, class... Args>  
 struct is_trivially_constructible;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要查詢的類型。  
+ The type to query.  
   
  `Args`  
- 要在 `T` 的建構函式中相符的引數類型。  
+ The argument types to match in a constructor of `T`.  
   
-## <a name="remarks"></a>備註  
- 如果類型 `T` 是可藉由使用 `Args` 中的引數類型透過極簡方式建構的類型，類型述詞執行個體的值就會是 true，否則會是 false。 如果變數定義 `T t(std::declval<Args>()...);` 格式正確，且已知不會呼叫任何非極簡作業，類型 `T` 便是可透過極簡方式建構的類型。 `T` 和 `Args` 中的所有類型必須都是完整類型 `void`，或是界限未知的陣列。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `T` is trivially constructible by using the argument types in `Args`, otherwise it holds false. Type `T` is trivially constructible if the variable definition `T t(std::declval<Args>()...);` is well-formed and is known to call no non-trivial operations. Both `T` and all the types in `Args` must be complete types, `void`, or arrays of unknown bound.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

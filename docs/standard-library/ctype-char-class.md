@@ -1,5 +1,5 @@
 ---
-title: "ctype&lt;char&gt; 類別 | Microsoft Docs"
+title: ctype&lt;char&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 28fc5cf88c6a50b5fcd9950b68d7c6ef3529ccee
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 45f94354962f3312ef7f935d1461d4ca54c42915
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 類別
-此類別可將範本類別 **ctype\<CharType**> 明確特製化為 `char` 類型，並描述可以作為地區設定 Facet 的物件，以表示 `char` 類型字元的各種屬性特性。  
+# <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; Class
+The class is an explicit specialization of template class **ctype\<CharType**> to type `char`, describing an object that can serve as a locale facet to characterize various properties of a character of type `char`.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <>  
@@ -144,31 +144,31 @@ protected:
 };  
 ```  
   
-## <a name="remarks"></a>備註  
- 明確特製化和範本類別有下列幾項差異：  
+## <a name="remarks"></a>Remarks  
+ The explicit specialization differs from the template class in several ways:  
   
--   ctype< `char`> 類別的物件會儲存 ctype 遮罩資料表的第一個元素指標，亦即 **ctype_base::mask** 類型的UCHAR_MAX + 1 元素陣列。 它也會儲存 Boolean 物件，指出當 ctype\< **Elem**> 物件已終結時，是否應該刪除陣列 (使用 `operator delete[]`)。  
+-   An object of class ctype< `char`> stores a pointer to the first element of a ctype mask table, an array of UCHAR_MAX + 1 elements of type **ctype_base::mask**. It also stores a Boolean object that indicates whether the array should be deleted (using `operator delete[]`) when the ctype\< **Elem**> object is destroyed.  
   
--   其唯一的公用建構函式可讓您指定**tab**、ctype 遮罩資料表、**del** (為 true 的 Boolean 物件，代表應在 ctype< `char`> 物件已終結時刪除陣列)，以及參考計數參數 refs。  
+-   Its sole public constructor lets you specify **tab**, the ctype mask table, and **del**, the Boolean object that is true if the array should be deleted when the ctype< `char`> object is destroyed, as well as the reference-count parameter refs.  
   
--   受保護的成員函式 **table** 會傳回預存的 ctype 遮罩資料表。  
+-   The protected member function **table** returns the stored ctype mask table.  
   
--   靜態成員物件 **table_size** 可指定 ctype 遮罩資料表中的元素數下限。  
+-   The static member object **table_size** specifies the minimum number of elements in a ctype mask table.  
   
--   受保護的靜態成員函式 **classic_table**( 會傳回適用於 "C" 地區設定的 ctype 遮罩資料表。  
+-   The protected static member function **classic_table**( returns the ctype mask table appropriate to the "C" locale.  
   
--   系統並沒有提供 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is) 或 [do_scan_not](../standard-library/ctype-class.md#do_scan_not) 這幾個受保護的虛擬成員函式。 對應的公用成員函式會自行執行對等作業。  
+-   There are no protected virtual member functions [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is), or [do_scan_not](../standard-library/ctype-class.md#do_scan_not). The corresponding public member functions perform the equivalent operations themselves.  
   
- 成員函式 [do_narrow](../standard-library/ctype-class.md#do_narrow) 和 [do_widen](../standard-library/ctype-class.md#do_widen) 會複製不變的元素。  
+ The member functions [do_narrow](../standard-library/ctype-class.md#do_narrow) and [do_widen](../standard-library/ctype-class.md#do_widen) copy elements unaltered.  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [facet 類別](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
- [ctype_base 類別](../standard-library/ctype-base-class.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [facet Class](http://msdn.microsoft.com/Library/dd4f12f5-cb1b-457f-af56-2fb204216ec1)   
+ [ctype_base Class](../standard-library/ctype-base-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

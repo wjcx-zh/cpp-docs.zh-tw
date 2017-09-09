@@ -1,30 +1,45 @@
 ---
-title: "&lt;list&gt; 運算子 | Microsoft Docs"
+title: '&lt;list&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- list/std::operator!=
+- list/std::operator&gt;
+- list/std::operator&gt;=
+- list/std::operator&lt;
+- list/std::operator&lt;=
+- list/std::operator==
+dev_langs:
+- C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5713a02d534f8e4e2245ba3d181d78c529adbe79
+helpviewer_keywords:
+- std::operator!= (list)
+- std::operator&gt; (list)
+- std::operator&gt;= (list)
+- std::operator&lt; (list)
+- std::operator&lt;= (list)
+- std::operator== (list)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 575dcc65565bf004da19238b743f1802e023668c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlistgt-operators"></a>&lt;list&gt; 運算子
+# <a name="ltlistgt-operators"></a>&lt;list&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 測試運算子左邊的清單物件是否不等於右邊的清單物件。  
+ Tests if the list object on the left side of the operator is not equal to the list object on the right side.  
   
 ```
 bool operator!=(
@@ -32,20 +47,20 @@ bool operator!=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
  `right`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
-### <a name="return-value"></a>傳回值  
- 如果清單不相等，便會傳回 **true**；如果清單相等，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the lists are not equal; **false** if the lists are equal.  
   
-### <a name="remarks"></a>備註  
- list 物件之間的比較是以其元素的成對比較為基礎。 如果有相同數目的元素，且個別元素擁有相同的值，則兩個清單相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. Two lists are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_ne.cpp  
@@ -71,7 +86,7 @@ Lists not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 測試運算子左邊的清單物件是否小於右邊的清單物件。  
+ Tests if the list object on the left side of the operator is less than the list object on the right side.  
   
 ```
 bool operator<(
@@ -79,20 +94,20 @@ bool operator<(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
  `right`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的清單小於但不等於運算子右邊的清單，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is less than but not equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- list 物件之間的比較是以其元素的成對比較為基礎。 兩個物件之間的小於關聯性是根據第一對不相等元素的比較。  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The less-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_lt.cpp  
@@ -122,7 +137,7 @@ List c1 is less than list c2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 測試運算子左邊的清單物件是否小於或等於右邊的清單物件。  
+ Tests if the list object on the left side of the operator is less than or equal to the list object on the right side.  
   
 ```
 bool operator<=(
@@ -130,20 +145,20 @@ bool operator<=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
  `right`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的清單小於或等於運算子右邊的清單，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is less than or equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- list 物件之間的比較是以其元素的成對比較為基礎。 兩個物件之間的小於或等於關聯性，是根據第一對不相等元素的比較。  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The less than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_le.cpp  
@@ -173,7 +188,7 @@ List c1 is less than or equal to list c2.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 測試運算子左邊的清單物件是否等於右邊的清單物件。  
+ Tests if the list object on the left side of the operator is equal to the list object on the right side.  
   
 ```
 bool operator==(
@@ -181,20 +196,20 @@ bool operator==(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
  `right`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的清單等於運算子右邊的清單，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- list 物件之間的比較是以其元素的成對比較為基礎。 如果有相同數目的元素，且個別元素擁有相同的值，則兩個清單相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. Two lists are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_eq.cpp  
@@ -220,7 +235,7 @@ The lists are equal.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 測試運算子左邊的清單物件是否大於右邊的清單物件。  
+ Tests if the list object on the left side of the operator is greater than the list object on the right side.  
   
 ```
 bool operator>(
@@ -228,20 +243,20 @@ bool operator>(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
  `right`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的清單大於運算子右邊的清單，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is greater than the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- list 物件之間的比較是以其元素的成對比較為基礎。 兩個物件之間的大於關聯性是根據第一對不相等元素的比較。  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The greater-than relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_gt.cpp  
@@ -271,7 +286,7 @@ List c1 is greater than list c2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 測試運算子左邊的清單物件是否大於或等於右邊的清單物件。  
+ Tests if the list object on the left side of the operator is greater than or equal to the list object on the right side.  
   
 ```
 bool operator>=(
@@ -279,20 +294,20 @@ bool operator>=(
     const list<Type, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
  `right`  
- **list** 類型的物件。  
+ An object of type **list**.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的清單大於或等於運算子右邊的清單，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the list on the left side of the operator is greater than or equal to the list on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- list 物件之間的比較是以其元素的成對比較為基礎。 兩個物件之間的大於或等於關聯性，是根據第一對不相等元素的比較。  
+### <a name="remarks"></a>Remarks  
+ The comparison between list objects is based on a pairwise comparison of their elements. The greater than or equal to relationship between two objects is based on a comparison of the first pair of unequal elements.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // list_op_ge.cpp  
@@ -322,7 +337,7 @@ List c1 is greater than or equal to list c2.
 *\  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<list>](../standard-library/list.md)
 
 

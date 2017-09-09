@@ -1,5 +1,5 @@
 ---
-title: "complex 類別 | Microsoft Docs"
+title: complex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,15 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- complex
 - complex/std::complex::value_type
 - complex/std::complex::imag
 - complex/std::complex::real
 dev_langs:
 - C++
 helpviewer_keywords:
-- complex numbers
-- complex class
+- std::complex [C++], value_type
+- std::complex [C++], imag
+- std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
 caps.latest.revision: 18
 author: corob-msft
@@ -37,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8f5f401e61aab91d24679ffdc8d796fb9138ee61
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0018aa0e4d4a7aea33a8893db28f18478ed1010b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="complex-class"></a>complex 類別
-此範本類別描述一個物件，該物件會儲存兩個類型皆為 **Type** 的物件，其中一個代表複數的實數部分，而另一個代表虛數部分。  
+# <a name="complex-class"></a>complex Class
+The template class describes an object that stores two objects of type **Type**, one that represents the real part of a complex number and one that represents the imaginary part.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
  
@@ -56,55 +56,55 @@ Type>
 class complex  
 ```  
   
-## <a name="remarks"></a>備註  
- **Type** 類別的物件：  
+## <a name="remarks"></a>Remarks  
+ An object of class **Type**:  
   
--   具有公用預設建構函式、解構函式、複製建構函式和指派運算子，且這些都具有傳統行為。  
+-   Has a public default constructor, destructor, copy constructor, and assignment operator with conventional behavior.  
   
--   可指派整數或浮點值，或轉換類型為具有傳統行為的值。  
+-   Can be assigned integer or floating-point values, or type cast to such values with conventional behavior.  
   
--   可視需要定義算術運算子和數學函式，將其定義為具有傳統行為的浮點類型。  
+-   Defines the arithmetic operators and math functions, as needed, that are defined for the floating-point types with conventional behavior.  
   
- 特別是在指派之後，細微的差異可能不存在於複製建構和預設建構之間。 **Type** 類別物件的作業可能不會擲回例外狀況。  
+ In particular, no subtle differences may exist between copy construction and default construction followed by assignment. None of the operations on objects of class **Type** may throw exceptions.  
   
- 有三個浮點類型具備 complex 範本類別的明確特製化。 在這項實作中，任何 **Type** 類型以外的值皆會轉換類型為 **double** 以進行實際計算，並將 **double** 結果指派回 **Type**`.` 類型的預存物件。  
+ Explicit specializations of template class complex exist for the three floating-point types. In this implementation, a value of any other type **Type** is typecast to **double** for actual calculations, with the **double** result assigned back to the stored object of type **Type**`.`  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[complex](#complex)|建構具有指定實數與虛數部分或作為其他一些複數複本的複數。|  
+|[complex](#complex)|Constructs a complex number with specified real and imaginary parts or as a copy of some other complex number.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[value_type](#value_type)|類型，表示用來代表複數之實數和虛數部分的資料類型。|  
+|[value_type](#value_type)|A type that represents the data type used to represent the real and imaginary parts of a complex number.|  
   
-### <a name="member-functions"></a>成員函式  
-  
-|||  
-|-|-|  
-|[imag](#imag)|擷取複數的虛數部分。|  
-|[real](#real)|擷取複數的實數部分。|  
-  
-### <a name="operators"></a>運算子  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator*=](#op_star_eq)|將目標複數乘以某個因數，該因數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。|  
-|[operator+=](#op_add_eq)|將目標複數加上某個數字，此加數可能是複雜類型，或者是與複數被加數的實數和虛數部分相同的類型。|  
-|[operator-=](#operator-_eq)|將目標複數減去某個數字，此減數可能是複雜類型，或者是與複數被減數的實數和虛數部分相同的類型。|  
-|[operator/=](#op_div_eq)|將目標複數除以某個除數，該除數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。|  
-|[operator=](#op_eq)|將目標複數指派某個數字，這個指派的數字可能是複雜類型，或者是與目標複數的實數和虛數部分相同的類型。|  
+|[imag](#imag)|Extracts the imaginary component of a complex number.|  
+|[real](#real)|Extracts the real component of a complex number.|  
   
-## <a name="requirements"></a>需求  
- **標頭**：\<complex>  
+### <a name="operators"></a>Operators  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[operator*=](#op_star_eq)|Multiplies a target complex number by a factor, which may be complex or be the same type as are the real and imaginary parts of the complex number.|  
+|[operator+=](#op_add_eq)|Adds a number to a target complex number, where the number added may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.|  
+|[operator-=](#operator-_eq)|Subtracts a number from a target complex number, where the number subtracted may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.|  
+|[operator/=](#op_div_eq)|Divides a target complex number by a divisor, which may be complex or be the same type as are the real and imaginary parts of the complex number.|  
+|[operator=](#op_eq)|Assigns a number to a target complex number, where the number assigned may be complex or of the same type as are the real and imaginary parts of the complex number to which it is being assigned.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<complex>  
+  
+ **Namespace:** std  
   
 ##  <a name="complex"></a>  complex::complex  
- 建構具有指定實數與虛數部分或作為其他一些複數複本的複數。  
+ Constructs a complex number with specified real and imaginary parts or as a copy of some other complex number.  
   
 ```  
 constexpr complex(
@@ -119,36 +119,36 @@ constexpr complex(
     complexNum);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_RealVal`  
- 用於初始化建構中複數之實數部分的值。  
+ The value of the real part used to initialize the complex number being constructed.  
   
  `_ImagVal`  
- 用於初始化建構中複數之虛數部分的值。  
+ The value of the imaginary part used to initialize the complex number being constructed.  
   
  `complexNum`  
- 其實數及虛數用於初始化建構中之複數的複數。  
+ The complex number whose real and imaginary parts are used to initialize the complex number being constructed.  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會將預存的實數部分初始化為 _ *RealVal*，並將預存的虛數部分初始化為 \_ *Imagval*。 第二個建構函式會將預存的實數部分初始化為 `complexNum`**.real**() 並將預存的虛數部分初始化為 `complexNum`**.imag**()。  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the stored real part to _ *RealVal* and the stored imaginary part to \_ *Imagval*. The second constructor initializes the stored real part to `complexNum`**.real**() and the stored imaginary part to `complexNum`**.imag**().  
   
- 在此實作中，若轉譯器不支援成員樣板函式，此樣板：  
+ In this implementation, if a translator does not support member template functions, the template:  
   
 ```  
 template <class Other>  
 complex(const complex<Other>& right);
 ```  
   
- 取代為：  
+ is replaced with:  
   
 ```  
  
 complex(const complex& right);
 ```  
   
- 此為複製建構函式。  
+ which is the copy constructor.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_complex.cpp  
@@ -189,7 +189,7 @@ int main( )
 ```  
   
 ##  <a name="imag"></a>  complex::imag  
- 擷取複數的虛數部分。  
+ Extracts the imaginary component of a complex number.  
   
 ```  
 T imag() const;
@@ -198,17 +198,17 @@ T imag() const;
 T imag(const T& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要擷取其虛數部分的複數。  
+ A complex number whose imaginary value is to be extracted.  
   
-### <a name="return-value"></a>傳回值  
- 複數的虛數部分。  
+### <a name="return-value"></a>Return Value  
+ The imaginary part of the complex number.  
   
-### <a name="remarks"></a>備註  
- 若為複數 *a + bi*，虛數部分或分量為 *Im(a + bi) = b*。  
+### <a name="remarks"></a>Remarks  
+ For a complex number *a + bi*, the imaginary part or component is *Im(a + bi) = b.*  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_imag.cpp  
@@ -240,7 +240,7 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 ```  
   
 ##  <a name="op_star_eq"></a>  complex::operator*=  
- 將目標複數乘以某個因數，該因數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。  
+ Multiplies a target complex number by a factor, which may be complex or be the same type as are the real and imaginary parts of the complex number.  
   
 ```  
 template <class Other>  
@@ -251,17 +251,17 @@ complex<Type>& operator*=(const Type& right);
 complex<Type>& operator*=(const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 複數或與目標複數之參數相同類型的數字。  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>傳回值  
- 複數，其已乘以指定的參數數字。  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been multiplied by the number specified as a parameter.  
   
-### <a name="remarks"></a>備註  
- 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_me.cpp  
@@ -320,7 +320,7 @@ int main() {
 ```  
   
 ##  <a name="op_add_eq"></a>  complex::operator+=  
- 將目標複數加上某個數字，此加數可能是複雜類型，或者是與複數被加數的實數和虛數部分相同的類型。  
+ Adds a number to a target complex number, where the number added may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.  
   
 ```  
 template <class Other>  
@@ -331,17 +331,17 @@ complex<Type>& operator+=(const Type& right);
 complex<Type>& operator+=(const complex<Type>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 複數或與目標複數之參數相同類型的數字。  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>傳回值  
- 複數，其已加上指定的參數數字。  
+### <a name="return-value"></a>Return Value  
+ A complex number that has had the number specified as a parameter added.  
   
-### <a name="remarks"></a>備註  
- 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_pe.cpp  
@@ -419,7 +419,7 @@ The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```  
   
 ##  <a name="complex__operator-_eq"></a>  complex::operator-=  
- 將目標複數減去某個數字，此減數可能是複雜類型，或者是與複數被減數的實數和虛數部分相同的類型。  
+ Subtracts a number from a target complex number, where the number subtracted may be complex or of the same type as are the real and imaginary parts of the complex number to which it is added.  
   
 ```  
 template <class Other>  
@@ -430,20 +430,20 @@ complex<Type>& operator-=(const Type& _RealPart);
 complex<Type>& operator-=(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 複數，其為目標複數的減數。  
+ A complex number to be subtracted from the target complex number.  
   
  `_RealPart`  
- 實數，其為目標複數的減數。  
+ A real number to be subtracted from the target complex number.  
   
-### <a name="return-value"></a>傳回值  
- 複數，其已減去指定的參數數字。  
+### <a name="return-value"></a>Return Value  
+ A complex number that has had the number specified as a parameter subtracted from it.  
   
-### <a name="remarks"></a>備註  
- 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_se.cpp  
@@ -523,7 +523,7 @@ The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```  
   
 ##  <a name="op_div_eq"></a>  complex::operator/=  
- 將目標複數除以某個除數，該除數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。  
+ Divides a target complex number by a divisor, which may be complex or be the same type as are the real and imaginary parts of the complex number.  
   
 ```  
 template <class Other>  
@@ -534,20 +534,20 @@ complex<Type>& operator/=(const Type& _RealPart);
 complex<Type>& operator/=(const complex<Type>& complexNum);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `complexNum`  
- 複數，其為目標複數的減數。  
+ A complex number to be subtracted from the target complex number.  
   
  `_RealPart`  
- 實數，其為目標複數的減數。  
+ A real number to be subtracted from the target complex number.  
   
-### <a name="return-value"></a>傳回值  
- 複數，其已除以指定的參數數字。  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been divided by the number specified as a parameter.  
   
-### <a name="remarks"></a>備註  
- 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_de.cpp  
@@ -623,7 +623,7 @@ The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```  
   
 ##  <a name="op_eq"></a>  complex::operator=  
- 將目標複數指派某個數字，這個指派的數字可能是複雜類型，或者是與目標複數的實數和虛數部分相同的類型。  
+ Assigns a number to a target complex number, where the number assigned may be complex or of the same type as are the real and imaginary parts of the complex number to which it is being assigned.  
   
 ```  
 template <class Other>  
@@ -632,17 +632,17 @@ complex<Type>& operator=(const complex<Other>& right);
 complex<Type>& operator=(const Type& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 複數或與目標複數之參數相同類型的數字。  
+ A complex number or a number that is of the same type as the parameter of the target complex number.  
   
-### <a name="return-value"></a>傳回值  
- 複數，其已指派指定的參數數字。  
+### <a name="return-value"></a>Return Value  
+ A complex number that has been assigned the number specified as a parameter.  
   
-### <a name="remarks"></a>備註  
- 系統會將運算多載以執行簡單的算數運算，而無須將資料轉換成特定格式。  
+### <a name="remarks"></a>Remarks  
+ The operation is overloaded so that simple arithmetic operations can be executed without the conversion of the data to a particular format.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_op_as.cpp  
@@ -697,7 +697,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 ```  
   
 ##  <a name="real"></a>  complex::real  
- 取得或設定複數的實數部分。  
+ Gets or sets the real component of a complex number.  
   
 ```  
 constexpr T real() const;
@@ -706,17 +706,17 @@ constexpr T real() const;
 T real(const T& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要擷取其實數部分的複數。  
+ A complex number whose real value is to be extracted.  
   
-### <a name="return-value"></a>傳回值  
- 複數的實數部分。  
+### <a name="return-value"></a>Return Value  
+ The real part of the complex number.  
   
-### <a name="remarks"></a>備註  
- 若為複數 *a + bi*，實數部分或分量為 *Re(a + bi) = a*。  
+### <a name="remarks"></a>Remarks  
+ For a complex number *a + bi*, the real part or component is *Re(a + bi) = a.*  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_class_real.cpp  
@@ -748,17 +748,17 @@ The imaginary part of c1 is c1.imag ( ) = 3.
 ```  
   
 ##  <a name="value_type"></a>  complex::value_type  
- 類型，表示用來代表複數之實數和虛數部分的資料類型。  
+ A type that represents the data type used to represent the real and imaginary parts of a complex number.  
   
 ```  
  
 typedef Type value_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- `value_type` 是 complex 類別 **Type** 範本參數的同義字。  
+### <a name="remarks"></a>Remarks  
+ `value_type` is a synonym for the class complex **Type** template parameter.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // complex_valuetype.cpp  
@@ -783,8 +783,8 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [complex 成員](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [complex Members](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

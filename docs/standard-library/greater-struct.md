@@ -1,15 +1,14 @@
 ---
-title: "greater 結構 | Microsoft Docs"
+title: greater Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- greater
 - xfunctional/std::greater
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: bcb6c83709d8e0effc202ecfb13659e7f725b1d1
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8113c140b7ff3236fff9169563f9c93633416b95
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="greater-struct"></a>greater 結構
-在其引數上執行大於運算 ( `operator>`) 的二元述詞。  
+# <a name="greater-struct"></a>greater Struct
+A binary predicate that performs the greater-than operation ( `operator>`) on its arguments.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -67,23 +67,23 @@ struct greater<void>
  };
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支援 `operator>` 的任何類型，其接受指定或推斷類型的運算元。  
+ Any type that supports an `operator>` that takes operands of the specified or inferred types.  
   
  `Left`  
- 大於運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
+ The left operand of the greater-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 大於運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
+ The right operand of the greater-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>傳回值  
- `Left``>``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator>` 所傳回的類型。  
+## <a name="return-value"></a>Return Value  
+ The result of `Left > Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator>`.  
   
-## <a name="remarks"></a>備註  
- 二元述詞 `greater`< `Type`> 會提供嚴格弱式排序來將一組 `Type` 類型的元素值分割成等價類別，但只有在此類型滿足以此方式排序的標準數學需求時，才會這麼做。 任何指標類型的特製化都會產生元素的總排序，其中所有不同值的元素都會依照彼此的相關順序排序。  
+## <a name="remarks"></a>Remarks  
+ The binary predicate `greater`< `Type`> provides a strict weak ordering of a set of element values of type `Type` into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_greater.cpp  
@@ -129,7 +129,7 @@ int main( )
 }  
 ```  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
   
 ```
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478 29358)
@@ -137,13 +137,13 @@ Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500 29358)
 Resorted vector v1 = (29358 26500 19169 18467 15724 11478 6334 41)
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

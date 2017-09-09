@@ -1,5 +1,5 @@
 ---
-title: "piecewise_constant_distribution 類別 | Microsoft Docs"
+title: piecewise_constant_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- piecewise_constant_distribution
 - random/std::piecewise_constant_distribution
 - random/std::piecewise_constant_distribution::reset
 - random/std::piecewise_constant_distribution::intervals
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- piecewise_constant_distribution class
+- std::piecewise_constant_distribution [C++]
+- std::piecewise_constant_distribution [C++], reset
+- std::piecewise_constant_distribution [C++], intervals
+- std::piecewise_constant_distribution [C++], densities
+- std::piecewise_constant_distribution [C++], param
+- std::piecewise_constant_distribution [C++], min
+- std::piecewise_constant_distribution [C++], max
+- std::piecewise_constant_distribution [C++], param_type
+- std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
 caps.latest.revision: 23
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fecb32f7916b79d631ed7a6ccf4cb55b89448fa0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e94b741b5ab9c53705ed264241e1f7fcd83fdfad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution 類別
-產生分段常數分佈，其中有不同寬度間隔，且每個間隔中有統一可能性。  
+# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution Class
+Generates a piecewise constant distribution that has varying-width intervals with uniform probability in each interval.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>  
 class piecewise_constant_distribution  
@@ -97,35 +104,35 @@ public:
    };  
 ```  
 
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-浮點結果類型，預設值為 `double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+The floating point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>備註  
-此取樣分佈有不同寬度間隔，且每個間隔中有統一可能性。 如需其他取樣分佈的詳細資訊，請參閱 [piecewise_linear_distribution 類別](../standard-library/piecewise-linear-distribution-class.md)和 [discrete_distribution](../standard-library/discrete-distribution-class.md)。  
+## <a name="remarks"></a>Remarks  
+This sampling distribution has varying-width intervals with uniform probability in each interval. For information about other sampling distributions, see [piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) and [discrete_distribution](../standard-library/discrete-distribution-class.md).  
   
-下表提供各個成員的文章連結：  
+The following table links to articles about individual members:  
   
 ||||  
 |-|-|-|  
 |[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
 |`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|  
   
-屬性函式 `intervals()` 會傳回 `vector<result_type>`，其中具有儲存的分佈間隔的設定。  
+The property function `intervals()` returns a `vector<result_type>` with the set of stored intervals of the distribution.  
   
-屬性函式 `densities()` 會傳回 `vector<result_type>`，其中具有針對每個間隔設定所儲存的密度，這是根據建構函式參數中提供的加權所計算而得。  
+The property function `densities()` returns a `vector<result_type>` with the stored densities for each interval set, which are calculated according to the weights provided in the constructor parameters.  
   
-屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 成員函式會捨棄任何快取的值，讓下個針對 `operator()` 呼叫的結果不是取決於呼叫之前取自引擎的任何值。  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -230,13 +237,13 @@ Distribution for 100 samples:
     14-15 ::::::::  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
-建構分佈。  
+Constructs the distribution.  
   
 ```  
 // default constructor  
@@ -262,47 +269,47 @@ piecewise_constant_distribution(size_t count, RealType xmin, RealType xmax, Unar
 explicit piecewise_constant_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `firstI`  
- 分佈範圍中第一個元素的輸入迭代器。  
+ An input iterator of the first element in the distribution range.  
   
  `lastI`  
- 分佈範圍中最後一個元素的輸入迭代器。  
+ An input iterator of the last element in the distribution range.  
   
  `firstW`  
- 加權範圍中第一個元素的輸入迭代器。  
+ An input iterator of the first element in the weights range.  
   
  `intervals`  
- 具有分佈間隔的 [initializer_list](../cpp/initializers.md)。  
+ An [initializer_list](../cpp/initializers.md) with the intervals of the distribution.  
   
  `count`  
- 分佈範圍中的元素數目。  
+ The number of elements in the distribution range.  
   
  `xmin`  
- 分佈範圍中的最低值。  
+ The lowest value in the distribution range.  
   
  `xmax`  
- 分佈範圍中的最高值。 必須大於 `xmin`。  
+ The highest value in the distribution range. Must be greater than `xmin`.  
   
  `weightfunc`  
- 表示分佈的可能性函式的物件。 參數和傳回值都必須可以轉換為 `double`。  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
  `parm`  
- 用於建構分佈的參數結構。  
+ The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>備註  
-預設建構函式會設定儲存的參數，因此會有可能性密度為 1 的一個間隔 (0 到 1)。  
+### <a name="remarks"></a>Remarks  
+The default constructor sets the stored parameters such that there is one interval, 0 to 1, with a probability density of 1.  
   
-迭代器範圍建構函式  
+The iterator range constructor  
 ```  
 template <class InputIteratorI, class InputIteratorW>  
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,  
     InputIteratorW firstW);
 ```  
   
-建構分佈物件，而分佈物件具有序列 [`firstI`, `lastI`) 上來自迭代器的間隔，以及從 `firstW` 開始的相符加權序列。  
+constructs a distribution object with itnervals from iterators over the sequence [ `firstI`, `lastI`) and a matching weight sequence starting at `firstW`.  
   
-初始設定式清單建構函式  
+The initializer list constructor  
 ```  
 template <class UnaryOperation>  
 piecewise_constant_distribution(initializer_list<result_type>  
@@ -310,26 +317,26 @@ intervals,
     UnaryOperation weightfunc);
 ```  
   
-建構分佈物件，而分佈物件具有來自初始設定式清單 `intervals` 的間隔，以及透過函式 `weightfunc` 產生的加權。  
+constructs a distribution object with intervals from the intializer list `intervals` and weights generated from the function `weightfunc`.  
   
-建構函式定義為  
+The constructor defined as  
 ```  
 template <class UnaryOperation>  
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,  
     UnaryOperation weightfunc);
 ```  
   
-建構分佈物件，其具有平均分佈在 [`xmin,xmax`] 的 `count` 個間隔 (根據函式 `weightfunc` 指派每個間隔加權)，而且 `weightfunc` 必須接受一個參數並有一個傳回值 (兩者都可以轉換為 `double`)。 **前置條件：**`xmin < xmax`  
+constructs a distribution object with `count` intervals distributed uniformly over [ `xmin,xmax`], assigning each interval weights according to the function `weightfunc`, and `weightfunc` must accept one parameter and have a return value, both of which are convertible to `double`. **Precondition:** `xmin < xmax`  
   
-建構函式定義為  
+The constructor defined as  
 ```  
 explicit piecewise_constant_distribution(const param_type& parm);
 ```  
   
-使用 `parm` 做為儲存參數結構，以建構分佈物件。  
+constructs a distribution object using `parm` as the stored parameter structure.  
   
 ##  <a name="param_type"></a>  piecewise_constant_distribution::param_type  
-儲存分佈的所有參數。  
+Stores all the parameters of the distribution.  
   
 ```    
 struct param_type {  
@@ -347,15 +354,15 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>參數  
-請參閱 [piecewise_constant_distribution](#piecewise_constant_distribution) 的建構函式參數。  
+### <a name="parameters"></a>Parameters  
+See the constructor parameters for the [piecewise_constant_distribution](#piecewise_constant_distribution).  
   
-### <a name="remarks"></a>備註  
- **前置條件：**`xmin < xmax`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `xmin < xmax`  
   
-此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)   
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)
 

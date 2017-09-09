@@ -1,5 +1,5 @@
 ---
-title: "sync_shared 類別 | Microsoft Docs"
+title: sync_shared Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,16 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- sync_shared
 - allocators/stdext::sync_shared
-- stdext::sync_shared
 - allocators/stdext::sync_shared::allocate
 - allocators/stdext::sync_shared::deallocate
 - allocators/stdext::sync_shared::equals
 dev_langs:
 - C++
 helpviewer_keywords:
-- sync_shared class
+- stdext::sync_shared
+- stdext::sync_shared [C++], allocate
+- stdext::sync_shared [C++], deallocate
+- stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
 caps.latest.revision: 19
 author: corob-msft
@@ -38,98 +39,98 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d3cfcde97a0f6c89b1f18c4026c6ab49db66fd96
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 14dae43c422833556004f6522c4096a85fb0ac3f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="syncshared-class"></a>sync_shared 類別
-描述的[同步處理篩選](../standard-library/allocators-header.md)會使用 mutex 來控制對所有配置器所共用之快取物件的存取。  
+# <a name="syncshared-class"></a>sync_shared Class
+Describes a [synchronization filter](../standard-library/allocators-header.md) that uses a mutex to control access to a cache object that is shared by all allocators.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Cache>  
 class sync_shared
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|  
+|`Cache`|The type of cache associated with the synchronization filter. This can be [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|配置記憶體區塊。|  
-|[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|  
-|[equals](#equals)|比較兩個快取是否相等。|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[equals](#equals)|Compares two caches for equality.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **命名空間：** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  sync_shared::allocate  
- 配置記憶體區塊。  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|陣列中要配置的項目數。|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>傳回值  
- 所配置物件的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>備註  
- 成員函式會鎖定 mutex、呼叫 `cache.allocate(count)`、解除鎖定 mutex，然後傳回之前呼叫 `cache.allocate(count)` 的結果。 `cache`，代表目前的快取物件。  
+### <a name="remarks"></a>Remarks  
+ The member function locks the mutex, calls `cache.allocate(count)`, unlocks the mutex, and returns the result of the earlier call to `cache.allocate(count)`. `cache` represents the current cache object.  
   
 ##  <a name="deallocate"></a>  sync_shared::deallocate  
- 從指定位置起算的儲存體中，釋放指定數目的物件。  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|  
-|`count`|要從儲存空間解除配置的物件數目。|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>備註  
- 此成員函式會鎖定 mutex、呼叫 `cache.deallocate(ptr, count)` (其中 `cache` 代表快取物件)，然後解除鎖定 mutex。  
+### <a name="remarks"></a>Remarks  
+ This member function locks the mutex, calls `cache.deallocate(ptr, count)`, where `cache` represents the cache object, and then unlocks the mutex.  
   
 ##  <a name="equals"></a>  sync_shared::equals  
- 比較兩個快取是否相等。  
+ Compares two caches for equality.  
   
 ```
 bool equals(const sync_shared<Cache>& Other) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|與同步處理篩選相關聯的快取類型。|  
-|`Other`|要比較是否相等的快取。|  
+|`Cache`|The type of cache associated with the synchronization filter.|  
+|`Other`|The cache to compare for equality.|  
   
-### <a name="return-value"></a>傳回值  
- 如果 `cache.equals(Other.cache)` 的結果 (其中 `cache` 代表快取物件) 是 `true`，即為 `true`，否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the result of `cache.equals(Other.cache)`, where `cache` represents the cache object, is `true`; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

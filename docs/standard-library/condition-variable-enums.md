@@ -1,5 +1,5 @@
 ---
-title: "&lt;condition_variable&gt; 列舉 | Microsoft Docs"
+title: '&lt;condition_variable&gt; enums | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,24 +11,24 @@ f1_keywords:
 ms.assetid: f261ad79-e25b-4afa-9f8a-909ce697e0d8
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 8eefe4c79537e8efabe4ef1fdad11b180deefcd1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1ac74f3a5073ae0b3dde0dfbed7059054e50689a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltconditionvariablegt-enums"></a>&lt;condition_variable&gt; 列舉
+# <a name="ltconditionvariablegt-enums"></a>&lt;condition_variable&gt; enums
 ||  
 |-|  
 |[cv_status](#cv_status)|  
   
-##  <a name="cv_status"></a>  cv_status 列舉  
- 提供 [condition_variable](../standard-library/condition-variable-class.md) 範本類別方法之傳回值的符號名稱。  
+##  <a name="cv_status"></a>  cv_status Enumeration  
+ Supplies symbolic names for the return values of the methods of template class [condition_variable](../standard-library/condition-variable-class.md).  
   
 class cv_status { no_timeout timeout };  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<condition_variable>](../standard-library/condition-variable.md)
 
 

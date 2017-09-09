@@ -1,5 +1,5 @@
 ---
-title: "numpunct 類別 | Microsoft Docs"
+title: numpunct Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocnum/std::numpunct
-- numpunct
 - locale/std::numpunct::char_type
 - locale/std::numpunct::string_type
 - locale/std::numpunct::decimal_point
@@ -26,7 +25,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- numpunct class
+- std::numpunct [C++]
+- std::numpunct [C++], char_type
+- std::numpunct [C++], string_type
+- std::numpunct [C++], decimal_point
+- std::numpunct [C++], do_decimal_point
+- std::numpunct [C++], do_falsename
+- std::numpunct [C++], do_grouping
+- std::numpunct [C++], do_thousands_sep
+- std::numpunct [C++], do_truename
+- std::numpunct [C++], falsename
+- std::numpunct [C++], grouping
+- std::numpunct [C++], thousands_sep
+- std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 caps.latest.revision: 22
 author: corob-msft
@@ -46,87 +57,87 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 56dbd3ed6e655ec5f431d383864f949925baaf5c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: aaaeb63198a6ff5191f5bb758c90c0d41d3dc4c4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="numpunct-class"></a>numpunct 類別
-樣板類別，描述可以做為區域 facet 的物件，以描述用來表示數值和布林運算式格式和標點符號資訊之 `CharType` 類型的序列。  
+# <a name="numpunct-class"></a>numpunct Class
+A template class that describes an object that can serve as a local facet to describe the sequences of type `CharType` used to represent information about the formatting and punctuation of numeric and Boolean expressions.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType>  
 class numpunct : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 程式內用於編碼地區設定字元的類型。  
+ The type used within a program to encode characters in a locale.  
   
-## <a name="remarks"></a>備註  
- 如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[numpunct](#numpunct)|`numpunct` 類型物件的建構函式。|  
+|[numpunct](#numpunct)|The constructor for objects of type `numpunct`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|  
-|[string_type](#string_type)|類型，描述包含 `CharType` 類型字元的字串。|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[decimal_point](#decimal_point)|傳回地區設定特定項目以做為小數點。|  
-|[do_decimal_point](#do_decimal_point)|受保護的虛擬成員函式，呼叫以傳回要做為小數點的地區設定特定項目。|  
-|[do_falsename](#do_falsename)|受保護的虛擬成員函式，呼叫以傳回要當做 `false` 值的文字表示的字串。|  
-|[do_grouping](#do_grouping)|受保護的虛擬成員函式，呼叫以傳回決定如何將數字群組在小數點左側的地區設定特定規則。|  
-|[do_thousands_sep](#do_thousands_sep)|受保護的虛擬成員函式，呼叫以傳回要做為千位分隔符號的地區設定特定項目。|  
-|[do_truename](#do_truename)|受保護的虛擬成員函式，呼叫以傳回要當做 `true` 值的文字表示的字串。|  
-|[falsename](#falsename)|傳回字串，做為 `false` 值的文字表示。|  
-|[grouping](#grouping)|傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。|  
-|[thousands_sep](#thousands_sep)|傳回地區設定特定項目以做為千位分隔符號。|  
-|[truename](#truename)|傳回字串，做為 `true` 值的文字表示。|  
+|[decimal_point](#decimal_point)|Returns a locale-specific element to use as a decimal point.|  
+|[do_decimal_point](#do_decimal_point)|A protected virtual member function that is called to return a locale-specific element to use as a decimal point.|  
+|[do_falsename](#do_falsename)|A protected virtual member function that is called to return a string to use as a text representation of the value `false`.|  
+|[do_grouping](#do_grouping)|A protected virtual member function that is called to return a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
+|[do_thousands_sep](#do_thousands_sep)|A protected virtual member function that is called to return a locale-specific element to use as a thousands separator.|  
+|[do_truename](#do_truename)|A protected virtual member function that is called to return a string to use as a text representation of the value `true`.|  
+|[falsename](#falsename)|Returns a string to use as a text representation of the value `false`.|  
+|[grouping](#grouping)|Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
+|[thousands_sep](#thousands_sep)|Returns a locale-specific element to use as a thousands separator.|  
+|[truename](#truename)|Returns a string to use as a text representation of the value `true`.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  numpunct::char_type  
- 類型，用來描述由地區設定使用的字元。  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType.**  
   
 ##  <a name="decimal_point"></a>  numpunct::decimal_point  
- 傳回地區設定特定項目以做為小數點。  
+ Returns a locale-specific element to use as a decimal point.  
   
 ```  
 CharType decimal_point() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 要做為小數點的地區設定特定項目。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific element to use as a decimal point.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_decimal_point](#do_decimal_point)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_decimal_point](#do_decimal_point).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_decimal_point.cpp  
@@ -154,97 +165,97 @@ German_Germany.1252 thousands separator .
 ```  
   
 ##  <a name="do_decimal_point"></a>  numpunct::do_decimal_point  
- 受保護的虛擬成員函式，呼叫以傳回要做為小數點的地區設定特定項目。  
+ A protected virtual member function that is called to return a locale-specific element to use as a decimal point.  
   
 ```  
 virtual CharType do_decimal_point() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 要做為小數點的地區設定特定項目。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific element to use as a decimal point.  
   
-### <a name="example"></a>範例  
-  請參閱 [decimal_point](#decimal_point) 的範例，其中 `decimal_point` 會呼叫虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [decimal_point](#decimal_point), where the virtual member function is called by `decimal_point`.  
   
 ##  <a name="do_falsename"></a>  numpunct::do_falsename  
- 受保護的虛擬成員函式，傳回當作 **false** 值的文字表示的序列。  
+ The protected virtual member function returns a sequence to use as a text representation of the value **false**.  
   
 ```  
 virtual string_type do_falsename() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 字串，包含當作 **false** 值的文字表示的序列。  
+### <a name="return-value"></a>Return Value  
+ A string containing a sequence to use as a text representation of the value **false**.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回字串 "false" 來表示所有地區設定中的 **false** 值。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the string "false" to represent the value **false** in all locales.  
   
-### <a name="example"></a>範例  
-  請參閱 [falsename](#falsename) 的範例，其中 `falsename` 會呼叫虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [falsename](#falsename), where the virtual member function is called by `falsename`.  
   
 ##  <a name="do_grouping"></a>  numpunct::do_grouping  
- 受保護的虛擬成員函式，呼叫以傳回決定如何將數字群組在小數點左側的地區設定特定規則。  
+ A protected virtual member function that is called to return a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
 ```  
 virtual string do_grouping() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定規則，用來決定任何小數點左邊數字分組的方式。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
-### <a name="remarks"></a>備註  
- 受保護的虛擬成員函式傳回決定如何將數字群組在小數點左側的地區設定特定規則。 編碼和 **lconv::grouping** 相同。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function returns a locale-specific rule for determining how digits are grouped to the left of any decimal point. The encoding is the same as for **lconv::grouping**.  
   
-### <a name="example"></a>範例  
-  請參閱 [grouping](#grouping) 的範例，其中 **grouping** 會呼叫虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [grouping](#grouping), where the virtual member function is called by **grouping**.  
   
 ##  <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep  
- 受保護的虛擬成員函式，呼叫以傳回要做為千位分隔符號的地區設定特定項目。  
+ A protected virtual member function that is called to return a locale-specific element to use as a thousands separator.  
   
 ```  
 virtual CharType do_thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回地區設定特定項目以做為千位分隔符號。  
+### <a name="return-value"></a>Return Value  
+ Returns a locale-specific element to use as a thousands separator.  
   
-### <a name="remarks"></a>備註  
- 受保護的虛擬成員函式會傳回類型 **CharType** 的地區設定特定項目，當作任何小數點左側的群組分隔符號。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function returns a locale-specific element of type **CharType** to use as a group separator to the left of any decimal point.  
   
-### <a name="example"></a>範例  
-  請參閱 [thousands_sep](#thousands_sep) 的範例，其中 `thousands_sep` 會呼叫虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [thousands_sep](#thousands_sep), where the virtual member function is called by `thousands_sep`.  
   
 ##  <a name="do_truename"></a>  numpunct::do_truename  
- 受保護的虛擬成員函式，呼叫以傳回要當做 **true** 值的文字表示的字串。  
+ A protected virtual member function that is called to return a string to use as a text representation of the value **true**.  
   
 ```  
 virtual string_type do_truename() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 字串，做為 **true** 值的文字表示。  
+### <a name="remarks"></a>Remarks  
+ A string to use as a text representation of the value **true**.  
   
- 所有的地區設定會傳回字串 "true" 來表示 **true** 值。  
+ All locales return a string "true" to represent the value **true**.  
   
-### <a name="example"></a>範例  
-  請參閱 [truename](#truename) 的範例，其中 `truename` 會呼叫虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [truename](#truename), where the virtual member function is called by `truename`.  
   
 ##  <a name="falsename"></a>  numpunct::falsename  
- 傳回字串，做為 **false** 值的文字表示。  
+ Returns a string to use as a text representation of the value **false**.  
   
 ```  
 string_type falsename() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 字串，包含當作 **false** 值的文字表示的 **CharType** 序列。  
+### <a name="return-value"></a>Return Value  
+ A string containing a sequence of **CharType**s to use as a text representation of the value **false**.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回字串 "false" 來表示所有地區設定中的 **false** 值。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the string "false" to represent the value **false** in all locales.  
   
- 成員函式會傳回 [do_falsename](#do_falsename)。  
+ The member function returns [do_falsename](#do_falsename).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_falsename.cpp  
@@ -276,19 +287,19 @@ French_France.1252 falsename false
 ```  
   
 ##  <a name="grouping"></a>  numpunct::grouping  
- 傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。  
+ Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
 ```  
 string grouping() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定規則，用來決定任何小數點左邊數字分組的方式。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_grouping](#do_grouping)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_grouping](#do_grouping).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_grouping.cpp  
@@ -319,53 +330,53 @@ German_Germany.1252 international grouping:
 ```  
   
 ##  <a name="numpunct"></a>  numpunct::numpunct  
- `numpunct` 類型物件的建構函式。  
+ The constructor for objects of type `numpunct`.  
   
 ```  
 explicit numpunct(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 整數值，用來指定物件的記憶體管理類型。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>備註  
- `_Refs` 參數的可能值和其意義如下：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：物件的存留期由包含該物件的地區設定來管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：物件的存留期必須以手動方式管理。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定義這些值。  
+-   \> 1: These values are not defined.  
   
- 無法提供任何直接範例，因為解構函式受到保護。  
+ No direct examples are possible, because the destructor is protected.  
   
- 建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 初始化其基底物件。  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ##  <a name="string_type"></a>  numpunct::string_type  
- 類型，描述包含 **CharType** 類型字元的字串。  
+ A type that describes a string containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型描述 [basic_string](../standard-library/basic-string-class.md) 樣板類別的特製化，其物件可儲存標點符號序列的複本。  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the punctuation sequences.  
   
 ##  <a name="thousands_sep"></a>  numpunct::thousands_sep  
- 傳回地區設定特定項目以做為千位分隔符號。  
+ Returns a locale-specific element to use as a thousands separator.  
   
 ```  
 CharType thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 要做為千位分隔符號的地區設定特定項目。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific element to use as a thousands separator.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_thousands_sep](#do_thousands_sep)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_thousands_sep](#do_thousands_sep).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_thou_sep.cpp  
@@ -393,21 +404,21 @@ German_Germany.1252 thousands separator .
 ```  
   
 ##  <a name="truename"></a>  numpunct::truename  
- 傳回字串，做為 **true** 值的文字表示。  
+ Returns a string to use as a text representation of the value **true**.  
   
 ```  
 string_type falsename() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 字串，做為 **true** 值的文字表示。  
+### <a name="return-value"></a>Return Value  
+ A string to use as a text representation of the value **true**.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 [do_truename](#do_truename)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_truename](#do_truename).  
   
- 所有的地區設定會傳回字串 "true" 來表示 **true** 值。  
+ All locales return a string "true" to represent the value **true**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numpunct_truename.cpp  
@@ -438,9 +449,9 @@ French_France.1252 truename true
 French_France.1252 falsename false  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [facet 類別](../standard-library/locale-class.md#facet_class)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "remove_cv 類別 | Microsoft Docs"
+title: remove_cv Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_cv
 - type_traits/std::remove_cv
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: e8e219b296e352fb5ad2f6e470126bfd2b773355
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 89ce7d66adfa283c711db1563fe5e72b7ba150a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removecv-class"></a>remove_cv 類別
-從類型建立非 const/volatile 類型。  
+# <a name="removecv-class"></a>remove_cv Class
+Makes non const/volatile type from type.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_cv_t = typename remove_cv<T>::type;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要修改的類型。  
+ The type to modify.  
   
-## <a name="remarks"></a>備註  
- `remove_cv<T>` 執行個體儲存修改的類型，如果 `T1` 的格式為 `T`、`const T1` 或 `volatile T1`，類型為 `const volatile T1`，否則為 `T`。  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_cv<T>` holds a modified-type that is `T1` when `T` is of the form `const T1`, `volatile T1`, or `const volatile T1`, otherwise `T`.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,13 +83,13 @@ int main()
 remove_cv_t<const volatile int> == int  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_const 類別](../standard-library/remove-const-class.md)   
- [remove_volatile 類別](../standard-library/remove-volatile-class.md)
+ [remove_const Class](../standard-library/remove-const-class.md)   
+ [remove_volatile Class](../standard-library/remove-volatile-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "&lt;locale&gt; 函式 | Microsoft Docs"
+title: '&lt;locale&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,14 +25,30 @@ f1_keywords:
 ms.assetid: b06c1ceb-33a7-48d3-8d4b-2714bbb27f14
 caps.latest.revision: 15
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c2af4555aca38e0c8997a5a1ba6f3dac34f30b3c
+helpviewer_keywords:
+- std::has_facet [C++]
+- std::isalnum [C++]
+- std::isalpha [C++]
+- std::iscntrl [C++]
+- std::isdigit [C++]
+- std::isgraph [C++]
+- std::islower [C++]
+- std::isprint [C++]
+- std::ispunct [C++]
+- std::isspace [C++]
+- std::isupper [C++]
+- std::isxdigit [C++]
+- std::tolower [C++]
+- std::toupper [C++]
+- std::use_facet [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4d3be53163b1ca0676e0561ab10ad1d8af545858
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltlocalegt-functions"></a>&lt;locale&gt; 函式
+# <a name="ltlocalegt-functions"></a>&lt;locale&gt; functions
 ||||  
 |-|-|-|  
 |[has_facet](#has_facet)|[isalnum](#isalnum)|[isalpha](#isalpha)|  
@@ -42,24 +58,24 @@ ms.lasthandoff: 04/29/2017
 |[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|  
   
 ##  <a name="has_facet"></a>  has_facet  
- 測試特定的 facet 是否在指定的地區設定中儲存。  
+ Tests if a particular facet is stored in a specified locale.  
   
 ```  
 template <class Facet>  
 bool has_facet(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- 要測試是否有 facet 存在的地區設定。  
+ The locale to be tested for the presence of a facet.  
   
-### <a name="return-value"></a>傳回值  
- 如果地區設定具有所測試的 facet，便會傳回 **true**；如果沒有，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the locale has the facet tested for; **false** if it does not.  
   
-### <a name="remarks"></a>備註  
- 此範本函式可用來在呼叫 `use_facet` 之前，先檢查地區設定中是否有列出非強制性 facet，以避免因 facet 不存在而擲回例外狀況。  
+### <a name="remarks"></a>Remarks  
+ The template function is useful for checking whether nonmandatory facets are listed in a locale before `use_facet` is called to avoid the exception that would be thrown if it were not present.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_has_facet.cpp  
@@ -81,24 +97,24 @@ int main( )
 ```  
   
 ##  <a name="isalnum"></a>  isalnum  
- 測試地區設定中的項目是否為字母或數字字元。  
+ Tests whether an element in a locale is an alphabetic or a numeric character.  
   
 ```  
 template <class CharType>  
 bool isalnum(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的英數字元元素。  
+ The alphanumeric element to be tested.  
   
  `Loc`  
- 包含要測試之英數字元元素的地區設定。  
+ The locale containing the alphanumeric element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是英數字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is alphanumeric; **false** if it is not.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isalnum.cpp  
@@ -145,27 +161,27 @@ The character '3' in the locale is alphanumeric.
 ```  
   
 ##  <a name="isalpha"></a>  isalpha  
- 測試地區設定中的元素是否為字母字元。  
+ Tests whether an element in a locale is an alphabetic character.  
   
 ```  
 template <class CharType>  
 bool isalpha(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之字母元素的地區設定。  
+ The locale containing the alphabetic element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是字母字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is alphabetic; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isalpha.cpp  
@@ -206,27 +222,27 @@ int main( )
 ```  
   
 ##  <a name="iscntrl"></a>  iscntrl  
- 測試地區設定中的項目是否為控制字元。  
+ Tests whether an element in a locale is a control character.  
   
 ```  
 template <class CharType>  
 bool iscntrl(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是控制字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a control character; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_iscntrl.cpp  
@@ -267,27 +283,27 @@ int main( )
 ```  
   
 ##  <a name="isdigit"></a>  isdigit  
- 測試地區設定中的項目是否為數字字元。  
+ Tests whether an element in a locale is a numeric character.  
   
 ```  
 template <class CharType>  
 bool isdigit(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是數字字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a numeric character; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_is_digit.cpp  
@@ -328,27 +344,27 @@ int main( )
 ```  
   
 ##  <a name="isgraph"></a>  isgraph  
- 測試地區設定中的項目是否為英數字元或標點符號字元。  
+ Tests whether an element in a locale is an alphanumeric or punctuation character.  
   
 ```  
 template <class CharType>  
 bool isgraph(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是英數字元或標點符號字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is an alphanumeric or a punctuation character; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_is_graph.cpp  
@@ -389,27 +405,27 @@ int main( )
 ```  
   
 ##  <a name="islower"></a>  islower  
- 測試地區設定中的項目是否為小寫。  
+ Tests whether an element in a locale is lower case.  
   
 ```  
 template <class CharType>  
 bool islower(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是小寫字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a lowercase character; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_islower.cpp  
@@ -450,27 +466,27 @@ int main( )
 ```  
   
 ##  <a name="isprint"></a>  isprint  
- 測試地區設定中的項目是否為可列印的字元。  
+ Tests whether an element in a locale is a printable character.  
   
 ```  
 template <class CharType>  
 bool isprint(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是可列印字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a printable; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isprint.cpp  
@@ -510,27 +526,27 @@ int main( )
 ```  
   
 ##  <a name="ispunct"></a>  ispunct  
- 測試地區設定中的項目是否為標點符號字元。  
+ Tests whether an element in a locale is a punctuation character.  
   
 ```  
 template <class CharType>  
 bool ispunct(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是標點符號字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a punctuation character; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_ispunct.cpp  
@@ -571,27 +587,27 @@ int main( )
 ```  
   
 ##  <a name="isspace"></a>  isspace  
- 測試地區設定中的項目是否為空白字元。  
+ Tests whether an element in a locale is a whitespace character.  
   
 ```  
 template <class CharType>  
 bool isspace(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是空白字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a whitespace character; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isspace.cpp  
@@ -632,27 +648,27 @@ int main( )
 ```  
   
 ##  <a name="isupper"></a>  isupper  
- 測試地區設定中的元素是否為大寫。  
+ Tests whether an element in a locale is in upper case.  
   
 ```  
 template <class CharType>  
 bool isupper(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是大寫字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is an uppercase character; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isupper.cpp  
@@ -693,29 +709,29 @@ int main( )
 ```  
   
 ##  <a name="isxdigit"></a>  isxdigit  
- 測試地區設定中的項目是否為用來表示十六進位數字的字元。  
+ Tests whether an element in a locale is a character used to represent a hexadecimal number.  
   
 ```  
 template <class CharType>  
 bool isxdigit(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要測試的元素。  
+ The element to be tested.  
   
  `Loc`  
- 包含要測試之元素的地區設定。  
+ The locale containing the element to be tested.  
   
-### <a name="return-value"></a>傳回值  
- 如果所測試的元素是用來表示十六進位數字的字元，便會傳回 **true**；如果不是，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the element tested is a character used to represent a hexadecimal number; **false** if it is not.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).  
   
- 十六進位數字會使用以 16 為底數的方式來表示數字，其中是使用數字 0 到 9 再加上不區分大小寫的字母 A 到 F，來表示十進位數字 0 到 15。  
+ Hexadecimal digits use base 16 to represent numbers, using the numbers 0 through 9 plus case-insensitive letters A through F to represent the decimal numbers 0 through 15.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_isxdigit.cpp  
@@ -756,27 +772,27 @@ int main( )
 ```  
   
 ##  <a name="tolower"></a>  tolower  
- 將字元轉換為小寫。  
+ Converts a character to lower case.  
   
 ```  
 template <class CharType>  
 CharType tolower(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要轉換為小寫的字元。  
+ The character to be converted to lower case.  
   
  `Loc`  
- 包含要轉換之字元的地區設定。  
+ The locale containing the character to be converted.  
   
-### <a name="return-value"></a>傳回值  
- 已轉換為小寫的字元。  
+### <a name="return-value"></a>Return Value  
+ The character converted to lower case.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_tolower.cpp  
@@ -801,27 +817,27 @@ int main( )
 ```  
   
 ##  <a name="toupper"></a>  toupper  
- 將字元轉換為大寫。  
+ Converts a character to upper case.  
   
 ```  
 template <class CharType>  
 CharType toupper(CharType Ch, const locale& Loc)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要轉換為大寫的字元。  
+ The character to be converted to upper case.  
   
  `Loc`  
- 包含要轉換之字元的地區設定。  
+ The locale containing the character to be converted.  
   
-### <a name="return-value"></a>傳回值  
- 已轉換為大寫的字元。  
+### <a name="return-value"></a>Return Value  
+ The character converted to upper case.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`)。  
+### <a name="remarks"></a>Remarks  
+ The template function returns [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> >( `Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_toupper.cpp  
@@ -846,24 +862,24 @@ int main( )
 ```  
   
 ##  <a name="use_facet"></a>  use_facet  
- 傳回儲存在地區設定中指定之類型的 facet 的參考。  
+ Returns a reference to a facet of a specified type stored in a locale.  
   
 ```  
 template <class Facet>  
 const Facet& use_facet(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- 包含所要參考之 facet 類型的常數地區設定。  
+ The const locale containing the type of facet being referenced.  
   
-### <a name="return-value"></a>傳回值  
- 對 locale 引數內所包含之 `Facet` 類別 facet 的參考。  
+### <a name="return-value"></a>Return Value  
+ A reference to the facet of class `Facet` contained within the argument locale.  
   
-### <a name="remarks"></a>備註  
- 只要有任何一個包含 facet 的地區設定複本存在，此範本函式所傳回對 facet 的參考就會保持有效。 如果 locale 引數中未列出任何這類 `Facet` 類別的 facet 物件，此函式就會擲回 `bad_cast` 例外狀況。  
+### <a name="remarks"></a>Remarks  
+ The reference to the facet returned by the template function remains valid as long as any copy of the containing locale exists. If no such facet object of class `Facet` is listed in the argument locale, the function throws a `bad_cast` exception.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_use_facet.cpp  
@@ -902,7 +918,7 @@ The character 'a' in locale loc1 is alphabetic.
 The character '!' in locale loc2 is not alphabetic.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)
 
 

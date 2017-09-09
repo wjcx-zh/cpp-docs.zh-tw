@@ -1,5 +1,5 @@
 ---
-title: "alignment_of 類別 | Microsoft Docs"
+title: alignment_of Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- alignment_of
 - type_traits/std::alignment_of
 dev_langs:
 - C++
@@ -35,36 +34,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: dee638b0260deff1d8701353c7119fc1b0082685
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 63754bd686c7d1823e01ea5a2790cbeb8771e04e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="alignmentof-class"></a>alignment_of 類別
-取得指定類型的對齊方式。 此結構是針對 [alignof](../cpp/alignof-and-alignas-cpp.md) 所實作。 若只需要查詢對齊值，請直接使用 `alignof`。 當您需要整數常數 (例如進行標記分派時)，請使用 alignment_of。  
+# <a name="alignmentof-class"></a>alignment_of Class
+Gets alignment of the specified type. This struct is implemented in terms of [alignof](../cpp/alignof-and-alignas-cpp.md). Use `alignof` directly when you simply need to query an alignment value. Use alignment_of when you need an integral constant, for example when doing tag dispatch.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct alignment_of;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查詢的類型。  
+ The type to query.  
   
-## <a name="remarks"></a>備註  
- 類型查詢會保存類型 `Ty` 的對齊值。  
+## <a name="remarks"></a>Remarks  
+ The type query holds the value of the the alignment of the type `Ty`.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [aligned_storage 類別](../standard-library/aligned-storage-class.md)
+ [aligned_storage Class](../standard-library/aligned-storage-class.md)
 

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<new>
-- <new>
-- std.<new>
+- std::<new>", "<new>", "std.<new>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,63 +33,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e804f35db459c7fe50bb36fa8eeaf795d04cc621
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0a864c12451b9265c35405b2b3c5eac82a577485
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
-定義數個類型和函式，對在程式控制下之儲存體控制配置和釋放。 它也會定義儲存體管理錯誤報告的元件。  
+Defines several types and functions that control the allocation and freeing of storage under program control. It also defines components for reporting on storage management errors.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <new>  
   
 ```  
   
-## <a name="remarks"></a>備註  
- 在這個標頭宣告的某些函式為可取代的。 此實作提供預設版本，會在本文件中描述其行為。 然而程式可能以相同簽章定義函式，藉此在連結時取代預設版本。 此取代版本必須符合本文件中描述的需求。  
+## <a name="remarks"></a>Remarks  
+ Some of the functions declared in this header are replaceable. The implementation supplies a default version, whose behavior is described in this document. A program can, however, define a function with the same signature to replace the default version at link time. The replacement version must satisfy the requirements described in this document.  
   
-### <a name="objects"></a>物件  
+### <a name="objects"></a>Objects  
   
 |||  
 |-|-|  
-|[nothrow](../standard-library/new-functions.md#nothrow)|為 **new** 和 **delete** 的 `nothrow` 版本提供要用來作為引數的物件。|  
+|[nothrow](../standard-library/new-functions.md#nothrow)|Provides an object to be used as an argument for the `nothrow` versions of **new** and **delete**.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[new_handler](../standard-library/new-typedefs.md#new_handler)|類型，指向適合做為新的處理常式使用之函式。|  
+|[new_handler](../standard-library/new-typedefs.md#new_handler)|A type that points to a function suitable for use as a new handler.|  
   
-### <a name="functions"></a>函式  
-  
-|||  
-|-|-|  
-|[set_new_handler](../standard-library/new-functions.md#set_new_handler)|當嘗試配置記憶體發生新的錯誤時，安裝此時所呼叫的使用者函式。|  
-  
-### <a name="operators"></a>運算子  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator delete](../standard-library/new-operators.md#op_delete)|由 delete 陳述式呼叫的函式，藉此取消配置物件個體的儲存區。|  
-|[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|由 delete 陳述式呼叫的函式，藉此取消配置物件陣列的儲存區。|  
-|[operator new](../standard-library/new-operators.md#op_new)|由 new 陳述式呼叫的函式，藉此配置物件個體的儲存區。|  
-|[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|由 new 陳述式呼叫的函式，藉此配置物件陣列的儲存區。|  
+|[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Installs a user function that is called when new fails in its attempt to allocate memory.|  
   
-### <a name="classes"></a>類別  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[bad_alloc 類別](../standard-library/bad-alloc-class.md)|描述擲回例外狀況的類別，該例外狀況表示配置要求失敗。|  
-|[nothrow_t 類別](../standard-library/nothrow-t-structure.md)|該類別可做為 new 運算子的函式參數使用，藉此表示此函式應該要傳回 null 指標，報告配置失敗，而非擲回例外狀況。|  
+|[operator delete](../standard-library/new-operators.md#op_delete)|The function called by a delete expression to deallocate storage for individual of objects.|  
+|[operator delete&#91;&#93;](../standard-library/new-operators.md#op_delete_arr)|The function called by a delete expression to deallocate storage for an array of objects.|  
+|[operator new](../standard-library/new-operators.md#op_new)|The function called by a new expression to allocate storage for individual objects.|  
+|[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)|The function called by a new expression to allocate storage for an array of objects.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[bad_alloc Class](../standard-library/bad-alloc-class.md)|The class describes an exception thrown to indicate that an allocation request did not succeed.|  
+|[nothrow_t Class](../standard-library/nothrow-t-structure.md)|The class is used as a function parameter to operator new to indicate that the function should return a null pointer to report an allocation failure, rather than throw an exception.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

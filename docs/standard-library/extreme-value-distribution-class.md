@@ -1,5 +1,5 @@
 ---
-title: "extreme_value_distribution 類別 | Microsoft Docs"
+title: extreme_value_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- extreme_value_distribution
 - random/std::extreme_value_distribution
 - random/std::extreme_value_distribution::reset
 - random/std::extreme_value_distribution::a
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- extreme_value_distribution class
+- std::extreme_value_distribution [C++]
+- std::extreme_value_distribution [C++], reset
+- std::extreme_value_distribution [C++], a
+- std::extreme_value_distribution [C++], b
+- std::extreme_value_distribution [C++], param
+- std::extreme_value_distribution [C++], min
+- std::extreme_value_distribution [C++], max
+- std::extreme_value_distribution [C++], param_type
+- std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
 caps.latest.revision: 16
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 146a9b5efeda58af066af1c9c5ce6f652b07bacc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bdcb04e77e139446b138717b3b4bdf6a133ed279
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="extremevaluedistribution-class"></a>extreme_value_distribution 類別
-產生極值分佈。  
+# <a name="extremevaluedistribution-class"></a>extreme_value_distribution Class
+Generates an extreme value distribution.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>
 class extreme_value_distribution  
@@ -87,27 +94,27 @@ public:
    result_type max() const;
    };  
 ```    
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-浮點結果類型，預設值為 `double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG* 亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*URNG* The random number generator engine. For possible types, see [\<random>](../standard-library/random.md).
   
-## <a name="remarks"></a>備註  
- 此範本類別描述的分佈可產生使用者指定之整數類型的值 (若無提供則為 `double` 類型)，並根據極值分佈進行分佈。 下表提供各個成員的文章連結。  
+## <a name="remarks"></a>Remarks  
+ The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Extreme Value Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|  
 |`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|  
   
- 屬性函式 `a()` 和 `b()` 會針對儲存的分佈參數 `a` 和 `b` 分別傳回各自的值。  
+ The property functions `a()` and `b()` return their respective values for stored distribution parameters `a` and `b`.  
   
- 如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
- 如需極值分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Extreme Value Distribution](http://go.microsoft.com/fwlink/LinkId=401110) (極值分佈)。  
+ For detailed information about the extreme value distribution, see the Wolfram MathWorld article [Extreme Value Distribution](http://go.microsoft.com/fwlink/LinkId=401110).  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -190,38 +197,38 @@ Distribution for 10 samples:
     10: 2.0568757061  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution  
- 建構分佈。  
+ Constructs the distribution.  
   
 ```  
 explicit extreme_value_distribution(result_type a_value = 0.0, result_type b_value = 1.0);
 explicit extreme_value_distribution(const param_type& parm);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *a_value*  
- `a` 分佈參數。  
+ The `a` distribution parameter.  
   
 *b_value*  
- `b` 分佈參數。  
+ The `b` distribution parameter.  
   
 *parm*  
- 用來建構分佈的 `param_type` 結構。  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>備註  
- **前置條件：**`0.0 < b`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < b`  
   
- 第一個建構函式建構的物件，其預存的 `a` 值具有 *a_value* 值，而該值的預存 `b` 值則具有 *b_value* 值。  
+ The first constructor constructs an object whose stored `a` value holds the value *a_value* and whose stored `b` value holds the value *b_value*.  
   
- 第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+ The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  extreme_value_distribution::param_type  
-儲存分佈的參數。  
+Stores the parameters of the distribution.  
   
 ```cpp  
 struct param_type {  
@@ -235,22 +242,22 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *a_value*  
- `a` 分佈參數。  
+ The `a` distribution parameter.  
   
 *b_value*  
- `b` 分佈參數。  
+ The `b` distribution parameter.  
   
 *right*  
- 要與這個項目比較的 `param_type` 物件。  
+ The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>備註  
- **前置條件：**`0.0 < b`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < b`  
   
- 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+ This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<queue>
-- std.<queue>
-- <queue>
+- std::<queue>", "<queue>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,44 +33,44 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8c2f3d928d305baa4fce49eb55ee8c6a65cd794b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 511a90397f8ab85847e29bd45da4ccf6b3d6d2f1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
-定義範本類別 priority_queue 和佇列以及數個支援的範本。  
+Defines the template classes priority_queue and queue and several supporting templates.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <queue>  
   
 ```  
   
-### <a name="operators"></a>運算子  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/queue-operators.md#op_neq)|測試運算子左邊的佇列物件是否不等於右邊的佇列物件。|  
-|[operator<](../standard-library/queue-operators.md#op_lt)|測試運算子左邊的佇列物件是否小於右邊的佇列物件。|  
-|[operator\<=](../standard-library/queue-operators.md#op_gt_eq)|測試運算子左邊的佇列物件是否小於或等於右邊的佇列物件。|  
-|[operator==](../standard-library/queue-operators.md#op_eq_eq)|測試運算子左邊的佇列物件是否等於右邊的佇列物件。|  
-|[operator>](../standard-library/queue-operators.md#op_gt)|測試運算子左邊的佇列物件是否大於右邊的佇列物件。|  
-|[operator>=](../standard-library/queue-operators.md#op_gt_eq)|測試運算子左邊的佇列物件是否大於或等於右邊的佇列物件。|  
+|[operator!=](../standard-library/queue-operators.md#op_neq)|Tests if the queue object on the left side of the operator is not equal to the queue object on the right side.|  
+|[operator<](../standard-library/queue-operators.md#op_lt)|Tests if the queue object on the left side of the operator is less than the queue object on the right side.|  
+|[operator\<=](../standard-library/queue-operators.md#op_gt_eq)|Tests if the queue object on the left side of the operator is less than or equal to the queue object on the right side.|  
+|[operator==](../standard-library/queue-operators.md#op_eq_eq)|Tests if the queue object on the left side of the operator is equal to the queue object on the right side.|  
+|[operator>](../standard-library/queue-operators.md#op_gt)|Tests if the queue object on the left side of the operator is greater than the queue object on the right side.|  
+|[operator>=](../standard-library/queue-operators.md#op_gt_eq)|Tests if the queue object on the left side of the operator is greater than or equal to the queue object on the right side.|  
   
-### <a name="classes"></a>類別  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[queue 類別](../standard-library/queue-class.md)|範本容器配接器類別，其提供的功能限制對項目的存取為一些基礎容器類型的前面和後面項目。|  
-|[priority_queue 類別](../standard-library/priority-queue-class.md)|範本容器配接器類別，其提供的功能限制對項目的存取為一些基礎容器類型的上層項目，而這一一律為最大。|  
+|[queue Class](../standard-library/queue-class.md)|A template container adaptor class that provides a restriction of functionality limiting access to the front and back elements of some underlying container type.|  
+|[priority_queue Class](../standard-library/priority-queue-class.md)|A template container adaptor class that provides a restriction of functionality limiting access to the top element of some underlying container type, which is always the largest.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

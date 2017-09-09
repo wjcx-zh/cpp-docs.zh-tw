@@ -1,20 +1,19 @@
 ---
-title: "basic_istream 類別 | Microsoft Docs"
+title: basic_istream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_istream
 - istream/std::basic_istream
 - istream/std::basic_istream::gcount
 - istream/std::basic_istream::get
 - istream/std::basic_istream::getline
-- istream/std::basic_istream::ignore
+- istream/std::basic_istream::OVERWRITE
 - istream/std::basic_istream::peek
 - istream/std::basic_istream::putback
 - istream/std::basic_istream::read
@@ -28,7 +27,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_istream class
+- std::basic_istream [C++]
+- std::basic_istream [C++], gcount
+- std::basic_istream [C++], get
+- std::basic_istream [C++], getline
+- std::basic_istream [C++], OVERWRITE
+- std::basic_istream [C++], peek
+- std::basic_istream [C++], putback
+- std::basic_istream [C++], read
+- std::basic_istream [C++], readsome
+- std::basic_istream [C++], seekg
+- std::basic_istream [C++], sentry
+- std::basic_istream [C++], swap
+- std::basic_istream [C++], sync
+- std::basic_istream [C++], tellg
+- std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 caps.latest.revision: 21
 author: corob-msft
@@ -48,25 +61,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e8609e71bb233f3daeaaf9b5620f4bd7a59408f6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b564cbf771fdce6e292fbbc40458825d91a8fdce
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicistream-class"></a>basic_istream 類別
-描述一個物件，該物件可控制如何從具有 `Elem` 類型 (也稱為 [char_type](../standard-library/basic-ios-class.md#char_type)) 之元素的資料流緩衝區擷取元素和編碼物件；其中該類型的字元特性是由 *Tr* 類別 (也稱為 [traits_type](../standard-library/basic-ios-class.md#traits_type)) 所決定。  
+# <a name="basicistream-class"></a>basic_istream Class
+Describes an object that controls extraction of elements and encoded objects from a stream buffer with elements of type `Elem`, also known as [char_type](../standard-library/basic-ios-class.md#char_type), whose character traits are determined by the class *Tr*, also known as [traits_type](../standard-library/basic-ios-class.md#traits_type).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_istream : virtual public basic_ios<Elem, Tr>  
 ```  
   
-## <a name="remarks"></a>備註  
- 大部分多載 [operator>>](#op_gt_gt) 的成員函式為格式化的輸入函式。 它們遵循下列模式：  
+## <a name="remarks"></a>Remarks  
+ Most of the member functions that overload [operator>>](#op_gt_gt) are formatted input functions. They follow the pattern:  
   
 ```cpp  
 iostate state = goodbit;
@@ -99,7 +112,7 @@ setstate(state);
 return (*this);
 ```  
   
- 許多其他的成員函式為未經格式化的輸入函式。 它們遵循下列模式：  
+ Many other member functions are unformatted input functions. They follow the pattern:  
   
 ```cpp  
 iostate state = goodbit;
@@ -131,56 +144,56 @@ if (ok)
 setstate(state);
 ```  
   
- 如果在擷取元素時遇到檔案結尾，則這兩種函式群組都會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)。  
+ Both groups of functions call [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) if they encounter end of file while extracting elements.  
   
- `basic_istream`< `Elem`, *Tr*> 類別的物件會儲存：  
+ An object of class `basic_istream`< `Elem`, *Tr*> stores:  
   
--   [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> 類別的虛擬公開基底物件`.`  
+-   A virtual public base object of class [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> `.`  
   
--   最後一個未格式化的輸入作業之擷取計數 (在先前的程式碼中稱為 **count**)。  
+-   An extraction count for the last unformatted input operation (called **count** in the previous code).  
   
-## <a name="example"></a>範例  
- 若要深入了解輸入資料流，請參閱 [basic_ofstream 類別](../standard-library/basic-ifstream-class.md)的範例。  
+## <a name="example"></a>Example  
+ See the example for [basic_ifstream Class](../standard-library/basic-ifstream-class.md) to learn more about input streams.  
   
-### <a name="constructors"></a>建構函式  
-  
-|||  
-|-|-|  
-|[basic_istream](#basic_istream)|建構類型 `basic_istream` 的物件。|  
-  
-### <a name="member-functions"></a>成員函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[gcount](#gcount)|傳回最後一個未經格式化的輸入期間，讀取的字元數。|  
-|[get](#get)|從輸入資料流讀取一或多個字元。|  
-|[getline](#getline)|從輸入資料流讀取一行。|  
-|[ignore](#ignore)|導致從目前的讀取位置略過一些項目。|  
-|[peek](#peek)|傳回要讀取的下一個字元。|  
-|[putback](#putback)|將指定的字元放入資料流。|  
-|[read](#read)|從資料流讀取指定的字元數，並將其儲存在陣列中。|  
-|[readsome](#readsome)|只從緩衝區讀取。|  
-|[seekg](#seekg)|移動資料流中的讀取位置。|  
-|[sentry](#sentry)|此巢狀類別會描述物件，該物件的宣告會建構格式化的輸入函式以及未經格式化的輸入函式。|  
-|[swap](#swap)|以 `basic_istream` 物件交換所提供的 `basic_istream` 物件參數。|  
-|[sync](#sync)|同步處理與資料流緩衝區的資料流相關聯的輸入裝置。|  
-|[tellg](#tellg)|回報在資料流中目前的讀取位置。|  
-|[unget](#unget)|將最近讀取的字元放回資料流。|  
+|[basic_istream](#basic_istream)|Constructs an object of type `basic_istream`.|  
   
-### <a name="operators"></a>運算子  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator>>](#op_gt_gt)|呼叫輸入資料流上的函式，或從輸入資料流讀取經格式化的資料。|  
-|[operator=](#op_eq)|將位於運算子右側的 `basic_istream` 指派給此物件。 這是一個移動指派，涉及不會留下複本的 `rvalue` 參考。|  
+|[gcount](#gcount)|Returns the number of characters read during the last unformatted input.|  
+|[get](#get)|Reads one or more characters from the input stream.|  
+|[getline](#getline)|Reads a line from the input stream.|  
+|[ignore](#ignore)|Causes a number of elements to be skipped from the current read position.|  
+|[peek](#peek)|Returns the next character to be read.|  
+|[putback](#putback)|Puts a specified character into the stream.|  
+|[read](#read)|Reads a specified number of characters from the stream and stores them in an array.|  
+|[readsome](#readsome)|Read from buffer only.|  
+|[seekg](#seekg)|Moves the read position in a stream.|  
+|[sentry](#sentry)|The nested class describes an object whose declaration structures the formatted input functions and the unformatted input functions.|  
+|[swap](#swap)|Exchanges this `basic_istream` object for the provided `basic_istream` object parameter.|  
+|[sync](#sync)|Synchronizes the input device associated with the stream with the stream's buffer.|  
+|[tellg](#tellg)|Reports the current read position in the stream.|  
+|[unget](#unget)|Puts the most recently read character back into the stream.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<istream>  
+### <a name="operators"></a>Operators  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[operator>>](#op_gt_gt)|Calls a function on the input stream or reads formatted data from the input stream.|  
+|[operator=](#op_eq)|Assigns the `basic_istream` on the right side of the operator to this object. This is a move assignment involving an `rvalue` reference that does not leave a copy behind.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<istream>  
+  
+ **Namespace:** std  
   
 ##  <a name="basic_istream"></a>  basic_istream::basic_istream  
- 建構類型 `basic_istream` 的物件。  
+ Constructs an object of type `basic_istream`.  
   
 ```  
 explicit basic_istream(
@@ -190,38 +203,38 @@ explicit basic_istream(
 basic_istream(basic_istream&& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- [basic_streambuf](../standard-library/basic-streambuf-class.md) 類型的物件。  
+ An object of type [basic_streambuf](../standard-library/basic-streambuf-class.md).  
   
  `_Isstd`  
-若這是標準資料流，即為  `true`；否則為 `false`。  
+ `true` if this is a standard stream; otherwise, `false`.  
   
  `right`  
- 要複製的 `basic_istream` 物件。  
+ A `basic_istream` object to copy.  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會藉由呼叫 [init](../standard-library/basic-ios-class.md#init)(_S `trbuf`) 初始化基底類別。 它也會在擷取計數中儲存零。 如需此擷取計數的詳細資訊，請參閱 [basic_istream 類別](../standard-library/basic-istream-class.md)概觀主題的＜備註＞一節。  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [init](../standard-library/basic-ios-class.md#init)(_S `trbuf`). It also stores zero in the extraction count. For more information about this extraction count, see the Remarks section of the [basic_istream Class](../standard-library/basic-istream-class.md) overview topic.  
   
- 第二個建構函式會藉由呼叫 `move``( right)` 初始化基底類別。 它也會在擷取計數中儲存 _R `ight.gcount()`，並在 _R `ight` 的擷取計數中儲存零。  
+ The second constructor initializes the base class by calling `move( right)`. It also stores _R `ight.gcount()` in the extraction count and stores zero in the extraction count for _R `ight`.  
   
-### <a name="example"></a>範例  
-  若要深入了解輸入資料流，請參閱 [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) 的範例。  
+### <a name="example"></a>Example  
+  See the example for [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) to learn more about input streams.  
   
 ##  <a name="gcount"></a>  basic_istream::gcount  
- 傳回最後一個未經格式化的輸入期間，讀取的字元數。  
+ Returns the number of characters read during the last unformatted input.  
   
 ```  
 streamsize gcount() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 擷取計數。  
+### <a name="return-value"></a>Return Value  
+ The extraction count.  
   
-### <a name="remarks"></a>備註  
- 請使用 [basic_istream:: get](#get) 來讀取未格式化的字元。  
+### <a name="remarks"></a>Remarks  
+ Use [basic_istream::get](#get) to read unformatted characters.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_gcount.cpp  
@@ -257,7 +270,7 @@ a
 ```  
   
 ##  <a name="get"></a>  basic_istream::get  
- 從輸入資料流讀取一或多個字元。  
+ Reads one or more characters from the input stream.  
   
 ```  
 int_type get();
@@ -270,47 +283,47 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf);
 basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要從 `strbuf` 中讀取的字元數。  
+ The number of characters to read from `strbuf`.  
   
  `Delim`  
- 如果到達 `count` 之前就遇到，則應終止讀取的字元。  
+ The character that should terminate the read if it is encountered before `count`.  
   
  `str`  
- 要在其中寫入的字串。  
+ A string in which to write.  
   
  `Ch`  
- 要取得的字元。  
+ A character to get.  
   
  `strbuf`  
- 要在其中寫入的緩衝區。  
+ A buffer in which to write.  
   
-### <a name="return-value"></a>傳回值  
- 無參數格式的 get 會將讀取的元素當做整數或檔案結尾傳回。 其餘格式會傳回資料流 (* `this`)。  
+### <a name="return-value"></a>Return Value  
+ The parameterless form of get returns the element read as an integer or end of file. The remaining forms return the stream (* `this`).  
   
-### <a name="remarks"></a>備註  
- 這些未格式化之輸入函式的第一個函式會盡可能擷取一個元素，就像是傳回 `rdbuf`-> `sbumpc` 一樣。 否則會傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。 如果此函式未擷取任何元素，則會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。  
+### <a name="remarks"></a>Remarks  
+ The first of these unformatted input functions extracts an element, if possible, as if by returning `rdbuf`-> `sbumpc`. Otherwise, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). If the function extracts no element, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
   
- 第二個函式會以相同方式來擷取 [int_type](../standard-library/basic-ios-class.md#int_type) 元素 `meta`。 如果 `meta` 與 **traits_type::eof** 比較的結果相等，則此函式會呼叫 `setstate`( **failbit**)。 否則，它會將 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) 儲存在 `Ch` 中。 此函式會傳回 **\*this**。  
+ The second function extracts the [int_type](../standard-library/basic-ios-class.md#int_type) element `meta` the same way. If `meta` compares equal to **traits_type::eof**, the function calls `setstate`( **failbit**). Otherwise, it stores **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) in `Ch`. The function returns **\*this**.  
   
- 第三個函式會傳回 **get**(_ *Str*, `count`, `widen`('\ **n**'))。  
+ The third function returns **get**(_ *Str*, `count`, `widen`('\ **n**')).  
   
- 第四個函式最多會擷取 `count` - 1 個元素，並將其儲存在 _ *Str* 開頭的陣列中。 它一律會在所儲存的任何已擷取元素之後儲存 `char_type`。 為了進行測試，在下列情況下會停止擷取：  
+ The fourth function extracts up to `count` - 1 elements and stores them in the array beginning at _ *Str*. It always stores `char_type` after any extracted elements it stores. In order of testing, extraction stops:  
   
--   到達檔案結尾時。  
+-   At end of file.  
   
--   此函式擷取到與 `Delim` 比較為相等的元素之後；在此情況下，會將此元素放回受控制的序列。  
+-   After the function extracts an element that compares equal to `Delim`, in which case the element is put back to the controlled sequence.  
   
--   此函式擷取 `count` - 1 個元素之後。  
+-   After the function extracts `count` - 1 elements.  
   
- 如果此函式未擷取任何元素，則會呼叫 `setstate`( **failbit**)。 在任何情況下，它都會傳回 **\*this**。  
+ If the function extracts no elements, it calls `setstate`( **failbit**). In any case, it returns **\*this**.  
   
- 第五個函式會傳回 **get**( **strbuf**, `widen`('\ **n**'))。  
+ The fifth function returns **get**( **strbuf**, `widen`('\ **n**')).  
   
- 第六個函式會擷取元素並將其插入 **strbuf**。 到達檔案結尾時，或是遇到與 _ *Delim* 比較為相等的元素 (不會擷取此元素) 時，會停止擷取。 如果插入失敗或擲回例外狀況 (會攔截但不會再次擲回)，也會停止，而不會擷取有問題的元素。 如果此函式未擷取任何元素，則會呼叫 `setstate`( **failbit**)。 在任何情況下，此函式都會傳回 **\*this**。  
+ The sixth function extracts elements and inserts them in **strbuf**. Extraction stops on end-of-file or on an element that compares equal to _ *Delim,* which is not extracted. It also stops, without extracting the element in question, if an insertion fails or throws an exception (which is caught but not rethrown). If the function extracts no elements, it calls `setstate`( **failbit**). In any case, the function returns **\*this**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_get.cpp  
@@ -337,7 +350,7 @@ int main( )
 ```  
   
 ##  <a name="getline"></a>  basic_istream::getline  
- 從輸入資料流取得一行。  
+ Gets a line from the input stream.  
   
 ```  
 basic_istream<Elem, Tr>& getline(
@@ -350,33 +363,33 @@ basic_istream<Elem, Tr>& getline(
     char_type Delim);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要從 **strbuf** 中讀取的字元數。  
+ The number of characters to read from **strbuf**.  
   
  `Delim`  
- 如果到達 `count` 之前就遇到，則應終止讀取的字元。  
+ The character that should terminate the read if it is encountered before `count`.  
   
  `str`  
- 要在其中寫入的字串。  
+ A string in which to write.  
   
-### <a name="return-value"></a>傳回值  
- 資料流 ( **\*this**)。  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>備註  
- 這些未格式化之輸入函式的第一個輸入函式會傳回 **getline**(_ *Str*, `count`, `widen`(' `\`**n**'))。  
+### <a name="remarks"></a>Remarks  
+ The first of these unformatted input functions returns **getline**(_ *Str*, `count`, `widen`(' `\`**n**')).  
   
- 第二個函式最多會擷取 `count` - 1 個元素，並將其儲存在 _ *Str* 開頭的陣列中。 它一律會在所儲存的任何已擷取元素之後儲存字串結束字元。 為了進行測試，在下列情況下會停止擷取：  
+ The second function extracts up to `count` - 1 elements and stores them in the array beginning at _ *Str*. It always stores the string termination character after any extracted elements it stores. In order of testing, extraction stops:  
   
--   到達檔案結尾時。  
+-   At end of file.  
   
--   此函式擷取到與 `Delim` 比較為相等的元素之後；在此情況下，不會將此元素放回或附加至受控制的序列。  
+-   After the function extracts an element that compares equal to `Delim`, in which case the element is neither put back nor appended to the controlled sequence.  
   
--   此函式擷取 `count` - 1 個元素之後。  
+-   After the function extracts `count` - 1 elements.  
   
- 如果此函式未擷取任何元素或擷取 `count` - 1 個元素，則會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情況下，它都會傳回 **\*this**。  
+ If the function extracts no elements or `count` - 1 elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_getline.cpp  
@@ -399,7 +412,7 @@ int main( )
 ```  
   
 ##  <a name="ignore"></a>  basic_istream::ignore  
- 導致從目前的讀取位置略過一些項目。  
+ Causes a number of elements to be skipped from the current read position.  
   
 ```  
 basic_istream<Elem, Tr>& ignore(
@@ -407,20 +420,20 @@ basic_istream<Elem, Tr>& ignore(
     int_type Delim = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `count`  
- 要從目前的讀取位置略過的元素數目。  
+ The number of elements to skip from the current read position.  
   
  `Delim`  
- 此元素若在到達計數之前就遇到，會導致傳回 **ignore**，並允許讀取 `Delim` 之後的所有元素。  
+ The element that, if encountered before count, causes **ignore** to return and allowing all elements after `Delim` to be read.  
   
-### <a name="return-value"></a>傳回值  
- 資料流 ( **\*this**)。  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>備註  
- 未格式化的輸入函式最多會擷取並捨棄 `count` 個元素。 不過，如果 `count` 等於 **numeric_limits\<int>::max**，則會視為任意大。 會停止擷取早期或項目上的檔案結尾`Ch`使得**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) 比較等於*Delim* （這也會擷取）。 此函式會傳回 **\*this**。  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts up to `count` elements and discards them. If `count` equals **numeric_limits\<int>::max**, however, it is taken as arbitrarily large. Extraction stops early on end of file or on an element `Ch` such that **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) compares equal to *Delim* (which is also extracted). The function returns **\*this**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_ignore.cpp  
@@ -442,9 +455,9 @@ Type 'abcdef': abcdef
 def  
 ```  
   
-##  <a name="op_gt_gt"></a>基本\_istream::operator >>
+##  <a name="op_gt_gt"></a>  basic\_istream::operator>>
   
-呼叫輸入資料流上的函式，或從輸入資料流讀取經格式化的資料。  
+Calls a function on the input stream or reads formatted data from the input stream.  
   
 ```  
 basic_istream& operator>>(basic_istream& (* Pfn)(basic_istream&));
@@ -466,42 +479,42 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Pfn`  
- 函式指標。  
+ A function pointer.  
   
  `strbuf`  
- **stream_buf** 類型的物件。  
+ An object of type **stream_buf**.  
   
  `val`  
- 要從資料流中讀取的值。  
+ The value to read from the stream.  
   
-### <a name="return-value"></a>傳回值  
- 資料流 ( **\*this**)。  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>備註  
- `<istream>` 標頭也會定義數個全域擷取運算子。 如需詳細資訊，請參閱 [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt)。  
+### <a name="remarks"></a>Remarks  
+ The `<istream>` header also defines several global extraction operators. For more information, see [operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt).  
   
- 第一個成員函式可確保 **istr** >> `ws` 格式的運算式呼叫 [ws](../standard-library/istream-functions.md#ws)( **istr**)，然後傳回 **\*this**。 第二個和第三個函式可確保其他操作工具 (例如 [hex](../standard-library/ios-functions.md#hex)) 具有類似的行為。 其餘函式會構成格式化的輸入函式。  
+ The first member function ensures that an expression of the form **istr** >> `ws` calls [ws](../standard-library/istream-functions.md#ws)( **istr**), and then returns **\*this**. The second and third functions ensure that other manipulators, such as [hex](../standard-library/ios-functions.md#hex), behave similarly. The remaining functions constitute the formatted input functions.  
   
- 函式：  
+ The function:  
   
 ```  
 basic_istream& operator>>(
     basic_streambuf<Elem, Tr>* strbuf);
 ```  
   
- 會擷取元素 (如果 _ *Strbuf* 不是 null 指標)，並將其插入 `strbuf`。 到達檔案結尾時，會停止擷取。 如果插入失敗或擲回例外狀況 (會攔截但不會再次擲回)，也會停止，而不會擷取有問題的元素。 如果此函式未擷取任何元素，則會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情況下，此函式都會傳回 **\*this**。  
+ extracts elements, if _ *Strbuf* is not a null pointer, and inserts them in `strbuf`. Extraction stops on end of file. It also stops without extracting the element in question, if an insertion fails or throws an exception (which is caught but not rethrown). If the function extracts no elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the function returns **\*this**.  
   
- 函式：  
+ The function:  
   
 ```  
 basic_istream& operator>>(bool& val);
 ```  
   
- 會藉由呼叫 [use_facet](../standard-library/basic-filebuf-class.md#open) < `num_get`\< **Elem**, **InIt**>( [getloc](../standard-library/ios-base-class.md#getloc)). [get](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為布林值。 其中的 **InIt** 會定義為 [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)\< **Elem**, **Tr**>。 此函式會傳回 **\*this**。  
+ extracts a field and converts it to a Boolean value by calling [use_facet](../standard-library/basic-filebuf-class.md#open) < `num_get`\< **Elem**, **InIt**>( [getloc](../standard-library/ios-base-class.md#getloc)). [get](../standard-library/ios-base-class.md#getloc)( **InIt**( [rdbuf](../standard-library/basic-ios-class.md#rdbuf)), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as [istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)\< **Elem**, **Tr**>. The function returns **\*this**.  
   
- 函式：  
+ The functions:  
   
 ```  
 basic_istream& operator>>(short& val);
@@ -515,11 +528,11 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```  
   
- 會藉由呼叫 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為數值。 Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **long**,`unsigned long`, or **void \*** as needed.  
+ each extract a field and convert it to a numeric value by calling `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **long**,`unsigned long`, or **void \*** as needed.  
   
- 如果無法以 `val` 類型表示已轉換的值，此函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情況下，此函式都會傳回 **\*this**。  
+ If the converted value cannot be represented as the type of `val`, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the function returns **\*this**.  
   
- 函式：  
+ The functions:  
   
 ```  
 basic_istream& operator>>(float& val);
@@ -527,11 +540,11 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```  
   
- 會藉由呼叫 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為數值。 其中的 **InIt** 會定義為 `istreambuf_iterator`\< **Elem**, **Tr**>，而 `val` 會視需要具有 **double** 或 `long double` 類型。  
+ each extract a field and convert it to a numeric value by calling `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`). Here, **InIt** is defined as `istreambuf_iterator`\< **Elem**, **Tr**>, and `val` has type **double** or `long double` as needed.  
   
- 如果無法以 `val` 類型表示已轉換的值，此函式會呼叫 `setstate`( **failbit**)。 在任何情況下，它都會傳回 **\*this**。  
+ If the converted value cannot be represented as the type of `val`, the function calls `setstate`( **failbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // istream_basic_istream_op_is.cpp  
@@ -569,36 +582,36 @@ int main( )
 ```  
   
 ##  <a name="op_eq"></a>  basic_istream::operator=  
- 將位於運算子右側的 `basic_istream` 指派給此物件。 這是一個移動指派，涉及不會留下複本的 `rvalue` 參考。  
+ Assigns the `basic_istream` on the right side of the operator to this object. This is a move assignment involving an `rvalue` reference that does not leave a copy behind.  
   
 ```  
 basic_istream& operator=(basic_istream&& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- `basic_ifstream` 物件的 `rvalue` 參考。  
+ An `rvalue` reference to a `basic_ifstream` object.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 *this。  
+### <a name="return-value"></a>Return Value  
+ Returns *this.  
   
-### <a name="remarks"></a>備註  
- 這個成員運算子會呼叫 swap `( right)`。  
+### <a name="remarks"></a>Remarks  
+ The member operator calls swap `( right)`.  
   
 ##  <a name="peek"></a>  basic_istream::peek  
- 傳回要讀取的下一個字元。  
+ Returns the next character to be read.  
   
 ```  
 int_type peek();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 要讀取的下一個字元。  
+### <a name="return-value"></a>Return Value  
+ The next character that will be read.  
   
-### <a name="remarks"></a>備註  
- 此未格式化的輸入函式會盡可能擷取一個元素，就像是傳回 `rdbuf` -> [sgetc](../standard-library/basic-streambuf-class.md#sgetc) 一樣。 否則會傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts an element, if possible, as if by returning `rdbuf` -> [sgetc](../standard-library/basic-streambuf-class.md#sgetc). Otherwise, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_peek.cpp  
@@ -631,24 +644,24 @@ a abcde
 ```  
   
 ##  <a name="putback"></a>  basic_istream::putback  
- 將指定的字元放入資料流。  
+ Puts a specified character into the stream.  
   
 ```  
 basic_istream<Elem, Tr>& putback(
     char_type Ch);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ch`  
- 要放回資料流的字元。  
+ A character to put back into the stream.  
   
-### <a name="return-value"></a>傳回值  
- 資料流 ( **\*this**)。  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>備註  
- [未格式化的輸入函式](../standard-library/basic-istream-class.md)會盡可能放回 `Ch`，就像是呼叫 [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc) 一樣。 如果 rdbuf 為 null 指標，或是呼叫 `sputbackc` 會傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，此函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**)。 在任何情況下，它都會傳回 **\*this**。  
+### <a name="remarks"></a>Remarks  
+ The [unformatted input function](../standard-library/basic-istream-class.md) puts back `Ch`, if possible, as if by calling [rdbuf](../standard-library/basic-ios-class.md#rdbuf)`->`[sputbackc](../standard-library/basic-streambuf-class.md#sputbackc). If rdbuf is a null pointer, or if the call to `sputbackc` returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). In any case, it returns **\*this**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_putback.cpp  
@@ -674,9 +687,9 @@ qwq
 ```  
   
 ##  <a name="read"></a>  basic_istream::read  
- 從資料流讀取指定的字元數，並將其儲存在陣列中。  
+ Reads a specified number of characters from the stream and stores them in an array.  
   
- 此方法有賴於呼叫者檢查傳遞的值是否正確，因此可能不安全。  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 basic_istream<Elem, Tr>& read(
@@ -684,20 +697,20 @@ basic_istream<Elem, Tr>& read(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `str`  
- 要讀取其中字元的陣列。  
+ The array in which to read the characters.  
   
  `count`  
- 要讀取的字元數。  
+ The number of characters to read.  
   
-### <a name="return-value"></a>傳回值  
- 資料流 ( `*this`)。  
+### <a name="return-value"></a>Return Value  
+ The stream ( `*this`).  
   
-### <a name="remarks"></a>備註  
- 此未格式化的輸入函式最多會擷取 `count` 個元素，並將其儲存在 _ `Str` 開頭的陣列中。 到達檔案結尾時，會及早停止擷取；在此情況下，此函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`)。 在任何情況下，它都會傳回 `*this`。  
+### <a name="remarks"></a>Remarks  
+ The unformatted input function extracts up to `count` elements and stores them in the array beginning at _ `Str`. Extraction stops early on end of file, in which case the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`). In any case, it returns `*this`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_read.cpp  
@@ -734,9 +747,9 @@ abcde
 ```  
   
 ##  <a name="readsome"></a>  basic_istream::readsome  
- 讀取指定數目的字元值。  
+ Reads the specified number of character values.  
   
- 此方法有賴於呼叫者檢查傳遞的值是否正確，因此可能不安全。  
+ This method is potentially unsafe, as it relies on the caller to check that the passed values are correct.  
   
 ```  
 streamsize readsome(
@@ -744,22 +757,22 @@ streamsize readsome(
     streamsize count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `str`  
- `readsome` 要在其中儲存所讀取字元的陣列。  
+ The array in which `readsome` stores the characters it reads.  
   
  `count`  
- 要讀取的字元數。  
+ The number of characters to read.  
   
-### <a name="return-value"></a>傳回值  
- 實際讀取的字元數 [gcount](#gcount)。  
+### <a name="return-value"></a>Return Value  
+ The number of characters actually read, [gcount](#gcount).  
   
-### <a name="remarks"></a>備註  
- 此未格式化的輸入函式最多會從輸入資料流中擷取 `count` 個元素，並將其儲存在陣列 `str` 中。  
+### <a name="remarks"></a>Remarks  
+ This unformatted input function extracts up to `count` elements from the input stream and stores them in the array `str`.  
   
- 此函式不會等候輸入。 它會讀取任何可用的資料。  
+ This function does not wait for input. It reads whatever data is available.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_readsome.cpp  
@@ -789,7 +802,7 @@ int main( )
 ```  
   
 ##  <a name="seekg"></a>  basic_istream::seekg  
- 移動資料流中的讀取位置。  
+ Moves the read position in a stream.  
   
 ```  
 basic_istream<Elem, Tr>& seekg(pos_type pos);
@@ -797,30 +810,30 @@ basic_istream<Elem, Tr>& seekg(pos_type pos);
 basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pos`  
- 要在其中移動讀取指標的絕對位置。  
+ The absolute position in which to move the read pointer.  
   
  `off`  
- 要相對於 `way` 移動讀取指標的位移。  
+ An offset to move the read pointer relative to `way`.  
   
  `way`  
- 其中一個 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 列舉。  
+ One of the [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) enumerations.  
   
-### <a name="return-value"></a>傳回值  
- 資料流 ( **\*this**)。  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>備註  
- 第一個成員函式會執行絕對搜尋，第二個成員函式會執行相對搜尋。  
+### <a name="remarks"></a>Remarks  
+ The first member function performs an absolute seek, the second member function performs a relative seek.  
   
 > [!NOTE]
->  請勿對文字檔案使用第二個成員函式，因為標準 C++ 不支援在文字檔案中執行相對搜尋。  
+>  Do not use the second member function with text files, because Standard C++ does not support relative seeks in text files.  
   
- 如果 [fail](../standard-library/basic-ios-class.md#fail) 為 false，第一個成員函式會針對某些 **pos_type** 暫存物件 **newpos**，呼叫 **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`)。 如果 **fail** 為 false，第二個函式會呼叫 **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`)。 在任一情況下，如果 ( `off_type`) **newpos** == ( `off_type`)(-1) (置放作業失敗)，則函式會呼叫 **istr**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 兩個函式都會傳回 **\*this**。  
+ If [fail](../standard-library/basic-ios-class.md#fail) is false, the first member function calls **newpos** = [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( `pos`), for some **pos_type** temporary object **newpos**. If **fail** is false, the second function calls **newpos** = **rdbuf** -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( `off`, `way`). In either case, if ( `off_type`) **newpos** == ( `off_type`)(-1) (the positioning operation fails), the function calls **istr**. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). Both functions return **\*this**.  
   
- 如果 [fail](../standard-library/basic-ios-class.md#fail) 為 true，成員函式不會執行任何動作。  
+ If [fail](../standard-library/basic-ios-class.md#fail) is true, the member functions do nothing.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_seekg.cpp  
@@ -842,60 +855,60 @@ int main ( )
 ```  
   
 ##  <a name="sentry"></a>  basic_istream::sentry  
- 此巢狀類別描述一個物件，該物件的宣告會建構格式化和未格式化的輸入函式。  
+ The nested class describes an object whose declaration structures the formatted and unformatted input functions.  
   
 class sentry {  
    public:  
    explicit sentry( basic_istream\<Elem, Tr>& _Istr,  
    bool _Noskip = false); operator bool() const; };  
   
-### <a name="remarks"></a>備註  
- 如果 `_Istr``.`[good](../standard-library/basic-ios-class.md#good) 為 true，此建構函式會：  
+### <a name="remarks"></a>Remarks  
+ If `_Istr.`[good](../standard-library/basic-ios-class.md#good) is true, the constructor:  
   
--   呼叫 `_Istr`。 [tie](../standard-library/basic-ios-class.md#tie) -> [flush](../standard-library/basic-ostream-class.md#flush) (如果 `_Istr` `tie` 不是 null 指標)  
+-   Calls `_Istr`. [tie](../standard-library/basic-ios-class.md#tie) -> [flush](../standard-library/basic-ostream-class.md#flush) if `_Istr`. `tie` is not a null pointer  
   
--   有效呼叫 [ws](../standard-library/istream-functions.md#ws)( `_Istr`) (如果 `_Istr` [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) 為非零值)  
+-   Effectively calls [ws](../standard-library/istream-functions.md#ws)( `_Istr`) if `_Istr`. [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) is nonzero  
   
- 如果在任何這類準備之後，`_Istr` **good** 為 false，此建構函式會呼叫 `_Istr` [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)。 在任何情況下，此建構函式都會將 `_Istr` **good** 所傳回的值儲存在 **status** 中。 稍後呼叫 **operator bool** 會提供此預存值。  
+ If, after any such preparation, `_Istr`. **good** is false, the constructor calls `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). In any case, the constructor stores the value returned by `_Istr`. **good** in **status**. A later call to **operator bool** delivers this stored value.  
   
 ##  <a name="swap"></a>  basic_istream::swap  
- 交換兩個 `basic_istream` 物件的內容。  
+ Exchanges the contents of two `basic_istream` objects.  
   
 ```  
 void swap(basic_istream& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- `basic_istream` 物件的 lvalue 參考。  
+ An lvalue reference to a `basic_istream` object.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會呼叫 [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(``right``)`。 它也會與 `right` 交換擷取計數。  
+### <a name="remarks"></a>Remarks  
+ The member function calls [basic_ios::swap](../standard-library/basic-ios-class.md#swap)`(right)`. It also exchanges the extraction count with the extraction count for `right`.  
   
 ##  <a name="sync"></a>  basic_istream::sync  
- 同步處理與資料流緩衝區的資料流相關聯的輸入裝置。  
+ Synchronizes the input device associated with the stream with the stream's buffer.  
   
 ```  
 int sync();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 為 null 指標，此函式會傳回 -1。 否則會呼叫 `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync)。 如果傳回 -1，此函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) 並傳回 -1。 否則，此函式會傳回零。  
+### <a name="return-value"></a>Return Value  
+ If [rdbuf](../standard-library/basic-ios-class.md#rdbuf) is a null pointer, the function returns -1. Otherwise, it calls `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync). If that returns -1, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**) and returns -1. Otherwise, the function returns zero.  
   
 ##  <a name="tellg"></a>  basic_istream::tellg  
- 回報在資料流中目前的讀取位置。  
+ Reports the current read position in the stream.  
   
 ```  
 pos_type tellg();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在資料流中的目前位置。  
+### <a name="return-value"></a>Return Value  
+ The current position in the stream.  
   
-### <a name="remarks"></a>備註  
- 如果 [fail](../standard-library/basic-ios-class.md#fail) 為 false，此成員函式會傳回 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**)。 否則會傳回 `pos_type`(-1)。  
+### <a name="remarks"></a>Remarks  
+ If [fail](../standard-library/basic-ios-class.md#fail) is false, the member function returns [rdbuf](../standard-library/basic-ios-class.md#rdbuf) -> [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Otherwise, it returns `pos_type`(-1).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_tellg.cpp  
@@ -922,21 +935,21 @@ int main()
 ```  
   
 ##  <a name="unget"></a>  basic_istream::unget  
- 將最近讀取的字元放回資料流。  
+ Puts the most recently read character back into the stream.  
   
 ```  
 basic_istream<Elem, Tr>& unget();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 資料流 ( **\*this**)。  
+### <a name="return-value"></a>Return Value  
+ The stream ( **\*this**).  
   
-### <a name="remarks"></a>備註  
- [未格式化的輸入函式](../standard-library/basic-istream-class.md)會盡可能將上一個元素放回資料流，就像是呼叫 `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc) 一樣。 如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 為 null 指標，或是呼叫 `sungetc` 會傳回 **traits_type::**[eof](../standard-library/basic-ios-class.md#eof)，此函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**)。 在任何情況下，它都會傳回 **\*this**。  
+### <a name="remarks"></a>Remarks  
+ The [unformatted input function](../standard-library/basic-istream-class.md) puts back the previous element in the stream, if possible, as if by calling `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc). If [rdbuf](../standard-library/basic-ios-class.md#rdbuf) is a null pointer, or if the call to `sungetc` returns **traits_type::**[eof](../standard-library/basic-ios-class.md#eof), the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **badbit**). In any case, it returns **\*this**.  
   
- 如需 `unget` 何以失敗的資訊，請參閱 [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc)。  
+ For information on how `unget` might fail, see [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_istream_unget.cpp  
@@ -968,9 +981,9 @@ abc
 abc  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <functional>
-- functional/std::<functional>
-- std::<functional>
+- <functional>", "functional/std::<functional>", "std::<functional>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,152 +34,152 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e4c3cbb6d11758ff15909c6062b7430f6679f6de
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0863a6bc58f28a18c6e5b6d301c792009882a36c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
-定義可協助建構「函式物件」(又稱為函子 (Functor)) 及其繫結器的「C++ 標準程式庫」函式。 函式物件是定義 `operator()` 的類型物件。 函式物件可以是函式指標，不過該物件更常用來儲存可在函式呼叫期間存取的其他資訊。  
+Defines C++ Standard Library functions that help construct *function objects*—also known as functors—and their binders. A function object is an object of a type that defines `operator()`. A function object can be a function pointer, but more typically, the object is used to store additional information that can be accessed during a function call.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <functional>  
 ```  
   
-## <a name="remarks"></a>備註  
- 演算法需要兩種類型的函式物件：一元和二元。 一元函式物件需要一個引數，而二元函式物件需要兩個引數。 函式物件和函式指標都可當作述詞來傳遞給演算法，但函式物件還具有可調適性，因此能增加「C++ 標準程式庫」的範圍、彈性及效率。 例如，如果值需要在傳遞給演算法之前繫結至函式，則無法使用函式指標。 函式配接器會將函式指標轉換成可繫結至值的可調適性函式物件。 \<functional> 標頭也包含成員函式配接器，可允許將成員函式當作可調適性函式物件來呼叫。 如果函式具有指定其引數和傳回型別的巢狀類型宣告，則具有可調適性。 C++ 標準要求這個可調適性的實作方式，必須是讓所有標準物件類別都繼承自 unary_function 或 binary_function 基底類別。 函式物件及其配接器可讓「C++ 標準程式庫」升級現有的應用程式，並協助將程式庫整合到 C++ 程式設計環境中。  
+## <a name="remarks"></a>Remarks  
+ Algorithms require two types of function objects: unary and binary. Unary function objects require one argument, and binary function objects require two arguments. A function object and function pointers can be passed as a predicate to an algorithm, but function objects are also adaptable and increase the scope, flexibility, and efficiency of the C++ Standard Library. If, for example, a value needed to be bound to a function before being passed to an algorithm, then a function pointer could not be used. Function adaptors convert function pointers into adaptable function objects that can be bound to a value. The header \<functional> also contains member function adaptors that allow member functions to be called as adaptable function objects. Functions are adaptable if they have nested type declarations specifying their argument and return types. The C++ Standard requires that this adaptability is implemented by having all standard object classes inherit from the unary_function or binary_function base classes. Function objects and their adaptors allow the C++ Standard Library to upgrade existing applications and help integrate the library into the C++ programming environment.  
   
- \<functional> 中函式物件的 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] 實作包含「透明運算子函子」(Transparent Operator Functor)，這是標準函式物件的特製化，不接受任何範本參數，而且可將函式引數完整轉送並將結果完整傳回。 這項功能是 C++14 草稿標準規格的一部分。 當您叫用算術、比較、邏輯和位元運算子函子時，這些樣板特製化不會要求您指定引數類型。 您可以針對自己所擁有的類型或類型的異質組合，多載算術、比較、邏輯或位元運算子，然後使用透明運算子函子做為函式引數。 例如，如果您的 *MyType* 類型實作 `operator<`，則您可以呼叫 `sort(my_collection.begin(), my_collection.end(), less<>())`，而不是明確指定 `sort(my_collection.begin(), my_collection.end(), less<MyType>())` 類型。  
+ The Visual C++ implementation of the function objects in \<functional> includes *transparent operator functors*, which are specializations of standard function objects and take no template parameters, and perform perfect forwarding of the function arguments and perfect return of the result. This feature is part of the C++14 Draft Standard specification. These template specializations do not require that you specify argument types when you invoke arithmetic, comparison, logical, and bitwise operator functors. You can overload arithmetic, comparison, logical, or bitwise operators for your own types, or for heterogeneous combinations of types, and then use the transparent operator functors as function arguments. For example, if your type *MyType* implements `operator<`, you can call `sort(my_collection.begin(), my_collection.end(), less<>())` instead of explicitly specifying the type `sort(my_collection.begin(), my_collection.end(), less<MyType>())`.  
   
-## <a name="c11c14-implementation"></a>C++11/C++14 實作  
- C++11/C++14 的 Visual C++ 實作中已新增下列功能：  
+## <a name="c11c14-implementation"></a>C++11/C++14 Implementation  
+ The following features are added in the Visual C++ implementation of C++11/C++14:  
   
--   「呼叫簽章」(Call Signature) 是傳回類型的名稱，後面會接著以括號括住、內含零個或多個引數類型的逗號分隔清單。  
+-   A *call signature* is the name of a return type followed by a parenthesized comma-separated list of zero or more argument types.  
   
--   「可呼叫類型」(Callable Type) 是函式指標、成員函式指標、成員資料指標，或其物件緊接在函式呼叫運算子左側的類別類型。  
+-   A *callable type* is a pointer to function, a pointer to member function, a pointer to member data, or a class type whose objects can appear immediately to the left of a function call operator.  
   
--   「可呼叫物件」(Callable Object) 是屬於可呼叫類型的物件。  
+-   A *callable object* is an object of a callable type.  
   
--   「呼叫包裝函式類型」(Call Wrapper Type) 是包含可呼叫物件並支援轉送至該物件之呼叫作業的類型。  
+-   A *call wrapper type* is a type that holds a callable object and supports a call operation that forwards to that object.  
   
--   「呼叫包裝函式」(Call Wrapper) 是屬於呼叫包裝函式類型的物件。  
+-   A *call wrapper* is an object of a call wrapper type.  
   
--   「目標物件」(Target Object) 是呼叫包裝函式物件所持有的可呼叫物件。  
+-   A *target object* is the callable object held by a call wrapper object.  
   
- 虛擬函式 `INVOKE(f, t1, t2, ..., tN)` 表示下列其中一項：  
+ The pseudo-function `INVOKE(f, t1, t2, ..., tN)` means one of the following things:  
   
-- `(t1.*f)(t2, ..., tN)`：當 `f` 是 `T` 類別的成員函式指標，而且 `t1` 是 `T` 類型的物件、`T` 類型的物件參考或衍生自 `T` 之類型的物件參考時。  
+- `(t1.*f)(t2, ..., tN)` when `f` is a pointer to member function of class `T` and `t1` is an object of type `T` or a reference to an object of type `T` or a reference to an object of a type derived from `T`.  
   
-- `((*t1).*f)(t2, ..., tN)`：當 `f` 是 `T` 類別的成員函式指標，而且 `t1` 不是上一個項目所描述的任何一個類型時。  
+- `((*t1).*f)(t2, ..., tN)` when `f` is a pointer to member function of class `T` and `t1` is not one of the types described in the previous item.  
   
-- `t1.*f`：當 N == 1，`f` 是 `T` 類別的成員資料指標，而且 `t1` 是 `T` 類型的物件、`T` 類型的物件參考或衍生自 `T` 之類型的物件參考時。  
+- `t1.*f` when N == 1 and `f` is a pointer to member data of a class `T` and `t1` is an object of type `T` or a reference to an object of type `T` or a reference to an object of a type derived from `T`.  
   
-- `(*t1).*f`：當 N == 1，`f` 是 `T` 類別的成員資料指標，而且 `t1` 不是上一個項目所描述的任何一個類型時。  
+- `(*t1).*f` when N == 1 and `f` is a pointer to member data of a class `T` and `t1` is not one of the types described in the previous item.  
   
-- `f(t1, t2, ..., tN)`：其他所有情況。  
+- `f(t1, t2, ..., tN)` in all other cases.  
   
- 虛擬函式 `INVOKE(f, t1, t2, ..., tN, R)` 表示 `INVOKE(f, t1, t2, ..., tN)` 會隱含地轉換成 `R`。  
+ The pseudo-function `INVOKE(f, t1, t2, ..., tN, R)` means `INVOKE(f, t1, t2, ..., tN)` implicitly converted to `R`.  
   
- 如果呼叫包裝函式具有「弱式結果類型」(Weak Result Type)，則其成員類型 `result_type` 的類型會根據包裝函式之目標物件的 `T` 類型，如下所示：  
+ If a call wrapper has a *weak result type*, the type of its member type `result_type` is based on the type `T` of the target object of the wrapper, as follows:  
   
--   如果 `T` 是函式的指標，則 `result_type` 與 `T` 的傳回類型同義。  
+-   If `T` is a pointer to function, `result_type` is a synonym for the return type of `T`.  
   
--   如果 `T` 是成員函式的指標，則 `result_type` 與 `T` 的傳回類型同義。  
+-   If `T` is a pointer to member function, `result_type` is a synonym for the return type of `T`.  
   
--   如果 `T` 是具有成員類型 `result_type` 的類別類型，則 `result_type` 與 `T::result_type` 同義。  
+-   If `T` is a class type that has a member type `result_type`, then `result_type` is a synonym for `T::result_type`.  
   
--   否則沒有成員 `result_type`。  
+-   Otherwise, there is no member `result_type`.  
   
- 每個呼叫包裝函式具有一個移動建構函式和一個複製建構函式。 「簡單呼叫包裝函式」(Simple Call Wrapper) 是具有指派運算子的呼叫包裝函式，其中它的複製建構函式、移動建構函式及指派運算子不會擲回例外狀況。 「轉送呼叫包裝函式」(Forwarding Call Wrapper) 是可藉由使用任意引數清單來呼叫的呼叫包裝函式，而且它可將引數當作參考傳遞給已包裝的可呼叫物件。 所有右值引數都會做為右值參考傳遞，而左值引數會做為左值參考傳遞。  
+ Every call wrapper has a move constructor and a copy constructor. A *simple call wrapper* is a call wrapper that has an assignment operator and whose copy constructor, move constructor, and assignment operator do not throw exceptions. A *forwarding call wrapper* is a call wrapper that can be called by using an arbitrary argument list and that delivers the arguments to the wrapped callable object as references. All rvalue arguments are delivered as rvalue references, and lvalue arguments are delivered as lvalue references.  
   
-### <a name="classes"></a>類別  
-  
-|||  
-|-|-|  
-|[bad_function_call](../standard-library/bad-function-call-class.md)|描述所擲回之例外狀況的類別，這個例外狀況會指出對 [function](../standard-library/function-class.md) 物件上的 `operator()` 呼叫失敗，因為物件是空的。|  
-|[binary_negate](../standard-library/binary-negate-class.md)|提供一個成員函式的樣板類別，這個成員函式可將指定二元函式的傳回值變成負值。|  
-|[binder1st](../standard-library/binder1st-class.md)|提供一個建構函式的樣板類別，這個建構函式透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。|  
-|[binder2nd](../standard-library/binder2nd-class.md)|提供一個建構函式的樣板類別，這個建構函式透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。|  
-|[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|配接器類別，這個類別允許不接受引數的常數成員函式在使用參考引數初始化時，可當做一元函式物件來呼叫。|  
-|[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|配接器類別，這個類別允許不接受引數的常數成員函式在使用指標引數初始化時，可當做一元函式物件來呼叫。|  
-|[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|配接器類別，這個類別允許不接受單一引數的常數成員函式在使用參考引數初始化時，可當做二元函式物件來呼叫。|  
-|[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|配接器類別，這個類別允許不接受單一引數的常數成員函式在使用指標引數初始化時，可當做二元函式物件來呼叫。|  
-|[function](../standard-library/function-class.md)|包裝可呼叫物件的類別。|  
-|[hash](../standard-library/hash-class.md)|此類別可以計算值的雜湊碼。|  
-|[is_bind_expression](../standard-library/is-bind-expression-class.md)|此類別測試呼叫 `bind` 時是否產生特定類型。|  
-|[is_placeholder](../standard-library/is-placeholder-class.md)|此類別測試特定類型是否為預留位置。|  
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|配接器類別，可允許將不接受任何引數的 **non_const** 成員函式在以參考引數初始化時，當作一元函式物件來呼叫。|  
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|配接器類別，可允許將不接受任何引數的 **non_const** 成員函式在以指標引數初始化時，當作一元函式物件來呼叫。|  
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|配接器類別，可允許將接受單一引數的 **non_const** 成員函式在以參考引數初始化時，當作二元函式物件來呼叫。|  
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|配接器類別，可允許將接受單一引數的 **non_const** 成員函式在以指標引數初始化時，當作二元函式物件來呼叫。|  
-|[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|將二元函式指標轉換成可調適性二元函式。|  
-|[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|將一元函式指標轉換成可調適性一元函式。|  
-|[reference_wrapper](../standard-library/reference-wrapper-class.md)|包裝參考的類別。|  
-|[unary_negate](../standard-library/unary-negate-class.md)|提供一個成員函式的樣板類別，這個成員函式可將指定一元函式的傳回值變成負值。|  
-  
-### <a name="functions"></a>函式  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[bind](../standard-library/functional-functions.md#bind)|將引數繫結至可呼叫物件。|  
-|[bind1st](../standard-library/functional-functions.md#bind1st)|協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。|  
-|[bind2nd](../standard-library/functional-functions.md#bind2nd)|協助程式樣板函式，可建立配接器，透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。|  
-|[bit_and](../standard-library/functional-functions.md#bit_and)|傳回兩個參數的位元邏輯 AND (二元運算子 &)。|  
-|[bit_not](../standard-library/functional-functions.md#bit_not)|傳回參數的位元邏輯補數 (運算子 ~)。|  
-|[bit_or](../standard-library/functional-functions.md#bit_or)|傳回兩個參數的位元邏輯 OR (運算子 &#124;)。|  
-|[bit_xor](../standard-library/functional-functions.md#bit_xor)|傳回兩個參數的位元邏輯 XOR (運算子 ^)。|  
-|[cref](../standard-library/functional-functions.md#cref)|從引數建構常數`reference_wrapper`。|  
-|[mem_fn](../standard-library/functional-functions.md#mem_fn)|產生簡單呼叫包裝函式。|  
-|[mem_fun](../standard-library/functional-functions.md#mem_fun)|協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。|  
-|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|協助程式樣板函式，可用來建構使用參考引數初始化時之成員函式的物件配接器。|  
-|[not1](../standard-library/functional-functions.md#not1)|傳回一元述詞的補數。|  
-|[not2](../standard-library/functional-functions.md#not2)|傳回二元述詞的補數。|  
-|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|協助程式樣板函式，可用來將一元和二元函式指標分別轉換成一元和二元可調適性函式。|  
-|[ref](../standard-library/functional-functions.md#ref)|從引數建構 `reference_wrapper` 。|  
-|[swap](../standard-library/functional-functions.md#swap)|交換兩個 `function` 物件。|  
+|[bad_function_call](../standard-library/bad-function-call-class.md)|A class that describes an exception thrown to indicate that a call to `operator()` on a [function](../standard-library/function-class.md) object failed because the object was empty.|  
+|[binary_negate](../standard-library/binary-negate-class.md)|A template class providing a member function that negates the return value of a specified binary function.|  
+|[binder1st](../standard-library/binder1st-class.md)|A template class providing a constructor that converts a binary function object into a unary function object by binding the first argument of the binary function to a specified value.|  
+|[binder2nd](../standard-library/binder2nd-class.md)|A template class providing a constructor that converts a binary function object into a unary function object by binding the second argument of the binary function to a specified value.|  
+|[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|An adapter class that allows a const member function that takes no arguments to be called as a unary function object when initialized with a reference argument.|  
+|[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|An adapter class that allows a const member function that takes no arguments to be called as a unary function object when initialized with a pointer argument.|  
+|[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|An adapter class that allows a const member function that takes a single argument to be called as a binary function object when initialized with a reference argument.|  
+|[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|An adapter class that allows a const member function that takes a single argument to be called as a binary function object when initialized with a pointer argument.|  
+|[function](../standard-library/function-class.md)|A class that wraps a callable object.|  
+|[hash](../standard-library/hash-class.md)|A class that computes a hash code for a value.|  
+|[is_bind_expression](../standard-library/is-bind-expression-class.md)|A class that tests if a particular type is generated by calling `bind`.|  
+|[is_placeholder](../standard-library/is-placeholder-class.md)|A class that tests if a particular type is a placeholder.|  
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|An adapter class that allows a **non_const** member function that takes no arguments to be called as a unary function object when initialized with a reference argument.|  
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|An adapter class that allows a **non_const** member function that takes no arguments to be called as a unary function object when initialized with a pointer argument.|  
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|An adapter class that allows a **non_const** member function that takes a single argument to be called as a binary function object when initialized with a reference argument.|  
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|An adapter class that allows a **non_const** member function that takes a single argument to be called as a binary function object when initialized with a pointer argument.|  
+|[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|Converts a binary function pointer into an adaptable binary function.|  
+|[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|Converts a unary function pointer into an adaptable unary function.|  
+|[reference_wrapper](../standard-library/reference-wrapper-class.md)|A class that wraps a reference.|  
+|[unary_negate](../standard-library/unary-negate-class.md)|A template class providing a member function that negates the return value of a specified unary function.|  
   
-### <a name="structs"></a>結構  
-  
-|||  
-|-|-|  
-|[binary_function](../standard-library/binary-function-struct.md)|空的基底類別，定義可繼承衍生類別並提供二元函式物件的類型。|  
-|[divides](../standard-library/divides-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行算術除法運算。|  
-|[equal_to](../standard-library/equal-to-struct.md)|二元述詞，可測試指定類型的值是否等於該類型的另一個值。|  
-|[greater](../standard-library/greater-struct.md)|二元述詞，可測試指定類型的值是否大於該類型的另一個值。|  
-|[greater_equal](../standard-library/greater-equal-struct.md)|二元述詞，可測試指定類型的值是否大於或等於該類型的另一個值。|  
-|[less](../standard-library/less-struct.md)|二元述詞，可測試指定類型的值是否小於該類型的另一個值。|  
-|[less_equal](../standard-library/less-equal-struct.md)|二元述詞，可測試指定類型的值是否小於或等於該類型的另一個值。|  
-|[logical_and](../standard-library/logical-and-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行邏輯結合運算，並測試結果為 True 或 False。|  
-|[logical_not](../standard-library/logical-not-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行邏輯負運算，並測試結果為 True 或 False。|  
-|[logical_or](../standard-library/logical-or-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行邏輯分離運算，並測試結果為 True 或 False。|  
-|[minus](../standard-library/minus-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行算術減法運算。|  
-|[modulus](../standard-library/modulus-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行算術模數運算。|  
-|[multiplies](../standard-library/multiplies-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行算術乘法運算。|  
-|[negate](../standard-library/negate-struct.md)|這個類別會提供預先定義的函式物件，該物件會傳回項目值的負值。|  
-|[not_equal_to](../standard-library/not-equal-to-struct.md)|二元述詞，可測試指定類型的值是否不等於該類型的另一個值。|  
-|[plus](../standard-library/plus-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行算術加法運算。|  
-|[unary_function](../standard-library/unary-function-struct.md)|空的基底類別，這個類別定義可能繼承自衍生類別並提供一元函式物件的類型。|  
-  
-### <a name="objects"></a>物件  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[_1.._M](../standard-library/1-object.md)|可取代引數的預留位置。|  
+|[bind](../standard-library/functional-functions.md#bind)|Binds arguments to a callable object.|  
+|[bind1st](../standard-library/functional-functions.md#bind1st)|A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the first argument of the binary function to a specified value.|  
+|[bind2nd](../standard-library/functional-functions.md#bind2nd)|A helper template function that creates an adaptor to convert a binary function object into a unary function object by binding the second argument of the binary function to a specified value.|  
+|[bit_and](../standard-library/functional-functions.md#bit_and)|Returns the bitwise logical AND (binary operator&) of the two parameters.|  
+|[bit_not](../standard-library/functional-functions.md#bit_not)|Returns the bitwise logical complement (operator~) of the parameter.|  
+|[bit_or](../standard-library/functional-functions.md#bit_or)|Returns the bitwise logical OR (operator&#124;) of the two parameters.|  
+|[bit_xor](../standard-library/functional-functions.md#bit_xor)|Returns the bitwise logical XOR (operator^) of the two parameters.|  
+|[cref](../standard-library/functional-functions.md#cref)|Constructs a const `reference_wrapper` from an argument.|  
+|[mem_fn](../standard-library/functional-functions.md#mem_fn)|Generates a simple call wrapper.|  
+|[mem_fun](../standard-library/functional-functions.md#mem_fun)|Helper template functions used to construct function object adaptors for member functions when initialized with pointer arguments.|  
+|[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|A helper template function used to construct function object adaptors for member functions when initialized with reference arguments.|  
+|[not1](../standard-library/functional-functions.md#not1)|Returns the complement of a unary predicate.|  
+|[not2](../standard-library/functional-functions.md#not2)|Returns the complement of a binary predicate.|  
+|[ptr_fun](../standard-library/functional-functions.md#ptr_fun)|A helper template function used to convert unary and binary function pointers, respectively, into unary and binary adaptable functions.|  
+|[ref](../standard-library/functional-functions.md#ref)|Constructs a `reference_wrapper` from an argument.|  
+|[swap](../standard-library/functional-functions.md#swap)|Swaps two `function` objects.|  
   
-### <a name="operators"></a>運算子  
+### <a name="structs"></a>Structs  
   
 |||  
 |-|-|  
-|[operator==](../standard-library/functional-operators.md#op_eq_eq)|不允許可呼叫物件的等號比較。|  
-|[operator!=](../standard-library/functional-operators.md#op_neq)|不允許可呼叫物件的不等比較。|  
+|[binary_function](../standard-library/binary-function-struct.md)|An empty base class that defines types that may be inherited by derived class that provides a binary function object.|  
+|[divides](../standard-library/divides-struct.md)|The class provides a predefined function object that performs the arithmetic operation of division on elements of a specified value type.|  
+|[equal_to](../standard-library/equal-to-struct.md)|A binary predicate that tests whether a value of a specified type is equal to another value of that type.|  
+|[greater](../standard-library/greater-struct.md)|A binary predicate that tests whether a value of a specified type is greater than another value of that type.|  
+|[greater_equal](../standard-library/greater-equal-struct.md)|A binary predicate that tests whether a value of a specified type is greater than or equal to another value of that type.|  
+|[less](../standard-library/less-struct.md)|A binary predicate that tests whether a value of a specified type is less than another value of that type.|  
+|[less_equal](../standard-library/less-equal-struct.md)|A binary predicate that tests whether a value of a specified type is less than or equal to another value of that type.|  
+|[logical_and](../standard-library/logical-and-struct.md)|The class provides a predefined function object that performs the logical operation of conjunction on elements of a specified value type and tests for the truth or falsity of the result.|  
+|[logical_not](../standard-library/logical-not-struct.md)|The class provides a predefined function object that performs the logical operation of negation on elements of a specified value type and tests for the truth or falsity of the result.|  
+|[logical_or](../standard-library/logical-or-struct.md)|The class provides a predefined function object that performs the logical operation of disjunction on elements of a specified value type and tests for the truth or falsity of the result.|  
+|[minus](../standard-library/minus-struct.md)|The class provides a predefined function object that performs the arithmetic operation of subtraction on elements of a specified value type.|  
+|[modulus](../standard-library/modulus-struct.md)|The class provides a predefined function object that performs the arithmetic operation of modulus on elements of a specified value type.|  
+|[multiplies](../standard-library/multiplies-struct.md)|The class provides a predefined function object that performs the arithmetic operation of multiplication on elements of a specified value type.|  
+|[negate](../standard-library/negate-struct.md)|The class provides a predefined function object that returns the negative of an element value.|  
+|[not_equal_to](../standard-library/not-equal-to-struct.md)|A binary predicate that tests whether a value of a specified type is not equal to another value of that type.|  
+|[plus](../standard-library/plus-struct.md)|The class provides a predefined function object that performs the arithmetic operation of addition on elements of a specified value type.|  
+|[unary_function](../standard-library/unary-function-struct.md)|An empty base class that defines types that may be inherited by derived class that provides a unary function object.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+### <a name="objects"></a>Objects  
+  
+|||  
+|-|-|  
+|[_1.._M](../standard-library/1-object.md)|Placeholders for replaceable arguments.|  
+  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|Disallows equality comparison of callable objects.|  
+|[operator!=](../standard-library/functional-operators.md#op_neq)|Disallows inequality comparison of callable objects.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

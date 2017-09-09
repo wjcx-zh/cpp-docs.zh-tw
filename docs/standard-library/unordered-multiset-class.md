@@ -1,5 +1,5 @@
 ---
-title: "unordered_multiset 類別 | Microsoft Docs"
+title: unordered_multiset Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unordered_multiset
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
 - unordered_set/std::unordered_multiset::const_iterator
@@ -98,7 +97,91 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- unordered_multiset class
+- std::unordered_multiset
+- std::unordered_multiset::allocator_type
+- std::unordered_multiset::const_iterator
+- std::unordered_multiset::const_local_iterator
+- std::unordered_multiset::const_pointer
+- std::unordered_multiset::const_reference
+- std::unordered_multiset::difference_type
+- std::unordered_multiset::hasher
+- std::unordered_multiset::iterator
+- std::unordered_multiset::key_equal
+- std::unordered_multiset::key_type
+- std::unordered_multiset::local_iterator
+- std::unordered_multiset::pointer
+- std::unordered_multiset::reference
+- std::unordered_multiset::size_type
+- std::unordered_multiset::value_type
+- std::unordered_multiset::begin
+- std::unordered_multiset::bucket
+- std::unordered_multiset::bucket_count
+- std::unordered_multiset::bucket_size
+- std::unordered_multiset::cbegin
+- std::unordered_multiset::cend
+- std::unordered_multiset::clear
+- std::unordered_multiset::count
+- std::unordered_multiset::emplace
+- std::unordered_multiset::emplace_hint
+- std::unordered_multiset::empty
+- std::unordered_multiset::end
+- std::unordered_multiset::equal_range
+- std::unordered_multiset::erase
+- std::unordered_multiset::find
+- std::unordered_multiset::get_allocator
+- std::unordered_multiset::hash
+- std::unordered_multiset::insert
+- std::unordered_multiset::key_eq
+- std::unordered_multiset::load_factor
+- std::unordered_multiset::max_bucket_count
+- std::unordered_multiset::max_load_factor
+- std::unordered_multiset::max_size
+- std::unordered_multiset::rehash
+- std::unordered_multiset::size
+- std::unordered_multiset::swap
+- std::unordered_multiset::unordered_multiset
+- std::unordered_multiset::operator=
+- std::unordered_multiset::allocator_type
+- std::unordered_multiset::const_iterator
+- std::unordered_multiset::const_local_iterator
+- std::unordered_multiset::const_pointer
+- std::unordered_multiset::const_reference
+- std::unordered_multiset::difference_type
+- std::unordered_multiset::hasher
+- std::unordered_multiset::iterator
+- std::unordered_multiset::key_equal
+- std::unordered_multiset::key_type
+- std::unordered_multiset::local_iterator
+- std::unordered_multiset::pointer
+- std::unordered_multiset::reference
+- std::unordered_multiset::size_type
+- std::unordered_multiset::value_type
+- std::unordered_multiset::begin
+- std::unordered_multiset::bucket
+- std::unordered_multiset::bucket_count
+- std::unordered_multiset::bucket_size
+- std::unordered_multiset::cbegin
+- std::unordered_multiset::cend
+- std::unordered_multiset::clear
+- std::unordered_multiset::count
+- std::unordered_multiset::emplace
+- std::unordered_multiset::emplace_hint
+- std::unordered_multiset::empty
+- std::unordered_multiset::end
+- std::unordered_multiset::equal_range
+- std::unordered_multiset::erase
+- std::unordered_multiset::find
+- std::unordered_multiset::get_allocator
+- std::unordered_multiset::hash_function
+- std::unordered_multiset::insert
+- std::unordered_multiset::key_eq
+- std::unordered_multiset::load_factor
+- std::unordered_multiset::max_bucket_count
+- std::unordered_multiset::max_load_factor
+- std::unordered_multiset::max_size
+- std::unordered_multiset::rehash
+- std::unordered_multiset::size
+- std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
 caps.latest.revision: 24
 author: corob-msft
@@ -118,17 +201,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4df02938056e6a49c71de0ce594cf7eeb84208f6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ca362eadad4097efd06b92e8ae534f108ac8e52d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unorderedmultiset-class"></a>unordered_multiset 類別
-此樣板類別描述控制不同長度的 `const Key` 類型項目序列的物件。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目同時做為排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。  
+# <a name="unorderedmultiset-class"></a>unordered_multiset Class
+The template class describes an object that controls a varying-length sequence of elements of type `const Key`. The sequence is weakly ordered by a hash function, which partitions the sequence into an ordered set of subsequences called buckets. Within each bucket a comparison function determines whether any pair of elements has equivalent ordering. Each element serves as both a sort key and a value. The sequence is represented in a way that permits lookup, insertion, and removal of an arbitrary element with a number of operations that can be independent of the number of elements in the sequence (constant time), at least when all buckets are of roughly equal length. In the worst case, when all of the elements are in one bucket, the number of operations is proportional to the number of elements in the sequence (linear time). Moreover, inserting an element invalidates no iterators, and removing an element invalidates only those iterators which point at the removed element.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,  
@@ -138,98 +221,98 @@ template <class Key,
 class unordered_multiset;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|說明|  
-|`Key`|索引鍵類型。|  
-|`Hash`|雜湊函式物件類型。|  
-|`Pred`|相等比較函式物件類型。|  
-|`Alloc`|配置器類別。|  
+|Parameter|Description|  
+|`Key`|The key type.|  
+|`Hash`|The hash function object type.|  
+|`Pred`|The equality comparison function object type.|  
+|`Alloc`|The allocator class.|  
   
 ## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|類型定義|說明|  
-|[allocator_type](#allocator_type)|管理儲存體的配置器類型。|  
-|[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
-|[const_local_iterator](#const_local_iterator)|用於受控制序列的常數 Bucket 迭代器類型。|  
-|[const_pointer](#const_pointer)|項目的常數指標類型。|  
-|[const_reference](#const_reference)|項目的常數參考類型。|  
-|[difference_type](#difference_type)|兩個項目之間帶正負號距離的類型。|  
-|[hasher](#hasher)|雜湊函式的類型。|  
-|[iterator](#iterator)|受控制序列之迭代器的類型。|  
-|[key_equal](#key_equal)|比較函式的類型。|  
-|[key_type](#key_type)|排序索引鍵的類型。|  
-|[local_iterator](#local_iterator)|用於受控制序列的 Bucket 迭代器類型。|  
-|[pointer](#pointer)|項目的指標類型。|  
-|[reference](#reference)|項目的參考類型。|  
-|[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|  
-|[value_type](#value_type)|元素的類型。|  
+|Type Definition|Description|  
+|[allocator_type](#allocator_type)|The type of an allocator for managing storage.|  
+|[const_iterator](#const_iterator)|The type of a constant iterator for the controlled sequence.|  
+|[const_local_iterator](#const_local_iterator)|The type of a constant bucket iterator for the controlled sequence.|  
+|[const_pointer](#const_pointer)|The type of a constant pointer to an element.|  
+|[const_reference](#const_reference)|The type of a constant reference to an element.|  
+|[difference_type](#difference_type)|The type of a signed distance between two elements.|  
+|[hasher](#hasher)|The type of the hash function.|  
+|[iterator](#iterator)|The type of an iterator for the controlled sequence.|  
+|[key_equal](#key_equal)|The type of the comparison function.|  
+|[key_type](#key_type)|The type of an ordering key.|  
+|[local_iterator](#local_iterator)|The type of a bucket iterator for the controlled sequence.|  
+|[pointer](#pointer)|The type of a pointer to an element.|  
+|[reference](#reference)|The type of a reference to an element.|  
+|[size_type](#size_type)|The type of an unsigned distance between two elements.|  
+|[value_type](#value_type)|The type of an element.|  
   
 |||  
 |-|-|  
-|成員函式|說明|  
-|[begin](#begin)|指定受控制序列的開頭。|  
-|[值區](#bucket)|取得索引鍵值的值區數目。|  
-|[bucket_count](#bucket_count)|取得 Bucket 的數目。|  
-|[bucket_size](#bucket_size)|取得 Bucket 大小。|  
-|[cbegin](#cbegin)|指定受控制序列的開頭。|  
-|[cend](#cend)|指定受控制序列的結尾。|  
-|[clear](#clear)|移除所有項目。|  
-|[count](#count)|尋找符合指定索引鍵的項目數目。|  
-|[emplace](#emplace)|加入就地建構的項目。|  
-|[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|  
-|[empty](#empty)|測試項目是否不存在。|  
-|[end](#end)|指定受控制序列的結尾。|  
-|[equal_range](#equal_range)|尋找符合指定之索引鍵的範圍。|  
-|[erase](#erase)|移除位於指定位置的項目。|  
-|[find](#find)|尋找符合指定之索引鍵的元素。|  
-|[get_allocator](#get_allocator)|取得已儲存的配置器物件。|  
-|[hash_function](#hash)|取得儲存的雜湊函式物件。|  
-|[insert](#insert)|加入項目。|  
-|[key_eq](#key_eq)|取得儲存的比較函式物件。|  
-|[load_factor](#load_factor)|計算每個值區的平均項目數。|  
-|[max_bucket_count](#max_bucket_count)|取得 Bucket 最大數目。|  
-|[max_load_factor](#max_load_factor)|取得或設定每個 Bucket 最大項目數。|  
-|[max_size](#max_size)|取得受控制序列的大小上限。|  
-|[rehash](#rehash)|重建雜湊資料表。|  
-|[size](#size)|計算元素的數目。|  
-|[swap](#swap)|交換兩個容器的內容。|  
-|[unordered_multiset](#unordered_multiset)|建構容器物件。|  
+|Member Function|Description|  
+|[begin](#begin)|Designates the beginning of the controlled sequence.|  
+|[bucket](#bucket)|Gets the bucket number for a key value.|  
+|[bucket_count](#bucket_count)|Gets the number of buckets.|  
+|[bucket_size](#bucket_size)|Gets the size of a bucket.|  
+|[cbegin](#cbegin)|Designates the beginning of the controlled sequence.|  
+|[cend](#cend)|Designates the end of the controlled sequence.|  
+|[clear](#clear)|Removes all elements.|  
+|[count](#count)|Finds the number of elements matching a specified key.|  
+|[emplace](#emplace)|Adds an element constructed in place.|  
+|[emplace_hint](#emplace_hint)|Adds an element constructed in place, with hint.|  
+|[empty](#empty)|Tests whether no elements are present.|  
+|[end](#end)|Designates the end of the controlled sequence.|  
+|[equal_range](#equal_range)|Finds range that matches a specified key.|  
+|[erase](#erase)|Removes elements at specified positions.|  
+|[find](#find)|Finds an element that matches a specified key.|  
+|[get_allocator](#get_allocator)|Gets the stored allocator object.|  
+|[hash_function](#hash)|Gets the stored hash function object.|  
+|[insert](#insert)|Adds elements.|  
+|[key_eq](#key_eq)|Gets the stored comparison function object.|  
+|[load_factor](#load_factor)|Counts the average elements per bucket.|  
+|[max_bucket_count](#max_bucket_count)|Gets the maximum number of buckets.|  
+|[max_load_factor](#max_load_factor)|Gets or sets the maximum elements per bucket.|  
+|[max_size](#max_size)|Gets the maximum size of the controlled sequence.|  
+|[rehash](#rehash)|Rebuilds the hash table.|  
+|[size](#size)|Counts the number of elements.|  
+|[swap](#swap)|Swaps the contents of two containers.|  
+|[unordered_multiset](#unordered_multiset)|Constructs a container object.|  
   
 |||  
 |-|-|  
-|運算子|說明|  
-|[unordered_multiset::operator=](#op_eq)|複製雜湊資料表。|  
+|Operator|Description|  
+|[unordered_multiset::operator=](#op_eq)|Copies a hash table.|  
   
-## <a name="remarks"></a>備註  
- 物件會排列它所控制之序列的順序，方式是呼叫兩個預存物件，一個是 [unordered_multiset::key_equal](#key_equal) 類型的比較函式物件，一個是 [unordered_multiset::hasher](#hasher) 類型的雜湊函式物件。 您可以透過呼叫成員函式 [unordered_multiset::key_eq](#key_eq)`()` 存取第一個預存物件；透過呼叫成員函式 [unordered_multiset::hash_function](#hash)`()` 存取第二個預存物件。 具體來說，只有在兩個引數值具有對等順序，對於 `X` 類型的所有值 `Y` 和 `Key`，呼叫 `key_eq()(X, Y)` 才會傳回 true，呼叫 `hash_function()(keyval)` 會產生 `size_t` 類型值的分佈。 不同於樣板類別 [unordered_set 類別](../standard-library/unordered-set-class.md)，樣板類別 `unordered_multiset` 的物件並不保證 `key_eq()(X, Y)` 針對受控制序列的任何兩個元素永遠是 false。 (索引鍵不需要是唯一的)。  
+## <a name="remarks"></a>Remarks  
+ The object orders the sequence it controls by calling two stored objects, a comparison function object of type [unordered_multiset::key_equal](#key_equal) and a hash function object of type [unordered_multiset::hasher](#hasher). You access the first stored object by calling the member function [unordered_multiset::key_eq](#key_eq)`()`; and you access the second stored object by calling the member function [unordered_multiset::hash_function](#hash)`()`. Specifically, for all values `X` and `Y` of type `Key`, the call `key_eq()(X, Y)` returns true only if the two argument values have equivalent ordering; the call `hash_function()(keyval)` yields a distribution of values of type `size_t`. Unlike template class [unordered_set Class](../standard-library/unordered-set-class.md), an object of template class `unordered_multiset` does not ensure that `key_eq()(X, Y)` is always false for any two elements of the controlled sequence. (Keys need not be unique.)  
   
- 物件也會儲存最大載入因數，指定每個 Bucket 所需的項目平均數目上限。 如果插入元素會使 [unordered_multiset::load_factor](#load_factor)`()` 超出最大的載入因數，容器會增加值區的數目並視需要重建雜湊資料表。  
+ The object also stores a maximum load factor, which specifies the maximum desired average number of elements per bucket. If inserting an element causes [unordered_multiset::load_factor](#load_factor)`()` to exceed the maximum load factor, the container increases the number of buckets and rebuilds the hash table as needed.  
   
- 受控制序列中實際的項目順序取決於雜湊函式、比較函式、插入順序、最大載入因數和 Bucket 目前數目。 一般來說，您無法預測受控制序列中的項目順序。 不過，您永遠可以確保，有對等順序的任何項目子集在受控制序列中為相鄰。  
+ The actual order of elements in the controlled sequence depends on the hash function, the comparison function, the order of insertion, the maximum load factor, and the current number of buckets. You cannot in general predict the order of elements in the controlled sequence. You can always be assured, however, that any subset of elements that have equivalent ordering are adjacent in the controlled sequence.  
   
- 物件會透過 [unordered_multiset::allocator_type](#allocator_type) 類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須具有和 `allocator` 樣板類別物件相同的外部介面。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。  
+ The object allocates and frees storage for the sequence it controls through a stored allocator object of type [unordered_multiset::allocator_type](#allocator_type). Such an allocator object must have the same external interface as an object of template class `allocator`. Note that the stored allocator object is not copied when the container object is assigned.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** \<unordered_set>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<unordered_set>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  unordered_multiset::allocator_type  
- 管理儲存體的配置器類型。  
+ The type of an allocator for managing storage.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型是範本參數 `Alloc`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Alloc`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_allocator_type.cpp   
@@ -257,7 +340,7 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="begin"></a>  unordered_multiset::begin  
- 指定受控制序列或值區的開頭。  
+ Designates the beginning of the controlled sequence or a bucket.  
   
 ```  
 iterator begin();
@@ -270,17 +353,17 @@ local_iterator begin(size_type nbucket);
 const_local_iterator begin(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|`nbucket`|Bucket 編號。|  
+|Parameter|Description|  
+|`nbucket`|The bucket number.|  
   
-### <a name="remarks"></a>備註  
- 最前面兩個成員函式傳回的正向迭代器，指向序列的第一個項目 (或在空序列結尾以外的位置)。 最後面兩個成員函式傳回的正向迭代器，指向值區 `nbucket` 的第一個項目 (或在空值區結尾以外的位置)。  
+### <a name="remarks"></a>Remarks  
+ The first two member functions return a forward iterator that points at the first element of the sequence (or just beyond the end of an empty sequence). The last two member functions return a forward iterator that points at the first element of bucket `nbucket` (or just beyond the end of an empty bucket).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_begin.cpp   
@@ -326,20 +409,20 @@ int main()
 ```  
   
 ##  <a name="bucket"></a>  unordered_multiset::bucket  
- 取得索引鍵值的值區數目。  
+ Gets the bucket number for a key value.  
   
 ```  
 size_type bucket(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  keyval  
- 要對應的索引鍵值。  
+ The key value to map.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回目前對應至索引鍵值 `keyval`的值區數目。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the bucket number currently corresponding to the key value `keyval`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_bucket.cpp   
@@ -380,16 +463,16 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="bucket_count"></a>  unordered_multiset::bucket_count  
- 取得 Bucket 的數目。  
+ Gets the number of buckets.  
   
 ```  
 size_type bucket_count() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回目前的 Bucket 數目。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the current number of buckets.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_bucket_count.cpp   
@@ -466,20 +549,20 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="bucket_size"></a>  unordered_multiset::bucket_size  
- 取得 Bucket 大小  
+ Gets the size of a bucket  
   
 ```  
 size_type bucket_size(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nbucket`  
- Bucket 編號。  
+ The bucket number.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 Bucket 編號 `nbucket`的大小。  
+### <a name="remarks"></a>Remarks  
+ The member functions returns the size of bucket number `nbucket`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_bucket_size.cpp   
@@ -520,19 +603,19 @@ bucket_size(7) == 1
 ```  
   
 ##  <a name="cbegin"></a>  unordered_multiset::cbegin  
- 傳回 `const` 迭代器，為範圍中的第一個項目定址。  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- `const` 正向存取迭代器，指向範圍的第一個項目，或指向空白範圍結尾 (空白範圍 `cbegin() == cend()`) 之外的位置。  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>備註  
- 傳回值為 `cbegin` 時，無法修改範圍中的項目。  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為支援 `begin()` 和 `cbegin()` 的各種可修改 (非 `const`) 容器。  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -543,19 +626,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  unordered_multiset::cend  
- 傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向範圍結尾之外的 `const` 正向存取迭代器。  
+### <a name="return-value"></a>Return Value  
+ A `const` forward-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>備註  
- `cend` 用來測試迭代器是否已超過其範圍結尾。  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- 您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `end()` 和 `cend()` 且可修改 (非 `const`) 的容器類型。  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -565,19 +648,19 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- `cend` 所傳回的值不應該取值。  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  unordered_multiset::clear  
- 移除所有項目。  
+ Removes all elements.  
   
 ```  
 void clear();
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式呼叫 [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`。  
+### <a name="remarks"></a>Remarks  
+ The member function calls [unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_clear.cpp   
@@ -634,16 +717,16 @@ empty() == false
 ```  
   
 ##  <a name="const_iterator"></a>  unordered_multiset::const_iterator  
- 用於受控制序列的常數迭代器類型。  
+ The type of a constant iterator for the controlled sequence.  
   
 ```  
 typedef T1 const_iterator;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T1`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant forward iterator for the controlled sequence. It is described here as a synonym for the implementation-defined type `T1`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_const_iterator.cpp   
@@ -676,16 +759,16 @@ int main()
 ```  
   
 ##  <a name="const_local_iterator"></a>  unordered_multiset::const_local_iterator  
- 用於受控制序列的常數 Bucket 迭代器類型。  
+ The type of a constant bucket iterator for the controlled sequence.  
   
 ```  
 typedef T5 const_local_iterator;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型說明可作為值區之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T5`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T5`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_const_local_iterator.cpp   
@@ -723,16 +806,16 @@ int main()
 ```  
   
 ##  <a name="const_pointer"></a>  unordered_multiset::const_pointer  
- 項目的常數指標類型。  
+ The type of a constant pointer to an element.  
   
 ```  
 typedef Alloc::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所說明的物件可做為受控制序列之項目的常數指標。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant pointer to an element of the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_const_pointer.cpp   
@@ -768,16 +851,16 @@ int main()
 ```  
   
 ##  <a name="const_reference"></a>  unordered_multiset::const_reference  
- 項目的常數參考類型。  
+ The type of a constant reference to an element.  
   
 ```  
 typedef Alloc::const_reference const_reference;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所說明的物件可作為受控制序列之元素的常數參考。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a constant reference to an element of the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_const_reference.cpp   
@@ -813,20 +896,20 @@ int main()
 ```  
   
 ##  <a name="count"></a>  unordered_multiset::count  
- 尋找符合指定索引鍵的項目數目。  
+ Finds the number of elements matching a specified key.  
   
 ```  
 size_type count(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- 要搜尋的索引鍵值。  
+ Key value to search for.  
   
-### <a name="remarks"></a>備註  
- 成員函式傳回由 [unordered_multiset::equal_range](#equal_range)`(keyval)` 分隔之範圍中的元素數。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements in the range delimited by [unordered_multiset::equal_range](#equal_range)`(keyval)`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_count.cpp   
@@ -866,16 +949,16 @@ count('C') == 0
 ```  
   
 ##  <a name="difference_type"></a>  unordered_multiset::difference_type  
- 兩個項目之間帶正負號距離的類型。  
+ The type of a signed distance between two elements.  
   
 ```  
 typedef T3 difference_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此帶正負號的整數類型所描述的物件可代表受控制序列中任何兩個項目位址之間的差距。 在此將其描述為已定義實作之 `T3`類型的同義字。  
+### <a name="remarks"></a>Remarks  
+ The signed integer type describes an object that can represent the difference between the addresses of any two elements in the controlled sequence. It is described here as a synonym for the implementation-defined type `T3`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_difference_type.cpp   
@@ -924,32 +1007,32 @@ begin()-end() == -3
 ```  
   
 ##  <a name="emplace"></a>  unordered_multiset::emplace  
- 插入就地建構的元素 (沒有執行複製或移動作業)。  
+ Inserts an element constructed in place (no copy or move operations are performed).  
   
 ```  
 template <class... Args>  
 iterator emplace(Args&&... args);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|說明|  
-|`args`|轉送以建構插入 unordered_multiset 之元素的引數。|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the unordered_multiset.|  
   
-### <a name="return-value"></a>傳回值  
- 指向新插入之元素的迭代器。  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
-### <a name="remarks"></a>備註  
- 此函式不會使容器元素的參考無效，但是可能會使容器的所有迭代器無效。  
+### <a name="remarks"></a>Remarks  
+ No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
   
- 在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。  
+ During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
   
- 如需程式碼範例，請參閱 [multiset::emplace](../standard-library/multiset-class.md#emplace)。  
+ For a code example, see [multiset::emplace](../standard-library/multiset-class.md#emplace).  
   
 ##  <a name="emplace_hint"></a>  unordered_multiset::emplace_hint  
- 插入就地建構元素 (沒有執行複製或移動作業)，其中含位置提示。  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
@@ -958,35 +1041,35 @@ iterator emplace_hint(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|說明|  
-|`args`|轉送以建構插入 unordered_multiset 之元素的引數。|  
-|`where`|有關要從何處開始搜尋正確插入點的提示。|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the unordered_multiset.|  
+|`where`|A hint regarding the place to start searching for the correct point of insertion.|  
   
-### <a name="return-value"></a>傳回值  
- 指向新插入之元素的迭代器。  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
-### <a name="remarks"></a>備註  
- 此函式不會使容器元素的參考無效，但是可能會使容器的所有迭代器無效。  
+### <a name="remarks"></a>Remarks  
+ No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
   
- 在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。  
+ During the insertion, if an exception is thrown but does not occur in the container's hash function, the container is not modified. If the exception is thrown in the hash function, the result is undefined.  
   
- 如需程式碼範例，請參閱 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)。  
+ For a code example, see [set::emplace_hint](../standard-library/set-class.md#emplace_hint).  
   
 ##  <a name="empty"></a>  unordered_multiset::empty  
- 測試項目是否不存在。  
+ Tests whether no elements are present.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會對空的受控制序列傳回 true。  
+### <a name="remarks"></a>Remarks  
+ The member function returns true for an empty controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_empty.cpp   
@@ -1043,7 +1126,7 @@ empty() == false
 ```  
   
 ##  <a name="end"></a>  unordered_multiset::end  
- 指定受控制序列的結尾。  
+ Designates the end of the controlled sequence.  
   
 ```  
 iterator end();
@@ -1054,14 +1137,14 @@ const_iterator end() const;
 const_local_iterator end(size_type nbucket) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nbucket`  
- Bucket 編號。  
+ The bucket number.  
   
-### <a name="remarks"></a>備註  
- 前兩個成員函式會傳回指向序列結尾之外的正向迭代器。 最後兩個成員函式會傳回指向 Bucket `nbucket` 結尾之外的正向迭代器。  
+### <a name="remarks"></a>Remarks  
+ The first two member functions return a forward iterator that points just beyond the end of the sequence. The last two member functions return a forward iterator that points just beyond the end of bucket `nbucket`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_end.cpp   
@@ -1109,7 +1192,7 @@ int main()
 ```  
   
 ##  <a name="equal_range"></a>  unordered_multiset::equal_range  
- 尋找符合指定之索引鍵的範圍。  
+ Finds range that matches a specified key.  
   
 ```  
 std::pair<iterator, iterator>  
@@ -1119,14 +1202,14 @@ std::pair<const_iterator, const_iterator>
     equal_range(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- 要搜尋的索引鍵值。  
+ Key value to search for.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回一組迭代器 `X` ，使 `[X.first, X.second)` 僅分隔與 `keyval`具有相同順序之受控制序列的項目。 如果沒有這類項目存在，則兩個迭代器皆為 `end()`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns a pair of iterators `X` such that `[X.first, X.second)` delimits just those elements of the controlled sequence that have equivalent ordering with `keyval`. If no such elements exist, both iterators are `end()`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_equal_range.cpp   
@@ -1176,7 +1259,7 @@ equal_range('b'): [b]
 ```  
   
 ##  <a name="erase"></a>  unordered_multiset::erase  
- 從指定的位置移除 unordered_multiset 中的元素或元素範圍，或移除符合指定索引鍵的元素。  
+ Removes an element or a range of elements in a unordered_multiset from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(
@@ -1190,42 +1273,42 @@ size_type erase(
     const key_type& Key);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Where`  
- 要移除之項目的位置。  
+ Position of the element to be removed.  
   
  `First`  
- 要移除之第一個項目的位置。  
+ Position of the first element to be removed.  
   
  `Last`  
- 緊接在要移除之最後一個項目後面的位置。  
+ Position just beyond the last element to be removed.  
   
  `Key`  
- 要移除之項目的索引鍵值。  
+ The key value of the elements to be removed.  
   
-### <a name="return-value"></a>傳回值  
- 在前兩個成員函式中，會傳回雙向迭代器，其中指定任何移除的元素之外剩餘的第一個元素，或者如果沒有此類元素，則傳回 unordered_multiset 結尾的元素。  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or an element that is the end of the unordered_multiset if no such element exists.  
   
- 在第三個成員函式中，傳回已從 unordered_multiset 移除的元素數。  
+ For the third member function, returns the number of elements that have been removed from the unordered_multiset.  
   
-### <a name="remarks"></a>備註  
- 如需程式碼範例，請參閱 [set::erase](../standard-library/set-class.md#erase)。  
+### <a name="remarks"></a>Remarks  
+ For a code example, see [set::erase](../standard-library/set-class.md#erase).  
   
 ##  <a name="find"></a>  unordered_multiset::find  
- 尋找符合指定之索引鍵的元素。  
+ Finds an element that matches a specified key.  
   
 ```  
 const_iterator find(const Key& keyval) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `keyval`  
- 要搜尋的索引鍵值。  
+ Key value to search for.  
   
-### <a name="remarks"></a>備註  
- 成員函式傳回 [unordered_multiset::equal_range](#equal_range)`(keyval).first`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [unordered_multiset::equal_range](#equal_range)`(keyval).first`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_find.cpp   
@@ -1270,16 +1353,16 @@ find('b') == true: [b]
 ```  
   
 ##  <a name="get_allocator"></a>  unordered_multiset::get_allocator  
- 取得已儲存的配置器物件。  
+ Gets the stored allocator object.  
   
 ```  
 Alloc get_allocator() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 這個成員函式會傳回儲存的配置器物件。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored allocator object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_get_allocator.cpp   
@@ -1307,16 +1390,16 @@ al == std::allocator() is true
 ```  
   
 ##  <a name="hash"></a>  unordered_multiset::hash_function  
- 取得儲存的雜湊函式物件。  
+ Gets the stored hash function object.  
   
 ```  
 Hash hash_function() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回儲存的雜湊函式物件。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored hash function object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_hash_function.cpp   
@@ -1344,16 +1427,16 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="hasher"></a>  unordered_multiset::hasher  
- 雜湊函式的類型。  
+ The type of the hash function.  
   
 ```  
 typedef Hash hasher;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型是範本參數 `Hash`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Hash`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_hasher.cpp   
@@ -1381,7 +1464,7 @@ hfn('b') == 1647086
 ```  
   
 ##  <a name="insert"></a>  unordered_multiset::insert  
- 將某個元素或元素範圍插入 unordered_multiset 中。  
+ Inserts an element or a range of elements into an unordered_multiset.  
   
 ```  
 // (1) single element  
@@ -1422,60 +1505,60 @@ void insert(
 IList);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|`Val`|要插入至 unordered_multiset 的元素值。|  
-|`Where`|要開始搜尋正確的插入點的地方|  
-|`ValTy`|範本參數，指定 unordered_multiset 可用於建構 [value_type](../standard-library/map-class.md#value_type) 之元素的引數類型，並將 `Val` 做為引數完美轉送。|  
-|`First`|要複製之第一個元素的位置。|  
-|`Last`|要複製之最一個元素後方的位置。|  
-|`InputIterator`|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|  
-|`IList`|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the unordered_multiset.|  
+|`Where`|The place to start searching for the correct point of insertion.|  
+|`ValTy`|Template parameter that specifies the argument type that the unordered_multiset can use to construct an element of [value_type](../standard-library/map-class.md#value_type), and perfect-forwards `Val` as an argument.|  
+|`First`|The position of the first element to be copied.|  
+|`Last`|The position just beyond the last element to be copied.|  
+|`InputIterator`|Template function argument that meets the requirements of an [input iterator](../standard-library/input-iterator-tag-struct.md) that points to elements of a type that can be used to construct [value_type](../standard-library/map-class.md#value_type) objects.|  
+|`IList`|The [initializer_list](../standard-library/initializer-list.md) from which to copy the elements.|  
   
-### <a name="return-value"></a>傳回值  
- 單一元素插入成員函式 (1) 和 (2)，會將迭代器傳回至在 unordered_multiset 中插入新元素的位置。  
+### <a name="return-value"></a>Return Value  
+ The single-element-insert member functions, (1) and (2), return an iterator to the position where the new element was inserted into the unordered_multiset.  
   
- 具有提示的單一元素成員函式 (3) 和 (4)，會傳回迭代器，其指向在 unordered_multiset 中插入新元素的位置。  
+ The single-element-with-hint member functions, (3) and (4), return an iterator that points to the position where the new element was inserted into the unordered_multiset.  
   
-### <a name="remarks"></a>備註  
- 此函式不會使指標或參考無效，但是可能會使容器的所有迭代器無效。  
+### <a name="remarks"></a>Remarks  
+ No pointers or references are invalidated by this function, but it may invalidate all iterators to the container.  
   
- 在只插入一個元素的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。  
+ During the insertion of just one element, if an exception is thrown but does not occur in the container's hash function, the container's state is not modified. If the exception is thrown in the hash function, the result is undefined. During the insertion of multiple elements, if an exception is thrown, the container is left in an unspecified but valid state.  
   
- 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而針對 set，`unordered_multiset<V>::value_type` 是類型 `const V`。  
+ The [value_type](../standard-library/map-class.md#value_type) of a container is a typedef that belongs to the container, and, for set, `unordered_multiset<V>::value_type` is type `const V`.  
   
- 範圍成員函式 (5) 會將元素值序列插入 unordered_multiset，而 unordered_multiset 對應至範圍 `[First, Last)` 中迭代器指定的每個元素；因此不會插入 `Last`。 容器成員函式 `end()` 是指容器中最後一個元素後方的位置；例如，陳述式 `m.insert(v.begin(), v.end());` 會將 `v` 的所有元素插入至 `m`。  
+ The range member function (5) inserts the sequence of element values into an unordered_multiset that corresponds to each element addressed by an iterator in the range `[First, Last)`; therefore, `Last` does not get inserted. The container member function `end()` refers to the position just after the last element in the container—for example, the statement `m.insert(v.begin(), v.end());` inserts all elements of `v` into `m`.  
   
- 初始設定式清單成員函式 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 將元素複製到 unordered_multiset。  
+ The initializer list member function (6) uses an [initializer_list](../standard-library/initializer-list.md) to copy elements into the unordered_multiset.  
   
- 針對插入就地建構的元素 (也就是沒有執行複製或移動作業)，請參閱 [unordered_multiset::emplace](#emplace) 和 [unordered_multiset::emplace_hint](#emplace_hint)。  
+ For insertion of an element constructed in place—that is, no copy or move operations are performed—see [unordered_multiset::emplace](#emplace) and [unordered_multiset::emplace_hint](#emplace_hint).  
   
- 如需程式碼範例，請參閱 [multiset::insert](../standard-library/multiset-class.md#insert)。  
+ For a code example, see [multiset::insert](../standard-library/multiset-class.md#insert).  
   
 ##  <a name="iterator"></a>  unordered_multiset::iterator  
- 這是一種類型，提供可讀取 unordered_multiset 中元素的常數[正向迭代器](../standard-library/forward-iterator-tag-struct.md)。  
+ A type that provides a constant [forward iterator](../standard-library/forward-iterator-tag-struct.md) that can read elements in an unordered_multiset.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="example"></a>範例  
-  如需如何宣告及使用**迭代器**的範例，請參閱 [begin](../standard-library/multiset-class.md#begin) 的範例。  
+### <a name="example"></a>Example  
+  See the example for [begin](../standard-library/multiset-class.md#begin) for an example of how to declare and use an **iterator**.  
   
 ##  <a name="key_eq"></a>  unordered_multiset::key_eq  
- 取得儲存的比較函式物件。  
+ Gets the stored comparison function object.  
   
 ```  
 Pred key_eq() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回儲存的比較函式物件  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored comparison function object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_key_eq.cpp   
@@ -1505,16 +1588,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_equal"></a>  unordered_multiset::key_equal  
- 比較函式的類型。  
+ The type of the comparison function.  
   
 ```  
 typedef Pred key_equal;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型是範本參數 `Pred`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Pred`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_key_equal.cpp   
@@ -1544,16 +1627,16 @@ cmpfn('a', 'b') == false
 ```  
   
 ##  <a name="key_type"></a>  unordered_multiset::key_type  
- 排序索引鍵的類型。  
+ The type of an ordering key.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型是範本參數 `Key`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Key`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_key_type.cpp   
@@ -1597,16 +1680,16 @@ int main()
 ```  
   
 ##  <a name="load_factor"></a>  unordered_multiset::load_factor  
- 計算每個值區的平均項目數。  
+ Counts the average elements per bucket.  
   
 ```  
 float load_factor() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式傳回 `(float)`[unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()`，亦即每個值區的平均元素數。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `(float)`[unordered_multiset::size](#size)`() / (float)`[unordered_multiset::bucket_count](#bucket_count)`()`, the average number of elements per bucket.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_load_factor.cpp   
@@ -1664,16 +1747,16 @@ int main()
 ```  
   
 ##  <a name="local_iterator"></a>  unordered_multiset::local_iterator  
- 值區迭代器的類型。  
+ The type of a bucket iterator.  
   
 ```  
 typedef T4 local_iterator;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型說明可做為值區之正向迭代器的物件。 在此將其說明為實作定義類型 `T4`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a forward iterator for a bucket. It is described here as a synonym for the implementation-defined type `T4`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_local_iterator.cpp   
@@ -1711,16 +1794,16 @@ int main()
 ```  
   
 ##  <a name="max_bucket_count"></a>  unordered_multiset::max_bucket_count  
- 取得 Bucket 最大數目。  
+ Gets the maximum number of buckets.  
   
 ```  
 size_type max_bucket_count() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回目前允許的最大值區數目。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the maximum number of buckets currently permitted.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_max_bucket_count.cpp   
@@ -1797,7 +1880,7 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_load_factor"></a>  unordered_multiset::max_load_factor  
- 取得或設定每個 Bucket 最大項目數。  
+ Gets or sets the maximum elements per bucket.  
   
 ```  
 float max_load_factor() const;
@@ -1806,14 +1889,14 @@ float max_load_factor() const;
 void max_load_factor(float factor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `factor`  
- 新的最大載入因數。  
+ The new maximum load factor.  
   
-### <a name="remarks"></a>備註  
- 第一個成員函式會傳回儲存的最大載入因數。 第二個成員函式會以 `factor`取代儲存的最大載入因數。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored maximum load factor. The second member function replaces the stored maximum load factor with `factor`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_max_load_factor.cpp   
@@ -1890,16 +1973,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="max_size"></a>  unordered_multiset::max_size  
- 取得受控制序列的大小上限。  
+ Gets the maximum size of the controlled sequence.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回物件可以控制之最長序列的長度。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the longest sequence that the object can control.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_max_size.cpp   
@@ -1924,7 +2007,7 @@ max_size() == 4294967295
 ```  
   
 ##  <a name="op_eq"></a>  unordered_multiset::operator=  
- 複製雜湊資料表。  
+ Copies a hash table.  
   
 ```  
 unordered_multiset& operator=(const unordered_multiset& right);
@@ -1932,17 +2015,17 @@ unordered_multiset& operator=(const unordered_multiset& right);
 unordered_multiset& operator=(unordered_multiset&& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|說明|  
-|`right`|複製到 `unordered_multiset` 的 [unordered_multiset](../standard-library/unordered-multiset-class.md)。|  
+|Parameter|Description|  
+|`right`|The [unordered_multiset](../standard-library/unordered-multiset-class.md) being copied into the `unordered_multiset`.|  
   
-### <a name="remarks"></a>備註  
- 清除 `unordered_multiset` 中的任何現有元素之後， `operator=` 會將 `right` 的內容複製或移到 `unordered_multiset` 中。  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in an `unordered_multiset`, `operator=` either copies or moves the contents of `right` into the `unordered_multiset`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // unordered_multiset_operator_as.cpp  
@@ -1980,16 +2063,16 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  unordered_multiset::pointer  
- 項目的指標類型。  
+ The type of a pointer to an element.  
   
 ```  
 typedef Alloc::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所說明的物件可做為受控制序列之項目的指標。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a pointer to an element of the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_pointer.cpp   
@@ -2026,16 +2109,16 @@ int main()
 ```  
   
 ##  <a name="reference"></a>  unordered_multiset::reference  
- 項目的參考類型。  
+ The type of a reference to an element.  
   
 ```  
 typedef Alloc::reference reference;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型所說明的物件可做為受控制序列之元素的參考。  
+### <a name="remarks"></a>Remarks  
+ The type describes an object that can serve as a reference to an element of the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_reference.cpp   
@@ -2072,20 +2155,20 @@ int main()
 ```  
   
 ##  <a name="rehash"></a>  unordered_multiset::rehash  
- 重建雜湊資料表。  
+ Rebuilds the hash table.  
   
 ```  
 void rehash(size_type nbuckets);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nbuckets`  
- 要求的值區數目。  
+ The requested number of buckets.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會將值區數目改變為至少 `nbuckets` ，並視需要重建雜湊資料表。  
+### <a name="remarks"></a>Remarks  
+ The member function alters the number of buckets to be at least `nbuckets` and rebuilds the hash table as needed.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_rehash.cpp   
@@ -2148,16 +2231,16 @@ max_load_factor() == 0.1
 ```  
   
 ##  <a name="size"></a>  unordered_multiset::size  
- 計算元素的數目。  
+ Counts the number of elements.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回受控制序列的長度。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the length of the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_size.cpp   
@@ -2214,16 +2297,16 @@ empty() == false
 ```  
   
 ##  <a name="size_type"></a>  unordered_multiset::size_type  
- 兩個項目之間不帶正負號距離的類型。  
+ The type of an unsigned distance between two elements.  
   
 ```  
 typedef T2 size_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此不帶正負號的整數類型所描述的物件可代表任何受控制序列的長度。 在此將其描述為已定義實作之 `T2`類型的同義字。  
+### <a name="remarks"></a>Remarks  
+ The unsigned integer type describes an object that can represent the length of any controlled sequence. It is described here as a synonym for the implementation-defined type `T2`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_size_type.cpp   
@@ -2249,20 +2332,20 @@ size == 0
 ```  
   
 ##  <a name="swap"></a>  unordered_multiset::swap  
- 交換兩個容器的內容。  
+ Swaps the contents of two containers.  
   
 ```  
 void swap(unordered_multiset& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要交換的容器。  
+ The container to swap with.  
   
-### <a name="remarks"></a>備註  
- 成員函式會交換 `*this` 和 `right`之間受控制的序列。 如果是 [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
+### <a name="remarks"></a>Remarks  
+ The member function swaps the controlled sequences between `*this` and `right`. If [unordered_multiset::get_allocator](#get_allocator)`() == right.get_allocator()`, it does so in constant time, it throws an exception only as a result of copying the stored traits object of type `Tr`, and it invalidates no references, pointers, or iterators that designate elements in the two controlled sequences. Otherwise, it performs a number of element assignments and constructor calls proportional to the number of elements in the two controlled sequences.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_swap.cpp   
@@ -2319,7 +2402,7 @@ int main()
 ```  
   
 ##  <a name="unordered_multiset"></a>  unordered_multiset::unordered_multiset  
- 建構容器物件。  
+ Constructs a container object.  
   
 ```  
 unordered_multiset(
@@ -2369,43 +2452,43 @@ unordered_multiset(
     const Allocator& Al = Alloc());
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|`InputIterator`|迭代器類型。|  
-|`Al`|要儲存的配置器物件。|  
-|`Comp`|要儲存的比較函式物件。|  
-|`Hash`|要儲存的雜湊函式物件。|  
-|`Bucket_count`|Bucket 最小數目。|  
-|`Right`|要複製的容器。|  
-|`IList`|要從中複製的 initializer_list。|  
+|Parameter|Description|  
+|`InputIterator`|The iterator type.|  
+|`Al`|The allocator object to store.|  
+|`Comp`|The comparison function object to store.|  
+|`Hash`|The hash function object to store.|  
+|`Bucket_count`|The minimum number of buckets.|  
+|`Right`|The container to copy.|  
+|`IList`|The initializer_list from which to copy.|  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式指定由 `Right` 控制之序列的複本。 第二個建構函式會指定空白的受控制序列。 第三個建構函式會插入項目值序列 `[First, Last)`。 第四個建構函式透過移動 `Right` 來指定序列的複本。  
+### <a name="remarks"></a>Remarks  
+ The first constructor specifies a copy of the sequence controlled by `Right`. The second constructor specifies an empty controlled sequence. The third constructor inserts the sequence of element values `[First, Last)`. The fourth constructor specifies a copy of the sequence by moving `Right`.  
   
- 所有建構函式也會初始化數個儲存值。 對於複製建構函式，其值是從 `Right` 取得。 否則就是：  
+ All constructors also initialize several stored values. For the copy constructor, the values are obtained from `Right`. Otherwise:  
   
- Bucket 最小數目為引數 `Bucket_count` (如果存在)；否則其為本文所述的預設值，即由實作所定義的值 `N0`。  
+ The minimum number of buckets is the argument `Bucket_count`, if present; otherwise it is a default value described here as the implementation-defined value `N0`.  
   
- 雜湊函式物件是引數 `Hash` (如果存在)；否則為 `Hash()`。  
+ The hash function object is the argument `Hash`, if present; otherwise it is `Hash()`.  
   
- 比對函式物件是引數 `Comp` (如果存在)；否則為 `Comp()`。  
+ The comparison function object is the argument `Comp`, if present; otherwise it is `Comp()`.  
   
- 配置器物件是引數 `Al` (如果存在)；否則為 `Alloc()`。  
+ The allocator object is the argument `Al`, if present; otherwise, it is `Alloc()`.  
   
 ##  <a name="value_type"></a>  unordered_multiset::value_type  
- 元素的類型。  
+ The type of an element.  
   
 ```  
 typedef Key value_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型描述受控制序列的項目。  
+### <a name="remarks"></a>Remarks  
+ The type describes an element of the controlled sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__unordered_set__unordered_multiset_value_type.cpp   
@@ -2448,10 +2531,10 @@ int main()
 [d] [c] [b] [a]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<unordered_set>](../standard-library/unordered-set.md)   
- [容器](../cpp/containers-modern-cpp.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+ [Containers](../cpp/containers-modern-cpp.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

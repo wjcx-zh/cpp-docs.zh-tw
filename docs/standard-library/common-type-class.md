@@ -1,5 +1,5 @@
 ---
-title: "common_type 類別 | Microsoft Docs"
+title: common_type Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- common_type
 - type_traits/std::common_type
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 9166035a7de5414f23149354f0c8fb658f4a30fe
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: de91723a1957090d9df279cc1ad4788bdd20b696
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="commontype-class"></a>common_type 類別
-判斷一或多個類型的一般類型。  
+# <a name="commontype-class"></a>common_type Class
+Determines the common type of one or more types.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class... T>  
@@ -68,14 +67,14 @@ struct common_type<T, U, V...> {
 };
 ```  
   
-#### <a name="parameters"></a>參數  
- [完整類型](../c-language/incomplete-types.md)或 void 的類型清單。  
+#### <a name="parameters"></a>Parameters  
+ List of types that are either [complete types](../c-language/incomplete-types.md) or void.  
   
-## <a name="remarks"></a>備註  
- `type` 成員是常見的類型，其中參數清單中的所有類型都可以轉換為該類型。  
+## <a name="remarks"></a>Remarks  
+ The `type` member is the common type to which all types in the parameter list can be converted.  
   
-## <a name="example"></a>範例  
- 下列程式會示範一些正確使用方式案例和測試以取得結果。  
+## <a name="example"></a>Example  
+ The following program demonstrates some correct usage scenarios and tests for results.  
   
 ```cpp  
 // Compile using cl.exe /EHsc  
@@ -116,7 +115,7 @@ int main()
 }  
 ```  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
   
 ```
 Test for typedefs of common_type int
@@ -138,12 +137,12 @@ ModifiedIntType: false
 ClassType: true
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

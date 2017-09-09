@@ -1,42 +1,60 @@
 ---
-title: "&lt;cvt-wstring&gt;&lt;/cvt-wstring&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "stdext.cvt.<cvt/wstring>"
-  - "<cvt/wstring>"
-  - "stdext::cvt::<cvt/wstring>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvt/wstring 標頭"
+title: '&lt;cvt-wstring&gt; | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- stdext.cvt.<cvt/wstring>", "<cvt/wstring>", "stdext::cvt::<cvt/wstring>
+dev_langs:
+- C++
+helpviewer_keywords:
+- cvt/wstring header
 ms.assetid: d78b04bb-9ac0-4adb-8ffe-3aefb9b14c2d
 caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
----
-# &lt;cvt/wstring&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 721aaf9facd2b37f7c27e6de39a2b70837af3ac3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
-舊版 Visual Studio 中的標頭 `<cvt/wstring>` 已在 stdext::cvt 命名空間中定義範本類別 [wstring\_convert 類別](../standard-library/wstring-convert-class.md)。  為了回溯相容性，會維護此標頭。  新的程式碼應該使用 `std` 命名空間中 [\<locale\>](../standard-library/locale.md) 所定義的類別版本  
+---
+# <a name="ltcvtwstringgt"></a>&lt;cvt/wstring&gt;
+The header `<cvt/wstring>` in previous versions of Visual Studio defined the template class [wstring_convert Class](../standard-library/wstring-convert-class.md) in the stdext::cvt namespace. The header is maintained for backward compatibility. New code should use the version of the class that is defined in [\<locale>](../standard-library/locale.md) in the `std` namespace  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 #include <cvt/wstring>  
   
 ```  
   
-## 需求  
+## <a name="requirements"></a>Requirements  
   
-## 請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
+
+
+
+

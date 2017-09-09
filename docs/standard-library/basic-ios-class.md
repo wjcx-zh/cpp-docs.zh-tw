@@ -1,16 +1,15 @@
 ---
-title: "basic_ios 類別 | Microsoft Docs"
+title: basic_ios Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - ios/std::basic_ios
-- basic_ios
 - ios/std::basic_ios::char_type
 - ios/std::basic_ios::int_type
 - ios/std::basic_ios::off_type
@@ -39,7 +38,31 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_ios class
+- std::basic_ios [C++]
+- std::basic_ios [C++], char_type
+- std::basic_ios [C++], int_type
+- std::basic_ios [C++], off_type
+- std::basic_ios [C++], pos_type
+- std::basic_ios [C++], traits_type
+- std::basic_ios [C++], bad
+- std::basic_ios [C++], clear
+- std::basic_ios [C++], copyfmt
+- std::basic_ios [C++], eof
+- std::basic_ios [C++], exceptions
+- std::basic_ios [C++], fail
+- std::basic_ios [C++], fill
+- std::basic_ios [C++], good
+- std::basic_ios [C++], imbue
+- std::basic_ios [C++], init
+- std::basic_ios [C++], move
+- std::basic_ios [C++], narrow
+- std::basic_ios [C++], rdbuf
+- std::basic_ios [C++], rdstate
+- std::basic_ios [C++], set_rdbuf
+- std::basic_ios [C++], setstate
+- std::basic_ios [C++], swap
+- std::basic_ios [C++], tie
+- std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 caps.latest.revision: 24
 author: corob-msft
@@ -59,17 +82,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: df32e4cf1cfddd4e5634880ba6bffc63ddcd90af
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ea20a0c433ca12ceafc7bdcfe088d994ca65555e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicios-class"></a>basic_ios 類別
-此樣板類別描述相依於樣板參數的輸入資料流 (屬於樣板類別 [basic_istream](../standard-library/basic-istream-class.md)) 和輸出資料流 (屬於樣板類別 [basic_ostream](../standard-library/basic-ostream-class.md)) 通用的儲存體和成員函式 ([ios_base](../standard-library/ios-base-class.md) 類別描述通用但與樣板參數不相依的項目)。**basic_ios\<class Elem, class Traits>** 類別的物件可協助控制具有 **Elem** 類型之元素的資料流；其中該類型的字元特性是由 **Traits** 類別所決定。  
+# <a name="basicios-class"></a>basic_ios Class
+The template class describes the storage and member functions common to both input streams (of template class [basic_istream](../standard-library/basic-istream-class.md)) and output streams (of template class [basic_ostream](../standard-library/basic-ostream-class.md)) that depend on the template parameters. (The class [ios_base](../standard-library/ios-base-class.md) describes what is common and not dependent on template parameters.) An object of class **basic_ios\<class Elem, class Traits>** helps control a stream with elements of type **Elem**, whose character traits are determined by the class **Traits**.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
  
@@ -77,92 +100,92 @@ template <class Elem, class Traits>
 class basic_ios : public ios_base  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- 類型。  
+ A type.  
   
  `Traits`  
- 類型為 `char_traits` 的變數。  
+ A variable of type `char_traits`.  
   
-## <a name="remarks"></a>備註  
- **basic_ios\<class Elem, class Traits>** 類別的物件會儲存：  
+## <a name="remarks"></a>Remarks  
+ An object of class **basic_ios\<class Elem, class Traits>** stores:  
   
--   [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, Traits>** 類型物件的繫結指標。  
+-   A tie pointer to an object of type [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, Traits>**.  
   
--   [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, Traits >** 類型物件的資料流緩衝區指標。  
+-   A stream buffer pointer to an object of type [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, Traits >**.  
   
-- [格式設定資訊](../standard-library/ios-base-class.md)。  
+- [Formatting information](../standard-library/ios-base-class.md).  
   
-- [ios_base](../standard-library/ios-base-class.md) 類型基底物件中的[資料流狀態資訊](../standard-library/ios-base-class.md)。  
+- [Stream state information](../standard-library/ios-base-class.md) in a base object of type [ios_base](../standard-library/ios-base-class.md).  
   
--   `char_type` 類型物件中的填滿字元。  
+-   A fill character in an object of type `char_type`.  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_ios](#basic_ios)|建構 `basic_ios` 類別。|  
+|[basic_ios](#basic_ios)|Constructs the `basic_ios` class.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|`Elem` 樣板參數的同義字。|  
-|[int_type](#int_type)|`Traits::int_type` 的同義字。|  
-|[off_type](#off_type)|`Traits::off_type` 的同義字。|  
-|[pos_type](#pos_type)|`Traits::pos_type` 的同義字。|  
-|[traits_type](#traits_type)|`Traits` 樣板參數的同義字。|  
+|[char_type](#char_type)|A synonym for the template parameter `Elem`.|  
+|[int_type](#int_type)|A synonym for `Traits::int_type`.|  
+|[off_type](#off_type)|A synonym for `Traits::off_type`.|  
+|[pos_type](#pos_type)|A synonym for `Traits::pos_type`.|  
+|[traits_type](#traits_type)|A synonym for the template parameter `Traits`.|  
   
-### <a name="member-functions"></a>成員函式  
-  
-|||  
-|-|-|  
-|[bad](#bad)|表示資料流緩衝區的完整性遺失。|  
-|[clear](#clear)|清除所有錯誤的旗標。|  
-|[copyfmt](#copyfmt)|將旗標從某個資料流複製到另一個資料流。|  
-|[eof](#eof)|表示是否已到達資料流的結尾。|  
-|[exceptions](#exceptions)|表示此資料流會擲回哪些例外狀況。|  
-|[fail](#fail)|表示無法從資料流擷取有效的欄位。|  
-|[fill](#fill)|當此文字比該資料流還窄時，指定或傳回將要使用的字元。|  
-|[good](#good)|表示資料流處於良好狀況。|  
-|[imbue](#imbue)|變更地區設定。|  
-|[init](#init)|由 `basic_ios` 建構函式所呼叫。|  
-|[move](#move)|將所有值從此參數移動至目前物件，但該資料流緩衝區的指標除外。|  
-|[narrow](#narrow)|尋找指定之 `char_type` 的對等字元。|  
-|[rdbuf](#rdbuf)|將資料流路由轉送到指定緩衝區。|  
-|[rdstate](#rdstate)|讀取旗標的位元狀態。|  
-|[set_rdbuf](#set_rdbuf)|指派此資料流緩衝區為此資料流物件的讀取緩衝區。|  
-|[setstate](#setstate)|設定其他旗標。|  
-|[swap](#swap)|用另一個 `basic_ios` 物件中的值交換這個 `basic_ios` 物件中的值。 不會交換資料流緩衝區的指標。|  
-|[tie](#tie)|可確保一個資料流在另一個資料流之前先處理。|  
-|[widen](#widen)|尋找指定字元的對等 `char_type`。|  
-  
-### <a name="operators"></a>運算子  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[explicit operator bool](#op_bool)|允許使用 `basic_ios` 物件做為 `bool`。 自動類型轉換會停用，以避免常見非預期的副作用。|  
-|[operator void *](#op_void_star)|表示資料流是否仍然良好。|  
-|[operator!](#op_not)|表示資料流是否沒有錯誤。|  
+|[bad](#bad)|Indicates a loss of integrity of the stream buffer.|  
+|[clear](#clear)|Clears all error flags.|  
+|[copyfmt](#copyfmt)|Copies flags from one stream to another.|  
+|[eof](#eof)|Indicates if the end of a stream has been reached.|  
+|[exceptions](#exceptions)|Indicates which exceptions will be thrown by the stream.|  
+|[fail](#fail)|Indicates failure to extract a valid field from a stream.|  
+|[fill](#fill)|Specifies or returns the character that will be used when the text is not as wide as the stream.|  
+|[good](#good)|Indicates the stream is in good condition.|  
+|[imbue](#imbue)|Changes the locale.|  
+|[init](#init)|Called by `basic_ios` constructors.|  
+|[move](#move)|Moves all values, except the pointer to the stream buffer, from the parameter to the current object.|  
+|[narrow](#narrow)|Finds the equivalent char to a given `char_type`.|  
+|[rdbuf](#rdbuf)|Routes stream to specified buffer.|  
+|[rdstate](#rdstate)|Reads the state of bits for flags.|  
+|[set_rdbuf](#set_rdbuf)|Assigns a stream buffer to be the read buffer for this stream object.|  
+|[setstate](#setstate)|Sets additional flags.|  
+|[swap](#swap)|Exchanges the values in this `basic_ios` object for those of another `basic_ios` object. The pointers to the stream buffers are not swapped.|  
+|[tie](#tie)|Ensures that one stream is processed before another stream.|  
+|[widen](#widen)|Finds the equivalent `char_type` to a given char.|  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<ios>  
+### <a name="operators"></a>Operators  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[explicit operator bool](#op_bool)|Allows use of a `basic_ios` object as a `bool`. Automatic type conversion is disabled to prevent common, unintended side effects.|  
+|[operator void *](#op_void_star)|Indicates if the stream is still good.|  
+|[operator!](#op_not)|Indicates if the stream is not bad.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<ios>  
+  
+ **Namespace:** std  
   
 ##  <a name="bad"></a>  basic_ios::bad  
- 表示資料流緩衝區的完整性遺失  
+ Indicates a loss of integrity of the stream buffer  
   
 ```  
 bool bad() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 若 `rdstate & badbit` 為非零值，即為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if `rdstate & badbit` is nonzero; otherwise `false`.  
   
- 如需 `badbit` 的詳細資訊，請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
+ For more information on `badbit`, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_bad.cpp  
@@ -183,73 +206,73 @@ int main( void )
 ```  
   
 ##  <a name="basic_ios"></a>  basic_ios::basic_ios  
- 建構 basic_ios 類別。  
+ Constructs the basic_ios class.  
   
 ```   
 explicit basic_ios(basic_streambuf<Elem,  Traits>* sb);
 basic_ios();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `sb`  
- 要儲存輸入或輸出元素的標準緩衝區。  
+ Standard buffer to store input or output elements.  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會藉由呼叫 [init](#init)(_ *Sb*) 初始化其成員物件。 第二個 (受保護的) 建構函式會保留其成員物件的未初始化狀態。 稍後對 **init** 的呼叫必須先將物件初始化，之後才能將它安全地終結。  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes its member objects by calling [init](#init)(_ *Sb*). The second (protected) constructor leaves its member objects uninitialized. A later call to **init** must initialize the object before it can be safely destroyed.  
   
 ##  <a name="char_type"></a>  basic_ios::char_type  
- **Elem** 樣板參數的同義字。  
+ A synonym for the template parameter **Elem**.  
   
 ```   
 typedef Elem char_type;  
 ```  
   
 ##  <a name="clear"></a>  basic_ios::clear  
- 清除所有錯誤的旗標。  
+ Clears all error flags.  
   
 ```   
 void clear(iostate state = goodbit, bool reraise = false); 
 void clear(io_state state);
 ```  
   
-### <a name="parameters"></a>參數  
- `state` (選擇性)  
- 清除所有旗標之後您想要設定的旗標。 預設值為 `goodbit`。  
+### <a name="parameters"></a>Parameters  
+ `state` (optional)  
+ The flags you want to set after clearing all flags. Defaults to `goodbit`.  
   
- `reraise` (選擇性)  
- 指定是否應該重新引發例外狀況。 預設值為 `false` (將不重新引發例外狀況)。  
+ `reraise` (optional)  
+ Specifies whether the exception should be re-raised. Defaults to `false` (will not re-raise the exception).  
   
-### <a name="remarks"></a>備註  
- 旗標為 **goodbit**、**failbit**、**eofbit** 和 **badbit**。 使用 [good](#good)、[bad](#bad)、[eof](#eof) 和 [fail](#fail) 測試這些旗標  
+### <a name="remarks"></a>Remarks  
+ The flags are **goodbit**, **failbit**, **eofbit**, and **badbit**. Test for these flags with [good](#good), [bad](#bad), [eof](#eof), and [fail](#fail)  
   
- 成員函式會以下列項目取代預存的資料流狀態資訊：  
+ The member function replaces the stored stream state information with:  
   
  `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)  
   
- 如果 `state`**&**[exceptions](#exceptions) 為非零值，則會擲回 [failure](../standard-library/ios-base-class.md#failure) 類別的物件。  
+ If `state`**&**[exceptions](#exceptions) is nonzero, it then throws an object of class [failure](../standard-library/ios-base-class.md#failure).  
   
-### <a name="example"></a>範例  
-  如需 **clear** 的使用範例，請參閱 [rdstate](#rdstate) 和 [getline](../standard-library/string-functions.md#getline)。  
+### <a name="example"></a>Example  
+  See [rdstate](#rdstate) and [getline](../standard-library/string-functions.md#getline) for examples using **clear**.  
   
 ##  <a name="copyfmt"></a>  basic_ios::copyfmt  
- 將旗標從某個資料流複製到另一個資料流。  
+ Copies flags from one stream to another.  
   
 ```   
 basic_ios<Elem, Traits>& copyfmt(
 const basic_ios<Elem, Traits>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 您要複製其旗標的資料流。  
+ The stream whose flags you want to copy.  
   
-### <a name="return-value"></a>傳回值  
- 您要複製旗標之目的資料流的 **this** 物件。  
+### <a name="return-value"></a>Return Value  
+ The **this** object for the stream to which you are copying the flags.  
   
-### <a name="remarks"></a>備註  
- 成員函式會報告回撥事件**清除\_事件**。 然後將填滿字元、繫結指標和格式設定資訊從 `right` 複製到 **\*this**。 再變更例外狀況遮罩，它會報告回撥事件**copyfmt_event**。 如果複製完成之後，**state &**[exceptions](#exceptions) 為非零值，此函式會以引數 [rdstate](#rdstate) 有效呼叫 [clear](#clear)。 它會傳回 **\*this**。  
+### <a name="remarks"></a>Remarks  
+ The member function reports the callback event **erase\_event**. It then copies from `right` into **\*this** the fill character, the tie pointer, and the formatting information. Before altering the exception mask, it reports the callback event **copyfmt_event**. If, after the copy is complete, **state &**[exceptions](#exceptions) is nonzero, the function effectively calls [clear](#clear) with the argument [rdstate](#rdstate). It returns **\*this**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp    
 // basic_ios_copyfmt.cpp  
@@ -272,19 +295,19 @@ int main( )
 ```  
   
 ##  <a name="eof"></a>  basic_ios::eof  
- 表示是否已到達資料流的結尾。  
+ Indicates if the end of a stream has been reached.  
   
 ```  
 bool eof() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 若到達資料流的結尾，即為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the end of the stream has been reached, `false` otherwise.  
   
-### <a name="remarks"></a>備註  
- 如果 [rdstate](#rdstate) `& eofbit` 為非零值，此成員函式會傳回 `true`。 如需 `eofbit` 的詳細資訊，請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `true` if [rdstate](#rdstate) `& eofbit` is nonzero. For more information on `eofbit`, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp    
 // basic_ios_eof.cpp  
@@ -308,7 +331,7 @@ int main( int argc, char* argv[] )
 ```  
   
 ##  <a name="exceptions"></a>  basic_ios::exceptions  
- 表示此資料流會擲回哪些例外狀況。  
+ Indicates which exceptions will be thrown by the stream.  
   
 ```   
 iostate exceptions() const; 
@@ -316,17 +339,17 @@ void exceptions(iostate Newexcept);
 void exceptions(io_state Newexcept);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *Newexcept*  
- 您要擲回例外狀況的旗標。  
+ The flags that you want to throw an exception.  
   
-### <a name="return-value"></a>傳回值  
- 目前指定要針對資料流擲回例外狀況的旗標。  
+### <a name="return-value"></a>Return Value  
+ The flags that are currently specified to thrown an exception for the stream.  
   
-### <a name="remarks"></a>備註  
- 第一個成員函式會傳回預存的例外狀況遮罩。 第二個成員函式會在例外狀況遮罩中儲存 *_Except*，並傳回其先前儲存的值。 請注意，儲存新的例外狀況遮罩可能會擲回例外狀況，就像是呼叫 [clear](#clear)( [rdstate](#rdstate) ) 一樣。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored exception mask. The second member function stores *_Except* in the exception mask and returns its previous stored value. Note that storing a new exception mask can throw an exception just like the call [clear](#clear)( [rdstate](#rdstate) ).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_exceptions.cpp  
@@ -365,18 +388,18 @@ Exception description: ios_base::eofbit set
 ```  
   
 ##  <a name="fail"></a>  basic_ios::fail  
- 表示無法從資料流擷取有效的欄位。  
+ Indicates failure to extract a valid field from a stream.  
   
 ```  
 bool fail() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 若 [rdstate](#rdstate) `& (badbit|failbit)` 為非零值，即為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if [rdstate](#rdstate) `& (badbit|failbit)` is nonzero, otherwise `false`.  
   
- 如需 `failbit` 的詳細資訊，請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
+ For more information on `failbit`, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_fail.cpp  
@@ -394,24 +417,24 @@ int main( void )
 ```  
   
 ##  <a name="fill"></a>  basic_ios::fill  
- 當此文字比該資料流還窄時，指定或傳回將要使用的字元。  
+ Specifies or returns the character that will be used when the text is not as wide as the stream.  
   
 ```   
 char_type fill() const; 
 char_type fill(char_type Char);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Char`  
- 您要當做填滿字元的字元。  
+ The character you want as the fill character.  
   
-### <a name="return-value"></a>傳回值  
- 目前的填滿字元。  
+### <a name="return-value"></a>Return Value  
+ The current fill character.  
   
-### <a name="remarks"></a>備註  
- 第一個成員函式會傳回預存的填滿字元。 第二個成員函式會在填滿字元中儲存 `Char`，並傳回其先前儲存的值。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored fill character. The second member function stores `Char` in the fill character and returns its previous stored value.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_fill.cpp  
@@ -439,42 +462,42 @@ x
 ```  
   
 ##  <a name="good"></a>  basic_ios::good  
- 表示資料流處於良好狀況。  
+ Indicates the stream is in good condition.  
   
 ```  
 bool good() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 若 [rdstate](#rdstate) `== goodbit` (未設定狀態旗標)，即為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if [rdstate](#rdstate) `== goodbit` (no state flags are set), otherwise, `false`.  
   
- 如需 `goodbit` 的詳細資訊，請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)。  
+ For more information on `goodbit`, see [ios_base::iostate](../standard-library/ios-base-class.md#iostate).  
   
-### <a name="example"></a>範例  
-  如需 `good` 的使用範例，請參閱 [basic_ios:: bad](#bad)。  
+### <a name="example"></a>Example  
+  See [basic_ios::bad](#bad) for an example of using `good`.  
   
 ##  <a name="imbue"></a>  basic_ios::imbue  
- 變更地區設定。  
+ Changes the locale.  
   
 ```   
 locale imbue(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- 地區設定字串。  
+ A locale string.  
   
-### <a name="return-value"></a>傳回值  
- 先前的地區設定。  
+### <a name="return-value"></a>Return Value  
+ The previous locale.  
   
-### <a name="remarks"></a>備註  
- 如果 [rdbuf](#rdbuf) 不是 null 指標，此成員函式會呼叫  
+### <a name="remarks"></a>Remarks  
+ If [rdbuf](#rdbuf) is not a null pointer, the member function calls  
   
  `rdbuf`-> [pubimbue](../standard-library/basic-streambuf-class.md#pubimbue)(_ *Loc*)  
   
- 在任何情況下，它都會傳回 [ios_base::imbue](../standard-library/ios-base-class.md#imbue)(_ *Loc*)。  
+ In any case, it returns [ios_base::imbue](../standard-library/ios-base-class.md#imbue)(_ *Loc*).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_imbue.cpp  
@@ -494,85 +517,85 @@ int main( )
 ```  
   
 ##  <a name="init"></a>  basic_ios::init  
- 由 basic_ios 建構函式呼叫。  
+ Called by basic_ios constructors.  
   
 ```  
  
 void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Sb`  
- 要儲存輸入或輸出元素的標準緩衝區。  
+ Standard buffer to store input or output elements.  
   
  `_Isstd`  
- 指定這是否為標準資料流。  
+ Specifies whether this is a standard stream.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會儲存所有成員物件中的值，因此：  
+### <a name="remarks"></a>Remarks  
+ The member function stores values in all member objects, so that:  
   
-- [rdbuf](#rdbuf) 會傳回 *_Sb*。  
+- [rdbuf](#rdbuf) returns *_Sb.*  
   
-- [tie](#tie) 會傳回 null 指標。  
+- [tie](#tie) returns a null pointer.  
   
-- 如果 `_Sb` 為非零值，[rdstate](#rdstate) 會傳回 [goodbit](../standard-library/ios-base-class.md#iostate)；否則會傳回 [badbit](../standard-library/ios-base-class.md#iostate)。  
+- [rdstate](#rdstate) returns [goodbit](../standard-library/ios-base-class.md#iostate) if `_Sb` is nonzero; otherwise, it returns [badbit](../standard-library/ios-base-class.md#iostate).  
   
-- [exceptions](#exceptions) 會傳回 **goodbit**。  
+- [exceptions](#exceptions) returns **goodbit**.  
   
-- [flags](../standard-library/ios-base-class.md#flags) 會傳回 [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags)。  
+- [flags](../standard-library/ios-base-class.md#flags) returns [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags).  
   
-- [width](../standard-library/ios-base-class.md#width) 會傳回 0。  
+- [width](../standard-library/ios-base-class.md#width) returns 0.  
   
-- [precision](../standard-library/ios-base-class.md#precision) 會傳回 6。  
+- [precision](../standard-library/ios-base-class.md#precision) returns 6.  
   
-- [fill](#fill) 會傳回空白字元。  
+- [fill](#fill) returns the space character.  
   
-- [getloc](../standard-library/ios-base-class.md#getloc) 會傳回 `locale::classic`。  
+- [getloc](../standard-library/ios-base-class.md#getloc) returns `locale::classic`.  
   
-- [iword](../standard-library/ios-base-class.md#iword) 會傳回零，而 [pword](../standard-library/ios-base-class.md#pword) 會針對所有引數值傳回 null 指標。  
+- [iword](../standard-library/ios-base-class.md#iword) returns zero, and [pword](../standard-library/ios-base-class.md#pword) returns a null pointer for all argument values.  
   
 ##  <a name="int_type"></a>  basic_ios::int_type  
- **traits_type::int_type** 的同義字。  
+ A synonym for **traits_type::int_type**.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
 ##  <a name="move"></a>  basic_ios::move  
- 將所有值從此參數移動至目前物件，但該資料流緩衝區的指標除外。  
+ Moves all values, except the pointer to the stream buffer, from the parameter to the current object.  
   
 ```   
 void move(basic_ios&& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要從中移動值的 `ios_base` 物件。  
+ The `ios_base` object to move values from.  
   
-### <a name="remarks"></a>備註  
- 此受保護的成員函式會將儲存在 `right` 中的所有值移至 `*this`，但預存的 `stream buffer pointer` 除外，該值在 `right` 中未變更，而且在 `*this` 中會設為 null 指標。 預存的 `tie pointer` 在 `right` 中會設為 null 指標。  
+### <a name="remarks"></a>Remarks  
+ The protected member function moves all the values stored in `right` to `*this` except the stored `stream buffer pointer`, which is unchanged in `right` and set to a null pointer in `*this`. The stored `tie pointer` is set to a null pointer in `right`.  
   
 ##  <a name="narrow"></a>  basic_ios::narrow  
- 尋找指定之 `char_type` 的對等字元。  
+ Finds the equivalent char to a given `char_type`.  
   
 ```  
 char narrow(char_type Char, char Default = '\0') const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Char`  
- 要進行轉換的 `char`。  
+ The `char` to convert.  
   
  `Default`  
- 找不到對應項時所要傳回的 `char`。  
+ The `char` that you want returned if no equivalent is found.  
   
-### <a name="return-value"></a>傳回值  
- 指定 `char_type` 的對等 `char`。  
+### <a name="return-value"></a>Return Value  
+ The equivalent `char` to a given `char_type`.  
   
-### <a name="remarks"></a>備註  
- 成員函式傳回[use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc](../standard-library/ios-base-class.md#getloc)（)）。`narrow`( `Char`, `Default`).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E> >( [getloc](../standard-library/ios-base-class.md#getloc)( ) ).`narrow`( `Char`, `Default`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_narrow.cpp  
@@ -594,23 +617,23 @@ int main( )
 ```  
   
 ##  <a name="off_type"></a>  basic_ios::off_type  
- **traits_type::off_type** 的同義字。  
+ A synonym for **traits_type::off_type**.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
 ##  <a name="op_void_star"></a>  basic_ios::operator void *  
- 表示資料流是否仍然良好。  
+ Indicates if the stream is still good.  
   
 ```  
  operator void *() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 此運算子只有在 [fail](#fail) 時才會傳回 null 指標。  
+### <a name="return-value"></a>Return Value  
+ The operator returns a null pointer only if [fail](#fail).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_opgood.cpp  
@@ -630,16 +653,16 @@ int main( )
 ```  
   
 ##  <a name="op_not"></a>  basic_ios::operator!  
- 表示資料流是否沒有錯誤。  
+ Indicates if the stream is not bad.  
   
 ```   
 bool operator!() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 [fail](#fail)。  
+### <a name="return-value"></a>Return Value  
+ Returns [fail](#fail).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_opbad.cpp  
@@ -659,24 +682,24 @@ int main( )
 ```  
   
 ##  <a name="op_bool"></a>  basic_ios::operator bool  
- 允許使用 `basic_ios` 物件做為 `bool`。 自動類型轉換會停用，以避免常見非預期的副作用。  
+ Allows use of a `basic_ios` object as a `bool`. Automatic type conversion is disabled to prevent common, unintended side effects.  
   
 ```  
 explicit operator bool() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 此運算子只有在 `fail``()` 時才會傳回可轉換為 `false` 的值。 此傳回型別只能轉換為 `bool`，而無法轉換為 `void *` 或其他已知的純量類型。  
+### <a name="remarks"></a>Remarks  
+ The operator returns a value convertible to `false` only if `fail()`. The return type is convertible only to `bool`, not to `void *` or other known scalar type.  
   
 ##  <a name="pos_type"></a>  basic_ios::pos_type  
- **traits_type::pos_type** 的同義字。  
+ A synonym for **traits_type::pos_type**.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
 ##  <a name="rdbuf"></a>  basic_ios::rdbuf  
- 將資料流路由轉送到指定緩衝區。  
+ Routes stream to specified buffer.  
   
 ```   
 basic_streambuf<Elem, Traits> *rdbuf() const; 
@@ -684,16 +707,16 @@ basic_streambuf<Elem, Traits> *rdbuf(
 basic_streambuf<Elem, Traits>* _Sb);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Sb`  
- 資料流。  
+ A stream.  
   
-### <a name="remarks"></a>備註  
- 第一個成員函式會傳回預存的資料流緩衝區指標。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the stored stream buffer pointer.  
   
- 第二個成員函式會在預存的資料流緩衝區指標中儲存 `_Sb`，並傳回先前儲存的值。  
+ The second member function stores `_Sb` in the stored stream buffer pointer and returns the previously stored value.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_rdbuf.cpp  
@@ -719,17 +742,17 @@ test2
 ```  
   
 ##  <a name="rdstate"></a>  basic_ios::rdstate  
- 讀取旗標的位元狀態。  
+ Reads the state of bits for flags.  
   
 ```  
  
 iostate rdstate() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 預存的資料流狀態資訊。  
+### <a name="return-value"></a>Return Value  
+ The stored stream state information.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_ios_rdstate.cpp  
@@ -769,20 +792,20 @@ int main( )
 ```  
   
 ##  <a name="setstate"></a>  basic_ios::setstate  
- 設定其他旗標。  
+ Sets additional flags.  
   
 ```   
 void setstate(iostate _State);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_State`  
- 要設定的其他旗標。  
+ Additional flags to set.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會有效呼叫 [clear](#clear)(_ *State* &#124; [rdstate](#rdstate))。  
+### <a name="remarks"></a>Remarks  
+ The member function effectively calls [clear](#clear)(_ *State* &#124; [rdstate](#rdstate)).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp    
 // basic_ios_setstate.cpp  
@@ -817,22 +840,22 @@ int main( )
 ```  
   
 ##  <a name="set_rdbuf"></a>  basic_ios::set_rdbuf  
- 指派此資料流緩衝區為此資料流物件的讀取緩衝區。  
+ Assigns a stream buffer to be the read buffer for this stream object.  
   
 ```   
 void set_rdbuf(
 basic_streambuf<Elem, Tr>* strbuf)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `strbuf`  
- 要成為讀取緩衝區的資料流緩衝區。  
+ The stream buffer to become the read buffer.  
   
-### <a name="remarks"></a>備註  
- 此受保護的成員函式會在 `stream buffer pointer` 中儲存 `strbuf`，而不會呼叫 `clear`。  
+### <a name="remarks"></a>Remarks  
+ The protected member function stores `strbuf` in the `stream buffer pointer`.It does not call `clear`.  
   
 ##  <a name="tie"></a>  basic_ios::tie  
- 可確保一個資料流在另一個資料流之前先處理。  
+ Ensures that one stream is processed before another stream.  
   
 ```  
  
@@ -841,18 +864,18 @@ basic_ostream<Elem, Traits> *tie(
 basic_ostream<Elem, Traits>* str);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `str`  
- 資料流。  
+ A stream.  
   
-### <a name="return-value"></a>傳回值  
- 第一個成員函式會傳回預存的繫結指標。 第二個成員函式會在繫結指標中儲存 `str`，並傳回其先前儲存的值。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns the stored tie pointer. The second member function stores `str` in the tie pointer and returns its previous stored value.  
   
-### <a name="remarks"></a>備註  
- `tie` 會使兩個資料流同步；因此，當其中一個資料流的作業完成之後，就會進行另一個資料流的作業。  
+### <a name="remarks"></a>Remarks  
+ `tie` causes two streams to be synchronized, such that, operations on one stream occur after operations on the other stream are complete.  
   
-### <a name="example"></a>範例  
-  在此範例中，將 cin 繫結至 cout 可確保 "Enter a number:" 字串會先移至主控台，再從 cin 中擷取數字本身。 這樣做可避免在讀取數字時，"Enter a number:" 字串仍在緩衝區中的可能性，因此我們可以確定使用者實際上會有可做出回應的一些提示。 根據預設，cin 會與 cout 繫結。  
+### <a name="example"></a>Example  
+  In this example, by tying cin to cout, it is guaranteed that the "Enter a number:" string will go to the console before the number itself is extracted from cin. This eliminates the possibility that the "Enter a number:" string is still sitting in the buffer when the number is read, so that we are certain that the user actually has some prompt to respond to. By default, cin and cout are tied.  
   
 ```  
   
@@ -871,30 +894,30 @@ int main( )
 ```  
   
 ##  <a name="traits_type"></a>  basic_ios::traits_type  
- **Traits** 樣板參數的同義字。  
+ A synonym for the template parameter **Traits**.  
   
 ```   
 typedef Traits traits_type;  
 ```  
   
 ##  <a name="widen"></a>  basic_ios::widen  
- 尋找指定 `char` 的對等 `char_type`。  
+ Finds the equivalent `char_type` to a given `char`.  
   
 ```   
 char_type widen(char Char) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Char`  
- 要轉換的字元。  
+ The character to convert.  
   
-### <a name="return-value"></a>傳回值  
- 尋找指定 `char` 的對等 `char_type`。  
+### <a name="return-value"></a>Return Value  
+ Finds the equivalent `char_type` to a given `char`.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc))。 `widen`( `Char`)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp    
 // basic_ios_widen.cpp  
@@ -916,22 +939,22 @@ int main( )
 ```  
   
 ##  <a name="swap"></a>  basic_ios::swap  
- 用另一個 `basic_ios` 物件中的值交換這個 `basic_ios` 物件中的值。 但不交換資料流緩衝區的指標。  
+ Exchanges the values in this `basic_ios` object for those of another `basic_ios` object. However, the pointers to the stream buffers are not swapped.  
   
 ```   
 void swap(basic_ios&& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 用來交換值的 `basic_ios` 物件。  
+ The `basic_ios` object that is used to exchange values.  
   
-### <a name="remarks"></a>備註  
- 此受保護的成員函式會將儲存在 `right` 中的所有值與 `*this` 交換，但預存的 `stream buffer pointer` 除外。  
+### <a name="remarks"></a>Remarks  
+ The protected member function exchanges all the values stored in `right` with `*this` except the stored `stream buffer pointer`.  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

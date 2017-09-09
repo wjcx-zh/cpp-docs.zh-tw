@@ -1,5 +1,5 @@
 ---
-title: "basic_stringbuf 類別 | Microsoft Docs"
+title: basic_stringbuf Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_stringbuf
 - sstream/std::basic_stringbuf
 - sstream/std::basic_stringbuf::allocator_type
 - sstream/std::basic_stringbuf::char_type
@@ -26,7 +25,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_stringbuf class
+- std::basic_stringbuf [C++]
+- std::basic_stringbuf [C++], allocator_type
+- std::basic_stringbuf [C++], char_type
+- std::basic_stringbuf [C++], int_type
+- std::basic_stringbuf [C++], off_type
+- std::basic_stringbuf [C++], pos_type
+- std::basic_stringbuf [C++], traits_type
+- std::basic_stringbuf [C++], overflow
+- std::basic_stringbuf [C++], pbackfail
+- std::basic_stringbuf [C++], seekoff
+- std::basic_stringbuf [C++], seekpos
+- std::basic_stringbuf [C++], str
+- std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 caps.latest.revision: 28
 author: corob-msft
@@ -46,17 +57,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b8d19f4cd76690c52dd6a69df04240944c151f67
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fd162dff71b079a10d1e1bcfdd2384ca53559724
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicstringbuf-class"></a>basic_stringbuf 類別
-描述資料流緩衝區，其控制類型 `Elem` 的項目 (其字元特性由類別 `Tr` 所決定)，與陣列物件中儲存的項目序列之間的往來傳輸。  
+# <a name="basicstringbuf-class"></a>basic_stringbuf Class
+Describes a stream buffer that controls the transmission of elements of type `Elem`, whose character traits are determined by the class `Tr`, to and from a sequence of elements stored in an array object.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>,   
@@ -64,68 +75,68 @@ template <class Elem, class Tr = char_traits<Elem>,
 class basic_stringbuf : public basic_streambuf<Elem, Tr>  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Alloc`  
- 配置器類別。  
+ The allocator class.  
   
  `Elem`  
- 字串之基本項目的類型。  
+ The type of the basic element of the string.  
   
  `Tr`  
- 字元特性是在字串的基本項目上特製化。  
+ The character traits specialized on the basic element of the string.  
   
-## <a name="remarks"></a>備註  
- 會視需要配置、擴充和釋出物件，以容納序列中的變更。  
+## <a name="remarks"></a>Remarks  
+ The object is allocated, extended, and freed as necessary to accommodate changes in the sequence.  
   
- basic_stringbuf< `Elem`, `Tr`, `Alloc`> 類別的物件會將其建構函式中的 `ios_base::`[openmode](../standard-library/ios-base-class.md#openmode) 引數複本儲存為其 `stringbuf` 模式 **mode**：  
+ An object of class basic_stringbuf< `Elem`, `Tr`, `Alloc`> stores a copy of the `ios_base::`[openmode](../standard-library/ios-base-class.md#openmode) argument from its constructor as its `stringbuf` mode **mode**:  
   
--   如果 `mode & ios_base::in` 非零，輸入緩衝區即可存取。 如需詳細資訊，請參閱 [basic_streambuf 類別](../standard-library/basic-streambuf-class.md)。  
+-   If `mode & ios_base::in` is nonzero, the input buffer is accessible. For more information, see [basic_streambuf Class](../standard-library/basic-streambuf-class.md).  
   
--   如果 `mode & ios_base::out` 非零，輸出緩衝區即可存取。  
+-   If `mode & ios_base::out` is nonzero, the output buffer is accessible.  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_stringbuf](#basic_stringbuf)|建構類型 `basic_stringbuf` 的物件。|  
+|[basic_stringbuf](#basic_stringbuf)|Constructs an object of type `basic_stringbuf`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|此類型是範本參數 `Alloc`的同義字。|  
-|[char_type](#char_type)|將類型名稱與 `Elem` 樣板參數產生關聯。|  
-|[int_type](#int_type)|在 `basic_filebuf` 的範圍中製作此類型，相當於在 `Tr` 範圍中的同名類型。|  
-|[off_type](#off_type)|在 `basic_filebuf` 的範圍中製作此類型，相當於在 `Tr` 範圍中的同名類型。|  
-|[pos_type](#pos_type)|在 `basic_filebuf` 的範圍中製作此類型，相當於在 `Tr` 範圍中的同名類型。|  
-|[traits_type](#traits_type)|將類型名稱與 `Tr` 樣板參數產生關聯。|  
+|[allocator_type](#allocator_type)|The type is a synonym for the template parameter `Alloc`.|  
+|[char_type](#char_type)|Associates a type name with the `Elem` template parameter.|  
+|[int_type](#int_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[off_type](#off_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[pos_type](#pos_type)|Makes this type within `basic_filebuf`'s scope equivalent to the type of the same name in the `Tr` scope.|  
+|[traits_type](#traits_type)|Associates a type name with the `Tr` template parameter.|  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[overflow](#overflow)|受保護的虛擬函式，可在將新字元插入已滿的緩衝區時呼叫。|  
-|[pbackfail](#pbackfail)|受保護的虛擬成員函式會嘗試將項目放回輸入緩衝區，然後將其設成目前的項目 (由下一個指標指向)。|  
-|[seekoff](#seekoff)|受保護的虛擬成員函式會嘗試改變受控制資料流的目前位置。|  
-|[seekpos](#seekpos)|受保護的虛擬成員函式會嘗試改變受控制資料流的目前位置。|  
-|[str](#str)|設定或取得字串緩衝區中的文字，而不需要變更寫入位置。|  
+|[overflow](#overflow)|A protected, virtual function that can be called when a new character is inserted into a full buffer.|  
+|[pbackfail](#pbackfail)|The protected virtual member function tries to put back an element into the input buffer, then makes it the current element (pointed to by the next pointer).|  
+|[seekoff](#seekoff)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[seekpos](#seekpos)|The protected virtual member function tries to alter the current positions for the controlled streams.|  
+|[str](#str)|Sets or gets the text in a string buffer without changing the write position.|  
 |swap||  
-|[underflow](#underflow)|用於從輸入資料流擷取目前項目之受保護的虛擬成員函式。|  
+|[underflow](#underflow)|The protected virtual member function to extract the current element from the input stream.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<sstream>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<sstream>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  basic_stringbuf::allocator_type  
- 此類型是範本參數 `Alloc`的同義字。  
+ The type is a synonym for the template parameter `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
 ##  <a name="basic_stringbuf"></a>  basic_stringbuf::basic_stringbuf  
- 建構類型 `basic_stringbuf` 的物件。  
+ Constructs an object of type `basic_stringbuf`.  
   
 ```  
 basic_stringbuf(
@@ -136,90 +147,90 @@ basic_stringbuf(
     ios_base::openmode _Mode = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Mode`  
- [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `str`  
- [basic_string](../standard-library/basic-string-class.md) 類型的物件。  
+ An object of type [basic_string](../standard-library/basic-string-class.md).  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會在控制輸入緩衝區和輸出緩衝區的所有指標中儲存一個 null 指標。 如需詳細資訊，請參閱 [basic_streambuf 類別](../standard-library/basic-streambuf-class.md)的＜備註＞一節。 它也會將 `_Mode` 儲存為 stringbuf 模式。 如需詳細資訊，請參閱 [basic_stringbuf 類別](../standard-library/basic-stringbuf-class.md)的＜備註＞一節。  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores a null pointer in all the pointers controlling the input buffer and the output buffer. For more information, see the Remarks section of the [basic_streambuf Class](../standard-library/basic-streambuf-class.md). It also stores `_Mode` as the stringbuf mode. For more information, see the Remarks section of the [basic_stringbuf Class](../standard-library/basic-stringbuf-class.md).  
   
- 第二個建構函式會配置字串物件 `str` 所控制的序列複本。 如果 `_Mode & ios_base::in` 為非零值，它會設定輸入緩衝區從序列開頭開始讀取。 如果 `_Mode & ios_base::out` 為非零值，它會設定輸出緩衝區從序列開頭開始寫入。 它也會將 `_Mode` 儲存為 stringbuf 模式。 如需詳細資訊，請參閱 [basic_stringbuf 類別](../standard-library/basic-stringbuf-class.md)的＜備註＞一節。  
+ The second constructor allocates a copy of the sequence controlled by the string object `str`. If `_Mode & ios_base::in` is nonzero, it sets the input buffer to start reading at the start of the sequence. If `_Mode & ios_base::out` is nonzero, it sets the output buffer to begin writing at the start of the sequence. It also stores `_Mode` as the stringbuf mode. For more information, see the Remarks section of the [basic_stringbuf Class](../standard-library/basic-stringbuf-class.md).  
   
 ##  <a name="char_type"></a>  basic_stringbuf::char_type  
- 將類型名稱與 **Elem** 樣板參數產生關聯。  
+ Associates a type name with the **Elem** template parameter.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
 ##  <a name="int_type"></a>  basic_stringbuf::int_type  
- 使 basic_filebuf 範圍中的這個類型，相當於 **Tr** 範圍中的同名類型。  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::int_type int_type;  
 ```  
   
 ##  <a name="off_type"></a>  basic_stringbuf::off_type  
- 使 basic_filebuf 範圍中的這個類型，相當於 **Tr** 範圍中的同名類型。  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::off_type off_type;  
 ```  
   
 ##  <a name="overflow"></a>  basic_stringbuf::overflow  
- 受保護的虛擬函式，可在將新字元插入已滿的緩衝區時呼叫。  
+ A protected virtual function that can be called when a new character is inserted into a full buffer.  
   
 ```  
 virtual int_type overflow(int_type _Meta = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- 要插入緩衝區的字元，或 **traits_type::eof**。  
+ The character to insert into the buffer, or **traits_type::eof**.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式不成功，則傳回 **traits_type::eof**。 否則會傳回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof**. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
-### <a name="remarks"></a>備註  
- 如果 _ *Meta* 與 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) 比較的結果不相等，此受保護的虛擬成員函式會嘗試將元素 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 插入輸出緩衝區。 它可以透過下列各種方式來執行：  
+### <a name="remarks"></a>Remarks  
+ If _ *Meta* does not compare equal to **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the protected virtual member function tries to insert the element **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) into the output buffer. It can do so in various ways:  
   
--   如果有寫入位置可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。  
+-   If a write position is available, it can store the element into the write position and increment the next pointer for the output buffer.  
   
--   藉由為輸出緩衝區配置新的或額外的儲存體，即可提供寫入位置。 以這種方式擴充輸出緩衝區時，也會擴充任何相關輸入緩衝區。  
+-   It can make a write position available by allocating new or additional storage for the output buffer. Extending the output buffer this way also extends any associated input buffer.  
   
 ##  <a name="pbackfail"></a>  basic_stringbuf::pbackfail  
- 此受保護的虛擬成員函式會嘗試將元素放回輸入緩衝區，然後將其設成目前的元素 (由下一個指標指向)。  
+ The protected virtual member function tries to put back an element into the input buffer, and then make it the current element (pointed to by the next pointer).  
   
 ```  
 virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Meta`  
- 要插入緩衝區的字元，或 **traits_type::eof**。  
+ The character to insert into the buffer, or **traits_type::eof**.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式不成功，則傳回 **traits_type::eof**。 否則會傳回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::eof**. Otherwise, it returns **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
-### <a name="remarks"></a>備註  
- 如果 `_Meta` 與 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) 比較的結果相等，要推回的元素實際上是一個已在資料流中目前元素之前的元素。 否則會以 **byte** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*) 取代該元素。 此函式可以透過下列各種方式來放回元素：  
+### <a name="remarks"></a>Remarks  
+ If `_Meta` compares equal to **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), the element to push back is effectively the one already in the stream before the current element. Otherwise, that element is replaced by **byte** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*). The function can put back an element in various ways:  
   
--   如果有 putback 位置可供使用，而且儲存在其中的元素與位元組比較的結果相等，則可以遞減輸入緩衝區的下一個指標。  
+-   If a putback position is available, and the element stored there compares equal to byte, it can decrement the next pointer for the input buffer.  
   
--   如果有 putback 位置可供使用，而且 stringbuf 模式允許改變序列 (**mode & ios_base::out** 為非零值)，則可以將位元組儲存在 putback 位置，並遞減輸入緩衝區的下一個指標。  
+-   If a putback position is available, and if the stringbuf mode permits the sequence to be altered ( **mode & ios_base::out** is nonzero), it can store byte into the putback position and decrement the next pointer for the input buffer.  
   
 ##  <a name="pos_type"></a>  basic_stringbuf::pos_type  
- 使 basic_filebuf 範圍中的這個類型，相當於 **Tr** 範圍中的同名類型。  
+ Makes this type within basic_filebuf's scope equivalent to the type of the same name in the **Tr** scope.  
   
 ```  
 typedef typename traits_type::pos_type pos_type;  
 ```  
   
 ##  <a name="seekoff"></a>  basic_stringbuf::seekoff  
- 受保護的虛擬成員函式會嘗試改變受控制資料流的目前位置。  
+ The protected virtual member function tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekoff(
@@ -228,58 +239,58 @@ virtual pos_type seekoff(
     ios_base::openmode _Mode = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 要搜尋的 `_Way` 相對位置。 如需詳細資訊，請參閱 [basic_stringbuf::off_type](#off_type)。  
+ The position to seek for relative to `_Way`. For more information, see [basic_stringbuf::off_type](#off_type).  
   
  `_Way`  
- 位移作業的起點。 如需可能的值，請參閱 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)。  
+ The starting point for offset operations. See [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) for possible values.  
   
  `_Mode`  
- 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions. For more information, see [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
-### <a name="return-value"></a>傳回值  
- 傳回新位置或無效的資料流位置。  
+### <a name="return-value"></a>Return Value  
+ Returns the new position or an invalid stream position.  
   
-### <a name="remarks"></a>備註  
- 針對 `basic_stringbuf<Elem, Tr, Alloc>` 類別的物件，資料流位置完全是由資料流位移所組成。 位移零指定受控制序列的第一個元素。  
+### <a name="remarks"></a>Remarks  
+ For an object of class `basic_stringbuf<Elem, Tr, Alloc>`, a stream position consists purely of a stream offset. Offset zero designates the first element of the controlled sequence.  
   
- 新位置的判斷如下：  
+ The new position is determined as follows:  
   
--   如果 `_Way` == `ios_base::beg`，新位置是資料流開頭加上 `_Off`。  
+-   If `_Way` == `ios_base::beg`, the new position is the beginning of the stream plus `_Off`.  
   
--   如果 `_Way` == `ios_base::cur`，新位置是目前的資料流位置加上 `_Off`。  
+-   If `_Way` == `ios_base::cur`, the new position is the current stream position plus `_Off`.  
   
--   如果 `_Way` == `ios_base::end`，新位置是資料流結尾加上 `_Off`。  
+-   If `_Way` == `ios_base::end`, the new position is the end of the stream plus `_Off`.  
   
- 如果 `_Mode & ios_base::in` 為非零值，此函式會改變要讀入輸入緩衝區的下一個位置。 如果 `_Mode & ios_base::out` 為非零值，此函式會改變要寫入輸出緩衝區的下一個位置。 若要影響資料流，其緩衝區必須存在。 若要讓置放作業成功，產生的資料流位置必須位於受控制的序列內。 如果函式會影響這兩個資料流位置，`_Way` 必須是 `ios_base::beg` 或 `ios_base::end`，並將這兩個資料流置放於相同的元素。 否則 (若不影響任一位置)，置放作業會失敗。  
+ If `_Mode & ios_base::in` is nonzero, the function alters the next position to read in the input buffer. If `_Mode & ios_base::out` is nonzero, the function alters the next position to write in the output buffer. For a stream to be affected, its buffer must exist. For a positioning operation to succeed, the resulting stream position must lie within the controlled sequence. If the function affects both stream positions, `_Way` must be `ios_base::beg` or `ios_base::end` and both streams are positioned at the same element. Otherwise (or if neither position is affected), the positioning operation fails.  
   
- 如果函式成功改變一個或兩個資料流位置，則會傳回結果資料流位置。 否則會失敗，並傳回無效的資料流位置。  
+ If the function succeeds in altering either or both of the stream positions, it returns the resultant stream position. Otherwise, it fails and returns an invalid stream position.  
   
 ##  <a name="seekpos"></a>  basic_stringbuf::seekpos  
- 受保護的虛擬成員函式會嘗試改變受控制資料流的目前位置。  
+ The protected virtual member function tries to alter the current positions for the controlled streams.  
   
 ```  
 virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Sp`  
- 要搜尋的位置。  
+ The position to seek for.  
   
  `_Mode`  
- 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。  
+ Specifies the mode for the pointer position. The default is to allow you to modify the read and write positions.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功改變一個或兩個資料流位置，則會傳回結果資料流位置。 否則會失敗，並傳回無效的資料流位置。 若要判斷資料流位置是否無效，請比較傳回值與 `pos_type(off_type(-1))`。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds in altering either or both of the stream positions, it returns the resultant stream position. Otherwise, it fails and returns an invalid stream position. To determine if the stream position is invalid, compare the return value with `pos_type(off_type(-1))`.  
   
-### <a name="remarks"></a>備註  
- 針對 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件，資料流位置完全是由資料流位移所組成。 位移零指定受控制序列的第一個元素。 新位置是由 _ *Sp* 所決定。  
+### <a name="remarks"></a>Remarks  
+ For an object of class basic_stringbuf< **Elem**, **Tr**, `Alloc`>, a stream position consists purely of a stream offset. Offset zero designates the first element of the controlled sequence. The new position is determined by _ *Sp*.  
   
- 如果 **mode & ios_base::in** 為非零值，此函式會改變要讀入輸入緩衝區的下一個位置。 如果 **mode & ios_base::out** 為非零值，此函式會改變要寫入輸出緩衝區的下一個位置。 若要影響資料流，其緩衝區必須存在。 若要讓置放作業成功，產生的資料流位置必須位於受控制的序列內。 否則 (若不影響任一位置)，置放作業會失敗。  
+ If **mode & ios_base::in** is nonzero, the function alters the next position to read in the input buffer. If **mode & ios_base::out** is nonzero, the function alters the next position to write in the output buffer. For a stream to be affected, its buffer must exist. For a positioning operation to succeed, the resulting stream position must lie within the controlled sequence. Otherwise (or if neither position is affected), the positioning operation fails.  
   
 ##  <a name="str"></a>  basic_stringbuf::str  
- 設定或取得字串緩衝區中的文字，而不需要變更寫入位置。  
+ Sets or gets the text in a string buffer without changing the write position.  
   
 ```  
 basic_string<Elem, Tr, Alloc> str() const;
@@ -287,25 +298,25 @@ void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Newstr`  
- 新字串。  
+ The new string.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 [basic_string](../standard-library/basic-string-class.md)\< **Elem**, **Tr**, Alloc **>,** 類別的物件，其受控制的序列是由 **\*this** 所控制的序列複本。  
+### <a name="return-value"></a>Return Value  
+ Returns an object of class [basic_string](../standard-library/basic-string-class.md)\< **Elem**, **Tr**, Alloc **>,** whose controlled sequence is a copy of the sequence controlled by **\*this**.  
   
-### <a name="remarks"></a>備註  
- 第一個成員函式會傳回 basic_string< **Elem**, **Tr**, `Alloc`> 類別的物件，其受控制的序列是由 **\*this** 所控制的序列複本。 複製的序列取決於預存的 stringbuf 模式：  
+### <a name="remarks"></a>Remarks  
+ The first member function returns an object of class basic_string< **Elem**, **Tr**, `Alloc`>, whose controlled sequence is a copy of the sequence controlled by **\*this**. The sequence copied depends on the stored stringbuf mode:  
   
--   如果 **mode &amp; ios_base::out** 為非零值，而且存在輸出緩衝區，此序列是整個輸出緩衝區 ([epptr](../standard-library/basic-streambuf-class.md#epptr) - [pbase](../standard-library/basic-streambuf-class.md#pbase) 元素，從 `pbase` 開始)。  
+-   If **mode & ios_base::out** is nonzero and an output buffer exists, the sequence is the entire output buffer ( [epptr](../standard-library/basic-streambuf-class.md#epptr) - [pbase](../standard-library/basic-streambuf-class.md#pbase) elements beginning with `pbase`).  
   
--   如果 **mode &amp; ios_base::in** 為非零值，而且存在輸入緩衝區，此序列是整個輸入緩衝區 ([egptr](../standard-library/basic-streambuf-class.md#egptr) - [eback](../standard-library/basic-streambuf-class.md#eback) 元素，從 `eback` 開始)。  
+-   If **mode & ios_base::in** is nonzero and an input buffer exists, the sequence is the entire input buffer ( [egptr](../standard-library/basic-streambuf-class.md#egptr) - [eback](../standard-library/basic-streambuf-class.md#eback) elements beginning with `eback`).  
   
--   否則，複製的序列是空的。  
+-   Otherwise, the copied sequence is empty.  
   
- 第二個成員函式會解除配置 **\*this** 目前所控制的任何序列。 然後會配置 `_Newstr` 所控制的序列複本。 如果 **mode & ios_base::in** 為非零值，它會設定輸入緩衝區從序列開頭開始讀取。 如果 **mode & ios_base::out** 為非零值，它會設定輸出緩衝區從序列開頭開始寫入。  
+ The second member function deallocates any sequence currently controlled by **\*this**. It then allocates a copy of the sequence controlled by `_Newstr`. If **mode & ios_base::in** is nonzero, it sets the input buffer to start reading at the beginning of the sequence. If **mode & ios_base::out** is nonzero, it sets the output buffer to start writing at the beginning of the sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // basic_stringbuf_str.cpp  
@@ -338,57 +349,57 @@ be
 ```  
   
 ##  <a name="traits_type"></a>  basic_stringbuf::traits_type  
- 將類型名稱與 **Tr** 樣板參數產生關聯。  
+ Associates a type name with the **Tr** template parameter.  
   
 ```  
 typedef Tr traits_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與樣板參數 **Tr** 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **Tr**.  
   
 ##  <a name="underflow"></a>  basic_stringbuf::underflow  
- 用於從輸入資料流擷取目前項目之受保護的虛擬函式。  
+ Protected, virtual function to extract the current element from the input stream.  
   
 ```  
 virtual int_type underflow();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式不成功，則傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。 否則會傳回輸入資料流中已轉換的目前元素。  
+### <a name="return-value"></a>Return Value  
+ If the function cannot succeed, it returns **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). Otherwise, it returns the current element in the input stream, which are converted.  
   
-### <a name="remarks"></a>備註  
- 此受保護的虛擬成員函式會嘗試從輸入緩衝區擷取目前的元素 **byte**，從目前的資料流位置前移，並傳回此元素作為 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**)。 它可以透過下列其中一種方式來執行︰如果有讀取位置可供使用，它會採用 **byte** 作為儲存在讀取位置中的元素，並前進到輸入緩衝區的下一個指標。  
+### <a name="remarks"></a>Remarks  
+ The protected virtual member function tries to extract the current element **byte** from the input buffer, advance the current stream position, and return the element as **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**). It can do so in one way: If a read position is available, it takes **byte** as the element stored in the read position and advances the next pointer for the input buffer.  
   
 ##  <a name="swap"></a>  basic_streambuf::swap  
- 將此字串緩衝區的內容與另一個字串緩衝區交換。  
+ Swaps the contents of this string buffer with another string buffer.  
   
 ```  
 void basic_stringbuf<T>::swap(basic_stringbuf& other)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `other`  
- 內容即將與此 basic_stringbuf 交換的 basic_stringbuf。  
+ The basic_stringbuf whose contents will be swapped with this basic_stringbuf.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="op_eq"></a>  basic_stringbuf::operator=  
- 將運算子右邊的 basic_stringbuf 內容指派到左邊的 basic_stringbuf。  
+ Assigns the contents of the basic_stringbuf on the right side of the operator to the basic_stringbuf on the left side.  
   
 ```  
 basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `other`  
- 其內容 (包括地區設定特性) 將被指派到運算子左邊 stringbuf 的 basic_stringbuf。  
+ A basic_stringbuf whose contents, including locale traits, will be assigned to the stringbuf on the left side of the operator.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

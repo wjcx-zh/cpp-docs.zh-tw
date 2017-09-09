@@ -1,5 +1,5 @@
 ---
-title: "shared_future 類別 | Microsoft Docs"
+title: shared_future Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,59 +37,67 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 84b55dc763d4cd254e4aca55c01690ce5abf0152
+helpviewer_keywords:
+- std::shared_future [C++]
+- std::shared_future [C++], shared_future
+- std::shared_future [C++], get
+- std::shared_future [C++], valid
+- std::shared_future [C++], wait
+- std::shared_future [C++], wait_for
+- std::shared_future [C++], wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 14f427af73abbe511ecdd326240388cc29da16df
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="sharedfuture-class"></a>shared_future 類別
-描述「非同步傳回物件」。 相對於 [future](../standard-library/future-class.md) 物件，「非同步提供者」可以與任意數目的 `shared_future` 物件相關聯。  
+# <a name="sharedfuture-class"></a>shared_future Class
+Describes an *asynchronous return object*. In contrast with a [future](../standard-library/future-class.md) object, an *asynchronous provider* can be associated with any number of `shared_future` objects.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 class shared_future;
 ```  
   
-## <a name="remarks"></a>備註  
- 請勿在「空的」`shared_future` 物件上呼叫 `valid`、`operator=` 及建構函式以外的任何方法。  
+## <a name="remarks"></a>Remarks  
+ Do not call any methods other than `valid`, `operator=`, and the destructor on a `shared_future` object that's *empty*.  
   
- `shared_future` 物件不會進行同步處理。 在來自多個執行緒的相同物件上呼叫方法會導致資料競爭的情形，因而產生無法預期的結果。  
+ `shared_future` objects are not synchronized. Calling methods on the same object from multiple threads introduces a data race that has unpredictable results.  
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[shared_future](#shared_future)|建構 `shared_future` 物件。|  
+|[shared_future](#shared_future)|Constructs a `shared_future` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[get](#get)|擷取以「相關聯的非同步狀態」儲存的結果。|  
-|[有效](#valid)|指定物件是否不是空的。|  
-|[等候](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|  
-|[wait_for](#wait_for)|封鎖直到相關聯的非同步狀態就緒為止，或直到指定的時間已過為止。|  
-|[wait_until](#wait_until)|封鎖直到相關聯的非同步狀態就緒為止，或直到到了指定的時間點為止。|  
+|[get](#get)|Retrieves the result that's stored in the *associated asynchronous state*.|  
+|[valid](#valid)|Specifies whether the object is not empty.|  
+|[wait](#wait)|Blocks the current thread until the associated asynchronous state is ready.|  
+|[wait_for](#wait_for)|Blocks until the associated asynchronous state is ready or until the specified time has elapsed.|  
+|[wait_until](#wait_until)|Blocks until the associated asynchronous state is ready or until a specified point in time.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[shared_future::operator=](#op_eq)|指派新的相關聯非同步狀態。|  
+|[shared_future::operator=](#op_eq)|Assigns a new associated asynchronous state.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰** \<未來 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<future>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-##  <a name="get"></a>shared_future:: get
- 擷取以「相關聯的非同步狀態」儲存的結果。  
+##  <a name="get"></a>  shared_future::get
+ Retrieves the result that's stored in the *associated asynchronous state*.  
   
 ```
 const Ty& get() const;
@@ -99,37 +107,37 @@ Ty& get() const;
 void get() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 如果結果是例外狀況，此方法就會重新擲回該例外狀況。 否則會傳回結果。  
+### <a name="remarks"></a>Remarks  
+ If the result is an exception, the method rethrows it. Otherwise, the result is returned.  
   
- 在擷取結果之前，此方法會封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。  
+ Before it retrieves the result, this method blocks the current thread until the associated asynchronous state is ready.  
   
- 就部分特製化 `shared_future<Ty&>` 而言，預存值實際上是對傳遞給「非同步提供者」作為傳回值之物件的參考。  
+ For the partial specialization `shared_future<Ty&>`, the stored value is effectively a reference to the object that was passed to the *asynchronous provider* as the return value.  
   
- 由於沒有特製化 `shared_future<void>` 適用的任何預存值存在，因此這個方法會傳回 `void`。  
+ Because no stored value exists for the specialization `shared_future<void>`, the method returns `void`.  
   
 ##  <a name="op_eq"></a>  shared_future::operator=  
- 從指定的物件轉移「相關聯的非同步狀態」。  
+ Transfers an *associated asynchronous state* from a specified object.  
   
 ```
 shared_future& operator=(shared_future&& Right) noexcept;
 shared_future& operator=(const shared_future& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Right`  
- `shared_future` 物件。  
+ A `shared_future` object.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
  `*this`  
   
-### <a name="remarks"></a>備註  
- 針對第一個運算子，`Right` 在作業完成之後就不再具有相關聯的非同步狀態。  
+### <a name="remarks"></a>Remarks  
+ For the first operator, `Right` no longer has an associated asynchronous state after the operation.  
   
- 針對第二個方法，`Right` 會保留它的相關聯非同步狀態。  
+ For the second method, `Right` maintains its associated asynchronous state.  
   
-##  <a name="shared_future"></a>  shared_future::shared_future 建構函式  
- 建構 `shared_future` 物件。  
+##  <a name="shared_future"></a>  shared_future::shared_future Constructor  
+ Constructs a `shared_future` object.  
   
 ```
 shared_future() noexcept;
@@ -138,39 +146,39 @@ shared_future(shared_future&& Right) noexcept;
 shared_future(const shared_future& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Right`  
- [future](../standard-library/future-class.md) 或 `shared_future` 物件。  
+ A [future](../standard-library/future-class.md) or `shared_future` object.  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會建構沒有「相關聯的非同步狀態」的 `shared_future` 物件。  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs a `shared_future` object that has no *associated asynchronous state*.  
   
- 第二個建構函式會建構 `shared_future` 物件，並從 `Right` 中轉移相關聯的非同步狀態。 `Right` 已不再具有相關聯的非同步狀態。  
+ The second and third constructors construct a `shared_future` object and transfer the associated asynchronous state from `Right`. `Right` no longer has an associated asynchronous state.  
   
- 第四個建構函式所建構的 `shared_future` 物件，會具備與 `Right` 相同的相關聯非同步狀態。  
+ The fourth constructor constructs a `shared_future` object that has the same associated asynchronous state as `Right`.  
   
-##  <a name="valid"></a>shared_future:: valid
- 指定物件是否具有「相關聯的非同步狀態」。  
+##  <a name="valid"></a>  shared_future::valid
+ Specifies whether the object has an *associated asynchronous state*.  
   
 ```
 bool valid() noexcept;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果物件有關聯的非同步狀態，就是 `true`，否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the object has an associated asynchronous state; otherwise, `false`.  
   
-##  <a name="wait"></a>shared_future:: wait
- 封鎖目前的執行緒，直到「相關聯的非同步狀態」就緒為止。  
+##  <a name="wait"></a>  shared_future::wait
+ Blocks the current thread until the *associated asynchronous state* is *ready*.  
   
 ```
 void wait() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 只有在非同步提供者儲存傳回值或儲存例外狀況後，相關聯的非同步狀態才會就緒。  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is ready only if its asynchronous provider has stored a return value or stored an exception.  
   
-##  <a name="wait_for"></a>shared_future:: wait_for
- 封鎖目前的執行緒，直到相關聯的非同步狀態「就緒」為止，或直到指定的時間已過為止。  
+##  <a name="wait_for"></a>  shared_future::wait_for
+ Blocks the current thread until the associated asynchronous state is *ready* or until a specified time has elapsed.  
   
 ```
 template <class Rep, class Period>
@@ -178,18 +186,18 @@ future_status wait_for(
     const chrono::duration<Rep, Period>& Rel_time) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Rel_time`  
- [chrono::duration](../standard-library/duration-class.md) 物件，會指定執行緒封鎖的時間間隔上限。  
+ A [chrono::duration](../standard-library/duration-class.md) object that specifies a maximum time interval that the thread blocks.  
   
-### <a name="return-value"></a>傳回值  
- [future_status](../standard-library/future-enums.md#future_status)，會指出傳回的原因。  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>備註  
- 只有在非同步提供者儲存了傳回值或儲存了例外狀況之後，相關聯的非同步狀態才會「就緒」。  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is *ready* only if its asynchronous provider has stored a return value or stored an exception.  
   
-##  <a name="wait_until"></a>shared_future:: wait_until
- 封鎖目前的執行緒，直到相關聯的非同步狀態「就緒」為止，或直到指定的時間點過後為止。  
+##  <a name="wait_until"></a>  shared_future::wait_until
+ Blocks the current thread until the associated asynchronous state is *ready* or until after a specified time point.  
   
 ```
 template <class Clock, class Duration>
@@ -197,18 +205,18 @@ future_status wait_until(
     const chrono::time_point<Clock, Duration>& Abs_time) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Abs_time`  
- [chrono::time_point](../standard-library/time-point-class.md) 物件，會指定可將執行緒解除封鎖的時間。  
+ A [chrono::time_point](../standard-library/time-point-class.md) object that specifies a time after which the thread can unblock.  
   
-### <a name="return-value"></a>傳回值  
- [future_status](../standard-library/future-enums.md#future_status)，會指出傳回的原因。  
+### <a name="return-value"></a>Return Value  
+ A [future_status](../standard-library/future-enums.md#future_status) that indicates the reason for returning.  
   
-### <a name="remarks"></a>備註  
- 只有在非同步提供者儲存傳回值或儲存例外狀況後，相關聯的非同步狀態才會就緒。  
+### <a name="remarks"></a>Remarks  
+ An associated asynchronous state is ready only if its asynchronous provider has stored a return value or stored an exception.  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
 
 

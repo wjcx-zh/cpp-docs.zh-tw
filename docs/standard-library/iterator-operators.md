@@ -1,23 +1,39 @@
 ---
-title: "&lt;iterator&gt; 運算子 | Microsoft Docs"
+title: '&lt;iterator&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- iterator/std::operator!=
+- iterator/std::operator&gt;
+- iterator/std::operator&gt;=
+- iterator/std::operator&lt;
+- iterator/std::operator&lt;=
+- iterator/std::operator+
+- iterator/std::operator-
+- iterator/std::operator==
+dev_langs:
+- C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
 caps.latest.revision: 10
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a369890d41b58fb3865780291822b4e7e045e919
+helpviewer_keywords:
+- std::operator!= (iterator)
+- std::operator&gt; (iterator)
+- std::operator&gt;= (iterator)
+- std::operator&lt; (iterator)
+- std::operator&lt;= (iterator), std::operator== (iterator)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 129433eebdc988b863d1a61d2ceaf220cd897096
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 運算子
+# <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
@@ -25,7 +41,7 @@ ms.lasthandoff: 04/29/2017
 |[operator-](#operator-)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 測試運算子左邊的迭代器物件是否不等於右邊的迭代器物件。  
+ Tests if the iterator object on the left side of the operator is not equal to the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
@@ -38,20 +54,20 @@ template <class CharType, class Tr>
 bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istreambuf_iterator<CharType, Traits>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **iterator** 類型的物件。  
+ An object of type **iterator**.  
   
  `right`  
- **iterator** 類型的物件。  
+ An object of type **iterator**.  
   
-### <a name="return-value"></a>傳回值  
- 如果迭代器物件不相等，便會傳回 **true**；如果迭代器物件相等，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator objects are not equal; **false** if the iterator objects are equal.  
   
-### <a name="remarks"></a>備註  
- 一個迭代器物件與另一個迭代器物件如果定址對象是容器中的相同元素，兩者便相等。 如果兩個迭代器指向容器中不同的元素，它們便不相等。  
+### <a name="remarks"></a>Remarks  
+ One iterator object is equal to another if they address the same elements in a container. If two iterators point to different elements in a container, then they are not equal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_ne.cpp  
@@ -114,7 +130,7 @@ The iterators are not equal.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 測試運算子左邊的迭代器物件是否等於右邊的迭代器物件。  
+ Tests if the iterator object on the left side of the operator is equal to the iterator object on the right side.  
   
 ```  
 template <class RandomIterator1, class RandomIterator2>  
@@ -138,22 +154,22 @@ bool operator==(
     const istreambuf_iterator<CharType, Traits>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- iterator 類型的物件。  
+ An object of type iterator.  
   
  `right`  
- iterator 類型的物件。  
+ An object of type iterator.  
   
-### <a name="return-value"></a>傳回值  
- 如果迭代器物件相等，便會傳回 `true`；如果迭代器物件不相等，則會傳回 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the iterator objects are equal; `false` if the iterator objects are not equal.  
   
-### <a name="remarks"></a>備註  
- 一個迭代器物件與另一個迭代器物件如果定址對象是容器中的相同元素，兩者便相等。 如果兩個迭代器指向容器中不同的元素，它們便不相等。  
+### <a name="remarks"></a>Remarks  
+ One iterator object is equal to another if they address the same elements in a container. If two iterators point to different elements in a container, then they are not equal.  
   
- 前兩個範本運算子只有在 `left` 和 `right` 都儲存相同的迭代器時，才會傳回 true。 第三個範本運算子只有在 `left` 和 `right` 都儲存相同的資料流指標時，才會傳回 true。 第四個範本運算子會傳回 ` left.equal ( right)`。  
+ The first two template operators return true only if both `left` and `right` store the same iterator. The third template operator returns true only if both `left` and `right` store the same stream pointer. The fourth template operator returns ` left.equal ( right)`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_eq.cpp  
@@ -216,27 +232,27 @@ The iterators are not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 測試運算子左邊的迭代器物件是否小於右邊的迭代器物件。  
+ Tests if the iterator object on the left side of the operator is less than the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
 bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **iterator** 類型的物件。  
+ An object of type **iterator**.  
   
  `right`  
- **iterator** 類型的物件。  
+ An object of type **iterator**.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算式左邊的迭代器小於運算式右邊的迭代器，便會傳回 **true**；如果大於或等於右邊的迭代器，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator on the left side of the expression is less than the iterator on the right side of the expression; **false** if it is greater than or equal to the iterator on the right.  
   
-### <a name="remarks"></a>備註  
- 一個迭代器物件所定址的元素在容器中如果位於另一個迭代器物件所定址的元素之前，前面的迭代器物件便小於後面的迭代器物件。 一個迭代器物件所定址的元素如果與另一個迭代器物件所定址的元素相同，或所定址的元素在容器中位於另一個迭代器物件所定址的元素之後，前面的迭代器物件便不小於後面的迭代器物件。  
+### <a name="remarks"></a>Remarks  
+ One iterator object is less than another if it addresses an element that occurs earlier in the container than the element addressed by the other iterator object. One iterator object is not less than another if it addresses either the same element as the other iterator object or an element that occurs later in the container than the element addressed by the other iterator object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_lt.cpp  
@@ -303,27 +319,27 @@ The iterator rVPOS1 is less than the iterator rVPOS2.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 測試運算子左邊的迭代器物件是否小於或等於右邊的迭代器物件。  
+ Tests if the iterator object on the left side of the operator is less than or equal to the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
 bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- iterator 類型的物件。  
+ An object of type iterator.  
   
  `right`  
- iterator 類型的物件。  
+ An object of type iterator.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算式左邊的迭代器小於或等於運算式右邊的迭代器，便會傳回 **true**；如果大於右邊的迭代器，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator on the left side of the expression is less than or equal to the iterator on the right side of the expression; **false** if it is greater than the iterator on the right.  
   
-### <a name="remarks"></a>備註  
- 一個迭代器物件所定址的元素如果與另一個迭代器物件所定址的元素相同，或在容器中位於該元素之前，前面的迭代器物件便小於或等於後面的迭代器物件。 一個迭代器物件所定址的元素在容器中如果位於另一個迭代器物件所定址的元素之後，前面的迭代器物件便大於後面的迭代器物件。  
+### <a name="remarks"></a>Remarks  
+ One iterator object is less than or equal to another if it addresses the same element or an element that occurs earlier in the container than the element addressed by the other iterator object. One iterator object is greater than another if it addresses an element that occurs later in the container than the element addressed by the other iterator object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_le.cpp  
@@ -394,27 +410,27 @@ The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 測試運算子左邊的迭代器物件是否大於右邊的迭代器物件。  
+ Tests if the iterator object on the left side of the operator is greater than the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
 bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- iterator 類型的物件。  
+ An object of type iterator.  
   
  `right`  
- iterator 類型的物件。  
+ An object of type iterator.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算式左邊的迭代器大於運算式右邊的迭代器，便會傳回 **true**；如果小於或等於右邊的迭代器，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator on the left side of the expression is greater than the iterator on the right side of the expression; **false** if it is less than or equal to the iterator on the right.  
   
-### <a name="remarks"></a>備註  
- 一個迭代器物件所定址的元素在容器中如果位於另一個迭代器物件所定址的元素之後，前面的迭代器物件便大於後面的迭代器物件。 一個迭代器物件所定址的元素如果與另一個迭代器物件所定址的元素相同，或所定址的元素在容器中位於另一個迭代器物件所定址的元素之前，前面的迭代器物件便不大於後面的迭代器物件。  
+### <a name="remarks"></a>Remarks  
+ One iterator object is greater than another if it addresses an element that occurs later in the container than the element addressed by the other iterator object. One iterator object is not greater than another if it addresses either the same element as the other iterator object or an element that occurs earlier in the container than the element addressed by the other iterator object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_gt.cpp  
@@ -479,27 +495,27 @@ The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 測試運算子左邊的迭代器物件是否大於或等於右邊的迭代器物件。  
+ Tests if the iterator object on the left side of the operator is greater than or equal to the iterator object on the right side.  
   
 ```  
 template <class RandomIterator>  
 bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- iterator 類型的物件。  
+ An object of type iterator.  
   
  `right`  
- iterator 類型的物件。  
+ An object of type iterator.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算式左邊的迭代器大於或等於運算式右邊的迭代器，便會傳回 **true**；如果小於右邊的迭代器，則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the iterator on the left side of the expression is greater than or equal to the iterator on the right side of the expression; **false** if it is less than the iterator on the right.  
   
-### <a name="remarks"></a>備註  
- 一個迭代器物件所定址的元素如果與另一個迭代器物件所定址的元素相同，或在容器中位於該元素之後，前面的迭代器物件便大於或等於後面的迭代器物件。 一個迭代器物件所定址的元素在容器中如果位於另一個迭代器物件所定址的元素之前，前面的迭代器物件便小於後面的迭代器物件。  
+### <a name="remarks"></a>Remarks  
+ One iterator object is greater than or equal to another if it addresses the same element or an element that occurs later in the container than the element addressed by the other iterator object. One iterator object is less than another if it addresses an element that occurs earlier in the container than the element addressed by the other iterator object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_ge.cpp  
@@ -570,7 +586,7 @@ The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```  
   
 ##  <a name="op_add"></a>  operator+  
- 將位移新增至迭代器，並傳回定址對象是在新位移位置中插入之元素的 `move_iterator` 或 `reverse_iterator`。  
+ Adds an offset to an iterator and returns a `move_iterator` or a `reverse_iterator` addressing the inserted element at the new offset position.  
   
 ```  
 template <class RandomIterator, class Diff>  
@@ -586,17 +602,17 @@ operator+(
     const reverse_iterator<RandomIterator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 要為常數 move_iterator 或常數 reverse_iterator 調整位移的位置數目。  
+ The number of positions the const move_iterator or const reverse_iterator is to be offset.  
   
  `right`  
- 要調整位移的迭代器。  
+ The iterator to be offset.  
   
-### <a name="return-value"></a>傳回值  
- 傳回總和 `right` + `_Off`。  
+### <a name="return-value"></a>Return Value  
+ Returns the sum `right` + `_Off`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_insert.cpp  
@@ -646,7 +662,7 @@ The iterator rVPOS1 now points to the fifth element
 ```  
   
 ##  <a name="operator-"></a>  operator-  
- 將一個迭代器減去另一個，並傳回差異。  
+ Subtracts one iterator from another and returns the difference.  
   
 ```  
 template <class RandomIterator1, class RandomIterator2>  
@@ -660,24 +676,24 @@ Tdiff operator-(
     const reverse_iterator<RandomIterator2>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 迭代器。  
+ An iterator.  
   
  `right`  
- 迭代器。  
+ An iterator.  
   
-### <a name="return-value"></a>傳回值  
- 兩個迭代器之間的差異`.`  
+### <a name="return-value"></a>Return Value  
+ The difference between two iterators `.`  
   
-### <a name="remarks"></a>備註  
- 第一個範本運算子會傳回 `left.base() - right.base()`。  
+### <a name="remarks"></a>Remarks  
+ The first template operator returns `left.base() - right.base()`.  
   
- 第二個範本運算子會傳回 `right.current - left.current`。  
+ The second template operator returns `right.current - left.current`.  
   
- `Tdiff` 取決於所傳回運算式的類型。 否則為 `RandomIterator1::difference_type`。  
+ `Tdiff` is determined by the type of the returned expression. Otherwise, it is `RandomIterator1::difference_type`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_op_sub.cpp  
@@ -734,7 +750,7 @@ The iterator rVPOS2 now points to the fifth element
 The difference: rVPOS2 - rVPOS1= 4.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)
 
 

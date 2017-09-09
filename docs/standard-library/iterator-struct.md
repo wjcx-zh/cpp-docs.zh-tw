@@ -1,5 +1,5 @@
 ---
-title: "iterator 結構 | Microsoft Docs"
+title: iterator Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- iterator
 - xutility/std::iterator
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: b14712f36d8cc7b4dbbdd4fd6a0cef3cb0667d8b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c634a769384b34fde401a8089ac00c6ba5a2c664
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iterator-struct"></a>iterator 結構
-空的基底結構，用來確保使用者定義的迭代器類別能夠與 **iterator_trait** 正常搭配運作。  
+# <a name="iterator-struct"></a>iterator Struct
+An empty base struct used to ensure that a user-defined iterator class works properly with **iterator_trait**s.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
 ```    
 struct iterator {
    typedef Category iterator_category;
@@ -56,35 +55,35 @@ struct iterator {
    typedef Reference reference;
    };  
 ```    
-## <a name="remarks"></a>備註  
- 此範本結構可作為所有迭代器的基底類型。 它會定義成員類型  
+## <a name="remarks"></a>Remarks  
+ The template struct serves as a base type for all iterators. It defines the member types  
   
-- `iterator_category` (與範本參數 `Category` 同義)。  
+- `iterator_category` (a synonym for the template parameter `Category`).  
   
-- `value_type` (與範本參數 **Type** 同義)。  
+- `value_type` (a synonym for the template parameter **Type**).  
   
-- `difference_type` (與範本參數 `Distance` 同義)。  
+- `difference_type` (a synonym for the template parameter `Distance`).  
   
-- `distance_type` (與範本參數 `Distance` 同義)  
+- `distance_type` (a synonym for the template parameter `Distance`)  
   
-- `pointer` (與範本參數 `Pointer` 同義)。  
+- `pointer` (a synonym for the template parameter `Pointer`).  
   
-- `reference` (與範本參數 `Reference` 同義)。  
+- `reference` (a synonym for the template parameter `Reference`).  
   
- 請注意，`value_type` 不應該是常數類型，即使 **pointer** 指向 const **Type** 的物件且參考指定的物件是 const **Type** 亦同。  
+ Note that `value_type` should not be a constant type even if **pointer** points at an object of const **Type** and reference designates an object of const **Type**.  
   
-## <a name="example"></a>範例  
- 如需如何在迭代器基底類別中宣告及使用類型的範例，請參閱 [iterator_traits](../standard-library/iterator-traits-struct.md)。  
+## <a name="example"></a>Example  
+ See [iterator_traits](../standard-library/iterator-traits-struct.md) for an example of how to declare and use the types in the iterator base class.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<iterator>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

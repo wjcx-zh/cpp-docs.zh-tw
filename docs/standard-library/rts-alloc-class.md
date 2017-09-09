@@ -1,5 +1,5 @@
 ---
-title: "rts_alloc 類別 | Microsoft Docs"
+title: rts_alloc Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,16 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::rts_alloc
 - allocators/stdext::rts_alloc
-- rts_alloc
 - allocators/stdext::rts_alloc::allocate
 - allocators/stdext::rts_alloc::deallocate
 - allocators/stdext::rts_alloc::equals
 dev_langs:
 - C++
 helpviewer_keywords:
-- rts_alloc class
+- stdext::rts_alloc
+- stdext::rts_alloc [C++], allocate
+- stdext::rts_alloc [C++], deallocate
+- stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
 caps.latest.revision: 19
 author: corob-msft
@@ -38,99 +39,99 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fe127f896fa902f4a8cdb44454cf6e4c5f449e79
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f3eb62d14b304decfe168b224f87f433ac0c39d9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="rtsalloc-class"></a>rts_alloc 類別
-rts_alloc 樣板類別描述一個[篩選](../standard-library/allocators-header.md)，其可保留快取執行個體的陣列，並判斷在執行階段 (而不是編譯時期) 配置和解除配置時所使用的執行個體。  
+# <a name="rtsalloc-class"></a>rts_alloc Class
+The rts_alloc template class describes a [filter](../standard-library/allocators-header.md) that holds an array of cache instances and determines which instance to use for allocation and deallocation at runtime instead of at compile time.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Cache>  
 class rts_alloc
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|包含在陣列中的快取執行個體類型， 這可以是 [cache_chunklist Class](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|  
+|`Cache`|The type of cache instances contained in the array. This can be [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-## <a name="remarks"></a>備註  
- 這個樣板類別保留多個區塊配置器執行個體，並判斷在執行階段 (而不是編譯時期) 配置和解除配置時所使用的執行個體。 它會搭配不可編譯重新繫結的編譯器使用。  
+## <a name="remarks"></a>Remarks  
+ This template class holds multiple block allocator instances and determines which instance to use for allocation or deallocation at runtime instead of at compile time. It is used with compilers that cannot compile rebind.  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|配置記憶體區塊。|  
-|[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|  
-|[equals](#equals)|比較兩個快取是否相等。|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[equals](#equals)|Compares two caches for equality.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **命名空間：** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  rts_alloc::allocate  
- 配置記憶體區塊。  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|陣列中要配置的項目數。|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>傳回值  
- 所配置物件的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 `caches[_IDX].allocate(count)`，其中索引 `_IDX` 是透過要求的區塊大小 `count` 來判斷，或者，如果 `count` 太大，它會傳回 `operator new(count)`。 `cache`，代表快取物件。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `caches[_IDX].allocate(count)`, where the index `_IDX` is determined by the requested block size `count`, or, if `count` is too large, it returns `operator new(count)`. `cache`, which represents the cache object.  
   
 ##  <a name="deallocate"></a>  rts_alloc::deallocate  
- 從指定位置起算的儲存體中，釋放指定數目的物件。  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|  
-|`count`|要從儲存空間解除配置的物件數目。|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>備註  
- 成員函式會呼叫 `caches[_IDX].deallocate(ptr, count)`，其中索引 `_IDX` 是透過要求的區塊大小 `count` 來判斷，或者，如果 `count` 太大，它會傳回 `operator delete(ptr)`。  
+### <a name="remarks"></a>Remarks  
+ The member function calls `caches[_IDX].deallocate(ptr, count)`, where the index `_IDX` is determined by the requested block size `count`, or, if `count` is too large, it returns `operator delete(ptr)`.  
   
 ##  <a name="equals"></a>  rts_alloc::equals  
- 比較兩個快取是否相等。  
+ Compares two caches for equality.  
   
 ```
 bool equals(const sync<_Cache>& _Other) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Cache`|與篩選條件相關聯的快取物件。|  
-|`_Other`|要比較是否相等的快取物件。|  
+|`_Cache`|The cache object associated with the filter.|  
+|`_Other`|The cache object to compare for equality.|  
   
-### <a name="remarks"></a>備註  
- 若結果是 `caches[0].equals(other.caches[0])`，即為 `true`，否則為 `false`。 `caches` 代表快取物件的陣列。  
+### <a name="remarks"></a>Remarks  
+ `true` if the result of `caches[0].equals(other.caches[0])`; otherwise, `false`. `caches` represents the array of cache objects.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)   
  [\<allocators>](../standard-library/allocators-header.md)
 

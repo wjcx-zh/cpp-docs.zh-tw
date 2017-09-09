@@ -1,5 +1,5 @@
 ---
-title: "allocator_base 類別 | Microsoft Docs"
+title: allocator_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,12 +9,8 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- allocator_base
 - allocators/stdext::allocator_base
-- stdext::allocator_base
-- stdext::allocators::allocator_base
 - allocators/stdext::allocators::allocator_base
-- allocators::allocator_base
 - allocators/stdext::allocator_base::const_pointer
 - allocators/stdext::allocator_base::const_reference
 - allocators/stdext::allocator_base::difference_type
@@ -33,7 +29,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- allocator_base class
+- stdext::allocator_base [C++]
+- stdext::allocators [C++], allocator_base
+- stdext::allocator_base [C++], const_pointer
+- stdext::allocator_base [C++], const_reference
+- stdext::allocator_base [C++], difference_type
+- stdext::allocator_base [C++], pointer
+- stdext::allocator_base [C++], reference
+- stdext::allocator_base [C++], size_type
+- stdext::allocator_base [C++], value_type
+- stdext::allocator_base [C++], _Charalloc
+- stdext::allocator_base [C++], _Chardealloc
+- stdext::allocator_base [C++], address
+- stdext::allocator_base [C++], allocate
+- stdext::allocator_base [C++], construct
+- stdext::allocator_base [C++], deallocate
+- stdext::allocator_base [C++], destroy
+- stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
 caps.latest.revision: 17
 author: corob-msft
@@ -53,104 +65,104 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 11e6300d0d625f419e47d5f60f1db175419e3420
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 55e3a008319b851260502c8ae515132b687ff0d0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatorbase-class"></a>allocator_base 類別
-定義從同步處理篩選條件建立使用者定義的配置器時所需的基底類別和一般功能。  
+# <a name="allocatorbase-class"></a>allocator_base Class
+Defines the base class and common functions needed to create a user-defined allocator from a synchronization filter.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type, class Sync>  
 class allocator_base
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|配置器所配置的元素類型。|  
-|`Sync`|配置器的同步處理原則，即 [sync_none 類別](../standard-library/sync-none-class.md)、[sync_per_container 類別](../standard-library/sync-per-container-class.md)、[sync_per_thread 類別](../standard-library/sync-per-thread-class.md)或 [sync_shared 類別](../standard-library/sync-shared-class.md)。|  
+|`Type`|The type of elements allocated by the allocator.|  
+|`Sync`|The synchronization policy for the allocator, which is [sync_none Class](../standard-library/sync-none-class.md), [sync_per_container Class](../standard-library/sync-per-container-class.md), [sync_per_thread Class](../standard-library/sync-per-thread-class.md), or [sync_shared Class](../standard-library/sync-shared-class.md).|  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[allocator_base](#allocator_base)|建構類型 `allocator_base` 的物件。|  
+|[allocator_base](#allocator_base)|Constructs an object of type `allocator_base`.|  
   
 ### <a name="typedefs"></a>TypeDefs  
   
 |||  
 |-|-|  
-|[const_pointer](#const_pointer)|一種類型，可提供配置器管理之物件類型的常數指標。|  
-|[const_reference](#const_reference)|一種類型，可提供配置器管理之物件類型的常數參考。|  
-|[difference_type](#difference_type)|帶正負號整數類型，可以表示配置器所管理的物件類型的指標值之間的差異。|  
-|[pointer](#pointer)|一種類型，可提供配置器管理之物件類型的指標。|  
-|[reference](#reference)|一種類型，可提供配置器管理之物件類型的參考。|  
-|[size_type](#size_type)|不帶正負號的整數類型，可以代表樣板類別 `allocator_base` 的物件可配置的任何序列的長度。|  
-|[value_type](#value_type)|配置器所管理的類型。|  
+|[const_pointer](#const_pointer)|A type that provides a constant pointer to the type of object managed by the allocator.|  
+|[const_reference](#const_reference)|A type that provides a constant reference to type of object managed by the allocator.|  
+|[difference_type](#difference_type)|A signed integral type that can represent the difference between values of pointers to the type of object managed by the allocator.|  
+|[pointer](#pointer)|A type that provides a pointer to the type of object managed by the allocator.|  
+|[reference](#reference)|A type that provides a reference to the type of object managed by the allocator.|  
+|[size_type](#size_type)|An unsigned integral type that can represent the length of any sequence that an object of template class `allocator_base` can allocate.|  
+|[value_type](#value_type)|A type that is managed by the allocator.|  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[_Charalloc](#charalloc)|為類型 `char` 的陣列配置儲存體。|  
-|[_Chardealloc](#chardealloc)|為包含類型 `char` 之元素的陣列釋放儲存體。|  
-|[address](#address)|尋找指定值所屬物件的位址。|  
-|[allocate](#allocate)|配置夠大的記憶體區塊，至少儲存某些指定的項目數。|  
-|[construct](#construct)|在指定值初始化的指定位址上，建構特定類型的物件。|  
-|[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|  
-|[destroy](#destroy)|呼叫物件解構函式，而不取消配置儲存物件的記憶體。|  
-|[max_size](#max_size)|傳回在可用記憶體用完之前，無法由類別配置器的物件配置之類型 `Type` 的元素數。|  
+|[_Charalloc](#charalloc)|Allocates storage for an array of type `char`.|  
+|[_Chardealloc](#chardealloc)|Frees storage for the array containing elements of type `char`.|  
+|[address](#address)|Finds the address of an object whose value is specified.|  
+|[allocate](#allocate)|Allocates a block of memory large enough to store at least some specified number of elements.|  
+|[construct](#construct)|Constructs a specific type of object at a specified address that is initialized with a specified value.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[destroy](#destroy)|Calls an objects destructor without deallocating the memory where the object was stored.|  
+|[max_size](#max_size)|Returns the number of elements of type `Type` that could be allocated by an object of class allocator before the free memory is used up.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **命名空間：** stdext  
+ **Namespace:** stdext  
   
-##  <a name="charalloc"></a> allocator_base::_Charalloc  
- 為類型 `char` 的陣列配置儲存體。  
+##  <a name="charalloc"></a>  allocator_base::_Charalloc  
+ Allocates storage for an array of type `char`.  
   
 ```
 char *_Charalloc(size_type count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|陣列中要配置的項目數。|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>傳回值  
- 所配置物件的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>備註  
- 使用無法編譯重新繫結的編譯器進行編譯時，容器會使用此成員函式。 它會實作使用者定義配置器的 `_Charalloc`，方法是傳回同步處理篩選之 `allocate` 函式呼叫的結果。  
+### <a name="remarks"></a>Remarks  
+ This member function is used by containers when compiled with a compiler that cannot compile rebind. It implements `_Charalloc` for the user-defined allocator by returning the result of a call to the `allocate` function of the synchronization filter.  
   
-##  <a name="chardealloc"></a> allocator_base::_Chardealloc  
- 為包含類型 `char` 之元素的陣列釋放儲存體。  
+##  <a name="chardealloc"></a>  allocator_base::_Chardealloc  
+ Frees storage for the array containing elements of type `char`.  
   
 ```
 void _Chardealloc(void* ptr, size_type count);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|  
-|`count`|要從儲存空間解除配置的物件數目。|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>備註  
- 使用無法編譯重新繫結的編譯器進行編譯時，容器會使用此成員函式。 它會實作使用者定義配置器的 `_Chardealloc`，方法是呼叫同步處理篩選的 `deallocate` 函式。 之前必須已傳回指標 ptr，方法是呼叫等於 `*this` 之配置器物件的 `_Charalloc`，並配置相同大小和類型的陣列物件。 `_Chardealloc` 絕不會擲回例外狀況。  
+### <a name="remarks"></a>Remarks  
+ This member function is used by containers when compiled with a compiler that cannot compile rebind. It implements `_Chardealloc` for the user-defined allocator by calling the `deallocate` function of the synchronization filter. The pointer ptr must have been earlier returned by a call to `_Charalloc` for an allocator object that compares equal to `*this`, allocating an array object of the same size and type. `_Chardealloc` never throws an exception.  
   
-##  <a name="address"></a> allocator_base::address  
- 尋找指定值所屬物件的位址。  
+##  <a name="address"></a>  allocator_base::address  
+ Finds the address of an object whose value is specified.  
   
 ```
 pointer address(reference val);
@@ -158,18 +170,18 @@ pointer address(reference val);
 const_pointer address(const_reference val);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `val`  
- 搜尋其位址之物件的 const 或 nonconst 值。  
+ The const or nonconst value of the object whose address is being searched for.  
   
-### <a name="return-value"></a>傳回值  
- 分別針對 const 或 nonconst 值找到之物件的 const 或 nonconst 指標。  
+### <a name="return-value"></a>Return Value  
+ A const or nonconst pointer to the object found of, respectively, const or nonconst value.  
   
-### <a name="remarks"></a>備註  
- 傳回 `&val`，即會針對使用者定義的配置器實作這個成員函式。  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by returning `&val`.  
   
-##  <a name="allocate"></a> allocator_base::allocate  
- 配置夠大的記憶體區塊，至少儲存某些指定的項目數。  
+##  <a name="allocate"></a>  allocator_base::allocate  
+ Allocates a block of memory large enough to store at least some specified number of elements.  
   
 ```
 template <class Other>  
@@ -178,21 +190,21 @@ pointer allocate(size_type _Nx, const Other* _Hint = 0);
 pointer allocate(size_type _Nx);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Nx`|所配置陣列中的元素數。|  
-|`_Hint`|這個參數已忽略。|  
+|`_Nx`|The number of elements in the array to be allocated.|  
+|`_Hint`|This parameter is ignored.|  
   
-### <a name="return-value"></a>傳回值  
- 所配置物件的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>備註  
- 如果 `_Nx == 1`，則成員函式會實作使用者定義配置器的記憶體配置，方法是傳回類型 Type `*` 之同步處理篩選的 `allocate` 函式呼叫的結果，否則方法是傳回 `operator new(_Nx * sizeof(Type))` 轉型為類型 Type `*` 之呼叫的結果。  
+### <a name="remarks"></a>Remarks  
+ The member function implements memory allocation for the user-defined allocator by returning the result of a call to the `allocate` function of the synchronization filter of type Type `*` if `_Nx == 1`, otherwise by returning the result of a call to `operator new(_Nx * sizeof(Type))` cast to type Type `*`.  
   
-##  <a name="allocator_base"></a> allocator_base::allocator_base  
- 建構類型 `allocator_base` 的物件。  
+##  <a name="allocator_base"></a>  allocator_base::allocator_base  
+ Constructs an object of type `allocator_base`.  
   
 ```
 allocator_base();
@@ -201,128 +213,128 @@ template <class Other>
 allocator_base(const allocator_base<Other, Sync>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`right`|要複製的配置器物件。|  
+|`right`|The allocator object to be copied.|  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會建構 [allocator_base](../standard-library/allocator-base-class.md) 執行個體。 第二個建構函式會建構 `allocator_base` 執行個體，因此適用於任何 `allocator_base<Type, _Sync>` 執行個體 `a`，`allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`。  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an [allocator_base](../standard-library/allocator-base-class.md) instance. The second constructor constructs an `allocator_base` instance such that for any `allocator_base<Type, _Sync>` instance `a`, `allocator_base<Type, Sync>(allocator_base<Other, Sync>(a)) == a`.  
   
-##  <a name="const_pointer"></a> allocator_base::const_pointer  
- 一種類型，可提供配置器管理之物件類型的常數指標。  
+##  <a name="const_pointer"></a>  allocator_base::const_pointer  
+ A type that provides a constant pointer to the type of object managed by the allocator.  
   
 ```
 typedef const Type *const_pointer;
 ```  
   
-##  <a name="const_reference"></a> allocator_base::const_reference  
- 一種類型，可提供配置器管理之物件類型的常數參考。  
+##  <a name="const_reference"></a>  allocator_base::const_reference  
+ A type that provides a constant reference to type of object managed by the allocator.  
   
 ```
 typedef const Type& const_reference;
 ```  
   
-##  <a name="construct"></a> allocator_base::construct  
- 在指定值初始化的指定位址上，建構特定類型的物件。  
+##  <a name="construct"></a>  allocator_base::construct  
+ Constructs a specific type of object at a specified address that is initialized with a specified value.  
   
 ```
 void construct(pointer ptr, const Type& val);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|要建構物件之位置的指標。|  
-|`val`|用來初始化所建構物件的值。|  
+|`ptr`|A pointer to the location where the object is to be constructed.|  
+|`val`|The value with which the object being constructed is to be initialized.|  
   
-### <a name="remarks"></a>備註  
- 呼叫 `new((void*)ptr Type(val)`，即會針對使用者定義的配置器實作這個成員函式。  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `new((void*)ptr Type(val)`.  
   
-##  <a name="deallocate"></a> allocator_base::deallocate  
- 從指定位置起算的儲存體中，釋放指定數目的物件。  
+##  <a name="deallocate"></a>  allocator_base::deallocate  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(pointer ptr, size_type _Nx);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|要從儲存體解除配置之第一個物件的指標。|  
-|`_Nx`|要從儲存空間解除配置的物件數目。|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`_Nx`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>備註  
- 如果 `_Nx == 1`，則對同步處理篩選 `Sync` 呼叫 `deallocate(ptr)` 以針對使用者定義的配置器實作這個成員函式，否則是呼叫 `operator delete(_Nx * ptr)`。  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `deallocate(ptr)` on the synchronization filter `Sync` if `_Nx == 1`, otherwise by calling `operator delete(_Nx * ptr)`.  
   
-##  <a name="destroy"></a> allocator_base::destroy  
- 呼叫物件解構函式，而不取消配置儲存物件的記憶體。  
+##  <a name="destroy"></a>  allocator_base::destroy  
+ Calls an objects destructor without deallocating the memory where the object was stored.  
   
 ```
 void destroy(pointer ptr);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|說明|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|指定要終結之物件位址的指標。|  
+|`ptr`|A pointer designating the address of the object to be destroyed.|  
   
-### <a name="remarks"></a>備註  
- 呼叫 `ptr->~Type()`，即會針對使用者定義的配置器實作這個成員函式。  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by calling `ptr->~Type()`.  
   
-##  <a name="difference_type"></a> allocator_base::difference_type  
- 帶正負號整數類型，可以表示配置器所管理的物件類型的指標值之間的差異。  
+##  <a name="difference_type"></a>  allocator_base::difference_type  
+ A signed integral type that can represent the difference between values of pointers to the type of object managed by the allocator.  
   
 ```
 typedef std::ptrdiff_t difference_type;
 ```  
   
-##  <a name="max_size"></a> allocator_base::max_size  
- 傳回在可用記憶體用完之前，無法由類別配置器的物件配置之類型 `Type` 的元素數。  
+##  <a name="max_size"></a>  allocator_base::max_size  
+ Returns the number of elements of type `Type` that could be allocated by an object of class allocator before the free memory is used up.  
   
 ```
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 無法配置的元素數。  
+### <a name="return-value"></a>Return Value  
+ The number of elements that could be allocated.  
   
-### <a name="remarks"></a>備註  
- 如果 `0 < (size_t)-1 / sizeof(Type)`，則會傳回 `(size_t)-1 / sizeof(Type)` 以針對使用者定義的配置器實作這個成員函式，否則為 `1`。  
+### <a name="remarks"></a>Remarks  
+ This member function is implemented for the user-defined allocator by returning `(size_t)-1 / sizeof(Type)` if `0 < (size_t)-1 / sizeof(Type)`, otherwise `1`.  
   
-##  <a name="pointer"></a> allocator_base::pointer  
- 一種類型，可提供配置器管理之物件類型的指標。  
+##  <a name="pointer"></a>  allocator_base::pointer  
+ A type that provides a pointer to the type of object managed by the allocator.  
   
 ```
 typedef Type *pointer;
 ```  
   
-##  <a name="reference"></a> allocator_base::reference  
- 一種類型，可提供配置器管理之物件類型的參考。  
+##  <a name="reference"></a>  allocator_base::reference  
+ A type that provides a reference to the type of object managed by the allocator.  
   
 ```
 typedef Type& reference;
 ```  
   
-##  <a name="size_type"></a> allocator_base::size_type  
- 不帶正負號的整數類型，可以代表樣板類別 `allocator_base` 的物件可配置的任何序列的長度。  
+##  <a name="size_type"></a>  allocator_base::size_type  
+ An unsigned integral type that can represent the length of any sequence that an object of template class `allocator_base` can allocate.  
   
 ```
 typedef std::size_t size_type;
 ```  
   
-##  <a name="value_type"></a> allocator_base::value_type  
- 配置器所管理的類型。  
+##  <a name="value_type"></a>  allocator_base::value_type  
+ A type that is managed by the allocator.  
   
 ```
 typedef Type value_type;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

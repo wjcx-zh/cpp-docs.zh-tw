@@ -1,5 +1,5 @@
 ---
-title: "is_trivially_move_constructible 類別 | Microsoft Docs"
+title: is_trivially_move_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_move_constructible
 - type_traits/std::is_trivially_move_constructible
 dev_langs:
 - C++
@@ -34,54 +33,54 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: bfcd131b706f68b6cea38880c3c7fcd49527bba4
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0e5210adea5cd18381d57993b58479deead5cb6b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible 類別
-測試類型是否有 trivial 移動建構函式。  
+# <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible Class
+Tests if type has trivial move constructor.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_trivially_move_constructible;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查詢的類型。  
+ The type to query.  
   
-## <a name="remarks"></a>備註  
- 如果 `Ty` 類型是具有 trivial 移動建構函式的類別，則 predicate 類型的執行個體保留 true，否則保留 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial move constructor, otherwise it holds false.  
   
- 在下列情況下，類別 `Ty` 的移動建構函式是 trivial：  
+ A move constructor for a class `Ty` is trivial if:  
   
- 它是隱含宣告  
+ it is implicitly declared  
   
- 其參數類型相等於隱含宣告的參數類型  
+ its parameter types are equivalent to those of an implicit declaration  
   
- 類別 `Ty` 沒有虛擬函式  
+ the class `Ty` has no virtual functions  
   
- 類別 `Ty` 沒有虛擬基底  
+ the class `Ty` has no virtual bases  
   
- 類別沒有任何變動性的非靜態資料成員  
+ the class has no volatile non-static data members  
   
- 類別 `Ty` 的所有直接基底都有 trivial 移動建構函式  
+ all the direct bases of the class `Ty` have trivial move constructors  
   
- 類別類型的所有非靜態資料成員的類別都具有 trivial 移動建構函式  
+ the classes of all the non-static data members of class type have trivial move constructors  
   
- 類別的類型陣列的所有非靜態資料成員的類別，都具有 trivial 移動建構函式  
+ the classes of all the non-static data members of type array of class have trivial move constructors  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

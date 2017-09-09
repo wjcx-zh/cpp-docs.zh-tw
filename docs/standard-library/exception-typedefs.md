@@ -13,10 +13,11 @@ f1_keywords:
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f55867484f781f91dfb447d384223fbdeb370592
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3f0cf891a1ff2d3c83482fad6f971d0baaae0911
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
@@ -25,51 +26,51 @@ ms.lasthandoff: 02/24/2017
 |[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|  
   
 ##  <a name="exception_ptr"></a>  exception_ptr  
- 描述例外狀況指標的類型。  
+ A type that describes a pointer to an exception.  
   
 ```cpp  
 typedef unspecified exception_ptr;
 ```  
   
-### <a name="remarks"></a>備註  
- 用於實作 `exception_ptr` 類型的未指定內部類別。  
+### <a name="remarks"></a>Remarks  
+ An unspecified internal class that is used to implement the `exception_ptr` type.  
   
- 利用 `exception_ptr` 物件參考目前的例外狀況或使用者指定的例外狀況執行個體。 在 Microsoft 實作中，例外狀況是以 [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) 結構表示。 每個 `exception_ptr` 物件均包含一個例外狀況參考欄位，指向代表該例外狀況的 `EXCEPTION_RECORD` 結構複本。  
+ Use an `exception_ptr` object to reference the current exception or an instance of a user-specified exception. In the Microsoft implementation, an exception is represented by an [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) structure. Each `exception_ptr` object includes an exception reference field that points to a copy of the `EXCEPTION_RECORD` structure that represents the exception.  
   
- 當您宣告 `exception_ptr` 變數時，此變數尚未關聯任何例外狀況。 也就是說，其例外狀況參考欄位為 NULL。 這樣的 `exception_ptr` 物件稱為 *null exception_ptr*。  
+ When you declare an `exception_ptr` variable, the variable is not associated with any exception. That is, its exception reference field is NULL. Such an `exception_ptr` object is called a *null exception_ptr*.  
   
- 利用 `current_exception` 或 `make_exception_ptr` 函式將例外狀況指派給 `exception_ptr` 物件。 當您將例外狀況指派給 `exception_ptr` 變數時，此變數的例外狀況參考欄位會指向該例外狀況的複本。 如果記憶體空間不足，無法複製該例外狀況，則例外狀況參考欄位會指向 [std::bad_alloc](../standard-library/bad-alloc-class.md) 例外狀況的複本。 如果 `current_exception` 或 `make_exception_ptr` 函式因故無法複製例外狀況，則函式會呼叫 **terminate** CRT 函式以結束目前的處理序。  
+ Use the `current_exception` or `make_exception_ptr` function to assign an exception to an `exception_ptr` object. When you assign an exception to an `exception_ptr` variable, the variable's exception reference field points to a copy of the exception. If there is insufficient memory to copy the exception, the exception reference field points to a copy of a [std::bad_alloc](../standard-library/bad-alloc-class.md) exception. If the `current_exception` or `make_exception_ptr` function cannot copy the exception for any other reason, the function calls the **terminate** CRT function to exit the current process.  
   
- `exception_ptr` 物件本身並不是指標 (儘管其名稱如此)。 此物件不會遵守指標語意，也不能搭配指標成員存取 (`->`) 或間接取值 (*) 運算子使用。 `exception_ptr` 物件沒有公用資料成員或成員函式。  
+ Despite its name, an `exception_ptr` object is not itself a pointer. It does not obey pointer semantics and cannot be used with the pointer member access ( `->`) or indirection (*) operators. The `exception_ptr` object has no public data members or member functions.  
   
- **比較：**  
+ **Comparisons:**  
   
- 您可以使用等於 (`==`) 和不等於 (`!=`) 運算子比較兩個 `exception_ptr` 物件。 運算子不會比較代表例外狀況之 `EXCEPTION_RECORD` 結構的二進位值 (位元模式)。 相反地，運算子會比較 `exception_ptr` 物件的例外狀況參考欄位位址。 因此，Null `exception_ptr` 和 Null 值的比較結果是相等。  
+ You can use the equal ( `==`) and not-equal ( `!=`) operators to compare two `exception_ptr` objects. The operators do not compare the binary value (bit pattern) of the `EXCEPTION_RECORD` structures that represent the exceptions. Instead, the operators compare the addresses in the exception reference field of the `exception_ptr` objects. Consequently, a null `exception_ptr` and the NULL value compare as equal.  
   
 ##  <a name="terminate_handler"></a>  terminate_handler  
- 此類型描述適合做為 `terminate_handler` 之函式的指標。  
+ The type describes a pointer to a function suitable for use as a `terminate_handler`.  
   
 ```
 typedef void (*terminate_handler)();
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型描述適合做為終止處理常式之函式的指標。  
+### <a name="remarks"></a>Remarks  
+ The type describes a pointer to a function suitable for use as a terminate handler.  
   
-### <a name="example"></a>範例  
-  如需 `terminate_handler` 的用法範例，請參閱 [set_terminate](../standard-library/exception-functions.md#set_terminate)。  
+### <a name="example"></a>Example  
+  See [set_terminate](../standard-library/exception-functions.md#set_terminate) for an example of the use of `terminate_handler`.  
   
 ##  <a name="unexpected_handler"></a>  unexpected_handler  
- 此類型描述的函式指標適合作為 `unexpected_handler`。  
+ The type describes a pointer to a function suitable for use as an `unexpected_handler`.  
   
 ```
 typedef void (*unexpected_handler)();
 ```  
   
-### <a name="example"></a>範例  
-  如需 `unexpected_handler` 的用法範例，請參閱 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。  
+### <a name="example"></a>Example  
+  See [set_unexpected](../standard-library/exception-functions.md#set_unexpected) for an example of the use of `unexpected_handler`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<exception>](../standard-library/exception.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "remove_volatile 類別 | Microsoft Docs"
+title: remove_volatile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- remove_volatile
 - type_traits/std::remove_volatile
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: 6c4e2273d6eed8e88f101a25f5b53b777a0bc48f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 40675fa94853c795e3332a285b3f3a8c5e30e720
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="removevolatile-class"></a>remove_volatile 類別
-從類型建立非 volatile 類型。  
+# <a name="removevolatile-class"></a>remove_volatile Class
+Makes non volatile type from type.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,14 +54,14 @@ template <class T>
 using remove_volatile_t = typename remove_volatile<T>::type;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要修改的類型。  
+ The type to modify.  
   
-## <a name="remarks"></a>備註  
- `remove_volatile<T>` 執行個體儲存修改的類型，如果 `T1` 的格式為 `T`，類型為 `volatile T1`，否則為 `T`。  
+## <a name="remarks"></a>Remarks  
+ An instance of `remove_volatile<T>` holds a modified-type that is `T1` when `T` is of the form `volatile T1`, otherwise `T`.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
 remove_volatile_t<volatile int> == int  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [add_volatile 類別](../standard-library/add-volatile-class.md)
+ [add_volatile Class](../standard-library/add-volatile-class.md)
 

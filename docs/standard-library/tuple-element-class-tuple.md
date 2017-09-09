@@ -1,5 +1,5 @@
 ---
-title: "tuple_element 類別 | Microsoft Docs"
+title: tuple_element Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,13 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- tuple_element
-- std::tuple_element
-- utility/std::tuple_element
+- tuple_element", "std::tuple_element", "utility/std::tuple_element
 dev_langs:
 - C++
 helpviewer_keywords:
-- tuple_element Class
+- ', '
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
 caps.latest.revision: 23
 author: corob-msft
@@ -35,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: b5568eb951738b1c0c53321d7430c84db6bac9ec
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 86d3e1e93b6a0bedbae20c2dacec7c393c0dd3a0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="tupleelement-class"></a>tuple_element 類別
-包裝 `tuple` 項目。 特製化包裝 `array` 項目和 `pair` 項目。  
+# <a name="tupleelement-class"></a>tuple_element Class
+Wraps a `tuple` element. Specializations wrap `array` elements and `pair` elements.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 // CLASS tuple_element (find element by index)  
@@ -82,36 +80,36 @@ template <class T1, class T2>
    struct tuple_element<1, pair<T1, T2>>;
 ```  
   
-### <a name="parameters"></a>參數  
-*索引*  
-指定之項目的索引。  
+### <a name="parameters"></a>Parameters  
+*Index*  
+The index of the designated element.  
   
 *Tuple*  
-Tuple 的類型。  
+The type of the tuple.  
   
 *Elem*  
-陣列元素的類型。  
+The type of an array element.  
   
 *Size*  
-陣列的大小。  
+The size of the array.  
 
-*T1* 配對中第一個元素的類型。
+*T1* The type of the first element in a pair.
   
 *T2*  
-配對中第二個元素的類型。
+The type of the second element in a pair.
 
-## <a name="remarks"></a>備註  
-此樣板類別 `tuple_element` 具有巢狀的 typedef `type`，和在 tuple 類型 `Tuple` 索引處 `Index` 的類型同義。  
+## <a name="remarks"></a>Remarks  
+The template class `tuple_element` has a nested typedef `type` that is a synonym for the type at index `Index` of the tuple type `Tuple`.  
 
-typedef `tuple_element_t` 是 `tuple_element<Index, Tuple>::type` 的方便別名。  
+The typedef `tuple_element_t` is a convenient alias for `tuple_element<Index, Tuple>::type`.  
   
-陣列的樣板類別特製化會提供介面給 `array`，當做 `Size` 元素的 tuple，其中每一個都有相同的類型。 每個特製化都具有巢狀的 typedef `type` ，也就是類型的同義字 `Index` 的 `array`元素類型的同義字，保留了任何 const-volatile 限定性條件。  
+The template class specialization for arrays provides an interface to an `array` as a tuple of `Size` elements, each of which has the same type. Each specialization has a nested typedef `type` that is a synonym for the type of the `Index` element of the `array`, with any const-volatile qualifications preserved.  
   
-`pair` 類型的樣板特製化都提供單一成員 typedef，`type`，也就是在配對中指定位置的元素類型同義字，保留了任何 const 及/或 volatile 限定性條件。 typedef `tuple_element_t` 是 `tuple_element<N, pair<T1, T2>>::type` 的方便別名。  
+The template specializations for `pair` types each provide a single member typedef, `type`, which is a synonym for the type of the element at the specified position in the pair, with any const and/or volatile qualifications preserved. The typedef `tuple_element_t` is a convenient alias for `tuple_element<N, pair<T1, T2>>::type`.  
   
-使用[get 函式&lt;公用程式&gt;](../standard-library/utility-functions.md#get)傳回項目中指定的位置，或指定的型別。 
+Use the [get Function &lt;utility&gt;](../standard-library/utility-functions.md#get) to return the element at a specified position, or of a specified type. 
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>  
@@ -136,7 +134,7 @@ int main() {
 0 1.5 Tail  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <array>   
@@ -166,7 +164,7 @@ int main()
  0  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <utility>   
@@ -197,10 +195,10 @@ int main() {
  0 1.333  
 ```  
 
-## <a name="requirements"></a>需求  
- **標頭：** \<tuple>  
- **Header:** \<array> (用於陣列特製化)  **Header:** \<utility> (用於配對特製化)  **Namespace:** std  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<tuple>  
+ **Header:** \<array> (for array specialization) **Header:** \<utility> (for pair specializations) **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
 [tuple ](../standard-library/tuple-class.md)
 

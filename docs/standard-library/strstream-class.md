@@ -1,5 +1,5 @@
 ---
-title: "strstream 類別 | Microsoft Docs"
+title: strstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- strstream
 - strstream/std::strstream::freeze
 - strstream/std::strstream::pcount
 - strstream/std::strstream::rdbuf
@@ -17,7 +16,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- strstream class
+- std::strstream [C++], freeze
+- std::strstream [C++], pcount
+- std::strstream [C++], rdbuf
+- std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
 caps.latest.revision: 21
 author: corob-msft
@@ -37,115 +39,115 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a1d7d7799e1338c72404f5bcdb9d06e9bac763e5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 06f3db071e0b8652da27c01bd5e1668b50f24fde
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="strstream-class"></a>strstream 類別
-描述一個物件，該物件可控制如何使用類別 [strstreambuf](../standard-library/strstreambuf-class.md) 的資料流緩衝區來插入及擷取項目和編碼物件。  
+# <a name="strstream-class"></a>strstream Class
+Describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 class strstream : public iostream
 ```  
   
-## <a name="remarks"></a>備註  
- 此物件會儲存類別 `strstreambuf` 的物件。  
+## <a name="remarks"></a>Remarks  
+ The object stores an object of class `strstreambuf`.  
   
 > [!NOTE]
->  這個類別已被取代。 請考慮改用 [stringstream](../standard-library/sstream-typedefs.md#stringstream) 或 [wstringstream](../standard-library/sstream-typedefs.md#wstringstream)。  
+>  This class is deprecated. Consider using [stringstream](../standard-library/sstream-typedefs.md#stringstream) or [wstringstream](../standard-library/sstream-typedefs.md#wstringstream) instead.  
   
-### <a name="constructors"></a>建構函式  
-  
-|||  
-|-|-|  
-|[strstream](#strstream)|建構類型 `strstream` 的物件。|  
-  
-### <a name="member-functions"></a>成員函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[freeze](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|  
-|[pcount](#pcount)|傳回寫入至受控制序列的元素計數。|  
-|[rdbuf](#rdbuf)|將指標傳回至資料流的相關 `strstreambuf` 物件。|  
-|[str](#str)|呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後傳回指向受控制序列開頭的指標。|  
+|[strstream](#strstream)|Constructs an object of type `strstream`.|  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<strstream>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[freeze](#freeze)|Causes a stream buffer to be unavailable through stream buffer operations.|  
+|[pcount](#pcount)|Returns a count of the number of elements written to the controlled sequence.|  
+|[rdbuf](#rdbuf)|Returns a pointer to the stream's associated `strstreambuf` object.|  
+|[str](#str)|Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<strstream>  
+  
+ **Namespace:** std  
   
 ##  <a name="freeze"></a>  strstream::freeze  
- 導致資料流緩衝區無法在資料流緩衝區作業中使用。  
+ Causes a stream buffer to be unavailable through stream buffer operations.  
   
 ```
 void freeze(bool _Freezeit = true);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Freezeit`  
- `bool`，指出您是否要凍結資料流。  
+ A `bool` indicating whether you want the stream to be frozen.  
   
-### <a name="remarks"></a>備註  
- 成員函式會呼叫 [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*)。  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).  
   
-### <a name="example"></a>範例  
-  如需使用 **freeze** 的範例，請參閱 [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze)。  
+### <a name="example"></a>Example  
+  See [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) for an example that uses **freeze**.  
   
 ##  <a name="pcount"></a>  strstream::pcount  
- 傳回寫入至受控制序列的元素計數。  
+ Returns a count of the number of elements written to the controlled sequence.  
   
 ```
 streamsize pcount() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 寫入受控制序列的項目數。  
+### <a name="return-value"></a>Return Value  
+ The number of elements written to the controlled sequence.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).  
   
-### <a name="example"></a>範例  
-  如需使用 pcount 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。  
+### <a name="example"></a>Example  
+  See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample of using pcount.  
   
 ##  <a name="rdbuf"></a>  strstream::rdbuf  
- 將指標傳回至資料流的相關 strstreambuf 物件。  
+ Returns a pointer to the stream's associated strstreambuf object.  
   
 ```
 strstreambuf *rdbuf() const
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向資料流相關 strstreambuf 物件的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the stream's associated strstreambuf object.  
   
-### <a name="remarks"></a>備註  
- 成員函式會將類型 **pointer** 的已儲存資料流緩衝區位址傳回 [strstreambuf](../standard-library/strstreambuf-class.md)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the address of the stored stream buffer of type **pointer** to [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-### <a name="example"></a>範例  
-  如需使用 `rdbuf` 的範例，請參閱 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。  
+### <a name="example"></a>Example  
+  See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `rdbuf`.  
   
 ##  <a name="str"></a>  strstream::str  
- 呼叫 [freeze](../standard-library/strstreambuf-class.md#freeze)，然後將指標傳回至受控制序列的開頭。  
+ Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.  
   
 ```
 char *str();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向受控制序列開頭的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the controlled sequence.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
   
-### <a name="example"></a>範例  
-  如需使用 **str** 的範例，請參閱 [strstreambuf::str](../standard-library/strstreambuf-class.md#str)。  
+### <a name="example"></a>Example  
+  See [strstreambuf::str](../standard-library/strstreambuf-class.md#str) for a sample that uses **str**.  
   
 ##  <a name="strstream"></a>  strstream::strstream  
- 建構類型 `strstream` 的物件。  
+ Constructs an object of type `strstream`.  
   
 ```
 strstream();
@@ -155,28 +157,28 @@ strstream(char* ptr,
     ios_base::openmode _Mode = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `count`  
- 緩衝區的大小。  
+ The size of the buffer.  
   
  `_Mode`  
- 緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。  
+ The input and output mode of the buffer. See [ios_base::openmode](../standard-library/ios-base-class.md#openmode) for more information.  
   
  `ptr`  
- 緩衝區。  
+ The buffer.  
   
-### <a name="remarks"></a>備註  
- 這兩個建構函式會呼叫 [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) 來初始化基底類別，其中 **sb** 是類別 [strstreambuf](../standard-library/strstreambuf-class.md) 的已儲存物件。 第一個建構函式也會呼叫 [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf) 來初始化 **sb**。 第二個建構函式會使用下列其中一種方法來初始化基底類別：  
+### <a name="remarks"></a>Remarks  
+ Both constructors initialize the base class by calling [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**), where **sb** is the stored object of class [strstreambuf](../standard-library/strstreambuf-class.md). The first constructor also initializes **sb** by calling [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). The second constructor initializes the base class one of two ways:  
   
--   如果 `_Mode` & **ios_base::app**== 0，則 `ptr` 必須指定 `count` 項目陣列的第一個項目，且建構函式會呼叫 `strstreambuf`( `ptr`, `count`, `ptr`)。  
+-   If `_Mode` & **ios_base::app**== 0, then `ptr` must designate the first element of an array of `count` elements, and the constructor calls `strstreambuf`( `ptr`, `count`, `ptr`).  
   
--   否則，`ptr` 必須指定 count 項目陣列 (包含 C 字串) 第一個項目，其第一個項目是由 `ptr` 指定，且建構函式會呼叫 `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) )。  
+-   Otherwise, `ptr` must designate the first element of an array of count elements that contains a C string whose first element is designated by `ptr`, and the constructor calls `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [iostream](../standard-library/istream-typedefs.md#iostream)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "make_signed 類別 | Microsoft Docs"
+title: make_signed Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- make_signed
 - type_traits/std::make_signed
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 43b41b7016faeb593af12d01f940c27d00882b9e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1c4a018f0868163c496eecccf4a1cd2f7be5da28
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="makesigned-class"></a>make_signed 類別
-建立類型，或是建立大於或等於類型大小的最小帶正負號類型。  
+# <a name="makesigned-class"></a>make_signed Class
+Makes type or the smallest signed type greater than or equal in size to type.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
@@ -55,19 +54,19 @@ template <class T>
 using make_signed_t = typename make_signed<T>::type;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要修改的類型。  
+ The type to modify.  
   
-## <a name="remarks"></a>備註  
- 如果 `is_signed<T>` 為 true，則 modifier 類型的執行個體所保留的修改類型是 `T`。 否則，是最小的未帶正負號類型 `UT`，其中 `sizeof (T) <= sizeof (UT)`。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type modifier holds a modified-type that is `T` if `is_signed<T>` holds true. Otherwise it is the smallest unsigned type `UT` for which `sizeof (T) <= sizeof (UT)`.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

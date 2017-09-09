@@ -1,5 +1,5 @@
 ---
-title: "&lt;memory&gt; 列舉 | Microsoft Docs"
+title: '&lt;memory&gt; enums | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,33 +11,33 @@ f1_keywords:
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: d2f3cf1ec90c7caff5bb3a100d45d69a4a35e01a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: eb02712cbe1d55721002cc45dc7719bd2eaea910
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmemorygt-enums"></a>&lt;memory&gt; 列舉
+# <a name="ltmemorygt-enums"></a>&lt;memory&gt; enums
 ||  
 |-|  
 |[pointer_safety](#pointer_safety)|  
   
-##  <a name="pointer_safety"></a>  pointer_safety 列舉  
- `get_pointer_safety` 的可能傳回值列舉。  
+##  <a name="pointer_safety"></a>  pointer_safety Enumeration  
+ The enumeration of possible values returned by `get_pointer_safety`.  
   
 class pointer_safety { relaxed, preferred, strict };  
   
-### <a name="remarks"></a>備註  
- 已限定範圍的 `enum` 會定義 `get_pointer_safety``()` 能傳回的值：  
+### <a name="remarks"></a>Remarks  
+ The scoped `enum` defines the values that can be returned by `get_pointer_safety()`:  
   
- `relaxed` -- 以相同方式處理不是以安全方式衍生的指標 (顯然是已宣告或配置之物件的指標) 和以安全方式衍生的指標。  
+ `relaxed` -- pointers not safely derived (obviously pointers to declared or allocated objects) are treated the same as those safely derived.  
   
- `preferred` -- 與先前一樣，但對於不是以安全方式衍生的指標不應取值。  
+ `preferred` -- as before, but pointers not safely derived should not be dereferenced.  
   
- `strict` -- 可能以不同方式處理不是以安全方式衍生的指標和以安全方式衍生的指標。  
+ `strict` -- pointers not safely derived might be treated differently than those safely derived.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)
 
 

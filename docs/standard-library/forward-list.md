@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <forward_list>
-- std::<forward_list>
-- std.<forward_list>
+- <forward_list>", "std::<forward_list>", "std.<forward_list>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,47 +33,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3493d1897018e203e3918c3368c68f5b112908b6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8177a16536343b85978d1a2a861559b0387840c8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
-定義容器範本類別 forward_list，以及數個支援的範本。  
+Defines the container template class forward_list and several supporting templates.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <forward_list>  
 ```  
   
-### <a name="operators"></a>運算子  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|測試運算子左邊的轉送清單物件是否等於右邊的轉送清單物件。|  
-|[operator!=](../standard-library/forward-list-operators.md#op_neq)|測試運算子左邊的轉送清單物件是否不等於右邊的轉送清單物件。|  
-|[operator<](../standard-library/forward-list-operators.md#op_lt)|測試運算子左邊的轉送清單物件是否小於右邊的轉送清單物件。|  
-|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|測試運算子左邊的轉送清單物件是否小於或等於右邊的轉送清單物件。|  
-|[operator>](../standard-library/forward-list-operators.md#op_gt)|測試運算子左邊的轉送清單物件是否大於右邊的轉送清單物件。|  
-|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|測試運算子左邊的轉送清單物件是否大於或等於右邊的轉送清單物件。|  
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Tests if the forward list object on the left side of the operator is equal to the forward list object on the right side.|  
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Tests if the forward list object on the left side of the operator is not equal to the forward list object on the right side.|  
+|[operator<](../standard-library/forward-list-operators.md#op_lt)|Tests if the forward list object on the left side of the operator is less than the forward list object on the right side.|  
+|[operator<=](../standard-library/forward-list-operators.md#op_lt_eq)|Tests if the forward list object on the left side of the operator is less than or equal to the forward list object on the right side.|  
+|[operator>](../standard-library/forward-list-operators.md#op_gt)|Tests if the forward list object on the left side of the operator is greater than the forward list object on the right side.|  
+|[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|Tests if the forward list object on the left side of the operator is greater than or equal to the forward list object on the right side.|  
   
-### <a name="functions"></a>函式  
-  
-|||  
-|-|-|  
-|[swap](../standard-library/forward-list-functions.md#swap)|交換兩個轉送清單的項目。|  
-  
-### <a name="classes"></a>類別  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[forward_list](../standard-library/forward-list-class.md)|描述一個控制不同長度項目序列的物件。 這個序列會以元素的單向連結清單形式儲存，每個元素都包含一個 `Type` 類型的成員。|  
+|[swap](../standard-library/forward-list-functions.md#swap)|Exchanges the elements of two forward lists.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[forward_list](../standard-library/forward-list-class.md)|Describes an object that controls a varying-length sequence of elements. The sequence is stored as a singly-linked list of elements, each containing a member of type `Type`.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

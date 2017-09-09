@@ -1,5 +1,5 @@
 ---
-title: "slice_array 類別 | Microsoft Docs"
+title: slice_array Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- slice_array
 - valarray/std::slice_array
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 97770a32fe661daf972753384d69b47badbcb7aa
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5294aa8817abb89e07a710c97eb10a55029492cc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="slicearray-class"></a>slice_array 類別
-可藉由提供 valarray 之切割所定義的子集陣列之間的作業，支援切割物件的內部、輔助的範本類別。  
+# <a name="slicearray-class"></a>slice_array Class
+An internal, auxiliary template class that supports slice objects by providing operations between subset arrays defined by the slice of a valarray.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type>  
@@ -91,24 +90,24 @@ public:
 }  
 ```  
   
-## <a name="remarks"></a>備註  
- 此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之物件的參考與 [slice](../standard-library/slice-class.md) 類別的物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的項目序列。  
+## <a name="remarks"></a>Remarks  
+ The class describes an object that stores a reference to an object of class [valarray](../standard-library/valarray-class.md)**\<Type>**, along with an object of class [slice](../standard-library/slice-class.md), which describes the sequence of elements to select from the **valarray\<Type>** object.  
   
- 此樣板類別是由某些 valarray 運算間接建立的，無法直接在程式中使用。 配量註標運算子會使用內部輔助樣板類別：  
+ The template class is created indirectly by certain valarray operations and cannot be used directly in the program. An internal, auxiliary template class that is used by the slice subscript operator:  
   
- `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`)。  
+ `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).  
   
- 您只能藉由撰寫 [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式，為 valarray **va** 的配量 **sl** 建構 **slice_array\<Type>** 物件。 slice_array 類別的成員函式接著會像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的項目序列會受到影響。 slice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即配量中第一個項目的索引、項目數，以及項目之間的距離。 從由 **va**[ `slice`(2, 5, 3)] 所宣告之 valarray **va** 所剪下的 slice_array，會選取含有 **va** 之索引 2、5、8、11 及 14 的項目。 索引必須有效，程序才能有效。  
+ You construct a **slice_array\<Type>** object only by writing an expression of the form [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), for a slice **sl** of valarray **va**. The member functions of class slice_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected. The sequence controlled by the slice_array is defined by the three parameters of the slice constructor, the index of the first element in the slice, the number of elements, and the distance between the elements. A slice_array cut from valarray **va** declared by **va**[ `slice`(2, 5, 3)] selects elements with indices 2, 5, 8, 11, and 14 from **va**. The indices must be valid for the procedure to be valid.  
   
-## <a name="example"></a>範例  
- 如需如何宣告及使用 slice_array 的範例，請參閱 [slice::slice](../standard-library/slice-class.md#slice) 的範例。  
+## <a name="example"></a>Example  
+ See the example for [slice::slice](../standard-library/slice-class.md#slice) for an example of how to declare and use a slice_array.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

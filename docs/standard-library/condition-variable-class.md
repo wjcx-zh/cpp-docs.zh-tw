@@ -1,5 +1,5 @@
 ---
-title: "condition_variable 類別 | Microsoft Docs"
+title: condition_variable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,17 +38,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5614afd8d17f119b47d11c641e3f999399f80925
+helpviewer_keywords:
+- std::condition
+- std::condition_variable::condition_variable
+- std::condition_variable::native_handle
+- std::condition_variable::notify_all
+- std::condition_variable::notify_one
+- std::condition_variable::wait
+- std::condition_variable::wait_for
+- std::condition_variable::wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7f6f042a545cc2b9846404551fdc23770b5b19bf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="conditionvariable-class"></a>condition_variable 類別
-當您具有 `unique_lock<mutex>` 類型的 `mutex` 時，可使用 `condition_variable` 類別來等候事件。 此類型的物件可能比 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 類型的物件效能更好。  
+# <a name="conditionvariable-class"></a>condition_variable Class
+Use the `condition_variable` class to wait for an event when you have a `mutex` of type `unique_lock<mutex>`. Objects of this type may have better performance than objects of type [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 class condition_variable;
@@ -56,64 +65,64 @@ class condition_variable;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[condition_variable](#condition_variable)|建構 `condition_variable` 物件。|  
+|[condition_variable](#condition_variable)|Constructs a `condition_variable` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[native_handle](#native_handle)|傳回代表 condition_variable 控制代碼的實作特定類型。|  
-|[notify_all](#notify_all)|解除封鎖所有等候 `condition_variable` 物件的執行緒。|  
-|[notify_one](#notify_one)|解除封鎖其中一個等候 `condition_variable` 物件的執行緒。|  
-|[等候](#wait)|封鎖執行緒。|  
-|[wait_for](#wait_for)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|  
-|[wait_until](#wait_until)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|  
+|[native_handle](#native_handle)|Returns the implementation-specific type representing the condition_variable handle.|  
+|[notify_all](#notify_all)|Unblocks all threads that are waiting for the `condition_variable` object.|  
+|[notify_one](#notify_one)|Unblocks one of the threads that are waiting for the `condition_variable` object.|  
+|[wait](#wait)|Blocks a thread.|  
+|[wait_for](#wait_for)|Blocks a thread, and sets a time interval after which the thread unblocks.|  
+|[wait_until](#wait_until)|Blocks a thread, and sets a maximum point in time at which the thread unblocks.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰** \<condition_variable >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<condition_variable>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-##  <a name="condition_variable"></a>  condition_variable::condition_variable 建構函式  
- 建構 `condition_variable` 物件。  
+##  <a name="condition_variable"></a>  condition_variable::condition_variable Constructor  
+ Constructs a `condition_variable` object.  
   
 ```
 condition_variable();
 ```  
   
-### <a name="remarks"></a>備註  
- 如果可用的記憶體不足，建構函式會擲回具有 `not_enough_memory` 錯誤碼的 [system_error](../standard-library/system-error-class.md) 物件。 如果因為無法使用其他部分資源，而無法建構物件，建構函式會擲回具有 `resource_unavailable_try_again` 錯誤碼的 `system_error` 物件。  
+### <a name="remarks"></a>Remarks  
+ If not enough memory is available, the constructor throws a [system_error](../standard-library/system-error-class.md) object that has a `not_enough_memory` error code. If the object cannot be constructed because some other resource is not available, the constructor throws a `system_error` object that has a `resource_unavailable_try_again` error code.  
   
 ##  <a name="native_handle"></a>  condition_variable::native_handle  
- 傳回代表 condition_variable 控制代碼的實作特定類型。  
+ Returns the implementation-specific type that represents the condition_variable handle.  
   
 ```
 native_handle_type native_handle();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 系統會將 `native_handle_type` 定義為並行執行階段內部資料結構的指標。  
+### <a name="return-value"></a>Return Value  
+ `native_handle_type` is defined as a pointer to Concurrency Runtime internal data structures.  
   
 ##  <a name="notify_all"></a>  condition_variable::notify_all  
- 解除封鎖所有等候 `condition_variable` 物件的執行緒。  
+ Unblocks all threads that are waiting for the `condition_variable` object.  
   
 ```
 void notify_all() noexcept;
 ```  
   
 ##  <a name="notify_one"></a>  condition_variable::notify_one  
- 解除封鎖其中一個等候 `condition_variable` 物件的執行緒。  
+ Unblocks one of the threads that are waiting on the `condition_variable` object.  
   
 ```
 void notify_one() noexcept;
 ```  
   
 ##  <a name="wait"></a>  condition_variable::wait  
- 封鎖執行緒。  
+ Blocks a thread.  
   
 ```
 void wait(unique_lock<mutex>& Lck);
@@ -122,17 +131,17 @@ template <class Predicate>
 void wait(unique_lock<mutex>& Lck, Predicate Pred);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 物件。  
+ A [unique_lock\<mutex>](../standard-library/unique-lock-class.md) object.  
   
  `Pred`  
- 傳回 `true` 或 `false` 的任何運算式。  
+ Any expression that returns `true` or `false`.  
   
-### <a name="remarks"></a>備註  
- 系統會封鎖第一個方法，直到 `condition_variable` 物件收到 [notify_one](#notify_one) 或 [notify_all](#notify_all) 的呼叫訊號為止。 它也可能會假性喚醒。  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable` object is signaled by a call to [notify_one](#notify_one) or [notify_all](#notify_all). It can also wake up spuriously.  
   
- 而第二種方法會執行下列程式碼。  
+ In effect, the second method executes the following code.  
   
 ```cpp  
 while(!Pred())
@@ -140,7 +149,7 @@ while(!Pred())
 ```    
   
 ##  <a name="wait_for"></a>  condition_variable::wait_for  
- 封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。  
+ Blocks a thread, and sets a time interval after which the thread unblocks.  
   
 ```
 template <class Rep, class Period>
@@ -155,25 +164,25 @@ bool wait_for(
     Predicate Pred);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 物件。  
+ A [unique_lock\<mutex>](../standard-library/unique-lock-class.md) object.  
   
  `Rel_time`  
- `chrono::duration` 物件，指定喚醒執行緒之前的時間。  
+ A `chrono::duration` object that specifies the amount of time before the thread wakes up.  
   
  `Pred`  
- 傳回 `true` 或 `false` 的任何運算式。  
+ Any expression that returns `true` or `false`.  
   
-### <a name="return-value"></a>傳回值  
- 如果因已歷時 `Rel_time` 而等候終止時，第一個方法會傳回 `cv_status::timeout`。 否則，方法會傳回 `cv_status::no_timeout`。  
+### <a name="return-value"></a>Return Value  
+ The first method returns `cv_status::timeout` if the wait terminates when `Rel_time` has elapsed. Otherwise, the method returns `cv_status::no_timeout`.  
   
- 第二個方法會傳回 `Pred` 的值。  
+ The second method returns the value of `Pred`.  
   
-### <a name="remarks"></a>備註  
- 系統會封鎖第一個方法，直到 `condition_variable` 物件收到 [notify_one](#notify_one) 或 [notify_all](#notify_all) 的呼叫訊號，或已歷時 `Rel_time` 時間間隔為止。 它也可能會假性喚醒。  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable` object is signaled by a call to [notify_one](#notify_one) or [notify_all](#notify_all) or until the time interval `Rel_time` has elapsed. It can also wake up spuriously.  
   
- 而第二種方法會執行下列程式碼。  
+ In effect, the second method executes the following code.  
   
 ```cpp  
 while(!Pred())
@@ -184,7 +193,7 @@ return true;
 ```  
   
 ##  <a name="wait_until"></a>  condition_variable::wait_until  
- 封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。  
+ Blocks a thread, and sets a maximum point in time at which the thread unblocks.  
   
 ```
 template <class Clock, class Duration>
@@ -209,25 +218,25 @@ bool wait_until(
     Predicate Pred);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 物件。  
+ A [unique_lock\<mutex>](../standard-library/unique-lock-class.md) object.  
   
  `Abs_time`  
- [chrono::time_point](../standard-library/time-point-class.md) 物件。  
+ A [chrono::time_point](../standard-library/time-point-class.md) object.  
   
  `Pred`  
- 傳回 `true` 或 `false` 的任何運算式。  
+ Any expression that returns `true` or `false`.  
   
-### <a name="return-value"></a>傳回值  
- 如果因歷時 `Abs_time` 而等候終止時，傳回 `cv_status` 類型的方法會傳回 `cv_status::timeout`。 否則，方法會傳回 `cv_status::no_timeout`。  
+### <a name="return-value"></a>Return Value  
+ Methods that return a `cv_status` type return `cv_status::timeout` if the wait terminates when `Abs_time` elapses. Otherwise, the methods return `cv_status::no_timeout`.  
   
- 傳回 `bool` 的方法會傳回 `Pred` 的值。  
+ Methods that return a `bool` return the value of `Pred`.  
   
-### <a name="remarks"></a>備註  
- 系統會封鎖第一個方法，直到 `condition_variable` 物件收到 [notify_one](#notify_one) 或 [notify_all](#notify_all) 的呼叫訊號，或直到 `Abs_time` 為止。 它也可能會假性喚醒。  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable` object is signaled by a call to [notify_one](#notify_one) or [notify_all](#notify_all) or until `Abs_time`. It can also wake up spuriously.  
   
- 而第二種方法會執行下列程式碼。  
+ In effect, the second method executes the following code  
   
 ```cpp  
 while(!Pred())
@@ -237,10 +246,10 @@ while(!Pred())
 return true;
 ```  
   
- 第三個和第四個方法會使用 `xtime` 類型的物件指標來取代 `chrono::time_point` 物件。 `xtime` 物件可指定等待訊號的時間量上限。  
+ The third and fourth methods use a pointer to an object of type `xtime` to replace the `chrono::time_point` object. The `xtime` object specifies the maximum amount of time to wait for a signal.  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [<condition_variable>](../standard-library/condition-variable.md)
 
 

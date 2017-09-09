@@ -1,5 +1,5 @@
 ---
-title: "&lt;hash_set&gt; 函式 | Microsoft Docs"
+title: '&lt;hash_set&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 caps.latest.revision: 7
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2743e67d8077cdf75b51a3dce914ced0894a3392
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cb98cfbaa2716569df75913af054f4d764dc11df
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 函式
+# <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; functions
 |||  
 |-|-|  
 |[swap](#swap)|[swap (hash_multiset)](#swap_hash_multiset)|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 04/29/2017
 ##  <a name="swap"></a>  swap  
   
 > [!NOTE]
->  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 交換兩個 hash_set 的元素。  
+ Exchanges the elements of two hash_sets.  
   
 ```
 void swap(
@@ -37,56 +37,56 @@ void swap(
     hash_set <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 提供要交換之元素的 hash_set，或要與 hash_set `left` 交換元素的 hash_set。  
+ The hash_set providing the elements to be swapped, or the hash_set whose elements are to be exchanged with those of the hash_set `left`.  
   
  `left`  
- 要與 hash_set `right` 交換元素的 hash_set。  
+ The hash_set whose elements are to be exchanged with those of the hash_set `right`.  
   
-### <a name="remarks"></a>備註  
- `swap` 範本函式是在容器類別 hash_set 特製化的演算法，用來執行成員函式 `left``.`[swap](../standard-library/hash-set-class.md#swap)( `right`)。 這是編譯器所執行的函式範本部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本  
+### <a name="remarks"></a>Remarks  
+ The `swap` template function is an algorithm specialized on the container class hash_set to execute the member function `left.`[swap](../standard-library/hash-set-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
- **template \<class T> void swap(T&, T&)**  
+ **template \<class T> void swap(T&, T&),**  
   
- 會依指派運作而作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>範例  
-  如需使用 `swap` 之範本版本的範例，請參閱成員函式 [hash_set::swap](../standard-library/hash-set-class.md#swap) 的程式碼範例。  
+### <a name="example"></a>Example  
+  See the code example for the member class [hash_set::swap](../standard-library/hash-set-class.md#swap) for an example that uses the template version of `swap`.  
   
 ##  <a name="swap_hash_multiset"></a>  swap (hash_multiset)  
   
 > [!NOTE]
->  這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。  
+>  This API is obsolete. The alternative is [unordered_set Class](../standard-library/unordered-set-class.md).  
   
- 交換兩個 hash_multiset 的元素。  
+ Exchanges the elements of two hash_multisets.  
   
 ```
 void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 提供要交換之元素的 hash_multiset，或要與 hash_multiset `left` 交換元素的 hash_multiset。  
+ The hash_multiset providing the elements to be swapped, or the hash_multiset whose elements are to be exchanged with those of the hash_multiset `left`.  
   
  `left`  
- 要與 hash_multiset `right` 交換元素的 hash_multiset。  
+ The hash_multiset whose elements are to be exchanged with those of the hash_multiset `right`.  
   
-### <a name="remarks"></a>備註  
- `swap` 範本函式是在容器類別 hash_multiset 特製化的演算法，用來執行成員函式 `left``.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`)。 這是編譯器所執行的函式範本部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本  
+### <a name="remarks"></a>Remarks  
+ The `swap` template function is an algorithm specialized on the container class hash_multiset to execute the member function `left.`[swap](../standard-library/hash-multiset-class.md#swap)( `right`). This is an instance of the partial ordering of function templates by the compiler. When template functions are overloaded in such a way that the match of the template with the function call is not unique, then the compiler will select the most specialized version of the template function. The general version of the template function  
   
- **template \<class T> void swap(T&, T&)**  
+ **template \<class T> void swap(T&, T&),**  
   
- 會依指派運作而作業緩慢。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
+ in the algorithm class works by assignment and is a slow operation. The specialized version in each container is much faster as it can work with the internal representation of the container class.  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+ In Visual C++ .NET 2003, members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [The stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-### <a name="example"></a>範例  
-  如需使用 `swap` 之範本版本的範例，請參閱成員函式 [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) 的程式碼範例。  
+### <a name="example"></a>Example  
+  See the code example for the member class [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap) for an example that uses the template version of `swap`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<hash_set>](../standard-library/hash-set.md)
 
 

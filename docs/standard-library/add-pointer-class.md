@@ -1,5 +1,5 @@
 ---
-title: "add_pointer 類別 | Microsoft Docs"
+title: add_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_pointer
 - type_traits/std::add_pointer
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 008f19421575b8a930498a615642fdfdad99b7b6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5b7f0fa84b8a99b5e2225dfdf4028807f2d89eaa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="addpointer-class"></a>add_pointer 類別
-從指定的類型建立類型指標。  
+# <a name="addpointer-class"></a>add_pointer Class
+Makes a pointer-to-type from a specified type.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,17 +54,17 @@ template <class T>
 using add_pointer_t = typename add_pointer<T>::type;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
 *T*  
-要修改的類型。  
+The type to modify.  
   
-## <a name="remarks"></a>備註  
-成員 typedef `type` 名稱與 `remove_reference<T>::type*` 的類型相同。 `add_pointer_t` 別名是存取成員 typedef `type` 的捷徑。  
+## <a name="remarks"></a>Remarks  
+The member typedef `type` names the same type as `remove_reference<T>::type*`. The alias `add_pointer_t` is a shortcut to access the member typedef `type`.  
   
-由於不能從參考建立指標，因此在建立類型指標之前，`add_pointer` 會從指定的類型移除參考 (如果有的話)。 因此，您可以使用類型與 `add_pointer`，而不用擔心類型是否為參考。  
+Because it is invalid to make a pointer from a reference, `add_pointer` removes the reference, if any, from the specified type before it makes a pointer-to-type. Consequently, you can use a type with `add_pointer` without being concerned about whether the type is a reference.  
   
-## <a name="example"></a>範例  
-下列範例會示範，類型的 `add_pointer` 與該類型的指標相同。  
+## <a name="example"></a>Example  
+The following example demonstrates that `add_pointer` of a type is the same as a pointer to that type.  
   
 ```cpp  
 #include <type_traits>   
@@ -87,12 +86,12 @@ int main()
 add_pointer_t<int> == int *  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_pointer 類別](../standard-library/remove-pointer-class.md)
+ [remove_pointer Class](../standard-library/remove-pointer-class.md)
 

@@ -1,15 +1,14 @@
 ---
-title: "chi_squared_distribution 類別 | Microsoft Docs"
+title: chi_squared_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- chi_squared_distribution
 - random/std::chi_squared_distribution
 - random/std::chi_squared_distribution::reset
 - random/std::chi_squared_distribution::n
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- chi_squared_distribution class
+- std::chi_squared_distribution [C++]
+- std::chi_squared_distribution [C++], reset
+- std::chi_squared_distribution [C++], n
+- std::chi_squared_distribution [C++], param
+- std::chi_squared_distribution [C++], min
+- std::chi_squared_distribution [C++], max
+- std::chi_squared_distribution [C++], param_type
+- std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
 caps.latest.revision: 17
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e02680da3c44f31d9a81e1dc83b18822b9583e1b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2c90370462a9388011a92d9474e97bc152075ceb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chisquareddistribution-class"></a>chi_squared_distribution 類別
-產生卡方分佈。  
+# <a name="chisquareddistribution-class"></a>chi_squared_distribution Class
+Generates a chi-squared distribution.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class RealType = double>  
@@ -84,35 +90,35 @@ public:
     result_type max() const;
 };
 ```  
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
 *RealType*  
-浮點結果類型，預設值為 `double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>備註  
-此樣板類別描述產生使用者指定之浮點類型的值的分佈 (若無提供則為 `double` 類型)，而這是根據卡方分佈進行分佈。 下表提供各個成員的文章連結。  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Chi-Squared Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|  
 |`chi_squared_distribution::operator()`||[param_type](#param_type)|  
   
-屬性函式 `n()` 會傳回儲存的分佈參數 `n` 的值。  
+The property function `n()` returns the value for the stored distribution parameter `n`.  
   
-屬性成員 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 成員函式會捨棄任何快取的值，讓下個針對 `operator()` 呼叫的結果不是取決於呼叫之前取自引擎的任何值。  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-如需卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Chi-Squared Distribution](http://go.microsoft.com/fwlink/LinkId=400528) (卡方分佈)。  
+For detailed information about the chi-squared distribution, see the Wolfram MathWorld article [Chi-Squared Distribution](http://go.microsoft.com/fwlink/LinkId=400528).  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -166,7 +172,7 @@ int main()
 }  
 ```  
   
-第一次執行：  
+First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -189,7 +195,7 @@ Distribution for 10 samples:
     10: 1.5429743723  
 ```  
   
-第二次執行：  
+Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -212,7 +218,7 @@ Distribution for 10 samples:
     10: 1.3552086624  
 ```  
   
-第三次執行：  
+Third run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -235,35 +241,35 @@ Distribution for 10 samples:
     10: 1054.7051509381  
 ```  
   
-## <a name="requirements"></a>需求  
-**標頭：**\<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**命名空間：** std  
+**Namespace:** std  
   
 ##  <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution  
-建構分佈。  
+Constructs the distribution.  
   
 ```  
 explicit chi_squared_distribution(result_type n = 1.0);  
 explicit chi_squared_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *n*  
-`n` 分佈參數。  
+The `n` distribution parameter.  
   
 *parm*  
- 用於建構分佈的參數結構。  
+ The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>備註  
-**前置條件：**`0.0 < n`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < n`  
   
-第一個建構函式建構的物件，其預存的 `n` 值具有 *n* 值。  
+The first constructor constructs an object whose stored `n` value holds the value *n*.  
   
-第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  chi_squared_distribution::param_type  
-儲存分佈的參數。  
+Stores the parameters of the distribution.  
   
 ```cpp    
 struct param_type {  
@@ -276,19 +282,19 @@ struct param_type {
    };  
 ```  
 
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *n*  
-`n` 分佈參數。  
+The `n` distribution parameter.  
   
 *right*  
-要與這個項目比較的 `param_type` 物件。  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>備註  
-**前置條件：**`0.0 < n`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < n`  
   
-此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

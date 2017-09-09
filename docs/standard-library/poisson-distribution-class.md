@@ -1,5 +1,5 @@
 ---
-title: "poisson_distribution 類別 | Microsoft Docs"
+title: poisson_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- poisson_distribution
 - random/std::poisson_distribution
 - random/std::poisson_distribution::reset
 - random/std::poisson_distribution::mean
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- poisson_distribution class
+- std::poisson_distribution [C++]
+- std::poisson_distribution [C++], reset
+- std::poisson_distribution [C++], mean
+- std::poisson_distribution [C++], param
+- std::poisson_distribution [C++], min
+- std::poisson_distribution [C++], max
+- std::poisson_distribution [C++], param_type
+- std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
 caps.latest.revision: 19
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a8a87f4101cca4a709d594ac2ad19726eb505c00
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d7237dd8a273323eb8424223848bde9d647c06da
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="poissondistribution-class"></a>poisson_distribution 類別
-產生波氏 (Poisson) 分佈。  
+# <a name="poissondistribution-class"></a>poisson_distribution Class
+Generates a Poisson distribution.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class IntType = int>
@@ -86,33 +92,33 @@ public:
    };  
 ``` 
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
-整數結果類型，預設值為 `int`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>備註  
-此範例類別描述使用波氏分佈產生使用者指定之整數類型的值。 下表提供各個成員的文章連結。  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type with a Poisson distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
 |`poisson_distribution::operator()`||[param_type](#param_type)|  
   
-屬性函式 `mean()` 會傳回儲存的分佈參數 *mean* 的值。  
+The property function `mean()` returns the value for stored distribution parameter *mean*.  
   
-屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 成員函式會捨棄任何快取的值，讓下個針對 `operator()` 呼叫的結果不是取決於呼叫之前取自引擎的任何值。  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-如需波氏分佈的詳細資訊，請參閱 Wolfram MathWorld 文章[波氏分佈 (英文)](http://go.microsoft.com/fwlink/LinkId=401112)。  
+For detailed information about the Poisson distribution, see the Wolfram MathWorld article [Poisson Distribution](http://go.microsoft.com/fwlink/LinkId=401112).  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -166,7 +172,7 @@ int main()
   
 ```  
   
-第一個測試：  
+First test:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -183,7 +189,7 @@ Distribution for 100 samples:
     5 :  
 ```  
   
-第二個測試：  
+Second test:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -210,35 +216,35 @@ Distribution for 100 samples:
    17 :  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution  
-建構分佈。  
+Constructs the distribution.  
   
 ```  
 explicit poisson_distribution(RealType mean = 1.0);
 explicit binomial_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *mean*  
-`mean` 分佈參數。  
+The `mean` distribution parameter.  
   
 *parm*  
-用於建構分佈的參數結構。  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>備註  
- **前置條件：**`0.0 < mean`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < mean`  
   
-第一個建構函式會建構其中儲存的 `mean` 值具有值 *mean* 的物件。  
+The first constructor constructs an object whose stored `mean` value holds the value *mean*.  
   
-第二個建構函式會建構其中儲存的參數是初始化自 *parm* 的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  poisson_distribution::param_type  
-儲存分佈的參數。  
+Stores the parameters of the distribution.  
   
 ```    
 struct param_type {  
@@ -251,15 +257,15 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>參數  
-請參閱 [poisson_distribution](#poisson_distribution) 的建構函式參數。  
+### <a name="parameters"></a>Parameters  
+See constructor parameters for [poisson_distribution](#poisson_distribution).  
   
-### <a name="remarks"></a>備註  
- **前置條件：**`0.0 < mean`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < mean`  
   
-此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

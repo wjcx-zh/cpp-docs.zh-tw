@@ -1,5 +1,5 @@
 ---
-title: "type_index 類別 | Microsoft Docs"
+title: type_index Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,38 +33,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e00ba54975dfac0439509e63606e9992d86c9522
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e77d1dd69a2db5e211348e6373d35f337f0b0f17
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="typeindex-class"></a>type_index 類別
-`type_index` 類別會將指標包裝到 [type_info Class](../cpp/type-info-class.md) 來協助這類物件的索引。  
+# <a name="typeindex-class"></a>type_index Class
+The `type_index` class wraps a pointer to [type_info Class](../cpp/type-info-class.md) to assist in indexing by such objects.  
   
 class type_index { public: type_index(const type_info& tinfo); const char *name() const; size_t hash_code() const; bool operator==(const type_info& right) const; bool operator!=(const type_info& right) const; bool operator<(const type_info& right) const; bool operator\<=(const type_info& right) const; bool operator>(const type_info& right) const; bool operator>=(const type_info& right) const; };  
   
- 建構函式會將 `ptr` 初始化為 `&tinfo`。  
+ The constructor initializes `ptr` to `&tinfo`.  
   
- `name` 會傳回 `ptr->name()`。  
+ `name` returns `ptr->name()`.  
   
- `hash_code` 傳回 `ptr->hash_code().`  
+ `hash_code` returns `ptr->hash_code().`  
   
- `operator==` 會傳回 `*ptr == right.ptr`。  
+ `operator==` returns `*ptr == right.ptr`.  
   
- `operator!=` 會傳回 `!(*this == right)`。  
+ `operator!=` returns `!(*this == right)`.  
   
- `operator<` 會傳回 `*ptr->before(*right.ptr)`。  
+ `operator<` returns `*ptr->before(*right.ptr)`.  
   
- `operator<=` 傳回 `!(right < *this).`  
+ `operator<=` returns `!(right < *this).`  
   
- `operator>` 會傳回 `right < *this`。  
+ `operator>` returns `right < *this`.  
   
- `operator>=` 會傳回 `!(*this < right)`。  
+ `operator>=` returns `!(*this < right)`.  
   
-## <a name="see-also"></a>另請參閱  
- [執行階段類型資訊](../cpp/run-time-type-information.md)   
+## <a name="see-also"></a>See Also  
+ [Run-Time Type Information](../cpp/run-time-type-information.md)   
  [\<typeindex>](../standard-library/typeindex.md)
 
 

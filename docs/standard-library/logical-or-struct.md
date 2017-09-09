@@ -1,15 +1,14 @@
 ---
-title: "logical_or 結構 | Microsoft Docs"
+title: logical_or Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- logical_or
 - xfunctional/std::logical_or
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 4928eb5d79877dd4d1e2c1a1c0f25dbc29e4ec1b
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3e8c5a109c882669231967ea06a8770e07057da6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="logicalor-struct"></a>logical_or 結構
-在其引數上執行邏輯分離運算 ( `operator||`) 的預先定義函式物件。  
+# <a name="logicalor-struct"></a>logical_or Struct
+A predefined function object that performs the logical disjunction operation ( `operator||`) on its arguments.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct logical_or<void>
  };
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- 支援 `operator||` 的任何類型，其接受指定或推斷類型的運算元。  
+ Any type that supports an `operator||` that takes operands of the specified or inferred types.  
   
  `Left`  
- 邏輯分離運算的左運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `T` 推斷類型的左值和右值參考引數。  
+ The left operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- 邏輯分離運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
+ The right operand of the logical disjunction operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>傳回值  
- `Left``||``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator||` 所傳回的類型。  
+## <a name="return-value"></a>Return Value  
+ The result of `Left || Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator||`.  
   
-## <a name="remarks"></a>備註  
- 針對使用者定義的類型，並沒有任何最少運算的運算元評估。 兩個引數都是由 `operator||` 評估。  
+## <a name="remarks"></a>Remarks  
+ For user-defined types, there is no short-circuiting of operand evaluation. Both arguments are evaluated by `operator||`.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_logical_or.cpp  
@@ -140,14 +140,14 @@ The deque which is the disjuction of d1 & d2 is:
   
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

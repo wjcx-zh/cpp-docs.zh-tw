@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <complex>
-- std.<complex>
-- std::<complex>
+- <complex>", "std::<complex>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,40 +33,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 02d651b3e3ca4dc643b01463a85762a6427b8e83
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 03b72414921c6de42a7e5c4dd5bd91d1630c4ee4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
-定義容器範本類別**複雜**以及其支援的範本。  
+Defines the container template class **complex** and its supporting templates.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <complex>  
 ```  
   
-## <a name="remarks"></a>備註  
- 複數是一組有序對的實數。 以純綷幾何的術語來講，複數平面為實數的二維平面。 區別複數平面和實數平面最特別的特質在於，是因為它有額外的代數結構。 此代數結構有兩種基本運算：  
+## <a name="remarks"></a>Remarks  
+ A complex number is an ordered pair of real numbers. In purely geometrical terms, the complex plane is the real, two-dimensional plane. The special qualities of the complex plane that distinguish it from the real plane are due to its having an additional algebraic structure. This algebraic structure has two fundamental operations:  
   
 -   Addition defined as (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)  
   
 -   Multiplication defined as (*a*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*)  
   
- 從標準代數的意義來說，一組複數集合搭配複數加法和複數乘法的運算是一個體。  
+ The set of complex numbers with the operations of complex addition and complex multiplication are a field in the standard algebraic sense:  
   
--   加法和乘法運算是可交換和可結合的，且乘法可分配到加法，和實數體上的實數加法與乘法如出一轍。  
+-   The operations of addition and multiplication are commutative and associative and multiplication distributes over addition exactly as it does with real addition and multiplication on the field of real numbers.  
   
--   複數 （0，0） 為加法和 （1，0） 為乘法。  
+-   The complex number (0, 0) is the additive identity and (1, 0) is the multiplicative identity.  
   
--   針對複數的加法反元素 (， *b*) 是 (-、-*b*)，以及除了所有這類複數的乘法逆元 （0，0） 是  
+-   The additive inverse for a complex number (*a*, *b*) is (-*a*, -*b*), and the multiplicative inverse for all such complex numbers except (0, 0) is  
   
      (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
- 來表示複數*z* = (， *b*) 形式*z* =  + *bi*，其中*我*<sup>2</sup> =-1，規則，實數集合的代數可以套用至一組複數集合和其元件。 例如:   
+ By representing a complex number *z* = (*a*, *b*) in the form *z* = *a* + *bi*, where *i*<sup>2</sup> = -1, the rules for the algebra of the set of real numbers can be applied to the set of complex numbers and to their components. For example:  
   
   (1 + 2*i*) \* (2 + 3*i*)  
   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
@@ -76,9 +74,9 @@ ms.lasthandoff: 04/29/2017
   = (2 - 6) + (3 + 4)*i*  
   = -4 + 7*i*  
   
- 複數系統為體，但不為有序體。 任何排序複數之因為沒有欄位的實際數字和及其子集，所以不等式不適用於複雜的數字時為實數。  
+ The system of complex numbers is a field, but it is not an ordered field. There is no ordering of the complex numbers as there is for the field of real numbers and its subsets, so inequalities cannot be applied to complex numbers as they are to real numbers.  
   
- 有三種常用來表示複數 *z* 的形式：  
+ There are three common forms of representing a complex number *z*:  
   
 -   Cartesian: *z* = *a* + *bi*  
   
@@ -86,75 +84,75 @@ ms.lasthandoff: 04/29/2017
   
 -   Exponential: *z* = *r* \* *e*<sup>*ip*</sup>  
   
- 這些複數標準表示法所使用的術語可參考如下：  
+ The terms used in these standard representations of a complex number are referred to as follows:  
   
--   實數的笛卡兒座標分量，或實數部分 *a*。  
+-   The real Cartesian component or real part *a*.  
   
--   虛數的笛卡兒座標分量，或虛數部分 *b*。  
+-   The imaginary Cartesian component or imaginary part *b*.  
   
--   模數或複數的絕對值*r*。  
+-   The modulus or absolute value of a complex number *r*.  
   
--   引數角或相角*p*以弧度為單位。  
+-   The argument or phase angle *p* in radians.  
   
- 除非另行指定，可傳回多個值的函式所要傳回其引數之主值大於-π 且小於高於或等於 + π 地進行單一值。 所有角度必須以弧度為單位，都表示其中一個圓為 2 π 弧度 （360 度）。  
+ Unless otherwise specified, functions that can return multiple values are required to return a principal value for their arguments greater than -π and less than or equal to +π to keep them single valued. All angles must be expressed in radians, where there are 2π radians (360 degrees) in a circle.  
   
-### <a name="functions"></a>函式  
-  
-|||  
-|-|-|  
-|[abs](../standard-library/complex-functions.md#abs)|計算複數的模。|  
-|[arg](../standard-library/complex-functions.md#arg)|從複數擷取幅角。|  
-|[conj](../standard-library/complex-functions.md#conj)|傳回複數的共軛複數。|  
-|[cos](../standard-library/complex-functions.md#cos)|傳回複數的餘弦值。|  
-|[cosh](../standard-library/complex-functions.md#cosh)|傳回複數的雙曲餘弦值。|  
-|[exp](../standard-library/complex-functions.md#exp)|傳回複數的指數函式值。|  
-|[imag](../standard-library/complex-functions.md#imag)|擷取複數的虛數部分。|  
-|[log](../standard-library/complex-functions.md#log)|傳回複數的自然對數值。|  
-|[log10](../standard-library/complex-functions.md#log10)|傳回複數之底數為 10 的對數值。|  
-|[norm](../standard-library/complex-functions.md#norm)|擷取複數的範數。|  
-|[polar](../standard-library/complex-functions.md#polar)|傳回以笛卡兒座標形式表示的複數，其對應到指定的模和幅角。|  
-|[pow](../standard-library/complex-functions.md#pow)|計算底數為複數且次方為另一個複數的乘冪，評估藉此取得的複數。|  
-|[real](../standard-library/complex-functions.md#real)|擷取複數的實數部分。|  
-|[sin](../standard-library/complex-functions.md#sin)|傳回複數的正弦值。|  
-|[sinh](../standard-library/complex-functions.md#sinh)|傳回複數的雙曲正弦值。|  
-|[sqrt](../standard-library/complex-functions.md#sqrt)|傳回複數的平方根。|  
-|[tan](../standard-library/complex-functions.md#tan)|傳回複數的正切值。|  
-|[tanh](../standard-library/complex-functions.md#tanh)|傳回複數的雙曲正切值。|  
-  
-### <a name="operators"></a>運算子  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/complex-operators.md#op_neq)|測試兩個複數間的不相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。|  
-|[operator*](../standard-library/complex-operators.md#op_star)|將兩個複數相乘，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
-|[operator+](../standard-library/complex-operators.md#op_add)|將兩個複數相加，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
-|[operator-](../standard-library/complex-operators.md#operator-)|將兩個複數相減，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
-|[operator/](../standard-library/complex-operators.md#op_div)|將兩個複數相除，其中之一或兩者都可能屬於實部和虛部類型的子集。|  
-|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|將複數插入至輸出資料流的範本函式。|  
-|[operator==](../standard-library/complex-operators.md#op_eq_eq)|測試兩個複數間的相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。|  
-|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|從輸入資料流擷取複數值的範本函式。|  
+|[abs](../standard-library/complex-functions.md#abs)|Calculates the modulus of a complex number.|  
+|[arg](../standard-library/complex-functions.md#arg)|Extracts the argument from a complex number.|  
+|[conj](../standard-library/complex-functions.md#conj)|Returns the complex conjugate of a complex number.|  
+|[cos](../standard-library/complex-functions.md#cos)|Returns the cosine of a complex number.|  
+|[cosh](../standard-library/complex-functions.md#cosh)|Returns the hyperbolic cosine of a complex number.|  
+|[exp](../standard-library/complex-functions.md#exp)|Returns the exponential function of a complex number.|  
+|[imag](../standard-library/complex-functions.md#imag)|Extracts the imaginary component of a complex number.|  
+|[log](../standard-library/complex-functions.md#log)|Returns the natural logarithm of a complex number.|  
+|[log10](../standard-library/complex-functions.md#log10)|Returns the base 10 logarithm of a complex number.|  
+|[norm](../standard-library/complex-functions.md#norm)|Extracts the norm of a complex number.|  
+|[polar](../standard-library/complex-functions.md#polar)|Returns the complex number, which corresponds to a specified modulus and argument, in Cartesian form.|  
+|[pow](../standard-library/complex-functions.md#pow)|Evaluates the complex number obtained by raising a base that is a complex number to the power of another complex number.|  
+|[real](../standard-library/complex-functions.md#real)|Extracts the real component of a complex number.|  
+|[sin](../standard-library/complex-functions.md#sin)|Returns the sine of a complex number.|  
+|[sinh](../standard-library/complex-functions.md#sinh)|Returns the hyperbolic sine of a complex number.|  
+|[sqrt](../standard-library/complex-functions.md#sqrt)|Returns the square root of a complex number.|  
+|[tan](../standard-library/complex-functions.md#tan)|Returns the tangent of a complex number.|  
+|[tanh](../standard-library/complex-functions.md#tanh)|Returns the hyperbolic tangent of a complex number.|  
   
-### <a name="classes"></a>類別  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[complex\<double>](../standard-library/complex-double.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**double**，其中第一個代表複數的實數部分，而第二個代表虛部。|  
-|[complex\<float>](../standard-library/complex-float.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**float**，其中第一個代表複數的實數部分，而第二個代表虛部。|  
-|[complex\<long double>](../standard-library/complex-long-double.md)|此明確特製化的樣板類別描述可儲存的物件，這兩個類型的排序的配對**長雙精度**，其中第一個代表複數的實數部分，而第二個代表虛部。|  
-|[complex](../standard-library/complex-class.md)|此範本類別描述用來代表複數系統，並執行複數算術運算的物件。|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Tests for inequality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator*](../standard-library/complex-operators.md#op_star)|Multiplies two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator+](../standard-library/complex-operators.md#op_add)|Adds two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator-](../standard-library/complex-operators.md#operator-)|Subtracts two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator/](../standard-library/complex-operators.md#op_div)|Divides two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|A template function that inserts a complex number into the output stream.|  
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Tests for equality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|A template function that extracts a complex value from the input stream.|  
   
-### <a name="literals"></a>常值  
- \<complex> 標頭會定義下列[使用者定義常值](../cpp/user-defined-literals-cpp.md)，其會建立一個複數，複數的實數部分為零，虛數部分則為輸入參數的值。  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|傳回︰`complex<long double>{0.0L, static_cast<long double>(d)}`|  
-|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|傳回 `complex<double>{0.0, static_cast<double>(d)}`。|  
-|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|傳回 `complex<float>{0.0f, static_cast<float>(d)}`。|  
+|[complex\<double>](../standard-library/complex-double.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **double**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex\<float>](../standard-library/complex-float.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **float**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex\<long double>](../standard-library/complex-long-double.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **long double**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex](../standard-library/complex-class.md)|The template class describes an object used to represent the complex number system and perform complex arithmetic operations.|  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="literals"></a>Literals  
+ The \<complex> header defines the following [user-defined literals](../cpp/user-defined-literals-cpp.md) which create a complex number with the real part being zero and the imaginary part being the value of the input parameter.  
+  
+|||  
+|-|-|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Returns: `complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Returns: `complex<double>{0.0, static_cast<double>(d)}`.|  
+|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Returns: `complex<float>{0.0f, static_cast<float>(d)}`.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,31 +1,34 @@
 ---
-title: "&lt;ostream&gt; 運算子 | Microsoft Docs"
+title: '&lt;ostream&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- ostream/std::operator&lt;&lt;
+dev_langs:
+- C++
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 097b3ec2a7b097eb2137e1fd5fe59eabc0da537f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8f133af1d58a083492aa0631f51721a94a6d612f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 運算子
+# <a name="ltostreamgt-operators"></a>&lt;ostream&gt; operators
 ||  
 |-|  
 |[operator&lt;&lt;](#op_lt_lt)|  
   
 ##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
- 將各種類型寫入資料流。  
+ Writes various types to the stream.  
   
 ```
 template <class _Elem, class _Tr>
@@ -84,32 +87,32 @@ basic_ostream <_Elem, _Tr>& operator<<(
     Ty val);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Ch`  
- 字元。  
+ A character.  
   
  `_Elem`  
- 元素類型。  
+ The element type.  
   
  `_Ostr`  
- `basic_ostream` 物件。  
+ A `basic_ostream` object.  
   
  `str`  
- 字元字串。  
+ A character string.  
   
  `_Tr`  
- 字元特性。  
+ Character traits.  
   
  `val`  
- 類型  
+ The type  
   
-### <a name="return-value"></a>傳回值  
- 資料流。  
+### <a name="return-value"></a>Return Value  
+ The stream.  
   
-### <a name="remarks"></a>備註  
- `basic_ostream` 類別也會定義數個插入運算子。 如需詳細資訊，請參閱 [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)。  
+### <a name="remarks"></a>Remarks  
+ The `basic_ostream` class also defines several insertion operators. For more information, see [basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt).  
   
- 樣板函式  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -118,9 +121,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 決定開頭位於 `str` 之序列的長度 N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`)，然後插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，則函式會另外插入重複的 `_Ostr.``width` - N 填滿字元。 在以下情況重複項目會排在序列之前：當 (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left)。 否則，重複項目會接在序列後面。 函式會傳回 `_Ostr`。  
+ determines the length N = `traits_type::`[length](../standard-library/char-traits-struct.md#length)( `str`) of the sequence beginning at `str`, and inserts the sequence. If N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), then the function also inserts a repetition of `_Ostr.width` - N fill characters. The repetition precedes the sequence if ( `_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Otherwise, the repetition follows the sequence. The function returns `_Ostr`.  
   
- 樣板函式  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -129,9 +132,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- 插入項目 `_Ch`。 如果 1 < `_Ostr.width`，則函式會另外插入 `_Ostr.width` - 1 填滿字元的重複項目。 在以下情況重複項目會排在序列之前：當 `_Ostr.flags & adjustfield != left`。 否則，重複項目會接在序列後面。 它會傳回 `_Ostr`。  
+ inserts the element `_Ch`. If 1 < `_Ostr.width`, then the function also inserts a repetition of `_Ostr.width` - 1 fill characters. The repetition precedes the sequence if `_Ostr.flags & adjustfield != left`. Otherwise, the repetition follows the sequence. It returns `_Ostr`.  
   
- 樣板函式  
+ The template function  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -140,7 +143,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const char *str);
 ```  
   
- 行為相同於  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -149,9 +152,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- 不同之處在於開頭位於 `str` 之序列的每個項目 `_Ch` 會呼叫 `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)) 來轉換為類型 `Elem` 的物件。  
+ except that each element `_Ch` of the sequence beginning at `str` is converted to an object of type `Elem` by calling `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)( `_Ostr.`[widen](../standard-library/basic-ios-class.md#widen)( `_Ch`)).  
   
- 樣板函式  
+ The template function  
   
 ```cpp
 template <class _Elem, class _Tr>
@@ -160,7 +163,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     char _Ch);
 ```  
   
- 行為相同於  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -169,9 +172,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- 不同之處在於 `_Ch` 會呼叫 `_Ostr.put`( `_Ostr.widen`( `_Ch`)) 來轉換為類型 `Elem` 的物件。  
+ except that `_Ch` is converted to an object of type `Elem` by calling `_Ostr.put`( `_Ostr.widen`( `_Ch`)).  
   
- 樣板函式  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -180,7 +183,7 @@ basic_ostream<char, _Tr>& operator<<(
     const char *str);
 ```  
   
- 行為相同於  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -189,9 +192,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```  
   
- (插入項目之前並不需要擴展項目)。  
+ (It does not have to widen the elements before inserting them.)  
   
- 樣板函式  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -200,7 +203,7 @@ basic_ostream<char, Tr>& operator<<(
     char _Ch);
 ```  
   
- 行為相同於  
+ behaves the same as  
   
 ```cpp  
 template <class _Elem, class _Tr>
@@ -209,9 +212,9 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```  
   
- (插入 `_Ch` 之前並不需要擴展它)。  
+ (It does not have to widen `_Ch` before inserting it.)  
   
- 樣板函式  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -220,9 +223,9 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```  
   
- 傳回 `_Ostr` << ( `const char *`) `str`。  
+ returns `_Ostr` << ( `const char *`) `str`.  
   
- 樣板函式  
+ The template function  
   
 ```cpp  
 template <class _Tr>
@@ -231,9 +234,9 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```  
   
- 傳回 `_Ostr` << ( `char`) `_Ch`。  
+ returns `_Ostr` << ( `char`) `_Ch`.  
   
- 樣板函式：  
+ The template function:  
   
 ```cpp  
 template <class _Tr>
@@ -242,9 +245,9 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```  
   
- 傳回 `_Ostr` << ( `const char *`) `str`。  
+ returns `_Ostr` << ( `const char *`) `str`.  
   
- 樣板函式：  
+ The template function:  
   
 ```cpp  
 template <class _Tr>
@@ -253,9 +256,9 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```  
   
- 傳回 `_Ostr` << ( `char`) `_Ch`。  
+ returns `_Ostr` << ( `char`) `_Ch`.  
   
- 樣板函式：  
+ The template function:  
   
 ```cpp  
 template <class _Elem, class _Tr, class T>
@@ -264,12 +267,12 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```  
   
- 傳回 `_Ostr` `<<` `val` (並轉換[右值參考](../cpp/rvalue-reference-declarator-amp-amp.md)為 `_Ostr` 到程序中的左值)。  
+ returns `_Ostr` `<<` `val` (and converts a [RValue Reference](../cpp/rvalue-reference-declarator-amp-amp.md) to `_Ostr` to an lvalue in the process).  
   
-### <a name="example"></a>範例  
-  如需 `operator<<` 的使用範例，請參閱 [flush](../standard-library/ostream-functions.md#flush)。  
+### <a name="example"></a>Example  
+  See [flush](../standard-library/ostream-functions.md#flush) for an example using `operator<<`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<ostream>](../standard-library/ostream.md)
 
 

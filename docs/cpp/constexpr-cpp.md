@@ -1,65 +1,90 @@
 ---
-title: "constexpr (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "constexpr"
-  - "constexpr_cpp"
-dev_langs: 
-  - "C++"
+title: constexpr (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- constexpr
+- constexpr_cpp
+dev_langs:
+- C++
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# constexpr (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 28ca16343632b720a990c2753d9f70158081e974
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-關鍵字 `constexpr` 是在 C\+\+11 中引進，並在 C\+\+14 中改進。  它代表*「常數運算式」*\(constant expression\)。  就像 `const`，它可以套用至變數，以便在任何程式碼嘗試修改值時引發編譯器錯誤。  不同於 `const` 的是，`constexpr` 也可以套用至函式和類別建構函式。  `constexpr` 表示值或傳回值為常數，而且可能的話，會在編譯時期計算。  只要在需要 const 整數 \(例如在樣板引數和陣列宣告中\) 之處，便可以使用 `constexpr` 整數值。  而且，當可以在編譯時期而不是執行階段計算值時，便有助於讓您的程式執行速度更快且使用較少的記憶體。  
+---
+# <a name="constexpr-c"></a>constexpr (C++)
+The keyword `constexpr` was introduced in C++11 and improved in C++14. It means *constant expression*. Like `const`, it can be applied to variables so that a compiler error will be raised if any code attempts to modify the value. Unlike `const`, `constexpr` can also be applied to functions and class constructors. `constexpr` indicates that the value, or return value, is constant and, if possible, will be computed at compile time.  A `constexpr` integral value can be used wherever a const integer is required, such as in template arguments and array declarations. And when a value can be computed at compile time instead of run time, it can help your program run faster and use less memory.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
-```vb  
-  
-constexpr  literal-type  identifier = constant-expression;  
-constexpr  literal-type  identifier { constant-expression };  
-constexpr literal-type identifier(params );  
+```cpp  
+constexpr  literal-type  identifier = constant-expression;
+constexpr  literal-type  identifier { constant-expression };
+constexpr literal-type identifier(params );
 constexpr ctor (params);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>Parameters  
  `params`  
- 一或多個必須是常值類型 \(如下所示\) 且本身是常數運算式的參數。  
+ One or more parameters which must be a literal type (as listed below) and must itself be a constant expression.  
   
-## 傳回值  
- Constexpr 變數或函式必須傳回下列常值類型之一。  
+## <a name="return-value"></a>Return Value  
+ A constexpr variable or function must return one of the literal types, as listed below.  
   
-## 常值類型  
- 為了限制運算編譯時期常數的複雜性，及其可能造成的編譯時間影響，C\+\+14 標準要求參與常數運算式的類型必須受限為常值類型。  常值類型的配置可以在編譯時期決定。  以下是常值類型：  
+## <a name="literal-types"></a>Literal types  
+ To limit the complexity of computing compile time constants, and their potential impacts of compilation time, the C++14 standard requires that the types involved in constant expressions be restricted to literal types. A literal type is one whose layout can be determined at compile time. The following are the literal types:  
   
 1.  void  
   
-2.  純量類型  
+2.  scalar types  
   
-3.  參考  
+3.  references  
   
-4.  Void、純量類型或參考的陣列  
+4.  Arrays of void, scalar types or references  
   
-5.  具有 trivial 解構函式和一或多個非移動或複製建構函式之 constexpr 建構函式的類別。  此外，其所有的非靜態資料成員和基底類別必須是常值類型，且不會變動。  
+5.  A class that has a trivial destructor, and one or more constexpr constructors that are not move or copy constructors. Additionally, all its non-static data members and base classes must be literal types and not volatile.  
   
-## constexpr 變數  
- const 和 constexpr 變數之間的主要差異是 const 變數的初始化可以延遲到執行階段，而 constexpr 變數則必須在編譯時期初始化。  所有的 constexpr 變數都是常數。  
+## <a name="constexpr-variables"></a>constexpr variables  
+ The primary difference between const and constexpr variables is that the initialization of a const variable can be deferred until run time whereas a constexpr variable must be initialized at compile time.  All constexpr variables are const.  
+
+-  A variable can be declared with `constexpr`, if it has a literal type and is initialized. If the initialization is performed by a constructor, the constructor must be declared as `constexpr`.  
   
-```  
+-   A reference may be declared as constexpr if the object that it references has been initialized by a constant expression and any implicit conversions that are invoked during initialization are also constant expressions.  
+  
+-   All declarations of a `constexpr` variable or function must have the `constexpr` specifier.  
+  
+ 
+  
+ 
+  
+```cpp  
 constexpr float x = 42.0;  
 constexpr float y{108};  
 constexpr float z = exp(5, 3);  
@@ -68,10 +93,39 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression  
 ```  
   
-## constexpr 函式  
- `constexpr` 函式的傳回值，可以在耗用程式碼需要它時，在編譯時進行計算。  `constexpr` 函式必須只接受並傳回常值類型。  當其引數為 `constexpr` 值，而且耗用程式碼在編譯時期需要傳回值 \(例如初始化 `constexpr` 變數\)，或提供非類型樣板引數，便會產生編譯時期常數。  當呼叫時使用了非`constexpr` 引數，或在編譯時期不需要其值時，便會像一般函式一樣在執行階段產生值。  \(這種雙行為讓您不必撰寫相同函式的 `constexpr` 和非 `constexpr` 版本。\)  
+## <a name="constexpr-functions"></a>constexpr functions  
+ A `constexpr` function is one whose return value can be computed at compile when consuming code requires it.  When its arguments are `constexpr` values, and consuming code requires the return value at compile time, for example to initialize a `constexpr` variable or provide a non-type template argument, it produces a compile-time constant. When called with non-`constexpr` arguments, or when its value is not required at compile-time, it produces a value at run time like a regular function.  (This dual behavior saves you from having to write `constexpr` and non-`constexpr` versions of the same function.)  
+ 
+ A `constexpr` function or constructor is implicitly `inline`. 
+ 
+ The following rules apply to constexpr functions:
+
+- A `constexpr` function must accept and return only literal types. 
+
+- A `constexpr` function can be recursive. 
+
+- It cannot be [virtual](../cpp/virtual-cpp.md). A a constructor cannot be defined as constexpr if the enclosing class has any virtual base classes.
+
+- The body can be defined as `= default` or `= delete`. 
+
+- The body can contain no `goto` statements or try blocks. 
+
+- An explicit specialization of a non-constexpr template can be declared as `constexpr`:  
   
-```  
+- An explicit specialization of a `constexpr` template does not have to also be `constexpr`: 
+
+
+<!--conformance note-->
+The following rules apply to constexpr functions in Visual Studio 2017 and later: 
+
+- It may contain if and switch statements, and all looping statements including for, range-based for, while, and do-while
+    
+- It may contain local variable declarations, but the variable must be initialized, must be a literal type, and cannot be static or thread-local. The locally-declared variable is not required to be const and may mutate.
+
+- A constexpr non-static member function is not required to be implicitly const.
+
+  
+```cpp  
 constexpr float exp(float x, int n)  
 {  
     return n == 0 ? 1 :  
@@ -81,27 +135,11 @@ constexpr float exp(float x, int n)
 ```  
   
 > [!TIP]
->  注意：在 Visual Studio 偵錯工具中，您可以藉由在函式中放入中斷點，來分辨 `constexpr` 函式是否會在編譯時期評估。  如果叫用中斷點，便已在執行階段呼叫此函式。  否則便是在編譯時期呼叫函式。  
+>  Note: In the Visual Studio debugger, you can tell whether a `constexpr` function is being evaluated at compile time by putting a breakpoint inside it. If the breakpoint is hit, the function was called at run-time.  If not, then the function was called at compile time.  
   
-## 一般 constexpr 規則  
- 對於函式、變數、建構函式或靜態資料成員而言，若要定義為 `constexpr`，必須符合特定需求：  
-  
--   `constexpr` 函式可以是遞迴的。  它不能是[虛擬](../cpp/virtual-cpp.md)，而且其傳回類型和參數類型必須全部是常值類型。  主體可以定義為 `= default` 或 `= delete`。  否則必須遵守下列規則：不包含 `goto` 陳述式、try 區塊、未初始化的變數，或是非常值類型或為靜態或執行緒區域的變數定義。  此外，如果封入類別有任何虛擬基底類別，則建構函式不可以定義為 constexpr。  
-  
--   如果變數具有常值類型並已初始化，則可以使用 `constexpr` 宣告。  如果是由建構函式執行初始化，則建構函式必須宣告為 `constexpr`。  
-  
--   如果所參考的物件已由常數運算式初始化，而且在初始化期間叫用的任何隱含轉換也是常數運算式，則參考可以宣告為 constexpr。  
-  
--   `constexpr` 變數或函式的所有宣告必須具有 `constexpr` 指定名稱。  
-  
--   非 constexpr 範本的明確特製化可以宣告為 `constexpr`：  
-  
--   `constexpr` 範本的明確特製化不需要也是 `constexpr`：  
-  
--   `constexpr` 函式或建構函式隱含即為 `inline`。  
-  
-## 範例  
- 下列範例會顯示 `constexpr` 變數、函式及使用者定義類型。  請注意，在 main\(\) 最後一個陳述式中，因為不需要在編譯時間知道其值，所以`constexpr` 成員函式 Getvalue\(\) 是執行階段呼叫。  
+ 
+## <a name="example"></a>Example  
+ The following example shows `constexpr` variables, functions and a user-defined type. Note that in the last statement in main(), the `constexpr` member function GetValue() is a run-time call because the value is not required to be known at compile time.  
   
 ```  
 #include <iostream>  
@@ -171,9 +209,9 @@ int main()
   
 ```  
   
-## 需求  
+## <a name="requirements"></a>Requirements  
  Visual Studio 2015  
   
-## 請參閱  
- [宣告和定義](../cpp/declarations-and-definitions-cpp.md)   
- [const](../cpp/constexpr-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Declarations and Definitions](../cpp/declarations-and-definitions-cpp.md)   
+ [const](../cpp/const-cpp.md)

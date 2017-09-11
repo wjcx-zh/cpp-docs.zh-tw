@@ -1,29 +1,47 @@
 ---
-title: "統一初始設定和委派建構函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Uniform Initialization and Delegating Constructors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
 caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# 統一初始設定和委派建構函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ac08f1df693edd6fe2245146b2bc1717415e1d73
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-在現代 C\+\+，您可以為任何型別使用 *括號初始化* ，但其中不含等號。  此外，當您使用多個可以簡化工作的建構函時候，您也可以使用委派的建構函式以簡化您的程式碼。  
+---
+# <a name="uniform-initialization-and-delegating-constructors"></a>Uniform Initialization and Delegating Constructors
+In modern C++, you can use *brace initialization* for any type, without the equals sign. Also, you can use delegating constructors to simplify your code when you have multiple constructors that perform similar work.  
   
-## 括號初始化  
- 您可以為所有類別、結構或等位使用括號來初始化。  如果型別有預設建構函式，無論是隱含或是明確宣告，您可以使用預設括號初始化 \(包含空括號\)。  例如，使用預設和非預設的括號初始化，下列類別可能初始化:  
+## <a name="brace-initialization"></a>Brace Initialization  
+ You can use brace initialization for any class, struct, or union. If a type has a default constructor, either implicitly or explicitly declared, you can use default brace initialization (with empty braces). For example, the following class may be initialized by using both default and non-default brace initialization:  
   
 ```cpp  
 #include <string>  
@@ -53,7 +71,7 @@ int main()
   
 ```  
   
- 如果一個類別有非預設的建構函式，那類別成員出現在brace initializer 的順序會跟相關參數在建構函式中出現的順序一樣, 而不是成員被宣告的順序 \(如上述範例的 `class_a` \)。  否則，如果這個型別沒有宣告建構函式，成員會出現在括號初始設定式的命令不相同則為其宣告命令; 在這種情況下，您可以如您所願使用許多公用成員，您不能略過任何成員。  下列範例顯示用以括號初始化的命令，而未宣告的建構函式時:  
+ If a class has non-default constructors, the order in which class members appear in the brace initializer is the order in which the corresponding parameters appear in the constructor, not the order in which the members are declared (as with `class_a` in the previous example). Otherwise, if the type has no declared constructor, the order in which the members appear in the brace initializer is the same as the order in which they are declared; in this case, you can initialize as many of the public members as you wish, but you cannot skip any member. The following example shows the order that's used in brace initialization when there is no declared constructor:  
   
 ```cpp  
 class class_d {  
@@ -75,7 +93,7 @@ int main()
 }   
 ```  
   
- 如果預設建構函式明確地宣告，但是標記為刪除，預設無法使用括號初始化:  
+ If the default constructor is explicitly declared but marked as deleted, default brace initialization cannot be used:  
   
 ```cpp  
 class class_f {  
@@ -91,7 +109,7 @@ int main()
 }  
 ```  
   
- 您可以使用括號來初始化任何地方初始化中通常會，比如函式參數或傳回值，或使用 `new` 關鍵字:  
+ You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the `new` keyword:  
   
 ```cpp  
 class_d* cf = new class_d{4.5};  
@@ -100,17 +118,17 @@ return { 4.5 };
   
 ```  
   
-## initializer\_list 建構函式  
- [initializer\_list Class](../standard-library/initializer-list-class.md) 表示可用於建構函式所指定型別的物件清單和其他內容。  您可以使用括號初始化以建構 initializer\_list:  
+## <a name="initializerlist-constructors"></a>initializer_list Constructors  
+ The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. You can construct an initializer_list by using brace initialization:  
   
 ```cpp  
 initializer_list<int> int_list{5, 6, 7};  
 ```  
   
 > [!IMPORTANT]
->  若要使用這個類別，您必須包含 [\<initializer\_list\>](../standard-library/initializer-list.md) 標頭。  
+>  To use this class, you must include the [<initializer_list>](../standard-library/initializer-list.md) header.  
   
- `initializer_list` 可以複製。  在這個案例中，新清單的成員是對原始清單成員的參考:  
+ An `initializer_list` can be copied. In this case, the members of the new list are references to the members of the original list:  
   
 ```cpp  
 initializer_list<int> ilist1{ 5, 6, 7 };  
@@ -120,7 +138,7 @@ if (ilist1.begin() == ilist2.begin())
   
 ```  
   
- 標準文件庫容器類別和 \( `string`、 `wstring`和 `regex`，具有 `initializer_list` 建構函式。  下列範例示範如何使用這些建構函式的括號初始化:  
+ The standard library container classes, and also `string`, `wstring`, and `regex`, have `initializer_list` constructors. The following examples show how to do brace initialization with these constructors:  
   
 ```cpp  
 vector<int> v1{ 9, 10, 11 };   
@@ -129,8 +147,8 @@ string s{ 'a', 'b', 'c' };
 regex rgx{'x', 'y', 'z'};   
 ```  
   
-## 委派建構函式  
- 許多類別擁有相同項目中的多個建構函式，以驗證參數:  
+## <a name="delegating-constructors"></a>Delegating Constructors  
+ Many classes have multiple constructors that do similar things—for example, validate parameters:  
   
 ```cpp  
 class class_c {  
@@ -155,7 +173,7 @@ public:
 };  
 ```  
   
- 您可以透過增加一個進行驗證的函式以減少程式碼，不過，如果建構函式可以委派到其他工作，了解和維護`class_c` 的程式碼將更為容易。  若要加入委派的建構函式，請使用 `constructor (. . .) : constructor (. . .)` 語法:  
+ You could reduce the repetitive code by adding a function that does all of the validation, but the code for `class_c` would be easier to understand and maintain if one constructor could delegate some of the work to another one. To add delegating constructors, use the `constructor (. . .) : constructor (. . .)` syntax:  
   
 ```cpp  
 class class_c {  
@@ -181,9 +199,9 @@ int main() {
   
 ```  
   
- 您透過前導參照逐步執行，請注意建構函式 `class_c(int, int, int)` 第一次呼叫建構函式 `class_c(int, int)`，接著呼叫 `class_c(int)`。  每個建構函式會執行未由其他建構函式只執行的工作。  
+ As you step through the previous example, notice that the constructor `class_c(int, int, int)` first calls the constructor `class_c(int, int)`, which in turn calls `class_c(int)`. Each of the constructors performs only the work that is not performed by the other constructors.  
   
- 第一個被呼叫建構函式的稱為初始化物件，他所有的成員都將被初始化。  您無法在委派至另一個建構函式的成員初始設定，如下所示:  
+ The first constructor that's called initializes the object so that all of its members are initialized at that point. You can’t do member initialization in a constructor that delegates to another constructor, as shown here:  
   
 ```cpp  
 class class_a {  
@@ -204,7 +222,7 @@ public:
   
 ```  
   
- 下一個範例顯示使用非靜態資料成員初始設定式。  請注意，如果建構函式初始化一個已有給定值的成員，則初始化的同時，此成員會被覆寫:  
+ The next example shows the use of non-static data-member initializers. Notice that if a constructor also initializes a given data member, the member initializer is overridden:  
   
 ```cpp  
 class class_a {  
@@ -222,7 +240,7 @@ int main() {
 }  
 ```  
   
- 建構函式委派語法不會預防意外產生的遞迴建構函式—Constructor1呼叫已經呼叫Constructor1的Constructor2—而且直到堆疊溢位之前都不會擲回任何錯誤訊息。  避免循環為您的責任。  
+ The constructor delegation syntax doesn't prevent the accidental creation of constructor recursion—Constructor1 calls Constructor2 which calls Constructor1—and no errors are thrown until there is a stack overflow. It's your responsibility to avoid cycles.  
   
 ```cpp  
 class class_f{  

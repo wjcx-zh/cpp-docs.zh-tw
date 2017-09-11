@@ -1,64 +1,77 @@
 ---
-title: "別名和 typedef (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "typedef"
-dev_langs: 
-  - "C++"
+title: Aliases and typedefs (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- typedef
+dev_langs:
+- C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 別名和 typedef (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: ab1d0d08368e75e26f4ca51f49f80c162d791f7f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-您可以使用「*別名宣告*」\(Alias Declaration\)，來宣告名稱當做先前宣告類型的同義字   \(這個機制也非正式地稱為「*類類型名*」\(Type Alias\)\)。  您也可以使用這個機制建立「*別名樣板*」\(Alias Template\)，特別用於自訂配置器。  
+---
+# <a name="aliases-and-typedefs-c"></a>Aliases and typedefs (C++)
+You can use an *alias declaration* to declare a name to use as a synonym for a previously declared type. (This mechanism is also referred to informally as a *type alias*). You can also use this mechanism to create an *alias template*, which can be particularly useful for custom allocators.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
 using identifier = type;  
 ```  
   
-## 備註  
+## <a name="remarks"></a>Remarks  
  `identifier`  
- 別名的名稱。  
+ The name of the alias.  
   
  `type`  
- 您要建立別名的類型識別項。  
+ The type identifier you are creating an alias for.  
   
- 別名不會引入新的類型，而且無法變更現有類型名稱的意義。  
+ An alias does not introduce a new type and cannot change the meaning of an existing type name.  
   
- 最簡單的別名形式相當於 C\+\+03 的 `typedef` 機制：  
+ The simplest form of an alias is equivalent to the `typedef` mechanism from C++03:  
   
 ```cpp  
-  
 // C++11  
 using counter = long;  
   
 // C++03 equivalent:  
 // typedef long counter;  
-  
 ```  
   
- 這兩個都啟用 "counter" 類型變數的建立。  更有用的是像 `std::ios_base::fmtflags` 的這個類類型名：  
+ Both of these enable the creation of variables of type "counter". Something more useful would be a type alias like this one for `std::ios_base::fmtflags`:  
   
 ```cpp  
-  
 // C++11  
 using fmtfl = std::ios_base::fmtflags;  
+  
 // C++03 equivalent:  
 // typedef std::ios_base::fmtflags fmtfl;  
   
@@ -66,13 +79,11 @@ fmtfl fl_orig = std::cout.flags();
 fmtfl fl_hex = (fl_orig & ~std::cout.basefield) | std::cout.showbase | std::cout.hex;  
 // ...  
 std::cout.flags(fl_hex);  
-  
 ```  
   
- 別名也能與函式指標一起使用，不過比 typedef 對等用法的可讀性更高：  
+ Aliases also work with function pointers, but are much more readable than the equivalent typedef:  
   
 ```cpp  
-  
 // C++11  
 using func = void(*)(int);  
   
@@ -85,7 +96,7 @@ func fptr = &actual_function;
   
 ```  
   
- `typedef` 機制的限制是它不能搭配樣板使用。  不過，C\+\+11 的類類型名語法啟用別名樣板的建立：  
+ A limitation of the `typedef` mechanism is that it doesn't work with templates. However, the type alias syntax in C++11 enables the creation of alias templates:  
   
 ```cpp  
 template<typename T> using ptr = T*;   
@@ -95,11 +106,10 @@ ptr<int> ptr_int;
   
 ```  
   
-## 範例  
- 下列範例示範如何搭配使用別名樣板與自訂配置器 \(在這個案例中為整數向量類型\)。  您可以用任何類型替代 `int` 建立方便別名，以隱藏主要功能程式碼中的複雜參數清單。  在您的程式碼中使用自訂配置器，可以改善可讀性和減少引入錯字所導致 Bug 的風險。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use an alias template with a custom allocator—in this case, an integer vector type. You can substitute any type for `int` to create a convenient alias to hide the complex parameter lists in your main functional code. By using the custom allocator throughout your code you can improve readability and reduce the risk of introducing bugs caused by typos.  
   
 ```cpp  
-  
 #include <stdlib.h>  
 #include <new>  
   
@@ -151,16 +161,18 @@ int main ()
 }  
 ```  
   
-## 輸出  
-  **1701 1764 1664**   
-## Typedefs  
- `typedef` 宣告會引進一個名稱，而在其範圍內，它會成為宣告的 *type\-declaration* 部分所指定類型的同義字。  
+```Output  
+1701 1764 1664  
+```  
   
- 您可以使用 typedef 宣告，針對語言已經定義的類型或您已經宣告的類型建構較短或更有意義的名稱。  Typedef 名稱可讓您封裝可能變更的實作詳細資料。  
+## <a name="typedefs"></a>Typedefs  
+ A `typedef` declaration introduces a name that, within its scope, becomes a synonym for the type given by the *type-declaration* portion of the declaration.  
   
- 與 **class**、`struct`、**union** 和 `enum` 宣告相反， `typedef` 宣告未引進新的類型；它們引進現有類型的新名稱。  
+ You can use typedef declarations to construct shorter or more meaningful names for types already defined by the language or for types that you have declared. Typedef names allow you to encapsulate implementation details that may change.  
   
- 使用 `typedef` 所宣告的名稱會佔用與其他識別項相同的命名空間 \(除了陳述式標籤以外\)。  因此，除非是在類別類型宣告中，否則這類名稱不能使用與先前宣告的名稱相同的識別項。  參考下列範例：  
+ In contrast to the **class**, `struct`, **union**, and `enum` declarations, `typedef` declarations do not introduce new types — they introduce new names for existing types.  
+  
+ Names declared using `typedef` occupy the same namespace as other identifiers (except statement labels). Therefore, they cannot use the same identifier as a previously declared name, except in a class-type declaration. Consider the following example:  
   
 ```  
 // typedef_names1.cpp  
@@ -169,7 +181,7 @@ typedef unsigned long UL;   // Declare a typedef name, UL.
 int UL;                     // C2377: redefined.  
 ```  
   
- 與其他識別項相關的名稱隱藏規則也會控制使用 `typedef` 宣告之名稱的可視性。  因此，下列範例在 C\+\+ 中是合法的：  
+ The name-hiding rules that pertain to other identifiers also govern the visibility of names declared using `typedef`. Therefore, the following example is legal in C++:  
   
 ```  
 // typedef_names2.cpp  
@@ -181,12 +193,7 @@ int main()
   
 // typedef UL back in scope  
 ```  
-  
--   [typedef 名稱的重新宣告](../misc/redeclaration-of-typedef-names.md)  
-  
--   [搭配使用 typedef 與類別類型](../misc/use-of-typedef-with-class-types.md)  
-  
--   [typedef 名稱的命名空間](../misc/name-space-of-typedef-names.md)  
+ 
   
 ```  
 // typedef_specifier1.cpp  
@@ -202,37 +209,37 @@ void myproc( int )
 }  
 ```  
   
- 將相同名稱的區域範圍識別項宣告為 typedef 時，或者宣告相同範圍或內部範圍之結構或等位的成員時，必須指定類型指定名稱。  例如:  
+ When declaring a local-scope identifier by the same name as a typedef, or when declaring a member of a structure or union in the same scope or in an inner scope, the type specifier must be specified. For example:  
   
 ```  
 typedef char FlagType;  
 const FlagType x;  
 ```  
   
- 若要重複使用 `FlagType` 名稱做為識別項、結構成員或等位成員的名稱，必須提供類型：  
+ To reuse the `FlagType` name for an identifier, a structure member, or a union member, the type must be provided:  
   
 ```  
 const int FlagType;  // Type specifier required  
 ```  
   
- 只有下列做法是不夠的：  
+ It is not sufficient to say  
   
 ```  
 const FlagType;      // Incomplete specification  
 ```  
   
- 因為 `FlagType` 會被當做類型的一部分，而非將重新宣告的識別項。  這個宣告會被視為不合法的宣告，如同  
+ because the `FlagType` is taken to be part of the type, not an identifier that is being redeclared. This declaration is taken to be an illegal declaration like  
   
 ```  
 int;  // Illegal declaration   
 ```  
   
- 您可以使用 typedef 宣告任何類型，包括指標、函式和陣列類型。  您可以在定義結構或等位類型之前宣告結構或等位類型指標的 typedef 名稱，只要定義的可視性和宣告相同即可。  
+ You can declare any type with typedef, including pointer, function, and array types. You can declare a typedef name for a pointer to a structure or union type before you define the structure or union type, as long as the definition has the same visibility as the declaration.  
   
-### 範例  
- 其中一種 `typedef` 宣告的用法是讓宣告更為統一並精簡。  例如:  
+### <a name="examples"></a>Examples  
+ One use of `typedef` declarations is to make declarations more uniform and compact. For example:  
   
-```  
+```cpp  
 typedef char CHAR;          // Character type.  
 typedef CHAR * PSTR;        // Pointer to a string (char *).  
 PSTR strchr( PSTR source, CHAR target );  
@@ -240,33 +247,33 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"  
 ```  
   
- 若要使用 `typedef` 在相同的宣告中指定基本和衍生類型，您可以使用逗號來區隔宣告子。  例如:  
+ To use `typedef` to specify fundamental and derived types in the same declaration, you can separate declarators with commas. For example:  
   
 ```  
 typedef char CHAR, *PSTR;  
 ```  
   
- 下列範例提供類型 `DRAWF` 給未傳回任何值的函式，並且接受兩個 int 引數：  
+ The following example provides the type `DRAWF` for a function returning no value and taking two int arguments:  
   
 ```  
 typedef void DRAWF( int, int );  
 ```  
   
- 在上方的 `typedef` 陳述式之後，宣告  
+ After the above `typedef` statement, the declaration  
   
 ```  
 DRAWF box;   
 ```  
   
- 相當於下列宣告：  
+ would be equivalent to the declaration  
   
 ```  
 void box( int, int );  
 ```  
   
- `typedef` 通常與 `struct` 搭配使用，來宣告和命名使用者定義類型：  
+ `typedef` is often combined with `struct` to declare and name user-defined types:  
   
-```  
+```cpp  
 // typedef_specifier2.cpp  
 #include <stdio.h>  
   
@@ -285,11 +292,14 @@ int main()
 }  
 ```  
   
-  **10   0.990000**   
-### typedef 的重新宣告  
- `typedef` 宣告可用來重新宣告參考相同類型的相同名稱。  例如:  
-  
+```Output  
+10   0.990000  
 ```  
+  
+### <a name="re-declaration-of-typedefs"></a>Re-declaration of typedefs  
+ The `typedef` declaration can be used to redeclare the same name to refer to the same type. For example:  
+  
+```cpp  
 // FILE1.H  
 typedef char CHAR;  
   
@@ -301,18 +311,18 @@ typedef char CHAR;
 #include "file2.h"   // OK  
 ```  
   
- 程式 PROG.CPP 包含兩個標頭檔，兩個標頭檔都包含名稱 `typedef` 的 `CHAR` 宣告。  只要兩個宣告都參考相同的類型，就可以接受此類重新宣告。  
+ The program PROG.CPP includes two header files, both of which contain `typedef` declarations for the name `CHAR`. As long as both declarations refer to the same type, such redeclaration is acceptable.  
   
- `typedef` 不能重新定義先前已宣告為不同類型的名稱。  因此，如果 FILE2.H 包含  
+ A `typedef` cannot redefine a name that was previously declared as a different type. Therefore, if FILE2.H contains  
   
-```  
+```cpp  
 // FILE2.H  
 typedef int CHAR;     // Error  
 ```  
   
- 由於嘗試將名稱 `CHAR` 重新定義為參考不同類型，因此編譯器會發出錯誤。  此項重新定義可延伸到如下的建構：  
+ the compiler issues an error because of the attempt to redeclare the name `CHAR` to refer to a different type. This extends to constructs such as:  
   
-```  
+```cpp  
 typedef char CHAR;  
 typedef CHAR CHAR;      // OK: redeclared as same type  
   
@@ -323,10 +333,10 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;  
 ```  
   
-### 下列兩者中的 typedef：C\+\+ 與C  
- 同時使用 `typedef` 指定名稱和類別類型是廣受支援的用法，因為 ANSI C 會在 `typedef` 宣告中宣告未命名結構。  例如，許多 C 程式設計人員採用下列作法：  
+### <a name="typedefs-in-c-vs-c"></a>typedefs in C++ vs. C  
+ Use of the `typedef` specifier with class types is supported largely because of the ANSI C practice of declaring unnamed structures in `typedef` declarations. For example, many C programmers use the following:  
   
-```  
+```cpp  
 // typedef_with_class_types1.cpp  
 // compile with: /c  
 typedef struct {   // Declare an unnamed structure and give it the  
@@ -336,21 +346,21 @@ typedef struct {   // Declare an unnamed structure and give it the
 } POINT;  
 ```  
   
- 這類宣告的優點是可以執行類似以下的宣告：  
+ The advantage of such a declaration is that it enables declarations like:  
   
 ```  
 POINT ptOrigin;  
 ```  
   
- 而非：  
+ instead of:  
   
 ```  
 struct point_t ptOrigin;  
 ```  
   
- 在 C\+\+ 中，`typedef` 名稱和真實的類型 \(以**類別**、`struct`、**等位**和 `enum` 關鍵字宣告\) 之間的差異比較明顯。  雖然在 `typedef` 陳述式中宣告無名稱結構的 C 作法仍然可用，但優勢不如在 C 中。  
+ In C++, the difference between `typedef` names and real types (declared with the **class**, `struct`, **union**, and `enum` keywords) is more distinct. Although the C practice of declaring a nameless structure in a `typedef` statement still works, it provides no notational benefits as it does in C.  
   
-```  
+```cpp  
 // typedef_with_class_types2.cpp  
 // compile with: /c /W1  
 typedef struct {  
@@ -360,13 +370,11 @@ typedef struct {
 } POINT;  
 ```  
   
- 上述範例使用未命名的類別 `POINT` 語法宣告名為 `typedef` 的類別。  `POINT` 是類別名稱；不過，以此方式產生的名稱會受到下列限制：  
+ The preceding example declares a class named `POINT` using the unnamed class `typedef` syntax. `POINT` is treated as a class name; however, the following restrictions apply to names introduced this way:  
   
--   名稱 \(同義字\) 不可以出現在**類別**、`struct` 或**等位**前置詞之後。  
+-   The name (the synonym) cannot appear after a **class**, `struct`, or **union** prefix.  
   
--   不可在類別宣告中使用此名稱做為建構函式或解構函式名稱。  
+-   The name cannot be used as constructor or destructor names within a class declaration.  
   
- 總而言之，此語法不提供任何繼承、建構或解構機制。  
-  
-## 請參閱  
- [using 關鍵字](../misc/using-keyword.md)
+ In summary, this syntax does not provide any mechanism for inheritance, construction, or destruction.  
+

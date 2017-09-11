@@ -1,82 +1,99 @@
 ---
-title: "字串和 I/O 格式化 (現代 C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: String and I-O Formatting (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 字串和 I/O 格式化 (現代 C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 7f077a7209be09c6c00977833ce079f22dfa20e0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-C\+\+ [iostreams](../standard-library/iostream.md) 可進行格式化的字串 I\/O。  例如，下列程式碼示範如何先取消儲存目前狀態然後再重設，設定 cout 將整數格式化為十六進位的輸出，因為一旦狀態格式傳遞至 cout，會保持這種方式直到變更為止，而不只是針對一個程式碼行。  
+---
+# <a name="string-and-io-formatting-modern-c"></a>String and I/O Formatting (Modern C++)
+C++ [iostreams](../standard-library/iostream.md) are capable of formatted string I/O. For example, the following code shows how to set cout to format an integer to output in hexadecimal, first saving off the current state and re-setting afterwards, because once state formatting is passed to cout, it stays that way until changed, not just for the one line of code.  
   
-```fortran  
-#include <iostream>  
-#include <iomanip>  
+```cpp  
+#include <iostream>  
+#include <iomanip>  
   
-using namespace std;  
+using namespace std;  
   
-int main()   
+int main()   
 {  
-    ios state(nullptr);  
+    ios state(nullptr);  
   
-    cout << "The answer in decimal is: " << 42 << endl;  
+    cout << "The answer in decimal is: " << 42 << endl;  
   
-    state.copyfmt(cout); // save current formatting  
-    cout << "In hex: 0x" // now load up a bunch of formatting modifiers  
-        << hex   
-        << uppercase   
-        << setw(8)   
-        << setfill('0')   
-        << 42            // the actual value we wanted to print out  
-        << endl;  
-    cout.copyfmt(state); // restore previous formatting  
+    state.copyfmt(cout); // save current formatting  
+    cout << "In hex: 0x" // now load up a bunch of formatting modifiers  
+        << hex   
+        << uppercase   
+        << setw(8)   
+        << setfill('0')   
+        << 42            // the actual value we wanted to print out  
+        << endl;  
+    cout.copyfmt(state); // restore previous formatting  
 }  
   
 ```  
   
- 這在許多情況下都完全難以處理。  或者，您可以使用 Boost C\+\+ 程式庫中的 Boost.Format，即使它是非標準的。  您可以從 [Boost](http://www.boost.org/) 網站下載任何 Boost 程式庫。  
+ This can be entirely too cumbersome in many cases. As an alternative, you can use Boost.Format from the Boost C++ libraries, even though it’s nonstandard. You can download any Boost library from the [Boost](http://www.boost.org/) website.  
   
- Boost.Format 的一些優點是：  
+ Some advantages of Boost.Format are:  
   
--   安全：類型安全，並針對錯誤擲回例外狀況 \-\- 例如，有太少或太多項目的規格。  
+-   Safe: Type-safe, and throws an exception for errors—for example, the specification of too few or too many items.  
   
--   可延伸的：適用於可以進行資料流處理的任何類型。  
+-   Extensible: Works for any type that can be streamed.  
   
--   方便：標準 Posix 和類似的格式字串。  
+-   Convenient: Standard Posix and similar format strings.  
   
- 雖然 Boost.Format 是建置在 C\+\+ [iostreams](../standard-library/iostream-programming.md) 基礎上，是安全且可擴充的，但並非效能最佳化。  當您需要效能最佳化時，請考慮使用 C 的 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 和 [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，這是既快速又容易使用的。  然而，它們無法擴充或有安全性弱點。\(安全版本存在，但是產生些微的效能損失。  如需詳細資訊，請參閱 [printf\_s、\_printf\_s\_l、wprintf\_s、\_wprintf\_s\_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) 和 [sprintf\_s、\_sprintf\_s\_l、swprintf\_s、\_swprintf\_s\_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)\)。  
+ Although Boost.Format is built on C++ [iostreams](../standard-library/iostream-programming.md), which are safe and extensible, they aren't performance-optimized. When you require performance optimization, consider C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) and [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), which are fast and easy to use. However, they are not extensible or safe from vulnerabilities. (Safe versions exist, but they incur a slight performance penalty. For more information, see [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) and [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).  
   
- 下列程式碼示範部分提升格式化功能。  
+ The following code demonstrates some of the Boost formatting features.  
   
 ```cpp  
-    string s = str( format("%2% %2% %1%\n") % "world" % "hello" );  
-    // s contains "hello hello world"    
+    string s = str( format("%2% %2% %1%\n") % "world" % "hello" );  
+    // s contains "hello hello world"    
   
-    for( auto i = 0; i < names.size(); ++i )  
-        cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];  
-    // Georges Benjamin Clemenceau             +33 (0) 123 456 789  
-    // Jean de Lattre de Tassigny              +33 (0) 987 654 321  
+    for( auto i = 0; i < names.size(); ++i )  
+        cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];  
+    // Georges Benjamin Clemenceau             +33 (0) 123 456 789  
+    // Jean de Lattre de Tassigny              +33 (0) 987 654 321  
   
 ```  
   
-## 請參閱  
- [歡迎回到 C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+ 語言參考](../cpp/cpp-language-reference.md)   
- [C\+\+ Standard Library](../standard-library/cpp-standard-library-reference.md)   
- [\<iostream\>](../standard-library/iostream.md)   
- [\<limits\>](../standard-library/limits.md)   
- [\< \> iomanip](../standard-library/iomanip.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)   
+ [\<iostream>](../standard-library/iostream.md)   
+ [\<limits>](../standard-library/limits.md)   
+ [\<iomanip>](../standard-library/iomanip.md)
+

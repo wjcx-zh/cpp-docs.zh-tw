@@ -1,47 +1,63 @@
 ---
-title: "語意模糊解決 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Resolving ambiguous declarations (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 3d773ee7-bbea-47de-80c2-cb0a9d4ec0b9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 語意模糊解決
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0f49a3b4b7c131a477dc7ff25c95b15173d0bb85
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-若要從一個類型明確轉換成另一個類型，您必須使用轉型來指定所需的類型名稱。  某些類型轉換會導致語意模稜兩可的情況。  下列函式樣式類型轉換就是模稜兩可的情況：  
+---
+# <a name="resolving-ambiguous-declarations-c"></a>Resolving ambiguous declarations (C++)
+To perform explicit conversions from one type to another, you must use casts, specifying the desired type name. Some type casts result in syntactic ambiguity. The following function-style type cast is ambiguous:  
   
 ```  
 char *aName( String( s ) );  
 ```  
   
- 究竟是使用函式樣式轉型做為初始設定式的函式宣告或是物件宣告並不明確：它可以宣告傳回採用一個 `String` 類型引數之 **char \*** 類型的函式，也可以宣告 `aName` 物件並將它初始化，其中 `s` 值會轉型為 `String` 類型。  
+ It is unclear whether it is a function declaration or an object declaration with a function-style cast as the initializer: It could declare a function returning type **char \*** that takes one argument of type `String`, or it could declare the object `aName` and initialize it with the value of `s` cast to type `String`.  
   
- 如果宣告可以視為有效的函式宣告，則會以此方式處理。  只有在不可能是函式宣告的情況下 \(也就是它的語意不正確\)，才會查看陳述式是否為函式樣式類型轉換。  因此，編譯器會將陳述式視為函式宣告，必且忽略識別項 `s` 前後的括號。  換句話說，陳述式：  
+ If a declaration can be considered a valid function declaration, it is treated as such. Only if it cannot possibly be a function declaration — that is, if it would be syntactically incorrect — is a statement examined to see if it is a function-style type cast. Therefore, the compiler considers the statement to be a declaration of a function and ignores the parentheses around the identifier `s`. On the other hand, the statements:  
   
 ```  
 char *aName( (String)s );  
 ```  
   
- 和  
+ and  
   
 ```  
 char *aName = String( s );  
 ```  
   
- 很明確就是物件的宣告，而且會叫用從 `String` 類型到 **char \*** 類型的使用者定義轉換來初始化 `aName`。  
+ are clearly declarations of objects, and a user-defined conversion from type `String` to type **char \*** is invoked to perform the initialization of `aName`.  
   
-## 請參閱  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/zh-tw/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>See Also  
+ 

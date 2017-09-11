@@ -1,39 +1,55 @@
 ---
-title: "物件存留期和資源管理 (現代 C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Object Lifetime And Resource Management (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
 caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 物件存留期和資源管理 (現代 C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 3582447033a364472a42455bd52df9e298b0a2ac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-不同於 Managed 語言， C\+\+ 沒有記憶體回收 \(GC\)，版本不會自動使用記憶體資源，程式執行。  在 C\+\+ 中，資源管理員會直接與物件存留期相關。  本文件說明會影響在 C\+\+ 物件的存留期和如何處理它的因素。  
+---
+# <a name="object-lifetime-and-resource-management-modern-c"></a>Object Lifetime And Resource Management (Modern C++)
+Unlike managed languages, C++ doesn’t have garbage collection (GC), which automatically releases no-longer-used memory resources as a program runs. In C++, resource management is directly related to object lifetime. This document describes the factors that affect object lifetime in C++ and how to manage it.  
   
- 主要因為它無法處理非記憶體資源， C\+\+ 沒有 GC。  與的只判斷解構函式在 C\+\+ 可能平均處理記憶體和非記憶體資源。  GC 也有其他問題，例如更高的額外負荷在記憶體和 CPU 使用量和位置。  但是，全球無法透過智慧最佳化會降低的基本問題。  
+ C++ doesn’t have GC primarily because it doesn't handle non-memory resources. Only deterministic destructors like those in C++ can handle memory and non-memory resources equally. GC also has other problems, like higher overhead in memory and CPU consumption, and locality. But universality is a fundamental problem that can't be mitigated through clever optimizations.  
   
-## 概念  
- 一件重要的事情在物件存留期管理方面是封裝其使用物件不需要知道資源該物件擁有，或如何釋放它們，甚至是擁有任何資源。  它只能終結物件。  C\+\+ 核心語言設計保證物件終結在正確時間，也就是，因為區塊結尾，在建構反向。  在物件終結時，它的基底和成員以特殊的順序被終結。除非您做類似，新的堆積配置或位置的特殊事項語言自動終結物件。例如， [智慧型指標](../cpp/smart-pointers-modern-cpp.md) \(如 `unique_ptr` 和 `shared_ptr`和 Standard Template Library \(STL\) 容器像 `vector`，封裝 `new`\/`delete` 和 `new[]`\/`delete[]` 物件中，有解構函式。  因此使用智慧型指標和 STL 容器是很重要的。  
+## <a name="concepts"></a>Concepts  
+ An important thing in object-lifetime management is the encapsulation—whoever's using an object doesn't have to know what resources that object owns, or how to get rid of them, or even whether it owns any resources at all. It just has to destroy the object. The C++ core language is designed to ensure that objects are destroyed at the correct times, that is, as blocks are exited, in reverse order of construction. When an object is destroyed, its bases and members are destroyed in a particular order.  The language automatically destroys objects, unless you do special things like heap allocation or placement new.  For example, [smart pointers](../cpp/smart-pointers-modern-cpp.md) like `unique_ptr` and `shared_ptr`, and C++ Standard Library containers like `vector`, encapsulate `new`/`delete` and `new[]`/`delete[]` in objects, which have destructors. That's why it's so important to use smart pointers and C++ Standard Library containers.  
   
- 另一個重要概念在存留期管理方面:解構函式。  解構函式封裝資源版本。\(常用的助憶鍵是 RRID，資源版本是解構函式\)。資源是從「系統」取得並稍後必須傳回回收的動作。記憶體是最常見的資源，不過，也有檔案、通訊、材質和其他非記憶體資源。擁有資源表示您可以使用，在需要時，還必須釋放它，會在完成時。在物件終結時，其解構函式來釋放其資源。  
+ Another important concept in lifetime management: destructors. Destructors encapsulate resource release.  (The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.  Memory is the most common resource, but there are also files, sockets, textures, and other non-memory resources. "Owning" a resource means you can use it when you need it but you also have to release it when you're finished with it.  When an object is destroyed, its destructor releases the resources that it owned.  
   
- 最後的概念是 DAG \(維持非循環圖\)。擁有權結構在程式的表單 DAG。  物件可以擁有本身，不僅不可能，本質上也無意義。  但是，兩個物件可以共用第三個物件的擁有權。數種連結可能會在如下的 DAG:是 B 的成員 \(B 擁有 A\)， C\# 的 `vector<D>` \(C\# 擁有每個 D 項目\)，電子儲存 `shared_ptr<F>` \(E 與其他物件共用 F 擁有權，可能\)，依此類推。只要沒有循環，並在 DAG 的每個連結都由具有解構函式的物件表示 \(而不是原始指標、控制代碼，或其他機制\)，然後資源遺漏是不可能的，因為語言防止它們。  資源釋放，在不再需要之後，不用，記憶體回收行程執行。  存留期追蹤是堆疊範圍、基底、成員和相關問題的額外負荷可用，並可以 `shared_ptr`的。  
+ The final concept is the DAG (Directed Acyclic Graph).  The structure of ownership in a program forms a DAG. No object can own itself—that's not only impossible but also inherently meaningless. But two objects can share ownership of a third object.  Several kinds of links are possible in a DAG like this: A is a member of B (B owns A), C stores a `vector<D>` (C owns each D element), E stores a `shared_ptr<F>` (E shares ownership of F, possibly with other objects), and so forth.  As long as there are no cycles and every link in the DAG is represented by an object that has a destructor (instead of a raw pointer, handle, or other mechanism), then resource leaks are impossible because the language prevents them. Resources are released immediately after they're no longer needed, without a garbage collector running. The lifetime tracking is overhead-free for stack scope, bases, members, and related cases, and inexpensive for `shared_ptr`.  
   
-### 基於堆積的存留期  
- 對於堆積物件存留期，請使用 [智慧型指標](../cpp/smart-pointers-modern-cpp.md)。  使用 `shared_ptr` 和 `make_shared` 做為預設指標和配置器。  使用 `weak_ptr` 中斷循環，進行快取，並觀察物件，而不會影響或假設任何有關其存留期。  
+### <a name="heap-based-lifetime"></a>Heap-based lifetime  
+ For heap object lifetime, use [smart pointers](../cpp/smart-pointers-modern-cpp.md). Use `shared_ptr` and `make_shared` as the default pointer and allocator. Use `weak_ptr` to break cycles, do caching, and observe objects without affecting or assuming anything about their lifetimes.  
   
 ```cpp  
 void func() {  
@@ -46,13 +62,13 @@ p->draw();
   
 ```  
   
- 為唯一的擁有權使用 `unique_ptr` ，例如，在 *pimpl* 慣用語。\(請參閱[編譯時期封裝的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)\)。讓 `unique_ptr` 主要目標任何明確的 `new` 運算式。  
+ Use `unique_ptr` for unique ownership, for example, in the *pimpl* idiom. (See [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Make a `unique_ptr` the primary target of all explicit `new` expressions.  
   
 ```cpp  
 unique_ptr<widget> p(new widget());  
 ```  
   
- 您可以為非擁有權和檢視使用原始指標。  非主控指標可能連接下列，不過它不能遺漏。  
+ You can use raw pointers for non-ownership and observation. A non-owning pointer may dangle, but it can’t leak.  
   
 ```cpp  
 class node {  
@@ -65,34 +81,33 @@ node::node() : parent(...) { children.emplace_back(new node(...) ); }
   
 ```  
   
- 在需要時最佳化效能，您可能必須使用 *封裝* 擁有指標和明確呼叫 Delete。  範例為您實作自己的低階資料結構。  
+ When performance optimization is required, you might have to use *well-encapsulated* owning pointers and explicit calls to delete. An example is when you implement your own low-level data structure.  
   
-### 以堆疊為基礎的存留期  
- 在現代 C\+\+， *以堆疊為基礎的範圍* 是一項強大的撰寫強固的程式碼，因為它會結合自動 *堆疊存留期* ，而資料與有效存留期追蹤的 *成員存留期* 基本上免於額外負荷。  尤其是您與原始指標時，堆積物件存留期要求工作手動管理，也可以是資源遺漏和效率低落來源。  考慮這段程式碼，示範以堆疊為基礎的範圍:  
+### <a name="stack-based-lifetime"></a>Stack-based lifetime  
+ In modern C++, *stack-based scope* is a powerful way to write robust code because it combines automatic *stack lifetime* and *data member lifetime* with high efficiency—lifetime tracking is essentially free of overhead. Heap object lifetime requires diligent manual management and can be the source of resource leaks and inefficiencies, especially when you are working with raw pointers. Consider this code, which demonstrates stack-based scope:  
   
 ```cpp  
 class widget {  
 private:  
-  gadget g;   // lifetime automatically tied to enclosing object  
+    gadget g;   // lifetime automatically tied to enclosing object  
 public:  
-  void draw();  
+    void draw();  
 };  
   
 void functionUsingWidget () {  
-  widget w;   // lifetime automatically tied to enclosing scope  
-              // constructs w, including the w.g gadget member  
-  …  
-  w.draw();  
-  …  
+    widget w;   // lifetime automatically tied to enclosing scope  
+                // constructs w, including the w.g gadget member  
+    // ...
+    w.draw();  
+    // ...
 } // automatic destruction and deallocation for w and w.g  
   // automatic exception safety,   
   // as if "finally { w.dispose(); w.g.dispose(); }"  
-  
 ```  
   
- 謹慎使用靜態存留期 \(全域靜態函式，區域靜態\)，因為問題可能會出現。  當全域物件的建構函式擲回例外狀況，會發生什麼事?  一般而言，應用程式錯誤會很難偵錯的方法。  建構順序為靜態物件的存留期會有問題，而不是並行安全的。  不僅是物件建構問題，解構函式順序可能會很複雜，尤其是多型是包含的地方。  即使您的物件或變數不是多型的，不複雜建構\/解構定序，仍有安全執行緒並行問題。  多執行緒的應用程式無法安全地修改靜態物件的資料未含有執行緒區域儲存區、資源鎖定和其他特殊預防措施。  
+ Use static lifetime sparingly (global static, function local static) because problems can arise. What happens when the constructor of a global object throws an exception? Typically, the app faults in a way that can be difficult to debug. Construction order is problematic for static lifetime objects, and is not concurrency-safe. Not only is object construction a problem, destruction order can be complex, especially where polymorphism is involved. Even if your object or variable isn’t polymorphic and doesn't have complex construction/destruction ordering, there’s still the issue of thread-safe concurrency. A multithreaded app can’t safely modify the data in static objects without having thread-local storage, resource locks, and other special precautions.  
   
-## 請參閱  
- [歡迎回到 C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+ 語言參考](../cpp/cpp-language-reference.md)   
- [C\+\+ Standard Library](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

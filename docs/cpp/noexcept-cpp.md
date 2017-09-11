@@ -1,58 +1,73 @@
 ---
-title: "noexcept (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "noexcept_cpp"
-dev_langs: 
-  - "C++"
+title: noexcept (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- noexcept_cpp
+dev_langs:
+- C++
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# noexcept (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 80e9ac58dcee9ee4e3028b422d0fede23f8a72f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-**C\+\+11：**指定函式是否可能擲回例外狀況。  
+---
+# <a name="noexcept-c"></a>noexcept (C++)
+**C++11:** Specifies whether a function might throw exceptions.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
-```vb  
-ReturnType FunctionName(params) noexcept;  
-ReturnType FunctionName(params) noexcept(noexcept(expression);  
-```  
+> *noexcept-expression*:  
+> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept**  
+> &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**  
   
-#### 參數  
- 運算式  
- 評估結果是 True 或 False 的常數運算式。  無條件的版本相當於 noexcept\(true\)。  
+### <a name="parameters"></a>Parameters  
+ *constant-expression*  
+ A constant expression of type `bool` that represents whether the set of potential exception types is empty. The unconditional version is equivalent to `noexcept(true)`.  
   
-## 備註  
- `noexcept` \(及其同義字 `noecept(true)`\) 指定函式永遠不會擲回例外狀況或允許從其他任何直接或間接叫用的函式散佈例外狀況。  更具體來說，`noexcept` 表示函式要成為 `noexcept` 的情況，唯有函式所呼叫的所有函式也都是 noexcept 或 const 時，而且沒有可能評估的動態轉換 \(cast\) 需要執行階段檢查、typeid 運算式套用至類型為多型類別類型的 glvalue 運算式，或擲回運算式。  不過，編譯器不必針對可能出現至 `noexcept` 函式的例外狀況，檢查每一個程式碼路徑。  如果例外狀況確實達到標示為 `noexcept` 的函式，則會立即叫用 [std::terminate](../Topic/terminate%20\(%3Cexception%3E\).md)，且不保證會叫用任何範圍中物件的解構函式。  
+## <a name="remarks"></a>Remarks  
+ A *noexcept expression* is a kind of *exception specification*, a suffix to a function declaration that represents a set of types that might be matched by an exception handler for any exception that exits a function. Unary conditional operator `noexcept(`*constant_expression*`)` where *constant_expression* yeilds `true`, and its unconditional synonym `noexcept`, specify that the set of potential exception types that can exit a function is empty. That is, the function never throws an exception and never allows an exception to be propagated outside its scope. The operator `noexcept(`*constant_expression*`)` where *constant_expression* yeilds `false`, or the absence of an exception specification (other than for a destructor or deallocation function), indicates that the set of potential exceptions that can exit the function is the set of all types.  
+ 
+ Mark a function as `noexcept` only if all the functions that it calls, either directly or indirectly, are also `noexcept` or `const`. The compiler does not necessarily check every code path for exceptions that might bubble up to a `noexcept` function. If an exception does exit the outer scope of a function marked `noexcept`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked immediately, and there is no guarantee that destructors of any in-scope objects will be invoked. Use `noexcept` instead of the dynamic exception specifier `throw`, which is deprecated in C++11 and later and not fully implemented in Visual Studio. We recommended you apply `noexcept` to any function that never allows an exception to propagate up the call stack. When a function is declared `noexcept`, it enables the compiler to generate more efficient code in several different contexts.    
   
- 使用評估為 noexcept\(false\) 之條件式 noexcept 所宣告的函式，會指定其允許散佈例外狀況。  例如，在所複製物件是一般舊資料類型 \(POD\) 的情況下，複製引數的函式可能會宣告為 noexcept。  這類函式可以宣告如下：  
+## <a name="example"></a>Example  
+A template function that copies its argument might be declared `noexcept` on the condition that the object being copied is a plain old data type (POD). Such a function could be declared like this:  
   
-```  
+```cpp  
 #include <type_traits>  
   
 template <typename T>  
-T copy_object(T& obj) noexcept(std::is_pod<T>)  
+T copy_object(const T& obj) noexcept(std::is_pod<T>)  
 {  
- //. . .   
+   // ...   
 }  
-  
 ```  
   
- 使用 `noexcept` 而不使用例外狀況規範 `throw`，後者在 C\+\+11 和更新版本中已取代。  建議您在確定永遠不允許順著呼叫堆疊散佈例外狀況時，對函式套用 `noexcept`。  使用 `noexcept` 宣告的函式可讓編譯器產生在數種不同內容中更有效率的程式碼。  
-  
-## 請參閱  
- [C\+\+ 例外狀況處理](../cpp/cpp-exception-handling.md)
+## <a name="see-also"></a>See Also  
+ [C++ Exception Handling](../cpp/cpp-exception-handling.md) [Exception Specifications (throw, noexcept)](../cpp/exception-specifications-throw-cpp.md)

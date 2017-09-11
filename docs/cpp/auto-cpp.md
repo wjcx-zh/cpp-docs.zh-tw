@@ -1,29 +1,45 @@
 ---
-title: "auto (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: auto (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 caps.latest.revision: 18
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# auto (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: c3d761378e4265305905fab17768144aef403b29
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-從所宣告變數的初始化運算式，來推斷其類型。  
+---
+# <a name="auto-c"></a>auto (C++)
+Deduces the type of a declared variable from its initialization expression.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 auto declarator initializer;  
@@ -33,104 +49,128 @@ auto declarator initializer;
 [](auto param1, auto param2) {};  
 ```  
   
-## 備註  
- `auto` 關鍵字會指示編譯器使用所宣告變數或 Lambda 運算式參數的初始化運算式來推算其類型。  
+## <a name="remarks"></a>Remarks  
+ The `auto` keyword directs the compiler to use the initialization expression of a declared variable, or lambda expression parameter, to deduce its type.  
   
- 除非您確實要進行轉換，否則建議您在大多數情況下使用 `auto` 關鍵字，因為它提供下列優點：  
+ We recommend that you use the `auto` keyword for most situations—unless you really want a conversion—because it provides these benefits:  
   
--   **穩固性：**如果運算式的類型變更 \(這包括函式傳回類型變更時\)，它就會運作。  
+-   **Robustness:** If the expression’s type is changed—this includes when a function return type is changed—it just works.  
   
--   **效能：**可保證不會進行任何轉換。  
+-   **Performance:** You’re guaranteed that there will be no conversion.  
   
--   **可用性：**您不需要擔心類型名稱拼字困難和錯字。  
+-   **Usability:** You don't have to worry about type name spelling difficulties and typos.  
   
--   **效率：**您的程式碼可能較具效率。  
+-   **Efficiency:** Your coding can be more efficient.  
   
- 可能不想使用 `auto` 的轉換案例：  
+ Conversion cases in which you might not want to use `auto`:  
   
--   想要特定類型但不執行任何動作時。  
+-   When you want a specific type and nothing else will do.  
   
--   運算式樣板 Helper 類型 \(例如，`(valarray+valarray)` 和初始設定式清單\)，雖然您很少會選擇撰寫 `auto x = { 1 };` 並實際預期收到 `int`。  
+-   Expression template helper types—for example, `(valarray+valarray)`.  
   
- 若要使用 `auto` 關鍵字，請使用它 \(非類型\) 來宣告一個變數，並指定初始化運算式。  此外，您還可以修改 `auto` 關鍵字，方式是使用規範和宣告子，例如 `const`、`volatile`、指標 \(`*`\)、參考 \(`&`\) 和右值參考 `(&&`\)。  編譯器會評估初始化運算式，然後使用該資訊來推斷變數類型。  
+ To use the `auto` keyword, use it instead of a type to declare a variable, and specify an initialization expression. In addition, you can modify the `auto` keyword by using specifiers and declarators such as `const`, `volatile`, pointer (`*`), reference (`&`), and rvalue reference `(&&`). The compiler evaluates the initialization expression and then uses that information to deduce the type of the variable.  
   
- 初始化運算式可以是指派 \(等號語法\)、直接初始化 \(函式樣式語法\)、[operator new](../Topic/operator%20new%20\(%3Cnew%3E\).md) 運算式，或初始化運算式可以是 [以範圍為基礎的 for 陳述式 \(C\+\+\)](../cpp/range-based-for-statement-cpp.md) 陳述式中的 *for\-range\-declaration* 參數。  如需詳細資訊，請參閱[初始設定式](../cpp/initializers.md)和本文件後面的程式碼範例。  
+ The initialization expression can be an assignment (equal-sign syntax), a direct initialization (function-style syntax), an [operator new](new-operator-cpp.md) expression, or the initialization expression can be the *for-range-declaration* parameter in a [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md) statement. For more information, see [Initializers](../cpp/initializers.md) and the code examples later in this document.  
   
- `auto` 關鍵字是類型的預留位置，但它本身不是類型。  因此，`auto` 關鍵字不能用於轉換或運算子 \(例如 [sizeof](../cpp/sizeof-operator.md) 和 [typeid](../windows/typeid-cpp-component-extensions.md)\)。  
+ The `auto` keyword is a placeholder for a type, but it is not itself a type. Therefore, the `auto` keyword cannot be used in casts or operators such as [sizeof](../cpp/sizeof-operator.md) and [typeid](../windows/typeid-cpp-component-extensions.md).  
   
-## 實用性  
- `auto` 關鍵字是宣告包含複雜類型之變數的簡單方式。  例如，您可以使用 `auto` 宣告變數，其中初始化運算式包括樣板、函式指標或成員指標。  
+## <a name="usefulness"></a>Usefulness  
+ The `auto` keyword is a simple way to declare a variable that has a complicated type. For example, you can use `auto` to declare a variable where the initialization expression involves templates, pointers to functions, or pointers to members.  
   
- 您也可以使用 `auto` 宣告並初始化 Lambda 運算式的變數。  您無法自行宣告變數類型，因為只有編譯器才知道 Lambda 運算式的類型。  如需詳細資訊，請參閱 [Lambda 運算式的範例](../cpp/examples-of-lambda-expressions.md)。  
+ You can also use `auto` to declare and initialize a variable to a lambda expression. You can't declare the type of the variable yourself because the type of a lambda expression is known only to the compiler. For more information, see [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md).  
   
-## 尾端傳回類型  
- 您可以搭配使用 `auto` 與 `decltype` 類型規範，以協助撰寫樣板庫。  使用 `auto` 和 `decltype` 來宣告其傳回類型視樣板引數而定的樣板函式。  或是使用 `auto` 和 `decltype` 宣告樣板函式，以包裝對其他函式的呼叫，然後傳回該其他函式的傳回類型。  如需詳細資訊，請參閱 [decltype](../cpp/decltype-cpp.md)。  
+## <a name="trailing-return-types"></a>Trailing Return Types  
+ You can use `auto`, together with the `decltype` type specifier, to help write template libraries. Use `auto` and `decltype` to declare a template function whose return type depends on the types of its template arguments. Or, use `auto` and `decltype` to declare a template function that wraps a call to another function, and then returns whatever is the return type of that other function. For more information, see [decltype](../cpp/decltype-cpp.md).  
   
-## 參考和 cv 限定詞  
- 請注意，使用 `auto` 會捨棄參考、const 限定詞和 volatile 限定詞。  參考下列範例：  
+## <a name="references-and-cv-qualifiers"></a>References and cv-qualifiers  
+ Note that using `auto` drops references, const qualifiers, and volatile qualifiers. Consider the following example:  
   
 ```cpp  
-// cl.exe /analyze /EHsc /W4  
-#include <iostream>  
+// cl.exe /analyze /EHsc /W4  
+#include <iostream>  
   
-using namespace std;  
+using namespace std;  
   
-int main( )  
+int main( )  
 {  
-    int count = 10;  
-    int& countRef = count;  
-    auto myAuto = countRef;  
+    int count = 10;  
+    int& countRef = count;  
+    auto myAuto = countRef;  
   
-    countRef = 11;  
-    cout << count << " ";  
+    countRef = 11;  
+    cout << count << " ";  
   
-    myAuto = 12;  
-    cout << count << endl;  
+    myAuto = 12;  
+    cout << count << endl;  
 }  
   
 ```  
   
- 您可能會認為 myAuto 是 int 參考，但它不是。  它只是 int，因此輸出是 `11 11`，而非 `11 12` \(如果 `auto` 尚未捨棄參考\)。  
+ In the previous example, myAuto is an int, not an int reference, so the output is `11 11`, not `11 12` as would be the case if the reference qualifier had not been dropped by `auto`.  
   
-## 限制和錯誤訊息  
- 下表列出 `auto` 關鍵字使用限制，以及編譯器所發出的對應診斷錯誤訊息。  
-  
-|錯誤代碼|描述|  
-|----------|--------|  
-|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|`auto` 關鍵字無法與任何其他類型規範結合。|  
-|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|使用 `auto` 關鍵字所宣告的符號必須有初始設定式。|  
-|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|您不正確地使用 `auto` 關鍵字來宣告類型。  例如，您已宣告方法傳回類型或陣列。|  
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md)、[C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|參數或樣板引數不可以使用 `auto` 關鍵字進行宣告。|  
-|[C3534](../Topic/Compiler%20Error%20C3534.md)|`new` 運算式中使用 `auto` 關鍵字所宣告的符號必須有初始設定式。  如需詳細資訊，請參閱 [operator new](../Topic/operator%20new%20\(%3Cnew%3E\).md)。|  
-|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|方法或樣板參數不可以使用 `auto` 關鍵字進行宣告。|  
-|[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符號無法在初始化之前使用。  實際上，這表示不能使用變數來初始化它自己。|  
-|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|您無法轉換成使用 `auto` 關鍵字所宣告的類型。|  
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|宣告子清單中使用 `auto` 關鍵字所宣告的所有符號必須解析成相同的類型。  如需詳細資訊，請參閱[宣告](../misc/declarations.md)。|  
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、[C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[sizeof](../cpp/sizeof-operator.md) 和 [typeid](../windows/typeid-cpp-component-extensions.md) 運算子不能套用至使用 `auto` 關鍵字所宣告的符號。|  
-  
-## 範例  
- 這些程式碼片段說明可以使用 `auto` 關鍵字的數種方式。  
-  
- 下列宣告相同。  在第一個陳述式中，變數 `j` 宣告成類型 `int`。  在第二個陳述式中，變數 `k` 宣告成類型 `int`，因為初始化運算式 \(0\) 是整數。  
+## <a name="type-deduction-with-braced-initializers-c14"></a>Type deduction with braced initializers (C++14)  
+ The following code exmample shows how to intialize an auto variable using braces. Note the difference between B and C and between A and E.  
   
 ```cpp  
+#include <initializer_list>  
   
+int main()  
+{  
+    // std::initializer_list<int>  
+    auto A = { 1, 2 };  
+  
+    // std::initializer_list<int>  
+    auto B = { 3 };  
+  
+    // int  
+    auto C{ 4 };  
+  
+    // C3535: cannot deduce type for 'auto' from initializer list'  
+    auto D = { 5, 6.7 };  
+  
+    // C3518 in a direct-list-initialization context the type for 'auto'  
+    // can only be deduced from a single initializer expression  
+    auto E{ 8, 9 };  
+  
+    return 0;  
+}  
+```  
+  
+## <a name="restrictions-and-error-messages"></a>Restrictions and Error Messages  
+ The following table lists the restrictions on the use of the `auto` keyword, and the corresponding diagnostic error message that the compiler emits.  
+  
+|Error number|Description|  
+|------------------|-----------------|  
+|[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|The `auto` keyword cannot be combined with any other type-specifier.|  
+|[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|A symbol that is declared with the `auto` keyword must have an initializer.|  
+|[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|You incorrectly used the `auto` keyword to declare a type. For example, you declared a method return type or an array.|  
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|A parameter or template argument cannot be declared with the `auto` keyword.|  
+|[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|A method or template parameter cannot be declared with the `auto` keyword.|  
+|[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|A symbol cannot be used before it is initialized. In practice, this means that a variable cannot be used to initialize itself.|  
+|[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|You cannot cast to a type that is declared with the `auto` keyword.|  
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|All the symbols in a declarator list that is declared with the `auto` keyword must resolve to the same type. For more information, see [Declarations and Definitions](declarations-and-definitions-cpp.md).|  
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|The [sizeof](../cpp/sizeof-operator.md) and [typeid](../windows/typeid-cpp-component-extensions.md) operators cannot be applied to a symbol that is declared with the `auto` keyword.|  
+  
+## <a name="examples"></a>Examples  
+ These code fragments illustrate some of the ways in which the `auto` keyword can be used.  
+  
+ The following declarations are equivalent. In the first statement, variable `j` is declared to be type `int`. In the second statement, variable `k` is deduced to be type `int` because the initialization expression (0) is an integer.  
+  
+```cpp  
 int j = 0;  // Variable j is explicitly type int.  
 auto k = 0; // Variable k is implicitly type int because 0 is an integer.  
 ```  
   
- 下列宣告相同，但第二個宣告比第一個宣告簡單。  其中一個使用 `auto` 關鍵字的最令人信服原因是簡單。  
+ The following declarations are equivalent, but the second declaration is simpler than the first. One of the most compelling reasons to use the `auto` keyword is simplicity.  
   
 ```cpp  
-  
 map<int,list<string>>::iterator i = m.begin();   
 auto i = m.begin();   
 ```  
   
- 下列程式碼片段會在 `for` 和範圍 `for` 迴圈開始時宣告變數 `iter` 和 `elem` 的類型。  
+ The following code fragment declares the type of variables `iter` and `elem` when the `for` and range `for` loops start.  
   
 ```cpp  
-  
 // cl /EHsc /nologo /W4  
 #include <deque>  
 using namespace std;  
@@ -154,39 +194,34 @@ int main()
     for (const auto& elem : dqDoubleData) // observes elements IN-PLACE  
     { /* ... */ }  
 }  
-  
 ```  
   
- 下列程式碼片段使用 `new` 運算子和指標宣告來宣告指標。  
+ The following code fragment uses the `new` operator and pointer declaration to declare pointers.  
   
 ```cpp  
-  
 double x = 12.34;  
 auto *y = new auto(x), **z = new auto(&x);  
 ```  
   
- 下一個程式碼片段會宣告每個宣告陳述式中的多個符號。  請注意，每個陳述式中的所有符號都會解析成相同類型。  
+ The next code fragment declares multiple symbols in each declaration statement. Notice that all of the symbols in each statement resolve to the same type.  
   
 ```cpp  
-  
 auto x = 1, *y = &x, **z = &y; // Resolves to int.  
 auto a(2.01), *b (&a);         // Resolves to double.  
 auto c = 'a', *d(&c);          // Resolves to char.  
 auto m = 1, &n = m;            // Resolves to int.  
 ```  
   
- 此程式碼片段使用條件運算子 \(`?:`\) 將變數 `x` 宣告為值為 200 的整數：  
+ This code fragment uses the conditional operator (`?:`) to declare variable `x` as an integer that has a value of 200:  
   
 ```cpp  
-  
 int v1 = 100, v2 = 200;  
 auto x = v1 > v2 ? v1 : v2;  
 ```  
   
- 下列程式碼片段會初始化變數 `x` 成類型 `int`、變數 `y` 成類型 `const` `int` 的參考，以及可傳回類型 `int` 之函式指標的變數 `fp`。  
+ The following code fragment initializes variable `x` to type `int`, variable `y` to a reference to type `const int`, and variable `fp` to a pointer to a function that returns type `int`.  
   
 ```cpp  
-  
 int f(int x) { return x; }  
 int main()  
 {  
@@ -197,18 +232,16 @@ int main()
     auto fp = p;  
     //...  
 }  
-  
 ```  
   
-## 請參閱  
- [auto 關鍵字](../cpp/auto-keyword.md)   
- [\(NOTINBUILD\)Storage\-Class Specifiers](http://msdn.microsoft.com/zh-tw/10b3d22d-cb40-450b-994b-08cf9a211b6c)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
- [\/Zc:auto \(推算變數類型\)](../build/reference/zc-auto-deduce-variable-type.md)   
- [sizeof 運算子](../cpp/sizeof-operator.md)   
+## <a name="see-also"></a>See Also  
+ [auto Keyword](../cpp/auto-keyword.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
+ [/Zc:auto (Deduce Variable Type)](../build/reference/zc-auto-deduce-variable-type.md)   
+ [sizeof Operator](../cpp/sizeof-operator.md)   
  [typeid](../windows/typeid-cpp-component-extensions.md)   
- [operator new](../Topic/operator%20new%20\(%3Cnew%3E\).md)   
- [宣告](../misc/declarations.md)   
- [Lambda 運算式的範例](../cpp/examples-of-lambda-expressions.md)   
- [初始設定式](../cpp/initializers.md)   
+ [operator new](new-operator-cpp.md)   
+ [Declarations and Definitions](declarations-and-definitions-cpp.md)   
+ [Examples of Lambda Expressions](../cpp/examples-of-lambda-expressions.md)   
+ [Initializers](../cpp/initializers.md)   
  [decltype](../cpp/decltype-cpp.md)

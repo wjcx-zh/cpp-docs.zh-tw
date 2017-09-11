@@ -1,55 +1,70 @@
 ---
-title: "類型轉換和類型安全 (現代 C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Type Conversions and Type Safety (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
 caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 類型轉換和類型安全 (現代 C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 4a4be148948b8e4b180504dfc6a05a34e7ab4f33
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-此文件列出一般型別轉換的問題並說明如何在 C\+\+ 程式碼中避免此類情型。  
+---
+# <a name="type-conversions-and-type-safety-modern-c"></a>Type Conversions and Type Safety (Modern C++)
+This document identifies common type conversion problems and describes how you can avoid them in your C++ code.  
   
- 當您撰寫 C \+\+ 程式時，確認為型別安全這一點很重要。  這表示每個變數、函式引數以及函式回傳值存取一種接受資料，此操作包含使不同型別的值合乎規範，並避免資料遺失、位元組合的誤譯和記憶體損毀。  根據定義，不論指令明確與否，程式無法任意轉換型別中的值即為型別安全。  然而，在某些情況下，即使為不安全的型別轉換，仍需要做型別轉換。  舉例來說，有時候你必須要將浮點數的運算結果存入  `int`的變數之中，或者將不帶正負號的 `int` 型別中的值，傳入帶正負號的 `int`型別變數中。  上述的例子皆說明不安全的型別轉換，因為它們可能導致資料值的遺失或重新定義其值。  
+ When you write a C++ program, it's important to ensure that it's type-safe. This means that every variable, function argument, and function return value is storing an acceptable kind of data, and that operations that involve values of different types "make sense" and don't cause data loss, incorrect interpretation of bit patterns, or memory corruption. A program that never explicitly or implicitly converts values from one type to another is type-safe by definition. However, type conversions, even unsafe conversions, are sometimes required. For example, you might have to store the result of a floating point operation in a variable of type `int`, or you might have to pass the value in an unsigned `int` to a function that takes a signed `int`. Both examples illustrate unsafe conversions because they may cause data loss or re-interpretation of a value.  
   
- 當編譯器偵測到不安全的型別轉換時，便會發出錯誤或警告。  當發生錯誤時則停止編譯，警告則不停止，雖然警告允許繼續編譯，卻顯示程式碼中含有可能會發生的錯誤。  但是，即使程式在編譯過程中沒有發出警告訊息，程式中仍可能包含因隱含型別轉換而產生的錯誤結果。  程式中也有可能因為明確的型別轉換或轉型而導致型別錯誤。  
+ When the compiler detects an unsafe conversion, it issues either an error or a warning. An error stops compilation; a warning allows compilation to continue but indicates a possible error in the code. However, even if your program compiles without warnings, it still may contain code that leads to implicit type conversions that produce incorrect results. Type errors can also be introduced by explicit conversions, or casts, in the code.  
   
-## 隱含型別轉換  
- 當一運算式中含有不同型別的運算元，且沒有任何明確的轉型，編譯器會利用內建的 *轉換標準* 將其中一個運算元轉換成相符的型別。  編譯器會在運算成功時，停止嘗試型別轉換。  如果為晉升的型別轉換，此時編譯器不會發出警告。  但如果為窄型的轉換，則編譯器會警告可能發生資料遺失。  實際上，資料是否遺失，取決於目前所包含的值，但不論情況為何，仍建議將此警告視為錯誤。  如果牽涉至使用者定義型別時。編譯器會嘗試使用您在類別定義中所指定的轉換。  當無法找到可行的轉換，編譯器會發出錯誤，並停止編譯程式。  如需標準轉換規則的詳細資訊，請參閱 [標準轉換](../cpp/standard-conversions.md)。  如需使用者定義型別轉換的詳細資訊，請參閱[使用者定義轉換](../dotnet/user-defined-conversions-cpp-cli.md)。  
+## <a name="implicit-type-conversions"></a>Implicit type conversions  
+ When an expression contains operands of different built-in types, and no explicit casts are present, the compiler uses built-in *standard conversions* to convert one of the operands so that the types match. The compiler tries the conversions in a well-defined sequence until one succeeds. If the selected conversion is a promotion, the compiler does not issue a warning. If the conversion is a narrowing, the compiler issues a warning about possible data loss. Whether actual data loss occurs depends on the actual values involved, but we recommend that you treat this warning as an error. If a user-defined type is involved, then the compiler tries to use the conversions that you have specified in the class definition. If it can't find an acceptable conversion, the compiler issues an error and does not compile the program. For more information about the rules that govern the standard conversions, see [Standard Conversions](../cpp/standard-conversions.md). For more information about user-defined conversions, see [User-Defined Conversions (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).  
   
-### 擴展轉換 \(晉升\)  
- 在擴展轉換中，較小變數中的值會指派至較大的變數，且不會發生資料遺失。  因為擴展轉換必定為安全的型別轉換，編譯器會自動執行轉換且不發出警告訊息。  下列的型別轉換屬於擴展轉換。  
+### <a name="widening-conversions-promotion"></a>Widening conversions (promotion)  
+ In a widening conversion, a value in a smaller variable is assigned to a larger variable with no loss of data. Because widening conversions are always safe, the compiler performs them silently and does not issue warnings. The following conversions are widening conversions.  
   
-|從|轉換為|  
-|-------|---------|  
-|任何帶正負號或不帶正負號的整數類資料型別 \(不包含 `long long` 和 `__int64` \)|`double`|  
-|`bool` 或 `char`|內建型別|  
-|`short` 或 `wchar_t`|`int`, `long`, `long long`|  
+|From|To|  
+|----------|--------|  
+|Any signed or unsigned integral type except `long long` or `__int64`|`double`|  
+|`bool` or `char`|Any other built-in type|  
+|`short` or `wchar_t`|`int`, `long`, `long long`|  
 |`int`, `long`|`long long`|  
 |`float`|`double`|  
   
-### 窄型轉換 \(強制轉型\)  
- 編譯器默認執行的窄型轉換，但仍會發出可能導致資料遺失的警告訊息。  請謹慎評估這些警告訊息。  當您確定因較大變數的值必定符合較小變數的規格，所以不會發生資料遺失時，請添加明確轉換的指令，讓編譯器停止發出警告訊息。  但如果你無法確定型別轉換是否安全，將執行階段檢查加入程式碼中，以處理可能發生的資料遺失，讓程式不會產生錯誤結果。  如需如何處理這種情況的建議，請參閱 [\(NOTINBUILD\)How to: Handle Narrowing Conversions \(C\+\+\)](http://msdn.microsoft.com/zh-tw/e483237e-501e-4a12-ac24-51526f6ddeaa)。  
+### <a name="narrowing-conversions-coercion"></a>Narrowing conversions (coercion)  
+ The compiler performs narrowing conversions implicitly, but it warns you about potential data loss. Take these warnings very seriously. If you are certain that no data loss will occur because the values in the larger variable will always fit in the smaller variable, then add an explicit cast so that the compiler will no longer issue a warning. If you are not sure that the conversion is safe, add to your code some kind of runtime check to handle possible data loss so that it does not cause your program to produce incorrect results. 
   
- 因為浮點數值的分數部分被捨棄，從浮點型別轉換為整數型別皆為窄型轉換。  
+ Any conversion from a floating point type to an integral type is a narrowing conversion because the fractional portion of the floating point value is discarded and lost.  
   
- 下列範例程式碼顯示了隱含窄型轉換以及編譯器對此所發出的警告。  
+ The following code example shows some implicit narrowing conversions, and the warnings that the compiler issues for them.  
   
 ```cpp  
-  
 int i = INT_MAX + 1; //warning C4307:'+':integral constant overflow  
 wchar_t wch = 'A'; //OK  
 char c = wch; // warning C4244:'initializing':conversion from 'wchar_t'  
@@ -60,16 +75,14 @@ int j = 1.9f; // warning C4244:'initializing':conversion from 'float' to
               // 'int', possible loss of data  
 int k = 7.7; // warning C4244:'initializing':conversion from 'double' to  
              // 'int', possible loss of data  
-  
 ```  
   
-### 帶正負號\-不帶正負號的型別轉換  
- 帶正負號和不帶正負號的資料型別恆為相同大小，其差別在於位元組合對於轉換後所得值的不同解譯。  下列範例程式碼展示同樣的位元組合，如何在帶正負號型別和不帶正負號型別中的值中解譯。  `num` 和 `num2` 中的位元組合值在儲存之後皆不再改變。  
+### <a name="signed---unsigned-conversions"></a>Signed - unsigned conversions  
+ A signed integral type and its unsigned counterpart are always the same size, but they differ in how the bit pattern is interpreted for value transformation. The following code example demonstrates what happens when the same bit pattern is interpreted as a signed value and as an unsigned value. The bit pattern stored in both `num` and `num2` never changes from what is shown in the earlier illustration.  
   
 ```cpp  
-  
 using namespace std;  
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>  
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>  
 short num2 = num;  
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;  
 // Prints: unsigned val = 65535 signed val = -1  
@@ -82,44 +95,40 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
   
 ```  
   
- 請注意值在兩條路徑中皆重新定義。  如果值的正負號與你預期的結果不同，請在程式中尋找是否發生隱含帶正負號—不帶正負號的整數型別轉換。  在下列範例中，當運算式 \(0– 1\) 的結果從 `int` 型別儲存至 `num` 中時，發生隱含轉換至 `unsigned int` 型別的過程。  而這會導致此位元組合重新定義。  
+ Notice that values are reinterpreted in both directions. If your program produces odd results in which the sign of the value seems inverted from what you expect, look for implicit conversions between signed and unsigned integral types. In the following example, the result of the expression ( 0 - 1) is implicitly converted from `int` to `unsigned int` when it's stored in `num`. This causes the bit pattern to be reinterpreted.  
   
 ```cpp  
-  
 unsigned int u3 = 0 - 1;  
 cout << u3 << endl; // prints 4294967295  
   
 ```  
   
- 編譯器不會發出帶正負號和不帶正負號間整數型別隱含轉換的警告訊息。  因此，建議您儘可能避免帶正負號和不帶正負號間的型別轉換。  如果無法避免此狀況，則請將執行階段檢查加入至程式碼中，以檢查轉換的值是否大於或等於零，且小於或等於帶正負號型別的最大值。  在此範圍內的值，若發生帶正負號、不帶正負號型別的轉換，則不用重新定義。  
+ The compiler does not warn about implicit conversions between signed and unsigned integral types. Therefore, we recommend that you avoid signed-to-unsigned conversions altogether. If you can't avoid them, then add to your code a runtime check to detect whether the value being converted is greater than or equal to zero and less than or equal to the maximum value of the signed type. Values in this range will transfer from signed to unsigned or from unsigned to signed without being reinterpreted.  
   
-### 指標轉換  
- C 樣式在許多運算式中，會將陣列隱含轉換至第一個元素的指標，因此，陣列發生常數型別轉換時，不會發出警告訊息。  雖然這很方便，但卻容易發生錯誤。  例如，下列設計的程式碼看似毫無意義，卻仍能在 Visual C\+\+ 中編譯並產生「p」的結果。  首先，「Help」字串常數被轉換為指向第一個元素的 `char*` 指標，接下來此指標增加了3個單位，因此指標最後會指向最後一個元素「p」。  
+### <a name="pointer-conversions"></a>Pointer conversions  
+ In many expressions, a C-style array is implicitly converted to a pointer to the first element in the array, and constant conversions can happen silently. Although this is convenient, it's also potentially error-prone. For example, the following badly designed code example seems nonsensical, and yet it will compile in Visual C++ and produces a result of 'p'. First, the "Help" string constant literal is converted to a `char*` that points to the first element of the array; that pointer is then incremented by three elements so that it now points to the last element 'p'.  
   
 ```cpp  
-  
 char* s = "Help" + 3;  
   
 ```  
   
-## 明確型別轉換 \(轉型\)  
- 使用轉型作業，可以指示編譯器將一個型別的值轉換至另一個型別。  編譯器在兩型別完全無關的狀況下會發生錯誤，但在某些情況下，即使不是型別安全的運作，也不會發出錯誤訊息。  請謹慎使用轉型，因為任何型別的轉換有可能是來源程式的錯誤。  不過，並非所有的轉型都同樣危險，仍然會有必要轉型的時機。  利用轉型的其中一個用途為在您確定轉換不會發生錯誤時，執行窄型轉換。  實際上，這會告訴編譯器您了解程式運行的過程，並停止發出警告訊息。  另一個用途是從衍生類別指標轉型至基底類別指標。  以及轉型成非 `const` 型別的變數，並將此變數傳至限定非`const` 型別引數的函式。  大部分轉型作業含有潛在的風險。  
+## <a name="explicit-conversions-casts"></a>Explicit conversions (casts)  
+ By using a cast operation, you can instruct the compiler to convert a value of one type to another type. The compiler will raise an error in some cases if the two types are completely unrelated, but in other cases it will not raise an error even if the operation is not type-safe. Use casts sparingly because any conversion from one type to another is a potential source of program error. However, casts are sometimes required, and not all casts are equally dangerous. One effective use of a cast is when your code performs a narrowing conversion and you know that the conversion is not causing your program to produce incorrect results. In effect, this tells the compiler that you know what you are doing and to stop bothering you with warnings about it. Another use is to cast from a pointer-to-derived class to a pointer-to-base class. Another use is to cast away the `const`-ness of a variable to pass it to a function that requires a non-`const` argument. Most of these cast operations involve some risk.  
   
- 同一轉型運算子在 C\-style 程式中可為所有的轉型所使用。  
+ In C-style programming, the same C-style cast operator is used for all kinds of casts.  
   
 ```cpp  
-  
 (int) x; // old-style cast, old-style syntax  
 int(x); // old-style cast, functional syntax  
   
 ```  
   
- 因為 C\-style 轉型運算子與呼叫運算子相同，所以容易在程式碼中被忽略。  當兩者同時發生錯誤時，難以一眼就辨識出或搜尋得到，且因本質上的差異，而難與 `static`、 `const`和 `reinterpret_cast` 做搭配。  舊式的型別轉換不僅理解困難且容易發生錯誤。  基於這些原因，如果需要轉型，請利用下列所列的 C\+\+ 轉型運算子，在某些情況下較為型別安全，且清楚表示程式的設計目的：  
+ The C-style cast operator is identical to the call operator () and is therefore inconspicuous in code and easy to overlook. Both are bad because they're difficult to recognize at a glance or search for, and they're disparate enough to invoke any combination of `static`, `const`, and `reinterpret_cast`. Figuring out what an old-style cast actually does can be difficult and error-prone. For all these reasons, when a cast is required, we recommend that you use one of the following C++ cast operators, which in some cases are significantly more type-safe, and which express much more explicitly the programming intent:  
   
--   `static_cast` 只檢查在編譯時期的轉換。  如果編譯器偵測到將完全不相容的型別進行轉型，則 `static_cast` 回傳錯誤。  你也可以利用它進行基底指標和衍生指標之前的轉型，不過編譯器不會每一次都提示何種轉型在執行階段是安全的。  
+-   `static_cast`, for casts that are checked at compile time only. `static_cast` returns an error if the compiler detects that you are trying to cast between types that are completely incompatible. You can also use it to cast between pointer-to-base and pointer-to-derived, but the compiler can't always tell whether such conversions will be safe at runtime.  
   
     ```cpp  
-  
     double d = 1.58947;  
     int i = d;  // warning C4244 possible loss of data  
     int j = static_cast<int>(d);       // No warning.  
@@ -132,12 +141,11 @@ int(x); // old-style cast, functional syntax
   
     ```  
   
-     如需更多詳細資訊，請參閱[靜態建構函式](../cpp/static-cast-operator.md)。  
+     For more information, see [static_cast](../cpp/static-cast-operator.md).  
   
--   `dynamic_cast` 在執行階段檢查基底指標轉型至衍生指標是否安全。  `dynamic_cast` 比要向下轉換的 `static_cast` 具有安全性，但在執行階段檢查會產生額外的負荷。  
+-   `dynamic_cast`, for safe, runtime-checked casts of pointer-to-base to pointer-to-derived. A `dynamic_cast` is safer than a `static_cast` for downcasts, but the runtime check incurs some overhead.  
   
     ```cpp  
-  
     Base* b = new Base();  
   
     // Run-time check to determine whether b is actually a Derived*  
@@ -159,12 +167,11 @@ int(x); // old-style cast, functional syntax
   
     ```  
   
-     如需詳細資訊，請參閱 [dynamic\_cast](../cpp/dynamic-cast-operator.md)。  
+     For more information, see [dynamic_cast](../cpp/dynamic-cast-operator.md).  
   
--   `const_cast` 將變數中  `const` 型別的性質丟棄，或將非 `const` 型別變數轉型成 `const` 型別。  除非和 `const-cast` 型別一同使用，否則利用此運算子丟棄  `const` 型別的性質，將和 C\-style 之轉型一樣容易出錯。  有時候必須丟棄變數中  `const` 型別的性質，舉例來說，需要將 `const` 傳遞至限定接受非 `const` 型別參數的函式。  下列範例顯示如何執行這項工作。  
+-   `const_cast`, for casting away the `const`-ness of a variable, or converting a non-`const` variable to be `const`. Casting away `const`-ness by using this operator is just as error-prone as is using a C-style cast, except that with `const-cast` you are less likely to perform the cast accidentally. Sometimes you have to cast away the `const`-ness of a variable, for example, to pass a `const` variable to a function that takes a non-`const` parameter. The following example shows how to do this.  
   
     ```cpp  
-  
     void Func(double& d) { ... }  
     void ConstCast()  
     {  
@@ -174,17 +181,16 @@ int(x); // old-style cast, functional syntax
   
     ```  
   
-     如需詳細資訊，請參閱 [\/testcontainer](../cpp/const-cast-operator.md)。  
+     For more information, see [const_cast](../cpp/const-cast-operator.md).  
   
--   `reinterpret_cast` 用於不相關型別間的轉型，例如將 `pointer` 型別轉型至 `int` 型別。  
+-   `reinterpret_cast`, for casts between unrelated types such as `pointer` to `int`.  
   
     > [!NOTE]
-    >  此轉型運算子相較其他類較為少用，且不一定能在其他編譯器上使用。  
+    >  This cast operator is not used as often as the others, and it's not guaranteed to be portable to other compilers.  
   
-     以下範例說明 `reinterpret_cast` 與 `static_cast` 之間的不同。  
+     The following example illustrates how `reinterpret_cast` differs from `static_cast`.  
   
     ```cpp  
-  
     const char* str = "hello";  
     int i = static_cast<int>(str);//error C2440: 'static_cast' : cannot  
                                   // convert from 'const char *' to 'int'  
@@ -195,10 +201,10 @@ int(x); // old-style cast, functional syntax
   
     ```  
   
-     如需詳細資訊，請參閱[reinterpret\_cast 運算子](../cpp/reinterpret-cast-operator.md)。  
+     For more information, see [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).  
   
-## 請參閱  
- [C\+\+ 類型系統](../cpp/cpp-type-system-modern-cpp.md)   
- [歡迎回到 C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+ 語言參考](../cpp/cpp-language-reference.md)   
- [C\+\+ Standard Library](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Type System](../cpp/cpp-type-system-modern-cpp.md)   
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

@@ -1,59 +1,76 @@
 ---
-title: "明確的預設和被刪除的函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Explicitly Defaulted and Deleted Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 明確的預設和被刪除的函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 24e7432f8797e1f7835e62c179ef32bca85f7532
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-在 C\+\+11 中，預設和已刪除的函式可讓您明確控制是否要自動產生特殊成員函式。  被刪除的函式也提供您簡單語言，防止在所有類型函式 \(特殊成員函式，一般成員函式和非成員函式\) 的引數中發生有問題的類型提升 \(原本可能會導致不必要的函式呼叫\)。  
+---
+# <a name="explicitly-defaulted-and-deleted-functions"></a>Explicitly Defaulted and Deleted Functions
+In C++11, defaulted and deleted functions give you explicit control over whether the special member functions are automatically generated. Deleted functions also give you simple language to prevent problematic type promotions from occurring in arguments to functions of all types—special member functions, as well as normal member functions and non-member functions—which would otherwise cause an unwanted function call.  
   
-## 明確預設和已刪除的函式的優點  
- 在 C\+\+ 中，如果類型未自動宣告，編譯器會自動產生預設建構函式、複製建構函式、複製指派運算子和解構函式。  這些函式稱為*「特殊成員函式」*\(Special Member Function\)，而且它們可讓 C\+\+ 中簡單使用者定義類型的行為與 C 中的結構相同。  也就是說，您可以建立、複製和終結它們，而不需要任何額外的編碼工作。  C\+\+11 語言引進移動語意，在編譯器可以自動產生的特殊成員函式清單中，加入移動建構函式和移動指派運算子。  
+## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Benefits of explicitly defaulted and deleted functions  
+ In C++, the compiler automatically generates the default constructor, copy constructor, copy-assignment operator, and destructor for a type if it does not declare its own. These functions are known as the *special member functions*, and they are what make simple user-defined types in C++ behave like structures do in C. That is, you can create, copy, and destroy them without any additional coding effort. C++11 brings move semantics to the language and adds the move constructor and move-assignment operator to the list of special member functions that the compiler can automatically generate.  
   
- 這對簡單類型而言十分方便，但是複雜類型通常會自行定義一個或多個特殊成員函式，而且這可以防止自動產生其他特殊成員函式。  實際上：  
+ This is convenient for simple types, but complex types often define one or more of the special member functions themselves, and this can prevent other special member functions from being automatically generated. In practice:  
   
--   如果明確宣告任何建構函式，則不會自動產生任何預設建構函式。  
+-   If any constructor is explicitly declared, then no default constructor is automatically generated.  
   
--   如果明確宣告虛擬解構函式，則不會自動產生任何預設解構函式。  
+-   If a virtual destructor is explicitly declared, then no default destructor is automatically generated.  
   
--   如果已明確宣告移動建構函式或移動指派運算子：  
+-   If a move constructor or move-assignment operator is explicitly declared, then:  
   
-    -   不會自動產生複製建構函式。  
+    -   No copy constructor is automatically generated.  
   
-    -   不會自動產生複製指派運算子。  
+    -   No copy-assignment operator is automatically generated.  
   
--   如果已明確宣告複製建構函式、複製指派運算子、移動建構函式、移動指派運算子或解構函式：  
+-   If a copy constructor, copy-assignment operator, move constructor, move-assignment operator, or destructor is explicitly declared, then:  
   
-    -   不會自動產生移動建構函式。  
+    -   No move constructor is automatically generated.  
   
-    -   不會自動產生移動指派運算子。  
+    -   No move-assignment operator is automatically generated.  
   
 > [!NOTE]
->  此外，C\+\+11 標準指定下列額外規則：  
+>  Additionally, the C++11 standard specifies the following additional rules:  
 >   
->  -   如果已明確宣告複製建構函式或解構函式，則複製指派運算子自動產生為已被取代。  
-> -   如果已明確宣告複製指派運算子或解構函式，則複製建構函式自動產生為已被取代。  
+>  -   If a copy constructor or destructor is explicitly declared, then automatic generation of the copy-assignment operator is deprecated.  
+> -   If a copy-assignment operator or destructor is explicitly declared, then automatic generation of the copy constructor is deprecated.  
 >   
->  在這兩種情況下，Visual Studio 會繼續自動隱含產生必要函式，且不會發出警告。  
+>  In both cases, Visual Studio continues to automatically generate the necessary functions implicitly, and does not emit a warning.  
   
- 這些規則的結果也可能滲入物件階層架構中。  例如，如果基底類別因故無法取得衍生類別可呼叫的預設建構函式 \(也就是不接受任何參數的 `public` 或 `protected` 建構函式\)，則從它衍生的類別無法自動產生自己的預設建構函式。  
+ The consequences of these rules can also leak into object hierarchies. For example, if for any reason a base class fails to have a default constructor that's callable from a deriving class—that is, a `public` or `protected` constructor that takes no parameters—then a class that derives from it cannot automatically generate its own default constructor.  
   
- 這些規則會讓應該簡單的實作、使用者定義類型和一般 C\+\+ 慣用語更加複雜；例如，私下宣告複製建構函式和複製指派運算子，但未進行定義，以將使用者定義類型設定為不可複製。  
+ These rules can complicate the implementation of what should be straight-forward, user-defined types and common C++ idioms—for example, making a user-defined type non-copyable by declaring the copy constructor and copy-assignment operator privately and not defining them.  
   
 ```  
 struct noncopyable  
@@ -66,17 +83,17 @@ private:
 };  
 ```  
   
- 在 C\+\+11 之前，此程式碼片段是不可複製類型的慣用語表單。  不過，它有數個問題：  
+ Before C++11, this code snippet was the idiomatic form of non-copyable types. However, it has several problems:  
   
--   必須私下宣告複製建構函式以將其隱藏，但是，因為它已完全進行宣告，所以無法自動產生預設建構函式。  如果您需要預設建構函式，則必須明確地定義預設建構函式，即使它不執行任何動作也是一樣。  
+-   The copy constructor has to be declared privately to hide it, but because it’s declared at all, automatic generation of the default constructor is prevented. You have to explicitly define the default constructor if you want one, even if it does nothing.  
   
--   即使明確定義的預設建構函式不執行任何動作，編譯器還是會將它視為非一般。  其效率比自動產生的預設建構函式還要低，而且會防止 `noncopyable` 變成真正的 POD 類型。  
+-   Even if the explicitly-defined default constructor does nothing, it's considered non-trivial by the compiler. It's less efficient than an automatically generated default constructor and prevents `noncopyable` from being a true POD type.  
   
--   即使外部程式碼看不見複製建構函式和複製指派運算子，`noncopyable` 的成員函式和 friend 仍可以看見及呼叫它們。  如果宣告但未定義它們，則呼叫它們會導致連結器錯誤。  
+-   Even though the copy constructor and copy-assignment operator are hidden from outside code, the member functions and friends of `noncopyable` can still see and call them. If they are declared but not defined, calling them causes a linker error.  
   
--   雖然這是普遍接受的慣用語，但是用意不清楚，除非您了解自動產生特殊成員函式的所有規則。  
+-   Although this is a commonly accepted idiom, the intent is not clear unless you understand all of the rules for automatic generation of the special member functions.  
   
- 在 C\+\+11 中，non\-copyable 慣用語可以用更直接的方式來實作。  
+ In C++11, the non-copyable idiom can be implemented in a way that is more straightforward.  
   
 ```  
 struct noncopyable  
@@ -87,22 +104,22 @@ struct noncopyable
 };  
 ```  
   
- 請注意如何解決 C\+\+11 之前的慣用語問題：  
+ Notice how the problems with the pre-C++11 idiom are resolved:  
   
--   預設建構函式的產生仍是透過宣告複製建構函式加以避免，但是您可以明確預設以再次產生預設建構函式。  
+-   Generation of the default constructor is still prevented by declaring the copy constructor, but you can bring it back by explicitly defaulting it.  
   
--   明確預設的特殊成員函式仍視為一般，因此不會對效能造成負面影響，而且不會防止 `noncopyable` 成為真正的 POD 類型。  
+-   Explicitly defaulted special member functions are still considered trivial, so there is no performance penalty, and `noncopyable` is not prevented from being a true POD type.  
   
--   複製建構函式和複製指派運算子是公用的，但已遭刪除。  它是定義或呼叫已刪除函式的編譯時期錯誤。  
+-   The copy constructor and copy-assignment operator are public but deleted. It is a compile-time error to define or call a deleted function.  
   
--   意圖對所有了解 `=default` 和 `=delete` 的人來說很清楚。  您不需要了解自動產生特殊成員函式的規則。  
+-   The intent is clear to anyone who understands `=default` and `=delete`. You don't have to understand the rules for automatic generation of special member functions.  
   
- 具有類似的慣用語，可產生不可移動、只能動態配置或無法動態配置的使用者定義類型。  所有這些慣用語都有 C\+\+11 之前的實作，而這些實作發生類似的問題，而且同樣可在 C\+\+11 中獲得解決，方法是根據預設和已刪除的特殊成員函式來實作它們。  
+ Similar idioms exist for making user-defined types that are non-movable, that can only be dynamically allocated, or that cannot be dynamically allocated. Each of these idioms have pre-C++11 implementations that suffer similar problems, and that are similarly resolved in C++11 by implementing them in terms of defaulted and deleted special member functions.  
   
-## 明確預設函式  
- 您可以預設任何特殊成員函式：明確陳述特殊成員函式使用預設實作、定義具有非公用存取限定詞的特殊成員函式，或復原在其他情況下無法自動產生的特殊成員函式。  
+## <a name="explicitly-defaulted-functions"></a>Explicitly defaulted functions  
+ You can default any of the special member functions—to explicitly state that the special member function uses the default implementation, to define the special member function with a non-public access qualifier, or to reinstate a special member function whose automatic generation was prevented by other circumstances.  
   
- 透過宣告，即可預設特殊成員函式宣告 \(如此範例所示\)：  
+ You default a special member function by declaring it as in this example:  
   
 ```  
 struct widget  
@@ -115,15 +132,12 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;  
 ```  
   
- 請注意，只要特殊成員函式是可內嵌的，您就可以在類別主體外部預設特殊成員函式。  
+ Notice that you can default a special member function outside the body of a class as long as it’s inlinable.  
   
- 因為一般特殊成員函式的效能優勢，建議您在想要預設行為時偏好使用透過空白函式主體自動產生的特殊成員函式。  做法是明確預設特殊成員函式，或不予宣告 \(也不宣告會防止自動產生它的其他特殊成員函式\)。  
+ Because of the performance benefits of trivial special member functions, we recommend that you prefer automatically generated special member functions over empty function bodies when you want the default behavior. You can do this either by explicitly defaulting the special member function, or by not declaring it (and also not declaring other special member functions that would prevent it from being automatically generated.)  
   
-> [!NOTE]
->  因為 C\+\+11 標準規定，[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 不支援預設的移動建構函式或移動指派運算子。  如需詳細資訊，請參閱 [C\+\+11\/14\/17 功能的支援](../cpp/support-for-cpp11-14-17-features-modern-cpp.md)中的＜預設和已刪除的函式＞一節。  
-  
-## 已刪除的函式  
- 您可以刪除特殊成員函式以及一般成員函式和非成員函式，以防止定義或呼叫它們。  刪除特殊成員函式，提供更簡潔的方法來防止編譯器產生您不想要的特殊成員函式。  函式必須在宣告時被刪除；不能透過可以先宣告再預設函式的方式之後刪除。  
+## <a name="deleted-functions"></a>Deleted functions  
+ You can delete special member functions as well as normal member functions and non-member functions to prevent them from being defined or called. Deleting of special member functions provides a cleaner way of preventing the compiler from generating special member functions that you don’t want. The function must be deleted as it is declared; it cannot be deleted afterwards in the way that a function can be declared and then later defaulted.  
   
 ```  
 struct widget  
@@ -133,7 +147,7 @@ struct widget
 };  
 ```  
   
- 刪除一般成員函式或非成員函式，可防止有問題的類型提升呼叫非預期的函式。  這種方式適用，因為已刪除的函式仍參與多載解析，而且提供的相符程度高於提升類型之後可呼叫的函式。  函式呼叫解析為更特定、但已刪除的函式，且造成編譯器錯誤。  
+ Deleting of normal member function or non-member functions prevents problematic type promotions from causing an unintended function to be called. This works because deleted functions still participate in overload resolution and provide a better match than the function that could be called after the types are promoted. The function call resolves to the more-specific—but deleted—function and causes a compiler error.  
   
 ```  
 // deleted overload prevents call through type promotion of float to double from succeeding.  
@@ -141,7 +155,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }  
 ```  
   
- 請注意，在上述範例中，使用 `call_with_true_double_only` 引數呼叫 `float` 會造成編譯器錯誤，但如果使用 `call_with_true_double_only` 引數呼叫 `int` 卻不會導致問題。在 `int` 案例中，引數會從 `int` 提升為 `double` 並成功呼叫 `double` 版本的函式，即使這不是一開始的目的。  若要確定使用 non\-double 引數呼叫這個函式會造成編譯器錯誤，您可以宣告被刪除的函式的範本版本。  
+ Notice in the preceding sample that calling `call_with_true_double_only` by using a `float` argument would cause a compiler error, but calling `call_with_true_double_only` by using an `int` argument would not; in the `int` case, the argument will be promoted from `int` to `double` and successfully call the `double` version of the function, even though that might not be what’s intended. To ensure that any call to this function by using a non-double argument causes a compiler error, you can declare a template version of the function that’s deleted.  
   
 ```  
 template < typename T >  

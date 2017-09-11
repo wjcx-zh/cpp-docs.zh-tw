@@ -1,32 +1,49 @@
 ---
-title: "一般規則和限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: General Rules and Limitations | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 一般規則和限制
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 722fabfa40045883ac7d3dcdbf5a1eb159439551
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-## Microsoft 特定的  
+---
+# <a name="general-rules-and-limitations"></a>General Rules and Limitations
+## <a name="microsoft-specific"></a>Microsoft Specific  
   
--   如果您宣告的函式或物件未具有 **dllimport** 或 `dllexport` 屬性，則此函式或物件不會視為 DLL 介面的一部分。  因此，函式或物件的定義必須存在該模組中，或是相同程式的另一個模組中。  若要讓函式或物件成為 DLL 介面的一部分，您必須在另一個模組中將函式或物件的定義宣告為 `dllexport`。  否則會產生連結器錯誤。  
+-   If you declare a function or object without the **dllimport** or `dllexport` attribute, the function or object is not considered part of the DLL interface. Therefore, the definition of the function or object must be present in that module or in another module of the same program. To make the function or object part of the DLL interface, you must declare the definition of the function or object in the other module as `dllexport`. Otherwise, a linker error is generated.  
   
-     如果您宣告的函式或物件具有 `dllexport` 屬性，則其定義必須出現在相同程式的一些模組中。  否則會產生連結器錯誤。  
+     If you declare a function or object with the `dllexport` attribute, its definition must appear in some module of the same program. Otherwise, a linker error is generated.  
   
--   如果您程式中的單一模組同時包含相同函式或物件的 **dllimport** 和 `dllexport` 宣告，則 `dllexport` 屬性會優先於 **dllimport** 屬性。  不過，這樣會產生編譯器警告。  例如：  
+-   If a single module in your program contains both **dllimport** and `dllexport` declarations for the same function or object, the `dllexport` attribute takes precedence over the **dllimport** attribute. However, a compiler warning is generated. For example:  
   
     ```  
     __declspec( dllimport ) int i;  
@@ -34,7 +51,7 @@ caps.handback.revision: 7
                                      // dllexport takes precedence.  
     ```  
   
--   在 C\+\+ 中，您可以初始化一個全域宣告或靜態區域資料指標，或者使用以 **dllimport** 屬性宣告的資料物件位址，這些動作在 C 中會產生錯誤。  此外，您可以使用以 **dllimport** 屬性宣告的函式位址初始化靜態區域函式指標。  在 C 中，此類指派會將指標設定為 DLL 匯入 Thunk \(將控制權傳送至函式的程式碼 Stub\) 的位址，而不是設定為函式的位址。  在 C\+\+ 中，它會將指標設定為函式的位址。  例如：  
+-   In C++, you can initialize a globally declared or static local data pointer or with the address of a data object declared with the **dllimport** attribute, which generates an error in C. In addition, you can initialize a static local function pointer with the address of a function declared with the **dllimport** attribute. In C, such an assignment sets the pointer to the address of the DLL import thunk (a code stub that transfers control to the function) rather than the address of the function. In C++, it sets the pointer to the address of the function. For example:  
   
     ```  
     __declspec( dllimport ) void func1( void );  
@@ -52,7 +69,7 @@ caps.handback.revision: 7
     }  
     ```  
   
-     不過，由於物件宣告中包含 `dllexport` 屬性的程式必須在程式的某個位置為該物件提供定義，因此您可以使用 `dllexport` 函式的位址初始化全域或區域靜態函式指標。  同樣地，您可以使用 `dllexport` 資料物件的位址初始化全域或區域靜態資料指標。  例如，下列程式碼不會在 C 或 C\+\+ 中產生錯誤：  
+     However, because a program that includes the `dllexport` attribute in the declaration of an object must provide the definition for that object somewhere in the program, you can initialize a global or local static function pointer with the address of a `dllexport` function. Similarly, you can initialize a global or local static data pointer with the address of a `dllexport` data object. For example, the following code does not generate errors in C or C++:  
   
     ```  
     __declspec( dllexport ) void func1( void );  
@@ -68,9 +85,9 @@ caps.handback.revision: 7
     }  
     ```  
   
--   由於 Visual C\+\+ .NET 中引入的行為變更，會讓 `dllexport` 的應用程式在類別樣板的一般類別和特製化之間更為一致，因此，如果您將 `dllexport` 套用至具有基底類別的一般類別，而該基底類別並未標記為 `dllexport`，則編譯器會產生 C4275。  
+-   Because of a change in behavior introduce in Visual C++ .NET to make the application of `dllexport` more consistent between regular classes and specializations of class templates, if you apply `dllexport` to a regular class that has a base class that is not marked as `dllexport`, the compiler will generate C4275.  
   
-     如果基底類別是類別樣板的特製化，則編譯器會產生相同的警告。  若要解決這個問題，請為基底類別加上 `dllexport` 標記。  類別樣板特製化的問題是要在何處放置 **\_\_declspec\(dllexport\)**，因為您無法標記類別樣板。  相反地，您可以明確的具現化類別樣板，以及明確地使用 `dllexport` 標記具現化。  例如：  
+     The compiler generates the same warning if the base class is a specialization of a class template. To work around this, mark the base-class with `dllexport`. The problem with a specialization of a class template is where to place the **__declspec(dllexport)**; you are not allowed to mark the class template. Instead, explicitly instantiate the class template and mark this explicit instantiation with `dllexport`. For example:  
   
     ```  
     template class __declspec(dllexport) B<int>;  
@@ -78,21 +95,21 @@ caps.handback.revision: 7
     // ...  
     ```  
   
-     如果樣板引數為衍生類別，則這個解決方法會失敗。  例如：  
+     This workaround fails if the template argument is the deriving class. For example:  
   
     ```  
     class __declspec(dllexport) D : public B<D> {  
     // ...  
     ```  
   
-     因為這是使用樣板的通用樣式，而當編譯器在將 `dllexport` 套用至具有一個或多個基底類別的類別，以及有一個或多個基底類別是類別樣板的特製化時，會改變它的語意。  在這種情況下，編譯器會以隱含方式將 `dllexport` 套用至類別樣板的特製化。  在 Visual C\+\+ .NET 中，使用者可以執行下列動作而不會收到警告：  
+     Because this is common pattern with templates, the compiler changed the semantics of `dllexport` when it is applied to a class that has one or more base-classes and when one or more of the base classes is a specialization of a class template. In this case, the compiler implicitly applies `dllexport` to the specializations of class templates. In Visual C++ .NET, a user can do the following and not get a warning:  
   
     ```  
     class __declspec(dllexport) D : public B<D> {  
     // ...  
     ```  
   
-## END Microsoft 特定的  
+**END Microsoft Specific**  
   
-## 請參閱  
- [dllexport、dllimport](../cpp/dllexport-dllimport.md)
+## <a name="see-also"></a>See Also  
+ [dllexport, dllimport](../cpp/dllexport-dllimport.md)

@@ -1,41 +1,57 @@
 ---
-title: "__func__ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__func__"
-  - "__func___cpp"
-dev_langs: 
-  - "C++"
+title: __func__ | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __func__
+- __func___cpp
+dev_langs:
+- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
 caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# __func__
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 1f53837966ba451b2a246d21b8b34b5f027d7aac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-**\(C\+\+11\)** 預先定義的識別項 \_\_func\_\_ 以隱含方式定義為字串，其中包含封入函式的不合格及未修飾名稱。  \_\_func\_\_ 由 C\+\+ 標準所託管，而且不是 Microsoft 擴充功能。  
+---
+# <a name="func"></a>__func__
+**(C++11)** The predefined identifier __func\_\_ is implicitly defined as a string that contains the unqualified and unadorned name of the enclosing function. \__func\_\_ is mandated by the C++ standard and is not a Microsoft extension.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
-```vb  
+```cpp  
 __func__  
 ```  
   
-## 傳回值  
- 傳回以 null 結束的字元 const char 陣列，其中包含函式名稱。  
+## <a name="return-value"></a>Return Value  
+ Returns a null-terminated const char array of characters that constains the function name.  
   
-## 範例  
+## <a name="example"></a>Example  
   
 ```  
   
@@ -61,5 +77,5 @@ int main()
   
 ```  
   
-## 需求  
- C\+\+11
+## <a name="requirements"></a>Requirements  
+ C++11

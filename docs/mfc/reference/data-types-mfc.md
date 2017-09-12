@@ -1,57 +1,75 @@
 ---
-title: "資料類型 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LPCRECT"
-  - "POSITION"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Boolean 資料類型 [C++], 支援的資料類型"
-  - "BYTE 資料類型 (Windows)"
-  - "COLORREF"
-  - "資料類型 [C++], MFC"
-  - "DWORD 運算子"
-  - "Long 資料類型, Windows 類型"
-  - "LPARAM 資料類型"
-  - "LPCRECT 資料類型"
-  - "LPCSTR"
-  - "LPCTSTR"
-  - "LPSTR"
-  - "LPTSTR"
-  - "LPVOID 資料類型"
-  - "LRESULT"
-  - "POSITION 資料類型"
-  - "UINT"
-  - "WORD 資料類型"
-  - "WPARAM 資料類型"
+title: Data Types (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LPCRECT
+- POSITION
+dev_langs:
+- C++
+helpviewer_keywords:
+- LPCRECT data type [MFC]
+- WPARAM data type [MFC]
+- data types [MFC], MFC
+- LRESULT [MFC]
+- POSITION data type [MFC]
+- UINT [MFC]
+- LPVOID data type [MFC]
+- COLORREF [MFC]
+- LPCTSTR [MFC]
+- LPSTR [MFC]
+- DWORD operator [MFC]
+- WORD data type [MFC]
+- LPTSTR [MFC]
+- BYTE data type (Windows)
+- Long data type [MFC], Windows types
+- Boolean data type [MFC], supported data types
+- LPARAM data type [MFC]
+- LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 資料類型 (MFC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 88d40ab60e26647b840d673948b376c5549db137
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本主題列出資料型別最常用在 MFC 程式庫。  而其他的 MFC，是唯一大部分的資料型別與 Platform Software Development Kit \(SDK\)。  
+---
+# <a name="data-types-mfc"></a>Data Types (MFC)
+This topic lists the data types most commonly used in the Microsoft Foundation Class Library. Most of the data types are the same as those in the Platform Software Development Kit (SDK), while others are unique to MFC.  
   
- 如需 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 和 MFC 資料型別的詳細資訊，請參閱 [視窗資料型別](http://msdn.microsoft.com/library/windows/desktop/aa383751)。  
+ For information about the data types used in both the             Windows SDK and MFC, see             [Windows Data Types](http://msdn.microsoft.com/library/windows/desktop/aa383751).  
   
- 資料型別特有 MFC 程式庫包括下列:  
+ Data types unique to the Microsoft Foundation Class Library include the following:  
   
--   在集合中的項目表示的位置**POSITION** 的值;使用由 MFC 集合類別。  
+-   **POSITION** A value used to denote the position of an element in a collection; used by MFC collection classes.  
   
--   對常數 \(不可修改的\) `RECT` 結構的**LPCRECT** 的 32 位元指標。  
+-   **LPCRECT** A 32-bit pointer to a constant (nonmodifiable)                     `RECT` structure.  
   
-## 請參閱  
- [類別概觀](../../mfc/class-library-overview.md)   
- [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../../mfc/class-library-overview.md)   
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
+

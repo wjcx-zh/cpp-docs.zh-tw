@@ -1,65 +1,84 @@
 ---
-title: "程式庫命名慣例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "編碼慣例, MFC 程式庫名稱"
-  - "主控台應用程式, MFC 程式庫版本"
-  - "慣例 [C++], MFC 程式庫名稱"
-  - "程式庫 [C++], static"
-  - "MFC 程式庫, 命名規範"
-  - "NAFXCW.LIB"
-  - "NAFXCWD.LIB"
-  - "命名慣例 [C++], MFC 目的碼程式庫"
-  - "目的碼程式庫"
-  - "目的碼程式庫, MFC 命名慣例"
+title: Library Naming Conventions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- NAFXCW.LIB [MFC]
+- libraries [MFC], static
+- coding conventions [MFC], MFC library names
+- NAFXCWD.LIB [MFC]
+- console applications [MFC], MFC library versions
+- naming conventions [MFC], MFC object code libraries
+- object code libraries, MFC naming conventions
+- object code libraries
+- conventions [MFC], MFC library names
+- MFC libraries, naming conventions
 ms.assetid: 39fe7d93-5a14-4c6a-b16c-bf318fa01278
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 程式庫命名慣例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5507c0565207978793168cc7c38798e38375c007
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 物件的程式碼程式庫使用下列命名慣例。  程式庫名稱的格式  
+---
+# <a name="library-naming-conventions"></a>Library Naming Conventions
+Object-code libraries for MFC use the following naming conventions. The library names have the form  
   
- *u*AFX`c`W`d`.LIB  
+ *u*AFX*c*W*d*.LIB  
   
- 其中以斜體顯示小寫字母的，是指定名稱的標示，其意義如下表所示：  
+ where the letters shown in italic lowercase are placeholders for specifiers whose meanings are shown in the following table:  
   
-### 程式庫命名慣例  
+### <a name="library-naming-conventions"></a>Library Naming Conventions  
   
-|指定名稱|值和意義|  
-|----------|----------|  
-|*u*|ANSI \(N\) 或 Unicode \(U\)|  
-|`c`|要建立的專案類型：C\=all|  
-|`d`|偵錯或發行：D\=偵錯 \(Debug\)；省略指定名稱\=發行 \(Release\)|  
+|Specifier|Values and meanings|  
+|---------------|-------------------------|  
+|*u*|ANSI (N) or Unicode (U)|  
+|*c*|Type of program to create: C=all|  
+|*d*|Debug or Release: D=Debug; omit specifier for Release|  
   
- 預設值為建立在 Intel 平台上的偵錯 Windows ANSI 應用程式：NAFXCWD.Lib。  下表列出的所有程式庫是預先建置在 Visual C\+\+ CD\-ROM 的 \\atlmfc\\ lib 目錄中。  
+ The default is to build a debug Windows ANSI application for the Intel platform: NAFXCWD.Lib. All libraries listed in the following table are included prebuilt in the \atlmfc\lib directory.  
   
-### 靜態連結程式庫命名慣例  
+### <a name="static-link-library-naming-conventions"></a>Static-Link Library Naming Conventions  
   
-|程式庫|說明|  
-|---------|--------|  
-|NAFXCW.LIB|MFC 靜態連結程式庫，發行版本|  
-|NAFXCWD.LIB|MFC 靜態連結程式庫，偵錯版本|  
-|UAFXCW.LIB|MFC 靜態連結程式庫 \(附 Unicode 支援\)，發行版本|  
-|UAFXCWD.LIB|MFC 靜態連結程式庫 \(附 Unicode 支援\)，偵錯版本|  
+|Library|Description|  
+|-------------|-----------------|  
+|NAFXCW.LIB|MFC Static-Link Library, Release version|  
+|NAFXCWD.LIB|MFC Static-Link Library, Debug version|  
+|UAFXCW.LIB|MFC Static-Link Library with Unicode support, Release version|  
+|UAFXCWD.LIB|MFC Static-Link Library with Unicode support, Debug version|  
   
 > [!NOTE]
->  如果您需要建立程式庫版本，請查看 \\atlmfc\\src\\mfc 目錄的 Readme.Txt 檔案。  這個檔案會描述使用 NMAKE 提供的 Makefile。  
+>  If you need to build a library version, see the Readme.Txt file in the \atlmfc\src\mfc directory. This file describes using the supplied makefile with NMAKE.  
   
- 如需詳細資訊，請參閱 [MFC DLL 的命名慣例](../build/naming-conventions-for-mfc-dlls.md) 和 [MFC 程式庫的 Unicode 版本](../mfc/unicode-in-mfc.md)。  
+ For more information, see [Naming Conventions for MFC DLLs](../build/naming-conventions-for-mfc-dlls.md) and [Unicode Versions of the MFC Libraries](../mfc/unicode-in-mfc.md).  
   
-## 請參閱  
- [MFC 程式庫版本](../mfc/mfc-library-versions.md)
+## <a name="see-also"></a>See Also  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)
+
+

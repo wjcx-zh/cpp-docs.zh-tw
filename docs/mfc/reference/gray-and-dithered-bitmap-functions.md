@@ -1,5 +1,5 @@
 ---
-title: "灰色和遞色點陣圖函式 |Microsoft 文件"
+title: Gray and Dithered Bitmap Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- gray and dithered bitmap functions
+- gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
 caps.latest.revision: 13
 author: mikeblome
@@ -36,38 +36,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: b8b6f43917dfe211f477b3dde0c94323015d18b2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8263f93b440be22916dd3597c4093005255455a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="gray-and-dithered-bitmap-functions"></a>灰色和遞色點陣圖函式
-**灰色點陣圖函式**  
+# <a name="gray-and-dithered-bitmap-functions"></a>Gray and Dithered Bitmap Functions
+**Gray Bitmap Functions**  
   
- MFC 提供兩個函式來提供點陣圖已停用控制項的外觀。  
+ MFC provides two functions for giving a bitmap the appearance of a disabled control.  
   
- ![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
-  
-|||  
-|-|-|  
-|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|繪製點陣圖的灰色版本。|  
-|[AfxGetGrayBitmap](#afxgetgraybitmap)|複製點陣圖的灰色版本。|  
-  
- **遞色的點陣圖函式**  
-  
- MFC 也提供兩個函式將點陣圖的背景取代為遞色圖樣。  
-  
- ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Comparison of gray and original icon versions](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
 |||  
 |-|-|  
-|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|繪製遞色背景的點陣圖。|  
-|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|複製遞色背景的點陣圖。|  
+|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|Draws a gray version of a bitmap.|  
+|[AfxGetGrayBitmap](#afxgetgraybitmap)|Copies a gray version of a bitmap.|  
   
-##  <a name="afxdrawgraybitmap"></a>AfxDrawGrayBitmap  
- 繪製點陣圖的灰色版本。  
+ **Dithered Bitmap Functions**  
+  
+ MFC also provides two functions for replacing a bitmap's background with a dithered pattern.  
+  
+ ![Comparison of dithered and original icon versions](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+  
+|||  
+|-|-|  
+|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|Draws a bitmap with a dithered background.|  
+|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|Copies a bitmap with a dithered background.|  
+  
+##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap  
+ Draws a gray version of a bitmap.  
   
 ```   
 void AFXAPI AfxDrawGrayBitmap(
@@ -78,35 +78,35 @@ void AFXAPI AfxDrawGrayBitmap(
     COLORREF crBackground); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向目的地 DC。  
+ Points to the destination DC.  
   
  *x*  
- 目的地 x 座標。  
+ The destination x-coordinate.  
   
  *y*  
- 目的地 y 座標。  
+ The destination y-coordinate.  
   
  `rSrc`  
- 來源點陣圖。  
+ The source bitmap.  
   
  `crBackground`  
- 新的背景色彩 (通常是灰色，例如 COLOR_MENU)。  
+ The new background color (typically gray, such as COLOR_MENU).  
   
-### <a name="remarks"></a>備註  
- 使用 `AfxDrawGrayBitmap` 繪製的點陣圖，外觀為已停用的控制項。  
+### <a name="remarks"></a>Remarks  
+ A bitmap drawn with `AfxDrawGrayBitmap` will have the appearance of a disabled control.  
   
- ![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Comparison of gray and original icon versions](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&191;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
-##  <a name="afxgetgraybitmap"></a>AfxGetGrayBitmap  
- 複製點陣圖的灰色版本。  
+##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap  
+ Copies a gray version of a bitmap.  
   
 ```   
 void AFXAPI AfxGetGrayBitmap(
@@ -115,29 +115,29 @@ void AFXAPI AfxGetGrayBitmap(
     COLORREF crBackground); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rSrc`  
- 來源點陣圖。  
+ The source bitmap.  
   
  `pDest`  
- 目的點陣圖。  
+ The destination bitmap.  
   
  `crBackground`  
- 新的背景色彩 (通常是灰色，例如 COLOR_MENU)。  
+ The new background color (typically gray, such as COLOR_MENU).  
   
-### <a name="remarks"></a>備註  
- 使用 `AfxGetGrayBitmap` 複製的點陣圖，外觀上會有已停用的控制項。  
+### <a name="remarks"></a>Remarks  
+ A bitmap copied with `AfxGetGrayBitmap` will have the appearance of a disabled control.  
   
- ![灰色和原本圖示版本的比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
+ ![Comparison of gray and original icon versions](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&193;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap  
- 繪製點陣圖，以遞色 （檢查程式） 樣式取代它的背景。  
+##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
+ Draws a bitmap, replacing its background with a dithered (checker) pattern.  
   
 ```   
 void AFXAPI AfxDrawDitheredBitmap(
@@ -149,39 +149,39 @@ void AFXAPI AfxDrawDitheredBitmap(
     COLORREF cr2); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向目的地 DC。  
+ Points to the destination DC.  
   
  *x*  
- 目的地 x 座標。  
+ The destination x-coordinate.  
   
  *y*  
- 目的地 y 座標。  
+ The destination y-coordinate.  
   
  `rSrc`  
- 來源點陣圖。  
+ The source bitmap.  
   
  `cr1`  
- 兩個遞色色彩之一，通常為白色。  
+ One of the two dither colors, typically white.  
   
  `cr2`  
- 另一個遞色色彩，通常是淺灰色 (COLOR_MENU)。  
+ The other dither color, typically light gray (COLOR_MENU).  
   
-### <a name="remarks"></a>備註  
- 含有兩個色彩的目的地 DC 上繪製的來源點陣圖 (`cr1`和`cr2`) 棋盤式的圖樣取代點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。  
+### <a name="remarks"></a>Remarks  
+ The source bitmap is drawn on the destination DC with a two-color ( `cr1` and `cr2`) checkered pattern replacing the bitmap's background. The background of the source bitmap is defined as its white pixels and all pixels matching the color of the pixel in the upper-left corner of the bitmap.  
   
- ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Comparison of dithered and original icon versions](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&190;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
 
-##  <a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap  
- 複製點陣圖，以遞色 (檢查程式) 樣式取代它的背景。  
+##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap  
+ Copies a bitmap, replacing its background with a dithered (checker) pattern.  
   
 ```   
 void AFXAPI AfxGetDitheredBitmap(
@@ -191,30 +191,30 @@ void AFXAPI AfxGetDitheredBitmap(
     COLORREF cr2); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rSrc`  
- 來源點陣圖。  
+ The source bitmap.  
   
  `pDest`  
- 目的點陣圖。  
+ The destination bitmap.  
   
  `cr1`  
- 兩個遞色色彩之一，通常為白色。  
+ One of the two dither colors, typically white.  
   
  `cr2`  
- 另一個遞色色彩，通常是淺灰色 (COLOR_MENU)。  
+ The other dither color, typically light gray (COLOR_MENU).  
   
-### <a name="remarks"></a>備註  
- 將來源點陣圖複製到目的地點陣圖與兩個色彩 (`cr1`和`cr2`) 棋盤式的圖樣取代來源點陣圖的背景。 來源點陣圖的背景會定義為其白色像素，以及符合點陣圖左上角像素色彩的所有像素。  
+### <a name="remarks"></a>Remarks  
+ The source bitmap is copied to the destination bitmap with a two-color ( `cr1` and `cr2`) checkered pattern replacing the source bitmap's background. The background of the source bitmap is defined as its white pixels and all pixels matching the color of the pixel in the upper-left corner of the bitmap.  
   
- ![遞色和原本圖示版本的比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
+ ![Comparison of dithered and original icon versions](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&192;](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

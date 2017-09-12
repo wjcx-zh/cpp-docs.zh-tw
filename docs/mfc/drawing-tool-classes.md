@@ -1,53 +1,72 @@
 ---
-title: "繪圖工具類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.drawing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "繪製, 工具類別"
-  - "輸出類別"
-  - "螢幕輸出類別"
+title: Drawing Tool Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.drawing
+dev_langs:
+- C++
+helpviewer_keywords:
+- drawing [MFC], tool classes
+- screen output classes [MFC]
+- output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 繪圖工具類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d7b9378bacf343d02d204a679afc7295792c6d8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這些類別會封裝在裝置內容用來繪製的繪圖工具。  
+---
+# <a name="drawing-tool-classes"></a>Drawing Tool Classes
+These classes encapsulate drawing tools that are used to draw on a device context.  
   
  [CGdiObject](../mfc/reference/cgdiobject-class.md)  
- GDI 繪製工具的基底類別。  
+ The base class for GDI drawing tools.  
   
  [CBrush](../mfc/reference/cbrush-class.md)  
- 封裝可以選取做為這個目前的筆刷在裝置內容的 GDI 筆刷。  針對填滿筆刷繪製的物件內部使用。  
+ Encapsulates a GDI brush that can be selected as the current brush in a device context. Brushes are used for filling interiors of objects being drawn.  
   
  [CPen](../mfc/reference/cpen-class.md)  
- 封裝可以選取做為這個目前筆在裝置內容的 GDI 畫筆。  為畫筆繪製物件框線使用。  
+ Encapsulates a GDI pen that can be selected as the current pen in a device context. Pens are used for drawing the border lines of objects.  
   
  [CFont](../mfc/reference/cfont-class.md)  
- 封裝可以選取做為目前字型在裝置內容的 GDI 字型。  
+ Encapsulates a GDI font that can be selected as the current font in a device context.  
   
  [CBitmap](../mfc/reference/cbitmap-class.md)  
- 封裝 GDI 點陣圖，提供介面為操作的點陣圖。  
+ Encapsulates a GDI bitmap, providing an interface for manipulating bitmaps.  
   
  [CPalette](../mfc/reference/cpalette-class.md)  
- 封裝一個 GDI 調色盤當做應用程式和一組色彩輸出裝置之間的介面 \(例如顯示。  
+ Encapsulates a GDI color palette for use as an interface between the application and a color output device such as a display.  
   
  [CRectTracker](../mfc/reference/crecttracker-class.md)  
- 顯示及處理調整大小和移動矩形物件的使用者介面。  
+ Displays and handles the user interface for resizing and moving rectangular objects.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

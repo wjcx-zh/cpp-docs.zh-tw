@@ -1,51 +1,70 @@
 ---
-title: "Automation 用戶端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automation 用戶端"
-  - "用戶端"
-  - "用戶端, Automation"
-  - "類型程式庫, Automation 用戶端"
+title: Automation Clients | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- clients, Automation
+- Automation clients
+- type libraries, Automation clients
+- clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Automation 用戶端
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e6ae8b10687d7ff99ee6b980c89768f9d757be28
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Automation 可讓您的應用程式可以操作在另一個應用程式實作的物件，或者公開物件，因此可以操作。  Automation 用戶端可以操作屬於另一個應用程式的已公開物件的應用程式。  公開物件的應用程式呼叫 Automation 伺服程式。  用戶端可以存取其屬性和函式管理伺服器應用程式的物件。  
+---
+# <a name="automation-clients"></a>Automation Clients
+Automation makes it possible for your application to manipulate objects implemented in another application, or to expose objects so they can be manipulated. An Automation client is an application that can manipulate exposed objects belonging to another application. The application that exposes the objects is called the Automation server. The client manipulates the server application's objects by accessing those objects' properties and functions.  
   
-### Automation 用戶端的型別  
- 用戶端自動化有兩種：  
+### <a name="types-of-automation-clients"></a>Types of Automation Clients  
+ There are two types of Automation clients:  
   
--   的用戶端 \(在執行階段\) 以動態方式取得與伺服器的屬性和作業的相關資訊。  
+-   Clients that dynamically (at run time) acquire information about the properties and operations of the server.  
   
--   擁有靜態資訊的用戶端 \(提供在編譯時期\) 指定伺服器的屬性和作業。  
+-   Clients that possess static information (provided at compile time) that specifies the properties and operations of the server.  
   
- 第一個類型取得資訊的用戶端與伺服器的方法和屬性可以藉由查詢 OLE 系統的 `IDispatch` 機制。  雖然它是完整為動態用戶端使用 `IDispatch` ，很難為靜態用戶端使用，必須知道要巡覽的物件在編譯時期。  對於靜態繫結的用戶端， MFC 提供 [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) 類別。  
+ Clients of the first kind acquire information about the server's methods and properties by querying the OLE system's `IDispatch` mechanism. Although it is adequate to use for dynamic clients, `IDispatch` is difficult to use for static clients, where the objects being driven must be known at compile time. For static bound clients, the Microsoft Foundation classes provide the [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md) class.  
   
- 靜態繫結用戶端用來與用戶端應用程式靜態連結的 Proxy 類別。  這個類別提供伺服器應用程式的屬性和作業的型別安全 C\+\+ 套件。  
+ Static bound clients use a proxy class that is statically linked with the client application. This class provides a type-safe C++ encapsulation of the server application's properties and operations.  
   
- 類別 `COleDispatchDriver` 為 Automation 用戶端提供主要支援。  使用 `Add New Item` 對話方塊，您可以建立衍生自 `COleDispatchDriver`的類別。  
+ The class `COleDispatchDriver` provides the principal support for the client side of Automation. Using the `Add New Item` dialog box, you create a class derived from `COleDispatchDriver`.  
   
- 然後指定描述伺服器應用程式的物件的屬性和函式的型別程式庫檔案。  加入項目對話方塊中讀取這個檔案並建立 `COleDispatchDriver`衍生類別，與成員函式應用程式可以呼叫存取在 C\+\+ 的伺服器應用程式的物件提供型別安全方式。  繼承自 `COleDispatchDriver` 的其他功能簡化呼叫適當的 Automation 伺服程式流程。  
+ You then specify the type-library file describing the properties and functions of the server application's object. The Add Item dialog box reads this file and creates the `COleDispatchDriver`-derived class, with member functions that your application can call to access the server application's objects in C++ in a type-safe manner. Additional functionality inherited from `COleDispatchDriver` simplifies the process of calling the proper Automation server.  
   
-### 在 Automation 用戶端處理事件  
- 如果您要處理您的 Automation 用戶端事件，您必須將接收介面。  MFC 提供精靈不是供加接收介面為 ActiveX 控制項，不過，支援其他 COM 伺服器。  如需如何將 MFC 用戶端的接收介面的 COM 伺服器資訊描述的來源介面的詳細資訊，請參閱 HOWTO:建立在 MFC 架構的 COM 用戶端 \(181845 KB\) 之接收介面中 [http:\/\/support.microsoft.com\/default.aspx?scid\=kb;en\-us;181845](http://support.microsoft.com/default.aspx?scid=kb;en-us;181845)。  
+### <a name="handling-events-in-automation-clients"></a>Handling Events in Automation Clients  
+ If you want to handle events in your automation client, you need to add a sink interface. MFC provides wizard support to add sink interfaces for ActiveX controls, but not support for other COM servers. For information on how to add a sink interface in an MFC client for source interfaces described by COM servers, see HOWTO: Create a Sink Interface in MFC-Based COM Client (KB 181845) at [http://support.microsoft.com/default.aspxscid=kb;en-us;181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).  
   
-## 請參閱  
- [Automation 用戶端：使用類型程式庫](../mfc/automation-clients-using-type-libraries.md)   
+## <a name="see-also"></a>See Also  
+ [Automation Clients: Using Type Libraries](../mfc/automation-clients-using-type-libraries.md)   
  [Automation](../mfc/automation.md)   
- [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)
+ [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md)
+
+

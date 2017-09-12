@@ -1,51 +1,70 @@
 ---
-title: "MFC 應用程式架構類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式架構類別"
-  - "類別 [C++], MFC"
-  - "MFC [C++], 應用程式開發"
-  - "MFC [C++], 類別"
+title: MFC Application Architecture Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, classes
+- MFC, application development
+- classes [MFC], MFC
+- application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# MFC 應用程式架構類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ff7e847340e6afb6c1a97160a7b1763e43447a6a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在這個類別會使架構應用程式的結構。  它們提供常用的功能給大部分的應用程式。  您填入架構將應用程式特定的功能。  一般來說，您會藉由衍生新類別從結構描述，然後將新的成員或覆寫現有的成員函式來進行。  
+---
+# <a name="mfc-application-architecture-classes"></a>MFC Application Architecture Classes
+Classes in this category contribute to the architecture of a framework application. They supply functionality common to most applications. You fill in the framework to add application-specific functionality. Typically, you do so by deriving new classes from the architecture classes, and then adding new members or overriding existing member functions.  
   
- [應用程式精靈](../mfc/reference/mfc-application-wizard.md) 產生應用程式的幾種型別，以不同方式使用應用程式架構。  SDI \(單一文件介面\) 和 MDI \(多重文件介面\) 應用程式充分利用呼叫文件的架構的部分\/檢視架構。  應用程式的其他型別，例如對話方塊架構的應用程式，表單架構應用程式，因此DLL使用少數文件\/檢視架構的功能。  
+ [Application wizards](../mfc/reference/mfc-application-wizard.md) generate several types of applications, all of which use the application framework in differing ways. SDI (single document interface) and MDI (multiple document interface) applications make full use of a part of the framework called document/view architecture. Other types of applications, such as dialog-based applications, form-based applications, and DLLs, use only some of document/view architecture features.  
   
- 文件\/檢視應用程式包含一或多組文件、檢視和框架視窗。  文件樣板物件會將每一個文件\/檢視架構\/集合的類別。  
+ Document/view applications contain one or more sets of documents, views, and frame windows. A document-template object associates the classes for each document/view/frame set.  
   
- 雖然您在 MFC 應用程式不使用文件\/檢視架構，不過還是有一些優點值得如此做。  MFC OLE 容器和伺服器支援根據文件\/檢視架構，例如支援列印和預覽列印。  
+ Although you do not have to use document/view architecture in your MFC application, there are a number of advantages to doing so. The MFC OLE container and server support is based on document/view architecture, as is support for printing and print preview.  
   
- 所有的 MFC 應用程式中至少有兩個物件:衍生自 [CWinApp](../mfc/reference/cwinapp-class.md)的應用程式物件和某一個主視窗物件，取得 \(通常間接\) 從 [CWnd](../mfc/reference/cwnd-class.md)。\(通常，主視窗從 [CFrameWnd](../mfc/reference/cframewnd-class.md)、 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)或 [CDialog](../mfc/reference/cdialog-class.md)衍生的型別，衍生自 `CWnd`\)。  
+ All MFC applications have at least two objects: an application object derived from [CWinApp](../mfc/reference/cwinapp-class.md), and some sort of main window object, derived (often indirectly) from [CWnd](../mfc/reference/cwnd-class.md). (Most often, the main window is derived from [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), or [CDialog](../mfc/reference/cdialog-class.md), all of which are derived from `CWnd`.)  
   
- 使用文件\/檢視架構包含其他物件的應用程式。  主要物件如下:  
+ Applications that use document/view architecture contain additional objects. The principal objects are:  
   
--   衍生自的應用程式物件 [CWinApp](../mfc/reference/cwinapp-class.md)，如上所述。  
+-   An application object derived from class [CWinApp](../mfc/reference/cwinapp-class.md), as mentioned before.  
   
--   從類別衍生的一個或多個資料類別 [CDocument](../mfc/reference/cdocument-class.md)物件。  文件類別物件於檢視操作資料的內部表示負責。  它們可能與資料檔案。  
+-   One or more document class objects derived from class [CDocument](../mfc/reference/cdocument-class.md). Document class objects are responsible for the internal representation of the data manipulated in the view. They may be associated with a data file.  
   
--   衍生自類別的一或多個檢視物件 [CView](../mfc/reference/cview-class.md)。  每個檢視是附加到文件並與框架視窗。  檢視顯示和管理文件類別物件的資料。  
+-   One or more view objects derived from class [CView](../mfc/reference/cview-class.md). Each view is a window that is attached to a document and associated with a frame window. Views display and manipulate the data contained in a document class object.  
   
- 文件\/檢視應用程式也包含框架視窗 \(衍生自 [CFrameWnd](../mfc/reference/cframewnd-class.md)\) 和文件範本 \(衍生自 [CDocTemplate](../mfc/reference/cdoctemplate-class.md)\)。  
+ Document/view applications also contain frame windows (derived from [CFrameWnd](../mfc/reference/cframewnd-class.md)) and document templates (derived from [CDocTemplate](../mfc/reference/cdoctemplate-class.md)).  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

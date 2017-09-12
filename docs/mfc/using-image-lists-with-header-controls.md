@@ -1,56 +1,74 @@
 ---
-title: "搭配使用影像清單與標題控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl 類別, 影像清單"
-  - "標題控制項, 影像清單"
-  - "影像清單 [C++], 標題控制項"
+title: Using Image Lists with Header Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], image lists
+- CHeaderCtrl class [MFC], image lists
+- image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 搭配使用影像清單與標題控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f2d7b7e07a4e5723f93311dcbf79f4dad3e2ef4b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-標題項目可以顯示在標題項目內的影像。  這個影像，儲存在一個關聯的影像清單，為 16 x 16 像素且具有相同圖示影像在清單檢視控制項使用的特性。  要成功實作這個行為，您必須先建立和初始化影像清單，使清單與標題控制項，然後修改要顯示影像標頭項目的屬性。  
+---
+# <a name="using-image-lists-with-header-controls"></a>Using Image Lists with Header Controls
+Header items have the ability to display an image within a header item. This image, stored in an associated image list, is 16 x 16 pixels and has the same characteristics as the icon images used in a list view control. In order to implement this behavior successfully, you must first create and initialize the image list, associate the list with the header control, and then modify the attributes of the header item that will display the image.  
   
- 下列程序說明詳細資料，請使用指標標題控制項 \(`m_pHdrCtrl`\) 和指標影像清單 \(`m_pHdrImages`\)。  
+ The following procedure illustrates the details, using a pointer to a header control (`m_pHdrCtrl`) and a pointer to an image list (`m_pHdrImages`).  
   
-### 顯示在標頭項目的影像。  
+### <a name="to-display-an-image-in-a-header-item"></a>To display an image in a header item  
   
-1.  建構新的影像清單 \(或使用現有的影像清單物件\) 使用 [CImageList](../mfc/reference/cimagelist-class.md) 建構函式，，儲存結果指標。  
+1.  Construct a new image list (or use an existing image list object) using the [CImageList](../mfc/reference/cimagelist-class.md) constructor, storing the resultant pointer.  
   
-2.  透過呼叫 [CImageList::Create](../Topic/CImageList::Create.md)初始化新的影像清單物件。  下列程式碼是這個呼叫的範例。  
+2.  Initialize the new image list object by calling [CImageList::Create](../mfc/reference/cimagelist-class.md#create). The following code is one example of this call.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/CPP/using-image-lists-with-header-controls_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]  
   
-3.  將每個標題項目的影像。  下列程式碼加入兩個預先定義的影像。  
+3.  Add the images for each header item. The following code adds two predefined images.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/CPP/using-image-lists-with-header-controls_2.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]  
   
-4.  相關聯的影像清單與有標題控制項的 [CHeaderCtrl::SetImageList](../Topic/CHeaderCtrl::SetImageList.md)。  
+4.  Associate the image list with the header control with a call to [CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist).  
   
-5.  修改標頭項目中顯示從關聯的影像清單中的影像。  下列範例會將第一個影像，以 `m_phdrImages`，對第一個標頭項目，則為 `m_pHdrCtrl`。  
+5.  Modify the header item to display an image from the associated image list. The following example assigns the first image, from `m_phdrImages`, to the first header item, `m_pHdrCtrl`.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/CPP/using-image-lists-with-header-controls_3.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]  
   
- 如需使用的參數值的詳細資訊，請參閱相關的 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)。  
+ For detailed information on the parameter values used, consult the pertinent [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md).  
   
 > [!NOTE]
->  有多個控制項使用同一個影像清單，則為。  例如，在標準清單檢視控制項，可能有清單檢視控制項的小圖示檢視和清單檢視控制項的標頭項目 \(16 個 x 16 個像素影像\) 使用的影像清單。  
+>  It is possible to have multiple controls using the same image list. For instance, in a standard list view control, there could be an image list (of 16 x 16 pixel images) used by both the small icon view of a list view control and the header items of the list view control.  
   
-## 請參閱  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+

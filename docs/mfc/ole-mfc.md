@@ -1,48 +1,65 @@
 ---
-title: "OLE (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式 [OLE], 使用者介面"
-  - "OLE [C++], 使用者介面主題"
-  - "OLE 應用程式 [C++], 使用者介面"
-  - "使用者介面, OLE"
+title: OLE (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE [MFC], user-interface topics
+- OLE applications [MFC], user interface
+- user interfaces, OLE
+- applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# OLE (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 098e40f6027715e67b361b899bbf13459e7c4979
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在您的程式中實作 OLE 功能會影響使用者介面使用幾種方式：  
+---
+# <a name="ole-mfc"></a>OLE (MFC)
+Implementing OLE functionality in your program affects your user interface in several ways:  
   
--   視覺編輯 \(就地啟動\) 顯示其他程式使用者介面在程式中的視窗並從其他程式修改您的項目的程式功能表。  
+-   Visual editing (in-place activation) displays the user interface of another program in your program's windows and modifies your program's menus with items from the other program.  
   
--   拖放功能可讓使用者拖曳物件在視窗之間甚至程式之間。  
+-   Drag and drop allows users to drag objects within and between windows and even between programs.  
   
--   在視覺化編輯和拖放作業期間，追蹤提供視覺提示給物件狀態。  
+-   Trackers provide visual cues to the state of objects during visual editing and drag and drop.  
   
- 如需詳細資訊，請參閱：  
+ For more information, see:  
   
--   [OLE 和 MFC](../mfc/ole-in-mfc.md)  
+-   [OLE and MFC](../mfc/ole-in-mfc.md)  
   
--   [視覺化編輯 \(啟用\)](../mfc/activation-cpp.md)  
+-   [Visual Editing (Activation)](../mfc/activation-cpp.md)  
   
--   [拖放](../mfc/drag-and-drop-ole.md)  
+-   [Drag and Drop](../mfc/drag-and-drop-ole.md)  
   
--   [追蹤器](../mfc/trackers.md)  
+-   [Trackers](../mfc/trackers.md)  
   
-## 請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

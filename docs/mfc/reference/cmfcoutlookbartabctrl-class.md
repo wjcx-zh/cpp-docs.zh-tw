@@ -1,5 +1,5 @@
 ---
-title: "CMFCOutlookBarTabCtrl 類別 |Microsoft 文件"
+title: CMFCOutlookBarTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,7 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCOutlookBarTabCtrl class
+- CMFCOutlookBarTabCtrl [MFC], AddControl
+- CMFCOutlookBarTabCtrl [MFC], CanShowFewerPageButtons
+- CMFCOutlookBarTabCtrl [MFC], CanShowMorePageButtons
+- CMFCOutlookBarTabCtrl [MFC], Create
+- CMFCOutlookBarTabCtrl [MFC], EnableAnimation
+- CMFCOutlookBarTabCtrl [MFC], EnableInPlaceEdit
+- CMFCOutlookBarTabCtrl [MFC], EnableScrollButtons
+- CMFCOutlookBarTabCtrl [MFC], GetBorderSize
+- CMFCOutlookBarTabCtrl [MFC], GetVisiblePageButtons
+- CMFCOutlookBarTabCtrl [MFC], IsAnimation
+- CMFCOutlookBarTabCtrl [MFC], IsMode2003
+- CMFCOutlookBarTabCtrl [MFC], OnShowFewerPageButtons
+- CMFCOutlookBarTabCtrl [MFC], OnShowMorePageButtons
+- CMFCOutlookBarTabCtrl [MFC], OnShowOptions
+- CMFCOutlookBarTabCtrl [MFC], SetActiveTab
+- CMFCOutlookBarTabCtrl [MFC], SetBorderSize
+- CMFCOutlookBarTabCtrl [MFC], SetPageButtonTextAlign
+- CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
+- CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
 caps.latest.revision: 26
 author: mikeblome
@@ -53,17 +71,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 16de4287a2b3a6352fb4fc560b9c8eec2ba766d1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8070d43e6f2f21b1e02f9a7a9a0d6807a9b80f87
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
-具有 Microsoft Outlook [ **巡覽窗格** ] 視覺外觀的索引標籤控制項。  
+A tab control that has the visual appearance of the **Navigation Pane** in Microsoft Outlook.  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl  
@@ -71,56 +89,56 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|預設建構函式。|  
-|`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|解構函式。|  
+|`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Default constructor.|  
+|`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|加入 Windows 控制項做為 outlook 功能區中的新索引標籤。|  
-|`CMFCOutlookBarTabCtrl::CalcRectEdit`|由架構呼叫，如果以判斷使用者時，會出現在編輯方塊的維度重新命名索引標籤。 (覆寫 `CMFCBaseTabCtrl::CalcRectEdit`。)|  
-|[CMFCOutlookBarTabCtrl::CanShowFewerPageButtons](#canshowfewerpagebuttons)|若要判斷是否可以顯示較少的 Outlook 列 索引標籤 按鈕，比目前可見的調整大小作業期間，由框架呼叫。|  
-|[CMFCOutlookBarTabCtrl::CanShowMorePageButtons](#canshowmorepagebuttons)|若要判斷是否可以顯示更多的 Outlook 列 索引標籤 按鈕，比目前可見的調整大小作業期間，由框架呼叫。|  
-|[CMFCOutlookBarTabCtrl::Create](#create)|建立 Outlook 功能區 索引標籤控制項。|  
-|`CMFCOutlookBarTabCtrl::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|[CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)|指定是否要啟用使用中的索引標籤之間切換期間發生的動畫。|  
-|[CMFCOutlookBarTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|指定使用者是否可以修改的 outlook 功能區索引標籤按鈕上的文字標籤。 (覆寫[CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit)。)|  
-|[CMFCOutlookBarTabCtrl::EnableScrollButtons](#enablescrollbuttons)|若要啟用按鈕，可讓使用者透過 Outlook 功能區窗格上的按鈕捲動架構呼叫。|  
-|`CMFCOutlookBarTabCtrl::FindTargetWnd`|識別包含指定的點的窗格。 (覆寫[CMFCBaseTabCtrl::FindTargetWnd](../../mfc/reference/cmfcbasetabctrl-class.md#findtargetwnd)。)|  
-|[CMFCOutlookBarTabCtrl::GetBorderSize](#getbordersize)|傳回 Outlook 索引標籤控制項的框線大小。|  
-|`CMFCOutlookBarTabCtrl::GetTabArea`|擷取的大小和位置的索引標籤控制項的索引標籤區域。 (覆寫[CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea)。)|  
-|`CMFCOutlookBarTabCtrl::GetThisClass`|由架構用來取得變數的指標， [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
+|[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Adds a Windows control as a new tab in the Outlook bar.|  
+|`CMFCOutlookBarTabCtrl::CalcRectEdit`|Called by the framework to determine the dimensions of the edit box that appears when a user renames a tab. (Overrides `CMFCBaseTabCtrl::CalcRectEdit`.)|  
+|[CMFCOutlookBarTabCtrl::CanShowFewerPageButtons](#canshowfewerpagebuttons)|Called by the framework during resizing operations to determine if fewer Outlook bar tab page buttons can be displayed than are currently visible.|  
+|[CMFCOutlookBarTabCtrl::CanShowMorePageButtons](#canshowmorepagebuttons)|Called by the framework during resizing operations to determine if more Outlook bar tab page buttons can be displayed than are currently visible.|  
+|[CMFCOutlookBarTabCtrl::Create](#create)|Creates the Outlook bar tab control.|  
+|`CMFCOutlookBarTabCtrl::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)|Specifies whether the animation that occurs during the switch between active tabs is enabled.|  
+|[CMFCOutlookBarTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Specifies whether a user can modify the text labels on the tab buttons of the Outlook bar. (Overrides [CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|  
+|[CMFCOutlookBarTabCtrl::EnableScrollButtons](#enablescrollbuttons)|Called by the framework to enable buttons that allow the user to scroll through buttons on the Outlook bar pane.|  
+|`CMFCOutlookBarTabCtrl::FindTargetWnd`|Identifies the pane that contains a specified point. (Overrides [CMFCBaseTabCtrl::FindTargetWnd](../../mfc/reference/cmfcbasetabctrl-class.md#findtargetwnd).)|  
+|[CMFCOutlookBarTabCtrl::GetBorderSize](#getbordersize)|Returns the border size of the Outlook tab control.|  
+|`CMFCOutlookBarTabCtrl::GetTabArea`|Retrieves the size and position of the tab area of the tab control. (Overrides [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|  
+|`CMFCOutlookBarTabCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
 |[CMFCOutlookBarTabCtrl::GetVisiblePageButtons](#getvisiblepagebuttons)||  
-|[CMFCOutlookBarTabCtrl::IsAnimation](#isanimation)|判斷是否已啟用作用中的索引標籤之間切換期間發生的動畫。|  
-|[CMFCOutlookBarTabCtrl::IsMode2003](#ismode2003)|判斷 Outlook 功能區 索引標籤控制項是否會模擬 Microsoft Outlook 2003 的模式。|  
-|`CMFCOutlookBarTabCtrl::IsPtInTabArea`|決定在索引標籤區域內時點。 (覆寫[CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea)。)|  
-|`CMFCOutlookBarTabCtrl::IsTabDetachable`|判斷是否可拆式索引標籤。 (覆寫[CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable)。)|  
-|`CMFCOutlookBarTabCtrl::OnChangeTabs`|插入或移除索引標籤時，由架構呼叫。 (覆寫 `CMFCBaseTabCtrl::OnChangeTabs`。)|  
-|[CMFCOutlookBarTabCtrl::OnShowFewerPageButtons](#onshowfewerpagebuttons)|減少您的索引標籤 按鈕會顯示的架構所呼叫。|  
-|[CMFCOutlookBarTabCtrl::OnShowMorePageButtons](#onshowmorepagebuttons)|增加索引標籤 按鈕會顯示的架構所呼叫。|  
-|[CMFCOutlookBarTabCtrl::OnShowOptions](#onshowoptions)|顯示**瀏覽窗格選項** 對話方塊。|  
-|`CMFCOutlookBarTabCtrl::RecalcLayout`|重新計算索引標籤控制項的內部配置。 (覆寫[CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)。)|  
-|[CMFCOutlookBarTabCtrl::SetActiveTab](#setactivetab)|設定作用中的索引標籤。 (覆寫[CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)。)|  
-|[CMFCOutlookBarTabCtrl::SetBorderSize](#setbordersize)|設定 Outlook 索引標籤控制項的框線大小。|  
-|[CMFCOutlookBarTabCtrl::SetPageButtonTextAlign](#setpagebuttontextalign)|設定文字標籤對齊方式 索引標籤按鈕的 outlook 功能區上。|  
-|[CMFCOutlookBarTabCtrl::SetToolbarImageList](#settoolbarimagelist)|設定包含在 Outlook 2003 模式下的 outlook 功能區下方會顯示圖示的點陣圖 (請參閱[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md))。|  
+|[CMFCOutlookBarTabCtrl::IsAnimation](#isanimation)|Determines whether the animation that occurs during the switch between active tabs is enabled.|  
+|[CMFCOutlookBarTabCtrl::IsMode2003](#ismode2003)|Determines if the Outlook bar tab control is in a mode that emulates Microsoft Outlook 2003.|  
+|`CMFCOutlookBarTabCtrl::IsPtInTabArea`|Determines if a point is inside the tab area. (Overrides [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|  
+|`CMFCOutlookBarTabCtrl::IsTabDetachable`|Determines whether a tab is detachable. (Overrides [CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable).)|  
+|`CMFCOutlookBarTabCtrl::OnChangeTabs`|Called by the framework when a tab is inserted or removed. (Overrides `CMFCBaseTabCtrl::OnChangeTabs`.)|  
+|[CMFCOutlookBarTabCtrl::OnShowFewerPageButtons](#onshowfewerpagebuttons)|Called by the framework to decrease the number of tab page buttons that are visible.|  
+|[CMFCOutlookBarTabCtrl::OnShowMorePageButtons](#onshowmorepagebuttons)|Called by the framework to increase the number of tab page buttons that are visible.|  
+|[CMFCOutlookBarTabCtrl::OnShowOptions](#onshowoptions)|Displays the **Navigation Pane Options** dialog.|  
+|`CMFCOutlookBarTabCtrl::RecalcLayout`|Recalculates the internal layout of the tab control. (Overrides [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
+|[CMFCOutlookBarTabCtrl::SetActiveTab](#setactivetab)|Sets the active tab. (Overrides [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
+|[CMFCOutlookBarTabCtrl::SetBorderSize](#setbordersize)|Sets the border size of the Outlook tab control.|  
+|[CMFCOutlookBarTabCtrl::SetPageButtonTextAlign](#setpagebuttontextalign)|Sets the alignment of the text labels on the tab buttons of the Outlook bar.|  
+|[CMFCOutlookBarTabCtrl::SetToolbarImageList](#settoolbarimagelist)|Sets the bitmap that contains the icons that are displayed on the bottom of the Outlook bar in Outlook 2003 mode (see [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)).|  
 |[CMFCOutlookBarTabCtrl::SetVisiblePageButtons](#setvisiblepagebuttons)||  
   
-## <a name="remarks"></a>備註  
- 若要建立停駐支援 outlook 功能區，請使用`CMFCOutlookBar`物件來裝載 Outlook 列 索引標籤控制項。 如需詳細資訊，請參閱[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)。  
+## <a name="remarks"></a>Remarks  
+ To create an Outlook bar that has docking support, use a `CMFCOutlookBar` object to host the Outlook bar tab control. For more information, see [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-## <a name="example"></a>範例  
- 下列範例示範如何初始化`CMFCOutlookBarTabCtrl`物件，使用各種方法的`CMFCOutlookBarTabCtrl`類別。 此範例示範如何啟用的 outlook 功能區 索引標籤 按鈕上的文字標籤就地編輯、 啟用動畫、 允許讓使用者透過 Outlook 功能區窗格上的按鈕捲動、 設定 Outlook 索引標籤控制項的框線大小以及設定的文字標籤對齊方式 索引標籤按鈕的 outlook 功能區上的捲軸控點。 此程式碼片段是一部分[Outlook 示範範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to initialize a `CMFCOutlookBarTabCtrl` object and use various methods in the `CMFCOutlookBarTabCtrl` class. The example shows how to enable the in-place editing of the text label on the tab page buttons of the Outlook bar, enable the animation, enable scroll handles that enable the user to scroll through buttons on the Outlook bar pane, set the border size of the Outlook tab control, and set the alignment of the text labels on the tab buttons of the Outlook bar. This code snippet is part of the [Outlook Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_OutlookDemo #&1;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]  
-[!code-cpp[NVC_MFC_OutlookDemo #&2;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]  
+[!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -131,11 +149,11 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
   
  [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxoutlookbartabctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxoutlookbartabctrl.h  
   
-##  <a name="addcontrol"></a>CMFCOutlookBarTabCtrl::AddControl  
- 加入 Windows 控制項做為 outlook 功能區中的新索引標籤。  
+##  <a name="addcontrol"></a>  CMFCOutlookBarTabCtrl::AddControl  
+ Adds a Windows control as a new tab in the Outlook bar.  
   
 ```  
 void AddControl(
@@ -146,62 +164,62 @@ void AddControl(
     DWORD dwControlBarStyle=AFX_CBRS_FLOAT |  AFX_CBRS_CLOSE | AFX_CBRS_RESIZE |  CBRS_AFX_AUTOHIDE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndCtrl`  
- 加入控制項的指標。  
+ A pointer to a control to add.  
   
  [in] `lpszName`  
- 指定索引標籤的名稱。  
+ Specifies the name of tab.  
   
  [in] `bDetachable`  
- 如果`TRUE`，頁面將會建立為可分開。  
+ If `TRUE`, the page will be created as detachable.  
   
  [in] `nImageID`  
- 顯示新的索引標籤中的影像的內部影像清單中的影像索引。  
+ Image index in the internal image list for the image to be displayed in the new tab.  
   
  [in] `dwControlBarStyle`  
- 指定 AFX_ `CBRS_`* 包裝停駐窗格的樣式。  
+ Specifies the AFX_ `CBRS_`* style for wrapped docking panes.  
   
-### <a name="remarks"></a>備註  
- 使用此函式將控制項加入為新頁面的 outlook 功能區。  
+### <a name="remarks"></a>Remarks  
+ Use this function to add a control as a new page of an outlook bar.  
   
- 此函式會在內部呼叫上[CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)。  
+ This function internally calls on [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab).  
   
- 如果您設定`bDetachable`至`TRUE`，`AddControl`內部建立`CDockablePaneAdapter`物件，並已加入之控制項的包裝。 它會自動設定的索引標籤式視窗的執行階段類別的執行階段類別`CMFCOutlookBar`和執行階段類別的浮動框架`CMultiPaneFrameWnd`。  
+ If you set `bDetachable` to `TRUE`, `AddControl` internally creates a `CDockablePaneAdapter` object and wraps the added control. It automatically sets the runtime class of the tabbed window to the runtime class of `CMFCOutlookBar` and the runtime class of the floating frame to `CMultiPaneFrameWnd`.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`AddControl`方法中的`CMFCOutlookBarTabCtrl`類別。 此程式碼片段是一部分[Outlook 示範範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `AddControl` method in the `CMFCOutlookBarTabCtrl` class. This code snippet is part of the [Outlook Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_OutlookDemo #&3;](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]  
   
-##  <a name="canshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl::CanShowFewerPageButtons  
- 由架構呼叫期間調整大小作業來判斷比目前可見，是否可以顯示較少的 Outlook 列 索引標籤 按鈕。  
+##  <a name="canshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowFewerPageButtons  
+ Called by the framework during resizing operations to determine whether fewer Outlook bar tab page buttons can be displayed than are currently visible.  
   
 ```  
 virtual BOOL CanShowFewerPageButtons() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果有多個按鈕。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if there is more than one button; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- Outlook 功能區 索引標籤控制項動態新增或移除從根據有可用的多少空間顯示 索引標籤。 這個方法可供架構來協助該程序。  
+### <a name="remarks"></a>Remarks  
+ The Outlook bar tab control dynamically adds or removes tabs from the display depending on how much room is available. This method is used by the framework to assist in that process.  
   
-##  <a name="canshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
- 由架構呼叫期間調整大小作業來判斷比目前可見，是否可以顯示更多的 Outlook 列 索引標籤 按鈕。  
+##  <a name="canshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::CanShowMorePageButtons  
+ Called by the framework during resizing operations to determine whether more Outlook bar tab page buttons can be displayed than are currently visible.  
   
 ```  
 virtual BOOL CanShowMorePageButtons() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果有幾個按鈕不是目前可見的。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if there are buttons that are not currently visible; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- Outlook 功能區 索引標籤控制項動態新增或移除索引標籤，在顯示中，根據有可用的多少空間。 這個方法可供架構來協助該程序。  
+### <a name="remarks"></a>Remarks  
+ The Outlook bar tab control dynamically adds or removes tabs from the display, depending on how much room is available. This method is used by the framework to assist in that process.  
   
-##  <a name="create"></a>CMFCOutlookBarTabCtrl::Create  
- 建立 Outlook 功能區 索引標籤控制項。  
+##  <a name="create"></a>  CMFCOutlookBarTabCtrl::Create  
+ Creates the Outlook bar tab control.  
   
 ```  
 virtual BOOL Create(
@@ -210,54 +228,54 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- 指定的初始大小和位置，像素為單位。  
+ Specifies the initial size and position, in pixels.  
   
  [in] `pParentWnd`  
- 父視窗的指標。 必須不是 `NULL`。  
+ Points to the parent window. Must not be `NULL`.  
   
  [in] `nID`  
- 控制項 id。  
+ The control ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果已成功; 建立控制項為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the control has been created successfully; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 通常，outlook 狀態列 索引標籤控制項時，會建立[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)控制項`WM_CREATE`程序的訊息。  
+### <a name="remarks"></a>Remarks  
+ Usually, outlook bar tab controls are created when [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md) controls the `WM_CREATE` message of the process.  
   
-##  <a name="enableanimation"></a>CMFCOutlookBarTabCtrl::EnableAnimation  
- 指定是否要啟用使用中的索引標籤之間切換期間發生的動畫。  
+##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
+ Specifies whether the animation that occurs during the switch between active tabs is enabled.  
   
 ```  
 static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 指定應該啟用或停用動畫。  
+ Specifies whether the animation should be enabled or disabled.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式可啟用和停用動畫。 當使用者開啟索引標籤頁時，網頁的標題投影片 向上或向下如果動畫已啟用。 如果已停用動畫，頁面會立即。  
+### <a name="remarks"></a>Remarks  
+ Call this function to enable and disable animation. When the user opens a tab page, the page's caption slides up or down if animation is enabled. If animation is disabled, the page becomes active immediately.  
   
- 根據預設，會啟用動畫。  
+ By the default, the animation is enabled.  
   
-##  <a name="enableinplaceedit"></a>CMFCOutlookBarTabCtrl::EnableInPlaceEdit  
- 指定使用者是否可以修改的 outlook 功能區 索引標籤 按鈕上的文字標籤。  
+##  <a name="enableinplaceedit"></a>  CMFCOutlookBarTabCtrl::EnableInPlaceEdit  
+ Specifies whether a user can modify the text labels on the tab page buttons of the Outlook bar.  
   
 ```  
 virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- 如果`TRUE`，啟用就地編輯的文字標籤。 如果`FALSE`，停用就地編輯。  
+ If `TRUE`, enable the in-place editing of the text label. If `FALSE`, disable the in-place editing.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式可啟用或停用就地編輯的文字標籤 索引標籤 按鈕。 預設會停用就地編輯。  
+### <a name="remarks"></a>Remarks  
+ Call this function to enable or disable in-place editing of text  labels on tab page buttons. By default the in-place editing is disabled.  
   
-##  <a name="enablescrollbuttons"></a>CMFCOutlookBarTabCtrl::EnableScrollButtons  
- 若要啟用捲軸控點可讓使用者透過 Outlook 功能區窗格上的按鈕捲動架構呼叫。  
+##  <a name="enablescrollbuttons"></a>  CMFCOutlookBarTabCtrl::EnableScrollButtons  
+ Called by the framework to enable scroll handles that allow the user to scroll through buttons on the Outlook bar pane.  
   
 ```  
 void EnableScrollButtons(
@@ -266,131 +284,131 @@ void EnableScrollButtons(
     BOOL bIsDown = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 決定是否要顯示捲軸按鈕。  
+ Determines whether the scroll buttons are displayed.  
   
  [in] `bIsUp`  
- 決定是否要顯示的最上層的捲軸。  
+ Determines whether the top scrollbar is displayed.  
   
  [in] `bIsDown`  
- 決定是否要顯示在底部的捲軸。  
+ Determines whether the bottom scrollbar is displayed.  
   
-### <a name="remarks"></a>備註  
- 可捲動按鈕的顯示。 要還原的捲軸按鈕的作用中的索引標籤變更時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ Enables the display of the scroll buttons. This method is called by the framework when the active tab changes to restore the scroll buttons.  
   
-##  <a name="getbordersize"></a>CMFCOutlookBarTabCtrl::GetBorderSize  
- 傳回 Outlook 索引標籤控制項的框線大小。  
+##  <a name="getbordersize"></a>  CMFCOutlookBarTabCtrl::GetBorderSize  
+ Returns the border size of the Outlook tab control.  
   
 ```  
 int GetBorderSize() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 框線的大小，單位為像素。  
+### <a name="return-value"></a>Return Value  
+ The border size, in pixels.  
   
-##  <a name="getvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
+##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons  
 
   
 ```  
 int GetVisiblePageButtons() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isanimation"></a>CMFCOutlookBarTabCtrl::IsAnimation  
- 指定是否要啟用使用中的索引標籤之間切換期間發生的動畫。  
+##  <a name="isanimation"></a>  CMFCOutlookBarTabCtrl::IsAnimation  
+ Specifies whether the animation that occurs during the switch between active tabs is enabled.  
   
 ```  
 static BOOL IsAnimation();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果已啟用動畫。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the animation is enabled; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)函式來啟用或停用動畫。  
+### <a name="remarks"></a>Remarks  
+ Call the [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation) function to enable or disable animation.  
   
-##  <a name="ismode2003"></a>CMFCOutlookBarTabCtrl::IsMode2003  
- 判斷 Outlook 功能區 索引標籤控制項是否會模擬 Microsoft Outlook 2003 的模式。  
+##  <a name="ismode2003"></a>  CMFCOutlookBarTabCtrl::IsMode2003  
+ Determines whether the Outlook bar tab control is in a mode that emulates Microsoft Outlook 2003.  
   
 ```  
 BOOL IsMode2003() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果 Outlook 列 索引標籤控制項是在 Outlook 2003 模式;否則`FALSE`;  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the Outlook bar tab control is in Outlook 2003 mode; otherwise `FALSE`;  
   
-### <a name="remarks"></a>備註  
- 這個值由設定[CMFCOutlookBar::SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003)。  
+### <a name="remarks"></a>Remarks  
+ This value is set by [CMFCOutlookBar::SetMode2003](../../mfc/reference/cmfcoutlookbar-class.md#setmode2003).  
   
-##  <a name="onshowfewerpagebuttons"></a>CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
- 減少您的索引標籤 按鈕會顯示的架構所呼叫。  
+##  <a name="onshowfewerpagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowFewerPageButtons  
+ Called by the framework to decrease the number of tab page buttons that are visible.  
   
 ```  
 virtual void OnShowFewerPageButtons();
 ```  
   
-### <a name="remarks"></a>備註  
- 重新調整控制項大小時，這個方法會調整可見的頁面索引標籤上的按鈕的數目。  
+### <a name="remarks"></a>Remarks  
+ This method adjusts the number of visible page tab buttons when the control is resized.  
   
-##  <a name="onshowmorepagebuttons"></a>CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
- 增加索引標籤 按鈕會顯示的架構所呼叫。  
+##  <a name="onshowmorepagebuttons"></a>  CMFCOutlookBarTabCtrl::OnShowMorePageButtons  
+ Called by the framework to increase the number of tab page buttons that are visible.  
   
 ```  
 virtual void OnShowMorePageButtons();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會調整 索引標籤 按鈕會顯示重新調整控制項大小時的數目。  
+### <a name="remarks"></a>Remarks  
+ This method adjust the number of tab page buttons that are visible when the control is resized.  
   
-##  <a name="onshowoptions"></a>CMFCOutlookBarTabCtrl::OnShowOptions  
- 顯示**瀏覽窗格選項**對話方塊。  
+##  <a name="onshowoptions"></a>  CMFCOutlookBarTabCtrl::OnShowOptions  
+ Displays the **Navigation Pane Options** dialog box.  
   
 ```  
 virtual void OnShowOptions();
 ```  
   
-### <a name="remarks"></a>備註  
- **瀏覽窗格選項**對話方塊可讓使用者選取索引標籤 按鈕會顯示，並顯示它們的順序。  
+### <a name="remarks"></a>Remarks  
+ The **Navigation Pane Options** dialog box allows the user to select which tab page buttons are to be displayed, and the order in which they are displayed.  
   
- 當使用者選取由架構呼叫這個方法**瀏覽窗格選項**從控制項的自訂功能表的功能表項目。  
+ This method is called by the framework when the user selects the **Navigation Pane Options** menu item from the control's customization menu.  
   
-##  <a name="setactivetab"></a>CMFCOutlookBarTabCtrl::SetActiveTab  
- 設定作用中的索引標籤。 作用中的索引標籤是處於開啟狀態，以顯示其內容。  
+##  <a name="setactivetab"></a>  CMFCOutlookBarTabCtrl::SetActiveTab  
+ Sets the active tab. The active tab is the one that is open, with its contents visible.  
   
 ```  
 virtual BOOL SetActiveTab(int iTab);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 要開啟的索引標籤以零為起始的索引。  
+ The zero-based index of a tab to be opened.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果指定的索引標籤開啟可順利啟動。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified tab has been opened successfully; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 設定作用中的索引標籤的視覺效果取決於您是否已啟用動畫。 如需詳細資訊，請參閱[CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation)。  
+### <a name="remarks"></a>Remarks  
+ The visual effect of setting the active tab depends on whether you have enabled animation. For more information, see [CMFCOutlookBarTabCtrl::EnableAnimation](#enableanimation).  
   
-##  <a name="setbordersize"></a>CMFCOutlookBarTabCtrl::SetBorderSize  
- 設定 Outlook 索引標籤控制項的框線大小。  
+##  <a name="setbordersize"></a>  CMFCOutlookBarTabCtrl::SetBorderSize  
+ Sets the border size of the Outlook tab control.  
   
 ```  
 void SetBorderSize(int nBorderSize);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nBorderSize`  
- 指定新的框線大小，單位為像素。  
+ Specifies the new border size in pixels.  
   
-### <a name="remarks"></a>備註  
- 設定新的框線大小，並重新計算 outlook 視窗配置。  
+### <a name="remarks"></a>Remarks  
+ Sets the new border size and recalculates the outlook window layout.  
   
-##  <a name="setpagebuttontextalign"></a>CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
- 設定文字標籤對齊方式 索引標籤按鈕的 outlook 功能區上。  
+##  <a name="setpagebuttontextalign"></a>  CMFCOutlookBarTabCtrl::SetPageButtonTextAlign  
+ Sets the alignment of the text labels on the tab buttons of the Outlook bar.  
   
 ```  
 void SetPageButtonTextAlign(
@@ -398,28 +416,28 @@ void SetPageButtonTextAlign(
     BOOL bRedraw=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiAlign`  
- 指定的文字對齊方式。  
+ Specifies the text alignment.  
   
  [in] `bRedraw`  
- 如果`TRUE`，outlook 視窗將會重新繪製。  
+ If `TRUE`, the outlook window will be redrawn.  
   
-### <a name="remarks"></a>備註  
- 您可以使用此函式來變更 按鈕的文字對齊方式。  
+### <a name="remarks"></a>Remarks  
+ Use this function to change text alignment for page buttons.  
   
- `uiAlign`可以是下列值之一︰  
+ `uiAlign` can be one of the following values:  
   
-|常數|意義|  
+|Constant|Meaning|  
 |--------------|-------------|  
-|TA_LEFT|靠左的對齊|  
-|TA_CENTER|置中對齊|  
-|TA_RIGHT|靠右對齊|  
+|TA_LEFT|Left alignment|  
+|TA_CENTER|Center alignment|  
+|TA_RIGHT|Right alignment|  
   
- 預設值是 TA_CENTER。  
+ The default value is TA_CENTER.  
   
-##  <a name="settoolbarimagelist"></a>CMFCOutlookBarTabCtrl::SetToolbarImageList  
- 設定包含在 Outlook 2003 模式下的 outlook 功能區下方會顯示圖示的點陣圖。  
+##  <a name="settoolbarimagelist"></a>  CMFCOutlookBarTabCtrl::SetToolbarImageList  
+ Sets the bitmap that contains the icons that are displayed on the bottom of the Outlook bar in Outlook 2003 mode.  
   
 ```  
 BOOL SetToolbarImageList(
@@ -428,40 +446,40 @@ BOOL SetToolbarImageList(
     COLORREF clrTransp=RGB(255, 0, 255));
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 指定映像載入的資源識別碼。  
+ Specifies the resource ID of the image to load.  
   
  [in] `cx`  
- 在映像清單中，像素為單位指定影像的寬度。  
+ Specifies the width of an image in the image list, in pixels.  
   
  [in] `clrTransp`  
- 指定透明色彩的 RGB 值。  
+ An RGB value that specifies the transparent color.  
   
-### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果成功，否則會傳回`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if successful; otherwise returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 使用此函式附加影像清單的影像會顯示在 Microsoft Office 2003 模式下的工具列按鈕。 映像索引應該對應至頁面的索引。  
+### <a name="remarks"></a>Remarks  
+ Use this function to attach an image list whose images will be displayed on toolbar buttons in Microsoft Office 2003 mode. Image indexes should correspond to page indexes.  
   
- 不應該呼叫這個方法，如果不在 Microsoft Office 2003 模式。 如需詳細資訊，請參閱[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)。  
+ This method should not be called if not in Microsoft Office 2003 mode. For more information, see [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-##  <a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
+##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons  
 
   
 ```  
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nVisiblePageButtons`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)   
- [CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)   
- [CMFCOutlookBarPane 類別](../../mfc/reference/cmfcoutlookbarpane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)   
+ [CMFCOutlookBarPane Class](../../mfc/reference/cmfcoutlookbarpane-class.md)
 

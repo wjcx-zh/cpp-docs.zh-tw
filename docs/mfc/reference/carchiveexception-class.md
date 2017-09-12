@@ -1,5 +1,5 @@
 ---
-title: "CArchiveException 類別 |Microsoft 文件"
+title: CArchiveException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,11 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- exceptions [C++], serialization
-- serialization [C++], exceptions
-- CArchiveException class
-- exceptions [C++], archive
-- archive exceptions [C++]
+- CArchiveException [MFC], CArchiveException
+- CArchiveException [MFC], m_cause
+- CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
 caps.latest.revision: 21
 author: mikeblome
@@ -41,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: e927bea5b8d9e6dbaafb191f6c3bdcf0f0d076cc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1c1652037db836819e471ef18c448e4c22ea5e40
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="carchiveexception-class"></a>CArchiveException 類別
-表示序列化例外狀況  
+# <a name="carchiveexception-class"></a>CArchiveException Class
+Represents a serialization exception condition  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CArchiveException : public CException  
@@ -59,36 +57,36 @@ class CArchiveException : public CException
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArchiveException::CArchiveException](#carchiveexception)|建構 `CArchiveException` 物件。|  
+|[CArchiveException::CArchiveException](#carchiveexception)|Constructs a `CArchiveException` object.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArchiveException::m_cause](#m_cause)|表示例外狀況的原因。|  
-|[CArchiveException::m_strFileName](#m_strfilename)|指定此例外狀況的檔案名稱。|  
+|[CArchiveException::m_cause](#m_cause)|Indicates the exception cause.|  
+|[CArchiveException::m_strFileName](#m_strfilename)|Specifies the name of the file for this exception condition.|  
   
-## <a name="remarks"></a>備註  
- `CArchiveException`類別包含表示例外狀況原因的公用資料成員。  
+## <a name="remarks"></a>Remarks  
+ The `CArchiveException` class includes a public data member that indicates the cause of the exception.  
   
- `CArchiveException`物件的建構與內擲回[CArchive](../../mfc/reference/carchive-class.md)成員函式。 您可以存取這些物件的範圍內**攔截**運算式。 原因碼與作業系統無關。 如需例外狀況處理的詳細資訊，請參閱[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ `CArchiveException` objects are constructed and thrown inside [CArchive](../../mfc/reference/carchive-class.md) member functions. You can access these objects within the scope of a **CATCH** expression. The cause code is independent of the operating system. For more information about exception processing, see [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CArchiveException`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
- 建構`CArchiveException`物件，儲存的值`cause`物件中。  
+##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
+ Constructs a `CArchiveException` object, storing the value of `cause` in the object.  
   
 ```  
 CArchiveException(
@@ -96,62 +94,62 @@ CArchiveException(
     LPCTSTR lpszArchiveName = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cause`  
- 列舉型別變數，指出例外狀況的原因。 列舉值的清單，請參閱[m_cause](#m_cause)資料成員。  
+ An enumerated type variable that indicates the reason for the exception. For a list of the enumerators, see the [m_cause](#m_cause) data member.  
   
  `lpszArchiveName`  
- 包含名稱的字串會指向`CArchive`造成例外狀況物件。  
+ Points to a string containing the name of the `CArchive` object causing the exception.  
   
-### <a name="remarks"></a>備註  
- 您可以建立`CArchiveException`物件在堆積上和自己丟或全域函式可讓[AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)為您處理它。  
+### <a name="remarks"></a>Remarks  
+ You can create a `CArchiveException` object on the heap and throw it yourself or let the global function [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception) handle it for you.  
   
- 直接; 請勿使用這個建構函式請改為呼叫全域函式`AfxThrowArchiveException`。  
+ Do not use this constructor directly; instead, call the global function `AfxThrowArchiveException`.  
   
-##  <a name="m_cause"></a>CArchiveException::m_cause  
- 指定例外狀況的原因。  
+##  <a name="m_cause"></a>  CArchiveException::m_cause  
+ Specifies the cause of the exception.  
   
 ```  
 int m_cause;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此資料成員是 `int` 類型的公用變數。 其值會由`CArchiveException`列舉型別。 列舉程式及其意義如下：  
+### <a name="remarks"></a>Remarks  
+ This data member is a public variable of type `int`. Its values are defined by a `CArchiveException` enumerated type. The enumerators and their meanings are as follows:  
   
-- **CArchiveException::none**未發生任何錯誤。  
+- **CArchiveException::none** No error occurred.  
   
-- **CArchiveException::genericException**未指定的錯誤。  
+- **CArchiveException::genericException** Unspecified error.  
   
-- **CArchiveException::readOnly**嘗試要寫入至載入開啟的封存。  
+- **CArchiveException::readOnly** Tried to write into an archive opened for loading.  
   
-- **CArchiveException::endOfFile**讀取物件時發生已達結束的檔案。  
+- **CArchiveException::endOfFile** Reached end of file while reading an object.  
   
-- **CArchiveException::writeOnly**嘗試讀取儲存開啟的封存。  
+- **CArchiveException::writeOnly** Tried to read from an archive opened for storing.  
   
-- **CArchiveException::badIndex**檔案的格式無效。  
+- **CArchiveException::badIndex** Invalid file format.  
   
-- **CArchiveException::badClass**嘗試讀取物件為錯誤類型的物件。  
+- **CArchiveException::badClass** Tried to read an object into an object of the wrong type.  
   
-- **CArchiveException::badSchema**嘗試讀取具有不同版本的類別的物件。  
-  
-    > [!NOTE]
-    >  這些 `CArchiveException` 原因列舉程式不同於 `CFileException` 原因列舉程式。  
+- **CArchiveException::badSchema** Tried to read an object with a different version of the class.  
   
     > [!NOTE]
-    > **CArchiveException::generic**已被取代。 使用**genericException**改。 如果**泛型**已用在應用程式，而且建置以 /clr，會有語法錯誤，並不容易破解。  
+    >  These `CArchiveException` cause enumerators are distinct from the `CFileException` cause enumerators.  
   
-##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
- 指定此例外狀況的檔案名稱。  
+    > [!NOTE]
+    > **CArchiveException::generic** is deprecated. Use **genericException** instead. If **generic** is used in an application and built with /clr, there will be syntax errors that are not easy to decipher.  
+  
+##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
+ Specifies the name of the file for this exception condition.  
   
 ```  
 CString m_strFileName;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [CException 類別](../../mfc/reference/cexception-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CArchive 類別](../../mfc/reference/carchive-class.md)   
+## <a name="see-also"></a>See Also  
+ [CException Class](../../mfc/reference/cexception-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CArchive Class](../../mfc/reference/carchive-class.md)   
  [AfxThrowArchiveException](../../mfc/reference/exception-processing.md#afxthrowarchiveexception)   
- [例外狀況處理](../../mfc/reference/exception-processing.md)
+ [Exception Processing](../../mfc/reference/exception-processing.md)
 
 

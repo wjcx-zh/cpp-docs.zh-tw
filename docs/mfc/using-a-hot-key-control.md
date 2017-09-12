@@ -1,42 +1,61 @@
 ---
-title: "使用熱鍵控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHotKeyCtrl 類別, 使用"
-  - "熱鍵控制項"
+title: Using a Hot Key Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHotKeyCtrl class [MFC], using
+- hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用熱鍵控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9590d2ea6c374523b2d369f50affab16b7467331
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-熱鍵控制項的一般使用方式會遵循下列模式:  
+---
+# <a name="using-a-hot-key-control"></a>Using a Hot Key Control
+Typical usage of a hot key control follows the pattern below:  
   
--   建立控制項。  如果控制項在對話方塊樣板指定，建立是自動的，在對話方塊中建立時。\(您應該會包含熱鍵控制項\) 的對話方塊類別中的 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) 成員。或者，您可以使用 [建立](../Topic/CHotKeyCtrl::Create.md) 成員函式來建立控制項做為子視窗的所有視窗。  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md) member in your dialog class that corresponds to the hot key control.) Alternatively, you can use the [Create](../mfc/reference/chotkeyctrl-class.md#create) member function to create the control as a child window of any window.  
   
--   如果您要將控制項的預設值，請呼叫 [SetHotKey](../Topic/CHotKeyCtrl::SetHotKey.md) 成員函式。  如果您要禁止某些傳輸狀態，請呼叫 [SetRules](../Topic/CHotKeyCtrl::SetRules.md)。  對於在對話方塊的控制項，好時機可以在對話方塊的 [OnInitDialog](../Topic/CDialog::OnInitDialog.md) 函式。  
+-   If you want to set a default value for the control, call the [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey) member function. If you want to prohibit certain shift states, call [SetRules](../mfc/reference/chotkeyctrl-class.md#setrules). For controls in a dialog box, a good time to do this is in the dialog box's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   使用者與控制項互動傳入的快速鍵組合，當熱鍵控制項取得焦點時。  使用者按一下對話方塊上的按鈕莫名其妙就可以表示工作已完成，或啟用。  
+-   The user interacts with the control by pressing a hot key combination when the hot key control has focus. The user then somehow indicates that this task is complete, perhaps by clicking a button in the dialog box.  
   
--   當您的程式告知時使用者選取了一個快速鍵，則應該使用成員函式 [GetHotKey](../Topic/CHotKeyCtrl::GetHotKey.md) 擷取虛擬按鍵和從熱鍵控制項將狀態值。  
+-   When your program is notified that the user has selected a hot key, it should use the member function [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) to retrieve the virtual key and shift state values from the hot key control.  
   
--   一旦您知道哪些按鍵使用者選取，您可以設定快速鍵使用 [設定熱鍵](../mfc/setting-a-hot-key.md)中所描述的其中一個方法。  
+-   Once you know what key the user selected, you can set the hot key using one of the methods described in [Setting a Hot Key](../mfc/setting-a-hot-key.md).  
   
--   如果熱鍵控制項在對話方塊中，將自動終結和 `CHotKeyCtrl` 物件。  否則，您必須確保適當地終結控制項和 `CHotKeyCtrl` 物件。  
+-   If the hot key control is in a dialog box, it and the `CHotKeyCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CHotKeyCtrl` object are properly destroyed.  
   
-## 請參閱  
- [使用 CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

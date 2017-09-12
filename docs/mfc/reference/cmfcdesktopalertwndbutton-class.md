@@ -1,5 +1,5 @@
 ---
-title: "CMFCDesktopAlertWndButton 類別 |Microsoft 文件"
+title: CMFCDesktopAlertWndButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDesktopAlertWndButton class
+- CMFCDesktopAlertWndButton [MFC], IsCaptionButton
+- CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
 caps.latest.revision: 23
 author: mikeblome
@@ -36,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 52294143c6caf5a8e0458c152540c41f7df78c57
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f3f540f2809aa9232bc4b68340967e0c320e3aa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton 類別
-允許加入桌面警示對話方塊的按鈕。  
+# <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton Class
+Allows buttons to be added to a desktop alert dialog box.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDesktopAlertWndButton : public CMFCButton  
@@ -54,42 +55,42 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|預設建構函式。|  
-|`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|解構函式。|  
+|Name|Description|  
+|`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Default constructor.|  
+|`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
-  
-|||  
-|-|-|  
-|名稱|說明|  
-|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|決定是否要將按鈕顯示 [警示] 對話方塊的標題區域中。|  
-|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|決定按鈕是否要關閉警示 對話方塊。|  
-  
-### <a name="data-members"></a>資料成員  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|布林值，指定是否要將按鈕顯示 [警示] 對話方塊的標題區域中。|  
-|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|布林值，指定按鈕是否要關閉警示 對話方塊。|  
+|Name|Description|  
+|[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Determines whether the button is displayed in the caption area of the alert dialog box.|  
+|[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Determines whether the button closes the alert dialog box.|  
   
-### <a name="remarks"></a>備註  
- 根據預設，建構函式設定`m_bIsCaptionButton`和`m_bIsCloseButton`資料成員`FALSE`。 父代`CMFCDesktopAlertDialog`物件集`m_bIsCaptionButton`至`TRUE`如果按鈕位於 [警示] 對話方塊的標題區域中。 `CMFCDesktopAlertDialog`類別會建立`CMFCDesktopAlertWndButton`物件，可做為關閉警示 對話方塊的按鈕方塊，並設定`m_bIsCloseButton`到`TRUE`。  
+### <a name="data-members"></a>Data Members  
   
- 新增`CMFCDesktopAlertWndButton`物件加入至`CMFCDesktopAlertDialog`物件，您可以加入任何按鈕。 如需詳細資訊`CMFCDesktopAlertDialog`，請參閱[CMFCDesktopAlertDialog 類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)。  
+|||  
+|-|-|  
+|Name|Description|  
+|`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|A Boolean value that specifies whether the button is displayed in the caption area of the alert dialog box.|  
+|`CMFCDesktopAlertWndButton::m_bIsCloseButton`|A Boolean value that specifies whether the button closes the alert dialog box.|  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用`SetImage`方法中的`CMFCDesktopAlertWndButton`類別。 此程式碼片段是一部分[桌面警示示範範例](../../visual-cpp-samples.md)。  
+### <a name="remarks"></a>Remarks  
+ By default, the constructor sets the `m_bIsCaptionButton` and `m_bIsCloseButton` data members to `FALSE`. The parent `CMFCDesktopAlertDialog` object sets `m_bIsCaptionButton` to `TRUE` if the button is positioned in the caption area of the alert dialog box. The `CMFCDesktopAlertDialog` class creates a `CMFCDesktopAlertWndButton` object that serves as the button that closes the alert dialog box and sets `m_bIsCloseButton` to `TRUE`.  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo #&4;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
-[!code-cpp[NVC_MFC_DesktopAlertDemo #&5;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]  
+ Add `CMFCDesktopAlertWndButton` objects to a `CMFCDesktopAlertDialog` object as you would add any button. For more information about `CMFCDesktopAlertDialog`, see [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use the `SetImage` method in the `CMFCDesktopAlertWndButton` class. This code snippet is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).  
+  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
+[!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -102,31 +103,31 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdesktopalertwnd.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdesktopalertwnd.h  
   
-##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
- 決定是否要將按鈕顯示 [警示] 對話方塊的標題區域中。  
+##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  
+ Determines whether the button is displayed in the caption area of the alert dialog box.  
   
 ```  
 BOOL IsCaptionButton() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果按鈕會顯示在標題區域的 [警示] 對話方塊中，為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button is displayed in the caption area of the alert dialog box; otherwise, 0.  
   
-##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
- 決定按鈕是否要關閉警示 對話方塊。  
+##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton  
+ Determines whether the button closes the alert dialog box.  
   
 ```  
 BOOL IsCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果按鈕會關閉警示 對話方塊中，為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button closes the alert dialog box; otherwise, 0.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertDialog 類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)
 

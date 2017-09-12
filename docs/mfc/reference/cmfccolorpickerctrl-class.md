@@ -1,5 +1,5 @@
 ---
-title: "CMFCColorPickerCtrl 類別 |Microsoft 文件"
+title: CMFCColorPickerCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,7 +31,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCColorPickerCtrl class
+- CMFCColorPickerCtrl [MFC], CMFCColorPickerCtrl
+- CMFCColorPickerCtrl [MFC], GetColor
+- CMFCColorPickerCtrl [MFC], GetHLS
+- CMFCColorPickerCtrl [MFC], GetHue
+- CMFCColorPickerCtrl [MFC], GetLuminance
+- CMFCColorPickerCtrl [MFC], GetSaturation
+- CMFCColorPickerCtrl [MFC], SelectCellHexagon
+- CMFCColorPickerCtrl [MFC], SetColor
+- CMFCColorPickerCtrl [MFC], SetHLS
+- CMFCColorPickerCtrl [MFC], SetHue
+- CMFCColorPickerCtrl [MFC], SetLuminance
+- CMFCColorPickerCtrl [MFC], SetLuminanceBarWidth
+- CMFCColorPickerCtrl [MFC], SetOriginalColor
+- CMFCColorPickerCtrl [MFC], SetPalette
+- CMFCColorPickerCtrl [MFC], SetSaturation
+- CMFCColorPickerCtrl [MFC], SetType
+- CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
 caps.latest.revision: 33
 author: mikeblome
@@ -51,17 +67,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0a819d04535ba965e2c1a10f3761c442c9840538
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5b5fddc50f3f25673bb9732d73d46ab09755dc4b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 類別
-`CMFCColorPickerCtrl`類別會提供用於選取色彩的控制項的功能。  
+# <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl Class
+The `CMFCColorPickerCtrl` class provides functionality for a control that is used to select colors.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCColorPickerCtrl : public CButton  
@@ -69,62 +85,62 @@ class CMFCColorPickerCtrl : public CButton
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|建構 `CMFCColorPickerCtrl` 物件。|  
+|[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Constructs a `CMFCColorPickerCtrl` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorPickerCtrl::GetColor](#getcolor)|擷取使用者選取的色彩。|  
-|[CMFCColorPickerCtrl::GetHLS](#gethls)|擷取使用者選取之色彩的色調、 亮度及飽和度值。|  
-|[CMFCColorPickerCtrl::GetHue](#gethue)|擷取使用者選取之色彩的色調元件。|  
-|[CMFCColorPickerCtrl::GetLuminance](#getluminance)|擷取使用者選取之色彩的亮度元件。|  
-|[CMFCColorPickerCtrl::GetSaturation](#getsaturation)|擷取使用者選取之色彩的飽和度元件。|  
-|[CMFCColorPickerCtrl::SelectCellHexagon](#selectcellhexagon)|將目前的色彩設定為指定的 RGB 色彩元件或指定的資料格六邊形所定義的色彩。|  
-|[CMFCColorPickerCtrl::SetColor](#setcolor)|將目前的色彩設定為指定的 RGB 色彩值。|  
-|[CMFCColorPickerCtrl::SetHLS](#sethls)|將目前的色彩設定為指定 HLS 色彩值。|  
-|[CMFCColorPickerCtrl::SetHue](#sethue)|變更目前所選色彩的色調元件。|  
-|[CMFCColorPickerCtrl::SetLuminance](#setluminance)|變更目前所選色彩的亮度元件。|  
-|[CMFCColorPickerCtrl::SetLuminanceBarWidth](#setluminancebarwidth)|色彩選擇器控制項中設定亮度列的寬度。|  
-|[CMFCColorPickerCtrl::SetOriginalColor](#setoriginalcolor)|設定初始選取的色彩。|  
-|[CMFCColorPickerCtrl::SetPalette](#setpalette)|設定目前的色彩調色盤。|  
-|[CMFCColorPickerCtrl::SetSaturation](#setsaturation)|變更目前所選色彩的飽和度元件。|  
-|[CMFCColorPickerCtrl::SetType](#settype)|設定要顯示色彩選擇器控制項的類型。|  
+|[CMFCColorPickerCtrl::GetColor](#getcolor)|Retrieves the color that the user selects.|  
+|[CMFCColorPickerCtrl::GetHLS](#gethls)|Retrieves the hue, luminance and saturation values of the color that the user selects.|  
+|[CMFCColorPickerCtrl::GetHue](#gethue)|Retrieves the hue component of the color that the user selects.|  
+|[CMFCColorPickerCtrl::GetLuminance](#getluminance)|Retrieves the luminance component of the color that the user selects.|  
+|[CMFCColorPickerCtrl::GetSaturation](#getsaturation)|Retrieves the saturation component of the color that the user selects.|  
+|[CMFCColorPickerCtrl::SelectCellHexagon](#selectcellhexagon)|Sets the current color to the color defined by the specified RGB color components or the specified cell hexagon.|  
+|[CMFCColorPickerCtrl::SetColor](#setcolor)|Sets the current color to the specified RGB color value.|  
+|[CMFCColorPickerCtrl::SetHLS](#sethls)|Sets the current color to the specified HLS color value.|  
+|[CMFCColorPickerCtrl::SetHue](#sethue)|Changes the hue component of the currently selected color.|  
+|[CMFCColorPickerCtrl::SetLuminance](#setluminance)|Changes the luminance component of the currently selected color.|  
+|[CMFCColorPickerCtrl::SetLuminanceBarWidth](#setluminancebarwidth)|Sets the width of the luminance bar in the color picker control.|  
+|[CMFCColorPickerCtrl::SetOriginalColor](#setoriginalcolor)|Sets the initial selected color.|  
+|[CMFCColorPickerCtrl::SetPalette](#setpalette)|Sets the current color palette.|  
+|[CMFCColorPickerCtrl::SetSaturation](#setsaturation)|Changes the saturation component of the currently selected color.|  
+|[CMFCColorPickerCtrl::SetType](#settype)|Sets the type of color picker control to display.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|顯示選取的色彩會指向資料指標之前，由架構呼叫。|  
+|[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Called by the framework before a cursor that points to the selected color is displayed.|  
   
-## <a name="remarks"></a>備註  
- 六角調色盤選取的標準色彩和亮度列中選取自訂色彩的色彩使用指定的紅/綠/藍標記法或明亮度色調/satuaration 標記法。  
+## <a name="remarks"></a>Remarks  
+ Standard colors are selected from a hexagonal color palette, and custom colors are selected from a luminance bar where colors are specified using either red/green/blue notation or hue/satuaration/luminance notation.  
   
- 下圖顯示數個`CMFCColorPickerCtrl`物件。  
+ The following illustration depicts several `CMFCColorPickerCtrl` objects.  
   
- ![CMFCColorPickerCtrl 對話方塊](../../mfc/reference/media/colorpicker.png "colorpicker")  
+ ![CMFCColorPickerCtrl dialog box](../../mfc/reference/media/colorpicker.png "colorpicker")  
   
- `CMFCColorPickerCtrl`支援兩個配對的樣式。 十六進位和 HEX_GREYSCALE 樣式是適用於標準的色彩選項。 選擇器和亮度的樣式就是適用於自訂色彩選取項目。  
+ The `CMFCColorPickerCtrl` supports two pairs of styles. The HEX and HEX_GREYSCALE styles are appropriate for standard color selection. The PICKER and LUMINANCE styles are appropriate for custom color selection.  
   
- 執行下列步驟，以納入`CMFCColorPickerCtrl`控制項到對話方塊中︰  
+ Perform the following steps to incorporate the `CMFCColorPickerCtrl` control into your dialog box:  
   
-1.  如果您使用**ClassWizard**，您的對話方塊範本中插入新的按鈕控制項 (因為`CMFCColorPickerCtrl`類別繼承自`CButton`類別)。  
+1.  If you use the **ClassWizard**, insert a new button control into your dialog box template (because the `CMFCColorPickerCtrl` class is inherited from the `CButton` class).  
   
-2.  插入與新的按鈕控制項到您的對話方塊類別相關聯的成員變數。 然後變更變數的型別，從`CButton`到`CMFCColorPickerCtrl`。  
+2.  Insert a member variable that is associated with the new button control into your dialog box class. Then change the variable type from `CButton` to `CMFCColorPickerCtrl`.  
   
-3.  插入`WM_INITDIALOG`對話方塊類別的訊息處理常式。 在處理常式中設定的類型、 調色盤上和初始選取的色彩的`CMFCColorPickerCtrl`控制項。  
+3.  Insert the `WM_INITDIALOG` message handler for the dialog box class. In the handler, set the type, palette, and initial selected color of the `CMFCColorPickerCtrl` control.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何設定`CMFCColorPickerCtrl`使用各種方法的物件`CMFCColorPickerCtrl`類別。 範例將示範如何設定型別選擇器控制項，以及如何設定其色彩、 色調、 亮度，以及飽和度。 範例是一部分[新的控制項範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a `CMFCColorPickerCtrl` object by using various methods in the `CMFCColorPickerCtrl` class. The example demonstrates how to set the type of the picker control, and how to set its color, hue, luminance, and saturation. The example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #&4;](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls #&5;](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -135,22 +151,22 @@ class CMFCColorPickerCtrl : public CButton
   
  [CMFCColorPickerCtrl](../../mfc/reference/cmfccolorpickerctrl-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxcolorpickerctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcolorpickerctrl.h  
   
-##  <a name="cmfccolorpickerctrl"></a>CMFCColorPickerCtrl::CMFCColorPickerCtrl  
- 建構 `CMFCColorPickerCtrl` 物件。  
+##  <a name="cmfccolorpickerctrl"></a>  CMFCColorPickerCtrl::CMFCColorPickerCtrl  
+ Constructs a `CMFCColorPickerCtrl` object.  
   
 ```  
 CMFCColorPickerCtrl();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="drawcursor"></a>CMFCColorPickerCtrl::DrawCursor  
- 顯示選取的色彩會指向資料指標之前，由架構呼叫。  
+##  <a name="drawcursor"></a>  CMFCColorPickerCtrl::DrawCursor  
+ Called by the framework before a cursor that points to the selected color is displayed.  
   
 ```  
 virtual void DrawCursor(
@@ -158,30 +174,30 @@ virtual void DrawCursor(
     const CRect& rect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ Pointer to a device context.  
   
  [in] `rect`  
- 指定所選取之色彩周圍的矩形區域。  
+ Specifies a rectangular area around the selected color.  
   
-### <a name="remarks"></a>備註  
- 當您需要變更選取的色彩會指向資料指標的形狀時，覆寫這個方法。  
+### <a name="remarks"></a>Remarks  
+ Override this method when you need to change the shape of the cursor that points to the selected color.  
   
-##  <a name="getcolor"></a>CMFCColorPickerCtrl::GetColor  
- 擷取使用者選取的色彩。  
+##  <a name="getcolor"></a>  CMFCColorPickerCtrl::GetColor  
+ Retrieves the color that the user selects.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 所選取之色彩的 RGB 值。  
+### <a name="return-value"></a>Return Value  
+ The RGB value of the selected color.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethls"></a>CMFCColorPickerCtrl::GetHLS  
- 擷取使用者選取之色彩的色調、 亮度及飽和度值。  
+##  <a name="gethls"></a>  CMFCColorPickerCtrl::GetHLS  
+ Retrieves the hue, luminance and saturation values of the color that the user selects.  
   
 ```  
 void GetHLS(
@@ -190,56 +206,56 @@ void GetHLS(
     double* saturation);
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `hue`  
- Double 可接收色調的資訊類型的變數的指標。  
+### <a name="parameters"></a>Parameters  
+ [out] `hue`  
+ Pointer to a variable of type double that receives hue information.  
   
- [輸出] `luminance`  
- Double 可接收明亮的資訊類型的變數的指標。  
+ [out] `luminance`  
+ Pointer to a variable of type double that receives luminance information.  
   
- [輸出] `saturation`  
- Double 可接收飽和度的資訊類型的變數的指標。  
+ [out] `saturation`  
+ Pointer to a variable of type double that receives saturation information.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethue"></a>CMFCColorPickerCtrl::GetHue  
- 擷取使用者選取之色彩的色調元件。  
+##  <a name="gethue"></a>  CMFCColorPickerCtrl::GetHue  
+ Retrieves the hue component of the color that the user selects.  
   
 ```  
 double GetHue() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 選取的色彩色調元件。  
+### <a name="return-value"></a>Return Value  
+ The hue component of the selected color.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getluminance"></a>CMFCColorPickerCtrl::GetLuminance  
- 擷取使用者選取之色彩的亮度元件。  
+##  <a name="getluminance"></a>  CMFCColorPickerCtrl::GetLuminance  
+ Retrieves the luminance component of the color that the user selects.  
   
 ```  
 double GetLuminance() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 選取的色彩亮度元件。  
+### <a name="return-value"></a>Return Value  
+ The luminance component of the selected color.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getsaturation"></a>CMFCColorPickerCtrl::GetSaturation  
- 擷取使用者選取的色彩的濃度值。  
+##  <a name="getsaturation"></a>  CMFCColorPickerCtrl::GetSaturation  
+ Retrieves the saturation value of the color that the user selects.  
   
 ```  
 double GetSaturation() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 選取的色彩飽和度元件。  
+### <a name="return-value"></a>Return Value  
+ The saturation component of the selected color.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="selectcellhexagon"></a>CMFCColorPickerCtrl::SelectCellHexagon  
- 將目前的色彩設定為指定的 RGB 色彩元件或指定的資料格六邊形所定義的色彩。  
+##  <a name="selectcellhexagon"></a>  CMFCColorPickerCtrl::SelectCellHexagon  
+ Sets the current color to the color defined by the specified RGB color components or the specified cell hexagon.  
   
 ```  
 void SelectCellHexagon(
@@ -253,45 +269,45 @@ BOOL SelectCellHexagon(
     int y);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `R`  
- 紅色元件。  
+ The red color component.  
   
  [in] `G`  
- 綠色元件。  
+ The green color component.  
   
  [in] `B`  
- 藍色元件。  
+ The blue color component.  
   
  [in] `x`  
- 資料指標，指向 資料格六邊形 x 軸座標。  
+ The x-coordinate of the cursor, which points to a cell hexagon.  
   
  [in] `y`  
- 資料指標，指向 資料格六邊形 y 軸座標。  
+ The y-coordinate of the cursor, which points to a cell hexagon.  
   
-### <a name="return-value"></a>傳回值  
- 第二個多載，這個方法一律會傳回`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ The second overload of this method always returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會設定目前色彩的色彩對應至色彩選取控制項的第一個多載指定紅色、 綠色和藍色元件。  
+### <a name="remarks"></a>Remarks  
+ The first overload of this method sets the current color to the color that corresponds to the color selection control's specified red, green, and blue color components.  
   
- 這個方法的第二個多載設定所指定的資料指標位置的色彩會指到儲存格六邊形目前的色彩。  
+ The second overload of this method sets the current color to the color of the cell hexagon that is pointed to by the specified cursor location.  
   
-##  <a name="setcolor"></a>CMFCColorPickerCtrl::SetColor  
- 將目前的色彩設定為指定的 RGB 色彩值。  
+##  <a name="setcolor"></a>  CMFCColorPickerCtrl::SetColor  
+ Sets the current color to the specified RGB color value.  
   
 ```  
 void SetColor(COLORREF Color);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `Color`  
- RGB 色彩值。  
+ An RGB color value.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sethls"></a>CMFCColorPickerCtrl::SetHLS  
- 將目前的色彩設定為指定 HLS 色彩值。  
+##  <a name="sethls"></a>  CMFCColorPickerCtrl::SetHLS  
+ Sets the current color to the specified HLS color value.  
   
 ```  
 void SetHLS(
@@ -301,120 +317,120 @@ void SetHLS(
     BOOL bInvalidate=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `hue`  
- 色調值。  
+ A hue value.  
   
  [in] `luminance`  
- 亮度值。  
+ A luminance value.  
   
  [in] `saturation`  
- 飽和度值。  
+ A saturation value.  
   
  [in] `bInvalidate`  
- `TRUE`若要強制立即更新為新的色彩視窗否則， `FALSE`。 預設為 `TRUE`。  
+ `TRUE` to force the window to immediately update to the new color; otherwise, `FALSE`. The default is `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sethue"></a>CMFCColorPickerCtrl::SetHue  
- 變更目前所選色彩的色調。  
+##  <a name="sethue"></a>  CMFCColorPickerCtrl::SetHue  
+ Changes the hue of the currently selected color.  
   
 ```  
 void SetHue(double Hue);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `Hue`  
- 色調值。  
+ A hue value.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setluminance"></a>CMFCColorPickerCtrl::SetLuminance  
- 變更目前所選色彩的亮度。  
+##  <a name="setluminance"></a>  CMFCColorPickerCtrl::SetLuminance  
+ Changes the luminance of the currently selected color.  
   
 ```  
 void SetLuminance(double Luminance);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `Luminance`  
- 亮度值。  
+ A luminance value.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setluminancebarwidth"></a>CMFCColorPickerCtrl::SetLuminanceBarWidth  
- 色彩選擇器控制項中設定亮度列的寬度。  
+##  <a name="setluminancebarwidth"></a>  CMFCColorPickerCtrl::SetLuminanceBarWidth  
+ Sets the width of the luminance bar in the color picker control.  
   
 ```  
 void SetLuminanceBarWidth(int w);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `w`  
- 亮度列的寬度，以像素為單位。  
+ The width of the luminance bar measured in pixels.  
   
-### <a name="remarks"></a>備註  
- 使用此方法來調整亮度列中，位於**自訂**色彩選擇器控制項的索引標籤。 `w`參數指定新的亮度列寬度。 如果它超過四分之三的工作區寬度，則會忽略寬度的值。  
+### <a name="remarks"></a>Remarks  
+ Use this method to resize the luminance bar, which is on the **Custom** tab of the color picker control. The `w` parameter specifies the new width of the luminance bar. The width value is ignored if it exceeds three-fourths of the client area width.  
   
-##  <a name="setoriginalcolor"></a>CMFCColorPickerCtrl::SetOriginalColor  
- 設定初始選取的色彩。  
+##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
+ Sets the initial selected color.  
   
 ```  
 void SetOriginalColor(COLORREF ref);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `ref`  
- RGB 色彩值。  
+ An RGB color value.  
   
-### <a name="remarks"></a>備註  
- 初始化色彩選擇器控制項時，請呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ Call this method when the color picker control is initialized.  
   
-##  <a name="setpalette"></a>CMFCColorPickerCtrl::SetPalette  
- 設定目前的色彩調色盤。  
+##  <a name="setpalette"></a>  CMFCColorPickerCtrl::SetPalette  
+ Sets the current color palette.  
   
 ```  
 void SetPalette(CPalette* pPalette);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pPalette`  
- 色彩調色盤的指標。  
+ Pointer to a color palette.  
   
-### <a name="remarks"></a>備註  
- 色彩調色盤定義色彩選擇器控制項中的顯示色彩的陣列。  
+### <a name="remarks"></a>Remarks  
+ The color palette defines the array of colors that is presented in the color picker control.  
   
-##  <a name="setsaturation"></a>CMFCColorPickerCtrl::SetSaturation  
- 變更目前所選色彩的飽和度。  
+##  <a name="setsaturation"></a>  CMFCColorPickerCtrl::SetSaturation  
+ Changes the saturation of the currently selected color.  
   
 ```  
 void SetSaturation(double Saturation);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `Saturation`  
- 飽和度值。  
+ A saturation value.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settype"></a>CMFCColorPickerCtrl::SetType  
- 設定要顯示色彩選擇器控制項的類型。  
+##  <a name="settype"></a>  CMFCColorPickerCtrl::SetType  
+ Sets the type of color picker control to display.  
   
 ```  
 void SetType(COLORTYPE colorType);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `colorType`  
- 色彩選擇器控制項型別。  
+ A color picker control type.  
   
- 類型會由`CMFCColorPickerCtrl::COLORTYPE`列舉型別。 可能的類型為`LUMINANCE`， `PICKER`，`HEX`和`HEX_GREYSCALE`。 預設類型為 `PICKER`。  
+ The types are defined by the `CMFCColorPickerCtrl::COLORTYPE` enumeration. The possible types are `LUMINANCE`, `PICKER`, `HEX` and `HEX_GREYSCALE`. The default type is `PICKER`.  
   
-### <a name="remarks"></a>備註  
- 若要指定色彩選擇器控制項類型，請建立 Windows 控制項之前呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ To specify a color picker control type, call this method before the Windows control is created.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md)
 

@@ -1,42 +1,58 @@
 ---
-title: "COM 介面進入點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM 介面, 進入點"
-  - "進入點, COM 介面"
-  - "MFC COM, COM 介面進入點"
-  - "MFC, 管理狀態資料"
-  - "OLE, 介面進入點"
-  - "狀態管理, OLE/COM 介面"
+title: COM Interface Entry Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- entry points, COM interfaces
+- state management, OLE/COM interfaces
+- MFC COM, COM interface entry points
+- OLE, interface entry points
+- MFC, managing state data
+- COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# COM 介面進入點
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b97fa6891e35a6aff492c70baad967466a46eb4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-對於 COM 介面的成員函式，請使用 [METHOD\_PROLOGUE](../Topic/METHOD_PROLOGUE.md) 巨集維護適當的全域狀態，當呼叫匯出方法的介面。  
+---
+# <a name="com-interface-entry-points"></a>COM Interface Entry Points
+For member functions of a COM interface, use the [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) macro to maintain the proper global state when calling methods of an exported interface.  
   
- 通常， `CCmdTarget`實作的介面成員函式衍生物件已經使用這個巨集會提供 `pThis` 指標的自動初始化。  例如：  
+ Typically, member functions of interfaces implemented by `CCmdTarget`-derived objects already use this macro to provide automatic initialization of the `pThis` pointer. For example:  
   
- [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/CPP/com-interface-entry-points_1.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- 如需詳細資訊，請參閱MFC\/OLE **IUnknown** 實作的 [Technical Note 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) 。  
+ For additional information, see [Technical Note 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) on MFC/OLE **IUnknown** implementation.  
   
- `METHOD_PROLOGUE` 巨集定義如下：  
+ The `METHOD_PROLOGUE` macro is defined as:  
   
  `#define METHOD_PROLOGUE(theClass, localClass) \`  
   
@@ -46,11 +62,13 @@ manager: "ghogen"
   
  `AFX_MANAGE_STATE(pThis->m_pModuleState) \`  
   
- 與處理全域狀態相關的巨集的部分是:  
+ The portion of the macro concerned with managing the global state is:  
   
  `AFX_MANAGE_STATE( pThis->m_pModuleState )`  
   
- 在這個運算式， *m\_pModuleState* 假設是包含物件的成員變數。  將物件具現化時，它會由 `CCmdTarget` 基底類別實作和初始化為適當的值是 `COleObjectFactory`。  
+ In this expression, *m_pModuleState* is assumed to be a member variable of the containing object. It is implemented by the `CCmdTarget` base class and is initialized to the appropriate value by `COleObjectFactory`, when the object is instantiated.  
   
-## 請參閱  
- [管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)
+## <a name="see-also"></a>See Also  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+

@@ -1,57 +1,78 @@
 ---
-title: "如何：將現有的 MFC 功能區轉換為功能區資源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 功能區, 轉換為功能區資源"
-  - "功能區資源, 從 MFC 功能區轉換"
+title: 'How to: Convert an Existing MFC Ribbon to a Ribbon Resource | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon resource, converting from an MFC ribbon
+- MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# 如何：將現有的 MFC 功能區轉換為功能區資源
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 30ed9bd9483e00dc4845b4e318a66bfb21f4531f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-功能區資源比更容易視覺化，修改和維護手動撰寫功能區。  本主題說明如何轉換手動撰寫在 MFC 專案的功能區到功能區資源。  
+---
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>How to: Convert an Existing MFC Ribbon to a Ribbon Resource
+Ribbon resources are easier to visualize, modify, and maintain than manually coded ribbons. This topic describes how to convert a manually coded ribbon in an MFC Project into a ribbon resource.  
   
- 您必須擁有程式碼使用 MFC 功能區類別，例如， [CMFCRibbonBar 類別](../mfc/reference/cmfcribbonbar-class.md)的現有的 MFC 專案。  
+ You must have an existing MFC project that has code that uses the MFC ribbon classes, for example, [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  
   
-### 將 MFC 功能區轉換成功能區資源  
+### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>To convert an MFC ribbon to a ribbon resource  
   
-1.  在 Visual Studio 中，在現有的 MFC 專案，請開啟 CMFCRibbonBar 物件初始化的原始程式檔。  通常，檔案是 mainfrm.cpp。  在功能區上的初始化程式碼後面加入下列程式碼。  
+1.  In Visual Studio, in an existing MFC project, open the source file where the CMFCRibbonBar object is initialized. Typically, the file is mainfrm.cpp. Add the following code after the initialization code for the ribbon.  
   
-    ```  
-    m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");  
-    ```  
+ ```  
+    m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
+
+ ```  
   
-     儲存並關閉檔案。  
+     Save and close the file.  
   
-2.  建置並執行 MFC 應用程式，然後在記事本中，開啟 RibbonOutput.txt 並複製其內容。  
+2.  Build and run the MFC application, and then in Notepad, open RibbonOutput.txt and copy its contents.  
   
-3.  在 Visual Studio 中，按一下 \[**專案**\] 功能表上，按一下 \[**加入資源**\]。  在 \[**加入資源** \] 對話方塊中，選取 \[**功能區** \]，然後按一下 \[**新增**\]。  
+3.  In Visual Studio, on the **Project** menu, click **Add Resource**. In the **Add Resource** dialog box, select **Ribbon** and then click **New**.  
   
-     Visual Studio 會建立功能區資源並在設計檢視中將它開啟。  功能區資源 ID 是 IDR\_RIBBON1，顯示在 \[**資源檢視**\] 中。  功能區 XML ribbon1.mfcribbon\) 檔案中定義。  
+     Visual Studio creates a ribbon resource and opens it in design view. The ribbon resource ID is IDR_RIBBON1, which is displayed in **Resource View**. The ribbon is defined in the ribbon1.mfcribbon-ms XML file.  
   
-4.  在 Visual Studio 中，開啟 ribbon1.mfcribbon 毫秒，刪除其內容，然後貼上 RibbonOutput.txt 內容，您複製之前。  儲存並關閉 ribbon1.mfcribbon 毫秒。  
+4.  In Visual Studio, open ribbon1.mfcribbon-ms, delete its contents, and then paste the contents of RibbonOutput.txt, which you copied earlier. Save and close ribbon1.mfcribbon-ms.  
   
-5.  再次開啟 CMFCRibbonBar 物件初始化的原始程式檔 \(通常， mainfrm.cpp\) 和註解現有功能區程式碼。  在註解的程式碼後面加入下列程式碼。  
+5.  Again open the source file where the CMFCRibbonBar object is initialized (typically, mainfrm.cpp) and comment out the existing ribbon code. Add the following code after the code that you commented out.  
   
-    ```  
-    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);  
-    ```  
+ ```  
+    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
+
+ ```  
   
-6.  建置專案並執行程式。  
+6.  Build the project and run the program.  
   
-## 請參閱  
- [功能區設計工具 \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

@@ -1,72 +1,91 @@
 ---
-title: "Windows Sockets：通訊端告知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "告知, 通訊端"
-  - "通訊端 [C++], 告知"
-  - "Windows Sockets [C++], 告知"
+title: 'Windows Sockets: Socket Notifications | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], notifications
+- notifications [MFC], socket
+- sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Windows Sockets：通訊端告知
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dec4c5ef9bf53cfae7afe78cec9e33ceea0856da
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文將通訊端類別描述告知函式。  這些成員函式是重要事件通知您的通訊端物件的框架所呼叫的回呼函式。  告知函式為：  
+---
+# <a name="windows-sockets-socket-notifications"></a>Windows Sockets: Socket Notifications
+This article describes the notification functions in the socket classes. These member functions are callback functions that the framework calls to notify your socket object of important events. The notification functions are:  
   
--   [OnReceive](../Topic/CAsyncSocket::OnReceive.md):告知這個通訊端有緩衝區中資料的可以擷取呼叫 [接收](../Topic/CAsyncSocket::Receive.md)。  
+-   [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive): Notifies this socket that there is data in the buffer for it to retrieve by calling [Receive](../mfc/reference/casyncsocket-class.md#receive).  
   
--   [OnSend](../Topic/CAsyncSocket::OnSend.md):告知這個通訊端可以呼叫 [傳送](../Topic/CAsyncSocket::Send.md)現在會傳送資料。  
+-   [OnSend](../mfc/reference/casyncsocket-class.md#onsend): Notifies this socket that it can now send data by calling [Send](../mfc/reference/casyncsocket-class.md#send).  
   
--   [OnAccept](../Topic/CAsyncSocket::OnAccept.md):告知接聽通訊端可以接受暫止連接要求透過呼叫 [接受](../Topic/CAsyncSocket::Accept.md)。  
+-   [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept): Notifies this listening socket that it can accept pending connection requests by calling [Accept](../mfc/reference/casyncsocket-class.md#accept).  
   
--   [OnConnect](../Topic/CAsyncSocket::OnConnect.md):告知這個連接通訊端其連接嘗試完成:或許可能成功或錯誤。  
+-   [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect): Notifies this connecting socket that its connection attempt completed: perhaps successfully or perhaps in error.  
   
--   [OnClose](../Topic/CAsyncSocket::OnClose.md):通知它連接至這個通訊端的通訊端關閉。  
+-   [OnClose](../mfc/reference/casyncsocket-class.md#onclose): Notifies this socket that the socket it is connected to has closed.  
   
     > [!NOTE]
-    >  額外的告知函式是 [OnOutOfBandData](../Topic/CAsyncSocket::OnOutOfBandData.md)。  此通知會通知接收的通訊端傳送通訊端有「傳送 Out\-of\-Band」的資料。  Out\-of\-Band Data 是邏輯上獨立整合通道的與每個至已連接的資料流通訊端。  Out\-of\-Band 通道通常用來傳送「緊急」資料。  MFC 支援 Out\-of\-Band 資料。  進階使用者使用 [CAsyncSocket](../mfc/reference/casyncsocket-class.md) 一起使用可能需要使用 Out\-of\-Band 通道，不過， [CSocket](../mfc/reference/csocket-class.md) 類別的使用者從使用它被鼓勵。  最簡單的方法是建立傳遞的這類資料的第二個通訊端。  如需 Out\-of\-Band 資料的詳細資訊，請參閱 Windows Sockets 規格，在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中使用。  
+    >  An additional notification function is [OnOutOfBandData](../mfc/reference/casyncsocket-class.md#onoutofbanddata). This notification tells the receiving socket that the sending socket has "out-of-band" data to send. Out-of-band data is a logically independent channel associated with each pair of connected stream sockets. The out-of-band channel is typically used to send "urgent" data. MFC supports out-of-band data. Advanced users working with class [CAsyncSocket](../mfc/reference/casyncsocket-class.md) might need to use the out-of-band channel, but users of class [CSocket](../mfc/reference/csocket-class.md) are discouraged from using it. The easier way is to create a second socket for passing such data. For more information about out-of-band data, see the Windows Sockets specification, available in the Windows SDK.  
   
- 如果您從類別衍生自 `CAsyncSocket`，您必須覆寫這些 Web 事件的告知函式想要加入至應用程式。  如果您從類別衍生自 `CSocket`的類別，它是您選擇的覆寫函式相關通知。  在告知函式會預設為的情況下，您也可以使用 `CSocket` 。  
+ If you derive from class `CAsyncSocket`, you must override the notification functions for those network events of interest to your application. If you derive a class from class `CSocket`, it is your choice whether to override the notification functions of interest. You can also use `CSocket` itself, in which case the notification functions default to doing nothing.  
   
- 這些函式是可覆寫的回呼函式。  `CAsyncSocket` 和 `CSocket` 轉換訊息告知，不過，您必須實作告知函式如何回應，如果要使用它們。  告知函式呼叫，則通訊端會收到相關事件的時間，例如要讀取的資料隨即出現。  
+ These functions are overridable callback functions. `CAsyncSocket` and `CSocket` convert messages to notifications, but you must implement how the notification functions respond if you wish to use them. The notification functions are called at the time your socket is notified of an event of interest, such as the presence of data to be read.  
   
- 會通知時， MFC 會告知函式可讓您自訂的通訊端的行為。  例如，您可能會從您的 `OnReceive` 告知函式的 **Receive** ，也就是說，在收到具有讀取資料，您可以呼叫 **Receive** 讀取它。  這個方法不是必要的，不過，它是有效的案例。  或者，您可以使用您的告知函式追蹤進度，列印 **TRACE** 訊息，依此類推。  
+ MFC calls the notification functions to let you customize your socket's behavior at the time it is notified. For example, you might call **Receive** from your `OnReceive` notification function, that is, on being notified that there is data to read, you call **Receive** to read it. This approach is not necessary, but it is a valid scenario. As an alternative, you might use your notification function to track progress, print **TRACE** messages, and so on.  
   
- 您可以覆寫衍生的通訊端類別的告知功能和提供實作利用這些通知。  
+ You can take advantage of these notifications by overriding the notification functions in a derived socket class and providing an implementation.  
   
- 在執行作業時 \(例如接收或傳送資料， `CSocket` 物件會同步處理。  在這個同步處理狀態期間，做為其他通訊端表示所有通知排入佇列時，若要的目前通訊端等候告知時。在 **Receive** 呼叫期間， \(例如，通訊端要通知讀取\)。一旦通訊端完成同步作業並再次變成非同步，其他通訊端可開始接收佇列的通知。  
+ During an operation such as receiving or sending data, a `CSocket` object becomes synchronous. During the synchronous state, any notifications meant for other sockets are queued while the current socket waits for the notification it wants. (For example, during a **Receive** call, the socket wants a notification to read.) Once the socket completes its synchronous operation and becomes asynchronous again, other sockets can begin receiving the queued notifications.  
   
 > [!NOTE]
->  在 `CSocket`中， `OnConnect` 告知函式絕不會呼叫。  如需連接，您呼叫 **Connect**，將傳回，當連接完成時 \(成功或錯誤\)。  連接通知的處理方式是 MFC 實作詳細資料。  
+>  In `CSocket`, the `OnConnect` notification function is never called. For connections, you call **Connect**, which will return when the connection is completed (either successfully or in error). How connection notifications are handled is an MFC implementation detail.  
   
- 如需每個告知函式的詳細資訊，請參閱函式在《 *MFC 參考》中的*類別 `CAsyncSocket` 下。  如需原始程式碼以及有關 MFC 範例，請參閱 [MFC 範例](../top/visual-cpp-samples.md)。  
+ For details about each notification function, see the function under class `CAsyncSocket` in the *MFC Reference*. For source code and information about MFC samples, see [MFC Samples](../visual-cpp-samples.md).  
   
- 如需詳細資訊，請參閱：  
+ For more information, see:  
   
--   [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets：從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets：如何搭配使用通訊端與封存](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: How Sockets with Archives Work](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets：封鎖](../mfc/windows-sockets-blocking.md)  
+-   [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md)  
   
--   [Windows Sockets：位元組順序](../mfc/windows-sockets-byte-ordering.md)  
+-   [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md)  
   
--   [Windows Sockets：轉換字串](../mfc/windows-sockets-converting-strings.md)  
+-   [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md)  
   
-## 請參閱  
- [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

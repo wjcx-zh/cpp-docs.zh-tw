@@ -1,5 +1,5 @@
 ---
-title: "CMFCPrintPreviewToolBar 類別 |Microsoft 文件"
+title: CMFCPrintPreviewToolBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,10 +11,8 @@ ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPrintPreviewToolBar class
-- CMFCPrintPreviewToolBar class, destructor
-- CMFCPrintPreviewToolBar::GetThisClass method
-- ~CMFCPrintPreviewToolBar destructor
+- CMFCPrintPreviewToolBar class [MFC]
+- CMFCPrintPreviewToolBar class [MFC], destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
 caps.latest.revision: 20
 author: mikeblome
@@ -34,17 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 56cfa9460448db47330d87410d5aad589a9127c2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b193f4801de9500576e048a9cb321745f5c0a2b4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcprintpreviewtoolbar-class"></a>CMFCPrintPreviewToolBar 類別
-在列印預覽工具列。  
+# <a name="cmfcprintpreviewtoolbar-class"></a>CMFCPrintPreviewToolBar Class
+The toolbar on the print preview.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPrintPreviewToolBar : public CMFCToolBar  
@@ -52,21 +50,21 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|解構函式。|  
+|Name|Description|  
+|`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|`CMFCPrintPreviewToolBar::GetThisClass`|由架構用來取得變數的指標， [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
+|Name|Description|  
+|`CMFCPrintPreviewToolBar::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -83,10 +81,10 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
   
  [CMFCPrintPreviewToolBar](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxpreviewviewex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxpreviewviewex.h  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

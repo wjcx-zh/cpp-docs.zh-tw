@@ -1,5 +1,5 @@
 ---
-title: "分派對應 |Microsoft 文件"
+title: Dispatch Maps | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,9 +13,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dispatch maps. macros
-- dispatch maps
-- dispatch map macros
+- dispatch maps [MFC], macros
+- dispatch maps [MFC]
+- dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 caps.latest.revision: 14
 author: mikeblome
@@ -35,86 +35,86 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 48e5d1fe207089733caa5ed9e8ca30c2de21f95f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d3c8ce6d9099df6f5c19ce8e699c13f8739b878
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dispatch-maps"></a>分派對應
-OLE Automation 提供方式呼叫方法，及跨應用程式中存取屬性。 Microsoft Foundation 類別庫發送這些要求所提供的機制是 「 分派對應 」 指定物件的函式和屬性，以及本身的屬性和函式引數的資料類型的內部和外部名稱。  
+# <a name="dispatch-maps"></a>Dispatch Maps
+OLE Automation provides ways to call methods and to access properties across applications. The mechanism supplied by the Microsoft Foundation Class Library for dispatching these requests is the "dispatch map," which designates the internal and external names of object functions and properties, as well as the data types of the properties themselves and of function arguments.  
   
-### <a name="dispatch-maps"></a>分派對應  
+### <a name="dispatch-maps"></a>Dispatch Maps  
   
 |||  
 |-|-|  
-|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|宣告分派對應將用於公開類別的方法和屬性 （必須使用在類別宣告中）。|  
-|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|啟動分派對應的定義。|  
-|[END_DISPATCH_MAP](#end_dispatch_map)|結束分派對應的定義。|  
-|[DISP_FUNCTION](#disp_function)|分派對應中用來定義 OLE automation 函式。|  
-|[DISP_PROPERTY](#disp_property)|定義 OLE automation 屬性。|  
-|[DISP_PROPERTY_EX](#disp_property_ex)|定義 OLE automation 屬性和名稱的 Get 和 Set 函式。|  
-|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|定義 OLE automation 屬性通知。|  
-|[DISP_PROPERTY_PARAM](#disp_property_param)|定義 OLE automation 屬性的 Get 和 Set 函式採用參數和名稱。|  
-|[DISP_DEFVALUE](#disp_defvalue)|將現有的屬性設為物件的預設值。|  
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Declares that a dispatch map will be used to expose a class's methods and properties (must be used in the class declaration).|  
+|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Starts the definition of a dispatch map.|  
+|[END_DISPATCH_MAP](#end_dispatch_map)|Ends the definition of a dispatch map.|  
+|[DISP_FUNCTION](#disp_function)|Used in a dispatch map to define an OLE automation function.|  
+|[DISP_PROPERTY](#disp_property)|Defines an OLE automation property.|  
+|[DISP_PROPERTY_EX](#disp_property_ex)|Defines an OLE automation property and names the Get and Set functions.|  
+|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Defines an OLE automation property with notification.|  
+|[DISP_PROPERTY_PARAM](#disp_property_param)|Defines an OLE automation property that takes parameters and names the Get and Set functions.|  
+|[DISP_DEFVALUE](#disp_defvalue)|Makes an existing property the default value of an object.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
- 如果`CCmdTarget`-衍生的類別，在程式中支援 OLE Automation，類別必須提供公開其方法和屬性的分派對應。  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
+ If a `CCmdTarget`-derived class in your program supports OLE Automation, that class must provide a dispatch map to expose its methods and properties.  
   
 ```   
 DECLARE_DISPATCH_MAP()  
 ```  
   
-### <a name="remarks"></a>備註  
- 使用`DECLARE_DISPATCH_MAP`巨集，在類別宣告的結尾。 然後，在。CPP 檔案所定義的成員函式類別，請使用`BEGIN_DISPATCH_MAP`巨集。 然後在每個類別的公開方法和屬性包含巨集項目 ( `DISP_FUNCTION`， `DISP_PROPERTY`，依此類推)。 最後，使用`END_DISPATCH_MAP`巨集。  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_DISPATCH_MAP` macro at the end of your class declaration. Then, in the .CPP file that defines the member functions for the class, use the `BEGIN_DISPATCH_MAP` macro. Then include macro entries for each of your class's exposed methods and properties ( `DISP_FUNCTION`, `DISP_PROPERTY`, and so on). Finally, use the `END_DISPATCH_MAP` macro.  
   
 > [!NOTE]
->  如果您宣告之後的任何成員`DECLARE_DISPATCH_MAP`，您必須指定新的存取類型 (**公用**， `private`，或`protected`) 它們。  
+>  If you declare any members after `DECLARE_DISPATCH_MAP`, you must specify a new access type ( **public**, `private`, or `protected`) for them.  
   
- 應用程式精靈和程式碼精靈會協助建立 Automation 類別和維護分派對應。 如需有關分派對應的詳細資訊，請參閱[Automation 伺服程式](../../mfc/automation-servers.md)。  
+ The Application Wizard and code wizards assist in creating Automation classes and in maintaining dispatch maps. For more information on dispatch maps, see [Automation Servers](../../mfc/automation-servers.md).  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCAutomation #&10;](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
 
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
- 宣告您的分派對應的定義。  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
+ Declares the definition of your dispatch map.  
   
 ```  
 BEGIN_DISPATCH_MAP(theClass, baseClass)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 指定擁有此分派對應之類別的名稱。  
+ Specifies the name of the class that owns this dispatch map.  
   
  `baseClass`  
- 指定 `theClass` 的基底類別名稱。  
+ Specifies the base class name of `theClass`.  
   
-### <a name="remarks"></a>備註  
- 在為您的類別定義成員函式的實作 (.cpp) 檔案中，使用 `BEGIN_DISPATCH_MAP` 巨集啟動分派對應，為每個分派函式和屬性新增巨集項目，然後使用 `END_DISPATCH_MAP` 巨集完成分派對應。  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the dispatch map with the `BEGIN_DISPATCH_MAP` macro, add macro entries for each of your dispatch functions and properties, and complete the dispatch map with the `END_DISPATCH_MAP` macro.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
- 結束您的分派對應的定義。  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
+ Ends the definition of your dispatch map.  
   
 ```   
 END_DISPATCH_MAP()  
 ```  
   
-### <a name="remarks"></a>備註  
- 必須與 `BEGIN_DISPATCH_MAP` 搭配使用。  
+### <a name="remarks"></a>Remarks  
+ It must be used in conjunction with `BEGIN_DISPATCH_MAP`.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
- 分派對應中定義的 OLE automation 函式。  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
+ Defines an OLE automation function in a dispatch map.  
   
 ```   
 DISP_FUNCTION(
@@ -125,26 +125,26 @@ DISP_FUNCTION(
   vtsParams)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 類別的名稱。  
+ Name of the class.  
   
  `pszName`  
- 外部函式的名稱。  
+ External name of the function.  
   
  `pfnMember`  
- 成員函式的名稱。  
+ Name of the member function.  
   
  `vtRetVal`  
- 值，指定函式的傳回型別。  
+ A value specifying the function's return type.  
   
  `vtsParams`  
- 指定函式的參數清單的一個或多個常數以空格分隔清單。  
+ A space-separated list of one or more constants specifying the function's parameter list.  
   
-### <a name="remarks"></a>備註  
- `vtRetVal`引數的型別是**VARTYPE**。 以下的可能值為這個引數取自`VARENUM`列舉型別︰  
+### <a name="remarks"></a>Remarks  
+ The `vtRetVal` argument is of type **VARTYPE**. The following possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|符號|傳回型別|  
+|Symbol|Return type|  
 |------------|-----------------|  
 |`VT_EMPTY`|`void`|  
 |`VT_I2`|**short**|  
@@ -152,7 +152,7 @@ DISP_FUNCTION(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
-|`VT_DATE`|**日期**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`BSTR`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -160,47 +160,47 @@ DISP_FUNCTION(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
- `vtsParams`引數是以空格分隔的清單中的值**VTS_**常數。 一或多個以空格 （不是逗號） 分隔這些值會指定函式的參數清單。 例如： 
+ The `vtsParams` argument is a space-separated list of values from the **VTS_** constants. One or more of these values separated by spaces (not commas) specifies the function's parameter list. For example, 
   
- [!code-cpp[NVC_MFCAutomation #&14;](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]  
   
- 指定包含短整數後面短整數指標的清單。  
+ specifies a list containing a short integer followed by a pointer to a short integer.  
   
- **VTS_**常數和其意義如下︰  
+ The **VTS_** constants and their meanings are as follows:  
   
-|符號|參數類型|  
+|Symbol|Parameter type|  
 |------------|--------------------|  
 |**VTS_I2**|`Short`|  
 |**VTS_I4**|`Long`|  
-|**VTS_R4**|**浮點數**|  
+|**VTS_R4**|**Float**|  
 |**VTS_R8**|`Double`|  
-|**VTS_CY**|**const CY**或**CY\***|  
-|**VTS_DATE**|**日期**|  
+|**VTS_CY**|**const CY** or **CY\***|  
+|**VTS_DATE**|**DATE**|  
 |**VTS_BSTR**|`LPCSTR`|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const 變異\***或**VARIANT i**|  
+|**VTS_VARIANT**|**const VARIANT\*** or **VARIANT&**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**簡短\***|  
-|**VTS_PI4**|**長\***|  
-|**VTS_PR4**|**浮點數\***|  
+|**VTS_PI2**|**short\***|  
+|**VTS_PI4**|**long\***|  
+|**VTS_PR4**|**float\***|  
 |**VTS_PR8**|**double\***|  
 |**VTS_PCY**|**CY\***|  
-|**VTS_PDATE**|**日期\***|  
+|**VTS_PDATE**|**DATE\***|  
 |**VTS_PBSTR**|**BSTR\***|  
 |**VTS_PDISPATCH**|**LPDISPATCH\***|  
 |**VTS_PSCODE**|**SCODE\***|  
 |**VTS_PBOOL**|**BOOL\***|  
 |**VTS_PVARIANT**|**VARIANT\***|  
 |**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
-|**VTS_NONE**|沒有參數|  
+|**VTS_NONE**|No parameters|  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
- 分派對應中定義的 OLE automation 屬性。  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
+ Defines an OLE automation property in a dispatch map.  
   
 ```   
 DISP_PROPERTY(
@@ -210,30 +210,30 @@ DISP_PROPERTY(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 類別的名稱。  
+ Name of the class.  
   
  `pszName`  
- 屬性外部名稱。  
+ External name of the property.  
   
  `memberName`  
- 成員變數中儲存屬性的名稱。  
+ Name of the member variable in which the property is stored.  
   
  `vtPropType`  
- 值，指定屬性的型別。  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>備註  
- `vtPropType`引數的型別是**VARTYPE**。 可能的值，這個引數取自`VARENUM`列舉型別︰  
+### <a name="remarks"></a>Remarks  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|符號|**屬性類型**|  
+|Symbol|**Property type**|  
 |------------|-----------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
-|`VT_DATE`|**日期**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`CString`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -241,13 +241,13 @@ DISP_PROPERTY(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
- 當外部用戶端變更的屬性，指定的成員變數的值`memberName`變更; 沒有變更的通知。  
+ When an external client changes the property, the value of the member variable specified by `memberName` changes; there is no notification of the change.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
- 用來取得及設定屬性的值，在分派對應的函式定義 OLE automation 屬性和名稱。  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
+ Defines an OLE automation property and name the functions used to get and set the property's value in a dispatch map.  
   
 ```   
 DISP_PROPERTY_EX(
@@ -258,32 +258,32 @@ DISP_PROPERTY_EX(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 類別的名稱。  
+ Name of the class.  
   
  `pszName`  
- 屬性外部名稱。  
+ External name of the property.  
   
  `memberGet`  
- 用於取得屬性的成員函式的名稱。  
+ Name of the member function used to get the property.  
   
  `memberSet`  
- 用來設定屬性的成員函式的名稱。  
+ Name of the member function used to set the property.  
   
  `vtPropType`  
- 值，指定屬性的型別。  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>備註  
- `memberGet`和`memberSet`函式具有簽章由`vtPropType`引數。 `memberGet`函式不接受引數並傳回所指定型別的值`vtPropType`。 `memberSet`函式的引數所指定型別的`vtPropType`並會傳回任何資料。  
+### <a name="remarks"></a>Remarks  
+ The `memberGet` and `memberSet` functions have signatures determined by the `vtPropType` argument. The `memberGet` function takes no arguments and returns a value of the type specified by `vtPropType`. The `memberSet` function takes an argument of the type specified by `vtPropType` and returns nothing.  
   
- `vtPropType`引數的型別是**VARTYPE**。 可能的值，這個引數取自`VARENUM`列舉型別。 如需這些值的清單，請參閱備註`vtRetVal`中的參數[DISP_FUNCTION](#disp_function)。 請注意， `VT_EMPTY`，列在`DISP_FUNCTION`註解、 不允許做為屬性的資料類型。  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration. For a list of these values, see the Remarks for the `vtRetVal` parameter in [DISP_FUNCTION](#disp_function). Note that `VT_EMPTY`, listed in the `DISP_FUNCTION` remarks, is not permitted as a property data type.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
- 定義 OLE automation 屬性與通知分派對應中。  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
+ Defines an OLE automation property with notification in a dispatch map.  
   
 ```   
 DISP_PROPERTY_NOTIFY(
@@ -294,35 +294,35 @@ DISP_PROPERTY_NOTIFY(
   vtPropType)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 類別的名稱。  
+ Name of the class.  
   
  `szExternalName`  
- 屬性外部名稱。  
+ External name of the property.  
   
  `memberName`  
- 成員變數中儲存屬性的名稱。  
+ Name of the member variable in which the property is stored.  
   
  `pfnAfterSet`  
- 通知函式的名稱`szExternalName`。  
+ Name of the notification function for `szExternalName`.  
   
  `vtPropType`  
- 值，指定屬性的型別。  
+ A value specifying the property's type.  
   
-### <a name="remarks"></a>備註  
- 不像屬性以定義`DISP_PROPERTY`，與定義的屬性`DISP_PROPERTY_NOTIFY`會自動呼叫所指定的函數`pfnAfterSet`屬性變更時。  
+### <a name="remarks"></a>Remarks  
+ Unlike properties defined with `DISP_PROPERTY`, a property defined with `DISP_PROPERTY_NOTIFY` will automatically call the function specified by `pfnAfterSet` when the property is changed.  
   
- `vtPropType`引數的型別是**VARTYPE**。 可能的值，這個引數取自`VARENUM`列舉型別︰  
+ The `vtPropType` argument is of type **VARTYPE**. Possible values for this argument are taken from the `VARENUM` enumeration:  
   
-|符號|**屬性類型**|  
+|Symbol|**Property type**|  
 |------------|-----------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
 |`VT_CY`|**CY**|  
-|`VT_DATE`|**日期**|  
+|`VT_DATE`|**DATE**|  
 |`VT_BSTR`|`CString`|  
 |**VT_DISPATCH**|`LPDISPATCH`|  
 |`VT_ERROR`|`SCODE`|  
@@ -330,11 +330,11 @@ DISP_PROPERTY_NOTIFY(
 |**VT_VARIANT**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
- 存取使用不同的屬性會定義**取得**和`Set`成員函式。  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
+ Defines a property accessed with separate **Get** and `Set` member functions.  
   
 ```   
 DISP_PROPERTY_PARAM(
@@ -346,70 +346,70 @@ DISP_PROPERTY_PARAM(
   vtsParams)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 類別的名稱。  
+ Name of the class.  
   
  *pszExternalName*  
- 屬性外部名稱。  
+ External name of the property.  
   
  `pfnGet`  
- 用於取得屬性的成員函式的名稱。  
+ Name of the member function used to get the property.  
   
  `pfnSet`  
- 用來設定屬性的成員函式的名稱。  
+ Name of the member function used to set the property.  
   
  `vtPropType`  
- 值，指定屬性的型別。  
+ A value specifying the property's type.  
   
  `vtsParams`  
- 以空格分隔的字串**VTS_**變異參數類型，一個用於每個參數。  
+ A string of space-separated **VTS_** variant parameter types, one for each parameter.  
   
-### <a name="remarks"></a>備註  
- 不同於`DISP_PROPERTY_EX`巨集，此巨集讓您指定之屬性的參數清單。 這可用於實作會編製索引或參數化屬性。  
+### <a name="remarks"></a>Remarks  
+ Unlike the `DISP_PROPERTY_EX` macro, this macro allows you to specify a parameter list for the property. This is useful for implementing properties that are indexed or parameterized.  
   
-### <a name="example"></a>範例  
- 請考慮下列宣告的 get 和設定成員函式可讓使用者存取屬性時，要求特定資料列和資料行︰  
+### <a name="example"></a>Example  
+ Consider the following declaration of get and set member functions that allow the user to request a specific row and column when accessing the property:  
   
- [!code-cpp[NVC_MFCActiveXControl #&9;](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]  
+ [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]  
   
- 這些會對應至下列`DISP_PROPERTY_PARAM`中控制項分派對應巨集︰  
+ These correspond to the following `DISP_PROPERTY_PARAM` macro in the control dispatch map:  
   
- [!code-cpp[NVC_MFCActiveXControl #&10;](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]  
   
- 另一個範例，請考慮下列取得並設定成員函式︰  
+ As another example, consider the following get and set member functions:  
   
- [!code-cpp[NVC_MFCActiveXControl #&11;](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]  
+ [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]  
   
- 這些會對應至下列`DISP_PROPERTY_PARAM`中控制項分派對應巨集︰  
+ These correspond to the following `DISP_PROPERTY_PARAM` macro in the control dispatch map:  
   
- [!code-cpp[NVC_MFCActiveXControl #&12;](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
- 將現有的屬性設為物件的預設值。  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
+ Makes an existing property the default value of an object.  
   
 ```   
 DISP_DEFVALUE(theClass, pszName)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 類別的名稱。  
+ Name of the class.  
   
  `pszName`  
- 屬性外部名稱，表示物件的｢值｣。  
+ External name of the property that represents the "value" of the object.  
   
-### <a name="remarks"></a>備註  
- 使用預設值可以使設計 Visual Basic 應用程式的自動化物件時更為簡單。  
+### <a name="remarks"></a>Remarks  
+ Using a default value can make programming your automation object simpler for Visual Basic applications.  
   
- 您的物件的「預設值」就是物件的參考不指定屬性或成員函式時，所擷取或設定的屬性。  
+ The "default value" of your object is the property that is retrieved or set when a reference to an object does not specify a property or member function.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h 
 
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

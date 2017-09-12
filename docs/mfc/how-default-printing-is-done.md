@@ -1,40 +1,59 @@
 ---
-title: "如何完成預設列印 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "預設列印"
-  - "預設, 列印"
-  - "列印 [MFC], 預設"
+title: How Default Printing Is Done | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- default printing
+- printing [MFC], default
+- defaults, printing
 ms.assetid: 0f698459-0fc9-4d43-97da-29cf0f65daa2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 如何完成預設列印
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d4a08c857045a41bb3e913f90eb1c46d3d49db68
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明Windows的預設列印處理序是 MFC 架構。  
+---
+# <a name="how-default-printing-is-done"></a>How Default Printing Is Done
+This article explains the default printing process in Windows in terms of the MFC framework.  
   
- 在 MFC 應用程式，其檢視類別具有一個名稱為 `OnDraw`、包含任何繪圖程式碼的成員函式。  `OnDraw` 將指向 [CDC](../mfc/reference/cdc-class.md) 物件的指標做為參數。  `CDC` 物件表示裝置內容接收由 `OnDraw`所產生的影像。  當顯示文件的視窗收到 [WM\_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 訊息時，架構會呼叫 `OnDraw` 並將它繪製至畫面 \( [CPaintDC](../mfc/reference/cpaintdc-class.md) 物件的裝置內容，是特定的\)。  因此， `OnDraw` 要輸出至螢幕。  
+ In MFC applications, the view class has a member function named `OnDraw` that contains all the drawing code. `OnDraw` takes a pointer to a [CDC](../mfc/reference/cdc-class.md) object as a parameter. That `CDC` object represents the device context to receive the image produced by `OnDraw`. When the window displaying the document receives a [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message, the framework calls `OnDraw` and passes it a device context for the screen (a [CPaintDC](../mfc/reference/cpaintdc-class.md) object, to be specific). Accordingly, `OnDraw`'s output goes to the screen.  
   
- 在 Windows 程式設計中，將輸出傳送至印表機非常類似於傳送輸出至螢幕。  這是因為 Windows 繪圖裝置介面 \(Graphics Device \(GDI\) 無關硬體。  使用適當的裝置內容，可以使用相同的 GDI 函式為螢幕顯示和列印。  如果 `OnDraw` 所接收的 `CDC` 物件代表印表機， `OnDraw` 輸出到印表機。  
+ In programming for Windows, sending output to the printer is very similar to sending output to the screen. This is because the Windows graphics device interface (GDI) is hardware-independent. You can use the same GDI functions for screen display or for printing simply by using the appropriate device context. If the `CDC` object that `OnDraw` receives represents the printer, `OnDraw`'s output goes to the printer.  
   
- 這說明 MFC 應用程式如何執行簡單的列印，而不需要在您部分的額外工作。  架構負責顯示列印對話方塊並建立印表機的裝置內容。  當使用者從檔案功能表選取列印命令時，這個檢視會傳遞這個裝置內容至 `OnDraw`，其描製文件於印表機。  
+ This explains how MFC applications can perform simple printing without requiring extra effort on your part. The framework takes care of displaying the Print dialog box and creating a device context for the printer. When the user selects the Print command from the File menu, the view passes this device context to `OnDraw`, which draws the document on the printer.  
   
- 不過，在列印和螢幕顯示之間有一些重大差異。  您在列印時必須將文件分割成不同頁面並一次顯示一個，而不是在視窗中顯示任何可顯示的部分。  做為推算，您必須知道文件大小 \(不論是字母大小、法定規格或信封\)。  您可能需要不同的列印方向，例如橫向和縱向模式。  MFC 程式庫無法預測應用程式如何處理這些問題，因此，它提供了通訊協定來加強這些功能。  
+ However, there are some significant differences between printing and screen display. When you print, you have to divide the document into distinct pages and display them one at a time, rather than display whatever portion is visible in a window. As a corollary, you have to be aware of the size of the paper (whether it's letter size, legal size, or an envelope). You may want to print in different orientations, such as landscape or portrait mode. The Microsoft Foundation Class Library can't predict how your application will handle these issues, so it provides a protocol for you to add these capabilities.  
   
- 該通訊協定說明於文件 [多頁文件](../mfc/multipage-documents.md)中。  
+ That protocol is described in the article [Multipage Documents](../mfc/multipage-documents.md).  
   
-## 請參閱  
- [列印](../mfc/printing.md)
+## <a name="see-also"></a>See Also  
+ [Printing](../mfc/printing.md)
+
+

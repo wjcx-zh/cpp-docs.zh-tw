@@ -1,286 +1,309 @@
 ---
-title: "逐步解說：更新 MFC Scribble 應用程式 (第 1 部分) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "範例 [C++], 更新現有的應用程式"
-  - "MFC 功能套件, 更新現有的應用程式"
-  - "Office Fluent UI, 移植至"
-  - "功能區 UI, 移植至"
-  - "範例 [C++], 更新現有的應用程式"
-  - "逐步解說 [C++], 更新現有的應用程式"
+title: 'Walkthrough: Updating the MFC Scribble Application (Part 1) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- examples [MFC], update existing application
+- ribbon UI, porting to
+- Office Fluent UI, porting to
+- samples [MFC], update existing application
+- MFC Feature Pack, update existing application
+- walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 caps.latest.revision: 54
-caps.handback.revision: 50
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 逐步解說：更新 MFC Scribble 應用程式 (第 1 部分)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b6b10b3a5f8033e927c6a7359b7eca48dddbc8eb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本逐步解說示範如何修改現有的 MFC 應用程式使用功能區使用者介面。  Visual Studio 支援 Office 2007 功能區和自 Windows 7 的功能區。  如需功能區使用者介面的詳細資訊，請參閱 MSDN 網站上 [功能區](http://go.microsoft.com/fwlink/?LinkId=129233) 。  
+---
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Walkthrough: Updating the MFC Scribble Application (Part 1)
+This walkthrough demonstrates how to modify an existing MFC application to use the Ribbon user interface. Visual Studio supports both the Office 2007 Ribbon and the Windows 7 Scenic Ribbon. For more information about the Ribbon user interface, see [Ribbons](http://go.microsoft.com/fwlink/linkid=129233) on the MSDN Web site.  
   
- 這個逐步解說中修改可讓您使用滑鼠建立線條繪圖的傳統 Scribble MFC 1.0 範例。  這個逐步解說的這個部分顯示如何修改 Scribble 範例，使其顯示功能區列。  [第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) 會將多個按鈕加入至功能區列。  
+ This walkthrough modifies the classic Scribble 1.0 MFC sample that lets you use the mouse to create line drawings. This part of the walkthrough shows how to modify the Scribble sample so that it displays a ribbon bar. [Part 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) adds more buttons to the ribbon bar.  
   
-## 必要條件  
- [Visual C\+\+ 範例](../top/visual-cpp-samples.md)  
+## <a name="prerequisites"></a>Prerequisites  
+ [Visual C++ Samples](../visual-cpp-samples.md)  
   
- [Visual C\+\+ 範例](../top/visual-cpp-samples.md)  
+ [Visual C++ Samples](../visual-cpp-samples.md)  
   
-##  <a name="top"></a> 章節  
- 這部分的逐步解說中有下列部分:  
+##  <a name="top"></a> Sections  
+ This part of the walkthrough has the following sections:  
   
--   [取代基底類別](#replaceClass)  
+- [Replacing the Base Classes](#replaceclass)  
   
--   [將點陣圖儲存至專案](#addBitmap)  
+- [Adding Bitmaps to the Project](#addbitmap)  
   
--   [將功能區資源加入至專案](#addRibbon)  
+- [Adding a Ribbon Resource to the Project](#addribbon)  
   
--   [建立功能區列表的執行個體。](#createInstance)  
+- [Creating an Instance of the Ribbon Bar](#createinstance)  
   
--   [加入功能區類別](#addCategory)  
+- [Adding a Ribbon Category](#addcategory)  
   
--   [設定應用程式的外觀。](#setLook)  
+- [Setting the Look of the Application](#setlook)  
   
-##  <a name="replaceClass"></a> 取代基底類別  
- 若要轉換支援功能表對應用程式支援功能區的應用程式，您必須更新從基底類別衍生應用程式框架視窗和工具列類別。\(建議您不要修改原始的 Scribble 範例;相反地，請清除 Scribble 專案，複製至另一個目錄，然後修改複本\)。  
+##  <a name="replaceclass"></a> Replacing the Base Classes  
+ To convert an application that supports a menu to an application that supports a ribbon, you must derive the application, frame window, and toolbar classes from updated base classes. (We suggest that you do not modify the original Scribble sample; instead, clean the Scribble project, copy it to another directory, and then modify the copy.)  
   
-#### 取代在 Scribble 應用程式的基底類別。  
+#### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>To replace the base classes in the Scribble application  
   
-1.  在 scribble.cpp，確認 `CScribbleApp::InitInstance` 包含呼叫 [AfxOleInit](../Topic/AfxOleInit.md)。  
+1.  In scribble.cpp, verify that `CScribbleApp::InitInstance` includes a call to [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).  
   
-2.  將下列程式碼加入至 Stdafx.h 檔案：  
+2.  Add the following code to the stdafx.h file.  
   
-    ```  
+ ```  
     #include <afxcontrolbars.h>  
-    ```  
+ ```  
   
-3.  在 scribble.h，修改 `CScribbleApp` 類別定義，使其衍生自 [CWinAppEx Class](../mfc/reference/cwinappex-class.md)。  
+3.  In scribble.h, modify the definition for the `CScribbleApp` class so that it is derived from [CWinAppEx Class](../mfc/reference/cwinappex-class.md).  
   
-    ```  
+ ```  
     class CScribbleApp: public CWinAppEx  
-    ```  
+ ```  
   
-4.  Scribble 1.0 時，當 Windows 應用程式使用初始化 \(.ini\) 檔案儲存使用者偏好設定資料。  請修改 Scribble 儲存使用者偏好設定在登錄中，而不是使用初始化檔案。  若要設定登錄機碼和基底，請在 `LoadStdProfileSettings()` 陳述式後面輸入在 `CScribbleApp::InitInstance` 的程式碼。  
+4.  Scribble 1.0 was written when Windows applications used an initialization (.ini) file to save user preference data. Instead of an initialization file, modify Scribble to store user preferences in the registry. To set the registry key and base, type the following code in `CScribbleApp::InitInstance` after the `LoadStdProfileSettings()` statement.  
   
-    ```  
-    SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));  
-    SetRegistryBase(_T("Settings"));  
-    ```  
+ ```  
+    SetRegistryKey(_T("MFCNext\\Samples\\Scribble2"));
+
+ SetRegistryBase(_T("Settings"));
+
+ ```  
   
-5.  多重文件介面 \(MDI\) \(MDI\) 應用程式的主框架從 `CMDIFrameWnd` 類別不再衍生。  相反地，它衍生自 [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) 類別。  
+5.  The main frame for a multiple document interface (MDI) application is no longer derived from the `CMDIFrameWnd` class. Instead, it is derived from the [CMDIFrameWndEx](../mfc/reference/cmdiframewndex-class.md) class.  
   
-     在 mainfrm.h 和 mainfrm.cpp 檔案，將 `CMDIFrameWndEx`取代為 `CMDIFrameWnd` 的所有參考。  
+     In the mainfrm.h and mainfrm.cpp files, replace all references to `CMDIFrameWnd` with `CMDIFrameWndEx`.  
   
-6.  在 childfrm.h 和 childfrm.cpp 檔案，將 `CMDIChildWndEx`取代為 `CMDIChildWnd` 。  
+6.  In the childfrm.h and childfrm.cpp files, replace `CMDIChildWnd` with `CMDIChildWndEx`.  
   
-     在 childfrm.h 檔案，將 `CSplitterWndEx`取代成 `CSplitterWnd` 。  
+     In the childfrm. h file, replace `CSplitterWnd` with `CSplitterWndEx`.  
   
-7.  修改工具列和狀態列使用新的 MFC 類別。  
+7.  Modify toolbars and status bars to use the new MFC classes.  
   
-     在 mainfrm.h 檔案:  
+     In the mainfrm.h file:  
   
-    1.  將 `CToolBar` 取代為 `CMFCToolBar`。  
+    1.  Replace `CToolBar` with `CMFCToolBar`.  
   
-    2.  將 `CStatusBar` 取代為 `CMFCStatusBar`。  
+    2.  Replace `CStatusBar` with `CMFCStatusBar`.  
   
-8.  在 mainfrm.cpp 檔案:  
+8.  In the mainfrm.cpp file:  
   
-    1.  將 `m_wndToolBar.SetBarStyle` 取代為 `m_wndToolBar.SetPaneStyle`。  
+    1.  Replace `m_wndToolBar.SetBarStyle` with `m_wndToolBar.SetPaneStyle`  
   
-    2.  將 `m_wndToolBar.GetBarStyle` 取代為 `m_wndToolBar.GetPaneStyle`。  
+    2.  Replace `m_wndToolBar.GetBarStyle` with `m_wndToolBar.GetPaneStyle`  
   
-    3.  將 `DockControlBar(&m_wndToolBar)` 取代為 `DockPane(&m_wndToolBar)`。  
+    3.  Replace `DockControlBar(&m_wndToolBar)` with `DockPane(&m_wndToolBar)`  
   
-9. 在 ipframe.cpp 檔案，請註解下列三個程式碼。  
+9. In the ipframe.cpp file, comment out the following three lines of code.  
   
-    ```  
-    m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);  
-    pWndFrame->EnableDocking(CBRS_ALIGN_ANY);  
-    pWndFrame->DockPane(&m_wndToolBar);  
-    ```  
+ ```  
+    m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
+
+ pWndFrame->EnableDocking(CBRS_ALIGN_ANY);
+
+    pWndFrame->DockPane(&m_wndToolBar);
+
+ ```  
   
-10. 如果您打算以靜態方式連結到您的應用程式，請將下列程式碼加入至專案資源 \(.rc\) 檔的開頭。  
+10. If you intend to link your application statically, add the following code to the start of the project resource (.rc) file.  
   
-    ```  
+ ```  
     #include "afxribbon.rc"  
-    ```  
+ ```  
   
-     afxribbon.rc 檔案包含需要在執行階段的資源。  當您建立應用程式時， [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md) 會自動包含這個檔案。  
+     The afxribbon.rc file contains resources that are required at run time. The [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md) includes this file automatically when you create an application.  
   
-11. 儲存變更，接著建置並執行應用程式。  
+11. Save the changes and then build and run the application.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="addBitmap"></a> 將點陣圖儲存至專案  
- 下一個步驟這個逐步解說需要點陣圖資源。  您可以取得適當的點陣圖以各種方式:  
+##  <a name="addbitmap"></a> Adding Bitmaps to the Project  
+ The next four steps of this walkthrough require bitmap resources. You can obtain appropriate bitmaps in various ways:  
   
--   使用 [Resource Editors](../mfc/resource-editors.md) 以發明您的點陣圖。  或使用資源編輯器組件從 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]包含的 PNG 檔案格式 \(.jpg\) 影像的點陣圖。  這些影像在 `VS2008ImageLibrary` 目錄。  
+-   Use the [Resource Editors](../windows/resource-editors.md) to invent your own bitmaps. Or use the resource editors to assemble bitmaps from the portable network graphics (.png) images that are included with [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]. These images are in the `VS2008ImageLibrary` directory.  
   
-     不過，功能區使用者介面需要特定點陣圖支援透明影像。  透明點陣圖使用像素 32 位元， 24 位元指定色彩的紅色，綠色和藍色元件，8 位元定義指定色彩的透明度的 *Alpha 色頻* 。  目前的資源編輯器可以檢視，但是無法修改 32 位元像素的點陣圖。  因此，請使用外部影像編輯器，而不是資源編輯器操作透明點陣圖。  
+     However, the Ribbon user interface requires that certain bitmaps support transparent images. Transparent bitmaps use 32-bit pixels, where 24 bits specify the red, green, and blue components of the color, and 8 bits define an *alpha channel* that specifies the transparency of the color. The current resource editors can view, but not modify bitmaps with 32-bit pixels. Consequently, use an external image editor instead of the resource editors to manipulate transparent bitmaps.  
   
--   複製另一個應用程式的資源檔加入至專案並匯入點陣圖該檔案。  
+-   Copy an appropriate resource file from another application to your project and then import bitmaps from that file.  
   
- 這個逐步解說複製某個應用程式的資源檔在範例目錄。  
+ This walkthrough copies resource files from an application in the Samples directory.  
   
-#### 若要將點陣圖加入至專案  
+#### <a name="to-add-bitmaps-to-the-project"></a>To add bitmaps to the Project  
   
-1.  使用檔案總管從資源目錄 \(`res`\) RibbonGadgets 範例中複製下列 .bmp 檔案:  
+1.  Use File Explorer to copy the following .bmp files from the resources directory (`res`) of the RibbonGadgets sample:  
   
-    1.  複製 main.bmp 至 Scribble 專案。  
+    1.  Copy main.bmp to your Scribble project.  
   
-    2.  複製 filesmall.bmp 和 filelarge.bmp 至 Scribble 專案。  
+    2.  Copy filesmall.bmp and filelarge.bmp to your Scribble project.  
   
-    3.  製造新的 filelarge.bmp 和 filesmall.bmp 檔案副本，不過要將副本儲存在 RibbonGadgets 範例。  將複製 homesmall.bmp 和 homelarge.bmp 重新命名並將其複製到您的 Scribble 專案。  
+    3.  Make new copies of the filelarge.bmp and filesmall.bmp files, but save the copies in the RibbonGadgets sample. Rename the copies homesmall.bmp and homelarge.bmp and then move the copies to your Scribble project.  
   
-    4.  製作這個 toolbar.bmp 檔案，不過要將副本儲存在 RibbonGadgets 範例中。  將複製 panelicons.bmp 重新命名並將其複製到您的 Scribble 專案。  
+    4.  Make a copy of the toolbar.bmp file, but save the copy in the RibbonGadgets sample. Rename the copy panelicons.bmp and then move the copy to your Scribble project.  
   
-2.  匯入 MFC 應用程式的點陣圖。  在 \[**資源檢視**\] 中，按兩下 \[**scribble.rc**\] 節點，按兩下 \[**點陣圖**\] 節點，然後按一下 \[**加入資源**\]。  在出現的對話方塊中按一下 \[**安裝**\]。  瀏覽至 `res` 目錄中，選取 main.bmp 檔案，然後按一下 \[**開啟**\]。  
+2.  Import the bitmap for an MFC application. In **Resource View**, double-click the **scribble.rc** node, double-click the **Bitmap** node, and then click **Add resource**. On the dialog box that appears, click **Import**. Browse to the `res` directory, select the main.bmp file, and then click **Open**.  
   
-     main.bmp 點陣圖包含 26x26 的影像。  變更點陣圖的 ID 加入至 IDB\_RIBBON\_MAIN。  
+     The main.bmp bitmap contains a 26x26 image. Change the ID of the bitmap to IDB_RIBBON_MAIN.  
   
-3.  匯入附加到應用程式按鈕的文件功能表的點陣圖。  
+3.  Import the bitmaps for the file menu that is attached to the Application button.  
   
-    1.  匯入包含十個16x16 \(16x160\) 影像的 filesmall.bmp 檔案，。  因為我們只需要八個 16x16 影像 \(16x128\)，請使用 \[**資源檢視**\] 來變更該點陣圖的寬度 \(從 160 到 128\)。  變更點陣圖的 ID 加入至 IDB\_RIBBON\_FILESMALL。  
+    1.  Import the filesmall.bmp file, which contains ten 16x16 (16x160) images. Because we need only eight 16x16 images (16x128),  use the **Resource View** to change the width of that bitmap from 160 to 128. Change the ID of the bitmap to IDB_RIBBON_FILESMALL.  
   
-    2.  匯入包含八個 32x32 \(32x256\) 影像的 filelarge.bmp 檔案。  變更點陣圖的 ID 加入至 IDB\_RIBBON\_FILESLARGE。  
+    2.  Import the filelarge.bmp, which contains eight 32x32 (32x256) images. Change the ID of the bitmap to IDB_RIBBON_FILELARGE.  
   
-4.  匯入區類別和面板的點陣圖。  功能區列的每個索引標籤是分類，並包含文字標籤和選擇性影像。  
+4.  Import the bitmaps for the ribbon categories and panels. Each tab on the ribbon bar is a category, and consists of a text label and an optional image.  
   
-    1.  匯入 homesmall.bmp 點陣圖，包含小按鈕點陣圖的八個 16x16 影像。  變更點陣圖的 ID 加入至 IDB\_RIBBON\_HOMESMALL。  
+    1.  Import the homesmall.bmp bitmap, which contains eight 16x16 images for small button bitmaps. Change the ID of the bitmap to IDB_RIBBON_HOMESMALL.  
   
-    2.  匯入 homelarge.bmp 點陣圖，包含大按鈕點陣圖的八個 32x32 影像。  變更點陣圖的 ID 加入至 IDB\_RIBBON\_HOMELARGE。  
+    2.  Import the homelarge.bmp bitmap, which contains eight 32x32 images for large button bitmaps. Change the ID of the bitmap to IDB_RIBBON_HOMELARGE.  
   
-5.  匯入調整大小的功能區面板的點陣圖。  如果功能區太小而無法顯示整個面板，在調整大小作業之後，使用這些點陣圖或面板圖示。  
+5.  Import bitmaps for the resized ribbon panels. These bitmaps, or panel icons, are used after a resize operation if the ribbon is too small to display the entire panel.  
   
-    1.  匯入 panelicons.bmp 點陣圖，包含八個 16x16 的影像。  在 \[**點陣圖編輯器**\] 的 \[**屬性**\] 視窗，請調整點陣圖的寬度為 64 \(16x64\)。  變更點陣圖的 ID 加入至 IDB\_PANEL\_ICONS。  
+    1.  Import the panelicons.bmp bitmap, which contains eight 16x16 images. In the **Properties** window of the **Bitmap Editor**, adjust the width of the bitmap to 64 (16x64). Change the ID of the bitmap to IDB_PANEL_ICONS.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="addRibbon"></a> 將功能區資源加入至專案  
- 當您將使用功能表對應用程式使用功能區的應用程式時，您不必移除或停用現有的功能表。  相反地，您可以建立功能區資源，新增功能區按鈕，然後將新按鈕與現有的功能表項目連結。  雖然功能表不再可見，訊息可以從功能區列的訊息傳遞。  此外，功能表快速鍵繼續運作。  
+##  <a name="addribbon"></a> Adding a Ribbon Resource to the Project  
+ When you convert an application that uses menus to an application that uses a ribbon, you do not have to remove or disable the existing menus. Instead, you create a ribbon resource, add ribbon buttons, and then associate the new buttons with the existing menu items. Although the menus are no longer visible, messages from the ribbon bar are routed through the menus. In addition, menu shortcuts continue to work.  
   
- 功能區包括在功能區上的左上角邊的大按鈕和一個或多個分類選項的應用程式按鈕。  每個分類索引標籤包含做為功能區按鈕和控制項容器的一或多個面板。  下列程序顯示如何建立功能區資源然後自訂應用程式按鈕。  
+ A ribbon consists of the Application button, which is the large button on the upper-left side of the ribbon, and one or more category tabs. Each category tab contains one or more panels that act as containers for ribbon buttons and controls. The following procedure shows how to create a ribbon resource and then customize the Application button.  
   
-#### 若要將功能區來源加入至專案  
+#### <a name="to-add-a-ribbon-resource-to-the-project"></a>To add a ribbon resource to the project  
   
-1.  在 **\[專案\]** 功能表上，按一下 **\[新增參照\]**。  
+1.  On the **Project** menu, click **Add Resource**.  
   
-2.  在 \[**加入資源** \] 對話方塊中，選取 \[**功能區** \]，然後按一下 \[**新增**\]。  
+2.  In the **Add Resource** dialog box, select **Ribbon** and then click **New**.  
   
-     Visual Studio 會建立功能區資源並在設計檢視中將它開啟。  功能區資源 ID 是 IDR\_RIBBON1，顯示在 \[**資源檢視**\] 中。  功能區包含類別和一個面板。  
+     Visual Studio creates a ribbon resource and opens it in the design view. The ribbon resource ID is IDR_RIBBON1, which is displayed in **Resource View**. The ribbon contains one category and one panel.  
   
-3.  您可以修改它的屬性來自訂應用程式按鈕。  在這個程式碼的訊息 ID 在 Scribble 的 1.0 功能表已定義。  
+3.  You can customize the Application button by modifying its properties. The message IDs that are used in this code are already defined in the menu for Scribble 1.0.  
   
-4.  在設計檢視中，按一下應用程式按鈕顯示其屬性。  變更屬性值如下:為 `IDB_RIBBON_MAIN`的為 `檔案`的 \[**影像** \]，為 `f`的 \[**提示** \]，為 `IDB_RIBBON_FILELARGE`的 \[**索引鍵** \]，為 `IDB_RIBBON_FILESMALL`的 \[**大型影像**\] 和 \[**小型影像**\] 。  
+4.  In the design view, click the Application Button to display its properties. Change property values as follows: **Image** to `IDB_RIBBON_MAIN`, **Prompt** to `File`, **Keys** to `f`, **Large Images** to `IDB_RIBBON_FILELARGE`, and **Small Images** to `IDB_RIBBON_FILESMALL`.  
   
-5.  下列的修改會出現的功能表會在使用者按一下應用程式按鈕。  按一下 \[**主項目**\] 旁邊的省略符號 \(\[**...**\]\) 開啟 \[**項目編輯器**\]。  
+5.  The following modifications create the menu that appears when the user clicks the Application button. Click the ellipsis (**...**) next to **Main Items** to open the **Items Editor**.  
   
-    1.  請按一下 \[**加入**\] 以加入規則，。  將 \[**標題**\] 變更為 `&New`，其中\[**ID**\] 變更為 `ID_FILE_NEW`，\[**影像**\] 變更為 `0`，\[**大型影像**\] 變更為 `0` 。  
+    1.  Click **Add** to add a button. Change **Caption** to `&New`, **ID** to `ID_FILE_NEW`, **Image** to `0`, **Image Large** to `0`.  
   
-    2.  請按一下 \[**加入**\] 以加入第二個按鈕。  將 \[**標題** \] 變更為 `&Save`， \[**ID** \] 為 `ID_FILE_SAVE`， \[**影像** \] 設定為 `2`、將 \[**大型影像** \] 變更為 `2`。  
+    2.  Click **Add** to add a second button. Change **Caption** to `&Save`, **ID** to `ID_FILE_SAVE`, **Image** to `2`, and **Image Large** to `2`.  
   
-    3.  請按一下 \[**加入**\] 以加入第三個按鈕。  將 \[**標題** \] 變更為 `& As` ， \[**ID** \] 為 `ID_FILE_SAVE_AS`， \[**影像** \] 設定為 `3`、將 \[**大型影像** \] 變更為 `3`。  
+    3.  Click **Add** to add a third button. Change **Caption** to `Save &As`, **ID** to `ID_FILE_SAVE_AS`, **Image** to `3`, and **Image Large** to `3`.  
   
-    4.  請按一下 \[**加入**\] 以加入第四個按鈕。  將 \[**標題** \] 變更為 `&Print` ， \[**ID** \] 為 `ID_FILE_PRINT`， \[**影像** \] 設定為 `4`、將 \[**大型影像** \] 變更為 `4`。  
+    4.  Click **Add** to add a fourth  button. Change **Caption** to `&Print`, **ID** to `ID_FILE_PRINT`, **Image** to `4`, and **Image Large** to `4`.  
   
-    5.  變更 \[**項目**\] 類型為 \[**分隔符號**\] 然後按一下 \[**加入**\]。  
+    5.  Change the **Item** type to **Separator** and then click **Add**.  
   
-    6.  變更 \[**項目**\] 類型變更為 \[**按鈕**\]。  請按一下 \[**加入**\] 加入第五個按鈕。  將 \[**標題** \] 變更為 `&Close` ， \[**ID** \] 為 `ID_FILE_CLOSE`， \[**影像** \] 設定為 `5`、將 \[**大型影像** \] 變更為 `5`。  
+    6.  Change the **Item** type to **Button**. Click **Add** to add a fifth button. Change **Caption** to `&Close`, **ID** to `ID_FILE_CLOSE`, **Image** to `5`, and **Image Large** to `5`.  
   
-6.  下列修改建立子功能表在您於前一步驟所建立的列印按鈕之下。  
+6.  The following modifications create a submenu under the Print button that you created in the previous step.  
   
-    1.  按一下 \[**列印**\] 按鈕，變更 \[**項目**\] 類型為 \[**標籤**\]，然後按一下 \[**插入**\]。  將 \[**標題**\] 變更為 `預覽並列印文件`。  
+    1.  Click the **Print** button, change the **Item** type to **Label**, and then click **Insert**. Change **Caption** to `Preview and print the document`.  
   
-    2.  按一下 \[**列印**\] 按鈕，變更 \[**項目**\] 類型為 \[**按鈕**\]，然後按一下 \[**插入**\]。  將 \[**標題** \] 變更為 `&Print` ， \[**ID** \] 為 `ID_FILE_PRINT`， \[**影像** \] 設定為 `4`、將 \[**大型影像** \] 變更為 `4`。  
+    2.  Click the **Print** button, change the **Item** type to **Button**, and click **Insert**. Change **Caption** to `&Print`, **ID** to `ID_FILE_PRINT`, **Image** to `4`, and **Image Large** to `4`.  
   
-    3.  按一下 \[**列印**\] 按鈕然後按一下 \[**插入**\] 加入按鈕。  將 \[**標題** \] 變更為 `&Quick Print` ， \[**ID** \] 為 `ID_FILE_PRINT_DIRECT`， \[**影像** \] 設定為 `7`、將 \[**大型影像** \] 變更為 `7`。  
+    3.  Click the **Print** button and then click **Insert** to add a button. Change **Caption** to `&Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, **Image** to `7`, and **Image Large** to `7`.  
   
-    4.  按一下 \[**列印**\] 按鈕然後按一下 \[**插入**\] 加入另一個按鈕。  將 \[**標題**\] 變更為 `目前的列印&檢視`， \[**ID**\] 為 `ID_FILE_PRINT_PREVIEW`， \[**影像**\] 設定為 `6`、將 \[**大型影像**\] 加入至 \[\]`6`。  
+    4.  Click the **Print** button and then click **Insert** to add another button. Change **Caption** to `Print Pre&view`, **ID** to `ID_FILE_PRINT_PREVIEW`, **Image** to `6`, and **Image Large** to `6`.  
   
-    5.  您現在已修改 \[**主項目**\]。  按一下完成 \[**項目編輯器**\] 中的 \[**關閉** \]。  
+    5.  You have now modified the **Main Items**. Click **Close** to exit the **Items Editor**.  
   
-7.  下列的修改會出現在應用程式按鈕功能表底端的結束按鈕。  
+7.  The following modification creates an exit button that appears at the bottom of the Application button menu.  
   
-    1.  在 \[**屬性**\] 視窗中，按一下在**按鈕**旁邊的省略按鈕 \(**...**\) 開啟 **物件編輯器**。  
+    1.  In the **Properties** window, click the ellipsis (**...**) next to **Button** to open the **Items Editor**.  
   
-    2.  請按一下 \[**加入**\] 以加入規則，。  將 \[**標題**\] 變更為 `E&xit`，其中 `ID_APP_EXIT`，對 \[\]`8`\[**影像**\] 的 \[**ID**\] 。  
+    2.  Click **Add** to add a button. Change **Caption** to `E&xit`, **ID** to `ID_APP_EXIT`, **Image** to `8`.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="createInstance"></a> 建立功能區列表的執行個體。  
- 當應用程式啟動時，下列步驟說明如何建立功能區列的執行個體。  若要將功能區列到應用程式中，就在功能區列宣告 mainfrm.h 檔案。  然後在 mainfrm.cpp 檔案載入功能區資源的程式碼。  
+##  <a name="createinstance"></a> Creating an Instance of the Ribbon Bar  
+ The following steps show how to create an instance of the ribbon bar when your application starts. To add a ribbon bar to an application, declare the ribbon bar in the mainfrm.h file. Then, in the mainfrm.cpp file, write code to load the ribbon resource.  
   
-#### 若要建立功能區列的執行個體  
+#### <a name="to-create-an-instance-of-the-ribbon-bar"></a>To create an instance of the ribbon bar  
   
-1.  在 mainfrm.h 檔案，請將資料成員加入至 `CMainFrame` 主框架的類別定義的受保護區段。  這個成員表示功能區列。  
+1.  In the mainfrm.h file, add a data member to the protected section of `CMainFrame`, the class definition for the main frame. This member represents the ribbon bar.  
   
-    ```  
-    // Ribbon bar for the application  
-    CMFCRibbonBar  m_wndRibbonBar;  
-    ```  
+ ``` *// Ribbon bar for the application  
+    CMFCRibbonBar m_wndRibbonBar;  
+ ```  
   
-2.  在 mainfrm.cpp 檔案中，在最後的 `return` 陳述式 `CMainFrame::OnCreate` 函式結尾之前加入下列程式碼。  建立功能區列的執行個體。  
+2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
-    ```  
-    // Create the ribbon bar  
+ ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
-    {  
+ {  
     return -1;   //Failed to create ribbon bar  
-    }  
-    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);  
-    ```  
+ }  
+    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
+
+ ```  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="addCategory"></a> 自訂功能區資源  
- 現在您已經建立應用程式按鈕，您可以將項目加入至功能區。  
+##  <a name="addcategory"></a> Customizing the Ribbon Resource  
+ Now that you have created the Application button, you can add elements to the ribbon.  
   
 > [!NOTE]
->  這個逐步解說會提供適用於所有面板使用相同的面板圖示。  不過，您可以使用其他影像清單中顯示其他圖示。  
+>  This walkthrough uses the same panel icon for all panels. However, you can use other image list indexes to display other icons.  
   
-#### 將首頁分類和編輯面板  
+#### <a name="to-add-a-home-category-and-edit-panel"></a>To add a Home category and Edit panel  
   
-1.  Scribble 程式只需要一個分類。  在設計檢視中，按一下以顯示 \[**分類**\] 屬性。  變更屬性值如下:為 `&Home`，其中 `IDB_RIBBON_HOMELARGE`，其中 `IDB_RIBBON_HOMESMALL`的 \[**小型影像**\] 加入 \[**大型影像**\] 中的 \[**標題**\] 。  
+1.  The Scribble program requires only one category. In the design view, click **Category** to display its properties. Change property values as follows: **Caption** to `&Home`, **Large Images** to `IDB_RIBBON_HOMELARGE`, **Small Images** to `IDB_RIBBON_HOMESMALL`.  
   
-2.  每個功能區類別會組織成具名面板。  每個面板包含執行相關作業的控制項。  這個類別有一個面板。  按一下 \[**面板**\]，然後將 \[**標題** \] 變更為 `編輯` 、將 \[**影像索引。** \] 變更為 `0`。  
+2.  Each ribbon category is organized into named panels. Each panel contains a set of controls that perform related operations. This category has one panel. Click **Panel**, and then change **Caption** to `Edit` and **Image Index** to `0`.  
   
-3.  若要 \[**編輯**\] 面板中，新增負責清除內容負責文件的按鈕。  這個按鈕的訊息 ID 已經在 IDR\_SCRIBBTYPE 功能表資源被定義。  指定 `清除所有` 做為按鈕文字和裝飾按鈕點陣圖的索引。  開啟 \[**工具箱**\]，然後將 \[**按鈕**\] 拖曳至 \[**編輯**\] 面板。  按一下按鈕來將 \[**標題** \] 變更為 `清除所有`，其中 `ID_EDIT_CLEAR_ALL`，其中 `0`，其中 `0`的 \[**大型影像索引。**\] 加入 \[**影像索引。**\] 中的 \[**ID** \]。  
+3.  To the **Edit** panel, add a button that is responsible for clearing the contents of the document. The message ID for this button has already been defined in the IDR_SCRIBBTYPE menu resource. Specify `Clear All` as the button text and the index of the bitmap that decorates the button. Open the **Toolbox**, and then drag a **Button** to the **Edit** panel. Click the button  and then change **Caption** to `Clear All`, **ID** to `ID_EDIT_CLEAR_ALL`, **Image Index** to `0`, **Large Image Index** to `0`.  
   
-4.  儲存變更，接著建置並執行應用程式。  應顯示 Scribble 應用程式，因此，它應該有功能區列位於視窗的頂端而非功能表列。  功能區列應該有一個分類， \[**首頁**\]，，而且 \[**首頁**\] 應該有一個面板， \[**編輯**\]。  您加入的功能區按鈕應該與現有的事件處理常式和 \[**開啟**\]、 \[**關閉**\]、 \[**儲存**\]、 \[**列印**\] 和 \[**清除所有**\] 按鈕應該如預期般運作。  
+4.  Save the changes, and then build and run the application. The Scribble application should be displayed, and it should have a ribbon bar at the top of the window instead of a menu bar. The ribbon bar should have one category, **Home**, and **Home** should have one panel, **Edit**. The ribbon buttons that you added should be associated with the existing event handlers, and the **Open**, **Close**, **Save**, **Print**, and **Clear All** buttons should work as expected.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="setLook"></a> 設定應用程式的外觀。  
- 一個 *視覺化管理員* 是全域物件控制應用程式的所有繪製。  因為原始的 Scribble 應用程式使用 Office 2000 User Interface \(UI\) 樣式，應用程式看起來可能會古板。  您可以重新設定應用程式使用 Office 2007 視覺化管理員，使它類似 Office 2007 應用程式。  
+##  <a name="setlook"></a> Setting the Look of the Application  
+ A *visual manager* is a global object that controls all drawing for an application. Because the original Scribble application uses the Office 2000 user interface (UI) style, the application may look old-fashioned. You can reset the application to use the Office 2007 visual manager so that it resembles an Office 2007 application.  
   
-#### 設定應用程式的外觀。  
+#### <a name="to-set-the-look-of-the-application"></a>To set the look of the application  
   
-1.  在 `CMainFrame::OnCreate` 函式中，輸入下列程式碼會變更預設視覺管理員和樣式。  
+1.  In the `CMainFrame::OnCreate` function, type the following code to change the default visual manager and style.  
   
-    ```  
-    // Set the default manager to Office 2007   
-    CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerOffice2007));  
-    CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_LunaBlue);  
-    ```  
+ ``` *// Set the default manager to Office 2007   
+    CMFCVisualManager::SetDefaultManager(RUNTIME_CLASS(CMFCVisualManagerOffice2007));
+
+ CMFCVisualManagerOffice2007::SetStyle(CMFCVisualManagerOffice2007::Office2007_LunaBlue);
+
+ ```  
   
-2.  儲存變更，接著建置並執行應用程式。  應用程式 UI 應類似 Office 2007 UI。  
+2.  Save the changes, and then build and run the application. The application UI should resemble the Office 2007 UI.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-## 後續步驟  
- 您修改傳統 Scribble MFC 1.0 範例使用功能區設計工具。  現在移至 [第 2 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)。  
+## Next Steps  
+ You have modified the classic Scribble 1.0 MFC sample to use the Ribbon Designer. Now go to [Part 2](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md).  
   
-## 請參閱  
- [逐步解說](../mfc/walkthroughs-mfc.md)   
- [逐步解說：更新 MFC Scribble 應用程式 \(第 2 部分\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+## See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Walkthrough: Updating the MFC Scribble Application (Part 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+
+

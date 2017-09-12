@@ -1,5 +1,5 @@
 ---
-title: "COLORADJUSTMENT 結構 |Microsoft 文件"
+title: COLORADJUSTMENT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COLORADJUSTMENT structure
+- COLORADJUSTMENT structure [MFC]
 ms.assetid: 67fc4e63-0e0e-4fcb-8c45-aa5ebfefa013
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 7f88877fa009abf4e811ba0a99b7e0e1683f998a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f8d3066b39a11369ca8f0a4f04429a26d2f04702
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coloradjustment-structure"></a>COLORADJUSTMENT 結構
-`COLORADJUSTMENT`結構會定義 Windows 所使用的色彩調整值`StretchBlt`和**stretchdibits 做**函式時`StretchBlt`模式是**半色調**。  
+# <a name="coloradjustment-structure"></a>COLORADJUSTMENT Structure
+The `COLORADJUSTMENT` structure defines the color adjustment values used by the Windows `StretchBlt` and **StretchDIBits** functions when the `StretchBlt` mode is **HALFTONE**.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct  tagCOLORADJUSTMENT {    /* ca */  
@@ -62,19 +62,19 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
 } COLORADJUSTMENT;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  *caSize*  
- 以位元組為單位指定的結構大小。  
+ Specifies the size of the structure in bytes.  
   
  *caFlags*  
- 指定應該如何準備輸出映像。 這個成員可以設定為**NULL**或下列值的任何組合︰  
+ Specifies how the output image should be prepared. This member can be set to **NULL** or any combination of the following values:  
   
-- **CA_NEGATIVE**指定應該顯示原始的映像的負值。  
+- **CA_NEGATIVE** Specifies that the negative of the original image should be displayed.  
   
-- **CA_LOG_FILTER**指定對數函式應該要套用至最終輸出色彩的密度。 這會增加的色彩對比，較低亮度時。  
+- **CA_LOG_FILTER** Specifies that a logarithmic function should be applied to the final density of the output colors. This will increase the color contrast when the luminance is low.  
   
  *caIlluminantIndex*  
- 指定檢視映像物件時的光源的亮度。 這個成員可以設定為下列值之一︰  
+ Specifies the luminance of the light source under which the image object is viewed. This member can be set to one of the following values:  
   
 - **ILLUMINANT_EQUAL_ENERGY**  
   
@@ -103,37 +103,37 @@ typedef struct  tagCOLORADJUSTMENT {    /* ca */
 - **ILLUMINANT_NTSC**  
   
  *caRedGamma*  
- 指定來源色彩的紅色主要的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
+ Specifies the nth power gamma-correction value for the red primary of the source colors. The value must be in the range from 2,500 to 65,000. A value of 10,000 means no gamma-correction.  
   
  *caGreenGamma*  
- 指定來源色彩的綠色主要的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
+ Specifies the nth power gamma-correction value for the green primary of the source colors. The value must be in the range from 2,500 to 65,000. A value of 10,000 means no gamma-correction.  
   
  *caBlueGamma*  
- 指定來源色彩藍色原色的第 n 個電源 gamma 修正值。 值必須是介於 2500 65000 之間。 值為 10000 表示 gamma 修正。  
+ Specifies the nth power gamma-correction value for the blue primary of the source colors. The value must be in the range from 2,500 to 65,000. A value of 10,000 means no gamma-correction.  
   
  *caReferenceBlack*  
- 指定來源色彩為黑色的參考。 會比這更深色的任何色彩都會視為黑色。 值必須介於 0 到 4000。  
+ Specifies the black reference for the source colors. Any colors that are darker than this are treated as black. The value must be in the range from 0 to 4,000.  
   
  *caReferenceWhite*  
- 指定來源色彩為白色的參考。 任何會比這更亮的色彩會被視為空白。 值必須是介於 6000 到 10000。  
+ Specifies the white reference for the source colors. Any colors that are lighter than this are treated as white. The value must be in the range from 6,000 to 10,000.  
   
  *caContrast*  
- 指定要套用至來源物件的對比數量。 值必須介於-100 到 100 之間。 值為 0 表示無對比調整。  
+ Specifies the amount of contrast to be applied to the source object. The value must be in the range from -100 to 100. A value of 0 means no contrast adjustment.  
   
  *caBrightness*  
- 指定要套用至來源物件的亮度。 值必須介於-100 到 100 之間。 值為 0 表示無亮度調整。  
+ Specifies the amount of brightness to be applied to the source object. The value must be in the range from -100 to 100. A value of 0 means no brightness adjustment.  
   
  *caColorfulness*  
- 指定要套用至來源物件的 colorfulness 數量。 值必須介於-100 到 100 之間。 值為 0 表示無 colorfulness 調整。  
+ Specifies the amount of colorfulness to be applied to the source object. The value must be in the range from -100 to 100. A value of 0 means no colorfulness adjustment.  
   
  *caRedGreenTint*  
- 指定要套用至來源物件的紅色或綠色濃淡調整數量。 值必須介於-100 到 100 之間。 數字會調整紅色向和負的數字調整綠色向正數。 0 表示無濃淡調整。  
+ Specifies the amount of red or green tint adjustment to be applied to the source object. The value must be in the range from -100 to 100. Positive numbers would adjust towards red and negative numbers adjust towards green. A 0 means no tint adjustment.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetColorAdjustment](../../mfc/reference/cdc-class.md#getcoloradjustment)
 
 

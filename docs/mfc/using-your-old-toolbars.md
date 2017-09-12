@@ -1,45 +1,64 @@
 ---
-title: "使用舊的工具列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COldToolBar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COldToolBar 類別"
-  - "工具列 [C++], 回溯相容性"
+title: Using Your Old Toolbars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COldToolBar
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbars [MFC], backward compatibility
+- COldToolBar class [MFC]
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 使用舊的工具列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 33fd793a21371a3e2bd57da4b44a0eaae033ed41
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-如果您曾使用舊版 Visual C\+\+ 建立自訂的工具列， [CToolBar](../mfc/reference/ctoolbar-class.md) 類別的新實作可能會產生問題。  因此您不必放棄以舊工具列使用新功能，舊的實作仍然支援。  
+---
+# <a name="using-your-old-toolbars"></a>Using Your Old Toolbars
+If you have used previous versions of Visual C++ to create customized toolbars, the new implementation of class [CToolBar](../mfc/reference/ctoolbar-class.md) could cause you problems. So that you don't have to give up your old toolbars to use the new functionality, the old implementation is still supported.  
   
- DOCKTOOL 範例不使用舊樣式的工具列，只使用新工具列。  
+ The DOCKTOOL sample does not use the old-style toolbars, only the new-style toolbars.  
   
- 您無法以工具列資源編輯器編輯舊樣式工具列。  
+ You can't edit old-style toolbars with the toolbar resource editor.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [工具列基本概念](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [停駐和浮動工具列](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [工具列工具提示](../mfc/toolbar-tool-tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   [使用工具列控制項工作](../mfc/working-with-the-toolbar-control.md)  
+-   [Working with the toolbar control](../mfc/working-with-the-toolbar-control.md)  
   
-## 請參閱  
- [MFC 工具列實作](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

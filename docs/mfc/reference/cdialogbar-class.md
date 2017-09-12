@@ -1,5 +1,5 @@
 ---
-title: "CDialogBar 類別 |Microsoft 文件"
+title: CDialogBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,9 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dialog bars, Windows modeless dialog box
-- CDialogBar class
-- dialog boxes, modeless
+- CDialogBar [MFC], CDialogBar
+- CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 caps.latest.revision: 23
 author: mikeblome
@@ -38,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 33dc5f5f4d345745a4b9435e725f411f4387e287
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3a292e7cf09871b4d22e60f4e81f6fedf13d3c0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdialogbar-class"></a>CDialogBar 類別
-在控制列中提供 Windows 非強制回應對話方塊的功能。  
+# <a name="cdialogbar-class"></a>CDialogBar Class
+Provides the functionality of a Windows modeless dialog box in a control bar.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDialogBar : public CControlBar  
@@ -56,29 +55,29 @@ class CDialogBar : public CControlBar
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogBar::CDialogBar](#cdialogbar)|建構 `CDialogBar` 物件。|  
+|[CDialogBar::CDialogBar](#cdialogbar)|Constructs a `CDialogBar` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDialogBar::Create](#create)|建立 Windows 對話方塊列並將它附加`CDialogBar`物件。|  
+|[CDialogBar::Create](#create)|Creates a Windows dialog bar and attaches it to the `CDialogBar` object.|  
   
-## <a name="remarks"></a>備註  
- 對話方塊列類似的對話方塊，其中包含使用者可以使用 tab 鍵之間的標準 Windows 控制項。 另一個相似度為您建立來代表對話方塊列的對話方塊範本。  
+## <a name="remarks"></a>Remarks  
+ A dialog bar resembles a dialog box in that it contains standard Windows controls that the user can tab between. Another similarity is that you create a dialog template to represent the dialog bar.  
   
- 建立和使用對話方塊列是類似於建立和使用`CFormView`物件。 首先，使用[對話方塊編輯器](../../windows/dialog-editor.md)定義樣式的對話方塊範本**WS_CHILD**和任何其他樣式。 範本不能樣式**WS_VISIBLE**。 在您的應用程式程式碼中呼叫建構函式來建構`CDialogBar`物件，然後呼叫**建立**建立對話方塊列視窗，並將其附加至`CDialogBar`物件。  
+ Creating and using a dialog bar is similar to creating and using a `CFormView` object. First, use the [dialog editor](../../windows/dialog-editor.md) to define a dialog template with the style **WS_CHILD** and no other style. The template must not have the style **WS_VISIBLE**. In your application code, call the constructor to construct the `CDialogBar` object, then call **Create** to create the dialog-bar window and attach it to the `CDialogBar` object.  
   
- 如需有關`CDialogBar`，請參閱文章[對話方塊列](../../mfc/dialog-bars.md)和[技術提示 31](../../mfc/tn031-control-bars.md)，控制列。  
+ For more information on `CDialogBar`, see the article [Dialog Bars](../../mfc/dialog-bars.md) and [Technical Note 31](../../mfc/tn031-control-bars.md), Control Bars.  
   
 > [!NOTE]
->  在目前版本中，`CDialogBar`物件無法裝載 Windows Form 控制項。 如需 Visual c + + 的 Windows Form 控制項的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+>  In the current release, a `CDialogBar` object cannot host Windows Forms controls. For more information about Windows Forms controls in Visual C++, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,18 +88,18 @@ class CDialogBar : public CControlBar
   
  `CDialogBar`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
- 建構 `CDialogBar` 物件。  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
+ Constructs a `CDialogBar` object.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
- 載入對話方塊資源範本所指定`lpszTemplateName`或`nIDTemplate`、 建立對話方塊列視窗中，設定其樣式，並將它與關聯`CDialogBar`物件。  
+##  <a name="create"></a>  CDialogBar::Create  
+ Loads the dialog-box resource template specified by `lpszTemplateName` or `nIDTemplate`, creates the dialog-bar window, sets its style, and associates it with the `CDialogBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -117,53 +116,53 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- 父代的指標`CWnd`物件。  
+ A pointer to the parent `CWnd` object.  
   
  `lpszTemplateName`  
- 名稱的指標`CDialogBar`物件的對話方塊中的資源範本。  
+ A pointer to the name of the `CDialogBar` object's dialog-box resource template.  
   
  `nStyle`  
- 工具列的樣式。 支援的其他工具列樣式為︰  
+ The toolbar style. Additional toolbar styles supported are:  
   
-- `CBRS_TOP`控制列是在框架視窗的頂端。  
+- `CBRS_TOP` Control bar is at top of the frame window.  
   
-- `CBRS_BOTTOM`控制列是在框架視窗的底部。  
+- `CBRS_BOTTOM` Control bar is at bottom of the frame window.  
   
-- `CBRS_NOALIGN`父代重新調整大小時，控制列是不會重新調整位置。  
+- `CBRS_NOALIGN` Control bar is not repositioned when the parent is resized.  
   
-- `CBRS_TOOLTIPS`控制列會顯示工具提示。  
+- `CBRS_TOOLTIPS` Control bar displays tool tips.  
   
-- **CBRS_SIZE_DYNAMIC**控制列是動態。  
+- **CBRS_SIZE_DYNAMIC** Control bar is dynamic.  
   
-- **CBRS_SIZE_FIXED**固定的控制列。  
+- **CBRS_SIZE_FIXED** Control bar is fixed.  
   
-- **CBRS_FLOATING**浮動控制列。  
+- **CBRS_FLOATING** Control bar is floating.  
   
-- `CBRS_FLYBY`狀態列會顯示按鈕的相關資訊。  
+- `CBRS_FLYBY` Status bar displays information about the button.  
   
-- **CBRS_HIDE_INPLACE**控制列不會顯示給使用者。  
+- **CBRS_HIDE_INPLACE** Control bar is not displayed to the user.  
   
  `nID`  
- 對話方塊列的控制項 ID。  
+ The control ID of the dialog bar.  
   
  `nIDTemplate`  
- 資源識別碼`CDialogBar`物件的對話方塊範本。  
+ The resource ID of the `CDialogBar` object's dialog-box template.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果您指定`CBRS_TOP`或`CBRS_BOTTOM`對齊樣式將對話方塊列的寬度是框架視窗和高度所指定的資源，就是`nIDTemplate`。 如果您指定`CBRS_LEFT`或`CBRS_RIGHT`對齊樣式將對話方塊列的高度是框架視窗和其寬度所指定的資源，就是`nIDTemplate`。  
+### <a name="remarks"></a>Remarks  
+ If you specify the `CBRS_TOP` or `CBRS_BOTTOM` alignment style, the dialog bar's width is that of the frame window and its height is that of the resource specified by `nIDTemplate`. If you specify the `CBRS_LEFT` or `CBRS_RIGHT` alignment style, the dialog bar's height is that of the frame window and its width is that of the resource specified by `nIDTemplate`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCMessageMaps #&13;](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 CTRLBARS](../../visual-cpp-samples.md)   
- [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CFormView 類別](../../mfc/reference/cformview-class.md)   
- [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CTRLBARS](../../visual-cpp-samples.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
 

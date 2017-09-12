@@ -1,72 +1,91 @@
 ---
-title: "建立索引標籤控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TCS_EX_REGISTERDROP"
-  - "TCS_EX_FLATSEPARATORS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl 類別, 建立"
-  - "索引標籤控制項, 建立"
-  - "TCS_EX_FLATSEPARATORS 延伸樣式"
-  - "TCS_EX_REGISTERDROP 延伸樣式"
+title: Creating the Tab Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TCS_EX_REGISTERDROP
+- TCS_EX_FLATSEPARATORS
+dev_langs:
+- C++
+helpviewer_keywords:
+- TCS_EX_REGISTERDROP extended style [MFC]
+- tab controls [MFC], creating
+- CTabCtrl class [MFC], creating
+- TCS_EX_FLATSEPARATORS extended style
 ms.assetid: 3a9c2d64-f5f4-41ea-84ab-fceb73c3dbdc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 建立索引標籤控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45dca159d6102d0a30c5ac82c2d460186f24c002
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-索引標籤控制項的建立方式，取決於您是在對話方塊中使用控制項或在 nondialog 視窗建立它。  
+---
+# <a name="creating-the-tab-control"></a>Creating the Tab Control
+How the tab control is created depends on whether you are using the control in a dialog box or creating it in a nondialog window.  
   
-### 若要直接在對話方塊使用 CTabCtrl  
+### <a name="to-use-ctabctrl-directly-in-a-dialog-box"></a>To use CTabCtrl directly in a dialog box  
   
-1.  在對話方塊編輯器中，將索引標籤控制項加入至對話方塊樣板資源。  指定它的控制項 ID.  
+1.  In the dialog editor, add a Tab Control to your dialog template resource. Specify its control ID.  
   
-2.  使用 [加入成員變數精靈](../ide/adding-a-member-variable-visual-cpp.md) 將型別 [CTabCtrl](../mfc/reference/ctabctrl-class.md) 的成員變數加入至控制項屬性。  您可以使用這個成員呼叫 `CTabCtrl` 成員函式。  
+2.  Use the [Add Member Variable Wizard](../ide/adding-a-member-variable-visual-cpp.md) to add a member variable of type [CTabCtrl](../mfc/reference/ctabctrl-class.md) with the Control property. You can use this member to call `CTabCtrl` member functions.  
   
-3.  將對話方塊類別中的處理函式對應至需要處理的任何索引標籤控制項通知訊息。  如需詳細資訊，請參閱[將訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)。  
+3.  Map handler functions in the dialog class for any tab control notification messages you need to handle. For more information, see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md).  
   
-4.  在 [OnInitDialog](../Topic/CDialog::OnInitDialog.md) 中，設定 `CTabCtrl` 的樣式。  
+4.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), set the styles for the `CTabCtrl`.  
   
-### 若要在 nondialog 視窗使用 CTabCtrl  
+### <a name="to-use-ctabctrl-in-a-nondialog-window"></a>To use CTabCtrl in a nondialog window  
   
-1.  在檢視或視窗類別定義控制項。  
+1.  Define the control in the view or window class.  
   
-2.  呼叫控制項的 [建立](../Topic/CTabCtrl::Create.md) 成員函式 \(可能在 [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) 中\)，並且盡可能的與父視窗的 [OnCreate](../Topic/CWnd::OnCreate.md) 處理常式函式一樣早 \(如果您是繼承控制項\) 。  設定控制項的樣式。  
+2.  Call the control's [Create](../mfc/reference/ctabctrl-class.md#create) member function, possibly in [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate), possibly as early as the parent window's [OnCreate](../mfc/reference/cwnd-class.md#oncreate) handler function (if you're subclassing the control). Set the styles for the control.  
   
- 在 `CTabCtrl` 物件建立之後，您可以設定或清除下列延伸樣式：  
+ After the `CTabCtrl` object has been created, you can set or clear the following extended styles:  
   
--   **TCS\_EX\_FLATSEPARATORS** 索引標籤控制項會在索引標籤項目之間繪製分隔符號。  這個延伸樣式只會影響擁有 **TCS\_BUTTONS** 和 **TCS\_FLATBUTTONS** 樣式的索引標籤控制項。  根據預設，以 **TCS\_FLATBUTTONS** 樣式建立的索引標籤控制項會設定此延伸樣式。  
+-   **TCS_EX_FLATSEPARATORS** The tab control will draw separators between the tab items. This extended style only affects tab controls that have the **TCS_BUTTONS** and **TCS_FLATBUTTONS** styles. By default, creating the tab control with the **TCS_FLATBUTTONS** style sets this extended style.  
   
--   **TCS\_EX\_REGISTERDROP** 將物件拖曳索引標籤項目至控制項時，索引標籤控制項產生 **TCN\_GETOBJECT** 通知訊息要求置放目標物件。  
+-   **TCS_EX_REGISTERDROP** The tab control generates **TCN_GETOBJECT** notification messages to request a drop target object when an object is dragged over the tab items in the control.  
   
     > [!NOTE]
-    >  若要接收 **TCN\_GETOBJECT** 通知，您必須呼叫 [AfxOleInit](../Topic/AfxOleInit.md) 初始化 OLE 程式庫。  
+    >  To receive the **TCN_GETOBJECT** notification, you must initialize the OLE libraries with a call to [AfxOleInit](../mfc/reference/ole-initialization.md#afxoleinit).  
   
- 在建立控制項之後，這些樣式可以分別呼叫 [GetExtendedStyle](../Topic/CTabCtrl::GetExtendedStyle.md) 和 [SetExtendedStyle](../Topic/CTabCtrl::SetExtendedStyle.md) 成員函式，進行擷取和設定。  
+ These styles can be retrieved and set, after the control has been created, with respective calls to the [GetExtendedStyle](../mfc/reference/ctabctrl-class.md#getextendedstyle) and [SetExtendedStyle](../mfc/reference/ctabctrl-class.md#setextendedstyle) member functions.  
   
- 例如，將下列程式碼設定 **TCS\_EX\_FLATSEPARATORS** 樣式：  
+ For instance, set the **TCS_EX_FLATSEPARATORS** style with the following lines of code:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/CPP/creating-the-tab-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#33](../mfc/codesnippet/cpp/creating-the-tab-control_1.cpp)]  
   
- 以下列程式碼清除 `CTabCtrl` 物件的 **TCS\_EX\_FLATSEPARATORS** 樣式：  
+ Clear the **TCS_EX_FLATSEPARATORS** style from a `CTabCtrl` object with the following lines of code:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/CPP/creating-the-tab-control_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#34](../mfc/codesnippet/cpp/creating-the-tab-control_2.cpp)]  
   
- 這會移除顯示在您的 `CTabCtrl` 物件之間的按鈕分隔符號。  
+ This will remove the separators that appear between the buttons of your `CTabCtrl` object.  
   
-## 請參閱  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

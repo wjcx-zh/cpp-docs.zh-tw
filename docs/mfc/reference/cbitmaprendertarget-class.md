@@ -1,5 +1,5 @@
 ---
-title: "CBitmapRenderTarget 類別 |Microsoft 文件"
+title: CBitmapRenderTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,7 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBitmapRenderTarget class
+- CBitmapRenderTarget [MFC], CBitmapRenderTarget
+- CBitmapRenderTarget [MFC], Attach
+- CBitmapRenderTarget [MFC], Detach
+- CBitmapRenderTarget [MFC], GetBitmap
+- CBitmapRenderTarget [MFC], GetBitmapRenderTarget
+- CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
 caps.latest.revision: 16
 author: mikeblome
@@ -40,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 11bea138185df23c9f3cc79491c71d86861a6bdc
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a03063991b663ef35047dac552b8c6fea9a1970f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 類別
-ID2D1BitmapRenderTarget 包裝函式。  
+# <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget Class
+A wrapper for ID2D1BitmapRenderTarget.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBitmapRenderTarget : public CRenderTarget;  
@@ -58,112 +63,112 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|建構 CBitmapRenderTarget 物件。|  
+|[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|Constructs a CBitmapRenderTarget object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::Attach](#attach)|會附加至現有的呈現目標物件的介面|  
-|[CBitmapRenderTarget::Detach](#detach)|中斷連結物件中的呈現目標介面|  
-|[CBitmapRenderTarget::GetBitmap](#getbitmap)|擷取此呈現目標的點陣圖。 傳回的點陣圖用於繪製作業。|  
-|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|傳回 ID2D1BitmapRenderTarget 介面|  
+|[CBitmapRenderTarget::Attach](#attach)|Attaches existing render target interface to the object|  
+|[CBitmapRenderTarget::Detach](#detach)|Detaches render target interface from the object|  
+|[CBitmapRenderTarget::GetBitmap](#getbitmap)|Retrieves the bitmap for this render target. The returned bitmap can be used for drawing operations.|  
+|[CBitmapRenderTarget::GetBitmapRenderTarget](#getbitmaprendertarget)|Returns ID2D1BitmapRenderTarget interface|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|傳回 ID2D1BitmapRenderTarget 介面|  
+|[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*](#operator_id2d1bitmaprendertarget_star)|Returns ID2D1BitmapRenderTarget interface|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|ID2D1BitmapRenderTarget 物件的指標。|  
+|[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|A pointer to an ID2D1BitmapRenderTarget object.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CRenderTarget](../../mfc/reference/crendertarget-class.md)  
   
  `CBitmapRenderTarget` 
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="attach"></a>CBitmapRenderTarget::Attach  
- 會附加至現有的呈現目標物件的介面  
+##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
+ Attaches existing render target interface to the object  
   
 ```  
 void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pTarget`  
- 現有的呈現目標介面。 不能是 NULL  
+ Existing render target interface. Cannot be NULL  
   
-##  <a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget  
- 建構 CBitmapRenderTarget 物件。  
+##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
+ Constructs a CBitmapRenderTarget object.  
   
 ```  
 CBitmapRenderTarget();
 ```  
   
-##  <a name="detach"></a>CBitmapRenderTarget::Detach  
- 中斷連結物件中的呈現目標介面  
+##  <a name="detach"></a>  CBitmapRenderTarget::Detach  
+ Detaches render target interface from the object  
   
 ```  
 ID2D1BitmapRenderTarget* Detach();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 中斷連結的指標會呈現目標的介面。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached render target interface.  
   
-##  <a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap  
- 擷取此呈現目標的點陣圖。 傳回的點陣圖用於繪製作業。  
+##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap  
+ Retrieves the bitmap for this render target. The returned bitmap can be used for drawing operations.  
   
 ```  
 BOOL GetBitmap(CD2DBitmap& bitmap);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bitmap`  
- 這個方法傳回時，包含此呈現目標的有效點陣圖。 此點陣圖用於繪製作業。  
+ When this method returns, contains the valid bitmap for this render target. This bitmap can be used for drawing operations.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns TRUE. Otherwise, it returns FALSE.  
   
-##  <a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget  
- 傳回 ID2D1BitmapRenderTarget 介面  
+##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget  
+ Returns ID2D1BitmapRenderTarget interface  
   
 ```  
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 ID2D1BitmapRenderTarget 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1BitmapRenderTarget interface or NULL if object is not initialized yet.  
   
-##  <a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget  
- ID2D1BitmapRenderTarget 物件的指標。  
+##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget  
+ A pointer to an ID2D1BitmapRenderTarget object.  
   
 ```  
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
- 傳回 ID2D1BitmapRenderTarget 介面  
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget*  
+ Returns ID2D1BitmapRenderTarget interface  
   
 ```  
 operator ID2D1BitmapRenderTarget*();
 ```   
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 ID2D1BitmapRenderTarget 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1BitmapRenderTarget interface or NULL if object is not initialized yet.  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

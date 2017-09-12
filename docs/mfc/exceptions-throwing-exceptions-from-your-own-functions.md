@@ -1,53 +1,72 @@
 ---
-title: "例外狀況：從您自己的函式擲回例外狀況 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "例外狀況, 擲回"
-  - "函式 [C++], 擲回例外狀況"
-  - "擲回例外狀況, 從函式"
+title: 'Exceptions: Throwing Exceptions from Your Own Functions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- throwing exceptions [MFC], from functions
+- functions [MFC], throwing exceptions
+- exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 例外狀況：從您自己的函式擲回例外狀況
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a67bebf4f9f71ae86a5c0bcbe3716c96ced6b56
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-個別使用 MFC 例外狀況處理範例攔截函式所擲回的例外狀況在 MFC 或其他程式庫中是可能的。  除了程式庫程式碼擲回的攔截例外狀況之外，您可以擲回從您的程式碼的例外狀況，如果您正在撰寫可能發生例外狀況的函式。  
+---
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceptions: Throwing Exceptions from Your Own Functions
+It is possible to use the MFC exception-handling paradigm solely to catch exceptions thrown by functions in MFC or other libraries. In addition to catching exceptions thrown by library code, you can throw exceptions from your own code if you are writing functions that can encounter exceptional conditions.  
   
- 當例外狀況擲回時，目前函式的執行會停止並直接跳到最內層的例外狀況框架的 **catch** 區塊。  例外狀況機制略過從函式的正常結束路徑。  因此，您必須確定刪除在正常結束要刪除的記憶體區塊。  
+ When an exception is thrown, execution of the current function is stopped and jumps directly to the **catch** block of the innermost exception frame. The exception mechanism bypasses the normal exit path from a function. Therefore, you must be sure to delete those memory blocks that would be deleted in a normal exit.  
   
-#### 擲回例外狀況。  
+#### <a name="to-throw-an-exception"></a>To throw an exception  
   
-1.  使用其中一個 MFC Helper 函式，例如 `AfxThrowMemoryException`。  這些函式會擲回適當型別的預先配置的例外狀況物件。  
+1.  Use one of the MFC helper functions, such as `AfxThrowMemoryException`. These functions throw a preallocated exception object of the appropriate type.  
   
-     在下列範例中，如果，任一組態失敗，函式嘗試指派兩個記憶體區塊時會擲回例外狀況:  
+     In the following example, a function tries to allocate two memory blocks and throws an exception if either allocation fails:  
   
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
   
-     如果第一個配置失敗，您可以擲回記憶體不足例外狀況。  如果第一個配置成功，但是第二個失敗，您必須在擲回例外狀況之前釋放第一個配置區塊。  如果兩個配置成功，通常可以執行和釋放區塊，當函式結束時。  
+     If the first allocation fails, you can simply throw the memory exception. If the first allocation is successful but the second one fails, you must free the first allocation block before throwing the exception. If both allocations succeed, you can proceed normally and free the blocks when exiting the function.  
   
-     \-或\-  
+     - or -  
   
-2.  使用使用者定義的例外狀況會指示問題的情況。  您可以擲回任何型別，甚至整個類別項目，為您的例外狀況。  
+2.  Use a user-defined exception to indicate a problem condition. You can throw an item of any type, even an entire class, as your exception.  
   
-     如果發生失敗，下列範例嘗試透過聲波裝置播放音效並擲回例外狀況。  
+     The following example attempts to play a sound through a wave device and throws an exception if there is a failure.  
   
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
   
 > [!NOTE]
->  MFC 的例外狀況預設處理僅適用於指標對 `CException` 或 `CException`物件 \(此物件和衍生類別\)。  上述範例略過 MFC 的例外狀況機制。  
+>  MFC's default handling of exceptions applies only to pointers to `CException` objects (and objects of `CException`-derived classes). The example above bypasses MFC's exception mechanism.  
   
-## 請參閱  
- [例外狀況處理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

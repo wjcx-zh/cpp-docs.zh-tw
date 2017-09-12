@@ -1,48 +1,67 @@
 ---
-title: "框架視窗執行什麼功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架視窗, 關於框架視窗"
-  - "框架視窗, 工作"
-  - "MFC, 框架視窗"
+title: What Frame Windows Do | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], about frame widows
+- frame windows [MFC], tasks
+- MFC, frame windows
 ms.assetid: 1148a952-6786-4622-b5a8-68a2d7eae584
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 框架視窗執行什麼功能
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c36c7c4390f548128ad31767bfd8288f079b5f40
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-除了框架檢視以外，框架視窗停駐在協調架構所涉及的許多工作負責與其檢視及應用程式。  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) 和 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) 繼承自 [CFrameWnd](../mfc/reference/cframewnd-class.md)，因此，它們有它們加入的 `CFrameWnd` 功能和新功能。  子視窗的範例包括檢視控制項，例如按鈕和清單方塊和控制列，包括工具列、狀態列和對話方塊列。  
+---
+# <a name="what-frame-windows-do"></a>What Frame Windows Do
+Besides simply framing a view, frame windows are responsible for numerous tasks involved in coordinating the frame with its view and with the application. [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) and [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) inherit from [CFrameWnd](../mfc/reference/cframewnd-class.md), so they have `CFrameWnd` capabilities as well as new capabilities that they add. Examples of child windows include views, controls such as buttons and list boxes, and control bars, including toolbars, status bars, and dialog bars.  
   
- 框架視窗要負責管理自己的子視窗配置。  在 MFC 架構，框架視窗放置所有控制列、檢視和其他子視窗在其工作區內。  
+ The frame window is responsible for managing the layout of its child windows. In the MFC framework, a frame window positions any control bars, views, and other child windows inside its client area.  
   
- 框架視窗也傳送命令給其檢視，並回應來自控制項視窗的通知訊息。  
+ The frame window also forwards commands to its views and can respond to notification messages from control windows.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [控制列 \(它們如何配合至框架視窗\)](../mfc/control-bars.md)  
+-   [Control bars (how they fit into the frame window)](../mfc/control-bars.md)  
   
--   [處理功能表、控制列和快速鍵 \(它們如何配合至框架視窗\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (how they fit into the frame window)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
--   [命令路由 \(從框架視窗至它的檢視和其他命令目標\)。](../mfc/command-routing.md)  
+-   [Command Routing (from the frame window to its view and other command targets)](../mfc/command-routing.md)  
   
--   [文件\/檢視架構](../mfc/document-view-architecture.md)  
+-   [Document /View Architecture](../mfc/document-view-architecture.md)  
   
--   [控制列](../mfc/control-bars.md)  
+-   [Control bars](../mfc/control-bars.md)  
   
--   [控制項](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## 請參閱  
- [框架視窗](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

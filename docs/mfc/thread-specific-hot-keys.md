@@ -1,34 +1,53 @@
 ---
-title: "執行緒特定的熱鍵 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "便捷鍵 [C++], 熱鍵"
-  - "CHotKeyCtrl 類別, 執行緒特定的熱鍵"
-  - "鍵盤快速鍵 [C++], 熱鍵"
-  - "執行緒 [C++], CHotKeyCtrl 中的熱鍵"
+title: Thread-Specific Hot Keys | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHotKeyCtrl class [MFC], thread-specific hot keys
+- keyboard shortcuts [MFC], hot keys
+- threading [MFC], hot keys in CHotKeyCtrl
+- access keys [MFC], hot keys
 ms.assetid: b6021274-1498-483f-bcbf-ba5723547cc8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 執行緒特定的熱鍵
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 372f725fbc84d5321496bda5b13be8d2d680e33f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-應用程式設定一個執行緒特定的快速鍵 \([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)\) 使用視窗 **RegisterHotKey** 函式。  當使用者按下某個執行緒特定的快速鍵時， Windows 會宣告 [WM\_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) 訊息至特定執行緒的訊息佇列的開頭。  **WM\_HOTKEY** 訊息包含已按下特定快速鍵的虛擬按鍵碼、傳輸狀態和使用者定義的 ID。  如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。  如需這個方法的詳細資訊，請參閱 [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)。  
+---
+# <a name="thread-specific-hot-keys"></a>Thread-Specific Hot Keys
+An application sets a thread-specific hot key ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) by using the Windows **RegisterHotKey** function. When the user presses a thread-specific hot key, Windows posts a [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) message to the beginning of a particular thread's message queue. The **WM_HOTKEY** message contains the virtual key code, shift state, and user-defined ID of the specific hot key that was pressed. For a list of standard virtual key codes, see Winuser.h. For more information on this method, see [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309).  
   
- 請注意在呼叫傳輸狀態旗標對 **RegisterHotKey** 與 [GetHotKey](../Topic/CHotKeyCtrl::GetHotKey.md) 成員函式傳回的項目;您必須在呼叫 **RegisterHotKey**目前轉譯這些旗標。  
+ Note that the shift state flags used in the call to **RegisterHotKey** are not the same as those returned by the [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey) member function; you'll have to translate these flags before calling **RegisterHotKey**.  
   
-## 請參閱  
- [使用 CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

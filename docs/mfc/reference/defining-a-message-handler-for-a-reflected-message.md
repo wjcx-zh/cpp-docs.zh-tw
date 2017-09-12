@@ -1,5 +1,5 @@
 ---
-title: "定義反映訊息的訊息處理常式 |Microsoft 文件"
+title: Defining a Message Handler for a Reflected Message | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- messages, reflected
-- message handling, reflected messages
+- messages [MFC], reflected
+- message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
 caps.latest.revision: 9
 author: mikeblome
@@ -34,52 +34,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0033c75d351aa201a0c18e81395d764b9d45761b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e7a447048143d175e143a3e9c3072c844194bf8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="defining-a-message-handler-for-a-reflected-message"></a>定義反映訊息的訊息處理常式
-一旦您建立新的 MFC 控制項類別，您可以為其定義訊息處理常式。 反映的訊息處理常式可讓您的控制項類別來處理其本身的訊息之前父系所收到的訊息。 您可以使用 MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)函式可從控制項傳送訊息給父視窗。  
+# <a name="defining-a-message-handler-for-a-reflected-message"></a>Defining a Message Handler for a Reflected Message
+Once you have created a new MFC control class, you can define message handlers for it. Reflected message handlers allow your control class to handle its own messages before the message is received by the parent. You can use the MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) function to send messages from your control to a parent window.  
   
- 透過這項功能可以例如，建立一個清單方塊，將會重繪其本身，而不要依賴要執行的話 （主控描繪） 之父視窗。 如需有關反映訊息的詳細資訊，請參閱[處理反映訊息](../../mfc/handling-reflected-messages.md)。  
+ With this functionality you could, for example, create a list box that will redraw itself rather than relying on the parent window to do so (owner drawn). For more information on reflected messages, see [Handling Reflected Messages](../../mfc/handling-reflected-messages.md).  
   
- 若要建立[ActiveX 控制項](../../mfc/activex-controls-on-the-internet.md)具有相同的功能，您必須建立 ActiveX 控制項專案。  
+ To create an [ActiveX control](../../mfc/activex-controls-on-the-internet.md) with the same functionality, you must create a project for the ActiveX control.  
   
 > [!NOTE]
->  您無法新增反映的訊息 (OCM_*訊息*) 的 ActiveX 控制項使用 [屬性] 視窗中，如下所述。 您必須手動加入這些訊息。  
+>  You cannot add a reflected message (OCM_*Message*) for an ActiveX control using the Properties window, as described below. You must add these messages manually.  
   
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>若要定義反映訊息屬性 視窗中的訊息處理常式  
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>To define a message handler for a reflected message from the Properties window  
   
-1.  將控制項，例如清單、 rebar 控制項、 工具列或樹狀目錄控制項，加入至 MFC 專案。  
+1.  Add a control, such as a list, a rebar control, a toolbar, or a tree control, to your MFC project.  
   
-2.  在類別檢視中，按一下您的控制項類別的名稱。  
+2.  In Class View, click the name of your control class.  
   
-3.  在[屬性 視窗](/visualstudio/ide/reference/properties-window)，控制項類別名稱會出現在**類別名稱**清單。  
+3.  In the [Properties window](/visualstudio/ide/reference/properties-window), the control class name appears in the **Class Name** list.  
   
-4.  按一下 [**訊息**] 按鈕以顯示可用來加入至控制項的 Windows 訊息。  
+4.  Click the **Messages** button to display the Windows messages available to add to the control.  
   
-5.  向下捲動直到您看到標題中的 [屬性] 視窗中的訊息清單**反映**。 或者，按一下**類別**按鈕和摺疊檢視來查看**反映**標題。  
+5.  Scroll down the list of messages in the Properties window until you see the heading **Reflected**. Alternately, click the **Categories** button and collapse the view to see the **Reflected** heading.  
   
-6.  選取您要定義處理常式的反映的訊息。 反映的訊息會標示以等號 （=）。  
+6.  Select the reflected message for which you want to define a handler. Reflected messages are marked with an equal sign (=).  
   
-7.  按一下以顯示建議的處理常式做為名稱屬性 視窗右欄中的儲存格\<新增 >*HandlerName*。 (例如， **= WM_CTLCOLOR**訊息處理常式建議\<新增 >**CtlColor**)。  
+7.  Click the cell in the right column in the Properties window to display the suggested name of the handler as \<add>*HandlerName*. (For example, the **=WM_CTLCOLOR** message handler suggests \<add>**CtlColor**).  
   
-8.  按一下 接受建議的名稱。 處理常式加入至您的專案。  
+8.  Click the suggested name to accept. The handler is added to your project.  
   
-     反映的訊息 視窗右欄中，會出現您加入的訊息處理常式名稱。  
+     Message handler names that you have added appear in the right column of the reflected messages window.  
   
-9. 若要編輯或刪除的訊息處理常式，請重複步驟 4 到 7。 按一下包含要編輯或刪除按一下適當的工作處理常式名稱的儲存格。  
+9. To edit or delete a message handler, repeat steps 4 through 7. Click the cell containing the handler name to edit or delete and click the appropriate task.  
   
-## <a name="see-also"></a>另請參閱  
- [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)   
- [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入類別](../../ide/adding-a-class-visual-cpp.md)   
- [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CTabCtrl 類別 |Microsoft 文件"
+title: CTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- tab controls
-- CTabCtrl class, common controls
-- CTabCtrl class
+- CTabCtrl [MFC], CTabCtrl
+- CTabCtrl [MFC], AdjustRect
+- CTabCtrl [MFC], Create
+- CTabCtrl [MFC], CreateEx
+- CTabCtrl [MFC], DeleteAllItems
+- CTabCtrl [MFC], DeleteItem
+- CTabCtrl [MFC], DeselectAll
+- CTabCtrl [MFC], DrawItem
+- CTabCtrl [MFC], GetCurFocus
+- CTabCtrl [MFC], GetCurSel
+- CTabCtrl [MFC], GetExtendedStyle
+- CTabCtrl [MFC], GetImageList
+- CTabCtrl [MFC], GetItem
+- CTabCtrl [MFC], GetItemCount
+- CTabCtrl [MFC], GetItemRect
+- CTabCtrl [MFC], GetItemState
+- CTabCtrl [MFC], GetRowCount
+- CTabCtrl [MFC], GetToolTips
+- CTabCtrl [MFC], HighlightItem
+- CTabCtrl [MFC], HitTest
+- CTabCtrl [MFC], InsertItem
+- CTabCtrl [MFC], RemoveImage
+- CTabCtrl [MFC], SetCurFocus
+- CTabCtrl [MFC], SetCurSel
+- CTabCtrl [MFC], SetExtendedStyle
+- CTabCtrl [MFC], SetImageList
+- CTabCtrl [MFC], SetItem
+- CTabCtrl [MFC], SetItemExtra
+- CTabCtrl [MFC], SetItemSize
+- CTabCtrl [MFC], SetItemState
+- CTabCtrl [MFC], SetMinTabWidth
+- CTabCtrl [MFC], SetPadding
+- CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 caps.latest.revision: 21
 author: mikeblome
@@ -69,17 +99,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 150b11e4989cd45ba2a8065c86c07510d00c346c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5714de6c675d433320ce3095205b4c78f9701323
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctabctrl-class"></a>CTabCtrl 類別
-提供 Windows 通用索引標籤控制項的功能。  
+# <a name="ctabctrl-class"></a>CTabCtrl Class
+Provides the functionality of the Windows common tab control.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CTabCtrl : public CWnd  
@@ -87,57 +117,57 @@ class CTabCtrl : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabCtrl::CTabCtrl](#ctabctrl)|建構 `CTabCtrl` 物件。|  
+|[CTabCtrl::CTabCtrl](#ctabctrl)|Constructs a `CTabCtrl` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabCtrl::AdjustRect](#adjustrect)|計算索引標籤控制項的顯示區域提供視窗矩形中，或計算視窗矩形，就會對應至指定的顯示區域。|  
-|[CTabCtrl::Create](#create)|建立索引標籤控制項，並將其附加至執行個體的`CTabCtrl`物件。|  
-|[CTabCtrl::CreateEx](#createex)|建立具有指定的 Windows 延伸樣式 索引標籤控制項，並將其附加至執行個體的`CTabCtrl`物件。|  
-|[CTabCtrl::DeleteAllItems](#deleteallitems)|移除索引標籤控制項中的所有項目。|  
-|[CTabCtrl::DeleteItem](#deleteitem)|移除索引標籤控制項中的項目。|  
-|[CTabCtrl::DeselectAll](#deselectall)|重設在索引標籤控制項中，清除已按下的任何項目。|  
-|[CTabCtrl::DrawItem](#drawitem)|繪製指定的項目索引標籤控制項。|  
-|[CTabCtrl::GetCurFocus](#getcurfocus)|擷取具有目前焦點所在的索引標籤控制項的索引標籤。|  
-|[CTabCtrl::GetCurSel](#getcursel)|決定索引標籤控制項中目前選取的索引標籤。|  
-|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|擷取目前正在使用的索引標籤控制項中的延伸的樣式。|  
-|[CTabCtrl::GetImageList](#getimagelist)|擷取影像清單索引標籤控制項相關聯。|  
-|[CTabCtrl::GetItem](#getitem)|擷取索引標籤控制項中的索引標籤的相關資訊。|  
-|[CTabCtrl::GetItemCount](#getitemcount)|擷取索引標籤控制項中的索引標籤數目。|  
-|[CTabCtrl::GetItemRect](#getitemrect)|擷取索引標籤控制項中的索引標籤的週框矩形。|  
-|[CTabCtrl::GetItemState](#getitemstate)|擷取指定的索引標籤控制項項目的狀態。|  
-|[CTabCtrl::GetRowCount](#getrowcount)|擷取目前的索引標籤控制項中的索引標籤的資料列數。|  
-|[CTabCtrl::GetToolTips](#gettooltips)|擷取索引標籤控制項相關聯的工具提示控制項的控制代碼。|  
-|[CTabCtrl::HighlightItem](#highlightitem)|設定反白顯示的狀態索引標籤項目。|  
-|[CTabCtrl::HitTest](#hittest)|判斷哪些索引標籤上，如果有的話，是在指定的螢幕位置。|  
-|[Ctabctrl:: Insertitem](#insertitem)|索引標籤控制項中插入新的索引標籤。|  
-|[CTabCtrl::RemoveImage](#removeimage)|索引標籤控制項影像清單中移除映像。|  
-|[CTabCtrl::SetCurFocus](#setcurfocus)|將焦點設定到索引標籤控制項中指定之索引標籤。|  
-|[CTabCtrl::SetCurSel](#setcursel)|索引標籤控制項中選取索引標籤。|  
-|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|設定索引標籤控制項的延伸的樣式。|  
-|[CTabCtrl::SetImageList](#setimagelist)|指定的索引標籤控制項影像清單。|  
-|[CTabCtrl::SetItem](#setitem)|設定下列部分或所有索引標籤的屬性。|  
-|[CTabCtrl::SetItemExtra](#setitemextra)|設定每個索引標籤的索引標籤控制項中的應用程式定義的資料保留的位元組數目。|  
-|[CTabCtrl::SetItemSize](#setitemsize)|設定項目的高度與寬度。|  
-|[CTabCtrl::SetItemState](#setitemstate)|將指定的索引標籤控制項項目狀態設定。|  
-|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|索引標籤控制項中設定的最小寬度的項目。|  
-|[CTabCtrl::SetPadding](#setpadding)|設定 （填補） 每個索引標籤的圖示和標籤控制項中的標籤周圍的空間數量。|  
-|[CTabCtrl::SetToolTips](#settooltips)|將工具提示控制項指派給索引標籤控制項。|  
+|[CTabCtrl::AdjustRect](#adjustrect)|Calculates a tab control's display area given a window rectangle, or calculates the window rectangle that would correspond to a given display area.|  
+|[CTabCtrl::Create](#create)|Creates a tab control and attaches it to an instance of a `CTabCtrl` object.|  
+|[CTabCtrl::CreateEx](#createex)|Creates a tab control with the specified Windows extended styles and attaches it to an instance of a `CTabCtrl` object.|  
+|[CTabCtrl::DeleteAllItems](#deleteallitems)|Removes all items from a tab control.|  
+|[CTabCtrl::DeleteItem](#deleteitem)|Removes an item from a tab control.|  
+|[CTabCtrl::DeselectAll](#deselectall)|Resets items in a tab control, clearing any that were pressed.|  
+|[CTabCtrl::DrawItem](#drawitem)|Draws a specified item of a tab control.|  
+|[CTabCtrl::GetCurFocus](#getcurfocus)|Retrieves the tab with the current focus of a tab control.|  
+|[CTabCtrl::GetCurSel](#getcursel)|Determines the currently selected tab in a tab control.|  
+|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Retrieves the extended styles that are currently in use for the tab control.|  
+|[CTabCtrl::GetImageList](#getimagelist)|Retrieves the image list associated with a tab control.|  
+|[CTabCtrl::GetItem](#getitem)|Retrieves information about a tab in a tab control.|  
+|[CTabCtrl::GetItemCount](#getitemcount)|Retrieves the number of tabs in the tab control.|  
+|[CTabCtrl::GetItemRect](#getitemrect)|Retrieves the bounding rectangle for a tab in a tab control.|  
+|[CTabCtrl::GetItemState](#getitemstate)|Retrieves the state of the indicated tab control item.|  
+|[CTabCtrl::GetRowCount](#getrowcount)|Retrieves the current number of rows of tabs in a tab control.|  
+|[CTabCtrl::GetToolTips](#gettooltips)|Retrieves the handle of the tool tip control associated with a tab control.|  
+|[CTabCtrl::HighlightItem](#highlightitem)|Sets the highlight state of a tab item.|  
+|[CTabCtrl::HitTest](#hittest)|Determines which tab, if any, is at a specified screen position.|  
+|[CTabCtrl::InsertItem](#insertitem)|Inserts a new tab in a tab control.|  
+|[CTabCtrl::RemoveImage](#removeimage)|Removes an image from a tab control's image list.|  
+|[CTabCtrl::SetCurFocus](#setcurfocus)|Sets the focus to a specified tab in a tab control.|  
+|[CTabCtrl::SetCurSel](#setcursel)|Selects a tab in a tab control.|  
+|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Sets the extended styles for a tab control.|  
+|[CTabCtrl::SetImageList](#setimagelist)|Assigns an image list to a tab control.|  
+|[CTabCtrl::SetItem](#setitem)|Sets some or all of a tab's attributes.|  
+|[CTabCtrl::SetItemExtra](#setitemextra)|Sets the number of bytes per tab reserved for application-defined data in a tab control.|  
+|[CTabCtrl::SetItemSize](#setitemsize)|Sets the width and height of an item.|  
+|[CTabCtrl::SetItemState](#setitemstate)|Sets the state of the indicated tab control item.|  
+|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Sets the minimum width of items in a tab control.|  
+|[CTabCtrl::SetPadding](#setpadding)|Sets the amount of space (padding) around each tab's icon and label in a tab control.|  
+|[CTabCtrl::SetToolTips](#settooltips)|Assigns a tool tip control to a tab control.|  
   
-## <a name="remarks"></a>備註  
- 「 索引標籤控制項 」 是類似於筆記本中的分隔線或檔案櫃中的標籤。 藉由使用索引標籤控制項，應用程式可以定義視窗或對話方塊中同一個區域的多個頁面。 每個頁面所組成的一組資訊或一群應用程式會顯示當使用者選取 [對應] 索引標籤的控制項。 一種特殊的索引標籤控制項顯示看起來像按鈕的索引標籤。 按一下按鈕應該立即執行命令，而不要顯示的頁面。  
+## <a name="remarks"></a>Remarks  
+ A "tab control" is analogous to the dividers in a notebook or the labels in a file cabinet. By using a tab control, an application can define multiple pages for the same area of a window or dialog box. Each page consists of a set of information or a group of controls that the application displays when the user selects the corresponding tab. A special type of tab control displays tabs that look like buttons. Clicking a button should immediately perform a command instead of displaying a page.  
   
- 這個控制項 (因此`CTabCtrl`類別) 僅適用於 Windows 95/98、 Windows NT 的版本 3.51 下執行的程式和更新版本。  
+ This control (and therefore the `CTabCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- 如需有關使用`CTabCtrl`，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CTabCtrl](../../mfc/using-ctabctrl.md)。  
+ For more information on using `CTabCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CTabCtrl](../../mfc/using-ctabctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -146,28 +176,28 @@ class CTabCtrl : public CWnd
   
  `CTabCtrl`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
- 計算索引標籤控制項的顯示區域提供視窗矩形中，或計算視窗矩形，就會對應至指定的顯示區域。  
+##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect  
+ Calculates a tab control's display area given a window rectangle, or calculates the window rectangle that would correspond to a given display area.  
   
 ```  
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bLarger`  
- 表示要執行哪些作業。 如果這個參數是**TRUE**，`lpRect`指定顯示矩形，並接收對應視窗矩形。 如果這個參數是**FALSE**，`lpRect`指定視窗矩形，並接收對應的顯示矩形。  
+ Indicates which operation to perform. If this parameter is **TRUE**, `lpRect` specifies a display rectangle and receives the corresponding window rectangle. If this parameter is **FALSE**, `lpRect` specifies a window rectangle and receives the corresponding display rectangle.  
   
  `lpRect`  
- 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，以指定給定的矩形，並接收計算出的矩形。  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that specifies the given rectangle and receives the calculated rectangle.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl # 1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
-##  <a name="create"></a>CTabCtrl::Create  
- 建立索引標籤控制項，並將其附加至執行個體的`CTabCtrl`物件。  
+##  <a name="create"></a>  CTabCtrl::Create  
+ Creates a tab control and attaches it to an instance of a `CTabCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -177,44 +207,44 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定索引標籤控制項的樣式。 套用的任何組合[ 索引標籤控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760549)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 請參閱**備註**取得一份您也可以套用至控制項的視窗樣式。  
+ Specifies the tab control's style. Apply any combination of [tab control styles](http://msdn.microsoft.com/library/windows/desktop/bb760549), described in the Windows SDK. See **Remarks** for a list of window styles that you can also apply to the control.  
   
  `rect`  
- 指定索引標籤控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
+ Specifies the tab control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- 指定的索引標籤控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
+ Specifies the tab control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- 指定索引標籤控制項的 id。  
+ Specifies the tab control's ID.  
   
-### <a name="return-value"></a>傳回值  
- **TRUE**如果物件的初始化成功，否則為**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if initialization of the object was successful; otherwise **FALSE**.  
   
-### <a name="remarks"></a>備註  
- 您建構`CTabCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後再呼叫**建立**，建立索引標籤控制項，並將它附加至`CTabCtrl`物件。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CTabCtrl` object in two steps. First, call the constructor, and then call **Create**, which creates the tab control and attaches it to the `CTabCtrl` object.  
   
- 除了索引標籤控制項的樣式，您可以套用下列視窗樣式索引標籤控制項︰  
+ In addition to tab control styles, you can apply the following window styles to a tab control:  
   
-- **WS_CHILD**建立表示索引標籤控制項的子視窗。 不能與`WS_POPUP`樣式。  
+- **WS_CHILD** Creates a child window that represents the tab control. Cannot be used with the `WS_POPUP` style.  
   
-- **WS_VISIBLE**建立起始時是可見的索引標籤控制項。  
+- **WS_VISIBLE** Creates a tab control that is initially visible.  
   
-- **WS_DISABLED**建立視窗一開始停用。  
+- **WS_DISABLED** Creates a window that is initially disabled.  
   
-- **WS_GROUP**指定一組控制項所在使用者可以移動一個控制項到下一步 箭號索引鍵的第一個控制項。 所有控制項，以定義**WS_GROUP**樣式之後的第一個控制項必須屬於相同的群組。 下一個控制項與**WS_GROUP**樣式結束樣式的群組，並啟動下一個群組 （也就是說，一個群組結束開始下）。  
+- **WS_GROUP** Specifies the first control of a group of controls in which the user can move from one control to the next with the arrow keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the style group and starts the next group (that is, one group ends where the next begins).  
   
-- **WS_TABSTOP**透過這些使用者可以使用 TAB 鍵移動的控制項的指定任意數目的其中一個。 TAB 鍵移至所指定的下一個控制項的使用者**WS_TABSTOP**樣式。  
+- **WS_TABSTOP** Specifies one of any number of controls through which the user can move by using the TAB key. The TAB key moves the user to the next control specified by the **WS_TABSTOP** style.  
   
- 若要建立具有延伸的視窗樣式 索引標籤控制項，呼叫[CTabCtrl::CreateEx](#createex)而不是**建立**。  
+ To create a tab control with extended window styles, call [CTabCtrl::CreateEx](#createex) instead of **Create**.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl # 2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CTabCtrl::CreateEx  
- 建立控制項 （子視窗），並將它與相關聯`CTabCtrl`物件。  
+##  <a name="createex"></a>  CTabCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CTabCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -225,222 +255,222 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 指定索引標籤控制項的樣式。 套用的任何組合[ 索引標籤控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760549)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 請參閱**備註**中[建立](#create)取得一份您也可以套用至控制項的視窗樣式。  
+ Specifies the tab control's style. Apply any combination of [tab control styles](http://msdn.microsoft.com/library/windows/desktop/bb760549), described in the Windows SDK. See **Remarks** in [Create](#create) for a list of window styles that you can also apply to the control.  
   
  `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 為控制項的父視窗的指標。  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 控制項的子視窗識別碼。  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>傳回值  
- 否則為 0，如果成功則為非零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
- `CreateEx`建立具有所指定的延伸視窗樣式控制項， `dwExStyle`。 設定擴充特定控制項使用的樣式[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設定做為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設定做為這類樣式**TCS_EX_FLATSEPARATORS**。 如需詳細資訊，請參閱中所述的樣式[ 索引標籤控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb760546)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ `CreateEx` creates the control with the extended Windows styles specified by `dwExStyle`. Set extended styles specific to a control using [SetExtendedStyle](#setextendedstyle). For example, use `CreateEx` to set such styles as **WS_EX_CONTEXTHELP**, but use `SetExtendedStyle` to set such styles as **TCS_EX_FLATSEPARATORS**. For more information, see the styles described in [Tab Control Extended Styles](http://msdn.microsoft.com/library/windows/desktop/bb760546) in the Windows SDK.  
   
-##  <a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
- 建構 `CTabCtrl` 物件。  
+##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
+ Constructs a `CTabCtrl` object.  
   
 ```  
 CTabCtrl();
 ```  
   
-##  <a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
- 移除索引標籤控制項中的所有項目。  
+##  <a name="deleteallitems"></a>  CTabCtrl::DeleteAllItems  
+ Removes all items from a tab control.  
   
 ```  
 BOOL DeleteAllItems();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="deleteitem"></a>CTabCtrl::DeleteItem  
- 從索引標籤控制項中移除指定的項目。  
+##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem  
+ Removes the specified item from a tab control.  
   
 ```  
 BOOL DeleteItem(int nItem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 要刪除的項目以零為起始的值。  
+ Zero-based value of the item to delete.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl # 3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
-##  <a name="deselectall"></a>CTabCtrl::DeselectAll  
- 重設在索引標籤控制項中，清除已按下的任何項目。  
+##  <a name="deselectall"></a>  CTabCtrl::DeselectAll  
+ Resets items in a tab control, clearing any that were pressed.  
   
 ```  
 void DeselectAll(BOOL fExcludeFocus);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *fExcludeFocus*  
- 指定的項目取消選取範圍的旗標。 如果此參數設為**FALSE**，所有的索引標籤按鈕將會重設。 如果設定為**TRUE**，則除了目前所選取的所有索引標籤項目將會重設。  
+ Flag that specifies the scope of the item deselection. If this parameter is set to **FALSE**, all tab buttons will be reset. If it is set to **TRUE**, then all tab items except for the one currently selected will be reset.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息中，行為[TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), as described in the Windows SDK.  
   
-##  <a name="drawitem"></a>CTabCtrl::DrawItem  
- 當主控描繪索引標籤控制項變更的視覺外觀時，架構呼叫。  
+##  <a name="drawitem"></a>  CTabCtrl::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw tab control changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 指標[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)結構，描述要繪製的項目。  
+ A pointer to a [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure describing the item to be painted.  
   
-### <a name="remarks"></a>備註  
- **ItemAction**隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed.  
   
- 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作主控描繪的繪圖`CTabCtrl`物件。  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CTabCtrl` object.  
   
- 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前此成員函式會結束。  
+ The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before this member function terminates.  
   
-##  <a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
- 擷取具有目前焦點所在的索引標籤的索引。  
+##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
+ Retrieves the index of the tab with the current focus.  
   
 ```  
 int GetCurFocus() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 具有目前焦點所在的索引標籤以零為起始的索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the tab with the current focus.  
   
-##  <a name="getcursel"></a>CTabCtrl::GetCurSel  
- 擷取索引標籤控制項中目前選取的索引標籤。  
+##  <a name="getcursel"></a>  CTabCtrl::GetCurSel  
+ Retrieves the currently selected tab in a tab control.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 選取的索引標籤，如果成功或-1，表示已不選取任何索引標籤的以零為起始的索引。  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the selected tab if successful or - 1 if no tab is selected.  
   
-##  <a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
- 擷取目前正在使用的索引標籤控制項中的延伸的樣式。  
+##  <a name="getextendedstyle"></a>  CTabCtrl::GetExtendedStyle  
+ Retrieves the extended styles that are currently in use for the tab control.  
   
 ```  
 DWORD GetExtendedStyle();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 表示目前使用的索引標籤控制項中的延伸的樣式。 這個值是組合[索引標籤控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb760546)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="return-value"></a>Return Value  
+ Represents the extended styles currently in use for the tab control. This value is a combination of [tab control extended styles](http://msdn.microsoft.com/library/windows/desktop/bb760546), as described in the Windows SDK.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), as described in the Windows SDK.  
   
-##  <a name="getimagelist"></a>CTabCtrl::GetImageList  
- 擷取與索引標籤控制項關聯的影像清單。  
+##  <a name="getimagelist"></a>  CTabCtrl::GetImageList  
+ Retrieves the image list that's associated with a tab control.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，控制項影像清單索引標籤的指標否則， **NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the image list of the tab control; otherwise, **NULL**.  
   
-##  <a name="getitem"></a>CTabCtrl::GetItem  
- 擷取索引標籤控制項中的索引標籤的相關資訊。  
+##  <a name="getitem"></a>  CTabCtrl::GetItem  
+ Retrieves information about a tab in a tab control.  
   
 ```  
 BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 以零為起始的索引標籤的索引。  
+ Zero-based index of the tab.  
   
  `pTabCtrlItem`  
- 指標[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)用來指定要擷取之資訊的結構。 也可用來在索引標籤的相關資訊。 此結構會搭配`InsertItem`， `GetItem`，和`SetItem`成員函式。  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, used to specify the information to retrieve. Also used to receive information about the tab. This structure is used with the `InsertItem`, `GetItem`, and `SetItem` member functions.  
   
-### <a name="return-value"></a>傳回值  
- 傳回**TRUE**如果登錄成功。**FALSE**否則。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** if successful; **FALSE** otherwise.  
   
-### <a name="remarks"></a>備註  
- 當傳送訊息時，**遮罩**成員指定要傳回的屬性。 如果**遮罩**成員指定`TCIF_TEXT`值**pszText**成員必須包含接收項目文字的緩衝區的位址和**cchTextMax**成員必須指定緩衝區的大小。  
+### <a name="remarks"></a>Remarks  
+ When the message is sent, the **mask** member specifies which attributes to return. If the **mask** member specifies the `TCIF_TEXT` value, the **pszText** member must contain the address of the buffer that receives the item text and the **cchTextMax** member must specify the size of the buffer.  
   
- **遮罩**  
- 值，指定其`TCITEM`結構擷取或設定成員。 這個成員可以是零或下列值的組合︰  
+ **mask**  
+ Value specifying which `TCITEM` structure members to retrieve or set. This member can be zero or a combination of the following values:  
   
-- `TCIF_TEXT`**PszText**成員是否有效。  
+- `TCIF_TEXT` The **pszText** member is valid.  
   
-- `TCIF_IMAGE``iImage`成員是否有效。  
+- `TCIF_IMAGE` The `iImage` member is valid.  
   
-- `TCIF_PARAM`**LParam**成員是否有效。  
+- `TCIF_PARAM` The **lParam** member is valid.  
   
-- `TCIF_RTLREADING`文字**pszText**希伯來文或阿拉伯文系統上使用由右至左讀取順序顯示。  
+- `TCIF_RTLREADING` The text of **pszText** is displayed using right-to-left reading order on Hebrew or Arabic systems.  
   
-- `TCIF_STATE`**DwState**成員是否有效。  
+- `TCIF_STATE` The **dwState** member is valid.  
   
  **pszText**  
- 以 null 終止的字串，包含在索引標籤文字，如果結構包含一個索引標籤的相關資訊的指標。 如果結構接收資訊，這個成員會指定接收在索引標籤文字的緩衝區的位址。  
+ Pointer to a null-terminated string containing the tab text if the structure contains information about a tab. If the structure is receiving information, this member specifies the address of the buffer that receives the tab text.  
   
  **cchTextMax**  
- 所指向之緩衝區的大小**pszText**。 如果結構不能接收資訊時，會忽略這個成員。  
+ Size of the buffer pointed to by **pszText**. This member is ignored if the structure is not receiving information.  
   
  `iImage`  
- 如果沒有影像的索引在索引標籤控制項影像清單，或-1 的索引。  
+ Index into the tab control's image list, or - 1 if there is no image for the tab.  
   
  **lParam**  
- [] 索引標籤相關聯的應用程式定義的資料。 如果有四個位元組以上的應用程式定義的資料，每個索引標籤，應用程式必須定義的結構，並使用它，而不要`TCITEM`結構。 應用程式定義的結構中的第一個成員必須是[TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)結構。 **TCITEMHEADER**結構等同於`TCITEM`結構，但不含**lParam**成員。 您的結構大小的大小之間的差異**TCITEMHEADER**結構應該會等於每個索引標籤的額外位元組數目。  
+ Application-defined data associated with the tab. If there are more than four bytes of application-defined data per tab, an application must define a structure and use it instead of the `TCITEM` structure. The first member of the application-defined structure must be a [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)structure. The **TCITEMHEADER** structure is identical to the `TCITEM` structure, but without the **lParam** member. The difference between the size of your structure and the size of the **TCITEMHEADER** structure should equal the number of extra bytes per tab.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl # 4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
   
-##  <a name="getitemcount"></a>CTabCtrl::GetItemCount  
- 擷取索引標籤控制項中的索引標籤數目。  
+##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount  
+ Retrieves the number of tabs in the tab control.  
   
 ```  
 int GetItemCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 索引標籤控制項中的項目數目。  
+### <a name="return-value"></a>Return Value  
+ Number of items in the tab control.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemrect"></a>CTabCtrl::GetItemRect  
- 擷取指定之索引標籤索引標籤控制項中的週框。  
+##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect  
+ Retrieves the bounding rectangle for the specified tab in a tab control.  
   
 ```  
 BOOL GetItemRect(int nItem,   LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 以零為起始的索引標籤項目索引。  
+ Zero-based index of the tab item.  
   
  `lpRect`  
- 指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收 索引標籤的周框的結構。 這些座標會使用目前的對應模式在檢視區。  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle of the tab. These coordinates use the viewport's current mapping mode.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemstate"></a>CTabCtrl::GetItemState  
- 擷取所識別的索引標籤控制項項目狀態`nItem`。  
+##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
+ Retrieves the state of the tab control item identified by `nItem`.  
   
 ```  
 DWORD GetItemState(
@@ -448,86 +478,86 @@ DWORD GetItemState(
     DWORD dwMask) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 要擷取狀態資訊項目的以零為起始的索引編號。  
+ The zero-based index number of the item for which to retrieve state information.  
   
  `dwMask`  
- 指定要傳回哪些項目的狀態旗標的遮罩。 如需值的清單，請參閱的遮罩成員[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Mask specifying which of the item's state flags to return. For a list of values, see the mask member of the [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, as described in the Windows SDK.  
   
-### <a name="return-value"></a>傳回值  
- 若要參考`DWORD`接收的狀態資訊的值。 可為下列其中一個值：  
+### <a name="return-value"></a>Return Value  
+ A reference to a `DWORD` value receiving the state information. Can be one of the following values:  
   
-|值|說明|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|選取索引標籤控制項項目。|  
-|**TCIS_HIGHLIGHTED**|索引標籤控制項項目會反白顯示，而且索引標籤和文字則會使用目前的反白顯示色彩繪製。 使用時反白顯示色彩，這會是的則為 true 的插補，非遞色色彩。|  
+|**TCIS_BUTTONPRESSED**|The tab control item is selected.|  
+|**TCIS_HIGHLIGHTED**|The tab control item is highlighted, and the tab and text are drawn using the current highlight color. When using highlight color, this will be a true interpolation, not a dithered color.|  
   
-### <a name="remarks"></a>備註  
- 所指定項目的狀態**dwState**隸屬`TCITEM`結構。  
+### <a name="remarks"></a>Remarks  
+ An item's state is specified by the **dwState** member of the `TCITEM` structure.  
   
-##  <a name="getrowcount"></a>CTabCtrl::GetRowCount  
- 擷取目前的索引標籤控制項中的資料列數。  
+##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
+ Retrieves the current number of rows in a tab control.  
   
 ```  
 int GetRowCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 索引標籤控制項中的索引標籤的資料列數目。  
+### <a name="return-value"></a>Return Value  
+ The number of rows of tabs in the tab control.  
   
-### <a name="remarks"></a>備註  
- 只有索引標籤控制項具有**TCS_MULTILINE**樣式可以有多個資料列的索引標籤。  
+### <a name="remarks"></a>Remarks  
+ Only tab controls that have the **TCS_MULTILINE** style can have multiple rows of tabs.  
   
-##  <a name="gettooltips"></a>CTabCtrl::GetToolTips  
- 擷取索引標籤控制項相關聯的工具提示控制項的控制代碼。  
+##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
+ Retrieves the handle of the tool tip control associated with a tab control.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功; 時，工具提示控制項的控制代碼否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Handle of the tool tip control if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 如果有，索引標籤控制項建立工具提示控制項**TCS_TOOLTIPS**樣式。 您也可以指派至索引標籤控制項的工具提示控制項，使用`SetToolTips`成員函式。  
+### <a name="remarks"></a>Remarks  
+ A tab control creates a tool tip control if it has the **TCS_TOOLTIPS** style. You can also assign a tool tip control to a tab control by using the `SetToolTips` member function.  
   
-##  <a name="highlightitem"></a>CTabCtrl::HighlightItem  
- 設定反白顯示的狀態索引標籤項目。  
+##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
+ Sets the highlight state of a tab item.  
   
 ```  
 BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `idItem`  
- 以零為起始的索引標籤控制項項目索引。  
+ Zero-based index of a tab control item.  
   
  `fHighlight`  
- 值，指定要設定的反白顯示狀態。 如果此值為**TRUE**，[] 索引標籤會反白顯示; 如果**FALSE**，[] 索引標籤設為其預設狀態。  
+ Value specifying the highlight state to be set. If this value is **TRUE**, the tab is highlighted; if **FALSE**, the tab is set to its default state.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息[TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the Win32 message [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), as described in the Windows SDK.  
   
-##  <a name="hittest"></a>CTabCtrl::HitTest  
- 判斷哪些索引標籤上，如果有的話，位於指定的螢幕上的位置。  
+##  <a name="hittest"></a>  CTabCtrl::HitTest  
+ Determines which tab, if any, is at the specified screen position.  
   
 ```  
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pHitTestInfo`  
- 指標[TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]，以指定要測試的螢幕位置。  
+ Pointer to a [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) structure, as described in the Windows SDK, which specifies the screen position to test.  
   
-### <a name="return-value"></a>傳回值  
- 如果沒有索引標籤位於指定位置，傳回以零為起始的索引標籤或-1 索引。  
+### <a name="return-value"></a>Return Value  
+ Returns the zero-based index of the tab or - 1 if no tab is at the specified position.  
   
-##  <a name="insertitem"></a>Ctabctrl:: Insertitem  
- 現有的索引標籤控制項中插入新的索引標籤。  
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem  
+ Inserts a new tab in an existing tab control.  
   
 ```  
 LONG InsertItem(
@@ -564,179 +594,179 @@ LONG InsertItem(
     DWORD dwStateMask);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 新的索引標籤的以零為起始的索引。  
+ Zero-based index of the new tab.  
   
  `pTabCtrlItem`  
- 指標[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構，指定索引標籤的屬性。  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure that specifies the attributes of the tab.  
   
  `lpszItem`  
- 包含的文字 索引標籤的 null 結尾字串的位址。  
+ Address of a null-terminated string that contains the text of the tab.  
   
  `nImage`  
- 插入影像清單中之影像的以零為起始的索引。  
+ The zero-based index of an image to insert from an image list.  
   
  `nMask`  
- 指定哪一個`TCITEM`結構要設定的屬性。 可以是零或下列值的組合︰  
+ Specifies which `TCITEM` structure attributes to set. Can be zero or a combination of the following values:  
   
-- `TCIF_TEXT`**PszText**成員是否有效。  
+- `TCIF_TEXT` The **pszText** member is valid.  
   
-- `TCIF_IMAGE``iImage`成員是否有效。  
+- `TCIF_IMAGE` The `iImage` member is valid.  
   
-- `TCIF_PARAM`**LParam**成員是否有效。  
+- `TCIF_PARAM` The **lParam** member is valid.  
   
-- `TCIF_RTLREADING`文字**pszText**希伯來文或阿拉伯文系統上使用由右至左讀取順序顯示。  
+- `TCIF_RTLREADING` The text of **pszText** is displayed using right-to-left reading order on Hebrew or Arabic systems.  
   
-- `TCIF_STATE`**DwState**成員是否有效。  
+- `TCIF_STATE` The **dwState** member is valid.  
   
  `lParam`  
- [] 索引標籤相關聯的應用程式定義的資料。  
+ Application-defined data associated with the tab.  
   
  `dwState`  
- 指定的項目狀態的值。 如需詳細資訊，請參閱[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies values for the item's states. For more information, see [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in the Windows SDK.  
   
  *dwStateMask*  
- 指定要設定哪些狀態。 如需詳細資訊，請參閱[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies which states are to be set. For more information, see [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in the Windows SDK.  
   
-### <a name="return-value"></a>傳回值  
- 以零起始的索引，新的索引標籤，如果登錄成功。否則為-1。  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the new tab if successful; otherwise - 1.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CTabCtrl # 5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
   
-##  <a name="removeimage"></a>CTabCtrl::RemoveImage  
- 索引標籤控制項影像清單中移除指定的映像。  
+##  <a name="removeimage"></a>  CTabCtrl::RemoveImage  
+ Removes the specified image from a tab control's image list.  
   
 ```  
 void RemoveImage(int nImage);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- 要移除之影像的以零為起始索引。  
+ Zero-based index of the image to remove.  
   
-### <a name="remarks"></a>備註  
- 此索引標籤控制項更新每個索引標籤的映像索引，好讓每個索引標籤會保持相同的映像相關聯。  
+### <a name="remarks"></a>Remarks  
+ The tab control updates each tab's image index so that each tab remains associated with the same image.  
   
-##  <a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
- 將焦點設定到索引標籤控制項中指定之索引標籤。  
+##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus  
+ Sets the focus to a specified tab in a tab control.  
   
 ```  
 void SetCurFocus(int nItem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 指定的索引標籤，取得焦點的索引。  
+ Specifies the index of the tab that gets the focus.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), as described in the Windows SDK.  
   
-##  <a name="setcursel"></a>CTabCtrl::SetCurSel  
- 索引標籤控制項中選取索引標籤。  
+##  <a name="setcursel"></a>  CTabCtrl::SetCurSel  
+ Selects a tab in a tab control.  
   
 ```  
 int SetCurSel(int nItem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 要選取的項目以零為起始的索引。  
+ The zero-based index of the item to be selected.  
   
-### <a name="return-value"></a>傳回值  
- 以零為起始的索引，先前選取的索引標籤，如果成功，否則為-1。  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the previously selected tab if successful, otherwise - 1.  
   
-### <a name="remarks"></a>備註  
- 索引標籤控制項不會傳送**TCN_SELCHANGING**或**TCN_SELCHANGE**通知訊息時使用這個函式選取索引標籤。 這些通知會傳送使用**WM_NOTIFY**，當使用者按一下，或使用鍵盤來變更索引標籤。  
+### <a name="remarks"></a>Remarks  
+ A tab control does not send a **TCN_SELCHANGING** or **TCN_SELCHANGE** notification message when a tab is selected using this function. These notifications are sent, using **WM_NOTIFY**, when the user clicks or uses the keyboard to change tabs.  
   
-##  <a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
- 設定索引標籤控制項的延伸的樣式。  
+##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
+ Sets the extended styles for a tab control.  
   
 ```  
 DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwNewStyle`  
- 值，指定的索引標籤組合控制延伸的樣式。  
+ Value specifying a combination of tab control extended styles.  
   
  `dwExMask`  
- A`DWORD`值，指出在哪些樣式`dwNewStyle`會受到影響。 只有在擴充的樣式`dwExMask`將會變更。 因為是，仍會維護所有其他樣式。 如果這個參數是零，則所有樣式中`dwNewStyle`會受到影響。  
+ A `DWORD` value that indicates which styles in `dwNewStyle` are to be affected. Only the extended styles in `dwExMask` will be changed. All other styles will be maintained as is. If this parameter is zero, then all of the styles in `dwNewStyle` will be affected.  
   
-### <a name="return-value"></a>傳回值  
- A`DWORD`值，包含先前[索引標籤控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb760546)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value that contains the previous [tab control extended styles](http://msdn.microsoft.com/library/windows/desktop/bb760546), as described in the Windows SDK.  
   
-### <a name="return-value"></a>傳回值  
- 此成員函式實作的 Win32 訊息行為[TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="return-value"></a>Return Value  
+ This member function implements the behavior of the Win32 message [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), as described in the Windows SDK.  
   
-##  <a name="setimagelist"></a>CTabCtrl::SetImageList  
- 指定的索引標籤控制項影像清單。  
+##  <a name="setimagelist"></a>  CTabCtrl::SetImageList  
+ Assigns an image list to a tab control.  
   
 ```  
 CImageList* SetImageList(CImageList* pImageList);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pImageList`  
- 要指派給此索引標籤控制項影像清單的指標。  
+ Pointer to the image list to be assigned to the tab control.  
   
-### <a name="return-value"></a>傳回值  
- 讓指標回到先前的影像清單或**NULL**如果沒有任何先前的影像清單。  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the previous image list or **NULL** if there is no previous image list.  
   
-##  <a name="setitem"></a>CTabCtrl::SetItem  
- 設定下列部分或所有索引標籤的屬性。  
+##  <a name="setitem"></a>  CTabCtrl::SetItem  
+ Sets some or all of a tab's attributes.  
   
 ```  
 BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 項目的以零為起始的索引。  
+ Zero-based index of the item.  
   
  `pTabCtrlItem`  
- 指標[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構，其中包含新的項目屬性。 **遮罩**成員指定要設定的屬性。 如果**遮罩**成員指定`TCIF_TEXT`值**pszText**成員是以 null 結尾字串的位址和**cchTextMax**成員會被忽略。  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure that contains the new item attributes. The **mask** member specifies which attributes to set. If the **mask** member specifies the `TCIF_TEXT` value, the **pszText** member is the address of a null-terminated string and the **cchTextMax** member is ignored.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[GetItem](#getitem)。  
+### <a name="example"></a>Example  
+  See the example for [GetItem](#getitem).  
   
-##  <a name="setitemextra"></a>CTabCtrl::SetItemExtra  
- 設定每個索引標籤的索引標籤控制項中的應用程式定義的資料保留的位元組數目。  
+##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra  
+ Sets the number of bytes per tab reserved for application-defined data in a tab control.  
   
 ```  
 BOOL SetItemExtra(int nBytes);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nBytes`  
- 若要設定的額外位元組數目。  
+ The number of extra bytes to set.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), as described in the Windows SDK.  
   
-##  <a name="setitemsize"></a>CTabCtrl::SetItemSize  
- 設定索引標籤控制項項目的寬度和高度。  
+##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize  
+ Sets the width and height of the tab control items.  
   
 ```  
 CSize SetItemSize(CSize size);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `size`  
- 索引標籤控制項項目的新寬度和高度 (以像素為單位)。  
+ The new width and height, in pixels, of the tab control items.  
   
-### <a name="return-value"></a>傳回值  
- 傳回索引標籤控制項項目的舊寬度和高度。  
+### <a name="return-value"></a>Return Value  
+ Returns the old width and height of the tab control items.  
   
-##  <a name="setitemstate"></a>CTabCtrl::SetItemState  
- 設定所識別的索引標籤控制項目狀態`nItem`。  
+##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
+ Sets the state of the tab control item identified by `nItem`.  
   
 ```  
 BOOL SetItemState(
@@ -745,72 +775,72 @@ BOOL SetItemState(
     DWORD dwState);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- 要設定的狀態資訊項目的以零為起始的索引編號。  
+ The zero-based index number of the item for which to set state information.  
   
  `dwMask`  
- 指定其中一個項目的狀態旗標，用於設定遮罩。 如需值的清單，請參閱的遮罩成員[TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554)結構中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Mask specifying which of the item's state flags to set. For a list of values, see the mask member of the [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, as described in the Windows SDK.  
   
  `dwState`  
- 若要參考`DWORD`值，其中包含狀態資訊。 可為下列其中一個值：  
+ A reference to a `DWORD` value containing the state information. Can be one of the following values:  
   
-|值|說明|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|選取索引標籤控制項項目。|  
-|**TCIS_HIGHLIGHTED**|索引標籤控制項項目會反白顯示，而且索引標籤和文字則會使用目前的反白顯示色彩繪製。 使用時反白顯示色彩，這會是的則為 true 的插補，非遞色色彩。|  
+|**TCIS_BUTTONPRESSED**|The tab control item is selected.|  
+|**TCIS_HIGHLIGHTED**|The tab control item is highlighted, and the tab and text are drawn using the current highlight color. When using highlight color, this will be a true interpolation, not a dithered color.|  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
- 索引標籤控制項中設定的最小寬度的項目。  
+##  <a name="setmintabwidth"></a>  CTabCtrl::SetMinTabWidth  
+ Sets the minimum width of items in a tab control.  
   
 ```  
 int SetMinTabWidth(int cx);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cx`  
- 索引標籤控制項項目設定的最小寬度。 如果這個參數設定為-1 時，控制項將使用的預設索引標籤的寬度。  
+ Minimum width to be set for a tab control item. If this parameter is set to -1, the control will use the default tab width.  
   
-### <a name="return-value"></a>傳回值  
- 先前的最小的索引標籤寬度。  
+### <a name="return-value"></a>Return Value  
+ The previous minimum tab width.  
   
-### <a name="return-value"></a>傳回值  
- 此成員函式實作的 Win32 訊息行為[TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="return-value"></a>Return Value  
+ This member function implements the behavior of the Win32 message [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), as described in the Windows SDK.  
   
-##  <a name="setpadding"></a>CTabCtrl::SetPadding  
- 設定 （填補） 每個索引標籤的圖示和標籤控制項中的標籤周圍的空間數量。  
+##  <a name="setpadding"></a>  CTabCtrl::SetPadding  
+ Sets the amount of space (padding) around each tab's icon and label in a tab control.  
   
 ```  
 void SetPadding(CSize size);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `size`  
- 設定 （填補） 每個索引標籤的圖示和標籤控制項中的標籤周圍的空間數量。  
+ Sets the amount of space (padding) around each tab's icon and label in a tab control.  
   
-##  <a name="settooltips"></a>CTabCtrl::SetToolTips  
- 將工具提示控制項指派給索引標籤控制項。  
+##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
+ Assigns a tool tip control to a tab control.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWndTip`  
- 工具提示控制項的控制代碼。  
+ Handle of the tool tip control.  
   
-### <a name="remarks"></a>備註  
- 您可以取得工具提示控制項，藉由呼叫相關聯的索引標籤控制項`GetToolTips`。  
+### <a name="remarks"></a>Remarks  
+ You can get the tool tip control associated with a tab control by making a call to `GetToolTips`.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)。  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-## <a name="see-also"></a>另請參閱  
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CHeaderCtrl 類別](../../mfc/reference/cheaderctrl-class.md)   
- [CListCtrl 類別](../../mfc/reference/clistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CHeaderCtrl Class](../../mfc/reference/cheaderctrl-class.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)
 

@@ -1,110 +1,127 @@
 ---
-title: "TN035：在 Visual C++ 中使用多個資源檔和標頭檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.resources"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資源檔，多個"
-  - "TN035"
+title: 'TN035: Using Multiple Resource Files and Header Files with Visual C++ | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.resources
+dev_langs:
+- C++
+helpviewer_keywords:
+- resource files, multiple
+- TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
 caps.latest.revision: 13
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN035：在 Visual C++ 中使用多個資源檔和標頭檔
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8e8cc5c7127ecd953ca97d8fd90b2ee94e08cc04
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Using Multiple Resource Files and Header Files with Visual C++
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。  因此，有些程序和主題可能已過期或不正確。  如需最新資訊，建議您在線上文件索引中搜尋相關的主題。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 本提示說明 Visual C\+\+ 資源編輯器如何支援在單一專案內共用或跨多項專案共用的多個資源檔和標頭檔，以及如何善加運用該支援。  這份提示將回答下列問題：  
+ This note describes how the Visual C++ resource editor supports multiple resource files and header files shared in a single project or shared across multiple projects and how you can take advantage of that support. This note answers these questions:  
   
--   什麼時候最好要將專案分割成多個資源檔和\/或標頭檔，以及如何這麼做？  
+-   When might you want to split a project into multiple resource files and/or header files, and how you do it  
   
--   如何在兩個 .RC 檔之間共用通用 .H 標頭檔？  
+-   How do you share a common header .H file between two .RC files  
   
--   如何將專案資源分割成多個 .RC 檔？  
+-   How do you divide project resources into multiple .RC files  
   
--   您 \(和工具\) 如何管理 .RC、.CPP 與 .H 檔案之間的組建相依性？  
+-   How do you (and the tools) manage build dependencies between .RC, .CPP, and .H files  
   
- 請注意，如果將額外的資源檔加入至專案，ClassWizard 就無法辨識所加入之檔案中的資源。  
+ You should be aware that if you add an additional resource file to your project, ClassWizard will not recognize the resources in the added file.  
   
- 這份提示是定型解答，針對上述問題回應的內容如下：  
+ This note is structured to answer the above questions as follows:  
   
--   **Overview of How Visual C\+\+ Manages Resource Files and Header Files**提供 Visual C\+\+ 的 \[Resource Set Includes\] 命令如何讓您在同一個專案中使用多個資源檔和標頭檔的概觀。  
+- **Overview of How Visual C++ Manages Resource Files and Header Files** provides an overview of how the Resource Set Includes command in Visual C++ lets you use multiple resource files and header files in the same project.  
   
--   **Analysis of AppWizard\-created .RC and .H Files**著眼於 AppWizard 建立的應用程式所使用的多個資源檔及標頭檔。  這些檔案可以在您需要將其他資源檔和標頭檔加入至專案時，做為這些檔案的良好典範。  
+- **Analysis of AppWizard-created .RC and .H Files** looks at the multiple resource and header files that are used by an AppWizard-created application. These files serve as a good model for additional resource files and header files you might want to add to your project.  
   
--   **Including Additional Header Files**說明您可能需要加入多個標頭檔的地方，並提供如何這麼做的詳細資訊。  
+- **Including Additional Header Files** describes where you might want to include multiple header files, and provides details how to do so.  
   
--   **Sharing a Header File Between Two .RC Files**告訴您如何在不同專案 \(或是相同專案\) 中的多個 .RC 檔之間共用一個標頭檔。  
+- **Sharing a Header File Between Two .RC Files** shows how you can share one header file between multiple .RC files in different projects, or perhaps in the same project.  
   
--   **Using Multiple Resource Files in the Same Project**說明您可能需要將專案分解成多個 .RC 檔的地方，並提供如何這麼做的詳細資訊。  
+- **Using Multiple Resource Files in the Same Project** describes where you might want to break up your project into multiple .RC files, and provides details how to do so.  
   
--   **Enforcement of Non\-Editable Visual C\+\+ Files**說明如何確認 Visual C\+\+ 不會編輯自訂資源且不會無意中重新設定其格式。  
+- **Enforcement of Non-Editable Visual C++ Files** describes how you can make sure Visual C++ does not edit and unintentionally reformat a custom resource.  
   
--   **Managing Symbols Shared by Multiple Visual C\+\+\-Edited .RC Files**說明如何跨多個 .RC 檔共用相同的符號，以及如何避免指派重複的 ID 數值。  
+- **Managing Symbols Shared by Multiple Visual C++-Edited .RC Files** describes how to share the same symbols across multiple .RC files and how to avoid assigning duplicate ID numeric values.  
   
--   **Managing Dependencies Between .RC, .CPP, and .H Files**說明 Visual C\+\+ 如何避免對相依於資源符號檔的 .CPP 檔案進行不必要的重新編譯。  
+- **Managing Dependencies Between .RC, .CPP, and .H Files** describes how Visual C++ avoids unnecessary recompiling .CPP files that are dependent on resource symbol files.  
   
--   **How Visual C\+\+ Manages Set Includes Information**提供技術詳細資料，說明 Visual C\+\+ 如何追蹤多個 \(巢狀\) .RC 檔以及 .RC 檔藉由 \#include 所包含的多個標頭檔。  
+- **How Visual C++ Manages Set Includes Information** provides technical details about how Visual C++ keeps track of multiple (nested) .RC files and multiple header files that are #include'd by an .RC file.  
   
- **Visual C\+\+ 如何管理資源檔和標頭檔的概觀**  
+ **Overview of How Visual C++ Manages Resource Files and Header Files**  
   
- Visual C\+\+ 將單一 .RC 資源檔和對應的 .H 標頭檔當做緊密結合的一組檔案來管理。  當您編輯和儲存 .RC 檔中的資源時，會間接編輯和儲存對應 .H 檔案中的符號。  雖然您可以同時開啟和編輯多個 .RC 檔 \(使用 Visual C\+\+ 的 MDI 使用者介面\)，但對任何指定 .RC 檔來說，您間接編輯的就恰好只有一個對應的標頭檔。  
+ Visual C++ manages a single .RC resource file and a corresponding .H header file as a tightly coupled pair of files. When you edit and save resources in an .RC file, you indirectly edit and save symbols in the corresponding .H file. Although you can open and edit multiple .RC files at a time (using Visual C++'s MDI user interface) for any given .RC file you indirectly edit exactly one corresponding header file.  
   
- **符號標頭檔**  
+ **Symbol Header File**  
   
- 根據預設，不論資源檔的名稱為何 \(例如 MYAPP.RC\)，Visual C\+\+ 永遠將對應的標頭檔命名為 RESOURCE.H。  在 Visual C\+\+ 中，您可以使用 \[**View**\] 功能表的 \[**Resource Includes**\] 命令，透過更新 \[**Set Includes**\] 對話方塊中的符號標頭檔來變更這個標頭檔的名稱。  
+ By default, Visual C++ always names the corresponding header file RESOURCE.H, regardless of the name of the resource file (e.g., MYAPP.RC). Using the **Resource Includes** command from the **View** menu in Visual C++, you can change the name of this header file by updating the Symbol Header File file in the **Set Includes** dialog box.  
   
- **唯讀符號指示詞**  
+ **Read-Only Symbol Directives**  
   
- 雖然 Visual C\+\+ 對於任何指定的 .RC 檔都只會編輯一個標頭檔，但是 Visual C\+\+ 也支援其他唯讀標頭檔中所定義之符號的參考。  在 Visual C\+\+ 中，您可以使用 \[**View**\] 功能表的 \[**Resource Includes**\] 命令，將任何數目的其他唯讀標頭檔指定為唯讀符號指示詞。  「唯讀」限制表示，當您在 .RC 檔中加入新資源時，您可以使用唯讀標頭檔中定義的符號，但若刪除資源，符號在唯讀標頭檔中仍然維持已定義狀態。  您無法變更指派給唯讀符號的數值。  
+ Although Visual C++ only edits one header file for any given .RC file, Visual C++ supports references to symbols defined in additional read-only header files. Using the **Resource Includes** command from the **View** menu in Visual C++, you can specify any number of additional read-only header files as Read-Only Symbol Directives. The "read-only" restriction means that when you add a new resource in the .RC file, you can use a symbol defined in the read-only header file; but if you delete the resource, the symbol still remains defined in the read-only header file. You cannot change the numeric value assigned to a read-only symbol.  
   
- **編譯時期指示詞**  
+ **Compile-Time Directives**  
   
- Visual C\+\+ 也支援巢狀資源檔，也就是藉由 \#include 將一個 .RC 檔包含在另一個資源檔中。  使用 Visual C\+\+ 編輯指定的 .RC 檔時，以 \#include 所包含之檔案中的任何資源都不是可見的。  但是當您編譯 .RC 檔時，同樣會編譯 \#include 所包含的檔案。  在 Visual C\+\+ 中，您可以使用 \[**View**\] 功能表的 \[**Resource Includes**\] 命令，將任何數目以 \#include 包含的 .RC 檔指定為編譯時期指示詞。  
+ Visual C++ also supports nesting of resource files, where one .RC file is #include'd within another. When you edit a given .RC file using Visual C++, any resources in the #include'd files are not visible. But when you compile the .RC file, the #include'd files are also compiled. Using the **Resource Includes** command from the **View** menu in Visual C++, you can specify any number of #include'd .RC files as Compile-Time Directives.  
   
- 如果您讓 Visual C\+\+ 讀入的 .RC 檔，透過 \#include 包含了*未*指定為編譯時期指示詞的另一個 .RC 檔時，請注意會發生什麼情況。  當您在 Visual C\+\+ 中加入您先前使用文字編輯器手動維護的 .RC 檔時，這種情況就可能出現。  Visual C\+\+ 讀取 \#include 包含的 .RC 檔時，會將 \#include 的資源合併至父代 .RC 檔中。  當您儲存父代 .RC 檔時，實際上會以 \#include 的資源來取代 \#include 陳述式。  如果您不願意發生這種合併，就應該在 Visual C\+\+ 讀入父代 .RC 檔*之前*，從其中移除 \#include 陳述式，然後再使用 Visual C\+\+，將相同的 \#include 陳述式重新加入做為編譯時期指示詞。  
+ Note what happens if you read into Visual C++ an .RC file that #include's another .RC file that is *not* specified as a Compile-Time Directive. This situation might arise when you bring to Visual C++ an .RC file that you had been previously maintaining manually with a text editor. When Visual C++ reads the #include'd .RC file, it merges the #include'd resources into the parent .RC file. When you save the parent .RC file, the #include statement, in effect, will be replaced by the #include'd resources. If you do not want this merge to happen, you should remove the #include statement from the parent .RC file *prior* to reading it into Visual C++; then using Visual C++, add back the same #include statement as a Compile-Time Directive.  
   
- Visual C\+\+ 會在 \#include 指示詞中 \(*以及*在 TEXTINCLUDE 資源中\) 儲存 .RC 檔的上述三種 Set Includes 資訊 \(符號標頭檔、唯讀符號指示詞和編譯時期指示詞\)。  TEXTINCLUDE 資源是您通常不需要處理的實作詳細資料，這會在[Visual C\+\+ 如何管理 Set Includes 資訊](#_mfcnotes_tn035_set_includes)中說明。  
+ Visual C++ saves in an .RC file the three kinds of above Set Includes information (Symbol Header File, Read-Only Symbol Directives, and Compile-Time Directives) in #include directives *and* in TEXTINCLUDE resources. The TEXTINCLUDE resources, an implementation detail that you do not normally need to deal with, are explained in [How Visual C++ Manages Set Includes Information](#_mfcnotes_tn035_set_includes).  
   
- **分析 AppWizard 建立的 .RC 和 .H 檔案**  
+ **Analysis of AppWizard-Created .RC and .H Files**  
   
- 檢查 AppWizard 產生的應用程式程式碼可讓您深入了解 Visual C\+\+ 如何管理多個資源檔和標頭檔。  下面檢查的程式碼是摘錄自 AppWizard 使用預設選項所產生的 MYAPP 應用程式。  
+ Examining the application code produced by AppWizard provides insight into how Visual C++ manages multiple resource files and header files. The code excerpts examined below are from a MYAPP application produced by AppWizard using the default options.  
   
- AppWizard 建立的應用程式會使用多個資源檔和多個標頭檔，如下圖摘要所示：  
+ An AppWizard-created application uses multiple resource files and multiple header files, as summarized in the diagram below:  
   
 ```  
-RESOURCE.H     AFXRES.H                      
-       \       /                                
-        \     /                                  
-       MYAPP.RC                                 
-           |                                  
-           |                                
-     RES\MYAPP.RC2    
-     AFXRES.RC                     
-     AFXPRINT.RC                   
+RESOURCE.H     AFXRES.H      
+ \       /                
+ \     /  
+    MYAPP.RC 
+ |  
+ |                
+    RES\MYAPP.RC2 
+    AFXRES.RC 
+    AFXPRINT.RC 
 ```  
   
- 您可以使用 Visual C\+\+ \[File\/Set Includes\] 命令，檢視這些檔案關聯性。  
+ You can view these multiple file relationships using the Visual C++ File/Set Includes command.  
   
  MYAPP.RC  
- 您使用 Visual C\+\+ 編輯的應用程式資源檔。  
+ The application resource file that you edit using Visual C++.  
   
- RESOURCE.H 是應用程式專用的標頭檔。  AppWizard 永遠將其命名為 RESOURCE.H，這與 Visual C\+\+ 的標頭檔預設命名方式一致。  標頭檔的 \#include 是資源檔 \(MYAPP.RC\) 中的第一個陳述式：  
+ RESOURCE.H is the application-specific header file. It is always named RESOURCE.H by AppWizard, consistent with Visual C++'s default naming of the header file. The #include for this header file is the first statement in the resource file (MYAPP.RC):  
   
 ```  
 //Microsoft Visual C++ generated resource script  
@@ -112,22 +129,22 @@ RESOURCE.H     AFXRES.H
 #include "resource.h"  
 ```  
   
- RES\\MYAPP.RC2  
- 包含 Visual C\+\+ 不會加以編輯、但會包含在最終編譯後 .EXE 檔案中的資源。  由於 Visual C\+\+ 可以編輯任何標準資源，包括版本資源 \(這個版本中的新功能\)，因此 AppWizard 預設不會建立此類資源。  AppWizard 會產生空白檔案，以備您想要自行在這個檔案中加入自訂格式的資源。  
+ RES\MYAPP.RC2  
+ Contains resources that will not be edited by Visual C++ but will be included in the final compiled .EXE file. AppWizard creates no such resources by default, since Visual C++ can edit all of the standard resources, including the version resource (a new feature in this release). An empty file is generated by AppWizard in case you wish to add your own custom formatted resources to this file.  
   
- 如果您使用自訂格式的資源，可以使用 Visual C\+\+ 文字編輯器，將這些資源加入至 RES\\MYAPP.RC2 並進行編輯。  
+ If you use custom formatted resources, you can add them to RES\MYAPP.RC2 and edit them using the Visual C++ text editor.  
   
- AFXRES.RC 和 AFXPRINT.RC 包含 Framework 某些功能所需的標準資源。  就像 RES\\MYAPP.RC2，這兩個 Framework 提供的資源檔以 \#include 包含在 MYAPP.RC 結尾，並且是在 \[Set Includes\] 對話方塊的編譯時期指示詞中指定。  因此，當您在 Visual C\+\+ 中編輯 MYAPP.RC 時，這些 Framework 資源無法直接加以檢視或編輯，但還是會編譯至應用程式的二進位 .RES 檔案與最終 .EXE 檔案。  如需標準 Framework 資源的詳細資訊 \(包括進行修改的程序\)，請參閱[技術提示 23](../mfc/tn023-standard-mfc-resources.md)。  
+ AFXRES.RC and AFXPRINT.RC contain standard resources required by certain features of the framework. Like RES\MYAPP.RC2, these two framework-provided resource files are #include'd at the end of MYAPP.RC, and they are specified in the Compile-Time Directives of the Set Includes dialog box. Thus, you do not directly view or edit these framework resources while you edit MYAPP.RC in Visual C++, but they are compiled into the application's binary .RES file and final .EXE file. For more information on the standard framework resources, including procedures for modifying them, see [Technical Note 23](../mfc/tn023-standard-mfc-resources.md).  
   
- AFXRES.H 會定義標準符號，例如 Framework 所使用 \(特別是用在 AFXRES.RC 中\) 的 `ID_FILE_NEW`。  AFXRES.H 也會以 \#include 包含 WINRES.H，後者含有 Visual C\+\+ 產生之 .RC 檔以及 AFXRES.RC 所需的 WINDOWS.H 子集。  AFXRES.H 中定義的符號可供您在編輯應用程式資源檔 \(MYAPP.RC\) 時使用。  例如，`ID_FILE_NEW` 是用於 MYAPP.RC 功能表資源中的 \[開新檔案\] 功能表項目。  您無法變更或刪除這些 Framework 定義的符號。  
+ AFXRES.H defines standard symbols, such as `ID_FILE_NEW`, used by the framework and specifically used in AFXRES.RC. AFXRES.H also #include's WINRES.H, which contains a subset of WINDOWS.H that are needed by Visual C++ generated .RC files as well as AFXRES.RC. The symbols defined in AFXRES.H are available as you edit the application resource file (MYAPP.RC). For example, `ID_FILE_NEW` is used for the File New menu item in MYAPP.RC's menu resource. You cannot change or delete these framework-defined symbols.  
   
- **包含其他標頭檔**  
+## <a name="_mfcnotes_tn035_including"></a> Including Additional Header Files  
   
- AppWizard 建立的應用程式只會包含兩個標頭檔：RESOURCE.H 和 AFXRES.H。  只有 RESOURCE.H 是應用程式專用的。  您可能需要在下列情況中包含其他唯讀標頭檔：  
+ The AppWizard-created application includes only two header files: RESOURCE.H and AFXRES.H. Only RESOURCE.H is application-specific. You may need to include additional read-only header files in the following cases:  
   
- 標頭檔是由外部來源提供，或者您想要在多個專案之間或相同專案的多個組件之間共用標頭檔。  
+ The header file is provided by an external source, or you want to share the header file among multiple projects or multiple parts of the same project.  
   
- 標頭檔含有您不希望 Visual C\+\+ 在儲存檔案時加以變更或篩除的格式設定和註解。  例如，您或許想要保留使用符號算術的 \#define：  
+ The header file has formatting and comments that you do not want Visual C++ to change or filter out when it saves the file. For example, maybe you want to preserve #define's that use symbolic arithmetic such as:  
   
 ```  
 #define RED 0  
@@ -139,61 +156,59 @@ RESOURCE.H     AFXRES.H
 #define ID_GREEN_BUTTON (ID_COLOR_BUTTON + GREEN)  
 ```  
   
- 您可以包含其他唯讀標頭檔，做法是使用 \[**Resource Includes**\] 命令，將 \#include 陳述式指定為第二個唯讀符號指示詞，如下所示：  
+ You can include additional read-only header files by using the **Resource Includes** command to specify the #include statement as a second Read-Only Symbol Directive, as in:  
   
 ```  
 #include "afxres.h"  
 #include "second.h"  
 ```  
   
- 新的檔案關聯性圖表，現在看起來像這樣：  
+ The new file relationship diagram now looks like this:  
   
 ```  
-               AFXRES.H         
-RESOURCE.H     SECOND.H                      
-      \       /                                
-       \     /                                  
-      MYAPP.RC     
-          |                                  
-          |                                
-    RES\MYAPP.RC2    
-    AFXRES.RC                     
-    AFXPRINT.RC                   
+    AFXRES.H 
+RESOURCE.H     SECOND.H      
+ \       /                
+ \     /  
+    MYAPP.RC 
+ |  
+ |                
+    RES\MYAPP.RC2 
+    AFXRES.RC 
+    AFXPRINT.RC 
 ```  
   
- **在兩個 .RC 檔案之間共用標頭檔**  
+ **Sharing a Header File Between Two .RC Files**  
   
- 您可能會想要在不同專案 \(或可能相同專案\) 中的兩個 .RC 檔之間共用標頭檔。  若要這麼做，只需將上述「唯讀指示詞」技術套用至這兩個 .RC 檔即可。  在兩個 .RC 檔分屬不同應用程式 \(不同專案\) 的情況下，結果如下圖所示：  
+ You may want to share a header file between two .RC files that are in different projects, or possibly the same project. To do so, simply apply the Read-Only Directives technique described above to both .RC files. In the case where the two .RC files are for different applications (different projects), the result is illustrated in the following diagram:  
   
 ```  
-     RESOURCE.H   AFXRES.H   RESOURCE.H    
-    (for MYAPP1)  SECOND.H   (for MYAPP2)               
-          \       /     \       /             
-           \     /       \     /               
-          MYAPP1.RC      MYAPP2.RC                   
-           /    \        /     \                     
-          /      \      /       \              
+    RESOURCE.H AFXRES.H   RESOURCE.H    
+ (for MYAPP1) SECOND.H   (for MYAPP2)               
+ \       /     \       /             
+ \     /       \     /               
+    MYAPP1.RC MYAPP2.RC */    \        /     \ */      \      /       \              
 RES\MYAPP1.RC2  AFXRES.RC     RES\MYAPP2.RC2                
-                AFXPRINT.RC                   
+    AFXPRINT.RC 
 ```  
   
- 以下將討論第二種在相同應用程式 \(專案\) 中由兩個 .RC 檔案共用標頭檔的情況。  
+ The case where the second header file is shared by two .RC files in the same application (project) is discussed below.  
   
- **在相同專案中使用多個資源檔**  
+ **Using Multiple Resource Files in the Same Project**  
   
- Visual C\+\+ 和資源編譯器透過 .RC 檔中另一個資源檔的 \#include 支援相同專案中的多個 .RC 檔。  這會允許多重巢狀。  有各種原因需要將專案的資源分割成多個 .RC 檔：  
+ Visual C++ and the Resource Compiler support multiple .RC files in the same project through #include's of one .RC file within another. Multiple nesting is allowed. There are various reasons to split your project's resources into multiple .RC files:  
   
--   如果將資源分割成多個 .RC 檔，管理多個專案小組成員之間的大量資源會更為容易。  如果使用原始檔控制管理套件進行檔案簽出和變更簽入，將資源分割成多個 .RC 檔可讓您對管理資源的變更掌握更細微的控制。  
+-   It is easier to manage a large number of resources among multiple project team members if you split the resources into multiple .RC files. If you use a source control management package for checking out files and checking in changes, splitting the resources into multiple .RC files will give you finer control over managing changes to resources.  
   
--   如果資源的某些部分需要使用前置處理器指示詞 \(例如 \#ifdef、\#endif 和 \#define\)，您必須將這些部分放在會由資源編譯器編譯的唯讀資源中隔離。  
+-   If you want to use preprocessor directives, such as #ifdef, #endif, and #define, for portions of your resources, you must isolate them in read-only resources that will be compiled by the Resource Compiler.  
   
--   在 Visual C\+\+ 中，載入和儲存一組個別 .RC 檔會比載入和儲存一個複合 .RC 檔還要快速。  
+-   Component .RC files will load and save faster in Visual C++ than one composite .RC file.  
   
--   如果您想要使用文字編輯器以人類看得懂的格式維護資源，就必須將此資源保留在 Visual C\+\+ 會編輯的資源檔以外的不同 .RC 檔中。  
+-   If you want to maintain a resource with a text editor in a human-readable form, you should keep it in a .RC file separate from the one Visual C++ edits.  
   
--   如果您需要以其他特定資料編輯器可解譯的二進位或文字格式來保留使用者定義的資源，那麼就必須在個別 .RC 檔中保留此資源，這樣 Visual C\+\+ 才不會將格式變更為十六進位資料。  MFC 進階概念範例 [SPEAKN](../top/visual-cpp-samples.md) 中的 .WAV \(聲音\) 檔案資源即是很好的例子。  
+-   If you need to keep a user-defined resource in a binary or text form that is interpretable by another specialized data editor, then you should keep it in a separate .RC file so Visual C++ does not change the format to hexadecimal data. The .WAV (sound) file resources in the MFC Advanced Concepts sample [SPEAKN](../visual-cpp-samples.md) are a good example.  
   
- 您可以在 \[Set Includes\] 對話方塊中，使用 \#include 將 SECOND.RC 包含在編譯時期指示詞中：  
+ You can #include a SECOND.RC in the Compile-Time Directives in the Set Includes dialog box:  
   
 ```  
 #include "res\myapp.rc2"  // non-Visual C++ edited resources  
@@ -203,62 +218,60 @@ RES\MYAPP1.RC2  AFXRES.RC     RES\MYAPP2.RC2
 #include "afxprint.rc"  // printing/print preview resources  
 ```  
   
- 結果如下圖所示：  
+ The result is illustrated in the following diagram:  
   
 ```  
-RESOURCE.H     AFXRES.H                      
-       \       /                                
-        \     /                                  
-       MYAPP.RC  
-           |                                  
-           |                                
-     RES\MYAPP.RC2  
-     SECOND.RC    
-     AFXRES.RC                     
-     AFXPRINT.RC                   
+RESOURCE.H     AFXRES.H      
+ \       /                
+ \     /  
+    MYAPP.RC 
+ |  
+ |                
+    RES\MYAPP.RC2 
+    SECOND.RC 
+    AFXRES.RC 
+    AFXPRINT.RC 
 ```  
   
- 您可以使用編譯時期指示詞，將 Visual C\+\+ 可編輯與不可編輯的資源組織在多個 .RC 檔案，其中「主要」MYAPP.RC 除了藉由 \#include 包含其他 .RC 檔外，就什麼事也不做。  如果您要使用 Visual C\+\+ 專案 .MAK 檔案，則必須在專案中包含「主要」.RC 檔，這樣才能讓所有 \#include 的資源與您的應用程式一起編譯。  
+ Using Compile-Time Directives, you can organize your Visual C++-editable and non-editable resources into multiple .RC files, where the "master" MYAPP.RC does nothing but #include the other .RC files. If you are using a Visual C++ project .MAK file, then you should include the "master" .RC file in the project so that all the #include'd resources are compiled with your application.  
   
- **強制設定不可編輯的 Visual C\+\+ 檔案**  
+ **Enforcement of Noneditable Visual C++ Files**  
   
- 例如，AppWizard 建立的 RES\\MYAPP.RC2 檔案即是包含您*不*希望 Visual C\+\+ 意外讀入，又接著加以寫出而遺失格式設定資訊之資源的檔案。  若要避免這種情況，請將下列程式碼行放在 RES\\MYAPP.RC2 檔案的開頭：  
+ The AppWizard-created RES\MYAPP.RC2 file is an example of a file that contains resources that you do *not* want to accidentally read into Visual C++ and then write it back out with loss of formatting information. To protect against this, place the following lines in the beginning of the RES\MYAPP.RC2 file:  
   
 ```  
 #ifdef APSTUDIO_INVOKED  
-    #error this file is not editable by Visual C++  
+ #error this file is not editable by Visual C++  
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Visual C\+\+ 編譯 .RC 檔時，會定義 **APSTUDIO\_INVOKED** 和 **RC\_INVOKED**。  如果 AppWizard 建立的檔案結構損毀，而且 Visual C\+\+ 讀取了上述 \#error 行，就會報告嚴重錯誤並中止 .RC 檔案讀取。  
+ When Visual C++ compiles the .RC file, it defines **APSTUDIO_INVOKED** as well as **RC_INVOKED**. If the AppWizard-created file structure is corrupted and Visual C++ reads the #error line above, it reports a fatal error and abort the reading of the .RC file.  
   
- **管理 Visual C\+\+ 編輯的多個 .RC 檔案所共用的符號**  
+ **Managing Symbols Shared by Multiple Visual C++-Edited .RC Files**  
   
- 當您將資源分割成多個要在 Visual C\+\+ 中個別編輯的 .RC 檔時，會引發兩個問題：  
+ Two issues arise when you split up your resources into multiple .RC files that you want to edit separately in Visual C++:  
   
--   您可能會想要跨多個 .RC 檔共用相同的符號。  
+-   You might want to share the same symbols across multiple .RC files.  
   
--   您需要協助 Visual C\+\+ 避免將相同的 ID 數值指派給不同資源 \(符號\)。  
+-   You need to help Visual C++ avoid assigning the same ID numeric values to distinct resources (symbols).  
   
- 下圖說明處理第一個問題的 .RC 和 .H 檔案的組織：  
+ The following diagram illustrates an organization of .RC and .H files that deals with the first issue:  
   
 ```  
-              MYAPP.RC  
-             /         \  
-            /           \  
+    MYAPP.RC */         \ */           \  
 MYSTRS.H   / MYSHARED.H  \  MYMENUS.H  
-     \    /    /      \   \    \  
-      \  /    /        \   \    \  
-   MYSTRS.RC           MYMENUS.RC  
+ \    /    /      \   \    \  
+ \  /    /        \   \    \  
+    MYSTRS.RC MYMENUS.RC  
 ```  
   
- 在這個範例中，字串資源保留在一個資源檔 MYSTRS.RC，而功能表保留在另一個資源檔 MYMENUS.RC。  有些符號 \(例如命令的符號\) 可能需要在兩個檔案之間共用。  例如，ID\_TOOLS\_SPELL 可以是 \[工具\] 功能表中的 \[拼字\] 項目，也可以是應用程式主視窗狀態列框架所顯示之命令提示字元的字串 ID。  
+ In this example, string resources are kept in one resource file, MYSTRS.RC, and menus are kept in another, MYMENUS.RC. Some symbols, such as for commands, may need to be shared between the two files. For example, a ID_TOOLS_SPELL may be the menu command ID for the Spell item in a Tools menu; and it may also be the string ID of the command prompt displayed by the framework in the application's main window status bar.  
   
- ID\_TOOLS\_SPELL 符號是保留在共用標頭檔 MYSHARED.H 中。  您可以使用文字編輯器手動維護這個共用標頭檔，Visual C\+\+ 無法直接進行編輯。  在兩個資源檔 MYSTRS.RC 和 MYMENUS.RC 中，您可以使用 \[**Resource Includes**\] 命令，將 \#include MYSHARED.H 指定於 MYAPP.RC 的唯讀指示詞，如之前所述。  
+ The ID_TOOLS_SPELL symbol is kept in the shared header file, MYSHARED.H. You maintain this shared header file manually with a text editor; Visual C++ does not directly edit it. In the two resource files MYSTRS.RC and MYMENUS.RC, you specify #include MYSHARED.H in the Read-Only Directives for MYAPP.RC, using the **Resource Includes** command, as described earlier.  
   
- 嘗試使用符號識別任何資源之前，您最好預先準備將會共用的符號。  將這個符號加入至標頭檔，如果您還沒有使用 \#include 在 .RC 檔的唯讀指示詞中包含共用標頭檔，請在使用符號前這麼做。  如果您未以這種方式預先準備共用符號，那麼就必須手動 \(使用文字編輯器\) 將符號的 \#define 陳述式，\(比方說\) 在符號用於 MYSTRS.RC 之前從 MYMENUS.H 移至 MYSHARED.H。  
+ It is most convenient to anticipate a symbol you will share before you attempt use it to identify any resource. Add the symbol to the shared header file and, if you have not already #include'd the shared header file in the Read-Only Directives for the .RC file, do so before using the symbol. If you did not anticipate sharing the symbol in this way, then you will have to manually (using a text editor) move the #define statement for the symbol from, say, MYMENUS.H to MYSHARED.H before using it in MYSTRS.RC.  
   
- 當您管理多個 .RC 檔中的符號時，也必須協助 Visual C\+\+ 避免將相同的 ID 數值指派給不同資源 \(符號\)。  對於任何指定的 .RC 檔，Visual C\+\+ 會自動累加指派每個 ID 定義域 \(總共四個\) 中的 ID。  在編輯工作階段之間，Visual C\+\+ 會記錄上次在 .RC 檔符號標頭檔的每個定義域中指派的 ID。  以下說明 APS\_NEXT 值對空白 \(新增\) .RC 檔的意義：  
+ When you manage symbols in multiple .RC files, you also must help Visual C++ avoid assigning the same ID numeric values to distinct resources (symbols). For any given .RC file, Visual C++ incrementally assigns IDs in each of four ID domains. Between editing sessions, Visual C++ keeps track of the last ID it assigned in each of the domains in the symbol header file for the .RC file. Here is what the APS_NEXT values are for an empty (new) .RC file:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  101  
@@ -267,19 +280,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **\_APS\_NEXT\_RESOURCE\_VALUE** 是要用於對話方塊、功能表等資源的下一個符號值。  資源符號值的有效範圍是 1 至 0x6FFF。  
+ **_APS_NEXT_RESOURCE_VALUE** is the next symbol value that will be used for a dialog resource, menu resource, and so on. The valid range for resource symbol values is 1 to 0x6FFF.  
   
- **\_APS\_NEXT\_COMMAND\_VALUE** 是要用於命令識別的下一個符號值。  命令符號值的有效範圍是 0x8000 至 0xDFFF。  
+ **_APS_NEXT_COMMAND_VALUE** is the next symbol value that will be used for a command identification. The valid range for command symbol values is 0x8000 to 0xDFFF.  
   
- **\_APS\_NEXT\_CONTROL\_VALUE** 是要用於對話方塊控制項的下一個符號值。  對話方塊控制項符號值的有效範圍是 8 至 0xDFFF。  
+ **_APS_NEXT_CONTROL_VALUE** is the next symbol value that will be used for a dialog control. The valid range for dialog control symbol values is 8 to 0xDFFF.  
   
- **\_APS\_NEXT\_SYMED\_VALUE** 是您使用符號瀏覽器的 \[New\] 命令手動指派符號值時，將會發行的下一個符號值。  
+ **_APS_NEXT_SYMED_VALUE** is the next symbol value that will be issued when you manually assign a symbol value using the New command in the Symbol Browser.  
   
- 建立新的 .RC 檔時，Visual C\+\+ 一開始會使用比最低合法值稍微高的值。  AppWizard 也會將這些值初始化為一些較適合 MFC 應用程式的值。  如需 ID 值範圍的詳細資訊，請參閱[技術提示 20](../mfc/tn020-id-naming-and-numbering-conventions.md)。  
+ Visual C++ starts with slightly higher values that the lowest legal value when creating a new .RC file. AppWizard will also initialize these values to something more appropriate for MFC applications. For more information about ID value ranges, see [Technical Note 20](../mfc/tn020-id-naming-and-numbering-conventions.md).  
   
- 現在，每當您建立新的資源檔時，即使是在同一個專案中，Visual C\+\+ 都會定義相同的 **\_APS\_NEXT\_** 值。  這表示，如果您在兩個不同 .RC 檔中加入 \(舉例說\) 多個對話方塊，很有可能會將相同的 \#define 值指派給不同的對話方塊。  例如，第一個 .RC 檔的 IDD\_MY\_DLG1 和第二個 .RC 檔的 IDD\_MY\_DLG2 可能都有相同的指派數字 101。  
+ Now every time you create a new resource file, even in the same project, Visual C++ defines the same **_APS_NEXT\_** values. This means that if you add, say, multiple dialogs in two different .RC files, it is highly likely that the same #define value will be assigned to different dialogs. For example, IDD_MY_DLG1 in the first .RC file might be assigned the same number, 101, as IDD_MY_DLG2 in a second .RC file.  
   
- 若要避免這種情況，您應該在不同 .RC 檔案中分別為每個 ID 定義域 \(總共四個\) 各自保留不同的數值範圍。  您可以在開始加入資源`之前`，透過手動更新每個 .RC 檔的 **\_APS\_NEXT** 值來這麼做。  例如，如果第一個 .RC 檔使用預設 **\_APS\_NEXT** 值，那麼您可能會想要指派下列 **\_APS\_NEXT** 值給第二個 .RC 檔：  
+ To avoid this, you should reserve a separate numeric range for each of the four domains of IDs in the respective .RC files. Do this by manually updating the **_APS_NEXT** values in each of the .RC files `before` you start adding resources. For example, if the first .RC file uses the default **_APS_NEXT** values, then you might want to assign the following **_APS_NEXT** values to the second .RC file:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  
@@ -288,70 +301,70 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     2000  
 ```  
   
- 當然，Visual C\+\+ 仍舊可能在第一個 .RC 檔中指派這麼多的 ID，使得這些數值開始與第二個 .RC 檔保留的那些數值重疊。  您應該保留足夠大的範圍，讓這種情況就不會發生。  
+ Of course, it is still possible that Visual C++ will assign so many IDs in the first .RC file that the numeric values start to overlap those reserved for the second .RC file. You should reserve sufficiently large ranges so that this does not happen.  
   
- **管理 .RC、.CPP 和 .H 檔案之間的相依性**  
+ **Managing Dependencies Between .RC, .CPP, and .H Files**  
   
- Visual C\+\+ 儲存 .RC 檔時，也會將符號的變更儲存到對應的 RESOURCE.H 檔案。  在 .RC 檔中參考的資源的任何 .CPP 檔案通常都必須從專案的主要標頭檔中，以 \#include 包含 RESOURCE.H 檔案。  由於開發環境的內部專案管理會掃描原始程式檔的標頭相依性，這會產生不必要的副作用。  每當您在 Visual C\+\+ 中加入新符號時，都必須重新編譯所有藉由 \#include 包含 RESOURCE.H 的 .CPP 檔案。  
+ When Visual C++ saves an .RC file, it also saves symbol changes to the corresponding RESOURCE.H file. Any of your .CPP files that refer to resources in the .RC file must #include the RESOURCE.H file, usually from within your project's master header file. This leads to an undesirable side-effect because of the development environment's internal project management which scans source files for header dependencies. Every time you add a new symbol in Visual C++, all the .CPP file that #include RESOURCE.H would need to be recompiled.  
   
- Visual C\+\+ 會加入下列註解做為 RESOURCE.H 檔案的第一行，以避開對 RESOURCE.H 的相依性：  
+ Visual C++, circumvents the dependency on RESOURCE.H by including the following comment as the first line of the RESOURCE.H file:  
   
 ```  
 //{{NO_DEPENDENCIES}}  
 ```  
   
- 開發環境會以忽略 RESOURCE.H 的變更來解譯此註解，這樣就不需要重新編譯相依 .CPP 檔案。  
+ The development environment interprets this comment by ignoring the changes to RESOURCE.H so that dependent .CPP files will not need to be recompiled.  
   
- Visual C\+\+ 永遠會在儲存檔案時，將 \/\/{{NO\_DEPENDENCIES}} 註解行加入至 .RC 檔。  在某些情況下，避開 RESOURCE.H 的組建相依性可能導致連結時偵測不到執行階段錯誤。  例如，當您使用符號瀏覽器變更指派給資源符號的數值時，如果沒有重新編譯參考資源的 .CPP 檔案，就無法在應用程式執行階段正確找到和載入資源。  在這類情況下，您應該明確地重新編譯已知道會受到 RESOURCE.H 中符號變更影響的任何 .CPP 檔案，或是選取 \[**Rebuild All**\]。  如果您需要經常變更特定資源群組的符號值，或許會發覺將這些符號另外建立成不同的唯讀標頭檔，更方便且更安全，如之前[包含其他標頭檔](#_mfcnotes_tn035_including)一節中所述。  
+ Visual C++ always adds the //{{NO_DEPENDENCIES}} comment line to a .RC file when it saves the file. In some cases, circumventing of the build dependency on RESOURCE.H may lead to run-time errors undetected at link time. For example, if you use the Symbol Browser to change the numeric value assigned to a symbol for a resource, the resource will not be correctly found and loaded at application run-time if the .CPP file referring to the resource is not recompiled. In such cases, you should explicitly recompile any .CPP files that you know are affected by the symbol changes in RESOURCE.H or select **Rebuild All**. If you have the need to frequently change symbol values for a certain group of resources, you will probably find it more convenient and safer to break out these symbols into a separate read-only header file, as described in the above section [Including Additional Header Files](#_mfcnotes_tn035_including).  
   
- **Visual C\+\+ 如何管理 Set Includes 資訊**  
+## <a name="_mfcnotes_tn035_set_includes"></a> How Visual C++ Manages Set Includes Information**  
   
- 如前所述，\[File\] 功能表 \[Set Includes\] 命令可讓您指定三種類型的資訊：  
+ As discussed above, the File menu Set Includes command lets you specify three types of information:  
   
--   符號標頭檔  
+-   Symbol Header File  
   
--   唯讀符號指示詞  
+-   Read-Only Symbol Directives  
   
--   編譯時期指示詞  
+-   Compile-Time Directives  
   
- 以下將說明 Visual C\+\+ 如何在 .RC 檔案中維護這個資訊。  您不需要此項資訊也可以使用 Visual C\+\+，但是這可以增進您的理解，讓自己有更多的把握使用 \[Set Includes\] 功能。  
+ The following describes how Visual C++ maintains this information in a .RC file. You do not need this information to use Visual C++, but it may enhance your understanding so that you can more confidently use the Set Includes feature.  
   
- 上述三種類型的 Set Includes 資訊都個別以兩種形式儲存於 .RC 檔：\(1\) 為 \#include 或其他可由資源編譯器解譯的指示詞，以及 \(2\) 為只能由 Visual C\+\+ 解譯的特殊 TEXTINCLUDE 資源。  
+ Each of the above three types of Set Includes information is stored in the .RC file in two forms: (1) as #include or other directives interpretable by the Resource Compiler, and (2) as special TEXTINCLUDE resources interpretable only by Visual C++.  
   
- TEXTINCLUDE 資源的用途是安全地以立即可供 Visual C\+\+ 顯示在 \[**Set Includes**\] 對話方塊的形式儲存的 Set Includes 資訊。  TEXTINCLUDE 是 Visual C\+\+ 定義的*資源類型*。  Visual C\+\+ 可以辨認資源識別碼為 1、2 和 3 的三個特定 TEXTINCLUDE 資源：  
+ The purpose of the TEXTINCLUDE resource is to safely store Set Include information in a form that is readily presentable in Visual C++'s **Set Includes** dialog box. TEXTINCLUDE is a *resource type* defined by Visual C++. Visual C++ recognizes three specific TEXTINCLUDE resources that have the resource identification numbers 1, 2 and 3:  
   
-|TEXTINCLUDE 資源 ID|Set Includes 資訊的類型|  
-|-----------------------|------------------------|  
-|1|符號標頭檔|  
-|2|唯讀符號指示詞|  
-|3|編譯時期指示詞|  
+|TEXTINCLUDE resource ID|Type of Set Includes information|  
+|-----------------------------|--------------------------------------|  
+|1|Symbol Header File|  
+|2|Read-Only Symbol Directives|  
+|3|Compile-Time Directives|  
   
- AppWizard 建立的預設 MYAPP.RC 和 RESOURCE.H 檔案會示例說明三種 Set Includes 資訊中的每一個類型，如下所述。  BEGIN 和 END 區塊之間的額外 \\0 和 "" 語彙基元是基於 RC 語法的需求，分別用來指定以零結尾的字串和雙引號字元。  
+ Each of the three types of Set Includes information is illustrated by the default MYAPP.RC and RESOURCE.H files created by AppWizard, as described below. The extra \0 and "" tokens between BEGIN and END blocks are required by the RC syntax to specify zero terminated strings and the double quote character respectively.  
   
-## 符號標頭檔  
- 資源編譯器所解譯的符號標頭檔資訊的形式只是簡單的 \#include 陳述式：  
+## <a name="symbol-header-file"></a>Symbol Header File  
+ The form of the Symbol Header File information interpreted by the Resource Compiler is simply a #include statement:  
   
 ```  
 #include "resource.h"  
 ```  
   
- 對應的 TEXTINCLUDE 資源為：  
+ The corresponding TEXTINCLUDE resource is:  
   
 ```  
 1 TEXTINCLUDE DISCARDABLE  
 BEGIN  
-   "resource.h\0"  
+ "resource.h\0"  
 END  
 ```  
   
-## 唯讀符號指示詞  
- 唯讀符號指示詞是以資源編譯器可解譯的下列形式包含在 MYAPP.RC 頂端：  
+## <a name="read-only-symbol-directives"></a>Read-Only Symbol Directives  
+ Read-Only Symbol Directives are included at the top of MYAPP.RC in the following form interpretable by the Resource Compiler:  
   
 ```  
 #include "afxres.h"  
 ```  
   
- 對應的 TEXTINCLUDE 資源為：  
+ The corresponding TEXTINCLUDE resource is:  
   
 ```  
 2 TEXTINCLUDE DISCARDABLE  
@@ -361,8 +374,8 @@ BEGIN
 END  
 ```  
   
-## 編譯時期指示詞  
- 編譯時期指示詞是以資源編譯器可解譯的下列形式包含在 MYAPP.RC 結尾：  
+## <a name="compile-time-directives"></a>Compile-Time Directives  
+ Compile-Time Directives are included at the end of MYAPP.RC in the following form interpretable by the Resource Compiler:  
   
 ```  
 #ifndef APSTUDIO_INVOKED  
@@ -377,9 +390,9 @@ END
 #endif  // not APSTUDIO_INVOKED  
 ```  
   
- \#ifndef APSTUDIO\_INVOKED 指示詞會指示 Visual C\+\+ 略過編譯時期指示詞。  
+ The #ifndef APSTUDIO_INVOKED directive instructs Visual C++ to skip over Compile-Time Directives.  
   
- 對應的 TEXTINCLUDE 資源為：  
+ The corresponding TEXTINCLUDE resource is:  
   
 ```  
 3 TEXTINCLUDE DISCARDABLE  
@@ -392,6 +405,8 @@ BEGIN
 END  
 ```  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

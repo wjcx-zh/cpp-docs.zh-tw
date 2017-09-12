@@ -1,71 +1,90 @@
 ---
-title: "伺服器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "全伺服程式"
-  - "迷你伺服程式"
-  - "OLE 伺服器應用程式"
-  - "OLE 伺服器應用程式, 啟動"
-  - "OLE 伺服器應用程式, 伺服器類型"
-  - "伺服器應用程式"
-  - "伺服器"
+title: Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC]
+- OLE server applications [MFC], activation
+- full-server
+- servers
+- mini-server
+- OLE server applications [MFC], server types
+- server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 伺服器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 47c6019418107070d1982c7cc55a1e303ff30536
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-伺服器應用程式 \(或元件應用程式\) 會將 OLE 項目 \(或元件\) 供容器應用程式使用。  視覺化編輯伺服器應用程式也支援視覺化編輯或就地啟動。  OLE 伺服器另一表單是 [Automation 伺服器](../mfc/automation-servers.md)。  某些伺服器應用程式支援內嵌項目只建立;其他支援內嵌和連結項目的建立。  一些支援只連接，不過，這很罕見。  表示使用者想要編輯項目時，所有伺服器應用程式必須由容器應用程式支援啟動。  應用程式可以是容器和伺服器。  換句話說，它可將資料加入至文件中建立可合併成項目到其他應用程式的文件中的資料。  
+---
+# <a name="servers"></a>Servers
+A server application (or component application) creates OLE items (or components) for use by container applications. A visual editing server application also supports visual editing or in-place activation. Another form of OLE server is an [automation server](../mfc/automation-servers.md). Some server applications support only the creation of embedded items; others support the creation of both embedded and linked items. Some support linking only, although this is rare. All server applications must support activation by container applications when the user wants to edit an item. An application can be both a container and a server. In other words, it can both incorporate data into its documents, and create data that can be incorporated as items into other applications' documents.  
   
- miniserver 可能由容器才啟動伺服器應用程式的特定型別。  Microsoft 繪製和 Microsoft Graph 是 miniservers 的範例。  miniserver 不以將文件儲存為檔案在磁碟上。  相反地，它會讀取資料並將項目寫入到屬於容器的文件。  因此， miniserver 只支援內嵌，而連接。  
+ A miniserver is a special type of server application that can only be launched by a container. Microsoft Draw and Microsoft Graph are examples of miniservers. A miniserver does not store documents as files on disk. Instead, it reads its documents from and writes them to items in documents belonging to containers. As a result, a miniserver supports embedding only, not linking.  
   
- 全伺服器可以當做獨立的應用程式或由容器應用程式啟動。  全伺服器可能以將文件儲存為檔案在磁碟上。  它可能只支援內嵌，內嵌和連結或只連接。  容器應用程式的使用者可以選取伺服器的剪下或複製命令及容器的貼上命令建立內嵌項目。  連結的項目可以選取伺服器上的複製命令及容器的貼上連結命令建立。  或者，使用插入物件對話方塊，使用者可以建立內嵌或連結的項目。  
+ A full server can be run either as a stand-alone application or launched by a container application. A full server can store documents as files on disk. It can support embedding only, both embedding and linking, or linking only. The user of a container application can create an embedded item by choosing the Cut or Copy command in the server and the Paste command in the container. A linked item is created by choosing the Copy command in the server and the Paste Link command in the container. Alternatively, the user can create an embedded or linked item using the Insert Object dialog box.  
   
- 下表摘要說明伺服器的不同類型的特性:  
+ The following table summarizes characteristics of different types of servers:  
   
-### 伺服器特性  
+### <a name="server-characteristics"></a>Server Characteristics  
   
-|伺服器上的型別|支援多個執行個體。|項目的每個文件|文件的每個執行個體|  
-|-------------|---------------|-------------|---------------|  
-|Miniserver|有|1|1|  
-|SDI 全伺服器|有|1 \(如果連接支援， 1 或更\)|1|  
-|MDI 全伺服器|沒有 \(不需要\)|1 \(如果連接支援， 1 或更\)|0 或更多|  
+|Type of server|Supports multiple instances|Items per document|Documents per instance|  
+|--------------------|---------------------------------|------------------------|----------------------------|  
+|Miniserver|Yes|1|1|  
+|SDI full server|Yes|1 (if linking is supported, 1 or more)|1|  
+|MDI full server|No (not required)|1 (if linking is supported, 1 or more)|0 or more|  
   
- 在一個以上的容器可用來編輯內嵌或連結項目的情況下，伺服器應用程式應該同時支援多個容器。  如果伺服器是 SDI 應用程式 \(或與對話方塊介面的 miniserver\)，伺服器的多個執行個體必須能夠同時執行。  這樣可以讓應用程式的個別執行個體處理每個容器要求。  
+ A server application should support multiple containers simultaneously, in the event that more than one container will be used to edit an embedded or linked item. If the server is an SDI application (or a miniserver with a dialog box interface), multiple instances of the server must be able to run simultaneously. This allows a separate instance of the application to handle each container request.  
   
- 如果伺服器是 MDI 應用程式，可以建立新的 MDI 子視窗，每次容器需要編輯項目。  如此一來，應用程式的單一執行個體可以支援多個容器。  
+ If the server is an MDI application, it can create a new MDI child window each time a container needs to edit an item. In this way, a single instance of the application can support multiple containers.  
   
- 您的伺服器應用程式必須呼叫這個 OLE 系統 DLL 要執行的動作，如果伺服器的執行個體已經在執行，而其他容器要求其服務:它應該啟動伺服器上建立新的執行個體或指示所有容器的要求至伺服器上的執行個體。  
+ Your server application must tell the OLE system DLLs what to do if one instance of the server is already running when another container requests its services: whether it should launch a new instance of the server or direct all containers' requests to one instance of the server.  
   
- 如需詳細資訊在伺服器，請參閱:  
+ For more details on servers, see:  
   
--   [伺服程式：實作一個伺服程式](../mfc/servers-implementing-a-server.md)  
+-   [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)  
   
--   [伺服器:實作伺服器資料](../mfc/servers-implementing-server-documents.md)  
+-   [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md)  
   
--   [伺服器:實作就地框架視窗](../mfc/servers-implementing-in-place-frame-windows.md)  
+-   [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md)  
   
--   [伺服器:伺服器項目](../mfc/servers-server-items.md)  
+-   [Servers: Server Items](../mfc/servers-server-items.md)  
   
--   [伺服器:使用者介面問題](../mfc/servers-user-interface-issues.md)  
+-   [Servers: User-Interface Issues](../mfc/servers-user-interface-issues.md)  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [容器](../mfc/containers.md)   
- [容器：進階功能](../mfc/containers-advanced-features.md)   
- [功能表和資源 \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [註冊](../mfc/registration.md)   
- [Automation 伺服程式](../mfc/automation-servers.md)
+ [Containers](../mfc/containers.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Registration](../mfc/registration.md)   
+ [Automation Servers](../mfc/automation-servers.md)
+
+

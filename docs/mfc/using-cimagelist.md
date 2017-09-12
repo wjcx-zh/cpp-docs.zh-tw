@@ -1,49 +1,68 @@
 ---
-title: "使用 CImageList | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CImageList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList 類別, 使用"
-  - "影像清單控制項"
+title: Using CImageList | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CImageList
+dev_langs:
+- C++
+helpviewer_keywords:
+- image list control
+- CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 CImageList
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bf76d92b14c2c4fc4d43115c569d1289a7ddc95c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-一個影像清單，由類別 [CImageList](../mfc/reference/cimagelist-class.md) 顯示，是一個相同大小影像的集合，其中每個物件都可以由其索引參考。  影像清單用來有效管理大量圖示或點陣圖。  因為它們不是視窗，影像清單不是自己的控制項；但是，它們是與幾種不同型別的控制項一起使用，包括清單控制項 \([CListCtrl](../mfc/reference/clistctrl-class.md)\)、樹狀控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 和索引標籤控制項 \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\)。  
+---
+# <a name="using-cimagelist"></a>Using CImageList
+An image list, represented by class [CImageList](../mfc/reference/cimagelist-class.md), is a collection of same-sized images, each of which can be referred to by its index. Image lists are used to efficiently manage large sets of icons or bitmaps. Image lists are not themselves controls since they are not windows; however, they are used with several different types of controls, including list controls ([CListCtrl](../mfc/reference/clistctrl-class.md)), tree controls ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), and tab controls ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  
   
- 在一個影像清單中的所有影像會以螢幕裝置格式包含在單一的寬點陣圖中。  影像清單也可以包括一個包含遮罩 \(用來以透明方式繪製影像 \) 的單色點陣圖 \(圖示樣式\)。  `CImageList` 提供成員函式，可讓您繪製影像、建立和終結影像清單、加入和移除影像、取代影像、合併影像和拖曳影像。  
+ All images in an image list are contained in a single, wide bitmap in screen-device format. An image list may also include a monochrome bitmap that contains masks used to draw images transparently (icon style). `CImageList` provides member functions that enable you to draw images, create and destroy image lists, add and remove images, replace images, merge images, and drag images.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [影像清單的類型](../mfc/types-of-image-lists.md)  
+-   [Types of Image Lists](../mfc/types-of-image-lists.md)  
   
--   [使用影像清單](../mfc/using-an-image-list.md)  
+-   [Using an Image List](../mfc/using-an-image-list.md)  
   
--   [管理影像清單](../mfc/manipulating-image-lists.md)  
+-   [Manipulating Image Lists](../mfc/manipulating-image-lists.md)  
   
--   [從影像清單描繪影像](../mfc/drawing-images-from-an-image-list.md)  
+-   [Drawing Images from an Image List](../mfc/drawing-images-from-an-image-list.md)  
   
--   [影像清單中的影像覆疊](../mfc/image-overlays-in-image-lists.md)  
+-   [Image Overlays in Image Lists](../mfc/image-overlays-in-image-lists.md)  
   
--   [從影像清單拖曳影像](../mfc/dragging-images-from-an-image-list.md)  
+-   [Dragging Images from an Image List](../mfc/dragging-images-from-an-image-list.md)  
   
--   [影像清單中的影像資訊](../mfc/image-information-in-image-lists.md)  
+-   [Image Information in Image Lists](../mfc/image-information-in-image-lists.md)  
   
-## 請參閱  
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

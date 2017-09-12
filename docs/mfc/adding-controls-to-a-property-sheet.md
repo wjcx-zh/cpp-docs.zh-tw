@@ -1,34 +1,51 @@
 ---
-title: "將控制項加入至屬性工作表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制項 [MFC], 加入至屬性工作表"
-  - "屬性工作表, 加入控制項"
+title: Adding Controls to a Property Sheet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], adding to property sheets
+- property sheets, adding controls
 ms.assetid: 24ad4c0b-c1db-4850-b9f0-34aae8d74571
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 將控制項加入至屬性工作表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7174b205c6eeb11d55e3ca2bd5fbc3df6f653414
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-根據預設，屬性工作表配置屬性頁、索引標籤和判斷、移除和應用程式按鈕的視窗區域。\(非強制回應的屬性工作表沒有確定按鈕, 取消按鈕, 套用按鈕\)。您可以將其他控制項加入至屬性工作表。  例如，如果套用至外部物件您可以在屬性頁區域右邊加入預覽視窗會顯示選取控制項中目前設定的外觀。  
+---
+# <a name="adding-controls-to-a-property-sheet"></a>Adding Controls to a Property Sheet
+By default, a property sheet allocates window area for the property pages, the tab index, and the OK, Cancel, and Apply buttons. (A modeless property sheet does not have the OK, Cancel, and Apply buttons.) You can add other controls to the property sheet. For example, you can add a preview window to the right of the property page area to show the user what the current settings would look like if applied to an external object.  
   
- 您可以加入控制項至 `OnCreate` 處理常式的屬性工作表對話方塊。  包容的其他控制項通常需要展開屬性工作表對話方塊的大小。  在呼叫基底類別 \( **CPropertySheet::OnCreate**之後，呼叫 [GetWindowRect](../Topic/CWnd::GetWindowRect.md) 取得寬度和高度配置的屬性工作表視窗，目前展開矩形的維度，然後呼叫 [MoveWindow](../Topic/CWnd::MoveWindow.md) 變更屬性工作表視窗的大小。  
+ You can add controls to the property sheet dialog in the `OnCreate` handler. Accommodating additional controls usually requires expanding the size of the property sheet dialog. After calling the base class **CPropertySheet::OnCreate**, call [GetWindowRect](../mfc/reference/cwnd-class.md#getwindowrect) to get the width and height of the currently allocated property sheet window, expand the rectangle's dimensions, and call [MoveWindow](../mfc/reference/cwnd-class.md#movewindow) to change the size of the property sheet window.  
   
-## 請參閱  
- [屬性工作表](../mfc/property-sheets-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)   
  [CPropertyPage Class](../mfc/reference/cpropertypage-class.md)   
  [CPropertySheet Class](../mfc/reference/cpropertysheet-class.md)
+

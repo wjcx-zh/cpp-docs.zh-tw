@@ -1,5 +1,5 @@
 ---
-title: "MFC 巨集和全域 |Microsoft 文件"
+title: MFC Macros and Globals | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - MFC, macros
 - global functions, MFC
 - macros, MFC
-- global functions
+- global functions [MFC]
 - global variables, MFC
 - Afx naming convention
 - macros
@@ -40,120 +40,120 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 4de4d9a0764bb2f25eaf63c302fa03ebc12e3cee
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 077df418dfaea723965bb2a8876bceaf754a8346
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="mfc-macros-and-globals"></a>MFC 巨集和全域
-Mfc 程式庫可以分成兩個主要區段: （1） 的 MFC 類別和 （2） 巨集和全域變數。 如果函式或變數不是類別的成員，它是全域函式或變數。  
+# <a name="mfc-macros-and-globals"></a>MFC Macros and Globals
+The Microsoft Foundation Class Library can be divided into two major sections: (1) the MFC classes and (2) macros and globals. If a function or variable is not a member of a class, it is a global function or variable.  
   
- MFC 程式庫和 Active Template Library (ATL) 共用字串轉換巨集。 如需詳細資訊，請參閱[字串轉換巨集](../../atl/reference/string-conversion-macros.md)ATL 文件中。  
+ The MFC library and the Active Template Library (ATL) share string conversion macros. For more information, see [String Conversion Macros](../../atl/reference/string-conversion-macros.md) in the ATL documentation.  
   
- MFC 巨集和全域變數會提供下列類別中的功能。  
+ The MFC macros and globals offer functionality in the following categories.  
   
-## <a name="general-mfc"></a>一般 MFC  
+## <a name="general-mfc"></a>General MFC  
   
--   [資料類型](data-types-mfc.md)  
+-   [Data types](data-types-mfc.md)  
   
--   [MFC 類別物件的型別轉型](type-casting-of-mfc-class-objects.md)  
+-   [Type casting of MFC class objects](type-casting-of-mfc-class-objects.md)  
   
--   [執行階段物件模型服務](run-time-object-model-services.md)  
+-   [Run-time object model services](run-time-object-model-services.md)  
   
--   [診斷服務](diagnostic-services.md)  
+-   [Diagnostic services](diagnostic-services.md)  
   
--   [例外狀況處理](exception-processing.md)  
+-   [Exception processing](exception-processing.md)  
   
--   [CString 格式和訊息方塊顯示](cstring-formatting-and-message-box-display.md)  
+-   [CString formatting and message-box display](cstring-formatting-and-message-box-display.md)  
   
--   [訊息對應](message-map-macros-mfc.md)  
+-   [Message maps](message-map-macros-mfc.md)  
 
--   [委派與介面對應](delegate-and-interface-maps.md)
+-   [Delegate and Interface Maps](delegate-and-interface-maps.md)
 
--   [模組和 DLL](extension-dll-macros.md)
+-   [Modules and DLLs](extension-dll-macros.md)
   
--   [應用程式資訊和管理](application-information-and-management.md)  
+-   [Application information and management](application-information-and-management.md)  
   
--   [標準命令和視窗 Id](standard-command-and-window-ids.md)  
+-   [Standard command and window IDs](standard-command-and-window-ids.md)  
   
--   [集合類別 helper](collection-class-helpers.md)  
+-   [Collection class helpers](collection-class-helpers.md)  
   
--   [灰色和遞色點陣圖函式](gray-and-dithered-bitmap-functions.md)  
+-   [Gray and dithered bitmap functions](gray-and-dithered-bitmap-functions.md)  
   
--   [標準對話方塊資料交換 (DDX) 常式](standard-dialog-data-exchange-routines.md)  
+-   [Standard dialog data exchange (DDX) routines](standard-dialog-data-exchange-routines.md)  
   
--   [標準對話方塊資料驗證 (DDV) 常式](standard-dialog-data-validation-routines.md)  
+-   [Standard dialog data validation (DDV) routines](standard-dialog-data-validation-routines.md)  
   
--   [AFX 訊息](afx-messages.md)  
+-   [AFX Messages](afx-messages.md)  
   
--   [ToolBar 控制項樣式](toolbar-control-styles.md)  
+-   [ToolBar Control Styles](toolbar-control-styles.md)  
   
--   [CMFCImagePaintArea::IMAGE_EDIT_MODE 列舉](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
+-   [CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md)  
 
   
-## <a name="database"></a>資料庫  
+## <a name="database"></a>Database  
   
--   [記錄欄位交換 (RFX) 函式](record-field-exchange-functions.md)和[大量資料錄欄位交換 (bulk RFX) 函式](record-field-exchange-functions.md)MFC ODBC 類別  
+-   [Record Field Exchange (RFX) functions](record-field-exchange-functions.md) and [Bulk Record Field Exchange (bulk RFX) functions](record-field-exchange-functions.md) for the MFC ODBC classes  
   
--   [記錄欄位交換 (DFX) 函式](record-field-exchange-functions.md)MFC DAO 類別  
+-   [Record field exchange (DFX) functions](record-field-exchange-functions.md) for the MFC DAO classes  
   
--   [CRecordView 和 CDaoRecordView 的對話方塊資料交換 (DDX) 函式](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md)（MFC ODBC 與 DAO 類別）  
+-   [Dialog data exchange (DDX) functions for CRecordView and CDaoRecordView](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md) (MFC ODBC and DAO classes)  
   
--   [OLE 控制項的對話方塊資料交換 (DDX) 函式](dialog-data-exchange-functions-for-ole-controls.md)  
+-   [Dialog data exchange (DDX) functions for OLE controls](dialog-data-exchange-functions-for-ole-controls.md)  
   
--   [巨集和全域變數，以直接呼叫開放式資料庫連接 (ODBC) 應用程式開發介面函式](database-macros-and-globals.md)  
+-   [Macros and globals to aid in calling Open Database Connectivity (ODBC) API functions directly](database-macros-and-globals.md)  
   
--   [DAO 資料庫引擎初始化及終止](dao-database-engine-initialization-and-termination.md)  
+-   [DAO database engine initialization and termination](dao-database-engine-initialization-and-termination.md)  
   
-## <a name="internet"></a>網際網路  
+## <a name="internet"></a>Internet  
   
--   [網際網路 URL 剖析全域](internet-url-parsing-globals.md)  
+-   [Internet URL parsing globals](internet-url-parsing-globals.md)  
   
-## <a name="dhtml--dhtml-event-maps"></a>DHTML / DHTML 事件對應  
+## <a name="dhtml--dhtml-event-maps"></a>DHTML / DHTML Event Maps  
   
--   [DHTML 對話方塊資料交換 (DDX) helper 巨集](ddx-dhtml-helper-macros.md)  
+-   [DHTML dialog data exchange (DDX) helper macros](ddx-dhtml-helper-macros.md)  
   
--   [DHTML 事件對應](dhtml-event-maps.md)  
+-   [DHTML event maps](dhtml-event-maps.md)  
   
 ## <a name="ole"></a>OLE  
   
--   [OLE 初始化](ole-initialization.md)  
+-   [OLE initialization](ole-initialization.md)  
   
--   [應用程式控制](application-control.md)  
+-   [Application control](application-control.md)  
   
--   [分派對應](dispatch-maps.md)  
+-   [Dispatch maps](dispatch-maps.md)  
   
- 此外，MFC 提供函式，呼叫[AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer)啟用任何 OLE 容器開發 MFC 4.0 的完整支援內嵌 OLE 控制項。  
+ In addition, MFC provides a function called [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) that enables any OLE container developed with MFC 4.0 to fully support embedded OLE controls.  
   
-## <a name="ole-controls"></a>OLE 控制項  
+## <a name="ole-controls"></a>OLE Controls  
   
--   [變異參數類型常數](variant-parameter-type-constants.md)  
+-   [Variant parameter type constants](variant-parameter-type-constants.md)  
   
--   [類型程式庫存取](type-library-access.md)  
+-   [Type library access](type-library-access.md)  
   
--   [屬性頁](property-pages-mfc.md)  
+-   [Property pages](property-pages-mfc.md)  
   
--   [事件對應](event-maps.md)  
+-   [Event maps](event-maps.md)  
   
--   [事件接收對應](event-sink-maps.md)  
+-   [Event sink maps](event-sink-maps.md)  
   
--   [連接對應](connection-maps.md)  
+-   [Connection maps](connection-maps.md)  
   
--   [註冊 OLE 控制項](registering-ole-controls.md)  
+-   [Registering OLE controls](registering-ole-controls.md)  
   
--   [Class factory 和授權](class-factories-and-licensing.md)  
+-   [Class factories and licensing](class-factories-and-licensing.md)  
   
--   [OLE 控制項的持續性](persistence-of-ole-controls.md)  
+-   [Persistence of OLE controls](persistence-of-ole-controls.md)  
   
- 本節的第一個部分簡要討論每個先前的類別，並列出全域變數和巨集的類別，以及功能的簡短描述。 接下來是全域函式、 全域變數和 MFC 程式庫中的巨集的描述。  
+ The first part of this section briefly discusses each of the previous categories and lists the globals and macros in the category, together with brief descriptions of functionality. Following this are descriptions of the global functions, global variables, and macros in the MFC library.  
   
 > [!NOTE]
->  許多全域函式開頭的前置詞 「 Afx 」，但部分，例如對話方塊資料交換 (DDX) 函式和許多資料庫函式不會遵循這個慣例。 做為前置詞，以 「 afx 」 開頭所有全域變數。 巨集不會啟動任何特殊的前置詞，但它們以大寫字母寫入。  
+>  Many global functions start with the prefix "Afx", but some, for example, the dialog data exchange (DDX) functions and many of the database functions, do not follow this convention. All global variables start with "afx" as a prefix. Macros do not start with any particular prefix, but they are written in uppercase letters.  
   
-## <a name="see-also"></a>另請參閱  
- [類別概觀](../../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../../mfc/class-library-overview.md)
 
 
 

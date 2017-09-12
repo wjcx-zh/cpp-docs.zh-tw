@@ -1,5 +1,5 @@
 ---
-title: "CAnimateCtrl 類別 |Microsoft 文件"
+title: CAnimateCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,9 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- animation controls [C++], CAnimateCtrl class
-- Windows common controls [C++], CAnimateCtrl class
-- CAnimateCtrl class
+- CAnimateCtrl [MFC], CAnimateCtrl
+- CAnimateCtrl [MFC], Close
+- CAnimateCtrl [MFC], Create
+- CAnimateCtrl [MFC], CreateEx
+- CAnimateCtrl [MFC], IsPlaying
+- CAnimateCtrl [MFC], Open
+- CAnimateCtrl [MFC], Play
+- CAnimateCtrl [MFC], Seek
+- CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
 caps.latest.revision: 25
 author: mikeblome
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c4b8472a0dd8d2470f8e069e144efd0949201266
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aab4f8a110fe77b606143efea2a37fc55ff48f92
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimatectrl-class"></a>CAnimateCtrl 類別
-提供 Windows 通用動畫控制項的功能。  
+# <a name="canimatectrl-class"></a>CAnimateCtrl Class
+Provides the functionality of the Windows common animation control.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimateCtrl : public CWnd  
@@ -63,51 +69,51 @@ class CAnimateCtrl : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|建構 `CAnimateCtrl` 物件。|  
+|[CAnimateCtrl::CAnimateCtrl](#canimatectrl)|Constructs a `CAnimateCtrl` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimateCtrl::Close](#close)|關閉 AVI 短片。|  
-|[CAnimateCtrl::Create](#create)|建立動畫控制項，並將它附加至`CAnimateCtrl`物件。|  
-|[CAnimateCtrl::CreateEx](#createex)|使用指定的 Windows 延伸樣式建立動畫控制項，並將它附加至`CAnimateCtrl`物件。|  
-|[CAnimateCtrl::IsPlaying](#isplaying)|指出是否要播放的音訊視訊交錯格式 (AVI) 剪輯。|  
-|[CAnimateCtrl::Open](#open)|AVI 短片從開啟的檔案或資源，並且會顯示第一個框架。|  
-|[CAnimateCtrl::Play](#play)|播放 AVI 短片，沒有聲音。|  
-|[CAnimateCtrl::Seek](#seek)|顯示選取的單一畫面格的 AVI 短片。|  
-|[CAnimateCtrl::Stop](#stop)|停止播放 AVI 短片。|  
+|[CAnimateCtrl::Close](#close)|Closes the AVI clip.|  
+|[CAnimateCtrl::Create](#create)|Creates an animation control and attaches it to a `CAnimateCtrl` object.|  
+|[CAnimateCtrl::CreateEx](#createex)|Creates an animation control with the specified Windows extended styles and attaches it to a `CAnimateCtrl` object.|  
+|[CAnimateCtrl::IsPlaying](#isplaying)|Indicates whether an Audio-Video Interleaved (AVI) clip is playing.|  
+|[CAnimateCtrl::Open](#open)|Opens an AVI clip from a file or resource and displays the first frame.|  
+|[CAnimateCtrl::Play](#play)|Plays the AVI clip without sound.|  
+|[CAnimateCtrl::Seek](#seek)|Displays a selected single frame of the AVI clip.|  
+|[CAnimateCtrl::Stop](#stop)|Stops playing the AVI clip.|  
   
-## <a name="remarks"></a>備註  
- 這個控制項 (因此`CAnimateCtrl`類別) 僅適用於 Windows 95、 Windows 98 和 Windows NT 的版本 3.51 下執行的程式和更新版本。  
+## <a name="remarks"></a>Remarks  
+ This control (and therefore the `CAnimateCtrl` class) is available only to programs running under Windows 95, Windows 98, and Windows NT version 3.51 and later.  
   
- 動畫控制項是矩形的視窗顯示 AVI （音訊視訊交錯格式） 格式的剪輯，標準的 Windows 視訊與音訊格式。 AVI 短片是一系列的點陣圖框架，例如電影。  
+ An animation control is a rectangular window that displays a clip in AVI (Audio Video Interleaved) format— the standard Windows video/audio format. An AVI clip is a series of bitmap frames, like a movie.  
   
- 動畫控制項可以播放只有簡單的 AVI 短片。 具體而言，無法播放動畫控制項項目必須符合下列需求︰  
+ Animation controls can play only simple AVI clips. Specifically, the clips to be played by an animation control must meet the following requirements:  
   
--   必須有正好一個視訊串流，且必須具有至少一個框架。  
+-   There must be exactly one video stream and it must have at least one frame.  
   
--   有最多可達兩個資料流檔案中 （通常在其他資料流，如果有的話，是音訊串流，雖然動畫控制項會忽略音訊資訊）。  
+-   There can be at most two streams in the file (typically the other stream, if present, is an audio stream, although the animation control ignores audio information).  
   
--   剪輯必須為未壓縮或壓縮 RLE8 壓縮。  
+-   The clip must either be uncompressed or compressed with RLE8 compression.  
   
--   不允許任何調色盤變更視訊資料流中。  
+-   No palette changes are allowed in the video stream.  
   
- 您可以將 AVI 短片加入您的應用程式做為 AVI 資源，或其可隨附於您的應用程式做為個別的 AVI 檔案。  
+ You can add the AVI clip to your application as an AVI resource, or it can accompany your application as a separate AVI file.  
   
- 因為您的執行緒會繼續執行，同時會顯示在播放 AVI 短片，動畫控制項的常見用法之一是在長時間作業期間表示系統活動。 例如，檔案總管 的 尋找 對話方塊會顯示移動的放大鏡隨著系統搜尋檔案。  
+ Because your thread continues executing while the AVI clip is displayed, one common use for an animation control is to indicate system activity during a lengthy operation. For example, the Find dialog box of File Explorer displays a moving magnifying glass as the system searches for a file.  
   
- 如果您建立`CAnimateCtrl`物件 對話方塊中，方塊中，或從使用對話方塊編輯器對話方塊資源，也會在自動終結當使用者關閉對話方塊。  
+ If you create a `CAnimateCtrl` object within a dialog box or from a dialog resource using the dialog editor, it will be automatically destroyed when the user closes the dialog box.  
   
- 如果您建立`CAnimateCtrl`物件內的視窗中，您可能要終結。 如果您建立`CAnimateCtrl`物件在堆疊上，會自動終結。 如果您建立`CAnimateCtrl`使用堆積上的物件**新**函式，您必須呼叫**刪除**終結該物件上。 如果您衍生新類別從`CAnimateCtrl`，會配置任何記憶體，該類別中的覆寫`CAnimateCtrl`解構函式來處置的配置。  
+ If you create a `CAnimateCtrl` object within a window, you may need to destroy it. If you create the `CAnimateCtrl` object on the stack, it is destroyed automatically. If you create the `CAnimateCtrl` object on the heap by using the **new** function, you must call **delete** on the object to destroy it. If you derive a new class from `CAnimateCtrl` and allocate any memory in that class, override the `CAnimateCtrl` destructor to dispose of the allocations.  
   
- 如需有關使用`CAnimateCtrl`，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CAnimateCtrl](../../mfc/using-canimatectrl.md)。  
+ For more information on using `CAnimateCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CAnimateCtrl](../../mfc/using-canimatectrl.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -116,37 +122,37 @@ class CAnimateCtrl : public CWnd
   
  `CAnimateCtrl`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
- 建構 `CAnimateCtrl` 物件。  
+##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl  
+ Constructs a `CAnimateCtrl` object.  
   
 ```  
 CAnimateCtrl();
 ```  
   
-### <a name="remarks"></a>備註  
- 您必須呼叫[建立](#create)成員函式，才能執行您所建立的物件上的任何其他作業。  
+### <a name="remarks"></a>Remarks  
+ You must call the [Create](#create) member function before you can perform any other operations on the object you create.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCControlLadenDialog # 56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="close"></a>CAnimateCtrl::Close  
- 關閉先前動畫控制項 （如果有的話） 中開啟 AVI 短片，並將它從記憶體移除。  
+##  <a name="close"></a>  CAnimateCtrl::Close  
+ Closes the AVI clip that was previously opened in the animation control (if any) and removes it from memory.  
   
 ```  
 BOOL Close();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="create"></a>CAnimateCtrl::Create  
- 建立動畫控制項，並將它附加至`CAnimateCtrl`物件。  
+##  <a name="create"></a>  CAnimateCtrl::Create  
+ Creates an animation control and attaches it to a `CAnimateCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -156,42 +162,42 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定動畫控制項的樣式。 適用於的 windows 中的 < 備註 > 一節和動畫控制項樣式中所述的樣式所述的任何組合[動畫控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the animation control's style. Apply any combination of the windows styles described in the Remarks section below and the animation control styles described in [Animation Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb761886) in the Windows SDK.  
   
  `rect`  
- 指定動畫控制項的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。  
+ Specifies the animation control's position and size. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- 指定動畫控制項的父視窗，通常`CDialog`。 它不得為**NULL。**  
+ Specifies the animation control's parent window, usually a `CDialog`. It must not be **NULL.**  
   
  `nID`  
- 指定動畫控制項的 id。  
+ Specifies the animation control's ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 您建構`CAnimateCtrl`分成兩個步驟。 首先，呼叫建構函式，然後再呼叫**建立**，建立動畫控制項，並將它附加至`CAnimateCtrl`物件。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CAnimateCtrl` in two steps. First, call the constructor, and then call **Create**, which creates the animation control and attaches it to the `CAnimateCtrl` object.  
   
- 套用下列[視窗樣式](../../mfc/reference/window-styles.md)動畫控制項。  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to an animation control.  
   
-- **WS_CHILD**一律  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE**通常  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED**很少  
+- **WS_DISABLED** Rarely  
   
- 如果您想要使用動畫控制項的延伸的視窗樣式，呼叫[CreateEx](#createex)而不是**建立**。  
+ If you want to use extended windows styles with your animation control, call [CreateEx](#createex) instead of **Create**.  
   
- 除了上述所列的視窗樣式，您可能想要將一或多個動畫控制項樣式套用至動畫控制項。 請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需有關[動畫控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)。  
+ In addition to the window styles listed above, you may want to apply one or more of the animation control styles to an animation control. See the Windows SDK for more information on [animation control styles](http://msdn.microsoft.com/library/windows/desktop/bb761886).  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="createex"></a>CAnimateCtrl::CreateEx  
- 建立控制項 （子視窗），並將它與相關聯`CAnimateCtrl`物件。  
+##  <a name="createex"></a>  CAnimateCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CAnimateCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -202,75 +208,75 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 指定動畫控制項的樣式。 套用視窗的任何組合和動畫控制項樣式中所述[動畫控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the animation control's style. Apply any combination of the window and animation control styles described in [Animation Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb761886) in the Windows SDK.  
   
  `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 為控制項的父視窗的指標。  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 控制項的子視窗識別碼。  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
- 指出是否要播放的音訊視訊交錯格式 (AVI) 剪輯。  
+##  <a name="isplaying"></a>  CAnimateCtrl::IsPlaying  
+ Indicates whether an Audio-Video Interleaved (AVI) clip is playing.  
   
 ```  
 BOOL IsPlaying() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `true`如果正在播放 AVI 短片就;否則， `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if an AVI clip is playing; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) message, which is described in the Windows SDK.  
   
-##  <a name="open"></a>CAnimateCtrl::Open  
- 呼叫此函式可開啟 AVI 短片，並顯示其第一個畫面格。  
+##  <a name="open"></a>  CAnimateCtrl::Open  
+ Call this function to open an AVI clip and display its first frame.  
   
 ```  
 BOOL Open(LPCTSTR lpszFileName);  
 BOOL Open(UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- A`CString`物件或指標以 null 終止的字串，包含 AVI 檔案的名稱或 AVI 資源的名稱。 如果這個參數是**NULL**，系統會關閉先前針對動畫控制項中，開啟 AVI 短片，如果有的話。  
+ A `CString` object or a pointer to a null-terminated string that contains either the name of the AVI file or the name of an AVI resource. If this parameter is **NULL**, the system closes the AVI clip that was previously opened for the animation control, if any.  
   
  `nID`  
- AVI 資源識別項。 如果這個參數是**NULL**，系統會關閉先前針對動畫控制項中，開啟 AVI 短片，如果有的話。  
+ The AVI resource identifier. If this parameter is **NULL**, the system closes the AVI clip that was previously opened for the animation control, if any.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- AVI 資源是從建立動畫控制項的模組載入。  
+### <a name="remarks"></a>Remarks  
+ The AVI resource is loaded from the module that created the animation control.  
   
- **開啟**不支援音效中 AVI 短片; 您可以開啟僅無訊息的 AVI 短片。  
+ **Open** does not support sound in an AVI clip; you can open only silent AVI clips.  
   
- 如果動畫控制項有`ACS_AUTOPLAY`樣式，動畫控制項將會自動啟動它就會開啟之後，立即播放剪輯。 它會繼續在背景播放短片，而您的執行緒會繼續執行。 當完成剪輯播放時，它會自動重複。  
+ If the animation control has the `ACS_AUTOPLAY` style, the animation control will automatically start playing the clip immediately after it opens it. It will continue to play the clip in the background while your thread continues executing. When the clip is done playing, it will automatically be repeated.  
   
- 如果動畫控制項有`ACS_CENTER`樣式 AVI 短片會置於控制項和控制項的大小不會變更。 如果動畫控制項沒有`ACS_CENTER`樣式的 AVI 短片中的影像大小開啟 AVI 短片時，將會調整大小的控制項。 控制項的左上角的位置不會變更，控制項的大小。  
+ If the animation control has the `ACS_CENTER` style, the AVI clip will be centered in the control and the size of the control will not change. If the animation control does not have the `ACS_CENTER` style, the control will be resized when the AVI clip is opened to the size of the images in the AVI clip. The position of the top left corner of the control will not change, only the size of the control.  
   
- 如果動畫控制項有`ACS_TRANSPARENT`樣式，第一個框架將會使用透明背景繪製而不是在指定的背景色彩動畫剪輯。  
+ If the animation control has the `ACS_TRANSPARENT` style, the first frame will be drawn using a transparent background rather than the background color specified in the animation clip.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="play"></a>CAnimateCtrl::Play  
- 呼叫此函式可播放 AVI 短片動畫控制項中。  
+##  <a name="play"></a>  CAnimateCtrl::Play  
+ Call this function to play an AVI clip in an animation control.  
   
 ```  
 BOOL Play(
@@ -279,61 +285,61 @@ BOOL Play(
     UINT nRep);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nFrom`  
- 從播放開始畫面格的以零為起始索引。 值必須小於 65536。 值為 0 表示開頭為 AVI 短片中第一個框架。  
+ Zero-based index of the frame where playing begins. Value must be less than 65,536. A value of 0 means begin with the first frame in the AVI clip.  
   
  `nTo`  
- 畫面格的以零為起始索引位置播放結束。 值必須小於 65536。 值為-1 表示結尾 AVI 短片中的最後一個畫面格。  
+ Zero-based index of the frame where playing ends. Value must be less than 65,536. A value of - 1 means end with the last frame in the AVI clip.  
   
  *nRep*  
- 若要重新執行 AVI 短片次數。 值為-1 表示無限期地重新執行檔案。  
+ Number of times to replay the AVI clip. A value of - 1 means replay the file indefinitely.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 動畫控制項將會在背景播放短片，而您的執行緒會繼續執行。 如果動畫控制項有`ACS_TRANSPARENT`樣式，在播放 AVI 短片就會播放使用透明背景，而不是動畫剪輯中指定的背景色彩。  
+### <a name="remarks"></a>Remarks  
+ The animation control will play the clip in the background while your thread continues executing. If the animation control has `ACS_TRANSPARENT` style, the AVI clip will be played using a transparent background rather than the background color specified in the animation clip.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="seek"></a>CAnimateCtrl::Seek  
- 呼叫此函數會以靜態方式顯示 AVI 短片單一框架。  
+##  <a name="seek"></a>  CAnimateCtrl::Seek  
+ Call this function to statically display a single frame of your AVI clip.  
   
 ```  
 BOOL Seek(UINT nTo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nTo`  
- 要顯示的畫面格的以零為起始的索引。 值必須小於 65536。 值為 0 表示 AVI 短片中顯示第一個框架。 值為-1 表示顯示在播放 AVI 短片中最後一個畫面格。  
+ Zero-based index of the frame to display. Value must be less than 65,536. A value of 0 means display the first frame in the AVI clip. A value of -1 means display the last frame in the AVI clip.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 如果動畫控制項有`ACS_TRANSPARENT`樣式，將會使用透明背景繪製 AVI 短片而不是在中指定的背景色彩動畫剪輯。  
+### <a name="remarks"></a>Remarks  
+ If the animation control has `ACS_TRANSPARENT` style, the AVI clip will be drawn using a transparent background rather than the background color specified in the animation clip.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-##  <a name="stop"></a>CAnimateCtrl::Stop  
- 呼叫此函式可停止播放 AVI 短片動畫控制項中。  
+##  <a name="stop"></a>  CAnimateCtrl::Stop  
+ Call this function to stop playing an AVI clip in an animation control.  
   
 ```  
 BOOL Stop();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CAnimateCtrl::CAnimateCtrl](#canimatectrl)。  
+### <a name="example"></a>Example  
+  See the example for [CAnimateCtrl::CAnimateCtrl](#canimatectrl).  
   
-## <a name="see-also"></a>另請參閱  
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CAnimateCtrl::Create](#create)   
  [ON_CONTROL](message-map-macros-mfc.md#on_control)
 

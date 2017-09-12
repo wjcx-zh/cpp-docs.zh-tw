@@ -1,5 +1,5 @@
 ---
-title: "CStringList 類別 |Microsoft 文件"
+title: CStringList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,10 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- strings [C++], lists
-- lists, string
-- CStringList class
-- strings [C++], collections
+- CObList [MFC], CObList
+- CObList [MFC], AddHead
+- CObList [MFC], AddTail
+- CObList [MFC], Find
+- CObList [MFC], FindIndex
+- CObList [MFC], GetAt
+- CObList [MFC], GetCount
+- CObList [MFC], GetHead
+- CObList [MFC], GetHeadPosition
+- CObList [MFC], GetNext
+- CObList [MFC], GetPrev
+- CObList [MFC], GetSize
+- CObList [MFC], GetTail
+- CObList [MFC], GetTailPosition
+- CObList [MFC], InsertAfter
+- CObList [MFC], InsertBefore
+- CObList [MFC], IsEmpty
+- CObList [MFC], RemoveAll
+- CObList [MFC], RemoveAt
+- CObList [MFC], RemoveHead
+- CObList [MFC], RemoveTail
+- CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
 caps.latest.revision: 25
 author: mikeblome
@@ -59,92 +77,92 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0b67104e330890ffe8f67bac0dd3b129c7742a29
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e92526991a7f7554f868a36d655766cf7f1304f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstringlist-class"></a>CStringList 類別
-支援 `CString` 物件的清單。  
+# <a name="cstringlist-class"></a>CStringList Class
+Supports lists of `CString` objects.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CStringList : public CObject  
 ```  
   
 ## <a name="members"></a>Members  
- 成員函式`CStringList`類別的成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到`CObject`指標做為傳回值，取代`CString`(不`CString`指標)。 無論在何處看到`CObject`指標做為函式參數，以取代`LPCTSTR`。  
+ The member functions of `CStringList` are similar to the member functions of class [CObList](../../mfc/reference/coblist-class.md). Because of this similarity, you can use the `CObList` reference documentation for member function specifics. Wherever you see a `CObject` pointer as a return value, substitute a `CString` (not a `CString` pointer). Wherever you see a `CObject` pointer as a function parameter, substitute an `LPCTSTR`.  
   
  `CObject*& CObList::GetHead() const;`  
   
- 例如，轉換為  
+ for example, translates to  
   
  `CString& CStringList::GetHead() const;`  
   
- 和  
+ and  
   
  `POSITION AddHead( CObject* <newElement> );`  
   
- 轉換為  
+ translates to  
   
  `POSITION AddHead( LPCTSTR <newElement> );`  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|建構空的清單。|  
+|[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Constructs an empty list.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|新增項目 （或另一個清單中的所有項目） 標頭的清單 （產生新的標頭）。|  
-|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|（產生新的結尾） 的清單結尾加入項目 （或另一個清單中的所有項目）。|  
-|[CObList::Find](../../mfc/reference/coblist-class.md#find)|取得指標值所指定的項目位置。|  
-|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|取得指定的項目以零為起始的索引位置。|  
-|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|取得指定位置的項目。|  
-|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|這份清單中傳回的項目數。|  
-|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|傳回的清單 （不能是空的） 的標頭的項目。|  
-|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|傳回的標頭的項目清單的位置。|  
-|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|取得逐一查看下一個項目。|  
-|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|取得逐一查看的上一個項目。|  
-|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|這份清單中傳回的項目數。|  
-|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|傳回的結尾項目清單 （不能是空的）。|  
-|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|傳回清單的結尾項目的位置。|  
-|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|指定的位置之後插入新項目。|  
-|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|將指定的位置之前的新項目。|  
-|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|空白清單條件 （沒有項目） 的測試。|  
-|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|從這個清單中移除所有項目。|  
-|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|從此清單中，指定位置移除元素。|  
-|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|從清單的開頭移除的項目。|  
-|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|從清單的結尾的項目。|  
-|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|設定位於指定位置的項目。|  
+|[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Adds an element (or all the elements in another list) to the head of the list (makes a new head).|  
+|[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Adds an element (or all the elements in another list) to the tail of the list (makes a new tail).|  
+|[CObList::Find](../../mfc/reference/coblist-class.md#find)|Gets the position of an element specified by pointer value.|  
+|[CObList::FindIndex](../../mfc/reference/coblist-class.md#findindex)|Gets the position of an element specified by a zero-based index.|  
+|[CObList::GetAt](../../mfc/reference/coblist-class.md#getat)|Gets the element at a given position.|  
+|[CObList::GetCount](../../mfc/reference/coblist-class.md#getcount)|Returns the number of elements in this list.|  
+|[CObList::GetHead](../../mfc/reference/coblist-class.md#gethead)|Returns the head element of the list (cannot be empty).|  
+|[CObList::GetHeadPosition](../../mfc/reference/coblist-class.md#getheadposition)|Returns the position of the head element of the list.|  
+|[CObList::GetNext](../../mfc/reference/coblist-class.md#getnext)|Gets the next element for iterating.|  
+|[CObList::GetPrev](../../mfc/reference/coblist-class.md#getprev)|Gets the previous element for iterating.|  
+|[CObList::GetSize](../../mfc/reference/coblist-class.md#getsize)|Returns the number of elements in this list.|  
+|[CObList::GetTail](../../mfc/reference/coblist-class.md#gettail)|Returns the tail element of the list (cannot be empty).|  
+|[CObList::GetTailPosition](../../mfc/reference/coblist-class.md#gettailposition)|Returns the position of the tail element of the list.|  
+|[CObList::InsertAfter](../../mfc/reference/coblist-class.md#insertafter)|Inserts a new element after a given position.|  
+|[CObList::InsertBefore](../../mfc/reference/coblist-class.md#insertbefore)|Inserts a new element before a given position.|  
+|[CObList::IsEmpty](../../mfc/reference/coblist-class.md#isempty)|Tests for the empty list condition (no elements).|  
+|[CObList::RemoveAll](../../mfc/reference/coblist-class.md#removeall)|Removes all the elements from this list.|  
+|[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)|Removes an element from this list, specified by position.|  
+|[CObList::RemoveHead](../../mfc/reference/coblist-class.md#removehead)|Removes the element from the head of the list.|  
+|[CObList::RemoveTail](../../mfc/reference/coblist-class.md#removetail)|Removes the element from the tail of the list.|  
+|[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)|Sets the element at a given position.|  
   
-## <a name="remarks"></a>備註  
- 所有的比較，這表示字串中的字元，而不是字串的位址比較的值即可。  
+## <a name="remarks"></a>Remarks  
+ All comparisons are done by value, meaning that the characters in the string are compared instead of the addresses of the strings.  
   
- `CStringList` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果一份`CString`物件會儲存至封存檔，請使用多載的插入運算子或`Serialize`成員函式，每個`CString`項目會依序序列化。  
+ `CStringList` incorporates the `IMPLEMENT_SERIAL` macro to support serialization and dumping of its elements. If a list of `CString` objects is stored to an archive, either with an overloaded insertion operator or with the `Serialize` member function, each `CString` element is serialized in turn.  
   
- 如果您需要個別的傾印`CString`項目，您必須將傾印內容的深度大於或等於 1。  
+ If you need a dump of individual `CString` elements, you must set the depth of the dump context to 1 or greater.  
   
- 如需有關使用`CStringList`，請參閱文章[集合](../../mfc/collections.md)。  
+ For more information on using `CStringList`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CStringList`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxcoll.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例收集](../../visual-cpp-samples.md)   
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

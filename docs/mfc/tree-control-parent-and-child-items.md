@@ -1,40 +1,59 @@
 ---
-title: "樹狀目錄控制項的父和子項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "樹狀目錄控制項中的子項目"
-  - "CTreeCtrl 類別, 父和子項目"
-  - "CTreeCtrl 中的父項目"
-  - "樹狀目錄控制項, 父和子項目"
+title: Tree Control Parent and Child Items | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- parent items in CTreeCtrl [MFC]
+- child items in tree control [MFC]
+- CTreeCtrl class [MFC], parent and child items
+- tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 樹狀目錄控制項的父和子項目
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 823c7ce4bf946d8698b670f3c8b014d7dec1d7e9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在樹狀目錄控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 中的所有項目可以有關連於它的子項目清單，稱為子項目。  有一或多個子項目的項目稱為父項目。  子項目在其父項目下方顯示並縮排表示其附屬至父代。  沒有父代的項目是在階層架構的頂端並稱為根項目。  
+---
+# <a name="tree-control-parent-and-child-items"></a>Tree Control Parent and Child Items
+Any item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) can have a list of subitems, which are called child items, associated with it. An item that has one or more child items is called a parent item. A child item is displayed below its parent item and is indented to indicate it is subordinate to the parent. An item that has no parent is at the top of the hierarchy and is called a root item.  
   
- 在指定的任何時間，父項目的子項目清單的狀態可以是展開或摺疊。  在這個狀態展開時，子項目在父項目下顯示。  當它摺疊時，子項目不會顯示。  當使用者按一下與父項目關連的按鈕時，清單會自動切換展開和摺疊狀態，當使用者按一下父項目或，如果父代有 **TVS\_HASBUTTONS** 樣式。  使用 [展開](../Topic/CTreeCtrl::Expand.md) 成員函式，應用程式可以展開或摺疊子系項目。  
+ At any given time, the state of a parent item's list of child items can be either expanded or collapsed. When the state is expanded, the child items are displayed below the parent item. When it is collapsed, the child items are not displayed. The list automatically toggles between the expanded and collapsed states when the user double-clicks the parent item or, if the parent has the **TVS_HASBUTTONS** style, when the user clicks the button associated with the parent item. An application can expand or collapse the child items by using the [Expand](../mfc/reference/ctreectrl-class.md#expand) member function.  
   
- 藉由呼叫 [InsertItem](../Topic/CTreeCtrl::InsertItem.md) 成員函式，您將項目加入至樹狀目錄控制項。  這個函式會傳回 **HTREEITEM** 型別的控制代碼，這可唯一識別項目。  在加入項目時，必須指定新項目的父項目的控制代碼。  如果您指定 **NULL** 和 **TVI\_ROOT** 值而非 [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) 結構或 `hParent` 參數中的父項目控制代碼，則會將項目加入做為根項目。  
+ You add an item to a tree control by calling the [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) member function. This function returns a handle of the **HTREEITEM** type, which uniquely identifies the item. When adding an item, you must specify the handle of the new item's parent item. If you specify **NULL** or the **TVI_ROOT** value instead of a parent item handle in the [TVINSERTSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb773452) structure or `hParent` parameter, the item is added as a root item.  
   
- 表示子項目的父項目清單將要展開或摺疊時，樹狀目錄控制項傳送 [TVN\_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) 通知訊息。  通知可以防止變更或設定取決於子項目清單狀態父項目的所有屬性。  在變更清單的狀態之後，樹狀目錄控制項傳送 [TVN\_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) 通知訊息。  
+ A tree control sends a [TVN_ITEMEXPANDING](http://msdn.microsoft.com/library/windows/desktop/bb773537) notification message when a parent item's list of child items is about to be expanded or collapsed. The notification gives you the opportunity to prevent the change or to set any attributes of the parent item that depend on the state of the list of child items. After changing the state of the list, the tree control sends a [TVN_ITEMEXPANDED](http://msdn.microsoft.com/library/windows/desktop/bb773533) notification message.  
   
- 當子項目清單展開時，它會相對於父項目縮排。  使用 [GetIndent](../Topic/CTreeCtrl::GetIndent.md) 成員函式或使用 [SetIndent](../Topic/CTreeCtrl::SetIndent.md) 成員函式擷取目前數量，您可以設定縮排數量。  
+ When a list of child items is expanded, it is indented relative to the parent item. You can set the amount of indentation by using the [SetIndent](../mfc/reference/ctreectrl-class.md#setindent) member function or retrieve the current amount by using the [GetIndent](../mfc/reference/ctreectrl-class.md#getindent) member function.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

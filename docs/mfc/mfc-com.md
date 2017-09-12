@@ -1,76 +1,95 @@
 ---
-title: "MFC COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MFC COM (MFC)"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Active 技術 [C++]"
-  - "ActiveX 控制項 [C++], COM 物件模型"
-  - "COM [C++], MFC 支援"
-  - "MFC [C++], COM 支援"
-  - "MFC ActiveX 控制項 [C++], MFC 中的 COM 支援"
-  - "MFC COM [C++]"
+title: MFC COM | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, COM support
+- MFC ActiveX controls [MFC], COM support in MFC
+- MFC COM [MFC]
+- ActiveX controls [MFC], COM object model
+- Active technology [MFC]
+- COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eabce4d97201628c406f10ad474089540de91e5a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 的子集是設計為支援 COM，而大部分的 Active Template Library \(ATL\) 是專為 COM 程式設計而設計的。  主題的一節的 MFC 支援 COM。  
+---
+# <a name="mfc-com"></a>MFC COM
+A subset of MFC is designed to support COM, while most of the Active Template Library (ATL) is designed for COM programming. This section of topics describes MFC's support for COM.  
   
- Active 技術 \(例如 ActiveX 控制項，主動式文件內含項目， OLE 等等\)，在網路環境使用元件物件模型 \(COM\) \(COM\) 使軟體元件彼此互動，不論其建立的語言。  Active 技術可用來在桌面或網際網路執行的應用程式。  如需詳細資訊請參閱 [COM 簡介](../atl/introduction-to-com.md) 或 [元件物件模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)。  
+ Active technologies (such as ActiveX controls, Active document containment, OLE, and so on) use the Component Object Model (COM) to enable software components to interact with one another in a networked environment, regardless of the language with which they were created. Active technologies can be used to create applications that run on the desktop or the Internet. For more information see [Introduction to COM](../atl/introduction-to-com.md) or [The Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363).  
   
- Active 技術包括用戶端和伺服器技術，包括:  
+ Active technologies include both client and server technologies, including the following:  
   
--   [現用文件內含項目](../mfc/active-document-containment.md)，支援在 MFC 4.2 版和以後，可以讓使用者檢視 [現用文件](../mfc/active-documents.md) \(例如 Microsoft Excel 或 Word 檔案\) 和啟動文件的原生應用程式的整個介面在 [主動式文件容器](../mfc/active-document-containers.md) 的整個工作區 \(例如 Microsoft Office Binder 或 Microsoft Internet Explorer。  而 [主動式文件伺服程式](../mfc/active-document-servers.md)，提供文件容器做為用戶端。  如需使用主動式文件的詳細資訊可以在網際網路應用程式，請參閱: [在網際網路上的現用文件](../mfc/active-documents-on-the-internet.md)。  
+-   [Active document containment](../mfc/active-document-containment.md), supported in MFC versions 4.2 and later, allows users to view [active documents](../mfc/active-documents.md) (such as Microsoft Excel or Word files) and activate the entire interface of the document's native application in the entire client area of an [active document container](../mfc/active-document-containers.md) such as the Microsoft Office Binder or Microsoft Internet Explorer. The containers act as clients, while the documents are provided by [active document servers](../mfc/active-document-servers.md). For more information on using active documents in Internet applications, see: [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md).  
   
--   ActiveX 控制項是可以用來容器 \(例如網站的互動式物件。  如需MFC ActiveX 控制項詳細資訊，請參閱:  
+-   ActiveX controls are interactive objects that can be used in containers such as a Web site. For more information on ActiveX controls, see:  
   
-    -   [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)  
+    -   [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)  
   
-    -   [網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)  
+    -   [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)  
   
-    -   [概觀:網際網路](../mfc/mfc-internet-programming-basics.md)  
+    -   [Overview: Internet](../mfc/mfc-internet-programming-basics.md)  
   
-    -   [升級現有的網際網路使用 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)  
+    -   [Upgrade an Existing ActiveX Control to be Used on the Internet](../mfc/upgrading-an-existing-activex-control.md)  
   
-    -   [偵錯 ActiveX 控制項](../Topic/How%20to:%20Debug%20an%20ActiveX%20Control.md)  
+    -   [Debugging an ActiveX Control](/visualstudio/debugger/how-to-debug-an-activex-control)  
   
--   Active Scripting 控制一個或多個 ActiveX 控制項整合式行為從瀏覽器或伺服器的。  如需 Active Scripting 的詳細資訊，請參閱 [在網際網路上 Active 技術](../mfc/active-technology-on-the-internet.md)。  
+-   Active scripting controls the integrated behavior of one or more ActiveX controls from a browser or server. For more information on active scripting, see [Active Technology on the Internet](../mfc/active-technology-on-the-internet.md).  
   
--   [Automation](../mfc/automation.md)\(先前稱為 OLE Automation\) 讓應用程式能操作在另一個應用程式實作的物件，或者公開物件讓它們可以被操作。  
+-   [Automation](../mfc/automation.md) (formerly known as OLE Automation) makes it possible for one application to manipulate objects implemented in another application, or to "expose" objects so they can be manipulated.  
   
-     自動化物件可以是區域或 [遠端](../mfc/remote-automation.md) \(在網路上的其他電腦進行存取\)。  Aurotmation 在 OLE 和 COM 物件皆可取得。  
+     The automated object might be local or [remote](../mfc/remote-automation.md) (on another machine accessible across a network). Automation is available for both OLE and COM objects.  
   
--   使用 MFC，本節也提供如何將 COM 元件，例如在 [連接點](../mfc/connection-points.md)。  
+-   This section also provides information on how to write COM components using MFC, for example, in [Connection Points](../mfc/connection-points.md).  
   
- 如需何種討論仍會呼叫 OLE 對哪些現在稱為 Active 技術，請參閱 [OLE](../mfc/ole-in-mfc.md)主題。  
+ For a discussion of what is still called OLE versus what is now called active technology, see the topics on [OLE](../mfc/ole-in-mfc.md).  
   
- 此外，請參閱知識庫文件 Q248019:HOWTO:防止伺服器忙碌對話方塊隨即出現在冗長的 COM 作業時。  
+ Also, see Knowledge Base article Q248019 : HOWTO: Prevent Server Busy Dialog Box From Appearing During a Lengthy COM Operation.  
   
-## 本章節內容  
- [主動式文件內含項目](../mfc/active-document-containment.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Active Document Containment](../mfc/active-document-containment.md)  
   
  [Automation](../mfc/automation.md)  
   
- [遠端 Automation](../mfc/remote-automation.md)  
+ [Remote Automation](../mfc/remote-automation.md)  
   
- [連接點](../mfc/connection-points.md)  
+ [Connection Points](../mfc/connection-points.md)  
   
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)  
   
-## 請參閱  
- [概念](../mfc/mfc-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)
+
+

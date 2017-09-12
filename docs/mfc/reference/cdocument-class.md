@@ -1,5 +1,5 @@
 ---
-title: "CDocument 類別 |Microsoft 文件"
+title: CDocument Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -71,16 +71,63 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- documents [C++], serialization
-- files [C++], documents
-- command handling, documents and
-- documents [C++], document classes
-- documents [C++], multiple views
-- serialization [C++], documents and
-- CDocument class
-- command routing, documents and
-- views [C++], document
-- documents [C++], command routing
+- CDocument [MFC], CDocument
+- CDocument [MFC], AddView
+- CDocument [MFC], BeginReadChunks
+- CDocument [MFC], CanCloseFrame
+- CDocument [MFC], ClearChunkList
+- CDocument [MFC], ClearPathName
+- CDocument [MFC], DeleteContents
+- CDocument [MFC], FindChunk
+- CDocument [MFC], GetAdapter
+- CDocument [MFC], GetDocTemplate
+- CDocument [MFC], GetFile
+- CDocument [MFC], GetFirstViewPosition
+- CDocument [MFC], GetNextView
+- CDocument [MFC], GetPathName
+- CDocument [MFC], GetThumbnail
+- CDocument [MFC], GetTitle
+- CDocument [MFC], InitializeSearchContent
+- CDocument [MFC], IsModified
+- CDocument [MFC], IsSearchAndOrganizeHandler
+- CDocument [MFC], LoadDocumentFromStream
+- CDocument [MFC], OnBeforeRichPreviewFontChanged
+- CDocument [MFC], OnChangedViewList
+- CDocument [MFC], OnCloseDocument
+- CDocument [MFC], OnCreatePreviewFrame
+- CDocument [MFC], OnDocumentEvent
+- CDocument [MFC], OnDrawThumbnail
+- CDocument [MFC], OnLoadDocumentFromStream
+- CDocument [MFC], OnNewDocument
+- CDocument [MFC], OnOpenDocument
+- CDocument [MFC], OnPreviewHandlerQueryFocus
+- CDocument [MFC], OnPreviewHandlerTranslateAccelerator
+- CDocument [MFC], OnRichPreviewBackColorChanged
+- CDocument [MFC], OnRichPreviewFontChanged
+- CDocument [MFC], OnRichPreviewSiteChanged
+- CDocument [MFC], OnRichPreviewTextColorChanged
+- CDocument [MFC], OnSaveDocument
+- CDocument [MFC], OnUnloadHandler
+- CDocument [MFC], PreCloseFrame
+- CDocument [MFC], ReadNextChunkValue
+- CDocument [MFC], ReleaseFile
+- CDocument [MFC], RemoveChunk
+- CDocument [MFC], RemoveView
+- CDocument [MFC], ReportSaveLoadException
+- CDocument [MFC], SaveModified
+- CDocument [MFC], SetChunkValue
+- CDocument [MFC], SetModifiedFlag
+- CDocument [MFC], SetPathName
+- CDocument [MFC], SetTitle
+- CDocument [MFC], UpdateAllViews
+- CDocument [MFC], OnFileSendMail
+- CDocument [MFC], OnUpdateFileSendMail
+- CDocument [MFC], m_bGetThumbnailMode
+- CDocument [MFC], m_bPreviewHandlerMode
+- CDocument [MFC], m_bSearchMode
+- CDocument [MFC], m_clrRichPreviewBackColor
+- CDocument [MFC], m_clrRichPreviewTextColor
+- CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 caps.latest.revision: 21
 author: mikeblome
@@ -100,17 +147,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4d64b95f77139d984b855e710f3951434e489dd5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 204f414a660ab26b39463547a574eb35c1d27863
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdocument-class"></a>CDocument 類別
-提供使用者定義的文件類別的基本功能。  
+# <a name="cdocument-class"></a>CDocument Class
+Provides the basic functionality for user-defined document classes.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocument : public CCmdTarget  
@@ -118,209 +165,209 @@ class CDocument : public CCmdTarget
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocument::CDocument](#cdocument)|建構 `CDocument` 物件。|  
+|[CDocument::CDocument](#cdocument)|Constructs a `CDocument` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocument::AddView](#addview)|將檢視附加至文件。|  
-|[CDocument::BeginReadChunks](#beginreadchunks)|初始化區塊讀取。|  
-|[CDocument::CanCloseFrame](#cancloseframe)|進階可覆寫。關閉框架視窗檢視這份文件之前呼叫。|  
-|[CDocument::ClearChunkList](#clearchunklist)|清除區塊清單。|  
-|[CDocument::ClearPathName](#clearpathname)|清除文件物件的路徑。|  
-|[CDocument::DeleteContents](#deletecontents)|呼叫以執行清除作業的文件。|  
-|[CDocument::FindChunk](#findchunk)|會尋找具有指定之 GUID。|  
-|[CDocument::GetAdapter](#getadapter)|將指標傳回至物件實作`IDocument`介面。|  
-|[CDocument::GetDocTemplate](#getdoctemplate)|傳回描述文件類型的文件範本的指標。|  
-|[CDocument::GetFile](#getfile)|將指標傳回至想要的`CFile`物件。|  
-|[CDocument::GetFirstViewPosition](#getfirstviewposition)|傳回第一個清單中的檢視。用來開始反覆項目。|  
-|[CDocument::GetNextView](#getnextview)|逐一查看的文件相關聯的檢視清單。|  
-|[CDocument::GetPathName](#getpathname)|傳回文件的資料檔案的路徑。|  
-|[CDocument::GetThumbnail](#getthumbnail)|呼叫來建立縮圖的提供者用來顯示縮圖中的點陣圖。|  
-|[CDocument::GetTitle](#gettitle)|傳回文件的標題。|  
-|[CDocument::InitializeSearchContent](#initializesearchcontent)|呼叫以初始化搜尋內容搜尋處理常式。|  
-|[CDocument::IsModified](#ismodified)|表示自上次儲存後是否已修改文件。|  
-|[CDocument::IsSearchAndOrganizeHandler](#issearchandorganizehandler)|指示是否的這個執行個體`CDocument`搜尋 i 組織處理常式建立物件。|  
-|[CDocument::LoadDocumentFromStream](#loaddocumentfromstream)|呼叫以從資料流載入文件資料。|  
-|[CDocument::OnBeforeRichPreviewFontChanged](#onbeforerichpreviewfontchanged)|豐富的預覽字型變更之前呼叫。|  
-|[CDocument::OnChangedViewList](#onchangedviewlist)|檢視加入或移除文件之後呼叫。|  
-|[CDocument::OnCloseDocument](#onclosedocument)|呼叫以關閉文件。|  
-|[CDocument::OnCreatePreviewFrame](#oncreatepreviewframe)|需要建立豐富的預覽預覽框架時，由架構呼叫。|  
-|[CDocument::OnDocumentEvent](#ondocumentevent)|以文件事件回應的架構所呼叫。|  
-|[CDocument::OnDrawThumbnail](#ondrawthumbnail)|衍生的類別，用來繪製內容的縮圖中，這個方法會覆寫。|  
-|[CDocument::OnLoadDocumentFromStream](#onloaddocumentfromstream)|需要從資料流載入文件資料時，由架構呼叫。|  
-|[CDocument::OnNewDocument](#onnewdocument)|呼叫以建立新的文件。|  
-|[CDocument::OnOpenDocument](#onopendocument)|呼叫以開啟現有文件。|  
-|[CDocument::OnPreviewHandlerQueryFocus](#onpreviewhandlerqueryfocus)|指示預覽處理常式從呼叫 GetFocus 函式傳回的 HWND。|  
-|[CDocument::OnPreviewHandlerTranslateAccelerator](#onpreviewhandlertranslateaccelerator)|指示預覽處理常式來處理按鍵，從預覽處理常式正在執行的程序的訊息幫浦中向上傳遞。|  
-|[CDocument::OnRichPreviewBackColorChanged](#onrichpreviewbackcolorchanged)|豐富的預覽背景色彩變更時呼叫。|  
-|[CDocument::OnRichPreviewFontChanged](#onrichpreviewfontchanged)|豐富的預覽字型變更時呼叫。|  
-|[CDocument::OnRichPreviewSiteChanged](#onrichpreviewsitechanged)|豐富的預覽網站已經變更時呼叫。|  
-|[CDocument::OnRichPreviewTextColorChanged](#onrichpreviewtextcolorchanged)|豐富的預覽文字色彩變更時呼叫。|  
-|[CDocument::OnSaveDocument](#onsavedocument)|呼叫以將文件儲存至磁碟。|  
-|[CDocument::OnUnloadHandler](#onunloadhandler)|正在卸載預覽處理常式時，由架構呼叫。|  
-|[CDocument::PreCloseFrame](#precloseframe)|框架視窗關閉之前呼叫。|  
-|[CDocument::ReadNextChunkValue](#readnextchunkvalue)|讀取下一個區塊的值。|  
-|[CDocument::ReleaseFile](#releasefile)|釋出要使其可供使用的其他應用程式的檔案。|  
-|[CDocument::RemoveChunk](#removechunk)|移除具有指定之 GUID。|  
-|[CDocument::RemoveView](#removeview)|中斷連結文件的檢視。|  
-|[CDocument::ReportSaveLoadException](#reportsaveloadexception)|進階可覆寫。呼叫時已開啟或儲存作業無法完成，因為發生例外狀況。|  
-|[CDocument::SaveModified](#savemodified)|進階可覆寫。呼叫以詢問使用者是否應該儲存文件。|  
-|[CDocument::SetChunkValue](#setchunkvalue)|設定區塊值。|  
-|[CDocument::SetModifiedFlag](#setmodifiedflag)|設定旗標，表示自上次儲存後，您已修改文件。|  
-|[CDocument::SetPathName](#setpathname)|設定文件所使用的資料檔案的路徑。|  
-|[CDocument::SetTitle](#settitle)|設定文件的標題。|  
-|[CDocument::UpdateAllViews](#updateallviews)|通知所有文件的檢視已經過修改。|  
+|[CDocument::AddView](#addview)|Attaches a view to the document.|  
+|[CDocument::BeginReadChunks](#beginreadchunks)|Initializes chunk reading.|  
+|[CDocument::CanCloseFrame](#cancloseframe)|Advanced overridable; called before closing a frame window viewing this document.|  
+|[CDocument::ClearChunkList](#clearchunklist)|Clears the chunk list.|  
+|[CDocument::ClearPathName](#clearpathname)|Clears the path of the document object.|  
+|[CDocument::DeleteContents](#deletecontents)|Called to perform cleanup of the document.|  
+|[CDocument::FindChunk](#findchunk)|Looks for a chunk with specified GUID.|  
+|[CDocument::GetAdapter](#getadapter)|Returns a pointer to object implementing `IDocument` interface.|  
+|[CDocument::GetDocTemplate](#getdoctemplate)|Returns a pointer to the document template that describes the type of the document.|  
+|[CDocument::GetFile](#getfile)|Returns a pointer to the desired `CFile` object.|  
+|[CDocument::GetFirstViewPosition](#getfirstviewposition)|Returns the position of the first in the list of views; used to begin iteration.|  
+|[CDocument::GetNextView](#getnextview)|Iterates through the list of views associated with the document.|  
+|[CDocument::GetPathName](#getpathname)|Returns the path of the document's data file.|  
+|[CDocument::GetThumbnail](#getthumbnail)|Called to create a bitmap to be used by thumbnail provider to display thumbnail.|  
+|[CDocument::GetTitle](#gettitle)|Returns the document's title.|  
+|[CDocument::InitializeSearchContent](#initializesearchcontent)|Called to initialize search content for Search Handler.|  
+|[CDocument::IsModified](#ismodified)|Indicates whether the document has been modified since it was last saved.|  
+|[CDocument::IsSearchAndOrganizeHandler](#issearchandorganizehandler)|Tells whether this instance of `CDocument` object was created for Search & Organize handler.|  
+|[CDocument::LoadDocumentFromStream](#loaddocumentfromstream)|Called to load document data from stream.|  
+|[CDocument::OnBeforeRichPreviewFontChanged](#onbeforerichpreviewfontchanged)|Called before Rich Preview font is changed.|  
+|[CDocument::OnChangedViewList](#onchangedviewlist)|Called after a view is added to or removed from the document.|  
+|[CDocument::OnCloseDocument](#onclosedocument)|Called to close the document.|  
+|[CDocument::OnCreatePreviewFrame](#oncreatepreviewframe)|Called by the framework when it needs to create a preview frame for Rich Preview.|  
+|[CDocument::OnDocumentEvent](#ondocumentevent)|Called by the framework in response to a document event.|  
+|[CDocument::OnDrawThumbnail](#ondrawthumbnail)|Override this method in a derived class to draw content of thumbnail.|  
+|[CDocument::OnLoadDocumentFromStream](#onloaddocumentfromstream)|Called by the framework when it needs to load the document data from stream.|  
+|[CDocument::OnNewDocument](#onnewdocument)|Called to create a new document.|  
+|[CDocument::OnOpenDocument](#onopendocument)|Called to open an existing document.|  
+|[CDocument::OnPreviewHandlerQueryFocus](#onpreviewhandlerqueryfocus)|Directs the preview handler to return the HWND from calling the GetFocus Function.|  
+|[CDocument::OnPreviewHandlerTranslateAccelerator](#onpreviewhandlertranslateaccelerator)|Directs the preview handler to handle a keystroke passed up from the message pump of the process in which the preview handler is running.|  
+|[CDocument::OnRichPreviewBackColorChanged](#onrichpreviewbackcolorchanged)|Called when Rich Preview background color has changed.|  
+|[CDocument::OnRichPreviewFontChanged](#onrichpreviewfontchanged)|Called when Rich Preview font has changed.|  
+|[CDocument::OnRichPreviewSiteChanged](#onrichpreviewsitechanged)|Called when Rich Preview site has changed.|  
+|[CDocument::OnRichPreviewTextColorChanged](#onrichpreviewtextcolorchanged)|Called when Rich Preview text color has changed.|  
+|[CDocument::OnSaveDocument](#onsavedocument)|Called to save the document to disk.|  
+|[CDocument::OnUnloadHandler](#onunloadhandler)|Called by the framework when the preview handler is being unloaded.|  
+|[CDocument::PreCloseFrame](#precloseframe)|Called before the frame window is closed.|  
+|[CDocument::ReadNextChunkValue](#readnextchunkvalue)|Reads next chunk value.|  
+|[CDocument::ReleaseFile](#releasefile)|Releases a file to make it available for use by other applications.|  
+|[CDocument::RemoveChunk](#removechunk)|Removes a chunk with specified GUID.|  
+|[CDocument::RemoveView](#removeview)|Detaches a view from the document.|  
+|[CDocument::ReportSaveLoadException](#reportsaveloadexception)|Advanced overridable; called when an open or save operation cannot be completed because of an exception.|  
+|[CDocument::SaveModified](#savemodified)|Advanced overridable; called to ask the user whether the document should be saved.|  
+|[CDocument::SetChunkValue](#setchunkvalue)|Sets a chunk value.|  
+|[CDocument::SetModifiedFlag](#setmodifiedflag)|Sets a flag indicating that you have modified the document since it was last saved.|  
+|[CDocument::SetPathName](#setpathname)|Sets the path of the data file used by the document.|  
+|[CDocument::SetTitle](#settitle)|Sets the document's title.|  
+|[CDocument::UpdateAllViews](#updateallviews)|Notifies all views that document has been modified.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocument::OnFileSendMail](#onfilesendmail)|附加的文件傳送郵件訊息。|  
-|[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|是否有郵件支援，可讓傳送郵件命令。|  
+|[CDocument::OnFileSendMail](#onfilesendmail)|Sends a mail message with the document attached.|  
+|[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Enables the Send Mail command if mail support is present.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|指定`CDocument`dllhost 的縮圖建立物件。 應該簽入`CView::OnDraw`。|  
-|[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|指定`CDocument`物件所建立的 prevhost `Rich Preview`。 應該簽入`CView::OnDraw`。|  
-|[CDocument::m_bSearchMode](#m_bsearchmode)|指定`CDocument`索引子或其他的搜尋應用程式所建立物件。|  
-|[CDocument::m_clrRichPreviewBackColor](#m_clrrichpreviewbackcolor)|指定豐富的預覽視窗的背景色彩。 這個色彩是由主應用程式設定。|  
-|[CDocument::m_clrRichPreviewTextColor](#m_clrrichpreviewtextcolor)|指定前景色彩豐富的預覽視窗。 這個色彩是由主應用程式設定。|  
-|[CDocument::m_lfRichPreviewFont](#m_lfrichpreviewfont)|指定豐富的預覽視窗的文字字型。 這個字型的資訊是由主應用程式設定。|  
+|[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|Specifies that `CDocument` object was created by dllhost for thumbnails. Should be checked in `CView::OnDraw`.|  
+|[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Specifies that `CDocument` object was created by prevhost for `Rich Preview`. Should be checked in `CView::OnDraw`.|  
+|[CDocument::m_bSearchMode](#m_bsearchmode)|Specifies that `CDocument` object was created by indexer or other search application.|  
+|[CDocument::m_clrRichPreviewBackColor](#m_clrrichpreviewbackcolor)|Specifies background color of Rich Preview window. This color is set by host.|  
+|[CDocument::m_clrRichPreviewTextColor](#m_clrrichpreviewtextcolor)|Specifies foreground color of Rich Preview window. This color is set by host.|  
+|[CDocument::m_lfRichPreviewFont](#m_lfrichpreviewfont)|Specifies text font for Rich Preview window. This font information is set by host.|  
   
-## <a name="remarks"></a>備註  
- 文件表示使用者通常會開啟並開啟檔案 命令，並儲存檔案的命令會將資料的單元。  
+## <a name="remarks"></a>Remarks  
+ A document represents the unit of data that the user typically opens with the File Open command and saves with the File Save command.  
   
- **CDocument**支援標準作業，例如建立文件、 載入它，以及儲存它。 架構會管理使用介面所定義的文件**CDocument**。  
+ **CDocument** supports standard operations such as creating a document, loading it, and saving it. The framework manipulates documents using the interface defined by **CDocument**.  
   
- 應用程式可以支援多個類型的文件。例如，應用程式可能支援試算表和文字文件。 每一種文件具有相關聯的文件範本。文件範本指定哪些資源 （例如，功能表、 圖示或加速器資料表） 會使用該類型的文件。 每份文件包含與其相關聯的指標`CDocTemplate`物件。  
+ An application can support more than one type of document; for example, an application might support both spreadsheets and text documents. Each type of document has an associated document template; the document template specifies what resources (for example, menu, icon, or accelerator table) are used for that type of document. Each document contains a pointer to its associated `CDocTemplate` object.  
   
- 透過文件與使用者互動[CView](../../mfc/reference/cview-class.md)與其相關聯的物件。 檢視呈現文件框架視窗中的影像，而且會將使用者輸入解譯為文件上的作業。 文件可以有多個與其相關聯的檢視。 當使用者開啟文件視窗時，架構會建立檢視，並將其附加至文件。 文件範本指定的檢視和框架視窗類型用來顯示每一種文件。  
+ Users interact with a document through the [CView](../../mfc/reference/cview-class.md) object(s) associated with it. A view renders an image of the document in a frame window and interprets user input as operations on the document. A document can have multiple views associated with it. When the user opens a window on a document, the framework creates a view and attaches it to the document. The document template specifies what type of view and frame window are used to display each type of document.  
   
- 文件屬於架構的標準命令路由，並因此接收標準使用者介面元件 （例如儲存檔案 功能表項目） 中的命令。 文件接收轉送的使用中檢視的命令。 如果文件不會處理指定的命令，它會轉送命令來管理它的文件範本。  
+ Documents are part of the framework's standard command routing and consequently receive commands from standard user-interface components (such as the File Save menu item). A document receives commands forwarded by the active view. If the document doesn't handle a given command, it forwards the command to the document template that manages it.  
   
- 文件的資料修改時，每個檢視必須反映這些修改。 **CDocument**提供[UpdateAllViews](#updateallviews) ，以通知這類變更的檢視，讓檢視可以重新繪製所需的成員函式。 架構也會提示使用者關閉之前儲存修改過的檔案。  
+ When a document's data is modified, each of its views must reflect those modifications. **CDocument** provides the [UpdateAllViews](#updateallviews) member function for you to notify the views of such changes, so the views can repaint themselves as necessary. The framework also prompts the user to save a modified file before closing it.  
   
- 若要實作典型的應用程式中的文件，您必須執行下列作業︰  
+ To implement documents in a typical application, you must do the following:  
   
--   自**CDocument**每種類型的文件。  
+-   Derive a class from **CDocument** for each type of document.  
   
--   加入成員變數來儲存每個文件資料。  
+-   Add member variables to store each document's data.  
   
--   實作成員函式來讀取和修改文件的資料。 文件的檢視是這些成員函式的最重要的使用者。  
+-   Implement member functions for reading and modifying the document's data. The document's views are the most important users of these member functions.  
   
--   覆寫[CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)成員函式，在您的文件類別，以讀取和寫入文件的資料磁碟。  
+-   Override the [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) member function in your document class to write and read the document's data to and from disk.  
   
- **CDocument**支援傳送郵件透過文件是否有郵件支援 (MAPI)。 請參閱文章[MAPI](../../mfc/mapi.md)和[MFC 的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)。  
+ **CDocument** supports sending your document via mail if mail support (MAPI) is present. See the articles [MAPI](../../mfc/mapi.md) and [MAPI Support in MFC](../../mfc/mapi-support-in-mfc.md).  
   
- 如需有關**CDocument**，請參閱[序列化](../../mfc/serialization-in-mfc.md)，[文件/檢視架構主題](../../mfc/document-view-architecture.md)，和[文件/檢視建立](../../mfc/document-view-creation.md)。  
+ For more information on **CDocument**, see [Serialization](../../mfc/serialization-in-mfc.md), [Document/View Architecture Topics](../../mfc/document-view-architecture.md), and [Document/View Creation](../../mfc/document-view-creation.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocument`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="addview"></a>CDocument::AddView  
- 呼叫此函式可附加至文件的檢視。  
+##  <a name="addview"></a>  CDocument::AddView  
+ Call this function to attach a view to the document.  
   
 ```  
 void AddView(CView* pView);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pView`  
- 指向 [新增] 檢視。  
+ Points to the view being added.  
   
-### <a name="remarks"></a>備註  
- 此函式會將指定的檢視加入至文件; 相關聯的檢視清單函式也會設定此文件檢視的文件指標。 將新建立的檢視物件附加至文件時，架構會呼叫此函式這個問題發生在回應新檔案、 開啟檔案或新的視窗的命令或分隔視窗被分割。  
+### <a name="remarks"></a>Remarks  
+ This function adds the specified view to the list of views associated with the document; the function also sets the view's document pointer to this document. The framework calls this function when attaching a newly created view object to a document; this occurs in response to a File New, File Open, or New Window command or when a splitter window is split.  
   
- 只有當您以手動方式建立並附加檢視，請呼叫此函式。 通常您會讓連接文件和檢視表定義架構[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)文件類別、 檢視類別和框架視窗類別建立關聯的物件。  
+ Call this function only if you are manually creating and attaching a view. Typically you will let the framework connect documents and views by defining a [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) object to associate a document class, view class, and frame window class.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocViewSDI #&12;](../../mfc/codesnippet/cpp/cdocument-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocViewSDI#12](../../mfc/codesnippet/cpp/cdocument-class_1.cpp)]  
   
-##  <a name="beginreadchunks"></a>CDocument::BeginReadChunks  
- 初始化區塊讀取。  
+##  <a name="beginreadchunks"></a>  CDocument::BeginReadChunks  
+ Initializes chunk reading.  
   
 ```  
 virtual void BeginReadChunks ();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cancloseframe"></a>CDocument::CanCloseFrame  
- 顯示文件框架視窗關閉之前，由架構呼叫。  
+##  <a name="cancloseframe"></a>  CDocument::CanCloseFrame  
+ Called by the framework before a frame window displaying the document is closed.  
   
 ```  
 virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pFrame`  
- 框架視窗的檢視附加至文件的指標。  
+ Points to the frame window of a view attached to the document.  
   
-### <a name="return-value"></a>傳回值  
- 安全地關閉框架視窗; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if it is safe to close the frame window; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 預設實作會檢查是否有其他框架視窗，顯示文件。 如果指定的框架視窗會顯示文件的最後一個，函數就會提示使用者儲存文件，如果已修改。 如果您想要執行特殊處理的框架視窗關閉時，覆寫這個函式。 這是進階可覆寫。  
+### <a name="remarks"></a>Remarks  
+ The default implementation checks if there are other frame windows displaying the document. If the specified frame window is the last one that displays the document, the function prompts the user to save the document if it has been modified. Override this function if you want to perform special processing when a frame window is closed. This is an advanced overridable.  
   
-##  <a name="cdocument"></a>CDocument::CDocument  
- 建構**CDocument**物件。  
+##  <a name="cdocument"></a>  CDocument::CDocument  
+ Constructs a **CDocument** object.  
   
 ```  
 CDocument();
 ```  
   
-### <a name="remarks"></a>備註  
- 為您的文件建立可由架構處理。 覆寫[OnNewDocument](#onnewdocument)成員函式來初始化每個文件各執行; 這是在單一文件介面 (SDI) 應用程式中非常重要。  
+### <a name="remarks"></a>Remarks  
+ The framework handles document creation for you. Override the [OnNewDocument](#onnewdocument) member function to perform initialization on a per-document basis; this is particularly important in single document interface (SDI) applications.  
   
-##  <a name="clearchunklist"></a>CDocument::ClearChunkList  
- 清除區塊清單。  
+##  <a name="clearchunklist"></a>  CDocument::ClearChunkList  
+ Clears the chunk list.  
   
 ```  
 virtual void ClearChunkList ();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="clearpathname"></a>CDocument::ClearPathName  
- 清除文件物件的路徑。  
+##  <a name="clearpathname"></a>  CDocument::ClearPathName  
+ Clears the path of the document object.  
   
 ```  
 virtual void ClearPathName();
 ```  
   
-### <a name="remarks"></a>備註  
- 清除從路徑`CDocument`物件讓應用程式接著儲存文件時，提示使用者。 這可讓**儲存**命令行為就像**另存新檔**命令。  
+### <a name="remarks"></a>Remarks  
+ Clearing the path from a `CDocument` object causes the application to prompt the user when the document is next saved. This makes a **Save** command behave like a **Save As** command.  
   
-##  <a name="deletecontents"></a>CDocument::DeleteContents  
- 若要刪除文件的資料，而不會終結架構呼叫**CDocument**物件本身。  
+##  <a name="deletecontents"></a>  CDocument::DeleteContents  
+ Called by the framework to delete the document's data without destroying the **CDocument** object itself.  
   
 ```  
 virtual void DeleteContents();
 ```  
   
-### <a name="remarks"></a>備註  
- 它是在文件，則會終結之前呼叫。 它也稱為以確保文件是空的才能重複使用它。 這是非常重要的 SDI 應用程式，使用只有一個文件。每當使用者建立或開啟另一個文件時，會重複使用文件。 呼叫此函式以實作 [編輯全部清除] 或類似的命令會刪除所有文件的資料。 此函式的預設實作不做任何動作。 覆寫這個函式來刪除您的文件中的資料。  
+### <a name="remarks"></a>Remarks  
+ It is called just before the document is to be destroyed. It is also called to ensure that a document is empty before it is reused. This is particularly important for an SDI application, which uses only one document; the document is reused whenever the user creates or opens another document. Call this function to implement an "Edit Clear All" or similar command that deletes all of the document's data. The default implementation of this function does nothing. Override this function to delete the data in your document.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&57;](../../mfc/codesnippet/cpp/cdocument-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#57](../../mfc/codesnippet/cpp/cdocument-class_2.cpp)]  
   
-##  <a name="findchunk"></a>CDocument::FindChunk  
- 會尋找具有指定之 GUID。  
+##  <a name="findchunk"></a>  CDocument::FindChunk  
+ Looks for a chunk with a specified GUID.  
   
 ```  
 virtual POSITION FindChunk(
@@ -328,45 +375,45 @@ virtual POSITION FindChunk(
     DWORD pid);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `guid`  
- 指定要尋找區塊的 GUID。  
+ Specifies the GUID of a chunk to find.  
   
  `pid`  
- 指定區塊來尋找的 PID。  
+ Specifies a PID of a chunk to find.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功內部的區塊清單中的位置。 否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ Position in the internal chunk list if successful. Otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getadapter"></a>CDocument::GetAdapter  
- 將指標傳回至物件實作`IDocument`介面。  
+##  <a name="getadapter"></a>  CDocument::GetAdapter  
+ Returns a pointer to an object implementing the `IDocument` interface.  
   
 ```  
 virtual ATL::IDocument* GetAdapter();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向物件實作`IDocument`介面。  
+### <a name="return-value"></a>Return Value  
+ A pointer to an object implementing the `IDocument` interface.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getdoctemplate"></a>CDocument::GetDocTemplate  
- 呼叫此函式可取得此文件類型的文件範本的指標。  
+##  <a name="getdoctemplate"></a>  CDocument::GetDocTemplate  
+ Call this function to get a pointer to the document template for this document type.  
   
 ```  
 CDocTemplate* GetDocTemplate() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 此文件類型的文件範本的指標或**NULL**如果文件未受管理的文件範本。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document template for this document type, or **NULL** if the document is not managed by a document template.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&58;](../../mfc/codesnippet/cpp/cdocument-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#58](../../mfc/codesnippet/cpp/cdocument-class_3.cpp)]  
   
-##  <a name="getfile"></a>CDocument::GetFile  
- 若要取得的指標，此成員函式的呼叫`CFile`物件。  
+##  <a name="getfile"></a>  CDocument::GetFile  
+ Call this member function to get a pointer to a `CFile` object.  
   
 ```  
 virtual CFile* GetFile(
@@ -375,64 +422,64 @@ virtual CFile* GetFile(
     CFileException* pError);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- 所需的檔案的路徑字串。 路徑可能是相對或絕對。  
+ A string that is the path to the desired file. The path may be relative or absolute.  
   
  `pError`  
- 現有的檔案例外狀況物件，表示作業的完成狀態指標。  
+ A pointer to an existing file-exception object that indicates the completion status of the operation.  
   
  `nOpenFlags`  
- 共用和存取模式。 指定當開啟檔案時要採取的動作。 您可以結合 CFile 建構函式中列出的選項[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)所使用的位元 OR (|) 運算子。 一個存取權，以及一個共用選項是必要的。**modeCreate**和**modeNoInherit**是選擇性的模式。  
+ Sharing and access mode. Specifies the action to take when opening the file. You can combine options listed in the CFile constructor [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) by using the bitwise OR (&#124;) operator. One access permission and one share option are required; the **modeCreate** and **modeNoInherit** modes are optional.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CFile`物件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CFile` object.  
   
-##  <a name="getfirstviewposition"></a>CDocument::GetFirstViewPosition  
- 呼叫此函式可取得的文件相關聯的檢視清單中的第一個檢視的位置。  
+##  <a name="getfirstviewposition"></a>  CDocument::GetFirstViewPosition  
+ Call this function to get the position of the first view in the list of views associated with the document.  
   
 ```  
 virtual POSITION GetFirstViewPosition() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A**位置**值，可用於反覆項目與[GetNextView](#getnextview)成員函式。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration with the [GetNextView](#getnextview) member function.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&59;](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
-##  <a name="getnextview"></a>CDocument::GetNextView  
- 呼叫此函式來逐一查看所有的文件的檢視。  
+##  <a name="getnextview"></a>  CDocument::GetNextView  
+ Call this function to iterate through all of the document's views.  
   
 ```  
 virtual CView* GetNextView(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rPosition`  
- 參考**位置**先前呼叫所傳回的值`GetNextView`或[GetFirstViewPosition](#getfirstviewposition)成員函式。 此值不能**NULL**。  
+ A reference to a **POSITION** value returned by a previous call to the `GetNextView` or [GetFirstViewPosition](#getfirstviewposition) member functions. This value must not be **NULL**.  
   
-### <a name="return-value"></a>傳回值  
- 檢視所識別的指標`rPosition`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the view identified by `rPosition`.  
   
-### <a name="remarks"></a>備註  
- 此函數會傳回所識別的檢視`rPosition`，然後設定`rPosition`至**位置**下一步檢視清單中的值。 如果擷取的檢視是在清單中，最後則`rPosition`設為**NULL**。  
+### <a name="remarks"></a>Remarks  
+ The function returns the view identified by `rPosition` and then sets `rPosition` to the **POSITION** value of the next view in the list. If the retrieved view is the last in the list, then `rPosition` is set to **NULL**.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&59;](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
-##  <a name="getpathname"></a>CDocument::GetPathName  
- 呼叫此函式可取得文件的磁碟檔案的完整的路徑。  
+##  <a name="getpathname"></a>  CDocument::GetPathName  
+ Call this function to get the fully qualified path of the document's disk file.  
   
 ```  
 const CString& GetPathName() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 文件的完整的路徑。 如果文件尚未儲存，或沒有與其相關聯的磁碟檔案，這個字串是空的。  
+### <a name="return-value"></a>Return Value  
+ The document's fully qualified path. This string is empty if the document has not been saved or does not have a disk file associated with it.  
   
-##  <a name="getthumbnail"></a>CDocument::GetThumbnail  
- 建立縮圖的提供者用來顯示縮圖的點陣圖。  
+##  <a name="getthumbnail"></a>  CDocument::GetThumbnail  
+ Creates a bitmap to be used by the thumbnail provider to display the thumbnail.  
   
 ```  
 virtual BOOL GetThumbnail(
@@ -441,66 +488,66 @@ virtual BOOL GetThumbnail(
     DWORD* pdwAlpha);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cx`  
- 指定點陣圖的高度與寬度。  
+ Specifies the width and height of the bitmap.  
   
  `phbmp`  
- 函式成功傳回時包含點陣圖的控制代碼。  
+ Contains a handle to a bitmap, when the function returns successfully.  
   
  `pdwAlpha`  
- 包含函式成功傳回時，指定 alpha 色頻值 DWORD。  
+ Contains a DWORD specifying the alpha channel value, when the function returns successfully.  
   
-### <a name="return-value"></a>傳回值  
- 傳回`TRUE`是否成功，否則為建立縮圖的點陣圖`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if a bitmap for the thumbnail was created successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettitle"></a>CDocument::GetTitle  
- 呼叫此函式可取得文件的標題，通常衍生自文件的檔名。  
+##  <a name="gettitle"></a>  CDocument::GetTitle  
+ Call this function to get the document's title, which is usually derived from the document's filename.  
   
 ```  
 const CString& GetTitle() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 文件的標題。  
+### <a name="return-value"></a>Return Value  
+ The document's title.  
   
-##  <a name="initializesearchcontent"></a>CDocument::InitializeSearchContent  
- 呼叫以初始化搜尋內容搜尋處理常式。  
+##  <a name="initializesearchcontent"></a>  CDocument::InitializeSearchContent  
+ Called to initialize search content for the Search Handler.  
   
 ```  
 virtual void InitializeSearchContent ();
 ```  
   
-### <a name="remarks"></a>備註  
- 覆寫此方法以初始化搜尋內容的衍生類別中。 內容應該要分隔的組件包含字串 「; 」。 例如，「 點。矩形。ole 項目 」。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to initialize search content. The content should be a string with parts delimited by ";". For example, "point; rectangle; ole item".  
   
-##  <a name="ismodified"></a>CDocument::IsModified  
- 呼叫此函式可判斷自上次儲存後是否已修改文件。  
+##  <a name="ismodified"></a>  CDocument::IsModified  
+ Call this function to determine whether the document has been modified since it was last saved.  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果已修改文件自上次儲存。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document has been modified since it was last saved; otherwise 0.  
   
-##  <a name="issearchandorganizehandler"></a>CDocument::IsSearchAndOrganizeHandler  
- 指示是否的這個執行個體`CDocument`建立搜尋 i 組織處理常式。  
+##  <a name="issearchandorganizehandler"></a>  CDocument::IsSearchAndOrganizeHandler  
+ Tells whether this instance of `CDocument` was created for the Search & Organize handler.  
   
 ```  
 BOOL IsSearchAndOrganizeHandler() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果這個執行個體`CDocument`建立搜尋 i 組織處理常式。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if this instance of `CDocument` was created for the Search & Organize handler.  
   
-### <a name="remarks"></a>備註  
- 此函數會傳回目前`TRUE`僅適用於豐富的預覽處理常式中處理序伺服器的實作。 您可以設定適當的旗標 （m_bPreviewHandlerMode、 m_bSearchMode、 m_bGetThumbnailMode），以使此函式回到您應用程式層級`TRUE`。  
+### <a name="remarks"></a>Remarks  
+ Currently this function returns `TRUE` only for Rich Preview handlers implemented in an out of process server. You can set the appropriate flags (m_bPreviewHandlerMode, m_bSearchMode, m_bGetThumbnailMode) at your application level to make this function return `TRUE`.  
   
-##  <a name="loaddocumentfromstream"></a>CDocument::LoadDocumentFromStream  
- 呼叫以從資料流載入文件資料。  
+##  <a name="loaddocumentfromstream"></a>  CDocument::LoadDocumentFromStream  
+ Called to load document data from a stream.  
   
 ```  
 virtual HRESULT LoadDocumentFromStream(
@@ -508,144 +555,144 @@ virtual HRESULT LoadDocumentFromStream(
     DWORD dwGrfMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pStream`  
- 資料流的指標。 介面會提供這個資料流。  
+ A pointer to a stream. This stream is supplied by the Shell.  
   
  `dwGrfMode`  
- 資料流的存取模式。  
+ Access mode to the stream.  
   
-### <a name="return-value"></a>傳回值  
- 如果載入作業成功，否則為 HRESULT 錯誤碼，S_OK。  
+### <a name="return-value"></a>Return Value  
+ S_OK if the load operation succeeds, otherwise HRESULT with an error code.  
   
-### <a name="remarks"></a>備註  
- 您可以覆寫這個方法來自訂如何將資料從資料流載入在衍生類別中。  
+### <a name="remarks"></a>Remarks  
+ You can override this method in a derived class to customize how to load data from the stream.  
   
-##  <a name="m_bgetthumbnailmode"></a>CDocument::m_bGetThumbnailMode  
- 指定`CDocument`dllhost 的縮圖建立物件。 應該簽入`CView::OnDraw`。  
+##  <a name="m_bgetthumbnailmode"></a>  CDocument::m_bGetThumbnailMode  
+ Specifies that the `CDocument` object was created by dllhost for thumbnails. Should be checked in `CView::OnDraw`.  
   
 ```  
 BOOL m_bGetThumbnailMode;  
 ```  
   
-### <a name="remarks"></a>備註  
- `TRUE`表示文件由 dllhost 的縮圖。  
+### <a name="remarks"></a>Remarks  
+ `TRUE` indicates that the document was created by dllhost for thumbnails.  
   
-##  <a name="m_bpreviewhandlermode"></a>CDocument::m_bPreviewHandlerMode  
- 指定`CDocument`prevhost 已建立物件的豐富預覽。 應該簽入`CView::OnDraw`。  
+##  <a name="m_bpreviewhandlermode"></a>  CDocument::m_bPreviewHandlerMode  
+ Specifies that the `CDocument` object was created by prevhost for Rich Preview. Should be checked in `CView::OnDraw`.  
   
 ```  
 BOOL m_bPreviewHandlerMode;  
 ```  
   
-### <a name="remarks"></a>備註  
- `TRUE`表示文件所建立的 prevhost 豐富的預覽。  
+### <a name="remarks"></a>Remarks  
+ `TRUE` indicates that the document was created by prevhost for Rich Preview.  
   
-##  <a name="m_bsearchmode"></a>CDocument::m_bSearchMode  
- 指定`CDocument`索引子或另一個搜尋應用程式建立物件。  
+##  <a name="m_bsearchmode"></a>  CDocument::m_bSearchMode  
+ Specifies that the `CDocument` object was created by indexer or by another search application.  
   
 ```  
 BOOL m_bSearchMode;  
 ```  
   
-### <a name="remarks"></a>備註  
- `TRUE`表示建立文件的索引子或另一個搜尋應用程式。  
+### <a name="remarks"></a>Remarks  
+ `TRUE` indicates that the document was created by indexer or by another search application.  
   
-##  <a name="m_clrrichpreviewbackcolor"></a>CDocument::m_clrRichPreviewBackColor  
- 指定豐富的預覽視窗的背景色彩。 這個色彩是由主應用程式設定。  
+##  <a name="m_clrrichpreviewbackcolor"></a>  CDocument::m_clrRichPreviewBackColor  
+ Specifies the background color of the Rich Preview window. This color is set by host.  
   
 ```  
 COLORREF m_clrRichPreviewBackColor;  
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_clrrichpreviewtextcolor"></a>CDocument::m_clrRichPreviewTextColor  
- 指定豐富的預覽視窗的前景色彩。 這個色彩是由主應用程式設定。  
+##  <a name="m_clrrichpreviewtextcolor"></a>  CDocument::m_clrRichPreviewTextColor  
+ Specifies the foreground color of the Rich Preview window. This color is set by host.  
   
 ```  
 COLORREF m_clrRichPreviewTextColor;  
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_lfrichpreviewfont"></a>CDocument::m_lfRichPreviewFont  
- 指定豐富的預覽視窗的文字字型。 這個字型的資訊是由主應用程式設定。  
+##  <a name="m_lfrichpreviewfont"></a>  CDocument::m_lfRichPreviewFont  
+ Specifies the text font for the Rich Preview window. This font information is set by host.  
   
 ```  
 CFont m_lfRichPreviewFont;  
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onbeforerichpreviewfontchanged"></a>CDocument::OnBeforeRichPreviewFontChanged  
- 豐富的預覽字型變更之前呼叫。  
+##  <a name="onbeforerichpreviewfontchanged"></a>  CDocument::OnBeforeRichPreviewFontChanged  
+ Called before the Rich Preview font is changed.  
   
 ```  
 virtual void OnBeforeRichPreviewFontChanged();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onchangedviewlist"></a>CDocument::OnChangedViewList  
- 加入或移除文件檢視之後，由框架呼叫。  
+##  <a name="onchangedviewlist"></a>  CDocument::OnChangedViewList  
+ Called by the framework after a view is added to or removed from the document.  
   
 ```  
 virtual void OnChangedViewList();
 ```  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作檢查是否的最後一個檢視已停用，是否是的話，會刪除文件。 如果您想要執行特殊處理的架構中加入或移除檢視時，覆寫這個函式。 例如，如果您想要保持開啟，即使沒有附加至該檢視的文件時，覆寫這個函式。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function checks whether the last view is being removed and, if so, deletes the document. Override this function if you want to perform special processing when the framework adds or removes a view. For example, if you want a document to remain open even when there are no views attached to it, override this function.  
   
-##  <a name="onclosedocument"></a>CDocument::OnCloseDocument  
- 當文件關閉時，通常做為檔案關閉命令的一部分，由架構呼叫。  
+##  <a name="onclosedocument"></a>  CDocument::OnCloseDocument  
+ Called by the framework when the document is closed, typically as part of the File Close command.  
   
 ```  
 virtual void OnCloseDocument();
 ```  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會終結所有可用來檢視文件的框架，關閉檢視、 清除文件的內容，然後呼叫[DeleteContents](#deletecontents)成員函式來刪除文件的資料。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function destroys all of the frames used for viewing the document, closes the view, cleans up the document's contents, and then calls the [DeleteContents](#deletecontents) member function to delete the document's data.  
   
- 如果您想要執行特殊清除處理序架構關閉文件時，覆寫這個函式。 比方說，如果文件代表資料庫中的記錄，您可能想要覆寫這個函式來關閉資料庫。 您應該從您的覆寫呼叫此函式的基底類別版本。  
+ Override this function if you want to perform special cleanup processing when the framework closes a document. For example, if the document represents a record in a database, you may want to override this function to close the database. You should call the base class version of this function from your override.  
   
-##  <a name="oncreatepreviewframe"></a>CDocument::OnCreatePreviewFrame  
- 需要建立豐富的預覽預覽框架時，由架構呼叫。  
+##  <a name="oncreatepreviewframe"></a>  CDocument::OnCreatePreviewFrame  
+ Called by the framework when it needs to create a preview frame for Rich Preview.  
   
 ```  
 virtual BOOL OnCreatePreviewFrame();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果成功，否則為建立框架`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the frame is created successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondocumentevent"></a>CDocument::OnDocumentEvent  
- 以文件事件回應的架構所呼叫。  
+##  <a name="ondocumentevent"></a>  CDocument::OnDocumentEvent  
+ Called by the framework in response to a document event.  
   
 ```  
 virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `deEvent`  
- 描述事件的型別列舉的資料型別。  
+ An enumerated data type that describes the type of event.  
   
-### <a name="remarks"></a>備註  
- 文件事件可能會影響多個類別。 這個方法會負責處理只會影響類別的文件事件[CDocument 類別](../../mfc/reference/cdocument-class.md)。 目前，唯一必須回應文件事件的類別是[CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)。 `CDocument`類別有其他可覆寫方法負責處理效果`CDocument`。  
+### <a name="remarks"></a>Remarks  
+ Document events may affect multiple classes. This method is responsible for handling document events that affect classes other than the [CDocument Class](../../mfc/reference/cdocument-class.md). Currently, the only class that must respond to document events is the [CDataRecoveryHandler Class](../../mfc/reference/cdatarecoveryhandler-class.md). The `CDocument` class has other overrideable methods responsible for handling the effect on the `CDocument`.  
   
- 下表列出可能的值為`deEvent`和它們對應到事件。  
+ The following table lists the possible values for `deEvent` and the events that they correspond to.  
   
-|值|相對應的事件|  
+|Value|Corresponding Event|  
 |-----------|-------------------------|  
-|`onAfterNewDocument`|建立新的文件。|  
-|`onAfterOpenDocument`|開啟新文件。|  
-|`onAfterSaveDocument`|已儲存文件。|  
-|`onAfterCloseDocument`|已關閉文件。|  
+|`onAfterNewDocument`|A new document was created.|  
+|`onAfterOpenDocument`|A new document was opened.|  
+|`onAfterSaveDocument`|The document was saved.|  
+|`onAfterCloseDocument`|The document was closed.|  
   
-##  <a name="ondrawthumbnail"></a>CDocument::OnDrawThumbnail  
- 在衍生的類別，用來繪製縮圖中，這個方法會覆寫。  
+##  <a name="ondrawthumbnail"></a>  CDocument::OnDrawThumbnail  
+ Override this method in a derived class to draw the thumbnail.  
   
 ```  
 virtual void OnDrawThumbnail(
@@ -653,31 +700,31 @@ virtual void OnDrawThumbnail(
     LPRECT lprcBounds);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dc`  
- 裝置內容的參考。  
+ A reference to a device context.  
   
  `lprcBounds`  
- 指定縮圖應該要繪製的區域的周框的矩形。  
+ Specifies a bounding rectangle of the area where the thumbnail should be drawn.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfilesendmail"></a>CDocument::OnFileSendMail  
- 傳送訊息透過內建的郵件主機 （如果有的話） 與文件作為附件。  
+##  <a name="onfilesendmail"></a>  CDocument::OnFileSendMail  
+ Sends a message via the resident mail host (if any) with the document as an attachment.  
   
 ```  
 void OnFileSendMail();
 ```  
   
-### <a name="remarks"></a>備註  
- `OnFileSendMail`呼叫[OnSaveDocument](#onsavedocument)序列化 （儲存） 到暫存檔案，然後透過電子郵件會傳送未命名和修改過的文件。 如果未修改文件，不被必要的暫存檔;原始會傳送。 `OnFileSendMail`載入 MAPI32。如果它已經尚未載入的 DLL。  
+### <a name="remarks"></a>Remarks  
+ `OnFileSendMail` calls [OnSaveDocument](#onsavedocument) to serialize (save) untitled and modified documents to a temporary file, which is then sent via electronic mail. If the document has not been modified, a temporary file is not needed; the original is sent. `OnFileSendMail` loads MAPI32.DLL if it has not already been loaded.  
   
- 特殊實作`OnFileSendMail`的[COleDocument](../../mfc/reference/coledocument-class.md)控點正確複合檔案。  
+ A special implementation of `OnFileSendMail` for [COleDocument](../../mfc/reference/coledocument-class.md) handles compound files correctly.  
   
- **CDocument**支援傳送郵件透過文件是否有郵件支援 (MAPI)。 請參閱文章[MAPI 主題](../../mfc/mapi.md)和[MFC 的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)。  
+ **CDocument** supports sending your document via mail if mail support (MAPI) is present. See the articles [MAPI Topics](../../mfc/mapi.md) and [MAPI Support in MFC](../../mfc/mapi-support-in-mfc.md).  
   
-##  <a name="onloaddocumentfromstream"></a>CDocument::OnLoadDocumentFromStream  
- 需要從資料流載入文件資料時，由架構呼叫。  
+##  <a name="onloaddocumentfromstream"></a>  CDocument::OnLoadDocumentFromStream  
+ Called by the framework when it needs to load the document data from a stream.  
   
 ```  
 virtual HRESULT OnLoadDocumentFromStream(
@@ -685,218 +732,218 @@ virtual HRESULT OnLoadDocumentFromStream(
     DWORD grfMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pStream`  
- 內送資料流的指標。  
+ A pointer to an incoming stream.  
   
  `grfMode`  
- 資料流的存取模式。  
+ Access mode to the stream.  
   
-### <a name="return-value"></a>傳回值  
- S_OK，如果負載是成功。否則錯誤碼。  
+### <a name="return-value"></a>Return Value  
+ S_OK if the load is successful; otherwise an error code.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onnewdocument"></a>CDocument::OnNewDocument  
- 做為新檔案 命令的一部分的架構所呼叫。  
+##  <a name="onnewdocument"></a>  CDocument::OnNewDocument  
+ Called by the framework as part of the File New command.  
   
 ```  
 virtual BOOL OnNewDocument();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 已成功初始化文件; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document was successfully initialized; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會呼叫[DeleteContents](#deletecontents)成員函式，以確保文件是空的且隨後會將標示為初始狀態的新文件。 覆寫這個函式來初始化新的文件的資料結構。 您應該從您的覆寫呼叫此函式的基底類別版本。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function calls the [DeleteContents](#deletecontents) member function to ensure that the document is empty and then marks the new document as clean. Override this function to initialize the data structure for a new document. You should call the base class version of this function from your override.  
   
- 如果使用者選擇在 SDI 應用程式中的新檔案 命令，架構會使用此函式來重新初始化現有的文件，而不是建立一個新。 如果使用者選擇新檔案的多個文件介面 (MDI) 應用程式中，每次建立新的文件架構，並接著呼叫此函式可將它初始化。 您必須將初始化程式碼，而不是此函式中的新檔案 命令會在 SDI 應用程式中有效的建構函式。  
+ If the user chooses the File New command in an SDI application, the framework uses this function to reinitialize the existing document, rather than creating a new one. If the user chooses File New in a multiple document interface (MDI) application, the framework creates a new document each time and then calls this function to initialize it. You must place your initialization code in this function instead of in the constructor for the File New command to be effective in SDI applications.  
   
- 請注意，有案例 where`OnNewDocument`呼叫兩次。 會發生這種情況是當文件會內嵌為 ActiveX 文件伺服程式。 第一次呼叫函式`CreateInstance`方法 (由`COleObjectFactory`-衍生的類別) 和第二次的`InitNew`方法 (所公開`COleServerDoc`-衍生的類別)。  
+ Note that there are cases where `OnNewDocument` is called twice. This occurs when the document is embedded as an ActiveX Document Server. The function is first called by the `CreateInstance` method (exposed by the `COleObjectFactory`-derived class) and a second time by the `InitNew` method (exposed by the `COleServerDoc`-derived class).  
   
-### <a name="example"></a>範例  
- 下列範例說明初始化文件物件的替代方法。  
+### <a name="example"></a>Example  
+ The following examples illustrate alternative methods of initializing a document object.  
   
- [!code-cpp[NVC_MFCDocView #&60;](../../mfc/codesnippet/cpp/cdocument-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDocView#60](../../mfc/codesnippet/cpp/cdocument-class_5.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #&61;](../../mfc/codesnippet/cpp/cdocument-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDocView#61](../../mfc/codesnippet/cpp/cdocument-class_6.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #&62;](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]  
+ [!code-cpp[NVC_MFCDocView#62](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]  
   
-##  <a name="onopendocument"></a>CDocument::OnOpenDocument  
- 開啟檔案 命令的一部分的架構所呼叫。  
+##  <a name="onopendocument"></a>  CDocument::OnOpenDocument  
+ Called by the framework as part of the File Open command.  
   
 ```  
 virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszPathName`  
- 若要開啟的文件的路徑點。  
+ Points to the path of the document to be opened.  
   
-### <a name="return-value"></a>傳回值  
- 已成功載入文件; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document was successfully loaded; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會開啟指定的檔案，呼叫[DeleteContents](#deletecontents)成員函式，以確保文件是空的會呼叫[CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)讀取檔案的內容，以及隨後會將標示為全新的文件。 如果您想要使用的項目保存機制或檔案機制以外，覆寫這個函式。 例如，您可以撰寫應用程式的文件，代表資料庫，而不是個別檔案中的記錄。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function opens the specified file, calls the [DeleteContents](#deletecontents) member function to ensure that the document is empty, calls [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) to read the file's contents, and then marks the document as clean. Override this function if you want to use something other than the archive mechanism or the file mechanism. For example, you might write an application where documents represent records in a database rather than separate files.  
   
- 如果使用者選擇開啟檔案 命令在 SDI 應用程式中，架構會使用此函式重新初始化現有**CDocument**物件，而不是建立一個新。 如果使用者選擇開啟檔案的 MDI 應用程式中，建構新的架構**CDocument**每次物件，然後再呼叫此函式可將它初始化。 您必須將初始化程式碼，而不是此函式中開啟檔案 命令會在 SDI 應用程式中有效的建構函式。  
+ If the user chooses the File Open command in an SDI application, the framework uses this function to reinitialize the existing **CDocument** object, rather than creating a new one. If the user chooses File Open in an MDI application, the framework constructs a new **CDocument** object each time and then calls this function to initialize it. You must place your initialization code in this function instead of in the constructor for the File Open command to be effective in SDI applications.  
   
-### <a name="example"></a>範例  
- 下列範例說明初始化文件物件的替代方法。  
+### <a name="example"></a>Example  
+ The following examples illustrate alternative methods of initializing a document object.  
   
- [!code-cpp[NVC_MFCDocView #&60;](../../mfc/codesnippet/cpp/cdocument-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDocView#60](../../mfc/codesnippet/cpp/cdocument-class_5.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #&61;](../../mfc/codesnippet/cpp/cdocument-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDocView#61](../../mfc/codesnippet/cpp/cdocument-class_6.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #&62;](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]  
+ [!code-cpp[NVC_MFCDocView#62](../../mfc/codesnippet/cpp/cdocument-class_7.cpp)]  
   
- [!code-cpp[NVC_MFCDocView #&63;](../../mfc/codesnippet/cpp/cdocument-class_8.cpp)]  
+ [!code-cpp[NVC_MFCDocView#63](../../mfc/codesnippet/cpp/cdocument-class_8.cpp)]  
   
-##  <a name="onpreviewhandlerqueryfocus"></a>CDocument::OnPreviewHandlerQueryFocus  
- 指示預覽處理常式傳回 HWND 擷取自呼叫`GetFocus`函式。  
+##  <a name="onpreviewhandlerqueryfocus"></a>  CDocument::OnPreviewHandlerQueryFocus  
+ Directs the preview handler to return the HWND retrieved from calling the `GetFocus` function.  
   
 ```  
 virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `phwnd`  
- [out]當這個方法會傳回包含從呼叫傳回的 HWND 指標`GetFocus`函式的預覽處理常式的幕前執行緒。  
+ [out] When this method returns, contains a pointer to the HWND returned from calling the `GetFocus` function from the preview handler's foreground thread.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果登錄成功。或其他原因的錯誤值。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK if successful; or an error value otherwise.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onpreviewhandlertranslateaccelerator"></a>CDocument::OnPreviewHandlerTranslateAccelerator  
- 指示預覽處理常式來處理按鍵，從預覽處理常式正在執行的程序的訊息幫浦中向上傳遞。  
+##  <a name="onpreviewhandlertranslateaccelerator"></a>  CDocument::OnPreviewHandlerTranslateAccelerator  
+ Directs the preview handler to handle a keystroke passed up from the message pump of the process in which the preview handler is running.  
   
 ```  
 virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pmsg`  
- [in]視窗訊息指標。  
+ [in] A pointer to a window message.  
   
-### <a name="return-value"></a>傳回值  
- 如果可以由預覽處理常式處理按鍵訊息，此處理常式加以處理，並傳回 S_OK。 如果預覽處理常式無法處理按鍵訊息，它會提供它透過主機`IPreviewHandlerFrame::TranslateAccelerator`。 如果主應用程式處理訊息時，這個方法會傳回 S_OK。 如果主應用程式不會處理訊息，這個方法會傳回 S_FALSE。  
+### <a name="return-value"></a>Return Value  
+ If the keystroke message can be processed by the preview handler, the handler processes it and returns S_OK. If the preview handler cannot process the keystroke message, it offers it to the host via `IPreviewHandlerFrame::TranslateAccelerator`. If the host processes the message, this method returns S_OK. If the host does not process the message, this method returns S_FALSE.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onrichpreviewbackcolorchanged"></a>CDocument::OnRichPreviewBackColorChanged  
- 豐富的預覽背景色彩變更時呼叫。  
+##  <a name="onrichpreviewbackcolorchanged"></a>  CDocument::OnRichPreviewBackColorChanged  
+ Called when the Rich Preview background color has changed.  
   
 ```  
 virtual void OnRichPreviewBackColorChanged();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onrichpreviewfontchanged"></a>CDocument::OnRichPreviewFontChanged  
- 豐富的預覽字型變更時呼叫。  
+##  <a name="onrichpreviewfontchanged"></a>  CDocument::OnRichPreviewFontChanged  
+ Called when the Rich Preview font has changed.  
   
 ```  
 virtual void OnRichPreviewFontChanged();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onrichpreviewsitechanged"></a>CDocument::OnRichPreviewSiteChanged  
- 豐富的預覽網站已經變更時呼叫。  
+##  <a name="onrichpreviewsitechanged"></a>  CDocument::OnRichPreviewSiteChanged  
+ Called when the Rich Preview site has changed.  
   
 ```  
 virtual void OnRichPreviewSiteChanged();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onrichpreviewtextcolorchanged"></a>CDocument::OnRichPreviewTextColorChanged  
- 豐富的預覽文字色彩變更時呼叫。  
+##  <a name="onrichpreviewtextcolorchanged"></a>  CDocument::OnRichPreviewTextColorChanged  
+ Called when the Rich Preview text color has changed.  
   
 ```  
 virtual void OnRichPreviewTextColorChanged();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsavedocument"></a>CDocument::OnSaveDocument  
- 儲存檔案] 或 [另存新檔命令中的架構所呼叫。  
+##  <a name="onsavedocument"></a>  CDocument::OnSaveDocument  
+ Called by the framework as part of the File Save or File Save As command.  
   
 ```  
 virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszPathName`  
- 指向檔案應該儲存的完整路徑。  
+ Points to the fully qualified path to which the file should be saved.  
   
-### <a name="return-value"></a>傳回值  
- 已成功儲存文件; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document was successfully saved; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會開啟指定的檔案，呼叫[CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)文件的資料寫入至檔案，然後將文件標記為清除。 如果您想要執行特殊處理的架構儲存文件時，覆寫這個函式。 例如，您可以撰寫應用程式的文件，代表資料庫，而不是個別檔案中的記錄。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function opens the specified file, calls [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) to write the document's data to the file, and then marks the document as clean. Override this function if you want to perform special processing when the framework saves a document. For example, you might write an application where documents represent records in a database rather than separate files.  
   
-##  <a name="onunloadhandler"></a>CDocument::OnUnloadHandler  
- 卸載預覽處理常式時，由架構呼叫。  
+##  <a name="onunloadhandler"></a>  CDocument::OnUnloadHandler  
+ Called by the framework when the preview handler is unloaded.  
   
 ```  
 virtual void OnUnloadHandler();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onupdatefilesendmail"></a>CDocument::OnUpdateFileSendMail  
- 可讓**ID_FILE_SEND_MAIL**命令郵件支援 (MAPI) 是否存在。  
+##  <a name="onupdatefilesendmail"></a>  CDocument::OnUpdateFileSendMail  
+ Enables the **ID_FILE_SEND_MAIL** command if mail support (MAPI) is present.  
   
 ```  
 void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pCmdUI`  
- 指標[CCmdUI](../../mfc/reference/ccmdui-class.md)物件相關聯**ID_FILE_SEND_MAIL**命令。  
+ A pointer to the [CCmdUI](../../mfc/reference/ccmdui-class.md) object associated with the **ID_FILE_SEND_MAIL** command.  
   
-### <a name="remarks"></a>備註  
- 否則函式會移除**ID_FILE_SEND_MAIL**命令從功能表中，包括上述分隔符號或功能表項目會視情況下。 如果啟用 MAPI MAPI32。DLL 會在路徑中，以及獲得 [Mail] 區段中。INI 檔案中，MAPI =&1;。 大部分的應用程式檔案 功能表上，將此命令。  
+### <a name="remarks"></a>Remarks  
+ Otherwise the function removes the **ID_FILE_SEND_MAIL** command from the menu, including separators above or below the menu item as appropriate. MAPI is enabled if MAPI32.DLL is present in the path and, in the [Mail] section of the WIN.INI file, MAPI=1. Most applications put this command on the File menu.  
   
- **CDocument**支援傳送郵件透過文件是否有郵件支援 (MAPI)。 請參閱文章[MAPI 主題](../../mfc/mapi.md)和[MFC 的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)。  
+ **CDocument** supports sending your document via mail if mail support (MAPI) is present. See the articles [MAPI Topics](../../mfc/mapi.md) and [MAPI Support in MFC](../../mfc/mapi-support-in-mfc.md).  
   
-##  <a name="precloseframe"></a>CDocument::PreCloseFrame  
- 終結框架視窗，架構會呼叫此成員函式。  
+##  <a name="precloseframe"></a>  CDocument::PreCloseFrame  
+ This member function is called by the framework before the frame window is destroyed.  
   
 ```  
 virtual void PreCloseFrame(CFrameWnd* pFrame);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pFrame`  
- 指標[CFrameWnd](../../mfc/reference/cframewnd-class.md)保存相關聯**CDocument**物件。  
+ Pointer to the [CFrameWnd](../../mfc/reference/cframewnd-class.md) that holds the associated **CDocument** object.  
   
-### <a name="remarks"></a>備註  
- 您可以覆寫來提供自訂清除，但請務必呼叫基底類別。  
+### <a name="remarks"></a>Remarks  
+ It can be overridden to provide custom cleanup, but be sure to call the base class as well.  
   
- 預設值是`PreCloseFrame`不做任何動作**CDocument**。 **CDocument**-衍生的類別[COleDocument](../../mfc/reference/coledocument-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)使用此成員函式。  
+ The default of `PreCloseFrame` does nothing in **CDocument**. The **CDocument**-derived classes [COleDocument](../../mfc/reference/coledocument-class.md) and [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) use this member function.  
   
-##  <a name="readnextchunkvalue"></a>CDocument::ReadNextChunkValue  
- 讀取的下一個區塊的值。  
+##  <a name="readnextchunkvalue"></a>  CDocument::ReadNextChunkValue  
+ Reads the next chunk value.  
   
 ```  
 virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ppValue`  
- [out]函式傳回時，`ppValue`包含可讀取的值。  
+ [out] When the function returns, `ppValue` contains the value that was read.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="releasefile"></a>CDocument::ReleaseFile  
- 此成員函式是由發行檔案，因此可以使用其他應用程式的架構所呼叫。  
+##  <a name="releasefile"></a>  CDocument::ReleaseFile  
+ This member function is called by the framework to release a file, making it available for use by other applications.  
   
 ```  
 virtual void ReleaseFile(
@@ -904,22 +951,22 @@ virtual void ReleaseFile(
     BOOL bAbort);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pFile`  
- 釋出 CFile 物件的指標。  
+ A pointer to the CFile object to be released.  
   
  `bAbort`  
- 指定檔案是否要使用發行`CFile::Close`或`CFile::Abort`。 **FALSE**如果檔案是使用發行[CFile::Close](../../mfc/reference/cfile-class.md#close);**TRUE**如果檔案是使用發行[cfile:: Abort](../../mfc/reference/cfile-class.md#abort)。  
+ Specifies whether the file is to be released by using either `CFile::Close` or `CFile::Abort`. **FALSE** if the file is to be released using [CFile::Close](../../mfc/reference/cfile-class.md#close); **TRUE** if the file is to be released using [CFile::Abort](../../mfc/reference/cfile-class.md#abort).  
   
-### <a name="remarks"></a>備註  
- 如果`bAbort`是**TRUE**，`ReleaseFile`呼叫`CFile::Abort`，並且檔案時。 `CFile::Abort`不會擲回例外狀況。  
+### <a name="remarks"></a>Remarks  
+ If `bAbort` is **TRUE**, `ReleaseFile` calls `CFile::Abort`, and the file is released. `CFile::Abort` will not throw an exception.  
   
- 如果`bAbort`是**FALSE**，`ReleaseFile`呼叫`CFile::Close`和釋放檔案。  
+ If `bAbort` is **FALSE**, `ReleaseFile` calls `CFile::Close` and the file is released.  
   
- 覆寫此成員函式釋放檔案之前，需要使用者動作。  
+ Override this member function to require an action by the user before the file is released.  
   
-##  <a name="removechunk"></a>CDocument::RemoveChunk  
- 移除具有指定之 GUID。  
+##  <a name="removechunk"></a>  CDocument::RemoveChunk  
+ Removes a chunk with the specified GUID.  
   
 ```  
 virtual void RemoveChunk(
@@ -927,35 +974,35 @@ virtual void RemoveChunk(
     DWORD pid);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Guid`  
- 指定要移除區塊的 GUID。  
+ Specifies the GUID of a chunk to be removed.  
   
  `Pid`  
- 指定要移除區塊的 PID。  
+ Specifies the PID of a chunk to be removed.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeview"></a>CDocument::RemoveView  
- 呼叫此函式可卸離的文件的檢視。  
+##  <a name="removeview"></a>  CDocument::RemoveView  
+ Call this function to detach a view from a document.  
   
 ```  
 void RemoveView(CView* pView);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pView`  
- 指向要移除的檢視。  
+ Points to the view being removed.  
   
-### <a name="remarks"></a>備註  
- 此函式的文件; 相關聯的檢視清單中移除指定的檢視它也會將設定檢視的文件指標**NULL**。 框架視窗已關閉或已關閉的分隔視窗窗格時，則架構會呼叫此函數。  
+### <a name="remarks"></a>Remarks  
+ This function removes the specified view from the list of views associated with the document; it also sets the view's document pointer to **NULL**. This function is called by the framework when a frame window is closed or a pane of a splitter window is closed.  
   
- 只有當您手動卸離的檢視，請呼叫此函式。 通常您會讓卸離的文件和檢視表定義架構[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)文件類別、 檢視類別和框架視窗類別建立關聯的物件。  
+ Call this function only if you are manually detaching a view. Typically you will let the framework detach documents and views by defining a [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) object to associate a document class, view class, and frame window class.  
   
- 請參閱範例[AddView](#addview)實作範例。  
+ See the example at [AddView](#addview) for a sample implementation.  
   
-##  <a name="reportsaveloadexception"></a>CDocument::ReportSaveLoadException  
- 如果發生例外狀況時呼叫 (通常[CFileException](../../mfc/reference/cfileexception-class.md)或[CArchiveException](../../mfc/reference/carchiveexception-class.md)) 時，儲存或載入文件。  
+##  <a name="reportsaveloadexception"></a>  CDocument::ReportSaveLoadException  
+ Called if an exception is thrown (typically a [CFileException](../../mfc/reference/cfileexception-class.md) or [CArchiveException](../../mfc/reference/carchiveexception-class.md)) while saving or loading the document.  
   
 ```  
 virtual void ReportSaveLoadException(
@@ -965,67 +1012,67 @@ virtual void ReportSaveLoadException(
     UINT nIDPDefault);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszPathName`  
- 指向所要的文件的名稱儲存或載入。  
+ Points to name of document that was being saved or loaded.  
   
  *e*  
- 已擲回的例外狀況的點。 可能是**NULL**。  
+ Points to the exception that was thrown. May be **NULL**.  
   
  *bSaving*  
- 旗標，指出哪一個作業正在進行。如果文件儲存，0 如果文件載入為非零。  
+ Flag indicating what operation was in progress; nonzero if the document was being saved, 0 if the document was being loaded.  
   
  `nIDPDefault`  
- 如果函式未指定更特定的顯示錯誤訊息的識別碼。  
+ Identifier of the error message to be displayed if the function does not specify a more specific one.  
   
-### <a name="remarks"></a>備註  
- 預設實作會檢查例外狀況物件，並尋找能具體描述所造成的錯誤訊息。 如果找不到特定的訊息，或如果*e*是**NULL**，由指定的一般訊息`nIDPDefault`參數使用。 函式接著會顯示包含錯誤訊息的訊息方塊。 如果您想要提供額外的自訂錯誤訊息，請覆寫這個函式。 這是進階可覆寫。  
+### <a name="remarks"></a>Remarks  
+ The default implementation examines the exception object and looks for an error message that specifically describes the cause. If a specific message is not found or if *e* is **NULL**, the general message specified by the `nIDPDefault` parameter is used. The function then displays a message box containing the error message. Override this function if you want to provide additional, customized failure messages. This is an advanced overridable.  
   
-##  <a name="savemodified"></a>CDocument::SaveModified  
- 架構修改的文件關閉之前呼叫。  
+##  <a name="savemodified"></a>  CDocument::SaveModified  
+ Called by the framework before a modified document is to be closed.  
   
 ```  
 virtual BOOL SaveModified();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 安全地繼續並關閉文件; 如果為非零0，表示不會關閉文件。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if it is safe to continue and close the document; 0 if the document should not be closed.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會顯示訊息方塊，詢問使用者是否要將變更儲存至文件中，如果您未做任何。 如果您的程式都需要不同的提示程序，請覆寫這個函式。 這是進階可覆寫。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function displays a message box asking the user whether to save the changes to the document, if any have been made. Override this function if your program requires a different prompting procedure. This is an advanced overridable.  
   
-##  <a name="setchunkvalue"></a>CDocument::SetChunkValue  
- 設定區塊值。  
+##  <a name="setchunkvalue"></a>  CDocument::SetChunkValue  
+ Sets a chunk value.  
   
 ```  
 virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pValue`  
- 指定要設定的區塊值。  
+ Specifies a chunk value to set.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setmodifiedflag"></a>CDocument::SetModifiedFlag  
- 在您進行任何修改文件之後，請呼叫此函式。  
+##  <a name="setmodifiedflag"></a>  CDocument::SetModifiedFlag  
+ Call this function after you have made any modifications to the document.  
   
 ```  
 virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bModified`  
- 旗標，指出是否已修改文件。  
+ Flag indicating whether the document has been modified.  
   
-### <a name="remarks"></a>備註  
- 一致的方式呼叫此函數，您可以確保架構會提示使用者關閉文件之前先儲存變更。 通常您應該使用的預設值**TRUE**的`bModified`參數。 若要標記的乾淨的文件 （未修改），呼叫此函數中使用的值**FALSE**。  
+### <a name="remarks"></a>Remarks  
+ By calling this function consistently, you ensure that the framework prompts the user to save changes before closing a document. Typically you should use the default value of **TRUE** for the `bModified` parameter. To mark a document as clean (unmodified), call this function with a value of **FALSE**.  
   
-##  <a name="setpathname"></a>CDocument::SetPathName  
- 呼叫此函式可指定文件的磁碟檔案的完整的路徑。  
+##  <a name="setpathname"></a>  CDocument::SetPathName  
+ Call this function to specify the fully qualified path of the document's disk file.  
   
 ```  
 virtual void SetPathName(
@@ -1033,32 +1080,32 @@ virtual void SetPathName(
     BOOL bAddToMRU = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszPathName`  
- 指向要做為文件路徑的字串。  
+ Points to the string to be used as the path for the document.  
   
  `bAddToMRU`  
- 判斷是否有檔案名稱新增至最近使用過 (MRU) 檔案清單。 如果**為 TRUE，**加入檔案名稱; 如果**FALSE**，會將其加入。  
+ Determines whether the filename is added to the most recently used (MRU) file list. If **TRUE,** the filename is added; if **FALSE**, it is not added.  
   
-### <a name="remarks"></a>備註  
- 值而定`bAddToMRU`加入，或未加入至應用程式所維護的 MRU 清單的路徑。 請注意，某些文件不相關聯的磁碟檔案。 只有當您正在覆寫預設實作，來開啟和儲存架構所使用的檔案，請呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ Depending on the value of `bAddToMRU` the path is added, or not added, to the MRU list maintained by the application. Note that some documents are not associated with a disk file. Call this function only if you are overriding the default implementation for opening and saving files used by the framework.  
   
-##  <a name="settitle"></a>CDocument::SetTitle  
- 呼叫此函式可指定文件的標題 （框架視窗的標題列中顯示的字串）。  
+##  <a name="settitle"></a>  CDocument::SetTitle  
+ Call this function to specify the document's title (the string displayed in the title bar of a frame window).  
   
 ```  
 virtual void SetTitle(LPCTSTR lpszTitle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszTitle`  
- 指向要做為文件的標題字串。  
+ Points to the string to be used as the document's title.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式會更新所有顯示的文件的框架視窗的標題。  
+### <a name="remarks"></a>Remarks  
+ Calling this function updates the titles of all frame windows that display the document.  
   
-##  <a name="updateallviews"></a>CDocument::UpdateAllViews  
- 修改文件之後，請呼叫此函式。  
+##  <a name="updateallviews"></a>  CDocument::UpdateAllViews  
+ Call this function after the document has been modified.  
   
 ```  
 void UpdateAllViews(
@@ -1067,31 +1114,31 @@ void UpdateAllViews(
     CObject* pHint = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pSender`  
- 指向修改文件中，檢視或**NULL**如果所有的檢視更新。  
+ Points to the view that modified the document, or **NULL** if all views are to be updated.  
   
  `lHint`  
- 包含有關修改資訊。  
+ Contains information about the modification.  
   
  `pHint`  
- 指向以儲存修改的相關資訊的物件。  
+ Points to an object storing information about the modification.  
   
-### <a name="remarks"></a>備註  
- 在您呼叫後，您應該呼叫此函式[SetModifiedFlag](#setmodifiedflag)成員函式。 此函式，就會通知附加至文件，除了由指定的檢視每個檢視`pSender`，已修改過的文件。 一般都會呼叫此函式從您的檢視類別之後使用者已透過檢視文件。  
+### <a name="remarks"></a>Remarks  
+ You should call this function after you call the [SetModifiedFlag](#setmodifiedflag) member function. This function informs each view attached to the document, except for the view specified by `pSender`, that the document has been modified. You typically call this function from your view class after the user has changed the document through a view.  
   
- 此函數會呼叫[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)的文件之外傳送的每個成員函式檢視，請傳遞`pHint`和`lHint`。 使用這些參數將資訊傳遞至相關文件所做的修改檢視。 您可以編碼資訊使用`lHint`和 （或) 您可以定義[CObject](../../mfc/reference/cobject-class.md)-衍生類別，以儲存修改的相關資訊，並傳遞物件，該類別使用的`pHint`。 覆寫`CView::OnUpdate`成員函式中的您[CView](../../mfc/reference/cview-class.md)-衍生的類別，來最佳化更新檢視的顯示根據傳遞的資訊。  
+ This function calls the [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) member function for each of the document's views except the sending view, passing `pHint` and `lHint`. Use these parameters to pass information to the views about the modifications made to the document. You can encode information using `lHint` and/or you can define a [CObject](../../mfc/reference/cobject-class.md)-derived class to store information about the modifications and pass an object of that class using `pHint`. Override the `CView::OnUpdate` member function in your [CView](../../mfc/reference/cview-class.md)-derived class to optimize the updating of the view's display based on the information passed.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&64;](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 MDIDOCVW](../../visual-cpp-samples.md)   
- [MFC 範例 SNAPVW](../../visual-cpp-samples.md)   
- [MFC 範例 NPP](../../visual-cpp-samples.md)   
- [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
- [CView 類別](../../mfc/reference/cview-class.md)   
- [CDocTemplate 類別](../../mfc/reference/cdoctemplate-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDIDOCVW](../../visual-cpp-samples.md)   
+ [MFC Sample SNAPVW](../../visual-cpp-samples.md)   
+ [MFC Sample NPP](../../visual-cpp-samples.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)
 

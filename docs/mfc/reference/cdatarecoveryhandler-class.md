@@ -1,5 +1,5 @@
 ---
-title: "CDataRecoveryHandler 類別 |Microsoft 文件"
+title: CDataRecoveryHandler Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,7 +42,34 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDataRecoveryHandler class
+- CDataRecoveryHandler [MFC], CDataRecoveryHandler
+- CDataRecoveryHandler [MFC], AutosaveAllDocumentInfo
+- CDataRecoveryHandler [MFC], AutosaveDocumentInfo
+- CDataRecoveryHandler [MFC], CreateDocumentInfo
+- CDataRecoveryHandler [MFC], DeleteAllAutosavedFiles
+- CDataRecoveryHandler [MFC], DeleteAutosavedFile
+- CDataRecoveryHandler [MFC], GenerateAutosaveFileName
+- CDataRecoveryHandler [MFC], GetAutosaveInterval
+- CDataRecoveryHandler [MFC], GetAutosavePath
+- CDataRecoveryHandler [MFC], GetDocumentListName
+- CDataRecoveryHandler [MFC], GetNormalDocumentTitle
+- CDataRecoveryHandler [MFC], GetRecoveredDocumentTitle
+- CDataRecoveryHandler [MFC], GetRestartIdentifier
+- CDataRecoveryHandler [MFC], GetSaveDocumentInfoOnIdle
+- CDataRecoveryHandler [MFC], GetShutdownByRestartManager
+- CDataRecoveryHandler [MFC], Initialize
+- CDataRecoveryHandler [MFC], QueryRestoreAutosavedDocuments
+- CDataRecoveryHandler [MFC], ReadOpenDocumentList
+- CDataRecoveryHandler [MFC], RemoveDocumentInfo
+- CDataRecoveryHandler [MFC], ReopenPreviousDocuments
+- CDataRecoveryHandler [MFC], RestoreAutosavedDocuments
+- CDataRecoveryHandler [MFC], SaveOpenDocumentList
+- CDataRecoveryHandler [MFC], SetAutosaveInterval
+- CDataRecoveryHandler [MFC], SetAutosavePath
+- CDataRecoveryHandler [MFC], SetRestartIdentifier
+- CDataRecoveryHandler [MFC], SetSaveDocumentInfoOnIdle
+- CDataRecoveryHandler [MFC], SetShutdownByRestartManager
+- CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
 caps.latest.revision: 18
 author: mikeblome
@@ -62,17 +89,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 26e36977a2e18dcaa4a76b201f9543e200f2d276
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 310de2d1001c967439850b2ee22386b9963194c3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 類別
-`CDataRecoveryHandler`時，自動儲存文件中，如果應用程式非預期地結束進行還原。  
+# <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler Class
+The `CDataRecoveryHandler` autosaves documents and restores them if an application unexpectedly exits.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDataRecoveryHandler : public CObject  
@@ -80,92 +107,92 @@ class CDataRecoveryHandler : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[CDataRecoveryHandler::CDataRecoveryHandler](#cdatarecoveryhandler)|建構 `CDataRecoveryHandler` 物件。|  
+|[CDataRecoveryHandler::CDataRecoveryHandler](#cdatarecoveryhandler)|Constructs a `CDataRecoveryHandler` object.|  
   
-### <a name="methods"></a>方法  
-  
-|||  
-|-|-|  
-|[CDataRecoveryHandler::AutosaveAllDocumentInfo](#autosavealldocumentinfo)|使用註冊的每個檔案時，自動儲存`CDataRecoveryHandler`類別。|  
-|[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)|時，自動儲存指定的文件。|  
-|[CDataRecoveryHandler::CreateDocumentInfo](#createdocumentinfo)|將文件加入至開啟的文件的清單。|  
-|[CDataRecoveryHandler::DeleteAllAutosavedFiles](#deleteallautosavedfiles)|刪除所有目前的 autosaved 檔案。|  
-|[CDataRecoveryHandler::DeleteAutosavedFile](#deleteautosavedfile)|刪除指定的 autosaved 檔案。|  
-|[CDataRecoveryHandler::GenerateAutosaveFileName](#generateautosavefilename)|會產生與提供的文件檔案名稱相關聯的自動儲存檔案的名稱。|  
-|[CDataRecoveryHandler::GetAutosaveInterval](#getautosaveinterval)|傳回 還是會嘗試之間的間隔。|  
-|[CDataRecoveryHandler::GetAutosavePath](#getautosavepath)|傳回 autosaved 檔案的路徑。|  
-|[CDataRecoveryHandler::GetDocumentListName](#getdocumentlistname)|擷取的文件名稱`CDocument`物件。|  
-|[CDataRecoveryHandler::GetNormalDocumentTitle](#getnormaldocumenttitle)|擷取指定的文件的一般標題。|  
-|[CDataRecoveryHandler::GetRecoveredDocumentTitle](#getrecovereddocumenttitle)|建立並傳回復原的文件的標題。|  
-|[CDataRecoveryHandler::GetRestartIdentifier](#getrestartidentifier)|擷取應用程式的唯一的重新啟動識別項。|  
-|[CDataRecoveryHandler::GetSaveDocumentInfoOnIdle](#getsavedocumentinfoonidle)|指出是否`CDataRecoveryHandler`自動儲存對目前的閒置迴圈。|  
-|[CDataRecoveryHandler::GetShutdownByRestartManager](#getshutdownbyrestartmanager)|指出是否重新啟動管理員會造成應用程式結束。|  
-|[CDataRecoveryHandler::Initialize](#initialize)|初始化 `CDataRecoveryHandler`。|  
-|[CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments)|向使用者顯示的對話方塊中的每個文件`CDataRecoveryHandler`autosaved。 對話方塊會決定使用者是否想要還原 autosaved 文件。|  
-|[CDataRecoveryHandler::ReadOpenDocumentList](#readopendocumentlist)|從登錄載入開啟的文件清單。|  
-|[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)|從開啟的文件清單中移除提供的文件。|  
-|[CDataRecoveryHandler::ReopenPreviousDocuments](#reopenpreviousdocuments)|會開啟先前開啟的文件。|  
-|[CDataRecoveryHandler::RestoreAutosavedDocuments](#restoreautosaveddocuments)|還原根據使用者輸入的 autosaved 文件。|  
-|[CDataRecoveryHandler::SaveOpenDocumentList](#saveopendocumentlist)|將目前開啟的文件的清單儲存至 Windows 登錄。|  
-|[CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval)|設定以毫秒為單位的自動儲存循環之間的時間。|  
-|[CDataRecoveryHandler::SetAutosavePath](#setautosavepath)|設定 autosaved 檔案儲存所在的目錄。|  
-|[CDataRecoveryHandler::SetRestartIdentifier](#setrestartidentifier)|設定這個執行個體的唯一重新啟動識別碼`CDataRecoveryHandler`。|  
-|[CDataRecoveryHandler::SetSaveDocumentInfoOnIdle](#setsavedocumentinfoonidle)|設定是否`CDataRecoveryHandler`目前閒置週期期間，將開啟的文件資訊儲存至 Windows 登錄。|  
-|[CDataRecoveryHandler::SetShutdownByRestartManager](#setshutdownbyrestartmanager)|設定是否重新啟動管理員先前的應用程式結束所造成。|  
-|[CDataRecoveryHandler::UpdateDocumentInfo](#updatedocumentinfo)|因為使用者可以儲存它，請更新文件的資訊。|  
-  
-### <a name="data-members"></a>資料成員  
+### <a name="methods"></a>Methods  
   
 |||  
 |-|-|  
-|m_bRestoringPreviousOpenDocs|表示資料復原處理常式是否要重新開啟先前開啟的文件。|  
-|m_bSaveDocumentInfoOnIdle|指出是否在下一步的閒置迴圈資料復原處理常式時，自動儲存文件。|  
-|m_bShutdownByRestartManager|指出是否重新啟動管理員會在結束應用程式。|  
-|m_dwRestartManagerSupportFlags|旗標，表示重新啟動管理員支援哪些提供應用程式。|  
-|m_lstAutosavesToDelete|未刪除與原始文件已關閉時 autosaved 檔案的清單。 當應用程式存在時，重新啟動管理員重試刪除檔案。|  
-|m_mapDocNameToAutosaveName|Autosaved 檔案名稱之文件名稱的對應。|  
-|m_mapDocNameToDocumentPtr|將文件名稱的對應[CDocument](../../mfc/reference/cdocument-class.md)指標。|  
-|m_mapDocNameToRestoreBool|布林值參數，指出是否要還原 autosaved 文件之文件名稱的對應。|  
-|m_mapDocumentPtrToDocName|對應`CDocument`文件名稱的指標。|  
-|m_mapDocumentPtrToDocTitle|對應`CDocument`文件標題的指標。 這些項目可用來儲存檔案。|  
-|m_nAutosaveInterval|以毫秒為單位時，自動儲存之間的時間。|  
-|m_nTimerID|自動儲存計時器的識別項。|  
-|m_strAutosavePath|儲存 autosaved 文件位置。|  
-|m_strRestartIdentifier|重新啟動管理員 GUID 的字串表示。|  
+|[CDataRecoveryHandler::AutosaveAllDocumentInfo](#autosavealldocumentinfo)|Autosaves each file registered with the `CDataRecoveryHandler` class.|  
+|[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)|Autosaves the specified document.|  
+|[CDataRecoveryHandler::CreateDocumentInfo](#createdocumentinfo)|Adds a document to the list of open documents.|  
+|[CDataRecoveryHandler::DeleteAllAutosavedFiles](#deleteallautosavedfiles)|Deletes all the current autosaved files.|  
+|[CDataRecoveryHandler::DeleteAutosavedFile](#deleteautosavedfile)|Deletes the specified autosaved file.|  
+|[CDataRecoveryHandler::GenerateAutosaveFileName](#generateautosavefilename)|Generates the name for an autosave file associated with the supplied document file name.|  
+|[CDataRecoveryHandler::GetAutosaveInterval](#getautosaveinterval)|Returns the interval between autosave tries.|  
+|[CDataRecoveryHandler::GetAutosavePath](#getautosavepath)|Returns the path of the autosaved files.|  
+|[CDataRecoveryHandler::GetDocumentListName](#getdocumentlistname)|Retrieves the document name from a `CDocument` object.|  
+|[CDataRecoveryHandler::GetNormalDocumentTitle](#getnormaldocumenttitle)|Retrieves the normal title for the specified document.|  
+|[CDataRecoveryHandler::GetRecoveredDocumentTitle](#getrecovereddocumenttitle)|Creates and returns the title for the recovered document.|  
+|[CDataRecoveryHandler::GetRestartIdentifier](#getrestartidentifier)|Retrieves the unique restart identifier for the application.|  
+|[CDataRecoveryHandler::GetSaveDocumentInfoOnIdle](#getsavedocumentinfoonidle)|Indicates whether the `CDataRecoveryHandler` performs an autosave on the current idle loop.|  
+|[CDataRecoveryHandler::GetShutdownByRestartManager](#getshutdownbyrestartmanager)|Indicates whether the restart manager caused the application to exit.|  
+|[CDataRecoveryHandler::Initialize](#initialize)|Initializes the `CDataRecoveryHandler`.|  
+|[CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments)|Displays a dialog box to the user for each document that the `CDataRecoveryHandler` autosaved. The dialog box determines whether the user wants to restore the autosaved document.|  
+|[CDataRecoveryHandler::ReadOpenDocumentList](#readopendocumentlist)|Loads the open document list from the registry.|  
+|[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)|Removes the supplied document from the open document list.|  
+|[CDataRecoveryHandler::ReopenPreviousDocuments](#reopenpreviousdocuments)|Opens the previously open documents.|  
+|[CDataRecoveryHandler::RestoreAutosavedDocuments](#restoreautosaveddocuments)|Restores the autosaved documents based on user input.|  
+|[CDataRecoveryHandler::SaveOpenDocumentList](#saveopendocumentlist)|Saves the current list of open documents to the Windows registry.|  
+|[CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval)|Sets the time between autosave cycles in milliseconds.|  
+|[CDataRecoveryHandler::SetAutosavePath](#setautosavepath)|Sets the directory where autosaved files are stored.|  
+|[CDataRecoveryHandler::SetRestartIdentifier](#setrestartidentifier)|Sets the unique restart identifier for this instance of the `CDataRecoveryHandler`.|  
+|[CDataRecoveryHandler::SetSaveDocumentInfoOnIdle](#setsavedocumentinfoonidle)|Sets whether the `CDataRecoveryHandler` saves the open document information to the Windows registry during the current idle cycle.|  
+|[CDataRecoveryHandler::SetShutdownByRestartManager](#setshutdownbyrestartmanager)|Sets whether the previous exit of the application was caused by the restart manager.|  
+|[CDataRecoveryHandler::UpdateDocumentInfo](#updatedocumentinfo)|Updates the information for a document because the user saved it.|  
   
-## <a name="remarks"></a>備註  
- 重新啟動管理員會使用`CDataRecoveryHandler`類別，以記錄追蹤的所有開啟的文件和自動儲存到它們視。 若要啟用自動儲存，請使用[CDataRecoveryHandler::SetSaveDocumentInfoOnIdle](#setsavedocumentinfoonidle)方法。 這個方法會指示`CDataRecoveryHandler`在下一步的閒置迴圈上執行自動儲存。 重新啟動管理員呼叫`SetSaveDocumentInfoOnIdle`時`CDataRecoveryHandler`應該執行自動儲存。  
+### <a name="data-members"></a>Data Members  
   
- 所有的方法`CDataRecoveryHandler`類別都是虛擬的。 覆寫這個類別來建立您自己自訂的資料復原處理常式中的方法。 除非您建立您自己的資料復原處理常式，或重新啟動管理員，否則請勿執行個體化 CDataRecoveryHandler。 [CWinApp 類別](../../mfc/reference/cwinapp-class.md)建立`CDataRecoveryHandler`視需要的物件。  
+|||  
+|-|-|  
+|m_bRestoringPreviousOpenDocs|Indicates whether the data recovery handler reopens previously open documents.|  
+|m_bSaveDocumentInfoOnIdle|Indicates whether the data recovery handler autosaves documents on the next idle loop.|  
+|m_bShutdownByRestartManager|Indicates whether the restart manager causes the application to exit.|  
+|m_dwRestartManagerSupportFlags|Flags that indicate what support the restart manager provides for the application.|  
+|m_lstAutosavesToDelete|A list of autosaved files that were not deleted when the original documents were closed. When the application exits, the restart manager retries deleting the files.|  
+|m_mapDocNameToAutosaveName|A map of the document names to the autosaved file names.|  
+|m_mapDocNameToDocumentPtr|A map of the document names to the [CDocument](../../mfc/reference/cdocument-class.md) pointers.|  
+|m_mapDocNameToRestoreBool|A map of the document names to a Boolean parameter that indicates whether to restore the autosaved document.|  
+|m_mapDocumentPtrToDocName|A map of the `CDocument` pointers to the document names.|  
+|m_mapDocumentPtrToDocTitle|A map of the `CDocument` pointers to the document titles. These titles are used for saving files.|  
+|m_nAutosaveInterval|Time in milliseconds between autosaves.|  
+|m_nTimerID|The identifier for the autosave timer.|  
+|m_strAutosavePath|The location where the autosaved documents are stored.|  
+|m_strRestartIdentifier|The string representation of a GUID for the restart manager.|  
   
- 您可以使用之前`CDataRecoveryHandler`物件，您必須呼叫[CDataRecoveryHandler::Initialize](#initialize)。  
+## <a name="remarks"></a>Remarks  
+ The restart manager uses the `CDataRecoveryHandler` class to keep track of all open documents and to autosave them as necessary. To enable autosave, use the [CDataRecoveryHandler::SetSaveDocumentInfoOnIdle](#setsavedocumentinfoonidle) method. This method directs the `CDataRecoveryHandler` to perform an autosave on the next idle loop. The restart manager calls `SetSaveDocumentInfoOnIdle` when the `CDataRecoveryHandler` should perform an autosave.  
   
- 因為`CDataRecoveryHandler`類別緊密地連接到重新啟動管理員，`CDataRecoveryHandler`取決於全域參數`m_dwRestartManagerSupportFlags`。 這個參數會決定哪些權限重新啟動管理員和與您的應用程式互動的方式。 若要併入現有的應用程式重新啟動管理員，您必須指派`m_dwRestartManagerSupportFlags`主應用程式的建構函式中的適當值。 如需如何使用 重新啟動管理員的詳細資訊，請參閱[如何︰ 加入重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)。  
+ All of the methods of the `CDataRecoveryHandler` class are virtual. Override the methods in this class to create your own custom data recovery handler. Unless you create your own data recovery handler or restart manager, do not instantiate a CDataRecoveryHandler. The [CWinApp Class](../../mfc/reference/cwinapp-class.md) creates a `CDataRecoveryHandler` object as it is required.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdatarecovery.h  
+ Before you can use a `CDataRecoveryHandler` object, you must call [CDataRecoveryHandler::Initialize](#initialize).  
   
-##  <a name="autosavealldocumentinfo"></a>CDataRecoveryHandler::AutosaveAllDocumentInfo  
- 使用註冊的每個檔案時，自動儲存`CDataRecoveryHandler`類別。  
+ Because the `CDataRecoveryHandler` class is closely connected to the restart manager, `CDataRecoveryHandler` depends on the global parameter `m_dwRestartManagerSupportFlags`. This parameter determines what permissions the restart manager has and how it interacts with your application. To incorporate the restart manager into an existing application, you have to assign `m_dwRestartManagerSupportFlags` the appropriate value in the constructor of your main application. For more information about how to use the restart manager, see [How to: Add Restart Manager Support](../../mfc/how-to-add-restart-manager-support.md).  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdatarecovery.h  
+  
+##  <a name="autosavealldocumentinfo"></a>  CDataRecoveryHandler::AutosaveAllDocumentInfo  
+ Autosaves each file registered with the `CDataRecoveryHandler` class.  
   
 ```  
 virtual BOOL AutosaveAllDocumentInfo();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果`CDataRecoveryHandler`儲存的文件。`FALSE`如果不儲存任何文件。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `CDataRecoveryHandler` saved all the documents; `FALSE` if any document was not saved.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳回`TRUE`如果沒有，您必須儲存的文件。 它也會傳回`TRUE`而不儲存任何文件，如果擷取`CWinApp`或`CDocManager`應用程式會產生錯誤。  
+### <a name="remarks"></a>Remarks  
+ This method returns `TRUE` if there are no documents that must be saved. It also returns `TRUE` without saving any documents if retrieving the `CWinApp` or `CDocManager` for the application generates an error.  
   
- 請使用此方法，`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`或`AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL`必須在設定`m_dwRestartManagerSupportFlags`。 請參閱[m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)取得更多資訊。  
+ To use this method, either `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` or `AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL` must be set in `m_dwRestartManagerSupportFlags`. See [m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags) for more information.  
   
-##  <a name="autosavedocumentinfo"></a>CDataRecoveryHandler::AutosaveDocumentInfo  
- 時，自動儲存指定的文件。  
+##  <a name="autosavedocumentinfo"></a>  CDataRecoveryHandler::AutosaveDocumentInfo  
+ Autosaves the specified document.  
   
 ```  
 virtual BOOL AutosaveDocumentInfo(
@@ -173,29 +200,29 @@ virtual BOOL AutosaveDocumentInfo(
     BOOL bResetModifiedFlag = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `pDocument`|指標`CDocument`儲存。|  
-|[in] `bResetModifiedFlag`|`TRUE`表示`CDataRecoveryHandler`會考慮`pDocument`要修改;`FALSE`表示架構會考慮`pDocument`是未修改。 請參閱 < 備註 > 一節，如需詳細資訊的影響，此旗標。|  
+|Parameter|Description|  
+|[in] `pDocument`|A pointer to the `CDocument` to save.|  
+|[in] `bResetModifiedFlag`|`TRUE` indicates that the `CDataRecoveryHandler` considers `pDocument` to be modified; `FALSE` indicates that the framework considers `pDocument` to be unmodified. See the Remarks section for more information about the effect of this flag.|  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已設定適當的旗標和`pDocument`有效`CDocument`物件。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the appropriate flags are set and `pDocument` is a valid `CDocument` object.  
   
-### <a name="remarks"></a>備註  
- 每個`CDocument`物件具有旗標，指出是否已變更從上次儲存之後。 使用[CDocument::IsModified](../../mfc/reference/cdocument-class.md#ismodified)來判斷這個旗標的狀態。 如果`CDocument`最後一個檔案之後, 並未變更`AutosaveDocumentInfo`刪除該文件的任何 autosaved 檔案。 如果文件已經從上次儲存後，關閉它會提示使用者儲存文件關閉前。  
+### <a name="remarks"></a>Remarks  
+ Each `CDocument` object has a flag that indicates if it has changed since the last save. Use [CDocument::IsModified](../../mfc/reference/cdocument-class.md#ismodified) to determine the state of this flag. If a `CDocument` has not changed since the last save, `AutosaveDocumentInfo` deletes any autosaved files for that document. If a document has changed since the last save, closing it prompts the user to save the document before closing.  
   
 > [!NOTE]
->  使用`bResetModifiedFlag`將文件的狀態變更為 「 未修改可能會導致使用者遺失未儲存的資料。 如果架構將視為不想修改的文件，關閉它不會提示使用者儲存。  
+>  Using `bResetModifiedFlag` to change the state of the document to unmodified may cause the user to lose unsaved data. If the framework considers a document unmodified, closing it does not prompt the user to save.  
   
- 這個方法會擲回的例外狀況[ASSERT](diagnostic-services.md#assert)巨集如果`pDocument`不是有效`CDocument`物件。  
+ This method throws an exception with the [ASSERT](diagnostic-services.md#assert) macro if `pDocument` is not a valid `CDocument` object.  
   
- 請使用此方法，`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`或`AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL`必須在設定`m_dwRestartManagerSupportFlags`。   
+ To use this method, either `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` or `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` must be set in `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="cdatarecoveryhandler"></a>CDataRecoveryHandler::CDataRecoveryHandler  
- 建構 `CDataRecoveryHandler` 物件。  
+##  <a name="cdatarecoveryhandler"></a>  CDataRecoveryHandler::CDataRecoveryHandler  
+ Constructs a `CDataRecoveryHandler` object.  
   
 ```  
 CDataRecoveryHandler(
@@ -203,416 +230,416 @@ CDataRecoveryHandler(
     int nAutosaveInterval);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `dwRestartManagerSupportFlags`|指出哪些選項重新啟動管理員支援。|  
-|[in] `nAutosaveInterval`|時，自動儲存之間的時間。 這個參數是以毫秒為單位。|  
+|Parameter|Description|  
+|[in] `dwRestartManagerSupportFlags`|Indicates which options of the restart manager are supported.|  
+|[in] `nAutosaveInterval`|The time between autosaves. This parameter is in milliseconds.|  
   
-### <a name="remarks"></a>備註  
- MFC 架構會自動建立`CDataRecoveryHandler`當您使用您的應用程式的物件**新專案**精靈。 除非您要自訂的資料復原行為或重新啟動管理員，您不應建立`CDataRecoveryHandler`物件。  
+### <a name="remarks"></a>Remarks  
+ The MFC framework automatically creates a `CDataRecoveryHandler` object for your application when you use the **New Project** wizard. Unless you are customizing the data recovery behavior or the restart manager, you should not create a `CDataRecoveryHandler` object.  
   
   
-##  <a name="createdocumentinfo"></a>CDataRecoveryHandler::CreateDocumentInfo  
- 將文件加入至開啟的文件的清單。  
+##  <a name="createdocumentinfo"></a>  CDataRecoveryHandler::CreateDocumentInfo  
+ Adds a document to the list of open documents.  
   
 ```  
 virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `pDocument`|指標`CDocument`。 這個方法會建立這個文件資訊`CDocument`。|  
+|Parameter|Description|  
+|[in] `pDocument`|A pointer to a `CDocument`. This method creates the document information for this `CDocument`.|  
   
-### <a name="return-value"></a>傳回值  
- 預設實作會傳回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ The default implementation returns `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 如果這個方法會檢查`pDocument`再增加文件已經是清單中的文件。 如果`pDocument`已經在清單中，這個方法與相關聯 autosaved 檔案刪除`pDocument`。  
+### <a name="remarks"></a>Remarks  
+ This method checks if `pDocument` is already in the list of documents before it adds the document. If `pDocument` is already in the list, this method deletes the autosaved file associated with `pDocument`.  
   
- 請使用此方法，`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`或`AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL`必須在設定`m_dwRestartManagerSupportFlags`。 
+ To use this method, either `AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART` or `AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL` must be set in `m_dwRestartManagerSupportFlags`. 
   
-##  <a name="deleteallautosavedfiles"></a>CDataRecoveryHandler::DeleteAllAutosavedFiles  
- 刪除所有目前的 autosaved 檔案。  
+##  <a name="deleteallautosavedfiles"></a>  CDataRecoveryHandler::DeleteAllAutosavedFiles  
+ Deletes all the current autosaved files.  
   
 ```  
 virtual BOOL DeleteAllAutosavedFiles();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 預設實作一定會傳回`TRUE`。  
+### <a name="return-value"></a>Return Value  
+ The default implementation always returns `TRUE`.  
   
-##  <a name="deleteautosavedfile"></a>CDataRecoveryHandler::DeleteAutosavedFile  
- 刪除指定的 autosaved 檔案。  
+##  <a name="deleteautosavedfile"></a>  CDataRecoveryHandler::DeleteAutosavedFile  
+ Deletes the specified autosaved file.  
   
 ```  
 virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `strAutosavedFile`|包含 autosaved 檔案名稱的字串。|  
+|Parameter|Description|  
+|[in] `strAutosavedFile`|A string that contains the autosaved file name.|  
   
-### <a name="return-value"></a>傳回值  
- 預設實作永遠會傳回`TRUE`。  
+### <a name="return-value"></a>Return Value  
+ The default implementation always return `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 如果這個方法無法刪除 autosaved 檔案，它會將儲存的檔案名稱清單。 解構函式`CDataRecoveryHandler`嘗試刪除該清單中指定每個 autosaved 檔案。  
+### <a name="remarks"></a>Remarks  
+ If this method cannot delete the autosaved file, it saves the name of the file in a list. The destructor for the `CDataRecoveryHandler` tries to delete each autosaved file specified in that list.  
   
-##  <a name="generateautosavefilename"></a>CDataRecoveryHandler::GenerateAutosaveFileName  
- 會產生與提供的文件檔案名稱相關聯的自動儲存檔案的名稱。  
+##  <a name="generateautosavefilename"></a>  CDataRecoveryHandler::GenerateAutosaveFileName  
+ Generates the name for an autosave file associated with the supplied document file name.  
   
 ```  
 virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `strDocumentName`  
- 包含文件名稱的字串。 `GenerateAutosaveFileName`使用此文件名稱以產生對應的自動儲存檔案名稱。  
+ A string that contains the document name. `GenerateAutosaveFileName` uses this document name to generate a corresponding autosave file name.  
   
-### <a name="return-value"></a>傳回值  
- 從產生的自動儲存檔案名稱`strDocumentName`。  
+### <a name="return-value"></a>Return Value  
+ The autosave file name generated from `strDocumentName`.  
   
-### <a name="remarks"></a>備註  
- 每個文件名稱會有一對一的對應，以自動儲存檔案名稱。  
+### <a name="remarks"></a>Remarks  
+ Each document name has a one-to-one mapping with an autosave file name.  
   
-##  <a name="getautosaveinterval"></a>CDataRecoveryHandler::GetAutosaveInterval  
- 傳回 還是會嘗試之間的間隔。  
+##  <a name="getautosaveinterval"></a>  CDataRecoveryHandler::GetAutosaveInterval  
+ Returns the interval between autosave tries.  
   
 ```  
 virtual int GetAutosaveInterval() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 會嘗試自動儲存之間的毫秒數。  
+### <a name="return-value"></a>Return Value  
+ The number of milliseconds between autosave tries.  
   
-##  <a name="getautosavepath"></a>CDataRecoveryHandler::GetAutosavePath  
- 傳回 autosaved 檔案的路徑。  
+##  <a name="getautosavepath"></a>  CDataRecoveryHandler::GetAutosavePath  
+ Returns the path of the autosaved files.  
   
 ```  
 virtual CString GetAutosavePath() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 儲存 autosaved 文件位置。  
+### <a name="return-value"></a>Return Value  
+ The location where the autosaved documents are stored.  
   
-##  <a name="getdocumentlistname"></a>CDataRecoveryHandler::GetDocumentListName  
- 擷取的文件名稱`CDocument`物件。  
+##  <a name="getdocumentlistname"></a>  CDataRecoveryHandler::GetDocumentListName  
+ Retrieves the document name from a `CDocument` object.  
   
 ```  
 virtual CString GetDocumentListName(CDocument* pDocument) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `pDocument`|指標`CDocument`。 `GetDocumentListName`從這個擷取的文件名稱`CDocument`。|  
+|Parameter|Description|  
+|[in] `pDocument`|A pointer to a `CDocument`. `GetDocumentListName` retrieves the document name from this `CDocument`.|  
   
-### <a name="return-value"></a>傳回值  
- 文件名稱，從`pDocument`。  
+### <a name="return-value"></a>Return Value  
+ The document name from `pDocument`.  
   
-### <a name="remarks"></a>備註  
- `CDataRecoveryHandler`使用中的索引鍵與文件名稱`m_mapDocNameToAutosaveName`， `m_mapDocNameToDocumentPtr`，和`m_mapDocNameToRestoreBool`。 這些參數會啟用`CDataRecoveryHandler`監視`CDocument`物件、 自動儲存檔案名稱和自動儲存設定。  
+### <a name="remarks"></a>Remarks  
+ The `CDataRecoveryHandler` uses the document name as the key in `m_mapDocNameToAutosaveName`, `m_mapDocNameToDocumentPtr`, and `m_mapDocNameToRestoreBool`. These parameter enable the `CDataRecoveryHandler` to monitor `CDocument` objects, the autosave file name, and the autosave settings.  
   
-##  <a name="getnormaldocumenttitle"></a>CDataRecoveryHandler::GetNormalDocumentTitle  
- 擷取指定的文件的一般標題。  
+##  <a name="getnormaldocumenttitle"></a>  CDataRecoveryHandler::GetNormalDocumentTitle  
+ Retrieves the normal title for the specified document.  
   
 ```  
 virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `pDocument`|指標`CDocument`。|  
+|Parameter|Description|  
+|[in] `pDocument`|A pointer to a `CDocument`.|  
   
-### <a name="return-value"></a>傳回值  
- 指定的文件的一般的標題。  
+### <a name="return-value"></a>Return Value  
+ The normal title for the specified document.  
   
-### <a name="remarks"></a>備註  
- 一般文件的標題通常是不含路徑的文件的檔案名稱。 這是中的標題**檔案名稱**欄位**存** 對話方塊。  
+### <a name="remarks"></a>Remarks  
+ The normal title of a document is usually the file name of the document without the path. This is the title in the **File name** field of the **Save As** dialog box.  
   
-##  <a name="getrecovereddocumenttitle"></a>CDataRecoveryHandler::GetRecoveredDocumentTitle  
- 建立並傳回復原的文件的標題。  
+##  <a name="getrecovereddocumenttitle"></a>  CDataRecoveryHandler::GetRecoveredDocumentTitle  
+ Creates and returns the title for the recovered document.  
   
 ```  
 virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `strDocumentTitle`  
- 一般文件的標題。  
+ The normal title for the document.  
   
-### <a name="return-value"></a>傳回值  
- 復原的文件的標題。  
+### <a name="return-value"></a>Return Value  
+ The recovered document title.  
   
-### <a name="remarks"></a>備註  
- 根據預設，復原文件的標題是一般的標題與**[復原]**附加。 復原的標題會顯示給使用者時`CDataRecoveryHandler`查詢使用者還原 autosaved 文件。  
+### <a name="remarks"></a>Remarks  
+ By default, the recovered title of a document is the normal title with **[recovered]** appended to it. The recovered title is displayed to the user when the `CDataRecoveryHandler` queries the user to restore autosaved documents.  
   
-##  <a name="getrestartidentifier"></a>CDataRecoveryHandler::GetRestartIdentifier  
- 擷取應用程式的唯一的重新啟動識別項。  
+##  <a name="getrestartidentifier"></a>  CDataRecoveryHandler::GetRestartIdentifier  
+ Retrieves the unique restart identifier for the application.  
   
 ```  
 virtual CString GetRestartIdentifier() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 重新啟動唯一識別項。  
+### <a name="return-value"></a>Return Value  
+ The unique restart identifier.  
   
-### <a name="remarks"></a>備註  
- 重新啟動識別項是唯一的應用程式每次執行。  
+### <a name="remarks"></a>Remarks  
+ The restart identifier is unique for each execution of the application.  
   
- `CDataRecoveryHandler`儲存在登錄中目前開啟的文件的相關資訊。 當重新啟動管理員會結束應用程式，並將它重新啟動時，它提供的重新啟動識別項`CDataRecoveryHandler`。 `CDataRecoveryHandler`擷取先前開啟的文件清單中使用的重新啟動識別項。 這可讓`CDataRecoveryHandler`尋找並還原 autosaved 檔案再試一次。  
+ The `CDataRecoveryHandler` stores information in the registry about the currently open documents. When the restart manager exits an application and restarts it, it supplies the restart identifier to the `CDataRecoveryHandler`. The `CDataRecoveryHandler` uses the restart identifier to retrieve the list of previously open documents. This enables the `CDataRecoveryHandler` to try to find and restore autosaved files.  
   
-##  <a name="getsavedocumentinfoonidle"></a>CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
- 指出是否`CDataRecoveryHandler`自動儲存對目前的閒置迴圈。  
+##  <a name="getsavedocumentinfoonidle"></a>  CDataRecoveryHandler::GetSaveDocumentInfoOnIdle  
+ Indicates whether the `CDataRecoveryHandler` performs an autosave on the current idle loop.  
   
 ```  
 virtual BOOL GetSaveDocumentInfoOnIdle() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`指出`CDataRecoveryHandler`時，自動儲存在目前的閒置迴圈。`FALSE`表示它並不會。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` indicates the `CDataRecoveryHandler` autosaves on the current idle loop; `FALSE` indicates it does not.  
   
-##  <a name="getshutdownbyrestartmanager"></a>CDataRecoveryHandler::GetShutdownByRestartManager  
- 指出是否重新啟動管理員會造成應用程式結束。  
+##  <a name="getshutdownbyrestartmanager"></a>  CDataRecoveryHandler::GetShutdownByRestartManager  
+ Indicates whether the restart manager caused the application to exit.  
   
 ```  
 virtual BOOL GetShutdownByRestartManager() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`指出重新啟動管理員造成應用程式結束。`FALSE`表示它不提供支援。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` indicates the restart manager caused the application to exit; `FALSE` indicates it did not.  
   
-##  <a name="initialize"></a>CDataRecoveryHandler::Initialize  
- 初始化 `CDataRecoveryHandler`。  
+##  <a name="initialize"></a>  CDataRecoveryHandler::Initialize  
+ Initializes the `CDataRecoveryHandler`.  
   
 ```  
 virtual BOOL Initialize();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果初始化成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the initialization is successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 初始化處理程序載入用於儲存從登錄自動儲存檔案的路徑。 如果`Initialize`方法找不到此目錄，或如果路徑是`NULL`，`Initialize`會失敗並傳回`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ The initialization process loads the path for storing autosave files from the registry. If the `Initialize` method cannot find this directory or if the path is `NULL`, `Initialize` fails and returns `FALSE`.  
   
- 使用[CDataRecoveryHandler::SetAutosavePath](#setautosavepath)來變更自動儲存路徑之後您的應用程式初始化, `CDataRecoveryHandler`。  
+ Use [CDataRecoveryHandler::SetAutosavePath](#setautosavepath) to change the autosave path after your application initializes the `CDataRecoveryHandler`.  
   
- `Initialize`方法也會啟動計時器來監視何時發生下一步 自動儲存。 使用[CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval)變更自動儲存間隔之後您的應用程式初始化, `CDataRecoveryHandler`。  
+ The `Initialize` method also starts a timer to monitor when the next autosave occurs. Use [CDataRecoveryHandler::SetAutosaveInterval](#setautosaveinterval) to change the autosave interval after your application initializes the `CDataRecoveryHandler`.  
   
-##  <a name="queryrestoreautosaveddocuments"></a>CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
- 向使用者顯示的對話方塊中的每個文件`CDataRecoveryHandler`autosaved。 對話方塊會決定使用者是否想要還原 autosaved 文件。  
+##  <a name="queryrestoreautosaveddocuments"></a>  CDataRecoveryHandler::QueryRestoreAutosavedDocuments  
+ Displays a dialog box to the user for each document that the `CDataRecoveryHandler` autosaved. The dialog box determines whether the user wants to restore the autosaved document.  
   
 ```  
 virtual void QueryRestoreAutosavedDocuments();
 ```  
   
-### <a name="remarks"></a>備註  
- 如果您的應用程式是 Unicode，這個方法會顯示[CTaskDialog](../../mfc/reference/ctaskdialog-class.md)給使用者。 否則，架構會使用[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)向使用者查詢。  
+### <a name="remarks"></a>Remarks  
+ If your application is Unicode, this method displays a [CTaskDialog](../../mfc/reference/ctaskdialog-class.md) to the user. Otherwise, the framework uses [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) to query the user.  
   
- 之後`QueryRestoreAutosavedDocuments`收集所有回應來自使用者，它將資訊儲存在成員變數`m_mapDocNameToRestoreBool`。 這個方法不會還原 autosaved 文件。  
+ After `QueryRestoreAutosavedDocuments` gathers all the responses from the user, it stores the information in the member variable `m_mapDocNameToRestoreBool`. This method does not restore the autosaved documents.  
   
-##  <a name="readopendocumentlist"></a>CDataRecoveryHandler::ReadOpenDocumentList  
- 從登錄載入開啟的文件清單。  
+##  <a name="readopendocumentlist"></a>  CDataRecoveryHandler::ReadOpenDocumentList  
+ Loads the open document list from the registry.  
   
 ```  
 virtual BOOL ReadOpenDocumentList();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`表示`ReadOpenDocumentList`從登錄; 載入至少一個文件的資訊`FALSE`指出載入任何文件資訊。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` indicates that `ReadOpenDocumentList` loaded the information for at least one document from the registry; `FALSE` indicates no document information was loaded.  
   
-### <a name="remarks"></a>備註  
- 此函式會從登錄載入開啟的文件資訊，並將它儲存在成員變數`m_mapDocNameToAutosaveName`。  
+### <a name="remarks"></a>Remarks  
+ This function loads the open document information from the registry and stores it in the member variable `m_mapDocNameToAutosaveName`.  
   
- 之後`ReadOpenDocumentList`載入所有的資料，它會從登錄中刪除文件資訊。  
+ After `ReadOpenDocumentList` loads all the data, it deletes the document information from the registry.  
   
-##  <a name="removedocumentinfo"></a>CDataRecoveryHandler::RemoveDocumentInfo  
- 從開啟的文件清單中移除提供的文件。  
+##  <a name="removedocumentinfo"></a>  CDataRecoveryHandler::RemoveDocumentInfo  
+ Removes the supplied document from the open document list.  
   
 ```  
 virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `pDocument`|要移除文件指標。|  
+|Parameter|Description|  
+|[in] `pDocument`|A pointer to the document to remove.|  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果`pDocument`已從清單中，移除`FALSE`如果發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if `pDocument` was removed from the list; `FALSE` if an error occurred.  
   
-### <a name="remarks"></a>備註  
- 當使用者關閉文件時，架構會使用從開啟的文件的清單中移除這個方法。  
+### <a name="remarks"></a>Remarks  
+ When the user closes a document, the framework uses this method to remove it from the list of open documents.  
   
- 如果`RemoveDocumentInfo`找不到`pDocument`在開啟的文件清單中，它不做任何動作，並傳回`TRUE`。  
+ If `RemoveDocumentInfo` cannot find `pDocument` in the list of open documents, it does nothing and returns `TRUE`.  
   
- 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定`m_dwRestartManagerSupportFlags`。   
+ To use this method, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` must be set in `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="reopenpreviousdocuments"></a>CDataRecoveryHandler::ReopenPreviousDocuments  
- 會開啟先前開啟的文件。  
+##  <a name="reopenpreviousdocuments"></a>  CDataRecoveryHandler::ReopenPreviousDocuments  
+ Opens the previously open documents.  
   
 ```  
 virtual BOOL ReopenPreviousDocuments();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果至少一個文件已開啟。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if at least one document was opened; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會開啟最近儲存的先前開啟的文件。 如果不儲存文件或 autosaved，`ReopenPreviousDocuments`開啟該檔案類型的範本為基礎的空白文件。  
+### <a name="remarks"></a>Remarks  
+ This method opens the most recent save of the previously open documents. If a document was not saved or autosaved, `ReopenPreviousDocuments` opens a blank document based on the template for that file type.  
   
- 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定`m_dwRestartManagerSupportFlags`。 如果未設定此參數，`ReopenPreviousDocuments`不做任何動作，並傳回`FALSE`。  
+ To use this method, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` must be set in `m_dwRestartManagerSupportFlags`. If this parameter is not set, `ReopenPreviousDocuments` does nothing and returns `FALSE`.  
   
- 如果沒有儲存先前開啟的文件的清單中的文件`ReopenPreviousDocuments`不做任何動作，並傳回`FALSE`。  
+ If there are no documents stored in the list of previously open documents, `ReopenPreviousDocuments` does nothing and returns `FALSE`.  
   
-##  <a name="restoreautosaveddocuments"></a>CDataRecoveryHandler::RestoreAutosavedDocuments  
- 還原根據使用者輸入的 autosaved 文件。  
+##  <a name="restoreautosaveddocuments"></a>  CDataRecoveryHandler::RestoreAutosavedDocuments  
+ Restores the autosaved documents based on user input.  
   
 ```  
 virtual BOOL RestoreAutosavedDocuments();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果這個方法已成功還原文件。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method successfully restores the documents.  
   
-### <a name="remarks"></a>備註  
- 這個方法會呼叫[CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments)來判斷其記錄使用者想要還原。 如果使用者決定不 autosaved 文件還原`RestoreAutosavedDocuments`刪除自動儲存檔案。 否則，`RestoreAutosavedDocuments`取代 autosaved 版本中開啟的文件。  
+### <a name="remarks"></a>Remarks  
+ This method calls [CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments) to determine which documents the user wants to restore. If a user decides not to restore an autosaved document, `RestoreAutosavedDocuments` deletes the autosave file. Otherwise, `RestoreAutosavedDocuments` replaces the open document with the autosaved version.  
   
- 請使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`或`AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES`必須在設定`m_dwRestartManagerSupportFlags`。   
+ To use this method, either `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` or `AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES` must be set in `m_dwRestartManagerSupportFlags`.   
   
-##  <a name="saveopendocumentlist"></a>CDataRecoveryHandler::SaveOpenDocumentList  
- 將目前開啟的文件的清單儲存至 Windows 登錄。  
+##  <a name="saveopendocumentlist"></a>  CDataRecoveryHandler::SaveOpenDocumentList  
+ Saves the current list of open documents to the Windows registry.  
   
 ```  
 virtual BOOL SaveOpenDocumentList();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果沒有任何開啟的文件儲存，或它們已成功儲存。 `FALSE`如果文件儲存至登錄，但它們未儲存，因為發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if there are no open documents to save or if they were saved successfully. `FALSE` if there are documents to save to the registry, but they were not saved because an error occurred.  
   
-### <a name="remarks"></a>備註  
- 重新啟動管理員呼叫`SaveOpenDocumentList`應用程式時意外結束，或當它會結束升級。 當應用程式重新啟動時，它會使用[CDataRecoveryHandler::ReadOpenDocumentList](#readopendocumentlist)擷取開啟的文件的清單。  
+### <a name="remarks"></a>Remarks  
+ The restart manager calls `SaveOpenDocumentList` when the application exits unexpectedly or when it exits for an upgrade. When the application restarts, it uses [CDataRecoveryHandler::ReadOpenDocumentList](#readopendocumentlist) to retrieve the list of open documents.  
   
- 這個方法會將儲存開啟的文件的清單。 此方法[CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo)負責儲存文件本身。  
+ This method saves only the list of open documents. The method [CDataRecoveryHandler::AutosaveDocumentInfo](#autosavedocumentinfo) is responsible for saving the documents themselves.  
   
-##  <a name="setautosaveinterval"></a>CDataRecoveryHandler::SetAutosaveInterval  
- 設定以毫秒為單位的自動儲存循環之間的時間。  
+##  <a name="setautosaveinterval"></a>  CDataRecoveryHandler::SetAutosaveInterval  
+ Sets the time between autosave cycles in milliseconds.  
   
 ```  
 Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nAutosaveInterval`  
- 新的自動儲存間隔以毫秒為單位。  
+ The new autosave interval in milliseconds.  
   
-##  <a name="setautosavepath"></a>CDataRecoveryHandler::SetAutosavePath  
- 設定 autosaved 檔案儲存所在的目錄。  
+##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
+ Sets the directory where autosaved files are stored.  
   
 ```  
 virtual void SetAutosavePath(const CString& strAutosavePath);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `strAutosavePath`|儲存自動儲存檔案的路徑。|  
+|Parameter|Description|  
+|[in] `strAutosavePath`|The path where autosave files are stored.|  
   
-### <a name="remarks"></a>備註  
- 變更自動儲存目錄不會移動目前 autosaved 檔案。  
+### <a name="remarks"></a>Remarks  
+ Changing the autosave directory does not move currently autosaved files.  
   
-##  <a name="setrestartidentifier"></a>CDataRecoveryHandler::SetRestartIdentifier  
- 設定這個執行個體的唯一重新啟動識別碼`CDataRecoveryHandler`。  
+##  <a name="setrestartidentifier"></a>  CDataRecoveryHandler::SetRestartIdentifier  
+ Sets the unique restart identifier for this instance of the `CDataRecoveryHandler`.  
   
 ```  
 virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `strRestartIdentifier`|重新啟動管理員唯一識別項。|  
+|Parameter|Description|  
+|[in] `strRestartIdentifier`|The unique identifier for the restart manager.|  
   
-### <a name="remarks"></a>備註  
- 重新啟動管理員會記錄在登錄中開啟的文件的相關資訊。 這項資訊會儲存具有唯一的重新啟動識別項，做為索引鍵。 重新啟動識別項是唯一的應用程式的每個執行個體，因為應用程式的多個執行個體可能會非預期地結束，並重新啟動管理員可以復原每個。  
+### <a name="remarks"></a>Remarks  
+ The restart manager records information about the open documents in the registry. This information is stored with the unique restart identifier as the key. Because the restart identifier is unique for each instance of an application, multiple instances of an application may exit unexpectedly and the restart manager can recover each of them.  
   
-##  <a name="setsavedocumentinfoonidle"></a>CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
- 設定是否`CDataRecoveryHandler`目前閒置週期期間，將開啟的文件資訊儲存至 Windows 登錄。  
+##  <a name="setsavedocumentinfoonidle"></a>  CDataRecoveryHandler::SetSaveDocumentInfoOnIdle  
+ Sets whether the `CDataRecoveryHandler` saves the open document information to the Windows registry during the current idle cycle.  
   
 ```  
 virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `bSaveOnIdle`|`TRUE`若要儲存在目前的閒置週期; 文件資訊`FALSE to not perform a save`.|  
+|Parameter|Description|  
+|[in] `bSaveOnIdle`|`TRUE` to save document information during the current idle cycle; `FALSE to not perform a save`.|  
   
-##  <a name="setshutdownbyrestartmanager"></a>CDataRecoveryHandler::SetShutdownByRestartManager  
- 設定是否重新啟動管理員先前的應用程式結束所造成。  
+##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
+ Sets whether the previous exit of the application was caused by the restart manager.  
   
 ```  
 virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `bShutdownByRestartManager`|`TRUE`指出重新啟動管理員造成應用程式結束。`FALSE`以指出應用程式已結束，因為其他原因。|  
+|Parameter|Description|  
+|[in] `bShutdownByRestartManager`|`TRUE` to indicate that the restart manager caused the application to exit; `FALSE` to indicate that the application exited for another reason.|  
   
-### <a name="remarks"></a>備註  
- 架構的行為上先前的結束是否非預期或已重新啟動管理員來起始而有所不同。  
+### <a name="remarks"></a>Remarks  
+ The framework behaves differently based on whether the previous exit was unexpected or whether it was initiated by the restart manager.  
   
-##  <a name="updatedocumentinfo"></a>CDataRecoveryHandler::UpdateDocumentInfo  
- 因為使用者可以儲存它，請更新文件的資訊。  
+##  <a name="updatedocumentinfo"></a>  CDataRecoveryHandler::UpdateDocumentInfo  
+ Updates the information for a document because the user saved it.  
   
 ```  
 virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `pDocument`|儲存的文件指標。|  
+|Parameter|Description|  
+|[in] `pDocument`|A pointer to the saved document.|  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法刪除 autosaved 文件且已更新文件的資訊。`FALSE`如果發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method deleted the autosaved document and updated the document information; `FALSE` if an error occurred.  
   
-### <a name="remarks"></a>備註  
- 當使用者儲存文件時，應用程式會移除 autosaved 檔案，因為它已不再需要。 `UpdateDocumentInfo`藉由呼叫刪除 autosaved 檔案[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)。 `UpdateDocumentInfo`將資訊從`pDocument`清單目前開啟文件因為`RemoveDocumentInfo`刪除該資訊之後，但是已儲存文件仍為開啟。  
+### <a name="remarks"></a>Remarks  
+ When a user saves a document, the application removes the autosaved file because it is no longer needed. `UpdateDocumentInfo` deletes the autosaved file by calling [CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo). `UpdateDocumentInfo` then adds the information from `pDocument` to the list of currently open documents because `RemoveDocumentInfo` deletes that information, but the saved document is still open.  
   
- 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定`m_dwRestartManagerSupportFlags`。   
+ To use this method, `AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES` must be set in `m_dwRestartManagerSupportFlags`.   
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [如何：新增重新啟動管理員支援](../../mfc/how-to-add-restart-manager-support.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [How to: Add Restart Manager Support](../../mfc/how-to-add-restart-manager-support.md)
 
 

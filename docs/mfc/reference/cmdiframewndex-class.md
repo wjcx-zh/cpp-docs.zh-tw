@@ -1,11 +1,11 @@
 ---
-title: "Cmdiframewndex 是類別 |Microsoft 文件"
+title: CMDIFrameWndEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -89,7 +89,81 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMDIFrameWndEx class
+- CMDIFrameWndEx [MFC], ActiveItemRecalcLayout
+- CMDIFrameWndEx [MFC], AddPane
+- CMDIFrameWndEx [MFC], AdjustClientArea
+- CMDIFrameWndEx [MFC], AdjustDockingLayout
+- CMDIFrameWndEx [MFC], AreMDITabs
+- CMDIFrameWndEx [MFC], CanCovertControlBarToMDIChild
+- CMDIFrameWndEx [MFC], ControlBarToTabbedDocument
+- CMDIFrameWndEx [MFC], CreateDocumentWindow
+- CMDIFrameWndEx [MFC], CreateNewWindow
+- CMDIFrameWndEx [MFC], DockPane
+- CMDIFrameWndEx [MFC], DockPaneLeftOf
+- CMDIFrameWndEx [MFC], EnableAutoHidePanes
+- CMDIFrameWndEx [MFC], EnableDocking
+- CMDIFrameWndEx [MFC], EnableFullScreenMainMenu
+- CMDIFrameWndEx [MFC], EnableFullScreenMode
+- CMDIFrameWndEx [MFC], EnableLoadDockState
+- CMDIFrameWndEx [MFC], EnableMDITabbedGroups
+- CMDIFrameWndEx [MFC], EnableMDITabs
+- CMDIFrameWndEx [MFC], EnableMDITabsLastActiveActivation
+- CMDIFrameWndEx [MFC], EnablePaneMenu
+- CMDIFrameWndEx [MFC], EnableWindowsDialog
+- CMDIFrameWndEx [MFC], GetActivePopup
+- CMDIFrameWndEx [MFC], GetPane
+- CMDIFrameWndEx [MFC], GetDefaultResId
+- CMDIFrameWndEx [MFC], GetMDITabGroups
+- CMDIFrameWndEx [MFC], GetMDITabs
+- CMDIFrameWndEx [MFC], GetMDITabsContextMenuAllowedItems
+- CMDIFrameWndEx [MFC], GetMenuBar
+- CMDIFrameWndEx [MFC], GetRibbonBar
+- CMDIFrameWndEx [MFC], GetTearOffBars
+- CMDIFrameWndEx [MFC], GetToolbarButtonToolTipText
+- CMDIFrameWndEx [MFC], InsertPane
+- CMDIFrameWndEx [MFC], IsFullScreen
+- CMDIFrameWndEx [MFC], IsMDITabbedGroup
+- CMDIFrameWndEx [MFC], IsMemberOfMDITabGroup
+- CMDIFrameWndEx [MFC], IsMenuBarAvailable
+- CMDIFrameWndEx [MFC], IsPointNearDockSite
+- CMDIFrameWndEx [MFC], IsPrintPreview
+- CMDIFrameWndEx [MFC], LoadFrame
+- CMDIFrameWndEx [MFC], LoadMDIState
+- CMDIFrameWndEx [MFC], MDITabMoveToNextGroup
+- CMDIFrameWndEx [MFC], MDITabNewGroup
+- CMDIFrameWndEx [MFC], NegotiateBorderSpace
+- CMDIFrameWndEx [MFC], OnCloseDockingPane
+- CMDIFrameWndEx [MFC], OnCloseMiniFrame
+- CMDIFrameWndEx [MFC], OnClosePopupMenu
+- CMDIFrameWndEx [MFC], OnCmdMsg
+- CMDIFrameWndEx [MFC], OnDrawMenuImage
+- CMDIFrameWndEx [MFC], OnDrawMenuLogo
+- CMDIFrameWndEx [MFC], OnEraseMDIClientBackground
+- CMDIFrameWndEx [MFC], OnMenuButtonToolHitTest
+- CMDIFrameWndEx [MFC], OnMoveMiniFrame
+- CMDIFrameWndEx [MFC], OnSetPreviewMode
+- CMDIFrameWndEx [MFC], OnShowCustomizePane
+- CMDIFrameWndEx [MFC], OnShowMDITabContextMenu
+- CMDIFrameWndEx [MFC], OnShowPanes
+- CMDIFrameWndEx [MFC], OnShowPopupMenu
+- CMDIFrameWndEx [MFC], OnSizeMDIClient
+- CMDIFrameWndEx [MFC], OnTearOffMenu
+- CMDIFrameWndEx [MFC], OnUpdateFrameMenu
+- CMDIFrameWndEx [MFC], PaneFromPoint
+- CMDIFrameWndEx [MFC], RecalcLayout
+- CMDIFrameWndEx [MFC], RemovePaneFromDockManager
+- CMDIFrameWndEx [MFC], SaveMDIState
+- CMDIFrameWndEx [MFC], SetPrintPreviewFrame
+- CMDIFrameWndEx [MFC], SetupToolbarMenu
+- CMDIFrameWndEx [MFC], ShowFullScreen
+- CMDIFrameWndEx [MFC], ShowPane
+- CMDIFrameWndEx [MFC], ShowWindowsDialog
+- CMDIFrameWndEx [MFC], TabbedDocumentToControlBar
+- CMDIFrameWndEx [MFC], UpdateCaption
+- CMDIFrameWndEx [MFC], UpdateMDITabbedBarsIcons
+- CMDIFrameWndEx [MFC], WinHelp
+- CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
+- CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 caps.latest.revision: 42
 author: mikeblome
@@ -110,16 +184,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b9946f59b9ed789604ac6a02d2148188831bae56
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd2c86f6aacf302deb7dc004fc12341a55af2658
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
-擴充功能的[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)，Windows 多重文件介面 (MDI) 框架視窗。  
+# <a name="cmdiframewndex-class"></a>CMDIFrameWndEx Class
+Extends the functionality of [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md), a Windows Multiple Document Interface (MDI) frame window.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMDIFrameWndEx : public CMDIFrameWnd  
@@ -127,104 +202,104 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|重新計算使用中的項目的配置。|  
-|`CMDIFrameWndEx::AddDockSite`|不使用這個方法。|  
-|[CMDIFrameWndEx::AddPane](#addpane)|向停駐的管理員 窗格。|  
-|[CMDIFrameWndEx::AdjustClientArea](#adjustclientarea)|減少工作區，以允許框線。|  
-|[CMDIFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|重新計算所有停駐窗格的配置。|  
-|[CMDIFrameWndEx::AreMDITabs](#aremditabs)|判斷是否已啟用 MDI 索引標籤功能或 MDI 索引標籤式群組功能。|  
-|[CMDIFrameWndEx::CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|若要判斷框架視窗是否可以轉換成索引標籤式文件的停駐窗格架構呼叫。|  
-|[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)|索引標籤式文件會將指定的停駐窗格。|  
-|[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|建立子文件視窗。|  
-|[CMDIFrameWndEx::CreateNewWindow](#createnewwindow)|若要建立新的視窗，架構呼叫。|  
-|`CMDIFrameWndEx::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|[CMDIFrameWndEx::DockPane](#dockpane)|框架視窗停駐於指定的窗格。|  
-|[CMDIFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|將窗格停駐在另一個窗格的左邊。|  
-|[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|啟用自動隱藏窗格模式在指定的側邊的主框架視窗停駐時。|  
-|[CMDIFrameWndEx::EnableDocking](#enabledocking)|啟用的停駐屬於 MDI 框架視窗的窗格。|  
-|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|顯示或隱藏全螢幕模式中的主功能表。|  
-|[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|啟用全螢幕模式，框架視窗。|  
-|[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|啟用或停用的銜接狀態的載入。|  
-|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|啟用或停用的 MDI 索引標籤式群組功能。|  
-|[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|啟用或停用 MDI 索引標籤功能。 啟用時，框架視窗會顯示每個 MDI 子視窗的索引標籤。|  
-|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|指定當使用者關閉目前的索引標籤是否應啟用 [最後一個使用中] 索引標籤。|  
-|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|啟用或停用自動建立及管理的快顯窗格功能表會顯示應用程式窗格的清單。  。|  
-|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|插入功能表項目的命令 ID 會呼叫[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)對話方塊。|  
-|[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|將指標傳回到目前顯示的快顯功能表。|  
-|[CMDIFrameWndEx::GetPane](#getpane)|將指標傳回至窗格中具有指定之的控制項 id。|  
-|[CMDIFrameWndEx::GetDefaultResId](#getdefaultresid)|傳回的 MDI 框架視窗的共用資源的識別碼。|  
-|[CMDIFrameWndEx::GetMDITabGroups](#getmditabgroups)|傳回一份 MDI 索引視窗。|  
-|[CMDIFrameWndEx::GetMDITabs](#getmditabs)|傳回加上底線的索引標籤式視窗的參考。|  
-|[CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|傳回旗標的組合，用來判定哪些內容功能表項目有效啟用 MDI 索引標籤式群組功能。|  
-|[CMDIFrameWndEx::GetMenuBar](#getmenubar)|傳回附加到的框架視窗的功能表列物件的指標。|  
-|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|擷取框架的功能區列控制項。|  
-|[CMDIFrameWndEx::GetTearOffBars](#gettearoffbars)|會傳回一份[CPane](../../mfc/reference/cpane-class.md)-衍生撕狀態的物件。|  
-|`CMDIFrameWndEx::GetThisClass`|若要取得的指標，架構呼叫[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
-|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|當應用程式顯示的工具列按鈕的工具提示時，由架構呼叫。|  
-|[CMDIFrameWndEx::InsertPane](#insertpane)|連接管理員會向指定的窗格。|  
-|[CMDIFrameWndEx::IsFullScreen](#isfullscreen)|判斷是否在全螢幕模式中的框架視窗。|  
-|[CMDIFrameWndEx::IsMDITabbedGroup](#ismditabbedgroup)|判斷是否已啟用 MDI 索引標籤式群組功能。|  
-|[CMDIFrameWndEx::IsMemberOfMDITabGroup](#ismemberofmditabgroup)|判斷指定的索引標籤式的視窗是否為 MDI 索引標籤式群組中的視窗的清單中。|  
-|[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|決定框架視窗是否有功能表列。|  
-|[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|判斷指定的點是否停駐位置附近。|  
-|[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|決定框架視窗是否處於預覽列印模式。|  
-|[CMDIFrameWndEx::LoadFrame](#loadframe)|建立框架視窗從資源資訊。 (覆寫 `CMDIFrameWnd::LoadFrame`。)|  
-|[Cmdiframewndex:: Loadmdistate](#loadmdistate)|載入指定的 MDI 索引標籤式群組的配置和先前開啟的文件的清單。|  
-|[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|將作用中的索引標籤從目前使用中的索引標籤式視窗移至下一個或前一個索引群組。|  
-|[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|建立新的索引標籤式的群組具有單一視窗。|  
-|[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|會在框架視窗的框線空間交涉 OLE 就地啟用期間。|  
-|[CMDIFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|當使用者按一下時，由框架呼叫**關閉**可停駐窗格上的按鈕。|  
-|[CMDIFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|當使用者按一下時，由框架呼叫**關閉**浮動的迷你框架視窗上的按鈕。|  
-|[CMDIFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|使用中的快顯功能表上處理時，由框架呼叫`WM_DESTROY`訊息。|  
-|[CMDIFrameWndEx::OnCmdMsg](#oncmdmsg)|傳送和分派命令訊息，並以更新命令使用者介面物件的架構所呼叫。|  
-|[CMDIFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|架構在繪製與功能表項目相關聯的映像時所呼叫。|  
-|[CMDIFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|由架構呼叫時[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)處理程序`WM_PAINT`訊息。|  
-|[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|MDI 框架視窗程序時，由框架呼叫`WM_ERASEBKGND`訊息。|  
-|[CMDIFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|由架構呼叫時[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件處理程序`WM_NCHITTEST`訊息。|  
-|[CMDIFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|若要移動的迷你框架視窗，架構呼叫。|  
-|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|設定應用程式的主框架視窗預覽列印模式。 (覆寫[CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。)|  
-|[CMDIFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|啟動快速自訂窗格時，由架構呼叫。|  
-|[CMDIFrameWndEx::OnShowMDITabContextMenu](#onshowmditabcontextmenu)|由架構呼叫時應該顯示內容功能表，在其中一個索引標籤。 （有效的 MDI 索引標籤式群組只。）|  
-|[CMDIFrameWndEx::OnShowPanes](#onshowpanes)|若要顯示或隱藏窗格架構呼叫。|  
-|[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|架構在啟動快顯功能表時所呼叫。|  
-|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|架構的用戶端 MDI 視窗大小變更時呼叫。|  
-|[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|架構在啟動有分割列的功能表時所呼叫。|  
-|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|若要更新 [框架] 功能表架構呼叫。 (覆寫 `CMDIFrameWnd::OnUpdateFrameMenu`。)|  
-|[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|傳回包含指定的點的停駐窗格。|  
-|`CMDIFrameWndEx::PreTranslateMessage`|類別所使用的[CWinApp](../../mfc/reference/cwinapp-class.md)轉譯視窗訊息，再分派給[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。  (覆寫 `CMDIFrameWnd::PreTranslateMessage`。)|  
-|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|若要重新計算框架視窗的版面配置架構呼叫。 (覆寫[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。)|  
-|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊 窗格，並將它從停駐管理員移除。|  
-|[CMDIFrameWndEx::SaveMDIState](#savemdistate)|儲存目前的 MDI 索引標籤式群組的配置和先前所開啟的文件的清單。|  
-|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|設定預覽列印框架視窗。|  
-|[CMDIFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|藉由搜尋虛設項目並替換成指定的使用者定義項目，修改工具列物件。|  
-|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|切換至全螢幕模式一般模式從主框架。|  
-|[CMDIFrameWndEx::ShowPane](#showpane)|顯示或隱藏指定的窗格。|  
-|[CMDIFrameWndEx::ShowWindowsDialog](#showwindowsdialog)|建立[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)方塊，並將它開啟。|  
-|[CMDIFrameWndEx::TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|將指定的索引標籤式文件轉換為停駐窗格。|  
-|[CMDIFrameWndEx::UpdateCaption](#updatecaption)|若要更新的視窗框架標題架構呼叫。|  
-|[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|設定每個 MDI 索引標籤式窗格的圖示。|  
-|[CMDIFrameWndEx::WinHelp](#winhelp)|架構所呼叫以起始 WinHelp 應用程式或內容說明。 (覆寫[CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)。)|  
+|[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Recalculates the layout of the active item.|  
+|`CMDIFrameWndEx::AddDockSite`|This method is not used.|  
+|[CMDIFrameWndEx::AddPane](#addpane)|Registers a pane with the docking manager.|  
+|[CMDIFrameWndEx::AdjustClientArea](#adjustclientarea)|Reduces the client area to allow for a border.|  
+|[CMDIFrameWndEx::AdjustDockingLayout](#adjustdockinglayout)|Recalculates the layout of all docked panes.|  
+|[CMDIFrameWndEx::AreMDITabs](#aremditabs)|Determines whether the MDI Tabs feature or the MDI Tabbed Groups feature is enabled.|  
+|[CMDIFrameWndEx::CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|Called by the framework to determine whether the frame window can convert docking panes to tabbed documents.|  
+|[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)|Converts the specified docking pane to a tabbed document.|  
+|[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|Creates a child document window.|  
+|[CMDIFrameWndEx::CreateNewWindow](#createnewwindow)|Called by the framework to create a new window.|  
+|`CMDIFrameWndEx::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMDIFrameWndEx::DockPane](#dockpane)|Docks the specified pane to the frame window.|  
+|[CMDIFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|Docks one pane to the left of another pane.|  
+|[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|Enables auto-hide mode for panes when they are docked at specified sides of the main frame window.|  
+|[CMDIFrameWndEx::EnableDocking](#enabledocking)|Enables docking of the panes that belong to the MDI frame window.|  
+|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|Shows or hides the main menu in full-screen mode.|  
+|[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|Enables full-screen mode for the frame window.|  
+|[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|Enables or disables the loading of the docking state.|  
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|Enables or disables the MDI Tabbed Groups feature.|  
+|[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|Enables or disables the MDI Tabs feature. When enabled, the frame window displays a tab for each MDI child window.|  
+|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|Specifies whether the last active tab should be activated when the user closes the current tab.|  
+|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|Enables or disables automatic creation and management of the pop-up pane menu, which displays a list of application panes.  .|  
+|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|Inserts a menu item whose command ID calls a [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialog box.|  
+|[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|Returns a pointer to the currently displayed popup menu.|  
+|[CMDIFrameWndEx::GetPane](#getpane)|Returns a pointer to the pane that has the specified control ID.|  
+|[CMDIFrameWndEx::GetDefaultResId](#getdefaultresid)|Returns the ID of shared resources of the MDI frame window.|  
+|[CMDIFrameWndEx::GetMDITabGroups](#getmditabgroups)|Returns a list of MDI tabbed windows.|  
+|[CMDIFrameWndEx::GetMDITabs](#getmditabs)|Returns a reference to the underlined tabbed window.|  
+|[CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|Returns a combination of flags that determines what context menu items are valid when the MDI Tabbed Groups feature is enabled.|  
+|[CMDIFrameWndEx::GetMenuBar](#getmenubar)|Returns a pointer to a menu bar object attached to the frame window.|  
+|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|Retrieves the ribbon bar control for the frame.|  
+|[CMDIFrameWndEx::GetTearOffBars](#gettearoffbars)|Returns a list of [CPane](../../mfc/reference/cpane-class.md)-derived objects that are in a tear-off state.|  
+|`CMDIFrameWndEx::GetThisClass`|Called by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Called by the framework when the application displays the tooltip for a toolbar button.|  
+|[CMDIFrameWndEx::InsertPane](#insertpane)|Registers the specified pane with the docking manager.|  
+|[CMDIFrameWndEx::IsFullScreen](#isfullscreen)|Determines whether the frame window is in full-screen mode.|  
+|[CMDIFrameWndEx::IsMDITabbedGroup](#ismditabbedgroup)|Determines whether the MDI Tabbed Groups feature is enabled.|  
+|[CMDIFrameWndEx::IsMemberOfMDITabGroup](#ismemberofmditabgroup)|Determines whether the specified tabbed window is in the list of windows that are in MDI Tabbed Groups.|  
+|[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|Determines whether the frame window has a menu bar.|  
+|[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|Determines whether a specified point is near the dock site.|  
+|[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|Determines whether the frame window is in print-preview mode.|  
+|[CMDIFrameWndEx::LoadFrame](#loadframe)|Creates a frame window from resource information. (Overrides `CMDIFrameWnd::LoadFrame`.)|  
+|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|Loads the specified layout of MDI Tabbed Groups and the list of previously opened documents.|  
+|[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|Moves the active tab from the currently active tabbed window to the next or previous tabbed group.|  
+|[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|Creates a new tabbed group that has a single window.|  
+|[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|Negotiates border space in a frame window during OLE in-place activation.|  
+|[CMDIFrameWndEx::OnCloseDockingPane](#onclosedockingpane)|Called by the framework when the user clicks the **Close** button on a dockable pane.|  
+|[CMDIFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|Called by the framework when the user clicks the **Close** button on a floating mini frame window.|  
+|[CMDIFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|Called by the framework when an active pop-up menu processes a `WM_DESTROY` message.|  
+|[CMDIFrameWndEx::OnCmdMsg](#oncmdmsg)|Called by the framework to route and dispatch command messages and to update command user-interface objects.|  
+|[CMDIFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|Called by the framework when the image associated with a menu item is drawn.|  
+|[CMDIFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|Called by the framework when a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processes a `WM_PAINT` message.|  
+|[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|Called by the framework when the MDI frame window processes a `WM_ERASEBKGND` message.|  
+|[CMDIFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|Called by the framework when a [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)object processes a `WM_NCHITTEST` message.|  
+|[CMDIFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|Called by the framework to move a mini-frame window.|  
+|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|Sets the application's main frame window print-preview mode. (Overrides [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).)|  
+|[CMDIFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|Called by the framework when a Quick Customize pane is activated.|  
+|[CMDIFrameWndEx::OnShowMDITabContextMenu](#onshowmditabcontextmenu)|Called by the framework when a context menu should be displayed on one of the tabs. (Valid for MDI Tabbed Groups only.)|  
+|[CMDIFrameWndEx::OnShowPanes](#onshowpanes)|Called by the framework to show or hide panes.|  
+|[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|Called by the framework when a pop-up menu is activated.|  
+|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|Called by the framework when the size of the client MDI window is changing.|  
+|[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Called by the framework when a menu that has a tear-off bar is activated.|  
+|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Called by the framework to update the frame menu. (Overrides `CMDIFrameWnd::OnUpdateFrameMenu`.)|  
+|[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Returns the docking pane that contains the specified point.|  
+|`CMDIFrameWndEx::PreTranslateMessage`|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions.  (Overrides `CMDIFrameWnd::PreTranslateMessage`.)|  
+|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Called by the framework to recalculate the layout of the frame window. (Overrides [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|  
+|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Unregisters a pane and removes it from the docking manager.|  
+|[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Saves the current layout of MDI Tabbed Groups and the list of previously opened documents.|  
+|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|Sets the print preview frame window.|  
+|[CMDIFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|Modifies a toolbar object by searching for dummy items and replacing them with the specified user-defined items.|  
+|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|Switches the main frame from regular mode to full-screen mode.|  
+|[CMDIFrameWndEx::ShowPane](#showpane)|Shows or hides the specified pane.|  
+|[CMDIFrameWndEx::ShowWindowsDialog](#showwindowsdialog)|Creates a [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) box and opens it.|  
+|[CMDIFrameWndEx::TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|Converts the specified tabbed document to a docking pane.|  
+|[CMDIFrameWndEx::UpdateCaption](#updatecaption)|Called by the framework to update the window frame caption.|  
+|[CMDIFrameWndEx::UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|Sets the icon for each MDI tabbed pane.|  
+|[CMDIFrameWndEx::WinHelp](#winhelp)|Called by the framework to initiate the WinHelp application or context help. (Overrides [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).)|  
   
-### <a name="data-members"></a>資料成員  
+### <a name="data-members"></a>Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|判斷是否停駐窗格可以轉換成 MDI 子視窗。|  
-|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|啟用或停用的 MDI 子視窗的重繪最佳化。|  
+|[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|Determines whether docking panes can be converted to MDI child windows.|  
+|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|Enables or disables redraw optimization for MDI child windows.|  
   
-## <a name="remarks"></a>備註  
- 若要在 MDI 應用程式中利用自訂擴充的功能，可以衍生 MDI 框架視窗類別，從應用程式的`CMDIFrameWndEx`而不是`CMDIFrameWnd`。  
+## <a name="remarks"></a>Remarks  
+ To take advantage of extended customization features in your MDI application, derive the MDI frame window class of the application from `CMDIFrameWndEx` instead of `CMDIFrameWnd`.  
   
-## <a name="example"></a>範例  
- 下列範例是衍生自`CMDIFrameWndEx`。 此程式碼片段來自[DrawClient 範例︰ MFC Ribbon-Based OLE 物件的繪圖應用程式](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example derives a class from `CMDIFrameWndEx`. This code snippet comes from the [DrawClient Sample: MFC Ribbon-Based OLE Object Drawing Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient #&1;](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]  
+ [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -235,20 +310,20 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
  [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)  
   
- [Cmdiframewndex 是](../../mfc/reference/cmdiframewndex-class.md)  
+ [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxMDIFrameWndEx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxMDIFrameWndEx.h  
   
-##  <a name="activeitemrecalclayout"></a>CMDIFrameWndEx::ActiveItemRecalcLayout  
- 重新計算使用中的項目的配置。  
+##  <a name="activeitemrecalclayout"></a>  CMDIFrameWndEx::ActiveItemRecalcLayout  
+ Recalculates the layout of the active item.  
   
 ```  
 void ActiveItemRecalcLayout();
 ```  
   
-##  <a name="addpane"></a>CMDIFrameWndEx::AddPane  
- 向停駐的管理員 窗格。  
+##  <a name="addpane"></a>  CMDIFrameWndEx::AddPane  
+ Registers a pane with the docking manager.  
   
 ```  
 BOOL AddPane(
@@ -256,99 +331,99 @@ BOOL AddPane(
     BOOL bTail=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- [註冊] 窗格的指標。  
+ Pointer to the pane to register.  
   
  [in] `bTail`  
- 指定是否要將這個窗格加入至清單的結尾。  
+ Specifies whether to add this pane to the end of the list.  
   
-### <a name="return-value"></a>傳回值  
- 如果已成功註冊窗格會傳回非零值。 如果窗格已向停駐 manager，傳回 0。  
+### <a name="return-value"></a>Return Value  
+ Returns a non-zero value if the pane is registered successfully. Returns 0 if the pane is already registered with the docking manager.  
   
-### <a name="remarks"></a>備註  
- 每個窗格必須向[CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md)它可以參加的停駐配置之前。 使用此方法以通知停駐的經理想要停駐特定的窗格。 一旦註冊此窗格，會停駐管理員對齊根據其對齊設定和位置清單中的停駐的管理員所維護的窗格。  
+### <a name="remarks"></a>Remarks  
+ Each pane must be registered with the [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) before it can take a part in the docking layout. Use this method to notify the docking manager that you want to dock a specific pane. Once that pane is registered, the docking manager aligns it based on its alignment setting and position in the list of panes maintained by the docking manager.  
   
-##  <a name="adjustclientarea"></a>CMDIFrameWndEx::AdjustClientArea  
- 減少工作區，以允許框線。  
+##  <a name="adjustclientarea"></a>  CMDIFrameWndEx::AdjustClientArea  
+ Reduces the client area to allow for a border.  
   
 ```  
 virtual void AdjustClientArea();
 ```  
   
-##  <a name="adjustdockinglayout"></a>CMDIFrameWndEx::AdjustDockingLayout  
- 重新計算所有停駐窗格的配置。  
+##  <a name="adjustdockinglayout"></a>  CMDIFrameWndEx::AdjustDockingLayout  
+ Recalculates the layout of all docked panes.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `hdwp`  
- 識別多個視窗位置結構。 您可以取得此值，藉由呼叫`BeginDeferWindowPos`。  
+ Identifies the multiple-window-position structure. You can obtain this value by calling `BeginDeferWindowPos`.  
   
-### <a name="remarks"></a>備註  
- 呼叫此成員函式，重新計算所有窗格停駐在框架視窗的配置。  
+### <a name="remarks"></a>Remarks  
+ Call this member function to recalculate the layout of all panes docked to the frame window.  
   
-##  <a name="aremditabs"></a>CMDIFrameWndEx::AreMDITabs  
- 決定是否啟用 MDI 索引標籤功能或 MDI 索引標籤式的群組功能。  
+##  <a name="aremditabs"></a>  CMDIFrameWndEx::AreMDITabs  
+ Determines whether the MDI tabs feature or the MDI tabbed groups feature is enabled.  
   
 ```  
 BOOL AreMDITabs(int* pnMDITabsType=NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `pnMDITabsType`  
- 表示要啟用哪些功能的整數變數的指標︰  
+### <a name="parameters"></a>Parameters  
+ [out] `pnMDITabsType`  
+ A pointer to an integer variable that indicates which features are enabled:  
   
--   0︰ 停用所有功能。  
+-   0: All features are disabled.  
   
--   1︰ 啟用 MDI 索引標籤。  
+-   1: MDI tabs is enabled.  
   
--   2︰ 啟用 MDI 索引群組。  
+-   2: MDI tabbed groups is enabled.  
   
-### <a name="return-value"></a>傳回值  
- `Returns TRUE`如果 MDI 索引標籤或 MDI 索引標籤式群組已啟用。  
+### <a name="return-value"></a>Return Value  
+ `Returns TRUE` if MDI tabs or MDI tabbed groups is enabled.  
   
- `Returns FALSE`如果沒有上述功能啟用。  
+ `Returns FALSE` if none of the above features is enabled.  
   
-### <a name="remarks"></a>備註  
- 使用此函式可判斷 MDI 索引標籤或 MDI 索引群組會啟用框架視窗。 使用[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)啟用或停用 MDI 索引標籤功能。  
+### <a name="remarks"></a>Remarks  
+ Use this function to determine whether MDI tabs or MDI tabbed groups is enabled for the frame window. Use [CMDIFrameWndEx::EnableMDITabs](#enablemditabs) to enable or disable the MDI tabs feature.  
   
- 使用[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)啟用或停用 MDI 索引標籤式的群組功能。  
+ Use [CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups) to enable or disable the MDI tabbed groups feature.  
   
-##  <a name="cancovertcontrolbartomdichild"></a>CMDIFrameWndEx::CanCovertControlBarToMDIChild  
- 若要判斷框架視窗是否可以轉換成索引標籤式文件的停駐窗格架構呼叫  
+##  <a name="cancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::CanCovertControlBarToMDIChild  
+ Called by the framework to determine whether the frame window can convert docking panes to tabbed documents  
   
 ```  
 virtual BOOL CanCovertControlBarToMDIChild();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回`TRUE`如果框架視窗可以將停駐窗格轉換為索引標籤式文件; 否則會傳回`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the frame window can convert docking panes to tabbed documents; otherwise returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法在衍生類別中的，並傳回`TRUE`可停駐窗格索引標籤式文件轉換。 或者，您可以設定[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)到`TRUE`。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class and return `TRUE` to enable the conversion of docking panes to tabbed documents. Alternatively, you can set [CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild) to `TRUE`.  
   
-##  <a name="controlbartotabbeddocument"></a>CMDIFrameWndEx::ControlBarToTabbedDocument  
- 索引標籤式文件會將指定的停駐窗格。  
+##  <a name="controlbartotabbeddocument"></a>  CMDIFrameWndEx::ControlBarToTabbedDocument  
+ Converts the specified docking pane to a tabbed document.  
   
 ```  
 virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- 要轉換的停駐窗格的指標。  
+ A pointer to the docking pane to convert.  
   
-### <a name="return-value"></a>傳回值  
- 傳回新的 MDI 子視窗，其中包含停駐窗格的指標。  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the new MDI child window that contains the docking pane.  
   
-### <a name="remarks"></a>備註  
- 這個方法會將索引標籤式文件中的停駐窗格。 當您呼叫這個方法時，此架構會建立[CMDIChildWndEx 類別](../../mfc/reference/cmdichildwndex-class.md)物件，移除停駐窗格從停駐的管理員，並加入新的 MDI 子視窗停駐窗格。 MDI 子視窗調整大小，以涵蓋整個工作區的停駐窗格  
+### <a name="remarks"></a>Remarks  
+ This method converts a docking pane to a tabbed document. When you call this method, the framework creates a [CMDIChildWndEx Class](../../mfc/reference/cmdichildwndex-class.md) object, removes the docking pane from the docking manager, and adds the docking pane to the new MDI child window. The MDI child window resizes the docking pane to cover the entire client area  
   
-##  <a name="createdocumentwindow"></a>CMDIFrameWndEx::CreateDocumentWindow  
- 建立子文件視窗。  
+##  <a name="createdocumentwindow"></a>  CMDIFrameWndEx::CreateDocumentWindow  
+ Creates a child document window.  
   
 ```  
 virtual CMDIChildWndEx* CreateDocumentWindow(
@@ -356,30 +431,30 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
     CObject* pObj);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpcszDocName`  
- 文字字串，其中包含文件識別碼。 一般而言，它是文件檔案的完整路徑。  
+ A text string that contains a document identifier. Typically, it is the full path of a document file.  
   
  [in] `pObj`  
- 使用者定義的物件指標。 例如，開發人員可以建立應用程式特定的資料結構描述文件，並告訴您如何在文件應該在啟動時初始化。  
+ A pointer to a user-defined object. For example, a developer can create an application-specific data structure describing the document and telling how the document should be initialized at startup.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CMDIChildWndEx`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to `CMDIChildWndEx`.  
   
-### <a name="remarks"></a>備註  
- 載入先前儲存在登錄中的文件的清單時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it loads the list of documents previously saved in the registry.  
   
- 若要建立文件，從登錄載入時，覆寫這個方法。  
+ Override this method in order to create documents when they are being loaded from the registry.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`CreateDocumentWindow`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `CreateDocumentWindow` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- 在此範例中，`g_strStartViewName`可能是 「 虛擬文件 」 （例如，「 啟動頁面 」），實際上不是從磁碟檔案載入的名稱。 因此我們需要特殊處理，以處理這種情況。  
+ In this example, `g_strStartViewName` could be the name of a "virtual document" (for example, "Start Page") that is not actually loaded from a disk file. Therefore we need special processing to handle that case.  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&13;](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
   
-##  <a name="createnewwindow"></a>CMDIFrameWndEx::CreateNewWindow  
- 若要建立新的視窗，架構呼叫。  
+##  <a name="createnewwindow"></a>  CMDIFrameWndEx::CreateNewWindow  
+ Called by the framework to create a new window.  
   
 ```  
 virtual CMDIChildWndEx* CreateNewWindow(
@@ -387,18 +462,18 @@ virtual CMDIChildWndEx* CreateNewWindow(
     CObject* pObj);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpcszDocName`  
- 文件名稱。  
+ The document name.  
   
  [in] `pObj`  
- 保留供未來使用。  
+ Reserved for future use.  
   
-### <a name="return-value"></a>傳回值  
- 新視窗的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new window.  
   
-##  <a name="dockpane"></a>CMDIFrameWndEx::DockPane  
- 框架視窗停駐於指定的窗格。  
+##  <a name="dockpane"></a>  CMDIFrameWndEx::DockPane  
+ Docks the specified pane to the frame window.  
   
 ```  
 void DockPane(
@@ -407,26 +482,26 @@ void DockPane(
     LPCRECT lpRect=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 若要停駐窗格的指標。  
+ Pointer to the pane to dock.  
   
  [in] `nDockBarID`  
- 指定框架視窗停駐的側的邊。  
+ Specifies which sides of the frame window to dock to.  
   
  [in] `lpRect`  
- 未使用。  
+ Not used.  
   
-### <a name="remarks"></a>備註  
- 這個方法停駐在指定的其中一個已在框架視窗的側邊窗格時指定[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)和[CMDIFrameWndEx::EnableDocking](#enabledocking)所呼叫。  
+### <a name="remarks"></a>Remarks  
+ This method docks the specified the pane to one of the sides of the frame window that was specified when [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) and [CMDIFrameWndEx::EnableDocking](#enabledocking) were called.  
   
-### <a name="example"></a>範例  
- 下列範例示範 `DockPane` 方法的用法。 此程式碼片段來自[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates the use of the `DockPane` method. This code snippet comes from the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&4;](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]  
   
-##  <a name="dockpaneleftof"></a>CMDIFrameWndEx::DockPaneLeftOf  
- 將窗格停駐在另一個窗格的左邊。  
+##  <a name="dockpaneleftof"></a>  CMDIFrameWndEx::DockPaneLeftOf  
+ Docks one pane to the left of another pane.  
   
 ```  
 BOOL DockPaneLeftOf(
@@ -434,34 +509,34 @@ BOOL DockPaneLeftOf(
     CPane* pLeftOf);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 指標停駐窗格。  
+ A pointer to the docking pane.  
   
  [in] `pLeftOf`  
- 此窗格，可做為停駐位置指標。 。  
+ A pointer to the pane that serves as the dock site. .  
   
-### <a name="return-value"></a>傳回值  
- 傳回`TRUE`作業是否成功。 否則傳回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the operation is successful. Otherwise returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法，以停駐在預先定義的順序中的數個窗格物件。 這個方法所指定的窗格停駐於`pBar`左邊窗格中所指定的`pLeftOf`。  
+### <a name="remarks"></a>Remarks  
+ Call this method to dock several pane objects in a predefined order. This method docks the pane specified by `pBar` to the left of the pane specified by `pLeftOf`.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`DockPaneLeftOf`方法使用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how the `DockPaneLeftOf` method is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&5;](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]  
   
-##  <a name="enableautohidepanes"></a>CMDIFrameWndEx::EnableAutoHidePanes  
- 啟用自動隱藏窗格模式時指定的側邊的主框架視窗停駐。  
+##  <a name="enableautohidepanes"></a>  CMDIFrameWndEx::EnableAutoHidePanes  
+ Enables auto-hide mode for panes when they are docked at the specified sides of the main frame window.  
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwDockStyle`  
- 指定要啟用的主框架視窗的側邊。 使用一或多個下列旗標。  
+ Specifies the sides of the main frame window that will be enabled. Use one or more of the following flags.  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -471,79 +546,79 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 - `CBRS_ALIGN_BOTTOM`  
   
-### <a name="return-value"></a>傳回值  
- 呼叫此函式可啟用窗格的 自動隱藏模式時指定的側邊的主框架視窗停駐。  
+### <a name="return-value"></a>Return Value  
+ Call this function to enable auto-hide mode for panes when they are docked at the specified sides of the main frame window.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`EnableAutoHidePanes`方法使用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how the `EnableAutoHidePanes` method is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&6;](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabledocking"></a>CMDIFrameWndEx::EnableDocking  
- 啟用的停駐屬於 MDI 框架視窗的窗格。  
+##  <a name="enabledocking"></a>  CMDIFrameWndEx::EnableDocking  
+ Enables docking of the panes that belong to the MDI frame window.  
   
 ```  
 BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwDockStyle`  
- 指定您想要套用的停駐樣式。  
+ Specifies the docking style that you want to apply.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式可讓屬於窗格的停駐`CMDIFrameWndEx`物件。  
+### <a name="remarks"></a>Remarks  
+ Call this function to enable docking of panes that belong to the `CMDIFrameWndEx` object.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`EnableDocking`方法使用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how the `EnableDocking` method is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&7;](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]  
   
-##  <a name="enablefullscreenmainmenu"></a>CMDIFrameWndEx::EnableFullScreenMainMenu  
- 顯示或隱藏全螢幕模式中的主功能表。  
+##  <a name="enablefullscreenmainmenu"></a>  CMDIFrameWndEx::EnableFullScreenMainMenu  
+ Shows or hides the main menu in full-screen mode.  
   
 ```  
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnableMenu`  
- `TRUE`若要在全螢幕模式中，顯示在主功能表或`FALSE`隱藏起來。  
+ `TRUE` to show the main menu in full-screen mode, or `FALSE` to hide it.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablefullscreenmode"></a>CMDIFrameWndEx::EnableFullScreenMode  
- 啟用全螢幕模式，框架視窗。  
+##  <a name="enablefullscreenmode"></a>  CMDIFrameWndEx::EnableFullScreenMode  
+ Enables full-screen mode for the frame window.  
   
 ```  
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiFullScreenCmd`  
- 啟用或停用全螢幕模式的命令識別碼。  
+ The ID of a command that enables or disables full-screen mode.  
   
-### <a name="remarks"></a>備註  
- 在全螢幕模式中，會隱藏所有停駐控制列、 工具列和功能表，並使用中的檢視會調整大小以佔用全螢幕。當您啟用全螢幕模式時，您必須指定啟用或停用該命令的識別碼。 您可以呼叫`EnableFullScreenMode`從主框架的`OnCreate`函式。 當框架視窗會切換至全螢幕模式時，此架構會建立浮動的工具列具有一個按鈕具有指定的命令識別碼。如果您想要保留在螢幕上的主功能表上，呼叫[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)。  
+### <a name="remarks"></a>Remarks  
+ In full-screen mode, all docking control bars, toolbars and menus are hidden and the active view is resized to occupy the full-screen.When you enable full-screen mode, you must specify an ID of the command that enables or disables it. You can call `EnableFullScreenMode` from the main frame's `OnCreate` function. When a frame window is being switched to full-screen mode, the framework creates a floating toolbar with one button that has the specified command ID.If you want to keep the main menu on the screen, call [CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu).  
   
-##  <a name="enableloaddockstate"></a>CMDIFrameWndEx::EnableLoadDockState  
- 啟用或停用的銜接狀態的載入。  
+##  <a name="enableloaddockstate"></a>  CMDIFrameWndEx::EnableLoadDockState  
+ Enables or disables the loading of the docking state.  
   
 ```  
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用的銜接狀態中，載入`FALSE`停用的銜接狀態的載入。  
+ `TRUE` to enable the loading of the docking state, `FALSE` to disable the loading of the docking state.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablemditabbedgroups"></a>CMDIFrameWndEx::EnableMDITabbedGroups  
- 啟用或停用框架視窗的 MDI 索引標籤式的群組功能。  
+##  <a name="enablemditabbedgroups"></a>  CMDIFrameWndEx::EnableMDITabbedGroups  
+ Enables or disables the MDI tabbed groups feature for the frame window.  
   
 ```  
 void EnableMDITabbedGroups(
@@ -551,39 +626,39 @@ void EnableMDITabbedGroups(
     const CMDITabInfo& params);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 如果`TRUE`，啟用 MDI 索引標籤式的群組功能; 如果`FALSE`，MDI 索引標籤式的群組功能已停用。  
+ If `TRUE`, the MDI tabbed groups feature is enabled; if `FALSE`, the MDI tabbed groups feature is disabled.  
   
  [in] `params`  
- 指定架構適用於在 MDI 工作區中建立子視窗的參數。  
+ Specifies parameters that the framework applies to child windows that are created in the MDI client area.  
   
-### <a name="remarks"></a>備註  
- 使用這個方法來啟用或停用 MDI 索引標籤式的群組功能。 這項功能可讓您以垂直對齊的索引標籤式視窗或 MDI 工作區中水平顯示子視窗的 MDI 應用程式。 索引視窗會以分隔器分隔。 使用者可以使用分隔器調整索引標籤式的群組的大小。  
+### <a name="remarks"></a>Remarks  
+ Use this method to enable or disable the MDI tabbed groups feature. This feature enables MDI applications to display child windows as tabbed windows that are aligned vertically or horizontally within the MDI client area. Groups of tabbed windows are separated by splitters. The user can resize tabbed groups by using a splitter.  
   
--   使用者可以︰  
+-   The user can:  
   
--   在群組間拖曳個別索引標籤。  
+-   Drag individual tabs between groups.  
   
--   若要建立新的群組視窗的邊緣拖曳個別索引標籤。  
+-   Drag individual tabs to the edge of the window to create new groups.  
   
--   移動索引標籤，或使用捷徑功能表建立新的群組。  
+-   Move tabs or create new groups by using a shortcut menu.  
   
--   索引標籤式視窗的目前配置和目前開啟的文件的清單，可以儲存您的應用程式。  
+-   Your application can save the current layout of tabbed windows and the list of currently opened documents.  
   
- 如果您呼叫這個方法與`bEnable`設`FALSE`，`params`會被忽略。  
+ If you call this method with `bEnable` set to `FALSE`, `params` is ignored.  
   
- 即使已啟用 MDI 索引群組，您可以呼叫這個方法一次修改子視窗的設定。 使用呼叫方法`bEnable`設`TRUE`和修改的成員`CMDITabInfo`物件所指定的`params`參數。  
+ Even if MDI tabbed groups is already enabled, you can call this method again to modify the settings for child windows. Call the method with `bEnable` set to `TRUE` and modify the members of the `CMDITabInfo` object that are specified by the `params` parameter.  
   
- 如需有關如何使用 MDI 索引標籤式群組，請參閱[MDI 索引標籤式群組](../../mfc/mdi-tabbed-groups.md)。  
+ For more information about how to use MDI tabbed groups, see [MDI Tabbed Groups](../../mfc/mdi-tabbed-groups.md).  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`EnableMDITabbedGroups`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `EnableMDITabbedGroups` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&8;](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]  
   
-##  <a name="enablemditabs"></a>CMDIFrameWndEx::EnableMDITabs  
- 啟用或停用 MDI 框架視窗的 MDI 索引標籤功能。 啟用時，框架視窗會顯示每個 MDI 子視窗的索引標籤。  
+##  <a name="enablemditabs"></a>  CMDIFrameWndEx::EnableMDITabs  
+ Enables or disables the MDI Tabs feature for the MDI frame window. When enabled, the frame window displays a tab for each MDI child window.  
   
 ```  
 void EnableMDITabs(
@@ -596,64 +671,64 @@ void EnableMDITabs(
     BOOL bActiveTabCloseButton=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- 指定是否啟用索引標籤。  
+ Specifies whether tabs are enabled.  
   
  `bIcons`  
- 指定的索引標籤上，是否會顯示圖示。  
+ Specifies whether icons should be displayed on the tabs.  
   
  `tabLocation`  
- 指定的索引標籤的位置。  
+ Specifies the location of the tab labels.  
   
  `bTabCloseButton`  
- 指定是否要顯示索引標籤 [關閉] 按鈕。  
+ Specifies whether to display tab close buttons.  
   
  `style`  
- 指定的索引標籤的樣式。 使用`STYLE_3D_SCROLLED`一般索引標籤或`STYLE_3D_ONENOTE`Microsoft OneNote 索引標籤。  
+ Specifies the style of tabs. Use `STYLE_3D_SCROLLED` for regular tabs or `STYLE_3D_ONENOTE` for Microsoft OneNote tabs.  
   
  `bTabCustomTooltips`  
- 指定是否啟用自訂的工具提示。  
+ Specifies whether custom tooltips are enabled.  
   
  `bActiveTabCloseButton`  
- 如果`TRUE`、**關閉**按鈕將顯示使用中 索引標籤上而不是最右邊的索引標籤區域。  
+ If `TRUE`, a **Close** button will be displayed on the active tab instead of on the right corner of the tab area.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來啟用或停用 MDI 框架視窗的 MDI 索引標籤功能。 啟用時，所有的子視窗會顯示為索引標籤。  
+### <a name="remarks"></a>Remarks  
+ Call this method to enable or disable the MDI tabs feature for the MDI frame window. When enabled, all child windows are displayed as tabs.  
   
- 索引標籤可位於頂端或底部的框架中，根據參數設定`tabLocation`。 您可以指定`CMFCTabCtrl::LOCATION_BOTTOM`（預設值） 或`CMFCTabCtrl::LOCATION_TOP`。  
+ The tab labels can be located at the top or bottom of the frame, depending on the setting of the parameter `tabLocation`. You may specify either `CMFCTabCtrl::LOCATION_BOTTOM` (the default setting) or `CMFCTabCtrl::LOCATION_TOP`.  
   
- 如果`bTabCustomTooltips`是`TRUE`、`AFX_WM_ON_GET_TAB_TOOLTIP`訊息會傳送到主框架視窗。 您的程式碼可以處理這個訊息，並提供自訂的工具提示與 MDI 索引標籤的架構。  
+ If `bTabCustomTooltips` is `TRUE`, an `AFX_WM_ON_GET_TAB_TOOLTIP` message will be sent to the main frame window. Your code can handle this message and provide the framework with custom tooltips for MDI tabs.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`EnableMDITabs`用於[MDITabsDemo 範例︰ MFC 索引標籤式 MDI 應用程式](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `EnableMDITabs` is used in the [MDITabsDemo Sample: MFC Tabbed MDI Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MDITabsDemo #&3;](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]  
+ [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]  
   
-##  <a name="enablemditabslastactiveactivation"></a>CMDIFrameWndEx::EnableMDITabsLastActiveActivation  
- 指定當使用者關閉目前的索引標籤是否要開啟 [最後一個使用中] 索引標籤。  
+##  <a name="enablemditabslastactiveactivation"></a>  CMDIFrameWndEx::EnableMDITabsLastActiveActivation  
+ Specifies whether the last active tab should be opened when the user closes the current tab.  
   
 ```  
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bLastActiveTab`  
- 如果`TRUE`，啟用 「 啟用 」 的最後一個使用中的索引標籤。 如果`FALSE`，停用啟動過程的最後一個使用中的索引標籤。  
+ If `TRUE`, enable activation of the last active tab. If `FALSE`, disable activation of the last active tab.  
   
-### <a name="remarks"></a>備註  
- 有兩種方式可以關閉使用中的索引標籤時，請開啟索引標籤︰  
+### <a name="remarks"></a>Remarks  
+ There are two ways to open a tab when the active tab is closed:  
   
--   啟用 [下一步] 索引標籤。  
+-   Activate the next tab.  
   
--   啟動前一個作用中的索引標籤。  
+-   Activate the previously active tab.  
   
- 預設實作會使用第一種方式。  
+ The default implementation uses the first way.  
   
- 使用`EnableMDITabsLastActiveActivation`若要啟用索引標籤上啟用的第二個方法。 它會模擬開啟視窗的 MDI 子視窗的方式。  
+ Use `EnableMDITabsLastActiveActivation` to enable the second way of tab activation. It emulates the way Windows opens MDI child windows.  
   
-##  <a name="enablepanemenu"></a>CMDIFrameWndEx::EnablePaneMenu  
- 啟用或停用自動建立及管理的快顯窗格功能表會顯示應用程式窗格的清單。  
+##  <a name="enablepanemenu"></a>  CMDIFrameWndEx::EnablePaneMenu  
+ Enables or disables automatic creation and management of the pop-up pane menu, which displays a list of application panes.  
   
 ```  
 void EnablePaneMenu(
@@ -665,35 +740,35 @@ void EnablePaneMenu(
     BOOL bViewMenuShowsToolbarsOnly=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 如果`TRUE`，啟用自動處理窗格功能表; 如果`FALSE`，停用自動處理。  
+ If `TRUE`, automatic handling of the pane menu is enabled; if `FALSE`, automatic handling is disabled.  
   
  [in] `uiCustomizeCmd`  
- 命令 ID 的**自訂**功能表項目。 這個功能表項目通常被加到窗格的清單結尾。  
+ Command ID of the **Customize** menu item. This menu item is usually added to the end of the list of panes.  
   
  [in] `strCustomizeLabel`  
- 要顯示的文字**自訂**（適用於當地語系化） 的功能表項目。  
+ The text to be displayed for the **Customize** menu item (for localization).  
   
  [in] `uiViewToolbarsMenuEntryID`  
- 指定開啟 [窗格] 功能表的工具列功能表項目識別碼。 這通常是**工具列**子功能表中的**檢視**功能表。  
+ Specifies the ID of a toolbar menu item that opens the pane menu. Usually this is the **Toolbars** submenu of the **View** menu.  
   
  [in] `bContextMenuShowsToolbarsOnly`  
- 如果`TRUE`，窗格功能表會顯示工具列的清單。 如果`FALSE`，功能表就會顯示的工具列和停駐列清單。  
+ If `TRUE`, the pane menu displays only a list of toolbars. If `FALSE`, the menu displays a list of toolbars and docking bars.  
   
  [in] `bViewMenuShowsToolbarsOnly`  
- 如果`TRUE`，窗格功能表會顯示工具列的清單。 如果`FALSE`，功能表就會顯示的工具列和停駐列清單。  
+ If `TRUE`, the pane menu displays only a list of toolbars. If `FALSE`, the menu displays a list of toolbars and docking bars.  
   
-### <a name="remarks"></a>備註  
- 窗格的快顯功能表會顯示應用程式的窗格的清單，並讓使用者顯示或隱藏個別的窗格。  
+### <a name="remarks"></a>Remarks  
+ The pop-up pane menu displays the list of the application's panes and lets the user show or hide individual panes.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`EnablePaneMenu`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `EnablePaneMenu` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&9;](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]  
   
-##  <a name="enablewindowsdialog"></a>CMDIFrameWndEx::EnableWindowsDialog  
- 插入功能表項目的命令 ID 會呼叫[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)對話方塊。  
+##  <a name="enablewindowsdialog"></a>  CMDIFrameWndEx::EnableWindowsDialog  
+ Inserts a menu item whose command ID calls a [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialog box.  
   
 ```  
 void EnableWindowsDialog(
@@ -710,156 +785,156 @@ void EnableWindowsDialog(
     BOOL bShowHelpButton=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiMenuId`  
- 指定功能表上的資源識別碼。  
+ Specifies the resource ID of a menu.  
   
  [in] `lpszMenuText`  
- 指定項目的文字。  
+ Specifies the item's text.  
   
  [in] `bShowHelpButton`  
- 指定是否要顯示**協助**windows 的 [管理] 對話方塊上的按鈕。  
+ Specifies whether to display a **Help** button on the windows management dialog box.  
   
  [in] `uiMenuTextResId`  
- 包含項目的文字字串的字串資源識別碼。  
+ The string resource identifier that contains the item's text string.  
   
-### <a name="remarks"></a>備註  
- 使用此方法來插入其命令呼叫 MDI 子視窗管理對話方塊中的功能表項目 ( [CMFCWindowsManagerDialog 類別](../../mfc/reference/cmfcwindowsmanagerdialog-class.md))。 新的項目插入所指定的功能表`uiMenuId`。 呼叫`EnableWindowsDialog`當處理`WM_CREATE`訊息。  
+### <a name="remarks"></a>Remarks  
+ Use this method to insert a menu item whose command calls a MDI child window management dialog box ( [CMFCWindowsManagerDialog Class](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)). The new item is inserted into the menu specified by `uiMenuId`. Call `EnableWindowsDialog` when you process the `WM_CREATE` message.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`EnableWindowsDialog`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `EnableWindowsDialog` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&10;](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]  
   
-##  <a name="getactivepopup"></a>CMDIFrameWndEx::GetActivePopup  
- 將指標傳回到目前顯示的快顯功能表。  
+##  <a name="getactivepopup"></a>  CMDIFrameWndEx::GetActivePopup  
+ Returns a pointer to the currently displayed popup menu.  
   
 ```  
 CMFCPopupMenu* GetActivePopup() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 使用中的快顯功能表中，指標`NULL`如果快顯功能表沒有作用。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the active popup menu; `NULL` if no popup menu is active.  
   
-### <a name="remarks"></a>備註  
- 使用此函式取得的指標[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)目前顯示的物件。  
+### <a name="remarks"></a>Remarks  
+ Use this function to obtain a pointer to the [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) object that is currently displayed.  
   
-##  <a name="getdefaultresid"></a>CMDIFrameWndEx::GetDefaultResId  
- 傳回的 MDI 框架視窗的共用資源的識別碼。  
+##  <a name="getdefaultresid"></a>  CMDIFrameWndEx::GetDefaultResId  
+ Returns the ID of shared resources of the MDI frame window.  
   
 ```  
 UINT GetDefaultResId() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 資源識別碼值。 0，如果框架視窗有沒有功能表列。  
+### <a name="return-value"></a>Return Value  
+ A resource ID value. 0 if the frame window has no menu bar.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳回載入 MDI 框架視窗時所指定的資源識別碼[CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)。  
+### <a name="remarks"></a>Remarks  
+ This method returns the resource ID that was specified when the MDI frame window was loaded by [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe).  
   
-##  <a name="getmditabgroups"></a>CMDIFrameWndEx::GetMDITabGroups  
- 傳回一份 MDI 索引視窗。  
+##  <a name="getmditabgroups"></a>  CMDIFrameWndEx::GetMDITabGroups  
+ Returns a list of MDI tabbed windows.  
   
 ```  
 const CObList& GetMDITabGroups() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 參考[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含一份索引標籤式視窗。 不要儲存或修改清單。  
+### <a name="return-value"></a>Return Value  
+ A reference to a [CObList Class](../../mfc/reference/coblist-class.md) object that contains a list of tabbed windows. Do not store or modify the list.  
   
-### <a name="remarks"></a>備註  
- 您可以使用這個方法來存取索引標籤式視窗的清單。 如果您想要變更或查詢的個別索引標籤式視窗的一些參數，它可以是很有幫助。  
+### <a name="remarks"></a>Remarks  
+ Use this method to access the list of tabbed windows. It can be helpful if you want to change or query some parameters of individual tabbed windows.  
   
-##  <a name="getmditabs"></a>CMDIFrameWndEx::GetMDITabs  
- 傳回加上底線的索引標籤式視窗的參考。  
+##  <a name="getmditabs"></a>  CMDIFrameWndEx::GetMDITabs  
+ Returns a reference to the underlined tabbed window.  
   
 ```  
 CMFCTabCtrl& GetMDITabs();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 加上底線的索引標籤式視窗的參考。  
+### <a name="return-value"></a>Return Value  
+ A reference to the underlined tabbed window.  
   
-##  <a name="getmditabscontextmenualloweditems"></a>CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems  
- 傳回旗標的組合，用來判定哪些作業有效啟用 MDI 索引標籤式群組功能。  
+##  <a name="getmditabscontextmenualloweditems"></a>  CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems  
+ Returns a combination of flags that determines what operations are valid when the MDI Tabbed Groups feature is enabled.  
   
 ```  
 DWORD GetMDITabsContextMenuAllowedItems();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 下列旗標的位元 OR 組合︰  
+### <a name="return-value"></a>Return Value  
+ A bitwise-OR combination of the following flags:  
   
-- `BCGP_MDI_CREATE_VERT_GROUP`-可以建立垂直索引標籤群組。  
+- `BCGP_MDI_CREATE_VERT_GROUP` - can create a vertical tab group.  
   
-- `BCGP_MDI_CREATE_HORZ_GROUP`-可以建立水平索引標籤群組。  
+- `BCGP_MDI_CREATE_HORZ_GROUP` - can create a horizontal tab group.  
   
-- `BCGP_MDI_CAN_MOVE_PREV`-可以將索引標籤移至前一個索引標籤群組。  
+- `BCGP_MDI_CAN_MOVE_PREV` - can move a tab to the previous tab group.  
   
-- `BCGP_MDI_CAN_MOVE_NEXT`-可以移至下一步 索引標籤群組中 索引標籤。  
+- `BCGP_MDI_CAN_MOVE_NEXT` - can move a tab to the next tab group.  
   
-### <a name="remarks"></a>備註  
- 啟用 MDI 索引標籤式群組功能時，您必須知道特定視窗的索引標籤上允許哪些作業。 這個方法會分析目前的索引標籤式視窗配置，並傳回旗標的組合，可以用來建置，比方說，快顯功能表。  
+### <a name="remarks"></a>Remarks  
+ When the MDI Tabbed Groups feature is enabled, you must know what operations are allowed on the tabs of a particular window. This method analyzes the current layout of tabbed windows and returns a combination of flags that can be used to build, for example, a shortcut menu.  
   
- 當所有的索引標籤式的視窗會垂直對齊，或只有一個索引標籤式的視窗時，您可以建立新的垂直索引標籤群組。  
+ You can create a new vertical tab group when all tabbed windows are aligned vertically, or when there is only one tabbed window.  
   
- 水平對齊所有索引標籤式的視窗時，或只有一個索引標籤式的視窗時，您可以建立新的水平索引標籤群組。  
+ You can create a new horizontal tab group when all tabbed windows are aligned horizontally, or when there is only one tabbed window.  
   
- 只有當索引標籤式視窗中有多個索引標籤，您可以移至上一個群組索引標籤。  
+ You can move a tab to the previous group only if there is more than one tab in a tabbed window.  
   
- 只有當索引標籤式視窗中有多個索引標籤，您可以將索引標籤移到下一個群組中。  
+ You can move a tab to the next group only if there is more than one tab in a tabbed window.  
   
-##  <a name="getmenubar"></a>CMDIFrameWndEx::GetMenuBar  
- 傳回附加到的框架視窗的功能表列物件的指標。  
+##  <a name="getmenubar"></a>  CMDIFrameWndEx::GetMenuBar  
+ Returns a pointer to a menu bar object attached to the frame window.  
   
 ```  
 const CMFCMenuBar* GetMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 功能表列物件的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a menu bar object.  
   
-##  <a name="getpane"></a>CMDIFrameWndEx::GetPane  
- 將指標傳回至窗格中具有指定之的控制項 id。  
+##  <a name="getpane"></a>  CMDIFrameWndEx::GetPane  
+ Returns a pointer to the pane that has the specified control ID.  
   
 ```  
 CBasePane* GetPane(UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 控制項 id。  
+ The control ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果存在具有指定之的控制項 ID，窗格指標。 否則為 `NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the pane that has the specified control ID, if it exists. Otherwise, `NULL`.  
   
-##  <a name="getribbonbar"></a>CMDIFrameWndEx::GetRibbonBar  
- 擷取框架的功能區列控制項。  
+##  <a name="getribbonbar"></a>  CMDIFrameWndEx::GetRibbonBar  
+ Retrieves the ribbon bar control for the frame.  
   
 ```  
 CMFCRibbonBar* GetRibbonBar();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)框架。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) for the frame.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettearoffbars"></a>CMDIFrameWndEx::GetTearOffBars  
- 傳回一份 tear-off 功能表。  
+##  <a name="gettearoffbars"></a>  CMDIFrameWndEx::GetTearOffBars  
+ Returns a list of tear-off menus.  
   
 ```  
 const CObList& GetTearOffBars() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 參考[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含的指標集合`CPane`-衍生撕狀態的物件。  
+### <a name="return-value"></a>Return Value  
+ A reference to a [CObList Class](../../mfc/reference/coblist-class.md) object that contains a collection of pointers to `CPane`-derived objects that are in a tear-off state.  
   
-### <a name="remarks"></a>備註  
- `CMDIFrameWndEx`會維護一堆 tear-off 功能表。 使用這個方法來擷取這份清單的參考。  
+### <a name="remarks"></a>Remarks  
+ `CMDIFrameWndEx` maintains a collection of tear-off menus. Use this method to retrieve a reference to this list.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx::GetToolbarButtonToolTipText  
- 當應用程式顯示的工具列按鈕的工具提示時，由架構呼叫。  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIFrameWndEx::GetToolbarButtonToolTipText  
+ Called by the framework when the application displays the tooltip for a toolbar button.  
   
 ```  
 virtual BOOL GetToolbarButtonToolTipText(
@@ -867,20 +942,20 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString& strTTText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 指標，工具列按鈕。  
+ A pointer to a toolbar button.  
   
  [in] `strTTText`  
- 若要為按鈕顯示工具提示文字。  
+ The tooltip text to display for the button.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已顯示工具提示。 否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tooltip has been displayed. `FALSE` otherwise.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="insertpane"></a>CMDIFrameWndEx::InsertPane  
- 連接管理員會向指定的窗格。  
+##  <a name="insertpane"></a>  CMDIFrameWndEx::InsertPane  
+ Registers the specified pane with the docking manager.  
   
 ```  
 BOOL InsertPane(
@@ -889,74 +964,74 @@ BOOL InsertPane(
     BOOL bAfter=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 要插入窗格指標。  
+ A pointer to the pane to be inserted.  
   
  [in] `pTarget`  
- 指標之前或之後要插入窗格的窗格。  
+ A pointer to the pane before or after which to insert the pane.  
   
  [in] `bAfter`  
- 如果`TRUE`，`pControlBar`後面插入`pTarget`。 如果`FALSE`，`pControlBar`之前，插入`pTarget`。  
+ If `TRUE`, `pControlBar` is inserted after `pTarget`. If `FALSE`, `pControlBar` is inserted before `pTarget`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功註冊的工作窗格中，`FALSE`如果窗格已註冊到停駐的管理員。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method successfully registers the pane, `FALSE` if the pane was already registered with the docking manager.  
   
-### <a name="remarks"></a>備註  
- 使用這個方法來通知窗格中所指定的停駐管理員`pControlBar`。 停駐管理員將對齊此窗格根據窗格的對齊和停駐管理員的內部清單中的位置。  
+### <a name="remarks"></a>Remarks  
+ Use this method to tell the docking manager about a pane specified by `pControlBar`. The docking manager will align this pane according to the pane's alignment and position in the docking manager's internal list.  
   
-##  <a name="isfullscreen"></a>CMDIFrameWndEx::IsFullScreen  
- 判斷是否在全螢幕模式中的框架視窗。  
+##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen  
+ Determines whether the frame window is in full-screen mode.  
   
 ```  
 BOOL IsFullScreen() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果框架視窗會以全螢幕模式。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame window is in full screen mode; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 您可以藉由呼叫設定全螢幕模式[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)方法。  
+### <a name="remarks"></a>Remarks  
+ You can set the full screen mode by calling the [CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode) method.  
   
-##  <a name="ismditabbedgroup"></a>CMDIFrameWndEx::IsMDITabbedGroup  
- 指定是否啟用 MDI 索引標籤式群組功能。  
+##  <a name="ismditabbedgroup"></a>  CMDIFrameWndEx::IsMDITabbedGroup  
+ Specifies whether the MDI Tabbed Groups feature is enabled.  
   
 ```  
 BOOL IsMDITabbedGroup() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用 MDI 索引標籤式群組功能。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the MDI Tabbed Groups feature is enabled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 若要判斷是否啟用一般 MDI 索引標籤或 MDI 索引標籤式群組功能，請使用[CMDIFrameWndEx::AreMDITabs](#aremditabs)。  
+### <a name="remarks"></a>Remarks  
+ To determine whether regular MDI tabs or the MDI Tabbed Groups feature is enabled, use [CMDIFrameWndEx::AreMDITabs](#aremditabs).  
   
-##  <a name="ismemberofmditabgroup"></a>CMDIFrameWndEx::IsMemberOfMDITabGroup  
- 判斷指定的索引標籤式的視窗是否為 MDI 索引標籤式群組中的視窗的清單中。  
+##  <a name="ismemberofmditabgroup"></a>  CMDIFrameWndEx::IsMemberOfMDITabGroup  
+ Determines whether the specified tabbed window is in the list of windows that are in MDI Tabbed Groups.  
   
 ```  
 BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 索引標籤式視窗的指標。  
+ A pointer to tabbed window.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的索引標籤式的視窗是構成 MDI 索引標籤式群組的索引標籤式視窗的清單。 否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified tabbed window is in the list of tabbed windows that form MDI Tabbed Groups. Otherwise `FALSE`.  
   
-##  <a name="ismenubaravailable"></a>CMDIFrameWndEx::IsMenuBarAvailable  
- 決定框架視窗是否有功能表列。  
+##  <a name="ismenubaravailable"></a>  CMDIFrameWndEx::IsMenuBarAvailable  
+ Determines whether the frame window has a menu bar.  
   
 ```  
 BOOL IsMenuBarAvailable() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果功能表列物件的指標不`NULL`，否則為`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pointer to the menu bar object is not `NULL`; otherwise `FALSE`.  
   
-##  <a name="ispointneardocksite"></a>CMDIFrameWndEx::IsPointNearDockSite  
- 判斷指定的點是否停駐位置附近。  
+##  <a name="ispointneardocksite"></a>  CMDIFrameWndEx::IsPointNearDockSite  
+ Determines whether a specified point is near the dock site.  
   
 ```  
 BOOL IsPointNearDockSite(
@@ -965,36 +1040,36 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 螢幕座標中指定的點。  
+ The specified point in screen coordinates.  
   
  [in] `dwBarAlignment`  
- 指定的點是附近的邊緣。 可能的值為`CBRS_ALIGN_LEFT`， `CBRS_ALIGN_RIGHT`， `CBRS_ALIGN_TOP`，並`CBRS_ALIGN_BOTTOM`  
+ Specifies which edge the point is near. Possible values are `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, and `CBRS_ALIGN_BOTTOM`  
   
  [in] `bOuterEdge`  
- `TRUE`如果點很近外框的停駐位置。`FALSE`否則。  
+ `TRUE` if the point is near the outer border of the dock site; `FALSE` otherwise.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果點附近的停駐位置。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the point is near the dock site; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 重點是停駐位置附近時中設定連接管理員中的敏感度。 預設區分大小寫為 15 像素。  
+### <a name="remarks"></a>Remarks  
+ The point is near the dock site when it is within the sensitivity set in the docking manager. The default sensitivity is 15 pixels.  
   
-##  <a name="isprintpreview"></a>CMDIFrameWndEx::IsPrintPreview  
- 決定框架視窗是否處於預覽列印模式。  
+##  <a name="isprintpreview"></a>  CMDIFrameWndEx::IsPrintPreview  
+ Determines whether the frame window is in print-preview mode.  
   
 ```  
 BOOL IsPrintPreview();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果框架視窗處於預覽列印模式;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame window is in print-preview mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="loadframe"></a>CMDIFrameWndEx::LoadFrame  
- 建立框架視窗從資源資訊。  
+##  <a name="loadframe"></a>  CMDIFrameWndEx::LoadFrame  
+ Creates a frame window from resource information.  
   
 ```  
 virtual BOOL LoadFrame(
@@ -1004,115 +1079,115 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIDResource`  
- 框架視窗相關聯的共用資源的識別碼。  
+ The ID of a shared resource associated with the frame window.  
   
  [in] `dwDefaultStyle`  
- 框架視窗樣式。  
+ The style of the frame window.  
   
  [in] `pParentWnd`  
- 父框架的指標。  
+ A pointer to the frame's parent.  
   
  [in] `pContext`  
- 指標[CCreateContext 結構](../../mfc/reference/ccreatecontext-structure.md)。 這個參數可以是 `NULL`。  
+ A pointer to a [CCreateContext Structure](../../mfc/reference/ccreatecontext-structure.md). This parameter can be `NULL`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, otherwise `FALSE`.  
   
-##  <a name="loadmdistate"></a>Cmdiframewndex:: Loadmdistate  
- 載入指定的 MDI 索引標籤式群組的配置和先前開啟的文件的清單。  
+##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState  
+ Loads the specified layout of MDI Tabbed Groups and the list of previously opened documents.  
   
 ```  
 virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 指定設定檔名稱。  
+ Specifies the profile name.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果載入成功。`FALSE`如果載入失敗，或沒有載入的資料。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the load succeeded; `FALSE` if the load failed or there is no data to load.  
   
-### <a name="remarks"></a>備註  
- 若要載入或儲存 MDI 索引標籤和群組的狀態和開啟文件的清單，執行下列作業︰  
+### <a name="remarks"></a>Remarks  
+ To load or save the state of MDI tabs and groups and the list of opened documents, do the following:  
   
--   呼叫[CMDIFrameWndEx::SaveMDIState](#savemdistate)關閉主框架時  
+-   Call [CMDIFrameWndEx::SaveMDIState](#savemdistate) when the main frame is being closed  
   
--   呼叫[cmdiframewndex:: Loadmdistate](#loadmdistate)建立主要畫面格時。 建議您將這個呼叫是主要畫面格第一次顯示之前。 新增`CWinAppEx::EnableLoadWindowPlacement``(FALSE);`之前`pMainFrame->LoadFrame (IDR_MAINFRAME);.`新增`CBCGPWorkspace::ReloadWindowPlacement``(pMainFrame);`呼叫之後`LoadMDIState`主框架顯示儲存在登錄中的位置。  
+-   Call [CMDIFrameWndEx::LoadMDIState](#loadmdistate) when the main frame is being created. The recommended place for this call is before the main frame is displayed for the first time. Add `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` before `pMainFrame->LoadFrame (IDR_MAINFRAME);.` Add `CBCGPWorkspace::ReloadWindowPlacement` `(pMainFrame);` after the call to `LoadMDIState` to display the main frame at the position that was stored in the registry.  
   
--   覆寫`GetDocumentName`中`CMDIChildWndEx`-衍生類別，如果您的應用程式會顯示不會儲存為檔案的文件。 傳回的字串會儲存在登錄中，做為文件識別碼。 基底實作[CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)傳回值，這個值取自[CDocument::GetPathName](../../mfc/reference/cdocument-class.md#getpathname)。  
+-   Override `GetDocumentName` in the `CMDIChildWndEx`- derived class if your application displays documents that are not stored as files. The returned string will be saved in the registry as the document identifier. The base implementation of [CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname) returns a value obtained from [CDocument::GetPathName](../../mfc/reference/cdocument-class.md#getpathname).  
   
--   覆寫[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)時從登錄載入正確建立文件。 第一個參數是字串，`GetDocumentName`傳回。  
+-   Override [CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow) to correctly create documents when they are being loaded from the registry. The first parameter is the string that `GetDocumentName` returned.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`LoadMDIState`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `LoadMDIState` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&11;](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]  
   
-##  <a name="mditabmovetonextgroup"></a>CMDIFrameWndEx::MDITabMoveToNextGroup  
- 將作用中的索引標籤從目前使用中的索引標籤式視窗移至下一個或前一個索引群組。  
+##  <a name="mditabmovetonextgroup"></a>  CMDIFrameWndEx::MDITabMoveToNextGroup  
+ Moves the active tab from the currently active tabbed window to the next or previous tabbed group.  
   
 ```  
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bNext`  
- 如果`TRUE`，移至下一個索引標籤式群組的索引標籤。 如果`FALSE`，將它移至前一個索引標籤式群組。  
+ If `TRUE`, move the tab to the next tabbed group. If `FALSE`, move it to the previous tabbed group.  
   
-##  <a name="mditabnewgroup"></a>CMDIFrameWndEx::MDITabNewGroup  
- 建立新的索引標籤式的群組具有單一視窗。  
+##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup  
+ Creates a new tabbed group that has a single window.  
   
 ```  
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bVert`  
- 指定新群組對齊方式。 如果`TRUE`，新的群組會垂直對齊。 如果`FALSE`，新的群組水平對齊。  
+ Specifies the new group alignment. If `TRUE`, the new group is aligned vertically. If `FALSE`, the new group is aligned horizontally.  
   
-### <a name="remarks"></a>備註  
- 使用此函式來建立新的索引標籤式視窗 （新的索引標籤式群組），然後為其新增第一個索引標籤。  
+### <a name="remarks"></a>Remarks  
+ Use this function to create a new tabbed window (new tabbed group) and add the first tab to it.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`MDITabNewGroup`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `MDITabNewGroup` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&12;](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]  
   
-##  <a name="m_bcancovertcontrolbartomdichild"></a>CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild  
- 指定是否停駐窗格可以轉換成 MDI 子視窗。  
+##  <a name="m_bcancovertcontrolbartomdichild"></a>  CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild  
+ Specifies whether docking panes can be converted to MDI child windows.  
   
 ```  
 BOOL m_bCanCovertControlBarToMDIChild;  
 ```  
   
-### <a name="remarks"></a>備註  
- 表示停駐控制列是否可轉換為 MDI 子視窗。 如果這個旗標`TRUE`，架構會處理轉換的自動當使用者選取**索引標籤式文件**命令。 旗標受到保護，且您必須明確啟用此選項設定的`m_bCanCovertControlBarToMDIChild`建構函式中`CMDIFrameWndEx`-衍生的類別，或藉由覆寫`CanConvertControlBarToMDIChild`。  
+### <a name="remarks"></a>Remarks  
+ Indicates whether docking control bars can be converted to MDI child windows. If this flag is `TRUE`, the framework handles the conversion automatically when the user selects the **Tabbed Document** command. The flag is protected and you must explicitly enable this option either by setting `m_bCanCovertControlBarToMDIChild` in a constructor of a `CMDIFrameWndEx`-derived class, or by overriding `CanConvertControlBarToMDIChild`.  
   
- 預設值是 `FALSE`。  
+ The default value is `FALSE`.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`m_bCanCovertControlBarToMDIChild`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `m_bCanCovertControlBarToMDIChild` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&13;](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]  
   
-##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx::m_bDisableSetRedraw  
- 啟用或停用的 MDI 子視窗的重繪最佳化。  
+##  <a name="m_bdisablesetredraw"></a>  CMDIFrameWndEx::m_bDisableSetRedraw  
+ Enables or disables redraw optimization for MDI child windows.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;  
 ```  
   
-### <a name="remarks"></a>備註  
- 預設值是 `TRUE`。  
+### <a name="remarks"></a>Remarks  
+ The default value is `TRUE`.  
   
- 若要設定此旗標`FALSE`如果您想要最佳化的 MDI 子視窗重繪作業。 在此情況下，架構會呼叫`SetRedraw (FALSE)`主要畫面格應用程式會變更使用中的索引標籤。  
+ Set this flag to `FALSE` if you want to optimize redrawing of MDI children. In this case the framework will call `SetRedraw (FALSE)` for the main frame when the application is changing the active tab.  
   
- 這個旗標可能會導致不必要的影響 （例如背景應用程式，就會顯示）。 因此我們建議您變更預設值，只有在遇到明顯閃爍在啟動過程中 MDI 索引標籤。  
+ This flag can cause unwanted effects (such as background applications that become visible). Therefore we recommend that you change the default only if you experience noticeable flickering during MDI tab activation.  
   
-##  <a name="negotiateborderspace"></a>CMDIFrameWndEx::NegotiateBorderSpace  
- 會在框架視窗的框線空間交涉 OLE 就地啟用期間。  
+##  <a name="negotiateborderspace"></a>  CMDIFrameWndEx::NegotiateBorderSpace  
+ Negotiates border space in a frame window during OLE in-place activation.  
   
 ```  
 virtual BOOL NegotiateBorderSpace(
@@ -1120,9 +1195,9 @@ virtual BOOL NegotiateBorderSpace(
     LPRECT lpRectBorder);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nBorderCmd`  
- 列舉中的以下值的其中一個`CFrameWnd::BorderCmd`:  
+ Contains one of the following values from the enum `CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
   
@@ -1130,69 +1205,69 @@ virtual BOOL NegotiateBorderSpace(
   
 - `borderSet` = 3  
   
- [in、out] `lpRectBorder`  
- 指標[RECT 結構](../../mfc/reference/rect-structure1.md)或[CRect 類別](../../atl-mfc-shared/reference/crect-class.md)物件，指定框線的座標。  
+ [in, out] `lpRectBorder`  
+ Pointer to a [RECT Structure](../../mfc/reference/rect-structure1.md) or a [CRect Class](../../atl-mfc-shared/reference/crect-class.md) object that specifies the coordinates of the border.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 這個方法是實作的 OLE 框線空間交涉。  
+### <a name="remarks"></a>Remarks  
+ This method is an implementation of OLE border space negotiation.  
   
-##  <a name="onclosedockingpane"></a>CMDIFrameWndEx::OnCloseDockingPane  
- 當使用者按一下時，由框架呼叫**關閉**可停駐窗格上的按鈕。  
+##  <a name="onclosedockingpane"></a>  CMDIFrameWndEx::OnCloseDockingPane  
+ Called by the framework when the user clicks the **Close** button on a dockable pane.  
   
 ```  
 virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- [關閉] 窗格的指標。  
+ Pointer to the pane being closed.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可以關閉停駐窗格。 否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the docking pane can be closed. Otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 覆寫此方法以處理隱藏停駐窗格。 傳回`FALSE`如果您想要防止在隱藏停駐窗格。  
+### <a name="remarks"></a>Remarks  
+ Override this method to handle hiding of docking panes. Return `FALSE` if you want to prevent a docking pane from being hidden.  
   
- 預設實作不做任何動作，並傳回`TRUE`。  
+ The default implementation does nothing and returns `TRUE`.  
   
-##  <a name="oncloseminiframe"></a>CMDIFrameWndEx::OnCloseMiniFrame  
- 當使用者按一下時，由框架呼叫**關閉**浮動的迷你框架視窗上的按鈕。  
+##  <a name="oncloseminiframe"></a>  CMDIFrameWndEx::OnCloseMiniFrame  
+ Called by the framework when the user clicks the **Close** button on a floating mini-frame window.  
   
 ```  
 virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 正在關閉迷你框架視窗的指標。  
+ Pointer to the mini-frame window being closed.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可以關閉浮動的迷你框架視窗。 否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the floating mini-frame window can be closed. Otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 覆寫此方法以處理隱藏浮動迷你框架視窗。 傳回`FALSE`如果您想要防止在隱藏浮動的迷你框架視窗。  
+### <a name="remarks"></a>Remarks  
+ Override this method to handle hiding of floating mini-frame windows. Return `FALSE` if you want to prevent a floating mini-frame window from being hidden.  
   
- 預設實作不做任何動作，並傳回`TRUE`。  
+ The default implementation does nothing and returns `TRUE`.  
   
-##  <a name="onclosepopupmenu"></a>CMDIFrameWndEx::OnClosePopupMenu  
- 使用中的快顯功能表上處理時，由框架呼叫`WM_DESTROY`訊息。  
+##  <a name="onclosepopupmenu"></a>  CMDIFrameWndEx::OnClosePopupMenu  
+ Called by the framework when an active pop-up menu processes a `WM_DESTROY` message.  
   
 ```  
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuPopup`  
- 快顯功能表上的指標。  
+ Pointer to a pop-up menu.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法，如果您想要處理的通知[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)時處理這些物件屬於 MDI 框架視窗物件`WM_DESTROY`訊息。  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to process notifications from [CMFCPopupMenu Class](../../mfc/reference/cmfcpopupmenu-class.md) objects that belong to the MDI frame window when those objects process `WM_DESTROY` messages.  
   
-##  <a name="oncmdmsg"></a>CMDIFrameWndEx::OnCmdMsg  
- 傳送和分派命令訊息，並以更新命令使用者介面物件的架構所呼叫。  
+##  <a name="oncmdmsg"></a>  CMDIFrameWndEx::OnCmdMsg  
+ Called by the framework to route and dispatch command messages and to update command user-interface objects.  
   
 ```  
 virtual BOOL OnCmdMsg(
@@ -1202,24 +1277,24 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 命令 ID。  
+ The command ID.  
   
  [in] `nCode`  
- 識別命令通知程式碼。 請參閱[CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)如需有關值`nCode`。  
+ Identifies the command notification code. See [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) for more information about values for `nCode`.  
   
  [in] `pExtra`  
- 依據的值來使用`nCode`。 請參閱[CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)如需詳細資訊`pExtra`。  
+ Used according to the value of `nCode`. See [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) for more information about `pExtra`.  
   
- [in、out] `pHandlerInfo`  
- 通常，這個參數應該是`NULL`。如果不是`NULL`，`OnCmdMsg`填入`pTarget`和`pmf`成員`pHandlerInfo`結構，而不是分派命令。  
+ [in, out] `pHandlerInfo`  
+ Typically, this parameter should be `NULL`.If not `NULL`, `OnCmdMsg` fills in the `pTarget` and `pmf` members of the `pHandlerInfo` structure instead of dispatching the command.  
   
-### <a name="return-value"></a>傳回值  
- 處理訊息的; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message is handled; otherwise 0.  
   
-##  <a name="ondrawmenuimage"></a>CMDIFrameWndEx::OnDrawMenuImage  
- 架構在繪製與功能表項目相關聯的映像時所呼叫。  
+##  <a name="ondrawmenuimage"></a>  CMDIFrameWndEx::OnDrawMenuImage  
+ Called by the framework when the image associated with a menu item is drawn.  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -1228,24 +1303,24 @@ virtual BOOL OnDrawMenuImage(
     const CRect& rectImage);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ Pointer to a device context.  
   
  [in] `pMenuButton`  
- 指標 [功能表] 按鈕。  
+ Pointer to the menu button.  
   
  [in] `rectImage`  
- 週框的影像。  
+ Bounding rectangle of the image.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法會繪製影像。 預設實作會傳回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method draws the image. The default implementation returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法，如果您想要自訂的功能表項目所擁有的功能表列屬於影像轉譯`CMDIFrameWndEx`-衍生物件。 預設實作不做任何動作。  
+### <a name="remarks"></a>Remarks  
+ Override this method  if you want to customize image rendering for the menu items that belong to the menu bar owned by the `CMDIFrameWndEx`-derived object. The default implementation does nothing.  
   
-##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx::OnDrawMenuLogo  
- 由架構呼叫時[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)處理程序`WM_PAINT`訊息。  
+##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo  
+ Called by the framework when a [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)processes a `WM_PAINT` message.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -1254,24 +1329,24 @@ virtual void OnDrawMenuLogo(
     const CRect&);
 ```  
   
-### <a name="remarks"></a>備註  
- 覆寫這個函式來顯示屬於所擁有的功能表列的快顯功能表上的標誌`CMDIFrameWndEx`-衍生物件。 預設實作不做任何動作。  
+### <a name="remarks"></a>Remarks  
+ Override this function to display a logo on the pop-up menu that belongs to the menu bar owned by the `CMDIFrameWndEx`-derived object. The default implementation does nothing.  
   
-##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx::OnEraseMDIClientBackground  
- MDI 框架視窗程序時，由框架呼叫`WM_ERASEBKGND`訊息。  
+##  <a name="onerasemdiclientbackground"></a>  CMDIFrameWndEx::OnEraseMDIClientBackground  
+ Called by the framework when the MDI frame window processes a `WM_ERASEBKGND` message.  
   
 ```  
 virtual BOOL OnEraseMDIClientBackground(CDC*);
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果應用程式處理訊息，並清除背景。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the application processes the message and erases the background.  
   
-### <a name="remarks"></a>備註  
- 覆寫此成員函式，如果您想要處理`WM_ERASEBKGND`中訊息`CMDIFrameWndEx`-衍生的類別。  
+### <a name="remarks"></a>Remarks  
+ Override this member function if you want to process the `WM_ERASEBKGND` message in a `CMDIFrameWndEx`-derived class.  
   
-##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx::OnMenuButtonToolHitTest  
- 由架構呼叫時[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件處理程序`WM_NCHITTEST`訊息。  
+##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest  
+ Called by the framework when a [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)object processes a `WM_NCHITTEST` message.  
   
 ```  
 virtual BOOL OnMenuButtonToolHitTest(
@@ -1279,35 +1354,35 @@ virtual BOOL OnMenuButtonToolHitTest(
     TOOLINFO* pTI);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 工具列按鈕。  
+ The toolbar button.  
   
- [輸出] `pTI`  
- 指標[TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256)結構。  
+ [out] `pTI`  
+ Pointer to a [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) structure.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果應用程式會填入`pTI`參數。 預設實作會傳回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the application fills the `pTI` parameter. The default implementation returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 如果您想要提供特定的功能表項目，為工具提示的相關資訊，請覆寫這個方法。 預設實作不做任何動作。  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to provide information about specific menu items to a tooltip. The default implementation does nothing.  
   
-##  <a name="onmoveminiframe"></a>CMDIFrameWndEx::OnMoveMiniFrame  
- 若要移動的迷你框架視窗，架構呼叫。  
+##  <a name="onmoveminiframe"></a>  CMDIFrameWndEx::OnMoveMiniFrame  
+ Called by the framework to move a mini-frame window.  
   
 ```  
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pFrame`  
- 迷你框架視窗的指標。  
+ A pointer to a mini-frame window.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, otherwise `FALSE`.  
   
-##  <a name="onsetpreviewmode"></a>CMDIFrameWndEx::OnSetPreviewMode  
- 設定應用程式的主框架視窗預覽列印模式。  
+##  <a name="onsetpreviewmode"></a>  CMDIFrameWndEx::OnSetPreviewMode  
+ Sets the application's main frame window print-preview mode.  
   
 ```  
 virtual void OnSetPreviewMode(
@@ -1315,18 +1390,18 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bPreview`  
- 如果`TRUE`，設定預覽列印模式。 如果`FALSE`，取消預覽模式。  
+ If `TRUE`, sets print-preview mode. If `FALSE`, cancels preview mode.  
   
  [in] `pState`  
- 指標`CPrintPreviewState`結構。  
+ A pointer to a `CPrintPreviewState` structure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫[CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。  
+### <a name="remarks"></a>Remarks  
+ This method overrides [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode).  
   
-##  <a name="onshowcustomizepane"></a>CMDIFrameWndEx::OnShowCustomizePane  
- 啟動快速自訂窗格時，由架構呼叫。  
+##  <a name="onshowcustomizepane"></a>  CMDIFrameWndEx::OnShowCustomizePane  
+ Called by the framework when a Quick Customize pane is activated.  
   
 ```  
 virtual BOOL OnShowCustomizePane(
@@ -1334,23 +1409,23 @@ virtual BOOL OnShowCustomizePane(
     UINT uiToolbarID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuPane`  
- 快速自訂的窗格指標。  
+ A pointer to the Quick Customize pane.  
   
  [in] `uiToolbarID`  
- 控制項 ID 的工具列來自訂。  
+ Control ID of the toolbar to customize.  
   
-### <a name="return-value"></a>傳回值  
- 這個方法一律會傳回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ This method always returns `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 快速自訂的窗格是當使用者按一下 [開啟] 功能表**自訂**工具列上。  
+### <a name="remarks"></a>Remarks  
+ The Quick Customize pane is a menu that opens when the user clicks **Customize** on a toolbar.  
   
- 在快速自訂的窗格中進行變更的衍生類別中，這個方法會覆寫。  
+ Override this method in a derived class to make changes in the Quick Customize pane.  
   
-##  <a name="onshowmditabcontextmenu"></a>CMDIFrameWndEx::OnShowMDITabContextMenu  
- 由架構呼叫其中一個索引標籤上顯示快顯功能表之前。 針對 MDI 索引標籤式群組才有效。  
+##  <a name="onshowmditabcontextmenu"></a>  CMDIFrameWndEx::OnShowMDITabContextMenu  
+ Called by the framework before a shortcut menu is displayed on one of the tabs. Valid for MDI Tabbed Groups only.  
   
 ```  
 virtual BOOL OnShowMDITabContextMenu(
@@ -1359,73 +1434,73 @@ virtual BOOL OnShowMDITabContextMenu(
     BOOL bTabDrop);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 螢幕座標中的功能表中的位置。  
+ The location of the menu in screen coordinates.  
   
  [in] `dwAllowedItems`  
- 位元 OR 組合的旗標，指出目前的索引標籤允許的動作︰  
+ A bitwise-OR combination of flags that indicates what actions are allowed for the current tab:  
   
-- `BCGP_MDI_CREATE_VERT_GROUP`-可以建立垂直索引標籤群組。  
+- `BCGP_MDI_CREATE_VERT_GROUP` - can create a vertical tab group.  
   
-- `BCGP_MDI_CREATE_HORZ_GROUP`-可以建立水平索引標籤群組。  
+- `BCGP_MDI_CREATE_HORZ_GROUP` - can create a horizontal tab group.  
   
-- `BCGP_MDI_CAN_MOVE_PREV`-可以將索引標籤移至前一個索引標籤群組。  
+- `BCGP_MDI_CAN_MOVE_PREV` - can move a tab to the previous tab group.  
   
-- `BCGP_MDI_CAN_MOVE_NEXT`-可以移至下一步 索引標籤群組中 索引標籤。  
+- `BCGP_MDI_CAN_MOVE_NEXT` - can move a tab to the next tab group.  
   
-- `BCGP_MDI_CAN_BE_DOCKED`-索引標籤式文件切換停駐狀態 （如索引標籤式文件相關）。  
+- `BCGP_MDI_CAN_BE_DOCKED` - switch a tabbed document to docked state (relevant for tabbed documents only).  
   
  [in] `bTabDrop`  
- `TRUE`若要顯示的結果 索引標籤拖曳到另一個索引標籤式群組功能表。 `FALSE`若要顯示為目前使用中 索引標籤上的快顯功能表的功能表。  
+ `TRUE` to display the menu as a result of dragging the tab onto another tabbed group. `FALSE` to display the menu as a shortcut menu on the currently active tab.  
   
-### <a name="return-value"></a>傳回值  
- 覆寫這個方法在[CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-衍生的類別。  
+### <a name="return-value"></a>Return Value  
+ Override this method in a [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)-derived class.  
   
-### <a name="remarks"></a>備註  
- 如果您不會處理`OnShowMDITabContextMenu`，將不會顯示快顯功能表。 此函式由產生**MFC 應用程式精靈**當您啟用 MDI 索引標籤式群組功能。  
+### <a name="remarks"></a>Remarks  
+ If you do not process `OnShowMDITabContextMenu`, the shortcut menu will not be displayed. This function is generated by the **MFC Application Wizard** when you enable the MDI Tabbed Groups feature.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`OnShowMDITabContextMenu`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `OnShowMDITabContextMenu` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&14;](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]  
   
-##  <a name="onshowpanes"></a>CMDIFrameWndEx::OnShowPanes  
- 若要顯示或隱藏窗格架構呼叫。  
+##  <a name="onshowpanes"></a>  CMDIFrameWndEx::OnShowPanes  
+ Called by the framework to show or hide panes.  
   
 ```  
 virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- `TRUE`若要顯示的窗格，`FALSE`隱藏窗格。  
+ `TRUE` to show panes, `FALSE` to hide panes.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果因而呼叫這個方法，變更窗格的狀態`FALSE`窗格會在中所指定的狀態已經是`bShow`。 例如，如果隱藏的窗格和`bShow`是`FALSE`，則傳回值是`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the state of the panes changes as a result of calling this method, `FALSE` if the panes are already in the state specified by `bShow`. For example, if the panes are hidden and `bShow` is `FALSE`, the return value is `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 預設實作會移除最上層框架視窗的工具列。  
+### <a name="remarks"></a>Remarks  
+ The default implementation removes the toolbar from the top-level frame window.  
   
- 如果[CDockingManager::m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode)是`TRUE`（預設值），將隱藏所有停駐窗格。  
+ If [CDockingManager::m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode) is `TRUE` (the default), all docking panes will be hidden.  
   
-##  <a name="onshowpopupmenu"></a>CMDIFrameWndEx::OnShowPopupMenu  
- 開啟快顯功能表時，由架構呼叫。  
+##  <a name="onshowpopupmenu"></a>  CMDIFrameWndEx::OnShowPopupMenu  
+ Called by the framework when it opens a pop-up menu.  
   
 ```  
 virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果要顯示為快顯功能表。 否則為 `FALSE`。 預設實作會傳回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pop-up menu is to be displayed. Otherwise, `FALSE`. The default implementation returns `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 如果您想要實作在快顯功能表啟動時的特殊處理，覆寫這個方法。 例如，如果您想要將規則功能表項目變更為色彩功能表按鈕，設定撕列等等。  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to implement special processing upon pop-up menu activation. For example, if you want to change regular menu items to color menu buttons, set up tear-off bars, and so on.  
   
- 預設實作不做任何動作。  
+ The default implementation does nothing.  
   
-##  <a name="onsizemdiclient"></a>CMDIFrameWndEx::OnSizeMDIClient  
- 架構的用戶端 MDI 視窗大小變更時呼叫。  
+##  <a name="onsizemdiclient"></a>  CMDIFrameWndEx::OnSizeMDIClient  
+ Called by the framework when the size of the client MDI window is changing.  
   
 ```  
 virtual void OnSizeMDIClient(
@@ -1433,17 +1508,17 @@ virtual void OnSizeMDIClient(
     const CRect& rectNew);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rectOld`  
- 目前的 MDI 用戶端視窗大小。  
+ The current size of the MDI client window.  
   
  [in] `rectNew`  
- 新的 MDI 用戶端視窗大小。  
+ The new size of the MDI client window.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ontearoffmenu"></a>CMDIFrameWndEx::OnTearOffMenu  
- 架構在啟動有分割列的功能表時所呼叫。  
+##  <a name="ontearoffmenu"></a>  CMDIFrameWndEx::OnTearOffMenu  
+ Called by the framework when a menu that has a tear-off bar is activated.  
   
 ```  
 virtual BOOL OnTearOffMenu(
@@ -1451,32 +1526,32 @@ virtual BOOL OnTearOffMenu(
     CPane* pBar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuPopup`  
- 快顯功能表上的指標。  
+ A pointer to the pop-up menu.  
   
  [in] `pBar`  
- 撕下列指標。  
+ A pointer to the tear-off bar.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`若要允許快顯功能表與撕下列進行啟動。否則`FALSE`。 預設為 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` to allow the pop-up menu with the tear-off bar to be made activate; otherwise `FALSE`. The default is `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 當您想要實作撕列特殊的設定會覆寫這個函式。 預設實作不做任何動作。  
+### <a name="remarks"></a>Remarks  
+ Override this function when you want to implement a special setup for the tear-off bar. The default implementation does nothing.  
   
-##  <a name="onupdateframemenu"></a>CMDIFrameWndEx::OnUpdateFrameMenu  
- 若要更新 [框架] 功能表架構呼叫。  
+##  <a name="onupdateframemenu"></a>  CMDIFrameWndEx::OnUpdateFrameMenu  
+ Called by the framework to update the frame menu.  
   
 ```  
 virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `hMenuAlt`  
- 功能表的控點。  
+ A handle to a menu.  
   
-##  <a name="panefrompoint"></a>CMDIFrameWndEx::PaneFromPoint  
- 傳回包含指定的點的停駐窗格。  
+##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint  
+ Returns the docking pane that contains the specified point.  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -1492,44 +1567,44 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- （在螢幕座標表示） 的點。  
+ The point (in screen coordinates).  
   
  [in] `nSensitivity`  
- 已檢查的每個窗格的視窗矩形會在所有方向中放大，此值。  
+ The window rectangle of each checked pane is enlarged in all directions by this value.  
   
  [in] `bExactBar`  
- 如果`TRUE`、`nSensitivity`參數會被忽略。  
+ If `TRUE`, the `nSensitivity` parameter is ignored.  
   
  [in] `pRTCBarType`  
- 如果非`NULL`，此方法會逐一查看指定之型別的窗格。  
+ If non- `NULL`, the method iterates over only the panes of the specified type.  
   
- [輸出] `dwAlignment`  
- 如果找到一個窗格，則這個參數會指定哪一側窗格的最接近指定位置。  
+ [out] `dwAlignment`  
+ If a pane is found, this parameter will specify which side of the pane is closest to the specified point.  
   
-### <a name="return-value"></a>傳回值  
- 停駐窗格的指標或`NULL`如果控制項包含所指定的點`point`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a docking pane, or `NULL` if no control contains the point specified by `point`.  
   
-### <a name="remarks"></a>備註  
- 呼叫重新導向至[CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md)。 請參閱[CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint)如需詳細資訊。  
+### <a name="remarks"></a>Remarks  
+ The call is redirected to the [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md). See [CDockingManager::ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) for more information.  
   
-##  <a name="recalclayout"></a>CMDIFrameWndEx::RecalcLayout  
- 若要重新計算框架視窗的版面配置架構呼叫。  
+##  <a name="recalclayout"></a>  CMDIFrameWndEx::RecalcLayout  
+ Called by the framework to recalculate the layout of the frame window.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bNotify`  
- 決定框架視窗的使用中就地項目是否要接收的配置變更通知。 如果`TRUE`，項目就會通知否則`FALSE`。  
+ Determines whether the active in-place item for the frame window receives notification of the layout change. If `TRUE`, the item is notified; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。  
+### <a name="remarks"></a>Remarks  
+ This method overrides [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).  
   
-##  <a name="removepanefromdockmanager"></a>CMDIFrameWndEx::RemovePaneFromDockManager  
- 取消註冊 窗格，並將它從停駐管理員移除。  
+##  <a name="removepanefromdockmanager"></a>  CMDIFrameWndEx::RemovePaneFromDockManager  
+ Unregisters a pane and removes it from the docking manager.  
   
 ```  
 void RemovePaneFromDockManager(
@@ -1540,76 +1615,76 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 要移除的窗格指標。  
+ A pointer to a pane to be removed.  
   
  [in] `bDestroy`  
- `TRUE`要終結 [移除] 窗格。 `FALSE`若要摧毀它。  
+ `TRUE` to destroy the removed pane. `FALSE` to not destroy it.  
   
  [in] `bAdjustLayout`  
- `TRUE`若要立即調整停駐配置。 如果`FALSE`，調整 就會發生只重繪事件發生時因為其他原因 （使用者調整視窗大小時，拖曳主要畫面格等等）。  
+ `TRUE` to adjust the docking layout immediately. If `FALSE`, the adjustment will occur only when a redraw event occurs for other reasons (the user resizes the window, drags the main frame, etc.).  
   
  [in] `bAutoHide`  
- `TRUE`若要移除自動隱藏窗格的清單 窗格。 `FALSE`若要移除規則 窗格的清單 窗格。  
+ `TRUE` to remove the pane from the list of autohide panes. `FALSE` to remove the pane from the list of regular panes.  
   
  [in] `pBarReplacement`  
- 指標，會取代 [移除] 窗格的窗格。  
+ A pointer to a pane that replaces the removed pane.  
   
-### <a name="remarks"></a>備註  
- 您必須向要參加的停駐配置的停駐管理員的每個窗格。 使用[CMDIFrameWndEx::AddPane](#addpane)或[CMDIFrameWndEx::InsertPane](#insertpane)註冊窗格。  
+### <a name="remarks"></a>Remarks  
+ You must register each pane with the docking manager to take part in the docking layout. Use [CMDIFrameWndEx::AddPane](#addpane) or [CMDIFrameWndEx::InsertPane](#insertpane) to register panes.  
   
- 當窗格不再是框架視窗停駐配置的一部分，請使用此方法。  
+ Use this method when a pane is no longer a part of the docking layout of the frame window.  
   
-##  <a name="savemdistate"></a>CMDIFrameWndEx::SaveMDIState  
- 儲存目前的 MDI 索引標籤式群組的配置和先前所開啟的文件的清單。  
+##  <a name="savemdistate"></a>  CMDIFrameWndEx::SaveMDIState  
+ Saves the current layout of MDI Tabbed Groups and the list of previously opened documents.  
   
 ```  
 virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 指定設定檔名稱。  
+ Specifies the profile name.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果儲存成功。`FALSE`如果，儲存作業失敗。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the save succeeded; `FALSE` if the save failed.  
   
-### <a name="remarks"></a>備註  
- 若要載入或儲存 MDI 索引標籤和群組的狀態和開啟文件的清單，執行下列作業︰  
+### <a name="remarks"></a>Remarks  
+ To load or save the state of MDI tabs and groups and the list of opened documents, do the following:  
   
--   呼叫`SaveMDIState`關閉主框架時  
+-   Call `SaveMDIState` when the main frame is being closed  
   
--   呼叫[cmdiframewndex:: Loadmdistate](#loadmdistate)建立主要畫面格時。 此呼叫的建議的位置是主要畫面格第一次顯示之前。  
+-   Call [CMDIFrameWndEx::LoadMDIState](#loadmdistate) when the main frame is being created. The recommended location for this call is before the main frame is displayed for the first time.  
   
--   呼叫`CWinAppEx::EnableLoadWindowPlacement(FALSE);`之前`pMainFrame->LoadFrame (IDR_MAINFRAME);`  
+-   Call `CWinAppEx::EnableLoadWindowPlacement(FALSE);` before `pMainFrame->LoadFrame (IDR_MAINFRAME);`  
   
--   呼叫`CWinAppEx::ReloadWindowPlacement``(pMainFrame)`之後`LoadMDIState`主框架顯示儲存在登錄中的位置。  
+-   Call `CWinAppEx::ReloadWindowPlacement(pMainFrame)` after `LoadMDIState` to display the main frame at the position that was stored in the registry.  
   
--   覆寫`GetDocumentName`中`CMDIChildWndEx`-衍生類別，如果您的應用程式會顯示不會儲存為檔案的文件。 傳回的字串會儲存在登錄中，做為文件識別項。 如需詳細資訊，請參閱[CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)。  
+-   Override `GetDocumentName` in the `CMDIChildWndEx`- derived class if your application displays documents that are not stored as files. The returned string will be saved in the registry as a document identifier. For more information, see [CMDIChildWndEx::GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname).  
   
--   覆寫[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)正確建立文件，它們會從登錄載入時。 參數可`CreateDocumentWindow`是字串，`GetDocumentName`稍早傳回。  
+-   Override [CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow) to correctly create documents when they are loaded from the registry. The parameter to `CreateDocumentWindow` is the string that `GetDocumentName` returned earlier.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`SaveMDIState`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `SaveMDIState` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&15;](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]  
   
-##  <a name="setprintpreviewframe"></a>CMDIFrameWndEx::SetPrintPreviewFrame  
- 設定預覽列印框架視窗。  
+##  <a name="setprintpreviewframe"></a>  CMDIFrameWndEx::SetPrintPreviewFrame  
+ Sets the print preview frame window.  
   
 ```  
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 預覽列印框架視窗的指標。  
+ Pointer to a print preview frame window.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setuptoolbarmenu"></a>CMDIFrameWndEx::SetupToolbarMenu  
- 使用者定義的項目取代成空的項目修改工具列物件。  
+##  <a name="setuptoolbarmenu"></a>  CMDIFrameWndEx::SetupToolbarMenu  
+ Modifies a toolbar object by replacing dummy items with user-defined items.  
   
 ```  
 void SetupToolbarMenu(
@@ -1618,27 +1693,27 @@ void SetupToolbarMenu(
     const UINT uiViewUserToolbarCmdLast);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `menu`  
- 參考[CMenu 類別](../../mfc/reference/cmenu-class.md)要修改的物件。  
+ A reference to a [CMenu Class](../../mfc/reference/cmenu-class.md) object to be modified.  
   
  [in] `uiViewUserToolbarCmdFirst`  
- 指定的使用者定義的第一個命令。  
+ Specifies the first user-defined command.  
   
  [in] `uiViewUserToolbarCmdLast`  
- 指定的使用者定義的最後一個命令。  
+ Specifies the last user-defined command.  
   
-##  <a name="showfullscreen"></a>CMDIFrameWndEx::ShowFullScreen  
- 切換至全螢幕模式一般模式從主框架。  
+##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen  
+ Switches the main frame from regular mode to full-screen mode.  
   
 ```  
 void ShowFullScreen();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="showpane"></a>CMDIFrameWndEx::ShowPane  
- 顯示或隱藏指定的窗格。  
+##  <a name="showpane"></a>  CMDIFrameWndEx::ShowPane  
+ Shows or hides the specified pane.  
   
 ```  
 void ShowPane(
@@ -1648,79 +1723,79 @@ void ShowPane(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 顯示或隱藏窗格的指標。  
+ Pointer to the pane to be shown or hidden.  
   
  [in] `bShow`  
- `TRUE`若要顯示的窗格。 `FALSE`若要隱藏窗格。  
+ `TRUE` to show the pane. `FALSE` to hide the pane.  
   
  [in] `bDelay`  
- `TRUE`若要延遲的停駐配置的重新計算。 `FALSE`若要立即重新計算停駐配置。  
+ `TRUE` to delay the recalculation of the docking layout. `FALSE` to recalculate the docking layout immediately.  
   
  [in] `bActivate`  
- `TRUE`若要顯示的窗格應該為使用中。 `FALSE`若要顯示為非作用中 窗格。  
+ `TRUE` to show the pane should as active. `FALSE` to show the pane as inactive.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法，以顯示或隱藏窗格。 請勿使用`ShowWindow`停駐窗格。  
+### <a name="remarks"></a>Remarks  
+ Call this method to show or hide the pane. Do not use `ShowWindow` for docking panes.  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`ShowPane`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `ShowPane` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&16;](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]  
   
-##  <a name="showwindowsdialog"></a>CMDIFrameWndEx::ShowWindowsDialog  
- 建立[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)方塊，並將它開啟。  
+##  <a name="showwindowsdialog"></a>  CMDIFrameWndEx::ShowWindowsDialog  
+ Creates a [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) box and opens it.  
   
 ```  
 void ShowWindowsDialog();
 ```  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`ShowWindowsDialog`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `ShowWindowsDialog` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&18;](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]  
   
-##  <a name="tabbeddocumenttocontrolbar"></a>CMDIFrameWndEx::TabbedDocumentToControlBar  
- 將指定的索引標籤式文件轉換為停駐窗格。  
+##  <a name="tabbeddocumenttocontrolbar"></a>  CMDIFrameWndEx::TabbedDocumentToControlBar  
+ Converts the specified tabbed document to a docking pane.  
   
 ```  
 virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pMDIChildWnd`  
- 包含的停駐窗格的 MDI 子視窗的指標。  
+ A pointer to MDI child window that contains a docking pane.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`方法成功，則`FALSE`失敗。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful, `FALSE` on failure.  
   
-### <a name="remarks"></a>備註  
- 若要將轉換的停駐窗格的索引標籤式文件中使用這個方法。 索引標籤式文件必須已建立使用[CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument)。  
+### <a name="remarks"></a>Remarks  
+ Use this method to convert a tabbed document to a docking pane. The tabbed document must have been created by using [CMDIFrameWndEx::ControlBarToTabbedDocument](#controlbartotabbeddocument).  
   
-### <a name="example"></a>範例  
- 下列範例將示範如何`TabbedDocumentToControlBar`用於[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example shows how `TabbedDocumentToControlBar` is used in the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&19;](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]  
   
-##  <a name="updatecaption"></a>CMDIFrameWndEx::UpdateCaption  
- 若要更新的視窗框架標題架構呼叫。  
+##  <a name="updatecaption"></a>  CMDIFrameWndEx::UpdateCaption  
+ Called by the framework to update the window frame caption.  
   
 ```  
 void UpdateCaption();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx::UpdateMDITabbedBarsIcons  
- 設定每個 MDI 索引標籤式窗格的圖示。  
+##  <a name="updatemditabbedbarsicons"></a>  CMDIFrameWndEx::UpdateMDITabbedBarsIcons  
+ Sets the icon for each MDI tabbed pane.  
   
 ```  
 void UpdateMDITabbedBarsIcons();
 ```  
   
-##  <a name="winhelp"></a>CMDIFrameWndEx::WinHelp  
- 架構所呼叫以起始 WinHelp 應用程式或內容說明。  
+##  <a name="winhelp"></a>  CMDIFrameWndEx::WinHelp  
+ Called by the framework to initiate the WinHelp application or context help.  
   
 ```  
 virtual void WinHelp(
@@ -1728,19 +1803,19 @@ virtual void WinHelp(
     UINT nCmd = HELP_CONTEXT);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 指定資料為 `nCmd`所指定之說明類型的必要項目。  
+ Specifies data as required for the type of help specified by `nCmd`.  
   
  [in] `nCmd`  
- 指定要求的說明類型。 如需可能的值清單以及它們如何影響 `dwData` 參數的相關資訊，請參閱 Windows SDK 中的 [WinHelp 函式](http://msdn.microsoft.com/library/windows/desktop/bb762267) 。  
+ Specifies the type of help requested. For a list of possible values and how they affect the `dwData` parameter, see the [WinHelp Function](http://msdn.microsoft.com/library/windows/desktop/bb762267) in the Windows SDK.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫[CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)。  
+### <a name="remarks"></a>Remarks  
+ This method overrides [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp).  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)   
- [CMDIChildWndEx 類別](../../mfc/reference/cmdichildwndex-class.md)
+ [CMDIChildWndEx Class](../../mfc/reference/cmdichildwndex-class.md)
 

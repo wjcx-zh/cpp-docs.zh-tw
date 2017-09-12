@@ -1,5 +1,5 @@
 ---
-title: "CMFCDesktopAlertWndInfo 類別 |Microsoft 文件"
+title: CMFCDesktopAlertWndInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDesktopAlertWndInfo class
+- CMFCDesktopAlertWndInfo [MFC], m_hIcon
+- CMFCDesktopAlertWndInfo [MFC], m_nURLCmdID
+- CMFCDesktopAlertWndInfo [MFC], m_strText
+- CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
 caps.latest.revision: 26
 author: mikeblome
@@ -38,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 7013a7c9b29c6dc9e6324ca0490a667ed79c88f7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77f515d3eecdf9466ab81ffb1d23e845ab4a8cdc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 類別
-`CMFCDesktopAlertWndInfo`類別搭配[CMFCDesktopAlertWnd 類別](../../mfc/reference/cmfcdesktopalertwnd-class.md)。 這會指定如果桌面警示視窗出現時要顯示的控制項。  
+# <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo Class
+The `CMFCDesktopAlertWndInfo` class is used with the [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md). It specifies the controls that are displayed if the desktop alert window pops up.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDesktopAlertWndInfo  
@@ -56,105 +59,105 @@ class CMFCDesktopAlertWndInfo
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|解構函式。|  
+|`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDesktopAlertWndInfo::operator =](#operator_eq)||  
+|[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||  
   
-### <a name="data-members"></a>資料成員  
+### <a name="data-members"></a>Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|控制代碼時所顯示的圖示。|  
-|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|桌面警示視窗上的連結相關聯的命令識別碼。|  
-|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|顯示桌面警示視窗的文字。|  
-|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|會顯示在桌面警示視窗中的連結。|  
+|[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|A handle to the icon that is displayed.|  
+|[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|The command ID associated with a link on the desktop alert window.|  
+|[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)|The text that is displayed on the desktop alert window.|  
+|[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)|The link that is displayed on the desktop alert window.|  
   
-## <a name="remarks"></a>備註  
- `CMFCDesktopAlertWndInfo`類別傳遞給[CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)方法，以指定顯示在桌面警示視窗的 [預設] 對話方塊的項目。 [預設] 對話方塊中可以包含三個項目︰  
+## <a name="remarks"></a>Remarks  
+ The `CMFCDesktopAlertWndInfo` class is passed to the [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) method to specify the elements that are displayed on the default dialog of the desktop alert window. The default dialog can contain three items:  
   
--   圖示，它會藉由呼叫設定[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)。  
+-   An icon, which is set by calling [CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon).  
   
--   標籤或文字訊息，藉由呼叫設定[CMFCDesktopAlertWndInfo::m_strText](#m_strtext)。  
+-   A label, or text message, which is set by calling [CMFCDesktopAlertWndInfo::m_strText](#m_strtext).  
   
--   藉由呼叫設定連結[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)。 若要在按一下連結時，所執行的命令，呼叫[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)。  
+-   A link, which is set by calling [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl). To set the command that is executed when the link is clicked, call [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid).  
   
- 如果預設對話方塊不足夠，您可以建立自訂的對話方塊，並將它傳遞給[CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)方法，而不要使用這個類別。 如需詳細資訊，請參閱[CMFCDesktopAlertDialog 類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)。  
+ If the default dialog is not sufficient, you can create a custom dialog and pass it to the [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) method instead of using this class. For more information, see [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md).  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用各種成員`CMFCDesktopAlertWndInfo`類別。 範例會示範如何將控制代碼設定為所顯示的圖示時，會顯示在桌面警示視窗，顯示在桌面警示視窗中，連結和桌面警示視窗上的連結相關聯的命令 ID 的文字。 這個範例是屬於[桌面警示示範範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various members in the `CMFCDesktopAlertWndInfo` class. The example demonstrates how to set the handle to the icon that is displayed, the text that is displayed on the desktop alert window, the link that is displayed on the desktop alert window, and the command ID that is associated with a link on the desktop alert window. This example is part of the [Desktop Alert Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DesktopAlertDemo #&3;](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxDesktopAlertDialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxDesktopAlertDialog.h  
   
-##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator=  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
- 控制代碼時所顯示的圖示。  
+##  <a name="m_hicon"></a>  CMFCDesktopAlertWndInfo::m_hIcon  
+ A handle to the icon that is displayed.  
   
 ```  
 HICON m_hIcon;  
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
- 桌面警示視窗上的連結相關聯的命令識別碼。  
+##  <a name="m_nurlcmdid"></a>  CMFCDesktopAlertWndInfo::m_nURLCmdID  
+ The command ID associated with a link on the desktop alert window.  
   
 ```  
 UINT m_nURLCmdID;  
 ```  
   
-### <a name="remarks"></a>備註  
- 當使用者按一下連結所指定的命令 ID 傳送至快顯視窗的擁有者[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)。  
+### <a name="remarks"></a>Remarks  
+ The command ID is sent to the owner of the popup window when the user clicks on the link specified by [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl).  
   
-##  <a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
- 顯示桌面警示視窗的文字。  
+##  <a name="m_strtext"></a>  CMFCDesktopAlertWndInfo::m_strText  
+ The text that is displayed on the desktop alert window.  
   
 ```  
 CString m_strText;  
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
- 會顯示在桌面警示視窗中的連結。  
+##  <a name="m_strurl"></a>  CMFCDesktopAlertWndInfo::m_strURL  
+ The link that is displayed on the desktop alert window.  
   
 ```  
 CString m_strURL;  
 ```  
   
-### <a name="remarks"></a>備註  
- 當使用者按一下連結時，此命令有[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)命令便會傳送快顯視窗的擁有者。  
+### <a name="remarks"></a>Remarks  
+ When the user clicks the link, the command that has the [CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid) command ID will be sent to the owner of the pop-up window.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCDesktopAlertWnd 類別](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)   
  [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)   
- [CMFCDesktopAlertDialog 類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)
+ [CMFCDesktopAlertDialog Class](../../mfc/reference/cmfcdesktopalertdialog-class.md)
 

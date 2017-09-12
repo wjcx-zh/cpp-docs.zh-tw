@@ -1,77 +1,95 @@
 ---
-title: "文件、檢視和架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式物件 [C++], 與其他 MFC 物件的關聯"
-  - "應用程式 [MFC]"
-  - "文件物件, 與其他 MFC 物件相關的"
-  - "文件樣板, 範本物件"
-  - "文件/檢視架構, 關於文件/檢視架構"
-  - "文件 [C++]"
-  - "MFC [C++], 應用程式架構"
-  - "MFC [C++], 文件"
-  - "MFC [C++], 檢視"
-  - "MFC 物件關聯性"
-  - "物件 [C++], MFC 應用程式"
-  - "執行緒物件"
-  - "檢視物件, 與其他 MFC 物件的關聯"
+title: Documents, Views, and the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document templates [MFC], template objects
+- applications [MFC]
+- MFC, application framework
+- application objects [MFC], relation to other MFC objects
+- documents [MFC]
+- MFC, documents
+- document objects [MFC], in relation to other MFC objects
+- view objects [MFC], relation to other MFC objects
+- MFC, views
+- document/view architecture [MFC], about document/view architecture
+- objects [MFC], MFC applications
+- MFC object relationships
+- thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 文件、檢視和架構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fedc1c3bd792265aa8c375a6162dd13315dcabc3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 架構核心是文件和檢視的概念。  文件是使用者在編輯工作階段互動的資料物件。  它是由 `New` 或 **檔案** 功能表上的 **Open** 命令所建立，通常會被儲存在檔案中。\(衍生自類別 **CDocument** 的標準 MFC 文件與 Active 文件和 OLE 複合文件不同。\)檢視是使用者與文件互動的視窗物件。  
+---
+# <a name="documents-views-and-the-framework"></a>Documents, Views, and the Framework
+At the heart of the MFC framework are the concepts of document and view. A document is a data object with which the user interacts in an editing session. It is created by the `New` or **Open** command on the **File** menu and is typically saved in a file. (Standard MFC documents, derived from class **CDocument**, are different from Active documents and OLE compound documents.) A view is a window object through which the user interacts with a document.  
   
- 執行中應用程式的主要物件如下：  
+ The key objects in a running application are:  
   
--   文件或多個文件。  
+-   The document or documents.  
   
-     您的文件類別 \(衍生自 [CDocument](../mfc/reference/cdocument-class.md)\) 指定您的應用程式資料。  
+     Your document class (derived from [CDocument](../mfc/reference/cdocument-class.md)) specifies your application's data.  
   
-     如果您想要在應用程式使用 OLE 功能，從 [COleDocument](../mfc/reference/coledocument-class.md) 或其中一個它的衍生類別衍生您的文件類別，根據您需要的功能類型。  
+     If you want OLE functionality in your application, derive your document class from [COleDocument](../mfc/reference/coledocument-class.md) or one of its derived classes, depending on the type of functionality you need.  
   
--   檢視或多個檢視。  
+-   The view or views.  
   
-     檢視類別 \(衍生自 [CView](../mfc/reference/cview-class.md)\) 是使用者的「資料上的視窗」。檢視類別控制使用者如何參閱文件資料並與其互動。  在某些情況下，您可能想要文件有多個資料檢視。  
+     Your view class (derived from [CView](../mfc/reference/cview-class.md)) is the user's "window on the data." The view class controls how the user sees your document's data and interacts with it. In some cases, you may want a document to have multiple views of the data.  
   
-     如果您需要捲動，從 [CScrollView](../mfc/reference/cscrollview-class.md) 衍生。  如果您要在對話方塊樣板資源配置使用者介面，從 [CFormView](../mfc/reference/cformview-class.md) 衍生。  對於簡單的文字資料，請使用 [CEditView](../mfc/reference/ceditview-class.md) 或從其衍生。  如需表單架構的資料存取應用程式，例如資料輸入程式，從 [CRecordView](../mfc/reference/crecordview-class.md) \(ODBC\) 衍生。  類別 [CTreeView](../mfc/reference/ctreeview-class.md)、[CListView](../mfc/reference/clistview-class.md) 和 [CRichEditView](../mfc/reference/cricheditview-class.md) 也可使用。  
+     If you need scrolling, derive from [CScrollView](../mfc/reference/cscrollview-class.md). If your view has a user interface that is laid out in a dialog-template resource, derive from [CFormView](../mfc/reference/cformview-class.md). For simple text data, use or derive from [CEditView](../mfc/reference/ceditview-class.md). For a form-based data-access application, such as a data-entry program, derive from [CRecordView](../mfc/reference/crecordview-class.md) (for ODBC). Also available are classes [CTreeView](../mfc/reference/ctreeview-class.md), [CListView](../mfc/reference/clistview-class.md), and [CRichEditView](../mfc/reference/cricheditview-class.md).  
   
--   框架視窗  
+-   The frame windows  
   
-     檢視是顯示在「文件框架視窗」內部。在 SDI 應用程式中，文件框架視窗也是應用程式的「主框架視窗」。  在 MDI 應用程式中，文件視窗是會顯示在主框架視窗內的子視窗。  您的衍生的主框架視窗類別會指定樣式和包含檢視的框架視窗的其他特性。  如果您需要自訂框架視窗，從 [CFrameWnd](../mfc/reference/cframewnd-class.md) 衍生以自訂 SDI 應用程式的文件框架視窗。  從 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) 衍生以自訂 MDI 應用程式的主框架視窗。  同時從 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) 衍生一個類別以自訂應用程式支援的每一種不同的 MDI 文件框架視窗。  
+     Views are displayed inside "document frame windows." In an SDI application, the document frame window is also the "main frame window" for the application. In an MDI application, document windows are child windows displayed inside a main frame window. Your derived main frame-window class specifies the styles and other characteristics of the frame windows that contain your views. If you need to customize frame windows, derive from [CFrameWnd](../mfc/reference/cframewnd-class.md) to customize the document frame window for SDI applications. Derive from [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) to customize the main frame window for MDI applications. Also derive a class from [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) to customize each distinct kind of MDI document frame windows that your application supports.  
   
--   文件範本或範本  
+-   The document template or templates  
   
-     資料範本組織在文件、檢視和框架視窗建立的時候。  特定文件樣板類別 \(衍生自 [CDocTemplate](../mfc/reference/cdoctemplate-class.md)類別\) 建立並管理一個型別的所有開啟的文件。  支援多個文件型別的應用程式擁有多個文件範本。  為 SDI 應用程式使用類別 [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) 或為 MDI 應用程式使用 [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) 類別。  
+     A document template orchestrates the creation of documents, views, and frame windows. A particular document-template class, derived from class [CDocTemplate](../mfc/reference/cdoctemplate-class.md), creates and manages all open documents of one type. Applications that support more than one type of document have multiple document templates. Use class [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) for SDI applications, or use class [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) for MDI applications.  
   
--   應用程式物件  
+-   The application object  
   
-     您的應用程式類別 \(衍生自 [CWinApp](../mfc/reference/cwinapp-class.md)\) 控制所有上述物件並指定應用程式的行為 \(例如初始化和清除\)。  應用程式的唯一應用程式物件建立及管理應用程式支援的任何資料型別的文件範本。  
+     Your application class (derived from [CWinApp](../mfc/reference/cwinapp-class.md)) controls all of the objects above and specifies application behavior such as initialization and cleanup. The application's one and only application object creates and manages the document templates for any document types the application supports.  
   
--   執行緒物件  
+-   Thread objects  
   
-     如果您的應用程式建立個別的執行緒 \(例如，在背景執行計算\) ，您將使用衍生自 [CWinThread](../mfc/reference/cwinthread-class.md) 的類別。  [CWinApp](../mfc/reference/cwinapp-class.md) 衍生自 `CWinThread` 並表示應用程式執行 \(或主要\) 的處理序主執行緒。  您也可以在次要執行緒使用 MFC。  
+     If your application creates separate threads of execution — for example, to perform calculations in the background — you'll use classes derived from [CWinThread](../mfc/reference/cwinthread-class.md). [CWinApp](../mfc/reference/cwinapp-class.md) itself is derived from `CWinThread` and represents the primary thread of execution (or the main process) in your application. You can also use MFC in secondary threads.  
   
- 在執行中的應用程式，這些物件一起合作地回應使用者動作，並透過命令和其他訊息繫結在一起。  單一應用程式物件處理一個或多個資料範本。  每個文件樣板建立和管理一個或多個資料 \(根據應用程式是否是 SDI 或 MDI\)。  使用者透過框架視窗中的檢視來檢視和操作資料。  下圖顯示 SDI 應用程式中這些物件之間的關聯性。  
+ In a running application, these objects cooperatively respond to user actions, bound together by commands and other messages. A single application object manages one or more document templates. Each document template creates and manages one or more documents (depending on whether the application is SDI or MDI). The user views and manipulates a document through a view contained inside a frame window. The following figure shows the relationships among these objects for an SDI application.  
   
- ![執行中 SDI 應用程式內的物件](../mfc/media/vc386v1.png "vc386V1")  
-執行中的 SDI 應用程式內的物件  
+ ![Objects in a running SDI application](../mfc/media/vc386v1.gif "vc386v1")  
+Objects in a Running SDI Application  
   
- 這系列的其他文章說明架構工具、MFC 應用程式精靈和資源編輯器，如何建立這些物件、它們如何一起工作，以及如何在您的程式設計中使用它們。  文件、檢視和框架視窗在 [視窗物件](../mfc/window-objects.md) 和 [文件\/檢視架構](../mfc/document-view-architecture.md) 中會進一步討論。  
+ The rest of this family of articles explains how the framework tools, the MFC Application Wizard, and the resource editors, create these objects, how they work together, and how you use them in your programming. Documents, views, and frame windows are discussed in more detail in [Window Objects](../mfc/window-objects.md) and [Document/View Architecture](../mfc/document-view-architecture.md).  
   
-## 請參閱  
- [使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

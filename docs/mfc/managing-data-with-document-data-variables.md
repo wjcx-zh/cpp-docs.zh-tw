@@ -1,43 +1,62 @@
 ---
-title: "使用文件資料變數管理資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], friend"
-  - "集合類別 [C++], 文件物件所使用的"
-  - "資料 [MFC]"
-  - "資料 [MFC], 文件"
-  - "文件資料 [C++]"
-  - "文件 [C++], 資料儲存"
-  - "friend 類別"
-  - "成員變數 [C++], 文件類別"
+title: Managing Data with Document Data Variables | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], data storage
+- friend classes [MFC]
+- classes [MFC], friend
+- data [MFC]
+- data [MFC], documents
+- collection classes [MFC], used by document object
+- document data [MFC]
+- member variables [MFC], document class [MFC]
 ms.assetid: e70b87f4-8c30-49e5-8986-521c2ff91704
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用文件資料變數管理資料
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f891754a2161b87c87e56cd392faf1394e62ba5d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-實作您的文件中的資料，您的資料成員變數的分類。  例如， Scribble 程式宣告型別 `CObList` —存放指標對 `CObject` 物件的連結串列的資料成員。  這份清單是用來儲存組成徒手繪製掃描線的點陣列。  
+---
+# <a name="managing-data-with-document-data-variables"></a>Managing Data with Document Data Variables
+Implement your document's data as member variables of your document class. For example, the Scribble program declares a data member of type `CObList` — a linked list that stores pointers to `CObject` objects. This list is used to store arrays of points that make up a freehand line drawing.  
   
- 如何實作自己的資料成員的資料取決於您應用程式的本質。  協助您， 「設定一組分類」的 MFC 提供—陣列，清單，並將 \(字典\)，包含以 C\+\+ 樣板的集合—與類別一起封裝各種不同通用資料型別 \(例如 `CString`、 `CRect`、 `CPoint`、 `CSize`和 `CTime`。  如需這些類別的詳細資訊，請參閱《 *MFC 參考》中的*[類別庫概觀](../mfc/class-library-overview.md) 。  
+ How you implement your document's member data depends on the nature of your application. To help you out, MFC supplies a group of "collection classes" — arrays, lists, and maps (dictionaries), including collections based on C++ templates — along with classes that encapsulate a variety of common data types such as `CString`, `CRect`, `CPoint`, `CSize`, and `CTime`. For more information about these classes, see the [Class Library Overview](../mfc/class-library-overview.md) in the *MFC Reference*.  
   
- 當您定義資料成員的資料，您通常會將成員函式到文件類別設定和取得資料項目和執行其他有用的作業。  
+ When you define your document's member data, you will usually add member functions to the document class to set and get data items and perform other useful operations on them.  
   
- 您要存取文件物件使用檢視的指標文件，安裝在此檢視中建立時。  您可以藉由呼叫 `CView` 成員函式來擷取在檢視的成員函式中的這個指標 **GetDocument**。  請務必將這個指標到您的資料型別。  然後您可以傳遞指標存取公文書成員。  
+ Your views access the document object by using the view's pointer to the document, installed in the view at creation time. You can retrieve this pointer in a view's member functions by calling the `CView` member function **GetDocument**. Be sure to cast this pointer to your own document type. Then you can access public document members through the pointer.  
   
- 如果經常資料傳輸要求直接存取，或者您使用文件的非公用成員的繼續進行分類，您也可以交換檢視類別 friend \(用 C\+\+ 用語\) 文件類別。  
+ If frequent data transfer requires direct access, or you wish to use the nonpublic members of the document class, you may want to make your view class a friend (in C++ terms) of the document class.  
   
-## 請參閱  
- [使用文件](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

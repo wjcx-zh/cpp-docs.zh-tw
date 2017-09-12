@@ -1,5 +1,5 @@
 ---
-title: "按鈕樣式 |Microsoft 文件"
+title: Button Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,33 +38,33 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- BS_NOTIFY constant
-- BS_RIGHTBUTTON constant
-- styles, button objects
-- BS_USERBUTTON constant
-- BS_VCENTER constant
-- BS_PUSHLIKE constant
-- BS_RADIOBUTTON constant
-- BS_PUSHBUTTON constant
-- BS_DEFPUSHBUTTON constant
-- BS_LEFTTEXT constant
+- BS_NOTIFY constant [MFC]
+- BS_RIGHTBUTTON constant [MFC]
+- styles [MFC], button objects
+- BS_USERBUTTON constant [MFC]
+- BS_VCENTER constant [MFC]
+- BS_PUSHLIKE constant [MFC]
+- BS_RADIOBUTTON constant [MFC]
+- BS_PUSHBUTTON constant [MFC]
+- BS_DEFPUSHBUTTON constant [MFC]
+- BS_LEFTTEXT constant [MFC]
 - button objects (CButton), button styles
-- BS_AUTO3STATE constant
-- BS_3STATE constant
-- BS_OWNERDRAW constant
-- BS_AUTORADIOBUTTON constant
-- BS_GROUPBOX constant
-- BS_BITMAP constant
-- BS_CENTER constant
-- BS_MULTILINE constant
-- BS_BOTTOM constant
-- BS_FLAT constant
-- BS_AUTOCHECKBOX constant
-- BS_RIGHT constant
-- BS_CHECKBOX constant
-- BS_LEFT constant
-- BS_ICON constant
-- BS_TOP constant
+- BS_AUTO3STATE constant [MFC]
+- BS_3STATE constant [MFC]
+- BS_OWNERDRAW constant [MFC]
+- BS_AUTORADIOBUTTON constant [MFC]
+- BS_GROUPBOX constant [MFC]
+- BS_BITMAP constant [MFC]
+- BS_CENTER constant [MFC]
+- BS_MULTILINE constant [MFC]
+- BS_BOTTOM constant [MFC]
+- BS_FLAT constant [MFC]
+- BS_AUTOCHECKBOX constant [MFC]
+- BS_RIGHT constant [MFC]
+- BS_CHECKBOX constant [MFC]
+- BS_LEFT constant [MFC]
+- BS_ICON constant [MFC]
+- BS_TOP constant [MFC]
 - BS_TEXT constant
 ms.assetid: 41206f72-2b92-4250-ae32-31184046402f
 caps.latest.revision: 20
@@ -85,80 +85,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: cdd577cd6915a1f3c1e05fae68f7fed47cc79236
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3056c9686359e1cc12c583bbf86217cba4055d6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="button-styles"></a>按鈕樣式
-本主題說明的按鈕類型和樣式。  
+# <a name="button-styles"></a>Button Styles
+This topic describes button types and styles.  
   
-## <a name="button-types"></a>按鈕類型  
- 下表列出的按鈕類型。 您可以選擇下列其中一個項目。 如果未指定按鈕類型，預設值是`BS_PUSHBUTTON`。  
+## <a name="button-types"></a>Button Types  
+ The following table lists button types. You can optionally choose one of the following. If you do not specify a button type, the default is `BS_PUSHBUTTON`.  
   
-|類型|描述|  
+|Type|Description|  
 |----------|-----------------|  
-|`BS_3STATE`|建立具有三種狀態的核取方塊按鈕︰ `BST_CHECKED`， `BST_INDETERMINATE`，和`BST_UNCHECKED`。 按一下按鈕會傳送`BN_CLICKED`主控視窗的通知，但不變更按鈕的狀態。 根據預設，相關聯的文字會顯示核取方塊的右邊。 若要顯示的文字左邊的核取方塊，請使用`BS_LEFTTEXT`或`BS_RIGHTBUTTON`樣式。|  
-|`BS_AUTO3STATE`|建立具有三種狀態的核取方塊按鈕︰ `BST_CHECKED`， `BST_INDETERMINATE`，和`BST_UNCHECKED`。 按一下按鈕會傳送`BN_CLICKED`主控視窗的通知，並變更按鈕的狀態。 按鈕狀態的順序循環`BST_CHECKED`， `BST_INDETERMINATE`，和`BST_UNCHECKED`。 根據預設，相關聯的文字會顯示核取方塊的右邊。 若要顯示的文字左邊的核取方塊，請使用`BS_LEFTTEXT`或`BS_RIGHTBUTTON`樣式。|  
-|`BS_AUTOCHECKBOX`|建立核取方塊按鈕有兩個狀態︰`BST_CHECKED`和`BST_UNCHECKED`。 按一下按鈕會傳送`BN_CLICKED`主控視窗的通知，並變更按鈕的狀態。 根據預設，相關聯的文字會顯示核取方塊的右邊。 若要顯示的文字左邊的核取方塊，請使用`BS_LEFTTEXT`或`BS_RIGHTBUTTON`樣式。|  
-|`BS_AUTORADIOBUTTON`|建立選項按鈕，有兩個狀態︰`BST_CHECKED`和`BST_UNCHECKED`。 選項按鈕通常用在群組中，與具有其中一個已檢查的選項，一次最多每個群組。 按一下按鈕會傳送`BN_CLICKED`主控視窗的通知設定的狀態已按下的選項按鈕以`BST_CHECKED`，並設定按鈕群組中的所有其他選項按鈕狀態`BST_UNCHECKED`。 根據預設，相關聯的文字會顯示右邊的選項按鈕。 若要顯示的文字左邊的選項按鈕，使用`BS_LEFTTEXT`或`BS_RIGHTBUTTON`樣式。|  
-|`BS_CHECKBOX`|建立核取方塊按鈕有兩個狀態︰`BST_CHECKED`和`BST_UNCHECKED`。 按一下按鈕會傳送`BN_CLICKED`主控視窗的通知，但不變更按鈕的狀態。 根據預設，相關聯的文字會顯示核取方塊的右邊。 若要顯示的文字左邊的核取方塊，請使用`BS_LEFTTEXT`或`BS_RIGHTBUTTON`樣式。|  
-|`BS_COMMANDLINK`|建立命令連結按鈕。 命令連結按鈕是在特定的命令按鈕[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]主要文字和主要的文字下方的附註的左邊顯示綠色箭號。 您可以設定附註文字使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。|  
-|`BS_DEFCOMMANDLINK`|建立命令連結按鈕。 命令連結按鈕是在特定的命令按鈕[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]主要文字和主要的文字下方的附註的左邊顯示綠色箭號。 您可以設定附註文字使用[CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote)。 如果按鈕在對話方塊中，按下 ENTER 鍵傳送`BN_CLICKED`按鈕沒有輸入的焦點時，即使 對話方塊中的通知。|  
-|`BS_DEFPUSHBUTTON`|建立具有大量的黑色框線的命令按鈕。 如果按鈕在對話方塊中，按下 ENTER 鍵傳送`BN_CLICKED`按鈕沒有輸入的焦點時，即使 對話方塊中的通知。|  
-|`BS_DEFSPLITBUTTON`|建立分割按鈕。 分割按鈕是在特定的命令按鈕[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]包含旁的下拉箭號按鈕。 當您按一下按鈕時，預設會執行命令。 當您按一下下拉箭號時，就會出現其他命令的功能表。 如果 [分割] 按鈕，在對話方塊中按下 ENTER 鍵傳送`BN_CLICKED`通知加入對話方塊中，即使沒有輸入的焦點的按鈕。|  
-|`BS_GROUPBOX`|建立可以群組其他按鈕的矩形。 這個樣式相關聯的文字會顯示在矩形的左上角。|  
-|`BS_OWNERDRAW`|建立主控描繪的按鈕。 這個架構會呼叫`DrawItem`時 按鈕的視覺外觀的方法已變更。 當您使用時，就必須設定此樣式`CBitmapButton`類別。|  
-|`BS_PUSHBUTTON`|建立傳送命令按鈕`BN_CLICKED`主控視窗，當使用者按一下按鈕時的通知。|  
-|`BS_RADIOBUTTON`|建立選項按鈕，有兩個狀態︰`BST_CHECKED`和`BST_UNCHECKED`。 選項按鈕通常用在群組中，與具有其中一個已檢查的選項，一次最多每個群組。 按一下按鈕會傳送`BN_CLICKED`主控視窗的通知，但不會自動變更群組中的任何按鍵的狀態。 根據預設，相關聯的文字會顯示右邊的選項按鈕。 若要顯示的文字左邊的選項按鈕，使用`BS_LEFTTEXT`或`BS_RIGHTBUTTON`樣式。|  
-|`BS_SPLITBUTTON`|建立分割按鈕。 分割按鈕是在特定的命令按鈕[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]包含旁的下拉箭號按鈕。 當您按一下按鈕時，預設會執行命令。 當您按一下下拉箭號時，就會出現其他命令的功能表。|  
-|`BS_USERBUTTON`|已過時，但提供的 16 位元版本的 Windows 相容性。 Win32 應用程式應該使用`BS_OWNERDRAW`改。|  
+|`BS_3STATE`|Creates a check box button with three states: `BST_CHECKED`, `BST_INDETERMINATE`, and `BST_UNCHECKED`. Clicking on the button sends a `BN_CLICKED` notification to the owner window but does not change the state of the button. By default, associated text is displayed to the right of the check box. To display text to the left of the check box, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
+|`BS_AUTO3STATE`|Creates a check box button with three states: `BST_CHECKED`, `BST_INDETERMINATE`, and `BST_UNCHECKED`. Clicking on the button sends a `BN_CLICKED` notification to the owner window and changes the state of the button. The button states cycle in the order of `BST_CHECKED`, `BST_INDETERMINATE`, and `BST_UNCHECKED`. By default, associated text is displayed to the right of the check box. To display text to the left of the check box, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
+|`BS_AUTOCHECKBOX`|Creates a check box button with two states: `BST_CHECKED` and `BST_UNCHECKED`. Clicking on the button sends a `BN_CLICKED` notification to the owner window and changes the state of the button. By default, associated text is displayed to the right of the check box. To display text to the left of the check box, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
+|`BS_AUTORADIOBUTTON`|Creates a radio button with two states: `BST_CHECKED` and `BST_UNCHECKED`. Radio buttons are usually used in groups, with each group having a maximum of one checked option at a time. Clicking on the button sends a `BN_CLICKED` notification to the owner window, sets the state of the clicked radio button to `BST_CHECKED`, and sets the states of all other radio buttons in the button group to `BST_UNCHECKED`. By default, associated text is displayed to the right of the radio button. To display text to the left of the radio button, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
+|`BS_CHECKBOX`|Creates a check box button with two states: `BST_CHECKED` and `BST_UNCHECKED`. Clicking on the button sends a `BN_CLICKED` notification to the owner window but does not change the state of the button. By default, associated text is displayed to the right of the check box. To display text to the left of the check box, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
+|`BS_COMMANDLINK`|Creates a command link button. A command link button is a command button specific to [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] that displays a green arrow to the left of the main text and a note below the main text. You can set the note text using [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote).|  
+|`BS_DEFCOMMANDLINK`|Creates a command link button. A command link button is a command button specific to [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] that displays a green arrow to the left of the main text and a note below the main text. You can set the note text using [CButton::SetNote](../../mfc/reference/cbutton-class.md#setnote). If the button is in a dialog box, pressing the ENTER key sends a `BN_CLICKED` notification to the dialog box even when the button does not have the input focus.|  
+|`BS_DEFPUSHBUTTON`|Creates a command button that has a heavy black border. If the button is in a dialog box, pressing the ENTER key sends a `BN_CLICKED` notification to the dialog box even when the button does not have the input focus.|  
+|`BS_DEFSPLITBUTTON`|Creates a split button. A split button is a command button specific to [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] that contains a button adjacent to a drop-down arrow. When you click the button, the default command is executed. When you click the drop-down arrow, a menu of additional commands appears. If the split button is in a dialog box, pressing the ENTER key sends a `BN_CLICKED` notification to the dialog box even when the button does not have the input focus|  
+|`BS_GROUPBOX`|Creates a rectangle in which other buttons can be grouped. Text associated with this style is displayed in the rectangle's upper-left corner.|  
+|`BS_OWNERDRAW`|Creates an owner-drawn button. The framework calls the `DrawItem` method when a visual aspect of the button has changed. This style must be set when you use the `CBitmapButton` class.|  
+|`BS_PUSHBUTTON`|Creates a command button that sends a `BN_CLICKED` notification to the owner window when the user clicks the button.|  
+|`BS_RADIOBUTTON`|Creates a radio button with two states: `BST_CHECKED` and `BST_UNCHECKED`. Radio buttons are usually used in groups, with each group having a maximum of one checked option at a time. Clicking on the button sends a `BN_CLICKED` notification to the owner window but does not automatically change the state of any button in the group. By default, associated text is displayed to the right of the radio button. To display text to the left of the radio button, use the `BS_LEFTTEXT` or `BS_RIGHTBUTTON` style.|  
+|`BS_SPLITBUTTON`|Creates a split button. A split button is a command button specific to [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] that contains a button adjacent to a drop-down arrow. When you click the button, the default command is executed. When you click the drop-down arrow, a menu of additional commands appears.|  
+|`BS_USERBUTTON`|Obsolete, but provided for compatibility with 16-bit versions of Windows. Win32-based applications should use `BS_OWNERDRAW` instead.|  
   
-## <a name="radio-button-and-check-box-styles"></a>選項按鈕和核取方塊樣式  
- 下表列出樣式所特有的選項按鈕和核取方塊。 這些樣式會遭到忽略其他所有的按鈕類型。 您可以選擇一或多個項目。  
+## <a name="radio-button-and-check-box-styles"></a>Radio Button and Check Box Styles  
+ The following table lists styles that are specific to radio buttons and check boxes. These styles are ignored in all other button types. You can optionally choose one or more of the following.  
   
-|樣式|描述|  
+|Style|Description|  
 |-----------|-----------------|  
-|`BS_LEFTTEXT`|結合使用選項按鈕或核取方塊樣式時，文字會出現在左邊的選項按鈕或核取方塊。|  
-|`BS_RIGHTBUTTON`|結合使用選項按鈕或核取方塊樣式時，文字會出現在左邊的選項按鈕或核取方塊。 這個樣式等同於`BS_LEFTTEXT`樣式。|  
-|`BS_PUSHLIKE`|對於核取方塊或選項按鈕外觀和行為就像命令按鈕一樣。 [] 按鈕時，會顯示已按下狀態`BST_CHECKED`、 按下並呈現暗灰色，其狀態為時`BST_INDETERMINATE`，且其狀態為時釋放`BST_UNCHECKED`。|  
+|`BS_LEFTTEXT`|When combined with a radio button or check-box style, the text appears on the left side of the radio button or check box.|  
+|`BS_RIGHTBUTTON`|When combined with a radio button or check-box style, the text appears on the left side of the radio button or check box. This style is identical to the `BS_LEFTTEXT` style.|  
+|`BS_PUSHLIKE`|Makes a check box or radio button look and behave like a command button. The button appears pressed when its state is `BST_CHECKED`, pressed and dimmed when its state is `BST_INDETERMINATE`, and released when its state is `BST_UNCHECKED`.|  
   
-## <a name="text-alignment-styles"></a>文字對齊樣式  
- 下表列出水平和垂直文字對齊選項。 您可以選擇下列其中一個項目。  
+## <a name="text-alignment-styles"></a>Text Alignment Styles  
+ The following table lists horizontal and vertical text alignment options. You can optionally choose one of the following.  
   
-|樣式|說明|  
+|Style|Description|  
 |-----------|-----------------|  
-|`BS_LEFT`|靠左對齊按鈕的矩形中的文字。 不過，如果按鈕是核取方塊或選項按鈕，並沒有`BS_RIGHTBUTTON`樣式的文字會保留在核取方塊或選項按鈕的右邊對齊。|  
-|`BS_RIGHT`|按鈕的矩形中的文字靠右對齊。 不過，如果按鈕是核取方塊或選項按鈕，並沒有`BS_RIGHTBUTTON`樣式的文字是正確的核取方塊或選項按鈕的右邊對齊。|  
-|`BS_CENTER`|置中按鈕的矩形中的水平文字。|  
-|`BS_TOP`|將文字放在矩形上方的按鈕。|  
-|`BS_BOTTOM`|將文字放在按鈕的矩形的底部。|  
-|`BS_VCENTER`|置中按鈕的矩形垂直文字。|  
+|`BS_LEFT`|Left aligns the text in the button rectangle. However, if the button is a check box or radio button that does not have the `BS_RIGHTBUTTON` style, the text is left aligned on the right side of the check box or radio button.|  
+|`BS_RIGHT`|Right aligns the text in the button rectangle. However, if the button is a check box or radio button that does not have the `BS_RIGHTBUTTON` style, the text is right aligned on the right side of the check box or radio button.|  
+|`BS_CENTER`|Centers text horizontally in the button rectangle.|  
+|`BS_TOP`|Places text at the top of the button rectangle.|  
+|`BS_BOTTOM`|Places text at the bottom of the button rectangle.|  
+|`BS_VCENTER`|Centers text vertically in the button rectangle.|  
   
-## <a name="button-content-options"></a>按鈕的內容選項  
- 下表列出的選項，以指出按鈕中顯示的內容。 僅顯示文字的按鈕類型會忽略這些樣式。 您可以選擇下列其中一個項目。  
+## <a name="button-content-options"></a>Button Content Options  
+ The following table lists options that indicate what is displayed in the button. Button types that only display text ignore these styles. You can optionally choose one of the following.  
   
-|樣式|描述|  
+|Style|Description|  
 |-----------|-----------------|  
-|`BS_BITMAP`|指定按鈕顯示點陣圖。|  
-|`BS_ICON`|指定按鈕會顯示圖示。|  
-|`BS_TEXT`|指定按鈕會顯示文字。|  
+|`BS_BITMAP`|Specifies that the button displays a bitmap.|  
+|`BS_ICON`|Specifies that the button displays an icon.|  
+|`BS_TEXT`|Specifies that the button displays text.|  
   
-## <a name="other-options"></a>其他選項  
- 下表列出您可以使用任何按鈕類型的其他選項。 您可以選擇一或多個項目。  
+## <a name="other-options"></a>Other Options  
+ The following table lists additional options that you can use with any button type. You can optionally choose one or more of the following.  
   
-|樣式|說明|  
+|Style|Description|  
 |-----------|-----------------|  
-|`BS_FLAT`|指定按鈕是二維的和不使用預設陰影，以建立&3;d 影像繪製。|  
-|`BS_MULTILINE`|如果太長而無法容納於按鈕的矩形中，每一行文字字串，包裝成好幾行，則按鈕文字。|  
-|`BS_NOTIFY`|可讓按鈕以傳送`BN_DBLCLK`， `BN_KILLFOCUS`，和`BN_SETFOCUS`通知訊息至其父視窗。 請注意，按鈕傳送`BN_CLICKED`無論指定此樣式的通知。|  
+|`BS_FLAT`|Specifies that the button is two-dimensional and is not drawn with default shading to create a three-dimensional image.|  
+|`BS_MULTILINE`|Wraps the button text to multiple lines if the text string is too long to fit on a single line in the button rectangle.|  
+|`BS_NOTIFY`|Enables a button to send `BN_DBLCLK`, `BN_KILLFOCUS`, and `BN_SETFOCUS` notification messages to its parent window. Note that buttons send the `BN_CLICKED` notification regardless of whether this style is specified.|  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 使用的樣式](../../mfc/reference/styles-used-by-mfc.md)   
- [CButton::Create](../../mfc/reference/cbutton-class.md#create)
- [按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb775951)   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
+ [CButton::Create](../../mfc/reference/cbutton-class.md#create) [Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb775951)   
 
 
 

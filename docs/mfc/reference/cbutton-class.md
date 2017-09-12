@@ -1,5 +1,5 @@
 ---
-title: "CButton 類別 |Microsoft 文件"
+title: CButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,13 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CButton class
-- checkbox buttons
-- pushbuttons
-- button control [MFC]
-- check boxes, button controls
-- button objects (CButton)
-- radio buttons, CButton class
+- CButton [MFC], CButton
+- CButton [MFC], Create
+- CButton [MFC], DrawItem
+- CButton [MFC], GetBitmap
+- CButton [MFC], GetButtonStyle
+- CButton [MFC], GetCheck
+- CButton [MFC], GetCursor
+- CButton [MFC], GetIcon
+- CButton [MFC], GetIdealSize
+- CButton [MFC], GetImageList
+- CButton [MFC], GetNote
+- CButton [MFC], GetNoteLength
+- CButton [MFC], GetSplitGlyph
+- CButton [MFC], GetSplitImageList
+- CButton [MFC], GetSplitInfo
+- CButton [MFC], GetSplitSize
+- CButton [MFC], GetSplitStyle
+- CButton [MFC], GetState
+- CButton [MFC], GetTextMargin
+- CButton [MFC], SetBitmap
+- CButton [MFC], SetButtonStyle
+- CButton [MFC], SetCheck
+- CButton [MFC], SetCursor
+- CButton [MFC], SetDropDownState
+- CButton [MFC], SetIcon
+- CButton [MFC], SetImageList
+- CButton [MFC], SetNote
+- CButton [MFC], SetSplitGlyph
+- CButton [MFC], SetSplitImageList
+- CButton [MFC], SetSplitInfo
+- CButton [MFC], SetSplitSize
+- CButton [MFC], SetSplitStyle
+- CButton [MFC], SetState
+- CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 caps.latest.revision: 19
 author: mikeblome
@@ -74,17 +101,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 03771a3d0dd2297487953089081893a7c892b321
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: acddd4102969470c56790308969025390b3bcdc6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbutton-class"></a>CButton 類別
-提供 Windows 按鈕控制項的功能。  
+# <a name="cbutton-class"></a>CButton Class
+Provides the functionality of Windows button controls.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CButton : public CWnd  
@@ -92,85 +119,85 @@ class CButton : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CButton::CButton](#cbutton)|建構 `CButton` 物件。|  
+|[CButton::CButton](#cbutton)|Constructs a `CButton` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CButton::Create](#create)|建立 Windows 按鈕控制項，並將它附加至`CButton`物件。|  
-|[CButton::DrawItem](#drawitem)|覆寫可繪製主控描繪`CButton`物件。|  
-|[CButton::GetBitmap](#getbitmap)|擷取與先前設定之點陣圖的控制代碼[SetBitmap](#setbitmap)。|  
-|[CButton::GetButtonStyle](#getbuttonstyle)|擷取相關的按鈕控制項的樣式資訊。|  
-|[CButton::GetCheck](#getcheck)|擷取按鈕控制項的核取的狀態。|  
-|[CButton::GetCursor](#getcursor)|與先前設定的資料指標影像的控制代碼的擷取[SetCursor](#setcursor)。|  
-|[CButton::GetIcon](#geticon)|擷取圖示與先前設定的控制代碼[SetIcon](#seticon)。|  
-|[CButton::GetIdealSize](#getidealsize)|擷取按鈕控制項的理想大小。|  
-|[CButton::GetImageList](#getimagelist)|擷取影像清單的按鈕控制項。|  
-|[CButton::GetNote](#getnote)|擷取目前的命令連結控制項的附註元件。|  
-|[CButton::GetNoteLength](#getnotelength)|擷取目前的命令連結控制項的註解文字的長度。|  
-|[CButton::GetSplitGlyph](#getsplitglyph)|擷取目前的分割按鈕控制項相關聯的圖像。|  
-|[CButton::GetSplitImageList](#getsplitimagelist)|擷取目前的分割按鈕控制項的影像清單。|  
-|[CButton::GetSplitInfo](#getsplitinfo)|擷取定義目前的分割按鈕控制項的資訊。|  
-|[CButton::GetSplitSize](#getsplitsize)|擷取目前的分割按鈕控制項的下拉式清單元件的週框矩形。|  
-|[CButton::GetSplitStyle](#getsplitstyle)|擷取定義目前的分割按鈕控制項的分割按鈕樣式。|  
-|[CButton::GetState](#getstate)|擷取檢查狀態、 反白顯示的狀態，以及按鈕控制項的焦點狀態。|  
-|[CButton::GetTextMargin](#gettextmargin)|擷取按鈕控制項的文字邊界。|  
-|[CButton::SetBitmap](#setbitmap)|指定要顯示在按鈕上的點陣圖。|  
-|[CButton::SetButtonStyle](#setbuttonstyle)|變更按鈕的樣式。|  
-|[CButton::SetCheck](#setcheck)|設定按鈕控制項的核取狀態。|  
-|[CButton::SetCursor](#setcursor)|指定要顯示在按鈕上的資料指標映像。|  
-|[CButton::SetDropDownState](#setdropdownstate)|設定目前的分割按鈕控制項的下拉式清單狀態。|  
-|[CButton::SetIcon](#seticon)|指定要在按鈕上顯示的圖示。|  
-|[CButton::SetImageList](#setimagelist)|設定按鈕控制項的影像清單。|  
-|[CButton::SetNote](#setnote)|設定目前的命令連結控制項的附註。|  
-|[CButton::SetSplitGlyph](#setsplitglyph)|將指定的圖像 （glyph） 與目前的分割按鈕控制項產生關聯。|  
-|[CButton::SetSplitImageList](#setsplitimagelist)|將影像清單與目前的分割按鈕控制項產生關聯。|  
-|[CButton::SetSplitInfo](#setsplitinfo)|指定定義目前的分割按鈕控制項的資訊。|  
-|[CButton::SetSplitSize](#setsplitsize)|設定目前的分割按鈕控制項的下拉式清單元件的週框矩形。|  
-|[CButton::SetSplitStyle](#setsplitstyle)|設定目前的分割按鈕控制項的樣式。|  
-|[CButton::SetState](#setstate)|設定按鈕控制項的反白顯示的狀態。|  
-|[CButton::SetTextMargin](#settextmargin)|設定按鈕控制項的文字邊界。|  
+|[CButton::Create](#create)|Creates the Windows button control and attaches it to the `CButton` object.|  
+|[CButton::DrawItem](#drawitem)|Override to draw an owner-drawn `CButton` object.|  
+|[CButton::GetBitmap](#getbitmap)|Retrieves the handle of the bitmap previously set with [SetBitmap](#setbitmap).|  
+|[CButton::GetButtonStyle](#getbuttonstyle)|Retrieves information about the button control style.|  
+|[CButton::GetCheck](#getcheck)|Retrieves the check state of a button control.|  
+|[CButton::GetCursor](#getcursor)|Retrieves the handle of the cursor image previously set with [SetCursor](#setcursor).|  
+|[CButton::GetIcon](#geticon)|Retrieves the handle of the icon previously set with [SetIcon](#seticon).|  
+|[CButton::GetIdealSize](#getidealsize)|Retrieves the ideal size of the button control.|  
+|[CButton::GetImageList](#getimagelist)|Retrieves the image list of the button control.|  
+|[CButton::GetNote](#getnote)|Retrieves the note component of the current command link control.|  
+|[CButton::GetNoteLength](#getnotelength)|Retrieves the length of the note text for the current command link control.|  
+|[CButton::GetSplitGlyph](#getsplitglyph)|Retrieves the glyph associated with the current split button control.|  
+|[CButton::GetSplitImageList](#getsplitimagelist)|Retrieves the image list for the current split button control.|  
+|[CButton::GetSplitInfo](#getsplitinfo)|Retrieves information that defines the current split button control.|  
+|[CButton::GetSplitSize](#getsplitsize)|Retrieves the bounding rectangle of the drop-down component of the current split button control.|  
+|[CButton::GetSplitStyle](#getsplitstyle)|Retrieves the split button styles that define the current split button control.|  
+|[CButton::GetState](#getstate)|Retrieves the check state, highlight state, and focus state of a button control.|  
+|[CButton::GetTextMargin](#gettextmargin)|Retrieves the text margin of the button control.|  
+|[CButton::SetBitmap](#setbitmap)|Specifies a bitmap to be displayed on the button.|  
+|[CButton::SetButtonStyle](#setbuttonstyle)|Changes the style of a button.|  
+|[CButton::SetCheck](#setcheck)|Sets the check state of a button control.|  
+|[CButton::SetCursor](#setcursor)|Specifies a cursor image to be displayed on the button.|  
+|[CButton::SetDropDownState](#setdropdownstate)|Sets the drop-down state of the current split button control.|  
+|[CButton::SetIcon](#seticon)|Specifies an icon to be displayed on the button.|  
+|[CButton::SetImageList](#setimagelist)|Sets the image list of the button control.|  
+|[CButton::SetNote](#setnote)|Sets the note on the current command link control.|  
+|[CButton::SetSplitGlyph](#setsplitglyph)|Associates a specified glyph with the current split button control.|  
+|[CButton::SetSplitImageList](#setsplitimagelist)|Associates an image list with the current split button control.|  
+|[CButton::SetSplitInfo](#setsplitinfo)|Specifies information that defines the current split button control.|  
+|[CButton::SetSplitSize](#setsplitsize)|Sets the bounding rectangle of the drop-down component of the current split button control.|  
+|[CButton::SetSplitStyle](#setsplitstyle)|Sets the style of the current split button control.|  
+|[CButton::SetState](#setstate)|Sets the highlighting state of a button control.|  
+|[CButton::SetTextMargin](#settextmargin)|Sets the text margin of the button control.|  
   
-## <a name="remarks"></a>備註  
- 按鈕控制項是一個小型的矩形的子視窗可以開啟或關閉按一下。 按鈕可以單獨使用或群組中，可以被標示為或沒有文字會出現。 當使用者按一下該按鈕通常會變更外觀。  
+## <a name="remarks"></a>Remarks  
+ A button control is a small, rectangular child window that can be clicked on and off. Buttons can be used alone or in groups and can either be labeled or appear without text. A button typically changes appearance when the user clicks it.  
   
- 典型的按鈕都將核取方塊、 選項按鈕和按鈕。 A`CButton`物件可能會變得上述任何根據[按鈕樣式](../../mfc/reference/button-styles.md)在其初始化所指定[建立](#create)成員函式。  
+ Typical buttons are the check box, radio button, and pushbutton. A `CButton` object can become any of these, according to the [button style](../../mfc/reference/styles-used-by-mfc.md#button-styles) specified at its initialization by the [Create](#create) member function.  
   
- 此外， [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md)類別衍生自`CButton`支援建立以點陣圖影像，而非文字標示的按鈕控制項。 A`CBitmapButton`可以有不同的點陣圖按鈕的、 向下，已取得焦點，並且停用狀態。  
+ In addition, the [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md) class derived from `CButton` supports creation of button controls labeled with bitmap images instead of text. A `CBitmapButton` can have separate bitmaps for a button's up, down, focused, and disabled states.  
   
- 從對話方塊範本，或是直接在您的程式碼中，您可以建立的按鈕控制項。 在這兩種情況下，第一次呼叫建構函式`CButton`建構`CButton`物件; 然後呼叫**建立**成員函式來建立 Windows 按鈕控制項，並將其附加至`CButton`物件。  
+ You can create a button control either from a dialog template or directly in your code. In both cases, first call the constructor `CButton` to construct the `CButton` object; then call the **Create** member function to create the Windows button control and attach it to the `CButton` object.  
   
- 建構可以是單一步驟中的處理序類別，衍生自`CButton`。 寫入的建構函式在衍生的類別並呼叫**建立**從建構函式內。  
+ Construction can be a one-step process in a class derived from `CButton`. Write a constructor for the derived class and call **Create** from within the constructor.  
   
- 如果您想要處理 Windows 通知訊息至其父代，由按鈕控制項傳送 (通常的類別衍生自[CDialog](../../mfc/reference/cdialog-class.md))，將訊息對應項目和訊息處理常式成員函式加入至每個訊息的父類別。  
+ If you want to handle Windows notification messages sent by a button control to its parent (usually a class derived from [CDialog](../../mfc/reference/cdialog-class.md)), add a message-map entry and message-handler member function to the parent class for each message.  
   
- 每個訊息對應項目有下列形式︰  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`, `memberFxn`**)**  
   
- 其中`id`指定傳送通知之控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。  
+ where `id` specifies the child window ID of the control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- 在父系的函式原型如下所示︰  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- 可能的訊息對應項目如下所示︰  
+ Potential message-map entries are as follows:  
   
-|對應項目|傳送至父時...|  
+|Map entry|Sent to parent when...|  
 |---------------|----------------------------|  
-|**ON_BN_CLICKED**|使用者按一下按鈕。|  
-|**ON_BN_DOUBLECLICKED**|使用者按兩下按鈕。|  
+|**ON_BN_CLICKED**|The user clicks a button.|  
+|**ON_BN_DOUBLECLICKED**|The user double-clicks a button.|  
   
- 如果您建立`CButton`物件從對話方塊資源，`CButton`使用者關閉對話方塊時，即會自動終結物件。  
+ If you create a `CButton` object from a dialog resource, the `CButton` object is automatically destroyed when the user closes the dialog box.  
   
- 如果您建立`CButton`物件內的視窗中，您可能要終結。 如果您建立`CButton`使用堆積上的物件**新**函式，您必須呼叫**刪除**物件終結時，使用者關閉 Windows 按鈕控制項。 如果您建立`CButton`堆疊，或它的物件內嵌在父對話方塊物件，它會自動終結。  
+ If you create a `CButton` object within a window, you may need to destroy it. If you create the `CButton` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the user closes the Windows button control. If you create the `CButton` object on the stack, or it is embedded in the parent dialog object, it is destroyed automatically.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -179,21 +206,21 @@ class CButton : public CWnd
   
  `CButton`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cbutton"></a>CButton::CButton  
- 建構 `CButton` 物件。  
+##  <a name="cbutton"></a>  CButton::CButton  
+ Constructs a `CButton` object.  
   
 ```  
 CButton();
 ```  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#1](../../mfc/reference/codesnippet/cpp/cbutton-class_1.cpp)]  
   
-##  <a name="create"></a>CButton::Create  
- 建立 Windows 按鈕控制項，並將它附加至`CButton`物件。  
+##  <a name="create"></a>  CButton::Create  
+ Creates the Windows button control and attaches it to the `CButton` object.  
   
 ```  
 virtual BOOL Create(
@@ -204,173 +231,173 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszCaption`  
- 指定按鈕控制項的文字。  
+ Specifies the button control's text.  
   
  `dwStyle`  
- 指定按鈕控制項的樣式。 套用的任何組合[按鈕樣式](../../mfc/reference/button-styles.md)至按鈕。  
+ Specifies the button control's style. Apply any combination of [button styles](../../mfc/reference/styles-used-by-mfc.md#button-styles) to the button.  
   
  `rect`  
- 指定按鈕控制項的大小和位置。 它可以是`CRect`物件或`RECT`結構。  
+ Specifies the button control's size and position. It can be either a `CRect` object or a `RECT` structure.  
   
  `pParentWnd`  
- 指定按鈕控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
+ Specifies the button control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- 指定按鈕控制項的 id。  
+ Specifies the button control's ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 您建構`CButton`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫**建立**，建立 Windows 按鈕控制項，並將它附加至`CButton`物件。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CButton` object in two steps. First, call the constructor and then call **Create**, which creates the Windows button control and attaches it to the `CButton` object.  
   
- 如果**WS_VISIBLE**樣式，Windows 就會將按鈕控制項，啟動及顯示的按鈕時所需的所有訊息。  
+ If the **WS_VISIBLE** style is given, Windows sends the button control all the messages required to activate and show the button.  
   
- 套用下列[視窗樣式](../../mfc/reference/window-styles.md)到按鈕控制項︰  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a button control:  
   
-- **WS_CHILD**一律  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE**通常  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED**很少  
+- **WS_DISABLED** Rarely  
   
-- **WS_GROUP**群組控制項  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP** tab 鍵順序中包含按鈕  
+- **WS_TABSTOP** To include the button in the tabbing order  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#2](../../mfc/reference/codesnippet/cpp/cbutton-class_2.cpp)]  
   
-##  <a name="drawitem"></a>CButton::DrawItem  
- 當主控描繪按鈕的視覺外觀變更時由架構呼叫。  
+##  <a name="drawitem"></a>  CButton::DrawItem  
+ Called by the framework when a visual aspect of an owner-drawn button has changed.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 長指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構。 此結構包含要繪製的項目和所需的繪圖的類型資訊。  
+ A long pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure. The structure contains information about the item to be drawn and the type of drawing required.  
   
-### <a name="remarks"></a>備註  
- 為主控描繪按鈕具有**BS_OWNERDRAW**樣式設定。 覆寫此成員函式，來實作繪圖的描繪`CButton`物件。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前的成員函式會結束。  
+### <a name="remarks"></a>Remarks  
+ An owner-drawn button has the **BS_OWNERDRAW** style set. Override this member function to implement drawing for an owner-drawn `CButton` object. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the member function terminates.  
   
- 另請參閱[BS_](../../mfc/reference/button-styles.md)樣式值。  
+ Also see the [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) style values.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#3](../../mfc/reference/codesnippet/cpp/cbutton-class_3.cpp)]  
   
-##  <a name="getbitmap"></a>CButton::GetBitmap  
- 呼叫此成員函式，來取得點陣圖，先前設定的控制代碼[SetBitmap](#setbitmap)，也就是與按鈕相關聯。  
+##  <a name="getbitmap"></a>  CButton::GetBitmap  
+ Call this member function to get the handle of a bitmap, previously set with [SetBitmap](#setbitmap), that is associated with a button.  
   
 ```  
 HBITMAP GetBitmap() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 點陣圖的控制代碼。 **NULL**如果先前已指定沒有點陣圖。  
+### <a name="return-value"></a>Return Value  
+ A handle to a bitmap. **NULL** if no bitmap is previously specified.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="getbuttonstyle"></a>CButton::GetButtonStyle  
- 擷取相關的按鈕控制項的樣式資訊。  
+##  <a name="getbuttonstyle"></a>  CButton::GetButtonStyle  
+ Retrieves information about the button control style.  
   
 ```  
 UINT GetButtonStyle() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回這個按鈕樣式`CButton`物件。 此函式只會傳回[BS_](../../mfc/reference/button-styles.md)樣式值，不是任何其他視窗樣式。  
+### <a name="return-value"></a>Return Value  
+ Returns the button styles for this `CButton` object. This function returns only the [BS_](../../mfc/reference/styles-used-by-mfc.md#button-styles) style values, not any of the other window styles.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="getcheck"></a>CButton::GetCheck  
- 擷取選項按鈕或核取方塊的核取的狀態。  
+##  <a name="getcheck"></a>  CButton::GetCheck  
+ Retrieves the check state of a radio button or check box.  
   
 ```  
 int GetCheck() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 按鈕控制項的傳回值以建立**BS_AUTOCHECKBOX**， **BS_AUTORADIOBUTTON**， **BS_AUTO3STATE**， **BS_CHECKBOX**， **BS_RADIOBUTTON**，或**BS_3STATE**樣式是下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ The return value from a button control created with the **BS_AUTOCHECKBOX**, **BS_AUTORADIOBUTTON**, **BS_AUTO3STATE**, **BS_CHECKBOX**, **BS_RADIOBUTTON**, or **BS_3STATE** style is one of the following values:  
   
-|值|意義|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**BST_UNCHECKED**|未選取按鈕狀態。|  
-|**BST_CHECKED**|按鈕狀態會檢查。|  
-|**BST_INDETERMINATE**|按鈕狀態 (僅適用於該按鈕**BS_3STATE**或**BS_AUTO3STATE**樣式)。|  
+|**BST_UNCHECKED**|Button state is unchecked.|  
+|**BST_CHECKED**|Button state is checked.|  
+|**BST_INDETERMINATE**|Button state is indeterminate (applies only if the button has the **BS_3STATE** or **BS_AUTO3STATE** style).|  
   
- 如果按鈕的任何其他樣式時，傳回值是**BST_UNCHECKED**。  
+ If the button has any other style, the return value is **BST_UNCHECKED**.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="getcursor"></a>CButton::GetCursor  
- 呼叫此成員函式取得的資料指標，先前設定的控制代碼[SetCursor](#setcursor)，也就是與按鈕相關聯。  
+##  <a name="getcursor"></a>  CButton::GetCursor  
+ Call this member function to get the handle of a cursor, previously set with [SetCursor](#setcursor), that is associated with a button.  
   
 ```  
 HCURSOR GetCursor();  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 資料指標影像控制代碼。 **NULL**如果先前不指定的任何資料指標。  
+### <a name="return-value"></a>Return Value  
+ A handle to a cursor image. **NULL** if no cursor is previously specified.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="geticon"></a>CButton::GetIcon  
- 呼叫此成員函式，以取得圖示，使用先前設定的控制代碼[SetIcon](#seticon)，也就是與按鈕相關聯。  
+##  <a name="geticon"></a>  CButton::GetIcon  
+ Call this member function to get the handle of an icon, previously set with [SetIcon](#seticon), that is associated with a button.  
   
 ```  
 HICON GetIcon() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 圖示的控制代碼。 **NULL**如果先前未不指定任何圖示。  
+### <a name="return-value"></a>Return Value  
+ A handle to an icon. **NULL** if no icon is previously specified.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="getidealsize"></a>CButton::GetIdealSize  
- 擷取按鈕控制項的理想大小。  
+##  <a name="getidealsize"></a>  CButton::GetIdealSize  
+ Retrieves the ideal size for the button control.  
   
 ```  
 BOOL GetIdealSize(SIZE* psize);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *psize*  
- 按鈕的目前大小的指標。  
+ A pointer to the current size of the button.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬的功能**BCM_GETIDEALSIZE**訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)區段[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_GETIDEALSIZE** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-##  <a name="getimagelist"></a>CButton::GetImageList  
- 呼叫這個方法，取得從按鈕控制項影像清單。  
+##  <a name="getimagelist"></a>  CButton::GetImageList  
+ Call this method to get the image list from the button control.  
   
 ```  
 BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pbuttonImagelist`  
- 影像清單的指標`CButton`物件。  
+ A pointer to the image list of the `CButton` object.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬的功能**BCM_GETIMAGELIST**訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)區段[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_GETIMAGELIST** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-##  <a name="getnote"></a>CButton::GetNote  
- 擷取與目前的命令連結控制項關聯的附註文字。  
+##  <a name="getnote"></a>  CButton::GetNote  
+ Retrieves the note text associated with the current command link control.  
   
 ```  
 CString GetNote() const;  
@@ -380,193 +407,193 @@ BOOL GetNote(
     UINT* cchNote) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[輸出] `lpszNote`|呼叫端會負責配置和解除配置的緩衝區指標。 如果傳回值是`true`，緩衝區會包含與目前的命令連結控制項相關聯; 否則為註解文字，緩衝區是不變。|  
-|[in、out] `cchNote`|不帶正負號的整數變數的指標。<br /><br /> 呼叫這個方法時，變數會包含所指定的緩衝區大小`lpszNote`參數。<br /><br /> 當這個方法傳回時，如果傳回值是`true`變數包含與目前的命令連結控制項關聯的附註的大小。 如果傳回值是`false`，變數包含包含附註所需要的緩衝區大小。|  
+|[out] `lpszNote`|Pointer to a buffer, which the caller is responsible for allocating and deallocating. If the return value is `true`, the buffer contains the note text that is associated with the current command link control; otherwise, the buffer is unchanged.|  
+|[in, out] `cchNote`|A pointer to an unsigned integer variable.<br /><br /> When this method is called, the variable contains the size of the buffer specified by the `lpszNote` parameter.<br /><br /> When this method returns, if the return value is `true` the variable contains the size of the note associated with the current command link control. If the return value is `false`, the variable contains the buffer size required to contain the note.|  
   
-### <a name="return-value"></a>傳回值  
- 在第一個多載， [CString](../../atl-mfc-shared/using-cstring.md)物件，其中包含與目前的命令連結控制項相關聯的註解文字。  
+### <a name="return-value"></a>Return Value  
+ In the first overload, a [CString](../../atl-mfc-shared/using-cstring.md) object that contains the note text associated with the current command link control.  
   
- -或-  
+ -or-  
   
- 在第二個多載，`true`如果此方法成功，否則`false`。  
+ In the second overload, `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_COMMANDLINK`或`BS_DEFCOMMANDLINK`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
   
- 這個方法會傳送[BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [BCM_GETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775965) message, which is described in the Windows SDK.  
   
-##  <a name="getnotelength"></a>CButton::GetNoteLength  
- 擷取目前的命令連結控制項的註解文字的長度。  
+##  <a name="getnotelength"></a>  CButton::GetNoteLength  
+ Retrieves the length of the note text for the current command link control.  
   
 ```  
 UINT GetNoteLength() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 附註文字，請在目前的命令連結控制項的 16 位元 Unicode 字元的長度。  
+### <a name="return-value"></a>Return Value  
+ The length of the note text, in 16-bit Unicode characters, for the current command link control.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_COMMANDLINK`或`BS_DEFCOMMANDLINK`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
   
- 這個方法會傳送[BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [BCM_GETNOTELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb775967) message, which is described in the Windows SDK.  
   
-##  <a name="getsplitglyph"></a>CButton::GetSplitGlyph  
- 擷取目前的分割按鈕控制項相關聯的圖像。  
+##  <a name="getsplitglyph"></a>  CButton::GetSplitGlyph  
+ Retrieves the glyph associated with the current split button control.  
   
 ```  
 TCHAR GetSplitGlyph() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的分割按鈕控制項相關聯的圖像 （glyph） 字元。  
+### <a name="return-value"></a>Return Value  
+ The glyph character associated with the current split button control.  
   
-### <a name="remarks"></a>備註  
- 圖像 （glyph） 是字元的特定字型中實體表示法。 例如，分割按鈕控制項可能裝飾的字符的 Unicode 勾號字元 (U + 2713)。  
+### <a name="remarks"></a>Remarks  
+ A glyph is the physical representation of a character in a particular font. For example, a split button control might be decorated with the glyph of the Unicode check mark character (U+2713).  
   
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構和`BCSIF_GLYPH`旗標，然後再結構中的傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 訊息函式傳回時，這個方法會擷取從圖像`himlGlyph`結構的成員。  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_GLYPH` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the glyph from the `himlGlyph` member of the structure.  
   
-##  <a name="getsplitimagelist"></a>CButton::GetSplitImageList  
- 擷取[影像清單](../../mfc/reference/cimagelist-class.md)目前分割按鈕控制項。  
+##  <a name="getsplitimagelist"></a>  CButton::GetSplitImageList  
+ Retrieves the [image list](../../mfc/reference/cimagelist-class.md) for the current split button control.  
   
 ```  
 CImageList* GetSplitImageList() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標[CImageList](../../mfc/reference/cimagelist-class.md)物件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構和`BCSIF_IMAGE`旗標，然後再結構中的傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 訊息函式傳回時，這個方法會擷取影像清單，從`himlGlyph`結構的成員。  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_IMAGE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the image list from the `himlGlyph` member of the structure.  
   
-##  <a name="getsplitinfo"></a>CButton::GetSplitInfo  
- 擷取參數，以決定如何 Windows 來繪製目前的分割按鈕控制項。  
+##  <a name="getsplitinfo"></a>  CButton::GetSplitInfo  
+ Retrieves parameters that determine how Windows draws the current split button control.  
   
 ```  
 BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[輸出] `pInfo`|指標[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)接收目前分割按鈕控制項的相關資訊的結構。 呼叫端會負責配置結構。|  
+|[out] `pInfo`|Pointer to a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure that receives information about the current split button control. The caller is responsible for allocating the structure.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 這個方法會傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message, which is described in the Windows SDK.  
   
-##  <a name="getsplitsize"></a>CButton::GetSplitSize  
- 擷取目前的分割按鈕控制項的下拉式清單元件的週框矩形。  
+##  <a name="getsplitsize"></a>  CButton::GetSplitSize  
+ Retrieves the bounding rectangle of the drop-down component of the current split button control.  
   
 ```  
 BOOL GetSplitSize(LPSIZE pSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[輸出] `pSize`|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)接收矩形描述的結構。|  
+|[out] `pSize`|Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that receives the description of a rectangle.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 在展開分割按鈕控制項時，它可以顯示下拉式清單的元件，例如清單控制項或頁面巡覽區控制項。 這個方法會擷取包含下拉式清單元件的週框矩形。  
+ When the split button control is expanded, it can display a drop-down component such as a list control or pager control. This method retrieves the bounding rectangle that contains the drop-down component.  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構和`BCSIF_SIZE`旗標，然後再結構中的傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 訊息函式傳回時，這個方法會擷取從框`size`結構的成員。  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_SIZE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the bounding rectangle from the `size` member of the structure.  
   
-##  <a name="getsplitstyle"></a>CButton::GetSplitStyle  
- 擷取定義目前的分割按鈕控制項的分割按鈕樣式。  
+##  <a name="getsplitstyle"></a>  CButton::GetSplitStyle  
+ Retrieves the split button styles that define the current split button control.  
   
 ```  
 UINT GetSplitStyle() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 分割按鈕樣式的位元組合。 如需詳細資訊，請參閱`uSplitStyle`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構。  
+### <a name="return-value"></a>Return Value  
+ A bitwise combination of split button styles. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 分割按鈕樣式指定對齊、 外觀比例和圖形格式的 Windows 來繪製分割按鈕圖示。  
+ The split button styles specify the alignment, aspect ratio, and graphical format with which Windows draws a split button icon.  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構和`BCSIF_STYLE`旗標，然後再結構中的傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 訊息函式傳回時，這個方法會擷取從分割按鈕樣式`uSplitStyle`結構的成員。  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_STYLE` flag, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK. When the message function returns, this method retrieves the split button styles from the `uSplitStyle` member of the structure.  
   
-##  <a name="getstate"></a>CButton::GetState  
- 擷取按鈕控制項的狀態。  
+##  <a name="getstate"></a>  CButton::GetState  
+ Retrieves the state of a button control.  
   
 ```  
 UINT GetState() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 位元欄位，其中包含值，指出按鈕控制項的目前狀態的組合。 下表列出可能的值。  
+### <a name="return-value"></a>Return Value  
+ A bit field that contains the combination of values that indicate the current state of a button control. The following table lists possible values.  
   
-|按鈕狀態|值|說明|  
+|Button State|Value|Description|  
 |------------------|-----------|-----------------|  
-|`BST_UNCHECKED`|0x0000|初始狀態。|  
-|`BST_CHECKED`|0x0001|選取按鈕控制項。|  
-|`BST_INDETERMINATE`|0x0002|狀態不定 （才是可能的按鈕控制項有三種狀態時）。|  
-|`BST_PUSHED`|0x0004|已按下按鈕控制項。|  
-|`BST_FOCUS`|0x0008|按鈕控制項具有焦點。|  
+|`BST_UNCHECKED`|0x0000|The initial state.|  
+|`BST_CHECKED`|0x0001|The button control is checked.|  
+|`BST_INDETERMINATE`|0x0002|The state is indeterminate (only possible when the button control has three states).|  
+|`BST_PUSHED`|0x0004|The button control is pressed.|  
+|`BST_FOCUS`|0x0008|The button control has the focus.|  
   
-### <a name="remarks"></a>備註  
- 按鈕控制項與`BS_3STATE`或`BS_AUTO3STATE`按鈕樣式會建立名為不定狀態的第三個狀態的核取方塊。 不確定的狀態表示核取方塊已核取都未核取。  
+### <a name="remarks"></a>Remarks  
+ A button control with the `BS_3STATE` or `BS_AUTO3STATE` button style creates a check box that has a third state that is named the indeterminate state. The indeterminate state indicates that the check box is neither checked nor unchecked.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="gettextmargin"></a>CButton::GetTextMargin  
- 呼叫此方法來取得文字邊界`CButton`物件。  
+##  <a name="gettextmargin"></a>  CButton::GetTextMargin  
+ Call this method to get the text margin of the `CButton` object.  
   
 ```  
 BOOL GetTextMargin(RECT* pmargin);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pmargin`  
- 指標的文字邊界`CButton`物件。  
+ A pointer to the text margin of the `CButton` object.  
   
-### <a name="return-value"></a>傳回值  
- 傳回的文字邊界。  
+### <a name="return-value"></a>Return Value  
+ Returns the text margin.  
   
-### <a name="remarks"></a>備註  
- 如果成功則為非零；否則為 0。  
+### <a name="remarks"></a>Remarks  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬的功能**BCM_GETTEXTMARGIN**訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)區段[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_GETTEXTMARGIN** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-##  <a name="setbitmap"></a>CButton::SetBitmap  
- 呼叫此成員函式可將新的點陣圖按鈕產生關聯。  
+##  <a name="setbitmap"></a>  CButton::SetBitmap  
+ Call this member function to associate a new bitmap with the button.  
   
 ```  
 HBITMAP SetBitmap(HBITMAP hBitmap);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hBitmap`  
- 點陣圖的控制代碼。  
+ The handle of a bitmap.  
   
-### <a name="return-value"></a>傳回值  
- 之前與按鈕相關聯的點陣圖的控制代碼。  
+### <a name="return-value"></a>Return Value  
+ The handle of a bitmap previously associated with the button.  
   
-### <a name="remarks"></a>備註  
- 點陣圖會自動放置按鈕，預設內置表面。 如果點陣圖按鈕太大，則會遭到裁剪任一邊。 您可以選擇其他的對齊選項，包括下列︰  
+### <a name="remarks"></a>Remarks  
+ The bitmap will be automatically placed on the face of the button, centered by default. If the bitmap is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
   
 - **BS_TOP**  
   
@@ -580,15 +607,15 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
   
 - **BS_VCENTER**  
   
- 不同於[CBitmapButton](../../mfc/reference/cbitmapbutton-class.md)，它會使用每個按鈕，四個點陣圖`SetBitmap`會使用每個按鈕只能有一個點陣圖。 按下按鈕時，會出現點陣圖往下及往右移位。  
+ Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetBitmap` uses only one bitmap per the button. When the button is pressed, the bitmap appears to shift down and to the right.  
   
- 您必須負責釋放點陣圖，當您在使用它。  
+ You are responsible for releasing the bitmap when you are done with it.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#4](../../mfc/reference/codesnippet/cpp/cbutton-class_4.cpp)]  
   
-##  <a name="setbuttonstyle"></a>CButton::SetButtonStyle  
- 變更按鈕的樣式。  
+##  <a name="setbuttonstyle"></a>  CButton::SetButtonStyle  
+ Changes the style of a button.  
   
 ```  
 void SetButtonStyle(
@@ -596,58 +623,58 @@ void SetButtonStyle(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nStyle`  
- 指定[按鈕樣式](../../mfc/reference/button-styles.md)。  
+ Specifies the [button style](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
  `bRedraw`  
- 指定是否要重新描繪按鈕。 非零值會重繪按鈕。 0 的值不會重新繪製按鈕。 根據預設，按鈕會重新繪製。  
+ Specifies whether the button is to be redrawn. A nonzero value redraws the button. A 0 value does not redraw the button. The button is redrawn by default.  
   
-### <a name="remarks"></a>備註  
- 使用`GetButtonStyle`成員函式來擷取按鈕樣式。 完成 按鈕樣式的低序位字組是特定按鈕的樣式。  
+### <a name="remarks"></a>Remarks  
+ Use the `GetButtonStyle` member function to retrieve the button style. The low-order word of the complete button style is the button-specific style.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#5](../../mfc/reference/codesnippet/cpp/cbutton-class_5.cpp)]  
   
-##  <a name="setcheck"></a>CButton::SetCheck  
- 設定或重設選項按鈕或核取方塊的核取狀態。  
+##  <a name="setcheck"></a>  CButton::SetCheck  
+ Sets or resets the check state of a radio button or check box.  
   
 ```  
 void SetCheck(int nCheck);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nCheck`  
- 指定的核取狀態。 這個參數可以是下列其中一項︰  
+ Specifies the check state. This parameter can be one of the following:  
   
-|值|意義|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**BST_UNCHECKED**|若未選取要設定按鈕的狀態。|  
-|**BST_CHECKED**|設定按鈕的狀態檢查。|  
-|**BST_INDETERMINATE**|將按鈕狀態設定為不定。 可以使用此值，只有當按鈕的**BS_3STATE**或**BS_AUTO3STATE**樣式。|  
+|**BST_UNCHECKED**|Set the button state to unchecked.|  
+|**BST_CHECKED**|Set the button state to checked.|  
+|**BST_INDETERMINATE**|Set the button state to indeterminate. This value can be used only if the button has the **BS_3STATE** or **BS_AUTO3STATE** style.|  
   
-### <a name="remarks"></a>備註  
- 此成員函式沒有在按鈕上的任何作用。  
+### <a name="remarks"></a>Remarks  
+ This member function has no effect on a pushbutton.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#6](../../mfc/reference/codesnippet/cpp/cbutton-class_6.cpp)]  
   
-##  <a name="setcursor"></a>CButton::SetCursor  
- 呼叫此成員函式可將新的資料指標與按鈕產生關聯。  
+##  <a name="setcursor"></a>  CButton::SetCursor  
+ Call this member function to associate a new cursor with the button.  
   
 ```  
 HCURSOR SetCursor(HCURSOR hCursor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hCursor`  
- 資料指標的控制代碼。  
+ The handle of a cursor.  
   
-### <a name="return-value"></a>傳回值  
- 之前與按鈕相關聯之資料指標的控制代碼。  
+### <a name="return-value"></a>Return Value  
+ The handle of a cursor previously associated with the button.  
   
-### <a name="remarks"></a>備註  
- 資料指標會自動放按鈕，預設內置表面。 如果游標位於按鈕太大，則會遭到裁剪任一邊。 您可以選擇其他的對齊選項，包括下列︰  
+### <a name="remarks"></a>Remarks  
+ The cursor will be automatically placed on the face of the button, centered by default. If the cursor is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
   
 - **BS_TOP**  
   
@@ -661,79 +688,79 @@ HCURSOR SetCursor(HCURSOR hCursor);
   
 - **BS_VCENTER**  
   
- 不同於[CBitmapButton](../../mfc/reference/cbitmapbutton-class.md)，它會使用每個按鈕，四個點陣圖`SetCursor`使用每個按鈕只能有一個資料指標。 按下按鈕時，游標會顯示將往下及往右移位。  
+ Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetCursor` uses only one cursor per the button. When the button is pressed, the cursor appears to shift down and to the right.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#7](../../mfc/reference/codesnippet/cpp/cbutton-class_7.cpp)]  
   
-##  <a name="setdropdownstate"></a>CButton::SetDropDownState  
- 設定目前的分割按鈕控制項的下拉式清單狀態。  
+##  <a name="setdropdownstate"></a>  CButton::SetDropDownState  
+ Sets the drop-down state of the current split button control.  
   
 ```  
 BOOL SetDropDownState(BOOL fDropDown);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `fDropDown`|`true`若要設定`BST_DROPDOWNPUSHED`狀態; 否則`false`。|  
+|[in] `fDropDown`|`true` to set `BST_DROPDOWNPUSHED` state; otherwise, `false`.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 分割按鈕控制項會有的一種樣式`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`而且包含按鈕和其右邊的下拉箭號。 如需詳細資訊，請參閱[按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb775951)。 通常，當使用者按一下下拉箭號，已設定的下拉式清單狀態。 使用此方法以程式設計方式設定下拉式清單控制項的狀態。 下拉箭號會繪製陰影來表示的狀態。  
+### <a name="remarks"></a>Remarks  
+ A split button control has a style of `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON` and consists of a button and a drop-down arrow to its right. For more information, see [Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb775951). Usually, the drop-down state is set when the user clicks the drop-down arrow. Use this method to programmatically set the drop-down state of the control. The drop-down arrow is drawn shaded to indicate the state.  
   
- 這個方法會傳送[BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [BCM_SETDROPDOWNSTATE](http://msdn.microsoft.com/library/windows/desktop/bb775973) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_splitButton`，也就是用來以程式設計方式存取分割按鈕控制項。 在下列範例會使用此變數。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control. This variable is used in the following example.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會設定分割按鈕控制項，以指出下拉箭號會推入的狀態。  
+### <a name="example"></a>Example  
+ The following code example sets the state of the split button control to indicate that the drop-down arrow is pushed.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#6](../../mfc/reference/codesnippet/cpp/cbutton-class_11.cpp)]  
   
-##  <a name="setelevationrequired"></a>CButton::SetElevationRequired  
- 設定目前的按鈕控制項以狀態`elevation required`，此為所需的控制項來顯示提高權限的安全性圖示。  
+##  <a name="setelevationrequired"></a>  CButton::SetElevationRequired  
+ Sets the state of the current button control to `elevation required`, which is necessary for the control to display an elevated security icon.  
   
 ```  
 BOOL SetElevationRequired(BOOL fElevationRequired);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `fElevationRequired`|`true`若要設定`elevation required`狀態; 否則`false`。|  
+|[in] `fElevationRequired`|`true` to set `elevation required` state; otherwise, `false`.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 如果按鈕或命令的連結控制需要提高權限的安全性權限執行的動作，將控制項設為`elevation required`狀態。 接著，Windows 會顯示在控制項上的使用者帳戶控制 (UAC) 保護盾圖示。 如需詳細資訊，請參閱 「 使用者帳戶控制 」 在[MSDN](http://go.microsoft.com/fwlink/linkid=18507)。  
+### <a name="remarks"></a>Remarks  
+ If a button or command link control requires elevated security permission to perform an action, set the control to `elevation required` state. Subsequently, Windows displays the User Account Control (UAC) shield icon on the control. For more information, see "User Account Control" at [MSDN](http://go.microsoft.com/fwlink/linkid=18507).  
   
- 這個方法會傳送[BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) message, which is described in the Windows SDK.  
   
-##  <a name="seticon"></a>CButton::SetIcon  
- 呼叫此成員函式可將新的圖示與按鈕產生關聯。  
+##  <a name="seticon"></a>  CButton::SetIcon  
+ Call this member function to associate a new icon with the button.  
   
 ```  
 HICON SetIcon(HICON hIcon);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hIcon`  
- 圖示的控制代碼。  
+ The handle of an icon.  
   
-### <a name="return-value"></a>傳回值  
- 之前與按鈕相關聯的圖示的控制代碼。  
+### <a name="return-value"></a>Return Value  
+ The handle of an icon previously associated with the button.  
   
-### <a name="remarks"></a>備註  
- 圖示將會自動放置按鈕，預設內置表面。 如果太大按鈕的圖示，則會遭到裁剪任一邊。 您可以選擇其他的對齊選項，包括下列︰  
+### <a name="remarks"></a>Remarks  
+ The icon will be automatically placed on the face of the button, centered by default. If the icon is too large for the button, it will be clipped on either side. You can choose other alignment options, including the following:  
   
 - **BS_TOP**  
   
@@ -747,245 +774,245 @@ HICON SetIcon(HICON hIcon);
   
 - **BS_VCENTER**  
   
- 不同於[CBitmapButton](../../mfc/reference/cbitmapbutton-class.md)，它會使用每個按鈕，四個點陣圖`SetIcon`會使用每個按鈕只能有一個圖示。 按下按鈕時，圖示會顯示將往下及往右移位。  
+ Unlike [CBitmapButton](../../mfc/reference/cbitmapbutton-class.md), which uses four bitmaps per button, `SetIcon` uses only one icon per the button. When the button is pressed, the icon appears to shift down and to the right.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#8](../../mfc/reference/codesnippet/cpp/cbutton-class_8.cpp)]  
   
-##  <a name="setimagelist"></a>CButton::SetImageList  
- 呼叫這個方法來設定影像清單的`CButton`物件。  
+##  <a name="setimagelist"></a>  CButton::SetImageList  
+ Call this method to set the image list of the `CButton` object.  
   
 ```  
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pbuttonImagelist`  
- 新的影像清單的指標。  
+ A pointer to the new image list.  
   
-### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**失敗。  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬的功能**BCM_SETIMAGELIST**訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)區段[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_SETIMAGELIST** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-##  <a name="setnote"></a>CButton::SetNote  
- 設定目前的命令連結控制項的附註文字。  
+##  <a name="setnote"></a>  CButton::SetNote  
+ Sets the note text for the current command link control.  
   
 ```  
 BOOL SetNote(LPCTSTR lpszNote);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `lpszNote`|設定為命令連結控制項的註解文字的 Unicode 字串指標。|  
+|[in] `lpszNote`|Pointer to a Unicode string that is set as the note text for the command link control.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_COMMANDLINK`或`BS_DEFCOMMANDLINK`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_COMMANDLINK` or `BS_DEFCOMMANDLINK`.  
   
- 這個方法會傳送[BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [BCM_SETNOTE](http://msdn.microsoft.com/library/windows/desktop/bb775977) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_cmdLink`，也就是用來以程式設計方式存取 命令連結控制項。 在下列範例會使用此變數。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_cmdLink`, that is used to programmatically access the command link control. This variable is used in the following example.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會設定命令連結控制項的附註文字。  
+### <a name="example"></a>Example  
+ The following code example sets the note text for the command link control.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#7](../../mfc/reference/codesnippet/cpp/cbutton-class_12.cpp)]  
   
-##  <a name="setsplitglyph"></a>CButton::SetSplitGlyph  
- 將指定的圖像 （glyph） 與目前的分割按鈕控制項產生關聯。  
+##  <a name="setsplitglyph"></a>  CButton::SetSplitGlyph  
+ Associates a specified glyph with the current split button control.  
   
 ```  
 BOOL SetSplitGlyph(TCHAR chGlyph);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `chGlyph`|指定要做為分割按鈕的下拉箭號圖像字元。|  
+|[in] `chGlyph`|A character that specifies the glyph to use as the split button drop-down arrow.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於具有按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls that have the button style `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 圖像 （glyph） 是字元的特定字型中實體表示法。 `chGlyph`參數當做字符，不使用，但是改為用來從系統定莪圖像 （glyph） 的一組選取圖像 （glyph）。 預設下拉箭號圖像 （glyph） 的字元 '6'，所指定，而且類似的 Unicode 字元黑色向下三角形 (U + 25BC)。  
+ A glyph is the physical representation of a character in a particular font. The `chGlyph` parameter is not used as the glyph, but is instead used to select a glyph from a set of system-defined glyphs. The default drop-down arrow glyph is specified by a character '6', and resembles the Unicode character BLACK DOWN-POINTING TRIANGLE (U+25BC).  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構和`BCSIF_GLYPH`旗標和`himlGlyph`成員`chGlyph`參數，然後再結構中的傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_GLYPH` flag and the `himlGlyph` member with the `chGlyph` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
   
-##  <a name="setsplitimagelist"></a>CButton::SetSplitImageList  
- 將[影像清單](../../mfc/reference/cimagelist-class.md)與目前的分割按鈕控制項。  
+##  <a name="setsplitimagelist"></a>  CButton::SetSplitImageList  
+ Associates an [image list](../../mfc/reference/cimagelist-class.md) with the current split button control.  
   
 ```  
 BOOL SetSplitImageList(CImageList* pSplitImageList);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pSplitImageList`|指標[CImageList](../../mfc/reference/cimagelist-class.md)来指派給目前的分割按鈕控制項的物件。|  
+|[in] `pSplitImageList`|Pointer to a [CImageList](../../mfc/reference/cimagelist-class.md) object to assign to the current split button control.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構和`BCSIF_IMAGE`旗標和`himlGlyph`成員`pSplitImageList`參數，然後再結構中的傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_IMAGE` flag and the `himlGlyph` member with the `pSplitImageList` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
   
-##  <a name="setsplitinfo"></a>CButton::SetSplitInfo  
- 指定參數，以決定如何 Windows 來繪製目前的分割按鈕控制項。  
+##  <a name="setsplitinfo"></a>  CButton::SetSplitInfo  
+ Specifies parameters that determine how Windows draws the current split button control.  
   
 ```  
 BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pInfo`|指標[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構，定義目前的分割按鈕控制項。|  
+|[in] `pInfo`|Pointer to a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure that defines the current split button control.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 這個方法會傳送[BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method sends the [BCM_SETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775981) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_splitButton`，也就是用來以程式設計方式存取分割按鈕控制項。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會變更用來分割按鈕的下拉箭號圖像。 範例替代預設向三角形字符向上三角形字符。 顯示的圖像取決於您在中指定的字元`himlGlyph`隸屬`BUTTON_SPLITINFO`結構。 向三角形圖像指定以字元 '6' 和向上三角形圖像是以字元' 5'。 比較，請參閱便利的方法， [CButton::SetSplitGlyph](#setsplitglyph)。  
+### <a name="example"></a>Example  
+ The following code example changes the glyph that is used for the split button drop-down arrow. The example substitutes an up-pointing triangle glyph for the default down-pointing triangle glyph. The glyph that is displayed depends on the character that you specify in the `himlGlyph` member of the `BUTTON_SPLITINFO` structure. The down-pointing triangle glyph is specified by a character '6' and the up-pointing triangle glyph is specified by a character '5'. For comparison, see the convenience method, [CButton::SetSplitGlyph](#setsplitglyph).  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#4](../../mfc/reference/codesnippet/cpp/cbutton-class_13.cpp)]  
   
-##  <a name="setsplitsize"></a>CButton::SetSplitSize  
- 設定目前的分割按鈕控制項的下拉式清單元件的週框矩形。  
+##  <a name="setsplitsize"></a>  CButton::SetSplitSize  
+ Sets the bounding rectangle of the drop-down component of the current split button control.  
   
 ```  
 BOOL SetSplitSize(LPSIZE pSize);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pSize`|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構描述的周框。|  
+|[in] `pSize`|Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that describes a bounding rectangle.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 在展開分割按鈕控制項時，它可以顯示下拉式清單的元件，例如清單控制項或頁面巡覽區控制項。 這個方法會指定包含下拉式元件，這個周框的大小。  
+ When the split button control is expanded, it can display a drop-down component such as a list control or pager control. This method specifies the size of the bounding rectangle that contains the drop-down component.  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構和`BCSIF_SIZE`旗標和`size`成員`pSize`參數，然後再結構中的傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_SIZE` flag and the `size` member with the `pSize` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_splitButton`，也就是用來以程式設計方式存取分割按鈕控制項。 在下列範例會使用此變數。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control. This variable is used in the following example.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會加倍大小分割按鈕的下拉箭號。  
+### <a name="example"></a>Example  
+ The following code example doubles the size of the split button drop-down arrow.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#5](../../mfc/reference/codesnippet/cpp/cbutton-class_14.cpp)]  
   
-##  <a name="setsplitstyle"></a>CButton::SetSplitStyle  
- 設定目前的分割按鈕控制項的樣式。  
+##  <a name="setsplitstyle"></a>  CButton::SetSplitStyle  
+ Sets the style of the current split button control.  
   
 ```  
 BOOL SetSplitStyle(UINT uSplitStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `uSplitStyle`|分割按鈕樣式的位元組合。 如需詳細資訊，請參閱`uSplitStyle`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構。|  
+|[in] `uSplitStyle`|A bitwise combination of split button styles. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法只適用於其按鈕樣式的控制項`BS_SPLITBUTTON`或`BS_DEFSPLITBUTTON`。  
+### <a name="remarks"></a>Remarks  
+ Use this method only with controls whose button style is `BS_SPLITBUTTON` or `BS_DEFSPLITBUTTON`.  
   
- 分割按鈕樣式指定對齊、 外觀比例和圖形格式的 Windows 來繪製分割按鈕圖示。 如需詳細資訊，請參閱`uSplitStyle`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構。  
+ The split button styles specify the alignment, aspect ratio, and graphical format with which Windows draws a split button icon. For more information, see the `uSplitStyle` member of the [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure.  
   
- 這個方法會初始化`mask`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構和`BCSIF_STYLE`旗標和`uSplitStyle`成員`uSplitStyle`參數，然後再結構中的傳送[BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ This method initializes the `mask` member of a [BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955) structure with the `BCSIF_STYLE` flag and the `uSplitStyle` member with the `uSplitStyle` parameter, and then sends that structure in the [BCM_GETSPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775969) message that is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_splitButton`，也就是用來以程式設計方式存取分割按鈕控制項。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_splitButton`, that is used to programmatically access the split button control.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
+ [!code-cpp[NVC_MFC_CButton_s1#1](../../mfc/reference/codesnippet/cpp/cbutton-class_10.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會設定分割按鈕的下拉箭號的樣式。 `BCSS_ALIGNLEFT`樣式顯示箭號按鈕，左側和`BCSS_STRETCH`樣式會保留下拉箭號的比例，當您調整按鈕的大小。  
+### <a name="example"></a>Example  
+ The following code example sets the style of the split button drop-down arrow. The `BCSS_ALIGNLEFT` style displays the arrow on the left side of the button, and the `BCSS_STRETCH` style retains the drop-down arrow's proportions when you resize the button.  
   
- [!code-cpp[NVC_MFC_CButton_s&#1; 3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
+ [!code-cpp[NVC_MFC_CButton_s1#3](../../mfc/reference/codesnippet/cpp/cbutton-class_15.cpp)]  
   
-##  <a name="setstate"></a>CButton::SetState  
- 設定是否使用或不會反白顯示的按鈕控制項。  
+##  <a name="setstate"></a>  CButton::SetState  
+ Sets whether a button control is highlighted or not.  
   
 ```  
 void SetState(BOOL bHighlight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *bHighlight*  
- 指定是否會反白顯示 按鈕。 反白顯示的按鈕，則為非零值值 0 會移除任何反白顯示。  
+ Specifies whether the button is to be highlighted. A nonzero value highlights the button; a 0 value removes any highlighting.  
   
-### <a name="remarks"></a>備註  
- 反白顯示會影響外部的按鈕控制項。 它沒有任何作用核取狀態的選項按鈕或核取方塊。  
+### <a name="remarks"></a>Remarks  
+ Highlighting affects the exterior of a button control. It has no effect on the check state of a radio button or check box.  
   
- 按鈕控制項自動反白顯示，當使用者按滑鼠左鍵會保存。 當使用者放開滑鼠按鈕時，會移除反白顯示。  
+ A button control is automatically highlighted when the user clicks and holds the left mouse button. The highlighting is removed when the user releases the mouse button.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CButton # 9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CButton#9](../../mfc/reference/codesnippet/cpp/cbutton-class_9.cpp)]  
   
-##  <a name="settextmargin"></a>CButton::SetTextMargin  
- 呼叫此方法以設定的文字邊界`CButton`物件。  
+##  <a name="settextmargin"></a>  CButton::SetTextMargin  
+ Call this method to set the text margin of the `CButton` object.  
   
 ```  
 BOOL SetTextMargin(RECT* pmargin);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pmargin`  
- 新的文字邊界指標。  
+ A pointer to the new text margin.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，則傳回 TRUE 失敗，則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE on success, FALSE on failure.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬的功能**BCM_SETTEXTMARGIN**訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)區段[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the **BCM_SETTEXTMARGIN** message, as described in the [Buttons](http://msdn.microsoft.com/library/windows/desktop/bb775943) section of the Windows SDK.  
   
-## <a name="see-also"></a>另請參閱  
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [CComboBox 類別](../../mfc/reference/ccombobox-class.md)   
- [CEdit 類別](../../mfc/reference/cedit-class.md)   
- [CListBox 類別](../../mfc/reference/clistbox-class.md)   
- [CScrollBar 類別](../../mfc/reference/cscrollbar-class.md)   
- [CStatic 類別](../../mfc/reference/cstatic-class.md)   
- [CBitmapButton 類別](../../mfc/reference/cbitmapbutton-class.md)   
- [CDialog 類別](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CComboBox Class](../../mfc/reference/ccombobox-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CScrollBar Class](../../mfc/reference/cscrollbar-class.md)   
+ [CStatic Class](../../mfc/reference/cstatic-class.md)   
+ [CBitmapButton Class](../../mfc/reference/cbitmapbutton-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

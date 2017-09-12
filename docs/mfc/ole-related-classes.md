@@ -1,45 +1,63 @@
 ---
-title: "OLE 相關類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 類別 [C++]"
-  - "OLE [C++], 類別"
-  - "OLE 類別 [C++]"
+title: OLE-Related Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- OLE classes [MFC]
+- OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# OLE 相關類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76f496ed2a4f2587ce2773ff7d244c1ed7f2485d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這些類別提供檔案輸入和輸出提供許多不同的服務，範圍從例外狀況。  
+---
+# <a name="ole-related-classes"></a>OLE-Related Classes
+These classes provide a number of different services, ranging from exceptions to file input and output.  
   
  [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)  
- 用來建立項目，當要求其他容器。  這個類別可做為類別的基底類別的特定型別，包括 `COleTemplateServer`。  
+ Used to create items when requested from other containers. This class serves as the base class for more specific types of factories, including `COleTemplateServer`.  
   
  [COleMessageFilter](../mfc/reference/colemessagefilter-class.md)  
- 用來處理與 OLE 輕量型遠端程序呼叫 \(LRPC\) 的並行。  
+ Used to manage concurrency with OLE Lightweight Remote Procedure Calls (LRPC).  
   
  [COleStreamFile](../mfc/reference/colestreamfile-class.md)  
- 使用 COM `IStream` 介面提供 `CFile` 對複合檔案。  這個類別 \(衍生自 `CFile`\) 可讓序列化使用 MFC OLE 結構化儲存體。  
+ Uses the COM `IStream` interface to provide `CFile` access to compound files. This class (derived from `CFile`) enables MFC serialization to use OLE structured storage.  
   
  [CRectTracker](../mfc/reference/crecttracker-class.md)  
- 用來允許移動，就地項目的調整大小和重新定位。  
+ Used to allow moving, resizing, and reorientation of in-place items.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

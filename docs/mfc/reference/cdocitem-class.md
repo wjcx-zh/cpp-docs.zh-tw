@@ -1,5 +1,5 @@
 ---
-title: "CDocItem 類別 |Microsoft 文件"
+title: CDocItem Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,14 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- items, document
-- document items
-- server documents, document items
-- CDocItem class
-- container document items
-- client document items
-- OLE documents, items
-- server documents
+- CDocItem [MFC], GetDocument
+- CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
 caps.latest.revision: 22
 author: mikeblome
@@ -43,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 1ade88aa562180d5c3a6a7afe3fe26943a5d811d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7846499918e1ef1456cc1ebcd5b5aa8225ad1133
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdocitem-class"></a>CDocItem 類別
-文件項目的基底類別，這些項目是文件資料的元件。  
+# <a name="cdocitem-class"></a>CDocItem Class
+The base class for document items, which are components of a document's data.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocItem : public CCmdTarget  
@@ -61,60 +55,60 @@ class CDocItem : public CCmdTarget
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocItem::GetDocument](#getdocument)|傳回包含之項目的文件。|  
-|[CDocItem::IsBlank](#isblank)|判斷項目是否包含任何資訊。|  
+|[CDocItem::GetDocument](#getdocument)|Returns the document that contains the item.|  
+|[CDocItem::IsBlank](#isblank)|Determines whether the item contains any information.|  
   
-## <a name="remarks"></a>備註  
- `CDocItem`物件用來代表用戶端和伺服器文件中的 OLE 項目。  
+## <a name="remarks"></a>Remarks  
+ `CDocItem` objects are used to represent OLE items in both client and server documents.  
   
- 如需詳細資訊，請參閱文章[容器︰ 實作容器](../../mfc/containers-implementing-a-container.md)。  
+ For more information, see the article [Containers: Implementing a Container](../../mfc/containers-implementing-a-container.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocItem`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
- 呼叫此函式可取得文件，其中包含項目。  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
+ Call this function to get the document that contains the item.  
   
 ```  
 CDocument* GetDocument() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向文件，其中包含項目;**NULL**，如果項目不是文件的一部分。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the document that contains the item; **NULL**, if the item is not part of a document.  
   
-### <a name="remarks"></a>備註  
- 此函式在衍生類別中覆寫[COleClientItem](../../mfc/reference/coleclientitem-class.md)和[COleServerItem](../../mfc/reference/coleserveritem-class.md)，將指標傳回至[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)物件。  
+### <a name="remarks"></a>Remarks  
+ This function is overridden in the derived classes [COleClientItem](../../mfc/reference/coleclientitem-class.md) and [COleServerItem](../../mfc/reference/coleserveritem-class.md), returning a pointer to either a [COleDocument](../../mfc/reference/coledocument-class.md), a [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), or a [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) object.  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
- 預設的序列化時，由架構呼叫。  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
+ Called by the framework when default serialization occurs.  
   
 ```  
 virtual BOOL IsBlank() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果項目未不包含任何資訊。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item contains no information; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 根據預設，`CDocItem`物件不是空白。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)物件有時會空白因為它們直接衍生自`CDocItem`。 不過， [COleServerItem](../../mfc/reference/coleserveritem-class.md)物件永遠為空白。 根據預設，OLE 應用程式包含`COleClientItem`物件沒有 x 或 y 範圍會序列化。 這是藉由傳回**TRUE**的覆寫從`IsBlank`項目時有任何 x 或 y 範圍。  
+### <a name="remarks"></a>Remarks  
+ By default, `CDocItem` objects are not blank. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objects are sometimes blank because they derive directly from `CDocItem`. However, [COleServerItem](../../mfc/reference/coleserveritem-class.md) objects are always blank. By default, OLE applications containing `COleClientItem` objects that have no x or y extent are serialized. This is done by returning **TRUE** from an override of `IsBlank` when the item has no x or y extent.  
   
- 如果您想要在序列化期間執行其他動作，請覆寫這個函式。  
+ Override this function if you want to implement other actions during serialization.  
   
-## <a name="see-also"></a>另請參閱  
- [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [COleDocument 類別](../../mfc/reference/coledocument-class.md)   
- [COleServerItem 類別](../../mfc/reference/coleserveritem-class.md)   
- [COleClientItem 類別](../../mfc/reference/coleclientitem-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDocument Class](../../mfc/reference/coledocument-class.md)   
+ [COleServerItem Class](../../mfc/reference/coleserveritem-class.md)   
+ [COleClientItem Class](../../mfc/reference/coleclientitem-class.md)
 

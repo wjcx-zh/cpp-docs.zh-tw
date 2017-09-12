@@ -1,5 +1,5 @@
 ---
-title: "CMFCPreviewCtrlImpl 類別 |Microsoft 文件"
+title: CMFCPreviewCtrlImpl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,7 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCPreviewCtrlImpl class
+- CMFCPreviewCtrlImpl [MFC], CMFCPreviewCtrlImpl
+- CMFCPreviewCtrlImpl [MFC], Create
+- CMFCPreviewCtrlImpl [MFC], Destroy
+- CMFCPreviewCtrlImpl [MFC], Focus
+- CMFCPreviewCtrlImpl [MFC], GetDocument
+- CMFCPreviewCtrlImpl [MFC], Redraw
+- CMFCPreviewCtrlImpl [MFC], SetDocument
+- CMFCPreviewCtrlImpl [MFC], SetHost
+- CMFCPreviewCtrlImpl [MFC], SetPreviewVisuals
+- CMFCPreviewCtrlImpl [MFC], SetRect
+- CMFCPreviewCtrlImpl [MFC], DoPaint
+- CMFCPreviewCtrlImpl [MFC], m_clrBackColor
+- CMFCPreviewCtrlImpl [MFC], m_clrTextColor
+- CMFCPreviewCtrlImpl [MFC], m_font
+- CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
 caps.latest.revision: 28
 author: mikeblome
@@ -49,17 +63,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b3ccd0d6e03f652798b45ac35d36f8bc2f63e048
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7c0e9567fbbc5b750e378af2693a2596c007a05e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 類別
-這個類別會實作放置在 Shell for Rich Preview 提供之主機視窗的視窗。  
+# <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl Class
+This class implements a window that is placed on a host window provided by the Shell for Rich Preview.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCPreviewCtrlImpl : public CWnd;  
@@ -67,46 +81,46 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Destructs 預覽控制項物件。|  
-|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|建構預覽控制項物件。|  
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Destructs a preview control object.|  
+|[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Constructs a preview control object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::Create](#create)|多載。 若要建立 Windows 視窗的豐富預覽處理常式呼叫。|  
-|[CMFCPreviewCtrlImpl::Destroy](#destroy)|要終結這個控制項需要時，由豐富的預覽處理常式呼叫。|  
-|[CMFCPreviewCtrlImpl::Focus](#focus)|設定輸入這個控制項焦點。|  
-|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|傳回連接到此預覽控制項的文件。|  
-|[CMFCPreviewCtrlImpl::Redraw](#redraw)|說明此控制項重繪。|  
-|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|呼叫預覽處理常式建立文件實作與預覽控制項之間的關聯性。|  
-|[CMFCPreviewCtrlImpl::SetHost](#sethost)|設定新的父項對這個控制項。|  
-|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|豐富的預覽處理常式時呼叫必須設定視覺效果豐富的預覽的內容。|  
-|[CMFCPreviewCtrlImpl::SetRect](#setrect)|設定這個控制項的新周框矩形。|  
+|[CMFCPreviewCtrlImpl::Create](#create)|Overloaded. Called by a Rich Preview handler to create the Windows window.|  
+|[CMFCPreviewCtrlImpl::Destroy](#destroy)|Called by a Rich Preview handler when it needs to destroy this control.|  
+|[CMFCPreviewCtrlImpl::Focus](#focus)|Sets input focus to this control.|  
+|[CMFCPreviewCtrlImpl::GetDocument](#getdocument)|Returns a document connected to this preview control.|  
+|[CMFCPreviewCtrlImpl::Redraw](#redraw)|Tells this control to redraw.|  
+|[CMFCPreviewCtrlImpl::SetDocument](#setdocument)|Called by the preview handler to create a relationship between the document implementation and the preview control.|  
+|[CMFCPreviewCtrlImpl::SetHost](#sethost)|Sets a new parent for this control.|  
+|[CMFCPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|Called by a Rich Preview handler when it needs to set visuals of rich preview content.|  
+|[CMFCPreviewCtrlImpl::SetRect](#setrect)|Sets a new bounding rectangle for this control.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|呈現預覽架構呼叫。|  
+|[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Called by the framework to render the preview.|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|預覽視窗的背景色彩。|  
-|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|預覽視窗的文字色彩。|  
-|[CMFCPreviewCtrlImpl::m_font](#m_font)|用來在預覽視窗中顯示文字的字型。|  
-|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|內容控制項中可預覽的文件指標。|  
+|[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Background color of preview window.|  
+|[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Text color of preview window.|  
+|[CMFCPreviewCtrlImpl::m_font](#m_font)|Font used to display text in the preview window.|  
+|[CMFCPreviewCtrlImpl::m_pDocument](#m_pdocument)|A pointer to a document whose content is previewed in the control.|  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h    
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h    
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -115,16 +129,16 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
-建構預覽控制項物件。
+## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+Constructs a preview control object.
 
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
 CMFCPreviewCtrlImpl();  
 
-## <a name="create"></a>CMFCPreviewCtrlImpl::Create
-多載。 若要建立 Windows 視窗的豐富預覽處理常式呼叫。  
+## <a name="create"></a> CMFCPreviewCtrlImpl::Create
+Overloaded. Called by a Rich Preview handler to create the Windows window.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual BOOL Create(  
@@ -138,32 +152,32 @@ virtual BOOL Create(
 );  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hWndParent`  
- 提供在 shell for Rich Preview 主應用程式視窗的控制代碼。  
+ A handle to the host window supplied by the Shell for Rich Preview.  
   
  `prc`  
- 指定的初始大小和視窗的位置。  
+ Specifies the initial size and position of the window.  
   
  `pContext`  
- 建立內容的指標。  
+ A pointer to a creation context.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果建立成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if creation succeeded; otherwise `FALSE`.  
   
-## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
-要終結這個控制項需要時，由豐富的預覽處理常式呼叫。  
+## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
+Called by a Rich Preview handler when it needs to destroy this control.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void Destroy();  
 ```  
   
-## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
-呈現預覽架構呼叫。  
+## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint  
+Called by the framework to render the preview.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void DoPaint(  
@@ -171,76 +185,76 @@ virtual void DoPaint(
 );  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 要繪製的裝置內容指標。  
+ A pointer to a device context for painting.  
 
 
-## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
-設定輸入這個控制項焦點。  
+## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus  
+Sets input focus to this control.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void Focus();  
 ```  
-## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
-傳回連接到此預覽控制項的文件。  
+## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
+Returns a document connected to this preview control.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ATL::IDocument* GetDocument();  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 文件，其內容控制項中可預覽指標。
+### <a name="return-value"></a>Return Value  
+ A pointer to a document, whose content is previewed in the control.
 
-## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
-預覽視窗的背景色彩。  
+## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor  
+Background color of the preview window.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
-預覽視窗的文字色彩。  
+## <a name="m_clrtextcolor"></a> CMFCPreviewCtrlImpl::m_clrTextColor
+Text color of the preview window.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="m_font"></a>CMFCPreviewCtrlImpl::m_font 用來在預覽視窗中顯示文字的字型。  
+## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font  Font used to display text in the preview window.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
-內容控制項中可預覽的文件指標。  
+## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument  
+A pointer to a document whose content is previewed in the control.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
-說明此控制項重繪。  
+## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw  
+Tells this control to redraw.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void Redraw();  
 ```  
-## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
-呼叫預覽處理常式建立文件實作與預覽控制項之間的關聯性。  
+## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
+Called by the preview handler to create a relationship between the document implementation and the preview control.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 void SetDocument(  
@@ -248,14 +262,14 @@ void SetDocument(
 );  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDocument`  
- 文件實作指標。  
+ A pointer to the document implementation.  
 
-## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
-設定新的父項對這個控制項。  
+## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
+Sets a new parent for this control.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void SetHost(  
@@ -263,14 +277,14 @@ virtual void SetHost(
 );  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hWndParent`  
- 新的父視窗控制代碼。  
+ A handle to the new parent window.  
 
-## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
-豐富的預覽處理常式時呼叫必須設定視覺效果豐富的預覽的內容。  
+## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
+Called by a Rich Preview handler when it needs to set visuals of rich preview content.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void SetPreviewVisuals(  
@@ -280,20 +294,20 @@ virtual void SetPreviewVisuals(
 );  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `clrBack`  
- 預覽視窗的背景色彩。  
+ Background color of preview window.  
   
  `clrText`  
- 預覽視窗的文字色彩。  
+ Text color of preview window.  
   
  `plf`  
- 用來在預覽視窗中顯示文字的字型。 
+ Font used to display text in the preview window. 
 
-##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
-設定這個控制項的新周框矩形。  
+##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
+Sets a new bounding rectangle for this control.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual void SetRect(  
@@ -302,20 +316,20 @@ virtual void SetRect(
 );  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `prc`  
- 指定新的大小和預覽控制項的位置。  
+ Specifies the new size and position of the preview control.  
   
  `bRedraw`  
- 指定是否應該重新繪製控制項。  
+ Specifies whether the control should be redrawn.  
   
-### <a name="remarks"></a>備註  
- 通常主控制項的大小時，會設定新周框矩形。  
+### <a name="remarks"></a>Remarks  
+ Usually a new bounding rectangle is set when the host control is resized.  
 
-## <a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
-Destructs 預覽控制項物件。  
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl  
+Destructs a preview control object.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 virtual ~CMFCPreviewCtrlImpl();  

@@ -1,45 +1,64 @@
 ---
-title: "初始化 CStatusBarCtrl 物件的組件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl 類別, 宣告其組件"
-  - "CStatusBarCtrl 類別, 簡單模式"
-  - "圖示, 在狀態列中使用"
-  - "簡單狀態列"
-  - "狀態列, 宣告其組件"
-  - "狀態列, 圖示"
-  - "狀態列, 簡單模式"
+title: Initializing the Parts of a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStatusBarCtrl class [MFC], simple mode
+- status bars [MFC], declaring parts of
+- simple status bars [MFC]
+- status bars [MFC], icons
+- status bars [MFC], simple mode
+- icons, using in status bars
+- CStatusBarCtrl class [MFC], declaring parts of
 ms.assetid: 60e8f285-d2d8-424a-a6ea-2fc548370303
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 初始化 CStatusBarCtrl 物件的組件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5d946ed45cebba1d0f1f54a65e6c35129d209b57
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-根據預設，狀態列會使用不同的窗格顯示狀態資訊。  這些窗格 \(也稱為組件\) 可以包含文字字串、圖示或兩者。  
+---
+# <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>Initializing the Parts of a CStatusBarCtrl Object
+By default, a status bar displays status information using separate panes. These panes (also referred to as parts) can contain either a text string, an icon, or both.  
   
- 使用 [SetParts](../Topic/CStatusBarCtrl::SetParts.md) 定義狀態列會有多少部分和長度。  在您建立這個狀態列之後的部分，請呼叫 [SetText](../Topic/CStatusBarCtrl::SetText.md) 和 [SetIcon](../Topic/CStatusBarCtrl::SetIcon.md) 設定文字或圖示狀態列的特定部分。  一旦這個部分已成功設定，控制項會自動重新繪製。  
+ Use [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) to define how many parts, and the length, the status bar will have. After you have created the parts of the status bar, make calls to [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) and [SetIcon](../mfc/reference/cstatusbarctrl-class.md#seticon) to set the text or icon for a specific part of the status bar. Once the part has been successfully set, the control is automatically redrawn.  
   
- 下列範例使用現有的 `CStatusBarCtrl` 物件 \(`m_StatusBarCtrl`\) 具有四個窗格然後在第二個部分設定圖示 \(IDI\_ICON1\) 的一些文字。  
+ The following example initializes an existing `CStatusBarCtrl` object (`m_StatusBarCtrl`) with four panes and then sets an icon (IDI_ICON1) and some text in the second part.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/CPP/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#31](../mfc/codesnippet/cpp/initializing-the-parts-of-a-cstatusbarctrl-object_1.cpp)]  
   
- 如需設定 `CStatusBarCtrl` 物件為簡易模式的相關資訊，請參閱 [設定 CStatusBarCtrl 物件的模式](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)。  
+ For more information on setting the mode of a `CStatusBarCtrl` object to simple, see [Setting the Mode of a CStatusBarCtrl Object](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
   
-## 請參閱  
- [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

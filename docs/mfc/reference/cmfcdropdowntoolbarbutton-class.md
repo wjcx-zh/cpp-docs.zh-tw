@@ -1,5 +1,5 @@
 ---
-title: "CMFCDropDownToolbarButton 類別 |Microsoft 文件"
+title: CMFCDropDownToolbarButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,8 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDropDownToolbarButton class
-- OnCancelMode method
+- CMFCDropDownToolbarButton [MFC], CMFCDropDownToolbarButton
+- CMFCDropDownToolbarButton [MFC], CopyFrom
+- CMFCDropDownToolbarButton [MFC], DropDownToolbar
+- CMFCDropDownToolbarButton [MFC], ExportToMenuButton
+- CMFCDropDownToolbarButton [MFC], GetDropDownToolBar
+- CMFCDropDownToolbarButton [MFC], IsDropDown
+- CMFCDropDownToolbarButton [MFC], IsExtraSize
+- CMFCDropDownToolbarButton [MFC], OnCalculateSize
+- CMFCDropDownToolbarButton [MFC], OnChangeParentWnd
+- CMFCDropDownToolbarButton [MFC], OnClick
+- CMFCDropDownToolbarButton [MFC], OnClickUp
+- CMFCDropDownToolbarButton [MFC], OnContextHelp
+- CMFCDropDownToolbarButton [MFC], OnCustomizeMenu
+- CMFCDropDownToolbarButton [MFC], OnDraw
+- CMFCDropDownToolbarButton [MFC], OnDrawOnCustomizeList
+- CMFCDropDownToolbarButton [MFC], Serialize
+- CMFCDropDownToolbarButton [MFC], SetDefaultCommand
+- CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
 caps.latest.revision: 31
 author: mikeblome
@@ -53,17 +69,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 24398ddb605489bf9677bd493a1bc1f490d583b9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ab80905ed4055c2d0a4f73c64cc06eaac83db822
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 類別
-按一下時其行為像一般按鈕的工具列按鈕類型。 不過，它會開啟下拉式工具列 ( [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)如果使用者按下並按住工具列按鈕。  
+# <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton Class
+A type of toolbar button that behaves like a regular button when it is clicked. However, it opens a drop-down toolbar ( [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md) if the user presses and holds the toolbar button down.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDropDownToolbarButton : public CMFCToolBarButton  
@@ -71,76 +87,76 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|建構 `CMFCDropDownToolbarButton` 物件。|  
-|`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|解構函式。|  
+|[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|Constructs a `CMFCDropDownToolbarButton` object.|  
+|`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|將另一個工具列按鈕的內容複製到目前的按鈕。 (覆寫[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)。)|  
-|`CMFCDropDownToolbarButton::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|開啟下拉式工具列。|  
-|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|複製文字從工具列按鈕的功能表。 (覆寫[CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)。)|  
-|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|擷取與按鈕關聯的下拉式清單工具列。|  
-|`CMFCDropDownToolbarButton::GetThisClass`|由架構用來取得變數的指標， [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
-|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|判斷是否為目前開啟下拉式工具列。|  
-|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|判斷是否可以使用擴充的框線顯示按鈕。 (覆寫[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)。)|  
-|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|計算指定之的裝置內容和停駐狀態的按鈕大小的架構所呼叫。 (覆寫[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)。)|  
-|`CMFCDropDownToolbarButton::OnCancelMode`|處理架構呼叫[WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615)訊息。 (覆寫 `CMCToolBarButton::OnCancelMode`。)|  
-|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|插入新的工具列按鈕時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)。)|  
-|[CMFCDropDownToolbarButton::OnClick](#onclick)|使用者按下滑鼠按鈕時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)。)|  
-|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|當使用者放開滑鼠按鈕時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup)。)|  
-|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|為父工具列處理時，由框架呼叫`WM_HELPHITTEST`訊息。 (覆寫[CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)。)|  
-|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|當應用程式為父工具列上顯示捷徑功能表，請修改功能表。 (覆寫[CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)。)|  
-|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|使用指定的樣式和選項繪製按鈕架構呼叫。 (覆寫[CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw)。)|  
-|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|繪製按鈕架構呼叫**命令**窗格**自訂**對話方塊。 (覆寫[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)。)|  
-|[CMFCDropDownToolbarButton::Serialize](#serialize)|從封存讀取此物件，或將它寫入至封存檔。 (覆寫[CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)。)|  
-|[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|設定當使用者按一下按鈕時，架構會使用預設命令。|  
+|[CMFCDropDownToolbarButton::CopyFrom](#copyfrom)|Copies the properties of another toolbar button to the current button. (Overrides [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|`CMFCDropDownToolbarButton::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)|Opens a drop-down toolbar.|  
+|[CMFCDropDownToolbarButton::ExportToMenuButton](#exporttomenubutton)|Copies text from the toolbar button to a menu. (Overrides [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton).)|  
+|[CMFCDropDownToolbarButton::GetDropDownToolBar](#getdropdowntoolbar)|Retrieves the drop-down toolbar that is associated with the button.|  
+|`CMFCDropDownToolbarButton::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|Determines whether the drop-down toolbar is currently open.|  
+|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|Determines whether the button can be displayed with an extended border. (Overrides [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).)|  
+|[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|Called by the framework to calculate the size of the button for the specified device context and docking state. (Overrides [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
+|`CMFCDropDownToolbarButton::OnCancelMode`|Called by the framework to handle the [WM_CANCELMODE](http://msdn.microsoft.com/library/windows/desktop/ms632615) message. (Overrides `CMCToolBarButton::OnCancelMode`.)|  
+|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|Called by the framework when the button is inserted into a new toolbar. (Overrides [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCDropDownToolbarButton::OnClick](#onclick)|Called by the framework when the user clicks the mouse button. (Overrides [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
+|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|Called by the framework when the user releases the mouse button. (Overrides [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup).)|  
+|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|Called by the framework when the parent toolbar handles a `WM_HELPHITTEST` message. (Overrides [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp).)|  
+|[CMFCDropDownToolbarButton::OnCustomizeMenu](#oncustomizemenu)|Modifies the provided menu when the application displays a shortcut menu on the parent toolbar. (Overrides [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|  
+|[CMFCDropDownToolbarButton::OnDraw](#ondraw)|Called by the framework to draw the button by using the specified styles and options. (Overrides [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
+|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box. (Overrides [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
+|[CMFCDropDownToolbarButton::Serialize](#serialize)|Reads this object from an archive or writes it to an archive. (Overrides [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
+|[CMFCDropDownToolbarButton::SetDefaultCommand](#setdefaultcommand)|Sets the default command that the framework uses when a user clicks the button.|  
   
-### <a name="data-members"></a>資料成員  
+### <a name="data-members"></a>Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|指定使用者必須按住滑鼠按鈕才會出現下拉式工具列的時間的長度。|  
+|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|Specifies the length of time that a user must hold the mouse button down before the drop-down toolbar appears.|  
   
-## <a name="remarks"></a>備註  
- A`CMFCDropDownToolBarButton`不同於一般的按鈕，因為它有一個小箭號按鈕的右下角。 使用者從下拉式清單工具列中選取一個按鈕之後，架構會顯示它的圖示上最上層工具列按鈕 （位於右下角的小箭頭的按鈕）。  
+## <a name="remarks"></a>Remarks  
+ A `CMFCDropDownToolBarButton` differs from an ordinary button in that it has a small arrow in the lower-right corner of the button. After the user selects a button from the drop-down toolbar, the framework displays its icon on the top-level toolbar button (the button with the small arrow in the lower-right corner).  
   
- 如需如何實作下拉式工具列，請參閱[CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)。  
+ For information about how to implement a drop-down toolbar, see [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
   
- `CMFCDropDownToolBarButton`物件可以匯出至[CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)物件，並顯示為快顯功能表的功能表按鈕。  
+ The `CMFCDropDownToolBarButton` object can be exported to a [CMFCToolBarMenuButton Class](../../mfc/reference/cmfctoolbarmenubutton-class.md) object and displayed as a menu button with a pop-up menu.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
  [CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxdropdowntoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdropdowntoolbar.h  
   
-##  <a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
- 將另一個工具列按鈕的內容複製到目前的按鈕。  
+##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom  
+ Copies the properties of another toolbar button to the current button.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 從中複製來源 按鈕參考。  
+ A reference to the source button from which to copy.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 `src`必須是型別`CMFCDropDownToolbarButton`。  
+### <a name="remarks"></a>Remarks  
+ Call this method to copy another toolbar button to this toolbar button. `src` must be of type `CMFCDropDownToolbarButton`.  
   
-##  <a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
- 建構 `CMFCDropDownToolbarButton` 物件。  
+##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
+ Constructs a `CMFCDropDownToolbarButton` object.  
   
 ```  
 CMFCDropDownToolbarButton();
@@ -151,114 +167,114 @@ CMFCDropDownToolbarButton(
     CMFCDropDownToolBar* pToolBar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 按鈕的預設文字。  
+ The default text of the button.  
   
  [in] `pToolBar`  
- 指標`CMFCDropDownToolBar`使用者按下按鈕時顯示的物件。  
+ A pointer to the `CMFCDropDownToolBar` object that is displayed when the user presses the button.  
   
-### <a name="remarks"></a>備註  
- 第二個多載的建構函式將複製到下拉式按鈕的第一個按鈕從工具列的`pToolBar`指定。  
+### <a name="remarks"></a>Remarks  
+ The second overload of the constructor copies to the drop-down button the first button from the toolbar that `pToolBar` specifies.  
   
- 一般而言，下拉式工具列按鈕會從最近使用過的按鈕文字使用工具列中，`pToolBar`指定。 它會使用所指定的文字`lpszName`時轉換成功能表按鈕  按鈕，或顯示在**命令** 索引標籤的**自訂**對話方塊。 如需詳細資訊**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
+ Typically, a drop-down toolbar button uses the text from the most recently used button in the toolbar that `pToolBar` specifies. It uses the text specified by `lpszName` when the button is converted to a menu button or is displayed in the **Commands** tab of the **Customize** dialog box. For more information about the **Customize** dialog box, see [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-### <a name="example"></a>範例  
- 下列範例示範如何建構的物件`CMFCDropDownToolbarButton`類別。 此程式碼片段是一部分[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCDropDownToolbarButton` class. This code snippet is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&31;](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
   
-##  <a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar  
- 開啟下拉式工具列。  
+##  <a name="dropdowntoolbar"></a>  CMFCDropDownToolbarButton::DropDownToolbar  
+ Opens a drop-down toolbar.  
   
 ```  
 BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 父框架的視窗下拉式清單，或`NULL`使用父視窗的下拉式清單工具列按鈕。  
+ The parent window of the drop-down frame, or `NULL` to use the parent window of the drop-down toolbar button.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- [CMFCDropDownToolbarButton::OnClick](#onclick)方法會呼叫這個方法，以開啟下拉式工具列，當使用者按下並按住工具列按鈕。  
+### <a name="remarks"></a>Remarks  
+ The [CMFCDropDownToolbarButton::OnClick](#onclick) method calls this method to open the drop-down toolbar when the user presses and holds the toolbar button down.  
   
- 這個方法會使用建立下拉式工具列[CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create)方法。 如果為父工具列停駐垂直，這個方法會將下拉式清單工具列到為父工具列，根據符合的左側或右側端。 否則，這個方法會將為父工具列下方的下拉式清單工具列。  
+ This methods creates the drop-down toolbar by using the [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) method. If the parent toolbar is docked vertically, this method positions the drop-down toolbar either to the left-hand or right-hand side of the parent toolbar, depending on the fit. Otherwise, this method positions the drop-down toolbar underneath the parent toolbar.  
   
- 如果`pWnd`是`NULL`而下拉式工具列按鈕並沒有父視窗。  
+ This method fails if `pWnd` is `NULL` and the drop-down toolbar button does not have a parent window.  
   
-##  <a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton  
- 複製文字從工具列按鈕的功能表。  
+##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
+ Copies text from the toolbar button to a menu.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `menuButton`  
- 參考目標功能表按鈕。  
+ A reference to the target menu button.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 這個方法會呼叫基底類別實作 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton))，則會附加至目標功能表按鈕包含每個工具列功能表項目，這個按鈕在快顯功能表。 這個方法不會將子功能表附加至快顯功能表。  
+### <a name="remarks"></a>Remarks  
+ This method calls the base class implementation ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) and then appends to the target menu button a pop-up menu that contains each toolbar menu item in this button. This method does not append sub-menus to the pop-up menu.  
   
- 如果為父工具列， `m_pToolBar`，是`NULL`或基底類別實作會傳回`FALSE`。  
+ This method fails if the parent toolbar, `m_pToolBar`, is `NULL` or the base class implementation returns `FALSE`.  
   
-##  <a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar  
- 擷取與按鈕關聯的下拉式清單工具列。  
+##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar  
+ Retrieves the drop-down toolbar that is associated with the button.  
   
 ```  
 CMFCToolBar* GetDropDownToolBar() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 下拉式工具列按鈕與相關聯。  
+### <a name="return-value"></a>Return Value  
+ The drop-down toolbar that is associated with the button.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳回`m_pToolBar`資料成員。  
+### <a name="remarks"></a>Remarks  
+ This method returns the `m_pToolBar` data member.  
   
-##  <a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown  
- 判斷是否為目前開啟下拉式工具列。  
+##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown  
+ Determines whether the drop-down toolbar is currently open.  
   
 ```  
 BOOL IsDropDown() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 下拉式工具列已開啟; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the drop-down toolbar is currently open; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 架構使用開啟下拉式工具列[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)方法。 當使用者按下下拉式工具列的非工作區左邊滑鼠按鈕時，架構就會關閉下拉式工具列。  
+### <a name="remarks"></a>Remarks  
+ The framework opens the drop-down toolbar by using the [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) method. The framework closes the drop-down toolbar when the user presses the left-mouse button in the non-client area of the drop-down toolbar.  
   
-##  <a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize  
- 判斷是否可以使用擴充的框線顯示按鈕。  
+##  <a name="isextrasize"></a>  CMFCDropDownToolbarButton::IsExtraSize  
+ Determines whether the button can be displayed with an extended border.  
   
 ```  
 virtual BOOL IsExtraSize() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果工具列按鈕可以使用擴充的框線，來顯示為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the toolbar button can be displayed with an extended border; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如需擴充框線的詳細資訊，請參閱[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)。  
+### <a name="remarks"></a>Remarks  
+ For more information about extended borders, see [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
-##  <a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay  
- 指定使用者必須按住滑鼠按鈕才會出現下拉式工具列的時間的長度。  
+##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay  
+ Specifies the length of time that a user must hold the mouse button down before the drop-down toolbar appears.  
   
 ```  
 static UINT m_uiShowBarDelay;  
 ```  
   
-### <a name="remarks"></a>備註  
- 以毫秒為單位的延遲時間。 預設值為 500。 您可以設定另一個延遲，藉由變更這個共用的資料成員的值。  
+### <a name="remarks"></a>Remarks  
+ The delay time is measured in milliseconds. The default value is 500. You can set another delay by changing the value of this shared data member.  
   
-##  <a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize  
- 計算指定之的裝置內容和停駐狀態的按鈕大小的架構所呼叫。  
+##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize  
+ Called by the framework to calculate the size of the button for the specified device context and docking state.  
   
 ```  
 virtual SIZE OnCalculateSize(
@@ -267,38 +283,38 @@ virtual SIZE OnCalculateSize(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 顯示按鈕的裝置內容。  
+ The device context that displays the button.  
   
  [in] `sizeDefault`  
- 按鈕的預設大小。  
+ The default size of the button.  
   
  [in] `bHorz`  
- 為父工具列停駐狀態。 這個參數是`TRUE`如果工具列水平停駐或浮動或`FALSE`如果垂直停駐工具列。  
+ The dock state of the parent toolbar. This parameter is `TRUE` if the toolbar is docked horizontally or is floating, or `FALSE` if the toolbar is docked vertically.  
   
-### <a name="return-value"></a>傳回值  
- A`SIZE`結構，其中包含的按鈕，單位為像素尺寸。  
+### <a name="return-value"></a>Return Value  
+ A `SIZE` structure that contains the dimensions of the button, in pixels.  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) 加入按鈕尺寸的水平維度中的下拉箭號的寬度。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) by adding the width of the drop-down arrow to the horizontal dimension of the button size.  
   
-##  <a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd  
- 插入新的工具列按鈕時，由架構呼叫。  
+##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd  
+ Called by the framework when the button is inserted into a new toolbar.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 新的父視窗。  
+ The new parent window.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 藉由清除文字標籤 ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext))，並設定[CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext)和[CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton)資料成員`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) by clearing the text label ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) and setting the [CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) and [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) data members to `FALSE`.  
   
-##  <a name="onclick"></a>CMFCDropDownToolbarButton::OnClick  
- 使用者按下滑鼠按鈕時，由架構呼叫。  
+##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick  
+ Called by the framework when the user clicks the mouse button.  
   
 ```  
 virtual BOOL OnClick(
@@ -306,88 +322,88 @@ virtual BOOL OnClick(
     BOOL bDelay = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 父視窗的工具列按鈕。  
+ The parent window of the toolbar button.  
   
  [in] `bDelay`  
- `TRUE`如果應該會有延遲處理訊息。  
+ `TRUE` if the message should be handled with a delay.  
   
-### <a name="return-value"></a>傳回值  
- 按鈕處理按一下的訊息; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the click message; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作時， [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)，藉由更新下拉式工具列的狀態。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), by updating the state of the drop-down toolbar.  
   
- 當使用者按一下工具列按鈕時，這個方法會建立一個計時器，等候指定的時間長度[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)資料成員，然後再開啟下拉式工具列使用[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)方法。 這個方法會關閉下拉式工具列第二次使用者按一下工具列按鈕。  
+ When a user clicks the toolbar button, this method creates a timer that waits the length of time specified by the [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) data member and then opens the drop-down toolbar by using the [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) method. This method closes the drop-down toolbar the second time the user clicks the toolbar button.  
   
-##  <a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp  
- 當使用者放開滑鼠按鈕時，由架構呼叫。  
+##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp  
+ Called by the framework when the user releases the mouse button.  
   
 ```  
 virtual BOOL OnClickUp();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 按鈕處理按一下的訊息; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the click message; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作時， [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup)，藉由更新下拉式工具列的狀態。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup), by updating the state of the drop-down toolbar.  
   
- 使用中，這個方法會停止下拉式工具列計時器。 若已開啟，則會關閉下拉式工具列。  
+ This method stops the drop-down toolbar timer if it is active. It closes the drop-down toolbar if it is open.  
   
- 下拉式工具列和工具列下拉式計時器相關的詳細資訊，請參閱[CMFCDropDownToolbarButton::OnClick](#onclick)。  
+ For more information about the drop-down toolbar and drop-down toolbar timer, see [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
-##  <a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp  
- 為父工具列處理時，由框架呼叫`WM_HELPHITTEST`訊息。  
+##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp  
+ Called by the framework when the parent toolbar handles a `WM_HELPHITTEST` message.  
   
 ```  
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 父視窗的工具列按鈕。  
+ The parent window of the toolbar button.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果按鈕的處理程序說明訊息。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the help message; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) 藉由呼叫[CMFCDropDownToolbarButton::OnClick](#onclick)方法`bDelay`設為`FALSE`。 這個方法會傳回所傳回的值[CMFCDropDownToolbarButton::OnClick](#onclick)。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) by calling the [CMFCDropDownToolbarButton::OnClick](#onclick) method with `bDelay` set to `FALSE`. This method returns the value that is returned by [CMFCDropDownToolbarButton::OnClick](#onclick).  
   
- 如需詳細資訊`WM_HELPHITTEST message, see` [TN028︰ 即時線上說明支援](../../mfc/tn028-context-sensitive-help-support.md)。  
+ For more information about the `WM_HELPHITTEST message, see` [TN028: Context-Sensitive Help Support](../../mfc/tn028-context-sensitive-help-support.md).  
   
-##  <a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu  
- 當應用程式為父工具列上顯示捷徑功能表，請修改功能表。  
+##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu  
+ Modifies the provided menu when the application displays a shortcut menu on the parent toolbar.  
   
 ```  
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pMenu`  
- 若要自訂功能表。  
+ The menu to customize.  
   
-### <a name="return-value"></a>傳回值  
- 此方法會傳回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) 停用下列功能表項目︰  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) by disabling the following menu items:  
   
-- **複製按鈕影像**  
+- **Copy Button Image**  
   
-- **按鈕的外觀**  
+- **Button Appearance**  
   
-- **映像**  
+- **Image**  
   
-- **文字**  
+- **Text**  
   
-- **影像和文字**  
+- **Image and Text**  
   
- 覆寫這個方法來修改自訂模式中，架構會顯示快顯功能表。  
+ Override this method to modify the shortcut menu that the framework displays in customization mode.  
   
-##  <a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw  
- 使用指定的樣式和選項繪製按鈕架構呼叫。  
+##  <a name="ondraw"></a>  CMFCDropDownToolbarButton::OnDraw  
+ Called by the framework to draw the button by using the specified styles and options.  
   
 ```  
 virtual void OnDraw(
@@ -401,36 +417,36 @@ virtual void OnDraw(
     BOOL bGrayDisabledButtons = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 顯示按鈕的裝置內容。  
+ The device context that displays the button.  
   
  [in] `rect`  
- [] 按鈕，這個周框。  
+ The bounding rectangle of the button.  
   
  [in] `pImages`  
- 與按鈕關聯的工具列影像集合。  
+ The collection of toolbar images that is associated with the button.  
   
  [in] `bHorz`  
- 為父工具列停駐狀態。 這個參數是`TRUE`時按鈕會停駐水平及`FALSE`時按鈕會停駐垂直。  
+ The dock state of the parent toolbar. This parameter is `TRUE` when the button is docked horizontally and `FALSE` when the button is docked vertically.  
   
  [in] `bCustomizeMode`  
- 指定工具列是否為自訂模式。 這個參數是`TRUE`工具列時自訂模式和`FALSE`當工具列不是在自訂模式。  
+ Specifies whether the toolbar is in customization mode. This parameter is `TRUE` when the toolbar is in customization mode and `FALSE` when the toolbar is not in customization mode.  
   
  [in] `bHighlight`  
- 指定按鈕會反白顯示。 這個參數是`TRUE`時按鈕會反白顯示和`FALSE`時按鈕會不反白顯示。  
+ Specifies whether the button is highlighted. This parameter is `TRUE` when the button is highlighted and `FALSE` when the button is not highlighted.  
   
  [in] `bDrawBorder`  
- 指定按鈕是否要顯示其框線。 這個參數是`TRUE`按鈕時應該顯示其框線和`FALSE`當按鈕應該不會顯示其框線。  
+ Specifies whether the button should display its border. This parameter is `TRUE` when the button should display its border and `FALSE` when the button should not display its border.  
   
  [in] `bGrayDisabledButtons`  
- 指定是否要加上停用的按鈕，或使用已停用的影像集合。 這個參數是`TRUE`時停用的按鈕應該會有陰影和`FALSE`當這個方法應該使用已停用的影像集合。  
+ Specifies whether to shade disabled buttons or use the disabled images collection. This parameter is `TRUE` when disabled buttons should be shaded and `FALSE` when this method should use the disabled images collection.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法可自訂工具列按鈕繪圖。  
+### <a name="remarks"></a>Remarks  
+ Override this method to customize toolbar button drawing.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
- 繪製按鈕架構呼叫**命令**窗格**自訂**對話方塊。  
+##  <a name="ondrawoncustomizelist"></a>  CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
+ Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -439,59 +455,59 @@ virtual int OnDrawOnCustomizeList(
     BOOL bSelected);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 顯示按鈕的裝置內容。  
+ The device context that displays the button.  
   
  [in] `rect`  
- [] 按鈕，這個周框。  
+ The bounding rectangle of the button.  
   
  [in] `bSelected`  
- 是否已選取 [] 按鈕。 如果這個參數是`TRUE`，選取該按鈕。 如果這個參數是`FALSE`，請勿選取 按鈕。  
+ Whether the button is selected. If this parameter is `TRUE`, the button is selected. If this parameter is `FALSE`, the button is not selected.  
   
-### <a name="return-value"></a>傳回值  
- 寬度，單位為像素上指定的裝置內容的按鈕。  
+### <a name="return-value"></a>Return Value  
+ The width, in pixels, of the button on the specified device context.  
   
-### <a name="remarks"></a>備註  
- 這個方法會呼叫自訂 對話方塊中 (**命令** 索引標籤) 按鈕時所需使其顯示在主控描繪清單方塊。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the customization dialog box ( **Commands** tab) when the button is required to display itself on the owner-draw list box.  
   
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) 按鈕的名稱變更 按鈕的文字標籤 (也就是值`lpszName`您傳遞給建構函式的參數)。  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) by changing the text label of the button to the name of the button (that is,to the value of the `lpszName` parameter that you passed to the constructor).  
   
-##  <a name="serialize"></a>CMFCDropDownToolbarButton::Serialize  
- 從封存讀取此物件，或將它寫入至封存檔。  
+##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize  
+ Reads this object from an archive or writes it to an archive.  
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
- `CArchive`從中或要序列化的物件。  
+ The `CArchive` object from which or to which to serialize.  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) 序列化為父工具列資源識別碼。 當載入封存檔 ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)傳回非零值)，這個方法會設定`m_pToolBar`資料成員，至工具列，包含序列化的資源識別碼。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) by serializing the resource ID of the parent toolbar. When the archive is loading ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) returns a nonzero value), this method sets the `m_pToolBar` data member to the toolbar that contains the serialized resource ID.  
   
-##  <a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand  
- 設定當使用者按一下按鈕時，架構會使用預設命令。  
+##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand  
+ Sets the default command that the framework uses when a user clicks the button.  
   
 ```  
 void SetDefaultCommand(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 預設命令的識別碼。  
+ The ID of the default command.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法，指定架構就會執行使用者按一下按鈕時的預設命令。 具有所指定的命令 ID 的項目`uiCmd`必須位在父下拉式工具列。  
+### <a name="remarks"></a>Remarks  
+ Call this method to specify a default command that the framework executes when the user clicks the button. An item with the command ID specified by `uiCmd` must be located in the parent drop-down toolbar.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
- [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
- [逐步解說︰ 將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBarMenuButton Class](../../mfc/reference/cmfctoolbarmenubutton-class.md)   
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

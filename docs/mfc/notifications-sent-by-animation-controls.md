@@ -1,34 +1,53 @@
 ---
-title: "動畫控制項傳送的告知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "動畫控制項 [C++], 告知"
-  - "CAnimateCtrl 類別, 告知"
-  - "控制項 [MFC], 動畫"
-  - "告知, 動畫控制項"
+title: Notifications Sent by Animation Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], animation controls
+- CAnimateCtrl class [MFC], notifications
+- controls [MFC], animation
+- animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 動畫控制項傳送的告知
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc95f7d2d9e79ab14122f81847a730cbc31629e9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-動畫控制項 \([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)\) 傳送通知訊息的兩個不同型別。  以 [WM\_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 訊息的形式傳送通知。  
+---
+# <a name="notifications-sent-by-animation-controls"></a>Notifications Sent by Animation Controls
+An animation control ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) sends two different types of notification messages. The notifications are sent in the form of [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) messages.  
   
- 當動畫控制項開始播放裁剪時， [ACN\_START](http://msdn.microsoft.com/library/windows/desktop/bb761891) 傳送。  當動畫完成控制項或停止播放裁剪時， [ACN\_STOP](http://msdn.microsoft.com/library/windows/desktop/bb761893) 傳送。  
+ The [ACN_START](http://msdn.microsoft.com/library/windows/desktop/bb761891) message is sent when the animation control has started playing a clip. The [ACN_STOP](http://msdn.microsoft.com/library/windows/desktop/bb761893) message is sent when the animation control has finished or stopped playing a clip.  
   
-## 請參閱  
- [使用 CAnimateCtrl](../mfc/using-canimatectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CAnimateCtrl](../mfc/using-canimatectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

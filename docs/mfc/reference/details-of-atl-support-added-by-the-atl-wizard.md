@@ -1,5 +1,5 @@
 ---
-title: "ATL 精靈加入 ATL 支援的詳細資訊 |Microsoft 文件"
+title: Details of ATL Support Added by the ATL Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: e353df6f4f6e728fb7b866fc7690215be28b8155
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 44532e102ab648ad553917b2b6a8a5307fc20f93
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 精靈加入 ATL 支援的詳細資訊
-當您[將 ATL 支援加入至現有的 MFC 可執行檔或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，Visual c + + 可讓下列修改現有的 MFC 專案 (在此範例中，稱為專案`MFCEXE`):  
+# <a name="details-of-atl-support-added-by-the-atl-wizard"></a>Details of ATL Support Added by the ATL Wizard
+When you [add ATL support to an existing MFC executable or DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual C++ makes the following modifications to the existing MFC project (in this example, the project is called `MFCEXE`):  
   
--   會加入兩個新檔案 （一個.idl 檔案和一個.rgs 檔案，用來註冊的伺服器）。  
+-   Two new files (an .idl file and an .rgs file, used to register the server) are added.  
   
--   在主應用程式標頭和實作檔案 （Mfcexe.h 和 Mfcexe.cpp） 中的新類別 (衍生自**CAtlMFCModule**) 加入。 程式碼加入至新的類別，除了`InitInstance`進行註冊。 程式碼也會加入至`ExitInstance`撤銷類別物件的函式。 在標頭檔，最後，兩個新標頭檔 （g 和 Mfcexe_i.c） 都包含在實作檔案中，宣告和初始化的新 Guid **CAtlMFCModule**-衍生的類別。  
+-   In the main application header and implementation files (Mfcexe.h and Mfcexe.cpp), a new class (derived from **CAtlMFCModule**) is added. In addition to the new class, code is added to `InitInstance` for registration. Code is also added to the `ExitInstance` function for revoking the class object. In the header file, Finally, two new header files (Initguid.h and Mfcexe_i.c) are included in the implementation file, declaring and initializing the new GUIDs for the **CAtlMFCModule**-derived class.  
   
--   若要正確登錄的伺服器，新.rgs 檔案的項目會加入專案的資源檔。  
+-   To register the server properly, an entry for the new .rgs file is added to the project's resource file.  
   
-## <a name="notes-for-dll-projects"></a>DLL 專案的相關資訊  
- 當您將 ATL 支援加入 MFC DLL 專案時，您會看到一些差異。 程式碼加入至**DLLRegisterServer**和**DLLUnregisterServer**註冊及取消註冊 DLL 函式。 程式碼也會加入至[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)和[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)。  
+## <a name="notes-for-dll-projects"></a>Notes for DLL Projects  
+ When you add ATL support to an MFC DLL project, you will see some differences. Code is added to the **DLLRegisterServer** and **DLLUnregisterServer** functions for registering and unregistering the DLL. Code is also added to [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) and [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject).  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 專案中的 ATL 支援](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
- [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入類別](../../ide/adding-a-class-visual-cpp.md)   
- [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [ATL Support in an MFC Project](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

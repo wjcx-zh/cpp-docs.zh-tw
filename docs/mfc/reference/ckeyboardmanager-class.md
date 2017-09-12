@@ -1,5 +1,5 @@
 ---
-title: "CKeyboardManager 類別 |Microsoft 文件"
+title: CKeyboardManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,7 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CKeyboardManager class
+- CKeyboardManager [MFC], CKeyboardManager
+- CKeyboardManager [MFC], CleanUp
+- CKeyboardManager [MFC], FindDefaultAccelerator
+- CKeyboardManager [MFC], IsKeyHandled
+- CKeyboardManager [MFC], IsKeyPrintable
+- CKeyboardManager [MFC], IsShowAllAccelerators
+- CKeyboardManager [MFC], LoadState
+- CKeyboardManager [MFC], ResetAll
+- CKeyboardManager [MFC], SaveState
+- CKeyboardManager [MFC], ShowAllAccelerators
+- CKeyboardManager [MFC], TranslateCharToUpper
+- CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
 caps.latest.revision: 33
 author: mikeblome
@@ -46,17 +57,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bbe12d2bf4af0008233df25e09f09008c402ee7f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c49d5be8f9e208defeb1752c4288e212bb5dec45
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ckeyboardmanager-class"></a>CKeyboardManager 類別
-管理主框架視窗及子框架視窗的快速鍵資料表。  
+# <a name="ckeyboardmanager-class"></a>CKeyboardManager Class
+Manages shortcut key tables for the main frame window and child frame windows.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CKeyboardManager : public CObject  
@@ -64,72 +75,72 @@ class CKeyboardManager : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|建構 `CKeyboardManager` 物件。|  
+|Name|Description|  
+|[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Constructs a `CKeyboardManager` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|[CKeyboardManager::CleanUp](#cleanup)|清除快速鍵資料表。|  
-|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|擷取指定的命令和視窗的預設快速鍵。|  
-|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|決定索引鍵由快速鍵對應表。|  
-|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|指出是否可列印字元。|  
-|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|表示功能表是否顯示命令的快速鍵或只有預設的快速鍵。|  
-|[CKeyboardManager::LoadState](#loadstate)|從 Windows 登錄載入的快速鍵資料表。|  
-|[CKeyboardManager::ResetAll](#resetall)|重新載入應用程式資源的快速鍵資料表。|  
-|[CKeyboardManager::SaveState](#savestate)|將捷徑索引鍵的資料表儲存至 Windows 登錄。|  
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|指定是否，架構會顯示所有命令，所有的快速鍵或單一快速鍵，每個命令。 這個方法不會影響必須只有一個相關聯的快速鍵的命令。|  
-|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|將字元轉換成其上方的暫存器。|  
-|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|更新快顯的索引鍵資料表具有新的快速鍵資料表。|  
+|Name|Description|  
+|[CKeyboardManager::CleanUp](#cleanup)|Clears the shortcut key tables.|  
+|[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Retrieves the default shortcut key for the specified command and window.|  
+|[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Determines whether a key is handled by the accelerator table.|  
+|[CKeyboardManager::IsKeyPrintable](#iskeyprintable)|Indicates whether a character is printable.|  
+|[CKeyboardManager::IsShowAllAccelerators](#isshowallaccelerators)|Indicates whether menus show all shortcut keys for a command or only the default shortcut key.|  
+|[CKeyboardManager::LoadState](#loadstate)|Loads the shortcut key tables from the Windows registry.|  
+|[CKeyboardManager::ResetAll](#resetall)|Reloads the shortcut key tables from the application resource.|  
+|[CKeyboardManager::SaveState](#savestate)|Saves the shortcut key tables to the Windows registry.|  
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|Specifies whether the framework displays all the shortcut keys for all commands, or a single shortcut key for each command. This method does not affect commands that have only one associated shortcut key.|  
+|[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|Converts a character to its upper register.|  
+|[CKeyboardManager::UpdateAccelTable](#updateacceltable)|Updates a shortcut key table with a new shortcut key table.|  
   
-## <a name="remarks"></a>備註  
- 這個類別的成員可讓您儲存和載入至 Windows 登錄快速鍵資料表，請使用範本來更新資料表的捷徑，並在框架視窗中尋找命令的預設快速鍵。 此外，`CKeyboardManager`物件可讓您控制如何將快速鍵顯示給使用者。  
+## <a name="remarks"></a>Remarks  
+ The members of this class enable you to save and load shortcut key tables to the Windows registry, use a template to update the short cut key tables, and find the default shortcut key for a command in a frame window. In addition, the `CKeyboardManager` object lets you control how shortcut keys are displayed to the user.  
   
- 您不應該建立`CKeyboardManager`手動物件。 它將會自動建立您的應用程式的架構。 不過，您應該呼叫[CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)您的應用程式在初始化過程。 若要取得您的應用程式鍵盤管理員的指標，呼叫[CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)。  
+ You should not create a `CKeyboardManager` object manually. It will be created automatically by the framework of your application. However, you should call [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) during the initialization process of your application. To get a pointer to the keyboard manager for your application, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager).  
   
-## <a name="example"></a>範例  
- 下列範例示範如何擷取變數的指標，`CKeyboardManager`物件從`CWinAppEx`類別，以及如何顯示所有關聯的快速鍵與功能表命令。 此程式碼片段是一部分[自訂網頁範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a pointer to a `CKeyboardManager` object from a `CWinAppEx` class, and how to show all the shortcut keys associated with menu commands. This code snippet is part of the [Custom Pages sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_CustomPages #&5;](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxkeyboardmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxkeyboardmanager.h  
   
-##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
- 建構 `CKeyboardManager` 物件。  
+##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
+ Constructs a `CKeyboardManager` object.  
   
 ```  
 CKeyboardManager();
 ```  
   
-### <a name="remarks"></a>備註  
- 在大部分情況下，您不需要建立`CKeyboardManager`直接。 根據預設，架構會建立一個用於您。 若要取得的指標`CKeyboardManager`，呼叫[CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)。 如果您不要手動建立一個，您必須將它初始化方法[CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)。  
+### <a name="remarks"></a>Remarks  
+ In most cases, you do not have to create a `CKeyboardManager` directly. By default, the framework creates one for you. To get a pointer to the `CKeyboardManager`, call [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager). If you do create one manually, you must initialize it with the method [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager).  
   
-##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
- 釋放`CKeyboardManager`資源，並清除所有的快速鍵對應。  
+##  <a name="cleanup"></a>  CKeyboardManager::CleanUp  
+ Frees the `CKeyboardManager` resources and clears all shortcut key mappings.  
   
 ```  
 static void CleanUp();
 ```  
   
-### <a name="remarks"></a>備註  
- 如需快速鍵的詳細資訊，請參閱[鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about shortcut keys, see [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md).  
   
- 沒有應用程式結束，因為架構會呼叫它自動在應用程式結束時呼叫此函式。  
+ You do not have to call this function when your application exits because the framework calls it automatically during application exit.  
   
-##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
- 擷取指定的命令和視窗的預設快速鍵。  
+##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator  
+ Retrieves the default shortcut key for the specified command and window.  
   
 ```  
 static BOOL FindDefaultAccelerator(
@@ -139,27 +150,27 @@ static BOOL FindDefaultAccelerator(
     BOOL bIsDefaultFrame);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 命令 ID。  
+ The command ID.  
   
- [輸出] `str`  
- 對 `CString` 物件的參考。  
+ [out] `str`  
+ A reference to a `CString` object.  
   
  [in] `pWndFrame`  
- 框架視窗的指標。  
+ A pointer to a frame window.  
   
  [in] `bIsDefaultFrame`  
- 指定的框架視窗是否為預設的框架視窗。  
+ Specifies whether the frame window is the default frame window.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果找到捷徑。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the shortcut is found; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 這個方法會查詢所指定的命令`uiCmd`並擷取預設的快速鍵。 然後方法會採用此快速鍵相關聯的字串值並寫入至`str`參數。  
+### <a name="remarks"></a>Remarks  
+ This method looks up the command specified by `uiCmd` and retrieves the default shortcut key. Then the method takes the string associated with this shortcut key and writes the value to the `str` parameter.  
   
-##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
- 判斷是否有指定之索引鍵由[CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)。  
+##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
+ Determines whether the specified key is handled by the [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md).  
   
 ```  
 static BOOL __stdcall IsKeyHandled(
@@ -169,57 +180,57 @@ static BOOL __stdcall IsKeyHandled(
     BOOL bIsDefaultFrame);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `nKey`|要進行檢查的按鍵。|  
-|[in] `fVirt`|指定的快速鍵的行為。 如需可能的值，請參閱[加速度結構](http://msdn.microsoft.com/library/windows/desktop/ms646340)。|  
-|[in] `pWndFrame`|框架視窗。 這個方法會判斷是否已處理這個框架中的快速鍵。|  
-|[in] `bIsDefaultFrame`|布林值，指出參數是否`pWndFrame`是預設的框架視窗。|  
+|Parameter|Description|  
+|[in] `nKey`|The key to check.|  
+|[in] `fVirt`|Specifies the behavior of the shortcut key. For a list of possible values, see [ACCEL Structure](http://msdn.microsoft.com/library/windows/desktop/ms646340).|  
+|[in] `pWndFrame`|A frame window. This method determines whether a shortcut key is handled in this frame.|  
+|[in] `bIsDefaultFrame`|A Boolean parameter that indicates whether `pWndFrame` is the default frame window.|  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果處理的快速鍵。 `FALSE`如果索引鍵不處理或`pWndFrame`是`NULL`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the shortcut key is handled. `FALSE` if the key is not handled or if `pWndFrame` is `NULL`.  
   
-### <a name="remarks"></a>備註  
- 輸入的參數必須符合的項目快速鍵對應表中這兩個`nKey`和`fVirt`來判斷是否有處理快速鍵`pWndFrame`。  
+### <a name="remarks"></a>Remarks  
+ The input parameters must match the entry in the accelerator table both for `nKey` and `fVirt` to determine whether a shortcut key is handled in `pWndFrame`.  
   
-##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
- 指出是否可列印字元。  
+##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
+ Indicates whether a character is printable.  
   
 ```  
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `nChar`|這個方法會檢查字元。|  
+|Parameter|Description|  
+|[in] `nChar`|The character that this method checks.|  
   
-### <a name="return-value"></a>傳回值  
- 非零值可列印字元時，如果為零不是。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the character is printable, zero if it is not.  
   
-### <a name="remarks"></a>備註  
- 如果呼叫[GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299)失敗。  
+### <a name="remarks"></a>Remarks  
+ This method fails if a call to [GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299) fails.  
   
-##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
- 表示功能表是否顯示與功能表命令相關聯的所有快速鍵或只有預設的快速鍵。  
+##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
+ Indicates whether menus show all the shortcut keys associated with menu commands or only the default shortcut keys.  
   
 ```  
 static BOOL IsShowAllAccelerators();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果應用程式會列出所有的快速鍵功能表命令的方式。如果應用程式會顯示預設快捷鍵，0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the application lists all the shortcut keys for menu commands; 0 if the application displays only default shortcut keys.  
   
-### <a name="remarks"></a>備註  
- 應用程式列出的功能表列中的功能表命令的快速鍵。 使用函數[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)來控制是否應用程式會列出所有的快速鍵或只是預設的快速鍵。  
+### <a name="remarks"></a>Remarks  
+ The application lists the shortcut keys for menu commands in the menu bar. Use the function [CKeyboardManager::ShowAllAccelerators](#showallaccelerators) to control whether the application lists all the shortcut keys or just the default shortcut keys.  
   
-##  <a name="loadstate"></a>CKeyboardManager::LoadState  
- 從 Windows 登錄載入的快速鍵資料表。  
+##  <a name="loadstate"></a>  CKeyboardManager::LoadState  
+ Loads the shortcut key tables from the Windows registry.  
   
 ```  
 BOOL LoadState(
@@ -227,33 +238,33 @@ BOOL LoadState(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 登錄路徑位置`CKeyboardManager`資料儲存。  
+ The registry path where `CKeyboardManager` data is saved.  
   
  [in] `pDefaultFrame`  
- 要做為預設的視窗框架視窗的指標。  
+ A pointer to a frame window to use as the default window.  
   
-### <a name="return-value"></a>傳回值  
- 如果狀態載入成功則為 0 否則為非零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the state was loaded successfully or 0 otherwise.  
   
-### <a name="remarks"></a>備註  
- 如果`lpszProfileName`參數是`NULL`，這個方法會檢查預設登錄位置`CKeyboardManager`資料。 所指定的預設登錄位置[CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)。 資料必須與方法之前寫入[CKeyboardManager::SaveState](#savestate)。  
+### <a name="remarks"></a>Remarks  
+ If the `lpszProfileName` parameter is `NULL`, this method checks the default registry location for `CKeyboardManager` data. The default registry location is specified by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). The data must be previously written with the method [CKeyboardManager::SaveState](#savestate).  
   
- 如果未指定預設的視窗，將會使用您的應用程式的主框架視窗。  
+ If you do not specify a default window, the main frame window of your application will be used.  
   
-##  <a name="resetall"></a>CKeyboardManager::ResetAll  
- 重新載入應用程式資源的快速鍵資料表。  
+##  <a name="resetall"></a>  CKeyboardManager::ResetAll  
+ Reloads the shortcut key tables from the application resource.  
   
 ```  
 void ResetAll();
 ```  
   
-### <a name="remarks"></a>備註  
- 此函式會清除儲存在快速鍵`CKeyboardManager`執行個體。 然後，它會重新載入鍵盤管理員，從應用程式資源的狀態。  
+### <a name="remarks"></a>Remarks  
+ This function clears the shortcuts stored in the `CKeyboardManager` instance. It will then reload the state of the keyboard manager from the application resource.  
   
-##  <a name="savestate"></a>CKeyboardManager::SaveState  
- 將捷徑索引鍵的資料表儲存至 Windows 登錄。  
+##  <a name="savestate"></a>  CKeyboardManager::SaveState  
+ Saves the shortcut key tables to the Windows registry.  
   
 ```  
 BOOL SaveState(
@@ -261,23 +272,23 @@ BOOL SaveState(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 儲存的登錄路徑`CKeyboardManager`狀態。  
+ The registry path for saving the `CKeyboardManager` state.  
   
  [in] `pDefaultFrame`  
- 成為預設的視窗框架視窗的指標。  
+ A pointer to a frame window that becomes the default window.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果鍵盤管理員狀態已經順利完成，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the keyboard manager state was saved successfully, or 0 otherwise.  
   
-### <a name="remarks"></a>備註  
- 如果`lpszProfileName`參數是`NULL`，此方法將寫入`CKeyboardManager`狀態所指定的預設位置[CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)。 如果您指定的位置，您可以將資料載入之後再使用此方法[CKeyboardManager::LoadState](#loadstate)。  
+### <a name="remarks"></a>Remarks  
+ If the `lpszProfileName` parameter is `NULL`, this method will write the `CKeyboardManager` state to the default location specified by the [CWinAppEx Class](../../mfc/reference/cwinappex-class.md). If you specify a location, you can load the data later using the method [CKeyboardManager::LoadState](#loadstate).  
   
- 如果未指定預設值 視窗中，主框架視窗會當做預設的視窗。  
+ If you do not specify a default window, the main frame window will be used as the default window.  
   
-##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
- 顯示所有關聯的快速鍵與功能表命令。  
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators  
+ Shows all the shortcut keys associated with menu commands.  
   
 ```  
 static void ShowAllAccelerators(
@@ -285,34 +296,34 @@ static void ShowAllAccelerators(
     LPCTSTR lpszDelimiter = _afxDefaultAcceleratorDelimiter);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bShowAll`  
- 如果`true`，將會顯示所有的快速鍵。 如果`false`，將會顯示的第一個的快速鍵。  
+ If `true`, all the shortcut keys will be displayed. If `false`, only the first shortcut key will be displayed.  
   
  [in] `lpszDelimiter`  
- 要插入快捷鍵之間的字串。 如果只有一個快速鍵會顯示此分隔符號會有任何作用。  
+ A string to insert between shortcut keys. This delimiter has no effect if only one shortcut key is displayed.  
   
-### <a name="remarks"></a>備註  
- 根據預設，如果命令具有與其相關聯，多個快速鍵將顯示的第一個的快速鍵。 此函式可讓您列出的所有命令相關都聯的所有快速鍵。  
+### <a name="remarks"></a>Remarks  
+ By default, if a command has more than one shortcut key associated with it, only the first shortcut key will be shown. This function enables you to list all the shortcut keys associated with all commands.  
   
- 旁邊的功能表列中的命令會列出的鍵盤快速鍵。 如果顯示的快速鍵，所提供字串`lpszDelimiter`分隔個別的快速鍵。  
+ The shortcut keys will be listed next to the command in the menu bar. If all the shortcut keys are displayed, the string provided by `lpszDelimiter` will separate individual shortcut keys.  
   
-##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
- 將字元轉換成其上方的暫存器。  
+##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
+ Converts a character to its upper register.  
   
 ```  
 static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- 要轉換的字元。  
+ The character to convert.  
   
-### <a name="return-value"></a>傳回值  
- 輸入參數的上層暫存器就是字元。  
+### <a name="return-value"></a>Return Value  
+ The character that is the upper register of the input parameter.  
   
-##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
- 更新快顯的索引鍵資料表具有新的快速鍵資料表。  
+##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable  
+ Updates a shortcut key table with a new shortcut key table.  
   
 ```  
 BOOL UpdateAccelTable(
@@ -328,34 +339,34 @@ BOOL UpdateAccelTable(
     CFrameWnd* pDefaultFrame = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pTemplate`  
- 將文件範本的指標。  
+ A pointer to a document template.  
   
  [in] `lpAccel`  
- 新的快顯金鑰的指標。  
+ A pointer to the new shortcut key.  
   
  [in] `nSize`  
- 新的快速鍵資料表的大小。  
+ The size of the new shortcut table.  
   
  [in] `pDefaultFrame`  
- 預設框架視窗的指標。  
+ A pointer to the default frame window.  
   
  [in] `hAccelNew`  
- 新的快速鍵資料表控制代碼。  
+ A handle to the new shortcut table.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用此函式來取代現有的快顯資料表具有數個框架視窗物件的新快速鍵。 在函數收到的文件範本做為參數，以取得連接到指定的文件範本的所有框架視窗物件的存取權。  
+### <a name="remarks"></a>Remarks  
+ Use this function to replace the existing shortcut table with new shortcut keys for several frame window objects. The function receives a document template as a parameter to obtain access to all frame window objects connected to the given document template.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [Cwinappex 衍生類別](../../mfc/reference/cwinappex-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)   
  [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)   
- [鍵盤和滑鼠自訂](../../mfc/keyboard-and-mouse-customization.md)
+ [Keyboard and Mouse Customization](../../mfc/keyboard-and-mouse-customization.md)
 
 
 

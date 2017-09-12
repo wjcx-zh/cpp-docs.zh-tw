@@ -1,55 +1,74 @@
 ---
-title: "搭配使用對話方塊列與 Rebar 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "WM_EX_TRANSPARENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "對話方塊列, 與 Rebar 群組列一起使用"
-  - "Rebar 控制項, 對話方塊列"
-  - "WS_EX_TRANSPARENT 樣式"
+title: Using a Dialog Bar with a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- WM_EX_TRANSPARENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- WS_EX_TRANSPARENT style
+- rebar controls [MFC], dialog bars
+- dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 搭配使用對話方塊列與 Rebar 控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 98589878d82693fca3c4efdbc9a3a669b504abc3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-如 [Rebar 控制項和群組列](../mfc/rebar-controls-and-bands.md)所述，每個群組列只能包含子視窗 \(或控制項\)。  如果您要有一個以上每個群組列，建立子視窗這可能是限制。  方便的解決方法是建立具有多個控制項的對話方塊列資源後加入 Rebar 群組列 \(包含對話方塊列\) 到 Rebar 控制項。  
+---
+# <a name="using-a-dialog-bar-with-a-rebar-control"></a>Using a Dialog Bar with a Rebar Control
+As mentioned in [Rebar Controls and Bands](../mfc/rebar-controls-and-bands.md), each band can contain only one child window (or control). This might be a limitation if you want to have more than one child window per band. A convenient workaround is to create a dialog bar resource with multiple controls and then add a rebar band (containing the dialog bar) to the rebar control.  
   
- 通常，因此，如果您要對話方塊列群組列顯示為透明，您會設定對話方塊列物件的 **WS\_EX\_TRANSPARENT** 延伸樣式。  不過，，因為 **WS\_EX\_TRANSPARENT** 具有適當繪製對話方塊列背景的問題，您必須完成這個額外的達到此效果。  
+ Normally, if you wanted the dialog bar band to appear transparent, you would set the **WS_EX_TRANSPARENT** extended style for the dialog bar object. However, because **WS_EX_TRANSPARENT** has some issues with properly painting the background of a dialog bar, you will need to do a little extra work to achieve the desired effect.  
   
- 下列程序說明的必要步驟達成透明度，而不使用 **WS\_EX\_TRANSPARENT** 延伸樣式。  
+ The following procedure details the steps necessary to achieve transparency without using the **WS_EX_TRANSPARENT** extended style.  
   
-### 若要實作 Rebar 的透明對話方塊列中關聯  
+### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>To implement a transparent dialog bar in a rebar band  
   
-1.  使用 [加入類別對話方塊](../mfc/reference/adding-an-mfc-class.md)，請將該新類別 \(例如， `CMyDlgBar`\) 實作自己的對話方塊列的物件。  
+1.  Using the [Add Class dialog box](../mfc/reference/adding-an-mfc-class.md), add a new class (for example, `CMyDlgBar`) that implements your dialog bar object.  
   
-2.  將 `WM_ERASEBKGND` 訊息的處理常式。  
+2.  Add a handler for the `WM_ERASEBKGND` message.  
   
-3.  在新的處理常式，請修改現有的程式碼符合下列範例:  
+3.  In the new handler, modify the existing code to match the following example:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/CPP/using-a-dialog-bar-with-a-rebar-control_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]  
   
-4.  將 `WM_MOVE` 訊息的處理常式。  
+4.  Add a handler for the `WM_MOVE` message.  
   
-5.  在新的處理常式，請修改現有的程式碼符合下列範例:  
+5.  In the new handler, modify the existing code to match the following example:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/CPP/using-a-dialog-bar-with-a-rebar-control_2.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]  
   
- 新的處理常式會轉送 `WM_ERASEBKGND` 訊息到父視窗和強制重繪模擬對話方塊列的透明度，對話方塊列物件移動時。  
+ The new handlers simulate the transparency of the dialog bar by forwarding the `WM_ERASEBKGND` message to the parent window and forcing a repaint every time the dialog bar object is moved.  
   
-## 請參閱  
- [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

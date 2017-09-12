@@ -1,5 +1,5 @@
 ---
-title: "標準對話方塊資料驗證常式 |Microsoft 文件"
+title: Standard Dialog Data Validation Routines | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,43 +31,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: 5e71adfb0cda64e43239926b75a8fdc91b73fc29
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 80cb4c66e5190d76552982461066edea6a4b35be
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="standard-dialog-data-validation-routines"></a>標準對話方塊資料驗證常式
-本主題列出用於通用的 MFC 對話方塊控制項的標準對話方塊資料驗證 (DDV) 常式。  
+# <a name="standard-dialog-data-validation-routines"></a>Standard Dialog Data Validation Routines
+This topic lists the standard dialog data validation (DDV) routines used for common MFC dialog controls.  
   
 > [!NOTE]
->  標準對話方塊資料交換常式定義於標頭檔 afxdd_.h。 不過，應用程式應該包括 afxwin.h。  
+>  The standard dialog data exchange routines are defined in the header file afxdd_.h. However, applications should include afxwin.h.  
   
-### <a name="ddv-functions"></a>DDV 函式  
+### <a name="ddv-functions"></a>DDV Functions  
   
 |||  
 |-|-|  
-|[DDV_MaxChars](#ddv_maxchars)|確認指定的控制項值中的字元數目不超過指定的最大值。|  
-|[DDV_MinMaxByte](#ddv_minmaxbyte)|確認指定的控制項值不會超過給定**位元組**範圍。|  
-|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|確認指定的控制項值未超過給定的時間範圍。|  
-|[DDV_MinMaxDouble](#ddv_minmaxdouble)|確認指定的控制項值不會超過給定**double**範圍。|  
-|[DDV_MinMaxDWord](#ddv_minmaxdword)|確認指定的控制項值不會超過給定**DWORD**範圍。|  
-|[DDV_MinMaxFloat](#ddv_minmaxfloat)|確認指定的控制項值不會超過給定**float**範圍。|  
-|[DDV_MinMaxInt](#ddv_minmaxint)|確認指定的控制項值不會超過給定**int**範圍。|  
-|[DDV_MinMaxLong](#ddv_minmaxlong)|確認指定的控制項值不會超過給定**長**範圍。|  
-|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|確認指定的控制項值不會超過給定**LONGLONG**範圍。|  
-|[DDV_MinMaxMonth](#ddv_minmaxmonth)|確認指定的控制項值未超過指定的日期範圍內。|  
-|[DDV_MinMaxShort](#ddv_minmaxshort)|確認指定的控制項值不會超過給定**簡短**範圍。|  
-|[DDV_MinMaxSlider](#ddv_minmaxslider)|確認指定的滑桿控制項值落在指定範圍內。|  
-|[DDV_MinMaxUInt](#ddv_minmaxuint)|確認指定的控制項值不會超過給定**UINT**範圍。|  
-|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|確認指定的控制項值介於兩個指定的值。| 
-|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|確認指定的控制項值不會超過給定**ULONGLONG**範圍。|  
+|[DDV_MaxChars](#ddv_maxchars)|Verifies the number of characters in a given control value does not exceed a given maximum.|  
+|[DDV_MinMaxByte](#ddv_minmaxbyte)|Verifies a given control value does not exceed a given **BYTE** range.|  
+|[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|Verifies a given control value does not exceed a given time range.|  
+|[DDV_MinMaxDouble](#ddv_minmaxdouble)|Verifies a given control value does not exceed a given **double** range.|  
+|[DDV_MinMaxDWord](#ddv_minmaxdword)|Verifies a given control value does not exceed a given **DWORD** range.|  
+|[DDV_MinMaxFloat](#ddv_minmaxfloat)|Verifies a given control value does not exceed a given **float** range.|  
+|[DDV_MinMaxInt](#ddv_minmaxint)|Verifies a given control value does not exceed a given **int** range.|  
+|[DDV_MinMaxLong](#ddv_minmaxlong)|Verifies a given control value does not exceed a given **long** range.|  
+|[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|Verifies a given control value does not exceed a given **LONGLONG** range.|  
+|[DDV_MinMaxMonth](#ddv_minmaxmonth)|Verifies a given control value does not exceed a given date range.|  
+|[DDV_MinMaxShort](#ddv_minmaxshort)|Verifies a given control value does not exceed a given **short** range.|  
+|[DDV_MinMaxSlider](#ddv_minmaxslider)|Verifies a given slider control value falls within the given range.|  
+|[DDV_MinMaxUInt](#ddv_minmaxuint)|Verifies a given control value does not exceed a given **UINT** range.|  
+|[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Verifies a given control value falls between two specified values.| 
+|[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Verifies a given control value does not exceed a given **ULONGLONG** range.|  
   
 
   
-##  <a name="ddv_maxchars"></a>DDV_MaxChars  
- 呼叫`DDV_MaxChars`驗證與關聯的控制項中的字元數*值*不超過*nChars*。  
+##  <a name="ddv_maxchars"></a>  DDV_MaxChars  
+ Call `DDV_MaxChars` to verify that the amount of characters in the control associated with *value* does not exceed *nChars*.  
   
 ```   
 void AFXAPI DDV_MaxChars(
@@ -76,24 +76,24 @@ void AFXAPI DDV_MaxChars(
     int nChars); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `nChars`  
- 允許的字元數目上限。  
+ Maximum number of characters allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
- 呼叫`DDV_MinMaxByte`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
+ Call `DDV_MinMaxByte` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxByte(
@@ -103,27 +103,27 @@ void AFXAPI DDV_MinMaxByte(
     BYTE maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**位元組**) 允許。  
+ Minimum value (of type **BYTE**) allowed.  
   
  `maxVal`  
- 最大值 (類型的**位元組**) 允許。  
+ Maximum value (of type **BYTE**) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
- 呼叫`DDV_MinMaxDateTime`確認日期和時間選擇器中的日期/時間值，控制 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) 相關聯*refValue*介於`refMinRange`和`refMaxRange`。  
+##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
+ Call `DDV_MinMaxDateTime` to verify that the time/date value in the date and time picker control ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) associated with *refValue* falls between `refMinRange` and `refMaxRange`.  
   
 ```   
 void AFXAPI DDV_MinMaxDateTime(
@@ -139,27 +139,27 @@ void AFXAPI DDV_MinMaxDateTime(
     const COleDateTime* refMaxRange); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。 您不需要刪除此物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction. You don't need to delete this object.  
   
  *refValue*  
- 若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)或[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)對話方塊、 表單檢視或控制項檢視物件的成員變數與相關聯的物件。 此物件包含要驗證資料。  
+ A reference to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) or [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object associated with a member variable of the dialog box, form view, or control view object. This object contains the data to be validated.  
   
  `refMinRange`  
- 最小日期/時間允許的值。  
+ Minimum date/time value allowed.  
   
  `refMaxRange`  
- 允許的最大日期/時間值。  
+ Maximum date/time value allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
- 呼叫`DDV_MinMaxDouble`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
+ Call `DDV_MinMaxDouble` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxDouble(
@@ -169,27 +169,27 @@ void AFXAPI DDV_MinMaxDouble(
     double maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**double**) 允許。  
+ Minimum value (of type **double**) allowed.  
   
  `maxVal`  
- 最大值 (類型的**double**) 允許。  
+ Maximum value (of type **double**) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
- 呼叫`DDV_MinMaxDWord`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
+ Call `DDV_MinMaxDWord` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxDWord(
@@ -199,27 +199,27 @@ void AFXAPI DDV_MinMaxDWord(
     DWORD maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的`DWORD`) 允許。  
+ Minimum value (of type `DWORD`) allowed.  
   
  `maxVal`  
- 最大值 (類型的`DWORD`) 允許。  
+ Maximum value (of type `DWORD`) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
- 呼叫`DDV_MinMaxFloat`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
+ Call `DDV_MinMaxFloat` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxFloat(
@@ -229,27 +229,27 @@ void AFXAPI DDV_MinMaxFloat(
     float maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**float**) 允許。  
+ Minimum value (of type **float**) allowed.  
   
  `maxVal`  
- 最大值 (類型的**float**) 允許。  
+ Maximum value (of type **float**) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>DDV_MinMaxInt  
- 呼叫`DDV_MinMaxInt`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
+ Call `DDV_MinMaxInt` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxInt(
@@ -259,27 +259,27 @@ void AFXAPI DDV_MinMaxInt(
     int maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的`int`) 允許。  
+ Minimum value (of type `int`) allowed.  
   
  `maxVal`  
- 最大值 (類型的`int`) 允許。  
+ Maximum value (of type `int`) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
- 呼叫`DDV_MinMaxLong`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
+ Call `DDV_MinMaxLong` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxLong(
@@ -289,27 +289,27 @@ void AFXAPI DDV_MinMaxLong(
     long maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**長**) 允許。  
+ Minimum value (of type **long**) allowed.  
   
  `maxVal`  
- 最大值 (類型的**長**) 允許。  
+ Maximum value (of type **long**) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
- 呼叫`DDV_MinMaxLongLong`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
+ Call `DDV_MinMaxLongLong` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxLongLong(
@@ -319,27 +319,27 @@ void AFXAPI DDV_MinMaxLongLong(
     LONGLONG maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**LONGLONG**) 允許。  
+ Minimum value (of type **LONGLONG**) allowed.  
   
  `maxVal`  
- 最大值 (類型的**LONGLONG**) 允許。  
+ Maximum value (of type **LONGLONG**) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
- 呼叫`DDV_MinMaxMonth`以確認月份行事曆中的日期/時間值，控制 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) 相關聯*refValue*介於`refMinRange`和`refMaxRange`。  
+##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
+ Call `DDV_MinMaxMonth` to verify that the time/date value in the month calendar control ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) associated with *refValue* falls between `refMinRange` and `refMaxRange`.  
   
 ```   
 void AFXAPI DDV_MinMaxMonth(
@@ -355,27 +355,27 @@ void AFXAPI DDV_MinMaxMonth(
     const COleDateTime* refMaxRange); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *refValue*  
- 類型的物件參考`CTime`或`COleDateTime`對話方塊中的成員變數與相關聯，表單檢視，或控制項檢視物件。 此物件包含要驗證資料。 MFC 傳遞時參考這個`DDV_MinMaxMonth`呼叫。  
+ A reference to an object of type `CTime` or `COleDateTime` associated with a member variable of the dialog box, form view, or control view object. This object contains the data to be validated. MFC passes this reference when `DDV_MinMaxMonth` is called.  
   
  `refMinRange`  
- 最小日期/時間允許的值。  
+ Minimum date/time value allowed.  
   
  `refMaxRange`  
- 允許的最大日期/時間值。  
+ Maximum date/time value allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
- 呼叫`DDV_MinMaxShort`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
+ Call `DDV_MinMaxShort` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxShort(
@@ -385,27 +385,27 @@ void AFXAPI DDV_MinMaxShort(
     short maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**簡短**) 允許。  
+ Minimum value (of type **short**) allowed.  
   
  `maxVal`  
- 最大值 (類型的**簡短**) 允許。  
+ Maximum value (of type **short**) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
- 呼叫`DDV_MinMaxSlider`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
+ Call `DDV_MinMaxSlider` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxSlider(
@@ -415,27 +415,27 @@ void AFXAPI DDV_MinMaxSlider(
     DWORD maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 要驗證值的參考。 這個參數會存放或設定滑桿控制項的目前捲動方塊位置。  
+ A reference to the value to be validated. This parameter holds or sets the slider control's current thumb position.  
   
  `minVal`  
- 允許的最小值。  
+ Minimum value allowed.  
   
  `maxVal`  
- 允許的最大值。  
+ Maximum value allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。 滑桿控制項的相關資訊，請參閱[使用 CSliderCtrl](../../mfc/using-csliderctrl.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md). For information about slider controls, see [Using CSliderCtrl](../../mfc/using-csliderctrl.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
- 呼叫`DDV_MinMaxUInt`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
+ Call `DDV_MinMaxUInt` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxUInt(
@@ -445,27 +445,27 @@ void AFXAPI DDV_MinMaxUInt(
     UINT maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**UINT**) 允許。  
+ Minimum value (of type **UINT**) allowed.  
   
  `maxVal`  
- 最大值 (類型的**UINT**) 允許。  
+ Maximum value (of type **UINT**) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
- 呼叫`DDV_MinMaxULongLong`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
+ Call `DDV_MinMaxULongLong` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
   
 ```   
 void AFXAPI DDV_MinMaxULongLong(
@@ -475,33 +475,33 @@ void AFXAPI DDV_MinMaxULongLong(
     ULONGLONG  maxVal); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**ULONGLONG**) 允許。  
+ Minimum value (of type **ULONGLONG**) allowed.  
   
  `maxVal`  
- 最大值 (類型的**ULONGLONG**) 允許。  
+ Maximum value (of type **ULONGLONG**) allowed.  
   
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
 
-### <a name="requirements"></a>需求  
-  **標頭**afxdd_.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdd_.h  
     
-## <a name="see-also"></a>另請參閱  
- [標準對話方塊資料交換常式](../../mfc/reference/standard-dialog-data-exchange-routines.md)   
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Standard Dialog Data Exchange Routines](../../mfc/reference/standard-dialog-data-exchange-routines.md)   
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 
  ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
-呼叫`DDV_MinMaxUnsigned`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
+Call `DDV_MinMaxUnsigned` to verify that the value in the control associated with *value* falls between `minVal` and `maxVal`.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
    void AFXAPI DDV_MinMaxUnsigned(  
        CDataExchange* pDX,  
@@ -509,27 +509,27 @@ void AFXAPI DDV_MinMaxULongLong(
        unsigned minVal,  
        unsigned maxVal );  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  *value*  
- 對話方塊、 表單檢視中或用來驗證資料的控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view, or control view object with which data is validated.  
   
  `minVal`  
- 最小值 (類型的**不帶正負號**) 允許。  
+ Minimum value (of type **unsigned** ) allowed.  
   
  `maxVal`  
- 最大值 (類型的**不帶正負號**) 允許。  
+ Maximum value (of type **unsigned** ) allowed.  
    
-### <a name="remarks"></a>備註  
- 如需 DDV 的詳細資訊，請參閱[對話方塊資料交換和驗證](../dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDV, see [Dialog Data Exchange and Validation](../dialog-data-exchange-and-validation.md).  
    
-### <a name="requirements"></a>需求  
- **標頭︰** afxdd_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdd_.h  
    
-### <a name="see-also"></a>另請參閱  
- [巨集和全域變數](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [DDX_Slider](#ddx_slider)   
  [DDX_FieldSlider](#ddx_fieldslider)
  

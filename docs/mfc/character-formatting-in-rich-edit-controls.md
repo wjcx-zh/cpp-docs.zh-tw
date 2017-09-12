@@ -1,39 +1,58 @@
 ---
-title: "Rich Edit 控制項中的字元格式化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl 類別, 其中的字元格式化"
-  - "格式化 [C++], 字元"
-  - "Rich Edit 控制項, 其中的字元格式化"
+title: Character Formatting in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- formatting [MFC], characters
+- rich edit controls [MFC], character formatting in
+- CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Rich Edit 控制項中的字元格式化
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e2da6052721125835517a2b93341a6800c75205e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您可以使用 Rich Edit 控制項 \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) 的成員函式為格式字元和擷取格式化資訊。  對於字元，您可以指定字樣，調整，色彩和效果，例如粗體、斜體，並保護。  
+---
+# <a name="character-formatting-in-rich-edit-controls"></a>Character Formatting in Rich Edit Controls
+You can use member functions of the rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) to format characters and to retrieve formatting information. For characters, you can specify typeface, size, color, and effects such as bold, italic, and protected.  
   
- 使用 [SetSelectionCharFormat](../Topic/CRichEditCtrl::SetSelectionCharFormat.md) 和 [SetWordCharFormat](../Topic/CRichEditCtrl::SetWordCharFormat.md) 成員函式，您可以將字元格式。  若要判斷所選取文字的目前字元格式，請使用 [GetSelectionCharFormat](../Topic/CRichEditCtrl::GetSelectionCharFormat.md) 成員函式。  [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) 結構用來以這些成員函式指定字元屬性。  其中一個 **CHARFORMAT** 的重要成員是 **dwMask**。  在 `SetSelectionCharFormat` 和 `SetWordCharFormat`， **dwMask** 指定哪些字元屬性會由這個函式呼叫設定。  `GetSelectionCharFormat` 報告第一個字元的屬性在選取範圍中; **dwMask** 指定一致的選取範圍中的屬性。  
+ You can apply character formatting by using the [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) and [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) member functions. To determine the current character formatting for the selected text, use the [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) member function. The [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) structure is used with these member functions to specify character attributes. One of the important members of **CHARFORMAT** is **dwMask**. In `SetSelectionCharFormat` and `SetWordCharFormat`, **dwMask** specifies which character attributes will be set by this function call. `GetSelectionCharFormat` reports the attributes of the first character in the selection; **dwMask** specifies the attributes that are consistent throughout the selection.  
   
- 您也可以取得及設定預設字元格式，而是格式套用至所有後續插入的字元。  例如，在中，如果應用程式將格式化為粗體預設字元，而且使用者會輸入字元，該字元為粗體。  若要取得和設定預設字元格式，使用 [GetDefaultCharFormat](../Topic/CRichEditCtrl::GetDefaultCharFormat.md) 和 [SetDefaultCharFormat](../Topic/CRichEditCtrl::SetDefaultCharFormat.md) 成員函式。  
+ You can also get and set the "default character formatting," which is the formatting applied to any subsequently inserted characters. For example, if an application sets the default character formatting to bold and the user then types a character, that character is bold. To get and set default character formatting, use the [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) and [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) member functions.  
   
- 「protected」字元屬性不變更文字的外觀。  如果使用者嘗試修改保護的文字， Rich Edit 控制項傳送給其父視窗 **EN\_PROTECTED** 通知訊息，讓父視窗允許或防止變更。  使用 [SetEventMask](../Topic/CRichEditCtrl::SetEventMask.md) 成員函式，要接收這個告知訊息，您必須啟用它。  如需事件遮罩的詳細資訊，請參閱 [從 Rich Edit 控制項的告知。](../mfc/notifications-from-a-rich-edit-control.md)，稍後在本主題中。  
+ The "protected" character attribute does not change the appearance of text. If the user attempts to modify protected text, a rich edit control sends its parent window an **EN_PROTECTED** notification message, allowing the parent window to allow or prevent the change. To receive this notification message, you must enable it by using the [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) member function. For more information about the event mask, see [Notifications from a Rich Edit Control](../mfc/notifications-from-a-rich-edit-control.md), later in this topic.  
   
- 前景色彩是字元屬性，不過，背景色彩是 Rich Edit 控制項的屬性。  若要設定背景色彩，請使用 [SetBackgroundColor](../Topic/CRichEditCtrl::SetBackgroundColor.md) 成員函式。  
+ Foreground color is a character attribute, but background color is a property of the rich edit control. To set the background color, use the [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor) member function.  
   
-## 請參閱  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

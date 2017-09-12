@@ -1,5 +1,5 @@
 ---
-title: "CNetAddressCtrl 類別 |Microsoft 文件"
+title: CNetAddressCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,7 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CNetAddressCtrl class
+- CNetAddressCtrl [MFC], CNetAddressCtrl
+- CNetAddressCtrl [MFC], Create
+- CNetAddressCtrl [MFC], CreateEx
+- CNetAddressCtrl [MFC], DisplayErrorTip
+- CNetAddressCtrl [MFC], GetAddress
+- CNetAddressCtrl [MFC], GetAllowType
+- CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
 caps.latest.revision: 32
 author: mikeblome
@@ -41,17 +47,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 03b08d13a9e456c5533b4dddce7f389a63a69c6d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8d69d5b8415419dd9630acd4cc85423db132862
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
-`CNetAddressCtrl` 類別表示網路位址控制項，您可以用來輸入和驗證 IPv4、IPv6 和具名 DNS 位址的格式。  
+# <a name="cnetaddressctrl-class"></a>CNetAddressCtrl Class
+The `CNetAddressCtrl` class represents the network address control, which you can use to input and validate the format of IPv4, IPv6, and named DNS addresses.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CNetAddressCtrl : public CEdit  
@@ -59,43 +65,43 @@ class CNetAddressCtrl : public CEdit
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|建構 `CNetAddressCtrl` 物件。|  
+|[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Constructs a `CNetAddressCtrl` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CNetAddressCtrl::Create](#create)|使用指定的樣式建立網路位址控制項，並將其附加至目前`CNetAddressCtrl`物件。|  
-|[CNetAddressCtrl::CreateEx](#createex)|使用指定的延伸樣式建立網路位址控制項，並將其附加至目前`CNetAddressCtrl`物件。|  
-|[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|當使用者在目前的網路位址控制項進入不支援的網路位址，會顯示錯誤汽球提示。|  
-|[CNetAddressCtrl::GetAddress](#getaddress)|擷取目前的網路位址控制項相關聯的網路位址的驗證和剖析呈現。|  
-|[CNetAddressCtrl::GetAllowType](#getallowtype)|擷取目前的網路位址控制項可支援的網路位址的型別。|  
-|[CNetAddressCtrl::SetAllowType](#setallowtype)|設定目前的網路位址控制項可支援的網路位址的類型。|  
+|[CNetAddressCtrl::Create](#create)|Creates a network address control with specified styles and attaches it to the current `CNetAddressCtrl` object.|  
+|[CNetAddressCtrl::CreateEx](#createex)|Creates a network address control with specified extended styles and attaches it to the current `CNetAddressCtrl` object.|  
+|[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|Displays an error balloon tip when the user enters an unsupported network address in the current network address control.|  
+|[CNetAddressCtrl::GetAddress](#getaddress)|Retrieves a validated and parsed representation of the network address associated with the current network address control.|  
+|[CNetAddressCtrl::GetAllowType](#getallowtype)|Retrieves the type of network address that the current network address control can support.|  
+|[CNetAddressCtrl::SetAllowType](#setallowtype)|Sets the type of network address that the current network address control can support.|  
   
-## <a name="remarks"></a>備註  
- 網路位址控制項驗證使用者輸入的地址的格式正確。 控制項不會實際連線至網路位址。 [CNetAddressCtrl::SetAllowType](#setallowtype)方法會指定一或多個類型的地址， [CNetAddressCtrl::GetAddress](#getaddress)方法可以剖析和驗證。 位址可以是 IPv4、 IPv6、 或具名的伺服器、 網路、 主機或廣播的訊息目的地的地址的格式。 如果位址的格式不正確，您可以使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法，以顯示資訊提示訊息方塊，以圖形方式指向網路位址控制項的文字方塊中，並顯示預先定義的錯誤訊息。  
+## <a name="remarks"></a>Remarks  
+ The network address control verifies that the format of the address the user enters is correct. The control does not actually connect to the network address. The [CNetAddressCtrl::SetAllowType](#setallowtype) method specifies one or more types of address that the [CNetAddressCtrl::GetAddress](#getaddress) method can parse and verify. An address can be in the form of an IPv4, IPv6, or named address for a server, network, host, or broadcast message destination. If the format of the address is incorrect, you can use the [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) method to display an infotip message box that graphically points to the text box of the network address control and displays a predefined error message.  
   
- `CNetAddressCtrl`類別衍生自[CEdit](../../mfc/reference/cedit-class.md)類別。 因此，網路位址控制項提供存取所有 Windows 編輯控制項的訊息。  
+ The `CNetAddressCtrl` class is derived from the [CEdit](../../mfc/reference/cedit-class.md) class. Consequently, the network address control provides access to all Windows edit control messages.  
   
- 下圖說明包含網路位址控制項的對話方塊。 文字 方塊中 （1） 的網路位址控制項包含無效的網路位址。 如果網路位址不正確，就會顯示資訊提示訊息 (2)。  
+ The following figure depicts a dialog that contains a network address control. The text box (1) for the network address control contains an invalid network address. The infotip message (2) is displayed if the network address is invalid.  
   
- ![具有網路位址控制項和資訊提示的對話方塊。] (../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
+ ![Dialog with a network address control and infotip.](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")  
   
-## <a name="example"></a>範例  
- 下列程式碼範例是驗證的網路位址 對話方塊的一部分。 三個選項按鈕的事件處理常式指定的網路位址可以是其中一種位址類型。 使用者在網路控制中，文字方塊中輸入的地址，然後按下按鈕，以驗證地址。 如果位址是有效的則會顯示成功訊息;否則，就會顯示預先定義的資訊提示錯誤訊息。  
+## <a name="example"></a>Example  
+ The following code example is a portion of a dialog that validates a network address. The event handlers for three radio buttons specify that the network address can be one of three address types. The user enters an address in the text box of the network control, then presses a button to validate the address. If the address is valid, a success message is displayed; otherwise, the predefined infotip error message is displayed.  
   
- [!code-cpp[NVC_MFC_CNetAddressCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]  
   
-## <a name="example"></a>範例  
- 下列程式碼範例從對話方塊標頭檔會定義[NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345)和[NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346)變數所需的[CNetAddressCtrl::GetAddress](#getaddress)方法。  
+## <a name="example"></a>Example  
+ The following code example from the dialog header file defines the [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) and [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) variables that are required by the [CNetAddressCtrl::GetAddress](#getaddress) method.  
   
- [!code-cpp[NVC_MFC_CNetAddressCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]  
+ [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -106,25 +112,25 @@ class CNetAddressCtrl : public CEdit
   
  `CNetAddressCtrl`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
- 這個類別支援[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]和更新版本。  
+ This class is supported in [!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)] and later.  
   
- 這個類別的其他需求所述[建置需求的 Windows Vista 通用控制項](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
+ Additional requirements for this class are described in [Build Requirements for Windows Vista Common Controls](../../mfc/build-requirements-for-windows-vista-common-controls.md).  
   
-##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
- 建構 `CNetAddressCtrl` 物件。  
+##  <a name="cnetaddressctrl"></a>  CNetAddressCtrl::CNetAddressCtrl  
+ Constructs a `CNetAddressCtrl` object.  
   
 ```  
 CNetAddressCtrl();
 ```  
   
-### <a name="remarks"></a>備註  
- 使用[CNetAddressCtrl::Create](#create)或[CNetAddressCtrl::CreateEx](#createex)方法來建立網路控制，並將其附加至`CNetAddressCtrl`物件。  
+### <a name="remarks"></a>Remarks  
+ Use the [CNetAddressCtrl::Create](#create) or [CNetAddressCtrl::CreateEx](#createex) method to create a network control and attach it to the `CNetAddressCtrl` object.  
   
-##  <a name="create"></a>CNetAddressCtrl::Create  
- 使用指定的樣式建立網路位址控制項，並將其附加至目前`CNetAddressCtrl`物件。  
+##  <a name="create"></a>  CNetAddressCtrl::Create  
+ Creates a network address control with specified styles and attaches it to the current `CNetAddressCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -134,20 +140,20 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwStyle`|若要套用至控制項的樣式的位元組合。 如需詳細資訊，請參閱[編輯樣式](../../mfc/reference/edit-styles.md)。|  
-|[in] `rect`|參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
-|[in] `pParentWnd`|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
-|[in] `nID`|控制項的 ID。|  
+|[in] `dwStyle`|A bitwise combination of styles to be applied to the control. For more information, see [Edit Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control.|  
+|[in] `pParentWnd`|A non-null pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
- 使用指定的延伸樣式建立網路位址控制項，並將其附加至目前`CNetAddressCtrl`物件。  
+##  <a name="createex"></a>  CNetAddressCtrl::CreateEx  
+ Creates a network address control with specified extended styles and attaches it to the current `CNetAddressCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -158,93 +164,93 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|位元組合 (OR) 的延伸樣式套用至控制項。 如需詳細資訊，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函式。|  
-|[in] `dwStyle`|位元組合 (OR) 的樣式套用至控制項。 如需詳細資訊，請參閱[編輯樣式](../../mfc/reference/edit-styles.md)。|  
-|[in] `rect`|參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，包含控制項的大小與位置。|  
-|[in] `pParentWnd`|非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|  
-|[in] `nID`|控制項的 ID。|  
+|[in] `dwExStyle`|A bitwise combination (OR) of extended styles to be applied to the control. For more information, see the `dwExStyle` parameter of the [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) function.|  
+|[in] `dwStyle`|A bitwise combination (OR) of styles to be applied to the control. For more information, see [Edit Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control.|  
+|[in] `pParentWnd`|A non-null pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
- 在目前的網路位址控制項相關聯的汽球提示中顯示錯誤訊息。  
+##  <a name="displayerrortip"></a>  CNetAddressCtrl::DisplayErrorTip  
+ Displays an error message in the balloon tip that is associated with the current network address control.  
   
 ```  
 HRESULT DisplayErrorTip();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 值`S_OK`如果此方法成功則為錯誤碼。  
+### <a name="return-value"></a>Return Value  
+ The value `S_OK` if this method is successful; otherwise, an error code.  
   
-### <a name="remarks"></a>備註  
- 使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定的位址可支援目前的網路位址控制項的類型。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法來驗證和剖析使用者輸入的網路位址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法，以顯示錯誤訊息資訊提示，如果[CNetAddressCtrl::GetAddress](#getaddress)方法不成功。  
+### <a name="remarks"></a>Remarks  
+ Use the [CNetAddressCtrl::SetAllowType](#setallowtype) method to specify the types of addresses that the current network address control can support. Use the [CNetAddressCtrl::GetAddress](#getaddress) method to validate and parse the network address that the user enters. Use the [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) method to display an error message infotip if the [CNetAddressCtrl::GetAddress](#getaddress) method is unsuccessful.  
   
- 此訊息會叫用[NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314)巨集，這會在說明[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 該巨集傳送`NCM_DISPLAYERRORTIP`訊息。  
+ This message invokes the [NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314) macro, which is described in the Windows SDK. That macro sends the `NCM_DISPLAYERRORTIP` message.  
   
-##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
- 擷取目前的網路位址控制項相關聯的網路位址的驗證和剖析呈現。  
+##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress  
+ Retrieves a validated and parsed representation of the network address that is associated with the current network address control.  
   
 ```  
 HRESULT GetAddress(PNC_ADDRESS pAddress) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in、out] `pAddress`|指標[NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345)結構。  設定`pAddrInfo`這個位址的結構的成員[NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346)結構才能呼叫 GetAddress 方法。|  
+|[in, out] `pAddress`|Pointer to an [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) structure.  Set the `pAddrInfo` member of this structure to the address of a [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) structure before you call the GetAddress method.|  
   
-### <a name="return-value"></a>傳回值  
- 值`S_OK`如果此方法成功，否則 COM 錯誤程式碼。 如需可能的錯誤代碼的詳細資訊，請參閱 > 一節會傳回值[NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316)巨集。  
+### <a name="return-value"></a>Return Value  
+ The value `S_OK` if this method is successful; otherwise, a COM error code. For more information about the possible error codes, see the Return Value section of the [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro.  
   
-### <a name="remarks"></a>備註  
- 如果此方法成功， [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346)結構包含的網路位址的其他資訊。  
+### <a name="remarks"></a>Remarks  
+ If this method is successful, the [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) structure contains additional information about the network address.  
   
- 使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定的位址可支援目前的網路位址控制項的類型。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法來驗證和剖析使用者輸入的網路位址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法，以顯示錯誤訊息資訊提示，如果[CNetAddressCtrl::GetAddress](#getaddress)方法不成功。  
+ Use the [CNetAddressCtrl::SetAllowType](#setallowtype) method to specify the types of addresses the current network address control can support. Use the [CNetAddressCtrl::GetAddress](#getaddress) method to validate and parse the network address that the user enters. Use the [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) method to display an error message infotip if the [CNetAddressCtrl::GetAddress](#getaddress) method is unsuccessful.  
   
- 這個方法會叫用[NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316)巨集，這會在說明[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 該巨集傳送`NCM_GETADDRESS`訊息。  
+ This method invokes the [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) macro, which is described in the Windows SDK. That macro sends the `NCM_GETADDRESS` message.  
   
-##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
- 擷取目前的網路位址控制項可支援的網路位址的型別。  
+##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType  
+ Retrieves the type of network address that the current network address control can support.  
   
 ```  
 DWORD GetAllowType() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 網路位址控制項可以支援的位元組合 (OR) 旗標，以指定的位址類型。 如需詳細資訊，請參閱[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。  
+### <a name="return-value"></a>Return Value  
+ A bitwise combination (OR) of flags that specifies the types of addresses the network address control can support. For more information, see [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).  
   
-### <a name="remarks"></a>備註  
- 此訊息會叫用[NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318)巨集，這會在說明[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 該巨集傳送`NCM_GETALLOWTYPE`訊息。  
+### <a name="remarks"></a>Remarks  
+ This message invokes the [NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318) macro, which is described in the Windows SDK. That macro sends the `NCM_GETALLOWTYPE` message.  
   
-##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
- 設定目前的網路位址控制項可支援的網路位址的類型。  
+##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
+ Sets the type of network address that the current network address control can support.  
   
 ```  
 HRESULT SetAllowType(DWORD dwAddrMask);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwAddrMask`|網路位址控制項可以支援的位元組合 (OR) 旗標，以指定的位址類型。 如需詳細資訊，請參閱[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
+|[in] `dwAddrMask`|A bitwise combination (OR) of flags that specifies the types of addresses the network address control can support. For more information, see [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
-### <a name="return-value"></a>傳回值  
- `S_OK`如果此方法成功。否則，COM 錯誤程式碼。  
+### <a name="return-value"></a>Return Value  
+ `S_OK` if this method is successful; otherwise, a COM error code.  
   
-### <a name="remarks"></a>備註  
- 使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定的位址可支援目前的網路位址控制項的類型。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法來驗證和剖析使用者輸入的網路位址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法，以顯示錯誤訊息資訊提示，如果[CNetAddressCtrl::GetAddress](#getaddress)方法不成功。  
+### <a name="remarks"></a>Remarks  
+ Use the [CNetAddressCtrl::SetAllowType](#setallowtype) method to specify the types of addresses that the current network address control can support. Use the [CNetAddressCtrl::GetAddress](#getaddress) method to validate and parse the network address that the user enters. Use the [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) method to display an error message infotip if the [CNetAddressCtrl::GetAddress](#getaddress) method is unsuccessful.  
   
- 此訊息會叫用[NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320)巨集，這會在說明[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 該巨集傳送`NCM_SETALLOWTYPE`訊息。  
+ This message invokes the [NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320) macro, which is described in the Windows SDK. That macro sends the `NCM_SETALLOWTYPE` message.  
   
-## <a name="see-also"></a>另請參閱  
- [CNetAddressCtrl 類別](../../mfc/reference/cnetaddressctrl-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CEdit 類別](../../mfc/reference/cedit-class.md)
+## <a name="see-also"></a>See Also  
+ [CNetAddressCtrl Class](../../mfc/reference/cnetaddressctrl-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)
 

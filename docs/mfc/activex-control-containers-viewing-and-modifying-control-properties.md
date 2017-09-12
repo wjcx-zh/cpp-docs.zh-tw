@@ -1,52 +1,71 @@
 ---
-title: "ActiveX 控制項容器：檢視和修改控制項屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項容器 [C++], 檢視及修改屬性"
-  - "ActiveX 控制項 [C++], 屬性"
-  - "控制項 [MFC], 屬性"
-  - "屬性 [MFC], 檢視及修改"
-  - "資源編輯器, 檢視及修改 ActiveX 控制項"
+title: 'ActiveX Control Containers: Viewing and Modifying Control Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- properties [MFC], viewing and modifying
+- ActiveX control containers [MFC], viewing and modifying properties
+- resource editors, viewing and modifying ActiveX controls
+- ActiveX controls [MFC], properties
+- controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX 控制項容器：檢視和修改控制項屬性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f147544230d135b89f208eef2aba8db9a31468f8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當您將 ActiveX 控制項編譯專案時，檢視和變更 ActiveX 控制項支援的屬性非常有用。  本文將討論如何使用 Visual C\+\+ 資源編輯器來做。  
+---
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX Control Containers: Viewing and Modifying Control Properties
+When you insert an ActiveX control into a project, it is useful to view and change the properties supported by the ActiveX control. This article discusses how to use the Visual C++ resource editor to do this.  
   
- 如果 ActiveX 控制項容器應用程式使用內嵌控制項，您可以檢視和修改控制項的屬性，在資源編輯器中。  在設計階段，您也可以使用資源編輯器設定屬性值。  資源編輯器自動更新儲存在專案的資源檔中的這些值。  控制項的所有執行個體並將其屬性初始化為這些值。  
+ If your ActiveX control container application uses embedded controls, you can view and modify the control's properties while in the resource editor. You can also use the resource editor to set property values during design time. The resource editor then automatically saves these values in the project's resource file. Any instance of the control will then have its properties initialized to these values.  
   
- 這個程序假設您插入控制項至您的專案中。  如需詳細資訊，請參閱 [ActiveX 控制項容器:插入至控制項容器應用程式](../mfc/inserting-a-control-into-a-control-container-application.md)。  
+ This procedure assumes that you have inserted a control into your project. For information, see [ActiveX Control Containers: Inserting a Control Into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md).  
   
- 第一步檢視中控制項的屬性將加入控制項的執行個體加入至專案的對話方塊範本。  
+ The first step in viewing the control's properties is to add an instance of the control to the project's dialog template.  
   
-### 若要檢視使用者控制項的屬性  
+### <a name="to-view-the-properties-of-a-control"></a>To view the properties of a control  
   
-1.  在資源檢視中，開啟 **Dialog** 資料夾。  
+1.  In Resource View, open the **Dialog** folder.  
   
-2.  開啟您的主對話方塊範本。  
+2.  Open your main dialog box template.  
   
-3.  使用 \[**插入 ActiveX 控制項**\] 對話方塊，將 ActiveX 控制項。  如需詳細資訊，請參閱 [檢視及加入 ActiveX 控制項加入至對話方塊](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md)。  
+3.  Insert an ActiveX control using the **Insert ActiveX Control** dialog box. For more information, see [Viewing and Adding ActiveX Controls to a Dialog Box](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md).  
   
-4.  在對話方塊中，選取 ActiveX 控制項。  
+4.  Select the ActiveX control in the dialog box.  
   
-5.  從 \[屬性\] 視窗中，按一下 \[**屬性**\] 按鈕。  
+5.  From the Properties window, click the **Properties** button.  
   
- 使用 \[**屬性**\] 對話方塊會立即修改和測試新的屬性。  
+ Use the **Properties** dialog box to modify and test new properties immediately.  
   
-## 請參閱  
- [ActiveX 控制項容器](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

@@ -1,63 +1,82 @@
 ---
-title: "MFC 中的狀態列實作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COldStatusBar"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COldStatusBar 類別"
-  - "CStatusBar 類別, 和 CStatusBarCtrl 類別"
-  - "CStatusBar 類別, 和 MFC 狀態列"
-  - "CStatusBarCtrl 類別, 和 CStatusBar 類別"
-  - "CStatusBarCtrl 類別, 和 MFC 狀態列"
-  - "狀態列, 和 CStatusBarCtrl 類別"
-  - "狀態列, 回溯相容性"
-  - "狀態列, 在 MFC 中實作"
-  - "狀態列, COldStatusBar 類別中舊的"
-  - "狀態列, Windows 95 實作"
-  - "狀態指標"
+title: Status Bar Implementation in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- COldStatusBar
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bars [MFC], implementing in MFC
+- CStatusBarCtrl class [MFC], and MFC status bars
+- CStatusBar class [MFC], and CStatusBarCtrl class [MFC]
+- CStatusBarCtrl class [MFC], and CStatusBar class [MFC]
+- status bars [MFC], backward compatibility
+- status bars [MFC], old with COldStatusBar class [MFC]
+- COldStatusBar class [MFC]
+- status bars [MFC], and CStatusBarCtrl class
+- CStatusBar class [MFC], and MFC status bars
+- status indicators
+- status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# MFC 中的狀態列實作
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1cd1fcd13a99451cc81bdd48d0a7a0f90cbc2c7c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-[CStatusBar](../mfc/reference/cstatusbar-class.md) 物件與文字輸出窗格中資料列的控制列。  輸出窗格通常做為訊息列和目前狀態表示。  範例包括簡短說明選取的功能表命令和指示器顯示 SCROLL LOCK、NUM LOCK 和其他按鍵狀態的功能表說明訊息行。  
+---
+# <a name="status-bar-implementation-in-mfc"></a>Status Bar Implementation in MFC
+A [CStatusBar](../mfc/reference/cstatusbar-class.md) object is a control bar with a row of text output panes. The output panes are commonly used as message lines and as status indicators. Examples include the menu help-message lines that briefly explain the selected menu command and the indicators that show the status of the SCROLL LOCK, NUM LOCK, and other keys.  
   
- 使用 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)類別，根據 MFC 4.0 版，狀態列會實作，封裝狀態列通用控制項。  如需回溯相容性，在 MFC 類別 **COldStatusBar**保留舊的狀態列實作。  MFC 舊版本的文件描述 **COldStatusBar**`CStatusBar`下。  
+ As of MFC version 4.0, status bars are implemented using class [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), which encapsulates a status bar common control. For backward compatibility, MFC retains the older status bar implementation in class **COldStatusBar**. The documentation for earlier versions of MFC describes **COldStatusBar** under `CStatusBar`.  
   
- [CStatusBar::GetStatusBarCtrl](../Topic/CStatusBar::GetStatusBarCtrl.md)成員函式，新的 MFC 4.0 中，可讓您利用 Windows 通用控制項支援狀態列自訂和其他功能。  `CStatusBar` 成員函式最給您 Windows 通用控制項的功能;不過，也就是說，當您呼叫 `GetStatusBarCtrl`時，您可以將狀態列狀態列的特性。  當您呼叫 `GetStatusBarCtrl`，則會傳回 `CStatusBarCtrl` 物件的參考。  您可以使用參考操作狀態列控制項。  
+ [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), a member function new to MFC 4.0, allows you to take advantage of the Windows common control's support for status bar customization and additional functionality. `CStatusBar` member functions give you most of the functionality of the Windows common controls; however, when you call `GetStatusBarCtrl`, you can give your status bars even more of the characteristics of a status bar. When you call `GetStatusBarCtrl`, it will return a reference to a `CStatusBarCtrl` object. You can use that reference to manipulate the status bar control.  
   
- 下圖顯示數個指示器的狀態列。  
+ The following figure shows a status bar that displays several indicators.  
   
- ![狀態列](../mfc/media/vc37dy1.png "vc37DY1")  
-一個狀態列  
+ ![Status bar](../mfc/media/vc37dy1.gif "vc37dy1")  
+A Status Bar  
   
- 例如，工具列，在框架視窗時，狀態列物件在其父框架視窗內嵌和自動建構。  終結時，，，如同控制列，自動終結狀態列父框架。  
+ Like the toolbar, the status-bar object is embedded in its parent frame window and is constructed automatically when the frame window is constructed. The status bar, like all control bars, is destroyed automatically as well when the parent frame is destroyed.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [更新狀態列窗格文字](../mfc/updating-the-text-of-a-status-bar-pane.md)  
+-   [Updating the text of a status bar pane](../mfc/updating-the-text-of-a-status-bar-pane.md)  
   
--   MFC 類別 [CStatusBar](../mfc/reference/cstatusbar-class.md) 和 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
+-   MFC classes [CStatusBar](../mfc/reference/cstatusbar-class.md) and [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
   
--   [控制列](../mfc/control-bars.md)  
+-   [Control bars](../mfc/control-bars.md)  
   
--   [對話方塊列](../mfc/dialog-bars.md)  
+-   [Dialog bars](../mfc/dialog-bars.md)  
   
--   [工具列 \(MFC 工具列實作\)](../mfc/mfc-toolbar-implementation.md)  
+-   [Toolbars (MFC Toolbar Implementation)](../mfc/mfc-toolbar-implementation.md)  
   
-## 請參閱  
- [狀態列](../mfc/status-bars.md)
+## <a name="see-also"></a>See Also  
+ [Status Bars](../mfc/status-bars.md)
+
+

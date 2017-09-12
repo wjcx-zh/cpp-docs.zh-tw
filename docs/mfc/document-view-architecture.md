@@ -1,100 +1,119 @@
 ---
-title: "文件/檢視架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocument 類別"
-  - "CView 類別, 檢視架構"
-  - "文件物件"
-  - "文件物件, 文件/檢視架構"
-  - "文件物件, MFC 文件/檢視模型"
-  - "文件, MFC 文件/檢視模型"
-  - "MFC, 文件"
-  - "MFC, 檢視"
-  - "檢視, MFC 文件/檢視模型"
+title: Document-View Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CView class [MFC], view architecture
+- CDocument class [MFC]
+- MFC, views
+- views [MFC], MFC document/view model
+- document objects [MFC]
+- document objects [MFC], MFC document/view model
+- MFC, documents
+- documents [MFC], MFC document/view model
+- document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 文件/檢視架構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7baa789c6caafff25b6ababcf488f27ded9c17a9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-根據預設，MFC 應用程式精靈建立具有文件類別和檢視類別的應用程式基本架構。  MFC 將資料管理到這兩個類別。  文件儲存資料和處理列印資料並協調更新資料的多個檢視。  這個檢視會顯示資料、處理使用者的互動，包括選取和編輯。  
+---
+# <a name="documentview-architecture"></a>Document/View Architecture
+By default, the MFC Application Wizard creates an application skeleton with a document class and a view class. MFC separates data management into these two classes. The document stores the data and manages printing the data and coordinates updating multiple views of the data. The view displays the data and manages user interaction with it, including selection and editing.  
   
- 在這個模型， MFC 文件物件在持續性儲存體中讀取和寫入資料。  文件可能也提供介面給資料位置，無論它位於何處 \(例如資料庫\)。  一個檢視物件處理資料顯示，從呈現在視窗中的資料到使用者選取和編輯資料。  這個檢視從文件得到顯示資料並將任何資料變更傳回給文件。  
+ In this model, an MFC document object reads and writes data to persistent storage. The document may also provide an interface to the data wherever it resides (such as in a database). A separate view object manages data display, from rendering the data in a window to user selection and editing of data. The view obtains display data from the document and communicates back to the document any data changes.  
   
- 當您可以輕易地覆寫或忽略文件\/檢視中斷連接時，有強制性的理由在大部分的情況下遵循此模型。  其中一個最好的是當您需要相同文件的多個檢視時，例如報表和圖形檢視。  文件\/檢視模型讓另一個檢視物件表示資料的每一個檢視，而對所有檢視共用的程式碼 \(例如計算引擎\) 可能位於文件。  每當資料變更文件也負責更新所有檢視工作。  
+ While you can easily override or ignore the document/view separation, there are compelling reasons to follow this model in most cases. One of the best is when you need multiple views of the same document, such as both a spreadsheet and a chart view. The document/view model lets a separate view object represent each view of the data, while code common to all views (such as a calculation engine) can reside in the document. The document also takes on the task of updating all views whenever the data changes.  
   
- MFC 文件\/檢視架構可支援多個檢視、多個資料型別、分隔視窗和其他重要的使用者介面功能。  
+ The MFC document/view architecture makes it easy to support multiple views, multiple document types, splitter windows, and other valuable user-interface features.  
   
- MFC 架構最能讓使用者、您和程式設計人員看見的部分，是文件和檢視。  大部分使用 framework 開發應用程式進入撰寫文件和檢視類別。  本文章系列描述：  
+ The parts of the MFC framework most visible both to the user and to you, the programmer, are the document and view. Most of your work in developing an application with the framework goes into writing your document and view classes. This article family describes:  
   
--   文件和檢視的目的，以及如何在 framework 互動。  
+-   The purposes of documents and views and how they interact in the framework.  
   
--   說明您實作必須做什麼。  
+-   What you must do to implement them.  
   
- 在文件\/檢視的核心是四個重要類別：  
+ At the heart of document/view are four key classes:  
   
- [CDocument](../mfc/reference/cdocument-class.md) \(或 [COleDocument](../mfc/reference/coledocument-class.md)\) 類別支援儲存或控制您程式的資料並提供為程式設計人員定義的文件類別的基本功能的物件。  代表使用者通常會使用檔案功能表上的開啟命令開啟並使用檔案功能表上的儲存命令儲存的單位資料的文件。  
+ The [CDocument](../mfc/reference/cdocument-class.md) (or [COleDocument](../mfc/reference/coledocument-class.md)) class supports objects used to store or control your program's data and provides the basic functionality for programmer-defined document classes. A document represents the unit of data that the user typically opens with the Open command on the File menu and saves with the Save command on the File menu.  
   
- [CView](../mfc/reference/cview-class.md) \(或其中一個衍生類別\) 為程式設計人員定義的檢視類別提供基本功能。  檢視連結至文件，並作為文件和使用者之間的媒介：這個檢視呈現文件的影像在螢幕上將使用者輸入轉譯成對文件的作業。  此檢視也會呈現列印和預覽列印的影像。  
+ The [CView](../mfc/reference/cview-class.md) (or one of its many derived classes) provides the basic functionality for programmer-defined view classes. A view is attached to a document and acts as an intermediary between the document and the user: the view renders an image of the document on the screen and interprets user input as operations upon the document. The view also renders the image for both printing and print preview.  
   
- 其[CFrameWnd](../mfc/reference/cframewnd-class.md) \(或其中一個變化\) 支援文件的一或多個檢視周圍提供架構的物件。  
+ [CFrameWnd](../mfc/reference/cframewnd-class.md) (or one of its variations) supports objects that provides the frame around one or more views of a document.  
   
- [CDocTemplate](../mfc/reference/cdoctemplate-class.md) \(或 [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) 或 [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)\) 支援協調特定類型的一個或多個現有文件並處理建立正確的文件、檢視和框架視窗物件那個型別的物件。  
+ [CDocTemplate](../mfc/reference/cdoctemplate-class.md) (or [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) or [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)) supports an object that coordinates one or more existing documents of a given type and manages creating the correct document, view, and frame window objects for that type.  
   
- 下圖顯示了一個文件和它的檢視之間的關係。  
+ The following figure shows the relationship between a document and its view.  
   
- ![檢視是所顯示文件的一部分](../mfc/media/vc379n1.png "vc379N1")  
-文件和檢視  
+ ![View is the part of the document that's displayed](../mfc/media/vc379n1.gif "vc379n1")  
+Document and View  
   
- 在類別庫中的文件\/檢視實作將資料從其顯示與使用者操作分開。  對資料所做的變更都透過文件類別管理。  這個檢視呼叫這個介面存取及更新資料。  
+ The document/view implementation in the class library separates the data itself from its display and from user operations on the data. All changes to the data are managed through the document class. The view calls this interface to access and update the data.  
   
- 文件、其相關聯的檢視和建構檢視的框架檢視由文件樣板建立。  文件樣板負責建立和管理一個資料型別的所有文件。  
+ Documents, their associated views, and the frame windows that frame the views are created by a document template. The document template is responsible for creating and managing all documents of one document type.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [文件\/檢視架構的簡介](../mfc/a-portrait-of-the-document-view-architecture.md)  
+-   [A portrait of the document/view architecture](../mfc/a-portrait-of-the-document-view-architecture.md)  
   
--   [文件\/檢視架構的優點](../mfc/advantages-of-the-document-view-architecture.md)  
+-   [Advantages of the document/view architecture](../mfc/advantages-of-the-document-view-architecture.md)  
   
--   [文件和檢視類別由應用程式精靈建立。](../mfc/document-and-view-classes-created-by-the-mfc-application-wizard.md)  
+-   [Document and view classes created by the Application Wizard](../mfc/document-and-view-classes-created-by-the-mfc-application-wizard.md)  
   
--   [文件\/檢視架構的替代方案](../mfc/alternatives-to-the-document-view-architecture.md)  
+-   [Alternatives to the document/view architecture](../mfc/alternatives-to-the-document-view-architecture.md)  
   
--   [將多個檢視加入至單一文件](../mfc/adding-multiple-views-to-a-single-document.md)  
+-   [Adding Multiple Views to a Single Document](../mfc/adding-multiple-views-to-a-single-document.md)  
   
--   [使用文件](../mfc/using-documents.md)  
+-   [Using Documents](../mfc/using-documents.md)  
   
--   [使用檢視](../mfc/using-views.md)  
+-   [Using Views](../mfc/using-views.md)  
   
--   [多重文件類型、檢視和框架視窗](../mfc/multiple-document-types-views-and-frame-windows.md)  
+-   [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md)  
   
--   [初始化及清除文件和檢視](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
+-   [Initializing and cleaning up documents and views](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
   
--   [初始化您加入至文件 & 檢視類別。](../mfc/creating-new-documents-windows-and-views.md)  
+-   [Initialize your own additions to document & view classes](../mfc/creating-new-documents-windows-and-views.md)  
   
--   [使用具有文件和檢視的資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)  
+-   [Using database classes with documents and views](../data/mfc-using-database-classes-with-documents-and-views.md)  
   
--   [使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)  
+-   [Using database classes without documents and views](../data/mfc-using-database-classes-without-documents-and-views.md)  
   
--   [範例](../top/visual-cpp-samples.md)  
+-   [Samples](../visual-cpp-samples.md)  
   
-## 請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
  [Windows](../mfc/windows.md)   
- [框架視窗](../mfc/frame-windows.md)   
- [文件範本和文件\/檢視建立流程](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [文件\/檢視建立](../mfc/document-view-creation.md)   
- [建立新文件、視窗和檢視](../mfc/creating-new-documents-windows-and-views.md)
+ [Frame Windows](../mfc/frame-windows.md)   
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

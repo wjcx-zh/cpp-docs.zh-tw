@@ -1,73 +1,91 @@
 ---
-title: "使用 CArchive &lt;&lt; 和 &gt;&gt; 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CArchive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArchive 類別, 運算子"
-  - "CArchive 類別, 儲存及載入物件"
-  - "物件 [C++], 從先前儲存的值載入"
+title: Using the CArchive &lt;&lt; and &gt;&gt; Operators | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CArchive
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], loading from previously stored values
+- CArchive class [MFC], storing and loading objects
+- CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 使用 CArchive &lt;&lt; 和 &gt;&gt; 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4a0a3577e4f36eda3148e91ed2223cde7524bf9e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-`CArchive` 提供 \<\< 和 \>\> 運算子撰寫和讀取簡單資料型別以及 `CObject`來回檔案。  
+---
+# <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>Using the CArchive &lt;&lt; and &gt;&gt; Operators
+`CArchive` provides <\< and >> operators for writing and reading simple data types as well as `CObject`s to and from a file.  
   
-#### 儲存物件在檔案中的封存  
+#### <a name="to-store-an-object-in-a-file-via-an-archive"></a>To store an object in a file via an archive  
   
-1.  下列範例會在檔案顯示如何儲存物件透過封存:  
+1.  The following example shows how to store an object in a file via an archive:  
   
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/CPP/using-the-carchive-output-and-input-operators_1.cpp)]  
+     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]  
   
-#### 從檔案先前儲存的值載入物件。  
+#### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>To load an object from a value previously stored in a file  
   
-1.  下列範例示範如何從檔案先前儲存的值載入物件:  
+1.  The following example shows how to load an object from a value previously stored in a file:  
   
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/CPP/using-the-carchive-output-and-input-operators_2.cpp)]  
+     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- 通常，您將檔案儲存和載入傳遞資料保存在 `CObject`的 `Serialize` 函式衍生類別，您必須宣告與 **DECLARE\_SERIALIZE** 巨集。  對 `CArchive` 物件的參考傳遞至 `Serialize` 函式。  您呼叫 `CArchive` 物件的 `IsLoading` 函式來判斷 `Serialize` 函式是否呼叫從檔案載入資料或將資料儲存至檔案。  
+ Usually, you store and load data to and from a file via an archive in the `Serialize` functions of `CObject`-derived classes, which you must have declared with the **DECLARE_SERIALIZE** macro. A reference to a `CArchive` object is passed to your `Serialize` function. You call the `IsLoading` function of the `CArchive` object to determine whether the `Serialize` function has been called to load data from the file or store data to the file.  
   
- 可序列化之 `CObject`的 `Serialize` 函式衍生類別通常會具有下列格式:  
+ The `Serialize` function of a serializable `CObject`-derived class typically has the following form:  
   
- [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/CPP/using-the-carchive-output-and-input-operators_3.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- 上述程式碼範本完全做為文件的 `Serialize` 函式中的 AppWizard 建立相同 \( **CDocument\)**從類別衍生自。  這個程式碼範本可協助您撰寫更容易在下列範例中檢閱的程式碼，因為存放的程式碼和載入程式碼必須是平行:  
+ The above code template is exactly the same as the one AppWizard creates for the `Serialize` function of the document (a class derived from **CDocument)**. This code template helps you write code that is easier to review, because the storing code and the loading code should always be parallel, as in the following example:  
   
- [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/CPP/using-the-carchive-output-and-input-operators_4.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
- 程式庫定義 **\<\<** 和 **\>\>** `CArchive` 的運算子做為第一個運算元和下列資料型別和類別型別做為第二個運算元:  
+ The library defines **<\<** and **>>** operators for `CArchive` as the first operand and the following data types and class types as the second operand:  
   
 ||||  
 |-|-|-|  
-|`CObject*`|**大小和 CSize**|**float**|  
-|**WORD**|`CString`|**POINT** 和 `CPoint`|  
-|`DWORD`|**BYTE**|`RECT` 和 `CRect`|  
-|**Double**|**LONG**|`CTime` 和 `CTimeSpan`|  
+|`CObject*`|**SIZE and CSize**|**float**|  
+|**WORD**|`CString`|**POINT** and `CPoint`|  
+|`DWORD`|**BYTE**|`RECT` and `CRect`|  
+|**Double**|**LONG**|`CTime` and `CTimeSpan`|  
 |`Int`|**COleCurrency**|`COleVariant`|  
 |`COleDateTime`|`COleDateTimeSpan`||  
   
 > [!NOTE]
->  藉由封存儲存和載入 `CObject` 需要額外的考量。  如需詳細資訊，請參閱 [儲存和載入 CObjects 透過封存](../mfc/storing-and-loading-cobjects-via-an-archive.md)。  
+>  Storing and loading `CObject`s via an archive requires extra consideration. For more information, see [Storing and Loading CObjects via an Archive](../mfc/storing-and-loading-cobjects-via-an-archive.md).  
   
- **CArchive \<\<** 和 **\>\>** 運算子一律傳回 `CArchive` 物件的參考，是第一個運算元。  這可讓您繫結運算子，如下所示:  
+ The **CArchive <\<** and **>>** operators always return a reference to the `CArchive` object, which is the first operand. This enables you to chain the operators, as illustrated below:  
   
- [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/CPP/using-the-carchive-output-and-input-operators_5.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]  
   
-## 請參閱  
- [序列化：序列化物件](../mfc/serialization-serializing-an-object.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md)
+
+

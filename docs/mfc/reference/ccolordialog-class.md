@@ -1,5 +1,5 @@
 ---
-title: "CColorDialog 類別 |Microsoft 文件"
+title: CColorDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,9 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- colors, dialog box
-- dialog boxes, colors
-- CColorDialog class
+- CColorDialog [MFC], CColorDialog
+- CColorDialog [MFC], DoModal
+- CColorDialog [MFC], GetColor
+- CColorDialog [MFC], GetSavedCustomColors
+- CColorDialog [MFC], SetCurrentColor
+- CColorDialog [MFC], OnColorOK
+- CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
 caps.latest.revision: 25
 author: mikeblome
@@ -43,17 +47,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a8aee088aadbca18acda348c574c8f4b55d1ecbb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 88568399cc2977fb246bf2e54f7706066a2ef6b5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccolordialog-class"></a>CColorDialog 類別
-可讓您將色彩選取對話方塊納入應用程式。  
+# <a name="ccolordialog-class"></a>CColorDialog Class
+Allows you to incorporate a color-selection dialog box into your application.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CColorDialog : public CCommonDialog  
@@ -61,58 +65,58 @@ class CColorDialog : public CCommonDialog
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CColorDialog::CColorDialog](#ccolordialog)|建構 `CColorDialog` 物件。|  
+|[CColorDialog::CColorDialog](#ccolordialog)|Constructs a `CColorDialog` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CColorDialog::DoModal](#domodal)|會顯示一個對話方塊，可讓使用者進行選擇。|  
-|[CColorDialog::GetColor](#getcolor)|傳回**COLORREF**結構，其中包含所選取之色彩的值。|  
-|[CColorDialog::GetSavedCustomColors](#getsavedcustomcolors)|擷取使用者所建立的自訂色彩。|  
-|[CColorDialog::SetCurrentColor](#setcurrentcolor)|強制目前的色彩選擇，以指定的色彩。|  
+|[CColorDialog::DoModal](#domodal)|Displays a color dialog box and allows the user to make a selection.|  
+|[CColorDialog::GetColor](#getcolor)|Returns a **COLORREF** structure containing the values of the selected color.|  
+|[CColorDialog::GetSavedCustomColors](#getsavedcustomcolors)|Retrieves custom colors created by the user.|  
+|[CColorDialog::SetCurrentColor](#setcurrentcolor)|Forces the current color selection to the specified color.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CColorDialog::OnColorOK](#oncolorok)|覆寫，以驗證輸入到對話方塊中的色彩。|  
+|[CColorDialog::OnColorOK](#oncolorok)|Override to validate the color entered into the dialog box.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CColorDialog::m_cc](#m_cc)|用來自訂設定，在對話方塊中的結構。|  
+|[CColorDialog::m_cc](#m_cc)|A structure used to customize the settings of the dialog box.|  
   
-## <a name="remarks"></a>備註  
- A`CColorDialog`物件是針對顯示系統定義的色彩清單對話方塊。 使用者可以選取，或從清單中，然後回報給應用程式之對話方塊的 結束時建立特定的色彩。  
+## <a name="remarks"></a>Remarks  
+ A `CColorDialog` object is a dialog box with a list of colors that are defined for the display system. The user can select or create a particular color from the list, which is then reported back to the application when the dialog box exits.  
   
- 若要建構`CColorDialog`物件、 使用提供的建構函式或衍生新類別，並使用您自己的自訂建構函式。  
+ To construct a `CColorDialog` object, use the provided constructor or derive a new class and use your own custom constructor.  
   
- 一旦建構的對話方塊中，您可以設定或修改中的任何值[m_cc](#m_cc)結構，以初始化對話方塊的控制項的值。 `m_cc`結構的型別是[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)。  
+ Once the dialog box has been constructed, you can set or modify any values in the [m_cc](#m_cc) structure to initialize the values of the dialog box's controls. The `m_cc` structure is of type [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830).  
   
- 初始化對話方塊的控制項之後, 呼叫`DoModal`成員函式來顯示對話方塊，並允許使用者選取的色彩。 `DoModal`傳回使用者的選取項目中的其中一個對話方塊的 確定 ( **IDOK**) 或 取消 ( **IDCANCEL**) 按鈕。  
+ After initializing the dialog box's controls, call the `DoModal` member function to display the dialog box and allow the user to select a color. `DoModal` returns the user's selection of either the dialog box's OK ( **IDOK**) or Cancel ( **IDCANCEL**) button.  
   
- 如果`DoModal`傳回**IDOK**，您可以使用其中一個`CColorDialog`的成員函式來擷取使用者輸入的資訊。  
+ If `DoModal` returns **IDOK**, you can use one of `CColorDialog`'s member functions to retrieve the information input by the user.  
   
- 您可以使用 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函式判斷是否在對話方塊的初始化期間發生錯誤，並了解錯誤的詳細資訊。  
+ You can use the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred during initialization of the dialog box and to learn more about the error.  
   
- `CColorDialog`依賴 COMMDLG。隨附於 Windows 3.1 和更新版本的 DLL 檔案。  
+ `CColorDialog` relies on the COMMDLG.DLL file that ships with Windows versions 3.1 and later.  
   
- 若要自訂對話方塊中，衍生自`CColorDialog`、 提供自訂的對話方塊範本，以及新增訊息對應到處理從擴充的控制項通知訊息。 任何未處理的訊息應該傳遞至基底類別。  
+ To customize the dialog box, derive a class from `CColorDialog`, provide a custom dialog template, and add a message map to process the notification messages from the extended controls. Any unprocessed messages should be passed to the base class.  
   
- 自訂攔截函式不需要。  
+ Customizing the hook function is not required.  
   
 > [!NOTE]
->  某些安裝`CColorDialog`物件將不會顯示灰色背景如果您已使用架構來進行其他`CDialog`物件灰色。  
+>  On some installations the `CColorDialog` object will not display with a gray background if you have used the framework to make other `CDialog` objects gray.  
   
- 如需有關使用`CColorDialog`，請參閱[通用對話方塊類別](../../mfc/common-dialog-classes.md)  
+ For more information on using `CColorDialog`, see [Common Dialog Classes](../../mfc/common-dialog-classes.md)  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -125,11 +129,11 @@ class CColorDialog : public CCommonDialog
   
  `CColorDialog`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="ccolordialog"></a>CColorDialog::CColorDialog  
- 建構 `CColorDialog` 物件。  
+##  <a name="ccolordialog"></a>  CColorDialog::CColorDialog  
+ Constructs a `CColorDialog` object.  
   
 ```  
 CColorDialog(
@@ -138,132 +142,132 @@ CColorDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *clrInit*  
- 預設色彩選項。 如果未不指定任何值，預設為 RGB(0,0,0) （黑色）。  
+ The default color selection. If no value is specified, the default is RGB(0,0,0) (black).  
   
  `dwFlags`  
- 一組自訂的函式及外觀 對話方塊中的旗標。 如需詳細資訊，請參閱[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ A set of flags that customize the function and appearance of the dialog box. For more information, see the [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) structure in the Windows SDK.  
   
  `pParentWnd`  
- 對話方塊的父系或擁有者視窗的指標。  
+ A pointer to the dialog box's parent or owner window.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&49;](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#49](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CColorDialog::DoModal  
- 呼叫此函式來顯示 Windows 通用色彩對話方塊中，並允許使用者選取色彩。  
+##  <a name="domodal"></a>  CColorDialog::DoModal  
+ Call this function to display the Windows common color dialog box and allow the user to select a color.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>傳回值  
- **IDOK**或**IDCANCEL**。 如果**IDCANCEL**會傳回，呼叫 Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916)函式來判斷是否發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ **IDOK** or **IDCANCEL**. If **IDCANCEL** is returned, call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
   
- **IDOK**和**IDCANCEL**都是常數，指出使用者是否已選取 [確定] 或 [取消] 按鈕。  
+ **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
   
-### <a name="remarks"></a>備註  
- 如果您想要設定的成員初始化的各種色彩對話方塊選項[m_cc](#m_cc)結構，您應該執行這項操作之前，先呼叫`DoModal`但在建構對話方塊物件之後。  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various color dialog-box options by setting members of the [m_cc](#m_cc) structure, you should do this before calling `DoModal` but after the dialog-box object is constructed.  
   
- 在呼叫`DoModal`，您可以呼叫其他成員函式來擷取設定或使用者的資訊輸入到對話方塊。  
+ After calling `DoModal`, you can call other member functions to retrieve the settings or information input by the user into the dialog box.  
   
-### <a name="example"></a>範例  
-  請參閱範例[CColorDialog::CColorDialog](#ccolordialog)。  
+### <a name="example"></a>Example  
+  See the example for [CColorDialog::CColorDialog](#ccolordialog).  
   
-##  <a name="getcolor"></a>CColorDialog::GetColor  
- 呼叫此函式之後呼叫`DoModal`擷取使用者所選的色彩資訊。  
+##  <a name="getcolor"></a>  CColorDialog::GetColor  
+ Call this function after calling `DoModal` to retrieve the information about the color the user selected.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，其中包含 [色彩] 對話方塊中選取的色彩的 RGB 資訊。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the RGB information for the color selected in the color dialog box.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&50;](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
   
-##  <a name="getsavedcustomcolors"></a>CColorDialog::GetSavedCustomColors  
- `CColorDialog`物件可讓使用者，除了選擇色彩，來定義最多 16 個自訂色彩。  
+##  <a name="getsavedcustomcolors"></a>  CColorDialog::GetSavedCustomColors  
+ `CColorDialog` objects permit the user, in addition to choosing colors, to define up to 16 custom colors.  
   
 ```  
 static COLORREF* PASCAL GetSavedCustomColors();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 儲存使用者所建立的自訂色彩 16 RGB 色彩值的陣列指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to an array of 16 RGB color values that stores custom colors created by the user.  
   
-### <a name="remarks"></a>備註  
- `GetSavedCustomColors`成員函式提供存取這些色彩。 之後，可以擷取這些色彩[DoModal](#domodal)傳回**IDOK**。  
+### <a name="remarks"></a>Remarks  
+ The `GetSavedCustomColors` member function provides access to these colors. These colors can be retrieved after [DoModal](#domodal) returns **IDOK**.  
   
- 每個 16 RGB 值傳回的陣列中會初始化為 RGB(255,255,255) （白色）。 只會在應用程式中的對話方塊方塊引動過程之間，會儲存使用者選擇自訂色彩。 如果您想要儲存這些應用程式的引動過程之間的色彩，您必須儲存它們以其他方式，例如在初始化期間 (。INI) 檔案。  
+ Each of the 16 RGB values in the returned array is initialized to RGB(255,255,255) (white). The custom colors chosen by the user are saved only between dialog box invocations within the application. If you wish to save these colors between invocations of the application, you must save them in some other manner, such as in an initialization (.INI) file.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&51;](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
-##  <a name="m_cc"></a>CColorDialog::m_cc  
- 型別的結構[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)，其成員儲存的特性和對話方塊中的值。  
+##  <a name="m_cc"></a>  CColorDialog::m_cc  
+ A structure of type [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830), whose members store the characteristics and values of the dialog box.  
   
 ```  
 CHOOSECOLOR m_cc;  
 ```  
   
-### <a name="remarks"></a>備註  
- 在建構之後`CColorDialog`物件時，您可以使用`m_cc`設定 對話方塊中，然後再呼叫的各種層面[DoModal](#domodal)成員函式。  
+### <a name="remarks"></a>Remarks  
+ After constructing a `CColorDialog` object, you can use `m_cc` to set various aspects of the dialog box before calling the [DoModal](#domodal) member function.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&53;](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
   
-##  <a name="oncolorok"></a>CColorDialog::OnColorOK  
- 覆寫，以驗證輸入到對話方塊中的色彩。  
+##  <a name="oncolorok"></a>  CColorDialog::OnColorOK  
+ Override to validate the color entered into the dialog box.  
   
 ```  
 virtual BOOL OnColorOK();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果不應該關閉對話方塊。否則為 0，表示接受輸入的色彩。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the dialog box should not be dismissed; otherwise 0 to accept the color that was entered.  
   
-### <a name="remarks"></a>備註  
- 只有當您想要提供自訂驗證的使用者選取 [色彩] 對話方塊中的色彩，請覆寫這個函式。  
+### <a name="remarks"></a>Remarks  
+ Override this function only if you want to provide custom validation of the color the user selects in the color dialog box.  
   
- 使用者可以選取一個色彩，由下列兩種方法之一︰  
+ The user can select a color by one of the following two methods:  
   
--   按一下色彩調色盤的色彩。 所選取之的色彩的 RGB 值接著會反映在適當的 RGB 編輯方塊中。  
+-   Clicking a color on the color palette. The selected color's RGB values are then reflected in the appropriate RGB edit boxes.  
   
--   輸入 RGB 值的編輯方塊  
+-   Entering values in the RGB edit boxes  
   
- 覆寫`OnColorOK`可讓您以拒絕使用者進入特定應用程式因故通用色彩對話方塊中的色彩。  
+ Overriding `OnColorOK` allows you to reject a color the user enters into a common color dialog box for any application-specific reason.  
   
- 一般來說，您不需要使用此函式，因為架構提供的色彩的預設驗證，並顯示訊息方塊，如果輸入無效的色彩。  
+ Normally, you do not need to use this function because the framework provides default validation of colors and displays a message box if an invalid color is entered.  
   
- 您可以呼叫[SetCurrentColor](#setcurrentcolor)從`OnColorOK`強制色彩選擇。 一次`OnColorOK`已經引發 (亦即，使用者按一下**確定**接受色彩變更)，您可以呼叫[GetColor](#getcolor)以取得新的色彩的 RGB 值。  
+ You can call [SetCurrentColor](#setcurrentcolor) from within `OnColorOK` to force a color selection. Once `OnColorOK` has been fired (that is, the user clicks **OK** to accept the color change), you can call [GetColor](#getcolor) to get the RGB value of the new color.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&52;](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
-##  <a name="setcurrentcolor"></a>CColorDialog::SetCurrentColor  
- 呼叫此函式之後呼叫`DoModal`強制在指定的色彩值目前的色彩選擇`clr`。  
+##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
+ Call this function after calling `DoModal` to force the current color selection to the color value specified in `clr`.  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `clr`  
- RGB 色彩值。  
+ An RGB color value.  
   
-### <a name="remarks"></a>備註  
- 訊息處理常式中呼叫此函式或`OnColorOK`。 對話方塊會自動更新的值為基礎的使用者選取`clr`參數。  
+### <a name="remarks"></a>Remarks  
+ This function is called from within a message handler or `OnColorOK`. The dialog box will automatically update the user's selection based on the value of the `clr` parameter.  
   
-### <a name="example"></a>範例  
-  請參閱範例[CColorDialog::OnColorOK](#oncolorok)。  
+### <a name="example"></a>Example  
+  See the example for [CColorDialog::OnColorOK](#oncolorok).  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 MDI](../../visual-cpp-samples.md)   
- [MFC 範例 DRAWCLI](../../visual-cpp-samples.md)   
- [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDI](../../visual-cpp-samples.md)   
+ [MFC Sample DRAWCLI](../../visual-cpp-samples.md)   
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

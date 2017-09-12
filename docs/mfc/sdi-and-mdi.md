@@ -1,40 +1,57 @@
 ---
-title: "SDI 和 MDI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架視窗, MDI 應用程式"
-  - "框架視窗, SDI 應用程式"
-  - "MDI, 和 SDI 的比較"
-  - "MFC, 視窗"
-  - "單一文件介面 (SDI), 應用程式"
+title: SDI and MDI | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], SDI applications
+- frame windows [MFC], MDI applications
+- MFC, windows
+- single document interface (SDI) [MFC], applications
+- MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# SDI 和 MDI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 974b31893158d532397441f37403028e39aa60de
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 可與單一文件介面 \(SDI\) \(SDI\) 和多重文件一起使用連接 \(MDI\) 應用程式。  
+---
+# <a name="sdi-and-mdi"></a>SDI and MDI
+MFC makes it easy to work with both single-document interface (SDI) and multiple-document interface (MDI) applications.  
   
- SDI 應用程式一次只允許一個開啟的文件框架視窗。  MDI 應用程式允許多重文件框架視窗中開啟應用程式的相同執行個體。  MDI 應用程式中有多個 MDI 子視窗，是框架視窗，可以開啟的視窗中，含有不同資料的每個。  在某些應用程式中，子視窗可以是不同的型別，例如圖表視窗和報告視窗。  在這種情況下，，如同的 MDI 子視窗不同類型啟動，功能表列會變更。  
+ SDI applications allow only one open document frame window at a time. MDI applications allow multiple document frame windows to be open in the same instance of an application. An MDI application has a window within which multiple MDI child windows, which are frame windows themselves, can be opened, each containing a separate document. In some applications, the child windows can be of different types, such as chart windows and spreadsheet windows. In that case, the menu bar can change as MDI child windows of different types are activated.  
   
 > [!NOTE]
->  在 Windows 95 中，因為作業系統採用了「文件置中的檢視，以及之後，應用程式通常是 SDI。  
+>  Under Windows 95 and later, applications are commonly SDI because the operating system has adopted a "document-centered" view.  
   
- 如需詳細資訊，請參閱 [文件、檢視和架構](../mfc/documents-views-and-the-framework.md)。  
+ For more information, see [Documents, Views, and the Framework](../mfc/documents-views-and-the-framework.md).  
   
-## 請參閱  
- [使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

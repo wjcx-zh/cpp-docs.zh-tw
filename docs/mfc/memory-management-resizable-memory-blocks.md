@@ -1,36 +1,55 @@
 ---
-title: "記憶體管理：可調整大小的記憶體區塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "區塊, 記憶體配置"
-  - "記憶體配置, 記憶體區塊大小"
-  - "記憶體區塊, 配置"
-  - "記憶體區塊, 可調整大小"
-  - "記憶體, 損毀"
-  - "可調整大小的記憶體區塊"
+title: 'Memory Management: Resizable Memory Blocks | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory blocks [MFC], resizable
+- memory [MFC], corruption
+- memory allocation [MFC], memory block size
+- memory blocks [MFC], allocating
+- blocks [MFC], memory allocation
+- resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 記憶體管理：可調整大小的記憶體區塊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6259834253e570befdfbac6cf97d8fbc7258edd9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-**new** 和 **delete** 運算子，描述在這篇文章 [記憶體管理:範例](../mfc/memory-management-examples.md)，獲益配置和解除配置固定大小的記憶體區塊和物件。  有時候，您的應用程式可能需要可調整大小的記憶體區塊。  您必須使用標準 C 執行階段程式庫函式 [malloc](../c-runtime-library/reference/malloc.md)、 [realloc](../c-runtime-library/reference/realloc.md)和 [可用](../c-runtime-library/reference/free.md) 來管理堆積的可調整大小的記憶體區塊。  
+---
+# <a name="memory-management-resizable-memory-blocks"></a>Memory Management: Resizable Memory Blocks
+The **new** and **delete** operators, described in the article [Memory Management: Examples](../mfc/memory-management-examples.md), are good for allocating and deallocating fixed-size memory blocks and objects. Occasionally, your application may need resizable memory blocks. You must use the standard C run-time library functions [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), and [free](../c-runtime-library/reference/free.md) to manage resizable memory blocks on the heap.  
   
 > [!IMPORTANT]
->  混合 **new** 和 **delete** 運算子在相同記憶體區塊的可調整大小的記憶體配置函式會在 MFC 偵錯版本的損毀記憶體。  您不應該使用在記憶體區塊的 `realloc` 配置與 **new**。  同樣地，您不應該配置有 **new** 運算子的記憶體區塊和刪除它與 **free**，或使用記憶體區塊的 **delete** 運算子配置的 `malloc`。  
+>  Mixing the **new** and **delete** operators with the resizable memory-allocation functions on the same memory block will result in corrupted memory in the Debug version of MFC. You should not use `realloc` on a memory block allocated with **new**. Likewise, you should not allocate a memory block with the **new** operator and delete it with **free**, or use the **delete** operator on a block of memory allocated with `malloc`.  
   
-## 請參閱  
- [記憶體管理：堆積配置](../mfc/memory-management-heap-allocation.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management: Heap Allocation](../mfc/memory-management-heap-allocation.md)
+
+

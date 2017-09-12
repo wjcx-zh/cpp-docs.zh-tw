@@ -1,5 +1,5 @@
 ---
-title: "CMultiPageDHtmlDialog 類別 |Microsoft 文件"
+title: CMultiPageDHtmlDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMultiPageDHtmlDialog class
+- CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
 caps.latest.revision: 22
 author: mikeblome
@@ -35,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c00af20731b2c47a0074366722da3f4a0711ef85
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 14f45cfc76755650624ccee4da74e18aba081278
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog 類別
-多頁對話方塊會循序顯示多個 HTML 網頁並處理來自每頁的事件。  
+# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog Class
+A multipage dialog displays multiple HTML pages sequentially and handles the events from each page.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMultiPageDHtmlDialog : public CDHtmlDialog  
@@ -53,28 +53,28 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|建構多頁 （精靈樣式） DHTML 對話方塊物件。|  
-|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|終結多頁 DHTML 對話方塊物件。|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Constructs a multipage (wizard-style) DHTML dialog object.|  
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Destroys a multipage DHTML dialog object.|  
   
-## <a name="remarks"></a>備註  
- 這樣的機制是[DHTML 和 URL 事件對應](http://msdn.microsoft.com/en-us/2a7332f0-79d7-46e4-b816-0a618c46777a)，其中包含[內嵌事件對應](http://msdn.microsoft.com/library/5346210f-f8b7-4e28-9d2c-d9d7fd42421d)針對每個頁面。  
+## <a name="remarks"></a>Remarks  
+ The mechanism for doing this is a [DHTML and URL event map](dhtml-event-maps.md), which contains embedded event maps for each page.  
   
-## <a name="example"></a>範例  
- 此多頁對話方塊假設定義簡單的精靈式功能的三個 HTML 資源。 第一頁`Next`按鈕，第二個**Prev**和`Next`第三個按鈕， **Prev**按鈕。 按下其中一個按鈕時，處理常式函式呼叫[CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource)載入適當的新頁面。  
+## <a name="example"></a>Example  
+ This multipage dialog assumes three HTML resources that define simple wizard-like functionality. The first page has a `Next` button, the second a **Prev** and `Next` button, and the third a **Prev** button. When one of the buttons is pressed, a handler function calls [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) to load the appropriate new page.  
   
- 類別中的宣告 （CMyMultiPageDlg.h) 關聯的部分︰  
+ The pertinent parts of the class declaration (in CMyMultiPageDlg.h):  
   
- [!code-cpp[NVC_MFCDocView&181;](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
+ [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
   
- 類別中的實作 （CMyMultipageDlg.cpp) 關聯的部分︰  
+ The pertinent parts of the class implementation (in CMyMultipageDlg.cpp):  
   
- [!code-cpp[NVC_MFCDocView #&182;](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDHtmlSinkHandlerBase2`  
@@ -95,11 +95,11 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
  `CMultiPageDHtmlDialog`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
   
-##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
- 建構多頁 （精靈樣式） DHTML 對話方塊物件。  
+##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+ Constructs a multipage (wizard-style) DHTML dialog object.  
   
 ```  
 CMultiPageDHtmlDialog(
@@ -116,29 +116,29 @@ CMultiPageDHtmlDialog(
 CMultiPageDHtmlDialog();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- 對話方塊範本資源的名稱以 null 結束字串。  
+ The null-terminated string that is the name of a dialog-box template resource.  
   
  `szHtmlResID`  
- 以 null 結束的字串是 HTML 資源名稱。  
+ The null-terminated string that is the name of an HTML resource.  
   
  `pParentWnd`  
- 父系或擁有者的視窗物件的指標 (類型的[CWnd](../../mfc/reference/cwnd-class.md)) 對話方塊物件所屬。 如果是**NULL**，對話方塊物件的父視窗設為主要應用程式視窗。  
+ A pointer to the parent or owner window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
  `nIDTemplate`  
- 包含對話方塊範本資源的 ID 編號。  
+ Contains the ID number of a dialog-box template resource.  
   
  `nHtmlResID`  
- 包含 HTML 資源的 ID 編號。  
+ Contains the ID number of an HTML resource.  
   
-##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
- 終結多頁 DHTML 對話方塊物件。  
+##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog  
+ Destroys a multipage DHTML dialog object.  
   
 ```  
 virtual ~CMultiPageDHtmlDialog();
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [CDHtmlDialog 類別](../../mfc/reference/cdhtmldialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)
 

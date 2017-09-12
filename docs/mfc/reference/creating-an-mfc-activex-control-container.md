@@ -1,5 +1,5 @@
 ---
-title: "建立 MFC ActiveX 控制項容器 |Microsoft 文件"
+title: Creating an MFC ActiveX Control Container | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,10 +13,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC ActiveX controls [C++], containers
-- ActiveX control containers [C++], creating
-- containers [C++], creating
-- OLE controls [C++], containers
+- MFC ActiveX controls [MFC], containers
+- ActiveX control containers [MFC], creating
+- containers [MFC], creating
+- OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
 caps.latest.revision: 8
 author: mikeblome
@@ -36,31 +36,31 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 54e2edef0a0b37da1260e9d62c57524e864356be
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9bfc976963c759b540fc104fbddceebcc8747375
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creating-an-mfc-activex-control-container"></a>建立 MFC ActiveX 控制項容器
-ActiveX 控制項容器是提供 ActiveX (先前稱為 OLE) 控制項執行的環境的主程式。 您可以建立應用程式可以含有包含或不含 MFC ActiveX 控制項，但是就能輕鬆與 MFC。  
+# <a name="creating-an-mfc-activex-control-container"></a>Creating an MFC ActiveX Control Container
+An ActiveX control container is a parent program that supplies the environment for an ActiveX (formerly OLE) control to run. You can create an application capable of containing ActiveX controls with or without MFC, but it is much easier to do with MFC.  
   
- 建立 MFC 容器使用的程式[MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)可讓您存取 ActiveX 控制項和自動化的 MFC 和 ActiveX 類別所實作的許多功能。 這些功能包括視覺化編輯，自動化中，建立複合檔案，並支援控制項的。 父程式將支援的 MFC 應用程式精靈視覺化編輯選項包括建立容器、 迷你伺服器、 全伺服器和容器和伺服器的程式。  
+ Creating an MFC container program using the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md) allows you to access the many features of ActiveX controls and Automation that are implemented by the MFC and ActiveX classes. These features include visual editing, Automation, creating compound files, and support for controls. The MFC Application Wizard visual editing options that your parent program will support include creating a container, a mini-server, a full-server, and a program that is both a container and a server.  
   
--   **新的 MFC 應用程式**。 若要建立新的 MFC 程式，其中包含自動化，視覺化編輯，複合檔案，或控制支援、 使用 MFC 應用程式精靈 以及選擇適當的 Automation 選項。  
+-   **New MFC Application**. To create a new MFC program that includes Automation, visual editing, compound files, or control support, use the MFC Application Wizard and choose the appropriate Automation options.  
   
--   **現有的 MFC 應用程式**。 如果您要新增控制項內含項目至現有的 MFC 應用程式，請參閱[OLE 控制項容器︰ 手動啟用 OLE 控制項內含項目](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)。  
+-   **Existing MFC Application**. If you are adding control containment to an existing MFC application, see [OLE Control Containers: Manually Enabling OLE Control Containment](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).  
   
-### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>若要建立 ActiveX 容器任何下列類型的應用程式  
+### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>To create an ActiveX container for any of the following types of applications  
   
-1.  [容器](../../mfc/containers.md)  
+1.  [Containers](../../mfc/containers.md)  
   
-2.  [視覺化編輯](../../mfc/ole-mfc.md)  
+2.  [Visual editing](../../mfc/ole-mfc.md)  
   
-3.  [MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)  
+3.  [MFC ActiveX controls](../../mfc/mfc-activex-controls.md)  
   
-## <a name="see-also"></a>另請參閱  
- [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)
+## <a name="see-also"></a>See Also  
+ [Visual C++ Project Types](../../ide/visual-cpp-project-types.md)
 
 

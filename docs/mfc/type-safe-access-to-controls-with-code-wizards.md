@@ -1,48 +1,67 @@
 ---
-title: "使用程式碼精靈的控制項類型安全存取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "程式碼精靈"
-  - "DDX (對話資料交換), 存取控制項"
-  - "對話方塊控制項, 存取"
-  - "對話方塊, 存取控制項"
+title: Type-Safe Access to Controls With Code Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DDX (dialog data exchange), access to controls
+- code wizards
+- dialog boxes [MFC], access to controls
+- dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 使用程式碼精靈的控制項類型安全存取
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77917663ef027781f7d132028dac21c735ca48dc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-如果您熟悉 DDX 功能，您可以使用 [加入成員變數精靈](../ide/add-member-variable-wizard.md) 控制項屬性的型別安全存取。  這個方法會建立控制項容易沒有程式碼精靈。  
+---
+# <a name="type-safe-access-to-controls-with-code-wizards"></a>Type-Safe Access to Controls With Code Wizards
+If you are familiar with DDX features, you can use the Control property in the [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) to create type-safe access. This approach is easier than creating controls without code wizards.  
   
- 如果您要控制值的存取， DDX 提供它。  如果您要不僅存取控制項的值，請使用加入成員變數精靈加入適當類別的成員變數加入至對話方塊類別。  此成員變數給控制項屬性。  
+ If you simply want access to a control's value, DDX provides it. If you want to do more than access a control's value, use the Add Member Variable Wizard to add a member variable of the appropriate class to your dialog class. Attach this member variable to the Control property.  
   
- 成員變數可能有控制項屬性 \(而不是屬性的值。  Value 屬性是指從控制項傳回的資料型別，例如 `CString` 或 `int`。  控制項屬性透過型別是一個 MFC 控制項類別，例如 `CButton` 或 `CEdit`資料成員啟用對控制項的直接存取。  
+ Member variables can have a Control property instead of a Value property. The Value property refers to the type of data returned from the control, such as `CString` or `int`. The Control property enables direct access to the control through a data member whose type is one of the control classes in MFC, such as `CButton` or `CEdit`.  
   
 > [!NOTE]
->  如需特定控制項，您可以，因此，如果您需要，具有值的屬性的多個成員變數和最多與控制項屬性的 10% 成員變數。  因為多個物件附加至控制項，或其他視窗，會導致訊息對應，模稜兩可的情況。您只能將 MFC 物件會對應至控制項。  
+>  For a given control, you can, if you wish, have multiple member variables with the Value property and at most one member variable with the Control property. You can have only one MFC object mapped to a control because multiple objects attached to a control, or any other window, would lead to an ambiguity in the message map.  
   
- 您可以使用這個物件呼叫控制物件的所有成員函式。  此呼叫會影響在對話方塊的控制項。  例如，，以變數 `m_Checkbox`代表的核取方塊控制項， `CButton`型別，您可以呼叫:  
+ You can use this object to call any member functions for the control object. Such calls affect the control in the dialog box. For example, for a check-box control represented by a variable `m_Checkbox`, of type `CButton`, you could call:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/CPP/type-safe-access-to-controls-with-code-wizards_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]  
   
- 此成員變數 `m_Checkbox` 為用途和成員函式在 [對控制項的型別安全存取沒有程式碼精靈](../mfc/type-safe-access-to-controls-without-code-wizards.md)中顯示的 `GetMyCheckbox` 。  如果核取方塊不是自動核取方塊，則 **BN\_CLICKED** 控制通知訊息的對話方塊類別會需要處理常式，在按一下按鈕時。  
+ Here the member variable `m_Checkbox` serves the same purpose as the member function `GetMyCheckbox` shown in [Type-Safe Access to Controls Without Code Wizards](../mfc/type-safe-access-to-controls-without-code-wizards.md). If the check box is not an auto check box, you would still need a handler in your dialog class for the **BN_CLICKED** control-notification message when the button is clicked.  
   
- 如需控制項的詳細資訊，請參閱 [控制項](../mfc/controls-mfc.md)。  
+ For more information about controls, see [Controls](../mfc/controls-mfc.md).  
   
-## 請參閱  
- [對話方塊中之控制項的類型安全存取](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)   
- [不使用程式碼精靈的控制項類型安全存取](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+## <a name="see-also"></a>See Also  
+ [Type-Safe Access to Controls in a Dialog Box](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Type-Safe Access to Controls Without Code Wizards](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+
+

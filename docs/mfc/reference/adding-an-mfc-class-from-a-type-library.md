@@ -1,5 +1,5 @@
 ---
-title: "從類型程式庫加入 MFC 類別 |Microsoft 文件"
+title: Adding an MFC Class from a Type Library | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,7 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- classes [C++], adding MFC
+- classes [MFC], adding MFC
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
@@ -33,35 +33,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0aec2c2f83dcc5857134f39f6729ce1ca9aa1acf
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c0cbd52202de867fb330a3acd2d72a4b940f56ed
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="adding-an-mfc-class-from-a-type-library"></a>從類型程式庫加入 MFC 類別
-使用此精靈建立的 MFC 類別會從可用的型別程式庫中的介面。 您可以加入至 MFC 類別[MFC 應用程式](../../mfc/reference/creating-an-mfc-application.md)、 [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)，或[MFC ActiveX 控制項](../../mfc/reference/creating-an-mfc-activex-control.md)。  
+# <a name="adding-an-mfc-class-from-a-type-library"></a>Adding an MFC Class from a Type Library
+Use this wizard to create an MFC class from an interface in an available type library. You can add an MFC class to an [MFC application](../../mfc/reference/creating-an-mfc-application.md), an [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md), or an [MFC ActiveX control](../../mfc/reference/creating-an-mfc-activex-control.md).  
   
 > [!NOTE]
->  您不需要從類型程式庫加入類別啟用自動化以建立您的 MFC 專案。  
+>  You do not need to create your MFC project with Automation enabled to add a class from a type library.  
   
- 型別程式庫包含元件，請定義以及其參數和傳回型別方法所公開的介面的二進位的描述。 您必須針對才會出現在註冊您的型別程式庫**可用的型別程式庫**Typelib 精靈的加入類別中的清單。 請參閱 「 在分散式 COM:: 類型程式庫和語言整合 」，如需詳細資訊的 MSDN library 中。  
+ A type library contains a binary description of the interfaces exposed by a component, defining the methods along with their parameters and return types. Your type library must be registered for it to appear in the **Available type libraries** list in the Add Class from Typelib Wizard. See "Inside Distributed COM: Type Libraries and Language Integration" in the MSDN library for more information.  
   
-### <a name="to-add-an-mfc-class-from-a-type-library"></a>若要從型別程式庫加入 MFC 類別  
+### <a name="to-add-an-mfc-class-from-a-type-library"></a>To add an MFC class from a type library  
   
-1.  在**方案總管 中**或[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，以滑鼠右鍵按一下您要將類別加入的專案的名稱。  
+1.  In either **Solution Explorer** or [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), right-click the name of the project to which you want to add the class.  
   
-2.  從捷徑功能表，按一下 **新增**，然後按一下 **加入類別**。  
+2.  From the shortcut menu, click **Add**, and then click **Add Class**.  
   
-3.  在[加入類別](../../ide/add-class-dialog-box.md)對話方塊，在 [範本] 窗格中，按一下**從型別程式庫的 MFC 類別**，然後按一下 **開啟**顯示[Typelib 精靈的加入類別](../../mfc/reference/add-class-from-typelib-wizard.md)。  
+3.  In the [Add Class](../../ide/add-class-dialog-box.md) dialog box, in the Templates pane, click **MFC Class from Typelib**, and then click **Open** to display the [Add Class from Typelib Wizard](../../mfc/reference/add-class-from-typelib-wizard.md).  
   
- 在精靈中，您可以加入多個類型程式庫中的類別。 同樣地，您可以從一個以上的型別程式庫加入類別，在單一精靈工作階段。  
+ In the wizard, you can add more than one class in a type library. Likewise, you can add classes from more than one type library in a single wizard session.  
   
- 精靈會建立衍生自 MFC 類別[COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)，為您從選取的類型程式庫加入每個介面。 `COleDispatchDriver`實作 OLE automation 用戶端。  
+ The wizard creates an MFC class, derived from [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), for each interface you add from the selected type library. `COleDispatchDriver` implements the client side of OLE automation.  
   
-## <a name="see-also"></a>另請參閱  
- [Automation 用戶端](../../mfc/automation-clients.md)   
- [Automation 用戶端︰ 使用類型程式庫](../../mfc/automation-clients-using-type-libraries.md)
+## <a name="see-also"></a>See Also  
+ [Automation Clients](../../mfc/automation-clients.md)   
+ [Automation Clients: Using Type Libraries](../../mfc/automation-clients-using-type-libraries.md)
 
 

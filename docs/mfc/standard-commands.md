@@ -1,67 +1,86 @@
 ---
-title: "標準命令 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令 ID, 標準命令"
-  - "命令 [C++], 標準"
-  - "編輯功能表標準命令"
-  - "檔案功能表"
-  - "說明, 功能表"
-  - "識別項 [C++], 命令 ID"
-  - "OLE 命令"
-  - "程式設計人員定義的 ID [C++]"
-  - "標準命令 ID"
-  - "標準命令"
-  - "檢視功能表命令"
-  - "視窗功能表命令"
+title: Standard Commands | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- File menu
+- identifiers [MFC], command IDs
+- command IDs, standard commands
+- OLE commands
+- commands [MFC], standard
+- standard command IDs
+- Window menu commands
+- standard commands
+- View menu commands
+- Edit menu standard commands
+- Help [MFC], menus
+- programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 標準命令
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 092d67376a9384ab9470d2d3bd6b1dcb12ad37a6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-框架定義許多標準命令訊息。  這些命令的 ID 通常會採用下列格式:  
+---
+# <a name="standard-commands"></a>Standard Commands
+The framework defines many standard command messages. The IDs for these commands typically take the form:  
   
- **ID\_** *Source*\_*Item*  
+ **ID_** *Source*_*Item*  
   
- 其中 *來源* 通常功能表名稱和 *項目* 是功能表項目。  例如，新命令的命令 ID 在檔案功能表是 `ID_FILE_NEW`。  標準命令 ID 在顯示粗體文件。  程式設計人員定義的 ID 會以周圍文字不同的字型顯示。  
+ where *Source* is usually a menu name and *Item* is a menu item. For example, the command ID for the New command on the File menu is `ID_FILE_NEW`. Standard command IDs are shown in bold type in the documentation. Programmer-defined IDs are shown in a font that is different from the surrounding text.  
   
- 下列是支援的某些清單最重要的命令:  
+ The following is a list of some of the most important commands supported:  
   
- *檔案功能表命令*  
- 新增，開啟，關閉，儲存，儲存，版面設定、列印設定、列印、列印預覽、匯出和最近使用過的檔案。  
+ *File Menu Commands*  
+ New, Open, Close, Save, Save As, Page Setup, Print Setup, Print, Print Preview, Exit, and most-recently-used files.  
   
- *編輯結構功能表命令*  
- 清除，清除所有，複製，剪下，尋找，貼上，迴圈，取代，選取所有，移除，然後再進行。  
+ *Edit Menu Commands*  
+ Clear, Clear All, Copy, Cut, Find, Paste, Repeat, Replace, Select All, Undo, and Redo.  
   
- *檢視功能表命令*  
- 工具列和狀態列  
+ *View Menu Commands*  
+ Toolbar and Status Bar.  
   
- *視窗功能表命令*  
- 新增，安排，串聯，並排顯示水平，並排顯示垂直和分割。  
+ *Window Menu Commands*  
+ New, Arrange, Cascade, Tile Horizontal, Tile Vertical, and Split.  
   
- *說明功能表命令*  
- 索引，使用說明和。  
+ *Help Menu Commands*  
+ Index, Using Help, and About.  
   
- *OLE 命令\(編輯功能表\)*  
- 將新的物件，編輯連結，貼上連結，請將特殊和 *typename* 物件 \(動詞命令\)。  
+ *OLE Commands (Edit Menu)*  
+ Insert New Object, Edit Links, Paste Link, Paste Special, and *typename* Object (verb commands).  
   
- 這個框架為這些命令提供各種支援層級。  而其他支援與徹底的實作，某些命令支援，只有在定義的命令 ID。  例如，此架構會建立新的資料物件，顯示一個開啟對話方塊並開啟和讀取檔案實作檔案功能表上的開啟命令。  相反地，您必須實作編輯功能表上的命令，因為像 **ID\_EDIT\_COPY** 的順序來決定要複製資料的性質。  
+ The framework provides varying levels of support for these commands. Some commands are supported only as defined command IDs, while others are supported with thorough implementations. For example, the framework implements the Open command on the File menu by creating a new document object, displaying an Open dialog box, and opening and reading the file. In contrast, you must implement commands on the Edit menu yourself, since commands like **ID_EDIT_COPY** depend on the nature of the data you are copying.  
   
- 如需命令支援的和實作的詳細資訊提供的層級，請參閱 [Technical Note 22](../mfc/tn022-standard-commands-implementation.md)。  標準命令在檔案 AFXRES.H. 定義。  
+ For more information about the commands supported and the level of implementation provided, see [Technical Note 22](../mfc/tn022-standard-commands-implementation.md). The standard commands are defined in the file AFXRES.H.  
   
-## 請參閱  
- [使用者介面物件和命令 ID](../mfc/user-interface-objects-and-command-ids.md)
+## <a name="see-also"></a>See Also  
+ [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CAnimationVariableIntegerChangeHandler 類別 |Microsoft 文件"
+title: CAnimationVariableIntegerChangeHandler Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationVariableIntegerChangeHandler class
+- CAnimationVariableIntegerChangeHandler [MFC], CAnimationVariableIntegerChangeHandler
+- CAnimationVariableIntegerChangeHandler [MFC], CreateInstance
+- CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
+- CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
 caps.latest.revision: 18
 author: mikeblome
@@ -38,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 41062ddcf01d26a4897b7e7ab2fe254bca8a1b5d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3bc7f2e7ad7e8d90823481aa3d517af66c41f465
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler 類別
-實作回呼，當動畫變數的值變更時由動畫 API 呼叫。  
+# <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler Class
+Implements a callback, which is called by the Animation API when the value of an animation variable changes.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntegerChangeHandlerBase<CAnimationVariableIntegerChangeHandler>;  
@@ -56,25 +59,25 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler](#canimationvariableintegerchangehandler)|建構 `CAnimationVariableIntegerChangeHandler` 物件。|  
+|[CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler](#canimationvariableintegerchangehandler)|Constructs a `CAnimationVariableIntegerChangeHandler` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|建立的執行個體`CAnimationVariableIntegerChangeHandler`回呼。|  
-|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|當動畫變數的值已變更時呼叫。 (覆寫 `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`。)|  
-|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|儲存路由事件的動畫控制器的指標。|  
+|[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|Creates an instance of `CAnimationVariableIntegerChangeHandler` callback.|  
+|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Called when a value of an animation variable has changed. (Overrides `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.)|  
+|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Stores a pointer to animation controller to route events.|  
   
-## <a name="remarks"></a>備註  
- 此事件處理常式建立並傳遞至 IUIAnimationVariable::SetVariableIntegerChangeHandler 方法，當您呼叫 CAnimationVariable::EnableIntegerValueChangedEvent 或 CAnimationBaseObject::EnableIntegerValueChangedEvent （這可讓封裝在動畫物件的所有動畫變數的這個事件）。  
+## <a name="remarks"></a>Remarks  
+ This event handler is created and passed to IUIAnimationVariable::SetVariableIntegerChangeHandler method, when you call CAnimationVariable::EnableIntegerValueChangedEvent or CAnimationBaseObject::EnableIntegerValueChangedEvent (which enables this event for all animation variables encapsulated in an animation object).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
- [MFC 類別](../../mfc/reference/mfc-classes.md)  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
+ [MFC Classes](../../mfc/reference/mfc-classes.md)  
   
  `CUIAnimationCallbackBase`  
   
@@ -82,18 +85,18 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
   
  `CAnimationVariableIntegerChangeHandler`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
- 建構 CAnimationVariableIntegerChangeHandler 物件。  
+##  <a name="canimationvariableintegerchangehandler"></a>  CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler  
+ Constructs a CAnimationVariableIntegerChangeHandler object.  
   
 ```  
 CAnimationVariableIntegerChangeHandler ();
 ```  
   
-##  <a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance  
- 建立 CAnimationVariableIntegerChangeHandler 回呼的執行個體。  
+##  <a name="createinstance"></a>  CAnimationVariableIntegerChangeHandler::CreateInstance  
+ Creates an instance of CAnimationVariableIntegerChangeHandler callback.  
   
 ```  
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -101,17 +104,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
     IUIAnimationVariableIntegerChangeHandler** ppHandler);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- 動畫控制器，將會收到事件指標。  
+ A pointer to animation controller, which will receive events.  
   
  `ppHandler`  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged  
- 當動畫變數的值已變更時呼叫。  
+##  <a name="onintegervaluechanged"></a>  CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged  
+ Called when a value of an animation variable has changed.  
   
 ```  
 IFACEMETHOD(OnIntegerValueChanged) (
@@ -121,33 +124,33 @@ IFACEMETHOD(OnIntegerValueChanged) (
     __in INT32 previousValue);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `storyboard`  
- 腳本動畫變數。  
+ The storyboard that is animating the variable.  
   
  `variable`  
- 已更新動畫變數。  
+ The animation variable that was updated.  
   
  `newValue`  
- 新的捨入的值。  
+ The new rounded value.  
   
  `previousValue`  
- 先前的捨入的值。  
+ The previous rounded value.  
   
-### <a name="return-value"></a>傳回值  
- S_OK，如果方法成功。否則 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ S_OK if the method succeeds; otherwise E_FAIL.  
   
-##  <a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController  
- 儲存路由事件的動畫控制器的指標。  
+##  <a name="setanimationcontroller"></a>  CAnimationVariableIntegerChangeHandler::SetAnimationController  
+ Stores a pointer to animation controller to route events.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- 動畫控制器，將會收到事件指標。  
+ A pointer to animation controller, which will receive events.  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

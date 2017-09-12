@@ -1,39 +1,58 @@
 ---
-title: "使用滑桿控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSliderCtrl 類別, 使用"
-  - "滑桿"
-  - "滑桿, 使用"
+title: Using Slider Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSliderCtrl class [MFC], using
+- slider controls
+- slider controls [MFC], using
 ms.assetid: 2b1a8ac8-2b17-41e1-aa24-83c1fd737049
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用滑桿控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27b4b5b8bb454a5b4bee0fdd09b6ff8698651761
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-滑動條控制項的一般使用方式會遵循下列模式:  
+---
+# <a name="using-slider-controls"></a>Using Slider Controls
+Typical usage of an slider control follows the pattern below:  
   
--   會建立控制項。  如果控制項在對話方塊樣板指定，在對話方塊中建立時建立是自動的。\(您應該會包含動畫控制項\) 的對話方塊類別中的 [CSliderCtrl](../mfc/reference/csliderctrl-class.md) 成員。或者，您可以使用 [建立](../Topic/CSliderCtrl::Create.md) 成員函式來建立控制項做為子視窗的所有視窗。  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CSliderCtrl](../mfc/reference/csliderctrl-class.md) member in your dialog class that corresponds to the slider control.) Alternatively, you can use the [Create](../mfc/reference/csliderctrl-class.md#create) member function to create the control as a child window of any window.  
   
--   呼叫各種成員函式對控制項的值。  變更可以設定滑桿的最小和最大位置，繪製的刻度標記，將選取範圍和重新調整滑桿。  對於在對話方塊的控制項，好時機可以在對話方塊的 [OnInitDialog](../Topic/CDialog::OnInitDialog.md) 函式。  
+-   Call the various Set member functions to set values for the control. Changes that you can make include setting the minimum and maximum positions for the slider, drawing tick marks, setting a selection range, and repositioning the slider. For controls in a dialog box, a good time to do this is in the dialog's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   因為使用者與控制項互動，它會傳送各種告知訊息。  您可以從控制項擷取的值會藉由呼叫 [GetPos](../Topic/CSliderCtrl::GetPos.md) 成員函式。  
+-   As the user interacts with the control, it will send various notification messages. You can extract the slider value from the control by calling the [GetPos](../mfc/reference/csliderctrl-class.md#getpos) member function.  
   
--   當您在使用控制項時，請確定您正確地終止。  如果滑桿控制項在對話方塊中，將自動終結和 `CSliderCtrl` 物件。  否則，您必須確保適當地終結控制項和 `CSliderCtrl` 物件。  
+-   When you're done with the control, you need to make sure it's properly destroyed. If the slider control is in a dialog box, it and the `CSliderCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CSliderCtrl` object are properly destroyed.  
   
-## 請參閱  
- [使用 CSliderCtrl](../mfc/using-csliderctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CSliderCtrl](../mfc/using-csliderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

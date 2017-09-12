@@ -1,5 +1,5 @@
 ---
-title: "CSettingsStore 類別 |Microsoft 文件"
+title: CSettingsStore Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSettingsStore class
+- CSettingsStore [MFC], CSettingsStore
+- CSettingsStore [MFC], Close
+- CSettingsStore [MFC], CreateKey
+- CSettingsStore [MFC], DeleteKey
+- CSettingsStore [MFC], DeleteValue
+- CSettingsStore [MFC], Open
+- CSettingsStore [MFC], Read
+- CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
 caps.latest.revision: 29
 author: mikeblome
@@ -42,17 +49,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0b07f6b12e178d8e324313ea3b0f6de9ae7420c9
-ms.openlocfilehash: 0918c8dd9b6284adecb61bc95ddfd41c22d16cb8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6ecae74312bbdca97de8f636d54e1ddd441dd837
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
-包裝 Windows 應用程式開發介面函式，提供用來存取登錄的物件導向介面。  
+Wraps Windows API functions, providing an object-oriented interface that you use to access the registry.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSettingsStore : public CObject  
@@ -60,69 +67,69 @@ class CSettingsStore : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStore::CSettingsStore](#csettingsstore)|建構 `CSettingsStore` 物件。|  
+|[CSettingsStore::CSettingsStore](#csettingsstore)|Constructs a `CSettingsStore` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSettingsStore::Close](#close)|關閉開啟登錄機碼。|  
-|[CSettingsStore::CreateKey](#createkey)|開啟指定的索引鍵，或不存在時建立。|  
-|[CSettingsStore::DeleteKey](#deletekey)|刪除指定的索引鍵和其所有子系。|  
-|[CSettingsStore::DeleteValue](#deletevalue)|刪除的開放式金鑰指定的值。|  
-|[CSettingsStore::Open](#open)|開啟指定的索引鍵。|  
-|[CSettingsStore::Read](#read)|擷取指定之索引鍵值的資料。|  
-|[CSettingsStore::Write](#write)|將值寫入開啟登錄機碼底下。|  
+|[CSettingsStore::Close](#close)|Closes the open registry key.|  
+|[CSettingsStore::CreateKey](#createkey)|Opens the specified key or creates it if it does not exist.|  
+|[CSettingsStore::DeleteKey](#deletekey)|Deletes the specified key and all its children.|  
+|[CSettingsStore::DeleteValue](#deletevalue)|Deletes the specified value of the open key.|  
+|[CSettingsStore::Open](#open)|Opens the specified key.|  
+|[CSettingsStore::Read](#read)|Retrieves the data for a specified key value.|  
+|[CSettingsStore::Write](#write)|Writes a value to the registry under the open key.|  
   
-## <a name="remarks"></a>備註  
- 成員函式`CreateKey`和`Open`非常類似。 如果登錄機碼已經存在，`CreateKey`和`Open`函式相同的方式。 不過，如果登錄機碼不存在，`CreateKey`會建立它而`Open`會傳回錯誤值。  
+## <a name="remarks"></a>Remarks  
+ The member functions `CreateKey` and `Open` are very similar. If the registry key already exists, `CreateKey` and `Open` function in the same way. However, if the registry key does not exist, `CreateKey` will create it whereas `Open` will return an error value.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用的開啟和讀取方法`CSettingsStore`類別。 此程式碼片段是一部分[工具提示示範範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use the Open and Read methods of the `CSettingsStore` class. This code snippet is part of the [Tool Tip Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_ToolTipDemo #&1;](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CSettingsStore`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxsettingsstore.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
- 關閉開啟登錄機碼。  
+##  <a name="close"></a>  CSettingsStore::Close  
+ Closes the open registry key.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，呼叫這個方法的解構函式從[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
+### <a name="remarks"></a>Remarks  
+ By default, this method is called from the destructor of the [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md).  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
- 開啟登錄機碼，或不存在時建立。  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
+ Opens a registry key or creates it if it does not exist.  
   
 ```  
 virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pszPath`  
- 指定用來建立或開啟金鑰的名稱。  
+ Specifies the name of a key to be created or opened.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為&0;否則為非零值。  
+### <a name="return-value"></a>Return Value  
+ 0 if successful; otherwise a nonzero value.  
   
-### <a name="remarks"></a>備註  
- `CreateKey`使用`m_hKey`登錄查詢的根。 它會搜尋`pszPath`的子機碼為`m_hKey`。 如果索引鍵不存在，`CreateKey`會加以建立。 否則，它會開啟索引鍵。 `CreateKey`然後設定`m_hKey`建立或開啟的索引鍵。  
+### <a name="remarks"></a>Remarks  
+ `CreateKey` uses `m_hKey` as the root of registry inquiries. It searches for `pszPath` as a subkey of `m_hKey`. If the key does not exist, `CreateKey` creates it. Otherwise, it opens the key. `CreateKey` then sets `m_hKey` to the created or opened key.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
- 建立 `CSettngsStore` 物件。  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
+ Creates a `CSettngsStore` object.  
   
 ```  
 CSettingsStore(
@@ -130,22 +137,22 @@ CSettingsStore(
     BOOL bReadOnly);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bAdmin`  
- 布林值參數，指定是否`CSettingsStore`物件就會把自己以系統管理員模式。  
+ Boolean parameter that specifies whether the `CSettingsStore` object is acting in administrator mode.  
   
  [in] `bReadOnly`  
- 布林值參數，指定是否`CSettingsStore`唯讀模式中建立物件。  
+ Boolean parameter that specifies whether the `CSettingsStore` object is created in read-only mode.  
   
-### <a name="remarks"></a>備註  
- 如果`bAdmin`設為`false`、`m_hKey`成員變數會設為`HKEY_LOCAL_MACHINE`。 If you set `bAdmin` to `true`, `m_hKey` is set to `HKEY_CURRENT_USER`.  
+### <a name="remarks"></a>Remarks  
+ If `bAdmin` is set to `false`, the `m_hKey` member variable is set to `HKEY_LOCAL_MACHINE`. If you set `bAdmin` to `true`, `m_hKey` is set to `HKEY_CURRENT_USER`.  
   
- 安全性存取權取決於`bReadOnly`參數。 如果`bReadonly`是`false`，安全性的存取將會設定為`KEY_ALL_ACCESS`。 如果`bReadyOnly`是`true`，安全性存取將會設定為結合`KEY_QUERY_VALUE, KEY_NOTIFY`和`KEY_ENUMERATE_SUB_KEYS`。 如需詳細的安全性存取權，以及登錄的詳細資訊，請參閱[登錄機碼的安全性和存取權限](http://msdn.microsoft.com/library/windows/desktop/ms724878)。  
+ The security access depends on the `bReadOnly` parameter. If `bReadonly` is `false`, the security access will be set to `KEY_ALL_ACCESS`. If `bReadyOnly` is `true`, the security access will be set to a combination of `KEY_QUERY_VALUE, KEY_NOTIFY` and `KEY_ENUMERATE_SUB_KEYS`. For more information about security access together with the registry, see [Registry Key Security and Access Rights](http://msdn.microsoft.com/library/windows/desktop/ms724878).  
   
- 解構函式的`CSettingsStore`釋放`m_hKey`自動。  
+ The destructor for `CSettingsStore` releases `m_hKey` automatically.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
- 刪除登錄機碼及其所有子系。  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
+ Deletes a key and all its children from the registry.  
   
 ```  
 virtual BOOL DeleteKey(
@@ -153,54 +160,54 @@ virtual BOOL DeleteKey(
     BOOL bAdmin = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pszPath`  
- 若要刪除的索引鍵名稱。  
+ The name of the key to delete.  
   
  [in] `bAdmin`  
- 指定要刪除之索引鍵位置的參數。  
+ Switch that specifies the location of the key to delete.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果此方法將會失敗`CSettingsStore`物件處於唯讀模式。  
+### <a name="remarks"></a>Remarks  
+ This method will fail if the `CSettingsStore` object is in read-only mode.  
   
- 如果參數`bAdmin`為零，`DeleteKey`搜尋索引鍵，以刪除下`HKEY_CURRENT_USER`。 如果`bAdmin`是零，`DeleteKey`搜尋索引鍵，以刪除下`HKEY_LOCAL_MACHINE`。  
+ If the parameter `bAdmin` is zero, `DeleteKey` searches for the key to delete under `HKEY_CURRENT_USER`. If `bAdmin` is nonzero, `DeleteKey` searches for the key to delete under `HKEY_LOCAL_MACHINE`.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
- 刪除值，以從`m_hKey`。  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
+ Deletes a value from `m_hKey`.  
   
 ```  
 virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pszValue`  
- 指定要移除的值欄位。  
+ Specifies the value field to remove.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="open"></a>CSettingsStore::Open  
- 開啟登錄機碼。  
+##  <a name="open"></a>  CSettingsStore::Open  
+ Opens a registry key.  
   
 ```  
 virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pszPath`  
- 登錄機碼名稱。  
+ The name of a registry key.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 這個方法已成功開啟指定的索引鍵之後，它會設定`m_hKey`這個機碼的控制代碼。  
+### <a name="remarks"></a>Remarks  
+ After this method successfully opens the specified key, it sets `m_hKey` to the handle of this key.  
   
-##  <a name="read"></a>CSettingsStore::Read  
- 從登錄機碼讀取值。  
+##  <a name="read"></a>  CSettingsStore::Read  
+ Reads a value from a key in the registry.  
   
 ```  
 virtual BOOL Read(
@@ -274,63 +281,63 @@ virtual BOOL Read(
     CObject*& pObj);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pszKey`  
- 以 null 終止的字串，其中包含要讀取登錄值名稱的指標。  
+ Pointer to a null-terminated string that contains the name of the value to read from the registry.  
   
- [輸出] `iVal`  
- 接收從登錄機碼讀取值的整數變數的參考。  
+ [out] `iVal`  
+ Reference to an integer variable that receives the value read from the registry key.  
   
- [輸出] `dwVal`  
- 接收從登錄機碼讀取值的 32 位元雙字組變數參考。  
+ [out] `dwVal`  
+ Reference to a 32-bit double word variable that receives the value read from the registry key.  
   
- [輸出] `sVal`  
- 接收從登錄機碼讀取值的字串變數的參考。  
+ [out] `sVal`  
+ Reference to a string variable that receives the value read from the registry key.  
   
- [輸出] `scStringList`  
- 接收從登錄機碼讀取值的字串清單變數參考。  
+ [out] `scStringList`  
+ Reference to a string list variable that receives the value read from the registry key.  
   
- [輸出] `scArray`  
- 接收從登錄機碼讀取值的字串陣列變數參考。  
+ [out] `scArray`  
+ Reference to a string array variable that receives the value read from the registry key.  
   
- [輸出] `dwcArray`  
- 接收從登錄機碼讀取值的 32 位元雙字組陣列變數參考。  
+ [out] `dwcArray`  
+ Reference to a 32-bit double word array variable that receives the value read from the registry key.  
   
- [輸出] `wcArray`  
- 接收從登錄機碼讀取值的 16 位元字組陣列變數參考。  
+ [out] `wcArray`  
+ Reference to a 16-bit word array variable that receives the value read from the registry key.  
   
- [輸出] `bcArray`  
- 接收從登錄機碼讀取值的位元組陣列變數參考。  
+ [out] `bcArray`  
+ Reference to a byte array variable that receives the value read from the registry key.  
   
- [輸出] `lpPoint`  
- 參考的指標`POINT`接收值的結構讀取登錄機碼。  
+ [out] `lpPoint`  
+ Reference to a pointer to a `POINT` structure that receives the value read from the registry key.  
   
- [輸出] `rect`  
- 若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)變數接收值讀取登錄機碼。  
+ [out] `rect`  
+ Reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) variable that receives the value read from the registry key.  
   
- [輸出] `ppData`  
- 從登錄機碼讀取接收值的資料指標的指標。  
+ [out] `ppData`  
+ Pointer to a pointer to data that receives the value read from the registry key.  
   
- [輸出] `pBytes`  
- 不帶正負號的整數變數的指標。 此變數會接收緩衝區的大小，`ppData`指向。  
+ [out] `pBytes`  
+ Pointer to an unsigned integer variable. This variable receives the size of the buffer that `ppData` points to.  
   
- [輸出] `list`  
- 若要參考[CObList](../../mfc/reference/coblist-class.md)變數接收值讀取登錄機碼。  
+ [out] `list`  
+ Reference to a [CObList](../../mfc/reference/coblist-class.md) variable that receives the value read from the registry key.  
   
- [輸出] `obj`  
- 若要參考[CObject](../../mfc/reference/cobject-class.md)變數接收值讀取登錄機碼。  
+ [out] `obj`  
+ Reference to a [CObject](../../mfc/reference/cobject-class.md) variable that receives the value read from the registry key.  
   
- [輸出] `pObj`  
- 參考的指標`CObject`變數接收值讀取登錄機碼。  
+ [out] `pObj`  
+ Reference to a pointer to a `CObject` variable that receives the value read from the registry key.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- `Read`檢查是否有`pszKey`的子機碼為`m_hKey`。  
+### <a name="remarks"></a>Remarks  
+ `Read` checks for `pszKey` as a subkey of `m_hKey`.  
   
-##  <a name="write"></a>CSettingsStore::Write  
- 將值寫入開啟登錄機碼底下。  
+##  <a name="write"></a>  CSettingsStore::Write  
+ Writes a value to the registry under the open key.  
   
 ```  
 virtual BOOL Write(
@@ -404,63 +411,63 @@ virtual BOOL Write(
     CObject* pObj);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pszKey`  
- 字串，其中包含要設定的值名稱的指標。  
+ Pointer to a string that contains the name of the value to set.  
   
  [in] `iVal`  
- 整數變數，其中包含要儲存資料的參考。  
+ Reference to an integer variable that contains the data to store.  
   
  [in] `dwVal`  
- 32 位元雙字組變數，其中包含要儲存資料的參考。  
+ Reference to a 32-bit double word variable that contains the data to store.  
   
  [in] `pszVal`  
- Null 結束的字串變數，其中包含要儲存的資料指標。  
+ Pointer to a null-terminated string variable that contains the data to store.  
   
  [in] `scStringList`  
- 若要參考[CStringList](../../mfc/reference/cstringlist-class.md)變數，其中包含要儲存的資料。  
+ Reference to a [CStringList](../../mfc/reference/cstringlist-class.md) variable that contains the data to store.  
   
  [in] `bcArray`  
- 包含要儲存資料的位元組陣列變數參考。  
+ Reference to a byte array variable that contains the data to store.  
   
  [in] `scArray`  
- 包含要儲存資料的字串陣列變數參考。  
+ Reference to a string array variable that contains the data to store.  
   
  [in] `dwcArray`  
- 包含要儲存資料的 32 位元雙字組陣列變數參考。  
+ Reference to a 32-bit double word array variable that contains the data to store.  
   
  [in] `wcArray`  
- 包含要儲存資料的 16 位元字組陣列變數參考。  
+ Reference to a 16-bit word array variable that contains the data to store.  
   
  [in] `rect`  
- 若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)變數，其中包含要儲存的資料。  
+ Reference to a [CRect](../../atl-mfc-shared/reference/crect-class.md) variable that contains the data to store.  
   
  [in] `lpPoint`  
- 參考的指標`POINT`變數，其中包含要儲存的資料。  
+ Reference to a pointer to a `POINT` variable that contains the data to store.  
   
  [in] `pData`  
- 包含要儲存資料的緩衝區指標。  
+ Pointer to a buffer that contains the data to store.  
   
  [in] `nBytes`  
- 指定的大小，以位元組為單位之資料`pData`參數點。  
+ Specifies the size, in bytes, of the data to which the `pData` parameter points.  
   
  [in] `list`  
- 若要參考[CObList](../../mfc/reference/coblist-class.md)變數，其中包含要儲存的資料。  
+ Reference to a [CObList](../../mfc/reference/coblist-class.md) variable that contains the data to store.  
   
  [in] `obj`  
- 若要參考[CObject](../../mfc/reference/cobject-class.md)變數，其中包含要儲存的資料。  
+ Reference to a [CObject](../../mfc/reference/cobject-class.md) variable that contains the data to store.  
   
  [in] `pObj`  
- 指標的指標`CObject`變數，其中包含要儲存的資料。  
+ Pointer to a pointer to a `CObject` variable that contains the data to store.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，則為 `TRUE`，否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 若要寫入登錄，您必須為`bReadOnly`為非零值，當您建立[CSettingsStore](../../mfc/reference/csettingsstore-class.md)物件。 如需詳細資訊，請參閱[CSettingsStore::CSettingsStore](#csettingsstore)。  
+### <a name="remarks"></a>Remarks  
+ In order to write to the registry, you must set `bReadOnly` to a nonzero value when you create a [CSettingsStore](../../mfc/reference/csettingsstore-class.md) object. For more information, see [CSettingsStore::CSettingsStore](#csettingsstore).  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [Cwinappex 衍生類別](../../mfc/reference/cwinappex-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)
 

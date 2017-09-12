@@ -1,5 +1,5 @@
 ---
-title: "CSplitterWndEx 類別 |Microsoft 文件"
+title: CSplitterWndEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSplitterWndEx
+- CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
 caps.latest.revision: 24
 author: mikeblome
@@ -35,20 +35,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 08b26bc2321485181941dbaaa9a903de9a401ef8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c80722c339756f42889db39e1820edc8dc035f28
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csplitterwndex-class"></a>CSplitterWndEx 類別
+# <a name="csplitterwndex-class"></a>CSplitterWndEx Class
 
 
 
-表示自訂分割視窗。  
+Represents a customized splitter window.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSplitterWndEx : public CSplitterWnd  
@@ -56,25 +56,25 @@ class CSplitterWndEx : public CSplitterWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`CSplitterWndEx::CSplitterWndEx`|預設建構函式。|  
-|`CSplitterWndEx::~CSplitterWndEx`|解構函式。|  
+|`CSplitterWndEx::CSplitterWndEx`|Default constructor.|  
+|`CSplitterWndEx::~CSplitterWndEx`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|若要繪製的分隔視窗架構呼叫。 (覆寫[CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter)。)|  
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Called by the framework to draw a splitter window. (Overrides [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|  
   
-## <a name="remarks"></a>備註  
- 覆寫`OnDrawSplitter`方法，以自訂分割視窗中的圖形化元件的外觀。  
+## <a name="remarks"></a>Remarks  
+ Override the `OnDrawSplitter` method to customize the appearance of the graphical components of a splitter window.  
   
- `CSplitterWndEx`類別會搭配[OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)， [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)，和[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)的視覺管理員所實作的方法。 若要使繪製您的應用程式中的分隔視窗的視覺管理員，來取代的宣告`CSplitterWnd`類別`CSplitterWndEx`類別。 框架視窗應用程式，位於 mainfrm.h CMainFrame 類別中宣告的分隔視窗類別。 如需範例，請參閱`OutlookDemo`範例目錄中的範例。  
+ The `CSplitterWndEx` class is used together with the [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), and [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) methods, which are implemented by a visual manager. To cause a visual manager to draw a splitter window in your application, replace declarations of the `CSplitterWnd` class with the `CSplitterWndEx` class. For frame window applications, the splitter window class is declared in the CMainFrame class that is located in mainfrm.h. For an example, see the `OutlookDemo` sample in the Samples directory.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](cobject-class.md)  
   
  [CCmdTarget](ccmdtarget-class.md)  
@@ -83,11 +83,11 @@ class CSplitterWndEx : public CSplitterWnd
   
  [CSplitterWnd](csplitterwnd-class.md)  
    
-## <a name="requirements"></a>需求  
- **標頭︰** afxsplitterwndex.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxsplitterwndex.h  
   
-##  <a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
- 若要繪製的分隔視窗架構呼叫。  
+##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
+ Called by the framework to draw a splitter window.  
   
 ```  
 virtual void OnDrawSplitter(  
@@ -97,20 +97,20 @@ virtual void OnDrawSplitter(
 );  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容指標。 如果這個參數是`NULL`，架構會重新繪製的使用中視窗。  
+ Pointer to the device context. If this parameter is `NULL`, the framework redraws the active window.  
   
  [in] `nType`  
- 其中一個`CSplitterWnd::ESplitType`列舉值，指定要繪製的分隔視窗項目。 有效值為`splitBox`， `splitBar`， `splitIntersection`，和`splitBorder`。  
+ One of the `CSplitterWnd::ESplitType` enumeration values that specifies the splitter window element to draw. Valid values are `splitBox`, `splitBar`, `splitIntersection`, and `splitBorder`.  
   
  [in] `rect`  
- 指定位置繪製指定的分隔器視窗項目和維度的週框。  
+ A bounding rectangle that specifies the dimensions and location to draw the specified splitter window element.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../hierarchy-chart.md)   
- [類別](mfc-classes.md)   
- [CSplitterWnd 類別](csplitterwnd-class.md)   
- [CMFCVisualManager 類別](cmfcvisualmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../hierarchy-chart.md)   
+ [Classes](mfc-classes.md)   
+ [CSplitterWnd Class](csplitterwnd-class.md)   
+ [CMFCVisualManager Class](cmfcvisualmanager-class.md)

@@ -1,5 +1,5 @@
 ---
-title: "COleCmdUI 類別 |Microsoft 文件"
+title: COleCmdUI Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,12 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- document object server
-- COleCmdUI class
-- servers [C++], ActiveX documents
-- docobject server
-- servers [C++], doc objects
-- ActiveX documents [C++], document server
+- COleCmdUI [MFC], COleCmdUI
+- COleCmdUI [MFC], Enable
+- COleCmdUI [MFC], SetCheck
+- COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
 caps.latest.revision: 21
 author: mikeblome
@@ -43,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 38e7019d7636166262028d955455cee675824f8b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77c88a0595038dea342b7e5357e8723cde680646
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colecmdui-class"></a>COleCmdUI 類別
-實作 MFC 的方法以更新與應用程式 `IOleCommandTarget`驅動功能相關聯之使用者介面物件的狀態。  
+# <a name="colecmdui-class"></a>COleCmdUI Class
+Implements a method for MFC to update the state of user-interface objects related to the `IOleCommandTarget`-driven features of your application.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleCmdUI : public CCmdUI  
@@ -61,37 +59,37 @@ class COleCmdUI : public CCmdUI
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleCmdUI::COleCmdUI](#colecmdui)|建構 `COleCmdUI` 物件。|  
+|[COleCmdUI::COleCmdUI](#colecmdui)|Constructs a `COleCmdUI` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleCmdUI::Enable](#enable)|設定或清除 啟用命令旗標。|  
-|[COleCmdUI::SetCheck](#setcheck)|設定狀態的開啟/關閉切換命令。|  
-|[COleCmdUI::SetText](#settext)|傳回命令的文字名稱或狀態字串。|  
+|[COleCmdUI::Enable](#enable)|Sets or clears the enable command flag.|  
+|[COleCmdUI::SetCheck](#setcheck)|Sets the state of an on/off toggle command.|  
+|[COleCmdUI::SetText](#settext)|Returns a text name or status string for a command.|  
   
-## <a name="remarks"></a>備註  
- 未啟用 DocObjects，當使用者在應用程式，MFC 處理程序檢視 功能表上的應用程式中**UPDATE_COMMAND_UI**通知。 指定每個通知[CCmdUI](../../mfc/reference/ccmdui-class.md)反映特定命令的狀態可操作的物件。 不過，當您的應用程式啟用 DocObjects，MFC 處理**UPDATE_OLE_COMMAND_UI**通知，並將指派`COleCmdUI`物件。  
+## <a name="remarks"></a>Remarks  
+ In an application that is not enabled for DocObjects, when the user views a menu in the application, MFC processes **UPDATE_COMMAND_UI** notifcations. Each notification is given a [CCmdUI](../../mfc/reference/ccmdui-class.md) object that can be manipulated to reflect the state of a particular command. However, when your application is enabled for DocObjects, MFC processes **UPDATE_OLE_COMMAND_UI** notifications and assigns `COleCmdUI` objects.  
   
- `COleCmdUI`允許 DocObject 接收命令來自其容器的使用者介面 （例如 FileNew、 Open、 列印等），並允許容器接收來自 DocObject 的使用者介面的命令。 雖然`IDispatch`無法用來分派相同的命令，`IOleCommandTarget`更簡單的方式來查詢和執行，因為它會依賴一組標準的命令，通常不使用引數，且涉及到任何型別資訊。 `COleCmdUI`可用來啟用、 更新和設定其他屬性的 DocObject 使用者介面的命令。 當您想要叫用該命令時，呼叫[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)。  
+ `COleCmdUI` allows a DocObject to receive commands that originate in its container's user interface (such as FileNew, Open, Print, and so on), and allows a container to receive commands that originate in the DocObject's user interface. Although `IDispatch` could be used to dispatch the same commands, `IOleCommandTarget` provides a simpler way to query and execute because it relies on a standard set of commands, usually without arguments, and no type information is involved. `COleCmdUI` can be used to enable, update, and set other properties of DocObject user interface commands. When you want to invoke the command, call [COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd).  
   
- 如需 DocObjects 詳細資訊，請參閱[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)和[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)。 另請參閱[網際網路第一個步驟︰ 主動式文件](../../mfc/active-documents-on-the-internet.md)和[主動式文件](../../mfc/active-documents-on-the-internet.md)。  
+ For further information on DocObjects, see [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md) and [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md). Also see [Internet First Steps: Active Documents](../../mfc/active-documents-on-the-internet.md) and [Active Documents](../../mfc/active-documents-on-the-internet.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CCmdUI](../../mfc/reference/ccmdui-class.md)  
   
  `COleCmdUI`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdocobj.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdocobj.h  
   
-##  <a name="colecmdui"></a>COleCmdUI::COleCmdUI  
- 建構`COleCmdUI`與特定的使用者介面命令相關聯的物件。  
+##  <a name="colecmdui"></a>  COleCmdUI::COleCmdUI  
+ Constructs a `COleCmdUI` object associated with a particular user-interface command.  
   
 ```  
 COleCmdUI(
@@ -100,61 +98,61 @@ COleCmdUI(
     const GUID* m_pGroup);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rgCmds`  
- 與指定 GUID 相關聯的支援命令清單。 **OLECMD**命令旗標與結構產生關聯的命令。  
+ A list of supported commands associated with the given GUID. The **OLECMD** structure associates commands with command flags.  
   
  *cCmds*  
- 中的命令計數`rgCmds`。  
+ The count of commands in `rgCmds`.  
   
  `pGroup`  
- 識別一組命令的 GUID 指標。  
+ A pointer to a GUID that identifies a set of commands.  
   
-### <a name="remarks"></a>備註  
- `COleCmdUI`物件提供程式設計介面，以更新 DocObject 使用者介面物件，例如功能表項目或控制列按鈕。 使用者介面物件可以是啟用、 停用、 檢查，和/或透過清除`COleCmdUI`物件。  
+### <a name="remarks"></a>Remarks  
+ The `COleCmdUI` object provides a programmatic interface for updating DocObject user-interface objects such as menu items or control-bar buttons. The user-interface objects can be enabled, disabled, checked, and/or cleared through the `COleCmdUI` object.  
   
-##  <a name="enable"></a>COleCmdUI::Enable  
- 呼叫此函式可設定的命令旗標`COleCmdUI`物件傳遞給**OLECOMDF_ENABLED**，這會告知介面命令是可用且已啟用，或清除命令旗標。  
+##  <a name="enable"></a>  COleCmdUI::Enable  
+ Call this function to set the command flag of the `COleCmdUI` object to **OLECOMDF_ENABLED**, which tells the interface the command is available and enabled, or to clear the command flag.  
   
 ```  
 virtual void Enable(BOOL bOn);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bOn`  
- 指出是否與命令相關聯`COleCmdUI`物件應該啟用或停用。 Nonzero 啟用命令。0 會停用此命令。  
+ Indicates whether the command associated with the `COleCmdUI` object should be enabled or disabled. Nonzero enables the command; 0 disables the command.  
   
-##  <a name="setcheck"></a>COleCmdUI::SetCheck  
- 呼叫此函式可設定狀態的開啟/關閉切換命令。  
+##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
+ Call this function to set the state of an on/off toggle command.  
   
 ```  
 virtual void SetCheck(int nCheck);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nCheck`  
- 值，判斷要設定的開啟/關閉切換狀態命令。 值為：  
+ A value determining the state to set an on/off toggle command. Values are:  
   
-|值|說明|  
+|Value|Description|  
 |-----------|-----------------|  
-|**1**|若要在設定的命令。|  
-|**2**|設定的命令，以不確定。無法判斷狀態，因為這個命令的屬性就會採用同時關閉相關的選取範圍中的狀態。|  
-|任何其他值|設定為 off 的命令。|  
+|**1**|Sets the command to on.|  
+|**2**|Sets the command to indeterminate; the state cannot be determined because the attribute of this command is in both on and off states in the relevant selection.|  
+|any other value|Sets the command to off.|  
   
-##  <a name="settext"></a>COleCmdUI::SetText  
- 呼叫此函式來傳回命令的文字名稱或狀態字串。  
+##  <a name="settext"></a>  COleCmdUI::SetText  
+ Call this function to return a text name or status string for a command.  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 若要命令適用於文字指標。  
+ A pointer to the text to be used with the command.  
   
-## <a name="see-also"></a>另請參閱  
- [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CCmdUI Class](../../mfc/reference/ccmdui-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "CMutex 類別 |Microsoft 文件"
+title: CMutex Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,10 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMutex class
-- synchronization classes, CMutex class
-- synchronization objects, mutex
-- mutex
+- CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
 caps.latest.revision: 22
 author: mikeblome
@@ -38,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 159f2e02dfe44d74ebcaad687a23cef734b61fc9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f68fe590efd8e5eda87c2f346168ebb71300641
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmutex-class"></a>CMutex 類別
-代表 「 mutex 」 — 允許執行緒互斥存取資源的同步處理物件。  
+# <a name="cmutex-class"></a>CMutex Class
+Represents a "mutex" — a synchronization object that allows one thread mutually exclusive access to a resource.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMutex : public CSyncObject  
@@ -56,35 +53,35 @@ class CMutex : public CSyncObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMutex::CMutex](#cmutex)|建構 `CMutex` 物件。|  
+|[CMutex::CMutex](#cmutex)|Constructs a `CMutex` object.|  
   
-## <a name="remarks"></a>備註  
- 可允許一次只有一個執行緒修改資料或其他一些受控制的資源時，Mutex 就很有用。 例如，將節點加入至連結的清單是應只允許一個執行緒一次的處理程序。 使用`CMutex`物件，以控制連結的清單中，只有一次一個執行緒可以存取清單。  
+## <a name="remarks"></a>Remarks  
+ Mutexes are useful when only one thread at a time can be allowed to modify data or some other controlled resource. For example, adding nodes to a linked list is a process that should only be allowed by one thread at a time. By using a `CMutex` object to control the linked list, only one thread at a time can gain access to the list.  
   
- 若要使用`CMutex`物件，建構`CMutex`物件會在需要時。 指定您想要等候的 mutex 的名稱和您的應用程式一開始應該擁有它。 然後，建構函式傳回時，您可以存取 mutex。 呼叫[CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock)完成存取控制的資源。  
+ To use a `CMutex` object, construct the `CMutex` object when it is needed. Specify the name of the mutex you wish to wait on, and that your application should initially own it. You can then access the mutex when the constructor returns. Call [CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock) when you are done accessing the controlled resource.  
   
- 使用替代方法`CMutex`物件是新增型別的變數`CMutex`以您想要控制的類別資料成員。 在受控制的物件建構期間呼叫的建構函式`CMutex`資料成員指定是否 mutex 一開始擁有，名稱的 mutex （如果它將會使用跨處理序界限），以及所需的安全性屬性。  
+ An alternative method for using `CMutex` objects is to add a variable of type `CMutex` as a data member to the class you wish to control. During construction of the controlled object, call the constructor of the `CMutex` data member specifying if the mutex is initially owned, the name of the mutex (if it will be used across process boundaries), and desired security attributes.  
   
- 控制存取資源`CMutex`物件以這種方式，先建立這兩種類型的變數[CSingleLock](../../mfc/reference/csinglelock-class.md)或型別[CMultiLock](../../mfc/reference/cmultilock-class.md)在您的資源存取的成員函式。 接著呼叫鎖定物件的`Lock`成員函式 (例如， [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock))。 此時，您的執行緒會取得資源的存取權，等待資源釋出，並存取應用程式，或等待資源釋出及逾時，無法存取的資源。 在任何情況下，您的資源已存取具備執行緒安全的方式。 若要釋放資源，使用鎖定物件的`Unlock`成員函式 (例如， [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock))，或允許超出範圍的鎖定物件。  
+ To access resources controlled by `CMutex` objects in this manner, first create a variable of either type [CSingleLock](../../mfc/reference/csinglelock-class.md) or type [CMultiLock](../../mfc/reference/cmultilock-class.md) in your resource's access member function. Then call the lock object's `Lock` member function (for example, [CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock)). At this point, your thread will either gain access to the resource, wait for the resource to be released and gain access, or wait for the resource to be released and time out, failing to gain access to the resource. In any case, your resource has been accessed in a thread-safe manner. To release the resource, use the lock object's `Unlock` member function (for example, [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)), or allow the lock object to fall out of scope.  
   
- 如需有關使用`CMutex`物件，請參閱文章[多執行緒︰ 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。  
+ For more information on using `CMutex` objects, see the article [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
  `CMutex`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="cmutex"></a>CMutex::CMutex  
- 建構具名或未命名的`CMutex`物件。  
+##  <a name="cmutex"></a>  CMutex::CMutex  
+ Constructs a named or unnamed `CMutex` object.  
   
 ```  
 CMutex(
@@ -93,25 +90,25 @@ CMutex(
     LPSECURITY_ATTRIBUTES lpsaAttribute = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bInitiallyOwn`  
- 指定如果執行緒建立`CMutex`物件一開始會有由 mutex 控制資源的存取權。  
+ Specifies if the thread creating the `CMutex` object initially has access to the resource controlled by the mutex.  
   
  `lpszName`  
- `CMutex` 物件的名稱。 如果具有相同名稱的另一個 mutex 已存在，`lpszName`必須提供，如果該物件會用於跨處理序界限。 如果**NULL**，便會是未命名。 如果名稱符合現有的 mutex，建構函式會建置新`CMutex`會參考該名稱的 mutex 物件。 如果名稱符合現有的同步處理物件不是 mutex，建構將會失敗。  
+ Name of the `CMutex` object. If another mutex with the same name exists, `lpszName` must be supplied if the object will be used across process boundaries. If **NULL**, the mutex will be unnamed. If the name matches an existing mutex, the constructor builds a new `CMutex` object which references the mutex of that name. If the name matches an existing synchronization object that is not a mutex, the construction will fail.  
   
  `lpsaAttribute`  
- Mutex 物件的安全性屬性。 此結構的完整說明，請參閱[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Security attributes for the mutex object. For a full description of this structure, see [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) in the Windows SDK.  
   
-### <a name="remarks"></a>備註  
- 存取或釋放`CMutex`物件，請建立[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件，然後呼叫其[鎖定](../../mfc/reference/csinglelock-class.md#lock)和[Unlock](../../mfc/reference/csinglelock-class.md#unlock)成員函式。 如果`CMutex`獨立使用物件，請呼叫其`Unlock`成員函式來釋放它。  
+### <a name="remarks"></a>Remarks  
+ To access or release a `CMutex` object, create a [CMultiLock](../../mfc/reference/cmultilock-class.md) or [CSingleLock](../../mfc/reference/csinglelock-class.md) object and call its [Lock](../../mfc/reference/csinglelock-class.md#lock) and [Unlock](../../mfc/reference/csinglelock-class.md#unlock) member functions. If the `CMutex` object is being used stand-alone, call its `Unlock` member function to release it.  
   
 > [!IMPORTANT]
->  在建立之後`CMutex`物件，請使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以確保，mutex 原本不存在。 如果存在非預期地 mutex，可能表示處理序佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序是關閉此控制代碼，並繼續如同在建立物件時發生錯誤。  
+>  After creating the `CMutex` object, use [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) to ensure that the mutex did not already exist. If the mutex did exist unexpectedly, it may indicate a rogue process is squatting and may be intending to use the mutex maliciously. In this case, the recommended security-conscious procedure is to close the handle and continue as if there was a failure in creating the object.  
   
-## <a name="see-also"></a>另請參閱  
- [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CSyncObject Class](../../mfc/reference/csyncobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

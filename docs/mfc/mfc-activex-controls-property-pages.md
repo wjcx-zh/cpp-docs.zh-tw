@@ -1,124 +1,142 @@
 ---
-title: "MFC ActiveX 控制項：屬性頁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPropertyPageDialog 類別"
-  - "DDP_ 函式"
-  - "DoDataExchange 方法"
-  - "MFC ActiveX 控制項, 屬性"
-  - "MFC ActiveX 控制項, 屬性頁"
-  - "OLEIVERB_PROPERTIES"
-  - "屬性頁, MFC ActiveX 控制項"
+title: 'MFC ActiveX Controls: Property Pages | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DDP_ functions [MFC]
+- MFC ActiveX controls [MFC], properties
+- property pages [MFC], MFC ActiveX controls
+- DoDataExchange method [MFC]
+- OLEIVERB_PROPERTIES
+- CPropertyPageDialog class [MFC]
+- MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC ActiveX 控制項：屬性頁
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b61c93f269b38bf4cca26c4cd27c64f8136e6954
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-屬性頁允許 ActiveX 控制項的使用者檢視和變更 ActiveX 控制項的屬性。  這些屬性以叫用控制項屬性對話方塊來存取，這個對話方塊包含一張以上的屬性頁，提供檢視和編輯控制項屬性要使用的自訂圖形介面。  
+---
+# <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX Controls: Property Pages
+Property pages allow an ActiveX control user to view and change ActiveX control properties. These properties are accessed by invoking a control properties dialog box, which contains one or more property pages that provide a customized, graphical interface for viewing and editing the control properties.  
   
- ActiveX 控制項屬性頁顯示使用兩種方法:  
+ ActiveX control property pages are displayed in two ways:  
   
--   當控制項的屬性動詞命令 \(**OLEIVERB\_PROPERTIES**\) 時叫用，控制開啟包含控制項的屬性頁中 Modal 屬性對話方塊。  
+-   When the control's Properties verb (**OLEIVERB_PROPERTIES**) is invoked, the control opens a modal property dialog box that contains the control's property pages.  
   
--   容器可以顯示選取之控制項的屬性頁的非強制回應對話方塊。  
+-   The container can display its own modeless dialog box that shows the property pages of the selected control.  
   
- 屬性對話方塊 \(說明在下圖\) 中顯示的目前屬性頁、選項交換在屬性頁之間執行一般工作，例如關閉屬性頁對話方塊，取消任何變更或立即套用至 ActiveX 控制項的按鈕的集合本機變更。  
+ The properties dialog box (illustrated in the following figure) consists of an area for displaying the current property page, tabs for switching between property pages, and a collection of buttons that perform common tasks such as closing the property page dialog, canceling any changes made, or immediately applying any changes to the ActiveX control.  
   
- ![Circ3 的屬性對話方塊](../mfc/media/vc373i1.png "vc373I1")  
-屬性對話方塊  
+ ![Properties dialog box for Circ3](../mfc/media/vc373i1.gif "vc373i1")  
+Properties Dialog Box  
   
- 本文包含主題與使用屬性頁與 ActiveX 控制項。  這些需求包括：  
+ This article covers topics related to using property pages in an ActiveX control. These include:  
   
--   [實作 ActiveX 控制項的預設屬性頁](#_core_implementing_the_default_property_page)  
+-   [Implementing the default property page for an ActiveX control](#_core_implementing_the_default_property_page)  
   
--   [將控制項加入至屬性工作頁](#_core_adding_controls_to_a_property_page)  
+-   [Adding controls to a property page](#_core_adding_controls_to_a_property_page)  
   
--   [自訂 DoDataExchange 函式](#_core_customizing_the_dodataexchange_function)  
+-   [Customizing the DoDataExchange function](#_core_customizing_the_dodataexchange_function)  
   
- 如需使用屬性頁的詳細資訊在 ActiveX 控制項，請參閱下列文件:  
+ For more information on using property pages in an ActiveX control, see the following articles:  
   
--   [MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
+-   [MFC ActiveX Controls: Adding Another Custom Property Page](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
--   [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+-   [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
- 如需使用屬性工作表的資訊在刪除 ActiveX 控制項之外的 MFC 應用程式，請參閱 [屬性工作表](../mfc/property-sheets-mfc.md)。  
+ For information on using property sheets in an MFC application other than an ActiveX control, see [Property Sheets](../mfc/property-sheets-mfc.md).  
   
-##  <a name="_core_implementing_the_default_property_page"></a> 實作預設屬性頁  
- 如果您使用 ActiveX 控制項精靈來建立您的控制項專案， ActiveX 控制項精靈可從 [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md)衍生的控制項提供預設屬性頁類別。  最初，這個屬性頁是空白的，不過，您可以加入任何對話方塊控制項或一組控制項。  預設會因為 ActiveX 控制項精靈只建立屬性頁類別，使用類別檢視中，必須建立其他屬性頁類別 \(也是衍生自 `COlePropertyPage`\)。  如需這項程序的詳細資訊，請參閱 [MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)。  
+##  <a name="_core_implementing_the_default_property_page"></a> Implementing the Default Property Page  
+ If you use the ActiveX Control Wizard to create your control project, the ActiveX Control Wizard provides a default property page class for the control derived from [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md). Initially, this property page is blank, but you can add any dialog box control or set of controls to it. Because the ActiveX Control Wizard creates only one property page class by default, additional property page classes (also derived from `COlePropertyPage`) must be created using Class View. For more information on this procedure, see [MFC ActiveX Controls: Adding Another Custom Property Page](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
   
- 實作屬性頁 \(在這種情況下，預設\) 是一個步驟:  
+ Implementing a property page (in this case, the default) is a three-step process:  
   
-#### 實作屬性頁  
+#### <a name="to-implement-a-property-page"></a>To implement a property page  
   
-1.  將`COlePropertyPage`衍生類別加入至 Web 控制項專案。  如果專案建立使用 ActiveX 控制項精靈 \(在此例中\)，預設屬性頁類別已經存在。  
+1.  Add a `COlePropertyPage`-derived class to the control project. If the project was created using the ActiveX Control Wizard (as in this case), the default property page class already exists.  
   
-2.  使用對話方塊編輯器加入所有控制項屬性頁範本。  
+2.  Use the dialog editor to add any controls to the property page template.  
   
-3.  自訂 `COlePropertyPage`的 `DoDataExchange` 函式要交換值的衍生類別在屬性頁控制項和 ActiveX 控制項範圍。  
+3.  Customize the `DoDataExchange` function of the `COlePropertyPage`-derived class to exchange values between the property page control and the ActiveX control.  
   
- 提供示範之用，下列程序使用簡單的控制項 \(名稱為「Sample」\)。  範例會使用 ActiveX 控制項精靈和只包含內建標頭屬性。  
+ For example purposes, the following procedures use a simple control (named "Sample"). Sample was created using the ActiveX Control Wizard and contains only the stock Caption property.  
   
-##  <a name="_core_adding_controls_to_a_property_page"></a> 將控制項加入至屬性工作頁  
+##  <a name="_core_adding_controls_to_a_property_page"></a> Adding Controls to a Property Page  
   
-#### 將控制項加入至屬性頁  
+#### <a name="to-add-controls-to-a-property-page"></a>To add controls to a property page  
   
-1.  在您的專案中，開啟資源檢視。  
+1.  With your control project open, open Resource View.  
   
-2.  按兩下 **Dialog** 目錄圖示。  
+2.  Double-click the **Dialog** directory icon.  
   
-3.  開啟 **IDD\_PROPPAGE\_SAMPLE** 對話方塊。  
+3.  Open the **IDD_PROPPAGE_SAMPLE** dialog box.  
   
-     ActiveX 控制項精靈附加專案名稱對話方塊 ID 的結尾，在這種情況下，看範例。  
+     The ActiveX Control Wizard appends the name of the project to the end of the dialog ID, in this case, Sample.  
   
-4.  拖放從工具箱中選取的控制項在對話方塊區域上。  
+4.  Drag and drop the selected control from the Toolbox onto the dialog box area.  
   
-5.  在這個範例中，文字標籤控制「標題: 」並與 **IDC\_CAPTION** 識別項的編輯方塊控制項即可。  
+5.  For this example, a text label control "Caption :" and an edit box control with an **IDC_CAPTION** identifier are sufficient.  
   
-6.  在工具列上按一下 \[**儲存**\] 以儲存變更。  
+6.  Click **Save** on the Toolbar to save your changes.  
   
- 現在已修改使用者介面，您需要與標頭屬性連接編輯方塊。  這在下列章節透過編輯 `CSamplePropPage::DoDataExchange` 函式完成。  
+ Now that the user interface has been modified, you need to link the edit box with the Caption property. This is done in the following section by editing the `CSamplePropPage::DoDataExchange` function.  
   
-##  <a name="_core_customizing_the_dodataexchange_function"></a> 自訂 DoDataExchange 函式  
- 您的屬性頁 [CWnd::DoDataExchange](../Topic/CWnd::DoDataExchange.md) 函式可讓您使用屬性的實際值在控制項的連接屬性頁值。  若要建立連結，您必須將適當的屬性頁欄位到其各自的控制項屬性。  
+##  <a name="_core_customizing_the_dodataexchange_function"></a> Customizing the DoDataExchange Function  
+ Your property page [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) function allows you to link property page values with the actual values of properties in the control. To establish links, you must map the appropriate property page fields to their respective control properties.  
   
- 使用屬性頁 **DDP\_** 函式實作這些對應。  **DDP\_** 函式的運作方式與在標準 MFC 對話方塊的 **DDX\_** 函式，有一個例外狀況。  除了對成員變數的參考以外， **DDP\_** 函式採用控制項屬性的名稱。  下列是在 `DoDataExchange` 函式中的一般項目屬性頁。  
+ These mappings are implemented using the property page **DDP_** functions. The **DDP_** functions work like the **DDX_** functions used in standard MFC dialogs, with one exception. In addition to the reference to a member variable, **DDP_** functions take the name of the control property. The following is a typical entry in the `DoDataExchange` function for a property page.  
   
- [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/CPP/mfc-activex-controls-property-pages_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- 使用 `DDP_TEXT` 函式，此函式相關聯之屬性頁的 `m_caption` 成員變數與標頭。  
+ This function associates the property page's `m_caption` member variable with the Caption, using the `DDP_TEXT` function.  
   
- 將屬性頁控制外掛程式之後，您需要建立上述屬性頁控制項、`IDC_CAPTION`和實際控制項屬性，標頭之間的連結，透過使用 **DDP\_Text** 函式。  
+ After you have the property page control inserted, you need to establish a link between the property page control, `IDC_CAPTION`, and the actual control property, Caption, using the **DDP_Text** function as described above.  
   
- [屬性頁](../mfc/reference/property-pages-mfc.md) 為其他對話方塊控制項類型，例如核取方塊、選項按鈕和清單方塊。  下表列出整組屬性頁 **DDP\_** 函式及其用途:  
+ [Property Pages](../mfc/reference/property-pages-mfc.md) are available for other dialog control types, such as check boxes, radio buttons, and list boxes. The table below lists the entire set of property page **DDP_** functions and their purposes:  
   
-### 屬性頁函式  
+### <a name="property-page-functions"></a>Property Page Functions  
   
-|函式名稱|使用這個函式連接|  
-|----------|--------------|  
-|`DDP_CBIndex`|在下拉式方塊中選取有控制項屬性的索引的字串。|  
-|`DDP_CBString`|在下拉式方塊中選取有控制項屬性的字串。  選取的字串可能以字母開頭和屬性值相同，但不需要完全相符。|  
-|`DDP_CBStringExact`|在下拉式方塊中選取有控制項屬性的字串。  選取的資料和屬性的字串值必須完全相符。|  
-|`DDP_Check`|控制項有屬性的核取方塊。|  
-|`DDP_LBIndex`|在清單方塊中選取有控制項屬性的索引的字串。|  
-|`DDP_LBString`|在清單方塊中選取有控制項屬性的字串。  選取的字串可能以字母開頭和屬性值相同，但不需要完全相符。|  
-|`DDP_LBStringExact`|在清單方塊中選取有控制項屬性的字串。  選取的資料和屬性的字串值必須完全相符。|  
-|`DDP_Radio`|控制項有屬性的一個選項按鈕。|  
-|**DDP\_Text**|控制項屬性中的文字。|  
+|Function name|Use this function to link|  
+|-------------------|-------------------------------|  
+|`DDP_CBIndex`|The selected string's index in a combo box with a control property.|  
+|`DDP_CBString`|The selected string in a combo box with a control property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|`DDP_CBStringExact`|The selected string in a combo box with a control property. The selected string and the property's string value must match exactly.|  
+|`DDP_Check`|A check box with a control property.|  
+|`DDP_LBIndex`|The selected string's index in a list box with a control property.|  
+|`DDP_LBString`|The selected string in a list box with a control property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|`DDP_LBStringExact`|The selected string in a list box with a control property. The selected string and the property's string value must match exactly.|  
+|`DDP_Radio`|A radio button with a control property.|  
+|**DDP_Text**|Text with a control property.|  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
  [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md)
+

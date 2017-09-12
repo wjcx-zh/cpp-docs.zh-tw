@@ -1,51 +1,70 @@
 ---
-title: "框架視窗類別 (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.frame"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架視窗類別, 參考"
+title: Frame Window Classes (Windows) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.frame
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 框架視窗類別 (Windows)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8b476e2f1b4922dd35dd0eb27f04670550fc84e8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-框架視窗是架構應用程式或應用程式中的視窗。  框架視窗通常包含其他視窗，例如檢視、工具列和狀態列。  在 `CMDIFrameWnd`的情況下，它們可能間接包含 `CMDIChildWnd` 物件。  
+---
+# <a name="frame-window-classes-windows"></a>Frame Window Classes (Windows)
+Frame windows are windows that frame an application or a part of an application. Frame windows usually contain other windows, such as views, tool bars, and status bars. In the case of `CMDIFrameWnd`, they may contain `CMDIChildWnd` objects indirectly.  
   
  [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- SDI 應用程式的主框架視窗的基底類別。  也是任何其他的基底類別框架視窗類別。  
+ The base class for an SDI application's main frame window. Also the base class for all other frame window classes.  
   
  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- MDI 應用程式的主框架視窗的基底類別。  
+ The base class for an MDI application's main frame window.  
   
  [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- MDI 應用程式的文件框架視窗的基底類別。  
+ The base class for an MDI application's document frame windows.  
   
  [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)  
- 通常在浮動工具列周圍出現的半高度框架視窗。  
+ A half-height frame window typically seen around floating toolbars.  
   
  [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)  
- 當伺服器文件就地編輯時，提供檢視框架視窗。  
+ Provides the frame window for a view when a server document is being edited in place.  
   
-## 相關類別  
- `CMenu` 類別提供存取應用程式的功能表的介面。  在執行階段動態操作功能表示有用的；例如在根據內容加入或刪除功能表項目時。  雖然功能表最常用於框架視窗，但也可以使用對話方塊和其他 nonchild 視窗。  
+## <a name="related-class"></a>Related Class  
+ Class `CMenu` provides an interface through which to access your application's menus. It is useful for manipulating menus dynamically at run time; for example, when adding or deleting menu items according to context. Although menus are most often used with frame windows, they can also be used with dialog boxes and other nonchild windows.  
   
  [CMenu](../mfc/reference/cmenu-class.md)  
- 封裝 `HMENU` 控制代碼應用程式的功能表列和快顯功能表。  
+ Encapsulates an `HMENU` handle to the application's menu bar and pop-up menus.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

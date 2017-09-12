@@ -1,5 +1,5 @@
 ---
-title: "CD2DRectF 類別 |Microsoft 文件"
+title: CD2DRectF Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DRectF class
+- CD2DRectF [MFC], CD2DRectF
+- CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
 caps.latest.revision: 18
 author: mikeblome
@@ -36,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5bca2dcce32679083e5917d855f711984989a489
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fade68a235bc93ff8dccce1d68c3b7d354a26c39
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2drectf-class"></a>CD2DRectF 類別
-`D2D1_RECT_F`的包裝函式。  
+# <a name="cd2drectf-class"></a>CD2DRectF Class
+A wrapper for `D2D1_RECT_F`.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DRectF : public D2D1_RECT_F;  
@@ -54,34 +55,34 @@ class CD2DRectF : public D2D1_RECT_F;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::CD2DRectF](#cd2drectf)|多載。 建構`CD2DRectF`物件從`D2D1_RECT_F`物件。|  
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Overloaded. Constructs a `CD2DRectF` object from `D2D1_RECT_F` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|傳回`boolean`值，指出運算式是否包含任何有效的資料 ( `null`)。|  
+|[CD2DRectF::IsNull](#isnull)|Returns a `boolean` value that indicates whether an expression contains no valid data ( `null`).|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DRectF::operator CRect](#operator_crect)|將轉換`CD2DRectF`到`CRect`物件。|  
+|[CD2DRectF::operator CRect](#operator_crect)|Converts `CD2DRectF` to `CRect` object.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `D2D1_RECT_F`  
   
  `CD2DRectF`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF  
- 建構 CD2DRectF 物件從 CRect 物件。  
+##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF  
+ Constructs a CD2DRectF object from CRect object.  
   
 ```  
 CD2DRectF(const CRect& rect);  
@@ -96,42 +97,42 @@ CD2DRectF(
     FLOAT fBottom = 0.);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 來源矩形  
+ source rectangle  
   
  `fLeft`  
- 來源左方的座標  
+ source left coordinate  
   
  `fTop`  
- 來源上方座標  
+ source top coordinate  
   
  `fRight`  
- 來源右座標  
+ source right coordinate  
   
  `fBottom`  
- 來源下方座標  
+ source bottom coordinate  
   
-##  <a name="isnull"></a>CD2DRectF::IsNull  
- 傳回布林值，指出運算式是否包含任何有效的資料 (Null)。  
+##  <a name="isnull"></a>  CD2DRectF::IsNull  
+ Returns a Boolean value that indicates whether an expression contains no valid data (Null).  
   
 ```  
 BOOL IsNull() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 矩形的上方、 左側、 底端和正確的值是否設為 0，所有相等，則為 TRUE。否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if rectangle's top, left, bottom, and right values are all equal to 0; otherwise FALSE.  
   
-##  <a name="operator_crect"></a>CD2DRectF::operator CRect  
- 將 CD2DRectF 轉換 CRect 物件。  
+##  <a name="operator_crect"></a>  CD2DRectF::operator CRect  
+ Converts CD2DRectF to CRect object.  
   
 ```  
 operator CRect();
 ```   
   
-### <a name="return-value"></a>傳回值  
- D2D 矩形的目前值。  
+### <a name="return-value"></a>Return Value  
+ Current value of D2D rectangle.  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

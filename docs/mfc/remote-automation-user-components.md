@@ -1,32 +1,50 @@
 ---
-title: "Remote Automation 使用者元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], Automation"
-  - "Remote Automation [C++], 使用者元件"
+title: Remote Automation User Components | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DLLs [MFC], Automation
+- Remote Automation [MFC], user components
 ms.assetid: 601591cc-a442-440a-988e-baf3284b0d46
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Remote Automation 使用者元件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 29735b6e515f5d6c04cfcc0014a9f69cc1a22cb4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您將需要確定每個用戶端包含您的用戶端程式和它需要的任何支援 DLL。  您也必須確定伺服器應用程式和它需要位於伺服器電腦的任何支援 DLL。  最後，您將需要確定您的伺服器程式在每一個用戶端註冊，在 RAC 管理員可以執行設定連接之前。  如果程式自我登錄 \(大部分都是\)，您只需要實作在用戶端的伺服器端登錄它。  如果再次失敗，您可能必須執行您提供的登錄檔案，或是手動編輯登錄。  
+---
+# <a name="remote-automation-user-components"></a>Remote Automation User Components
+You will need to ensure that each client machine contains your client program and any support DLLs it requires. You will also need to ensure that the server application and any support DLLs it requires are present on the server machine. Finally, you will need to ensure that your server program is registered on each client machine before RAC Manager can be run to configure the connection. If the program is self-registering (as most will be), you need only execute the server program on the client machine to register it. Failing that, you may have to execute a registration file that you provide, or manually edit the registry.  
   
-## 請參閱  
- [Automation 管理員 \(MFC\)](../mfc/automation-manager-mfc.md)   
- [Remote Automation 連接管理員](../mfc/remote-automation-connection-manager.md)   
- [Remote Automation 安裝](../mfc/remote-automation-installation.md)
+## <a name="see-also"></a>See Also  
+ [Automation Manager (MFC)](../mfc/automation-manager-mfc.md)   
+ [Remote Automation Connection Manager](../mfc/remote-automation-connection-manager.md)   
+ [Remote Automation Installation](../mfc/remote-automation-installation.md)
+
+

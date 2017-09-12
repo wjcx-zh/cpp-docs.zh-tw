@@ -1,34 +1,53 @@
 ---
-title: "初始化文件和檢視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件, 初始化"
-  - "初始化文件"
-  - "初始化物件, 文件物件"
-  - "初始化檢視"
-  - "檢視, 初始化"
+title: Initializing Documents and Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing documents [MFC]
+- documents [MFC], initializing
+- views [MFC], initializing
+- initializing objects [MFC], document objects
+- initializing views [MFC]
 ms.assetid: 33cb8643-8a16-478c-bc26-eccc734e3661
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 初始化文件和檢視
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9214fc1f08e0b22a2660e542689e3dd4fb4002f8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-資料會以兩種不同的方式產生，因此您的文件類別必須支援這兩個方式。  首先，使用者可用「建立檔案」命令產生新的空文件。  在這種情況下，請初始化 [CDocument](../mfc/reference/cdocument-class.md) 類別的 [OnNewDocument](../Topic/CDocument::OnNewDocument.md) 成員函式的覆寫中的文件。  再來，使用者可以使用檔案功能表的開啟命令建立內容從檔案讀取的新文件。  在這種情況下，請初始化 **CDocument** 類別的 [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) 成員函式的覆寫中的文件。  如果兩個初始化相同，您可以從兩個覆寫呼叫一個共同成員函式，或 `OnOpenDocument` 可以呼叫 `OnNewDocument` 以初始化乾淨文件後完成開啟作業。  
+---
+# <a name="initializing-documents-and-views"></a>Initializing Documents and Views
+Documents are created in two different ways, so your document class must support both ways. First, the user can create a new, empty document with the File New command. In that case, initialize the document in your override of the [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) member function of class [CDocument](../mfc/reference/cdocument-class.md). Second, the user can use the Open command on the File menu to create a new document whose contents are read from a file. In that case, initialize the document in your override of the [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) member function of class **CDocument**. If both initializations are the same, you can call a common member function from both overrides, or `OnOpenDocument` can call `OnNewDocument` to initialize a clean document and then finish the open operation.  
   
- 檢視會在其資料建立後產生。  初始化檢視的最佳時機是在架構完成建立文件框架視窗和檢視之後。  您可以透過覆寫 [CView](../mfc/reference/cview-class.md) 的 [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) 成員函式來初始化您的檢視。  如果您需要重新初始化或調整文件每次的任何變更，您可以覆寫 [OnUpdate](../Topic/CView::OnUpdate.md)。  
+ Views are created after their documents are created. The best time to initialize a view is after the framework has finished creating the document, frame window, and view. You can initialize your view by overriding the [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) member function of [CView](../mfc/reference/cview-class.md). If you need to reinitialize or adjust anything each time the document changes, you can override [OnUpdate](../mfc/reference/cview-class.md#onupdate).  
   
-## 請參閱  
- [初始化及清除文件和檢視](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+## <a name="see-also"></a>See Also  
+ [Initializing and Cleaning Up Documents and Views](../mfc/initializing-and-cleaning-up-documents-and-views.md)
+
+

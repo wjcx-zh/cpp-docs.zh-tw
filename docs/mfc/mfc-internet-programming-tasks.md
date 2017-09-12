@@ -1,62 +1,81 @@
 ---
-title: "MFC 網際網路程式設計工作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "網際網路應用程式, 第一步"
-  - "網際網路應用程式, 使用者入門"
+title: MFC Internet Programming Tasks | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], getting started
+- Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# MFC 網際網路程式設計工作
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 966dbcf797ee1429789afdd5bda4a1492307c324
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本節包含加入網際網路支援至您的應用程式的詳細步。  主題包含如何使用 MFC 類別網際網路啟用您的現有應用程式和如何將主動式文件支援加入至現有的 COM 元件。  您是否想要建立更新股價、匹茲堡的橄欖球分數和最新的南極洲溫度的資料的文件?  Microsoft 提供幾種技巧可以協助您在網際網路進行這件事。  
+---
+# <a name="mfc-internet-programming-tasks"></a>MFC Internet Programming Tasks
+This section contains detailed steps for adding Internet support to your applications. Topics include how to use the MFC classes to Internet-enable your existing applications, and how to add Active document support to your existing COM component. Do you want to create a document with up-to-the-minute stock quotes, Pittsburgh's football scores, and the latest temperature in Antarctica Microsoft provides a number of technologies to help you do that over the Internet.  
   
- Active 技術包括 ActiveX 控制項 \(先前稱為 OLE automation 控制項\) 和 Active 文件；可擷取和儲存 WinInet 跨網際網路檔案；而且有效率資料下載的非同步標記。  Visual C\+\+ 提供精靈用起始應用程式協助您快速入門。  如需這些技術的簡介，請參閱 [MFC 網際網路程式設計的基本概念。](../mfc/mfc-internet-programming-basics.md) 和 [MFC COM](../mfc/mfc-com.md)。  
+ Active technologies include ActiveX controls (formerly OLE controls) and Active documents; WinInet for easily retrieving and saving files across the Internet; and asynchronous monikers for efficient data downloading. Visual C++ provides wizards to help you get started quickly with a starter application. For an introduction to these technologies, see [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md) and [MFC COM](../mfc/mfc-com.md).  
   
- 您是否總是要 FTP 檔案，但是未學習 Winsock 和網路程式設計通訊協定?  WinInet 類別封裝這些通訊協定，提供您簡單的可讓您用來在網際網路上撰寫客戶端應用程式使用 HTTP、FTP 和 gopher 下載檔案的一組函式。  您可以使用 WinInet 搜尋您的硬碟的環境儲存目錄或整個世界。  您可以以透明方式收集不同型別的資料，並將其展示給聯合的使用者介面。  
+ Have you always wanted to FTP a file but haven't learned WinSock and network programming protocols WinInet classes encapsulate these protocols, providing you with a simple set of functions you can use to write a client application on the Internet to download files using HTTP, FTP, and gopher. You can use WinInet to search directories on your hard drive or around the world. You can transparently collect data of several different types, and present it to the user in an integrated interface.  
   
- 您是否有下載大量的資料?  非同步標記為大型物件進行轉換列提供 COM \(元件物件模型 \(Component Object Model，COM\) 方案。  WinInet 也可以非同步使用。  
+ Do you have large amounts of data to download Asynchronous monikers provide a COM (Component Object Model) solution for progressive rendering of large objects. WinInet can also be used asynchronously.  
   
- 下表描述您可以使用這些技術的一些事項。  
+ The following table describes a few of the things you can do with these technologies.  
   
-|您有|您想要|您應該|  
-|--------|---------|---------|  
-|網頁伺服器|追蹤記錄檔和詳細資訊的 URL 要求。|寫入一個篩選條件、註冊事件和 URL 要求對應的通知。|  
-|Web 瀏覽器|提供動態內容。|建立 ActiveX 控制項和現用文件。|  
-|以文件為基礎的應用程式。|加入支援 FTP 檔案。|使用 WinInet 或非同步標記。|  
+|You have|You want to|You should|  
+|--------------|-----------------|----------------|  
+|A Web server.|Track logons and detailed information about URL requests.|Write a filter, request notifications for logon events and URL mapping.|  
+|A Web browser.|Provide dynamic content.|Create ActiveX controls and Active documents.|  
+|A document-based application.|Add support to FTP a file.|Use WinInet or asynchronous monikers.|  
   
- 請參閱下列主題以取得詳細資訊讓您開始：  
+ See the following topics for details to get you started:  
   
--   [應用程式設計選擇](../mfc/application-design-choices.md)  
+-   [Application Design Choices](../mfc/application-design-choices.md)  
   
--   [撰寫 MFC 應用程式](../mfc/writing-mfc-applications.md)  
+-   [Writing MFC Applications](../mfc/writing-mfc-applications.md)  
   
--   [網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)  
+-   [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)  
   
--   [升級現有的 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)  
+-   [Upgrading an Existing ActiveX Control](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [網際網路上的主動式文件](../mfc/active-documents-on-the-internet.md)  
+-   [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md)  
   
--   [網際網路上的非同步 Moniker](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronous Monikers on the Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   
--   [測試網際網路應用程式](../mfc/testing-internet-applications.md)  
+-   [Testing Internet Applications](../mfc/testing-internet-applications.md)  
   
--   [網際網路安全性](../mfc/internet-security-cpp.md)  
+-   [Internet Security](../mfc/internet-security-cpp.md)  
   
-## 請參閱  
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)   
- [依工作分類的網際網路資訊](../mfc/internet-information-by-task.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [Internet Information by Task](../mfc/internet-information-by-task.md)
+
+

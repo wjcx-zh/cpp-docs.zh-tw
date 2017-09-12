@@ -1,61 +1,80 @@
 ---
-title: "容器：用戶端項目通知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "用戶端項目與 OLE 容器"
-  - "告知, 容器用戶端項目"
-  - "OLE 容器, 用戶端項目通知"
+title: 'Containers: Client-Item Notifications | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], container client item
+- OLE containers [MFC], client-item notifications
+- client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 容器：用戶端項目通知
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5023d697e6c87199d449687f21e35c3e31fea854
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文將討論 MFC 架構稱為的可覆寫的函式在伺服器應用程式修改在用戶端應用程式的文件的項目。  
+---
+# <a name="containers-client-item-notifications"></a>Containers: Client-Item Notifications
+This article discusses the overridable functions that the MFC framework calls when server applications modify items in your client application's document.  
   
- [COleClientItem](../mfc/reference/coleclientitem-class.md) 定義呼叫以回應在元件應用程式的需求，也稱為伺服器應用程式的幾個可覆寫的函式。  這些 overridables 通常做為通知。  這些告知容器應用程式各種事件，例如捲動、啟動或位置的變更，所以，並變更使用者進行時，編輯或管理項目。  
+ [COleClientItem](../mfc/reference/coleclientitem-class.md) defines several overridable functions that are called in response to requests from the component application, which is also called the server application. These overridables usually act as notifications. They inform the container application of various events, such as scrolling, activation, or a change of position, and of changes that the user makes when editing or otherwise manipulating the item.  
   
- 這個架構會呼叫 `COleClientItem::OnChange`，需要實作的可覆寫的函式通知變更的容器應用程式。  這個受保護的函式接受兩個引數。  第一個指定伺服器變更項目的原因:  
+ The framework notifies your container application of changes through a call to `COleClientItem::OnChange`, an overridable function whose implementation is required. This protected function receives two arguments. The first specifies the reason the server changed the item:  
   
-|告知|意義|  
-|--------|--------|  
-|`OLE_CHANGED`|OLE 項目的外觀變更時。|  
-|`OLE_SAVED`|OLE 項目儲存。|  
-|`OLE_CLOSED`|OLE 項目關閉。|  
-|**OLE\_RENAMED**|包含 OLE 項目的伺服器檔案重新命名。|  
-|`OLE_CHANGED_STATE`|OLE 項目從某個狀態變更為另一個。|  
-|**OLE\_CHANGED\_ASPECT**|架構變更 OLE 項目的繪製方式。|  
+|Notification|Meaning|  
+|------------------|-------------|  
+|`OLE_CHANGED`|The OLE item's appearance has changed.|  
+|`OLE_SAVED`|The OLE item has been saved.|  
+|`OLE_CLOSED`|The OLE item has been closed.|  
+|**OLE_RENAMED**|The server document containing the OLE item has been renamed.|  
+|`OLE_CHANGED_STATE`|The OLE item has changed from one state to another.|  
+|**OLE_CHANGED_ASPECT**|The OLE item's draw aspect has been changed by the framework.|  
   
- 這些值是從 **OLE\_NOTIFICATION** 列舉，在 AFXOLE.H. 定義。  
+ These values are from the **OLE_NOTIFICATION** enumeration, which is defined in AFXOLE.H.  
   
- 對這個函式的第二個引數會指定項目有何變更或什麼狀態並輸入:  
+ The second argument to this function specifies how the item has changed or what state it has entered:  
   
-|當第一個引數是|第二個引數。|  
-|-------------|------------|  
-|`OLE_SAVED` 或 `OLE_CLOSED`|不使用。|  
-|`OLE_CHANGED`|指定變更 OLE 項目的外觀。|  
-|`OLE_CHANGED_STATE`|描述輸入的狀態 \( **loadedState**、`emptyState`、 `openState`、 `activeState`或 `activeUIState`\)。|  
+|When first argument is|Second argument|  
+|----------------------------|---------------------|  
+|`OLE_SAVED` or `OLE_CLOSED`|Is not used.|  
+|`OLE_CHANGED`|Specifies the aspect of the OLE item that has changed.|  
+|`OLE_CHANGED_STATE`|Describes the state being entered (`emptyState`, **loadedState**, `openState`, `activeState`, or `activeUIState`).|  
   
- 如需用戶端項目可以假設狀態的詳細資訊，請參閱 [容器:用戶端項目狀態](../mfc/containers-client-item-states.md)。  
+ For more information about the states a client item can assume, see [Containers: Client-Item States](../mfc/containers-client-item-states.md).  
   
- 當項目為就地編譯時，就會啟動這個框架呼叫 `COleClientItem::OnGetItemPosition` 。  實作針對支援就地編譯的應用程式所需的。  MFC 應用程式精靈提供基底實作，指定項目的座標的 `CRect` 物件當做引數傳遞至 `OnGetItemPosition`。  
+ The framework calls `COleClientItem::OnGetItemPosition` when an item is being activated for in-place editing. Implementation is required for applications that support in-place editing. The MFC Application Wizard provides a basic implementation, which assigns the item's coordinates to the `CRect` object that is passed as an argument to `OnGetItemPosition`.  
   
- 在就地編輯期間，如果 OLE 項目的位置或大小變更時，該項目的位置的容器的相關資訊和裁剪方框必須更新，以及伺服器必須取得有關變更的資訊。  這個架構提供此呼叫 `COleClientItem::OnChangeItemPosition` 。  MFC 應用程式精靈提供呼叫基底類別的函式的覆寫。  您必須編輯函式應用程式精靈為您的 `COleClientItem`衍生類別覆寫，以便函式更新您的用戶端項目物件保留的所有資訊。  
+ If an OLE item's position or size changes during in-place editing, the container's information about the item's position and clipping rectangles must be updated and the server must receive information about the changes. The framework calls `COleClientItem::OnChangeItemPosition` for this purpose. The MFC Application Wizard provides an override that calls the base class's function. You should edit the function that the application wizard writes for your `COleClientItem`-derived class so that the function updates any information retained by your client-item object.  
   
-## 請參閱  
- [容器](../mfc/containers.md)   
- [容器：用戶端項目狀態](../mfc/containers-client-item-states.md)   
- [COleClientItem::OnChangeItemPosition](../Topic/COleClientItem::OnChangeItemPosition.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Client-Item States](../mfc/containers-client-item-states.md)   
+ [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
+
+

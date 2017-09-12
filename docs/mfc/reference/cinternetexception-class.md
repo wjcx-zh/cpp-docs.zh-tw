@@ -1,5 +1,5 @@
 ---
-title: "CInternetException 類別 |Microsoft 文件"
+title: CInternetException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- exception handling, Internet operations
-- exceptions, Internet
-- CInternetException class
+- CInternetException [MFC], CInternetException
+- CInternetException [MFC], m_dwContext
+- CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
 caps.latest.revision: 22
 author: mikeblome
@@ -39,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 1831f868b7388cbc6382e26fca92280c3b880276
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19c144cffcb44e75edcc003b642601866b8a5850
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cinternetexception-class"></a>CInternetException 類別
-表示與網際網路作業相關的例外狀況。  
+# <a name="cinternetexception-class"></a>CInternetException Class
+Represents an exception condition related to an Internet operation.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CInternetException : public CException  
@@ -57,72 +57,72 @@ class CInternetException : public CException
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetException::CInternetException](#cinternetexception)|建構 `CInternetException` 物件。|  
+|[CInternetException::CInternetException](#cinternetexception)|Constructs a `CInternetException` object.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CInternetException::m_dwContext](#m_dwcontext)|造成例外狀況的作業相關聯的內容值。|  
-|[CInternetException::m_dwError](#m_dwerror)|造成例外狀況時發生錯誤。|  
+|[CInternetException::m_dwContext](#m_dwcontext)|The context value associated with the operation that caused the exception.|  
+|[CInternetException::m_dwError](#m_dwerror)|The error that caused the exception.|  
   
-## <a name="remarks"></a>備註  
- `CInternetException`類別包含兩個公用資料成員︰ 一個保存的例外狀況相關聯的錯誤碼和其他保留與錯誤相關聯的網際網路應用程式的內容識別碼。  
+## <a name="remarks"></a>Remarks  
+ The `CInternetException` class includes two public data members: one holds the error code associated with the exception, and the other holds the context identifier of the Internet application associated with the error.  
   
- 如需網際網路應用程式的內容識別碼的詳細資訊，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
+ For more information about context identifiers for Internet applications, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CInternetException`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="cinternetexception"></a>CInternetException::CInternetException  
- 此成員函式時，會呼叫`CInternetException`建立物件。  
+##  <a name="cinternetexception"></a>  CInternetException::CInternetException  
+ This member function is called when a `CInternetException` object is created.  
   
 ```  
 CInternetException(DWORD dwError);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwError`  
- 造成例外狀況時發生錯誤。  
+ The error that caused the exception.  
   
-### <a name="remarks"></a>備註  
- 擲回 CInternetException，呼叫 MFC 的全域函式[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)。  
+### <a name="remarks"></a>Remarks  
+ To throw a CInternetException, call the MFC global function [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception).  
   
-##  <a name="m_dwcontext"></a>CInternetException::m_dwContext  
- 與相關的網際網路作業相關聯的內容值。  
+##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext  
+ The context value associated with the related Internet operation.  
   
 ```  
 DWORD_PTR m_dwContext;  
 ```  
   
-### <a name="remarks"></a>備註  
- 中原本指定的內容識別碼[CInternetSession](../../mfc/reference/cinternetsession-class.md)而且由 MFC 傳遞[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-和[CInternetFile](../../mfc/reference/cinternetfile-class.md)-衍生的類別。 您可以覆寫此預設值，並將任何指派`dwContext`參數您選擇的值。 `dwContext`與指定之任何的物件作業有關聯。 `dwContext`識別作業的狀態資訊傳回[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。  
+### <a name="remarks"></a>Remarks  
+ The context identifier is originally specified in [CInternetSession](../../mfc/reference/cinternetsession-class.md) and passed by MFC to [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)- and [CInternetFile](../../mfc/reference/cinternetfile-class.md)-derived classes. You can override this default and assign any `dwContext` parameter a value of your choosing. `dwContext` is associated with any operation of the given object. `dwContext` identifies the operation's status information returned by [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).  
   
-##  <a name="m_dwerror"></a>CInternetException::m_dwError  
- 造成例外狀況時發生錯誤。  
+##  <a name="m_dwerror"></a>  CInternetException::m_dwError  
+ The error that caused the exception.  
   
 ```  
 DWORD m_dwError;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此錯誤的值可能是系統 WINERROR 中找到的錯誤碼。H 或從 WININET 錯誤值。H.  
+### <a name="remarks"></a>Remarks  
+ This error value may be a system error code, found in WINERROR.H, or an error value from WININET.H.  
   
- 如需 Win32 錯誤碼的清單，請參閱[錯誤碼](http://msdn.microsoft.com/library/windows/desktop/ms681381)。 如需網際網路特定錯誤訊息的清單，請參閱。 這兩個主題位於[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For a list of Win32 error codes, see [Error Codes](http://msdn.microsoft.com/library/windows/desktop/ms681381). For a list of Internet-specific error messages, see  . Both topics are in the Windows SDK.  
   
-## <a name="see-also"></a>另請參閱  
- [CException 類別](../../mfc/reference/cexception-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CException 類別](../../mfc/reference/cexception-class.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](../../mfc/reference/cexception-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)
 

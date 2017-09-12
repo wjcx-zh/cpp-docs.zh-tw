@@ -1,5 +1,5 @@
 ---
-title: "類型程式庫存取 |Microsoft 文件"
+title: Type Library Access | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- type libraries, accessing
+- type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 caps.latest.revision: 14
 author: mikeblome
@@ -33,68 +33,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c531cfd358a6f049754b55a5bc8902ad5a37d975
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="type-library-access"></a>類型程式庫存取
-類型程式庫會將 OLE 控制項的介面公開給其他 OLE 感知應用程式。 如果有一個或多個介面要公開，則每個 OLE 控制項都必須有類型程式庫。  
+# <a name="type-library-access"></a>Type Library Access
+Type libraries expose the interfaces of an OLE control to other OLE-aware applications. Each OLE control must have a type library if one or more interfaces are to be exposed.  
   
- 下列巨集可以讓 OLE 控制項提供對其類型程式庫的存取能力：  
+ The following macros allow an OLE control to provide access to its own type library:  
   
-### <a name="type-library-access"></a>類型程式庫存取  
+### <a name="type-library-access"></a>Type Library Access  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|宣告 OLE 控制項的 `GetTypeLib` 成員函式 (必須在類別宣告中使用)。|  
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|實作 OLE 控制項的 `GetTypeLib` 成員函式 (必須在類別實作中使用)。|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declares a `GetTypeLib` member function of an OLE control (must be used in the class declaration).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implements a `GetTypeLib` member function of an OLE control (must be used in the class implementation).|  
   
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
- 宣告`GetTypeLib`控制類別成員函式。  
+##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
+ Declares the `GetTypeLib` member function of your control class.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 控制項類別相關的類型程式庫的名稱。  
+ The name of the control class related to the type library.  
   
-### <a name="remarks"></a>備註  
- 控制項類別標頭檔中使用這個巨集。  
+### <a name="remarks"></a>Remarks  
+ Use this macro in the control class header file.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
- 實作控制項的`GetTypeLib`成員函式。  
+##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
+ Implements the control's `GetTypeLib` member function.  
   
 ```   
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 控制項類別相關的類型程式庫的名稱。  
+ The name of the control class related to the type library.  
   
  *tlid*  
- 型別程式庫 ID 編號。  
+ The ID number of the type library.  
   
  `wVerMajor`  
- 類型程式庫主要版本號碼。  
+ The type library major version number.  
   
  `wVerMinor`  
- 類型程式庫次要版本號碼。  
+ The type library minor version number.  
   
-### <a name="remarks"></a>備註  
- 這個巨集必須出現在使用任何控制項類別的實作檔`DECLARE_OLETYPELIB`巨集。  
+### <a name="remarks"></a>Remarks  
+ This macro must appear in the implementation file for any control class that uses the `DECLARE_OLETYPELIB` macro.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
    
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

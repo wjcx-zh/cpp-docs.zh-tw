@@ -1,40 +1,59 @@
 ---
-title: "OLE Automation 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automation 類別"
-  - "Automation 類別, OLE 類別"
-  - "Automation, 類別"
-  - "OLE Automation"
-  - "OLE Automation, 類別"
+title: OLE Automation Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation, classes
+- Automation classes [MFC], OLE classes
+- OLE Automation [MFC], classes
+- Automation classes [MFC]
+- OLE Automation [MFC]
 ms.assetid: 96e5372b-ff8a-4da1-933b-4d9bbf4dceb3
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE Automation 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2344c8cc3e9a4f09c7d39c0c0e728077fb29b118
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這些類別支援 Automation 用戶端 \(控制其他應用程式\) 的應用程式。  的 Automation 伺服程式\(可供其他應用程式控制項應用程式\)透過 [分派對應](../mfc/reference/dispatch-maps.md)支援。  
+---
+# <a name="ole-automation-classes"></a>OLE Automation Classes
+These classes support automation clients (applications that control other applications). Automation servers (applications that can be controlled by other applications) are supported through [dispatch maps](../mfc/reference/dispatch-maps.md).  
   
  [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
- 用來呼叫您的 Automation 用戶端的 Automation 伺服程式。  當加入類別時，這個類別是用來建立提供型別程式庫的 Automation 伺服器的型別安全類別。  
+ Used to call automation servers from your automation client. When adding a class, this class is used to create type-safe classes for automation servers that provide a type library.  
   
  [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
- 例外狀況造成的錯誤在 OLE Automation 時。  Automation 例外狀況由 Automation 伺服器擲回並由 Automation 用戶端攔截。  
+ An exception resulting from an error during OLE automation. Automation exceptions are thrown by automation servers and caught by automation clients.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

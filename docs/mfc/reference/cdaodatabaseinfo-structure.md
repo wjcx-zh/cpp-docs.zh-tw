@@ -1,5 +1,5 @@
 ---
-title: "CDaoDatabaseInfo 結構 |Microsoft 文件"
+title: CDaoDatabaseInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoDatabaseInfo structure
+- CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
 caps.latest.revision: 14
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed7eb8612099daf59cb7e722434102095122f3d1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4403b7ac9d37f55763ecadbac3f8bd912860ea74
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 結構
-`CDaoDatabaseInfo`結構包含定義資料存取物件 (DAO) 的資料庫物件的相關資訊。  
+# <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo Structure
+The `CDaoDatabaseInfo` structure contains information about a database object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoDatabaseInfo  
@@ -59,76 +59,76 @@ struct CDaoDatabaseInfo
 };  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 唯一名稱的資料庫物件。 若要直接擷取這個屬性，呼叫[CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
+ Uniquely names the database object. To directly retrieve this property, call [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname). For details, see the topic "Name Property" in DAO Help.  
   
  `m_bUpdatable`  
- 指出是否可以變更至資料庫。 若要直接擷取這個屬性，呼叫[CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 可更新屬性 」。  
+ Indicates whether changes can be made to the database. To directly retrieve this property, call [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate). For details, see the topic "Updatable Property" in DAO Help.  
   
  *m_bTransactions*  
- 指出資料來源是否支援交易，錄製一系列稍後復原回來的變更 （取消） 或認可 （儲存）。 如果資料庫根據 Microsoft Jet 資料庫引擎，交易屬性為非零值，您可以使用交易。 其他的資料庫引擎可能不支援交易。 若要直接擷取這個屬性，呼叫[CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact)。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 交易屬性 」。  
+ Indicates whether a data source supports transactions — the recording of a series of changes that can later be rolled back (canceled) or committed (saved). If a database is based on the Microsoft Jet database engine, the Transactions property is nonzero and you can use transactions. Other database engines may not support transactions. To directly retrieve this property, call [CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact). For details, see the topic "Transactions Property" in DAO Help.  
   
  *m_strVersion*  
- 表示 Microsoft Jet 資料庫引擎的版本。 若要直接擷取這個屬性的值，呼叫資料庫物件的[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 版本屬性 」。  
+ Indicates the version of the Microsoft Jet database engine. To retrieve the value of this property directly, call the database object's [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) member function. For details, see the topic "Version Property" in DAO Help.  
   
  `m_lCollatingOrder`  
- 適用於字串比較或排序文字中指定排序次序的順序。 可能的值包括：  
+ Specifies the sequence of the sort order in text for string comparison or sorting. Possible values include:  
   
-- **dbSortGeneral**使用一般 （英文、 法文、 德文、 葡萄牙文、 義大利文、 和現代西班牙文） 的排序順序。  
+- **dbSortGeneral** Use the General (English, French, German, Portuguese, Italian, and Modern Spanish) sort order.  
   
-- **dbSortArabic**使用阿拉伯文排序順序。  
+- **dbSortArabic** Use the Arabic sort order.  
   
-- **dbSortCyrillic**使用俄文的排序順序。  
+- **dbSortCyrillic** Use the Russian sort order.  
   
-- **dbSortCzech**使用捷克文的排序順序。  
+- **dbSortCzech** Use the Czech sort order.  
   
-- **dbSortDutch**使用荷蘭的排序順序。  
+- **dbSortDutch** Use the Dutch sort order.  
   
-- **dbSortGreek**使用希臘文的排序順序。  
+- **dbSortGreek** Use the Greek sort order.  
   
-- **dbSortHebrew**使用希伯來文排序順序。  
+- **dbSortHebrew** Use the Hebrew sort order.  
   
-- **dbSortHungarian**使用匈牙利文的排序順序。  
+- **dbSortHungarian** Use the Hungarian sort order.  
   
-- **dbSortIcelandic**使用冰島排序順序。  
+- **dbSortIcelandic** Use the Icelandic sort order.  
   
-- **dbSortNorwdan**使用挪威文或丹麥文的排序順序。  
+- **dbSortNorwdan** Use the Norwegian or Danish sort order.  
   
-- **dbSortPDXIntl**使用 Paradox 國際排序順序。  
+- **dbSortPDXIntl** Use the Paradox International sort order.  
   
-- **dbSortPDXNor**使用 Paradox 挪威文或丹麥文的排序次序。  
+- **dbSortPDXNor** Use the Paradox Norwegian or Danish sort order.  
   
-- **dbSortPDXSwe**使用 Paradox 瑞典文或芬蘭文的排序次序。  
+- **dbSortPDXSwe** Use the Paradox Swedish or Finnish sort order.  
   
-- **dbSortPolish**使用波蘭文的排序順序。  
+- **dbSortPolish** Use the Polish sort order.  
   
-- **dbSortSpanish**使用西班牙文的排序順序。  
+- **dbSortSpanish** Use the Spanish sort order.  
   
-- **dbSortSwedFin**使用瑞典文或芬蘭文的排序順序。  
+- **dbSortSwedFin** Use the Swedish or Finnish sort order.  
   
-- **dbSortTurkish**使用土耳其文的排序順序。  
+- **dbSortTurkish** Use the Turkish sort order.  
   
-- **dbSortUndefined**排序順序是未定義或未知。  
+- **dbSortUndefined** The sort order is undefined or unknown.  
   
- 如需詳細資訊，請參閱 「 自訂 Windows 登錄設定的資料存取 」 DAO 說明中的主題。  
+ For more information, see the topic "Customizing Windows Registry Settings for Data Access" in DAO Help.  
   
  *m_nQueryTimeout*  
- ODBC 資料庫上執行查詢時，就會發生的 Microsoft Jet 資料庫引擎在逾時錯誤之前等候的秒數。 預設的逾時值為 60 秒。 當 QueryTimeout 設定為 0 時，就會發生不會逾時;這會造成程式停止回應。 若要直接擷取這個屬性的值，呼叫資料庫物件的[GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 QueryTimeout 屬性 」。  
+ The number of seconds the Microsoft Jet database engine waits before a timeout error occurs when a query is run on an ODBC database. The default timeout value is 60 seconds. When QueryTimeout is set to 0, no timeout occurs; this can cause the program to stop responding. To retrieve the value of this property directly, call the database object's [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) member function. For details, see the topic "QueryTimeout Property" in DAO Help.  
   
  `m_strConnect`  
- 提供開啟的資料庫來源的相關資訊。 如需連接字串，和直接擷取這個屬性的值的詳細資訊，請參閱[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 連接屬性 」。  
+ Provides information about the source of an open database. For information about connect strings, and for information about retrieving the value of this property directly, see the [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) member function. For more information, see the topic "Connect Property" in DAO Help.  
   
-## <a name="remarks"></a>備註  
- 資料庫是基礎類別的 MFC 物件的 DAO 物件[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)。 主要、 次要資料庫，且上述所有參考表示資訊由[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式。  
+## <a name="remarks"></a>Remarks  
+ The database is a DAO object underlying an MFC object of class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md). The references to Primary, Secondary, and All above indicate how the information is returned by the [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) member function.  
   
- 所擷取的資訊[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式會儲存在`CDaoDatabaseInfo`結構。 呼叫`GetDatabaseInfo`的`CDaoWorkspace`資料庫物件會儲存其資料庫集合中的物件。 `CDaoDatabaseInfo`也會定義`Dump`成員函式中偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoDatabaseInfo`物件。  
+ Information retrieved by the [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo) member function is stored in a `CDaoDatabaseInfo` structure. Call `GetDatabaseInfo` for the `CDaoWorkspace` object in whose Databases collection the database object is stored. `CDaoDatabaseInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoDatabaseInfo` object.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace 類別](../../mfc/reference/cdaoworkspace-class.md)   
- [CDaoDatabase 類別](../../mfc/reference/cdaodatabase-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)
 

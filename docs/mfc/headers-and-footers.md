@@ -1,50 +1,68 @@
 ---
-title: "頁首和頁尾 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "頁尾, 列印"
-  - "頁首, 列印"
-  - "頁尾"
-  - "頁尾, 列印"
-  - "頁首"
-  - "頁首, 列印"
-  - "列印 [MFC], 頁首和頁尾"
-  - "列印 [MFC], 多頁文件"
+title: Headers and Footers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- printing [MFC], multipage documents
+- page headers [MFC], printing
+- headers [MFC], printing
+- footers [MFC], printing
+- page footers [MFC], printing
+- page headers [MFC]
+- printing [MFC], headers and footers
+- page footers [MFC]
 ms.assetid: b0be9c53-5773-4955-a777-3c15da745128
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 頁首和頁尾
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 46314bd0bc97dd9d346c2abd1310902a21bb6d1c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明如何將頁首和頁尾加入至列印的文件。  
+---
+# <a name="headers-and-footers"></a>Headers and Footers
+This article explains how to add headers and footers to a printed document.  
   
- 當您在螢幕看到一個文件，文件名稱和您的文件中目前的位置在標題列和狀態列通常會顯示。  當檢視文件的列印的複本時，在頁首或頁尾和頁碼顯示名稱會很有用。  這是即使 WYSIWYG 程式執行列印和螢幕顯示的方式有所不同時的一個常見方法。  
+ When you look at a document on the screen, the name of the document and your current location in the document are commonly displayed in a title bar and a status bar. When looking at a printed copy of a document, it's useful to have the name and page number shown in a header or footer. This is a common way in which even WYSIWYG programs differ in how they perform printing and screen display.  
   
- [OnPrint](../Topic/CView::OnPrint.md) 成員函式是列印頁首或頁尾的適當位置，因為它會為每個頁面被呼叫，且因為它只為列印呼叫，而非針對螢幕顯示。  您可以定義不同的函式列印頁首或頁尾，並傳給它 `OnPrint` 的印表機內容。  您可能需要在呼叫 [OnDraw](../Topic/CView::OnDraw.md) 之前調整視窗原點或範圍以避免排列頁面主體重疊頁首或頁尾。  您可能也需要修改 `OnDraw` ，因為在頁面相容的數量文件會降低。  
+ The [OnPrint](../mfc/reference/cview-class.md#onprint) member function is the appropriate place to print headers or footers because it is called for each page, and because it is called only for printing, not for screen display. You can define a separate function to print a header or footer, and pass it the printer device context from `OnPrint`. You might need to adjust the window origin or extent before calling [OnDraw](../mfc/reference/cview-class.md#ondraw) to avoid having the body of the page overlap the header or footer. You might also have to modify `OnDraw` because the amount of the document that fits on the page could be reduced.  
   
- 一種補償頁首或頁尾佔據的區域是使用 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)的 **m\_rectDraw** 成員。  每次列印頁面，這個成員以使用的頁面的可以使用區域初始化。  如果您在列印頁面主體前先列印頁首或頁尾，可以減少在 **m\_rectDraw** 存放的矩形大小佔頁首或頁尾採取的區域。  然後 `OnPrint` 可以參考 **m\_rectDraw** 以尋找為列印頁面主體會保持多少區域。  
+ One way to compensate for the area taken by the header or footer is to use the **m_rectDraw** member of [CPrintInfo](../mfc/reference/cprintinfo-structure.md). Each time a page is printed, this member is initialized with the usable area of the page. If you print a header or footer before printing the body of the page, you can reduce the size of the rectangle stored in **m_rectDraw** to account for the area taken by the header or footer. Then `OnPrint` can refer to **m_rectDraw** to find out how much area remains for printing the body of the page.  
   
- 從 [OnPrepareDC](../Topic/CView::OnPrepareDC.md)，您無法列印標題或任何其他東西，因為它在 [CDC](../mfc/reference/cdc-class.md) 的 `StartPage` 成員函式呼叫之前被呼叫。  此時，印表機內容視為在頁面界限。  您只可以從 `OnPrint` 成員函式執行列印。  
+ You cannot print a header, or anything else, from [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc), because it is called before the `StartPage` member function of [CDC](../mfc/reference/cdc-class.md) has been called. At that point, the printer device context is considered to be at a page boundary. You can perform printing only from the `OnPrint` member function.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [列印多頁文件](../mfc/multipage-documents.md)  
+-   [Printing multipage documents](../mfc/multipage-documents.md)  
   
--   [配置列印的 GDI 資源](../mfc/allocating-gdi-resources.md)  
+-   [Allocating GDI resources for printing](../mfc/allocating-gdi-resources.md)  
   
-## 請參閱  
- [列印](../mfc/printing.md)
+## <a name="see-also"></a>See Also  
+ [Printing](../mfc/printing.md)
+
+

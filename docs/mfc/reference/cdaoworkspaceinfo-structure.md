@@ -1,5 +1,5 @@
 ---
-title: "CDaoWorkspaceInfo 結構 |Microsoft 文件"
+title: CDaoWorkspaceInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoWorkspaceInfo structure
+- CDaoWorkspaceInfo structure [MFC]
 - DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
 caps.latest.revision: 13
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 44c1ce365a1eecdb2a500998c082c6a9245dffb2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f868a92ea05d7d747db892c57b456c0eb202ec07
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 結構
-`CDaoWorkspaceInfo`結構包含定義資料存取物件 (DAO) 資料庫存取工作區的相關資訊。  
+# <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo Structure
+The `CDaoWorkspaceInfo` structure contains information about a workspace defined for data access objects (DAO) database access.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoWorkspaceInfo  
@@ -55,25 +55,25 @@ struct CDaoWorkspaceInfo
 };  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 唯一命名工作區中的物件。 若要直接擷取這個屬性的值，呼叫 recordset 物件的[GetName](../../mfc/reference/cdaoquerydef-class.md#getname)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
+ Uniquely names the workspace object. To retrieve the value of this property directly, call the querydef object's [GetName](../../mfc/reference/cdaoquerydef-class.md#getname) member function. For more information, see the topic "Name Property" in DAO Help.  
   
  *m_strUserName*  
- 值，表示工作區中物件的擁有者。 如需相關資訊，請參閱主題 DAO 說明中的 「 使用者名稱屬性 」。  
+ A value that represents the owner of a workspace object. For related information, see the topic "UserName Property" in DAO Help.  
   
  *m_bIsolateODBCTrans*  
- 值，指出是否包含相同的 ODBC 資料庫的多個交易隔離。 如需詳細資訊，請參閱[CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)。 如需相關資訊，請參閱主題 DAO 說明中的 「 IsolateODBCTrans 屬性 」。  
+ A value that indicates whether multiple transactions that involve the same ODBC database are isolated. For more information, see [CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans). For related information, see the topic "IsolateODBCTrans Property" in DAO Help.  
   
-## <a name="remarks"></a>備註  
- 工作區是類別的物件[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)。 主要、 次要資料庫，且上述所有參考表示資訊由[GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)類別中的成員函式`CDaoWorkspace`。  
+## <a name="remarks"></a>Remarks  
+ The workspace is an object of class [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md). The references to Primary, Secondary, and All above indicate how the information is returned by the [GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) member function in class `CDaoWorkspace`.  
   
- 所擷取的資訊[CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)成員函式會儲存在`CDaoWorkspaceInfo`結構。 `CDaoWorkspaceInfo`也會定義`Dump`成員函式中偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoWorkspaceInfo`物件。  
+ Information retrieved by the [CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) member function is stored in a `CDaoWorkspaceInfo` structure. `CDaoWorkspaceInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoWorkspaceInfo` object.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoWorkspace 類別](../../mfc/reference/cdaoworkspace-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)
 

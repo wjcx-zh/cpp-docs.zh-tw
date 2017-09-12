@@ -1,58 +1,77 @@
 ---
-title: "使用 AUTOCLIK 和 AUTODRIV 執行 Remote Automation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AUTOCLIK 範例 [MFC]"
+title: Running Remote Automation Using AUTOCLIK and AUTODRIV | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- AUTOCLIK sample [MFC]
 ms.assetid: 8900c0de-8dba-4f0a-8d9e-7db77a1f4f46
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 AUTOCLIK 和 AUTODRIV 執行 Remote Automation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 56240a60197b63f5098ecef080719bd96bde81d1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-可以是您可以使用做為基底進一步了解遠端自動化的簡單 Automation 伺服程式應用程式。  AUTODRIV 範例是一個驅動 AUTOCLIK 的簡易 Automation 用戶端應用程式。  您可以使用它們來示範遠端自動化。  
+---
+# Running Remote Automation Using AUTOCLIK and AUTODRIV
+AUTOCLIK is a simple Automation server sample application that you can use as a base from which to learn more about Remote Automation. AUTODRIV is a simple Automation client application that drives AUTOCLIK. You can use them to demonstrate Remote Automation.  
   
-#### 使用遠端自動化，安裝在兩台電腦的 AUTOCLIK.EXE 和巡覽它  
+#### To install AUTOCLIK.EXE on two machines and drive it using Remote Automation  
   
-1.  安裝在開發電腦上的 [AUTOCLIK](../top/visual-cpp-samples.md) 範例應用程式。  
+1.  Install the [AUTOCLIK](../visual-cpp-samples.md) sample application onto your development machine.  
   
-2.  建置 AUTOCLIK.EXE。  
+2.  Build AUTOCLIK.EXE.  
   
-3.  執行 AUTOCLIK.EXE 無關的方式將其關閉。  這會註冊為 Automation 伺服程式。  
+3.  Run AUTOCLIK.EXE in standalone fashion and then shut it down. This will register it as an Automation server.  
   
-4.  複製 AUTOCLIK.EXE 對遠端電腦上，執行該檔案，然後關閉檔案。  
+4.  Copy AUTOCLIK.EXE to a remote machine, run it there, and then shut it down.  
   
-5.  在本機電腦上 AUTODRIV.EXE 並確認執行啟動 AUTOCLIK.EXE。  如需詳細資訊 AUTODRIV.EXE，請參閱 [AUTOCLIK](../top/visual-cpp-samples.md)。  
+5.  Run AUTODRIV.EXE on the local machine and verify that running it starts AUTOCLIK.EXE. To find out more about AUTODRIV.EXE, see [AUTOCLIK](../visual-cpp-samples.md).  
   
-6.  在遠端機器上，啟動 AUTMGR32.EXE \(Automation 管理員\)。  
+6.  On the remote machine, start AUTMGR32.EXE (Automation Manager).  
   
-7.  在遠端機器上，啟動 RACMGR32.EXE \(Remote Automation 連接管理員\)。  
+7.  On the remote machine, start RACMGR32.EXE (Remote Automation Connection Manager).  
   
-8.  在遠端自動化連接管理員 **OLE Classes** ，從清單中選取 AutoClik.Document。  
+8.  In the Remote Automation Connection Manager, select AutoClik.Document from the **OLE Classes** list.  
   
-9. 從 **Client Access** 選項選取系統安全性原則授與 AutoClik.Document 的用戶端存取。  
+9. Choose a system security policy from the **Client Access** tab to grant client access to AutoClik.Document.  
   
-10. 在本機電腦上，啟動 RACMGR32.EXE\] AutoClik.Document 從 **OLE Classes** 清單。  
+10. On the local machine, start RACMGR32.EXE and select AutoClik.Document from the **OLE Classes** list.  
   
-11. 從 **Server Connection** 選項，請選擇遠端電腦的網路位址和適當的網路通訊協定。  
+11. From the **Server Connection** tab, choose both the network address of the remote machine and the appropriate network protocol.  
   
-12. 使用在 **OLE Classes** 清單方塊仍選取的 AutoClik.Document，選取 `Register` 功能表中選擇 **Remote** 命令。  
+12. With AutoClik.Document still selected in the **OLE Classes** list box, choose the **Remote** command from the `Register` menu.  
   
-13. 在本機電腦上執行的 AUTODRIV.EXE 或對等的 AUTOCLIK.MAK Visual Basic 專案要使用 Visual Basic，而非 MFC，用戶端。  
+13. On the local machine, run AUTODRIV.EXE or the equivalent AUTOCLIK.MAK Visual Basic project if you want to have a Visual Basic, rather than an MFC, client.  
   
- 在遠端機器上，現在應該可以看到 AUTOCLIK 執行命令的您啟始本機用戶端。  
+ On the remote machine, you should now be able to see AUTOCLIK executing commands initiated from the local client.  
   
-## 請參閱  
+## See Also  
  [Remote Automation](../mfc/remote-automation.md)
+
+

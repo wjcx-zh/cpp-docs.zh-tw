@@ -1,5 +1,5 @@
 ---
-title: "CSimpleException 類別 |Microsoft 文件"
+title: CSimpleException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CSimpleException class
+- CSimpleException [MFC], CSimpleException
+- CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
 caps.latest.revision: 19
 author: mikeblome
@@ -36,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5612d76a2351b9898b8ffe082844686d21fcd7a0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ab6a2347567dfe404d3dc5c154e24c789dff45c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="csimpleexception-class"></a>CSimpleException 類別
-這個類別是資源關鍵 MFC 例外狀況的基底類別。  
+# <a name="csimpleexception-class"></a>CSimpleException Class
+This class is a base class for resource-critical MFC exceptions.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CSimpleException : public CException  
@@ -54,60 +55,60 @@ class AFX_NOVTABLE CSimpleException : public CException
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSimpleException::CSimpleException](#csimpleexception)|建構函式。|  
+|[CSimpleException::CSimpleException](#csimpleexception)|The constructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSimpleException::GetErrorMessage](#geterrormessage)|提供有關已發生的錯誤文字。|  
+|[CSimpleException::GetErrorMessage](#geterrormessage)|Provides text about an error that has occurred.|  
   
-## <a name="remarks"></a>備註  
- `CSimpleException`是資源關鍵 MFC 例外狀況的基底類別，並處理的擁有權和初始化錯誤訊息。 下列類別會使用`CSimpleException`作為其基底類別︰  
+## <a name="remarks"></a>Remarks  
+ `CSimpleException` is the base class for resource-critical MFC exceptions and handles the ownership and initialization of an error message. The following classes use `CSimpleException` as their base class:  
   
 |||  
 |-|-|  
-|[Afxthrowmemoryexception 類別](../../mfc/reference/cmemoryexception-class.md)|記憶體不足例外狀況|  
-|[CNotSupportedException 類別](../../mfc/reference/cnotsupportedexception-class.md)|不支援的作業的要求|  
-|[CResourceException 類別](../../mfc/reference/cresourceexception-class.md)|找不到或無法建立 Windows 資源|  
-|[CUserException 類別](../../mfc/reference/cuserexception-class.md)|找不到例外狀況，表示資源|  
-|[CInvalidArgException 類別](../../mfc/reference/cinvalidargexception-class.md)|表示無效的引數的例外狀況|  
+|[CMemoryException Class](../../mfc/reference/cmemoryexception-class.md)|Out-of-memory exception|  
+|[CNotSupportedException Class](../../mfc/reference/cnotsupportedexception-class.md)|Requests for an unsupported operation|  
+|[CResourceException Class](../../mfc/reference/cresourceexception-class.md)|Windows resource not found or not creatable|  
+|[CUserException Class](../../mfc/reference/cuserexception-class.md)|Exception that indicates a resource could not be found|  
+|[CInvalidArgException Class](../../mfc/reference/cinvalidargexception-class.md)|Exception that indicates an invalid argument|  
   
- 因為`CSimpleException`是抽象的基底類別，您無法宣告`CSimpleException`直接物件。 相反地，您必須宣告衍生的物件，例如前面表格中。 如果您宣告衍生的類別，做為模型的上一個類別。  
+ Because `CSimpleException` is an abstract base class, you cannot declare a `CSimpleException` object directly. Instead, you must declare derived objects such as those in the previous table. If you are declaring your own derived class, use the previous classes as a model.  
   
- 如需詳細資訊，請參閱[CException 類別](../../mfc/reference/cexception-class.md)主題和[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ For more information, see the [CException Class](../../mfc/reference/cexception-class.md) topic and [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CSimpleException`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
- 建構函式。  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
+ The constructor.  
   
 ```  
 CSimpleException();  
 explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bAutoDelete`  
- 指定**TRUE**如果的記憶體`CSimpleException`已在堆積上配置物件。 這將導致`CSimpleException`時刪除物件**刪除**呼叫成員函式會刪除例外狀況。 指定**FALSE**如果`CSimpleException`物件在堆疊上，或全域物件。 在此情況下，`CSimpleException`物件不會刪除**刪除**成員函式呼叫。  
+ Specify **TRUE** if the memory for the `CSimpleException` object has been allocated on the heap. This will cause the `CSimpleException` object to be deleted when the **Delete** member function is called to delete the exception. Specify **FALSE** if the `CSimpleException` object is on the stack or is a global object. In this case, the `CSimpleException` object will not be deleted when the **Delete** member function is called.  
   
-### <a name="remarks"></a>備註  
- 您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生類別，並呼叫其建構函式，或它應該 MFC 使用其中一個擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 預先定義的型別會擲回。  
+### <a name="remarks"></a>Remarks  
+ You would normally never need to call this constructor directly. A function that throws an exception should create an instance of a `CException`-derived class and call its constructor, or it should use one of the MFC throw functions, such as [AfxThrowFileException](exception-processing.md#afxthrowfileexception), to throw a predefined type.  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
- 呼叫此成員函式，以提供有關已發生的錯誤文字。  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
+ Call this member function to provide text about an error that has occurred.  
   
 ```  
 virtual BOOL GetErrorMessage(
@@ -116,26 +117,26 @@ virtual BOOL GetErrorMessage(
     PUNIT  pnHelpContext = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszError`  
- 將會收到錯誤訊息緩衝區的指標。  
+ A pointer to a buffer that will receive an error message.  
   
  `nMaxError`  
- 最大的緩衝區可以保存包括的字元數**NULL**結束字元。  
+ The maximum number of characters the buffer can hold, including the **NULL** terminator.  
   
  `pnHelpContext`  
- 位址**UINT** ，將會收到說明內容識別碼。 如果**NULL**，將會傳回任何識別碼。  
+ The address of a **UINT** that will receive the help context ID. If **NULL**, no ID will be returned.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零否則為 0，如果沒有任何錯誤訊息文字使用。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0 if no error message text is available.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage).  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CException 類別](../../mfc/reference/cexception-class.md)   
- [例外狀況處理](../../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)   
+ [Exception Handling](../../mfc/exception-handling-in-mfc.md)
 
 
 

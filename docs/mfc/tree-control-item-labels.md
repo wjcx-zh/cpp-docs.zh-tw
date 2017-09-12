@@ -1,37 +1,56 @@
 ---
-title: "樹狀目錄控制項目標籤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 類別, 項目標籤"
-  - "項目標籤"
-  - "項目標籤, 樹狀目錄控制項"
-  - "標籤, CTreeCtrl 項目"
-  - "樹狀目錄控制項, 項目標籤"
+title: Tree Control Item Labels | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree controls [MFC], item labels
+- labels, CTreeCtrl items
+- CTreeCtrl class [MFC], item labels
+- item labels, tree controls
+- item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 樹狀目錄控制項目標籤
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f81e05ccda98bca47c810f1e948b51652c187017
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您通常會指定項目的標籤文字，將項目加入至樹狀目錄控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\)。  `InsertItem` 成員函式可以定義項目的屬性的 [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) 結構，其中包含標籤文字的字串。  `InsertItem` 不可以呼叫具有參數的各種組合的數個多載。  
+---
+# <a name="tree-control-item-labels"></a>Tree Control Item Labels
+You typically specify the text of an item's label when adding the item to the tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). The `InsertItem` member function can pass a [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) structure that defines the item's properties, including a string containing the text of the label. `InsertItem` has several overloads that can be called with various combinations of parameters.  
   
- 樹狀目錄控制項配置中的每一項目記憶體;項目標籤的文字會佔用這個記憶體的一個重要的部分。  如果您的應用程式保留字串的複本在樹狀目錄控制項，您可以指定 **LPSTR\_TEXTCALLBACK** 值在 `TV_ITEM` 的 **pszText** 成員或 `lpszItem` 參數來減少控制項的記憶體需求而不是傳遞實際字串對樹狀目錄控制項。  使用 **LPSTR\_TEXTCALLBACK** 造成樹狀目錄控制項從應用程式擷取項目的標籤文字，當項目需要重新繪製。  若要擷取文字，樹狀目錄控制項傳送 [TVN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) 通知訊息，包括 [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) 結構的位址。  您必須設定包含結構的適當成員回應。  
+ A tree control allocates memory for storing each item; the text of the item labels takes up a significant portion of this memory. If your application maintains a copy of the strings in the tree control, you can decrease the memory requirements of the control by specifying the **LPSTR_TEXTCALLBACK** value in the **pszText** member of `TV_ITEM` or the `lpszItem` parameter instead of passing actual strings to the tree control. Using **LPSTR_TEXTCALLBACK** causes the tree control to retrieve the text of an item's label from the application whenever the item needs to be redrawn. To retrieve the text, the tree control sends a [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) notification message, which includes the address of a [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) structure. You must respond by setting the appropriate members of the included structure.  
   
- 樹狀目錄控制項使用從建立樹狀控制流程的堆積配置的記憶體。  項目的最大數目樹狀控制項根據數量堆積中的可用記憶體。  每個項目都需要 64 個位元組。  
+ A tree control uses memory allocated from the heap of the process that creates the tree control. The maximum number of items in a tree control is based on the amount of memory available in the heap. Each item takes 64 bytes.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

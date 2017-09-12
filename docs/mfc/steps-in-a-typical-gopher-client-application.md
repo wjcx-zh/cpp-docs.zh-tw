@@ -1,45 +1,63 @@
 ---
-title: "一般 Gopher 用戶端應用程式中的步驟 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Gopher 用戶端應用程式"
-  - "網際網路應用程式, gopher 用戶端應用程式"
-  - "網際網路用戶端應用程式, gopher 資料表"
-  - "WinInet 類別, gopher"
+title: Steps in a Typical Gopher Client Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- WinInet classes [MFC], gopher
+- Internet applications [MFC], gopher client applications
+- Gopher client applications [MFC]
+- Internet client applications [MFC], gopher table
 ms.assetid: 3e4e1869-5da0-453d-8ba9-b648c894bb90
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 一般 Gopher 用戶端應用程式中的步驟
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4dcd34fc91fb6b32bfe87060f73f3579f9d169ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-下表顯示您在一般 Gopher 用戶端應用程式可以執行的步驟。  
+---
+# <a name="steps-in-a-typical-gopher-client-application"></a>Steps in a Typical Gopher Client Application
+The following table shows the steps you might perform in a typical gopher client application.  
   
-|您的目標|您採取的動作|效果|  
-|----------|------------|--------|  
-|啟動 Gopher 工作階段。|建立 [CInternetSession](../mfc/reference/cinternetsession-class.md) 物件。|初始化 WinInet 並連接到伺服器。|  
-|連接 Gopher 伺服器。|使用 [CInternetSession::GetGopherConnection](../Topic/CInternetSession::GetGopherConnection.md)。|傳回 [CGopherConnection](../mfc/reference/cgopherconnection-class.md) 物件。|  
-|尋找 Gopher 中的第一個資源。|使用 [CGopherFileFind::FindFile](../Topic/CGopherFileFind::FindFile.md)。|尋找第一個檔案。  如果找不到檔案則回傳 false。|  
-|尋找 Gopher 中的下一個資源。|使用 [CGopherFileFind::FindNextFile](../Topic/CGopherFileFind::FindNextFile.md)。|尋找下一個檔案。  如果找不到檔案，則傳回 FALSE。|  
-|使用 **FindFile** 或 `FindNextFile` 開啟找到的檔案，以便讀取。|使用 [CGopherFileFind::GetLocator](../Topic/CGopherFileFind::GetLocator.md)，取得 Gopher 定位器。  使用 [CGopherConnection::OpenFile](../Topic/CGopherConnection::OpenFile.md)。|開啟定位器指定的檔案。  `OpenFile` 會傳回 [CGopherFile](../mfc/reference/cgopherfile-class.md) 物件。|  
-|使用您所提供的 Gopher 定位器開啟檔案。|使用 [CGopherConnection::CreateLocator](../Topic/CGopherConnection::CreateLocator.md)，建立 Gopher 定位器。  使用 [CGopherConnection::OpenFile](../Topic/CGopherConnection::OpenFile.md)。|開啟定位器指定的檔案。  `OpenFile` 會傳回 [CGopherFile](../mfc/reference/cgopherfile-class.md) 物件。|  
-|從檔案讀取。|使用 [CGopherFile](../mfc/reference/cgopherfile-class.md)。|使用您提供的緩衝區讀取指定的位元組數。|  
-|處理例外狀況。|使用 [CInternetException](../mfc/reference/cinternetexception-class.md) 類別。|處理所有通用網際網路例外狀況型別。|  
-|結束 Gopher 工作階段。|處理 [CInternetSession](../mfc/reference/cinternetsession-class.md) 物件。|自動清除開啟檔案控制代碼和連接。|  
+|Your goal|Actions you take|Effects|  
+|---------------|----------------------|-------------|  
+|Begin a gopher session.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Initializes WinInet and connects to server.|  
+|Connect to a gopher server.|Use [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection).|Returns a [CGopherConnection](../mfc/reference/cgopherconnection-class.md) object.|  
+|Find the first resource in the gopher.|Use [CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile).|Finds the first file. Returns FALSE if no files are found.|  
+|Find the next resource in the gopher.|Use [CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile).|Finds the next file. Returns FALSE if the file is not found.|  
+|Open the file found by **FindFile** or `FindNextFile` for reading.|Get a gopher locator using [CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator). Use [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Opens the file specified by the locator. `OpenFile` returns a [CGopherFile](../mfc/reference/cgopherfile-class.md) object.|  
+|Open a file using a gopher locator you supply.|Create a gopher locator using [CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator). Use [CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile).|Opens the file specified by the locator. `OpenFile` returns a [CGopherFile](../mfc/reference/cgopherfile-class.md) object.|  
+|Read from the file.|Use [CGopherFile](../mfc/reference/cgopherfile-class.md).|Reads the specified number of bytes, using a buffer you supply.|  
+|Handle exceptions.|Use the [CInternetException](../mfc/reference/cinternetexception-class.md) class.|Handles all common Internet exception types.|  
+|End the gopher session.|Dispose of the [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Automatically cleans up open file handles and connections.|  
   
-## 請參閱  
- [Win32 網際網路擴充功能 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [網際網路用戶端類別的必要條件](../mfc/prerequisites-for-internet-client-classes.md)   
- [使用 MFC WinInet 類別建立網際網路用戶端應用程式](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

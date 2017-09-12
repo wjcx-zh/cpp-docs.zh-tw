@@ -1,5 +1,5 @@
 ---
-title: "WINDOWPOS 結構&1; |Microsoft 文件"
+title: WINDOWPOS Structure1 | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINDOWPOS structure
+- WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 522b15d630c3a5a3593010250db0491601493c69
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b67d22414408e68ebcd60a79a19e8b372d761cd9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="windowpos-structure1"></a>WINDOWPOS 結構&1;
-`WINDOWPOS`結構包含大小和位置 視窗的相關資訊。  
+# <a name="windowpos-structure1"></a>WINDOWPOS Structure1
+The `WINDOWPOS` structure contains information about the size and position of a window.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagWINDOWPOS { /* wp */  
@@ -57,59 +57,59 @@ typedef struct tagWINDOWPOS { /* wp */
 } WINDOWPOS;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  *hwnd*  
- 識別視窗。  
+ Identifies the window.  
   
  *hwndInsertAfter*  
- 識別此視窗放置於背後的視窗。  
+ Identifies the window behind which this window is placed.  
   
  *x*  
- 指定視窗的左邊緣的位置。  
+ Specifies the position of the left edge of the window.  
   
  *y*  
- 指定視窗的右邊緣的位置。  
+ Specifies the position of the right edge of the window.  
   
  `cx`  
- 指定的視窗寬度，單位為像素。  
+ Specifies the window width, in pixels.  
   
  `cy`  
- 指定視窗的高度，單位為像素。  
+ Specifies the window height, in pixels.  
   
  `flags`  
- 指定視窗位置選項。 這個成員可以是下列值之一︰  
+ Specifies window-positioning options. This member can be one of the following values:  
   
-- **SWP_DRAWFRAME**視窗周圍繪製 （定義於視窗類別描述） 的框架。 視窗收到`WM_NCCALCSIZE`訊息。  
+- **SWP_DRAWFRAME** Draws a frame (defined in the class description for the window) around the window. The window receives a `WM_NCCALCSIZE` message.  
   
-- **SWP_FRAMECHANGED**傳送`WM_NCCALCSIZE`訊息 視窗中，即使未變更視窗的大小。 如果未指定這個旗標，`WM_NCCALCSIZE`視窗的大小變更時，才會傳送。  
+- **SWP_FRAMECHANGED** Sends a `WM_NCCALCSIZE` message to the window, even if the window's size is not being changed. If this flag is not specified, `WM_NCCALCSIZE` is sent only when the window's size is being changed.  
   
-- **SWP_HIDEWINDOW**隱藏視窗。  
+- **SWP_HIDEWINDOW** Hides the window.  
   
-- `SWP_NOACTIVATE`無法啟動視窗。  
+- `SWP_NOACTIVATE` Does not activate the window.  
   
-- **SWP_NOCOPYBITS**捨棄工作區的整個內容。 如果未指定這個旗標，有效的工作區的內容會儲存及之後的視窗大小或重新定位複製回用戶端區域。  
+- **SWP_NOCOPYBITS** Discards the entire contents of the client area. If this flag is not specified, the valid contents of the client area are saved and copied back into the client area after the window is sized or repositioned.  
   
-- `SWP_NOMOVE`保留目前的位置 (忽略**x**和**y**成員)。  
+- `SWP_NOMOVE` Retains current position (ignores the **x** and **y** members).  
   
-- **SWP_NOOWNERZORDER**不會變更擁有者視窗的疊置順序的位置。  
+- **SWP_NOOWNERZORDER** Does not change the owner window's position in the Z-order.  
   
-- `SWP_NOSIZE`保留目前的大小 (忽略**cx**和**cy**成員)。  
+- `SWP_NOSIZE` Retains current size (ignores the **cx** and **cy** members).  
   
-- **SWP_NOREDRAW**不會重新繪製的變更。  
+- **SWP_NOREDRAW** Does not redraw changes.  
   
-- **SWP_NOREPOSITION**相同**SWP_NOOWNERZORDER**。  
+- **SWP_NOREPOSITION** Same as **SWP_NOOWNERZORDER**.  
   
-- **SWP_NOSENDCHANGING**防止接收視窗`WM_WINDOWPOSCHANGING`訊息。  
+- **SWP_NOSENDCHANGING** Prevents the window from receiving the `WM_WINDOWPOSCHANGING` message.  
   
-- `SWP_NOZORDER`會保留目前的順序 (會忽略**hwndInsertAfter**成員)。  
+- `SWP_NOZORDER` Retains current ordering (ignores the **hwndInsertAfter** member).  
   
-- **SWP_SHOWWINDOW**顯示視窗。  
+- **SWP_SHOWWINDOW** Displays the window.  
   
-## <a name="requirements"></a>需求  
- **標頭：** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)
 
 

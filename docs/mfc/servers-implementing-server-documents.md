@@ -1,51 +1,69 @@
 ---
-title: "伺服器：實作伺服器文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE 伺服器應用程式, 實作 OLE 伺服器"
-  - "OLE 伺服器應用程式, 管理伺服器文件"
-  - "伺服器文件, 實作"
-  - "伺服器, 伺服器文件"
+title: 'Servers: Implementing Server Documents | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], managing server documents
+- OLE server applications [MFC], implementing OLE servers
+- servers, server documents
+- server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 伺服器：實作伺服器文件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df2da0855532b4f5503933b3c0b1f6379b3d0ade
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明您必須採取成功實作伺服器資料的步驟，如果您在應用程式精靈沒有指定 OLE 伺服器選項。  
+---
+# <a name="servers-implementing-server-documents"></a>Servers: Implementing Server Documents
+This article explains the steps you must take to successfully implement a server document if you did not specify the OLE Server option in the application wizard.  
   
-#### 定義伺服器資料類別  
+#### <a name="to-define-a-server-document-class"></a>To define a server document class  
   
-1.  從 `COleServerDoc` 衍生您自己的文件類別而非 **CDocument**。  
+1.  Derive your document class from `COleServerDoc` instead of **CDocument**.  
   
-2.  建立衍生自 `COleServerItem`的伺服器項目類別。  
+2.  Create a server item class derived from `COleServerItem`.  
   
-3.  實作您的伺服器資料類別的 `OnGetEmbeddedItem` 成員函式。  
+3.  Implement the `OnGetEmbeddedItem` member function of your server document class.  
   
-     當容器應用程式的使用者建立或編輯內嵌項目時，呼叫`OnGetEmbeddedItem` 。  它會傳回代表整份文件的項目。  這應該為 `COleServerItem`物件衍生類別。  
+     `OnGetEmbeddedItem` is called when the user of a container application creates or edits an embedded item. It should return an item representing the entire document. This should be an object of your `COleServerItem`-derived class.  
   
-4.  覆寫 `Serialize` 成員函式序列化文件的內容。  除非您使用它們代表您的文件上，原生資料時不需要序列化伺服器項目清單。  如需詳細資訊，請參閱文件 [伺服器:伺服器項目](../mfc/servers-server-items.md)上 *實作伺服器項目* 。  
+4.  Override the `Serialize` member function to serialize the contents of the document. You do not need to serialize the list of server items unless you are using them to represent the native data in your document. For more information, see *Implementing Server Items* in the article [Servers: Server Items](../mfc/servers-server-items.md).  
   
- 當伺服器文件時，架構會自動向這個 OLE 系統 DLL 的文件。  這可讓 DLL 識別伺服器文件。  
+ When a server document is created, the framework automatically registers the document with the OLE system DLLs. This allows the DLLs to identify the server documents.  
   
- 在 *類別庫參考 \(*如需詳細資訊，請參閱 [COleServerItem](../mfc/reference/coleserveritem-class.md) 和 [COleServerDoc](../mfc/reference/coleserverdoc-class.md) 。  
+ For more information, see [COleServerItem](../mfc/reference/coleserveritem-class.md) and [COleServerDoc](../mfc/reference/coleserverdoc-class.md) in the *Class Library Reference*.  
   
-## 請參閱  
- [伺服器](../mfc/servers.md)   
- [伺服器：伺服器項目](../mfc/servers-server-items.md)   
- [伺服器：實作伺服器](../mfc/servers-implementing-a-server.md)   
- [伺服器：實作就地編輯框架視窗](../mfc/servers-implementing-in-place-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CSpinButtonCtrl 類別 |Microsoft 文件"
+title: CSpinButtonCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,11 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Windows common controls [C++], CSpinButtonCtrl
-- CSpinButtonCtrl class
-- CSpinButtonCtrl class, common controls
-- up-down controls, spin button control
-- spin button control
+- CSpinButtonCtrl [MFC], CSpinButtonCtrl
+- CSpinButtonCtrl [MFC], Create
+- CSpinButtonCtrl [MFC], CreateEx
+- CSpinButtonCtrl [MFC], GetAccel
+- CSpinButtonCtrl [MFC], GetBase
+- CSpinButtonCtrl [MFC], GetBuddy
+- CSpinButtonCtrl [MFC], GetPos
+- CSpinButtonCtrl [MFC], GetRange
+- CSpinButtonCtrl [MFC], SetAccel
+- CSpinButtonCtrl [MFC], SetBase
+- CSpinButtonCtrl [MFC], SetBuddy
+- CSpinButtonCtrl [MFC], SetPos
+- CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
 caps.latest.revision: 23
 author: mikeblome
@@ -51,17 +59,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 91be67ccbf1fb7fb863aa4072d55bb3f330aa44f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ae174d059e23d93cec902cc4c5946052e73e8b41
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
-提供 Windows 通用微調按鈕控制項的功能。  
+# <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl Class
+Provides the functionality of the Windows common spin button control.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CSpinButtonCtrl : public CWnd  
@@ -69,43 +77,43 @@ class CSpinButtonCtrl : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|建構 `CSpinButtonCtrl` 物件。|  
+|[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Constructs a `CSpinButtonCtrl` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CSpinButtonCtrl::Create](#create)|建立微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件。|  
-|[CSpinButtonCtrl::CreateEx](#createex)|使用指定的 Windows 延伸樣式建立微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件。|  
-|[CSpinButtonCtrl::GetAccel](#getaccel)|擷取加速微調按鈕控制項的資訊。|  
-|[CSpinButtonCtrl::GetBase](#getbase)|擷取目前微調按鈕控制項的基底。|  
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|擷取目前的協同視窗的指標。|  
-|[CSpinButtonCtrl::GetPos](#getpos)|擷取目前的微調按鈕控制項的位置。|  
-|[CSpinButtonCtrl::GetRange](#getrange)|擷取的上限和下限限制 （範圍） 微調按鈕控制項。|  
-|[CSpinButtonCtrl::SetAccel](#setaccel)|設定之微調按鈕控制項加速。|  
-|[CSpinButtonCtrl::SetBase](#setbase)|設定微調按鈕控制項的基底。|  
-|[CSpinButtonCtrl::SetBuddy](#setbuddy)|設定微調按鈕控制項的協同視窗。|  
-|[CSpinButtonCtrl::SetPos](#setpos)|設定控制項的目前位置。|  
-|[Cspinbuttonctrl:: Setrange](#setrange)|設定的上限和下限限制 （範圍） 微調按鈕控制項。|  
+|[CSpinButtonCtrl::Create](#create)|Creates a spin button control and attaches it to a `CSpinButtonCtrl` object.|  
+|[CSpinButtonCtrl::CreateEx](#createex)|Creates a spin button control with the specified Windows extended styles and attaches it to a `CSpinButtonCtrl` object.|  
+|[CSpinButtonCtrl::GetAccel](#getaccel)|Retrieves acceleration information for a spin button control.|  
+|[CSpinButtonCtrl::GetBase](#getbase)|Retrieves the current base for a spin button control.|  
+|[CSpinButtonCtrl::GetBuddy](#getbuddy)|Retrieves a pointer to the current buddy window.|  
+|[CSpinButtonCtrl::GetPos](#getpos)|Retrieves the current position of a spin button control.|  
+|[CSpinButtonCtrl::GetRange](#getrange)|Retrieves the upper and lower limits (range) for a spin button control.|  
+|[CSpinButtonCtrl::SetAccel](#setaccel)|Sets the acceleration for a spin button control.|  
+|[CSpinButtonCtrl::SetBase](#setbase)|Sets the base for a spin button control.|  
+|[CSpinButtonCtrl::SetBuddy](#setbuddy)|Sets the buddy window for a spin button control.|  
+|[CSpinButtonCtrl::SetPos](#setpos)|Sets the current position for the control.|  
+|[CSpinButtonCtrl::SetRange](#setrange)|Sets the upper and lower limits (range) for a spin button control.|  
   
-## <a name="remarks"></a>備註  
- 「 微調按鈕控制項 」 （也稱為上下按鈕控制項） 是一對箭號按鈕，讓使用者可以按一下要遞增或遞減值，例如捲動位置或附屬控制項中顯示的數字。 微調按鈕控制項相關聯的值稱為其目前位置。 微調按鈕控制項最常搭配附屬控制項稱為 「 協同視窗 」。  
+## <a name="remarks"></a>Remarks  
+ A "spin button control" (also known as an up-down control) is a pair of arrow buttons that the user can click to increment or decrement a value, such as a scroll position or a number displayed in a companion control. The value associated with a spin button control is called its current position. A spin button control is most often used with a companion control, called a "buddy window."  
   
- 這個控制項 (因此`CSpinButtonCtrl`類別) 僅適用於 Windows 95/98、 Windows NT 的版本 3.51 下執行的程式和更新版本。  
+ This control (and therefore the `CSpinButtonCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- 給使用者，微調按鈕控制項和協同視窗通常看起來像單一的控制項。 您可以指定的微調按鈕控制項定位本身其協同視窗旁邊，以及它會自動以其目前位置設定協同視窗的標題。 您可以使用微調按鈕控制項的編輯控制項來提示使用者輸入數字輸入。  
+ To the user, a spin button control and its buddy window often look like a single control. You can specify that a spin button control automatically position itself next to its buddy window, and that it automatically set the caption of the buddy window to its current position. You can use a spin button control with an edit control to prompt the user for numeric input.  
   
- 按一下向上箭頭移往最大值，目前的位置並移動朝最小值的目前位置，按一下向下箭號。 根據預設，最小值是 100，最大值是 0。 最小設定是超過最大值設定 （例如，使用預設設定） 時，按一下向上箭號會減少任何時間的位置值，然後按一下向下箭號會遞增。  
+ Clicking the up arrow moves the current position toward the maximum, and clicking the down arrow moves the current position toward the minimum. By default, the minimum is 100 and the maximum is 0. Any time the minimum setting is greater than the maximum setting (for example, when the default settings are used), clicking the up arrow decreases the position value and clicking the down arrow increases it.  
   
- 微調按鈕控制項而協同視窗不可以當做一種簡化的捲軸。 例如，索引標籤控制項有時會顯示要讓使用者捲動額外的索引標籤來檢視微調按鈕控制項。  
+ A spin button control without a buddy window functions as a sort of simplified scroll bar. For example, a tab control sometimes displays a spin button control to enable the user to scroll additional tabs into view.  
   
- 如需有關使用`CSpinButtonCtrl`，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md)。  
+ For more information on using `CSpinButtonCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -114,11 +122,11 @@ class CSpinButtonCtrl : public CWnd
   
  `CSpinButtonCtrl`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="create"></a>CSpinButtonCtrl::Create  
- 建立微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件...  
+##  <a name="create"></a>  CSpinButtonCtrl::Create  
+ Creates a spin button control and attaches it to a `CSpinButtonCtrl` object..  
   
 ```  
 virtual BOOL Create(
@@ -128,29 +136,29 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定微調按鈕控制項的樣式。 套用至控制項的任何微調按鈕控制項樣式的組合。 這些樣式中所述[上下按鈕控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb759885)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the spin button control's style. Apply any combination of spin button control styles to the control. These styles are described in [Up-Down Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb759885) in the Windows SDK.  
   
  `rect`  
- 指定微調按鈕控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構  
+ Specifies the spin button control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure  
   
  `pParentWnd`  
- 微調按鈕控制項的父視窗，通常是指向`CDialog`。 它不得為**NULL。**  
+ A pointer to the spin button control's parent window, usually a `CDialog`. It must not be **NULL.**  
   
  `nID`  
- 指定微調按鈕控制項的 id。  
+ Specifies the spin button control's ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果初始化成功，則為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 您建構`CSpinButtonCtrl`先物件在兩個步驟中，呼叫建構函式，，然後呼叫**建立**，建立微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CSpinButtonCtrl` object in two steps First, call the constructor, and then call **Create**, which creates the spin button control and attaches it to the `CSpinButtonCtrl` object.  
   
- 若要使用延伸的視窗樣式建立微調按鈕控制項，呼叫[CSpinButtonCtrl::CreateEx](#createex)而不是**建立**。  
+ To create a spin button control with extended window styles, call [CSpinButtonCtrl::CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CSpinButtonCtrl::CreateEx  
- 建立控制項 （子視窗），並將它與相關聯`CSpinButtonCtrl`物件。  
+##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CSpinButtonCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -161,37 +169,37 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the extended style of the control being created. For a list of extended windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 指定微調按鈕控制項的樣式。 套用至控制項的任何微調按鈕控制項樣式的組合。 這些樣式中所述[上下按鈕控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb759885)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the spin button control's style. Apply any combination of spin button control styles to the control. These styles are described in [Up-Down Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb759885) in the Windows SDK.  
   
  `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 為控制項的父視窗的指標。  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 控制項的子視窗識別碼。  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl::CSpinButtonCtrl  
- 建構 `CSpinButtonCtrl` 物件。  
+##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
+ Constructs a `CSpinButtonCtrl` object.  
   
 ```  
 CSpinButtonCtrl();
 ```  
   
-##  <a name="getaccel"></a>CSpinButtonCtrl::GetAccel  
- 擷取加速微調按鈕控制項的資訊。  
+##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel  
+ Retrieves acceleration information for a spin button control.  
   
 ```  
 UINT GetAccel(
@@ -199,57 +207,57 @@ UINT GetAccel(
     UDACCEL* pAccel) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nAccel`  
- 中所指定之陣列的項目數`pAccel`。  
+ Number of elements in the array specified by `pAccel`.  
   
  `pAccel`  
- 陣列的指標[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)接收加速資訊的結構。  
+ Pointer to an array of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures that receives acceleration information.  
   
-### <a name="return-value"></a>傳回值  
- 擷取對應的結構數目。  
+### <a name="return-value"></a>Return Value  
+ Number of accelerator structures retrieved.  
   
-##  <a name="getbase"></a>CSpinButtonCtrl::GetBase  
- 擷取目前微調按鈕控制項的基底。  
+##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase  
+ Retrieves the current base for a spin button control.  
   
 ```  
 UINT GetBase() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的基底值。  
+### <a name="return-value"></a>Return Value  
+ The current base value.  
   
-##  <a name="getbuddy"></a>CSpinButtonCtrl::GetBuddy  
- 擷取目前的協同視窗的指標。  
+##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy  
+ Retrieves a pointer to the current buddy window.  
   
 ```  
 CWnd* GetBuddy() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的協同視窗的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current buddy window.  
   
-##  <a name="getpos"></a>CSpinButtonCtrl::GetPos  
- 擷取目前的微調按鈕控制項的位置。  
+##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos  
+ Retrieves the current position of a spin button control.  
   
 ```  
 int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpbError*  
- 已成功擷取或非零發生錯誤時設定為零如果值為布林值的指標。 如果此參數設為**NULL**，不會報告錯誤。  
+ A pointer to a boolean value that is set to zero if the value is successfully retrieved or non-zero if an error occurs. If this parameter is set to **NULL**, errors are not reported.  
   
-### <a name="return-value"></a>傳回值  
- 第一個版本會傳回 16 位元低序位字組中的目前位置。 高序位文字不是零，如果發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ The first version returns the 16-bit current position in the low-order word. The high-order word is nonzero if an error occurred.  
   
- 第二個版本會傳回 32 位元位置。  
+ The second version returns the 32-bit position.  
   
-### <a name="remarks"></a>備註  
- 當它處理傳回的值時，控制項就會更新其目前的位置根據協同視窗的標題。 如果沒有協同視窗，或標題指定無效或超出範圍的值，控制權會傳回錯誤。  
+### <a name="remarks"></a>Remarks  
+ When it processes the value returned, the control updates its current position based on the caption of the buddy window. The control returns an error if there is no buddy window or if the caption specifies an invalid or out-of-range value.  
   
-##  <a name="getrange"></a>CSpinButtonCtrl::GetRange  
- 擷取的上限和下限限制 （範圍） 微調按鈕控制項。  
+##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange  
+ Retrieves the upper and lower limits (range) for a spin button control.  
   
 ```  
 DWORD GetRange() const;  
@@ -263,21 +271,21 @@ void GetRange32(
     int &upper) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- *較低*  
- 整數，接收控制項的較低限制的參考。  
+### <a name="parameters"></a>Parameters  
+ *lower*  
+ Reference to an integer that receives the lower limit for the control.  
   
- *上限*  
- 接收控制項的最高上限的整數的參考。  
+ *upper*  
+ Reference to an integer that receives the upper limit for the control.  
   
-### <a name="return-value"></a>傳回值  
- 第一個版本會傳回 32 位元值，包含上限和下限。 低序位字組的控制項，上限，而高序位文字較低的限制。  
+### <a name="return-value"></a>Return Value  
+ The first version returns a 32-bit value containing the upper and lower limits. The low-order word is the upper limit for the control, and the high-order word is the lower limit.  
   
-### <a name="remarks"></a>備註  
- 成員函式`GetRange32`擷取微調按鈕控制項的範圍為 32 位元整數。  
+### <a name="remarks"></a>Remarks  
+ The member function `GetRange32` retrieves the spin button control's range as a 32-bit integer.  
   
-##  <a name="setaccel"></a>CSpinButtonCtrl::SetAccel  
- 設定之微調按鈕控制項加速。  
+##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel  
+ Sets the acceleration for a spin button control.  
   
 ```  
 BOOL SetAccel(
@@ -285,70 +293,70 @@ BOOL SetAccel(
     UDACCEL* pAccel);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nAccel`  
- 數目[UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897)所指定的結構`pAccel`。  
+ Number of [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) structures specified by `pAccel`.  
   
  `pAccel`  
- 陣列的指標`UDACCEL`結構，其中包含加速資訊。 應該排序項目以遞增順序依據**nSec**成員。  
+ Pointer to an array of `UDACCEL` structures, which contain acceleration information. Elements should be sorted in ascending order based on the **nSec** member.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="setbase"></a>CSpinButtonCtrl::SetBase  
- 設定微調按鈕控制項的基底。  
+##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase  
+ Sets the base for a spin button control.  
   
 ```  
 int SetBase(int nBase);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nBase`  
- 新控制項的基底值。 它可以是十進位的 10 或 16 個十六進位。  
+ New base value for the control. It can be 10 for decimal or 16 for hexadecimal.  
   
-### <a name="return-value"></a>傳回值  
- 先前的基底值，如果成功，則為零，如果指定的 base 無效。  
+### <a name="return-value"></a>Return Value  
+ The previous base value if successful, or zero if an invalid base is given.  
   
-### <a name="remarks"></a>備註  
- 基底值會決定是否協同視窗會顯示十進位或十六進位數字的數字。 十六進位數字都不帶正負號。十進位數字會進行簽署。  
+### <a name="remarks"></a>Remarks  
+ The base value determines whether the buddy window displays numbers in decimal or hexadecimal digits. Hexadecimal numbers are always unsigned; decimal numbers are signed.  
   
-##  <a name="setbuddy"></a>CSpinButtonCtrl::SetBuddy  
- 設定微調按鈕控制項的協同視窗。  
+##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy  
+ Sets the buddy window for a spin button control.  
   
 ```  
 CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWndBuddy`  
- 新的協同視窗的指標。  
+ Pointer to the new buddy window.  
   
-### <a name="return-value"></a>傳回值  
- 先前的協同視窗的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the previous buddy window.  
   
-### <a name="remarks"></a>備註  
- 微調控制項幾乎都是與另一個視窗中，例如編輯控制項，可顯示某些內容相關聯。 其他視窗稱為微調控制項的 「 夥伴 」。  
+### <a name="remarks"></a>Remarks  
+ A spin control is almost always associated with another window, such as an edit control, that displays some content. This other window is called the "buddy" of the spin control.  
   
-##  <a name="setpos"></a>CSpinButtonCtrl::SetPos  
- 設定微調按鈕控制項的目前位置。  
+##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos  
+ Sets the current position for a spin button control.  
   
 ```  
 int SetPos(int nPos);  
 int SetPos32(int nPos);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- 控制項的新位置。 此值必須是控制項的上限和下限所指定的範圍中。  
+ New position for the control. This value must be in the range specified by the upper and lower limits for the control.  
   
-### <a name="return-value"></a>傳回值  
- 前一個位置 (16 位元的有效位數`SetPos`32 位元的有效位數`SetPos32`)。  
+### <a name="return-value"></a>Return Value  
+ The previous position (16-bit precision for `SetPos`, 32-bit precision for `SetPos32`).  
   
-### <a name="remarks"></a>備註  
- `SetPos32`設定 32 位元位置。  
+### <a name="remarks"></a>Remarks  
+ `SetPos32` sets the 32-bit position.  
   
-##  <a name="setrange"></a>Cspinbuttonctrl:: Setrange  
- 設定的上限和下限限制 （範圍） 微調按鈕控制項。  
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange  
+ Sets the upper and lower limits (range) for a spin button control.  
   
 ```  
 void SetRange(
@@ -361,19 +369,19 @@ void SetRange32(
     int nUpper);
 ```  
   
-### <a name="parameters"></a>參數  
- `nLower` 和 `nUpper`  
- 上限和下限控制項。 如`SetRange`，都沒有限制可能會大於**UD_MAXVAL**或小於**UD_MINVAL**; 此外，不能超過兩個限制之間的差異**UD_MAXVAL**。 `SetRange32`沒有任何限制置於限制;使用任何整數。  
+### <a name="parameters"></a>Parameters  
+ `nLower` and `nUpper`  
+ Upper and lower limits for the control. For `SetRange`, neither limit can be greater than **UD_MAXVAL** or less than **UD_MINVAL**; in addition, the difference between the two limits cannot exceed **UD_MAXVAL**. `SetRange32` places no restrictions on the limits; use any integers.  
   
-### <a name="remarks"></a>備註  
- 成員函式`SetRange32`設定微調按鈕控制項的 32 位元範圍。  
+### <a name="remarks"></a>Remarks  
+ The member function `SetRange32` sets the 32-bit range for the spin button control.  
   
 > [!NOTE]
->  微調按鈕的預設範圍具有最大值為零 (0) 和最小值為 100。 因為最大值小於最小值，按一下向上箭號，將會降低位置並按一下向下箭號會增加它。 使用`CSpinButtonCtrl::SetRange`調整這些值。  
+>  The default range for the spin button has the maximum set to zero (0) and the minimum set to 100. Because the maximum value is less than the minimum value, clicking the up arrow will decrease the position and clicking the down arrow will increase it. Use `CSpinButtonCtrl::SetRange` to adjust these values.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)   
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CSliderCtrl 類別](../../mfc/reference/csliderctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CMNCTRL2](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CSliderCtrl Class](../../mfc/reference/csliderctrl-class.md)
 

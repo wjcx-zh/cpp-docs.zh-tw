@@ -1,40 +1,57 @@
 ---
-title: "與 C 語言應用程式開發介面的關聯性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "書籍 [C++]"
-  - "書籍 [C++], 關於 MFC 和 Windows SDK"
-  - "MFC [C++], Windows 應用程式開發介面"
-  - "Visual C, Windows 應用程式開發介面呼叫"
-  - "Windows API [C++], 與 MFC"
+title: Relationship to the C-Language API | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- books [MFC], about MFC and Windows SDK
+- books [MFC]
+- MFC, Windows API
+- Visual C, Windows API calls
+- Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 與 C 語言應用程式開發介面的關聯性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 789064722f019a3f31fd4e30510b2b45682b7f21
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-對於 Windows，區隔 Microsoft Foundation Class \(MFC\) 程式庫與其他程式庫的一個特點為，以 C 語言撰寫的、對於 Windows 應用程式開發介面非常接近的對應。  此外，您可以自由將對類別庫的呼叫與直接對 Windows API 的呼叫混合在一起。  然而，這種直接存取，並不表示類別可以完整取代應用程式開發介面。  開發人員仍然必須對某些 Windows 函式直接呼叫，例如 [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) 和 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385)。  只有在有明顯的好處時， Windows 函式會由類別成員函式包裝。  
+---
+# <a name="relationship-to-the-c-language-api"></a>Relationship to the C-Language API
+The single characteristic that sets the Microsoft Foundation Class (MFC) Library apart from other class libraries for Windows is the very close mapping to the Windows API written in the C language. Further, you can generally mix calls to the class library freely with direct calls to the Windows API. This direct access does not, however, imply that the classes are a complete replacement for that API. Developers must still occasionally make direct calls to some Windows functions, such as [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) and [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), for example. A Windows function is wrapped by a class member function only when there is a clear advantage to doing so.  
   
- 由於您有時必須呼叫原生 Windows 函式呼叫，您應該存取 C 語言 Windows 應用程式開發介面的文件。  這個檔案包含在 Microsoft Visual C\+\+。  
+ Because you sometimes need to make native Windows function calls, you should have access to the C-language Windows API documentation. This documentation is included with Microsoft Visual C++.  
   
 > [!NOTE]
->  如需 MFC 程式庫架構作業的概觀，請參閱 [使用類別撰寫 Windows 的應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)。  
+>  For an overview of how the MFC Library framework operates, see [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md).  
   
-## 請參閱  
- [一般類別設計原理](../mfc/general-class-design-philosophy.md)
+## <a name="see-also"></a>See Also  
+ [General Class Design Philosophy](../mfc/general-class-design-philosophy.md)
+

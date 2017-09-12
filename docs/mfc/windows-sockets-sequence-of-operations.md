@@ -1,80 +1,99 @@
 ---
-title: "Windows Sockets：作業順序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通訊端 [C++], 作業"
-  - "通訊端 [C++], 資料流通訊端"
-  - "資料流通訊端 [C++]"
-  - "Windows Sockets [C++], 作業"
-  - "Windows Sockets [C++], 資料流通訊端"
+title: 'Windows Sockets: Sequence of Operations | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], operations
+- Windows Sockets [MFC], stream sockets
+- sockets [MFC], stream sockets
+- sockets [MFC], operations
+- stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Windows Sockets：作業順序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3daa26edce7467237b40ffc3c0809318253d236
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文詳細說明通訊端伺服器和用戶端通訊端之作業序列。  由於通訊端使用 `CArchive` 物件，它們必須是 [資料流通訊端](../mfc/windows-sockets-stream-sockets.md)。  
+---
+# <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets: Sequence of Operations
+This article illustrates, side by side, the sequence of operations for a server socket and a client socket. Because the sockets use `CArchive` objects, they are necessarily [stream sockets](../mfc/windows-sockets-stream-sockets.md).  
   
-## 資料流通訊端通訊的作業序列  
- 直到建構 `CSocketFile` 物件為止，`CAsyncSocket` 和 `CSocket` 的下列序列是正確的 \(但有一些參數差異\)。  從這時起，序列完全是為了 `CSocket`。  下表說明設定用戶端和伺服器之間的通訊之作業序列。  
+## <a name="sequence-of-operations-for-a-stream-socket-communication"></a>Sequence of Operations for a Stream Socket Communication  
+ Up to the point of constructing a `CSocketFile` object, the following sequence is accurate (with a few parameter differences) for both `CAsyncSocket` and `CSocket`. From that point on, the sequence is strictly for `CSocket`. The following table illustrates the sequence of operations for setting up communication between a client and a server.  
   
-### 設定用戶端和伺服器之間的通訊  
+### <a name="setting-up-communication-between-a-server-and-a-client"></a>Setting Up Communication Between a Server and a Client  
   
-|伺服器|用戶端|  
-|---------|---------|  
+|Server|Client|  
+|------------|------------|  
 |`// construct a socket`<br /><br /> `CSocket sockSrvr;`|`// construct a socket`<br /><br /> `CSocket sockClient;`|  
 |`// create the SOCKET`<br /><br /> `sockSrvr.Create(nPort);`1,2|`// create the SOCKET`<br /><br /> `sockClient.Create( );`2|  
 |`// start listening`<br /><br /> `sockSrvr.Listen( );`||  
 ||`// seek a connection`<br /><br /> `sockClient.Connect(strAddr, nPort);`3,4|  
 |`// construct a new, empty socket`<br /><br /> `CSocket sockRecv;`<br /><br /> `// accept connection`<br /><br /> `sockSrvr.Accept( sockRecv );` 5||  
 |`// construct file object`<br /><br /> `CSocketFile file(&sockRecv);`|`// construct file object`<br /><br /> `CSocketFile file(&sockClient);`|  
-|`// construct an archive`<br /><br /> `CArchive arIn(&file,`  `CArchive::load);`<br /><br /> \-或\-<br /><br /> `CArchive arOut(&file,`  `CArchive::store);`<br /><br /> –或是兩者–|`// construct an archive`<br /><br /> `CArchive arIn(&file,`  `CArchive::load);`<br /><br /> \-或\-<br /><br /> `CArchive arOut(&file,`  `CArchive::store);`<br /><br /> –或是兩者–|  
-|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> \-或\-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> \-或\-<br /><br /> `arOut << dwValue;`6|  
+|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -or-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - or Both -|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> -or-<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - or Both -|  
+|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -or-<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> -or-<br /><br /> `arOut << dwValue;`6|  
   
- 1.  其中 `nPort` 是通訊埠編號。  如需通訊埠的詳細資訊，請參閱 [Windows Sockets：通訊埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md) 。  
+ 1. Where `nPort` is a port number. See [Windows Sockets: Ports and Socket Addresses](../mfc/windows-sockets-ports-and-socket-addresses.md) for details about ports.  
   
- 2.  伺服器一定要指定連接埠，如此用戶端才可以連接。  **Create** 呼叫有時也會指定位址。  在用戶端上，請使用預設參數，要求 MFC 使用任何可用的通訊埠。  
+ 2. The server must always specify a port so clients can connect. The **Create** call sometimes also specifies an address. On the client side, use the default parameters, which ask MFC to use any available port.  
   
- 3.  其中 `nPort` 是通訊埠編號， *strAddr* 是 MAC 位址或 Internet Protocol \(IP\) 位址。  
+ 3. Where `nPort` is a port number and *strAddr* is a machine address or an Internet Protocol (IP) address.  
   
- 4.  MAC 位址可能採用數種形式：「ftp.microsoft.com」或「microsoft.com」。  IP 位址使用「點狀數目」格式，例如「127.54.67.32」。  **Connect** 函式驗證位址是否為點狀數字 \(雖然它不會檢查數值是否為網路中有效的電腦\)。  如果不是，**Connect** 假設使用電腦名稱是其他種類的格式。  
+ 4. Machine addresses can take several forms: "ftp.microsoft.com", "microsoft.com". IP addresses use the "dotted number" form "127.54.67.32". The **Connect** function checks to see if the address is a dotted number (although it does not check to ensure the number is a valid machine on the network). If not, **Connect** assumes a machine name of one of the other forms.  
   
- 5.  當您在伺服器端呼叫 **Accept** 時，會傳遞參考至新的通訊端物件。  您必須先建構此物件，但是請不要呼叫 **Create** 。  請記住，如果這個通訊端物件超出範圍，連接會關閉。  MFC 連接新物件至 **SOCKET** 控制代碼。  您可以在堆疊上或者在堆積上建構通訊端，如下所示。  
+ 5. When you call **Accept** on the server side, you pass a reference to a new socket object. You must construct this object first, but do not call **Create** for it. Keep in mind that if this socket object goes out of scope, the connection closes. MFC connects the new object to a **SOCKET** handle. You can construct the socket on the stack, as shown, or on the heap.  
   
- 6.  當超出範圍時，封存和通訊端檔案會關閉。  當物件超出範圍或刪除時，通訊端物件的解構函式也會呼叫通訊端物件的 [Close](../Topic/CAsyncSocket::Close.md) 成員函式。  
+ 6. The archive and the socket file are closed when they go out of scope. The socket object's destructor also calls the [Close](../mfc/reference/casyncsocket-class.md#close) member function for the socket object when the object goes out of scope or is deleted.  
   
-## 序列的其他注意事項  
- 在上表所列的呼叫序列是資料流通訊端所用。  資料包通訊端是無連接的，不需要 [CAsyncSocket::Connect](../Topic/CAsyncSocket::Connect.md)、[Listen](../Topic/CAsyncSocket::Listen.md) 和 [Accept](../Topic/CAsyncSocket::Accept.md) 呼叫 \(雖然您可以選擇性地使用 **Connect**\)。  相反地，如果您使用了類別 `CAsyncSocket`，資料包通訊端會使用 `CAsyncSocket::SendTo` 和 `ReceiveFrom` 成員函式。\(如果您使用資料包通訊端的 **Connect** ，請使用 **Send** 和 **Receive**\)。因為 `CArchive` 無法與資料包一起使用，如果通訊是資料包，請不要與封存的 `CSocket` 一起使用。  
+## <a name="additional-notes-about-the-sequence"></a>Additional Notes About the Sequence  
+ The sequence of calls shown in the preceding table is for a stream socket. Datagram sockets, which are connectionless, do not require the [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect), [Listen](../mfc/reference/casyncsocket-class.md#listen), and [Accept](../mfc/reference/casyncsocket-class.md#accept) calls (although you can optionally use **Connect**). Instead, if you are using class `CAsyncSocket`, datagram sockets use the `CAsyncSocket::SendTo` and `ReceiveFrom` member functions. (If you use **Connect** with a datagram socket, you use **Send** and **Receive**.) Because `CArchive` does not work with datagrams, do not use `CSocket` with an archive if the socket is a datagram.  
   
- [CSocketFile](../mfc/reference/csocketfile-class.md) 不支援 `CFile` 的全部功能；`CFile` 成員 \(例如 `Seek`\) 在通訊端通訊不具意義，無法使用。  因此，有些預設 MFC `Serialize` 函式與 `CSocketFile` 不相容。  特別是的 `CEditView` 類別。  您不應嘗試使用 `CEditView::SerializeRaw`，透過附加至 `CSocketFile` 物件的 `CArchive` 物件來序列化 `CEditView` 資料；請改使用 **CEditView::Serialize** \(未記載\)。  [SerializeRaw](../Topic/CEditView::SerializeRaw.md) 函式預期檔案物件有函式，例如 `Seek`，而 `CSocketFile` 不支援。  
+ [CSocketFile](../mfc/reference/csocketfile-class.md) does not support all of `CFile`'s functionality; `CFile` members such as `Seek`, which make no sense for a socket communication, are unavailable. Because of this, some default MFC `Serialize` functions are not compatible with `CSocketFile`. This is particularly true of the `CEditView` class. You should not try to serialize `CEditView` data through a `CArchive` object attached to a `CSocketFile` object using `CEditView::SerializeRaw`; use **CEditView::Serialize** instead (not documented). The [SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) function expects the file object to have functions, such as `Seek`, that `CSocketFile` does not support.  
   
- 如需詳細資訊，請參閱：  
+ For more information, see:  
   
--   [Windows Sockets：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets：連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)  
+-   [Windows Sockets: Ports and Socket Addresses](../mfc/windows-sockets-ports-and-socket-addresses.md)  
   
--   [Windows Sockets：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets：資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## 請參閱  
- [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
  [CSocket Class](../mfc/reference/csocket-class.md)   
- [CAsyncSocket::Create](../Topic/CAsyncSocket::Create.md)   
- [CAsyncSocket::Close](../Topic/CAsyncSocket::Close.md)
+ [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)   
+ [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
+
+

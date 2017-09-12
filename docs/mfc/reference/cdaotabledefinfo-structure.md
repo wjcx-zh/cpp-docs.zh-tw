@@ -1,5 +1,5 @@
 ---
-title: "CDaoTableDefInfo 結構 |Microsoft 文件"
+title: CDaoTableDefInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoTableDefInfo structure
+- CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
 caps.latest.revision: 13
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 4d1ac5ca00f98f8c34332ce2eb1a180ab715e6ba
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e0268fc3d7a88bf1290303c54cd27a14d1087360
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 結構
-`CDaoTableDefInfo`結構包含 tabledef 物件定義的資料存取物件 (DAO) 的相關資訊。  
+# <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo Structure
+The `CDaoTableDefInfo` structure contains information about a tabledef object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoTableDefInfo  
@@ -62,61 +62,61 @@ struct CDaoTableDefInfo
 };  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 唯一命名 tabledef 的物件。 若要直接擷取這個屬性的值，呼叫 tabledef 物件[GetName](../../mfc/reference/cdaotabledef-class.md#getname)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
+ Uniquely names the tabledef object. To retrieve the value of this property directly, call the tabledef object's [GetName](../../mfc/reference/cdaotabledef-class.md#getname) member function. For more information, see the topic "Name Property" in DAO Help.  
   
  `m_bUpdatable`  
- 指出是否可以變更的資料表。 判斷資料表是否為可更新的快速方式是開啟`CDaoTableDef`資料表物件並呼叫物件的[CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate)成員函式。 `CanUpdate`一律會傳回非零 (**TRUE**) 針對新建立的 tabledef 物件和 0 (**FALSE**) 附加的 tabledef 物件。 只以其目前的使用者具有寫入權限的資料庫可以附加新 tabledef 物件。 如果資料表包含無法更新欄位，`CanUpdate`會傳回 0。 當一或多個欄位是可更新，`CanUpdate`傳回非零值。 您可以編輯可更新的欄位。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 可更新屬性 」。  
+ Indicates whether changes can be made to the table. The quick way to determine whether a table is updatable is to open a `CDaoTableDef` object for the table and call the object's [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) member function. `CanUpdate` always returns nonzero (**TRUE**) for a newly created tabledef object and 0 (**FALSE**) for an attached tabledef object. A new tabledef object can be appended only to a database for which the current user has write permission. If the table contains only nonupdatable fields, `CanUpdate` returns 0. When one or more fields are updatable, `CanUpdate` returns nonzero. You can edit only the updatable fields. For more information, see the topic "Updatable Property" in DAO Help.  
   
  `m_lAttributes`  
- 指定資料表 tabledef 物件所代表的特性。 若要擷取目前的 tabledef 屬性，請呼叫其[GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes)成員函式。 傳回的值可以是兩個長常數組合 (使用位元 OR (**|**) 運算子):  
+ Specifies characteristics of the table represented by the tabledef object. To retrieve the current attributes of a tabledef, call its [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) member function. The value returned can be a combination of these long constants (using the bitwise-OR (**&#124;**) operator):  
   
-- **dbAttachExclusive**使用 Microsoft Jet 資料庫引擎的資料庫，表示資料表是以獨佔開啟附加的資料表。  
+- **dbAttachExclusive** For databases that use the Microsoft Jet database engine, indicates the table is an attached table opened for exclusive use.  
   
-- **dbAttachSavePWD**使用 Microsoft Jet 資料庫引擎的資料庫，表示使用者識別碼和密碼附加的資料表會儲存連接資訊。  
+- **dbAttachSavePWD** For databases that use the Microsoft Jet database engine, indicates that the user ID and password for the attached table are saved with the connection information.  
   
-- **dbSystemObject**表示資料表是由 Microsoft Jet 資料庫引擎所提供的系統資料表。 (唯讀)。  
+- **dbSystemObject** Indicates the table is a system table provided by the Microsoft Jet database engine. (Read-only.)  
   
-- **dbHiddenObject**表示資料表是由 Microsoft Jet 資料庫引擎 （用於暫時） 提供的隱藏的資料表。 (唯讀)。  
+- **dbHiddenObject** Indicates the table is a hidden table provided by the Microsoft Jet database engine (for temporary use). (Read-only.)  
   
-- **dbAttachedTable**表示資料表是從非 ODBC 資料庫，例如 Paradox 資料庫連接的資料表。  
+- **dbAttachedTable** Indicates the table is an attached table from a non-ODBC database, such as a Paradox database.  
   
-- **dbAttachedODBC**表示資料表為附加從 ODBC 資料庫，例如 Microsoft SQL Server 資料表。  
+- **dbAttachedODBC** Indicates the table is an attached table from an ODBC database, such as Microsoft SQL Server.  
   
  `m_dateCreated`  
- 日期時間與建立資料表。 若要直接擷取資料表的建立的日期，請呼叫[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成員函式`CDaoTableDef`與資料表相關聯的物件。 如需詳細資訊，請參閱下方的註解。 如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
+ The date and time the table was created. To directly retrieve the date the table was created, call the [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) member function of the `CDaoTableDef` object associated with the table. See Comments below for more information. For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
  `m_dateLastUpdated`  
- 時間與日期資料表的設計所做的最新變更。 若要直接擷取資料表上次更新日期，請呼叫[GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated)成員函式`CDaoTableDef`與資料表相關聯的物件。 如需詳細資訊，請參閱下方的註解。 如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
+ The date and time of the most recent change made to the design of the table. To directly retrieve the date the table was last updated, call the [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) member function of the `CDaoTableDef` object associated with the table. See Comments below for more information. For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
  *m_strSrcTableName*  
- 如果有的話，請指定附加資料表的名稱。 若要直接擷取來源資料表名稱，請呼叫[GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename)成員函式`CDaoTableDef`與資料表相關聯的物件。  
+ Specifies the name of an attached table if any. To directly retrieve the source table name, call the [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) member function of the `CDaoTableDef` object associated with the table.  
   
  `m_strConnect`  
- 提供開啟的資料庫來源的相關資訊。 您可以檢查這個屬性，藉由呼叫[GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)成員函式您`CDaoTableDef`物件。 如需有關連接字串，請參閱`GetConnect`。  
+ Provides information about the source of an open database. You can check this property by calling the [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) member function of your `CDaoTableDef` object. For more information about connect strings, see `GetConnect`.  
   
  `m_strValidationRule`  
- 驗證 tabledef 欄位中的資料已變更或加入至資料表的這些值。 使用 Microsoft Jet 資料庫引擎的資料庫支援驗證。 若要直接擷取驗證規則，請呼叫[GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule)成員函式`CDaoTableDef`與資料表相關聯的物件。 如需相關資訊，請參閱主題 DAO 說明中的 「 ValidationRule 屬性 」。  
+ A value that validates the data in tabledef fields as they are changed or added to a table. Validation is supported only for databases that use the Microsoft Jet database engine. To directly retrieve the validation rule, call the [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) member function of the `CDaoTableDef` object associated with the table. For related information, see the topic "ValidationRule Property" in DAO Help.  
   
  `m_strValidationText`  
- 值，指定如果不符合驗證規則屬性所指定的驗證規則，您的應用程式應該會顯示訊息的文字。 如需相關資訊，請參閱主題 DAO 說明中的 「 驗證屬性 」。  
+ A value that specifies the text of the message that your application should display if the validation rule specified by the ValidationRule property is not satisfied. For related information, see the topic "ValidationText Property" in DAO Help.  
   
  *m_lRecordCount*  
- 存取 tabledef 物件中的記錄數目。 這個屬性設定為唯讀。 若要直接擷取記錄計數，呼叫[GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount)成員函式`CDaoTableDef`物件。 文件`GetRecordCount`描述記錄筆數。 請注意，擷取這個計數可能會很耗時的作業是否資料表包含多筆記錄。  
+ The number of records accessed in a tabledef object. This property setting is read-only. To directly retrieve the record count, call the [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount) member function of the `CDaoTableDef` object. The documentation for `GetRecordCount` describes the record count further. Note that retrieving this count can be a time-consuming operation if the table contains many records.  
   
-## <a name="remarks"></a>備註  
- Tabledef 是類別的物件[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)。 主要、 次要資料庫，且上述所有參考表示資訊由[GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)類別中的成員函式`CDaoDatabase`。  
+## <a name="remarks"></a>Remarks  
+ The tabledef is an object of class [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md). The references to Primary, Secondary, and All above indicate how the information is returned by the [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) member function in class `CDaoDatabase`.  
   
- 所擷取的資訊[cdaodatabase:: Gettabledefinfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)成員函式會儲存在`CDaoTableDefInfo`結構。 呼叫`GetTableDefInfo`成員函式`CDaoDatabase`tabledef 物件會儲存其 TableDefs 集合中的物件。 `CDaoTableDefInfo`也會定義`Dump`成員函式中偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoTableDefInfo`物件。  
+ Information retrieved by the [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) member function is stored in a `CDaoTableDefInfo` structure. Call the `GetTableDefInfo` member function of the `CDaoDatabase` object in whose TableDefs collection the tabledef object is stored. `CDaoTableDefInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoTableDefInfo` object.  
   
- 日期和時間設定被衍生自的基底資料表建立或上次更新的電腦。 在多使用者環境中，使用者應該取得這些設定，直接從檔案伺服器以避免不一致的地方 DateCreated 和 LastUpdated 屬性設定。  
+ The date and time settings are derived from the computer on which the base table was created or last updated. In a multiuser environment, users should get these settings directly from the file server to avoid discrepancies in the DateCreated and LastUpdated property settings.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoTableDef 類別](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoDatabase 類別](../../mfc/reference/cdaodatabase-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)
 

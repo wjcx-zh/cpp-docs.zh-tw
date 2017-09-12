@@ -1,5 +1,5 @@
 ---
-title: "CDBVariant 類別 |Microsoft 文件"
+title: CDBVariant Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,8 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDBVariant class
-- Variant data types, ODBC
+- CDBVariant [MFC], CDBVariant
+- CDBVariant [MFC], Clear
+- CDBVariant [MFC], m_dwType
+- CDBVariant [MFC], m_boolVal
+- CDBVariant [MFC], m_chVal
+- CDBVariant [MFC], m_dblVal
+- CDBVariant [MFC], m_fltVal
+- CDBVariant [MFC], m_iVal
+- CDBVariant [MFC], m_lVal
+- CDBVariant [MFC], m_pbinary
+- CDBVariant [MFC], m_pdate
+- CDBVariant [MFC], m_pstring
+- CDBVariant [MFC], m_pstringA
+- CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
 caps.latest.revision: 21
 author: mikeblome
@@ -49,17 +61,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 930115ce4fe673e82a447ab1d90c260fe2b941d6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 31142b6cc94db0f83dbe5692019a154c3790ff25
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdbvariant-class"></a>CDBVariant 類別
-表示 MFC ODBC 類別的 Variant 資料類型。  
+# <a name="cdbvariant-class"></a>CDBVariant Class
+Represents a variant data type for the MFC ODBC classes.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDBVariant  
@@ -67,102 +79,102 @@ class CDBVariant
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDBVariant::CDBVariant](#cdbvariant)|建構 `CDBVariant` 物件。|  
+|[CDBVariant::CDBVariant](#cdbvariant)|Constructs a `CDBVariant` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDBVariant::Clear](#clear)|清除`CDBVariant`物件。|  
+|[CDBVariant::Clear](#clear)|Clears the `CDBVariant` object.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDBVariant::m_dwType](#m_dwtype)|包含目前儲存的值的資料型別。 輸入 `DWORD`。|  
+|[CDBVariant::m_dwType](#m_dwtype)|Contains the data type of the currently stored value. Type `DWORD`.|  
   
-### <a name="public-union-members"></a>公用的等位成員  
+### <a name="public-union-members"></a>Public Union Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDBVariant::m_boolVal](#m_boolval)|包含型別的值**BOOL**。|  
-|[CDBVariant::m_chVal](#m_chval)|包含型別的值`unsigned char`。|  
-|[CDBVariant::m_dblVal](#m_dblval)|包含型別的值**雙**。|  
-|[CDBVariant::m_fltVal](#m_fltval)|包含型別的值**float**。|  
-|[CDBVariant::m_iVal](#m_ival)|包含型別的值**簡短**。|  
-|[CDBVariant::m_lVal](#m_lval)|包含型別的值**長**。|  
-|[CDBVariant::m_pbinary](#m_pbinary)|包含型別的物件的指標`CLongBinary`。|  
-|[CDBVariant::m_pdate](#m_pdate)|包含型別的物件的指標**TIMESTAMP_STRUCT**。|  
-|[CDBVariant::m_pstring](#m_pstring)|包含型別的物件的指標`CString`。|  
-|[CDBVariant::m_pstringA](#m_pstringa)|儲存的指標 ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件。|  
-|[CDBVariant::m_pstringW](#m_pstringw)|儲存的指標寬[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件。|  
+|[CDBVariant::m_boolVal](#m_boolval)|Contains a value of type **BOOL**.|  
+|[CDBVariant::m_chVal](#m_chval)|Contains a value of type `unsigned char`.|  
+|[CDBVariant::m_dblVal](#m_dblval)|Contains a value of type **double**.|  
+|[CDBVariant::m_fltVal](#m_fltval)|Contains a value of type **float**.|  
+|[CDBVariant::m_iVal](#m_ival)|Contains a value of type **short**.|  
+|[CDBVariant::m_lVal](#m_lval)|Contains a value of type **long**.|  
+|[CDBVariant::m_pbinary](#m_pbinary)|Contains a pointer to an object of type `CLongBinary`.|  
+|[CDBVariant::m_pdate](#m_pdate)|Contains a pointer to an object of type **TIMESTAMP_STRUCT**.|  
+|[CDBVariant::m_pstring](#m_pstring)|Contains a pointer to an object of type `CString`.|  
+|[CDBVariant::m_pstringA](#m_pstringa)|Stores a pointer to an ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) object.|  
+|[CDBVariant::m_pstringW](#m_pstringw)|Stores a pointer to a wide [CString](../../atl-mfc-shared/reference/cstringt-class.md) object.|  
   
-## <a name="remarks"></a>備註  
- `CDBVariant`沒有基底類別。  
+## <a name="remarks"></a>Remarks  
+ `CDBVariant` does not have a base class.  
   
- `CDBVariant`類似於[COleVariant](../../mfc/reference/colevariant-class.md); 不過，`CDBVariant`不會使用 OLE。 `CDBVariant`可讓您儲存值，而不需擔心值的資料類型。 `CDBVariant`會追蹤目前的值等位中儲存的資料型別。  
+ `CDBVariant` is similar to [COleVariant](../../mfc/reference/colevariant-class.md); however, `CDBVariant` does not use OLE. `CDBVariant` allows you to store a value without worrying about the value's data type. `CDBVariant` tracks the data type of the current value, which is stored in a union.  
   
- 類別[CRecordset](../../mfc/reference/crecordset-class.md)利用`CDBVariant`三個成員函式中的物件︰ `GetFieldValue`， `GetBookmark`，和`SetBookmark`。 例如，`GetFieldValue`可讓您以動態方式提取資料行中的資料。 因為資料行的資料型別可能不知道在執行階段，`GetFieldValue`使用`CDBVariant`物件來儲存資料行的資料。  
+ Class [CRecordset](../../mfc/reference/crecordset-class.md) utilizes `CDBVariant` objects in three member functions: `GetFieldValue`, `GetBookmark`, and `SetBookmark`. For example, `GetFieldValue` allows you to dynamically fetch data in a column. Because the data type of the column may not be known at run time, `GetFieldValue` uses a `CDBVariant` object to store the column's data.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CDBVariant`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-##  <a name="cdbvariant"></a>CDBVariant::CDBVariant  
- 建立 NULL`CDBVariant`物件。  
+##  <a name="cdbvariant"></a>  CDBVariant::CDBVariant  
+ Creates a NULL `CDBVariant` object.  
   
 ```  
 CDBVariant();
 ```  
   
-### <a name="remarks"></a>備註  
- 設定[m_dwType](#m_dwtype)資料成員，才能**DBVT_NULL**。  
+### <a name="remarks"></a>Remarks  
+ Sets the [m_dwType](#m_dwtype) data member to **DBVT_NULL**.  
   
-##  <a name="clear"></a>CDBVariant::Clear  
- 呼叫此成員函式，以清除`CDBVariant`物件。  
+##  <a name="clear"></a>  CDBVariant::Clear  
+ Call this member function to clear the `CDBVariant` object.  
   
 ```  
 void Clear();
 ```  
   
-### <a name="remarks"></a>備註  
- 如果值[m_dwType](#m_dwtype)資料成員是**DBVT_DATE**， **DBVT_STRING**，或**DBVT_BINARY**，**清除**釋放等位的指標成員相關聯的記憶體。 **清除**設定`m_dwType`至**DBVT_NULL**。  
+### <a name="remarks"></a>Remarks  
+ If the value of the [m_dwType](#m_dwtype) data member is **DBVT_DATE**, **DBVT_STRING**, or **DBVT_BINARY**, **Clear** frees the memory associated with the union pointer member. **Clear** sets `m_dwType` to **DBVT_NULL**.  
   
- `CDBVariant`解構函式呼叫**清除**。  
+ The `CDBVariant` destructor calls **Clear**.  
   
-##  <a name="m_boolval"></a>CDBVariant::m_boolVal  
- 儲存的型別值**BOOL**。  
+##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
+ Stores a value of type **BOOL**.  
   
-### <a name="remarks"></a>備註  
- **M_boolVal**資料成員所屬的等位。 存取之前**m_boolVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_BOOL**，然後**m_boolVal**將包含有效的值; 否則存取**m_boolVal**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_boolVal** data member belongs to a union. Before accessing **m_boolVal**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_BOOL**, then **m_boolVal** will contain a valid value; otherwise, accessing **m_boolVal** will produce unreliable results.  
   
-##  <a name="m_chval"></a>CDBVariant::m_chVal  
- 儲存的型別值`unsigned char`。  
+##  <a name="m_chval"></a>  CDBVariant::m_chVal  
+ Stores a value of type `unsigned char`.  
   
-### <a name="remarks"></a>備註  
- **M_chVal**資料成員所屬的等位。 存取之前**m_chVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_UCHAR**，然後**m_chVal**包含有效的值; 否則存取**m_chVal**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_chVal** data member belongs to a union. Before accessing **m_chVal**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_UCHAR**, then **m_chVal** contains a valid value; otherwise, accessing **m_chVal** will produce unreliable results.  
   
-##  <a name="m_dblval"></a>CDBVariant::m_dblVal  
- 儲存的型別值**雙**。  
+##  <a name="m_dblval"></a>  CDBVariant::m_dblVal  
+ Stores a value of type **double**.  
   
-### <a name="remarks"></a>備註  
- **M_dblVal**資料成員所屬的等位。 存取之前**m_dblVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_DOUBLE**，然後**m_dblVal**包含有效的值; 否則存取**m_dblVal**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_dblVal** data member belongs to a union. Before accessing **m_dblVal**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_DOUBLE**, then **m_dblVal** contains a valid value; otherwise, accessing **m_dblVal** will produce unreliable results.  
   
-##  <a name="m_dwtype"></a>CDBVariant::m_dwType  
- 此資料成員包含目前儲存在中的值的資料型別`CDBVariant`物件的聯集的資料成員。  
+##  <a name="m_dwtype"></a>  CDBVariant::m_dwType  
+ This data member contains the data type for the value that is currently stored in the `CDBVariant` object's union data member.  
   
-### <a name="remarks"></a>備註  
- 才能存取這個聯集，您必須檢查的值`m_dwType`才能判斷存取的等位資料成員。 下表列出可能的值為`m_dwType`和相對應的等位資料成員。  
+### <a name="remarks"></a>Remarks  
+ Before accessing this union, you must check the value of `m_dwType` in order to determine which union data member to access. The following table lists the possible values for `m_dwType` and the corresponding union data member.  
   
-|m_dwType|等位資料成員|  
+|m_dwType|Union data member|  
 |---------------|-----------------------|  
-|**DBVT_NULL**|不等位的成員僅適用於存取項目。|  
+|**DBVT_NULL**|No union member is valid for access.|  
 |**DBVT_BOOL**|[m_boolVal](#m_boolval)|  
 |**DBVT_UCHAR**|[m_chVal](#m_chval)|  
 |**DBVT_SHORT**|[m_iVal](#m_ival)|  
@@ -175,57 +187,57 @@ void Clear();
 |**DBVT_ASTRING**|[m_pstringA](#m_pstringa)|  
 |**DBVT_WSTRING**|[m_pstringW](#m_pstringw)|  
   
-##  <a name="m_fltval"></a>CDBVariant::m_fltVal  
- 儲存的型別值**float**。  
+##  <a name="m_fltval"></a>  CDBVariant::m_fltVal  
+ Stores a value of type **float**.  
   
-### <a name="remarks"></a>備註  
- **M_fltVal**資料成員所屬的等位。 存取之前**m_fltVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_SINGLE**，然後**m_fltVal**包含有效的值; 否則存取**m_fltVal**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_fltVal** data member belongs to a union. Before accessing **m_fltVal**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_SINGLE**, then **m_fltVal** contains a valid value; otherwise, accessing **m_fltVal** will produce unreliable results.  
   
-##  <a name="m_ival"></a>CDBVariant::m_iVal  
- 儲存的型別值**簡短**。  
+##  <a name="m_ival"></a>  CDBVariant::m_iVal  
+ Stores a value of type **short**.  
   
-### <a name="remarks"></a>備註  
- **M_iVal**資料成員所屬的等位。 存取之前**m_iVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_SHORT**，然後**m_iVal**包含有效的值; 否則存取**m_iVal**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_iVal** data member belongs to a union. Before accessing **m_iVal**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_SHORT**, then **m_iVal** contains a valid value; otherwise, accessing **m_iVal** will produce unreliable results.  
   
-##  <a name="m_lval"></a>CDBVariant::m_lVal  
- 儲存的型別值**長**。  
+##  <a name="m_lval"></a>  CDBVariant::m_lVal  
+ Stores a value of type **long**.  
   
-### <a name="remarks"></a>備註  
- **M_lVal**資料成員所屬的等位。 存取之前**m_lVal**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_LONG**，然後**m_lVal**包含有效的值; 否則存取**m_lVal**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_lVal** data member belongs to a union. Before accessing **m_lVal**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_LONG**, then **m_lVal** contains a valid value; otherwise, accessing **m_lVal** will produce unreliable results.  
   
-##  <a name="m_pbinary"></a>CDBVariant::m_pbinary  
- 儲存型別的物件的指標[CLongBinary](../../mfc/reference/clongbinary-class.md)。  
+##  <a name="m_pbinary"></a>  CDBVariant::m_pbinary  
+ Stores a pointer to an object of type [CLongBinary](../../mfc/reference/clongbinary-class.md).  
   
-### <a name="remarks"></a>備註  
- **M_pbinary**資料成員所屬的等位。 存取之前**m_pbinary**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_BINARY**，然後**m_pbinary**包含有效的指標; 否則存取**m_pbinary**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_pbinary** data member belongs to a union. Before accessing **m_pbinary**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_BINARY**, then **m_pbinary** contains a valid pointer; otherwise, accessing **m_pbinary** will produce unreliable results.  
   
-##  <a name="m_pdate"></a>CDBVariant::m_pdate  
- 儲存型別的物件的指標**TIMESTAMP_STRUCT**。  
+##  <a name="m_pdate"></a>  CDBVariant::m_pdate  
+ Stores a pointer to an object of type **TIMESTAMP_STRUCT**.  
   
-### <a name="remarks"></a>備註  
- **M_pdate**資料成員所屬的等位。 存取之前**m_pdate**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_DATE**，然後**m_pdate**包含有效的指標; 否則存取**m_pdate**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_pdate** data member belongs to a union. Before accessing **m_pdate**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_DATE**, then **m_pdate** contains a valid pointer; otherwise, accessing **m_pdate** will produce unreliable results.  
   
- 如需詳細資訊**TIMESTAMP_STRUCT**資料類型，請參閱主題[C 資料型別](https://msdn.microsoft.com/library/ms714556.aspx)中的附錄 D *ODBC 程式設計人員參考*中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about the **TIMESTAMP_STRUCT** data type, see the topic [C Data Types](https://msdn.microsoft.com/library/ms714556.aspx) in Appendix D of the *ODBC Programmer's Reference* in the Windows SDK.  
   
-##  <a name="m_pstring"></a>CDBVariant::m_pstring  
- 儲存型別的物件的指標[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
+##  <a name="m_pstring"></a>  CDBVariant::m_pstring  
+ Stores a pointer to an object of type [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
-### <a name="remarks"></a>備註  
- **M_pstring**資料成員所屬的等位。 存取之前**m_pstring**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_STRING**，然後**m_pstring**包含有效的指標; 否則存取**m_pstring**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_pstring** data member belongs to a union. Before accessing **m_pstring**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_STRING**, then **m_pstring** contains a valid pointer; otherwise, accessing **m_pstring** will produce unreliable results.  
   
-##  <a name="m_pstringa"></a>CDBVariant::m_pstringA  
- 儲存的指標 ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件。  
+##  <a name="m_pstringa"></a>  CDBVariant::m_pstringA  
+ Stores a pointer to an ASCII [CString](../../atl-mfc-shared/reference/cstringt-class.md) object.  
   
-### <a name="remarks"></a>備註  
- **M_pstringA**資料成員所屬的等位。 存取之前**m_pstringA**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_ASTRING**，然後**m_pstringA**包含有效的指標; 否則存取**m_pstringA**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_pstringA** data member belongs to a union. Before accessing **m_pstringA**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_ASTRING**, then **m_pstringA** contains a valid pointer; otherwise, accessing **m_pstringA** will produce unreliable results.  
   
-##  <a name="m_pstringw"></a>CDBVariant::m_pstringW  
- 儲存的指標寬[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件。  
+##  <a name="m_pstringw"></a>  CDBVariant::m_pstringW  
+ Stores a pointer to a wide [CString](../../atl-mfc-shared/reference/cstringt-class.md) object.  
   
-### <a name="remarks"></a>備註  
- **M_pstringW**資料成員所屬的等位。 存取之前**m_pstringW**，值會先檢查[CDBVariant::m_dwType](#m_dwtype)。 如果`m_dwType`設為**DBVT_WSTRING**，然後**m_pstringW**包含有效的指標; 否則存取**m_pstringW**會產生不可靠的結果。  
+### <a name="remarks"></a>Remarks  
+ The **m_pstringW** data member belongs to a union. Before accessing **m_pstringW**, first check the value of [CDBVariant::m_dwType](#m_dwtype). If `m_dwType` is set to **DBVT_WSTRING**, then **m_pstringW** contains a valid pointer; otherwise, accessing **m_pstringW** will produce unreliable results.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CRecordset 類別](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CRecordset Class](../../mfc/reference/crecordset-class.md)
 

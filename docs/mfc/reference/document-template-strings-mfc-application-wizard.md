@@ -1,50 +1,69 @@
 ---
-title: "MFC 應用程式精靈、文件樣板字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.mfc.exe.doctemp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 應用程式精靈, 文件樣板字串"
+title: Document Template Strings, MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.appwiz.mfc.exe.doctemp
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC Application Wizard, document template strings
 ms.assetid: 8109f662-3182-4682-977a-2503321c678a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC 應用程式精靈、文件樣板字串
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3aeaccbb050f93fb366f7352f8df0276e0327434
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在 MFC 應用程式精靈的本頁中，提供或精選下列選項以協助文件管理與當地語系化工作。  文件樣板字串適用的應用程式是在[應用程式類型](../../mfc/reference/application-type-mfc-application-wizard.md)中，有選取 \[支援文件\/檢視架構\] 的程式。  它們並不適用於對話方塊。  由於應用程式的使用者可以看見多數的文件樣板字串並且會使用它們，因此會將它們當地語系化為精靈 \[**應用程式類型**\] 頁面中所指定的 \[資源語言\]。  
+---
+# <a name="document-template-strings-mfc-application-wizard"></a>Document Template Strings, MFC Application Wizard
+In this page of the MFC Application Wizard, provide or refine the following options to help with document management and localization. Document template strings are available for applications that include **Document/view architecture support** in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md). They are not available for dialog boxes. Because most document template strings are visible and used by the application's users, they are localized into the **Resource language** indicated in the **Application Type** page of the wizard.  
   
- **未當地語系化字串**  
- 套用至建立使用者文件的應用程式。  如果有提供副檔名和檔案類型 ID，使用者可以更輕鬆地開啟、列印和儲存文件。  這些項目之所以沒有當地語系化，是因為它們是由系統使用，而不是由使用者所使用。  
+ **Nonlocalized strings**  
+ Applies to applications that create user documents. Users can open, print, and save documents more easily if you provide a file extension and a file type ID. These items are not localized because they are used by the system rather than by the user.  
   
-|選項|說明|  
-|--------|--------|  
-|**副檔名**|設定使用者於使用應用程式時，儲存文件的關聯副檔名。  例如，如果專案命名為 Widget，可將副檔名命名為 .wgt \(在輸入副檔名時，請勿輸入半形句號\)。<br /><br /> 若提供副檔名，則使用者將文件圖示放到印表機圖示上的時候，檔案總管可以在未啟動應用程式的情況下，列印出應用程式的文件。<br /><br /> 如果不指定副檔名，則使用者必須在儲存檔案時指定副檔名。  精靈不提供預設副檔名。|  
-|**檔案類型 ID**|設定系統註冊區中的文件類型的標籤。|  
+|Option|Description|  
+|------------|-----------------|  
+|**File extension**|Sets the file extension associated with the documents that the user saves when using the application. For example, if your project is named Widget, you could name the file extension .wgt. (When you enter the file extension, do not include the period.)<br /><br /> If you provide a file extension, the Explorer can print your application's documents without launching your application when the user drops the document icon on a printer icon.<br /><br /> If you do not specify an extension, a user must specify a file extension when saving files. The wizard does not provide a default file extension.|  
+|**File type ID**|Sets the label for your document type in the system registry.|  
   
- **已當地語系化字串**  
- 產生與應用程式和文件關聯的字串，可經由應用程式的使用者讀取和使用，因此字串已當地語系化。  
+ **Localized strings**  
+ Produces strings associated with the application and document that are read and used by the application's users, so the strings are localized.  
   
-|選項|說明|  
-|--------|--------|  
-|**語言**|指定 \[當地語系化字串\] 項下所有方塊顯示字串的語言。  若要變更本方塊中的值，請在 MFC 應用程式精靈的[應用程式類型](../../mfc/reference/application-type-mfc-application-wizard.md)頁面中，選取 \[資源語言\] 項下的適當語言。|  
-|**主框架標題**|設定在主應用程式框架頂端出現的文字。  預設情況下會使用專案名稱。|  
-|**文件類型名稱**|識別出應用程式的文件可歸類的文件類型。  預設情況下會使用專案名稱。  變更預設並不會改變本對話方塊中的任何其他選項。|  
-|**篩選條件名稱**|設定名稱以便使用者指定尋找某檔案類型的檔案。  本選項位於標準 Windows \[開啟舊檔\] 和 \[另存新檔\] 對話方塊中的 \[檔案類型\] 和 \[**存檔類型**\] 選項中。  在預設情況下，專案名稱和檔案，後面則是 \[副檔名\] 中提供的內容。  例如，如果您的專案命名為 Widget，而副檔名是 .wgt，則 \[篩選名稱\] 依預設會是 Widget 檔案 \(\*.wgt\)。|  
-|**檔案新簡短名稱**|如果有多個新文件範本，請設定標準 Windows `New` 對話方塊中顯示的名稱。  如果您的應用程式為 [Automation 伺服程式](../../mfc/automation-servers.md)，本名稱可做為 Automation 物件的簡短名稱。  預設情況下會使用專案名稱。|  
-|**檔案類型完整名稱**|設定系統註冊區中的檔案類型名稱。  如果您的應用程式為 Automation 伺服程式，則本名稱可用來做為 Automation 物件的完整名稱。  預設情況下，專案名稱加上 .Document。|  
+|Option|Description|  
+|------------|-----------------|  
+|**Language**|Indicates the language in which strings are displayed for all the boxes under **Localized strings**. To change the value in this box, select the appropriate language under **Resource language** in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard.|  
+|**Main frame caption**|Sets the text appearing at the top of the main application frame. By default, the project name.|  
+|**Doc type name**|Identifies the type of document under which a document of the application can be grouped. By default, the project name. Changing the default does not change any other options in this dialog box.|  
+|**Filter name**|Sets the name your users can indicate to find files of your file type. This option is available from the **Files of type** and **Save as type** options in the standard Windows **Open** and **Save as** dialog boxes. By default, the project name plus Files, followed by the extension provided in **File extension**. For example, if your project is named Widget, and the file extension is .wgt, the **Filter name** is Widget Files (*.wgt) by default.|  
+|**File new short name**|Sets the name appearing in the standard Windows `New` dialog box, if there is more than one new document template. If your application is an [Automation server](../../mfc/automation-servers.md), this name is used as the short name of your Automation object. By default, the project name.|  
+|**File type long name**|Sets the file type name in the system registry. If your application is an Automation server, this name is used as the long name of your Automation object. By default, the project name plus .Document.|  
   
-## 請參閱  
- [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
+
+

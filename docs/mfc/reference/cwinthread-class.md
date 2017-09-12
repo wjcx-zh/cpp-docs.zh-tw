@@ -1,5 +1,5 @@
 ---
-title: "CWinThread 類別 |Microsoft 文件"
+title: CWinThread Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,10 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- worker threads
-- threading [MFC], safety
-- CWinThread class
-- threading [MFC], creating threads
+- CWinThread [MFC], CWinThread
+- CWinThread [MFC], CreateThread
+- CWinThread [MFC], ExitInstance
+- CWinThread [MFC], GetMainWnd
+- CWinThread [MFC], GetThreadPriority
+- CWinThread [MFC], InitInstance
+- CWinThread [MFC], IsIdleMessage
+- CWinThread [MFC], OnIdle
+- CWinThread [MFC], PostThreadMessage
+- CWinThread [MFC], PreTranslateMessage
+- CWinThread [MFC], ProcessMessageFilter
+- CWinThread [MFC], ProcessWndProcException
+- CWinThread [MFC], PumpMessage
+- CWinThread [MFC], ResumeThread
+- CWinThread [MFC], Run
+- CWinThread [MFC], SetThreadPriority
+- CWinThread [MFC], SuspendThread
+- CWinThread [MFC], m_bAutoDelete
+- CWinThread [MFC], m_hThread
+- CWinThread [MFC], m_nThreadID
+- CWinThread [MFC], m_pActiveWnd
+- CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 caps.latest.revision: 24
 author: mikeblome
@@ -59,17 +77,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5dfcb232b0080435800a2666735b8d6f1654b18c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b8cd94a75a7dea9d574f9fd06141e2ec4ac3fee
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cwinthread-class"></a>CWinThread 類別
-代表應用程式內執行的執行緒。  
+# <a name="cwinthread-class"></a>CWinThread Class
+Represents a thread of execution within an application.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CWinThread : public CCmdTarget  
@@ -77,76 +95,76 @@ class CWinThread : public CCmdTarget
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinThread::CWinThread](#cwinthread)|建構 `CWinThread` 物件。|  
+|[CWinThread::CWinThread](#cwinthread)|Constructs a `CWinThread` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinThread::CreateThread](#createthread)|開始執行`CWinThread`物件。|  
-|[CWinThread::ExitInstance](#exitinstance)|覆寫您執行緒終止時清除。|  
-|[CWinThread::GetMainWnd](#getmainwnd)|擷取執行緒的主視窗的指標。|  
-|[CWinThread::GetThreadPriority](#getthreadpriority)|取得目前執行緒的優先權。|  
-|[CWinThread::InitInstance](#initinstance)|覆寫以執行執行緒的執行個體初始化。|  
-|[CWinThread::IsIdleMessage](#isidlemessage)|檢查有無特殊訊息。|  
-|[CWinThread::OnIdle](#onidle)|覆寫以執行特定的執行緒閒置時間處理。|  
-|[CWinThread::PostThreadMessage](#postthreadmessage)|張貼訊息至另一個`CWinThread`物件。|  
-|[CWinThread::PreTranslateMessage](#pretranslatemessage)|篩選訊息，再分派這些 Windows 函式[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)。|  
-|[CWinThread::ProcessMessageFilter](#processmessagefilter)|到達應用程式之前，會攔截特定訊息。|  
-|[CWinThread::ProcessWndProcException](#processwndprocexception)|會攔截所有執行緒的訊息和命令處理常式所擲回的未處理例外狀況。|  
-|[CWinThread::PumpMessage](#pumpmessage)|包含執行緒的訊息迴圈。|  
-|[CWinThread::ResumeThread](#resumethread)|減少執行緒的暫停計數。|  
-|[Cwinthread:: Run](#run)|使用訊息幫浦的控制執行緒的函式。 若要自訂預設訊息迴圈會覆寫。|  
-|[CWinThread::SetThreadPriority](#setthreadpriority)|設定目前執行緒的優先權。|  
-|[CWinThread::SuspendThread](#suspendthread)|增加執行緒的暫停計數。|  
+|[CWinThread::CreateThread](#createthread)|Starts execution of a `CWinThread` object.|  
+|[CWinThread::ExitInstance](#exitinstance)|Override to clean up when your thread terminates.|  
+|[CWinThread::GetMainWnd](#getmainwnd)|Retrieves a pointer to the main window for the thread.|  
+|[CWinThread::GetThreadPriority](#getthreadpriority)|Gets the priority of the current thread.|  
+|[CWinThread::InitInstance](#initinstance)|Override to perform thread instance initialization.|  
+|[CWinThread::IsIdleMessage](#isidlemessage)|Checks for special messages.|  
+|[CWinThread::OnIdle](#onidle)|Override to perform thread-specific idle-time processing.|  
+|[CWinThread::PostThreadMessage](#postthreadmessage)|Posts a message to another `CWinThread` object.|  
+|[CWinThread::PreTranslateMessage](#pretranslatemessage)|Filters messages before they are dispatched to the Windows functions [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).|  
+|[CWinThread::ProcessMessageFilter](#processmessagefilter)|Intercepts certain messages before they reach the application.|  
+|[CWinThread::ProcessWndProcException](#processwndprocexception)|Intercepts all unhandled exceptions thrown by the thread's message and command handlers.|  
+|[CWinThread::PumpMessage](#pumpmessage)|Contains the thread's message loop.|  
+|[CWinThread::ResumeThread](#resumethread)|Decrements a thread's suspend count.|  
+|[CWinThread::Run](#run)|Controlling function for threads with a message pump. Override to customize the default message loop.|  
+|[CWinThread::SetThreadPriority](#setthreadpriority)|Sets the priority of the current thread.|  
+|[CWinThread::SuspendThread](#suspendthread)|Increments a thread's suspend count.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinThread::operator 控制代碼](#operator_handle)|擷取的控制代碼`CWinThread`物件。|  
+|[CWinThread::operator HANDLE](#operator_handle)|Retrieves the handle of the `CWinThread` object.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinThread::m_bAutoDelete](#m_bautodelete)|指定是否要終結執行緒結束處的物件。|  
-|[CWinThread::m_hThread](#m_hthread)|目前執行緒的控制代碼。|  
-|[CWinThread::m_nThreadID](#m_nthreadid)|目前執行緒的識別碼。|  
-|[CWinThread::m_pActiveWnd](#m_pactivewnd)|OLE 伺服器時就地啟用作用中的容器應用程式的主視窗的指標。|  
-|[CWinThread::m_pMainWnd](#m_pmainwnd)|保留應用程式的主視窗的指標。|  
+|[CWinThread::m_bAutoDelete](#m_bautodelete)|Specifies whether to destroy the object at thread termination.|  
+|[CWinThread::m_hThread](#m_hthread)|Handle to the current thread.|  
+|[CWinThread::m_nThreadID](#m_nthreadid)|ID of the current thread.|  
+|[CWinThread::m_pActiveWnd](#m_pactivewnd)|Pointer to the main window of the container application when an OLE server is in-place active.|  
+|[CWinThread::m_pMainWnd](#m_pmainwnd)|Holds a pointer to the application's main window.|  
   
-## <a name="remarks"></a>備註  
- 主執行緒的執行通常由衍生自物件`CWinApp`;`CWinApp`衍生自`CWinThread`。 其他`CWinThread`物件允許在指定的應用程式中的多個執行緒。  
+## <a name="remarks"></a>Remarks  
+ The main thread of execution is usually provided by an object derived from `CWinApp`; `CWinApp` is derived from `CWinThread`. Additional `CWinThread` objects allow multiple threads within a given application.  
   
- 有兩種一般的執行緒，`CWinThread`支援︰ 工作者執行緒和使用者介面執行緒。 背景工作執行緒中有任何訊息幫浦︰ 例如，執行緒執行背景計算的試算表應用程式中的。 使用者介面執行緒有訊息幫浦，並處理從系統收到的訊息。 [CWinApp](../../mfc/reference/cwinapp-class.md)和從它衍生的類別是使用者介面執行緒的範例。 您也可以直接從衍生其他使用者介面執行緒`CWinThread`。  
+ There are two general types of threads that `CWinThread` supports: worker threads and user-interface threads. Worker threads have no message pump: for example, a thread that performs background calculations in a spreadsheet application. User-interface threads have a message pump and process messages received from the system. [CWinApp](../../mfc/reference/cwinapp-class.md) and classes derived from it are examples of user-interface threads. Other user-interface threads can also be derived directly from `CWinThread`.  
   
- 類別的物件`CWinThread`通常存在該執行緒持續期間。 如果您想要修改此行為，設定[m_bAutoDelete](#m_bautodelete)至**FALSE**。  
+ Objects of class `CWinThread` typically exist for the duration of the thread. If you wish to modify this behavior, set [m_bAutoDelete](#m_bautodelete) to **FALSE**.  
   
- `CWinThread`類別是為了讓您的程式碼與 MFC 完整的安全執行緒。 執行緒區域資料架構用來維護執行緒特定的資訊由管理`CWinThread`物件。 因為此相依性`CWinThread`處理執行緒區域資料，任何使用 MFC 的執行緒必須由 MFC。 例如，執行階段函式所建立的執行緒[_beginthread、 _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)不能使用任何 MFC 應用程式開發介面。  
+ The `CWinThread` class is necessary to make your code and MFC fully thread-safe. Thread-local data used by the framework to maintain thread-specific information is managed by `CWinThread` objects. Because of this dependence on `CWinThread` to handle thread-local data, any thread that uses MFC must be created by MFC. For example, a thread created by the run-time function [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) cannot use any MFC APIs.  
   
- 若要建立的執行緒，呼叫[AfxBeginThread](application-information-and-management.md#afxbeginthread)。 有兩種形式，取決於您的背景工作角色或使用者介面執行緒。 如果您想要在使用者介面執行緒，傳遞給`AfxBeginThread`指標`CRuntimeClass`的您`CWinThread`-衍生的類別。 如果您想要建立背景工作執行緒，傳遞給`AfxBeginThread`控制函式並使用參數來控制函式的指標。 背景工作執行緒和使用者介面執行緒中，您可以指定修改優先順序，堆疊大小，建立旗標，安全性屬性的選擇性參數。 `AfxBeginThread`會將指標傳回至新`CWinThread`物件。  
+ To create a thread, call [AfxBeginThread](application-information-and-management.md#afxbeginthread). There are two forms, depending on whether you want a worker or user-interface thread. If you want a user-interface thread, pass to `AfxBeginThread` a pointer to the `CRuntimeClass` of your `CWinThread`-derived class. If you want to create a worker thread, pass to `AfxBeginThread` a pointer to the controlling function and the parameter to the controlling function. For both worker threads and user-interface threads, you can specify optional parameters that modify priority, stack size, creation flags, and security attributes. `AfxBeginThread` will return a pointer to your new `CWinThread` object.  
   
- 而不是呼叫`AfxBeginThread`，您可以建構`CWinThread`-衍生物件，然後再呼叫`CreateThread`。 如果您想要重複使用這個兩階段建構方法相當實用`CWinThread`之間連續建立與終止執行緒執行的物件。  
+ Instead of calling `AfxBeginThread`, you can construct a `CWinThread`-derived object and then call `CreateThread`. This two-stage construction method is useful if you want to reuse the `CWinThread` object between successive creation and terminations of thread executions.  
   
- 如需詳細資訊`CWinThread`，請參閱文章[多執行緒 c + + 和 MFC](../../parallel/multithreading-with-cpp-and-mfc.md)，[多執行緒︰ 建立使用者介面執行緒](../../parallel/multithreading-creating-user-interface-threads.md)，[多執行緒︰ 建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)，和[多執行緒︰ 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。  
+ For more information on `CWinThread`, see the articles [Multithreading with C++ and MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading: Creating User-Interface Threads](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading: Creating Worker Threads](../../parallel/multithreading-creating-worker-threads.md), and [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CWinThread`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="createthread"></a>CWinThread::CreateThread  
- 建立執行緒的呼叫程序的位址空間中執行。  
+##  <a name="createthread"></a>  CWinThread::CreateThread  
+ Creates a thread to execute within the address space of the calling process.  
   
 ```  
 BOOL CreateThread(
@@ -155,79 +173,79 @@ BOOL CreateThread(
     LPSECURITY_ATTRIBUTES lpSecurityAttrs = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwCreateFlags`  
- 指定控制的執行緒建立的額外旗標。 這個旗標可以包含兩個值之一︰  
+ Specifies an additional flag that controls the creation of the thread. This flag can contain one of two values:  
   
-- **CREATE_SUSPENDED**暫停計數為其中一個啟動執行緒。 使用**CREATE_SUSPENDED**如果您想要初始化的任何成員資料`CWinThread`物件，例如[m_bAutoDelete](#m_bautodelete)或衍生類別中，執行緒開始執行之前的任何成員。 當您初始化完成之後，使用[CWinThread::ResumeThread](#resumethread)開始執行的執行緒。 執行緒不會執行直到`CWinThread::ResumeThread`呼叫。  
+- **CREATE_SUSPENDED** Start the thread with a suspend count of one. Use **CREATE_SUSPENDED** if you want to initialize any member data of the `CWinThread` object, such as [m_bAutoDelete](#m_bautodelete) or any members of your derived class, before the thread starts running. Once your initialization is complete, use the [CWinThread::ResumeThread](#resumethread) to start the thread running. The thread will not execute until `CWinThread::ResumeThread` is called.  
   
-- **0**在建立後立即啟動執行緒。  
+- **0** Start the thread immediately after creation.  
   
  `nStackSize`  
- 指定的大小，以位元組為單位的新執行緒的堆疊。 如果**0**，堆疊大小預設為相同大小的處理序的主要執行緒。  
+ Specifies the size in bytes of the stack for the new thread. If **0**, the stack size defaults to the same size as that of the process's primary thread.  
   
  `lpSecurityAttrs`  
- 指向[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定在執行緒的安全性屬性。  
+ Points to a [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) structure that specifies the security attributes for the thread.  
   
-### <a name="return-value"></a>傳回值  
- 如果執行緒已成功; 建立為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the thread is created successfully; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用`AfxBeginThread`建立執行緒物件，並執行一個步驟。 使用`CreateThread`如果您想要重複使用後續的建立與終止執行緒執行的執行緒物件。  
+### <a name="remarks"></a>Remarks  
+ Use `AfxBeginThread` to create a thread object and execute it in one step. Use `CreateThread` if you want to reuse the thread object between successive creation and termination of thread executions.  
   
-##  <a name="cwinthread"></a>CWinThread::CWinThread  
- 建構 `CWinThread` 物件。  
+##  <a name="cwinthread"></a>  CWinThread::CWinThread  
+ Constructs a `CWinThread` object.  
   
 ```  
 CWinThread();
 ```  
   
-### <a name="remarks"></a>備註  
- 若要開始執行的執行緒，請呼叫[CreateThread](#createthread)成員函式。 您通常會建立執行緒藉由呼叫[AfxBeginThread](application-information-and-management.md#afxbeginthread)，這會呼叫這個建構函式和`CreateThread`。  
+### <a name="remarks"></a>Remarks  
+ To begin the thread's execution, call the [CreateThread](#createthread) member function. You will usually create threads by calling [AfxBeginThread](application-information-and-management.md#afxbeginthread), which will call this constructor and `CreateThread`.  
   
-##  <a name="exitinstance"></a>CWinThread::ExitInstance  
- 從架構，很少覆寫呼叫[執行](#run)成員函式來結束此執行個體的執行緒，或如果呼叫[InitInstance](#initinstance)失敗。  
+##  <a name="exitinstance"></a>  CWinThread::ExitInstance  
+ Called by the framework from within a rarely overridden [Run](#run) member function to exit this instance of the thread, or if a call to [InitInstance](#initinstance) fails.  
   
 ```  
 virtual int ExitInstance();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在執行緒結束代碼。0 表示沒有錯誤，和大於 0 的值表示錯誤。 這個值可以藉由呼叫擷取[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)。  
+### <a name="return-value"></a>Return Value  
+ The thread's exit code; 0 indicates no errors, and values greater than 0 indicate an error. This value can be retrieved by calling [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
   
-### <a name="remarks"></a>備註  
- 請勿呼叫此成員函式從任何地方但內**執行**成員函式。 此成員函式只能用於使用者介面執行緒。  
+### <a name="remarks"></a>Remarks  
+ Do not call this member function from anywhere but within the **Run** member function. This member function is used only in user-interface threads.  
   
- 此函式的預設實作會刪除`CWinThread`物件，如果[m_bAutoDelete](#m_bautodelete)是**TRUE**。 如果您想要在執行緒結束時執行其他清除，請覆寫這個函式。 實作`ExitInstance`執行您的程式碼之後，應該呼叫基底類別的版本。  
+ The default implementation of this function deletes the `CWinThread` object if [m_bAutoDelete](#m_bautodelete) is **TRUE**. Override this function if you wish to perform additional clean-up when your thread terminates. Your implementation of `ExitInstance` should call the base class's version after your code is executed.  
   
-##  <a name="getmainwnd"></a>CWinThread::GetMainWnd  
- 如果您的應用程式是 OLE 伺服器，呼叫此函式可擷取而不是直接參考應用程式的現用主視窗的指標`m_pMainWnd`應用程式物件的成員。  
+##  <a name="getmainwnd"></a>  CWinThread::GetMainWnd  
+ If your application is an OLE server, call this function to retrieve a pointer to the active main window of the application instead of directly referring to the `m_pMainWnd` member of the application object.  
   
 ```  
 virtual CWnd* GetMainWnd();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 此函式傳回下列其中一種 windows 的指標。 如果您的執行緒是 OLE 伺服器的一部分，而且有是就地啟用作用中作用中的容器內的物件，此函數會傳回[CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd)資料成員`CWinThread`物件。  
+### <a name="return-value"></a>Return Value  
+ This function returns a pointer to one of two types of windows. If your thread is part of an OLE server and has an object that is in-place active inside an active container, this function returns the [CWinApp::m_pActiveWnd](../../mfc/reference/cwinapp-class.md#m_pactivewnd) data member of the `CWinThread` object.  
   
- 如果不是就地啟用作用中的容器內的物件，或您的應用程式不是 OLE 伺服器，此函數會傳回[m_pMainWnd](#m_pmainwnd)執行緒物件資料成員。  
+ If there is no object that is in-place active within a container or your application is not an OLE server, this function returns the [m_pMainWnd](#m_pmainwnd) data member of your thread object.  
   
-### <a name="remarks"></a>備註  
- 對於使用者介面執行緒，這相當於直接參考`m_pActiveWnd`應用程式物件的成員。  
+### <a name="remarks"></a>Remarks  
+ For user-interface threads, this is equivalent to directly referring to the `m_pActiveWnd` member of your application object.  
   
- 如果您的應用程式不是 OLE 伺服器，則呼叫此函式和直接參考應用程式物件的 `m_pMainWnd` 成員的功用相同。  
+ If your application is not an OLE server, then calling this function is equivalent to directly referring to the `m_pMainWnd` member of your application object.  
   
- 覆寫此函式可修改預設行為。  
+ Override this function to modify the default behavior.  
   
-##  <a name="getthreadpriority"></a>CWinThread::GetThreadPriority  
- 取得這個執行緒目前的執行緒優先權等級。  
+##  <a name="getthreadpriority"></a>  CWinThread::GetThreadPriority  
+ Gets the current thread priority level of this thread.  
   
 ```  
 int GetThreadPriority();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在其優先順序類別中目前的執行緒優先權等級。 傳回的值將會是下列其中一項列出優先順序從高到最低︰  
+### <a name="return-value"></a>Return Value  
+ The current thread priority level within its priority class. The value returned will be one of the following, listed from highest priority to lowest:  
   
 - **THREAD_PRIORITY_TIME_CRITICAL**  
   
@@ -243,145 +261,145 @@ int GetThreadPriority();
   
 - **THREAD_PRIORITY_IDLE**  
   
- 如需有關這些優先順序的詳細資訊，請參閱[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on these priorities, see [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) in the Windows SDK.  
   
-##  <a name="initinstance"></a>CWinThread::InitInstance  
- `InitInstance`必須覆寫來初始化每個使用者介面執行緒的新執行個體。  
+##  <a name="initinstance"></a>  CWinThread::InitInstance  
+ `InitInstance` must be overridden to initialize each new instance of a user-interface thread.  
   
 ```  
 virtual BOOL InitInstance();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果初始化成功，則為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if initialization is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 通常，您會覆寫`InitInstance`執行執行緒最初建立時必須完成的工作。  
+### <a name="remarks"></a>Remarks  
+ Typically, you override `InitInstance` to perform tasks that must be completed when a thread is first created.  
   
- 此成員函式只能用於使用者介面執行緒。 在控制傳遞至函式中執行的背景工作執行緒初始化[AfxBeginThread](application-information-and-management.md#afxbeginthread)。  
+ This member function is used only in user-interface threads. Perform initialization of worker threads in the controlling function passed to [AfxBeginThread](application-information-and-management.md#afxbeginthread).  
   
-##  <a name="isidlemessage"></a>CWinThread::IsIdleMessage  
- 覆寫此函式可保留**OnIdle**從被呼叫後會產生特定的訊息。  
+##  <a name="isidlemessage"></a>  CWinThread::IsIdleMessage  
+ Override this function to keep **OnIdle** from being called after specific messages are generated.  
   
 ```  
 virtual BOOL IsIdleMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pMsg`  
- 指向目前正在處理的訊息。  
+ Points to the current message being processed.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果`OnIdle`應該經過處理後呼叫訊息; 否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if `OnIdle` should be called after processing message; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 預設實作不會呼叫**OnIdle**備援滑鼠訊息後插入號閃爍不停，所產生的訊息。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does not call **OnIdle** after redundant mouse messages and messages generated by blinking carets.  
   
- 如果已建立的應用程式的簡短的計時器， **OnIdle**會呼叫經常造成效能問題。 若要改善這類應用程式的效能，覆寫`IsIdleMessage`在應用程式的`CWinApp`-衍生的類別來檢查`WM_TIMER`訊息，如下所示︰  
+ If an application has created a short timer, **OnIdle** will be called frequently, causing performance problems. To improve such an application's performance, override `IsIdleMessage` in the application's `CWinApp`-derived class to check for `WM_TIMER` messages as follows:  
   
- [!code-cpp[NVC_MFCDocView # 189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]  
   
- 處理`WM_TIMER`以這種方式將可改善效能的應用程式，使用簡短的計時器。  
+ Handling `WM_TIMER` in this fashion will improve performance of applications that use short timers.  
   
-##  <a name="m_bautodelete"></a>CWinThread::m_bAutoDelete  
- 指定在執行緒終止時是否要自動刪除 `CWinThread` 物件。  
+##  <a name="m_bautodelete"></a>  CWinThread::m_bAutoDelete  
+ Specifies whether the `CWinThread` object should be automatically deleted at thread termination.  
   
 ```  
 BOOL m_bAutoDelete;  
 ```  
   
-### <a name="remarks"></a>備註  
- `m_bAutoDelete`資料成員是類型的公用變數**BOOL**。  
+### <a name="remarks"></a>Remarks  
+ The `m_bAutoDelete` data member is a public variable of type **BOOL**.  
   
- `m_bAutoDelete` 的值不會影響基礎執行緒控制代碼如何關閉。 在 `CWinThread` 物件終結時，執行緒控制代碼永遠關閉。  
+ The value of `m_bAutoDelete` does not affect how the underlying thread handle is closed. The thread handle is always closed when the `CWinThread` object is destroyed.  
   
-##  <a name="m_hthread"></a>CWinThread::m_hThread  
- 處理執行緒附加至這個`CWinThread`。  
+##  <a name="m_hthread"></a>  CWinThread::m_hThread  
+ Handle to the thread attached to this `CWinThread`.  
   
 ```  
 HANDLE m_hThread;  
 ```  
   
-### <a name="remarks"></a>備註  
- `m_hThread`資料成員是類型的公用變數`HANDLE`。 如果基礎執行緒目前存在，才有效。  
+### <a name="remarks"></a>Remarks  
+ The `m_hThread` data member is a public variable of type `HANDLE`. It is only valid if underlying thread currently exists.  
   
-##  <a name="m_nthreadid"></a>CWinThread::m_nThreadID  
- 執行緒的 ID 附加至這個`CWinThread`。  
+##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID  
+ ID of the thread attached to this `CWinThread`.  
   
 ```  
 DWORD m_nThreadID;  
 ```  
   
-### <a name="remarks"></a>備註  
- **M_nThreadID**資料成員是類型的公用變數`DWORD`。 如果基礎執行緒目前存在，才有效。  
+### <a name="remarks"></a>Remarks  
+ The **m_nThreadID** data member is a public variable of type `DWORD`. It is only valid if underlying thread currently exists.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[AfxGetThread](application-information-and-management.md#afxgetthread)。  
+### <a name="example"></a>Example  
+  See the example for [AfxGetThread](application-information-and-management.md#afxgetthread).  
   
-##  <a name="m_pactivewnd"></a>CWinThread::m_pActiveWnd  
- 使用此資料成員儲存執行緒的作用中視窗物件的指標。  
+##  <a name="m_pactivewnd"></a>  CWinThread::m_pActiveWnd  
+ Use this data member to store a pointer to your thread's active window object.  
   
 ```  
 CWnd* m_pActiveWnd;  
 ```  
   
-### <a name="remarks"></a>備註  
- Microsoft Foundation 類別庫會自動終止您的執行緒，所參考的視窗時`m_pActiveWnd`已關閉。 如果這個執行緒是由主執行緒的應用程式，將會終止應用程式。 如果此資料成員是**NULL**，應用程式的使用中視窗`CWinApp`物件會被繼承。 `m_pActiveWnd`這類型的公用變數**CWnd\***。  
+### <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library will automatically terminate your thread when the window referred to by `m_pActiveWnd` is closed. If this thread is the primary thread for an application, the application will also be terminated. If this data member is **NULL**, the active window for the application's `CWinApp` object will be inherited. `m_pActiveWnd` is a public variable of type **CWnd\***.  
   
- 一般而言，您將此成員變數覆寫時`InitInstance`。 在背景工作執行緒，這個資料成員的值被繼承自父執行緒。  
+ Typically, you set this member variable when you override `InitInstance`. In a worker thread, the value of this data member is inherited from its parent thread.  
   
-##  <a name="m_pmainwnd"></a>CWinThread::m_pMainWnd  
- 使用此資料成員，來儲存您的執行緒主視窗物件的指標。  
+##  <a name="m_pmainwnd"></a>  CWinThread::m_pMainWnd  
+ Use this data member to store a pointer to your thread's main window object.  
   
 ```  
 CWnd* m_pMainWnd;  
 ```  
   
-### <a name="remarks"></a>備註  
- Microsoft Foundation 類別庫會自動終止您的執行緒，所參考的視窗時`m_pMainWnd`已關閉。 如果這個執行緒是由主執行緒的應用程式，將會終止應用程式。 如果此資料成員是**NULL**，應用程式的主視窗`CWinApp`物件會用來判斷何時要終止執行緒。 `m_pMainWnd`這類型的公用變數**CWnd\***。  
+### <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library will automatically terminate your thread when the window referred to by `m_pMainWnd` is closed. If this thread is the primary thread for an application, the application will also be terminated. If this data member is **NULL**, the main window for the application's `CWinApp` object will be used to determine when to terminate the thread. `m_pMainWnd` is a public variable of type **CWnd\***.  
   
- 一般而言，您將此成員變數覆寫時`InitInstance`。 在背景工作執行緒，這個資料成員的值被繼承自父執行緒。  
+ Typically, you set this member variable when you override `InitInstance`. In a worker thread, the value of this data member is inherited from its parent thread.  
   
-##  <a name="onidle"></a>CWinThread::OnIdle  
- 覆寫此成員函式，以執行閒置時間處理。  
+##  <a name="onidle"></a>  CWinThread::OnIdle  
+ Override this member function to perform idle-time processing.  
   
 ```  
 virtual BOOL OnIdle(LONG lCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lCount`  
- 每次遞增計數器`OnIdle`執行緒的訊息佇列是空的時呼叫。 這個計數會重設為 0 每次處理新訊息時。 您可以使用`lCount`參數，來判斷相對的執行緒已經閒置而不處理訊息的時間長度。  
+ A counter incremented each time `OnIdle` is called when the thread's message queue is empty. This count is reset to 0 each time a new message is processed. You can use the `lCount` parameter to determine the relative length of time the thread has been idle without processing a message.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，接收更多閒置處理時間;如果沒有更多閒置處理的時間就是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero to receive more idle processing time; 0 if no more idle processing time is needed.  
   
-### <a name="remarks"></a>備註  
- `OnIdle`預設訊息迴圈中時呼叫的執行緒訊息佇列是空的。 您可以使用覆寫來呼叫您自己的背景工作閒置處理常式。  
+### <a name="remarks"></a>Remarks  
+ `OnIdle` is called in the default message loop when the thread's message queue is empty. Use your override to call your own background idle-handler tasks.  
   
- `OnIdle`應該會傳回 0，表示需要任何額外的閒置處理時間。 `lCount`參數就會遞增每次`OnIdle`時呼叫的訊息佇列是空的而且會重設為 0 每次處理新訊息時。 您可以呼叫您不同閒置基礎常式，此計數。  
+ `OnIdle` should return 0 to indicate that no additional idle processing time is required. The `lCount` parameter is incremented each time `OnIdle` is called when the message queue is empty and is reset to 0 each time a new message is processed. You can call your different idle routines based on this count.  
   
- 暫存物件和記憶體未使用的動態連結程式庫，此成員函式的預設實作會釋出。  
+ The default implementation of this member function frees temporary objects and unused dynamic link libraries from memory.  
   
- 此成員函式只能用於使用者介面執行緒。  
+ This member function is used only in user-interface threads.  
   
- 因為應用程式處理的訊息，直到`OnIdle`傳回時，請勿執行此函式中的執行時間較長的工作。  
+ Because the application cannot process messages until `OnIdle` returns, do not perform lengthy tasks in this function.  
   
-##  <a name="operator_handle"></a>CWinThread::operator 控制代碼  
- 擷取的控制代碼`CWinThread`物件。  
+##  <a name="operator_handle"></a>  CWinThread::operator HANDLE  
+ Retrieves the handle of the `CWinThread` object.  
   
 ```  
 operator HANDLE() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功的話，物件的控制代碼的執行緒。否則， **NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the thread object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>備註  
- 若要直接呼叫 Windows Api 中使用控制代碼。  
+### <a name="remarks"></a>Remarks  
+ Use the handle to directly call Windows APIs.  
   
-##  <a name="postthreadmessage"></a>CWinThread::PostThreadMessage  
- 呼叫使用者定義訊息張貼至另一個`CWinThread`物件。  
+##  <a name="postthreadmessage"></a>  CWinThread::PostThreadMessage  
+ Called to post a user-defined message to another `CWinThread` object.  
   
 ```  
 BOOL PostThreadMessage(
@@ -390,44 +408,44 @@ BOOL PostThreadMessage(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `message`  
- 使用者定義訊息的識別碼。  
+ ID of the user-defined message.  
   
  `wParam`  
- 第一個訊息參數。  
+ First message parameter.  
   
  `lParam`  
- 第二個訊息參數。  
+ Second message parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 張貼的訊息由訊息對應巨集對應到適當的訊息處理常式`ON_THREAD_MESSAGE`。  
+### <a name="remarks"></a>Remarks  
+ The posted message is mapped to the proper message handler by the message map macro `ON_THREAD_MESSAGE`.  
   
 > [!NOTE]
->  當呼叫 Windows [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946)內 MFC 應用程式時，MFC 訊息處理常式不會呼叫的函式。 如需詳細資訊，請參閱 「 知識庫 」 文件 」 PRB:: MFC 訊息處理常式不呼叫與 PostThreadMessage() 」 (Q142415)。  
+>  When calling the Windows [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) function within an MFC application, the MFC message handlers are not called. For more information, see the Knowledge Base article, "PRB: MFC Message Handler Not Called with PostThreadMessage()" (Q142415).  
   
-##  <a name="pretranslatemessage"></a>CWinThread::PreTranslateMessage  
- 覆寫此函式可篩選視窗訊息，再分派這些 Windows 函式[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)。  
+##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage  
+ Override this function to filter window messages before they are dispatched to the Windows functions [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934).  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pMsg`  
- 指向[MSG 結構](../../mfc/reference/msg-structure1.md)包含要處理的訊息。  
+ Points to a [MSG structure](../../mfc/reference/msg-structure1.md) containing the message to process.  
   
-### <a name="return-value"></a>傳回值  
- 如果在已完全處理訊息為非零`PreTranslateMessage`和不應進一步處理。 如果應該以一般方式處理訊息為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message was fully processed in `PreTranslateMessage` and should not be processed further. Zero if the message should be processed in the normal way.  
   
-### <a name="remarks"></a>備註  
- 此成員函式只能用於使用者介面執行緒。  
+### <a name="remarks"></a>Remarks  
+ This member function is used only in user-interface threads.  
   
-##  <a name="processmessagefilter"></a>CWinThread::ProcessMessageFilter  
- 架構的攔截函式會呼叫此成員函式，以篩選及回應特定 Windows 訊息。  
+##  <a name="processmessagefilter"></a>  CWinThread::ProcessMessageFilter  
+ The framework's hook function calls this member function to filter and respond to certain Windows messages.  
   
 ```  
 virtual BOOL ProcessMessageFilter(
@@ -435,23 +453,23 @@ virtual BOOL ProcessMessageFilter(
     LPMSG lpMsg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `code`  
- 指定攔截的程式碼。 此成員函式來判斷如何處理使用程式碼`lpMsg.`  
+ Specifies a hook code. This member function uses the code to determine how to process `lpMsg.`  
   
  `lpMsg`  
- Windows 的指標[MSG 結構](../../mfc/reference/msg-structure1.md)。  
+ A pointer to a Windows [MSG structure](../../mfc/reference/msg-structure1.md).  
   
-### <a name="return-value"></a>傳回值  
- 如果已處理訊息為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message is processed; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 攔截函式會處理之前將會傳送至應用程式的一般訊息的事件處理。  
+### <a name="remarks"></a>Remarks  
+ A hook function processes events before they are sent to the application's normal message processing.  
   
- 如果您覆寫此進階的功能，請務必呼叫基底類別版本來維護架構的攔截 (hook) 處理。  
+ If you override this advanced feature, be sure to call the base-class version to maintain the framework's hook processing.  
   
-##  <a name="processwndprocexception"></a>CWinThread::ProcessWndProcException  
- 此處理常式不會攔截在一個執行緒的訊息或命令處理常式中擲回例外狀況時，架構會呼叫此成員函式。  
+##  <a name="processwndprocexception"></a>  CWinThread::ProcessWndProcException  
+ The framework calls this member function whenever the handler does not catch an exception thrown in one of your thread's message or command handlers.  
   
 ```  
 virtual LRESULT ProcessWndProcException(
@@ -459,82 +477,82 @@ virtual LRESULT ProcessWndProcException(
     const MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *e*  
- 要處理的例外狀況的點。  
+ Points to an unhandled exception.  
   
  `pMsg`  
- 指向[MSG 結構](../../mfc/reference/msg-structure1.md)包含導致擲回例外狀況架構的 windows 訊息的相關資訊。  
+ Points to a [MSG structure](../../mfc/reference/msg-structure1.md) containing information about the windows message that caused the framework to throw an exception.  
   
-### <a name="return-value"></a>傳回值  
- -1，否則`WM_CREATE`會產生例外狀況; 否則為 0。  
+### <a name="return-value"></a>Return Value  
+ -1 if a `WM_CREATE` exception is generated; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 請勿直接呼叫此成員函式。  
+### <a name="remarks"></a>Remarks  
+ Do not call this member function directly.  
   
- 此成員函式的預設實作會處理只從下列兩則訊息產生的例外狀況︰  
+ The default implementation of this member function handles only exceptions generated from the following messages:  
   
-|命令|動作|  
+|Command|Action|  
 |-------------|------------|  
-|`WM_CREATE`|失敗。|  
-|`WM_PAINT`|驗證受影響的視窗，因此防止另`WM_PAINT`產生的訊息。|  
+|`WM_CREATE`|Fail.|  
+|`WM_PAINT`|Validate the affected window, thus preventing another `WM_PAINT` message from being generated.|  
   
- 覆寫此成員函式，以提供您的例外狀況的全域處理。 只有當您想要顯示的預設行為，請呼叫基底功能。  
+ Override this member function to provide global handling of your exceptions. Call the base functionality only if you wish to display the default behavior.  
   
- 此成員函式只能用於具有訊息幫浦的執行緒。  
+ This member function is used only in threads that have a message pump.  
   
-##  <a name="pumpmessage"></a>CWinThread::PumpMessage  
- 包含執行緒的訊息迴圈。  
+##  <a name="pumpmessage"></a>  CWinThread::PumpMessage  
+ Contains the thread's message loop.  
   
 ```  
 virtual BOOL PumpMessage();
 ```  
   
-### <a name="remarks"></a>備註  
- `PumpMessage`包含執行緒的訊息迴圈。 **PumpMessage**稱為`CWinThread`至執行緒的訊息幫浦 」。 您可以呼叫`PumpMessage`直接強制訊息加以處理，或者您可以覆寫`PumpMessage`變更其預設行為。  
+### <a name="remarks"></a>Remarks  
+ `PumpMessage` contains the thread's message loop. **PumpMessage** is called by `CWinThread` to pump the thread's messages. You can call `PumpMessage` directly to force messages to be processed, or you can override `PumpMessage` to change its default behavior.  
   
- 呼叫`PumpMessage`直接覆寫其預設行為是僅供進階使用者建議。  
+ Calling `PumpMessage` directly and overriding its default behavior is recommended for advanced users only.  
   
-##  <a name="resumethread"></a>CWinThread::ResumeThread  
- 若要繼續執行已暫停的執行緒呼叫[SuspendThread](#suspendthread)成員函式或使用建立的執行緒**CREATE_SUSPENDED**旗標。  
+##  <a name="resumethread"></a>  CWinThread::ResumeThread  
+ Called to resume execution of a thread that was suspended by the [SuspendThread](#suspendthread) member function, or a thread created with the **CREATE_SUSPENDED** flag.  
   
 ```  
 DWORD ResumeThread();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 執行緒的先前暫停計數，如果登錄成功。`0xFFFFFFFF`否則。 傳回值為零，如果目前執行緒已不會暫停。 如果傳回的值為 1，執行緒暫止，但現在已經重新啟動。 任何大於一表示執行緒的傳回值也會保持暫停。  
+### <a name="return-value"></a>Return Value  
+ The thread's previous suspend count if successful; `0xFFFFFFFF` otherwise. If the return value is zero, the current thread was not suspended. If the return value is one, the thread was suspended, but is now restarted. Any return value greater than one means the thread remains suspended.  
   
-### <a name="remarks"></a>備註  
- 目前執行緒的暫停計數減少一個。 如果暫止數目減少為零，執行緒會繼續執行。否則，執行緒也會保持暫停。  
+### <a name="remarks"></a>Remarks  
+ The suspend count of the current thread is reduced by one. If the suspend count is reduced to zero, the thread resumes execution; otherwise the thread remains suspended.  
   
-##  <a name="run"></a>Cwinthread:: Run  
- 提供使用者介面執行緒中的預設訊息迴圈。  
+##  <a name="run"></a>  CWinThread::Run  
+ Provides a default message loop for user-interface threads.  
   
 ```  
 virtual int Run();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `int`執行緒所傳回的值。 這個值可以藉由呼叫擷取[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)。  
+### <a name="return-value"></a>Return Value  
+ An `int` value that is returned by the thread. This value can be retrieved by calling [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190).  
   
-### <a name="remarks"></a>備註  
- **執行**取得和分派視窗訊息，直到應用程式收到[WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641)訊息。 如果目前執行緒的訊息佇列不包含的任何訊息，**執行**呼叫`OnIdle`執行閒置時間處理。 內送訊息會移至[PreTranslateMessage](#pretranslatemessage)成員函式進行特殊處理，然後 Windows 函式[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)標準鍵盤翻譯。 最後， [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934)呼叫 Windows 函式。  
+### <a name="remarks"></a>Remarks  
+ **Run** acquires and dispatches Windows messages until the application receives a [WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641) message. If the thread's message queue currently contains no messages, **Run** calls `OnIdle` to perform idle-time processing. Incoming messages go to the [PreTranslateMessage](#pretranslatemessage) member function for special processing and then to the Windows function [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) for standard keyboard translation. Finally, the [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows function is called.  
   
- **執行**很少會覆寫，但您可以覆寫該實作特殊行為。  
+ **Run** is rarely overridden, but you can override it to implement special behavior.  
   
- 此成員函式只能用於使用者介面執行緒。  
+ This member function is used only in user-interface threads.  
   
-##  <a name="setthreadpriority"></a>CWinThread::SetThreadPriority  
- 此函式會設定其優先權類別目前執行緒的優先權層級。  
+##  <a name="setthreadpriority"></a>  CWinThread::SetThreadPriority  
+ This function sets the priority level of the current thread within its priority class.  
   
 ```  
 BOOL SetThreadPriority(int nPriority);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPriority`  
- 指定新的執行緒優先權等級，其優先順序類別內。 這個參數必須是下列值，列出優先順序從高到最低的其中一個︰  
+ Specifies the new thread priority level within its priority class. This parameter must be one of the following values, listed from highest priority to lowest:  
   
 - **THREAD_PRIORITY_TIME_CRITICAL**  
   
@@ -550,30 +568,30 @@ BOOL SetThreadPriority(int nPriority);
   
 - **THREAD_PRIORITY_IDLE**  
   
- 如需有關這些優先順序的詳細資訊，請參閱[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on these priorities, see [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) in the Windows SDK.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，則為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if function was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 只可以呼叫之後[CreateThread](#createthread)成功傳回。  
+### <a name="remarks"></a>Remarks  
+ It can only be called after [CreateThread](#createthread) successfully returns.  
   
-##  <a name="suspendthread"></a>CWinThread::SuspendThread  
- 遞增目前執行緒的暫停計數。  
+##  <a name="suspendthread"></a>  CWinThread::SuspendThread  
+ Increments the current thread's suspend count.  
   
 ```  
 DWORD SuspendThread();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 執行緒的先前暫停計數，如果登錄成功。`0xFFFFFFFF`否則。  
+### <a name="return-value"></a>Return Value  
+ The thread's previous suspend count if successful; `0xFFFFFFFF` otherwise.  
   
-### <a name="remarks"></a>備註  
- 如果任何執行緒的暫停計數高於零，則不會執行該執行緒。 執行緒可以繼續呼叫[ResumeThread](#resumethread)成員函式。  
+### <a name="remarks"></a>Remarks  
+ If any thread has a suspend count above zero, that thread does not execute. The thread can be resumed by calling the [ResumeThread](#resumethread) member function.  
   
-## <a name="see-also"></a>另請參閱  
- [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CWinApp 類別](../../mfc/reference/cwinapp-class.md)   
- [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWinApp Class](../../mfc/reference/cwinapp-class.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CMFCBaseVisualManager 類別 |Microsoft 文件"
+title: CMFCBaseVisualManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,9 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ~CMFCBaseVisualManager destructor
-- CMFCBaseVisualManager class, destructor
-- CMFCBaseVisualManager class
+- CMFCBaseVisualManager [MFC], CMFCBaseVisualManager
+- CMFCBaseVisualManager [MFC], DrawCheckBox
+- CMFCBaseVisualManager [MFC], DrawComboBorder
+- CMFCBaseVisualManager [MFC], DrawComboDropButton
+- CMFCBaseVisualManager [MFC], DrawPushButton
+- CMFCBaseVisualManager [MFC], DrawRadioButton
+- CMFCBaseVisualManager [MFC], DrawStatusBarProgress
+- CMFCBaseVisualManager [MFC], FillReBarPane
+- CMFCBaseVisualManager [MFC], GetStandardWindowsTheme
+- CMFCBaseVisualManager [MFC], CleanUpThemes
+- CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
 caps.latest.revision: 24
 author: mikeblome
@@ -47,21 +55,21 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 7c726fe71b7dcf26353fe0ce3a6b383eb5b578b9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 603a805d9206862d6893fd36b1815d1d3b6da0e1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 類別
-在衍生的視覺管理員與 Windows 佈景主題 API 層。  
+# <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager Class
+A layer between derived visual managers and the Windows Theme API.  
   
- `CMFCBaseVisualManager`如果有的話，載入 UxTheme.dll，並管理 Windows 佈景主題的 API 方法的存取。  
+ `CMFCBaseVisualManager` loads UxTheme.dll, if available, and manages access to Windows Theme API methods.  
   
- 這個類別是僅供內部使用。  
+ This class is for internal use only.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCBaseVisualManager: public CObject  
@@ -69,68 +77,68 @@ class CMFCBaseVisualManager: public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名稱|描述|  
-|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|建構並初始化 `CMFCBaseVisualManager` 物件。|  
-|`CMFCBaseVisualManager::~CMFCBaseVisualManager`|解構函式。|  
+|Name|Description|  
+|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Constructs and initializes a `CMFCBaseVisualManager` object.|  
+|`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
-  
-|||  
-|-|-|  
-|名稱|說明|  
-|[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|繪製使用目前的 Windows 佈景主題的核取方塊控制項。|  
-|[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|繪製使用目前的 Windows 佈景主題的下拉式方塊框線。|  
-|[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|繪製使用目前的 Windows 佈景主題的下拉式方塊下拉式按鈕。|  
-|[CMFCBaseVisualManager::DrawPushButton](#drawpushbutton)|繪製使用目前的 Windows 佈景主題的按鈕。|  
-|[CMFCBaseVisualManager::DrawRadioButton](#drawradiobutton)|使用目前的 Windows 佈景主題繪製選項按鈕控制項。|  
-|[CMFCBaseVisualManager::DrawStatusBarProgress](#drawstatusbarprogress)|狀態列控制項上繪製一個進度列 ( [CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)) 使用目前的 Windows 佈景主題。|  
-|[CMFCBaseVisualManager::FillReBarPane](#fillrebarpane)|使用目前的 Windows 佈景主題，填滿 rebar 控制項的背景。|  
-|[CMFCBaseVisualManager::GetStandardWindowsTheme](#getstandardwindowstheme)|取得目前的 Windows 佈景主題。|  
-  
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|呼叫`CloseThemeData`中取得的所有控制代碼`UpdateSystemColors`。|  
-|[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|呼叫`OpenThemeData`來取得繪製各種控制項的控制代碼︰ windows、 工具列、 按鈕等等。|  
+|Name|Description|  
+|[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|Draws a check box control by using the current Windows theme.|  
+|[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|Draws a combo box border using the current Windows theme.|  
+|[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|Draws a combo box drop-down button using the current Windows theme.|  
+|[CMFCBaseVisualManager::DrawPushButton](#drawpushbutton)|Draws a push button using the current Windows theme.|  
+|[CMFCBaseVisualManager::DrawRadioButton](#drawradiobutton)|Draws a radio button control by using the current Windows theme.|  
+|[CMFCBaseVisualManager::DrawStatusBarProgress](#drawstatusbarprogress)|Draws a progress bar on a status bar control ( [CMFCStatusBar Class](../../mfc/reference/cmfcstatusbar-class.md)) using the current Windows theme.|  
+|[CMFCBaseVisualManager::FillReBarPane](#fillrebarpane)|Fills the background of the rebar control by using the current Windows theme.|  
+|[CMFCBaseVisualManager::GetStandardWindowsTheme](#getstandardwindowstheme)|Gets the current Windows theme.|  
   
-## <a name="remarks"></a>備註  
- 沒有直接執行個體化這個類別的物件。  
+### <a name="protected-methods"></a>Protected Methods  
   
- 因為它是所有的視覺管理員的基底類別，您可以直接呼叫[CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance)取得的指標給目前視覺管理員，並存取的方法`CMFCBaseVisualManager`使用該指標。 不過，如果您有使用目前的 Windows 佈景主題來顯示控制項，最好是使用`CMFCVisualManagerWindows`介面。  
+|||  
+|-|-|  
+|Name|Description|  
+|[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Calls `CloseThemeData` for all handles obtained in `UpdateSystemColors`.|  
+|[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Calls `OpenThemeData` to obtain handles for drawing various controls: windows, toolbars, buttons, and so on.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="remarks"></a>Remarks  
+ You do not have to instantiate objects of this class directly.  
+  
+ Because it is a base class for all visual managers, you can just call [CMFCVisualManager::GetInstance](../../mfc/reference/cmfcvisualmanager-class.md#getinstance), obtain a pointer to the current Visual Manager, and access the methods for `CMFCBaseVisualManager` using that pointer. However, if you have to display a control by using the current Windows theme, it is better to use the `CMFCVisualManagerWindows` interface.  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxvisualmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxvisualmanager.h  
   
-##  <a name="cleanupthemes"></a>CMFCBaseVisualManager::CleanUpThemes  
- 呼叫`CloseThemeData`中取得的所有控制代碼`UpdateSystemColors`。  
+##  <a name="cleanupthemes"></a>  CMFCBaseVisualManager::CleanUpThemes  
+ Calls `CloseThemeData` for all handles obtained in `UpdateSystemColors`.  
   
 ```  
 void CleanUpThemes();
 ```  
   
-### <a name="remarks"></a>備註  
- 僅供內部使用。  
+### <a name="remarks"></a>Remarks  
+ For internal use only.  
   
-##  <a name="cmfcbasevisualmanager"></a>CMFCBaseVisualManager::CMFCBaseVisualManager  
- 建構並初始化 `CMFCBaseVisualManager` 物件。  
+##  <a name="cmfcbasevisualmanager"></a>  CMFCBaseVisualManager::CMFCBaseVisualManager  
+ Constructs and initializes a `CMFCBaseVisualManager` object.  
   
 ```  
 CMFCBaseVisualManager();
 ```  
   
-##  <a name="drawcheckbox"></a>CMFCBaseVisualManager::DrawCheckBox  
- 繪製使用目前的 Windows 佈景主題的核取方塊控制項。  
+##  <a name="drawcheckbox"></a>  CMFCBaseVisualManager::DrawCheckBox  
+ Draws a check box control by using the current Windows theme.  
   
 ```  
 virtual BOOL DrawCheckBox(
@@ -144,41 +152,41 @@ virtual BOOL DrawCheckBox(
 );
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標  
+ A pointer to a device context  
   
  [in] `rect`  
- 核取方塊，這個周框。  
+ The bounding rectangle of the check box.  
   
  [in] `bHighlighted`  
- 指定核取方塊會反白顯示。  
+ Specifies whether the check box is highlighted.  
   
  [in] `nState`  
- 0 已檢查的標準，如未選取，1  
+ 0 for unchecked, 1 for checked normal,  
   
- 適用於混合的標準&2;。  
+ 2 for mixed normal.  
   
  [in] `bEnabled`  
- 指定是否要啟用此核取方塊。  
+ Specifies whether the check box is enabled.  
   
  [in] `bPressed`  
- 指定是否要按下核取方塊。  
+ Specifies whether the check box is pressed.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用佈景主題的 API。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if Theme API is enabled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 值`nState`對應至下列的核取方塊樣式。  
+### <a name="remarks"></a>Remarks  
+ The values of `nState` correspond to the following check box styles.  
   
-|nState|核取方塊樣式|  
+|nState|Check box style|  
 |------------|---------------------|  
 |0|CBS_UNCHECKEDNORMAL|  
 |1|CBS_CHECKEDNORMAL|  
 |2|CBS_MIXEDNORMAL|  
   
-##  <a name="drawcomboborder"></a>CMFCBaseVisualManager::DrawComboBorder  
- 繪製使用目前的 Windows 佈景主題的下拉式方塊框線。  
+##  <a name="drawcomboborder"></a>  CMFCBaseVisualManager::DrawComboBorder  
+ Draws the combo box border using the current Windows theme.  
   
 ```  
 virtual BOOL DrawComboBorder(
@@ -189,27 +197,27 @@ virtual BOOL DrawComboBorder(
     BOOL bIsHighlighted);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
  [in] `rect`  
- 下拉式方塊框的週框。  
+ Bounding rectangle of the combo box border.  
   
  [in] `bDisabled`  
- 指定是否要停用下拉式方塊框線。  
+ Specifies whether the combo box border is disabled.  
   
  [in] `bIsDropped`  
- 指定是否要卸除的下拉式方塊的框線。  
+ Specifies whether the combo box border is dropped down.  
   
  [in] `bIsHighlighted`  
- 指定下拉式方塊框線會反白顯示。  
+ Specifies whether the combo box border is highlighted.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用佈景主題的 API。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if Theme API is enabled; otherwise `FALSE`.  
   
-##  <a name="drawcombodropbutton"></a>CMFCBaseVisualManager::DrawComboDropButton  
- 繪製使用目前的 Windows 佈景主題的下拉式方塊下拉式按鈕。  
+##  <a name="drawcombodropbutton"></a>  CMFCBaseVisualManager::DrawComboDropButton  
+ Draws a combo box drop-down button using the current Windows theme.  
   
 ```  
 virtual BOOL DrawComboDropButton(
@@ -220,21 +228,21 @@ virtual BOOL DrawComboDropButton(
     BOOL bIsHighlighted);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pDC`|裝置內容的指標。|  
-|[in] `rect`|下拉式方塊下拉式按鈕，這個周框。|  
-|[in] `bDisabled`|指定是否要停用下拉式方塊下拉式按鈕。|  
-|[in] `bIsDropped`|指定是否要卸除下拉式方塊下拉式按鈕。|  
-|[in] `bIsHighlighted`|指定下拉式方塊下拉式按鈕會反白顯示。|  
+|[in] `pDC`|A pointer to a device context.|  
+|[in] `rect`|The bounding rectangle of the combo box drop-down button.|  
+|[in] `bDisabled`|Specifies whether the combo box drop-down button is disabled.|  
+|[in] `bIsDropped`|Specifies whether the combo box drop-down button is dropped down.|  
+|[in] `bIsHighlighted`|Specifies whether the combo box drop-down button is highlighted.|  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用佈景主題的 API。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if Theme API is enabled; otherwise `FALSE`.  
   
-##  <a name="drawpushbutton"></a>CMFCBaseVisualManager::DrawPushButton  
- 繪製使用目前的 Windows 佈景主題的按鈕。  
+##  <a name="drawpushbutton"></a>  CMFCBaseVisualManager::DrawPushButton  
+ Draws a push button using the current Windows theme.  
   
 ```  
 virtual BOOL DrawPushButton(
@@ -244,24 +252,24 @@ virtual BOOL DrawPushButton(
     UINT uiState);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
  [in] `rect`  
- [推送] 按鈕，這個周框。  
+ The bounding rectangle of the push button.  
   
  [in] `pButton`  
- 指標[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)物件來繪製。  
+ A pointer to the [CMFCButton Class](../../mfc/reference/cmfcbutton-class.md) object to draw.  
   
  [in] `uiState`  
- 忽略。 狀態取自`pButton`。  
+ Ignored. The state is taken from `pButton`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用佈景主題的 API。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if Theme API is enabled; otherwise `FALSE`.  
   
-##  <a name="drawradiobutton"></a>CMFCBaseVisualManager::DrawRadioButton  
- 使用目前的 Windows 佈景主題繪製選項按鈕控制項。  
+##  <a name="drawradiobutton"></a>  CMFCBaseVisualManager::DrawRadioButton  
+ Draws a radio button control by using the current Windows theme.  
   
 ```  
 virtual BOOL DrawRadioButton(
@@ -273,30 +281,30 @@ virtual BOOL DrawRadioButton(
     BOOL bPressed);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
  [in] `rect`  
- 選項按鈕，這個周框。  
+ The bounding rectangle of the radio button.  
   
  [in] `bHighlighted`  
- 指定的選項按鈕會反白顯示。  
+ Specifies whether the radio button is highlighted.  
   
  [in] `bChecked`  
- 指定是否要檢查的選項按鈕。  
+ Specifies whether the radio button is checked.  
   
  [in] `bEnabled`  
- 指定是否要啟用的選項按鈕。  
+ Specifies whether the radio button is enabled.  
   
  [in] `bPressed`  
- 指定是否要按下的選項按鈕。  
+ Specifies whether the radio button is pressed.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用佈景主題的 API。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if Theme API is enabled; otherwise `FALSE`.  
   
-##  <a name="drawstatusbarprogress"></a>CMFCBaseVisualManager::DrawStatusBarProgress  
- 狀態列控制項上繪製進度列 ( [CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)) 使用目前的 Windows 佈景主題。  
+##  <a name="drawstatusbarprogress"></a>  CMFCBaseVisualManager::DrawStatusBarProgress  
+ Draws progress bar on status bar control ( [CMFCStatusBar Class](../../mfc/reference/cmfcstatusbar-class.md)) using the current Windows theme.  
   
 ```  
 virtual BOOL DrawStatusBarProgress(
@@ -311,39 +319,39 @@ virtual BOOL DrawStatusBarProgress(
     BOOL bProgressText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
  [in] `pStatusBar`  
- 狀態列指標。 這個值會被忽略。  
+ A pointer to status bar. This value is ignored.  
   
  [in] `rectProgress`  
- 進度列中的周框矩形`pDC`座標。  
+ The bounding rectangle of the progress bar in `pDC` coordinates.  
   
  [in] `nProgressTotal`  
- 整體進度值。  
+ The total progress value.  
   
  [in] `nProgressCurr`  
- 目前的進度值。  
+ The current progress value.  
   
  [in] `clrBar`  
- 開始色彩。 `CMFCBaseVisualManager`會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。  
+ The start color. `CMFCBaseVisualManager` ignores this. Derived classes can use it for color gradients.  
   
  [in] `clrProgressBarDest`  
- 結束色彩。 `CMFCBaseVisualManager`會忽略這種情況。 在衍生的類別可以使用它的色彩漸層。  
+ The end color. `CMFCBaseVisualManager` ignores this. Derived classes can use it for color gradients.  
   
  [in] `clrProgressText`  
- 進度的文字色彩。 `CMFCBaseVisualManager`會忽略這種情況。 所定義的文字色彩`afxGlobalData.clrBtnText`。  
+ Progress text color. `CMFCBaseVisualManager` ignores this. The text color is defined by `afxGlobalData.clrBtnText`.  
   
  [in] `bProgressText`  
- 指定是否要顯示進度的文字。  
+ Specifies whether to display progress text.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用佈景主題的 API。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if Theme API is enabled; otherwise `FALSE`.  
   
-##  <a name="fillrebarpane"></a>CMFCBaseVisualManager::FillReBarPane  
- 使用目前的 Windows 佈景主題，填滿 rebar 控制項的背景。  
+##  <a name="fillrebarpane"></a>  CMFCBaseVisualManager::FillReBarPane  
+ Fills the background of the rebar control by using the current Windows theme.  
   
 ```  
 virtual void FillReBarPane(
@@ -352,50 +360,50 @@ virtual void FillReBarPane(
     CRect rectClient);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
  [in] `pBar`  
- 應該繪製其背景窗格指標。  
+ A pointer to a pane whose background should be drawn.  
   
  [in] `rectClient`  
- 要填滿區域的周框矩形。  
+ The bounding rectangle of the area to be filled.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用佈景主題的 API。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if Theme API is enabled; otherwise `FALSE`.  
   
-##  <a name="getstandardwindowstheme"></a>CMFCBaseVisualManager::GetStandardWindowsTheme  
- 取得目前的 Windows 佈景主題。  
+##  <a name="getstandardwindowstheme"></a>  CMFCBaseVisualManager::GetStandardWindowsTheme  
+ Gets the current Windows theme.  
   
 ```  
 virtual WinXpTheme GetStandardWindowsTheme();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前選取的 Windows 佈景主題色彩。 可以是下列的列舉值之一︰  
+### <a name="return-value"></a>Return Value  
+ The currently selected Windows Theme color. Can be one of the following enumerated values:  
   
-- `WinXpTheme_None`-沒有啟用無佈景主題。  
+- `WinXpTheme_None` - there is no theme enabled.  
   
-- `WinXpTheme_NonStandard`-選取非標準的佈景主題 （亦即已選取的佈景主題，但無從以下清單）。  
+- `WinXpTheme_NonStandard` - non standard theme is selected (meaning a theme is selected, but none from the list below).  
   
-- `WinXpTheme_Blue`-藍色佈景主題 (Luna)。  
+- `WinXpTheme_Blue` - blue theme (Luna).  
   
-- `WinXpTheme_Olive`-黃褐色佈景主題。  
+- `WinXpTheme_Olive` - olive theme.  
   
-- `WinXpTheme_Silver`-銀色佈景主題。  
+- `WinXpTheme_Silver` - silver theme.  
   
-##  <a name="updatesystemcolors"></a>CMFCBaseVisualManager::UpdateSystemColors  
- 呼叫`OpenThemeData`來取得繪製各種控制項的控制代碼︰ windows、 工具列、 按鈕等等。  
+##  <a name="updatesystemcolors"></a>  CMFCBaseVisualManager::UpdateSystemColors  
+ Calls `OpenThemeData` to obtain handles for drawing various controls: windows, toolbars, buttons, and so on.  
   
 ```  
 void UpdateSystemColors();
 ```  
   
-### <a name="remarks"></a>備註  
- 僅供內部使用。  
+### <a name="remarks"></a>Remarks  
+ For internal use only.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,50 +1,69 @@
 ---
-title: "如何：從 MFC 應用程式載入功能區應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "功能區資源, 載入"
+title: 'How to: Load a Ribbon Resource from an MFC Application | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 如何：從 MFC 應用程式載入功能區應用程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e45f63ccf2af52a6e41b3f46e4a04b43101e99b6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-若要使用功能區資源在應用程式中，修改應用程式載入功能區資源。  
+---
+# <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>How to: Load a Ribbon Resource from an MFC Application
+To use the ribbon resource in your application, modify the application to load the ribbon resource.  
   
-### 載入功能區資源  
+### <a name="to-load-a-ribbon-resource"></a>To load a ribbon resource  
   
-1.  宣告 `Ribbon Control` 物件，在 `CMainFrame` 類別。  
+1.  Declare the `Ribbon Control` object in the `CMainFrame` class.  
   
-    ```  
+ ```  
     CMFCRibbonBar m_wndRibbonBar;   
-    ```  
+ ```  
   
-2.  在 `CMainFrame::OnCreate`中，建立並初始化功能區控制項。  
+2.  In `CMainFrame::OnCreate`, create and initialize the Ribbon Control.  
   
-    ```  
+ ```  
     if (!m_wndRibbonBar.Create (this))  
-    {  
-        return -1;  
-    }  
-  
+ {  
+    return -1;  
+ }  
+ 
     if (!m_wndRibbonBar.LoadFromResource(IDR_RIBBON))  
-    {  
-        return -1;  
-    }  
-    ```  
+ {  
+    return -1;  
+ }  
+ ```  
   
-## 請參閱  
- [功能區設計工具 \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

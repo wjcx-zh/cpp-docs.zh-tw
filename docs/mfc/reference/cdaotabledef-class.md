@@ -1,5 +1,5 @@
 ---
-title: "CDaoTableDef 類別 |Microsoft 文件"
+title: CDaoTableDef Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,11 +47,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- database classes [C++], DAO
-- tabledefs [C++]
-- CDaoTableDef class
-- database tables [C++], attached table definition
-- database tables [C++], base table definition
+- CDaoTableDef [MFC], CDaoTableDef
+- CDaoTableDef [MFC], Append
+- CDaoTableDef [MFC], CanUpdate
+- CDaoTableDef [MFC], Close
+- CDaoTableDef [MFC], Create
+- CDaoTableDef [MFC], CreateField
+- CDaoTableDef [MFC], CreateIndex
+- CDaoTableDef [MFC], DeleteField
+- CDaoTableDef [MFC], DeleteIndex
+- CDaoTableDef [MFC], GetAttributes
+- CDaoTableDef [MFC], GetConnect
+- CDaoTableDef [MFC], GetDateCreated
+- CDaoTableDef [MFC], GetDateLastUpdated
+- CDaoTableDef [MFC], GetFieldCount
+- CDaoTableDef [MFC], GetFieldInfo
+- CDaoTableDef [MFC], GetIndexCount
+- CDaoTableDef [MFC], GetIndexInfo
+- CDaoTableDef [MFC], GetName
+- CDaoTableDef [MFC], GetRecordCount
+- CDaoTableDef [MFC], GetSourceTableName
+- CDaoTableDef [MFC], GetValidationRule
+- CDaoTableDef [MFC], GetValidationText
+- CDaoTableDef [MFC], IsOpen
+- CDaoTableDef [MFC], Open
+- CDaoTableDef [MFC], RefreshLink
+- CDaoTableDef [MFC], SetAttributes
+- CDaoTableDef [MFC], SetConnect
+- CDaoTableDef [MFC], SetName
+- CDaoTableDef [MFC], SetSourceTableName
+- CDaoTableDef [MFC], SetValidationRule
+- CDaoTableDef [MFC], SetValidationText
+- CDaoTableDef [MFC], m_pDAOTableDef
+- CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 caps.latest.revision: 24
 author: mikeblome
@@ -71,17 +99,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 51a93f7facdebb748ec819b731456066dfeaf55d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 15740ba39184fc6838fc460aa24c849e367c078e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaotabledef-class"></a>CDaoTableDef 類別
-表示儲存的基底資料表或附加資料表定義。  
+# <a name="cdaotabledef-class"></a>CDaoTableDef Class
+Represents the stored definition of a base table or an attached table.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDaoTableDef : public CObject  
@@ -89,161 +117,161 @@ class CDaoTableDef : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|建構**CDaoTableDef**物件。|  
+|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Constructs a **CDaoTableDef** object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoTableDef::Append](#append)|將新的資料表加入至資料庫。|  
-|[CDaoTableDef::CanUpdate](#canupdate)|傳回非零，如果可以更新資料表 （您可以修改欄位或資料表屬性的定義）。|  
-|[CDaoTableDef::Close](#close)|關閉開啟的 tabledef。|  
-|[CDaoTableDef::Create](#create)|建立可加入到資料庫時使用這些資料表[附加](#append)。|  
-|[CDaoTableDef::CreateField](#createfield)|呼叫以建立資料表的欄位。|  
-|[CDaoTableDef::CreateIndex](#createindex)|呼叫以建立資料表的索引。|  
-|[CDaoTableDef::DeleteField](#deletefield)|呼叫以從資料表中刪除欄位。|  
-|[CDaoTableDef::DeleteIndex](#deleteindex)|呼叫以從資料表中刪除索引。|  
-|[CDaoTableDef::GetAttributes](#getattributes)|傳回值，這個值表示的一或多個特性`CDaoTableDef`物件。|  
-|[CDaoTableDef::GetConnect](#getconnect)|傳回值，以提供來源資料表的相關資訊。|  
-|[CDaoTableDef::GetDateCreated](#getdatecreated)|傳回基礎基底資料表的日期和時間`CDaoTableDef`建立物件。|  
-|[CDaoTableDef::GetDateLastUpdated](#getdatelastupdated)|傳回日期和時間的基底資料表的設計所做的最新變更。|  
-|[CDaoTableDef::GetFieldCount](#getfieldcount)|傳回值，表示資料表中的欄位數目。|  
-|[CDaoTableDef::GetFieldInfo](#getfieldinfo)|傳回資料表中的特定類型的欄位資訊。|  
-|[CDaoTableDef::GetIndexCount](#getindexcount)|傳回資料表的索引數目。|  
-|[CDaoTableDef::GetIndexInfo](#getindexinfo)|傳回特定類型的資料表索引的相關資訊。|  
-|[CDaoTableDef::GetName](#getname)|傳回使用者定義資料表的名稱。|  
-|[CDaoTableDef::GetRecordCount](#getrecordcount)|傳回資料表中的記錄數目。|  
-|[CDaoTableDef::GetSourceTableName](#getsourcetablename)|傳回值，指定來源資料庫中的連結資料表的名稱。|  
-|[CDaoTableDef::GetValidationRule](#getvalidationrule)|傳回值，會驗證欄位中的資料，因為它已變更或加入至資料表。|  
-|[CDaoTableDef::GetValidationText](#getvalidationtext)|傳回值，指定如果欄位物件的值不符合指定的驗證規則，會顯示您的應用程式之訊息的文字。|  
-|[CDaoTableDef::IsOpen](#isopen)|傳回非零，如果資料表是開啟。|  
-|[CDaoTableDef::Open](#open)|開啟儲存在資料庫中現有的 tabledef 的 TableDef 的集合。|  
-|[CDaoTableDef::RefreshLink](#refreshlink)|更新附加資料表的連接資訊。|  
-|[CDaoTableDef::SetAttributes](#setattributes)|設定值，這個值表示的一或多個特性`CDaoTableDef`物件。|  
-|[CDaoTableDef::SetConnect](#setconnect)|設定值，這個值會提供來源資料表的相關資訊。|  
-|[CDaoTableDef::SetName](#setname)|設定資料表的名稱。|  
-|[CDaoTableDef::SetSourceTableName](#setsourcetablename)|設定值，指定來源資料庫中的附加資料表的名稱。|  
-|[CDaoTableDef::SetValidationRule](#setvalidationrule)|設定值，會驗證欄位中的資料，因為它已變更或加入至資料表。|  
-|[CDaoTableDef::SetValidationText](#setvalidationtext)|設定值，指定如果欄位物件的值不符合指定的驗證規則，會顯示您的應用程式之訊息的文字。|  
+|[CDaoTableDef::Append](#append)|Adds a new table to the database.|  
+|[CDaoTableDef::CanUpdate](#canupdate)|Returns nonzero if the table can be updated (you can modify the definition of fields or the table properties).|  
+|[CDaoTableDef::Close](#close)|Closes an open tabledef.|  
+|[CDaoTableDef::Create](#create)|Creates a table which can be added to the database using [Append](#append).|  
+|[CDaoTableDef::CreateField](#createfield)|Called to create a field for a table.|  
+|[CDaoTableDef::CreateIndex](#createindex)|Called to create an index for a table.|  
+|[CDaoTableDef::DeleteField](#deletefield)|Called to delete a field from a table.|  
+|[CDaoTableDef::DeleteIndex](#deleteindex)|Called to delete an index from a table.|  
+|[CDaoTableDef::GetAttributes](#getattributes)|Returns a value that indicates one or more characteristics of a `CDaoTableDef` object.|  
+|[CDaoTableDef::GetConnect](#getconnect)|Returns a value that provides information about the source of a table.|  
+|[CDaoTableDef::GetDateCreated](#getdatecreated)|Returns the date and time the base table underlying a `CDaoTableDef` object was created.|  
+|[CDaoTableDef::GetDateLastUpdated](#getdatelastupdated)|Returns the date and time of the most recent change made to the design of the base table.|  
+|[CDaoTableDef::GetFieldCount](#getfieldcount)|Returns a value that represents the number of fields in the table.|  
+|[CDaoTableDef::GetFieldInfo](#getfieldinfo)|Returns specific kinds of information about the fields in the table.|  
+|[CDaoTableDef::GetIndexCount](#getindexcount)|Returns the number of indexes for the table.|  
+|[CDaoTableDef::GetIndexInfo](#getindexinfo)|Returns specific kinds of information about the indexes for the table.|  
+|[CDaoTableDef::GetName](#getname)|Returns the user-defined name of the table.|  
+|[CDaoTableDef::GetRecordCount](#getrecordcount)|Returns the number of records in the table.|  
+|[CDaoTableDef::GetSourceTableName](#getsourcetablename)|Returns a value that specifies the name of the attached table in the source database.|  
+|[CDaoTableDef::GetValidationRule](#getvalidationrule)|Returns a value that validates the data in a field as it is changed or added to a table.|  
+|[CDaoTableDef::GetValidationText](#getvalidationtext)|Returns a value that specifies the text of the message that your application displays if the value of a Field object does not satisfy the specified validation rule.|  
+|[CDaoTableDef::IsOpen](#isopen)|Returns nonzero if the table is open.|  
+|[CDaoTableDef::Open](#open)|Opens an existing tabledef stored in the database's TableDef's collection.|  
+|[CDaoTableDef::RefreshLink](#refreshlink)|Updates the connection information for an attached table.|  
+|[CDaoTableDef::SetAttributes](#setattributes)|Sets a value that indicates one or more characteristics of a `CDaoTableDef` object.|  
+|[CDaoTableDef::SetConnect](#setconnect)|Sets a value that provides information about the source of a table.|  
+|[CDaoTableDef::SetName](#setname)|Sets the name of the table.|  
+|[CDaoTableDef::SetSourceTableName](#setsourcetablename)|Sets a value that specifies the name of an attached table in the source database.|  
+|[CDaoTableDef::SetValidationRule](#setvalidationrule)|Sets a value that validates the data in a field as it is changed or added to a table.|  
+|[CDaoTableDef::SetValidationText](#setvalidationtext)|Sets a value that specifies the text of the message that your application displays if the value of a Field object does not satisfy the specified validation rule.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoTableDef::m_pDAOTableDef](#m_pdaotabledef)|基礎 tabledef 物件 DAO 介面的指標。|  
-|[CDaoTableDef::m_pDatabase](#m_pdatabase)|這份資料表的來源資料庫。|  
+|[CDaoTableDef::m_pDAOTableDef](#m_pdaotabledef)|A pointer to the DAO interface underlying the tabledef object.|  
+|[CDaoTableDef::m_pDatabase](#m_pdatabase)|Source database for this table.|  
   
-## <a name="remarks"></a>備註  
- 每個 DAO 資料庫物件會維護一個稱為 TableDefs，其中包含所有已儲存的 DAO tabledef 物件的集合。  
+## <a name="remarks"></a>Remarks  
+ Each DAO database object maintains a collection, called TableDefs, that contains all saved DAO tabledef objects.  
   
- 您可以操作資料表定義，使用`CDaoTableDef`物件。 例如，您可以：  
+ You manipulate a table definition using a `CDaoTableDef` object. For example, you can:  
   
--   檢查資料庫中的任何本機、 附加，或外部資料表的欄位和索引結構。  
+-   Examine the field and index structure of any local, attached, or external table in a database.  
   
--   呼叫`SetConnect`和`SetSourceTableName`成員函式，以附加的資料表及使用`RefreshLink`成員函式來更新連接到附加的資料表。  
+-   Call the `SetConnect` and `SetSourceTableName` member functions for attached tables, and use the `RefreshLink` member function to update connections to attached tables.  
   
--   呼叫`CanUpdate`成員函式來判斷是否您可以編輯資料表中的欄位定義。  
+-   Call the `CanUpdate` member function to determine if you can edit field definitions in the table.  
   
--   取得或設定使用的驗證條件`GetValidationRule`和`SetValidationRule`，而`GetValidationText`和`SetValidationText`成員函式。  
+-   Get or set validation conditions using the `GetValidationRule` and `SetValidationRule`, and the `GetValidationText` and `SetValidationText` member functions.  
   
--   使用**開啟**成員函式來建立資料表類型、 動態集或快照集類型`CDaoRecordset`物件。  
+-   Use the **Open** member function to create a table-, dynaset-, or snapshot-type `CDaoRecordset` object.  
   
     > [!NOTE]
-    >  DAO 資料庫類別是不同的基礎上開放式資料庫連接 (ODBC) 之 MFC 資料庫類別。 所有的 DAO 資料庫類別名稱有"CDao"前置詞。 您仍然可以使用 DAO 類別; 存取 ODBC 資料來源因為它們是 Microsoft Jet 資料庫引擎的特定 DAO 類別通常會提供更好的功能。  
+    >  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes; the DAO classes generally offer superior capabilities because they are specific to the Microsoft Jet database engine.  
   
-### <a name="to-use-tabledef-objects-either-to-work-with-an-existing-table-or-to-create-a-new-table"></a>若要使用現有的資料表，或建立新的資料表使用 tabledef 物件  
+### <a name="to-use-tabledef-objects-either-to-work-with-an-existing-table-or-to-create-a-new-table"></a>To use tabledef objects either to work with an existing table or to create a new table  
   
-1.  在所有情況下，第一次，以建構`CDaoTableDef`物件，提供的指標[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)資料表所屬的物件。  
+1.  In all cases, first construct a `CDaoTableDef` object, supplying a pointer to a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object to which the table belongs.  
   
-2.  然後，執行下列命令，視您想要︰  
+2.  Then do the following, depending on what you want:  
   
-    -   若要使用現有已儲存的資料表，呼叫 tabledef 物件[開啟](#open)成員函式，提供儲存資料表的名稱。  
+    -   To use an existing saved table, call the tabledef object's [Open](#open) member function, supplying the name of the saved table.  
   
-    -   若要建立新的資料表，請呼叫 tabledef 物件的[建立](#create)成員函式，提供資料表的名稱。 呼叫[CreateField](#createfield)和[CreateIndex](#createindex)將欄位和索引加入至資料表。  
+    -   To create a new table, call the tabledef object's [Create](#create) member function, supplying the name of the table. Call [CreateField](#createfield) and [CreateIndex](#createindex) to add fields and indexes to the table.  
   
-    -   呼叫[附加](#append)資料表的儲存方式附加至資料庫的 TableDefs 集合。 **建立**tabledef 放在開啟狀態，因此在呼叫**建立**沒有呼叫**開啟**。  
+    -   Call [Append](#append) to save the table by appending it to the database's TableDefs collection. **Create** puts the tabledef into an open state, so after calling **Create** you do not call **Open**.  
   
         > [!TIP]
-        >  若要建立已儲存的資料表最簡單的方式是建立它們，並將它們儲存在使用 Microsoft Access 資料庫中。 然後您可以開啟，並在您的 MFC 程式碼中使用它們。  
+        >  The easiest way to create saved tables is to create them and store them in your database using Microsoft Access. Then you can open and use them in your MFC code.  
   
- 若要使用您已經開啟，或建立 tabledef 物件，建立並開啟`CDaoRecordset`物件，指定的名稱與 tabledef **dbOpenTable**值`nOpenType`參數。  
+ To use the tabledef object you have opened or created, create and open a `CDaoRecordset` object, specifying the name of the tabledef with a **dbOpenTable** value in the `nOpenType` parameter.  
   
- 若要建立使用 tabledef 物件`CDaoRecordset`物件，您通常建立或開啟 tabledef （如上所述），然後建構資料錄集物件，將指標傳遞至 tabledef 物件，當您呼叫[cdaorecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open)。 您傳遞 tabledef 必須處於開啟狀態。 如需詳細資訊，請參閱類別[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)。  
+ To use a tabledef object to create a `CDaoRecordset` object, you typically create or open a tabledef as described above, then construct a recordset object, passing a pointer to your tabledef object when you call [CDaoRecordset::Open](../../mfc/reference/cdaorecordset-class.md#open). The tabledef you pass must be in an open state. For more information, see class [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).  
   
- 當您完成使用 tabledef 物件時，呼叫其[關閉](../../mfc/reference/cdaorecordset-class.md#close)成員函式，然後終結 tabledef 物件。  
+ When you finish using a tabledef object, call its [Close](../../mfc/reference/cdaorecordset-class.md#close) member function; then destroy the tabledef object.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDaoTableDef`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="append"></a>CDaoTableDef::Append  
- 呼叫此成員函式之後您呼叫,[建立](#create)建立新的 tabledef 物件 tabledef 儲存在資料庫中。  
+##  <a name="append"></a>  CDaoTableDef::Append  
+ Call this member function after you call [Create](#create) to create a new tabledef object to save the tabledef in the database.  
   
 ```  
 virtual void Append();
 ```  
   
-### <a name="remarks"></a>備註  
- 此函式會將物件附加至資料庫的 TableDefs 集合。 您可以使用 tabledef 作為暫存物件時定義未附加，但如果您想要儲存並使用它，您必須呼叫**附加**。  
+### <a name="remarks"></a>Remarks  
+ The function appends the object to the database's TableDefs collection. You can use the tabledef as a temporary object while defining it by not appending it, but if you want to save and use it, you must call **Append**.  
   
 > [!NOTE]
->  如果您嘗試附加未命名的 tabledef （包含 null 或空字串），MFC 會擲回例外狀況。  
+>  If you attempt to append an unnamed tabledef (containing a null or empty string), MFC throws an exception.  
   
- 如需相關資訊，請參閱主題 < 附加方法 >，DAO [說明] 中。  
+ For related information, see the topic "Append Method" in DAO Help.  
   
-##  <a name="canupdate"></a>CDaoTableDef::CanUpdate  
- 呼叫此成員函式，以判斷是否將基礎資料表的定義`CDaoTableDef`物件可以變更。  
+##  <a name="canupdate"></a>  CDaoTableDef::CanUpdate  
+ Call this member function to determine whether the definition of the table underlying a `CDaoTableDef` object can be changed.  
   
 ```  
 BOOL CanUpdate();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果可以修改資料表結構 （結構描述） 則為非零 （新增或刪除欄位和索引），否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the table structure (schema) can be modified (add or delete fields and indexes), otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 根據預設，新建立的資料表，基礎`CDaoTableDef`物件可以更新，並附加的資料表基礎`CDaoTableDef`無法更新物件。 A`CDaoTableDef`物件可以是可更新，即使不是可更新結果的資料錄集。  
+### <a name="remarks"></a>Remarks  
+ By default, a newly created table underlying a `CDaoTableDef` object can be updated, and an attached table underlying a `CDaoTableDef` object cannot be updated. A `CDaoTableDef` object may be updatable, even if the resulting recordset is not updatable.  
   
- 相關資訊，請參閱本主題說明 DAO 中的 「 可更新屬性 」。  
+ For related information, see the topic "Updatable Property" in DAO Help.  
   
-##  <a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
- 建構**CDaoTableDef**物件。  
+##  <a name="cdaotabledef"></a>  CDaoTableDef::CDaoTableDef  
+ Constructs a **CDaoTableDef** object.  
   
 ```  
 CDaoTableDef(CDaoDatabase* pDatabase);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDatabase`  
- 指標[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件。  
+ A pointer to a [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 之後建構物件，您必須呼叫[建立](#create)或[開啟](#open)成員函式。 當您完成物件時，您必須呼叫其[關閉](#close)成員函式，並終結`CDaoTableDef`物件。  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, you must call the [Create](#create) or [Open](#open) member function. When you finish with the object, you must call its [Close](#close) member function and destroy the `CDaoTableDef` object.  
   
-##  <a name="close"></a>CDaoTableDef::Close  
- 呼叫此成員函式，以關閉及釋放 tabledef 物件。  
+##  <a name="close"></a>  CDaoTableDef::Close  
+ Call this member function to close and release the tabledef object.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>備註  
- 通常在呼叫**關閉**，您會刪除 tabledef 物件，如果其配置具有**新**。  
+### <a name="remarks"></a>Remarks  
+ Usually after calling **Close**, you delete the tabledef object if it was allocated with **new**.  
   
- 您可以呼叫[開啟](#open)呼叫之後，再次**關閉**。 這可讓您重複使用 tabledef 物件。  
+ You can call [Open](#open) again after calling **Close**. This lets you reuse the tabledef object.  
   
- 如需相關資訊，請參閱主題 < 關閉方法 >，DAO [說明] 中。  
+ For related information, see the topic "Close Method" in DAO Help.  
   
-##  <a name="create"></a>CDaoTableDef::Create  
- 呼叫此成員函式，建立新的儲存的資料表。  
+##  <a name="create"></a>  CDaoTableDef::Create  
+ Call this member function to create a new saved table.  
   
 ```  
 virtual void Create(
@@ -253,33 +281,33 @@ virtual void Create(
     LPCTSTR lpszConnect = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 包含的資料表名稱的字串指標。  
+ A pointer to a string containing the name of the table.  
   
  `lAttributes`  
- 值，對應至 tabledef 物件所代表之資料表的特性。 您可以使用位元 OR 結合任何下列常數︰  
+ A value corresponding to characteristics of the table represented by the tabledef object. You can use the bitwise-OR to combine any of the following constants:  
   
-|常數|描述|  
+|Constant|Description|  
 |--------------|-----------------|  
-|**dbAttachExclusive**|使用 Microsoft Jet 資料庫引擎的資料庫，表示資料表是專供開啟附加的資料表。|  
-|**dbAttachSavePWD**|使用 Microsoft Jet 資料庫引擎的資料庫，表示的使用者識別碼和密碼附加資料表會儲存連接資訊。|  
-|**dbSystemObject**|表示資料表是 Microsoft Jet 資料庫引擎所提供的系統資料表。|  
-|**dbHiddenObject**|表示資料表是由 Microsoft Jet 資料庫引擎提供隱藏的資料表。|  
+|**dbAttachExclusive**|For databases that use the Microsoft Jet database engine, indicates the table is an attached table opened for exclusive use.|  
+|**dbAttachSavePWD**|For databases that use the Microsoft Jet database engine, indicates that the user ID and password for the attached table are saved with the connection information.|  
+|**dbSystemObject**|Indicates the table is a system table provided by the Microsoft Jet database engine.|  
+|**dbHiddenObject**|Indicates the table is a hidden table provided by the Microsoft Jet database engine.|  
   
  *lpszSrcTable*  
- 包含來源資料表名稱的字串指標。 依預設，這個值會初始化為**NULL**。  
+ A pointer to a string containing the source table name. By default this value is initialized as **NULL**.  
   
  `lpszConnect`  
- 包含預設的連接字串的字串指標。 依預設，這個值會初始化為**NULL**。  
+ A pointer to a string containing the default connection string. By default this value is initialized as **NULL**.  
   
-### <a name="remarks"></a>備註  
- 一旦您擁有具名 tabledef，您就可以呼叫[附加](#append)tabledef 儲存資料庫的 TableDefs 集合中。 在呼叫**附加**、 tabledef 處於開啟狀態，以及您可用它來建立[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件。  
+### <a name="remarks"></a>Remarks  
+ Once you have named the tabledef, you can then call [Append](#append) to save the tabledef in the database's TableDefs collection. After calling **Append**, the tabledef is in an open state, and you can use it to create a [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) object.  
   
- 如需相關資訊，請參閱主題 < CreateTableDef 方法 >，DAO [說明] 中。  
+ For related information, see the topic "CreateTableDef Method" in DAO Help.  
   
-##  <a name="createfield"></a>CDaoTableDef::CreateField  
- 呼叫此成員函式可將欄位加入至資料表。  
+##  <a name="createfield"></a>  CDaoTableDef::CreateField  
+ Call this member function to add a field to the table.  
   
 ```  
 void CreateField(
@@ -291,48 +319,48 @@ void CreateField(
 void CreateField(CDaoFieldInfo& fieldinfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 指向的字串運算式，指定這個欄位的名稱。  
+ A pointer to a string expression specifying the name of this field.  
   
  `nType`  
- 值，指出欄位的資料類型。 設定可以是下列值之一︰  
+ A value indicating the data type of the field. The setting can be one of these values:  
   
-|類型|大小 (位元組)|描述|  
+|Type|Size (bytes)|Description|  
 |----------|--------------------|-----------------|  
-|**dbBoolean**|1 個位元組|BOOL|  
+|**dbBoolean**|1 byte|BOOL|  
 |**dbByte**|1|BYTE|  
 |**dbInteger**|2|int|  
 |**dbLong**|4|long|  
-|**dbCurrency**|8|貨幣 ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|  
-|**dbSingle**|4|浮動|  
+|**dbCurrency**|8|Currency ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|  
+|**dbSingle**|4|float|  
 |**dbDouble**|8|double|  
-|**dbDate**|8|日期/時間 ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
-|**dbText**|1 - 255|文字 ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
-|**dbLongBinary**|0|長的二進位檔 （OLE 物件）、 [CLongBinary](../../mfc/reference/clongbinary-class.md)或[CByteArray](../../mfc/reference/cbytearray-class.md)|  
-|**dbMemo**|0|備忘 ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
+|**dbDate**|8|Date/Time ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
+|**dbText**|1 - 255|Text ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
+|**dbLongBinary**|0|Long Binary (OLE Object), [CLongBinary](../../mfc/reference/clongbinary-class.md) or [CByteArray](../../mfc/reference/cbytearray-class.md)|  
+|**dbMemo**|0|Memo ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
   
  `lSize`  
- 值，指出最大的大小，以位元組為單位的欄位，包含文字或包含文字或數值欄位的固定的大小。 `lSize`參數已忽略所有的文字欄位。  
+ A value that indicates the maximum size, in bytes, of a field that contains text, or the fixed size of a field that contains text or numeric values. The `lSize` parameter is ignored for all but text fields.  
   
  `lAttributes`  
- 值，對應到特性的欄位，並且可以使用位元 OR 結合起來。  
+ A value corresponding to characteristics of the field and that can be combined using a bitwise-OR.  
   
-|常數|說明|  
+|Constant|Description|  
 |--------------|-----------------|  
-|**dbFixedField**|欄位大小被固定的 （數值欄位的預設值）。|  
-|**dbVariableField**|欄位大小是變數 （文字欄位）。|  
-|**dbAutoIncrField**|新記錄的欄位值會自動遞增就無法變更為唯一長整數。 僅支援 Microsoft Jet 資料庫資料表。|  
-|**dbUpdatableField**|可以變更欄位值。|  
-|**dbDescending**|欄位以遞減排序 (Z-A 或 100-0) （僅適用於索引物件的欄位集合中的欄位物件） 的順序。 如果您省略這個常數，此欄位以遞增排序 (A-Z 或 0-100) 順序 （預設值）。|  
+|**dbFixedField**|The field size is fixed (default for Numeric fields).|  
+|**dbVariableField**|The field size is variable (Text fields only).|  
+|**dbAutoIncrField**|The field value for new records is automatically incremented to a unique long integer that cannot be changed. Only supported for Microsoft Jet database tables.|  
+|**dbUpdatableField**|The field value can be changed.|  
+|**dbDescending**|The field is sorted in descending (Z - A or 100 - 0) order (applies only to a Field object in a Fields collection of an Index object). If you omit this constant, the field is sorted in ascending (A - Z or 0 - 100) order (default).|  
   
  `fieldinfo`  
- 若要參考[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。  
+ A reference to a [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure.  
   
-### <a name="remarks"></a>備註  
- A **DAOField** (OLE) 物件建立並附加至的欄位集合**DAOTableDef** (OLE) 物件。 除了它使用來檢查物件屬性中，您也可以使用`CDaoFieldInfo`建構之輸入的參數的 tabledef 中建立新的欄位。 第一個版本`CreateField`容易使用，但是如果您想進行更細微的控制，您可以使用第二個版本`CreateField`，這個方法會接受`CDaoFieldInfo`參數。  
+### <a name="remarks"></a>Remarks  
+ A **DAOField** (OLE) object is created and appended to the Fields collection of the **DAOTableDef** (OLE) object. Besides its use for examining object properties, you can also use `CDaoFieldInfo` to construct an input parameter for creating new fields in a tabledef. The first version of `CreateField` is simpler to use, but if you want finer control, you can use the second version of `CreateField`, which takes a `CDaoFieldInfo` parameter.  
   
- 如果您使用新版`CreateField`採用`CDaoFieldInfo`，您必須仔細設定參數的下列成員的每個`CDaoFieldInfo`結構︰  
+ If you use the version of `CreateField` that takes a `CDaoFieldInfo` parameter, you must carefully set each of the following members of the `CDaoFieldInfo` structure:  
   
 - **m_strName**  
   
@@ -344,173 +372,173 @@ void CreateField(CDaoFieldInfo& fieldinfo);
   
 - **m_bAllowZeroLength**  
   
- 其餘成員`CDaoFieldInfo`應該設定為**0**， **FALSE**，或空字串，視您的成員，或`CDaoException`可能會發生。  
+ The remaining members of `CDaoFieldInfo` should be set to **0**, **FALSE**, or an empty string, as appropriate for the member, or a `CDaoException` may occur.  
   
- 如需相關資訊，請參閱主題 < CreateField 方法 >，DAO [說明] 中。  
+ For related information, see the topic "CreateField Method" in DAO Help.  
   
-##  <a name="createindex"></a>CDaoTableDef::CreateIndex  
- 呼叫此函式可將索引加入資料表。  
+##  <a name="createindex"></a>  CDaoTableDef::CreateIndex  
+ Call this function to add an index to a table.  
   
 ```  
 void CreateIndex(CDaoIndexInfo& indexinfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `indexinfo`  
- 若要參考[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。  
+ A reference to a [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure.  
   
-### <a name="remarks"></a>備註  
- 索引指定資料庫資料表，以及接受重複的記錄從存取的記錄的順序。 索引也會提供能夠有效率地存取資料。  
+### <a name="remarks"></a>Remarks  
+ Indexes specify the order of records accessed from database tables and whether or not duplicate records are accepted. Indexes also provide efficient access to data.  
   
- 您沒有建立索引的資料表，但在大型、 未編製索引的資料表中，存取特定的記錄或建立資料錄集可能需要很長的時間。 相反地，建立太多的索引降低更新、 附加、 和刪除作業，因為所有的索引會自動更新。 您決定哪一個要建立的索引，請考慮這些因素。  
+ You do not have to create indexes for tables, but in large, unindexed tables, accessing a specific record or creating a recordset can take a long time. On the other hand, creating too many indexes slows down update, append, and delete operations as all indexes are automatically updated. Consider these factors as you decide which indexes to create.  
   
- 下列成員的`CDaoIndexInfo`結構必須設定︰  
+ The following members of the `CDaoIndexInfo` structure must be set:  
   
-- **m_strName**必須提供名稱。  
+- **m_strName** A name must be supplied.  
   
-- `m_pFieldInfos`陣列必須指向`CDaoIndexFieldInfo`結構。  
+- `m_pFieldInfos` Must point to an array of `CDaoIndexFieldInfo` structures.  
   
-- `m_nFields`必須指定陣列中的欄位數目`CDaoFieldInfo`結構。  
+- `m_nFields` Must specify the number of fields in the array of `CDaoFieldInfo` structures.  
   
- 剩餘的成員將會忽略的如果設定為**FALSE**。 此外， **m_lDistinctCount**索引建立期間，已忽略成員。  
+ The remaining members will be ignored if set to **FALSE**. In addition, the **m_lDistinctCount** member is ignored during creation of the index.  
   
-##  <a name="deletefield"></a>CDaoTableDef::DeleteField  
- 呼叫此成員函式，移除欄位，並使其無法存取。  
+##  <a name="deletefield"></a>  CDaoTableDef::DeleteField  
+ Call this member function to remove a field and make it inaccessible.  
   
 ```  
 void DeleteField(LPCTSTR lpszName);  
 void DeleteField(int nIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 指標是與現有欄位名稱的字串運算式。  
+ A pointer to a string expression that is the name of an existing field.  
   
  `nIndex`  
- 資料表的以零為起始的欄位集合中，查閱索引欄位的索引。  
+ The index of the field in the table's zero-based Fields collection, for lookup by index.  
   
-### <a name="remarks"></a>備註  
- 您可以使用此成員函式上不已附加至資料庫的新物件或當[CanUpdate](#canupdate)傳回非零值。  
+### <a name="remarks"></a>Remarks  
+ You can use this member function on a new object that has not been appended to the database or when [CanUpdate](#canupdate) returns nonzero.  
   
- 如需相關資訊，請參閱主題 < 刪除方法 >，DAO [說明] 中。  
+ For related information, see the topic "Delete Method" in DAO Help.  
   
-##  <a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
- 呼叫此成員函式來刪除基礎資料表中的索引。  
+##  <a name="deleteindex"></a>  CDaoTableDef::DeleteIndex  
+ Call this member function to delete an index in an underlying table.  
   
 ```  
 void DeleteIndex(LPCTSTR lpszName);  
 void DeleteIndex(int nIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 指標，是現有的索引名稱的字串運算式。  
+ A pointer to a string expression that is the name of an existing index.  
   
  `nIndex`  
- 資料庫的以零為起始 TableDefs 集合中，依索引查閱的索引物件的陣列索引。  
+ The array index of the index object in the database's zero-based TableDefs collection, for lookup by index.  
   
-### <a name="remarks"></a>備註  
- 您可以使用此成員函式上新的物件尚未附加到資料庫，或當[CanUpdate](#canupdate)傳回非零值。  
+### <a name="remarks"></a>Remarks  
+ You can use this member function on a new object that hasn't been appended to the database or when [CanUpdate](#canupdate) returns nonzero.  
   
- 如需相關資訊，請參閱主題 < 刪除方法 >，DAO [說明] 中。  
+ For related information, see the topic "Delete Method" in DAO Help.  
   
-##  <a name="getattributes"></a>CDaoTableDef::GetAttributes  
- 如`CDaoTableDef`物件，傳回值會指定所表示的資料表的特性`CDaoTableDef`物件，而且可以是這些常數的總和︰  
+##  <a name="getattributes"></a>  CDaoTableDef::GetAttributes  
+ For a `CDaoTableDef` object, the return value specifies characteristics of the table represented by the `CDaoTableDef` object and can be a sum of these constants:  
   
 ```  
 long GetAttributes();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回值，這個值表示的一或多個特性`CDaoTableDef`物件。  
+### <a name="return-value"></a>Return Value  
+ Returns a value that indicates one or more characteristics of a `CDaoTableDef` object.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-|常數|描述|  
+|Constant|Description|  
 |--------------|-----------------|  
-|**dbAttachExclusive**|使用 Microsoft Jet 資料庫引擎的資料庫，表示資料表是專供開啟附加的資料表。|  
-|**dbAttachSavePWD**|使用 Microsoft Jet 資料庫引擎的資料庫，表示的使用者識別碼和密碼附加資料表會儲存連接資訊。|  
-|**dbSystemObject**|表示資料表是 Microsoft Jet 資料庫引擎所提供的系統資料表。|  
-|**dbHiddenObject**|表示資料表是由 Microsoft Jet 資料庫引擎提供隱藏的資料表。|  
-|**dbAttachedTable**|表示資料表是從非 ODBC 資料庫，例如 Paradox 資料庫附加的資料表。|  
-|**dbAttachedODBC**|表示資料表為附加來自 ODBC 資料庫，例如 Microsoft SQL Server 資料表。|  
+|**dbAttachExclusive**|For databases that use the Microsoft Jet database engine, indicates the table is an attached table opened for exclusive use.|  
+|**dbAttachSavePWD**|For databases that use the Microsoft Jet database engine, indicates that the user ID and password for the attached table are saved with the connection information.|  
+|**dbSystemObject**|Indicates the table is a system table provided by the Microsoft Jet database engine.|  
+|**dbHiddenObject**|Indicates the table is a hidden table provided by the Microsoft Jet database engine.|  
+|**dbAttachedTable**|Indicates the table is an attached table from a non-ODBC database, such as a Paradox database.|  
+|**dbAttachedODBC**|Indicates the table is an attached table from an ODBC database, such as Microsoft SQL Server.|  
   
- 系統資料表是由 Microsoft Jet 資料庫引擎，以包含各種不同的內部資訊的資料表。  
+ A system table is a table created by the Microsoft Jet database engine to contain various internal information.  
   
- 隱藏的資料表是 Microsoft Jet 資料庫引擎所建立的暫時使用的資料表。  
+ A hidden table is a table created for temporary use by the Microsoft Jet database engine.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 「 屬性屬性 」。  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getconnect"></a>CDaoTableDef::GetConnect  
- 呼叫此成員函式可取得的資料來源的連接字串。  
+##  <a name="getconnect"></a>  CDaoTableDef::GetConnect  
+ Call this member function to obtain the connection string for a data source.  
   
 ```  
 CString GetConnect();
 ```  
   
-### <a name="return-value"></a>傳回值  
- A`CString`物件，其中包含資料表的路徑和資料庫類型。  
+### <a name="return-value"></a>Return Value  
+ A `CString` object containing the path and database type for the table.  
   
-### <a name="remarks"></a>備註  
- 如`CDaoTableDef`物件，表示附加的資料表，`CString`物件 （資料庫類型規範和資料庫的路徑） 的一或兩個部分所組成。  
+### <a name="remarks"></a>Remarks  
+ For a `CDaoTableDef` object that represents an attached table, the `CString` object consists of one or two parts (a database type specifier and a path to the database).  
   
- 下表所示的路徑是包含資料庫檔案的目錄的完整路徑和前面必須有識別項 」 資料庫 ="。 在某些情況 （如 Microsoft Excel 和 Microsoft Jet 資料庫） 中，特定的檔案名稱包含在資料庫路徑引數。  
+ The path as shown in the table below is the full path for the directory containing the database files and must be preceded by the identifier "DATABASE=". In some cases (as with Microsoft Jet and Microsoft Excel databases), a specific filename is included in the database path argument.  
   
- 中的資料表[CDaoTableDef::SetConnect](#setconnect)顯示可能的資料庫類型及其對應的資料庫指定名稱和路徑︰  
+ The table in [CDaoTableDef::SetConnect](#setconnect) shows possible database types and their corresponding database specifiers and paths:  
   
- Microsoft Jet 資料庫基底資料表，這個規範是空字串 ("")。  
+ For Microsoft Jet database base tables, the specifier is a empty string ("").  
   
- 如果密碼是必要，但未提供，ODBC 驅動程式就會顯示登入對話方塊第一次資料表存取時，另一次，如果連接已關閉並重新開啟。 如果附加的資料表具有**dbAttachSavePWD**屬性，登入提示不會重新開啟資料表時。  
+ If a password is required but not provided, the ODBC driver displays a login dialog box the first time a table is accessed and again if the connection is closed and reopened. If an attached table has the **dbAttachSavePWD** attribute, the login prompt will not appear when the table is reopened.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < 連接屬性 >。  
+ For related information, see the topic "Connect Property" in DAO Help.  
   
-##  <a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
- 呼叫此函式可判斷日期和時間資料表基礎`CDaoTableDef`建立物件。  
+##  <a name="getdatecreated"></a>  CDaoTableDef::GetDateCreated  
+ Call this function to determine the date and time the table underlying the `CDaoTableDef` object was created.  
   
 ```  
 COleDateTime GetDateCreated();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 值，其中包含的日期和時間的基礎資料表建立`CDaoTableDef`物件。  
+### <a name="return-value"></a>Return Value  
+ A value containing the date and time of the creation of the table underlying the `CDaoTableDef` object.  
   
-### <a name="remarks"></a>備註  
- 日期和時間設定被衍生自基底資料表已在其建立，或上次更新的電腦。 在多使用者環境中，使用者應該直接從檔案伺服器，以避免不一致; 取得這些設定也就是說，所有用戶端應該使用 「 標準 」 的時間來源，可能是從一部伺服器。  
+### <a name="remarks"></a>Remarks  
+ The date and time settings are derived from the computer on which the base table was created or last updated. In a multiuser environment, users should get these settings directly from the file server to avoid discrepancies; that is, all clients should use a "standard" time source — perhaps from one server.  
   
- 如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
+ For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
-##  <a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
- 呼叫此函式可判斷日期和時間資料表基礎**CDaoTableDef**上次更新物件。  
+##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
+ Call this function to determine the date and time the table underlying the **CDaoTableDef** object was last updated.  
   
 ```  
 COleDateTime GetDateLastUpdated();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 包含基礎資料表的日期和時間值**CDaoTableDef**上次更新物件。  
+### <a name="return-value"></a>Return Value  
+ A value that contains the date and time the table underlying the **CDaoTableDef** object was last updated.  
   
-### <a name="remarks"></a>備註  
- 日期和時間設定被衍生自基底資料表已在其建立，或上次更新的電腦。 在多使用者環境中，使用者應該直接從檔案伺服器，以避免不一致; 取得這些設定也就是說，所有用戶端應該使用 「 標準 」 的時間來源，可能是從一部伺服器。  
+### <a name="remarks"></a>Remarks  
+ The date and time settings are derived from the computer on which the base table was created or last updated. In a multiuser environment, users should get these settings directly from the file server to avoid discrepancies; that is, all clients should use a "standard" time source — perhaps from one server.  
   
- 如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
+ For related information, see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
-##  <a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
- 呼叫此成員函式可擷取的資料表中定義的欄位數目。  
+##  <a name="getfieldcount"></a>  CDaoTableDef::GetFieldCount  
+ Call this member function to retrieve the number of fields defined in the table.  
   
 ```  
 short GetFieldCount();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 資料表中的欄位數目。  
+### <a name="return-value"></a>Return Value  
+ The number of fields in the table.  
   
-### <a name="remarks"></a>備註  
- 如果其值為 0，則沒有物件儲存在集合上。  
+### <a name="remarks"></a>Remarks  
+ If its value is 0, there are no objects in the collection.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 「 計數屬性 」。  
+ For related information, see the topic "Count Property" in DAO Help.  
   
-##  <a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
- 呼叫此成員函式，以取得各種 tabledef 中定義欄位的相關資訊。  
+##  <a name="getfieldinfo"></a>  CDaoTableDef::GetFieldInfo  
+ Call this member function to obtain various kinds of information about a field defined in the tabledef.  
   
 ```  
 void GetFieldInfo(
@@ -525,49 +553,49 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 欄位集合中的物件資料表的以零為起始的欄位，依索引查閱的索引。  
+ The index of the field object in the table's zero-based Fields collection, for lookup by index.  
   
  `fieldinfo`  
- 若要參考[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。  
+ A reference to a [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure.  
   
  `dwInfoOptions`  
- 指定要擷取的欄位有關的資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回︰  
+ Options that specify which information about the field to retrieve. The available options are listed here along with what they cause the function to return:  
   
-- `AFX_DAO_PRIMARY_INFO`（預設值）屬性名稱、 類型、 大小。 使用此選項，以最快的效能。  
+- `AFX_DAO_PRIMARY_INFO` (Default) Name, Type, Size, Attributes. Use this option for fastest performance.  
   
-- `AFX_DAO_SECONDARY_INFO`主要的資訊，加上︰ 序數位置，所需，允許零長度、 定序順序，外部索引名稱、 來源欄位中，來源資料表  
+- `AFX_DAO_SECONDARY_INFO` Primary information, plus: Ordinal Position, Required, Allow Zero Length, Collating Order, Foreign Name, Source Field, Source Table  
   
-- `AFX_DAO_ALL_INFO`主要和次要的資訊，加上︰ 驗證規則，驗證文字，預設值  
+- `AFX_DAO_ALL_INFO` Primary and secondary information, plus: Validation Rule, Validation Text, Default Value  
   
  `lpszName`  
- 物件的名稱欄位，依名稱查閱的指標。 名稱是字串最多 64 個字元的唯一名稱的欄位。  
+ A pointer to the name of the field object, for lookup by name. The name is a string with up to 64 characters that uniquely names the field.  
   
-### <a name="remarks"></a>備註  
- 一個版本的函式可讓您依索引查閱欄位。 另一個版本可讓您依名稱查閱欄位。  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up a field by index. The other version lets you look up a field by name.  
   
- 如需傳回的資訊的說明，請參閱[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員`dwInfoOptions`。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
+ For a description of the information returned, see the [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. When you request information at one level, you get information for any prior levels as well.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 「 屬性屬性 」。  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
- 呼叫此成員函式可取得資料表的索引編號。  
+##  <a name="getindexcount"></a>  CDaoTableDef::GetIndexCount  
+ Call this member function to obtain the number of indexes for a table.  
   
 ```  
 short GetIndexCount();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 資料表的索引數目。  
+### <a name="return-value"></a>Return Value  
+ The number of indexes for the table.  
   
-### <a name="remarks"></a>備註  
- 如果其值為 0，則沒有索引儲存在集合上。  
+### <a name="remarks"></a>Remarks  
+ If its value is 0, there are no indexes in the collection.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 「 計數屬性 」。  
+ For related information, see the topic "Count Property" in DAO Help.  
   
-##  <a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
- 呼叫此成員函式，以取得各種 tabledef 中定義索引的相關資訊。  
+##  <a name="getindexinfo"></a>  CDaoTableDef::GetIndexInfo  
+ Call this member function to obtain various kinds of information about an index defined in the tabledef.  
   
 ```  
 void GetIndexInfo(
@@ -582,306 +610,306 @@ void GetIndexInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 索引集合中的物件資料表的以零為起始的索引，查閱的集合中位置的數字索引。  
+ The numeric index of the Index object in the table's zero-based Indexes collection, for lookup by its position in the collection.  
   
  `indexinfo`  
- 若要參考[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。  
+ A reference to a [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure.  
   
  `dwInfoOptions`  
- 指定的索引來擷取的相關資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回︰  
+ Options that specify which information about the index to retrieve. The available options are listed here along with what they cause the function to return:  
   
-- `AFX_DAO_PRIMARY_INFO`名稱欄位資訊欄位。 使用此選項，以最快的效能。  
+- `AFX_DAO_PRIMARY_INFO` Name, Field Info, Fields. Use this option for fastest performance.  
   
-- `AFX_DAO_SECONDARY_INFO`主要的資訊，加上︰ 主要、 Unique、 叢集、 忽略 null 值，有需要，外部  
+- `AFX_DAO_SECONDARY_INFO` Primary information, plus: Primary, Unique, Clustered, Ignore Nulls, Required, Foreign  
   
-- `AFX_DAO_ALL_INFO`主要和次要的資訊，加上︰ 相異計數量  
+- `AFX_DAO_ALL_INFO` Primary and secondary information, plus: Distinct Count  
   
  `lpszName`  
- 依名稱查閱索引物件的名稱指標。  
+ A pointer to the name of the index object, for lookup by name.  
   
-### <a name="remarks"></a>備註  
- 一個版本的函式可讓您查詢的集合中位置的索引。 另一個版本可讓您依名稱查閱索引。  
+### <a name="remarks"></a>Remarks  
+ One version of the function lets you look up an index by its position in the collection. The other version lets you look up an index by name.  
   
- 如需傳回的資訊的說明，請參閱[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員`dwInfoOptions`。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
+ For a description of the information returned, see the [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) structure. This structure has members that correspond to the items of information listed above in the description of `dwInfoOptions`. When you request information at one level, you get information for any prior levels as well.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 「 屬性屬性 」。  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="getname"></a>CDaoTableDef::GetName  
- 呼叫此成員函式可取得使用者定義的基礎資料表的名稱。  
+##  <a name="getname"></a>  CDaoTableDef::GetName  
+ Call this member function to obtain the user-defined name of the underlying table.  
   
 ```  
 CString GetName();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 使用者定義資料表的名稱。  
+### <a name="return-value"></a>Return Value  
+ A user-defined name for a table.  
   
-### <a name="remarks"></a>備註  
- 這個名稱開頭為字母，且可以包含最多 64 個字元。 它可以包含數字和底線字元，但是不能包含標點符號或空格。  
+### <a name="remarks"></a>Remarks  
+ This name starts with a letter and can contain a maximum of 64 characters. It can include numbers and underscore characters but cannot include punctuation or spaces.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
+ For related information, see the topic "Name Property" in DAO Help.  
   
-##  <a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
- 呼叫此成員函式，以找出的多少筆記錄位於`CDaoTableDef`物件。  
+##  <a name="getrecordcount"></a>  CDaoTableDef::GetRecordCount  
+ Call this member function to find out how many records are in a `CDaoTableDef` object.  
   
 ```  
 long GetRecordCount();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 存取 tabledef 物件中的記錄數目。  
+### <a name="return-value"></a>Return Value  
+ The number of records accessed in a tabledef object.  
   
-### <a name="remarks"></a>備註  
- 呼叫`GetRecordCount`資料表類型`CDaoTableDef`物件會反映記錄資料表中的大約數目，及新增及刪除資料表會記錄時立即影響。 回復交易會出現一部分的記錄計數，直到您呼叫[CDaoWorkSpace::CompactDatabase](../../mfc/reference/cdaoworkspace-class.md#compactdatabase)。 A`CDaoTableDef`物件沒有記錄已記錄計數屬性設定為 0。 使用附加的資料表或 ODBC 資料庫時`GetRecordCount`一律會傳回-1。  
+### <a name="remarks"></a>Remarks  
+ Calling `GetRecordCount` for a table-type `CDaoTableDef` object reflects the approximate number of records in the table and is affected immediately as table records are added and deleted. Rolled back transactions will appear as part of the record count until you call [CDaoWorkSpace::CompactDatabase](../../mfc/reference/cdaoworkspace-class.md#compactdatabase). A `CDaoTableDef` object with no records has a record count property setting of 0. When working with attached tables or ODBC databases, `GetRecordCount` always returns -1.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < RecordCount 屬性 >。  
+ For related information, see the topic "RecordCount Property" in DAO Help.  
   
-##  <a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
- 呼叫此成員函式可擷取附加來源資料庫中資料表的名稱。  
+##  <a name="getsourcetablename"></a>  CDaoTableDef::GetSourceTableName  
+ Call this member function to retrieve the name of an attached table in a source database.  
   
 ```  
 CString GetSourceTableName();
 ```  
   
-### <a name="return-value"></a>傳回值  
- A`CString`物件，指定附加的資料表或空字串的來源名稱，如果原生資料的資料表。  
+### <a name="return-value"></a>Return Value  
+ A `CString` object that specifies the source name of an attached table, or an empty string if a native data table.  
   
-### <a name="remarks"></a>備註  
- 附加的資料表是連結到 Microsoft Jet 資料庫的另一個資料庫中的資料表。 連結資料表的資料會保留在外部資料庫，其中由其他應用程式操作。  
+### <a name="remarks"></a>Remarks  
+ An attached table is a table in another database linked to a Microsoft Jet database. Data for attached tables remains in the external database, where it can be manipulated by other applications.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < SourceTableName 屬性 >。  
+ For related information, see the topic "SourceTableName Property" in DAO Help.  
   
-##  <a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
- 呼叫此成員函式可擷取 tabledef 的驗證規則。  
+##  <a name="getvalidationrule"></a>  CDaoTableDef::GetValidationRule  
+ Call this member function to retrieve the validation rule for a tabledef.  
   
 ```  
 CString GetValidationRule();
 ```  
   
-### <a name="return-value"></a>傳回值  
- A **CString**會驗證欄位中的資料，因為它已變更或加入至資料表的物件。  
+### <a name="return-value"></a>Return Value  
+ A **CString** object that validates the data in a field as it is changed or added to a table.  
   
-### <a name="remarks"></a>備註  
- 與更新作業所使用驗證規則。 如果 tabledef 包含驗證規則，更新該 tabledef 必須符合預先決定的準則，才能在資料變更。 如果變更不符合準則，包含值的例外狀況[GetValidationText](#getvalidationtext)就會擲回。 如`CDaoTableDef`物件，這`CString`是唯讀的附加的資料表，以及在基底資料表的讀取/寫入。  
+### <a name="remarks"></a>Remarks  
+ Validation rules are used in connection with update operations. If a tabledef contains a validation rule, updates to that tabledef must match predetermined criteria before the data is changed. If the change does not match the criteria, an exception containing the value of [GetValidationText](#getvalidationtext) is thrown. For a `CDaoTableDef` object, this `CString` is read-only for an attached table and read/write for a base table.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < 驗證規則屬性 >。  
+ For related information, see the topic "ValidationRule Property" in DAO Help.  
   
-##  <a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
- 呼叫此函式可擷取使用者輸入的驗證規則不相符的資料時所顯示的字串。  
+##  <a name="getvalidationtext"></a>  CDaoTableDef::GetValidationText  
+ Call this function to retrieve the string to display when a user enters data that does not match the validation rule.  
   
 ```  
 CString GetValidationText();
 ```  
   
-### <a name="return-value"></a>傳回值  
- A`CString`物件，指定如果使用者輸入不符合驗證規則的資料顯示的文字。  
+### <a name="return-value"></a>Return Value  
+ A `CString` object that specifies the text displayed if the user enters data that does not match the validation rule.  
   
-### <a name="remarks"></a>備註  
- 如`CDaoTableDef`物件，這`CString`是唯讀的附加的資料表，以及在基底資料表的讀取/寫入。  
+### <a name="remarks"></a>Remarks  
+ For a `CDaoTableDef` object, this `CString` is read-only for an attached table and read/write for a base table.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < 驗證文字屬性 >。  
+ For related information, see the topic "ValidationText Property" in DAO Help.  
   
-##  <a name="isopen"></a>CDaoTableDef::IsOpen  
- 呼叫此成員函式，以判斷是否`CDaoTableDef`物件目前是否開啟。  
+##  <a name="isopen"></a>  CDaoTableDef::IsOpen  
+ Call this member function to determine whether the `CDaoTableDef` object is currently open.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果`CDaoTableDef`物件已開啟; 否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CDaoTableDef` object is open; otherwise 0.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
- 包含的指標[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)這份資料表的物件。  
+##  <a name="m_pdatabase"></a>  CDaoTableDef::m_pDatabase  
+ Contains a pointer to the [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) object for this table.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
- 包含 DAO tabledef 物件基礎的 OLE 介面的指標`CDaoTableDef`物件。  
+##  <a name="m_pdaotabledef"></a>  CDaoTableDef::m_pDAOTableDef  
+ Contains a pointer to the OLE interface for the DAO tabledef object underlying the `CDaoTableDef` object.  
   
-### <a name="remarks"></a>備註  
- 如果您需要直接存取 DAO 介面，請使用這個指標。  
+### <a name="remarks"></a>Remarks  
+ Use this pointer if you need to access the DAO interface directly.  
   
-##  <a name="open"></a>CDaoTableDef::Open  
- 呼叫此成員函式，以開啟 tabledef 先前儲存在資料庫中的 TableDef 的集合。  
+##  <a name="open"></a>  CDaoTableDef::Open  
+ Call this member function to open a tabledef previously saved in the database's TableDef's collection.  
   
 ```  
 virtual void Open(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 指定的資料表名稱的字串指標。  
+ A pointer to a string that specifies a table name.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="refreshlink"></a>CDaoTableDef::RefreshLink  
- 呼叫此成員函式來更新附加資料表的連接資訊。  
+##  <a name="refreshlink"></a>  CDaoTableDef::RefreshLink  
+ Call this member function to update the connection information for an attached table.  
   
 ```  
 void RefreshLink();
 ```  
   
-### <a name="remarks"></a>備註  
- 您藉由呼叫變更附加資料表的連接資訊[SetConnect](#setconnect)在相對應`CDaoTableDef`物件，然後使用`RefreshLink`成員函式，以更新的資訊。 當您呼叫`RefreshLink`，附加的資料表內容不會變更。  
+### <a name="remarks"></a>Remarks  
+ You change the connection information for an attached table by calling [SetConnect](#setconnect) on the corresponding `CDaoTableDef` object and then using the `RefreshLink` member function to update the information. When you call `RefreshLink`, the attached table's properties are not changed.  
   
- 若要強制執行已修改連接資訊才會生效，所有開啟[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)必須關閉這個 tabledef 為基礎的物件。  
+ To force the modified connect information to take effect, all open [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) objects based on this tabledef must be closed.  
   
- 如需相關資訊，請參閱主題 < RefreshLink 方法 >，DAO [說明] 中。  
+ For related information, see the topic "RefreshLink Method" in DAO Help.  
   
-##  <a name="setattributes"></a>CDaoTableDef::SetAttributes  
- 設定值，這個值表示的一或多個特性`CDaoTableDef`物件。  
+##  <a name="setattributes"></a>  CDaoTableDef::SetAttributes  
+ Sets a value that indicates one or more characteristics of a `CDaoTableDef` object.  
   
 ```  
 void SetAttributes(long lAttributes);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lAttributes`  
- 所表示的資料表的特性`CDaoTableDef`物件，而且可以是這些常數的總和︰  
+ Characteristics of the table represented by the `CDaoTableDef` object and can be a sum of these constants:  
   
-|常數|描述|  
+|Constant|Description|  
 |--------------|-----------------|  
-|**dbAttachExclusive**|使用 Microsoft Jet 資料庫引擎的資料庫，表示資料表是專供開啟附加的資料表。|  
-|**dbAttachSavePWD**|使用 Microsoft Jet 資料庫引擎的資料庫，表示的使用者識別碼和密碼附加資料表會儲存連接資訊。|  
-|**dbSystemObject**|表示資料表是 Microsoft Jet 資料庫引擎所提供的系統資料表。|  
-|**dbHiddenObject**|表示資料表是由 Microsoft Jet 資料庫引擎提供隱藏的資料表。|  
+|**dbAttachExclusive**|For databases that use the Microsoft Jet database engine, indicates the table is an attached table opened for exclusive use.|  
+|**dbAttachSavePWD**|For databases that use the Microsoft Jet database engine, indicates that the user ID and password for the attached table are saved with the connection information.|  
+|**dbSystemObject**|Indicates the table is a system table provided by the Microsoft Jet database engine.|  
+|**dbHiddenObject**|Indicates the table is a hidden table provided by the Microsoft Jet database engine.|  
   
-### <a name="remarks"></a>備註  
- 設定多個屬性，您可以將合併它們可以加總正確使用位元 OR 運算子的常數。 設定**dbAttachExclusive**附加資料表上會產生例外狀況。 結合下列的值也產生的例外狀況︰  
+### <a name="remarks"></a>Remarks  
+ When setting multiple attributes, you can combine them by summing the appropriate constants using the bitwise-OR operator. Setting **dbAttachExclusive** on a nonattached table produces an exception. Combining the following values also produce an exception:  
   
-- **dbAttachExclusive |dbAttachedODBC**  
+- **dbAttachExclusive &#124; dbAttachedODBC**  
   
-- **dbAttachSavePWD |dbAttachedTable**  
+- **dbAttachSavePWD &#124; dbAttachedTable**  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 「 屬性屬性 」。  
+ For related information, see the topic "Attributes Property" in DAO Help.  
   
-##  <a name="setconnect"></a>CDaoTableDef::SetConnect  
- 如`CDaoTableDef`代表連接的資料表，string 物件的物件 （資料庫類型規範和資料庫的路徑） 的一或兩個部分所組成。  
+##  <a name="setconnect"></a>  CDaoTableDef::SetConnect  
+ For a `CDaoTableDef` object that represents an attached table, the string object consists of one or two parts (a database type specifier and a path to the database).  
   
 ```  
 void SetConnect(LPCTSTR lpszConnect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszConnect`  
- 指向的字串運算式，指定要傳遞給 ODBC 或可安裝 ISAM 驅動程式的其他參數。  
+ A pointer to a string expression that specifies additional parameters to pass to ODBC or installable ISAM drivers.  
   
-### <a name="remarks"></a>備註  
- 下表所示的路徑是包含資料庫檔案的目錄的完整路徑和前面必須有識別項 」 資料庫 ="。 在某些情況 （如 Microsoft Excel 和 Microsoft Jet 資料庫） 中，特定的檔案名稱包含在資料庫路徑引數。  
+### <a name="remarks"></a>Remarks  
+ The path as shown in the table below is the full path for the directory containing the database files and must be preceded by the identifier "DATABASE=". In some cases (as with Microsoft Jet and Microsoft Excel databases), a specific filename is included in the database path argument.  
   
 > [!NOTE]
->  在表單的路徑陳述式中不包含等號前後的空白字元 」 資料庫 = 磁碟機︰\\\path"。 這會導致擲回例外狀況以及連接失敗。  
+>  Do not include whitespace around the equal sign in path statements of the form "DATABASE=drive:\\\path". This will result in an exception being thrown and the connection failing.  
   
- 下表顯示可能的資料庫類型及其對應的資料庫指定名稱和路徑︰  
+ The following table shows possible database types and their corresponding database specifiers and paths:  
   
-|資料庫類型|指定名稱|路徑|  
+|Database type|Specifier|Path|  
 |-------------------|---------------|----------|  
-|使用 Jet 資料庫引擎的資料庫|"[ `database`];"|" `drive`:\\\ *path*\\\ *filename*.MDB"|  
-|dBASE III|「 dBASE III;"|" `drive`:\\\ *path*"|  
-|dBASE IV|「 dBASE IV;"|" `drive`:\\\ *path*"|  
-|dBASE 5|「 dBASE 5.0;"|" `drive`:\\\ *path*"|  
-|Paradox 3.x|「 Paradox 3.x;"|" `drive`:\\\ *path*"|  
-|Paradox 4.x|「 Paradox 4.x;"|" `drive`:\\\ *path*"|  
-|Paradox 5.x|「 Paradox 5.x;"|" `drive`:\\\ *path*"|  
-|Excel 3.0|「 Excel 3.0"。|" `drive`:\\\ *path*\\\ *filename*.XLS"|  
-|Excel 4.0|「 Excel 4.0;"|" `drive`:\\\ *path*\\\ *filename*.XLS"|  
-|Excel 5.0 或 Excel 95|「 Excel 5.0;"|" `drive`:\\\ *path*\\\ *filename*.XLS"|  
-|Excel 97|「 Excel 8.0";|" `drive`:\\\ *path*\ *filename*.XLS"|  
-|HTML 匯入|「 HTML 匯入 」。|" `drive`:\\\ *path*\ *filename*"|  
-|HTML 匯出|「 HTML 匯出 」。|" `drive`:\\\ *path*"|  
-|Text|「 文字 」。|「 磁碟機︰\\\path"|  
-|ODBC|「 ODBC;資料庫 = `database`;UID= *user*;PWD =*密碼*;DSN = *datasourcename;*LOGINTIMEOUT =*秒;*"（這可能不是所有伺服器的完整連接字串，而只是範例。 務必非常不具有參數之間的空格。）|無|  
-|Exchange|「 交換;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 | 1}。]<br /><br /> [設定檔 =*設定檔*。]<br /><br /> [PWD =*密碼*。]<br /><br /> [DATABASE = `database`;]"|*"drive*:\\\ *path*\\\ *filename*.MDB"|  
+|Database using the Jet database engine|"[ `database`];"|" `drive`:\\\ *path*\\\ *filename*.MDB"|  
+|dBASE III|"dBASE III;"|" `drive`:\\\ *path*"|  
+|dBASE IV|"dBASE IV;"|" `drive`:\\\ *path*"|  
+|dBASE 5|"dBASE 5.0;"|" `drive`:\\\ *path*"|  
+|Paradox 3.x|"Paradox 3.x;"|" `drive`:\\\ *path*"|  
+|Paradox 4.x|"Paradox 4.x;"|" `drive`:\\\ *path*"|  
+|Paradox 5.x|"Paradox 5.x;"|" `drive`:\\\ *path*"|  
+|Excel 3.0|"Excel 3.0;"|" `drive`:\\\ *path*\\\ *filename*.XLS"|  
+|Excel 4.0|"Excel 4.0;"|" `drive`:\\\ *path*\\\ *filename*.XLS"|  
+|Excel 5.0 or Excel 95|"Excel 5.0;"|" `drive`:\\\ *path*\\\ *filename*.XLS"|  
+|Excel 97|"Excel 8.0;"|" `drive`:\\\ *path*\ *filename*.XLS"|  
+|HTML Import|"HTML Import;"|" `drive`:\\\ *path*\ *filename*"|  
+|HTML Export|"HTML Export;"|" `drive`:\\\ *path*"|  
+|Text|"Text;"|"drive:\\\path"|  
+|ODBC|"ODBC; DATABASE= `database`; UID= *user*;PWD= *password*; DSN= *datasourcename;* LOGINTIMEOUT= *seconds;*" (This may not be a complete connection string for all servers; it is just an example. It is very important not to have spaces between the parameters.)|None|  
+|Exchange|"Exchange;<br /><br /> MAPILEVEL= *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*"drive*:\\\ *path*\\\ *filename*.MDB"|  
   
 > [!NOTE]
->  Btrieve 已不再支援為準，DAO 3.5。  
+>  Btrieve is no longer supported as of DAO 3.5.  
   
- 您必須使用雙反斜線 (\\\\) 的連接字串中。 如果您已修改現有的連接使用的屬性`SetConnect`，您必須在後續呼叫[RefreshLink](#refreshlink)。 如果您要初始化連接屬性使用`SetConnect`，您需要不呼叫`RefreshLink`，但首先您應該選擇這樣做，附加 tabledef。  
+ You must use a double backslash (\\\\) in the connection strings. If you have modified the properties of an existing connection using `SetConnect`, you must subsequently call [RefreshLink](#refreshlink). If you are initializing the connection properties using `SetConnect`, you need not call `RefreshLink`, but should you choose to do so, first append the tabledef.  
   
- 如果密碼是必要，但未提供，ODBC 驅動程式就會顯示登入對話方塊第一次資料表存取時，另一次，如果連接已關閉並重新開啟。  
+ If a password is required but not provided, the ODBC driver displays a login dialog box the first time a table is accessed and again if the connection is closed and reopened.  
   
- 您可以設定的連接字串`CDaoTableDef`藉由提供的來源引數物件**建立**成員函式。 您可以檢查以判斷型別、 路徑、 使用者識別碼、 密碼或資料庫的 ODBC 資料來源的設定。 如需詳細資訊，請參閱文件的特定驅動程式。  
+ You can set the connection string for a `CDaoTableDef` object by providing a source argument to the **Create** member function. You can check the setting to determine the type, path, user ID, password, or ODBC data source of the database. For more information, see the documentation for the specific driver.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < 連接屬性 >。  
+ For related information, see the topic "Connect Property" in DAO Help.  
   
-##  <a name="setname"></a>CDaoTableDef::SetName  
- 呼叫此成員函式可設定使用者定義資料表的名稱。  
+##  <a name="setname"></a>  CDaoTableDef::SetName  
+ Call this member function to set a user-defined name for a table.  
   
 ```  
 void SetName(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- 指向的字串運算式，指定資料表的名稱。  
+ A pointer to a string expression that specifies a name for a table.  
   
-### <a name="remarks"></a>備註  
- 名稱必須以字母開頭，而且可以包含最多 64 個字元。 它可以包含數字和底線字元，但是不能包含標點符號或空格。  
+### <a name="remarks"></a>Remarks  
+ The name must start with a letter and can contain a maximum of 64 characters. It can include numbers and underscore characters but cannot include punctuation or spaces.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
+ For related information, see the topic "Name Property" in DAO Help.  
   
-##  <a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
- 呼叫此成員函式，來指定連接的資料表名稱或基底資料表的名稱在其上`CDaoTableDef`基礎物件，因為它存在於原始資料的來源。  
+##  <a name="setsourcetablename"></a>  CDaoTableDef::SetSourceTableName  
+ Call this member function to specify the name of an attached table or the name of the base table on which the `CDaoTableDef` object is based, as it exists in the original source of the data.  
   
 ```  
 void SetSourceTableName(LPCTSTR lpszSrcTableName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpszSrcTableName*  
- 指標，在外部資料庫中指定的資料表名稱的字串運算式。 基底資料表中，設定為空字串 ("")。  
+ A pointer to a string expression that specifies a table name in the external database. For a base table, the setting is an empty string ("").  
   
-### <a name="remarks"></a>備註  
- 然後您必須呼叫[RefreshLink](#refreshlink)。 此屬性設定值是空的基底資料表和讀取/寫入附加的資料表或未附加至集合的物件。  
+### <a name="remarks"></a>Remarks  
+ You must then call [RefreshLink](#refreshlink). This property setting is empty for a base table and read/write for an attached table or an object not appended to a collection.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < SourceTableName 屬性 >。  
+ For related information, see the topic "SourceTableName Property" in DAO Help.  
   
-##  <a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
- 呼叫此成員函式設定 tabledef 的驗證規則。  
+##  <a name="setvalidationrule"></a>  CDaoTableDef::SetValidationRule  
+ Call this member function to set a validation rule for a tabledef.  
   
 ```  
 void SetValidationRule(LPCTSTR lpszValidationRule);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpszValidationRule*  
- 指標，會驗證作業的字串運算式。  
+ A pointer to a string expression that validates an operation.  
   
-### <a name="remarks"></a>備註  
- 與更新作業所使用驗證規則。 如果 tabledef 包含驗證規則，更新該 tabledef 必須符合預先決定的準則，才能在資料變更。 如果變更不符合準則，包含文字的例外狀況[GetValidationText](#getvalidationtext)隨即出現。  
+### <a name="remarks"></a>Remarks  
+ Validation rules are used in connection with update operations. If a tabledef contains a validation rule, updates to that tabledef must match predetermined criteria before the data is changed. If the change does not match the criteria, an exception containing the text of [GetValidationText](#getvalidationtext) is displayed.  
   
- 驗證只支援使用 Microsoft Jet 資料庫引擎的資料庫。 運算式無法參考使用者定義函數、 網域彙總函式、 SQL 彙總函式或查詢。 驗證規則`CDaoTableDef`物件可參考該物件中的多個欄位。  
+ Validation is supported only for databases that use the Microsoft Jet database engine. The expression cannot refer to user-defined functions, domain aggregate functions, SQL aggregate functions, or queries. A validation rule for a `CDaoTableDef` object can refer to multiple fields in that object.  
   
- 例如，針對名為欄位`hire_date`和`termination_date`，驗證規則可能是︰  
+ For example, for fields named `hire_date` and `termination_date`, a validation rule might be:  
   
- [!code-cpp[NVC_MFCDatabase # 34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < 驗證規則屬性 >。  
+ For related information, see the topic "ValidationRule Property" in DAO Help.  
   
-##  <a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
- 呼叫此成員函式設定的驗證規則的例外狀況文字`CDaoTableDef`Microsoft Jet database engine 所支援的基礎基底資料表的物件。  
+##  <a name="setvalidationtext"></a>  CDaoTableDef::SetValidationText  
+ Call this member function to set the exception text of a validation rule for a `CDaoTableDef` object with an underlying base table supported by the Microsoft Jet database engine.  
   
 ```  
 void SetValidationText(LPCTSTR lpszValidationText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpszValidationText*  
- 指定如果輸入資料顯示的文字的字串運算式的指標無效。  
+ A pointer to a string expression that specifies the text displayed if entered data is invalid.  
   
-### <a name="remarks"></a>備註  
- 您無法設定驗證的文字附加的資料表。  
+### <a name="remarks"></a>Remarks  
+ You cannot set the validation text of an attached table.  
   
- 如需相關資訊，請參閱主題 DAO [說明] 中的 < 驗證文字屬性 >。  
+ For related information, see the topic "ValidationText Property" in DAO Help.  
   
-## <a name="see-also"></a>另請參閱  
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CDaoDatabase 類別](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoRecordset 類別](../../mfc/reference/cdaorecordset-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
+ [CDaoRecordset Class](../../mfc/reference/cdaorecordset-class.md)
 

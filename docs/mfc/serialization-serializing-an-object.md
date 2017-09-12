@@ -1,40 +1,59 @@
 ---
-title: "序列化：序列化物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "物件 [C++], 序列化"
-  - "序列化 [C++], 物件"
-  - "序列化物件 [C++]"
+title: 'Serialization: Serializing an Object | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- serializing objects [MFC]
+- serialization [MFC], objects
+- objects [MFC], serializing
 ms.assetid: 1db772b1-ad55-4fcf-b133-126cca082510
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 序列化：序列化物件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ac3c7c420f5e4ed13618b8a9475083ecf824e742
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-文件 [序列化: 將 Serializable 類別](../mfc/serialization-making-a-serializable-class.md) 示範如何使類別可序列化。  一旦您有可序列化類別，您可以在檔案序列化該類別物件透過 [CArchive](../mfc/reference/carchive-class.md) 物件。  本文說明:  
+---
+# <a name="serialization-serializing-an-object"></a>Serialization: Serializing an Object
+The article [Serialization: Making a Serializable Class](../mfc/serialization-making-a-serializable-class.md) shows how to make a class serializable. Once you have a serializable class, you can serialize objects of that class to and from a file via a [CArchive](../mfc/reference/carchive-class.md) object. This article explains:  
   
--   [什麼是 CArchive 物件](../mfc/what-is-a-carchive-object.md)  
+-   [What a CArchive object is](../mfc/what-is-a-carchive-object.md).  
   
--   [建立 CArchive 物件的兩種方式](../mfc/two-ways-to-create-a-carchive-object.md)  
+-   [Two ways to create a CArchive](../mfc/two-ways-to-create-a-carchive-object.md).  
   
--   [如何使用 CArchive \<\< 和 \>\> 運算子](../mfc/using-the-carchive-output-and-input-operators.md)。  
+-   [How to use the CArchive <\< and >> operators](../mfc/using-the-carchive-output-and-input-operators.md).  
   
--   [透過封存儲存及載入 CObjects](../mfc/storing-and-loading-cobjects-via-an-archive.md)  
+-   [Storing and loading CObjects via an archive](../mfc/storing-and-loading-cobjects-via-an-archive.md).  
   
- 您可以讓架構建置可序列化資料的封存或明確建立 `CArchive` 物件。  您可以將資料儲存在檔案中使用的 \<\< 序列化 `CArchive` 物件和 \>\> 運算子之間，或在其他情況下，藉由呼叫 `CObject` 衍生類別的 `Serialize` 函式。  
+ You can let the framework create the archive for your serializable document or explicitly create the `CArchive` object yourself. You can transfer data between a file and your serializable object by using the <\< and >> operators for `CArchive` or, in some cases, by calling the `Serialize` function of a `CObject`-derived class.  
   
-## 請參閱  
- [序列化](../mfc/serialization-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Serialization](../mfc/serialization-in-mfc.md)
+
+

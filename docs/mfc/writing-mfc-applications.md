@@ -1,58 +1,77 @@
 ---
-title: "撰寫 MFC 應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式精靈 [C++], 網際網路應用程式"
-  - "網際網路應用程式 [C++], MFC"
-  - "MFC [C++], 應用程式開發"
-  - "MFC [C++], 網際網路應用程式"
+title: Writing MFC Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/16/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], MFC
+- MFC, Internet applications
+- application wizards [MFC], Internet applications
+- MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 撰寫 MFC 應用程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63072af612adf75290cbdab69867b37e9cbe1bc5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明您開發應用程式所要遵照的步驟。  首先，您必須決定哪些應用程式寫入。  一些選擇會在[應用程式設計選擇](../mfc/application-design-choices.md)中討論。  您的應用程式將會是:  
+---
+# <a name="writing-mfc-applications"></a>Writing MFC Applications
+This article explains the initial steps you take to develop your application. First, you must decide what kind of application you are writing. Several of the choices were discussed in [Application Design Choices](../mfc/application-design-choices.md). Will your application be:  
   
--   在網際網路或內部網路執行?  
+-   Running on the Internet or an intranet  
   
--   在用戶端或伺服器執行?  
+-   Running on a client or on a server  
   
--   在瀏覽器或做為獨立應用程式執行?  
+-   Running in a browser or as a stand-alone application  
   
--   使用 COM 或 Active 技術?  
+-   Using COM or Active technology  
   
--   使用 WinInet 或非同步標記下載資料?  
+-   Downloading data using WinInet or asynchronous monikers  
   
- 您的選擇會決定哪個類別對您的應用程式是適當的。  您的答案也有助於判斷這樣當您執行應用程式精靈開始建置應用程式時的選取範圍。  
+ Your decisions determine which classes are appropriate for your application. Your answers also help determine the selections you make when you run the Application Wizard to begin constructing your application.  
   
- 在您進行了有關您的網際網路應用程式的初始設計決定，您可以使用應用程式精靈隨即啟動。  使用應用程式精靈建立基本架構應用程式和修改程式碼文件如下所述:  
+ After you've made your initial design decisions about your Internet application, you can use the Application Wizard to get started. Use the Application Wizard to create a skeleton application and modify the code as described in the following articles:  
   
--   如需 ActiveX 控制項，請參閱 [在網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)。  
+-   For an ActiveX control, see [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
--   如需活動文件，請參閱 [在網際網路上的現用文件](../mfc/active-documents-on-the-internet.md)。  
+-   For an Active document, see [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md).  
   
- 下列文件也說明如何協助您啟動程式設計工作:。  
+ The following articles also provide instructions to help you start your programming tasks:  
   
--   [應用程式設計選擇](../mfc/application-design-choices.md)  
+-   [Application Design Choices](../mfc/application-design-choices.md)  
   
--   [網際網路上的非同步 Moniker](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronous Monikers on the Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   
--   [WinInet 基本概念](../mfc/wininet-basics.md)  
+-   [WinInet Basics](../mfc/wininet-basics.md)  
   
-## 請參閱  
- [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

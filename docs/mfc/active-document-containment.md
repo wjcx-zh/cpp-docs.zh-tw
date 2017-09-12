@@ -1,50 +1,69 @@
 ---
-title: "主動式文件內含項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "主動式文件容器 [C++], 關於主動式文件容器"
-  - "主動式文件 [C++], 容器"
-  - "容器 [C++], 主動式文件"
-  - "MFC [C++], COM 支援"
-  - "MFC COM [C++], 主動式文件內含項目"
+title: Active Document Containment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- containers [MFC], active document
+- MFC, COM support
+- active document containers [MFC], about active document containers
+- MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 主動式文件內含項目
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c35d1da52fab535036eb931f8ae0b3a916a7cc0c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-現用文件內含項目是提供單一框架與文件一起使用，而不是強制您為每個資料型別建立和使用多個應用程式架構的技術。  它與基礎 OLE 技術不同 OLE 與內容只有單一組件可以是現用的複合文件中的內嵌物件一起使用。  現用文件內含項目，您可以在單一框架內啟動整份文件 \(也就是整個應用程式，包括關聯的功能表，工具列，依此類推\)。  
+---
+# <a name="active-document-containment"></a>Active Document Containment
+Active document containment is a technology that provides a single frame in which to work with documents, instead of forcing you to create and use multiple application frames for each document type. It differs from basic OLE technology in that OLE works with embedded objects within a compound document in which only a single piece of content can be active. With active document containment, you activate an entire document (that is, an entire application, including associated menus, toolbars, and so on) within the context of a single frame.  
   
- 現用文件內含技術原先開發以 Microsoft Office 可以實作 Office 文件夾。  不過，除了 Office 和 Office 相容應用程式之外，技術不夠彈性支援主動式文件容器刪除 Office 文件夾之外，而且可支援文件伺服器。  
+ The active document containment technology was originally developed for Microsoft Office to implement Office Binder. However, the technology is flexible enough to support active document containers other than Office Binder and can support document servers other than Office and Office-compatible applications.  
   
- 裝載現用文件的應用程式呼叫 [主動式文件容器](../mfc/active-document-containers.md)。  範例的這樣的容器是 Microsoft Office Binder 或 Microsoft Internet Explorer。  
+ The application that hosts active documents is called an [active document container](../mfc/active-document-containers.md). Examples of such containers are the Microsoft Office Binder or Microsoft Internet Explorer.  
   
- 現用文件內含項目實作，一組 OLE 文件的副檔名， OLE 複合文件技術。  擴充功能已啟用可內嵌的其他介面，代表整份文件的就地物件而不是內嵌單一內容。  與 OLE 文件，主動式文件內含項目用於現用文件的顯示空間的使用中文件的使用者介面和管理功能的容器和伺服器。  
+ Active document containment is implemented as a set of extensions to OLE documents, the compound document technology of OLE. The extensions are additional interfaces that allow an embeddable, in-place object to represent an entire document instead of a single piece of embedded content. As with OLE documents, active document containment uses a container that provides the display space for active documents, and servers that provide the user interface and manipulation capabilities for the active documents themselves.  
   
- [主動式文件伺服程式](../mfc/active-document-servers.md) 是一個應用程式 \(例如 Word、Excel、PowerPoint\) 對一或多個現用文件類別，其中每個物件支援在適當的容器允許物件啟動的擴充介面。  
+ An [active document server](../mfc/active-document-servers.md) is an application (such as Word, Excel, or PowerPoint) that supports one or more active document classes, where each object itself supports the extension interfaces that allow the object to be activated in a suitable container.  
   
- [現用文件](../mfc/active-documents.md) \(提供來自主動式文件伺服程式 \(例如 Word 或 Excel\) 基本上是內嵌為其他主動式文件容器內的物件之完整，一般文件。  不同於內嵌物件，現用文件有對其網頁的完整控制項，因此，應用程式的完整介面 \(與其所有基底命令和工具\) 可供使用者編輯這些項目。  
+ An [active document](../mfc/active-documents.md) (provided from an active document server such as Word or Excel) is essentially a full-scale, conventional document that is embedded as an object within another active document container. Unlike embedded objects, active documents have complete control over their pages, and the full interface of the application (with all its underlying commands and tools) is available to the user to edit them.  
   
- 現用文件最好是透過區別了解與標準 OLE 內嵌物件。  在 OLE 慣例之後，內嵌物件是在文件頁面中顯示其所屬的話，，且文件由 OLE 容器處理。  容器儲存內嵌物件的資料以文件的其餘部分。  不過，內嵌的物件會限制這些控制項會顯示的頁面。  
+ An active document is best understood by distinguishing it from a standard OLE embedded object. Following the OLE convention, an embedded object is one that is displayed within the page of the document that owns it, and the document is managed by an OLE container. The container stores the embedded object's data with the rest of the document. However, embedded objects are limited in that they do not control the page on which they appear.  
   
- 主動式文件容器應用程式的使用者可以建立主動式文件 \(呼叫在 Office 文件夾區段\) 使用其偏好的應用程式 \(提供這些應用程式是啟用的主動式文件\)，因此，使用者可以處理產生的專案，在單一實體，可以唯一名稱，保存，列印，依此類推。  因此，網際網路瀏覽器的使用者可以將整個網路，以及檔案系統，做為單一檔案儲存實體能夠瀏覽該儲存的文件從一個位置。  
+ Users of an active document container application can create active documents (called sections in Office Binder) using their favorite applications (provided these applications are active document enabled), yet the users can manage the resulting project as a single entity, which can be uniquely named, saved, printed, and so on. In the same way, a user of an Internet browser can treat the entire network, as well as local file systems, as a single document storage entity with the ability to browse the documents in that storage from a single location.  
   
-## 範例程式  
+## <a name="sample-programs"></a>Sample Programs  
   
--   [MFCBIND](../top/visual-cpp-samples.md) 範例說明主動式文件容器應用程式的實作。  
+-   The [MFCBIND](../visual-cpp-samples.md) sample illustrates the implementation of an active document container application.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)
+
+

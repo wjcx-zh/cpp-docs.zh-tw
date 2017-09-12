@@ -1,5 +1,5 @@
 ---
-title: "對話方塊資料交換函式的 OLE 控制項 |Microsoft 文件"
+title: Dialog Data Exchange Functions for OLE Controls | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE controls, DDX functions
+- OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
 caps.latest.revision: 13
@@ -45,35 +45,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5c50690c1652c4136b7f52f852ddf201c9dd6c9b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d20ebb94a41ad8ec1afb3a18da7957652a5eeb0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控制項的對話方塊資料交換函式
-本主題列出用於對話方塊、 表單檢視或控制檢視物件中的 OLE 控制項屬性對話方塊、 表單檢視或控制檢視物件的資料成員之間交換資料的 DDX_OC 函式。  
+# <a name="dialog-data-exchange-functions-for-ole-controls"></a>Dialog Data Exchange Functions for OLE Controls
+This topic lists the DDX_OC functions used to exchange data between a property of an OLE control in a dialog box, form view, or control view object and a data member of the dialog box, form view, or control view object.  
   
-### <a name="ddxoc-functions"></a>DDX_OC 函式  
+### <a name="ddxoc-functions"></a>DDX_OC Functions  
   
 |||  
 |-|-|  
-|[DDX_OCBool](#ddx_ocbool)|管理傳送**BOOL**的 OLE 控制項屬性之間的資料和**BOOL**資料成員。|  
-|[DDX_OCBoolRO](#ddx_ocboolro)|管理傳送**BOOL** OLE 控制項的唯讀屬性之間的資料和**BOOL**資料成員。|  
-|[DDX_OCColor](#ddx_occolor)|管理傳送**OLE_COLOR**的 OLE 控制項屬性之間的資料和**OLE_COLOR**資料成員。|  
-|[DDX_OCColorRO](#ddx_occolorro)|管理傳送**OLE_COLOR** OLE 控制項的唯讀屬性之間的資料和**OLE_COLOR**資料成員。|  
-|[DDX_OCFloat](#ddx_ocfloat)|管理傳送**float** (或**雙**) 的 OLE 控制項屬性之間的資料和**float** (或**雙**) 資料成員。|  
-|[DDX_OCFloatRO](#ddx_ocfloatro)|管理傳送**float** (或**雙**) 的 OLE 控制項的唯讀屬性之間的資料和**float** (或**雙**) 資料成員。|  
-|[DDX_OCInt](#ddx_ocint)|管理傳送`int`(或**長**) 的 OLE 控制項屬性之間的資料和`int`(或**長**) 資料成員。|  
-|[DDX_OCIntRO](#ddx_ocintro)|管理傳送`int`(或**長**) 的 OLE 控制項的唯讀屬性之間的資料和`int`(或**長**) 資料成員。|  
-|[DDX_OCShort](#ddx_ocshort)|管理傳送**簡短**的 OLE 控制項屬性之間的資料和**簡短**資料成員。|  
-|[DDX_OCShortRO](#ddx_ocshortro)|管理傳送**簡短**OLE 控制項的唯讀屬性之間的資料和**簡短**資料成員。|  
-|[DDX_OCText](#ddx_octext)|管理傳送**CString**的 OLE 控制項屬性之間的資料和**CString**資料成員。|  
-|[DDX_OCTextRO](#ddx_octextro)|管理傳送**CString** OLE 控制項的唯讀屬性之間的資料和**CString**資料成員。|  
+|[DDX_OCBool](#ddx_ocbool)|Manages the transfer of **BOOL** data between a property of an OLE control and a **BOOL** data member.|  
+|[DDX_OCBoolRO](#ddx_ocboolro)|Manages the transfer of **BOOL** data between a read-only property of an OLE control and a **BOOL** data member.|  
+|[DDX_OCColor](#ddx_occolor)|Manages the transfer of **OLE_COLOR** data between a property of an OLE control and an **OLE_COLOR** data member.|  
+|[DDX_OCColorRO](#ddx_occolorro)|Manages the transfer of **OLE_COLOR** data between a read-only property of an OLE control and an **OLE_COLOR** data member.|  
+|[DDX_OCFloat](#ddx_ocfloat)|Manages the transfer of **float** (or **double**) data between a property of an OLE control and a **float** (or **double**) data member.|  
+|[DDX_OCFloatRO](#ddx_ocfloatro)|Manages the transfer of **float** (or **double**) data between a read-only property of an OLE control and a **float** (or **double**) data member.|  
+|[DDX_OCInt](#ddx_ocint)|Manages the transfer of `int` (or **long**) data between a property of an OLE control and an `int` (or **long**) data member.|  
+|[DDX_OCIntRO](#ddx_ocintro)|Manages the transfer of `int` (or **long**) data between a read-only property of an OLE control and an `int` (or **long**) data member.|  
+|[DDX_OCShort](#ddx_ocshort)|Manages the transfer of **short** data between a property of an OLE control and a **short** data member.|  
+|[DDX_OCShortRO](#ddx_ocshortro)|Manages the transfer of **short** data between a read-only property of an OLE control and a **short** data member.|  
+|[DDX_OCText](#ddx_octext)|Manages the transfer of **CString** data between a property of an OLE control and a **CString** data member.|  
+|[DDX_OCTextRO](#ddx_octextro)|Manages the transfer of **CString** data between a read-only property of an OLE control and a **CString** data member.|  
   
-##  <a name="ddx_ocbool"></a>DDX_OCBool  
- `DDX_OCBool`函式會管理傳送**BOOL**的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和**BOOL**對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_ocbool"></a>  DDX_OCBool  
+ The `DDX_OCBool` function manages the transfer of **BOOL** data between a property of an OLE control in a dialog box, form view, or control view object and a **BOOL** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCBool(
@@ -83,27 +83,27 @@ void AFXAPI DDX_OCBool(
     BOOL& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header:** afxdisp.h  
   
-##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
- `DDX_OCBoolRO`函式會管理傳送**BOOL** OLE 控制項在對話方塊中的唯讀屬性之間的資料表單檢視或控制檢視物件和**BOOL**對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO  
+ The `DDX_OCBoolRO` function manages the transfer of **BOOL** data between a read-only property of an OLE control in a dialog box, form view, or control view object and a **BOOL** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCBoolRO(
@@ -113,27 +113,27 @@ void AFXAPI DDX_OCBoolRO(
     BOOL& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_occolor"></a>DDX_OCColor  
- `DDX_OCColor`函式會管理傳送**OLE_COLOR**的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和**OLE_COLOR**對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_occolor"></a>  DDX_OCColor  
+ The `DDX_OCColor` function manages the transfer of **OLE_COLOR** data between a property of an OLE control in a dialog box, form view, or control view object and a **OLE_COLOR** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -143,27 +143,27 @@ void AFXAPI DDX_OCColor(
     OLE_COLOR& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
- `DDX_OCColorRO`函式會管理傳送**OLE_COLOR** OLE 控制項在對話方塊中的唯讀屬性之間的資料表單檢視或控制檢視物件和**OLE_COLOR**對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
+ The `DDX_OCColorRO` function manages the transfer of **OLE_COLOR** data between a read-only property of an OLE control in a dialog box, form view, or control view object and a **OLE_COLOR** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -173,27 +173,27 @@ void AFXAPI DDX_OCColorRO(
     OLE_COLOR& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
- `DDX_OCFloat`函式會管理傳送**float** (或**雙**) 的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和**float** (或**雙**) 對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_ocfloat"></a>  DDX_OCFloat  
+ The `DDX_OCFloat` function manages the transfer of **float** (or **double**) data between a property of an OLE control in a dialog box, form view, or control view object and a **float** (or **double**) data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCFloat(
@@ -209,27 +209,27 @@ void AFXAPI DDX_OCFloat(
     double& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
- `DDX_OCFloatRO`函式會管理傳送**float** (或**雙**) 的 OLE 控制項在對話方塊中，唯讀屬性之間的資料表單檢視或控制檢視物件和**float** (或**雙**) 對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO  
+ The `DDX_OCFloatRO` function manages the transfer of **float** (or **double**) data between a read-only property of an OLE control in a dialog box, form view, or control view object and a **float** (or **double**) data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCFloatRO(
@@ -245,27 +245,27 @@ void AFXAPI DDX_OCFloatRO(
     double& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocint"></a>DDX_OCInt  
- `DDX_OCInt`函式會管理傳送`int`(或**長**) 的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和`int`(或**長**) 對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_ocint"></a>  DDX_OCInt  
+ The `DDX_OCInt` function manages the transfer of `int` (or **long**) data between a property of an OLE control in a dialog box, form view, or control view object and a `int` (or **long**) data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -281,27 +281,27 @@ void AFXAPI DDX_OCInt(
     long& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
- `DDX_OCIntRO`函式會管理傳送`int`(或**長**) 的 OLE 控制項在對話方塊中，唯讀屬性之間的資料表單檢視或控制檢視物件和`int`(或**長**) 對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
+ The `DDX_OCIntRO` function manages the transfer of `int` (or **long**) data between a read-only property of an OLE control in a dialog box, form view, or control view object and a `int` (or **long**) data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -317,27 +317,27 @@ void AFXAPI DDX_OCIntRO(
     long& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocshort"></a>DDX_OCShort  
- `DDX_OCShort`函式管理] 對話方塊的 [表單檢視中的 OLE 控制項的屬性之間的簡短的資料傳送，或控制檢視物件和短的資料成員的對話方塊中，表單檢視，或控制檢視物件。  
+##  <a name="ddx_ocshort"></a>  DDX_OCShort  
+ The `DDX_OCShort` function manages the transfer of short data between a property of an OLE control in a dialog box, form view, or control view object and a short data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCShort(
@@ -347,27 +347,27 @@ void AFXAPI DDX_OCShort(
     short& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
- `DDX_OCShortRO`函式管理簡短之間傳送資料] 對話方塊的 [表單檢視中的 OLE 控制項的唯讀屬性或控制項檢視物件和短的資料成員的對話方塊中，表單檢視，或控制檢視物件。  
+##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO  
+ The `DDX_OCShortRO` function manages the transfer of short data between a read-only property of an OLE control in a dialog box, form view, or control view object and a short data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCShortRO(
@@ -377,27 +377,27 @@ void AFXAPI DDX_OCShortRO(
     short& value);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_octext"></a>DDX_OCText  
- **DDX_OCText**函式會管理傳送**CString**的 OLE 控制項在對話方塊中，屬性之間的資料表單檢視或控制檢視物件和**CString**對話方塊、 表單檢視或控制檢視物件的資料成員。  
+##  <a name="ddx_octext"></a>  DDX_OCText  
+ The **DDX_OCText** function manages the transfer of **CString** data between a property of an OLE control in a dialog box, form view, or control view object and a **CString** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCText(
@@ -407,27 +407,27 @@ void AFXAPI DDX_OCText(
     CString& value); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指標**CDataExchange**物件。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a **CDataExchange** object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_octextro"></a>DDX_OCTextRO  
- `DDX_OCTextRO` 函式可管理對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的唯讀屬性，與對話方塊、表單檢視或控制項檢視物件的 `CString` 資料成員之間的 `CString` 資料傳輸。  
+##  <a name="ddx_octextro"></a>  DDX_OCTextRO  
+ The `DDX_OCTextRO` function manages the transfer of `CString` data between a read-only property of an OLE control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_OCTextRO(
@@ -437,25 +437,25 @@ void AFXAPI DDX_OCTextRO(
     CString& value); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- 對話方塊、表單檢視或控制項檢視物件中 OLE 控制項的識別碼。  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- 控制項屬性的分派識別碼。  
+ The dispatch ID of a property of the control.  
   
  *value*  
- 用來交換資料之對話方塊、表單檢視或控制項檢視物件的成員變數參考。  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>備註  
- 如需有關 DDX 的詳細資訊，請參閱[對話資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
 
-### <a name="requirements"></a>需求  
-  **標頭**afxdisp.h
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h
     
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

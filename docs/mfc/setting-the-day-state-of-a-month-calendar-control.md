@@ -1,58 +1,77 @@
 ---
-title: "設定月曆控制項的日期狀態 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MCN_GETDAYSTATE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMonthCalCtrl 類別, 設定日期狀態資訊"
-  - "MCN_GETDAYSTATE 告知"
-  - "月曆控制項, 日期狀態資訊"
+title: Setting the Day State of a Month Calendar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MCN_GETDAYSTATE
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMonthCalCtrl class [MFC], setting day state info
+- MCN_GETDAYSTATE notification [MFC]
+- month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 設定月曆控制項的日期狀態
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5cc3c804936834f017d01c967674d19e14f1facd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-月曆控制項的其中一個屬性是能夠儲存資訊，參考至該月份每天控制項狀態的日期。  這個資訊可用來強調目前顯示的月份中某些特別的日期。  
+---
+# <a name="setting-the-day-state-of-a-month-calendar-control"></a>Setting the Day State of a Month Calendar Control
+One of the attributes of a month calendar control is the ability to store information, referred to as the day state of the control, for each day of the month. This information is used to emphasize certain dates for the month currently displayed.  
   
 > [!NOTE]
->  `CMonthCalCtrl` 物件必須有 **MCS\_DAYSTATE** 樣式，以顯示日期狀態資訊。  
+>  The `CMonthCalCtrl` object must have the **MCS_DAYSTATE** style to display day state information.  
   
- 日期狀態資訊是 32 位元資料型別， **MONTHDAYSTATE**。  **MONTHDAYSTATE** 位元欄位 \(從 1 到 31\) 的每個位元表示一個月裡一天的狀態。  如果位元是開啟的，則對應的日期會以粗體顯示；否則其顯示不會有任何強調。  
+ Day state information is expressed as a 32-bit data type, **MONTHDAYSTATE**. Each bit in a **MONTHDAYSTATE** bit field (1 through 31) represents the state of a day in a month. If a bit is on, the corresponding day will be displayed in bold; otherwise it will be displayed with no emphasis.  
   
- 有兩種方法可以設定月曆控制項上的日期狀態：明確呼叫 [CMonthCalCtrl::SetDayState](../Topic/CMonthCalCtrl::SetDayState.md) 或處理 **MCN\_GETDAYSTATE** 通知訊息。  
+ There are two methods for setting the day state of the month calendar control: explicitly with a call to [CMonthCalCtrl::SetDayState](../mfc/reference/cmonthcalctrl-class.md#setdaystate) or by handling the **MCN_GETDAYSTATE** notification message.  
   
-## 處理 MCN\_GETDAYSTATE 通知訊息  
- **MCN\_GETDAYSTATE** 資訊由控制項傳送，以判斷顯示月份中的日期應該如何顯示。  
+## <a name="handling-the-mcngetdaystate-notification-message"></a>Handling the MCN_GETDAYSTATE Notification Message  
+ The **MCN_GETDAYSTATE** message is sent by the control to determine how the days within the visible months should be displayed.  
   
 > [!NOTE]
->  因為控制項會快取之前和之後的月份，如需可見的月份，您會在新的月份被選取時接收這個告知。  
+>  Because the control caches the previous and following months, in respect to the visible month, you will receive this notification every time a new month is chosen.  
   
- 若要適當地處理這個訊息，您必須判斷多少個月份日狀態資訊正在被要求，初始化一個具有適當值的 **MONTHDAYSTATE** 結構之陣列，並以新的資訊初始化相關的結構成員。  下列程序列出詳細的必要步驟，假設您有一個名為 `m_monthcal` 的 `CMonthCalCtrl` 物件，和一個 **MONTHDAYSTATE** 物件的陣列 `mdState`。  
+ To properly handle this message, you must determine how many months day state information is being requested for, initialize an array of **MONTHDAYSTATE** structures with the proper values, and initialize the related structure member with the new information. The following procedure, detailing the necessary steps, assumes that you have a `CMonthCalCtrl` object called `m_monthcal` and an array of **MONTHDAYSTATE** objects, `mdState`.  
   
-#### 若要處理 MCN\_GETDAYSTATE 通知訊息  
+#### <a name="to-handle-the-mcngetdaystate-notification-message"></a>To handle the MCN_GETDAYSTATE notification message  
   
-1.  使用屬性視窗，將 **MCN\_GETDAYSTATE** 訊息的通知處理常式加入至 `m_monthcal` 物件 \(請參閱 [對應訊息至函式](../mfc/reference/mapping-messages-to-functions.md)\)。  
+1.  Using the Properties window, add a notification handler for the **MCN_GETDAYSTATE** message to the `m_monthcal` object (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-2.  在處理常式的的主體，加入下列程式碼：  
+2.  In the body of the handler, add the following code:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/CPP/setting-the-day-state-of-a-month-calendar-control_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]  
   
-     這個範例會將 `pNMHDR` 指標轉換為適當的型別，然後判斷多少月份的資訊正在被要求 \(`pDayState->cDayState`\)。  對於每個月份，目前的位元欄位 \(`pDayState->prgDayState[i]`\) 初始化為零，而需要的日期已設定 \(在這個情況中為，每個月的第 15 天\)。  
+     The example converts the `pNMHDR` pointer to the proper type, then determines how many months of information are being requested (`pDayState->cDayState`). For each month, the current bitfield (`pDayState->prgDayState[i]`) is initialized to zero and then the needed dates are set (in this case, the 15th of each month).  
   
-## 請參閱  
- [使用 CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

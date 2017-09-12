@@ -1,63 +1,82 @@
 ---
-title: "開啟檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFile 類別, 變數"
-  - "範例 [MFC], 開啟檔案"
-  - "例外狀況處理 [C++], 開啟檔案"
-  - "例外狀況處理 [C++], 當開啟檔案時"
-  - "檔案物件 [C++]"
-  - "檔案 [C++], 開啟"
-  - "MFC [C++], 檔案作業"
-  - "Open 呼叫"
-  - "Open 成員函式"
-  - "Open 方法, CFile 類別"
-  - "開啟檔案"
-  - "開啟檔案, 例外狀況處理"
-  - "開啟檔案, 在 MFC 中"
+title: Opening Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open member functions [MFC]
+- CFile class [MFC], variable
+- opening files, in MFC
+- Open calls [MFC]
+- Open method, CFile class [MFC]
+- examples [MFC], opening files
+- opening files, handling exceptions
+- exception handling [MFC], when opening files
+- files [MFC], opening
+- file objects [MFC]
+- MFC, file operations
+- opening files [MFC]
+- exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 開啟檔案
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aba8aa5c5f2d55058422d64b101f68106ea2667b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在 MFC 中，開啟檔案的最常見的方式是兩階段的程序。  
+---
+# <a name="opening-files"></a>Opening Files
+In MFC, the most common way to open a file is a two-stage process.  
   
-#### 開啟檔案  
+#### <a name="to-open-a-file"></a>To open a file  
   
-1.  建立檔案物件，而不指定路徑或使用權限旗標。  
+1.  Create the file object without specifying a path or permission flags.  
   
-     您通常藉由在堆疊框架宣告 [CFile](../mfc/reference/cfile-class.md) 變數建立檔案物件。  
+     You usually create a file object by declaring a [CFile](../mfc/reference/cfile-class.md) variable on the stack frame.  
   
-2.  對檔案物件呼叫 [Open](../Topic/CFile::Open.md) 成員函式，提供路徑和使用權限旗標。  
+2.  Call the [Open](../mfc/reference/cfile-class.md#open) member function for the file object, supplying a path and permission flags.  
   
-     如果已成功開啟檔案，`Open` 的傳回值會是非零，或 0 如果無法開啟指定的檔案。  `Open` 成員函式原型如下:  
+     The return value for `Open` will be nonzero if the file was opened successfully or 0 if the specified file could not be opened. The `Open` member function is prototyped as follows:  
   
      `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`  
   
-     開啟旗標指定您想要檔案的使用權限，例如唯讀。  可能的旗標值定義在 `CFile` 類別中的列舉常數，使其符合"`CFile::`" 如 `CFile::modeRead`。  如果您要建立檔案，請使用 `CFile::modeCreate` 旗標。  
+     The open flags specify which permissions, such as read-only, you want for the file. The possible flag values are defined as enumerated constants within the `CFile` class, so they are qualified with "`CFile::`" as in `CFile::modeRead`. Use the `CFile::modeCreate` flag if you want to create the file.  
   
- 下列範例顯示如何建立具有讀取\/寫入權限的新檔案 \(取代任何之前具有相同路徑的檔案\):  
+ The following example shows how to create a new file with read/write permission (replacing any previous file with the same path):  
   
- [!code-cpp[NVC_MFCFiles#1](../mfc/codesnippet/CPP/opening-files_1.cpp)]  
+ [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  這個範例會建立並開啟檔案。  如果有問題， `Open` 可能會呼叫在它的最後一個參數的 `CFileException` 物件，如下所示。  `TRACE` 巨集列印表示失敗的檔案名稱和程式碼原因。  如果您需要更詳細的錯誤報告，您可以呼叫 `AfxThrowFileException` 函式。  
+>  This example creates and opens a file. If there are problems, the `Open` call can return a `CFileException` object in its last parameter, as shown here. The `TRACE` macro prints both the file name and a code indicating the reason for failure. You can call the `AfxThrowFileException` function if you require more detailed error reporting.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [CFile Class](../mfc/reference/cfile-class.md)   
- [CFile::Open](../Topic/CFile::Open.md)   
- [檔案](../mfc/files-in-mfc.md)
+ [CFile::Open](../mfc/reference/cfile-class.md#open)   
+ [Files](../mfc/files-in-mfc.md)
+
+

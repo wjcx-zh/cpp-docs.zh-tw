@@ -1,62 +1,81 @@
 ---
-title: "處理工具提示的 TTN_NEEDTEXT 告知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TTN_NEEDTEXT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "告知, 工具提示"
-  - "工具提示 [C++], 告知"
-  - "TTN_NEEDTEXT 訊息"
+title: Handling TTN_NEEDTEXT Notification for Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TTN_NEEDTEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- TTN_NEEDTEXT message [MFC]
+- notifications [MFC], tool tips
+- tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 處理工具提示的 TTN_NEEDTEXT 告知
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd7b4e4d9e022f7c33191ca181ae6be3a701800c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-做為 [啟用工具提示](../mfc/enabling-tool-tips.md)一節中，您可以將下列輸入處理 **TTN\_NEEDTEXT** 訊息至主控視窗的訊息對應:  
+---
+# <a name="handling-ttnneedtext-notification-for-tool-tips"></a>Handling TTN_NEEDTEXT Notification for Tool Tips
+As part of [enabling tool tips](../mfc/enabling-tool-tips.md), you handle the **TTN_NEEDTEXT** message by adding the following entry to your owner window's message map:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/CPP/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]  
   
  `memberFxn`  
- 要呼叫的，當文字此按鈕所需的成員函式。  
+ The member function to be called when text is needed for this button.  
   
- 請注意工具提示的識別碼一定是 0。  
+ Note that the ID of a tool tip is always 0.  
   
- 宣告在類別定義的處理常式函式:  
+ Declare your handler function in the class definition as follows:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/CPP/handling-ttn-needtext-notification-for-tool-tips_2.h)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]  
   
- 其中斜體參數:  
+ where the italicized parameters are:  
   
  `id`  
- 傳送通知控制項的識別項。  不適用。  控制項 ID 從 **NMHDR** 結構中取得。  
+ Identifier of the control that sent the notification. Not used. The control id is taken from the **NMHDR** structure.  
   
  `pNMHDR`  
- out [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) 結構的指標。  這個結構進一步在 [TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)也會討論。  
+ A pointer to the [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) structure. This structure is also discussed further in [The TOOLTIPTEXT Structure](../mfc/tooltiptext-structure.md).  
   
  `pResult`  
- 產生的指標可以設定的程式碼，在返回之前。  **TTN\_NEEDTEXT** 處理常式可以忽略 `pResult` 參數。  
+ A pointer to result code you can set before you return. **TTN_NEEDTEXT** handlers can ignore the `pResult` parameter.  
   
- 例如表單檢視告知處理常式:  
+ As an example of a form-view notification handler:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/CPP/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]  
   
- 呼叫 `EnableToolTips` \(從 `OnInitDialog`取得的片段\):  
+ Call `EnableToolTips` (this fragment taken from `OnInitDialog`):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/CPP/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]  
   
-## 請參閱  
- [非衍生自 CFrameWnd 之視窗中的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

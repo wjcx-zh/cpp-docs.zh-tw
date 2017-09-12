@@ -1,35 +1,54 @@
 ---
-title: "屬性工作表做為精靈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "屬性工作表, 做為精靈"
+title: Property Sheets as Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 屬性工作表做為精靈
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b590d9587fafe23e570e22fac04173d91ca1976
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-索引鍵通常精靈屬性工作表是巡覽隨下或結束、後面和取消按鈕取代選項。  您必須在呼叫屬性工作表物件的 [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) 之前使用這項功能就稱為 [CPropertySheet::SetWizardMode](../Topic/CPropertySheet::SetWizardMode.md) 。  
+---
+# <a name="property-sheets-as-wizards"></a>Property Sheets as Wizards
+A key characteristic of a wizard property sheet is that navigation is provided with Next or Finish, Back, and Cancel buttons instead of tabs. You need to call [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) before calling [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) on the property sheet object to take advantage of this feature.  
   
- 使用者收到相同的 [CPropertyPage::OnSetActive](../Topic/CPropertyPage::OnSetActive.md) 和 [CPropertyPage::OnKillActive](../Topic/CPropertyPage::OnKillActive.md) 告知，當將從一頁移至其他頁面時。  下個和結束按鈕是互斥的控制項;即一次只會顯示其中一個。  在第一頁，下一步按鈕應該啟用。  如果使用者為最後一頁，結束按鈕應該啟用。  這不是由架構會自動完成的。  您必須呼叫在最後一頁的 [CPropertySheet::SetWizardButton](../Topic/CPropertySheet::SetWizardButtons.md) 達成這個目的。  
+ The user receives the same [CPropertyPage::OnSetActive](../mfc/reference/cpropertypage-class.md#onsetactive) and [CPropertyPage::OnKillActive](../mfc/reference/cpropertypage-class.md#onkillactive) notifications while moving from one page to another page. Next and Finish buttons are mutually exclusive controls; that is, only one of them will be shown at a time. On the first page, the Next button should be enabled. If the user is on the last page, the Finish button should be enabled. This is not done automatically by the framework. You have to call [CPropertySheet::SetWizardButton](../mfc/reference/cpropertysheet-class.md#setwizardbuttons) on the last page to achieve this.  
   
- 顯示所有預設按鈕，您必須示範關閉按鈕和將移動下一個按鈕。  然後移至上一頁按鈕，讓它與下個按鈕相對維護。  如需詳細說明，請搜尋知識庫文件 Q143210。  可以在 MSDN library 中尋找知識庫文件。  
+ To display all of the default buttons, you mush show the Finish button and move the Next button. Then move the Back button so that its relative position to the Next button is maintained.  
   
-## 範例  
- [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/CPP/property-sheets-as-wizards_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
-## 請參閱  
- [屬性工作表](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

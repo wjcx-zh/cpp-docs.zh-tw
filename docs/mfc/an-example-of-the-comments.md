@@ -1,40 +1,59 @@
 ---
-title: "註解的範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "程式碼註解, MFC"
-  - "註解, MFC"
-  - "範例 [MFC], 程式碼註解"
-  - "MFC 原始程式檔, 註解範例"
+title: An Example of the Comments | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC source files, comment example
+- code comments, MFC
+- comments, MFC
+- examples [MFC], code comments
 ms.assetid: eb8ddea2-74de-4d5c-93d6-596f7c5e58a7
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 註解的範例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e76e853073157dca03fec67a19a5f583c0cbfee7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-類別 `CChildFrame` 下列部分會使用 MFC 在其類別使用方式分割類別成員使用其大部分標準註解:  
+---
+# <a name="an-example-of-the-comments"></a>An Example of the Comments
+The following partial listing of class `CChildFrame` uses most of the standard comments that MFC employs in its classes to divide class members by the ways they are used:  
   
- [!code-cpp[NVC_MFCListView#5](../mfc/codesnippet/CPP/an-example-of-the-comments_1.h)]  
+ [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
   
- 這些註解一致地指示包含相似類型類別成員類別宣告的一部分。  記住這些是 MFC 慣例，未設定規則。  
+ These comments consistently mark sections of the class declaration that contain similar kinds of class members. Keep in mind that these are MFC conventions, not set rules.  
   
-## 請參閱  
- [使用 MFC 原始程式檔](../mfc/using-the-mfc-source-files.md)   
- [\/\/ 實作註解](../mfc/decrement-implementation-comment.md)   
- [\/\/ 建構函式註解](../mfc/decrement-constructors-comment.md)   
- [\/\/ 屬性註解](../mfc/decrement-attributes-comment.md)   
- [\/\/ 作業註解](../mfc/decrement-operations-comment.md)   
- [\/\/ 可覆寫函式註解](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

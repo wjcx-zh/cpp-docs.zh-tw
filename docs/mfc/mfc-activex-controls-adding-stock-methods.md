@@ -1,70 +1,88 @@
 ---
-title: "MFC ActiveX 控制項：加入內建方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoClick 方法"
-  - "MFC ActiveX 控制項, 方法"
-  - "MFC ActiveX 控制項, 內建方法"
+title: 'MFC ActiveX Controls: Adding Stock Methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], stock methods
+- MFC ActiveX controls [MFC], methods
+- DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC ActiveX 控制項：加入內建方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a62e9c34de043f55b89b59554bf7aaac3b48421
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-內建方法與自訂方法不同之處在於它由 [COleControl](../mfc/reference/colecontrol-class.md)類別已經實作。  例如， `COleControl` 會包含支援您的控制項重新整理方法之預先定義的成員函式。  這個內建方法的分派對應項目是 **DISP\_STOCKFUNC\_REFRESH**。  
+---
+# MFC ActiveX Controls: Adding Stock Methods
+A stock method differs from a custom method in that it is already implemented by class [COleControl](../mfc/reference/colecontrol-class.md). For example, `COleControl` contains a predefined member function that supports the Refresh method for your control. The dispatch map entry for this stock method is **DISP_STOCKFUNC_REFRESH**.  
   
- `COleControl` 支援兩個內建方法:DoClick 和重新整理。  重新整理控制項的使用者叫用立即更新控制項的外觀;叫用 DoClick 引發控制項的 Click 事件。  
+ `COleControl` supports two stock methods: DoClick and Refresh. Refresh is invoked by the control's user to immediately update the control's appearance; DoClick is invoked to fire the control's Click event.  
   
-|方法|分派對應項目|Comment|  
-|--------|------------|-------------|  
-|`DoClick`|**DISP\_STOCKPROP\_DOCLICK \(\)**|引發 Click 事件。|  
-|**重新整理**|**DISP\_STOCKPROP\_REFRESH \(\)**|立即更新控制項的外觀。|  
+|Method|Dispatch map entry|Comment|  
+|------------|------------------------|-------------|  
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Fires a Click event.|  
+|**Refresh**|**DISP_STOCKPROP_REFRESH( )**|Immediately updates the control's appearance.|  
   
-##  <a name="_core_adding_a_stock_method_using_classwizard"></a> 將使用加入方法精靈的內建方法  
- 將內建方法使用 [加入方法精靈](../ide/add-method-wizard.md)很簡單。  下列程序示範如何將方法重新整理到使用 MFC ActiveX 控制項精靈所建立的控制項。  
+##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Adding a Stock Method Using the Add Method Wizard  
+ Adding a stock method is simple using the [Add Method Wizard](../ide/add-method-wizard.md). The following procedure demonstrates adding the Refresh method to a control created using the MFC ActiveX Control Wizard.  
   
-#### 使用加入方法精靈，將這個共用重新整理方法  
+#### To add the stock Refresh method using the Add Method Wizard  
   
-1.  載入控制項的專案。  
+1.  Load your control's project.  
   
-2.  在類別檢視中，展開您的控制項程式庫節點。  
+2.  In Class View, expand the library node of your control.  
   
-3.  以滑鼠右鍵按一下控制項的 \(程式庫節點的第二個節點介面節點\) 開啟捷徑功能表。  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  從捷徑功能表上，按一下 **Add** 然後按一下 **Add Method**。  
+4.  From the shortcut menu, click **Add** and then click **Add Method**.  
   
-     這會開啟加入方法精靈。  
+     This opens the Add Method Wizard.  
   
-5.  在 **Method Name** 方塊中，按一下 **Refresh**。  
+5.  In the **Method Name** box, click **Refresh**.  
   
-6.  按一下 \[**完成**\]。  
+6.  Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_stock_methods"></a> 加入方法內建方法的精靈變更  
- 由於這個共用重新整理方法是由控制項的基底類別以任何方式支援， **Add Method Wizard** 不會變更控制項的類別宣告。  它的方法加入項目至控制項的分派對應到和其 .IDL 檔案。  下列程式碼行加入至控制項的分派對應，其實作 \(.CPP\) 檔案:  
+##  <a name="_core_classwizard_changes_for_stock_methods"></a> Add Method Wizard Changes for Stock Methods  
+ Because the stock Refresh method is supported by the control's base class, the **Add Method Wizard** does not change the control's class declaration in any way. It adds an entry for the method to the control's dispatch map and to its .IDL file. The following line is added to the control's dispatch map, located in its implementation (.CPP) file:  
   
- [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-methods_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]  
   
- 這個重新整理方法提供給控制項的使用者。  
+ This makes the Refresh method available to the control's users.  
   
- 下列程式碼行加入至控制項的 .IDL 檔案:  
+ The following line is added to the control's .IDL file:  
   
- [!code-cpp[NVC_MFC_AxUI#17](../mfc/codesnippet/CPP/mfc-activex-controls-adding-stock-methods_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#17](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_2.idl)]  
   
- 這一行會將方法重新整理每個特定 ID 編號。  
+ This line assigns the Refresh method a specific ID number.  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
+## See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

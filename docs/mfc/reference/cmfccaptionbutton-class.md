@@ -1,5 +1,5 @@
 ---
-title: "CMFCCaptionButton 類別 |Microsoft 文件"
+title: CMFCCaptionButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCCaptionButton class
+- CMFCCaptionButton [MFC], CMFCCaptionButton
+- CMFCCaptionButton [MFC], GetHit
+- CMFCCaptionButton [MFC], GetIconID
+- CMFCCaptionButton [MFC], GetRect
+- CMFCCaptionButton [MFC], GetSize
+- CMFCCaptionButton [MFC], IsMiniFrameButton
+- CMFCCaptionButton [MFC], Move
+- CMFCCaptionButton [MFC], OnDraw
+- CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
 caps.latest.revision: 28
 author: mikeblome
@@ -43,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9d6342f87622c34b671ad5ea443eb78ffd8c3838
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b23d49205c080b9eb38577f97ee0b6e0a1e4f6b3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 類別
-`CMFCCaptionButton`類別實作停駐窗格或迷你框架視窗的標題列顯示的按鈕。 Framework 通常會自動建立標題按鈕。  
+# <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton Class
+The `CMFCCaptionButton` class implements a button that is displayed on the caption bar for a docking pane or a mini-frame window. Typically, the framework creates caption buttons automatically.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCCaptionButton : public CObject  
@@ -61,49 +69,49 @@ class CMFCCaptionButton : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|建構 CMFCCaptionButton 物件。|  
+|[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Constructs a CMFCCaptionButton object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionButton::GetHit](#gethit)|傳回代表按鈕的命令。|  
-|[CMFCCaptionButton::GetIconID](#geticonid)|傳回與按鈕關聯的影像 ID。|  
-|[CMFCCaptionButton::GetRect](#getrect)|傳回按鈕所佔據的矩形。|  
-|[CMFCCaptionButton::GetSize](#getsize)|傳回按鈕的高度與寬度。|  
-|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|指出是否要將標題列的高度設定為迷你大小。|  
-|[CMFCCaptionButton::Move](#move)|設定按鈕繪製位置和視窗中顯示狀態。|  
-|[CMFCCaptionButton::OnDraw](#ondraw)|繪製標題按鈕。|  
-|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|設定迷你標題列的大小。|  
+|[CMFCCaptionButton::GetHit](#gethit)|Returns the command represented by the button.|  
+|[CMFCCaptionButton::GetIconID](#geticonid)|Returns the image ID associated with the button.|  
+|[CMFCCaptionButton::GetRect](#getrect)|Returns the rectangle occupied by the button.|  
+|[CMFCCaptionButton::GetSize](#getsize)|Returns the width and height of the button.|  
+|[CMFCCaptionButton::IsMiniFrameButton](#isminiframebutton)|Indicates whether the title bar height is set to mini size.|  
+|[CMFCCaptionButton::Move](#move)|Sets the button draw location and window show state.|  
+|[CMFCCaptionButton::OnDraw](#ondraw)|Draws the caption button.|  
+|[CMFCCaptionButton::SetMiniFrameButton](#setminiframebutton)|Sets the mini size of the title bar.|  
   
-## <a name="remarks"></a>備註  
- 您可以衍生自[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)，並使用受保護的方法，`AddButton`要加入的迷你框架視窗標題按鈕。  
+## <a name="remarks"></a>Remarks  
+ You can derive a class from [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md) and use the protected method, `AddButton`, to add caption buttons to a mini frame window.  
   
- CPaneFrameWnd.h 會定義兩種類型的標題按鈕的命令識別碼︰  
+ CPaneFrameWnd.h defines command IDs for two types of caption buttons:  
   
-- `AFX_CAPTION_BTN_PIN`其中顯示釘選按鈕停駐窗格支援自動隱藏模式時。  
+- `AFX_CAPTION_BTN_PIN`, which displays a pin button when the docking pane supports auto-hide mode.  
   
-- `AFX_CAPTION_BTN_CLOSE`用來顯示**關閉**按鈕時，可以關閉或隱藏窗格。  
+- `AFX_CAPTION_BTN_CLOSE`, which displays a **Close** button when the pane can be closed or hidden.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何建構`CMFCCaptionButton`物件，並設定迷你標題列的大小。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCCaptionButton` object and set the mini size of the title bar.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&43;](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#43](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCCaptionButton](../../mfc/reference/cmfccaptionbutton-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxcaptionbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcaptionbutton.h  
   
-##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
- 建構 `CMFCCaptionButton` 物件。  
+##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
+ Constructs a `CMFCCaptionButton` object.  
   
 ```  
 CMFCCaptionButton();
@@ -114,54 +122,54 @@ CMFCCaptionButton(
     BOOL bLeftAlign = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nHit`  
- 關聯按鈕的命令。  
+ The command associated with the button.  
   
  [in] `bLeftAlign`  
- 指定按鈕是否靠左對齊。  
+ Specifies whether the button is aligned to the left.  
   
- 下表列出可能的值為`nHit`參數。  
+ The following table lists possible values for the `nHit` parameter.  
   
-|值|命令|  
+|Value|Command|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|[關閉] 按鈕。|  
-|`HTMINBUTTON`|最小化按鈕。|  
-|`HTMAXBUTTON`|最大化 按鈕。|  
-|`AFX_HTLEFTBUTTON`|向左箭號按鈕。|  
-|`AFX_HTRIGHTBUTTON`|向右箭號按鈕。|  
-|`AFX_HTMENU`|向下箭號 功能表按鈕。|  
-|`HTNOWHERE`|預設值。不代表任何命令。|  
+|`AFX_HTCLOSE`|Close button.|  
+|`HTMINBUTTON`|Minimize button.|  
+|`HTMAXBUTTON`|Maximize button.|  
+|`AFX_HTLEFTBUTTON`|Left arrow button.|  
+|`AFX_HTRIGHTBUTTON`|Right arrow button.|  
+|`AFX_HTMENU`|Down arrow menu button.|  
+|`HTNOWHERE`|The default value; represents no command.|  
   
-### <a name="remarks"></a>備註  
- 根據預設，標題按鈕不會與命令相關聯。  
+### <a name="remarks"></a>Remarks  
+ By default, caption buttons are not associated with a command.  
   
- 標題按鈕右邊或左邊對齊。  
+ Caption buttons are aligned either on the right or left.  
   
-##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
- 傳回代表按鈕的命令。  
+##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
+ Returns the command represented by the button.  
   
 ```  
 UINT GetHit() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 命令按鈕所表示。  
+### <a name="return-value"></a>Return Value  
+ The command represented by the button.  
   
- 下表列出可能的傳回值。  
+ The following table lists possible return values.  
   
-|值|命令|  
+|Value|Command|  
 |-----------|-------------|  
-|`AFX_HTCLOSE`|[關閉] 按鈕。|  
-|`HTMINBUTTON`|最小化按鈕。|  
-|`HTMAXBUTTON`|最大化 按鈕。|  
-|`AFX_HTLEFTBUTTON`|向左箭號按鈕。|  
-|`AFX_HTRIGHTBUTTON`|向右箭號按鈕。|  
-|`AFX_HTMENU`|向下箭號 功能表按鈕。|  
-|`HTNOWHERE`|預設值。不代表任何命令。|  
+|`AFX_HTCLOSE`|Close button.|  
+|`HTMINBUTTON`|Minimize button.|  
+|`HTMAXBUTTON`|Maximize button.|  
+|`AFX_HTLEFTBUTTON`|Left arrow button.|  
+|`AFX_HTRIGHTBUTTON`|Right arrow button.|  
+|`AFX_HTMENU`|Down arrow menu button.|  
+|`HTNOWHERE`|The default value; represents no command.|  
   
-##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
- 傳回與按鈕關聯的影像 ID。  
+##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
+ Returns the image ID associated with the button.  
   
 ```  
 virtual CMenuImages::IMAGES_IDS GetIconID(
@@ -169,59 +177,59 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
     BOOL bMaximized = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bHorz`  
- `TRUE`向左或向右箭號影像 Id。`FALSE`的向上或向下箭號影像 Id。  
+ `TRUE` for left or right arrow image IDs; `FALSE` for up or down arrow image IDs.  
   
  [in] `bMaximized`  
- `TRUE`最大化影像 ID。`FALSE`最小化映像識別碼。  
+ `TRUE` for a maximize image ID; `FALSE` for a minimize image ID.  
   
-### <a name="return-value"></a>傳回值  
- 映像的識別碼。  
+### <a name="return-value"></a>Return Value  
+ The image ID.  
   
-### <a name="remarks"></a>備註  
- 參數會指定最小化的映像識別碼，或最大化標題按鈕。  
+### <a name="remarks"></a>Remarks  
+ The parameters specify image IDs for minimize or maximize caption buttons.  
   
-##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
- 傳回按鈕所佔據的矩形。  
+##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
+ Returns the rectangle occupied by the button.  
   
 ```  
 virtual CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 表示按鈕的位置矩形。  
+### <a name="return-value"></a>Return Value  
+ The rectangle that represents the location of the button.  
   
-### <a name="remarks"></a>備註  
- 如果您無法看到此按鈕，傳回的大小為 0。  
+### <a name="remarks"></a>Remarks  
+ If you cannot see the button, the size returned is 0.  
   
-##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
- 傳回按鈕的高度與寬度。  
+##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
+ Returns the width and height of the button.  
   
 ```  
 static CSize GetSize();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 按鈕的外部的維度。  
+### <a name="return-value"></a>Return Value  
+ The outer dimensions of the button.  
   
-### <a name="remarks"></a>備註  
- 傳回的大小包含按鈕邊界和邊框。  
+### <a name="remarks"></a>Remarks  
+ The size returned includes button margin and border.  
   
-##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
- 指出是否要將標題列的高度設定為迷你大小。  
+##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
+ Indicates whether the title bar height is set to mini size.  
   
 ```  
 BOOL IsMiniFrameButton() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果標題設為迷你大小;否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the caption is set to mini size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="move"></a>CMFCCaptionButton::Move  
- 設定按鈕繪製位置和視窗中顯示狀態。  
+##  <a name="move"></a>  CMFCCaptionButton::Move  
+ Sets the button draw location and window show state.  
   
 ```  
 void Move(
@@ -229,15 +237,15 @@ void Move(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `ptTo`  
- 新位置。  
+ The new location.  
   
  [in] `bHide`  
- 是否要顯示的按鈕。  
+ Whether to show the button.  
   
-##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
- 繪製標題按鈕。  
+##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
+ Draws the caption button.  
   
 ```  
 virtual void OnDraw(
@@ -248,39 +256,39 @@ virtual void OnDraw(
     BOOL bDisabled = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 按鈕的裝置內容的指標。  
+ Pointer to a device context for the button.  
   
  [in] `bActive`  
- 是否要畫作用中 按鈕。  
+ Whether to draw an active button image.  
   
  [in] `bHorz`  
- 保留供衍生類別中使用。  
+ Reserved for use in a derived class.  
   
  [in] `bMaximized`  
- 是否要繪製最大化 按鈕的影像。  
+ Whether to draw a maximized button image.  
   
  [in] `bDisabled`  
- 是否要繪製已啟用 按鈕影像。  
+ Whether to draw an enabled button image.  
   
-### <a name="remarks"></a>備註  
- `bMaximized`參數會使用最大化 按鈕時，或最小化按鈕。  
+### <a name="remarks"></a>Remarks  
+ The `bMaximized` parameter is used when the button is a maximize or minimize button.  
   
-##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
- 設定迷你標題列的大小。  
+##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
+ Sets the mini size of the title bar.  
   
 ```  
 void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`迷你標題列的高度;`FALSE`的預設標題列的高度。  
+ `TRUE` for mini title bar height; `FALSE` for default title bar height.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)   
- [CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CDataPathProperty 類別 |Microsoft 文件"
+title: CDataPathProperty Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -21,10 +21,13 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ActiveX controls [C++], asynchronous
-- OLE controls [C++], asynchronous
-- CDataPathProperty class
-- asynchronous controls [C++]
+- CDataPathProperty [MFC], CDataPathProperty
+- CDataPathProperty [MFC], GetControl
+- CDataPathProperty [MFC], GetPath
+- CDataPathProperty [MFC], Open
+- CDataPathProperty [MFC], ResetData
+- CDataPathProperty [MFC], SetControl
+- CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
 caps.latest.revision: 24
 author: mikeblome
@@ -44,17 +47,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d767cf950d8b86959aadc2fd4d77401134a6dc75
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0c93eec0c2f8c33c7cc56a1e4e8a67996c56d6b4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdatapathproperty-class"></a>CDataPathProperty 類別
-實作可以非同步載入的 OLE 控制項屬性。  
+# <a name="cdatapathproperty-class"></a>CDataPathProperty Class
+Implements an OLE control property that can be loaded asynchronously.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDataPathProperty : public CAsyncMonikerFile  
@@ -62,35 +65,35 @@ class CDataPathProperty : public CAsyncMonikerFile
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|建構 `CDataPathProperty` 物件。|  
+|[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Constructs a `CDataPathProperty` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDataPathProperty::GetControl](#getcontrol)|擷取相關聯的非同步 OLE 控制項`CDataPathProperty`物件。|  
-|[CDataPathProperty::GetPath](#getpath)|擷取屬性的路徑名稱。|  
-|[CDataPathProperty::Open](#open)|初始載入相關聯的 ActiveX (OLE) 控制項的非同步屬性。|  
-|[CDataPathProperty::ResetData](#resetdata)|呼叫`CAsyncMonikerFile::OnDataAvailable`以通知容器控制項的屬性已變更。|  
-|[CDataPathProperty::SetControl](#setcontrol)|設定與屬性相關聯的非同步 ActiveX (OLE) 控制。|  
-|[CDataPathProperty::SetPath](#setpath)|設定屬性的路徑名稱。|  
+|[CDataPathProperty::GetControl](#getcontrol)|Retrieves the asynchronous OLE control associated with the `CDataPathProperty` object.|  
+|[CDataPathProperty::GetPath](#getpath)|Retrieves the pathname of the property.|  
+|[CDataPathProperty::Open](#open)|Initiates loading of the asynchronous property for the associated ActiveX (OLE) control.|  
+|[CDataPathProperty::ResetData](#resetdata)|Calls `CAsyncMonikerFile::OnDataAvailable` to notify the container that the control properties have changed.|  
+|[CDataPathProperty::SetControl](#setcontrol)|Sets the asynchronous ActiveX (OLE) control associated with the property.|  
+|[CDataPathProperty::SetPath](#setpath)|Sets the pathname of the property.|  
   
-## <a name="remarks"></a>備註  
- 非同步屬性會在同步初始之後載入。  
+## <a name="remarks"></a>Remarks  
+ Asynchronous properties are loaded after synchronous initiation.  
   
- 類別`CDataPathProperty`衍生自**CAysncMonikerFile**。 OLE 控制項實作非同步屬性，衍生自`CDataPathProperty`，並覆寫[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)。  
+ The class `CDataPathProperty` is derived from **CAysncMonikerFile**. To implement asynchronous properties in your OLE controls, derive a class from `CDataPathProperty`, and override [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable).  
   
- 如需如何在 網際網路應用程式中使用非同步 moniker 和 ActiveX 控制項的詳細資訊，請參閱下列文章︰  
+ For more information about how to use asynchronous monikers and ActiveX controls in Internet applications, see the following articles:  
   
-- [網際網路的第一個步驟︰ ActiveX 控制項](../../mfc/activex-controls-on-the-internet.md)  
+- [Internet First Steps: ActiveX Controls](../../mfc/activex-controls-on-the-internet.md)  
   
-- [非同步 Moniker 的網際網路第一個步驟︰](../../mfc/asynchronous-monikers-on-the-internet.md)  
+- [Internet First Steps: Asynchronous Monikers](../../mfc/asynchronous-monikers-on-the-internet.md)  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -103,49 +106,49 @@ class CDataPathProperty : public CAsyncMonikerFile
   
  `CDataPathProperty`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxctl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
   
-##  <a name="cdatapathproperty"></a>CDataPathProperty::CDataPathProperty  
- 建構 `CDataPathProperty` 物件。  
+##  <a name="cdatapathproperty"></a>  CDataPathProperty::CDataPathProperty  
+ Constructs a `CDataPathProperty` object.  
   
 ```  
 CDataPathProperty(COleControl* pControl = NULL);  
 CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pControl`  
- 要與此相關聯的 OLE 控制項物件的指標`CDataPathProperty`物件。  
+ A pointer to the OLE control object to be associated with this `CDataPathProperty` object.  
   
  `lpszPath`  
- 路徑可以是絕對或相對，用來建立參考之屬性的實際絕對位置，非同步 moniker。 `CDataPathProperty`會使用 Url，不是檔名。 如果您想`CDataPathProperty`物件的檔案，在前面加上`file://`的路徑。  
+ The path, which may be absolute or relative, used to create an asynchronous moniker that references the actual absolute location of the property. `CDataPathProperty` uses URLs, not filenames. If you want a `CDataPathProperty` object for a file, prepend `file://` to the path.  
   
-### <a name="remarks"></a>備註  
- `COleControl`指向的物件`pControl`由**開啟**，並且擷取衍生的類別。 如果`pControl`是**NULL**，搭配使用的控制項**開啟**應該與設定`SetControl`。 如果`lpszPath`是**NULL**，您可以透過路徑中傳遞**開啟**，或將它與`SetPath`。  
+### <a name="remarks"></a>Remarks  
+ The `COleControl` object pointed to by `pControl` is used by **Open** and retrieved by derived classes. If `pControl` is **NULL**, the control used with **Open** should be set with `SetControl`. If `lpszPath` is **NULL**, you can pass in the path through **Open** or set it with `SetPath`.  
   
-##  <a name="getcontrol"></a>CDataPathProperty::GetControl  
- 呼叫此成員函式擷取`COleControl`物件相關聯`CDataPathProperty`物件。  
+##  <a name="getcontrol"></a>  CDataPathProperty::GetControl  
+ Call this member function to retrieve the `COleControl` object associated with the `CDataPathProperty` object.  
   
 ```  
 COleControl* GetControl();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回與關聯的 OLE 控制項的指標`CDataPathProperty`物件。 **NULL**如果不是控制項相關聯。  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the OLE control associated with the `CDataPathProperty` object. **NULL** if not control is associated.  
   
-##  <a name="getpath"></a>CDataPathProperty::GetPath  
- 呼叫此成員函式，擷取路徑，請設定當`CDataPathProperty`建構，或在指定物件**開啟**，或在前一次呼叫中指定`SetPath`成員函式。  
+##  <a name="getpath"></a>  CDataPathProperty::GetPath  
+ Call this member function to retrieve the path, set when the `CDataPathProperty` object was constructed, or specified in **Open**, or specified in a previous call to the `SetPath` member function.  
   
 ```  
 CString GetPath() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 屬性本身傳回的路徑名稱。 可以是空白，如果未不指定任何路徑。  
+### <a name="return-value"></a>Return Value  
+ Returns the pathname to the property itself. Can be empty if no path has been specified.  
   
-##  <a name="open"></a>CDataPathProperty::Open  
- 呼叫此成員函式，以起始非同步屬性相關聯控制項的載入。  
+##  <a name="open"></a>  CDataPathProperty::Open  
+ Call this member function to initiate loading of the asynchronous property for the associated control.  
   
 ```  
 virtual BOOL Open(
@@ -166,63 +169,63 @@ virtual BOOL Open(
 virtual BOOL Open(CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pControl`  
- 要與此相關聯的 OLE 控制項物件的指標`CDataPathProperty`物件。  
+ A pointer to the OLE control object to be associated with this `CDataPathProperty` object.  
   
  `pError`  
- 檔案例外狀況的指標。 發生錯誤時，將可能的原因。  
+ A pointer to a file exception. In the event of an error, will be set to the cause.  
   
  `lpszPath`  
- 路徑可以是絕對或相對，用來建立參考之屬性的實際絕對位置，非同步 moniker。 `CDataPathProperty`會使用 Url，不是檔名。 如果您想`CDataPathProperty`物件的檔案，在前面加上`file://`的路徑。  
+ The path, which may be absolute or relative, used to create an asynchronous moniker that references the actual absolute location of the property. `CDataPathProperty` uses URLs, not filenames. If you want a `CDataPathProperty` object for a file, prepend `file://` to the path.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 函式會嘗試取得`IBindHost`從控制項的介面。  
+### <a name="remarks"></a>Remarks  
+ The function attempts to obtain the `IBindHost` interface from the control.  
   
- 然後再呼叫**開啟**不包含路徑，您必須設定屬性的路徑值。 這可以建構，或藉由呼叫物件時`SetPath`成員函式。  
+ Before calling **Open** without a path, the value for the property's path must be set. This can be done when the object is constructed, or by calling the `SetPath` member function.  
   
- 然後再呼叫**開啟**不受控制，ActiveX 控制項 （先前稱為 OLE 控制項） 可以是與物件相關聯。 這可以建構，或藉由呼叫物件時`SetControl`。  
+ Before calling **Open** without a control, an ActiveX control (formerly known as an OLE control) can be associated with the object. This can be done when the object is constructed, or by calling `SetControl`.  
   
- 所有多載[CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open)也都由`CDataPathProperty`。  
+ All overloads of [CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open) are also available from `CDataPathProperty`.  
   
-##  <a name="resetdata"></a>CDataPathProperty::ResetData  
- 呼叫此函式可取得`CAsyncMonikerFile::OnDataAvailable`以通知容器，控制項屬性已變更，並以非同步方式載入的所有資訊都都不再有用。  
+##  <a name="resetdata"></a>  CDataPathProperty::ResetData  
+ Call this function to get `CAsyncMonikerFile::OnDataAvailable` to notify the container that the control properties have changed, and all the information loaded asynchronously is no longer useful.  
   
 ```  
 virtual void ResetData();
 ```  
   
-### <a name="remarks"></a>備註  
- 開啟應該重新啟動。 在衍生的類別可以覆寫這個函式供不同的預設值。  
+### <a name="remarks"></a>Remarks  
+ Opening should be restarted. Derived classes can override this function for different defaults.  
   
-##  <a name="setcontrol"></a>CDataPathProperty::SetControl  
- 呼叫此成員函式，將以非同步的 OLE 控制項相關聯`CDataPathProperty`物件。  
+##  <a name="setcontrol"></a>  CDataPathProperty::SetControl  
+ Call this member function to associate an asynchronous OLE control with the `CDataPathProperty` object.  
   
 ```  
 void SetControl(COleControl* pControl);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pControl`  
- 非同步的 OLE 控制項，與屬性相關聯的指標。  
+ A pointer to the asynchronous OLE control to be associated with the property.  
   
-##  <a name="setpath"></a>CDataPathProperty::SetPath  
- 呼叫此成員函式設定屬性的路徑名稱。  
+##  <a name="setpath"></a>  CDataPathProperty::SetPath  
+ Call this member function to set the pathname of the property.  
   
 ```  
 void SetPath(LPCTSTR lpszPath);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszPath`  
- 路徑，可能是絕對或相對的以非同步方式載入的屬性。 `CDataPathProperty`會使用 Url，不是檔名。 如果您想`CDataPathProperty`物件的檔案，在前面加上`file://`的路徑。  
+ A path, which may be absolute or relative, to the property being loaded asynchronously. `CDataPathProperty` uses URLs, not filenames. If you want a `CDataPathProperty` object for a file, prepend `file://` to the path.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例的影像](../../visual-cpp-samples.md)   
- [CAsyncMonikerFile 類別](../../mfc/reference/casyncmonikerfile-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CAsyncMonikerFile 類別](../../mfc/reference/casyncmonikerfile-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample Image](../../visual-cpp-samples.md)   
+ [CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)
 

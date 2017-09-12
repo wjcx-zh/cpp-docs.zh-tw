@@ -1,5 +1,5 @@
 ---
-title: "CMFCShellListCtrl 類別 |Microsoft 文件"
+title: CMFCShellListCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,7 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCShellListCtrl class
+- CMFCShellListCtrl [MFC], DisplayFolder
+- CMFCShellListCtrl [MFC], DisplayParentFolder
+- CMFCShellListCtrl [MFC], EnableShellContextMenu
+- CMFCShellListCtrl [MFC], GetCurrentFolder
+- CMFCShellListCtrl [MFC], GetCurrentFolderName
+- CMFCShellListCtrl [MFC], GetCurrentItemIdList
+- CMFCShellListCtrl [MFC], GetCurrentShellFolder
+- CMFCShellListCtrl [MFC], GetItemPath
+- CMFCShellListCtrl [MFC], GetItemTypes
+- CMFCShellListCtrl [MFC], IsDesktop
+- CMFCShellListCtrl [MFC], OnCompareItems
+- CMFCShellListCtrl [MFC], OnFormatFileDate
+- CMFCShellListCtrl [MFC], OnFormatFileSize
+- CMFCShellListCtrl [MFC], OnGetItemIcon
+- CMFCShellListCtrl [MFC], OnGetItemText
+- CMFCShellListCtrl [MFC], OnSetColumns
+- CMFCShellListCtrl [MFC], Refresh
+- CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
 caps.latest.revision: 30
 author: mikeblome
@@ -52,17 +69,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8adac043d30d7555522c05165ffd3856c5999872
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 023ff60fa23c063a5d0c71a9c4099723b6dbe771
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 類別
-`CMFCShellListCtrl`類別提供視窗清單控制項功能，並加入擴充包括能夠顯示 shell 項目清單。  
+# <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl Class
+The `CMFCShellListCtrl` class provides Windows list control functionality and expands it by including the ability to display a list of shell items.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCShellListCtrl : public CMFCListCtrl  
@@ -70,42 +87,42 @@ class CMFCShellListCtrl : public CMFCListCtrl
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|顯示所提供的資料夾中包含的項目清單。|  
-|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|顯示是目前顯示資料夾的父資料夾中包含的項目的清單。|  
-|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|啟用或停用快顯功能表。|  
-|[CMFCShellListCtrl::GetCurrentFolder](#getcurrentfolder)|擷取目前的資料夾路徑。|  
-|[CMFCShellListCtrl::GetCurrentFolderName](#getcurrentfoldername)|擷取目前的資料夾名稱。|  
-|[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|傳回目前的清單控制項項目的 PIDL。|  
-|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|讓指標回到目前的殼層資料夾中。|  
-|[CMFCShellListCtrl::GetItemPath](#getitempath)|傳回文字的項目路徑。|  
-|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|傳回殼層清單控制項所顯示的項目類型。|  
-|[CMFCShellListCtrl::IsDesktop](#isdesktop)|檢查目前選取的資料夾是否為 [桌面] 資料夾。|  
-|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|它會比較兩個項目時，架構會呼叫這個方法。 (覆寫[CMFCListCtrl::OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems)。)|  
-|[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|架構會擷取清單控制項所顯示的檔案日期時呼叫。|  
-|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|架構會將檔案大小的清單控制項時呼叫。|  
-|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|架構會擷取圖示清單控制項項目時呼叫。|  
-|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|架構將轉換的文字清單控制項項目時呼叫。|  
-|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|它會將設定的資料行名稱時，由架構呼叫。|  
-|[CMFCShellListCtrl::Refresh](#refresh)|重新整理，並重新繪製該清單控制項。|  
-|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|設定顯示在清單控制項項目的型別。|  
+|[CMFCShellListCtrl::DisplayFolder](#displayfolder)|Displays a list of items that are contained in a provided folder.|  
+|[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|Displays a list of items that are contained in the folder that is the parent of the currently displayed folder.|  
+|[CMFCShellListCtrl::EnableShellContextMenu](#enableshellcontextmenu)|Enables or disables the shortcut menu.|  
+|[CMFCShellListCtrl::GetCurrentFolder](#getcurrentfolder)|Retrieves the path of the current folder.|  
+|[CMFCShellListCtrl::GetCurrentFolderName](#getcurrentfoldername)|Retrieves the name of the current folder.|  
+|[CMFCShellListCtrl::GetCurrentItemIdList](#getcurrentitemidlist)|Returns the PIDL of the current list control item.|  
+|[CMFCShellListCtrl::GetCurrentShellFolder](#getcurrentshellfolder)|Returns a pointer to the current Shell folder.|  
+|[CMFCShellListCtrl::GetItemPath](#getitempath)|Returns the textual path of an item.|  
+|[CMFCShellListCtrl::GetItemTypes](#getitemtypes)|Returns Shell item types that are displayed by the list control.|  
+|[CMFCShellListCtrl::IsDesktop](#isdesktop)|Checks if the currently selected folder is the desktop folder.|  
+|[CMFCShellListCtrl::OnCompareItems](#oncompareitems)|The framework calls this method when it compares two items. (Overrides [CMFCListCtrl::OnCompareItems](../../mfc/reference/cmfclistctrl-class.md#oncompareitems).)|  
+|[CMFCShellListCtrl::OnFormatFileDate](#onformatfiledate)|Called when the framework retrieves the file date displayed by the list control.|  
+|[CMFCShellListCtrl::OnFormatFileSize](#onformatfilesize)|Called when the framework converts the file size of a list control.|  
+|[CMFCShellListCtrl::OnGetItemIcon](#ongetitemicon)|Called when the framework retrieves the icon of a list control item.|  
+|[CMFCShellListCtrl::OnGetItemText](#ongetitemtext)|Called when the framework converts the text of a list control item.|  
+|[CMFCShellListCtrl::OnSetColumns](#onsetcolumns)|Called by the framework when it sets the names of the columns.|  
+|[CMFCShellListCtrl::Refresh](#refresh)|Refreshes and repaints the list control.|  
+|[CMFCShellListCtrl::SetItemTypes](#setitemtypes)|Sets the type of items displayed by the list control.|  
   
-## <a name="remarks"></a>備註  
- `CMFCShellListCtrl`類別擴充功能的[CMFCListCtrl 類別](../../mfc/reference/cmfclistctrl-class.md)藉由啟用您的程式，列出 Windows 殼層項目。 所使用的顯示格式如下的檔案總管視窗的清單檢視。  
+## <a name="remarks"></a>Remarks  
+ The `CMFCShellListCtrl` class extends the functionality of the [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md) by enabling your program to list Windows shell items. The display format that is used is like that of a list view for an Explorer window.  
   
- A [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md)物件可以與相關聯`CMFCShellListCtrl`物件來建立完整的 [總管] 視窗。 然後，選取中的項目`CMFCShellTreeCtrl`會導致`CMFCShellListCtrl`列出選取的項目內容的物件。  
+ A [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) object can be associated with a `CMFCShellListCtrl` object to create a complete Explorer window. Then, selecting an item in the `CMFCShellTreeCtrl` will cause the `CMFCShellListCtrl` object to list the contents of the selected item.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何建立的物件`CMFCShellListCtrl`類別以及如何顯示目前所顯示資料夾的上層資料夾。 此程式碼片段是一部分[總管範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to create an object of the `CMFCShellListCtrl` class and how to display the parent folder of the currently displayed folder. This code snippet is part of the [Explorer sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_Explorer #&1;](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_Explorer #&2;](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]  
-[!code-cpp[NVC_MFC_Explorer #&3;](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_Explorer#2](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_2.cpp)]  
+[!code-cpp[NVC_MFC_Explorer#3](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_3.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -118,107 +135,107 @@ class CMFCShellListCtrl : public CMFCListCtrl
   
  `CMFCShellListCtrl`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxshelllistCtrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxshelllistCtrl.h  
   
-##  <a name="displayfolder"></a>CMFCShellListCtrl::DisplayFolder  
- 顯示所提供的資料夾中包含的項目清單。  
+##  <a name="displayfolder"></a>  CMFCShellListCtrl::DisplayFolder  
+ Displays a list of items that are contained in the provided folder.  
   
 ```  
 virtual HRESULT DisplayFolder(LPCTSTR lpszPath);
 virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPath`  
- 字串，其中包含資料夾路徑。  
+ A string that contains the path of a folder.  
   
  [in] `lpItemInfo`  
- 指標`LPAFX_SHELLITEMINFO`描述要顯示的資料夾結構。  
+ A pointer to a `LPAFX_SHELLITEMINFO` structure that describes a folder to display.  
   
-### <a name="return-value"></a>傳回值  
- `S_OK`如果登錄成功。，`E_FAIL`否則。  
+### <a name="return-value"></a>Return Value  
+ `S_OK` if successful; `E_FAIL` otherwise.  
   
-##  <a name="displayparentfolder"></a>CMFCShellListCtrl::DisplayParentFolder  
- 更新[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件，以顯示目前所顯示資料夾的上層資料夾。  
+##  <a name="displayparentfolder"></a>  CMFCShellListCtrl::DisplayParentFolder  
+ Updates the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object to display the parent folder of the currently displayed folder.  
   
 ```  
 virtual HRESULT DisplayParentFolder();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `S_OK`如果登錄成功。，`E_FAIL`否則。  
+### <a name="return-value"></a>Return Value  
+ `S_OK` if successful; `E_FAIL` otherwise.  
   
-##  <a name="enableshellcontextmenu"></a>CMFCShellListCtrl::EnableShellContextMenu  
- 啟用快顯功能表。  
+##  <a name="enableshellcontextmenu"></a>  CMFCShellListCtrl::EnableShellContextMenu  
+ Enables the shortcut menu.  
   
 ```  
 void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 布林值，指定架構是否啟用快顯功能表。  
+ A Boolean that specifies whether the framework enables the shortcut menu.  
   
-##  <a name="getcurrentfolder"></a>CMFCShellListCtrl::GetCurrentFolder  
- 擷取目前選取的資料夾中的路徑[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
+##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
+ Retrieves the path of the currently selected folder in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 BOOL GetCurrentFolder(CString& strPath) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `strPath`  
- 字串參數的方法寫入路徑的位置參考。  
+### <a name="parameters"></a>Parameters  
+ [out] `strPath`  
+ A reference to a string parameter where the method writes the path.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 otherwise.  
   
-### <a name="remarks"></a>備註  
- 如果沒有資料夾中選取`CMFCShellListCtrl`。  
+### <a name="remarks"></a>Remarks  
+ This method fails if there is no folder selected in the `CMFCShellListCtrl`.  
   
-##  <a name="getcurrentfoldername"></a>CMFCShellListCtrl::GetCurrentFolderName  
- 擷取目前選取的資料夾中的名稱[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
+##  <a name="getcurrentfoldername"></a>  CMFCShellListCtrl::GetCurrentFolderName  
+ Retrieves the name of the currently selected folder in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 BOOL GetCurrentFolderName(CString& strName) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `strName`  
- 其中的方法，將名稱寫入字串參數的參考。  
+### <a name="parameters"></a>Parameters  
+ [out] `strName`  
+ A reference to a string parameter where the method writes the name.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 otherwise.  
   
-### <a name="remarks"></a>備註  
- 如果沒有資料夾中選取`CMFCShellListCtrl`。  
+### <a name="remarks"></a>Remarks  
+ This method fails if there is no folder selected in the `CMFCShellListCtrl`.  
   
-##  <a name="getcurrentitemidlist"></a>CMFCShellListCtrl::GetCurrentItemIdList  
- 傳回目前所選項目的 PIDL。  
+##  <a name="getcurrentitemidlist"></a>  CMFCShellListCtrl::GetCurrentItemIdList  
+ Returns the PIDL of the currently selected item.  
   
 ```  
 LPITEMIDLIST GetCurrentItemIdList() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前項目的 PIDL。  
+### <a name="return-value"></a>Return Value  
+ The PIDL of the current item.  
   
-##  <a name="getcurrentshellfolder"></a>CMFCShellListCtrl::GetCurrentShellFolder  
- 取得目前選取的項目中的指標[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
+##  <a name="getcurrentshellfolder"></a>  CMFCShellListCtrl::GetCurrentShellFolder  
+ Gets a pointer to the currently selected item in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 const IShellFolder* GetCurrentShellFolder() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標[IShellFolder 介面](http://msdn.microsoft.com/library/windows/desktop/bb775075)針對選取的物件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [IShellFolder Interface](http://msdn.microsoft.com/library/windows/desktop/bb775075) for the selected object.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳回`NULL`如果目前沒有選取任何物件。  
+### <a name="remarks"></a>Remarks  
+ This method returns `NULL` if no object is currently selected.  
   
-##  <a name="getitempath"></a>CMFCShellListCtrl::GetItemPath  
- 擷取項目的路徑。  
+##  <a name="getitempath"></a>  CMFCShellListCtrl::GetItemPath  
+ Retrieves the path for an item.  
   
 ```  
 BOOL GetItemPath(
@@ -226,43 +243,43 @@ BOOL GetItemPath(
     int iItem) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `strPath`  
- 接收路徑字串的參考。  
+### <a name="parameters"></a>Parameters  
+ [out] `strPath`  
+ A reference to a string that receives the path.  
   
  [in] `iItem`  
- 清單項目的索引。  
+ The index of the list item.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果登錄成功。，`FALSE`否則。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; `FALSE` otherwise.  
   
-### <a name="remarks"></a>備註  
- 所提供的索引`iItem`根據目前所顯示的項目[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
+### <a name="remarks"></a>Remarks  
+ The index supplied by `iItem` is based on the items currently displayed by the [CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
-##  <a name="getitemtypes"></a>CMFCShellListCtrl::GetItemTypes  
- 傳回所顯示的項目型別[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
+##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
+ Returns the type of items displayed by the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 SHCONTF GetItemTypes() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)包含列出的項目類型的值`CMFCShellListCtrl`。  
+### <a name="return-value"></a>Return Value  
+ A [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539) value that contains the type of items listed in the `CMFCShellListCtrl`.  
   
-### <a name="remarks"></a>備註  
- 若要設定列出的項目類型`CMFCShellListCtrl`，呼叫[CMFCShellListCtrl::SetItemTypes](#setitemtypes)。  
+### <a name="remarks"></a>Remarks  
+ To set the type of items listed in a `CMFCShellListCtrl`, call [CMFCShellListCtrl::SetItemTypes](#setitemtypes).  
   
-##  <a name="isdesktop"></a>CMFCShellListCtrl::IsDesktop  
- 如果資料夾，就是會決定顯示在[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件是 [桌面] 資料夾。  
+##  <a name="isdesktop"></a>  CMFCShellListCtrl::IsDesktop  
+ Determines if the folder that is displayed in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object is the desktop folder.  
   
 ```  
 BOOL IsDesktop() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果顯示的資料夾 [桌面] 資料夾。`FALSE`否則。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the displayed folder is the desktop folder; `FALSE` otherwise.  
   
-##  <a name="oncompareitems"></a>CMFCShellListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -272,17 +289,17 @@ virtual int OnCompareItems(
     int iColumn);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lParam1`  
  [in] `lParam2`  
  [in] `iColumn`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onformatfiledate"></a>CMFCShellListCtrl::OnFormatFileDate  
- 它必須轉換成字串，與物件相關聯的日期時，架構會呼叫這個方法。  
+##  <a name="onformatfiledate"></a>  CMFCShellListCtrl::OnFormatFileDate  
+ The framework calls this method when it must convert the date associated with an object into a string.  
   
 ```  
 virtual void OnFormatFileDate(
@@ -290,18 +307,18 @@ virtual void OnFormatFileDate(
     CString& str);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `tmFile`  
- 與檔案關聯的日期。  
+ The date associated with a file.  
   
- [輸出] `str`  
- 字串，包含格式的檔案的日期。  
+ [out] `str`  
+ A string that contains the formatted file date.  
   
-### <a name="remarks"></a>備註  
- 當[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件顯示與檔案相關聯的日期，它必須將該日期轉換成字串格式。 `CMFCShellListCtrl`進行該轉換會使用這個方法。 根據預設，此方法會使用目前的地區設定日期格式轉換為字串。  
+### <a name="remarks"></a>Remarks  
+ When a [CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md) object displays the date associated with a file, it must convert that date to a string format. The `CMFCShellListCtrl` uses this method to make that conversion. By default, this method uses the current locale to format the date into a string.  
   
-##  <a name="onformatfilesize"></a>CMFCShellListCtrl::OnFormatFileSize  
- 將物件大小轉換成字串時，架構會呼叫這個方法。  
+##  <a name="onformatfilesize"></a>  CMFCShellListCtrl::OnFormatFileSize  
+ The framework calls this method when it converts the size of an object to a string.  
   
 ```  
 virtual void OnFormatFileSize(
@@ -309,18 +326,18 @@ virtual void OnFormatFileSize(
     CString& str);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lFileSize`  
- 架構會顯示檔案的大小。  
+ The size of the file that the framework will display.  
   
- [輸出] `str`  
- 字串，包含格式的檔案大小。  
+ [out] `str`  
+ A string that contains the formatted file size.  
   
-### <a name="remarks"></a>備註  
- 當[CMFCShellListCtrl 類別](../../mfc/reference/cmfcshelllistctrl-class.md)物件需要顯示檔案的大小，它必須轉換成字串格式的檔案大小。 `CMFCShellListCtrl`進行該轉換會使用這個方法。 根據預設，這個方法會將檔案大小位元組轉換成 kb，並再使用目前的地區設定來格式化成字串的大小。  
+### <a name="remarks"></a>Remarks  
+ When a [CMFCShellListCtrl Class](../../mfc/reference/cmfcshelllistctrl-class.md) object needs to display the size of a file, it needs to convert the file size into a string format. The `CMFCShellListCtrl` uses this method to make that conversion. By default, this method converts the file size from bytes to kilobytes and then uses the current locale to format the size into string.  
   
-##  <a name="ongetitemicon"></a>CMFCShellListCtrl::OnGetItemIcon  
- 架構會呼叫這個方法來擷取與殼層清單項目相關聯的圖示。  
+##  <a name="ongetitemicon"></a>  CMFCShellListCtrl::OnGetItemIcon  
+ The framework calls this method to retrieve the icon associated with a shell list item.  
   
 ```  
 virtual int OnGetItemIcon(
@@ -328,23 +345,23 @@ virtual int OnGetItemIcon(
     LPAFX_SHELLITEMINFO pItem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- 項目索引。  
+ The item index.  
   
  [in] `pItem`  
- A`LPAFX_SHELLITEMINFO`參數描述項目。  
+ A `LPAFX_SHELLITEMINFO` parameter that describes the item.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，圖示影像的索引在函數失敗時，為-1。  
+### <a name="return-value"></a>Return Value  
+ The index of the icon image if successful; -1 if the function fails.  
   
-### <a name="remarks"></a>備註  
- 圖示的影像索引為基礎的系統映像清單。  
+### <a name="remarks"></a>Remarks  
+ The icon image index is based on the system image list.  
   
- 根據預設，這個方法依賴`pItem`參數。 值`iItem`不是預設的實作。 您可以使用`iItem`來實作自訂行為。  
+ By default, this method relies on the `pItem` parameter. The value of `iItem` is not used in the default implementation. You can use `iItem` to implement custom behavior.  
   
-##  <a name="ongetitemtext"></a>CMFCShellListCtrl::OnGetItemText  
- 必須擷取 shell 項目的文字時，架構會呼叫這個方法。  
+##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
+ The framework calls this method when it must retrieve the text of a shell item.  
   
 ```  
 virtual CString OnGetItemText(
@@ -353,64 +370,64 @@ virtual CString OnGetItemText(
     LPAFX_SHELLITEMINFO pItem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- 項目索引。  
+ The item index.  
   
  [in] `iColumn`  
- 感興趣的資料行。  
+ The column of interest.  
   
  [in] `pItem`  
- A`LPAFX_SHELLITEMINFO`參數描述項目。  
+ A `LPAFX_SHELLITEMINFO` parameter that describes the item.  
   
-### <a name="return-value"></a>傳回值  
- A `CString` ，其中包含與項目相關聯的文字。  
+### <a name="return-value"></a>Return Value  
+ A `CString` that contains the text associated with the item.  
   
-### <a name="remarks"></a>備註  
- 在每個項目`CMFCShellListCtrl`物件只能有一個或多個資料行中的文字。 架構會呼叫這個方法，它會指定它感興趣的資料行。 如果您以手動方式呼叫此函式，您也必須指定您感興趣的資料行。  
+### <a name="remarks"></a>Remarks  
+ Each item in the `CMFCShellListCtrl` object may have text in one or more columns. When the framework calls this method, it specifies the column that it is interested in. If you call this function manually, you must also specify the column that you are interested in.  
   
- 根據預設，這個方法依賴`pItem`參數，來判斷這項程序。 值`iItem`不是預設的實作。  
+ By default, this method relies on the `pItem` parameter to determine which item to process. The value of `iItem` is not used in the default implementation.  
   
-##  <a name="onsetcolumns"></a>CMFCShellListCtrl::OnSetColumns  
- 它會將設定的資料行名稱時，架構會呼叫這個方法。  
+##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
+ The framework calls this method when it sets the names of the columns.  
   
 ```  
 virtual void OnSetColumns();
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，此架構會建立四個資料行中的`CMFCShellListCtrl`物件。 這些資料行的名稱是`Name`， `Size`， `Type`，和`Modified`。 您可以覆寫這個方法來自訂資料行數目和他們的名稱。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework creates four columns in a `CMFCShellListCtrl` object. The names of these columns are `Name`, `Size`, `Type`, and `Modified`. You can override this method to customize the number of columns and their names.  
   
-##  <a name="refresh"></a>CMFCShellListCtrl::Refresh  
- 重新整理，並重新繪製[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
+##  <a name="refresh"></a>  CMFCShellListCtrl::Refresh  
+ Refreshes and repaints the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 virtual HRESULT Refresh();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `S_OK`如果登錄成功。，否則為錯誤值。  
+### <a name="return-value"></a>Return Value  
+ `S_OK` if successful; otherwise an error value.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來重新整理所顯示的項目清單`CMFCShellListCtrl`物件。  
+### <a name="remarks"></a>Remarks  
+ Call this method to refresh the list of items displayed by the `CMFCShellListCtrl` object.  
   
-##  <a name="setitemtypes"></a>CMFCShellListCtrl::SetItemTypes  
- 設定項目中所列的型別[CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md)物件。  
+##  <a name="setitemtypes"></a>  CMFCShellListCtrl::SetItemTypes  
+ Sets the type of items that are listed in the [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) object.  
   
 ```  
 void SetItemTypes(SHCONTF nTypes);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nTypes`  
- 清單項目的型別`CMFCShellListCtrl`物件支援。  
+ A list of item types that the `CMFCShellListCtrl` object supports.  
   
-### <a name="remarks"></a>備註  
- 項目類型的清單的相關資訊，請參閱[SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)。  
+### <a name="remarks"></a>Remarks  
+ For more information about the list of item types, see [SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539).  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCListCtrl 類別](../../mfc/reference/cmfclistctrl-class.md)   
- [CMFCShellTreeCtrl 類別](../../mfc/reference/cmfcshelltreectrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)   
+ [CMFCShellTreeCtrl Class](../../mfc/reference/cmfcshelltreectrl-class.md)
 

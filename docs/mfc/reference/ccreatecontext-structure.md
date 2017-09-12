@@ -1,5 +1,5 @@
 ---
-title: "CCreateContext 結構 |Microsoft 文件"
+title: CCreateContext Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCreateContext structure
+- CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
 caps.latest.revision: 22
 author: mikeblome
@@ -33,66 +33,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 231f2e44e085d27a2b2cbf289adf7b0521471b0e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccb666fdd2289eb08c7a84791525c1a12385ca9b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccreatecontext-structure"></a>CCreateContext 結構
-架構會使用`CCreateContext`結構時，它會建立框架視窗和文件相關聯的檢視。  
+# <a name="ccreatecontext-structure"></a>CCreateContext Structure
+The framework uses the `CCreateContext` structure when it creates the frame windows and views that are associated with a document.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CCreateContext  
 ```  
   
-## <a name="remarks"></a>備註  
- `CCreateContext`是一種結構，而且也沒有基底類別。  
+## <a name="remarks"></a>Remarks  
+ `CCreateContext` is a structure and does not have a base class.  
   
- 當您建立一個視窗時，此結構中的值會提供用來連接到其資料的檢視文件的元件的資訊。 您只需要使用`CCreateContext`如果您正在覆寫組件的建立程序。  
+ When you create a window, the values in this structure provide the information used to connect the components of a document to the view of its data. You only have to use `CCreateContext` if you are overriding parts of the creation process.  
   
- A`CCreateContext`結構包含文件、 框架視窗、 檢視和文件範本的指標。 它也包含一個指向`CRuntimeClass`，識別要建立的檢視類型。 執行階段類別資訊和目前的文件指標用於以動態方式建立新的檢視。 下表建議的方式和時機每個`CCreateContext`成員可能會使用︰  
+ A `CCreateContext` structure contains pointers to the document, the frame window, the view, and the document template. It also contains a pointer to a `CRuntimeClass` that identifies the type of view to create. The run-time class information and the current document pointer are used to create a new view dynamically. The following table suggests how and when each `CCreateContext` member might be used:  
   
-|成員|類型|它為|  
+|Member|Type|What it is for|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`若要建立新的檢視。|  
-|`m_pCurrentDoc`|`CDocument*`|要與新的檢視相關聯的現有文件。|  
-|`m_pNewDocTemplate`|`CDocTemplate*`|建立新的 MDI 框架視窗相關聯的文件範本。|  
-|`m_pLastView`|`CView*`|原始檢視的其他檢視模型，就像建立分隔器 視窗中檢視或建立的文件上的第二個檢視。|  
-|`m_pCurrentFrame`|`CFrameWnd*`|框架視窗的其他框架視窗的設計，如下所示的第二個框架視窗的文件上建立。|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` of the new view to create.|  
+|`m_pCurrentDoc`|`CDocument*`|The existing document to be associated with the new view.|  
+|`m_pNewDocTemplate`|`CDocTemplate*`|The document template associated with the creation of a new MDI frame window.|  
+|`m_pLastView`|`CView*`|The original view on which additional views are modeled, as in the creation of splitter window views or the creation of a second view on a document.|  
+|`m_pCurrentFrame`|`CFrameWnd*`|The frame window on which additional frame windows are modeled, as in the creation of a second frame window on a document.|  
   
- 當文件範本會建立文件和相關的元件時，它會驗證資訊儲存在`CCreateContext`結構。 例如，檢視不應建立不存在的文件。  
+ When a document template creates a document and its associated components, it validates the information stored in the `CCreateContext` structure. For example, a view should not be created for a nonexistent document.  
   
 > [!NOTE]
->  所有在指標`CCreateContext`是選擇性的可以是`NULL`如果未指定或未知。  
+>  All of the pointers in `CCreateContext` are optional and can be `NULL` if unspecified or unknown.  
   
- `CCreateContext`底下列出的成員函式會使用 「 另請參閱。 」 如果想要覆寫它們，請參閱這些函式的說明的特定資訊。  
+ `CCreateContext` is used by the member functions listed under "See Also." Consult the descriptions of these functions for specific information if you plan to override them.  
   
- 以下是一些一般指導方針︰  
+ Here are a few general guidelines:  
   
--   中傳遞做為引數的視窗建立時`CWnd::Create`， `CFrameWnd::Create`，和`CFrameWnd::LoadFrame`，建立內容可讓您指定什麼新的視窗應該連接到。 對於大部分的 windows，整個結構是選擇性和`NULL`可以傳遞指標。  
+-   When passed as an argument for window creation, as in `CWnd::Create`, `CFrameWnd::Create`, and `CFrameWnd::LoadFrame`, the create context specifies what the new window should be connected to. For most windows, the entire structure is optional and a `NULL` pointer can be passed.  
   
--   對於可覆寫成員函式，例如`CFrameWnd::OnCreateClient`、`CCreateContext`引數是選擇性。  
+-   For overridable member functions, such as `CFrameWnd::OnCreateClient`, the `CCreateContext` argument is optional.  
   
--   成員函式檢視中建立，您必須提供足夠的資訊來建立檢視。 比方說，在分割視窗中的第一個檢視，您必須提供的檢視類別資訊和目前的文件。  
+-   For member functions involved in view creation, you must provide enough information to create the view. For example, for the first view in a splitter window, you must supply the view class information and the current document.  
   
- 一般而言，如果您使用 framework 預設值，您可以忽略`CCreateContext`。 如果您嘗試更進階的修改，Mfc 程式庫原始碼或範例程式，例如 VIEWEX，將引導您。 如果您不要忘記必要的參數，架構判斷提示會告訴您您忘了。  
+ In general, if you use the framework defaults, you can ignore `CCreateContext`. If you attempt more advanced modifications, the Microsoft Foundation Class Library source code or the sample programs, such as VIEWEX, will guide you. If you do forget a required parameter, a framework assertion will tell you what you forgot.  
   
- 如需有關`CCreateContext`，請參閱 MFC 範例[VIEWEX](../../visual-cpp-samples.md)。  
+ For more information on `CCreateContext`, see the MFC sample [VIEWEX](../../visual-cpp-samples.md).  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)   
  [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)   
  [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)   
  [CSplitterWnd::Create](../../mfc/reference/csplitterwnd-class.md#create)   
  [CSplitterWnd::CreateView](../../mfc/reference/csplitterwnd-class.md#createview)   
- [Cwnd:: Create](../../mfc/reference/cwnd-class.md#create)
+ [CWnd::Create](../../mfc/reference/cwnd-class.md#create)
 
 

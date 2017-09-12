@@ -1,43 +1,61 @@
 ---
-title: "建立非強制回應屬性工作表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Create 方法 [C++], 屬性工作表"
-  - "非強制回應屬性工作表"
-  - "屬性工作表, 非強制回應"
+title: Creating a Modeless Property Sheet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modeless property sheets
+- property sheets, modeless
+- Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 建立非強制回應屬性工作表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb93a55b9da82f75a1bdaab5818e11ae0e075d5f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-通常，您建立的屬性工作表會強制回應。  當使用強制回應屬性工作表時，使用者必須在使用應用程式的其他部分之前關閉屬性工作表。  本文說明您可以用來建立非強制回應屬性工作表允許使用者保持屬性工作表開啟時，應用程式的其他部分的方法。  
+---
+# <a name="creating-a-modeless-property-sheet"></a>Creating a Modeless Property Sheet
+Normally, the property sheets you create will be modal. When using a modal property sheet, the user must close the property sheet before using any other part of the application. This article describes methods you can use to create a modeless property sheet that allows the user to keep the property sheet open while using other parts of the application.  
   
- 若要顯示屬性工作表為非強制回應對話方塊而非強制回應對話方塊，請呼叫 [CPropertySheet::Create](../Topic/CPropertySheet::Create.md) 取代 [DoModal](../Topic/CPropertySheet::DoModal.md)。  您也必須實作一些額外的工作支援非強制回應的屬性工作表。  
+ To display a property sheet as a modeless dialog box instead of as a modal dialog box, call [CPropertySheet::Create](../mfc/reference/cpropertysheet-class.md#create) instead of [DoModal](../mfc/reference/cpropertysheet-class.md#domodal). You must also implement some extra tasks to support a modeless property sheet.  
   
- 其中一個其他工作是在修改的屬性工作表和外部物件之間交換資料屬性工作表時是開啟的。  這通常是工作與標準非強制回應對話方塊的。  中的這個工作實作通訊通道屬性設定套用至的非強制回應的屬性工作表和外部物件之間。  如果您從非強制回應的屬性工作表中， [CPropertySheet](../mfc/reference/cpropertysheet-class.md) 是從衍生類別的這個實作會比較容易。  本文假設您的話\)。  
+ One of the additional tasks is exchanging data between the property sheet and the external object it is modifying when the property sheet is open. This is generally the same task as for standard modeless dialog boxes. Part of this task is implementing a channel of communication between the modeless property sheet and the external object to which the property settings apply. This implementation is far easier if you derive a class from [CPropertySheet](../mfc/reference/cpropertysheet-class.md) for your modeless property sheet. This article assumes you have done so.  
   
- 通訊的方法在非強制回應的屬性工作表和外部物件 \(例如在檢視中目前選取範圍之間，\) 將定義從屬性工作表的指標到外部物件。  定義函式呼叫 \(類似 `SetMyExternalObject`\) 在 `CPropertySheet`\-變更指標的衍生類別，當焦點從外部物件而變更。  `SetMyExternalObject` 函式需要重設每個屬性頁的設定可以反映最近選取的外部物件。  若要完成這項作業， `SetMyExternalObject` 函式必須能夠存取屬於 `CPropertySheet` 類別中的 [CPropertyPage](../mfc/reference/cpropertypage-class.md) 物件。  
+ One method for communicating between the modeless property sheet and the external object (the current selection in a view, for example) is to define a pointer from the property sheet to the external object. Define a function (called something like `SetMyExternalObject`) in the `CPropertySheet`-derived class to change the pointer whenever the focus changes from one external object to another. The `SetMyExternalObject` function needs to reset the settings for each property page to reflect the newly selected external object. To accomplish this, the `SetMyExternalObject` function must be able to access the [CPropertyPage](../mfc/reference/cpropertypage-class.md) objects belonging to the `CPropertySheet` class.  
   
- 最方便的方式提供對屬性工作表內的屬性頁將內嵌 `CPropertyPage` 物件在 `CPropertySheet`衍生物件。  內嵌的 `CPropertyPage` 中 `CPropertySheet`物件衍生物件與強制回應對話方塊的一般設計不同，屬性工作表擁有者建立 `CPropertyPage` 物件並將其傳遞至屬性工作表透過 [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md)。  
+ The most convenient way to provide access to property pages within a property sheet is to embed the `CPropertyPage` objects in the `CPropertySheet`-derived object. Embedding `CPropertyPage` objects in the `CPropertySheet`-derived object differs from the typical design for modal dialog boxes, where the owner of the property sheet creates the `CPropertyPage` objects and passes them to the property sheet via [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage).  
   
- 會決定何時許多使用者介面以選取要套用非強制回應的屬性工作表的設定至外部物件。  替代方式是將目前屬性頁上的設定，每當使用者變更任何值。  另一個替代方式是提供應用程式按鈕，讓使用者在執行前累積在屬性頁中的變更至外部物件。  如需方式處理新應用程式的詳細資訊，請參閱本文件的 [處理應用程式按鈕。](../mfc/handling-the-apply-button.md)。  
+ There are many user-interface alternatives for determining when the settings of the modeless property sheet should be applied to an external object. One alternative is to apply the settings of the current property page whenever the user changes any value. Another alternative is to provide an Apply button, which allows the user to accumulate changes in the property pages before committing them to the external object. For information on ways to handle the Apply button, see the article [Handling the Apply Button](../mfc/handling-the-apply-button.md).  
   
-## 請參閱  
- [屬性工作表](../mfc/property-sheets-mfc.md)   
- [交換資料](../mfc/exchanging-data.md)   
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)   
+ [Exchanging Data](../mfc/exchanging-data.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

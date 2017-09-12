@@ -1,5 +1,5 @@
 ---
-title: "CD2DGradientBrush 類別 |Microsoft 文件"
+title: CD2DGradientBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,7 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DGradientBrush class
+- CD2DGradientBrush [MFC], CD2DGradientBrush
+- CD2DGradientBrush [MFC], Destroy
+- CD2DGradientBrush [MFC], m_arGradientStops
+- CD2DGradientBrush [MFC], m_colorInterpolationGamma
+- CD2DGradientBrush [MFC], m_extendMode
+- CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
 caps.latest.revision: 17
 author: mikeblome
@@ -40,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 0b0a692ef2b5194daf7b38eed9ebe3b2f4eda448
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 139907169b2de67972fba728a02cce175339e1f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 類別
-CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 類別的基底類別。  
+# <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush Class
+The base class of the CD2DLinearGradientBrush and the CD2DRadialGradientBrush classes.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DGradientBrush : public CD2DBrush;  
@@ -58,29 +63,29 @@ class CD2DGradientBrush : public CD2DBrush;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|建構 CD2DGradientBrush 物件。|  
-|[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|解構函式。 D2D 漸層筆刷物件終結時呼叫。|  
+|[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Constructs a CD2DGradientBrush object.|  
+|[CD2DGradientBrush::~CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|The destructor. Called when a D2D gradient brush object is being destroyed.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGradientBrush::Destroy](#destroy)|終結 CD2DGradientBrush 物件。 (覆寫[CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy)。)|  
+|[CD2DGradientBrush::Destroy](#destroy)|Destroys a CD2DGradientBrush object. (Overrides [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 結構的陣列。|  
-|[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|插補漸層停駐點之間執行中的色彩空間。|  
-|[CD2DGradientBrush::m_extendMode](#m_extendmode)|正規化 [0，1] 範圍以外的漸層的行為。|  
-|[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|D2D1_GRADIENT_STOP 結構的陣列指標。|  
+|[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Array of the D2D1_GRADIENT_STOP structures.|  
+|[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|The space in which color interpolation between the gradient stops is performed.|  
+|[CD2DGradientBrush::m_extendMode](#m_extendmode)|The behavior of the gradient outside the [0,1] normalized range.|  
+|[CD2DGradientBrush::m_pGradientStops](#m_pgradientstops)|A pointer to an array of D2D1_GRADIENT_STOP structures.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -89,18 +94,18 @@ class CD2DGradientBrush : public CD2DBrush;
   
  `CD2DGradientBrush`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
- 解構函式。 D2D 漸層筆刷物件終結時呼叫。  
+##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush::~CD2DGradientBrush  
+ The destructor. Called when a D2D gradient brush object is being destroyed.  
   
 ```  
 virtual ~CD2DGradientBrush();
 ```  
   
-##  <a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
- 建構 CD2DGradientBrush 物件。  
+##  <a name="cd2dgradientbrush"></a>  CD2DGradientBrush::CD2DGradientBrush  
+ Constructs a CD2DGradientBrush object.  
   
 ```  
 CD2DGradientBrush(
@@ -113,63 +118,63 @@ CD2DGradientBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 呈現目標指標。  
+ A pointer to the render target.  
   
  `gradientStops`  
- D2D1_GRADIENT_STOP 結構的陣列指標。  
+ A pointer to an array of D2D1_GRADIENT_STOP structures.  
   
  `gradientStopsCount`  
- 值大於或等於 1，gradientStops 陣列中指定漸層停駐點的數目。  
+ A value greater than or equal to 1 that specifies the number of gradient stops in the gradientStops array.  
   
  `colorInterpolationGamma`  
- 插補漸層停駐點之間執行中的色彩空間。  
+ The space in which color interpolation between the gradient stops is performed.  
   
  `extendMode`  
- 正規化 [0，1] 範圍以外的漸層的行為。  
+ The behavior of the gradient outside the [0,1] normalized range.  
   
  `pBrushProperties`  
- 指標的不透明度和筆刷轉換。  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- 指出由擁有者 (pParentTarget) 將會終結物件。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="destroy"></a>CD2DGradientBrush::Destroy  
- 終結 CD2DGradientBrush 物件。  
+##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  
+ Destroys a CD2DGradientBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
- D2D1_GRADIENT_STOP 結構的陣列。  
+##  <a name="m_argradientstops"></a>  CD2DGradientBrush::m_arGradientStops  
+ Array of the D2D1_GRADIENT_STOP structures.  
   
 ```  
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;  
 ```  
   
-##  <a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
- 插補漸層停駐點之間執行中的色彩空間。  
+##  <a name="m_colorinterpolationgamma"></a>  CD2DGradientBrush::m_colorInterpolationGamma  
+ The space in which color interpolation between the gradient stops is performed.  
   
 ```  
 D2D1_GAMMA m_colorInterpolationGamma;  
 ```  
   
-##  <a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
- 正規化 [0，1] 範圍以外的漸層的行為。  
+##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode  
+ The behavior of the gradient outside the [0,1] normalized range.  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  
 ```  
   
-##  <a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
- D2D1_GRADIENT_STOP 結構的陣列指標。  
+##  <a name="m_pgradientstops"></a>  CD2DGradientBrush::m_pGradientStops  
+ A pointer to an array of D2D1_GRADIENT_STOP structures.  
   
 ```  
 ID2D1GradientStopCollection* m_pGradientStops;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

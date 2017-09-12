@@ -1,5 +1,5 @@
 ---
-title: "控制項名稱，MFC ActiveX 控制項精靈 |Microsoft 文件"
+title: Control Names, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,73 +33,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 28ef331cb66ee184c4bc104fedddf69e9296367c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c027e7a3f24c33e4fa15ec666bdc2b7838502f76
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="control-names-mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈、控制項名稱
-指定之名稱的控制項類別和屬性頁類別的型別名稱，並輸入您的控制項的識別項。 除了**簡短名稱**，單獨進行編輯的所有其他欄位。 如果您變更的文字**簡短名稱**，變更會反映在此頁面中的所有其他欄位的名稱。 這項命名行為被為了讓您開發您的控制項時容易識別的所有名稱。  
+# <a name="control-names-mfc-activex-control-wizard"></a>Control Names, MFC ActiveX Control Wizard
+Specify the names for the control class and property page class, the type names, and type identifiers for your control. With the exception of **Short name**, all other fields can be edited independently. If you change the text for **Short name**, the change is reflected in the names of all other fields in this page. This naming behavior is designed to make all the names easily identifiable for you as you develop your control.  
   
- **簡短名稱**  
- 提供控制項的縮寫的名稱。 根據預設，這個名稱會根據您在中提供的專案名稱上**新專案** 對話方塊。 您提供的名稱判斷類別名稱、 型別名稱和類型識別項，除非您個別變更這些欄位。  
+ **Short name**  
+ Provide an abbreviated name for the control. By default, this name is based on the project name you provided in the **New Project** dialog box. The name you provide determines the class names, the type names, and the type identifiers, unless you change those fields individually.  
   
- **控制項類別名稱**  
- 根據預設的控制項類別名稱根據簡短名稱，與`C`做為前置詞和`Ctrl`做為尾碼。 例如，如果您的控制項的簡短名稱是`Price`，控制項類別名稱是`CPriceCtrl`。  
+ **Control class name**  
+ By default, the name of the control class is based on the short name, with `C` as a prefix and `Ctrl` as a suffix. For example, if your control's short name is `Price`, the control class name is `CPriceCtrl`.  
   
- **控制.h 檔案**  
- 根據預設，標頭檔的名稱根據簡短名稱，與`Ctrl`做為尾碼和`.h`做為副檔名。 例如，如果您的控制項的簡短名稱是`Price`，標頭檔名稱是`PriceCtrl.h`。 此欄位中的名稱應符合控制項類別名稱。  
+ **Control .h file**  
+ By default, the name of the header file is based on the short name, with `Ctrl` as a suffix and `.h` as the file extension. For example, if your control's short name is `Price`, the header file name is `PriceCtrl.h`. The name in this field should match the control class name.  
   
- **控制.cpp 檔案**  
- 根據預設，標頭檔的名稱根據簡短名稱，與`Ctrl`做為尾碼和`.cpp`做為副檔名。 例如，如果您的控制項的簡短名稱是`Price`，標頭檔名稱是`PriceCtrl.cpp`。 此欄位中的名稱應該符合的標頭名稱。  
+ **Control .cpp file**  
+ By default, the name of the header file is based on the short name, with `Ctrl` as a suffix and `.cpp` as the file extension. For example, if your control's short name is `Price`, the header file name is `PriceCtrl.cpp`. The name in this field should match the header name.  
   
- **控制項型別名稱**  
- 根據預設，控制項類型的名稱根據簡短名稱，後面接著`Control`。 例如，如果您的控制項的簡短名稱是`Price`，控制項的類別類型名稱是`Price Control`。 如果您變更此欄位中的值，請確定此名稱指出繼承。  
+ **Control type name**  
+ By default, the name of the control type is based on the short name, followed by `Control`. For example, if your control's short name is `Price`, the control class type name is `Price Control`. If you change the value in this field, make sure the name indicates an inheritance.  
   
- **控制項類型識別碼**  
- 設定控制項類別的控制項類型識別碼。 控制項加入至專案時，將此字串寫入至登錄。 容器應用程式會使用這個字串，來建立控制項的執行個體。  
+ **Control type ID**  
+ Sets the control type ID of the control class. The control writes this string to the registry when it is added to a project. Container applications use this string to create an instance of the control.  
   
- 根據預設，控制項類型識別碼根據專案名稱，也就是您指示中**新專案**對話方塊中，以及簡短名稱。 這個名稱應該符合的型別名稱。  
+ By default, the control type ID is based on the project name, which you indicated in the **New Project** dialog box, and the short name. This name should match the type name.  
   
- 根據預設，控制項類型 ID 會顯示如下︰  
+ By default, the control type ID appears as follows:  
   
  *ProjectName.ShortName*Ctrl.1  
   
- 如果您變更的簡短名稱，在此對話方塊中，控制項類型識別碼會出現，如下所示︰  
+ If you change the short name in this dialog box, the control type ID appears as follows:  
   
  *ProjectName.NewShortName*Ctrl.1  
   
- **屬性頁類別名稱**  
- 根據預設，屬性頁類別的名稱根據簡短名稱，與`C`做為前置詞和`PropPage`做為尾碼。 例如，如果您的控制項的簡短名稱是`Price`，屬性頁類別名稱是`CPricePropPage`。 此名稱應符合控制項類別名稱，加上`PropPage`。  
+ **PropPage class name**  
+ By default, the name of the property page class is based on the short name, with `C` as a prefix and `PropPage` as a suffix. For example, if your control's short name is `Price`, the property page class name is `CPricePropPage`. This name should match the control class name, appended with `PropPage`.  
   
- **屬性頁.h 檔案**  
- 根據預設，屬性頁標頭檔的名稱為根據的簡短名稱，以`PropPage`做為尾碼和`.h`做為副檔名。 例如，如果您的控制項的簡短名稱是`Price`，屬性頁面標頭檔名稱是`PricePropPage.h`。 此名稱必須符合類別名稱。  
+ **PropPage .h file**  
+ By default, the name of the property page header file is based on the short name, with as a `PropPage` as a suffix and `.h` as the file extension. For example, if your control's short name is `Price`, the property page header file name is `PricePropPage.h`. This name should match the class name.  
   
- **屬性頁.cpp 檔案中**  
- 根據預設，屬性頁的實作檔的名稱為根據的簡短名稱，以`PropPage`做為尾碼和`.cpp`做為副檔名。 例如，如果您的控制項的簡短名稱是`Price`，屬性頁面標頭檔名稱是`PricePropPage.cpp`。 此名稱必須符合標頭檔名稱。  
+ **PropPage .cpp file**  
+ By default, the name of the property page implementation file is based on the short name, with as a `PropPage` as a suffix and `.cpp` as the file extension. For example, if your control's short name is `Price`, the property page header file name is `PricePropPage.cpp`. This name should match the header file name.  
   
- **屬性頁的型別名稱**  
- 根據預設，屬性頁的型別名稱根據簡短名稱，後面接著`Property Page`。 例如，如果您的控制項的簡短名稱是`Price`，屬性頁的型別名稱是`Price Property Page`。 如果您變更此欄位中的值，請確定名稱會表示控制項類別。  
+ **PropPage type name**  
+ By default, the property page type name is based on the short name, followed by `Property Page`. For example, if your control's short name is `Price`, the property page type name is `Price Property Page`. If you change the value in this field, make sure the name indicates the control class.  
   
- **屬性頁類型識別碼**  
- 設定屬性頁類別的識別碼。 控制項將套用至專案時，在登錄中寫入這個字串。 容器應用程式會使用這個字串建立的控制項屬性頁的執行個體。  
+ **PropPage type ID**  
+ Sets the ID of the property page class. The control writes this string in the registry when it is applied to a project. A container application uses this string to create an instance of the control's property page.  
   
- 根據預設，屬性頁類型 ID 根據專案名稱，也就是您指示中**新專案**對話方塊中，以及簡短名稱。 這個名稱應該符合的型別名稱。  
+ By default, the property page type ID is based on the project name, which you indicated in the **New Project** dialog box, and the short name. This name should match the type name.  
   
- 根據預設，屬性頁類型 ID 會顯示如下︰  
+ By default, the property page type ID appears as follows:  
   
  *ProjectName.ShortName*PropPage.1  
   
- 如果您變更此對話方塊中的簡短名稱，屬性頁類型 ID 會出現，如下所示︰  
+ If you change the short name in this dialog box, the property page type ID appears as follows:  
   
  *ProjectName.NewShortName*PropPage.1  
   
-## <a name="see-also"></a>另請參閱  
- [MFC ActiveX 控制項精靈](../../mfc/reference/mfc-activex-control-wizard.md)   
- [MFC ActiveX 控制項精靈、 應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [MFC ActiveX 控制項精靈、 控制項設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
- [為 Visual C++ 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
 
 

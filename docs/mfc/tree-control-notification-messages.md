@@ -1,48 +1,67 @@
 ---
-title: "樹狀目錄控制項通知訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 類別, 告知"
-  - "訊息, 告知"
-  - "告知, CTreeCtrl"
-  - "告知, 樹狀目錄控制項"
-  - "樹狀目錄控制項, 通知訊息"
+title: Tree Control Notification Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], tree controls
+- messages [MFC], notification
+- CTreeCtrl class [MFC], notifications
+- notifications [MFC], CTreeCtrl
+- tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 樹狀目錄控制項通知訊息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fa73f84bbbd6e8d4318b038831ccdd5b1721e9c6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-樹狀目錄控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 以 **WM\_NOTIFY** 訊息傳送以下通知訊息:  
+---
+# <a name="tree-control-notification-messages"></a>Tree Control Notification Messages
+A tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sends the following notification messages as **WM_NOTIFY** messages:  
   
-|通知訊息|說明|  
-|----------|--------|  
-|**TVN\_BEGINDRAG**|通知拖放作業已開始|  
-|**TVN\_BEGINLABELEDIT**|通知啟動就地編輯標籤|  
-|**TVN\_BEGINRDRAG**|通知使用滑鼠右鍵，表示拖放作業啟動|  
-|**TVN\_DELETEITEM**|表示特定項目的刪除|  
-|**TVN\_ENDLABELEDIT**|表示結束編輯標籤|  
-|**TVN\_GETDISPINFO**|要求樹狀目錄控制項需要顯示項目的資訊。|  
-|**TVN\_ITEMEXPANDED**|通知子項目父項目清單展開或摺疊|  
-|**TVN\_ITEMEXPANDING**|通知子項目父項目清單將展開或摺疊|  
-|**TVN\_KEYDOWN**|表示鍵盤事件|  
-|**TVN\_SELCHANGED**|表示選取項目變更到另一個|  
-|**TVN\_SELCHANGING**|表示選取即將變更成另一項目|  
-|**TVN\_SETDISPINFO**|更新為項目維持的資訊的通知|  
+|Notification message|Description|  
+|--------------------------|-----------------|  
+|**TVN_BEGINDRAG**|Signals the start of a drag-and-drop operation|  
+|**TVN_BEGINLABELEDIT**|Signals the start of in-place label editing|  
+|**TVN_BEGINRDRAG**|Signals the start of a drag-and-drop operation, using the right mouse button|  
+|**TVN_DELETEITEM**|Signals the deletion of a specific item|  
+|**TVN_ENDLABELEDIT**|Signals the end of label editing|  
+|**TVN_GETDISPINFO**|Requests information that the tree control requires to display an item|  
+|**TVN_ITEMEXPANDED**|Signals that a parent item's list of child items was expanded or collapsed|  
+|**TVN_ITEMEXPANDING**|Signals that a parent item's list of child items is about to be expanded or collapsed|  
+|**TVN_KEYDOWN**|Signals a keyboard event|  
+|**TVN_SELCHANGED**|Signals that the selection has changed from one item to another|  
+|**TVN_SELCHANGING**|Signals that the selection is about to be changed from one item to another|  
+|**TVN_SETDISPINFO**|Notification to update the information maintained for an item|  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

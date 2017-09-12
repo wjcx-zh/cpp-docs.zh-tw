@@ -1,86 +1,105 @@
 ---
-title: "視覺化管理員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "視覺化管理員"
+title: Visualization Manager | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 視覺化管理員
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 263fd911d68d6b179ee110594e4b8ed855b69473
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-視覺化管理員是物件控制整個應用程式的外觀。  為您可以將應用程式的任何繪圖程式碼的單一類別。  MFC 程式庫包含數個視覺化管理員。  如果您要建置應用程式，自訂檢視您也可以建立自己的視覺化管理員。  在不同的視覺化管理員啟用時，下圖顯示相同的應用程式:  
+---
+# <a name="visualization-manager"></a>Visualization Manager
+The visual manager is an object that controls the appearance of a whole application. It acts as a single class where you can put all the drawing code for your application. The MFC Library includes several visual managers. You can also create your own visual manager if you want to create a custom view for your application. The following images show the same application when different visual managers are enabled:  
   
- ![由 CMFCVisualManagerWindows 呈現的 MyApp](../mfc/media/vmwindows.png "VMWindows")  
-使用 CMFCVisualManagerWindows 視覺化管理員的 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows")  
+MyApp that uses the CMFCVisualManagerWindows visual manager  
   
- ![由 CMFCVisualManagerVS2005 呈現的 MyApp](../mfc/media/vmvs2005.png "VMVS2005")  
-使用 CMFCVisualManagerVS2005 視覺化管理員的 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005")  
+MyApp that uses the CMFCVisualManagerVS2005 visual manager  
   
- ![由 CMFCVisualManagerOfficeXP 呈現的 MyApp](../mfc/media/vmofficexp.png "VMOfficeXP")  
-使用 CMFCVisualManagerOfficeXP 視覺化管理員的 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp")  
+MyApp that uses the CMFCVisualManagerOfficeXP visual manager  
   
- ![由 CMFCVisualManagerOffice2003 呈現的 MyApp](../mfc/media/vmoffice2003.png "VMOffice2003")  
-使用 CMFCVisualManagerOffice2003 視覺化管理員的 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003")  
+MyApp that uses the CMFCVisualManagerOffice2003 visual manager  
   
- ![由 CMFCVisualManagerOffice2007 呈現的 MyApp](../mfc/media/msoffice2007.png "MSOffice2007")  
-使用 CMFCVisualManagerOffice2007 視覺化管理員的 MyApp  
+ ![MyApp as rendered by CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007")  
+MyApp that uses the CMFCVisualManagerOffice2007 visual manager  
   
- 根據預設，視覺化管理員會維護幾個 GUI 項目的繪製程式碼。  若要提供自訂 UI 項目，您需要覆寫視覺管理員的相關繪圖方法。  如需這些方法的清單，請參閱 [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md)。  您可以覆寫提供自訂外觀的方法是以 `OnDraw`中的所有方法。  
+ By default, the visual manager maintains the drawing code for several GUI elements. To provide custom UI elements, you need to override the related drawing methods of the visual manager. For the list of these methods, see [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md). The methods that you can override to provide a custom appearance are all the methods that start with `OnDraw`.  
   
- 您的應用程式只能有一個 `CMFCVisualManager` 物件。  若要取得指標對應用程式的視覺化管理員，請呼叫靜態函式 [CMFCVisualManager::GetInstance](../Topic/CMFCVisualManager::GetInstance.md)。  由於所有視覺化管理員繼承自 `CMFCVisualManager`， `CMFCVisualManager::GetInstance` 方法會取得指標為適當的視覺化管理員，，即使您建立自訂視覺管理員。  
+ Your application can have only one `CMFCVisualManager` object. To obtain a pointer to the visual manager for your application, call the static function [CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance). Because all visual managers inherit from `CMFCVisualManager`, the `CMFCVisualManager::GetInstance` method will get a pointer to the appropriate visual manager, even if you create a custom visual manager.  
   
- 如果您要建立自訂視覺管理員，您必須從已存在的一位視覺化管理員取得它。  取得的預設類別為 `CMFCVisualManager`。  不過，您可以使用一個不同的視覺化管理員，則較佳類似要為應用程式想要。  例如，在中，如果您要使用 `CMFCVisualManagerOffice2007` 視覺管理員，不過，只要變更分隔符號的外觀，您可以從 `CMFCVisualManagerOffice2007`衍生您自己的自訂類別。  在這個案例中，您應該覆寫繪製的分隔符號方法。  
+ If you want to create a custom visual manager, you must derive it from a visual manager that already exists. The default class to derive from is `CMFCVisualManager`. However, you can use a different visual manager if it better resembles what you want for your application. For example, if you wanted to use the `CMFCVisualManagerOffice2007` visual manager, but wanted only to change how separators look, you could derive your custom class from `CMFCVisualManagerOffice2007`. In this scenario, you should overwrite only the methods for drawing separators.  
   
- 有兩種可能的方式為您的應用程式使用特定視覺化管理員。  一種方式是呼叫 [CMFCVisualManager::SetDefaultManager](../Topic/CMFCVisualManager::SetDefaultManager.md) 方法並傳遞這個適當的視覺化管理員做為參數。  下列程式碼範例顯示如何使用這個方法的 `CMFCVisualManagerVS2005` 視覺管理員:  
+ There are two possible ways to use a specific visual manager for your application. One way is to call the [CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) method and pass the appropriate visual manager as a parameter. The following code example shows how you would use the `CMFCVisualManagerVS2005` visual manager with this method:  
   
 ```  
-CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));  
+CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```  
   
- 另一種使用一個視覺化管理員在您的應用程式將手動建立它。  應用程式的所有轉換會使用這個新的視覺管理員。  不過，，因為只能有一個應用程式的 `CMFCVisualManager` 物件，您必須刪除目前視覺化管理員，在建立新的。  在下列範例中， `CMyVisualManager` 是從 `CMFCVisualManager`衍生的自訂視覺化管理員。  下列方法會根據索引將會變更哪些視覺管理員用來顯示應用程式，例如:  
+ The other way to use a visual manager in your application is to create it manually. The application will then use this new visual manager for all the rendering. However, because there can be only one `CMFCVisualManager` object per application, you will have to delete the current visual manager before you create a new one. In the following example, `CMyVisualManager` is a custom visual manager that is derived from `CMFCVisualManager`. The following method will change what visual manager is used to display your application, depending on an index:  
   
 ```  
 void CMyApp::SetSkin (int index)  
 {  
-   if (CMFCVisualManager::GetInstance() != NULL)  
-   {  
-      delete CMFCVisualManager::GetInstance();  
-   }  
-  
-   switch (index)  
-   {  
-   case DEFAULT_STYLE:  
-      // The following statement creates a new CMFCVisualManager  
-      CMFCVisualManager::GetInstance();  
-      break;  
-  
-   case CUSTOM_STYLE:  
-      new CMyVisualManager;  
-      break;  
-  
-   default:  
-      CMFCVisualManager::GetInstance();  
-      break;  
-   }  
-  
-   CMFCVisualManager::GetInstance()->RedrawAll();  
-}  
+    if (CMFCVisualManager::GetInstance() != NULL)  
+ {  
+    delete CMFCVisualManager::GetInstance();
+
+ }  
+ 
+    switch (index)  
+ {  
+    case DEFAULT_STYLE: *// The following statement creates a new CMFCVisualManager  
+    CMFCVisualManager::GetInstance();
+break;  
+ 
+    case CUSTOM_STYLE:  
+    new CMyVisualManager;  
+    break; 
+ 
+    default: 
+    CMFCVisualManager::GetInstance();
+break;  
+ }  
+ 
+    CMFCVisualManager::GetInstance()->RedrawAll();
+
+} 
 ```  
   
-## 請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
  [CMFCVisualManager Class](../mfc/reference/cmfcvisualmanager-class.md)
+

@@ -1,37 +1,56 @@
 ---
-title: "建立工具提示的方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolTipCtrl 類別, 建立工具提示"
-  - "工具提示 [C++], 建立"
-  - "工具提示 [C++], 工具提示控制項"
+title: Methods of Creating Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolTipCtrl class [MFC], creating tool tips
+- tool tips [MFC], tool tip controls
+- tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 建立工具提示的方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f241e39e640da8927943d3628af9ccc7e430c0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 提供三種類別以建立及管理工具提示控制項: [CWnd](../mfc/reference/cwnd-class.md)、 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)、 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) 和 [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md)。  這些類別中的工具提示成員函式包裝 Windows 通用控制項 API。  `CToolBarCtrl` 類別和 `CToolTipCtrl` 類別衍生自 `CWnd` 類別。  
+---
+# <a name="methods-of-creating-tool-tips"></a>Methods of Creating Tool Tips
+MFC provides three classes to create and manage the tool tip control: [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) and [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). The tool tip member functions in these classes wrap the Windows common control API. Class `CToolBarCtrl` and class `CToolTipCtrl` are derived from class `CWnd`.  
   
- `CWnd` 提供四個成員函式來建立並管理工具提示: [EnableToolTips](../Topic/CWnd::EnableToolTips.md)、 [CancelToolTips](../Topic/CWnd::CancelToolTips.md)、 [FilterToolTipMessage](../Topic/CWnd::FilterToolTipMessage.md)和 [OnToolHitTest](../Topic/CWnd::OnToolHitTest.md)。  參考這些個別成員函式以取得實作工具提示的詳細資訊。  
+ `CWnd` provides four member functions to create and manage tool tips: [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), and [OnToolHitTest](../mfc/reference/cwnd-class.md#ontoolhittest). See these individual member functions for more information about how they implement tool tips.  
   
- 如果您使用 `CToolBarCtrl` 建立工具列，您可以使用下列成員函式實作該工具列上的工具提示: [GetToolTips](../Topic/CToolBarCtrl::GetToolTips.md) 和 [SetToolTips](../Topic/CToolBarCtrl::SetToolTips.md)。  參考這些個別成員函式和 [處理工具提示通知](../mfc/handling-tool-tip-notifications.md) 以取得實作工具提示的詳細資訊。  
+ If you create a toolbar using `CToolBarCtrl`, you can implement tool tips for that toolbar directly using the following member functions: [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) and [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). See these individual member functions and [Handling Tool Tip Notifications](../mfc/handling-tool-tip-notifications.md) for more information about how they implement tool tips.  
   
- `CToolTipCtrl` 類別提供 Windows 通用工具提示控制項的功能。  一個工具提示控制項可以提供多個工具的資訊。  工具是一個視窗，例如子視窗或控制項或為視窗工作區中應用程式定義的矩形區域。  [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) 類別衍生自 `CToolTipCtrl` 並提供額外的視覺化樣式和功能。  
+ The `CToolTipCtrl` class provides the functionality of the Windows common tool tip control. A single tool tip control can provide information for more than one tool. A tool is either a window, such as a child window or control, or an application-defined rectangular area within a window's client area. The [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) class derives from `CToolTipCtrl` and provides additional visual styles and functionality.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+ [Controls](../mfc/controls-mfc.md)
+
+

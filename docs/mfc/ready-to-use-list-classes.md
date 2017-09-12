@@ -1,41 +1,60 @@
 ---
-title: "立即可用的清單類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], 清單"
-  - "集合類別, 清單"
-  - "清單類別"
+title: Ready-to-Use List Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.list
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [MFC], list
+- list classes [MFC]
+- collection classes [MFC], lists
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 立即可用的清單類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9b1d0baeb59e906c8d31a2df096f5dfe11e968f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-下列類別是立即可用的清單類別。  
+---
+# <a name="ready-to-use-list-classes"></a>Ready-to-Use List Classes
+The following classes are ready-to-use list classes.  
   
  [CObList](../mfc/reference/coblist-class.md)  
- 存放類別 `CObject` 的物件或衍生自連結串列中 `CObject` 的類別物件的指標。  
+ Stores pointers to objects of class `CObject` or to objects of classes derived from `CObject` in a linked list.  
   
  [CPtrList](../mfc/reference/cptrlist-class.md)  
- 儲存連結串列中 `void` 的指標 \(泛型指標\) 。  
+ Stores pointers to `void` (generic pointers) in a linked list.  
   
  [CStringList](../mfc/reference/cstringlist-class.md)  
- 在連結串列儲存 `CString` 物件。  
+ Stores `CString` objects in a linked list.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

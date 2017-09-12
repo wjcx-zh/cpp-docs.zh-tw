@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBarDateTimeCtrl 類別 |Microsoft 文件"
+title: CMFCToolBarDateTimeCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,13 +35,27 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- SetStyle method
-- OnCalculateSize method
-- OnDraw method
-- OnDrawOnCustomizeList method
-- CMFCToolBarDateTimeCtrl class
-- Serialize method
-- OnSize method
+- CMFCToolBarDateTimeCtrl [MFC], CMFCToolBarDateTimeCtrl
+- CMFCToolBarDateTimeCtrl [MFC], CanBeStretched
+- CMFCToolBarDateTimeCtrl [MFC], CopyFrom
+- CMFCToolBarButton [MFC], ExportToMenuButton
+- CMFCToolBarDateTimeCtrl [MFC], GetByCmd
+- CMFCToolBarDateTimeCtrl [MFC], GetDateTimeCtrl
+- CMFCToolBarDateTimeCtrl [MFC], GetHwnd
+- CMFCToolBarDateTimeCtrl [MFC], GetTime
+- CMFCToolBarDateTimeCtrl [MFC], GetTimeAll
+- CMFCToolBarDateTimeCtrl [MFC], HaveHotBorder
+- CMFCToolBarDateTimeCtrl [MFC], NotifyCommand
+- CMFCToolBarDateTimeCtrl [MFC], OnAddToCustomizePage
+- CMFCToolBarDateTimeCtrl [MFC], OnChangeParentWnd
+- CMFCToolBarDateTimeCtrl [MFC], OnClick
+- CMFCToolBarDateTimeCtrl [MFC], OnCtlColor
+- CMFCToolBarDateTimeCtrl [MFC], OnGlobalFontsChanged
+- CMFCToolBarDateTimeCtrl [MFC], OnMove
+- CMFCToolBarDateTimeCtrl [MFC], OnShow
+- CMFCToolBarDateTimeCtrl [MFC], OnUpdateToolTip
+- CMFCToolBarDateTimeCtrl [MFC], SetTime
+- CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
 caps.latest.revision: 30
 author: mikeblome
@@ -61,17 +75,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9558d62710c7be571d6aefab2c44fe504ca56d60
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f0c0eeb3b3f1728659a21c12bc93e27e97ad7980
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl 類別
-包含日期和時間選擇器控制項的工具列按鈕。  
+# <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl Class
+A toolbar button that contains a date and time picker control.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton  
@@ -79,75 +93,75 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl](#cmfctoolbardatetimectrl)|建構 `CMFCToolBarDateTimeCtrl` 物件。|  
-|`CMFCToolBarDateTimeCtrl::~CMFCToolBarDateTimeCtrl`|解構函式。|  
+|[CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl](#cmfctoolbardatetimectrl)|Constructs a `CMFCToolBarDateTimeCtrl` object.|  
+|`CMFCToolBarDateTimeCtrl::~CMFCToolBarDateTimeCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|指定使用者是否可以在自訂期間延伸按鈕。 (覆寫[CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)。)|  
-|[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|將另一個工具列按鈕的內容複製到目前的按鈕。 (覆寫[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)。)|  
-|`CMFCToolBarDateTimeCtrl::DuplicateData`|保留供未來使用。|  
-|[CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)|複製文字從工具列按鈕的功能表。|  
-|`CMFCToolBarDateTimeCtrl::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|[CMFCToolBarDateTimeCtrl::GetByCmd](#getbycmd)|擷取第一個`CMFCToolBarDateTimeCtrl`中具有指定的命令 ID 的應用程式物件|  
-|[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|傳回日期和時間選擇器控制項的指標。|  
-|[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|擷取與工具列按鈕相關聯的視窗控制代碼。 (覆寫[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)。)|  
-|`CMFCToolBarDateTimeCtrl::GetThisClass`|由架構用來取得變數的指標， [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|取得日期和時間選擇器控制項中選取的時間，並將它放在指定的[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構。|  
-|[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|傳回選取的時間從時間選擇器控制項按鈕具有指定的命令識別碼。|  
-|[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|決定當使用者選擇按鈕時，是否要顯示按鈕的框線。 (覆寫[CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder)。)|  
-|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|指定是否要處理按鈕[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)訊息。 (覆寫[CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)。)|  
-|[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|加入按鈕時，由框架呼叫**自訂**對話方塊。 (覆寫[CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)。)|  
-|`CMFCToolBarDateTimeCtrl::OnCalculateSize`|計算指定之的裝置內容和停駐狀態的按鈕大小的架構所呼叫。 (覆寫[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)。)|  
-|[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|插入新的工具列按鈕時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)。)|  
-|[CMFCToolBarDateTimeCtrl::OnClick](#onclick)|當使用者按一下控制項時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)。)|  
-|[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|為父工具列處理時，由框架呼叫`WM_CTLCOLOR`訊息。 (覆寫[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)。)|  
-|`CMFCToolBarDateTimeCtrl::OnDraw`|使用指定的樣式和選項繪製按鈕架構呼叫。 (覆寫[CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw)。)|  
-|`CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList`|繪製按鈕架構呼叫**命令**窗格**自訂**對話方塊。 (覆寫[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)。)|  
-|[CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged](#onglobalfontschanged)|全域字型變更時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)。)|  
-|[CMFCToolBarDateTimeCtrl::OnMove](#onmove)|為父工具列移動時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)。)|  
-|[CMFCToolBarDateTimeCtrl::OnShow](#onshow)|由架構呼叫時按鈕會變成可見或不可見。 (覆寫[CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)。)|  
-|`CMFCToolBarDateTimeCtrl::OnSize`|為父工具列變更它的大小或位置，這項變更會使按鈕大小變更時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)。)|  
-|[CMFCToolBarDateTimeCtrl::OnUpdateToolTip](#onupdatetooltip)|為父工具列更新其工具提示文字時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)。)|  
-|`CMFCToolBarDateTimeCtrl::Serialize`|從封存讀取此物件，或將其寫入至封存檔，(覆寫[CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)。)|  
-|`CMFCToolBarDateTimeCtrl::SetStyle`|設定樣式的工具列按鈕。 (覆寫[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。)|  
-|[CMFCToolBarDateTimeCtrl::SetTime](#settime)|時間選擇器控制項中設定的時間和日期。|  
-|[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)|在有指定的命令 ID 時間選擇器控制項的所有執行個體設定的時間和日期|  
+|[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Specifies whether a user can stretch the button during customization. (Overrides [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
+|[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Copies the properties of another toolbar button to the current button. (Overrides [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|`CMFCToolBarDateTimeCtrl::DuplicateData`|Reserved for future use.|  
+|[CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)|Copies text from the toolbar button to a menu.|  
+|`CMFCToolBarDateTimeCtrl::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCToolBarDateTimeCtrl::GetByCmd](#getbycmd)|Retrieves the first `CMFCToolBarDateTimeCtrl` object in the application that has the specified command ID.|  
+|[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Returns a pointer to the date and time picker control.|  
+|[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Retrieves the window handle that is associated with the toolbar button. (Overrides [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
+|`CMFCToolBarDateTimeCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Gets the selected time from a date and time picker control and puts it in a specified [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure.|  
+|[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Returns the selected time from the time picker control button that has a specified command ID.|  
+|[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Determines whether a border of the button is displayed when a user selects the button. (Overrides [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
+|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Specifies whether the button processes the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message. (Overrides [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Called by the framework when the button is added to a **Customize** dialog box. (Overrides [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
+|`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Called by the framework to calculate the size of the button for the specified device context and docking state. (Overrides [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
+|[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Called by the framework when the button is inserted into a new toolbar. (Overrides [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCToolBarDateTimeCtrl::OnClick](#onclick)|Called by the framework when the user clicks the control. (Overrides [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
+|[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|Called by the framework when the parent toolbar handles a `WM_CTLCOLOR` message. (Overrides [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
+|`CMFCToolBarDateTimeCtrl::OnDraw`|Called by the framework to draw the button by using the specified styles and options. (Overrides [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
+|`CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList`|Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box. (Overrides [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
+|[CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged](#onglobalfontschanged)|Called by the framework when the global font has changed. (Overrides [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
+|[CMFCToolBarDateTimeCtrl::OnMove](#onmove)|Called by the framework when the parent toolbar moves. (Overrides [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|  
+|[CMFCToolBarDateTimeCtrl::OnShow](#onshow)|Called by the framework when the button becomes visible or invisible. (Overrides [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|  
+|`CMFCToolBarDateTimeCtrl::OnSize`|Called by the framework when the parent toolbar changes its size or position and this change causes the button to change size. (Overrides [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
+|[CMFCToolBarDateTimeCtrl::OnUpdateToolTip](#onupdatetooltip)|Called by the framework when the parent toolbar updates its tooltip text. (Overrides [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|  
+|`CMFCToolBarDateTimeCtrl::Serialize`|Reads this object from an archive or writes it to an archive, (Overrides [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
+|`CMFCToolBarDateTimeCtrl::SetStyle`|Sets the style of the toolbar button. (Overrides [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle).)|  
+|[CMFCToolBarDateTimeCtrl::SetTime](#settime)|Sets the time and date in the time picker control.|  
+|[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)|Sets the time and date in all instances of the time picker control that have a specified command ID.|  
   
-## <a name="remarks"></a>備註  
- 如需如何使用日期和時間選擇器控制項的範例，請參閱 ToolbarDateTimePicker 範例專案。 如需如何將控制項的按鈕加入至工具列，請參閱[逐步解說︰ 將工具列控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)。  
+## <a name="remarks"></a>Remarks  
+ For an example of how to use a date and time picker control, see the ToolbarDateTimePicker sample project. For information about how to add control buttons to toolbars, see [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
  [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxtoolbardatetimectrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbardatetimectrl.h  
   
-##  <a name="canbestretched"></a>CMFCToolBarDateTimeCtrl::CanBeStretched  
- 指定使用者是否可以在自訂期間延伸按鈕。  
+##  <a name="canbestretched"></a>  CMFCToolBarDateTimeCtrl::CanBeStretched  
+ Specifies whether a user can stretch the button during customization.  
   
 ```  
 virtual BOOL CanBeStretched() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 此方法會傳回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，架構不允許使用者在自訂期間延伸工具列按鈕。 此方法會擴充基底類別實作 ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) 允許使用者在自訂期間調整日期和時間的工具列按鈕。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework does not allow the user to stretch a toolbar button during customization. This method extends the base class implementation ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) by allowing the user to stretch a date and time toolbar button during customization.  
   
-##  <a name="cmfctoolbardatetimectrl"></a>CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
- 建立並初始化[CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md)物件。  
+##  <a name="cmfctoolbardatetimectrl"></a>  CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
+ Creates and initializes a [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md) object.  
   
 ```  
 CMFCToolBarDateTimeCtrl(
@@ -157,103 +171,103 @@ CMFCToolBarDateTimeCtrl(
     int iWidth=0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 控制項 id。  
+ The control ID.  
   
  [in] `iImage`  
- 在工具列上的映像索引`CMFCToolBarImages`物件。  
+ The index of the image in the toolbar's `CMFCToolBarImages` object.  
   
  [in] `dwStyle`  
- 樣式`CMFCToolBarDateTimeCtrlImpl`使用者按一下按鈕時所建立的視窗。  
+ The style of the `CMFCToolBarDateTimeCtrlImpl` window that is created when a user clicks the button.  
   
  [in] `iWidth`  
- 控制項的寬度 (單位為像素)。  
+ The width of the control, in pixels.  
   
-### <a name="remarks"></a>備註  
- 此物件會初始化為系統日期和時間。 內部的視窗樣式`CMFCToolBarDateTimeCtrlImpl`物件包含`dwStyle`參數和`WS_CHILD`和`WS_VISIBLE`樣式。 您無法使用，以變更這些樣式`CMFCToolBarDateTimeCtrl::SetStyle`。 使用`SetStyle`變更樣式`CMFCToolBarDateTimeCtrl`控制項。  
+### <a name="remarks"></a>Remarks  
+ This object is initialized to the system date and time. The window style of the internal `CMFCToolBarDateTimeCtrlImpl` object includes the `dwStyle` parameter and the `WS_CHILD` and `WS_VISIBLE` styles. You cannot change these styles by using `CMFCToolBarDateTimeCtrl::SetStyle`. Use `SetStyle` to change the style of the `CMFCToolBarDateTimeCtrl` control.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何建構的物件`CMFCToolBarDateTimeCtrl`類別。 此程式碼片段是一部分[工具列日期時間選擇器範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCToolBarDateTimeCtrl` class. This code snippet is part of the [Toolbar Date Time Picker sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_ToolbarDateTimePicker #&1;](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCToolBarDateTimeCtrl::CopyFrom  
- 將另一個工具列按鈕的內容複製到目前的按鈕。  
+##  <a name="copyfrom"></a>  CMFCToolBarDateTimeCtrl::CopyFrom  
+ Copies the properties of another toolbar button to the current button.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 從中複製來源 按鈕參考。  
+ A reference to the source button from which to copy.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 `src`必須是型別`CMFCToolBarDateTimeCtrl`。  
+### <a name="remarks"></a>Remarks  
+ Call this method to copy another toolbar button to this toolbar button. `src` must be of type `CMFCToolBarDateTimeCtrl`.  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarDateTimeCtrl::ExportToMenuButton  
- 複製文字從工具列按鈕的功能表。  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarDateTimeCtrl::ExportToMenuButton  
+ Copies text from the toolbar button to a menu.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `menuButton`  
- 參考目標功能表按鈕。  
+ A reference to the target menu button.  
   
-### <a name="return-value"></a>傳回值  
- 此方法會傳回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) 載入控制項的命令 ID 相關聯的字串資源。 如需字串資源的詳細資訊，請參閱[CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) by loading the string resource that is associated with the command ID of the control. For more information about string resources, see [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring).  
   
-##  <a name="getbycmd"></a>CMFCToolBarDateTimeCtrl::GetByCmd  
- 擷取第一個`CMFCToolBarDateTimeCtrl`中具有指定的命令 ID 的應用程式物件  
+##  <a name="getbycmd"></a>  CMFCToolBarDateTimeCtrl::GetByCmd  
+ Retrieves the first `CMFCToolBarDateTimeCtrl` object in the application that has the specified command ID.  
   
 ```  
 static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 要擷取按鈕的命令識別碼。  
+ The command ID of the button to retrieve.  
   
-### <a name="return-value"></a>傳回值  
- 第一個`CMFCToolBarDateTimeCtrl`中具有指定的命令 ID 的應用程式物件或`NULL`如果沒有`CMFCToolBarDateTimeCtrl`物件具有指定之的命令 id。  
+### <a name="return-value"></a>Return Value  
+ The first `CMFCToolBarDateTimeCtrl` object in the application that has the specified command ID, or `NULL` if no `CMFCToolBarDateTimeCtrl` objects have the specified command ID.  
   
-### <a name="remarks"></a>備註  
- 這類方法使用這個共用公用程式方法是[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)和[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)設定或取得具有指定的命令識別碼時間選擇器控制項的所有執行個體的日期與時間  
+### <a name="remarks"></a>Remarks  
+ This shared utility method is used by methods such as [CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall) and [CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall) to set or get the time and date of all instances of the time picker control that have a specified command ID.  
   
-##  <a name="getdatetimectrl"></a>CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
- 傳回日期和時間選擇器控制項的指標。  
+##  <a name="getdatetimectrl"></a>  CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
+ Returns a pointer to the date and time picker control.  
   
 ```  
 CDateTimeCtrl* GetDateTimeCtrl() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 變數的指標，日期和時間選擇器控制項。或`NULL`如果控制項不存在。  
+### <a name="return-value"></a>Return Value  
+ A pointer to date and time picker control; or `NULL` if the control does not exist.  
   
-### <a name="remarks"></a>備註  
- `CMFCToolBarDateTimeCtrl`類別初始化`m_pWndDateTime`資料成員，當您插入`CMFCToolBarDateTimeCtrl`成為一個工具列物件。  
+### <a name="remarks"></a>Remarks  
+ The `CMFCToolBarDateTimeCtrl` class initializes the `m_pWndDateTime` data member when you insert a `CMFCToolBarDateTimeCtrl` object into a toolbar.  
   
-##  <a name="gethwnd"></a>CMFCToolBarDateTimeCtrl::GetHwnd  
- 擷取與工具列按鈕相關聯的視窗控制代碼。  
+##  <a name="gethwnd"></a>  CMFCToolBarDateTimeCtrl::GetHwnd  
+ Retrieves the window handle that is associated with the toolbar button.  
   
 ```  
 virtual HWND GetHwnd();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 視窗控制代碼所關聯的日期和時間的工具列按鈕。  
+### <a name="return-value"></a>Return Value  
+ The window handle that is associated with the date and time toolbar button.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)方法。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) method.  
   
-##  <a name="gettime"></a>CMFCToolBarDateTimeCtrl::GetTime  
- 取得選取的時間從相關聯的日期和時間選擇器控制項，並將它放在指定的[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構  
+##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
+ Gets the selected time from the associated date and time picker control and puts it in a specified [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -261,21 +275,21 @@ DWORD GetTime(CTime& timeDest) const;
 DWORD GetTime(LPSYSTEMTIME pTimeDest) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `[out] timeDest`  
- 在第一個多載， [COleDateTime 類別](../../atl-mfc-shared/reference/coledatetime-class.md)將會收到系統時間資訊的物件。 在第二個多載， [CTime](../../atl-mfc-shared/reference/ctime-class.md)將會收到系統時間資訊的物件。  
+ In the first overload, a [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object that will receive the system time information. In the second overload, a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that will receive the system time information.  
   
  `[out] pTimeDest`  
- 指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)接收系統時間資訊的結構。 必須不是 `NULL`。  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure to receive the system time information. Must not be `NULL`.  
   
-### <a name="return-value"></a>傳回值  
- 在第一個多載中，如果要成功寫入的時間為非零[COleDateTime 類別](../../atl-mfc-shared/reference/coledatetime-class.md)物件，否則傳回 0。 在第二個和第三個多載，則傳回值是`DWORD`等於在已設定的 dwFlag 成員[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構。  
+### <a name="return-value"></a>Return Value  
+ In the first overload, nonzero if the time is successfully written to the [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object; otherwise 0. In the second and third overloads, the return value is a `DWORD` that is equal to the dwFlag member that was set in the [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) structure.  
   
-### <a name="remarks"></a>備註  
- 方法會設定[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構成員 dwFlags 表示的日期和時間選擇器是否設定為日期和時間。 控制項的值等於 GDT_NONE，如果設定為`no date`狀態，並使用 DTS_SHOWNONE 樣式。 如果傳回的值等於 GDT_VALID，系統時間已成功儲存在目的地位置。  
+### <a name="remarks"></a>Remarks  
+ The method sets the [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) structure member dwFlags to indicate whether the date and time picker is set to a date and time. If the value equals GDT_NONE, the control is set to `no date` status, and uses the DTS_SHOWNONE style. If the value returned equals GDT_VALID, the system time is successfully stored in the destination location.  
   
-##  <a name="gettimeall"></a>CMFCToolBarDateTimeCtrl::GetTimeAll  
- 傳回具有指定的命令 id。 時間選擇器控制項按鈕從使用者選取的時間  
+##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
+ Returns the time selected by the user from the time picker control button that has a specified command ID.  
   
 ```  
 static BOOL GetTimeAll(
@@ -291,82 +305,82 @@ static DWORD GetTimeAll(
     LPSYSTEMTIME pTimeDest);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `[in] uiCmd`  
- 指定工具列按鈕的命令 id。  
+ Specifies a toolbar button's command ID.  
   
  `[out] timeDest`  
- 在第一個多載， [COleDateTime 類別](../../atl-mfc-shared/reference/coledatetime-class.md)將會收到系統時間資訊的物件。 在第二個多載， [CTime](../../atl-mfc-shared/reference/ctime-class.md)將會收到系統時間資訊的物件。  
+ In the first overload, a [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object that will receive the system time information. In the second overload, a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that will receive the system time information.  
   
  `[out] pTimeDest`  
- 指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)接收系統時間資訊的結構。 必須不是 `NULL`。  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure to receive the system time information. Must not be `NULL`.  
   
-### <a name="return-value"></a>傳回值  
- 如果架構找不到符合的命令 ID 的工具列按鈕`uiCmd`，傳回值為零，在第一個多載，GDT_NONE 在其他多載。 如果找到工具列按鈕，則傳回值會從呼叫傳回的值相同[CMFCToolBarDateTimeCtrl::GetTime](#gettime)對該按鈕。 傳回值&0; 或 GDT_NONE 時發現 按鈕，這表示可能會發生在呼叫`GetTime`未傳回有效的日期，因其他原因。  
+### <a name="return-value"></a>Return Value  
+ If the framework cannot find a toolbar button that matches the command ID `uiCmd`, the return value is zero in the first overload, and GDT_NONE in the other overloads. If the toolbar button is found, the return value is the same as the return value from a call to [CMFCToolBarDateTimeCtrl::GetTime](#gettime) on that button. A return value of zero or GDT_NONE can occur when the button is found, which indicates that the call to `GetTime` did not return a valid date for some other reason.  
   
-### <a name="remarks"></a>備註  
- 這個方法會尋找具有指定的命令 ID 和呼叫的工具列按鈕[CMFCToolBarDateTimeCtrl::GetTime](#gettime)該按鈕上的方法。  
+### <a name="remarks"></a>Remarks  
+ This method looks for a toolbar button that has the specified command ID and calls [CMFCToolBarDateTimeCtrl::GetTime](#gettime) method on that button.  
   
-##  <a name="havehotborder"></a>CMFCToolBarDateTimeCtrl::HaveHotBorder  
- 決定當使用者選擇按鈕時，是否要顯示按鈕的框線。  
+##  <a name="havehotborder"></a>  CMFCToolBarDateTimeCtrl::HaveHotBorder  
+ Determines whether a border of the button is displayed when a user selects the button.  
   
 ```  
 virtual BOOL HaveHotBorder() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 按鈕會顯示其框線時選取; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a button displays its border when selected; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果控制項為可見，這個方法會傳回非零值。  
+### <a name="remarks"></a>Remarks  
+ This method returns a nonzero value if the control is visible.  
   
-##  <a name="notifycommand"></a>CMFCToolBarDateTimeCtrl::NotifyCommand  
- 指定是否要處理按鈕[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)訊息。  
+##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
+ Specifies whether the button processes the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iNotifyCode`  
- 與命令相關聯的通知訊息。  
+ The notification message that is associated with the command.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果按鈕處理`WM_COMMAND`訊息，或`FALSE`來指示訊息應該由父工具列。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button processes the `WM_COMMAND` message, or `FALSE` to indicate that the message should be handled by the parent toolbar.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，當它是傳送[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)給父視窗的訊息。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it is about to send a [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message to the parent window.  
   
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 藉由處理[DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737)通知。 它將內部時間的狀態更新並更新所有的時間屬性`CMFCToolBarDateTimeCtrl`物件具有相同命令 id。  
+ This method extends the base class implementation ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) by processing the [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737) notification. It updates the internal time status and updates the time property of all `CMFCToolBarDateTimeCtrl` objects with the same command ID.  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
- 加入按鈕時，由框架呼叫**自訂**對話方塊。  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
+ Called by the framework when the button is added to a **Customize** dialog box.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作時， [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage)，藉由複製屬性從第一個日期與時間任何具有相同的命令識別碼與此物件的工具列中的控制項。 如果沒有工具列中的日期和時間的控制項具有相同命令 ID 與此物件，這個方法作用。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage), by copying the properties from the first date and time control in any toolbar that has the same command ID as this object. This method does nothing if no toolbar has a date and time control that has the same command ID as this object.  
   
- 如需詳細資訊**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
+ For more information about the **Customize** dialog box, see [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
- 插入新的工具列按鈕時，由架構呼叫。  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
+ Called by the framework when the button is inserted into a new toolbar.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 新的父視窗。  
+ The new parent window.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 重新建立內部`CMFCToolBarDateTimeCtrlImpl`物件。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) by recreating the internal `CMFCToolBarDateTimeCtrlImpl` object.  
   
-##  <a name="onclick"></a>CMFCToolBarDateTimeCtrl::OnClick  
- 當使用者按一下控制項時，由架構呼叫。  
+##  <a name="onclick"></a>  CMFCToolBarDateTimeCtrl::OnClick  
+ Called by the framework when the user clicks the control.  
   
 ```  
 virtual BOOL OnClick(
@@ -374,21 +388,21 @@ virtual BOOL OnClick(
     BOOL bDelay = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- 未使用。  
+ Unused.  
   
  [in] `bDelay`  
- 未使用。  
+ Unused.  
   
-### <a name="return-value"></a>傳回值  
- 按鈕處理按一下的訊息; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the click message; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫基底類別實作時， [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)，藉由傳回非零值，如果內部`CMFCToolBarDateTimeCtrlImpl`物件為可見。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation, [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), by returning a nonzero value if the internal `CMFCToolBarDateTimeCtrlImpl` object is visible.  
   
-##  <a name="onctlcolor"></a>CMFCToolBarDateTimeCtrl::OnCtlColor  
- 為父工具列處理時，由框架呼叫`WM_CTLCOLOR`訊息。  
+##  <a name="onctlcolor"></a>  CMFCToolBarDateTimeCtrl::OnCtlColor  
+ Called by the framework when the parent toolbar handles a `WM_CTLCOLOR` message.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -396,73 +410,73 @@ virtual HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 顯示按鈕的裝置內容。  
+ The device context that displays the button.  
   
  [in] `nCtlColor`  
- 未使用。  
+ Unused.  
   
-### <a name="return-value"></a>傳回值  
- 通用架構會使用來繪製按鈕背景的筆刷控制代碼。  
+### <a name="return-value"></a>Return Value  
+ A handle to the global brush that the framework uses to paint the background of the button.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫基底類別實作時， [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)，藉由設定的文字和背景分別提供的裝置內容的通用的文字色彩和背景色彩。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation, [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor), by setting the text and background colors of the provided device context to the global text and background colors, respectively.  
   
- 如需可用於您的應用程式的全域選項的詳細資訊，請參閱[AFX_GLOBAL_DATA 結構](../../mfc/reference/afx-global-data-structure.md)。  
+ For more information about global options that are available to your application, see [AFX_GLOBAL_DATA Structure](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged  
- 全域字型變更時，由架構呼叫。  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged  
+ Called by the framework when the global font has changed.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) 所通用的字型變更控制項的字型。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) by changing the font of the control to that of the global font.  
   
- 如需可用於您的應用程式的全域選項的詳細資訊，請參閱[AFX_GLOBAL_DATA 結構](../../mfc/reference/afx-global-data-structure.md)。  
+ For more information about global options that are available to your application, see [AFX_GLOBAL_DATA Structure](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="onmove"></a>CMFCToolBarDateTimeCtrl::OnMove  
- 為父工具列移動時，由架構呼叫。  
+##  <a name="onmove"></a>  CMFCToolBarDateTimeCtrl::OnMove  
+ Called by the framework when the parent toolbar moves.  
   
 ```  
 virtual void OnMove();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫預設類別實作 ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) 藉由更新內部位置`CMFCToolBarDateTimeCtrlImpl`物件。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the default class implementation ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) by updating the position of the internal `CMFCToolBarDateTimeCtrlImpl` object.  
   
-##  <a name="onshow"></a>CMFCToolBarDateTimeCtrl::OnShow  
- 由架構呼叫時按鈕會變成可見或不可見。  
+##  <a name="onshow"></a>  CMFCToolBarDateTimeCtrl::OnShow  
+ Called by the framework when the button becomes visible or invisible.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 指定按鈕是否可見。 如果這個參數是`TRUE`，按鈕會顯示。 否則，按鈕看不到。  
+ Specifies whether the button is visible. If this parameter is `TRUE`, the button is visible. Otherwise, the button is not visible.  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 來顯示按鈕`bShow`是`TRUE`。 否則，這個方法會隱藏按鈕。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) by displaying the button if `bShow` is `TRUE`. Otherwise, this method hides the button.  
   
-##  <a name="onsize"></a>CMFCToolBarDateTimeCtrl::OnSize  
- 為父工具列變更它的大小或位置，這項變更會使按鈕大小變更時，由架構呼叫。  
+##  <a name="onsize"></a>  CMFCToolBarDateTimeCtrl::OnSize  
+ Called by the framework when the parent toolbar changes its size or position and this change causes the button to change size.  
   
 ```  
 virtual void OnSize(int iSize);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iSize`  
- 新按鈕，單位為像素的寬度。  
+ The new width of the button, in pixels.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫預設類別實作 ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) 藉由更新的大小和位置內部`CMFCToolBarDateTimeCtrlImpl`物件。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the default class implementation ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) by updating the size and position of the internal `CMFCToolBarDateTimeCtrlImpl` object.  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
- 為父工具列更新其工具提示文字時，由架構呼叫。  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
+ Called by the framework when the parent toolbar updates its tooltip text.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -472,27 +486,27 @@ virtual BOOL OnUpdateToolTip(
     CString& str);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- 父視窗。  
+ The parent window.  
   
  [in] `iButtonIndex`  
- 父代按鈕集合中的按鈕以零為起始的索引。  
+ The zero-based index of the button in the parent button collection.  
   
  [in] `wndToolTip`  
- 顯示工具提示文字的控制項。  
+ The control that displays the tooltip text.  
   
- [輸出] `str`  
- A`CString`接收更新的工具提示文字的物件。  
+ [out] `str`  
+ A `CString` object that receives the updated tooltip text.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果此方法來更新的工具提示文字。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method updates the tooltip text; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此方法會擴充基底類別實作 ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) 所顯示的按鈕相關聯的工具提示文字。 如果按鈕不會水平停駐，這個方法不做任何動作，並傳回`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) by displaying the tooltip text that is associated with the button. If the button is not docked horizontally, this method does nothing and returns `FALSE`.  
   
-##  <a name="settime"></a>CMFCToolBarDateTimeCtrl::SetTime  
- 時間選擇器控制項中設定的時間和日期。  
+##  <a name="settime"></a>  CMFCToolBarDateTimeCtrl::SetTime  
+ Sets the time and date in the time picker control.  
   
 ```  
 BOOL SetTime(const COleDateTime& timeNew);
@@ -500,21 +514,21 @@ BOOL SetTime(const CTime* timeNew);
 BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `[in] timeNew`  
- 第一版的參考[COleDateTime 類別](../../atl-mfc-shared/reference/coledatetime-class.md)物件，其中包含要將設定控制項的時間。 在第二個版本中，指標[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含要將設定控制項的時間。  
+ In the first version, a reference to a [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object that contains the time to which the control will be set. In the second version, a pointer to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that contains the time to which the control will be set.  
   
  `[in] pTimeNew`  
- 指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含要將設定控制項的時間。  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that contains the time to which the control will be set.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 日期和時間選擇器控制項中設定的時間，藉由呼叫[CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime)。  
+### <a name="remarks"></a>Remarks  
+ Sets the time in a date and time picker control by calling [CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime).  
   
-##  <a name="settimeall"></a>CMFCToolBarDateTimeCtrl::SetTimeAll  
- 在有指定的命令 ID 時間選擇器控制項的所有執行個體設定的時間和日期  
+##  <a name="settimeall"></a>  CMFCToolBarDateTimeCtrl::SetTimeAll  
+ Sets the time and date in all instances of the time picker control that have a specified command ID.  
   
 ```  
 static BOOL SetTimeAll(
@@ -530,27 +544,27 @@ static BOOL SetTimeAll(
     LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `[in] uiCmd`  
- 指定工具列按鈕的命令 id。  
+ Specifies a toolbar button's command ID.  
   
  `[in] timeNew`  
- 在第一個版本中， [COleDateTime 類別](../../atl-mfc-shared/reference/coledatetime-class.md)物件，其中包含要將設定控制項的時間。 在第二個版本中，指標[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含要將設定控制項的時間。  
+ In the first version, a [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object that contains the time to which the control will be set. In the second version, a pointer to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that contains the time to which the control will be set.  
   
  `[in] pTimeNew`  
- 指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含要將設定控制項的時間。  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that contains the time to which the control will be set.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 會尋找具有指定的命令 ID 的工具列按鈕，設定日期和時間選擇器控制項中的時間，藉由呼叫[CMFCToolBarDateTimeCtrl::SetTime](#settime)。  
+### <a name="remarks"></a>Remarks  
+ Looks for a toolbar button with the specified command ID and sets the time in a date and time picker control by calling [CMFCToolBarDateTimeCtrl::SetTime](#settime).  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [逐步解說︰ 將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

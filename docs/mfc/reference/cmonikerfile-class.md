@@ -1,5 +1,5 @@
 ---
-title: "CMonikerFile 類別 |Microsoft 文件"
+title: CMonikerFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,10 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMonikerFile class
-- monikers, MFC
-- IMoniker interface, binding
-- IMoniker interface
+- CMonikerFile [MFC], CMonikerFile
+- CMonikerFile [MFC], Close
+- CMonikerFile [MFC], Detach
+- CMonikerFile [MFC], GetMoniker
+- CMonikerFile [MFC], Open
+- CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
 caps.latest.revision: 22
 author: mikeblome
@@ -43,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0f348328a4be4b934e00acdb43ba47fa919bac75
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9f66bde77b25725172933852e8f404876fe0fe20
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmonikerfile-class"></a>CMonikerFile 類別
-表示資料的資料流 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) 名為[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)。  
+# <a name="cmonikerfile-class"></a>CMonikerFile Class
+Represents a stream of data ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)) named by an [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMonikerFile : public COleStreamFile  
@@ -61,37 +63,37 @@ class CMonikerFile : public COleStreamFile
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMonikerFile::CMonikerFile](#cmonikerfile)|建構 `CMonikerFile` 物件。|  
+|[CMonikerFile::CMonikerFile](#cmonikerfile)|Constructs a `CMonikerFile` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMonikerFile::Close](#close)|卸離並釋放資料流並釋放 moniker。|  
-|[CMonikerFile::Detach](#detach)|卸離`IMoniker`從此`CMonikerFile`物件。|  
-|[CMonikerFile::GetMoniker](#getmoniker)|傳回目前的 moniker。|  
-|[CMonikerFile::Open](#open)|開啟指定的檔案取得資料流。|  
+|[CMonikerFile::Close](#close)|Detaches and releases the stream and releases the moniker.|  
+|[CMonikerFile::Detach](#detach)|Detaches the `IMoniker` from this `CMonikerFile` object.|  
+|[CMonikerFile::GetMoniker](#getmoniker)|Returns the current moniker.|  
+|[CMonikerFile::Open](#open)|Opens the specified file to obtain a stream.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMonikerFile::CreateBindContext](#createbindcontext)|取得繫結內容，或建立的預設值初始化繫結內容。|  
+|[CMonikerFile::CreateBindContext](#createbindcontext)|Obtains the bind context or creates a default initialized bind context.|  
   
-## <a name="remarks"></a>備註  
- Moniker 包含非常類似檔案的路徑名稱的資訊。 如果您有 moniker 物件的指標`IMoniker`介面，可以取得已識別檔案的存取權，而不需要任何其他特定相關檔案所在位置實際資訊。  
+## <a name="remarks"></a>Remarks  
+ A moniker contains information much like a pathname to a file. If you have a pointer to a moniker object's `IMoniker` interface, you can get access to the identified file without having any other specific information about where the file is actually located.  
   
- 衍生自`COleStreamFile`，`CMonikerFile`取得 moniker 或者可以製作成 moniker 的字串表示法，並繫結至資料流 moniker 的名稱。 您可以讀取並寫入該資料流。 實際用途`CMonikerFile`是提供簡單的存取權`IStream`s 命名`IMoniker`s，讓您不必自己繫結至資料流，尚未擁有`CFile`資料流的功能。  
+ Derived from `COleStreamFile`, `CMonikerFile` takes a moniker or a string representation it can make into a moniker and binds to the stream for which the moniker is a name. You can then read and write to that stream. The real purpose of `CMonikerFile` is to provide simple access to `IStream`s named by `IMoniker`s so that you do not have to bind to a stream yourself, yet have `CFile` functionality to the stream.  
   
- `CMonikerFile`不能繫結至資料流以外的任何項目。 如果您想要繫結至儲存體或物件，您必須使用`IMoniker`直接介面。  
+ `CMonikerFile` cannot be used to bind to anything other than a stream. If you want to bind to storage or an object, you must use the `IMoniker` interface directly.  
   
- 如需有關資料流和 moniker 的詳細資訊，請參閱[COleStreamFile](../../mfc/reference/colestreamfile-class.md)中*MFC 參考*和[IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)和[IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on streams and monikers, see [COleStreamFile](../../mfc/reference/colestreamfile-class.md) in the *MFC Reference* and [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) and [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705) in the Windows SDK.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
@@ -100,72 +102,72 @@ class CMonikerFile : public COleStreamFile
   
  `CMonikerFile`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="close"></a>CMonikerFile::Close  
- 呼叫此函式來卸離，並釋放資料流，並釋放 moniker。  
+##  <a name="close"></a>  CMonikerFile::Close  
+ Call this function to detach and release the stream and to release the moniker.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>備註  
- 可以在未開啟或已關閉的資料流上呼叫。  
+### <a name="remarks"></a>Remarks  
+ Can be called on unopened or already closed streams.  
   
-##  <a name="cmonikerfile"></a>CMonikerFile::CMonikerFile  
- 建構 `CMonikerFile` 物件。  
+##  <a name="cmonikerfile"></a>  CMonikerFile::CMonikerFile  
+ Constructs a `CMonikerFile` object.  
   
 ```  
 CMonikerFile();
 ```  
   
-##  <a name="createbindcontext"></a>CMonikerFile::CreateBindContext  
- 呼叫此函式來建立預設值初始化繫結內容。  
+##  <a name="createbindcontext"></a>  CMonikerFile::CreateBindContext  
+ Call this function to create a default initialized bind context.  
   
 ```  
 IBindCtx* CreateBindContext(CFileException* pError);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pError`  
- 檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
+ A pointer to a file exception. In the event of an error, it will be set to the cause.  
   
-### <a name="return-value"></a>傳回值  
- 繫結內容的指標[IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755)要與繫結，如果成功，否則**NULL**。 如果執行個體以開啟`IBindHost`介面，繫結內容擷取從`IBindHost`。 如果沒有任何`IBindHost`介面或介面無法傳回繫結內容、 繫結內容建立。 如需說明的[IBindHost](http://msdn.microsoft.com/library/ie/ms775076)介面，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the bind context [IBindCtx](http://msdn.microsoft.com/library/windows/desktop/ms693755) to bind with if successful; otherwise **NULL**. If the instance was opened with an `IBindHost` interface, the bind context is retrieved from the `IBindHost`. If there is no `IBindHost` interface or the interface fails to return a bind context, a bind context is created. For a description of the [IBindHost](http://msdn.microsoft.com/library/ie/ms775076) interface, see the Windows SDK.  
   
-### <a name="remarks"></a>備註  
- 繫結內容是儲存在特定的 moniker 繫結作業的相關資訊的物件。 您可以覆寫此函式可提供自訂的繫結內容。  
+### <a name="remarks"></a>Remarks  
+ A bind context is an object that stores information about a particular moniker binding operation. You can override this function to provide a custom bind context.  
   
-##  <a name="detach"></a>CMonikerFile::Detach  
- 呼叫此函式來關閉資料流。  
+##  <a name="detach"></a>  CMonikerFile::Detach  
+ Call this function to close the stream.  
   
 ```  
 BOOL Detach(CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pError`  
- 檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
+ A pointer to a file exception. In the event of an error, it will be set to the cause.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="getmoniker"></a>CMonikerFile::GetMoniker  
- 呼叫此函式可擷取目前 moniker 的指標。  
+##  <a name="getmoniker"></a>  CMonikerFile::GetMoniker  
+ Call this function to retrieve a pointer to the current moniker.  
   
 ```  
 IMoniker* GetMoniker() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的 moniker 介面的指標 ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705))。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current moniker interface ( [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)).  
   
-### <a name="remarks"></a>備註  
- 因為`CMonikerFile`不是介面，傳回的指標不會遞增參考計數 (透過[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379))，並釋放 moniker 時`CMonikerFile`釋放物件。 如果您想要保留 moniker 或自行發行，您必須`AddRef`它。  
+### <a name="remarks"></a>Remarks  
+ Since `CMonikerFile` is not an interface, the pointer returned does not increment the reference count (through [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)), and the moniker is released when the `CMonikerFile` object is released. If you want to hold onto the moniker or release it yourself, you must `AddRef` it.  
   
-##  <a name="open"></a>CMonikerFile::Open  
- 呼叫此成員函式，以開啟檔案或 moniker 物件。  
+##  <a name="open"></a>  CMonikerFile::Open  
+ Call this member function to open a file or moniker object.  
   
 ```  
 virtual BOOL Open(
@@ -178,32 +180,32 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszURL`  
- URL 或開啟檔案的檔案名稱。  
+ A URL or filename of the file to be opened.  
   
  `pError`  
- 檔案例外狀況的指標。 發生錯誤時，它就會設定為可能的原因。  
+ A pointer to a file exception. In the event of an error, it will be set to the cause.  
   
  `pMoniker`  
- Moniker 介面的指標`IMoniker`用來取得資料流。  
+ A pointer to the moniker interface `IMoniker` to be used to obtain a stream.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- `lpszURL`參數不能在 Macintosh。 只有`pMoniker`形式**開啟**可以用於 Macintosh。  
+### <a name="remarks"></a>Remarks  
+ The `lpszURL` parameter cannot be used on a Macintosh. Only the `pMoniker` form of **Open** can be used on a Macintosh.  
   
- 您可以使用 URL 或檔案名稱`lpszURL`參數。 例如:   
+ You can use a URL or a filename for the `lpszURL` parameter. For example:  
   
- [!code-cpp[NVC_MFCWinInet # 6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
+ [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]  
   
- - 或 -  
+ - or -  
   
- [!code-cpp[NVC_MFCWinInet # 7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
+ [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/cmonikerfile-class_2.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [COleStreamFile 類別](../../mfc/reference/colestreamfile-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CAsyncMonikerFile 類別](../../mfc/reference/casyncmonikerfile-class.md)
+## <a name="see-also"></a>See Also  
+ [COleStreamFile Class](../../mfc/reference/colestreamfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CAsyncMonikerFile Class](../../mfc/reference/casyncmonikerfile-class.md)
 

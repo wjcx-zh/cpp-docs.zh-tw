@@ -1,5 +1,5 @@
 ---
-title: "PAINTSTRUCT 結構 |Microsoft 文件"
+title: PAINTSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- PAINTSTRUCT structure
+- PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 07b79b9ae20bd6e5648c67fa277ddde2929028c7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b27dcb247437b37631e306b171c4201142c33cae
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="paintstruct-structure"></a>PAINTSTRUCT 結構
-`PAINTSTRUCT`結構包含可以用來繪製的視窗工作區的資訊。  
+# <a name="paintstruct-structure"></a>PAINTSTRUCT Structure
+The `PAINTSTRUCT` structure contains information that can be used to paint the client area of a window.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagPAINTSTRUCT {  
@@ -56,30 +56,30 @@ typedef struct tagPAINTSTRUCT {
 } PAINTSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  *hdc*  
- 識別要用來繪製的顯示內容。  
+ Identifies the display context to be used for painting.  
   
  *fErase*  
- 指定是否需要重新繪製背景。 它不是 0，如果應用程式應該重繪背景。 應用程式會負責繪製背景，如果 Windows 視窗類別建立時沒有背景筆刷 (請參閱說明**hbrBackground**成員[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)])。  
+ Specifies whether the background needs to be redrawn. It is not 0 if the application should redraw the background. The application is responsible for drawing the background if a Windows window-class is created without a background brush (see the description of the **hbrBackground** member of the [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure in the Windows SDK).  
   
  *rcPaint*  
- 指定的右上方，而要求在其中繪製的矩形的右角。  
+ Specifies the upper left and lower right corners of the rectangle in which the painting is requested.  
   
  *fRestore*  
- 保留的成員。 它是由 Windows 內部使用。  
+ Reserved member. It is used internally by Windows.  
   
  *fIncUpdate*  
- 保留的成員。 它是由 Windows 內部使用。  
+ Reserved member. It is used internally by Windows.  
   
- *rgbReserved [16]*  
- 保留的成員。 保留的內部 Windows 所使用的記憶體區塊。  
+ *rgbReserved[16]*  
+ Reserved member. A reserved block of memory used internally by Windows.  
   
-## <a name="requirements"></a>需求  
- **標頭：** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPaintDC::m_ps](../../mfc/reference/cpaintdc-class.md#m_ps)
 
 

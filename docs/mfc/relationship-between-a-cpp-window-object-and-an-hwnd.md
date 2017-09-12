@@ -1,38 +1,56 @@
 ---
-title: "C++ 視窗物件和 HWND 之間的關聯性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "HWND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWnd 類別, HWND"
-  - "HWND"
-  - "HWND, 視窗物件"
-  - "視窗物件 [C++], HWND 和"
-  - "Windows 視窗 [C++]"
+title: Relationship Between a C++ Window Object and an HWND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- HWND
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows window [MFC]
+- window objects [MFC], HWND and
+- HWND [MFC]
+- CWnd class [MFC], HWND
+- HWND, window objects [MFC]
 ms.assetid: f2e76340-6691-4ee6-9424-0345634a9469
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 視窗物件和 HWND 之間的關聯性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a82eeea31a3b48ed7467df50c9ecc17ada034c0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-視窗 *物件* 是程式直接建立 C\+\+ `CWnd` 類別 \(或衍生類別\) 的物件。  它來來往往回應程式的建構函式和解構函式。  視窗的 *視窗*，另一方面，是不透明的控制代碼對應到視窗的內部視窗資料結構和使用系統資源，而存在。  視窗的視窗是由視窗的控制代碼」判斷 \(`HWND`\) 和建立， `CWnd` 物件藉由呼叫會建立類別的 `CWnd`**Create** 成員函式之後。  視窗會終結或已被程式呼叫或是使用者動作。  視窗控制代碼在視窗物件的 `m_hWnd` 成員變數儲存。  下圖顯示 C\+\+ 視窗物件和 Windows 視窗之間的關聯性。  建立視窗會在 [建立視窗](../mfc/creating-windows.md)中討論。  終結視窗會在 [要終結的視窗物件](../mfc/destroying-window-objects.md)中討論。  
+---
+# <a name="relationship-between-a-c-window-object-and-an-hwnd"></a>Relationship Between a C++ Window Object and an HWND
+The window *object* is an object of the C++ `CWnd` class (or a derived class) that your program creates directly. It comes and goes in response to your program's constructor and destructor calls. The Windows *window*, on the other hand, is an opaque handle to an internal Windows data structure that corresponds to a window and consumes system resources when present. A Windows window is identified by a "window handle" (`HWND`) and is created after the `CWnd` object is created by a call to the **Create** member function of class `CWnd`. The window may be destroyed either by a program call or by a user's action. The window handle is stored in the window object's `m_hWnd` member variable. The following figure shows the relationship between the C++ window object and the Windows window. Creating windows is discussed in [Creating Windows](../mfc/creating-windows.md). Destroying windows is discussed in [Destroying Window Objects](../mfc/destroying-window-objects.md).  
   
- ![CWnd 視窗物件和結果視窗](../mfc/media/vc37fj1.png "vc37FJ1")  
-視窗物件和 Windows 視窗  
+ ![CWnd window object and resulting window](../mfc/media/vc37fj1.gif "vc37fj1")  
+Window Object and Windows Window  
   
-## 請參閱  
- [視窗物件](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

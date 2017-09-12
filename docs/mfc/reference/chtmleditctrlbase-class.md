@@ -1,5 +1,5 @@
 ---
-title: "CHtmlEditCtrlBase 類別 |Microsoft 文件"
+title: CHtmlEditCtrlBase Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -121,7 +121,113 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CHtmlEditCtrlBase class
+- CHtmlEditCtrlBase [MFC], AddToGlyphTable
+- CHtmlEditCtrlBase [MFC], Bold
+- CHtmlEditCtrlBase [MFC], Button
+- CHtmlEditCtrlBase [MFC], CheckBox
+- CHtmlEditCtrlBase [MFC], ClearSelection
+- CHtmlEditCtrlBase [MFC], Copy
+- CHtmlEditCtrlBase [MFC], Cut
+- CHtmlEditCtrlBase [MFC], Delete
+- CHtmlEditCtrlBase [MFC], DropDownBox
+- CHtmlEditCtrlBase [MFC], EmptyGlyphTable
+- CHtmlEditCtrlBase [MFC], ExecCommand
+- CHtmlEditCtrlBase [MFC], Font
+- CHtmlEditCtrlBase [MFC], GetAbsolutePosition
+- CHtmlEditCtrlBase [MFC], GetBackColor
+- CHtmlEditCtrlBase [MFC], GetBlockFormat
+- CHtmlEditCtrlBase [MFC], GetBlockFormatNames
+- CHtmlEditCtrlBase [MFC], GetBookMark
+- CHtmlEditCtrlBase [MFC], GetDocument
+- CHtmlEditCtrlBase [MFC], GetDocumentHTML
+- CHtmlEditCtrlBase [MFC], GetDocumentTitle
+- CHtmlEditCtrlBase [MFC], GetEvent
+- CHtmlEditCtrlBase [MFC], GetEventSrcElement
+- CHtmlEditCtrlBase [MFC], GetFontFace
+- CHtmlEditCtrlBase [MFC], GetFontSize
+- CHtmlEditCtrlBase [MFC], GetForeColor
+- CHtmlEditCtrlBase [MFC], GetFrameZone
+- CHtmlEditCtrlBase [MFC], GetIsDirty
+- CHtmlEditCtrlBase [MFC], GetShowAlignedSiteTags
+- CHtmlEditCtrlBase [MFC], GetShowAllTags
+- CHtmlEditCtrlBase [MFC], GetShowAreaTags
+- CHtmlEditCtrlBase [MFC], GetShowBRTags
+- CHtmlEditCtrlBase [MFC], GetShowCommentTags
+- CHtmlEditCtrlBase [MFC], GetShowMiscTags
+- CHtmlEditCtrlBase [MFC], GetShowScriptTags
+- CHtmlEditCtrlBase [MFC], GetShowStyleTags
+- CHtmlEditCtrlBase [MFC], GetShowUnknownTags
+- CHtmlEditCtrlBase [MFC], HorizontalLine
+- CHtmlEditCtrlBase [MFC], HyperLink
+- CHtmlEditCtrlBase [MFC], IE50Paste
+- CHtmlEditCtrlBase [MFC], Iframe
+- CHtmlEditCtrlBase [MFC], Image
+- CHtmlEditCtrlBase [MFC], Indent
+- CHtmlEditCtrlBase [MFC], InsFieldSet
+- CHtmlEditCtrlBase [MFC], InsInputButton
+- CHtmlEditCtrlBase [MFC], InsInputHidden
+- CHtmlEditCtrlBase [MFC], InsInputImage
+- CHtmlEditCtrlBase [MFC], InsInputPassword
+- CHtmlEditCtrlBase [MFC], InsInputReset
+- CHtmlEditCtrlBase [MFC], InsInputSubmit
+- CHtmlEditCtrlBase [MFC], InsInputUpload
+- CHtmlEditCtrlBase [MFC], Is1DElement
+- CHtmlEditCtrlBase [MFC], Is2DElement
+- CHtmlEditCtrlBase [MFC], Italic
+- CHtmlEditCtrlBase [MFC], JustifyCenter
+- CHtmlEditCtrlBase [MFC], JustifyLeft
+- CHtmlEditCtrlBase [MFC], JustifyRight
+- CHtmlEditCtrlBase [MFC], ListBox
+- CHtmlEditCtrlBase [MFC], Marquee
+- CHtmlEditCtrlBase [MFC], NewDocument
+- CHtmlEditCtrlBase [MFC], OrderList
+- CHtmlEditCtrlBase [MFC], Outdent
+- CHtmlEditCtrlBase [MFC], Paragraph
+- CHtmlEditCtrlBase [MFC], Paste
+- CHtmlEditCtrlBase [MFC], PrintDocument
+- CHtmlEditCtrlBase [MFC], PrintPreview
+- CHtmlEditCtrlBase [MFC], QueryStatus
+- CHtmlEditCtrlBase [MFC], RadioButton
+- CHtmlEditCtrlBase [MFC], RefreshDocument
+- CHtmlEditCtrlBase [MFC], RemoveFormat
+- CHtmlEditCtrlBase [MFC], SaveAs
+- CHtmlEditCtrlBase [MFC], SelectAll
+- CHtmlEditCtrlBase [MFC], Set2DPosition
+- CHtmlEditCtrlBase [MFC], SetAbsolutePosition
+- CHtmlEditCtrlBase [MFC], SetAtomicSelection
+- CHtmlEditCtrlBase [MFC], SetAutoURLDetectMode
+- CHtmlEditCtrlBase [MFC], SetBackColor
+- CHtmlEditCtrlBase [MFC], SetBlockFormat
+- CHtmlEditCtrlBase [MFC], SetBookMark
+- CHtmlEditCtrlBase [MFC], SetCSSEditingLevel
+- CHtmlEditCtrlBase [MFC], SetDefaultComposeSettings
+- CHtmlEditCtrlBase [MFC], SetDesignMode
+- CHtmlEditCtrlBase [MFC], SetDisableEditFocusUI
+- CHtmlEditCtrlBase [MFC], SetDocumentHTML
+- CHtmlEditCtrlBase [MFC], SetFontFace
+- CHtmlEditCtrlBase [MFC], SetFontSize
+- CHtmlEditCtrlBase [MFC], SetForeColor
+- CHtmlEditCtrlBase [MFC], SetIE5PasteMode
+- CHtmlEditCtrlBase [MFC], SetLiveResize
+- CHtmlEditCtrlBase [MFC], SetMultiSelect
+- CHtmlEditCtrlBase [MFC], SetOverrideCursor
+- CHtmlEditCtrlBase [MFC], SetOverwriteMode
+- CHtmlEditCtrlBase [MFC], SetRespectVisInDesign
+- CHtmlEditCtrlBase [MFC], SetShowAlignedSiteTags
+- CHtmlEditCtrlBase [MFC], SetShowAllTags
+- CHtmlEditCtrlBase [MFC], SetShowAreaTags
+- CHtmlEditCtrlBase [MFC], SetShowBRTags
+- CHtmlEditCtrlBase [MFC], SetShowCommentTags
+- CHtmlEditCtrlBase [MFC], SetShowMiscTags
+- CHtmlEditCtrlBase [MFC], SetShowScriptTags
+- CHtmlEditCtrlBase [MFC], SetShowStyleTags
+- CHtmlEditCtrlBase [MFC], SetShowUnknownTags
+- CHtmlEditCtrlBase [MFC], TextArea
+- CHtmlEditCtrlBase [MFC], TextBox
+- CHtmlEditCtrlBase [MFC], UnBookmark
+- CHtmlEditCtrlBase [MFC], Underline
+- CHtmlEditCtrlBase [MFC], Unlink
+- CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
 caps.latest.revision: 21
 author: mikeblome
@@ -141,17 +247,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: a32d9df86837c5cafd27f8f876a703d0b3ec3bfe
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df8a6665e01fed9de2328e1577683c5a69da5813
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 類別
-表示 HTML 編輯元件。  
+# <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase Class
+Represents an HTML editing component.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T> class CHtmlEditCtrlBase  
@@ -159,135 +265,135 @@ template <class T> class CHtmlEditCtrlBase
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|將項目加入至圖像 （glyph） 資料表，其指定要顯示在設計模式中的特定標記的影像。|  
-|[CHtmlEditCtrlBase::Bold](#bold)|切換所選取文字的粗體的狀態。|  
-|[CHtmlEditCtrlBase::Button](#button)|會覆寫目前的選取範圍上的按鈕控制項。|  
-|[CHtmlEditCtrlBase::CheckBox](#checkbox)|會覆寫目前的選取項目上的核取方塊控制項。|  
-|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|清除目前選取範圍。|  
-|[CHtmlEditCtrlBase::Copy](#copy)|將目前的選取範圍複製到剪貼簿。|  
-|[CHtmlEditCtrlBase::Cut](#cut)|將目前的選取範圍複製到剪貼簿，然後再刪除它。|  
-|[CHtmlEditCtrlBase::Delete](#delete)|刪除目前選取範圍。|  
-|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|會覆寫的下拉式清單選取控制項，在目前選取範圍。|  
-|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|從字符資料表中，會隱藏顯示設計模式中的標記的所有映像移除所有項目。|  
-|[CHtmlEditCtrlBase::ExecCommand](#execcommand)|執行命令。|  
-|[CHtmlEditCtrlBase::Font](#font)|開啟 [字型] 對話方塊，讓使用者變更文字色彩、 字型和目前的選取範圍的字型大小。|  
-|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|傳回的項目位置的屬性是否為 「 絕對 」。|  
-|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|擷取目前的選取範圍的背景色彩。|  
-|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|擷取目前的區塊格式標記。|  
-|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|擷取對應至可用的區塊格式標記的字串。|  
-|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|擷取書籤錨點名稱。|  
-|[CHtmlEditCtrlBase::GetDocument](#getdocument)|擷取的文件物件。|  
-|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|擷取目前的文件的 HTML。|  
-|[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|擷取文件的標題。|  
-|[CHtmlEditCtrlBase::GetEvent](#getevent)|擷取包含最新事件的相關資訊的事件物件的介面指標。|  
-|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|擷取引發事件的物件。|  
-|[CHtmlEditCtrlBase::GetFontFace](#getfontface)|擷取目前的選取範圍的字型名稱。|  
-|[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|擷取目前的選取範圍的字型大小。|  
-|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|擷取目前的選取項目的前景 （文字） 色彩。|  
-|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|在 web 瀏覽器中傳回目前頁面的安全性區域中。|  
-|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|表示 HTML 文件是否已變更。|  
-|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|傳回的所有項目是否顯示字符**styleFloat**屬性。|  
-|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|傳回 WebBrowser 是否顯示字符才能顯示文件中的所有標記的位置。|  
-|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|擷取 WebBrowser 顯示區域標記的圖像是否。|  
-|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|擷取 WebBrowser 顯示字符的 br 標記是否。|  
-|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|擷取 WebBrowser 顯示註解標記的圖像是否。|  
-|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|擷取 WebBrowser 會顯示在 Microsoft Internet Explorer 4.0 中顯示的所有標記是否。|  
-|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|擷取 WebBrowser 會顯示所有指令碼標記的圖像是否。|  
-|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|擷取 WebBrowser 會顯示所有樣式標記的圖像是否。|  
-|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|擷取 WebBrowser 會顯示所有未知的標記的圖像是否。|  
-|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|在目前選取範圍的水平列會覆寫。|  
-|[CHtmlEditCtrlBase::HyperLink](#hyperlink)|插入目前的選取範圍的超連結。|  
-|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|執行貼上運算，與 Microsoft Internet Explorer 5 相容。|  
-|[CHtmlEditCtrlBase::Iframe](#iframe)|會覆寫目前的選取範圍的內嵌框架。|  
-|[CHtmlEditCtrlBase::Image](#image)|會覆寫目前的選取範圍上的影像。|  
-|[CHtmlEditCtrlBase::Indent](#indent)|增加所選取文字的縮排一個縮排增量。|  
-|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|會覆寫目前的選取範圍上的方塊。|  
-|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|會覆寫目前的選取範圍上的按鈕控制項。|  
-|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|插入目前的選取項目上的隱藏的控制項。|  
-|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|影像控制項在目前選取範圍會覆寫。|  
-|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|會覆寫密碼控制項，在目前選取範圍。|  
-|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|會覆寫控制項重設與目前的選取範圍。|  
-|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|會覆寫目前的選取項目上送出控制項。|  
-|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|會覆寫檔案上傳控制項，在目前選取範圍。|  
-|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|判斷以靜態方式是否置於項目。|  
-|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|判斷元素是否為絕對定位。|  
-|[CHtmlEditCtrlBase::Italic](#italic)|切換目前選取範圍斜體和 nonitalic 之間。|  
-|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|中心格式區塊中目前選取項目所在。|  
-|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|靠左對齊格式區塊中目前選取項目所在。|  
-|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|靠右對齊格式區塊中目前選取項目所在。|  
-|[CHtmlEditCtrlBase::ListBox](#listbox)|會覆寫目前的選取範圍的清單方塊選取項目控制項。|  
-|[CHtmlEditCtrlBase::Marquee](#marquee)|會覆寫目前的選取範圍的空跑馬燈。|  
-|[CHtmlEditCtrlBase::NewDocument](#newdocument)|建立新的文件。|  
-|[CHtmlEditCtrlBase::OrderList](#orderlist)|切換目前選取項目已排序的清單之間的一般格式的區塊。|  
-|[CHtmlEditCtrlBase::Outdent](#outdent)|減少一個遞增值的縮排格式區塊中目前選取項目所在。|  
-|[CHtmlEditCtrlBase::Paragraph](#paragraph)|會覆寫在目前選取範圍中的分行符號。|  
-|[CHtmlEditCtrlBase::Paste](#paste)|會覆寫目前的選取範圍的剪貼簿的內容。|  
-|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|列印目前文件。|  
-|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|開啟目前文件使用預設的預覽列印範本或自訂範本 預覽列印視窗。|  
-|[CHtmlEditCtrlBase::QueryStatus](#querystatus)|呼叫這個方法來查詢命令的狀態。|  
-|[CHtmlEditCtrlBase::RadioButton](#radiobutton)|會覆寫目前的選取項目上的選項按鈕控制項。|  
-|[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|重新整理目前文件。|  
-|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|移除目前選取範圍格式的標記。|  
-|[CHtmlEditCtrlBase::SaveAs](#saveas)|將目前網頁儲存至檔案。|  
-|[CHtmlEditCtrlBase::SelectAll](#selectall)|選取整份文件。|  
-|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|允許拖曳移動的絕對定位項目。|  
-|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|元素的位置將屬性設定為 「 絕對 」 或 「 靜態 」。|  
-|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|設定不可部分完成的選取模式。|  
-|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|開啟自動 URL 偵測和關閉。|  
-|[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|設定目前選取範圍的背景色彩。|  
-|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|設定目前的區塊格式標記。|  
-|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|建立目前的選取範圍或插入點的書籤起點。|  
-|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|選取的 CSS 層級 （CSS1 或 CSS2） 編輯器將支援，如果有的話。|  
-|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|呼叫此方法以設定預設撰寫設定。|  
-|[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|設定設計模式。|  
-|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|停用陰影的框線，並具有編輯焦點的項目控點。|  
-|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|設定目前文件的 HTML。|  
-|[CHtmlEditCtrlBase::SetFontFace](#setfontface)|設定目前選取範圍的字型。|  
-|[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|設定目前選取範圍的字型大小。|  
-|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|設定目前選取範圍前景 （文字） 色彩。|  
-|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|設定 Microsoft Internet Explorer 5 與貼上作業。|  
-|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|會導致 WebBrowser 更新項目的外觀，調整大小或移動作業的持續期間。|  
-|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|可讓多個選取項目。|  
-|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|命令 WebBrowser 永遠不會變更滑鼠指標。|  
-|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|切換文字方塊項目模式之間插入，並覆寫。|  
-|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|隱藏設計模式中不可見的項目。|  
-|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|會顯示字符的所有項目**styleFloat**屬性。|  
-|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|會顯示這些圖像會顯示文件中的所有標記的位置。|  
-|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|顯示所有區域標記的圖像。|  
-|[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|顯示所有 br 標記的圖像。|  
-|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|顯示所有註解標記的圖像。|  
-|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|顯示 Microsoft Internet Explorer 4.0 中顯示的所有標記。|  
-|[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|顯示所有指令碼標記的圖像。|  
-|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|顯示所有樣式標記的圖像。|  
-|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|顯示所有未知的標記的圖像。|  
-|[CHtmlEditCtrlBase::TextArea](#textarea)|會覆寫目前的選取範圍上的多行文字輸入的控制項。|  
-|[CHtmlEditCtrlBase::TextBox](#textbox)|會覆寫目前的選取範圍的文字控制項。|  
-|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|移除目前選取範圍中的任何書籤。|  
-|[CHtmlEditCtrlBase::Underline](#underline)|切換目前選取項目之間加上底線，而且不加上底線。|  
-|[CHtmlEditCtrlBase::Unlink](#unlink)|移除目前選取範圍中的任何超連結。|  
-|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|切換目前選取項目已排序的清單之間的一般格式的區塊。|  
+|[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Adds an entry to the glyph table, which specifies images to display for specific tags in design mode.|  
+|[CHtmlEditCtrlBase::Bold](#bold)|Toggles the bold state of the selected text.|  
+|[CHtmlEditCtrlBase::Button](#button)|Overwrites a button control on the current selection.|  
+|[CHtmlEditCtrlBase::CheckBox](#checkbox)|Overwrites a check box control on the current selection.|  
+|[CHtmlEditCtrlBase::ClearSelection](#clearselection)|Clears the current selection.|  
+|[CHtmlEditCtrlBase::Copy](#copy)|Copies the current selection to the clipboard.|  
+|[CHtmlEditCtrlBase::Cut](#cut)|Copies the current selection to the clipboard and then deletes it.|  
+|[CHtmlEditCtrlBase::Delete](#delete)|Deletes the current selection.|  
+|[CHtmlEditCtrlBase::DropDownBox](#dropdownbox)|Overwrites a drop-down selection control on the current selection.|  
+|[CHtmlEditCtrlBase::EmptyGlyphTable](#emptyglyphtable)|Removes all entries from the glyph table, which hides all images displayed for tags in design mode.|  
+|[CHtmlEditCtrlBase::ExecCommand](#execcommand)|Executes a command.|  
+|[CHtmlEditCtrlBase::Font](#font)|Opens a font dialog box to enable the user to change the text color, font, and font size of the current selection.|  
+|[CHtmlEditCtrlBase::GetAbsolutePosition](#getabsoluteposition)|Returns whether an element's position property is "absolute."|  
+|[CHtmlEditCtrlBase::GetBackColor](#getbackcolor)|Retrieves the background color of the current selection.|  
+|[CHtmlEditCtrlBase::GetBlockFormat](#getblockformat)|Retrieves the current block format tag.|  
+|[CHtmlEditCtrlBase::GetBlockFormatNames](#getblockformatnames)|Retrieves the strings corresponding to the available block format tags.|  
+|[CHtmlEditCtrlBase::GetBookMark](#getbookmark)|Retrieves the name of a bookmark anchor.|  
+|[CHtmlEditCtrlBase::GetDocument](#getdocument)|Retrieves the document object.|  
+|[CHtmlEditCtrlBase::GetDocumentHTML](#getdocumenthtml)|Retrieves the HTML of the current document.|  
+|[CHtmlEditCtrlBase::GetDocumentTitle](#getdocumenttitle)|Retrieves the document's title.|  
+|[CHtmlEditCtrlBase::GetEvent](#getevent)|Retrieves an interface pointer to the event object that contains information relevant to the most recent event.|  
+|[CHtmlEditCtrlBase::GetEventSrcElement](#geteventsrcelement)|Retrieves the object that fired the event.|  
+|[CHtmlEditCtrlBase::GetFontFace](#getfontface)|Retrieves the font name for the current selection.|  
+|[CHtmlEditCtrlBase::GetFontSize](#getfontsize)|Retrieves the font size for the current selection.|  
+|[CHtmlEditCtrlBase::GetForeColor](#getforecolor)|Retrieves the foreground (text) color of the current selection.|  
+|[CHtmlEditCtrlBase::GetFrameZone](#getframezone)|Returns the security zone of the current page in the web browser.|  
+|[CHtmlEditCtrlBase::GetIsDirty](#getisdirty)|Indicates whether the HTML document has changed.|  
+|[CHtmlEditCtrlBase::GetShowAlignedSiteTags](#getshowalignedsitetags)|Returns whether a glyph is displayed for all elements that have a **styleFloat** property.|  
+|[CHtmlEditCtrlBase::GetShowAllTags](#getshowalltags)|Returns whether the WebBrowser displays glyphs to show the location of all tags in a document.|  
+|[CHtmlEditCtrlBase::GetShowAreaTags](#getshowareatags)|Retrieves whether the WebBrowser displays a glyph for area tags.|  
+|[CHtmlEditCtrlBase::GetShowBRTags](#getshowbrtags)|Retrieves whether the WebBrowser displays a glyph for br tags.|  
+|[CHtmlEditCtrlBase::GetShowCommentTags](#getshowcommenttags)|Retrieves whether the WebBrowser displays a glyph for comment tags.|  
+|[CHtmlEditCtrlBase::GetShowMiscTags](#getshowmisctags)|Retrieves whether the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::GetShowScriptTags](#getshowscripttags)|Retrieves whether the WebBrowser displays a glyph for all the script tags.|  
+|[CHtmlEditCtrlBase::GetShowStyleTags](#getshowstyletags)|Retrieves whether the WebBrowser displays a glyph for all the style tags.|  
+|[CHtmlEditCtrlBase::GetShowUnknownTags](#getshowunknowntags)|Retrieves whether the WebBrowser displays a glyph for all unknown tags.|  
+|[CHtmlEditCtrlBase::HorizontalLine](#horizontalline)|Overwrites a horizontal line on the current selection.|  
+|[CHtmlEditCtrlBase::HyperLink](#hyperlink)|Inserts a hyperlink on the current selection.|  
+|[CHtmlEditCtrlBase::IE50Paste](#ie50paste)|Performs a paste operation compatible with Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::Iframe](#iframe)|Overwrites an inline frame on the current selection.|  
+|[CHtmlEditCtrlBase::Image](#image)|Overwrites an image on the current selection.|  
+|[CHtmlEditCtrlBase::Indent](#indent)|Increases the indent of the selected text by one indentation increment.|  
+|[CHtmlEditCtrlBase::InsFieldSet](#insfieldset)|Overwrites a box on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputButton](#insinputbutton)|Overwrites a button control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputHidden](#insinputhidden)|Inserts a hidden control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputImage](#insinputimage)|Overwrites an image control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputPassword](#insinputpassword)|Overwrites a password control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputReset](#insinputreset)|Overwrites a reset control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputSubmit](#insinputsubmit)|Overwrites a submit control on the current selection.|  
+|[CHtmlEditCtrlBase::InsInputUpload](#insinputupload)|Overwrites a file upload control on the current selection.|  
+|[CHtmlEditCtrlBase::Is1DElement](#is1delement)|Determines if an element is statically positioned.|  
+|[CHtmlEditCtrlBase::Is2DElement](#is2delement)|Determines if an element is absolutely positioned.|  
+|[CHtmlEditCtrlBase::Italic](#italic)|Toggles the current selection between italic and nonitalic.|  
+|[CHtmlEditCtrlBase::JustifyCenter](#justifycenter)|Centers the format block in which the current selection is located.|  
+|[CHtmlEditCtrlBase::JustifyLeft](#justifyleft)|Left-justifies the format block in which the current selection is located.|  
+|[CHtmlEditCtrlBase::JustifyRight](#justifyright)|Right-justifies the format block in which the current selection is located.|  
+|[CHtmlEditCtrlBase::ListBox](#listbox)|Overwrites a list box selection control on the current selection.|  
+|[CHtmlEditCtrlBase::Marquee](#marquee)|Overwrites an empty marquee on the current selection.|  
+|[CHtmlEditCtrlBase::NewDocument](#newdocument)|Creates a new document.|  
+|[CHtmlEditCtrlBase::OrderList](#orderlist)|Toggles the current selection between an ordered list and a normal format block.|  
+|[CHtmlEditCtrlBase::Outdent](#outdent)|Decreases by one increment the indentation of the format block in which the current selection is located.|  
+|[CHtmlEditCtrlBase::Paragraph](#paragraph)|Overwrites a line break on the current selection.|  
+|[CHtmlEditCtrlBase::Paste](#paste)|Overwrites the contents of the clipboard on the current selection.|  
+|[CHtmlEditCtrlBase::PrintDocument](#printdocument)|Prints the current document.|  
+|[CHtmlEditCtrlBase::PrintPreview](#printpreview)|Opens the Print Preview window for the current document using either the default print preview template or a custom template.|  
+|[CHtmlEditCtrlBase::QueryStatus](#querystatus)|Call this method to query the status of commands.|  
+|[CHtmlEditCtrlBase::RadioButton](#radiobutton)|Overwrites a radio control on the current selection.|  
+|[CHtmlEditCtrlBase::RefreshDocument](#refreshdocument)|Refreshes the current document.|  
+|[CHtmlEditCtrlBase::RemoveFormat](#removeformat)|Removes the formatting tags from the current selection.|  
+|[CHtmlEditCtrlBase::SaveAs](#saveas)|Saves the current Web page to a file.|  
+|[CHtmlEditCtrlBase::SelectAll](#selectall)|Selects the entire document.|  
+|[CHtmlEditCtrlBase::Set2DPosition](#set2dposition)|Allows absolutely positioned elements to be moved by dragging.|  
+|[CHtmlEditCtrlBase::SetAbsolutePosition](#setabsoluteposition)|Sets an element's position property to "absolute" or "static."|  
+|[CHtmlEditCtrlBase::SetAtomicSelection](#setatomicselection)|Set atomic selection mode.|  
+|[CHtmlEditCtrlBase::SetAutoURLDetectMode](#setautourldetectmode)|Turns automatic URL detection on and off.|  
+|[CHtmlEditCtrlBase::SetBackColor](#setbackcolor)|Sets the background color of the current selection.|  
+|[CHtmlEditCtrlBase::SetBlockFormat](#setblockformat)|Sets the current block format tag.|  
+|[CHtmlEditCtrlBase::SetBookMark](#setbookmark)|Creates a bookmark anchor for the current selection or insertion point.|  
+|[CHtmlEditCtrlBase::SetCSSEditingLevel](#setcsseditinglevel)|Selects which CSS level (CSS1 or CSS2) the editor will support, if any.|  
+|[CHtmlEditCtrlBase::SetDefaultComposeSettings](#setdefaultcomposesettings)|Call this method to set the default compose settings.|  
+|[CHtmlEditCtrlBase::SetDesignMode](#setdesignmode)|Set design mode.|  
+|[CHtmlEditCtrlBase::SetDisableEditFocusUI](#setdisableeditfocusui)|Disables the hatched border and handles around an element that has edit focus.|  
+|[CHtmlEditCtrlBase::SetDocumentHTML](#setdocumenthtml)|Sets the HTML of the current document.|  
+|[CHtmlEditCtrlBase::SetFontFace](#setfontface)|Sets the font for the current selection.|  
+|[CHtmlEditCtrlBase::SetFontSize](#setfontsize)|Sets the font size for the current selection.|  
+|[CHtmlEditCtrlBase::SetForeColor](#setforecolor)|Sets the foreground (text) color of the current selection.|  
+|[CHtmlEditCtrlBase::SetIE5PasteMode](#setie5pastemode)|Sets the paste operation to be compatible with Microsoft Internet Explorer 5.|  
+|[CHtmlEditCtrlBase::SetLiveResize](#setliveresize)|Causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation.|  
+|[CHtmlEditCtrlBase::SetMultiSelect](#setmultiselect)|Enables multiple selection.|  
+|[CHtmlEditCtrlBase::SetOverrideCursor](#setoverridecursor)|Commands the WebBrowser never to change the mouse pointer.|  
+|[CHtmlEditCtrlBase::SetOverwriteMode](#setoverwritemode)|Toggles the text-entry mode between insert and overwrite.|  
+|[CHtmlEditCtrlBase::SetRespectVisInDesign](#setrespectvisindesign)|Hides invisible elements in design mode.|  
+|[CHtmlEditCtrlBase::SetShowAlignedSiteTags](#setshowalignedsitetags)|Displays a glyph for all elements that have a **styleFloat** property.|  
+|[CHtmlEditCtrlBase::SetShowAllTags](#setshowalltags)|Displays glyphs to show the location of all tags in a document.|  
+|[CHtmlEditCtrlBase::SetShowAreaTags](#setshowareatags)|Displays a glyph for all the area tags.|  
+|[CHtmlEditCtrlBase::SetShowBRTags](#setshowbrtags)|Displays a glyph for all the br tags.|  
+|[CHtmlEditCtrlBase::SetShowCommentTags](#setshowcommenttags)|Displays a glyph for all the comment tags.|  
+|[CHtmlEditCtrlBase::SetShowMiscTags](#setshowmisctags)|Displays all the tags shown in Microsoft Internet Explorer 4.0.|  
+|[CHtmlEditCtrlBase::SetShowScriptTags](#setshowscripttags)|Displays a glyph for all the script tags.|  
+|[CHtmlEditCtrlBase::SetShowStyleTags](#setshowstyletags)|Displays a glyph for all the style tags.|  
+|[CHtmlEditCtrlBase::SetShowUnknownTags](#setshowunknowntags)|Displays a glyph for all the unknown tags.|  
+|[CHtmlEditCtrlBase::TextArea](#textarea)|Overwrites a multiline text input control on the current selection.|  
+|[CHtmlEditCtrlBase::TextBox](#textbox)|Overwrites a text control on the current selection.|  
+|[CHtmlEditCtrlBase::UnBookmark](#unbookmark)|Removes any bookmark from the current selection.|  
+|[CHtmlEditCtrlBase::Underline](#underline)|Toggles the current selection between underlined and not underlined.|  
+|[CHtmlEditCtrlBase::Unlink](#unlink)|Removes any hyperlink from the current selection.|  
+|[CHtmlEditCtrlBase::UnorderList](#unorderlist)|Toggles the current selection between an ordered list and a normal format block.|  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 衍生類別的名稱。  
+ The name of the derived class.  
   
-## <a name="remarks"></a>備註  
- **CHtmlEditCtrlBase** WebBrowser HTML 編輯命令，例如提供成員函式[粗體](#bold)。 (或者，您可以呼叫[ExecCommand](#execcommand)執行**IDM_BOLD**命令。)  
+## <a name="remarks"></a>Remarks  
+ **CHtmlEditCtrlBase** provides member functions for the WebBrowser's HTML editing commands, such as [Bold](#bold). (Alternately, you can call [ExecCommand](#execcommand) to execute the **IDM_BOLD** command.)  
   
- **CHtmlEditCtrlBase**不適合它自己。 其設計目的是要公開的 HTML 編輯功能的 WebBrowser 的衍生類別的基底類別 (請參閱[CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md)和[CHtmlEditView](../../mfc/reference/chtmleditview-class.md))。  
+ **CHtmlEditCtrlBase** is not intended to stand on its own. It is designed to be a base class for derived classes that expose the HTML editing functionality of the WebBrowser (see [CHtmlEditCtrl](../../mfc/reference/chtmleditctrl-class.md) and [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CHtmlEditCtrlBase`  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>Requirements  
  **Header:** afxhtml.h  
   
-##  <a name="addtoglyphtable"></a>CHtmlEditCtrlBase::AddToGlyphTable  
- 將項目加入至圖像 （glyph） 資料表，其指定要顯示在設計模式中的特定標記的影像。  
+##  <a name="addtoglyphtable"></a>  CHtmlEditCtrlBase::AddToGlyphTable  
+ Adds an entry to the glyph table, which specifies images to display for specific tags in design mode.  
   
 ```  
 HRESULT AddToGlyphTable(
@@ -301,170 +407,170 @@ HRESULT AddToGlyphTable(
     unsigned int nImgHeight) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szTag`  
- 標記名稱 （例如，"P"或"table"）。  
+ The tag name (for example, "P" or "table").  
   
  *szImgUrl*  
- 影像 URL。  
+ The image URL.  
   
  *nTagType*  
- 標記類型︰ 0 表示影像的開頭標記。 1 表示影像的結尾標記。 2 表示影像的開頭和結尾標記。 單一標記，例如 br 和註解必須新增與標記類型設定為 0。  
+ Tag type: 0 means the image is for the opening tag only. 1 means the image is for the closing tag only. 2 means the image is for both the opening and closing tags. Single tags such as br and comment must be added with the tag type set to 0.  
   
  *nAlignment*  
- 對齊方式 （只有矩形項目）︰ 這個參數會指出影像適用於具有對齊屬性的項目。 左 = 0，center = 1、 權限 = 2，且未定義 = 3。 左、 右或置屬性必須明確設定項目上。  
+ Alignment (rectangular elements only): This parameter indicates that the image is for an element with an alignment attribute. Left = 0, center = 1, right = 2, and undefined = 3. Left, right, or center attributes must be explicitly set on the element.  
   
  *nPosInfo*  
- 位置資訊。 決定哪些階層式樣式表 (CSS) 的位置值圖像適用於，其中是靜態定位 = 0 時，絕對位置 = 1，相對位置 = 2，且所有 = 3。 此欄位可讓您指定的標記時未置於一個圖像 （glyph） 和定位的標記時，顯示錨點的另一個字符。  
+ Positioning information. Determines what cascading style sheets (CSS) positioning value the glyph applies to, where static positioning = 0, absolute positioning = 1, relative positioning = 2, and all = 3. This field enables you to specify one glyph for a tag when it is not positioned and another glyph to show an anchor point when the tag is positioned.  
   
  *nDirection*  
- 方向。 這個參數會指定目前的語言讀取順序為基礎的標記的影像。 0 指定左到右、 1 指定由右至左、 2 指定由上的而下、 3 會指定至上方、 下方和 4 指定所有。 您通常會將此欄位設定為 4。  
+ The direction. This parameter specifies the image for a tag based on the reading order of the current language. 0 specifies left to right, 1 specifies right to left, 2 specifies top to bottom, 3 specifies bottom to top, and 4 specifies all. You normally set this field to 4.  
   
  *nImgWidth*  
- 影像的寬度，以像素為單位。  
+ The image width in pixels.  
   
  *nImgHeight*  
- 影像的高度，單位為像素為單位。  
+ The image height in pixels.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 多個參數的詳細資訊，請參閱 「 圖像資料表字串格式 」，在[使用編輯圖像 （glyph)](https://msdn.microsoft.com/library/aa969614.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information on the parameters, see "Glyph Table String Format" in [Using Editing Glyphs](https://msdn.microsoft.com/library/aa969614.aspx).  
   
- 這個方法會傳送[IDM_ADDTOGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769891.aspx) WebBrowser 控制項。  
+ This method sends the [IDM_ADDTOGLYPHTABLE command ID](https://msdn.microsoft.com/library/aa769891.aspx) to the WebBrowser control.  
   
-##  <a name="bold"></a>CHtmlEditCtrlBase::Bold  
- 切換所選取文字的粗體的狀態。  
+##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold  
+ Toggles the bold state of the selected text.  
   
 ```  
 HRESULT Bold() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_BOLD 命令 ID](https://msdn.microsoft.com/library/aa769861.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BOLD command ID](https://msdn.microsoft.com/library/aa769861.aspx) to the WebBrowser control.  
   
-##  <a name="button"></a>CHtmlEditCtrlBase::Button  
- 會覆寫目前的選取範圍上的按鈕控制項。  
+##  <a name="button"></a>  CHtmlEditCtrlBase::Button  
+ Overwrites a button control on the current selection.  
   
 ```  
 HRESULT Button(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 按鈕控制項的識別碼。  
+ The ID of the button control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_BUTTON 命令 ID](https://msdn.microsoft.com/library/aa769966.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BUTTON command ID](https://msdn.microsoft.com/library/aa769966.aspx) to the WebBrowser control.  
   
-##  <a name="checkbox"></a>CHtmlEditCtrlBase::CheckBox  
- 會覆寫目前的選取項目上的核取方塊控制項。  
+##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox  
+ Overwrites a check box control on the current selection.  
   
 ```  
 HRESULT CheckBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 核取方塊控制項的 ID。  
+ The ID of the check box control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_CHECKBOX 命令 ID](https://msdn.microsoft.com/library/aa769972.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_CHECKBOX command ID](https://msdn.microsoft.com/library/aa769972.aspx) to the WebBrowser control.  
   
-##  <a name="clearselection"></a>CHtmlEditCtrlBase::ClearSelection  
- 清除目前選取範圍。  
+##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection  
+ Clears the current selection.  
   
 ```  
 HRESULT ClearSelection() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_CLEARSELECTION 命令 ID](https://msdn.microsoft.com/library/aa770038.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_CLEARSELECTION command ID](https://msdn.microsoft.com/library/aa770038.aspx) to the WebBrowser control.  
   
-##  <a name="copy"></a>CHtmlEditCtrlBase::Copy  
- 將目前的選取範圍複製到剪貼簿。  
+##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy  
+ Copies the current selection to the clipboard.  
   
 ```  
 HRESULT Copy() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_COPY 命令 ID](https://msdn.microsoft.com/library/aa769872.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_COPY command ID](https://msdn.microsoft.com/library/aa769872.aspx) to the WebBrowser control.  
   
-##  <a name="cut"></a>CHtmlEditCtrlBase::Cut  
- 將目前的選取範圍複製到剪貼簿，然後再刪除它。  
+##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut  
+ Copies the current selection to the clipboard and then deletes it.  
   
 ```  
 HRESULT Cut() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_CUT 命令 ID](https://msdn.microsoft.com/library/aa769875.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_CUT command ID](https://msdn.microsoft.com/library/aa769875.aspx) to the WebBrowser control.  
   
-##  <a name="delete"></a>CHtmlEditCtrlBase::Delete  
- 刪除目前選取範圍。  
+##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete  
+ Deletes the current selection.  
   
 ```  
 HRESULT Delete() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_DELETE 命令 ID](https://msdn.microsoft.com/library/aa769876.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_DELETE command ID](https://msdn.microsoft.com/library/aa769876.aspx) to the WebBrowser control.  
   
-##  <a name="dropdownbox"></a>CHtmlEditCtrlBase::DropDownBox  
- 會覆寫的下拉式清單選取控制項，在目前選取範圍。  
+##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox  
+ Overwrites a drop-down selection control on the current selection.  
   
 ```  
 HRESULT DropDownBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 下拉式清單選取項目控制項的 ID。  
+ The ID of the drop-down selection control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_DROPDOWNBOX 命令 ID](https://msdn.microsoft.com/library/aa769984.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_DROPDOWNBOX command ID](https://msdn.microsoft.com/library/aa769984.aspx) to the WebBrowser control.  
   
-##  <a name="emptyglyphtable"></a>CHtmlEditCtrlBase::EmptyGlyphTable  
- 從字符資料表中，會隱藏顯示設計模式中的標記的所有映像移除所有項目。  
+##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable  
+ Removes all entries from the glyph table, which hides all images displayed for tags in design mode.  
   
 ```  
 HRESULT EmptyGlyphTable() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_EMPTYGLYPHTABLE 命令 ID](https://msdn.microsoft.com/library/aa769907.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_EMPTYGLYPHTABLE command ID](https://msdn.microsoft.com/library/aa769907.aspx) to the WebBrowser control.  
   
-##  <a name="execcommand"></a>CHtmlEditCtrlBase::ExecCommand  
- 執行命令。  
+##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand  
+ Executes a command.  
   
 ```  
 HRESULT ExecCommand(
@@ -481,855 +587,855 @@ HRESULT ExecCommand(
     VARIANT* pOutVar = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 要執行的命令識別碼。 如需清單，請參閱[MSHTML 命令識別碼](https://msdn.microsoft.com/library/aa741315.aspx)。  
+ The command ID to be executed. For a list, see [MSHTML Command Identifiers](https://msdn.microsoft.com/library/aa741315.aspx).  
   
  `cmdExecOpt`  
- 值取自[OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930)列舉，描述物件應該如何執行命令。  
+ Values taken from the [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) enumeration, which describe how the object should execute the command.  
   
  *pInVar*  
- 輸入的引數。  
+ The input arguments.  
   
  *pOutVar*  
- 命令輸出。  
+ The command output.  
   
  *pGuid*  
- 命令群組 GUID。  
+ The GUID of the command group.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法提供的功能[IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300)。  
+### <a name="remarks"></a>Remarks  
+ This method provides the functionality of [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300).  
   
-##  <a name="font"></a>CHtmlEditCtrlBase::Font  
- 開啟 [字型] 對話方塊，讓使用者變更文字色彩、 字型和目前的選取範圍的字型大小。  
+##  <a name="font"></a>  CHtmlEditCtrlBase::Font  
+ Opens a font dialog box to enable the user to change the text color, font, and font size of the current selection.  
   
 ```  
 HRESULT Font() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_FONT 命令 ID](https://msdn.microsoft.com/library/aa769913.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_FONT command ID](https://msdn.microsoft.com/library/aa769913.aspx) to the WebBrowser control.  
   
-##  <a name="getabsoluteposition"></a>CHtmlEditCtrlBase::GetAbsolutePosition  
- 傳回的項目位置的屬性是否為 「 絕對 」。  
+##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition  
+ Returns whether an element's position property is "absolute."  
   
 ```  
 HRESULT GetAbsolutePosition(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果項目的位置屬性設定為"absolute。 」，則為 true。  
+ True if the element's position property is set to "absolute."  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_ABSOLUTE_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769889.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_ABSOLUTE_POSITION Command ID](https://msdn.microsoft.com/library/aa769889.aspx).  
   
-##  <a name="getbackcolor"></a>CHtmlEditCtrlBase::GetBackColor  
- 擷取目前的選取範圍的背景色彩。  
+##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor  
+ Retrieves the background color of the current selection.  
   
 ```  
 HRESULT GetBackColor(int& nColor) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nColor`  
- 背景色彩。  
+ The background color.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx) to the WebBrowser control.  
   
-##  <a name="getblockformat"></a>CHtmlEditCtrlBase::GetBlockFormat  
- 擷取目前的區塊格式標記。  
+##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat  
+ Retrieves the current block format tag.  
   
 ```  
 HRESULT GetBlockFormat(CString& strFormat) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *strFormat*  
- 目前的區塊格式標記。  
+ The current block format tag.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_BLOCKFMT 命令 ID](https://msdn.microsoft.com/library/aa769883.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BLOCKFMT command ID](https://msdn.microsoft.com/library/aa769883.aspx) to the WebBrowser control.  
   
-##  <a name="getblockformatnames"></a>CHtmlEditCtrlBase::GetBlockFormatNames  
- 擷取對應至可用的區塊格式標記的字串。  
+##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames  
+ Retrieves the strings corresponding to the available block format tags.  
   
 ```  
 HRESULT GetBlockFormatNames(CStringArray& sa) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *sa*  
- 可用的區塊格式標籤，為字串陣列。  
+ The available block format tags, as an array of strings.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_GETBLOCKFMTS 命令識別碼](https://msdn.microsoft.com/library/aa769884.aspx)WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_GETBLOCKFMTS command ID](https://msdn.microsoft.com/library/aa769884.aspx) to the WebBrowser control.  
   
-##  <a name="getbookmark"></a>CHtmlEditCtrlBase::GetBookMark  
- 擷取書籤錨點名稱。  
+##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark  
+ Retrieves the name of a bookmark anchor.  
   
 ```  
 HRESULT GetBookMark(CString& strAnchor) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *strAnchor*  
- 書籤錨點名稱。  
+ The name of a bookmark anchor.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_BOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa769873.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_BOOKMARK Command ID](https://msdn.microsoft.com/library/aa769873.aspx).  
   
-##  <a name="getdocument"></a>CHtmlEditCtrlBase::GetDocument  
- 擷取的文件物件。  
+##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument  
+ Retrieves the document object.  
   
 ```  
 HRESULT GetDocument(IHTMLDocument2** ppDoc) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ppDoc`  
- 文件物件。  
+ The document object.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="getdocumenthtml"></a>CHtmlEditCtrlBase::GetDocumentHTML  
- 擷取目前的文件的 HTML。  
+##  <a name="getdocumenthtml"></a>  CHtmlEditCtrlBase::GetDocumentHTML  
+ Retrieves the HTML of the current document.  
   
 ```  
 HRESULT GetDocumentHTML(CString& szHTML) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szHTML`  
- HTML 中。  
+ The HTML.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="getdocumenttitle"></a>CHtmlEditCtrlBase::GetDocumentTitle  
- 擷取文件的標題。  
+##  <a name="getdocumenttitle"></a>  CHtmlEditCtrlBase::GetDocumentTitle  
+ Retrieves the document's title.  
   
 ```  
 HRESULT GetDocumentTitle(CString& szTitle) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *szTitle*  
- 文件的標題。  
+ The document's title.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="getevent"></a>CHtmlEditCtrlBase::GetEvent  
- 擷取包含最新事件的相關資訊的事件物件的介面指標。  
+##  <a name="getevent"></a>  CHtmlEditCtrlBase::GetEvent  
+ Retrieves an interface pointer to the event object that contains information relevant to the most recent event.  
   
 ```  
 HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ppEventObj`  
- 事件物件。  
+ The event object.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="geteventsrcelement"></a>CHtmlEditCtrlBase::GetEventSrcElement  
- 擷取引發事件的物件。  
+##  <a name="geteventsrcelement"></a>  CHtmlEditCtrlBase::GetEventSrcElement  
+ Retrieves the object that fired the event.  
   
 ```  
 HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *ppSrcElement*  
- 引發事件的項目。  
+ The element that fired the event.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="getfontface"></a>CHtmlEditCtrlBase::GetFontFace  
- 擷取目前的選取範圍的字型名稱。  
+##  <a name="getfontface"></a>  CHtmlEditCtrlBase::GetFontFace  
+ Retrieves the font name for the current selection.  
   
 ```  
 HRESULT GetFontFace(CString& strFace) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `strFace`  
- 字型名稱。  
+ The font name.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如果目前的選取範圍會使用多個字型、`strFace`會是空字串。  
+### <a name="remarks"></a>Remarks  
+ If the current selection uses more than one font, `strFace` will be an empty string.  
   
- 這個方法會傳送[IDM_FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser 控制項。  
+ This method sends the [IDM_FONTNAME command ID](https://msdn.microsoft.com/library/aa769880.aspx) to the WebBrowser control.  
   
-##  <a name="getfontsize"></a>CHtmlEditCtrlBase::GetFontSize  
- 擷取目前的選取範圍的字型大小。  
+##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize  
+ Retrieves the font size for the current selection.  
   
 ```  
 HRESULT GetFontSize(short& nSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nSize`  
- 字型大小。  
+ The font size.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 HTML 字型大小 (1-7)。 如果選取範圍包含多個字型的大小，，傳回 0。  
+### <a name="return-value"></a>Return Value  
+ Returns the HTML font size (1-7). Returns 0 if the selection contains multiple font sizes.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_FONTSIZE command ID](https://msdn.microsoft.com/library/aa769881.aspx) to the WebBrowser control.  
   
-##  <a name="getforecolor"></a>CHtmlEditCtrlBase::GetForeColor  
- 擷取目前的選取項目的前景 （文字） 色彩。  
+##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor  
+ Retrieves the foreground (text) color of the current selection.  
   
 ```  
 HRESULT GetForeColor(int& nColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nColor`  
- 前景色彩。  
+ The foreground color.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_FORECOLOR Command ID](https://msdn.microsoft.com/library/aa769882.aspx) to the WebBrowser control.  
   
-##  <a name="getframezone"></a>CHtmlEditCtrlBase::GetFrameZone  
- 在 web 瀏覽器中傳回目前頁面的安全性區域中。  
+##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone  
+ Returns the security zone of the current page in the web browser.  
   
 ```  
 HRESULT GetFrameZone(short& nZone) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *nZone*  
- 安全性區域。  
+ The security zone.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_GETFRAMEZONE 命令 ID](https://msdn.microsoft.com/library/aa769916.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_GETFRAMEZONE command ID](https://msdn.microsoft.com/library/aa769916.aspx) to the WebBrowser control.  
   
-##  <a name="getisdirty"></a>CHtmlEditCtrlBase::GetIsDirty  
- 表示 HTML 文件是否已變更。  
+##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty  
+ Indicates whether the HTML document has changed.  
   
 ```  
 HRESULT GetIsDirty() const;  
 ```  
   
-### <a name="remarks"></a>備註  
- 指出是否已變更文件。 `GetIsDirty`傳回`HRESULT`從[IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910)。  
+### <a name="remarks"></a>Remarks  
+ Indicates whether the document has changed. `GetIsDirty` returns an `HRESULT` from [IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910).  
   
-##  <a name="getshowalignedsitetags"></a>CHtmlEditCtrlBase::GetShowAlignedSiteTags  
- 傳回的所有項目是否顯示字符**styleFloat**屬性。  
+##  <a name="getshowalignedsitetags"></a>  CHtmlEditCtrlBase::GetShowAlignedSiteTags  
+ Returns whether a glyph is displayed for all elements that have a **styleFloat** property.  
   
 ```  
 HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果圖像會顯示所有項目則為 true **styleFloat**屬性則會顯示任何圖像 （glyph） 為 false。  
+ True if a glyph is displayed for all elements that have a **styleFloat** property; false if no glyph is displayed.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWALIGNEDSITETAGS 命令 ID](https://msdn.microsoft.com/library/aa769947.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWALIGNEDSITETAGS Command ID](https://msdn.microsoft.com/library/aa769947.aspx).  
   
-##  <a name="getshowalltags"></a>CHtmlEditCtrlBase::GetShowAllTags  
- 傳回 WebBrowser 是否顯示字符才能顯示文件中的所有標記的位置。  
+##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags  
+ Returns whether the WebBrowser displays glyphs to show the location of all tags in a document.  
   
 ```  
 HRESULT GetShowAllTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果 WebBrowser 顯示這些圖像會顯示文件; 中的所有標記的位置，則為 true。如果不為 false。  
+ True if the WebBrowser displays glyphs to show the location of all tags in a document; false if it does not.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWALLTAGS Command ID](https://msdn.microsoft.com/library/aa769948.aspx).  
   
-##  <a name="getshowareatags"></a>CHtmlEditCtrlBase::GetShowAreaTags  
- 擷取 WebBrowser 顯示區域標記的圖像是否。  
+##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags  
+ Retrieves whether the WebBrowser displays a glyph for area tags.  
   
 ```  
 HRESULT GetShowAreaTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果 WebBrowser 顯示區域標記的圖像 false 如果不存在，則為 true。  
+ True if the WebBrowser displays a glyph for area tags, false if it does not.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWAREATAGS Command ID](https://msdn.microsoft.com/library/aa769949.aspx).  
   
-##  <a name="getshowbrtags"></a>CHtmlEditCtrlBase::GetShowBRTags  
- 擷取 WebBrowser 顯示字符的 br 標記是否。  
+##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags  
+ Retrieves whether the WebBrowser displays a glyph for br tags.  
   
 ```  
 HRESULT GetShowBRTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果 WebBrowser 顯示字符的 br 標記 false 如果沒有，則為 true。  
+ True if the WebBrowser displays a glyph for br tags, false if it doesn't.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWWBRTAGS Command ID](https://msdn.microsoft.com/library/aa769956.aspx).  
   
-##  <a name="getshowcommenttags"></a>CHtmlEditCtrlBase::GetShowCommentTags  
- 擷取 WebBrowser 顯示註解標記的圖像是否。  
+##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags  
+ Retrieves whether the WebBrowser displays a glyph for comment tags.  
   
 ```  
 HRESULT GetShowCommentTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果 WebBrowser 顯示註解標記的圖像 false 如果沒有，則為 true。  
+ True if the WebBrowser displays a glyph for comment tags, false if it doesn't.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWCOMMENTTAGS Command ID](https://msdn.microsoft.com/library/aa769950.aspx).  
   
-##  <a name="getshowmisctags"></a>CHtmlEditCtrlBase::GetShowMiscTags  
- 擷取 WebBrowser 會顯示在 Microsoft Internet Explorer 4.0 中顯示的所有標記是否。  
+##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags  
+ Retrieves whether the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0.  
   
 ```  
 HRESULT GetShowMiscTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果 WebBrowser 顯示所有標籤顯示在 Microsoft Internet Explorer 4.0，它並不會為 false，則為 true。  
+ True if the WebBrowser displays all the tags shown in Microsoft Internet Explorer 4.0, false if it does not.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWMISCTAGS Command ID](https://msdn.microsoft.com/library/aa769952.aspx).  
   
-##  <a name="getshowscripttags"></a>CHtmlEditCtrlBase::GetShowScriptTags  
- 擷取 WebBrowser 會顯示所有指令碼標記的圖像是否。  
+##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags  
+ Retrieves whether the WebBrowser displays a glyph for all the script tags.  
   
 ```  
 HRESULT GetShowScriptTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果 WebBrowser 顯示字符的所有指令碼標記，false 如果不存在，則為 true。  
+ True if the WebBrowser displays a glyph for all the script tags, false if it does not.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWSCRIPTTAGS Command ID](https://msdn.microsoft.com/library/aa769953.aspx).  
   
-##  <a name="getshowstyletags"></a>CHtmlEditCtrlBase::GetShowStyleTags  
- 擷取 WebBrowser 會顯示所有樣式標記的圖像是否。  
+##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags  
+ Retrieves whether the WebBrowser displays a glyph for all the style tags.  
   
 ```  
 HRESULT GetShowStyleTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果 WebBrowser 顯示字符的所有樣式的標籤，false 如果不存在，則為 true。  
+ True if the WebBrowser displays a glyph for all the style tags, false if it does not  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWSTYLETAGS Command ID](https://msdn.microsoft.com/library/aa769954.aspx).  
   
-##  <a name="getshowunknowntags"></a>CHtmlEditCtrlBase::GetShowUnknownTags  
- 擷取 WebBrowser 會顯示所有未知的標記的圖像是否。  
+##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags  
+ Retrieves whether the WebBrowser displays a glyph for all unknown tags.  
   
 ```  
 HRESULT GetShowUnknownTags(bool& bCurValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCurValue`  
- 如果 WebBrowser 顯示字符的 所有未知的標記，false 如果不存在，則為 true。  
+ True if the WebBrowser displays a glyph for all unknown tags, false if it does not.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[IDM_SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx)。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [IDM_SHOWUNKNOWNTAGS Command ID](https://msdn.microsoft.com/library/aa769955.aspx).  
   
-##  <a name="horizontalline"></a>CHtmlEditCtrlBase::HorizontalLine  
- 在目前選取範圍的水平列會覆寫。  
+##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine  
+ Overwrites a horizontal line on the current selection.  
   
 ```  
 HRESULT HorizontalLine(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *szID*  
- 水平列的識別碼。  
+ The ID for the horizontal line.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_HORIZONTALLINE 命令 ID](https://msdn.microsoft.com/library/aa769968.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_HORIZONTALLINE command ID](https://msdn.microsoft.com/library/aa769968.aspx) to the WebBrowser control.  
   
-##  <a name="hyperlink"></a>CHtmlEditCtrlBase::HyperLink  
- 插入目前的選取範圍的超連結。  
+##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink  
+ Inserts a hyperlink on the current selection.  
   
 ```  
 HRESULT HyperLink(LPCTSTR szUrl = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szUrl`  
- 超連結 URL。  
+ The hyperlink URL.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_HYPERLINK 命令 ID](https://msdn.microsoft.com/library/aa769874.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_HYPERLINK command ID](https://msdn.microsoft.com/library/aa769874.aspx) to the WebBrowser control.  
   
-##  <a name="ie50paste"></a>CHtmlEditCtrlBase::IE50Paste  
- 執行與 Internet Explorer 5 相容貼上作業。  
+##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste  
+ Performs a paste operation that's compatible with Internet Explorer 5.  
   
 ```  
 HRESULT IE50Paste(LPCTSTR szData) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szData`  
- 要貼上的字串。  
+ The string to paste.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_IE50_PASTE 命令 ID](https://msdn.microsoft.com/library/aa769922.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_IE50_PASTE command ID](https://msdn.microsoft.com/library/aa769922.aspx) to the WebBrowser control.  
   
-##  <a name="iframe"></a>CHtmlEditCtrlBase::Iframe  
- 會覆寫目前的選取範圍的內嵌框架。  
+##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe  
+ Overwrites an inline frame on the current selection.  
   
 ```  
 HRESULT Iframe(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 識別碼的內嵌框架。  
+ The ID for the inline frame.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_IFRAME 命令 ID](https://msdn.microsoft.com/library/aa769969.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_IFRAME command ID](https://msdn.microsoft.com/library/aa769969.aspx) to the WebBrowser control.  
   
-##  <a name="image"></a>CHtmlEditCtrlBase::Image  
- 會覆寫目前的選取範圍上的影像。  
+##  <a name="image"></a>  CHtmlEditCtrlBase::Image  
+ Overwrites an image on the current selection.  
   
 ```  
 HRESULT Image(LPCTSTR szUrl = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szUrl`  
- 要插入的影像路徑和檔案名稱。  
+ The path and file name of the image to be inserted.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_IMAGE 命令 ID](https://msdn.microsoft.com/library/aa769970.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_IMAGE command ID](https://msdn.microsoft.com/library/aa769970.aspx) to the WebBrowser control.  
   
-##  <a name="indent"></a>CHtmlEditCtrlBase::Indent  
- 增加所選取文字的縮排一個縮排增量。  
+##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent  
+ Increases the indent of the selected text by one indentation increment.  
   
 ```  
 HRESULT Indent() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INDENT 命令 ID](https://msdn.microsoft.com/library/aa769963.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INDENT command ID](https://msdn.microsoft.com/library/aa769963.aspx) to the WebBrowser control.  
   
-##  <a name="insfieldset"></a>CHtmlEditCtrlBase::InsFieldSet  
- 會覆寫目前的選取範圍上的方塊。  
+##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet  
+ Overwrites a box on the current selection.  
   
 ```  
 HRESULT InsFieldSet(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 方塊的識別碼。  
+ The ID for the box.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INSFIELDSET 命令 ID](https://msdn.microsoft.com/library/aa769967.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSFIELDSET command ID](https://msdn.microsoft.com/library/aa769967.aspx) to the WebBrowser control.  
   
-##  <a name="insinputbutton"></a>CHtmlEditCtrlBase::InsInputButton  
- 會覆寫目前的選取範圍上的按鈕控制項。  
+##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton  
+ Overwrites a button control on the current selection.  
   
 ```  
 HRESULT InsInputButton(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- Button 控制項的識別碼。  
+ The ID for the button control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INSINPUTBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769971.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTBUTTON command ID](https://msdn.microsoft.com/library/aa769971.aspx) to the WebBrowser control.  
   
-##  <a name="insinputhidden"></a>CHtmlEditCtrlBase::InsInputHidden  
- 插入目前的選取項目上的隱藏的控制項。  
+##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden  
+ Inserts a hidden control on the current selection.  
   
 ```  
 HRESULT InsInputHidden(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 隱藏的控制項識別碼。  
+ The ID for the hidden control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INSINPUTHIDDEN 命令 ID](https://msdn.microsoft.com/library/aa769974.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTHIDDEN command ID](https://msdn.microsoft.com/library/aa769974.aspx) to the WebBrowser control.  
   
-##  <a name="insinputimage"></a>CHtmlEditCtrlBase::InsInputImage  
- 影像控制項在目前選取範圍會覆寫。  
+##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage  
+ Overwrites an image control on the current selection.  
   
 ```  
 HRESULT InsInputImage(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 影像控制項的識別碼。  
+ The ID for the image control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INSINPUTIMAGE 命令 ID](https://msdn.microsoft.com/library/aa769975.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTIMAGE command ID](https://msdn.microsoft.com/library/aa769975.aspx) to the WebBrowser control.  
   
-##  <a name="insinputpassword"></a>CHtmlEditCtrlBase::InsInputPassword  
- 會覆寫密碼控制項，在目前選取範圍。  
+##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword  
+ Overwrites a password control on the current selection.  
   
 ```  
 HRESULT InsInputPassword(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 密碼控制項 ID。  
+ The ID for the password control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INSINPUTPASSWORD 命令 ID](https://msdn.microsoft.com/library/aa769976.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTPASSWORD command ID](https://msdn.microsoft.com/library/aa769976.aspx) to the WebBrowser control.  
   
-##  <a name="insinputreset"></a>CHtmlEditCtrlBase::InsInputReset  
- 會覆寫控制項重設與目前的選取範圍。  
+##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset  
+ Overwrites a reset control on the current selection.  
   
 ```  
 HRESULT InsInputReset(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 重設控制項的識別碼。  
+ The ID for the reset control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INSINPUTRESET 命令 ID](https://msdn.microsoft.com/library/aa769978.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTRESET command ID](https://msdn.microsoft.com/library/aa769978.aspx) to the WebBrowser control.  
   
-##  <a name="insinputsubmit"></a>CHtmlEditCtrlBase::InsInputSubmit  
- 會覆寫目前的選取項目上送出控制項。  
+##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit  
+ Overwrites a submit control on the current selection.  
   
 ```  
 HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 送出控制項的識別碼。  
+ The ID for the submit control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INSINPUTSUBMIT 命令 ID](https://msdn.microsoft.com/library/aa769979.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTSUBMIT command ID](https://msdn.microsoft.com/library/aa769979.aspx) to the WebBrowser control.  
   
-##  <a name="insinputupload"></a>CHtmlEditCtrlBase::InsInputUpload  
- 會覆寫檔案上傳控制項，在目前選取範圍。  
+##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload  
+ Overwrites a file upload control on the current selection.  
   
 ```  
 HRESULT InsInputUpload(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 檔案上傳控制項 ID。  
+ The ID for the file upload control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_INSINPUTUPLOAD 命令 ID](https://msdn.microsoft.com/library/aa769973.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_INSINPUTUPLOAD command ID](https://msdn.microsoft.com/library/aa769973.aspx) to the WebBrowser control.  
   
-##  <a name="is1delement"></a>CHtmlEditCtrlBase::Is1DElement  
- 判斷以靜態方式是否置於項目。  
+##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement  
+ Determines if an element is statically positioned.  
   
 ```  
 HRESULT Is1DElement(bool& bValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bValue`  
- 如果項目因靜態定位，則為 false，則為 true。  
+ True if the element is statically positioned, false otherwise.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_1D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769885.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_1D_ELEMENT command ID](https://msdn.microsoft.com/library/aa769885.aspx) to the WebBrowser control.  
   
-##  <a name="is2delement"></a>CHtmlEditCtrlBase::Is2DElement  
- 判斷元素是否為絕對定位。  
+##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement  
+ Determines if an element is absolutely positioned.  
   
 ```  
 HRESULT Is2DElement(bool& bValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bValue`  
- 如果項目因絕對位置，則為 false，則為 true。  
+ True if the element is absolutely positioned, false otherwise.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_2D_ELEMENT 命令 ID](https://msdn.microsoft.com/library/aa769886.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_2D_ELEMENT command ID](https://msdn.microsoft.com/library/aa769886.aspx) to the WebBrowser control.  
   
-##  <a name="italic"></a>CHtmlEditCtrlBase::Italic  
- 切換目前選取範圍斜體和 nonitalic 之間。  
+##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic  
+ Toggles the current selection between italic and nonitalic.  
   
 ```  
 HRESULT Italic() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_ITALIC 命令 ID](https://msdn.microsoft.com/library/aa769988.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_ITALIC command ID](https://msdn.microsoft.com/library/aa769988.aspx) to the WebBrowser control.  
   
-##  <a name="justifycenter"></a>CHtmlEditCtrlBase::JustifyCenter  
- 中心格式區塊中目前選取項目所在。  
+##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter  
+ Centers the format block in which the current selection is located.  
   
 ```  
 HRESULT JustifyCenter() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_JUSTIFYCENTER 命令 ID](https://msdn.microsoft.com/library/aa769989.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_JUSTIFYCENTER command ID](https://msdn.microsoft.com/library/aa769989.aspx) to the WebBrowser control.  
   
-##  <a name="justifyleft"></a>CHtmlEditCtrlBase::JustifyLeft  
- 靠左對齊格式區塊中目前選取項目所在。  
+##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft  
+ Left-justifies the format block in which the current selection is located.  
   
 ```  
 HRESULT JustifyLeft() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_JUSTIFYLEFT 命令 ID](https://msdn.microsoft.com/library/aa770011.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_JUSTIFYLEFT command ID](https://msdn.microsoft.com/library/aa770011.aspx) to the WebBrowser control.  
   
-##  <a name="justifyright"></a>CHtmlEditCtrlBase::JustifyRight  
- 靠右對齊格式區塊中目前選取項目所在。  
+##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight  
+ Right-justifies the format block in which the current selection is located.  
   
 ```  
 HRESULT JustifyRight() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_JUSTIFYRIGHT 命令 ID](https://msdn.microsoft.com/library/aa770013.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_JUSTIFYRIGHT command ID](https://msdn.microsoft.com/library/aa770013.aspx) to the WebBrowser control.  
   
-##  <a name="listbox"></a>CHtmlEditCtrlBase::ListBox  
- 會覆寫目前的選取範圍的清單方塊選取項目控制項。  
+##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox  
+ Overwrites a list box selection control on the current selection.  
   
 ```  
 HRESULT ListBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 清單方塊控制項的識別碼。  
+ The ID for the list box control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_LISTBOX 命令 ID](https://msdn.microsoft.com/library/aa769985.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_LISTBOX command ID](https://msdn.microsoft.com/library/aa769985.aspx) to the WebBrowser control.  
   
-##  <a name="marquee"></a>CHtmlEditCtrlBase::Marquee  
- 會覆寫目前的選取範圍的空跑馬燈。  
+##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee  
+ Overwrites an empty marquee on the current selection.  
   
 ```  
 HRESULT Marquee(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 跑馬燈識別碼。  
+ The ID for the marquee.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_MARQUEE 命令 ID](https://msdn.microsoft.com/library/aa769981.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_MARQUEE command ID](https://msdn.microsoft.com/library/aa769981.aspx) to the WebBrowser control.  
   
-##  <a name="newdocument"></a>CHtmlEditCtrlBase::NewDocument  
- 建立新的文件。  
+##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument  
+ Creates a new document.  
   
 ```  
 HRESULT NewDocument() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="orderlist"></a>CHtmlEditCtrlBase::OrderList  
- 切換目前選取項目已排序的清單之間的一般格式的區塊。  
+##  <a name="orderlist"></a>  CHtmlEditCtrlBase::OrderList  
+ Toggles the current selection between an ordered list and a normal format block.  
   
 ```  
 HRESULT OrderList(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 如需已排序的清單識別碼。  
+ The ID for the ordered list.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_ORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769982.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_ORDERLIST command ID](https://msdn.microsoft.com/library/aa769982.aspx) to the WebBrowser control.  
   
-##  <a name="outdent"></a>CHtmlEditCtrlBase::Outdent  
- 減少一個遞增值的縮排格式區塊中目前選取項目所在。  
+##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent  
+ Decreases by one increment the indentation of the format block in which the current selection is located.  
   
 ```  
 HRESULT Outdent() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_OUTDENT 命令 ID](https://msdn.microsoft.com/library/aa770015.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_OUTDENT command ID](https://msdn.microsoft.com/library/aa770015.aspx) to the WebBrowser control.  
   
-##  <a name="paragraph"></a>CHtmlEditCtrlBase::Paragraph  
- 會覆寫在目前選取範圍中的分行符號。  
+##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph  
+ Overwrites a line break on the current selection.  
   
 ```  
 HRESULT Paragraph(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 段落識別碼。  
+ The ID for the paragraph.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_PARAGRAPH 命令 ID](https://msdn.microsoft.com/library/aa769983.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_PARAGRAPH command ID](https://msdn.microsoft.com/library/aa769983.aspx) to the WebBrowser control.  
   
-##  <a name="paste"></a>CHtmlEditCtrlBase::Paste  
- 會覆寫目前的選取範圍的剪貼簿的內容。  
+##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste  
+ Overwrites the contents of the clipboard on the current selection.  
   
 ```  
 HRESULT Paste() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_PASTE 命令 ID](https://msdn.microsoft.com/library/aa770017.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_PASTE command ID](https://msdn.microsoft.com/library/aa770017.aspx) to the WebBrowser control.  
   
-##  <a name="printdocument"></a>CHtmlEditCtrlBase::PrintDocument  
- 列印目前文件。  
+##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument  
+ Prints the current document.  
   
 ```  
 HRESULT PrintDocument() const;  
@@ -1337,266 +1443,266 @@ HRESULT PrintDocument(LPCTSTR szPrintTemplate) const;
 HRESULT PrintDocument(bool bShowPrintDialog) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szPrintTemplate`  
- 路徑的列印範本。如果未指定，會使用預設的列印範本。  
+ Path to a print template; if none is specified, the default print template is used.  
   
  *bShowPrintDialog*  
- 如果為 true，會顯示 [列印] 對話方塊。  
+ If true, shows the Print dialog.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_PRINT 命令 ID](https://msdn.microsoft.com/library/aa769937.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_PRINT command ID](https://msdn.microsoft.com/library/aa769937.aspx) to the WebBrowser control.  
   
-##  <a name="printpreview"></a>CHtmlEditCtrlBase::PrintPreview  
- 開啟目前文件使用預設的預覽列印範本或自訂範本 預覽列印視窗。  
+##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview  
+ Opens the Print Preview window for the current document using either the default print preview template or a custom template.  
   
 ```  
 HRESULT PrintPreview() const;  
 HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szPrintTemplate`  
- 列印範本的路徑。  
+ Path to a print template.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_PRINTPREVIEW 命令 ID](https://msdn.microsoft.com/library/aa769938.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_PRINTPREVIEW command ID](https://msdn.microsoft.com/library/aa769938.aspx) to the WebBrowser control.  
   
-##  <a name="querystatus"></a>CHtmlEditCtrlBase::QueryStatus  
- 呼叫這個方法來查詢命令的狀態。  
+##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus  
+ Call this method to query the status of commands.  
   
 ```  
 long QueryStatus(long cmdID) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 命令 ID。 命令識別碼都取自`CGID_MSHTML`命令群組。 這些命令 Mshtmcid.h 中定義。 您也可以尋找在線上的清單[MSHTML 命令識別碼](http://go.microsoft.com/fwlink/linkid=149220)。  
+ The command ID. Command identifiers are taken from the `CGID_MSHTML` command group. These commands are defined in Mshtmcid.h. You can also find the list online at [MSHTML Command Identifiers](http://go.microsoft.com/fwlink/linkid=149220).  
   
-### <a name="return-value"></a>傳回值  
- 傳回[OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)的狀態，指出`cmdID`，或 0 失敗。  
+### <a name="return-value"></a>Return Value  
+ Returns an [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) indicating the status for `cmdID`, or 0 on failure.  
   
-##  <a name="radiobutton"></a>CHtmlEditCtrlBase::RadioButton  
- 會覆寫目前的選取項目上的選項按鈕控制項。  
+##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
+ Overwrites a radio control on the current selection.  
   
 ```  
 HRESULT RadioButton(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 選項按鈕的識別碼。  
+ The ID of the radio button.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_RADIOBUTTON 命令 ID](https://msdn.microsoft.com/library/aa769977.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_RADIOBUTTON command ID](https://msdn.microsoft.com/library/aa769977.aspx) to the WebBrowser control.  
   
-##  <a name="refreshdocument"></a>CHtmlEditCtrlBase::RefreshDocument  
- 重新整理目前文件。  
+##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument  
+ Refreshes the current document.  
   
 ```  
 HRESULT RefreshDocument() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_REFRESH 命令 ID](https://msdn.microsoft.com/library/aa770020.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_REFRESH Command ID](https://msdn.microsoft.com/library/aa770020.aspx) to the WebBrowser control.  
   
-##  <a name="removeformat"></a>CHtmlEditCtrlBase::RemoveFormat  
- 移除目前選取範圍格式的標記。  
+##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat  
+ Removes the formatting tags from the current selection.  
   
 ```  
 HRESULT RemoveFormat() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_REMOVEFORMAT 命令 ID](https://msdn.microsoft.com/library/aa770021.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_REMOVEFORMAT command ID](https://msdn.microsoft.com/library/aa770021.aspx) to the WebBrowser control.  
   
-##  <a name="saveas"></a>CHtmlEditCtrlBase::SaveAs  
- 將目前網頁儲存至檔案。  
+##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs  
+ Saves the current Web page to a file.  
   
 ```  
 HRESULT SaveAs(LPCTSTR szPath = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szPath`  
- 要用來儲存 Web 網頁的路徑和檔案名稱。  
+ The path and file name to which to save the Web page.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_SAVEAS 命令識別碼](https://msdn.microsoft.com/library/aa770024.aspx)WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_SAVEAS command ID](https://msdn.microsoft.com/library/aa770024.aspx) to the WebBrowser control.  
   
-##  <a name="selectall"></a>CHtmlEditCtrlBase::SelectAll  
- 選取整份文件。  
+##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll  
+ Selects the entire document.  
   
 ```  
 HRESULT SelectAll() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_SELECTALL 命令 ID](https://msdn.microsoft.com/library/aa770025.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_SELECTALL command ID](https://msdn.microsoft.com/library/aa770025.aspx) to the WebBrowser control.  
   
-##  <a name="set2dposition"></a>CHtmlEditCtrlBase::Set2DPosition  
- 允許拖曳移動的絕對定位項目。  
+##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition  
+ Allows absolutely positioned elements to be moved by dragging.  
   
 ```  
 HRESULT Set2DPosition(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，則可以藉由拖曳線上移動絕對定位項目。  
+ If true, absolutely positioned elements can be moved by dragging.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_2D_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769887.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_2D_POSITION command ID](https://msdn.microsoft.com/library/aa769887.aspx) to the WebBrowser control.  
   
-##  <a name="setabsoluteposition"></a>CHtmlEditCtrlBase::SetAbsolutePosition  
- 元素的位置將屬性設定為 「 絕對 」 或 「 靜態 」。  
+##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition  
+ Sets an element's position property to "absolute" or "static."  
   
 ```  
 HRESULT SetAbsolutePosition(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，項目的位置的屬性是"absolute";如果為 false，，則 「 靜態 」。  
+ If true, the element's position property is "absolute"; if false, it is "static."  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_ABSOLUTE_POSITION 命令 ID](https://msdn.microsoft.com/library/aa769889.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_ABSOLUTE_POSITION command ID](https://msdn.microsoft.com/library/aa769889.aspx) to the WebBrowser control.  
   
-##  <a name="setatomicselection"></a>CHtmlEditCtrlBase::SetAtomicSelection  
- 設定不可部分完成的選取模式。  
+##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection  
+ Set atomic selection mode.  
   
 ```  
 HRESULT SetAtomicSelection(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，則會僅做為一個單位，可選取 ATOMICSELECTION 屬性設定為 TRUE 的任何元素。  
+ If true, any element that has an ATOMICSELECTION attribute set to TRUE will be selectable only as a unit.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_ATOMICSELECTION 命令 ID](https://msdn.microsoft.com/library/aa769892.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_ATOMICSELECTION command ID](https://msdn.microsoft.com/library/aa769892.aspx) to the WebBrowser control.  
   
-##  <a name="setautourldetectmode"></a>CHtmlEditCtrlBase::SetAutoURLDetectMode  
- 開啟自動 URL 偵測和關閉。  
+##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode  
+ Turns automatic URL detection on and off.  
   
 ```  
 HRESULT SetAutoURLDetectMode(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，則會啟用自動的 URL 偵測。  
+ If true, automatic URL detection is enabled.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_AUTOURLDETECT_MODE 命令 ID](https://msdn.microsoft.com/library/aa769893.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_AUTOURLDETECT_MODE command ID](https://msdn.microsoft.com/library/aa769893.aspx) to the WebBrowser control.  
   
-##  <a name="setbackcolor"></a>CHtmlEditCtrlBase::SetBackColor  
- 設定目前選取範圍的背景色彩。  
+##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor  
+ Sets the background color of the current selection.  
   
 ```  
 HRESULT SetBackColor(int nColor) const;  
 HRESULT SetBackColor(LPCTSTR szColor) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nColor`  
- 色彩。 請參閱`pvaIn`中[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)。  
+ The color. See `pvaIn` in [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx).  
   
  `szColor`  
- 色彩。 請參閱`pvaIn`中[IDM_BACKCOLOR 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx)。  
+ The color. See `pvaIn` in [IDM_BACKCOLOR Command ID](https://msdn.microsoft.com/library/aa769858.aspx).  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_BACKCOLOR_ 命令 ID](https://msdn.microsoft.com/library/aa769858.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BACKCOLOR_ command ID](https://msdn.microsoft.com/library/aa769858.aspx) to the WebBrowser control.  
   
-##  <a name="setblockformat"></a>CHtmlEditCtrlBase::SetBlockFormat  
- 設定目前的區塊格式標記。  
+##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat  
+ Sets the current block format tag.  
   
 ```  
 HRESULT SetBlockFormat(LPCTSTR szFormat) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szFormat`  
- 格式標記。  
+ The format tag.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_BLOCKFMT_command 識別碼](https://msdn.microsoft.com/library/aa769883.aspx)WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) to the WebBrowser control.  
   
-##  <a name="setbookmark"></a>CHtmlEditCtrlBase::SetBookMark  
- 建立目前的選取範圍或插入點的書籤起點。  
+##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark  
+ Creates a bookmark anchor for the current selection or insertion point.  
   
 ```  
 HRESULT SetBookMark(LPCTSTR szAnchorName) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *szAnchorName*  
- 錨點名稱。  
+ The anchor name.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_BOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa769873.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_BOOKMARK command ID](https://msdn.microsoft.com/library/aa769873.aspx) to the WebBrowser control.  
   
-##  <a name="setcsseditinglevel"></a>CHtmlEditCtrlBase::SetCSSEditingLevel  
- 選取的 CSS 層級 （CSS1 或 CSS2） 編輯器將支援，如果有的話。  
+##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel  
+ Selects which CSS level (CSS1 or CSS2) the editor will support, if any.  
   
 ```  
 HRESULT SetCSSEditingLevel(short nLevel) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nLevel`  
- CSS 層級。 如果您不想 CSS 支援，請傳遞 0。  
+ The CSS level. Pass 0 if you do not want CSS support.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_CSSEDITING_LEVEL 命令 ID](https://msdn.microsoft.com/library/aa769903.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_CSSEDITING_LEVEL command ID](https://msdn.microsoft.com/library/aa769903.aspx) to the WebBrowser control.  
   
-##  <a name="setdefaultcomposesettings"></a>CHtmlEditCtrlBase::SetDefaultComposeSettings  
- 呼叫此方法以設定預設撰寫設定。  
+##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings  
+ Call this method to set the default compose settings.  
   
 ```  
 HRESULT SetDefaultComposeSettings(
@@ -1609,481 +1715,481 @@ HRESULT SetDefaultComposeSettings(
     bool bUnderline = false) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *szFontName*  
- 字型名稱。  
+ The font name.  
   
  *nFontSize*  
- 字型大小。  
+ The font size.  
   
  *crFontColor*  
- 字型色彩。  
+ The font color.  
   
  *crFontBgColor*  
- 字型的背景色彩。  
+ The font background color.  
   
  *bBold*  
- 傳遞的粗體文字，則為 true。  
+ Pass true for bold text.  
   
  `bItalic`  
- 傳遞的斜體文字，則為 true。  
+ Pass true for italic text.  
   
  `bUnderline`  
- 傳遞的加底線的文字，則為 true。  
+ Pass true for underlined text.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_COMPOSESETTINGS 命令識別碼](https://msdn.microsoft.com/library/aa769901.aspx)WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_COMPOSESETTINGS command ID](https://msdn.microsoft.com/library/aa769901.aspx) to the WebBrowser control.  
   
-##  <a name="setdesignmode"></a>CHtmlEditCtrlBase::SetDesignMode  
- 設定設計模式。  
+##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode  
+ Set design mode.  
   
 ```  
 BOOL SetDesignMode(BOOL bMode) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bMode`  
- 如果為 true，會開啟設計模式。  
+ If true, turns design mode on.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，則傳回 TRUE 失敗，則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE on success, FALSE on failure.  
   
-##  <a name="setdisableeditfocusui"></a>CHtmlEditCtrlBase::SetDisableEditFocusUI  
- 停用陰影的框線，並具有編輯焦點的項目控點。  
+##  <a name="setdisableeditfocusui"></a>  CHtmlEditCtrlBase::SetDisableEditFocusUI  
+ Disables the hatched border and handles around an element that has edit focus.  
   
 ```  
 HRESULT SetDisableEditFocusUI(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，會停用則包含陰影的框線和站台可選取項目周圍的控制代碼時項目設計模式中具有 「 編輯焦點 」也就是說，當文字或項目的內容可供編輯。  
+ If true, disables the hatched border and handles around a site selectable element when the element has "edit focus" in design mode; that is, when the text or contents of the element can be edited.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM_DISABLE_EDITFOCUS_UI 命令 ID](https://msdn.microsoft.com/library/aa769905.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM_DISABLE_EDITFOCUS_UI command ID](https://msdn.microsoft.com/library/aa769905.aspx) to the WebBrowser control.  
   
-##  <a name="setdocumenthtml"></a>CHtmlEditCtrlBase::SetDocumentHTML  
- 設定目前文件的 HTML。  
+##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML  
+ Sets the HTML of the current document.  
   
 ```  
 HRESULT SetDocumentHTML(LPCTSTR szHTML) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szHTML`  
- HTML 中。  
+ The HTML.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-##  <a name="setfontface"></a>CHtmlEditCtrlBase::SetFontFace  
- 設定目前選取範圍的字型。  
+##  <a name="setfontface"></a>  CHtmlEditCtrlBase::SetFontFace  
+ Sets the font for the current selection.  
   
 ```  
 HRESULT SetFontFace(LPCTSTR szFace) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szFace`  
- 字型名稱。  
+ The font name.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM FONTNAME 命令 ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM FONTNAME Command ID](https://msdn.microsoft.com/library/aa769880.aspx) to the WebBrowser control.  
   
-##  <a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize  
- 設定目前選取範圍的字型大小。  
+##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize  
+ Sets the font size for the current selection.  
   
 ```  
 HRESULT SetFontSize(unsigned short size) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `size`  
- HTML 字型大小 (1-7)。 值為 0 會將字型大小設定為 1。  
+ The HTML font size (1-7). A value of 0 sets the font size to 1.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM FONTSIZE 命令 ID](https://msdn.microsoft.com/library/aa769881.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM FONTSIZE command ID](https://msdn.microsoft.com/library/aa769881.aspx) to the WebBrowser control.  
   
-##  <a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor  
- 設定目前選取範圍前景 （文字） 色彩。  
+##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor  
+ Sets the foreground (text) color of the current selection.  
   
 ```  
 HRESULT SetForeColor(LPCTSTR szColor) const;  
 HRESULT SetForeColor(int nColor) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szColor`  
- 色彩。  
+ The color.  
   
  `nColor`  
- 色彩。  
+ The color.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM FORECOLOR 命令 ID](https://msdn.microsoft.com/library/aa769882.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM FORECOLOR command ID](https://msdn.microsoft.com/library/aa769882.aspx) to the WebBrowser control.  
   
-##  <a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode  
- 設定 Microsoft Internet Explorer 5 與貼上作業。  
+##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode  
+ Sets the paste operation to be compatible with Microsoft Internet Explorer 5.  
   
 ```  
 HRESULT SetIE5PasteMode(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，貼上的所有作業都都相容的 Internet Explorer 5;如果為 false，貼上作業會與 Internet Explorer 5.5 相容。  
+ If true, all paste operations are compatible with Internet Explorer 5; if false, paste operations are compatible with Internet Explorer 5.5.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM IE50_PASTE_MODE 命令 ID](https://msdn.microsoft.com/library/aa769923.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM IE50_PASTE_MODE command ID](https://msdn.microsoft.com/library/aa769923.aspx) to the WebBrowser control.  
   
-##  <a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize  
- 會導致 WebBrowser 更新項目的外觀持續期間調整大小或移動作業，而非更新只能在完成的移動或調整其大小。  
+##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize  
+ Causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation, rather than updating only at the completion of the move or resize.  
   
 ```  
 HRESULT SetLiveResize(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，則會導致 WebBrowser 更新項目的外觀，持續進行調整大小或移動作業;如果為 false，便會更新只會在完成移動或調整大小。  
+ If true, causes the WebBrowser to update an element's appearance continuously during a resizing or moving operation; if false, it updates only at the completion of the move or resize.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM LIVERESIZE 命令 ID](https://msdn.microsoft.com/library/aa769928.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM LIVERESIZE command ID](https://msdn.microsoft.com/library/aa769928.aspx) to the WebBrowser control.  
   
-##  <a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect  
- 可讓多個選取項目。  
+##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect  
+ Enables multiple selection.  
   
 ```  
 HRESULT SetMultiSelect(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，允許選取多個站台可選取項目時，使用者按住 SHIFT 或 CTRL 鍵一次。  
+ If true, allows for the selection of more than one site-selectable element at a time when the user holds down the SHIFT or CTRL keys.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM MULTIPLESELECTION 命令 ID](https://msdn.microsoft.com/library/aa769929.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM MULTIPLESELECTION command ID](https://msdn.microsoft.com/library/aa769929.aspx) to the WebBrowser control.  
   
-##  <a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor  
- 命令 WebBrowser 永遠不會變更滑鼠指標。  
+##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor  
+ Commands the WebBrowser never to change the mouse pointer.  
   
 ```  
 HRESULT SetOverrideCursor(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，WebBrowser 不會變更滑鼠指標。  
+ If true, the WebBrowser will not change the mouse pointer.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM OVERRIDE_CURSOR 命令 ID](https://msdn.microsoft.com/library/aa769932.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM OVERRIDE_CURSOR command ID](https://msdn.microsoft.com/library/aa769932.aspx) to the WebBrowser control.  
   
-##  <a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode  
- 切換文字方塊項目模式之間插入，並覆寫。  
+##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode  
+ Toggles the text-entry mode between insert and overwrite.  
   
 ```  
 HRESULT SetOverwriteMode(bool bMode) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bMode`  
- 如果為 true，會覆寫文字項目模式。如果為 false，則文字項目模式為 insert。  
+ If true, text-entry mode is overwrite; if false, text-entry mode is insert.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM 覆寫的命令 ID](https://msdn.microsoft.com/library/aa770016.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM OVERWRITE command ID](https://msdn.microsoft.com/library/aa770016.aspx) to the WebBrowser control.  
   
-##  <a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign  
- 隱藏設計模式中不可見的項目。  
+##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign  
+ Hides invisible elements in design mode.  
   
 ```  
 HRESULT SetRespectVisInDesign(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，具有可見度設定為"hidden"，或顯示屬性設定為"none"的任何項目將不會顯示在設計模式和瀏覽模式;如果為 false，則這些項目將顯示只能在瀏覽模式中。  
+ If true, any elements that have a visibility set to "hidden" or display property set to "none" will not be shown in both design mode and browse mode; if false, those elements will be displayed only in browse mode.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM RESPECTVISIBILITY_INDESIGN 命令 ID](https://msdn.microsoft.com/library/aa770023.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM RESPECTVISIBILITY_INDESIGN command ID](https://msdn.microsoft.com/library/aa770023.aspx) to the WebBrowser control.  
   
-##  <a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags  
- 會顯示字符的所有項目**styleFloat**屬性。  
+##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags  
+ Displays a glyph for all elements that have a **styleFloat** property.  
   
 ```  
 HRESULT SetShowAlignedSiteTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，就會顯示字符的所有項目**styleFloat**屬性。  
+ If true, displays a glyph for all elements that have a **styleFloat** property.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWALIGNEDSITETAGS 命令 ID](https://msdn.microsoft.com/library/aa769947.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWALIGNEDSITETAGS command ID](https://msdn.microsoft.com/library/aa769947.aspx) to the WebBrowser control.  
   
-##  <a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags  
- 會顯示這些圖像會顯示文件中的所有標記的位置。  
+##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags  
+ Displays glyphs to show the location of all tags in a document.  
   
 ```  
 HRESULT SetShowAllTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，則會顯示這些圖像會顯示文件中的所有標記的位置。  
+ If true, displays glyphs to show the location of all tags in a document.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWALLTAGS 命令 ID](https://msdn.microsoft.com/library/aa769948.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWALLTAGS command ID](https://msdn.microsoft.com/library/aa769948.aspx) to the WebBrowser control.  
   
-##  <a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags  
- 顯示所有區域標記的圖像。  
+##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags  
+ Displays a glyph for all the area tags.  
   
 ```  
 HRESULT SetShowAreaTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，就會顯示所有區域標記的圖像。  
+ If true, displays a glyph for all the area tags.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWAREATAGS 命令 ID](https://msdn.microsoft.com/library/aa769949.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWAREATAGS command ID](https://msdn.microsoft.com/library/aa769949.aspx) to the WebBrowser control.  
   
-##  <a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags  
- 顯示所有 br 標記的圖像。  
+##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags  
+ Displays a glyph for all the br tags.  
   
 ```  
 HRESULT SetShowBRTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，就會顯示所有 br 標記的圖像。  
+ If true, displays a glyph for all the br tags.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWWBRTAGS 命令 ID](https://msdn.microsoft.com/library/aa769956.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWWBRTAGS command ID](https://msdn.microsoft.com/library/aa769956.aspx) to the WebBrowser control.  
   
-##  <a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags  
- 顯示所有註解標記的圖像。  
+##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags  
+ Displays a glyph for all the comment tags.  
   
 ```  
 HRESULT SetShowCommentTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，就會顯示所有註解標記的圖像。  
+ If true, displays a glyph for all the comment tags.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWCOMMENTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769950.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWCOMMENTTAGS command ID](https://msdn.microsoft.com/library/aa769950.aspx) to the WebBrowser control.  
   
-##  <a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags  
- 顯示 Microsoft Internet Explorer 4.0 中顯示的所有標記。  
+##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags  
+ Displays all the tags shown in Microsoft Internet Explorer 4.0.  
   
 ```  
 HRESULT SetShowMiscTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，則會顯示在 Microsoft Internet Explorer 4.0 中顯示的所有標記。  
+ If true, displays all the tags shown in Microsoft Internet Explorer 4.0.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWMISCTAGS 命令 ID](https://msdn.microsoft.com/library/aa769952.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWMISCTAGS command ID](https://msdn.microsoft.com/library/aa769952.aspx) to the WebBrowser control.  
   
-##  <a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags  
- 顯示所有指令碼標記的圖像。  
+##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags  
+ Displays a glyph for all the script tags.  
   
 ```  
 HRESULT SetShowScriptTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，就會顯示所有指令碼標記的圖像。  
+ If true, displays a glyph for all the script tags.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWSCRIPTTAGS 命令 ID](https://msdn.microsoft.com/library/aa769953.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWSCRIPTTAGS command ID](https://msdn.microsoft.com/library/aa769953.aspx) to the WebBrowser control.  
   
-##  <a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags  
- 顯示所有樣式標記的圖像。  
+##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags  
+ Displays a glyph for all the style tags.  
   
 ```  
 HRESULT SetShowStyleTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，就會顯示所有樣式標記的圖像。  
+ If true, displays a glyph for all the style tags.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWSTYLETAGS 命令 ID](https://msdn.microsoft.com/library/aa769954.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWSTYLETAGS command ID](https://msdn.microsoft.com/library/aa769954.aspx) to the WebBrowser control.  
   
-##  <a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags  
- 顯示所有未知的標記的圖像。  
+##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags  
+ Displays a glyph for all the unknown tags.  
   
 ```  
 HRESULT SetShowUnknownTags(bool bNewValue) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bNewValue`  
- 如果為 true，就會顯示所有未知的標記的圖像。  
+ If true, displays a glyph for all the unknown tags.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM SHOWUNKNOWNTAGS 命令 ID](https://msdn.microsoft.com/library/aa769955.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM SHOWUNKNOWNTAGS command ID](https://msdn.microsoft.com/library/aa769955.aspx) to the WebBrowser control.  
   
-##  <a name="textarea"></a>CHtmlEditCtrlBase::TextArea  
- 會覆寫目前的選取範圍上的多行文字輸入的控制項。  
+##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea  
+ Overwrites a multiline text input control on the current selection.  
   
 ```  
 HRESULT TextArea(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 多行文字輸入控制項的識別碼。  
+ The ID of the multiline text input control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM TEXTAREA 命令 ID](https://msdn.microsoft.com/library/aa769986.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM TEXTAREA command ID](https://msdn.microsoft.com/library/aa769986.aspx) to the WebBrowser control.  
   
-##  <a name="textbox"></a>CHtmlEditCtrlBase::TextBox  
- 會覆寫目前的選取範圍的文字控制項。  
+##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox  
+ Overwrites a text control on the current selection.  
   
 ```  
 HRESULT TextBox(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 文字控制項的 ID。  
+ The ID of the text control.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM 文字方塊中的命令識別碼](https://msdn.microsoft.com/library/aa769980.aspx)WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM TEXTBOX command ID](https://msdn.microsoft.com/library/aa769980.aspx) to the WebBrowser control.  
   
-##  <a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark  
- 移除目前選取範圍中的任何書籤。  
+##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark  
+ Removes any bookmark from the current selection.  
   
 ```  
 HRESULT UnBookmark() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM UNBOOKMARK 命令 ID](https://msdn.microsoft.com/library/aa770034.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM UNBOOKMARK command ID](https://msdn.microsoft.com/library/aa770034.aspx) to the WebBrowser control.  
   
-##  <a name="underline"></a>CHtmlEditCtrlBase::Underline  
- 切換目前選取項目之間加上底線，而且不加上底線。  
+##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline  
+ Toggles the current selection between underlined and not underlined.  
   
 ```  
 HRESULT Underline() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM 加上底線的命令 ID](https://msdn.microsoft.com/library/aa770035.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM UNDERLINE command ID](https://msdn.microsoft.com/library/aa770035.aspx) to the WebBrowser control.  
   
-##  <a name="unlink"></a>CHtmlEditCtrlBase::Unlink  
- 移除目前選取範圍中的任何超連結。  
+##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink  
+ Removes any hyperlink from the current selection.  
   
 ```  
 HRESULT Unlink() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM 取消連結的命令 ID](https://msdn.microsoft.com/library/aa770037.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM UNLINK command ID](https://msdn.microsoft.com/library/aa770037.aspx) to the WebBrowser control.  
   
-##  <a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList  
- 切換目前選取項目已排序的清單之間的一般格式的區塊。  
+##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList  
+ Toggles the current selection between an ordered list and a normal format block.  
   
 ```  
 HRESULT UnorderList(LPCTSTR szId = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `szId`  
- 未排序清單的識別碼。  
+ The ID of the unordered list.  
   
-### <a name="return-value"></a>傳回值  
- 傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
+### <a name="return-value"></a>Return Value  
+ Returns S_OK on success, or an error HRESULT on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[IDM UNORDERLIST 命令 ID](https://msdn.microsoft.com/library/aa769987.aspx) WebBrowser 控制項。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [IDM UNORDERLIST command ID](https://msdn.microsoft.com/library/aa769987.aspx) to the WebBrowser control.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [HTMLEdit 範例](../../visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [HTMLEdit Sample](../../visual-cpp-samples.md)
 
 

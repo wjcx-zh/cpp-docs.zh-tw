@@ -1,46 +1,64 @@
 ---
-title: "MFC ActiveX 控制項：從方法傳回錯誤碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "錯誤 [C++], ActiveX 控制項錯誤碼"
-  - "FireError 方法"
-  - "GetNotSupported 方法"
-  - "MFC ActiveX 控制項, 錯誤碼"
-  - "SCODE, MFC ActiveX 控制項"
-  - "SetNotSupported 方法, 使用"
-  - "ThrowError 方法"
+title: 'MFC ActiveX Controls: Returning Error Codes From a Method | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], error codes
+- SetNotSupported method, using
+- errors [MFC], ActiveX control error codes
+- GetNotSupported method [MFC]
+- FireError method [MFC]
+- SCODE, MFC ActiveX controls
+- ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC ActiveX 控制項：從方法傳回錯誤碼
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d29c889dcc8bb86b024a4dd78954286d8ed6b33f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明如何從 ActiveX 控制項回傳方法的錯誤碼。  
+---
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX Controls: Returning Error Codes From a Method
+This article describes how to return error codes from an ActiveX control method.  
   
- 表示錯誤在方法內發生錯誤，您應該使用 [COleControl::ThrowError](../Topic/COleControl::ThrowError.md) 成員函式，採用 `SCODE` \(狀態碼\) 做為參數。  您可以使用預先定義的 `SCODE` 或自行定義。  
+ To indicate that an error has occurred within a method, you should use the [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror) member function, which takes an `SCODE` (status code) as a parameter. You can use a predefined `SCODE` or define one of your own.  
   
 > [!NOTE]
->  `ThrowError` 被視為只用來做為傳回錯誤的方法是從屬性取得的內部或 Set 函式或自動化方法。  這些是適當的例外處理常式會出現在堆疊唯一的時候。  
+>  `ThrowError` is meant to be used only as a means of returning an error from within a property's Get or Set function or an automation Method. These are the only times that the appropriate exception handler will be present on the stack.  
   
- Helper 函式為最常用的預先定義 `SCODE`存在，例如 [COleControl::SetNotSupported](../Topic/COleControl::SetNotSupported.md)、 [COleControl::GetNotSupported](../Topic/COleControl::GetNotSupported.md)和 [COleControl::SetNotPermitted](../Topic/COleControl::SetNotPermitted.md)。  
+ Helper functions exist for the most common predefined `SCODE`s, such as [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), and [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
- 如需定義自訂 `SCODE`的預先定義 `SCODE`物件的清單，請參閱《ActiveX 控制項的 [在您的 ActiveX 控制項的處理錯誤](../mfc/mfc-activex-controls-advanced-topics.md) 一節:進階主題。  
+ For a list of predefined `SCODE`s and instructions on defining custom `SCODE`s, see the section [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in ActiveX Controls: Advanced Topics.  
   
- 如需在程式碼的其他區域的報告例外狀況的詳細資訊，請參閱 [COleControl::FireError](../Topic/COleControl::FireError.md) 和區段在 ActiveX 控制項的 [在您的 ActiveX 控制項的處理錯誤](../mfc/mfc-activex-controls-advanced-topics.md) :進階主題。  
+ For more information on reporting exceptions in other areas of your code, see [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) and the section [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in ActiveX Controls: Advanced Topics.  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

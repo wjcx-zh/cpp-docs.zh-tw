@@ -1,39 +1,55 @@
 ---
-title: "MFC 程式庫版本的自動連結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "defaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自動連結 [C++]"
-  - "MFC 中的預設程式庫"
-  - "連結 [C++]"
-  - "連結 [C++], MFC 程式庫版本的自動"
-  - "連結 [C++], MFC 的"
-  - "MFC 程式庫, 連結至"
-  - "MFC 程式庫, 版本"
+title: Automatic Linking of MFC Library Version | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- defaultlib
+dev_langs:
+- C++
+helpviewer_keywords:
+- defaultlib in MFC
+- automatic links [MFC]
+- MFC libraries, linking to
+- linking [MFC], automatic of MFC library version
+- linking [MFC]
+- linking [MFC], of MFC
+- MFC libraries, versions
 ms.assetid: 02af4a20-2034-4fce-b200-c2202c3c8311
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC 程式庫版本的自動連結
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c256d88f7873f5e29858b3908329f0c9e8fbdb12
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在 MFC 版本在 3.0 版之前的 \(在 Visual C\+\+ 2.0 版\) 前，您在程式庫輸入清單必須手動指定 MFC 程式庫的正確版本的連結器。  MFC 3.0 版和更新版本中，手動指定的 MFC 程式庫版本不再是必要的。  相反的，MFC 標頭檔會根據`#define`定義的值，例如 **\_DEBUG** 或**\_UNICODE**，自動地決定正確 MFC 程式庫版本。  MFC 標頭檔會加入 **\/defaultlib**指示詞，指示連結器連結特定的 MFC 程式庫版本。  
+---
+# <a name="automatic-linking-of-mfc-library-version"></a>Automatic Linking of MFC Library Version
+In versions of MFC before version 3.0 (before Visual C++ version 2.0), you had to manually specify the correct version of the MFC library in the input list of libraries for the linker. With MFC version 3.0 and later, it is no longer necessary to manually specify the version of the MFC library. Instead, the MFC header files automatically determine the correct version of the MFC library, based on values defined with `#define`, such as **_DEBUG** or **_UNICODE**. The MFC header files add **/defaultlib** directives instructing the linker to link in a specific version of the MFC library.  
   
- 例如，下列程式碼片段從 AFX.H 標頭檔在 MFC NAFXCWD.LIB 或 NAFXCW.LIB 版本指示連結器連結，根據您使用的是 MFC 偵錯版本：  
+ For example, the following code fragment from the AFX.H header file instructs the linker to link in either the NAFXCWD.LIB or NAFXCW.LIB version of MFC, depending on whether you are using the debug version of MFC:  
   
  `#ifndef _UNICODE`  
   
@@ -61,7 +77,9 @@ manager: "ghogen"
   
  `#endif`  
   
- MFC 標頭檔在所有必要程式庫中的連結，包括 MFC 程式庫、 Win32 程式庫、 OLE 程式庫、從範例建置的 OLE 程式庫、 ODBC 程式庫，依此類推。  Win32 程式庫包含 Kernel32.Lib、User32.Lib 和 GDI32.Lib。  
+ MFC header files also link in all required libraries, including MFC libraries, Win32 libraries, OLE libraries, OLE libraries built from samples, ODBC libraries, and so on. The Win32 libraries include Kernel32.Lib, User32.Lib, and GDI32.Lib.  
   
-## 請參閱  
- [MFC 程式庫版本](../mfc/mfc-library-versions.md)
+## <a name="see-also"></a>See Also  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)
+
+

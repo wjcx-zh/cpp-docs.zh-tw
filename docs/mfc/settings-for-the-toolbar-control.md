@@ -1,32 +1,51 @@
 ---
-title: "工具列控制項的設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl 類別, 設定"
-  - "工具列控制項 [MFC], 關於工具列控制項"
+title: Settings for the Toolbar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbar controls [MFC], about toolbar controls
+- CToolBarCtrl class [MFC], settings
 ms.assetid: 025ba920-b3ee-4d82-9367-e652cd7875b9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 工具列控制項的設定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6f4f5851db38fdef582d5aaec6961bee53f8c0f0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在工具列的按鈕可以顯示點陣圖，字串或兩者皆可。  根據預設，影像大小設定為的 16 x 15 像素。  所有按鈕寬度都相同，預設為 24 x 22 像素。  工具列的高度取決於按鈕的高度，因此，工具列的寬度也預設為與父視窗的工作區的寬度。  
+---
+# <a name="settings-for-the-toolbar-control"></a>Settings for the Toolbar Control
+The buttons on a toolbar can display a bitmap, a string, or both. By default, the image size is set to the dimensions of 16 by 15 pixels. All buttons are the same width, by default 24 by 22 pixels. A toolbar's height is determined by the height of the buttons, and a toolbar's width is the same as the width of the parent window's client area, also by default.  
   
- 工具列可以具有內建的自訂功能，包括一個系統定義的自訂對話方塊，讓使用者插入、刪除或重新排列工具列按鈕。  應用程式決定自訂功能是否對使用者可用，且控制使用者自訂工具列的範圍。  如需自訂工具列的詳細資訊，請參閱《 *MFC 參考》中的*[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 類別。  
+ A toolbar can have built-in customization features, including a system-defined customization dialog box, that allow the user to insert, delete, or rearrange toolbar buttons. An application determines whether the customization features are available to the user and controls the extent to which the user can customize the toolbar. For more information about customizing the toolbar, see class [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) in the *MFC Reference*.  
   
-## 請參閱  
- [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

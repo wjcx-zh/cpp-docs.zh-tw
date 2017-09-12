@@ -1,74 +1,93 @@
 ---
-title: "虛擬清單控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "快取, 虛擬清單控制項目資料"
-  - "清單控制項, 清單檢視"
-  - "清單控制項, 虛擬"
-  - "虛擬清單控制項"
+title: Virtual List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- cache, virtual list control item data
+- list controls [MFC], virtual
+- list controls [MFC], List view
+- virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 虛擬清單控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c16450ee3a8529513badb118400a32a705bd0d6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-虛擬清單控制項是具有 **LVS\_OWNERDATA** 的樣式清單檢視控制項。  此模式可讓控制項支援項目計數由 `DWORD` \(預設項目計數只延伸到 `int`\)。  不過，這個樣式提供最大的好處是能夠隨時只有資料項目的子集在記憶體中。  這可讓虛擬清單檢視控制項本身為與資訊大型資料庫的使用，存取特定資料的方法已經準備就緒。  
+---
+# <a name="virtual-list-controls"></a>Virtual List Controls
+A virtual list control is a list view control that has the **LVS_OWNERDATA** style. This style enables the control to support an item count up to a `DWORD` (the default item count only extends to an `int`). However, the biggest advantage provided by this style is the ability to only have a subset of data items in memory at any one time. This allows the virtual list view control to lend itself for use with large databases of information, where specific methods of accessing data are already in place.  
   
 > [!NOTE]
->  除了提供 `CListCtrl`中的虛擬清單功能之外， MFC 也提供了 [CListView](../mfc/reference/clistview-class.md) 類別的相同功能。  
+>  In addition to providing virtual list functionality in `CListCtrl`, MFC also provides the same functionality in the [CListView](../mfc/reference/clistview-class.md) class.  
   
- 您必須知道，在開發虛擬清單控制項時的一些相容性問題。  如需詳細資訊，請參閱相容性發行清單檢視控制項主題的部分以 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]為單位。  
+ There are some compatibility issues you should be aware of when developing virtual list controls. For more information, see the Compatibility Issues section of the List-View Controls topic in the Windows SDK.  
   
-## 處理 LVN\_GETDISPINFO 通知  
- 虛擬清單控制項維護很少項目資訊。  除了項目選取範圍和焦點資訊，所有項目控制識別項的擁有者處理。  資訊由架構要求傳遞 **LVN\_GETDISPINFO** 通知訊息。  若要提供所要求的資訊，虛擬清單控制項的擁有人 \(或控制項\) 必須處理這個告知。  這可以輕鬆地使用屬性視窗 \(請參閱 [此函式之對應訊息](../mfc/reference/mapping-messages-to-functions.md)\)。  產生的程式碼應該看起來會像下列範例 \(其中 `CMyDialog` 擁有虛擬清單控制項物件，對話處理告知\):  
+## <a name="handling-the-lvngetdispinfo-notification"></a>Handling the LVN_GETDISPINFO Notification  
+ Virtual list controls maintain very little item information. Except for the item selection and focus information, all item information is managed by the owner of the control. Information is requested by the framework via a **LVN_GETDISPINFO** notification message. To provide the requested information, the owner of the virtual list control (or the control itself) must handle this notification. This can easily be done using the Properties window (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)). The resultant code should look something like the following example (where `CMyDialog` owns the virtual list control object and the dialog is handling the notification):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#23](../mfc/codesnippet/CPP/virtual-list-controls_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#23](../mfc/codesnippet/cpp/virtual-list-controls_1.cpp)]  
   
- 在 **LVN\_GETDISPINFO** 通知訊息的處理常式，您必須檢查何種資訊要求。  可能的值為：  
+ In the handler for the **LVN_GETDISPINFO** notification message, you must check to see what type of information is being requested. The possible values are:  
   
--   必須填入`LVIF_TEXT` `pszText` 成員。  
+-   `LVIF_TEXT` The `pszText` member must be filled in.  
   
--   必須填入`LVIF_IMAGE` `iImage` 成員。  
+-   `LVIF_IMAGE` The `iImage` member must be filled in.  
   
--   必須填入**LVIF\_INDENT** 這個 *iIndent* 成員。  
+-   **LVIF_INDENT** The *iIndent* member must be filled in.  
   
--   必須填入`LVIF_PARAM` *lParam* 成員。\(子項目的不存在\)  
+-   `LVIF_PARAM` The *lParam* member must be filled in. (Not present for sub-items.)  
   
--   必須填入`LVIF_STATE` *狀態* 成員。  
+-   `LVIF_STATE` The *state* member must be filled in.  
   
- 您應該就提供任何資訊要求回到上一個框架。  
+ You should then supply whatever information is requested back to the framework.  
   
- 下列範例 \(從通知處理常式的主體清單控制項的物件\) 會提供項目的文字緩衝區和影像的資訊示範了可能的方法:  
+ The following example (taken from the body of the notification handler for the list control object) demonstrates one possible method by supplying information for the text buffers and image of an item:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#24](../mfc/codesnippet/CPP/virtual-list-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#24](../mfc/codesnippet/cpp/virtual-list-controls_2.cpp)]  
   
-## 快取和虛擬清單控制項  
- 由於這種清單控制項供大型資料集使用，建議您快取要求項目資料改善擷取效能。  這個架構提供一個快取暗示的機制在最佳化快取的協助透過傳送 **LVN\_ODCACHEHINT** 通知訊息。  
+## <a name="caching-and-virtual-list-controls"></a>Caching and Virtual List Controls  
+ Because this type of list control is intended for large data sets, it is recommended that you cache requested item data to improve retrieval performance. The framework provides a cache-hinting mechanism to assist in optimizing the cache by sending an **LVN_ODCACHEHINT** notification message.  
   
- 下列範例會更新其範圍快取傳遞至處理函式。  
+ The following example updates the cache with the range passed to the handler function.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/CPP/virtual-list-controls_3.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#25](../mfc/codesnippet/cpp/virtual-list-controls_3.cpp)]  
   
- 如需準備和維護快取的詳細資訊，請參閱清單檢視控制項主題的快取區管理服務以 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]為單位\)。  
+ For more information on preparing and maintaining a cache, see the Cache Management section of the List-View Controls topic in the Windows SDK.  
   
-## 尋找特定項目  
- **LVN\_ODFINDITEM** 通知訊息由虛擬清單控制項傳送特定清單控制項項目。  當清單檢視控制項接收快速鍵存取時會傳送通知訊息，或在收到 **LVM\_FINDITEM** 訊息時。  以 **LVFINDINFO** 結構的形式，搜尋資訊傳送，是 **NMLVFINDITEM** 結構的成員。  藉由覆寫您的清單控制項物件的 `OnChildNotify` 函式來處理這個訊息，以及內部處理常式的主體，檢查 **LVN\_ODFINDITEM** 訊息。  如果找到，請執行適當的動作。  
+## <a name="finding-specific-items"></a>Finding Specific Items  
+ The **LVN_ODFINDITEM** notification message is sent by the virtual list control when a particular list control item needs to be found. The notification message is sent when the list view control receives quick key access or when it receives an **LVM_FINDITEM** message. Search information is sent in the form of an **LVFINDINFO** structure, which is a member of the **NMLVFINDITEM** structure. Handle this message by overriding the `OnChildNotify` function of your list control object and inside the body of the handler, check for the **LVN_ODFINDITEM** message. If found, perform the appropriate action.  
   
- 您應該準備搜尋符合清單檢視控制項所提供的資訊的項目。  您應該傳回項目的索引，如果成功則為 \-1，如果找不到相符的項目。  
+ You should be prepared to search for an item that matches the information given by the list view control. You should return the index of the item if successful, or -1 if no matching item is found.  
   
-## 請參閱  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

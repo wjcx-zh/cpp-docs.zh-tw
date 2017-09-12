@@ -1,87 +1,106 @@
 ---
-title: "指定功能層級 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject 類別, 將功能加入至衍生類別"
-  - "動態建立支援"
-  - "層級 [C++]"
-  - "層級 [C++], CObject 中的功能"
-  - "執行階段 [C++], 類別資訊"
-  - "執行階段類別, 資訊支援"
-  - "序列化 [C++], Cobject"
+title: Specifying Levels of Functionality | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CObject class [MFC], adding functionality to derived classes
+- runtime [MFC], class information
+- serialization [MFC], Cobject
+- dynamic creation support
+- levels [MFC], functionality in CObject
+- run-time class [MFC], information support
+- levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 指定功能層級
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3caa6b3fb3ae939c11646d54282edeb25a8740ac
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明如何加入下列層級功能加入至 [CObject](../mfc/reference/cobject-class.md)衍生類別:  
+---
+# <a name="specifying-levels-of-functionality"></a>Specifying Levels of Functionality
+This article describes how to add the following levels of functionality to your [CObject](../mfc/reference/cobject-class.md)-derived class:  
   
--   [執行階段類別資訊](#_core_to_add_run.2d.time_class_information)  
+-   [Run-time class information](#_core_to_add_run.2d.time_class_information)  
   
--   [動態建立支援](#_core_to_add_dynamic_creation_support)  
+-   [Dynamic creation support](#_core_to_add_dynamic_creation_support)  
   
--   [序列化支援。](#_core_to_add_serialization_support)  
+-   [Serialization support](#_core_to_add_serialization_support)  
   
- 如需 `CObject` 功能的一般說明，請參閱本文件的 [從衍生類別 CObject](../mfc/deriving-a-class-from-cobject.md)。  
+ For a general description of `CObject` functionality, see the article [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md).  
   
-#### 將執行階段類別資訊  
+-   [Run-time class information](#_core_to_add_run.2d.time_class_information)  
+#### <a name="_core_to_add_run.2d.time_class_information"></a> To add run-time class information  
   
-1.  從 `CObject`衍生您自己的類別，如 [從衍生類別 CObject](../mfc/deriving-a-class-from-cobject.md) 文件中所述。  
+1.  Derive your class from `CObject`, as described in the [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md) article.  
   
-2.  使用 `DECLARE_DYNAMIC` 巨集在類別宣告，如下所示:  
+2.  Use the `DECLARE_DYNAMIC` macro in your class declaration, as shown here:  
   
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/CPP/specifying-levels-of-functionality_1.h)]  
+     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]  
   
-3.  使用 `IMPLEMENT_DYNAMIC` 巨集在實作檔 \(.CPP\) 的類別。  這個巨集以做為引數類別和其基底類別的名稱，如下所示:  
+3.  Use the `IMPLEMENT_DYNAMIC` macro in the implementation file (.CPP) of your class. This macro takes as arguments the name of the class and its base class, as follows:  
   
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/CPP/specifying-levels-of-functionality_2.cpp)]  
+     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]  
   
 > [!NOTE]
->  永遠在實作檔 \(.CPP\) 的放置 `IMPLEMENT_DYNAMIC` 您的類別中。  應該一次只能在編譯期間評估 `IMPLEMENT_DYNAMIC` 巨集也不應該使用介面檔 \(。在多個檔案可能會包含的 H\)。  
+>  Always put `IMPLEMENT_DYNAMIC` in the implementation file (.CPP) for your class. The `IMPLEMENT_DYNAMIC` macro should be evaluated only once during a compilation and therefore should not be used in an interface file (.H) that could potentially be included in more than one file.  
   
-#### 將動態建立支援  
+#### <a name="_core_to_add_dynamic_creation_support"></a> To add dynamic creation support  
   
-1.  從 `CObject` 衍生您的類別。  
+1.  Derive your class from `CObject`.  
   
-2.  使用 `DECLARE_DYNCREATE` 巨集在類別宣告。  
+2.  Use the `DECLARE_DYNCREATE` macro in the class declaration.  
   
-3.  定義建構函式是不接收任何引數的建構函式\(預設建構函式\)。  
+3.  Define a constructor with no arguments (a default constructor).  
   
-4.  使用 `IMPLEMENT_DYNCREATE` 類別實作檔中的巨集。  
+4.  Use the `IMPLEMENT_DYNCREATE` macro in the class implementation file.  
   
-#### 若要加入序列化支援  
+#### <a name="_core_to_add_serialization_support"></a> To add serialization support  
   
-1.  從 `CObject` 衍生您的類別。  
+1.  Derive your class from `CObject`.  
   
-2.  覆寫 `Serialize` 成員函式。  
+2.  Override the `Serialize` member function.  
   
     > [!NOTE]
-    >  也就是說，如果您直接呼叫 `Serialize` 您不想將多型指標序列化物件，略過步驟 3 到步驟 5. 步驟。  
+    >  If you call `Serialize` directly, that is, you do not want to serialize the object through a polymorphic pointer, omit steps 3 through 5.  
   
-3.  使用 `DECLARE_SERIAL` 巨集在類別宣告。  
+3.  Use the `DECLARE_SERIAL` macro in the class declaration.  
   
-4.  定義建構函式是不接收任何引數的建構函式\(預設建構函式\)。  
+4.  Define a constructor with no arguments (a default constructor).  
   
-5.  使用 `IMPLEMENT_SERIAL` 類別實作檔中的巨集。  
+5.  Use the `IMPLEMENT_SERIAL` macro in the class implementation file.  
   
 > [!NOTE]
->  對類別 \(稱為物件的「多型指標」按它 A\) 或是從 A 的任何衍生類別物件 \(假設， B\)。  透過多型指標要序列化，架構必須判斷序列化 \(b\) 物件的執行階段類別，，因為它可以是從某些基底類別衍生的任何類別物件 \(\)。  
+>  A "polymorphic pointer" points to an object of a class (call it A) or to an object of any class derived from A (say, B). To serialize through a polymorphic pointer, the framework must determine the run-time class of the object it is serializing (B), since it might be an object of any class derived from some base class (A).  
   
- 如需更詳細的資訊是關於如何啟用序列化，請從 `CObject`衍生您自己的類別，請參閱文件 [MFC 中的檔案](../mfc/files-in-mfc.md) 和 [序列化](../mfc/serialization-in-mfc.md)。  
+ For more details on how to enable serialization when you derive your class from `CObject`, see the articles [Files in MFC](../mfc/files-in-mfc.md) and [Serialization](../mfc/serialization-in-mfc.md).  
   
-## 請參閱  
- [從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)
+## <a name="see-also"></a>See Also  
+ [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md)
+

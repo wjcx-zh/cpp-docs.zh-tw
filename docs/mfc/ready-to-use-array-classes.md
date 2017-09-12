@@ -1,53 +1,72 @@
 ---
-title: "立即可用的陣列類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 類別"
-  - "類別 [C++], 陣列"
-  - "集合類別, 陣列"
+title: Ready-to-Use Array Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.array
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [MFC], classes
+- collection classes [MFC], arrays
+- classes [MFC], array
 ms.assetid: fdeabf95-2fe7-43a8-8f88-d954133caf52
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 立即可用的陣列類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c4df6fab7c108a07bd11d33723978a8721f51de5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-下列類別能立即陣列類別。  
+---
+# <a name="ready-to-use-array-classes"></a>Ready-to-Use Array Classes
+The following classes are ready-to-use array classes.  
   
  [CByteArray](../mfc/reference/cbytearray-class.md)  
- 在陣列中儲存型別 **BYTE** 的項目。  
+ Stores elements of type **BYTE** in an array.  
   
  [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- 在陣列中儲存型別 `DWORD` 的項目。  
+ Stores elements of type `DWORD` in an array.  
   
  [CObArray](../mfc/reference/cobarray-class.md)  
- 存放區指標類別 `CObject` 物件或對類別物件從陣列中的衍生自 `CObject` 。  
+ Stores pointers to objects of class `CObject` or to objects of classes derived from `CObject` in an array.  
   
  [CPtrArray](../mfc/reference/cptrarray-class.md)  
- 儲存 `void` 的指標 \(泛型指標\) 陣列中。  
+ Stores pointers to `void` (generic pointers) in an array.  
   
  [CUIntArray](../mfc/reference/cuintarray-class.md)  
- 在陣列中儲存型別 **UINT** 的項目。  
+ Stores elements of type **UINT** in an array.  
   
  [CWordArray](../mfc/reference/cwordarray-class.md)  
- 在陣列中儲存型別 **WORD** 的項目。  
+ Stores elements of type **WORD** in an array.  
   
  [CStringArray](../mfc/reference/cstringarray-class.md)  
- 陣列中的 `CString` 物件。  
+ Stores `CString` objects in an array.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

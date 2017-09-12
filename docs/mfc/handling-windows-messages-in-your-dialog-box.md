@@ -1,33 +1,51 @@
 ---
-title: "處理對話方塊的 Windows 訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "訊息處理 [C++], 在對話方塊中"
-  - "MFC 對話方塊, Windows 訊息"
-  - "Windows 訊息 [C++], 處理"
+title: Handling Windows Messages in Your Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], Windows messages
+- Windows messages [MFC], handling
+- message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 處理對話方塊的 Windows 訊息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0335c83e91b7e40f30c03bab4d38672db526b880
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-對話方塊為視窗，在您提供適當的處理函式時，能處理 Windows 訊息。  當您以加入類別精靈時的對話方塊類別，精靈將空白訊息對應到類別。  使用屬性視窗將您希望類別處理的所有 Windows 訊息或命令。  
+---
+# <a name="handling-windows-messages-in-your-dialog-box"></a>Handling Windows Messages in Your Dialog Box
+Dialog boxes are windows, so they can handle Windows messages if you supply the appropriate handler functions. When you create your dialog class with the Add Class Wizard, the wizard adds an empty message map to the class. Use the Properties window to map any Windows messages or commands you want your class to handle.  
   
- 請參閱 [對您的對話方塊類別的映像的 Windows 訊息](../mfc/mapping-windows-messages-to-your-class.md) 以取得詳細資訊。  
+ See [Mapping Windows Messages to Your Dialog Class](../mfc/mapping-windows-messages-to-your-class.md) for more information.  
   
-## 請參閱  
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

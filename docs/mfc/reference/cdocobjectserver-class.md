@@ -1,5 +1,5 @@
 ---
-title: "CDocObjectServer 類別 |Microsoft 文件"
+title: CDocObjectServer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,12 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- document object server
-- CDocObjectServer class
-- servers [C++], ActiveX documents
-- docobject server
-- servers [C++], doc objects
-- ActiveX documents [C++], document server
+- CDocObjectServer [MFC], CDocObjectServer
+- CDocObjectServer [MFC], ActivateDocObject
+- CDocObjectServer [MFC], OnActivateView
+- CDocObjectServer [MFC], OnApplyViewState
+- CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
 caps.latest.revision: 23
 author: mikeblome
@@ -44,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 75fb0ba49d105a673e862ed3044e85ac9e990e9c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 90a2db624b814069b2f56edff2033b39f3901256
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdocobjectserver-class"></a>CDocObjectServer 類別
-實作可讓一般 `COleDocument` 伺服器融入完整 DocObject 伺服器所需的其他 OLE 介面： `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`和 `IPrint`。  
+# <a name="cdocobjectserver-class"></a>CDocObjectServer Class
+Implements the additional OLE interfaces needed to make a normal `COleDocument` server into a full DocObject server: `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, and `IPrint`.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDocObjectServer : public CCmdTarget  
@@ -62,63 +61,63 @@ class CDocObjectServer : public CCmdTarget
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServer::CDocObjectServer](#cdocobjectserver)|建構 `CDocObjectServer` 物件。|  
+|[CDocObjectServer::CDocObjectServer](#cdocobjectserver)|Constructs a `CDocObjectServer` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServer::ActivateDocObject](#activatedocobject)|啟用文件物件的伺服器，但不會顯示。|  
+|[CDocObjectServer::ActivateDocObject](#activatedocobject)|Activates the document object server, but does not show it.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDocObjectServer::OnActivateView](#onactivateview)|顯示 DocObject 檢視。|  
-|[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|還原 DocObject 檢視的狀態。|  
-|[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|儲存 DocObject 檢視狀態。|  
+|[CDocObjectServer::OnActivateView](#onactivateview)|Displays the DocObject view.|  
+|[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|Restores the state of the DocObject view.|  
+|[CDocObjectServer::OnSaveViewState](#onsaveviewstate)|Saves the state of the DocObject view.|  
   
-## <a name="remarks"></a>備註  
- `CDocObjectServer`衍生自`CCmdTarget`和與密切`COleServerDoc`公開的介面。  
+## <a name="remarks"></a>Remarks  
+ `CDocObjectServer` is derived from `CCmdTarget` and works closely with `COleServerDoc` to expose the interfaces.  
   
- DocObject 伺服器文件可以包含[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) DocObject 項目代表伺服器介面的物件。  
+ A DocObject server document can contain [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) objects, which represent the server interface to DocObject items.  
   
- 若要自訂 DocObject 伺服器，衍生您自己從`CDocObjectServer`並覆寫檢視安裝程式功能， [OnActivateView](#onactivateview)， [OnApplyViewState](#onapplyviewstate)，和[OnSaveViewState](#onsaveviewstate)。 您必須提供回應架構會呼叫您類別的新執行個體。  
+ To customize your DocObject server, derive your own class from `CDocObjectServer` and override its view setup functions, [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), and [OnSaveViewState](#onsaveviewstate). You will need to provide a new instance of your class in response to framework calls.  
   
- 如需 DocObjects 詳細資訊，請參閱[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)和[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 參考*。 另請參閱[網際網路第一個步驟︰ 主動式文件](../../mfc/active-documents-on-the-internet.md)和[主動式文件](../../mfc/active-documents-on-the-internet.md)。  
+ For further information on DocObjects, see [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) and [COleCmdUI](../../mfc/reference/colecmdui-class.md) in the *MFC Reference*. Also see [Internet First Steps: Active Documents](../../mfc/active-documents-on-the-internet.md) and [Active Documents](../../mfc/active-documents-on-the-internet.md).  
   
- 另請參閱下列知識庫文件︰  
+ Also see the following Knowledge Base article:  
   
--   Q247382: PRB︰ 在 ActiveX 文件伺服器控制項的工具提示隱藏 ActiveX 文件容器  
+-   Q247382 : PRB: ToolTips for Controls in ActiveX Document Server Are Hidden by the ActiveX Document Container  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `CDocObjectServer`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdocob.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdocob.h  
   
-##  <a name="activatedocobject"></a>CDocObjectServer::ActivateDocObject  
- 呼叫此函式文件物件伺服器啟動 （但不顯示）。  
+##  <a name="activatedocobject"></a>  CDocObjectServer::ActivateDocObject  
+ Call this function to activate (but not show) the document object server.  
   
 ```  
 void ActivateDocObject();
 ```  
   
-### <a name="remarks"></a>備註  
- `ActivateDocObject`呼叫`IOleDocumentSite`的**ActivateMe**方法，但不會顯示檢視，因為它會等候如何設定及顯示檢視中，指定的呼叫中的特定指示[CDocObjectServer::OnActivateView](#onactivateview)。  
+### <a name="remarks"></a>Remarks  
+ `ActivateDocObject` calls `IOleDocumentSite`'s **ActivateMe** method, but does not show the view because it waits for specific instructions on how to set up and display the view, given in the call to [CDocObjectServer::OnActivateView](#onactivateview).  
   
- 在一起，`ActivateDocObject`和`OnActivateView`啟動並顯示 DocObject 檢視。 DocObject 啟用不同於其他類型的 OLE 就地啟動。 DocObject 啟動會略過 顯示框線就地規劃和物件 （例如縮放控點） 的裝飾、 略過物件延伸功能，以及將捲軸，而不是外部矩形 （如同一般的就地啟用） 繪製這些檢視矩形內繪製。  
+ Together, `ActivateDocObject` and `OnActivateView` activate and display the DocObject view. DocObject activation differs from other kinds of OLE in-place activation. DocObject activation bypasses displaying in-place hatch borders and object adornments (such as sizing handles), ignores object extent functions, and draws scroll bars within the view rectangle as opposed to drawing them outside that rectangle (as in normal in-place activation).  
   
-##  <a name="cdocobjectserver"></a>CDocObjectServer::CDocObjectServer  
- 建構並初始化 `CDocObjectServer` 物件。  
+##  <a name="cdocobjectserver"></a>  CDocObjectServer::CDocObjectServer  
+ Constructs and initializes a `CDocObjectServer` object.  
   
 ```  
 explicit CDocObjectServer(
@@ -126,63 +125,63 @@ explicit CDocObjectServer(
     LPOLEDOCUMENTSITE pDocSite = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *pOwner*  
- 是 DocObject 伺服器的用戶端的用戶端站台文件指標。  
+ A pointer to the client site document that is the client for the DocObject server.  
   
  `pDocSite`  
- 指標`IOleDocumentSite`容器所實作的介面。  
+ A pointer to the `IOleDocumentSite` interface implemented by the container.  
   
-### <a name="remarks"></a>備註  
- 當 DocObject 作用時，用戶端站台 OLE 介面 ( `IOleDocumentSite`) 就是允許 DocObject 伺服器與用戶端 （容器） 進行通訊。 DocObject 伺服器啟動時，它會先檢查容器會實作`IOleDocumentSite`介面。 如果是這樣， [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver)稱為容器是否支援 DocObjects。 根據預設，`GetDocObjectServer`傳回**NULL**。 您必須覆寫`COleServerDoc::GetDocObjectServer`建構新`CDocObjectServer`物件或衍生您自己，與指標的物件`COleServerDoc`容器及其`IOleDocumentSite`介面做為引數的建構函式。  
+### <a name="remarks"></a>Remarks  
+ When a DocObject is active, the client site OLE interface ( `IOleDocumentSite`) is what allows the DocObject server to communicate with its client (the container). When a DocObject server is activated, it first checks that the container implements the `IOleDocumentSite` interface. If so, [COleServerDoc::GetDocObjectServer](../../mfc/reference/coleserverdoc-class.md#getdocobjectserver) is called to see if the container supports DocObjects. By default, `GetDocObjectServer` returns **NULL**. You must override `COleServerDoc::GetDocObjectServer` to construct a new `CDocObjectServer` object or a derived object of your own, with pointers to the `COleServerDoc` container and its `IOleDocumentSite` interface as arguments to the constructor.  
   
-##  <a name="onactivateview"></a>CDocObjectServer::OnActivateView  
- 呼叫此函式，以顯示 DocObject 檢視。  
+##  <a name="onactivateview"></a>  CDocObjectServer::OnActivateView  
+ Call this function to display the DocObject view.  
   
 ```  
 virtual HRESULT OnActivateView();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回錯誤或警告的值。 根據預設，會傳回**NOERROR**如果成功，否則**E_FAIL**。  
+### <a name="return-value"></a>Return Value  
+ Returns an error or warning value. By default, returns **NOERROR** if successful; otherwise, **E_FAIL**.  
   
-### <a name="remarks"></a>備註  
- 這個函式建立的就地框架視窗、 繪製捲軸檢視中的，設定伺服器以其容器的共用、 加入框架控制項、 設定作用中的物件，則最後就地框架視窗會顯示和設定焦點的功能表。  
+### <a name="remarks"></a>Remarks  
+ This function creates an in-place frame window, draws scrollbars within the view, sets up the menus the server shares with its container, adds frame controls, sets the active object, then finally shows the in-place frame window and sets the focus.  
   
-##  <a name="onapplyviewstate"></a>CDocObjectServer::OnApplyViewState  
- 覆寫這個函式來還原 DocObject 檢視狀態。  
+##  <a name="onapplyviewstate"></a>  CDocObjectServer::OnApplyViewState  
+ Override this function to restore the state of the DocObject view.  
   
 ```  
 virtual void OnApplyViewState(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ar`  
- A`CArchive`要序列化的檢視狀態的物件。  
+ A `CArchive` object from which to serialize the view state.  
   
-### <a name="remarks"></a>備註  
- 當它具現化之後的第一次顯示的檢視時，會呼叫此函數。 `OnApplyViewState`指示檢視，以根據中重新初始`CArchive`與先前儲存的物件[OnSaveViewState](#onsaveviewstate)。 檢視必須驗證中的資料`CArchive`物件，因為容器並不會嘗試解譯以任何方式的檢視狀態資料。  
+### <a name="remarks"></a>Remarks  
+ This function is called when the view is being displayed for the first time after its instantiation. `OnApplyViewState` instructs a view to reinitialize itself according to the data in the `CArchive` object previously saved with [OnSaveViewState](#onsaveviewstate). The view must validate the data in the `CArchive` object because the container does not attempt to interpret the view state data in any way.  
   
- 您可以使用`OnSaveViewState`來儲存您的檢視狀態的特定的持續性資訊。 如果您覆寫`OnSaveViewState`來儲存資訊，您會想要覆寫`OnApplyViewState`讀取該資訊，並將它套用至您的檢視，剛啟動時。  
+ You can use `OnSaveViewState` to store persistent information specific to your view's state. If you override `OnSaveViewState` to store information, you will want to override `OnApplyViewState` to read that information and apply it to your view when it is newly activated.  
   
-##  <a name="onsaveviewstate"></a>CDocObjectServer::OnSaveViewState  
- 覆寫此函式可儲存有關 DocObject 檢視額外的狀態資訊。  
+##  <a name="onsaveviewstate"></a>  CDocObjectServer::OnSaveViewState  
+ Override this function to save extra state information about your DocObject view.  
   
 ```  
 virtual void OnSaveViewState(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ar`  
- A`CArchive`檢視狀態序列化的物件。  
+ A `CArchive` object to which the view state is serialized.  
   
-### <a name="remarks"></a>備註  
- 您的狀態可能包含屬性，例如檢視類型、 比例、 插入和選取範圍點等。 通常，容器會呼叫此函式之前停用檢視。 儲存的狀態之後還原到[OnApplyViewState](#onapplyviewstate)。  
+### <a name="remarks"></a>Remarks  
+ Your state might include properties like the view type, zoom factor, insertion and selection point, and so on. The container typically calls this function before deactivating the view. The saved state can later be restored through [OnApplyViewState](#onapplyviewstate).  
   
- 您可以使用`OnSaveViewState`來儲存您的檢視狀態的特定的持續性資訊。 如果您覆寫`OnSaveViewState`來儲存資訊，您會想要覆寫`OnApplyViewState`讀取該資訊，並將它套用至您的檢視，剛啟動時。  
+ You can use `OnSaveViewState` to store persistent information specific to your view's state. If you override `OnSaveViewState` to store information, you will want to override `OnApplyViewState` to read that information and apply it to your view when it is newly activated.  
   
-## <a name="see-also"></a>另請參閱  
- [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CDocObjectServerItem 類別](../../mfc/reference/cdocobjectserveritem-class.md)
+## <a name="see-also"></a>See Also  
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocObjectServerItem Class](../../mfc/reference/cdocobjectserveritem-class.md)
 

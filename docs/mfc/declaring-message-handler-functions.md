@@ -1,36 +1,55 @@
 ---
-title: "宣告訊息處理函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "宣告函式, 訊息處理函式"
+title: Declaring Message Handler Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaring functions, message handler functions [MFC]
 ms.assetid: f8d3dbc1-4500-4f1e-a18d-7371edf36386
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 宣告訊息處理函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de47aa00d6e0c10f3f161c7bd6d01f56c8f0d471
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-某些規則和慣例管理您的訊息處理常式函式名稱。  這些取決於訊息的類別，如下列主題所述:  
+---
+# <a name="declaring-message-handler-functions"></a>Declaring Message Handler Functions
+Certain rules and conventions govern the names of your message-handler functions. These depend on the message category, as described in the following topics:  
   
--   [標準 Windows 訊息的處理常式。](../mfc/handlers-for-standard-windows-messages.md)  
+-   [Handlers for standard Windows messages](../mfc/handlers-for-standard-windows-messages.md)  
   
--   [命令和控制項通知的處理常式。](../mfc/handlers-for-commands-and-control-notifications.md)  
+-   [Handlers for commands and control notifications](../mfc/handlers-for-commands-and-control-notifications.md)  
   
--   [訊息的範圍的處理常式。](../mfc/handlers-for-message-map-ranges.md)  
+-   [Handlers for ranges of messages](../mfc/handlers-for-message-map-ranges.md)  
   
--   [處理反映訊息](../mfc/handling-reflected-messages.md)  
+-   [Handling reflected messages](../mfc/handling-reflected-messages.md)  
   
-## 請參閱  
- [訊息處理和對應](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

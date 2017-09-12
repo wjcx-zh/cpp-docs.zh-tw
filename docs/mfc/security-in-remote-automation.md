@@ -1,40 +1,59 @@
 ---
-title: "Remote Automation 中的安全性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "啟動物件"
-  - "AllowRemoteActivation"
-  - "Automation 物件, 安全性選項"
-  - "物件啟動"
-  - "Remote Automation, 安全性"
-  - "安全性 [MFC]"
-  - "安全性 [MFC], Remote Automation"
+title: Security in Remote Automation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- AllowRemoteActivation [MFC]
+- Remote Automation [MFC], security
+- activating objects [MFC]
+- security [MFC]
+- Automation objects [MFC], security options
+- object activation [MFC]
+- security [MFC], Remote Automation
 ms.assetid: 276b300d-c0b5-4bd8-8bf5-0270994b9cfa
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Remote Automation 中的安全性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7a6557470993da2a581a32fb29d26443e256c53c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-遠端 Automation 支援基本安全性層級允許伺服器應用程式撰寫者 \(或是它的系統管理員\) 的特定物件可能如何遠端啟動。  在特定系統的所有 Automation 物件可能將「禁止遠端啟動」或「允許遠端啟動」。  此外，通常會提供個別物件這類功能。  遠端 Automation 使用輸入每個物件的登錄設定， **AllowRemoteActivation**，判斷特定伺服器是否可以遠端啟動。  如果系統範圍設定為使用模式，則在登錄中的每個物件可能會指派這個機碼，因此每一個的個別狀態可能設定是或否適合。  
+---
+# <a name="security-in-remote-automation"></a>Security in Remote Automation
+Remote Automation supports a basic level of security to allow a server application writer (or, rather, its administrator) to specify how a specific object may be activated remotely. All automation objects on a given system may be globally set to "disallow remote activation" or to "allow remote activation". Additionally, and more often, individual objects may be given such capabilities. Remote Automation uses a key in each object's registry settings, **AllowRemoteActivation**, to determine whether a given server may be activated remotely. If the systemwide settings use this mode, then each object in the registry may be assigned this key, and the individual status of each one may be set to "yes" or "no" as appropriate.  
   
- 如果伺服器系統執行 Windows NT 或 Windows 2000，則安全性替代的表單允許。  在這個案例中， Remote Automation 使用 NT 存取控制清單 \(ACL\) \(ACL\) 指定使用者的哪些使用者或群組或群組可能遠端啟動給定的伺服器。  
+ If the server system is running Windows NT or Windows 2000, then an alternative form of security is allowed. In this case, Remote Automation uses the NT access control list (ACL) to specify which users or group or groups of users may remotely activate a given server.  
   
- 請注意安全性選項會套用至整個物件;設定特定介面的屬性，或個別的屬性或方法在該物件是不可能的。  
+ Note that the security options apply to the whole object; it is not possible to set attributes of a specific interface, or of individual properties or methods on that object.  
   
- 所有安全性選項可能會透過遠端連接 Automation \(RAC\) 管理員設定。  
+ All security options may be set through the Remote Automation Connection (RAC) Manager.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Remote Automation](../mfc/remote-automation.md)
+
+

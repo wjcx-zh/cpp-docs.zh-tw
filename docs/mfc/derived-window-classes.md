@@ -1,71 +1,90 @@
 ---
-title: "衍生的視窗類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], 衍生"
-  - "CWnd 類別, 類別衍生自"
-  - "衍生類別, 視窗類別"
-  - "階層, 視窗類別"
-  - "視窗類別階層"
-  - "視窗類別, 衍生"
+title: Derived Window Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- window class hierarchy
+- hierarchies, window classes
+- classes [MFC], derived
+- CWnd class [MFC], classes derived from
+- derived classes [MFC], window classes
+- window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 衍生的視窗類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: adfe0c19c2a6797022dfa22cab3e15b084ed3514
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您可以直接從 [CWnd](../mfc/reference/cwnd-class.md) 建立視窗，或從 `CWnd` 衍生新的視窗類別。  這通常會是建立自訂視窗的方法。  不過，大部分用於架構計劃的視窗是從 `CWnd` 衍生的框架視窗類別其中之一所建立，其為 MFC 所提供。  
+---
+# <a name="derived-window-classes"></a>Derived Window Classes
+You can create windows directly from [CWnd](../mfc/reference/cwnd-class.md), or derive new window classes from `CWnd`. This is how you typically create your own custom windows. However, most windows used in a framework program are instead created from one of the `CWnd`-derived frame-window classes supplied by MFC.  
   
-## 框架視窗類別  
+## <a name="frame-window-classes"></a>Frame Window Classes  
  [CFrameWnd](../mfc/reference/cframewnd-class.md)  
- 用作 SDI 框架視窗，建構單一文件及其檢視。  框架視窗是應用程式的主框架視窗和目前文件的框架視窗。  
+ Used for SDI frame windows that frame a single document and its view. The frame window is both the main frame window for the application and the frame window for the current document.  
   
  [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)  
- 用作 MDI 應用程式的主框架視窗。  主框架視窗是所有 MDI 文件視窗的容器並共享其功能表列。  MDI 框架視窗是出現在桌面最上層視窗。  
+ Used as the main frame window for MDI applications. The main frame window is a container for all MDI document windows and shares its menu bar with them. An MDI frame window is a top-level window that appears on the desktop.  
   
  [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)  
- 用作開啟在 MDI 主框架視窗中的個別文件。  每個文件及其檢視由 MDI 主框架視窗內包含的 MDI 子框架視窗框架所建構。  MDI 子視窗的外觀很像一般的框架視窗，但它是包含在 MDI 框架視窗內而非桌面上。  然而， MDI 子視窗缺少功能表列，所以必須和包含功能表列的 MDI 框架視窗共享。  
+ Used for individual documents opened in an MDI main frame window. Each document and its view are framed by an MDI child frame window contained by the MDI main frame window. An MDI child window looks much like a typical frame window but is contained inside an MDI frame window instead of sitting on the desktop. However, the MDI child window lacks a menu bar of its own and must share the menu bar of the MDI frame window that contains it.  
   
- 如需詳細資訊，請參閱 [框架視窗](../mfc/frame-windows.md)。  
+ For more information, see [Frame Windows](../mfc/frame-windows.md).  
   
-## 從 CWnd 衍生的其他視窗類別  
- 除了框架視窗以外，其他幾個視窗的主要類別衍生自 `CWnd`：  
+## <a name="other-window-classes-derived-from-cwnd"></a>Other Window Classes Derived from CWnd  
+ In addition to frame windows, several other major categories of windows are derived from `CWnd`:  
   
- *檢視*  
- 檢視是使用 `CWnd`衍生類別 [CView](../mfc/reference/cview-class.md) \(或它的衍生類別\) 所建立。  檢視會附加到文件並做為文件和使用者之間的媒介。  檢視是一個子視窗 \(非 MDI 子系\) ，通常會填滿 SDI 框架視窗的工作區或 MDI 子框架視窗 \(或工具列和狀態列未涵蓋的工作區部分\)。  
+ *Views*  
+ Views are created using the `CWnd`-derived class [CView](../mfc/reference/cview-class.md) (or one of its derived classes). A view is attached to a document and acts as an intermediary between the document and the user. A view is a child window (not an MDI child) that typically fills the client area of an SDI frame window or an MDI child frame window (or that portion of the client area not covered by a toolbar and/or a status bar).  
   
- *對話方塊*  
- 對話方塊是使用 `CWnd` 衍生類別 [CDialog](../mfc/reference/cdialog-class.md) 來建立。  
+ *Dialog Boxes*  
+ Dialog boxes are created using the `CWnd`-derived class [CDialog](../mfc/reference/cdialog-class.md).  
   
- *表單*  
- 以對話方塊樣板資源為基礎的表格檢視（例如對話方塊）是使用類別 [CFormView](../mfc/reference/cformview-class.md)、 [CRecordView](../mfc/reference/crecordview-class.md) 或 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md) 建立。  
+ *Forms*  
+ Form views based on dialog-template resources, such as dialog boxes, are created using classes [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), or [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).  
   
- *控制項*  
- 控制項 \(例如按鈕、清單方塊和下拉式方塊\) 會使用衍生自 `CWnd` 的其他類別來建立。  請參閱 [控制項主題](../mfc/controls-mfc.md)。  
+ *Controls*  
+ Controls such as buttons, list boxes, and combo boxes are created using other classes derived from `CWnd`. See [Control Topics](../mfc/controls-mfc.md).  
   
- *控制列*  
- 包含控制項的子視窗。  範例包含工具列和狀態列。  請參閱 [控制列](../mfc/control-bars.md)。  
+ *Control Bars*  
+ Child windows that contain controls. Examples include toolbars and status bars. See [Control Bars](../mfc/control-bars.md).  
   
-## 視窗類別階層  
- 請參閱 *《 MFC 參考》中的*[MFC 階層架構圖表](../mfc/hierarchy-chart.md) 。  「檢視」的說明在 [文件\/檢視架構](../mfc/document-view-architecture.md)。  對話方塊的說明在 [對話方塊](../mfc/dialog-boxes.md)。  
+## <a name="window-class-hierarchy"></a>Window Class Hierarchy  
+ Refer to the [MFC hierarchy chart](../mfc/hierarchy-chart.md) in the *MFC Reference*. Views are explained in [Document/View Architecture](../mfc/document-view-architecture.md). Dialog boxes are explained in [Dialog Boxes](../mfc/dialog-boxes.md).  
   
-## 建置特殊目的的視窗類別  
- 除了類別庫所提供的視窗類別之外，您可能需要特殊目的的子視窗。  要建立這種視窗，請建立您的 [CWnd](../mfc/reference/cwnd-class.md) 衍生類別並將它設為框架或檢視的子視窗。  記住框架處理的範圍是文件框架視窗的工作區。  大部分的工作區由檢視處理，不過其他視窗（例如控制列或自訂視窗）可能與檢視共用空間。  要在框架視窗的工作區內調整子視窗的位置，您可能需要和 [CView](../mfc/reference/cview-class.md) 及 [CControlBar](../mfc/reference/ccontrolbar-class.md) 類別中的機制互動。  
+## <a name="creating-your-own-special-purpose-window-classes"></a>Creating Your Own Special-Purpose Window Classes  
+ In addition to the window classes provided by the class library, you may need special-purpose child windows. To create such a window, create your own [CWnd](../mfc/reference/cwnd-class.md)-derived class and make it a child window of a frame or view. Bear in mind that the framework manages the extent of the client area of a document frame window. Most of the client area is managed by a view, but other windows, such as control bars or your own custom windows, may share the space with the view. You may need to interact with the mechanisms in classes [CView](../mfc/reference/cview-class.md) and [CControlBar](../mfc/reference/ccontrolbar-class.md) for positioning child windows in a frame window's client area.  
   
- [建立視窗](../mfc/creating-windows.md) 討論建立視窗物件及其管理的視窗。  
+ [Creating Windows](../mfc/creating-windows.md) discusses creation of window objects and the windows they manage.  
   
-## 請參閱  
- [視窗物件](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

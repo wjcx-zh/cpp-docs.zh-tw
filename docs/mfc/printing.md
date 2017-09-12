@@ -1,68 +1,87 @@
 ---
-title: "列印 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件, 列印"
-  - "列印 [MFC]"
-  - "列印 [MFC], 從架構"
-  - "檢視類別, 列印作業"
+title: Printing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- view classes [MFC], print operations
+- documents [MFC], printing
+- printing [MFC], from framework
+- printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 列印
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 095ef2d763a44607c5d026b61301d46d7654dfe2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Microsoft Windows 實作與裝置無關的顯示。  在 MFC，這表示相同的繪製呼叫，在您的檢視類別的 `OnDraw` 成員函式，要在其中繪製負責在顯示和其他裝置，例如印表機。  如需預覽列印，目標裝置是一個模擬印表機輸出至顯示。  
+---
+# <a name="printing"></a>Printing
+Microsoft Windows implements device-independent display. In MFC, this means that the same drawing calls, in the `OnDraw` member function of your view class, are responsible for drawing on the display and on other devices, such as printers. For print preview, the target device is a simulated printer output to the display.  
   
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> 在列印的效果 Framework 的角色  
- 檢視類別具有下列責任:  
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> Your Role in Printing vs. the Framework's Role  
+ Your view class has the following responsibilities:  
   
--   告知架構多少頁文件。  
+-   Inform the framework how many pages are in the document.  
   
--   當要求列印指定的頁面，繪製文件的部分。  
+-   When asked to print a specified page, draw that portion of the document.  
   
--   配置和解除配置為列印或其他繪圖裝置介面 \(Graphics Device \(GDI\) 資源所需的所有字型。  
+-   Allocate and deallocate any fonts or other graphics device interface (GDI) resources needed for printing.  
   
--   如果需要，將必要的任何逸出程式碼在列印特定頁面之前，例如，變更以每頁為基礎的列印方向變更印表機方式。  
+-   If necessary, send any escape codes needed to change the printer mode before printing a given page, for example, to change the printing orientation on a per-page basis.  
   
- 框架的責任如下:  
+ The framework's responsibilities are as follows:  
   
--   顯示 **Print** 對話方塊。  
+-   Display the **Print** dialog box.  
   
--   建立印表機的 [CDC](../mfc/reference/cdc-class.md) 物件。  
+-   Create a [CDC](../mfc/reference/cdc-class.md) object for the printer.  
   
--   呼叫 `CDC` 物件的 [StartDoc](../Topic/CDC::StartDoc.md) 和 [EndDoc](../Topic/CDC::EndDoc.md) 成員函式。  
+-   Call the [StartDoc](../mfc/reference/cdc-class.md#startdoc) and [EndDoc](../mfc/reference/cdc-class.md#enddoc) member functions of the `CDC` object.  
   
--   重複呼叫 `CDC` 物件的 [StartPage](../Topic/CDC::StartPage.md) 成員函式，通知檢視類別應該列印頁，並呼叫 `CDC` 物件的 [EndPage](../Topic/CDC::EndPage.md) 成員函式。  
+-   Repeatedly call the [StartPage](../mfc/reference/cdc-class.md#startpage) member function of the `CDC` object, inform the view class which page should be printed, and call the [EndPage](../mfc/reference/cdc-class.md#endpage) member function of the `CDC` object.  
   
--   呼叫在檢視中的可覆寫的函式在適當的時間。  
+-   Call overridable functions in the view at the appropriate times.  
   
- 下列文件說明架構如何支援列印和預覽列印:  
+ The following articles discuss how the framework supports printing and print preview:  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [預設印表機如何完成](../mfc/how-default-printing-is-done.md)  
+-   [How default printing is done](../mfc/how-default-printing-is-done.md)  
   
--   [多頁文件](../mfc/multipage-documents.md)  
+-   [Multipage documents](../mfc/multipage-documents.md)  
   
--   [頁首和頁尾](../mfc/headers-and-footers.md)  
+-   [Headers and footers](../mfc/headers-and-footers.md)  
   
--   [配置列印的 GDI 資源](../mfc/allocating-gdi-resources.md)  
+-   [Allocating GDI resources for printing](../mfc/allocating-gdi-resources.md)  
   
--   [預覽列印](../mfc/print-preview-architecture.md)  
+-   [Print preview](../mfc/print-preview-architecture.md)  
   
-## 請參閱  
- [列印和預覽列印](../mfc/printing-and-print-preview.md)
+## <a name="see-also"></a>See Also  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)
+
+

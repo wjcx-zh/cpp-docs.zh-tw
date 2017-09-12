@@ -1,39 +1,57 @@
 ---
-title: "OnCmdMsg 處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OnCmdMsg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令傳送, OnCmdMsg 處理常式"
-  - "處理常式"
-  - "處理常式, OnCmdMessage"
-  - "訊息, 傳送"
-  - "OnCmdMessage 方法"
+title: OnCmdMsg Handler | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OnCmdMsg
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages, routing
+- handlers [MFC]
+- command routing [MFC], OnCmdMsg handler
+- handlers, OnCmdMessage [MFC]
+- OnCmdMessage method [MFC]
 ms.assetid: 8df07024-506f-47e7-bba9-1c3bc5ad8ab6
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# OnCmdMsg 處理常式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 697da53aec1f98e08605152889ac48009a4397c4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-若要完成命令路由，每個命令目標呼叫下命令目標的 `OnCmdMsg` 成員函式在序列中。  命令目標使用 `OnCmdMsg` 判斷它們是否可以處理命令和傳送至另一個命令目標，則無法處理它。  
+---
+# <a name="oncmdmsg-handler"></a>OnCmdMsg Handler
+To accomplish the routing of commands, each command target calls the `OnCmdMsg` member function of the next command target in the sequence. Command targets use `OnCmdMsg` to determine whether they can handle a command and to route it to another command target if they cannot handle it.  
   
- 每個命令目標類別可能會覆寫 `OnCmdMsg` 成員函式。  覆寫讓每個類別傳送命令到特定的目標。  如 [標準命令路由](../mfc/command-routing.md)表所示，框架視窗，例如，永遠路由命令對其目前子視窗或檢視，。  
+ Each command-target class may override the `OnCmdMsg` member function. The overrides let each class route commands to a particular next target. A frame window, for example, always routes commands to its current child window or view, as shown in the table [Standard Command Route](../mfc/command-routing.md).  
   
- `OnCmdMsg` 的預設 `CCmdTarget` 實作的每個命令訊息使用命令目標類別的訊息對應搜尋標準訊息被搜尋的收到—的處理函式相同。  如果找到符合的項目，便會呼叫處理常式。  訊息對應搜尋在 [.NET Framework 搜尋訊息對應](../mfc/how-the-framework-searches-message-maps.md)中說明。  
+ The default `CCmdTarget` implementation of `OnCmdMsg` uses the message map of the command-target class to search for a handler function for each command message it receives — in the same way that standard messages are searched. If it finds a match, it calls the handler. Message-map searching is explained in [How the Framework Searches Message Maps](../mfc/how-the-framework-searches-message-maps.md).  
   
-## 請參閱  
- [架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

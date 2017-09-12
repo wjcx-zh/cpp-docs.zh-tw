@@ -1,5 +1,5 @@
 ---
-title: "CD2DBitmapBrush 類別 |Microsoft 文件"
+title: CD2DBitmapBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,7 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DBitmapBrush class
+- CD2DBitmapBrush [MFC], CD2DBitmapBrush
+- CD2DBitmapBrush [MFC], Attach
+- CD2DBitmapBrush [MFC], Create
+- CD2DBitmapBrush [MFC], Destroy
+- CD2DBitmapBrush [MFC], Detach
+- CD2DBitmapBrush [MFC], Get
+- CD2DBitmapBrush [MFC], GetBitmap
+- CD2DBitmapBrush [MFC], GetExtendModeX
+- CD2DBitmapBrush [MFC], GetExtendModeY
+- CD2DBitmapBrush [MFC], GetInterpolationMode
+- CD2DBitmapBrush [MFC], SetBitmap
+- CD2DBitmapBrush [MFC], SetExtendModeX
+- CD2DBitmapBrush [MFC], SetExtendModeY
+- CD2DBitmapBrush [MFC], SetInterpolationMode
+- CD2DBitmapBrush [MFC], CommonInit
+- CD2DBitmapBrush [MFC], m_pBitmap
+- CD2DBitmapBrush [MFC], m_pBitmapBrush
+- CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
 caps.latest.revision: 17
 author: mikeblome
@@ -52,17 +69,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: a9ab15dcae8715b98cc9f723a710b64e83649bf9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 430dcb54636a07ecc9b9bb6315ea1beefac443ad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 類別
-ID2D1BitmapBrush 包裝函式。  
+# <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush Class
+A wrapper for ID2D1BitmapBrush.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DBitmapBrush : public CD2DBrush;  
@@ -70,52 +87,52 @@ class CD2DBitmapBrush : public CD2DBrush;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|多載。 建構 CD2DBitmapBrush 物件從檔案。|  
-|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|解構函式。 D2D 點陣圖 brush 物件終結時呼叫。|  
+|[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Overloaded. Constructs a CD2DBitmapBrush object from file.|  
+|[CD2DBitmapBrush::~CD2DBitmapBrush](#dtor)|The destructor. Called when a D2D bitmap brush object is being destroyed.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::Attach](#attach)|會附加至現有的資源物件的介面|  
-|[CD2DBitmapBrush::Create](#create)|建立 CD2DBitmapBrush。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
-|[CD2DBitmapBrush::Destroy](#destroy)|終結 CD2DBitmapBrush 物件。 (覆寫[CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy)。)|  
-|[CD2DBitmapBrush::Detach](#detach)|中斷連結物件中的資源介面|  
-|[CD2DBitmapBrush::Get](#get)|傳回 ID2D1BitmapBrush 介面|  
-|[CD2DBitmapBrush::GetBitmap](#getbitmap)|取得這個筆刷用來繪製的點陣圖來源|  
-|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|取得這筆刷水平並排超過其點陣圖之區域的方法|  
-|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|取得這筆刷垂直並排超過其點陣圖之區域的方法|  
-|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|取得筆刷點陣圖是縮放或旋轉時所使用的插補方法|  
-|[CD2DBitmapBrush::SetBitmap](#setbitmap)|指定這個筆刷用來繪製的點陣圖來源|  
-|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|指定如何筆刷水平並排超過其點陣圖的區域|  
-|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|指定如何筆刷垂直重疊顯示超過其點陣圖的區域|  
-|[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|指定使用縮放或旋轉筆刷點陣圖時的插補模式|  
+|[CD2DBitmapBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DBitmapBrush::Create](#create)|Creates a CD2DBitmapBrush. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DBitmapBrush::Destroy](#destroy)|Destroys a CD2DBitmapBrush object. (Overrides [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
+|[CD2DBitmapBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DBitmapBrush::Get](#get)|Returns ID2D1BitmapBrush interface|  
+|[CD2DBitmapBrush::GetBitmap](#getbitmap)|Gets the bitmap source that this brush uses to paint|  
+|[CD2DBitmapBrush::GetExtendModeX](#getextendmodex)|Gets the method by which the brush horizontally tiles those areas that extend past its bitmap|  
+|[CD2DBitmapBrush::GetExtendModeY](#getextendmodey)|Gets the method by which the brush vertically tiles those areas that extend past its bitmap|  
+|[CD2DBitmapBrush::GetInterpolationMode](#getinterpolationmode)|Gets the interpolation method used when the brush bitmap is scaled or rotated|  
+|[CD2DBitmapBrush::SetBitmap](#setbitmap)|Specifies the bitmap source that this brush uses to paint|  
+|[CD2DBitmapBrush::SetExtendModeX](#setextendmodex)|Specifies how the brush horizontally tiles those areas that extend past its bitmap|  
+|[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|Specifies how the brush vertically tiles those areas that extend past its bitmap|  
+|[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|Specifies the interpolation mode used when the brush bitmap is scaled or rotated|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::CommonInit](#commoninit)|初始化物件|  
+|[CD2DBitmapBrush::CommonInit](#commoninit)|Initializes the object|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|傳回 ID2D1BitmapBrush 介面|  
+|[CD2DBitmapBrush::operator ID2D1BitmapBrush*](#operator_id2d1bitmapbrush_star)|Returns ID2D1BitmapBrush interface|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|儲存 CD2DBitmap 物件的指標。|  
-|[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|儲存 ID2D1BitmapBrush 物件的指標。|  
-|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|點陣圖 筆刷屬性。|  
+|[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|Stores a pointer to a CD2DBitmap object.|  
+|[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|Stores a pointer to an ID2D1BitmapBrush object.|  
+|[CD2DBitmapBrush::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|Bitmap brush properties.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -124,29 +141,29 @@ class CD2DBitmapBrush : public CD2DBrush;
   
  `CD2DBitmapBrush`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="dtor"></a>CD2DBitmapBrush:: ~ CD2DBitmapBrush  
- 解構函式。 D2D 點陣圖 brush 物件終結時呼叫。  
+##  <a name="dtor"></a>  CD2DBitmapBrush::~CD2DBitmapBrush  
+ The destructor. Called when a D2D bitmap brush object is being destroyed.  
   
 ```  
 virtual ~CD2DBitmapBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBitmapBrush::Attach  
- 會附加至現有的資源物件的介面  
+##  <a name="attach"></a>  CD2DBitmapBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- 現有的資源介面。 不能是 NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush  
- 建構 CD2DBitmapBrush 物件。  
+##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
+ Constructs a CD2DBitmapBrush object.  
   
 ```  
 CD2DBitmapBrush(
@@ -175,198 +192,198 @@ CD2DBitmapBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 呈現目標指標。  
+ A pointer to the render target.  
   
  `pBitmapBrushProperties`  
- 將延伸模式和插補模式點陣圖的筆刷的指標。  
+ A pointer to the extend modes and the interpolation mode of a bitmap brush.  
   
  `pBrushProperties`  
- 指標的不透明度和筆刷轉換。  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- 指出由擁有者 (pParentTarget) 將會終結物件。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
  `uiResID`  
- 資源的資源 ID 編號。  
+ The resource ID number of the resource.  
   
  `lpszType`  
- 以 null 終止的字串，其中包含的資源類型的指標。  
+ Pointer to a null-terminated string that contains the resource type.  
   
  `sizeDest`  
- 目的地點陣圖的大小。  
+ Destination size of the bitmap.  
   
  `lpszImagePath`  
- 以 null 終止的字串，其中包含檔案名稱的指標。  
+ Pointer to a null-terminated string that contains the name of file.  
   
-##  <a name="commoninit"></a>CD2DBitmapBrush::CommonInit  
- 初始化物件  
+##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
+ Initializes the object  
   
 ```  
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pBitmapBrushProperties`  
- 指向點陣圖筆刷屬性。  
+ A pointer to the bitmap brush properties.  
   
-##  <a name="create"></a>CD2DBitmapBrush::Create  
- 建立 CD2DBitmapBrush。  
+##  <a name="create"></a>  CD2DBitmapBrush::Create  
+ Creates a CD2DBitmapBrush.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- 呈現目標指標。  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DBitmapBrush::Destroy  
- 終結 CD2DBitmapBrush 物件。  
+##  <a name="destroy"></a>  CD2DBitmapBrush::Destroy  
+ Destroys a CD2DBitmapBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBitmapBrush::Detach  
- 中斷連結物件中的資源介面  
+##  <a name="detach"></a>  CD2DBitmapBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1BitmapBrush* Detach();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 中斷連結的資源介面指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DBitmapBrush::Get  
- 傳回 ID2D1BitmapBrush 介面  
+##  <a name="get"></a>  CD2DBitmapBrush::Get  
+ Returns ID2D1BitmapBrush interface  
   
 ```  
 ID2D1BitmapBrush* Get();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 ID2D1BitmapBrush 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1BitmapBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="getbitmap"></a>CD2DBitmapBrush::GetBitmap  
- 取得這個筆刷用來繪製的點陣圖來源  
+##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap  
+ Gets the bitmap source that this brush uses to paint  
   
 ```  
 CD2DBitmap* GetBitmap();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 CD2DBitmap 物件的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an CD2DBitmap object or NULL if object is not initialized yet.  
   
-##  <a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX  
- 取得這筆刷水平並排超過其點陣圖之區域的方法  
+##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX  
+ Gets the method by which the brush horizontally tiles those areas that extend past its bitmap  
   
 ```  
 D2D1_EXTEND_MODE GetExtendModeX() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 值，指定如何筆刷水平並排超過其點陣圖的區域  
+### <a name="return-value"></a>Return Value  
+ A value that specifies how the brush horizontally tiles those areas that extend past its bitmap  
   
-##  <a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY  
- 取得這筆刷垂直並排超過其點陣圖之區域的方法  
+##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY  
+ Gets the method by which the brush vertically tiles those areas that extend past its bitmap  
   
 ```  
 D2D1_EXTEND_MODE GetExtendModeY() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 值，指定如何筆刷垂直重疊顯示超過其點陣圖的區域  
+### <a name="return-value"></a>Return Value  
+ A value that specifies how the brush vertically tiles those areas that extend past its bitmap  
   
-##  <a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode  
- 取得筆刷點陣圖是縮放或旋轉時所使用的插補方法  
+##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode  
+ Gets the interpolation method used when the brush bitmap is scaled or rotated  
   
 ```  
 D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 使用縮放或旋轉筆刷點陣圖時的插補方法  
+### <a name="return-value"></a>Return Value  
+ The interpolation method used when the brush bitmap is scaled or rotated  
   
-##  <a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap  
- 儲存 CD2DBitmap 物件的指標。  
+##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap  
+ Stores a pointer to a CD2DBitmap object.  
   
 ```  
 CD2DBitmap* m_pBitmap;  
 ```  
   
-##  <a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush  
- 儲存 ID2D1BitmapBrush 物件的指標。  
+##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush  
+ Stores a pointer to an ID2D1BitmapBrush object.  
   
 ```  
 ID2D1BitmapBrush* m_pBitmapBrush;  
 ```  
   
-##  <a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties  
- 點陣圖 筆刷屬性。  
+##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties  
+ Bitmap brush properties.  
   
 ```  
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operator ID2D1BitmapBrush *  
- 傳回 ID2D1BitmapBrush 介面  
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush*  
+ Returns ID2D1BitmapBrush interface  
   
 ```  
 operator ID2D1BitmapBrush*();
 ```   
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 ID2D1BitmapBrush 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1BitmapBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap  
- 指定這個筆刷用來繪製的點陣圖來源  
+##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap  
+ Specifies the bitmap source that this brush uses to paint  
   
 ```  
 void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pBitmap`  
- 使用筆刷的點陣圖來源  
+ The bitmap source used by the brush  
   
-##  <a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX  
- 指定如何筆刷水平並排超過其點陣圖的區域  
+##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
+ Specifies how the brush horizontally tiles those areas that extend past its bitmap  
   
 ```  
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `extendModeX`  
- 值，指定如何筆刷水平並排超過其點陣圖的區域  
+ A value that specifies how the brush horizontally tiles those areas that extend past its bitmap  
   
-##  <a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY  
- 指定如何筆刷垂直重疊顯示超過其點陣圖的區域  
+##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
+ Specifies how the brush vertically tiles those areas that extend past its bitmap  
   
 ```  
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `extendModeY`  
- 值，指定如何筆刷垂直重疊顯示超過其點陣圖的區域  
+ A value that specifies how the brush vertically tiles those areas that extend past its bitmap  
   
-##  <a name="setinterpolationmode"></a>CD2DBitmapBrush::SetInterpolationMode  
- 指定使用縮放或旋轉筆刷點陣圖時的插補模式  
+##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
+ Specifies the interpolation mode used when the brush bitmap is scaled or rotated  
   
 ```  
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `interpolationMode`  
- 筆刷點陣圖是縮放或旋轉時使用的插補模式  
+ The interpolation mode used when the brush bitmap is scaled or rotated  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

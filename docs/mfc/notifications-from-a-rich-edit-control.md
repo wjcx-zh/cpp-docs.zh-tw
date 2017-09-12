@@ -1,44 +1,63 @@
 ---
-title: "來自 Rich Edit 控制項的告知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl 類別, 告知"
-  - "訊息, 告知"
-  - "告知, 從 CRichEditCtrl"
-  - "Rich Edit 控制項, 告知"
+title: Notifications from a Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], notification [MFC]
+- CRichEditCtrl class [MFC], notifications
+- rich edit controls [MFC], notifications
+- notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 來自 Rich Edit 控制項的告知
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cd56c62172b1d98cc5f95aceaa3fa45a7e642d23
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-通知訊息回報影響 Rich Edit 控制項 \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) 的事件。  使用訊息反映，它們可以處理由父視窗，或者，由 Rich Edit 控制項。  Rich Edit 控制項支援所有通知訊息使用與編輯控制項以及許多其他部分。  您可以判斷哪些通知訊息的 Rich Edit 控制項將其事件遮罩傳送其父視窗」。  
+---
+# <a name="notifications-from-a-rich-edit-control"></a>Notifications from a Rich Edit Control
+Notification messages report events affecting a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). They can be processed by the parent window or, using message reflection, by the rich edit control itself. Rich edit controls support all of the notification messages used with edit controls as well as several additional ones. You can determine which notification messages a rich edit control sends its parent window by setting its "event mask."  
   
- 要設定的 Rich Edit 控制項的事件遮罩，請使用 [SetEventMask](../Topic/CRichEditCtrl::SetEventMask.md) 成員函式。  使用 [GetEventMask](../Topic/CRichEditCtrl::GetEventMask.md) 成員函式，擷取 Rich Edit 控制項的事件遮罩。  
+ To set the event mask for a rich edit control, use the [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask) member function. You can retrieve the current event mask for a rich edit control by using the [GetEventMask](../mfc/reference/cricheditctrl-class.md#geteventmask) member function.  
   
- 以下各節列出幾個特定告知及其用法:  
+ The following paragraphs list several specific notifications and their uses:  
   
--   處理 **EN\_MSGFILTER** 通知的**EN\_MSGFILTER** 讓類別， Rich Edit 控制項或其父視窗，篩選，所有鍵盤和滑鼠輸入到控制項。  處理常式防止鍵盤或滑鼠訊息處理或可以修改指定的 [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) 結構變更訊息。  
+-   **EN_MSGFILTER** Handling the **EN_MSGFILTER** notification lets a class, either the rich edit control or its parent window, filter all keyboard and mouse input to the control. The handler can prevent the keyboard or mouse message from being processed or can change the message by modifying the specified [MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936) structure.  
   
--   **EN\_PROTECTED** 控制代碼偵測使用者何時 **EN\_PROTECTED** 的通知訊息嘗試修改保護的文字。  若要將文字範圍為 protected，您可以設定保護的字元作用。  如需詳細資訊，請參閱 [在 Rich Edit 控制項的字元格式。](../mfc/character-formatting-in-rich-edit-controls.md)。  
+-   **EN_PROTECTED** Handle the **EN_PROTECTED** notification message to detect when the user attempts to modify protected text. To mark a range of text as protected, you can set the protected character effect. For more information, see [Character Formatting in Rich Edit Controls](../mfc/character-formatting-in-rich-edit-controls.md).  
   
--   **EN\_DROPFILES** 您可以讓使用者藉由處理 **EN\_DROPFILES** 通知訊息放置在 Rich Edit 控制項的檔案。  將指定的 [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) 結構包含置放之檔案的相關資訊。  
+-   **EN_DROPFILES** You can enable the user to drop files in a rich edit control by processing the **EN_DROPFILES** notification message. The specified [ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895) structure contains information about the files being dropped.  
   
--   **EN\_SELCHANGE** 應用程式無法偵測到目前的選取範圍時會處理 **EN\_SELCHANGE** 通知訊息變更。  通知訊息指定包含新選取範圍的 [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) 結構資訊。  
+-   **EN_SELCHANGE** An application can detect when the current selection changes by processing the **EN_SELCHANGE** notification message. The notification message specifies a [SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952) structure containing information about the new selection.  
   
-## 請參閱  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

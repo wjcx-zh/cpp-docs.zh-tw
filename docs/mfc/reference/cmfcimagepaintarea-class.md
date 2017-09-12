@@ -1,5 +1,5 @@
 ---
-title: "CMFCImagePaintArea 類別 |Microsoft 文件"
+title: CMFCImagePaintArea Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCImagePaintArea class
+- CMFCImagePaintArea [MFC], CMFCImagePaintArea
+- CMFCImagePaintArea [MFC], GetMode
+- CMFCImagePaintArea [MFC], SetBitmap
+- CMFCImagePaintArea [MFC], SetColor
+- CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
 caps.latest.revision: 21
 author: mikeblome
@@ -39,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c16fd9605474e57f167646ddc9bc91d235d1cba5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f0b8d7998a7756ab11cb69a9e9b7e159063bcd79
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 類別
-提供您用來修改映像中的影像編輯器對話方塊的圖片區域。  
+# <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea Class
+Provides the picture area that you use to modify an image in an image editor dialog box.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCImagePaintArea : public CButton  
@@ -57,35 +61,35 @@ class CMFCImagePaintArea : public CButton
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|建構 `CMFCImagePaintArea` 物件。|  
-|`CMFCImagePaintArea::~CMFCImagePaintArea`|解構函式。|  
+|Name|Description|  
+|[CMFCImagePaintArea::CMFCImagePaintArea](#cmfcimagepaintarea)|Constructs a `CMFCImagePaintArea` object.|  
+|`CMFCImagePaintArea::~CMFCImagePaintArea`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名稱|描述|  
-|[CMFCImagePaintArea::GetMode](#getmode)|擷取目前的繪圖模式。|  
-|[CMFCImagePaintArea::SetBitmap](#setbitmap)|設定 [圖片] 區域的點陣圖影像。|  
-|[CMFCImagePaintArea::SetColor](#setcolor)|設定目前的繪圖色彩。|  
-|[CMFCImagePaintArea::SetMode](#setmode)|設定目前的繪圖模式。|  
+|Name|Description|  
+|[CMFCImagePaintArea::GetMode](#getmode)|Retrieves the current drawing mode.|  
+|[CMFCImagePaintArea::SetBitmap](#setbitmap)|Sets the bitmap image for the picture area.|  
+|[CMFCImagePaintArea::SetColor](#setcolor)|Sets the current drawing color.|  
+|[CMFCImagePaintArea::SetMode](#setmode)|Sets the current drawing mode.|  
   
-### <a name="remarks"></a>備註  
- 這個類別不是直接從您的程式碼使用。  
+### <a name="remarks"></a>Remarks  
+ This class is not intended to be used directly from your code.  
   
- 架構會使用這個類別在影像編輯器對話方塊中顯示圖片區域。 如需 [影像編輯器] 對話方塊的詳細資訊，請參閱[CMFCImageEditorDialog 類別](../../mfc/reference/cmfcimageeditordialog-class.md)。  
+ The framework uses this class to display the picture area in an image editor dialog box. For more information about the image editor dialog box, see [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
-## <a name="example"></a>範例  
- 下列範例示範如何建構的物件`CMFCImagePaintArea`類別中，設定目前的繪圖色彩，請設定目前的繪製模式，並設定點陣圖影像的圖片區域。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCImagePaintArea` class, set the current drawing color, set the current drawing mode, and set the bitmap image for the picture area.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&37;](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -96,85 +100,85 @@ class CMFCImagePaintArea : public CButton
   
  [CMFCImagePaintArea](../../mfc/reference/cmfcimagepaintarea-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afximagepaintarea.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afximagepaintarea.h  
   
-##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
- 建構 `CMFCImagePaintArea` 物件。  
+##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea  
+ Constructs a `CMFCImagePaintArea` object.  
   
 ```  
 CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `pParentDlg`|影像編輯器的父系對話方塊指標。|  
+|Parameter|Description|  
+|[in] `pParentDlg`|A pointer to the dialog box that is the parent of the image editor.|  
   
-##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
- 擷取目前的繪圖模式。  
+##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
+ Retrieves the current drawing mode.  
   
 ```  
 IMAGE_EDIT_MODE GetMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，指定目前的繪圖模式。  
+### <a name="return-value"></a>Return Value  
+ An [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) value that specifies the current drawing mode.  
   
-##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
- 設定 [圖片] 區域的點陣圖影像。  
+##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap  
+ Sets the bitmap image for the picture area.  
   
 ```  
 void SetBitmap(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `pBitmap`|若要顯示新的點陣圖影像。|  
+|Parameter|Description|  
+|[in] `pBitmap`|The new bitmap image to display.|  
   
-### <a name="remarks"></a>備註  
- 如果`pBitmap`是`NULL`，這個方法會將設定為可修改 [小畫家] 區域的大小設定為零。 否則，它將可修改 [小畫家] 區域的大小設定為提供的點陣圖影像的大小。  
+### <a name="remarks"></a>Remarks  
+ If `pBitmap` is `NULL`, this method sets the size of the modifiable paint area to zero. Otherwise, it sets the size of the modifiable paint area to the size of the provided bitmap image.  
   
-##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
- 設定目前的繪圖色彩。  
+##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
+ Sets the current drawing color.  
   
 ```  
 void SetColor(COLORREF color);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `color`|新繪圖的色彩。|  
+|Parameter|Description|  
+|[in] `color`|The new drawing color.|  
   
-### <a name="remarks"></a>備註  
- 當您從 [影像編輯器] 調色盤列中選取色彩或色彩選擇器，架構會呼叫這個方法來更新目前的繪圖色彩。 初始的繪圖色彩為黑色 (`COLORREF`值為 0)。  
+### <a name="remarks"></a>Remarks  
+ When you select a color from the image editor palette bar or color picker, the framework calls this method to update the current drawing color. The initial drawing color is black (a `COLORREF` value of 0).  
   
- 將繪圖的色彩以外的所有繪圖模式時，是由影像編輯器對話方塊`IMAGE_EDIT_MODE_COLOR`。 如需繪製模式的詳細資訊，請參閱[cmfcimagepaintarea:: Image_edit_mode 列舉](cmfcimagepaintarea-image-edit-mode-enumeration.md)。  
+ The drawing color is used by the image editor dialog box for all drawing modes except for `IMAGE_EDIT_MODE_COLOR`. For more information about drawing modes, see [CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration](cmfcimagepaintarea-image-edit-mode-enumeration.md).  
   
-##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
- 設定目前的繪圖模式。  
+##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
+ Sets the current drawing mode.  
   
 ```  
 void SetMode(IMAGE_EDIT_MODE mode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，指定目前的繪圖模式。|  
+|Parameter|Description|  
+|[in] `mode`|An [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) value that specifies the current drawing mode.|  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCImageEditorDialog 類別](../../mfc/reference/cmfcimageeditordialog-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
 

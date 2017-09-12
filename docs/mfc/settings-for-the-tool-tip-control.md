@@ -1,34 +1,53 @@
 ---
-title: "工具提示控制項的設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "工具提示 [C++], 啟用"
-  - "CToolTipCtrl 類別, 設定"
+title: Settings for the Tool Tip Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], activating
+- CToolTipCtrl class [MFC], settings
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 工具提示控制項的設定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1fe26a166503e772c0ed7241cbbdb937c65b4211
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您可以將工具提示控制項 \([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)\) 設為作用中或非作用中。 當您將它設為作用中時，當游標位於工具上時，會出現工具提示控制項。 當您將它設為非作用中時，即使游標位於工具上，也不會出現工具提示控制項。 呼叫 [Activate](../Topic/CToolTipCtrl::Activate.md) 啟用或停用工具提示控制項。  
+---
+# <a name="settings-for-the-tool-tip-control"></a>Settings for the Tool Tip Control
+You can set the tool tip control ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) to be either active or inactive. When you set it to be active, the tool tip control appears when the cursor is on a tool. When you set it to be inactive, the tool tip control does not appear, even if the cursor is on a tool. Call [Activate](../mfc/reference/ctooltipctrl-class.md#activate) to activate or deactivate a tool tip control.  
   
- 您可以使用 **TTS\_ALWAYSTIP** 樣式，設定作用中的工具提示，則無論工具提示控制項的主控視窗是否在作用中，當游標位於工具上時都會顯示工具提示。 如果不使用這個樣式，當工具的主控視窗在作用中時會出現工具提示控制項，但非作用中時則不會出現。  
+ You can set an active tool tip to display the tool tip when the cursor is on a tool, whether or not the tool tip control's owner window is active or inactive, by using the **TTS_ALWAYSTIP** style. If you do not use this style, the tool tip control appears when the tool's owner window is active, but not when it is inactive.  
   
- 大部分的應用程式包含對應至功能表命令之工具的工具列。 針對這類工具，工具提示控制項若能顯示與對應功能表項目相同的文字會很方便。 系統會自動從傳遞至工具提示控制項的所有字串移除 & 符號加速器字元，除非控制項有 **TTS\_NOPREFIX** 樣式。  
+ Most applications contain toolbars with tools that correspond to menu commands. For such tools, it is convenient for the tool tip control to display the same text as the corresponding menu item. The system automatically strips the ampersand (&) accelerator characters from all strings passed to a tool tip control, unless the control has the **TTS_NOPREFIX** style.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,67 +1,86 @@
 ---
-title: "一般 MFC 主題 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別庫, MFC"
-  - "MFC"
-  - "MFC, 應用程式開發"
+title: General MFC Topics | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC
+- class libraries [MFC], MFC
+- MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 一般 MFC 主題
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e6d3368bc32cfffd07dad512d95c58f2c81996e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本系列文章包含 Microsoft Foundation Class \(MFC\) 程式庫的技術詳細資料，並提供 MFC 架構以及其主要元件和子系統的概觀。  
+---
+# <a name="general-mfc-topics"></a>General MFC Topics
+This family of articles includes technical details about the Microsoft Foundation Class (MFC) Library and provides an overview of the MFC framework and its key components and subsystems.  
   
- MFC 程式庫是一種在 Microsoft Windows 中進行程式設計的應用程式架構。  以 C\+\+ 撰寫，MFC 提供許多處理視窗、功能表和對話方塊、實作基本輸入\/輸出、存放資料物件的集合等等功能所需的程式碼。  您需要做的就是將您的應用程式專屬程式碼加入至此架構。  有了 C\+\+ 類別的程式設計方法，延伸或覆寫 [MFC 架構](../mfc/framework-mfc.md) 所提供的基本功能變得相當容易。  
+ The Microsoft Foundation Class Library is an application framework for programming in Microsoft Windows. Written in C++, MFC provides much of the code necessary for managing windows, menus, and dialog boxes; performing basic input/output; storing collections of data objects; and so on. All you need to do is add your application-specific code into this framework. Given the nature of C++ class programming, it is easy to extend or override the basic functionality that [the MFC framework](../mfc/framework-mfc.md) supplies.  
   
- MFC 架構可讓您使用 Windows 專業程式設計人員所提供的功能建置功能強大的應用程式。  MFC 可縮短開發時間、使程式碼具有移植性、提供強大的支援，卻不會降低程式設計的自由和彈性，並可簡化「難撰寫的程式」使用者介面項目和技術，例如 Active 技術、OLE 和網際網路程式設計。  此外，透過簡化 MFC 資料存取物件 \(DAO\) 和開放式資料庫連接 \(Open Database Connectivity，ODBC\)，以及透過 Windows Sockets 進行網路程式設計，以簡化資料庫程式設計。  MFC 可讓您輕鬆地開發如屬性工作表 \(「索引標籤對話方塊」\)、預覽列印和浮動、可自訂工具列等功能。  
+ The MFC framework is a powerful approach that lets you build upon the work of expert programmers for Windows. MFC shortens development time; makes code more portable; provides tremendous support without reducing programming freedom and flexibility; and gives easy access to "hard to program" user-interface elements and technologies, like Active technology, OLE, and Internet programming. Furthermore, MFC simplifies database programming through Data Access Objects (DAO) and Open Database Connectivity (ODBC), and network programming through Windows Sockets. MFC makes it easy to program features like property sheets ("tab dialogs"), print preview, and floating, customizable toolbars.  
   
-## 本章節內容  
- [Visual C\+\+ 範例](../top/visual-cpp-samples.md)所提供的 `MFC Samples`  
+## <a name="in-this-section"></a>In This Section  
+ `MFC Samples`, which are supplied in [Visual C++ Samples](../visual-cpp-samples.md)  
   
- [使用 MFC 原始程式檔](../mfc/using-the-mfc-source-files.md)  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)  
   
- [MFC 程式庫版本](../mfc/mfc-library-versions.md)  
+ [MFC Library Versions](../mfc/mfc-library-versions.md)  
   
- [使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)  
   
- [在架構上建置](../mfc/building-on-the-framework.md)  
+ [Building on the Framework](../mfc/building-on-the-framework.md)  
   
- [CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)  
+ [CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md)  
   
- [文件範本和文件\/檢視建立流程](../mfc/document-templates-and-the-document-view-creation-process.md)  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)  
   
- [管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)  
   
- [閒置迴圈處理](../mfc/idle-loop-processing.md)  
+ [Idle Loop Processing](../mfc/idle-loop-processing.md)  
   
- [MFC 模組狀態的啟用內容支援](../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)  
+ [Support for Activation Contexts in the MFC Module State](../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)  
   
- [MFC 通用控制項程式庫的隔離](../mfc/isolation-of-the-mfc-common-controls-library.md)  
+ [Isolation of the MFC Common Controls Library](../mfc/isolation-of-the-mfc-common-controls-library.md)  
   
- [Windows Vista 通用控制項的組建需求](../mfc/build-requirements-for-windows-vista-common-controls.md)  
+ [Build Requirements for Windows Vista Common Controls](../mfc/build-requirements-for-windows-vista-common-controls.md)  
   
- [如何：加入重新啟動管理員支援](../mfc/how-to-add-restart-manager-support.md)  
+ [How to: Add Restart Manager Support](../mfc/how-to-add-restart-manager-support.md)  
   
- [動態版面配置](../mfc/dynamic-layout.md)  
+ [Dynamic Layout](../mfc/dynamic-layout.md)  
   
- 如需 MFC 參考文件的概觀，請參閱 [MFC 程式庫](../mfc/mfc-desktop-applications.md)。  
+ For an overview of the MFC reference documentation, see [Microsoft Foundation Class Library](../mfc/mfc-desktop-applications.md).  
   
- 如需 ATL 的詳細資訊，請參閱 [Active Template Library 參考](../atl/atl-class-overview.md)。  
+ For information about ATL, see [Active Template Library Reference](../atl/atl-class-overview.md).  
   
-## 請參閱  
- [使用視窗物件](../mfc/working-with-window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Working with Window Objects](../mfc/working-with-window-objects.md)
+
+

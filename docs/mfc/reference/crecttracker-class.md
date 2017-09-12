@@ -1,5 +1,5 @@
 ---
-title: "CRectTracker 類別 |Microsoft 文件"
+title: CRectTracker Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,9 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- displaying items
-- CRectTracker class
-- resizing items
+- CRectTracker [MFC], CRectTracker
+- CRectTracker [MFC], AdjustRect
+- CRectTracker [MFC], Draw
+- CRectTracker [MFC], DrawTrackerRect
+- CRectTracker [MFC], GetHandleMask
+- CRectTracker [MFC], GetTrueRect
+- CRectTracker [MFC], HitTest
+- CRectTracker [MFC], NormalizeHit
+- CRectTracker [MFC], OnChangedRect
+- CRectTracker [MFC], SetCursor
+- CRectTracker [MFC], Track
+- CRectTracker [MFC], TrackRubberBand
+- CRectTracker [MFC], m_nHandleSize
+- CRectTracker [MFC], m_nStyle
+- CRectTracker [MFC], m_rect
+- CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
 caps.latest.revision: 23
 author: mikeblome
@@ -52,17 +65,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 21fbd5457b6a3294a2925c88a72c32d568cce5e4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 270ace8e02abeac1d8cb9307dd64c3ca786c724e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crecttracker-class"></a>CRectTracker 類別
-可讓項目以顯示、 移動和調整大小不同的方式。  
+# <a name="crecttracker-class"></a>CRectTracker Class
+Allows an item to be displayed, moved, and resized in different fashions.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRectTracker  
@@ -70,56 +83,56 @@ class CRectTracker
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRectTracker::CRectTracker](#crecttracker)|建構 `CRectTracker` 物件。|  
+|[CRectTracker::CRectTracker](#crecttracker)|Constructs a `CRectTracker` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRectTracker::AdjustRect](#adjustrect)|將矩形調整時呼叫。|  
-|[CRectTracker::Draw](#draw)|將矩形的呈現。|  
-|[CRectTracker::DrawTrackerRect](#drawtrackerrect)|繪製的框線時呼叫`CRectTracker`物件。|  
-|[CRectTracker::GetHandleMask](#gethandlemask)|呼叫以取得的遮罩`CRectTracker`項目的調整大小控點。|  
-|[CRectTracker::GetTrueRect](#gettruerect)|傳回矩形中，包括調整大小控點的寬度和高度。|  
-|[CRectTracker::HitTest](#hittest)|傳回目前的位置與相關的資料指標`CRectTracker`物件。|  
-|[CRectTracker::NormalizeHit](#normalizehit)|將標準化的點擊測試碼。|  
-|[CRectTracker::OnChangedRect](#onchangedrect)|已調整大小或移動矩形時呼叫。|  
-|[CRectTracker::SetCursor](#setcursor)|設定資料指標，根據其透過矩形的位置。|  
-|[CRectTracker::Track](#track)|可讓使用者管理的矩形。|  
-|[Crecttracker:: Trackrubberband](#trackrubberband)|可讓使用者 「 拖放矩形 」 選取範圍。|  
+|[CRectTracker::AdjustRect](#adjustrect)|Called when the rectangle is resized.|  
+|[CRectTracker::Draw](#draw)|Renders the rectangle.|  
+|[CRectTracker::DrawTrackerRect](#drawtrackerrect)|Called when drawing the border of a `CRectTracker` object.|  
+|[CRectTracker::GetHandleMask](#gethandlemask)|Called to get the mask of a `CRectTracker` item's resize handles.|  
+|[CRectTracker::GetTrueRect](#gettruerect)|Returns width and height of rectangle, including resize handles.|  
+|[CRectTracker::HitTest](#hittest)|Returns the current position of the cursor related to the `CRectTracker` object.|  
+|[CRectTracker::NormalizeHit](#normalizehit)|Normalizes a hit-test code.|  
+|[CRectTracker::OnChangedRect](#onchangedrect)|Called when the rectangle has been resized or moved.|  
+|[CRectTracker::SetCursor](#setcursor)|Sets the cursor, depending on its position over the rectangle.|  
+|[CRectTracker::Track](#track)|Allows the user to manipulate the rectangle.|  
+|[CRectTracker::TrackRubberBand](#trackrubberband)|Allows the user to "rubber-band" the selection.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRectTracker::m_nHandleSize](#m_nhandlesize)|決定調整大小控點大小。|  
-|[CRectTracker::m_nStyle](#m_nstyle)|目前的追蹤程式 style(s)。|  
-|[Crecttracker:: M_rect](#m_rect)|目前位置 （以像素為單位） 的矩形。|  
-|[CRectTracker::m_sizeMin](#m_sizemin)|決定最小的矩形寬度和高度。|  
+|[CRectTracker::m_nHandleSize](#m_nhandlesize)|Determines size of resize handles.|  
+|[CRectTracker::m_nStyle](#m_nstyle)|Current style(s) of the tracker.|  
+|[CRectTracker::m_rect](#m_rect)|Current position (in pixels) of the rectangle.|  
+|[CRectTracker::m_sizeMin](#m_sizemin)|Determines minimum rectangle width and height.|  
   
-## <a name="remarks"></a>備註  
- `CRectTracker`沒有基底類別。  
+## <a name="remarks"></a>Remarks  
+ `CRectTracker` does not have a base class.  
   
- 雖然`CRectTracker`類別設計來允許使用者使用圖形化介面的 OLE 項目互動，其使用不限於 OLE 功能的應用程式。 可以使用這類使用者介面的所需的任何位置。  
+ Although the `CRectTracker` class is designed to allow the user to interact with OLE items by using a graphical interface, its use is not restricted to OLE-enabled applications. It can be used anywhere such a user interface is required.  
   
- `CRectTracker`框線可以是實線或虛線。 可以指定陰影的框線或覆蓋影線的模式，表示不同的狀態項目的項目。 您可以將八個調整大小控點放在外部或內部項目的框線。 (如需調整大小控點的說明，請參閱[GetHandleMask](#gethandlemask)。)最後，`CRectTracker`可讓您變更項目期間調整大小的方向。  
+ `CRectTracker` borders can be solid or dotted lines. The item can be given a hatched border or overlaid with a hatched pattern to indicate different states of the item. You can place eight resize handles on either the outside or the inside border of the item. (For an explanation of the resize handles, see [GetHandleMask](#gethandlemask).) Finally, a `CRectTracker` allows you to change the orientation of an item during resizing.  
   
- 若要使用`CRectTracker`，建構`CRectTracker`物件，並指定哪些顯示狀態初始化。 您接著可以使用此介面上 OLE 項目相關聯的目前狀態提供給使用者的視覺化回應`CRectTracker`物件。  
+ To use `CRectTracker`, construct a `CRectTracker` object and specify which display states are initialized. You can then use this interface to give the user visual feedback on the current status of the OLE item associated with the `CRectTracker` object.  
   
- 如需有關使用`CRectTracker`，請參閱文章[追蹤器](../../mfc/trackers.md)。  
+ For more information on using `CRectTracker`, see the article [Trackers](../../mfc/trackers.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CRectTracker`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
- 追蹤矩形使用調整大小控點來調整大小時，由架構呼叫。  
+##  <a name="adjustrect"></a>  CRectTracker::AdjustRect  
+ Called by the framework when the tracking rectangle is resized by using a resize handle.  
   
 ```  
 virtual void AdjustRect(
@@ -127,22 +140,22 @@ virtual void AdjustRect(
     LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nHandle`  
- 使用控制代碼的索引。  
+ Index of handle used.  
   
  `lpRect`  
- 目前大小的矩形的指標。 （矩形的大小是由它的高度和寬度所提供）。  
+ Pointer to the current size of the rectangle. (The size of a rectangle is given by its height and width.)  
   
-### <a name="remarks"></a>備註  
- 此函式的預設行為可讓矩形的方向變更時，才`Track`和`TrackRubberBand`以反轉允許來呼叫。  
+### <a name="remarks"></a>Remarks  
+ The default behavior of this function allows the rectangle's orientation to change only when `Track` and `TrackRubberBand` are called with inverting allowed.  
   
- 覆寫這個函式來控制追蹤矩形拖曳作業期間的調整。 其中一個方法是調整所指定的座標`lpRect`後再傳回。  
+ Override this function to control the adjustment of the tracking rectangle during a dragging operation. One method is to adjust the coordinates specified by `lpRect` before returning.  
   
- 並不直接支援的特殊功能`CRectTracker`，例如貼齊至格線或保留外觀比例，可以藉由覆寫這個函式實作。  
+ Special features that are not directly supported by `CRectTracker`, such as snap-to-grid or keep-aspect-ratio, can be implemented by overriding this function.  
   
-##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
- 建立並初始化`CRectTracker`物件。  
+##  <a name="crecttracker"></a>  CRectTracker::CRectTracker  
+ Creates and initializes a `CRectTracker` object.  
   
 ```  
 CRectTracker();
@@ -153,44 +166,44 @@ CRectTracker(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpSrcRect`  
- 矩形物件的座標。  
+ The coordinates of the rectangle object.  
   
  `nStyle`  
- 指定的樣式`CRectTracker`物件。 支援下列樣式︰  
+ Specifies the style of the `CRectTracker` object. The following styles are supported:  
   
-- **CRectTracker::solidLine**實線用於矩形的框線。  
+- **CRectTracker::solidLine** Use a solid line for the rectangle border.  
   
-- **CRectTracker::dottedLine**使用矩形外框虛線。  
+- **CRectTracker::dottedLine** Use a dotted line for the rectangle border.  
   
-- **CRectTracker::hatchedBorder**矩形外框使用影線的圖樣。  
+- **CRectTracker::hatchedBorder** Use a hatched pattern for the rectangle border.  
   
-- **CRectTracker::resizeInside**調整大小控點位於矩形內部。  
+- **CRectTracker::resizeInside** Resize handles located inside the rectangle.  
   
-- **CRectTracker::resizeOutside**調整大小控點放在矩形的外面。  
+- **CRectTracker::resizeOutside** Resize handles located outside the rectangle.  
   
-- **CRectTracker::hatchInside** Hatched 模式涵蓋整個矩形。  
+- **CRectTracker::hatchInside** Hatched pattern covers the entire rectangle.  
   
-### <a name="remarks"></a>備註  
- 預設建構函式初始化`CRectTracker`物件的值填入`lpSrcRect`並初始化為系統預設值的其他大小。 如果使用任何參數，建立物件`m_rect`和`m_nStyle`資料成員都是未初始化。  
+### <a name="remarks"></a>Remarks  
+ The default constructor initializes the `CRectTracker` object with the values from `lpSrcRect` and initializes other sizes to system defaults. If the object is created with no parameters, the `m_rect` and `m_nStyle` data members are uninitialized.  
   
-##  <a name="draw"></a>CRectTracker::Draw  
- 呼叫此函式可繪製的矩形外部線條和內部的區域。  
+##  <a name="draw"></a>  CRectTracker::Draw  
+ Call this function to draw the rectangle's outer lines and inner region.  
   
 ```  
 void Draw(CDC* pDC) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 若要在其上繪製的裝置內容的指標。  
+ Pointer to the device context on which to draw.  
   
-### <a name="remarks"></a>備註  
- 追蹤程式的樣式會判斷如何進行繪圖。 請參閱的建構函式`CRectTracker`如需有關可用樣式。  
+### <a name="remarks"></a>Remarks  
+ The style of the tracker determines how the drawing is done. See the constructor for `CRectTracker` for more information on the styles available.  
   
-##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
- 每當追蹤器的位置已變更時由架構呼叫時內`Track`或`TrackRubberBand`成員函式。  
+##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect  
+ Called by the framework whenever the position of the tracker has changed while inside the `Track` or `TrackRubberBand` member function.  
   
 ```  
 virtual void DrawTrackerRect(
@@ -200,72 +213,72 @@ virtual void DrawTrackerRect(
     CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指標`RECT`，其中包含要繪製的矩形。  
+ Pointer to the `RECT` that contains the rectangle to draw.  
   
  `pWndClipTo`  
- 用於裁剪矩形視窗的指標。  
+ Pointer to the window to use in clipping the rectangle.  
   
  `pDC`  
- 若要在其上繪製的裝置內容的指標。  
+ Pointer to the device context on which to draw.  
   
  `pWnd`  
- 視窗繪圖將會發生的指標。  
+ Pointer to the window on which the drawing will occur.  
   
-### <a name="remarks"></a>備註  
- 預設實作會呼叫`CDC::DrawFocusRect`，其中繪製虛線的矩形。  
+### <a name="remarks"></a>Remarks  
+ The default implementation makes a call to `CDC::DrawFocusRect`, which draws a dotted rectangle.  
   
- 此函式可提供不同的意見反應追蹤作業期間會覆寫。  
+ Override this function to provide different feedback during the tracking operation.  
   
-##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
- 架構會呼叫此成員函式，來擷取遮罩矩形的調整大小控點。  
+##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask  
+ The framework calls this member function to retrieve the mask for a rectangle's resize handles.  
   
 ```  
 virtual UINT GetHandleMask() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 遮罩`CRectTracker`項目的調整大小控點。  
+### <a name="return-value"></a>Return Value  
+ The mask of a `CRectTracker` item's resize handles.  
   
-### <a name="remarks"></a>備註  
- 調整大小控點出現在側邊和矩形的圓角，並允許使用者控制的形狀和大小的矩形。  
+### <a name="remarks"></a>Remarks  
+ The resize handles appear on the sides and corners of the rectangle and allow the user to control the shape and size of the rectangle.  
   
- 矩形有 8 編號 0-7 的調整大小控點。 每個調整大小控點被以的位元遮罩。該位元的值為 2 ^ *n*，其中*n*是調整大小控點數目。 位元 0-3 對應到邊角調整大小控點開始左上方移動順時針旋轉。 對應至側邊的 4-7 位元調整大小控點朝順時針方向移動從頂端開始。 下圖顯示矩形的調整大小控點和其相對應調整大小控點的數字和值︰  
+ A rectangle has 8 resize handles numbered 0-7. Each resize handle is represented by a bit in the mask; the value of that bit is 2^ *n*, where *n* is the resize handle number. Bits 0-3 correspond to the corner resize handles, starting at the top left moving clockwise. Bits 4-7 correspond to the side resize handles starting at the top moving clockwise. The following illustration shows a rectangle's resize handles and their corresponding resize handle numbers and values:  
   
- ![調整大小控點數字](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
+ ![Resize handle numbers](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
   
- 預設實作**GetHandleMask**傳回的位元遮罩，以便調整大小控點會出現。 如果單一的位元為開啟，就會繪製相對應的調整大小控點。  
+ The default implementation of **GetHandleMask** returns the mask of the bits so that the resize handles appear. If the single bit is on, the corresponding resize handle will be drawn.  
   
- 覆寫此成員函式，以隱藏或顯示指定的調整大小控點。  
+ Override this member function to hide or show the indicated resize handles.  
   
-##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
- 呼叫此函式可擷取的矩形座標。  
+##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect  
+ Call this function to retrieve the coordinates of the rectangle.  
   
 ```  
 void GetTrueRect(LPRECT lpTrueRect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpTrueRect`  
- 指標`RECT`結構將會包含裝置座標`CRectTracker`物件。  
+ Pointer to the `RECT` structure that will contain the device coordinates of the `CRectTracker` object.  
   
-### <a name="remarks"></a>備註  
- 矩形的維度會包含任何調整大小控點位於 外框的寬度與高度。 時傳回，`lpTrueRect`永遠是標準化的裝置座標中矩形。  
+### <a name="remarks"></a>Remarks  
+ The dimensions of the rectangle include the height and width of any resize handles located on the outer border. Upon returning, `lpTrueRect` is always a normalized rectangle in device coordinates.  
   
-##  <a name="hittest"></a>CRectTracker::HitTest  
- 呼叫此函式可了解使用者是否具有捕捉調整大小控點。  
+##  <a name="hittest"></a>  CRectTracker::HitTest  
+ Call this function to find out whether the user has grabbed a resize handle.  
   
 ```  
 int HitTest(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `point`  
- 若要測試的裝置座標中的點。  
+ The point, in device coordinates, to test.  
   
-### <a name="return-value"></a>傳回值  
- 傳回的值為基礎的列舉型別**CRectTracker::TrackerHit** ，而且可以有下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ The value returned is based on the enumerated type **CRectTracker::TrackerHit** and can have one of the following values:  
   
 - **CRectTracker::hitNothing** -1  
   
@@ -287,78 +300,78 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
- 大小，單位為像素的`CRectTracker`調整大小控點。  
+##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize  
+ The size, in pixels, of the `CRectTracker` resize handles.  
   
 ```  
 int m_nHandleSize;  
 ```  
   
-### <a name="remarks"></a>備註  
- 初始化具有預設的系統值。  
+### <a name="remarks"></a>Remarks  
+ Initialized with the default system value.  
   
-##  <a name="m_rect"></a>Crecttracker:: M_rect  
- 矩形的工作區座標 （像素） 中的目前位置。  
+##  <a name="m_rect"></a>  CRectTracker::m_rect  
+ The current position of the rectangle in client coordinates (pixels).  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
- 矩形的大小下限。  
+##  <a name="m_sizemin"></a>  CRectTracker::m_sizeMin  
+ The minimum size of the rectangle.  
   
 ```  
 CSize m_sizeMin;  
 ```  
   
-### <a name="remarks"></a>備註  
- 預設值 （literal） **cx**和**cy**，從預設系統的框線寬度的值計算所得。 此資料成員僅供`AdjustRect`成員函式。  
+### <a name="remarks"></a>Remarks  
+ Both default values, **cx** and **cy**, are calculated from the default system value for the border width. This data member is used only by the `AdjustRect` member function.  
   
-##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
- 目前的矩形樣式。  
+##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle  
+ Current style of the rectangle.  
   
 ```  
 UINT m_nStyle;  
 ```  
   
-### <a name="remarks"></a>備註  
- 請參閱[CRectTracker::CRectTracker](#crecttracker)取得一份可能的樣式。  
+### <a name="remarks"></a>Remarks  
+ See [CRectTracker::CRectTracker](#crecttracker) for a list of possible styles.  
   
-##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
- 呼叫此函式可將轉換可能會有反向的控制代碼。  
+##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit  
+ Call this function to convert a potentially inverted handle.  
   
 ```  
 int NormalizeHit(int nHandle) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nHandle`  
- 使用者所選的控制代碼。  
+ Handle selected by the user.  
   
-### <a name="return-value"></a>傳回值  
- 正規化的控制代碼的索引。  
+### <a name="return-value"></a>Return Value  
+ The index of the normalized handle.  
   
-### <a name="remarks"></a>備註  
- 當`CRectTracker::Track`或`CRectTracker::TrackRubberBand`稱為反轉允許，您也可以針對要在 x 軸、 y 軸，或兩者皆會反轉的矩形。 當發生這種情況時，`HitTest`會傳回相對於矩形也反轉的控制代碼。 因為意見反應取決於在矩形中，不會被修改的矩形資料結構一部分的螢幕位置，這並不適用於繪製游標意見反應。  
+### <a name="remarks"></a>Remarks  
+ When `CRectTracker::Track` or `CRectTracker::TrackRubberBand` is called with inverting allowed, it is possible for the rectangle to be inverted on the x-axis, the y-axis, or both. When this happens, `HitTest` will return handles that are also inverted with respect to the rectangle. This is inappropriate for drawing cursor feedback because the feedback depends on the screen position of the rectangle, not the portion of the rectangle data structure that will be modified.  
   
-##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
- 由架構呼叫，每當呼叫期間變更 tracker 矩形`Track`。  
+##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect  
+ Called by the framework whenever the tracker rectangle has changed during a call to `Track`.  
   
 ```  
 virtual void OnChangedRect(const CRect& rectOld);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *rectOld*  
- 包含舊裝置座標`CRectTracker`物件。  
+ Contains the old device coordinates of the `CRectTracker` object.  
   
-### <a name="remarks"></a>備註  
- 在階段會呼叫此函數，以繪製所有意見反應`DrawTrackerRect`已移除。 此函式的預設實作不做任何動作。  
+### <a name="remarks"></a>Remarks  
+ At the time this function is called, all feedback drawn with `DrawTrackerRect` has been removed. The default implementation of this function does nothing.  
   
- 當您想要執行任何動作矩形已調整大小之後，請覆寫這個函式。  
+ Override this function when you want to perform any actions after the rectangle has been resized.  
   
-##  <a name="setcursor"></a>CRectTracker::SetCursor  
- 呼叫此函式可變更指標形狀時透過`CRectTracker`物件的區域。  
+##  <a name="setcursor"></a>  CRectTracker::SetCursor  
+ Call this function to change the cursor shape while it is over the `CRectTracker` object's region.  
   
 ```  
 BOOL SetCursor(
@@ -366,21 +379,21 @@ BOOL SetCursor(
     UINT nHitTest) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 指向目前包含游標的視窗。  
+ Points to the window that currently contains the cursor.  
   
  `nHitTest`  
- 先前的點擊測試的結果從`WM_SETCURSOR`訊息。  
+ Results of the previous hit test, from the `WM_SETCURSOR` message.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果上一個結果是經由 tracker 矩形。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the previous hit was over the tracker rectangle; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式從您的視窗處理函式內`WM_SETCURSOR`訊息 (通常`OnSetCursor`)。  
+### <a name="remarks"></a>Remarks  
+ Call this function from inside the function of your window that handles the `WM_SETCURSOR` message (typically `OnSetCursor`).  
   
-##  <a name="track"></a>CRectTracker::Track  
- 呼叫此函式可顯示使用者介面的調整大小的矩形。  
+##  <a name="track"></a>  CRectTracker::Track  
+ Call this function to display the user interface for resizing the rectangle.  
   
 ```  
 BOOL Track(
@@ -390,31 +403,31 @@ BOOL Track(
     CWnd* pWndClipTo = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 包含矩形的視窗物件。  
+ The window object that contains the rectangle.  
   
  `point`  
- 裝置目前的滑鼠位置相對於用戶端區域的座標。  
+ Device coordinates of the current mouse position relative to the client area.  
   
  `bAllowInvert`  
- 如果**TRUE**，矩形可以是反向沿著 x 軸或 y 軸，否則**FALSE**。  
+ If **TRUE**, the rectangle can be inverted along the x-axis or y-axis; otherwise **FALSE**.  
   
  `pWndClipTo`  
- 繪製作業會裁剪到視窗。 如果**NULL**，`pWnd`做裁剪方框。  
+ The window that drawing operations will be clipped to. If **NULL**, `pWnd` is used as the clipping rectangle.  
   
-### <a name="return-value"></a>傳回值  
- 如果按下 ESC 鍵時，則會暫止追蹤程序、 儲存在追蹤程式中的矩形不會改變，和會傳回 0。 如果認可變更時，藉由移動滑鼠，並釋放滑鼠左鍵，新的位置及/或大小會記錄在追蹤器的矩形，並為非零，則會傳回。  
+### <a name="return-value"></a>Return Value  
+ If the ESC key is pressed, the tracking process is halted, the rectangle stored in the tracker is not altered, and 0 is returned. If the change is committed, by moving the mouse and releasing the left mouse button, the new position and/or size is recorded in the tracker's rectangle and nonzero is returned.  
   
-### <a name="remarks"></a>備註  
- 這通常稱為從函式會處理應用程式內`WM_LBUTTONDOWN`訊息 (通常`OnLButtonDown`)。  
+### <a name="remarks"></a>Remarks  
+ This is usually called from inside the function of your application that handles the `WM_LBUTTONDOWN` message (typically `OnLButtonDown`).  
   
- 此函式會擷取滑鼠，直到使用者放開滑鼠左的按鈕、 按下 ESC 鍵，或按下滑鼠按鈕。 當使用者移動滑鼠游標，藉由呼叫也會更新意見反應`DrawTrackerRect`和`OnChangedRect`。  
+ This function will capture the mouse until the user releases the left mouse button, presses the ESC key, or presses the right mouse button. As the user moves the mouse cursor, the feedback is updated by calling `DrawTrackerRect` and `OnChangedRect`.  
   
- 如果`bAllowInvert`是**TRUE**，追蹤矩形可以反轉 x 軸或 y 軸上。  
+ If `bAllowInvert` is **TRUE**, the tracking rectangle can be inverted on either the x-axis or y-axis.  
   
-##  <a name="trackrubberband"></a>Crecttracker:: Trackrubberband  
- 呼叫此函式執行拖放矩形選取範圍。  
+##  <a name="trackrubberband"></a>  CRectTracker::TrackRubberBand  
+ Call this function to do rubber-band selection.  
   
 ```  
 BOOL TrackRubberBand(
@@ -423,30 +436,30 @@ BOOL TrackRubberBand(
     BOOL bAllowInvert = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 包含矩形的視窗物件。  
+ The window object that contains the rectangle.  
   
  `point`  
- 裝置目前的滑鼠位置相對於用戶端區域的座標。  
+ Device coordinates of the current mouse position relative to the client area.  
   
  `bAllowInvert`  
- 如果**為 TRUE，**矩形可以是反向沿著 x 軸或 y 軸，否則**FALSE**。  
+ If **TRUE,** the rectangle can be inverted along the x-axis or y-axis; otherwise **FALSE**.  
   
-### <a name="return-value"></a>傳回值  
- 如果滑鼠移動，而且矩形不是空的則為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the mouse has moved and the rectangle is not empty; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 它通常稱為從函式會處理應用程式內`WM_LBUTTONDOWN`訊息 (通常`OnLButtonDown`)。  
+### <a name="remarks"></a>Remarks  
+ It is usually called from inside the function of your application that handles the `WM_LBUTTONDOWN` message (typically `OnLButtonDown`).  
   
- 此函式會擷取滑鼠，直到使用者放開滑鼠左的按鈕、 按下 ESC 鍵，或按下滑鼠按鈕。 當使用者移動滑鼠游標，藉由呼叫也會更新意見反應`DrawTrackerRect`和`OnChangedRect`。  
+ This function will capture the mouse until the user releases the left mouse button, presses the ESC key, or presses the right mouse button. As the user moves the mouse cursor, the feedback is updated by calling `DrawTrackerRect` and `OnChangedRect`.  
   
- 追蹤會使用從右下方的控制代碼的拖放頻外類型選取項目來執行。 如果允許反轉，矩形可以是向上和向左或往下及往右拖曳調整大小。  
+ Tracking is performed with a rubber-band-type selection from the lower-right handle. If inverting is allowed, the rectangle can be sized by dragging either up and to the left or down and to the right.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例追蹤器](../../visual-cpp-samples.md)   
- [MFC 範例 DRAWCLI](../../visual-cpp-samples.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [COleResizeBar 類別](../../mfc/reference/coleresizebar-class.md)   
- [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample TRACKER](../../visual-cpp-samples.md)   
+ [MFC Sample DRAWCLI](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleResizeBar Class](../../mfc/reference/coleresizebar-class.md)   
+ [CRect Class](../../atl-mfc-shared/reference/crect-class.md)
 

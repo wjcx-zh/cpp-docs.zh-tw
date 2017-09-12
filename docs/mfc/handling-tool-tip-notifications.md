@@ -1,56 +1,75 @@
 ---
-title: "處理工具提示告知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl 類別, 處理告知"
-  - "告知, 工具提示"
-  - "工具提示 [C++], 告知"
-  - "TOOLTIPTEXT 結構"
+title: Handling Tool Tip Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- TOOLTIPTEXT structure [MFC]
+- CToolBarCtrl class [MFC], handling notifications
+- notifications [MFC], tool tips
+- tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 處理工具提示告知
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4b6ad56302dc7bcbafad48452408bd931696257b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當您指定 `TBSTYLE_TOOLTIPS` 樣式時，工具列建立和管理工具提示控制項。  工具提示是包含描述工具列按鈕的文字行的小型快顯視窗。  只有當使用者在工具列按鈕和分葉上將游標放置它仍為大約二分之一秒時，工具提示會隱藏，則會發生。  工具提示在游標周圍顯示。  
+---
+# <a name="handling-tool-tip-notifications"></a>Handling Tool Tip Notifications
+When you specify the `TBSTYLE_TOOLTIPS` style, the toolbar creates and manages a tool tip control. A tool tip is a small pop-up window that contains a line of text describing a toolbar button. The tool tip is hidden, appearing only when the user puts the cursor on a toolbar button and leaves it there for approximately one-half second. The tool tip is displayed near the cursor.  
   
- 在工具提示中顯示之前， **TTN\_NEEDTEXT** 會傳送通知訊息至工具列的主控視窗擷取按鈕的描述文字。  如果工具列的主控視窗是 `CFrameWnd` 視窗，工具提示會顯示，而不需要任何額外工作，，因為 `CFrameWnd` 的 **TTN\_NEEDTEXT** 通知的預設處理常式。  如果工具列的主控視窗不是衍生自 `CFrameWnd`，例如對話方塊或表單檢視，您必須將項目加入至您的主控視窗的訊息對應和提供訊息對應的通知處理常式。  對您的主控視窗的訊息對應的項目如下:  
+ Before the tool tip is displayed, the **TTN_NEEDTEXT** notification message is sent to the toolbar's owner window to retrieve the descriptive text for the button. If the toolbar's owner window is a `CFrameWnd` window, tool tips are displayed without any extra effort, because `CFrameWnd` has a default handler for the **TTN_NEEDTEXT** notification. If the toolbar's owner window is not derived from `CFrameWnd`, such as a dialog box or form view, you must add an entry to your owner window's message map and provide a notification handler in the message map. The entry to your owner window's message map is as follows:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/CPP/handling-tool-tip-notifications_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-tool-tip-notifications_1.cpp)]  
   
-## 備註  
+## <a name="remarks"></a>Remarks  
  `memberFxn`  
- 要呼叫的，當文字此按鈕所需的成員函式。  
+ The member function to be called when text is needed for this button.  
   
- 請注意工具提示的 ID 一定是 0。  
+ Note that the id of a tool tip is always 0.  
   
- 除了通知 **TTN\_NEEDTEXT** 之外，工具提示控制項可以傳送通知給下列工具列控制項:  
+ In addition to the **TTN_NEEDTEXT** notification, a tool tip control can send the following notifications to a toolbar control:  
   
-|告知|意義|  
-|--------|--------|  
-|**TTN\_NEEDTEXTA**|工具提示控制項需要 ASCII 文字 \(僅適用於 Windows 95\)|  
-|**TTN\_NEEDTEXTW**|工具提示控制項要求 UNICODE 文字 \(僅適用於 Windows NT\)|  
-|**TBN\_HOTITEMCHANGE**|作用中指示 \(反白顯示\) 的項目已變更。|  
-|**NM\_RCLICK**|表示使用者按一下滑鼠右鍵按一下按鈕。|  
-|**TBN\_DRAGOUT**|表示使用者按一下按鈕並拖曳指標按鈕。  它可讓應用程式實作從工具列按鈕的拖放。  在接收這個告知時，應用程式會開始拖放作業。|  
-|**TBN\_DROPDOWN**|表示使用者按一下使用 **TBSTYLE\_DROPDOWN** 樣式的按鈕。|  
-|**TBN\_GETOBJECT**|表示使用者已捲動到使用 **TBSTYLE\_DROPPABLE** 樣式按鈕的指標。|  
+|Notification|Meaning|  
+|------------------|-------------|  
+|**TTN_NEEDTEXTA**|Tool tip control requires ASCII text (Windows 95 only)|  
+|**TTN_NEEDTEXTW**|Tool tip control requires UNICODE text (Windows NT only)|  
+|**TBN_HOTITEMCHANGE**|Indicates that the hot (highlighted) item has changed.|  
+|**NM_RCLICK**|Indicates the user has right-clicked a button.|  
+|**TBN_DRAGOUT**|Indicates the user has clicked the button and dragged the pointer off the button. It allows an application to implement drag and drop from a toolbar button. When receiving this notification, the application will begin the drag and drop operation.|  
+|**TBN_DROPDOWN**|Indicates the user has clicked a button that uses the **TBSTYLE_DROPDOWN** style.|  
+|**TBN_GETOBJECT**|Indicates the user moved the pointer over a button that uses the **TBSTYLE_DROPPABLE** style.|  
   
- 如需的範例處理常式函式和更多有關啟用工具提示，請參閱 [工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)。  
+ For an example handler function and more information about enabling tool tips, see [Tool Tips](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
   
-## 請參閱  
- [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

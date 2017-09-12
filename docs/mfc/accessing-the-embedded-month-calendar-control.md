@@ -1,52 +1,70 @@
 ---
-title: "存取內嵌月曆控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl 類別, 存取內嵌控制項"
-  - "CMonthCalCtrl 類別, 變更字型"
-  - "DateTimePicker 控制項 [MFC]"
-  - "DateTimePicker 控制項 [MFC], 存取月曆"
-  - "月曆控制項, 變更字型"
-  - "月曆控制項, 內嵌於日期/時間選擇器中"
+title: Accessing the Embedded Month Calendar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DateTimePicker control [MFC], accessing month calendar
+- CDateTimeCtrl class [MFC], accessing embedded control
+- month calendar controls [MFC], embedded in date/time picker
+- CMonthCalCtrl class [MFC], changing the font
+- month calendar controls [MFC], changing the font
+- DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 存取內嵌月曆控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ad47b376fd5f3cc044bffe3c98116489362d046d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-內嵌月曆控制項物件可以呼叫 [GetMonthCalCtrl](../Topic/CDateTimeCtrl::GetMonthCalCtrl.md) 成員函式，從 `CDateTimeCtrl` 物件存取。  
+---
+# <a name="accessing-the-embedded-month-calendar-control"></a>Accessing the Embedded Month Calendar Control
+The embedded month calendar control object can be accessed from the `CDateTimeCtrl` object with a call to the [GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl) member function.  
   
 > [!NOTE]
->  內嵌月曆控制項，只有在日期和時間選擇器控制項尚未有 **DTS\_UPDOWN**  模式時使用。  
+>  The embedded month calendar control is used only when the date and time picker control does not have the **DTS_UPDOWN** style set.  
   
- 如果您要在內嵌控制項顯示之前修改某些屬性，這會很有用。  若要完成這項作業，請處理 **DTN\_DROPDOWN** 通知，擷取月曆控制項 \(使用 [CDateTimeCtrl::GetMonthCalCtrl](../Topic/CDateTimeCtrl::GetMonthCalCtrl.md)\)，並進行修改。  可惜的是，月曆控制項不是永久性的。  
+ This is useful if you want to modify certain attributes before the embedded control is displayed. To accomplish this, handle the **DTN_DROPDOWN** notification, retrieve the month calendar control (using [CDateTimeCtrl::GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)), and make your modifications. Unfortunately, the month calendar control is not persistent.  
   
- 換句話說，當使用者要求顯示月曆控制項時，會建立新的月曆控制項 \(在 **DTN\_DROPDOWN** 告知之前\)。  當使用者關閉後控制項會被終結 \(在 **DTN\_CLOSEUP** 告知後\)。  這表示在內嵌控制項顯示之前，您修改的任何屬性會在當內嵌控制項關閉時遺失。  
+ In other words, when the user requests the display of the month calendar control, a new month calendar control is created (before the **DTN_DROPDOWN** notification). The control is destroyed (after the **DTN_CLOSEUP** notification) when dismissed by the user. This means that any attributes you modify, before the embedded control is displayed, are lost when the embedded control is dismissed.  
   
- 使用 **DTN\_DROPDOWN** 通知的處理常式，下列範例示範這個程序。  程式碼以呼叫 [SetMonthCalColor](../Topic/CDateTimeCtrl::SetMonthCalColor.md)，變更月曆控制項的背景色彩為灰色。  程式碼如下：  
+ The following example demonstrates this procedure, using a handler for the **DTN_DROPDOWN** notification. The code changes the background color of the month calendar control, with a call to [SetMonthCalColor](../mfc/reference/cdatetimectrl-class.md#setmonthcalcolor), to gray. The code is as follows:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/CPP/accessing-the-embedded-month-calendar-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#5](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_1.cpp)]  
   
- 如前面所述，當內嵌控制項關閉時，會遺失對月曆控制項屬性所做的任何修改，但有兩個例外狀況。  第一個例外狀況，這個月曆控制項的顏色，已經討論過。  第二個例外狀況，是月曆控制項所使用的字型。  您可以藉由呼叫 [CDateTimeCtrl::SetMonthCalFont](../Topic/CDateTimeCtrl::SetMonthCalFont.md)，修改預設字型，傳遞現有字型的控制代碼。  下列範例 \(其中 `m_dtPicker` 是日期和時間的物件\) 示範了可能的方法：  
+ As stated previously, all modifications to properties of the month calendar control are lost, with two exceptions, when the embedded control is dismissed. The first exception, the colors of the month calendar control, has already been discussed. The second exception is the font used by the month calendar control. You can modify the default font by making a call to [CDateTimeCtrl::SetMonthCalFont](../mfc/reference/cdatetimectrl-class.md#setmonthcalfont), passing the handle of an existing font. The following example (where `m_dtPicker` is the date and time control object) demonstrates one possible method:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/CPP/accessing-the-embedded-month-calendar-control_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#6](../mfc/codesnippet/cpp/accessing-the-embedded-month-calendar-control_2.cpp)]  
   
- 一旦呼叫 `CDateTimeCtrl::SetMonthCalFont` 變更字型後，下次月曆會顯示已儲存並使用的新字型。  
+ Once the font has been changed, with a call to `CDateTimeCtrl::SetMonthCalFont`, the new font is stored and used the next time a month calendar is to be displayed.  
   
-## 請參閱  
- [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

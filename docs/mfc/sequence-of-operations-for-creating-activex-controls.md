@@ -1,46 +1,64 @@
 ---
-title: "建立 ActiveX 控制項的作業順序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項 [C++], 建立"
-  - "MFC ActiveX 控制項 [C++], 建立"
-  - "OLE 控制項 [C++], MFC"
-  - "序列 [C++]"
-  - "序列 [C++], 建立 ActiveX 控制項的"
+title: Sequence of Operations for Creating ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], creating
+- ActiveX controls [MFC], creating
+- sequence [MFC], for creating ActiveX controls
+- OLE controls [MFC], MFC
+- sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 建立 ActiveX 控制項的作業順序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c293e5add988ef1b2dbe1ab976b2ac1c04d08d1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-下表顯示您的角色和架構的作用在建立 ActiveX 控制項 \(先前稱為 OLE automation 控制項\)。  
+---
+# <a name="sequence-of-operations-for-creating-activex-controls"></a>Sequence of Operations for Creating ActiveX Controls
+The following table shows your role and the framework's role in creating ActiveX controls (formerly known as OLE controls).  
   
-### 建立 ActiveX 控制項  
+### <a name="creating-activex-controls"></a>Creating ActiveX Controls  
   
-|工作|您做|架構做|  
-|--------|--------|---------|  
-|建立 ActiveX 控制項框架。|執行 MFC ActiveX 控制項精靈來建立您的控制項。  指定要在索引標籤頁要的選項。  選項是在專案，允許，子類別化和一個方塊方法包含控制項的型別和名稱。|MFC ActiveX 控制項精靈來建立 ActiveX 控制項的檔案與基本功能，包含應用程式的原始程式檔 \(Source File\)、控制項和屬性頁或網頁;資源檔;專案檔;另一個，所有適合您的規格。|  
-|查看控制項和 ActiveX 控制項精靈提供，而不加入您的程式碼行。|建立 ActiveX 控制項並測試它與 Internet Explorer 或 [TSTCON 範例](../top/visual-cpp-samples.md)。|執行控制項可以調整大小和移動。  它也有可以叫用的 **About Box** 方法 \(如果選取\)。|  
-|實作控制項的方法和屬性。|將成員函式提供公開介面實作您的控制項特定的方法和屬性指定控制項資料。  在決定時，加入成員變數來保存資料結構和使用事件處理常式引發事件。|框架已經定義對應支援控制項的事件，屬性和方法，讓您專注於屬性和方法如何執行。  預設屬性頁可檢視，並提供關於對話方塊方法的預設值。|  
-|建置控制項的屬性頁或頁面。|使用 Visual C\+\+ 資源編輯器視覺化編輯控制項的屬性頁介面:<br /><br /> -   建立額外的屬性頁。<br />-   建立及編輯點陣圖、圖示和游標。<br /><br /> 您也可以測試在對話方塊編輯器的屬性頁。|MFC 應用程式精靈建立的預設資源檔提供您所需的許多資源。  Visual C\+\+ 可讓您輕鬆和視覺化編輯現有的資源並加入新的資源。|  
-|測試控制項的事件、方法和屬性。|重建控制項並使用測試容器中測試您的處理常式能夠正確地運作。|您可以叫用控制項的方法，並透過屬性頁操作其屬性以測試容器連接或。  此外，請使用控制項和通知給追蹤引發之測試容器接收由控制項的容器。|  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Create an ActiveX control framework.|Run the MFC ActiveX Control Wizard to create your control. Specify the options you want in the options pages. Options include the type and name of the control in the project, licensing, subclassing, and an About Box method.|The MFC ActiveX Control Wizard creates the files for an ActiveX control with basic functionality, including source files for your application, control, and property page or pages; a resource file; a project file; and others, all tailored to your specifications.|  
+|See what the control and the ActiveX Control Wizard offer without adding a line of your own code.|Build the ActiveX control and test it with Internet Explorer or the [TSTCON sample](../visual-cpp-samples.md).|The running control has the ability to be resized and moved. It also has an **About Box** method (if chosen) that can be invoked.|  
+|Implement the control's methods and properties.|Implement your control-specific methods and properties by adding member functions to provide an exposed interface to the control's data. Add member variables to hold data structures and use event handlers to fire events when you determine.|The framework has already defined a map to support the control's events, properties, and methods, leaving you to focus on how the properties and methods are implemented. The default property page is viewable and a default About Box method is supplied.|  
+|Construct the control's property page or pages.|Use the Visual C++ resource editors to visually edit the control's property page interface:<br /><br /> -   Create additional property pages.<br />-   Create and edit bitmaps, icons, and cursors.<br /><br /> You can also test the property page(s) in the dialog editor.|The default resource file created by the MFC Application Wizard supplies many of the resources you need. Visual C++ lets you edit existing resources and add new resources easily and visually.|  
+|Test the control's events, methods, and properties.|Rebuild the control and use Test Container to test that your handlers work correctly.|You can invoke the control's methods and manipulate its properties through the property page interface or through Test Container. In addition, use Test Container to track events fired from the control and notifications received by the control's container.|  
   
-## 請參閱  
- [在架構上建置](../mfc/building-on-the-framework.md)   
- [建置 MFC 應用程式的作業順序](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
- [建立 OLE 應用程式的作業順序](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [建立資料庫應用程式的作業順序](../mfc/sequence-of-operations-for-creating-database-applications.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)   
+ [Sequence of Operations for Building MFC Applications](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
+ [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
+ [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)
+
+

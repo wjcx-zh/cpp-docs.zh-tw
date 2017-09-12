@@ -1,5 +1,5 @@
 ---
-title: "COleDataSource 類別 |Microsoft 文件"
+title: COleDataSource Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,17 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- drag and drop [C++], MFC support
-- Clipboard [C++], OLE support
-- uniform data transfer
-- OLE [C++], uniform data transfer
-- Clipboard [C++], MFC support
-- OLE Clipboard [C++], support
-- IDataObject, MFC encapsulation
-- data transfer [C++], OLE
-- COleDataSource class
-- OLE data transfer [C++]
-- uniform data transfer, OLE
+- COleDataSource [MFC], COleDataSource
+- COleDataSource [MFC], CacheData
+- COleDataSource [MFC], CacheGlobalData
+- COleDataSource [MFC], DelayRenderData
+- COleDataSource [MFC], DelayRenderFileData
+- COleDataSource [MFC], DelaySetData
+- COleDataSource [MFC], DoDragDrop
+- COleDataSource [MFC], Empty
+- COleDataSource [MFC], FlushClipboard
+- COleDataSource [MFC], GetClipboardOwner
+- COleDataSource [MFC], OnRenderData
+- COleDataSource [MFC], OnRenderFileData
+- COleDataSource [MFC], OnRenderGlobalData
+- COleDataSource [MFC], OnSetData
+- COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 caps.latest.revision: 23
 author: mikeblome
@@ -59,17 +63,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3839ebe5f278d71f933b6e76f2ad50dc8e62a165
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0d6db9b64098bf2bee5129b98dfe1797edfd6d8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledatasource-class"></a>COleDataSource 類別
-做為快取，應用程式在此放置資料，以便在資料傳輸作業 (例如剪貼簿或拖放作業) 期間提供。  
+# <a name="coledatasource-class"></a>COleDataSource Class
+Acts as a cache into which an application places the data that it will offer during data transfer operations, such as Clipboard or drag-and-drop operations.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDataSource : public CCmdTarget  
@@ -77,50 +81,50 @@ class COleDataSource : public CCmdTarget
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDataSource::COleDataSource](#coledatasource)|建構 `COleDataSource` 物件。|  
+|[COleDataSource::COleDataSource](#coledatasource)|Constructs a `COleDataSource` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDataSource::CacheData](#cachedata)|提供資料中指定的格式使用**STGMEDIUM**結構。|  
-|[COleDataSource::CacheGlobalData](#cacheglobaldata)|提供資料中指定的格式使用`HGLOBAL`。|  
-|[COleDataSource::DelayRenderData](#delayrenderdata)|提供在指定的格式來延遲的轉譯的資料。|  
-|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|提供資料中的指定格式`CFile`指標。|  
-|[COleDataSource::DelaySetData](#delaysetdata)|針對每一種支援的格式來呼叫`OnSetData`。|  
-|[Coledatasource:: Dodragdrop](#dodragdrop)|執行拖放作業與資料來源。|  
-|[COleDataSource::Empty](#empty)|清空`COleDataSource`資料物件。|  
-|[COleDataSource::FlushClipboard](#flushclipboard)|將所有的資料呈現到剪貼簿。|  
-|[COleDataSource::GetClipboardOwner](#getclipboardowner)|確認放在剪貼簿的資料仍然存在。|  
-|[COleDataSource::OnRenderData](#onrenderdata)|擷取資料做為延遲轉譯的一部分。|  
-|[COleDataSource::OnRenderFileData](#onrenderfiledata)|擷取資料到`CFile`延遲轉譯的一部分。|  
-|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|擷取資料到`HGLOBAL`延遲轉譯的一部分。|  
-|[COleDataSource::OnSetData](#onsetdata)|呼叫以取代中的資料`COleDataSource`物件。|  
-|[COleDataSource::SetClipboard](#setclipboard)|上的芳鄰`COleDataSource`剪貼簿上的物件。|  
+|[COleDataSource::CacheData](#cachedata)|Offers data in a specified format using a **STGMEDIUM** structure.|  
+|[COleDataSource::CacheGlobalData](#cacheglobaldata)|Offers data in a specified format using an `HGLOBAL`.|  
+|[COleDataSource::DelayRenderData](#delayrenderdata)|Offers data in a specified format using delayed rendering.|  
+|[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|Offers data in a specified format in a `CFile` pointer.|  
+|[COleDataSource::DelaySetData](#delaysetdata)|Called for every format that is supported in `OnSetData`.|  
+|[COleDataSource::DoDragDrop](#dodragdrop)|Performs drag-and-drop operations with a data source.|  
+|[COleDataSource::Empty](#empty)|Empties the `COleDataSource` object of data.|  
+|[COleDataSource::FlushClipboard](#flushclipboard)|Renders all data to the Clipboard.|  
+|[COleDataSource::GetClipboardOwner](#getclipboardowner)|Verifies that the data placed on the Clipboard is still there.|  
+|[COleDataSource::OnRenderData](#onrenderdata)|Retrieves data as part of delayed rendering.|  
+|[COleDataSource::OnRenderFileData](#onrenderfiledata)|Retrieves data into a `CFile` as part of delayed rendering.|  
+|[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|Retrieves data into an `HGLOBAL` as part of delayed rendering.|  
+|[COleDataSource::OnSetData](#onsetdata)|Called to replace the data in the `COleDataSource` object.|  
+|[COleDataSource::SetClipboard](#setclipboard)|Places a `COleDataSource` object on the Clipboard.|  
   
-## <a name="remarks"></a>備註  
- 您可以直接建立 OLE 資料來源。 或者， [COleClientItem](../../mfc/reference/coleclientitem-class.md)和[COleServerItem](../../mfc/reference/coleserveritem-class.md)類別建立 OLE 資料來源，以回應其`CopyToClipboard`和`DoDragDrop`成員函式。 請參閱[COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard)的簡短描述。 覆寫`OnGetClipboardData`OLE 資料來源中的資料加入其他的剪貼簿格式您用戶端項目或伺服器項目類別成員函式建立`CopyToClipboard`或`DoDragDrop`成員函式。  
+## <a name="remarks"></a>Remarks  
+ You can create OLE data sources directly. Alternately, the [COleClientItem](../../mfc/reference/coleclientitem-class.md) and [COleServerItem](../../mfc/reference/coleserveritem-class.md) classes create OLE data sources in response to their `CopyToClipboard` and `DoDragDrop` member functions. See [COleServerItem::CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) for a brief description. Override the `OnGetClipboardData` member function of your client item or server item class to add additional Clipboard formats to the data in the OLE data source created for the `CopyToClipboard` or `DoDragDrop` member function.  
   
- 每當您想要準備傳輸的資料，您應該建立這個類別的物件，並填入資料，可使用最適合的方法，為您的資料。 它會插入至資料來源的方式直接受到資料是否立即提供 （立即轉譯） 或依需求 （延遲轉譯）。 您可以在此提供藉由傳遞要使用的剪貼簿格式的資料每個剪貼簿格式 (和選擇性[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構)，呼叫[DelayRenderData](#delayrenderdata)。  
+ Whenever you want to prepare data for a transfer, you should create an object of this class and fill it with your data using the most appropriate method for your data. The way it is inserted into a data source is directly affected by whether the data is supplied immediately (immediate rendering) or on demand (delayed rendering). For every Clipboard format in which you are providing data by passing the Clipboard format to be used (and an optional [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure), call [DelayRenderData](#delayrenderdata).  
   
- 如需有關資料來源和資料傳輸的詳細資訊，請參閱文章[資料物件和資料來源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)。 此外，發行項[剪貼簿主題](../../mfc/clipboard.md)描述 OLE 剪貼簿機制。  
+ For more information about data sources and data transfer, see the article [Data Objects and Data Sources (OLE)](../../mfc/data-objects-and-data-sources-ole.md). In addition, the article [Clipboard Topics](../../mfc/clipboard.md) describes the OLE Clipboard mechanism.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleDataSource`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="cachedata"></a>COleDataSource::CacheData  
- 呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
+##  <a name="cachedata"></a>  COleDataSource::CacheData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void CacheData(
@@ -129,31 +133,31 @@ void CacheData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 資料為提供剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpStgMedium`  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，其中包含指定的格式中的資料。  
+ Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure containing the data in the format specified.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>備註  
- 您必須提供資料，因為此函式，提供它使用立即呈現。 資料會快取，直到需要為止。  
+### <a name="remarks"></a>Remarks  
+ You must supply the data, because this function provides it by using immediate rendering. The data is cached until needed.  
   
- 提供使用資料[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構。 您也可以使用`CacheGlobalData`成員函式，如果您提供的資料量是夠小，無法有效率地使用傳送`HGLOBAL`。  
+ Supply the data using a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure. You can also use the `CacheGlobalData` member function if the amount of data you are supplying is small enough to be transferred efficiently using an `HGLOBAL`.  
   
- 在呼叫之後`CacheData` **ptd**隸屬`lpFormatEtc`和內容`lpStgMedium`資料物件，不是由呼叫者所擁有。  
+ After the call to `CacheData` the **ptd** member of `lpFormatEtc` and the contents of `lpStgMedium` are owned by the data object, not by the caller.  
   
- 若要使用延遲的轉譯，呼叫[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)成員函式。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源︰ 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
+ To use delayed rendering, call the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)中結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures in the Windows SDK.  
   
- 如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
- 呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
+##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void CacheGlobalData(
@@ -162,34 +166,34 @@ void CacheGlobalData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 資料為提供剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  *hGlobal*  
- 包含指定的格式資料的全域記憶體區塊的控制代碼。  
+ Handle to the global memory block containing the data in the format specified.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>備註  
- 此函式提供使用直接呈現，因此呼叫函式; 時，您必須提供資料的資料資料會快取，直到需要為止。 使用`CacheData`成員函式，如果您提供的大量資料，或如果您需要的結構化儲存體。  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using immediate rendering, so you must supply the data when calling the function; the data is cached until needed. Use the `CacheData` member function if you are supplying a large amount of data or if you require a structured storage medium.  
   
- 若要使用延遲的轉譯，呼叫[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)成員函式。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源︰ 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
+ To use delayed rendering, call the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
- 建構 `COleDataSource` 物件。  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
+ Constructs a `COleDataSource` object.  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
- 呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
+##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void DelayRenderData(
@@ -197,26 +201,26 @@ void DelayRenderData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 資料為提供剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>備註  
- 此函式提供的資料，使用延遲的轉譯，所以不會立即提供的資料。 [OnRenderData](#onrenderdata)或[OnRenderGlobalData](#onrenderglobaldata)呼叫成員函式會要求資料。  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using delayed rendering, so the data is not supplied immediately. The [OnRenderData](#onrenderdata) or [OnRenderGlobalData](#onrenderglobaldata) member function is called to request the data.  
   
- 如果您不打算提供透過您的資料，請使用此函式`CFile`物件。 如果您要提供的資料，透過`CFile`物件，呼叫[DelayRenderFileData](#delayrenderfiledata)成員函式。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源︰ 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
+ Use this function if you are not going to supply your data through a `CFile` object. If you are going to supply the data through a `CFile` object, call the [DelayRenderFileData](#delayrenderfiledata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 若要使用立即轉譯，呼叫[CacheData](#cachedata)或[CacheGlobalData](#cacheglobaldata)成員函式。  
+ To use immediate rendering, call the [CacheData](#cachedata) or [CacheGlobalData](#cacheglobaldata) member function.  
   
- 如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
- 呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
+##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
+ Call this function to specify a format in which data is offered during data transfer operations.  
   
 ```  
 void DelayRenderFileData(
@@ -224,26 +228,26 @@ void DelayRenderFileData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 資料為提供剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ The Clipboard format in which the data is to be offered. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料為提供的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be offered. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>備註  
- 此函式提供的資料，使用延遲的轉譯，所以不會立即提供的資料。 [OnRenderFileData](#onrenderfiledata)呼叫成員函式會要求資料。  
+### <a name="remarks"></a>Remarks  
+ This function provides the data using delayed rendering, so the data is not supplied immediately. The [OnRenderFileData](#onrenderfiledata) member function is called to request the data.  
   
- 使用此函式，如果您要使用`CFile`來提供資料的物件。 如果您不打算使用`CFile`物件，呼叫[DelayRenderData](#delayrenderdata)成員函式。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源︰ 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
+ Use this function if you are going to use a `CFile` object to supply the data. If you are not going to use a `CFile` object, call the [DelayRenderData](#delayrenderdata) member function. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 若要使用立即轉譯，呼叫[CacheData](#cachedata)或[CacheGlobalData](#cacheglobaldata)成員函式。  
+ To use immediate rendering, call the [CacheData](#cachedata) or [CacheGlobalData](#cacheglobaldata) member function.  
   
- 如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
- 呼叫此函式來支援變更資料來源的內容。  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
+ Call this function to support changing the contents of the data source.  
   
 ```  
 void DelaySetData(
@@ -251,22 +255,22 @@ void DelaySetData(
     LPFORMATETC lpFormatEtc = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cfFormat`  
- 中的資料是放到剪貼簿格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ The Clipboard format in which the data is to be placed. This parameter can be one of the predefined Clipboard formats or the value returned by the native Windows [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) function.  
   
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述中的資料是要被取代的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
+ Points to a [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure describing the format in which the data is to be replaced. Provide a value for this parameter if you want to specify additional format information beyond the Clipboard format specified by `cfFormat`. If it is **NULL**, default values are used for the other fields in the **FORMATETC** structure.  
   
-### <a name="remarks"></a>備註  
- [OnSetData](#onsetdata)會在發生此情況時由架構呼叫。 這只用於架構傳回的資料來源時[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`未呼叫您`OnSetData`永遠不會呼叫函式。 `DelaySetData`應該針對每個剪貼簿呼叫或**FORMATETC**您支援的格式。  
+### <a name="remarks"></a>Remarks  
+ [OnSetData](#onsetdata) will be called by the framework when this happens. This is only used when the framework returns the data source from [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource). If `DelaySetData` is not called, your `OnSetData` function will never be called. `DelaySetData` should be called for each Clipboard or **FORMATETC** format you support.  
   
- 如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure in the Windows SDK.  
   
- 如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) in the Windows SDK.  
   
-##  <a name="dodragdrop"></a>Coledatasource:: Dodragdrop  
- 呼叫`DoDragDrop`成員函式來執行拖放作業，此資料來源，通常在[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)處理常式。  
+##  <a name="dodragdrop"></a>  COleDataSource::DoDragDrop  
+ Call the `DoDragDrop` member function to perform a drag-and-drop operation for this data source, typically in an [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown) handler.  
   
 ```  
 DROPEFFECT DoDragDrop(
@@ -275,76 +279,76 @@ DROPEFFECT DoDragDrop(
     COleDropSource* pDropSource = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwEffects`  
- 拖放作業所允許在此資料來源。 可以是下列一或多個項目︰  
+ Drag-and-drop operations that are allowed on this data source. Can be one or more of the following:  
   
-- `DROPEFFECT_COPY`無法執行複製作業。  
+- `DROPEFFECT_COPY` A copy operation could be performed.  
   
-- `DROPEFFECT_MOVE`無法執行移動作業。  
+- `DROPEFFECT_MOVE` A move operation could be performed.  
   
-- `DROPEFFECT_LINK`無法建立已卸除的資料從原始資料的連結。  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data could be established.  
   
-- `DROPEFFECT_SCROLL`表示可能發生拖曳捲軸作業。  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation could occur.  
   
  `lpRectStartDrag`  
- 實際開始拖曳所定義的矩形的指標。 如需詳細資訊，請參閱接下來的＜備註＞一節。  
+ Pointer to the rectangle that defines where the drag actually starts. For more information, see the following Remarks section.  
   
  *pDropSource*  
- 要卸除來源點。 如果**NULL**然後的預設實作[COleDropSource](../../mfc/reference/coledropsource-class.md)將使用。  
+ Points to a drop source. If **NULL** then a default implementation of [COleDropSource](../../mfc/reference/coledropsource-class.md) will be used.  
   
-### <a name="return-value"></a>傳回值  
- 卸除拖放作業，所產生的效果否則`DROPEFFECT_NONE`如果作業永遠不會開始因為使用者放開滑鼠按鈕，然後退出提供的矩形。  
+### <a name="return-value"></a>Return Value  
+ Drop effect generated by the drag-and-drop operation; otherwise `DROPEFFECT_NONE` if the operation never begins because the user released the mouse button before leaving the supplied rectangle.  
   
-### <a name="remarks"></a>備註  
- 拖放作業不會立即啟動。 它會等候直到滑鼠游標離開所指定的矩形`lpRectStartDrag`，或是直到已通過指定的毫秒數。 如果`lpRectStartDrag`是**NULL**，矩形的大小是一個像素。  
+### <a name="remarks"></a>Remarks  
+ The drag-and-drop operation does not start immediately. It waits until the mouse cursor leaves the rectangle specified by `lpRectStartDrag` or until a specified number of milliseconds have passed. If `lpRectStartDrag` is **NULL**, the size of the rectangle is one pixel.  
   
- 登錄機碼設定所指定的延遲時間。 您可以藉由呼叫變更的延遲時間[CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)或[cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)。 如果您未指定延遲時間，會使用預設值是 200 毫秒。 拖放到延遲時間會儲存，如下所示︰  
+ The delay time is specified by a registry key setting. You can change the delay time by calling [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) or [CWinApp::WriteProfileInt](../../mfc/reference/cwinapp-class.md#writeprofileint). If you do not specify the delay time, a default value of 200 milliseconds is used. Drag delay time is stored as follows:  
   
--   Windows NT 拖曳延遲時間會儲存在 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay。  
+-   Windows NT   Drag delay time is stored in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini\Windows\DragDelay.  
   
--   Win 儲存 Windows 3.x 拖曳延遲時間。INI 檔案，底下的 [Windows} 一節。  
+-   Windows 3.x   Drag delay time is stored in the WIN.INI file, under the [Windows} section.  
   
--   Windows 95/98 拖曳延遲時間會儲存在 WIN 的快取版本。INI。  
+-   Windows 95/98   Drag delay time is stored in a cached version of WIN.INI.  
   
- 如需有關如何將延遲的資訊會儲存在登錄或。INI 檔案，請參閱[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about how drag delay information is stored in either the registry or the .INI file, see [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) in the Windows SDK.  
   
- 如需詳細資訊，請參閱文章[將拖放︰ 實作置放來源](../../mfc/drag-and-drop-implementing-a-drop-source.md)。  
+ For more information, see the article [Drag and Drop: Implementing a Drop Source](../../mfc/drag-and-drop-implementing-a-drop-source.md).  
   
-##  <a name="empty"></a>COleDataSource::Empty  
- 呼叫此函式可空白`COleDataSource`資料物件。  
+##  <a name="empty"></a>  COleDataSource::Empty  
+ Call this function to empty the `COleDataSource` object of data.  
   
 ```  
 void Empty();
 ```  
   
-### <a name="remarks"></a>備註  
- 兩者都快取，而延遲的轉譯格式會清空，以便之後可以重複使用。  
+### <a name="remarks"></a>Remarks  
+ Both cached and delay render formats are emptied so they can be reused.  
   
- 如需詳細資訊，請參閱[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) in the Windows SDK.  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
- 將剪貼簿，並再貼上剪貼簿的資料，您的應用程式關閉後的資料呈現。  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
+ Renders data that is on the Clipboard, and then lets you paste data from the Clipboard after your application shuts down.  
   
 ```  
 static void PASCAL FlushClipboard();
 ```  
   
-### <a name="remarks"></a>備註  
- 使用[SetClipboard](#setclipboard)將資料放在剪貼簿。  
+### <a name="remarks"></a>Remarks  
+ Use [SetClipboard](#setclipboard) to put data on the Clipboard.  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
- 決定是否變更過資料到剪貼簿上的[SetClipboard](#setclipboard)上次呼叫，若是如此，識別目前的擁有者。  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
+ Determines whether the data on the Clipboard has changed since [SetClipboard](#setclipboard) was last called and, if so, identifies the current owner.  
   
 ```  
 static COleDataSource* PASCAL GetClipboardOwner();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 資料來源目前在剪貼簿，或**NULL**如果沒有任何剪貼簿上，或呼叫應用程式不屬於剪貼簿。  
+### <a name="return-value"></a>Return Value  
+ The data source currently on the Clipboard, or **NULL** if there is nothing on the Clipboard or if the Clipboard is not owned by the calling application.  
   
-##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
- 由架構呼叫以擷取指定格式的資料。  
+##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
+ Called by the framework to retrieve data in the specified format.  
   
 ```  
 virtual BOOL OnRenderData(
@@ -352,27 +356,27 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `lpStgMedium`  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)資料所要傳回的結構。  
+ Points to a [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure in which the data is to be returned.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 指定的格式是其中一個先前置於`COleDataSource`物件使用[DelayRenderData](#delayrenderdata)或[DelayRenderFileData](#delayrenderfiledata)延遲轉譯的成員函式。 此函式的預設實作會呼叫[OnRenderFileData](#onrenderfiledata)或[OnRenderGlobalData](#onrenderglobaldata)是否提供的儲存體中的檔案或記憶體，分別。 如果這些格式都不提供，預設實作會傳回 0，然後會執行任何動作。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源︰ 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) or [DelayRenderFileData](#delayrenderfiledata) member function for delayed rendering. The default implementation of this function will call [OnRenderFileData](#onrenderfiledata) or [OnRenderGlobalData](#onrenderglobaldata) if the supplied storage medium is either a file or memory, respectively. If neither of these formats are supplied, then the default implementation will return 0 and do nothing. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 如果`lpStgMedium` ->  *tymed*是**TYMED_NULL**、 **STGMEDIUM**應該配置，並填入所指定*-> tymed lpFormatEtc*。 如果不是**TYMED_NULL**、 **STGMEDIUM**應填入資料的位置。  
+ If `lpStgMedium`-> *tymed* is **TYMED_NULL**, the **STGMEDIUM** should be allocated and filled as specified by *lpFormatEtc->tymed*. If it is not **TYMED_NULL**, the **STGMEDIUM** should be filled in place with the data.  
   
- 這是進階可覆寫。 覆寫此函式可提供您要求的格式和 「 中 」 的資料。 根據您的資料，您可以改為覆寫這個函式的其他版本的其中一個。 如果您的資料是小型且固定的大小，會覆寫`OnRenderGlobalData`。 如果您在檔案中，或資料的大小不固定，覆寫`OnRenderFileData`。  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you may want to override one of the other versions of this function instead. If your data is small and fixed in size, override `OnRenderGlobalData`. If your data is in a file, or is of variable size, override `OnRenderFileData`.  
   
- 如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構[TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)列舉型別和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures, the [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) enumeration type, and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
- 由架構呼叫以指定的儲存體中為檔案時，擷取指定的格式中的資料。  
+##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
+ Called by the framework to retrieve data in the specified format when the specified storage medium is a file.  
   
 ```  
 virtual BOOL OnRenderFileData(
@@ -380,25 +384,25 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `pFile`  
- 指向[CFile](../../mfc/reference/cfile-class.md)資料為呈現的物件。  
+ Points to a [CFile](../../mfc/reference/cfile-class.md) object in which the data is to be rendered.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 指定的格式是其中一個先前置於`COleDataSource`物件使用[DelayRenderData](#delayrenderdata)延遲轉譯的成員函式。 此函式的預設實作只會傳回**FALSE**。  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) member function for delayed rendering. The default implementation of this function simply returns **FALSE**.  
   
- 這是進階可覆寫。 覆寫此函式可提供您要求的格式和 「 中 」 的資料。 根據您的資料，您可以改為覆寫這個函式的其他版本的其中一個。 如果您想要處理多個儲存媒體，覆寫[OnRenderData](#onrenderdata)。 如果您在檔案中，或資料的大小不固定，覆寫`OnRenderFileData`。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源︰ 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you might want to override one of the other versions of this function instead. If you want to handle multiple storage media, override [OnRenderData](#onrenderdata). If your data is in a file, or is of variable size, override `OnRenderFileData`. For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
- 由架構呼叫以時指定的儲存體中是全域記憶體擷取資料，以指定的格式。  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
+ Called by the framework to retrieve data in the specified format when the specified storage medium is global memory.  
   
 ```  
 virtual BOOL OnRenderGlobalData(
@@ -406,27 +410,27 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定用來要求資訊的格式。  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which information is requested.  
   
  `phGlobal`  
- 指向全域記憶體資料所要傳回的控制代碼。 如果其中一個具有尚未配置，這個參數可以是**NULL**。  
+ Points to a handle to global memory in which the data is to be returned. If one has not yet been allocated, this parameter can be **NULL**.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 指定的格式是其中一個先前置於`COleDataSource`物件使用[DelayRenderData](#delayrenderdata)延遲轉譯的成員函式。 此函式的預設實作只會傳回**FALSE**。  
+### <a name="remarks"></a>Remarks  
+ The specified format is one previously placed in the `COleDataSource` object using the [DelayRenderData](#delayrenderdata) member function for delayed rendering. The default implementation of this function simply returns **FALSE**.  
   
- 如果`phGlobal`是**NULL**，然後新`HGLOBAL`應該配置並傳回`phGlobal`。 否則，`HGLOBAL`所指定`phGlobal`應填入資料。 資料量置於`HGLOBAL`不能超過目前的記憶體區塊大小。 此外，無法重新配置較大的區塊。  
+ If `phGlobal` is **NULL**, then a new `HGLOBAL` should be allocated and returned in `phGlobal`. Otherwise, the `HGLOBAL` specified by `phGlobal` should be filled with the data. The amount of data placed in the `HGLOBAL` must not exceed the current size of the memory block. Also, the block cannot be reallocated to a larger size.  
   
- 這是進階可覆寫。 覆寫此函式可提供您要求的格式和 「 中 」 的資料。 根據您的資料，您可以改為覆寫這個函式的其他版本的其中一個。 如果您想要處理多個儲存媒體，覆寫[OnRenderData](#onrenderdata)。 如果您在檔案中，或資料的大小不固定，覆寫[OnRenderFileData](#onrenderfiledata)。 如需有關延遲轉譯為 mfc 已處理，請參閱文章[資料物件和資料來源︰ 管理](../../mfc/data-objects-and-data-sources-manipulation.md)。  
+ This is an advanced overridable. Override this function to supply your data in the requested format and medium. Depending on your data, you may want to override one of the other versions of this function instead. If you want to handle multiple storage media, override [OnRenderData](#onrenderdata). If your data is in a file, or is of variable size, override [OnRenderFileData](#onrenderfiledata). For more information on delayed rendering as handled by MFC, see the article [Data Objects and Data Sources: Manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).  
   
- 如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK.  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
- 由架構呼叫以設定或取代中的資料`COleDataSource`物件中指定的格式。  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
+ Called by the framework to set or replace the data in the `COleDataSource` object in the specified format.  
   
 ```  
 virtual BOOL OnSetData(
@@ -435,37 +439,37 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構，指定要取代的資料格式。  
+ Points to the [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structure specifying the format in which data is being replaced.  
   
  `lpStgMedium`  
- 指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)結構，其中包含的資料，將會取代目前的內容`COleDataSource`物件。  
+ Points to the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) structure containing the data that will replace the current contents of the `COleDataSource` object.  
   
  `bRelease`  
- 指出誰完成函式呼叫後之儲存媒體的擁有權。 呼叫端決定誰負責釋放之儲存媒體代表配置的資源。 呼叫端會藉由設定`bRelease`。 如果`bRelease`為非零，資料來源取得擁有權，使用它完成時釋放媒體。 當`bRelease`為 0、 呼叫端保留擁有權和資料來源可以只針對在呼叫期間使用之儲存媒體。  
+ Indicates who has ownership of the storage medium after completing the function call. The caller decides who is responsible for releasing the resources allocated on behalf of the storage medium. The caller does this by setting `bRelease`. If `bRelease` is nonzero, the data source takes ownership, freeing the medium when it has finished using it. When `bRelease` is 0, the caller retains ownership and the data source can use the storage medium only for the duration of the call.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 資料來源不會擁有權的資料，直到它成功取得它。 也就是說，它不會擁有權如果`OnSetData`傳回 0。 如果資料來源取得擁有權，才會釋出儲存媒體藉由呼叫[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)函式。  
+### <a name="remarks"></a>Remarks  
+ The data source does not take ownership of the data until it has successfully obtained it. That is, it does not take ownership if `OnSetData` returns 0. If the data source takes ownership, it frees the storage medium by calling the [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) function.  
   
- 預設實作不做任何動作。 覆寫這個函式來取代指定的格式中的資料。 這是進階可覆寫。  
+ The default implementation does nothing. Override this function to replace the data in the specified format. This is an advanced overridable.  
   
- 如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)函式的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) and [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) structures and the [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) and [IDataObject::GetData](http://msdn.microsoft.com/library/windows/desktop/ms678431) functions in the Windows SDK.  
   
-##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
- 將中所包含的資料放`COleDataSource`物件上呼叫下列函數的其中一個之後剪貼簿︰ [CacheData](#cachedata)， [CacheGlobalData](#cacheglobaldata)， [DelayRenderData](#delayrenderdata)，或[DelayRenderFileData](#delayrenderfiledata)。  
+##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
+ Puts the data contained in the `COleDataSource` object on the Clipboard after calling one of the following functions: [CacheData](#cachedata), [CacheGlobalData](#cacheglobaldata), [DelayRenderData](#delayrenderdata), or [DelayRenderFileData](#delayrenderfiledata).  
   
 ```  
 void SetClipboard();
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
- [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
- [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [COleDataObject 類別](../../mfc/reference/coledataobject-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDataObject Class](../../mfc/reference/coledataobject-class.md)
 

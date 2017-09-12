@@ -1,51 +1,70 @@
 ---
-title: "Remote Automation 安裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "安裝 Remote Automation"
-  - "Remote Automation, 安裝"
+title: Remote Automation Installation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation [MFC], installation
+- installing Remote Automation [MFC]
 ms.assetid: 9a02c9f6-dfc6-4489-b240-a1afe25fa0c5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Remote Automation 安裝
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 146a571ddd3b612aa7f7b3cb9489bb2764463967
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-遠端自動化有少數元件:  
+---
+# <a name="remote-automation-installation"></a>Remote Automation Installation
+Remote Automation has relatively few components:  
   
--   遠端 Automation 用戶端 Proxy， AUTPRX32.DLL。  
+-   The Remote Automation client proxy, AUTPRX32.DLL.  
   
--   遠端 Automation 伺服器端元件， Automation 管理員， AUTMGR32.EXE。  
+-   The Remote Automation server-side component, the Automation Manager, AUTMGR32.EXE.  
   
--   RAC 管理員， RACMGR32.EXE，與其相符的 RACREG32.DLL。  
+-   The RAC Manager, RACMGR32.EXE, with its matching RACREG32.DLL.  
   
- 其中， RAC 管理員以 Visual Basic 撰寫也需要 Visual Basic 執行階段支援。  安裝套件時， Visual C\+\+ Enterprise Edition 時，這些屬性和其他遠端自動化檔案由設定安裝。  
+ Of these, RAC Manager is written in Visual Basic and therefore needs the Visual Basic run-time support. These and the other Remote Automation files are installed by Setup when you install Visual C++ Enterprise Edition.  
   
- 如果您複製遠端 Automation 元件加入至 Visual C\+\+ 版本企業版未安裝的電腦上，請確定 REGSRV32.EXE 電腦上的路徑使用下列命令列，並註冊 RACREG32.DLL:  
+ If you copy the Remote Automation components to a computer on which Visual C++ version Enterprise Edition is not installed, ensure that REGSRV32.EXE is on the computer's path, and register RACREG32.DLL using the following command line:  
   
  REGSRVR32 RACREG32.DLL  
   
 > [!NOTE]
->  RAC 管理員版本 Visual C\+\+ 5.0 之前的要求 GUAGE32.OCX 和 TABCTL32.OCX。  兩者皆不是這些不需要有的 RAC 管理員版本隨附於 Visual C\+\+ Enterprise Edition，版本 5.0 \(含\) 以後版本是必要的。  
+>  Versions of RAC Manager before Visual C++ 5.0 required GUAGE32.OCX and TABCTL32.OCX. Neither of these is required for the version of RAC Manager that ships with Visual C++ Enterprise Edition, version 5.0 or later.  
   
-## 本章節內容  
- [Automation 管理員](../mfc/automation-manager-mfc.md)  
+## <a name="in-this-section"></a>In This Section  
+ [The Automation Manager](../mfc/automation-manager-mfc.md)  
   
- [Remote Automation 連接管理員](../mfc/remote-automation-connection-manager.md)  
+ [The Remote Automation Connection Manager](../mfc/remote-automation-connection-manager.md)  
   
- [Remote Automation 使用者元件](../mfc/remote-automation-user-components.md)  
+ [Remote Automation User Components](../mfc/remote-automation-user-components.md)  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Remote Automation](../mfc/remote-automation.md)
+
+

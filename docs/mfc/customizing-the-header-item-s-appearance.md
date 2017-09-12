@@ -1,47 +1,66 @@
 ---
-title: "自訂標題項目外觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl 類別, 自訂項目"
-  - "HDS_ 樣式"
-  - "標題控制項, 項目自訂"
+title: Customizing the Header Item&#39;s Appearance | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- header controls [MFC], customization of items
+- CHeaderCtrl class [MFC], customizing the items
+- HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 自訂標題項目外觀
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27f5bc3f96a06c21b559462ea5d003b9d7872a69
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當您先建立標題控制項 \([CHeaderCtrl::Create](../Topic/CHeaderCtrl::Create.md)\) 時藉由設定 *dwStyle* 參數，您可以定義標頭項目的外觀和行為或標題控制項。  
+---
+# <a name="customizing-the-header-item39s-appearance"></a>Customizing the Header Item&#39;s Appearance
+By setting the *dwStyle* parameter when you first create a header control ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), you can define the appearance and behavior of header items or of the header control itself.  
   
- 以下是您可以設定樣式的示範及其用途:  
+ Here is a sampling of the styles you can set, and their purpose:  
   
--   若要將標題項目設成看起來像按鈕，請使用 `HDS_BUTTONS` 樣式。  
+-   To make a header item look like a pushbutton, use the `HDS_BUTTONS` style.  
   
-     如果您要執行滑鼠按一下標題項目的回應的動作，請使用這個樣式，例如以特定欄排序資料，如 Microsoft Outlook。  
+     Use this style if you want to carry out actions in response to mouse clicks on a header item, such as sorting data by a particular column, as is done in Microsoft Outlook.  
   
--   若要指定當滑鼠指標通過時標題項目「熱追蹤」外觀，請使用 `HDS_HOTTRACK` 樣式。  
+-   To give the header items a "hot tracking" appearance when the mouse cursor passes over them, use the `HDS_HOTTRACK` style.  
   
-     熱追蹤於另外的水平棒上顯示作為通過項目的指標的 3D 外框。  
+     Hot tracking displays a 3D outline as the pointer passes over an item in an otherwise flat bar.  
   
--   若要指出標題控制項應被隱藏，請使用 `HDS_HIDDEN` 樣式。  
+-   To indicate that the header control should be hidden, use the `HDS_HIDDEN` style.  
   
-     `HDS_HIDDEN` 樣式表示標題控制項做為資料容器而非視覺控制項。  這個樣式不會在控制項自動隱藏，相反地，會影響 `CHeaderCtrl::Layout`的行為。  在 `WINDOWPOS` 結構的 **cy** 成員傳回的值會是零表示控制項不應該顯示給使用者。  
+     The `HDS_HIDDEN` style indicates that the header control is intended to be used as a data container and not a visual control. This style does not automatically hide the control but, instead, affects the behavior of `CHeaderCtrl::Layout`. The value returned in the **cy** member of the `WINDOWPOS` structure will be zero indicating that the control should not be visible to the user.  
   
- 如需這些屬性的詳細資訊，請參閱 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 中的 [Items](http://msdn.microsoft.com/library/windows/desktop/bb775238)。  如需加入項目至標題控制項的相關資訊，請參閱 [將項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)。  
+ For more information about these properties, see [Items](http://msdn.microsoft.com/library/windows/desktop/bb775238) in the Windows SDK. For information about adding items to a header control, see [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md).  
   
-## 請參閱  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

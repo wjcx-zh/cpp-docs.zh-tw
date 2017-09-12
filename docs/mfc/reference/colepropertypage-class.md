@@ -1,5 +1,5 @@
 ---
-title: "COlePropertyPage 類別 |Microsoft 文件"
+title: COlePropertyPage Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,12 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE property pages
-- custom controls [MFC], properties
-- COlePropertyPage class
-- properties [C++], displaying
-- displaying properties
-- property pages, OLE
+- COlePropertyPage [MFC], COlePropertyPage
+- COlePropertyPage [MFC], GetControlStatus
+- COlePropertyPage [MFC], GetObjectArray
+- COlePropertyPage [MFC], GetPageSite
+- COlePropertyPage [MFC], IgnoreApply
+- COlePropertyPage [MFC], IsModified
+- COlePropertyPage [MFC], OnEditProperty
+- COlePropertyPage [MFC], OnHelp
+- COlePropertyPage [MFC], OnInitDialog
+- COlePropertyPage [MFC], OnObjectsChanged
+- COlePropertyPage [MFC], OnSetPageSite
+- COlePropertyPage [MFC], SetControlStatus
+- COlePropertyPage [MFC], SetDialogResource
+- COlePropertyPage [MFC], SetHelpInfo
+- COlePropertyPage [MFC], SetModifiedFlag
+- COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
 caps.latest.revision: 23
 author: mikeblome
@@ -55,17 +65,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 20d70cc25305fc5d17860314d9cfbe927df65c70
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9d2241122ccc31bfeee1a9c132a261561feb60d2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colepropertypage-class"></a>COlePropertyPage 類別
-用來將自訂控制項的屬性顯示在類似對話方塊的圖形介面中。  
+# <a name="colepropertypage-class"></a>COlePropertyPage Class
+Used to display the properties of a custom control in a graphical interface, similar to a dialog box.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE COlePropertyPage : public CDialog  
@@ -73,40 +83,40 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePropertyPage::COlePropertyPage](#colepropertypage)|建構 `COlePropertyPage` 物件。|  
+|[COlePropertyPage::COlePropertyPage](#colepropertypage)|Constructs a `COlePropertyPage` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COlePropertyPage::GetControlStatus](#getcontrolstatus)|表示使用者是否已修改控制項中的值。|  
-|[COlePropertyPage::GetObjectArray](#getobjectarray)|傳回的 [屬性] 頁面上編輯物件的陣列。|  
-|[COlePropertyPage::GetPageSite](#getpagesite)|[屬性] 頁面中傳回的指標`IPropertyPageSite`介面。|  
-|[COlePropertyPage::IgnoreApply](#ignoreapply)|決定哪些控制項不會啟用 [套用] 按鈕。|  
-|[COlePropertyPage::IsModified](#ismodified)|表示使用者是否已修改的屬性頁。|  
-|[COlePropertyPage::OnEditProperty](#oneditproperty)|使用者編輯屬性時，由架構呼叫。|  
-|[COlePropertyPage::OnHelp](#onhelp)|當使用者叫用的說明，由架構呼叫。|  
-|[COlePropertyPage::OnInitDialog](#oninitdialog)|初始化屬性頁時，由架構呼叫。|  
-|[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|選擇其他 OLE 控制項和新的屬性時，由架構呼叫。|  
-|[Colepropertypage](#onsetpagesite)|當屬性框架提供網頁的網站時，由架構呼叫。|  
-|[COlePropertyPage::SetControlStatus](#setcontrolstatus)|設定旗標，指出使用者是否已修改控制項中的值。|  
-|[COlePropertyPage::SetDialogResource](#setdialogresource)|設定屬性頁的對話方塊資源。|  
-|[COlePropertyPage::SetHelpInfo](#sethelpinfo)|設定屬性頁的簡短說明文字、 它的說明檔和其說明內容的名稱。|  
-|[COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|設定旗標，指出使用者是否已修改的屬性頁。|  
-|[COlePropertyPage::SetPageName](#setpagename)|設定屬性頁的名稱 （標題）。|  
+|[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Indicates whether the user has modified the value in the control.|  
+|[COlePropertyPage::GetObjectArray](#getobjectarray)|Returns the array of objects being edited by the property page.|  
+|[COlePropertyPage::GetPageSite](#getpagesite)|Returns a pointer to the property page's `IPropertyPageSite` interface.|  
+|[COlePropertyPage::IgnoreApply](#ignoreapply)|Determines which controls do not enable the Apply button.|  
+|[COlePropertyPage::IsModified](#ismodified)|Indicates whether the user has modified the property page.|  
+|[COlePropertyPage::OnEditProperty](#oneditproperty)|Called by the framework when the user edits a property.|  
+|[COlePropertyPage::OnHelp](#onhelp)|Called by the framework when the user invokes help.|  
+|[COlePropertyPage::OnInitDialog](#oninitdialog)|Called by the framework when the property page is initialized.|  
+|[COlePropertyPage::OnObjectsChanged](#onobjectschanged)|Called by the framework when another OLE control, with new properties, is chosen.|  
+|[COlePropertyPage::OnSetPageSite](#onsetpagesite)|Called by the framework when the property frame provides the page's site.|  
+|[COlePropertyPage::SetControlStatus](#setcontrolstatus)|Sets a flag indicating whether the user has modified the value in the control.|  
+|[COlePropertyPage::SetDialogResource](#setdialogresource)|Sets the property page's dialog resource.|  
+|[COlePropertyPage::SetHelpInfo](#sethelpinfo)|Sets the property page's brief help text, the name of its help file, and its help context.|  
+|[COlePropertyPage::SetModifiedFlag](#setmodifiedflag)|Sets a flag indicating whether the user has modified the property page.|  
+|[COlePropertyPage::SetPageName](#setpagename)|Sets the property page's name (caption).|  
   
-## <a name="remarks"></a>備註  
- 比方說，在屬性頁可能包含一個編輯控制項，可讓使用者檢視和修改控制項的 caption 屬性。  
+## <a name="remarks"></a>Remarks  
+ For instance, a property page may include an edit control that allows the user to view and modify the control's caption property.  
   
- 每個自訂或內建的控制項屬性可以讓控制項的使用者檢視目前的屬性值，視需要修改該值的對話方塊控制項。  
+ Each custom or stock control property can have a dialog control that allows the control's user to view the current property value and modify that value if needed.  
   
- 如需有關使用`COlePropertyPage`，請參閱文章[ActiveX 控制項︰ 屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。  
+ For more information on using `COlePropertyPage`, see the article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -117,11 +127,11 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
   
  `COlePropertyPage`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxctl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
   
-##  <a name="colepropertypage"></a>COlePropertyPage::COlePropertyPage  
- 建構 `COlePropertyPage` 物件。  
+##  <a name="colepropertypage"></a>  COlePropertyPage::COlePropertyPage  
+ Constructs a `COlePropertyPage` object.  
   
 ```  
 COlePropertyPage(
@@ -129,155 +139,155 @@ COlePropertyPage(
     UINT idCaption);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *idDlg*  
- 在對話方塊範本資源識別碼。  
+ Resource ID of the dialog template.  
   
  *idCaption*  
- 資源識別碼屬性頁的標題。  
+ Resource ID of the property page's caption.  
   
-### <a name="remarks"></a>備註  
- 當您實作的子類別`COlePropertyPage`，應該使用您的子類別建構函式`COlePropertyPage`建構函式來識別在對話方塊範本資源所依據的屬性頁，並包含其標題的字串資源。  
+### <a name="remarks"></a>Remarks  
+ When you implement a subclass of `COlePropertyPage`, your subclass's constructor should use the `COlePropertyPage` constructor to identify the dialog-template resource on which the property page is based and the string resource containing its caption.  
   
-##  <a name="getcontrolstatus"></a>COlePropertyPage::GetControlStatus  
- 決定使用者是否已修改的值的屬性頁控制項，並提供指定的資源識別碼。  
+##  <a name="getcontrolstatus"></a>  COlePropertyPage::GetControlStatus  
+ Determines whether the user has modified the value of the property page control with the specified resource ID.  
   
 ```  
 BOOL GetControlStatus(UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nID`  
- 屬性頁控制項的資源識別碼。  
+ Resource ID of a property page control.  
   
-### <a name="return-value"></a>傳回值  
- **TRUE**控制項值已經過修改，否則如果**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the control value has been modified; otherwise **FALSE**.  
   
-##  <a name="getobjectarray"></a>COlePropertyPage::GetObjectArray  
- 傳回的 [屬性] 頁面上編輯物件的陣列。  
+##  <a name="getobjectarray"></a>  COlePropertyPage::GetObjectArray  
+ Returns the array of objects being edited by the property page.  
   
 ```  
 LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pnObjects`  
- 將會收到頁面所要編輯的物件數目的不帶正負號長整數指標。  
+ Pointer to an unsigned long integer that will receive the number of objects being edited by the page.  
   
-### <a name="return-value"></a>傳回值  
- 陣列的指標`IDispatch`指標，用來存取屬性頁上的每個控制項的屬性。 呼叫端必須釋放這些介面指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an array of `IDispatch` pointers, which are used to access the properties of each control on the property page. The caller must not release these interface pointers.  
   
-### <a name="remarks"></a>備註  
- 每個屬性頁物件維護的指標陣列`IDispatch`頁面所要編輯之物件的介面。 此函式會將其`pnObjects`該陣列中的元素數目的引數和傳回陣列的第一個元素的指標。  
+### <a name="remarks"></a>Remarks  
+ Each property page object maintains an array of pointers to the `IDispatch` interfaces of the objects being edited by the page. This function sets its `pnObjects` argument to the number of elements in that array and returns a pointer to the first element of the array.  
   
-##  <a name="getpagesite"></a>COlePropertyPage::GetPageSite  
- 取得屬性頁的指標`IPropertyPageSite`介面。  
+##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
+ Gets a pointer to the property page's `IPropertyPageSite` interface.  
   
 ```  
 LPPROPERTYPAGESITE GetPageSite();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 屬性頁的指標`IPropertyPageSite`介面。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the property page's `IPropertyPageSite` interface.  
   
-### <a name="remarks"></a>備註  
- 控制項和容器互相合作，讓使用者可以瀏覽並編輯控制項屬性。 控制項提供屬性頁中，每個都是 OLE 物件，可讓使用者編輯一組相關的屬性。 容器會提供顯示屬性頁的內容框架。 對於每個頁面上，屬性框架提供網頁，支援`IPropertyPageSite`介面。  
+### <a name="remarks"></a>Remarks  
+ Controls and containers cooperate so that users can browse and edit control properties. The control provides property pages, each of which is an OLE object that allows the user to edit a related set of properties. The container provides a property frame that displays the property pages. For each page, the property frame provides a page site, which supports the `IPropertyPageSite` interface.  
   
-##  <a name="ignoreapply"></a>COlePropertyPage::IgnoreApply  
- 決定哪些控制項不會啟用 [套用] 按鈕。  
+##  <a name="ignoreapply"></a>  COlePropertyPage::IgnoreApply  
+ Determines which controls do not enable the Apply button.  
   
 ```  
 void IgnoreApply(UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nID`  
- 若要忽略控制項的 ID。  
+ ID of the control to be ignored.  
   
-### <a name="remarks"></a>備註  
- 屬性頁的 [套用] 按鈕會在屬性頁控制項的值有變更時，才啟用。 您可以使用此函式來指定不會導致它們的值變更時，才能啟用 [套用] 按鈕的控制項。  
+### <a name="remarks"></a>Remarks  
+ The property page's Apply button is enabled only when values of property page controls have been changed. Use this function to specify controls that do not cause the Apply button to be enabled when their values change.  
   
-##  <a name="ismodified"></a>COlePropertyPage::IsModified  
- 判斷使用者是否已變更的內容頁上的任何值。  
+##  <a name="ismodified"></a>  COlePropertyPage::IsModified  
+ Determines whether the user has changed any values on the property page.  
   
 ```  
 BOOL IsModified();
 ```  
   
-### <a name="return-value"></a>傳回值  
- **TRUE**如果已修改的屬性頁。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the property page has been modified.  
   
-##  <a name="oneditproperty"></a>COlePropertyPage::OnEditProperty  
- 若要編輯的特定屬性時，架構會呼叫此函式。  
+##  <a name="oneditproperty"></a>  COlePropertyPage::OnEditProperty  
+ The framework calls this function when a specific property is to be edited.  
   
 ```  
 virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dispid`  
- 要編輯之屬性的分派 ID。  
+ Dispatch ID of the property being edited.  
   
-### <a name="return-value"></a>傳回值  
- 預設實作會傳回**FALSE**。 此函式的覆寫應傳回**TRUE**。  
+### <a name="return-value"></a>Return Value  
+ The default implementation returns **FALSE**. Overrides of this function should return **TRUE**.  
   
-### <a name="remarks"></a>備註  
- 您可以覆寫它將焦點設定在頁面上適當的控制項。 預設實作不做任何動作，並傳回**FALSE**。  
+### <a name="remarks"></a>Remarks  
+ You can override it to set the focus to the appropriate control on the page. The default implementation does nothing and returns **FALSE**.  
   
-##  <a name="onhelp"></a>COlePropertyPage::OnHelp  
- 當使用者要求線上說明時，架構會呼叫此函式。  
+##  <a name="onhelp"></a>  COlePropertyPage::OnHelp  
+ The framework calls this function when the user requests online help.  
   
 ```  
 virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpszHelpDir*  
- 包含屬性頁的說明檔的目錄。  
+ Directory containing the property page's help file.  
   
-### <a name="return-value"></a>傳回值  
- 預設實作會傳回**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ The default implementation returns **FALSE**.  
   
-### <a name="remarks"></a>備註  
- 覆寫其內容頁必須執行任何特殊動作，當使用者存取說明。 預設實作不做任何動作，並傳回**FALSE**，這個值會指示架構呼叫 WinHelp。  
+### <a name="remarks"></a>Remarks  
+ Override it if your property page must perform any special action when the user accesses help. The default implementation does nothing and returns **FALSE**, which instructs the framework to call WinHelp.  
   
-##  <a name="oninitdialog"></a>COlePropertyPage::OnInitDialog  
- 初始化屬性頁 對話方塊時，架構會呼叫此函式。  
+##  <a name="oninitdialog"></a>  COlePropertyPage::OnInitDialog  
+ The framework calls this function when the property page's dialog is initialized.  
   
 ```  
 virtual BOOL OnInitDialog();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 預設實作會傳回**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ The default implementation returns **FALSE**.  
   
-### <a name="remarks"></a>備註  
- 覆寫它如果初始化對話方塊時，不需要任何特殊動作。 預設實作會呼叫`CDialog::OnInitDialog`，並傳回**FALSE**。  
+### <a name="remarks"></a>Remarks  
+ Override it if any special action is required when the dialog is initialized. The default implementation calls `CDialog::OnInitDialog` and returns **FALSE**.  
   
-##  <a name="onobjectschanged"></a>COlePropertyPage::OnObjectsChanged  
- 選擇其他 OLE 控制項和新的屬性時，由架構呼叫。  
+##  <a name="onobjectschanged"></a>  COlePropertyPage::OnObjectsChanged  
+ Called by the framework when another OLE control, with new properties, is chosen.  
   
 ```  
 virtual void OnObjectsChanged();
 ```  
   
-### <a name="remarks"></a>備註  
- 當檢視 OLE 控制項的屬性，在開發環境中，非強制回應對話方塊用來顯示其屬性頁。 如果選取另一個控制項，則必須顯示一組不同的屬性頁的一組新的屬性。 架構會呼叫此函式可通知的變更屬性頁。  
+### <a name="remarks"></a>Remarks  
+ When viewing the properties of an OLE control in the developer environment, a modeless dialog box is used to display its property pages. If another control is selected, a different set of property pages must be displayed for the new set of properties. The framework calls this function to notify the property page of the change.  
   
- 覆寫此函式以接收通知，此動作，並執行任何特殊動作。  
+ Override this function to receive notification of this action and perform any special actions.  
   
-##  <a name="onsetpagesite"></a>Colepropertypage  
- 當屬性框架提供屬性頁的網頁時，架構會呼叫此函式。  
+##  <a name="onsetpagesite"></a>  COlePropertyPage::OnSetPageSite  
+ The framework calls this function when the property frame provides the property page's page site.  
   
 ```  
 virtual void OnSetPageSite();
 ```  
   
-### <a name="remarks"></a>備註  
- 預設實作載入網頁的標題，並嘗試判斷從對話方塊資源的頁面大小。 覆寫這個函式，如果屬性頁需要進一步的動作。覆寫應呼叫基底類別實作。  
+### <a name="remarks"></a>Remarks  
+ The default implementation loads the page's caption and attempts to determine the page's size from the dialog resource. Override this function if your property page requires any further action; your override should call the base-class implementation.  
   
-##  <a name="setcontrolstatus"></a>COlePropertyPage::SetControlStatus  
- 屬性頁控制項狀態變更。  
+##  <a name="setcontrolstatus"></a>  COlePropertyPage::SetControlStatus  
+ Changes the status of a property page control.  
   
 ```  
 BOOL SetControlStatus(
@@ -285,32 +295,32 @@ BOOL SetControlStatus(
     BOOL bDirty);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nID`  
- 包含屬性頁控制項 ID。  
+ Contains the ID of a property page control.  
   
  `bDirty`  
- 指定是否已修改的屬性頁面的欄位。 設定為**TRUE**如果欄位已被修改， **FALSE**如果未修改。  
+ Specifies if a field of the property page has been modified. Set to **TRUE** if the field has been modified, **FALSE** if it has not been modified.  
   
-### <a name="return-value"></a>傳回值  
- **TRUE**，如果指定的控制項已設定，否則**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE**, if the specified control was set; otherwise **FALSE**.  
   
-### <a name="remarks"></a>備註  
- 如果屬性頁控制項的狀態已變更，關閉 [屬性] 頁面上，或選擇 [套用] 按鈕時，會以適當的值更新控制項的屬性。  
+### <a name="remarks"></a>Remarks  
+ If the status of a property page control is dirty when the property page is closed or the Apply button is chosen, the control's property will be updated with the appropriate value.  
   
-##  <a name="setdialogresource"></a>COlePropertyPage::SetDialogResource  
- 設定屬性頁的對話方塊資源。  
+##  <a name="setdialogresource"></a>  COlePropertyPage::SetDialogResource  
+ Sets the property page's dialog resource.  
   
 ```  
 void SetDialogResource(HGLOBAL hDialog);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *hDialog*  
- 屬性頁的對話方塊資源的控制代碼。  
+ Handle to the property page's dialog resource.  
   
-##  <a name="sethelpinfo"></a>COlePropertyPage::SetHelpInfo  
- 指定工具提示資訊、 說明檔案名稱和屬性頁的說明內容。  
+##  <a name="sethelpinfo"></a>  COlePropertyPage::SetHelpInfo  
+ Specifies tooltip information, the help filename, and the help context for your property page.  
   
 ```  
 void SetHelpInfo(
@@ -319,42 +329,42 @@ void SetHelpInfo(
     DWORD dwHelpContext = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpszDocString*  
- 字串，包含顯示在狀態列上或其他位置的簡短說明資訊。  
+ A string containing brief help information for display in a status bar or other location.  
   
  `lpszHelpFile`  
- 屬性頁的說明檔的名稱。  
+ Name of the property page's help file.  
   
  *dwHelpContext*  
- [屬性] 頁面上的說明內容。  
+ Help context for the property page.  
   
-##  <a name="setmodifiedflag"></a>COlePropertyPage::SetModifiedFlag  
- 表示使用者是否已修改的屬性頁。  
+##  <a name="setmodifiedflag"></a>  COlePropertyPage::SetModifiedFlag  
+ Indicates whether the user has modified the property page.  
   
 ```  
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bModified`  
- 指定屬性頁的已修改的旗標的新值。  
+ Specifies the new value for the property page's modified flag.  
   
-##  <a name="setpagename"></a>COlePropertyPage::SetPageName  
- 設定屬性頁的名稱，通常會顯示屬性框架資料頁的索引標籤。  
+##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  
+ Sets the property page's name, which the property frame will typically display on the page's tab.  
   
 ```  
 void SetPageName(LPCTSTR lpszPageName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpszPageName*  
- 包含屬性頁的名稱之字串的指標。  
+ Pointer to a string containing the property page's name.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 CIRC3](../../visual-cpp-samples.md)   
- [MFC 範例 TESTHELP](../../visual-cpp-samples.md)   
- [CDialog 類別](../../mfc/reference/cdialog-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CDialog 類別](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CIRC3](../../visual-cpp-samples.md)   
+ [MFC Sample TESTHELP](../../visual-cpp-samples.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

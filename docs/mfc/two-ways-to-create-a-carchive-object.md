@@ -1,79 +1,98 @@
 ---
-title: "建立 CArchive 物件的兩種方式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CArchive"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArchive 類別, 關閉 CArchive 物件"
-  - "CArchive 類別, 建構函式"
-  - "CArchive 物件"
-  - "CArchive 物件, 關閉"
-  - "資料儲存 [C++], CArchive 類別"
-  - "I/O [MFC], 建立 CArchive 物件"
-  - "序列化 [C++], CArchive 類別"
-  - "儲存 [C++], CArchive 類別"
+title: Two Ways to Create a CArchive Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CArchive
+dev_langs:
+- C++
+helpviewer_keywords:
+- CArchive class [MFC], closing CArchive objects
+- CArchive objects [MFC], closing
+- I/O [MFC], creating CArchive objects
+- serialization [MFC], CArchive class
+- CArchive objects [MFC]
+- storage [MFC], CArchive class [MFC]
+- data storage [MFC], CArchive class
+- CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 建立 CArchive 物件的兩種方式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 13ac03d1c1188dff80c8ca0f33d39a8554a106c1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-有兩種方法可以建立 `CArchive` 物件：  
+---
+# <a name="two-ways-to-create-a-carchive-object"></a>Two Ways to Create a CArchive Object
+There are two ways to create a `CArchive` object:  
   
--   [透過框架隱含的建立 CArchive 物件](#_core_implicit_creation_of_a_carchive_object_via_the_framework)  
+-   [Implicit creation of a CArchive object via the framework](#_core_implicit_creation_of_a_carchive_object_via_the_framework)  
   
--   [明確的建立 CArchive 物件](#_core_explicit_creation_of_a_carchive_object)  
+-   [Explicit creation of a CArchive object](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> 透過框架隱含的建立 CArchive 物件  
- 最常見且最簡單方式，是讓架構為您的文件建立 `CArchive` 物件表示儲存，儲存為文件的和開啟檔案功能表上的命令。  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> Implicit Creation of a CArchive Object via the Framework  
+ The most common, and easiest, way is to let the framework create a `CArchive` object for your document on behalf of the Save, Save As, and Open commands on the File menu.  
   
- 以下是架構如何進行，當應用程式的使用者從檔案功能表的命令發行另存新檔:  
+ Here is what the framework does when the user of your application issues the Save As command from the File menu:  
   
-1.  顯示 \[**儲存**\] 對話方塊並從使用者取得這個檔名。  
+1.  Presents the **Save As** dialog box and gets the filename from the user.  
   
-2.  以 `CFile` 物件開啟使用者命名的檔案。  
+2.  Opens the file named by the user as a `CFile` object.  
   
-3.  建立指向這個 `CFile` 物件的 `CArchive` 物件。  在建立 `CArchive` 物件，架構設定模式「儲存」\(寫入，序列化\)，與「載入」\(讀取，序列化\) 相反。  
+3.  Creates a `CArchive` object that points to this `CFile` object. In creating the `CArchive` object, the framework sets the mode to "store" (write, serialize), as opposed to "load" (read, deserialize).  
   
-4.  呼叫定義自您的 **CDocument** 衍生類別的 `Serialize` 函式，傳遞它 `CArchive` 物件的參考。  
+4.  Calls the `Serialize` function defined in your **CDocument**-derived class, passing it a reference to the `CArchive` object.  
   
- 您的文件的 `Serialize` 函式將資料寫入至 `CArchive` 物件，如之後的簡短說明一般。  在從 `Serialize` 函式傳回時，這個框架終結 `CArchive` 物件和 `CFile` 物件。  
+ Your document's `Serialize` function then writes data to the `CArchive` object, as explained shortly. Upon return from your `Serialize` function, the framework destroys the `CArchive` object and then the `CFile` object.  
   
- 因此，如果您讓架構建立文件的 `CArchive` 物件，您只需要實作來回封存寫入和讀取文件的 `Serialize` 函式。  您也必須實作所有文件的 `Serialize` 函式直接或間接接著序列化 `CObject` 衍生物件的 `Serialize`。  
+ Thus, if you let the framework create the `CArchive` object for your document, all you have to do is implement the document's `Serialize` function that writes and reads to and from the archive. You also have to implement `Serialize` for any `CObject`-derived objects that the document's `Serialize` function in turn serializes directly or indirectly.  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a> 明確的建立 CArchive 物件  
- 除了透過架構序列化，您可能有其他場合需要 `CArchive` 物件。  例如，您可能會想來回序列化剪貼簿中的資料，由 `CSharedFile` 物件表示。  或者，您可能想要使用儲存不同於架構提供的檔案的使用使用者介面。  在這種情況下，您可以明確建立 `CArchive` 物件。  使用下列程序，這樣做與架構方式相同。  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> Explicit Creation of a CArchive Object  
+ Besides serializing a document via the framework, there are other occasions when you may need a `CArchive` object. For example, you might want to serialize data to and from the Clipboard, represented by a `CSharedFile` object. Or, you may want to use a user interface for saving a file that is different from the one offered by the framework. In this case, you can explicitly create a `CArchive` object. You do this the same way the framework does, using the following procedure.  
   
-#### 明確建立 CArchive 物件  
+#### <a name="to-explicitly-create-a-carchive-object"></a>To explicitly create a CArchive object  
   
-1.  建立 `CFile`或從 `CFile` 衍生的物件。  
+1.  Construct a `CFile` object or an object derived from `CFile`.  
   
-2.  如下列範例所示，傳遞 `CFile` 物件至建構函式給 `CArchive`:  
+2.  Pass the `CFile` object to the constructor for `CArchive`, as shown in the following example:  
   
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/CPP/two-ways-to-create-a-carchive-object_1.cpp)]  
+     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]  
   
-     傳遞給 `CArchive` 建構函式的第二個引數是指定的列舉值指定是否為儲存或載入資料會使用來回檔案。  `Serialize` 函式會為封存物件呼叫 `IsStoring` 函式來檢查這個狀態的物件。  
+     The second argument to the `CArchive` constructor is an enumerated value that specifies whether the archive will be used for storing or loading data to or from the file. The `Serialize` function of an object checks this state by calling the `IsStoring` function for the archive object.  
   
- 當您完成從或往 `CArchive` 物件儲存或載入，請將其關閉。  雖然 `CArchive` \(和 `CFile`\) 物件會自動關閉封存 \(和檔案\)，最好先明確如此，因為從錯誤復原更加容易。  如需錯誤處理的詳細資訊，請參閱本文件的 [例外狀況:攔截和刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
+ When you are finished storing or loading data to or from the `CArchive` object, close it. Although the `CArchive` (and `CFile`) objects will automatically close the archive (and file), it is good practice to explicitly do so since it makes recovery from errors easier. For more information about error handling, see the article [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-#### 關閉 CArchive 物件  
+#### <a name="to-close-the-carchive-object"></a>To close the CArchive object  
   
-1.  下列範例示範如何關閉 `CArchive` 物件。  
+1.  The following example illustrates how to close the `CArchive` object:  
   
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/CPP/two-ways-to-create-a-carchive-object_2.cpp)]  
+     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]  
   
-## 請參閱  
- [序列化：序列化物件](../mfc/serialization-serializing-an-object.md)
+## <a name="see-also"></a>See Also  
+ [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md)
+
+

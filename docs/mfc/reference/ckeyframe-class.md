@@ -1,5 +1,5 @@
 ---
-title: "CKeyFrame 類別 |Microsoft 文件"
+title: CKeyFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CKeyFrame class
+- CKeyFrame [MFC], CKeyFrame
+- CKeyFrame [MFC], AddToStoryboard
+- CKeyFrame [MFC], AddToStoryboardAfterTransition
+- CKeyFrame [MFC], AddToStoryboardAtOffset
+- CKeyFrame [MFC], GetExistingKeyframe
+- CKeyFrame [MFC], GetOffset
+- CKeyFrame [MFC], GetTransition
+- CKeyFrame [MFC], m_offset
+- CKeyFrame [MFC], m_pExistingKeyFrame
+- CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
 caps.latest.revision: 18
 author: mikeblome
@@ -44,17 +53,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d8ecff2e36148fb114ee708712b6e8bd0fe558ed
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f7fbeccae04eaeb02be295c45b33db20144f115
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ckeyframe-class"></a>CKeyFrame 類別
-表示動畫主要畫面格。  
+# <a name="ckeyframe-class"></a>CKeyFrame Class
+Represents an animation keyframe.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CKeyFrame : public CBaseKeyFrame;  
@@ -62,46 +71,46 @@ class CKeyFrame : public CBaseKeyFrame;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::CKeyFrame](#ckeyframe)|多載。 建構主要畫面格相依於其他主要畫面格。|  
+|[CKeyFrame::CKeyFrame](#ckeyframe)|Overloaded. Constructs a keyframe that depends on other keyframe.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|將主要畫面格加入至分鏡腳本。 (覆寫[CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard)。)|  
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|加入分鏡腳本完成轉換之後的主要畫面格。|  
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|加入主要畫面格位移分鏡腳本。|  
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|傳回這個主要畫面格取決於主要畫面格的指標。|  
-|[CKeyFrame::GetOffset](#getoffset)|傳回從其他主要畫面格的位移。|  
-|[CKeyFrame::GetTransition](#gettransition)|傳回的指標轉換，取決於此主要畫面格。|  
+|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Adds a keyframe to a storyboard. (Overrides [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
+|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Adds a keyframe to storyboard after transition.|  
+|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Adds a keyframe to storyboard at offset.|  
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Returns a pointer to a keyframe this keyframe depends on.|  
+|[CKeyFrame::GetOffset](#getoffset)|Returns an offset from other keyframe.|  
+|[CKeyFrame::GetTransition](#gettransition)|Returns a pointer to a transition this keyframe depends on.|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::m_offset](#m_offset)|指定從主要畫面格 m_pExistingKeyFrame 中儲存此主要畫面格的位移。|  
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|儲存至現有的 keframe 的指標。 此主要畫面格加入與現有的主要畫面格 m_offset 分鏡腳本。|  
-|[CKeyFrame::m_pTransition](#m_ptransition)|儲存的指標來開始這個主要畫面格的轉換。|  
+|[CKeyFrame::m_offset](#m_offset)|Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.|  
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.|  
+|[CKeyFrame::m_pTransition](#m_ptransition)|Stores a pointer to transtion that begins at this keyframe.|  
   
-## <a name="remarks"></a>備註  
- 這個類別會實作動畫主要畫面格。 主要畫面格代表一個時間點內的分鏡腳本的時間，而且可用來指定轉換的開始和結束時間。 主要畫面格可能根據其他主要畫面格的位移 （以秒為單位），或可能根據轉換，以及擁有代表這項轉換結束時的時間點。  
+## <a name="remarks"></a>Remarks  
+ This class implements an animation keyframe. A keyframe represents a moment in time within a storyboard and can be used to specify the start and end times of transitions. A keyframe may be based on other keyframe and have an offset (in seconds) from it, or may be based on a transition and represent a moment in time when this transition ends.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseKeyFrame](../../mfc/reference/cbasekeyframe-class.md)  
   
  [CKeyFrame](../../mfc/reference/ckeyframe-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
- 將主要畫面格加入至分鏡腳本。  
+##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard  
+ Adds a keyframe to a storyboard.  
   
 ```  
 virtual BOOL AddToStoryboard(
@@ -109,21 +118,21 @@ virtual BOOL AddToStoryboard(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 分鏡腳本指標。  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- 指定是否要加入主要畫面格，或轉換以遞迴方式。  
+ Specifies whether to add keyframe or transition recursively.  
   
-### <a name="return-value"></a>傳回值  
- 如果為 TRUE，成功加入主要畫面格。  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>備註  
- 這個方法會加入至分鏡腳本主要畫面格。 如果它相依於其他主要畫面格或轉換 bDeepAdd 為 TRUE，這個方法會嘗試以遞迴方式加入。  
+### <a name="remarks"></a>Remarks  
+ This method adds a keyframe to storyboard. If it depends on other keyframe or transition and bDeepAdd is TRUE, this method tries to add them recursively.  
   
-##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
- 加入分鏡腳本完成轉換之後的主要畫面格。  
+##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition  
+ Adds a keyframe to storyboard after transition.  
   
 ```  
 BOOL AddToStoryboardAfterTransition(
@@ -131,21 +140,21 @@ BOOL AddToStoryboardAfterTransition(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 分鏡腳本指標。  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- 指定是否要轉換以遞迴方式加入。  
+ Specifies whether to add a transition recursively.  
   
-### <a name="return-value"></a>傳回值  
- 如果為 TRUE，成功加入主要畫面格。  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>備註  
- 架構以新增主要畫面格分鏡腳本完成轉換之後會呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework to add a keyframe to storyboard after transition.  
   
-##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
- 加入主要畫面格位移分鏡腳本。  
+##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset  
+ Adds a keyframe to storyboard at offset.  
   
 ```  
 virtual BOOL AddToStoryboardAtOffset(
@@ -153,21 +162,21 @@ virtual BOOL AddToStoryboardAtOffset(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 分鏡腳本指標。  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- 指定是否要加入主要畫面格至此主要畫面格定以遞迴方式。  
+ Specifies whether to add a keyframe this keyframe depend on recursively.  
   
-### <a name="return-value"></a>傳回值  
- 如果為 TRUE，成功加入主要畫面格。  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>備註  
- 此函式會呼叫架構以新增至腳本位移主要畫面格。  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework to add a keyframe to storyboard at offset.  
   
-##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
- 建構取決於轉換的主要畫面格。  
+##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame  
+ Constructs a keyframe that depends on a transition.  
   
 ```  
 CKeyFrame(CBaseTransition* pTransition);
@@ -178,79 +187,79 @@ CKeyFrame(
     UI_ANIMATION_SECONDS offset = 0.0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pTransition`  
- 轉換指標。  
+ A pointer to a transition.  
   
  `pKeyframe`  
- 主要畫面格指標。  
+ A pointer to keyframe.  
   
  `offset`  
- 以秒為單位，從主要畫面格 pKeyframe 所指定的位移。  
+ Offset, in seconds, from keyframe specified by pKeyframe.  
   
-### <a name="remarks"></a>備註  
- 指定的轉換結束時，建構的主要畫面格會呈現在腳本內的時間點。  
+### <a name="remarks"></a>Remarks  
+ The constructed keyframe will represent a moment in time within a storyboard when the specified transition ends.  
   
-##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
- 傳回這個主要畫面格取決於主要畫面格的指標。  
+##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe  
+ Returns a pointer to a keyframe this keyframe depends on.  
   
 ```  
 CBaseKeyFrame* GetExistingKeyframe();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 主要畫面格或如果此主要畫面格不相依於其他主要畫面格則為 NULL 的有效指標。  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to keyframe, or NULL if this keyframe does not depend on other keyframe.  
   
-### <a name="remarks"></a>備註  
- 這是取決於此主要畫面格的主要畫面格的存取子。  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to a keyframe this keyframe depends on.  
   
-##  <a name="getoffset"></a>CKeyFrame::GetOffset  
- 傳回從其他主要畫面格的位移。  
+##  <a name="getoffset"></a>  CKeyFrame::GetOffset  
+ Returns an offset from other keyframe.  
   
 ```  
 UI_ANIMATION_SECONDS GetOffset();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 以秒為單位，從其他主要畫面格的位移。  
+### <a name="return-value"></a>Return Value  
+ An offset in seconds from other keyframe.  
   
-### <a name="remarks"></a>備註  
- 若要判斷位移 （秒） 從其他主要畫面格，應該呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ This method should be called to determine an offset in seconds from other keyframe.  
   
-##  <a name="gettransition"></a>CKeyFrame::GetTransition  
- 傳回的指標轉換，取決於此主要畫面格。  
+##  <a name="gettransition"></a>  CKeyFrame::GetTransition  
+ Returns a pointer to a transition this keyframe depends on.  
   
 ```  
 CBaseTransition* GetTransition();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 有效的指標轉換，或如果此主要畫面格不會根據轉換為 NULL。  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to transition, or NULL if this keyframe does not depend on transition.  
   
-### <a name="remarks"></a>備註  
- 這是轉換，取決於此主要畫面格的存取子。  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to a transition this keyframe depends on.  
   
-##  <a name="m_offset"></a>CKeyFrame::m_offset  
- 指定從主要畫面格 m_pExistingKeyFrame 中儲存此主要畫面格的位移。  
+##  <a name="m_offset"></a>  CKeyFrame::m_offset  
+ Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
- 儲存至現有的 keframe 的指標。 此主要畫面格加入與現有的主要畫面格 m_offset 分鏡腳本。  
+##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame  
+ Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
- 儲存的指標來開始這個主要畫面格的轉換。  
+##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition  
+ Stores a pointer to transtion that begins at this keyframe.  
   
 ```  
 CBaseTransition* m_pTransition;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

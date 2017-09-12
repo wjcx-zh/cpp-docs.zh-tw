@@ -1,85 +1,104 @@
 ---
-title: "裝置內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BeginPaint 方法, CPaintDC"
-  - "CClientDC 類別, 和 GetDC 方法"
-  - "CClientDC 類別, 和 ReleaseDC 方法"
-  - "CDC 類別, 物件"
-  - "工作區"
-  - "工作區, 和裝置內容"
-  - "CMetaFileDC 類別, 和 OnPrepareDC 方法"
-  - "CPaintDC 類別, 繪製的裝置內容"
-  - "裝置內容 [C++]"
-  - "裝置內容 [C++], 關於裝置內容"
-  - "裝置內容 [C++], CDC 類別"
-  - "裝置獨立繪圖"
-  - "繪製, 裝置內容"
-  - "繪製, 直接到視窗"
-  - "繪製, 在滑鼠和裝置內容中"
-  - "EndPaint 方法"
-  - "框架視窗 [C++], 裝置內容"
-  - "GDI 物件 [C++], 裝置內容"
-  - "GetDC 方法和 CClientDC 類別"
-  - "圖形物件, 裝置內容"
-  - "中繼檔和裝置內容"
-  - "滑鼠 [C++], 繪圖和裝置內容"
-  - "OnPrepareDC 方法"
-  - "繪製和裝置內容"
-  - "印表機 [C++], 裝置內容"
-  - "ReleaseDC 方法"
-  - "使用者介面 [C++], 裝置內容"
-  - "視窗 [C++], 和裝置內容"
-  - "視窗 [C++], 直接繪圖到"
+title: Device Contexts | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnPrepareDC method [MFC]
+- windows [MFC], and device context
+- drawing [MFC], device context
+- CClientDC class [MFC], and GetDC method [MFC]
+- drawing [MFC], in mouse and device contexts
+- CDC class [MFC], objects
+- device contexts [MFC]
+- client areas
+- CMetaFileDC class [MFC], and OnPrepareDC method [MFC]
+- GDI objects [MFC], device contexts
+- graphic objects [MFC], device contexts
+- frame windows [MFC], device contexts
+- metafiles and device contexts
+- EndPaint method [MFC]
+- printers [MFC], device contexts
+- mouse [MFC], drawing and device contexts
+- BeginPaint method, CPaintDC
+- CPaintDC class [MFC], device context for painting
+- windows [MFC], drawing directly into
+- client areas, and device context
+- device contexts [MFC], CDC class [MFC]
+- user interface [MFC], device contexts
+- device-independent drawing
+- GetDC method and CClientDC class [MFC]
+- CClientDC class [MFC], and ReleaseDC method [MFC]
+- ReleaseDC method [MFC]
+- device contexts [MFC], about device contexts
+- drawing [MFC], directly into windows
+- painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 裝置內容
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4fc2e2ddf2bc1313e1195fd5c31f14cff2fa7d68
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-裝置內容是包含裝置的繪圖屬性視窗資料結構等資訊顯示或印表機。  所有繪製呼叫透過裝置內容物件呼叫，封裝繪製線條、形狀和文字的 Windows API。  裝置內容允許在視窗的與裝置無關的繪圖。  裝置內容可以用來繪製至畫面，印表機，或加入至中繼檔。  
+---
+# <a name="device-contexts"></a>Device Contexts
+A device context is a Windows data structure containing information about the drawing attributes of a device such as a display or a printer. All drawing calls are made through a device-context object, which encapsulates the Windows APIs for drawing lines, shapes, and text. Device contexts allow device-independent drawing in Windows. Device contexts can be used to draw to the screen, to the printer, or to a metafile.  
   
- [CPaintDC](../mfc/reference/cpaintdc-class.md) 物件在裝置內容封裝，呼叫 `BeginPaint` 函式，然後繪製，然後呼叫 `EndPaint` 函式的視窗慣用語。  `CPaintDC` 建構函式會呼叫，則為 `BeginPaint` ，且解構函式呼叫 `EndPaint`。  簡化的流程是建立 [CDC](../mfc/reference/cdc-class.md) 物件，繪製，然後終結 `CDC` 物件。  在架構中，即使這個處理序自動執行。  特別是，則 `OnDraw` 函式會傳遞 `CPaintDC` 已經準備 \(透過 `OnPrepareDC`\)，因此，您引入它。  這個框架終結，而且基礎裝置內容釋放至傳回的視窗將呼叫加入至 `OnDraw` 函式。  
+ [CPaintDC](../mfc/reference/cpaintdc-class.md) objects encapsulate the common idiom of Windows, calling the `BeginPaint` function, then drawing in the device context, then calling the `EndPaint` function. The `CPaintDC` constructor calls `BeginPaint` for you, and the destructor calls `EndPaint`. The simplified process is to create the [CDC](../mfc/reference/cdc-class.md) object, draw, and then destroy the `CDC` object. In the framework, much of even this process is automated. In particular, your `OnDraw` function is passed a `CPaintDC` already prepared (via `OnPrepareDC`), and you simply draw into it. It is destroyed by the framework and the underlying device context is released to Windows upon return from the call to your `OnDraw` function.  
   
- [CClientDC](../mfc/reference/cclientdc-class.md) 物件封裝與代表視窗的工作區的裝置內容一起使用。  `CClientDC` 建構函式會呼叫 `GetDC` 函式和解構函式呼叫 `ReleaseDC` 函式。  [CWindowDC](../mfc/reference/cwindowdc-class.md) 物件封裝表示整個視窗的裝置內容，包括它的框架。  
+ [CClientDC](../mfc/reference/cclientdc-class.md) objects encapsulate working with a device context that represents only the client area of a window. The `CClientDC` constructor calls the `GetDC` function, and the destructor calls the `ReleaseDC` function. [CWindowDC](../mfc/reference/cwindowdc-class.md) objects encapsulate a device context that represents the whole window, including its frame.  
   
- [CMetaFileDC](../mfc/reference/cmetafiledc-class.md) 物件封裝繪圖到 Windows 中繼檔。  使用 `CPaintDC` 傳遞給 `OnDraw`，您必須在這個案例中呼叫 [OnPrepareDC](../Topic/CView::OnPrepareDC.md) 。  
+ [CMetaFileDC](../mfc/reference/cmetafiledc-class.md) objects encapsulate drawing into a Windows metafile. In contrast to the `CPaintDC` passed to `OnDraw`, you must in this case call [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) yourself.  
   
-## 滑鼠繪圖  
- 在架構計劃進行繪製 \(因此大部分裝置內容工作—在檢視的 `OnDraw` 成員函式。  不過，您可以在其他用途仍然使用裝置內容物件。  例如，在檢視的上方時提供追蹤意見，您需要引入直接檢視，而不用等候 `OnDraw` 呼叫。  
+## <a name="mouse-drawing"></a>Mouse Drawing  
+ Most drawing in a framework program — and thus most device-context work — is done in the view's `OnDraw` member function. However, you can still use device-context objects for other purposes. For example, to provide tracking feedback for mouse movement in a view, you need to draw directly into the view without waiting for `OnDraw` to be called.  
   
- 在這種情況下，您可以使用 [CClientDC](../mfc/reference/cclientdc-class.md) 裝置內容物件引入直接檢視。  
+ In such a case, you can use a [CClientDC](../mfc/reference/cclientdc-class.md) device-context object to draw directly into the view.  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [\<caps:sentence id\="tgt22" sentenceid\="a12b51e88715aef1e34dc9b8f4447117" class\="tgtSentence"\>裝置內容 \(定義\)\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd183553)  
+-   [Device contexts (definition)](http://msdn.microsoft.com/library/windows/desktop/dd183553)  
   
--   [繪製在檢視](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a View](../mfc/drawing-in-a-view.md)  
   
--   [您可以檢視輸入的解譯使用者](../mfc/interpreting-user-input-through-a-view.md)  
+-   [Interpreting User Input Through a View](../mfc/interpreting-user-input-through-a-view.md)  
   
--   [\<caps:sentence id\="tgt25" sentenceid\="f3dbb554cb14503827bf0ebda53953d7" class\="tgtSentence"\>直線和曲線\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd145028)  
+-   [Lines and curves](http://msdn.microsoft.com/library/windows/desktop/dd145028)  
   
--   [\<caps:sentence id\="tgt26" sentenceid\="365f749101c5eabc8b3be48de1dc3d6b" class\="tgtSentence"\>填滿的形狀\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd162714)  
+-   [Filled shapes](http://msdn.microsoft.com/library/windows/desktop/dd162714)  
   
--   [\<caps:sentence id\="tgt27" sentenceid\="dc86a6302992c2d9f64d0fc6a8cfef75" class\="tgtSentence"\>字型和文字\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd144819)  
+-   [Fonts and text](http://msdn.microsoft.com/library/windows/desktop/dd144819)  
   
--   [\<caps:sentence id\="tgt28" sentenceid\="62848e3ce5804aa985513a7922ff87b2" class\="tgtSentence"\>Colors\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd183450)  
+-   [Colors](http://msdn.microsoft.com/library/windows/desktop/dd183450)  
   
--   [\<caps:sentence id\="tgt29" sentenceid\="ee85800dfcba9a5bdf11f101e1bbadeb" class\="tgtSentence"\>座標空間和轉換\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/dd183475)  
+-   [Coordinate spaces and transformations](http://msdn.microsoft.com/library/windows/desktop/dd183475)  
   
-## 請參閱  
- [視窗物件](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "診斷服務 |Microsoft 文件"
+title: Diagnostic Services | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,21 +13,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- diagnosis, diagnostic services
-- diagnostic macros, list of general MFC
-- services, diagnostic
+- diagnosi [MFC]s, diagnostic services
+- diagnostic macros [MFC], list of general MFC
+- services [MFC], diagnostic
 - MFC, diagnostic services
-- general diagnostic functions and variables
-- diagnostics, diagnostic functions and variables
-- diagnostics, list of general MFC
-- diagnosis, diagnostic functions and variables
-- diagnosis, list of general MFC
+- general diagnostic functions and variables [MFC]
+- diagnostics [MFC], diagnostic functions and variables
+- diagnostics [MFC], list of general MFC
+- diagnosis [MFC], diagnostic functions and variables
+- diagnosis [MFC], list of general MFC
 - general diagnostic macros in MFC
-- diagnostic macros
-- diagnostic services
+- diagnostic macros [MFC]
+- diagnostic services [MFC]
 - object diagnostic functions in MFC
-- diagnostics, diagnostic services
-- diagnostic functions and variables
+- diagnostics [MFC], diagnostic services
+- diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 caps.latest.revision: 20
 author: mikeblome
@@ -48,87 +48,87 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: ceaf02cbe0eedec6e8bd4980d87c025d6aa23615
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f486a21308f376362fd236679858411b71dc01a5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="diagnostic-services"></a>診斷服務
-MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵錯。 這些診斷服務包含巨集和全域函式，可讓您追蹤程式的記憶體配置、在執行階段傾印物件的內容，以及在執行階段列印偵錯訊息。 診斷服務的巨集和全域函式可分為下列分類：  
+# <a name="diagnostic-services"></a>Diagnostic Services
+The Microsoft Foundation Class Library supplies many diagnostic services that make debugging your programs easier. These diagnostic services include macros and global functions that allow you to track your program's memory allocations, dump the contents of objects during run time, and print debugging messages during run time. The macros and global functions for diagnostic services are grouped into the following categories:  
   
--   一般診斷巨集  
+-   General diagnostic macros  
   
--   一般診斷函式和變數  
+-   General diagnostic functions and variables  
   
--   物件診斷函式  
+-   Object diagnostic functions  
   
- 這些巨集和函式可供所有類別都衍生自`CObject`MFC 的偵錯和發行版本中。 不過，所有除非`DEBUG_NEW`和**確認**不執行任何動作的發行版本中。  
+ These macros and functions are available for all classes derived from `CObject` in the Debug and Release versions of MFC. However, all except `DEBUG_NEW` and **VERIFY** do nothing in the Release version.  
   
- 在偵錯程式庫中，所有配置的記憶體區塊都會以一系列「保護位元組」(Guard Byte) 來提供支援。 如果這些位元組受到錯誤記憶體寫入的干擾，則診斷常式可能會回報問題。 如果您在實作檔中包含此行：  
+ In the Debug library, all allocated memory blocks are bracketed with a series of "guard bytes." If these bytes are disturbed by an errant memory write, then the diagnostic routines can report a problem. If you include the line:  
   
- [!code-cpp[NVC_MFCCObjectSample # 14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
   
- 在實作檔案中，所有呼叫**新**將儲存的檔名和行號其中發生記憶體配置。 此函式[cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince)會顯示此額外的資訊，讓您找出記憶體流失。 另請參閱類別[CDumpContext](../../mfc/reference/cdumpcontext-class.md)如需有關診斷輸出。  
+ in your implementation file, all calls to **new** will store the filename and line number where the memory allocation took place. The function [CMemoryState::DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) will display this extra information, allowing you to identify memory leaks. Refer also to the class [CDumpContext](../../mfc/reference/cdumpcontext-class.md) for additional information on diagnostic output.  
   
- 此外，C 執行階段程式庫也支援一組可用來偵錯應用程式的診斷函式。 如需詳細資訊，請參閱[偵錯常式](../../c-runtime-library/debug-routines.md)在執行階段程式庫參考。  
+ In addition, the C run-time library also supports a set of diagnostic functions you can use to debug your applications. For more information, see [Debug Routines](../../c-runtime-library/debug-routines.md) in the Run-Time Library Reference.  
   
-### <a name="mfc-general-diagnostic-macros"></a>MFC 一般診斷巨集  
-  
-|||  
-|-|-|  
-|[判斷提示](#assert)|列印訊息，再中止程式，如果指定的運算式評估為**FALSE**中的程式庫的偵錯版本。|  
-|[ASSERT_KINDOF](#assert_kindof)|測試物件是指定類別的物件，還是衍生自指定類別之類別的物件。|  
-|[ASSERT_VALID](#assert_valid)|內部物件的有效性測試藉由呼叫其`AssertValid`成員函式; 通常會覆寫從`CObject`。|
-|[DEBUG_NEW](#debug_new)|提供偵錯模式中所有物件配置的檔案名稱和行號，以協助找出記憶體流失的問題。|  
-|[DEBUG_ONLY](#debug_only)|類似於**ASSERT**但不會測試運算式; 的值適用於程式碼應該只在偵錯模式中執行。|  
-|[請確認且 ENSURE_VALID](#ensure)|用來驗證資料的正確性。|
-|[THIS_FILE](#this_file)|會展開至已編譯之檔案的名稱。|
-|[TRACE](#trace)|提供`printf`-要偵錯版本的程式庫中的功能。|  
-|[確認](#verify)|類似於**ASSERT**但評估程式庫也如同偵錯版本的發行版本中的運算式。|  
-  
-### <a name="mfc-general-diagnostic-variables-and-functions"></a>MFC 一般診斷變數和函式  
+### <a name="mfc-general-diagnostic-macros"></a>MFC General Diagnostic Macros  
   
 |||  
 |-|-|  
-|[afxDump](#afxdump)|傳送的全域變數[CDumpContext](../../mfc/reference/cdumpcontext-class.md)偵錯工具的 [輸出] 視窗或偵錯終端機的資訊。|  
-|[afxMemDF](#afxmemdf)|全域變數，可控制偵錯記憶體配置器的行為。|  
-|[AfxCheckError](#afxcheckerror)|用來測試所傳遞的全域變數**SCODE**查看如果它是錯誤，若是如此，就會擲回適當的錯誤。|  
-|[AfxCheckMemory](#afxcheckmemory)|檢查目前配置之所有記憶體的完整性。|  
-|[AfxDebugBreak](#afxdebugbreak)|導致執行中的中斷。|
-|[AfxDump](#cdumpcontext_in_mfc)|如果在偵錯工具中呼叫，則會一面進行偵錯，一面傾印物件的狀態。|  
-|[AfxDump](#afxdump)|將物件狀態傾印偵錯時的內部函式。|
-|[AfxDumpStack](#afxdumpstack)|產生目前堆疊的映像。 這個函式一律會以靜態方式連結。|  
-|[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|啟用記憶體流失傾印。|  
-|[AfxEnableMemoryTracking](#afxenablememorytracking)|開啟和關閉記憶體追蹤。|  
-|[AfxIsMemoryBlock](#afxismemoryblock)|確認已適當地配置記憶體區塊。|  
-|[AfxIsValidAddress](#afxisvalidaddress)|確認記憶體位址範圍落在程式的範圍內。|  
-|[AfxIsValidString](#afxisvalidstring)|判斷字串指標是否有效。|  
-|[AfxSetAllocHook](#afxsetallochook)|允許對每個記憶體配置呼叫函式。|  
+|[ASSERT](#assert)|Prints a message and then aborts the program if the specified expression evaluates to **FALSE** in the Debug version of the library.|  
+|[ASSERT_KINDOF](#assert_kindof)|Tests that an object is an object of the specified class or of a class derived from the specified class.|  
+|[ASSERT_VALID](#assert_valid)|Tests the internal validity of an object by calling its `AssertValid` member function; typically overridden from `CObject`.|
+|[DEBUG_NEW](#debug_new)|Supplies a filename and line number for all object allocations in Debug mode to help find memory leaks.|  
+|[DEBUG_ONLY](#debug_only)|Similar to **ASSERT** but does not test the value of the expression; useful for code that should execute only in Debug mode.|  
+|[ENSURE and ENSURE_VALID](#ensure)|Use to validate data correctness.|
+|[THIS_FILE](#this_file)|Expands to the name of the file that is being compiled.|
+|[TRACE](#trace)|Provides `printf`-like capability in the Debug version of the library.|  
+|[VERIFY](#verify)|Similar to **ASSERT** but evaluates the expression in the Release version of the library as well as in the Debug version.|  
   
-### <a name="mfc-object-diagnostic-functions"></a>MFC 物件診斷函式  
+### <a name="mfc-general-diagnostic-variables-and-functions"></a>MFC General Diagnostic Variables and Functions  
   
 |||  
 |-|-|  
-|[AfxDoForAllClasses](#afxdoforallclasses)|對所有指定的函式`CObject`-衍生類別，可支援執行階段類型檢查。|  
-|[AfxDoForAllObjects](#afxdoforallobjects)|對所有指定的函式`CObject`-衍生物件的配置與**新**。|  
+|[afxDump](#afxdump)|Global variable that sends [CDumpContext](../../mfc/reference/cdumpcontext-class.md) information to the debugger output window or to the debug terminal.|  
+|[afxMemDF](#afxmemdf)|Global variable that controls the behavior of the debugging memory allocator.|  
+|[AfxCheckError](#afxcheckerror)|Global variable used to test the passed **SCODE** to see if it is an error and, if so, throws the appropriate error.|  
+|[AfxCheckMemory](#afxcheckmemory)|Checks the integrity of all currently allocated memory.|  
+|[AfxDebugBreak](#afxdebugbreak)|Causes a break in execution.|
+|[AfxDump](#cdumpcontext_in_mfc)|If called while in the debugger, dumps the state of an object while debugging.|  
+|[AfxDump](#afxdump)|Internal function that dumps the state of an object while debugging.|
+|[AfxDumpStack](#afxdumpstack)|Generate an image of the current stack. This function is always linked statically.|  
+|[AfxEnableMemoryLeakDump](#afxenablememoryleakdump)|Enables the memory leak dump.|  
+|[AfxEnableMemoryTracking](#afxenablememorytracking)|Turns memory tracking on and off.|  
+|[AfxIsMemoryBlock](#afxismemoryblock)|Verifies that a memory block has been properly allocated.|  
+|[AfxIsValidAddress](#afxisvalidaddress)|Verifies that a memory address range is within the program's bounds.|  
+|[AfxIsValidString](#afxisvalidstring)|Determines whether a pointer to a string is valid.|  
+|[AfxSetAllocHook](#afxsetallochook)|Enables the calling of a function on each memory allocation.|  
+  
+### <a name="mfc-object-diagnostic-functions"></a>MFC Object Diagnostic Functions  
+  
+|||  
+|-|-|  
+|[AfxDoForAllClasses](#afxdoforallclasses)|Performs a specified function on all `CObject`-derived classes that support run-time type checking.|  
+|[AfxDoForAllObjects](#afxdoforallobjects)|Performs a specified function on all `CObject`-derived objects that were allocated with **new**.|  
 
-### <a name="mfc-compilation-macros"></a>MFC 編譯巨集
+### <a name="mfc-compilation-macros"></a>MFC Compilation Macros
 |||
 |-|-|
-|[_AFX_SECURE_NO_WARNINGS，則](#afx_secure_no_warnings)|隱藏關於使用被取代 MFC 的功能的編譯器警告。|  
+|[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Suppresses compiler warnings for the use of deprecated MFC functions.|  
 
 
-## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS，則
-隱藏關於使用被取代 MFC 的功能的編譯器警告。  
+## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
+Suppresses compiler warnings for the use of deprecated MFC functions.  
    
-### <a name="syntax"></a>語法   
+### <a name="syntax"></a>Syntax   
 ```  
 _AFX_SECURE_NO_WARNINGS  
 ```     
-### <a name="example"></a>範例  
- 如果沒有定義 _AFX_SECURE_NO_WARNINGS，則此程式碼範例會產生編譯器警告。  
+### <a name="example"></a>Example  
+ This code sample would cause a compiler warning if _AFX_SECURE_NO_WARNINGS were not defined.  
   
  ```cpp
 // define this before including any afx files in stdafx.h
@@ -142,193 +142,193 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a>AfxDebugBreak
-呼叫此函式會造成中斷 (若要呼叫的位置`AfxDebugBreak`) 執行中的 MFC 應用程式的偵錯版本。  
+## <a name="afxdebugbreak"></a> AfxDebugBreak
+Call this function to cause a break (at the location of the call to `AfxDebugBreak`) in the execution of the debug version of your MFC application.  
 
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
 void AfxDebugBreak( );    
 ```  
    
-### <a name="remarks"></a>備註  
- `AfxDebugBreak`在 MFC 應用程式的發行版本中沒有任何作用，應該移除。 此函式只能用於 MFC 應用程式。 使用 Win32 API 版本， **DebugBreak**、 非 MFC 應用程式中造成中斷。  
+### <a name="remarks"></a>Remarks  
+ `AfxDebugBreak` has no effect in release versions of an MFC application and should be removed. This function should only be used in MFC applications. Use the Win32 API version, **DebugBreak**, to cause a break in non-MFC applications.  
    
-### <a name="requirements"></a>需求  
- **標頭︰** afxver_.h   
+### <a name="requirements"></a>Requirements  
+ **Header:** afxver_.h   
 
-##  <a name="assert"></a>判斷提示
- 會評估其引數。  
+##  <a name="assert"></a>  ASSERT
+ Evaluates its argument.  
   
 ```   
 ASSERT(booleanExpression)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `booleanExpression`  
- 指定評估為非零，則為 0 的運算式 （包括指標值）。  
+ Specifies an expression (including pointer values) that evaluates to nonzero or 0.  
   
-### <a name="remarks"></a>備註  
- 如果結果為 0，巨集會列印診斷訊息，並中止程式。 如果條件為非零，它會執行任何動作。  
+### <a name="remarks"></a>Remarks  
+ If the result is 0, the macro prints a diagnostic message and aborts the program. If the condition is nonzero, it does nothing.  
   
- 診斷資訊的格式如下  
+ The diagnostic message has the form  
   
  `assertion failed in file <name> in line <num>`  
   
- 其中*名稱*是原始程式檔的名稱和*num*是原始程式檔中失敗的判斷提示的行號。  
+ where *name* is the name of the source file, and *num* is the line number of the assertion that failed in the source file.  
   
- 在發行版本的 MFC， **ASSERT**不會評估運算式，而且因此不會中斷程式。 如果不論環境，必須評估運算式，使用**確認**巨集取代**ASSERT**。  
+ In the Release version of MFC, **ASSERT** does not evaluate the expression and thus will not interrupt the program. If the expression must be evaluated regardless of environment, use the **VERIFY** macro in place of **ASSERT**.  
   
 > [!NOTE]
->  此函式是只能在 MFC 的偵錯版本。  
+>  This function is available only in the Debug version of MFC.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="assert_kindof"></a>ASSERT_KINDOF  
- 指向的物件為指定的類別的物件，或從指定的類別衍生類別的物件，這個巨集判斷提示。  
+##  <a name="assert_kindof"></a>  ASSERT_KINDOF  
+ This macro asserts that the object pointed to is an object of the specified class, or is an object of a class derived from the specified class.  
   
 ```   
 ASSERT_KINDOF(classname, pobject)  
 ```  
   
-### <a name="parameters"></a>參數  
- *類別名稱*  
- 名稱`CObject`-衍生的類別。  
+### <a name="parameters"></a>Parameters  
+ *classname*  
+ The name of a `CObject`-derived class.  
   
  *pobject*  
- 類別物件的指標。  
+ A pointer to a class object.  
   
-### <a name="remarks"></a>備註  
- *Pobject*參數應該是物件的指標，而且可以**const**。 指向的物件和類別必須支援`CObject`執行階段類別資訊。 做為範例，以確保`pDocument`是物件的指標`CMyDoc`類別或任何衍生項目，您可以撰寫程式碼︰  
+### <a name="remarks"></a>Remarks  
+ The *pobject* parameter should be a pointer to an object and can be **const**. The object pointed to and the class must support `CObject` run-time class information. As an example, to ensure that `pDocument` is a pointer to an object of the `CMyDoc` class, or any of its derivatives, you could code:  
   
- [!code-cpp[NVC_MFCDocView # 194](../../mfc/codesnippet/cpp/diagnostic-services_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#194](../../mfc/codesnippet/cpp/diagnostic-services_3.cpp)]  
   
- 使用`ASSERT_KINDOF`巨集是完全一樣撰寫程式碼︰  
+ Using the `ASSERT_KINDOF` macro is exactly the same as coding:  
   
- [!code-cpp[NVC_MFCDocView # 195](../../mfc/codesnippet/cpp/diagnostic-services_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView#195](../../mfc/codesnippet/cpp/diagnostic-services_4.cpp)]  
   
- 此函式僅適用於以宣告的類別 [DECLARE_DYNAMIC] (執行的時間-物件層模型-services.md #declare_dynamic 或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)巨集。  
+ This function works only for classes declared with the [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic or [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) macro.  
   
 > [!NOTE]
->  此函式是只能在 MFC 的偵錯版本。  
+>  This function is available only in the Debug version of MFC.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="assert_valid"></a>ASSERT_VALID  
- 使用測試有效性物件的內部狀態的相關假設。  
+##  <a name="assert_valid"></a>  ASSERT_VALID  
+ Use to test your assumptions about the validity of an object's internal state.  
   
 ```   
 ASSERT_VALID(pObject)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pObject`  
- 指定衍生自此類別的物件`CObject`具有覆寫版本的`AssertValid`成員函式。  
+ Specifies an object of a class derived from `CObject` that has an overriding version of the `AssertValid` member function.  
   
-### <a name="remarks"></a>備註  
- `ASSERT_VALID`呼叫`AssertValid`做為其引數傳遞之物件的成員函式。  
+### <a name="remarks"></a>Remarks  
+ `ASSERT_VALID` calls the `AssertValid` member function of the object passed as its argument.  
   
- 在發行版本的 MFC，`ASSERT_VALID`不做任何動作。 在偵錯版本中，驗證指標、 檢查**NULL**，和呼叫物件的自己`AssertValid`成員函式。 如果其中任何一項測試失敗，警示訊息會顯示在相同的方式[ASSERT](#assert)。  
+ In the Release version of MFC, `ASSERT_VALID` does nothing. In the Debug version, it validates the pointer, checks against **NULL**, and calls the object's own `AssertValid` member functions. If any of these tests fails, an alert message is displayed in the same manner as [ASSERT](#assert).  
   
 > [!NOTE]
->  此函式是只能在 MFC 的偵錯版本。  
+>  This function is available only in the Debug version of MFC.  
   
- 如需詳細資訊和範例，請參閱[偵錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。  
+ For more information and examples, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCObjectSample # 19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h
 
-##  <a name="debug_new"></a>DEBUG_NEW  
- 它可以協助您尋找記憶體流失。  
+##  <a name="debug_new"></a>  DEBUG_NEW  
+ Assists in finding memory leaks.  
   
 ```   
 #define  new DEBUG_NEW   
 ```  
   
-### <a name="remarks"></a>備註  
- 您可以使用`DEBUG_NEW`您通常會使用您程式中的所有**新**配置堆積存放集區的運算子。  
+### <a name="remarks"></a>Remarks  
+ You can use `DEBUG_NEW` everywhere in your program that you would ordinarily use the **new** operator to allocate heap storage.  
   
- 偵錯模式中 (當**_DEBUG**已定義符號)，`DEBUG_NEW`會追蹤的每個物件所配置的檔名和行號碼。 然後，當您使用[cmemorystate:: Dumpallobjectssince](cmemorystate-structure.md#dumpallobjectssince)成員函式，以配置每個物件`DEBUG_NEW`上顯示的檔名和行號配置位置。  
+ In debug mode (when the **_DEBUG** symbol is defined), `DEBUG_NEW` keeps track of the filename and line number for each object that it allocates. Then, when you use the [CMemoryState::DumpAllObjectsSince](cmemorystate-structure.md#dumpallobjectssince) member function, each object allocated with `DEBUG_NEW` is shown with the filename and line number where it was allocated.  
   
- 若要使用`DEBUG_NEW`，將下列指示詞插入至原始程式檔︰  
+ To use `DEBUG_NEW`, insert the following directive into your source files:  
   
- [!code-cpp[NVC_MFCCObjectSample # 14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
   
- 一旦您將此指示詞，前置處理器會插入`DEBUG_NEW`無論您使用**新**，和 MFC 會完成其餘工作。 當您編譯程式的發行版本`DEBUG_NEW`解析成簡單**新**不產生作業和檔名和行號資訊。  
+ Once you insert this directive, the preprocessor will insert `DEBUG_NEW` wherever you use **new**, and MFC does the rest. When you compile a release version of your program, `DEBUG_NEW` resolves to a simple **new** operation, and the filename and line number information are not generated.  
   
 > [!NOTE]
->  在舊版的 MFC （4.1 及更早版本），您需要將`#define`呼叫的所有陳述式之後的陳述式`IMPLEMENT_DYNCREATE`或`IMPLEMENT_SERIAL`巨集。 這是不必要的。  
+>  In previous versions of MFC (4.1 and earlier) you needed to put the `#define` statement after all statements that called the `IMPLEMENT_DYNCREATE` or `IMPLEMENT_SERIAL` macros. This is no longer necessary.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h
 
-##  <a name="debug_only"></a>DEBUG_ONLY  
- 在偵錯模式下 (當**_DEBUG**已定義符號)，`DEBUG_ONLY`評估其引數。  
+##  <a name="debug_only"></a>  DEBUG_ONLY  
+ In debug mode (when the **_DEBUG** symbol is defined), `DEBUG_ONLY` evaluates its argument.  
   
 ```   
 DEBUG_ONLY(expression)   
 ```  
   
-### <a name="remarks"></a>備註  
- 在發行組建， **DEBUG_ONLY**不會評估其引數。 當您應該只在偵錯組建中執行的程式碼時，這非常有用。  
+### <a name="remarks"></a>Remarks  
+ In a release build, **DEBUG_ONLY** does not evaluate its argument. This is useful when you have code that should be executed only in debug builds.  
   
- `DEBUG_ONLY`巨集就相當於周圍*運算式*與**#ifdef _DEBUG**和`#endif`。  
+ The `DEBUG_ONLY` macro is equivalent to surrounding *expression* with **#ifdef _DEBUG** and `#endif`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h
 
- ### <a name="ensure"></a>請確認且 ENSURE_VALID
-用來驗證資料的正確性。  
+ ### <a name="ensure"></a>  ENSURE and ENSURE_VALID
+Use to validate data correctness.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
 ENSURE(  booleanExpression )  
 ENSURE_VALID( booleanExpression  )  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `booleanExpression`  
- 指定要測試的布林運算式。  
+ Specifies a boolean expression to be tested.  
    
-### <a name="remarks"></a>備註  
- 這些巨集的目的是要提升驗證的參數。 巨集會阻止進一步處理的程式碼中的參數不正確。 不同於**ASSERT**巨集，**請**巨集擲回的例外狀況，除了產生判斷提示。  
+### <a name="remarks"></a>Remarks  
+ The purpose of these macros is to improve the validation of parameters. The macros prevent further processing of incorrect parameters in your code. Unlike the **ASSERT** macros, the **ENSURE** macros throw an exception in addition to generating an assertion.  
   
- 巨集的行為的兩種方式，根據專案組態。 巨集會呼叫**ASSERT**再擲回例外狀況，如果判斷提示失敗。 因此，在偵錯組態 (也就是其中**_DEBUG**定義) 巨集產生判斷提示，以及在發行組態中的例外狀況，巨集產生的例外狀況 (**ASSERT**不會評估發行組態中的運算式)。  
+ The macros behave in two ways, according to the project configuration. The macros call **ASSERT** and then throw an exception if the assertion fails. Thus, in Debug configurations (that is, where **_DEBUG** is defined) the macros produce an assertion and exception while in Release configurations, the macros produce only the exception (**ASSERT** does not evaluate the expression in Release configurations).  
   
- 巨集**ENSURE_ARG**類似**請**巨集。  
+ The macro **ENSURE_ARG** acts like the **ENSURE** macro.  
   
- **ENSURE_VALID**呼叫`ASSERT_VALID`巨集 （它只在偵錯組建中沒有影響）。 此外， **ENSURE_VALID**指標為 NULL 時擲回例外狀況。 NULL 測試是在偵錯和發行組態中執行。  
+ **ENSURE_VALID** calls the `ASSERT_VALID` macro (which has an effect only in Debug builds). In addition, **ENSURE_VALID** throws an exception if the pointer is NULL. The NULL test is performed in both Debug and Release configurations.  
   
- 如果其中任何一項測試失敗，警示訊息會顯示在相同的方式**ASSERT**。 如果需要巨集，就會擲回例外狀況無效的引數。  
-### <a name="requirements"></a>需求  
- **標頭：** afx.h  
+ If any of these tests fails, an alert message is displayed in the same manner as **ASSERT**. The macro throws an invalid argument exception if needed.  
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
    
-### <a name="see-also"></a>另請參閱  
- [巨集和全域變數](mfc-macros-and-globals.md)   
- [確認](#verify)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
+ [VERIFY](#verify)   
  [ATLENSURE](#altensure)
 
-## <a name="this_file"></a>THIS_FILE
-會展開至已編譯之檔案的名稱。  
+## <a name="this_file"></a> THIS_FILE
+Expands to the name of the file that is being compiled.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
 THIS_FILE    
 ```  
    
-### <a name="remarks"></a>備註  
- 會使用資訊**ASSERT**和**確認**巨集。 應用程式精靈和程式碼精靈會將巨集放在他們建立的原始程式檔。  
+### <a name="remarks"></a>Remarks  
+ The information is used by the **ASSERT** and **VERIFY** macros. The Application Wizard and code wizards place the macro in source code files they create.  
    
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
 ```cpp
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -339,130 +339,130 @@ static char THIS_FILE[] = __FILE__;
 // compiler recognizes. 
 ```
    
-### <a name="requirements"></a>需求  
- **標頭：** afx.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
    
-### <a name="see-also"></a>另請參閱  
- [巨集和全域變數](mfc-macros-and-globals.md)   
- [判斷提示](#assert)   
- [確認](#verify)
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
+ [ASSERT](#assert)   
+ [VERIFY](#verify)
 
 
-##  <a name="trace"></a>追蹤  
- 將指定的字串傳送至目前的應用程式的偵錯工具。  
+##  <a name="trace"></a>  TRACE  
+ Sends the specified string to the debugger of the current application.  
   
 ```   
 TRACE(exp)  
 TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)   
 ```  
   
-### <a name="remarks"></a>備註  
- 請參閱[ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2)的說明**追蹤**。 **追蹤**和`ATLTRACE2`有相同的行為。  
+### <a name="remarks"></a>Remarks  
+ See [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) for a description of **TRACE**. **TRACE** and `ATLTRACE2` have the same behavior.  
   
- 在 MFC 的偵錯版本，此巨集會將指定的字串傳送至目前的應用程式的偵錯工具。 在發行組建，這個巨集，會編譯為 nothing （沒有程式碼產生的話）。  
+ In the debug version of MFC, this macro sends the specified string to the debugger of the current application. In a release build, this macro compiles to nothing (no code is generated at all).  
   
- 如需詳細資訊，請參閱[偵錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。  
+ For more information, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h
 
-##  <a name="verify"></a>確認  
- 在 MFC 的偵錯版本，會評估其引數。  
+##  <a name="verify"></a>  VERIFY  
+ In the Debug version of MFC, evaluates its argument.  
   
 ```   
 VERIFY(booleanExpression)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `booleanExpression`  
- 指定評估為非零，則為 0 的運算式 （包括指標值）。  
+ Specifies an expression (including pointer values) that evaluates to nonzero or 0.  
   
-### <a name="remarks"></a>備註  
- 如果結果為 0，巨集會列印診斷訊息，並中止程式。 如果條件為非零，它會執行任何動作。  
+### <a name="remarks"></a>Remarks  
+ If the result is 0, the macro prints a diagnostic message and halts the program. If the condition is nonzero, it does nothing.  
   
- 診斷資訊的格式如下  
+ The diagnostic message has the form  
   
  `assertion failed in file <name> in line <num>`  
   
- 其中*名稱*是原始程式檔的名稱和*num*是原始程式檔中失敗的判斷提示的行號。  
+ where *name* is the name of the source file and *num* is the line number of the assertion that failed in the source file.  
   
- 在發行版本的 MFC，**確認**會評估運算式，但不會列印或中斷的程式。 例如，如果運算式是函式呼叫，將會進行呼叫。  
+ In the Release version of MFC, **VERIFY** evaluates the expression but does not print or interrupt the program. For example, if the expression is a function call, the call will be made.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>afxDump (MFC 中的 CDumpContext)  
- 提供應用程式中的基本物件傾印功能。  
+##  <a name="cdumpcontext_in_mfc"></a>  afxDump (CDumpContext in MFC)  
+ Provides basic object-dumping capability in your application.  
   
 ```   
 CDumpContext  afxDump;   
 ```  
   
-### <a name="remarks"></a>備註  
- `afxDump`是預先定義[CDumpContext](../../mfc/reference/cdumpcontext-class.md)物件，可讓您傳送`CDumpContext`偵錯工具的 [輸出] 視窗或偵錯終端機的資訊。 一般而言，您提供`afxDump`當做參數`CObject::Dump`。  
+### <a name="remarks"></a>Remarks  
+ `afxDump` is a predefined [CDumpContext](../../mfc/reference/cdumpcontext-class.md) object that allows you to send `CDumpContext` information to the debugger output window or to a debug terminal. Typically, you supply `afxDump` as a parameter to `CObject::Dump`.  
   
- 在 Windows NT 和所有版本的 Windows，`afxDump`偵錯您的應用程式時，輸出會傳送到 Visual c + + 的偵錯輸出視窗。  
+ Under Windows NT and all versions of Windows, `afxDump` output is sent to the Output-Debug window of Visual C++ when you debug your application.  
   
- 定義此變數只在 MFC 的偵錯版本。 如需有關`afxDump`，請參閱[偵錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。  
+ This variable is defined only in the Debug version of MFC. For more information on `afxDump`, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h
 
 
-## <a name="afxdump"></a>AfxDump （內部）
-MFC 會使用來傾印偵錯時的物件狀態的內部函式。  
+## <a name="afxdump"></a> AfxDump (Internal)
+Internal function that MFC uses to dump the state of an object while debugging.  
 
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
 void AfxDump(const CObject* pOb);   
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pOb`  
- 從衍生類別的物件指標`CObject`。  
+ A pointer to an object of a class derived from `CObject`.  
    
-### <a name="remarks"></a>備註  
- **AfxDump**呼叫物件的`Dump`成員函式，並將所指定的位置資訊`afxDump`變數。 **AfxDump**僅適用於 MFC 的偵錯版本。  
+### <a name="remarks"></a>Remarks  
+ **AfxDump** calls an object's `Dump` member function and sends the information to the location specified by the `afxDump` variable. **AfxDump** is available only in the Debug version of MFC.  
   
- 您的程式碼不應該呼叫**AfxDump**，但應該改為呼叫`Dump`成員函式的適當的物件。  
+ Your program code should not call **AfxDump**, but should instead call the `Dump` member function of the appropriate object.  
    
-### <a name="requirements"></a>需求  
- **標頭：** afx.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>See Also  
  [CObject::Dump](cobject-class.md#dump)   
 
 
 
-##  <a name="afxmemdf"></a>afxMemDF  
- 這個變數可從 偵錯工具或程式存取，並可讓您調整配置診斷。  
+##  <a name="afxmemdf"></a>  afxMemDF  
+ This variable is accessible from a debugger or your program and allows you to tune allocation diagnostics.  
   
 ```   
 int  afxMemDF;  
 ```  
   
-### <a name="remarks"></a>備註  
- `afxMemDF`可以是下列值所列舉型別指定`afxMemDF`:  
+### <a name="remarks"></a>Remarks  
+ `afxMemDF` can have the following values as specified by the enumeration `afxMemDF`:  
   
-- **allocMemDF**開啟偵錯配置器 （偵錯程式庫中的預設值）。  
+- **allocMemDF** Turns on debugging allocator (default setting in Debug library).  
   
-- **delayFreeMemDF**延遲釋放記憶體。 當您的程式會釋放記憶體區塊時，配置器不會傳回記憶體基礎作業系統。 這會將最大記憶體壓力放在您的程式。  
+- **delayFreeMemDF** Delays freeing memory. While your program frees a memory block, the allocator does not return that memory to the underlying operating system. This will place maximum memory stress on your program.  
   
-- **checkAlwaysMemDF**呼叫`AfxCheckMemory`每次配置或釋放記憶體。 這會將大幅降低記憶體配置和解除配置。  
+- **checkAlwaysMemDF** Calls `AfxCheckMemory` every time memory is allocated or freed. This will significantly slow memory allocations and deallocations.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h
 
-##  <a name="afxcheckerror"></a>AfxCheckError  
- 此函式會測試傳遞**SCODE**以查看是否發生錯誤。  
+##  <a name="afxcheckerror"></a>  AfxCheckError  
+ This function tests the passed **SCODE** to see if it is an error.  
   
 ```   
 void AFXAPI AfxCheckError(SCODE sc);
@@ -470,99 +470,99 @@ throw CMemoryException*
 throw COleException*  
 ```  
   
-### <a name="remarks"></a>備註  
- 如果是錯誤，函式會擲回例外狀況。 如果傳入`SCODE`是**E_OUTOFMEMORY**，函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)藉由呼叫[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 否則，函式會擲回[COleException](../../mfc/reference/coleexception-class.md)藉由呼叫[AfxThrowOleException](exception-processing.md#afxthrowoleexception)。  
+### <a name="remarks"></a>Remarks  
+ If it is an error, the function throws an exception. If the passed `SCODE` is **E_OUTOFMEMORY**, the function throws a [CMemoryException](../../mfc/reference/cmemoryexception-class.md) by calling [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). Otherwise, the function throws a [COleException](../../mfc/reference/coleexception-class.md) by calling [AfxThrowOleException](exception-processing.md#afxthrowoleexception).  
   
- 這個函式可用來檢查對應用程式中 OLE 函式呼叫的傳回值。 藉由在應用程式中以此函式測試傳回值，您可以用最少的程式碼因應錯誤狀況。  
+ This function can be used to check the return values of calls to OLE functions in your application. By testing the return value with this function in your application, you can properly react to error conditions with a minimal amount of code.  
   
 > [!NOTE]
->  這個函式在偵錯和非偵錯組建中具有相同的效果。  
+>  This function has the same effect in debug and non-debug builds.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCOleContainer # 33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h
 
-##  <a name="afxcheckmemory"></a>AfxCheckMemory  
- 此函式會驗證可用的記憶體集區，並會列印錯誤訊息，視需要。  
+##  <a name="afxcheckmemory"></a>  AfxCheckMemory  
+ This function validates the free memory pool and prints error messages as required.  
   
 ```   
 BOOL  AfxCheckMemory(); 
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果沒有記憶體錯誤，則為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if no memory errors; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果函式偵測到沒有記憶體損毀，它會列印執行任何動作。  
+### <a name="remarks"></a>Remarks  
+ If the function detects no memory corruption, it prints nothing.  
   
- 檢查所有在堆積上目前配置的記憶體區塊，包括所配置**新**但無法直接呼叫基礎的記憶體配置器所配置的這類`malloc`函式或**GlobalAlloc** Windows 函式。 如果發現任何區塊已損毀，則訊息會列印至偵錯工具的輸出。  
+ All memory blocks currently allocated on the heap are checked, including those allocated by **new** but not those allocated by direct calls to underlying memory allocators, such as the `malloc` function or the **GlobalAlloc** Windows function. If any block is found to be corrupted, a message is printed to the debugger output.  
   
- 如果您加入線條  
+ If you include the line  
   
- [!code-cpp[NVC_MFCCObjectSample # 14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
+ [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/diagnostic-services_1.cpp)]  
   
- 在程式模組中，則後續呼叫`AfxCheckMemory`顯示配置的記憶體位置的檔名和行號。  
+ in a program module, then subsequent calls to `AfxCheckMemory` show the filename and line number where the memory was allocated.  
   
 > [!NOTE]
->  如果模組包含的一或多個實作的可序列化的類別，則您必須將`#define`最後一個之後的行`IMPLEMENT_SERIAL`巨集呼叫。  
+>  If your module contains one or more implementations of serializable classes, then you must put the `#define` line after the last `IMPLEMENT_SERIAL` macro call.  
   
- 此函式僅適用於 MFC 的偵錯版本。  
+ This function works only in the Debug version of MFC.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCObjectSample # 26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
  
-##  <a name="afxdump"></a>AfxDump (MFC)  
- 呼叫此函式在偵錯工具偵錯時傾印物件的狀態中。  
+##  <a name="afxdump"></a>  AfxDump (MFC)  
+ Call this function while in the debugger to dump the state of an object while debugging.  
   
 ```   
 void AfxDump(const CObject* pOb); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pOb`  
- 從衍生類別的物件指標`CObject`。  
+ A pointer to an object of a class derived from `CObject`.  
   
-### <a name="remarks"></a>備註  
- **AfxDump**呼叫物件的`Dump`成員函式，並將所指定的位置資訊`afxDump`變數。 **AfxDump**僅適用於 MFC 的偵錯版本。  
+### <a name="remarks"></a>Remarks  
+ **AfxDump** calls an object's `Dump` member function and sends the information to the location specified by the `afxDump` variable. **AfxDump** is available only in the Debug version of MFC.  
   
- 您的程式碼不應該呼叫**AfxDump**，但應該改為呼叫`Dump`成員函式的適當的物件。  
+ Your program code should not call **AfxDump**, but should instead call the `Dump` member function of the appropriate object.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
 
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>See Also  
  [CObject::Dump](cobject-class.md#dump)   
 
 
   
-##  <a name="afxdumpstack"></a>AfxDumpStack  
- 此全域函式可以用來產生目前堆疊的映像。  
+##  <a name="afxdumpstack"></a>  AfxDumpStack  
+ This global function can be used to generate an image of the current stack.  
   
 ```   
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *dwTarget*  
- 表示傾印的輸出的目標。 可能的值，可以使用位元 OR 結合 ( **|**) 運算子，如下︰  
+ Indicates the target of the dump output. Possible values, which can be combined using the bitwise-OR ( **&#124;**) operator, are as follows:  
   
-- **AFX_STACK_DUMP_TARGET_TRACE**將輸出藉由傳送[追蹤](#trace)巨集。 **追蹤**巨集只能偵錯組建中產生輸出。 不過，它會在發行組建中產生任何輸出。 此外，**追蹤**可以重新導向至其他偵錯工具以外的目標。  
+- **AFX_STACK_DUMP_TARGET_TRACE** Sends output by means of the [TRACE](#trace) macro. The **TRACE** macro generates output in debug builds only; it generates no output in release builds. Also, **TRACE** can be redirected to other targets besides the debugger.  
   
-- **AFX_STACK_DUMP_TARGET_DEFAULT**傳送傾印的預設目標的輸出。 偵錯組建中，會輸出至**追蹤**巨集。 在發行組建，輸出會移至剪貼簿。  
+- **AFX_STACK_DUMP_TARGET_DEFAULT** Sends dump output to the default target. For a debug build, output goes to the **TRACE** macro. In a release build, output goes to the Clipboard.  
   
-- **AFX_STACK_DUMP_TARGET_CLIPBOARD**將輸出傳送至只在剪貼簿。 將資料放在剪貼簿使用純文字上**CF_TEXT**剪貼簿格式。  
+- **AFX_STACK_DUMP_TARGET_CLIPBOARD** Sends output to the Clipboard only. The data is placed on the Clipboard as plain text using the **CF_TEXT** Clipboard format.  
   
-- **AFX_STACK_DUMP_TARGET_BOTH**傳送輸出至剪貼簿和**追蹤**巨集，同時。  
+- **AFX_STACK_DUMP_TARGET_BOTH** Sends output to the Clipboard and to the **TRACE** macro, simultaneously.  
   
-- **AFX_STACK_DUMP_TARGET_ODS**輸出將直接傳送至偵錯工具的 Win32 函式透過**OutputDebugString()**。 此選項會產生偵錯工具輸出，在這兩個偵錯與發行組建，當偵錯工具附加至處理序。 **AFX_STACK_DUMP_TARGET_ODS**永遠會到達偵錯工具 （如果它附加），而且無法重新導向。  
+- **AFX_STACK_DUMP_TARGET_ODS** Sends output directly to the debugger by means of the Win32 function **OutputDebugString()**. This option will generate debugger output in both debug and release builds when a debugger is attached to the process. **AFX_STACK_DUMP_TARGET_ODS** always reaches the debugger (if it is attached) and cannot be redirected.  
   
-### <a name="remarks"></a>備註  
- 下列範例會反映單一呼叫所產生的輸出行`AfxDumpStack`從 MFC 對話方塊應用程式中的按鈕處理常式︰  
+### <a name="remarks"></a>Remarks  
+ The example below reflects a single line of the output generated from calling `AfxDumpStack` from a button handler in an MFC dialog application:  
   
  `=== begin AfxDumpStack output ===`  
   
@@ -608,82 +608,82 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  `=== end AfxDumpStack() output ===`  
   
- 上面的輸出中的每一行，表示最後一個函式呼叫的函式呼叫，並呼叫的函式原型所包含之模組的完整路徑名稱的位址。 如果函式呼叫堆疊上的不會發生在函式的實際位址，就會顯示的位元組位移。  
+ Each line in the output above indicates the address of the last function call, the full path name of the module that contains the function call, and the function prototype called. If the function call on the stack does not happen at the exact address of the function, an offset of bytes is shown.  
   
- 例如下, 表描述上述輸出第一行︰  
+ For example, the following table describes the first line of the above output:  
   
-|輸出|說明|  
+|Output|Description|  
 |------------|-----------------|  
-|`00427D55:`|最後一個函式呼叫的傳回位址。|  
-|`DUMP2\DEBUG\DUMP2.EXE!`|包含函式呼叫的模組完整路徑名稱。|  
-|`void AfxDumpStack(unsigned long)`|呼叫函式原型。|  
-|`+ 181 bytes`|以位元組為單位，從函式原型的位址位移 (在此情況下， `void AfxDumpStack(unsigned long)`) 的傳回位址 (在此情況下， `00427D55`)。|  
+|`00427D55:`|The return address of the last function call.|  
+|`DUMP2\DEBUG\DUMP2.EXE!`|The full path name of the module that contains the function call.|  
+|`void AfxDumpStack(unsigned long)`|The function prototype called.|  
+|`+ 181 bytes`|The offset in bytes from the address of the function prototype (in this case, `void AfxDumpStack(unsigned long)`) to the return address (in this case, `00427D55`).|  
   
- `AfxDumpStack`在偵錯和非偵錯版本的 MFC 程式庫中;不過，此函式是一律以靜態方式連結，即使可執行檔使用 MFC 共用 dll。 在共用程式庫實作中，函式 MFCS42 中找到。LIB 程式庫 （和其變體）。  
+ `AfxDumpStack` is available in debug and nondebug versions of the MFC libraries; however, the function is always linked statically, even when your executable file uses MFC in a shared DLL. In shared-library implementations, the function is found in the MFCS42.LIB library (and its variants).  
   
- 若要順利使用這個函式︰  
+ To use this function successfully:  
   
--   IMAGEHLP 檔案。DLL 必須位於您的路徑。 如果您沒有此 DLL，此函式會顯示錯誤訊息。 請參閱[影像協助程式庫](http://msdn.microsoft.com/library/windows/desktop/ms680321)IMAGEHLP 所提供的函式組上的資訊。  
+-   The file IMAGEHLP.DLL must be on your path. If you do not have this DLL, the function will display an error message. See [Image Help Library](http://msdn.microsoft.com/library/windows/desktop/ms680321) for information on the function set provided by IMAGEHLP.  
   
--   已在堆疊框架的模組必須包含偵錯資訊。 如果它們包含偵錯資訊，此函式仍會產生堆疊追蹤，但就較不詳細追蹤。  
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+-   The modules that have frames on the stack must include debugging information. If they do not contain debugging information, the function will still generate a stack trace, but the trace will be less detailed.  
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump  
- 啟用和停用 `AFX_DEBUG_STATE` 解構函式中的記憶體流失傾印。  
+##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
+ Enables and disables the memory leak dump in the `AFX_DEBUG_STATE` destructor.  
   
 ```  
 BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bDump`  
- `TRUE` 表示已啟用記憶體流失傾印；`FALSE` 則表示已停用記憶體流失傾印。  
+ `TRUE` indicates the memory leak dump is enabled; `FALSE` indicates the memory leak dump is disabled.  
   
-### <a name="return-value"></a>傳回值  
- 此旗標先前的值。  
+### <a name="return-value"></a>Return Value  
+ The previous value for this flag.  
   
-### <a name="remarks"></a>備註  
- 當應用程式卸載 MFC 程式庫時，MFC 程式庫會檢查記憶體流失。 此時，任何記憶體流失報告給使用者已透過**偵錯**視窗[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ When an application unloads the MFC library, the MFC library checks for memory leaks. At this point, any memory leaks are reported to the user through the **Debug** window of [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  
   
- 如果您的應用程式在 MFC 程式庫之前先載入另一個程式庫，系統會將該程式庫中的一些記憶體配置誤報為記憶體流失。 因為 MFC 程式庫發生記憶體流失誤報的情況，這些誤報可能會導致您的應用程式關閉速度很慢。 在這種情況下，請使用 `AfxEnableMemoryLeakDump` 以停用記憶體流失傾印。  
+ If your application loads another library before the MFC library, some memory allocations in that library will be incorrectly reported as memory leaks. False memory leaks can cause your application to close slowly as the MFC library reports them. In this case, use `AfxEnableMemoryLeakDump` to disable the memory leak dump.  
   
 > [!NOTE]
->  如果您使用這個方法來關閉記憶體流失傾印，就不會收到應用程式中有效的記憶體流失報告。 因此，僅有當您確信記憶體流失報告包含誤報的記憶體流失，才建議使用這個方法。  
+>  If you use this method to turn off the memory leak dump, you will not receive reports of valid memory leaks in your application. You should only use this method if you are confident that the memory leak report contains false memory leaks.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="afxenablememorytracking"></a>AfxEnableMemoryTracking  
- 在 MFC 的偵錯版本中，通常會啟用診斷記憶體追蹤。  
+##  <a name="afxenablememorytracking"></a>  AfxEnableMemoryTracking  
+ Diagnostic memory tracking is normally enabled in the Debug version of MFC.  
   
 ```   
 BOOL AfxEnableMemoryTracking(BOOL bTrack); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *bTrack*  
- 此值設定為**TRUE**開啟記憶體追蹤。**FALSE**會關閉。  
+ Setting this value to **TRUE** turns on memory tracking; **FALSE** turns it off.  
   
-### <a name="return-value"></a>傳回值  
- 追蹤啟用旗標先前的設定。  
+### <a name="return-value"></a>Return Value  
+ The previous setting of the tracking-enable flag.  
   
-### <a name="remarks"></a>備註  
- 若要停用您知道會正確地配置區塊程式碼區段上的 追蹤使用此函式。  
+### <a name="remarks"></a>Remarks  
+ Use this function to disable tracking on sections of your code that you know are allocating blocks correctly.  
   
- 如需有關`AfxEnableMemoryTracking`，請參閱[偵錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。  
+ For more information on `AfxEnableMemoryTracking`, see [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).  
   
 > [!NOTE]
->  此函式僅適用於 MFC 的偵錯版本。  
+>  This function works only in the Debug version of MFC.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]  
   
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="afxismemoryblock"></a>AfxIsMemoryBlock  
- 測試以確定它代表目前作用中的記憶體區塊診斷版本所配置的記憶體位址**新**。  
+##  <a name="afxismemoryblock"></a>  AfxIsMemoryBlock  
+ Tests a memory address to make sure it represents a currently active memory block that was allocated by the diagnostic version of **new**.  
   
 ```   
 BOOL AfxIsMemoryBlock(
@@ -692,30 +692,30 @@ BOOL AfxIsMemoryBlock(
     LONG* plRequestNumber = NULL); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `p`  
- 要測試的記憶體區塊指向。  
+ Points to the block of memory to be tested.  
   
  `nBytes`  
- 包含以位元組為單位的記憶體區塊的長度。  
+ Contains the length of the memory block in bytes.  
   
  `plRequestNumber`  
- 指向**長**會填入該記憶體區塊的配置順序編號，或如果不是目前作用中的記憶體區塊零的整數。  
+ Points to a **long** integer that will be filled in with the memory block's allocation sequence number, or zero if it does not represent a currently active memory block.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果目前配置的記憶體區塊，而且長度正確;否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the memory block is currently allocated and the length is correct; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 它也會檢查指定的大小，針對原始配置的大小。 如果此函數會傳回非零，就會傳回的配置順序編號`plRequestNumber`。 這個數字代表相對於所有其他配置區塊已在其中的順序**新**配置。  
+### <a name="remarks"></a>Remarks  
+ It also checks the specified size against the original allocated size. If the function returns nonzero, the allocation sequence number is returned in `plRequestNumber`. This number represents the order in which the block was allocated relative to all other **new** allocations.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]  
   
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="afxisvalidaddress"></a>AfxIsValidAddress  
- 測試以確保它包含程式的記憶體空間內的任何記憶體位址。  
+##  <a name="afxisvalidaddress"></a>  AfxIsValidAddress  
+ Tests any memory address to ensure that it is contained entirely within the program's memory space.  
   
 ```   
 BOOL AfxIsValidAddress(
@@ -724,32 +724,32 @@ BOOL AfxIsValidAddress(
     BOOL bReadWrite = TRUE); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lp`  
- 指向要測試的記憶體位址。  
+ Points to the memory address to be tested.  
   
  `nBytes`  
- 包含要測試記憶體的位元組數目。  
+ Contains the number of bytes of memory to be tested.  
   
  *bReadWrite*  
- 指定的記憶體是否同時進行讀取和寫入 ( **TRUE**) 或只讀取 ( **FALSE**)。  
+ Specifies whether the memory is both for reading and writing ( **TRUE**) or just reading ( **FALSE**).  
   
-### <a name="return-value"></a>傳回值  
- 在偵錯組建為非零，如果指定的記憶體區塊包含完全在程式的記憶體空間。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ In debug builds, nonzero if the specified memory block is contained entirely within the program's memory space; otherwise 0.  
   
- 在非偵錯組建中，為非零，如果`lp`不是 NULL，否則為 0。  
+ In non-debug builds, nonzero if `lp` is not NULL; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 位址不會套用至所配置的區塊**新**。  
+### <a name="remarks"></a>Remarks  
+ The address is not restricted to blocks allocated by **new**.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]  
   
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="afxisvalidstring"></a>AfxIsValidString  
- 您可以使用此函式來判斷字串指標是否有效。  
+##  <a name="afxisvalidstring"></a>  AfxIsValidString  
+ Use this function to determine whether a pointer to a string is valid.  
   
 ```   
 BOOL  AfxIsValidString(
@@ -757,59 +757,59 @@ BOOL  AfxIsValidString(
     int nLength = -1); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpsz`  
- 要測試的指標。  
+ The pointer to test.  
   
  `nLength`  
- 指定要測試，以位元組為單位之字串的長度。 -1 表示會以 null 結束的字串。  
+ Specifies the length of the string to be tested, in bytes. A value of -1 indicates that the string will be null-terminated.  
   
-### <a name="return-value"></a>傳回值  
- 在偵錯組建中，為非零，如果指定的指標指向的字串指定的大小。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ In debug builds, nonzero if the specified pointer points to a string of the specified size; otherwise 0.  
   
- 在非偵錯組建中，為非零，如果`lpsz`不是 NULL，否則為 0。  
+ In non-debug builds, nonzero if `lpsz` is not NULL; otherwise 0.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="afxsetallochook"></a>AfxSetAllocHook  
- 設定每個記憶體區塊配置之前，可讓指定的函式呼叫的攔截。  
+##  <a name="afxsetallochook"></a>  AfxSetAllocHook  
+ Sets a hook that enables calling of the specified function before each memory block is allocated.  
   
 ```   
 AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *pfnAllocHook*  
- 指定要呼叫的函式的名稱。 請參閱備註的配置函式原型。  
+ Specifies the name of the function to call. See the Remarks for the prototype of an allocation function.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果您想要允許配置;否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if you want to permit the allocation; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- Microsoft Foundation 類別庫的偵錯記憶體配置器可以呼叫使用者定義之 hook 函式，讓使用者以監視記憶體配置，並控制是否允許配置。 配置攔截函式會建立原型，如下所示︰  
+### <a name="remarks"></a>Remarks  
+ The Microsoft Foundation Class Library debug-memory allocator can call a user-defined hook function to allow the user to monitor a memory allocation and to control whether the allocation is permitted. Allocation hook functions are prototyped as follows:  
   
  **BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**  
   
  `nSize`  
- 建議的記憶體配置的大小。  
+ The size of the proposed memory allocation.  
   
  `bObject`  
- **TRUE**若配置為`CObject`-衍生物件; 否則為**FALSE**。  
+ **TRUE** if the allocation is for a `CObject`-derived object; otherwise **FALSE**.  
   
  `lRequestNumber`  
- 記憶體配置順序編號。  
+ The memory allocation's sequence number.  
   
- 請注意， **AFXAPI**呼叫慣例隱含被呼叫端必須從堆疊移除參數。  
+ Note that the **AFXAPI** calling convention implies that the callee must remove the parameters from the stack.  
 
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="afxdoforallclasses"></a>AfxDoForAllClasses  
- 呼叫指定的反覆項目函式的所有可序列化`CObject`-衍生的類別在應用程式的記憶體空間中。  
+##  <a name="afxdoforallclasses"></a>  AfxDoForAllClasses  
+ Calls the specified iteration function for all serializable `CObject`-derived classes in the application's memory space.  
   
 ```   
 void  
@@ -818,29 +818,29 @@ AFXAPI AfxDoForAllClasses(
     void* pContext); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pfn`  
- 指向要呼叫的每個類別的反覆項目函式。 函式引數是指標`CRuntimeClass`物件和 void 指標至函式的呼叫端提供的額外資料。  
+ Points to an iteration function to be called for each class. The function arguments are a pointer to a `CRuntimeClass` object and a void pointer to extra data that the caller supplies to the function.  
   
  `pContext`  
- 呼叫者可提供給反覆項目函式的選擇性資料點。 此指標可以是**NULL**。  
+ Points to optional data that the caller can supply to the iteration function. This pointer can be **NULL**.  
   
-### <a name="remarks"></a>備註  
- 可序列化`CObject`-衍生的類別是衍生使用`DECLARE_SERIAL`巨集。 將指標傳遞至`AfxDoForAllClasses`中`pContext`會傳遞至指定的反覆項目函式每次呼叫時。  
+### <a name="remarks"></a>Remarks  
+ Serializable `CObject`-derived classes are classes derived using the `DECLARE_SERIAL` macro. The pointer that is passed to `AfxDoForAllClasses` in `pContext` is passed to the specified iteration function each time it is called.  
   
 > [!NOTE]
->  此函式僅適用於 MFC 的偵錯版本。  
+>  This function works only in the Debug version of MFC.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 113](../../mfc/codesnippet/cpp/diagnostic-services_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#113](../../mfc/codesnippet/cpp/diagnostic-services_16.cpp)]  
   
- [!code-cpp[NVC_MFCCollections # 114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]  
+ [!code-cpp[NVC_MFCCollections#114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]  
   
-### <a name="requirements"></a>需求  
- **標頭：** afx.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afx.h 
 
-##  <a name="afxdoforallobjects"></a>AfxDoForAllObjects  
- 執行指定的反覆項目函式的所有物件衍生自`CObject`以已配置**新**。  
+##  <a name="afxdoforallobjects"></a>  AfxDoForAllObjects  
+ Executes the specified iteration function for all objects derived from `CObject` that have been allocated with **new**.  
   
 ```   
 void AfxDoForAllObjects(
@@ -848,23 +848,23 @@ void AfxDoForAllObjects(
     void* pContext); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pfn`  
- 指向反覆項目要執行函式的每個物件。 函式引數是指標`CObject`和 void 指標至函式的呼叫端提供的額外資料。  
+ Points to an iteration function to execute for each object. The function arguments are a pointer to a `CObject` and a void pointer to extra data that the caller supplies to the function.  
   
  `pContext`  
- 呼叫者可提供給反覆項目函式的選擇性資料點。 此指標可以是**NULL**。  
+ Points to optional data that the caller can supply to the iteration function. This pointer can be **NULL**.  
   
-### <a name="remarks"></a>備註  
- 不會列舉堆疊全域的或內嵌的物件。 將指標傳遞至`AfxDoForAllObjects`中`pContext`會傳遞至指定的反覆項目函式每次呼叫時。  
+### <a name="remarks"></a>Remarks  
+ Stack, global, or embedded objects are not enumerated. The pointer passed to `AfxDoForAllObjects` in `pContext` is passed to the specified iteration function each time it is called.  
   
 > [!NOTE]
->  此函式僅適用於 MFC 的偵錯版本。  
+>  This function works only in the Debug version of MFC.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 115](../../mfc/codesnippet/cpp/diagnostic-services_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#115](../../mfc/codesnippet/cpp/diagnostic-services_18.cpp)]  
   
- [!code-cpp[NVC_MFCCollections 116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]  
+ [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)

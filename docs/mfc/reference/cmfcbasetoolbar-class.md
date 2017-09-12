@@ -1,5 +1,5 @@
 ---
-title: "CMFCBaseToolBar 類別 |Microsoft 文件"
+title: CMFCBaseToolBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,11 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCBaseToolBar class, constructor
-- CMFCBaseToolBar class, destructor
-- ~CMFCBaseToolBar destructor
-- CreateObject method
-- CMFCBaseToolBar class
+- CMFCBaseToolBar [MFC], GetDockingMode
+- CMFCBaseToolBar [MFC], GetMinSize
+- CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
 caps.latest.revision: 19
 author: mikeblome
@@ -41,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f608b23c0dbee3ec0e2d2b234612365e3c2461b0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb896d2c03f8b25ec615444111fa6307e4dfd63e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar 類別
-工具列的基底類別。  
+# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar Class
+Base class for toolbars.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCBaseToolBar : public CPane  
@@ -59,23 +57,23 @@ class CMFCBaseToolBar : public CPane
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CMFCBaseToolBar`|預設建構函式。|  
-|`CMFCBaseToolBar::~CMFCBaseToolBar`|解構函式。|  
+|`CMFCBaseToolBar::CMFCBaseToolBar`|Default constructor.|  
+|`CMFCBaseToolBar::~CMFCBaseToolBar`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|傳回固定模式。 (覆寫[CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode)。)|  
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|傳回的最小的工具列。 (覆寫[CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)。)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|窗格的父變更之後，由框架呼叫。 (覆寫[CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent)。)|  
+|`CMFCBaseToolBar::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Returns the docking mode. (Overrides [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Returns the minimum size of a toolbar. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Called by the framework after the pane's parent changes. (Overrides [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,42 +86,42 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxbasetoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbasetoolbar.h  
   
-##  <a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
- 傳回固定模式。  
+##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
+ Returns the docking mode.  
   
 ```  
 virtual AFX_DOCK_TYPE GetDockingMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 停駐的模式。  
+### <a name="return-value"></a>Return Value  
+ The docking mode.  
   
-##  <a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
- 傳回的最小的工具列。  
+##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
+ Returns the minimum size of a toolbar.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `size`  
- 工具列的大小下限。  
+### <a name="parameters"></a>Parameters  
+ [out] `size`  
+ The minimum size of a toolbar.  
   
-##  <a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
- 窗格的父變更之後，由框架呼叫。  
+##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
+ Called by the framework after the pane's parent changes.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndOldParent`  
- 先前的父視窗的指標。  
+ A pointer to the previous parent window.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

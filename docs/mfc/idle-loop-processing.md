@@ -1,67 +1,86 @@
 ---
-title: "閒置迴圈處理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "背景處理"
-  - "閒置迴圈處理"
-  - "閒置處理"
-  - "訊息, 迴圈"
-  - "MFC, 背景處理"
-  - "MFC, 訊息"
-  - "OnIdle 方法"
-  - "PeekMessage 方法"
-  - "PeekMessage 方法, elsewhere than 訊息迴圈"
-  - "處理"
-  - "處理, 背景"
-  - "處理, 閒置迴圈期間"
-  - "執行緒 [MFC], 多執行緒的替代項目"
+title: Idle Loop Processing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, background processing
+- PeekMessage method [MFC], elsewhere than message loop
+- PeekMessage method [MFC]
+- MFC, messages
+- messages [MFC], loops
+- OnIdle method [MFC]
+- processing [MFC], background
+- idle loop processing [MFC]
+- idle processing [MFC]
+- threading [MFC], alternatives to multithreading
+- processing, during idle loop
+- processing [MFC]
+- background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 閒置迴圈處理
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc101bc8964adeb8fff488f4a6ce4dacb35190de
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-許多應用程式「在背景」執行長處理序。有時候效能考量指示使用多執行緒為這類工作。  執行緒包含額外的開發負荷，因此對於像是閒置時間工作這種 MFC 在 [OnIdle](../Topic/CWinThread::OnIdle.md) 函式中做的簡單工作並不推薦。  本文著重於閒置處理。  如需多執行續的詳細資訊，請參閱 [多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
+---
+# <a name="idle-loop-processing"></a>Idle Loop Processing
+Many applications perform lengthy processing "in the background." Sometimes performance considerations dictate using multithreading for such work. Threads involve extra development overhead, so they are not recommended for simple tasks like the idle-time work that MFC does in the [OnIdle](../mfc/reference/cwinthread-class.md#onidle) function. This article focuses on idle processing. For more information about multithreading, see [Multithreading Topics](../parallel/multithreading-support-for-older-code-visual-cpp.md).  
   
- 一些背景處理的種類適當地在使用者與應用程式沒有互動的期間完成。  在為 Microsoft Windows 作業系統開發的應用程式中，應用程式可以藉由將長執行緒分割成許多小片段來執行閒置時間處理。  在處裡每個片段之後，應用程式使用 [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) 迴圈，產生執行控制項傳回到視窗。  
+ Some kinds of background processing are appropriately done during intervals that the user is not otherwise interacting with the application. In an application developed for the Microsoft Windows operating system, an application can perform idle-time processing by splitting a lengthy process into many small fragments. After processing each fragment, the application yields execution control to Windows using a [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) loop.  
   
- 本文說明這兩種對您的應用程式進行閒置處理的方式：  
+ This article explains two ways to do idle processing in your application:  
   
--   在 MFC 的主要訊息迴圈使用 **PeekMessage** 。  
+-   Using **PeekMessage** in MFC's main message loop.  
   
--   將另一個 **PeekMessage** 迴圈嵌入至應用程式的其他位置。  
+-   Embedding another **PeekMessage** loop somewhere else in the application.  
   
-##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> 在 MFC 訊息迴圈的 PeekMessage  
- 在使用 MFC 開發的應用程式中，在 `CWinThread` 類別中的主要訊息迴圈包含呼叫 [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API 的訊息迴圈。  這個迴圈也呼叫 `CWinThread` 的 `OnIdle` 成員函式在訊息之間。  應用程式可以藉由覆寫 `OnIdle` 函式處理這些閒置時間的訊息。  
+##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> PeekMessage in the MFC Message Loop  
+ In an application developed with MFC, the main message loop in the `CWinThread` class contains a message loop that calls the [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API. This loop also calls the `OnIdle` member function of `CWinThread` between messages. An application can process messages in this idle time by overriding the `OnIdle` function.  
   
 > [!NOTE]
->  **Run**、 `OnIdle` 和其他成員函式現在是類別 `CWinThread` 的成員而不是 `CWinApp` 類別中的。  `CWinApp` 是衍生自 `CWinThread`。  
+>  **Run**, `OnIdle`, and certain other member functions are now members of class `CWinThread` rather than of class `CWinApp`. `CWinApp` is derived from `CWinThread`.  
   
- 如需執行閒置處理的詳細資訊，請參閱《 *MFC 參考*》中的[OnIdle](../Topic/CWinThread::OnIdle.md) 。  
+ For more information about performing idle processing, see [OnIdle](../mfc/reference/cwinthread-class.md#onidle) in the *MFC Reference*.  
   
-##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> 您應用程式中別處的 PeekMessage  
- 在應用程式中執行閒置處理的其他方法包含內嵌訊息迴圈在自己的函式中。  這個訊息迴圈非常類似於 MFC 的主要訊息迴圈，可以在 [CWinThread::Run](../Topic/CWinThread::Run.md) 中找到。  這表示在使用 MFC 開發的應用程式中的這類迴圈必須執行許多和主要訊息迴圈相同的函式。  下列程式碼片段示範撰寫與 MFC 相容的訊息迴圈：  
+##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage Elsewhere in Your Application  
+ Another method for performing idle processing in an application involves embedding a message loop in one of your functions. This message loop is very similar to MFC's main message loop, found in [CWinThread::Run](../mfc/reference/cwinthread-class.md#run). That means such a loop in an application developed with MFC must perform many of the same functions as the main message loop. The following code fragment demonstrates writing a message loop that is compatible with MFC:  
   
- [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/CPP/idle-loop-processing_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- 這個嵌入在函式中的程式碼，只要有閒置處理要做就執行迴圈。  在該迴圈內，巢狀迴圈重複呼叫 **PeekMessage**。  只要呼叫傳回非零的值，則迴圈會呼叫 `CWinThread::PumpMessage` 執行一般訊息轉譯和分派。  雖然 `PumpMessage` 並未記載，您可以檢查 Visual C\+\+ 安裝的 \\atlmfc\\src\\mfc 目錄中的 ThrdCore.Cpp 檔案的原始程式碼。  
+ This code, embedded in a function, loops as long as there is idle processing to do. Within that loop, a nested loop repeatedly calls **PeekMessage**. As long as that call returns a nonzero value, the loop calls `CWinThread::PumpMessage` to perform normal message translation and dispatching. Although `PumpMessage` is undocumented, you can examine its source code in the ThrdCore.Cpp file in the \atlmfc\src\mfc directory of your Visual C++ installation.  
   
- 一旦內部迴圈結束，外部迴圈便搭配一個或多個對 `OnIdle` 的呼叫執行閒置處理。  第一次呼叫是 MFC 的目的。  您可以開啟其他呼叫 `OnIdle` 完成您的背景工作。  
+ Once the inner loop ends, the outer loop performs idle processing with one or more calls to `OnIdle`. The first call is for MFC's purposes. You can make additional calls to `OnIdle` to do your own background work.  
   
- 如需執行閒置處理的詳細資訊，請參閱《 MFC 參考》中的[OnIdle](../Topic/CWinThread::OnIdle.md) 。  
+ For more information about performing idle processing, see [OnIdle](../mfc/reference/cwinthread-class.md#onidle) in the MFC Library Reference.  
   
-## 請參閱  
- [一般 MFC 主題](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

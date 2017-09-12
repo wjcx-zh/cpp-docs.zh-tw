@@ -1,40 +1,59 @@
 ---
-title: "陣列、清單和對應類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 類別"
-  - "集合類別, 清單"
-  - "集合類別, 對應"
-  - "清單類別"
-  - "對應類別"
+title: Array, List, and Map Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [MFC], classes
+- list classes [MFC]
+- collection classes [MFC], maps
+- map classes [MFC]
+- collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 陣列、清單和對應類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28ed43e1451c484dc2bb3ed08e1db194f77075de
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-對於處理資料彙總，類別庫的集合類別 \(例如陣列、可保留各種物件而預先定義的型別清單和對應的群組中。  設定動態調整大小。  這些類別可以在任何程式，在為視窗。  但是，讓實作器定義在應用程式架構的資料類別的資料結構是最有用的。  您可以從這些立即取得特定的集合類別，或者您可以在根據樣板類別。  如需這些方法的詳細資訊，請參閱本文件的 [集合](../mfc/collections.md)。  如需範本集合類別清單，請參閱本文件的 [陣列、清單和對應的樣板類別](../mfc/template-classes-for-arrays-lists-and-maps.md)。  
+---
+# <a name="array-list-and-map-classes"></a>Array, List, and Map Classes
+For handling aggregates of data, the class library provides a group of collection classes — arrays, lists, and maps — that can hold a variety of object and predefined types. The collections are dynamically sized. These classes can be used in any program, whether written for Windows or not. However, they are most useful for implementing the data structures that define your document classes in the application framework. You can readily derive specialized collection classes from these, or you can create them based on the template classes. For more information about these approaches, see the article [Collections](../mfc/collections.md). For a list of the template collection classes, see the article [Template Classes for Arrays, Lists, and Maps](../mfc/template-classes-for-arrays-lists-and-maps.md).  
   
- 陣列是記憶體中連續儲存項目的資料結構。  它們支援非常快速的隨機存取，因為任何特定項目記憶體位址可以藉由將這個項目的索引以項目的大小和將會計算結果到陣列的基底位址 \(Base Address\)。  但是，陣列是非常耗費資源的，如果您必須將元素插入陣列，，因為您可以插入項目的整個陣列必須移動足夠空間可插入的項目。  陣列可以視需要放大和縮小。  
+ Arrays are one-dimensional data structures that are stored contiguously in memory. They support very fast random access since the memory address of any given element can be calculated by multiplying the index of the element by the size of an element and adding the result to the base address of the array. But arrays are very expensive if you have to insert elements into the array, since the entire array past the element inserted has to be moved to make room for the element to be inserted. Arrays can grow and shrink as necessary.  
   
- 清單類似陣列，但是非常不同方式儲存。  清單中的每個項目也包含指標到前一個和下一個項目，讓雙向連結串列。  因為這樣做只涉及變更指標的陣列，它非常快速地為加入或刪除項目。  不過，，因為所有搜尋需要開始清單結尾，搜尋清單可能會耗用相當多的資源。  
+ Lists are similar to arrays but are stored very differently. Each element in a list also includes a pointer to the previous and next elements, making it a doubly linked list. It is very fast to add or delete items because doing so only involves changing a few pointers. However, searching a list can be expensive since all searches need to start at one of the list's ends.  
   
- 對應的資料值關聯一個關鍵值。  例如，對應的索引鍵可以是字串、游標的清單。  您會要求對應至您指標與特定字串。  因為對應為索引鍵查閱，雜湊資料表對應搜尋很短。  加入和刪除項目也很短。  對應通常與其他資料結構做為額外的索引。  MFC 使用對應呼叫 [訊息對應](../mfc/mapping-messages.md) 的特殊將 Windows 訊息至指標到該訊息的處理函式。  
+ Maps relate a key value to a data value. For instance, the key of a map could be a string and the data a pointer into a list. You would ask the map to give you the pointer associated with a particular string. Map lookups are fast because maps use hash tables for key lookups. Adding and deleting items is also fast. Maps are often used with other data structures as auxiliary indices. MFC uses a special kind of map called a [message map](../mfc/mapping-messages.md) to map Windows messages to a pointer to the handler function for that message.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

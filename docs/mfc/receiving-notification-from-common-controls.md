@@ -1,57 +1,76 @@
 ---
-title: "從通用控制項接收告知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ON_NOTIFY"
-  - "WM_NOTIFY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通用控制項 [C++], 告知"
-  - "控制項 [MFC], 告知"
-  - "告知, 通用控制項"
-  - "ON_NOTIFY 巨集"
-  - "OnNotify 方法"
-  - "從通用控制項接收告知"
-  - "Windows 通用控制項 [C++], 告知"
-  - "WM_NOTIFY 訊息"
+title: Receiving Notification from Common Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ON_NOTIFY
+- WM_NOTIFY
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnNotify method [MFC]
+- common controls [MFC], notifications
+- ON_NOTIFY macro [MFC]
+- controls [MFC], notifications
+- receiving notifications from common controls
+- notifications [MFC], common controls
+- Windows common controls [MFC], notifications
+- WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 從通用控制項接收告知
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96e967904cc4c851de6dc1aef34a4d6204ea9d78
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-通用控制項會傳送通知訊息至父視窗的子視窗，當事件，例如來自使用者的輸入，在控制項時發生。  
+---
+# <a name="receiving-notification-from-common-controls"></a>Receiving Notification from Common Controls
+Common controls are child windows that send notification messages to the parent window when events, such as input from the user, occur in the control.  
   
- 應用程式依賴這些通知訊息判斷行動使用者要採用。  最常見的控制項傳送通知訊息在 **WM\_NOTIFY** 訊息。  視窗控制項傳送大部分通知訊息在 **WM\_COMMAND** 訊息。  [CWnd::OnNotify](../Topic/CWnd::OnNotify.md) 是 **WM\_NOTIFY** 訊息的處理常式。  使用 `CWnd::OnCommand`， `OnNotify` 的實作會告知訊息處理的 `OnCmdMsg` 在訊息對應。  處理的通知訊息對應項目是 `ON_NOTIFY`。  如需詳細資訊，請參閱 [Technical Note 61:ON\_NOTIFY 和 WM\_NOTIFY 訊息](../mfc/tn061-on-notify-and-wm-notify-messages.md)。  
+ The application relies on these notification messages to determine what action the user wants it to take. Most common controls send notification messages as **WM_NOTIFY** messages. Windows controls send most notification messages as **WM_COMMAND** messages. [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify) is the handler for the **WM_NOTIFY** message. As with `CWnd::OnCommand`, the implementation of `OnNotify` dispatches the notification message to `OnCmdMsg` for handling in message maps. The message-map entry for handling notifications is `ON_NOTIFY`. For more information, see [Technical Note 61: ON_NOTIFY and WM_NOTIFY Messages](../mfc/tn061-on-notify-and-wm-notify-messages.md).  
   
- 此外，衍生類別可以處理它的通知訊息使用訊息反映」。如需詳細資訊，請參閱 [Technical Note 62:視窗的訊息反映](../mfc/tn062-message-reflection-for-windows-controls.md)。  
+ Alternately, a derived class can handle its own notification messages using "message reflection." For more information, see [Technical Note 62: Message Reflection for Windows Controls](../mfc/tn062-message-reflection-for-windows-controls.md).  
   
-## 擷取通知訊息的游標位置  
- 在某些情況下，當某些通知訊息由通用控制項時，接收決定游標的目前位置會很有用。  例如，在中，當通用控制項收到 **NM\_RCLICK** 通知訊息時，判斷目前游標位置很有用。  
+## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>Retrieving the Cursor Position in a Notification Message  
+ On occasion, it is useful to determine the current position of the cursor when certain notification messages are received by a common control. For example, it would be helpful to determine the current cursor location when a common control receives a **NM_RCLICK** notification message.  
   
- 有一種簡單的方式是透過呼叫 `CWnd::GetCurrentMessage`來完成。  不過，在這種情況下，傳送訊息時，這個方法只會擷取游標位置。  因為資料指標可能移動，因為傳送您必須呼叫 **CWnd::GetCursorPos** 取得目前游標位置。  
+ There is a simple way to accomplish this by calling `CWnd::GetCurrentMessage`. However, this method only retrieves the cursor position at the time the message was sent. Because the cursor may have been moved since the message was sent you must call **CWnd::GetCursorPos** to get the current cursor position.  
   
 > [!NOTE]
->  應該 在訊息處理常式內只呼叫`CWnd::GetCurrentMessage` 。  
+>  `CWnd::GetCurrentMessage` should only be called within a message handler.  
   
- 將下列程式碼加入至告知訊息的訊息處理常式的主體 \(在本例中， **NM\_RCLICK**\):  
+ Add the following code to the body of the notification message handler (in this example, **NM_RCLICK**):  
   
- [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/CPP/receiving-notification-from-common-controls_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/cpp/receiving-notification-from-common-controls_1.cpp)]  
   
- 此時，滑鼠游標位置在 `cursorPos` 物件中。  
+ At this point, the mouse cursor location is stored in the `cursorPos` object.  
   
-## 請參閱  
- [建立及使用控制項](../mfc/making-and-using-controls.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

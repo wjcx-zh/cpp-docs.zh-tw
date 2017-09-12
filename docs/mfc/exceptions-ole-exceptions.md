@@ -1,54 +1,73 @@
 ---
-title: "例外狀況：OLE 例外狀況 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "例外狀況處理, OLE"
-  - "例外狀況, OLE"
-  - "OLE 例外狀況"
-  - "OLE 例外狀況, 處理的類別"
-  - "OLE, 例外狀況"
+title: 'Exceptions: OLE Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE, exceptions
+- OLE exceptions [MFC]
+- exceptions [MFC], OLE
+- exception handling [MFC], OLE
+- OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 例外狀況：OLE 例外狀況
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77b7c16ab3cb1ebad70e6a65980d3c5fd818a3c4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-技術和工具處理的例外狀況在 OLE 與處理的其他例外狀況。  如需例外狀況處理的詳細資訊，請參閱本文件的 [C\+\+ 例外狀況處理](../cpp/cpp-exception-handling.md)。  
+---
+# <a name="exceptions-ole-exceptions"></a>Exceptions: OLE Exceptions
+The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions. For further information on exception handling, see the article [C++ Exception Handling](../cpp/cpp-exception-handling.md).  
   
- 所有例外狀況物件從抽象基底類別衍生自 `CException`。  MFC 提供處理 OLE 例外狀況提供兩個類別:  
+ All exception objects are derived from the abstract base class `CException`. MFC provides two classes for handling OLE exceptions:  
   
--   處理的一般 OLE 例外狀況[COleException](../mfc/reference/coleexception-class.md)。  
+-   [COleException](../mfc/reference/coleexception-class.md) For handling general OLE exceptions.  
   
--   產生和管理的 OLE 分派 \(自動\) 例外狀況[COleDispatchException](../mfc/reference/coledispatchexception-class.md)。  
+-   [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch (automation) exceptions.  
   
- 這兩個類別之間的差異在於它們，並提供的資訊量的地方使用它們。  `COleException` 不包含例外狀況的 OLE 狀態碼上的公用資料成員。  `COleDispatchException` 提供更多資訊，包括下列:  
+ The difference between these two classes is the amount of information they provide and where they are used. `COleException` has a public data member that contains the OLE status code for the exception. `COleDispatchException` supplies more information, including the following:  
   
--   一個應用程式相關的錯誤程式碼  
+-   An application-specific error code  
   
--   錯誤描述，例如「磁碟已滿」  
+-   An error description, such as "Disk full"  
   
--   您的應用程式可用來為使用者提供額外資訊的說明內容  
+-   A Help context that your application can use to provide additional information for the user  
   
--   您的應用程式中的說明檔案名稱  
+-   The name of your application's Help file  
   
--   造成例外狀況之應用程式或物件的名稱。  
+-   The name of the application that generated the exception  
   
- `COleDispatchException` 提供更多資訊，以便與 Microsoft Visual Basic 的產品。  用語錯誤描述可用於訊息方塊或其他通知;說明資訊可用來協助使用者回應造成例外狀況的條件。  
+ `COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic. The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.  
   
- 兩個全域函式對應於兩個 OLE 例外狀況類別: [AfxThrowOleException](../Topic/AfxThrowOleException.md) 和 [AfxThrowOleDispatchException](../Topic/AfxThrowOleDispatchException.md)。  使用它們分別擲回一般 OLE 例外狀況和 OLE 分派例外狀況。  
+ Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) and [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.  
   
-## 請參閱  
- [例外狀況處理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

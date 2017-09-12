@@ -1,106 +1,124 @@
 ---
-title: "MFC ActiveX 控制項：加入自訂屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控制項, 屬性"
-  - "屬性 [MFC], 自訂"
+title: 'MFC ActiveX Controls: Adding Custom Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], properties
+- properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC ActiveX 控制項：加入自訂屬性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aaac18f6b8137aad6732bb69edb4b587e71aca2f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-自訂屬性與內建屬性不同的自訂屬性不為 `COleControl` 類別已經實作。  自訂屬性來公開 ActiveX 控制項的某些狀態或外觀。使用控制項的程式設計人員。  
+---
+# <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX Controls: Adding Custom Properties
+Custom properties differ from stock properties in that custom properties are not already implemented by the `COleControl` class. A custom property is used to expose a certain state or appearance of an ActiveX control to a programmer using the control.  
   
- 本文說明如何將自訂屬性加入至 ActiveX 控制項加入屬性精靈並說明產生的程式碼修改。  主題包括：  
+ This article describes how to add a custom property to the ActiveX control using the Add Property Wizard and explains the resulting code modifications. Topics include:  
   
--   [使用將加入屬性精靈的自訂屬性。](#_core_using_classwizard_to_add_a_custom_property)  
+-   [Using the Add Property Wizard to add a custom property](#_core_using_classwizard_to_add_a_custom_property)  
   
--   [加入屬性的自訂精靈變更](#_core_classwizard_changes_for_custom_properties)  
+-   [Add Property Wizard changes for custom properties](#_core_classwizard_changes_for_custom_properties)  
   
- 自訂屬性的方式來實作四種:成員變數，以通知， Get\/Set 方法的成員變數和參數化。  
+ Custom properties come in four varieties of implementation: Member Variable, Member Variable with Notification, Get/Set Methods, and Parameterized.  
   
--   成員變數實作  
+-   Member Variable Implementation  
   
-     這個實作所表示屬性的狀態為控制項類別的 10% 成員變數。  請使用成員變數實作，當知道不重要的屬性值變更時。  三個型別，這個實作會建立屬性的最少量的支援程式碼。  成員變數實作的分派對應項巨集是 [DISP\_PROPERTY](../Topic/DISP_PROPERTY.md)。  
+     This implementation represents the property's state as a member variable in the control class. Use the Member Variable implementation when it is not important to know when the property value changes. Of the three types, this implementation creates the least amount of support code for the property. The dispatch map entry macro for member variable implementation is [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).  
   
--   與通知實作的成員變數  
+-   Member Variable with Notification Implementation  
   
-     這個實作中加入屬性精靈和告知函式所建立的成員變數。  在屬性值變更後，告知函式由架構會自動呼叫。  請使用與通知實作的成員變數，並在需要時收到通知，在屬性值變更之後。  因為它需要函式呼叫，這個實作需要更多時間。  這個實作的分派對應項巨集是 [DISP\_PROPERTY\_NOTIFY](../Topic/DISP_PROPERTY_NOTIFY.md)。  
+     This implementation consists of a member variable and a notification function created by the Add Property Wizard. The notification function is automatically called by the framework after the property value changes. Use the Member Variable with Notification implementation when you need to be notified after a property value has changed. This implementation requires more time because it requires a function call. The dispatch map entry macro for this implementation is [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).  
   
--   取得\/設定方法實作  
+-   Get/Set Methods Implementation  
   
-     這個實作包含一個控制項類別的成員函式。  取得\/設定方法實作會呼叫取得成員函式，當控制項的使用者要求屬性的目前值和成員函式時，變更屬性的控制項的使用者要求時。  請使用這個實作會在執行階段期間，也就是說，當您需要計算屬性值時，驗證控制項傳遞的值在變更實際屬性之前或實作讀取或唯寫屬性型別。  這個實作的分派對應項巨集是 [DISP\_PROPERTY\_EX](../Topic/DISP_PROPERTY_EX.md)。  下列章節， [使用將加入屬性精靈的自訂屬性](#_core_using_classwizard_to_add_a_custom_property)，使用 CircleOffset 自訂屬性示範這項實作。  
+     This implementation consists of a pair of member functions in the control class. The Get/Set Methods implementation automatically calls the Get member function when the control's user requests the current value of the property and the Set member function when the control's user requests that the property be changed. Use this implementation when you need to compute the value of a property during run time, validate a value passed by the control's user before changing the actual property, or implement a read- or write-only property type. The dispatch map entry macro for this implementation is [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). The following section, [Using the Add Property Wizard to Add a Custom Property](#_core_using_classwizard_to_add_a_custom_property), uses the CircleOffset custom property to demonstrate this implementation.  
   
--   參數化的實作  
+-   Parameterized Implementation  
   
-     參數型實作會加入屬性精靈支援。  參數化屬性 \(有時稱為屬性陣列\) 可以用來將控制單一屬性存取一組值。  這個實作的分派對應項巨集是 `DISP_PROPERTY_PARAM`。  如需實作型別的詳細資訊，請參閱下列文章 ActiveX 控制項的 [實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md) :進階主題。  
+     Parameterized implementation is supported by the Add Property Wizard. A parameterized property (sometimes called a property array) can be used to access a set of values through a single property of your control. The dispatch map entry macro for this implementation is `DISP_PROPERTY_PARAM`. For more information on implementing this type, see [Implementing a Parameterized Property](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX Controls: Advanced Topics.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用將加入屬性精靈的自訂屬性。  
- 下列程序示範如何將自訂屬性， CircleOffset，使用 Get\/Set 方法實作。  CircleOffset 自訂屬性可讓控制項的使用者控制項位移的周框矩形的中心的圓形。  加入的自訂屬性與方法除了 Get\/Set 方法以外的實作很相似。  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Using the Add Property Wizard to Add a Custom Property  
+ The following procedure demonstrates adding a custom property, CircleOffset, which uses the Get/Set Methods implementation. The CircleOffset custom property allows the control's user to offset the circle from the center of the control's bounding rectangle. The procedure for adding custom properties with an implementation other than Get/Set Methods is very similar.  
   
- 這個程序也可以用來加入您想要的其他自訂屬性。  用 CircleOffset 屬性名稱和參數替代自訂屬性名稱。  
+ This same procedure can also be used to add other custom properties you want. Substitute your custom property name for the CircleOffset property name and parameters.  
   
-#### 使用加入屬性精靈，將 CircleOffset 自訂屬性  
+#### <a name="to-add-the-circleoffset-custom-property-using-the-add-property-wizard"></a>To add the CircleOffset custom property using the Add Property Wizard  
   
-1.  載入控制項的專案。  
+1.  Load your control's project.  
   
-2.  在類別檢視中，展開您的控制項程式庫節點。  
+2.  In Class View, expand the library node of your control.  
   
-3.  以滑鼠右鍵按一下控制項的 \(程式庫節點的第二個節點介面節點\) 開啟捷徑功能表。  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  從捷徑功能表中，按一下 \[**加入**\]，再按一下 \[**加入屬性**\]。  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     這樣會開啟 [加入屬性精靈](../ide/names-add-property-wizard.md)。  
+     This opens the [Add Property Wizard](../ide/names-add-property-wizard.md).  
   
-5.  在 \[**屬性名稱**\] 方塊中輸入 `CircleOffset`。  
+5.  In the **Property Name** box, type `CircleOffset`.  
   
-6.  對於 **Implementation Type**，按一下 **Get\/Set Methods**。  
+6.  For **Implementation Type**, click **Get/Set Methods**.  
   
-7.  在 **Property Type** 方塊中，選取 **short**。  
+7.  In the **Property Type** box, select **short**.  
   
-8.  輸入唯一名稱您的 Get 和 Set 函式或接受預設名稱。  
+8.  Type unique names for your Get and Set Functions, or accept the default names.  
   
-9. 按一下 \[**完成**\]。  
+9. Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a> 加入屬性的自訂精靈變更  
- 當您將 CircleOffset 自訂屬性時，加入屬性精靈會對標題 \(。H\) 和控制項的實作 \(.CPP\) 檔案分類。  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Add Property Wizard Changes for Custom Properties  
+ When you add the CircleOffset custom property, the Add Property Wizard makes changes to the header (.H) and the implementation (.CPP) files of the control class.  
   
- 下列程式碼行加入至。宣告兩個函式的 H 檔案呼叫 `GetCircleOffset` 和 `SetCircleOffset`:  
+ The following lines are added to the .H file to declare two functions called `GetCircleOffset` and `SetCircleOffset`:  
   
- [!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_1.h)]  
   
- 下列程式碼行加入至控制項的.IDL 檔案:  
+ The following line is added to your control's .IDL file:  
   
- [!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_2.idl)]  
   
- 這一行會將 CircleOffset 屬性每個特定 ID 編號，並以加入屬性精靈方法和屬性清單中方法的位置。  
+ This line assigns the CircleOffset property a specific ID number, taken from the method's position in the methods and properties list of the Add Property Wizard.  
   
- 此外，下列程式行加入至分派對應 \(控制項類別的 .CPP 檔案\) 對應 CircleOffset 屬性加入至控制項的兩個處理常式函式:  
+ In addition, the following line is added to the dispatch map (in the .CPP file of the control class) to map the CircleOffset property to the control's two handler functions:  
   
- [!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_3.cpp)]  
   
- 最後， `GetCircleOffset` 的實作和 `SetCircleOffset` 函式加入至控制項的 .CPP 檔案結尾。  在大部分情況下，您將修改 Get 函式傳回屬性的值。  這個 Set 函式通常會包含應該實作或的程式碼，在屬性變更前後。  
+ Finally, the implementations of the `GetCircleOffset` and `SetCircleOffset` functions are added to the end of the control's .CPP file. In most cases, you will modify the Get function to return the value of the property. The Set function will usually contain code that should be executed either before or after the property changes.  
   
- [!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_4.cpp)]  
   
- 請注意加入屬性精靈會自動將呼叫，加入至 [SetModifiedFlag](../Topic/COleControl::SetModifiedFlag.md)，為 Set 函式的主體。  呼叫此函式將控制項標記為已修改。  如果修改了控制項，則新的控制項狀態儲存，當容器中。  應該呼叫這個函式，當屬性，儲存為控制項的持續性狀態中，變更值。  
+ Note that the Add Property Wizard automatically adds a call, to [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), to the body of the Set function. Calling this function marks the control as modified. If a control has been modified, its new state will be saved when the container is saved. This function should be called whenever a property, saved as part of the control's persistent state, changes value.  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
- [MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)   
- [MFC ActiveX 控制項：方法](../mfc/mfc-activex-controls-methods.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

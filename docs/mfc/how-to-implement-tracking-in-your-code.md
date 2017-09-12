@@ -1,66 +1,85 @@
 ---
-title: "如何：在您的程式碼中實作追蹤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRectTracker 類別, 實作追蹤器"
+title: 'How to: Implement Tracking in Your Code | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 如何：在您的程式碼中實作追蹤
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cc36a9c8b723d4ab06fde39595a70a69f29352ed
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-若要追蹤 OLE 項目，您必須處理特定事件與項目相關，例如按一下項目或更新文件的檢視。  在所有情況下，宣告暫存 [CRectTracker](../mfc/reference/crecttracker-class.md) 物件並透過此物件操作項目即可。  
+---
+# <a name="how-to-implement-tracking-in-your-code"></a>How to: Implement Tracking in Your Code
+To track an OLE item, you must handle certain events related to the item, such as clicking the item or updating the view of the document. In all cases, it is sufficient to declare a temporary [CRectTracker](../mfc/reference/crecttracker-class.md) object and manipulate the item by means of this object.  
   
- 當使用者選取項目或插入與功能表命令物件時，您必須使用追蹤以適當樣式表示 OLE 項目的狀態。  下表列出 OCLIENT 範例使用慣例。  如需這些模式的詳細資訊，請參閱 `CRectTracker`。  
+ When a user selects an item or inserts an object with a menu command, you must initialize the tracker with the proper styles to represent the state of the OLE item. The following table outlines the conventions used by the OCLIENT sample. For more information on these styles, see `CRectTracker`.  
   
-### 容器 OLE 項目的樣式和狀態。  
+### <a name="container-styles-and-states-of-the-ole-item"></a>Container Styles and States of the OLE Item  
   
-|顯示的樣式|OLE 項目狀態|  
-|-----------|--------------|  
-|點狀框線|項目連結|  
-|實心框線|項目在文件中嵌入|  
-|調整大小控點|項目目前已選取|  
-|將矩形內外的串聯框線|項目目前是就地啟動|  
-|影線樣式重疊項目。|項目的伺服器為開啟狀態|  
+|Style displayed|State of OLE item|  
+|---------------------|-----------------------|  
+|Dotted border|Item is linked|  
+|Solid border|Item is embedded in your document|  
+|Resize handles|Item is currently selected|  
+|Hatched border|Item is currently in-place active|  
+|Hatching pattern overlays item|Item's server is open|  
   
- 您可以輕易地處理這個初始化使用檢查 OLE 項目狀態並設定適當的樣式的程序。  在 OCLIENT 範例中找到的 **SetupTracker** 函式中追蹤程式初始化。  這個函式的參數是這個 Tracker， *pTracker*位址;要與這個追蹤相關的用戶端項目， `pItem`的指標;而的矩形， *pTrueRect 的*指標。  如需這個函式的更完整的範例，請參閱 MFC OLE [OCLIENT](../top/visual-cpp-samples.md)範例。  
+ You can handle this initialization easily using a procedure that checks the state of the OLE item and sets the appropriate styles. The **SetupTracker** function found in the OCLIENT sample demonstrates tracker initialization. The parameters for this function are the address of the tracker, *pTracker*; a pointer to the client item that is related to the tracker, `pItem`; and a pointer to a rectangle, *pTrueRect*. For a more complete example of this function, see the MFC OLE sample [OCLIENT](../visual-cpp-samples.md).  
   
- **SetupTracker** 程式碼範例顯示單一函式;函式的行位置顛倒有關函式的功能的討論:  
+ The **SetupTracker** code example presents a single function; lines of the function are interspersed with discussion of the function's features:  
   
- [!code-cpp[NVC_MFCOClient#1](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_1.cpp)]  
+ [!code-cpp[NVC_MFCOClient#1](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_1.cpp)]  
   
- 這個 Tracker 將最小大小和清除樣式這台追蹤程式初始化。  
+ The tracker is initialized by setting the minimum size and clearing the style of the tracker.  
   
- [!code-cpp[NVC_MFCOClient#2](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_2.cpp)]  
+ [!code-cpp[NVC_MFCOClient#2](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_2.cpp)]  
   
- 下列程式碼會檢查項目目前是否已選取，而項目是否與文件在連結或內嵌。  調整位於框線內的控制代碼加入至樣式，表示項目目前已選取。  如果項目與您的資料連接，使用點狀的框線樣式。  實心框線，否則內嵌，使用項目。  
+ The following lines check to see whether the item is currently selected and whether the item is linked to the document or embedded in it. Resize handles located on the inside of the border are added to the style, indicating that the item is currently selected. If the item is linked to your document, the dotted border style is used. A solid border is used if the item is embedded.  
   
- [!code-cpp[NVC_MFCOClient#3](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_3.cpp)]  
+ [!code-cpp[NVC_MFCOClient#3](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_3.cpp)]  
   
- 如果項目目前已開啟，下列程式碼以規劃模式重疊項目。  
+ The following code overlays the item with a hatched pattern if the item is currently open.  
   
- [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_4.cpp)]  
+ [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]  
   
- 您可以呼叫這個函式，在這個追蹤程式必須顯示。  例如，呼叫從您的檢視類別的 `OnDraw` 函式上執行此功能。  這項更新追蹤程式的外觀，每當檢視重新繪製。  如需完整範例，請參閱 MFC OLE [OCLIENT](../top/visual-cpp-samples.md)範例的 **CMainView::OnDraw** 函式。  
+ You can then call this function whenever the tracker has to be displayed. For example, call this function from the `OnDraw` function of your view class. This updates the tracker's appearance whenever the view is repainted. For a complete example, see the **CMainView::OnDraw** function of the MFC OLE sample [OCLIENT](../visual-cpp-samples.md).  
   
- 在您的應用程式，需要追蹤程式碼，例如調整大小，移至的事件或點擊偵測，就會發生。  這些動作通常表示嘗試擷取或移動項目。  在這些情況下，您必須決定要擷取了:調整大小控點或之間框線區段的調整大小控點。  `OnLButtonDown` 訊息處理常式是測試滑鼠位置的好有關項目。  呼叫 `CRectTracker::HitTest`。  如果測試傳回或呼叫 **CRectTracker::hitOutside**以外，項目調整大小或移動。  因此，您應該呼叫 `Track` 成員函式。  如需完整範例參閱位於 MFC OLE 範例的 **CMainView::OnLButtonDown** 函式 [OCLIENT](../top/visual-cpp-samples.md) 。  
+ In your application, events that require tracker code, such as resizing, moving, or hit detecting, will occur. These actions usually indicate that an attempt is being made to grab or move the item. In these cases, you will need to decide what was grabbed: a resize handle or a portion of the border between resize handles. The `OnLButtonDown` message handler is a good place to test the position of the mouse in relation to the item. Make a call to `CRectTracker::HitTest`. If the test returns something besides **CRectTracker::hitOutside**, the item is being resized or moved. Therefore, you should make a call to the `Track` member function. See the **CMainView::OnLButtonDown** function located in the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) for a complete example.  
   
- `CRectTracker` 類別會提供數個不同的游標圖案表示移動時，是否會調整大小，或拖曳作業時發生。  處理這個事件，檢查項目在滑鼠下目前是否已選取。  如果是，請呼叫 `CRectTracker::SetCursor`或呼叫預設的處理常式。  下列範例是從 MFC OLE [OCLIENT](../top/visual-cpp-samples.md)範例:  
+ The `CRectTracker` class provides several different cursor shapes used to indicate whether a move, resize, or drag operation is taking place. To handle this event, check to see whether the item currently under the mouse is selected. If it is, make a call to `CRectTracker::SetCursor`, or call the default handler. The following example is from the MFC OLE sample [OCLIENT](../visual-cpp-samples.md):  
   
- [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/CPP/how-to-implement-tracking-in-your-code_5.cpp)]  
+ [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]  
   
-## 請參閱  
- [追蹤器：在 OLE 應用程式中實作追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+## <a name="see-also"></a>See Also  
+ [Trackers: Implementing Trackers in Your OLE Application](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
+
+

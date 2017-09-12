@@ -1,35 +1,54 @@
 ---
-title: "TN032：MFC 例外狀況機制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.exceptions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CException 類別, 使用"
-  - "MFC, 例外狀況"
-  - "TN032"
+title: 'TN032: MFC Exception Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.exceptions
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN032
+- MFC, exceptions
+- CException class [MFC], using
 ms.assetid: 0271f0aa-82cb-47a2-b7ea-e88126fc7e43
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN032：MFC 例外狀況機制
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 86c149585d9ea7905ace80f7a6aad51eab5dc6dc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-舊版的 Visual C\+\+ 不支援 Standard C\+\+ 例外狀況機制，因此， MFC 提供了使用的巨集 **TRY\/CATCH\/THROW** 。  這個版本的 Visual C\+\+ 完全支援 C\+\+ 例外狀況。  這個標記會自動包含某些先前巨集的進階實作詳細資料包括如何清除堆疊式物件。  因為 C\+\+ 例外狀況預設回溯支援的堆疊，這個技術提示不再是必要的。  
+---
+# <a name="tn032-mfc-exception-mechanism"></a>TN032: MFC Exception Mechanism
+Previous versions of Visual C++ did not support the standard C++ exception mechanism, and MFC provided macros **TRY/CATCH/THROW** that were used instead. This version of Visual C++ fully supports C++ exceptions. This note covered some of the advanced implementation details of the previous macros including how to automatically cleanup stack based objects. Because C++ exceptions support stack unwinding by default, this technical note is no longer necessary.  
   
- 如需 MFC 巨集和新的 C\+\+ 關鍵字之間差異的詳細資訊，請參考 [例外狀況：使用 MFC 巨集和 C\+\+ 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) 。  
+ Refer to [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) for more information on the differences between the MFC macros and the new C++ keywords.  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

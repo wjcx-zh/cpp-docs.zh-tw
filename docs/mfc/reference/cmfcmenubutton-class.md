@@ -1,5 +1,5 @@
 ---
-title: "CMFCMenuButton 類別 |Microsoft 文件"
+title: CMFCMenuButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCMenuButton class
+- CMFCMenuButton [MFC], CMFCMenuButton
+- CMFCMenuButton [MFC], PreTranslateMessage
+- CMFCMenuButton [MFC], SizeToContent
+- CMFCMenuButton [MFC], m_bOSMenu
+- CMFCMenuButton [MFC], m_bRightArrow
+- CMFCMenuButton [MFC], m_bStayPressed
+- CMFCMenuButton [MFC], m_hMenu
+- CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
 caps.latest.revision: 32
 author: mikeblome
@@ -43,17 +50,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 65c334ce68dbbbae2b21da2c40aa9420cdeb51bd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3586f339fce759a5d2f4f44ac1abbf37077a6ebb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcmenubutton-class"></a>CMFCMenuButton 類別
-顯示快顯功能表和報告使用者功能表選取的按鈕。  
+# <a name="cmfcmenubutton-class"></a>CMFCMenuButton Class
+A button that displays a pop-up menu and reports on the user's menu selections.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCMenuButton : public CMFCButton  
@@ -61,41 +68,41 @@ class CMFCMenuButton : public CMFCButton
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|建構 `CMFCMenuButton` 物件。|  
+|[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Constructs a `CMFCMenuButton` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|要轉譯的視窗訊息，再分派這些架構呼叫。 (覆寫 `CMFCButton::PreTranslateMessage`。)|  
-|[CMFCMenuButton::SizeToContent](#sizetocontent)|變更它的文字和影像的大小根據按鈕大小。|  
+|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Called by the framework to translate window messages before they are dispatched. (Overrides `CMFCButton::PreTranslateMessage`.)|  
+|[CMFCMenuButton::SizeToContent](#sizetocontent)|Changes the size of the button according to its text and image size.|  
   
-### <a name="data-members"></a>資料成員  
+### <a name="data-members"></a>Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|指定是否要顯示的預設系統的快顯功能表，或是使用[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。|  
-|[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|指定是否快顯功能表會出現下方或右邊的按鈕。|  
-|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|指定是否功能表按鈕將其狀態變更之後，使用者放開按鈕。|  
-|[CMFCMenuButton::m_hMenu](#m_hmenu)|附加的 Windows 功能表控制代碼。|  
-|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|識別項，表示哪些項目從快顯功能表上選取的使用者。|  
+|[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|Specifies whether to display the default system pop-up menu or to use [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).|  
+|[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|Specifies whether the pop-up menu will appear underneath or to the right of the button.|  
+|[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|Specifies whether the menu button changes its state after the user releases the button.|  
+|[CMFCMenuButton::m_hMenu](#m_hmenu)|A handle to the attached Windows menu.|  
+|[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|An identifier that indicates which item the user selected from the pop-up menu.|  
   
-## <a name="remarks"></a>備註  
- `CMFCMenuButton`類別衍生自[CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)反而，衍生自[CButton 類別](../../mfc/reference/cbutton-class.md)。 因此，您可以使用`CMFCMenuButton`在相同的方式，您可以使用程式碼中`CButton`。  
+## <a name="remarks"></a>Remarks  
+ The `CMFCMenuButton` class is derived from the [CMFCButton Class](../../mfc/reference/cmfcbutton-class.md) which is, in turn, derived from the [CButton Class](../../mfc/reference/cbutton-class.md). Therefore, you can use `CMFCMenuButton` in your code the same way you would use `CButton`.  
   
- 當您建立`CMFCMenuButton`，您必須傳遞至相關聯的快顯功能表中的控制代碼。 接下來，呼叫函式`CMFCMenuButton::SizeToContent`。 `CMFCMenuButton::SizeToContent`檢查足以包含指向的位置快顯視窗中顯示的位置-也就是下面或按鈕右邊的箭號按鈕的大小。  
+ When you create a `CMFCMenuButton`, you must pass in a handle to the associated pop-up menu. Next, call the function `CMFCMenuButton::SizeToContent`. `CMFCMenuButton::SizeToContent` checks that the button size is sufficient to include an arrow that points to the location where the pop-up window will appear - namely, underneath or to the right of the button.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何設定附加至按鈕的功能表的控制代碼、 縮放按鈕根據其文字和影像的大小，以及設定時所顯示的快顯功能表。 此程式碼片段是一部分[新的控制項範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to set the handle of the menu attached to the button, resize the button according to its text and image size, and set the pop-up menu that is displayed by the framework. This code snippet is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #&38;](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls #&39;](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -108,105 +115,105 @@ class CMFCMenuButton : public CMFCButton
   
  [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxmenubutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmenubutton.h  
   
-##  <a name="cmfcmenubutton"></a>CMFCMenuButton::CMFCMenuButton  
- 建構新[CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)物件。  
+##  <a name="cmfcmenubutton"></a>  CMFCMenuButton::CMFCMenuButton  
+ Constructs a new [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md) object.  
   
 ```  
 CMFCMenuButton();
 ```  
   
-##  <a name="m_bosmenu"></a>CMFCMenuButton::m_bOSMenu  
- 此布林值的成員變數會指出哪一個快顯功能表，架構會顯示。  
+##  <a name="m_bosmenu"></a>  CMFCMenuButton::m_bOSMenu  
+ A Boolean member variable that indicates which pop-up menu the framework displays.  
   
 ```  
 BOOL m_bOSMenu;  
 ```  
   
-### <a name="remarks"></a>備註  
- 如果`m_bOSMenu`是`TRUE`，架構會呼叫繼承`TrackPopupMenu`此物件的方法。 否則，架構會呼叫[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。  
+### <a name="remarks"></a>Remarks  
+ If `m_bOSMenu` is `TRUE`, the framework calls the inherited `TrackPopupMenu` method for this object. Otherwise, the framework calls [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu).  
   
-##  <a name="m_brightarrow"></a>CMFCMenuButton::m_bRightArrow  
- 布林值的成員變數，指出快顯功能表上的位置。  
+##  <a name="m_brightarrow"></a>  CMFCMenuButton::m_bRightArrow  
+ A Boolean member variable that indicates the location of the pop-up menu.  
   
 ```  
 BOOL m_bRightArrow;  
 ```  
   
-### <a name="remarks"></a>備註  
- 當使用者按下 [功能表] 按鈕時，應用程式會顯示快顯功能表。 架構會顯示快顯功能表 按鈕下方或右邊的按鈕。 此按鈕還有一個小箭號，指出快顯功能表上出現的位置。 如果`m_bRightArrow`是`TRUE`，架構會顯示快顯功能表按鈕的右邊。 否則，它會顯示快顯功能表 按鈕下方。  
+### <a name="remarks"></a>Remarks  
+ When the user presses the menu button, the application shows a pop-up menu. The framework will display the pop-up menu either under the button or to the right of the button. The button also has a small arrow that indicates where the pop-up menu will appear. If `m_bRightArrow` is `TRUE`, the framework displays the pop-up menu to the right of the button. Otherwise, it displays the pop-up menu under the button.  
   
-##  <a name="m_bstaypressed"></a>CMFCMenuButton::m_bStayPressed  
- 雖然使用者可以從快顯功能表選取項目，按下的布林成員變數，指出是否顯示功能表 按鈕。  
+##  <a name="m_bstaypressed"></a>  CMFCMenuButton::m_bStayPressed  
+ A Boolean member variable that indicates whether the menu button appears pressed while the user makes a selection from the pop-up menu.  
   
 ```  
 BOOL m_bStayPressed;  
 ```  
   
-### <a name="remarks"></a>備註  
- 如果`m_bStayPressed`成員是`FALSE`，功能表不會不會按下按鈕時，會使用按下按鈕。 在此情況下，架構會顯示快顯功能表。  
+### <a name="remarks"></a>Remarks  
+ If the `m_bStayPressed` member is `FALSE`, the menu button does not become pressed when the uses clicks the button. In this case, the framework displays only the pop-up menu.  
   
- 如果`m_bStayPressed`成員是`TRUE`，當使用者按一下按鈕會變成已按下 [功能表] 按鈕。 使用者關閉快顯功能表上，藉由選取或取消之後，它會維持狀態直到按下。  
+ If the `m_bStayPressed` member is `TRUE`, the menu button becomes pressed when the user clicks the button. It stays pressed until after the user closes the pop-up menu, either by making a selection or canceling.  
   
-##  <a name="m_hmenu"></a>CMFCMenuButton::m_hMenu  
- 要附加的功能表的控制代碼。  
+##  <a name="m_hmenu"></a>  CMFCMenuButton::m_hMenu  
+ The handle to the attached menu.  
   
 ```  
 HMENU m_hMenu;  
 ```  
   
-### <a name="remarks"></a>備註  
- 架構會顯示由這個成員變數，當使用者按一下 [功能表] 按鈕的功能表。  
+### <a name="remarks"></a>Remarks  
+ The framework displays the menu indicated by this member variable when the user clicks the menu button.  
   
-##  <a name="m_nmenuresult"></a>CMFCMenuButton::m_nMenuResult  
- 整數，表示哪些項目會從快顯功能表上選取使用者。  
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult  
+ An integer that indicates which item the user selects from the pop-up menu.  
   
 ```  
 int m_nMenuResult;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這個成員變數的值為零，如果使用者取消功能表而不做選擇，或發生錯誤。  
+### <a name="remarks"></a>Remarks  
+ The value of this member variable is zero if the user cancels the menu without making a selection or if an error occurs.  
   
-##  <a name="pretranslatemessage"></a>CMFCMenuButton::PreTranslateMessage  
- 要轉譯的視窗訊息，再分派這些架構呼叫。  
+##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage  
+ Called by the framework to translate window messages before they are dispatched.  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pMsg`  
- 指向[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。  
+ Points to a [MSG](../../mfc/reference/msg-structure1.md) structure that contains the message to process.  
   
-### <a name="return-value"></a>傳回值  
- 如果訊息已轉譯，而且不會發送，為非零如果訊息無法轉譯，而且應該分派到，0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the message was translated and should not be dispatched; 0 if the message was not translated and should be dispatched.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizetocontent"></a>CMFCMenuButton::SizeToContent  
- 根據其文字大小和影像大小 按鈕的大小變更。  
+##  <a name="sizetocontent"></a>  CMFCMenuButton::SizeToContent  
+ Changes the size of the button according to its text size and image size.  
   
 ```  
 virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bCalcOnly`  
- 布林值的參數，指出是否此方法會調整大小 按鈕。  
+ A Boolean parameter that indicates whether this method resizes the button .  
   
-### <a name="return-value"></a>傳回值  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，指定新按鈕的大小。  
+### <a name="return-value"></a>Return Value  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object that specifies the new size for the button.  
   
-### <a name="remarks"></a>備註  
- 如果您呼叫此函式和`bCalcOnly`是`TRUE`，`SizeToContent`會先計算按鈕的新大小。  
+### <a name="remarks"></a>Remarks  
+ If you call this function and `bCalcOnly` is `TRUE`, `SizeToContent` will calculate only the new size of the button.  
   
- 新按鈕的大小計算為符合按鈕文字、 影像和箭號。 架構也會加入 10 個像素水平的邊緣和 5 個像素垂直邊緣的預先定義的邊界。  
+ The new size of the button is calculated to fit the button text, image, and arrow. The framework also adds in predefined margins of 10 pixels for the horizontal edge and 5 pixels for the vertical edge.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCButton Class](../../mfc/reference/cmfcbutton-class.md)
 

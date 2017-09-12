@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonQuickAccessToolBarDefaultState 類別 |Microsoft 文件"
+title: CMFCRibbonQuickAccessToolBarDefaultState Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonQuickAccessToolBarDefaultState class
+- CMFCRibbonQuickAccessToolBarDefaultState [MFC], CMFCRibbonQuickAccessToolBarDefaultState
+- CMFCRibbonQuickAccessToolBarDefaultState [MFC], AddCommand
+- CMFCRibbonQuickAccessToolBarDefaultState [MFC], CopyFrom
+- CMFCRibbonQuickAccessToolBarDefaultState [MFC], RemoveAll
 ms.assetid: eca99200-b87b-47ba-b2e8-2f3f2444b176
 caps.latest.revision: 28
 author: mikeblome
@@ -38,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 211e8d897de923e7f07df389b0e9e7218cf45872
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77a7fb9b0818d3df8dc41db2b94a0789e0d03b15
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 類別
-協助程式類別，可快速存取工具列所放置在功能區列上管理預設狀態 ( [CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md))。  
+# <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState Class
+A helper class that manages default state for the Quick Access Toolbar that is positioned on the ribbon bar ( [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonQuickAccessToolBarDefaultState  
@@ -56,36 +59,36 @@ class CMFCRibbonQuickAccessToolBarDefaultState
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|建構 `CMFCRibbonQuickAccessToolbarDefaultState` 物件。|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState](#cmfcribbonquickaccesstoolbardefaultstate)|Constructs a `CMFCRibbonQuickAccessToolbarDefaultState` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|快速存取工具列將命令新增到預設狀態。 工具列本身不會變更。|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|將一個快速存取工具列的內容複製到另一個。|  
-|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|快速存取工具列中移除所有的命令。 工具列本身不會變更。|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)|Adds a command to the default state for the Quick Access Toolbar. This does not change the toolbar itself.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom](#copyfrom)|Copies the properties of one Quick Access Toolbar to another.|  
+|[CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll](#removeall)|Removes all commands from the Quick Access Toolbar. This does not change the toolbar itself.|  
   
-## <a name="remarks"></a>備註  
- 您建立應用程式中的快速存取工具列之後，我們建議您設定其預設狀態，藉由呼叫[CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate)。 當使用者按一下還原這個預設狀態**重設**按鈕**自訂**應用程式頁面**選項**對話方塊。  
+## <a name="remarks"></a>Remarks  
+ After you create the Quick Access Toolbar in your application, we recommend that you set its default state by calling [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate). This default state is restored when a user clicks the **Reset** button on the **Customize** page of your application's **Options** dialog box.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)  
   
-## <a name="example"></a>範例  
- 下列範例示範如何建構的物件`CMFCRibbonQuickAccessToolbarDefaultState`類別，以及如何新增快速存取工具列命令的預設狀態。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonQuickAccessToolbarDefaultState` class and how to add a command to the default state for the Quick Access Toolbar.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&21;](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxribbonquickaccesstoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonquickaccesstoolbar.h  
   
-##  <a name="addcommand"></a>CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
- 快速存取工具列將命令新增到預設狀態。  
+##  <a name="addcommand"></a>  CMFCRibbonQuickAccessToolBarDefaultState::AddCommand  
+ Adds a command to the default state for the Quick Access Toolbar.  
   
 ```  
 void AddCommand(
@@ -93,52 +96,52 @@ void AddCommand(
     BOOL bIsVisible=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `[in] uiCmd`  
- 指定命令識別碼。  
+ Specifies command ID.  
   
  `[in] bIsVisible`  
- 快速存取工具列中的預設狀態時，請設定命令的可見性。  
+ Sets the visibility of the command when the Quick Access Toolbar is in the default state.  
   
-### <a name="remarks"></a>備註  
- 將命令加入至 CMFCRibbonQuickAccessToolBarDefaultState 完成三個結果。 首先，每個加入的命令列在快速存取工具列右邊的下拉式清單中。 以這種方式，使用者輕鬆地新增或移除快速存取工具列命令。 第二，快速存取工具列會重設為顯示只有所列出的命令為可見的預設狀態中當使用者按一下**重設**按鈕**自訂**對話方塊。 第三，如果您不呼叫[CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands)，快速存取工具列使用可見的指令，從這份清單做為預設顯示命令第一次使用者執行您的應用程式。 新增您想要的所有命令之後，呼叫[CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate)快速存取工具列的功能區列的這個執行個體設定為預設狀態。  
+### <a name="remarks"></a>Remarks  
+ Adding a command to the CMFCRibbonQuickAccessToolBarDefaultState accomplishes three results. First, each added command is listed on the dropdown on the right side of the Quick Access Toolbar. In this manner, a user can easily add or remove that command from the Quick Access Toolbar. Second, the Quick Access Toolbar is reset to show only those commands that are listed as visible in the default state when the user clicks the **Reset** button in the **Customize** dialog box. Third, if you have not called [CMFCRibbonBar::SetQuickAccessCommands](../../mfc/reference/cmfcribbonbar-class.md#setquickaccesscommands), the Quick Access Toolbar uses the visible commands from this list as the default visible commands the first time a user runs your application. After you have added all the commands that you want, call [CMFCRibbonBar::SetQuickAccessDefaultState](../../mfc/reference/cmfcribbonbar-class.md#setquickaccessdefaultstate) to set this instance as the default state for the Quick Access Toolbar of that Ribbon Bar.  
   
-##  <a name="copyfrom"></a>CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
- 將一個快速存取工具列的內容複製到另一個。  
+##  <a name="copyfrom"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CopyFrom  
+ Copies the properties of one Quick Access Toolbar to another.  
   
 ```  
 void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 來源的參考`CMFCRibbonQuickAccessToolBarDefaultState`從複製的物件。  
+ A reference to the source `CMFCRibbonQuickAccessToolBarDefaultState` object to copy from.  
   
-### <a name="remarks"></a>備註  
- 這個方法會從來源複製每個命令`CMFCRibbonQuickAccessToolBarDefaultState`物件與這個物件使用[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)方法。  
+### <a name="remarks"></a>Remarks  
+ This method copies each command from the source `CMFCRibbonQuickAccessToolBarDefaultState` object to this object by using the [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) method.  
   
-##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
- 建構的快速存取工具列預設狀態物件。  
+##  <a name="cmfcribbonquickaccesstoolbardefaultstate"></a>  CMFCRibbonQuickAccessToolBarDefaultState::CMFCRibbonQuickAccessToolBarDefaultState  
+ Constructs the Quick Access Toolbar default state object.  
   
 ```  
 CMFCRibbonQuickAccessToolBarDefaultState();
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，清單的命令的新執行個體[CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)包含是空的。  
+### <a name="remarks"></a>Remarks  
+ By default, the list of commands that the new instance of [CMFRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md) contains is empty.  
   
-##  <a name="removeall"></a>CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
- 清除 快速存取工具列中的預設命令的清單。  
+##  <a name="removeall"></a>  CMFCRibbonQuickAccessToolBarDefaultState::RemoveAll  
+ Clears the list of default commands in the Quick Access Toolbar.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>備註  
- 此函式會移除這個執行個體的所有命令的先前呼叫[CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand)加入。  
+### <a name="remarks"></a>Remarks  
+ This function removes from this instance all the commands that the previous calls to [CMFCRibbonQuickAccessToolBarDefaultState::AddCommand](#addcommand) added.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md)
 

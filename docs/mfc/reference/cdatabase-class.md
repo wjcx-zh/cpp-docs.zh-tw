@@ -1,11 +1,11 @@
 ---
-title: "CDatabase 類別 |Microsoft 文件"
+title: CDatabase Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -36,12 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- database classes [C++], ODBC
-- MFC [C++], ODBC
-- ODBC [C++], CDatabase class
-- ODBC database class
-- database connections [C++], CDatabase class
-- CDatabase class
+- CDatabase [MFC], CDatabase
+- CDatabase [MFC], BeginTrans
+- CDatabase [MFC], BindParameters
+- CDatabase [MFC], Cancel
+- CDatabase [MFC], CanTransact
+- CDatabase [MFC], CanUpdate
+- CDatabase [MFC], Close
+- CDatabase [MFC], CommitTrans
+- CDatabase [MFC], ExecuteSQL
+- CDatabase [MFC], GetBookmarkPersistence
+- CDatabase [MFC], GetConnect
+- CDatabase [MFC], GetCursorCommitBehavior
+- CDatabase [MFC], GetCursorRollbackBehavior
+- CDatabase [MFC], GetDatabaseName
+- CDatabase [MFC], IsOpen
+- CDatabase [MFC], OnSetOptions
+- CDatabase [MFC], Open
+- CDatabase [MFC], OpenEx
+- CDatabase [MFC], Rollback
+- CDatabase [MFC], SetLoginTimeout
+- CDatabase [MFC], SetQueryTimeout
+- CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 caps.latest.revision: 24
 author: mikeblome
@@ -61,16 +77,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e7b151d83f4229586ad8787a326e332abb9fc79d
-ms.lasthandoff: 04/01/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 767f5401bde4e6ef2e76e528b548b2435ff60ff6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdatabase-class"></a>CDatabase 類別
-表示資料來源的連接，您可以透過這個連接來操作資料來源。  
+# <a name="cdatabase-class"></a>CDatabase Class
+Represents a connection to a data source, through which you can operate on the data source.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDatabase : public CObject  
@@ -78,361 +95,361 @@ class CDatabase : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDatabase::CDatabase](#cdatabase)|建構 `CDatabase` 物件。 您必須藉由呼叫初始化物件`OpenEx`或**開啟**。|  
+|[CDatabase::CDatabase](#cdatabase)|Constructs a `CDatabase` object. You must initialize the object by calling `OpenEx` or **Open**.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDatabase::BeginTrans](#begintrans)|啟動 「 交易 」 — 一系列的回復呼叫`AddNew`，**編輯**，**刪除**，和**更新**類別成員函式`CRecordset`— 上連接的資料來源。 資料來源必須支援的交易**BeginTrans**才能發生效用。|  
-|[CDatabase::BindParameters](#bindparameters)|可讓您將繫結參數，然後再呼叫`CDatabase::ExecuteSQL`。|  
-|[CDatabase::Cancel](#cancel)|取消非同步作業或從第二個執行緒處理序。|  
-|[CDatabase::CanTransact](#cantransact)|傳回非零，如果資料來源支援交易。|  
-|[CDatabase::CanUpdate](#canupdate)|傳回非零，如果`CDatabase`是可更新的物件 （不唯讀）。|  
-|[CDatabase::Close](#close)|關閉資料來源連接。|  
-|[CDatabase::CommitTrans](#committrans)|完成開始異動**BeginTrans**。 在交易中改變資料來源的命令會執行。|  
-|[Cdatabase:: Executesql](#executesql)|執行 SQL 陳述式。 會不傳回任何資料。|  
-|[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|識別保存書籤資料錄集物件的作業。|  
-|[CDatabase::GetConnect](#getconnect)|傳回用來連接的 ODBC 連接字串`CDatabase`到資料來源的物件。|  
-|[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|識別認可異動的開啟資料錄集物件上的效果。|  
-|[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|識別開啟的資料錄集物件上回復交易的效果。|  
-|[CDatabase::GetDatabaseName](#getdatabasename)|傳回目前使用中資料庫的名稱。|  
-|[CDatabase::IsOpen](#isopen)|傳回非零，如果`CDatabase`物件目前連線至資料來源。|  
-|[CDatabase::OnSetOptions](#onsetoptions)|由架構呼叫以設定標準的連接選項。 預設實作會設定查詢逾時值。 您可以藉由呼叫來建立這些選項，事先`SetQueryTimeout`。|  
-|[CDatabase::Open](#open)|建立資料來源 （透過 ODBC 驅動程式） 的連接。|  
-|[CDatabase::OpenEx](#openex)|建立資料來源 （透過 ODBC 驅動程式） 的連接。|  
-|[CDatabase::Rollback](#rollback)|反轉目前交易期間所做的變更。 資料來源傳回至其先前的狀態，在定義**BeginTrans**呼叫時，不變。|  
-|[CDatabase::SetLoginTimeout](#setlogintimeout)|設定之後資料來源的連接嘗試會逾時秒數。|  
-|[CDatabase::SetQueryTimeout](#setquerytimeout)|設定資料庫之後的秒數查詢作業會逾時。 會影響所有後續的資料錄集**開啟**， `AddNew`，**編輯**，和**刪除**呼叫。|  
+|[CDatabase::BeginTrans](#begintrans)|Starts a "transaction" — a series of reversible calls to the `AddNew`, **Edit**, **Delete**, and **Update** member functions of class `CRecordset` — on the connected data source. The data source must support transactions for **BeginTrans** to have any effect.|  
+|[CDatabase::BindParameters](#bindparameters)|Allows you to bind parameters before calling `CDatabase::ExecuteSQL`.|  
+|[CDatabase::Cancel](#cancel)|Cancels an asynchronous operation or a process from a second thread.|  
+|[CDatabase::CanTransact](#cantransact)|Returns nonzero if the data source supports transactions.|  
+|[CDatabase::CanUpdate](#canupdate)|Returns nonzero if the `CDatabase` object is updatable (not read-only).|  
+|[CDatabase::Close](#close)|Closes the data source connection.|  
+|[CDatabase::CommitTrans](#committrans)|Completes a transaction begun by **BeginTrans**. Commands in the transaction that alter the data source are carried out.|  
+|[CDatabase::ExecuteSQL](#executesql)|Executes a SQL statement. No data records are returned.|  
+|[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|Identifies the operations through which bookmarks persist on recordset objects.|  
+|[CDatabase::GetConnect](#getconnect)|Returns the ODBC connection string used to connect the `CDatabase` object to a data source.|  
+|[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|Identifies the effect of committing a transaction on an open recordset object.|  
+|[CDatabase::GetCursorRollbackBehavior](#getcursorrollbackbehavior)|Identifies the effect of rolling back a transaction on an open recordset object.|  
+|[CDatabase::GetDatabaseName](#getdatabasename)|Returns the name of the database currently in use.|  
+|[CDatabase::IsOpen](#isopen)|Returns nonzero if the `CDatabase` object is currently connected to a data source.|  
+|[CDatabase::OnSetOptions](#onsetoptions)|Called by the framework to set standard connection options. The default implementation sets the query timeout value. You can establish these options ahead of time by calling `SetQueryTimeout`.|  
+|[CDatabase::Open](#open)|Establishes a connection to a data source (through an ODBC driver).|  
+|[CDatabase::OpenEx](#openex)|Establishes a connection to a data source (through an ODBC driver).|  
+|[CDatabase::Rollback](#rollback)|Reverses changes made during the current transaction. The data source returns to its previous state, as defined at the **BeginTrans** call, unaltered.|  
+|[CDatabase::SetLoginTimeout](#setlogintimeout)|Sets the number of seconds after which a data source connection attempt will time out.|  
+|[CDatabase::SetQueryTimeout](#setquerytimeout)|Sets the number of seconds after which database query operations will time out. Affects all subsequent recordset **Open**, `AddNew`, **Edit**, and **Delete** calls.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDatabase::m_hdbc](#m_hdbc)|開啟資料庫連接 (ODBC) 資料來源的連接控制代碼。 型別**HDBC**。|  
+|[CDatabase::m_hdbc](#m_hdbc)|Open Database Connectivity (ODBC) connection handle to a data source. Type **HDBC**.|  
   
-## <a name="remarks"></a>備註  
- 資料來源是資料的某些資料庫管理系統 (DBMS) 所裝載的特定執行個體。 範例包括 Microsoft SQL Server、 Microsoft Access、 Borland dBASE 和 xBASE。 您可以有一或多個`CDatabase`一次應用程式中作用中的物件。  
+## <a name="remarks"></a>Remarks  
+ A data source is a specific instance of data hosted by some database management system (DBMS). Examples include Microsoft SQL Server, Microsoft Access, Borland dBASE, and xBASE. You can have one or more `CDatabase` objects active at a time in your application.  
   
 > [!NOTE]
->  如果您正在使用的資料存取物件 (DAO) 類別，而不是開放式資料庫連接 (ODBC) 類別，使用類別[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)改為。 如需詳細資訊，請參閱文章[概觀︰ 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。  
+>  If you are working with the Data Access Objects (DAO) classes rather than the Open Database Connectivity (ODBC) classes, use class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) instead. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
- 若要使用`CDatabase`，建構`CDatabase`物件並呼叫其`OpenEx`成員函式。 這會開啟連接。 當您然後建構`CRecordset`連接的資料來源上運作的物件傳遞的資料錄集建構函式的指標，您`CDatabase`物件。 當您完成使用連接時，呼叫**關閉**成員函式，並終結`CDatabase`物件。 **關閉**關閉任何先前未關閉的資料錄集。  
+ To use `CDatabase`, construct a `CDatabase` object and call its `OpenEx` member function. This opens a connection. When you then construct `CRecordset` objects for operating on the connected data source, pass the recordset constructor a pointer to your `CDatabase` object. When you finish using the connection, call the **Close** member function and destroy the `CDatabase` object. **Close** closes any recordsets you have not closed previously.  
   
- 如需有關`CDatabase`，請參閱文章[資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)和[概觀︰ 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。  
+ For more information about `CDatabase`, see the articles [Data Source (ODBC)](../../data/odbc/data-source-odbc.md) and [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDatabase`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-##  <a name="begintrans"></a>CDatabase::BeginTrans  
- 呼叫此成員函式，進而開始交易與連接的資料來源。  
+##  <a name="begintrans"></a>  CDatabase::BeginTrans  
+ Call this member function to begin a transaction with the connected data source.  
   
 ```  
 BOOL BeginTrans();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果呼叫成功，會認可變更，只以手動方式;否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the call was successful and changes are committed only manually; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 交易是由所組成的一或多個呼叫`AddNew`，**編輯**，**刪除**，和**更新**的成員函式`CRecordset`物件。 開始交易之前,`CDatabase`物件必須具有已連接到資料來源藉由呼叫其`OpenEx`或**開啟**成員函式。 若要結束交易，呼叫[CommitTrans](#committrans)接受資料來源的所有變更 （及執行這些步驟），或呼叫[復原](#rollback)中止整個交易。 呼叫**BeginTrans**之後您開啟任何資料錄集參與異動的和做為接近實際更新作業越好。  
-  
-> [!CAUTION]
->  根據您的 ODBC 驅動程式，開啟資料錄集，然後再呼叫**BeginTrans**呼叫時可能會造成問題**復原**。 您應該檢查您使用特定驅動程式。 比方說，當 Microsoft ODBC Desktop Driver Pack 3.0 中包含的 Microsoft Access 驅動程式，您必須考慮 Jet 資料庫引擎的需求，您不應該開始已開啟的資料指標的任何資料庫上的交易。 在 MFC 資料庫類別中，開啟的資料指標表示開啟`CRecordset`物件。 如需詳細資訊，請參閱[技術提示 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)。  
-  
- **BeginTrans**在伺服器上，視要求的並行處理和資料來源的功能而定也可能會鎖定資料錄。 鎖定資料的相關資訊，請參閱文章[資料錄集︰ 鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)。  
-  
- 本文說明使用者定義交易[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
-  
- **BeginTrans**建立的交易序列可以復原的狀態 （相反）。 若要建立的新狀態的回復，認可任何目前的交易，然後呼叫**BeginTrans**一次。  
+### <a name="remarks"></a>Remarks  
+ A transaction consists of one or more calls to the `AddNew`, **Edit**, **Delete**, and **Update** member functions of a `CRecordset` object. Before beginning a transaction, the `CDatabase` object must already have been connected to the data source by calling its `OpenEx` or **Open** member function. To end the transaction, call [CommitTrans](#committrans) to accept all changes to the data source (and carry them out) or call [Rollback](#rollback) to abort the entire transaction. Call **BeginTrans** after you open any recordsets involved in the transaction and as close to the actual update operations as possible.  
   
 > [!CAUTION]
->  呼叫**BeginTrans**一次而不需呼叫**CommitTrans**或**復原**是錯誤。  
+>  Depending on your ODBC driver, opening a recordset before calling **BeginTrans** may cause problems when calling **Rollback**. You should check the specific driver you are using. For example, when using the Microsoft Access driver included in the Microsoft ODBC Desktop Driver Pack 3.0, you must account for the Jet database engine's requirement that you should not begin a transaction on any database that has an open cursor. In the MFC database classes, an open cursor means an open `CRecordset` object. For more information, see [Technical Note 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).  
   
- 呼叫[CanTransact](#cantransact)成員函式來判斷您的驅動程式是否支援給定的資料庫交易。 您也應該呼叫[GetCursorCommitBehavior](#getcursorcommitbehavior)和[GetCursorRollbackBehavior](#getcursorrollbackbehavior)判斷要保留資料指標支援。  
+ **BeginTrans** may also lock data records on the server, depending on the requested concurrency and the capabilities of the data source. For information about locking data, see the article [Recordset: Locking Records (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).  
   
- 如需有關交易的詳細資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
+ User-defined transactions are explained in the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-### <a name="example"></a>範例  
-  請參閱文章[交易︰ 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
+ **BeginTrans** establishes the state to which the sequence of transactions can be rolled back (reversed). To establish a new state for rollbacks, commit any current transaction, then call **BeginTrans** again.  
   
-##  <a name="bindparameters"></a>CDatabase::BindParameters  
- 覆寫`BindParameters`當您需要繫結參數，然後再呼叫[cdatabase:: Executesql](#executesql)。  
+> [!CAUTION]
+>  Calling **BeginTrans** again without calling **CommitTrans** or **Rollback** is an error.  
+  
+ Call the [CanTransact](#cantransact) member function to determine whether your driver supports transactions for a given database. You should also call [GetCursorCommitBehavior](#getcursorcommitbehavior) and [GetCursorRollbackBehavior](#getcursorrollbackbehavior) to determine the support for cursor preservation.  
+  
+ For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
+  
+### <a name="example"></a>Example  
+  See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
+  
+##  <a name="bindparameters"></a>  CDatabase::BindParameters  
+ Override `BindParameters` when you need to bind parameters before calling [CDatabase::ExecuteSQL](#executesql).  
   
 ```  
 virtual void BindParameters(HSTMT hstmt);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hstmt`  
- ODBC 陳述式控制代碼，您要將參數繫結。  
+ The ODBC statement handle for which you want to bind parameters.  
   
-### <a name="remarks"></a>備註  
- 這種方法時，您不需要將結果從預存程序設定。  
+### <a name="remarks"></a>Remarks  
+ This approach is useful when you do not need the result set from a stored procedure.  
   
- 在您的覆寫呼叫**SQLBindParameters**和相關的繫結參數的 ODBC 函數。 MFC 呼叫之前呼叫覆寫`ExecuteSQL`。 您不需要呼叫**SQLPrepare**;`ExecuteSQL`呼叫**SQLExecDirect**並終結**hstmt**，其中只有使用一次。  
+ In your override, call **SQLBindParameters** and related ODBC functions to bind the parameters. MFC calls your override before your call to `ExecuteSQL`. You do not need to call **SQLPrepare**; `ExecuteSQL` calls **SQLExecDirect** and destroys the **hstmt**, which is used only once.  
   
-##  <a name="cancel"></a>CDatabase::Cancel  
- 呼叫此成員函式，來要求資料來源取消非同步作業進行中的或從第二個執行緒的程序。  
+##  <a name="cancel"></a>  CDatabase::Cancel  
+ Call this member function to request that the data source cancel either an asynchronous operation in progress or a process from a second thread.  
   
 ```  
 void Cancel();
 ```  
   
-### <a name="remarks"></a>備註  
- 請注意，MFC ODBC 類別不會再使用非同步處理。若要執行的非同步作業，您必須直接呼叫 ODBC API 函式[SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx)。 如需詳細資訊，請參閱[非同步執行](https://msdn.microsoft.com/library/ms713563.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ Note that the MFC ODBC classes no longer use asynchronous processing; to perform an asychronous operation, you must directly call the ODBC API function [SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx). For more information, see [Asynchronous Execution](https://msdn.microsoft.com/library/ms713563.aspx) in the Windows SDK.  
   
-##  <a name="cantransact"></a>CDatabase::CanTransact  
- 呼叫此成員函式，以判斷資料庫是否允許交易。  
+##  <a name="cantransact"></a>  CDatabase::CanTransact  
+ Call this member function to determine whether the database allows transactions.  
   
 ```  
 BOOL CanTransact() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果使用這個資料錄集`CDatabase`物件允許交易; 否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if recordsets using this `CDatabase` object allow transactions; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 交易的相關資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
+### <a name="remarks"></a>Remarks  
+ For information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="canupdate"></a>CDatabase::CanUpdate  
- 呼叫此成員函式，以判斷是否`CDatabase`物件可用來更新。  
+##  <a name="canupdate"></a>  CDatabase::CanUpdate  
+ Call this member function to determine whether the `CDatabase` object allows updates.  
   
 ```  
 BOOL CanUpdate() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果`CDatabase`物件可用來更新; 否則為 0，表示可能是您傳遞**TRUE**中`bReadOnly`開啟時`CDatabase`物件或資料來源本身是唯讀的。 資料來源是唯讀的呼叫 ODBC API 函式如果**SQLGetInfo**如**SQL_DATASOURCE_READ_ONLY**傳回"y"。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CDatabase` object allows updates; otherwise 0, indicating either that you passed **TRUE** in `bReadOnly` when you opened the `CDatabase` object or that the data source itself is read-only. The data source is read-only if a call to the ODBC API function **SQLGetInfo** for **SQL_DATASOURCE_READ_ONLY** returns "y".  
   
-### <a name="remarks"></a>備註  
- 並非所有的驅動程式支援的更新。  
+### <a name="remarks"></a>Remarks  
+ Not all drivers support updates.  
   
-##  <a name="cdatabase"></a>CDatabase::CDatabase  
- 建構 `CDatabase` 物件。  
+##  <a name="cdatabase"></a>  CDatabase::CDatabase  
+ Constructs a `CDatabase` object.  
   
 ```  
 CDatabase();
 ```  
   
-### <a name="remarks"></a>備註  
- 之後建構物件，您必須呼叫其`OpenEx`或**開啟**成員函式來建立指定之資料來源的連接。  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, you must call its `OpenEx` or **Open** member function to establish a connection to a specified data source.  
   
- 您可能會發現很方便內嵌`CDatabase`文件類別中的物件。  
+ You may find it convenient to embed the `CDatabase` object in your document class.  
   
-### <a name="example"></a>範例  
- 這個範例說明使用`CDatabase`中`CDocument`-衍生的類別。  
+### <a name="example"></a>Example  
+ This example illustrates using `CDatabase` in a `CDocument`-derived class.  
   
- [!code-cpp[NVC_MFCDatabase # 9](../../mfc/codesnippet/cpp/cdatabase-class_1.h)]  
+ [!code-cpp[NVC_MFCDatabase#9](../../mfc/codesnippet/cpp/cdatabase-class_1.h)]  
   
- [!code-cpp[NVC_MFCDatabase # 10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDatabase#10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
   
-##  <a name="close"></a>CDatabase::Close  
- 如果您想要從資料來源中斷連線，請呼叫此成員函式。  
+##  <a name="close"></a>  CDatabase::Close  
+ Call this member function if you want to disconnect from a data source.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="remarks"></a>備註  
- 您必須先關閉任何與相關聯的資料錄集`CDatabase`物件前呼叫此成員函式。 因為**關閉**將不會終結`CDatabase`物件，您可以藉由開啟相同的資料來源或不同的資料來源的新連接重複使用物件。  
+### <a name="remarks"></a>Remarks  
+ You must close any recordsets associated with the `CDatabase` object before you call this member function. Because **Close** does not destroy the `CDatabase` object, you can reuse the object by opening a new connection to the same data source or a different data source.  
   
- 所有暫止`AddNew`或**編輯**使用資料庫的資料錄集的陳述式會取消，且所有擱置的交易都會回復。 相依於任何資料錄集`CDatabase`物件會處於未定義的狀態。  
+ All pending `AddNew` or **Edit** statements of recordsets using the database are canceled, and all pending transactions are rolled back. Any recordsets dependent on the `CDatabase` object are left in an undefined state.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDatabase # 12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
-##  <a name="committrans"></a>CDatabase::CommitTrans  
- 呼叫完成的交易之後此成員函式。  
+##  <a name="committrans"></a>  CDatabase::CommitTrans  
+ Call this member function upon completing transactions.  
   
 ```  
 BOOL CommitTrans();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果更新已成功認可。否則便是 0。 如果**CommitTrans**失敗，資料來源的狀態是未定義。 您必須檢查資料，以判斷它的狀態。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the updates were successfully committed; otherwise 0. If **CommitTrans** fails, the state of the data source is undefined. You must check the data to determine its state.  
   
-### <a name="remarks"></a>備註  
- 交易包含一系列的呼叫`AddNew`，**編輯**，**刪除**，和**更新**的成員函式`CRecordset`物件開始呼叫[BeginTrans](#begintrans)成員函式。 **CommitTrans**認可交易。 根據預設，更新已被認可立即;呼叫**BeginTrans**導致承諾的更新會延遲到**CommitTrans**呼叫。  
+### <a name="remarks"></a>Remarks  
+ A transaction consists of a series of calls to the `AddNew`, **Edit**, **Delete**, and **Update** member functions of a `CRecordset` object that began with a call to the [BeginTrans](#begintrans) member function. **CommitTrans** commits the transaction. By default, updates are committed immediately; calling **BeginTrans** causes commitment of updates to be delayed until **CommitTrans** is called.  
   
- 直到您呼叫**CommitTrans**結束交易，您可以呼叫[復原](#rollback)中止交易，並將資料來源保留在其原始狀態的成員函式。 若要開始新交易，請呼叫**BeginTrans**一次。  
+ Until you call **CommitTrans** to end a transaction, you can call the [Rollback](#rollback) member function to abort the transaction and leave the data source in its original state. To begin a new transaction, call **BeginTrans** again.  
   
- 如需有關交易的詳細資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
+ For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-### <a name="example"></a>範例  
-  請參閱文章[交易︰ 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
+### <a name="example"></a>Example  
+  See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="executesql"></a>Cdatabase:: Executesql  
- 當您需要直接執行 SQL 命令時，請呼叫此成員函式。  
+##  <a name="executesql"></a>  CDatabase::ExecuteSQL  
+ Call this member function when you need to execute a SQL command directly.  
   
 ```  
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszSQL`  
- 以 null 終止的字串包含有效的 SQL 命令執行的指標。 您可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
+ Pointer to a null-terminated string containing a valid SQL command to execute. You can pass a [CString](../../atl-mfc-shared/reference/cstringt-class.md).  
   
-### <a name="remarks"></a>備註  
- 以 null 終止字串建立的命令。 `ExecuteSQL`不會傳回資料記錄。 如果您想要處理的記錄，請改為使用資料錄集物件。  
+### <a name="remarks"></a>Remarks  
+ Create the command as a null-terminated string. `ExecuteSQL` does not return data records. If you want to operate on records, use a recordset object instead.  
   
- 大部分的資料來源的命令會發出透過資料錄集物件，以便選取資料、 插入新的記錄、 刪除資料錄，以及編輯記錄支援的命令。 但是，並非所有 ODBC 功能直接都支援資料庫類別中，因此您有時可能需要進行直接 SQL 呼叫與`ExecuteSQL`。  
+ Most of your commands for a data source are issued through recordset objects, which support commands for selecting data, inserting new records, deleting records, and editing records. However, not all ODBC functionality is directly supported by the database classes, so you may at times need to make a direct SQL call with `ExecuteSQL`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDatabase # 13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
-##  <a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
- 呼叫此成員函式，以判定在特定作業之後，記錄集物件上書籤的永續性。  
+##  <a name="getbookmarkpersistence"></a>  CDatabase::GetBookmarkPersistence  
+ Call this member function to determine the persistence of bookmarks on a recordset object after certain operations.  
   
 ```  
 DWORD GetBookmarkPersistence() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 位元遮罩，用於識別在記錄集物件上保存書籤所使用的作業。 如需詳細資料，請參閱＜備註＞。  
+### <a name="return-value"></a>Return Value  
+ A bitmask that identifies the operations through which bookmarks persist on a recordset object. For details, see Remarks.  
   
-### <a name="remarks"></a>備註  
- 例如，如果您呼叫 `CRecordset::GetBookmark`，然後呼叫 `CRecordset::Requery`，則從 `GetBookmark` 取得的書籤可能不再有效。 您應該先呼叫 `GetBookmarkPersistence`，然後再呼叫 `CRecordset::SetBookmark`。  
+### <a name="remarks"></a>Remarks  
+ For example, if you call `CRecordset::GetBookmark` and then call `CRecordset::Requery`, the bookmark obtained from `GetBookmark` may no longer be valid. You should call `GetBookmarkPersistence` before calling `CRecordset::SetBookmark`.  
   
- 下表列出可針對 `GetBookmarkPersistence` 的傳回值結合的位元遮罩值。  
+ The following table lists the bitmask values that can be combined for the return value of `GetBookmarkPersistence`.  
   
-|位元遮罩值|書籤永續性|  
+|Bitmask value|Bookmark persistence|  
 |-------------------|--------------------------|  
-|`SQL_BP_CLOSE`|書籤是之後有效**Requery**作業。|  
-|`SQL_BP_DELETE`|資料列的書籤是之後有效**刪除**作業，該資料列。|  
-|`SQL_BP_DROP`|書籤是之後有效**關閉**作業。|  
-|`SQL_BP_SCROLL`|書籤之後會有效**移動**作業。 這可輕鬆地識別記錄集上是否支援書籤，如 `CRecordset::CanBookmark` 所傳回的那樣。|  
-|`SQL_BP_TRANSACTION`|書籤在認可或回復異動之後有效。|  
-|`SQL_BP_UPDATE`|資料列的書籤是之後有效**更新**作業，該資料列。|  
-|`SQL_BP_OTHER_HSTMT`|與一個記錄集物件相關聯的書籤在第二個記錄集上有效。|  
+|`SQL_BP_CLOSE`|Bookmarks are valid after a **Requery** operation.|  
+|`SQL_BP_DELETE`|The bookmark for a row is valid after a **Delete** operation on that row.|  
+|`SQL_BP_DROP`|Bookmarks are valid after a **Close** operation.|  
+|`SQL_BP_SCROLL`|Bookmarks are valid after any **Move** operation. This simply identifies if bookmarks are supported on the recordset, as returned by `CRecordset::CanBookmark`.|  
+|`SQL_BP_TRANSACTION`|Bookmarks are valid after a transaction is committed or rolled back.|  
+|`SQL_BP_UPDATE`|The bookmark for a row is valid after an **Update** operation on that row.|  
+|`SQL_BP_OTHER_HSTMT`|Bookmarks associated with one recordset object are valid on a second recordset.|  
   
- 如需有關這個傳回值的詳細資訊，請參閱 ODBC API 函式**SQLGetInfo**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如需書籤的詳細資訊，請參閱文章[資料錄集︰ 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。  
+ For more information about this return value, see the ODBC API function **SQLGetInfo** in the Windows SDK. For more information about bookmarks, see the article [Recordset: Bookmarks and Absolute Positions (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).  
   
-##  <a name="getconnect"></a>CDatabase::GetConnect  
- 呼叫此成員函式擷取的呼叫期間所使用的連接字串`OpenEx`或`Open`連接`CDatabase`到資料來源的物件。  
+##  <a name="getconnect"></a>  CDatabase::GetConnect  
+ Call this member function to retrieve the connection string used during the call to `OpenEx` or `Open` that connected the `CDatabase` object to a data source.  
   
 ```  
 const CString GetConnect() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A `const` [CString](../../atl-mfc-shared/reference/cstringt-class.md)包含連接字串，如果`OpenEx`或`Open`已呼叫; 否則為空字串。  
+### <a name="return-value"></a>Return Value  
+ A `const`[CString](../../atl-mfc-shared/reference/cstringt-class.md) containing the connection string if `OpenEx` or `Open` has been called; otherwise, an empty string.  
   
-### <a name="remarks"></a>備註  
- 請參閱[CDatabase::Open](#open)如需如何建立連接字串的說明。  
+### <a name="remarks"></a>Remarks  
+ See [CDatabase::Open](#open) for a description of how the connection string is created.  
   
-##  <a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
- 呼叫此成員函式，以判斷如何[CommitTrans](#committrans)作業會影響資料指標在開啟資料錄集物件上的。  
+##  <a name="getcursorcommitbehavior"></a>  CDatabase::GetCursorCommitBehavior  
+ Call this member function to determine how a [CommitTrans](#committrans) operation affects cursors on open recordset objects.  
   
 ```  
 int GetCursorCommitBehavior() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 值，表示開啟資料錄集物件上的交易的效果。 如需詳細資料，請參閱＜備註＞。  
+### <a name="return-value"></a>Return Value  
+ A value indicating the effect of transactions on open recordset objects. For details, see Remarks.  
   
-### <a name="remarks"></a>備註  
- 下表列出可能的傳回值，如`GetCursorCommitBehavior`而開啟的資料錄集對應的效果。  
+### <a name="remarks"></a>Remarks  
+ The following table lists the possible return values for `GetCursorCommitBehavior` and the corresponding effect on the open recordset.  
   
-|傳回值|CRecordset 物件上的效果|  
+|Return value|Effect on CRecordset objects|  
 |------------------|----------------------------------|  
-|`SQL_CB_CLOSE`|呼叫`CRecordset::Requery`緊接的交易認可。|  
-|`SQL_CB_DELETE`|呼叫`CRecordset::Close`緊接的交易認可。|  
-|`SQL_CB_PRESERVE`|繼續正常進行`CRecordset`作業。|  
+|`SQL_CB_CLOSE`|Call `CRecordset::Requery` immediately following the transaction commit.|  
+|`SQL_CB_DELETE`|Call `CRecordset::Close` immediately following the transaction commit.|  
+|`SQL_CB_PRESERVE`|Proceed normally with `CRecordset` operations.|  
   
- 如需有關這個傳回值的詳細資訊，請參閱 ODBC API 函式**SQLGetInfo**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如需有關交易的詳細資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
+ For more information about this return value, see the ODBC API function **SQLGetInfo** in the Windows SDK. For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
- 呼叫此成員函式，以判斷如何[復原](#rollback)作業會影響資料指標在開啟資料錄集物件上的。  
+##  <a name="getcursorrollbackbehavior"></a>  CDatabase::GetCursorRollbackBehavior  
+ Call this member function to determine how a [Rollback](#rollback) operation affects cursors on open recordset objects.  
   
 ```  
 int GetCursorRollbackBehavior() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 值，表示開啟資料錄集物件上的交易的效果。 如需詳細資料，請參閱＜備註＞。  
+### <a name="return-value"></a>Return Value  
+ A value indicating the effect of transactions on open recordset objects. For details, see Remarks.  
   
-### <a name="remarks"></a>備註  
- 下表列出可能的傳回值，如`GetCursorRollbackBehavior`而開啟的資料錄集對應的效果。  
+### <a name="remarks"></a>Remarks  
+ The following table lists the possible return values for `GetCursorRollbackBehavior` and the corresponding effect on the open recordset.  
   
-|傳回值|CRecordset 物件上的效果|  
+|Return value|Effect on CRecordset objects|  
 |------------------|----------------------------------|  
-|`SQL_CB_CLOSE`|呼叫`CRecordset::Requery`緊接交易回復。|  
-|`SQL_CB_DELETE`|呼叫`CRecordset::Close`緊接交易回復。|  
-|`SQL_CB_PRESERVE`|繼續正常進行`CRecordset`作業。|  
+|`SQL_CB_CLOSE`|Call `CRecordset::Requery` immediately following the transaction rollback.|  
+|`SQL_CB_DELETE`|Call `CRecordset::Close` immediately following the transaction rollback.|  
+|`SQL_CB_PRESERVE`|Proceed normally with `CRecordset` operations.|  
   
- 如需有關這個傳回值的詳細資訊，請參閱 ODBC API 函式**SQLGetInfo**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 如需有關交易的詳細資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
+ For more information about this return value, see the ODBC API function **SQLGetInfo** in the Windows SDK. For more information about transactions, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
- 呼叫此成員函式 （前提是資料來源會定義具名的物件，稱為 「 資料庫 」） 擷取目前連接之資料庫的名稱。  
+##  <a name="getdatabasename"></a>  CDatabase::GetDatabaseName  
+ Call this member function to retrieve the name of the currently connected database (provided that the data source defines a named object called "database").  
   
 ```  
 CString GetDatabaseName() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)如果成功，否則為包含資料庫名稱、 空白`CString`。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) containing the database name if successful; otherwise, an empty `CString`.  
   
-### <a name="remarks"></a>備註  
- 這不是資料來源名稱 (DSN) 中指定相同`OpenEx`或**開啟**呼叫。 什麼`GetDatabaseName`傳回取決於 ODBC。 一般而言，資料庫是資料表的集合。 如果此實體有名稱，`GetDatabaseName`它傳回。  
+### <a name="remarks"></a>Remarks  
+ This is not the same as the data source name (DSN) specified in the `OpenEx` or **Open** call. What `GetDatabaseName` returns depends on ODBC. In general, a database is a collection of tables. If this entity has a name, `GetDatabaseName` returns it.  
   
- 您，例如，可以在標題中顯示此名稱。 如果發生錯誤時擷取的名稱，從 ODBC，`GetDatabaseName`傳回空**Cstring**。  
+ You might, for example, want to display this name in a heading. If an error occurs while retrieving the name from ODBC, `GetDatabaseName` returns an empty **Cstring**.  
   
-##  <a name="isopen"></a>CDatabase::IsOpen  
- 呼叫此成員函式，以判斷是否`CDatabase`物件目前連線至資料來源。  
+##  <a name="isopen"></a>  CDatabase::IsOpen  
+ Call this member function to determine whether the `CDatabase` object is currently connected to a data source.  
   
 ```  
 BOOL IsOpen() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果`CDatabase`目前連接物件; 否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CDatabase` object is currently connected; otherwise 0.  
   
-##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
- 包含公用的 ODBC 資料來源連接控制代碼，「 連接控制代碼 」。  
+##  <a name="m_hdbc"></a>  CDatabase::m_hdbc  
+ Contains a public handle to an ODBC data source connection — a "connection handle."  
   
-### <a name="remarks"></a>備註  
- 一般來說，就不需要直接存取此成員變數。 相反地，架構會配置控制代碼呼叫時`OpenEx`或**開啟**。 架構會呼叫時，取消配置控制代碼**刪除**運算子`CDatabase`物件。 請注意，**關閉**成員函式不會將它們取消配置的控制代碼。  
+### <a name="remarks"></a>Remarks  
+ Normally, you will have no need to access this member variable directly. Instead, the framework allocates the handle when you call `OpenEx` or **Open**. The framework deallocates the handle when you call the **delete** operator on the `CDatabase` object. Note that the **Close** member function does not deallocate the handle.  
   
- 不過，在某些情況下，您可能需要直接使用此控制代碼。 例如，如果您需要呼叫 ODBC API 函式直接而不是透過類別`CDatabase`，您可能需要連接控制代碼將做為參數傳遞。 下列程式碼範例，請參閱。  
+ Under some circumstances, however, you may need to use the handle directly. For example, if you need to call ODBC API functions directly rather than through class `CDatabase`, you may need a connection handle to pass as a parameter. See the code example below.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDatabase # 15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
-##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
- 直接執行的 SQL 陳述式時，架構會呼叫此成員函式`ExecuteSQL`成員函式。  
+##  <a name="onsetoptions"></a>  CDatabase::OnSetOptions  
+ The framework calls this member function when directly executing a SQL statement with the `ExecuteSQL` member function.  
   
 ```  
 virtual void OnSetOptions(HSTMT hstmt);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hstmt`  
- ODBC 陳述式控制代碼，設定選項。  
+ The ODBC statement handle for which options are being set.  
   
-### <a name="remarks"></a>備註  
- `CRecordset::OnSetOptions`也會呼叫此成員函式。  
+### <a name="remarks"></a>Remarks  
+ `CRecordset::OnSetOptions` also calls this member function.  
   
- `OnSetOptions`設定登入逾時值。 如果已有先前呼叫`SetQueryTimeout`成員函式，`OnSetOptions`會反映目前的值; 否則它會將預設值。  
+ `OnSetOptions` sets the login timeout value. If there have been previous calls to the `SetQueryTimeout` and member function, `OnSetOptions` reflects the current values; otherwise, it sets default values.  
   
 > [!NOTE]
->  在 MFC 4.2 之前`OnSetOptions`也設定處理模式為任一 snychronous 或非同步。 從 MFC 4.2 開始，所有作業都都會同步。 若要執行非同步作業，您必須進行直接呼叫 ODBC API 函式**SQLSetPos**。  
+>  Prior to MFC 4.2, `OnSetOptions` also set the processing mode to either snychronous or asynchronous. Beginning with MFC 4.2, all operations are synchronous. To perform an asynchronous operation, you must make a direct call to the ODBC API function **SQLSetPos**.  
   
- 您不需要覆寫`OnSetOptions`變更逾時值。 相反地，若要自訂的查詢逾時值，請呼叫`SetQueryTimeout`再建立資料錄集。`OnSetOptions`將會使用新的值。 設定的值套用至所有資料錄集或直接 SQL 呼叫後續作業。  
+ You do not need to override `OnSetOptions` to change the timeout value. Instead, to customize the query timeout value, call `SetQueryTimeout` before creating a recordset; `OnSetOptions` will use the new value. The values set apply to subsequent operations on all recordsets or direct SQL calls.  
   
- 覆寫`OnSetOptions`如果您想要設定其他選項。 您的覆寫應該呼叫基底類別`OnSetOptions`之前或之後呼叫 ODBC API 函式**SQLSetStmtOption**。 請依照下列架構的預設實作中所述的方法`OnSetOptions`。  
+ Override `OnSetOptions` if you want to set additional options. Your override should call the base class `OnSetOptions` either before or after you call the ODBC API function **SQLSetStmtOption**. Follow the method illustrated in the framework's default implementation of `OnSetOptions`.  
   
-##  <a name="open"></a>CDatabase::Open  
- 呼叫此成員函式，來初始化新建構`CDatabase`物件。  
+##  <a name="open"></a>  CDatabase::Open  
+ Call this member function to initialize a newly constructed `CDatabase` object.  
   
 ```  
 virtual BOOL Open(
@@ -443,44 +460,44 @@ virtual BOOL Open(
     BOOL bUseCursorLib = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszDSN`  
- 指定資料來源名稱，已登錄的名稱與 ODBC 透過 ODBC 管理員程式。 如果資料來源名稱值中指定了`lpszConnect`(形式"DSN =\<資料來源 >")，它不可指定一次在`lpszDSN`。 在此情況下，`lpszDSN`應該**NULL**。 否則，您可以傳遞**NULL**如果您想要對使用者顯示資料來源 對話方塊，使用者可在其中選取資料來源。 如需詳細資訊，請參閱 < 備註 >。  
+ Specifies a data source name — a name registered with ODBC through the ODBC Administrator program. If a DSN value is specified in `lpszConnect` (in the form "DSN=\<data-source>"), it must not be specified again in `lpszDSN`. In this case, `lpszDSN` should be **NULL**. Otherwise, you can pass **NULL** if you want to present the user with a Data Source dialog box in which the user can select a data source. For further information, see Remarks.  
   
  `bExclusive`  
- 不支援這個版本的類別庫。 目前，判斷提示失敗，則此參數**TRUE**。 永遠開啟資料來源，以共用的 （不是唯一的）。  
+ Not supported in this version of the class library. Currently, an assertion fails if this parameter is **TRUE**. The data source is always opened as shared (not exclusive).  
   
  `bReadOnly`  
- **TRUE**如果您想連接處於唯讀模式，並禁止資料來源的更新。 所有相依的資料錄集繼承這個屬性。 預設值是**FALSE**。  
+ **TRUE** if you intend the connection to be read-only and to prohibit updates to the data source. All dependent recordsets inherit this attribute. The default value is **FALSE**.  
   
  `lpszConnect`  
- 指定的連接字串。 連接字串串連的資訊，可能包括資料來源名稱、 有效的使用者識別碼上的資料來源、 使用者驗證的字串 （密碼，如果資料來源需要一個） 和其他資訊。 將整個連接字串必須加上字串"ODBC"。（大寫或小寫）。 「 ODBC 」; 字串會用來表示連接加入 ODBC 資料來源;當此方法的向上相容性的類別庫的未來版本可能會支援非 ODBC 資料來源。  
+ Specifies a connection string. The connection string concatenates information, possibly including a data source name, a user ID valid on the data source, a user authentication string (password, if the data source requires one), and other information. The whole connection string must be prefixed by the string "ODBC;" (uppercase or lowercase). The "ODBC;" string is used to indicate that the connection is to an ODBC data source; this is for upward compatibility when future versions of the class library might support non-ODBC data sources.  
   
  `bUseCursorLib`  
- **TRUE**如果您想要載入的 ODBC 資料指標程式庫 DLL。 資料指標程式庫會遮罩某些功能的基礎的 ODBC 驅動程式，有效防止動態集的使用 （如果此驅動程式支援它們）。 只支援如果資料指標程式庫已載入的資料指標是靜態的快照集和順向資料指標。 預設值是**TRUE**。 如果您打算建立資料錄集物件，直接從`CRecordset`而不需衍生自它，您不可以載入資料指標程式庫。  
+ **TRUE** if you want the ODBC Cursor Library DLL to be loaded. The cursor library masks some functionality of the underlying ODBC driver, effectively preventing the use of dynasets (if the driver supports them). The only cursors supported if the cursor library is loaded are static snapshots and forward-only cursors. The default value is **TRUE**. If you plan to create a recordset object directly from `CRecordset` without deriving from it, you should not load the cursor library.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果已成功建立連接。否則為 0，如果使用者選擇時，取消顯示一個對話方塊，要求連線的詳細資訊。 在其他情況下，架構會擲回例外狀況。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the connection is successfully made; otherwise 0 if the user chooses Cancel when presented a dialog box asking for more connection information. In all other cases, the framework throws an exception.  
   
-### <a name="remarks"></a>備註  
- 必須初始化資料庫物件，您可以使用它來建構資料錄集物件。  
+### <a name="remarks"></a>Remarks  
+ Your database object must be initialized before you can use it to construct a recordset object.  
   
 > [!NOTE]
->  呼叫[OpenEx](#openex)成員函式是連接到資料來源，並初始化您的資料庫物件的慣用的方法。  
+>  Calling the [OpenEx](#openex) member function is the preferred way to connect to a data source and initialize your database object.  
   
- 如果在參數您**開啟**呼叫未包含足夠的資訊來進行連接，ODBC 驅動程式會開啟對話方塊，以向使用者取得所需的資訊。 當您呼叫**開啟**，您的連接字串， `lpszConnect`，私下在儲存`CDatabase`物件，並可透過呼叫[GetConnect](#getconnect)成員函式。  
+ If the parameters in your **Open** call do not contain enough information to make the connection, the ODBC driver opens a dialog box to obtain the necessary information from the user. When you call **Open**, your connection string, `lpszConnect`, is stored privately in the `CDatabase` object and is available by calling the [GetConnect](#getconnect) member function.  
   
- 如果您希望，您就可以開啟您自己的對話方塊中，才能呼叫**開啟**取得資訊與使用者，例如密碼，然後將該資訊 」 至連接字串傳遞給**開啟**。 或者您可能想要儲存連接字串，如此您就可以重複使用它的下一步，您傳遞時間應用程式呼叫**開啟**上`CDatabase`物件。  
+ If you wish, you can open your own dialog box before you call **Open** to get information from the user, such as a password, then add that information to the connection string you pass to **Open**. Or you might want to save the connection string you pass so you can reuse it the next time your application calls **Open** on a `CDatabase` object.  
   
- 您也可以使用多個層級的登入授權 」 的連接字串 (每個不同`CDatabase`物件) 或傳遞其他資料來源特定的資訊。 如需連接字串的詳細資訊，請參閱 < 在第 5 章[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ You can also use the connection string for multiple levels of login authorization (each for a different `CDatabase` object) or to convey other data source-specific information. For more information about connection strings, see Chapter 5 in the Windows SDK.  
   
- 很可能連線嘗試逾時的時候，例如 DBMS 主機無法使用時。 如果連接嘗試失敗，**開啟**會擲回`CDBException`。  
+ It is possible for a connection attempt to time out if, for example, the DBMS host is unavailable. If the connection attempt fails, **Open** throws a `CDBException`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDatabase # 14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
-##  <a name="openex"></a>CDatabase::OpenEx  
- 呼叫此成員函式，來初始化新建構`CDatabase`物件。  
+##  <a name="openex"></a>  CDatabase::OpenEx  
+ Call this member function to initialize a newly constructed `CDatabase` object.  
   
 ```  
 virtual BOOL OpenEx(
@@ -488,94 +505,94 @@ virtual BOOL OpenEx(
     DWORD dwOptions = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszConnectString`  
- 指定 ODBC 連接字串。 這包括資料來源名稱，以及其他選擇性資訊，例如使用者識別碼和密碼。 例如，"DSN = SQLServer_Source;UID = SA。PWD = abc123"是可能的連接字串。 請注意，如果您傳遞**NULL**如`lpszConnectString`，資料來源 對話方塊會提示使用者選取的資料來源。  
+ Specifies an ODBC connection string. This includes the data source name as well as other optional information, such as a user ID and password. For example, "DSN=SQLServer_Source;UID=SA;PWD=abc123" is a possible connection string. Note that if you pass **NULL** for `lpszConnectString`, a Data Source dialog box will prompt the user to select a data source.  
   
  `dwOptions`  
- 位元遮罩，指定下列值的組合。 預設值為 0，表示資料庫將會開啟以寫入存取權與共用，ODBC 資料指標程式庫 DLL 將不會載入，和 ODBC 連接對話方塊會顯示只有當沒有足夠的資訊來進行連接。  
+ A bitmask which specifies a combination of the following values. The default value is 0, meaning that the database will be opened as shared with write access, the ODBC Cursor Library DLL will not be loaded, and the ODBC connection dialog box will display only if there is not enough information to make the connection.  
   
-- **CDatabase::openExclusive**類別庫的這個版本不支援。 永遠開啟資料來源，以共用的 （不是唯一的）。 目前，如果您指定這個選項，就會失敗判斷提示。  
+- **CDatabase::openExclusive** Not supported in this version of the class library. A data source is always opened as shared (not exclusive). Currently, an assertion fails if you specify this option.  
   
-- **CDatabase::openReadOnly**開啟資料來源，以唯讀狀態。  
+- **CDatabase::openReadOnly** Open the data source as read-only.  
   
-- **CDatabase::useCursorLib**載入 ODBC 資料指標程式庫 DLL。 資料指標程式庫會遮罩某些功能的基礎的 ODBC 驅動程式，有效防止動態集的使用 （如果此驅動程式支援它們）。 只支援如果資料指標程式庫已載入的資料指標是靜態的快照集和順向資料指標。 如果您打算建立資料錄集物件，直接從`CRecordset`而不需衍生自它，您不可以載入資料指標程式庫。  
+- **CDatabase::useCursorLib** Load the ODBC Cursor Library DLL. The cursor library masks some functionality of the underlying ODBC driver, effectively preventing the use of dynasets (if the driver supports them). The only cursors supported if the cursor library is loaded are static snapshots and forward-only cursors. If you plan to create a recordset object directly from `CRecordset` without deriving from it, you should not load the cursor library.  
   
-- **CDatabase::noOdbcDialog**不會顯示 ODBC 連線 對話方塊中，不論是否提供足夠的連接資訊。  
+- **CDatabase::noOdbcDialog** Do not display the ODBC connection dialog box, regardless of whether enough connection information is supplied.  
   
-- **CDatabase::forceOdbcDialog**一律顯示 ODBC 連接對話方塊。  
+- **CDatabase::forceOdbcDialog** Always display the ODBC connection dialog box.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果已成功建立連接。否則為 0，如果使用者選擇時，取消顯示一個對話方塊，要求連線的詳細資訊。 在其他情況下，架構會擲回例外狀況。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the connection is successfully made; otherwise 0 if the user chooses Cancel when presented a dialog box asking for more connection information. In all other cases, the framework throws an exception.  
   
-### <a name="remarks"></a>備註  
- 必須初始化資料庫物件，您可以使用它來建構資料錄集物件。  
+### <a name="remarks"></a>Remarks  
+ Your database object must be initialized before you can use it to construct a recordset object.  
   
- 如果`lpszConnectString`參數中的您`OpenEx`呼叫未包含足夠的資訊來進行連接，ODBC 驅動程式會開啟對話方塊，以從使用者取得所需的資訊，提供您沒有設定**CDatabase::noOdbcDialog**或**CDatabase::forceOdbcDialog**中`dwOptions`參數。 當您呼叫`OpenEx`，您的連接字串， `lpszConnectString`，私下在儲存`CDatabase`物件，並可透過呼叫[GetConnect](#getconnect)成員函式。  
+ If the `lpszConnectString` parameter in your `OpenEx` call does not contain enough information to make the connection, the ODBC driver opens a dialog box to obtain the necessary information from the user, provided you have not set **CDatabase::noOdbcDialog** or **CDatabase::forceOdbcDialog** in the `dwOptions` parameter. When you call `OpenEx`, your connection string, `lpszConnectString`, is stored privately in the `CDatabase` object and is available by calling the [GetConnect](#getconnect) member function.  
   
- 如果您希望，您就可以開啟您自己的對話方塊中，才能呼叫`OpenEx`從使用者，例如密碼取得資訊，並將該資訊新增到連接字串傳遞給`OpenEx`。 或者您可能想要儲存連接字串，如此您就可以重複使用它的下一步，您傳遞時間應用程式呼叫`OpenEx`上`CDatabase`物件。  
+ If you wish, you can open your own dialog box before you call `OpenEx` to get information from the user, such as a password, and then add that information to the connection string you pass to `OpenEx`. Or you might want to save the connection string you pass so you can reuse it the next time your application calls `OpenEx` on a `CDatabase` object.  
   
- 您也可以使用多個層級的登入授權 」 的連接字串 (每個不同`CDatabase`物件) 或傳遞其他資料來源特定的資訊。 如需連接字串的詳細資訊，請參閱 < 在第 6 章*ODBC 程式設計人員參考*。  
+ You can also use the connection string for multiple levels of login authorization (each for a different `CDatabase` object) or to convey other data source-specific information. For more information about connection strings, see Chapter 6 in the *ODBC Programmer's Reference*.  
   
- 很可能連線嘗試逾時的時候，例如 DBMS 主機無法使用時。 如果連接嘗試失敗，`OpenEx`會擲回`CDBException`。  
+ It is possible for a connection attempt to time out if, for example, the DBMS host is unavailable. If the connection attempt fails, `OpenEx` throws a `CDBException`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDatabase # 11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
-##  <a name="rollback"></a>CDatabase::Rollback  
- 呼叫此成員函式可反轉交易期間所做的變更。  
+##  <a name="rollback"></a>  CDatabase::Rollback  
+ Call this member function to reverse the changes made during a transaction.  
   
 ```  
 BOOL Rollback();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果交易已成功取消; 非零，否則便是 0。 如果**復原**呼叫失敗，資料來源和交易狀態是未定義。 如果**復原**傳回 0，您必須檢查資料來源以判斷它的狀態。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the transaction was successfully reversed; otherwise 0. If a **Rollback** call fails, the data source and transaction states are undefined. If **Rollback** returns 0, you must check the data source to determine its state.  
   
-### <a name="remarks"></a>備註  
- 所有`CRecordset``AddNew`，**編輯**，**刪除**，和**更新**自上次執行的呼叫[BeginTrans](#begintrans)回復到該呼叫時的狀態。  
+### <a name="remarks"></a>Remarks  
+ All `CRecordset` `AddNew`, **Edit**, **Delete**, and **Update** calls executed since the last [BeginTrans](#begintrans) are rolled back to the state that existed at the time of that call.  
   
- 呼叫之後**復原**，交易已經結束，而且您必須呼叫**BeginTrans**再為另一個交易。 目前您在呼叫之前的記錄**BeginTrans**會變成目前的資料錄一次之後**復原**。  
+ After a call to **Rollback**, the transaction is over, and you must call **BeginTrans** again for another transaction. The record that was current before you called **BeginTrans** becomes the current record again after **Rollback**.  
   
- 回復之後，復原之前的目前記錄會保留目前。 如需有關資料錄集和資料來源，在復原之後的狀態的詳細資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
+ After a rollback, the record that was current before the rollback remains current. For details about the state of the recordset and the data source after a rollback, see the article [Transaction (ODBC)](../../data/odbc/transaction-odbc.md).  
   
-### <a name="example"></a>範例  
-  請參閱文章[交易︰ 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
+### <a name="example"></a>Example  
+  See the article [Transaction: Performing a Transaction in a Recordset (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).  
   
-##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
- 呼叫此成員函式 — 之前先呼叫`OpenEx`或**開啟**— 若要覆寫預設允許的秒數之前嘗試的資料來源連接逾時。  
+##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout  
+ Call this member function — before you call `OpenEx` or **Open** — to override the default number of seconds allowed before an attempted data source connection times out.  
   
 ```  
 void SetLoginTimeout(DWORD dwSeconds);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwSeconds`  
- 逾時之前嘗試連線所允許的秒數。  
+ The number of seconds to allow before a connection attempt times out.  
   
-### <a name="remarks"></a>備註  
- 連接嘗試可能會逾時如果，比方說，DBMS 無法使用。 呼叫**SetLoginTimeout**建構初始化之後`CDatabase`物件，但您的呼叫之前`OpenEx`或**開啟**。  
+### <a name="remarks"></a>Remarks  
+ A connection attempt might time out if, for example, the DBMS is not available. Call **SetLoginTimeout** after you construct the uninitialized `CDatabase` object but before you call `OpenEx` or **Open**.  
   
- 登入逾時的預設值是 15 秒。 並非所有的資料來源都支援指定的登入逾時值的能力。 如果資料來源不支援逾時，您會收到追蹤輸出，但未發生例外狀況。 值為 0 表示 「 無限 」。  
+ The default value for login timeouts is 15 seconds. Not all data sources support the ability to specify a login timeout value. If the data source does not support timeout, you get trace output but not an exception. A value of 0 means "infinite."  
   
-##  <a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
- 呼叫此成員函式，來覆寫預設允許後續作業連接的資料來源逾時之前的秒數。  
+##  <a name="setquerytimeout"></a>  CDatabase::SetQueryTimeout  
+ Call this member function to override the default number of seconds to allow before subsequent operations on the connected data source time out.  
   
 ```  
 void SetQueryTimeout(DWORD dwSeconds);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwSeconds`  
- 逾時可讓查詢嘗試之前的秒數。  
+ The number of seconds to allow before a query attempt times out.  
   
-### <a name="remarks"></a>備註  
- 由於網路存取問題、 過多的查詢處理時間，以及其他作業可能會逾時。 呼叫`SetQueryTimeout`之前開啟資料錄集，或在呼叫資料錄集的前`AddNew`，**更新**或**刪除**成員函式，如果您想要變更查詢逾時值。 此設定會影響所有後續**開啟**， `AddNew`，**更新**，和**刪除**呼叫任何與此相關聯的資料錄集`CDatabase`物件。 在開啟之後變更資料錄集的查詢逾時值不會變更資料錄集的值。 例如，後續**移動**作業不會使用新的值。  
+### <a name="remarks"></a>Remarks  
+ An operation might time out due to network access problems, excessive query processing time, and so on. Call `SetQueryTimeout` prior to opening your recordset or prior to calling the recordset's `AddNew`, **Update** or **Delete** member functions if you want to change the query timeout value. The setting affects all subsequent **Open**, `AddNew`, **Update**, and **Delete** calls to any recordsets associated with this `CDatabase` object. Changing the query timeout value for a recordset after opening does not change the value for the recordset. For example, subsequent **Move** operations do not use the new value.  
   
- 查詢逾時的預設值是 15 秒。 並非所有的資料來源都支援可設定查詢逾時值的功能。 如果您設定的查詢逾時值為 0 時，不會逾時，就會發生。與資料來源之間的通訊可能會停止回應。 在開發期間，此行為可能很有用的。 如果資料來源不支援逾時，您會收到追蹤輸出，但未發生例外狀況。  
+ The default value for query timeouts is 15 seconds. Not all data sources support the ability to set a query timeout value. If you set a query timeout value of 0, no timeout occurs; the communication with the data source may stop responding. This behavior may be useful during development. If the data source does not support timeout, you get trace output but not an exception.  
   
-## <a name="see-also"></a>另請參閱  
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CRecordset 類別](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CRecordset Class](../../mfc/reference/crecordset-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CMFCDynamicLayout 類別 |Microsoft 文件"
+title: CMFCDynamicLayout Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,17 +42,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 3066da5e1f874c2f0f2a2564b15582d7238c539b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 574595d3b7475376a27735c483df71e15298e614
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 類別
-指定使用者調整視窗大小時，控制項在視窗中如何移動和調整大小。  
+# <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout Class
+Specifies how controls in a window are moved and resized as the user resizes the window.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDynamicLayout : public CObject  
@@ -60,55 +60,55 @@ class CMFCDynamicLayout : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCDynamicLayout::CMFCDynamicLayout`|建構 `CMFCDynamicLayout` 物件。|  
-|`CMFCDynamicLayout::~CMFCDynamicLayout`|解構函式。|  
+|`CMFCDynamicLayout::CMFCDynamicLayout`|Constructs a `CMFCDynamicLayout` object.|  
+|`CMFCDynamicLayout::~CMFCDynamicLayout`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDynamicLayout::AddItem](#additem)|將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。|  
-|[CMFCDynamicLayout::Adjust](#adjust)|將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。|  
-|[CMFCDynamicLayout::Create](#create)|儲存並驗證主控視窗。|  
-|[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|傳回主控視窗的指標。|  
-|[CMFCDynamicLayout::GetMinSize](#getminsize)|傳回視窗大小下限，低於此值就不調整版面配置。|  
-|[CMFCDynamicLayout::GetWindowRect](#getwindowrect)|擷取視窗的目前用戶端區域的週框。|  
-|[CMFCDynamicLayout::HasItem](#hasitem)|檢查如果子控制項是否已加入動態配置。|  
-|[CMFCDynamicLayout::IsEmpty](#isempty)|檢查動態配置是否未加入任何子視窗。|  
-|[CMFCDynamicLayout::LoadResource](#loadresource)|從 AFX_DIALOG_LAYOUT 資源讀取動態配置，然後將配置套用至主控視窗。|  
-|靜態[CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|取得[MoveSettings](#movesettings_structure)定義當使用者調整其裝載的視窗水平移動多少的子控制項的值。|  
-|靜態[CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|取得[MoveSettings](#movesettings_structure)定義當使用者調整其裝載的視窗水平移動多少的子控制項的值。|  
-|靜態[CMFCDynamicLayout::MoveNone](#movenone)|取得[MoveSettings](#movesettings_structure)值，表示沒有動畫，而垂直或水平時，子控制項。|  
-|靜態[CMFCDynamicLayout::MoveVertical](#movevertical)|取得[MoveSettings](#movesettings_structure)定義當使用者調整其裝載的視窗垂直移動多少的子控制項的值。|  
-|[CMFCDynamicLayout::SetMinSize](#setminsize)|設定視窗大小下限，低於此值就不調整版面配置。|  
-|靜態[CMFCDynamicLayout::SizeHorizontal](#sizehorizontal)|取得[SizeSettings](#sizesettings_structure)定義當使用者調整其裝載的視窗水平調整多少的子控制項的值。|  
-|靜態[CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|取得[SizeSettings](#sizesettings_structure)定義當使用者調整其裝載的視窗水平調整多少的子控制項的值。|  
-|靜態[CMFCDynamicLayout::SizeNone](#sizenone)|取得[SizeSettings](#sizesettings_structure)值，表示子控制項的大小沒有變更。|  
-|靜態[CMFCDynamicLayout::SizeVertical](#sizevertical)|取得[SizeSettings](#sizesettings_structure)定義當使用者調整其裝載的視窗垂直調整多少的子控制項的值。|  
+|[CMFCDynamicLayout::AddItem](#additem)|Adds a child window, typically a control, to the list of windows that are controlled by the dynamic layout manager.|  
+|[CMFCDynamicLayout::Adjust](#adjust)|Adds a child window, typically a control, to the list of windows that are controlled by the dynamic layout manager.|  
+|[CMFCDynamicLayout::Create](#create)|Stores and validates the host window.|  
+|[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|Returns a pointer to a host window.|  
+|[CMFCDynamicLayout::GetMinSize](#getminsize)|Returns the window size below which layout is not adjusted.|  
+|[CMFCDynamicLayout::GetWindowRect](#getwindowrect)|Retrieves the rectangle for the window's current client area.|  
+|[CMFCDynamicLayout::HasItem](#hasitem)|Checks if a child control was added to dynamic layout.|  
+|[CMFCDynamicLayout::IsEmpty](#isempty)|Checks if a dynamic layout has no child windows added.|  
+|[CMFCDynamicLayout::LoadResource](#loadresource)|Reads the dynamic layout from AFX_DIALOG_LAYOUT resource and then applies the layout to the host window.|  
+|static [CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved horizontally when the user resizes its hosting window.|  
+|static [CMFCDynamicLayout::MoveHorizontalAndVertical](#movehorizontalandvertical)|Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved horizontally when the user resizes its hosting window.|  
+|static [CMFCDynamicLayout::MoveNone](#movenone)|Gets a [MoveSettings](#movesettings_structure) value that represents no motion, vertical or horizontal, for a child control.|  
+|static [CMFCDynamicLayout::MoveVertical](#movevertical)|Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved vertically when the user resizes its hosting window.|  
+|[CMFCDynamicLayout::SetMinSize](#setminsize)|Sets the window size below which layout is not adjusted.|  
+|static [CMFCDynamicLayout::SizeHorizontal](#sizehorizontal)|Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized horizontally when the user resizes its hosting window.|  
+|static [CMFCDynamicLayout::SizeHorizontalAndVertical](#sizehorizontalandvertical)|Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized horizontally when the user resizes its hosting window.|  
+|static [CMFCDynamicLayout::SizeNone](#sizenone)|Gets a [SizeSettings](#sizesettings_structure) value that represents no change in size for a child control.|  
+|static [CMFCDynamicLayout::SizeVertical](#sizevertical)|Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized vertically when the user resizes its hosting window.|  
   
-## <a name="nested-types"></a>巢狀類型  
+## <a name="nested-types"></a>Nested Types  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCDynamicLayout::MoveSettings 結構](#movesettings_structure)|為動態配置中控制項封裝移動資料。|  
-|[CMFCDynamicLayout::SizeSettings 結構](#sizesettings_structure)|為動態配置中的控制項封裝大小變更資料。|  
+|[CMFCDynamicLayout::MoveSettings Structure](#movesettings_structure)|Encapsulates move data for controls in a dynamic layout.|  
+|[CMFCDynamicLayout::SizeSettings Structure](#sizesettings_structure)|Encapsulates size change data for controls in a dynamic layout.|  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCDynamicLayout](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxlayout.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxlayout.h  
   
-##  <a name="additem"></a>CMFCDynamicLayout::AddItem  
- 將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。  
+##  <a name="additem"></a>  CMFCDynamicLayout::AddItem  
+ Adds a child window, typically a control, to the list of windows that are controlled by the dynamic layout manager.  
   
 ```  
 BOOL AddItem(
@@ -121,120 +121,120 @@ BOOL AddItem(
     MoveSettings moveSettings SizeSettings sizeSettings);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hwnd`  
- 要加入之視窗的控制代碼。  
+ The handle to the window to add.  
   
  `nID`  
- 要加入之子控制項的 ID。  
+ The ID of the child control to add.  
   
  `moveSettings`  
- 說明在視窗大小變更時應如何移動控制項的結構。  
+ A structure that describes how the control should be moved as the window size changes.  
   
  `sizeSettings`  
- 說明在視窗大小變更時應如何為控制項調整大小的結構。  
+ A structure that describes how the control should be resized as the window size changes.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功加入項目則為 True，否則為 False。  
+### <a name="return-value"></a>Return Value  
+ TRUE if the item was added successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>備註  
- 調整主控視窗的大小時，子控制項的位置和大小會動態變更。  
+### <a name="remarks"></a>Remarks  
+ The position and size of a child control is changed dynamically when a hosting window is being resized.  
   
-##  <a name="adjust"></a>CMFCDynamicLayout::Adjust  
- 將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。  
+##  <a name="adjust"></a>  CMFCDynamicLayout::Adjust  
+ Adds a child window, typically a control, to the list of windows that are controlled by the dynamic layout manager.  
   
 ```  
 void Adjust();
 ```  
   
-### <a name="remarks"></a>備註  
- 調整主控視窗的大小時，子控制項的位置和大小會動態變更。  
+### <a name="remarks"></a>Remarks  
+ The position and size of a child control is changed dynamically when a hosting window is being resized.  
   
-##  <a name="create"></a>CMFCDynamicLayout::Create  
- 儲存並驗證主控視窗。  
+##  <a name="create"></a>  CMFCDynamicLayout::Create  
+ Stores and validates the host window.  
   
 ```  
 BOOL Create(CWnd* pHostWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  pHostWnd  
- 主控視窗的指標。  
+ A pointer to the host window.  
   
-### <a name="return-value"></a>傳回值  
- 如果作業成功，則為 TRUE，否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if creation succeeded; otherwise FALSE.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethostwnd"></a>CMFCDynamicLayout::GetHostWnd  
- 傳回主控視窗的指標。  
+##  <a name="gethostwnd"></a>  CMFCDynamicLayout::GetHostWnd  
+ Returns a pointer to a host window.  
   
 ```  
 CWnd* GetHostWnd();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 主控視窗的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the host window.  
   
-### <a name="remarks"></a>備註  
- 根據預設，會重新計算所有子控制項相對於此視窗的位置。  
+### <a name="remarks"></a>Remarks  
+ By default all child control positions recalculated relative to this window.  
   
-##  <a name="getminsize"></a>CMFCDynamicLayout::GetMinSize  
- 傳回視窗大小下限，低於此值就不調整版面配置。  
+##  <a name="getminsize"></a>  CMFCDynamicLayout::GetMinSize  
+ Returns the window size below which layout is not adjusted.  
   
 ```  
 CSize GetMinSize();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 視窗大小下限，低於此值就不調整版面配置。  
+### <a name="return-value"></a>Return Value  
+ The window size below which layout is not adjusted.  
   
-### <a name="remarks"></a>備註  
- 調整主控視窗的大小時，子控制項的位置和大小會動態變更，但是有大小下限，低於此值就不會調整版面配置。 使用者可以將視窗調小，但視窗的某些部分就看不見。  
+### <a name="remarks"></a>Remarks  
+ The position and size of a child control is changed dynamically when a hosting window is being resized, but there is a minimum size below which the layout is not adjusted. The user can resize the window to a smaller size, but parts of the window are then hidden from view.  
   
-##  <a name="getwindowrect"></a>CMFCDynamicLayout::GetWindowRect  
- 擷取視窗的目前用戶端區域的週框。  
+##  <a name="getwindowrect"></a>  CMFCDynamicLayout::GetWindowRect  
+ Retrieves the rectangle for the window's current client area.  
   
 ```  
 void GetHostWndRect(CRect& rect,);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 在此函數傳回之後，此參數會包含版面配置區域的週框。 這是輸出參數；輸入值會被覆寫。  
+ After the function returns, this parameter contains the bounding rectangle of the layout area. This is an out parameter; the input value is overwritten.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasitem"></a>CMFCDynamicLayout::HasItem  
- 檢查如果子控制項是否已加入動態配置。  
+##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem  
+ Checks if a child control was added to dynamic layout.  
   
 ```  
 BOOL HasItem(HWND hwnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hwnd`  
- 控制項的視窗控制代碼。  
+ The window handle for the control.  
   
-### <a name="return-value"></a>傳回值  
- 如果配置已有此項目，則為 TRUE，否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if layout already has this item; otherwise FALSE.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isempty"></a>CMFCDynamicLayout::IsEmpty  
- 檢查動態配置是否未加入任何子視窗。  
+##  <a name="isempty"></a>  CMFCDynamicLayout::IsEmpty  
+ Checks if a dynamic layout has no child windows added.  
   
 ```  
 BOOL IsEmpty();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果配置沒有任何項目，則為 TRUE，否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if layout has no items; otherwise FALSE.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="loadresource"></a>CMFCDynamicLayout::LoadResource  
- 從 AFX_DIALOG_LAYOUT 資源讀取動態配置，然後將配置套用至主控視窗。  
+##  <a name="loadresource"></a>  CMFCDynamicLayout::LoadResource  
+ Reads the dynamic layout from AFX_DIALOG_LAYOUT resource and then applies the layout to the host window.  
   
 ```  
 static BOOL LoadResource(CWnd* pHostWnd,
@@ -242,243 +242,243 @@ static BOOL LoadResource(CWnd* pHostWnd,
     DWORD dwSize);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pHostWnd`  
- 主控視窗的指標。  
+ A pointer to the host window.  
   
  `lpResource`  
- 包含 AFX_DIALOG_LAYOUT 資源的緩衝區的指標。  
+ A pointer to the buffer that contains the AFX_DIALOG_LAYOUT resource.  
   
  `dwSize`  
- 緩衝區大小，以位元組為單位。  
+ The buffer size in bytes.  
   
-### <a name="return-value"></a>傳回值  
- 如果載入資源並將其套用至主控視窗中，則為 TRUE，否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is loaded and applied to the host window; otherwise FALSE.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="movehorizontal"></a>CMFCDynamicLayout::MoveHorizontal  
- 取得[MoveSettings](#movesettings_structure)定義當使用者調整其裝載的視窗水平移動多少的子控制項的值。  
+##  <a name="movehorizontal"></a>  CMFCDynamicLayout::MoveHorizontal  
+ Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved horizontally when the user resizes its hosting window.  
   
 ```  
 static MoveSettings MoveHorizontal(int nRatio);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nRatio`  
- 定義當使用者調整主視窗大小時，水平移動子控制項的幅度百分比。  
+ Defines as a percentage how far a child control is moved horizontally when the user resizes the host window.  
   
-### <a name="return-value"></a>傳回值  
- A [MoveSettings](#movesettings_structure)封裝所要求的值移比率。  
+### <a name="return-value"></a>Return Value  
+ A [MoveSettings](#movesettings_structure) value that encapsulates the requested move ratio.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="movehorizontalandvertical"></a>CMFCDynamicLayout::MoveHorizontalAndVertical  
- 取得[MoveSettings](#movesettings_structure)定義當使用者調整其裝載的視窗水平移動多少的子控制項的值。  
+##  <a name="movehorizontalandvertical"></a>  CMFCDynamicLayout::MoveHorizontalAndVertical  
+ Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved horizontally when the user resizes its hosting window.  
   
 ```  
 static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nXRatio`  
- 定義當使用者調整主視窗大小時，水平移動子控制項的幅度百分比。  
+ Defines as a percentage how far a child control is moved horizontally when the user resizes the host window.  
   
  `nYRatio`  
- 定義當使用者調整主視窗大小時，垂直移動子控制項的幅度百分比。  
+ Defines as a percentage how far a child control is moved vertically when the user resizes the host window.  
   
-### <a name="return-value"></a>傳回值  
- A [MoveSettings](#movesettings_structure)封裝所要求的值移比率。  
+### <a name="return-value"></a>Return Value  
+ A [MoveSettings](#movesettings_structure) value that encapsulates the requested move ratio.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="movenone"></a>CMFCDynamicLayout::MoveNone  
- 取得[MoveSettings](#movesettings_structure)值，表示沒有動畫，而垂直或水平時，子控制項。  
+##  <a name="movenone"></a>  CMFCDynamicLayout::MoveNone  
+ Gets a [MoveSettings](#movesettings_structure) value that represents no motion, vertical or horizontal, for a child control.  
   
 ```  
 static MoveSettings MoveNone();  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [MoveSettings](#movesettings_structure)的位置，固定控制項，以便不會移動時使用者重新調整大小的主視窗的值。  
+### <a name="return-value"></a>Return Value  
+ A [MoveSettings](#movesettings_structure) value that fixes the control in place, so that it does not move as the user resizes the host window.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="movesettings_structure"></a>CMFCDynamicLayout::MoveSettings 結構  
- 為動態配置中控制項封裝移動資料。  
+##  <a name="movesettings_structure"></a>  CMFCDynamicLayout::MoveSettings Structure  
+ Encapsulates move data for controls in a dynamic layout.  
   
 ```  
 struct CMFCDynamicLayout::MoveSettings;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這是 `CMFCDynamicLayout` 內部的巢狀類別。  
+### <a name="remarks"></a>Remarks  
+ This is a nested class inside `CMFCDynamicLayout`.  
 
 ## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout::MoveSettings::IsHorizontal
-檢查移動資料是否指定非零的水平移動。  
+Check if the move data specifies a nonzero horizontal move.  
   
 
 ```  
 BOOL IsHorizontal() const 
 ```  
   
-## <a name="return-value"></a>傳回值  
- 如果 `MoveSettings` 物件指定非零的水平移動，則為 TRUE。  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `MoveSettings` object specifies a nonzero horizontal move.  
 
  ## <a name="cmfcdynamiclayoutmovesettingsisnone"></a>CMFCDynamicLayout::MoveSettings::IsNone
- 檢查移動資料是否指定不移動。  
+ Check if the move data specifies no movement.  
   
 ```  
 BOOL IsNone() const 
 ```  
   
-## <a name="return-value"></a>傳回值  
- 如果 `MoveSettings` 物件指定不移動，則為 TRUE 。  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `MoveSettings` object specifies no movement.  
 
 ## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFCDynamicLayout::MoveSettings::IsVertical
-  請檢查移動資料是否指定非零的垂直移動。  
+  Check if the move data specifies a nonzero vertical movement.  
   
 ```  
 BOOL IsVertical() const 
 ```  
   
-## <a name="return-value"></a>傳回值  
- 如果 `MoveSettings` 物件指定非零的垂直移動，則為 TRUE。  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `MoveSettings` object specifies a nonzero vertical movement.  
 
-##  <a name="movevertical"></a>CMFCDynamicLayout::MoveVertical  
- 取得[MoveSettings](#movesettings_structure)定義當使用者調整其裝載的視窗垂直移動多少的子控制項的值。  
+##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical  
+ Gets a [MoveSettings](#movesettings_structure) value that defines how much a child control is moved vertically when the user resizes its hosting window.  
   
 ```  
 static MoveSettings MoveVertical(int nRatio);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nRatio`  
- 定義當使用者調整主視窗大小時，垂直移動子控制項的幅度百分比。  
+ Defines as a percentage how far a child control is moved vertically when the user resizes the host window.  
   
-### <a name="return-value"></a>傳回值  
- A [MoveSettings](#movesettings_structure)封裝所要求的值移比率。  
+### <a name="return-value"></a>Return Value  
+ A [MoveSettings](#movesettings_structure) value that encapsulates the requested move ratio.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setminsize"></a>CMFCDynamicLayout::SetMinSize  
- 設定視窗大小下限，低於此值就不調整版面配置。  
+##  <a name="setminsize"></a>  CMFCDynamicLayout::SetMinSize  
+ Sets the window size below which layout is not adjusted.  
   
 ```  
 void SetMinSize(const CSize& size);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `size`  
- 所需的大小下限，低於此值就不調整版面配置。  
+ The desired size below which layout is not adjusted.  
   
-### <a name="remarks"></a>備註  
- 調整主控視窗的大小時，子控制項的位置和大小會動態變更，但是有大小下限，低於此值就不會調整版面配置。 使用者可以將視窗調小，但視窗的某些部分就看不見。  
+### <a name="remarks"></a>Remarks  
+ The position and size of a child control is changed dynamically when a hosting window is being resized, but there is a minimum size below which the layout is not adjusted. The user can resize the window to a smaller size, but parts of the window are then hidden from view.  
   
-##  <a name="sizehorizontal"></a>CMFCDynamicLayout::SizeHorizontal  
- 取得[SizeSettings](#sizesettings_structure)定義當使用者調整其裝載的視窗水平調整多少的子控制項的值。  
+##  <a name="sizehorizontal"></a>  CMFCDynamicLayout::SizeHorizontal  
+ Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized horizontally when the user resizes its hosting window.  
   
 ```  
 static SizeSettings SizeHorizontal(int nRatio);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nRatio`  
- 定義當使用者調整主視窗大小時，水平調整子控制項大小的幅度百分比。  
+ Defines as a percentage how far a child control is resized horizontally when the user resizes the host window.  
   
-### <a name="return-value"></a>傳回值  
- A [SizeSettings](#sizesettings_structure)封裝要求的大小比例的值。  
+### <a name="return-value"></a>Return Value  
+ A [SizeSettings](#sizesettings_structure) value that encapsulates the requested size ratio.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizehorizontalandvertical"></a>CMFCDynamicLayout::SizeHorizontalAndVertical  
- 取得[SizeSettings](#sizesettings_structure)定義當使用者調整其裝載的視窗水平調整多少的子控制項的值。  
+##  <a name="sizehorizontalandvertical"></a>  CMFCDynamicLayout::SizeHorizontalAndVertical  
+ Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized horizontally when the user resizes its hosting window.  
   
 ```  
 static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nXRatio`  
- 定義當使用者調整主視窗大小時，水平調整子控制項大小的幅度百分比。  
+ Defines as a percentage how far a child control is resized horizontally when the user resizes the host window.  
   
  `nYRatio`  
- 定義當使用者調整主視窗大小時，垂直調整子控制項大小的幅度百分比。  
+ Defines as a percentage how far a child control is resized vertically when the user resizes the host window.  
   
-### <a name="return-value"></a>傳回值  
- A [SizeSettings](#sizesettings_structure)封裝要求的大小比例的值。  
+### <a name="return-value"></a>Return Value  
+ A [SizeSettings](#sizesettings_structure) value that encapsulates the requested size ratio.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizenone"></a>CMFCDynamicLayout::SizeNone  
- 取得[SizeSettings](#sizesettings_structure)值，表示子控制項的大小沒有變更。  
+##  <a name="sizenone"></a>  CMFCDynamicLayout::SizeNone  
+ Gets a [SizeSettings](#sizesettings_structure) value that represents no change in size for a child control.  
   
 ```  
 static SizeSettings SizeNone();  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [SizeSettings](#sizesettings_structure)控制項修正特定大小，使它不會變更大小，當使用者調整主應用程式視窗的值。  
+### <a name="return-value"></a>Return Value  
+ A [SizeSettings](#sizesettings_structure) value that fixes the control at a certain size, so that it does not change size as the user resizes the host window.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sizesettings_structure"></a>CMFCDynamicLayout::SizeSettings 結構  
- 為動態配置中的控制項封裝大小變更資料。  
+##  <a name="sizesettings_structure"></a>  CMFCDynamicLayout::SizeSettings Structure  
+ Encapsulates size change data for controls in a dynamic layout.  
   
 ```  
 struct CMFCDynamicLayout::SizeSettings;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這是 `CMFCDynamicLayout` 內部的巢狀類別。  
+### <a name="remarks"></a>Remarks  
+ This is a nested class inside `CMFCDynamicLayout`.  
 
 ## <a name="cmfcdynamiclayoutsizesettingsishorizontal"></a>CMFCDynamicLayout::SizeSettings::IsHorizontal
-檢查調整大小資料是否指定非零的水平調整大小。  
+Checks if the resize data specifies a nonzero horizontal resizing.  
   
 ```  
 BOOL IsHorizontal() const 
 ```  
   
-## <a name="return-value"></a>傳回值  
- 如果 `SizeSettings` 物件指定非零的水平調整大小，則為 TRUE。 
+## <a name="return-value"></a>Return Value  
+ TRUE if the `SizeSettings` object specifies a nonzero horizontal resizing. 
 
 ## <a name="cmfcdynamiclayoutsizesettingsisnone"></a>CMFCDynamicLayout::SizeSettings::IsNone
-檢查調整大小資料是否指定不調整大小。  
+Checks if the resize data specifies no resizing.  
   
 ```  
 BOOL IsNone() const 
 ```  
   
-## <a name="return-value"></a>傳回值  
- 如果 `SizeSettings` 物件指定不調整大小，則為 TRUE 。  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `SizeSettings` object specifies no resizing.  
 
 ## <a name="cmfcdynamiclayoutsizesettingsisvertical"></a>CMFCDynamicLayout::SizeSettings::IsVertical
-檢查調整大小資料是否指定非零的垂直調整大小。  
+Checks if the resize data specifies a nonzero vertical resizing.  
   
 ```  
 BOOL IsVertical() const 
 ```  
   
-## <a name="return-value"></a>傳回值  
- 如果 `SizeSettings` 物件指定非零的垂直調整大小，則為 TRUE。  
+## <a name="return-value"></a>Return Value  
+ TRUE if the `SizeSettings` object specifies a nonzero vertical resizing.  
 
-##  <a name="sizevertical"></a>CMFCDynamicLayout::SizeVertical  
- 取得[SizeSettings](#sizesettings_structure)定義當使用者調整其裝載的視窗垂直調整多少的子控制項的值。  
+##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical  
+ Gets a [SizeSettings](#sizesettings_structure) value that defines how much a child control is resized vertically when the user resizes its hosting window.  
   
 ```  
 static SizeSettings SizeVertical(int nRatio);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nRatio`  
- 定義當使用者調整主視窗大小時，垂直調整子控制項大小的幅度百分比。  
+ Defines as a percentage how far a child control is resized vertically when the user resizes the host window.  
   
-### <a name="return-value"></a>傳回值  
- A [SizeSettings](#sizesettings_structure)封裝要求的大小比例的值。  
+### <a name="return-value"></a>Return Value  
+ A [SizeSettings](#sizesettings_structure) value that encapsulates the requested size ratio.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,41 +1,60 @@
 ---
-title: "Windows Sockets：資料包通訊端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料包通訊端 [C++]"
-  - "通訊端 [C++], 雙向資料流程"
-  - "通訊端 [C++], 資料包"
-  - "Windows Sockets [C++], 雙向資料流程"
-  - "Windows Sockets [C++], 資料包"
+title: 'Windows Sockets: Datagram Sockets | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], datagram
+- Windows Sockets [MFC], bi-directional data flow
+- datagram sockets [MFC]
+- Windows Sockets [MFC], datagram
+- sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Windows Sockets：資料包通訊端
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e48863aae635f8855cec24ebab023d07aeba12a8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明資料包通訊端，可利用兩個 Windows Sockets 的其中一種型別。\(另一個型別為 [資料流通訊端](../mfc/windows-sockets-stream-sockets.md)\)。  
+---
+# <a name="windows-sockets-datagram-sockets"></a>Windows Sockets: Datagram Sockets
+This article describes datagram sockets, one of the two Windows Socket types available. (The other type is the [stream socket](../mfc/windows-sockets-stream-sockets.md).)  
   
- 資料包通訊端支援不保證順序或 unduplicated 的雙向資料流。  資料包也不保證是可靠的;它們可能無法到達。  資料包資料可能會到達順序和可重複，不過，在資料的記錄界限，儲存，只要記錄小於接收器的內部大小限制。  您必須負責處理排序和可靠性。\(可靠性傾向於符合在連接網路 \[LAN\]，但是如此較少於廣域網路 \[WAN\]，例如網際網路\)。  
+ Datagram sockets support a bidirectional data flow that is not guaranteed to be sequenced or unduplicated. Datagrams also are not guaranteed to be reliable; they can fail to arrive. Datagram data may arrive out of order and possibly duplicated, but record boundaries in the data are preserved, as long as the records are smaller than the receiver's internal size limit. You are responsible for managing sequencing and reliability. (Reliability tends to be good on local-area networks [LAN] but less so on wide-area networks [WAN], such as the Internet.)  
   
- 資料包是無連接」，亦即，明確連結不會建立;您傳送資料包資訊加入至指定的通訊端，可接收從指定之通訊端的訊息。  
+ Datagrams are "connectionless", that is, no explicit connection is established; you send a datagram message to a specified socket and you can receive messages from a specified socket.  
   
- 資料包通訊端的範例是存放在網路上的系統時鐘同步處理的應用程式。  這說明資料包通訊端的其他功能在至少某些設定的:對許多網路位址的廣播訊息。  
+ An example of a datagram socket is an application that keeps system clocks on the network synchronized. This illustrates an additional capability of datagram sockets in at least some settings: broadcasting messages to a large number of network addresses.  
   
- 資料包通訊端和記錄導向資料的資料流通訊端好。  如需資料包通訊端的詳細資訊，請參閱 Windows Sockets 規格，在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中使用。  
+ Datagram sockets are better than stream sockets for record-oriented data. For more information about datagram sockets, see the Windows Sockets specification, available in the Windows SDK.  
   
-## 請參閱  
- [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets：背景](../mfc/windows-sockets-background.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+
+

@@ -1,109 +1,133 @@
 ---
-title: "TN001：視窗類別註冊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.registration"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AfxRegisterClass 函式"
-  - "TN001"
-  - "WNDCLASS"
+title: 'TN001: Window Class Registration | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.registration
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN001
+- WNDCLASS [MFC]
+- AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
 caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# TN001：視窗類別註冊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a54f529dacf090ee9052baad6a84fdc92c4a5c90
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這個附註描述註冊 Windows、所需的特殊 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)的 MFC 常式。  MFC 使用的特定 `WNDCLASS` 屬性和 Windows 討論。  
+---
+# <a name="tn001-window-class-registration"></a>TN001: Window Class Registration
+This note describes the MFC routines that register the special [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es needed by Microsoft Windows. Specific `WNDCLASS` attributes used by MFC and Windows are discussed.  
   
-## 問題  
- [CWnd](../mfc/reference/cwnd-class.md) 屬性的物件，就像在 Windows 中的 `HWND` 控制代碼，存在兩個位置中: 視窗物件和 `WNDCLASS`。  `WNDCLASS` 的名稱傳遞至一般視窗建立函式，例如 [CWnd::Create](../Topic/CWnd::Create.md) 和 [CFrameWnd::Create](../Topic/CFrameWnd::Create.md) 中 `lpszClassName` 參數。  
+## <a name="the-problem"></a>The Problem  
+ The attributes of a [CWnd](../mfc/reference/cwnd-class.md) object, like an `HWND` handle in Windows, are stored in two places: the window object and the `WNDCLASS`. The name of the `WNDCLASS` is passed to general window creation functions such as [CWnd::Create](../mfc/reference/cwnd-class.md#create) and [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) in the `lpszClassName` parameter.  
   
- 必須透過四種方式之一來註冊此 `WNDCLASS` :  
+ This `WNDCLASS` must be registered through one of four means:  
   
--   隱含使用 MFC 所提供的 `WNDCLASS`。  
+-   Implicitly by using a MFC provided `WNDCLASS`.  
   
--   隱含地透過子類別化視窗控制項 \(或其他控制項\)。  
+-   Implicitly by subclassing a Windows control (or some other control).  
   
--   明確呼叫 MFC [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) 或 [AfxRegisterClass](../Topic/AfxRegisterClass.md)。  
+-   Explicitly by calling the MFC [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) or [AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass).  
   
--   明確呼叫 Windows 常式 [RegisterClass](http://msdn.microsoft.com/library/windows/desktop/ms633586)。  
+-   Explicitly by calling the Windows routine [RegisterClass](http://msdn.microsoft.com/library/windows/desktop/ms633586).  
   
-## WNDCLASS 欄位  
- `WNDCLASS` 結構包含描述一個視窗類別的各種欄位。  下表顯示欄位並指定如何在 MFC 應用程式使用它們:  
+## <a name="wndclass-fields"></a>WNDCLASS Fields  
+ The `WNDCLASS` structure consists of various fields that describe a window class. The following table shows the fields and specifies how they are used in an MFC application:  
   
-|欄位|說明|  
-|--------|--------|  
-|`lpfnWndProc`|視窗程序，必須是 `AfxWndProc`|  
-|`cbClsExtra`|不被使用\(應該為零\)。|  
-|`cbWndExtra`|不被使用\(應該為零\)。|  
-|`hInstance`|用 [AfxGetInstanceHandle](../Topic/AfxGetInstanceHandle.md)自動填入|  
-|`hIcon`|框架視窗的圖示，請參閱以下|  
-|`hCursor`|當滑鼠在視窗時的游標，請參閱以下|  
-|`hbrBackground`|背景色彩，請參閱以下|  
-|`lpszMenuName`|不被使用\(應該為空\)。|  
-|`lpszClassName`|類別名稱，請參閱以下|  
+|Field|Description|  
+|-----------|-----------------|  
+|`lpfnWndProc`|window proc, must be an `AfxWndProc`|  
+|`cbClsExtra`|not used (should be zero)|  
+|`cbWndExtra`|not used (should be zero)|  
+|`hInstance`|automatically filled with [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|`hIcon`|icon for frame windows, see below|  
+|`hCursor`|cursor for when mouse is over window, see below|  
+|`hbrBackground`|background color, see below|  
+|`lpszMenuName`|not used (should be NULL)|  
+|`lpszClassName`|class name, see below|  
   
-## 提供的 WNDCLASSes  
- MFC 舊版 \(在 MFC 4.0\) 之前，提供數個預先定義視窗類別。  預設不再提供這些視窗類別。  應用程式應該使用適當參數的 `AfxRegisterWndClass` 。  
+## <a name="provided-wndclasses"></a>Provided WNDCLASSes  
+ Earlier versions of MFC (before MFC 4.0), provided several predefined Window classes. These Window classes are no longer provided by default. Applications should use `AfxRegisterWndClass` with the appropriate parameters.  
   
- 如果應用程式的資源以指定的資源 ID \(例如， AFX\_IDI\_STD\_FRAME\)， MFC 會使用該資源。  否則會使用預設資源。  對於圖示，使用標準應用程式圖示，對於游標，使用標準箭號游標。  
+ If the application provides a resource with the specified resource ID (for example, AFX_IDI_STD_FRAME), MFC will use that resource. Otherwise it will use the default resource. For the icon, the standard application icon is used, and for the cursor, the standard arrow cursor is used.  
   
- 兩個圖示支援與單一文件類型的 MDI 應用程式: 主應用程式的圖示，圖示文件\/MDIChild 視窗的另一個圖示。  如果是以不同的圖示的多個資料型別，您必須註冊其他 `WNDCLASS`、或使用 [CFrameWnd::LoadFrame](../Topic/CFrameWnd::LoadFrame.md) 函式。  
+ Two icons support MDI applications with single document types: one icon for the main application, the other icon for iconic document/MDIChild windows. For multiple document types with different icons, you must register additional `WNDCLASS`es or use the [CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) function.  
   
- `CFrameWnd::LoadFrame` 會註冊 `WNDCLASS` 使用您指定為第一個參數和下列標準屬性的圖示 ID:  
+ `CFrameWnd::LoadFrame` will register a `WNDCLASS` using the icon ID you specify as the first parameter and the following standard attributes:  
   
--   類別樣式：CS\_DBLCLKS&#124;CS\_HREDRAW&#124;CS\_VREDRAW;  
+-   class style : CS_DBLCLKS &#124; CS_HREDRAW &#124; CS_VREDRAW;  
   
--   圖示 AFX\_IDI\_STD\_FRAME  
+-   icon AFX_IDI_STD_FRAME  
   
--   鍵頭游標。  
+-   arrow cursor  
   
--   COLOR\_WINDOW 背景色彩  
+-   COLOR_WINDOW background color  
   
- 背景色彩的 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) 值和游標，因為 `CMDIFrameWnd` 的工作區是由包含於 \[**MDICLIENT**\] 視窗。  Microsoft 不鼓勵子類別化 \[**MDICLIENT**\] 視窗，因此請使用標準色彩和資料指標型別。  
+ The values for background color and cursor for the [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) are not used since the client area of the `CMDIFrameWnd` is completely covered by the **MDICLIENT** window. Microsoft does not encourage subclassing the **MDICLIENT** window so use the standard colors and cursor types when possible.  
   
-## 子類別化和 Superclassing 控制項  
- 如果您的子類別或 Superclass 的 Windows 控制項 \(例如 [CButton](../mfc/reference/cbutton-class.md)\)，所以您的類別在該控制項提供的 Windows 實作自動取得 `WNDCLASS` 屬性。  
+## <a name="subclassing-and-superclassing-controls"></a>Subclassing and Superclassing Controls  
+ If you subclass or superclass a Windows control (for example, [CButton](../mfc/reference/cbutton-class.md)) then your class automatically gets the `WNDCLASS` attributes provided in the Windows implementation of that control.  
   
-## AfxRegisterWndClass 函式  
- MFC 提供 Helper 函式來註冊視窗類別。  將一組屬性 \(視窗的類別樣式、游標、背景筆刷和圖示\)，產生綜合名稱，且註冊產生的視窗類別。  例如：  
-  
-```  
-const char* AfxRegisterWndClass(UINT nClassStyle, HCURSOR hCursor, HBRUSH hbrBackground, HICON hIcon);  
-```  
-  
- 這個函式會傳回產生的註冊視窗類別名稱的暫存資料。  如需這個函式的詳細資訊，請參閱[AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md) 。  
-  
- 傳回的字串是暫存指標在靜態字串緩衝區。  它是有效直到下一次呼叫 `AfxRegisterWndClass`。  如果您要此字串，請將它儲存在一個 [CString](../atl-mfc-shared/using-cstring.md) 變數，如下列範例所示:  
+## <a name="the-afxregisterwndclass-function"></a>The AfxRegisterWndClass Function  
+ MFC provides a helper function for registering a window class. Given a set of attributes (window class style, cursor, background brush, and icon), a synthetic name is generated, and the resulting window class is registered. For example,  
   
 ```  
-CString strWndClass = AfxRegisterWndClass(CS_DBLCLK, ...);  
+const char* AfxRegisterWndClass(UINT nClassStyle,
+    HCURSOR hCursor,
+    HBRUSH hbrBackground,
+    HICON hIcon);
+```  
+  
+ This function returns a temporary string of the generated registered window class name. For more information about this function, see [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass).  
+  
+ The returned string is a temporary pointer to a static string buffer. It is valid until the next call to `AfxRegisterWndClass`. If you want to keep this string around, store it in a [CString](../atl-mfc-shared/using-cstring.md) variable, as in this example:  
+  
+```  
+CString strWndClass = AfxRegisterWndClass(CS_DBLCLK, ...);
+
 ...  
 CWnd* pWnd = new CWnd;  
-pWnd->Create(strWndClass, ...);  
+pWnd->Create(strWndClass, ...);
+
 ...  
 ```  
   
- `AfxRegisterWndClass` 會擲回 [CResourceException](../mfc/reference/cresourceexception-class.md) ，如果視窗類別未註冊 \(因為錯誤的參數，或在 Windows 記憶體之外\)。  
+ `AfxRegisterWndClass` will throw a [CResourceException](../mfc/reference/cresourceexception-class.md) if the window class failed to register (either because of bad parameters, or out of Windows memory).  
   
-## RegisterClass 和 AfxRegisterClass 函式  
- 如果您要比 `AfxRegisterWndClass` 提供更複雜的任何項目，您可以呼叫 Windows API `RegisterClass` 或 MFC 函式 `AfxRegisterClass`。  `CWnd`、`Create` [CFrameWnd](../mfc/reference/cframewnd-class.md) 和 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) 函式採用 `lpszClassName` 字串名稱視窗類別做為第一個參數。  您可以使用任何已登錄的視窗類別名稱，不論您用來註冊其方法。  
+## <a name="the-registerclass-and-afxregisterclass-functions"></a>The RegisterClass and AfxRegisterClass Functions  
+ If you want to do anything more sophisticated than what `AfxRegisterWndClass` provides, you can call the Windows API `RegisterClass` or the MFC function `AfxRegisterClass`. The `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) and [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` functions take a `lpszClassName` string name for the window class as the first parameter. You can use any registered window class name, regardless of the method you used to register it.  
   
- 在 Win32 的 DLL 使用 `AfxRegisterClass` \(或 `AfxRegisterWndClass`\) 是重要的。  Win32 沒有自動 DLL 登錄移除註冊類別，因此，您需要明確移除註冊類別，當 DLL 結束時。  使用`AfxRegisterClass`而非`RegisterClass`，這會自動處理。  當 DLL 終止時，`AfxRegisterClass` 會維護您的 DLL 登錄的唯一類別清單並自動將移除它們。  當您在 DLL 時使用 `RegisterClass` ，您必須確定所有類別已移除註冊，當 DLL 終止時 \(在 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) 函式\)。  當另一個用戶端應用程式嘗試使用您的 DLL 時，失敗可能造成 `RegisterClass` 未預期地失敗。  
+ It is important to use `AfxRegisterClass` (or `AfxRegisterWndClass`) in a DLL on Win32. Win32 does not automatically unregister classes registered by a DLL, so you must explicitly unregister classes when the DLL is terminated. By using `AfxRegisterClass` instead of `RegisterClass` this is handled automatically for you. `AfxRegisterClass` maintains a list of unique classes registered by your DLL and will automatically unregister them when the DLL terminates. When you use `RegisterClass` in a DLL, you must ensure that all classes are unregistered when the DLL is terminated (in your [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) function). Failure to do so might cause `RegisterClass` to fail unexpectedly when another client application tries to use your DLL.  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

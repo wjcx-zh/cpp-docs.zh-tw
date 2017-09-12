@@ -1,34 +1,53 @@
 ---
-title: "樹狀目錄控制項目選取 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制項 [MFC], 在其中選取項目"
-  - "CTreeCtrl 類別, 項目選取"
-  - "樹狀目錄控制項中的項目選取"
-  - "樹狀目錄控制項, 項目選取"
+title: Tree Control Item Selection | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree controls [MFC], item selection
+- controls [MFC], selecting items in
+- CTreeCtrl class [MFC], item selection
+- item selection in tree controls
 ms.assetid: 7bcb3b16-b9c8-4c06-9350-7bc3c1c5009b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 樹狀目錄控制項目選取
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 022090fb17e7cbc41286d41b51b2cfcd3d7fc97c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當選取範圍從某個項目變更為另一個時，樹狀目錄控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 傳送 [TVN\_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) 和 [TVN\_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) 告知訊息。  兩個告知包含指出變更是否是按一下滑鼠或按鍵動作的結果。  通知還包含擷取選取項目和項目會遺失選取項目的相關資訊。  您可以使用這項資訊來設定由項目的選取狀態的項目屬性。  傳回以回應 **TVN\_SELCHANGING** 的 **TRUE** 防止變更選取範圍;傳回 **FALSE** 允許變更。  
+---
+# <a name="tree-control-item-selection"></a>Tree Control Item Selection
+When the selection changes from one item to another, a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sends [TVN_SELCHANGING](http://msdn.microsoft.com/library/windows/desktop/bb773547) and [TVN_SELCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb773544) notification messages. Both notifications include a value that specifies whether the change is the result of a mouse click or a keystroke. The notifications also include information about the item that is gaining the selection and the item that is losing the selection. You can use this information to set item attributes that depend on the selection state of the item. Returning **TRUE** in response to **TVN_SELCHANGING** prevents the selection from changing; returning **FALSE** allows the change.  
   
- 應用程式可以藉由呼叫 [SelectItem](../Topic/CTreeCtrl::SelectItem.md) 成員函式變更選取範圍。  
+ An application can change the selection by calling the [SelectItem](../mfc/reference/ctreectrl-class.md#selectitem) member function.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

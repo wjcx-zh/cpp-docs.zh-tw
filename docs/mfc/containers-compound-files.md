@@ -1,91 +1,109 @@
 ---
-title: "容器：複合檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "檔案的存取模式 [C++]"
-  - "複合文件"
-  - "複合檔案"
-  - "容器 [C++], 複合檔案"
-  - "文件 [C++], 複合"
-  - "文件 [C++], OLE"
-  - "檔案 [C++], 複合"
-  - "OLE 容器, 複合檔案"
-  - "OLE 文件, 複合檔案"
-  - "效能 [C++], 複合檔案"
-  - "標準化檔案結構複合檔案"
+title: 'Containers: Compound Files | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- compound files [MFC]
+- compound documents
+- containers [MFC], compound files
+- OLE documents [MFC], compound files
+- performance [MFC], compound files
+- files [MFC], compound
+- standardized file structure compound files
+- documents [MFC], compound
+- documents [MFC], OLE
+- OLE containers [MFC], compound files
+- access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 容器：複合檔案
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96b38a2eddce7e26cf20834e2b7bc32cfb681b59
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明複合檔案的元件和實作和使用複合檔案的優點和缺點於 OLE 應用程式。  
+---
+# <a name="containers-compound-files"></a>Containers: Compound Files
+This article explains the components and implementation of compound files and the advantages and disadvantages of using compound files in your OLE applications.  
   
- 複合檔案是 OLE 的整數部分。  它們是用來加速資料傳輸和 OLE 文件儲存。  複合檔案是現用的結構化儲存體模型的實作。  一致的介面有支援序列化至儲存區、資料流或檔案物件。  複合檔案在 MFC 程式庫類別支援 `COleStreamFile` 和 `COleDocument`。  
+ Compound files are an integral part of OLE. They are used to facilitate data transfer and OLE document storage. Compound files are an implementation of the Active structured storage model. Consistent interfaces exist that support serialization to a storage, a stream, or a file object. Compound files are supported in the Microsoft Foundation Class Library by the classes `COleStreamFile` and `COleDocument`.  
   
 > [!NOTE]
->  使用複合檔案不表示資訊來自 OLE 文件或複合文件。  複合檔案是一個方式儲存複合文件， OLE 文件和其他資料。  
+>  Using a compound file does not imply that the information comes from an OLE document or a compound document. Compound files are just one of the ways to store compound documents, OLE documents, and other data.  
   
-##  <a name="_core_components_of_a_compound_file"></a> 複合檔案的元件  
- 複合檔案的 OLE 實作使用三個物件型別:資料流物件、儲存物件和 `ILockBytes` 物件。  這些物件會以下列方式類似於標準檔案系統的元件:  
+##  <a name="_core_components_of_a_compound_file"></a> Components of a Compound File  
+ The OLE implementation of compound files uses three object types: stream objects, storage objects, and `ILockBytes` objects. These objects are similar to the components of a standard file system in the following ways:  
   
--   資料流物件，例如檔案，任何型別的資料。  
+-   Stream objects, like files, store data of any type.  
   
--   儲存物件，因為目錄，可能包含其他儲存區、資料流物件。  
+-   Storage objects, like directories, can contain other storage and stream objects.  
   
--   **LockBytes** 物件代表儲存物件和實體硬體之間的介面。  它們決定實際位元組方式寫入任何儲存裝置 **LockBytes** 物件存取，例如硬碟或全域記憶體區域。  如需 **LockBytes** 物件和 `ILockBytes` 介面的詳細資訊，請參閱 *OLE 程式設計人員參考》*。  
+-   **LockBytes** objects represent the interface between the storage objects and the physical hardware. They determine how the actual bytes are written to whatever storage device the **LockBytes** object is accessing, such as a hard drive or an area of global memory. For more information about **LockBytes** objects and the `ILockBytes` interface, see the *OLE Programmer's Reference*.  
   
-##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> 複合檔案的優缺點。  
- 複合檔案提供優點 null 以文件儲存較早的方法。  包括：  
+##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> Advantages and Disadvantages of Compound Files  
+ Compound files provide benefits not available with earlier methods of file storage. They include:  
   
--   將檔案存取。  
+-   Incremental file accessing.  
   
--   檔案存取模式。  
+-   File access modes.  
   
--   檔案結構的標準化  
+-   Standardization of file structure.  
   
- 在您的應用程式時應該考慮複合檔案 \(大和效能問題的可能的缺點與軟體磁碟儲存體相關\)，在決定使用它們。  
+ The potential disadvantages of compound files — large size and performance issues relating to storage on floppy discs — should be considered when deciding whether to use them in your application.  
   
-###  <a name="_core_incremental_access_to_files"></a> 對檔案的存取加入  
- 對檔案的增加存取是使用複合檔案中自動優點。  由於複合檔案可視為在檔案內的檔案系統，」各自的物件型別，例如資料流或儲存體，可以存取，而不需要載入整個檔案。  這可以大幅降低應用程式需要由使用者存取編輯的新物件的時間。  加入更新，根據相同概念，提供相似的優點。  而不是將整個檔案儲存所做的變更套用至物件， OLE 儲存使用者或儲存物件編輯的資料流。  
+###  <a name="_core_incremental_access_to_files"></a> Incremental Access to Files  
+ Incremental access to files is an automatic benefit of using compound files. Because a compound file can be viewed as a "file system within a file," individual object types, such as stream or storage, can be accessed without the need to load the entire file. This can dramatically decrease the time an application needs to access new objects for editing by the user. Incremental updating, based on the same concept, offers similar benefits. Instead of saving the entire file just to save the changes made to one object, OLE saves only the stream or storage object edited by the user.  
   
-###  <a name="_core_file_access_modes"></a> 檔案存取模式。  
- 可判斷物件的變更在複合檔案上時認可磁碟已使用複合檔案的另一項優點。  檔案存取，或交易或直接的方式，判斷變更時執行。  
+###  <a name="_core_file_access_modes"></a> File Access Modes  
+ Being able to determine when changes to objects in a compound file are committed to disk is another benefit of using compound files. The mode in which files are accessed, either transacted or direct, determines when changes are committed.  
   
--   交易模式使用兩階段交易認可作業對物件所做的變更會在複合檔案，同時保留文件可用的舊和新複本，直到使用者選擇要儲存或復原變更。  
+-   Transacted mode uses a two-phase commit operation to make changes to objects in a compound file, thereby keeping both the old and the new copies of the document available until the user chooses to either save or undo the changes.  
   
--   即時模式合併對文件進行的變更，會使，，不用能力之後移除它們。  
+-   Direct mode incorporates changes to the document as they are made, without the ability to later undo them.  
   
- 如需存取模式的詳細資訊，請參閱 *OLE 程式設計人員參考》*。  
+ For more information about access modes, see the *OLE Programmer's Reference*.  
   
-###  <a name="_core_standardization"></a> 標準。  
- 複合檔案標準化結構可讓不同的 OLE 應用程式將 OLE 應用程式建立的複合檔案瀏覽沒有實際的檔案建立應用程式的知識。  
+###  <a name="_core_standardization"></a> Standardization  
+ The standardized structure of compound files allows different OLE applications to browse through compound files created by your OLE application with no knowledge of the application that actually created the file.  
   
-###  <a name="_core_size_and_performance_considerations"></a> 尺寸與效能考量  
- 由於複合檔案儲存結構和能力的複雜累加儲存資料檔案，會使用這個格式大於其他檔案常使用非結構化或「平坦檔」儲存區。  如果您的應用程式經常載入和儲存檔案，使用複合檔案比 noncompound 檔案可能會造成檔案大小快速加入。  由於複合檔案可以取得大，檔案的存取時間儲存了並從磁片載入可能也會受到影響，導致對檔案的速度較慢的存取。  
+###  <a name="_core_size_and_performance_considerations"></a> Size and Performance Considerations  
+ Because of the complexity of the compound file storage structure and the ability to save data incrementally, files using this format tend to be larger than other files using unstructured or "flat file" storage. If your application frequently loads and saves files, using compound files can cause the file size to increase much more quickly than noncompound files. Because compound files can get large, the access time for files stored on and loaded from floppy disks can also be affected, resulting in slower access to files.  
   
- 影響效能的其他問題是複合檔案分割。  複合檔案的大小取決於檔案和最後扇磁碟區之間的差異使用的第一個。  已分割的檔案可能包含不包含資料可用空間的許多區域，不過，計數，在計算大小時。  在複合檔案的存留期內，這些區域由儲存物件的插入或刪除建立。  
+ Another issue that affects performance is compound-file fragmentation. The size of a compound file is determined by the difference between the first and last disk sectors used by the file. A fragmented file can contain many areas of free space that do not contain data, but are counted when calculating the size. During the lifetime of a compound file, these areas are created by the insertion or deletion of storage objects.  
   
-##  <a name="_core_using_compound_files_format_for_your_data"></a> 使用複合檔案為您的資料格式。  
- 在成功建立具有文件類別後的應用程式衍生自 `COleDocument`，請確定您的主要文件建構函式呼叫 `EnableCompoundFile`。  當應用程式精靈建立 OLE 容器應用程式時，插入這個呼叫您的。  
+##  <a name="_core_using_compound_files_format_for_your_data"></a> Using Compound Files Format for Your Data  
+ After successfully creating an application that has a document class derived from `COleDocument`, ensure that your main document constructor calls `EnableCompoundFile`. When the application wizard creates OLE container applications, this call is inserted for you.  
   
- 在 *OLE 程序參考*，請參閱 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)、 [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015)和 [ILockBytes](http://msdn.microsoft.com/library/windows/desktop/aa379238)。  
+ In the *OLE Programmer's Reference*, see [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034), [IStorage](http://msdn.microsoft.com/library/windows/desktop/aa380015), and [ILockBytes](http://msdn.microsoft.com/library/windows/desktop/aa379238).  
   
-## 請參閱  
- [容器](../mfc/containers.md)   
- [容器：使用者介面問題](../mfc/containers-user-interface-issues.md)   
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: User-Interface Issues](../mfc/containers-user-interface-issues.md)   
  [COleStreamFile Class](../mfc/reference/colestreamfile-class.md)   
  [COleDocument Class](../mfc/reference/coledocument-class.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "CMenuTearOffManager 類別 |Microsoft 文件"
+title: CMenuTearOffManager Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMenuTearOffManager class
+- CMenuTearOffManager [MFC], CMenuTearOffManager
+- CMenuTearOffManager [MFC], Build
+- CMenuTearOffManager [MFC], GetRegPath
+- CMenuTearOffManager [MFC], Initialize
+- CMenuTearOffManager [MFC], IsDynamicID
+- CMenuTearOffManager [MFC], Parse
+- CMenuTearOffManager [MFC], Reset
+- CMenuTearOffManager [MFC], SetInUse
+- CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
 caps.latest.revision: 31
 author: mikeblome
@@ -43,19 +51,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 53677bbea54e428e5f080f5c1f73c576abcf99a5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f5dae0b41cd1b350c07afe01dd514187140527b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 類別
-管理 Tear-Off 功能表。 Tear-Off 功能表是在功能表列上的功能表。 使用者可以取下功能表列中的 Tear-Off 功能表，讓 Tear-Off 功能表浮動。  
+# <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager Class
+Manages tear-off menus. A tear-off menu is a menu on the menu bar. The user can remove a tear-off menu from the menu bar, causing the tear-off menu to float.  
   
    [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
    
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMenuTearOffManager : public CObject  
@@ -63,42 +71,42 @@ class CMenuTearOffManager : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|建構 `CMenuTearOffManager` 物件。|  
+|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|Constructs a `CMenuTearOffManager` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
 |[CMenuTearOffManager::Build](#build)||  
 |[CMenuTearOffManager::GetRegPath](#getregpath)||  
-|[CMenuTearOffManager::Initialize](#initialize)|初始化`CMenuTearOffManager`物件。|  
+|[CMenuTearOffManager::Initialize](#initialize)|Initializes a `CMenuTearOffManager` object.|  
 |[CMenuTearOffManager::IsDynamicID](#isdynamicid)||  
 |[CMenuTearOffManager::Parse](#parse)||  
 |[CMenuTearOffManager::Reset](#reset)||  
 |[CMenuTearOffManager::SetInUse](#setinuse)||  
 |[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||  
   
-## <a name="remarks"></a>備註  
- 若要使用應用程式中的 tear-off 功能表，您必須擁有`CMenuTearOffManager`物件。 在大部分情況下，您將不會建立或初始化`CMenuTearOffManager`直接物件。 這會為您處理當您呼叫[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)函式。  
+## <a name="remarks"></a>Remarks  
+ In order to use tear-off menus in your application, you must have a `CMenuTearOffManager` object. In most cases, you won't create or initialize a `CMenuTearOffManager` object directly. This is handled for you when you call the [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) function.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何建構和初始化`CMenuTearOffManager`物件呼叫`CWinAppEX::EnableTearOffMenus`方法。 此程式碼片段是一部分[字板範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct and initialize a `CMenuTearOffManager` object by calling the `CWinAppEX::EnableTearOffMenus` method. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad #&12;](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMenuTearOffManager`   
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxmenutearoffmanager.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmenutearoffmanager.h  
   
-##  <a name="build"></a>CMenuTearOffManager::Build  
+##  <a name="build"></a>  CMenuTearOffManager::Build  
 
   
 ```  
@@ -107,35 +115,35 @@ void Build(
     CString& strText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiTearOffBarID`  
  [in] `strText`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="cmenutearoffmanager"></a>CMenuTearOffManager::CMenuTearOffManager  
- 建構[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)物件。  
+##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager  
+ Constructs a [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) object.  
   
 ```  
 CMenuTearOffManager();
 ```  
   
-### <a name="remarks"></a>備註  
- 在大部分情況下，您不應該建立`CMenuTearOffManager`手動。 您的應用程式的架構建立`CMenuTearOffManager`物件當您呼叫[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)。  
+### <a name="remarks"></a>Remarks  
+ In most cases, you should not create a `CMenuTearOffManager` manually. The framework of your application creates the `CMenuTearOffManager` object when you call [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).  
   
-##  <a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
+##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
   
 ```  
 LPCTSTR GetRegPath() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="initialize"></a>CMenuTearOffManager::Initialize  
- 初始化[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)物件。  
+##  <a name="initialize"></a>  CMenuTearOffManager::Initialize  
+ Initializes a [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) object.  
   
 ```  
 BOOL Initialize(
@@ -144,63 +152,63 @@ BOOL Initialize(
     UINT uiTearOffMenuLast);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszRegEntry`  
- 字串，其中包含登錄項目路徑。 您的應用程式儲存撕條的設定，此登錄項目中。  
+ A string that contains the path of a registry entry. Your applications stores the settings for tear-off bars in this registry entry.  
   
  [in] `uiTearOffMenuFirst`  
- Tear-off 功能表將第一個功能表識別碼。  
+ The first menu ID for a tear-off menu.  
   
  [in] `uiTearOffMenuLast`  
- Tear-off 功能表最後一個功能表識別碼。  
+ The last menu ID for a tear-off menu.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 從功能表識別碼的範圍`uiTearOffMenuFirst`至`uiTearOffMenuLast`必須是連續的間隔。 此間隔定義 tear-off 功能表可在應用程式中同時顯示的數目。  
+### <a name="remarks"></a>Remarks  
+ The range of menu IDs from `uiTearOffMenuFirst` to `uiTearOffMenuLast` must be a continuous interval. The interval defines the number of tear-off menus that can appear at the same time in the application.  
   
-##  <a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
+##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
   
 ```  
 BOOL IsDynamicID(UINT uiID) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="parse"></a>CMenuTearOffManager::Parse  
+##  <a name="parse"></a>  CMenuTearOffManager::Parse  
 
   
 ```  
 UINT Parse(CString& str);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `str`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="reset"></a>CMenuTearOffManager::Reset  
+##  <a name="reset"></a>  CMenuTearOffManager::Reset  
 
   
 ```  
 void Reset(HMENU hmenu);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `hmenu`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setinuse"></a>CMenuTearOffManager::SetInUse  
+##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse  
 
   
 ```  
@@ -209,26 +217,26 @@ void SetInUse(
     BOOL bUse = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
  [in] `bUse`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
+##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus  
 
   
 ```  
 void SetupTearOffMenus(HMENU hMenu);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `hMenu`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [Cwinappex 衍生類別](../../mfc/reference/cwinappex-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CWinAppEx Class](../../mfc/reference/cwinappex-class.md)
 

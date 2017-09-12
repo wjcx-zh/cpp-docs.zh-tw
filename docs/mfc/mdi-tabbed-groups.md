@@ -1,74 +1,92 @@
 ---
-title: "MDI 索引標籤式群組 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mdi, 索引標籤式群組"
-  - "索引標籤式群組"
+title: MDI Tabbed Groups | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- mdi [MFC], tabbed groups
+- tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# MDI 索引標籤式群組
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 955c785bab2f16d12c71b3ba253f753e8ab581fb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-多重文件介面 \(MDI\) \(MDI\) 中索引群組功能啟用多重文件介面 \(MDI\) \(MDI\) 應用程式來顯示一或多個索引標籤的索引標籤式視窗 \(或群組，稱為 *索引標籤式群組*\) MDI 工作區。  具索引標籤的視窗可以垂直或水平置中對齊。  如果應用程式裝載多個 MDI 索引標籤式群組，群組由分隔器分隔。  
+---
+# <a name="mdi-tabbed-groups"></a>MDI Tabbed Groups
+The multiple document interface (MDI) tabbed groups feature enables multiple document interface (MDI) applications to display one or more tabbed windows (or groups of tabbed windows, known as *tabbed groups*) in the MDI client area. The tabbed windows can be aligned vertically or horizontally. If an application hosts more than one MDI tabbed group, the groups are separated by splitters.  
   
-## 功能  
- 下列是 MDI 索引標籤式群組功能：  
+## <a name="features"></a>Features  
+ The following are the features of MDI tabbed groups:  
   
--   應用程式可以動態建立具索引標籤的視窗。  
+-   An application can create tabbed windows dynamically.  
   
--   應用程式可以水平或垂直對齊具索引標籤的視窗。  
+-   An application can align tabbed windows horizontally or vertically.  
   
--   具索引標籤的視窗群組由分隔器分隔。  使用分隔器，使用者可以調整成索引標籤式群組。  
+-   Groups of tabbed windows are separated by splitters. The user can resize tabbed groups by using the splitter.  
   
--   使用者可以拖曳群組之間的個別選項。  
+-   The user can drag individual tabs between groups.  
   
--   使用者可以拖曳個別選項建立新群組。  
+-   The user can drag individual tabs to create new groups.  
   
--   您可以使用捷徑功能表，使用者可以捲動選項或建立新群組。  
+-   The user can move tabs or create new groups by using a shortcut menu.  
   
--   應用程式可以儲存和載入具索引標籤的視窗配置。  
+-   An application can save and load the layout of tabbed windows.  
   
--   應用程式可以儲存和載入 MDI 文件清單。  
+-   An application can save and load the list of MDI documents.  
   
--   應用程式可以存取個別的索引標籤式群組和修改其參數。  
+-   An application can access individual tabbed groups and modify their parameters.  
   
-### 使用 MDI 索引標籤式群組  
- 下列是工作經常執行與 MDI 索引標籤式群組：  
+### <a name="using-mdi-tabbed-groups"></a>Using MDI Tabbed Groups  
+ The following are tasks commonly performed with MDI tabbed groups:  
   
--   若要啟用 MDI 索引標籤式主框架視窗的群組，請呼叫 [CMDIFrameWndEx::EnableMDITabbedGroups](../Topic/CMDIFrameWndEx::EnableMDITabbedGroups.md)。  這個方法的第二個參數是 `CMDITabInfo` 類別的執行個體。  在呼叫 `CMDIFrameWndEx::EnableMDITabbedGroups`之前，您可以使用預設參數或修改它們。  
+-   To enable MDI tabbed groups for a main frame window, call [CMDIFrameWndEx::EnableMDITabbedGroups](../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups). The second parameter of this method is an instance of the `CMDITabInfo` class. You can use the default parameters or modify them before you call `CMDIFrameWndEx::EnableMDITabbedGroups`.  
   
--   若要修改屬性的屬性索引標籤式群組在執行階段，才能建立或修改 `CMDITabInfo` 物件並再次呼叫 `CMDIFrameWndEx::EnableMDITabbedGroups`  
+-   To modify the properties of an MDI tabbed group at run time, create or modify a `CMDITabInfo` object and call `CMDIFrameWndEx::EnableMDITabbedGroups` again  
   
--   若要取得 MDI 清單索引標籤式視窗，呼叫 `CMDIFrameWndEx::GetMDITabGroups`。  
+-   To obtain a list of MDI tabbed windows, call `CMDIFrameWndEx::GetMDITabGroups`.  
   
--   若要建立新的 MDI 索引標籤式群組在現用旁邊的索引標籤式群組，由 `CMDIFrameWndEx::MDITabNewGroup`呼叫。  
+-   To create a new MDI tabbed group next to an active tabbed group, call `CMDIFrameWndEx::MDITabNewGroup`.  
   
--   若要將輸入焦點移至新的索引標籤式群組的上一個或下一個視窗，請呼叫 `CMDIFrameWndEx::MDITabMoveToNextGroup`。  
+-   To shift the input focus to the previous or next window of a tabbed group, call `CMDIFrameWndEx::MDITabMoveToNextGroup`.  
   
--   判斷視窗是否為 MDI 索引標籤式群組為 `CMDIFrameWndEx::IsMemberOfMDITabGroup`的成員。  
+-   To determine whether a window is a member of an MDI tabbed group call `CMDIFrameWndEx::IsMemberOfMDITabGroup`.  
   
--   判斷 MDI 索引標籤或 MDI 索引標籤式群組是否為主框架視窗啟用，呼叫 `CMDIFrameWndEx::AreMDITabs`。  判斷 MDI 索引標籤式群組成員是否已啟用，呼叫 `CMDIFrameWndEx::IsMDITabbedGroup`。  
+-   To determine whether MDI tabs or MDI tabbed groups are enabled for a main frame window, call `CMDIFrameWndEx::AreMDITabs`. To determine only whether MDI tabbed groups are enabled, call `CMDIFrameWndEx::IsMDITabbedGroup`.  
   
--   要顯示捷徑功能表，當使用者按一下選項或將它拖曳至另一個 MDI 索引標籤式群組時，請覆寫 `CMDIFrameWndEx`的 `CMDIFrameWndEx::OnShowMDITabContextMenu` 衍生類別。  如果您沒有執行這個方法，應用程式就會顯示捷徑功能表。  
+-   To display a shortcut menu when the user clicks a tab or drags it to another MDI tabbed group, override `CMDIFrameWndEx::OnShowMDITabContextMenu` in the `CMDIFrameWndEx`-derived class. If you do not implement this method, the application will not display the shortcut menu.  
   
--   要儲存設定 MDI 索引標籤式應用程式的群組，由 `CMDIFrameWndEx::SaveMDIState`呼叫。  若要載入先前儲存的 MDI 索引標籤式群組設定檔，呼叫 `CMDIFrameWndEx::LoadMDIState`。  您可以在 MDI 應用程式也可以呼叫這些方法載入或儲存開啟的文件清單。  如需儲存和載入 MDI 狀態的詳細資訊，請參閱 [CMDIFrameWndEx::LoadMDIState](../Topic/CMDIFrameWndEx::LoadMDIState.md)。  
+-   To save the layout of MDI tabbed groups in an application, call `CMDIFrameWndEx::SaveMDIState`. To load a previously saved MDI tabbed group profile, call `CMDIFrameWndEx::LoadMDIState`. You can also call these methods to load or save the list of opened documents in an MDI application. For more information about saving and loading MDI state, see [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate).  
   
-## 請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
- [CMDIFrameWndEx 類別](../mfc/reference/cmdiframewndex-class.md)   
- [CMDIChildWndEx 類別](../mfc/reference/cmdichildwndex-class.md)   
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [CMDIFrameWndEx Class](../mfc/reference/cmdiframewndex-class.md)   
+ [CMDIChildWndEx Class](../mfc/reference/cmdichildwndex-class.md)   
  [CMDITabInfo Class](../mfc/reference/cmditabinfo-class.md)
+

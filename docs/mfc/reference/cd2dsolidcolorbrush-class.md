@@ -1,5 +1,5 @@
 ---
-title: "CD2DSolidColorBrush 類別 |Microsoft 文件"
+title: CD2DSolidColorBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DSolidColorBrush class
+- CD2DSolidColorBrush [MFC], CD2DSolidColorBrush
+- CD2DSolidColorBrush [MFC], Attach
+- CD2DSolidColorBrush [MFC], Create
+- CD2DSolidColorBrush [MFC], Destroy
+- CD2DSolidColorBrush [MFC], Detach
+- CD2DSolidColorBrush [MFC], Get
+- CD2DSolidColorBrush [MFC], GetColor
+- CD2DSolidColorBrush [MFC], SetColor
+- CD2DSolidColorBrush [MFC], m_colorSolid
+- CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
 caps.latest.revision: 16
 author: mikeblome
@@ -44,17 +53,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5b6cbd6a6a5557f5ea23c0556a4b87011b510411
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3842452031c9cc952c7be740a877029985ae2b5a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush 類別
-ID2D1SolidColorBrush 包裝函式。  
+# <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush Class
+A wrapper for ID2D1SolidColorBrush.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DSolidColorBrush : public CD2DBrush;  
@@ -62,39 +71,39 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|多載。 建構 CD2DSolidColorBrush 物件。|  
-|[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|解構函式。 D2D 實心筆刷物件終結時呼叫。|  
+|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Overloaded. Constructs a CD2DSolidColorBrush object.|  
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|The destructor. Called when a D2D solid brush object is being destroyed.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::Attach](#attach)|會附加至現有的資源物件的介面|  
-|[CD2DSolidColorBrush::Create](#create)|建立 CD2DSolidColorBrush。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
-|[CD2DSolidColorBrush::Destroy](#destroy)|終結 CD2DSolidColorBrush 物件。 (覆寫[CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy)。)|  
-|[CD2DSolidColorBrush::Detach](#detach)|中斷連結物件中的資源介面|  
-|[CD2DSolidColorBrush::Get](#get)|傳回 ID2D1SolidColorBrush 介面|  
-|[CD2DSolidColorBrush::GetColor](#getcolor)|擷取單色筆刷色彩|  
-|[CD2DSolidColorBrush::SetColor](#setcolor)|指定此單色筆刷色彩|  
+|[CD2DSolidColorBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DSolidColorBrush::Create](#create)|Creates a CD2DSolidColorBrush. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DSolidColorBrush::Destroy](#destroy)|Destroys a CD2DSolidColorBrush object. (Overrides [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
+|[CD2DSolidColorBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DSolidColorBrush::Get](#get)|Returns ID2D1SolidColorBrush interface|  
+|[CD2DSolidColorBrush::GetColor](#getcolor)|Retrieves the color of the solid color brush|  
+|[CD2DSolidColorBrush::SetColor](#setcolor)|Specifies the color of this solid color brush|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|傳回 ID2D1SolidColorBrush 介面|  
+|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush*](#operator_id2d1solidcolorbrush_star)|Returns ID2D1SolidColorBrush interface|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|筆刷不透明的色彩。|  
-|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|儲存 ID2D1SolidColorBrush 物件的指標。|  
+|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Brush solid color.|  
+|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Stores a pointer to an ID2D1SolidColorBrush object.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -103,29 +112,29 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
  [CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
- 解構函式。 D2D 實心筆刷物件終結時呼叫。  
+##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::~CD2DSolidColorBrush  
+ The destructor. Called when a D2D solid brush object is being destroyed.  
   
 ```  
 virtual ~CD2DSolidColorBrush();
 ```  
   
-##  <a name="attach"></a>CD2DSolidColorBrush::Attach  
- 會附加至現有的資源物件的介面  
+##  <a name="attach"></a>  CD2DSolidColorBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1SolidColorBrush* pResource);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- 現有的資源介面。 不能是 NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
- 建構 CD2DSolidColorBrush 物件。  
+##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
+ Constructs a CD2DSolidColorBrush object.  
   
 ```  
 CD2DSolidColorBrush(
@@ -143,108 +152,108 @@ CD2DSolidColorBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 呈現目標指標。  
+ A pointer to the render target.  
   
  `color`  
- 筆刷色彩紅色、 綠色、 藍色及 alpha 值。  
+ The red, green, blue, and alpha values of the brush's color.  
   
  `pBrushProperties`  
- 指標的不透明度和筆刷轉換。  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- 指出由擁有者 (pParentTarget) 將會終結物件。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
  `nAlpha`  
- 筆刷色彩的不透明度。  
+ The opacity of the brush's color.  
   
-##  <a name="create"></a>CD2DSolidColorBrush::Create  
- 建立 CD2DSolidColorBrush。  
+##  <a name="create"></a>  CD2DSolidColorBrush::Create  
+ Creates a CD2DSolidColorBrush.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- 呈現目標指標。  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DSolidColorBrush::Destroy  
- 終結 CD2DSolidColorBrush 物件。  
+##  <a name="destroy"></a>  CD2DSolidColorBrush::Destroy  
+ Destroys a CD2DSolidColorBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DSolidColorBrush::Detach  
- 中斷連結物件中的資源介面  
+##  <a name="detach"></a>  CD2DSolidColorBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1SolidColorBrush* Detach();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 中斷連結的資源介面指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DSolidColorBrush::Get  
- 傳回 ID2D1SolidColorBrush 介面  
+##  <a name="get"></a>  CD2DSolidColorBrush::Get  
+ Returns ID2D1SolidColorBrush interface  
   
 ```  
 ID2D1SolidColorBrush* Get();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 ID2D1SolidColorBrush 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1SolidColorBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
- 擷取單色筆刷色彩  
+##  <a name="getcolor"></a>  CD2DSolidColorBrush::GetColor  
+ Retrieves the color of the solid color brush  
   
 ```  
 D2D1_COLOR_F GetColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 這個單色筆刷色彩  
+### <a name="return-value"></a>Return Value  
+ The color of this solid color brush  
   
-##  <a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
- 筆刷不透明的色彩。  
+##  <a name="m_colorsolid"></a>  CD2DSolidColorBrush::m_colorSolid  
+ Brush solid color.  
   
 ```  
 D2D1_COLOR_F m_colorSolid;  
 ```  
   
-##  <a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
- 儲存 ID2D1SolidColorBrush 物件的指標。  
+##  <a name="m_psolidcolorbrush"></a>  CD2DSolidColorBrush::m_pSolidColorBrush  
+ Stores a pointer to an ID2D1SolidColorBrush object.  
   
 ```  
 ID2D1SolidColorBrush* m_pSolidColorBrush;  
 ```  
   
-##  <a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush *  
- 傳回 ID2D1SolidColorBrush 介面  
+##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::operator ID2D1SolidColorBrush*  
+ Returns ID2D1SolidColorBrush interface  
   
 ```  
 operator ID2D1SolidColorBrush*();
 ```   
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 ID2D1SolidColorBrush 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1SolidColorBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
- 指定此單色筆刷色彩  
+##  <a name="setcolor"></a>  CD2DSolidColorBrush::SetColor  
+ Specifies the color of this solid color brush  
   
 ```  
 void SetColor(D2D1_COLOR_F color);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `color`  
- 這個單色筆刷色彩  
+ The color of this solid color brush  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

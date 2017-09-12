@@ -1,46 +1,65 @@
 ---
-title: "建立 CToolBarCtrl 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl 類別, 建立工具列"
-  - "工具列控制項 [MFC], 建立"
+title: Creating a CToolBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbar controls [MFC], creating
+- CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 建立 CToolBarCtrl 物件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5041670f733d353220f16d32fa5c56f66ba64904
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 物件包含許多內部資料結構—按鈕影像的點陣圖清單，按鈕標籤字串清單和 `TBBUTTON` 結構清單—組合影像和字串與按鈕的位置、樣式、狀態和指令 ID。  每一種資料結構之項目歸為以零起始的索引參考。  在您可以使用 `CToolBarCtrl` 物件之前，您必須設定好這些資料結構。  如需資料結構的清單，請參閱 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]的 [工具列控制項](https://msdn.microsoft.com/en-us/library/47xcww9x.aspx) 。  字串清單只可以為按鈕標籤使用;您無法從工具列擷取字串。  
+---
+# <a name="creating-a-ctoolbarctrl-object"></a>Creating a CToolBarCtrl Object
+[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objects contain several internal data structures — a list of button image bitmaps, a list of button label strings, and a list of `TBBUTTON` structures — that associate an image and/or string with the position, style, state, and command ID of the button. Each of the elements of these data structures is referred to by a zero-based index. Before you can use a `CToolBarCtrl` object, you must set up these data structures. For a list of the data structures, see [Toolbar Controls](https://msdn.microsoft.com/library/47xcww9x.aspx) in the Windows SDK. The list of strings can only be used for button labels; you cannot retrieve strings from the toolbar.  
   
- 若要使用 `CToolBarCtrl` 物件，您通常會執行下列步驟:  
+ To use a `CToolBarCtrl` object, you will typically follow these steps:  
   
-### 使用 CToolBarCtrl 物件  
+### <a name="to-use-a-ctoolbarctrl-object"></a>To use a CToolBarCtrl object  
   
-1.  建構 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 物件。  
+1.  Construct the [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object.  
   
-2.  呼叫 [建立](../Topic/CToolBarCtrl::Create.md) 以建立視窗工具列通用控制項並將它附加至 `CToolBarCtrl` 物件。  如果您想要按鈕的點陣圖影像，請藉由呼叫 [AddBitmap](../Topic/CToolBarCtrl::AddBitmap.md) 將按鈕點陣圖加入工具列。  如果您想要按鈕為標籤字串，請藉由呼叫 [AddString](../Topic/CToolBarCtrl::AddString.md) 和 [AddStrings](../Topic/CToolBarCtrl::AddStrings.md) 將字串加入至工具列。  在呼叫 `AddString` 和\/或 `AddStrings`之後，您應該呼叫 [AutoSize](../Topic/CToolBarCtrl::AutoSize.md) 以讓字串出現。  
+2.  Call [Create](../mfc/reference/ctoolbarctrl-class.md#create) to create the Windows toolbar common control and attach it to the `CToolBarCtrl` object. If you want bitmap images for buttons, add the button bitmaps to the toolbar by calling [AddBitmap](../mfc/reference/ctoolbarctrl-class.md#addbitmap). If you want string labels for buttons, add the strings to the toolbar by calling [AddString](../mfc/reference/ctoolbarctrl-class.md#addstring) and/or [AddStrings](../mfc/reference/ctoolbarctrl-class.md#addstrings). After calling `AddString` and/or `AddStrings`, you should call [AutoSize](../mfc/reference/ctoolbarctrl-class.md#autosize) in order to get the string or strings to appear.  
   
-3.  藉由呼叫 [AddButtons](../Topic/CToolBarCtrl::AddButtons.md) 將按鈕結構加入工具列。  
+3.  Add button structures to the toolbar by calling [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons).  
   
-4.  如果您想要工具提示，請處理在工具列的主控視窗的 **TTN\_NEEDTEXT** 訊息如 [處理工具提示通知](../mfc/handling-tool-tip-notifications.md)中所述。  
+4.  If you want tool tips, handle **TTN_NEEDTEXT** messages in the toolbar's owner window as described in [Handling Tool Tip Notifications](../mfc/handling-tool-tip-notifications.md).  
   
-5.  如果您想要讓使用者自訂工具列，請處理在主控視窗的自訂通知訊息如 [處理自訂通知](../mfc/handling-customization-notifications.md)中所述。  
+5.  If you want your user to be able to customize the toolbar, handle customization notification messages in the owner window as described in [Handling Customization Notifications](../mfc/handling-customization-notifications.md).  
   
-## 請參閱  
- [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

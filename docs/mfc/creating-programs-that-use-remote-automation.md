@@ -1,59 +1,78 @@
 ---
-title: "建立使用 Remote Automation 的程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Remote Automation, 建立程式"
+title: Creating Programs That Use Remote Automation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, creating programs
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 建立使用 Remote Automation 的程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d91501fc6f3c1bf962c7c2aba923209b8c261c20
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-不需要重新編譯，就不需要重新連結，需要的所有 Automation 物件和任何自動化測試，可以使用 Remote Automation 不做任何變更原始程式碼。  一旦您有本機工作上設定 \(也就是在相同的電腦\)，您需要經過少數步驟遠端執行它。  
+---
+# <a name="creating-programs-that-use-remote-automation"></a>Creating Programs That Use Remote Automation
+Any automation object, and any automation controller, is able to use Remote Automation without any change to the source code, without the need for recompilation, and without the need for relinking. Once you have a setup that works locally (that is, on the same machine), you need go through only a few steps to execute it remotely.  
   
-#### 執行遠端 Automation 物件  
+#### <a name="to-execute-the-remote-automation-object"></a>To execute the Remote Automation object  
   
-1.  登錄記錄在用戶端或電腦的應用程式。  
+1.  Register the application on the client machine or machines.  
   
-2.  設定用戶端存取使用遠端伺服器。  
+2.  Configure the client access to use remote server.  
   
-3.  安裝並註冊在伺服器電腦或電腦的應用程式。  
+3.  Install and register the application on the server machine or machines.  
   
-4.  將伺服器設定為允許遠端啟動過程。  
+4.  Configure the server to allow remote activation.  
   
-5.  安裝伺服器電腦的 Automation 管理員。  
+5.  Install the Automation Manager on the server machine(s).  
   
-6.  在伺服器上的 Automation 管理員。  
+6.  Run Automation Manager on the server(s).  
   
-7.  在用戶端的應用程式。  
+7.  Run the application on the client(s).  
   
- 步驟 1 透過載入和執行伺服器應用程式最容易在中完成在用戶端，，因為大部分伺服器是自我登錄。  如果您先在本機測試了這個設定，階段已完成。  如果伺服器應用程式不是註冊的自我，您可能想要這樣做它。  否則，您必須提供本機使用者可以執行這個步驟的登錄檔案。  如果您未執行這些作業，您或系統管理員必須手動編輯登錄，因任何建議的程序，除了最進階使用者。  
+ Step 1 is most easily accomplished by loading and executing the server application on the client machine, as most servers are self registering. If you tested the setup locally beforehand, this stage is already complete. If the server application is not self registering, you may want to make it so. Otherwise, you will need to provide a registration file that the local user can run to perform this step. If you do neither of these things, you or an administrator will need to edit the registry manually, a procedure which is not recommended for all but the most advanced users.  
   
- 第 2 步驟是使用遠端自動化連接 \(RAC\) 管理員。  執行 RAC 管理員並確定伺服器連接選項最高。  接著，探索伺服器物件的項目在 **OLE Classes** 窗格並按一下它。  然後移至 **Network Address** 下拉式方塊並輸入遠端可執行檔將會執行伺服器電腦的名稱。  例如，您可以輸入\\ \\ MyServer 這裡。  然後從提供的清單中選擇適當的網路通訊協定。  您可能需要詢問您的網路系統管理員判斷建議使用的通訊協定。  在大部分情況下，這會是 TCP\/IP。  最後，您可以選取驗證層級。  在大部分情況下，這會向左 \(無\) 或預設值。  現在請以滑鼠右鍵按一下 **OLE Classes** 窗格的伺服器。  這可讓您可以選擇本機或遠端作業的捷徑功能表。  選取遠端。  
+ Step 2 involves the use of the Remote Automation Connection (RAC) Manager. Run RAC Manager and ensure that the server connection tab is uppermost. Next, find the entry for the server object in the **OLE Classes** pane and click on it. Then move to the **Network Address** combo box and enter the name of the server machine on which the remote executable file will be run. For example, you may enter \\\MyServer here. Then choose the appropriate network protocol from the list provided. You may need to check with your network administrator to determine which protocol is recommended. In many cases, this will be TCP/IP. Finally, you may want to choose an authentication level. In most cases, this will be left as (None) or Default. Now right-click the server in the **OLE Classes** pane. This will produce a shortcut menu from which you can select local or remote operation. Select remote.  
   
- 步驟 3 會正確安裝和註冊在選取的伺服器電腦或電腦的伺服器應用程式。  同樣地，因此，如果應用程式是註冊的自我，執行它也一次註冊它。  
+ Step 3 involves properly installing and registering the server application on the selected server machine or machines. Again, if the application is self registering, executing it once will also register it.  
   
- 第 4 步驟是將伺服器設定為允許遠端執行。  執行伺服器電腦的 RAC 管理員，並確定 **Client Access** 選項有焦點。  選取您想要的啟動過程模型 \(通常 **Allow Remote Creates by Key**。  如果您選取這個選項，您可能需要按一下 **Allow Remote Activation** 核取方塊設定登錄項目的值為「Y」\)。  如果您執行的是 Windows NT 或 Windows 2000 和您選取允許遠端建立 \(ACL\) 選項，您也可以選擇傳入 **Edit ACL** 按鈕編輯 ACL。  
+ Step 4 involves configuring the server to allow remote execution. Run RAC Manager on the server machine, and ensure that the **Client Access** tab has the focus. Choose the activation model that you want (typically **Allow Remote Creates by Key**. If you do choose this option, you also need to click the **Allow Remote Activation** check box to set the value of the registry entry to 'Y'). If you are running Windows NT or Windows 2000 and you choose the Allow Remote Creates (ACL) option, you also have the option to edit the ACL by pushing the **Edit ACL** button.  
   
- 若要允許遠端自動化運作，您就必須確保自動化管理員已安裝且在伺服器電腦或電腦。  如果尚未安裝，請複製 AUTMGR32.EXE 對 Windows 系統目錄。  如需如何執行的詳細資訊，請參閱 [遠端自動化安裝](../mfc/remote-automation-installation.md)。  若要啟動遠端自動化，執行自動化管理員。  它會顯示一些訊息中顯示的小型狀態視窗。  一旦啟動，它將最小化。  如果您想要繼續檢視狀態資訊，您可以按一下工作列的 **Automation Manager** 選項還原視窗。  
+ To allow Remote Automation to work, you then need to ensure that the Automation Manager is installed and running on the server machine or machines. If it is not installed, copy AUTMGR32.EXE to the Windows system directory. For information on how to do so, see [Remote Automation Installation](../mfc/remote-automation-installation.md). To start Remote Automation, execute the Automation Manager. It will display a small status window in which a number of messages will be shown. Once it has started, it will minimize itself. If you want to continue to see status information, you can click the **Automation Manager** tab in the task bar to restore the window.  
   
- 最後一個步驟將在用戶端的用戶端應用程式。  如果您遵循上述步驟，它應該連接到伺服器物件和精確地執行，它時，雖然較慢的點。  
+ The final step is to execute the client application on the client machine. If you have followed the steps above, it should connect to the server object and execute precisely as it did locally, albeit a little slower.  
   
- 請注意 RAC 管理員也讓您在遠端自動化之間和分散式 COM \(DCOM，在支援 DCOM\) 的平台與選項按鈕的按一下。  如果您選擇 DCOM，您可以將各種配置選項。  如需更多細節，請參閱 DCOM 文件。  
+ Notice that the RAC Manager also allows you to switch between Remote Automation and distributed COM (DCOM, on those platforms that support DCOM) with a single click of a radio button. If you choose DCOM, you can set various other configuration options. See the DCOM documentation for further details.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Remote Automation](../mfc/remote-automation.md)   
- [使用 AUTOCLIK 和 AUTODRIV 執行 Remote Automation](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)
+ [Running Remote Automation Using AUTOCLIK and AUTODRIV](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)
+
+

@@ -1,102 +1,121 @@
 ---
-title: "序列化：建立可序列化的類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], 衍生"
-  - "CObject 類別, 衍生可序列化的類別"
-  - "建構函式 [C++], 不使用引數定義"
-  - "DECLARE_SERIAL 巨集"
-  - "預設建構函式"
-  - "預設值 [C++], 建構函式"
-  - "IMPLEMENT_SERIAL 巨集"
-  - "沒有預設建構函式"
-  - "無引數建構函式"
-  - "可序列化的類別"
-  - "序列化 [C++], 可序列化的類別"
-  - "Serialize 方法, 覆寫"
-  - "VERSIONABLE_SCHEMA 巨集"
+title: 'Serialization: Making a Serializable Class | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- serializable class [MFC]
+- DECLARE_SERIAL macro [MFC]
+- default constructor [MFC]
+- VERSIONABLE_SCHEMA macro [MFC]
+- classes [MFC], derived
+- IMPLEMENT_SERIAL macro [MFC]
+- no-arguments constructor [MFC]]
+- Serialize method, overriding
+- defaults [MFC], constructor
+- CObject class [MFC], deriving serializable classes
+- constructors [MFC], defining with no arguments
+- serialization [MFC], serializable classes
+- no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 序列化：建立可序列化的類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f19fb9c7aa7c8ee05c6973247b8309dd5a381b36
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-要求五個主要步驟使類別可序列化。  在下面列出並在下列部分說明：  
+---
+# <a name="serialization-making-a-serializable-class"></a>Serialization: Making a Serializable Class
+Five main steps are required to make a class serializable. They are listed below and explained in the following sections:  
   
-1.  [從 CObject 衍生您的類別](#_core_deriving_your_class_from_cobject) \(或從衍生自 `CObject` 的一些類別\)。  
+1.  [Deriving your class from CObject](#_core_deriving_your_class_from_cobject) (or from some class derived from `CObject`).  
   
-2.  [覆寫序列化成員函式](#_core_overriding_the_serialize_member_function)。  
+2.  [Overriding the Serialize member function](#_core_overriding_the_serialize_member_function).  
   
-3.  在 類別宣告的[使用 DECLARE\_SERIAL 巨集](#_core_using_the_declare_serial_macro) 。  
+3.  [Using the DECLARE_SERIAL macro](#_core_using_the_declare_serial_macro) in the class declaration.  
   
-4.  [定義不採用任何引數的建構函式](#_core_defining_a_constructor_with_no_arguments)。  
+4.  [Defining a constructor that takes no arguments](#_core_defining_a_constructor_with_no_arguments).  
   
-5.  為您的類別[使用在實作檔的 IMPLEMENT\_SERIAL 巨集](#_core_using_the_implement_serial_macro_in_the_implementation_file) 。  
+5.  [Using the IMPLEMENT_SERIAL macro in the implementation file](#_core_using_the_implement_serial_macro_in_the_implementation_file) for your class.  
   
- 如果您直接呼叫 `Serialize` 而非透過 [CArchive](../mfc/reference/carchive-class.md) \>\> 和 \<\<  的運算元，則最後三個步驟不為序列化所需。  
+ If you call `Serialize` directly rather than through the >> and << operators of [CArchive](../mfc/reference/carchive-class.md), the last three steps are not required for serialization.  
   
-##  <a name="_core_deriving_your_class_from_cobject"></a> 從 CObject 衍生您的類別  
- 基本序列化通訊協定和功能在 `CObject` 類別中定義。  藉由從 `CObject` 衍生您的類別\(或從衍生自 `CObject` 衍生的類別\)，如下列類別 `CPerson` 的宣告，您可以得到對序列化通訊協定和 `CObject` 的功能的存取權。  
+##  <a name="_core_deriving_your_class_from_cobject"></a> Deriving Your Class from CObject  
+ The basic serialization protocol and functionality are defined in the `CObject` class. By deriving your class from `CObject` (or from a class derived from `CObject`), as shown in the following declaration of class `CPerson`, you gain access to the serialization protocol and functionality of `CObject`.  
   
-##  <a name="_core_overriding_the_serialize_member_function"></a> 覆寫序列化成員函式  
- `Serialize` 成員函式，在 `CObject` 類別中定義，會實際序列化所需的資料來擷取物件的目前狀態。  `Serialize` 函式有一個 `CArchive` 引數用來讀取和寫入物件資料。  [CArchive](../mfc/reference/carchive-class.md) 物件具有一個成員函式，`IsStoring`，表示 `Serialize` 是否儲存\(寫入資料\)或載入\(讀取\)。  使用 `IsStoring` 的結果做為教學課程中，您可以使用插入運算子 \(**\<\<**\) 在 `CArchive` 插入您物件的資料或使用擷取運算子 \(**\>\>**\) 擷取資料。  
+##  <a name="_core_overriding_the_serialize_member_function"></a> Overriding the Serialize Member Function  
+ The `Serialize` member function, which is defined in the `CObject` class, is responsible for actually serializing the data necessary to capture an object's current state. The `Serialize` function has a `CArchive` argument that it uses to read and write the object data. The [CArchive](../mfc/reference/carchive-class.md) object has a member function, `IsStoring`, which indicates whether `Serialize` is storing (writing data) or loading (reading data). Using the results of `IsStoring` as a guide, you either insert your object's data in the `CArchive` object with the insertion operator (**<\<**) or extract data with the extraction operator (**>>**).  
   
- 請考慮衍生自 `CObject` 並有兩個型別為 `CString` 和 **WORD**的新成員變數的類別。  下列類別宣告片段顯示新成員變數和要覆寫 `Serialize` 成員函式的宣告：  
+ Consider a class that is derived from `CObject` and has two new member variables, of types `CString` and **WORD**. The following class declaration fragment shows the new member variables and the declaration for the overridden `Serialize` member function:  
   
- [!code-cpp[NVC_MFCSerialization#1](../mfc/codesnippet/CPP/serialization-making-a-serializable-class_1.h)]  
+ [!code-cpp[NVC_MFCSerialization#1](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_1.h)]  
   
-#### 若要覆寫序列化成員函式  
+#### <a name="to-override-the-serialize-member-function"></a>To override the Serialize member function  
   
-1.  呼叫您的 `Serialize` 的基底類別版本來確保物件的繼承部分序列化。  
+1.  Call your base class version of `Serialize` to make sure that the inherited portion of the object is serialized.  
   
-2.  插入或擷取您的類別指定的成員變數。  
+2.  Insert or extract the member variables specific to your class.  
   
-     插入和擷取運算子互動以封存類別來讀取和寫入資料。  下列程式碼範例將示範如何為上面宣告的 `CPerson` 實作 `Serialize` 類別。  
+     The insertion and extraction operators interact with the archive class to read and write the data. The following example shows how to implement `Serialize` for the `CPerson` class declared above:  
   
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/CPP/serialization-making-a-serializable-class_2.cpp)]  
+     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]  
   
- 您也可以使用 [CArchive::Read](../Topic/CArchive::Read.md) 和 [CArchive::Write](../Topic/CArchive::Write.md) 成員函式來讀取和寫入很多不具型別的資料。  
+ You can also use the [CArchive::Read](../mfc/reference/carchive-class.md#read) and [CArchive::Write](../mfc/reference/carchive-class.md#write) member functions to read and write large amounts of untyped data.  
   
-##  <a name="_core_using_the_declare_serial_macro"></a> 使用 DECLARE\_SERIAL 巨集  
- `DECLARE_SERIAL` 巨集為支援序列化類別的宣告所需要，如下所示：  
+##  <a name="_core_using_the_declare_serial_macro"></a> Using the DECLARE_SERIAL Macro  
+ The `DECLARE_SERIAL` macro is required in the declaration of classes that will support serialization, as shown here:  
   
- [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/CPP/serialization-making-a-serializable-class_3.h)]  
+ [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
-##  <a name="_core_defining_a_constructor_with_no_arguments"></a> 定義沒有引數的建構函式  
- 當它在還原序列化重新建立您的物件時 \(從磁碟載入\)，MFC 需要預設建構函式。  還原序列化程序需要的值將會填入所有成員變數來重新建立物件。  
+##  <a name="_core_defining_a_constructor_with_no_arguments"></a> Defining a Constructor with No Arguments  
+ MFC requires a default constructor when it re-creates your objects as they are deserialized (loaded from disk). The deserialization process will fill in all member variables with the values required to re-create the object.  
   
- 這個建構函式可以宣告為公用、保護或私用。  如果您將控制項設定私用或保護，有助於確保它只能由序列化函式使用。  建構函式必須讓物件處於可視需要刪除的狀態。  
+ This constructor can be declared public, protected, or private. If you make it protected or private, you help make sure that it will only be used by the serialization functions. The constructor must put the object in a state that allows it to be deleted if necessary.  
   
 > [!NOTE]
->  如果在使用 `DECLARE_SERIAL` 和 `IMPLEMENT_SERIAL` 巨集的類別忘記定義不搭配引數的建構函式，則會得到「沒有預設建構函式可使用」的編譯警告在使用 `IMPLEMENT_SERIAL` 聚集的那一行。  
+>  If you forget to define a constructor with no arguments in a class that uses the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros, you will get a "no default constructor available" compiler warning on the line where the `IMPLEMENT_SERIAL` macro is used.  
   
-##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> 在實作檔使用 IMPLEMENT\_SERIAL 巨集  
- 當您從 `CObject` 衍生一個可序列化類別時， `IMPLEMENT_SERIAL` 巨集被用來定義需要的各種功能。  您在實作檔 \(.CPP\) 為您的類別使用這個巨集。  對巨集的最前面兩個引數為類別的名稱及其直接基底類別的名稱。  
+##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> Using the IMPLEMENT_SERIAL Macro in the Implementation File  
+ The `IMPLEMENT_SERIAL` macro is used to define the various functions needed when you derive a serializable class from `CObject`. You use this macro in the implementation file (.CPP) for your class. The first two arguments to the macro are the name of the class and the name of its immediate base class.  
   
- 對這個巨集的第三個引數是結構描述數目。  結構描述數字基本上是類別之物件的版本號碼。  結構描述數字使用大於或等於0的整數。\(請勿將這個結構描述數字混淆資料庫詞彙中\)。  
+ The third argument to this macro is a schema number. The schema number is essentially a version number for objects of the class. Use an integer greater than or equal to 0 for the schema number. (Don't confuse this schema number with database terminology.)  
   
- 當物件讀取至記憶體時，MFC 序列化程式碼會檢查結構描述數字。  如果在磁碟上物件的結構描述數字不符合類別在記憶體的結構描述數字，程式庫會擲回 `CArchiveException`，預防您的程式讀取物件的不正確的版本。  
+ The MFC serialization code checks the schema number when reading objects into memory. If the schema number of the object on disk does not match the schema number of the class in memory, the library will throw a `CArchiveException`, preventing your program from reading an incorrect version of the object.  
   
- 如果您希望 `Serialize` 成員函式可以讀取多個版本，也就是說檔案寫入應用程式的不同版本。您可以使用值 **VERSIONABLE\_SCHEMA** 當做引數傳遞給 `IMPLEMENT_SERIAL` 巨集。  如需使用方式詳細資訊和範例，請參閱類別 `CArchive`的 `GetObjectSchema` 成員函式。  
+ If you want your `Serialize` member function to be able to read multiple versions — that is, files written with different versions of the application — you can use the value **VERSIONABLE_SCHEMA** as an argument to the `IMPLEMENT_SERIAL` macro. For usage information and an example, see the `GetObjectSchema` member function of class `CArchive`.  
   
- 下列範例顯示如何為類別 `CPerson` 使用 `IMPLEMENT_SERIAL` ，該類別衍生自 `CObject`：  
+ The following example shows how to use `IMPLEMENT_SERIAL` for a class, `CPerson`, that is derived from `CObject`:  
   
- [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/CPP/serialization-making-a-serializable-class_4.cpp)]  
+ [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]  
   
- 一旦您有可序列化類別，您可以序列化類別的物件，如文章 [序列化：序列化物件](../mfc/serialization-serializing-an-object.md) 中所述。  
+ Once you have a serializable class, you can serialize objects of the class, as discussed in the article [Serialization: Serializing an Object](../mfc/serialization-serializing-an-object.md).  
   
-## 請參閱  
- [序列化](../mfc/serialization-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Serialization](../mfc/serialization-in-mfc.md)
+
+

@@ -1,69 +1,85 @@
 ---
-title: "功能表和資源：功能表合併 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "協調功能表配置"
-  - "功能表 [C++], OLE 文件應用程式"
-  - "合併工具列和狀態列"
-  - "OLE 容器, 功能表和資源"
-  - "狀態列, OLE 文件應用程式"
-  - "工具列 [C++], OLE 文件應用程式"
-  - "視覺化編輯, 應用程式功能表和資源"
+title: 'Menus and Resources: Menu Merging | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- status bars [MFC], OLE document applications
+- visual editing [MFC], application menus and resources
+- coordinating menu layouts [MFC]
+- OLE containers [MFC], menus and resources
+- toolbars [MFC], OLE document applications
+- merging toolbar and status bar [MFC]
+- menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
 caps.latest.revision: 9
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 功能表和資源：功能表合併
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eba298c25c4be89d83913ff35f2f4d0af9e9f91d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這篇文章詳細步驟所需的 OLE 文件應用程式可以處理視覺化編輯和適當就地啟動。  就地啟用形成容器和伺服器元件 \(\) 應用程式的一個要求。  使用者在相同框架視窗保持 \(在容器文件的內容中\)，但是實際執行另一個應用程式 \(伺服器\)。  這需要在容器的資源和伺服器應用程式之間的協調。  
+---
+# <a name="menus-and-resources-menu-merging"></a>Menus and Resources: Menu Merging
+This article details the steps necessary for OLE document applications to handle visual editing and in-place activation properly. In-place activation poses a challenge for both container and server (component) applications. The user remains in the same frame window (within the context of the container document) but is actually running another application (the server). This requires coordination between the resources of the container and server applications.  
   
- 在此文件中包含的主題:  
+ Topics covered in this article include:  
   
--   [功能表設定](#_core_menu_layouts)  
+- [Menu Layouts](#_core_menu_layouts)  
   
--   [工具列和狀態列](#_core_toolbars_and_status_bars)  
+- [Toolbars and Status Bars](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a> 功能表設定  
- 第一步是協調功能表設定。  如需詳細資訊，請參閱 [功能表程式設計考量](https://msdn.microsoft.com/en-us/library/ms647557.aspx) 中的 **Menu Creation** 部分在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+##  <a name="_core_menu_layouts"></a> Menu Layouts  
+ The first step is to coordinate menu layouts. For more information, see the **Menu Creation** section in [Menu Programming Considerations](https://msdn.microsoft.com/library/ms647557.aspx) in the Windows SDK.  
   
- 只有在內嵌項目時，就地啟動容器應用程式應該建立要使用的新功能表。  在最小，此功能表應該包括，依列出的順序:  
+ Container applications should create a new menu to be used only when embedded items are activated in place. At the minimum, this menu should consist of the following, in the order listed:  
   
-1.  檔案功能表相同到使用的該檔案時是開啟的。\(其他功能表項目不會在下一個項目之前通常放置\)。  
+1.  File menu identical to the one used when files are open. (Usually no other menu items are placed before the next item.)  
   
-2.  兩個連續的分隔符號。  
+2.  Two consecutive separators.  
   
-3.  視窗功能表相同到使用的該檔案時為開啟\(只有在 MDI 應用程式的容器應用程式\)。  某些應用程式可能有其他功能表，例如選項功能表，在這個群組中屬於，功能表，當內嵌項目時就地啟動。  
+3.  Window menu identical to the one used when files are open (only if the container application in an MDI application). Some applications may have other menus, such as an Options menu, that belong in this group, which remains on the menu when an embedded item is activated in place.  
   
     > [!NOTE]
-    >  可能會影響容器文件檢視的其他功能表，例如縮放。  這些容器功能表在此功能表資源出現在兩個分隔符號之間。  
+    >  There may be other menus that affect the view of the container document, such as Zoom. These container menus appear between the two separators in this menu resource.  
   
- 伺服器元件 \(\) 應用程式應該明確地建立新的功能表就地啟動的。  它應該類似於使用的功能表，當檔案開啟時，，，但是不用管理伺服器資料而不是資料的功能表項目，例如檔案和視窗。  通常，這個功能表包含下列項目:  
+ Server (component) applications should also create a new menu specifically for in-place activation. It should be like the menu used when files are open, but without menu items, such as File and Window that manipulate the server document instead of the data. Typically, this menu consists of the following:  
   
-1.  編輯功能表相同到使用的該檔案時是開啟的。  
+1.  Edit menu identical to the one used when files are open.  
   
-2.  Separator。  
+2.  Separator.  
   
-3.  編輯功能表，例如在 Scribble 範例應用程式是一個功能表的物件。  
+3.  Object editing menus, such as the Pen menu in the Scribble sample application.  
   
-4.  Separator。  
+4.  Separator.  
   
-5.  說明功能表。  
+5.  Help menu.  
   
- 如需範例，請參閱一些範例就地功能表設定為容器和伺服器。  移除每個功能表項目詳細資料讓範例更清楚。  容器的就地功能表具有下列項目:  
+ For an example, look at the layout of some sample in-place menus for a container and a server. The details of each menu item have been removed to make the example clearer. The container's in-place menu has the following entries:  
   
 ```  
 IDR_CONTAINERTYPE_CNTR_IP MENU PRELOAD DISCARDABLE   
@@ -77,7 +93,7 @@ BEGIN
 END  
 ```  
   
- 連續分隔符號表示伺服器的功能表的第一個部分位置應該是。  現在請參閱伺服器的就地功能表:  
+ The consecutive separators indicate where the first part of the server's menu should go. Now look at the server's in-place menu:  
   
 ```  
 IDR_SERVERTYPE_SRVR_IP MENU PRELOAD DISCARDABLE   
@@ -90,7 +106,7 @@ BEGIN
 END  
 ```  
   
- 此分隔符號表示容器功能表項目的第二個群組要移至。  產生的功能表結構，就會發生此伺服器的物件已啟動到位在這個容器如下所示:  
+ The separators here indicate where the second group of container menu items should go. The resulting menu structure when an object from this server is activated in place inside this container looks like this:  
   
 ```  
 BEGIN  
@@ -104,19 +120,21 @@ BEGIN
 END  
 ```  
   
- 如您所見，分隔符號是每個應用程式的功能表的不同群組取代。  
+ As you can see, the separators have been replaced with the different groups of each application's menu.  
   
- 應該由伺服器應用程式也提供快速鍵對應表與就地功能表。  容器合併至其快速鍵對應表中。  
+ Accelerator tables associated with the in-place menu should also be supplied by the server application. The container will incorporate them into its own accelerator tables.  
   
- 當內嵌項目就地啟動時，架構會載入就地功能表。  然後要求其功能表的伺服器應用程式就地啟動 \(In\-Place Activation\) 並將它插入分隔符號的位置。  這是功能表的組合方式。  您從操作的容器取得功能表在檔案和視窗位置，因此，您從操作的伺服器中功能表項目。  
+ When an embedded item is activated in place, the framework loads the in-place menu. It then asks the server application for its menu for in-place activation and inserts it where the separators are. This is how the menus combine. You get menus from the container for operating on the file and window placement, and you get menus from the server for operating on the item.  
   
-##  <a name="_core_toolbars_and_status_bars"></a> 工具列和狀態列  
- 伺服器應用程式在不同的檔案中應該建立新的工具列和它的點陣圖。  應用程式精靈產生的應用程式在呼叫 ITOOLBAR.BMP 的檔案儲存點陣圖。  新的工具列取代容器應用程式的工具列，在您的伺服器項目就地啟動時，應該包含項目和您的一般工具列相同，不過，移除代表檔案和 Windows 功能表的圖示項目。  
+##  <a name="_core_toolbars_and_status_bars"></a> Toolbars and Status Bars  
+ Server applications should create a new toolbar and store its bitmap in a separate file. The application wizard-generated applications store this bitmap in a file called ITOOLBAR.BMP. The new toolbar replaces the container application's toolbar when your server's item is activated in place, and should contain the same items as your normal toolbar, but remove icons representing items on the File and Window menus.  
   
- 這個工具列中的 `COleIPFrameWnd`衍生類別載入，建立為您由應用程式精靈。  狀態列由容器應用程式處理。  如需就地框架視窗的實作的詳細資訊，請參閱 [伺服器:實作伺服器](../mfc/servers-implementing-a-server.md)。  
+ This toolbar is loaded in your `COleIPFrameWnd`-derived class, created for you by the application wizard. The status bar is handled by the container application. For more information on the implementation of in-place frame windows, see [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md).  
   
-## 請參閱  
- [功能表和資源 \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [啟用](../mfc/activation-cpp.md)   
- [伺服器](../mfc/servers.md)   
- [容器](../mfc/containers.md)
+## <a name="see-also"></a>See Also  
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Servers](../mfc/servers.md)   
+ [Containers](../mfc/containers.md)
+
+

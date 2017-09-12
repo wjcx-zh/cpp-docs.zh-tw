@@ -1,78 +1,97 @@
 ---
-title: "網際網路上的主動式文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "主動式文件 [C++], 建立"
-  - "主動式文件 [C++], 程式設計步驟"
-  - "主動式文件 [C++], 使用應用程式精靈"
-  - "應用程式精靈 [C++]"
-  - "應用程式精靈 [C++], 主動式文件"
+title: Active Documents on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], creating
+- application wizards [MFC], active documents
+- active documents [MFC], programming steps
+- application wizards [MFC]
+- active documents [MFC], using application wizards
 ms.assetid: a46bd8a0-e27a-4116-b1bf-dacdb7ae78d1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 網際網路上的主動式文件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4e3376e9f510fd8298f8ff8614f017823f924a0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-主動式文件提供擴充功能給傳統的內嵌物件。  主動式文件可能為多頁並顯示於整個工作區中。  它們與傳統功能表協調，並可就地編輯以及在伺服器應用程式中開啟的視窗。  主動式文件是全框且永遠就地啟動，而不是顯示為由串聯框線包圍的小矩形。  
+---
+# <a name="active-documents-on-the-internet"></a>Active Documents on the Internet
+Active documents provide an extension to traditional embedded objects. The Active documents may be multipage and are displayed in the entire client area. They do traditional menu negotiation, and can be edited in-place as well as in an open window in the server application. Instead of displaying as a small rectangle surrounded by a hatched border, Active documents are full frame and always in-place active.  
   
- 主動式文件可在類似 Microsoft Office Binder 的容器檢視，這提供建立複合文件組成如 Excel ，Word 中不同的資料型別和您的自訂文件類型，每一個可在完整框編輯。  主動式文件也可以在瀏覽器顯示像是 Microsoft Internet Explorer，它是主動式文件容器。  
+ Active documents can be viewed in a container like the Microsoft Office Binder, which provides a way to create a compound document made up of different document types like Excel, Word, and your custom document type, each of which can be edited full frame. Active documents can also be displayed in a browser such as Microsoft Internet Explorer, which is an Active document container.  
   
- **主動式文件的優點包括:**  
+ **Active document advantages include:**  
   
--   文件可以在完整框檢視，在整個用戶端視窗。  
+-   Documents can be viewed full frame, in the entire client window.  
   
--   文件可在不同的應用程式視窗中開啟。  
+-   Documents can be opened in a separate application window.  
   
-     若要開啟的文件，協助工具應用程式在用戶端必須存在或個別下載，應用程式才能執行。  撰寫檢視器以提供部分功能 \(Word、Excel 和 PowerPoint 為其提供文件檢視器\)。  應用程式的完整版本可以提供最大的編輯支援。  
+     For the document to open, the helper application must exist on the client, or be downloaded separately before the application can run. A viewer may be written to provide limited functionality (Word, PowerPoint, and Excel provide viewers for their documents). The full version of the application can provide full editing support.  
   
--   文件永遠是就地啟動。  
+-   Documents are always in-place active.  
   
--   從容器叫用的命令可以傳送至您的文件。  
+-   Menu commands invoked from the container can be routed to your document.  
   
--   文件可在 Web 瀏覽器中檢視。  這提供在文件和其他 Web 網頁之間的緊密整合。  
+-   Documents can be viewed in a Web browser. This provides seamless integration between your documents and other Web pages.  
   
-     使用者可以瀏覽 HTML 網頁，然後 Excel 報表，然後您使用 MFC 支援主動式文件撰寫的文件。  因為瀏覽器完美地在 HTML 網頁、Excel 和您的應用程式資料的功能表和檢視之間切換，可讓使用者使用熟悉的 Web 介面巡覽。  
+     A user can browse an HTML Web page, then an Excel spreadsheet, and then to a document that you have written using MFC support for Active documents. The user can navigate using the familiar Web interface, as the browser switches seamlessly between the menus and views of an HTML page, Excel, and your application's document.  
   
--   所有應用程式在     常見的框架中顯示。  
+-   All applications are displayed in a common frame.  
   
-## 主動式文件的要求  
- 下表所列的介面中包含對內嵌於伺服器上所需的介面和數個新介面下特有的主動式文件。  MFC 為大部分 [COleServerDoc](../mfc/reference/coleserverdoc-class.md) 類別的這些介面提供預設實作。  
+## <a name="requirements-for-active-documents"></a>Requirements for Active Documents  
+ The interfaces listed in the table below include interfaces already required for embedded servers and several new interfaces specific to Active documents. MFC provides default implementations for most of these interfaces in the [COleServerDoc](../mfc/reference/coleserverdoc-class.md) class.  
   
-|這文件…|會實作這些介面|  
-|----------|-------------|  
-|使用複合檔案做為它的儲存機制。|`IPersistStorage`.|  
-|支援主動式文件的基礎內嵌功能，包括從文件建立。|`IPersistFile`、`IOleObject` 和 `IDataObject`。|  
-|支援就地啟動|`IOleInPlaceObject` 和 `IOleInPlaceActiveObject` \(使用容器的 `IOleInPlaceSite` 和 **IOleInPlaceFrame** 介面\)。|  
-|支援包含這些新介面的主動式文件擴充功能。  有些介面是選擇性的。|`IOleDocument`、`IOleDocumentView`、`IOleCommandTarget`和`IPrint`。|  
+|A document that ...|Implements these interfaces|  
+|-------------------------|---------------------------------|  
+|Uses compound files as its storage mechanism.|`IPersistStorage`.|  
+|Supports the basic embedding features of Active documents, including Create From File.|`IPersistFile`, `IOleObject`, and `IDataObject`.|  
+|Supports in-place activation.|`IOleInPlaceObject` and `IOleInPlaceActiveObject` (using the container's `IOleInPlaceSite` and **IOleInPlaceFrame** interfaces).|  
+|Supports the Active document extensions that involve these new interfaces. Some interfaces are optional.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, and `IPrint`.|  
   
- MFC 提供擴充現有的內嵌伺服器支援主動式文件。  
+ MFC provides support for extending existing embedded server support to Active documents.  
   
-## 對新應用程式加入主動式文件支援  
- 建立主動式文件支援的新應用程式:在 MFC 應用程式精靈， **複合式文件支援** 頁面，在「選擇複合文件支援」下選取 **Full\-server** 或 **Container\/Full\-server**，以及在「選取其他選項」下為 **主動式文件伺服器**選取核取方塊。  
+## <a name="add-active-document-support-to-a-new-application"></a>Add Active Document Support to a New Application  
+ To create a new application with Active document support: In the MFC Application Wizard, on the **Compound Document Support** page, under "Select compound document support" choose **Full-server** or **Container/Full-server**, and under "Select additional options" select the check box for **Active document server**.  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> 轉換現有 MFC 同處理序伺服程式到主動式文件伺服程式  
- 如果您的應用程式以 Visual C\+\+ 4.2 之前的版本建立且已經是處理序伺服程式，您可以對下列類別的變更加入主動式文件支援:  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> Convert an Existing MFC In-Process Server to an Active Document Server  
+ If your application was created with a version of Visual C++ prior to version 4.2 and is already an in-process server, you can add Active document support by making changes to the following classes:  
   
-|類別類型|先前衍生自|變更衍生自|  
-|----------|-----------|-----------|  
-|就地框架|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
-|項目|`COleServerItem`|`CDocObjectServerItem`|  
+|Class type|Formerly derived from|Change to derive from|  
+|----------------|---------------------------|---------------------------|  
+|In-Place Frame|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|Item|`COleServerItem`|`CDocObjectServerItem`|  
   
- 您也需變更資訊如何在登錄中輸入，並進行其他變更。  如果您的應用程式目前不支援 COM 元件，您可以執行應用程式精靈與您的現有應用程式的 COM 元件和特定的程式碼作整合以加入伺服器支援。  
+ You will also change how information is entered in the registry, and make several other changes. If your application currently has no COM components support, you can add server support by running the Application Wizard and integrating the COM component-specific code with your existing application.  
   
-## 請參閱  
- [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

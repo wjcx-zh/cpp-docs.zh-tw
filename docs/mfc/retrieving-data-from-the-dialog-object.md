@@ -1,53 +1,72 @@
 ---
-title: "從對話方塊物件擷取資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "擷取使用者輸入"
-  - "資料 [MFC], 對話方塊"
-  - "資料 [MFC], 擷取"
-  - "資料擷取 [C++], 對話方塊"
-  - "DDX (對話方塊資料交換) [C++]"
-  - "DDX (對話方塊資料交換) [C++], 關於 DDX"
-  - "DDX (對話方塊資料交換) [C++], 從 Dialog 物件擷取資料"
-  - "對話方塊控制項 [C++], 初始化值"
-  - "對話方塊資料 [C++]"
-  - "對話方塊資料 [C++], 擷取"
-  - "對話方塊 [C++], 擷取使用者資料"
-  - "GetDlgItemText 方法"
-  - "GetWindowText 方法"
-  - "MFC 對話方塊, 擷取使用者輸入"
-  - "擷取資料"
-  - "SetDlgItemText 方法"
-  - "SetWindowText 方法"
-  - "使用者輸入 [C++], 從 MFC 對話方塊擷取"
+title: Retrieving Data from the Dialog Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], retrieving user data
+- dialog box data [MFC]
+- data [MFC], retrieving
+- GetDlgItemText method [MFC]
+- SetDlgItemText method [MFC]
+- SetWindowText method [MFC]
+- dialog box data [MFC], retrieving
+- retrieving data [MFC]
+- user input [MFC], retrieving from MFC dialog boxes
+- capturing user input [MFC]
+- dialog box controls [MFC], initializing values
+- DDX (dialog data exchange) [MFC]
+- MFC dialog boxes [MFC], retrieving user input
+- data retrieval [MFC], dialog boxes
+- data [MFC], dialog boxes
+- DDX (dialog data exchange) [MFC], about DDX
+- DDX (dialog data exchange) [MFC], retrieving data from Dialog object
+- GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 從對話方塊物件擷取資料
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7359d53246a454739636ee1f331da3b31a92e8fa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-架構提供簡易的方法會初始化控制項的值在對話方塊及擷取控制項的值。  這種比較耗費強制的手動方法將呼叫函式 \(例如類別 `CWnd`的 `SetDlgItemText` 和 `GetDlgItemText` 成員函式，套用至控制項的視窗。  這些函式，您個別存取的每個控制項設定或取得其值，呼叫函式 \(例如 `SetWindowText` 和 `GetWindowText`。  框架的方法自動初始化和擷取。  
+---
+# <a name="retrieving-data-from-the-dialog-object"></a>Retrieving Data from the Dialog Object
+The framework provides an easy way to initialize the values of controls in a dialog box and to retrieve values from the controls. The more laborious manual approach is to call functions such as the `SetDlgItemText` and `GetDlgItemText` member functions of class `CWnd`, which apply to control windows. With these functions, you access each control individually to set or get its value, calling functions such as `SetWindowText` and `GetWindowText`. The framework's approach automates both initialization and retrieval.  
   
- 對話資料交換 \(Dialog Data Exchange，DDX\) 可讓您在對話方塊的變數更輕鬆地物件的控制項在對話方塊和成員間交換資料。  這個切換運作兩個方式。  若要在對話方塊的控制項，您可以設定資料成員值對話方塊物件的，因此，架構會將值加入至控制項，在對話方塊顯示之前。  然後您可以隨時更新具有使用者輸入的資料的對話資料成員。  此時，您可以參考資料成員變數使用資料。  
+ Dialog data exchange (DDX) lets you exchange data between the controls in the dialog box and member variables in the dialog object more easily. This exchange works both ways. To initialize the controls in the dialog box, you can set the values of data members in the dialog object, and the framework will transfer the values to the controls before the dialog box is displayed. Then you can at any time update the dialog data members with data entered by the user. At that point, you can use the data by referring to the data member variables.  
   
- 您可以為對話方塊控制項的值會自動驗證的同時設定與對話資料驗證 \(DDV\)。  
+ You can also arrange for the values of dialog controls to be validated automatically with dialog data validation (DDV).  
   
- DDX 和 DDV [對話資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)中詳細說明。  
+ DDX and DDV are explained in more detail in [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md).  
   
- 對於強制回應對話方塊，也就是說，當，但是被終結時，擷取所有資料使用者輸入在對話方塊物件前的 `DoModal` 傳回 **IDOK** 。  對於非強制回應對話方塊，從對話方塊物件隨時擷取資料藉由使用引數呼叫 **TRUE** 的 `UpdateData` 然後存取對話方塊類別成員變數。  這個主題 [對話資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)中詳細討論。  
+ For a modal dialog box, you can retrieve any data the user entered when `DoModal` returns **IDOK** but before the dialog object is destroyed. For a modeless dialog box, you can retrieve data from the dialog object at any time by calling `UpdateData` with the argument **TRUE** and then accessing dialog class member variables. This subject is discussed in more detail in [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md).  
   
-## 請參閱  
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

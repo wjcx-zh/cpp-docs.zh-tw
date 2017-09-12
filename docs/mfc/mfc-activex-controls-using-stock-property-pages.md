@@ -1,63 +1,81 @@
 ---
-title: "MFC ActiveX 控制項：使用內建屬性頁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CLSID_CPicturePropPage"
-  - "CLSID_CColorPropPage"
-  - "CLSID_CFontPropPage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLSID_CColorPropPage"
-  - "CLSID_CFontPropPage"
-  - "CLSID_CPicturePropPage"
-  - "色彩內建屬性頁"
-  - "字型, ActiveX 控制項"
-  - "MFC ActiveX 控制項, 屬性頁"
-  - "圖片內建屬性頁"
-  - "內建屬性, 內建屬性頁"
+title: 'MFC ActiveX Controls: Using Stock Property Pages | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CLSID_CPicturePropPage
+- CLSID_CColorPropPage
+- CLSID_CFontPropPage
+dev_langs:
+- C++
+helpviewer_keywords:
+- picture stock property pages [MFC]
+- CLSID_CFontPropPage [MFC]
+- color stock property pages [MFC]
+- CLSID_CColorPropPage [MFC]
+- fonts [MFC], ActiveX controls
+- stock properties [MFC], stock property pages
+- CLSID_CPicturePropPage [MFC]
+- MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC ActiveX 控制項：使用內建屬性頁
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2a0a4b3ad54221500650b6e5c11e62e45805954c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文將討論股票屬性頁可用的 ActiveX 控制項和如何使用它們。  
+---
+# MFC ActiveX Controls: Using Stock Property Pages
+This article discusses the stock property pages available for ActiveX controls and how to use them.  
   
- 如需使用屬性頁的詳細資訊在 ActiveX 控制項，請參閱下列文件:  
+ For more information on using property pages in an ActiveX control, see the following articles:  
   
--   [MFC ActiveX 控制項：屬性頁](../mfc/mfc-activex-controls-property-pages.md)  
+-   [MFC ActiveX Controls: Property Pages](../mfc/mfc-activex-controls-property-pages.md)  
   
--   [MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
+-   [MFC ActiveX Controls: Adding Another Custom Property Page](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC 提供三種內建屬性頁以使用 ActiveX 控制項: **CLSID\_CColorPropPage**、**CLSID\_CFontPropPage**和 **CLSID\_CPicturePropPage**。  這些頁面分別顯示股票色彩、字型和圖片屬性的使用者介面。  
+ MFC provides three stock property pages for use with ActiveX controls: **CLSID_CColorPropPage**, **CLSID_CFontPropPage**, and **CLSID_CPicturePropPage**. These pages display a user interface for stock color, font, and picture properties, respectively.  
   
- 若要結合這些屬性頁加入至控制項，請將它們的 ID 加入至初始化控制項的陣列屬性頁 ID 的程式碼。  在下列範例中，此程式碼，位於控制項實作檔 \(.CPP\)，初始化陣列包含三個內建屬性頁和預設屬性頁 \(在本例中的具名 `CMyPropPage` \):  
+ To incorporate these property pages into a control, add their IDs to the code that initializes the control's array of property page IDs. In the following example, this code, located in the control implementation file (.CPP), initializes the array to contain all three stock property pages and the default property page (named `CMyPropPage` in this example):  
   
- [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/CPP/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- 請注意 Count 屬性頁，在 `BEGIN_PROPPAGEIDS` 巨集，是 4。  這表示屬性的頁數 ActiveX 控制項的支援。  
+ Note that the count of property pages, in the `BEGIN_PROPPAGEIDS` macro, is 4. This represents the number of property pages supported by the ActiveX control.  
   
- 在這些修改後，請重建專案。  您的控制項現在有字型、圖片和色彩屬性的屬性頁。  
+ After these modifications have been made, rebuild your project. Your control now has property pages for the font, picture, and color properties.  
   
 > [!NOTE]
->  如果控制項內建屬性頁無法存取，可能是因為， MFC DLL \(MFCxx.DLL\) 未正確向目前作業系統登錄。  這通常來自於安裝 Visual C\+\+ 在不同目前正在執行的作業系統中使用。  
+>  If the control stock property pages cannot be accessed, it may be because the MFC DLL (MFCxx.DLL) has not been properly registered with the current operating system. This usually results from installing Visual C++ under an operating system different from the one currently running.  
   
 > [!TIP]
->  如果您的內建屬性頁不是可見的 \(請參閱先前的注意事項\)，請執行 RegSvr32.exe 註冊 DLL 以完整路徑名稱的命令列到 DLL。  
+>  If your stock property pages are not visible (see previous Note), register the DLL by running RegSvr32.exe from the command line with the full path name to the DLL.  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
- [MFC ActiveX 控制項：加入內建屬性](../mfc/mfc-activex-controls-adding-stock-properties.md)
+## See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Adding Stock Properties](../mfc/mfc-activex-controls-adding-stock-properties.md)
+
+

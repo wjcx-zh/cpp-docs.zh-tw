@@ -1,46 +1,65 @@
 ---
-title: "處理擴充下拉式方塊控制項中的通知訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "擴充的下拉式方塊, 通知"
-  - "通知, 擴充的下拉式方塊控制項"
+title: Processing Notification Messages in Extended Combo Box Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extended combo boxes [MFC], notifications
+- notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 處理擴充下拉式方塊控制項中的通知訊息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5ab3d37f2c5341814f5830964a30564b444b6d65
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當使用者與擴充的下拉式方塊互動時，控制項 \(`CComboBoxEx`\) 會將通知訊息傳送至其父視窗，通常是檢視或對話方塊物件。 如果您想要執行動作以作為回應，請處理這些訊息。 例如，當使用者啟動下拉式清單，或按一下控制項的編輯方塊時，就會傳送 **CBEN\_BEGINEDIT** 通知。  
+---
+# <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Processing Notification Messages in Extended Combo Box Controls
+As users interact with the extended combo box, the control (`CComboBoxEx`) sends notification messages to its parent window, usually a view or dialog object. Handle these messages if you want to do something in response. For example, when the user activates the drop-down list or clicks in the control's edit box, the **CBEN_BEGINEDIT** notification is sent.  
   
- 使用 \[屬性\] 視窗，將通知處理常式加入您想要實作之這些訊息的父類別。  
+ Use the Properties window to add notification handlers to the parent class for those messages you want to implement.  
   
- 下列清單描述擴充的下拉式方塊控制項所傳送的各種通知。  
+ The following list describes the various notifications sent by the extended combo box control.  
   
--   **CBEN\_BEGINEDIT** 當使用者啟動下拉式清單，或按一下控制項的編輯方塊時所傳送。  
+-   **CBEN_BEGINEDIT** Sent when the user activates the drop-down list or clicks in the control's edit box.  
   
--   **CBEN\_DELETEITEM** 項目已刪除時所傳送。  
+-   **CBEN_DELETEITEM** Sent when an item has been deleted.  
   
--   **CBEN\_DRAGBEGIN** 當使用者開始拖曳顯示在控制項編輯部分的項目影像時所傳送。  
+-   **CBEN_DRAGBEGIN** Sent when the user begins dragging the image of the item displayed in the edit portion of the control.  
   
--   **CBEN\_ENDEDIT** 當使用者已經結束編輯方塊內的作業，或已從控制項下拉式清單中選取項目時所傳送。  
+-   **CBEN_ENDEDIT** Sent when the user has concluded an operation within the edit box or has selected an item from the control's drop-down list.  
   
--   **CBEN\_GETDISPINFO** 要擷取回呼項目的顯示資訊時所傳送。  
+-   **CBEN_GETDISPINFO** Sent to retrieve display information about a callback item.  
   
--   **CBEN\_INSERTITEM** 當新項目已插入控制項中時所傳送。  
+-   **CBEN_INSERTITEM** Sent when a new item has been inserted in the control.  
   
-## 請參閱  
- [使用 CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CComboBoxEx](../mfc/using-ccomboboxex.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

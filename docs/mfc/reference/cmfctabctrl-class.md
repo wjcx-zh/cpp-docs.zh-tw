@@ -1,5 +1,5 @@
 ---
-title: "CMFCTabCtrl 類別 |Microsoft 文件"
+title: CMFCTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -63,14 +63,55 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTabCtrl::SwapTabs method
-- CMFCTabCtrl constructor
-- CMFCTabCtrl::MoveTab method
-- CMFCTabCtrl::GetTabFromPoint method
-- CMFCTabCtrl::PreTranslateMessage method
-- CMFCTabCtrl::RecalcLayout method
-- CMFCTabCtrl class
-- CMFCTabCtrl::IsPtInTabArea method
+- CMFCTabCtrl [MFC], ActivateMDITab
+- CMFCTabCtrl [MFC], AllowDestroyEmptyTabbedPane
+- CMFCTabCtrl [MFC], AutoSizeWindow
+- CMFCTabCtrl [MFC], CalcRectEdit
+- CMFCTabCtrl [MFC], Create
+- CMFCTabCtrl [MFC], EnableActiveTabCloseButton
+- CMFCTabCtrl [MFC], EnableInPlaceEdit
+- CMFCTabCtrl [MFC], EnableTabDocumentsMenu
+- CMFCTabCtrl [MFC], EnsureVisible
+- CMFCTabCtrl [MFC], GetDocumentIcon
+- CMFCTabCtrl [MFC], GetFirstVisibleTabNum
+- CMFCTabCtrl [MFC], GetResizeMode
+- CMFCTabCtrl [MFC], GetScrollBar
+- CMFCTabCtrl [MFC], GetTabArea
+- CMFCTabCtrl [MFC], GetTabMaxWidth
+- CMFCTabCtrl [MFC], GetTabsHeight
+- CMFCTabCtrl [MFC], GetTabsRect
+- CMFCTabCtrl [MFC], GetWndArea
+- CMFCTabCtrl [MFC], HideActiveWindowHorzScrollBar
+- CMFCTabCtrl [MFC], HideInactiveWindow
+- CMFCTabCtrl [MFC], HideNoTabs
+- CMFCTabCtrl [MFC], HideSingleTab
+- CMFCTabCtrl [MFC], IsActiveInMDITabGroup
+- CMFCTabCtrl [MFC], IsActiveTabBoldFont
+- CMFCTabCtrl [MFC], IsActiveTabCloseButton
+- CMFCTabCtrl [MFC], IsDrawFrame
+- CMFCTabCtrl [MFC], IsFlatFrame
+- CMFCTabCtrl [MFC], IsFlatTab
+- CMFCTabCtrl [MFC], IsLeftRightRounded
+- CMFCTabCtrl [MFC], IsMDITabGroup
+- CMFCTabCtrl [MFC], IsOneNoteStyle
+- CMFCTabCtrl [MFC], IsSharedScroll
+- CMFCTabCtrl [MFC], IsTabDocumentsMenu
+- CMFCTabCtrl [MFC], IsVS2005Style
+- CMFCTabCtrl [MFC], ModifyTabStyle
+- CMFCTabCtrl [MFC], OnDragEnter
+- CMFCTabCtrl [MFC], OnDragOver
+- CMFCTabCtrl [MFC], OnShowTabDocumentsMenu
+- CMFCTabCtrl [MFC], SetActiveInMDITabGroup
+- CMFCTabCtrl [MFC], SetActiveTab
+- CMFCTabCtrl [MFC], SetActiveTabBoldFont
+- CMFCTabCtrl [MFC], SetDrawFrame
+- CMFCTabCtrl [MFC], SetFlatFrame
+- CMFCTabCtrl [MFC], SetImageList
+- CMFCTabCtrl [MFC], SetResizeMode
+- CMFCTabCtrl [MFC], SetTabMaxWidth
+- CMFCTabCtrl [MFC], StopResize
+- CMFCTabCtrl [MFC], SynchronizeScrollBar
+- CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 caps.latest.revision: 33
 author: mikeblome
@@ -90,17 +131,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 595ff7fbcd55f3b756ce650e02b6247b898d7629
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 435157fe230a29763a6e068e72a2b4d668651fcc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
-`CMFCTabCtrl`類別會提供索引標籤控制項的功能。 索引標籤控制項會顯示頂端或底部有一般或&3;D 索引標籤的可停駐視窗。 索引標籤可以顯示文字和影像，當在使用中狀態時，也可變更色彩。  
+The `CMFCTabCtrl` class provides functionality for a tab control. The tab control displays a dockable window with flat or three-dimensional tabs at its top or bottom. The tabs can display text and an image and can change color when active.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCTabCtrl : public CMFCBaseTabCtrl  
@@ -108,112 +149,112 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCTabCtrl::CMFCTabCtrl`|預設建構函式。|  
-|`CMFCTabCtrl::~CMFCTabCtrl`|解構函式。|  
+|`CMFCTabCtrl::CMFCTabCtrl`|Default constructor.|  
+|`CMFCTabCtrl::~CMFCTabCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTabCtrl::ActivateMDITab](#activatemditab)|顯示目前的索引標籤控制項的指定索引標籤，並將焦點設在該索引標籤。|  
+|[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Displays the specified tab of the current tab control and sets the focus on that tab.|  
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||  
-|[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|指定是否要調整大小的所有索引標籤上控制 windows 使用者介面項目 索引標籤的控制項變更時的工作區架構。|  
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|「 洩氣 」 指定的索引標籤區域的大小。 (覆寫 `CMFCBaseTabCtrl::CalcRectEdit`。)|  
-|[CMFCTabCtrl::Create](#create)|建立索引標籤控制項並將它附加`CMFCTabCtrl`物件。|  
-|`CMFCTabCtrl::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|顯示或隱藏 關閉 按鈕 ( **X**) 在使用中 索引標籤。|  
-|[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|啟用或停用可編輯的索引標籤。 (覆寫[CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit)。)|  
-|[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|取代捲動按鈕可開啟功能表的 索引標籤式視窗的視窗索引標籤的兩個按鈕。|  
-|[CMFCTabCtrl::EnsureVisible](#ensurevisible)|請確定索引標籤會出現。|  
-|[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|擷取與索引標籤式視窗的快顯功能表中的索引標籤相關聯的符號。|  
-|[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|擷取會在目前的索引標籤控制項中顯示的第一個索引標籤的索引。|  
-|[CMFCTabCtrl::GetResizeMode](#getresizemode)|擷取值，指定如何在目前的索引標籤控制項可以調整大小。|  
-|[CMFCTabCtrl::GetScrollBar](#getscrollbar)|擷取與索引標籤控制項相關聯的捲軸列物件的指標。|  
-|[CMFCTabCtrl::GetTabArea](#gettabarea)|擷取的頂端或底部的索引標籤控制項 索引標籤標籤區域的周框矩形。 (覆寫[CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea)。)|  
-|`CMFCTabCtrl::GetTabFromPoint`|擷取包含指定的點的索引標籤。 (覆寫[CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint)。)|  
-|[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|擷取索引標籤的最大寬度。|  
-|[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|擷取目前的索引標籤控制項的索引標籤區域的高度。|  
-|[CMFCTabCtrl::GetTabsRect](#gettabsrect)|擷取限定在目前的索引標籤控制項的索引標籤區域的矩形的。 (覆寫[CMFCBaseTabCtrl::GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect)。)|  
-|`CMFCTabCtrl::GetThisClass`|由架構用來取得變數的指標， [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
-|[CMFCTabCtrl::GetWndArea](#getwndarea)|擷取目前的索引標籤控制項的用戶端區域的界限。|  
-|[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)|如果有使用中視窗的，隱藏水平捲軸列。|  
-|[CMFCTabCtrl::HideInactiveWindow](#hideinactivewindow)|指定是否要顯示非作用中 索引標籤控制項的 windows 架構。|  
-|[CMFCTabCtrl::HideNoTabs](#hidenotabs)|啟用或停用 [繪圖] 索引標籤區域，如果不有任何可見的索引標籤。|  
-|[CMFCTabCtrl::HideSingleTab](#hidesingletab)|啟用或停用單一索引標籤式的視窗時，繪製一個索引標籤。 (覆寫[CMFCBaseTabCtrl::HideSingleTab](../../mfc/reference/cmfcbasetabctrl-class.md#hidesingletab)。)|  
-|[CMFCTabCtrl::IsActiveInMDITabGroup](#isactiveinmditabgroup)|指出目前的索引標籤的索引標籤控制項是否為多個文件介面 索引標籤群組中的 作用中 索引標籤。|  
-|[CMFCTabCtrl::IsActiveTabBoldFont](#isactivetabboldfont)|指出是否使用中 索引標籤的文字會顯示使用粗體字型。|  
-|[CMFCTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)|指出是否 [關閉] 按鈕 ( **X**) 會顯示在作用中的索引標籤或索引標籤區域右上角。|  
-|[CMFCTabCtrl::IsDrawFrame](#isdrawframe)|指出是否索引標籤式的視窗框架周圍繪製矩形內嵌的窗格。|  
-|[CMFCTabCtrl::IsFlatFrame](#isflatframe)|指出是否平面或 3D 索引標籤區域外的框。|  
-|[CMFCTabCtrl::IsFlatTab](#isflattab)|指出是否一般或不在目前的索引標籤控制項索引標籤的外觀。|  
-|[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|指出是否要四捨五入的左側和右側，目前的索引標籤控制項中的索引標籤的外觀。|  
-|[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|指出目前的索引標籤控制項是否包含多個文件介面視窗的工作區中。|  
-|[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|指出是否要將目前的索引標籤控制項顯示 Microsoft onenote 樣式。|  
-|`CMFCTabCtrl::IsPtInTabArea`|決定在索引標籤區域內時點。 (覆寫[CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea)。)|  
-|[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|指出目前的索引標籤控制項是否已捲軸可以捲動其 索引標籤，為群組。|  
-|[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|表示索引標籤控制項是否顯示捲軸按鈕或按鈕，可顯示索引標籤式視窗的功能表。|  
-|[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|指出是否顯示索引標籤，以在 Visual Studio.NET 2005年樣式。|  
-|[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|指定目前的索引標籤控制項中的索引標籤的外觀。|  
-|`CMFCTabCtrl::MoveTab`|將索引標籤移到另一個索引標籤的位置。 (覆寫[CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab)。)|  
-|[CMFCTabCtrl::OnDragEnter](#ondragenter)|資料指標第一次拖曳至 [索引標籤控制項] 視窗時，由架構呼叫。|  
-|[CMFCTabCtrl::OnDragOver](#ondragover)|當滑鼠移動經過置放目標視窗呼叫由架構在拖曳作業期間。 (覆寫[CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover)。)|  
-|[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|顯示索引標籤式視窗的快顯功能表中，會等到使用者選取索引標籤，並將選取的索引標籤為作用中索引標籤。|  
-|`CMFCTabCtrl::PreTranslateMessage`|轉譯的視窗訊息，再分派給[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫[CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)。)|  
-|`CMFCTabCtrl::RecalcLayout`|重新計算索引標籤控制項的內部配置。 (覆寫[CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)。)|  
-|[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|將索引標籤控制項的 [目前] 索引標籤設為作用中的索引標籤，在多個文件介面索引標籤群組。|  
-|[CMFCTabCtrl::SetActiveTab](#setactivetab)|啟動索引標籤。 (覆寫[CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)。)|  
-|[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|啟用或停用使用的作用中 索引標籤上的粗體字型。|  
-|[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|啟用或停用內嵌的列 drawinga 框矩形。|  
-|[CMFCTabCtrl::SetFlatFrame](#setflatframe)|指定是否要繪製以平面或 3D 框架 索引標籤區域。|  
-|[CMFCTabCtrl::SetImageList](#setimagelist)|指定映像清單。 (覆寫[CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist)。)|  
-|[CMFCTabCtrl::SetResizeMode](#setresizemode)|指定如何在目前的索引標籤控制項可以調整大小，然後重新顯示控制項。|  
-|[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)|指定在索引標籤式視窗的最大值 索引標籤寬度。|  
-|[CMFCTabCtrl::StopResize](#stopresize)|終止目前的調整大小作業 索引標籤控制項上。|  
-|`CMFCTabCtrl::SwapTabs`|交換一組索引標籤。 (覆寫[CMFCBaseTabCtrl::SwapTabs](../../mfc/reference/cmfcbasetabctrl-class.md#swaptabs)。)|  
-|[CMFCTabCtrl::SynchronizeScrollBar](#synchronizescrollbar)|一般索引標籤會顯示在索引標籤控制項上繪製水平捲軸。|  
+|[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|Specifies whether the framework is to resize the client area of all tab control windows when a user interface element of the tab control changes.|  
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|Deflates the size of the specified tab area. (Overrides `CMFCBaseTabCtrl::CalcRectEdit`.)|  
+|[CMFCTabCtrl::Create](#create)|Creates the tab control and attaches it to the `CMFCTabCtrl` object.|  
+|`CMFCTabCtrl::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|Shows or hides a Close button ( **X**) on the active tab.|  
+|[CMFCTabCtrl::EnableInPlaceEdit](#enableinplaceedit)|Enables or disables editable tab labels. (Overrides [CMFCBaseTabCtrl::EnableInPlaceEdit](../../mfc/reference/cmfcbasetabctrl-class.md#enableinplaceedit).)|  
+|[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)|Replaces two buttons that scroll the window tabs with a button that opens a menu of tabbed windows.|  
+|[CMFCTabCtrl::EnsureVisible](#ensurevisible)|Ensures that a tab is visible.|  
+|[CMFCTabCtrl::GetDocumentIcon](#getdocumenticon)|Retrieves the symbol that is associated with a tab in a popup menu of tabbed windows.|  
+|[CMFCTabCtrl::GetFirstVisibleTabNum](#getfirstvisibletabnum)|Retrieves the index of the first tab that is visible in the current tab control.|  
+|[CMFCTabCtrl::GetResizeMode](#getresizemode)|Retrieves a value that specifies how the current tab control can be resized.|  
+|[CMFCTabCtrl::GetScrollBar](#getscrollbar)|Retrieves a pointer to the scroll bar object that is associated with the tab control.|  
+|[CMFCTabCtrl::GetTabArea](#gettabarea)|Retrieves the bounding rectangle of the tab label area at the top or bottom of the tab control. (Overrides [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|  
+|`CMFCTabCtrl::GetTabFromPoint`|Retrieves the tab that contains a specified point. (Overrides [CMFCBaseTabCtrl::GetTabFromPoint](../../mfc/reference/cmfcbasetabctrl-class.md#gettabfrompoint).)|  
+|[CMFCTabCtrl::GetTabMaxWidth](#gettabmaxwidth)|Retrieves the maximum width of a tab.|  
+|[CMFCTabCtrl::GetTabsHeight](#gettabsheight)|Retrieves the height of the tab area of the current tab control.|  
+|[CMFCTabCtrl::GetTabsRect](#gettabsrect)|Retrieves a rectangle that bounds the tab area of the current tab control. (Overrides [CMFCBaseTabCtrl::GetTabsRect](../../mfc/reference/cmfcbasetabctrl-class.md#gettabsrect).)|  
+|`CMFCTabCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCTabCtrl::GetWndArea](#getwndarea)|Retrieves the boundary of the client area of the current tab control.|  
+|[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)|Hides the horizontal scroll bar, if any, of the active window.|  
+|[CMFCTabCtrl::HideInactiveWindow](#hideinactivewindow)|Specifies whether the framework is to display inactive tab control windows.|  
+|[CMFCTabCtrl::HideNoTabs](#hidenotabs)|Enables or disables drawing the tab area if there are no visible tabs.|  
+|[CMFCTabCtrl::HideSingleTab](#hidesingletab)|Enables or disables drawing a tab when there is a single tabbed window. (Overrides [CMFCBaseTabCtrl::HideSingleTab](../../mfc/reference/cmfcbasetabctrl-class.md#hidesingletab).)|  
+|[CMFCTabCtrl::IsActiveInMDITabGroup](#isactiveinmditabgroup)|Indicates whether the current tab of a tab control is the active tab in an multiple document interface tab group.|  
+|[CMFCTabCtrl::IsActiveTabBoldFont](#isactivetabboldfont)|Indicates whether the text of the active tab is displayed using a bold font.|  
+|[CMFCTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)|Indicates whether the Close button ( **X**) is displayed on an active tab or the upper-right corner of the tab area.|  
+|[CMFCTabCtrl::IsDrawFrame](#isdrawframe)|Indicates whether the tabbed window draws a frame rectangle around embedded panes.|  
+|[CMFCTabCtrl::IsFlatFrame](#isflatframe)|Indicates whether the frame around the tab area is flat or 3D.|  
+|[CMFCTabCtrl::IsFlatTab](#isflattab)|Indicates whether the appearance of the tabs in the current tab control is flat or not.|  
+|[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|Indicates whether the appearance of the left and right side of a tab in the current tab control is rounded.|  
+|[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|Indicates whether the current tab control is contained in the client area of a multiple-document interface window.|  
+|[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|Indicates whether the current tab control is displayed in the style of Microsoft OneNote.|  
+|`CMFCTabCtrl::IsPtInTabArea`|Determines if a point is inside the tab area. (Overrides [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|  
+|[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|Indicates whether the current tab control has a scroll bar that can scroll its tabs as a group.|  
+|[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|Indicates whether the tab control displays scroll buttons or a button that displays a menu of tabbed windows.|  
+|[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|Indicates whether tabs are displayed in the style of Visual Studio .NET 2005.|  
+|[CMFCTabCtrl::ModifyTabStyle](#modifytabstyle)|Specifies the appearance of tabs in the current tab control.|  
+|`CMFCTabCtrl::MoveTab`|Moves a tab to another tab position. (Overrides [CMFCBaseTabCtrl::MoveTab](../../mfc/reference/cmfcbasetabctrl-class.md#movetab).)|  
+|[CMFCTabCtrl::OnDragEnter](#ondragenter)|Called by the framework when the cursor is first dragged into the tab control window.|  
+|[CMFCTabCtrl::OnDragOver](#ondragover)|Called by the framework during a drag operation when the mouse is moved over the drop target window. (Overrides [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|  
+|[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Displays a popup menu of tabbed windows, waits until the user selects a tab, and makes the selected tab the active tab.|  
+|`CMFCTabCtrl::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|  
+|`CMFCTabCtrl::RecalcLayout`|Recalculates the internal layout of the tab control. (Overrides [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|  
+|[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Sets the current tab of a tab control as the active tab in an multiple document interface tab group.|  
+|[CMFCTabCtrl::SetActiveTab](#setactivetab)|Activates a tab. (Overrides [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|  
+|[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Enables or disables use of a bold font on active tabs.|  
+|[CMFCTabCtrl::SetDrawFrame](#setdrawframe)|Enables or disables drawinga frame rectangle around an embedded bar.|  
+|[CMFCTabCtrl::SetFlatFrame](#setflatframe)|Specifies whether to draw a flat or a 3D frame around the tab area.|  
+|[CMFCTabCtrl::SetImageList](#setimagelist)|Specifies an image list. (Overrides [CMFCBaseTabCtrl::SetImageList](../../mfc/reference/cmfcbasetabctrl-class.md#setimagelist).)|  
+|[CMFCTabCtrl::SetResizeMode](#setresizemode)|Specifies how the current tab control can be resized and then redisplays the control.|  
+|[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)|Specifies the maximum tab width in a tabbed window.|  
+|[CMFCTabCtrl::StopResize](#stopresize)|Terminates the current resize operation on the tab control.|  
+|`CMFCTabCtrl::SwapTabs`|Swaps a pair of tabs. (Overrides [CMFCBaseTabCtrl::SwapTabs](../../mfc/reference/cmfcbasetabctrl-class.md#swaptabs).)|  
+|[CMFCTabCtrl::SynchronizeScrollBar](#synchronizescrollbar)|Draws a horizontal scroll bar on a tab control that displays flat tabs.|  
   
-### <a name="data-members"></a>資料成員  
+### <a name="data-members"></a>Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|防止使用中的檢視是插入新的索引標籤，並啟用時，失去焦點。|  
+|[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Prevents the active view from losing focus when a new tab is inserted and enabled.|  
   
-## <a name="remarks"></a>備註  
- `CMFCTabCtrl`類別支援︰  
+## <a name="remarks"></a>Remarks  
+ The `CMFCTabCtrl` class supports:  
   
--   包含 3D，一般模式，以及一般共用水平捲軸的控制項樣式 索引標籤。  
+-   Tab control styles that include 3D, flat, and flat with a shared horizontal scroll bar.  
   
--   位於上方或下方的視窗 索引標籤。  
+-   Tabs located at the top or the bottom of the window.  
   
--   顯示文字、 影像或文字及影像的索引標籤。  
+-   Tabs that display text, images, or text and images.  
   
--   使用中 索引標籤時，變更色彩的索引標籤。  
+-   Tabs that change color when the tab is active.  
   
--   調整索引標籤的框線大小變更。  
+-   Border size changes for adjustable tabs.  
   
--   可拆式索引標籤式的視窗。  
+-   Detachable tabbed windows.  
   
- `CMFCTabCtrl`類別可以使用對話方塊中，但適用於應用程式使用停駐控制列，例如[!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)]和[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]。 如需詳細資訊，請參閱[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。  
+ The `CMFCTabCtrl` class can be used with a dialog box, but is intended for applications that use docking control bars like [!INCLUDE[ofprexcel](../../mfc/reference/includes/ofprexcel_md.md)] and [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. For more information, see [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
- 請遵循下列步驟來新增可調整停駐在應用程式中的索引標籤控制項︰  
+ Follow these steps to add a resizable, docking tab control in your application:  
   
-1.  建立的執行個體[CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)。  
+1.  Create an instance of [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md).  
   
-2.  呼叫[CDockablePane::Create](../../mfc/reference/cdockablepane-class.md#create)。  
+2.  Call [CDockablePane::Create](../../mfc/reference/cdockablepane-class.md#create).  
   
-3.  使用[CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab)或[CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab)加入新的索引標籤。  
+3.  Use [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) or [CMFCBaseTabCtrl::InsertTab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) to add new tabs.  
   
-4.  呼叫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) ，讓目前的停駐 索引標籤控制項可以停駐於主框架視窗。  
+4.  Call [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) so that the current docking tab control can dock at the main frame window.  
   
-5.  呼叫[CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane)停駐於主框架的索引標籤式的視窗。  
+5.  Call [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane) to dock the tabbed window at the main frame.  
   
- 如需如何建立為停駐控制列的索引標籤式的視窗的範例，請參閱[CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)。 若要使用`CMFCTabCtrl`做為非停駐的控制項，建立`CMFCTabCtrl`物件，然後呼叫[CMFCTabCtrl::Create](#create)。  
+ For an example of how to create a tabbed window as a docking control bar, see [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md). To use `CMFCTabCtrl` as a non-docking control, create a `CMFCTabCtrl` object and then call [CMFCTabCtrl::Create](#create).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -224,53 +265,53 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
   
  [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用各種方法的`CMFCTabCtrl`類別來設定`CMFCTabCtrl`物件。 此範例說明如何加入索引標籤，顯示作用中 索引標籤上的 關閉 按鈕，啟用可編輯的索引標籤，並顯示索引標籤式的視窗標籤快顯功能表。 這個範例是屬於[狀態集合範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCTabCtrl` class to configure a `CMFCTabCtrl` object. The example explains how to add a tab, show the Close button on the active tab, enable editable tab labels, and display a pop-up menu of tabbed window labels. This example is part of the [State Collection sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StateCollection #&1;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_StateCollection #&3;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxtabctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtabctrl.h  
   
-##  <a name="activatemditab"></a>CMFCTabCtrl::ActivateMDITab  
- 顯示目前的索引標籤控制項的指定索引標籤，並將焦點設在該索引標籤。  
+##  <a name="activatemditab"></a>  CMFCTabCtrl::ActivateMDITab  
+ Displays the specified tab of the current tab control and sets the focus on that tab.  
   
 ```  
 void ActivateMDITab(int nTab = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nTab`  
- 索引標籤以顯示，或是-1，指定目前使用中 索引標籤以零為起始的索引。  
+ The zero-based index of a tab to display, or -1 to specify the currently active tab.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
+##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 一定是 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="autosizewindow"></a>CMFCTabCtrl::AutoSizeWindow  
- 指定是否要調整大小的所有索引標籤上控制 windows 使用者介面項目 索引標籤的控制項變更時的工作區架構。  
+##  <a name="autosizewindow"></a>  CMFCTabCtrl::AutoSizeWindow  
+ Specifies whether the framework is to resize the client area of all tab control windows when a user interface element of the tab control changes.  
   
 ```  
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoSize`  
- `TRUE`自動調整 索引標籤控制項視窗中︰否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` to automatically resize tab control windows; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCTabCtrl::Create  
- 建立索引標籤控制項並將它附加`CMFCTabCtrl`物件。  
+##  <a name="create"></a>  CMFCTabCtrl::Create  
+ Creates the tab control and attaches it to the `CMFCTabCtrl` object.  
   
 ```  
 BOOL Create(
@@ -282,175 +323,175 @@ BOOL Create(
     BOOL bCloseBtn=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `style`  
- 索引標籤控制項的樣式。 如需詳細資訊，請參閱＜備註＞。  
+ The style of the tab control. For more information, see Remarks.  
   
  [in] `rect`  
- 矩形的索引標籤控制項 （繫結）。  
+ A rectangle that bounds the tab control.  
   
  [in] `pParentWnd`  
- 父視窗的指標。 必須不是 `NULL`。  
+ A pointer to a parent window. Must not be `NULL`.  
   
  [in] `nID`  
- 索引標籤控制項的 ID。  
+ The ID of the tab control.  
   
  [in] `location`  
- 索引標籤的位置。 預設值是 `LOCATION_BOTTOM`。 如需詳細資訊，請參閱＜備註＞。  
+ The location of tabs. The default value is `LOCATION_BOTTOM`. For more information, see Remarks.  
   
  [in] `bCloseBtn`  
- `TRUE`若要顯示 關閉 按鈕 索引標籤上，否則， `FALSE`。 預設值是 `FALSE`。  
+ `TRUE` to display a close button on the tab; otherwise, `FALSE`. The default value is `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功即為 `TRUE`；否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 下表描述您可以針對指定的值`style`參數。  
+### <a name="remarks"></a>Remarks  
+ The following table describes the values you can specify for the `style` parameter.  
   
-|樣式|描述|  
+|Style|Description|  
 |-----------|-----------------|  
-|STYLE_3D|建立有立體外觀的索引標籤控制項。|  
-|STYLE_FLAT|一般索引標籤建立索引標籤控制項。|  
-|STYLE_FLAT_SHARED_HORZ_SCROLL|建立具有一般索引標籤和捲軸可以捲動索引標籤，如果父視窗裁剪 索引標籤控制項。|  
-|STYLE_3D_ONENOTE|Microsoft onenote 樣式建立的索引標籤控制項。|  
-|STYLE_3D_VS2005|建立索引標籤控制項中的 Microsoft Visual Studio 2005 的樣式。|  
-|STYLE_3D_ROUNDED|建立具有圓角的索引標籤中的 Microsoft Visual Studio 2005 樣式 索引標籤控制項。|  
-|STYLE_3D_ROUNDED_SCROLL|建立具有圓角的索引標籤和 Microsoft Visual Studio 2005 的樣式中的捲軸按鈕 索引標籤控制項。|  
+|STYLE_3D|Creates a tab control with a three-dimensional appearance.|  
+|STYLE_FLAT|Creates a tab control with flat tabs.|  
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Creates a tab control with flat tabs and a scroll bar that can scroll the tabs if they are clipped by a parent window.|  
+|STYLE_3D_ONENOTE|Creates a tab control in the style of Microsoft OneNote.|  
+|STYLE_3D_VS2005|Creates a tab control in the style of Microsoft Visual Studio 2005.|  
+|STYLE_3D_ROUNDED|Creates a tab control with rounded tabs in the style of Microsoft Visual Studio 2005.|  
+|STYLE_3D_ROUNDED_SCROLL|Creates a tab control with rounded tabs and scroll buttons in the style of Microsoft Visual Studio 2005.|  
   
- 下表列出您可以針對指定的值`location`參數。  
+ The following table lists the values you can specify for the `location` parameter.  
   
-|位置|描述|  
+|Location|Description|  
 |--------------|-----------------|  
-|LOCATION_BOTTOM|索引標籤位於底部的索引標籤控制項。|  
-|LOCATION_TOP|索引標籤位於頂端的索引標籤控制項。|  
+|LOCATION_BOTTOM|Tabs are located at the bottom of the tab control.|  
+|LOCATION_TOP|Tabs are located at the top of the tab control.|  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`Create`方法中的`CMFCTabCtrl`類別。 這個範例是屬於[狀態集合範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `Create` method in the `CMFCTabCtrl` class. This example is part of the [State Collection sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_StateCollection #&1;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_StateCollection #&2;](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]  
   
-##  <a name="calcrectedit"></a>CMFCTabCtrl::CalcRectEdit  
- 「 洩氣 」 指定的索引標籤區域的大小。  
+##  <a name="calcrectedit"></a>  CMFCTabCtrl::CalcRectEdit  
+ Deflates the size of the specified tab area.  
   
 ```  
 virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rectEdit`  
- 指定的索引標籤區域的矩形。  
+ A rectangle that specifies the area of a tab.  
   
-### <a name="remarks"></a>備註  
- 當您變更索引標籤的標籤時，會呼叫這個方法。 這個方法 deflate 左側與右側相加，指定矩形的一半目前的索引標籤高度，並 「 洩氣 」 上、 下一個單位。  
+### <a name="remarks"></a>Remarks  
+ This method is called when you change the label of a tab. This method deflates the left and right sides of the specified rectangle by one-half the current tab height, and deflates the top and bottom by one unit.  
   
-##  <a name="enableactivetabclosebutton"></a>CMFCTabCtrl::EnableActiveTabCloseButton  
- 顯示或隱藏 關閉 按鈕 ( **X**) 在使用中 索引標籤。  
+##  <a name="enableactivetabclosebutton"></a>  CMFCTabCtrl::EnableActiveTabCloseButton  
+ Shows or hides a Close button ( **X**) on the active tab.  
   
 ```  
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要在作用中 索引標籤，顯示 關閉 按鈕`FALSE`以顯示索引標籤區域右上角的 關閉 按鈕。 預設值是 `TRUE`。  
+ `TRUE` to display the Close button on the active tab; `FALSE` to display the Close button on the upper-right corner of the tab area. The default value is `TRUE`.  
   
-##  <a name="enableinplaceedit"></a>CMFCTabCtrl::EnableInPlaceEdit  
- 啟用或停用可編輯的索引標籤。  
+##  <a name="enableinplaceedit"></a>  CMFCTabCtrl::EnableInPlaceEdit  
+ Enables or disables editable tab labels.  
   
 ```  
 virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用可編輯的索引標籤。`FALSE`停用可編輯的索引標籤。  
+ `TRUE` to enable editable tab labels; `FALSE` to disable editable tab labels.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabletabdocumentsmenu"></a>CMFCTabCtrl::EnableTabDocumentsMenu  
- 使用兩個按鈕捲動視窗索引標籤的使用者介面與介面，以顯示快顯功能表的 索引標籤式視窗之間切換。  
+##  <a name="enabletabdocumentsmenu"></a>  CMFCTabCtrl::EnableTabDocumentsMenu  
+ Toggles between a user interface that uses two buttons to scroll the window tabs and an interface that displays a pop-up menu of tabbed windows.  
   
 ```  
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要顯示的快顯功能表索引標籤式視窗的標籤。`FALSE`向前及向後捲動按鈕顯示。 預設值是 `TRUE`。  
+ `TRUE` to display a pop-up menu of tabbed window labels; `FALSE` to display forward and backward scroll buttons. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 當使用者按一下索引標籤的標籤時，架構會顯示對應的索引標籤式的視窗。 如果 索引標籤的標籤為可見，而不需要變更它的位置開啟索引標籤式的視窗。 如果使用者從快顯功能表選取 文件對應的索引標籤式的視窗已關閉螢幕，索引標籤式的視窗就會成為第一個索引標籤。  
+### <a name="remarks"></a>Remarks  
+ When the user clicks a tab label, the framework displays the corresponding tabbed window. If the tab label is visible, the tabbed window is opened without changing its position. If the user selects a document from the pop-up menu and the corresponding tabbed window is off screen, the tabbed window becomes the first tab.  
   
-##  <a name="ensurevisible"></a>CMFCTabCtrl::EnsureVisible  
- 請確定索引標籤會出現。  
+##  <a name="ensurevisible"></a>  CMFCTabCtrl::EnsureVisible  
+ Ensures that a tab is visible.  
   
 ```  
 virtual BOOL EnsureVisible(int iTab);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 索引標籤的以零為起始的索引。  
+ The zero-based index of a tab.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果登錄成功。`FALSE`如果`iTab`參數索引無效。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if it is successful; `FALSE` if the `iTab` parameter index is invalid.  
   
-### <a name="remarks"></a>備註  
- 使用這個方法，以確保指定的索引標籤是可見。 如果需要，將捲動索引標籤控制項。  
+### <a name="remarks"></a>Remarks  
+ Use this method to guarantee that the specified tab is visible. The tab control will scroll if it is required.  
   
-##  <a name="getdocumenticon"></a>CMFCTabCtrl::GetDocumentIcon  
- 擷取與索引標籤式視窗的快顯功能表中的索引標籤相關聯的映像。  
+##  <a name="getdocumenticon"></a>  CMFCTabCtrl::GetDocumentIcon  
+ Retrieves the image that is associated with a tab in a pop-up menu of tabbed windows.  
   
 ```  
 static HICON __stdcall GetDocumentIcon(UINT nCmdID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nCmdID`  
- 命令 ID 的索引標籤式視窗的快顯功能表中的索引標籤。  
+ The command ID of a tab in a pop-up menu of tabbed windows.  
   
-### <a name="return-value"></a>傳回值  
- 點陣圖影像的控制代碼。  
+### <a name="return-value"></a>Return Value  
+ The handle of a bitmap image.  
   
-##  <a name="getfirstvisibletabnum"></a>CMFCTabCtrl::GetFirstVisibleTabNum  
- 擷取會在目前的索引標籤控制項中顯示的第一個索引標籤的索引。  
+##  <a name="getfirstvisibletabnum"></a>  CMFCTabCtrl::GetFirstVisibleTabNum  
+ Retrieves the index of the first tab that is visible in the current tab control.  
   
 ```  
 virtual int GetFirstVisibleTabNum() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 索引標籤控制項中的索引標籤以零為起始的索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of a tab in the tab control.  
   
-### <a name="remarks"></a>備註  
- Microsoft onenote 的樣式會顯示索引標籤控制項時，才使用這個方法。 使用[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)方法，以判斷樣式。  
+### <a name="remarks"></a>Remarks  
+ Use this method only when the tab control is displayed in the style of Microsoft OneNote. Use the [CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle) method to determine the style.  
   
-##  <a name="getresizemode"></a>CMFCTabCtrl::GetResizeMode  
- 擷取值，指定如何在目前的索引標籤控制項可以調整大小。  
+##  <a name="getresizemode"></a>  CMFCTabCtrl::GetResizeMode  
+ Retrieves a value that specifies how the current tab control can be resized.  
   
 ```  
 ResizeMode GetResizeMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 其中一個`CMFCTabCtrl::ResizeMode`列舉值，指定可調整大小的索引標籤控制項的方式。 如需可能值的清單，請參閱的 < 備註 > 一節[CMFCTabCtrl::SetResizeMode](#setresizemode)方法。  
+### <a name="return-value"></a>Return Value  
+ One of the `CMFCTabCtrl::ResizeMode` enumeration values that specifies how the tab control can be resized. For a list of possible values, see the Remarks section of the [CMFCTabCtrl::SetResizeMode](#setresizemode) method.  
   
-##  <a name="getscrollbar"></a>CMFCTabCtrl::GetScrollBar  
- 擷取與索引標籤控制項相關聯的捲軸列物件的指標。  
+##  <a name="getscrollbar"></a>  CMFCTabCtrl::GetScrollBar  
+ Retrieves a pointer to the scroll bar object that is associated with the tab control.  
   
 ```  
 CScrollBar* GetScrollBar();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 捲軸物件、 指標或`NULL`若未建立索引標籤控制項使用`STYLE_FLAT_SHARED_HORZ_SCROLL`樣式。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a scrollbar object, or a `NULL` if the tab control was not created by using the `STYLE_FLAT_SHARED_HORZ_SCROLL` style.  
   
-### <a name="remarks"></a>備註  
- 使用這個方法來存取索引標籤控制項的內嵌的捲軸。 捲軸列物件會建立具有索引標籤控制項時，才`STYLE_FLAT_SHARED_HORZ_SCROLL`樣式。  
+### <a name="remarks"></a>Remarks  
+ Use this method to access the tab control's embedded scroll bar. A scroll bar object is created only when the tab control has the `STYLE_FLAT_SHARED_HORZ_SCROLL` style.  
   
-##  <a name="gettabarea"></a>CMFCTabCtrl::GetTabArea  
- 擷取的頂端或底部的索引標籤控制項 索引標籤標籤區域的周框矩形。  
+##  <a name="gettabarea"></a>  CMFCTabCtrl::GetTabArea  
+ Retrieves the bounding rectangle of the tab label area at the top or bottom of the tab control.  
   
 ```  
 void GetTabArea(
@@ -458,295 +499,295 @@ void GetTabArea(
     CRect& rectTabAreaBottom) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `rectTabAreaTop`  
- 此方法傳回時，此參考會包含限定上方的索引標籤的標籤區域的矩形。 矩形是在工作區座標。 此參考是空白，如果沒有索引標籤的標籤區域頂端的索引標籤控制項。  
+### <a name="parameters"></a>Parameters  
+ [out] `rectTabAreaTop`  
+ When this method returns, this reference contains a rectangle that bounds the top tab label area. The rectangle is in client coordinates. This reference is empty if no tab label area exists at the top of the tab control.  
   
- [輸出] `rectTabAreaBottom`  
- 此方法傳回時，此參考會包含限定底部 索引標籤的標籤區域的矩形的。 矩形是在工作區座標。 此參考是空白，如果沒有索引標籤的標籤區域底部的索引標籤控制項。  
+ [out] `rectTabAreaBottom`  
+ When this method returns, this reference contains a rectangle that bounds the bottom tab label area. The rectangle is in client coordinates. This reference is empty if no tab label area exists at the bottom of the tab control.  
   
-### <a name="remarks"></a>備註  
- 使用這個方法來決定的大小和索引標籤式視窗中的索引標籤區域位置。  
+### <a name="remarks"></a>Remarks  
+ Use this method to determine the size and position of the tab area in the tabbed window.  
   
-##  <a name="gettabmaxwidth"></a>CMFCTabCtrl::GetTabMaxWidth  
- 擷取索引標籤的最大寬度。  
+##  <a name="gettabmaxwidth"></a>  CMFCTabCtrl::GetTabMaxWidth  
+ Retrieves the maximum width of a tab.  
   
 ```  
 int GetTabMaxWidth() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 索引標籤上，單位為像素的最大寬度。 如果傳回值為 0，索引標籤寬度沒有限制。  
+### <a name="return-value"></a>Return Value  
+ Maximum width of a tab, in pixels. If the return value is 0, the tab width is unlimited.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth)方法來設定最大值 索引標籤的寬度。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetTabMaxWidth](#settabmaxwidth) method to set maximum tab width.  
   
-##  <a name="gettabsheight"></a>CMFCTabCtrl::GetTabsHeight  
- 擷取目前的索引標籤控制項的索引標籤區域的高度。  
+##  <a name="gettabsheight"></a>  CMFCTabCtrl::GetTabsHeight  
+ Retrieves the height of the tab area of the current tab control.  
   
 ```  
 virtual int GetTabsHeight() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果任何索引標籤是可見的或如果沒有索引標籤會顯示索引標籤區域的高度。  
+### <a name="return-value"></a>Return Value  
+ The height of the tab area if any tab is visible, or zero if no tab is visible.  
   
-##  <a name="gettabsrect"></a>CMFCTabCtrl::GetTabsRect  
- 擷取限定在目前的索引標籤控制項的索引標籤區域的矩形的。  
+##  <a name="gettabsrect"></a>  CMFCTabCtrl::GetTabsRect  
+ Retrieves a rectangle that bounds the tab area of the current tab control.  
   
 ```  
 virtual void GetTabsRect(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `rect`  
- 此方法傳回時，`rect`參數會包含限定 索引標籤區域的矩形。  
+### <a name="parameters"></a>Parameters  
+ [out] `rect`  
+ When this method returns, the `rect` parameter contains a rectangle that bounds the tab area.  
   
-##  <a name="getwndarea"></a>CMFCTabCtrl::GetWndArea  
- 擷取目前的索引標籤控制項的用戶端區域的界限。  
+##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea  
+ Retrieves the boundary of the client area of the current tab control.  
   
 ```  
 void GetWndArea(CRect& rect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [in、out] `rect`  
- 此方法傳回時，此參數會包含目前的索引標籤控制項 （繫結） 的矩形。  
+### <a name="parameters"></a>Parameters  
+ [in, out] `rect`  
+ When this method returns, this parameter contains a rectangle that bounds the current tab control.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hideactivewindowhorzscrollbar"></a>CMFCTabCtrl::HideActiveWindowHorzScrollBar  
- 水平捲軸中，如果隱藏任何使用中視窗。  
+##  <a name="hideactivewindowhorzscrollbar"></a>  CMFCTabCtrl::HideActiveWindowHorzScrollBar  
+ Hides the horizontal scroll bar, if any, in the active window.  
   
 ```  
 void HideActiveWindowHorzScrollBar();
 ```  
   
-### <a name="remarks"></a>備註  
- 若要防止索引標籤控制項閃爍的使用者 索引標籤控制項頁面之間切換時，使用這個方法。  
+### <a name="remarks"></a>Remarks  
+ Use this method to prevent the tab control from blinking when the user switches between tab control pages.  
   
-##  <a name="hideinactivewindow"></a>CMFCTabCtrl::HideInactiveWindow  
- 指定是否，架構會顯示非作用中 索引標籤控制項的視窗。  
+##  <a name="hideinactivewindow"></a>  CMFCTabCtrl::HideInactiveWindow  
+ Specifies whether the framework displays inactive tab control windows.  
   
 ```  
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`不想再顯示非作用中的視窗。`FALSE`顯示非作用中的視窗。 預設值是 `TRUE`。  
+ `TRUE` not to display an inactive window; `FALSE` to display an inactive window. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hidenotabs"></a>CMFCTabCtrl::HideNoTabs  
- 啟用或停用的索引標籤區域繪圖，如果不有任何可見的索引標籤。  
+##  <a name="hidenotabs"></a>  CMFCTabCtrl::HideNoTabs  
+ Enables or disables drawing of the tab area if there are no visible tabs.  
   
 ```  
 void HideNoTabs(BOOL bHide=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`若要啟用 [繪圖] 索引標籤區域中。`FALSE`停用繪製。 預設值是 `TRUE`。  
+ `TRUE` to enable drawing the tab area; `FALSE` to disable drawing. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hidesingletab"></a>CMFCTabCtrl::HideSingleTab  
- 啟用或停用索引標籤的繪製，如果沒有單一的索引標籤式的視窗。  
+##  <a name="hidesingletab"></a>  CMFCTabCtrl::HideSingleTab  
+ Enables or disables tab drawing if there is a single tabbed window.  
   
 ```  
 virtual void HideSingleTab(BOOL bHide=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bHide`  
- `TRUE`不繪製單一索引標籤式視窗; 的索引標籤`FALSE`繪製單一索引標籤。 預設值是 `TRUE`。  
+ `TRUE` to not draw a tab for a single tabbed window; `FALSE` to draw a single tab. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isactiveinmditabgroup"></a>CMFCTabCtrl::IsActiveInMDITabGroup  
- 指出目前的索引標籤的索引標籤控制項是否為多個文件介面 索引標籤群組中的 作用中 索引標籤。  
+##  <a name="isactiveinmditabgroup"></a>  CMFCTabCtrl::IsActiveInMDITabGroup  
+ Indicates whether the current tab of a tab control is the active tab in a multiple document interface tab group.  
   
 ```  
 BOOL IsActiveInMDITabGroup() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果目前的索引標籤索引標籤控制項的作用中的索引標籤中 MDI 索引標籤群組。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current tab of a tab control is the active tab in an MDI tab group; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 您可以將多個文件視窗組織成任一個垂直或水平索引標籤群組，並輕鬆地從一個索引標籤群組到另一個隨機文件。  
+### <a name="remarks"></a>Remarks  
+ You can organize multiple document windows into either vertical or horizontal tab groups and easily shuffle documents from one tab group to another.  
   
-##  <a name="isactivetabboldfont"></a>CMFCTabCtrl::IsActiveTabBoldFont  
- 指出是否使用中 索引標籤的文字會顯示使用粗體字型。  
+##  <a name="isactivetabboldfont"></a>  CMFCTabCtrl::IsActiveTabBoldFont  
+ Indicates whether the text of the active tab is displayed using a bold font.  
   
 ```  
 BOOL IsActiveTabBoldFont() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果使用中的索引標籤會顯示使用粗體字型。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the active tab is displayed using the bold font; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)方法，以變更作用中索引標籤的字型。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont) method to change the active tab font.  
   
-##  <a name="isactivetabclosebutton"></a>CMFCTabCtrl::IsActiveTabCloseButton  
- 指出是否 [關閉] 按鈕 ( **X**) 會顯示在作用中的索引標籤上，或索引標籤區域右上角。  
+##  <a name="isactivetabclosebutton"></a>  CMFCTabCtrl::IsActiveTabCloseButton  
+ Indicates whether the Close button ( **X**) is displayed on an active tab or on the upper-right corner of the tab area.  
   
 ```  
 virtual BOOL IsActiveTabCloseButton() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果 關閉 按鈕會顯示在作用中的索引標籤。`FALSE`如果 索引標籤區域右上角顯示 關閉 按鈕。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the Close button is displayed on the active tab; `FALSE` if the Close button is displayed on the upper-right corner of the tab area.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdrawframe"></a>CMFCTabCtrl::IsDrawFrame  
- 指出是否索引標籤式的視窗框架周圍繪製矩形內嵌的窗格。  
+##  <a name="isdrawframe"></a>  CMFCTabCtrl::IsDrawFrame  
+ Indicates whether the tabbed window draws a frame rectangle around embedded panes.  
   
 ```  
 BOOL IsDrawFrame() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果框架繪製矩形。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a frame rectangle is drawn; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCTabCtrl::SetDrawFrame](#setdrawframe)方法，以啟用或停用繪製框矩形。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetDrawFrame](#setdrawframe) method to enable or disable drawing a frame rectangle.  
   
-##  <a name="isflatframe"></a>CMFCTabCtrl::IsFlatFrame  
- 指出是否平面或 3D 索引標籤區域外的框。  
+##  <a name="isflatframe"></a>  CMFCTabCtrl::IsFlatFrame  
+ Indicates whether the frame around the tab area is flat or 3D.  
   
 ```  
 BOOL IsFlatFrame() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果索引標籤區域周圍框架的一般;`FALSE`如果框架為&3;d。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the frame around the tab area is flat; `FALSE` if the frame is three-dimensional.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCTabCtrl::SetFlatFrame](#setflatframe)方法，以變更繪製框架的方式。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::SetFlatFrame](#setflatframe) method to change how the frame is drawn.  
   
-##  <a name="isflattab"></a>CMFCTabCtrl::IsFlatTab  
- 指出是否一般或不在目前的索引標籤控制項索引標籤的外觀。  
+##  <a name="isflattab"></a>  CMFCTabCtrl::IsFlatTab  
+ Indicates whether the appearance of the tabs in the current tab control is flat or not.  
   
 ```  
 virtual BOOL IsFlatTab() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果目前的索引標籤控制項中的索引標籤的外觀是一般。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the appearance of the tabs in the current tab control is flat; otherwise, `FALSE`.  
   
-##  <a name="isleftrightrounded"></a>CMFCTabCtrl::IsLeftRightRounded  
- 指出是否要四捨五入的左側和右側，目前的索引標籤控制項中的索引標籤的外觀。  
+##  <a name="isleftrightrounded"></a>  CMFCTabCtrl::IsLeftRightRounded  
+ Indicates whether the appearance of the left and right side of a tab in the current tab control is rounded.  
   
 ```  
 virtual BOOL IsLeftRightRounded() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果會捨入的每個索引標籤旁邊。，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the sides of each tab is rounded; otherwise, `FALSE`.  
   
-##  <a name="ismditabgroup"></a>CMFCTabCtrl::IsMDITabGroup  
- 指出目前的索引標籤控制項是否包含多個文件介面視窗的工作區中。  
+##  <a name="ismditabgroup"></a>  CMFCTabCtrl::IsMDITabGroup  
+ Indicates whether the current tab control is contained in the client area of a multiple-document interface window.  
   
 ```  
 virtual BOOL IsMDITabGroup() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果目前的索引標籤控制項是在 MDI 工作區視窗;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current tab control is in an MDI client area window; otherwise, `FALSE`.  
   
-##  <a name="isonenotestyle"></a>CMFCTabCtrl::IsOneNoteStyle  
- 指出是否要將目前的索引標籤控制項顯示 Microsoft onenote 樣式。  
+##  <a name="isonenotestyle"></a>  CMFCTabCtrl::IsOneNoteStyle  
+ Indicates whether the current tab control is displayed in the style of Microsoft OneNote.  
   
 ```  
 virtual BOOL IsOneNoteStyle() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果 Microsoft onenote; 樣式中顯示索引標籤控制項否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control is displayed in the style of Microsoft OneNote; otherwise, `FALSE`.  
   
-##  <a name="issharedscroll"></a>CMFCTabCtrl::IsSharedScroll  
- 指出目前的索引標籤控制項是否已捲軸可以捲動其 索引標籤，為群組。  
+##  <a name="issharedscroll"></a>  CMFCTabCtrl::IsSharedScroll  
+ Indicates whether the current tab control has a scroll bar that can scroll its tabs as a group.  
   
 ```  
 BOOL IsSharedScroll() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果索引標籤控制項有共用的捲軸。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab control has a shared scroll bar; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳回`TRUE`如果`style`參數[CMFCTabCtrl::Create](#create)方法是 STYLE_FLAT_SHARED_HORZ_SCROLL。  
+### <a name="remarks"></a>Remarks  
+ This method returns `TRUE` if the `style` parameter of the [CMFCTabCtrl::Create](#create) method is STYLE_FLAT_SHARED_HORZ_SCROLL.  
   
-##  <a name="istabdocumentsmenu"></a>CMFCTabCtrl::IsTabDocumentsMenu  
- 表示索引標籤控制項是否顯示捲軸按鈕或按鈕，可顯示索引標籤式視窗的功能表。  
+##  <a name="istabdocumentsmenu"></a>  CMFCTabCtrl::IsTabDocumentsMenu  
+ Indicates whether the tab control displays scroll buttons or a button that displays a menu of tabbed windows.  
   
 ```  
 BOOL IsTabDocumentsMenu() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果索引標籤式的視窗將捲動使用快顯功能表的索引標籤式的視窗的標籤。`FALSE`如果索引標籤式的視窗將捲動使用向前及向後捲動按鈕。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabbed windows are scrolled using a popup menu of tabbed window labels; `FALSE` if tabbed windows are scrolled using forward and backward scroll buttons.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu)方法，以指定的方法捲動的索引視窗。  
+### <a name="remarks"></a>Remarks  
+ Use the [CMFCTabCtrl::EnableTabDocumentsMenu](#enabletabdocumentsmenu) method to specify the method of scrolling tabbed windows.  
   
-##  <a name="isvs2005style"></a>CMFCTabCtrl::IsVS2005Style  
- 指出是否索引標籤的繪製使用 Visual Studio 2005 的樣式。  
+##  <a name="isvs2005style"></a>  CMFCTabCtrl::IsVS2005Style  
+ Indicates whether tabs are drawn using the style of Visual Studio 2005.  
   
 ```  
 virtual BOOL IsVS2005Style() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果索引標籤的繪製樣式的 Visual Studio 2005;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tabs are drawn using the style of Visual Studio 2005; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 使用`style`參數[CMFCTabCtrl::Create](#create)方法，以指定索引標籤的繪製方式。  
+### <a name="remarks"></a>Remarks  
+ Use the `style` parameter of the [CMFCTabCtrl::Create](#create) method to specify how tabs are drawn.  
   
-##  <a name="m_benableactivate"></a>CMFCTabCtrl::m_bEnableActivate  
- 防止使用中的檢視是插入新的索引標籤，並啟用時，失去焦點。  
+##  <a name="m_benableactivate"></a>  CMFCTabCtrl::m_bEnableActivate  
+ Prevents the active view from losing focus when a new tab is inserted and enabled.  
   
 ```  
 static BOOL m_bEnableActivate;  
 ```  
   
-### <a name="remarks"></a>備註  
- 當 [] 索引標籤插入，並且成為使用中新的索引標籤式視窗通常是採取焦點。 設定`CMFCTabCtrl::m_bEnableActivate`成員變數來`FALSE`保留原始的焦點。 預設值是 `TRUE`。  
+### <a name="remarks"></a>Remarks  
+ The focus is usually taken by a new tabbed window when the tab is inserted and made active. Set the `CMFCTabCtrl::m_bEnableActivate` member variable to `FALSE` to retain the original focus. The default value is `TRUE`.  
   
-##  <a name="modifytabstyle"></a>CMFCTabCtrl::ModifyTabStyle  
- 指定目前的索引標籤控制項中的索引標籤的外觀。  
+##  <a name="modifytabstyle"></a>  CMFCTabCtrl::ModifyTabStyle  
+ Specifies the appearance of tabs in the current tab control.  
   
 ```  
 BOOL ModifyTabStyle(Style style);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `style`  
- 其中一個列舉值，指定索引標籤控制項的外觀。 如需詳細資訊，請參閱 < 備註 > 中的資料表。  
+ One of the enumeration values that specifies the appearance of the tab control. For more information, see the table in Remarks.  
   
-### <a name="return-value"></a>傳回值  
- 一定是 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 值`style`參數可以是下列其中一種`CMFCTabCtrl::Style`列舉型別。  
+### <a name="remarks"></a>Remarks  
+ The value of the `style` parameter can be one of the following `CMFCTabCtrl::Style` enumerations.  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|STYLE_3D|顯示&3;d、 矩形有圓角的索引標籤。|  
-|STYLE_3D_ONENOTE|顯示&3;d 索引標籤具有垂直一邊與斜體的一端，而且，具有圓角。|  
-|STYLE_3D_ROUNDED|顯示具有傾斜側邊和圓角的三維索引標籤。|  
-|STYLE_3D_ROUNDED_SCROLL|顯示具有傾斜側邊和圓角的三維索引標籤。 如果有多個索引標籤可以顯示在相同的時間比，架構會顯示下拉箭號和定位點以使用中的功能表。|  
-|STYLE_3D_SCROLLED|顯示&3;d、 矩形的索引標籤。 如果有多個索引標籤可以顯示在相同的時間比，架構會顯示下拉箭號和定位點以使用中的功能表。|  
-|STYLE_3D_VS2005|顯示&3;d，捨入有一端斜體和一個垂直邊的索引標籤。|  
-|STYLE_FLAT|顯示具有傾斜左邊和右邊的二維索引標籤。|  
-|STYLE_FLAT_SHARED_HORZ_SCROLL|顯示二維索引標籤。 如果有多個索引標籤可以顯示在相同的時間比，，架構會顯示端點索引標籤區域的捲動箭號。|  
+|STYLE_3D|Displays three-dimensional, rectangular tabs that have round corners.|  
+|STYLE_3D_ONENOTE|Displays three-dimensional tabs that have one vertical side and one slanted side and that have rounded corners.|  
+|STYLE_3D_ROUNDED|Displays three-dimensional tabs that have slanted sides and rounded corners.|  
+|STYLE_3D_ROUNDED_SCROLL|Displays three-dimensional tabs that have slanted sides and rounded corners. If there are more tabs than can be displayed at the same time, the framework displays a drop-down arrow and a menu of tabs to make active.|  
+|STYLE_3D_SCROLLED|Displays three-dimensional, rectangular tabs. If there are more tabs than can be displayed at the same time, the framework displays a drop-down arrow and a menu of tabs to make active.|  
+|STYLE_3D_VS2005|Displays three-dimensional, rounded tabs that have one slanted side and one vertical side.|  
+|STYLE_FLAT|Displays two-dimensional tabs that have slanted left and right sides.|  
+|STYLE_FLAT_SHARED_HORZ_SCROLL|Displays two-dimensional tabs. If there are more tabs than can be displayed at the same time, the framework displays scroll arrows at the ends of the tab area.|  
   
-##  <a name="ondragenter"></a>CMFCTabCtrl::OnDragEnter  
- 資料指標第一次進入目前的索引標籤控制項的視窗時呼叫 framework 拖放作業期間。  
+##  <a name="ondragenter"></a>  CMFCTabCtrl::OnDragEnter  
+ Called by the framework during a drag-and-drop operation when the cursor first enters the window of the current tab control.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -755,26 +796,26 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDataObject`  
- 資料物件，其中包含使用者拖曳的資料點。  
+ Points to a data object that contains data that the user drags.  
   
  [in] `dwKeyState`  
- 包含輔助按鍵的狀態。 這是參數的位元組合 (OR) 的下列值︰ `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。 如需詳細資訊，請參閱**訊息參數**區段[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
+ Contains the state of the modifier keys. This parameter is a bitwise combination (OR) of the following values: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, and `MK_RBUTTON`. For more information, see the **Message Parameters** section of [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
   
  [in] `point`  
- 包含用戶端座標中的資料指標目前位置。  
+ Contains the current location of the cursor in client coordinates.  
   
-### <a name="return-value"></a>傳回值  
- 一律`DROPEFFECT_NONE`，這表示置放目標無法接受資料。  
+### <a name="return-value"></a>Return Value  
+ Always `DROPEFFECT_NONE`, which means that the drop target cannot accept the data.  
   
-### <a name="remarks"></a>備註  
- 您可以使用這個方法支援拖放作業。 覆寫這個方法，以實作您自己的自訂行為。  
+### <a name="remarks"></a>Remarks  
+ Use this method to support a drag-and-drop operation. Override this method to implement your own custom behavior.  
   
- 根據預設，這個方法只會呼叫`CMFCTabCtrl::OnDragOver`，它一定會傳回`DROPEFFECT_NONE`。  
+ By default, this method only calls `CMFCTabCtrl::OnDragOver`, which always returns `DROPEFFECT_NONE`.  
   
-##  <a name="ondragover"></a>CMFCTabCtrl::OnDragOver  
- 當滑鼠移動經過置放目標視窗呼叫由架構在拖曳作業期間。  
+##  <a name="ondragover"></a>  CMFCTabCtrl::OnDragOver  
+ Called by the framework during a drag operation when the mouse is moved over the drop target window.  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -783,96 +824,96 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDataObject`  
- 指標[COleDataObject](../../mfc/reference/coledataobject-class.md)拖曳到置放目標物件。  
+ Pointer to a [COleDataObject](../../mfc/reference/coledataobject-class.md) object that is being dragged over the drop target.  
   
  [in] `dwKeyState`  
- 輔助按鍵的位元組合 （或者） 的狀態`MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。 如需詳細資訊，請參閱 < 訊息參數 」[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。  
+ The state of the modifier keys, which is a bitwise combination (OR) of `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, and `MK_RBUTTON`. For more information, see "Message Parameters" in [About Mouse Input](http://msdn.microsoft.com/library/windows/desktop/ms645601).  
   
  [in] `point`  
- 目前的滑鼠位置。  
+ The current mouse position.  
   
-### <a name="return-value"></a>傳回值  
- 一定是 `DROPEFFECT_NONE`。  
+### <a name="return-value"></a>Return Value  
+ Always `DROPEFFECT_NONE`.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法與您的自訂實作。 如需詳細資訊，請參閱[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)方法。  
+### <a name="remarks"></a>Remarks  
+ Override this method with your custom implementation. For more information, see the [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover) method.  
   
-##  <a name="onshowtabdocumentsmenu"></a>CMFCTabCtrl::OnShowTabDocumentsMenu  
- 顯示索引標籤式視窗的快顯功能表中，會等到使用者選取索引標籤，並將選取的索引標籤為作用中索引標籤。  
+##  <a name="onshowtabdocumentsmenu"></a>  CMFCTabCtrl::OnShowTabDocumentsMenu  
+ Displays a pop-up menu of tabbed windows, waits until the user selects a tab, and makes the selected tab the active tab.  
   
 ```  
 virtual void OnShowTabDocumentsMenu(CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 顯示快顯功能表上的位置座標。  
+ The coordinates of where to display the pop-up menu.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactiveinmditabgroup"></a>CMFCTabCtrl::SetActiveInMDITabGroup  
- 將索引標籤控制項的 目前 索引標籤設為多個文件介面 索引標籤群組中的 作用中 索引標籤。  
+##  <a name="setactiveinmditabgroup"></a>  CMFCTabCtrl::SetActiveInMDITabGroup  
+ Sets the current tab of a tab control as the active tab in a multiple document interface tab group.  
   
 ```  
 void SetActiveInMDITabGroup(BOOL bActive);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bActive`  
- `TRUE`讓目前的索引標籤作用中的索引標籤。`FALSE`來停用目前的索引標籤。  
+ `TRUE` to make the current tab the active tab; `FALSE` to make the current tab inactive.  
   
-### <a name="remarks"></a>備註  
- 您可以將多個文件視窗組織成任一個垂直或水平索引標籤群組，並輕鬆地從一個索引標籤群組到另一個隨機文件。  
+### <a name="remarks"></a>Remarks  
+ You can organize multiple document windows into either vertical or horizontal tab groups and easily shuffle documents from one tab group to another.  
   
-##  <a name="setactivetab"></a>CMFCTabCtrl::SetActiveTab  
- 啟動索引標籤。  
+##  <a name="setactivetab"></a>  CMFCTabCtrl::SetActiveTab  
+ Activates a tab.  
   
 ```  
 virtual BOOL SetActiveTab(int iTab);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iTab`  
- 指定啟動 索引標籤的以零為起始的索引。  
+ Specifies the zero-based index of the tab to activate.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的索引標籤已啟用。`FALSE`如果指定`iTab`參數值無效。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified tab was made active; `FALSE` if the specified `iTab` parameter value is invalid.  
   
-### <a name="remarks"></a>備註  
- 這個方法不會傳送`AFX_WM_CHANGE_ACTIVE_TAB`通知給父視窗的索引標籤控制項。  
+### <a name="remarks"></a>Remarks  
+ This method does not send the `AFX_WM_CHANGE_ACTIVE_TAB` notification to the parent window of the tab control.  
   
- `SetActiveTab`方法會自動呼叫[CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)方法，以避免使螢幕閃爍。  
+ The `SetActiveTab` method automatically calls the [CMFCTabCtrl::HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar) method to prevent the screen from blinking.  
   
-##  <a name="setactivetabboldfont"></a>CMFCTabCtrl::SetActiveTabBoldFont  
- 啟用或停用使用的作用中 索引標籤上的粗體字型。  
+##  <a name="setactivetabboldfont"></a>  CMFCTabCtrl::SetActiveTabBoldFont  
+ Enables or disables use of a bold font on active tabs.  
   
 ```  
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bIsBold`  
- `TRUE`使用以粗體字顯示標籤的 [作用中] 索引標籤。`FALSE`使用標準的字型來顯示標籤。 預設值是 `TRUE`。  
+ `TRUE` to use a bold font to display the label of the active tab; `FALSE` to use the standard font to display the label. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdrawframe"></a>CMFCTabCtrl::SetDrawFrame  
- 指定是否框架周圍繪製矩形內嵌的列。  
+##  <a name="setdrawframe"></a>  CMFCTabCtrl::SetDrawFrame  
+ Specifies whether a frame rectangle is drawn around an embedded bar.  
   
 ```  
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bDraw`  
- `TRUE`若要顯示框架矩形以圍繞內嵌的列。否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` to display a frame rectangle around an embedded bar; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setflatframe"></a>CMFCTabCtrl::SetFlatFrame  
- 指定是否要繪製以平面或 3D 框架 索引標籤區域。  
+##  <a name="setflatframe"></a>  CMFCTabCtrl::SetFlatFrame  
+ Specifies whether to draw a flat or a 3D frame around the tab area.  
   
 ```  
 void SetFlatFrame(
@@ -880,17 +921,17 @@ void SetFlatFrame(
     BOOL bRepaint=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bFlat`  
- `TRUE`要繪製 (2D) 平面框架 索引標籤區域中。`FALSE`繪製三維 (3D) 框架。 預設值是 `TRUE`。  
+ `TRUE` to draw a flat (2D) frame around the tab area; `FALSE` to draw a three-dimensional (3D) frame. The default value is `TRUE`.  
   
  [in] `bRepaint`  
- `TRUE`若要立即; 重繪視窗否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` to redraw the window immediately; otherwise, `FALSE`. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setimagelist"></a>CMFCTabCtrl::SetImageList  
- 指定映像清單。  
+##  <a name="setimagelist"></a>  CMFCTabCtrl::SetImageList  
+ Specifies an image list.  
   
 ```  
 virtual BOOL SetImageList(
@@ -901,93 +942,93 @@ virtual BOOL SetImageList(
 virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 包含影像清單的點陣圖資源識別碼。  
+ The ID of a bitmap resource that contains the image list.  
   
  [in] `cx`  
- 每個映像，單位為像素的寬度。 預設值為 15。  
+ The width of each image, in pixels. The default value is 15.  
   
  [in] `clrTransp`  
- 透明影像的色彩。 此色彩部分會是影像的透明的。 預設值是的洋紅色 RGB(255,0,255)。  
+ The transparent image color. The parts of the image that are this color will be transparent. The default value is the color magenta, RGB(255,0,255).  
   
  [in] `hImageList`  
- 預先載入的影像清單控制代碼。  
+ A handle to a preloaded image list.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功。 `FALSE`如果建立使用一般樣式 索引標籤控制項，或如果第一個方法多載無法載入指定的點陣圖`uiID`參數。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful. `FALSE` if the tab control is created by using a flat style or if the first method overload cannot load the bitmap that is specified by the `uiID` parameter.  
   
-### <a name="remarks"></a>備註  
- 使用此方法設定 索引標籤控制項影像清單。 索引標籤的標籤旁顯示的影像清單中的映像。 這個方法會重新計算 索引標籤的高度，使  索引標籤的大小調整為包含影像和文字。  
+### <a name="remarks"></a>Remarks  
+ Use this method to set an image list for the tab control. The images from the image list are displayed next to the tab label. This method recalculates the tab height so that the tab is sized to contain both the image and the text.  
   
- 使用[CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)  索引標籤控制項，指定要顯示之影像的索引所繼承的方法。  
+ Use the [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) method that is inherited by the tab control to specify the index of the image to display.  
   
-##  <a name="setresizemode"></a>CMFCTabCtrl::SetResizeMode  
- 指定如何在目前的索引標籤控制項可以調整大小，然後重新顯示控制項。  
+##  <a name="setresizemode"></a>  CMFCTabCtrl::SetResizeMode  
+ Specifies how the current tab control can be resized and then redisplays the control.  
   
 ```  
 void SetResizeMode(ResizeMode resizeMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `resizeMode`  
- 其中一個`CMFCTabCtrl::ResizeMode`列舉值，指定可調整大小的索引標籤控制項的方式。 如需可能值的清單，請參閱 < 備註 > 中的資料表。  
+ One of the `CMFCTabCtrl::ResizeMode` enumeration values that specifies how the tab control can be resized. For a list of possible values, see the table in Remarks.  
   
-### <a name="remarks"></a>備註  
- `resizeMode`參數可以是下列其中一種`ResizeMode`列舉值。  
+### <a name="remarks"></a>Remarks  
+ The `resizeMode` parameter can be one of the following `ResizeMode` enumeration values.  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|RESIZE_NO|無法調整 索引標籤控制項的大小。|  
-|RESIZE_VERT|索引標籤控制項可調整大小，以垂直方式，但不是水平。|  
-|RESIZE_HORIZ|索引標籤控制項可調整大小，以水平方式，但不是會以垂直方式。|  
+|RESIZE_NO|The tab control cannot be resized.|  
+|RESIZE_VERT|The tab control can be resized vertically but not horizontally.|  
+|RESIZE_HORIZ|The tab control can be resized horizontally but not vertically.|  
   
-##  <a name="settabmaxwidth"></a>CMFCTabCtrl::SetTabMaxWidth  
- 指定在索引標籤式視窗的最大值 索引標籤寬度。  
+##  <a name="settabmaxwidth"></a>  CMFCTabCtrl::SetTabMaxWidth  
+ Specifies the maximum tab width in a tabbed window.  
   
 ```  
 void SetTabMaxWidth(int nTabMaxWidth);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nTabMaxWidth`  
- 最大值 索引標籤的寬度，單位為像素。  
+ The maximum tab width, in pixels.  
   
-### <a name="remarks"></a>備註  
- 使用這個方法來限制每個索引標籤中的索引標籤式視窗的寬度。 此方法相當實用的索引標籤有很長的標籤。 [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md)類別建構函式會初始化為 0，表示實際寬度不受限制的最大值 索引標籤寬度。  
+### <a name="remarks"></a>Remarks  
+ Use this method to limit the width of each tab in a tabbed window. This method is useful if tabs have very long labels. The [CMFCTabCtrl](../../mfc/reference/cmfctabctrl-class.md) class constructor initializes the maximum tab width to 0, which actually means that the width is not limited.  
   
-##  <a name="stopresize"></a>CMFCTabCtrl::StopResize  
- 終止目前的調整大小作業 索引標籤控制項上。  
+##  <a name="stopresize"></a>  CMFCTabCtrl::StopResize  
+ Terminates the current resize operation on the tab control.  
   
 ```  
 void StopResize(BOOL bCancel);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bCancel`  
- `TRUE`要放棄目前的調整大小作業。`FALSE`完成目前的調整大小作業。 在任一情況下，架構會停止繪製調整大小的矩形。  
+ `TRUE` to abandon the current resize operation; `FALSE` to complete the current resize operation. In either case, the framework stops drawing the resize rectangle.  
   
-##  <a name="synchronizescrollbar"></a>CMFCTabCtrl::SynchronizeScrollBar  
- 一般索引標籤會顯示在索引標籤控制項上繪製水平捲軸。  
+##  <a name="synchronizescrollbar"></a>  CMFCTabCtrl::SynchronizeScrollBar  
+ Draws a horizontal scroll bar on a tab control that displays flat tabs.  
   
 ```  
 BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `pScrollInfo`  
- 指標[SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537)結構或`NULL`。 此方法傳回時，而且如果此參數不是`NULL`，此結構包含捲軸上的所有參數。 預設值是 `NULL`。  
+### <a name="parameters"></a>Parameters  
+ [out] `pScrollInfo`  
+ Pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure or `NULL`. When this method returns, and if this parameter is not `NULL`, the structure contains all the parameters of the scroll bar. The default value is `NULL`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會影響只會顯示一般索引標籤索引標籤控制項。 捲軸會同時影響所有索引標籤。  
+### <a name="remarks"></a>Remarks  
+ This method affects only a tab control that displays flat tabs. The scroll bar influences all the tabs at the same time.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)   
- [CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)   
- [CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)   
+ [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)
 

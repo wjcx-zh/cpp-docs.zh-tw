@@ -1,93 +1,112 @@
 ---
-title: "框架視窗 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CFrameWnd 類別, 框架視窗"
-  - "文件框架視窗"
-  - "框架視窗 [C++]"
-  - "框架視窗 [C++], 關於框架視窗"
-  - "MDI [C++], 框架視窗"
-  - "MFC [C++], 框架視窗"
-  - "單一文件介面 (SDI)"
-  - "單一文件介面 (SDI), 框架視窗"
-  - "分隔視窗, 和框架視窗"
-  - "檢視 [C++], 和框架視窗"
-  - "視窗類別 [C++], 框架"
-  - "視窗 [C++], MDI"
+title: Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document frame windows [MFC]
+- windows [MFC], MDI
+- window classes [MFC], frame
+- single document interface (SDI) [MFC]
+- single document interface (SDI) [MFC], frame windows
+- views [MFC], and frame windows
+- CFrameWnd class [MFC], frame windows
+- frame windows [MFC]
+- frame windows [MFC], about frame widows
+- MFC, frame windows
+- MDI [MFC], frame windows
+- splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 框架視窗
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e53a48c981fa6e470c33e54ef24bbb9bf500f09
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當應用程式在 Windows 下執行時，使用者與框架視窗中顯示的文件互動。  文件框架視窗有兩個主要元件：框架和框架的內容。  文件框架視窗可以是 [單一文件介面](../mfc/sdi-and-mdi.md) \(SDI\) 框架視窗，或 [多重文件介面](../mfc/sdi-and-mdi.md) \(MDI\) 子視窗。   Windows 大部分以框架視窗處理使用者的互動：移動和調整視窗大小，關閉、最小化和最大化。  您可以管理框架內的內容。  
+---
+# <a name="frame-windows"></a>Frame Windows
+When an application runs under Windows, the user interacts with documents displayed in frame windows. A document frame window has two major components: the frame and the contents that it frames. A document frame window can be a [single document interface](../mfc/sdi-and-mdi.md) (SDI) frame window or a [multiple document interface](../mfc/sdi-and-mdi.md) (MDI) child window. Windows manages most of the user's interaction with the frame window: moving and resizing the window, closing it, and minimizing and maximizing it. You manage the contents inside the frame.  
   
-## 框架視窗和檢視  
- MFC 架構使用框架視窗來包含檢視。  兩個元件—框架和內容—由 MFC 中的兩個不同的類別代表及處理。  框架視窗類別處理架構，而檢視類別處理內容。  檢視視窗是框架視窗的子系。  繪圖與其他使用者互動會發生在檢視的工作區，而不是框架視窗的工作區中。  框架視窗在檢視周圍提供可見的框架，標題列和標準 Windows 控制項 \(例如控制功能表，最小化和最大化視窗的按鈕，以及調整視窗大小的控制項\)。  「內容」包括視窗的工作區，由子視窗—檢視完全佔用。  下圖顯示框架視窗和檢視的關聯性。  
+## <a name="frame-windows-and-views"></a>Frame Windows and Views  
+ The MFC framework uses frame windows to contain views. The two components — frame and contents — are represented and managed by two different classes in MFC. A frame-window class manages the frame, and a view class manages the contents. The view window is a child of the frame window. Drawing and other user interaction with the document take place in the view's client area, not the frame window's client area. The frame window provides a visible frame around a view, complete with a caption bar and standard window controls such as a control menu, buttons to minimize and maximize the window, and controls for resizing the window. The "contents" consist of the window's client area, which is fully occupied by a child window — the view. The following figure shows the relationship between a frame window and a view.  
   
- ![框架視窗檢視](../mfc/media/vc37fx1.png "vc37FX1")  
-框架視窗與檢視  
+ ![Frame window view](../mfc/media/vc37fx1.gif "vc37fx1")  
+Frame Window and View  
   
-## 框架視窗和分隔視窗  
- 另一種常見的框架視窗安排是框架多個檢視，通常是使用 [分隔視窗](../mfc/multiple-document-types-views-and-frame-windows.md)。  在分隔視窗中，框架視窗的工作區由分隔視窗佔用，其中又有多個子視窗，稱為窗格 \(是檢視\)。  
+## <a name="frame-windows-and-splitter-windows"></a>Frame Windows and Splitter Windows  
+ Another common arrangement is for the frame window to frame multiple views, usually using a [splitter window](../mfc/multiple-document-types-views-and-frame-windows.md). In a splitter window, the frame window's client area is occupied by a splitter window, which in turn has multiple child windows, called panes, which are views.  
   
-### 您還想知道關於哪些方面的詳細資訊？  
- **一般框架視窗主題**  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
+ **General Frame Window Topics**  
   
--   [視窗物件](../mfc/window-objects.md)  
+-   [Window objects](../mfc/window-objects.md)  
   
--   [框架視窗類別](../mfc/frame-window-classes.md)  
+-   [Frame window classes](../mfc/frame-window-classes.md)  
   
--   [應用程式精靈所建立的框架視窗類別](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
+-   [The Frame-Window classes created by the Application Wizard](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
   
--   [框架視窗樣式](../mfc/frame-window-styles-cpp.md)  
+-   [Frame window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [框架視窗可以做什麼](../mfc/what-frame-windows-do.md)  
+-   [What frame windows do](../mfc/what-frame-windows-do.md)  
   
- **使用框架視窗的主題**  
+ **Topics on Using Frame Windows**  
   
--   [使用框架視窗](../mfc/using-frame-windows.md)  
+-   [Using frame windows](../mfc/using-frame-windows.md)  
   
--   [建立文件框架視窗](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [終結框架視窗](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
--   [管理 MDI 子視窗](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   在包含多個檢視的框架視窗內 [管理目前的檢視](../mfc/managing-the-current-view.md)  
+-   [Managing the current view](../mfc/managing-the-current-view.md) in a frame window that contains more than one view  
   
--   [管理功能表、控制列和快速鍵 \(其他物件共用框架視窗空間的物件\)](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators (other objects that share the frame window's space)](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
- **特殊框架視窗功能的主題**  
+ **Topics on Special Frame Window Capabilities**  
   
--   從檔案總管或文件管理員 [拖放檔案](../mfc/dragging-and-dropping-files-in-a-frame-window.md) 到框架視窗  
+-   [Dragging and dropping files](../mfc/dragging-and-dropping-files-in-a-frame-window.md) from File Explorer or File Manager into a frame window  
   
--   [回應動態資料交換 \(DDE\)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
+-   [Responding to dynamic data exchange (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
   
--   [Semimodal 狀態：即時線上 Windows 說明 \(組織其他視窗動作\)](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: Context-sensitive Windows Help (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
--   [Semimodal 狀態：列印和預覽 \(組織其他視窗動作\)](../mfc/orchestrating-other-window-actions.md)  
+-   [Semimodal states: printing and print preview (Orchestrating other window actions)](../mfc/orchestrating-other-window-actions.md)  
   
- **其他類型視窗的主題**  
+ **Topics on Other Kinds of Windows**  
   
--   [使用檢視](../mfc/using-views.md)  
+-   [Using Views](../mfc/using-views.md)  
   
--   [對話方塊](../mfc/dialog-boxes.md)  
+-   [Dialog boxes](../mfc/dialog-boxes.md)  
   
--   [控制項](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Windows](../mfc/windows.md)
+
+

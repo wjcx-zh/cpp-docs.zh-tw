@@ -1,49 +1,67 @@
 ---
-title: "MFC ActiveX 控制項：屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控制項, 屬性"
-  - "屬性 [MFC]"
-  - "屬性 [MFC], ActiveX 控制項"
+title: 'MFC ActiveX Controls: Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- properties [MFC], ActiveX controls
+- MFC ActiveX controls [MFC], properties
+- properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC ActiveX 控制項：屬性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fb056d7e94cd786d0e62167abccf1e599f2c63fc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-ActiveX 控制項引發事件與其控制項容器通訊。  容器，傳回，使用方法和屬性與控制項溝通。  方法和屬性都是在使用中且打算，分別，對成員函式，而且 C \+\+. 的成員變數分類。  屬性是公開到所有容器 ActiveX 控制項的資料成員。  屬性為包含 ActiveX 控制項的應用程式提供的介面，例如 Automation 用戶端和 ActiveX 控制項容器。  
+---
+# <a name="mfc-activex-controls-properties"></a>MFC ActiveX Controls: Properties
+An ActiveX control fires events to communicate with its control container. The container, in return, uses methods and properties to communicate with the control. Methods and properties are similar in use and purpose, respectively, to member functions and member variables of a C++ class. Properties are data members of the ActiveX control that are exposed to any container. Properties provide an interface for applications that contain ActiveX controls, such as Automation clients and ActiveX control containers.  
   
- 屬性也稱為屬性。  
+ Properties are also called attributes.  
   
- 如需 ActiveX 控制項方法的詳細資訊，請參閱本文件的 [MFC ActiveX 控制項:方法](../mfc/mfc-activex-controls-methods.md)。  
+ For more information on ActiveX control methods, see the article [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md).  
   
- ActiveX 控制項可以實作內建和自訂方法和屬性。  類別為 `COleControl` 內建屬性提供實作。\(如需內建屬性的完整清單，請參閱本文 [MFC ActiveX 控制項:將內建屬性。](../mfc/mfc-activex-controls-adding-stock-properties.md)\)。自訂屬性，定義由開發人員，將特定功能加入至 ActiveX 控制項。  如需詳細資訊，請參閱 [MFC ActiveX 控制項:將自訂屬性](../mfc/mfc-activex-controls-adding-custom-properties.md)。  
+ ActiveX controls can implement both stock and custom methods and properties. Class `COleControl` provides an implementation for stock properties. (For a complete list of stock properties, see the article [MFC ActiveX Controls: Adding Stock Properties](../mfc/mfc-activex-controls-adding-stock-properties.md).) Custom properties, defined by the developer, add specialized capabilities to an ActiveX control. For more information, see [MFC ActiveX Controls: Adding Custom Properties](../mfc/mfc-activex-controls-adding-custom-properties.md).  
   
- 自訂和內建屬性，例如方法，由包含分派對應處理屬性，以及方法和現有 `COleControl` 成員函式分類的機制支援。  此外，這些屬性可以有開發人員使用將額外資訊加入控制項的參數。  
+ Both custom and stock properties, like methods, are supported by a mechanism that consists of a dispatch map that handles properties and methods and existing member functions of the `COleControl` class. In addition, these properties can have parameters that the developer uses to pass extra information to the control.  
   
- 下列文件會進一步討論 ActiveX 控制項屬性:  
+ The following articles discuss ActiveX control properties in more detail:  
   
--   [MFC ActiveX 控制項:將內建屬性。](../mfc/mfc-activex-controls-adding-stock-properties.md)  
+-   [MFC ActiveX Controls: Adding Stock Properties](../mfc/mfc-activex-controls-adding-stock-properties.md)  
   
--   [MFC ActiveX 控制項:將自訂屬性](../mfc/mfc-activex-controls-adding-custom-properties.md)  
+-   [MFC ActiveX Controls: Adding Custom Properties](../mfc/mfc-activex-controls-adding-custom-properties.md)  
   
--   [MFC ActiveX 控制項:進階屬性實作](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
+-   [MFC ActiveX Controls: Advanced Property Implementation](../mfc/mfc-activex-controls-advanced-property-implementation.md)  
   
--   [MFC ActiveX 控制項:存取的環境屬性。](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
+-   [MFC ActiveX Controls: Accessing Ambient Properties](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

@@ -1,40 +1,59 @@
 ---
-title: "Rich Edit 控制項中目前的選取範圍 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl 類別, 其中目前的選取範圍"
-  - "CRichEditCtrls 中目前的選取範圍"
-  - "Rich Edit 控制項, 其中目前的選取範圍"
-  - "選取範圍, CRichEditCtrl 中目前的"
+title: Current Selection in a Rich Edit Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- current selection in CRichEditCtrls
+- CRichEditCtrl class [MFC], current selection in
+- rich edit controls [MFC], current selection in
+- selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Rich Edit 控制項中目前的選取範圍
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e0f40011dcdc9e4153341a4b91ffef3a184db53c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-使用者可以選取的 Rich Edit 控制項 \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\) 的文字使用滑鼠或鍵盤，。  目前選取範圍是選取的字元範圍或插入點的位置字元是否未選取。  應用程式可以取得有關目前選取項目的資訊，將目前的選擇，以判斷目前的選取範圍變更時和顯示或隱藏選取範圍反白顯示。  
+---
+# <a name="current-selection-in-a-rich-edit-control"></a>Current Selection in a Rich Edit Control
+The user can select text in a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) by using the mouse or the keyboard. The current selection is the range of selected characters, or the position of the insertion point if no characters are selected. An application can get information about the current selection, set the current selection, determine when the current selection changes, and show or hide the selection highlight.  
   
- 若要判斷在 Rich Edit 控制項的目前選取範圍，請使用 [GetSel](../Topic/CRichEditCtrl::GetSel.md) 成員函式。  若要設定目前的選取範圍，請使用 [SetSel](../Topic/CRichEditCtrl::SetSel.md) 成員函式。  [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 結構用來以這些函式指定字元的範圍。  若要擷取目前選取範圍內容的資訊，您可以使用 [GetSelectionType](../Topic/CRichEditCtrl::GetSelectionType.md) 成員函式。  
+ To determine the current selection in a rich edit control, use the [GetSel](../mfc/reference/cricheditctrl-class.md#getsel) member function. To set the current selection, use the [SetSel](../mfc/reference/cricheditctrl-class.md#setsel) member function. The [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) structure is used with these functions to specify a range of characters. To retrieve information about the contents of the current selection, you can use the [GetSelectionType](../mfc/reference/cricheditctrl-class.md#getselectiontype) member function.  
   
- 根據預設，，則取得和遺失焦點時，的 Rich Edit 控制項顯示和隱藏選取範圍反白顯示。  使用 [HideSelection](../Topic/CRichEditCtrl::HideSelection.md) 成員函式，您可以隨時顯示或隱藏選取範圍反白顯示。  例如，應用程式可能會提供搜尋對話方塊尋找在 Rich Edit 控制項的文字。  應用程式可以選擇符合文字，而不需關閉對話方塊，如果有的話，就必須使用 `HideSelection` 反白顯示選取範圍的情況下。  
+ By default, a rich edit control shows and hides the selection highlight when it gains and loses the focus. You can show or hide the selection highlight at any time by using the [HideSelection](../mfc/reference/cricheditctrl-class.md#hideselection) member function. For example, an application might provide a Search dialog box to find text in a rich edit control. The application might select matching text without closing the dialog box, in which case it must use `HideSelection` to highlight the selection.  
   
- 若要取得 Rich Edit 控制項中選取的文字，請使用 [GetSelText](../Topic/CRichEditCtrl::GetSelText.md) 成員函式。  文字複製到指定的字元陣列。  您必須確定陣列不夠大保留選取的文字加上結束的 null 字元。  
+ To get the selected text in a rich edit control, use the [GetSelText](../mfc/reference/cricheditctrl-class.md#getseltext) member function. The text is copied to the specified character array. You must ensure that the array is large enough to hold the selected text plus a terminating null character.  
   
- 您可以搜尋在 Rich Edit 控制項的字串使用 [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) 結構搭配此函式指定文字範圍搜尋和字串搜尋的 [FindText](../Topic/CRichEditCtrl::FindText.md) 成員函式。  您也可以指定這個選項與搜尋是否區分大小寫。  
+ You can search for a string in a rich edit control by using the [FindText](../mfc/reference/cricheditctrl-class.md#findtext) member function The [FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909) structure used with this function specifies the text range to search and the string to search for. You can also specify such options as whether the search is case-sensitive.  
   
-## 請參閱  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

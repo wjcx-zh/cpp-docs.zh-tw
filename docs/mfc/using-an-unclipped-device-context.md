@@ -1,36 +1,55 @@
 ---
-title: "使用未裁剪的裝置內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控制項, 未裁剪的裝置內容"
+title: Using an Unclipped Device Context | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], unclipped device context
 ms.assetid: 9c020063-73da-4803-bf7b-2e1fd950c9ed
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用未裁剪的裝置內容
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb4e5f4a40aa1885add7fdb68d1f8123563ef12e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-如果您完全確定您的控制項不在其工作區矩形繪製之外，您也可以停用 `COleControl`所進行的呼叫實現小，但是可偵測的速度擷取到 `IntersectClipRect` 。  若要這樣做，請從 [COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md)傳回的旗標集移除 **clipPaintDC** 旗標。  例如：  
+---
+# <a name="using-an-unclipped-device-context"></a>Using an Unclipped Device Context
+If you are absolutely certain that your control does not paint outside its client rectangle, you can realize a small but detectable speed gain by disabling the call to `IntersectClipRect` that is made by `COleControl`. To do this, remove the **clipPaintDC** flag from the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/CPP/using-an-unclipped-device-context_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/CPP/using-an-unclipped-device-context_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/CPP/using-an-unclipped-device-context_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/using-an-unclipped-device-context_3.cpp)]  
   
- 移除這個旗標的自動產生程式碼，也可以選擇在 [控制項設定](../mfc/reference/control-settings-mfc-activex-control-wizard.md) 頁面的 **Unclipped Device Context** 選項，也就是說，當您建立的 MFC ActiveX 控制項精靈控制項時。  
+ The code to remove this flag is automatically generated if you select the **Unclipped Device Context** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page, when creating your control with the MFC ActiveX Control Wizard.  
   
- 如果您使用無視窗啟動，這個最佳化沒有作用。  
+ If you are using windowless activation, this optimization has no effect.  
   
-## 請參閱  
- [MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

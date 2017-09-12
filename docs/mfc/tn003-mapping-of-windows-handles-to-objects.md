@@ -1,94 +1,112 @@
 ---
-title: "TN003：將 Windows 控制代碼對應到物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mapping"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制代碼對應"
-  - "對應, Windows 控制代碼到物件"
-  - "TN003"
-  - "Windows 控制代碼到物件 [C++]"
+title: 'TN003: Mapping of Windows Handles to Objects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mapping
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN003
+- handle maps
+- Windows handles to objects [MFC]
+- mappings [MFC]], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
 caps.latest.revision: 15
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN003：將 Windows 控制代碼對應到物件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b1ae730c803bd8c8e4e3f5c5a700ccfb52fb738e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這個附註描述支援映像視窗物件控制代碼 C\+\+ 物件的 MFC 常式。  
+---
+# <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Mapping of Windows Handles to Objects
+This note describes the MFC routines that support mapping Windows object handles to C++ objects.  
   
-## 問題  
- 視窗物件由具有 C\+\+ 的 MFC 類別包裝視窗物件控制項物件的各種 [控制代碼](http://msdn.microsoft.com/library/windows/desktop/aa383751) 物件通常表示。  包裝 MFC 類別庫的函式的控制代碼可讓您尋找包裝視窗物件具有特殊控制代碼的 C\+\+ 物件。  不過，物件有時沒有 C \+\+. 包裝函式物件，而這些時間系統建立暫存物件以 C\+\+ 包裝函式。  
+## <a name="the-problem"></a>The Problem  
+ Windows objects are typically represented by various [HANDLE](http://msdn.microsoft.com/library/windows/desktop/aa383751) objects The MFC classes wrap Windows object handles with C++ objects. The handle wrapping functions of the MFC class library let you find the C++ object that is wrapping the Windows object that has a particular handle. However, sometimes an object does not have a C++ wrapper object and at these times the system creates a temporary object to act as the C++ wrapper.  
   
- 視窗物件使用控制代碼對應如下:  
+ The Windows objects that use handle maps are as follows:  
   
--   HWND \([CWnd](../mfc/reference/cwnd-class.md) 和 `CWnd`衍生類別\)  
+-   HWND ([CWnd](../mfc/reference/cwnd-class.md) and `CWnd`-derived classes)  
   
--   HDC \([CDC](../mfc/reference/cdc-class.md) 和 `CDC`衍生類別\)  
+-   HDC ([CDC](../mfc/reference/cdc-class.md) and `CDC`-derived classes)  
   
--   項目 \([CMenu](../mfc/reference/cmenu-class.md)\)  
+-   HMENU ([CMenu](../mfc/reference/cmenu-class.md))  
   
--   HPEN \([CGdiObject](../mfc/reference/cgdiobject-class.md)\)  
+-   HPEN ([CGdiObject](../mfc/reference/cgdiobject-class.md))  
   
--   HBRUSH \(`CGdiObject`\)  
+-   HBRUSH (`CGdiObject`)  
   
--   HFONT \(`CGdiObject`\)  
+-   HFONT (`CGdiObject`)  
   
--   HBITMAP \(`CGdiObject`\)  
+-   HBITMAP (`CGdiObject`)  
   
--   HPALETTE \(`CGdiObject`\)  
+-   HPALETTE (`CGdiObject`)  
   
--   HRGN \(`CGdiObject`\)  
+-   HRGN (`CGdiObject`)  
   
--   HIMAGELIST \([CImageList](../mfc/reference/cimagelist-class.md)\)  
+-   HIMAGELIST ([CImageList](../mfc/reference/cimagelist-class.md))  
   
--   通訊端 \([CSocket](../mfc/reference/csocket-class.md)\)  
+-   SOCKET ([CSocket](../mfc/reference/csocket-class.md))  
   
- 將控制項加入至任何一個物件，您可以藉由呼叫靜態方法包裝控制項 `FromHandle`的 MFC 物件。  例如將 HWND 呼叫 `hWnd`，下列程式碼會傳回包裝 `hWnd`之 `CWnd` 的指標:  
+ Given a handle to any one of these objects, you can find the MFC object that wraps the handle by calling the static method `FromHandle`. For example, given an HWND called `hWnd`, the following line will return a pointer to the `CWnd` that wraps `hWnd`:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- 如果 `hWnd` 沒有特定的包裝函式物件，暫存 `CWnd` 建立包裝 `hWnd`。  這樣做可以衍生自所有控制代碼的有效的 C\+\+ 物件。  
+ If `hWnd` does not have a specific wrapper object, a temporary `CWnd` is created to wrap `hWnd`. This makes it possible to obtain a valid C++ object from any handle.  
   
- 在您有包裝函式物件之後，您可以從包裝函式類別的公用成員變數擷取其控制代碼。  在 `CWnd`的情況下， `m_hWnd` 包含物件的 HWND。  
+ After you have a wrapper object, you can retrieve its handle from a public member variable of the wrapper class. In the case of a `CWnd`, `m_hWnd` contains the HWND for that object.  
   
-## 附加至 MFC 物件的控制代碼  
- 將新建立的控制代碼的包裝函式物件和一個控制代碼視窗物件，您可以呼叫 `Attach` 函式使兩個如同下列範例所示:  
+## <a name="attaching-handles-to-mfc-objects"></a>Attaching Handles to MFC Objects  
+ Given a newly created handle-wrapper object and a handle to a Windows object, you can associate the two by calling the `Attach` function as in this example:  
   
 ```  
 CWnd myWnd;  
-myWnd.Attach(hWnd);  
+myWnd.Attach(hWnd);
 ```  
   
- 這會使 `myWnd` 和 `hWnd`的永久對應中的項目。  呼叫 `CWnd::FromHandle(hWnd)` 會傳回 `myWnd`的指標。  當 `myWnd` 刪除，解構函式會呼叫 Windows 函式 [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) 自動終結 `hWnd` 。  如果此不希望，必須從 `myWnd` 中斷連接 `hWnd` ，以在終結物件前 `myWnd` \(通常，讓 `myWnd` 所定義\) 的範圍。  `Detach` 方法。  
+ This makes an entry in the permanent map associating `myWnd` and `hWnd`. Calling `CWnd::FromHandle(hWnd)` will now return a pointer to `myWnd`. When `myWnd` is deleted, the destructor will automatically destroy `hWnd` by calling the Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682) function. If this is not desired, `hWnd` must be detached from `myWnd` before `myWnd` is destroyed (normally when leaving the scope at which `myWnd` was defined). The `Detach` method does this.  
   
 ```  
-myWnd.Detach();  
+myWnd.Detach();
 ```  
   
-## 進一步了解暫存物件  
- 暫存物件建立，就將尚未包裝函式物件 `FromHandle` 的控制代碼。  這些暫存物件從其控制代碼中斷並由 `DeleteTempMap` 函式刪除。  預設 [CWinThread::OnIdle](../Topic/CWinThread::OnIdle.md) 自動呼叫支援暫存控制代碼對應的每個類別的 `DeleteTempMap` 。  這表示您無法假設對暫存物件的指標是有效傳遞問題的從指標取得函式的匯出。  
+## <a name="more-about-temporary-objects"></a>More About Temporary Objects  
+ Temporary objects are created whenever `FromHandle` is given a handle that does not already have a wrapper object. These temporary objects are detached from their handle and deleted by the `DeleteTempMap` functions. By default [CWinThread::OnIdle](../mfc/reference/cwinthread-class.md#onidle) automatically calls `DeleteTempMap` for each class that supports temporary handle maps. This means that you cannot assume a pointer to a temporary object will be valid past the point of exit from the function where the pointer was obtained.  
   
-## 包裝函式物件和多執行緒  
- 暫時和永久目標維護個別執行緒為基礎。  也就是另一個執行緒的 C\+\+ 包裝函式物件的執行緒無法存取，不論它是否暫時或永久。  
+## <a name="wrapper-objects-and-multiple-threads"></a>Wrapper Objects and Multiple Threads  
+ Both temporary and permanent objects are maintained on a per-thread basis. That is, one thread cannot access another thread's C++ wrapper objects, regardless of whether it is temporary or permanent.  
   
- 若要將執行緒的這些物件與另一個，務必將它們當做其原生 `HANDLE` 型別。  透過 C \+\+. 從一個執行緒的包裝函式物件與另一個通常會造成未預期的結果。  
+ To pass these objects from one thread to another, always send them as their native `HANDLE` type. Passing a C++ wrapper object from one thread to another will often cause unexpected results.  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

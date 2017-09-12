@@ -1,119 +1,139 @@
 ---
-title: "TN011：將 MFC 當成 DLL 的一部分來使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.dll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_USRDLL 符號"
-  - "DLL [C++], 連結"
-  - "MFC DLL [C++], 將標準 DLL 連結至 MFC"
-  - "TN011"
-  - "USRDLL, 編譯器參數"
+title: 'TN011: Using MFC as Part of a DLL | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.dll
+dev_langs:
+- C++
+helpviewer_keywords:
+- _USRDLL symbol
+- USRDLLs, compiler switches
+- TN011
+- DLLs [MFC], linking
+- MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# TN011：將 MFC 當成 DLL 的一部分來使用
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6c705e64040214c028cdc2e5a59ba173a04ec9ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-說明標準 DLL，可以讓您將 MFC 程式庫當成 Windows 動態連結程式庫來使用。  它假設您熟悉 Windows DLL 和如何建置它們。  如需 MFC 擴充 DLL 的資訊，您可以建立擴充功能加入至 MFC 程式庫，請參閱 [MFC DLL 版本](../mfc/tn033-dll-version-of-mfc.md)。  
+---
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Using MFC as Part of a DLL
+This note describes regular MFC DLLs, which allow you to use the MFC library as part of a Windows dynamic-link library (DLL). It assumes that you are familiar with Windows DLLs and how to build them. For information about MFC extension DLLs, with which you can create extensions to the MFC library, see [DLL Version of MFC](../mfc/tn033-dll-version-of-mfc.md).  
   
-## DLL 介面  
- 泛型 DLL 假設應用程式和 DLL 之間的介面在像 C 的函式指定或明確匯出類別。  MFC 類別介面無法匯出。  
+## <a name="dll-interfaces"></a>DLL Interfaces  
+ regular MFC DLLs assume interfaces between the application and the DLL are specified in C-like functions or explicitly exported classes. MFC class interfaces cannot be exported.  
   
- 如果 DLL 和應用程式要使用 MFC，具有一個要使用 MFC 程式庫的共用版本或對靜態與程式庫的複寫連線。  應用程式和 DLL 可能都使用其中一個 MFC 程式庫的標準版本。  
+ If both a DLL and an application want to use MFC, both have a choice to either use the shared version of the MFC libraries or to statically link to a copy of the libraries. The application and DLL may both use one of the standard versions of the MFC library.  
   
- 標準 DLL 有下列幾項優點:  
+ regular MFC DLLs have several advantages:  
   
--   使用 DLL 的應用程式不使用 MFC，而且不需要是 Visual C\+\+ 應用程式。  
+-   The application that uses the DLL does not have to use MFC and does not have to be a Visual C++ application.  
   
--   靜態連結至 MFC 的標準 DLL， DLL 的大小只取決於使用和介面的 MFC 和 C 執行階段常式。  
+-   With regular MFC DLLs that statically link to MFC, the size of the DLL depends only on the MFC and C runtime routines that are used and linked.  
   
--   動態連結至 MFC 的標準 DLL，在記憶體中節省從使用 MFC 的共用版本可以是很重要的。  不過，您必須發出共用 DLL、Mfc*\<version\>*.dll 和 Msvvcrt 與您的 DLL 的*\<version\>*.dll，。  
+-   With regular MFC DLLs that dynamically link to MFC, the savings in memory from using the shared version of MFC can be significant. However, you must distribute the shared DLLs, Mfc*\<version>*.dll and Msvvcrt*\<version>*.dll, with your DLL.  
   
--   DLL 設計是獨立類別如何實作。  您的 DLL 設計只匯出至您要的 API。  因此，，如果實作變更，標準 DLL 有效。  
+-   The DLL design is independent of how classes are implemented. Your DLL design exports only to the APIs you want. As a result, if the implementation changes, regular MFC DLLs are still valid.  
   
--   標準 DLL，因此，如果 DLL 和應用程式使用 MFC 靜態連結至 MFC，沒有比 DLL 想要反之亦然 MFC 不同版本或應用程式的問題。  因為 MFC 程式庫以靜態方式連結至每個 DLL 或 EXE，沒有關於版本的問題您有。  
+-   With regular MFC DLLs that statically link to MFC, if both DLL and application use MFC, there are no problems with the application that wants a different version of MFC than the DLL or vice versa. Because the MFC library is statically linked into each DLL or EXE, there is no question about which version you have.  
   
-## API限制  
- 一些 MFC 功能並不適用於 DLL 版本，或由於技術限制，或是因為應用程式通常會提供這些服務。  MFC 版本，不適用於的函式是 `CWinApp::SetDialogBkColor`。  
+## <a name="api-limitations"></a>API Limitations  
+ Some MFC functionality does not apply to the DLL version, either because of technical limitations or because those services are usually provided by the application. With the current version of MFC, the only function that is not applicable is `CWinApp::SetDialogBkColor`.  
   
-## 建置 DLL  
- 當必須定義編譯標準 DLL 使用 MFC，符號的 `_USRDLL` 和 `_WINDLL` 時靜態連結。  也必須編譯您的 DLL 程式碼與下列編譯器參數:  
+## <a name="building-your-dll"></a>Building Your DLL  
+ When compiling regular MFC DLLs that statically link to MFC, the symbols `_USRDLL` and `_WINDLL` must be defined. Your DLL code must also be compiled with the following compiler switches:  
   
--   **\/D\_WINDLL** 表示編譯為 DLL  
+- **/D_WINDLL** signifies the compilation is for a DLL  
   
--   **\/D\_USRDLL** 指定您建置標準 DLL  
+- **/D_USRDLL** specifies you are building a regular MFC DLL  
   
- 在動態編譯標準 DLL 該連結至 MFC 時，您也必須定義這些符號和使用這些編譯器參數。  此外，必須定義符號則為 `_AFXDLL` ，而且必須編譯您的程式碼與 DLL:  
+ You must also define these symbols and use these compiler switches when you compile regular MFC DLLs that dynamically link to MFC. Additionally, the symbol `_AFXDLL` must be defined and your DLL code must be compiled with:  
   
--   **\/D\_AFXDLL** 指定建置該規則的 DLL 動態連結至 MFC  
+- **/D_AFXDLL** specifies that you are building a regular MFC DLL that dynamically links to MFC  
   
- 必須明確地匯出介面 \(API\) 應用程式和 DLL 之間。  我們建議您定義介面是低頻寬，並且只使用 C 介面，則可以。  直接 C 介面比更複雜的 C\+\+ 類別容易維護。  
+ The interfaces (APIs) between the application and the DLL must be explicitly exported. We recommend that you define your interfaces to be low bandwidth, and use only C interfaces if you can. Direct C interfaces are easier to maintain than more complex C++ classes.  
   
- 將 API 以 C 和 C\+\+ 檔案包含不同的標題。  如需範例查看 MFC 進階概念 [DLLScreenCap](../top/visual-cpp-samples.md) 範例的標題 ScreenCap.h。  您要匯出的函式，請輸入到模組定義檔 \(.DEF\) 的 `EXPORTS` 部分或包括在您的函式定義的 `__declspec(dllexport)` 。  使用 `__declspec(dllimport)` 匯入這些函式匯入用戶端可執行檔。  
+ Place your APIs in a separate header that can be included by both C and C++ files. See the header ScreenCap.h in the MFC Advanced Concepts sample [DLLScreenCap](../visual-cpp-samples.md) for an example. To export your functions, enter them in the `EXPORTS` section of your module definition file (.DEF) or include `__declspec(dllexport)` on your function definitions. Use `__declspec(dllimport)` to import these functions into the client executable.  
   
- 您必須在動態連結至 MFC 的標準 DLL 的匯出函式的開頭加入 `AFX_MANAGE_STATE` 巨集。  這個巨集目前模組狀態設定為 DLL 的狀態。  透過使用這個巨集，將下行程式碼加入由 DLL 匯出的函式開頭來完成：  
+ You must add the `AFX_MANAGE_STATE` macro at the beginning of all the exported functions in regular MFC DLLs that dynamically link to MFC. This macro sets the current module state to the one for the DLL. To use this macro, add the following line of code to the beginning of functions exported from the DLL:  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   
-## WinMain\-\> DllMain  
- MFC 程式庫定義標準 Win32 `DllMain` 進入點初始化您的 [CWinApp](../mfc/reference/cwinapp-class.md) 衍生物件加入位於一般 MFC 應用程式。  像在一般 MFC 應用程式一樣，將所有 DLL 特定的初始化置於 [InitInstance](../Topic/CWinApp::InitInstance.md) 成員函式裡。  
+## <a name="winmain---dllmain"></a>WinMain -> DllMain  
+ The MFC library defines the standard Win32 `DllMain` entry point that initializes your [CWinApp](../mfc/reference/cwinapp-class.md) derived object as in a typical MFC application. Place all DLL-specific initialization in the [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) method as in a typical MFC application.  
   
- 請注意因為應用程式擁有主要訊息幫浦，所以 [CWinApp::Run](../Topic/CWinApp::Run.md) 機制不適用於 DLL。  如果 DLL 顯示非強制回應的對話方塊或者是有它自己的主框架視窗，應用程式的主要訊息幫浦就必須呼叫將會呼叫 [CWinApp::PreTranslateMessage](../Topic/CWinApp::PreTranslateMessage.md) 的 DLL 匯出常式。  
+ Note that the [CWinApp::Run](../mfc/reference/cwinapp-class.md#run) mechanism does not apply to a DLL, because the application owns the main message pump. If your DLL displays modeless dialogs or has a main frame window of its own, your application's main message pump must call a DLL-exported routine that calls [CWinApp::PreTranslateMessage](../mfc/reference/cwinapp-class.md#pretranslatemessage).  
   
- 請參閱 DLLScreenCap 範例觀看這個函式的使用範例。  
+ See the DLLScreenCap sample for use of this function.  
   
- 在卸載 DLL 之前，MFC 提供的 `DllMain` 函式會從`CWinApp`  衍生您自己的類別的 [CWinApp::ExitInstance](../Topic/CWinApp::ExitInstance.md) 方法。  
+ The `DllMain` function that MFC provides will call the [CWinApp::ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) method of your class that is derived from `CWinApp` before the DLL is unloaded.  
   
-## 連接您的 DLL  
- 靜態連結至 MFC 的標準 DLL，您必須連結您的 DLL Nafxcwd.lib 或 Nafxcw.lib 和使用 C 執行階段具名 Libcmt.lib 的版本。  這些程式庫是預先建立，而且可以透過指定它們安裝，當您執行 Visual C\+\+ 設定時。  
+## <a name="linking-your-dll"></a>Linking Your DLL  
+ With regular MFC DLLs that statically link to MFC, you must link your DLL with Nafxcwd.lib or Nafxcw.lib and with the version of the C runtimes named Libcmt.lib. These libraries are pre-built and may be installed by specifying them when you run Visual C++ setup.  
   
-## 程式碼範例  
- 如需完整的範例的 MFC 進階概念 DLLScreenCap 範例程式。  請注意幾個有趣的是在這個範例如下:  
+## <a name="sample-code"></a>Sample Code  
+ See the MFC Advanced Concepts sample program DLLScreenCap for a complete sample. Several interesting things to note in this sample are as follows:  
   
--   DLL 的編譯器旗標和這些應用程式是不同的。  
+-   The compiler flags of the DLL and those of the application are different.  
   
--   連結行和 .DEF 檔的 DLL 和那些應用程式的不同。  
+-   The link lines and .DEF files for the DLL and those for the application are different.  
   
--   使用 DLL 的應用程式不需要在 C\+\+。  
+-   The application that uses the DLL does not have to be in C++.  
   
--   應用程式和由 C 或 C\+\+ 可和匯出與 DLLScreenCap.def 的 DLL 之間的介面是應用程式開發介面。  
+-   The interface between the application and the DLL is an API that is usable by C or C++ and is exported with DLLScreenCap.def.  
   
- 在該規則的 DLL 定義靜態連結至 MFC 的範例說明了應用程式開發介面。  在此範例中，宣告在 C\+\+ 使用者的 `extern "C" { }` 區塊內。  這有數種好處。  第一，它能夠讓非 C\+\+ 用戶端應用程式也可以使用您的 DLL API。  第二，它降低了 DLL 虛耗的空間，因為 C\+\+ 名稱損壞無法套用至已匯出的名稱。  最後，它讓您更容易明確地加入至 .DEF 檔案 \(以便用於依序數匯出\)，而不需要擔心 C\+\+ 名稱損壞。  
+ The following example illustrates an API that is defined in a regular MFC DLL that statically links to MFC. In this example, the declaration is enclosed in an `extern "C" { }` block for C++ users. This has several advantages. First, it makes your DLL APIs usable by non-C++ client applications. Second, it reduces DLL overhead because C++ name mangling will not be applied to the exported name. Lastly, it makes it easier to explicitly add to a .DEF file (for exporting by ordinal) without having to worry about name mangling.  
   
 ```  
 #ifdef __cplusplus  
 extern "C" {  
 #endif  /* __cplusplus */  
-  
+ 
 struct TracerData  
 {  
-    BOOL    bEnabled;  
-    UINT    flags;  
+    BOOL bEnabled;  
+    UINT flags;  
 };  
-  
-BOOL PromptTraceFlags(TracerData FAR* lpData);  
-  
+ 
+BOOL PromptTraceFlags(TracerData FAR* lpData);
+
+ 
 #ifdef __cplusplus  
 }  
 #endif  
 ```  
   
- 應用程式開發介面使用的結構從 MFC 類別在應用程式開發介面標頭不是衍生自和定義。  這會減少介面的複雜 DLL 和應用程式之間的並使 DLL 可以由 C 程式。  
+ The structures used by the API are not derived from MFC classes and are defined in the API header. This reduces the complexity of the interface between the DLL and the application and makes the DLL usable by C programs.  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

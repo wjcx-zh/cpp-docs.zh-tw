@@ -1,51 +1,70 @@
 ---
-title: "如何：更新使用者介面物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令, 更新 UI"
-  - "停用功能表"
-  - "停用 UI 項目"
-  - "啟用功能表"
-  - "啟用 UI 項目"
-  - "功能表, 更新為內容變更"
-  - "更新處理常式"
-  - "更新使用者介面物件"
-  - "使用者介面物件"
-  - "使用者介面物件, 更新"
+title: 'How to: Update User-Interface Objects | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- menus [MFC], updating as context changes
+- user interface objects [MFC], updating
+- user interface objects [MFC]
+- update handlers [MFC]
+- enabling UI elements [MFC]
+- disabling menus [MFC]
+- updating user-interface objects [MFC]
+- disabling UI elements [MFC]
+- commands [MFC], updating UI
+- enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 如何：更新使用者介面物件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b1e085cf7ee4d0e3ac040b3128ca2d778fdaea4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-通常，功能表項目和工具列按鈕有一種以上的狀態。  例如，功能表項目變成灰色 \(文件\)，則無法在目前的內容。  功能表項目也可以是已核取或未核取。  工具列按鈕也可以停用，否則無法使用，也可以是已核取。  
+---
+# <a name="how-to-update-user-interface-objects"></a>How to: Update User-Interface Objects
+Typically, menu items and toolbar buttons have more than one state. For example, a menu item is grayed (dimmed) if it is unavailable in the present context. Menu items can also be checked or unchecked. A toolbar button can also be disabled if unavailable, or it can be checked.  
   
- 當程式條件變更，了解更新這些項目狀態?  邏輯，則為，如果功能表項目產生文件所處理的命令，因此才會將文件更新功能表項目。  文件可能包含更新的資訊。  
+ Who updates the state of these items as program conditions change Logically, if a menu item generates a command that is handled by, say, a document, it makes sense to have the document update the menu item. The document probably contains the information on which the update is based.  
   
- 如果命令具有多使用者介面物件 \(可能是功能表項目和工具列按鈕\)，會傳送至相同處理函式。  這在單一位置封裝所有的使用者介面更新程式碼的使用者介面物件。  
+ If a command has multiple user-interface objects (perhaps a menu item and a toolbar button), both are routed to the same handler function. This encapsulates your user-interface update code for all of the equivalent user-interface objects in a single place.  
   
- 這個架構自動更新使用者介面物件提供方便的介面。  您可以選擇執行更新的其他方法，不過，提供的介面是有效率且容易使用的。  
+ The framework provides a convenient interface for automatically updating user-interface objects. You can choose to do the updating in some other way, but the interface provided is efficient and easy to use.  
   
- 下列主題將說明使用更新處理常式:  
+ The following topics explain the use of update handlers:  
   
--   [呼叫更新處理常式的時機](../mfc/when-update-handlers-are-called.md)  
+-   [When update handlers are called](../mfc/when-update-handlers-are-called.md)  
   
--   [ON\_UPDATE\_COMMAND\_UI 巨集](../mfc/on-update-command-ui-macro.md)  
+-   [The ON_UPDATE_COMMAND_UI macro](../mfc/on-update-command-ui-macro.md)  
   
--   [CCmdUI 類別](../mfc/the-ccmdui-class.md)  
+-   [The CCmdUI class](../mfc/the-ccmdui-class.md)  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Menus](../mfc/menus-mfc.md)
+
+

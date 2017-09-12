@@ -1,170 +1,192 @@
 ---
-title: "TN043：RFX 常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RFX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RFX (資料錄欄位交換)"
-  - "RFX (資料錄欄位交換), 架構"
-  - "TN043"
+title: 'TN043: RFX Routines | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- RFX
+dev_langs:
+- C++
+helpviewer_keywords:
+- RFX (record field exchange), architecture
+- TN043
+- RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN043：RFX 常式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8be94b49bd8ea339ae0639bad26110c23725d1f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn043-rfx-routines"></a>TN043: RFX Routines
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。  因此，有些程序和主題可能已過期或不正確。  如需最新資訊，建議您在線上文件索引中搜尋相關的主題。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 這個會描述資料錄欄位交換 \(RFX\) 結構。  它也說明如何撰寫 **RFX\_** 程序。  
+ This note describes the record field exchange (RFX) architecture. It also describes how you write an **RFX_** procedure.  
   
-## 資料錄欄位交換概觀  
- 所有資料錄集欄位函式完成與 C\+\+ 程式碼。  沒有特殊資源或不需要什麼特別的巨集。  這個機制的核心是在每個衍生資料錄集類別必須覆寫的虛擬函式。  永遠會以這種形式:  
+## <a name="overview-of-record-field-exchange"></a>Overview of Record Field Exchange  
+ All recordset field functions are done with C++ code. There are no special resources or magic macros. The heart of the mechanism is a virtual function that must be overridden in every derived recordset class. It is always found in this form:  
   
 ```  
 void CMySet::DoFieldExchange(CFieldExchange* pFX)  
-{  
-  //{{AFX_FIELD_MAP(CMySet)  
-  <recordset exchange field type call>  
-  <recordset exchange function call>  
-  //}}AFX_FIELD_MAP  
+{ *//{{AFX_FIELD_MAP(CMySet)  
+ <recordset exchange field type call>  
+ <recordset exchange function call> *//}}AFX_FIELD_MAP  
 }  
 ```  
   
- 特殊格式 AFX 註解允許 ClassWizard 尋找和編輯此函式中的程式碼。  程式碼與 ClassWizard 相容應該放置在特殊格式註解外。  
+ The special format AFX comments allow ClassWizard to locate and edit the code within this function. Code that is not compatible with ClassWizard should be placed outside of the special format comments.  
   
- 在上述範例中， \<recordset\_exchange\_field\_type\_call\> 表單:  
-  
-```  
-pFX->SetFieldType(CFieldExchange::outputColumn);  
-```  
-  
- 然後 \<recordset\_exchange\_function\_call\> 表單:  
+ In the above example, <recordset_exchange_field_type_call> is in the form:  
   
 ```  
-RFX_Custom(pFX, "Col2", m_Col2);  
+pFX->SetFieldType(CFieldExchange::outputColumn);
 ```  
   
- 大部分 **RFX\_** 函式有三個引數如上所述，不過，陣列 \(也就是。  `RFX_Text` 和 `RFX_Binary`\) 具有不同的選擇性引數。  
+ and <recordset_exchange_function_call> is in the form:  
   
- 多個 **RFX\_** 在每個 `DoDataExchange` 函式可能包括。  
+```  
+RFX_Custom(pFX, "Col2",
+    m_Col2);
+```  
   
- 為所有資料錄欄位交換常式清單參閱「afxdb.h」隨附 MFC。  
+ Most **RFX_** functions have three arguments as shown above, but some (e.g. `RFX_Text` and `RFX_Binary`) have additional optional arguments.  
   
- 資料錄集呼叫欄位是註冊記憶體位置模式 \(通常是資料成員\) 儲存欄位資料為 **CMySet** 類別。  
+ More than one **RFX_** may be included in each `DoDataExchange` function.  
   
-## 備註  
- 資料錄集欄位函式被設計只與 `CRecordset` 類別一起使用。  它們由其他 MFC 類別通常無法使用。  
+ See 'afxdb.h' for a list of all the recordset field exchange routines provided with MFC.  
   
- 原始資料在 Standard C\+\+ 建構函式設定，通常在具有 `//{{AFX_FIELD_INIT(CMylSet)` 和 `//}}AFX_FIELD_INIT` 的註解區塊。  
+ Recordset field calls are a way of registering memory locations (usually data members) to store field data for a **CMySet** class.  
   
- 每個 **RFX\_** 函式必須支援各種作業，範圍從傳回欄位的廢棄狀況對封存欄位為準備編輯欄位。  
+## <a name="notes"></a>Notes  
+ Recordset field functions are designed to work only with the `CRecordset` classes. They are not generally usable by any other MFC classes.  
   
- 呼叫 `DoFieldExchange` 的每個函式 \(例如 `SetFieldNull`\)，則為 `IsFieldDirty`，在呼叫前後執行其初始設定為 `DoFieldExchange`。  
+ Initial values of data are set in the standard C++ constructor, usually in a block with `//{{AFX_FIELD_INIT(CMylSet)` and `//}}AFX_FIELD_INIT` comments.  
   
-## 它的運作方式?  
- 您不需要了解下列才能使用資料錄欄位交換。  不過，了解這項處理在幕後作業可協助您撰寫交換程序。  
+ Each **RFX_** function must support various operations, ranging from returning the dirty status of the field to archiving the field in preparation for editing the field.  
   
- `DoFieldExchange` 成員函式非常類似 `Serialize` 成員函式 \(它會取得或設定從外部表單 \(在此情況下從 ODBC 查詢結果的資料行資料負責\) 從\/至類別中的成員資料。  `pFX` 參數是對資料交換內容類似 `CArchive` 參數的 `CObject::Serialize`。  `pFX` \( `CFieldExchange` 物件\) 有作業指示器，類似，不過， `CArchive` 方向旗標的一般化。  RFX 函式可能必須支援下列作業:  
+ Each function that calls `DoFieldExchange` (for instance `SetFieldNull`, `IsFieldDirty`), does its own initialization around the call to `DoFieldExchange`.  
   
--   **BindParam** —指示 ODBC 應該擷取參數資料的位置。  
+## <a name="how-does-it-work"></a>How Does It Work  
+ You do not need to understand the following in order to use record field exchange. However, understanding how this works behind the scenes will help you write your own exchange procedure.  
   
--   **BindFieldToColumn** —指示 ODBC 必須擷取\/內建 outputColumn 資料的位置。  
+ The `DoFieldExchange` member function is much like the `Serialize` member function — it is responsible for getting or setting data to/from an external form (in this case columns from the result of an ODBC query) from/to member data in the class. The `pFX` parameter is the context for doing data exchange and is similar to the `CArchive` parameter to `CObject::Serialize`. The `pFX` (a `CFieldExchange` object) has an operation indicator, which is similar to, but a generalization of the `CArchive` direction flag. An RFX function may have to support the following operations:  
   
--   **Fixup** —集合 **CString\/CByteArray** 長度，集合空白狀態位元  
+- **BindParam** — Indicate where ODBC should retrieve parameter data  
   
--   如果值已變更，因為上呼叫，**MarkForAddNew** —標記變更  
+- **BindFieldToColumn** — Indicate where ODBC must retrieve/deposit outputColumn data  
   
--   如果值已變更，因為編輯呼叫，**MarkForUpdate** —標記變更  
+- **Fixup** — Set **CString/CByteArray** lengths, set NULL status bit  
   
--   **Name** —附加欄位名稱欄位標記為變更。  
+- **MarkForAddNew** — Mark dirty if value has changed since AddNew call  
   
--   **NameValue** —附加行 name\=\>「\<?」對於欄位標記為變更。  
+- **MarkForUpdate** — Mark dirty if value has changed since Edit call  
   
--   \[**值**\] —附加「?」後面接著分隔符號，例如「，」或"  
+- **Name** — Append field names for fields marked dirty  
   
--   `SetFieldDirty` —集合狀態位元已變更 \(例如變更\) 欄位  
+- **NameValue** — Append "\<column name>=" for fields marked dirty  
   
--   `SetFieldNull` —集合狀態位元所表示欄位的 null 值。  
+- **Value** — Append "" followed by separator, like ',' or ' '  
   
--   `IsFieldDirty` —傳回值已變更的狀態位元  
+- `SetFieldDirty` — Set status bit dirty (i.e. changed) field  
   
--   `IsFieldNull` —傳回值 null 狀態位元  
+- `SetFieldNull` — Set status bit indicating null value for field  
   
--   `IsFieldNullable` —傳回則為 true，如果欄位可能表示 null 值。  
+- `IsFieldDirty` — Return value of dirty status bit  
   
--   **StoreField** —封存欄位值  
+- `IsFieldNull` — Return value of null status bit  
   
--   **LoadField** —重新載入封存的欄位值。  
+- `IsFieldNullable` — Return TRUE if field can hold NULL values  
   
--   **GetFieldInfoValue** —有關欄位傳回一般資訊  
+- **StoreField** — Archive field value  
   
--   **GetFieldInfoOrdinal** —有關欄位傳回一般資訊  
+- **LoadField** — Reload archived field value  
   
-## 使用者擴充功能。  
- 有幾個方式擴充預設 RFX 機制。  您可以  
+- **GetFieldInfoValue** — Return general information on a field  
   
--   加入新的資料型別。  例如：  
+- **GetFieldInfoOrdinal** — Return general information on a field  
   
-    ```  
-    CBookmark  
-    ```  
+## <a name="user-extensions"></a>User Extensions  
+ There are several ways to extend the default RFX mechanism. You can  
   
--   加入新的交換程序 \(RFX\_???\)。  
+-   Add new data types. For example:  
   
-    ```  
-    void AFXAPI RFX_Bigint(CFieldExchange* pFX, const char *szName,  
-        BIGINT& value);  
-    ```  
+ ```  
+    CBookmark 
+ ```  
   
--   有條件地使用 `DoFieldExchange` 成員函式包含額外的 RFX 呼叫或任何其他有效 C\+\+ 陳述式。  
+-   Add new exchange procedures (RFX_).  
   
-    ```  
+ ```  
+    void AFXAPI RFX_Bigint(CFieldExchange* pFX,
+    const char *szName,  
+    BIGINT& value);
+
+ ```  
+  
+-   Have the `DoFieldExchange` member function conditionally include additional RFX calls or any other valid C++ statements.  
+  
+ ```  
     while (posExtraFields != NULL)  
-    {  
-        RFX_Text(pFX, m_listName.GetNext(posExtraFields),   
-            m_listValue.GetNext(posExtraValues));  
-    }  
-    ```  
+ {  
+    RFX_Text(pFX,
+    m_listName.GetNext(posExtraFields),   
+    m_listValue.GetNext(posExtraValues));
+
+ }  
+ ```  
   
 > [!NOTE]
->  這類程式碼並不是由 ClassWizard 編輯，而且只能在特殊格式註解外。  
+>  Such code cannot be edited by ClassWizard and should be used only outside of the special format comments.  
   
-## 撰寫自訂 RFX  
- 若要撰寫自訂 RFX 函式，建議您複製現有的 RFX 函式並修改成您的目的。  選擇正確的 RFX 複製可能讓工作更容易。  某些 RFX 函式有您應該考慮到，在決定要複製時的一些唯一的屬性。  
+## <a name="writing-a-custom-rfx"></a>Writing a Custom RFX  
+ To write your own Custom RFX function, it is suggested that you copy an existing RFX function and modify it to your own purposes. Selecting the right RFX to copy can make your job much easier. Some RFX functions have some unique properties that you should take into account when deciding which to copy.  
   
- **RFX\_Long and RFX\_Int**:  
- 這些是最簡單的 RFX 函式。  資料值不需要任何特殊解譯，因此，資料大小是固定的。  
+ **RFX_Long and RFX_Int**:  
+ These are the simplest RFX functions. The data value does not need any special interpretation, and the data size is fixed.  
   
- **RFX\_Single and RFX\_Double**:  
- 與上面 RFX\_Long 和 RFX\_Int，這些函式是簡單，而且可能會廣泛地使用預設實作。  才明確參考時，會在 dbflt.cpp 儲存而不是 dbrfx.cpp，然而，讓載入執行階段浮點程式庫。  
+ **RFX_Single and RFX_Double**:  
+ Like RFX_Long and RFX_Int above, these functions are simple and can make use of the default implementation extensively. They are stored in dbflt.cpp instead of dbrfx.cpp, however, to enable loading the runtime floating point library only when they are explicitly reference.  
   
- **RFX\_Text and RFX\_Binary**:  
- 這兩個函式預先配置一個靜態緩衝區保存字串\/二進位資訊，而且必須向 ODBC SQLBindCol 的這些緩衝區而非 &登錄值。  因此，這兩個函式有許多特殊大小寫程式碼。  
+ **RFX_Text and RFX_Binary**:  
+ These two functions preallocate a static buffer to hold string/binary information, and must register these buffers with ODBC SQLBindCol instead of registering &value. Because of this, these two functions have lots of special-case code.  
   
  `RFX_Date`:  
- ODBC 傳回在自己的 TIMESTAMP\_STRUCT 資料結構的日期和時間資訊。  這個函式動態配置 TIMESTAMP\_STRUCT 為「Proxy」傳送和接收的日期時間資料。  各種作業必須將日期和時間資訊在 C\+\+ `CTime` 物件和 TIMESTAMP\_STRUCT Proxy 之間。  這相當使這個函式更為複雜，不過，它是一個好的範例為資料傳輸使用 Proxy。  
+ ODBC returns date and time information in their own TIMESTAMP_STRUCT data structure. This function dynamically allocates a TIMESTAMP_STRUCT as a "proxy" for sending and receiving date time data. Various operations must transfer the date and time information between the C++ `CTime` object and the TIMESTAMP_STRUCT proxy. This complicates this function considerably, but it is a good example of how to use a proxy for data transfer.  
   
  `RFX_LongBinary`:  
- 這是不使用資料行繫結接收和傳送資料的唯一的類別庫 RFX 函式。  這個函式在修復作業期間忽略 BindFieldToColumn 作業和，，配置儲存區保存傳入的 SQL\_LONGVARCHAR 或 SQL\_LONGVARBINARY 資料，然後執行 SQLGetData 呼叫擷取值至配置儲存區。  當準備好將資料傳回值至資料來源 \(例如 NameValue 和值作業\) 時，這個函式會使用 ODBC 的 DATA\_AT\_EXEC 功能。  請參閱 [Technical Note 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) 與 SQL\_LONGVARBINARY 和 SQL\_LONGVARCHARs 一起使用的詳細資訊。  
+ This is the only class library RFX function that does not use column binding to receive and send data. This function ignores the BindFieldToColumn operation and instead, during the Fixup operation, allocates storage to hold the incoming SQL_LONGVARCHAR or SQL_LONGVARBINARY data, then performs an SQLGetData call to retrieve the value into the allocated storage. When preparing to send data values back to the data source (such as NameValue and Value operations), this function uses ODBC's DATA_AT_EXEC functionality. See [Technical Note 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) for more information on working with SQL_LONGVARBINARY and SQL_LONGVARCHARs.  
   
- 在撰寫 **RFX\_** 函式時，您通常可以使用 **CFieldExchange::Default** 實作特定作業。  請使用預設的實作該作業。  如果它執行作業中您可以委派至 **CFieldExchange::Default.**的 **RFX\_** 函式寫入您可以呼叫在 dbrfx.cpp 的 **CFieldExchange::Default** 的範例  
+ When writing your own **RFX_** function, you will often be able to use **CFieldExchange::Default** to implement a given operation. Look at the implementation of Default for the operation in question. If it performs the operation you would be writing in your **RFX_** function you can delegate to the **CFieldExchange::Default.** You can see examples of calling **CFieldExchange::Default** in dbrfx.cpp  
   
- 如果傳回 false，在您的 RFX 函式的開頭呼叫 `IsFieldType` ，並立即傳回很重要。  這個機制在 **outputColumns**防止執行參數作業，反之亦然 \(像呼叫在 **outputColumn**的 **BindParam** \)。  此外， `IsFieldType` 會自動記錄計數 **outputColumns** \(`m_nFields`\) 和參數 \(`m_nParams`\)。  
+ It is important to call `IsFieldType` at the start of your RFX function, and return immediately if it returns FALSE. This mechanism keeps parameter operations from being performed on **outputColumns**, and vice versa (like calling **BindParam** on an **outputColumn**). In addition, `IsFieldType` automatically keeps track of the count of **outputColumns** (`m_nFields`) and params (`m_nParams`).  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

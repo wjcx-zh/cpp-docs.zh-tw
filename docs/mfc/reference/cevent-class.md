@@ -1,5 +1,5 @@
 ---
-title: "CEvent 類別 |Microsoft 文件"
+title: CEvent Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,9 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- synchronization objects, event
-- synchronization classes, CEvent class
-- CEvent class
+- CEvent [MFC], CEvent
+- CEvent [MFC], PulseEvent
+- CEvent [MFC], ResetEvent
+- CEvent [MFC], SetEvent
+- CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
 caps.latest.revision: 27
 author: mikeblome
@@ -41,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 9edadeec87cf04ae6166c173c65463d1509eb1d8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 07229413827af29688caffbff9b2ccbd6b113f4e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cevent-class"></a>CEvent 類別
-表示事件，這是可讓一個執行緒通知發生事件的另一個執行緒的同步處理物件。  
+# <a name="cevent-class"></a>CEvent Class
+Represents an event, which is a synchronization object that enables one thread to notify another that an event has occurred.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CEvent : public CSyncObject  
@@ -59,55 +61,55 @@ class CEvent : public CSyncObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CEvent::CEvent](#cevent)|建構 `CEvent` 物件。|  
+|[CEvent::CEvent](#cevent)|Constructs a `CEvent` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CEvent::PulseEvent](#pulseevent)|將可用的事件 （通知），釋放等候中執行緒，並且設定為無法使用的事件 （未收到訊號）。|  
-|[CEvent::ResetEvent](#resetevent)|設定為無法使用的事件 （未收到訊號）。|  
-|[CEvent::SetEvent](#setevent)|設定為可用的事件 （已收到訊號），並釋放所有等候的執行緒。|  
-|[CEvent::Unlock](#unlock)|釋放事件物件。|  
+|[CEvent::PulseEvent](#pulseevent)|Sets the event to available (signaled), releases waiting threads, and sets the event to unavailable (nonsignaled).|  
+|[CEvent::ResetEvent](#resetevent)|Sets the event to unavailable (nonsignaled).|  
+|[CEvent::SetEvent](#setevent)|Sets the event to available (signaled) and releases any waiting threads.|  
+|[CEvent::Unlock](#unlock)|Releases the event object.|  
   
-## <a name="remarks"></a>備註  
- 當執行緒必須知道何時要執行其工作時，事件會相當實用。 比方說，新的資料可用時，將資料複製到資料保存在執行緒就必須收到通知。 使用`CEvent`物件以新資料可用時通知複製執行緒的執行緒可以儘快執行其工作。  
+## <a name="remarks"></a>Remarks  
+ Events are useful when a thread must know when to perform its task. For example, a thread that copies data to a data archive must be notified when new data is available. By using a `CEvent` object to notify the copy thread when new data is available, the thread can perform its task as soon as possible.  
   
- `CEvent`物件有兩種類型︰ 手動和自動。  
+ `CEvent` objects have two types: manual and automatic.  
   
- 自動`CEvent`物件會自動傳回給單一執行緒的 （無法使用） 回應之後至少一個執行緒釋出。 根據預設，`CEvent`物件是自動的除非您傳遞`TRUE`的`bManualReset`在建構期間的參數。  
+ An automatic `CEvent` object automatically returns to a non-signaled (unavailable) state after at least one thread is released. By default, a `CEvent` object is automatic unless you pass `TRUE` for the `bManualReset` parameter during construction.  
   
- 手動`CEvent`物件會保留在所設定的狀態[SetEvent](#setevent)或[ResetEvent](#resetevent)另一個函式呼叫之前。 若要建立手動`CEvent`物件，傳遞`TRUE`的`bManualReset`在建構期間的參數。  
+ A manual `CEvent` object stays in the state set by [SetEvent](#setevent) or [ResetEvent](#resetevent) until the other function is called. To create a manual `CEvent` object, pass `TRUE` for the `bManualReset` parameter during construction.  
   
- 若要使用`CEvent`物件，建構`CEvent`物件會在需要時。 指定您想要等候，以及指定您的應用程式一開始應該擁有該事件的名稱。 您接著可存取建構函式傳回時，此事件。 呼叫[SetEvent](#setevent)訊號 （方式提供） 事件物件，然後再呼叫[Unlock](#unlock)完成存取控制的資源。  
+ To use a `CEvent` object, construct the `CEvent` object when it is required. Specify the name of the event you want to wait on, and also specify that your application should initially own it. You can then access the event when the constructor returns. Call [SetEvent](#setevent) to signal (make available) the event object and then call [Unlock](#unlock) when you are done accessing the controlled resource.  
   
- 使用替代方法`CEvent`物件是新增型別的變數`CEvent`以您想要控制的類別資料成員。 在受控制的物件建構期間呼叫的建構函式`CEvent`資料成員並指定是否一開始的信號事件，以及 specifythe 類型的事件物件，事件 （如果它將會使用跨處理序界限），名稱屬性的任何安全性需要。  
+ An alternative method for using `CEvent` objects is to add a variable of type `CEvent` as a data member to the class you want to control. During construction of the controlled object, call the constructor of the `CEvent` data member and specify whether the event is initially signaled, and also specifythe type of event object you want, the name of the event (if it will be used across process boundaries), and any security attributes you want.  
   
- 若要存取所控制的資源`CEvent`物件以這種方式，請先建立這兩種類型的變數[CSingleLock](../../mfc/reference/csinglelock-class.md)或型別[CMultiLock](../../mfc/reference/cmultilock-class.md)中部署資源的存取方法。 然後呼叫`Lock`之鎖定物件的方法 (例如， [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock))。 此時，您的執行緒會存取資源等候的資源釋出，並存取應用程式，或等候的資源釋出、 逾時，並無法取得資源的存取權。 在任何情況下，您的資源已存取具備執行緒安全的方式。 若要釋放資源，呼叫`SetEvent`發出信號的事件物件，然後使用`Unlock`之鎖定物件的方法 (例如， [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock))，或讓鎖定物件超出範圍。  
+ To access a resource controlled by a `CEvent` object in this manner, first create a variable of either type [CSingleLock](../../mfc/reference/csinglelock-class.md) or type [CMultiLock](../../mfc/reference/cmultilock-class.md) in the access method of your resource. Then call the `Lock` method of the lock object (for example, [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock)). At this point, your thread will either gain access to the resource, wait for the resource to be released and gain access, or wait for the resource to be released, time out, and fail to gain access to the resource. In any case, your resource has been accessed in a thread-safe manner. To release the resource, call `SetEvent` to signal the event object, and then use the `Unlock` method of the lock object (for example, [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock)), or let the lock object fall out of scope.  
   
- 如需有關如何使用`CEvent`物件，請參閱[多執行緒︰ 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。  
+ For more information about how to use `CEvent` objects, see [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities #&45;](../../mfc/codesnippet/cpp/cevent-class_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#45](../../mfc/codesnippet/cpp/cevent-class_1.cpp)]  
   
- [!code-cpp[NVC_MFC_Utilities #&46;](../../mfc/codesnippet/cpp/cevent-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#46](../../mfc/codesnippet/cpp/cevent-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
  `CEvent`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
- 建構具名或未命名的`CEvent`物件。  
+##  <a name="cevent"></a>  CEvent::CEvent  
+ Constructs a named or unnamed `CEvent` object.  
   
 ```  
 CEvent(
@@ -117,87 +119,87 @@ CEvent(
     LPSECURITY_ATTRIBUTES lpsaAttribute = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bInitiallyOwn`  
- 如果**TRUE**，如執行緒**CMultilock**或`CSingleLock`啟用物件。 否則，必須等到所有想要存取資源的執行緒。  
+ If **TRUE**, the thread for the **CMultilock** or `CSingleLock` object is enabled. Otherwise, all threads wanting to access the resource must wait.  
   
  *bManualReset*  
- 如果**TRUE**，指定事件的物件，手動事件，否則事件物件是自動的事件。  
+ If **TRUE**, specifies that the event object is a manual event, otherwise the event object is an automatic event.  
   
  `lpszName`  
- `CEvent` 物件的名稱。 如果此物件會使用跨處理序界限，必須提供。 如果名稱符合現有的事件、 建構函式會建置新`CEvent`物件會參考該名稱的事件。 如果名稱符合現有的同步處理物件不是事件，在建構將會失敗。 如果**NULL**，名稱會是 null。  
+ Name of the `CEvent` object. Must be supplied if the object will be used across process boundaries. If the name matches an existing event, the constructor builds a new `CEvent` object which references the event of that name. If the name matches an existing synchronization object that is not an event, the construction will fail. If **NULL**, the name will be null.  
   
  `lpsaAttribute`  
- 事件物件的安全性屬性。 此結構的完整說明，請參閱[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Security attributes for the event object. For a full description of this structure, see [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) in the Windows SDK.  
   
-### <a name="remarks"></a>備註  
- 存取或釋放`CEvent`物件，請建立[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件，然後呼叫其[鎖定](../../mfc/reference/csinglelock-class.md#lock)和[Unlock](../../mfc/reference/csinglelock-class.md#unlock)成員函式。  
+### <a name="remarks"></a>Remarks  
+ To access or release a `CEvent` object, create a [CMultiLock](../../mfc/reference/cmultilock-class.md) or [CSingleLock](../../mfc/reference/csinglelock-class.md) object and call its [Lock](../../mfc/reference/csinglelock-class.md#lock) and [Unlock](../../mfc/reference/csinglelock-class.md#unlock) member functions.  
   
- 若要變更的狀態`CEvent`物件已收到訊號 （執行緒沒有等候），呼叫[SetEvent](#setevent)或[PulseEvent](#pulseevent)。 若要設定狀態的`CEvent`物件為未收到信號 （執行緒必須等待，） 呼叫[ResetEvent](#resetevent)。  
+ To change the state of a `CEvent` object to signaled (threads do not have to wait), call [SetEvent](#setevent) or [PulseEvent](#pulseevent). To set the state of a `CEvent` object to nonsignaled (threads must wait), call [ResetEvent](#resetevent).  
   
 > [!IMPORTANT]
->  在建立之後`CEvent`物件，請使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以確保 mutex 不是已經存在。 如果存在非預期地 mutex，可能表示處理序佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序是關閉此控制代碼，並繼續如同在建立物件時發生錯誤。  
+>  After creating the `CEvent` object, use [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) to ensure that the mutex didn't already exist. If the mutex did exist unexpectedly, it may indicate a rogue process is squatting and may be intending to use the mutex maliciously. In this case, the recommended security-conscious procedure is to close the handle and continue as if there was a failure in creating the object.  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
- 設定之事件的狀態 （可用）、 釋放所有等候中執行緒，並將它重設為未收到信號 （無法使用） 自動。  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
+ Sets the state of the event to signaled (available), releases any waiting threads, and resets it to nonsignaled (unavailable) automatically.  
   
 ```  
 BOOL PulseEvent();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果事件為手動，會釋放所有等候中執行緒，就會設定為未收到信號，事件和`PulseEvent`傳回。 如果事件是自動的單一執行緒釋放，將事件設定為未收到信號，和`PulseEvent`傳回。  
+### <a name="remarks"></a>Remarks  
+ If the event is manual, all waiting threads are released, the event is set to nonsignaled, and `PulseEvent` returns. If the event is automatic, a single thread is released, the event is set to nonsignaled, and `PulseEvent` returns.  
   
- 如果沒有執行緒等候，或沒有執行緒可立即釋放`PulseEvent`將事件的狀態設定為未收到信號，並傳回。  
+ If no threads are waiting, or no threads can be released immediately, `PulseEvent` sets the state of the event to nonsignaled and returns.  
   
- `PulseEvent`使用基本 Win32`PulseEvent`函式，可以暫時移除等候狀態從核心模式的非同步程序呼叫。 因此，`PulseEvent`不可靠，而且不能供新的應用程式。 如需詳細資訊，請參閱[PulseEvent 函式](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
+ `PulseEvent` uses the underlying Win32 `PulseEvent` function, which can be momentarily removed from the wait state by a kernel-mode asynchronous procedure call. Therefore, `PulseEvent` is unreliable and should not be used by new applications. For more information, see the [PulseEvent function](http://msdn.microsoft.com/library/windows/desktop/ms684914).  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
- 設定事件的狀態未收到信號，直到明確設定為已收到訊號的[SetEvent](#setevent)成員函式。  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
+ Sets the state of the event to nonsignaled until explicitly set to signaled by the [SetEvent](#setevent) member function.  
   
 ```  
 BOOL ResetEvent();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 這會導致所有想要存取這個事件，以等候的執行緒。  
+### <a name="remarks"></a>Remarks  
+ This causes all threads wishing to access this event to wait.  
   
- 此成員函式不是由自動事件。  
+ This member function is not used by automatic events.  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
- 釋放所有等候的執行緒會設定為收到信號，事件的狀態。  
+##  <a name="setevent"></a>  CEvent::SetEvent  
+ Sets the state of the event to signaled, releasing any waiting threads.  
   
 ```  
 BOOL SetEvent();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果函式成功，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful, otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 是否手動事件，事件仍會收到信號，直到[ResetEvent](#resetevent)呼叫。 多個執行緒可以在此情況下發行。 如果自動事件，事件會保持已收到訊號，直到釋放單一執行緒。 系統接著會設定事件的狀態為未收到信號。 如果沒有執行緒等候，狀態會保留已收到訊號，直到會釋放一個執行緒。  
+### <a name="remarks"></a>Remarks  
+ If the event is manual, the event will remain signaled until [ResetEvent](#resetevent) is called. More than one thread can be released in this case. If the event is automatic, the event will remain signaled until a single thread is released. The system will then set the state of the event to nonsignaled. If no threads are waiting, the state remains signaled until one thread is released.  
   
-##  <a name="unlock"></a>CEvent::Unlock  
- 釋放事件物件。  
+##  <a name="unlock"></a>  CEvent::Unlock  
+ Releases the event object.  
   
 ```  
 BOOL Unlock();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果執行緒所擁有的事件物件和事件是自動的事件。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the thread owned the event object and the event is an automatic event; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 目前擁有自動事件來釋放之後完成，如果其鎖定的物件可重複使用的執行緒會呼叫此成員函式。 如果鎖定物件不是可重複使用，鎖定物件的解構函式會呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This member function is called by threads that currently own an automatic event to release it after they are done, if their lock object is to be reused. If the lock object is not to be reused, this function will be called by the lock object's destructor.  
   
-## <a name="see-also"></a>另請參閱  
- [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CSyncObject Class](../../mfc/reference/csyncobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 

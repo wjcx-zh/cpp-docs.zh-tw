@@ -1,46 +1,65 @@
 ---
-title: "網際網路上的 Active 技術 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "網際網路應用程式, Active 技術"
+title: Active Technology on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 網際網路上的 Active 技術
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3286a06350fde7c345f07dce909f90c85bfb4d83
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Active 技術是讓激開發人員所建立的已開啟平台，動態內容和應用程式環境的網路的，或者對公司內部網路，稱為內部網路。  Microsoft 提供的主要技術為網際網路程式設計如下。  
+---
+# <a name="active-technology-on-the-internet"></a>Active Technology on the Internet
+Active technology is an open platform that lets developers create exciting, dynamic content and applications for the global Internet, or for a company's internal network, known as an intranet. The major technologies provided by Microsoft for Internet programming are described below.  
   
-## ActiveX 控制項  
- ActiveX 控制項 \(先前稱為 OLE automation 控制項\) 是可以插入 Web 網頁或其他應用程式是一個 ActiveX 控制項容器的物件。  範例包含按鈕、股票行情即時看板和圖表控制項。  如需詳細資訊，請參閱 [在網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)。  
+## <a name="activex-controls"></a>ActiveX Controls  
+ ActiveX controls (formerly OLE controls) are objects that can be inserted into Web pages or any other application that is an ActiveX control container. Examples include buttons, stock tickers, and chart controls. For more information, see [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
-## 主動式文件  
- 啟用文件可以由 Web 瀏覽器或文件檢視器顯示。  傳統內嵌物件在文件中限制至頁面和顯示中。  有了Active 技術文件，便可以在整個工作區視窗中會顯示完整的畫面格。  如需詳細資訊，請參閱 [在網際網路上的現用文件](../mfc/active-documents-on-the-internet.md)。  
+## <a name="active-documents"></a>Active Documents  
+ Active documents can be displayed by Web browsers or document viewers. Traditional embedded objects were limited to one page and were shown embedded in the document. With Active technology, the document can be displayed full frame in the entire client area window. For more information, see [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md).  
   
-## 網際網路資料下載服務。  
- 使用常見的通訊協定，資料可以下載在網際網路:HTTP、FTP 和 Gopher。  MFC WinInet 類別可讓您輕鬆地將資料使用 HTTP、FTP 和 Gopher 通訊協定透過擷取 TCP\/IP 和 WinSock 通訊協定。  MFC 非同步 Moniker 類別提供下載檔案，而不封鎖和呈現大型物件非同步。  如需詳細資訊，請參閱 [Win32 Internet Extension \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)。  
+## <a name="internet-data-download-services"></a>Internet Data Download Services  
+ Data can be downloaded over the Internet using common protocols: HTTP, FTP, and gopher. The MFC WinInet classes make it easy to transfer data using HTTP, FTP, and gopher protocols by abstracting the TCP/IP and WinSock protocols. The MFC asynchronous moniker classes provide a way to download files without blocking and to render large objects asynchronously. For more information, see [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md).  
   
-## 現用指令碼  
- VBScript 和其他的指令碼語言連接控制項並將互動功能加入網頁。  指令碼從伺服器移動處理向用戶端。  例如，輸入學生人數表可以在用戶端上驗證然後傳送到伺服器。  
+## <a name="active-scripts"></a>Active Scripts  
+ VBScript and other scripting languages connect controls and add interactive functionality to Web pages. Scripting moves processing from the server to the client. For example, form entries can be validated on the client and then sent to the server.  
   
-## HTML 擴充  
- HTML 副檔名，例如物件標記，加入支援控制項和指令碼。  
+## <a name="html-extensions"></a>HTML Extensions  
+ HTML extensions, such as the object tag, have been added to support controls and scripting.  
   
-## 請參閱  
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)   
- [網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)   
- [網際網路上的主動式文件](../mfc/active-documents-on-the-internet.md)   
- [Win32 網際網路擴充功能 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)   
+ [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md)   
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+
+

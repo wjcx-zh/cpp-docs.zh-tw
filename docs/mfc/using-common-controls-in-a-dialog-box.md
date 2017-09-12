@@ -1,71 +1,90 @@
 ---
-title: "在對話方塊中使用通用控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通用控制項 [C++], 在對話方塊中"
-  - "對話方塊控制項 [C++], 通用控制項"
-  - "Windows 通用控制項 [C++], 在對話方塊中"
+title: Using Common Controls in a Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- common controls [MFC], in dialog boxes
+- dialog box controls [MFC], common controls
+- Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 在對話方塊中使用通用控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8dc48fa0370c6801c40819151374b178446d0dc1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Windows 通用控制項可用於 [對話方塊](../mfc/dialog-boxes.md)，形成檢視、資料錄檢視和根據對話方塊範本的其他視窗。  下列程序，次要變更，為表單上運作。  
+---
+# <a name="using-common-controls-in-a-dialog-box"></a>Using Common Controls in a Dialog Box
+The Windows common controls can be used in [dialog boxes](../mfc/dialog-boxes.md), form views, record views, and any other window based on a dialog template. The following procedure, with minor changes, will work for forms as well.  
   
-## 程序  
+## <a name="procedures"></a>Procedures  
   
-#### 使用公用控制對話方塊  
+#### <a name="to-use-a-common-control-in-a-dialog-box"></a>To use a common control in a dialog box  
   
-1.  將控制項放在對話方塊範本 [使用對話方塊編輯器](../mfc/using-the-dialog-editor-to-add-controls.md)。  
+1.  Place the control on the dialog template [using the dialog editor](../mfc/using-the-dialog-editor-to-add-controls.md).  
   
-2.  加入至對話方塊類別表示控制項的成員變數。  在 **Add Member Variable** 對話方塊，請檢查 **Control variable** 和 **Control** 確定 **Category**為已選取。  
+2.  Add to the dialog class a member variable that represents the control. In the **Add Member Variable** dialog box, check **Control variable** and ensure that **Control** is selected for the **Category**.  
   
-3.  如果這個通用控制項提供輸入至程式，宣告在對話方塊類別的其他成員變數管理這些輸入值。  
-  
-    > [!NOTE]
-    >  您可以加入這些成員變數在類別檢視中使用內容功能表 \(請參閱 [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)\)。  
-  
-4.  在您的對話方塊類別的 [OnInitDialog](../Topic/CDialog::OnInitDialog.md) ，設定通用控制項的初始條件。  使用變數前一步驟所建立的成員，使用成員函式來設定初始值和其他設定。  請參閱下列控制項在設定的詳細資訊的說明。  
-  
-     您也可以使用 [對話資料交換](../mfc/dialog-data-exchange-and-validation.md) \(Dialog Data Exchange，DDX\) 初始化在對話方塊的控制項。  
-  
-5.  在對話方塊中控制項的處理常式，使用成員變數操作控制項。  請參閱下列控制項在方法的詳細資訊的說明。  
+3.  If this common control is providing input to the program, declare additional member variable(s) in the dialog class to handle those input values.  
   
     > [!NOTE]
-    >  只有對話方塊存在，成員變數才會存在。  在對話方塊關閉之後，您將無法查詢輸入值的控制項。  要與通用控制項的輸入值時，請覆寫您的對話方塊類別的 `OnOK` 。  在您的覆寫，請查詢輸入值的控制項並儲存這些值在對話方塊類別的成員變數。  
+    >  You can add these member variables using the context menu in Class View (see [Adding a Member Variable](../ide/adding-a-member-variable-visual-cpp.md)).  
+  
+4.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) for your dialog class, set the initial conditions for the common control. Using the member variable created in the previous step, use the member functions to set initial value and other settings. See the following descriptions of the controls for details on settings.  
+  
+     You can also use [dialog data exchange](../mfc/dialog-data-exchange-and-validation.md) (DDX) to initialize controls in a dialog box.  
+  
+5.  In handlers for controls on the dialog box, use the member variable to manipulate the control. See the following descriptions of the controls for details on methods.  
   
     > [!NOTE]
-    >  您也可以使用對話資料交換從對話方塊的控制項設定或擷取值。  
+    >  The member variable will exist only as long as the dialog box itself exists. You will not be able to query the control for input values after the dialog box has been closed. To work with input values from a common control, override `OnOK` in your dialog class. In your override, query the control for input values and store those values in member variables of the dialog class.  
   
-## 備註  
- 一些常見的控制項加入至對話方塊將造成對話方塊不再生效。  參考 [Adding Controls to a Dialog Causes the Dialog to No Longer Function](../mfc/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md) 有關處理這種情況的詳細資訊。  
+    > [!NOTE]
+    >  You can also use dialog data exchange to set or retrieve values from the controls in a dialog box.  
   
-## 您想要執行甚麼工作？  
+## <a name="remarks"></a>Remarks  
+ The addition of some common controls to a dialog box will cause the dialog box to no longer function. Refer to [Adding Controls to a Dialog Causes the Dialog to No Longer Function](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md) for more information on handling this situation.  
   
--   [以手動方式將控制項加入至對話方塊而不是使用對話方塊編輯器](../mfc/adding-controls-by-hand.md)  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [從其中一個標準 Windows 通用控制項衍生我的控制項](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Add controls to a dialog box by hand instead of with the dialog editor](../mfc/adding-controls-by-hand.md)  
   
--   [使用通用控制項做為子視窗使用](../mfc/using-a-common-control-as-a-child-window.md)  
+-   [Derive my control from one of the standard Windows common controls](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [接收控制項傳回的通知訊息](../mfc/receiving-notification-from-common-controls.md)  
+-   [Use a common control as a child window](../mfc/using-a-common-control-as-a-child-window.md)  
   
--   [使用對話資料交換 \(DDX\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Receive notification messages from a control](../mfc/receiving-notification-from-common-controls.md)  
   
-## 請參閱  
- [建立及使用控制項](../mfc/making-and-using-controls.md)   
- [控制項](../mfc/controls-mfc.md)
+-   [Use dialog data exchange (DDX)](../mfc/dialog-data-exchange-and-validation.md)  
+  
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "下拉式方塊樣式 |Microsoft 文件"
+title: Combo-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,19 +25,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBS_OWNERDRAWVARIABLE constant
-- CBS_NOINTEGRALHEIGHT constant
-- CBS_SIMPLE constant
-- CBS_AUTOHSCROLL constant
-- CBS_OEMCONVERT constant
-- CBS_DISABLENOSCROLL constant
-- CBS_HASSTRINGS constant
-- CBS_LOWERCASE constant
-- CBS_SORT constant
-- CBS_DROPDOWN constant
-- CBS_OWNERDRAWFIXED constant
-- combo boxes, styles
-- CBS_UPPERCASE constant
+- CBS_OWNERDRAWVARIABLE constant [MFC]
+- CBS_NOINTEGRALHEIGHT constant [MFC]
+- CBS_SIMPLE constant [MFC]
+- CBS_AUTOHSCROLL constant [MFC]
+- CBS_OEMCONVERT constant [MFC]
+- CBS_DISABLENOSCROLL constant [MFC]
+- CBS_HASSTRINGS constant [MFC]
+- CBS_LOWERCASE constant [MFC]
+- CBS_SORT constant [MFC]
+- CBS_DROPDOWN constant [MFC]
+- CBS_OWNERDRAWFIXED constant [MFC]
+- combo boxes [MFC], styles
+- CBS_UPPERCASE constant [MFC]
 - CBS_DROPDOWNLIST constant
 ms.assetid: d21a5023-e6a2-495b-a6bd-010a515cbc63
 caps.latest.revision: 12
@@ -59,45 +59,45 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 57069f6e6cd0999773ab3872e671a65e1e880bba
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6ca7dba78b9265110977b18549ffb6207ce9b877
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="combo-box-styles"></a>下拉式方塊樣式
-MFC 中提供下列下拉式方塊樣式。  
+# <a name="combo-box-styles"></a>Combo-Box Styles
+The following combo-box styles are available in MFC.  
   
--   **CBS_AUTOHSCROLL** ：當使用者在行尾處輸入字元時，自動將編輯控制項中的文字往右捲動。 如果未設定此樣式，則只會允許符合矩形界限的文字。  
+-   **CBS_AUTOHSCROLL** Automatically scrolls the text in the edit control to the right when the user types a character at the end of the line. If this style is not set, only text that fits within the rectangular boundary is allowed.  
   
--   **CBS_DISABLENOSCROLL** ：在清單方塊中未包含足夠的項目可以捲動時，清單方塊會顯示已停用的垂直捲軸。 若沒有這個樣式，在清單方塊中未包含足夠的項目時，捲軸會隱藏。  
+-   **CBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **CBS_DROPDOWN** ：類似於 **CBS_SIMPLE**，不過除非使用者選取編輯控制項旁的圖示，否則不會顯示清單方塊。  
+-   **CBS_DROPDOWN** Similar to **CBS_SIMPLE**, except that the list box is not displayed unless the user selects an icon next to the edit control.  
   
--   **CBS_DROPDOWNLIST** ：類似於 **CBS_DROPDOWN**，不過編輯控制項會由顯示清單方塊中目前選取範圍的靜態文字項目取代。  
+-   **CBS_DROPDOWNLIST** Similar to **CBS_DROPDOWN**, except that the edit control is replaced by a static-text item that displays the current selection in the list box.  
   
--   **CBS_HASSTRINGS** ：主控描繪下拉式方塊包含由字串組成的項目。 下拉式方塊會維護記憶體和字串的指標，讓應用程式可以使用 `GetText` 成員函式來擷取特定項目的文字。  
+-   **CBS_HASSTRINGS** An owner-draw combo box contains items consisting of strings. The combo box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **CBS_LOWERCASE** ：將選取欄位和清單中的所有文字轉換成小寫。  
+-   **CBS_LOWERCASE** Converts to lowercase all text in both the selection field and the list.  
   
--   **CBS_NOINTEGRALHEIGHT** ：將下拉式方塊的大小，指定為應用程式建立下拉式方塊時所指定的相同大小。 一般而言，Windows 會調整下拉式方塊的大小，使下拉式方塊不會只顯示一部分的項目。  
+-   **CBS_NOINTEGRALHEIGHT** Specifies that the size of the combo box is exactly the size specified by the application when it created the combo box. Normally, Windows sizes a combo box so that the combo box does not display partial items.  
   
--   **CBS_OEMCONVERT** ：在下拉式方塊編輯控制項中輸入的文字，會從 ANSI 字元集轉換成 OEM 字集，然後再轉換回 ANSI。 如此可確保當應用程式呼叫 `AnsiToOem` Windows 函式將下拉式方塊中的 ANSI 字串轉換成 OEM 字元時，會進行適當的字元轉換。 此樣式是最適合用於包含檔案名稱的下拉式方塊，而且只適用於使用 **CBS_SIMPLE** 或 **CBS_DROPDOWN** 樣式建立的下拉式方塊。  
+-   **CBS_OEMCONVERT** Text entered in the combo-box edit control is converted from the ANSI character set to the OEM character set and then back to ANSI. This ensures proper character conversion when the application calls the `AnsiToOem` Windows function to convert an ANSI string in the combo box to OEM characters. This style is most useful for combo boxes that contain filenames and applies only to combo boxes created with the **CBS_SIMPLE** or **CBS_DROPDOWN** styles.  
   
--   **CBS_OWNERDRAWFIXED** ：清單方塊的擁有者會負責繪製其內容；清單方塊內的所有項目具有相同的高度。  
+-   **CBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are all the same height.  
   
--   **CBS_OWNERDRAWVARIABLE** ：清單方塊的擁有者會負責繪製其內容；清單方塊內項目的高度是可變的。  
+-   **CBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **CBS_SIMPLE** ：永遠顯示清單方塊。 編輯控制項會顯示清單方塊中目前的選取範圍。  
+-   **CBS_SIMPLE** The list box is displayed at all times. The current selection in the list box is displayed in the edit control.  
   
--   **CBS_SORT** ：自動排序輸入至清單方塊中的字串。  
+-   **CBS_SORT** Automatically sorts strings entered into the list box.  
   
--   **CBS_UPPERCASE** ：將選取欄位和清單中的所有文字轉換成大寫。  
+-   **CBS_UPPERCASE** Converts to uppercase all text in both the selection field and the list.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 使用的樣式](../../mfc/reference/styles-used-by-mfc.md)   
- [CComboBox::Create](ccombobox class.md # ccombobox__create   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
+ [CComboBox::Create](ccombobox-class.md#ccombobox__create   
 
 
 

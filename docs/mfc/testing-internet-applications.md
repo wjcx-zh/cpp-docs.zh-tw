@@ -1,37 +1,56 @@
 ---
-title: "測試網際網路應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "偵錯 [MFC], Web 應用程式"
-  - "偵錯 Web 應用程式, 測試應用程式"
-  - "網際網路偵錯和測試"
-  - "測試, 網際網路應用程式"
-  - "Web 應用程式, 測試"
+title: Testing Internet Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Web applications [MFC], testing
+- debugging Web applications [MFC], testing applications
+- testing [MFC], Internet applications
+- debugging [MFC], Web applications
+- Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 測試網際網路應用程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1bdf3922311d334eecece5fefbd7573f6dffab26
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在網際網路上有一些獨一無二的測試挑戰，特別是在 Web 伺服器上執行的應用程式。  您初始測試可能會使用單一使用者的用戶端連接到測試伺服器。  這對於偵錯您的程式碼將會非常有用。  
+---
+# <a name="testing-internet-applications"></a>Testing Internet Applications
+There are some unique testing challenges on the Internet, especially for applications running on a Web server. Your initial testing will probably be done using a single-user client connecting to a test server. This will be useful for debugging your code.  
   
- 您也會想要在實際的情況下測試:當多個用戶端連接在高速連接以及低速循序的線路，包括數據機連接。  模擬虛擬的情況非常困難，不過，值得花時間設計可能情況並執行它們。  可能的話，您可能會想要使用工具做容量和壓力測試。  某些錯誤類別，例如時間 Bug，很難尋找並重新產生。  
+ You will also want to test under real conditions: with multiple clients connected over high-speed connections as well as low-speed serial lines, including modem connections. It can be difficult to simulate real conditions, but it is certainly worth spending time designing possible scenarios and executing them. If possible, you will also want to use tools to do capacity and stress testing. Certain classes of bugs, such as timing bugs, are difficult to find and to reproduce.  
   
- 其中一個網際網路程式設計挑戰在於其可視性。  對網站的許多存取可能會減慢伺服器。  您會希望伺服器緩慢地降速。  如果您的應用程式失敗 \(例如，資料損毀，當寫入登錄，或是寫入時 Cookie 在用戶端\)，您要避免可能會對使用者的電腦造成破壞性的任何事情。  
+ One of the challenges of Internet programming is its visibility. Many accesses to your site may slow down your server. You want your server to degrade gracefully. You want to prevent anything that could be destructive to a user's computer if your application fails (for example, corruption of data while writing to the registry or while writing cookies on the client).  
   
-## 請參閱  
- [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

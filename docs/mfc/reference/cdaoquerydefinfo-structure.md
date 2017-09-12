@@ -1,5 +1,5 @@
 ---
-title: "CDaoQueryDefInfo 結構 |Microsoft 文件"
+title: CDaoQueryDefInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
-- CDaoQueryDefInfo structure
+- CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 80e681345091ef54e2be2e3f1c1ea6ccaefd9d17
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0c9f4f84340bb2f05289782992d2b969a1e58b9c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 結構
-`CDaoQueryDefInfo`結構包含定義資料存取物件 (DAO) 的 recordset 物件的相關資訊。  
+# <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo Structure
+The `CDaoQueryDefInfo` structure contains information about a querydef object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoQueryDefInfo  
@@ -61,75 +61,75 @@ struct CDaoQueryDefInfo
 };  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 唯一名稱的 recordset 物件。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。 呼叫[CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname)直接擷取這個屬性。  
+ Uniquely names the querydef object. For more information, see the topic "Name Property" in DAO Help. Call [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) to retrieve this property directly.  
   
  `m_nType`  
- 值，指出 recordset 物件的操作類型。 值可以是下列其中一項︰  
+ A value that indicates the operational type of a querydef object. The value can be one of the following:  
   
-- **dbQSelect**選取，查詢會選取資料錄。  
+- **dbQSelect** Select — the query selects records.  
   
-- **dbQAction**動作 — 查詢移動或變更資料，但是不會傳回記錄。  
+- **dbQAction** Action — the query moves or changes data but does not return records.  
   
-- **dbQCrosstab**交叉資料表，查詢會傳回資料試算表之類的格式。  
+- **dbQCrosstab** Crosstab — the query returns data in a spreadsheet-like format.  
   
-- **dbQDelete**刪除，查詢會刪除指定的資料列集。  
+- **dbQDelete** Delete — the query deletes a set of specified rows.  
   
-- **dbQUpdate**更新 — 查詢變更一組記錄。  
+- **dbQUpdate** Update — the query changes a set of records.  
   
-- **dbQAppend**附加，查詢會將新記錄新增至資料表或查詢的結尾。  
+- **dbQAppend** Append — the query adds new records to the end of a table or query.  
   
-- **dbQMakeTable**製成資料表，查詢會從資料錄集建立新的資料表。  
+- **dbQMakeTable** Make-table — the query creates a new table from a recordset.  
   
-- **dbQDDL**資料定義，影響的資料表或其組件的結構。  
+- **dbQDDL** Data-definition — the query affects the structure of tables or their parts.  
   
-- **dbQSQLPassThrough**傳遞 — SQL 陳述式會直接傳遞至資料庫後端，而不需要中繼處理。  
+- **dbQSQLPassThrough** Pass-through — the SQL statement is passed directly to the database backend, without intermediate processing.  
   
-- **dbQSetOperation**聯集，此查詢會建立快照集類型資料錄集物件，包含所有指定的記錄，在兩種不同的資料或任何重複的記錄與多個資料表中移除。 若要包含重複的項目，將關鍵字加入**所有**querydef SQL 陳述式中。  
+- **dbQSetOperation** Union — the query creates a snapshot-type recordset object containing data from all specified records in two or more tables with any duplicate records removed. To include the duplicates, add the keyword **ALL** in the querydef's SQL statement.  
   
-- **dbQSPTBulk**搭配**dbQSQLPassThrough**指定不會傳回記錄的查詢。  
+- **dbQSPTBulk** Used with **dbQSQLPassThrough** to specify a query that does not return records.  
   
 > [!NOTE]
->  若要建立 SQL 通過查詢，您未設定**dbQSQLPassThrough**常數。 這會自動設定由 Microsoft Jet 資料庫引擎時建立 recordset 物件，並設定連接屬性。  
+>  To create a SQL pass-through query, you do not set the **dbQSQLPassThrough** constant. This is set automatically by the Microsoft Jet database engine when you create a querydef object and set the Connect property.  
   
- 如需詳細資訊，請參閱本主題說明 DAO 中的 「 型別屬性 」。  
+ For more information, see the topic "Type Property" in DAO Help.  
   
  `m_dateCreated`  
- 日期和建立 recordset 的時間。 若要直接擷取 querydef 的建立的日期，請呼叫[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成員函式`CDaoTableDef`與資料表相關聯的物件。 如需詳細資訊，請參閱下方的註解。 在 DAO 說明請參閱主題 」 DateCreated，以下 LastUpdated 屬性 」。  
+ The date and time the querydef was created. To directly retrieve the date the querydef was created, call the [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) member function of the `CDaoTableDef` object associated with the table. See Comments below for more information. Also see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
  `m_dateLastUpdated`  
- 日期和時間的最新的變更對 querydef。 若要直接擷取資料表上次更新日期，請呼叫[GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) querydef 成員函式。 如需詳細資訊，請參閱下方的註解。 並請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
+ The date and time of the most recent change made to the querydef. To directly retrieve the date the table was last updated, call the [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) member function of the querydef. See Comments below for more information. And see the topic "DateCreated, LastUpdated Properties" in DAO Help.  
   
  `m_bUpdatable`  
- 指出是否可以變更 recordset 物件。 如果這個屬性是**TRUE**，querydef 就是可更新，否則它不是。 可更新的表示可以變更 recordset 物件的查詢定義。 Recordset 物件的可更新的屬性設定為**TRUE**如果查詢定義可以更新，即使產生的資料錄集並不是可更新。 若要直接擷取這個屬性，呼叫 querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 可更新屬性 」。  
+ Indicates whether changes can be made to a querydef object. If this property is **TRUE**, the querydef is updatable; otherwise, it is not. Updatable means the querydef object's query definition can be changed. The Updatable property of a querydef object is set to **TRUE** if the query definition can be updated, even if the resulting recordset is not updatable. To retrieve this property directly, call the querydef's [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) member function. For more information, see the topic "Updatable Property" in DAO Help.  
   
  *m_bReturnsRecords*  
- 指出 SQL 傳遞至外部資料庫查詢傳回的記錄。 如果這個屬性是**TRUE**，查詢會傳回記錄。 若要直接擷取這個屬性，呼叫[CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords)。 並非所有的 SQL 傳遞查詢至外部資料庫傳回資料錄。 例如，SQL**更新**陳述式更新記錄，而不會傳回記錄，同時 SQL**選取**陳述式會傳回記錄。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 傳回記錄屬性 」。  
+ Indicates whether a SQL pass-through query to an external database returns records. If this property is **TRUE**, the query returns records. To directly retrieve this property, call [CDaoQueryDef::GetReturnsRecords](../../mfc/reference/cdaoquerydef-class.md#getreturnsrecords). Not all SQL pass-through queries to external databases return records. For example, a SQL **UPDATE** statement updates records without returning records, while a SQL **SELECT** statement does return records. For more information, see the topic "ReturnsRecords Property" in DAO Help.  
   
  *m_strSQL*  
- 定義 recordset 物件所執行之查詢的 SQL 陳述式。 SQL 屬性包含決定如何選取記錄，分組，並依序執行查詢時的 SQL 陳述式。 您可以使用查詢來選取要包含在動態或快照集類型的資料錄集物件中的記錄。 您也可以定義大量查詢傳回的記錄不可以修改資料。 您可以擷取這個屬性的值直接呼叫 querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)成員函式。  
+ The SQL statement that defines the query executed by a querydef object. The SQL property contains the SQL statement that determines how records are selected, grouped, and ordered when you execute the query. You can use the query to select records to include in a dynaset- or snapshot-type recordset object. You can also define bulk queries to modify data without returning records. You can retrieve the value of this property directly by calling the querydef's [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) member function.  
   
  `m_strConnect`  
- 提供使用通過查詢中的資料庫來源的相關資訊。 這項資訊的形式的連接字串。 如需關於連接字串，和直接擷取這個屬性的值的詳細資訊，請參閱[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成員函式。  
+ Provides information about the source of a database used in a pass-through query. This information takes the form of a connect string. For more information about connect strings, and for information about retrieving the value of this property directly, see the [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) member function.  
   
  *m_nODBCTimeout*  
- ODBC 資料庫上執行查詢時，就會發生的 Microsoft Jet 資料庫引擎在逾時錯誤之前等候的秒數。 當您使用 ODBC 資料庫，例如 Microsoft SQL Server，因為網路流量或大量使用的 ODBC 伺服器可能會有延遲。 而不是無限期等候，您可以指定，便會產生錯誤之前，Microsoft Jet 引擎的等候時間長度。 預設的逾時值為 60 秒。 您可以擷取這個屬性的值直接呼叫 querydef [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 odbc 逾時屬性 」。  
+ The number of seconds the Microsoft Jet database engine waits before a timeout error occurs when a query is run on an ODBC database. When you're using an ODBC database, such as Microsoft SQL Server, there may be delays because of network traffic or heavy use of the ODBC server. Rather than waiting indefinitely, you can specify how long the Microsoft Jet engine waits before it produces an error. The default timeout value is 60 seconds. You can retrieve the value of this property directly by calling the querydef's [GetODBCTimeout](../../mfc/reference/cdaoquerydef-class.md#getodbctimeout) member function. For more information, see the topic "ODBCTimeout Property" in DAO Help.  
   
-## <a name="remarks"></a>備註  
- Querydef 是類別的物件[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 主要、 次要資料庫，且上述所有參考表示資訊由[GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)類別中的成員函式`CDaoDatabase`。  
+## <a name="remarks"></a>Remarks  
+ The querydef is an object of class [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md). The references to Primary, Secondary, and All above indicate how the information is returned by the [GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) member function in class `CDaoDatabase`.  
   
- 所擷取的資訊[CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)成員函式會儲存在`CDaoQueryDefInfo`結構。 呼叫`GetQueryDefInfo`recordset 物件會儲存其 QueryDefs 集合中的資料庫物件。 `CDaoQueryDefInfo`也會定義`Dump`成員函式中偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoQueryDefInfo`物件。 類別`CDaoDatabase`也提供直接存取的所有屬性中傳回的成員函式`CDaoQueryDefInfo`物件，因此您可能很少需要呼叫`GetQueryDefInfo`。  
+ Information retrieved by the [CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo) member function is stored in a `CDaoQueryDefInfo` structure. Call `GetQueryDefInfo` for the database object in whose QueryDefs collection the querydef object is stored. `CDaoQueryDefInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoQueryDefInfo` object. Class `CDaoDatabase` also supplies member functions for directly accessing all of the properties returned in a `CDaoQueryDefInfo` object, so you will probably seldom need to call `GetQueryDefInfo`.  
   
- 當您將新欄位或參數物件附加至欄位或參數的 recordset 物件集合時，如果基礎資料庫不支援指定為新物件的資料類型，會擲回例外狀況。  
+ When you append a new field or parameter object to the Fields or Parameters collection of a querydef object, an exception is thrown if the underlying database does not support the data type specified for the new object.  
   
- 日期和時間設定被衍生自 querydef 已建立或上次更新的電腦。 在多使用者環境中，使用者應該直接從檔案伺服器使用取得這些設定**net 時間**命令，以避免 DateCreated 和 LastUpdated 的屬性設定不一致的地方。  
+ The date and time settings are derived from the computer on which the querydef was created or last updated. In a multiuser environment, users should get these settings directly from the file server using the **net time** command to avoid discrepancies in the DateCreated and LastUpdated property settings.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoQueryDef 類別](../../mfc/reference/cdaoquerydef-class.md)   
- [CDaoDatabase 類別](../../mfc/reference/cdaodatabase-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)
 

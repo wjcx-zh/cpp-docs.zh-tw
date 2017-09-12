@@ -1,42 +1,61 @@
 ---
-title: "主動式文件伺服程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "主動式文件伺服程式 [C++]"
-  - "主動式文件 [C++], 伺服器"
-  - "伺服器 [C++], 主動式文件"
+title: Active Document Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], servers
+- servers [MFC], active document
+- active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 主動式文件伺服程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1dc80f4c1a84b17248df1e25dbcef7c85806c1f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-主動式文件伺服程式，例如 Word、Excel、PowerPoint 其他應用程式類型的主應用程式呼叫文件中的文件。  不同於其他資料的網頁顯示的 OLE 內嵌物件，主動式文件提供建立它們的伺服器應用程式的完整介面和完成原生功能。  使用者建立文件使用它們最愛的應用程式的完整功能 \(如果有啟用主動式文件\)，可以將產生的專案作為單一實體。  
+---
+# <a name="active-document-servers"></a>Active Document Servers
+Active document servers such as Word, Excel, or PowerPoint host documents of other application types called active documents. Unlike OLE embedded objects (which are simply displayed within the page of another document), Active documents provide the full interface and complete native functionality of the server application that creates them. Users can create documents using the full power of their favorite applications (if they are active document enabled), yet can treat the resulting project as a single entity.  
   
- 現用文件可能有多個網頁而且永遠就地啟動。  使用者介面的現用文件控制項區段，結合其功能表與容器的 **File** 和 **Help** 功能表。  它們佔用容器的整個編輯區域和控制項檢視和印表機頁面 \(框線，頁尾的配置，依此類推\)。  
+ Active documents can have more than one page and are always in-place active. Active documents control part of the user interface, merging their menus with the **File** and **Help** menus of the container. They occupy the entire editing area of the container and control the views and the layout of the printer page (margins, footers, and so on).  
   
- MFC 實作具有文件\/檢視介面、命令分派對應、列印、功能表和管理登錄的管理主動式文件伺服程式。  特定程式設計需要在 [現用文件](../mfc/active-documents.md)中討論。  
+ MFC implements active document servers with document/view interfaces, command dispatch maps, printing, menu management, and registry management. Specific programming requirements are discussed in [active documents](../mfc/active-documents.md).  
   
- MFC 支援使用 [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) 類別的現用文件，衍生自 [CCmdTarget](../mfc/reference/ccmdtarget-class.md)和 [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)，衍生自 [COleServerItem](../mfc/reference/coleserveritem-class.md)。  MFC 支援 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) 類別的主動式文件容器，衍生自 [COleClientItem](../mfc/reference/coleclientitem-class.md)。  
+ MFC supports active documents with the [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) class, derived from [CCmdTarget](../mfc/reference/ccmdtarget-class.md), and [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), derived from [COleServerItem](../mfc/reference/coleserveritem-class.md). MFC supports active document containers with the [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) class, derived from [COleClientItem](../mfc/reference/coleclientitem-class.md).  
   
- `CDocObjectServer` 將現用文件介面和初始化並啟動現用文件。  MFC 也提供巨集來處理現用文件上的命令路由。  若要使用現用文件中的應用程式，請包含 AfxDocOb.h StdAfx.h 檔。  
+ `CDocObjectServer` maps the active document interfaces and initializes and activates an active document. MFC also provides macros to handle command routing in ACTIVE documents. To use active documents in your application, include AfxDocOb.h in your StdAfx.h file.  
   
- 一般 MFC 伺服器連接其 `COleServerItem`衍生類別。  如果您選取 **Mini\-server** 和 **Full\-server** 核取方塊可讓您的應用程式伺服器複合文件支援，則是 MFC 應用程式精靈所產生的類別。  如果您同時選取 **Active document server** 核取方塊， MFC 應用程式精靈產生衍生自 `CDocObjectServerItem` 的類別。  
+ A regular MFC server hooks up its own `COleServerItem`-derived class. The MFC Application Wizard generates this class for you if you select the **Mini-server** or **Full-server** check box to give your application server compound document support. If you also select the **Active document server** check box, the MFC Application Wizard generates a class derived from `CDocObjectServerItem` instead.  
   
- `COleDocObjectItem` 類別允許 OLE 容器變成主動式文件容器。  您可以使用 MFC 應用程式精靈可選取 MFC 應用程式精靈的複合文件支援網頁的 **Active document container** 核取方塊建立主動式文件容器。  如需詳細資訊，請參閱 [建立主動式文件容器應用程式](../mfc/creating-an-active-document-container-application.md)。  
+ The `COleDocObjectItem` class allows an OLE container to become an active document container. You can use the MFC Application Wizard to create an active document container by selecting the **Active document container** checkbox in the Compound Document Support page of the MFC Application Wizard. For more information, see [Creating an Active Document Container Application](../mfc/creating-an-active-document-container-application.md).  
   
-## 請參閱  
- [主動式文件內含項目](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

@@ -1,53 +1,71 @@
 ---
-title: "屬性工作表 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "對話方塊, 屬性工作表"
-  - "對話方塊, 索引標籤"
-  - "屬性工作表"
-  - "索引標籤對話方塊"
+title: Property Sheets (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], tabs
+- property sheets
+- dialog boxes [MFC], property sheets
+- tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 屬性工作表 (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 579d5e55bb7d739749ab213ce66c299e88d8391b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這系列文章說明如何實作支援在 MFC 應用程式的屬性工作表。  屬性工作表，亦稱為選項對話方塊中，提供了在對話方塊中大量控制項的處理方式。  屬性工作表包含屬性頁，根據每個不同的對話方塊樣板資源。  您可以將對話方塊的控制項分割為邏輯群組，並將每個群組個別放置於其屬性頁。  
+---
+# <a name="property-sheets-mfc"></a>Property Sheets (MFC)
+This family of articles explains how to implement support for property sheets in MFC applications. A property sheet, also known as a tab dialog box, provides a way to manage large numbers of controls in a dialog box. The property sheet contains property pages, each based on a separate dialog template resource. You can divide your dialog box's controls into logical groups and put each group on its own property page.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [屬性工作表和屬性頁](../mfc/property-sheets-and-property-pages-in-mfc.md)  
+-   [Property sheets and property pages](../mfc/property-sheets-and-property-pages-in-mfc.md)  
   
--   [在應用程式中使用屬性工作表](../mfc/using-property-sheets-in-your-application.md)  
+-   [Using Property Sheets in Your Application](../mfc/using-property-sheets-in-your-application.md)  
   
--   [將控制項加入至屬性工作表](../mfc/adding-controls-to-a-property-sheet.md) \(使用屬性頁\)  
+-   [Adding Controls to a Property Sheet](../mfc/adding-controls-to-a-property-sheet.md) (as opposed to a property page)  
   
--   [在屬性工作表和程式之間交換資料。](../mfc/exchanging-data.md)  
+-   [Exchanging data between a property sheet and your program](../mfc/exchanging-data.md)  
   
--   [建立非強制回應屬性工作表](../mfc/creating-a-modeless-property-sheet.md)  
+-   [Creating a modeless property sheet](../mfc/creating-a-modeless-property-sheet.md)  
   
--   [處理套用按鈕](../mfc/handling-the-apply-button.md)  
+-   [Handling the Apply button](../mfc/handling-the-apply-button.md)  
   
--   [屬性工作表做為精靈](../mfc/property-sheets-as-wizards.md)  
+-   [Property Sheets as Wizards](../mfc/property-sheets-as-wizards.md)  
   
--   [CPropertySheet 類別](../mfc/reference/cpropertysheet-class.md)  
+-   [Class CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
   
--   [CPropertyPage 類別](../mfc/reference/cpropertypage-class.md)  
+-   [Class CPropertyPage](../mfc/reference/cpropertypage-class.md)  
   
--   [範例](../top/visual-cpp-samples.md)  
+-   [Sample](../visual-cpp-samples.md)  
   
-## 請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

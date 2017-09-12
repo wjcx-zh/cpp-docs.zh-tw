@@ -1,56 +1,75 @@
 ---
-title: "使用 CObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CObject 類別"
-  - "衍生類別, 來自 CObject"
-  - "範例 [MFC], CObject"
-  - "MFC, 基底類別"
-  - "MFC 的根基底類別"
+title: Using CObject | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CObject
+dev_langs:
+- C++
+helpviewer_keywords:
+- examples [MFC], CObject
+- root base class for MFC
+- derived classes [MFC], from CObject
+- MFC, base class
+- CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 使用 CObject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0346f7b28a8340fa5ea196388a986787d272f27d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-[CObject](../mfc/reference/cobject-class.md) 是大部分的根基底類別 MFC 程式庫。  `CObject` 類別包含您可以合併到您的程式物件，包含序列化支援，執行階段類別資訊，並針對診斷輸出的許多有用的功能。  如果您從 `CObject`衍生您自己的類別，該類別可利用這些 `CObject` 功能。  
+---
+# <a name="using-cobject"></a>Using CObject
+[CObject](../mfc/reference/cobject-class.md) is the root base class for most of the Microsoft Foundation Class Library (MFC). The `CObject` class contains many useful features that you may want to incorporate into your own program objects, including serialization support, run-time class information, and object diagnostic output. If you derive your class from `CObject`, your class can exploit these `CObject` features.  
   
-## 您想要執行甚麼工作？  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [從衍生自 CObject 的類別](../mfc/deriving-a-class-from-cobject.md)  
+-   [Derive a class from CObject](../mfc/deriving-a-class-from-cobject.md)  
   
--   [加入對對於執行階段類別資訊、動態建立和序列化至我的衍生類別。](../mfc/specifying-levels-of-functionality.md)  
+-   [Add support for run-time class information, dynamic creation, and serialization to my derived class](../mfc/specifying-levels-of-functionality.md)  
   
--   [存取執行階段類別資訊](../mfc/accessing-run-time-class-information.md)  
+-   [Access run-time class information](../mfc/accessing-run-time-class-information.md)  
   
--   [動態建立物件](../mfc/dynamic-object-creation.md)  
+-   [Create objects dynamically](../mfc/dynamic-object-creation.md)  
   
--   [傾印物件的資料以供診斷之用。](http://msdn.microsoft.com/zh-tw/727855b1-5a83-44bd-9fe3-f1d535584b59)  
+-   [Dump the object's data for diagnostic purposes](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59)  
   
--   驗證物件的內部狀態 \(請參閱 [MFC ASSERT\_VALID 和 CObject::AssertValid](http://msdn.microsoft.com/zh-tw/7654fb75-9e9a-499a-8165-0a96faf2d5e6)\)。  
+-   Validate the object's internal state (see [MFC ASSERT_VALID and CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6))  
   
--   [讓類別序列化至持續性儲存體。](../mfc/serialization-in-mfc.md)  
+-   [Have the class serialize itself to persistent storage](../mfc/serialization-in-mfc.md)  
   
--   請參閱 [CObject 常見問題集](../mfc/cobject-class-frequently-asked-questions.md)清單  
+-   See a list of [CObject Frequently Asked Questions](../mfc/cobject-class-frequently-asked-questions.md)  
   
-## 請參閱  
- [概念](../mfc/mfc-concepts.md)   
- [一般 MFC 主題](../mfc/general-mfc-topics.md)   
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
  [CRuntimeClass Structure](../mfc/reference/cruntimeclass-structure.md)   
- [檔案](../mfc/files-in-mfc.md)   
- [序列化](../mfc/serialization-in-mfc.md)
+ [Files](../mfc/files-in-mfc.md)   
+ [Serialization](../mfc/serialization-in-mfc.md)
+
+

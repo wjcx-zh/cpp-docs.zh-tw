@@ -1,71 +1,90 @@
 ---
-title: "Windows Sockets：使用封存的通訊端範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "範例 [MFC], Windows Sockets"
-  - "通訊端 [C++], 與封存"
-  - "Windows Sockets [C++], 與封存"
+title: 'Windows Sockets: Example of Sockets Using Archives | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], with archives
+- examples [MFC], Windows Sockets
+- Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Windows Sockets：使用封存的通訊端範例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc51b4ea00b6511786a6a95c9a17f82ffe1f7a7c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文將使用類別的範例 [CSocket](../mfc/reference/csocket-class.md)。  這個範例會使用 `CArchive` 物件的通訊端序列化資料。  請注意這不是文件序列化至檔案。  
+---
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Example of Sockets Using Archives
+This article presents an example of using class [CSocket](../mfc/reference/csocket-class.md). The example employs `CArchive` objects to serialize data through a socket. Note that this is not document serialization to or from a file.  
   
- 下列範例說明如何使用封存透過 `CSocket` 物件所傳送和接收資料。  範例設計，讓應用程式 \(在相同的電腦上或在網路上的不同電腦\) 交換資料的兩個執行個體。  執行個體傳送資料，另一個執行個體中的通知。  任一應用程式可以啟始切換，因此將可當做伺服器或用戶端到另一個應用程式。  下列函式在應用程式的檢視類別定義:  
+ The following example illustrates how you use the archive to send and receive data through `CSocket` objects. The example is designed so that two instances of the application (on the same machine or on different machines on the network) exchange data. One instance sends data, which the other instance receives and acknowledges. Either application can initiate an exchange, and either can act as server or as client to the other application. The following function is defined in the application's view class:  
   
- [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/CPP/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
+ [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
   
- 如需這個範例的最重要的事是 MFC `Serialize` 函式其結構平行。  **PacketSerialize** 成員函式包括與 **else** 子句的 **if** 陳述式。  函式會接收兩個 [CArchive](../mfc/reference/carchive-class.md) 參考做為參數: `arData` 和 `arAck`。  如果 `arData` 封存物件為儲存 \(傳送\) 設定， **if** 分支執行;否則，則為，如果 `arData` 為載入 \(接收\) 設定函式採用 **else** 分支。  如需如何以 MFC 撰寫序列化的詳細資訊，請參閱[序列化](../mfc/how-to-make-a-type-safe-collection.md)。  
+ The most important thing about this example is that its structure parallels that of an MFC `Serialize` function. The **PacketSerialize** member function consists of an **if** statement with an **else** clause. The function receives two [CArchive](../mfc/reference/carchive-class.md) references as parameters: `arData` and `arAck`. If the `arData` archive object is set for storing (sending), the **if** branch executes; otherwise, if `arData` is set for loading (receiving) the function takes the **else** branch. For more information about serialization in MFC, see [Serialization](../mfc/how-to-make-a-type-safe-collection.md).  
   
 > [!NOTE]
->  `arAck` 封存物件假設 `arData`是相反。  如果 `arData` 是要傳送 `arAck` 接收，計數器為 true。  
+>  The `arAck` archive object is assumed to be the opposite of `arData`. If `arData` is for sending, `arAck` receives, and the converse is true.  
   
- 對於傳送，範例函式為迴圈時，都會產生一些隨機資料的指定次數為了便於示範。  您的應用程式將衍生自某個來源的實際資料，例如檔案。  `arData` 表示檔案的插入運算子 \(**\<\<**\) 用於傳送資料的連續區塊資料流:  
+ For sending, the example function loops for a specified number of times, each time generating some random data for demonstration purposes. Your application would obtain real data from some source, such as a file. The `arData` archive's insertion operator (**<<**) is used to send a stream of three consecutive chunks of data:  
   
--   指定資料的性質的標題 \(在此例中， `bValue` 變數的值，以及可供傳送\)。  
+-   A "header" that specifies the nature of the data (in this case, the value of the `bValue` variable and how many copies will be sent).  
   
-     兩個項目對於這個範例會隨機產生。  
+     Both items are generated randomly for this example.  
   
--   指定之資料的複本數目。  
+-   The specified number of copies of the data.  
   
-     內部 **for** 重複傳送 `bValue` 指定的次數。  
+     The inner **for** loop sends `bValue` the specified number of times.  
   
--   字串呼叫接收者顯示給使用者的 `strText` 。  
+-   A string called `strText` that the receiver displays to its user.  
   
- 對於接收函式，功能差不多，但是從封存中使用捲軸的檔案擷取運算子 \(**\>\>**\) 取得資料。  接收應用程式驗證資料，最後顯示「接收訊息」，然後傳回稱為「傳送」的傳回顯示訊息。  
+ For receiving, the function operates similarly, except that it uses the archive's extraction operator (**>>**) to get data from the archive. The receiving application verifies the data it receives, displays the final "Received" message, and then sends back a message that says "Sent" for the sending application to display.  
   
- 在這個中通訊模型， 「接收」的文字，在 `strText` 變數所傳送的訊息，是顯示在通訊的另一端，因此，指定給接收使用者的一些資料包接收。  接收者回覆與稱為「傳送」的相同的字串，在原始寄件者的螢幕顯示的。  開啟收款兩個字串表示成功的通訊時發生。  
+ In this communications model, the word "Received", the message sent in the `strText` variable, is for display at the other end of the communication, so it specifies to the receiving user that a certain number of packets of data have been received. The receiver replies with a similar string that says "Sent", for display on the original sender's screen. Receipt of both strings indicates that successful communication has occurred.  
   
 > [!CAUTION]
->  如果您正在撰寫一個 MFC 用戶端程式建立的 \(非 MFC\) 伺服器通訊，請勿將封存傳送 C\+\+ 物件。  除非伺服器是了解這種物件的 MFC 應用程式要傳送，無法接收和序列化您的物件。  一個範例會在 [Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md) 一文顯示型別的通訊。  
+>  If you are writing an MFC client program to communicate with established (non-MFC) servers, do not send C++ objects through the archive. Unless the server is an MFC application that understands the kinds of objects you want to send, it won't be able to receive and deserialize your objects. An example in the article [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) shows a communication of this type.  
   
- 如需詳細資訊，請參閱 Windows Sockets 規格: **htonl**， **ntohl**， **ntohl**， **ntohs**。  如需詳細資訊，請參閱:  
+ For more information, see Windows Sockets Specification: **htonl**, **htons**, **ntohl**, **ntohs**. Also, for more information, see:  
   
--   [Windows Sockets：從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows Sockets：如何搭配使用通訊端與封存](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: How Sockets with Archives Work](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows Sockets：背景](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
-## 請參閱  
- [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
- [CArchive::IsStoring](../Topic/CArchive::IsStoring.md)   
- [CArchive::operator \<\<](../Topic/CArchive::operator%20%3C%3C.md)   
- [CArchive::operator \>\>](../Topic/CArchive::operator%20%3E%3E.md)   
- [CArchive::Flush](../Topic/CArchive::Flush.md)   
- [CObject::Serialize](../Topic/CObject::Serialize.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [CArchive::IsStoring](../mfc/reference/carchive-class.md#isstoring)   
+ [CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)   
+ [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)   
+ [CArchive::Flush](../mfc/reference/carchive-class.md#flush)   
+ [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
+
+

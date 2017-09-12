@@ -1,5 +1,5 @@
 ---
-title: "CRichEditCntrItem 類別 |Microsoft 文件"
+title: CRichEditCntrItem Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,10 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CRichEditCntrItem class
-- OLE items, in rich edit views
-- rich edit controls, using
-- rich edit controls, OLE items
+- CRichEditCntrItem [MFC], CRichEditCntrItem
+- CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
 caps.latest.revision: 24
 author: mikeblome
@@ -39,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b29c7c3b80d24ef9ddb94e09c6b5c7bf2444bb4f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 71d807b07dd162b0b34d7c6986aee5ef98914d4d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cricheditcntritem-class"></a>CRichEditCntrItem 類別
-使用[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供 rich edit 控制項的 MFC 的文件檢視架構內容中的功能。  
+# <a name="cricheditcntritem-class"></a>CRichEditCntrItem Class
+With [CRichEditView](../../mfc/reference/cricheditview-class.md) and [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), provides the functionality of the rich edit control within the context of MFC's document view architecture.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRichEditCntrItem : public COleClientItem  
@@ -57,28 +55,28 @@ class CRichEditCntrItem : public COleClientItem
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|建構 `CRichEditCntrItem` 物件。|  
+|[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|Constructs a `CRichEditCntrItem` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|啟動為其他類型的項目。|  
+|[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Activates the item as another type.|  
   
-## <a name="remarks"></a>備註  
- 「 Rich edit 控制項 」 是一個視窗，讓使用者輸入及編輯文字。 文字字元和段落格式，可以指派，而且可以包含內嵌的 OLE 物件。 Rich edit 控制項來格式化文字，提供程式設計介面。 然而，應用程式必須實作所有必要的使用者介面元件，讓使用者能夠執行格式化作業。  
+## <a name="remarks"></a>Remarks  
+ A "rich edit control" is a window in which the user can enter and edit text. The text can be assigned character and paragraph formatting, and can include embedded OLE objects. Rich edit controls provide a programming interface for formatting text. However, an application must implement any user interface components necessary to make formatting operations available to the user.  
   
- `CRichEditView` 會維護文字和文字的格式特性。 `CRichEditDoc`會維護檢視中的 OLE 用戶端項目清單。 `CRichEditCntrItem` 提供 OLE 用戶端項目的存取權給容器端。  
+ `CRichEditView` maintains the text and formatting characteristic of text. `CRichEditDoc` maintains the list of OLE client items which are in the view. `CRichEditCntrItem` provides container-side access to the OLE client item.  
   
- 這個 Windows 通用控制項 (並因此[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)和相關類別) 僅適用於在 Windows 95/98 和 Windows NT 版本 3.51 下執行的程式和更新版本。  
+ This Windows Common control (and therefore the [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) and related classes) is available only to programs running under Windows 95/98 and Windows NT versions 3.51 and later.  
   
- 在 MFC 應用程式中使用豐富的編輯容器項目，例如，請參閱[WORDPAD](../../visual-cpp-samples.md)範例應用程式。  
+ For an example of using rich edit container items in an MFC application, see the [WORDPAD](../../visual-cpp-samples.md) sample application.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,11 +87,11 @@ class CRichEditCntrItem : public COleClientItem
   
  `CRichEditCntrItem`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxrich.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrich.h  
   
-##  <a name="cricheditcntritem"></a>CRichEditCntrItem::CRichEditCntrItem  
- 呼叫此函式建立`CRichEditCntrItem`物件，並將它加入至容器文件。  
+##  <a name="cricheditcntritem"></a>  CRichEditCntrItem::CRichEditCntrItem  
+ Call this function to create a `CRichEditCntrItem` object and add it to the container document.  
   
 ```  
 CRichEditCntrItem(
@@ -101,36 +99,36 @@ CRichEditCntrItem(
     CRichEditDoc* pContainer = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *preo*  
- 指標[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述的 OLE 項目。 新`CRichEditCntrItem`物件會建構包含此 OLE 項目。 如果*preo*是**NULL**，用戶端項目是空的。  
+ Pointer to an [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure which describes an OLE item. The new `CRichEditCntrItem` object is constructed around this OLE item. If *preo* is **NULL**, the client item is empty.  
   
  `pContainer`  
- 容器文件會包含此項目的指標。 如果`pContainer`是**NULL**，您必須明確地呼叫[COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem)將此用戶端項目加入至文件。  
+ Pointer to the container document that will contain this item. If `pContainer` is **NULL**, you must explicitly call [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) to add this client item to a document.  
   
-### <a name="remarks"></a>備註  
- 此函式不會執行任何 OLE 初始化。  
+### <a name="remarks"></a>Remarks  
+ This function does not perform any OLE initialization.  
   
- 如需詳細資訊，請參閱[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see the [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure in the Windows SDK.  
   
-##  <a name="synctoricheditobject"></a>CRichEditCntrItem::SyncToRichEditObject  
- 呼叫此函式來同步處理裝置長寬[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)，這個**CRichEditCntrltem**所指定的*reo*。  
+##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
+ Call this function to synchronize the device aspect, [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318), of this **CRichEditCntrltem** to that specified by *reo*.  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *reo*  
- 若要參考[REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946)結構描述的 OLE 項目。  
+ Reference to an [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) structure which describes an OLE item.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ For more information, see [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) in the Windows SDK.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 WORDPAD](../../visual-cpp-samples.md)   
- [COleClientItem 類別](../../mfc/reference/coleclientitem-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CRichEditDoc 類別](../../mfc/reference/cricheditdoc-class.md)   
- [CRichEditView 類別](../../mfc/reference/cricheditview-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample WORDPAD](../../visual-cpp-samples.md)   
+ [COleClientItem Class](../../mfc/reference/coleclientitem-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CRichEditDoc Class](../../mfc/reference/cricheditdoc-class.md)   
+ [CRichEditView Class](../../mfc/reference/cricheditview-class.md)
 

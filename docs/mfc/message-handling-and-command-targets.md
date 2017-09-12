@@ -1,73 +1,81 @@
 ---
-title: "訊息處理和命令目標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IOleCommandTarget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令傳送, 命令目標"
-  - "命令目標"
-  - "IOleCommandTarget 介面"
-  - "訊息處理, 主動式文件"
+title: Message Handling and Command Targets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IOleCommandTarget
+dev_langs:
+- C++
+helpviewer_keywords:
+- command targets [MFC]
+- message handling [MFC], active documents
+- IOleCommandTarget interface [MFC]
+- command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 訊息處理和命令目標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76940076c98329a33be2d1908c332a08939848a8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-命令分派介面 `IOleCommandTarget` 定義一個簡單的機制查詢並執行命令。  因為它完全依賴標準命令集，這個機制來自動化的 `IDispatch` 簡單;命令很少有引數，，和型別資訊不是包含的 \(型別安全為命令引數會降低\)。  
+---
+# <a name="message-handling-and-command-targets"></a>Message Handling and Command Targets
+The command dispatch interface `IOleCommandTarget` defines a simple and extensible mechanism to query and execute commands. This mechanism is simpler than Automation's `IDispatch` because it relies entirely on a standard set of commands; commands rarely have arguments, and no type information is involved (type safety is diminished for command arguments as well).  
   
- 在命令分派介面設計，每個命令所屬本身識別與 **GUID**的命令組」。  因此，任何在該群組中可以定義新的群組和定義任何命令，沒有任何需要配合 Microsoft 和其他廠商。\(這基本上是定義相同的方式就像 **dispinterface** 加上 Automation 的 **dispIDs** 。  有重疊在此處，不過，這個命令路由機制大型地只適用於命令路由和不做為指令碼\/可程式性當 Automation 控制代碼\)。  
+ In the command dispatch interface design, each command belongs to a "command group" which is itself identified with a **GUID**. Therefore, anyone can define a new group and define all the commands within that group without any need to coordinate with Microsoft or any other vendor. (This is essentially the same means of definition as a **dispinterface** plus **dispIDs** in Automation. There is overlap here, although this command routing mechanism is only for command routing and not for scripting/programmability on a large scale as Automation handles.)  
   
- `IOleCommandTarget` 處理下列案例:  
+ `IOleCommandTarget` handles the following scenarios:  
   
--   當物件是就地啟動，，只有物件的工具列一般都是顯示和物件的工具列可能有特定的按鈕 \(例如 **Print**和 **Print** \[**預覽**\]， \[**儲存**\]、 \[**縮放**\]， `New`和其他的容器命令。\(就地啟用標準建議物件移除其工具列的這類按鈕或至少停用。  這種設計可以讓這些命令啟用，仍會傳送至正確的處理常式\)。目前，沒有物件的機制可以透過這些命令至容器。  
+-   When an object is in-place activated, only the object's toolbars are typically displayed and the object's toolbars may have buttons for some of the container commands like **Print**, **Print Preview**, **Save**, `New`, **Zoom**, and others. (In-place activation standards recommend that objects remove such buttons from their toolbars, or at least disable them. This design allows those commands to be enabled and yet routed to the right handler.) Currently, there is no mechanism for the object to dispatch these commands to the container.  
   
--   當現用文件在主動式文件容器內嵌 \(例如 Office 文件夾\)，容器可能需要傳送命令這類 **Print**和 **Page Setup**， \[**屬性**\] 和其他到包含現用文件。  
+-   When an active document is embedded in an active document container (such as Office Binder), the container may need to send commands such **Print**, **Page Setup**, **Properties**, and others to the contained active document.  
   
- 這個簡單的命令路由可以透過現有的 Automation 標準和 `IDispatch`被處理。  不過，額外負荷與 `IDispatch` 所需的在這裡較多，因此， `IOleCommandTarget` 提供更簡單的方式達成相同目的:  
+ This simple command routing could be handled through existing Automation standards and `IDispatch`. However, the overhead involved with `IDispatch` is more than is necessary here, so `IOleCommandTarget` provides a simpler means to achieve the same ends:  
   
- `interface IOleCommandTarget : IUnknown`  
+```  
+interface IOleCommandTarget : IUnknown  
+    {  
+    HRESULT QueryStatus(  
+        [in] GUID *pguidCmdGroup,  
+        [in] ULONG cCmds,  
+        [in,out][size_is(cCmds)] OLECMD *prgCmds,  
+        [in,out] OLECMDTEXT *pCmdText);  
+    HRESULT Exec(  
+        [in] GUID *pguidCmdGroup,  
+        [in] DWORD nCmdID,  
+        [in] DWORD nCmdExecOpt,  
+        [in] VARIANTARG *pvaIn,  
+        [in,out] VARIANTARG *pvaOut);  
+    }  
+```  
   
- `{`  
+ The `QueryStatus` method here tests whether a particular set of commands, the set being identified with a **GUID**, is supported. This call fills an array of **OLECMD** values (structures) with the supported list of commands as well as returning text describing the name of a command and/or status information. When the caller wishes to invoke a command, it can pass the command (and the set **GUID**) to **Exec** along with options and arguments, getting back a return value.  
   
- `HRESULT QueryStatus(`  
-  
- `[in] GUID *pguidCmdGroup,`  
-  
- `[in] ULONG cCmds,`  
-  
- `[in,out][size_is(cCmds)] OLECMD *prgCmds,`  
-  
- `[in,out] OLECMDTEXT *pCmdText);`  
-  
- `HRESULT Exec(`  
-  
- `[in] GUID *pguidCmdGroup,`  
-  
- `[in] DWORD nCmdID,`  
-  
- `[in] DWORD nCmdExecOpt,`  
-  
- `[in] VARIANTARG *pvaIn,`  
-  
- `[in,out] VARIANTARG *pvaOut);`  
-  
- `}`  
-  
- 這裡的 `QueryStatus` 方法會測試特定一組命令，以識別與 **GUID**的這個集合，是否支援。  這是呼叫命令支援的清單填入 **OLECMD** 值 \(結構\) 以及傳回描述命令和狀態資訊的名稱的文字。  當呼叫端想要叫用命令時，它可以透過命令 \(和集合 **GUID**\) 到 **Exec** 與選項和引數一起後面，取得傳回值。  
-  
-## 請參閱  
- [主動式文件容器](../mfc/active-document-containers.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containers](../mfc/active-document-containers.md)
+
+

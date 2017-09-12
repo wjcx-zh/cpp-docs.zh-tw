@@ -1,56 +1,75 @@
 ---
-title: "剪貼簿：使用 OLE 剪貼簿機制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式 [OLE], 剪貼簿"
-  - "剪貼簿 [C++], OLE 格式"
-  - "格式 [C++], OLE 的剪貼簿"
-  - "OLE 剪貼簿"
-  - "OLE 剪貼簿, 格式"
+title: 'Clipboard: Using the OLE Clipboard Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], Clipboard
+- OLE Clipboard
+- Clipboard [MFC], OLE formats
+- OLE Clipboard, formats
+- formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 剪貼簿：使用 OLE 剪貼簿機制
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8087ff3c5054193fa681ea094d1f223855889b78
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-OLE 使用標準格式和某些 OLE 特定格式的資料傳輸到剪貼簿。  
+---
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Clipboard: Using the OLE Clipboard Mechanism
+OLE uses standard formats and some OLE-specific formats for transferring data through the Clipboard.  
   
- 當您將剪下或複製到應用程式中的資料時，資料會在貼上作業將使用的剪貼簿中。  這個資料會有各種格式。  當使用者選取貼上剪貼簿中的資料時，應用程式可以選擇使用哪一種格式。  應寫入應用程式來選擇提供大部分資訊格式，除非使用者明確地要求某種格式，來使用貼上特殊。  在繼續之前，您可能要讀取 [資料物件和資料來源 \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) 主題。  會在您的應用程式描述基本資料傳輸如何運作以及如何加以實作。  
+ When you cut or copy data from an application, the data is stored on the Clipboard to be used later in paste operations. This data is in a variety of formats. When a user chooses to paste data from the Clipboard, the application can choose which of these formats to use. The application should be written to choose the format that provides the most information, unless the user specifically asks for a certain format, using Paste Special. Before continuing, you may want to read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics. They describe the fundamentals of how data transfers work, and how to implement them in your applications.  
   
- Windows 會定義可用於將資料使用剪貼簿的許多標準格式。  這些包括中繼檔、文字，點陣圖等。  OLE 定義了許多 OLE 特定格式。  如需比較這些標準格式給需要詳細資料的應用程式，最好能註冊它們自己的自訂剪貼簿格式。  使用 Win32 API 函式 [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) 來這樣做。  
+ Windows defines a number of standard formats that can be used for transferring data through the Clipboard. These include metafiles, text, bitmaps, and others. OLE defines a number of OLE-specific formats, as well. For applications that need more detail than given by these standard formats, it is a good idea to register their own custom Clipboard formats. Use the Win32 API function [RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) to do this.  
   
- 例如， Microsoft Excel 註冊報表的自訂格式。  這個格式會傳用詳細資訊，例如點陣圖。  這個資料貼入支援報告格式的應用程式時，所有公式和值從報表保留並可以在必要時更新。  Microsoft Excel 在剪貼簿也將資料格式，以便貼成 OLE 項目。  所有 OLE 文件容器可以貼上此資訊做為內嵌項目。  使用 Microsoft Excel，本內嵌的項目可以被變更。  剪貼簿也包含報表中的選取範圍的影像的簡單點陣圖。  這也可以貼入 OLE 文件容器或輸入點陣圖編輯器，像是繪製。  在點陣圖的情況下，不過，沒有方法可以以報告操作資料。  
+ For example, Microsoft Excel registers a custom format for spreadsheets. This format carries much more information than, for example, a bitmap does. When this data is pasted into an application that supports the spreadsheet format, all the formulas and values from the spreadsheet are retained and can be updated if necessary. Microsoft Excel also puts data on the Clipboard in formats so that it can be pasted as an OLE item. Any OLE document container can paste this information as an embedded item. This embedded item can be changed using Microsoft Excel. The Clipboard also contains a simple bitmap of the image of the selected range on the spreadsheet. This can also be pasted into OLE document containers or into bitmap editors, like Paint. In the case of a bitmap, however, there is no way to manipulate the data as a spreadsheet.  
   
- 若要從剪貼簿擷取最大資訊，應用程式應該在貼上剪貼簿中的資料之前檢查這些自訂格式。  
+ To retrieve the maximum amount of information from the Clipboard, applications should check for these custom formats before pasting data from the Clipboard.  
   
- 例如，若要剪下命令，您可以類似下列來撰寫處理常式:  
+ For example, to enable the Cut command, you might write a handler something like the following:  
   
- [!code-cpp[NVC_MFCListView#3](../mfc/codesnippet/CPP/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
+ [!code-cpp[NVC_MFCListView#3](../atl/reference/codesnippet/cpp/clipboard-using-the-ole-clipboard-mechanism_1.cpp)]  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)  
+-   [Copying and pasting data](../mfc/clipboard-copying-and-pasting-data.md)  
   
--   [加入其他格式](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [使用 Windows 剪貼簿](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Using the Windows Clipboard](../mfc/clipboard-using-the-windows-clipboard.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
--   [OLE 資料物件和資料來源以及一致的資料傳輸。](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
-## 請參閱  
- [剪貼簿](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

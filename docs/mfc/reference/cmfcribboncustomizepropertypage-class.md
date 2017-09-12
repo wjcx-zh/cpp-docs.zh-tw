@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonCustomizePropertyPage 類別 |Microsoft 文件"
+title: CMFCRibbonCustomizePropertyPage Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,11 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ~CMFCRibbonCustomizePropertyPage destructor
-- CMFCRibbonCustomizePropertyPage class, destructor
-- GetThisClass method
-- CreateObject method
-- CMFCRibbonCustomizePropertyPage class
+- CMFCRibbonCustomizePropertyPage [MFC], CMFCRibbonCustomizePropertyPage
+- CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
+- CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
 caps.latest.revision: 26
 author: mikeblome
@@ -41,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 83323142441de13140383152a32122bf1644003f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1dfe2103b57a2cc53a2ebfb0f484dad86b4c3fa3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 類別
-實作自訂頁面**自訂**在功能區應用程式中的對話方塊。  
+# <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage Class
+Implements a custom page for the **Customize** dialog box in Ribbon-based applications.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage  
@@ -59,33 +57,33 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|建構 `CMFCRibbonCustomizePropertyPage` 物件。|  
-|`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|解構函式。|  
+|Name|Description|  
+|[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|Constructs a `CMFCRibbonCustomizePropertyPage` object.|  
+|`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|名稱|說明|  
-|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|新增自訂的類別，以**命令**下拉式方塊。|  
-|`CMFCRibbonCustomizePropertyPage::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
-|`CMFCRibbonCustomizePropertyPage::GetThisClass`|由架構用來取得變數的指標， [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
-|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|由系統呼叫，當使用者按一下**確定**上**自訂**對話方塊。|  
+|Name|Description|  
+|[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|Adds a custom category to the **Commands** combo box.|  
+|`CMFCRibbonCustomizePropertyPage::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|`CMFCRibbonCustomizePropertyPage::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCRibbonCustomizePropertyPage::OnOK](#onok)|Called by the system when a user clicks **OK** on the **Customize** dialog box.|  
   
-## <a name="remarks"></a>備註  
- 如果您想要新增自訂命令**自訂**對話方塊中，您必須處理 AFX_WM_ON_RIBBON_CUSTOMIZE 訊息。 訊息處理常式中，在具現化`CMFCRibbonCustomizePropertyPage`堆疊上的物件。 建立自訂命令的清單，然後呼叫`AddCustomCategory`來加入新的頁面，以便**自訂**對話方塊。  
+## <a name="remarks"></a>Remarks  
+ If you want to add custom commands to the **Customize** dialog box, you must handle the AFX_WM_ON_RIBBON_CUSTOMIZE message. In the message handler, instantiate a `CMFCRibbonCustomizePropertyPage` object on the stack. Create a list of custom commands, and then call `AddCustomCategory` to add the new page to the **Customize** dialog box.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何建構`CMFCRibbonCustomizePropertyPage`物件，並將自訂類別。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCRibbonCustomizePropertyPage` object and to add a custom category.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&22;](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -100,11 +98,11 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
  [CMFCRibbonCustomizePropertyPage](../../mfc/reference/cmfcribboncustomizepropertypage-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxribboncustomizedialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribboncustomizedialog.h  
   
-##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
- 新增自訂的類別，以**命令**下拉式方塊。  
+##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+ Adds a custom category to the **Commands** combo box.  
   
 ```  
 void AddCustomCategory(
@@ -112,39 +110,39 @@ void AddCustomCategory(
     const CList<UINT, UINT>& lstIDS);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|參數|描述|  
-|[in] `lpszName`|指定自訂的類別名稱。|  
-|[in] `lstIDS`|包含要顯示在 [自訂] 類別的功能區命令 Id。|  
+|Parameter|Description|  
+|[in] `lpszName`|Specifies the custom category name.|  
+|[in] `lstIDS`|Contains ribbon command IDs to be shown in the custom category.|  
   
-### <a name="remarks"></a>備註  
- 這個方法會加入名為類別目錄`lpszName`至**命令**下拉式方塊。 當使用者選取類別目錄時，命令中指定`lstIDS`出現在 [命令] 清單中。  
+### <a name="remarks"></a>Remarks  
+ This method adds a category named `lpszName` to the **Commands** combo box. When the user selects the category, the commands specified in `lstIDS` appear in the command list.  
   
-##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
- 建構 `CMFCRibbonCustomizePropertyPage` 物件。  
+##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+ Constructs a `CMFCRibbonCustomizePropertyPage` object.  
   
 ```  
 CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pRibbonBar`  
- 在功能區控制項的指標選項來自訂。  
+ A pointer to a ribbon control for which the options to customize.  
   
-##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
- 當使用者按一下系統 Calleld**確定**上**自訂**對話方塊。  
+##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
+ Calleld by the system when a user clicks **OK** on the **Customize** dialog box.  
   
 ```  
 virtual void OnOK();
 ```  
   
-### <a name="remarks"></a>備註  
- 預設實作會套用在選取的選項**自訂**對話方塊，即可快速存取工具列。  
+### <a name="remarks"></a>Remarks  
+ The default implementation applies the options selected in the **Customize** dialog box to the Quick Access Toolbar.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

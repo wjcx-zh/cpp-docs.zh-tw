@@ -1,43 +1,62 @@
 ---
-title: "終結視窗物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架視窗, 終結"
-  - "視窗物件, 刪除"
-  - "視窗物件, 終結"
-  - "視窗物件, 移除"
+title: Destroying Window Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], destroying
+- window objects [MFC], deleting
+- window objects [MFC], destroying
+- window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 終結視窗物件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b72195923ba98afbd281bbda2a85d3e599258a43
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在使用者完成以視窗時，必須謹慎地以您的子視窗終結 C\+\+ 視窗物件。  如果沒有終結這些物件，您的應用程式不會復原其記憶體。  所幸，架構處理視窗終結以及建立框架視窗、檢視和對話方塊。  如果您建立其他視窗，您要負責終結它們。  
+---
+# <a name="destroying-window-objects"></a>Destroying Window Objects
+Care must be taken with your own child windows to destroy the C++ window object when the user is finished with the window. If these objects are not destroyed, your application will not recover their memory. Fortunately, the framework manages window destruction as well as creation for frame windows, views, and dialog boxes. If you create additional windows, you are responsible for destroying them.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [視窗解構序列](../mfc/window-destruction-sequence.md)  
+-   [Window destruction sequence](../mfc/window-destruction-sequence.md)  
   
--   [配置和解除配置視窗記憶體](../mfc/allocating-and-deallocating-window-memory.md)  
+-   [Allocating and deallocating window memory](../mfc/allocating-and-deallocating-window-memory.md)  
   
--   [從 HWND 中斷連結 CWnd](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
+-   [Detaching a CWnd from its HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)  
   
--   [一般視窗建立順序](../mfc/general-window-creation-sequence.md)  
+-   [General Window Creation Sequence](../mfc/general-window-creation-sequence.md)  
   
--   [終結框架視窗](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
-## 請參閱  
- [視窗物件](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

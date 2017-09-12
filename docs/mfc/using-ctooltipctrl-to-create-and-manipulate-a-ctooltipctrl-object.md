@@ -1,48 +1,67 @@
 ---
-title: "使用 CToolTipCtrl 建立及管理 CToolTipCtrl 物件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolTipCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolTipCtrl 類別, 使用"
-  - "工具提示 [C++], 建立"
+title: Using CToolTipCtrl to Create and Manipulate a CToolTipCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolTipCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], creating
+- CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 使用 CToolTipCtrl 建立及管理 CToolTipCtrl 物件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cfc091afcfea3eae5cc877d0a1a177f4f7221ac3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) 使用方式的範例：  
+---
+# <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>Using CToolTipCtrl to Create and Manipulate a CToolTipCtrl Object
+Here is an example of [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) usage:  
   
-### 建立和管理 CToolTipCtrl  
+### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>To create and manipulate a CToolTipCtrl  
   
-1.  建構 `CToolTipCtrl` 物件。  
+1.  Construct the `CToolTipCtrl` object.  
   
-2.  呼叫 [建立](../Topic/CToolTipCtrl::Create.md) 以建立視窗工具提示通用控制項並將它附加至 `CToolTipCtrl` 物件。  
+2.  Call [Create](../mfc/reference/ctooltipctrl-class.md#create) to create the Windows tool tip common control and attach it to the `CToolTipCtrl` object.  
   
-3.  呼叫 [AddTool](../Topic/CToolTipCtrl::AddTool.md) 註冊工具提示控制項的工具，因此，在工具提示中所儲存的資訊隨即顯示，當游標位於工具時。  
+3.  Call [AddTool](../mfc/reference/ctooltipctrl-class.md#addtool) to register a tool with the tool tip control, so that the information stored in the tool tip is displayed when the cursor is on the tool.  
   
-4.  呼叫 [SetToolInfo](../Topic/CToolTipCtrl::SetToolInfo.md) 設定工具提示的工具所維護的資訊。  
+4.  Call [SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo) to set the information that a tool tip maintains for a tool.  
   
-5.  呼叫 [SetToolRect](../Topic/CToolTipCtrl::SetToolRect.md) 設定中顯示的週框。  
+5.  Call [SetToolRect](../mfc/reference/ctooltipctrl-class.md#settoolrect) to set a new bounding rectangle for a tool.  
   
-6.  呼叫 [HitTest](../Topic/CToolTipCtrl::HitTest.md) 測試點判斷它是否在指定之工具的週框內，如果有的話，擷取有關工具的相關資訊。  
+6.  Call [HitTest](../mfc/reference/ctooltipctrl-class.md#hittest) to test a point to determine whether it is within the bounding rectangle of the given tool and, if so, retrieve information about the tool.  
   
-7.  呼叫 [GetToolCount](../Topic/CToolTipCtrl::GetToolCount.md) 擷取工具的計數向工具提示控制項註冊。  
+7.  Call [GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount) to retrieve a count of the tools registered with the tool tip control.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Using CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CMFCColorBar 類別 |Microsoft 文件"
+title: CMFCColorBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,34 +48,40 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCColorBar class
-- CMFCColorBar::m_ColorAutomatic data member
-- CMFCColorBar::m_bInternal data member
-- CMFCColorBar::m_bIsEnabled data member
-- CMFCColorBar::m_nNumColumnsVert data member
-- CMFCColorBar::m_nVertMargin data member
-- CMFCColorBar::m_strDocColors data member
-- CMFCColorBar::m_BoxSize data member
-- CMFCColorBar::m_pParentBtn data member
-- CMFCColorBar::m_bIsTearOff data member
-- CMFCColorBar::m_nHorzOffset data member
-- CMFCColorBar::m_pParentRibbonBtn data member
-- CMFCColorBar::m_nNumRowsHorz data member
-- CMFCColorBar::m_bStdColorDlg data member
-- CMFCColorBar::m_strAutoColor data member
-- CMFCColorBar::m_ColorNames data member
-- CMFCColorBar::m_strOtherColor data member
-- CMFCColorBar::m_lstDocColors data member
-- CMFCColorBar::m_pWndPropList data member
-- CMFCColorBar::m_ColorSelected data member
-- CMFCColorBar::m_nCommandID data member
-- CMFCColorBar::m_nHorzMargin data member
-- CMFCColorBar::m_nRowHeight data member
-- CMFCColorBar::m_Palette data member
-- CMFCColorBar::m_colors data member
-- CMFCColorBar::m_nVertOffset data member
-- CMFCColorBar::m_nNumColumns data member
-- CMFCColorBar::m_bShowDocColorsWhenDocked data member
+- CMFCColorBar [MFC], CMFCColorBar
+- CMFCColorBar [MFC], ContextToSize
+- CMFCColorBar [MFC], CreateControl
+- CMFCColorBar [MFC], Create
+- CMFCColorBar [MFC], EnableAutomaticButton
+- CMFCColorBar [MFC], EnableOtherButton
+- CMFCColorBar [MFC], GetColor
+- CMFCColorBar [MFC], GetCommandID
+- CMFCColorBar [MFC], GetHighlightedColor
+- CMFCColorBar [MFC], GetHorzMargin
+- CMFCColorBar [MFC], GetVertMargin
+- CMFCColorBar [MFC], IsTearOff
+- CMFCColorBar [MFC], SetColor
+- CMFCColorBar [MFC], SetColorName
+- CMFCColorBar [MFC], SetCommandID
+- CMFCColorBar [MFC], SetDocumentColors
+- CMFCColorBar [MFC], SetHorzMargin
+- CMFCColorBar [MFC], SetVertMargin
+- CMFCColorBar [MFC], AdjustLocations
+- CMFCColorBar [MFC], AllowChangeTextLabels
+- CMFCColorBar [MFC], AllowShowOnList
+- CMFCColorBar [MFC], CalcSize
+- CMFCColorBar [MFC], CreatePalette
+- CMFCColorBar [MFC], GetColorGridSize
+- CMFCColorBar [MFC], GetExtraHeight
+- CMFCColorBar [MFC], InitColors
+- CMFCColorBar [MFC], OnKey
+- CMFCColorBar [MFC], OnSendCommand
+- CMFCColorBar [MFC], OnUpdateCmdUI
+- CMFCColorBar [MFC], OpenColorDialog
+- CMFCColorBar [MFC], Rebuild
+- CMFCColorBar [MFC], SelectPalette
+- CMFCColorBar [MFC], SetPropList
+- CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
 caps.latest.revision: 35
 author: mikeblome
@@ -95,17 +101,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: bf4d431a3f3237587dc9f86be91f11b9b5016fe2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: df0baccf38bef3ecbd3a56b630100c47b66f7b4f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccolorbar-class"></a>CMFCColorBar 類別
-`CMFCColorBar`類別表示可以在文件或應用程式中選取色彩的停駐控制列。  
+# <a name="cmfccolorbar-class"></a>CMFCColorBar Class
+The `CMFCColorBar` class represents a docking control bar that can select colors in a document or application.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCColorBar : public CMFCPopupMenuBar  
@@ -113,119 +119,119 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
 ## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保護的建構函式  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|建構 `CMFCColorBar` 物件。|  
+|[CMFCColorBar::CMFCColorBar](#cmfccolorbar)|Constructs a `CMFCColorBar` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorBar::ContextToSize](#contexttosize)|計算的垂直和水平邊界，不需要包含色軸控制項上的按鈕，然後再調整這些按鈕的位置。|  
-|[CMFCColorBar::CreateControl](#createcontrol)|建立的色軸控制項的視窗，將它附加`CMFCColorBar`物件，然後將控制項調整為包含指定的色彩調色盤。|  
-|[CMFCColorBar::Create](#create)|建立的色軸的控制項視窗並將它附加`CMFCColorBar`物件。|  
-|[CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton)|顯示或隱藏 [自動] 按鈕。|  
-|[CMFCColorBar::EnableOtherButton](#enableotherbutton)|啟用或停用的對話方塊，讓使用者選取更多的色彩顯示。|  
-|[CMFCColorBar::GetColor](#getcolor)|擷取目前選取的色彩。|  
-|[CMFCColorBar::GetCommandID](#getcommandid)|擷取目前的色軸控制項的命令 ID。|  
-|[CMFCColorBar::GetHighlightedColor](#gethighlightedcolor)|擷取表示的色彩按鈕具有焦點，色彩亦即，按鈕是*熱*。|  
-|[CMFCColorBar::GetHorzMargin](#gethorzmargin)|擷取的水平的邊界，也就是左邊或右邊的色彩資料格和用戶端區域的界限之間的間距。|  
-|[CMFCColorBar::GetVertMargin](#getvertmargin)|擷取垂直邊界，也就是頂端或底部色彩的儲存格和用戶端區域的界限之間的間距。|  
-|[CMFCColorBar::IsTearOff](#istearoff)|指出是否可停駐在目前的色軸。|  
-|[CMFCColorBar::SetColor](#setcolor)|設定目前選取的色彩。|  
-|[CMFCColorBar::SetColorName](#setcolorname)|設定指定的色彩的新名稱。|  
-|[CMFCColorBar::SetCommandID](#setcommandid)|設定色軸控制項的新命令識別碼。|  
-|[CMFCColorBar::SetDocumentColors](#setdocumentcolors)|設定目前文件所使用的色彩清單。|  
-|[CMFCColorBar::SetHorzMargin](#sethorzmargin)|設定水平的邊界，也就是左邊或右邊的色彩資料格和用戶端區域的界限之間的間距。|  
-|[CMFCColorBar::SetVertMargin](#setvertmargin)|設定垂直邊界，也就是頂端或底端色彩資料格，而用戶端區域的界限之間的間距。|  
+|[CMFCColorBar::ContextToSize](#contexttosize)|Calculates the vertical and horizontal margins that are required to contain the buttons on the color bar control and then adjusts the location of those buttons.|  
+|[CMFCColorBar::CreateControl](#createcontrol)|Creates a color bar control window, attaches it to the `CMFCColorBar` object, and resizes the control to contain the specified palette of colors.|  
+|[CMFCColorBar::Create](#create)|Creates a color bar control window and attaches it to the `CMFCColorBar` object.|  
+|[CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton)|Shows or hides the automatic button.|  
+|[CMFCColorBar::EnableOtherButton](#enableotherbutton)|Enables or disables the display of a dialog box that lets the user select more colors.|  
+|[CMFCColorBar::GetColor](#getcolor)|Retrieves the currently selected color.|  
+|[CMFCColorBar::GetCommandID](#getcommandid)|Retrieves the command ID of the current color bar control.|  
+|[CMFCColorBar::GetHighlightedColor](#gethighlightedcolor)|Retrieves the color that signifies that a color button has the focus; that is, the button is *hot*.|  
+|[CMFCColorBar::GetHorzMargin](#gethorzmargin)|Retrieves the horizontal margin, which is the space between the left or right color cell and the client area boundary.|  
+|[CMFCColorBar::GetVertMargin](#getvertmargin)|Retrieves the vertical margin, which is the space between the top or bottom color cell and the client area boundary.|  
+|[CMFCColorBar::IsTearOff](#istearoff)|Indicates whether the current color bar is dockable.|  
+|[CMFCColorBar::SetColor](#setcolor)|Sets the color that is currently selected.|  
+|[CMFCColorBar::SetColorName](#setcolorname)|Sets a new name for a specified color.|  
+|[CMFCColorBar::SetCommandID](#setcommandid)|Sets a new command ID for a color bar control.|  
+|[CMFCColorBar::SetDocumentColors](#setdocumentcolors)|Sets the list of colors that are used in the current document.|  
+|[CMFCColorBar::SetHorzMargin](#sethorzmargin)|Sets the horizontal margin, which is the space between the left or right color cell and the client area boundary.|  
+|[CMFCColorBar::SetVertMargin](#setvertmargin)|Sets the vertical margin, which is the space between the top or bottom color cell and the client area boundary.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorBar::AdjustLocations](#adjustlocations)|調整色彩按鈕，在色軸控制項的位置。|  
-|[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|指出是否可以變更的色彩按鈕的文字標籤。|  
-|[CMFCColorBar::AllowShowOnList](#allowshowonlist)|指出色軸控制項物件是否可以在自訂程序期間出現在工具列清單。|  
-|[CMFCColorBar::CalcSize](#calcsize)|配置計算程序的一部分的架構所呼叫。|  
-|[CMFCColorBar::CreatePalette](#createpalette)|初始化具有指定的色彩陣列中的色彩調色盤。|  
-|[CMFCColorBar::GetColorGridSize](#getcolorgridsize)|計算的資料列和資料行在方格中，色軸控制項的數目。|  
-|[CMFCColorBar::GetExtraHeight](#getextraheight)|計算目前的色軸顯示其他的使用者介面項目，例如所需的其他高度**其他**按鈕、 文件色彩等等。|  
-|[CMFCColorBar::InitColors](#initcolors)|初始化具有指定的調色盤中的系統預設調色盤色彩的色彩的陣列。|  
-|[CMFCColorBar::OnKey](#onkey)|當使用者按下鍵盤 按鈕時，由架構呼叫。|  
-|[CMFCColorBar::OnSendCommand](#onsendcommand)|若要關閉快顯控制項階層架構呼叫。|  
-|[CMFCColorBar::OnUpdateCmdUI](#onupdatecmdui)|啟用或停用的色軸控制項的使用者介面項目，才能在顯示的項目架構呼叫。|  
-|[CMFCColorBar::OpenColorDialog](#opencolordialog)|開啟 [色彩] 對話方塊。|  
-|[CMFCColorBar::Rebuild](#rebuild)|完全重新繪製色軸的控制項。|  
-|[CMFCColorBar::SelectPalette](#selectpalette)|將指定的裝置內容的邏輯調色盤設定為目前的色彩列控制項的父代按鈕的調色盤。|  
-|[CMFCColorBar::SetPropList](#setproplist)|設定`m_pWndPropList`受保護的屬性方格控制項的指定指標的資料成員。|  
-|[CMFCColorBar::ShowCommandMessageString](#showcommandmessagestring)|要求框架視窗擁有色軸控制項來更新狀態 列中的訊息列。|  
+|[CMFCColorBar::AdjustLocations](#adjustlocations)|Adjusts the positions of the color buttons on the color bar control.|  
+|[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Indicates whether the text label of color buttons can change.|  
+|[CMFCColorBar::AllowShowOnList](#allowshowonlist)|Indicates whether the color bar control object can appear in a toolbar list during the customization process.|  
+|[CMFCColorBar::CalcSize](#calcsize)|Called by the framework as part of the layout calculation process.|  
+|[CMFCColorBar::CreatePalette](#createpalette)|Initalizes a palette with the colors in a specified array of colors.|  
+|[CMFCColorBar::GetColorGridSize](#getcolorgridsize)|Calculates the number of rows and columns in the grid of a color bar control.|  
+|[CMFCColorBar::GetExtraHeight](#getextraheight)|Calculates the additional height that the current color bar requires to display miscellaneous user interface elements such as the **Other** button, document colors, and so on.|  
+|[CMFCColorBar::InitColors](#initcolors)|Initializes an array of colors with the colors in a specified palette or the system default palette.|  
+|[CMFCColorBar::OnKey](#onkey)|Called by the framework when a user presses a keyboard button.|  
+|[CMFCColorBar::OnSendCommand](#onsendcommand)|Called by the framework to close a hierarchy of popup controls.|  
+|[CMFCColorBar::OnUpdateCmdUI](#onupdatecmdui)|Called by the framework to enable or disable a user-interface item of a color bar control before the item is displayed.|  
+|[CMFCColorBar::OpenColorDialog](#opencolordialog)|Opens a color dialog box.|  
+|[CMFCColorBar::Rebuild](#rebuild)|Completely redraws the color bar control.|  
+|[CMFCColorBar::SelectPalette](#selectpalette)|Sets the logical palette of the specified device context to the palette of the parent button of the current color bar control.|  
+|[CMFCColorBar::SetPropList](#setproplist)|Sets the `m_pWndPropList` protected data member to the specified pointer to a property grid control.|  
+|[CMFCColorBar::ShowCommandMessageString](#showcommandmessagestring)|Requests the frame window that owns the color bar control to update the message line in the status bar.|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`m_bInternal`|布林值的欄位，指出是否會處理滑鼠事件。 此欄位時，通常處理滑鼠事件`TRUE`和自訂模式是`FALSE`。|  
-|`m_bIsEnabled`|布林值，指出控制項是否已啟用。|  
-|`m_bIsTearOff`|布林值，指出是否支援停駐色軸的控制項。|  
-|`m_BoxSize`|A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，指定在色軸方格資料格的大小。|  
-|`m_bShowDocColorsWhenDocked`|布林值，指出是否要顯示的文件色彩停駐在色軸時。 如需詳細資訊，請參閱[CMFCColorBar::SetDocumentColors](#setdocumentcolors)。|  
-|`m_bStdColorDlg`|布林值，指出是否要顯示標準系統色彩 對話方塊或[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)對話方塊。 如需詳細資訊，請參閱[CMFCColorBar::EnableOtherButton](#enableotherbutton)。|  
-|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)會儲存目前的自動色彩。 如需詳細資訊，請參閱[CMFCColorBar::EnableOtherButton](#enableotherbutton)。|  
-|`m_ColorNames`|[CMap](../../mfc/reference/cmap-class.md)以其名稱的色彩的 RGB 集合產生關聯的物件。|  
-|`m_colors`|A [CArray](../../mfc/reference/carray-class.md)的[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)包含色軸控制項中顯示的色彩值。|  
-|`m_ColorSelected`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值為目前使用者從色軸的控制項選取的色彩。|  
-|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md)的[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) ，其中包含目前文件中使用的色彩值。|  
-|`m_nCommandID`|不帶正負號的整數的色彩按鈕的命令 ID。|  
-|`m_nHorzMargin`|水平的邊界色彩的方格中的色彩按鈕之間的整數。|  
-|`m_nHorzOffset`|為中心的 [色彩] 按鈕的水平位移的整數。 這個值是大按鈕會顯示文字或影像色彩以外。|  
-|`m_nNumColumns`|色彩的色軸控制項方格中的資料行數目的整數。|  
-|`m_nNumColumnsVert`|垂直方向色彩的方格中的資料行數目的整數。|  
-|`m_nNumRowsHorz`|水平方向色彩的方格中的資料行數目的整數。|  
-|`m_nRowHeight`|為格線中的色彩的色彩按鈕的資料列高度的整數。|  
-|`m_nVertMargin`|垂直的邊界色彩的方格中的色彩按鈕之間的整數。|  
-|`m_nVertOffset`|為中心的 [色彩] 按鈕的垂直位移的整數。 這個值是大按鈕會顯示文字或影像色彩以外。|  
-|`m_Palette`|A [CPalette](../../mfc/reference/cpalette-class.md)色軸控制項中使用的色彩。|  
-|`m_pParentBtn`|指標[CMFCColorButton](../../mfc/reference/cmfccolorbutton-class.md)目前按鈕的父物件。 如果 [色彩] 按鈕的工具列上的控制項階層架構或色彩屬性方格控制項中，這個值是重要的。|  
-|`m_pParentRibbonBtn`|指標[CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)物件的功能區上且目前按鈕的 [父] 按鈕。 如果 [色彩] 按鈕的工具列上的控制項階層架構或色彩屬性方格控制項中，這個值是重要的。|  
-|`m_pWndPropList`|指標[CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)物件。|  
-|`m_strAutoColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)即會顯示在文字**自動** 按鈕。 如需詳細資訊，請參閱[CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton)。|  
-|`m_strDocColors`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)也就是顯示在文件的 [色彩] 按鈕的文字。 如需詳細資訊，請參閱[CMFCColorBar::SetDocumentColors](#setdocumentcolors)。|  
-|`m_strOtherColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)即會顯示在文字*其他* 按鈕。 如需詳細資訊，請參閱[CMFCColorBar::EnableOtherButton](#enableotherbutton)。|  
+|`m_bInternal`|A Boolean field that determines whether mouse events are processed. Typically, mouse events are processed when this field is `TRUE` and customization mode is `FALSE`.|  
+|`m_bIsEnabled`|A Boolean that indicates whether a control is enabled.|  
+|`m_bIsTearOff`|A Boolean that indicates whether the color bar control supports docking.|  
+|`m_BoxSize`|A [CSize](../../atl-mfc-shared/reference/csize-class.md) object that specifies the size of a cell in a color bar grid.|  
+|`m_bShowDocColorsWhenDocked`|A Boolean that indicates whether to show document colors when the color bar is docked. For more information, see [CMFCColorBar::SetDocumentColors](#setdocumentcolors).|  
+|`m_bStdColorDlg`|A Boolean that indicates whether to show the standard system color dialog box or the [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialog box. For more information, see [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
+|`m_ColorAutomatic`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) that stores the current automatic color. For more information, see [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
+|`m_ColorNames`|An [CMap](../../mfc/reference/cmap-class.md) object that associates a set of RGB colors with their names.|  
+|`m_colors`|A [CArray](../../mfc/reference/carray-class.md) of [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) values that contains the colors that are displayed in the color bar control.|  
+|`m_ColorSelected`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that is the color that the user has currently selected from the color bar control.|  
+|`m_lstDocColors`|A [CList](../../mfc/reference/clist-class.md) of [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) values that contains the colors that are currently used in a document.|  
+|`m_nCommandID`|An unsigned integer that is the command ID of a color button.|  
+|`m_nHorzMargin`|An integer that is the horizontal margin between the color buttons in a grid of colors.|  
+|`m_nHorzOffset`|An integer that is the horizontal offset to the center of the color button. This value is significant if the button displays text or an image in addition to a color.|  
+|`m_nNumColumns`|An integer that is the number of columns in a color bar control grid of colors.|  
+|`m_nNumColumnsVert`|An integer that is the number of columns in a vertically oriented grid of colors.|  
+|`m_nNumRowsHorz`|An integer that is the number of columns in a horizontally oriented grid of colors.|  
+|`m_nRowHeight`|An integer that is the height of a row of color buttons in a grid of colors.|  
+|`m_nVertMargin`|An integer that is the vertical margin between the color buttons in a grid of colors.|  
+|`m_nVertOffset`|An integer that is the vertical offset to the center of the color button. This value is significant if the button displays text or an image in addition to a color.|  
+|`m_Palette`|A [CPalette](../../mfc/reference/cpalette-class.md) of the colors that are used in the color bar control.|  
+|`m_pParentBtn`|A pointer to a [CMFCColorButton](../../mfc/reference/cmfccolorbutton-class.md) object that is the parent of the current button. This value is significant if the color button is in a hierarchy of toolbar controls or is in a color property grid control.|  
+|`m_pParentRibbonBtn`|A pointer to a [CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md) object that is on the ribbon and is the parent button of the current button. This value is significant if the color button is in a hierarchy of toolbar controls or is in a color property grid control.|  
+|`m_pWndPropList`|A pointer to a [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) object.|  
+|`m_strAutoColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md) that is the text that is displayed on the **Automatic** button. For more information, see [CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton).|  
+|`m_strDocColors`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md) that is the text that is displayed on the document colors button. For more information, see [CMFCColorBar::SetDocumentColors](#setdocumentcolors).|  
+|`m_strOtherColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md) that is the text that is displayed on the *other* button. For more information, see [CMFCColorBar::EnableOtherButton](#enableotherbutton).|  
   
-## <a name="remarks"></a>備註  
- 通常，您不會建立`CMFCColorBar`直接物件。 相反地， [CMFCColorMenuButton 類別](../../mfc/reference/cmfccolormenubutton-class.md)（用於功能表和工具列） 或[CMFCColorButton 類別](../../mfc/reference/cmfccolorbutton-class.md)建立`CMFCColorBar`物件。  
+## <a name="remarks"></a>Remarks  
+ Usually, you do not create a `CMFCColorBar` object directly. Instead, the [CMFCColorMenuButton Class](../../mfc/reference/cmfccolormenubutton-class.md) (used in menus and toolbars) or the [CMFCColorButton Class](../../mfc/reference/cmfccolorbutton-class.md) creates the `CMFCColorBar` object.  
   
- `CMFCColorBar`類別會提供下列功能︰  
+ The `CMFCColorBar` class provides the following functionality:  
   
--   自動調整文件色彩的清單。  
+-   Automatically adjusts the list of document colors.  
   
--   儲存並還原其狀態，以及文件的狀態。  
+-   Saves and restores its state, together with the document state.  
   
--   管理 「 自動 」 按鈕。  
+-   Manages the "automatic" button.  
   
--   使用[CMFCColorPickerCtrl 類別](../../mfc/reference/cmfccolorpickerctrl-class.md)控制項選取自訂色彩。  
+-   Uses the [CMFCColorPickerCtrl Class](../../mfc/reference/cmfccolorpickerctrl-class.md) control to select a custom color.  
   
--   支援 「 撕 」 狀態 (如果它由使用[CMFCColorMenuButton 類別](../../mfc/reference/cmfccolormenubutton-class.md))。  
+-   Supports a "tear-off" state (if it is created by using the [CMFCColorMenuButton Class](../../mfc/reference/cmfccolormenubutton-class.md)).  
   
- 若要納入`CMFCColorBar`功能納入您的應用程式︰  
+ To incorporate the `CMFCColorBar` functionality into your application:  
   
-1.  建立一般功能表按鈕，並將它指派一個識別碼，例如 ID_CHAR_COLOR。  
+1.  Create a regular menu button and assign it an ID, for example ID_CHAR_COLOR.  
   
-2.  在框架視窗類別中覆寫[CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu)方法，並取代規則功能表按鈕與[CMFCColorMenuButton 類別](../../mfc/reference/cmfccolormenubutton-class.md)物件 (藉由呼叫[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton))。  
+2.  In your frame window class, override the [CFrameWndEx::OnShowPopupMenu](../../mfc/reference/cframewndex-class.md#onshowpopupmenu) method and replace the regular menu button with a [CMFCColorMenuButton Class](../../mfc/reference/cmfccolormenubutton-class.md) object (by calling [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)).  
   
-3.  設定所有的樣式和啟用或停用的功能`CMFCColorBar`物件期間[CMFCColorMenuButton 類別](../../mfc/reference/cmfccolormenubutton-class.md)建立。 `CMFCColorMenuButton`會動態建立物件`CMFCColorBar`物件之後，架構會呼叫`CreatePopupMenu`方法。  
+3.  Set all the styles and enable or disable the features of the `CMFCColorBar` object during [CMFCColorMenuButton Class](../../mfc/reference/cmfccolormenubutton-class.md) creation. The `CMFCColorMenuButton` object dynamically creates the `CMFCColorBar` object after the framework calls the `CreatePopupMenu` method.  
   
- 當使用者按一下色軸的控制項按鈕時，架構會使用`ON_COMMAND`巨集，以通知色軸控制項的父代。 在巨集、 命令 ID 參數會是您指派給色軸的控制項按鈕，在步驟 1 (在本例中為 ID_CHAR_COLOR) 中的值。 如需詳細資訊，請參閱[CMFCColorMenuButton 類別](../../mfc/reference/cmfccolormenubutton-class.md)， [CMFCColorButton 類別](../../mfc/reference/cmfccolorbutton-class.md)， [CMFCColorPickerCtrl 類別](../../mfc/reference/cmfccolorpickerctrl-class.md)， [cframewndex 則是類別](../../mfc/reference/cframewndex-class.md)，和[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)類別。  
+ When the user clicks a color bar control button, the framework uses the `ON_COMMAND` macro to notify the parent of the color bar control. In the macro, the command ID parameter is the value that you assigned to the color bar control button in step 1 (ID_CHAR_COLOR in this example). For more information, see the [CMFCColorMenuButton Class](../../mfc/reference/cmfccolormenubutton-class.md), [CMFCColorButton Class](../../mfc/reference/cmfccolorbutton-class.md), [CMFCColorPickerCtrl Class](../../mfc/reference/cmfccolorpickerctrl-class.md), [CFrameWndEx Class](../../mfc/reference/cframewndex-class.md), and [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md) classes.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用各種方法的設定色軸`CMFCColorBar`類別。 方法將水平和垂直邊界設定、 啟用其他按鈕、 色軸控制項視窗的建立和設定目前選取的色彩。 這個範例是屬於[新的控制項範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a color bar by using various methods in the `CMFCColorBar` class. The methods set the horizontal and vertical margins, enable the other button, create a color bar control window, and sets the currently selected color. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #&1;](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls #&2;](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -244,61 +250,61 @@ class CMFCColorBar : public CMFCPopupMenuBar
   
  [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxcolorbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcolorbar.h  
   
-##  <a name="adjustlocations"></a>CMFCColorBar::AdjustLocations  
- 調整色彩按鈕，在色軸控制項的位置。  
+##  <a name="adjustlocations"></a>  CMFCColorBar::AdjustLocations  
+ Adjusts the positions of the color buttons on the color bar control.  
   
 ```  
 virtual void AdjustLocations();
 ```  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法是在架構`WM_SIZE`訊息處理。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework during `WM_SIZE` message processing.  
   
-##  <a name="allowchangetextlabels"></a>CMFCColorBar::AllowChangeTextLabels  
- 指出是否可以變更的色彩按鈕的文字標籤。  
+##  <a name="allowchangetextlabels"></a>  CMFCColorBar::AllowChangeTextLabels  
+ Indicates whether the text label of color buttons can change.  
   
 ```  
 virtual BOOL AllowChangeTextLabels() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 一定是 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Always `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，此方法一律傳回`FALSE`，這表示文字標籤不能修改。 覆寫這個方法讓修改文字標籤。  
+### <a name="remarks"></a>Remarks  
+ By default, this method always returns `FALSE`, which means text labels cannot be modified. Override this method to enable modifying text labels.  
   
-##  <a name="allowshowonlist"></a>CMFCColorBar::AllowShowOnList  
- 指出色軸控制項物件是否可以在自訂程序期間出現在工具列清單。  
+##  <a name="allowshowonlist"></a>  CMFCColorBar::AllowShowOnList  
+ Indicates whether the color bar control object can appear in a toolbar list during the customization process.  
   
 ```  
 virtual BOOL AllowShowOnList() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 一定是 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Always `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，此方法一律傳回`TRUE`，這表示架構可以自訂程序期間顯示色軸的控制項。 覆寫這個方法以實作不同的行為。  
+### <a name="remarks"></a>Remarks  
+ By default, this method always returns `TRUE`, which means the framework can display the color bar control during the customization process. Override this method to implement a different behavior.  
   
-##  <a name="calcsize"></a>CMFCColorBar::CalcSize  
- 配置計算程序的一部分的架構所呼叫。  
+##  <a name="calcsize"></a>  CMFCColorBar::CalcSize  
+ Called by the framework as part of the layout calculation process.  
   
 ```  
 virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bVertDock`  
- `TRUE`若要指定，色軸控制項停駐垂直;`FALSE`指定色軸控制項停駐水平。  
+ `TRUE` to specify that the color bar control is docked vertically; `FALSE` to specify that the color bar control is docked horizontally.  
   
-### <a name="return-value"></a>傳回值  
- 一維陣列中的色彩列控制項的色彩按鈕的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of the array of color buttons in a color bar control.  
   
-##  <a name="cmfccolorbar"></a>CMFCColorBar::CMFCColorBar  
- 建構 `CMFCColorBar` 物件。  
+##  <a name="cmfccolorbar"></a>  CMFCColorBar::CMFCColorBar  
+ Constructs a `CMFCColorBar` object.  
   
 ```  
 CMFCColorBar(
@@ -334,55 +340,55 @@ CMFCColorBar(
     UINT uiCommandID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `colors`  
- 架構會在色軸控制項顯示的色彩的陣列。  
+ An array of colors that the framework displays on the color bar control.  
   
  [in] `color`  
- 一開始所選取的色彩。  
+ The initially selected color.  
   
  [in] `lpszAutoColor`  
- 文字標籤*自動*（預設值） 的色彩按鈕，或`NULL`。  
+ The text label of the *automatic* (default) color button, or `NULL`.  
   
- [自動] 按鈕的標準標籤是**自動**。  
+ The standard label for the automatic button is **Automatic**.  
   
  [in] `lpszOtherColor`  
- 文字標籤*其他* 按鈕，以顯示更多色彩選擇，或`NULL`。  
+ The text label of the *other* button, which displays more color choices, or `NULL`.  
   
- 其他按鈕的標準標籤是**更多色彩...**.  
+ The standard label for the other button is **More Colors...**.  
   
  [in] `lpszDocColors`  
- 文件的 [色彩] 按鈕的文字標籤。 文件色彩調色盤會列出所有文件目前使用的色彩。  
+ The text label of the document colors button. The document colors palette lists all the colors that the document currently uses.  
   
  [in] `lstDocColors`  
- 文件目前使用的色彩清單。  
+ A list of colors that the document currently uses.  
   
  [in] `nColumns`  
- 色彩陣列的資料行數目。  
+ The number of columns that the array of colors has.  
   
  [in] `nRowsDockHorz`  
- 色軸水平的停駐時的資料列數目。  
+ The number of rows that the color bar has when it is docked horizontally.  
   
  [in] `nColDockVert`  
- 色軸垂直的停駐時的資料行數目。  
+ The number of columns that the color bar has when it is docked vertically.  
   
  [in] `colorAutomatic`  
- 當您按一下 [自動] 按鈕時，此架構套用的預設色彩。  
+ The default color that the framework applies when you click the automatic button.  
   
  [in] `nCommandID`  
- 色彩控制命令識別碼。  
+ The color bar control command ID.  
   
  [in] `pParentBtn`  
- 父代按鈕指標。  
+ A pointer to a parent button.  
   
  [in] `src`  
- 將現有`CMFCColorBar`物件複製到新`CMFCColorBar`物件。  
+ An existing `CMFCColorBar` object to be copied into the new `CMFCColorBar` object.  
   
  [in] `uiCommandID`  
- 命令 ID。  
+ The command ID.  
   
-##  <a name="contexttosize"></a>CMFCColorBar::ContextToSize  
- 計算的垂直和水平邊界，才能包含在色軸控制項上的按鈕，調整這些按鈕的位置。  
+##  <a name="contexttosize"></a>  CMFCColorBar::ContextToSize  
+ Calculates the vertical and horizontal margins that are required to contain the buttons on the color bar control, and adjusts the location of those buttons.  
   
 ```  
 void ContextToSize(
@@ -390,17 +396,17 @@ void ContextToSize(
     BOOL bCenterButtons = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `bSquareButtons`|`TRUE`若要指定色彩控制項上按鈕的形狀是方形;否則， `FALSE`。 預設值是 `TRUE`。|  
-|[in] `bCenterButtons`|`TRUE`若要指定，色軸的控制項按鈕表面的內容會置中。否則， `FALSE`。 預設值是 `TRUE`。|  
+|[in] `bSquareButtons`|`TRUE` to specify that the shape of the buttons on a color bar control are square; otherwise, `FALSE`. The default value is `TRUE`.|  
+|[in] `bCenterButtons`|`TRUE` to specify that the content on the face of a color bar control button is centered; otherwise, `FALSE`. The default value is `TRUE`.|  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="create"></a>CMFCColorBar::Create  
- 建立的色軸的控制項視窗並將它附加`CMFCColorBar`物件。  
+##  <a name="create"></a>  CMFCColorBar::Create  
+ Creates a color bar control window and attaches it to the `CMFCColorBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -413,36 +419,36 @@ virtual BOOL Create(
     int nColDockVert=0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
- 父視窗的指標。  
+ Pointer to the parent window.  
   
  [in] `dwStyle`  
- 位元組合 (OR)[視窗樣式](../../mfc/reference/window-styles.md)。  
+ A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
  [in] `nID`  
- 命令 ID。  
+ The command ID.  
   
  [in] `pPalette`  
- 指標的色彩調色盤。 預設為 `NULL`。  
+ Pointer to a palette of colors. The default is `NULL`.  
   
  [in] `nColumns`  
- 在色軸控制項中的資料行數目。 預設值為 0。  
+ The number of columns in the color bar control. The default is 0.  
   
  [in] `nRowsDockHorz`  
- 當停駐水平控制項的色軸中的資料列數目。 預設值為 0。  
+ The number of rows in the color bar control when it is docked horizontally. The default is 0.  
   
  [in] `nColDockVert`  
- 在垂直停駐的色軸控制項的資料行數目。 預設值為 0。  
+ The number of columns in the color bar control when it is docked vertically. The default is 0.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `TRUE`；否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 若要建構`CMFCColorBar`物件，請呼叫類別建構函式，則這個方法。 `Create`方法會建立 Windows 控制項，並初始化色彩的清單。  
+### <a name="remarks"></a>Remarks  
+ To construct a `CMFCColorBar` object, call the class constructor then this method. The `Create` method creates the Windows control and initializes a list of colors.  
   
-##  <a name="createcontrol"></a>CMFCColorBar::CreateControl  
- 建立的色軸控制項的視窗，將它附加`CMFCColorBar`物件，並調整大小以包含指定的色彩調色盤的 [控制] 視窗。  
+##  <a name="createcontrol"></a>  CMFCColorBar::CreateControl  
+ Creates a color bar control window, attaches it to the `CMFCColorBar` object, and resizes the control window to contain the specified palette of colors.  
   
 ```  
 virtual BOOL CreateControl(
@@ -453,30 +459,30 @@ virtual BOOL CreateControl(
     CPalette* pPalette=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
- 父視窗的指標。 不能是`NULL`。  
+ Pointer to the parent window. Cannot be `NULL`.  
   
  [in] `rect`  
- 指定位置繪製色軸控制項週框。  
+ A bounding rectangle that specifies where to draw the color bar control.  
   
  [in] `nID`  
- 控制項 id。  
+ The control ID.  
   
  [in] `nColumns`  
- 理想的色軸控制項中的資料行數目。 這個方法會修改該數字，符合指定的色彩調色盤。 預設值為-1，表示未指定此參數。  
+ The ideal number of columns in the color bar control. This method modifies that number to fit the specified palette of colors. The default is -1, which means this parameter is not specified.  
   
  [in] `pPalette`  
- 指標的色彩調色盤或`NULL`。 如果這個參數是`NULL`，這個方法會計算色軸控制項的大小，如同已指定 20 的色彩。 預設為 `NULL`。  
+ Pointer to a palette of colors, or `NULL`. If this parameter is `NULL`, this method calculates the size of the color bar control as if 20 colors were specified. The default is `NULL`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會使用`rect`， `nColumns`，和`pPalette`參數來計算適當數目或資料列和資料行在色軸的控制項，然後再呼叫[CMFCColorBar::Create](#create)方法。  
+### <a name="remarks"></a>Remarks  
+ This method uses the `rect`, `nColumns`, and `pPalette` parameters to calculate the appropriate number or rows and columns in the color bar control, and then calls the [CMFCColorBar::Create](#create) method.  
   
-##  <a name="createpalette"></a>CMFCColorBar::CreatePalette  
- 初始化具有指定的色彩陣列中的色彩調色盤。  
+##  <a name="createpalette"></a>  CMFCColorBar::CreatePalette  
+ Initializes a palette with the colors in a specified array of colors.  
   
 ```  
 static BOOL CreatePalette(
@@ -484,18 +490,18 @@ static BOOL CreatePalette(
     CPalette& palette);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `arColors`|色彩的陣列。|  
-|[in] `palette`|色的調色盤。|  
+|[in] `arColors`|An array of colors.|  
+|[in] `palette`|A palette of colors.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `TRUE`；否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-##  <a name="enableautomaticbutton"></a>CMFCColorBar::EnableAutomaticButton  
- 顯示或隱藏 [自動] 按鈕。  
+##  <a name="enableautomaticbutton"></a>  CMFCColorBar::EnableAutomaticButton  
+ Shows or hides the automatic button.  
   
 ```  
 void EnableAutomaticButton(
@@ -504,23 +510,23 @@ void EnableAutomaticButton(
     BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszLabel`  
- 文字標籤*自動*（預設值） 的色彩按鈕，或`NULL`。  
+ The text label of the *automatic* (default) color button, or `NULL`.  
   
- [自動] 按鈕的標準標籤是**自動**。  
+ The standard label for the automatic button is **Automatic**.  
   
  [in] `colorAutomatic`  
- 當您按一下 [自動] 按鈕時，此架構套用的預設色彩。  
+ The default color that the framework applies when you click the automatic button.  
   
  [in] `bEnable`  
- `TRUE`若要啟用 [自動] 按鈕。`FALSE`停用 [自動] 按鈕。 預設值是 `TRUE`。  
+ `TRUE` to enable the automatic button; `FALSE` to disable the automatic button. The default value is `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 如果文字標籤的 [自動] 按鈕會刪除`lpszLabel`參數是`NULL`或`bEnable`參數是`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ The text label of the automatic button is deleted if the `lpszLabel` parameter is `NULL` or the `bEnable` parameter is `FALSE`.  
   
-##  <a name="enableotherbutton"></a>CMFCColorBar::EnableOtherButton  
- 啟用或停用的對話方塊，讓使用者選取更多的色彩顯示。  
+##  <a name="enableotherbutton"></a>  CMFCColorBar::EnableOtherButton  
+ Enables or disables the display of a dialog box that lets the user select more colors.  
   
 ```  
 void EnableOtherButton(
@@ -529,107 +535,107 @@ void EnableOtherButton(
     BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszLabel`  
- 文字標籤*其他* 按鈕，以顯示更多色彩選擇，或`NULL`。  
+ The text label of the *other* button, which displays more color choices, or `NULL`.  
   
- 此按鈕的標準標籤是**更多色彩...**.  
+ The standard label for this button is **More Colors...**.  
   
  [in] `bAltColorDlg`  
- `TRUE`若要顯示[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)對話方塊。`FALSE`以顯示標準[CColorDialog](../../mfc/reference/ccolordialog-class.md)對話方塊。 預設值是 `TRUE`。  
+ `TRUE` to display the [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) dialog box; `FALSE` to display the standard [CColorDialog](../../mfc/reference/ccolordialog-class.md) dialog box. The default value is `TRUE`.  
   
  [in] `bEnable`  
- `TRUE`若要啟用按鈕。`FALSE`來停用按鈕。 預設值是 `TRUE`。  
+ `TRUE` to enable the                                button; `FALSE` to disable the button. The default value is `TRUE`.  
   
-##  <a name="getcolor"></a>CMFCColorBar::GetColor  
- 擷取目前選取的色彩。  
+##  <a name="getcolor"></a>  CMFCColorBar::GetColor  
+ Retrieves the currently selected color.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前選取的色彩。  
+### <a name="return-value"></a>Return Value  
+ The currently selected color.  
   
-##  <a name="getcolorgridsize"></a>CMFCColorBar::GetColorGridSize  
- 計算的資料列和資料行在方格中，色軸控制項的數目。  
+##  <a name="getcolorgridsize"></a>  CMFCColorBar::GetColorGridSize  
+ Calculates the number of rows and columns in the grid of a color bar control.  
   
 ```  
 CSize GetColorGridSize(BOOL bVertDock) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `bVertDock`|`TRUE`執行計算垂直停駐的色彩列控制項。否則，執行計算的水平停駐的控制項。|  
+|[in] `bVertDock`|`TRUE` to perform the calculation for a vertically docked color bar control; otherwise, perform the calculation for a horizontally docked control.|  
   
-### <a name="return-value"></a>傳回值  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其`cx`元件包含資料行數目和其`cy`元件包含的資料列數目。  
+### <a name="return-value"></a>Return Value  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object whose `cx` component contains the number of columns and whose `cy` component contains the number of rows.  
   
-##  <a name="getcommandid"></a>CMFCColorBar::GetCommandID  
- 擷取目前的色軸控制項的命令 ID。  
+##  <a name="getcommandid"></a>  CMFCColorBar::GetCommandID  
+ Retrieves the command ID of the current color bar control.  
   
 ```  
 UINT GetCommandID() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 命令 id。  
+### <a name="return-value"></a>Return Value  
+ A command ID.  
   
-### <a name="remarks"></a>備註  
- 當使用者選取新的色彩時，架構會傳送的命令 ID`WM_COMMAND`訊息，通知的父代`CMFCColorBar`物件。  
+### <a name="remarks"></a>Remarks  
+ When the user selects a new color, the framework sends the command ID in a `WM_COMMAND` message to notify the parent of the `CMFCColorBar` object.  
   
-##  <a name="getextraheight"></a>CMFCColorBar::GetExtraHeight  
- 計算目前的色軸顯示其他的使用者介面項目，例如所需的其他高度**其他**按鈕或文件的色彩。  
+##  <a name="getextraheight"></a>  CMFCColorBar::GetExtraHeight  
+ Calculates the additional height that the current color bar requires to display miscellaneous user interface elements, such as the **Other** button or document colors.  
   
 ```  
 int GetExtraHeight(int nNumColumns) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `nNumColumns`|如果色軸控制項包含文件色彩，在文件色彩的方格中顯示的資料行數目。 否則，這個值不在使用中。|  
+|[in] `nNumColumns`|If the color bar control contains document colors, the number of columns to display in the grid of document colors. Otherwise, this value is not used.|  
   
-### <a name="return-value"></a>傳回值  
- 需要計算額外高度。  
+### <a name="return-value"></a>Return Value  
+ The calculated extra height that is required.  
   
-##  <a name="gethighlightedcolor"></a>CMFCColorBar::GetHighlightedColor  
- 擷取表示的色彩按鈕具有焦點，色彩亦即，按鈕是*熱*。  
+##  <a name="gethighlightedcolor"></a>  CMFCColorBar::GetHighlightedColor  
+ Retrieves the color that signifies that a color button has the focus; that is, the button is *hot*.  
   
 ```  
 COLORREF GetHighlightedColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- RGB 值。  
+### <a name="return-value"></a>Return Value  
+ An RGB value.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethorzmargin"></a>CMFCColorBar::GetHorzMargin  
- 擷取的水平的邊界，也就是左邊或右邊的色彩資料格和用戶端區域的界限之間的間距。  
+##  <a name="gethorzmargin"></a>  CMFCColorBar::GetHorzMargin  
+ Retrieves the horizontal margin, which is the space between the left or right color cell and the client area boundary.  
   
 ```  
 int GetHorzMargin();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 水平的邊界。  
+### <a name="return-value"></a>Return Value  
+ The horizontal margin.  
   
-##  <a name="getvertmargin"></a>CMFCColorBar::GetVertMargin  
- 擷取垂直邊界，也就是頂端或底部色彩的儲存格和用戶端區域的界限之間的間距。  
+##  <a name="getvertmargin"></a>  CMFCColorBar::GetVertMargin  
+ Retrieves the vertical margin, which is the space between the top or bottom color cell and the client area boundary.  
   
 ```  
 int GetVertMargin() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 垂直的邊界。  
+### <a name="return-value"></a>Return Value  
+ The vertical margin.  
   
-##  <a name="initcolors"></a>CMFCColorBar::InitColors  
- 初始化與色彩在指定的調色盤，或使用系統預設調色盤色彩的陣列。  
+##  <a name="initcolors"></a>  CMFCColorBar::InitColors  
+ Initializes an array of colors with the colors in a specified palette, or with the system default palette.  
   
 ```  
 static int InitColors(
@@ -637,61 +643,61 @@ static int InitColors(
     CArray<COLORREF, COLORREF>& arColors);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pPalette`|調色盤物件的指標或`NULL`。 如果這個參數是`NULL`，這個方法會使用預設調色盤的作業系統。|  
-|[in] `arColors`|色彩的陣列。|  
+|[in] `pPalette`|A pointer to a palette object, or `NULL`. If this parameter is `NULL`, this method uses the default palette of the operating system.|  
+|[in] `arColors`|An array of colors.|  
   
-### <a name="return-value"></a>傳回值  
- 色彩的陣列中的元素數目。  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the array of colors.  
   
-##  <a name="istearoff"></a>CMFCColorBar::IsTearOff  
- 指出是否可停駐在目前的色軸。  
+##  <a name="istearoff"></a>  CMFCColorBar::IsTearOff  
+ Indicates whether the current color bar is dockable.  
   
 ```  
 BOOL IsTearOff() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果目前的色軸控制項停駐;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the current color bar control is dockable; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 如果可停駐色軸的控制項，可以關閉控制列損毀和固定在另一個位置。  
+### <a name="remarks"></a>Remarks  
+ If the color bar control is dockable, it can be torn off a control bar and docked at another location.  
   
-##  <a name="onkey"></a>CMFCColorBar::OnKey  
- 當使用者按下鍵盤 按鈕時，由架構呼叫。  
+##  <a name="onkey"></a>  CMFCColorBar::OnKey  
+ Called by the framework when a user presses a keyboard button.  
   
 ```  
 virtual BOOL OnKey(UINT nChar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- 使用者按下按鍵虛擬按鍵碼。  
+ The virtual-key code for the key that a user pressed.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果這個方法會處理指定的索引鍵。，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method processes the specified key; otherwise, `FALSE`.  
   
-##  <a name="onsendcommand"></a>CMFCColorBar::OnSendCommand  
- 若要關閉快顯控制項階層架構呼叫。  
+##  <a name="onsendcommand"></a>  CMFCColorBar::OnSendCommand  
+ Called by the framework to close a hierarchy of pop-up controls.  
   
 ```  
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pButton`|指標位於工具列的控制項。|  
+|[in] `pButton`|Pointer to a control that resides on a toolbar.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `TRUE`；否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-##  <a name="onupdatecmdui"></a>CMFCColorBar::OnUpdateCmdUI  
- 啟用或停用的色軸控制項的使用者介面項目，才能在顯示的項目架構呼叫。  
+##  <a name="onupdatecmdui"></a>  CMFCColorBar::OnUpdateCmdUI  
+ Called by the framework to enable or disable a user-interface item of a color bar control before the item is displayed.  
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -699,18 +705,18 @@ virtual void OnUpdateCmdUI(
     BOOL bDisableIfNoHndler);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pTarget`  
- 包含要更新使用者介面項目 視窗的指標。  
+ Pointer to a window that contains a user-interface item to update.  
   
  [in] `bDisableIfNoHndler`  
- `TRUE`若要停用的使用者介面項目，如果沒有處理常式中定義的訊息對應。否則， `FALSE`。  
+ `TRUE` to disable the user-interface item if no handler is defined in a message map; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 當應用程式的使用者按一下使用者介面項目時，項目必須知道是否應該顯示為已啟用或停用。 命令訊息的目標是提供這項資訊藉由實作`ON_UPDATE_COMMAND_UI`命令處理常式。 使用這個方法，以協助處理命令。 如需詳細資訊，請參閱[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)。  
+### <a name="remarks"></a>Remarks  
+ When a user of your application clicks a user-interface item, the item must know whether it should be displayed as enabled or disabled. The target of the command message provides this information by implementing an `ON_UPDATE_COMMAND_UI` command handler. Use this method to help process the command. For more information, see [CCmdUI Class](../../mfc/reference/ccmdui-class.md).  
   
-##  <a name="opencolordialog"></a>CMFCColorBar::OpenColorDialog  
- 開啟 [色彩] 對話方塊。  
+##  <a name="opencolordialog"></a>  CMFCColorBar::OpenColorDialog  
+ Opens a color dialog box.  
   
 ```  
 virtual BOOL OpenColorDialog(
@@ -718,54 +724,54 @@ virtual BOOL OpenColorDialog(
     COLORREF& colorRes);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `colorDefault`  
- [色彩] 對話方塊開啟時預設會選取色彩。  
+ The color that is selected by default when the color dialog box opens.  
   
- [輸出] `colorRes`  
- 使用者選取色彩。  
+ [out] `colorRes`  
+ The color that a user selected.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果使用者選取色彩。，`FALSE`如果使用者已取消 [色彩] 對話方塊。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the user selected a color; `FALSE` if the user canceled the color dialog box.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="rebuild"></a>CMFCColorBar::Rebuild  
- 完全重新繪製色軸的控制項。  
+##  <a name="rebuild"></a>  CMFCColorBar::Rebuild  
+ Completely redraws the color bar control.  
   
 ```  
 virtual void Rebuild();
 ```  
   
-##  <a name="selectpalette"></a>CMFCColorBar::SelectPalette  
- 將指定的裝置內容的邏輯調色盤設定為目前的色彩列控制項的父代按鈕的調色盤。  
+##  <a name="selectpalette"></a>  CMFCColorBar::SelectPalette  
+ Sets the logical palette of the specified device context to the palette of the parent button of the current color bar control.  
   
 ```  
 CPalette* SelectPalette(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pDC`|目前的色彩列控制項的父代按鈕的裝置內容的指標。|  
+|[in] `pDC`|Pointer to the device context of the parent button of the current color bar control.|  
   
-### <a name="return-value"></a>傳回值  
- 指標會取代目前的色彩列控制項的父代按鈕的調色盤的調色盤。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the palette that is replaced by the palette of the parent button of the current color bar control.  
   
-##  <a name="setcolor"></a>CMFCColorBar::SetColor  
- 設定目前選取的色彩。  
+##  <a name="setcolor"></a>  CMFCColorBar::SetColor  
+ Sets the color that is currently selected.  
   
 ```  
 void SetColor(COLORREF color);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- RGB 色彩值。  
+ An RGB color value.  
   
-##  <a name="setcolorname"></a>CMFCColorBar::SetColorName  
- 設定指定的色彩的新名稱。  
+##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName  
+ Sets a new name for a specified color.  
   
 ```  
 static void SetColorName(
@@ -773,32 +779,32 @@ static void SetColorName(
     const CString& strName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- RGB 色彩的值。  
+ The RGB value of a color.  
   
  [in] `strName`  
- 指定的色彩新名稱。  
+ The new name for the specified color.  
   
-### <a name="remarks"></a>備註  
- 這個方法會變更在所有指定的色彩名稱`CMFCColorBar`應用程式中的物件。  
+### <a name="remarks"></a>Remarks  
+ This method changes the name of the specified color in all `CMFCColorBar` objects in your application.  
   
-##  <a name="setcommandid"></a>CMFCColorBar::SetCommandID  
- 設定色軸控制項的新命令識別碼。  
+##  <a name="setcommandid"></a>  CMFCColorBar::SetCommandID  
+ Sets a new command ID for a color bar control.  
   
 ```  
 void SetCommandID(UINT nCommandID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nCommandID`  
- 命令 id。  
+ A command ID.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法修改色軸控制項的命令 ID，並通知識別碼已變更之控制項的父視窗。  
+### <a name="remarks"></a>Remarks  
+ Call this method to modify the command ID of a color bar control and to notify the parent window of the control that the ID has changed.  
   
-##  <a name="setdocumentcolors"></a>CMFCColorBar::SetDocumentColors  
- 設定目前文件所使用的色彩清單。  
+##  <a name="setdocumentcolors"></a>  CMFCColorBar::SetDocumentColors  
+ Sets the list of colors that are used in the current document.  
   
 ```  
 void SetDocumentColors(
@@ -807,75 +813,75 @@ void SetDocumentColors(
     BOOL bShowWhenDocked=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszCaption`  
- 未停駐色軸的控制項時，會顯示標題。  
+ A caption that is displayed when the color bar control is not docked.  
   
  [in] `lstDocColors`  
- 取代目前的文件色彩的色彩清單。  
+ A list of colors that replaces the current document colors.  
   
  [in] `bShowWhenDocked`  
- `TRUE`若要顯示色軸控制項停駐; 文件色彩否則， `FALSE`。 預設值是 `FALSE`。  
+ `TRUE` to show document colors when the color bar control is docked; otherwise, `FALSE`. The default value is `FALSE`.  
   
-### <a name="remarks"></a>備註  
- *文件色彩*是文件中目前使用的色彩。 架構會自動維護一份文件色彩，但是您可以使用這個方法來修改清單。  
+### <a name="remarks"></a>Remarks  
+ *Document colors* are the colors that are currently used in a document. The framework automatically maintains a list of document colors, but you can use this method to modify the list.  
   
-##  <a name="sethorzmargin"></a>CMFCColorBar::SetHorzMargin  
- 設定水平的邊界，也就是左邊或右邊的色彩資料格和用戶端區域的界限之間的間距。  
+##  <a name="sethorzmargin"></a>  CMFCColorBar::SetHorzMargin  
+ Sets the horizontal margin, which is the space between the left or right color cell and the boundary of the client area.  
   
 ```  
 void SetHorzMargin(int nHorzMargin);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nHorzMargin`  
- 水平邊界，以像素為單位。  
+ The horizontal margin, in pixels.  
   
-### <a name="remarks"></a>備註  
- 根據預設， [CMFCColorBar::CMFCColorBar](#cmfccolorbar)建構函式會將水平的邊界設定為 4 個像素。  
+### <a name="remarks"></a>Remarks  
+ By default, the [CMFCColorBar::CMFCColorBar](#cmfccolorbar) constructor sets the horizontal margin to 4 pixels.  
   
-##  <a name="setproplist"></a>CMFCColorBar::SetPropList  
- 設定`m_pWndPropList`受保護的屬性方格控制項的指定指標的資料成員。  
+##  <a name="setproplist"></a>  CMFCColorBar::SetPropList  
+ Sets the `m_pWndPropList` protected data member to the specified pointer to a property grid control.  
   
 ```  
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `pWndList`|屬性方格控制項物件的指標。|  
+|[in] `pWndList`|Pointer to property grid control object.|  
   
-##  <a name="setvertmargin"></a>CMFCColorBar::SetVertMargin  
- 設定垂直邊界，也就是頂端或底端色彩資料格，而用戶端區域的界限之間的間距。  
+##  <a name="setvertmargin"></a>  CMFCColorBar::SetVertMargin  
+ Sets the vertical margin, which is the space between the top or bottom color cell and the client area boundary.  
   
 ```  
 void SetVertMargin(int nVertMargin);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nVertMargin`  
- 垂直邊界，以像素為單位。  
+ The vertical margin, in pixels.  
   
-### <a name="remarks"></a>備註  
- 根據預設， [CMFCColorBar::CMFCColorBar](#cmfccolorbar)建構函式會將垂直的邊界設定為 4 個像素。  
+### <a name="remarks"></a>Remarks  
+ By default, the [CMFCColorBar::CMFCColorBar](#cmfccolorbar) constructor sets the vertical margin to 4 pixels.  
   
-##  <a name="showcommandmessagestring"></a>CMFCColorBar::ShowCommandMessageString  
- 要求框架視窗擁有色軸控制項來更新狀態 列中的訊息列。  
+##  <a name="showcommandmessagestring"></a>  CMFCColorBar::ShowCommandMessageString  
+ Requests the frame window that owns the color bar control to update the message line in the status bar.  
   
 ```  
 virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- 命令 id。 （這個參數已忽略）。  
+ A command ID. (This parameter is ignored.)  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送`WM_SETMESSAGESTRING`色軸控制項的擁有者的訊息。  
+### <a name="remarks"></a>Remarks  
+ This method sends the `WM_SETMESSAGESTRING` message to the owner of the color bar control.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,43 +1,62 @@
 ---
-title: "OLE 背景：連結與內嵌 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內嵌物件 [C++]"
-  - "項目類型"
-  - "項目類型, 已定義的"
-  - "連結的項目 (OLE) [C++]"
-  - "OLE 內嵌項目"
-  - "OLE 項目, 類型"
-  - "OLE, 連結的項目"
+title: 'OLE Background: Linking and Embedding | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE embedded items [MFC]
+- item types [MFC], defined
+- item types [MFC]
+- OLE [MFC], linked items
+- linked items (OLE) [MFC]
+- embedded objects [MFC]
+- OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE 背景：連結與內嵌
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ab76058d859758ac9c42e63839ad2fd683e58e08
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-使用在容器應用程式的貼上命令可以建立內嵌元件或內嵌項目。  內嵌項目的來源資料儲存為包含它的 OLE 文件的一部分。  如此一來，文書處理器文件的文件包含文字也可能包含點陣圖、圖表、公式，或任何其他型別的資料。  
+---
+# <a name="ole-background-linking-and-embedding"></a>OLE Background: Linking and Embedding
+Using the Paste command in a container application can create an embedded component, or embedded item. The source data for an embedded item is stored as part of the OLE document that contains it. In this way, a document file for a word processor document can contain text and also can contain bitmaps, graphs, formulas, or any other type of data.  
   
- OLE 提供另一種合併來自另一個應用程式的資料:建立連結的元件或連接的項目或連結。  建立連結的項目步驟類似於建立的內嵌項目，不過，您是使用貼上連結命令而非貼上命令。  不同於內嵌元件，連結的元件儲存路徑至原始資料，通常是在個別的檔案中。  
+ OLE provides another way to incorporate data from another application: creating a linked component, or linked item, or a link. The steps for creating a linked item are similar to those for creating an embedded item, except that you use the Paste Link command instead of the Paste command. Unlike an embedded component, a linked component stores a path to the original data, which is often in a separate file.  
   
- 例如，如果文書處理器文件工作並建立連結的項目至陣列報表儲存格，資料連接的項目在原始的報告資料夾中。  文書處理器文件包含指定位置的資訊可以找到項目，也就是，它包含連結至原始的報表資料。  當您按兩下儲存格時，報告應用程式啟動，而原始報告資料從儲存的地方載入。  
+ For example, if you are working in a word processor document and create a linked item to some spreadsheet cells, the data for the linked item is stored in the original spreadsheet document. The word processor document contains only the information specifying where the item can be found, that is, it contains a link to the original spreadsheet document. When you double-click the cells, the spreadsheet application is launched and the original spreadsheet document is loaded from where it was stored.  
   
- 每個 OLE 項目，內嵌或連結是否有型別與它以建立自己的應用程式。  例如， Microsoft Paintbrush 繪圖軟體項目是項目的型別，因此， Microsoft Excel 項目是另一個型別。  不過，某些應用程式，可以建立一個以上的項目型別。  例如，可以建立 Microsoft Excel 工作表項目、圖形項目和 macrosheet 項目。  使用類別識別碼或 **CLSID**，這些項目都可以由系統唯一識別。  
+ Every OLE item, whether embedded or linked, has a type associated with it based on the application that created it. For example, a Microsoft Paintbrush item is one type of item, and a Microsoft Excel item is another type. Some applications, however, can create more than one item type. For example, Microsoft Excel can create worksheet items, chart items, and macrosheet items. Each of these items can be uniquely identified by the system using a Class Identifier or **CLSID**.  
   
-## 請參閱  
- [OLE 背景](../mfc/ole-background.md)   
- [OLE 背景：容器和伺服器](../mfc/ole-background-containers-and-servers.md)   
- [容器：用戶端項目](../mfc/containers-client-items.md)   
- [伺服器：伺服器項目](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: Containers and Servers](../mfc/ole-background-containers-and-servers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

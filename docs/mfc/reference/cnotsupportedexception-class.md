@@ -1,5 +1,5 @@
 ---
-title: "CNotSupportedException 類別 |Microsoft 文件"
+title: CNotSupportedException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CNotSupportedException class
-- unsupported features
-- exceptions, not supported
+- CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
 caps.latest.revision: 20
 author: mikeblome
@@ -37,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 6cb66448d0dadaf1f70c3606bc1b9027bd217a38
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83bc88d4618939650296e73a1c991b6e75883272
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cnotsupportedexception-class"></a>CNotSupportedException 類別
-表示因要求不支援的功能而產生的例外狀況。  
+# <a name="cnotsupportedexception-class"></a>CNotSupportedException Class
+Represents an exception that is the result of a request for an unsupported feature.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CNotSupportedException : public CSimpleException  
@@ -55,18 +53,18 @@ class CNotSupportedException : public CSimpleException
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|建構 `CNotSupportedException` 物件。|  
+|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Constructs a `CNotSupportedException` object.|  
   
-## <a name="remarks"></a>備註  
- 沒有進一步限定性條件是必要或不可能。  
+## <a name="remarks"></a>Remarks  
+ No further qualification is necessary or possible.  
   
- 如需有關使用`CNotSupportedException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ For more information on using `CNotSupportedException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -75,22 +73,22 @@ class CNotSupportedException : public CSimpleException
   
  `CNotSupportedException`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException  
- 建構 `CNotSupportedException` 物件。  
+##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException  
+ Constructs a `CNotSupportedException` object.  
   
 ```  
 CNotSupportedException();
 ```  
   
-### <a name="remarks"></a>備註  
- 請勿直接使用這個建構函式，但呼叫全域函式，而是[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)。 如需例外狀況處理的詳細資訊，請參閱文章[在 MFC 中處理例外狀況](../exception-handling-in-mfc.md)。  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly, but rather call the global function [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). for more information about exception processing, see the article [Exception Handling in MFC](../exception-handling-in-mfc.md).  
   
-## <a name="see-also"></a>另請參閱  
- [CException 類別](cexception-class.md)   
- [階層架構圖表](../hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](cexception-class.md)   
+ [Hierarchy Chart](../hierarchy-chart.md)
 
 
 

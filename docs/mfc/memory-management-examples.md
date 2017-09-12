@@ -1,111 +1,130 @@
 ---
-title: "記憶體管理：範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 配置資源"
-  - "陣列 [C++], 記憶體管理"
-  - "資料結構 [C++]"
-  - "資料結構 [C++], 配置記憶體"
-  - "範例 [MFC], 記憶體配置"
-  - "框架配置"
-  - "堆積配置, 範例"
-  - "記憶體配置 [C++], 陣列"
-  - "記憶體配置 [C++], 資料結構"
-  - "記憶體配置 [C++], 範例"
-  - "記憶體配置 [C++], 物件"
-  - "MFC [C++], 記憶體管理"
-  - "物件 [C++], 配置記憶體"
-  - "物件 [C++], 記憶體配置"
-  - "結構記憶體配置"
-  - "類型 [C++], 記憶體配置"
+title: 'Memory Management: Examples | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], memory allocation
+- data structures [MFC]
+- arrays [MFC], allocating resources
+- objects [MFC], allocating memory
+- data structures [MFC], allocating memory
+- examples [MFC], memory allocation
+- heap allocation [MFC], examples
+- memory allocation [MFC], arrays
+- MFC, memory management
+- struct memory allocation [MFC]
+- types [MFC], memory allocation
+- memory allocation [MFC], objects
+- memory allocation [MFC], examples
+- arrays [MFC], memory management
+- frame allocation [MFC]
+- memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 記憶體管理：範例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 108a4988ca87c96642c2368764ec3d047de746a8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明 MFC 執行如何框架配置和堆積配置這三種常見的每一個記憶體配置:  
+---
+# <a name="memory-management-examples"></a>Memory Management: Examples
+This article describes how MFC performs frame allocations and heap allocations for each of the three typical kinds of memory allocations:  
   
--   [位元組陣列](#_core_allocation_of_an_array_of_bytes)  
+-   [An array of bytes](#_core_allocation_of_an_array_of_bytes)  
   
--   [資料結構](#_core_allocation_of_a_data_structure)  
+-   [A data structure](#_core_allocation_of_a_data_structure)  
   
--   [物件](#_core_allocation_of_an_object)  
+-   [An object](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a> 陣列的配置位元組  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> Allocation of an Array of Bytes  
   
-#### 配置陣列在框架的位元組。  
+#### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>To allocate an array of bytes on the frame  
   
-1.  定義陣列如下列程式碼所示。  陣列，其記憶體自動回收，當變數關閉它的範圍。  
+1.  Define the array as shown by the following code. The array is automatically deleted and its memory reclaimed when the array variable exits its scope.  
   
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/CPP/memory-management-examples_1.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]  
   
-#### 將位元組陣列或任何基本資料型別\) 在堆積  
+#### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>To allocate an array of bytes (or any primitive data type) on the heap  
   
-1.  使用這個範例中顯示的陣列語法的 **new** 運算子:  
+1.  Use the **new** operator with the array syntax shown in this example:  
   
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/CPP/memory-management-examples_2.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]  
   
-#### 解除配置從堆積的陣列  
+#### <a name="to-deallocate-the-arrays-from-the-heap"></a>To deallocate the arrays from the heap  
   
-1.  使用 **delete** 運算子如下:  
+1.  Use the **delete** operator as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/CPP/memory-management-examples_3.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a> 資料結構的配置  
+##  <a name="_core_allocation_of_a_data_structure"></a> Allocation of a Data Structure  
   
-#### 配置在框架中的資料結構。  
+#### <a name="to-allocate-a-data-structure-on-the-frame"></a>To allocate a data structure on the frame  
   
-1.  定義結構變數:  
+1.  Define the structure variable as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/CPP/memory-management-examples_4.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]  
   
-     當它結束其範圍時，結構所佔用的記憶體回收。  
+     The memory occupied by the structure is reclaimed when it exits its scope.  
   
-#### 配置在堆積的資料結構。  
+#### <a name="to-allocate-data-structures-on-the-heap"></a>To allocate data structures on the heap  
   
-1.  使用配置在堆積 **new** 和 **delete** 的資料結構解除配置它們，如下所示的範例:  
+1.  Use **new** to allocate data structures on the heap and **delete** to deallocate them, as shown by the following examples:  
   
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/CPP/memory-management-examples_5.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a> 物件的配置  
+##  <a name="_core_allocation_of_an_object"></a> Allocation of an Object  
   
-#### 配置在框架的物件  
+#### <a name="to-allocate-an-object-on-the-frame"></a>To allocate an object on the frame  
   
-1.  宣告物件如下:  
+1.  Declare the object as follows:  
   
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/CPP/memory-management-examples_6.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]  
   
-     當物件完成其範圍時，物件的解構函式自動叫用。  
+     The destructor for the object is automatically invoked when the object exits its scope.  
   
-#### 配置在堆積上的物件  
+#### <a name="to-allocate-an-object-on-the-heap"></a>To allocate an object on the heap  
   
-1.  使用 **new** 運算子，將指標傳回物件，則會配置在堆積上的物件。  使用 **delete** 運算子刪除它們。  
+1.  Use the **new** operator, which returns a pointer to the object, to allocate objects on the heap. Use the **delete** operator to delete them.  
   
-     下列堆積和架構範例假設， `CPerson` 建構函式不接受引數。  
+     The following heap and frame examples assume that the `CPerson` constructor takes no arguments.  
   
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/CPP/memory-management-examples_7.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     如果 `CPerson` 建構函式的引數是指向 `char`，框架配置的陳述式是:  
+     If the argument for the `CPerson` constructor is a pointer to `char`, the statement for frame allocation is:  
   
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/CPP/memory-management-examples_8.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   
-     堆疊配置的陳述式是:  
+     The statement for heap allocation is:  
   
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/CPP/memory-management-examples_9.cpp)]  
+     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]  
   
-## 請參閱  
- [記憶體管理：堆積配置](../mfc/memory-management-heap-allocation.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management: Heap Allocation](../mfc/memory-management-heap-allocation.md)
+
+

@@ -1,106 +1,125 @@
 ---
-title: "範例：透過功能表命令顯示對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "對話方塊, MFC"
-  - "範例 [MFC], 對話方塊"
-  - "功能表項目, 範例"
-  - "MFC 對話方塊, 顯示"
-  - "MFC 對話方塊, 範例"
-  - "強制回應對話方塊, 顯示"
-  - "非強制回應對話方塊, 顯示"
+title: 'Example: Displaying a Dialog Box via a Menu Command | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], examples
+- MFC dialog boxes [MFC], displaying
+- modeless dialog boxes [MFC], displaying
+- dialog boxes [MFC], MFC
+- modal dialog boxes [MFC], displaying
+- examples [MFC], dialog boxes
+- menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 範例：透過功能表命令顯示對話方塊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66c040d1bb9c2315e7ea1df11cfe7e3423183376
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本主題包含程序:  
+---
+# <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Example: Displaying a Dialog Box via a Menu Command
+This topic contains procedures to:  
   
--   透過功能表命令顯示強制回應對話方塊。  
+-   Display a modal dialog box through a menu command.  
   
--   透過功能表命令顯示非強制回應對話方塊。  
+-   Display a modeless dialog box through a menu command.  
   
- 兩個範例程序是為 MFC 應用程式，並會在您使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)建立的應用程式。  
+ Both sample procedures are for MFC applications and will work in an application you create with the [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md).  
   
- 使用下列程序名稱和值:  
+ The procedures use the following names and values:  
   
-|項目|名稱或值。|  
-|--------|-----------|  
-|應用程式|DisplayDialog|  
-|功能表命令|在檢視\] 功能表的測試命令;命令 ID \= ID\_VIEW\_TEST|  
-|對話方塊|測試對話方塊;類別 CTestDialog \=;標頭檔 \= TestDialog.h;變數 \= testdlg， ptestdlg|  
-|命令處理常式|OnViewTest|  
+|Item|Name or value|  
+|----------|-------------------|  
+|Application|DisplayDialog|  
+|Menu command|Test command on View menu; Command ID = ID_VIEW_TEST|  
+|Dialog box|Test dialog box; Class = CTestDialog; Header file = TestDialog.h; Variable = testdlg, ptestdlg|  
+|Command handler|OnViewTest|  
   
-### 顯示強制回應對話方塊  
+### <a name="to-display-a-modal-dialog-box"></a>To display a modal dialog box  
   
-1.  建立功能表命令;請參閱 [建立功能表或功能表項目](../windows/creating-a-menu.md)。  
+1.  Create the menu command; see [Creating Menus or Menu Items](../windows/creating-a-menu.md).  
   
-2.  建立對話方塊;請參閱 [開啟對話方塊編輯器](../mfc/creating-a-new-dialog-box.md)。  
+2.  Create the dialog box; see [Starting the Dialog Editor](../windows/creating-a-new-dialog-box.md).  
   
-3.  將對話方塊的類別。  請參閱 [加入類別](../ide/adding-a-class-visual-cpp.md) 以取得詳細資訊。  
+3.  Add a class for your dialog box. See [Adding a Class](../ide/adding-a-class-visual-cpp.md) for more information.  
   
-4.  在 \[**類別檢視**\] 中，選取文件類別 \(CDisplayDialogDoc\)。  在 \[**屬性**\] 視窗中，按一下 **Events** 按鈕。  按兩下命令 \(ID\_VIEW\_TEST\) 的 ID 在 \[**屬性**\] 視窗的左窗格中選擇 **Command**。  在右窗格中，按一下向下箭號並選取 **\<Add\> OnViewTest**。  
+4.  In **Class View**, select the document class (CDisplayDialogDoc). In the **Properties** window, click the **Events** button. Double-click the ID of the menu command (ID_VIEW_TEST) in the left pane of the **Properties** window and select **Command**. In the right pane, click the down arrow and select **\<Add> OnViewTest**.  
   
-     如果您已將命令加入至 MDI 應用程式的電腦主機，請選取應用程式類別 \(CDisplayDialogApp\)。  
+     If you added the menu command to the mainframe of an MDI application, select the application class (CDisplayDialogApp) instead.  
   
-5.  將包含下列陳述式加入至 CDisplayDialogDoc.cpp \(或 CDisplayDialogApp.cpp\) 在現有包含陳述式之後:  
+5.  Add the following include statement to CDisplayDialogDoc.cpp (or CDisplayDialogApp.cpp) after the existing include statements:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/CPP/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]  
   
-6.  將下列程式碼新增至 `OnViewTest` 實作函式:  
+6.  Add the following code to `OnViewTest` to implement the function:  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/CPP/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]  
   
-### 顯示非強制回應對話方塊  
+### <a name="to-display-a-modeless-dialog-box"></a>To display a modeless dialog box  
   
-1.  執行前四個步驟顯示強制回應對話方塊，不過，選取檢視類別 \(CDisplayDialogView\) 在第 4. 步驟。  
+1.  Do the first four steps to display a modal dialog box, except select the view class (CDisplayDialogView) in step 4.  
   
-2.  編輯 DisplayDialogView.h:  
+2.  Edit DisplayDialogView.h:  
   
-    -   宣告在第一個類別宣告之前的對話方塊類別:  
+    -   Declare the dialog box class preceding the first class declaration:  
   
-         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/CPP/example-displaying-a-dialog-box-via-a-menu-command_3.h)]  
+         [!code-cpp[NVC_MFCControlLadenDialog#44](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_3.h)]  
   
-    -   宣告指標到對話方塊在屬性公開部分之後:  
+    -   Declare a pointer to the dialog box after the Attributes public section:  
   
-         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/CPP/example-displaying-a-dialog-box-via-a-menu-command_4.h)]  
+         [!code-cpp[NVC_MFCControlLadenDialog#45](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_4.h)]  
   
-3.  編輯 DisplayDialogView.cpp:  
+3.  Edit DisplayDialogView.cpp:  
   
-    -   在現有的 Include 陳述式之後加入下列包含陳述式:  
+    -   Add the following include statement after the existing include statements:  
   
-         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/CPP/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]  
+         [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]  
   
-    -   將下列程式碼加入至建構函式:  
+    -   Add the following code to the constructor:  
   
-         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/CPP/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]  
+         [!code-cpp[NVC_MFCControlLadenDialog#46](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_5.cpp)]  
   
-    -   將下列程式碼加入至解構函式:  
+    -   Add the following code to the destructor:  
   
-         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/CPP/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]  
+         [!code-cpp[NVC_MFCControlLadenDialog#47](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_6.cpp)]  
   
-    -   將下列程式碼新增至 `OnViewTest` 實作函式:  
+    -   Add the following code to `OnViewTest` to implement the function:  
   
-         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/CPP/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]  
+         [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]  
   
- 此外，請參閱下列知識庫 \(Knowledge Base\) 文件:  
+ Also, see the following Knowledge Base article:  
   
--   Q251059:HOWTO:提供 MFC 對話方塊中提供自己的視窗類別名稱。  
+-   Q251059 : HOWTO: Provide Your Own Window Class Name for an MFC Dialog Box  
   
-## 請參閱  
- [對話方塊](../mfc/dialog-boxes.md)   
- [強制回應和非強制回應對話方塊](../mfc/modal-and-modeless-dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Modal and Modeless Dialog Boxes](../mfc/modal-and-modeless-dialog-boxes.md)
+
+

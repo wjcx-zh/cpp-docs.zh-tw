@@ -1,85 +1,102 @@
 ---
-title: "集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列樣板"
-  - "陣列 [C++], 類別"
-  - "集合類別, 關於集合類別"
-  - "集合類別, 陣列"
-  - "集合類別, 清單"
-  - "集合類別, 對應"
-  - "集合類別, MFC"
-  - "集合類別, 圖案"
-  - "集合類別, 樣板架構"
-  - "集合, 關於集合"
-  - "MFC 集合類別"
-  - "MFC, 集合"
-  - "圖案"
-  - "圖案, 集合"
+title: Collections | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, collections
+- arrays [MFC], classes
+- MFC collection classes
+- shapes, collection
+- collection classes [MFC], MFC
+- collections, about collections
+- array templates [MFC]
+- collection classes [MFC], template-based
+- collection classes [MFC], about collection classes
+- collection classes [MFC], maps
+- collection classes [MFC], arrays
+- shapes
+- collection classes [MFC], lists
+- collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 集合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4ae4981412a7cf494b551de7f5bb26c74512244
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 程式庫提供集合類別管理物件群組。  這些類別有兩種類型：  
+---
+# <a name="collections"></a>Collections
+The Microsoft Foundation Class Library provides collection classes to manage groups of objects. These classes are of two types:  
   
--   [從 C\+\+ 樣板建立的集合類別。](#_core_the_template.2d.based_collection_classes)  
+-   [Collection classes created from C++ templates](#_core_the_template_based_collection_classes)  
   
--   [非從樣板建立的集合類別。](#_core_the_collection_classes_not_based_on_templates)  
+-   [Collection classes not created from templates](#_core_the_collection_classes_not_based_on_templates)  
   
 > [!NOTE]
->  如果您的程式碼已經使用非樣板集合類別，可以繼續使用它們。  如果您撰寫新的型別安全集合為您的資料型別分類，我們建議您使用較新的樣板類別。  
+>  If your code already uses nontemplate collection classes, you can continue to use them. If you write new type-safe collection classes for your own data types, we recommend that you use the newer template-based classes.  
   
-##  <a name="_core_collection_shapes"></a> 集合形狀  
- 集合類別 Draw 為它的形狀與由其項目的型別。  圖案參考組織並儲存物件集合的方式。  MFC 提供三個基本圖案集合:清單、陣列和對應 \(也稱為字典\)。  您可以選擇最適合您的特定程式設計問題的圖案集合。  
+##  <a name="_core_collection_shapes"></a> Collection Shapes  
+ A collection class is characterized by its "shape" and by the types of its elements. The shape refers to the way the objects are organized and stored by the collection. MFC provides three basic collection shapes: lists, arrays, and maps (also known as dictionaries). You can pick the collection shape that is most suited to your particular programming problem.  
   
- 提供三個集合圖案中的每一本主題稍後的簡短說明。  若要比較圖案的功能可協助您決定要提供程式最適合使用，請參閱 [選擇集合類別的建議](../mfc/recommendations-for-choosing-a-collection-class.md)。  
+ Each of the three provided collection shapes is described briefly later in this topic. To compare the features of the shapes to help you decide which is best for your program, see [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md).  
   
 -   List  
   
-     清單類別提供項目清單的指令，索引清單，實作為雙向連結串列。  清單中有「開頭」與「結尾」，以及加入或移除項目的開頭或結尾或插入或刪除項目在中間，非常快速地。  
+     The list class provides an ordered, nonindexed list of elements, implemented as a doubly linked list. A list has a "head" and a "tail," and adding or removing elements from the head or tail, or inserting or deleting elements in the middle, is very fast.  
   
--   陣列  
+-   Array  
   
-     陣列類別提供動態大小的，已排序和整數索引的陣列。  
+     The array class provides a dynamically sized, ordered, and integer-indexed array of objects.  
   
--   對應 \(也稱為字典\)  
+-   Map (also known as a dictionary)  
   
-     導覽是相關聯金鑰的物件與值物件的集合。  
+     A map is a collection that associates a key object with a value object.  
   
-##  <a name="_core_the_template.2d.based_collection_classes"></a> 樣板架構集合類別  
- 最簡單的方法實作包含任何型別的物件的型別安全集合是使用其中一個 MFC 樣板類別。  這兩個類別的範例，請參閱 MFC [收集](../top/visual-cpp-samples.md)範例。  
+##  <a name="_core_the_template_based_collection_classes"></a> The Template-Based Collection Classes  
+ The easiest way to implement a type-safe collection that contains objects of any type is to use one of the MFC template-based classes. For examples of these classes, see the MFC sample [COLLECT](../visual-cpp-samples.md).  
   
- 下表列出MFC範文為基底的並行集合類別。  
+ The following table lists the MFC template-based collection classes.  
   
-### 集合樣板類別  
+### <a name="collection-template-classes"></a>Collection Template Classes  
   
-|集合內容|陣列|清單|對應|  
-|----------|--------|--------|--------|  
-|任何型別之物件的集合。|`CArray`|`CList`|`CMap`|  
-|指標的集合對任何型別的物件|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
+|Collection contents|Arrays|Lists|Maps|  
+|-------------------------|------------|-----------|----------|  
+|Collections of objects of any type|`CArray`|`CList`|`CMap`|  
+|Collections of pointers to objects of any type|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a> 根據樣板中的集合類別。  
- 如果您的應用程式已經使用MFC非樣板類別，可以繼續使用它們。  不過，對於新集合，我們建議您使用樣板類別。  下表列出不是根據範本的 MFC 集合類別。  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> The Collection Classes Not Based on Templates  
+ If your application already uses MFC nontemplate classes, you can continue to use them. However, for new collections, we recommend that you use the template-based classes. The following table lists the MFC collection classes that are not based on templates.  
   
-### 非樣板集合類別  
+### <a name="nontemplate-collection-classes"></a>Nontemplate Collection Classes  
   
-|陣列|清單|對應|  
-|--------|--------|--------|  
+|Arrays|Lists|Maps|  
+|------------|-----------|----------|  
 |`CObArray`|`CObList`|`CMapPtrToWord`|  
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|  
 |`CDWordArray`|`CStringList`|`CMapStringToOb`|  
@@ -88,38 +105,40 @@ MFC 程式庫提供集合類別管理物件群組。  這些類別有兩種類�
 |`CWordArray`||`CMapWordToOb`|  
 |`CUIntArray`||`CMapWordToPtr`|  
   
- MFC 集合在 [選擇集合類別的建議](../mfc/recommendations-for-choosing-a-collection-class.md) 類別的資料表的特性說明 MFC 集合類別會根據這些特性 \(除了圖案之外\)：  
+ The Characteristics of MFC Collection Classes table in [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md) describes the MFC collection classes in terms of these characteristics (other than shape):  
   
--   類別會使用 C\+\+ 樣板與否  
+-   Whether the class uses C++ templates  
   
--   儲存在集合中的項目是否可序列化  
+-   Whether the elements stored in the collection can be serialized  
   
--   儲存在集合中的項目是否可用於診斷傾印  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   這個值是否為安全型別。  
+-   Whether the collection is type-safe  
   
-### 您想要執行甚麼工作？  
+### <a name="what-do-you-want-to-do"></a>What do you want to do  
   
-#### 一般集合類別工作  
+#### <a name="general-collection-class-tasks"></a>General Collection-Class Tasks  
   
--   [選擇集合類別的建議](../mfc/recommendations-for-choosing-a-collection-class.md)  
+-   [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md)  
   
--   [如何：建立類型安全集合](../mfc/how-to-make-a-type-safe-collection.md)  
+-   [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)  
   
--   [建立堆疊和佇列集合](../mfc/creating-stack-and-queue-collections.md)  
+-   [Creating Stack and Queue Collections](../mfc/creating-stack-and-queue-collections.md)  
   
--   [CArray::Add](../Topic/CArray::Add.md)  
+-   [CArray::Add](../mfc/reference/carray-class.md#add)  
   
-#### 樣板架構集合類別  
+#### <a name="template-based-collection-class-tasks"></a>Template-Based Collection-Class Tasks  
   
--   [樣板架構類別](../mfc/template-based-classes.md)  
+-   [Template-Based Classes](../mfc/template-based-classes.md)  
   
-#### 存取集合成員 \(樣本基底或非樣本基底\)  
+#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Accessing the Members of a Collection (Template-Based or Not)  
   
--   [存取集合的所有成員](../mfc/accessing-all-members-of-a-collection.md)  
+-   [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)  
   
--   [刪除 CObject 集合中的所有物件](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
+-   [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   
-## 請參閱  
- [概念](../mfc/mfc-concepts.md)   
- [一般 MFC 主題](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

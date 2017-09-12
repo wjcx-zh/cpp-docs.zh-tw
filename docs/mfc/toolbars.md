@@ -1,45 +1,63 @@
 ---
-title: "工具列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令列, MFC 工具列"
-  - "工具列 [C++]"
+title: Toolbars | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbars [MFC]
+- command bars [MFC], MFC toolbars
 ms.assetid: c22ecc5b-a84c-4979-8d1a-8e3e71d5ce33
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 工具列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 645fe8448588aac0ad40192e9028cfe0002a4365
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-文件工具列家族說明 MFC 工具列以及如何建立和使用它們。  
+---
+# <a name="toolbars"></a>Toolbars
+The toolbar family of articles describes MFC toolbars and how to create and use them.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [MFC 工具列實作](../mfc/mfc-toolbar-implementation.md)  
+-   [MFC toolbar implementation](../mfc/mfc-toolbar-implementation.md)  
   
--   [工具列基本概念](../mfc/toolbar-fundamentals.md)  
+-   [Toolbar fundamentals](../mfc/toolbar-fundamentals.md)  
   
--   [如何更新使用者介面物件 \(啟用\/停用工具列按鈕\)](../mfc/how-to-update-user-interface-objects.md)  
+-   [How to Update User-Interface Objects (enable/disable toolbar buttons)](../mfc/how-to-update-user-interface-objects.md)  
   
--   [CToolBar](../mfc/reference/ctoolbar-class.md)和[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 類別  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
--   [範例](../mfc/toolbar-sample-list.md)  
+-   [Sample](../mfc/toolbar-sample-list.md)  
   
- 如需 MFC 工具列的詳細資訊，請參閱文件 Q232017， 「HOWTO:將文字加入至工具列按鈕，網址為 http:\/\/support.microsoft.com 中的 Microsoft 知識庫文件。  
+ For more information about MFC toolbars, see article Q232017, "HOWTO: Add Text to Toolbar Buttons," in the Microsoft Knowledge Base at http://support.microsoft.com.  
   
-## 請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Toolbar Editor](../windows/toolbar-editor.md)
+
+

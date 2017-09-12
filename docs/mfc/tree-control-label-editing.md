@@ -1,38 +1,57 @@
 ---
-title: "樹狀目錄控制項標籤編輯 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 類別, 編輯標籤"
-  - "編輯樹狀目錄控制項標籤"
-  - "CTreeCtrl 類別中的標籤編輯"
-  - "樹狀目錄控制項, 標籤編輯"
+title: Tree Control Label Editing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- editing tree control labels
+- CTreeCtrl class [MFC], editing labels
+- label editing in CTreeCtrl class [MFC]
+- tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 樹狀目錄控制項標籤編輯
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 51c2f148861015f7d34c25f1f94c3047dd627aaa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-使用者可以直接編輯有 **TVS\_EDITLABELS** 樣式的樹狀目錄控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\)的項目標籤。  透過按一下具有焦點項目的標籤讓使用者開始編輯功能。  使用 [EditLabel](../Topic/CTreeCtrl::EditLabel.md) 成員函式以使應用程式開始編輯。  當它在開始編輯和被取消或完成時，樹狀目錄控制項會傳送通知。  如果可以，當編輯完成時，您必須負責更新項目的標籤。  
+---
+# <a name="tree-control-label-editing"></a>Tree Control Label Editing
+The user can directly edit the labels of items in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) that has the **TVS_EDITLABELS** style. The user begins editing by clicking the label of the item that has the focus. An application begins editing by using the [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) member function. The tree control sends the notification when editing begins and when it is canceled or completed. When editing is completed, you are responsible for updating the item's label, if appropriate.  
   
- 在標籤在開始編輯時，樹狀目錄控制項傳送 [TVN\_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) 通知訊息。  藉由處理這個通知，您可以允許編輯某些標籤並防止編輯其他。  傳回 0 允許編輯，傳回非零值防止編輯。  
+ When label editing begins, a tree control sends a [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) notification message. By processing this notification, you can allow editing of some labels and prevent editing of others. Returning 0 allows editing, and returning nonzero prevents it.  
   
- 在標籤編輯遭到取消或完成時，樹狀目錄控制項傳送 [TVN\_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515) 通知訊息。  `lParam` 參數為 [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) 結構的位址。  **item** 成員是識別項目並包含編輯文字的 [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) 結構。  如果在驗證編輯字串後為可行，則您要負責更新項目的標籤。  如果已經取消編輯，則 `TV_ITEM` **pszText** 的成員是 0。  
+ When label editing is canceled or completed, a tree control sends a [TVN_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515) notification message. The `lParam` parameter is the address of a [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) structure. The **item** member is a [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) structure that identifies the item and includes the edited text. You are responsible for updating the item's label, if appropriate, perhaps after validating the edited string. The **pszText** member of `TV_ITEM` is 0 if editing is canceled.  
   
- 在標籤編輯期間，通常是為了回應 [TVN\_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) 通知訊息，您可以使用[GetEditControl](../Topic/CTreeCtrl::GetEditControl.md) 成員函式以得到編輯控制項的指標。  您可以呼叫 Edit 控制項的 [SetLimitText](../Topic/CEdit::SetLimitText.md) 成員函式限制使用者能夠輸入或子類別攔截並捨棄無效字元的編輯控制項中的文字數。  不過，請注意，編輯控制項**TVN\_BEGINLABELEDIT** 只會在傳送*之後* 顯示。  
+ During label editing, typically in response to the [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) notification message, you can get a pointer to the edit control used for label editing by using the [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) member function. You can call the edit control's [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) member function to limit the amount of text a user can enter or subclass the edit control to intercept and discard invalid characters. Note, however, that the edit control is displayed only *after* **TVN_BEGINLABELEDIT** is sent.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

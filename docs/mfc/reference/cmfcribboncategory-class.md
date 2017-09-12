@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonCategory 類別 |Microsoft 文件"
+title: CMFCRibbonCategory Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -76,7 +76,68 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonCategory class
+- CMFCRibbonCategory [MFC], CMFCRibbonCategory
+- CMFCRibbonCategory [MFC], AddHidden
+- CMFCRibbonCategory [MFC], AddPanel
+- CMFCRibbonCategory [MFC], CopyFrom
+- CMFCRibbonCategory [MFC], FindByData
+- CMFCRibbonCategory [MFC], FindByID
+- CMFCRibbonCategory [MFC], FindPanelWithElem
+- CMFCRibbonCategory [MFC], GetContextID
+- CMFCRibbonCategory [MFC], GetData
+- CMFCRibbonCategory [MFC], GetDroppedDown
+- CMFCRibbonCategory [MFC], GetElements
+- CMFCRibbonCategory [MFC], GetElementsByID
+- CMFCRibbonCategory [MFC], GetFirstVisibleElement
+- CMFCRibbonCategory [MFC], GetFocused
+- CMFCRibbonCategory [MFC], GetHighlighted
+- CMFCRibbonCategory [MFC], GetImageCount
+- CMFCRibbonCategory [MFC], GetImageSize
+- CMFCRibbonCategory [MFC], GetItemIDsList
+- CMFCRibbonCategory [MFC], GetLastVisibleElement
+- CMFCRibbonCategory [MFC], GetLargeImages
+- CMFCRibbonCategory [MFC], GetMaxHeight
+- CMFCRibbonCategory [MFC], GetName
+- CMFCRibbonCategory [MFC], GetPanel
+- CMFCRibbonCategory [MFC], GetPanelCount
+- CMFCRibbonCategory [MFC], GetPanelFromPoint
+- CMFCRibbonCategory [MFC], GetPanelIndex
+- CMFCRibbonCategory [MFC], GetParentButton
+- CMFCRibbonCategory [MFC], GetParentMenuBar
+- CMFCRibbonCategory [MFC], GetParentRibbonBar
+- CMFCRibbonCategory [MFC], GetRect
+- CMFCRibbonCategory [MFC], GetSmallImages
+- CMFCRibbonCategory [MFC], GetTabColor
+- CMFCRibbonCategory [MFC], GetTabRect
+- CMFCRibbonCategory [MFC], GetTextTopLine
+- CMFCRibbonCategory [MFC], GetVisibleElements
+- CMFCRibbonCategory [MFC], HighlightPanel
+- CMFCRibbonCategory [MFC], HitTest
+- CMFCRibbonCategory [MFC], HitTestEx
+- CMFCRibbonCategory [MFC], HitTestScrollButtons
+- CMFCRibbonCategory [MFC], IsActive
+- CMFCRibbonCategory [MFC], IsVisible
+- CMFCRibbonCategory [MFC], IsWindows7Look
+- CMFCRibbonCategory [MFC], NotifyControlCommand
+- CMFCRibbonCategory [MFC], OnCancelMode
+- CMFCRibbonCategory [MFC], OnDraw
+- CMFCRibbonCategory [MFC], OnDrawImage
+- CMFCRibbonCategory [MFC], OnDrawMenuBorder
+- CMFCRibbonCategory [MFC], OnKey
+- CMFCRibbonCategory [MFC], OnLButtonDown
+- CMFCRibbonCategory [MFC], OnLButtonUp
+- CMFCRibbonCategory [MFC], OnMouseMove
+- CMFCRibbonCategory [MFC], OnRTLChanged
+- CMFCRibbonCategory [MFC], OnScrollHorz
+- CMFCRibbonCategory [MFC], OnUpdateCmdUI
+- CMFCRibbonCategory [MFC], RecalcLayout
+- CMFCRibbonCategory [MFC], RemovePanel
+- CMFCRibbonCategory [MFC], ReposPanels
+- CMFCRibbonCategory [MFC], SetCollapseOrder
+- CMFCRibbonCategory [MFC], SetData
+- CMFCRibbonCategory [MFC], SetKeys
+- CMFCRibbonCategory [MFC], SetName
+- CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
 caps.latest.revision: 38
 author: mikeblome
@@ -96,17 +157,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: dccbaac6450985f0d5255a790d83f374b52f06f9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9993ca0cfc02f09231ce6a6e93950fa129bb357e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 類別
-`CMFCRibbonCategory`類別會實作功能區索引標籤，其中包含一群[功能區面板](../../mfc/reference/cmfcribbonpanel-class.md)。  
+# <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory Class
+The `CMFCRibbonCategory` class implements a ribbon tab that contains a group of [ribbon panels](../../mfc/reference/cmfcribbonpanel-class.md).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonCategory : public CObject  
@@ -114,63 +175,63 @@ class CMFCRibbonCategory : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保護的建構函式  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|建構函式。|  
+|[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|The constructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonCategory::AddHidden](#addhidden)|將隱藏的項目加入至功能區分類。|  
-|[CMFCRibbonCategory::AddPanel](#addpanel)|將新的面板加入至功能區分類。|  
+|[CMFCRibbonCategory::AddHidden](#addhidden)|Adds a hidden element to the ribbon category.|  
+|[CMFCRibbonCategory::AddPanel](#addpanel)|Adds a new panel to the ribbon category.|  
 |[CMFCRibbonCategory::CopyFrom](#copyfrom)||  
 |[CMFCRibbonCategory::FindByData](#findbydata)||  
 |[CMFCRibbonCategory::FindByID](#findbyid)||  
 |[CMFCRibbonCategory::FindPanelWithElem](#findpanelwithelem)||  
-|[CMFCRibbonCategory::GetContextID](#getcontextid)|傳回功能區類別的內容識別碼。|  
-|[CMFCRibbonCategory::GetData](#getdata)|傳回與功能區類別相關聯的使用者定義的資料。|  
+|[CMFCRibbonCategory::GetContextID](#getcontextid)|Returns the context ID of the ribbon category.|  
+|[CMFCRibbonCategory::GetData](#getdata)|Returns the user-defined data that is associated with the ribbon category.|  
 |[CMFCRibbonCategory::GetDroppedDown](#getdroppeddown)||  
 |[CMFCRibbonCategory::GetElements](#getelements)||  
 |[CMFCRibbonCategory::GetElementsByID](#getelementsbyid)||  
-|[CMFCRibbonCategory::GetFirstVisibleElement](#getfirstvisibleelement)|取得屬於功能區類別的第一個可見項目。|  
-|[CMFCRibbonCategory::GetFocused](#getfocused)|傳回具有焦點的項目。|  
-|[CMFCRibbonCategory::GetHighlighted](#gethighlighted)|傳回反白顯示的項目。|  
+|[CMFCRibbonCategory::GetFirstVisibleElement](#getfirstvisibleelement)|Obtain a first visible element that belong to the ribbon category.|  
+|[CMFCRibbonCategory::GetFocused](#getfocused)|Returns a focused element.|  
+|[CMFCRibbonCategory::GetHighlighted](#gethighlighted)|Returns a highlighted element.|  
 |[CMFCRibbonCategory::GetImageCount](#getimagecount)||  
 |[CMFCRibbonCategory::GetImageSize](#getimagesize)||  
 |[CMFCRibbonCategory::GetItemIDsList](#getitemidslist)||  
-|[CMFCRibbonCategory::GetLastVisibleElement](#getlastvisibleelement)|取得最後一個可見項目屬於功能區分類|  
-|[CMFCRibbonCategory::GetLargeImages](#getlargeimages)|傳回的功能區類別使用的大型影像清單的參考。|  
+|[CMFCRibbonCategory::GetLastVisibleElement](#getlastvisibleelement)|Obtain a last visible element that belong to the ribbon category|  
+|[CMFCRibbonCategory::GetLargeImages](#getlargeimages)|Returns a reference to the list of large images that the ribbon category uses.|  
 |[CMFCRibbonCategory::GetMaxHeight](#getmaxheight)||  
 |[CMFCRibbonCategory::GetName](#getname)||  
-|[CMFCRibbonCategory::GetPanel](#getpanel)|傳回位於指定索引上的功能區面板的指標。|  
-|[CMFCRibbonCategory::GetPanelCount](#getpanelcount)|在 功能區類別傳回功能區面板的數目。|  
+|[CMFCRibbonCategory::GetPanel](#getpanel)|Returns a pointer to the ribbon panel that is located at the specified index.|  
+|[CMFCRibbonCategory::GetPanelCount](#getpanelcount)|Returns the number of ribbon panels in the ribbon category.|  
 |[CMFCRibbonCategory::GetPanelFromPoint](#getpanelfrompoint)||  
-|[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)|傳回指定之功能區面板的索引。|  
+|[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)|Returns the index of the specified ribbon panel.|  
 |[CMFCRibbonCategory::GetParentButton](#getparentbutton)||  
 |[CMFCRibbonCategory::GetParentMenuBar](#getparentmenubar)||  
 |[CMFCRibbonCategory::GetParentRibbonBar](#getparentribbonbar)||  
 |[CMFCRibbonCategory::GetRect](#getrect)||  
-|[CMFCRibbonCategory::GetSmallImages](#getsmallimages)|傳回的類別使用的小型影像清單的參考。|  
-|[CMFCRibbonCategory::GetTabColor](#gettabcolor)|傳回目前功能區類別目錄 索引標籤的色彩。|  
+|[CMFCRibbonCategory::GetSmallImages](#getsmallimages)|Returns a reference to the list of small images that the category uses.|  
+|[CMFCRibbonCategory::GetTabColor](#gettabcolor)|Returns the current color of the ribbon category tab.|  
 |[CMFCRibbonCategory::GetTabRect](#gettabrect)||  
 |[CMFCRibbonCategory::GetTextTopLine](#gettexttopline)||  
-|[CMFCRibbonCategory::GetVisibleElements](#getvisibleelements)|取得所有屬於功能區類別的可見項目。|  
+|[CMFCRibbonCategory::GetVisibleElements](#getvisibleelements)|Obtain all visible elements that belong to the ribbon category.|  
 |[CMFCRibbonCategory::HighlightPanel](#highlightpanel)||  
 |[CMFCRibbonCategory::HitTest](#hittest)||  
 |[CMFCRibbonCategory::HitTestEx](#hittestex)||  
 |[CMFCRibbonCategory::HitTestScrollButtons](#hittestscrollbuttons)||  
 |[CMFCRibbonCategory::IsActive](#isactive)||  
-|[CMFCRibbonCategory::IsVisible](#isvisible)|判斷是否為可見的功能區分類。|  
-|[CMFCRibbonCategory::IsWindows7Look](#iswindows7look)|表示父功能區是否有 Windows 7 樣式外觀 （矩形的小型應用程式按鈕）|  
+|[CMFCRibbonCategory::IsVisible](#isvisible)|Determines whether the ribbon category is visible.|  
+|[CMFCRibbonCategory::IsWindows7Look](#iswindows7look)|Indicates whether the parent ribbon has Windows 7-style look (small rectangular application button)|  
 |[CMFCRibbonCategory::NotifyControlCommand](#notifycontrolcommand)||  
 |[CMFCRibbonCategory::OnCancelMode](#oncancelmode)||  
 |[CMFCRibbonCategory::OnDraw](#ondraw)||  
 |[CMFCRibbonCategory::OnDrawImage](#ondrawimage)||  
 |[CMFCRibbonCategory::OnDrawMenuBorder](#ondrawmenuborder)||  
-|[CMFCRibbonCategory::OnKey](#onkey)|當使用者按下鍵盤 按鈕時，由架構呼叫。|  
+|[CMFCRibbonCategory::OnKey](#onkey)|Called by the framework when a user presses a keyboard button.|  
 |[CMFCRibbonCategory::OnLButtonDown](#onlbuttondown)||  
 |[CMFCRibbonCategory::OnLButtonUp](#onlbuttonup)||  
 |[CMFCRibbonCategory::OnMouseMove](#onmousemove)||  
@@ -180,18 +241,18 @@ class CMFCRibbonCategory : public CObject
 |[CMFCRibbonCategory::RecalcLayout](#recalclayout)||  
 |[CMFCRibbonCategory::RemovePanel](#removepanel)||  
 |[CMFCRibbonCategory::ReposPanels](#repospanels)||  
-|[CMFCRibbonCategory::SetCollapseOrder](#setcollapseorder)|定義摺疊的順序出現在功能區類別的功能區面板。|  
-|[CMFCRibbonCategory::SetData](#setdata)|將使用者定義資料存放區分類。|  
-|[CMFCRibbonCategory::SetKeys](#setkeys)|將 keytip 指派給功能區分類。|  
+|[CMFCRibbonCategory::SetCollapseOrder](#setcollapseorder)|Defines the collapse order of the ribbon panels that are present in the ribbon category.|  
+|[CMFCRibbonCategory::SetData](#setdata)|Stores the user defined data in the ribbon category.|  
+|[CMFCRibbonCategory::SetKeys](#setkeys)|Assigns a keytip to the ribbon category.|  
 |[CMFCRibbonCategory::SetName](#setname)||  
-|[CMFCRibbonCategory::SetTabColor](#settabcolor)|設定的功能區分類的色彩。|  
+|[CMFCRibbonCategory::SetTabColor](#settabcolor)|Sets the color of the ribbon category.|  
   
-## <a name="remarks"></a>備註  
- 通常您會建立功能區類別間接呼叫[CMFCRibbonBar::AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory)，其傳回的指標給新建立的功能區分類。 將面板加入至類別的呼叫[CMFCRibbonCategory::AddPanel](#addpanel)。  
+## <a name="remarks"></a>Remarks  
+ Typically, you create a ribbon category indirectly by calling [CMFCRibbonBar::AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory), which returns a pointer to the newly created ribbon category. You add panels to the category by calling [CMFCRibbonCategory::AddPanel](#addpanel).  
   
- `CMFCRibbonTab`類別繪製功能區分類。 它衍生自[CMFCRibbonBaseElement 類別](../../mfc/reference/cmfcribbonbaseelement-class.md)。  
+ The `CMFCRibbonTab` class draws ribbon categories. It is derived from [CMFCRibbonBaseElement Class](../../mfc/reference/cmfcribbonbaseelement-class.md).  
   
- 下列範例示範如何建立功能區分類和面板加入。  
+ This following example demonstrates how to create a ribbon category and add a panel to it.  
   
  `// Create a new ribbon category and get a pointer to it`  
   
@@ -211,34 +272,34 @@ class CMFCRibbonCategory : public CObject
   
  `m_PanelIcons.ExtractIcon (0));  // Panel icon`  
   
- 下圖顯示首頁分類 RibbonApp 範例應用程式的圖形。  
+ The following diagram shows a figure of the Home category from the RibbonApp sample application.  
   
- ![CMFCRibbonCategory 影像](../../mfc/reference/media/cmfcribboncategory.png "cmfcribboncategory")  
+ ![CMFCRibbonCategory image](../../mfc/reference/media/cmfcribboncategory.png "cmfcribboncategory")  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMFCRibbonCategory`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxribboncategory.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribboncategory.h  
   
-##  <a name="addhidden"></a>CMFCRibbonCategory::AddHidden  
- 將指定的功能區項目加入至功能區項目會顯示在自訂 對話方塊中的陣列。  
+##  <a name="addhidden"></a>  CMFCRibbonCategory::AddHidden  
+ Adds the specified ribbon element to the array of ribbon elements that are displayed on the customization dialog box.  
   
 ```  
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pElem`  
- 功能區元素的指標。  
+ Pointer to a ribbon element.  
   
-### <a name="remarks"></a>備註  
- 在 [自訂] 對話方塊上的功能區項目是您可以加入快速存取工具列命令。  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements on the customization dialog box are the commands that you can add to the quick access toolbar.  
   
-##  <a name="addpanel"></a>CMFCRibbonCategory::AddPanel  
- 建立功能區類別的功能區面板。  
+##  <a name="addpanel"></a>  CMFCRibbonCategory::AddPanel  
+ Creates a ribbon panel for the ribbon category.  
   
 ```  
 CMFCRibbonPanel* AddPanel(
@@ -247,31 +308,31 @@ CMFCRibbonPanel* AddPanel(
     CRuntimeClass* pRTI = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPanelName`  
- 新的功能區面板的名稱指標。  
+ Pointer to the name of the new ribbon panel.  
   
  [in] `hIcon`  
- 新的功能區面板的預設圖示的控制代碼。  
+ Handle to the default icon for the new ribbon panel.  
   
  [in] `pRTI`  
- 自訂功能區面板的執行階段類別資訊的指標。  
+ Pointer to runtime class information for a custom ribbon panel.  
   
-### <a name="return-value"></a>傳回值  
- 指向新的功能區面板如果方法成功。否則`NULL`若未建立面板。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the new ribbon panel if the method was successful; otherwise `NULL` if the panel was not created.  
   
-### <a name="remarks"></a>備註  
- 如果您想要建立自訂功能區面板，您必須指定在其執行階段類別資訊`pRTI`。 自訂功能區面板類別必須衍生自`CMFCRibbonPanel`類別。  
+### <a name="remarks"></a>Remarks  
+ If you want to create a custom ribbon panel, you must specify its runtime class information in `pRTI`. The custom ribbon panel class must be derived from the `CMFCRibbonPanel` class.  
   
- 空間不足而無法顯示功能區項目時，會顯示功能區面板的預設圖示。  
+ The default icon for the ribbon panel is displayed when there is insufficient space to display the ribbon elements.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`AddPanel`方法中的`CMFCRibbonCategory`類別。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `AddPanel` method in the `CMFCRibbonCategory` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&10;](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#10](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]  
   
-##  <a name="cmfcribboncategory"></a>CMFCRibbonCategory::CMFCRibbonCategory  
- 建構並初始化[CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)物件。  
+##  <a name="cmfcribboncategory"></a>  CMFCRibbonCategory::CMFCRibbonCategory  
+ Constructs and initializes a [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) object.  
   
 ```  
 CMFCRibbonCategory(
@@ -285,40 +346,40 @@ CMFCRibbonCategory(
     32));
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pParenrRibbonBar`  
- 功能區類別的父功能區列的指標。  
+ Pointer to the parent ribbon bar of the ribbon category.  
   
  [in] `lpszName`  
- 功能區分類的名稱。  
+ Name of the ribbon category.  
   
  [in] `uiSmallImagesResID`  
- 在功能區類別的功能區項目所使用的小型影像的影像清單的資源識別碼。  
+ Resource ID of the image list for small images that are used by ribbon elements in the ribbon category.  
   
  [in] `uiLargeImagesResID`  
- 在功能區類別的功能區項目所使用的大型影像的影像清單的資源識別碼。  
+ Resource ID of the image list for large images that are used by ribbon elements in the ribbon category.  
   
  [in] `sizeSmallImage`  
- 預設的功能區項目在功能區類別中的小型影像的大小。  
+ Default size of small images for ribbon elements in the ribbon category.  
   
  [in] `sizeLargeImage`  
- 預設功能區項目在功能區類別中的大型影像的大小。  
+ Default size of large images for ribbon elements in the ribbon category.  
   
-##  <a name="copyfrom"></a>CMFCRibbonCategory::CopyFrom  
- 複製指定的狀態[CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)目前[CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md)物件。  
+##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
+ Copies the state of the specified [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) to the current [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) object.  
   
 ```  
 virtual void CopyFrom(CMFCRibbonCategory& src);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- 來源 `CMFCRibbonCategory` 物件。  
+ The source `CMFCRibbonCategory` object.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbydata"></a>CMFCRibbonCategory::FindByData  
- 擷取與指定的資料相關聯的功能區項目。  
+##  <a name="findbydata"></a>  CMFCRibbonCategory::FindByData  
+ Retrieves the ribbon element associated with the specified data.  
   
 ```  
 CMFCRibbonBaseElement* FindByData(
@@ -326,20 +387,20 @@ CMFCRibbonBaseElement* FindByData(
     BOOL bVisibleOnly = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 使用功能區項目相關聯的資料。  
+ The data associated with a ribbon element.  
   
  [in] `bVisibleOnly`  
- `TRUE`快速存取功能區項目包含在搜尋。`FALSE`排除在搜尋中的快速存取功能區項目。  
+ `TRUE` to include quick access ribbon elements in the search; `FALSE` to exclude quick access ribbon elements in the search.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功，功能區項目的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyid"></a>CMFCRibbonCategory::FindByID  
- 擷取與指定的命令識別碼相關聯的功能區項目  
+##  <a name="findbyid"></a>  CMFCRibbonCategory::FindByID  
+ Retrieves the ribbon element associated with the specified command ID.  
   
 ```  
 CMFCRibbonBaseElement* FindByID(
@@ -347,86 +408,86 @@ CMFCRibbonBaseElement* FindByID(
     BOOL bVisibleOnly = TRUE) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 功能區項目相關聯的命令識別碼。  
+ Command ID associated with a ribbon element.  
   
  [in] `bVisibleOnly`  
- `TRUE`快速存取功能區項目包含在搜尋。`FALSE`排除在搜尋中的快速存取功能區項目。  
+ `TRUE` to include quick access ribbon elements in the search; `FALSE` to exclude quick access ribbon elements in the search.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功，功能區項目的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findpanelwithelem"></a>CMFCRibbonCategory::FindPanelWithElem  
- 擷取功能區面板，其中包含指定的功能區項目。  
+##  <a name="findpanelwithelem"></a>  CMFCRibbonCategory::FindPanelWithElem  
+ Retrieves the ribbon panel that contains the specified ribbon element.  
   
 ```  
 CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pElement`  
- 功能區元素的指標。  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功; 在功能區面板的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon panel if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcontextid"></a>CMFCRibbonCategory::GetContextID  
- 擷取功能區類別的內容識別碼。  
+##  <a name="getcontextid"></a>  CMFCRibbonCategory::GetContextID  
+ Retrieves the context ID of the ribbon category.  
   
 ```  
 UINT GetContextID() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 功能區類別目錄的內容識別碼。  
+### <a name="return-value"></a>Return Value  
+ Context ID of the ribbon category.  
   
-### <a name="remarks"></a>備註  
- 內容識別碼為 0，如果功能區類別不是內容的功能區分類。  
+### <a name="remarks"></a>Remarks  
+ The context ID is 0 if the ribbon category is not a context ribbon category.  
   
-##  <a name="getdata"></a>CMFCRibbonCategory::GetData  
- 擷取與功能區類別相關聯的使用者定義的資料。  
+##  <a name="getdata"></a>  CMFCRibbonCategory::GetData  
+ Retrieves the user-defined data that is associated with the ribbon category.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 使用者定義的資料與功能區類別相關聯。  
+### <a name="return-value"></a>Return Value  
+ The user-defined data that is associated with the ribbon category.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonCategory::GetDroppedDown  
- 擷取目前有顯示其快顯功能表功能區元素的指標。  
+##  <a name="getdroppeddown"></a>  CMFCRibbonCategory::GetDroppedDown  
+ Retrieves a pointer to the ribbon element that currently has its pop-up menu displayed.  
   
 ```  
 CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功，功能區項目的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelements"></a>CMFCRibbonCategory::GetElements  
- 擷取在功能區類別中的所有功能區項目。  
+##  <a name="getelements"></a>  CMFCRibbonCategory::GetElements  
+ Retrieves all ribbon elements in the ribbon category.  
   
 ```  
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>參數  
- [in、out] `arElements`  
- 若要參考[CArray](../../mfc/reference/carray-class.md)的功能區項目。  
+### <a name="parameters"></a>Parameters  
+ [in, out] `arElements`  
+ Reference to a [CArray](../../mfc/reference/carray-class.md) of ribbon elements.  
   
-### <a name="remarks"></a>備註  
- 陣列中包含專為快速存取工具列上的功能區項目。  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are designed for use on the quick access toolbar are included in the array.  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonCategory::GetElementsByID  
- 擷取與指定的命令 ID 相關聯的所有功能區項目  
+##  <a name="getelementsbyid"></a>  CMFCRibbonCategory::GetElementsByID  
+ Retrieves all ribbon elements that are associated with the specified command ID.  
   
 ```  
 void GetElementsByID(
@@ -434,87 +495,87 @@ void GetElementsByID(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 功能區項目相關聯的命令識別碼。  
+ Command ID associated with a ribbon element.  
   
- [in、out] `arElements`  
- 若要參考[CArray](../../mfc/reference/carray-class.md)的功能區項目。  
+ [in, out] `arElements`  
+ Reference to a [CArray](../../mfc/reference/carray-class.md) of ribbon elements.  
   
-### <a name="remarks"></a>備註  
- 陣列中包含專為快速存取工具列上的功能區項目。  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are designed for use on the quick access toolbar are included in the array.  
   
-##  <a name="getfirstvisibleelement"></a>CMFCRibbonCategory::GetFirstVisibleElement  
- 擷取第一個可見項目屬於功能區分類。  
+##  <a name="getfirstvisibleelement"></a>  CMFCRibbonCategory::GetFirstVisibleElement  
+ Retrieves the first visible element that belongs to the ribbon category.  
   
 ```  
 CMFCRibbonBaseElement* GetFirstVisibleElement() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向第一個可見項目。可能是`NULL`如果類別沒有任何可見的項目。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the first visible element; may be `NULL` if category does not have any visible elements.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getfocused"></a>CMFCRibbonCategory::GetFocused  
- 傳回具有焦點的項目。  
+##  <a name="getfocused"></a>  CMFCRibbonCategory::GetFocused  
+ Returns a focused element.  
   
 ```  
 CMFCRibbonBaseElement* GetFocused();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 具有焦點的項目之指標或`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a focused element or `NULL`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethighlighted"></a>CMFCRibbonCategory::GetHighlighted  
- 傳回反白顯示的項目。  
+##  <a name="gethighlighted"></a>  CMFCRibbonCategory::GetHighlighted  
+ Returns a highlighted element.  
   
 ```  
 CMFCRibbonBaseElement* GetHighlighted();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 反白顯示項目的指標或`NULL`如果沒有項目會反白顯示。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a highlighted element or `NULL` if no elements are highlighted.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getimagecount"></a>CMFCRibbonCategory::GetImageCount  
- 擷取指定的影像清單包含在功能區類別中的映像數目。  
+##  <a name="getimagecount"></a>  CMFCRibbonCategory::GetImageCount  
+ Retrieves the number of images in the specified image list that is contained in the ribbon category.  
   
 ```  
 int GetImageCount(BOOL bIsLargeImage) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bIsLargeImage`  
- `TRUE`大型影像清單中的映像數目`FALSE`的小型影像清單中的映像數目。  
+ `TRUE` for the number of images in the large image list; `FALSE` for the number of images in the small image list.  
   
-### <a name="return-value"></a>傳回值  
- 指定的影像清單中的映像數目。  
+### <a name="return-value"></a>Return Value  
+ The number of images in the specified image list.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getimagesize"></a>CMFCRibbonCategory::GetImageSize  
- 擷取指定的影像清單包含在功能區類別中的映像的大小。  
+##  <a name="getimagesize"></a>  CMFCRibbonCategory::GetImageSize  
+ Retrieves the size of an image in the specified image list that is contained in the ribbon category.  
   
 ```  
 CSize GetImageSize(BOOL bIsLargeImage) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bIsLargeImage`  
- `TRUE`若為大型影像; 的大小`FALSE`小型影像的大小。  
+ `TRUE` for the size of large images; `FALSE` for the size of small images.  
   
-### <a name="return-value"></a>傳回值  
- 指定的影像清單中的映像的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of an image in the specified image list.  
   
-### <a name="remarks"></a>備註  
- 擷取大小包含全域影像縮放比例。  
+### <a name="remarks"></a>Remarks  
+ The size retrieved includes the global image scale factor.  
   
-##  <a name="getitemidslist"></a>CMFCRibbonCategory::GetItemIDsList  
- 擷取功能區項目包含在功能區類別中的命令 Id。  
+##  <a name="getitemidslist"></a>  CMFCRibbonCategory::GetItemIDsList  
+ Retrieves the command IDs for the ribbon elements that are contained in the ribbon category.  
   
 ```  
 void GetItemIDsList(
@@ -522,198 +583,198 @@ void GetItemIDsList(
     BOOL bHiddenOnly = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `lstItems`  
- 功能區項目在功能區類別中的命令 Id 的清單。  
+### <a name="parameters"></a>Parameters  
+ [out] `lstItems`  
+ The list of command IDs for the ribbon elements in the ribbon category.  
   
  [in] `bHiddenOnly`  
- `TRUE`若要排除在功能區類別中，功能區面板上顯示的功能區項目`FALSE`在功能區類別中包含所有的功能區項目。  
+ `TRUE` to exclude ribbon elements displayed on the ribbon panels in the ribbon category; `FALSE` to include all ribbon elements in the ribbon category.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlargeimages"></a>CMFCRibbonCategory::GetLargeImages  
- 擷取包含在功能區類別中的大型影像清單。  
+##  <a name="getlargeimages"></a>  CMFCRibbonCategory::GetLargeImages  
+ Retrieves the list of large images that are contained in the ribbon category.  
   
 ```  
 CMFCToolBarImages& GetLargeImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 包含在功能區類別中的大型影像清單。  
+### <a name="return-value"></a>Return Value  
+ The list of large images that are contained in the ribbon category.  
   
-##  <a name="getlastvisibleelement"></a>CMFCRibbonCategory::GetLastVisibleElement  
- 擷取功能區類別所屬的最後一個可見項目。  
+##  <a name="getlastvisibleelement"></a>  CMFCRibbonCategory::GetLastVisibleElement  
+ Retrieves the last visible element that belongs to the ribbon category.  
   
 ```  
 CMFCRibbonBaseElement* GetLastVisibleElement() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向最後一個可見項目。可能是`NULL`如果類別沒有任何可見的項目。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the last visible element; may be `NULL` if the category does not have any visible elements.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getmaxheight"></a>CMFCRibbonCategory::GetMaxHeight  
- 擷取包含在功能區類別的功能區面板的最大高度。  
+##  <a name="getmaxheight"></a>  CMFCRibbonCategory::GetMaxHeight  
+ Retrieves the maximum height of the ribbon panels that are contained in the ribbon category.  
   
 ```  
 int GetMaxHeight(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 功能區面板的裝置內容的指標。  
+ Pointer to a device context for the ribbon panels.  
   
-### <a name="return-value"></a>傳回值  
- 功能區面板功能區類別中所包含的最大高度。  
+### <a name="return-value"></a>Return Value  
+ The maximum height of the ribbon panels that are contained in the ribbon category.  
   
-### <a name="remarks"></a>備註  
- 擷取的值包含功能區面板的上方和下方邊界的高度。  
+### <a name="remarks"></a>Remarks  
+ The value retrieved includes the height of the top and bottom margins for the ribbon panels.  
   
-##  <a name="getname"></a>CMFCRibbonCategory::GetName  
- 擷取功能區類別的名稱。  
+##  <a name="getname"></a>  CMFCRibbonCategory::GetName  
+ Retrieves the name of the ribbon category.  
   
 ```  
 LPCTSTR GetName() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 功能區類別目錄的名稱。  
+### <a name="return-value"></a>Return Value  
+ The name of the ribbon category.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpanel"></a>CMFCRibbonCategory::GetPanel  
- 傳回位於指定索引上的功能區面板的指標。  
+##  <a name="getpanel"></a>  CMFCRibbonCategory::GetPanel  
+ Returns a pointer to the ribbon panel that is located at the specified index.  
   
 ```  
 CMFCRibbonPanel* GetPanel(int nIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 在功能區面板的以零為起始的索引。  
+ The zero-based index of a ribbon panel.  
   
-### <a name="return-value"></a>傳回值  
- 功能區面板，位於指定索引處的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the ribbon panel that is located at the specified index.  
   
-### <a name="remarks"></a>備註  
- 如果擲回例外狀況`nIndex`超出範圍。  
+### <a name="remarks"></a>Remarks  
+ An exception is thrown if `nIndex` is out of range.  
   
-##  <a name="getpanelcount"></a>CMFCRibbonCategory::GetPanelCount  
- 在 功能區類別傳回功能區面板的數目。  
+##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount  
+ Returns the number of ribbon panels in the ribbon category.  
   
 ```  
 int GetPanelCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在 功能區類別的功能區面板數目。  
+### <a name="return-value"></a>Return Value  
+ The number of ribbon panels in the ribbon category.  
   
-##  <a name="getpanelfrompoint"></a>CMFCRibbonCategory::GetPanelFromPoint  
- 如果指定的點位於，擷取功能區面板的指標。  
+##  <a name="getpanelfrompoint"></a>  CMFCRibbonCategory::GetPanelFromPoint  
+ Retrieves a pointer to a ribbon panel if the specified point is located in it.  
   
 ```  
 CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 指標，相對於視窗左上角的 x 和 y 座標。  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功; 在功能區面板的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon panel if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
- 功能區類別中所包含的功能區面板為測試。  
+### <a name="remarks"></a>Remarks  
+ Only ribbon panels that are contained in the ribbon category are tested.  
   
-##  <a name="getpanelindex"></a>CMFCRibbonCategory::GetPanelIndex  
- 擷取指定的功能區面板的以零為起始的索引。  
+##  <a name="getpanelindex"></a>  CMFCRibbonCategory::GetPanelIndex  
+ Retrieves the zero-based index of the specified ribbon panel.  
   
 ```  
 int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pPanel`  
- 在功能區面板的指標。  
+ Pointer to a ribbon panel.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功; 指定的功能區面板的以零起始的索引否則為-1。  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the specified ribbon panel if the method was successful; otherwise -1.  
   
-### <a name="remarks"></a>備註  
- 功能區類別中所包含的功能區面板會搜尋。  
+### <a name="remarks"></a>Remarks  
+ Only ribbon panels that are contained in the ribbon category are searched.  
   
-##  <a name="getparentbutton"></a>CMFCRibbonCategory::GetParentButton  
- 擷取功能區類別的父功能區項目。  
+##  <a name="getparentbutton"></a>  CMFCRibbonCategory::GetParentButton  
+ Retrieves the parent ribbon element of the ribbon category.  
   
 ```  
 CMFCRibbonBaseElement* GetParentButton() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 讓指標回到父功能區項目，或`NULL`如果沒有父項目。  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the parent ribbon element, or `NULL` if there is no parent element.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentmenubar"></a>CMFCRibbonCategory::GetParentMenuBar  
- 將指標傳回至父功能表列的`CMFCRibbonCategory`物件。  
+##  <a name="getparentmenubar"></a>  CMFCRibbonCategory::GetParentMenuBar  
+ Returns a pointer to the parent menu bar of the `CMFCRibbonCategory` object.  
   
 ```  
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回的內容`m_pParentMenuBar`受保護的成員。  
+### <a name="return-value"></a>Return Value  
+ Returns the contents of the `m_pParentMenuBar` protected member.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonCategory::GetParentRibbonBar  
- 擷取功能區類別的父功能區列。  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonCategory::GetParentRibbonBar  
+ Retrieves the parent ribbon bar for the ribbon category.  
   
 ```  
 CMFCRibbonBar* GetParentRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 功能區類別的父功能區列的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the parent ribbon bar for the ribbon category.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getrect"></a>CMFCRibbonCategory::GetRect  
- 擷取的功能區分類的顯示矩形。  
+##  <a name="getrect"></a>  CMFCRibbonCategory::GetRect  
+ Retrieves the display rectangle for the ribbon category.  
   
 ```  
 CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 功能區類別顯示矩形。  
+### <a name="return-value"></a>Return Value  
+ The display rectangle for the ribbon category.  
   
-### <a name="remarks"></a>備註  
- 功能區分類的顯示矩形不包括 [類別] 索引標籤。  
+### <a name="remarks"></a>Remarks  
+ The display rectangle for the ribbon category does not include the category tab.  
   
-##  <a name="getsmallimages"></a>CMFCRibbonCategory::GetSmallImages  
- 擷取包含在功能區類別中的小型影像清單。  
+##  <a name="getsmallimages"></a>  CMFCRibbonCategory::GetSmallImages  
+ Retrieves the list of small images that are contained in the ribbon category.  
   
 ```  
 CMFCToolBarImages& GetSmallImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 包含在功能區類別中的小型影像清單。  
+### <a name="return-value"></a>Return Value  
+ The list of small images that are contained in the ribbon category.  
   
-##  <a name="gettabcolor"></a>CMFCRibbonCategory::GetTabColor  
- 傳回目前功能區類別目錄 索引標籤的色彩。  
+##  <a name="gettabcolor"></a>  CMFCRibbonCategory::GetTabColor  
+ Returns the current color of the ribbon category tab.  
   
 ```  
 AFX_RibbonCategoryColor GetTabColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前功能區類別 索引標籤的色彩。  
+### <a name="return-value"></a>Return Value  
+ The current color of the ribbon category tab.  
   
-### <a name="remarks"></a>備註  
- 傳回的值可以是下列的列舉值之一︰  
+### <a name="remarks"></a>Remarks  
+ The returned value can be one of the following enumerated values:  
   
 -   AFX_CategoryColor_Red  
   
@@ -729,32 +790,32 @@ AFX_RibbonCategoryColor GetTabColor() const;
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="gettabrect"></a>CMFCRibbonCategory::GetTabRect  
- 擷取功能區類別 索引標籤的顯示的矩形。  
+##  <a name="gettabrect"></a>  CMFCRibbonCategory::GetTabRect  
+ Retrieves the display rectangle for the ribbon category tab.  
   
 ```  
 CRect GetTabRect() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 功能區類別 索引標籤顯示矩形。  
+### <a name="return-value"></a>Return Value  
+ The display rectangle for the ribbon category tab.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettexttopline"></a>CMFCRibbonCategory::GetTextTopLine  
- 擷取在功能區類別顯示為大型影像的功能區按鈕上的文字的垂直位置。  
+##  <a name="gettexttopline"></a>  CMFCRibbonCategory::GetTextTopLine  
+ Retrieves the vertical location of text on ribbon buttons in the ribbon category that display large images.  
   
 ```  
 int GetTextTopLine() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 以像素為單位，顯示大型影像的功能區按鈕文字的垂直位置。  
+### <a name="return-value"></a>Return Value  
+ The vertical location of text, in pixels, on ribbon buttons that display large images.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvisibleelements"></a>CMFCRibbonCategory::GetVisibleElements  
- 擷取所有可見的項目屬於功能區分類。  
+##  <a name="getvisibleelements"></a>  CMFCRibbonCategory::GetVisibleElements  
+ Retrieves all visible elements that belong to the ribbon category.  
   
 ```  
 void GetVisibleElements(
@@ -762,14 +823,14 @@ void GetVisibleElements(
     CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `arElements`  
- 所有可見項目的陣列。  
+ Array of all visible elements.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="highlightpanel"></a>CMFCRibbonCategory::HighlightPanel  
- 指定的功能區面板會反白顯示。  
+##  <a name="highlightpanel"></a>  CMFCRibbonCategory::HighlightPanel  
+ Highlights the specified ribbon panel.  
   
 ```  
 CMFCRibbonPanel* HighlightPanel(
@@ -777,21 +838,21 @@ CMFCRibbonPanel* HighlightPanel(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pHLPanel`  
- 若要反白顯示功能區面板的指標。  
+ Pointer to the ribbon panel to highlight.  
   
  [in] `point`  
- 指標，相對於視窗左上角的 x 和 y 座標。  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="return-value"></a>傳回值  
- 指向先前反白顯示功能區面板。否則`NULL`如果叫用此方法時，會反白不顯示任何功能區面板。  
+### <a name="return-value"></a>Return Value  
+ Pointer to the previously highlighted ribbon panel; otherwise `NULL` if no ribbon panel is highlighted when this method is invoked.  
   
-### <a name="remarks"></a>備註  
- 如需反白顯示功能區面板的詳細資訊，請參閱[CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight)。  
+### <a name="remarks"></a>Remarks  
+ For more information about highlighting a ribbon panel, see [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight).  
   
-##  <a name="hittest"></a>CMFCRibbonCategory::HitTest  
- 如果指定的點位於，擷取功能區項目的指標。  
+##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest  
+ Retrieves a pointer to a ribbon element if the specified point is located in it.  
   
 ```  
 CMFCRibbonBaseElement* HitTest(
@@ -799,92 +860,92 @@ CMFCRibbonBaseElement* HitTest(
     BOOL bCheckPanelCaption = FALSE) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
+ The x and y coordinates of the mouse pointer, relative to the upper-left corner of the window.  
   
  [in] `bCheckPanelCaption`  
- `TRUE`若要測試的功能區面板標題中。`FALSE`排除功能區面板的標題。  
+ `TRUE` to test the ribbon panel caption; `FALSE` to exclude the ribbon panel caption.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功，功能區項目的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
- 測試功能區類別中所包含的功能區項目。  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon category are tested.  
   
-##  <a name="hittestex"></a>CMFCRibbonCategory::HitTestEx  
- 如果指定的點位於，擷取的功能區項目以零為起始的索引。  
+##  <a name="hittestex"></a>  CMFCRibbonCategory::HitTestEx  
+ Retrieves the zero-based index of a ribbon element if the specified point is located in it.  
   
 ```  
 int HitTestEx(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
+ The x and y coordinates of the mouse pointer, relative to the upper-left corner of the window.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，功能區項目之以零起始的索引否則為-1。  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of a ribbon element if the method was successful; otherwise -1.  
   
-### <a name="remarks"></a>備註  
- 測試功能區類別中所包含的功能區項目。  
+### <a name="remarks"></a>Remarks  
+ Only ribbon elements that are contained in the ribbon category are tested.  
   
-##  <a name="hittestscrollbuttons"></a>CMFCRibbonCategory::HitTestScrollButtons  
- 如果點落在功能區類別左或向右捲動按鈕，讓指標回到該按鈕。  
+##  <a name="hittestscrollbuttons"></a>  CMFCRibbonCategory::HitTestScrollButtons  
+ If a point falls within a ribbon category’s left or right scroll button, returns a pointer to that button.  
   
 ```  
 CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 要測試的點。  
+ The point to test.  
   
-### <a name="return-value"></a>傳回值  
- 如果`point`落在左邊的周框矩形或向右捲動按鈕的功能區分類，讓指標回到該按鈕，或反之則傳回`NULL`。  
+### <a name="return-value"></a>Return Value  
+ If `point` falls within the bounding rectangle of either the left or the right scroll button of the ribbon category, returns a pointer to that button, or otherwise, returns `NULL`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isactive"></a>CMFCRibbonCategory::IsActive  
- 表示功能區類別是否在功能區列上使用中的類別。  
+##  <a name="isactive"></a>  CMFCRibbonCategory::IsActive  
+ Indicates whether the ribbon category is the active category on the ribbon bar.  
   
 ```  
 BOOL IsActive() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果功能區類別是使用中的類別。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon category is the active category; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 使用中的功能區類別目錄會顯示其功能區面板。  
+### <a name="remarks"></a>Remarks  
+ The active ribbon category displays its ribbon panels.  
   
-##  <a name="isvisible"></a>CMFCRibbonCategory::IsVisible  
- 表示功能區類別是否為可見。  
+##  <a name="isvisible"></a>  CMFCRibbonCategory::IsVisible  
+ Indicates whether the ribbon category is visible.  
   
 ```  
 BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果功能區類別為可見的。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon category is visible; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 顯示功能區類別目錄會顯示類別 索引標籤。  
+### <a name="remarks"></a>Remarks  
+ Ribbon categories that are visible display a category tab.  
   
-##  <a name="iswindows7look"></a>CMFCRibbonCategory::IsWindows7Look  
- 表示父功能區是否有 Windows 7 尋找 （矩形的小型應用程式按鈕）。  
+##  <a name="iswindows7look"></a>  CMFCRibbonCategory::IsWindows7Look  
+ Indicates whether the parent ribbon has Windows 7 look (small rectangular application button).  
   
 ```  
 BOOL IsWindows7Look() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果父功能區看起來; Windows 7否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the parent ribbon has Windows 7 look; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="notifycontrolcommand"></a>CMFCRibbonCategory::NotifyControlCommand  
- WM_NOTIFY 命令訊息傳遞給所有`CMFCRibbonPanel`中的項目`CMFCRibbonCategory`之前處理訊息的。  
+##  <a name="notifycontrolcommand"></a>  CMFCRibbonCategory::NotifyControlCommand  
+ Delivers a WM_NOTIFY command message to all `CMFCRibbonPanel` elements in the `CMFCRibbonCategory` until the message is handled.  
   
 ```  
 virtual BOOL NotifyControlCommand(
@@ -894,48 +955,48 @@ virtual BOOL NotifyControlCommand(
     LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bAccelerator`  
- `TRUE`如果此命令的快速鍵，來源或`FALSE`否則。  
+ `TRUE` if this command originated from an accelerator, or `FALSE` otherwise.  
   
  [in] `nNotifyCode`  
- 通知程式碼。  
+ The notification code.  
   
  [in] `wParam`  
- 訊息的 WPARAM 欄位。  
+ The WPARAM field of the message.  
   
  [in] `lParam`  
- 訊息的 LPARAM 欄位。  
+ The LPARAM field of the message.  
   
-### <a name="return-value"></a>傳回值  
- 傳回`TRUE`是否已處理訊息，或`FALSE`如果不是。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if the message was handled, or `FALSE` if not.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="oncancelmode"></a>CMFCRibbonCategory::OnCancelMode  
- 叫用 [取消] 模式中所有`CMFCRibbonPanel`的項目`CMFCRibbonCategory`。  
+##  <a name="oncancelmode"></a>  CMFCRibbonCategory::OnCancelMode  
+ Invokes cancel mode in all the `CMFCRibbonPanel` elements of the `CMFCRibbonCategory`.  
   
 ```  
 virtual void OnCancelMode();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondraw"></a>CMFCRibbonCategory::OnDraw  
- 若要繪製功能區類別架構呼叫。  
+##  <a name="ondraw"></a>  CMFCRibbonCategory::OnDraw  
+ Called by the framework to draw the ribbon category.  
   
 ```  
 virtual void OnDraw(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 功能區類別的裝置內容的指標。  
+ Pointer to a device context for the ribbon category.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawimage"></a>CMFCRibbonCategory::OnDrawImage  
- 在功能區類別上繪製指定的映像的架構所呼叫。  
+##  <a name="ondrawimage"></a>  CMFCRibbonCategory::OnDrawImage  
+ Called by the framework to draw the specified image on the ribbon category.  
   
 ```  
 virtual BOOL OnDrawImage(
@@ -947,32 +1008,32 @@ virtual BOOL OnDrawImage(
     BOOL bCenter);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 映像的裝置內容的指標。  
+ Pointer to a device context for the image.  
   
  [in] `rect`  
- 顯示影像的矩形。  
+ Display rectangle for the image.  
   
  [in] `pElement`  
- 包含影像的功能區元素的指標。  
+ Pointer to the ribbon element that contains the image.  
   
  [in] `bIsLargeImage`  
- `TRUE`如果影像非常大。`FALSE`如果影像較小。  
+ `TRUE` if the image is the large size; `FALSE` if the image is the small size.  
   
  [in] `nImageIndex`  
- 映像陣列，包含在功能區類別中的映像的以零為起始的索引。  
+ Zero-based index of the image in the image array that is contained in the ribbon category.  
   
  [in] `bCenter`  
- `TRUE`若要置中的映像中的顯示矩形。`FALSE`繪製影像左上角的顯示矩形。  
+ `TRUE` to center the image in the display rectangle; `FALSE` to draw the image in the upper-left corner of the display rectangle.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenuborder"></a>CMFCRibbonCategory::OnDrawMenuBorder  
- 若要繪製框線的快顯功能表架構呼叫。  
+##  <a name="ondrawmenuborder"></a>  CMFCRibbonCategory::OnDrawMenuBorder  
+ Called by the framework to draw the border of a popup menu.  
   
 ```  
 virtual void OnDrawMenuBorder(
@@ -980,87 +1041,87 @@ virtual void OnDrawMenuBorder(
     CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 不使用這個參數。  
+ This parameter is not used.  
   
  [in] `pMenuBar`  
- 不使用這個參數。  
+ This parameter is not used.  
   
-### <a name="remarks"></a>備註  
- 依預設這個方法沒有作用。 覆寫這個方法，以繪製框線的快顯功能表。  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to draw the border of a popup menu.  
   
-##  <a name="onkey"></a>CMFCRibbonCategory::OnKey  
- 當使用者按下鍵盤 按鈕時，由架構呼叫。  
+##  <a name="onkey"></a>  CMFCRibbonCategory::OnKey  
+ Called by the framework when a user presses a keyboard button.  
   
 ```  
 virtual BOOL OnKey(UINT nChar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nChar`  
- 使用者按下按鍵虛擬按鍵碼。  
+ The virtual key code for the key that a user pressed.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onlbuttondown"></a>CMFCRibbonCategory::OnLButtonDown  
- 若要擷取在指定的點的功能區項目，當使用者按下滑鼠左鍵時架構呼叫。  
+##  <a name="onlbuttondown"></a>  CMFCRibbonCategory::OnLButtonDown  
+ Called by the framework to retrieve the ribbon element under the specified point when the user presses the left mouse button.  
   
 ```  
 virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 滑鼠指標，相對於視窗左上角的 x 和 y 座標。  
+ The x and y coordinates of the mouse pointer, relative to the upper-left corner of the window.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功，功能區項目的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a ribbon element if the method was successful; otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onlbuttonup"></a>CMFCRibbonCategory::OnLButtonUp  
- 當使用者放開滑鼠左鍵並透過功能區類別的指標是由架構呼叫。  
+##  <a name="onlbuttonup"></a>  CMFCRibbonCategory::OnLButtonUp  
+ Called by the framework when the user releases the left mouse button and the pointer is over the ribbon category.  
   
 ```  
 virtual void OnLButtonUp(CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 指標，相對於視窗左上角的 x 和 y 座標。  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onmousemove"></a>CMFCRibbonCategory::OnMouseMove  
- 若要更新的功能區類別顯示移動功能區列上的指標時，由架構呼叫。  
+##  <a name="onmousemove"></a>  CMFCRibbonCategory::OnMouseMove  
+ Called by the framework when the pointer moves on the ribbon bar in order to update the ribbon category display.  
   
 ```  
 virtual void OnMouseMove(CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 指標，相對於視窗左上角的 x 和 y 座標。  
+ The x and y coordinates of the pointer, relative to the upper-left corner of the window.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonCategory::OnRTLChanged  
- 版面配置變更方向時，由架構呼叫。  
+##  <a name="onrtlchanged"></a>  CMFCRibbonCategory::OnRTLChanged  
+ Called by the framework when the layout changes direction.  
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bIsRTL`  
- `TRUE`如果版面配置是從右至左。`FALSE`如果版面配置是由左到右。  
+ `TRUE` if the layout is right-to-left; `FALSE` if the layout is left-to-right.  
   
-### <a name="remarks"></a>備註  
- 這個方法會調整所有功能區面板和功能區類別中所包含的功能區項目的版面的配置。  
+### <a name="remarks"></a>Remarks  
+ This method adjusts the layout of all ribbon panels and ribbon elements that are contained in the ribbon category.  
   
-##  <a name="onscrollhorz"></a>CMFCRibbonCategory::OnScrollHorz  
- 將功能區分類，以水平方向的捲動。  
+##  <a name="onscrollhorz"></a>  CMFCRibbonCategory::OnScrollHorz  
+ Scrolls the ribbon category in the horizontal direction.  
   
 ```  
 virtual BOOL OnScrollHorz(
@@ -1068,20 +1129,20 @@ virtual BOOL OnScrollHorz(
     int nScrollOffset = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bScrollLeft`  
- `TRUE`捲動至左。`FALSE`捲到右邊。  
+ `TRUE` to scroll to the left; `FALSE` to scroll to the right.  
   
  [in] `nScrollOffset`  
- 捲軸的距離，單位為像素。  
+ The scroll distance in pixels.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果功能區類別移以水平方向。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon category moved in a horizontal direction; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onupdatecmdui"></a>CMFCRibbonCategory::OnUpdateCmdUI  
- 呼叫`OnUpdateCmdUI`成員函式中每個`CMFCRibbonPanel`的項目`CMFCRibbonCategory`啟用或停用使用者介面項目中的。  
+##  <a name="onupdatecmdui"></a>  CMFCRibbonCategory::OnUpdateCmdUI  
+ Calls the `OnUpdateCmdUI` member function in each of the `CMFCRibbonPanel` elements of the `CMFCRibbonCategory` to enable or disable the user-interface elements in them.  
   
 ```  
 virtual void OnUpdateCmdUI(
@@ -1090,33 +1151,33 @@ virtual void OnUpdateCmdUI(
     BOOL bDisableIfNoHndler);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pCmdUI`  
- 指標`CMFCRibbonCmdUI`物件，指定要啟用的使用者介面項目、 哪些是要停用。  
+ Pointer to the `CMFCRibbonCmdUI` object that specifies which user-interface elements are to be enabled and which are to be disabled.  
   
  [in] `pTarget`  
- 啟用或停用的使用者介面項目會控制視窗的指標。  
+ Pointer to the window that controls the enabling or disabling of the user-interface elements.  
   
  [in] `bDisableIfNoHndler`  
- `TRUE`若要停用的使用者介面項目，如果沒有處理常式中定義的訊息對應。否則， `FALSE`。  
+ `TRUE` to disable the user-interface item if no handler is defined in a message map; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="recalclayout"></a>CMFCRibbonCategory::RecalcLayout  
- 調整功能區類別上的所有控制項的版面配置。  
+##  <a name="recalclayout"></a>  CMFCRibbonCategory::RecalcLayout  
+ Adjusts the layout of all controls on the ribbon category.  
   
 ```  
 virtual void RecalcLayout(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 功能區類別的裝置內容的指標。  
+ Pointer to a device context for the ribbon category.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removepanel"></a>CMFCRibbonCategory::RemovePanel  
- 在功能區面板移除功能區分類。  
+##  <a name="removepanel"></a>  CMFCRibbonCategory::RemovePanel  
+ Removes a ribbon panel from the ribbon category.  
   
 ```cpp  
 BOOL RemovePanel(
@@ -1124,104 +1185,104 @@ BOOL RemovePanel(
     BOOL bDelete = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 若要移除面板的索引編號。 藉由呼叫取得[CMFCRibbonCategory::GetPanelIndex](#getpanelindex)方法。  
+ The index number of the panel to remove. Obtained by calling the [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) method.  
   
  [in] `bDelete`  
- `TRUE`若要刪除面板物件從記憶體中。`FALSE`移除面板物件而非加以刪除。  
+ `TRUE` to delete the panel object from memory; `FALSE` to remove the panel object without deleting it.  
   
-### <a name="return-value"></a>傳回值  
- 如果該方法成功則為 `TRUE`；否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise, `FALSE`.  
   
-##  <a name="repospanels"></a>CMFCRibbonCategory::ReposPanels  
- 調整功能區類別中所包含的功能區面板上的所有控制項的版面配置。  
+##  <a name="repospanels"></a>  CMFCRibbonCategory::ReposPanels  
+ Adjusts the layout of all controls on the ribbon panels that are contained in the ribbon category.  
   
 ```  
 virtual void ReposPanels(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 功能區類別中所包含的功能區面板的裝置內容的指標。  
+ Pointer to a device context for the ribbon panels that are contained in the ribbon category.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setcollapseorder"></a>CMFCRibbonCategory::SetCollapseOrder  
- 定義功能區類別的功能區面板摺疊的順序。  
+##  <a name="setcollapseorder"></a>  CMFCRibbonCategory::SetCollapseOrder  
+ Defines the order in which the ribbon panels of the ribbon category collapse.  
   
 ```  
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `arCollapseOrder`  
- 指定的摺疊的順序。 陣列包含功能區面板的以零為起始的索引。  
+ Specifies the collapse order. The array contains zero-based indexes of ribbon panels.  
   
-### <a name="remarks"></a>備註  
- 程式庫會定義摺疊的順序。 不過，您可以自訂此行為，藉由提供指定的摺疊順序的索引清單中的類別。  
+### <a name="remarks"></a>Remarks  
+ The library defines the collapse order. However, you can customize this behavior by providing the category with the list of indexes that specifies the collapse order.  
   
- 當類別偵測到它已摺疊在功能區面板時，它會尋找下一個項目，指定清單中。 如果清單是空的或您沒有指定足夠的元素，類別會使用內部演算法。  
+ When the category detects that it has to collapse a ribbon panel, it looks for the next element in the specified list. If the list is empty, or you have not specified enough elements, then the category uses the internal algorithm.  
   
- 例如，類別具有三個功能區面板和可摺疊數次直到所有面板完全摺疊狀態。 您可以設定下列摺疊順序︰ 0、 0、 2、 2。 在此情況下，類別會摺疊面板 0 兩次，表 2 兩倍。 索引為 1 的面板會保持展開。  
+ For example, the category has three ribbon panels and can be collapsed several times until all panels are in the fully collapsed state. You can set the following collapse order: 0, 0, 2, 2. In this case, the category will collapse the panel 0 two times, the panel 2 two times. The panel that has the index of 1 remains uncollapsed.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`SetCollapseOrder`方法中的`CMFCRibbonCategory`類別。 此範例示範如何建構的陣列，摺疊的順序，以及如何將摺疊順序設定為功能區類別。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `SetCollapseOrder` method in the `CMFCRibbonCategory` class. The example shows how to construct an array for the collapse order, and how to set the collapse order to the ribbon category.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&13;](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#13](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]  
   
-##  <a name="setdata"></a>CMFCRibbonCategory::SetData  
- 設定與功能區類別相關聯的使用者定義資料。  
+##  <a name="setdata"></a>  CMFCRibbonCategory::SetData  
+ Sets the user-defined data to be associated with the ribbon category.  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- 使用者定義的資料。  
+ The user-defined data.  
   
-##  <a name="setkeys"></a>CMFCRibbonCategory::SetKeys  
- 將 keytip 指派給功能區分類。  
+##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
+ Assigns a keytip to the ribbon category.  
   
 ```  
 void SetKeys(LPCTSTR lpszKeys);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszKeys`  
- Keytip 的文字。  
+ The keytip text.  
   
-### <a name="remarks"></a>備註  
- 當使用者按下 Alt 或 F10 鍵，會顯示按鍵提示。  
+### <a name="remarks"></a>Remarks  
+ Keytips are displayed when the user presses the Alt key or the F10 key.  
   
-##  <a name="setname"></a>CMFCRibbonCategory::SetName  
- 將名稱和 keytip 指派給功能區分類。  
+##  <a name="setname"></a>  CMFCRibbonCategory::SetName  
+ Assigns a name and keytip to the ribbon category.  
   
 ```  
 void SetName(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 名稱和 keytip 的功能區分類。  
+ The name and keytip of the ribbon category.  
   
-### <a name="remarks"></a>備註  
- 若要設定的功能區分類 keytip，附加新行逸出序列，後面接著 keytip 字元`lpszName`。  
+### <a name="remarks"></a>Remarks  
+ To set the keytip for the ribbon category, append a newline escape sequence followed by the keytip characters to `lpszName`.  
   
-##  <a name="settabcolor"></a>CMFCRibbonCategory::SetTabColor  
- 設定的功能區分類的色彩。  
+##  <a name="settabcolor"></a>  CMFCRibbonCategory::SetTabColor  
+ Sets the color of the ribbon category.  
   
 ```  
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `color`  
- 指定功能區類別的新的色彩。  
+ Specifies the new color of the ribbon category.  
   
-### <a name="remarks"></a>備註  
- 色彩可以是下列值之一︰  
+### <a name="remarks"></a>Remarks  
+ Color can be one of the following values:  
   
 -   AFX_CategoryColor_None  
   
@@ -1239,8 +1300,8 @@ void SetTabColor(AFX_RibbonCategoryColor color);
   
 -   AFX_CategoryColor_Violet  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CObject 類別](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

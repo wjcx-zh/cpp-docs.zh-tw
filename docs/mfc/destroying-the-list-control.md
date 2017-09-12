@@ -1,34 +1,53 @@
 ---
-title: "終結清單控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 類別, 終結控制項"
-  - "清單控制項, 終結"
+title: Destroying the List Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- list controls [MFC], destroying
+- CListCtrl class [MFC], destroying controls
 ms.assetid: 513ec820-3a02-49d2-b073-a6a7a3fc91b3
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 終結清單控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5d0062a0ca0ebbc1d5fa79ae08d8d063089649a0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-如果您將您的 [CListCtrl](../mfc/reference/clistctrl-class.md) 物件，在終結檢視或對話方塊類別，它的資料成員，在終結它的擁有人。  如果您使用 [CListView](../mfc/reference/clistview-class.md)，架構會終結控制項，以在終結檢視時。  
+---
+# <a name="destroying-the-list-control"></a>Destroying the List Control
+If you embed your [CListCtrl](../mfc/reference/clistctrl-class.md) object as a data member of a view or dialog class, it is destroyed when its owner is destroyed. If you use a [CListView](../mfc/reference/clistview-class.md), the framework destroys the control when it destroys the view.  
   
- 如果您在應用程式中儲存某些清單資料而不是清單控制項，您必須將其解除配置。  在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]\(如需詳細資訊，請參閱 [回呼項目和回呼遮罩](http://msdn.microsoft.com/library/windows/desktop/bb774736) 。  
+ If you arrange for some of your list data to be stored in the application rather than the list control, you will need to arrange for its deallocation. For more information, see [Callback Items and the Callback Mask](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK.  
   
- 此外，您必須負責解除配置您建立並與清單控制項的影像清單。  
+ In addition, you are responsible for deallocating any image lists you created and associated with the list control object.  
   
-## 請參閱  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

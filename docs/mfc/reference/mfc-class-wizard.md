@@ -1,104 +1,122 @@
 ---
-title: "MFC 類別精靈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.wizards.classwizard"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 類別精靈"
-  - "精靈 (MFC)"
+title: MFC Class Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.wizards.classwizard
+dev_langs:
+- C++
+helpviewer_keywords:
+- wizards (MFC)
+- MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# MFC 類別精靈
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d163ea30b71096e457595804bad01a6004e609f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-可讓您將訊息和訊息處理常式加入至專案中的類別。  您也可以啟動其他精靈或將類別加入至您的專案。  
+---
+# <a name="mfc-class-wizard"></a>MFC Class Wizard
+Lets you add messages and message handlers to classes in your project. You can also start other wizards or add a class to your project.  
   
- 若要開啟 \[**MFC 類別精靈**\]，請按一下 \[**專案**\] 功能表上的 \[**類別精靈**\]。  若要以鍵盤快速鍵開啟精靈，請按下 CTRL\+SHIFT\+X。  
+ To open the **MFC Class Wizard**, on the **Project** menu, click **Class Wizard**. To open the wizard with a keyboard shortcut, type CTRL+SHIFT+X.  
   
-## UIElement 清單  
- **專案**  
- 在您方案中之專案的名稱。  
+## <a name="uielement-list"></a>UIElement List  
+ **Project**  
+ The name of a project in your solution.  
   
- 您可以從下拉式清單方塊選取方案中的其他專案。  
+ You can select other projects in your solution from the drop-down list box.  
   
- **類別名稱**  
- 專案中類別的名稱。  
+ **Class name**  
+ The name of a class in your project.  
   
- 當您在 \[**類別名稱**\] 清單中選取類別時，類就會在 \[**MFC 類別精靈**\] 的控制項中填入該類別的資料。  當您變更控制項的值時，選取類別中的資料會受到影響。  
+ When you select a class in the **Class name** list, data from the class populates the controls in the **MFC Class Wizard**. When you change the value of a control, data in the selected class is affected.  
   
- **加入類別**  
- 可讓您從數個來源之一加入類別。  
+ **Add Class**  
+ Lets you add a class from one of several sources.  
   
- 根據您的選取範圍，啟動 \[**MFC 加入類別精靈**\]、\[**從 Typelib 加入類別精靈**\]、\[**從 ActiveX 控制項加入類別精靈**\] 或 \[**MFC ODBC 消費者精靈**\]。  
+ Depending on your selection, the **MFC Add Class Wizard**, **Add Class From Typelib Wizard**, **Add Class From ActiveX Control Wizard**, or **MFC ODBC Consumer Wizard** is started.  
   
- **基底類別**  
- 顯示在 \[**類別名稱**\] 之類別的基底類別。  
+ **Base class**  
+ The base class of the class that is displayed in **Class name**.  
   
- **類別宣告**  
- 在其中宣告 \[**類別名稱**\] 類別的類別。  
+ **Class declaration**  
+ The class in which the **Class name** class is declared.  
   
- 只有 \[**類別宣告**\] 方塊中的名稱不同於 \[**類別實作**\] 方塊中的名稱時，才會顯示該方塊。  
+ The **Class declaration** box is displayed only if the name in it differs from the name in **Class implementation**.  
   
- **資源**  
- \[**類別名稱**\] 中的資源的識別碼 \(如果有的話\)。  否則，\[**資源**\] 方塊是空的。  
+ **Resource**  
+ The ID of the resource in **Class name**, if any. Otherwise, the **Resource** box is empty.  
   
- **類別實作**  
- 檔案的名稱，該檔案包含 \[**類別名稱**\] 中之類別的實作。  
+ **Class implementation**  
+ The name of the file that contains the implementation of the class in **Class name**.  
   
- 您可以按一下箭號來選取不同的實作檔。  下表列出可用的選項。  
+ You can select a different implementation file by clicking the arrow. The following table lists the available options.  
   
-|選項|說明|  
-|--------|--------|  
-|**Open File**|結束類別精靈，並且開啟目前的類別實作檔案。|  
-|**開啟包含資料夾**|開啟包含目前類別實作檔的資料夾。|  
-|**將完整路徑複製到剪貼簿**|將將目前實作檔的路徑複製到剪貼簿。|  
+|Option|Description|  
+|------------|-----------------|  
+|**Open File**|Exits the class wizard and opens the current class implementation file.|  
+|**Open Containing Folder**|Opens the folder that contains the current class implementation file.|  
+|**Copy Full Path to Clipboard**|Copies the path of the current implementation file to the Clipboard.|  
   
- **命令**  
- 可讓您加入、刪除、編輯或搜尋命令和其訊息處理常式。  
+ **Commands**  
+ Lets you add, delete, edit, or search for a command and its message handler.  
   
- 若要加入處理常式，請按一下 \[**加入處理常式**\]，或按兩下 \[**物件 ID**\] 清單 或 \[**訊息**\] 清單中的項目。  所產生的函式名稱、ID 和訊息會顯示在 \[**成員函式** \] 清單中。  
+ To add a handler, click **Add Handler**, or double-click an item in the **Object IDs** list or **Messages** list. The resulting function name, ID, and message are displayed in the **Member functions** list.  
   
- 若要刪除處理常式，請選取 \[**成員函式**\] 清單中的項目，然後按一下 \[**刪除處理常式**\]。  
+ To delete a handler, select an item in the **Member functions** list and then click **Delete Handler**.  
   
- 若要修改處理常式，請在 \[**成員函式**\] 清單中連按兩下對應的項目。  或者，選取清單方塊中的一個項目，然後按一下 \[**編輯程式碼**\]。  
+ To modify a handler, double-click the corresponding item in the **Member functions** list. Or, select an item in the list box and then click **Edit Code**.  
   
- **訊息**  
- 可讓您加入、刪除、編輯或搜尋訊息和其訊息處理常式。  
+ **Messages**  
+ Lets you add, delete, edit, or search for a message and its message handler.  
   
- 若要加入處理常式，請按一下 \[**加入處理常式**\]，或按兩下 \[**訊息**\] 清單中的項目。  
+ To add a handler, click **Add Handler**, or double-click an item in the **Messages** list.  
   
- 若要加入自訂的訊息，請按一下 \[**加入自訂訊息**\] 或按 Enter 鍵，然後在 \[**加入自訂訊息**\] 對話方塊中指定值。  在該對話方塊中，您也可以選取 \[**註冊訊息**\] 來處理新的視窗訊息，確保這個訊息在整個作業系統中都是唯一的。  
+ To add a custom message, click **Add Custom Message** or press the Enter key, and then specify values in the **Add Custom Message** dialog box. In that dialog box, you can also select **Registered Message** to handle a window message that is guaranteed to be unique throughout the operating system.  
   
- **虛擬函式**  
- 可讓您加入、刪除、編輯或搜尋虛擬函式或覆寫的虛擬函式。  
+ **Virtual Functions**  
+ Lets you add, delete, edit, or search for a virtual function, or an overridden virtual function.  
   
- **成員變數**  
- 可讓您加入、刪除、編輯或搜尋成員變數。  
+ **Member Variables**  
+ Lets you add, delete, edit, or search for a member variable.  
   
- **方法**  
- 可讓您加入、刪除或搜尋方法，同時移至方法的定義或宣告。  
+ **Methods**  
+ Lets you add, delete, or search for a method, and also go to the definition or declaration of a method.  
   
- 若要加入方法，請按一下 \[**加入方法**\]，然後在 \[**加入方法**\] 對話方塊中指定值。  
+ To add a method, click **Add Method**, and then specify values in the **Add Method** dialog box.  
   
- 若要刪除方法，請選取 \[**方法**\] 清單中的項目，然後按一下 \[**刪除方法**\]。  
+ To delete a method, select an item in the **Methods** list and then click **Delete Method**.  
   
- 若要顯示宣告，請選取 \[**方法**\] 清單中的項目，再按 \[**移至宣告**\]。  
+ To display a declaration, select an item in the **Methods** list and then click **Go to Declaration.**  
   
- 若要顯示定義，請按兩下 \[**方法**\] 清單中的項目。  或者，選取 \[**方法**\] 清單中的一個項目，然後按一下 \[**移至定義**\] 按鈕。  
+ To display a definition, double-click an item in the **Methods** list. Or, select an item in the **Methods** list and then click the **Go to Definition** button.  
   
-## 請參閱  
- [加入類別](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
+

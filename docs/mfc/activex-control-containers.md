@@ -1,61 +1,80 @@
 ---
-title: "ActiveX 控制項容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項容器 [C++]"
-  - "OLE 控制項 [C++], 容器"
+title: ActiveX Control Containers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC]
+- OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX 控制項容器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 928c59eaa4c3440f5c1ec3679a6c39631155b7e7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-ActiveX 控制項容器是完全支援 ActiveX 控制項，而且可以合併至其視窗或對話方塊中的容器。  ActiveX 控制項是您在許多開發專案可以使用的可重複使用的軟體項目。  控制項可讓您的應用程式的使用者存取資料庫，監視資料，並在您的應用程式中的各種選項。  如需 ActiveX 控制項的詳細資訊，請參閱[MFC 控制項](../mfc/mfc-activex-controls.md)文件。  
+---
+# <a name="activex-control-containers"></a>ActiveX Control Containers
+An ActiveX control container is a container that fully supports ActiveX controls and can incorporate them into its own windows or dialogs. An ActiveX control is a reusable software element that you can use in many development projects. Controls allow your application's user to access databases, monitor data, and make various selections within your applications. For more information on ActiveX controls, see the article [MFC ActiveX Controls](../mfc/mfc-activex-controls.md).  
   
- 容器控制項通常會在專案的兩個表單：  
+ Control containers typically take two forms in a project:  
   
--   對話方塊和像對話方塊的視窗 ，例如表單檢視， ActiveX 控制項在對話方塊中使用某個位置。  
+-   Dialogs and dialog-like windows such as form views, where an ActiveX control is used somewhere in the dialog box.  
   
--   視窗在應用程式中， ActiveX 控制項用於工具列，或其他位置使用者視窗的。  
+-   Windows in an application, where an ActiveX control is used in a toolbar, or other location in the user window.  
   
- ActiveX 控制項容器與控制項互動透過公開的 [方法](../mfc/mfc-activex-controls-methods.md) 和 [屬性](../mfc/mfc-activex-controls-properties.md)。  這些方法和屬性，可以控制容器存取和修改，您可以在 ActiveX 控制項容器專案的包裝函式類別存取。  內嵌 ActiveX 控制項可能與容器互動所引發的 \(傳送\) [事件](../mfc/mfc-activex-controls-events.md) 告知容器發生的次數。  控制項容器可以選取動作在這些通知。  
+ The ActiveX control container interacts with the control via exposed [methods](../mfc/mfc-activex-controls-methods.md) and [properties](../mfc/mfc-activex-controls-properties.md). These methods and properties, which can be accessed and modified by the control container, are accessed through a wrapper class in the ActiveX control container project. The embedded ActiveX control can also interact with the container by firing (sending) [events](../mfc/mfc-activex-controls-events.md) to notify the container that an action has occurred. The control container can choose to act upon these notifications or not.  
   
- 其他文件討論幾個主題，從建立 ActiveX 控制項容器專案對基底實作問題與建置的 ActiveX 控制項容器相關與 Visual C\+\+:  
+ Additional articles discuss several topics, from creating an ActiveX control container project to basic implementation issues related to ActiveX control containers built with Visual C++:  
   
--   [建立 MFC ActiveX 控制項容器](../mfc/reference/creating-an-mfc-activex-control-container.md)  
+-   [Creating an MFC ActiveX Control Container](../mfc/reference/creating-an-mfc-activex-control-container.md)  
   
--   [ActiveX 控制項的容器](../mfc/containers-for-activex-controls.md)  
+-   [Containers for ActiveX Controls](../mfc/containers-for-activex-controls.md)  
   
--   [ActiveX 控制項容器：手動啟用 ActiveX 控制項內含項目](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)  
+-   [ActiveX Control Containers: Manually Enabling ActiveX Control Containment](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)  
   
--   [ActiveX 控制項容器：將控制項插入控制項容器應用程式中](../mfc/inserting-a-control-into-a-control-container-application.md)  
+-   [ActiveX Control Containers: Inserting a Control into a Control Container Application](../mfc/inserting-a-control-into-a-control-container-application.md)  
   
--   [ActiveX 控制項容器：將 ActiveX 控制項連接至成員變數](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
+-   [ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)  
   
--   [ActiveX 控制項容器：從 ActiveX 控制項中處理事件](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
+-   [ActiveX Control Containers: Handling Events from an ActiveX control](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)  
   
--   [ActiveX 控制項容器：檢視和修改控制項屬性](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
+-   [ActiveX Control Containers: Viewing and Modifying Control Properties](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)  
   
--   [ActiveX 控制項容器：在 ActiveX 控制項容器中程式設計 ActiveX 控制項](../mfc/programming-activex-controls-in-a-activex-control-container.md)  
+-   [ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container](../mfc/programming-activex-controls-in-a-activex-control-container.md)  
   
--   [ActiveX 控制項容器：在非對話方塊容器中使用控制項](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
+-   [ActiveX Control Containers: Using Controls in a Non-Dialog Container](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)  
   
- 如需使用 ActiveX 控制項的詳細資訊的對話方塊，請參閱 [對話方塊編輯器](../mfc/dialog-editor.md) 主題。  
+ For more information about using ActiveX controls in a dialog box, see the [Dialog Editor](../windows/dialog-editor.md) topics.  
   
- 使用 Visual C\+\+ 和 MFC ActiveX 控制項類別，如需說明開發 ActiveX 控制項詳細資料文件的清單，請參閱 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)。  文件的功能類別群組。  
+ For a list of articles that explain the details of developing ActiveX controls using Visual C++ and the MFC ActiveX control classes, see [MFC ActiveX controls](../mfc/mfc-activex-controls.md). The articles are grouped by functional categories.  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

@@ -1,48 +1,66 @@
 ---
-title: "// 可覆寫函式註解 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "註解, MFC"
-  - "MFC 原始程式檔, 可覆寫函式註解"
-  - "MFC 原始程式檔中的可覆寫函式註解"
-  - "覆寫, MFC 原始程式檔中的可覆寫函式註解"
+title: -- Overridables Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Overridables comment in MFC source files
+- MFC source files, Overridables comment
+- overriding, Overridables comment in MFC source files
+- comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // 可覆寫函式註解
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1c0031565dcc66b1db0c1f6ce35a4f7fc490da9f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 類別宣告的 `// Overridables` 區段包含您可以覆寫衍生類別中的虛擬函式時，您必須修改基底類別行為時。  它們的名稱通常是開頭為" on "，不過，不是絕對必要的。  此函式會覆寫並經常實作或提供某種「回呼」或「請將」。一般來說，這些成員會受到保護。  
+---
+# <a name="-overridables-comment"></a>// Overridables Comment
+The `// Overridables` section of an MFC class declaration contains virtual functions that you can override in a derived class when you need to modify the base class behavior. They are usually named starting with "On", although it is not strictly necessary. Functions here are designed to be overridden, and often implement or provide some sort of "callback" or "hook." Typically, these members are protected.  
   
- 在 MFC 中，純虛擬函式本節永遠放置。  C\+\+ 中的純虛擬函式是一個表單:  
+ In MFC itself, pure virtual functions are always placed in this section. A pure virtual function in C++ is one of the form:  
   
  `virtual void OnDraw( ) = 0;`  
   
- 在從類別 `CStdioFile`的範例目錄，在 [註解的範例](../mfc/an-example-of-the-comments.md)中，清單不包含 overridables 部分。  將 **CDocument**，另一方面，清單大約 10 可覆寫成員函式。  
+ In the sample listing from class `CStdioFile`, in [An Example of the Comments](../mfc/an-example-of-the-comments.md), the list includes no overridables section. Class **CDocument**, on the other hand, lists approximately 10 overridable member functions.  
   
- 在部分類別中，您可能會看到註解 `// Advanced Overridables`。  這些是只進階程式設計人員應該嘗試覆寫的函式。  您可能永遠不需要覆寫它們。  
+ In some classes, you may also see the comment `// Advanced Overridables`. These are functions that only advanced programmers should attempt to override. You will probably never need to override them.  
   
 > [!NOTE]
->  本文所述的慣例為自動化 \(先前稱為 OLE Automation\) 方法和屬性很好，一般而言，也工作。  Automation 方法類似於 MFC 作業。  Automation 屬性類似於 MFC 屬性。  Automation 事件 \(支援 ActiveX 控制項，先前稱為 OLE automation 控制項\) 類似於 MFC 可覆寫成員函式。  
+>  The conventions described in this article also work well, in general, for Automation (formerly known as OLE Automation) methods and properties. Automation methods are similar to MFC operations. Automation properties are similar to MFC attributes. Automation events (supported for ActiveX controls, formerly known as OLE controls) are similar to MFC overridable member functions.  
   
-## 請參閱  
- [使用 MFC 原始程式檔](../mfc/using-the-mfc-source-files.md)   
- [註解的範例](../mfc/an-example-of-the-comments.md)   
- [\/\/ 實作註解](../mfc/decrement-implementation-comment.md)   
- [\/\/ 建構函式註解](../mfc/decrement-constructors-comment.md)   
- [\/\/ 屬性註解](../mfc/decrement-attributes-comment.md)   
- [\/\/ 作業註解](../mfc/decrement-operations-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)
+
+

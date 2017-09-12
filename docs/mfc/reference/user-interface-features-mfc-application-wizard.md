@@ -1,5 +1,5 @@
 ---
-title: "MFC 應用程式精靈、 使用者介面功能 |Microsoft 文件"
+title: User Interface Features, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,57 +33,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 390d06ddb09786ac4e9960c1933e0b1a76531f5e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0612ca4dc78cbca0cffdd9f0ecb580864848ec5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="user-interface-features-mfc-application-wizard"></a>MFC 應用程式精靈、使用者介面功能
-本主題說明您可用來指定您的應用程式的外觀的選項。 可供您專案的使用者介面功能取決於您在中指定的應用程式類型[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)MFC 應用程式精靈頁面。 例如，如果您建立單一文件介面應用程式，您無法加入子框架樣式。  
+# <a name="user-interface-features-mfc-application-wizard"></a>User Interface Features, MFC Application Wizard
+This topic explains the options that you can use to specify the look of your application. The user interface features available for your project depend on the type of application you specified in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard. For example, if you create a single document interface application, you cannot add child frame styles.  
   
- **主框架樣式**  
- 設定您的應用程式主視窗框架的功能。  
+ **Main frame styles**  
+ Sets the features of your application's main window frame.  
   
-|選項|描述|  
+|Option|Description|  
 |------------|-----------------|  
-|**粗框架**|建立有調整大小框線的視窗。 預設值。|  
-|**最小化方塊**|包含在主框架視窗中的最小化方塊。 預設值。|  
-|**最大化方塊**|包含在主框架視窗的最大化的方塊。 預設值。|  
-|**最小化**|開啟主框架視窗為圖示。|  
-|**最大化**|開啟主框架視窗的顯示完整大小。|  
-|**系統功能表**|在主框架視窗包含系統功能表。 預設值。|  
-|**關於方塊**|包含**有關**應用程式 方塊。 使用者可以從應用程式的存取這個方塊**協助**功能表。 預設值，且無法變更，除非您選取**對話方塊架構**，請在[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)頁面。<br /><br /> **請注意**通常無法使用的選項表示精靈不會套用選項加入專案中，是否無法使用項目的核取方塊選取或清除。 在此情況下，精靈一律會新增**有關**方塊加入專案中，除非您先指定專案為基礎的對話方塊，然後取消核取方塊。|  
-|**初始狀態列**|將您的應用程式的狀態列。 狀態列上包含自動標記鍵盤的 CAPS LOCK、 NUM LOCK 和 SCROLL LOCK 鍵，並顯示 [說明] 訊息列字串的功能表命令和工具列按鈕。 按一下此選項時，也會將功能表命令來顯示或隱藏狀態列。 根據預設，應用程式有狀態列。 無法使用對話架構的應用程式類型。|  
-|**分隔視窗**|提供分割線。 分隔列分隔應用程式的主要檢視中。 在多重文件介面 (MDI) 應用程式，MDI 子框架的用戶端視窗為分隔視窗中，而單一文件介面 (SDI) 應用程式和多個最上層文件應用程式中，主要畫面格的用戶端視窗為分隔視窗。 無法使用對話架構的應用程式類型。|  
+|**Thick frame**|Creates a window that has a sizing border. The default.|  
+|**Minimize box**|Includes a minimize box in the main frame window. The default.|  
+|**Maximize box**|Includes a maximize box in the main frame window. The default.|  
+|**Minimized**|Opens the main frame window as an icon.|  
+|**Maximized**|Opens the main frame window to the full size of the display.|  
+|**System menu**|Includes a system menu in the main frame window. The default.|  
+|**About box**|Includes an **About** box for the application. The user can access this box from the application's **Help** menu. The default, and unchangeable unless you select **Dialog based**, in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page.<br /><br /> **Note** Usually, an unavailable option indicates that the wizard does not apply the option to the project, whether the unavailable item's check box is selected or cleared. In this case, the wizard always adds an **About** box to the project unless you first specify the project as dialog based and then uncheck the box.|  
+|**Initial status bar**|Adds a status bar to your application. The status bar contains automatic indicators for the keyboard's CAPS LOCK, NUM LOCK, and SCROLL LOCK keys and a message line that displays help strings for menu commands and toolbar buttons. Clicking this option also adds menu commands to display or hide the status bar. By default, an application has a status bar. Not available for dialog-based application types.|  
+|**Split window**|Provides a splitter bar. The splitter bar splits the application's main views. In a multiple document interface (MDI) application, the MDI child frame's client window is a splitter window, and in a single document interface (SDI) application and multiple top level document application, the main frame's client window is a splitter window. Not available for dialog-based application types.|  
   
- **子框架樣式**  
- 指定應用程式中的外觀及子框架的初始狀態。 對於 MDI 應用程式只使用子框架樣式。  
+ **Child frame styles**  
+ Specifies the appearance and initial state of the child frames in your application. Child frame styles are available for MDI applications only.  
   
-|選項|描述|  
+|Option|Description|  
 |------------|-----------------|  
-|**子系最小化方塊**|指定的子視窗是否有最小化按鈕 （預設為啟用）。|  
-|**子系最大化方塊**|指定的子視窗是否有最大化按鈕 （預設為啟用）。|  
-|**最大化的子系**|指定的子視窗是否一開始最大化藉由設定 cs.style 旗標**WS_MAXIMIZE**中[PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow)成員函式`CChildFrame`。|  
+|**Child minimize box**|Specifies whether a child window has a minimize button (enabled by default).|  
+|**Child maximize box**|Specifies whether a child window has a maximize button (enabled by default).|  
+|**Child maximized**|Specifies whether a child window is initially maximized by setting the cs.style flag **WS_MAXIMIZE** in the [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) member function of `CChildFrame`.|  
   
- **命令列 （功能表/工具列/功能區）**  
- 指出您的應用程式包含功能表、 工具列和/或功能區。 不可以使用對話方塊架構應用程式。  
+ **Command bars (menu/toolbar/ribbon)**  
+ Indicates whether your application includes menus, toolbars, and/or a ribbon. Not available for dialog-based applications.  
   
-|選項|描述|  
+|Option|Description|  
 |------------|-----------------|  
-|**使用傳統功能表**|指定您的應用程式包含傳統的非可拖曳的功能表。|  
-|**使用傳統停駐工具列**|將標準的 Windows 工具列加入至您的應用程式。 工具列包含按鈕建立新的文件。開啟和儲存文件檔案;剪下複製、 貼上或列印的文字;並輸入說明模式。 啟用此選項時，也會將功能表命令，以顯示或隱藏工具列。|  
-|**使用瀏覽器樣式工具列**|將 Internet Explorer 樣式工具列加入至您的應用程式。|  
-|**使用功能表和工具列**|表示您的應用程式包含可拖曳的功能表列和工具列。|  
-|**使用者定義工具列和影像**|可讓使用者自訂工具列和工具列影像在執行階段。|  
-|**個人化的功能表行為**|指定功能表是否包含項目開啟時，完整清單，或它是否包含使用者最常使用的命令。|  
-|**使用功能區**|在您的應用程式，而不要使用功能表或工具列中，會使用類似 Office 2007 的功能區。|  
+|**Use a classic menu**|Specifies that your application contains a classic, non-draggable menu.|  
+|**Use a classic docking toolbar**|Adds a standard Windows toolbar to your application. The toolbar contains buttons for creating a new document; opening and saving document files; cutting copying, pasting, or printing text; and entering Help mode. Enabling this option also adds menu commands to display or hide the toolbar.|  
+|**Use a browser style toolbar**|Adds an Internet Explorer-style toolbar to your application.|  
+|**Use a menu bar and toolbar**|Indicates that your application contains a draggable menu bar and a toolbar.|  
+|**User-defined toolbars and images**|Allows the user to customize the toolbar and the toolbar images at runtime.|  
+|**Personalized menu behavior**|Specifies whether the menu contains the full list of items when opened, or if it contains only the commands that the user most frequently uses.|  
+|**Use a ribbon**|Uses an Office 2007-like ribbon in your application instead of a menu bar or toolbar.|  
   
- **對話方塊標題**  
- 如[CDialog 類別](../../mfc/reference/cdialog-class.md)-架構應用程式，這個標題會出現在對話方塊的標題列。 若要編輯這個欄位，您必須先選取**對話方塊架構**選項在**應用程式類型**。 如需詳細資訊，請參閱[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)。  
+ **Dialog title**  
+ For [CDialog Class](../../mfc/reference/cdialog-class.md)-based applications only, this title appears in the title bar of the dialog box. To edit this field, you must first select the **Dialog based** option under **Application type**. For more information, see [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

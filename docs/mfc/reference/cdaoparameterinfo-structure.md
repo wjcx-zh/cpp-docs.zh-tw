@@ -1,5 +1,5 @@
 ---
-title: "CDaoParameterInfo 結構 |Microsoft 文件"
+title: CDaoParameterInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoParameterInfo structure
+- CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
 caps.latest.revision: 13
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: b41d26b736ea9f84c53f71dbd71949f74fb8ae52
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b8dab62695d7b2fa1b08ab5789b4becbd01d0ec1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 結構
-`CDaoParameterInfo`結構包含定義資料存取物件 (DAO) 的參數物件的相關資訊。  
+# <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo Structure
+The `CDaoParameterInfo` structure contains information about a parameter object defined for data access objects (DAO).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoParameterInfo  
@@ -55,32 +55,32 @@ struct CDaoParameterInfo
 };  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 唯一名稱的參數物件。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
+ Uniquely names the parameter object. For more information, see the topic "Name Property" in DAO Help.  
   
  `m_nType`  
- 值，指出參數物件的資料型別。 如需可能的值，請參閱`m_nType`成員[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 型別屬性 」。  
+ A value that indicates the data type of a parameter object. For a list of the possible values, see the `m_nType` member of the [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) structure. For more information, see the topic "Type Property" in DAO Help.  
   
  *m_varValue*  
- 參數的值，儲存在[COleVariant](../../mfc/reference/colevariant-class.md)物件。  
+ The value of the parameter, stored in a [COleVariant](../../mfc/reference/colevariant-class.md) object.  
   
-## <a name="remarks"></a>備註  
- 主要和次要上述參考表示資訊由[GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)類別中的成員函式`CDaoQueryDef`。  
+## <a name="remarks"></a>Remarks  
+ The references to Primary and Secondary above indicate how the information is returned by the [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) member function in class `CDaoQueryDef`.  
   
- MFC 不會封裝 DAO 類別中的參數物件。 DAO recordset 物件基礎 MFC`CDaoQueryDef`物件將參數儲存在其參數的集合。 若要存取中的參數物件[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)物件，請呼叫 recordset 物件的`GetParameterInfo`成員函式，針對特定的參數名稱或參數集合中的索引。 您可以使用[CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount)成員函式，配合`GetParameterInfo`參數集合執行迴圈。  
+ MFC does not encapsulate DAO parameter objects in a class. DAO querydef objects underlying MFC `CDaoQueryDef` objects store parameters in their Parameters collections. To access the parameter objects in a [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) object, call the querydef object's `GetParameterInfo` member function for a particular parameter name or an index into the Parameters collection. You can use the [CDaoQueryDef::GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) member function in conjunction with `GetParameterInfo` to loop through the Parameters collection.  
   
- 所擷取的資訊[CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)成員函式會儲存在`CDaoParameterInfo`結構。 呼叫`GetParameterInfo`recordset 物件的參數集合中儲存的參數物件。  
+ Information retrieved by the [CDaoQueryDef::GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) member function is stored in a `CDaoParameterInfo` structure. Call `GetParameterInfo` for the querydef object in whose Parameters collection the parameter object is stored.  
   
 > [!NOTE]
->  如果您想要取得或設定參數的值，請使用[GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue)和[SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue)類別成員函式`CDaoRecordset`。  
+>  If you want to get or set only the value of a parameter, use the [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) and [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) member functions of class `CDaoRecordset`.  
   
- `CDaoParameterInfo`也會定義`Dump`成員函式中偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoParameterInfo`物件。  
+ `CDaoParameterInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoParameterInfo` object.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoQueryDef 類別](../../mfc/reference/cdaoquerydef-class.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)
 

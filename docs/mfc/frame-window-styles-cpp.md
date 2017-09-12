@@ -1,46 +1,64 @@
 ---
-title: "框架視窗樣式 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架視窗 [C++], 樣式"
-  - "MFC [C++], 框架視窗"
-  - "PreCreateWindow 方法, 設定視窗樣式"
-  - "樣式, 視窗"
-  - "視窗樣式 [C++]"
-  - "視窗 [C++], MFC"
+title: Frame-Window Styles (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- window styles [MFC]
+- PreCreateWindow method, setting window styles
+- windows [MFC], MFC
+- frame windows [MFC], styles
+- MFC, frame windows
+- styles [MFC], windows
 ms.assetid: fc5058c1-eec8-48d8-9f76-3fc01cfa53f7
 caps.latest.revision: 8
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 框架視窗樣式 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 69905342d643c58727dd513451e87285b44f9d8f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-取得與這個框架的框架視窗適用於大部分的程式，您可以使用進階的功能 [PreCreateWindow](../Topic/CWnd::PreCreateWindow.md) 和 MFC 全域函式 [AfxRegisterWndClass](../Topic/AfxRegisterWndClass.md)，不過，您可以取得更多的彈性。  `PreCreateWindow` 是 `CWnd`的成員函式。  
+---
+# <a name="frame-window-styles-c"></a>Frame-Window Styles (C++)
+The frame windows you get with the framework are suitable for most programs, but you can gain additional flexibility by using the advanced functions [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) and the MFC global function [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` is a member function of `CWnd`.  
   
- 如果您套用至 **WS\_HSCROLL** 和 **WS\_VSCROLL** 樣式主框架視窗，就會套用到 **MDICLIENT** 視窗，讓使用者可以捲動 **MDICLIENT** 區域。  
+ If you apply the **WS_HSCROLL** and **WS_VSCROLL** styles to the main frame window, they are instead applied to the **MDICLIENT** window so users can scroll the **MDICLIENT** area.  
   
- 如果預設視窗的 **FWS\_ADDTOTITLE** 樣式位元設定為 \(為\)，檢視呼叫框架視窗哪些標題會顯示在視窗的標題列會根據檢視的文件名稱。  
+ If the window's **FWS_ADDTOTITLE** style bit is set (which it is by default), the view tells the frame window what title to display in the window's title bar based on the view's document name.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [處理的 MDI 子視窗 \(MDICLIENT\)](../mfc/managing-mdi-child-windows.md)，在包含 MDI 子視窗的 MDI 框架內的視窗  
+-   [Managing MDI child windows (MDICLIENT)](../mfc/managing-mdi-child-windows.md), the window within an MDI frame that contains the MDI child windows  
   
--   [變更視窗的樣式由 MFC 建立](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Changing the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
--   [視窗樣式](../mfc/reference/window-styles.md)  
+-   [Window styles](../mfc/reference/styles-used-by-mfc.md#window-styles)  
   
-## 請參閱  
- [框架視窗](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

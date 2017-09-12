@@ -1,49 +1,68 @@
 ---
-title: "標題控制項和清單控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl 類別, 與 CListCtrl"
-  - "CListCtrl 類別, 標題控制項"
-  - "CListCtrl 類別, 與 CHeaderCtrl"
-  - "控制項 [MFC], 標題"
-  - "標題控制項"
-  - "標題控制項, 一起使用的清單控制項"
+title: Header Control and List Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], with CHeaderCtrl
+- CListCtrl class [MFC], header controls
+- CHeaderCtrl class [MFC], with CListCtrl
+- controls [MFC], header
+- header controls [MFC]
+- header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 標題控制項和清單控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 144e5ee7bd7e60ad152ddcaa7d4928706a5cf1d8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在大部分情況下，您將使用內嵌在 [CListCtrl](../mfc/reference/clistctrl-class.md) 或 [CListView](../mfc/reference/clistview-class.md) 物件中的標題控制項。  然而，有些個別的標題控制項物件是適當的情況，例如操作資料，排列資料列或資料行，在 [CView](../mfc/reference/cview-class.md)衍生物件。  在這些情況下，您需要對外觀和預設內嵌標題控制項的行為更大的控制項。  
+---
+# <a name="header-control-and-list-control"></a>Header Control and List Control
+In most cases, you will use the header control that is embedded in a [CListCtrl](../mfc/reference/clistctrl-class.md) or [CListView](../mfc/reference/clistview-class.md) object. However, there are cases where a separate header control object is desirable, such as manipulating data, arranged in columns or rows, in a [CView](../mfc/reference/cview-class.md)-derived object. In these cases, you need greater control over the appearance and default behavior of an embedded header control.  
   
- 要標題控制項提供標準，預設行為的一般情況下，您可以使用 [CListCtrl](../mfc/reference/clistctrl-class.md) 或 [CListView](../mfc/reference/clistview-class.md) 。  使用 `CListCtrl` ，當您想要內嵌在清單檢視通用控制項中預設標題控制項的功能時。  使用 [CListView](../mfc/reference/clistview-class.md) ，在您想要內嵌在檢視物件的預設標題控制項的功能時。  
+ In the common case that you want a header control to provide standard, default behavior, you may want to use [CListCtrl](../mfc/reference/clistctrl-class.md) or [CListView](../mfc/reference/clistview-class.md) instead. Use `CListCtrl` when you want the functionality of a default header control, embedded in a list view common control. Use [CListView](../mfc/reference/clistview-class.md) when you want the functionality of a default header control, embedded in a view object.  
   
 > [!NOTE]
->  如果清單檢視控制項使用 `LVS_REPORT` 樣式建立，這些控制項只包含一個固定標題控制項。  
+>  These controls only include a built-in header control if the list view control is created using the `LVS_REPORT` style.  
   
- 在大部分情況下，內嵌標題控制項的外觀可藉由變更包含的清單檢視控制項修改。  此外，標題控制項的相關資訊可以透過父清單檢視控制項的成員函式取得。  不過，對於對內嵌標題控制項的屬性和樣式的完全控制和存取，建議取得標題控制項物件的指標。  
+ In most cases, the appearance of the embedded header control can be modified by changing the styles of the containing list view control. In addition, information about the header control can be obtained through member functions of the parent list view control. However, for complete control, and access, to the attributes and styles of the embedded header control, it is recommended that a pointer to the header control object be obtained.  
   
- 由呼叫個別類別的 `GetHeaderCtrl` 成員函式，內嵌標題控制項物件可以從 **CListCtrl** 或 `CListView` 存取。  下列程式碼可說明此點：  
+ The embedded header control object can be accessed from either **CListCtrl** or `CListView` with a call to the respective class's `GetHeaderCtrl` member function. The following code demonstrates this:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/CPP/header-control-and-list-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [搭配使用影像清單與標題控制項](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using image lists with header controls](../mfc/using-image-lists-with-header-controls.md)  
   
-## 請參閱  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

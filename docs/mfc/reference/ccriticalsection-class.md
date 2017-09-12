@@ -1,5 +1,5 @@
 ---
-title: "CCriticalSection 類別 |Microsoft 文件"
+title: CCriticalSection Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,10 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- synchronization objects, critical section
-- CCriticalSection class
-- critical sections
-- synchronization classes, CCriticalSection class
+- CCriticalSection [MFC], CCriticalSection
+- CCriticalSection [MFC], Lock
+- CCriticalSection [MFC], Unlock
+- CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
 caps.latest.revision: 21
 author: mikeblome
@@ -41,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 25d4b124d089441503e9cb457e648695fc54660d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fd78fb7d86413185fc56971adf6868f65499be24
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccriticalsection-class"></a>CCriticalSection 類別
-代表 「 關鍵區段 」 — 讓一個執行緒存取資源或程式碼區段的一次的同步處理物件。  
+# <a name="ccriticalsection-class"></a>CCriticalSection Class
+Represents a "critical section" — a synchronization object that allows one thread at a time to access a resource or section of code.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCriticalSection : public CSyncObject  
@@ -59,136 +59,136 @@ class CCriticalSection : public CSyncObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCriticalSection::CCriticalSection](#ccriticalsection)|建構 `CCriticalSection` 物件。|  
+|[CCriticalSection::CCriticalSection](#ccriticalsection)|Constructs a `CCriticalSection` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCriticalSection::Lock](#lock)|用來存取`CCriticalSection`物件。|  
-|[CCriticalSection::Unlock](#unlock)|釋出 `CCriticalSection` 物件。|  
+|[CCriticalSection::Lock](#lock)|Use to gain access to the `CCriticalSection` object.|  
+|[CCriticalSection::Unlock](#unlock)|Releases the `CCriticalSection` object.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCriticalSection::operator CRITICAL_SECTION *](#operator_critical_section_star)|擷取到內部指標**CRITICAL_SECTION**物件。|  
+|[CCriticalSection::operator CRITICAL_SECTION*](#operator_critical_section_star)|Retrieves a pointer to the internal **CRITICAL_SECTION** object.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCriticalSection::m_sect](#m_sect)|A **CRITICAL_SECTION**物件。|  
+|[CCriticalSection::m_sect](#m_sect)|A **CRITICAL_SECTION** object.|  
   
-## <a name="remarks"></a>備註  
- 可允許一次只有一個執行緒修改資料或其他一些受控制的資源時，重要區段會非常有用。 例如，將節點加入至連結的清單是應只允許一個執行緒一次的處理程序。 使用`CCriticalSection`物件，以控制連結的清單中，只有一次一個執行緒可以存取清單。  
+## <a name="remarks"></a>Remarks  
+ Critical sections are useful when only one thread at a time can be allowed to modify data or some other controlled resource. For example, adding nodes to a linked list is a process that should only be allowed by one thread at a time. By using a `CCriticalSection` object to control the linked list, only one thread at a time can gain access to the list.  
   
 > [!NOTE]
->  功能`CCriticalSection`類別提供實際的 Win32 **CRITICAL_SECTION**物件。  
+>  The functionality of the `CCriticalSection` class is provided by an actual Win32 **CRITICAL_SECTION** object.  
   
- 關鍵區段代替 mutex (請參閱[CMutex](../../mfc/reference/cmutex-class.md)) 時速度非常重要，且不會跨處理序界限使用的資源。  
+ Critical sections are used instead of mutexes (see [CMutex](../../mfc/reference/cmutex-class.md)) when speed is critical and the resource will not be used across process boundaries.  
   
- 有兩種方法使用`CCriticalSection`物件︰ 獨立和內嵌在類別中。  
+ There are two methods for using a `CCriticalSection` object: stand-alone and embedded in a class.  
   
--   若要使用獨立的獨立方法`CCriticalSection`物件，建構`CCriticalSection`物件會在需要時。 從建構函式成功傳回之後, 明確地鎖定的物件呼叫[鎖定](#lock)。 呼叫[Unlock](#unlock)完成存取重要區段。 這個方法，同時清楚給其他人讀取程式碼中，是更容易發生錯誤時，您必須記得鎖定和解除鎖定重要區段之前和之後存取。  
+-   Stand-alone method   To use a stand-alone `CCriticalSection` object, construct the `CCriticalSection` object when it is needed. After a successful return from the constructor, explicitly lock the object with a call to [Lock](#lock). Call [Unlock](#unlock) when you are done accessing the critical section. This method, while clearer to someone reading your source code, is more prone to error as you must remember to lock and unlock the critical section before and after access.  
   
-     更佳的方法是使用[CSingleLock](../../mfc/reference/csinglelock-class.md)類別。 它也有`Lock`和`Unlock`方法，但您不需要擔心解除鎖定資源，如果發生例外狀況。  
+     A more preferable method is to use the [CSingleLock](../../mfc/reference/csinglelock-class.md) class. It also has a `Lock` and `Unlock` method, but you don't have to worry about unlocking the resource if an exception occurs.  
   
--   內嵌方法，您也可以共用多個執行緒的類別，藉由新增`CCriticalSection`-類別和鎖定時所需的資料成員的型別資料成員。  
+-   Embedded method   You can also share a class with multiple threads by adding a `CCriticalSection`-type data member to the class and locking the data member when needed.  
   
- 如需有關使用`CCriticalSection`物件，請參閱文章[多執行緒︰ 如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。  
+ For more information on using `CCriticalSection` objects, see the article [Multithreading: How to Use the Synchronization Classes](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CSyncObject](../../mfc/reference/csyncobject-class.md)  
   
  `CCriticalSection`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxmt.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxmt.h  
   
-##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
- 建構 `CCriticalSection` 物件。  
+##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection  
+ Constructs a `CCriticalSection` object.  
   
 ```  
 CCriticalSection();
 ```  
   
-### <a name="remarks"></a>備註  
- 若要存取，或發行`CCriticalSection`物件，請建立[CSingleLock](../../mfc/reference/csinglelock-class.md)物件，然後呼叫其[鎖定](../../mfc/reference/csinglelock-class.md#lock)和[解除鎖定](../../mfc/reference/csinglelock-class.md#unlock)成員函式。 如果`CCriticalSection`獨立使用物件，請呼叫其[Unlock](#unlock)成員函式來釋放它。  
+### <a name="remarks"></a>Remarks  
+ To access or release a `CCriticalSection` object, create a [CSingleLock](../../mfc/reference/csinglelock-class.md) object and call its [Lock](../../mfc/reference/csinglelock-class.md#lock) and [Unlock](../../mfc/reference/csinglelock-class.md#unlock) member functions. If the `CCriticalSection` object is being used stand-alone, call its [Unlock](#unlock) member function to release it.  
   
- 如果建構函式，就無法配置所需的系統記憶體，記憶體例外狀況 (型別[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)) 會自動擲回。  
+ If the constructor fails to allocate the required system memory, a memory exception (of type [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) is automatically thrown.  
   
-### <a name="example"></a>範例  
-  請參閱範例[CCriticalSection::Lock](#lock)。  
+### <a name="example"></a>Example  
+  See the example for [CCriticalSection::Lock](#lock).  
   
-##  <a name="lock"></a>CCriticalSection::Lock  
- 呼叫此成員函式，以取得重要區段物件的存取權。  
+##  <a name="lock"></a>  CCriticalSection::Lock  
+ Call this member function to gain access to the critical section object.  
   
 ```  
 BOOL Lock();  
 BOOL Lock(DWORD dwTimeout);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwTimeout`  
- `Lock`會忽略此參數值。  
+ `Lock` ignores this parameter value.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- `Lock`已封鎖的呼叫，直到收到信號的重要區段物件將不會傳回 （可用）。  
+### <a name="remarks"></a>Remarks  
+ `Lock` is a blocking call that will not return until the critical section object is signaled (becomes available).  
   
- 如果已逾時的等候是必要的您可以使用[CMutex](../../mfc/reference/cmutex-class.md)物件而非`CCriticalSection`物件。  
+ If timed waits are necessary, you can use a [CMutex](../../mfc/reference/cmutex-class.md) object instead of a `CCriticalSection` object.  
   
- 如果`Lock`無法配置必要的系統記憶體，記憶體例外狀況 (型別[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)) 會自動擲回。  
+ If `Lock` fails to allocate the necessary system memory, a memory exception (of type [CMemoryException](../../mfc/reference/cmemoryexception-class.md)) is automatically thrown.  
   
-### <a name="example"></a>範例  
- 這個範例會示範巢狀的重要區段法藉由控制共用資源的存取權 (靜態`_strShared`物件) 使用共用`CCriticalSection`物件。 `SomeMethod`函式示範，如何以安全的方式更新共用的資源。  
+### <a name="example"></a>Example  
+ This example demonstrates the nested critical section approach by controlling access to a shared resource (the static `_strShared` object) using a shared `CCriticalSection` object. The `SomeMethod` function demonstrates updating a shared resource in a safe manner.  
   
- [!code-cpp[NVC_MFC_Utilities #&11;](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
+ [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="m_sect"></a>CCriticalSection::m_sect  
- 包含所有使用的重要區段物件`CCriticalSection`方法。  
+##  <a name="m_sect"></a>  CCriticalSection::m_sect  
+ Contains a critical section object that is used by all `CCriticalSection` methods.  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
- 擷取**CRITICAL_SECTION**物件。  
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION*  
+ Retrieves a **CRITICAL_SECTION** object.  
   
 ```  
 operator CRITICAL_SECTION*();
 ```   
   
-### <a name="remarks"></a>備註  
- 呼叫此函式可擷取內部指標**CRITICAL_SECTION**物件。  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve a pointer to the internal **CRITICAL_SECTION** object.  
   
-##  <a name="unlock"></a>CCriticalSection::Unlock  
- 版本`CCriticalSection`以供另一個執行緒的物件。  
+##  <a name="unlock"></a>  CCriticalSection::Unlock  
+ Releases the `CCriticalSection` object for use by another thread.  
   
 ```  
 BOOL Unlock();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果為非零`CCriticalSection`物件之擁有者執行緒和發行已成功，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CCriticalSection` object was owned by the thread and the release was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果`CCriticalSection`正在使用獨立的`Unlock`必須完成使用重要區段所控制的資源之後，立即呼叫。 如果[CSingleLock](../../mfc/reference/csinglelock-class.md)使用物件時，`CCriticalSection::Unlock`鎖定物件會呼叫`Unlock`成員函式。  
+### <a name="remarks"></a>Remarks  
+ If the `CCriticalSection` is being used stand-alone, `Unlock` must be called immediately after completing use of the resource controlled by the critical section. If a [CSingleLock](../../mfc/reference/csinglelock-class.md) object is being used, `CCriticalSection::Unlock` will be called by the lock object's `Unlock` member function.  
   
-### <a name="example"></a>範例  
-  請參閱範例[CCriticalSection::Lock](#lock)。  
+### <a name="example"></a>Example  
+  See the example for [CCriticalSection::Lock](#lock).  
   
-## <a name="see-also"></a>另請參閱  
- [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CMutex 類別](../../mfc/reference/cmutex-class.md)
+## <a name="see-also"></a>See Also  
+ [CSyncObject Class](../../mfc/reference/csyncobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMutex Class](../../mfc/reference/cmutex-class.md)
 

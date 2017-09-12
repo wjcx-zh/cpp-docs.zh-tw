@@ -1,5 +1,5 @@
 ---
-title: "清單方塊樣式 |Microsoft 文件"
+title: List-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,22 +28,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LBS_NOSEL constant
-- LBS_NOREDRAW constant
-- LBS_HASSTRINGS constant
-- LBS_OWNERDRAWFIXED constant
-- LBS_WANTKEYBOARDINPUT constant
-- LBS_STANDARD constant
-- LBS_MULTIPLESEL constant
-- LBS_OWNERDRAWVARIABLE constant
-- LBS_DISABLENOSCROLL constant
-- LBS_NODATA constant
-- list boxes, styles
-- LBS_EXTENDEDSEL constant
-- LBS_MULTICOLUMN constant
-- LBS_NOTIFY constant
-- LBS_USETABSTOPS constant
-- LBS_NOINTEGRALHEIGHT constant
+- LBS_NOSEL constant [MFC]
+- LBS_NOREDRAW constant [MFC]
+- LBS_HASSTRINGS constant [MFC]
+- LBS_OWNERDRAWFIXED constant [MFC]
+- LBS_WANTKEYBOARDINPUT constant [MFC]
+- LBS_STANDARD constant [MFC]
+- LBS_MULTIPLESEL constant [MFC]
+- LBS_OWNERDRAWVARIABLE constant [MFC]
+- LBS_DISABLENOSCROLL constant [MFC]
+- LBS_NODATA constant [MFC]
+- list boxes [MFC], styles
+- LBS_EXTENDEDSEL constant [MFC]
+- LBS_MULTICOLUMN constant [MFC]
+- LBS_NOTIFY constant [MFC]
+- LBS_USETABSTOPS constant [MFC]
+- LBS_NOINTEGRALHEIGHT constant [MFC]
 - LBS_SORT constant
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
 caps.latest.revision: 12
@@ -64,51 +64,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8e038e5cef50bd15df85c9d7f8b213b54ed03825
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cad7dce447e41b72116dc8317f7a05649cd34e76
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="list-box-styles"></a>清單方塊樣式
--   **LBS_DISABLENOSCROLL**清單方塊會顯示已停用的垂直捲軸當清單方塊中未包含足夠的項目捲動。 若沒有這個樣式，在清單方塊中未包含足夠的項目時，捲軸會隱藏。  
+# <a name="list-box-styles"></a>List-Box Styles
+-   **LBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **LBS_EXTENDEDSEL** ，使用者可以選取多個項目，使用 SHIFT 鍵和滑鼠或特殊按鍵組合。  
+-   **LBS_EXTENDEDSEL** The user can select multiple items using the SHIFT key and the mouse or special key combinations.  
   
--   **LBS_HASSTRINGS**指定主控描繪清單方塊，其中包含組成的字串項目。 清單方塊會維護記憶體和字串的指標，讓應用程式可以使用 `GetText` 成員函式來擷取特定項目的文字。  
+-   **LBS_HASSTRINGS** Specifies an owner-draw list box that contains items consisting of strings. The list box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **LBS_MULTICOLUMN**指定水平捲動的資料行清單方塊。 `SetColumnWidth` 成員函式可設定資料行的寬度。  
+-   **LBS_MULTICOLUMN** Specifies a multicolumn list box that is scrolled horizontally. The `SetColumnWidth` member function sets the width of the columns.  
   
--   **LBS_MULTIPLESEL**會切換字串選取範圍每次使用者按一下或按兩下字串。 您可以選取任何數目的字串。  
+-   **LBS_MULTIPLESEL** String selection is toggled each time the user clicks or double-clicks the string. Any number of strings can be selected.  
   
--   **LBS_NODATA**指定無資料清單方塊。 當清單方塊的項目計數會超過一千時，請指定此樣式。 無資料清單方塊也必須具有**LBS_OWNERDRAWFIXED**樣式，但不是能**LBS_SORT**或**LBS_HASSTRINGS**樣式。  
+-   **LBS_NODATA** Specifies a no-data list box. Specify this style when the count of items in the list box will exceed one thousand. A no-data list box must also have the **LBS_OWNERDRAWFIXED** style, but must not have the **LBS_SORT** or **LBS_HASSTRINGS** style.  
   
-     無資料清單方塊類似於主控描繪清單方塊，但它的項目不包含字串或點陣圖資料。 加入、插入或刪除項目的命令永遠會忽略任何指定的項目資料；在清單方塊尋找字串的要求永遠會失敗。 需要繪製項目時，系統會傳送 `WM_DRAWITEM` 訊息至主控視窗。 `DRAWITEMSTRUCT` 結構的 itemID 成員 (使用 `WM_DRAWITEM` 訊息傳遞) 指定要繪製項目的行號。 無資料清單方塊不會傳送 `WM_DELETEITEM` 資訊。  
+     A no-data list box resembles an owner-drawn list box except that it contains no string or bitmap data for an item. Commands to add, insert, or delete an item always ignore any given item data; requests to find a string within the list box always fail. The system sends the `WM_DRAWITEM` message to the owner window when an item must be drawn. The itemID member of the `DRAWITEMSTRUCT` structure passed with the `WM_DRAWITEM` message specifies the line number of the item to be drawn. A no-data list box does not send a `WM_DELETEITEM` message.  
   
--   **LBS_NOINTEGRALHEIGHT**清單方塊的大小是建立清單方塊時，應用程式所指定的大小。 通常，Windows 會調整清單方塊的大小，使清單方塊不會只顯示一部分的項目。  
+-   **LBS_NOINTEGRALHEIGHT** The size of the list box is exactly the size specified by the application when it created the list box. Usually, Windows sizes a list box so that the list box does not display partial items.  
   
--   **LBS_NOREDRAW**清單方塊顯示不會更新變更時。 這個樣式可以隨時變更，藉由傳送**WM_SETREDRAW**訊息。  
+-   **LBS_NOREDRAW** List-box display is not updated when changes are made. This style can be changed at any time by sending a **WM_SETREDRAW** message.  
   
--   **LBS_NOSEL**指定清單方塊包含可以檢視但無法選取的項目。  
+-   **LBS_NOSEL** Specifies that the list box contains items that can be viewed but not selected.  
   
--   **LBS_NOTIFY**每當使用者按一下或按兩下字串時，父視窗會收到輸入的訊息。  
+-   **LBS_NOTIFY** Parent window receives an input message whenever the user clicks or double-clicks a string.  
   
--   **LBS_OWNERDRAWFIXED**清單方塊的擁有者會負責繪製它的內容; 清單方塊中的項目都有相同的高度。  
+-   **LBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are the same height.  
   
--   **LBS_OWNERDRAWVARIABLE**清單方塊的擁有者會負責繪製它的內容; 清單方塊中的項目高度是可變的。  
+-   **LBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **LBS_SORT**清單方塊中的字串會依字母順序排序。  
+-   **LBS_SORT** Strings in the list box are sorted alphabetically.  
   
--   **LBS_STANDARD**清單方塊中的字串會依照字母順序排序，且每當使用者按一下或按兩下字串時，父視窗會收到輸入的訊息。 清單方塊的每一邊都包含邊界。  
+-   **LBS_STANDARD** Strings in the list box are sorted alphabetically, and the parent window receives an input message whenever the user clicks or double-clicks a string. The list box contains borders on all sides.  
   
--   **LBS_USETABSTOPS**允許清單方塊辨識和展開定位字元，繪製字串時。 預設的定位點位置是 32 個對話方塊單位 (對話方塊單位是水平或垂直距離。 一個水平對話方塊單位等於目前對話方塊基底寬度單位的四分之一。 對話方塊基本單位是根據目前系統字型的高度和寬度計算。 **GetDialogBaseUnits** Windows 函式會傳回目前對話方塊基底單位像素為單位。)這個樣式不應該使用與**LBS_OWNERDRAWFIXED**。  
+-   **LBS_USETABSTOPS** Allows a list box to recognize and expand tab characters when drawing its strings. The default tab positions are 32 dialog units. (A dialog unit is a horizontal or vertical distance. One horizontal dialog unit is equal to one-fourth of the current dialog base width unit. The dialog base units are computed based on the height and width of the current system font. The **GetDialogBaseUnits** Windows function returns the current dialog base units in pixels.) This style should not be used with **LBS_OWNERDRAWFIXED**.  
   
--   **LBS_WANTKEYBOARDINPUT**清單方塊的擁有者會收到`WM_VKEYTOITEM`或`WM_CHARTOITEM`訊息，使用者按下按鍵，同時清單方塊具有輸入焦點時。 這樣可以讓應用程式在鍵盤輸入時執行特殊的處理。  
+-   **LBS_WANTKEYBOARDINPUT** The owner of the list box receives `WM_VKEYTOITEM` or `WM_CHARTOITEM` messages whenever the user presses a key while the list box has input focus. This allows an application to perform special processing on the keyboard input.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 使用的樣式](../../mfc/reference/styles-used-by-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
  [CListBox::Create](../../mfc/reference/clistbox-class.md#create)   
- [清單方塊樣式](http://msdn.microsoft.com/library/windows/desktop/bb775149)
+ [List Box Styles](http://msdn.microsoft.com/library/windows/desktop/bb775149)
 
 

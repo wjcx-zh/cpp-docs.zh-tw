@@ -1,63 +1,82 @@
 ---
-title: "ActiveX 控制項的容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項容器 [C++], 應用程式支援"
+title: Containers for ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX 控制項的容器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 130a2b5572f0fc93ad99b68bf8f8405a5b229391
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-只要支援 ActiveX 控制項內含項目，您可以在其他應用程式的 Visual C\+\+ 中使用所開發的 ActiveX 控制項。  許多 Microsoft 應用程式，從列出的版本開始，支援 ActiveX 控制項內含項目。  
+---
+# <a name="containers-for-activex-controls"></a>Containers for ActiveX Controls
+You can use ActiveX controls developed in Visual C++ in other applications, as long as they support ActiveX control containment. A number of Microsoft applications, beginning with the versions listed, support ActiveX control containment.  
   
 > [!NOTE]
->  下列清單不是支援 ActiveX 控制項之應用程式的完整清單，但表示測試通常使用的這個集合：  
+>  The following list is not a complete list of applications that support ActiveX controls but represents the set used most often in testing:  
   
- 支援 ActiveX 控制項內含項目包含的應用程式：  
+ Applications that support ActiveX control containment include:  
   
--   Internet Explorer 3.x 和以上  
+-   Internet Explorer 3.x and greater  
   
--   Visual Basic 4.x 和以上  
+-   Visual Basic 4.x and greater  
   
--   Visual C\+\+ 4.x 和以上  
+-   Visual C++ 4.x and greater  
   
--   Aceess 95 和更新版本  
+-   Access 95 and greater  
   
--   Excel 97 和更新版本  
+-   Excel 97 and greater  
   
--   Word 97 和更新版本  
+-   Word 97 and greater  
   
--   Aceess 97 和更新版本  
+-   Access 97 and greater  
   
--   FrontPage 97 和更新版本  
+-   FrontPage 97 and greater  
   
--   PowerPoint 97 和更新版本  
+-   PowerPoint 97 and greater  
   
--   Visual InterDev 97 和更新版本  
+-   Visual InterDev 97 and greater  
   
- 下列是支援 ActiveX 控制項內含項目的非 Microsoft 應用程式：  
+ The following are non-Microsoft applications that support ActiveX control containment:  
   
 -   PowerBuilder  
   
 -   Delphi  
   
--   C\+\+ 產生器  
+-   C++ Builder  
   
--   Netscape Navigator 的 NCompass 插件  
+-   NCompass Plug-in for Netscape Navigator  
   
-## 請參閱  
- [ActiveX 控制項容器](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

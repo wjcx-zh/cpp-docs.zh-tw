@@ -1,57 +1,76 @@
 ---
-title: "管理 MFC 模組的狀態資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料管理 [C++]"
-  - "資料管理 [C++], MFC 模組"
-  - "匯出的介面和全域狀態 [C++]"
-  - "全域狀態 [C++]"
-  - "MFC [C++], 管理狀態資料"
-  - "還原的模組狀態"
-  - "模組狀態, 儲存和還原"
-  - "多個模組"
-  - "視窗程序進入點 [C++]"
+title: Managing the State Data of MFC Modules | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- global state [MFC]
+- data management [MFC], MFC modules
+- window procedure entry points [MFC]
+- exported interfaces and global state [MFC]
+- module states [MFC], saving and restoring
+- data management [MFC]
+- MFC, managing state data
+- multiple modules [MFC]
+- module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 管理 MFC 模組的狀態資料
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 087c8e584d4d42f2bcdbfffdc594523d795308cb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文將討論 MFC 模組狀態資料，而這個狀態如何更新，當執行 \(路徑程式碼透過應用程式接受，當執行\) 輸入處理序並讓模組。  與 `AFX_MANAGE_STATE` 和 `METHOD_PROLOGUE` 巨集的開啟或關閉模組狀態也會討論。  
+---
+# <a name="managing-the-state-data-of-mfc-modules"></a>Managing the State Data of MFC Modules
+This article discusses the state data of MFC modules and how this state is updated when the flow of execution (the path code takes through an application when executing) enters and leaves a module. Switching module states with the `AFX_MANAGE_STATE` and `METHOD_PROLOGUE` macros is also discussed.  
   
 > [!NOTE]
->  這個詞彙「module」這裡提到的可執行程式，或者對 DLL \(或一組 DLL\) 獨立應用程式的其他部分運作，不過，使用 MFC DLL 的共用複本。  ActiveX 控制項是模組的一般範例。  
+>  The term "module" here refers to an executable program, or to a DLL (or set of DLLs) that operate independently of the rest of the application, but uses a shared copy of the MFC DLL. An ActiveX control is a typical example of a module.  
   
- 如下圖所示， MFC 具有狀態資料應用程式的每個模組。  這個範例的資料包含視窗執行個體控制代碼 \(用於載入資源\)，指向應用程式目前的 `CWinApp` 和 `CWinThread` 物件， OLE 模組參考計數和維護視窗物件控制代碼和 MFC 物件之間的對應執行個體連接的各種對應。  然而，在中，當應用程式使用多個模組時，每個模組狀態資料不是全應用程式。  相反地，每個模組都有自己的 MFC 狀態資料的私用複本。  
+ As shown in the following figure, MFC has state data for each module used in an application. Examples of this data include Windows instance handles (used for loading resources), pointers to the current `CWinApp` and `CWinThread` objects of an application, OLE module reference counts, and a variety of maps that maintain the connections between Windows object handles and corresponding instances of MFC objects. However, when an application uses multiple modules, the state data of each module is not application wide. Rather, each module has its own private copy of the MFC's state data.  
   
- ![單一模組 &#40;應用程式&#41; 的狀態資料](../mfc/media/vc387n1.png "vc387N1")  
-單一模組 \(應用程式\) 的狀態資料  
+ ![State data of a single module &#40;application&#41;](../mfc/media/vc387n1.gif "vc387n1")  
+State Data of a Single Module (Application)  
   
- 模組的狀態資料儲存在結構中並透過指標永遠可供該結構。  如下圖所示，當執行流程輸入特定模組，模組的狀態必須是「Current」或「的有效狀態。  因此，每個執行緒物件具有指標對該應用程式啟用的狀態結構。  保留這個指標一直會更新為處理應用程式的全域狀態和維護每個模組的狀態完整性很重要。  全域狀態的有效管理可能會導致無法預期的應用程式行為。  
+ A module's state data is contained in a structure and is always available via a pointer to that structure. When the flow of execution enters a particular module, as shown in the following figure, that module's state must be the "current" or "effective" state. Therefore, each thread object has a pointer to the effective state structure of that application. Keeping this pointer updated at all times is vital to managing the application's global state and maintaining the integrity of each module's state. Incorrect management of the global state can lead to unpredictable application behavior.  
   
- ![多個模組的狀態資料](../mfc/media/vc387n2.png "vc387N2")  
-多個模組的狀態資料  
+ ![State data of multiple modules](../mfc/media/vc387n2.gif "vc387n2")  
+State Data of Multiple Modules  
   
- 也就是說，每個模組為正確的交換負責在模組狀態之間它的進入點。  「進入點」是執行流程可以輸入模組的程式碼中的位元。  進入點包括:  
+ In other words, each module is responsible for correctly switching between module states at all of its entry points. An "entry point" is any place where the flow of execution can enter the module's code. Entry points include:  
   
--   [在 DLL 的匯出函式](../mfc/exported-dll-function-entry-points.md)  
+-   [Exported functions in a DLL](../mfc/exported-dll-function-entry-points.md)  
   
--   [COM 介面的成員函式](../mfc/com-interface-entry-points.md)  
+-   [Member functions of COM interfaces](../mfc/com-interface-entry-points.md)  
   
--   [視窗程序](../mfc/window-procedure-entry-points.md)  
+-   [Window procedures](../mfc/window-procedure-entry-points.md)  
   
-## 請參閱  
- [一般 MFC 主題](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CPtrList 類別 |Microsoft 文件"
+title: CPtrList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - lists, generic
-- CPtrList class
+- CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
 caps.latest.revision: 23
@@ -35,50 +35,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 8158e0acce04ee78ea07da26332f53613489653f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f9265c795d8aef95f72899a39fd2a40409b76a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cptrlist-class"></a>CPtrList 類別
-支援 void 指標的清單。  
+# <a name="cptrlist-class"></a>CPtrList Class
+Supports lists of void pointers.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPtrList : public CObject  
 ```  
   
 ## <a name="members"></a>Members  
- 成員函式`CPtrList`類別的成員函式類似[CObList](../../mfc/reference/coblist-class.md)。 由於此相似性，您可以針對成員函式特性使用 `CObList` 參考文件。 無論在何處看到 `CObject` 指標做為函式參數或傳回值，請用 `void` 的指標予以替代。  
+ The member functions of `CPtrList` are similar to the member functions of class [CObList](../../mfc/reference/coblist-class.md). Because of this similarity, you can use the `CObList` reference documentation for member function specifics. Wherever you see a `CObject` pointer as a function parameter or return value, substitute a pointer to `void`.  
   
  `CObject*& CObList::GetHead() const;`  
   
- 例如，轉換為  
+ for example, translates to  
   
  `void*& CPtrList::GetHead() const;`  
   
-## <a name="remarks"></a>備註  
- `CPtrList` 結合 `IMPLEMENT_DYNAMIC` 巨集，支援 `CDumpContext` 物件的執行階段類型存取和傾印。 如果您需要個別指標清單項目傾印，您必須將傾印內容的深度設定為 1 (含) 以上。  
+## <a name="remarks"></a>Remarks  
+ `CPtrList` incorporates the `IMPLEMENT_DYNAMIC` macro to support run-time type access and dumping to a `CDumpContext` object. If you need a dump of individual pointer list elements, you must set the depth of the dump context to 1 or greater.  
   
- 指標清單不可序列化。  
+ Pointer lists cannot be serialized.  
   
- 當 `CPtrList` 物件被刪除，或當它的項目被移除時，只會移除指標，而非它們參考的實體。  
+ When a `CPtrList` object is deleted, or when its elements are removed, only the pointers are removed, not the entities they reference.  
   
- 如需有關使用`CPtrList`，請參閱文章[集合](../../mfc/collections.md)。  
+ For more information on using `CPtrList`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrList`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxcoll.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-## <a name="see-also"></a>另請參閱  
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CObList 類別](../../mfc/reference/coblist-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObList Class](../../mfc/reference/coblist-class.md)
 

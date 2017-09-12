@@ -1,33 +1,52 @@
 ---
-title: "MFC 通用控制項程式庫的隔離 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC, 通用控制項程式庫"
+title: Isolation of the MFC Common Controls Library | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, Common Controls library
 ms.assetid: 7471e6f0-49b0-47f7-86e7-8d6bc3541694
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC 通用控制項程式庫的隔離
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: beb727301a2dcc72127f4ecd61449ada2dfaf360
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-通用控制項程式庫在 MFC 中現在是隔離的，可讓不同的模組 \(例如使用者 DLL\) 使用通用控制項程式庫的不同版本藉由指定版本在其資訊清單中。  
+---
+# <a name="isolation-of-the-mfc-common-controls-library"></a>Isolation of the MFC Common Controls Library
+The Common Controls library is now isolated within MFC, allowing different modules (such as user DLLs) to use different versions of the Common Controls library by specifying the version in their manifests.  
   
- MFC 應用程式 \(或 MFC 呼叫使用者程式碼\) 呼叫通用控制項程式庫 API 以包裝函式名稱 `Afx`*FunctionName*，其中 *FunctionName* 是控制項公用應用程式開發介面的名稱。  這些包裝函式在 afxcomctl32.h 和 afxcomctl32.inl 定義。  
+ An MFC application (or user code called by MFC) makes calls to Common Controls library APIs through wrapper functions named `Afx`*FunctionName*, where *FunctionName* is the name of a Common Controls API. Those wrapper functions are defined in afxcomctl32.h and afxcomctl32.inl.  
   
- 您可以使用 [AFX\_COMCTL32\_IF\_EXISTS](../Topic/AFX_COMCTL32_IF_EXISTS.md) 和 [AFX\_COMCTL32\_IF\_EXISTS2](../Topic/AFX_COMCTL32_IF_EXISTS2.md) 巨集 \(定義於 afxcomctl32.h\) 判斷通用控制項程式庫是否實作某應用程式開發介面而不是呼叫 [GetProcAddress](../build/getprocaddress.md)。  
+ You can use the [AFX_COMCTL32_IF_EXISTS](reference/run-time-object-model-services.md#afx_comctl32_if_exists) and [AFX_COMCTL32_IF_EXISTS2](reference/run-time-object-model-services.md#afx_comctl32_if_exists2) macros (defined in afxcomctl32.h) to determine whether the Common Controls library implements a certain API instead of calling [GetProcAddress](../build/getprocaddress.md).  
   
- 技術上來說，正在呼叫通用控制項程式庫 API 以包裝函式類別， `CComCtlWrapper` \(定義於 afxcomctl32.h\)。  `CComCtlWrapper` 對載入和卸載也負責 comctl32.dll。  MFC 模組狀態包含指標為 `CComCtlWrapper`執行個體。  您可以使用 `afxComCtlWrapper` 巨集來存取包裝函式類別。  
+ Technically, you make calls to Common Controls Library APIs through a wrapper class, `CComCtlWrapper` (defined in afxcomctl32.h). `CComCtlWrapper` is also responsible for the loading and unloading of comctl32.dll. The MFC Module State contains a pointer to an instance of `CComCtlWrapper`. You can access the wrapper class using the `afxComCtlWrapper` macro.  
   
- 請注意直接呼叫公用控制應用程式開發介面的， \(不使用 MFC 包裝函式\) 從 MFC 應用程式或使用者 DLL 在許多情況下，會運作，因為它在其資訊清單中要求\) 的 MFC 應用程式或使用者 DLL 繫結至通用控制項程式庫。  不過，，因為 MFC 程式碼可能會以不同的通用控制項程式庫版本，使用者的 DLL 呼叫 MFC 程式碼必須使用包裝函式。
+ Note that calling Common Controls API directly (not using the MFC wrapper functions) from an MFC application or user DLL will work in most cases, because the MFC application or user DLL is bound to the Common Controls library it requested in its manifest). However, the MFC code itself has to use the wrappers, because MFC code might be called from user DLLs with different Common Controls library versions.
+
+

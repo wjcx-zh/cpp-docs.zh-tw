@@ -1,5 +1,5 @@
 ---
-title: "CMFCLinkCtrl 類別 |Microsoft 文件"
+title: CMFCLinkCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,7 +18,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCLinkCtrl class
+- CMFCLinkCtrl [MFC], SetURL
+- CMFCLinkCtrl [MFC], SetURLPrefix
+- CMFCLinkCtrl [MFC], SizeToContent
+- CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
 caps.latest.revision: 27
 author: mikeblome
@@ -38,17 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8c926c0ef611470b137d2bb897c012a85645c90c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ce159218682677082c20a6ffe8d698570d53e984
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 類別
-`CMFCLinkCtrl`類別顯示為超連結的按鈕，並按一下按鈕時，會叫用連結的目標。  
+# <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl Class
+The `CMFCLinkCtrl` class displays a button as a hyperlink and invokes the link's target when the button is clicked.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCLinkCtrl : public CMFCButton  
@@ -56,30 +59,30 @@ class CMFCLinkCtrl : public CMFCButton
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::SetURL](#seturl)|顯示指定的 URL 做為按鈕文字。|  
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|設定隱含的通訊協定 (例如，"http:") 的 url。|  
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|調整大小，以包含按鈕文字或點陣圖按鈕。|  
+|[CMFCLinkCtrl::SetURL](#seturl)|Displays a specified URL as the button text.|  
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Sets the implicit protocol (for example, "http:") of the URL.|  
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Resizes the button to contain the button text or bitmap.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|繪製焦點矩形的按鈕前，由架構呼叫。|  
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Called by the framework before the focus rectangle of the button is drawn.|  
   
-## <a name="remarks"></a>備註  
- 當您按一下按鈕，衍生自`CMFCLinkCtrl`類別架構按鈕的 URL 會以參數傳遞至`ShellExecute`方法。 然後在`ShellExecute`方法開啟的 URL 目標。  
+## <a name="remarks"></a>Remarks  
+ When you click a button that is derived from the `CMFCLinkCtrl` class, the framework passes the URL of the button as a parameter to the `ShellExecute` method. Then the `ShellExecute` method opens the target of the URL.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何設定的大小`CMFCLinkCtrl`物件，以及如何設定 url 和工具提示中的`CMFCLinkCtrl`物件。 這個範例是屬於[新的控制項範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to set the size of a `CMFCLinkCtrl` object, and how to set a url and a tooltip in a `CMFCLinkCtrl` object. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #&9;](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
-[!code-cpp[NVC_MFC_NewControls #&10;](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
+[!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -92,11 +95,11 @@ class CMFCLinkCtrl : public CMFCButton
   
  [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxlinkctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxlinkctrl.h  
   
-##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
- 繪製焦點矩形的按鈕前，由架構呼叫。  
+##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
+ Called by the framework before the focus rectangle of the button is drawn.  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -104,45 +107,45 @@ virtual void OnDrawFocusRect(
     const CRect& rectClient);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
  [in] `rectClient`  
- 矩形連結控制項 （繫結）。  
+ A rectangle that bounds the link control.  
   
-### <a name="remarks"></a>備註  
- 當您想要使用自己的程式碼繪製按鈕的焦點矩形，請覆寫這個方法。  
+### <a name="remarks"></a>Remarks  
+ Override this method when you want to use your own code to draw the button's focus rectangle.  
   
-##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
- 顯示指定的 URL 做為按鈕文字。  
+##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
+ Displays a specified URL as the button text.  
   
 ```  
 void SetURL(LPCTSTR lpszURL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszURL`  
- 要顯示的按鈕文字。  
+ The button text to display.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
- 設定隱含的通訊協定 (例如，"http:") 的 url。  
+##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
+ Sets the implicit protocol (for example, "http:") of the URL.  
   
 ```  
 void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPrefix`  
- URL 通訊協定前置詞。  
+ The prefix of the URL protocol.  
   
-### <a name="remarks"></a>備註  
- 使用此方法設定的 URL 首碼。 前置詞不會顯示在按鈕的圖示，但您可以使用它來瀏覽至的 URL 目標。  
+### <a name="remarks"></a>Remarks  
+ Use this method to set the URL prefix. The prefix is not displayed on the button's face, but you can use it to help browse to the URL's target.  
   
-##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
- 調整大小，以包含按鈕文字或點陣圖按鈕。  
+##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
+ Resizes the button to contain the button text or bitmap.  
   
 ```  
 virtual CSize SizeToContent(
@@ -150,21 +153,21 @@ virtual CSize SizeToContent(
     BOOL bHCenter=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bVCenter`  
- `TRUE`若要按鈕文字和點陣圖頂端和底部的連結控制項; 之間的垂直置中否則， `FALSE`。 預設值是 `FALSE`。  
+ `TRUE` to center the button text and bitmap vertically between the top and bottom of the link control; otherwise, `FALSE`. The default value is `FALSE`.  
   
  [in] `bHCenter`  
- `TRUE`若要置中按鈕文字和點陣圖，以水平方式之間的左邊和右邊的連結控制項，否則， `FALSE`。 預設值是 `FALSE`。  
+ `TRUE` to center the button text and bitmap horizontally between the left and right sides of the link control; otherwise, `FALSE`. The default value is `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含連結控制項的新大小。  
+### <a name="return-value"></a>Return Value  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object that contains the new size of the link control.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CLinkCtrl 類別](../../mfc/reference/clinkctrl-class.md)   
- [CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CLinkCtrl Class](../../mfc/reference/clinkctrl-class.md)   
+ [CMFCButton Class](../../mfc/reference/cmfcbutton-class.md)
 

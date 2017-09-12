@@ -1,40 +1,59 @@
 ---
-title: "如何：使用訊息對應交互參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "視窗 [C++], 訊息對應"
+title: 'How to: Use the Message-Map Cross-Reference | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 如何：使用訊息對應交互參考
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b25095aab5f565df033945a9523d21fd14ae567c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在標記 \<memberFxn\> 的輸入，為衍生自 [CWnd](../../mfc/reference/cwnd-class.md) 的類別中撰寫自己的成員函式。  您可以使用的函式想要的任何名稱。  其他功能，例如 `OnActivate`， `CWnd`是類別的成員函式。  如果呼叫，就會將訊息傳遞至 `DefWindowProc` 的 Windows 函式。  若要處理 Windows 通知訊息，請覆寫在衍生類別中對應的 `CWnd` 函式。  您的函式應該中呼叫基底類別的覆寫函式讓基底類別和 Windows 回應訊息。  
+---
+# <a name="how-to-use-the-message-map-cross-reference"></a>How to: Use the Message-Map Cross-Reference
+In entries labeled \<memberFxn>, write your own member function for a derived [CWnd](../../mfc/reference/cwnd-class.md) class. Give your function any name you like. Other functions, such as `OnActivate`, are member functions of class `CWnd`. If called, they pass the message to the `DefWindowProc` Windows function. To process Windows notification messages, override the corresponding `CWnd` function in your derived class. Your function should call the overridden function in your base class to let the base class and Windows respond to the message.  
   
- 在所有情況下，請將函式原型在 `CWnd`衍生類別標頭，以及撰寫訊息對應項目如下所示。  
+ In all cases, put the function prototype in the `CWnd`-derived class header, and code the message map entry as shown.  
   
- 使用下列詞彙:  
+ The following terms are used:  
   
-|詞彙|定義|  
-|--------|--------|  
-|id|任何使用者定義的功能表項目 ID \(**WM\_COMMAND** \) 訊息或控制項 ID \(子視窗通知訊息\)。|  
-|「訊息」和「wNotifyCode」|在 WINDOWS.H 定義視窗訊息 ID 。|  
-|nMessageVariable|包含從 **RegisterWindowMessage** Windows 函式的傳回值的變數名稱。|  
+|Term|Definition|  
+|----------|----------------|  
+|id|Any user-defined menu item ID (**WM_COMMAND** messages) or control ID (child window notification messages).|  
+|"message" and "wNotifyCode"|Windows message IDs as defined in WINDOWS.H.|  
+|nMessageVariable|Name of a variable that contains the return value from the **RegisterWindowMessage** Windows function.|  
   
-## 請參閱  
- [訊息對應](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
+
+

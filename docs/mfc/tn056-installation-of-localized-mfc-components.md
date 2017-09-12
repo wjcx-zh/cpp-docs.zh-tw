@@ -1,43 +1,62 @@
 ---
-title: "TN056：當地語系化 MFC 元件的安裝 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.components"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "元件 [MFC]"
-  - "元件 [MFC], 安裝"
-  - "CTL3D32.DLL"
-  - "DLL [C++], 當地語系化 MFC"
-  - "安裝 MFC 元件"
-  - "當地語系化 [C++], MFC 資源"
-  - "當地語系化 [C++], 資源"
-  - "MFC DLL [C++], 當地語系化"
-  - "MFC70LOC.DLL"
-  - "資源 [MFC], 當地語系化"
-  - "TN056"
+title: 'TN056: Installation of Localized MFC Components | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.components
+dev_langs:
+- C++
+helpviewer_keywords:
+- components [MFC]
+- TN056
+- resources [MFC], localization
+- localization [MFC], MFC resources
+- MFC70LOC.DLL
+- MFC DLLs [MFC], localizing
+- components [MFC], installing
+- DLLs [MFC], localizing MFC
+- CTL3D32.DLL
+- localization [MFC], resources
+- installing MFC components
 ms.assetid: 0b582615-3bb1-4fc0-b569-d127d6deccd3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN056：當地語系化 MFC 元件的安裝
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6affee078c4f16db9f8ed0277aeaafcd8922da86
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這個技術注意事項，其討論當地語系化 MFC 元件的安裝，現在已經過時。  
+---
+# <a name="tn056-installation-of-localized-mfc-components"></a>TN056: Installation of Localized MFC Components
+This tech note, which discussed the installation of localized MFC components, is now obsolete.  
   
- **請參閱** [部署應用程式](http://msdn.microsoft.com/zh-tw/4ff8881d-0daf-47e7-bfe7-774c625031b4)取得更多有關**轉散發 Visual C\+\+ 應用程式的詳細資訊。也請參閱**[TechNote 57](../mfc/tn057-localization-of-mfc-components.md)與當地語系化 MFC 應用程式的詳細資訊。  
+ **See**  [Deploying Applications](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4) for additional **information on redistributing Visual C++ applications. Also see** [TechNote 57](../mfc/tn057-localization-of-mfc-components.md) for more information on localizing MFC applications.  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

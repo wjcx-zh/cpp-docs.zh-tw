@@ -1,112 +1,127 @@
 ---
-title: "處理自訂告知 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TBN_CUSTHELP"
-  - "TBN_QUERYINSERT"
-  - "TBNOTIFY"
-  - "NMHDR"
-  - "TBN_TOOLBARCHANGE"
-  - "TBN_ENDDRAG"
-  - "NM_SETFOCUS"
-  - "TBN_RESET"
-  - "NM_RETURN"
-  - "NM_ENDWAIT"
-  - "NM_STARTWAIT"
-  - "TBN_BEGINDRAG"
-  - "NM_OUTOFMEMORY"
-  - "TBN_QUERYDELETE"
-  - "NM_DBLCLK"
-  - "TBN_ENDADJUST"
-  - "NM_KILLFOCUS"
-  - "NM_RCLICK"
-  - "TBN_BEGINADJUST"
-  - "NM_CLICK"
-  - "NM_RDBLCLK::"
-  - "TBN_GETBUTTONINFO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TBN_ENDADJUST 告知"
-  - "TBNOTIFY 告知"
-  - "TBN_BEGINDRAG 告知"
-  - "TBN_TOOLBARCHANGE 告知"
-  - "NM_CLICK 告知"
-  - "NM_RETURN 告知"
-  - "NM_RCLICK 告知"
-  - "TBN_ENDDRAG 告知"
-  - "TBN_BEGINADJUST 告知"
-  - "NM_ENDWAIT 告知"
-  - "NM_KILLFOCUS 告知"
-  - "NM_SETFOCUS 告知"
-  - "NM_OUTOFMEMORY 告知"
-  - "TBN_QUERYINSERT 告知"
-  - "NMHDR"
-  - "NM_STARTWAIT 告知"
-  - "CToolBarCtrl 類別, 處理通知"
-  - "TBN_CUSTHELP 告知"
-  - "TBN_RESET 告知"
-  - "NM_DBLCLK 告知"
-  - "TBN_QUERYDELETE 告知"
-  - "NM_RDBLCLK 告知"
-  - "TBN_GETBUTTONINFO 告知"
+title: Handling Customization Notifications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TBN_CUSTHELP
+- TBN_QUERYINSERT
+- TBNOTIFY
+- NMHDR
+- TBN_TOOLBARCHANGE
+- TBN_ENDDRAG
+- NM_SETFOCUS
+- TBN_RESET
+- NM_RETURN
+- NM_ENDWAIT
+- NM_STARTWAIT
+- TBN_BEGINDRAG
+- NM_OUTOFMEMORY
+- TBN_QUERYDELETE
+- NM_DBLCLK
+- TBN_ENDADJUST
+- NM_KILLFOCUS
+- NM_RCLICK
+- TBN_BEGINADJUST
+- NM_CLICK
+dev_langs:
+- C++
+helpviewer_keywords:
+- TBN_ENDADJUST notification [MFC]
+- TBNOTIFY notification [MFC]
+- TBN_BEGINDRAG notification [MFC]
+- TBN_TOOLBARCHANGE notification [MFC]
+- NM_CLICK notification [MFC]
+- NM_RETURN notification [MFC]
+- NM_RCLICK notification [MFC]
+- TBN_ENDDRAG notification [MFC]
+- TBN_BEGINADJUST notification [MFC]
+- NM_ENDWAIT notification [MFC]
+- NM_KILLFOCUS notification [MFC]
+- NM_SETFOCUS notification [MFC]
+- NM_OUTOFMEMORY notification [MFC]
+- TBN_QUERYINSERT notification [MFC]
+- NMHDR [MFC]
+- NM_STARTWAIT notification [MFC]
+- CToolBarCtrl class [MFC], handling notifications
+- TBN_CUSTHELP notification [MFC]
+- TBN_RESET notification [MFC]
+- NM_DBLCLK notification [MFC]
+- TBN_QUERYDELETE notification [MFC]
+- NM_RDBLCLK notification [MFC]
+- TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 處理自訂告知
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5e91497af12fb29ed1aa017d5cef9d285018bcb1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Windows 工具列通用控制項內建自訂功能 \(包括系統定義的自訂對話方塊\)，可讓使用者插入、刪除或重新排列工具列按鈕。 應用程式會判斷是否可以使用自訂功能，並控制使用者可自訂工具列的範圍。  
+---
+# <a name="handling-customization-notifications"></a>Handling Customization Notifications
+A Windows toolbar common control has built-in customization features, including a system-defined customization dialog box, which allow the user to insert, delete, or rearrange toolbar buttons. The application determines whether the customization features are available and controls the extent to which the user can customize the toolbar.  
   
- 您可以為工具列指定 `CCS_ADJUSTABLE` 樣式，來將這些自訂功能提供給使用者。 自訂功能可讓使用者將按鈕拖曳至新的位置，或者拖曳出工具列以移除按鈕。 此外，使用者可以按兩下工具列顯示 \[自訂工具列\] 對話方塊，讓使用者加入、刪除及重新排列工具列按鈕。 應用程式可以使用 \[自訂\][](../Topic/CToolBarCtrl::Customize.md) 成員函式來顯示此對話方塊。  
+ You can make these customization features available to the user by giving the toolbar the `CCS_ADJUSTABLE` style. The customization features allow the user to drag a button to a new position or to remove a button by dragging it off the toolbar. In addition, the user can double-click the toolbar to display the **Customize Toolbar** dialog box, which allows the user to add, delete, and rearrange toolbar buttons. The application can display the dialog box by using the [Customize](../mfc/reference/ctoolbarctrl-class.md#customize) member function.  
   
- 工具列控制項會在自訂程序中的每個步驟，將通知訊息傳送至父視窗。 如果使用者按住 SHIFT 鍵並開始拖曳按鈕，工具列會自動處理拖曳作業。 工具列會將 **TBN\_QUERYDELETE** 通知訊息傳送至父視窗，以判斷是否可刪除此按鈕。 如果父視窗傳回 **FALSE**，則結束拖曳作業。 否則，工具列會擷取滑鼠輸入，並等候使用者放開滑鼠按鈕。  
+ The toolbar control sends notification messages to the parent window at each step in the customization process. If the user holds the SHIFT key down and begins dragging a button, the toolbar automatically handles the drag operation. The toolbar sends the **TBN_QUERYDELETE** notification message to the parent window to determine whether the button may be deleted. The drag operation ends if the parent window returns **FALSE**. Otherwise, the toolbar captures mouse input and waits for the user to release the mouse button.  
   
- 當使用者放開滑鼠按鈕時，工具列控制項會判斷滑鼠游標的位置。 如果游標位於工具列之外，則已刪除按鈕。 如果游標位於另一個工具列按鈕上，則工具列會將 **TBN\_QUERYINSERT** 通知訊息傳送至父視窗，以判斷是否可將按鈕插入指定按鈕的左方。 如果父視窗傳回 **TRUE**，則已插入按鈕；否則未插入。 工具列傳送 **TBN\_TOOLBARCHANGE** 通知訊息來表示結束拖曳作業。  
+ When the user releases the mouse button, the toolbar control determines the location of the mouse cursor. If the cursor is outside the toolbar, the button is deleted. If the cursor is on another toolbar button, the toolbar sends the **TBN_QUERYINSERT** notification message to the parent window to determine if a button may be inserted to the left of the given button. The button is inserted if the parent window returns **TRUE**; otherwise, it is not. The toolbar sends the **TBN_TOOLBARCHANGE** notification message to signal the end of the drag operation.  
   
- 如果使用者未按住 SHIFT 鍵便開始拖曳作業，工具列控制項會將 **TBN\_BEGINDRAG** 通知訊息傳送至主控視窗。 自行實作按鈕拖曳程式碼的應用程式可以使用這則訊息來表示開始拖曳作業。 工具列傳送 **TBN\_ENDDRAG** 通知訊息來表示結束拖曳作業。  
+ If the user begins a drag operation without holding down the SHIFT key, the toolbar control sends the **TBN_BEGINDRAG** notification message to the owner window. An application that implements its own button-dragging code can use this message as a signal to begin a drag operation. The toolbar sends the **TBN_ENDDRAG** notification message to signal the end of the drag operation.  
   
- 當使用者使用 \[自訂工具列\] 對話方塊自訂工具列時，工具列控制項會傳送通知訊息。 在使用者按兩下工具列之後到建立對話方塊之前，工具列會傳送 **TBN\_BEGINADJUST** 通知訊息。 接下來，工具列會開始傳送一系列的 **TBN\_QUERYINSERT** 通知訊息，以判斷工具列是否允許插入按鈕。 當父視窗傳回 **TRUE** 時，工具列會停止傳送 **TBN\_QUERYINSERT** 通知訊息。 如果父視窗未針對任何按鈕傳回 **TRUE**，則工具列會終結對話方塊。  
+ A toolbar control sends notification messages when the user customizes a toolbar by using the **Customize Toolbar** dialog box. The toolbar sends the **TBN_BEGINADJUST** notification message after the user double-clicks the toolbar, but before the dialog box is created. Next, the toolbar begins sending a series of **TBN_QUERYINSERT** notification messages to determine whether the toolbar allows buttons to be inserted. When the parent window returns **TRUE**, the toolbar stops sending **TBN_QUERYINSERT** notification messages. If the parent window does not return **TRUE** for any button, the toolbar destroys the dialog box.  
   
- 接下來，工具列控制項會針對工具列中的每個按鈕傳送一則 **TBN\_QUERYDELETE** 通知訊息，來判斷是否可從工具列中刪除任何按鈕。 父視窗傳回 **TRUE** 表示可刪除按鈕，否則會傳回 **FALSE**。 工具列會將所有工具列按鈕加入對話方塊中，但將那些無法刪除的按鈕設為灰色。  
+ Next, the toolbar control determines if any buttons may be deleted from the toolbar by sending one **TBN_QUERYDELETE** notification message for each button in the toolbar. The parent window returns **TRUE** to indicate that a button may be deleted; otherwise, it returns **FALSE**. The toolbar adds all toolbar buttons to the dialog box, but grays those that may not be deleted.  
   
- 每當工具列控制項需要 \[自訂工具列\] 對話方塊中按鈕的相關資訊時，便會傳送 **TBN\_GETBUTTONINFO** 通知訊息，並指定需要資訊的按鈕索引，以及 **TBNOTIFY** 結構的位址。 父視窗必須以相關資訊填入結構。  
+ Whenever the toolbar control needs information about a button in the Customize Toolbar dialog box, it sends the **TBN_GETBUTTONINFO** notification message, specifying the index of the button for which it needs information and the address of a **TBNOTIFY** structure. The parent window must fill the structure with the relevant information.  
   
- \[自訂工具列\] 對話方塊包含 \[說明\] 按鈕和 \[重設\] 按鈕。 當使用者選擇 \[說明\] 按鈕時，工具列控制項會傳送 **TBN\_CUSTHELP** 通知訊息。 父視窗應該會顯示說明資訊來回應。 當使用者選取 \[重設\] 按鈕時，對話方塊會傳送 **TBN\_RESET** 通知訊息。 這則訊息表示工具列即將重新初始化對話方塊。  
+ The **Customize Toolbar** dialog box includes a Help button and a Reset button. When the user chooses the Help button, the toolbar control sends the **TBN_CUSTHELP** notification message. The parent window should respond by displaying help information. The dialog box sends the **TBN_RESET** notification message when the user selects the Reset button. This message signals that the toolbar is about to reinitialize the dialog box.  
   
- 這些訊息全部都是 **WM\_NOTIFY** 訊息，可在您的主控視窗中進行處理，方法是將下列格式訊息對應項目加入主控視窗的訊息對應中：  
+ These messages are all **WM_NOTIFY** messages, and they can be handled in your owner window by adding message-map entries of the following form to your owner window's message map:  
   
  `ON_NOTIFY( wNotifyCode, idControl, memberFxn )`  
   
  `wNotifyCode`  
- 通知訊息識別項代碼，例如 **TBN\_BEGINADJUST**。  
+ Notification message identifier code, such as **TBN_BEGINADJUST**.  
   
  `idControl`  
- 傳送通知之控制項的識別項。  
+ The identifier of the control sending the notification.  
   
  `memberFxn`  
- 收到這則通知時所要呼叫的成員函式。  
+ The member function to be called when this notification is received.  
   
- 您的成員函式會使用下列原型宣告：  
+ Your member function would be declared with the following prototype:  
   
  `afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );`  
   
- 如果通知訊息處理常式傳回一個值，應將該值放在 *result* 所指向的 **LRESULT**。  
+ If the notification message handler returns a value, it should put it in the **LRESULT** pointed to by *result*.  
   
- 針對每則訊息，`pNotifyStruct` 會指向 **NMHDR** 結構或 **TBNOTIFY** 結構。 這些結構的說明如下：  
+ For each message, `pNotifyStruct` points to either an **NMHDR** structure or a **TBNOTIFY** structure. These structures are described below:  
   
- **NMHDR** 結構包含下列成員：  
+ The **NMHDR** structure contains the following members:  
   
  `typedef struct tagNMHDR {`  
   
@@ -119,31 +134,31 @@ Windows 工具列通用控制項內建自訂功能 \(包括系統定義的自訂
  `} NMHDR;`  
   
  **hwndFrom**  
- 傳送通知之控制項的視窗控制代碼。 若要將這個控制代碼轉換成 `CWnd` 指標，請使用 [CWnd::FromHandle](../Topic/CWnd::FromHandle.md)。  
+ Window handle of the control that is sending the notification. To convert this handle to a `CWnd` pointer, use [CWnd::FromHandle](../mfc/reference/cwnd-class.md#fromhandle).  
   
  **idFrom**  
- 傳送通知之控制項的識別項。  
+ Identifier of the control sending the notification.  
   
- **程式碼**  
- 通知碼。 這個成員可以是控制項類型的特定值 \(例如 **TBN\_BEGINADJUST** 或 **TTN\_NEEDTEXT**\)，也可以是下列其中一個一般通知值：  
+ **code**  
+ Notification code. This member can be a value specific to a control type, such as **TBN_BEGINADJUST** or **TTN_NEEDTEXT**, or it can be one of the common notification values listed below:  
   
--   **NM\_CLICK** 使用者在控制項內按一下滑鼠左鍵。  
+-   **NM_CLICK** The user has clicked the left mouse button within the control.  
   
--   **NM\_DBLCLK** 使用者在控制項內按兩下滑鼠左鍵。  
+-   **NM_DBLCLK** The user has double-clicked the left mouse button within the control.  
   
--   **NM\_KILLFOCUS** 控制項已遺失輸入焦點。  
+-   **NM_KILLFOCUS** The control has lost the input focus.  
   
--   **NM\_OUTOFMEMORY** 控制項無法完成作業，因為沒有足夠的記憶體可供使用。  
+-   **NM_OUTOFMEMORY** The control could not complete an operation because there is not enough memory available.  
   
--   **NM\_RCLICK** 使用者在控制項內按一下滑鼠右鍵。  
+-   **NM_RCLICK** The user has clicked the right mouse button within the control.  
   
--   **NM\_RDBLCLK** 使用者在控制項內按兩下滑鼠右鍵。  
+-   **NM_RDBLCLK** The user has double-clicked the right mouse button within the control.  
   
--   **NM\_RETURN** 控制項有輸入焦點，而且使用者已按下 ENTER 鍵。  
+-   **NM_RETURN** The control has the input focus, and the user has pressed the ENTER key.  
   
--   **NM\_SETFOCUS** 控制項已收到輸入焦點。  
+-   **NM_SETFOCUS** The control has received the input focus.  
   
- **TBNOTIFY** 結構包含下列成員：  
+ The **TBNOTIFY** structure contains the following members:  
   
  `typedef struct {`  
   
@@ -159,44 +174,46 @@ Windows 工具列通用控制項內建自訂功能 \(包括系統定義的自訂
   
  `} TBNOTIFY, FAR* LPTBNOTIFY;`  
   
-## 備註  
+## <a name="remarks"></a>Remarks  
  **hdr**  
- 所有 **WM\_NOTIFY** 訊息的共通資訊。  
+ Information common to all **WM_NOTIFY** messages.  
   
  **iItem**  
- 與通知相關聯的按鈕索引。  
+ Index of button associated with notification.  
   
  **tbButton**  
- `TBBUTTON` 結構，其中包含與通知相關聯之工具列按鈕的資訊。  
+ `TBBUTTON` structure that contains information about the toolbar button associated with the notification.  
   
  **cchText**  
- 按鈕文字中的字元計數。  
+ Count of characters in button text.  
   
  **lpszText**  
- 按鈕文字的指標。  
+ Pointer to button text.  
   
- 工具列傳送的通知如下：  
+ The notifications the toolbar sends are as follows:  
   
--   **TBN\_BEGINADJUST** 當使用者開始自訂工具列控制項時傳送。 指向包含通知資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。  
+-   **TBN_BEGINADJUST** Sent when the user begins customizing a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification. The handler doesn't need to return any specific value.  
   
--   **TBN\_BEGINDRAG** 當使用者開始拖曳工具列控制項中的按鈕時傳送。 指向 **TBNOTIFY** 結構的指標。**iItem** 成員包含所要拖曳的按鈕之以零為起始的索引。 此處理常式不需要傳回任何特定值。  
+-   **TBN_BEGINDRAG** Sent when the user begins dragging a button in a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button being dragged. The handler doesn't need to return any specific value.  
   
--   **TBN\_CUSTHELP** 當使用者在 \[自訂工具列\] 對話方塊中選擇 \[說明\] 按鈕時傳送。 沒有傳回值。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。  
+-   **TBN_CUSTHELP** Sent when the user chooses the Help button in the Customize Toolbar dialog box. No return value. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_ENDADJUST** 當使用者停止自訂工具列控制項時傳送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。  
+-   **TBN_ENDADJUST** Sent when the user stops customizing a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_ENDDRAG** 當使用者停止拖曳工具列控制項中的按鈕時傳送。 指向 **TBNOTIFY** 結構的指標。**iItem** 成員包含所要拖曳的按鈕之以零為起始的索引。 此處理常式不需要傳回任何特定值。  
+-   **TBN_ENDDRAG** Sent when the user stops dragging a button in a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button being dragged. The handler doesn't need to return any specific value.  
   
--   **TBN\_GETBUTTONINFO** 當使用者正在自訂工具列控制項時傳送。 工具列會使用這項通知訊息，來擷取 \[自訂工具列\] 對話方塊所需的資訊。 指向 **TBNOTIFY** 結構的指標。**iItem** 成員指定按鈕之以零為起始的索引。**pszText** 和 **cchText** 成員指定目前按鈕文字的的位址和長度 \(以字元為單位\)。 應用程式應該以按鈕的相關資訊填入結構。 如果按鈕資訊已複製到結構，則傳回 **TRUE**；否則傳回 **FALSE**。  
+-   **TBN_GETBUTTONINFO** Sent when the user is customizing a toolbar control. The toolbar uses this notification message to retrieve information needed by the Customize Toolbar dialog box. The pointer points to a **TBNOTIFY** structure. The **iItem** member specifies the zero-based index of a button. The **pszText** and **cchText** members specify the address and length, in characters, of the current button text. An application should fill the structure with information about the button. Return **TRUE** if button information was copied to the structure, or **FALSE** otherwise.  
   
--   **TBN\_QUERYDELETE** 當使用者正在自訂工具列時傳送，以判斷是否可從工具列控制項中刪除按鈕。 指向 **TBNOTIFY** 結構的指標。**iItem** 成員包含所要刪除的按鈕之以零為起始的索引。 傳回 **TRUE** 表示可刪除按鈕，傳回 **FALSE** 表示無法刪除按鈕。  
+-   **TBN_QUERYDELETE** Sent while the user is customizing a toolbar to determine whether a button may be deleted from a toolbar control. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button to be deleted. Return **TRUE** to allow the button to be deleted or **FALSE** to prevent the button from being deleted.  
   
--   **TBN\_QUERYINSERT** 當使用者正在自訂工具列控制項時傳送，以判斷是否可將按鈕插入指定按鈕的左方。 指向 **TBNOTIFY** 結構的指標。**iItem** 成員包含所要插入的按鈕之以零為起始的索引。 傳回 **TRUE** 表示可在指定按鈕之前插入按鈕，傳回 **FALSE** 表示無法插入按鈕。  
+-   **TBN_QUERYINSERT** Sent while the user is customizing a toolbar control to determine whether a button may be inserted to the left of the given button. The pointer points to a **TBNOTIFY** structure. The **iItem** member contains the zero-based index of the button to be inserted. Return **TRUE** to allow a button to be inserted in front of the given button or **FALSE** to prevent the button from being inserted.  
   
--   **TBN\_RESET** 當使用者重設 \[自訂工具列\] 對話方塊的內容時傳送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。  
+-   **TBN_RESET** Sent when the user resets the content of the Customize Toolbar dialog box. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
--   **TBN\_TOOLBARCHANGE** 在使用者已自訂工具列控制項之後傳送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。  
+-   **TBN_TOOLBARCHANGE** Sent after the user has customized a toolbar control. The pointer points to an **NMHDR** structure that contains information about the notification message. The handler doesn't need to return any specific value.  
   
-## 請參閱  
- [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

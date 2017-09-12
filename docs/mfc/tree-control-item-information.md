@@ -1,36 +1,55 @@
 ---
-title: "樹狀目錄控制項目資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 類別, 項目資訊"
-  - "樹狀目錄控制項, 項目資訊"
+title: Tree Control Item Information | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree controls [MFC], item information
+- CTreeCtrl class [MFC], item information
 ms.assetid: 8dcab855-27de-49e9-95d8-f78ba963ea71
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 樹狀目錄控制項目資訊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23e6483ee3e660a15c11767292e249f5fae07fb1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-樹狀目錄控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 會擷取項目相關資訊在控制項的成員函式。  [GetItem](../Topic/CTreeCtrl::GetItem.md) 成員函式來擷取部分或所有資料與項目。  這項資料可以包含項目的文字、狀態、影像、計數子項目和應用程式定義的 32 位元資料值。  也可以設定某些或所有資料與項目相關聯的 [SetItem](../Topic/CTreeCtrl::SetItem.md) 函式。  
+---
+# <a name="tree-control-item-information"></a>Tree Control Item Information
+Tree controls ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) have a number of member functions that retrieve information about items in the control. The [GetItem](../mfc/reference/ctreectrl-class.md#getitem) member function retrieves some or all of the data associated with an item. This data could include the item's text, state, images, count of child items, and an application-defined 32-bit data value. There is also a [SetItem](../mfc/reference/ctreectrl-class.md#setitem) function that can set some or all of the data associated with an item.  
   
- [GetItemState](../Topic/CTreeCtrl::GetItemState.md)、 [GetItemText](../Topic/CTreeCtrl::GetItemText.md)、 [GetItemData](../Topic/CTreeCtrl::GetItemData.md)和 [GetItemImage](../Topic/CTreeCtrl::GetItemImage.md) 成員函式來擷取項目的個別屬性。  這些函式都具有設定項目的屬性有對應的 Set 函式。  
+ The [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate), [GetItemText](../mfc/reference/ctreectrl-class.md#getitemtext), [GetItemData](../mfc/reference/ctreectrl-class.md#getitemdata), and [GetItemImage](../mfc/reference/ctreectrl-class.md#getitemimage) member functions retrieve individual attributes of an item. Each of these functions has a corresponding Set function for setting the attributes of an item.  
   
- [GetNextItem](../Topic/CTreeCtrl::GetNextItem.md) 成員函式以取得額外負荷對目前項目的指定關聯性的樹狀目錄控制項項目。  這個函式會擷取項目的父代、下一個或上一個可見項目，第一個子項目，依此類推。  也有周遊樹狀結構的成員函式: [GetRootItem](../Topic/CTreeCtrl::GetRootItem.md)、 [GetFirstVisibleItem](../Topic/CTreeCtrl::GetFirstVisibleItem.md)、 [GetNextVisibleItem](../Topic/CTreeCtrl::GetNextVisibleItem.md)、 [GetPrevVisibleItem](../Topic/CTreeCtrl::GetPrevVisibleItem.md)、 [GetChildItem](../Topic/CTreeCtrl::GetChildItem.md)、 [GetNextSiblingItem](../Topic/CTreeCtrl::GetNextSiblingItem.md)、 [GetPrevSiblingItem](../Topic/CTreeCtrl::GetPrevSiblingItem.md)、 [GetParentItem](../Topic/CTreeCtrl::GetParentItem.md)、 [GetSelectedItem](../Topic/CTreeCtrl::GetSelectedItem.md)和 [GetDropHilightItem](../Topic/CTreeCtrl::GetDropHilightItem.md)。  
+ The [GetNextItem](../mfc/reference/ctreectrl-class.md#getnextitem) member function retrieves the tree control item that bears the specified relationship to the current item. This function can retrieve an item's parent, the next or previous visible item, the first child item, and so on. There are also member functions to traverse the tree: [GetRootItem](../mfc/reference/ctreectrl-class.md#getrootitem), [GetFirstVisibleItem](../mfc/reference/ctreectrl-class.md#getfirstvisibleitem), [GetNextVisibleItem](../mfc/reference/ctreectrl-class.md#getnextvisibleitem), [GetPrevVisibleItem](../mfc/reference/ctreectrl-class.md#getprevvisibleitem), [GetChildItem](../mfc/reference/ctreectrl-class.md#getchilditem), [GetNextSiblingItem](../mfc/reference/ctreectrl-class.md#getnextsiblingitem), [GetPrevSiblingItem](../mfc/reference/ctreectrl-class.md#getprevsiblingitem), [GetParentItem](../mfc/reference/ctreectrl-class.md#getparentitem), [GetSelectedItem](../mfc/reference/ctreectrl-class.md#getselecteditem), and [GetDropHilightItem](../mfc/reference/ctreectrl-class.md#getdrophilightitem).  
   
- [GetItemRect](../Topic/CTreeCtrl::GetItemRect.md) 成員函式來擷取樹狀目錄控制項項目的週框。  [GetCount](../Topic/CTreeCtrl::GetCount.md) 和 [GetVisibleCount](../Topic/CTreeCtrl::GetVisibleCount.md) 成員函式來分別擷取項目的計數樹狀控制項和目前是顯示在樹狀目錄控制項視窗中的項目計數，。  您可以確保特定項目藉由呼叫 [EnsureVisible](../Topic/CTreeCtrl::EnsureVisible.md) 成員函式是可見的。  
+ The [GetItemRect](../mfc/reference/ctreectrl-class.md#getitemrect) member function retrieves the bounding rectangle for a tree control item. The [GetCount](../mfc/reference/ctreectrl-class.md#getcount) and [GetVisibleCount](../mfc/reference/ctreectrl-class.md#getvisiblecount) member functions retrieve a count of the items in a tree control and a count of the items that are currently visible in the tree control's window, respectively. You can ensure that a particular item is visible by calling the [EnsureVisible](../mfc/reference/ctreectrl-class.md#ensurevisible) member function.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

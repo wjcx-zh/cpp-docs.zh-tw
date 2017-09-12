@@ -1,46 +1,65 @@
 ---
-title: "加入 MFC 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.adding.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], 加入 MFC"
-  - "MFC, 加入類別"
+title: Adding an MFC Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.classes.adding.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- classes [MFC], adding MFC
+- MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 加入 MFC 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 84d060fc72afc8b4bfc76c6bb109f4bcbd3602e6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-若要將衍生自 MFC 程式庫類別的類別加入至專案，請使用[類別檢視](http://msdn.microsoft.com/zh-tw/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中可用的 \[加入類別\] 命令。  指定新類別的名稱、選取基底類別並選取關聯的對話方塊 ID \(如果有\)。  程式碼精靈會建立標頭檔 \(Header File\) 和實作檔並將它們加入至您的專案。  
+---
+# <a name="adding-an-mfc-class"></a>Adding an MFC Class
+To add classes derived from Microsoft Foundation Class (MFC) library classes to your project, use the **Add Class** command available from [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925). Specify the name of the new class, select the base class, and select the ID of the dialog box with which it is associated (if any). The code wizard creates a header file and an implementation file and adds them to your project.  
   
 > [!NOTE]
->  如果您最初[建立具有 MFC 支援的應用程式](../../atl/reference/mfc-support-in-atl-projects.md)，則可以將 MFC 類別加入至 ATL COM 應用程式。  您也可以將 MFC 類別加入至具有 MFC 支援的 Win32 專案。  
+>  You can add MFC classes to an ATL COM application if you initially [created the application with MFC support](../../atl/reference/mfc-support-in-atl-projects.md). You can also add MFC classes to Win32 projects that have MFC support.  
   
-### 若要將 MFC 類別加入至您的專案  
+### <a name="to-add-an-mfc-class-to-your-project"></a>To add an MFC class to your project  
   
-1.  在 \[類別檢視\] 中以滑鼠右鍵按一下專案名稱。  按一下 \[加入\]，然後按一下 \[加入類別\] 開啟[加入類別](../../ide/add-class-dialog-box.md)對話方塊。  
+1.  From Class View, right-click the project name. Click **Add** and then click **Add Class** to open the [Add Class](../../ide/add-class-dialog-box.md) dialog box.  
   
-2.  在 \[範本\] 清單中選取 \[**MFC 類別**\]，然後按 \[**加入**\] 按鈕。  
+2.  In the Templates pane, select **MFC Class** and press the **Add** button.  
   
-3.  在 [MFC 類別精靈](../../mfc/reference/mfc-add-class-wizard.md)對話方塊中定義新類別的設定。  
+3.  Define the settings for the new class in the [MFC Class Wizard](../../mfc/reference/mfc-add-class-wizard.md) dialog box.  
   
-4.  按一下 \[完成\] 以關閉精靈，並在 \[類別檢視\] 中檢視新類別。  您也可以在**方案總管**中檢視精靈建立的檔案。  
+4.  Click **Finish** to close the wizard and view the new class in Class View. You can also view the files created by the wizard in **Solution Explorer**.  
   
-## 請參閱  
- [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入類別](../../ide/adding-a-class-visual-cpp.md)   
- [類別概觀](../../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Class Overview](../../mfc/class-library-overview.md)
+
+

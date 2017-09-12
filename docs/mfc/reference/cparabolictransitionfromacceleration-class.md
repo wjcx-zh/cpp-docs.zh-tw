@@ -1,5 +1,5 @@
 ---
-title: "CParabolicTransitionFromAcceleration 類別 |Microsoft 文件"
+title: CParabolicTransitionFromAcceleration Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CParabolicTransitionFromAcceleration class
+- CParabolicTransitionFromAcceleration [MFC], CParabolicTransitionFromAcceleration
+- CParabolicTransitionFromAcceleration [MFC], Create
+- CParabolicTransitionFromAcceleration [MFC], m_dblAcceleration
+- CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
+- CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
 caps.latest.revision: 18
 author: mikeblome
@@ -39,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: f0d3089a01cd244851be3d4bdf0453101a9c8274
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0426de47f08ea61bba206788a9f95ff6879ccc9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 類別
-封裝拋物線加速轉換。  
+# <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration Class
+Encapsulates a parabolic-acceleration transition.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CParabolicTransitionFromAcceleration : public CBaseTransition;  
@@ -57,41 +61,41 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|建構拋物線加速轉換，並使用指定的參數將它初始化。|  
+|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Constructs a parabolic-acceleration transition and initializes it with specified parameters.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
+|[CParabolicTransitionFromAcceleration::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|在轉換期間加速的動畫變數。|  
-|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|在轉換結束動畫變數的值。|  
-|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|在轉換結束動畫變數的速度。|  
+|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|The acceleration of the animation variable during the transition.|  
+|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|The value of the animation variable at the end of the transition.|  
+|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|The velocity of the animation variable at the end of the transition.|  
   
-## <a name="remarks"></a>備註  
- 拋物線加速轉換，在動畫變數的值變更的起始值的結束時間指定速度的最終值。 您可以控制變數達到最終的值所指定的加速速率的速度。 因為所有的轉換會自動清除，建議配置它們使用新的運算子。 封裝 IUIAnimationTransition 建立 COM 物件是由 CAnimationController::AnimateGroup，直到則為 NULL。 之後建立的 COM 物件沒有任何作用，請變更成員變數。  
+## <a name="remarks"></a>Remarks  
+ During a parabolic-acceleration transition, the value of the animation variable changes from the initial value to the final value ending at a specified velocity. You can control how quickly the variable reaches the final value by specifying the rate of acceleration. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
- 建構拋物線加速轉換，並使用指定的參數將它初始化。  
+##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
+ Constructs a parabolic-acceleration transition and initializes it with specified parameters.  
   
 ```  
 CParabolicTransitionFromAcceleration(
@@ -100,18 +104,18 @@ CParabolicTransitionFromAcceleration(
     DOUBLE dblAcceleration);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dblFinalValue`  
- 在轉換結束動畫變數的值。  
+ The value of the animation variable at the end of the transition.  
   
  `dblFinalVelocity`  
- 在轉換結束動畫變數的速度。  
+ The velocity of the animation variable at the end of the transition.  
   
  `dblAcceleration`  
- 在轉換期間加速的動畫變數。  
+ The acceleration of the animation variable during the transition.  
   
-##  <a name="create"></a>CParabolicTransitionFromAcceleration::Create  
- 呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
+##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -119,34 +123,34 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* /* not used */);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pLibrary`  
- 這是負責建立的標準轉換轉換程式庫指標。  
+ A pointer to transition library, which is responsible for creation of standard transitions.  
   
-### <a name="return-value"></a>傳回值  
- 如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="m_dblacceleration"></a>CParabolicTransitionFromAcceleration::m_dblAcceleration  
- 在轉換期間加速的動畫變數。  
+##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration  
+ The acceleration of the animation variable during the transition.  
   
 ```  
 DOUBLE m_dblAcceleration;  
 ```  
   
-##  <a name="m_dblfinalvalue"></a>CParabolicTransitionFromAcceleration::m_dblFinalValue  
- 在轉換結束動畫變數的值。  
+##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue  
+ The value of the animation variable at the end of the transition.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblfinalvelocity"></a>CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
- 在轉換結束動畫變數的速度。  
+##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
+ The velocity of the animation variable at the end of the transition.  
   
 ```  
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

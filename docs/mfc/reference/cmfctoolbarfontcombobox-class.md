@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBarFontComboBox 類別 |Microsoft 文件"
+title: CMFCToolBarFontComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBarFontComboBox class
+- CMFCToolBarFontComboBox [MFC], CMFCToolBarFontComboBox
+- CMFCToolBarFontComboBox [MFC], GetFontDesc
+- CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
 caps.latest.revision: 29
 author: mikeblome
@@ -37,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 50b22e19cab4f434ec53383c8a170344e89cbab0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e1c4df3e6eaf237c048502657bd2a9b6492b8767
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 類別
-包含可讓使用者從系統字型的清單選取字型的下拉式方塊控制項的工具列按鈕。  
+# <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox Class
+A toolbar button that contains a combo box control that enables the user to select a font from a list of system fonts.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton  
@@ -55,39 +57,39 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
 ## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保護的建構函式  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|建構 `CMFCToolBarFontComboBox` 物件。|  
+|[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|Constructs a `CMFCToolBarFontComboBox` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|傳回的指標`CMFCFontInfo`下拉式方塊中指定之索引的物件。|  
-|[CMFCToolBarFontComboBox::SetFont](#setfont)|字型的名稱或字型的前置詞和字元集合會依據 字型下拉式方塊中選取字型。|  
+|[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Returns a pointer to the `CMFCFontInfo` object for a specified index in the combo box.|  
+|[CMFCToolBarFontComboBox::SetFont](#setfont)|Selects a font in the font combo box according to either the name of the font, or the prefix and character set of the font.|  
   
-### <a name="data-members"></a>資料成員  
+### <a name="data-members"></a>Data Members  
  [CMFCToolBarFontComboBox::m_nFontHeight](#m_nfontheight)  
- 字型下拉式方塊中之字元的高度。  
+ The height of the characters in the font combo box.  
   
-## <a name="remarks"></a>備註  
- 若要將字型下拉式方塊按鈕加入至工具列，請遵循下列步驟︰  
+## <a name="remarks"></a>Remarks  
+ To add a font combo box button to a toolbar, follow these steps:  
   
-1.  為父工具列資源的按鈕保留假的資源 ID。  
+1.  Reserve a dummy resource ID for the button in the parent toolbar resource.  
   
-2.  建構`CMFCToolBarFontComboBox`物件。  
+2.  Construct a `CMFCToolBarFontComboBox` object.  
   
-3.  在訊息處理常式中處理`AFX_WM_RESETTOOLBAR`訊息，請以新的下拉式方塊按鈕取代原始的按鈕，使用[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
+3.  In the message handler that processes the `AFX_WM_RESETTOOLBAR` message, replace the original button with the new combo box button by using [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).  
   
-4.  同步處理的下拉式方塊中的文件中的字型選取使用的字型[CMFCToolBarFontComboBox::SetFont](#setfont)方法。  
+4.  Synchronize the font that is selected in the combo box with the font in the document by using the [CMFCToolBarFontComboBox::SetFont](#setfont) method.  
   
- 若要使用下拉式方塊中選取的字型，同步處理文件的字型，請使用[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)方法來擷取選取的字型屬性，並使用這些屬性來建立[CFont 類別](../../mfc/reference/cfont-class.md)物件。  
+ To synchronize the document's font with the font selected in the combo box, use the [CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc) method to retrieve the attributes of the selected font, and use those attributes to create a [CFont Class](../../mfc/reference/cfont-class.md) object.  
   
- 字型下拉式方塊按鈕會呼叫 Win32 函式[EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620)來判斷系統可用的螢幕及印表機字型。  
+ The font combo box button calls the Win32 function [EnumFontFamiliesEx](http://msdn.microsoft.com/library/windows/desktop/dd162620) to determine the screen and printer fonts available to the system.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
@@ -96,11 +98,11 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
  [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxtoolbarfontcombobox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
- 建構[CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)物件。  
+##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+ Constructs a [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) object.  
   
 ```  
 public:  
@@ -124,15 +126,15 @@ CMFCToolBarFontComboBox(
 CMFCToolBarFontComboBox();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 下拉式方塊的命令 ID。  
+ The command ID of the combo box.  
   
  [in] `iImage`  
- 工具列按鈕影像的以零為起始的索引。 映像位於[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)物件[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)類別會維護。  
+ The zero-based index of a toolbar image. The image is located in the [CMFCToolBarImages Class](../../mfc/reference/cmfctoolbarimages-class.md) object that [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md) class maintains.  
   
  [in] `nFontType`  
- 字型下拉式方塊包含型別。 這個參數可以是下列值的組合 (布林值 OR):  
+ The types of fonts that the combo box contains. This parameter can be a combination (boolean OR) of the following values:  
   
  DEVICE_FONTTYPE  
   
@@ -141,54 +143,54 @@ CMFCToolBarFontComboBox();
  TRUETYPE_FONTTYPE  
   
  [in] `nCharSet`  
- 如果設定為 DEFAULT_CHARSET，下拉式方塊包含所有字元集中的所有唯一名稱的字型。 （如果有兩個具有相同名稱的字型，下拉式方塊包含其中一個）。如果設定為有效的字元設定的值，下拉式方塊包含指定的字元集中的字型。 請參閱[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)的可能字元清單設定。  
+ If set to DEFAULT_CHARSET, the combo box contains all uniquely-named fonts in all character sets. (If there are two fonts with the same name, the combo box contains one of them.) If set to a valid character set value, the combo box contains only fonts in the specified character set. See [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) for a listing of possible character sets.  
   
  [in] `dwStyle`  
- 下拉式方塊樣式。 (請參閱[下拉式方塊樣式](../../mfc/reference/combo-box-styles.md))  
+ The style of the combo box. (see [Combo-Box Styles](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
  [in] `iWidth`  
- 單位為像素編輯控制項的寬度。  
+ The width in pixels of the edit control.  
   
  [in] `nPitchAndFamily`  
- 如果設定為 DEFAULT_PITCH，下拉式方塊包含不論字幅的字型。 如果設定為 FIXED_PITCH 或 VARIABLE_PITCH，下拉式方塊包含只與該音調類型的字型。 目前不支援基礎字型家族的篩選。  
+ If set to DEFAULT_PITCH, the combo box contains fonts regardless of pitch. If set to FIXED_PITCH or VARIABLE_PITCH, the combo box contains only fonts with that pitch type. Filtering based on font family is not currently supported.  
   
- [輸出] `pLstFontsExternal`  
- 指標[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中儲存可用的字型。  
+ [out] `pLstFontsExternal`  
+ Pointer to a [CObList Class](../../mfc/reference/coblist-class.md) object that stores the available fonts.  
   
-### <a name="remarks"></a>備註  
- 通常，`CMFCToolBarFontComboBox`物件使用的字型清單儲存於單一共用`CObList`物件。 如果您使用建構函式的第二個多載，並提供有效指標`pLstFontsExternal`，`CMFCToolBarFontComboBox`物件將會改為填滿`CObList`，`pLstFontsExternal`指向可用的字型。  
+### <a name="remarks"></a>Remarks  
+ Usually, `CMFCToolBarFontComboBox` objects store the list of available fonts in a single shared `CObList` object. If you use the second overload of the constructor and provide a valid pointer to `pLstFontsExternal`, that `CMFCToolBarFontComboBox` object will instead fill the `CObList` that `pLstFontsExternal` points to with available fonts.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何建構`CMFCToolBarFontComboBox`物件。 此程式碼片段是一部分[字板範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCToolBarFontComboBox` object. This code snippet is part of the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad #&7;](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
- 傳回的指標`CMFCFontInfo`下拉式方塊中指定之索引的物件。  
+##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
+ Returns a pointer to the `CMFCFontInfo` object for a specified index in the combo box.  
   
 ```  
 const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 指定的下拉式方塊項目以零為起始的索引。  
+ Specifies the zero-based index of a combo box item.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CMFCFontInfo`物件。 如果`iIndex`未指定有效的項目索引，則傳回值是`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CMFCFontInfo` object. If `iIndex` does not specify a valid item index, the return value is `NULL`.  
   
-##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
- 指定高度，單位為像素下拉式方塊的擁有者繪製樣式的字型下拉式方塊中的字元。  
+##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
+ Specifies the height, in pixels, of characters in the font combo box if the combo box has owner draw style.  
   
 ```  
 static int m_nFontHeight  
 ```  
   
-### <a name="remarks"></a>備註  
- 如果`m_nFontHeight`變數是 0，則根據下拉式方塊的預設字型自動計算高度。 高度同時包含的基準上方字元高度和深度的基準線下方的字元。  
+### <a name="remarks"></a>Remarks  
+ If the `m_nFontHeight` variable is 0, the height is calculated automatically according to the default font of the combo box. The height includes both the ascent of characters above the baseline and the descent of characters underneath the baseline.  
   
-##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
- 選取的字型名稱與字元字型下拉式方塊中的字型設定的參數中指定。  
+##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
+ Selects the font in the font combo box according to the font name and character set that are specified in the parameters.  
   
 ```  
 BOOL SetFont(
@@ -197,31 +199,31 @@ BOOL SetFont(
     BOOL bExact=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 指定字型名稱的前置詞。  
+ Specifies the font name or prefix.  
   
  [in] `nCharSet`  
- 指定的字元集。  
+ Specifies the character set.  
   
  [in] `bExact`  
- 指定是否`lpszName`包含字型的名稱或字型前置詞。  
+ Specifies whether `lpszName` contains the font name or the font prefix.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果選取的字型已順利啟動。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the font was selected successfully; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果`bExact`是`TRUE`，這個方法也會選取與您指定為名稱完全相符的字型`lpszName`。 如果`bExact`是`FALSE`，這個方法會選取開頭為指定的文字字型`lpszName`，並使用您指定為字元集`nCharSet`。 如果`nCharSet`設為 DEFAULT_CHARSET，字元集會忽略，而且只`lpszName`將用來選取字型。  
+### <a name="remarks"></a>Remarks  
+ If `bExact` is `TRUE`, this method selects a font that exactly matches the name that you specified as `lpszName`. If `bExact` is `FALSE`, this method selects a font that starts with the text specified as `lpszName` and that uses the character set that you specified as `nCharSet`. If `nCharSet` is set to DEFAULT_CHARSET, the character set will be ignored and only `lpszName` will be used to select a font.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)   
- [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [CMFCToolBarComboBoxButton 類別](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
- [CMFCFontInfo 類別](../../mfc/reference/cmfcfontinfo-class.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [CMFCToolBarComboBoxButton Class](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
+ [CMFCFontInfo Class](../../mfc/reference/cmfcfontinfo-class.md)   
  [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)   
- [逐步解說︰ 將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

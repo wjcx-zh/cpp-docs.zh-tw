@@ -1,5 +1,5 @@
 ---
-title: "CMDIChildWndEx 類別 |Microsoft 文件"
+title: CMDIChildWndEx Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -67,11 +67,59 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMDIChildWndEx class
-- ActivateFrame method
-- PreTranslateMessage method
-- GetThisClass method
-- CreateObject method
+- CMDIChildWndEx [MFC], ActivateTopLevelFrame
+- CMDIChildWndEx [MFC], AddPane
+- CMDIChildWndEx [MFC], AddTabbedPane
+- CMDIChildWndEx [MFC], AdjustDockingLayout
+- CMDIChildWndEx [MFC], CanShowOnMDITabs
+- CMDIChildWndEx [MFC], CanShowOnTaskBarTabs
+- CMDIChildWndEx [MFC], CanShowOnWindowsList
+- CMDIChildWndEx [MFC], DockPane
+- CMDIChildWndEx [MFC], DockPaneLeftOf
+- CMDIChildWndEx [MFC], EnableAutoHidePanes
+- CMDIChildWndEx [MFC], EnableDocking
+- CMDIChildWndEx [MFC], EnableTaskbarThumbnailClipRect
+- CMDIChildWndEx [MFC], GetDockingManager
+- CMDIChildWndEx [MFC], GetDocumentName
+- CMDIChildWndEx [MFC], GetFrameIcon
+- CMDIChildWndEx [MFC], GetFrameText
+- CMDIChildWndEx [MFC], GetPane
+- CMDIChildWndEx [MFC], GetRelatedTabGroup
+- CMDIChildWndEx [MFC], GetTabbedPane
+- CMDIChildWndEx [MFC], GetTabProxyWnd
+- CMDIChildWndEx [MFC], GetTaskbarPreviewWnd
+- CMDIChildWndEx [MFC], GetTaskbarThumbnailClipRect
+- CMDIChildWndEx [MFC], GetToolbarButtonToolTipText
+- CMDIChildWndEx [MFC], InsertPane
+- CMDIChildWndEx [MFC], InvalidateIconicBitmaps
+- CMDIChildWndEx [MFC], IsPointNearDockSite
+- CMDIChildWndEx [MFC], IsReadOnly
+- CMDIChildWndEx [MFC], IsRegisteredWithTaskbarTabs
+- CMDIChildWndEx [MFC], IsTabbedPane
+- CMDIChildWndEx [MFC], IsTaskbarTabsSupportEnabled
+- CMDIChildWndEx [MFC], IsTaskbarThumbnailClipRectEnabled
+- CMDIChildWndEx [MFC], m_dwDefaultTaskbarTabPropertyFlags
+- CMDIChildWndEx [MFC], OnGetIconicLivePreviewBitmap
+- CMDIChildWndEx [MFC], OnGetIconicThumbnail
+- CMDIChildWndEx [MFC], OnMoveMiniFrame
+- CMDIChildWndEx [MFC], OnPressTaskbarThmbnailCloseButton
+- CMDIChildWndEx [MFC], OnSetPreviewMode
+- CMDIChildWndEx [MFC], OnTaskbarTabThumbnailActivate
+- CMDIChildWndEx [MFC], OnTaskbarTabThumbnailMouseActivate
+- CMDIChildWndEx [MFC], OnTaskbarTabThumbnailStretch
+- CMDIChildWndEx [MFC], OnUpdateFrameTitle
+- CMDIChildWndEx [MFC], PaneFromPoint
+- CMDIChildWndEx [MFC], RecalcLayout
+- CMDIChildWndEx [MFC], RegisterTaskbarTab
+- CMDIChildWndEx [MFC], RemovePaneFromDockManager
+- CMDIChildWndEx [MFC], SetRelatedTabGroup
+- CMDIChildWndEx [MFC], SetTaskbarTabActive
+- CMDIChildWndEx [MFC], SetTaskbarTabOrder
+- CMDIChildWndEx [MFC], SetTaskbarTabProperties
+- CMDIChildWndEx [MFC], SetTaskbarThumbnailClipRect
+- CMDIChildWndEx [MFC], ShowPane
+- CMDIChildWndEx [MFC], UnregisterTaskbarTab
+- CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
 caps.latest.revision: 35
 author: mikeblome
@@ -92,20 +140,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 016de8fdade75376f9f081539c0f160a6502bc37
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d107f0794422901f862854f47b046e1970eb968c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
-`CMDIChildWndEx`類別提供的 Windows 功能多重文件介面 (MDI) 子視窗。 該擴充功能的[CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)。 當 MDI 應用程式使用特定 MFC 類別時，Framework 必須有這個類別。  
+# <a name="cmdichildwndex-class"></a>CMDIChildWndEx Class
+The `CMDIChildWndEx` class provides the functionality of a Windows multiple document interface (MDI) child window. It extends the functionality of [CMDIChildWnd Class](../../mfc/reference/cmdichildwnd-class.md). The framework requires this class when an MDI application uses certain MFC classes.  
  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
 
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMDIChildWndEx : public CMDIChildWnd  
@@ -113,77 +161,77 @@ class CMDIChildWndEx : public CMDIChildWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|啟用層級的最上層框架時應該從工作列 索引標籤中啟動應用程式架構在內部呼叫。|  
-|`CMDIChildWndEx::AddDockSite`|這個方法不會使用或實作。|  
-|[CMDIChildWndEx::AddPane](#addpane)|加入窗格。|  
-|[CMDIChildWndEx::AddTabbedPane](#addtabbedpane)|加入索引標籤式的窗格。|  
-|[CMDIChildWndEx::AdjustDockingLayout](#adjustdockinglayout)|調整停駐配置。|  
+|[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Called internally by the framework to activate top level frame when the application should be activated from a taskbar tab.|  
+|`CMDIChildWndEx::AddDockSite`|This method is not used or implemented.|  
+|[CMDIChildWndEx::AddPane](#addpane)|Adds a pane.|  
+|[CMDIChildWndEx::AddTabbedPane](#addtabbedpane)|Adds a tabbed pane.|  
+|[CMDIChildWndEx::AdjustDockingLayout](#adjustdockinglayout)|Adjusts the docking layout.|  
 |[CMDIChildWndEx::CanShowOnMDITabs](#canshowonmditabs)||  
-|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|會告知 framework 是否顯示此 MDI 子系，Windows 7 工作列 索引標籤上。|  
-|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|傳回`TRUE`如果 MDI 子視窗名稱可以顯示在[CMFCWindowsManagerDialog 類別](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)對話方塊。 否則傳回 `FALSE`。|  
-|`CMDIChildWndEx::CreateObject`|若要建立此類別類型的動態執行個體架構呼叫。|  
-|[CMDIChildWndEx::DockPane](#dockpane)|停駐窗格。|  
-|[CMDIChildWndEx::DockPaneLeftOf](#dockpaneleftof)|將窗格停駐在另一個窗格的左邊。|  
-|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|啟用自動隱藏窗格模式時指定的側邊的視窗停駐。|  
-|[CMDIChildWndEx::EnableDocking](#enabledocking)|啟用的子視窗停駐到主框架。|  
-|[CMDIChildWndEx::EnableTaskbarThumbnailClipRect](#enabletaskbarthumbnailcliprect)|啟用或停用自動選擇視窗的工作區，以顯示該視窗的工作列中的縮圖的一部分。|  
+|[CMDIChildWndEx::CanShowOnTaskBarTabs](#canshowontaskbartabs)|Tells the framework whether this MDI child can be displayed on Windows 7 taskbar tabs.|  
+|[CMDIChildWndEx::CanShowOnWindowsList](#canshowonwindowslist)|Returns `TRUE` if the MDI child window name can be displayed in the [CMFCWindowsManagerDialog Class](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialog box. Otherwise returns `FALSE`.|  
+|`CMDIChildWndEx::CreateObject`|Called by the framework to create a dynamic instance of this class type.|  
+|[CMDIChildWndEx::DockPane](#dockpane)|Docks a pane.|  
+|[CMDIChildWndEx::DockPaneLeftOf](#dockpaneleftof)|Docks one pane to the left of another pane.|  
+|[CMDIChildWndEx::EnableAutoHidePanes](#enableautohidepanes)|Enables auto-hide mode for panes when they are docked at the specified sides of the window.|  
+|[CMDIChildWndEx::EnableDocking](#enabledocking)|Enables docking of the child window to the main frame.|  
+|[CMDIChildWndEx::EnableTaskbarThumbnailClipRect](#enabletaskbarthumbnailcliprect)|Enables or disables automatic selection of a portion of a window's client area to display  as that window's thumbnail in the taskbar.|  
 |[CMDIChildWndEx::GetDockingManager](#getdockingmanager)||  
-|[CMDIChildWndEx::GetDocumentName](#getdocumentname)|傳回在 MDI 子視窗中顯示的文件的名稱。|  
-|[CMDIChildWndEx::GetFrameIcon](#getframeicon)|若要擷取的 MDI 子視窗圖示架構呼叫。|  
-|[CMDIChildWndEx::GetFrameText](#getframetext)|若要擷取的 MDI 子視窗的文字架構呼叫。|  
-|[CMDIChildWndEx::GetPane](#getpane)|尋找窗格中所指定的控制項 id。|  
+|[CMDIChildWndEx::GetDocumentName](#getdocumentname)|Returns the name of the document that is displayed in the MDI child window.|  
+|[CMDIChildWndEx::GetFrameIcon](#getframeicon)|Called by the framework to retrieve the MDI child window icon.|  
+|[CMDIChildWndEx::GetFrameText](#getframetext)|Called by the framework to retrieve the text for the MDI child window.|  
+|[CMDIChildWndEx::GetPane](#getpane)|Finds a pane by the specified control ID.|  
 |[CMDIChildWndEx::GetRelatedTabGroup](#getrelatedtabgroup)||  
-|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|傳回已轉換為索引標籤式文件內嵌停駐窗格的指標。|  
-|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|傳回索引標籤上的 proxy 視窗，實際上向 Windows 7 工作列 索引標籤。|  
-|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|若要取得 Windows 7 工作列 索引標籤的縮圖上顯示的子視窗 （通常是檢視或分隔視窗） 需要時，由架構呼叫。|  
-|[CMDIChildWndEx::GetTaskbarThumbnailClipRect](#gettaskbarthumbnailcliprect)|需要選取視窗的工作區，以顯示該視窗的工作列中的縮圖的一部分時，由架構呼叫。|  
-|`CMDIChildWndEx::GetThisClass`|若要取得的指標，架構呼叫[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與這個類別的型別相關聯的物件。|  
-|[CMDIChildWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|若要擷取的工具列按鈕的工具提示架構呼叫。|  
-|[CMDIChildWndEx::InsertPane](#insertpane)|連接管理員會向指定的窗格。|  
-|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|失效的 MDI 子系圖示的點陣圖表示法。|  
-|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|判斷指定的點是否停駐位置附近。|  
-|[CMDIChildWndEx::IsReadOnly](#isreadonly)|傳回`TRUE`子視窗中顯示的文件是唯讀。 否則傳回 `FALSE`。|  
-|[CMDIChildWndEx::IsRegisteredWithTaskbarTabs](#isregisteredwithtaskbartabs)|如果 Windows 7 工作列 索引標籤已成功註冊的 MDI 子系，則傳回 TRUE。|  
-|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|傳回`TRUE`如果 MDI 子視窗包含的停駐窗格。 否則傳回 `FALSE`。|  
-|[CMDIChildWndEx::IsTaskbarTabsSupportEnabled](#istaskbartabssupportenabled)|會告訴 Windows 7 工作列 索引標籤上是否可以顯示 MDI 子視窗。|  
-|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|指示是否啟用或停用自動選擇視窗的工作區，以顯示該視窗的工作列中的縮圖的一部分。|  
-|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|要登錄旗標的組合，由架構傳遞至 SetTaskbarTabProperties 方法中，當 索引標籤 （MDI 子系） 與 Windows 7 工作列 索引標籤。 預設的組合是 STPF_USEAPPTHUMBNAILWHENACTIVE |STPF_USEAPPPEEKWHENACTIVE。|  
-|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|需要取得即時預覽的 MDI 子系的點陣圖時，由架構呼叫。|  
-|[CMDIChildWndEx::OnGetIconicThumbnail](#ongeticonicthumbnail)|需要取得圖示的 MDI 子視窗的縮圖的點陣圖時，由架構呼叫。|  
-|[CMDIChildWndEx::OnMoveMiniFrame](#onmoveminiframe)|若要移動的迷你框架視窗，架構呼叫。|  
-|[CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton](#onpresstaskbarthmbnailclosebutton)|當使用者按下工作列 索引標籤的縮圖上的 關閉 按鈕時，由框架呼叫...|  
-|[CMDIChildWndEx::OnSetPreviewMode](#onsetpreviewmode)|進入或結束預覽列印模式架構呼叫。|  
-|[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|當工作列 索引標籤縮圖應處理 WM_ACTIVATE 訊息時，由架構呼叫。|  
-|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|當工作列 索引標籤縮圖應處理 WM_MOUSEACTIVATE 訊息時，由架構呼叫。|  
-|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|需要自動縮放的 MDI 子系的 Windows 7 工作列 索引標籤縮圖預覽的點陣圖時，由架構呼叫。|  
-|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|若要更新框架標題架構呼叫。 (覆寫 `CMDIChildWnd::OnUpdateFrameTitle`。)|  
-|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|傳回包含指定的點的窗格。|  
-|`CMDIChildWndEx::PreTranslateMessage`|類別所使用的[CWinApp](../../mfc/reference/cwinapp-class.md)轉譯視窗訊息，再分派給[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫[CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
-|[CMDIChildWndEx::RecalcLayout](#recalclayout)|重新計算視窗配置。|  
-|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|向 Windows 7 工作列 索引標籤中的 MDI 子系。|  
-|[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|移除連接管理員 窗格。|  
+|[CMDIChildWndEx::GetTabbedPane](#gettabbedpane)|Returns a pointer to an embedded docking pane that was converted to a tabbed document.|  
+|[CMDIChildWndEx::GetTabProxyWnd](#gettabproxywnd)|Returns tab proxy window actually registered with Windows 7 taskbar tabs.|  
+|[CMDIChildWndEx::GetTaskbarPreviewWnd](#gettaskbarpreviewwnd)|Called by the framework when it needs to obtain a child window (usually a view or splitter window) to be displayed on Windows 7 taskbar tab thumbnail.|  
+|[CMDIChildWndEx::GetTaskbarThumbnailClipRect](#gettaskbarthumbnailcliprect)|Called by the framework when it needs to select a portion of a window's client area to display  as that window's thumbnail in the taskbar.|  
+|`CMDIChildWndEx::GetThisClass`|Called by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMDIChildWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|Called by the framework to retrieve a tooltip for a toolbar button.|  
+|[CMDIChildWndEx::InsertPane](#insertpane)|Registers the specified pane with the docking manager.|  
+|[CMDIChildWndEx::InvalidateIconicBitmaps](#invalidateiconicbitmaps)|Invalidates iconic bitmap representation of MDI child.|  
+|[CMDIChildWndEx::IsPointNearDockSite](#ispointneardocksite)|Determines whether a specified point is near the dock site.|  
+|[CMDIChildWndEx::IsReadOnly](#isreadonly)|Returns `TRUE` if the document that is displayed in the child window is read-only. Otherwise returns `FALSE`.|  
+|[CMDIChildWndEx::IsRegisteredWithTaskbarTabs](#isregisteredwithtaskbartabs)|Returns TRUE if MDI child was successfully registered with Windows 7 taskbar tabs.|  
+|[CMDIChildWndEx::IsTabbedPane](#istabbedpane)|Returns `TRUE` if the MDI child window contains a docking pane. Otherwise returns `FALSE`.|  
+|[CMDIChildWndEx::IsTaskbarTabsSupportEnabled](#istaskbartabssupportenabled)|Tells whether the MDI child can appear on Windows 7 taskbar tabs.|  
+|[CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled](#istaskbarthumbnailcliprectenabled)|Tells whether automatic selection of a portion of a window's client area to display  as that window's thumbnail in the taskbar is enabled or disabled.|  
+|[CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags](#m_dwdefaulttaskbartabpropertyflags)|A combination of flags, which is passed by the framework to the SetTaskbarTabProperties method, when a tab (MDI child) is being registered with Windows 7 taskbar tabs. The default combination is STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.|  
+|[CMDIChildWndEx::OnGetIconicLivePreviewBitmap](#ongeticoniclivepreviewbitmap)|Called by the framework when it needs to obtain a bitmap for live preview of MDI child.|  
+|[CMDIChildWndEx::OnGetIconicThumbnail](#ongeticonicthumbnail)|Called by the framework when it needs to obtain a bitmap for iconic thumbnail of MDI child.|  
+|[CMDIChildWndEx::OnMoveMiniFrame](#onmoveminiframe)|Called by the framework to move a mini-frame window.|  
+|[CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton](#onpresstaskbarthmbnailclosebutton)|Called by the framework when the user presses close button on Taskbar tab thumbnail..|  
+|[CMDIChildWndEx::OnSetPreviewMode](#onsetpreviewmode)|Called by the framework to enter or exit print preview mode.|  
+|[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|Called by the framework when the Taskbar tab thumbnail should process WM_ACTIVATE message.|  
+|[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|Called by the framework when the Taskbar tab thumbnail should process WM_MOUSEACTIVATE message.|  
+|[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Called by the framework when it needs to stretch a bitmap for Windows 7 taskbar tab thumbnail preview of MDI child.|  
+|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Called by the framework to update the frame title. (Overrides `CMDIChildWnd::OnUpdateFrameTitle`.)|  
+|[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Returns the pane that contains the given point.|  
+|`CMDIChildWndEx::PreTranslateMessage`|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMDIChildWndEx::RecalcLayout](#recalclayout)|Recalculates the layout of the window.|  
+|[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Registers MDI child with Windows 7 taskbar tabs.|  
+|[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Removes a pane from the docking manager.|  
 |[CMDIChildWndEx::SetRelatedTabGroup](#setrelatedtabgroup)||  
-|[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|啟動對應的 Windows 7 工作列 索引標籤。|  
-|[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|插入之前 Windows 7 工作列 索引標籤上指定之視窗的 MDI 子系。|  
-|[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|設定 [Windows 7 工作列] 索引標籤的屬性。|  
-|[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|若要設定裁剪矩形來選取視窗的工作區，以顯示該視窗的縮圖，在工作列中的部分架構在內部呼叫。|  
+|[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|Activates corresponding Windows 7 taskbar tab.|  
+|[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|Inserts MDI child before specified window on Windows 7 taskbar tabs.|  
+|[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|Sets properties for a Windows 7 taskbar tab.|  
+|[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|Called internally by the framework to set clipping rectangle to select a portion of a window's client area to display  as that window's thumbnail in the taskbar.|  
 |[CMDIChildWndEx::ShowPane](#showpane)||  
-|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|移除 Windows 7 工作列 索引標籤中的 MDI 子系。|  
-|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|更新 Windows 7 工作列 索引標籤的圖示。|  
+|[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Removes MDI child from Windows 7 taskbar tabs.|  
+|[CMDIChildWndEx::UpdateTaskbarTabIcon](#updatetaskbartabicon)|Updates Windows 7 taskbar tab icon.|  
   
-## <a name="remarks"></a>備註  
- MDI 應用程式中利用停駐的擴充功能，衍生您的應用程式的 MDI 子視窗類別`CMDIChildWndEx`而不是[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)。  
+## <a name="remarks"></a>Remarks  
+ To take advantage of extended docking features in MDI applications, derive the MDI child window class of your application from `CMDIChildWndEx` instead of [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md).  
   
-## <a name="example"></a>範例  
- 下列範例是衍生自`CMDIChildWndEx`。 此程式碼片段來自[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example derives a class from `CMDIChildWndEx`. This code snippet comes from the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&3;](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -196,11 +244,11 @@ class CMDIChildWndEx : public CMDIChildWnd
   
  [CMDIChildWndEx](../../mfc/reference/cmdichildwndex-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxMDIChildWndEx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxMDIChildWndEx.h  
   
-##  <a name="addpane"></a>CMDIChildWndEx::AddPane  
- 加入窗格。  
+##  <a name="addpane"></a>  CMDIChildWndEx::AddPane  
+ Adds a pane.  
   
 ```  
 BOOL AddPane(
@@ -208,64 +256,64 @@ BOOL AddPane(
     BOOL bTail = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 窗格的指標。  
+ A pointer to the pane.  
   
  [in] `bTail`  
- `TRUE`若要將停駐管理員時，窗格的清單結尾新增窗格否則， `FALSE`。  
+ `TRUE` to add the pane to the end of the list of panes for the docking manager; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果連接管理員時，已成功註冊窗格，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was successfully registered with the docking manager; otherwise, `FALSE`.  
   
-##  <a name="addtabbedpane"></a>CMDIChildWndEx::AddTabbedPane  
- 加入索引標籤式的窗格。  
+##  <a name="addtabbedpane"></a>  CMDIChildWndEx::AddTabbedPane  
+ Adds a tabbed pane.  
   
 ```  
 void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 窗格的指標。  
+ A pointer to the pane.  
   
-##  <a name="adjustdockinglayout"></a>CMDIChildWndEx::AdjustDockingLayout  
- 調整停駐配置。  
+##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
+ Adjusts the docking layout.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `hdwp`  
- 延後的視窗位置結構的控制代碼。  
+ Handle to a deferred window position structure.  
   
-##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
+##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
 
   
 ```  
 virtual BOOL CanShowOnMDITabs();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="canshowonwindowslist"></a>CMDIChildWndEx::CanShowOnWindowsList  
- 指定是否可以在顯示 MDI 子視窗名稱[CMFCWindowsManagerDialog 類別](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)對話方塊。  
+##  <a name="canshowonwindowslist"></a>  CMDIChildWndEx::CanShowOnWindowsList  
+ Specifies whether the MDI child window name can be displayed in the [CMFCWindowsManagerDialog Class](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) dialog box.  
   
 ```  
 virtual BOOL CanShowOnWindowsList();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果視窗可以顯示在**Windows**  對話方塊中，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the window can be displayed in the **Windows** dialog box; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法在衍生類別中的，並傳回`FALSE`不會顯示在視窗中，如果**Windows**對話方塊。 此函式會從呼叫`CMFCWindowsManagerDialog`。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class and return `FALSE` if the window should not be displayed in the **Windows** dialog box. This function is called from `CMFCWindowsManagerDialog`.  
   
-##  <a name="dockpane"></a>CMDIChildWndEx::DockPane  
- 停駐窗格。  
+##  <a name="dockpane"></a>  CMDIChildWndEx::DockPane  
+ Docks a pane.  
   
 ```  
 void DockPane(
@@ -274,21 +322,21 @@ void DockPane(
     LPCRECT lpRect = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 窗格的指標。  
+ A pointer to the pane.  
   
  [in] `nDockBarID`  
- 窗格的識別碼。  
+ The ID of the pane.  
   
  [in] `lpRect`  
- 矩形的指標。  
+ A pointer to a rectangle.  
   
-### <a name="remarks"></a>備註  
- `lpRect`不使用參數。  
+### <a name="remarks"></a>Remarks  
+ The `lpRect` parameter is not used.  
   
-##  <a name="dockpaneleftof"></a>CMDIChildWndEx::DockPaneLeftOf  
- 將窗格停駐在另一個窗格的左邊。  
+##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
+ Docks one pane to the left of another pane.  
   
 ```  
 BOOL DockPaneLeftOf(
@@ -296,31 +344,31 @@ BOOL DockPaneLeftOf(
     CPane* pLeftOf);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pBar`  
- 指標是可停駐窗格。  
+ A pointer to the pane that is to be docked.  
   
  `pLeftOf`  
- 指標，此窗格，可做為參考點。  
+ A pointer to the pane that serves as the point of reference.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果成功，`FALSE`失敗。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` on success, `FALSE` on failure.  
   
-### <a name="remarks"></a>備註  
- 這個方法會採用所指定的窗格`pBar`並固定在左側窗格中所指定的`pLeftOf`。  
+### <a name="remarks"></a>Remarks  
+ This method takes the pane specified by `pBar` and docks it at the left side of the pane specified by `pLeftOf`.  
   
- 當您想要停駐在預先定義的順序中的幾個窗格，請呼叫這個方法。  
+ Call this method when you want to dock several panes in predefined order.  
   
-##  <a name="enableautohidepanes"></a>CMDIChildWndEx::EnableAutoHidePanes  
- 啟用自動隱藏窗格模式時指定的側邊的視窗停駐。  
+##  <a name="enableautohidepanes"></a>  CMDIChildWndEx::EnableAutoHidePanes  
+ Enables auto-hide mode for panes when they are docked at the specified sides of the window.  
   
 ```  
 BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwDockStyle`  
- 指定已啟用的主框架視窗的側邊。 使用一或多個下列旗標。  
+ Specifies the sides of the main frame window that is enabled. Use one or more of the following flags.  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -330,128 +378,128 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
   
 - `CBRS_ALIGN_BOTTOM`  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds; otherwise `FALSE`.  
   
-##  <a name="enabledocking"></a>CMDIChildWndEx::EnableDocking  
- 啟用的子視窗停駐到主框架。  
+##  <a name="enabledocking"></a>  CMDIChildWndEx::EnableDocking  
+ Enables docking of the child window to the main frame.  
   
 ```  
 BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwDockStyle`  
- 指定要啟用的停駐對齊。  
+ Specifies the docking alignment to enable.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來啟用停駐於主框架的對齊方式。 您可以傳遞 CBRS_ALIGN_ 旗標的組合 (如需詳細資訊，請參閱[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking))。  
+### <a name="remarks"></a>Remarks  
+ Call this method to enable docking alignment to the main frame. You can pass a combination of CBRS_ALIGN_ flags (for more information, see [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
-##  <a name="getdockingmanager"></a>CMDIChildWndEx::GetDockingManager  
+##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager  
 
   
 ```  
 CDockingManager* GetDockingManager();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getdocumentname"></a>CMDIChildWndEx::GetDocumentName  
- 傳回在 MDI 子視窗中顯示的文件的名稱。  
+##  <a name="getdocumentname"></a>  CMDIChildWndEx::GetDocumentName  
+ Returns the name of the document that is displayed in the MDI child window.  
   
 ```  
 virtual LPCTSTR GetDocumentName(CObject** pObj);
 ```  
   
-### <a name="return-value"></a>傳回值  
- 包含文件名稱的字串指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a string that contains the name of a document.  
   
-### <a name="remarks"></a>備註  
- 文件是 MDI 子視窗會顯示。 一般而言，視窗會顯示從載入或儲存到檔案中的資料。 因此，文件的名稱是檔案的名稱。 預設實作`GetDocumentName`傳回字串，取自`CDocument::GetPathName`。  
+### <a name="remarks"></a>Remarks  
+ A document is what the MDI child window displays. Generally, the window displays data that is loaded from or saved to a file. Therefore, the name of the document is the name of the file. The default implementation of `GetDocumentName` returns a string obtained from `CDocument::GetPathName`.  
   
- 如果此視窗會顯示不從檔案載入的文件，覆寫這個方法在衍生類別中的，並傳回唯一的文件識別碼。  
+ If the window displays a document that is not loaded from a file, override this method in a derived class and return a unique document identifier.  
   
- `GetDocumentName`是由架構呼叫，它會將儲存所有開啟的文件的狀態時。 傳回的字串會寫入登錄。  
+ `GetDocumentName` is called by the framework when it saves the state of all opened documents. The returned string is written to the registry.  
   
- 文件名稱時，架構稍後還原狀態，會從登錄讀取，傳遞至[CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow)。 覆寫這個方法在[cmdiframewndex 是](../../mfc/reference/cmdiframewndex-class.md)-衍生的類別，建立或開啟具有此名稱的文件並在具有此名稱的檔案中讀取。 如果檔案不以基礎文件，根據建立文件本身的文件識別碼。 只有當您想要儲存和還原的文件，您應該執行上述動作。  
+ When the framework is restoring state later, the document name is read from the registry and passed to [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow). Override this method in a [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-derived class and create or open a document that has this name and read in the file that has this name. If the document is not based on a file, create the document based on the document identifier itself. You should do the preceding actions only if you intend to save and restore documents.  
   
-### <a name="example"></a>範例  
- 下列範例示範 `GetDocumentName` 方法的用法。 此程式碼片段來自[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates the use of the `GetDocumentName` method. This code snippet comes from the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&17;](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
   
-##  <a name="getframeicon"></a>CMDIChildWndEx::GetFrameIcon  
- 若要擷取之 MDI 子視窗圖示架構呼叫。  
+##  <a name="getframeicon"></a>  CMDIChildWndEx::GetFrameIcon  
+ Called by the framework to retrieve the icon of the MDI child window.  
   
 ```  
 virtual HICON GetFrameIcon() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 視窗圖示的控制代碼。  
+### <a name="return-value"></a>Return Value  
+ A handle to the window icon.  
   
-### <a name="remarks"></a>備註  
- 判斷哪個圖示来顯示在包含 MDI 子框架視窗的 MDI 索引標籤上的架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework to determine what icon to display on the MDI tab that contains the MDI child frame window.  
   
- 依預設這個方法會傳回視窗圖示。 覆寫`GetFrameIcon`中`CMDIChildWndEx`-衍生類別，即可自訂這個行為。  
+ By default this method returns the window icon. Override `GetFrameIcon` in a `CMDIChildWndEx`-derived class to customize this behavior.  
   
-##  <a name="getframetext"></a>CMDIChildWndEx::GetFrameText  
- 若要擷取的 MDI 子視窗的文字架構呼叫。  
+##  <a name="getframetext"></a>  CMDIChildWndEx::GetFrameText  
+ Called by the framework to retrieve the text for the MDI child window.  
   
 ```  
 virtual CString GetFrameText() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 字串，包含框架視窗的文字。  
+### <a name="return-value"></a>Return Value  
+ A string that contains the frame window text.  
   
-### <a name="remarks"></a>備註  
- 決定所要包含 MDI 子框架視窗的 MDI 索引標籤上顯示文字的架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework to determine what text to display on the MDI tab that contains the MDI child frame window.  
   
- 依預設這個方法會傳回視窗文字。 覆寫`GetFrameText`中`CMDIChildWndEx`-衍生類別，即可自訂這個行為。  
+ By default this method returns the window text. Override `GetFrameText` in a `CMDIChildWndEx`-derived class to customize this behavior.  
   
-##  <a name="getpane"></a>CMDIChildWndEx::GetPane  
- 尋找窗格中所指定的控制項 id。  
+##  <a name="getpane"></a>  CMDIChildWndEx::GetPane  
+ Finds a pane by the specified control ID.  
   
 ```  
 CBasePane* GetPane(UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 若要尋找窗格的控制項 ID。  
+ The control ID of the pane to find.  
   
-### <a name="return-value"></a>傳回值  
- 窗格的指標如果找到，否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the pane if found, otherwise `NULL`.  
   
-##  <a name="getrelatedtabgroup"></a>CMDIChildWndEx::GetRelatedTabGroup  
+##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup  
 
   
 ```  
 CMFCTabCtrl* GetRelatedTabGroup();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabbedpane"></a>CMDIChildWndEx::GetTabbedPane  
- 傳回的指標是一群 MDI 一部分的停駐窗格的索引標籤式文件。  
+##  <a name="gettabbedpane"></a>  CMDIChildWndEx::GetTabbedPane  
+ Returns a pointer to a docking pane that is part of a group of MDI tabbed documents.  
   
 ```  
 CDockablePane* GetTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標停駐窗格屬於群組中的 MDI 索引標籤式文件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a docking pane that is part of a group of MDI tabbed documents.  
   
-##  <a name="gettoolbarbuttontooltiptext"></a>CMDIChildWndEx::GetToolbarButtonToolTipText  
- 若要擷取的工具列按鈕的工具提示架構呼叫。  
+##  <a name="gettoolbarbuttontooltiptext"></a>  CMDIChildWndEx::GetToolbarButtonToolTipText  
+ Called by the framework to retrieve a tooltip for a toolbar button.  
   
 ```  
 virtual BOOL GetToolbarButtonToolTipText(
@@ -459,14 +507,14 @@ virtual BOOL GetToolbarButtonToolTipText(
     CString&);
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已顯示工具提示。 預設實作會傳回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tooltip has been displayed. The default implementation returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 如果您想要顯示的工具列按鈕的自訂工具提示，請覆寫這個方法。  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to display custom tool tips for toolbar buttons.  
   
-##  <a name="insertpane"></a>CMDIChildWndEx::InsertPane  
- 連接管理員會向指定的窗格。  
+##  <a name="insertpane"></a>  CMDIChildWndEx::InsertPane  
+ Registers the specified pane with the docking manager.  
   
 ```  
 BOOL InsertPane(
@@ -475,21 +523,21 @@ BOOL InsertPane(
     BOOL bAfter = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 要插入窗格指標。  
+ A pointer to the pane to insert.  
   
  [in] `pTarget`  
- 指標，相鄰的窗格。  
+ A pointer to the adjacent pane.  
   
  [in] `bAfter`  
- 如果`TRUE`，`pControlBar`後面插入`pTarget`。 如果`FALSE`，`pControlBar`之前，插入`pTarget`。  
+ If `TRUE`, `pControlBar` is inserted after `pTarget`. If `FALSE`, `pControlBar` is inserted before `pTarget`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功，`FALSE`否則。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, `FALSE` otherwise.  
   
-##  <a name="ispointneardocksite"></a>CMDIChildWndEx::IsPointNearDockSite  
- 判斷指定的點是否停駐位置附近。  
+##  <a name="ispointneardocksite"></a>  CMDIChildWndEx::IsPointNearDockSite  
+ Determines whether a specified point is near the dock site.  
   
 ```  
 BOOL IsPointNearDockSite(
@@ -498,66 +546,66 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 指定的點。  
+ The specified point.  
   
  [in] `dwBarAlignment`  
- 指定的點是附近的邊緣。 可能的值為`CBRS_ALIGN_LEFT`， `CBRS_ALIGN_RIGHT`， `CBRS_ALIGN_TOP`，並`CBRS_ALIGN_BOTTOM`  
+ Specifies which edge the point is near. Possible values are `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, and `CBRS_ALIGN_BOTTOM`  
   
  [in] `bOuterEdge`  
- `TRUE`如果點很近外框的停駐位置。`FALSE`否則。  
+ `TRUE` if the point is near the outer border of the dock site; `FALSE` otherwise.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果點附近的停駐位置。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the point is near the dock site; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 重點是停駐位置附近時中設定連接管理員中的敏感度。 預設區分大小寫為 15 像素。  
+### <a name="remarks"></a>Remarks  
+ The point is near the dock site when it is within the sensitivity set in the docking manager. The default sensitivity is 15 pixels.  
   
-##  <a name="isreadonly"></a>CMDIChildWndEx::IsReadOnly  
- 指定顯示在子視窗的文件是否為唯讀。  
+##  <a name="isreadonly"></a>  CMDIChildWndEx::IsReadOnly  
+ Specifies whether the document that is displayed in the child window is read-only.  
   
 ```  
 virtual BOOL IsReadOnly();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果文件是唯讀的。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the document is read-only; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 此函式用來防止唯讀文件儲存。  
+### <a name="remarks"></a>Remarks  
+ This function is used to prevent saving of read-only documents.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何覆寫`IsReadOnly`方法。 此程式碼片段來自[VisualStudioDemo 範例︰ Visual Studio 應用程式的 MFC](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates overriding the `IsReadOnly` method. This code snippet comes from the [VisualStudioDemo Sample: MFC Visual Studio Application](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&2;](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
   
-##  <a name="istabbedpane"></a>CMDIChildWndEx::IsTabbedPane  
- 指定 MDI 子視窗是否包含停駐窗格。  
+##  <a name="istabbedpane"></a>  CMDIChildWndEx::IsTabbedPane  
+ Specifies whether the MDI child window contains a docking pane.  
   
 ```  
 BOOL IsTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果 MDI 子視窗會包含已轉換為索引標籤式文件的停駐窗格否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the MDI child window contains a docking pane that was converted to a tabbed document; otherwise `FALSE`.  
   
-##  <a name="onmoveminiframe"></a>CMDIChildWndEx::OnMoveMiniFrame  
- 若要移動的迷你框架視窗，架構呼叫。  
+##  <a name="onmoveminiframe"></a>  CMDIChildWndEx::OnMoveMiniFrame  
+ Called by the framework to move a mini-frame window.  
   
 ```  
 virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pFrame`  
- 迷你框架視窗的指標。  
+ A pointer to a mini-frame window.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, otherwise `FALSE`.  
   
-##  <a name="onsetpreviewmode"></a>CMDIChildWndEx::OnSetPreviewMode  
- 進入或結束預覽列印模式架構呼叫。  
+##  <a name="onsetpreviewmode"></a>  CMDIChildWndEx::OnSetPreviewMode  
+ Called by the framework to enter or exit print preview mode.  
   
 ```  
 virtual void OnSetPreviewMode(
@@ -565,26 +613,26 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bPreview`  
- 如果`TRUE`，進入 預覽列印模式。 如果`FALSE`，結束預覽列印模式。  
+ If `TRUE`, enter print preview mode. If `FALSE`, exit print preview mode.  
   
  [in] `pState`  
- 預覽列印狀態結構的指標。  
+ A pointer to the print preview state structure.  
   
-##  <a name="onupdateframetitle"></a>CMDIChildWndEx::OnUpdateFrameTitle  
- 若要更新框架標題架構呼叫。  
+##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
+ Called by the framework to update the frame title.  
   
 ```  
 virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bAddToTitle`  
- 如果`TRUE`，標題中加入文件名稱。  
+ If `TRUE`, add the document name to the title.  
   
-##  <a name="panefrompoint"></a>CMDIChildWndEx::PaneFromPoint  
- 傳回包含指定的點的窗格。  
+##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
+ Returns the pane that contains the given point.  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -600,43 +648,43 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 若要檢查的螢幕座標中指定點。  
+ Specifies the point, in screen coordinates, to check.  
   
  [in] `nSensitivity`  
- 搜尋區域增加此數量。 如果指定的點落在增加區域窗格可滿足搜尋條件。  
+ Increase the search area by this amount. A pane satisfies the search criteria if the given point falls in the increased area.  
   
  [in] `bExactBar`  
- `TRUE`若要忽略`nSensitivity`參數，否則`FALSE`。  
+ `TRUE` to ignore the `nSensitivity` parameter; otherwise, `FALSE`.  
   
  [in] `pRTCBarType`  
- 如果不是`NULL`，該方法會搜尋窗格指定的型別。  
+ If not `NULL`, the method searches only panes of the specified type.  
   
  [in] `dwAlignment`  
- 如果指定點上找到一個窗格，則此參數會包含窗格是最接近指定點的側邊。 如需詳細資訊，請參閱＜備註＞一節。  
+ If a pane is found at the specified point, this parameter contains the side of the pane that was closest to the specified point. For more information, see the Remarks section.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CBasePane`-衍生物件，其中包含指定的點或`NULL`如果找不到任何窗格。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CBasePane`-derived object that contains the given point, or `NULL` if no pane was found.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來判斷窗格是否包含指定的點，根據指定的條件，例如執行階段類別和可視性。  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine whether a pane contains the specified point according to the specified conditions such as runtime class and visibility.  
   
- 當函式會傳回，而且找不到一個窗格，`dwAlignment`包含指定點的對齊方式。 例如，如果點為最接近工作窗格中，頂端`dwAlignment`設為`CBRS_ALIGN_TOP`。  
+ When the function returns and a pane was found, `dwAlignment` contains the alignment of the specified point. For example, if the point was closest to the top of the pane, `dwAlignment` is set to `CBRS_ALIGN_TOP`.  
   
-##  <a name="recalclayout"></a>CMDIChildWndEx::RecalcLayout  
- 重新計算視窗配置。  
+##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
+ Recalculates the layout of the window.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bNotify`  
- 如果`TRUE`，使用中視窗的就地項目接收配置變更的通知。  
+ If `TRUE`, the active in-place item for the window receives notification of the layout change.  
   
-##  <a name="removepanefromdockmanager"></a>CMDIChildWndEx::RemovePaneFromDockManager  
- 移除連接管理員 窗格。  
+##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
+ Removes a pane from the docking manager.  
   
 ```  
 void RemovePaneFromDockManager(
@@ -647,35 +695,35 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 若要移除窗格指標。  
+ A pointer to the pane to remove.  
   
  [in] `bDestroy`  
- 如果`TRUE`，終結已移除的窗格。  
+ If `TRUE`, the removed pane is destroyed.  
   
  [in] `bAdjustLayout`  
- 如果`TRUE`，立即調整停駐配置。  
+ If `TRUE`, adjust the docking layout immediately.  
   
  [in] `bAutoHide`  
- 如果`TRUE`，停駐配置相關的自動隱藏列清單。 如果`FALSE`，停駐配置與一般窗格的清單。  
+ If `TRUE`, the docking layout is related to the list of autohide bars. If `FALSE`, the docking layout is related to the list of regular panes.  
   
  [in] `pBarReplacement`  
- 指標，會取代 [移除] 窗格的窗格。  
+ A pointer to a pane that replaces the removed pane.  
   
-##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
+##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
 
   
 ```  
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `p`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="showpane"></a>CMDIChildWndEx::ShowPane  
+##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane  
 
   
 ```  
@@ -686,106 +734,106 @@ void ShowPane(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
  [in] `bShow`  
  [in] `bDelay`  
  [in] `bActivate`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="updatetaskbartabicon"></a>CMDIChildWndEx::UpdateTaskbarTabIcon  
- 更新 Windows 7 工作列 索引標籤的圖示。  
+##  <a name="updatetaskbartabicon"></a>  CMDIChildWndEx::UpdateTaskbarTabIcon  
+ Updates the Windows 7 taskbar tab icon.  
   
 ```  
 virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hIcon`  
- 在 Windows 7 工作列 索引標籤上顯示圖示的控制代碼。  
+ A handle to an icon to display on the Windows 7 taskbar tab.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="unregistertaskbartab"></a>CMDIChildWndEx::UnregisterTaskbarTab  
- 移除 Windows 7 工作列 索引標籤中的 MDI 子視窗。  
+##  <a name="unregistertaskbartab"></a>  CMDIChildWndEx::UnregisterTaskbarTab  
+ Removes the MDI child from Windows 7 taskbar tabs.  
   
 ```  
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bCheckRegisteredMDIChildCount`  
- 指定此函式是否須檢查向 MDI 索引標籤的 MDI 子系數目。 如果這個數字為 0，此函式會移除裁剪方框從應用程式的工作列縮圖。  
+ Specifies whether this function needs to check the number of MDI children registered with MDI tabs. If this number is 0, then this function removes the clipping rectangle from the application's taskbar thumbnail.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settaskbarthumbnailcliprect"></a>CMDIChildWndEx::SetTaskbarThumbnailClipRect  
- 若要設定裁剪方框選取視窗的工作區，以顯示該視窗的縮圖，在工作列中的部分架構呼叫。  
+##  <a name="settaskbarthumbnailcliprect"></a>  CMDIChildWndEx::SetTaskbarThumbnailClipRect  
+ Called by the framework to set the clipping rectangle to select a portion of a window's client area to display as that window's thumbnail in the taskbar.  
   
 ```  
 virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rect`  
- 指定新的裁剪方框。 如果矩形是空白或 null，則會移除裁剪。  
+ Specifies the new clipping rectangle. If the rectangle is empty or null, the clipping is removed.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，則為 `TRUE`，否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settaskbartabproperties"></a>CMDIChildWndEx::SetTaskbarTabProperties  
- 設定 [Windows 7 工作列] 索引標籤的屬性。  
+##  <a name="settaskbartabproperties"></a>  CMDIChildWndEx::SetTaskbarTabProperties  
+ Sets properties for a Windows 7 taskbar tab.  
   
 ```  
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- STPFLAG 值的組合。 如需詳細資訊，請參閱[itaskbarlist4:: Settabproperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx)。  
+ A combination of STPFLAG values. For more information, see [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx).  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settaskbartaborder"></a>CMDIChildWndEx::SetTaskbarTabOrder  
- 插入之前 Windows 7 工作列 索引標籤上指定的視窗的 MDI 子系。  
+##  <a name="settaskbartaborder"></a>  CMDIChildWndEx::SetTaskbarTabOrder  
+ Inserts the MDI child before the specified window on Windows 7 taskbar tabs.  
   
 ```  
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWndBefore`  
- MDI 子視窗的縮圖左方插入指標。 這個視窗必須已登錄到`RegisterTaskbarTab`。 如果此值為`NULL`，新的縮圖會加入至清單的結尾。  
+ A pointer to the MDI child window whose thumbnail is inserted to the left. This window must already be registered through `RegisterTaskbarTab`. If this value is `NULL`, the new thumbnail is added to the end of the list.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settaskbartabactive"></a>CMDIChildWndEx::SetTaskbarTabActive  
- 啟動對應的 Windows 7 工作列 索引標籤。  
+##  <a name="settaskbartabactive"></a>  CMDIChildWndEx::SetTaskbarTabActive  
+ Activates the corresponding Windows 7 taskbar tab.  
   
 ```  
 void SetTaskbarTabActive();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="registertaskbartab"></a>CMDIChildWndEx::RegisterTaskbarTab  
- 向 Windows 7 工作列 索引標籤中的 MDI 子視窗。  
+##  <a name="registertaskbartab"></a>  CMDIChildWndEx::RegisterTaskbarTab  
+ Registers the MDI child with Windows 7 taskbar tabs.  
   
 ```  
 virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWndBefore`  
- MDI 子視窗的縮圖左方插入指標。 這個視窗必須已登錄到`RegisterTaskbarTab`。 如果此值為`NULL`，新的縮圖會加入至清單的結尾。  
+ A pointer to the MDI child window whose thumbnail is inserted to the left. This window must already be registered through `RegisterTaskbarTab`. If this value is `NULL`, the new thumbnail is added to the end of the list.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ontaskbartabthumbnailstretch"></a>CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
- 需要自動縮放的 MDI 子系的 Windows 7 工作列 索引標籤縮圖預覽的點陣圖時，由架構呼叫。  
+##  <a name="ontaskbartabthumbnailstretch"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailStretch  
+ Called by the framework when it needs to stretch a bitmap for a Windows 7 taskbar tab thumbnail preview of the MDI child.  
   
 ```  
 virtual BOOL OnTaskbarTabThumbnailStretch(
@@ -795,24 +843,24 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
     const CRect& rectSrc);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hBmpDst`  
- 目的點陣圖控制代碼。  
+ A handle to a destination bitmap.  
   
  `rectDst`  
- 指定目的地矩形。  
+ Specifies the destination rectangle.  
   
  `hBmpSrc`  
- 來源點陣圖控制代碼。  
+ A handle to a source bitmap.  
   
  `rectSrc`  
- 指定來源矩形。  
+ Specifies the source rectangle.  
   
-### <a name="remarks"></a>備註  
- Requirementher 或他他他他他他他**:** afxmdichildwndex.h  
+### <a name="remarks"></a>Remarks  
+ Requirementher or him him him him him him him **:** afxmdichildwndex.h  
   
-##  <a name="ontaskbartabthumbnailmouseactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
- 工作列 索引標籤縮圖應處理 WM_MOUSEACTIVATE 訊息時，由架構呼叫。  
+##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate  
+ Called by the framework when the Taskbar tab thumbnail should process the WM_MOUSEACTIVATE message.  
   
 ```  
 virtual int OnTaskbarTabThumbnailMouseActivate(
@@ -821,21 +869,21 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
     UINT message);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDesktopWnd`  
- 指定正在啟動視窗的最上層的父視窗的指標。 指標可能是暫時性的不會儲存。  
+ Specifies a pointer to the top-level parent window of the window being activated. The pointer may be temporary and should not be stored.  
   
  `nHitTest`  
- 指定的點擊測試區域代碼。 點擊的測試是測試，決定游標的位置。  
+ Specifies the hit-test area code. A hit test is a test that determines the location of the cursor.  
   
  `message`  
- 指定滑鼠訊息數目。  
+ Specifies the mouse message number.  
   
-### <a name="remarks"></a>備註  
- 預設實作會啟動相關的 MDI 子框架。  
+### <a name="remarks"></a>Remarks  
+ The default implementation activates the related MDI child frame.  
   
-##  <a name="ontaskbartabthumbnailactivate"></a>CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
- 工作列 索引標籤縮圖應處理 WM_ACTIVATE 訊息時，由架構呼叫。  
+##  <a name="ontaskbartabthumbnailactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailActivate  
+ Called by the framework when the Taskbar tab thumbnail should process the WM_ACTIVATE message.  
   
 ```  
 virtual void OnTaskbarTabThumbnailActivate(
@@ -844,30 +892,30 @@ virtual void OnTaskbarTabThumbnailActivate(
     BOOL bMinimized);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nState`  
- 指定是否`CWnd`啟動或停用。  
+ Specifies whether the `CWnd` is being activated or deactivated.  
   
  `pWndOther`  
- 指標`CWnd`正在啟動或停用。 指標可以是`NULL`，而且可能是暫時性。  
+ Pointer to the `CWnd` being activated or deactivated. The pointer can be `NULL`, and it may be temporary.  
   
  `bMinimized`  
- 指定的最小化的狀態`CWnd`正在啟動或停用。 值為`TRUE`指出視窗最小化。  
+ Specifies the minimized state of the `CWnd` being activated or deactivated. A value of `TRUE` indicates the window is minimized.  
   
-### <a name="remarks"></a>備註  
- 預設實作會啟動相關的 MDI 子框架。  
+### <a name="remarks"></a>Remarks  
+ The default implementation activates the related MDI child frame.  
   
-##  <a name="onpresstaskbarthmbnailclosebutton"></a>CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
- 當使用者按下 [關閉] 按鈕，在 [工作列] 索引標籤縮圖上時，由架構呼叫。  
+##  <a name="onpresstaskbarthmbnailclosebutton"></a>  CMDIChildWndEx::OnPressTaskbarThmbnailCloseButton  
+ Called by the framework when the user presses the close button on the Taskbar tab thumbnail.  
   
 ```  
 virtual void OnPressTaskbarThmbnailCloseButton();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ongeticonicthumbnail"></a>CMDIChildWndEx::OnGetIconicThumbnail  
- 需要取得圖示的縮圖的 MDI 子系的點陣圖時，由架構呼叫。  
+##  <a name="ongeticonicthumbnail"></a>  CMDIChildWndEx::OnGetIconicThumbnail  
+ Called by the framework when it needs to obtain a bitmap for the iconic thumbnail of the MDI child.  
   
 ```  
 virtual HBITMAP OnGetIconicThumbnail(
@@ -875,17 +923,17 @@ virtual HBITMAP OnGetIconicThumbnail(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- 指定所需的點陣圖的寬度。  
+ Specifies the width of the required bitmap.  
   
  `nHeight`  
- 指定所需的點陣圖的高度。  
+ Specifies the height of the required bitmap.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ongeticoniclivepreviewbitmap"></a>CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
- 需要取得的 MDI 子視窗的即時預覽的點陣圖時，由架構呼叫。  
+##  <a name="ongeticoniclivepreviewbitmap"></a>  CMDIChildWndEx::OnGetIconicLivePreviewBitmap  
+ Called by the framework when it needs to obtain a bitmap for live preview of the MDI child.  
   
 ```  
 virtual HBITMAP OnGetIconicLivePreviewBitmap(
@@ -893,153 +941,153 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
     CPoint& ptLocation);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bIsMDIChildActive`  
- 這個參數是`TRUE`點陣圖的 MDI 子系的要求時，如果這目前作用中，主視窗沒有最小化。 預設在此情況下處理會在主視窗的快照集。  
+ This parameter is `TRUE` if the bitmap is requested for the MDI child, which is currently active and the main window is not minimized. The default processing in this case takes a snapshot of the main window.  
   
  `ptLocation`  
- 指定點陣圖的位置 （最上層） 主視窗工作區座標。 應由被呼叫端提供此點。  
+ Specifies the location of the bitmap in the main (top level) window client coordinates. This point should be provided by the callee.  
   
-### <a name="return-value"></a>傳回值  
- 如果處理，傳回的控制代碼有效 32bpp 點陣圖，否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ If processed, returns a handle to a valid 32bpp bitmap, otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法在衍生類別中的，並傳回有效的 32bpp 點陣圖的 MDI 子視窗的即時預覽。 MDI 子視窗會顯示 Windows 7 工作列 索引標籤上時，才會呼叫這個方法。 如果您傳回`NULL`，MFC 呼叫的預設處理常式，並取得使用點陣圖`PrintClient`或`PrintWindow`。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class and return a valid 32bpp bitmap for live preview of MDI child. This method is called only when the MDI child is displayed on Windows 7 taskbar tabs. If you return `NULL`, MFC calls the default handlers and obtains bitmaps using `PrintClient` or `PrintWindow`.  
   
-##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
- 旗標的組合，這會由架構傳遞`SetTaskbarTabProperties`方法中，當 索引標籤 （MDI 子系） 已向 Windows 7 工作列 索引標籤。  
+##  <a name="m_dwdefaulttaskbartabpropertyflags"></a>  CMDIChildWndEx::m_dwDefaultTaskbarTabPropertyFlags  
+ A combination of flags, which is passed by the framework to the `SetTaskbarTabProperties` method, when a tab (MDI child) is being registered with Windows 7 taskbar tabs.  
   
 ```  
 AFX_IMPORT_DATA static DWORD m_dwDefaultTaskbarTabPropertyFlags;  
 ```  
   
-### <a name="remarks"></a>備註  
- 預設的組合是 STPF_USEAPPTHUMBNAILWHENACTIVE |STPF_USEAPPPEEKWHENACTIVE。  
+### <a name="remarks"></a>Remarks  
+ The default combination is STPF_USEAPPTHUMBNAILWHENACTIVE &#124; STPF_USEAPPPEEKWHENACTIVE.  
   
-##  <a name="istaskbarthumbnailcliprectenabled"></a>CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
- 指示是否啟用或停用自動選擇視窗的工作區，以顯示該視窗的工作列中的縮圖的一部分。  
+##  <a name="istaskbarthumbnailcliprectenabled"></a>  CMDIChildWndEx::IsTaskbarThumbnailClipRectEnabled  
+ Tells whether automatic selection of a portion of a window's client area to display as that window's thumbnail in the taskbar is enabled or disabled.  
   
 ```  
 BOOL IsTaskbarThumbnailClipRectEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回`TRUE`自動選擇的顯示視窗的工作區的部分是否已啟用，否則為`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ Returns `TRUE` if automatic selection of a portion of a window's client area to display is enabled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istaskbartabssupportenabled"></a>CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
- 會告訴 Windows 7 工作列 索引標籤上是否可以顯示 MDI 子視窗。  
+##  <a name="istaskbartabssupportenabled"></a>  CMDIChildWndEx::IsTaskbarTabsSupportEnabled  
+ Tells whether the MDI child can appear on Windows 7 taskbar tabs.  
   
 ```  
 BOOL IsTaskbarTabsSupportEnabled();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果 MDI 子系可以出現在 Windows 7 工作列 索引標籤。`FALSE`如果 MDI 子視窗可以顯示 Windows 7 工作列 索引標籤上。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the MDI child can appear on Windows 7 taskbar tabs; `FALSE` if the MDI child can not appear on Windows 7 taskbar tabs.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isregisteredwithtaskbartabs"></a>CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
- 傳回`TRUE`如果 MDI 子系已成功註冊 Windows 7 工作列 索引標籤。  
+##  <a name="isregisteredwithtaskbartabs"></a>  CMDIChildWndEx::IsRegisteredWithTaskbarTabs  
+ Returns `TRUE` if the MDI child was successfully registered with Windows 7 taskbar tabs.  
   
 ```  
 BOOL IsRegisteredWithTaskbarTabs();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果 MDI 子系向 Windows 7 工作列 索引標籤。，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the MDI child is registered with Windows 7 taskbar tabs; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="invalidateiconicbitmaps"></a>CMDIChildWndEx::InvalidateIconicBitmaps  
- 失效的 MDI 子系的圖示的點陣圖表示法。  
+##  <a name="invalidateiconicbitmaps"></a>  CMDIChildWndEx::InvalidateIconicBitmaps  
+ Invalidates an iconic bitmap representation of a MDI child.  
   
 ```  
 BOOL InvalidateIconicBitmaps();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回`FALSE`如果 Windows 7 工作列支援已停用或未註冊的 MDI 子系 Windows 7 工作列 索引標籤; 否則會傳回`TRUE`。  
+### <a name="return-value"></a>Return Value  
+ Returns `FALSE` if Windows 7 taskbar support is disabled or the MDI child is not registered with Windows 7 taskbar tabs; otherwise returns `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 實況內容或 MDI 子系的大小已變更時，應該呼叫。  
+### <a name="remarks"></a>Remarks  
+ Should be called when the live content or size of a MDI child has changed.  
   
-##  <a name="gettaskbarthumbnailcliprect"></a>CMDIChildWndEx::GetTaskbarThumbnailClipRect  
- 需要選取視窗的工作區，以顯示該視窗的工作列中的縮圖的一部分時，由架構呼叫。  
+##  <a name="gettaskbarthumbnailcliprect"></a>  CMDIChildWndEx::GetTaskbarThumbnailClipRect  
+ Called by the framework when it needs to select a portion of a window's client area to display as that window's thumbnail in the taskbar.  
   
 ```  
 virtual CRect GetTaskbarThumbnailClipRect() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在 windows 座標的矩形。 此矩形會對應到工作區的最上層框架。 矩形應該是空的才能清除裁剪方框。  
+### <a name="return-value"></a>Return Value  
+ A rectangle in windows coordinates. This rectangle is mapped to the client area of the top level frame. The rectangle should be empty to clear the clipping rectangle.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettaskbarpreviewwnd"></a>CMDIChildWndEx::GetTaskbarPreviewWnd  
- 若要取得 Windows 7 工作列 索引標籤縮圖上顯示的子視窗 （通常是檢視或分隔視窗） 需要時，由架構呼叫。  
+##  <a name="gettaskbarpreviewwnd"></a>  CMDIChildWndEx::GetTaskbarPreviewWnd  
+ Called by the framework when it needs to obtain a child window (usually a view or splitter window) to be displayed on a Windows 7 taskbar tab thumbnail.  
   
 ```  
 virtual CWnd* GetTaskbarPreviewWnd();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 應該傳回的有效指標`CWnd`這個 MDI 子系的相關的物件，其預覽也應該顯示在 Windows 7 工作列 索引標籤。 預設實作會傳回這個 AFX_IDW_PANE_FIRST 控制項 id 的 MDI 子系的子視窗 (通常是`CView`-衍生的類別)。  
+### <a name="return-value"></a>Return Value  
+ Should return a valid pointer to a `CWnd` object, whose preview should be displayed on a Windows 7 taskbar tab related to this MDI child. The default implementation returns a child window of this MDI child with AFX_IDW_PANE_FIRST control ID (which is usually a `CView`-derived class).  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabproxywnd"></a>CMDIChildWndEx::GetTabProxyWnd  
- 傳回向 Windows 7 工作列 索引標籤的 proxy 索引標籤 視窗。  
+##  <a name="gettabproxywnd"></a>  CMDIChildWndEx::GetTabProxyWnd  
+ Returns the tab proxy window registered with Windows 7 taskbar tabs.  
   
 ```  
 CMDITabProxyWnd* GetTabProxyWnd();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CMDITabProxyWnd`物件，它會向 Windows 7 工作列 索引標籤。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CMDITabProxyWnd` object, which is registered with Windows 7 taskbar tabs.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabletaskbarthumbnailcliprect"></a>CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
- 啟用或停用自動選擇視窗的工作區，以顯示該視窗的工作列中的縮圖的一部分。  
+##  <a name="enabletaskbarthumbnailcliprect"></a>  CMDIChildWndEx::EnableTaskbarThumbnailClipRect  
+ Enables or disables automatic selection of a portion of a window's client area to display as that window's thumbnail in the taskbar.  
   
 ```  
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- 指定是否要啟用 ( `TRUE`)，或停用 ( `FALSE`) 自動選擇来顯示的視窗的用戶端區域的一部分。  
+ Specifies whether to enable ( `TRUE`), or disable ( `FALSE`) automatic selection of a portion of a window's client area to display.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="canshowontaskbartabs"></a>CMDIChildWndEx::CanShowOnTaskBarTabs  
- 會告知 framework 是否顯示此 MDI 子系，Windows 7 工作列 索引標籤上。  
+##  <a name="canshowontaskbartabs"></a>  CMDIChildWndEx::CanShowOnTaskBarTabs  
+ Tells the framework whether this MDI child can be displayed on Windows 7 taskbar tabs.  
   
 ```  
 virtual BOOL CanShowOnTaskBarTabs();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可以在 Windows 7 工作列縮圖上顯示 MDI 子視窗的內容。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the content of the MDI child can be displayed on Windows 7 taskbar thumbnails.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法在衍生類別中的，並傳回`FALSE`停用這個 MDI 子系，Windows 7 工作列 索引標籤上的外觀。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class and return `FALSE` to disable the appearance of this MDI child on Windows 7 taskbar tabs.  
   
-##  <a name="activatetoplevelframe"></a>CMDIChildWndEx::ActivateTopLevelFrame  
- 若要從工作列 索引標籤啟動應用程式時，啟用最上層框架架構呼叫。  
+##  <a name="activatetoplevelframe"></a>  CMDIChildWndEx::ActivateTopLevelFrame  
+ Called by the framework to activate the top level frame when the application is activated from a taskbar tab.  
   
 ```  
 virtual void ActivateTopLevelFrame();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)   
- [CMFCWindowsManagerDialog 類別](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)   
- [Cmdiframewndex 是類別](../../mfc/reference/cmdiframewndex-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMDIChildWnd Class](../../mfc/reference/cmdichildwnd-class.md)   
+ [CMFCWindowsManagerDialog Class](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)   
+ [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md)
 

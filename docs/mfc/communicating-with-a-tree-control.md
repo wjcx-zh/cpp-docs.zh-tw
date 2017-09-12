@@ -1,38 +1,57 @@
 ---
-title: "與樹狀目錄控制項通訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通訊, 樹狀目錄控制項"
-  - "CTreeCtrl 類別, 呼叫成員函式"
-  - "樹狀目錄控制項"
-  - "樹狀目錄控制項, 與之通訊"
+title: Communicating with a Tree Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree controls [MFC], communicating with
+- CTreeCtrl class [MFC], calling member functions
+- communications, tree controls
+- tree controls
 ms.assetid: 680ad9ee-b11f-452d-93fa-501ca7d7e069
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 與樹狀目錄控制項通訊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8ab92bdc6b811f2590a66281e33c5e269df0f369
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您在 [CTreeCtrl](../mfc/reference/ctreectrl-class.md) 物件根據物件如何建立使用不同的方法呼叫成員函式。  
+---
+# <a name="communicating-with-a-tree-control"></a>Communicating with a Tree Control
+You use different methods for calling member functions in a [CTreeCtrl](../mfc/reference/ctreectrl-class.md) object depending on how the object was created:  
   
--   如果樹狀目錄控制項在對話方塊中，使用您在對話方塊類別建立的 `CTreeCtrl` 型別的成員變數。  
+-   If the tree control is in a dialog box, use a member variable of type `CTreeCtrl` that you create in the dialog box class.  
   
--   如果樹狀目錄控制項是子視窗，請使用您用來建構物件的 `CTreeCtrl` 物件 \(或指標\) 。  
+-   If the tree control is a child window, use the `CTreeCtrl` object (or pointer) you used to construct the object.  
   
--   如果您使用 `CTreeView` 物件，請使用 [CTreeView::GetTreeCtrl](../Topic/CTreeView::GetTreeCtrl.md) 函式取得此樹狀目錄控制項的參考。  您可以使用這個值初始化其他參考或指派參考的位址為 `CTreeCtrl` 指標。  
+-   If you're using a `CTreeView` object, use the function [CTreeView::GetTreeCtrl](../mfc/reference/ctreeview-class.md#gettreectrl) to get a reference to the tree control. You can initialize another reference with this value or assign the address of the reference to a `CTreeCtrl` pointer.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

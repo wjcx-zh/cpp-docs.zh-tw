@@ -1,5 +1,5 @@
 ---
-title: "將 ATL 支援加入至 MFC 專案 |Microsoft 文件"
+title: Adding ATL Support to Your MFC Project | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,43 +34,43 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e112ec3b96345666c7a72da3b88d44a8438f7b73
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b06402781d11f3f0eb1bbb935bac8e2edd742cc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="adding-atl-support-to-your-mfc-project"></a>將 ATL 支援加入至 MFC 專案
-如果您已經建立以 MFC 為基礎的應用程式，然後您可以新增支援的 Active Template Library (ATL) 中輕鬆地執行將 ATL 支援加入至 MFC 專案精靈。  
+# <a name="adding-atl-support-to-your-mfc-project"></a>Adding ATL Support to Your MFC Project
+If you have already created an MFC-based application, then you can add support for the Active Template Library (ATL) easily by running the Add ATL Support to MFC Project Wizard.  
   
 > [!NOTE]
->  ATL 和 MFC 通常無法用於 Visual Studio Express 版。  
+>  ATL and MFC are not generally supported in the Express editions of Visual Studio.  
   
 > [!NOTE]
->  這項支援只適用於簡單的 COM 物件加入至 MFC 可執行檔或 DLL 專案。 您可以將其他的 COM 物件 （包括 ActiveX 控制項） 加入 MFC 專案，但物件可能無法如預期般運作。  
+>  This support applies only to simple COM objects added to an MFC executable or DLL project. You can add other COM objects (including ActiveX controls) to MFC projects, but the objects might not operate as expected.  
   
-### <a name="to-add-atl-support-to-your-mfc-project"></a>若要將 ATL 支援加入至 MFC 專案  
+### <a name="to-add-atl-support-to-your-mfc-project"></a>To add ATL support to your MFC project  
   
-1.  在 [方案總管] 中，以滑鼠右鍵按一下您要加入 ATL 支援的專案。  
+1.  In Solution Explorer, right-click the project to which you want to add ATL support.  
   
-2.  在捷徑功能表，按一下 **新增**，然後按一下 **加入類別**。  
+2.  On the shortcut menu, click **Add**, and then click **Add Class**.  
   
-3.  選取**加入 ATL 支援加入至 MFC 專案**圖示。  
+3.  Select the **Add ATL Support to MFC Project** icon.  
   
     > [!NOTE]
-    >  這個圖示位於 [ATL] 資料夾中**類別**窗格。  
+    >  This icon is located in the ATL folder in the **Categories** pane.  
   
-4.  出現提示時，按一下 **是**加入 ATL 支援。  
+4.  When prompted, click **Yes** to add ATL support.  
   
- 如需如何將 ATL 支援加入變更 MFC 專案的程式碼的詳細資訊，請參閱[詳細資料加入 ATL 支援的 ATL 精靈](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
+ For more information about how adding ATL support changes your MFC project's code, see [Details of ATL Support Added by the ATL Wizard](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
   
-## <a name="see-also"></a>另請參閱  
- [加入類別](../../ide/adding-a-class-visual-cpp.md)   
- [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

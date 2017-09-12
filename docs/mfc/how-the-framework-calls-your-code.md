@@ -1,45 +1,63 @@
 ---
-title: "架構如何呼叫您的程式碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式特定事件 [C++]"
-  - "命令處理, 在 MFC 中呼叫處理常式和程式碼"
-  - "命令傳送, 架構"
-  - "命令傳送, MFC"
-  - "控制流程 [C++], MFC 架構和您的程式碼"
-  - "事件 [C++], MFC 中的命令路由"
-  - "事件 [C++], 事件驅動型程式設計"
-  - "MFC [C++], 呼叫程式碼"
-  - "MFC [C++], 呼叫程式碼來源"
+title: How the Framework Calls Your Code | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow [MFC], MFC framework and your code
+- events [MFC], command routing in MFC
+- command routing [MFC], framework
+- command handling [MFC], calling handlers and code in MFC
+- events [MFC], event-driven programming
+- MFC, calling code from
+- MFC, calling code
+- application-specific events [MFC]
+- command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 架構如何呼叫您的程式碼
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d43c78de9b61fd09db9c9e46b8517bae81a9fc4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-了解 MFC 架構中您的原始程式碼和程式碼之間的關聯性很重要。  當應用程式執行時，大部分的控制流程位於框架中的程式碼。  當使用者選取命令並編輯檢視中的資料，架構處理從視窗收到訊息的訊息迴圈。  架構可以自行處理的事件根本不取決於您的程式碼。  例如，架構知道如何回應使用者命令來關閉視窗並結束應用程式。  當它處理這些工作時，架構會使用訊息處理常式和 C\+\+ 虛擬函式讓您有機會回應這些事件。  您的程式碼並不在控制中；然而這個框架是的。  
+---
+# <a name="how-the-framework-calls-your-code"></a>How the Framework Calls Your Code
+It is crucial to understand the relationship between your source code and the code in the MFC framework. When your application runs, most of the flow of control resides in the framework's code. The framework manages the message loop that gets messages from Windows as the user chooses commands and edits data in a view. Events that the framework can handle by itself do not rely on your code at all. For example, the framework knows how to close windows and how to exit the application in response to user commands. As it handles these tasks, the framework uses message handlers and C++ virtual functions to give you opportunities to respond to these events as well. Your code is not in control, however; the framework is.  
   
- 架構會呼叫您的應用程式特定事件的程式碼。  例如，當使用者選取命令時，架構會沿著 C\+\+ 物件序列的順序：目前檢視和框架視窗、與檢視關聯的文件、文件的文件範本和應用程式物件。  如果其中一個物件可以處理命令，則它會呼叫適當的訊息處理函式。  對於任何指定的命令，呼叫的程式碼可能是您的、也可能是架構的。  
+ The framework calls your code for application-specific events. For example, when the user chooses a menu command, the framework routes the command along a sequence of C++ objects: the current view and frame window, the document associated with the view, the document's document template, and the application object. If one of these objects can handle the command, it does so, calling the appropriate message-handler function. For any given command, the code called may be yours or it may be the framework's.  
   
- 這個安排對於有傳統的視窗或事件驅動的程式設計經驗的人來說，應該是有些熟悉的。  
+ This arrangement is somewhat familiar to programmers experienced with traditional programming for Windows or event-driven programming.  
   
- 在相關主題中，您將讀取本框架在初始化和執行應用程式時會做什麼，然後會在應用程式結束時清除。  您也會了解程式碼要在何處寫入調整。  
+ In related topics, you will read what the framework does as it initializes and runs the application and then cleans up as the application terminates. You will also understand where the code you write fits in.  
   
- 如需詳細資訊，請參閱 [類別 CWinApp：應用程式類別。](../mfc/cwinapp-the-application-class.md) 和 [資料範本與文件\/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)。  
+ For more information, see [Class CWinApp: The Application Class](../mfc/cwinapp-the-application-class.md) and [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## 請參閱  
- [在架構上建置](../mfc/building-on-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Building on the Framework](../mfc/building-on-the-framework.md)
+
+

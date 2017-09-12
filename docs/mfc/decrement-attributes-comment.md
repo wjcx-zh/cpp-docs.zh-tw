@@ -1,42 +1,60 @@
 ---
-title: "// 屬性註解 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 原始程式檔中的屬性註解"
-  - "註解, 屬性"
-  - "MFC 原始程式檔, 屬性註解"
-  - "公用屬性註解"
+title: -- Attributes Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- comments, Attributes
+- Attributes comment in MFC source files
+- MFC source files, Attributes comment
+- public attributes comment
 ms.assetid: 96388e11-42df-4994-aedf-decd152961a7
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // 屬性註解
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 20eaa2e4851dd69e9123cea385bbe04b7c950a9e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 類別宣告的 `// Attributes` 區段包含公用屬性 \(或屬性\) 的物件。  這些通常是成員變數，或是取得\/設定函式。  「Get」和「Set」函式不一定是虛擬的。  所以在大部分情況下沒有副作用， 「Get」函式通常是 **const**。  這些成員通常是公用的;受保護的私用和屬性在實作部分通常會找到。  
+---
+# <a name="-attributes-comment"></a>// Attributes Comment
+The `// Attributes` section of an MFC class declaration contains the public attributes (or properties) of the object. Typically these are member variables, or Get/Set functions. The "Get" and "Set" functions may or may not be virtual. The "Get" functions are usually **const**, because in most cases they do not have side effects. These members are normally public; protected and private attributes are typically found in the implementation section.  
   
- 在從類別 `CStdioFile`的範例目錄，在 [註解的範例](../mfc/an-example-of-the-comments.md)下，清單包含 10% 成員變數，則為 `m_pStream`。  類別 `CDC` 清單幾乎 20 個成員在此註解中。  
+ In the sample listing from class `CStdioFile`, under [An Example of the Comments](../mfc/an-example-of-the-comments.md), the list includes one member variable, `m_pStream`. Class `CDC` lists nearly 20 members under this comment.  
   
 > [!NOTE]
->  擴充類別，例如 `CDC` 和 `CWnd`，可能有列出所有屬性在一個群組中會加入清晰的許多成員。  在這種情況下，類別庫使用其他註解，標題進一步描述成員。  例如， `CDC` 會使用 `// Device-Context Functions`、 `// Drawing Tool Functions`， `// Drawing Attribute Functions`等等。  表示屬性的群組會遵循中說明的頂端一般語法。  許多 OLE 類別有 `// Interface Maps`一部分實作。  
+>  Large classes, such as `CDC` and `CWnd`, may have so many members that simply listing all the attributes in one group would not add much to clarity. In such cases, the class library uses other comments as headings to further delineate the members. For example, `CDC` uses `// Device-Context Functions`, `// Drawing Tool Functions`, `// Drawing Attribute Functions`, and more. Groups that represent attributes will follow the usual syntax described above. Many OLE classes have an implementation section called `// Interface Maps`.  
   
-## 請參閱  
- [使用 MFC 原始程式檔](../mfc/using-the-mfc-source-files.md)   
- [註解的範例](../mfc/an-example-of-the-comments.md)   
- [\/\/ 實作註解](../mfc/decrement-implementation-comment.md)   
- [\/\/ 建構函式註解](../mfc/decrement-constructors-comment.md)   
- [\/\/ 作業註解](../mfc/decrement-operations-comment.md)   
- [\/\/ 可覆寫函式註解](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Operations Comment](../mfc/decrement-operations-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

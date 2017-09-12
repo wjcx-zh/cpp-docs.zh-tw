@@ -1,5 +1,5 @@
 ---
-title: "CAnimationStoryboardEventHandler 類別 |Microsoft 文件"
+title: CAnimationStoryboardEventHandler Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationStoryboardEventHandler class
+- CAnimationStoryboardEventHandler [MFC], CAnimationStoryboardEventHandler
+- CAnimationStoryboardEventHandler [MFC], CreateInstance
+- CAnimationStoryboardEventHandler [MFC], OnStoryboardStatusChanged
+- CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
+- CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
 caps.latest.revision: 18
 author: mikeblome
@@ -39,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: bda8b0c941fd833bf821b563f4ca59cab9598cb8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6e54194dbdf42ca3602e6400dd16ec32eae67032
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler 類別
-實作回呼，當腳本的狀態變更或更新腳本時由動畫 API 呼叫。  
+# <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler Class
+Implements a callback, which is called by the Animation API when the status of a storyboard is changed or a storyboard is updated.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandlerBase<CAnimationStoryboardEventHandler>;  
@@ -57,43 +61,43 @@ class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandl
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|建構 `CAnimationStoryboardEventHandler` 物件。|  
+|[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|Constructs a `CAnimationStoryboardEventHandler` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|建立的執行個體`CAnimationStoryboardEventHandler`回呼。|  
-|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|處理`OnStoryboardStatusChanged`腳本的狀態變更時，會發生的事件 (覆寫`CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`。)|  
-|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|處理`OnStoryboardUpdated`更新腳本時，會發生的事件 (覆寫`CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`。)|  
-|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|儲存路由事件的動畫控制器的指標。|  
+|[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Creates an instance of `CAnimationStoryboardEventHandler` callback.|  
+|[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Handles `OnStoryboardStatusChanged` events, which occur when a storyboard's status changes (Overrides `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`.)|  
+|[CAnimationStoryboardEventHandler::OnStoryboardUpdated](#onstoryboardupdated)|Handles `OnStoryboardUpdated` events, which occur when a storyboard is updated (Overrides `CUIAnimationStoryboardEventHandlerBase::OnStoryboardUpdated`.)|  
+|[CAnimationStoryboardEventHandler::SetAnimationController](#setanimationcontroller)|Stores a pointer to animation controller to route events.|  
   
-## <a name="remarks"></a>備註  
- 此事件處理常式會建立並傳遞至`IUIAnimationStoryboard::SetStoryboardEventHandler`方法中，當您呼叫`CAnimationController::EnableStoryboardEventHandler`。  
+## <a name="remarks"></a>Remarks  
+ This event handler is created and passed to `IUIAnimationStoryboard::SetStoryboardEventHandler` method, when you call `CAnimationController::EnableStoryboardEventHandler`.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CUIAnimationCallbackBase`  
   
  `CUIAnimationStoryboardEventHandlerBase`  
   
  `CAnimationStoryboardEventHandler`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="canimationstoryboardeventhandler"></a>CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
- 建構 CAnimationStoryboardEventHandler 物件。  
+##  <a name="canimationstoryboardeventhandler"></a>  CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler  
+ Constructs a CAnimationStoryboardEventHandler object.  
   
 ```  
 CAnimationStoryboardEventHandler();
 ```  
   
-##  <a name="createinstance"></a>CAnimationStoryboardEventHandler::CreateInstance  
- 建立 CAnimationStoryboardEventHandler 回呼的執行個體。  
+##  <a name="createinstance"></a>  CAnimationStoryboardEventHandler::CreateInstance  
+ Creates an instance of CAnimationStoryboardEventHandler callback.  
   
 ```  
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -101,17 +105,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
     IUIAnimationStoryboardEventHandler** ppHandler);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- 動畫控制器，將會收到事件指標。  
+ A pointer to animation controller, which will receive events.  
   
  `ppHandler`  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="onstoryboardstatuschanged"></a>CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
- 處理 OnStoryboardStatusChanged 事件，分鏡腳本的狀態變更時，會發生  
+##  <a name="onstoryboardstatuschanged"></a>  CAnimationStoryboardEventHandler::OnStoryboardStatusChanged  
+ Handles OnStoryboardStatusChanged events, which occur when a storyboard's status changes  
   
 ```  
 IFACEMETHOD(OnStoryboardStatusChanged) (
@@ -120,44 +124,44 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
     __in UI_ANIMATION_STORYBOARD_STATUS previousStatus);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `storyboard`  
- 分鏡腳本的狀態已變更指標。  
+ A pointer to storyboard whose status has changed.  
   
  `newStatus`  
- 指定新腳本的狀態。  
+ Specifies new storyboard status.  
   
  `previousStatus`  
- 指定上一個分鏡腳本的狀態。  
+ Specifies previous storyboard status.  
   
-### <a name="return-value"></a>傳回值  
- S_OK，如果方法成功。否則 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ S_OK if the method succeeds; otherwise E_FAIL.  
   
-##  <a name="onstoryboardupdated"></a>CAnimationStoryboardEventHandler::OnStoryboardUpdated  
- 處理更新腳本時，會發生的 OnStoryboardUpdated 事件  
+##  <a name="onstoryboardupdated"></a>  CAnimationStoryboardEventHandler::OnStoryboardUpdated  
+ Handles OnStoryboardUpdated events, which occur when a storyboard is updated  
   
 ```  
 IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `storyboard`  
- 分鏡腳本，指標的已更新。  
+ A pointer to storyboard, which was updated.  
   
-### <a name="return-value"></a>傳回值  
- S_OK，如果方法成功。否則 E_FAIL。  
+### <a name="return-value"></a>Return Value  
+ S_OK if the method succeeds; otherwise E_FAIL.  
   
-##  <a name="setanimationcontroller"></a>CAnimationStoryboardEventHandler::SetAnimationController  
- 儲存路由事件的動畫控制器的指標。  
+##  <a name="setanimationcontroller"></a>  CAnimationStoryboardEventHandler::SetAnimationController  
+ Stores a pointer to animation controller to route events.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- 動畫控制器，將會收到事件指標。  
+ A pointer to animation controller, which will receive events.  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 
